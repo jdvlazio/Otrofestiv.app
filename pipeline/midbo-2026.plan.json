@@ -1,0 +1,204 @@
+{
+ "_nota": "28 MIDBO — Muestra Internacional Documental de Bogotá (27 oct–4 nov (afiche oficial) 2026). La programación vive en la ficha de cada obra en midbo.co (120 fichas, bloque «Funciones»); la sección es la categoría madre de la taxonomía y el programa, la hija. Más el Seminario Pensar lo Real. Radar #1031.",
+ "radar": 1031,
+ "pasos": [
+  {
+   "cmd": "python3 pipeline/radar.py midbo-2026",
+   "que": "el volcado del radar #1031"
+  },
+  {
+   "cmd": "python3 pipeline/midbo-2026-crudo.py",
+   "que": "las 120 fichas de midbo.co + el seminario → crudo"
+  },
+  {
+   "cmd": "python3 pipeline/enriquecer.py midbo-2026 --posters",
+   "que": "crudo → enriquecido con la cascada de TMDB y lo ya publicado"
+  },
+  {
+   "cmd": "python3 pipeline/proimagenes.py midbo-2026 --posters",
+   "que": "el cine colombiano que TMDB no tiene"
+  },
+  {
+   "cmd": "python3 pipeline/geocodificar.py midbo-2026 --centro 4.6097,-74.0817 --ciudad \"Bogotá\"",
+   "que": "pines: solo los manuales (Google Maps) se publican"
+  },
+  {
+   "cmd": "python3 pipeline/ensamblar.py midbo-2026",
+   "que": "el build"
+  },
+  {
+   "cmd": "python3 pipeline/encuadrar-posters.py midbo-2026 --aplicar --desde festivals/staging/midbo-2026-build.json",
+   "que": "los afiches a 2:3"
+  },
+  {
+   "cmd": "python3 pipeline/midbo-2026-verificar.py",
+   "que": "el build contra las fichas, en los dos sentidos, y cada sede con pin"
+  }
+ ],
+ "festival": {
+  "crudo": "festivals/staging/midbo-2026-crudo.json",
+  "enriquecido": "festivals/staging/midbo-2026-enriquecido.json",
+  "geo": "festivals/staging/midbo-2026-venues-geo.json",
+  "_por_que_secciones": "Las categorías madre de la taxonomía `seccion` de midbo.co, tal cual; «Encuentro Pensar lo Real» es el nombre del menú del seminario; «Proyecciones» (nuestra) para la única obra sin sección.",
+  "secciones": {
+   "Competencia Nacional de Largometraje Documental": {
+    "emoji": "🏆",
+    "en": "National Feature Documentary Competition",
+    "archetype": "Competencia"
+   },
+   "Competencia Nacional de Cortometraje Documental": {
+    "emoji": "🎞️",
+    "en": "National Short Documentary Competition",
+    "archetype": "Competencia"
+   },
+   "Competencia Iberoamericana de Largometraje Documental": {
+    "emoji": "🌎",
+    "en": "Ibero-American Feature Documentary Competition",
+    "archetype": "Competencia"
+   },
+   "Competencia Iberoamericana de Cortometraje Documental": {
+    "emoji": "📽️",
+    "en": "Ibero-American Short Documentary Competition",
+    "archetype": "Competencia"
+   },
+   "Panorama Internacional de Largometraje Documental": {
+    "emoji": "🌍",
+    "en": "International Feature Documentary Panorama",
+    "archetype": "Muestra / País"
+   },
+   "Panorama Internacional de Cortometraje Documental": {
+    "emoji": "🗺️",
+    "en": "International Short Documentary Panorama",
+    "archetype": "Muestra / País"
+   },
+   "Panorama Nacional de Documental": {
+    "emoji": "🇨🇴",
+    "en": "National Documentary Panorama",
+    "archetype": "Muestra / País"
+   },
+   "Espejos: Gestos de reparación": {
+    "emoji": "🪞",
+    "en": "Mirrors: Gestures of Repair",
+    "archetype": "Perspectivas / Miradas"
+   },
+   "Programas especiales": {
+    "emoji": "✨",
+    "en": "Special Programs",
+    "archetype": "Especiales / Eventos"
+   },
+   "Foco Claire Simon": {
+    "emoji": "🔎",
+    "en": "Focus: Claire Simon",
+    "archetype": "Retrospectiva / Tributo"
+   },
+   "Foco Ignacio Agüero": {
+    "emoji": "🔍",
+    "en": "Focus: Ignacio Agüero",
+    "archetype": "Retrospectiva / Tributo"
+   },
+   "Foco Santiago Álvarez": {
+    "emoji": "🎯",
+    "en": "Focus: Santiago Álvarez",
+    "archetype": "Retrospectiva / Tributo"
+   },
+   "Retrospectiva: Sara Gómez": {
+    "emoji": "🕰️",
+    "en": "Retrospective: Sara Gómez",
+    "archetype": "Retrospectiva / Tributo"
+   },
+   "Homenaje a Pablo Mora Calderón. Premio ALADOS a toda una vida": {
+    "emoji": "🏅",
+    "en": "Tribute to Pablo Mora Calderón — ALADOS Lifetime Award",
+    "archetype": "Retrospectiva / Tributo"
+   },
+   "Comptoir du Doc": {
+    "emoji": "🇫🇷",
+    "en": "Comptoir du Doc",
+    "archetype": "Muestra / País"
+   },
+   "CREAndo documental en los barrios": {
+    "emoji": "🏘️",
+    "en": "CREAndo: Documentary in the Neighborhoods",
+    "archetype": "Cortos / Programas"
+   },
+   "Encuentro Pensar lo Real": {
+    "emoji": "🎙️",
+    "en": "Pensar lo Real Meeting",
+    "archetype": "Charlas / Industria"
+   },
+   "Proyecciones": {
+    "emoji": "🎬",
+    "en": "Screenings",
+    "archetype": "Especiales / Eventos"
+   }
+  },
+  "sedes": {
+   "Alianza Francesa": [
+    "Alianza Francesa - Bogotá",
+    ""
+   ],
+   "Universidad de Antioquia": [
+    "Universidad de Antioquia - Medellín",
+    ""
+   ],
+   "Cinemateca de Bogotá": [
+    "Cinemateca de Bogotá - Bogotá",
+    ""
+   ],
+   "Centro Cultural Gabriel García Márquez": [
+    "Centro Cultural Gabriel García Márquez - Bogotá",
+    ""
+   ],
+   "Universidad Nacional de Colombia": [
+    "Universidad Nacional de Colombia - Bogotá",
+    ""
+   ],
+   "Universidad Central": [
+    "Universidad Central - Bogotá",
+    ""
+   ],
+   "Centro de Memoria, Paz y Reconciliación": [
+    "Centro de Memoria, Paz y Reconciliación - Bogotá",
+    ""
+   ],
+   "Cine club Cine 40": [
+    "Cine club Cine 40 - Minca",
+    ""
+   ],
+   "Potocine": [
+    "Potocine - Bogotá",
+    ""
+   ],
+   "Canterbury Café": [
+    "Canterbury Café - Bogotá",
+    ""
+   ],
+   "Universidad del Magdalena": [
+    "Universidad del Magdalena - Santa Marta",
+    ""
+   ]
+  },
+  "name": "MIDBO",
+  "displayName": "MIDBO",
+  "fullName": "28 MIDBO — Muestra Internacional Documental de Bogotá",
+  "shortName": "MIDBO",
+  "tagline": "Muestra Internacional Documental de Bogotá",
+  "city": "Bogotá",
+  "country": "CO",
+  "dates": "27 OCT–4 NOV",
+  "dates_en": "OCT 27–NOV 4",
+  "year": 2026,
+  "timezoneOffset": "-05:00",
+  "storageKey": "midbo2026_",
+  "festivalStartStr": "2026-10-27T00:00:00",
+  "festivalEndStr": "2026-11-04T23:59:00",
+  "sharedSlotIsOneScreening": false,
+  "mes_es": "octubre",
+  "dias_vacios": [],
+  "_fuentes_versionadas": {
+   "festivals/staging/midbo-2026-radar.json": "el volcado del radar #1031",
+   "festivals/staging/midbo-2026-afiches.json": "afiches oficiales de las fichas de midbo.co, donde TMDB no tiene; lo lee enriquecer.py",
+   "festivals/staging/midbo-2026-correcciones.json": "el porqué de cada obra sin afiche"
+  }
+ }
+}

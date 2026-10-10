@@ -1,0 +1,2191 @@
+{
+ "_provenance": {
+  "fuente": "midbo.co — ficha de cada obra (bloque «Funciones») + API pelicula/seccion",
+  "capturado": "2026-10-10",
+  "url": "https://midbo.co/",
+  "metodo": "120 fichas; sección = categoría madre, programa = hija"
+ },
+ "_excluidas": [
+  "2026-11-07 16:30 Hanoi, martes 13: fuera del 27 oct–4 nov oficial (Cinemateca del Caribe, Barranquilla)",
+  "2026-11-10 14:30 Hanoi, martes 13: fuera del 27 oct–4 nov oficial (Sala Langosta Azul, Universidad del Magdalena, Santa Marta)",
+  "2026-11-14 16:30 Hanoi, martes 13: fuera del 27 oct–4 nov oficial (Cinemateca La Tertulia, Cali)",
+  "2026-11-14 15:00 Mineland: fuera del 27 oct–4 nov oficial (Sala 3, Cinemateca de Bogotá)",
+  "2026-11-28 11:00 Mineland: fuera del 27 oct–4 nov oficial (Sala 3, Cinemateca de Bogotá)",
+  "2026-12-12 15:00 Mineland: fuera del 27 oct–4 nov oficial (Sala 3, Cinemateca de Bogotá)",
+  "2026-12-12 15:00 Mineland: fuera del 27 oct–4 nov oficial (Sala 3, Cinemateca de Bogotá)",
+  "2026-10-15 10:30 ¿Quién quemó el bus?: fuera del 27 oct–4 nov oficial (Colegio Alejandro Obregón)",
+  "2026-10-15 12:30 ¿Quién quemó el bus?: fuera del 27 oct–4 nov oficial (Colegio Alejandro Obregón)",
+  "2026-10-16 09:00 ¿Quién quemó el bus?: fuera del 27 oct–4 nov oficial (Colegio Manuelita Sáenz)",
+  "2026-10-16 15:00 ¿Quién quemó el bus?: fuera del 27 oct–4 nov oficial (Colegio Manuelita Sáenz)",
+  "2026-11-07 16:30 Iré a Santiago: fuera del 27 oct–4 nov oficial (Cinemateca del Caribe, Barranquilla)",
+  "2026-11-10 14:30 Iré a Santiago: fuera del 27 oct–4 nov oficial (Sala Langosta Azul, Universidad del Magdalena, Santa Marta)",
+  "2026-11-14 16:30 Iré a Santiago: fuera del 27 oct–4 nov oficial (Cinemateca La Tertulia, Cali)",
+  "2026-11-07 16:30 En la otra isla: fuera del 27 oct–4 nov oficial (Cinemateca del Caribe, Barranquilla)",
+  "2026-11-10 14:30 En la otra isla: fuera del 27 oct–4 nov oficial (Sala Langosta Azul, Universidad del Magdalena, Santa Marta)",
+  "2026-11-14 16:30 En la otra isla: fuera del 27 oct–4 nov oficial (Cinemateca La Tertulia, Cali)",
+  "2026-11-07 16:30 Una isla para Miguel: fuera del 27 oct–4 nov oficial (Cinemateca del Caribe, Barranquilla)",
+  "2026-11-10 14:30 Una isla para Miguel: fuera del 27 oct–4 nov oficial (Sala Langosta Azul, Universidad del Magdalena, Santa Marta)",
+  "2026-11-14 16:30 Una isla para Miguel: fuera del 27 oct–4 nov oficial (Cinemateca La Tertulia, Cali)",
+  "2026-11-07 16:30 Isla del tesoro: fuera del 27 oct–4 nov oficial (Cinemateca del Caribe, Barranquilla)",
+  "2026-11-10 14:30 Isla del tesoro: fuera del 27 oct–4 nov oficial (Sala Langosta Azul, Universidad del Magdalena, Santa Marta)",
+  "2026-11-14 16:30 Isla del tesoro: fuera del 27 oct–4 nov oficial (Cinemateca La Tertulia, Cali)",
+  "2026-11-07 16:30 L.B.J.: fuera del 27 oct–4 nov oficial (Cinemateca del Caribe, Barranquilla)",
+  "2026-11-10 14:30 L.B.J.: fuera del 27 oct–4 nov oficial (Sala Langosta Azul, Universidad del Magdalena, Santa Marta)",
+  "2026-11-14 16:30 L.B.J.: fuera del 27 oct–4 nov oficial (Cinemateca La Tertulia, Cali)",
+  "2026-11-07 16:30 El tigre saltó y mató, pero… morirá… morirá: fuera del 27 oct–4 nov oficial (Cinemateca del Caribe, Barranquilla)",
+  "2026-11-10 14:30 El tigre saltó y mató, pero… morirá… morirá: fuera del 27 oct–4 nov oficial (Sala Langosta Azul, Universidad del Magdalena, Santa Marta)",
+  "2026-11-14 16:30 El tigre saltó y mató, pero… morirá… morirá: fuera del 27 oct–4 nov oficial (Cinemateca La Tertulia, Cali)",
+  "2026-11-07 16:30 Now!: fuera del 27 oct–4 nov oficial (Cinemateca del Caribe, Barranquilla)",
+  "2026-11-10 14:30 Now!: fuera del 27 oct–4 nov oficial (Sala Langosta Azul, Universidad del Magdalena, Santa Marta)",
+  "2026-11-14 16:30 Now!: fuera del 27 oct–4 nov oficial (Cinemateca La Tertulia, Cali)",
+  "2026-11-07 16:30 79 primaveras: fuera del 27 oct–4 nov oficial (Cinemateca del Caribe, Barranquilla)",
+  "2026-11-10 14:30 79 primaveras: fuera del 27 oct–4 nov oficial (Sala Langosta Azul, Universidad del Magdalena, Santa Marta)",
+  "2026-11-14 16:30 79 primaveras: fuera del 27 oct–4 nov oficial (Cinemateca La Tertulia, Cali)",
+  "2026-10-29 14:00 Instrucciones para cuando no esté: función dentro de un servicio de justicia restaurativa juvenil",
+  "2026-11-25 18:30 Instrucciones para cuando no esté: fuera del 27 oct–4 nov oficial (MAMM, El Poblado, Medellín)",
+  "2026-11-28 16:30 De cierta manera: fuera del 27 oct–4 nov oficial (MAMM, El Poblado, Medellín)",
+  "2026-11-07 19:00 De cierta manera: fuera del 27 oct–4 nov oficial (Cinemateca del Caribe, Barranquilla)",
+  "2026-11-06 11:30 Retratos de Churcampa: fuera del 27 oct–4 nov oficial (Sala 3, Cinemateca de Bogotá)",
+  "2026-11-13 11:30 Retratos de Churcampa: fuera del 27 oct–4 nov oficial (Sala 3, Cinemateca de Bogotá)",
+  "2026-11-27 11:30 Retratos de Churcampa: fuera del 27 oct–4 nov oficial (Sala 3, Cinemateca de Bogotá)",
+  "2026-12-11 11:30 Retratos de Churcampa: fuera del 27 oct–4 nov oficial (Sala 3, Cinemateca de Bogotá)",
+  "2026-11-22 17:00 Bojayá: la verdad desde adentro: fuera del 27 oct–4 nov oficial (Cinemateca La Tertulia, Cali)",
+  "2026-10-28 09:00 Boyuna: función dentro de un centro penitenciario («MIDBO va a las cárceles»)",
+  "2026-11-29 15:00 El coloquio de los pájaros: fuera del 27 oct–4 nov oficial (MAMM, El Poblado, Medellín)",
+  "2026-10-27 16:00 Foco Claire Simon: no es una actividad del público (registro, presentación o proyección ya publicada)",
+  "2026-10-28 08:00 Registro y acreditaciones al Seminario Pensar lo R: no es una actividad del público (registro, presentación o proyección ya publicada)",
+  "2026-10-28 08:50 Presentación: no es una actividad del público (registro, presentación o proyección ya publicada)",
+  "2026-10-29 08:00 Registro y acreditaciones al Seminario Pensar lo R: no es una actividad del público (registro, presentación o proyección ya publicada)",
+  "2026-10-29 08:50 Presentación: no es una actividad del público (registro, presentación o proyección ya publicada)",
+  "2026-10-29 16:00 Proyección comentada: Cuando cierro los ojos. Dir.: no es una actividad del público (registro, presentación o proyección ya publicada)",
+  "2026-10-30 08:00 Registro y acreditaciones al Seminario Pensar lo r: no es una actividad del público (registro, presentación o proyección ya publicada)",
+  "2026-10-30 08:50 Presentación: no es una actividad del público (registro, presentación o proyección ya publicada)"
+ ],
+ "funciones": [
+  {
+   "titulo": "Programa 7: Reactivar los archivos para el presente",
+   "dia": "2026-10-27",
+   "hora": "14:00",
+   "sede": "Universidad del Magdalena",
+   "sala": "Sala Langosta Azul",
+   "ciudad": "Santa Marta",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://midbo.co/peliculas/l-evangile-de-la-revolution/",
+    "date": "2026-10-10"
+   },
+   "has_qa": true,
+   "qa_type": "team",
+   "seccion": "Espejos: Gestos de reparación",
+   "obras": [
+    {
+     "titulo": "L'Evangile de la Révolution",
+     "director": "François-Xavier Drouet",
+     "pais": "Francia, Bélgica",
+     "anio": 2024,
+     "duracion_min": 115,
+     "sinopsis": "El auge revolucionario de América Latina en el siglo XX se debe mucho a la participación de millones de cristianos, comprometidos en luchas políticas en nombre de la fe. Inspirados por la teología de la liberación, desafiaron a los regímenes militares y a las oligarquías. Cuestionando la idea de la religión como opio del pueblo, la película va al encuentro de los que vieron en la revolución la llegada del Reino de Dios, en la tierra antes que en el cielo."
+    }
+   ],
+   "duracion_min": 115
+  },
+  {
+   "dia": "2026-10-27",
+   "hora": "16:00",
+   "sede": "Alianza Francesa",
+   "ciudad": "Bogotá",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://midbo.co/peliculas/notre-corps/",
+    "date": "2026-10-10"
+   },
+   "seccion": "Foco Claire Simon",
+   "titulo": "Notre corps",
+   "director": "Claire Simon",
+   "pais": "Francia",
+   "anio": 2023,
+   "duracion_min": 168,
+   "sinopsis": "En un hospital público de París, Claire Simon explora lo que significa habitar cuerpos de mujer, filmando su diversidad, singularidad y belleza en todas las etapas de la vida. Se despliegan historias únicas de deseos, miedos y luchas, incluida la de la propia cineasta. Claire Simon Francia 2023 168 min Producción: Kristina Larsen Fotografía: N/A Sonido: Flavia Cordey, Nathalie Vidal, Elias Boughedir Montaje: Luc Forveille"
+  },
+  {
+   "titulo": "Espejos: Gestos de reparación",
+   "dia": "2026-10-28",
+   "hora": "16:00",
+   "sede": "Alianza Francesa",
+   "ciudad": "Bogotá",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://midbo.co/peliculas/la-verdad-duerme-en-silencio/",
+    "date": "2026-10-10"
+   },
+   "has_qa": true,
+   "qa_type": "team",
+   "seccion": "Espejos: Gestos de reparación",
+   "obras": [
+    {
+     "titulo": "La verdad duerme en silencio",
+     "director": "Andrew Simon Tucker",
+     "pais": "Colombia",
+     "anio": 2026,
+     "duracion_min": 27,
+     "sinopsis": "Antes de que hubiera tierra, había pensamiento. Antes de que hubiera luz, había oscuridad, y en la oscuridad se tejió el mundo. Los hermanos menores llegaron después. Nombraron la montaña Gonawidúa con otro nombre. Contaron su historia en quinientos años, como quien cuenta los días desde que llegó, no desde que el mundo fue pensado. Pero la memoria duerme en la selva, duerme en la piedra, duerme en el agua que baja de los picos nevados hacia las profundidades del mar. «La verdad duerme en silencio» escucha esa memoria, la siente. Entrelaza la palabra de los mayores con los relatos de la tierra, con lo que el territorio recuerda, aunque nadie lo diga. Recorre el tiempo de origen, el tiempo de las primeras ciudades, el tiempo en que llegaron los forasteros, el tiempo de las pérdidas y de lo que fue sacado sin permiso."
+    },
+    {
+     "titulo": "Ubuntú: la métrica de los afectos",
+     "director": "Leonardo Rua",
+     "pais": "Colombia",
+     "anio": 2026,
+     "duracion_min": 30,
+     "sinopsis": "Es una historia de la lucha política del movimiento afro colombiano para ser reconocido como parte del país. Es un viaje realizado por el hijo de uno de los líderes del movimiento Carlos Rua. El director recorre los pasos de su padre conversando con algunos de sus compañeros y compañeras que aún están con vida. Las conversaciones recuerdan La Constituyente en Colombia, la titulación de tierras y la importancia del apoyo mutuo, la alianza, la tonga, y el ubuntú."
+    },
+    {
+     "titulo": "Si La Escombrera hablara",
+     "director": "Juan Prado",
+     "pais": "Colombia",
+     "anio": 2025,
+     "duracion_min": 33,
+     "sinopsis": "En la comuna 13 de Medellín existe la fosa urbana a cielo abierto más grande de América Latina. Durante más de veinte años, La Escombrera ha sido señalada por familias de personas víctimas de desaparición forzada como el lugar donde posiblemente se encuentren muchos de los 503 desaparecidos de este territorio. Mujeres Caminando por la Verdad lidera la búsqueda forense que, en medio de incontables obstáculos y tras dos décadas de negacionismo, desencadenó en el hallazgo de cuerpos en diciembre del año 2024. Este acontecimiento histórico, una bocanada de aire fresco para las familias buscadoras, envió un mensaje muy claro a toda Colombia: la tierra ha comenzado a hablar."
+    }
+   ],
+   "duracion_min": 88
+  },
+  {
+   "dia": "2026-10-28",
+   "hora": "18:00",
+   "sede": "Universidad de Antioquia",
+   "sala": "Paraninfo",
+   "ciudad": "Medellín",
+   "ticket_url": "https://tuboleta.com/es/eventos/un-lugar-mas-grande",
+   "acceso": "Boletería en TuBoleta",
+   "_src": {
+    "url": "https://midbo.co/peliculas/un-lugar-mas-grande/",
+    "date": "2026-10-10"
+   },
+   "has_qa": true,
+   "qa_type": "team",
+   "seccion": "Competencia Iberoamericana de Largometraje Documental",
+   "titulo": "Un lugar más grande",
+   "director": "Nicolas Défossé",
+   "pais": "México, Francia",
+   "anio": 2025,
+   "duracion_min": 115,
+   "sinopsis": "Chiapas, sureste de México. Cuando los habitantes del pueblo de Tila y de varias aldeas expulsan al ayuntamiento y a la policía, se enfrentan al reto del autogobierno. «Un lugar más grande» explora la construcción de la autonomía en el día a día, revelando un amplio tejido de personas, generaciones, espíritus y paisajes, así como imágenes inéditas. Nos sumerge en el corazón de un proceso colectivo, cuando el autogobierno se convierte en una responsabilidad frente a uno mismo y a los demás. Una aventura de inspiración zapatista en territorio maya ch’ol."
+  },
+  {
+   "dia": "2026-10-28",
+   "hora": "19:00",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Salas 2, 3 y Capital",
+   "ciudad": "Bogotá",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://midbo.co/peliculas/el-hogar-fue-sepultado-en-esa-tierra-que-nunca-pudimos-encontrar/",
+    "date": "2026-10-10"
+   },
+   "premiere": "Inauguración",
+   "seccion": "Competencia Nacional de Largometraje Documental",
+   "titulo": "El hogar fue sepultado en esa tierra que nunca pudimos encontrar",
+   "director": "Deimer Quintero Vertel",
+   "pais": "Colombia",
+   "anio": 2026,
+   "duracion_min": 92,
+   "sinopsis": "El hogar ha desaparecido; la casa fue paraíso, pero también infierno. Aunque la guerra intentó destruirlo todo a su paso, la familia intenta volver. Entre anhelos y pesadillas crean un nuevo territorio, un refugio donde se reencuentran con sus amigos y su comunidad. Allí logran volver a la casa grande, el parque de diversiones de la infancia, ahora habitado por seres fantásticos y espectros, en donde buscan conjurar un abrazo."
+  },
+  {
+   "dia": "2026-10-29",
+   "hora": "09:00",
+   "sede": "Centro Cultural Gabriel García Márquez",
+   "sala": "Auditorio Salmona",
+   "ciudad": "Bogotá",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://midbo.co/peliculas/lolita-en-honda/",
+    "date": "2026-10-10"
+   },
+   "has_qa": true,
+   "qa_type": "team",
+   "seccion": "Competencia Nacional de Largometraje Documental",
+   "titulo": "Lolita en Honda",
+   "director": "Daniel Torres",
+   "pais": "Colombia",
+   "anio": 2025,
+   "duracion_min": 61,
+   "sinopsis": "Detrás de los ojos de Lolita hay un velo que ciega sus palabras. Es el recuerdo de una infancia que, aún en la vejez, le oscurece la vista y no le permite escapar. Cuando habla me parece intuir, por el eco de las historias que repite, un mundo espectral de hambre, abandono, el estigma social de una madre soltera, la magia del Río Magdalena y todas las ilusiones y demonios de esa niñez. En la película, Lolita recuerda su infancia en la ciudad de Honda, Tolima. A medida que explora ese recuerdo, el acto de recordar y recrear estas historias se convierte tanto en una ventana como en una barrera hacia el mundo que existe detrás de sus ojos. Así nos va llevando por un cuento de hadas en blanco y negro brumoso, manchado y lleno de grano, hacia el asombro y el miedo de una niña."
+  },
+  {
+   "titulo": "Programa 7: Reactivar los archivos para el presente",
+   "dia": "2026-10-29",
+   "hora": "11:00",
+   "sede": "Universidad Nacional de Colombia",
+   "sala": "Auditorio Virginia Gutiérrez",
+   "ciudad": "Bogotá",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://midbo.co/peliculas/l-evangile-de-la-revolution/",
+    "date": "2026-10-10"
+   },
+   "has_qa": true,
+   "qa_type": "team",
+   "seccion": "Espejos: Gestos de reparación",
+   "obras": [
+    {
+     "titulo": "L'Evangile de la Révolution",
+     "director": "François-Xavier Drouet",
+     "pais": "Francia, Bélgica",
+     "anio": 2024,
+     "duracion_min": 115,
+     "sinopsis": "El auge revolucionario de América Latina en el siglo XX se debe mucho a la participación de millones de cristianos, comprometidos en luchas políticas en nombre de la fe. Inspirados por la teología de la liberación, desafiaron a los regímenes militares y a las oligarquías. Cuestionando la idea de la religión como opio del pueblo, la película va al encuentro de los que vieron en la revolución la llegada del Reino de Dios, en la tierra antes que en el cielo."
+    }
+   ],
+   "duracion_min": 115
+  },
+  {
+   "titulo": "Programa 4: Hijo de tigre y mula: la historia de los tratados Torrijos-Carter",
+   "dia": "2026-10-29",
+   "hora": "14:00",
+   "sede": "Universidad Central",
+   "sala": "Auditorio Caldas",
+   "ciudad": "Bogotá",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://midbo.co/peliculas/hijo-de-tigre-y-mula/",
+    "date": "2026-10-10"
+   },
+   "seccion": "Programas especiales",
+   "obras": [
+    {
+     "titulo": "Hijo de tigre y mula",
+     "director": "Annie Canavaggio",
+     "pais": "Panamá, Colombia",
+     "anio": 2025,
+     "duracion_min": 103,
+     "sinopsis": "El 31 de diciembre de 1999, Estados Unidos devolvió oficialmente control del Canal a Panamá, dando cumplimiento a los Acuerdos Torrijos-Carter. Por detrás de la histórica firma de los Acuerdos, existió un complejo juego de diplomacia internacional e intrigas liderado por el General Omar Torrijos. Esta es la historia de estas negociaciones, que restituyeron la integridad territorial y soberanía de Panamá. Annie Canavaggio Panamá, Colombia 2025 103 min Producción: María Neyla Santamaría Fotografía: Carlos Arango de Montis ADFC Sonido: Richard Córdoba Montaje: Leyda Nápoles Viant, Alonso Víquez Sancho"
+    }
+   ],
+   "duracion_min": 103
+  },
+  {
+   "dia": "2026-10-29",
+   "hora": "14:00",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala Capital",
+   "ciudad": "Bogotá",
+   "ticket_url": "https://tuboleta.com/es/eventos/writing-life-annie-ernaux-through-eyes-high-school",
+   "acceso": "Boletería en TuBoleta",
+   "_src": {
+    "url": "https://midbo.co/peliculas/writing-life-annie-ernaux-through-the-eyes-of-high-school-students/",
+    "date": "2026-10-10"
+   },
+   "seccion": "Foco Claire Simon",
+   "titulo": "Writing Life: Annie Ernaux Through the Eyes of High School Students",
+   "director": "Claire Simon",
+   "pais": "Francia",
+   "anio": 2025,
+   "duracion_min": 90,
+   "sinopsis": "Figura fundamental del feminismo contemporáneo y primera francesa en recibir el Premio Nobel de Literatura, Annie Ernaux es considerada por muchos una fuente de emancipación individual y colectiva, al entrelazar lo íntimo con lo universal. La cineasta Claire Simon le dedica un retrato original en el que da voz a estudiantes y profesores. ¿Cómo se enseña la obra de Ernaux en escuelas secundarias y universidades? ¿Cómo se recibe, se estudia y se aprende? ¿Cómo se acercan los jóvenes franceses de hoy a sus escritos? Al situar su cámara en las aulas francesas, Simon captura el impacto vivo de las palabras de Ernaux: su poder para despertar, cuestionar certezas y generar nuevos niveles de conciencia al llevar a los estudiantes a reflexionar sobre sus propias vidas durante la adolescencia. A través de esta mirada al proceso de transmisión, Simon muestra cómo la obra de Ernaux, tras ocupar el lugar que le corresponde en la literatura universal, continúa inspirando a los jóvenes en su búsqueda de libertad y autodeterminación."
+  },
+  {
+   "dia": "2026-10-29",
+   "hora": "16:00",
+   "sede": "Alianza Francesa",
+   "ciudad": "Bogotá",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://midbo.co/peliculas/cuando-cierro-los-ojos/",
+    "date": "2026-10-10"
+   },
+   "seccion": "Proyecciones",
+   "titulo": "Cuando cierro los ojos",
+   "director": "Sergio Blanco y Michelle Ibaven",
+   "pais": "México",
+   "anio": 2019,
+   "duracion_min": 63,
+   "sinopsis": "Adela y Marcelino comparten un aislamiento común entre numerosos hablantes de una lengua indígena, procesados sin intérprete por el sistema de justicia mexicano. A través de los sueños y los recuerdos que conservan de su tierra y su gente en la cárcel, externan a dos voces la desorientación y la necesidad de resistir frente a la exclusión contando su historia. Sergio Blanco y Michelle Ibaven México 2019 63 min Producción: Michelle Ibaven Fotografía: Michelle Ibaven Sonido: Sergio Blanco Martín Montaje: Sergio Blanco, Pedro G. García, Michelle Ibaven"
+  },
+  {
+   "titulo": "Programa 6: Restitución de archivos para una memoria política latinoamericana",
+   "dia": "2026-10-29",
+   "hora": "16:00",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala 2",
+   "ciudad": "Bogotá",
+   "ticket_url": "https://tuboleta.com/es/eventos/buenos-dias-wiraqocha",
+   "acceso": "Boletería en TuBoleta",
+   "_src": {
+    "url": "https://midbo.co/peliculas/buenos-dias-wiracocha/",
+    "date": "2026-10-10"
+   },
+   "has_qa": true,
+   "qa_type": "team",
+   "seccion": "Espejos: Gestos de reparación",
+   "obras": [
+    {
+     "titulo": "Buenos días, Wiracocha",
+     "director": "Mauricio Godoy",
+     "pais": "Perú, México",
+     "anio": 2025,
+     "duracion_min": 83,
+     "sinopsis": "Hace 50 años se filmó la lucha por las tierras en diversas comunidades campesinas del Cusco. Un grupo de cineastas trae estas imágenes de vuelta a la provincia de Paucartambo (Cusco), y les propone a los pobladores de la zona representar su memoria comunitaria a través de la creación de una nueva película."
+    }
+   ],
+   "duracion_min": 83
+  },
+  {
+   "titulo": "Programa 4: Narrar(se) desde la Diáspora y restituir la dignidad",
+   "dia": "2026-10-29",
+   "hora": "16:00",
+   "sede": "Centro de Memoria, Paz y Reconciliación",
+   "ciudad": "Bogotá",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://midbo.co/peliculas/latidos/",
+    "date": "2026-10-10"
+   },
+   "seccion": "Espejos: Gestos de reparación",
+   "obras": [
+    {
+     "titulo": "Latidos",
+     "director": "Baptista Joao",
+     "pais": "España",
+     "anio": 2026,
+     "duracion_min": 54,
+     "sinopsis": "«Latidos» aborda la migración, la discriminación y el racismo desde la perspectiva de las propias personas afectadas, sin intermediarios ni reinterpretaciones externas. La obra construye un relato coral donde el arte se convierte en herramienta de resistencia y expresión política. A través de diversas manifestaciones culturales practicadas por colectivos migrantes y racializados en España, el documental expone las múltiples capas de una realidad marcada por la exclusión estructural. Una obra que interpela directamente al espectador y lo invita a reflexionar sobre la convivencia, la desigualdad y la humanidad compartida."
+    }
+   ],
+   "duracion_min": 54
+  },
+  {
+   "dia": "2026-10-29",
+   "hora": "17:00",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala Capital",
+   "ciudad": "Bogotá",
+   "ticket_url": "https://tuboleta.com/es/eventos/nuestro-cuerpo-es-una-estrella-que-se-expande",
+   "acceso": "Boletería en TuBoleta",
+   "_src": {
+    "url": "https://midbo.co/peliculas/nuestro-cuerpo-es-una-estrella-que-se-expande/",
+    "date": "2026-10-10"
+   },
+   "seccion": "Competencia Iberoamericana de Largometraje Documental",
+   "titulo": "Nuestro cuerpo es una estrella que se expande",
+   "director": "Semillites Hernández Velasco y Tania Hernández Velasco",
+   "pais": "México",
+   "anio": 2025,
+   "duracion_min": 84,
+   "sinopsis": "Dos hermanos se adentran en los paisajes de sus cuerpos morenos y queer, donde los encuentros con familiares y ancestros iluminan nuevas posibilidades de su identidad. Semilites y Tania, dos hermanos queer unidos por una poderosa amistad, recorren el terreno moreno de sus propios cuerpos, tierras que alguna vez rechazaron. Atraviesan paisajes de piel, sueños y vísceras, llegando a lugares que palpitan con la memoria familiar. En el camino, se encuentran con una constelación de familiares y ancestros —su madre, padre, abuela, pero también flores, saltamontes y fósiles— que los guían en la reinvención de su identidad más allá de las narrativas coloniales de México. A través del collage, la animación, el manifiesto, la danza y momentos íntimos de documental, la película transita por las escalas del cuerpo y el territorio, trazando la silenciosa fuerza de la transformación y la ternura de la hermandad."
+  },
+  {
+   "titulo": "Programa 3: Acompañar y restituir la memoria familiar y colectiva",
+   "dia": "2026-10-29",
+   "hora": "17:30",
+   "sede": "Centro de Memoria, Paz y Reconciliación",
+   "ciudad": "Bogotá",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://midbo.co/peliculas/oscurana/",
+    "date": "2026-10-10"
+   },
+   "seccion": "Espejos: Gestos de reparación",
+   "obras": [
+    {
+     "titulo": "Oscurana",
+     "director": "Violeta Mora",
+     "pais": "Honduras, Portugal, Hungría, Bélgica",
+     "anio": 2025,
+     "duracion_min": 21,
+     "sinopsis": "La puesta de sol trae la oscuridad y transforma el campo en un terreno sombrío. La falta de luz anuncia el sonido de pasos que se sumergen en el campo, dispuestos a caminar sin pausa hacia un lugar desconocido. «Oscurana» evoca a aquellos migrantes centroamericanos que decidieron abandonar sus lugares caminando a través del paisaje a pesar del peligro."
+    },
+    {
+     "titulo": "Guañuna",
+     "director": "David Lasso",
+     "pais": "Ecuador",
+     "anio": 2022,
+     "duracion_min": 74,
+     "sinopsis": "El asesinato del estudiante Paúl Guañuna, de 16 años, cometido por oficiales de la Policía Nacional en Quito en 2007, suscitó la movilización y toma de conciencia de numerosas tribus urbanas y colectivos de jóvenes de los barrios populares en contra la violencia estatal y la discriminación racista contra sus códigos culturales. David Lasso filmó todos los detalles del proceso judicial que tuvo lugar para condenar a los tres policías responsables —audiencias, autopsia, reconocimiento del lugar de los hechos— y describe con una mirada aguda el modo en que el racismo y la impunidad se manifiestan a través de argucias jurídicas y gestos de algunos operadores de justicia. El proceso de transformación y empoderamiento que vive a lo largo del juicio el padre del joven Paúl, Leonardo Guañuna, es una de las líneas narrativas del filme. La película nos permite entender un poco mejor la descomposición de la policía y de la justicia en el Ecuador, en las que parecen imperar todavía el autoritarismo, el machismo y el racismo."
+    }
+   ],
+   "duracion_min": 96
+  },
+  {
+   "dia": "2026-10-29",
+   "hora": "19:00",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala 2",
+   "ciudad": "Bogotá",
+   "ticket_url": "https://tuboleta.com/es/eventos/travelers-les-voyageurs",
+   "acceso": "Boletería en TuBoleta",
+   "_src": {
+    "url": "https://midbo.co/peliculas/the-travelers/",
+    "date": "2026-10-10"
+   },
+   "premiere": "Estreno en Bogotá",
+   "seccion": "Panorama Internacional de Largometraje Documental",
+   "titulo": "The Travelers",
+   "director": "David Bingong",
+   "pais": "Camerún, España",
+   "anio": 2025,
+   "duracion_min": 60,
+   "sinopsis": "En la frontera entre Marruecos y España, aguardamos impacientes el boza – la travesía a Europa. Entre los sucesivos intentos fallidos, sobrevivimos, y yo, como el «artista», debo mantener viva la llama de la esperanza del grupo. Con una cámara y un puñado de canciones, hicimos juntos esta película."
+  },
+  {
+   "titulo": "Programa 1: Pasaje entre mundos: duelo y memoria",
+   "dia": "2026-10-29",
+   "hora": "19:30",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala Capital",
+   "ciudad": "Bogotá",
+   "ticket_url": "https://tuboleta.com/es/eventos/pasaje-entre-mundos-duelo-y-memoria",
+   "acceso": "Boletería en TuBoleta",
+   "_src": {
+    "url": "https://midbo.co/peliculas/el-leon/",
+    "date": "2026-10-10"
+   },
+   "has_qa": true,
+   "qa_type": "team",
+   "seccion": "Competencia Nacional de Cortometraje Documental",
+   "obras": [
+    {
+     "titulo": "El León",
+     "director": "Diana Bustamante",
+     "pais": "Colombia",
+     "anio": 2026,
+     "duracion_min": 15,
+     "sinopsis": "Un cuerpo cubierto con una sábana manchada de sangre yace sobre una mesa de ping-pong, ubicada en lo que parece ser un escenario. A partir de esta imagen encontrada en el archivo noticioso colombiano, esta pieza documental da cuenta de cómo la muerte, paradójica e inefable, ha habitado un lugar no pensado para ella: el Auditorio León de Greiff de la Universidad Nacional de Colombia."
+    },
+    {
+     "titulo": "No menguará el fuego de esta luna",
+     "director": "Sebastián Pérez",
+     "pais": "Colombia",
+     "anio": 2025,
+     "duracion_min": 22,
+     "sinopsis": "Busco y hablo con los muertos. Le escribo a una mujer que ya no está: Soraya Cataño, asesinada en Medellín en 1991. Treinta años después la encuentro en una imagen. Su voz emerge mientras una comparsa avanza por la ladera. El archivo revela su risa, sus gestos y yo decido invocarla. Yo también crecí en este valle. Yo también creí. Creo. Esta película no es sobre la muerte. Es una carta fílmica, un diálogo entre quien narra y quien resiste desde la ausencia. Es un fuego que no se apaga."
+    },
+    {
+     "titulo": "Decaer",
+     "director": "Juan Camilo González",
+     "pais": "Colombia",
+     "anio": 2025,
+     "duracion_min": 7,
+     "sinopsis": "Gracias a los chinos por la pólvora, parece que la hubieran hecho para mí. Su invención sucede como un accidente, pensada inicialmente para espantar los espíritus malos. Esta película inicia en China, luego un evento en Cartagena y se acaba siglos después en Bogotá."
+    },
+    {
+     "titulo": "Ya se ven los tigres en la lluvia",
+     "director": "Oscar Ruiz Navia",
+     "pais": "Colombia, Canadá",
+     "anio": 2025,
+     "duracion_min": 15,
+     "sinopsis": "Los desolados espacios de tránsito de un Montreal invernal y actual —callejones, carriles bici, pasos subterráneos, parques de skate— contrastan con las imágenes más animadas de vídeos caseros de hace décadas… Oscilando entre formatos de imagen en movimiento y collages de texturas locales y voces del pasado, la película de Oscar Ruiz Navia reflexiona sobre la pérdida y el duelo como experiencias de desplazamiento temporal."
+    },
+    {
+     "titulo": "Las formas de la magia",
+     "director": "Maria Paula Lorgia Garnica",
+     "pais": "Colombia",
+     "anio": 2026,
+     "duracion_min": 17,
+     "sinopsis": "Un año después de la muerte de su padre, el mago colombiano Gustavo Lorgia, la directora realiza una exploración por sus archivos de video que revelan su trayectoria como artista, su rol como padre y la estética televisiva de una época. Una película que acude al archivo como medio para atravesar el duelo y a la memoria como forma de resistir a la desaparición."
+    },
+    {
+     "titulo": "Lo que no está",
+     "director": "Jean Paul Sánchez Flórez",
+     "pais": "Colombia",
+     "anio": 2025,
+     "duracion_min": 15,
+     "sinopsis": "«Lo que no está» es una pregunta abierta hacia la muerte: tras trece años de perder a un hermano, la imagen de Paulo Cesar acompaña al director en todas las imágenes que él captura con su cámara. Esta pieza es un encuentro entre la carga de un duelo y las imágenes."
+    }
+   ],
+   "duracion_min": 90
+  },
+  {
+   "dia": "2026-10-30",
+   "hora": "14:00",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala 3",
+   "ciudad": "Bogotá",
+   "ticket_url": "https://tuboleta.com/es/eventos/bosque-arriba-en-la-montana",
+   "acceso": "Boletería en TuBoleta",
+   "_src": {
+    "url": "https://midbo.co/peliculas/bosque-arriba-en-la-montana/",
+    "date": "2026-10-10"
+   },
+   "seccion": "Competencia Iberoamericana de Largometraje Documental",
+   "titulo": "Bosque arriba en la montaña",
+   "director": "Sofia Bordenave",
+   "pais": "Argentina",
+   "anio": 2026,
+   "duracion_min": 91,
+   "sinopsis": "En 2017, fuerzas de seguridad del Estado mataron al joven mapuche Rafael Nahuel en un bosque de la Patagonia argentina. En ese mismo territorio, en la comunidad de Mirta Ñancunao, se sostiene desde hace años una lucha contra el avance de las empresas forestales. Un viaje por carretera recorre la memoria de familias desintegradas por el genocidio conocido como la «Campaña del Desierto», que a fines del siglo XIX devastó comunidades y territorios. La película también acompaña a jóvenes que reconstruyen su identidad a través de la música. Basándose en expedientes judiciales, documentos oficiales y archivos forenses, la película saca a la luz procesos de desarraigo y ruptura de identidad perpetrados a través de la violencia material y simbólica."
+  },
+  {
+   "titulo": "De cierta manera",
+   "dia": "2026-10-30",
+   "hora": "15:00",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala Capital",
+   "ciudad": "Bogotá",
+   "ticket_url": "https://tuboleta.com/es/eventos/de-cierta-manera-0",
+   "acceso": "Boletería en TuBoleta",
+   "_src": {
+    "url": "https://midbo.co/peliculas/de-cierta-manera/",
+    "date": "2026-10-10"
+   },
+   "seccion": "Retrospectiva: Sara Gómez",
+   "obras": [
+    {
+     "titulo": "De cierta manera",
+     "director": "Sara Gómez",
+     "pais": "Cuba",
+     "anio": 1977,
+     "duracion_min": 79,
+     "sinopsis": "El barrio de Miraflores, construido en 1962 por las mismas personas que lo habitarían, es resultado de los primeros esfuerzos de la Revolución Cubana por erradicar los barrios marginales. La película cuenta la historia de este barrio a través de la relación entre un trabajador negro y una maestra blanca. El filme combina el documental y la ficción para revelar las complejidades de la marginalización, la modernización revolucionaria, la raza y el género."
+    }
+   ],
+   "duracion_min": 79
+  },
+  {
+   "dia": "2026-10-30",
+   "hora": "16:00",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala 2",
+   "ciudad": "Bogotá",
+   "ticket_url": "https://tuboleta.com/es/eventos/cartas-mis-padres-muertos",
+   "acceso": "Boletería en TuBoleta",
+   "_src": {
+    "url": "https://midbo.co/peliculas/cartas-a-mis-padres-muertos/",
+    "date": "2026-10-10"
+   },
+   "has_qa": true,
+   "qa_type": "team",
+   "premiere": "Estreno en Bogotá",
+   "seccion": "Foco Ignacio Agüero",
+   "titulo": "Cartas a mis padres muertos",
+   "director": "Ignacio Agüero",
+   "pais": "Chile",
+   "anio": 2025,
+   "duracion_min": 106,
+   "sinopsis": "El cineasta se propone crear una forma de poner al día a sus padres sobre los asuntos íntimos de la familia y los acontecimientos sociopolíticos, desde la muerte de su padre, ocurrida pocos días después de la elección de Allende, hasta la actualidad. Cincuenta años de su vida y de la historia de Chile se entrelazan a partir de una combinación de material de archivo familiar y nuevas imágenes, dando lugar a un tejido íntimo y sociopolítico que mantiene la forma investigativa y exploratoria de las películas de Agüero, a la que él mismo denomina cine de la divagación."
+  },
+  {
+   "titulo": "Programa 1: Materias insumisas",
+   "dia": "2026-10-30",
+   "hora": "17:30",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala Capital",
+   "ciudad": "Bogotá",
+   "ticket_url": "https://tuboleta.com/es/eventos/materias-insumisas",
+   "acceso": "Boletería en TuBoleta",
+   "_src": {
+    "url": "https://midbo.co/peliculas/os-arcos-dourados-de-olinda/",
+    "date": "2026-10-10"
+   },
+   "premiere": "Estreno en Colombia",
+   "seccion": "Competencia Iberoamericana de Cortometraje Documental",
+   "obras": [
+    {
+     "titulo": "Os Arcos Dourados de Olinda",
+     "director": "Douglas Henrique",
+     "pais": "Brasil",
+     "anio": 2025,
+     "duracion_min": 24,
+     "sinopsis": "A principios de los años 2000, en medio del fervor político de la ciudad de Olinda, un insólito enfrentamiento se desarrolla en el corazón de la ciudad más importante del mundo. El gigante del capitalismo, McDonald’s, prepara su llegada, mientras una comunista asciende como favorita para la alcaldía. Los olindenses están a punto de presenciar una guerra fría tardía y tomar partido. ¿Qué hizo que Olinda fuera conocida como la primera ciudad del mundo en llevar a la quiebra a un McDonald’s?"
+    },
+    {
+     "titulo": "La taquigrafista",
+     "director": "Azul Aizenberg",
+     "pais": "Argentina",
+     "anio": 2026,
+     "duracion_min": 25,
+     "sinopsis": "En 1976, durante la última dictadura militar en Argentina, 17 trabajadores de Mercedes-Benz fueron desaparecidos. Unos pocos documentos de su historia sobreviven: algunas fotografías tomadas por sus compañeros, un fragmento de película muda y documentos escritos por policías espías infiltrados en la fábrica con la complicidad del directorio. Entre estos archivos, la imagen de tres mujeres de las que sólo se adivina su nombre de pila y su oficio: taquigrafistas. Mari, una de ellas, es la destinataria de una carta que fabula su pasado entre la niebla de un presente signado por el cierre de la fábrica, luego de setenta años en el conurbano bonaerense."
+    },
+    {
+     "titulo": "Filme Pin",
+     "director": "María Rojas Arias y Andrés Jurado",
+     "pais": "Colombia, Portugal",
+     "anio": 2026,
+     "duracion_min": 7,
+     "sinopsis": "Entre la luz, el metal y la plata, «Filme Pin» convierte una colección de pines de solidaridad en un archivo a otra escala: espectros del exilio y de la lucha internacional contra el régimen fascista y colonial de Portugal."
+    },
+    {
+     "titulo": "Trizas",
+     "director": "Luciana Decker Orozco",
+     "pais": "Bolivia",
+     "anio": 2026,
+     "duracion_min": 14,
+     "sinopsis": "Dos viajes se entrelazan anacrónicamente: el de un médico inglés en Bolivia durante la década los 30 y el de la cineasta en Londres en 2024. La película aborda la problemática del arte a través de fragmentos, entendidos como esquirlas de mundos más amplios: ventanas o espejos que se abren y se cierran, revelando brevemente lo que hay más allá. A través del cine, los objetos se abordan como rastros de trayectorias del pasado y del presente, proponiendo maneras sensibles y afectivas de relacionarse con ellos. La exploración se desarrolla desde la colección de arte boliviano del Museo Británico, pasando por la colección de joyas del Museo V&A, hasta una colección privada de arte latinoamericano, todo ello contextualizado en Londres."
+    }
+   ],
+   "duracion_min": 71
+  },
+  {
+   "titulo": "Competencia Nacional de Cortometraje Documental",
+   "dia": "2026-10-30",
+   "hora": "18:30",
+   "sede": "Cine club Cine 40",
+   "ciudad": "Minca",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://midbo.co/peliculas/montana-luminosa/",
+    "date": "2026-10-10"
+   },
+   "seccion": "Competencia Nacional de Cortometraje Documental",
+   "obras": [
+    {
+     "titulo": "Montaña luminosa",
+     "director": "Lony Welter",
+     "pais": "Colombia",
+     "anio": 2026,
+     "duracion_min": 26,
+     "sinopsis": "En La Jagua, un pequeño pueblo ribereño del Huila, la llegada de los hombres que vienen a abrir la tierra para construir una represa hidroeléctrica altera el delicado pulso del territorio. Nidia (55), una mujer campesina y maestra artesana del fique, espera con silenciosa tristeza la partida de su único hijo, quien se marcha en busca de un futuro «mejor». A medida que la ansiedad y el insomnio se instalan en su vida, una extraña sensación comienza a crecer en su interior: una presencia inquietante que no logra nombrar. Mientras la tierra es abierta y herida, Nidia se debate entre expulsar o abrazar aquello que la rodea, aquello que se filtra en su cuerpo. Entre el barro, el viento, las lágrimas y las alucinantes e intoxicantes flores del borrachero, avanza hacia una revelación: una que contiene el antídoto para su dolor y el último aliento necesario para que la montaña dé a luz."
+    },
+    {
+     "titulo": "Un río de aguas profundas y luminosas",
+     "director": "Andrés Dávila",
+     "pais": "Colombia",
+     "anio": 2026,
+     "duracion_min": 30,
+     "sinopsis": "En los años setenta, siendo niña, Susana acompañó a su padre, Pedro Juajibioy, en distintos viajes por el Putumayo, donde él recolectaba plantas mientras soñaba con crear un jardín botánico en Sibundoy, su lugar de origen. Hoy, junto a Susana y Brayan, un joven botánico de Sibundoy, recorremos esos mismos caminos en la Amazonía colombiana, siguiendo las huellas de Pedro, reconocido por haber acompañado al etnobotánico Richard Evans Schultes en sus exploraciones por la región entre 1941 y 1953. Ese legado continúa en la labor de Brayan, quien, inspirado en el jardín de Pedro, destruido por una avalancha en la década de 1990, creó en Sibundoy un nuevo espacio de conservación y reanudó su trabajo de recolección y cuidado de las plantas. «Un río de aguas profundas y luminosas» acompaña estos recorridos, en los que se puede observar cómo el conocimiento se transmite entre generaciones y permanece vivo en quienes continúan practicándolo en su territorio. Andrés Dávila Colombia 2026 30 min Producción: Andrés Dávila, Laura Dávila, Carolina Mejía Fotografía: Andrés Dávila Sonido: Arsenio Cadea, Daniela Cano Montaje: Andrés Dávila"
+    },
+    {
+     "titulo": "La forma y la raíz",
+     "director": "Nathalia Quimbay Cadena y Valeria Moraima Berríos",
+     "pais": "Colombia, Cuba",
+     "anio": 2025,
+     "duracion_min": 14,
+     "sinopsis": "Un retrato de la vida en transformación en el campo: se nace, crece y muere. Es una invitación a percibir la existencia con mayor calma, prestando atención a aquellos pequeños detalles y micro-mundos que suelen pasar desapercibidos en nuestra cotidianidad, en donde se mezcla la vida de las plantas y los animales en su constante transcurso de crecimiento y muerte. Esta contemplación de la vida rural se captura a través de planos fijos y visualmente serenos, que contrastan con un vasto y dinámico movimiento de sonido, creando una experiencia sensorial inmersiva y profundamente reflexiva. Nos invita a recordar lo insignificantes que somos en este ciclo eterno, donde finalmente todos nos convertimos en polvo."
+    }
+   ],
+   "duracion_min": 64
+  },
+  {
+   "dia": "2026-10-30",
+   "hora": "19:00",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala 2",
+   "ciudad": "Bogotá",
+   "ticket_url": "https://tuboleta.com/es/eventos/muchedumbre",
+   "acceso": "Boletería en TuBoleta",
+   "_src": {
+    "url": "https://midbo.co/peliculas/muchedumbre/",
+    "date": "2026-10-10"
+   },
+   "has_qa": true,
+   "qa_type": "team",
+   "premiere": "Estreno en Colombia",
+   "seccion": "Competencia Nacional de Largometraje Documental",
+   "titulo": "Muchedumbre",
+   "director": "Felipe Rugeles Pineda",
+   "pais": "Colombia",
+   "anio": 2026,
+   "duracion_min": 73,
+   "sinopsis": "Un director de cine llega a un pueblo fantasma y se encuentra con personas que hablan un lenguaje que está entre la vida y la muerte. Nadie quiere recordar lo que pasó y todos parecen atemorizados por el terror de otro tiempo. La única pista son los fragmentos de una película inconclusa que alguien rodó en el mismo pueblo hace varios años con representaciones de torturas y masacres paramilitares. La película del presente y la del pasado se van contagiando la una a la otra, en un bucle de terror infinito que nunca encuentra un final. «Muchedumbre» recoge en sus varias capas y pliegues, no solo una historia decantada de la violencia en Colombia, sino una reflexión sobre su representación."
+  },
+  {
+   "dia": "2026-10-30",
+   "hora": "20:00",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala Capital",
+   "ciudad": "Bogotá",
+   "ticket_url": "https://tuboleta.com/es/eventos/colors-white-rock",
+   "acceso": "Boletería en TuBoleta",
+   "_src": {
+    "url": "https://midbo.co/peliculas/colors-of-white-rock/",
+    "date": "2026-10-10"
+   },
+   "premiere": "Estreno en Latinoamérica",
+   "seccion": "Panorama Internacional de Largometraje Documental",
+   "titulo": "Colors of White Rock",
+   "director": "Khoroldorj Choijoovanchig",
+   "pais": "Francia, Mongolia",
+   "anio": 2026,
+   "duracion_min": 81,
+   "sinopsis": "Maikhuu es una de las pocas mujeres que trabajan como conductoras de camiones en las rutas del carbón de Mongolia, en medio del auge minero que atraviesa el país. Día tras día, enfrenta la peligrosa tarea de transportar carbón a través del implacable desierto del Gobi. Atrapada en un convoy interminable de camiones con destino a la frontera con China, lucha por mantener a su familia, mientras su recorrido revela los costos humanos y ambientales de «Minegolia»."
+  },
+  {
+   "dia": "2026-10-31",
+   "hora": "14:00",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala Capital",
+   "ciudad": "Bogotá",
+   "ticket_url": "https://tuboleta.com/es/eventos/revolutionaries-never-die",
+   "acceso": "Boletería en TuBoleta",
+   "_src": {
+    "url": "https://midbo.co/peliculas/revolutionaries-never-die/",
+    "date": "2026-10-10"
+   },
+   "premiere": "Estreno en Latinoamérica",
+   "seccion": "Panorama Internacional de Largometraje Documental",
+   "titulo": "Revolutionaries Never Die",
+   "director": "Mohanad Yaqubi",
+   "pais": "Palestina, Bélgica, Catar",
+   "anio": 2026,
+   "duracion_min": 80,
+   "sinopsis": "En octubre de 2018, el cineasta Mohanad Yaqubi recibió una propuesta de colaboración de Jocelyne Saab, poco antes de su muerte. En respuesta a esta última invitación, Yaqubi se adentra en sus archivos y rastrea los vínculos entre el arte y la lucha política, mientras explora el impacto personal de una vida comprometida con la justicia. «Revolutionaries Never Die» rinde homenaje a una cineasta árabe independiente que documentó personas y lugares destinados a desaparecer. A través del montaje cronológico de sus imágenes, la película construye un retrato vívido de Saab, reflejando su persistencia política y su papel como cineasta en tiempos de lucha. La película utiliza la propia voz de Saab y un collage de sus extensos materiales multilingües —incluidos rushes y montajes— para reconstruir su trayectoria durante la década de 1970. Desde su mirada única, aborda la vida política árabe, en particular la revolución palestina y la convulsa situación del Líbano. Situada en el conflictivo presente de 2026, la película mira hacia el pasado para avanzar hacia el futuro. Entreteje la geopolítica y la emoción personal mediante operaciones cinematográficas que alteran la memoria y el contexto. Este ejercicio de revisión del pasado busca transformar nuestra percepción del presente y cuestionar las ideas que damos por establecidas."
+  },
+  {
+   "dia": "2026-10-31",
+   "hora": "14:30",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala 3",
+   "ciudad": "Bogotá",
+   "ticket_url": "https://tuboleta.com/es/eventos/un-lugar-mas-grande",
+   "acceso": "Boletería en TuBoleta",
+   "_src": {
+    "url": "https://midbo.co/peliculas/un-lugar-mas-grande/",
+    "date": "2026-10-10"
+   },
+   "seccion": "Competencia Iberoamericana de Largometraje Documental",
+   "titulo": "Un lugar más grande",
+   "director": "Nicolas Défossé",
+   "pais": "México, Francia",
+   "anio": 2025,
+   "duracion_min": 115,
+   "sinopsis": "Chiapas, sureste de México. Cuando los habitantes del pueblo de Tila y de varias aldeas expulsan al ayuntamiento y a la policía, se enfrentan al reto del autogobierno. «Un lugar más grande» explora la construcción de la autonomía en el día a día, revelando un amplio tejido de personas, generaciones, espíritus y paisajes, así como imágenes inéditas. Nos sumerge en el corazón de un proceso colectivo, cuando el autogobierno se convierte en una responsabilidad frente a uno mismo y a los demás. Una aventura de inspiración zapatista en territorio maya ch’ol."
+  },
+  {
+   "dia": "2026-10-31",
+   "hora": "16:30",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala Capital",
+   "ciudad": "Bogotá",
+   "ticket_url": "https://tuboleta.com/es/eventos/cien-ninos-esperando-un-tren",
+   "acceso": "Boletería en TuBoleta",
+   "_src": {
+    "url": "https://midbo.co/peliculas/cien-ninos-esperando-un-tren/",
+    "date": "2026-10-10"
+   },
+   "seccion": "Foco Ignacio Agüero",
+   "titulo": "Cien niños esperando un tren",
+   "director": "Ignacio Agüero",
+   "pais": "Chile",
+   "anio": 1988,
+   "duracion_min": 56,
+   "sinopsis": "Un documental sobre un taller de cine para niños impartido por Alicia Vega, una profesora de un barrio marginal de Santiago, dirigido a niños cuya característica común es que nunca han ido al cine. Cien años después de la invención del cine, cien niños asisten por primera vez a una sala de cine. Luego cuentan su experiencia en una película que realizan mediante dibujos sobre fotogramas de papel."
+  },
+  {
+   "dia": "2026-10-31",
+   "hora": "17:30",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala 3",
+   "ciudad": "Bogotá",
+   "ticket_url": "https://tuboleta.com/es/eventos/alea-jacarandas",
+   "acceso": "Boletería en TuBoleta",
+   "_src": {
+    "url": "https://midbo.co/peliculas/alea-jacarandas/",
+    "date": "2026-10-10"
+   },
+   "premiere": "Estreno en Latinoamérica",
+   "seccion": "Panorama Internacional de Largometraje Documental",
+   "titulo": "Alea Jacarandas",
+   "director": "Hassen Ferhani",
+   "pais": "Algeria, Francia",
+   "anio": 2026,
+   "duracion_min": 78,
+   "sinopsis": "En Argel, un escritor emprende un mapeo poético de las jacarandas, esos árboles de flores moradas originarios de América Latina. Su hijo, cineasta, lo acompaña en este viaje íntimo, en el que las historias del padre trazan un diccionario amoroso de la ciudad. Sus miradas entrelazadas componen la historia de una transmisión."
+  },
+  {
+   "titulo": "Programa 1: Desatender el mandato",
+   "dia": "2026-10-31",
+   "hora": "19:30",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala 2",
+   "ciudad": "Bogotá",
+   "ticket_url": "https://tuboleta.com/es/eventos/desatender-el-mandato",
+   "acceso": "Boletería en TuBoleta",
+   "_src": {
+    "url": "https://midbo.co/peliculas/unlearning-motherhood/",
+    "date": "2026-10-10"
+   },
+   "seccion": "Panorama Nacional de Documental",
+   "obras": [
+    {
+     "titulo": "Unlearning Motherhood",
+     "director": "Juliana Erazo Gómez",
+     "pais": "Colombia, Países Bajos",
+     "anio": 2025,
+     "duracion_min": 11,
+     "sinopsis": "Cuando se le retrasa el periodo, una mujer soltera de veintitantos, aterrorizada, va a la tienda a comprar una prueba de embarazo. Este trayecto adquiere un significado distinto cuando se encuentra con varias mujeres cuyas palabras, sin saberlo, la hacen cuestionar su profundo miedo a la maternidad."
+    },
+    {
+     "titulo": "Geografías de un hogar",
+     "director": "Juan Sebastián Pérez y Santiago Pérez",
+     "pais": "Colombia",
+     "anio": 2026,
+     "duracion_min": 53,
+     "sinopsis": "Dos hermanos colombianos —uno en Ciudad de México, el otro en Berlín— inician una correspondencia audiovisual experimental. A través de una serie de breves videocartas, exploran sus experiencias personales de migración y la búsqueda de un hogar Combinando found-footage, archivos familiares, imágenes originales y paisajes sonoros, el proyecto toma la forma de un diálogo visual íntimo. «Geografías de un hogar» es un ensayo visual colaborativo, donde cada hermano revisa, edita y responde al material del otro. Basado en la antropología visual y la auto-etnografía, el filme plantea una pregunta central: ¿cómo construimos un sentido de hogar y pertenencia cuando ya no vivimos en el país donde nacimos?"
+    },
+    {
+     "titulo": "Pacífico",
+     "director": "Daniel Duque",
+     "pais": "Francia, Colombia",
+     "anio": 2025,
+     "duracion_min": 22,
+     "sinopsis": "En el Pacífico colombiano se celebran los nacimientos con un canto en particular: los arrullos. Esta música honra la vida en un territorio en conflicto donde antiguos esclavos encontraron refugio al final de la esclavitud en Colombia. En estas mismas aguas, cada año, miles de ballenas llegan desde la Antártida para dar a luz a sus ballenatos. «Pacífico» teje un relato polifónico en torno a los nacimientos en un espacio líquido donde el cuerpo, el territorio y la historia se encuentran."
+    }
+   ],
+   "duracion_min": 82
+  },
+  {
+   "dia": "2026-10-31",
+   "hora": "20:00",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala 3",
+   "ciudad": "Bogotá",
+   "ticket_url": "https://tuboleta.com/es/eventos/red-moon-eclipse",
+   "acceso": "Boletería en TuBoleta",
+   "_src": {
+    "url": "https://midbo.co/peliculas/the-red-moon-eclipse/",
+    "date": "2026-10-10"
+   },
+   "premiere": "Estreno en Latinoamérica",
+   "seccion": "Panorama Internacional de Largometraje Documental",
+   "titulo": "The Red Moon Eclipse",
+   "director": "Caroline Guimbal",
+   "pais": "Bélgica",
+   "anio": 2025,
+   "duracion_min": 77,
+   "sinopsis": "Mi madre, Nathalie, morirá dentro de dos años. Mi hijo nacerá en nueve meses. Del pasado queda una espiral de violencia y precariedad que aún debemos descifrar. Pero también la fortaleza de mi madre y la poesía de su manera de estar en el mundo. Al filmarla, aprendo a ver a través de sus ojos. A medida que se acerca la muerte, ella sana su vida."
+  },
+  {
+   "dia": "2026-11-01",
+   "hora": "14:00",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala 3",
+   "ciudad": "Bogotá",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://midbo.co/peliculas/como-me-da-la-gana/",
+    "date": "2026-10-10"
+   },
+   "seccion": "Foco Ignacio Agüero",
+   "titulo": "Como me da la gana",
+   "director": "Ignacio Agüero",
+   "pais": "Chile",
+   "anio": 1985,
+   "duracion_min": 30,
+   "sinopsis": "El director Ignacio Agüero interrumpe el rodaje de una película que tiene lugar en Chile en 1984 para preguntar a los cineastas qué sentido tiene filmar en Chile bajo la dictadura de Pinochet."
+  },
+  {
+   "titulo": "Programa 2: Geografías en resistencia",
+   "dia": "2026-11-01",
+   "hora": "14:30",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala Capital",
+   "ciudad": "Bogotá",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://midbo.co/peliculas/apotnojushi-la-casa-del-viento/",
+    "date": "2026-10-10"
+   },
+   "has_qa": true,
+   "qa_type": "team",
+   "seccion": "Competencia Nacional de Cortometraje Documental",
+   "obras": [
+    {
+     "titulo": "Apotnojushi: la casa del viento",
+     "director": "Marbel Vanegas Jusayu",
+     "pais": "Colombia",
+     "anio": 2025,
+     "duracion_min": 12,
+     "sinopsis": "Ana Rosa Jusayu (mi madre), lideresa ancestral de la comunidad Apotnojushi, ubicada en cercanías del Cerro de La Teta en la alta Guajira Colombiana, trata de recuperar el tejido y unión familiar que ocasionó el «desarrollo sostenible» invasivo. En medio de las pocas esperanzas de sobrevivir en lo desolado de su territorio ancestral, la familia comparte su añoranza de permanecer en el territorio, enfrentando las dificultades y los cambios económicos que afectan al pueblo wayuu."
+    },
+    {
+     "titulo": "Un río de aguas profundas y luminosas",
+     "director": "Andrés Dávila",
+     "pais": "Colombia",
+     "anio": 2026,
+     "duracion_min": 30,
+     "sinopsis": "En los años setenta, siendo niña, Susana acompañó a su padre, Pedro Juajibioy, en distintos viajes por el Putumayo, donde él recolectaba plantas mientras soñaba con crear un jardín botánico en Sibundoy, su lugar de origen. Hoy, junto a Susana y Brayan, un joven botánico de Sibundoy, recorremos esos mismos caminos en la Amazonía colombiana, siguiendo las huellas de Pedro, reconocido por haber acompañado al etnobotánico Richard Evans Schultes en sus exploraciones por la región entre 1941 y 1953. Ese legado continúa en la labor de Brayan, quien, inspirado en el jardín de Pedro, destruido por una avalancha en la década de 1990, creó en Sibundoy un nuevo espacio de conservación y reanudó su trabajo de recolección y cuidado de las plantas. «Un río de aguas profundas y luminosas» acompaña estos recorridos, en los que se puede observar cómo el conocimiento se transmite entre generaciones y permanece vivo en quienes continúan practicándolo en su territorio. Andrés Dávila Colombia 2026 30 min Producción: Andrés Dávila, Laura Dávila, Carolina Mejía Fotografía: Andrés Dávila Sonido: Arsenio Cadea, Daniela Cano Montaje: Andrés Dávila"
+    },
+    {
+     "titulo": "El salto",
+     "director": "Jerónimo Rincón",
+     "pais": "Colombia",
+     "anio": 2026,
+     "duracion_min": 12,
+     "sinopsis": "Según el mito indígena Muisca, la llanura de Bogotá alguna vez fue inundada por arroyos que amenazaban con arrasarlo todo. Apareció entonces el dios Bochica, quien con su bastón hirió la serranía y abrió paso a sus aguas represadas, formando así el Salto del Tequendama. En la orilla del precipicio, el río Bogotá se lanza sobre un banco de piedras. Allí se estrella y se arroja en forma de espumas y vapores hacia el abismo que lo espera."
+    },
+    {
+     "titulo": "La forma y la raíz",
+     "director": "Nathalia Quimbay Cadena y Valeria Moraima Berríos",
+     "pais": "Colombia, Cuba",
+     "anio": 2025,
+     "duracion_min": 14,
+     "sinopsis": "Un retrato de la vida en transformación en el campo: se nace, crece y muere. Es una invitación a percibir la existencia con mayor calma, prestando atención a aquellos pequeños detalles y micro-mundos que suelen pasar desapercibidos en nuestra cotidianidad, en donde se mezcla la vida de las plantas y los animales en su constante transcurso de crecimiento y muerte. Esta contemplación de la vida rural se captura a través de planos fijos y visualmente serenos, que contrastan con un vasto y dinámico movimiento de sonido, creando una experiencia sensorial inmersiva y profundamente reflexiva. Nos invita a recordar lo insignificantes que somos en este ciclo eterno, donde finalmente todos nos convertimos en polvo."
+    },
+    {
+     "titulo": "Sombras en la niebla",
+     "director": "Pedro Pablo Vega Reyes",
+     "pais": "Colombia",
+     "anio": 2026,
+     "duracion_min": 25,
+     "sinopsis": "En lo alto del páramo de Chiscas, en Boyacá, viven las ovejas que Edualdo y Ana cuidan desde hace décadas. En medio de la niebla, Wilmer, su hijo menor, crece entre el juego y las rutinas del campo. En esta película, la geografía no es sólo escenario. El páramo se impone como una presencia viva, bella y a la vez agreste, que configura la experiencia de la familia, determinando sus afectos, sus tiempos y su relación con la vida y la muerte."
+    }
+   ],
+   "duracion_min": 91
+  },
+  {
+   "titulo": "Programa 5: Gestos de expresión sobre violencias basadas en género",
+   "dia": "2026-11-01",
+   "hora": "15:00",
+   "sede": "Potocine",
+   "ciudad": "Bogotá",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://midbo.co/peliculas/bucan-tu-rhachhidu/",
+    "date": "2026-10-10"
+   },
+   "seccion": "Espejos: Gestos de reparación",
+   "obras": [
+    {
+     "titulo": "Bucan Tu Rhachhidu",
+     "director": "Luna Marán",
+     "pais": "México",
+     "anio": 2023,
+     "duracion_min": 28,
+     "sinopsis": "Desde el futuro comunal, una mujer recuerda las palabras de sus ancestras, mujeres guerreras que se reunieron para dejar grabadas sus palabras en torno al servicio comunitario. Al mismo tiempo, cuestiona su propio futuro: ¿algún día dejaremos de pelear? ¿A alguien le importa lo que decimos?"
+    },
+    {
+     "titulo": "Comparsa",
+     "director": "Vickie Curtis y Doug Anderson",
+     "pais": "Guatemala, Estados Unidos",
+     "anio": 2025,
+     "duracion_min": 78,
+     "sinopsis": "«Comparsa» sumerge por completo al público en el mundo intenso de Ciudad Peronia, Guatemala, donde las hermanas Lesli y Lupe utilizan el arte para movilizar a la juventud local y sanar heridas profundas. Tras la muerte de 41 niñas en un «Hogar Seguro» administrado por el Estado, y ante la negativa del gobierno a actuar, las hermanas responden con una comparsa comunitaria: una vibrante intervención callejera con marionetas gigantes, zanqueros que lanzan fuego y tambores atronadores. Con una valentía profundamente vulnerable, denuncian una estructura de poder que permite y perpetra la violencia contra las mujeres, y hablan abiertamente de la que ellas mismas han sufrido en su hogar. Su movimiento juvenil toma las calles, enfrentando la corrupción y reclamando el espacio público para mujeres y niñas. Al enraizar su lucha en la alegría y el cuidado colectivo, encuentran también sanación personal. «Comparsa» se construye sobre una relación de quince años entre las protagonistas y el equipo de realización, y ofrece un retrato conmovedor de la sororidad, la construcción de paz y el poder transformador del arte."
+    }
+   ],
+   "duracion_min": 107
+  },
+  {
+   "titulo": "Programa 3: Nacer de nuevo, escuchar la vida",
+   "dia": "2026-11-01",
+   "hora": "16:00",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala 2",
+   "ciudad": "Bogotá",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://midbo.co/peliculas/chanson-pour-le-nouveau-monde/",
+    "date": "2026-10-10"
+   },
+   "seccion": "Programas especiales",
+   "obras": [
+    {
+     "titulo": "Chanson pour le nouveau monde",
+     "director": "Miryam Charles",
+     "pais": "Canada, Haití",
+     "anio": 2021,
+     "duracion_min": 9,
+     "sinopsis": "Años después de la desaparición de su padre en Escocia, una joven recuerda su infancia en una isla del Caribe. Miryam Charles Canada, Haití 2021 9 min Producción: Karine Bélanger Fotografía: Miryam Charles Sonido: Miryam Charles Montaje: Miryam Charles"
+    },
+    {
+     "titulo": "Ciclón",
+     "director": "Santiago Álvarez",
+     "pais": "Cuba",
+     "anio": 1963,
+     "duracion_min": 22,
+     "sinopsis": "En octubre de 1963 el ciclón Flora devastó las provincias de Oriente y Camagüey, dejando a su paso numerosas víctimas y cuantiosos daños materiales. Este documental muestra los trabajos de salvamento y evacuación. Santiago Álvarez Cuba 1963 22 min Producción: ICAIC Fotografía: Camarógrafos del Noticiero ICAIC Latinoamericano, Noticiero Nacional de TV y Sección Fílmica del MINFAR Sonido: Marcos Madrigal Montaje: Mario González y Norma Torrado"
+    },
+    {
+     "titulo": "Nacer de nuevo",
+     "director": "Marta Rodríguez",
+     "pais": "Colombia",
+     "anio": 1986,
+     "duracion_min": 30,
+     "sinopsis": "El 13 de noviembre de 1985 la ciudad de Armero fue abatida por una avalancha del volcán Nevado del Ruiz, ocasionando miles de muertos y desaparecidos. Este acontecimiento sigue siendo, al día de hoy, una de las peores catástrofes naturales en Colombia. «Nacer de nuevo» sigue la vida cotidiana de María Eugenia, una anciana sobreviviente de la catástrofe y refugiada en un campo instalado por la Cruz Roja. Una crónica de la tercera edad que retrata a una mujer que demuestra, con su tenacidad y humor, que es posible encontrar poesía en las peores dificultades. Este documental rinde homenaje al coraje y la dignidad de este personaje mágico y reflexiona sobre la muerte, el amor y el impulso de vida. Marta Rodríguez Colombia 1986 30 min Producción: Fundación Cine Documental / FOCINE Fotografía: Lucas Silva, Juan José Bejarano Sonido: Ignacio Jiménez, Sara Silva Montaje: Gabriel González Balli, Marta Rodríguez, Piedad Ávila, Lucas Silva"
+    }
+   ],
+   "duracion_min": 60
+  },
+  {
+   "titulo": "Cortometrajes restaurados",
+   "dia": "2026-11-01",
+   "hora": "17:00",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala Capital",
+   "ciudad": "Bogotá",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://midbo.co/peliculas/ire-a-santiago/",
+    "date": "2026-10-10"
+   },
+   "seccion": "Retrospectiva: Sara Gómez",
+   "obras": [
+    {
+     "titulo": "Iré a Santiago",
+     "director": "Sara Gómez",
+     "pais": "Cuba",
+     "anio": 1964,
+     "duracion_min": 15,
+     "sinopsis": "Cinco años después de la Revolución y un año después de trabajar con Agnès Varda como asistente de dirección de «Salut les Cubains», Sara Gómez lanza su primer cortometraje con sello autoral para mostrar otra cara de Cuba y de su Revolución. Esta obra, con travieso ritmo en el montaje, enseña la herencia haitiana y el carácter diverso de Oriente, y enfoca sin vacilar la negritud y el carácter de Santiago de Cuba. Una celebración de la ciudad oriental de Cuba, Santiago De Cuba y su población negra y afrocubana, un lugar donde el pasado colonial y las costumbres contemporáneas se mezclan. Sara Gómez Cuba 1964 15 min Producción: ICAIC - Fernando Pi Fotografía: Mario García Joya Sonido: Raúl García Montaje: Roberto Bravo"
+    },
+    {
+     "titulo": "En la otra isla",
+     "director": "Sara Gómez",
+     "pais": "Cuba",
+     "anio": 1968,
+     "duracion_min": 41,
+     "sinopsis": "Generando un espacio de confianza, dialéctica y complicidad con sus personajes y los espectadores, Sara Gómez hace un retrato coral de la juventud cubana marginalizada y con «problemas de conducta» que llegó a la granja de La Isla de los Pinos (hoy, Isla de la Juventud) a participar de un proyecto de reeducación recién inaugurado por la naciente Revolución. Por medio de conversaciones íntimas y divertidas performances, la directora logra poner en cámara las tensiones y las problemáticas de estos chicos y chicas en un documental que abre horizontes y deja hablar a los silencios. Sara Gómez Cuba 1968 41 min Producción: ICAIC - Jesús Pascau Fotografía: Luis García Sonido: Germinal Hernández Montaje: Caíta Villalón"
+    },
+    {
+     "titulo": "Una isla para Miguel",
+     "director": "Sara Gómez",
+     "pais": "Cuba",
+     "anio": 1968,
+     "duracion_min": 22,
+     "sinopsis": "Segunda de la trilogía, este cortometraje documental retrata a Miguel, uno de los tantos niños cubanos que fueron a parar en la Isla de los Pinos luego de la Revolución. Los debates y anécdotas de los maestros, las pilatunas de los niños rebeldes y el contexto sociocultural de Miguel, nos muestran de cerca este proyecto «utópico y reeducativo» que bajo las banderas de la disciplina y la productividad buscaba enderezar la vida de estos pequeños y educar al nuevo hombre cubano. Sara Gómez Cuba 1968 22 min Producción: ICAIC - Jesús Pascau Fotografía: Luis García Sonido: Germinal Hernández y Arturo Valdés Montaje: Caíta Villalón"
+    },
+    {
+     "titulo": "Isla del tesoro",
+     "director": "Sara Gómez",
+     "pais": "Cuba",
+     "anio": 1969,
+     "duracion_min": 10,
+     "sinopsis": "Usando imágenes de archivo y mosaicos fotográficos, Sara Gómez cierra la trilogía de la Isla de Pinos con un cortometraje que cuenta la historia de la isla y sus muchos nombres: desde que fue escenario de batallas de piratas y corsarios, hasta ser colonia yanqui y prisión, y finalmente convertirse en el proyecto productivo agrícola y de reeducación para la juventud de la Revolución. Al igual que en «La otra isla», el cortometraje está acompañado por la voz de Omara Portuondo, quien canta especialmente para esta trilogía. Una breve evocación poética de Sara Gómez de la isla donde Fidel Castro fue encarcelado por Batista, donde la revolución construye una nueva sociedad. Una yuxtaposición del penal Presidio Modelo con la producción de cítricos. Una visión de la Isla de Pinos desde su descubrimiento hasta la actualidad, cuando se ha convertido en la Isla de la Juventud, donde la Revolución construye una nueva sociedad con la participación activa de los jóvenes. Sara Gómez Cuba 1969 10 min Producción: ICAIC - Jesús Pascau Fotografía: Luis García Sonido: Germinal Hernández Montaje: Caíta Villalón"
+    }
+   ],
+   "duracion_min": 86
+  },
+  {
+   "dia": "2026-11-01",
+   "hora": "17:00",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala 3",
+   "ciudad": "Bogotá",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://midbo.co/peliculas/hombres-perdidos/",
+    "date": "2026-10-10"
+   },
+   "seccion": "Competencia Iberoamericana de Largometraje Documental",
+   "titulo": "Hombres perdidos",
+   "director": "Andrés Madrigal Alvarado",
+   "pais": "Costa Rica, Guatemala",
+   "anio": 2026,
+   "duracion_min": 84,
+   "sinopsis": "Mi abuelo, Neftalí Madrigal Cartín, casado durante 57 años en Costa Rica, murió en un incendio en 2019. Mi papá me reveló que, al igual que yo, mi abuelo era gay. Tras esta revelación, juntos revisitamos la vida de mi abuelo mientras buscamos darle un último acto de liberación, descubriéndonos a nosotros mismos en el proceso."
+  },
+  {
+   "titulo": "Programa 2: Algún día escribire(mos) sobre flores como si fueran nuestras",
+   "dia": "2026-11-01",
+   "hora": "18:30",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala 2",
+   "ciudad": "Bogotá",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://midbo.co/peliculas/the-flowers-stand-silently-witnessing/",
+    "date": "2026-10-10"
+   },
+   "premiere": "Estreno en Colombia",
+   "seccion": "Programas especiales",
+   "obras": [
+    {
+     "titulo": "The Flowers Stand Silently, Witnessing",
+     "director": "Theo Panagopoulos",
+     "pais": "Escocia (Reino Unido)",
+     "anio": 2024,
+     "duracion_min": 17,
+     "sinopsis": "Cuando un cineasta palestino radicado en Escocia descubre un archivo cinematográfico escocés poco conocido sobre las flores silvestres de Palestina, decide reapropiarse de esas imágenes. Este delicado ensayo cinematográfico cuestiona el papel de la producción de imágenes como herramienta tanto de testimonio como de violencia cuando está vinculada a las complejas relaciones entre las personas y la tierra."
+    },
+    {
+     "titulo": "Wild Flowers",
+     "director": "Karla Crnčević",
+     "pais": "Croacia, España",
+     "anio": 2022,
+     "duracion_min": 11,
+     "sinopsis": "Mi padre utilizó una cámara una sola vez en su vida. Treinta años después, me pidió que digitalizara el material que había grabado en VHS. Me preguntaba qué recordaba él."
+    },
+    {
+     "titulo": "Yrupẽ",
+     "director": "Candela Sotos",
+     "pais": "España",
+     "anio": 2025,
+     "duracion_min": 80,
+     "sinopsis": "La Yrupé es un nenúfar amazónico nativo de los ríos Paraná y Paraguay. De sus raíces rizomáticas crecen tallos espinosos que se abren en grandes hojas carnosas y flotantes de hasta dos metros de largo. Su hermosa flor, con más de cien pétalos, florece durante dos noches, una vez al año. La Flor de Yrupé es el título de una película perdida que Guillermo Fernández-Zúñiga —fotógrafo, cineasta científico y biólogo, nacido en 1909 en España— realizó sobre la planta, durante su exilio en Buenos Aires tras la Guerra Civil Española. Setenta años después, la búsqueda del film perdido y el proceso de cuidado de la Yrupé nos lleva a reflexionar sobre las intersecciones entre humanos y no humanos, entre colonialismo y exilio, entre historia natural e identidad nacional para contar nuevas historias y acceder a nuevas posibilidades de relación con nuestros entornos."
+    },
+    {
+     "titulo": "Sol de niebla",
+     "director": "Maria José Ibarra y Florentino Vargas",
+     "pais": "Colombia",
+     "anio": 2026,
+     "duracion_min": 6,
+     "sinopsis": "«Sol de niebla» aborda una visión fragmentada y poliangular de los frailejones a través de una yuxtaposición de planos en detalle (macro) a modo de estudio morfológico de la planta, contraponiendo ilustraciones científicas, representaciones institucionales-oficiales y discursos alrededor de la Espeletia (frailejón), cuya denominación surge como un homenaje a un virrey de la Nueva Granada. El metraje, filmado en soporte fotosensible, aporta una noción de registro tangible de los frailejones y sus inflorescencias, creando un símil de la planta como territorio habitado por diversas manifestaciones de vida, lo cual nos cuestiona sobre el valor de los ecosistemas actualmente amenazados por actividades extractivistas que resuenan desde tiempos de la colonia española."
+    }
+   ],
+   "duracion_min": 114
+  },
+  {
+   "titulo": "Programa 2: Iniciación en la octava dimensión",
+   "dia": "2026-11-01",
+   "hora": "19:00",
+   "sede": "Canterbury Café",
+   "ciudad": "Bogotá",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://midbo.co/peliculas/iniciacion-en-la-octava-dimension/",
+    "date": "2026-10-10"
+   },
+   "has_qa": true,
+   "qa_type": "team",
+   "seccion": "Panorama Nacional de Documental",
+   "obras": [
+    {
+     "titulo": "Iniciación en la Octava Dimensión",
+     "director": "Lucas Silva",
+     "pais": "Colombia",
+     "anio": 2026,
+     "duracion_min": 90,
+     "sinopsis": "Cinco personajes afro en medio de la ciudad de Bogotá, cinco destinos disparejos en medio de una ciudad hostil. Rubí Quejada, joven modelo, desplazada del Chocó; Shaka, rapero y champetúo que trabaja en un café internet; Makambile, cantante de champeta y mesero; Jah-Man, profeta autodidacta de Buenaventura; y Afreeway, joven “gangsta” que busca realizar un gran golpe. Cinco historias de vida que se cruzan, y crean un diálogo de espejos entre ellas. Así el filme viaja de vuelta al origen, al Pacífico colombiano, Quibdó y Guapi, donde asistimos a una lectura visual del «Nuevo Evangelio» de Jah-Man, la historia descolonizada del Pacífico colombiano desde tiempos antiguos hasta hoy. Destinos cruzados de guerreros en trance, entre lo urbano y lo rural, donde vemos cómo sus vidas se construyen entre recuerdos de un pasado conflictivo y sueños improbables en medio de la gran urbe de cemento. Lucas Silva Colombia 2026 90 min Producción: Samuel Moreno Alvarez Fotografía: Lucas Silva Sonido: Cesar Salazar, Jose Jairo Florez Montaje: Lucas Silva"
+    }
+   ],
+   "duracion_min": 90
+  },
+  {
+   "dia": "2026-11-01",
+   "hora": "19:30",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala 3",
+   "ciudad": "Bogotá",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://midbo.co/peliculas/back-to-fukushima/",
+    "date": "2026-10-10"
+   },
+   "premiere": "Estreno en Latinoamérica",
+   "seccion": "Panorama Internacional de Largometraje Documental",
+   "titulo": "Back to Fukushima",
+   "director": "Thomas Licata",
+   "pais": "Bélgica",
+   "anio": 2026,
+   "duracion_min": 79,
+   "sinopsis": "El 11 de marzo de 2011 ocurrió uno de los peores desastres nucleares de la historia. Sin embargo, más de una década después, la región, todavía gravemente contaminada, parece estar reconstruyéndose. El Gobierno japonés planea reactivar su programa nuclear. Este documental se sitúa en un contexto de consentimiento social tácito, en el que un acontecimiento dramático parece desvanecerse en el olvido. Fukushima puede alimentar fantasías posapocalípticas, pero la realidad es muy distinta. El accidente se ha disuelto en las plantas y el suelo hasta volverse invisible. En lugar de ofrecer otra mirada sobre los últimos supervivientes que habitan las zonas contaminadas, la película adopta el enfoque contrario: años después, observa la reconstrucción y la extraña aceptación de la vida en un espacio contaminado, cueste lo que cueste. Incluso si ello implica ignorar la radiactividad invisible, porque, al fin y al cabo, no deberíamos ser «radiofóbicos». Detrás de todo esto surge una pregunta: ¿por qué persistimos en un camino que conduce a la ruina cuando todos los indicios nos señalan que deberíamos tomar decisiones opuestas? Japón destaca en este sentido. Tierra de desastres naturales, funciona como un faro que ilumina el camino que estamos dispuestos a seguir para mantener nuestro mundo de hiperconsumo. Las decisiones de los gobiernos afectan a poblaciones que sufren sus consecuencias. Y, sin embargo, esas mismas poblaciones, sin dejarse engañar, soportan las peores situaciones en las que se ven sumidas. Esta sociología del desastre, traducida al lenguaje cinematográfico, ofrece un amplio abanico de posibilidades que la película explora."
+  },
+  {
+   "dia": "2026-11-01",
+   "hora": "19:30",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala Capital",
+   "ciudad": "Bogotá",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://midbo.co/peliculas/relicto/",
+    "date": "2026-10-10"
+   },
+   "has_qa": true,
+   "qa_type": "team",
+   "premiere": "Estreno en Colombia",
+   "seccion": "Competencia Nacional de Largometraje Documental",
+   "titulo": "Relicto",
+   "director": "Guillermo Quintero",
+   "pais": "Colombia, Francia",
+   "anio": 2026,
+   "duracion_min": 97,
+   "sinopsis": "En algún lugar del norte de la Amazonía colombiana se encuentra el viejo Sixto Muñoz, también conocido como el «último indio tinigua». Según dicen, en la región donde ha vivido las últimas décadas, a sus 105 años, Sixto ha decidido dejar su casa en la laguna de Yarumales para emprender su «último viaje» a la selva. En un viaje a lo largo del río Guayabero, desde La Macarena hasta el Guaviare, sigo su rastro con la esperanza de encontrarlo antes de su muerte."
+  },
+  {
+   "titulo": "CREAndo documental en los barrios",
+   "dia": "2026-11-02",
+   "hora": "10:00",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala Capital",
+   "ciudad": "Bogotá",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://midbo.co/peliculas/los-guardianes-del-agua/",
+    "date": "2026-10-10"
+   },
+   "seccion": "CREAndo documental en los barrios",
+   "obras": [
+    {
+     "titulo": "Los guardianes del agua",
+     "director": "Zensibiliso",
+     "pais": "Colombia",
+     "anio": 2026,
+     "duracion_min": 9,
+     "sinopsis": "¿Qué nos dice el agua cuando decidimos escucharla? En medio de una ciudad que no deja de crecer, el Humedal de Techo resiste como un territorio donde el agua y la vida aún encuentran refugio. El documental explora la relación entre el humedal y la expansión urbana, revelando las huellas del deterioro ambiental y la lucha silenciosa de un ecosistema por permanecer. Una mirada poética y crítica sobre lo que hemos perdido, lo que aún permanece y aquello que estamos a tiempo de proteger. Zensibiliso Colombia 2026 9 min Producción: Silvia Camacho, Juan Molina Fotografía: Miguel Betancourt Sonido: Manuel Ruiz Montaje: Steven Zuluaga"
+    },
+    {
+     "titulo": "Tercer acto",
+     "director": "Entramados",
+     "pais": "Colombia",
+     "anio": 2026,
+     "duracion_min": 10,
+     "sinopsis": "Hay una etapa de la vida en la que el tiempo deja de ser una promesa y se convierte en memoria. La vida se entreteje como un hilo de memorias, y en cada uno de nuestros recuerdos tejemos alegrías, esfuerzos y esperanzas. Antonio, Elsa y Rafael son héroes de su propia historia, entrelazando momentos que con el pasar de los años se convierten en recuerdos conservados a través de las fotografías, en los viejos álbumes que atesoran como guardianes del momento y que son testimonio de quienes son, hacia dónde van y cómo habitan su presente. «Tercer acto» es un ensayo cinematográfico que se acerca a personas que han llegado a una nueva etapa de sus vidas para descubrir, a través de sus recuerdos, sus silencios y sus palabras, las historias que las han convertido en quienes son. Más que hablar de la edad, el corto habla de identidad, memoria y transformación: de lo que permanece, de lo que cambia y de la posibilidad de seguir escribiendo la propia historia cuando parece que ya todo ha sido contado. Porque el tercer acto no es el final de la historia. Es la parte en la que, finalmente, podemos mirarla con otros ojos. Entramados Colombia 2026 10 min Producción: Entramados Fotografía: Entramados Sonido: Entramados Montaje: Entramados"
+    },
+    {
+     "titulo": "Querida Engativá",
+     "director": "06 Frames",
+     "pais": "Colombia",
+     "anio": 2026,
+     "duracion_min": 8,
+     "sinopsis": "A través de palabras y de un sentimiento que va más allá de lo superficial, «Querida Engativá» demuestra cómo un lugar puede ser más que un hogar, donde se reflejan las cosas buenas y malas que están en el territorio. Esta carta audiovisual presenta el lugar donde muchos crecieron, ese lugar que muchos ven como recuerdos, historias y enseñanzas; además de eso «Querida Engativá» no oculta lo malo, simplemente lo muestra de una manera natural, pues también hace parte del territorio. Engativá es más que calles y edificios: Engativá son las personas que habitan en ella. Por esta razón, «Querida Engativá» busca mostrar a su comunidad desde una mirada cercana y sincera, mostrar todo lo que las personas ven como algo común y sencillo de una manera diferente, una manera en la que Engativa también siente. 06 Frames Colombia 2026 8 min Producción: 06 Frames Fotografía: Ricardo Nieto Sonido: Diego Alejandro Vanegas Montaje: Carolina Martinez"
+    },
+    {
+     "titulo": "La voz de los que no hablan",
+     "director": "Ñefix",
+     "pais": "Colombia",
+     "anio": 2026,
+     "duracion_min": 10,
+     "sinopsis": "Los animales comparten nuestro planeta, nuestros territorios y, en muchos casos, nuestros hogares, pero ¿alguna vez nos hemos preguntado qué sienten, qué necesitan o qué nos dirían si pudieran hablar? «La voz de los que no hablan» es un documental infantil que se acerca al mundo animal desde la curiosidad, el juego y la imaginación. A través de entrevistas, testimonios, historias, datos curiosos y experiencias cotidianas, niños y adultos descubren diferentes maneras en las que los animales se comunican y expresan sus necesidades. La propuesta combina realidad y ficción mediante la aparición de un animal que, por un momento, adquiere voz para contar su propia historia y poner en palabras aquello que muchas veces no sabemos escuchar. Desde esta mirada, el documental plantea preguntas sobre nuestra relación con los animales y con el entorno que habitamos. Más que hablar por los animales, la película busca despertar la capacidad de observar, escuchar y reconocer otras formas de vida. Así, invita a niños, niñas y adultos a reflexionar sobre el cuidado, el respeto, la protección y la responsabilidad que tenemos frente a todas las especies que comparten con nosotros este planeta. Ñefix Colombia 2026 10 min Producción: Silvana Pedraza Fotografía: Kenyer Vasquez Sonido: Isabela Castañeda Montaje: Fernando Barrera"
+    },
+    {
+     "titulo": "El espíritu de los Andes",
+     "director": "El Cuarto Oscuro",
+     "pais": "Colombia",
+     "anio": 2026,
+     "duracion_min": 10,
+     "sinopsis": "«El espíritu de los Andes» es un documental que, a través de la mirada de Diana Bautista y su cotidianidad, nos muestra cómo conviven las comunidades del páramo de Almorzadero con el cóndor andino y cómo han aprendido a proteger la especie a través de estrategias pedagógicas y de conservación, en las que intervienen distintos actores de la comunidad y organizaciones públicas y privadas de Santander y de Colombia en general. El Cuarto Oscuro Colombia 2026 10 min Producción: Lilia Mejia Fotografía: Mauricio Echeverry Sonido: Viviana Fuquene, Katherine Sanchez Montaje: Edicion colectiva El Cuarto Oscuro"
+    },
+    {
+     "titulo": "Voces y sombras",
+     "director": "Cinescape",
+     "pais": "Colombia",
+     "anio": 2026,
+     "duracion_min": 10,
+     "sinopsis": "En la fría monotonía de una penitenciaría, el tiempo se mide en rejas y silencios. Sin embargo, un grupo de personas privadas de la libertad ha encontrado una rendija de libertad a través de un colectivo que busca convertirse en una escuela de cine interna, con la que ya han dado vida a un cortometraje y un videoclip. Actualmente, el colectivo se enfrenta a su desafío más emotivo: finalizar su primer ejercicio documental. La obra que intentaba retratar a un hombre ciego y locutor de radio que, paradójicamente, ya ha salido en libertad, dejando atrás su voz grabada en un disco duro, transformó la idea inicial y la historia; el proceso documental se termina cruzando con las reflexiones del grupo sobre su propio encierro, la luz y la sombra que puede significar el estar allí y la necesidad vital de crear. La cámara registra no solo las voces del encierro sino la esperanza de libertad de cada uno de ellos. Cinescape Colombia 2026 10 min Producción: Colectivo Cinescape Fotografía: Oscar Moreno Sonido: Elibardo Sepulveda, Jhon Sanchez Montaje: Nicolas Gomez"
+    },
+    {
+     "titulo": "Salvando el proyecto",
+     "director": "Voces Isabelinas",
+     "pais": "Colombia",
+     "anio": 2026,
+     "duracion_min": 7,
+     "sinopsis": "En el Colegio Isabel II, en Bogotá, un grupo de estudiantes se enfrenta a un entorno marcado por la rutina, las barreras comunicativas y la dificultad para participar. Entre estudiantes sordos y oyentes surge la necesidad de encontrar nuevas formas de encontrarse, expresarse y ser escuchados. Así nace Voces Isabelinas, una emisora escolar que convierte un espacio olvidado del colegio en un lugar para crear, compartir y hacer comunidad. A través de la palabra, la música, las imágenes y la Lengua de Señas Colombiana, los estudiantes descubren que comunicarse no significa hacerlo todos de la misma manera. El proceso de creación de la emisora revela cómo el trabajo colectivo puede transformar no solo un espacio físico, sino también las relaciones dentro de la escuela, haciendo visible que todas las voces —incluso aquellas que no se escuchan con los oídos— tienen algo que contar. Voces Isabelinas Colombia 2026 7 min Producción: Catherine Ávila, Daniel Hincapé, Sindy Joya, Daniela Chacón Fotografía: Daniel Hincapié Sonido: Daniela Chacón González Montaje: Daniela Chacón González"
+    },
+    {
+     "titulo": "Legados de un mismo suelo",
+     "director": "Colectivo Fraktal 19",
+     "pais": "Colombia",
+     "anio": 2026,
+     "duracion_min": 10,
+     "sinopsis": "«He cambiado de nombre, pero mi alma… mi alma sigue siendo la misma». Así habla el protagonista de esta historia: un edificio en el barrio Lucero Bajo, Ciudad Bolívar, que narra en primera persona su propia transformación. Nacido como el colegio Rómulo Gallegos —y vinculado a una sede hermana en Meissen—, este espacio fue levantado y sostenido por el amor y la entrega de Doña Lola y Don Julio, sus fundadores. A través de una íntima voz en off y los testimonios de fundadores, maestros y exalumnos, la estructura relata cómo «cambió de piel» al compás del tiempo. Los recuerdos de las viejas aulas se entrelazan con su presente: hoy, transformado en un centro CREA, sus pasillos renacen como laboratorios de creación donde niños y jóvenes exploran su sensibilidad artística. Colectivo Fraktal 19 Colombia 2026 10 min Producción: Jeimmy Huerfano Fotografía: Yeraldin Tellez Sonido: Grabriela Clavijo, Boris Corredor Montaje: Raul Montaña"
+    }
+   ],
+   "duracion_min": 100
+  },
+  {
+   "titulo": "¿Quién paga el pato? + Crónica de un baile de muñeco",
+   "dia": "2026-11-02",
+   "hora": "14:00",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala 3",
+   "ciudad": "Bogotá",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://midbo.co/peliculas/quien-paga-el-pato/",
+    "date": "2026-10-10"
+   },
+   "has_qa": true,
+   "qa_type": "team",
+   "seccion": "Homenaje a Pablo Mora Calderón. Premio ALADOS a toda una vida",
+   "obras": [
+    {
+     "titulo": "¿Quién paga el pato?",
+     "director": "Pablo Mora Calderón",
+     "pais": "Colombia",
+     "anio": 2000,
+     "duracion_min": 30,
+     "sinopsis": "En un enredo futurista, este thriller satírico y de crónica roja expone de forma irónica cómo el azar y el destino juegan con la vida de una reportera (Cristina Umaña) y el último gamín bogotano (John Alex Toro). Pablo Mora Calderón Colombia 2000 30 min Producción: Federico Durán Amorocho Fotografía: Mauricio Vidal Sonido: César Salazar, Roberto García, Ricardo Escallón Montaje: Pablo Mora Calderón"
+    },
+    {
+     "titulo": "Crónica de un baile de muñeco",
+     "director": "Pablo Mora",
+     "pais": "Colombia",
+     "anio": 2003,
+     "duracion_min": 51,
+     "sinopsis": "En la selva amazónica colombiana el pueblo indígena Yucuna de Puerto Córdoba se dispone a celebrar un ritual ancestral sobre el origen sagrado de los animales. Con el fin de experimentar con nuevas formas de transmisión cultural, el chamán invita a una pareja de antropólogos documentalistas. Poco antes de su llegada el chamán muere. Sin saber los pormenores del proyecto, la comunidad espera con expectativa la llegada de los blancos. Esta es la historia contada por los indígenas."
+    }
+   ],
+   "duracion_min": 80
+  },
+  {
+   "titulo": "Programa 3: Creadoras de vida",
+   "dia": "2026-11-02",
+   "hora": "14:00",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala Capital",
+   "ciudad": "Bogotá",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://midbo.co/peliculas/geografia-espectral/",
+    "date": "2026-10-10"
+   },
+   "has_qa": true,
+   "qa_type": "team",
+   "seccion": "Competencia Nacional de Cortometraje Documental",
+   "obras": [
+    {
+     "titulo": "Geografía espectral",
+     "director": "Manuel Mateo Gómez",
+     "pais": "Colombia",
+     "anio": 2026,
+     "duracion_min": 22,
+     "sinopsis": "A orillas de una represa hidroeléctrica, cuya construcción sepultó el antiguo cauce del río Cauca, un grupo de mujeres se reúne para bordar. Cubren el río de flores para invocar a sus muertos, en una geografía tejida por hilos de memoria y resistencia. El espíritu de los cuerpos arrojados al río y cubiertos por la represa inconclusa navega junto a los peces en el agua. Las almas emergen vestidas de fuego para escuchar el canto que les envían sus madres y hermanas desde la vida."
+    },
+    {
+     "titulo": "Montaña luminosa",
+     "director": "Lony Welter",
+     "pais": "Colombia",
+     "anio": 2026,
+     "duracion_min": 26,
+     "sinopsis": "En La Jagua, un pequeño pueblo ribereño del Huila, la llegada de los hombres que vienen a abrir la tierra para construir una represa hidroeléctrica altera el delicado pulso del territorio. Nidia (55), una mujer campesina y maestra artesana del fique, espera con silenciosa tristeza la partida de su único hijo, quien se marcha en busca de un futuro «mejor». A medida que la ansiedad y el insomnio se instalan en su vida, una extraña sensación comienza a crecer en su interior: una presencia inquietante que no logra nombrar. Mientras la tierra es abierta y herida, Nidia se debate entre expulsar o abrazar aquello que la rodea, aquello que se filtra en su cuerpo. Entre el barro, el viento, las lágrimas y las alucinantes e intoxicantes flores del borrachero, avanza hacia una revelación: una que contiene el antídoto para su dolor y el último aliento necesario para que la montaña dé a luz."
+    },
+    {
+     "titulo": "No es una herida",
+     "director": "Violeta Zambrano",
+     "pais": "Colombia",
+     "anio": 2026,
+     "duracion_min": 15,
+     "sinopsis": "Violeta, Maria José y Daniela tienen diagnósticos diferentes con un síntoma en común: dolor crónico al menstruar. Cada una reflexiona desde su experiencia cíclica afectada por la endometriosis, el SOMP (antes ovario poliquístico) y el VPH, enfermedades con tratamiento pero sin cura. A través de una puesta coreográfica y performática, las protagonistas se sumergen en su propia sangre intentando transfigurar una herida imaginaria que condiciona su relación con su cuerpo, con el dar vida, con el movimiento y la soledad. Acompañadas por la reflexión de Mónica, una mujer adulta que también ha tenido una experiencia menstrual dolorosa, se preguntan por qué, si no es una herida, duele."
+    },
+    {
+     "titulo": "Madres de nacimiento",
+     "director": "Gloria Isabel Gómez Ceballos",
+     "pais": "Colombia, Francia",
+     "anio": 2026,
+     "duracion_min": 8,
+     "sinopsis": "Del olvido y la oscuridad hay imágenes y sonidos que resurgen para controlar los cuerpos de las mujeres latinoamericanas, quienes desde niñas han sido consideradas madres de nacimiento. Pero en estos archivos emerge una interferencia que proviene del pasado para evocar un mensaje de lucha, memoria y libertad."
+    },
+    {
+     "titulo": "Invierno Flores Jardín",
+     "director": "Sara Piñeros Cortés",
+     "pais": "Colombia, Austria",
+     "anio": 2026,
+     "duracion_min": 27,
+     "sinopsis": "Dos mujeres intercambian cartas fílmicas que cruzan el pasado y el presente, entrelazando material de archivo de películas amateur con material ficticio actual filmado en 16 mm. Nunca se conocen en persona, sólo en sus películas. Heidrun, una vienesa retratada mediante material de archivo, y Sara, una inmigrante colombiana que trabaja en el archivo fílmico del Museo Austriaco del Cine. Ambas viven en Viena en diferentes épocas y observan la ciudad desde sus respectivas y sus situaciones de vida. La película aborda temas como la migración, el desarraigo y el racismo, y adopta una dimensión ensayística al cuestionar qué merece ser archivado y qué no."
+    }
+   ],
+   "duracion_min": 99
+  },
+  {
+   "titulo": "Programa 2: Imágenes para otro pasado",
+   "dia": "2026-11-02",
+   "hora": "16:30",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala 2",
+   "ciudad": "Bogotá",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://midbo.co/peliculas/escrito-sobre-un-cuerpo/",
+    "date": "2026-10-10"
+   },
+   "premiere": "Estreno en Colombia",
+   "seccion": "Competencia Iberoamericana de Cortometraje Documental",
+   "obras": [
+    {
+     "titulo": "Escrito sobre un cuerpo",
+     "director": "Esteban Prudencio",
+     "pais": "Cuba, Bolivia",
+     "anio": 2025,
+     "duracion_min": 32,
+     "sinopsis": "El lector es una voz y a la vez un cuerpo. ¿Cómo rearticular un lugar común para decir un texto cuando no es posible alzar ni la voz ni el cuerpo en protesta ni disidencia? Conjurar la solidaridad y el deseo de revuelta contra toda opresión. En vez de ofrecer una historia definitiva, ofrecer un mosaico, un archipiélago: destellos de personas que leen y espacios que contienen memorias."
+    },
+    {
+     "titulo": "Gestos para romper una imagen",
+     "director": "Mayra Villavicencio Príncipe",
+     "pais": "Perú",
+     "anio": 2026,
+     "duracion_min": 15,
+     "sinopsis": "Una mujer recorre las calles de Lima, Perú, la ciudad donde alguna vez vivió, a través de Google Street View. Al transitar virtualmente esos espacios, se encuentra con cuerpos, objetos y señales de vigilancia que le recuerdan la presencia constante de la mirada estatal. Su recorrido la lleva a encontrar videos de vigilancia que documentan episodios de violencia ejercida por las fuerzas armadas durante las protestas sociales en Perú en 2022 y 2023. Frente a la saturación de imágenes sensibles que parecen no detener la violencia, surge una pregunta inevitable: ¿qué hacer con estas imágenes?"
+    },
+    {
+     "titulo": "Lengua muerta",
+     "director": "José Jiménez",
+     "pais": "Chile",
+     "anio": 2025,
+     "duracion_min": 25,
+     "sinopsis": "En 1980, Ricardo Rifo, un campesino de una zona remota del sur de Chile, fue instruido como adiestrador de perros policiales por Ingrid Olderöck, la mujer más poderosa de la policía secreta de la dictadura cívico-militar chilena (1973-1990). La exagente —quien murió en 2001 en total impunidad— es recordada por los violentos métodos de tortura sexual que llevó a cabo en centros de detención, donde utilizaba a su perro sobre los cuerpos de los presos políticos. Cuatro décadas después, el campesino, acompañado por una jauría de perros en medio de un paisaje intemporal, tan inhóspito como devastado, deambula entre la dificultad de las palabras y la imposibilidad de expresar el horror. «Lengua muerta» reflexiona sobre la matriz de la memoria en tiempos de sospecha, amenaza y muerte, frente a las secuelas del régimen en un país cuyo lenguaje ha sido mutilado."
+    },
+    {
+     "titulo": "Dreams for a Better Past",
+     "director": "Albert Kuhn",
+     "pais": "España, Países Bajos",
+     "anio": 2025,
+     "duracion_min": 21,
+     "sinopsis": "Una fotografía, un legado silencioso del poder y las batallas ideológicas que resuenan de generación en generación. Al buscar entre fragmentos del pasado, vislumbro aquello que elegimos no ver, aquello que se escapa entre las grietas de nuestra conciencia. ¿Cómo heredamos aquello que no podemos aprehender, obligándonos a repetir una y otra vez los mismos gestos?"
+    }
+   ],
+   "duracion_min": 93
+  },
+  {
+   "titulo": "Foco Santiago Álvarez",
+   "dia": "2026-11-02",
+   "hora": "17:00",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala 3",
+   "ciudad": "Bogotá",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://midbo.co/peliculas/hanoi-martes-13/",
+    "date": "2026-10-10"
+   },
+   "seccion": "Foco Santiago Álvarez",
+   "obras": [
+    {
+     "titulo": "Hanoi, martes 13",
+     "director": "Santiago Álvarez",
+     "pais": "Cuba",
+     "anio": 1968,
+     "duracion_min": 38,
+     "sinopsis": "Con una estructura poética y narrativa, teniendo como texto párrafos de José Martí escritos en 1889, se muestra cómo vive y vivió, y cómo luchó por su libertad el heroico pueblo vietnamita, a partir del primer día en que comenzaron los bombardeos a la ciudad de Hanoi durante la guerra, en la década de 1970. Santiago Álvarez Cuba 1968 38 min Producción: ICAIC Fotografía: Iván Nápoles Sonido: Carlos Fernández Montaje: Norma Torrado, Idalberto Gálvez"
+    },
+    {
+     "titulo": "El tigre saltó y mató, pero… morirá… morirá",
+     "director": "Santiago Álvarez",
+     "pais": "Cuba",
+     "anio": 1973,
+     "duracion_min": 16,
+     "sinopsis": "El documental es un testimonio de la lucha del pueblo chileno y rinde homenaje al cantautor Víctor Jara, quien fue torturado y asesinado tras el golpe de Estado de la Junta Militar en septiembre de 1973. A través de canciones e imágenes de archivo, la obra denuncia la represión y la violencia de la dictadura."
+    },
+    {
+     "titulo": "Now!",
+     "director": "Santiago Álvarez",
+     "pais": "Cuba",
+     "anio": 1965,
+     "duracion_min": 6,
+     "sinopsis": "Tal vez el documental más aclamado de Santiago Álvarez. Apenas seis minutos le bastan al artista para, tomando como fondo la canción interpretada por Lena Horne, conformar este contundente alegato a favor de los derechos civiles de los negros en los Estados Unidos. Para algunos, el antecedente de lo que hoy conocemos como «video clip»."
+    },
+    {
+     "titulo": "79 primaveras",
+     "director": "Santiago Álvarez",
+     "pais": "Cuba",
+     "anio": 1969,
+     "duracion_min": 25,
+     "sinopsis": "Un documental agit-prop que marca la muerte del líder nacionalista vietnamita Ho Chí Minh, utilizando imágenes encontradas para vincular su trabajo con movimientos políticos mundiales, incluida la Revolución cubana y la resistencia dentro de Estados Unidos a la guerra de Vietnam."
+    }
+   ],
+   "duracion_min": 80
+  },
+  {
+   "titulo": "Programa 1: Miradas convulsas desde el presente",
+   "dia": "2026-11-02",
+   "hora": "17:00",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala Capital",
+   "ciudad": "Bogotá",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://midbo.co/peliculas/boyuna/",
+    "date": "2026-10-10"
+   },
+   "seccion": "Panorama Internacional de Cortometraje Documental",
+   "obras": [
+    {
+     "titulo": "Boyuna",
+     "director": "Guillermo Quintero",
+     "pais": "Francia",
+     "anio": 2026,
+     "duracion_min": 29,
+     "sinopsis": "Marsella, 2135. Tras la desaparición de la mayoría de los ecosistemas de la Tierra, la empresa Boyuna abre un pasaje hacia el pasado, donde los subrevivientes pueden habitar sus sueños entre animales extintos. Creada en colaboración con participantes privados de libertad que asisten a un programa de formación audiovisual en la prisión de Baumettes, Marsella."
+    },
+    {
+     "titulo": "Too Blue A Sky",
+     "director": "Risto-Pekka Blom",
+     "pais": "Finlandia",
+     "anio": 2026,
+     "duracion_min": 15,
+     "sinopsis": "Una historia sobre el dinero, el poder, la explotación y los muchos finales posibles del mundo. Algunas personas anhelan Marte, otras el cielo. Algunas bailan la humppa en la Luna. En esta breve obra tragicómica, cada uno de nosotros tiene su pequeño papel."
+    },
+    {
+     "titulo": "Always Wanted To Be God, Never Wanted To Do Good",
+     "director": "Noa Epars y Marvin Merkel",
+     "pais": "Suiza",
+     "anio": 2025,
+     "duracion_min": 21,
+     "sinopsis": "Grandes cruces cristianas se alzan en las cumbres de las montañas suizas, mientras vallas publicitarias con versículos de la Biblia ocupan los espacios públicos de las ciudades. Los cineastas nunca se han sentido cómodos con la presencia de estos símbolos religiosos. En 2009, el guía de montaña Patrick Bussard derribó una cruz en los Alpes suizos y fue severamente castigado por los tribunales."
+    },
+    {
+     "titulo": "Their Eyes",
+     "director": "Nicolas Gourault",
+     "pais": "Francia",
+     "anio": 2025,
+     "duracion_min": 23,
+     "sinopsis": "¿Cómo aprende una máquina a leer el mundo? Testimonios y grabaciones de pantalla introducen la experiencia de trabajadores digitales del Sur Global, cuyo trabajo consiste en enseñar a la inteligencia artificial de los vehículos autónomos a desplazarse por las calles del Norte Global. Mientras examinan las imágenes que reciben desde Estados Unidos, imaginan microestrategias para organizarse y devolver el golpe al sistema que explota sus manos y sus ojos."
+    }
+   ],
+   "duracion_min": 83
+  },
+  {
+   "titulo": "Programa 1: Tanto trabajo por hacer",
+   "dia": "2026-11-02",
+   "hora": "18:30",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala 2",
+   "ciudad": "Bogotá",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://midbo.co/peliculas/a-women-s-college-in-the-village/",
+    "date": "2026-10-10"
+   },
+   "seccion": "Programas especiales",
+   "obras": [
+    {
+     "titulo": "A Women 's College in the Village",
+     "director": "Sumiko Haneda",
+     "pais": "Japón",
+     "anio": 1957,
+     "duracion_min": 25,
+     "sinopsis": "Un documental que retrata la vida de las llamadas «clases para mujeres del pueblo», centradas principalmente en el diálogo y basadas en la idea de «pensar juntas y crecer como buenas madres». La película fue rodada en Iwane, Kōsei-chō (actualmente ciudad de Konan), en la prefectura de Shiga. Las mujeres que se han casado en familias campesinas trabajan sin descanso y, frente a sus suegras y esposos, ni siquiera pueden expresar sus propias opiniones. Al mismo tiempo, se enfrentan a la diferencia entre su propia forma de pensar y la de sus hijos, quienes crecen en la escuela recibiendo una educación en la que no se hace distinción entre niños y niñas. A partir de las redacciones escritas por los niños bajo el tema «¿Qué piensas de tu madre?», las mujeres comienzan a compartir con sus compañeras sus preocupaciones sobre la crianza de los hijos y las dificultades de la vida cotidiana. A través del intercambio de opiniones y del apoyo mutuo, van encontrando la manera de afrontar sus problemas. Las «clases para mujeres» impulsadas por el Ministerio de Educación comenzaron en el año fiscal de 1956 (año 31 de la era Shōwa), como parte de la educación social de la posguerra. Se organizaron y desarrollaron sobre la base de las asociaciones locales de mujeres, dirigidas principalmente a mujeres de las zonas rurales. Esta película fue filmada durante el primer año de funcionamiento del programa. Además, permite observar la vestimenta y las formas de vida de las zonas rurales aproximadamente diez años después del final de la guerra, así como las labores agrícolas de una época en la que la mecanización todavía no había llegado al campo."
+    },
+    {
+     "titulo": "Mi aporte",
+     "director": "Sara Gómez",
+     "pais": "Cuba",
+     "anio": 1972,
+     "duracion_min": 33,
+     "sinopsis": "A través de entrevistas y debates, se presentan y analizan las dificultades que aún enfrentan las mujeres para ser aceptadas en el ámbito laboral, mientras deben conciliar estas responsabilidades con las tareas domésticas que continúan desempeñando. Una ilustración de las dificultades que encuentran las mujeres cuando buscan lograr la integración económica y la igualdad con los hombres en un país en plena revolución."
+    }
+   ],
+   "duracion_min": 58
+  },
+  {
+   "dia": "2026-11-02",
+   "hora": "19:30",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala 3",
+   "ciudad": "Bogotá",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://midbo.co/peliculas/hair-paper-water/",
+    "date": "2026-10-10"
+   },
+   "premiere": "Estreno en Bogotá",
+   "seccion": "Panorama Internacional de Largometraje Documental",
+   "titulo": "Hair, Paper, Water…",
+   "director": "Nicolas Graux y Trương Minh Quý",
+   "pais": "Bélgica, Francia, Vietnam",
+   "anio": 2025,
+   "duracion_min": 71,
+   "sinopsis": "Nacida en una cueva y ahora en su vejez, una mujer de la etnia Rục transita entre la memoria y la vida cotidiana, transmitiendo a sus nietos una lengua que está desapareciendo."
+  },
+  {
+   "dia": "2026-11-02",
+   "hora": "19:30",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala Capital",
+   "ciudad": "Bogotá",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://midbo.co/peliculas/las-almas-ni-los-ojos/",
+    "date": "2026-10-10"
+   },
+   "has_qa": true,
+   "qa_type": "team",
+   "seccion": "Competencia Nacional de Largometraje Documental",
+   "titulo": "Las almas ni los ojos",
+   "director": "Cesar Jaimes y Canela Reyes",
+   "pais": "Colombia",
+   "anio": 2026,
+   "duracion_min": 75,
+   "sinopsis": "Pacho salió de su pueblo por hechos violentos hace más de 50 años y nunca pudo regresar. Al ver una vieja fotografía que se parece al último recuerdo que guarda de su tierra, siente el deseo de volver y encontrarse con los que allí dejó. Ante la imposibilidad de hacerlo, inventa un regreso imaginario para reencontrarse con su historia y sanar las huellas que la violencia dejó en su vida. En ese pueblo que parece solitario, lo reciben unos rostros que lo han estado esperando. Desde el pasado, con sus miradas, lo acompañan a recorrer las calles. Mediante el juego y la imaginación, Pacho le da vida una imagen de archivo de hace 70 años, la misma que se convirtió en símbolo inaugural de la violencia en Colombia. En su retorno imaginado, la fotografía se transforma en territorio vivo y la imaginación en un acto de resistencia y sanación, frente a un trauma colectivo de un país entero que ha plasmado su violencia una y otra vez en una misma imagen."
+  },
+  {
+   "titulo": "Sey Arimaku, la otra oscuridad + Galu Dugbis – La memoria de las abuelas",
+   "dia": "2026-11-03",
+   "hora": "10:00",
+   "sede": "Alianza Francesa",
+   "ciudad": "Bogotá",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://midbo.co/peliculas/sey-arimaku-la-otra-oscuridad/",
+    "date": "2026-10-10"
+   },
+   "seccion": "Homenaje a Pablo Mora Calderón. Premio ALADOS a toda una vida",
+   "obras": [
+    {
+     "titulo": "Sey Arimaku, la otra oscuridad",
+     "director": "Pablo Mora",
+     "pais": "Colombia",
+     "anio": 2012,
+     "duracion_min": 59
+    },
+    {
+     "titulo": "Galu Dugbis – La memoria de las abuelas",
+     "director": "Pablo Mora (asesor de dirección)",
+     "pais": "Colombia",
+     "anio": 2019,
+     "duracion_min": 8
+    }
+   ],
+   "duracion_min": 67
+  },
+  {
+   "titulo": "Programa 6: Restitución de archivos para una memoria política latinoamericana",
+   "dia": "2026-11-03",
+   "hora": "14:30",
+   "sede": "Alianza Francesa",
+   "ciudad": "Bogotá",
+   "ticket_url": "https://tuboleta.com/es/eventos/buenos-dias-wiraqocha",
+   "acceso": "Boletería en TuBoleta",
+   "_src": {
+    "url": "https://midbo.co/peliculas/buenos-dias-wiracocha/",
+    "date": "2026-10-10"
+   },
+   "has_qa": true,
+   "qa_type": "team",
+   "seccion": "Espejos: Gestos de reparación",
+   "obras": [
+    {
+     "titulo": "Buenos días, Wiracocha",
+     "director": "Mauricio Godoy",
+     "pais": "Perú, México",
+     "anio": 2025,
+     "duracion_min": 83,
+     "sinopsis": "Hace 50 años se filmó la lucha por las tierras en diversas comunidades campesinas del Cusco. Un grupo de cineastas trae estas imágenes de vuelta a la provincia de Paucartambo (Cusco), y les propone a los pobladores de la zona representar su memoria comunitaria a través de la creación de una nueva película."
+    }
+   ],
+   "duracion_min": 83
+  },
+  {
+   "titulo": "Programa 2: Comunidades que siguen en búsqueda",
+   "dia": "2026-11-03",
+   "hora": "16:30",
+   "sede": "Centro de Memoria, Paz y Reconciliación",
+   "sala": "Aula 1",
+   "ciudad": "Bogotá",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://midbo.co/peliculas/si-la-escombrera-hablara/",
+    "date": "2026-10-10"
+   },
+   "seccion": "Espejos: Gestos de reparación",
+   "obras": [
+    {
+     "titulo": "Si La Escombrera hablara",
+     "director": "Juan Prado",
+     "pais": "Colombia",
+     "anio": 2025,
+     "duracion_min": 33,
+     "sinopsis": "En la comuna 13 de Medellín existe la fosa urbana a cielo abierto más grande de América Latina. Durante más de veinte años, La Escombrera ha sido señalada por familias de personas víctimas de desaparición forzada como el lugar donde posiblemente se encuentren muchos de los 503 desaparecidos de este territorio. Mujeres Caminando por la Verdad lidera la búsqueda forense que, en medio de incontables obstáculos y tras dos décadas de negacionismo, desencadenó en el hallazgo de cuerpos en diciembre del año 2024. Este acontecimiento histórico, una bocanada de aire fresco para las familias buscadoras, envió un mensaje muy claro a toda Colombia: la tierra ha comenzado a hablar."
+    }
+   ],
+   "duracion_min": 33
+  },
+  {
+   "dia": "2026-11-03",
+   "hora": "18:30",
+   "sede": "Alianza Francesa",
+   "ciudad": "Bogotá",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://midbo.co/peliculas/reexistir-entre-lo-politico-y-lo-intimo/",
+    "date": "2026-10-10"
+   },
+   "seccion": "Comptoir du Doc",
+   "titulo": "Reexistir: entre lo político y lo íntimo",
+   "director": "Colectivo OJOS A LA OBRA",
+   "pais": "Colombia, Francia",
+   "anio": 2026,
+   "duracion_min": 18,
+   "sinopsis": "«Reexistir: entre lo político y lo íntimo» reúne tres cortometrajes documentales —«Dicen», «El cuerpo archivado» y «El Camino»— como un tríptico que explora las relaciones entre cuerpo, memoria, identidad y resistencia. Desde aproximaciones íntimas y profundamente personales, las obras cuestionan los discursos de género, las violencias que atraviesan los cuerpos y los mandatos sociales que configuran las formas de ser. A través de la música, la poesía, la performance y el propio cine como herramientas de creación y enunciación, cada película convierte la experiencia individual en una reflexión colectiva sobre las múltiples formas de habitar el cuerpo y disputar las narrativas que históricamente lo han condicionado. Más que ofrecer respuestas, este tríptico propone un espacio de escucha y sensibilidad, donde lo íntimo se revela inseparable de lo político y el gesto creativo se afirma como una forma de reexistencia. Este proyecto fue realizado en Barranquilla como resultado del Taller Ojos a la Obra, desarrollado conjuntamente por Encuadradas, Comptoir du doc y la MIDBO. Colectivo OJOS A LA OBRA Colombia, Francia 2026 18 min Producción: Carmen Viveros, Natalia Gómez Carvajal, Agnès Frémont Fotografía: Daniela Locarno, Kenia Solano, Nathalie Bello Sonido: Adellie Chéneau, Natalia Gomez Carvajal, Agnès Frémont, Gabriela Monsalvo Montaje: Gabriela Liñan Fonseca, Orlando Jiménez, Gabriela Monsalvo, Natalia Gómez Carvajal, Adélie Chéneau"
+  },
+  {
+   "titulo": "Sey Arimaku, la otra oscuridad + Galu Dugbis – La memoria de las abuelas",
+   "dia": "2026-11-04",
+   "hora": "10:00",
+   "sede": "Alianza Francesa",
+   "ciudad": "Bogotá",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://midbo.co/peliculas/sey-arimaku-la-otra-oscuridad/",
+    "date": "2026-10-10"
+   },
+   "seccion": "Homenaje a Pablo Mora Calderón. Premio ALADOS a toda una vida",
+   "obras": [
+    {
+     "titulo": "Sey Arimaku, la otra oscuridad",
+     "director": "Pablo Mora",
+     "pais": "Colombia",
+     "anio": 2012,
+     "duracion_min": 59
+    },
+    {
+     "titulo": "Galu Dugbis – La memoria de las abuelas",
+     "director": "Pablo Mora (asesor de dirección)",
+     "pais": "Colombia",
+     "anio": 2019,
+     "duracion_min": 8
+    }
+   ],
+   "duracion_min": 67
+  },
+  {
+   "titulo": "Programa 3: Volvemos a nacer",
+   "dia": "2026-11-04",
+   "hora": "14:00",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala Capital",
+   "ciudad": "Bogotá",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://midbo.co/peliculas/para-mi-ya-no-es-cualquier-bano/",
+    "date": "2026-10-10"
+   },
+   "premiere": "Estreno en Colombia",
+   "seccion": "Competencia Iberoamericana de Cortometraje Documental",
+   "obras": [
+    {
+     "titulo": "Para mí, ya no es cualquier baño",
+     "director": "Micaela Moreno Barril",
+     "pais": "Chile",
+     "anio": 2026,
+     "duracion_min": 5,
+     "sinopsis": "Meses después de haber vivido un abuso por parte de una mujer, Micaela (21) regresa al baño donde ocurrieron los hechos. En un intento por sanar su trauma, registra y revive el recorrido que realizó en el pasado, transformando su recuerdo en un acto artístico que revela cómo esa experiencia quedó grabada en su subconsciente."
+    },
+    {
+     "titulo": "La impronta",
+     "director": "Cecilia Monroy Cuevas",
+     "pais": "México",
+     "anio": 2025,
+     "duracion_min": 12,
+     "sinopsis": "«La impronta» muestra el proceso de un parto en un hospital en los años setenta, desde las primeras contracciones, hasta el nacimiento de la bebé. A través de una sutil introspección y de algunas memorias, la directora narra sobre el impacto que le ha causado ver las imágenes de su madre pariendo y de su propio nacimiento. El cortometraje recurre a los elementos del cine ensayo para hacer un cuestionamiento a la manera de parir y de nacer en los hospitales, y propone una reflexión sobre la impronta que dejan los partos y nacimientos en hospitales, en donde la violencia obstétrica se ejerce de manera naturalizada."
+    },
+    {
+     "titulo": "O",
+     "director": "Francisca Alarcão",
+     "pais": "Portugal, España",
+     "anio": 2026,
+     "duracion_min": 14,
+     "sinopsis": "Desde que tiene memoria, Francisca vive con una aversión inexplicable e incontrolable hacia los ombligos. Nada le provoca tanta ansiedad como esta sencilla parte del cuerpo y las formas del mundo que se le asemejan. Cuando la terapia no basta para resolver su preciada fobia, Francisca recurre a otros tipos de métodos, sin ningún fundamento científico y no recomendados para nadie que padezca la misma condición."
+    },
+    {
+     "titulo": "Abortion Party",
+     "director": "Julia Mellen",
+     "pais": "España",
+     "anio": 2025,
+     "duracion_min": 13,
+     "sinopsis": "Después de conseguir reunir el dinero para pagar un aborto tras quedar embarazada de su novio polaco de intercambio, la directora decide celebrarlo con una fiesta. Entre los invitados están su vecino músico de ska de edad avanzada, unos miembros semirretirados de una pandilla, su compañero de piso gay y sucio, y las siempre presentes chinches."
+    },
+    {
+     "titulo": "A todas las sombras de nuestra marea",
+     "director": "Christian Peyrano",
+     "pais": "Argentina, México",
+     "anio": 2025,
+     "duracion_min": 11,
+     "sinopsis": "A partir de imágenes de archivo extranjeras, un poema se conforma como el oleaje de un mar para dialogar con los muertos y con los vivos. Un conjuro fílmico se desata para adentrarse en el exilio. Extranjería. Añoranza. ¿Qué significa ser nieto y abuelo? ¿Amar desde la lejanía?"
+    },
+    {
+     "titulo": "Agua fría",
+     "director": "Meme Cabello y Antonia Martínez Valls",
+     "pais": "Chile",
+     "anio": 2025,
+     "duracion_min": 19,
+     "sinopsis": "En el campamento Ribera del Río, en Talagante, Ángel (9) y Kimberly (11), dos niñxs atravesados por la migración, convierten una furgoneta estacionada en su nave imaginaria para emprender un viaje en busca de su amiga Sofía (9), quien recientemente tuvo que volver a su país natal, Colombia. En el viaje, recorren lugares que habitan en sus recuerdos, exploran su pasado y presente por medio de conversaciones, y se encuentran con otros niños que se suman a la aventura. En este espacio entre la realidad y la fantasía experimentan la construcción de la identidad, la sensación de pertenencia y la amistad en medio del desarraigo."
+    },
+    {
+     "titulo": "Oops, I Died",
+     "director": "Lara Carmo",
+     "pais": "Brasil",
+     "anio": 2025,
+     "duracion_min": 15,
+     "sinopsis": "Un grupo de niños se reúne todas las noches para jugar online. Conectados, crean una experiencia gamificada de la muerte y la anestesia aparece como una posibilidad para salir de sus propios sentimientos y luego volver a ellos. A través de un dispositivo de contrastes, esta película plantea preguntas sobre cómo las infancias digitales relacionan los sentimientos humanos con los avatares. Es posible ponerse nervioso, reír, temblar, emocionarse en una progresión que escapa al control remoto. «Oops, I Died» propone un desafío físico al público en una mezcla de agotamiento, complacencia y liberación. En un mundo disfórico, ¿cuáles son los nuevos humanos?"
+    }
+   ],
+   "duracion_min": 89
+  },
+  {
+   "titulo": "Programa 7: Reactivar los archivos para el presente",
+   "dia": "2026-11-04",
+   "hora": "14:00",
+   "sede": "Alianza Francesa",
+   "ciudad": "Bogotá",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://midbo.co/peliculas/a-film-to-remind-us-of-utopia/",
+    "date": "2026-10-10"
+   },
+   "seccion": "Espejos: Gestos de reparación",
+   "obras": [
+    {
+     "titulo": "A Film to Remind Us of Utopia",
+     "director": "Reinaldo Cardenuto",
+     "pais": "Brasil",
+     "anio": 2026,
+     "duracion_min": 20,
+     "sinopsis": "En los registros cinematográficos de Esdras Baptista, guardados durante décadas en su residencia, se puede sentir el fervor de quienes creían en un nuevo día. Filmadas en Brasil a principios de la década de 1960, en pleno auge de una política libertaria en movimiento, las imágenes del cineasta materializan la incandescencia de los deseos colectivos en el momento histórico de su eclosión. La utopía, aunque inalcanzable, nunca es una mera abstracción. Fuerza que moviliza las acciones y los sentimientos, constituye el ímpetu necesario para la existencia del ser humano."
+    },
+    {
+     "titulo": "Una sombra oscilante",
+     "director": "Celeste Rojas Mugica",
+     "pais": "Chile, Argentina, Francia",
+     "anio": 2024,
+     "duracion_min": 77,
+     "sinopsis": "La directora, una mujer fotógrafa, se aproxima al archivo de fotos de su padre, un hombre que durante su juventud, guiada por la militancia contra la dictadura en Chile y un prolongado exilio, fue también fotógrafo. Actualizando las imágenes a las que va y de las que regresa constantemente, la directora construirá un lenguaje lúdico en un espacio oscuro donde conectar con su padre, habilitando un juego sobre las formas de hacer imagen y un fuera de campo a través del cual recuperar la imaginación y pensar sobre la densidad de la lucha, las consecuencias del horror y las posibilidades de concebir otros futuros. «Una sombra oscilante» explora el peso íntimo y político de las imágenes para abrir un espacio donde especular sobre qué puede seguir ardiendo en ellas, hacia dónde pueden convocarnos o qué pueden ofrecernos ante la incertidumbre de nuestros tiempos."
+    }
+   ],
+   "duracion_min": 97
+  },
+  {
+   "dia": "2026-11-04",
+   "hora": "14:30",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala 3",
+   "ciudad": "Bogotá",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://midbo.co/peliculas/el-valor-de-la-palabra/",
+    "date": "2026-10-10"
+   },
+   "has_qa": true,
+   "qa_type": "team",
+   "seccion": "Competencia Nacional de Largometraje Documental",
+   "titulo": "El valor de la palabra",
+   "director": "Marta Rodríguez y Fernando Restrepo",
+   "pais": "Colombia",
+   "anio": 2026,
+   "duracion_min": 79,
+   "sinopsis": "«El valor de la palabra» es la historia de Ángel María y Napoleón Torres, dos líderes indígenas arhuacos de la Sierra Nevada de Santa Marta, en Colombia, que fueron secuestrados y asesinados por el ejército en 1990. A través de material de archivo y testimonios íntimos, el documental explora el impacto de su ausencia en sus familias y en la comunidad, al mismo tiempo que introduce al espectador en la cosmovisión arhuaca, donde el territorio es un ser vivo y la palabra hablada es un hilo vital que sostiene la vida. Más allá de relatar un episodio trágico de la historia reciente de Colombia, la película se erige como un acto de resistencia frente a la violencia colonial y militar que persiste. Ofrece una reflexión sobre el liderazgo, la supervivencia cultural y el legado perdurable que estos líderes dejaron a las generaciones futuras."
+  },
+  {
+   "titulo": "Programa 1: Reparación simbólica y búsquedas por justicia restaurativa",
+   "dia": "2026-11-04",
+   "hora": "16:00",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala 2",
+   "ciudad": "Bogotá",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://midbo.co/peliculas/bojaya-la-verdad-desde-adentro/",
+    "date": "2026-10-10"
+   },
+   "has_qa": true,
+   "qa_type": "team",
+   "seccion": "Espejos: Gestos de reparación",
+   "obras": [
+    {
+     "titulo": "Bojayá: la verdad desde adentro",
+     "director": "Ramón Alexander Valencia Córdoba",
+     "pais": "Colombia",
+     "anio": 2026,
+     "duracion_min": 106,
+     "sinopsis": "María Pascuala, lideresa sobreviviente de la masacre; Heidy, lideresa indígena de Mojaudó; y Ever, líder en condición de desplazamiento, recorren las comunidades afro e indígenas del municipio de Bojayá y los barrios donde habitan los bojayaseños desplazados en Quibdó. Llevan el baúl de la verdad, en donde recogen las preguntas que la comunidad envía a los responsables del conflicto armado en su territorio. Después de su recorrido, regresan al municipio para compartir las respuestas que han encontrado y junto con la comunidad construyen una verdad desde adentro."
+    }
+   ],
+   "duracion_min": 106
+  },
+  {
+   "dia": "2026-11-04",
+   "hora": "17:00",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala 3",
+   "ciudad": "Bogotá",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://midbo.co/peliculas/cuba-y-la-noche/",
+    "date": "2026-10-10"
+   },
+   "seccion": "Competencia Iberoamericana de Largometraje Documental",
+   "titulo": "Cuba y la noche",
+   "director": "Sergio Fernández Borrás",
+   "pais": "España, Cuba, Colombia",
+   "anio": 2026,
+   "duracion_min": 100,
+   "sinopsis": "«Cuba y la noche» es un testimonio del poder del arte y de la memoria frente al silenciamiento. De cómo la internet abrió una grieta en el control monolítico del régimen, permitiendo que voces marginadas narraran en primera persona la violencia, el miedo y la esperanza de un país. Es la historia de un grupo de artistas que convirtió sus teléfonos móviles en armas de resistencia."
+  },
+  {
+   "dia": "2026-11-04",
+   "hora": "17:00",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala Capital",
+   "ciudad": "Bogotá",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://midbo.co/peliculas/lolita-en-honda/",
+    "date": "2026-10-10"
+   },
+   "has_qa": true,
+   "qa_type": "team",
+   "seccion": "Competencia Nacional de Largometraje Documental",
+   "titulo": "Lolita en Honda",
+   "director": "Daniel Torres",
+   "pais": "Colombia",
+   "anio": 2025,
+   "duracion_min": 61,
+   "sinopsis": "Detrás de los ojos de Lolita hay un velo que ciega sus palabras. Es el recuerdo de una infancia que, aún en la vejez, le oscurece la vista y no le permite escapar. Cuando habla me parece intuir, por el eco de las historias que repite, un mundo espectral de hambre, abandono, el estigma social de una madre soltera, la magia del Río Magdalena y todas las ilusiones y demonios de esa niñez. En la película, Lolita recuerda su infancia en la ciudad de Honda, Tolima. A medida que explora ese recuerdo, el acto de recordar y recrear estas historias se convierte tanto en una ventana como en una barrera hacia el mundo que existe detrás de sus ojos. Así nos va llevando por un cuento de hadas en blanco y negro brumoso, manchado y lleno de grano, hacia el asombro y el miedo de una niña."
+  },
+  {
+   "titulo": "Programa 2: Esta tierra canta premoniciones",
+   "dia": "2026-11-04",
+   "hora": "19:30",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala 3",
+   "ciudad": "Bogotá",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://midbo.co/peliculas/statues-also-die/",
+    "date": "2026-10-10"
+   },
+   "seccion": "Panorama Internacional de Cortometraje Documental",
+   "obras": [
+    {
+     "titulo": "Statues Also Die?",
+     "director": "Thais Fernandes",
+     "pais": "Brasil, Hungría, Portugal, Bélgica",
+     "anio": 2026,
+     "duracion_min": 12,
+     "sinopsis": "El peso de la historia se vuelve ligero en manos de los niños. Un grupo de pequeños se convierte en un equipo de entrevistadores en un parque de Budapest, cementerio de enormes estatuas comunistas. Sus preguntas y observaciones despiertan ecos olvidados y, mediante un montaje lúdico, la película captura en este espacio acotado la magnitud del pasado y el presente de un país."
+    },
+    {
+     "titulo": "Still Playing",
+     "director": "Mohamed Mesbah",
+     "pais": "Francia",
+     "anio": 2025,
+     "duracion_min": 38,
+     "sinopsis": "Cisjordania, verano de 2024. Rasheed, creador de videojuegos, intenta criar a sus dos hijos en medio de las incursiones del ejército israelí y la guerra en Gaza. Por las noches, crea videojuegos en los que las madres y los padres ya no pueden proteger a sus hijos."
+    },
+    {
+     "titulo": "L'Mina",
+     "director": "Randa Maroufi",
+     "pais": "Francia, Marruecos, Italia, Catar",
+     "anio": 2025,
+     "duracion_min": 26,
+     "sinopsis": "Jerada es una ciudad minera de Marruecos donde la extracción de carbón, aunque fue oficialmente suspendida en 2001, continúa de manera informal hasta el día de hoy. «L’Mina» recrea el trabajo actual en las minas informales mediante una escenografía creada en colaboración con los habitantes de la ciudad, quienes interpretan sus propios papeles."
+    },
+    {
+     "titulo": "Al Basateen",
+     "director": "Antoine Chapon",
+     "pais": "Francia",
+     "anio": 2025,
+     "duracion_min": 25,
+     "sinopsis": "En 2015, el distrito de Basateen al-Razi, en Damasco, fue arrasado como castigo a la población por su levantamiento contra el régimen de Bashar al-Assad. En su lugar está prevista la construcción de Marota City, un distrito moderno y conectado con 80 rascacielos. Diez años después, dos antiguos residentes recuerdan el barrio donde alguna vez estuvieron sus hogares y los huertos más antiguos de Damasco. Tras perderlo todo, reconstruyen su memoria a través de sus testimonios y de la reutilización de animaciones 3D producidas por el régimen, haciendo que el recuerdo despierte y resista a este borrado deliberado."
+    }
+   ],
+   "duracion_min": 100
+  },
+  {
+   "dia": "2026-11-04",
+   "hora": "19:30",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala Capital",
+   "ciudad": "Bogotá",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://midbo.co/peliculas/el-coloquio-de-los-pajaros/",
+    "date": "2026-10-10"
+   },
+   "premiere": "Clausura",
+   "seccion": "Competencia Iberoamericana de Largometraje Documental",
+   "titulo": "El coloquio de los pájaros",
+   "director": "Sofía Velázquez Núñez",
+   "pais": "Perú",
+   "anio": 2026,
+   "duracion_min": 60,
+   "sinopsis": "Un buen día, no amaneció más. En ese reino de oscuridad que inevitablemente atrajo plagas, persecución, devastación y muerte, un grupo de viejos anarco-poetas se ve obligado a vivir en la clandestinidad y, durante sus aquelarres y secretas reuniones, buscan adoptar identidades no humanas. En esta fábula documental, que utiliza como alegoría el mito sufí del mismo nombre, la poesía, la danza y la amistad se erigen como armas de insubordinación al orden actual de las cosas."
+  },
+  {
+   "dia": "2026-11-04",
+   "hora": "20:00",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala 2",
+   "ciudad": "Bogotá",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://midbo.co/peliculas/les-surs-pathan/",
+    "date": "2026-10-10"
+   },
+   "seccion": "Comptoir du Doc",
+   "titulo": "Les sœurs Pathan",
+   "director": "Eléonore Boissinot",
+   "pais": "Francia",
+   "anio": 2023,
+   "duracion_min": 77,
+   "sinopsis": "Ahmedabad, en el estado de Gujarat, bastión político de los nacionalistas hindúes. Las hermanas Pathan, supervivientes de los pogromos antimusulmanes de 2002, viven bajo la protección de su padre y su abuela en un barrio periférico de la ciudad. A medida que crecen, el pasado las alcanza."
+  },
+  {
+   "titulo": "Master Class: La escucha en el cine directo",
+   "dia": "2026-10-28",
+   "hora": "09:00",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala Capital",
+   "ciudad": "Bogotá",
+   "tipo": "evento",
+   "event_kind": "masterclass",
+   "seccion": "Encuentro Pensar lo Real",
+   "duracion_min": 90,
+   "acceso": "desconocido",
+   "invitados": "Invitada: Claire Simon · Modera: Gustavo Vasco.",
+   "_src": {
+    "url": "https://midbo.co/encuentro-pensar-lo-real/seminario/",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "Mesa redonda: Urgencia y experimentación: sonidos del tercer cine",
+   "dia": "2026-10-28",
+   "hora": "10:30",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala Capital",
+   "ciudad": "Bogotá",
+   "tipo": "evento",
+   "event_kind": "conversatorio",
+   "seccion": "Encuentro Pensar lo Real",
+   "duracion_min": 90,
+   "acceso": "desconocido",
+   "invitados": "Invitados: Eduardo Rencurrel, Jacobo del Castillo · Modera: Adriana H. Bocanegra.",
+   "_src": {
+    "url": "https://midbo.co/encuentro-pensar-lo-real/seminario/",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "Diálogo: Dirigir desde la Nagra",
+   "dia": "2026-10-28",
+   "hora": "12:00",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala Capital",
+   "ciudad": "Bogotá",
+   "tipo": "evento",
+   "event_kind": "dialogo",
+   "seccion": "Encuentro Pensar lo Real",
+   "duracion_min": 60,
+   "acceso": "desconocido",
+   "invitados": "Invitades: Marta Rodríguez y Felipe Colmenares.",
+   "_src": {
+    "url": "https://midbo.co/encuentro-pensar-lo-real/seminario/",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "Charla: Audio descripción para documental",
+   "dia": "2026-10-28",
+   "hora": "14:30",
+   "sede": "Alianza Francesa",
+   "sala": "Sede Centro",
+   "ciudad": "Bogotá",
+   "tipo": "evento",
+   "event_kind": "charla",
+   "seccion": "Encuentro Pensar lo Real",
+   "duracion_min": 90,
+   "acceso": "desconocido",
+   "invitados": "Invitados: Luis Guillermo Torres (ATMedios) y Andrés Carmona, director Estancia (2024) · Modera: Julio Lamaña.",
+   "_src": {
+    "url": "https://midbo.co/encuentro-pensar-lo-real/seminario/",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "Master Class: Puntos de escucha",
+   "dia": "2026-10-29",
+   "hora": "09:00",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala Capital",
+   "ciudad": "Bogotá",
+   "tipo": "evento",
+   "event_kind": "masterclass",
+   "seccion": "Encuentro Pensar lo Real",
+   "duracion_min": 90,
+   "acceso": "desconocido",
+   "invitados": "Invitada: Mercedes Gaviría · Modera: María Fernanda Carrillo.",
+   "_src": {
+    "url": "https://midbo.co/encuentro-pensar-lo-real/seminario/",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "Mesa redonda: Escuchar el archivo",
+   "dia": "2026-10-29",
+   "hora": "10:30",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala Capital",
+   "ciudad": "Bogotá",
+   "tipo": "evento",
+   "event_kind": "conversatorio",
+   "seccion": "Encuentro Pensar lo Real",
+   "duracion_min": 90,
+   "acceso": "desconocido",
+   "invitados": "Invitades: Archipiélago Sonoro y Guateque Cine · Modera: Laura Alhach.",
+   "_src": {
+    "url": "https://midbo.co/encuentro-pensar-lo-real/seminario/",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "Diálogo: Silencio y fabulación de archivo",
+   "dia": "2026-10-29",
+   "hora": "12:00",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala Capital",
+   "ciudad": "Bogotá",
+   "tipo": "evento",
+   "event_kind": "dialogo",
+   "seccion": "Encuentro Pensar lo Real",
+   "duracion_min": 60,
+   "acceso": "desconocido",
+   "invitados": "Invitadas: Azul Aizenberg y Juana Schlenker.",
+   "_src": {
+    "url": "https://midbo.co/encuentro-pensar-lo-real/seminario/",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "Lanzamiento: Podcast Fuera de Foco",
+   "dia": "2026-10-29",
+   "hora": "14:30",
+   "sede": "Alianza Francesa",
+   "sala": "Sede Centro",
+   "ciudad": "Bogotá",
+   "tipo": "evento",
+   "event_kind": "evento",
+   "seccion": "Encuentro Pensar lo Real",
+   "duracion_min": 90,
+   "acceso": "desconocido",
+   "invitados": "Invitades: Ana María López y equipo de producción.",
+   "_src": {
+    "url": "https://midbo.co/encuentro-pensar-lo-real/seminario/",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "Master Class: Pensar el sonido",
+   "dia": "2026-10-30",
+   "hora": "09:00",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala Capital",
+   "ciudad": "Bogotá",
+   "tipo": "evento",
+   "event_kind": "masterclass",
+   "seccion": "Encuentro Pensar lo Real",
+   "duracion_min": 90,
+   "acceso": "desconocido",
+   "invitados": "Invitado: Samuel Larson · Modera: Andrew Tucker.",
+   "_src": {
+    "url": "https://midbo.co/encuentro-pensar-lo-real/seminario/",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "Diálogo: Música original para documentales, el proceso práctico",
+   "dia": "2026-10-30",
+   "hora": "10:30",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala Capital",
+   "ciudad": "Bogotá",
+   "tipo": "evento",
+   "event_kind": "dialogo",
+   "seccion": "Encuentro Pensar lo Real",
+   "duracion_min": 60,
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://midbo.co/encuentro-pensar-lo-real/seminario/",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "Mesa redonda: Escucha contínua. Homenaje a Roberto García.",
+   "dia": "2026-10-30",
+   "hora": "11:30",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala Capital",
+   "ciudad": "Bogotá",
+   "tipo": "evento",
+   "event_kind": "conversatorio",
+   "seccion": "Encuentro Pensar lo Real",
+   "duracion_min": 90,
+   "acceso": "desconocido",
+   "invitados": "Invitados: Nelson Vergara, Pablo Mora, Carlos Santa · Modera: Jorjan Betancurt.",
+   "_src": {
+    "url": "https://midbo.co/encuentro-pensar-lo-real/seminario/",
+    "date": "2026-10-10"
+   }
+  }
+ ]
+}

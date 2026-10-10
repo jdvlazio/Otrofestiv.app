@@ -108,6 +108,7 @@ deliberada existe la etiqueta `frontera-ok`.
 | `filcmar2026` | FILCMAR | Marinilla | 9–13 OCT | **Próximo / activo** |
 | `ficcali2026` | FICCALI | Cali | 16–25 OCT | **Próximo / activo** |
 | `fantasmagoria2026` | Fantasmagoría | Medellín | 14–25 OCT | **Próximo / activo** |
+| `midbo2026` | MIDBO | Bogotá | 27 OCT–4 NOV | **Próximo / activo** |
 | `narrarelfuturo2026` | #NarrarElFuturo | Bogotá | 15–20 SEP | Recién terminado |
 
 ### Features activas (desde `.specify/features/`)
