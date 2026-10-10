@@ -7,6 +7,9 @@ const { enterFestival } = require('./helpers');
 
 test('RP1 — sin cuenta se reporta por la función y se lee el consenso por la consulta pública', async ({ page }) => {
   await enterFestival(page, 'biff2026', '2026-10-12T20:10:00-05:00');
+  // la lectura REAL del arranque tiene que haber vuelto: si llega después de la
+  // simulada, la pisa con lo que haya en producción (carrera medida).
+  await page.waitForLoadState('networkidle');
   const r = await page.evaluate(async () => {
     const DC = await import('/src/controller/delays-cloud.js');
     const llamadas = { invoke: [], rpc: [], from: 0 };
