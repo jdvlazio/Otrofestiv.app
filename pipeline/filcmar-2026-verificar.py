@@ -31,7 +31,7 @@ plano = crudo.plano
 
 
 def main():
-    ojos = json.load(io.open(crudo.OJOS, encoding='utf-8'))['actividades']
+    ojos = crudo.vigentes(json.load(io.open(crudo.OJOS, encoding='utf-8'))['actividades'])
     build = json.load(io.open(f'{REPO}/festivals/staging/{FID}-build.json', encoding='utf-8'))
     geo = json.load(io.open(f'{REPO}/festivals/staging/{FID}-venues-geo.json', encoding='utf-8'))
 
