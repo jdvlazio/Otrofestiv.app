@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, emparejado con ficha_verifica() (director + año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-10-09"
+  "capturado": "2026-10-10"
  },
  "obras": [
   {
@@ -18,7 +18,7 @@
    "lbSlug": "afilando-memoria",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Eugenio Gómez, 2026, 7 min, CO; sinopsis del festival y afiche original de ficcali.com (biblioteca de medios).",
    "_director": "Eugenio Gómez",
-   "_sondeado": "2026-10-09",
+   "_sondeado": "2026-10-10",
    "poster": "/assets/ficcali-2026/afilando-memoria.jpg",
    "posterSource": "tmdb"
   },
@@ -84,6 +84,21 @@
   },
   {
    "titulo": "Alivios",
+   "tmdb_id": 1469210,
+   "titulo_original": "Alivios",
+   "poster_path": "/fuQQAuTPK0lGxsvI0yUxz9KzQCK.jpg",
+   "synopsis_es": "Carlos atraviesa una crisis que parece no tener salida mientras cuida de Rosa, su madre, cuyo dolor solo disminuye en las aguas cálidas de la hidroterapia. Una noche, ella le propone un sacrificio extremo que los obliga a reconsiderar el amor, la dependencia y la posibilidad de encontrar juntos otra forma de alivio.",
+   "synopsis_en": "Carlos is approaching midlife trapped in a personal crisis that has lingered too long. Rosa, his mother, suffers from disabling pain that is only mitigated by the warm waters of hydrotherapy. One night, she offers to make the ultimate sacrifice so that they can both transit to a better place. A short film about love, hope and relief we all long for.",
+   "genero": "Drama",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 19,
+   "pais_tmdb": "Mexico, Venezuela",
+   "title_en": "Reliefs",
+   "lbSlug": "reliefs-2025",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Alivios",
+   "_director": "Juan Manuel González",
+   "_sondeado": "2026-10-10",
    "_ya_publicada": [
     {
      "festival": "villadelcine-2026",
@@ -95,9 +110,9 @@
      "sinopsis": "Carlos atraviesa una crisis que parece no tener salida mientras cuida de Rosa, su madre, cuyo dolor solo disminuye en las aguas cálidas de la hidroterapia. Una noche, ella le propone un sacrificio extremo que los obliga a reconsiderar el amor, la dependencia y la posibilidad de encontrar juntos otra forma de alivio."
     }
    ],
-   "poster": "/assets/villadelcine-2026/alivios.jpg",
-   "_verificado": "ya publicada en villadelcine-2026: se reusa su afiche",
-   "sinopsis": "Carlos atraviesa una crisis que parece no tener salida mientras cuida de Rosa, su madre, cuyo dolor solo disminuye en las aguas cálidas de la hidroterapia. Una noche, ella le propone un sacrificio extremo que los obliga a reconsiderar el amor, la dependencia y la posibilidad de encontrar juntos otra forma de alivio."
+   "_sinopsis_de": "ya publicada en villadelcine-2026",
+   "poster": "/assets/ficcali-2026/alivios.jpg",
+   "posterSource": "tmdb"
   },
   {
    "titulo": "An Incomplete Calendar",
@@ -168,7 +183,7 @@
    "lbSlug": "boato",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Alexandra Julio, 2026, 7 min, CO; sinopsis del festival y afiche original de ficcali.com (biblioteca de medios).",
    "_director": "Alexandra Julio",
-   "_sondeado": "2026-10-09",
+   "_sondeado": "2026-10-10",
    "poster": "/assets/ficcali-2026/boato.jpg",
    "posterSource": "tmdb"
   },
@@ -205,7 +220,7 @@
    "lbSlug": "despues-de-las-seis",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Diana Kuellar (1740740, directora de Marímbula), 2026, 24 min, CO; sinopsis del festival y afiche original de ficcali.com (biblioteca de medios).",
    "_director": "Diana Kuéllar",
-   "_sondeado": "2026-10-09",
+   "_sondeado": "2026-10-10",
    "poster": "/assets/ficcali-2026/despues-de-las-seis.jpg",
    "posterSource": "tmdb"
   },
@@ -240,7 +255,9 @@
    "lbSlug": "el-coloso",
    "_verificado": "declarada a mano: Proyección especial fuera de la Selección: la tarjeta solo dice Colombia, 70 min. TMDB: «El coloso», José Varón, Colombia, 2025, 66 min (la otra ficha homónima, 1612550, es un corto peruano de 17 min). Verificado a mano el 8 oct.",
    "_director": "José Varón",
-   "_sondeado": "2026-10-09",
+   "_sondeado": "2026-10-10",
+   "sinopsis": "El Coloso cuenta la vida y el legado de Freddy Rincón, un gigante del fútbol colombiano que conquistó Brasil con su fuerza y su talento, llenó estadios en España y le dio a su país uno de sus goles más inolvidables, contra Alemania. De sus raíces en Buenaventura a convertirse en símbolo de orgullo nacional, Rincón trascendió la cancha para inspirar a toda una generación. Más que un futbolista, fue un faro de esperanza cuya grandeza sigue viva en la memoria de los colombianos.",
+   "_sinopsis": "traducción nuestra (Claude, 10 oct 2026; pendiente del pase de Content Design de Juan) de la sinopsis en inglés de TMDB: https://www.themoviedb.org/movie/1566489",
    "poster": "/assets/ficcali-2026/el-coloso.jpg",
    "posterSource": "tmdb"
   },
@@ -258,7 +275,7 @@
    "lbSlug": "el-mundo-de-humberto",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Paula Ortiz, 2025, 14 min, CO; sinopsis del festival y afiche original de ficcali.com (biblioteca de medios).",
    "_director": "Paula Ortiz",
-   "_sondeado": "2026-10-09",
+   "_sondeado": "2026-10-10",
    "poster": "/assets/ficcali-2026/el-mundo-de-humberto.jpg",
    "posterSource": "tmdb"
   },
@@ -280,7 +297,9 @@
    "_director": "Jenny David Piedrahita",
    "_sondeado": "2026-10-08",
    "poster": "/assets/ficcali-2026/el-ocaso-de-las-criaturas.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "sinopsis": "Una joven melancólica deambula por las calles solitarias del centro en busca de comida, mientras su mente está conectada con una dimensión paralela en la que sueña en voz alta cartas para su hermana. Su curiosidad y la posibilidad de volver a ver un atardecer ponen en riesgo su regreso a casa.",
+   "_sinopsis": "traducción nuestra (Claude, 10 oct 2026; pendiente del pase de Content Design de Juan) de la sinopsis en inglés de TMDB: https://www.themoviedb.org/movie/1216479"
   },
   {
    "titulo": "El viaje",
@@ -296,7 +315,7 @@
    "lbSlug": "el-viaje-2026",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Ana Sofía Franco, 2026, 8 min, CO; sinopsis del festival y afiche original de ficcali.com (biblioteca de medios).",
    "_director": "Ana Sofía Franco",
-   "_sondeado": "2026-10-09",
+   "_sondeado": "2026-10-10",
    "poster": "/assets/ficcali-2026/el-viaje.jpg",
    "posterSource": "tmdb"
   },
@@ -315,7 +334,7 @@
    "lbSlug": "work-in-progress",
    "_verificado": "declarada a mano: Proyección especial: la tarjeta dice España, 124 min. TMDB: José Luis Guerín, 2001, 125 min, España. Verificado a mano el 8 oct.",
    "_director": "José Luis Guerín",
-   "_sondeado": "2026-10-09",
+   "_sondeado": "2026-10-10",
    "poster": "/assets/ficcali-2026/en-construccion.jpg",
    "posterSource": "tmdb"
   },
@@ -337,22 +356,28 @@
    "_director": "Ana María Ferro",
    "_sondeado": "2026-10-08",
    "poster": "/assets/ficcali-2026/estirpe.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "sinopsis": "Entre los vivos y los muertos hay una memoria compartida.",
+   "_sinopsis": "traducción nuestra (Claude, 10 oct 2026; pendiente del pase de Content Design de Juan) de la sinopsis en inglés de TMDB: https://www.themoviedb.org/movie/1327925"
   },
   {
-   "titulo": "Historias del buen Valle",
-   "_ya_publicada": [
-    {
-     "festival": "ficci-65",
-     "titulo": "Historias del buen valle",
-     "poster": "https://image.tmdb.org/t/p/w500/tRuNQ4ncAUrhfClwL8GJYUE9HYJ.jpg",
-     "posterSource": "tmdb",
-     "sinopsis": "De nuevo, José Luis Guerín ofrece una lección de cine documental, como lo reconoció el jurado del Festival de Cine de San Sebastián, que le otorgó su Premio Especial."
-    }
-   ],
-   "poster": "https://image.tmdb.org/t/p/w500/tRuNQ4ncAUrhfClwL8GJYUE9HYJ.jpg",
-   "_verificado": "ya publicada en ficci-65: se reusa su afiche",
-   "sinopsis": "De nuevo, José Luis Guerín ofrece una lección de cine documental, como lo reconoció el jurado del Festival de Cine de San Sebastián, que le otorgó su Premio Especial."
+   "titulo": "Historias del buen valle",
+   "tmdb_id": 1457842,
+   "titulo_original": "Historias del buen valle",
+   "poster_path": "/vB8WLfHFsKBoQsoEZKHNqZVIqcx.jpg",
+   "synopsis_es": "En un barrio periférico donde se encuentran el mundo rural y el urbano, las casas de los primeros migrantes de la posguerra conviven con los nuevos bloques de una ciudad dormitorio donde se concentra la última oleada migratoria. Este rincón humilde se ha convertido en una auténtica aldea global, un retrato sereno y humanista de los conflictos sociales, generacionales e identitarios del mundo actual.",
+   "synopsis_en": "In a peripheral neighbourhood, where the rural and urban worlds meet, the houses of the first migrants who arrived after the post-war period coexist with the new blocks of the dormitory city, where the latest wave of migration is concentrated. This humble corner is now an authentic global village. Good Valley Stories is a sum of constructs, of social, generational and identity, urban and ecological conflicts, but it is also a calm and humanistic look at today’s world.",
+   "genero": "Documental",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 125,
+   "pais_tmdb": "France, Spain",
+   "title_en": "Good Valley Stories",
+   "lbSlug": "good-valley-stories",
+   "_verificado": "declarada a mano: FICCI 65 la publicó (José Luis Guerín, 2025); TMDB: Guerín, 2025, 125 min contra 120 de la tarjeta (10 oct 2026). La tarjeta de Ficcali no da director ni año: sin ellos el candado no podía corroborar.",
+   "_director": "José Luis Guerín",
+   "_sondeado": "2026-10-10",
+   "poster": "/assets/ficcali-2026/historias-del-buen-valle.jpg",
+   "posterSource": "tmdb"
   },
   {
    "titulo": "I Built a Rocket Imagining your Arrival",
@@ -405,30 +430,42 @@
    "posterSource": "tmdb"
   },
   {
+   "titulo": "Khazana",
+   "tmdb_id": 1431611,
+   "titulo_original": "Khazana",
+   "poster_path": "/5cvMGuUW3YsuPYPjPBKMDdqQ4k6.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "A Deaf waste collector in Karachi stumbles upon a shocking discovery at a landfill, leading to a dangerous clash with a ruthless gangster - only to uncover a treasure that changes his life forever.",
+   "genero": "Drama",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 19,
+   "pais_tmdb": "Pakistan",
+   "title_en": "Treasure",
+   "lbSlug": "treasure-2025",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Khazana",
+   "_director": "Basir Ahmed",
+   "_sondeado": "2026-10-10",
+   "poster": "/assets/ficcali-2026/khazana.jpg",
+   "posterSource": "tmdb"
+  },
+  {
    "titulo": "La bola negra",
-   "_ya_publicada": [
-    {
-     "festival": "biff-2026",
-     "titulo": "La Bola Negra",
-     "tmdb_id": 1422041,
-     "poster": "/assets/biff-2026/la-bola-negra.jpg",
-     "posterSource": "tmdb",
-     "lbSlug": "la-bola-negra",
-     "sinopsis": "LA BOLA NEGRA narra las vidas de tres hombres en tres épocas distintas —1932, 1937 y 2017— cuyas historias se entrelazan a través del deseo, el dolor y la herencia. Inspirada en una de las últimas obras inacabadas de Federico GARCÍA LORCA."
-    },
-    {
-     "festival": "tiff-2026",
-     "titulo": "La Bola Negra",
-     "tmdb_id": 1422041,
-     "poster": "https://image.tmdb.org/t/p/w500/c1vESDKwUGjAatrxt1MGKTbK9Ah.jpg",
-     "posterSource": "tmdb",
-     "lbSlug": "la-bola-negra",
-     "sinopsis": "El homenaje ambicioso y cautivador de Los Javis a Federico García Lorca entrelaza las vidas de tres hombres en el amor y la pérdida a lo largo de distintas épocas. Con interpretaciones potentes de Guitarricadelafuente, Carlos González y Miguel Bernardeau."
-    }
-   ],
-   "poster": "/assets/biff-2026/la-bola-negra.jpg",
-   "_verificado": "ya publicada en biff-2026: se reusa su afiche",
-   "sinopsis": "LA BOLA NEGRA narra las vidas de tres hombres en tres épocas distintas —1932, 1937 y 2017— cuyas historias se entrelazan a través del deseo, el dolor y la herencia. Inspirada en una de las últimas obras inacabadas de Federico GARCÍA LORCA."
+   "tmdb_id": 1422041,
+   "titulo_original": "La bola negra",
+   "poster_path": "/4omaYktw4VYkk5Tkq7rmUsWnQa5.jpg",
+   "synopsis_es": "Las vidas interconectadas de tres hombres en tres épocas distintas, tres existencias íntimamente ligadas por la sexualidad y el deseo, el dolor y la herencia.",
+   "synopsis_en": "The intertwined lives of three men in three different eras, three lives intimately linked by sexuality and desire, pain, and legacy.",
+   "genero": "Drama",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 155,
+   "pais_tmdb": "Spain, France",
+   "lbSlug": "la-bola-negra",
+   "_verificado": "declarada a mano: BIFF 12 y TIFF 2026 la publican con esta ficha; director, año (2026) y duración (155 min) coinciden (10 oct 2026). La tarjeta de Ficcali no da director ni año: sin ellos el candado no podía corroborar.",
+   "_director": "Javier Calvo, Javier Ambrossi",
+   "_sondeado": "2026-10-10",
+   "poster": "/assets/ficcali-2026/la-bola-negra.jpg",
+   "posterSource": "tmdb"
   },
   {
    "titulo": "La fabulosa máquina del tiempo",
@@ -445,7 +482,9 @@
    "lbSlug": "the-fabulous-time-machine",
    "_verificado": "declarada a mano: Proyección especial: la tarjeta dice Brasil, 70 min. TMDB: «A Fabulosa Máquina do Tempo», Eliza Capai, 2026, 73 min, Brasil. Verificado a mano el 8 oct.",
    "_director": "Eliza Capai",
-   "_sondeado": "2026-10-09",
+   "_sondeado": "2026-10-10",
+   "sinopsis": "En el corazón del árido sertão brasileño, un grupo de niñas de diez años juega a inventar máquinas del tiempo imaginarias. Las pequeñas viajan al pasado para explorar la dura realidad de supervivencia que vivieron sus madres y abuelas, al mismo tiempo que se proyectan. El documental utiliza la inocencia y la imaginación infantil como un poderoso catalizador para debatir con madurez sobre la autonomía de las mujeres, el género, el ciclo de la pobreza y sus propios sueños de libertad.",
+   "_sinopsis": "ficha de ficcali.com, verbatim (https://ficcali.com/pelicula/a-fabulosa-maquina-do-tempo), leída el 10 oct 2026",
    "poster": "/assets/ficcali-2026/la-fabulosa-maquina-del-tiempo.jpg",
    "posterSource": "tmdb"
   },
@@ -503,20 +542,22 @@
   },
   {
    "titulo": "La libertad doble",
-   "_ya_publicada": [
-    {
-     "festival": "biff-2026",
-     "titulo": "La Libertad Doble",
-     "tmdb_id": 1387981,
-     "poster": "/assets/biff-2026/la-libertad-doble-v2.jpg",
-     "posterSource": "tmdb",
-     "lbSlug": "double-freedom",
-     "sinopsis": "Misael trabaja solo con su hacha, talando árboles en el bosque. Una responsabilidad inesperada trastoca su vida, y la lógica de sus días se desvanece en una naturaleza donde la razón humana carece de sentido."
-    }
-   ],
-   "poster": "/assets/biff-2026/la-libertad-doble-v2.jpg",
-   "_verificado": "ya publicada en biff-2026: se reusa su afiche",
-   "sinopsis": "Misael trabaja solo con su hacha, talando árboles en el bosque. Una responsabilidad inesperada trastoca su vida, y la lógica de sus días se desvanece en una naturaleza donde la razón humana carece de sentido."
+   "tmdb_id": 1387981,
+   "titulo_original": "La libertad doble",
+   "poster_path": "/sBX05RMcO8eFcpV9hI7o2qA7mbH.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Misael works alone with his axe, cutting down trees in the woods. An unexpected responsibility upends his life, and the logic of his days fades away in a nature where human reason holds no meaning.",
+   "genero": "Drama",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 100,
+   "pais_tmdb": "Chile, Argentina, Luxembourg, Germany, Italy, Uruguay, United Kingdom, United States of America",
+   "title_en": "Double Freedom",
+   "lbSlug": "double-freedom",
+   "_verificado": "declarada a mano: BIFF 12 la publica con esta ficha; Lisandro Alonso, 2026, 100 min coinciden (10 oct 2026). La tarjeta de Ficcali no da director ni año: sin ellos el candado no podía corroborar.",
+   "_director": "Lisandro Alonso",
+   "_sondeado": "2026-10-10",
+   "poster": "/assets/ficcali-2026/la-libertad-doble-v2.jpg",
+   "posterSource": "tmdb"
   },
   {
    "titulo": "La mansión de Araucaima",
@@ -563,7 +604,7 @@
    "lbSlug": "las-pesadillas-del-siervo",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Manuel Villa (1711036, director de No amanece igual para todos), 2025, 90 min, CO; sinopsis del festival y afiche original de ficcali.com (biblioteca de medios).",
    "_director": "Manuel Villa",
-   "_sondeado": "2026-10-09",
+   "_sondeado": "2026-10-10",
    "poster": "/assets/ficcali-2026/las-pesadillas-del-siervo.jpg",
    "posterSource": "tmdb"
   },
@@ -583,7 +624,9 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Liebres",
    "_director": "Laura Carvajal",
-   "_sondeado": "2026-10-08"
+   "_sondeado": "2026-10-08",
+   "sinopsis": "Valentina y Pilar, dos adolescentes de contextos socioculturales distintos, viven un hecho violento que las cambiará para siempre: rompe las barreras que las separan y las hace habitar un mismo cuerpo herido.",
+   "_sinopsis": "traducción nuestra (Claude, 10 oct 2026; pendiente del pase de Content Design de Juan) de la sinopsis en inglés de TMDB: https://www.themoviedb.org/movie/1392101"
   },
   {
    "titulo": "Luis Tercero",
@@ -633,7 +676,9 @@
    "_director": "Rossana Montoya",
    "_sondeado": "2026-10-08",
    "poster": "/assets/ficcali-2026/mi-demonio.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "sinopsis": "En un extraordinario plano secuencia de 17 minutos acompañamos a una pareja joven y disfuncional que está a punto de tener su primer hijo. Camino al hospital, los dolores de parto se mezclan con los reproches mutuos, y las llamadas de los familiares suman comentarios imprudentes a una situación más que desesperada.",
+   "_sinopsis": "traducción nuestra (Claude, 10 oct 2026; pendiente del pase de Content Design de Juan) de la sinopsis en inglés de TMDB: https://www.themoviedb.org/movie/1463453"
   },
   {
    "titulo": "Mi vecino Totoro",
@@ -670,7 +715,7 @@
    "lbSlug": "minotaur-2026",
    "_verificado": "declarada a mano: Proyección especial: la tarjeta dice Rusia, 135 min. TMDB: «Minotaur», Andrey Zvyagintsev, 2026, 135 min exactos (origen FR por la coproducción; el director es ruso). Verificado a mano el 8 oct.",
    "_director": "Andrey Zvyagintsev",
-   "_sondeado": "2026-10-09",
+   "_sondeado": "2026-10-10",
    "poster": "/assets/ficcali-2026/minotauro.jpg",
    "posterSource": "tmdb"
   },
@@ -897,30 +942,29 @@
    "lbSlug": "rodilla-negra",
    "_verificado": "declarada a mano: Proyección especial junto a El Coloso: la tarjeta solo dice Colombia. Es «Rodilla negra» de Carlos Mayolo (Cali, 1975, 14 min), el único título así en TMDB; cuadra con un festival caleño. Verificado a mano el 8 oct.",
    "_director": "Carlos Mayolo",
-   "_sondeado": "2026-10-09",
+   "_sondeado": "2026-10-10",
+   "sinopsis": "Un equipo de fútbol, interpretado por jugadores del Barrios Unidos de Cali, se topa en el campo con una pareja de hippies que se bañan desnudos y les roba el radio de transistores. Eso parece desatar algo en su jugador más legendario, Jonny Mosquera: un síndrome terrible que lo hace caer, literalmente, de rodillas.",
+   "_sinopsis": "traducción nuestra (Claude, 10 oct 2026; pendiente del pase de Content Design de Juan) de la sinopsis en inglés de TMDB: https://www.themoviedb.org/movie/947607",
    "poster": "/assets/ficcali-2026/rodilla-negra.jpg",
    "posterSource": "tmdb"
   },
   {
-   "titulo": "Runa Simi",
-   "_ya_publicada": [
-    {
-     "festival": "aff-2026",
-     "titulo": "Runa Simi",
-     "poster": "https://image.tmdb.org/t/p/w185/eXeQscX8CHbp2orMEF33d4OAshA.jpg",
-     "posterSource": "tmdb",
-     "sinopsis": "Un actor de doblaje peruano busca convencer a Disney de doblar El Rey León al quechua. El viaje se convierte en una odisea personal de paternidad y activismo."
-    },
-    {
-     "festival": "ficci-65",
-     "titulo": "Runa Simi",
-     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/RUNA%20SIMI%20POSTER%20AF%20-%20Claudia%20chavez%20levano.jpg?itok=ObXBIPVJ",
-     "posterSource": "custom"
-    }
-   ],
-   "poster": "https://image.tmdb.org/t/p/w185/eXeQscX8CHbp2orMEF33d4OAshA.jpg",
-   "_verificado": "ya publicada en aff-2026: se reusa su afiche",
-   "sinopsis": "Un actor de doblaje peruano busca convencer a Disney de doblar El Rey León al quechua. El viaje se convierte en una odisea personal de paternidad y activismo."
+   "titulo": "Runa simi",
+   "tmdb_id": 1465974,
+   "titulo_original": "Runa Simi",
+   "poster_path": "/eXeQscX8CHbp2orMEF33d4OAshA.jpg",
+   "synopsis_es": "Fernando Valencia, actor de doblaje cusqueño, sueña con doblar El Rey León al quechua. Este viaje lo llevará a replantearse su compromiso con su lengua, su cultura y su rol como padre, con su hijo de 8 años, Dylan, como su compañero esencial en esta aventura. A través de la historia de Fernando exploramos temas como la cultura quechua, la paternidad, el racismo estructural en el Perú, la discriminación lingüística y la supervivencia de las lenguas indígenas en la actualidad.",
+   "synopsis_en": "Single father and Cusco radio host Fernando shares a modest yet endearing hobby with his son: dubbing classic animated clips into Quechua, an Indigenous language spoken by a relatively small population. When one of their dubs unexpectedly goes viral, a private passion transforms into something far more ambitious and meaningful.",
+   "genero": "Documental",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 81,
+   "pais_tmdb": "Peru",
+   "lbSlug": "runa-simi",
+   "_verificado": "declarada a mano: AFF 2026 la publicó (Augusto Zegarra, 2025); TMDB: Zegarra, 2025, 81 min contra 85 de la tarjeta (10 oct 2026). La tarjeta de Ficcali no da director ni año: sin ellos el candado no podía corroborar.",
+   "_director": "Augusto Zegarra",
+   "_sondeado": "2026-10-10",
+   "poster": "/assets/ficcali-2026/runa-simi.jpg",
+   "posterSource": "tmdb"
   },
   {
    "titulo": "Seis meses en el edificio rosa con azul",
@@ -1002,7 +1046,9 @@
     }
    ],
    "poster": "/assets/ficcali-2026/sirenas-en-la-niebla.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "sinopsis": "Mariela luchará contra la creencia del pueblo de que una sirena se está llevando a los jóvenes y, en el camino, descubrirá al verdadero monstruo.",
+   "_sinopsis": "traducción nuestra (Claude, 10 oct 2026; pendiente del pase de Content Design de Juan) de la sinopsis en inglés de TMDB: https://www.themoviedb.org/movie/1117116"
   },
   {
    "titulo": "Somnolítico",
@@ -1065,7 +1111,9 @@
    "_director": "Camila Loboguerrero",
    "_sondeado": "2026-10-08",
    "poster": "/assets/ficcali-2026/por-que-se-esconde-dracula.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "sinopsis": "Lolita, secretaria de una oficina de finca raíz, debe llevar el contrato de venta de un inmueble a donde un cliente un poco especial. Se verá envuelta en una misteriosa aventura que terminará de una manera no menos extraña.",
+   "_sinopsis": "ficha de ficcali.com, verbatim (https://ficcali.com/pelicula/por-que-se-esconde-dracula/), leída el 10 oct 2026"
   },
   {
    "titulo": "Álbum de familia",
@@ -1222,12 +1270,6 @@
    "_afiche": "declarado: ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/10/poster-jiru-iuiai-scaled.webp (2048×2560)"
   },
   {
-   "titulo": "Khazana",
-   "poster": "/assets/ficcali-2026/khazana.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/09/poster-khazana.jpg (1075×1536)"
-  },
-  {
    "titulo": "Kiki: entregas a domicilio",
    "poster": "/assets/ficcali-2026/kiki-entregas-a-domicilio.jpg",
    "posterSource": "oficial",
@@ -1300,6 +1342,12 @@
    "_afiche": "declarado: ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/10/poster-no-me-devoro-pc6-la-gula.webp (1587×2245)"
   },
   {
+   "titulo": "Ona",
+   "poster": "/assets/ficcali-2026/ona.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/09/poster-ona-scaled.webp (1706×2560)"
+  },
+  {
    "titulo": "Pajariscopio",
    "poster": "/assets/ficcali-2026/pajariscopio.jpg",
    "posterSource": "oficial",
@@ -1342,6 +1390,12 @@
    "_afiche": "declarado: ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/09/poster-tuktu.jpeg (1149×1600)"
   },
   {
+   "titulo": "Vértigo",
+   "poster": "/assets/ficcali-2026/vertigo.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/09/poster-vertigo.jpg (1810×2560)"
+  },
+  {
    "titulo": "Y el río lloró",
    "poster": "/assets/ficcali-2026/y-el-rio-lloro.jpg",
    "posterSource": "oficial",
@@ -1380,7 +1434,7 @@
    "lbSlug": "afilando-memoria",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Eugenio Gómez, 2026, 7 min, CO; sinopsis del festival y afiche original de ficcali.com (biblioteca de medios).",
    "_director": "Eugenio Gómez",
-   "_sondeado": "2026-10-09",
+   "_sondeado": "2026-10-10",
    "poster": "/assets/ficcali-2026/afilando-memoria.jpg",
    "posterSource": "tmdb"
   },
@@ -1426,6 +1480,37 @@
    ],
    "_sinopsis_de": "ya publicada en ficdeh-2026",
    "poster": "/assets/ficcali-2026/akababuru-expresion-de-asombro.jpg",
+   "posterSource": "tmdb"
+  },
+  "Alivios": {
+   "tmdb_id": 1469210,
+   "titulo_original": "Alivios",
+   "poster_path": "/fuQQAuTPK0lGxsvI0yUxz9KzQCK.jpg",
+   "synopsis_es": "Carlos atraviesa una crisis que parece no tener salida mientras cuida de Rosa, su madre, cuyo dolor solo disminuye en las aguas cálidas de la hidroterapia. Una noche, ella le propone un sacrificio extremo que los obliga a reconsiderar el amor, la dependencia y la posibilidad de encontrar juntos otra forma de alivio.",
+   "synopsis_en": "Carlos is approaching midlife trapped in a personal crisis that has lingered too long. Rosa, his mother, suffers from disabling pain that is only mitigated by the warm waters of hydrotherapy. One night, she offers to make the ultimate sacrifice so that they can both transit to a better place. A short film about love, hope and relief we all long for.",
+   "genero": "Drama",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 19,
+   "pais_tmdb": "Mexico, Venezuela",
+   "title_en": "Reliefs",
+   "lbSlug": "reliefs-2025",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Alivios",
+   "_director": "Juan Manuel González",
+   "_sondeado": "2026-10-10",
+   "_ya_publicada": [
+    {
+     "festival": "villadelcine-2026",
+     "titulo": "Alivios",
+     "tmdb_id": 1469210,
+     "poster": "/assets/villadelcine-2026/alivios.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "reliefs-2025",
+     "sinopsis": "Carlos atraviesa una crisis que parece no tener salida mientras cuida de Rosa, su madre, cuyo dolor solo disminuye en las aguas cálidas de la hidroterapia. Una noche, ella le propone un sacrificio extremo que los obliga a reconsiderar el amor, la dependencia y la posibilidad de encontrar juntos otra forma de alivio."
+    }
+   ],
+   "_sinopsis_de": "ya publicada en villadelcine-2026",
+   "poster": "/assets/ficcali-2026/alivios.jpg",
    "posterSource": "tmdb"
   },
   "An Incomplete Calendar": {
@@ -1494,7 +1579,7 @@
    "lbSlug": "boato",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Alexandra Julio, 2026, 7 min, CO; sinopsis del festival y afiche original de ficcali.com (biblioteca de medios).",
    "_director": "Alexandra Julio",
-   "_sondeado": "2026-10-09",
+   "_sondeado": "2026-10-10",
    "poster": "/assets/ficcali-2026/boato.jpg",
    "posterSource": "tmdb"
   },
@@ -1529,7 +1614,7 @@
    "lbSlug": "despues-de-las-seis",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Diana Kuellar (1740740, directora de Marímbula), 2026, 24 min, CO; sinopsis del festival y afiche original de ficcali.com (biblioteca de medios).",
    "_director": "Diana Kuéllar",
-   "_sondeado": "2026-10-09",
+   "_sondeado": "2026-10-10",
    "poster": "/assets/ficcali-2026/despues-de-las-seis.jpg",
    "posterSource": "tmdb"
   },
@@ -1546,7 +1631,9 @@
    "lbSlug": "el-coloso",
    "_verificado": "declarada a mano: Proyección especial fuera de la Selección: la tarjeta solo dice Colombia, 70 min. TMDB: «El coloso», José Varón, Colombia, 2025, 66 min (la otra ficha homónima, 1612550, es un corto peruano de 17 min). Verificado a mano el 8 oct.",
    "_director": "José Varón",
-   "_sondeado": "2026-10-09",
+   "_sondeado": "2026-10-10",
+   "sinopsis": "El Coloso cuenta la vida y el legado de Freddy Rincón, un gigante del fútbol colombiano que conquistó Brasil con su fuerza y su talento, llenó estadios en España y le dio a su país uno de sus goles más inolvidables, contra Alemania. De sus raíces en Buenaventura a convertirse en símbolo de orgullo nacional, Rincón trascendió la cancha para inspirar a toda una generación. Más que un futbolista, fue un faro de esperanza cuya grandeza sigue viva en la memoria de los colombianos.",
+   "_sinopsis": "traducción nuestra (Claude, 10 oct 2026; pendiente del pase de Content Design de Juan) de la sinopsis en inglés de TMDB: https://www.themoviedb.org/movie/1566489",
    "poster": "/assets/ficcali-2026/el-coloso.jpg",
    "posterSource": "tmdb"
   },
@@ -1563,7 +1650,7 @@
    "lbSlug": "el-mundo-de-humberto",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Paula Ortiz, 2025, 14 min, CO; sinopsis del festival y afiche original de ficcali.com (biblioteca de medios).",
    "_director": "Paula Ortiz",
-   "_sondeado": "2026-10-09",
+   "_sondeado": "2026-10-10",
    "poster": "/assets/ficcali-2026/el-mundo-de-humberto.jpg",
    "posterSource": "tmdb"
   },
@@ -1584,7 +1671,9 @@
    "_director": "Jenny David Piedrahita",
    "_sondeado": "2026-10-08",
    "poster": "/assets/ficcali-2026/el-ocaso-de-las-criaturas.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "sinopsis": "Una joven melancólica deambula por las calles solitarias del centro en busca de comida, mientras su mente está conectada con una dimensión paralela en la que sueña en voz alta cartas para su hermana. Su curiosidad y la posibilidad de volver a ver un atardecer ponen en riesgo su regreso a casa.",
+   "_sinopsis": "traducción nuestra (Claude, 10 oct 2026; pendiente del pase de Content Design de Juan) de la sinopsis en inglés de TMDB: https://www.themoviedb.org/movie/1216479"
   },
   "El viaje": {
    "tmdb_id": 1791683,
@@ -1599,7 +1688,7 @@
    "lbSlug": "el-viaje-2026",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Ana Sofía Franco, 2026, 8 min, CO; sinopsis del festival y afiche original de ficcali.com (biblioteca de medios).",
    "_director": "Ana Sofía Franco",
-   "_sondeado": "2026-10-09",
+   "_sondeado": "2026-10-10",
    "poster": "/assets/ficcali-2026/el-viaje.jpg",
    "posterSource": "tmdb"
   },
@@ -1617,7 +1706,7 @@
    "lbSlug": "work-in-progress",
    "_verificado": "declarada a mano: Proyección especial: la tarjeta dice España, 124 min. TMDB: José Luis Guerín, 2001, 125 min, España. Verificado a mano el 8 oct.",
    "_director": "José Luis Guerín",
-   "_sondeado": "2026-10-09",
+   "_sondeado": "2026-10-10",
    "poster": "/assets/ficcali-2026/en-construccion.jpg",
    "posterSource": "tmdb"
   },
@@ -1638,6 +1727,26 @@
    "_director": "Ana María Ferro",
    "_sondeado": "2026-10-08",
    "poster": "/assets/ficcali-2026/estirpe.jpg",
+   "posterSource": "tmdb",
+   "sinopsis": "Entre los vivos y los muertos hay una memoria compartida.",
+   "_sinopsis": "traducción nuestra (Claude, 10 oct 2026; pendiente del pase de Content Design de Juan) de la sinopsis en inglés de TMDB: https://www.themoviedb.org/movie/1327925"
+  },
+  "Historias del buen valle": {
+   "tmdb_id": 1457842,
+   "titulo_original": "Historias del buen valle",
+   "poster_path": "/vB8WLfHFsKBoQsoEZKHNqZVIqcx.jpg",
+   "synopsis_es": "En un barrio periférico donde se encuentran el mundo rural y el urbano, las casas de los primeros migrantes de la posguerra conviven con los nuevos bloques de una ciudad dormitorio donde se concentra la última oleada migratoria. Este rincón humilde se ha convertido en una auténtica aldea global, un retrato sereno y humanista de los conflictos sociales, generacionales e identitarios del mundo actual.",
+   "synopsis_en": "In a peripheral neighbourhood, where the rural and urban worlds meet, the houses of the first migrants who arrived after the post-war period coexist with the new blocks of the dormitory city, where the latest wave of migration is concentrated. This humble corner is now an authentic global village. Good Valley Stories is a sum of constructs, of social, generational and identity, urban and ecological conflicts, but it is also a calm and humanistic look at today’s world.",
+   "genero": "Documental",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 125,
+   "pais_tmdb": "France, Spain",
+   "title_en": "Good Valley Stories",
+   "lbSlug": "good-valley-stories",
+   "_verificado": "declarada a mano: FICCI 65 la publicó (José Luis Guerín, 2025); TMDB: Guerín, 2025, 125 min contra 120 de la tarjeta (10 oct 2026). La tarjeta de Ficcali no da director ni año: sin ellos el candado no podía corroborar.",
+   "_director": "José Luis Guerín",
+   "_sondeado": "2026-10-10",
+   "poster": "/assets/ficcali-2026/historias-del-buen-valle.jpg",
    "posterSource": "tmdb"
   },
   "I Built a Rocket Imagining your Arrival": {
@@ -1688,6 +1797,42 @@
    "poster": "/assets/ficcali-2026/iluminada.jpg",
    "posterSource": "tmdb"
   },
+  "Khazana": {
+   "tmdb_id": 1431611,
+   "titulo_original": "Khazana",
+   "poster_path": "/5cvMGuUW3YsuPYPjPBKMDdqQ4k6.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "A Deaf waste collector in Karachi stumbles upon a shocking discovery at a landfill, leading to a dangerous clash with a ruthless gangster - only to uncover a treasure that changes his life forever.",
+   "genero": "Drama",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 19,
+   "pais_tmdb": "Pakistan",
+   "title_en": "Treasure",
+   "lbSlug": "treasure-2025",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Khazana",
+   "_director": "Basir Ahmed",
+   "_sondeado": "2026-10-10",
+   "poster": "/assets/ficcali-2026/khazana.jpg",
+   "posterSource": "tmdb"
+  },
+  "La bola negra": {
+   "tmdb_id": 1422041,
+   "titulo_original": "La bola negra",
+   "poster_path": "/4omaYktw4VYkk5Tkq7rmUsWnQa5.jpg",
+   "synopsis_es": "Las vidas interconectadas de tres hombres en tres épocas distintas, tres existencias íntimamente ligadas por la sexualidad y el deseo, el dolor y la herencia.",
+   "synopsis_en": "The intertwined lives of three men in three different eras, three lives intimately linked by sexuality and desire, pain, and legacy.",
+   "genero": "Drama",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 155,
+   "pais_tmdb": "Spain, France",
+   "lbSlug": "la-bola-negra",
+   "_verificado": "declarada a mano: BIFF 12 y TIFF 2026 la publican con esta ficha; director, año (2026) y duración (155 min) coinciden (10 oct 2026). La tarjeta de Ficcali no da director ni año: sin ellos el candado no podía corroborar.",
+   "_director": "Javier Calvo, Javier Ambrossi",
+   "_sondeado": "2026-10-10",
+   "poster": "/assets/ficcali-2026/la-bola-negra.jpg",
+   "posterSource": "tmdb"
+  },
   "La fabulosa máquina del tiempo": {
    "tmdb_id": 1599779,
    "titulo_original": "A Fabulosa Máquina do Tempo",
@@ -1702,7 +1847,9 @@
    "lbSlug": "the-fabulous-time-machine",
    "_verificado": "declarada a mano: Proyección especial: la tarjeta dice Brasil, 70 min. TMDB: «A Fabulosa Máquina do Tempo», Eliza Capai, 2026, 73 min, Brasil. Verificado a mano el 8 oct.",
    "_director": "Eliza Capai",
-   "_sondeado": "2026-10-09",
+   "_sondeado": "2026-10-10",
+   "sinopsis": "En el corazón del árido sertão brasileño, un grupo de niñas de diez años juega a inventar máquinas del tiempo imaginarias. Las pequeñas viajan al pasado para explorar la dura realidad de supervivencia que vivieron sus madres y abuelas, al mismo tiempo que se proyectan. El documental utiliza la inocencia y la imaginación infantil como un poderoso catalizador para debatir con madurez sobre la autonomía de las mujeres, el género, el ciclo de la pobreza y sus propios sueños de libertad.",
+   "_sinopsis": "ficha de ficcali.com, verbatim (https://ficcali.com/pelicula/a-fabulosa-maquina-do-tempo), leída el 10 oct 2026",
    "poster": "/assets/ficcali-2026/la-fabulosa-maquina-del-tiempo.jpg",
    "posterSource": "tmdb"
   },
@@ -1757,6 +1904,24 @@
    "poster": "/assets/ficcali-2026/la-gran-hazana.jpg",
    "posterSource": "tmdb"
   },
+  "La libertad doble": {
+   "tmdb_id": 1387981,
+   "titulo_original": "La libertad doble",
+   "poster_path": "/sBX05RMcO8eFcpV9hI7o2qA7mbH.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Misael works alone with his axe, cutting down trees in the woods. An unexpected responsibility upends his life, and the logic of his days fades away in a nature where human reason holds no meaning.",
+   "genero": "Drama",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 100,
+   "pais_tmdb": "Chile, Argentina, Luxembourg, Germany, Italy, Uruguay, United Kingdom, United States of America",
+   "title_en": "Double Freedom",
+   "lbSlug": "double-freedom",
+   "_verificado": "declarada a mano: BIFF 12 la publica con esta ficha; Lisandro Alonso, 2026, 100 min coinciden (10 oct 2026). La tarjeta de Ficcali no da director ni año: sin ellos el candado no podía corroborar.",
+   "_director": "Lisandro Alonso",
+   "_sondeado": "2026-10-10",
+   "poster": "/assets/ficcali-2026/la-libertad-doble-v2.jpg",
+   "posterSource": "tmdb"
+  },
   "La mansión de Araucaima": {
    "tmdb_id": 327176,
    "titulo_original": "La mansión de Araucaima",
@@ -1800,7 +1965,7 @@
    "lbSlug": "las-pesadillas-del-siervo",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Manuel Villa (1711036, director de No amanece igual para todos), 2025, 90 min, CO; sinopsis del festival y afiche original de ficcali.com (biblioteca de medios).",
    "_director": "Manuel Villa",
-   "_sondeado": "2026-10-09",
+   "_sondeado": "2026-10-10",
    "poster": "/assets/ficcali-2026/las-pesadillas-del-siervo.jpg",
    "posterSource": "tmdb"
   },
@@ -1819,7 +1984,9 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Liebres",
    "_director": "Laura Carvajal",
-   "_sondeado": "2026-10-08"
+   "_sondeado": "2026-10-08",
+   "sinopsis": "Valentina y Pilar, dos adolescentes de contextos socioculturales distintos, viven un hecho violento que las cambiará para siempre: rompe las barreras que las separan y las hace habitar un mismo cuerpo herido.",
+   "_sinopsis": "traducción nuestra (Claude, 10 oct 2026; pendiente del pase de Content Design de Juan) de la sinopsis en inglés de TMDB: https://www.themoviedb.org/movie/1392101"
   },
   "Luis Tercero": {
    "tmdb_id": 1774071,
@@ -1867,7 +2034,9 @@
    "_director": "Rossana Montoya",
    "_sondeado": "2026-10-08",
    "poster": "/assets/ficcali-2026/mi-demonio.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "sinopsis": "En un extraordinario plano secuencia de 17 minutos acompañamos a una pareja joven y disfuncional que está a punto de tener su primer hijo. Camino al hospital, los dolores de parto se mezclan con los reproches mutuos, y las llamadas de los familiares suman comentarios imprudentes a una situación más que desesperada.",
+   "_sinopsis": "traducción nuestra (Claude, 10 oct 2026; pendiente del pase de Content Design de Juan) de la sinopsis en inglés de TMDB: https://www.themoviedb.org/movie/1463453"
   },
   "Mi vecino Totoro": {
    "tmdb_id": 8392,
@@ -1902,7 +2071,7 @@
    "lbSlug": "minotaur-2026",
    "_verificado": "declarada a mano: Proyección especial: la tarjeta dice Rusia, 135 min. TMDB: «Minotaur», Andrey Zvyagintsev, 2026, 135 min exactos (origen FR por la coproducción; el director es ruso). Verificado a mano el 8 oct.",
    "_director": "Andrey Zvyagintsev",
-   "_sondeado": "2026-10-09",
+   "_sondeado": "2026-10-10",
    "poster": "/assets/ficcali-2026/minotauro.jpg",
    "posterSource": "tmdb"
   },
@@ -2120,8 +2289,27 @@
    "lbSlug": "rodilla-negra",
    "_verificado": "declarada a mano: Proyección especial junto a El Coloso: la tarjeta solo dice Colombia. Es «Rodilla negra» de Carlos Mayolo (Cali, 1975, 14 min), el único título así en TMDB; cuadra con un festival caleño. Verificado a mano el 8 oct.",
    "_director": "Carlos Mayolo",
-   "_sondeado": "2026-10-09",
+   "_sondeado": "2026-10-10",
+   "sinopsis": "Un equipo de fútbol, interpretado por jugadores del Barrios Unidos de Cali, se topa en el campo con una pareja de hippies que se bañan desnudos y les roba el radio de transistores. Eso parece desatar algo en su jugador más legendario, Jonny Mosquera: un síndrome terrible que lo hace caer, literalmente, de rodillas.",
+   "_sinopsis": "traducción nuestra (Claude, 10 oct 2026; pendiente del pase de Content Design de Juan) de la sinopsis en inglés de TMDB: https://www.themoviedb.org/movie/947607",
    "poster": "/assets/ficcali-2026/rodilla-negra.jpg",
+   "posterSource": "tmdb"
+  },
+  "Runa simi": {
+   "tmdb_id": 1465974,
+   "titulo_original": "Runa Simi",
+   "poster_path": "/eXeQscX8CHbp2orMEF33d4OAshA.jpg",
+   "synopsis_es": "Fernando Valencia, actor de doblaje cusqueño, sueña con doblar El Rey León al quechua. Este viaje lo llevará a replantearse su compromiso con su lengua, su cultura y su rol como padre, con su hijo de 8 años, Dylan, como su compañero esencial en esta aventura. A través de la historia de Fernando exploramos temas como la cultura quechua, la paternidad, el racismo estructural en el Perú, la discriminación lingüística y la supervivencia de las lenguas indígenas en la actualidad.",
+   "synopsis_en": "Single father and Cusco radio host Fernando shares a modest yet endearing hobby with his son: dubbing classic animated clips into Quechua, an Indigenous language spoken by a relatively small population. When one of their dubs unexpectedly goes viral, a private passion transforms into something far more ambitious and meaningful.",
+   "genero": "Documental",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 81,
+   "pais_tmdb": "Peru",
+   "lbSlug": "runa-simi",
+   "_verificado": "declarada a mano: AFF 2026 la publicó (Augusto Zegarra, 2025); TMDB: Zegarra, 2025, 81 min contra 85 de la tarjeta (10 oct 2026). La tarjeta de Ficcali no da director ni año: sin ellos el candado no podía corroborar.",
+   "_director": "Augusto Zegarra",
+   "_sondeado": "2026-10-10",
+   "poster": "/assets/ficcali-2026/runa-simi.jpg",
    "posterSource": "tmdb"
   },
   "Seis meses en el edificio rosa con azul": {
@@ -2201,7 +2389,9 @@
     }
    ],
    "poster": "/assets/ficcali-2026/sirenas-en-la-niebla.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "sinopsis": "Mariela luchará contra la creencia del pueblo de que una sirena se está llevando a los jóvenes y, en el camino, descubrirá al verdadero monstruo.",
+   "_sinopsis": "traducción nuestra (Claude, 10 oct 2026; pendiente del pase de Content Design de Juan) de la sinopsis en inglés de TMDB: https://www.themoviedb.org/movie/1117116"
   },
   "Todo comenzó por el fin": {
    "tmdb_id": 358918,
@@ -2238,7 +2428,9 @@
    "_director": "Camila Loboguerrero",
    "_sondeado": "2026-10-08",
    "poster": "/assets/ficcali-2026/por-que-se-esconde-dracula.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "sinopsis": "Lolita, secretaria de una oficina de finca raíz, debe llevar el contrato de venta de un inmueble a donde un cliente un poco especial. Se verá envuelta en una misteriosa aventura que terminará de una manera no menos extraña.",
+   "_sinopsis": "ficha de ficcali.com, verbatim (https://ficcali.com/pelicula/por-que-se-esconde-dracula/), leída el 10 oct 2026"
   },
   "Álbum de familia": {
    "tmdb_id": 1320915,
@@ -2431,7 +2623,6 @@
  },
  "sin_ficha": [
   "Aguapanela",
-  "Alivios",
   "Animá Ve – Anibia",
   "Animá Ve – Mujeres en la animación",
   "Animá Ve – Retrospectiva de Maria Cristina Pérez",
@@ -2452,16 +2643,13 @@
   "Ellas, gardiennes de l'Amazonie",
   "Fabricia",
   "Guapi: ritmo y balsada",
-  "Historias del buen Valle",
   "Infinita canción: el secreto",
-  "Khazana",
   "Killah",
   "La María",
-  "La bola negra",
   "La fuga",
-  "La libertad doble",
   "Nancy Resabiada",
   "No me devoro-PC6. La gula",
+  "Ona",
   "Pajariscopio",
   "Plano sonoro: muestra de videoclips",
   "Pájaro Cubo",
@@ -2469,7 +2657,6 @@
   "Quinto primera",
   "Reloj",
   "Rodilla Negra + El Coloso",
-  "Runa Simi",
   "Salseando ando",
   "Salseando ando + Convergencias",
   "Sense of Reality",
@@ -2481,6 +2668,7 @@
   "Una porción por envase",
   "Vanguardias Afro e Indígena – Prog 1",
   "Vanguardias Afro e Indígena – Prog 2",
+  "Vértigo",
   "We Cam Fest 3",
   "¿Dónde está Richard?",
   "Árbol en pie"
@@ -2490,25 +2678,21 @@
    "director": "Juan José Narváez",
    "fecha": "2026-10-08"
   },
-  "Alivios": {
-   "director": "",
-   "fecha": "2026-10-07"
-  },
   "Animá Ve – Anibia": {
    "director": "",
-   "fecha": "2026-10-08"
+   "fecha": "2026-10-10"
   },
   "Animá Ve – Mujeres en la animación": {
    "director": "",
-   "fecha": "2026-10-08"
+   "fecha": "2026-10-10"
   },
   "Animá Ve – Retrospectiva de Maria Cristina Pérez": {
    "director": "",
-   "fecha": "2026-10-08"
+   "fecha": "2026-10-10"
   },
   "Arco + Corto Akababuru": {
    "director": "",
-   "fecha": "2026-10-08"
+   "fecha": "2026-10-10"
   },
   "Bankolombia": {
    "director": "Iván Darío Vernaza",
@@ -2516,7 +2700,7 @@
   },
   "Cali, ciudad abierta – Prog. Cortos": {
    "director": "",
-   "fecha": "2026-10-08"
+   "fecha": "2026-10-10"
   },
   "Canción para mi tierra": {
    "director": "",
@@ -2555,12 +2739,12 @@
    "fecha": "2026-10-07"
   },
   "El bitcoin de oro": {
-   "director": "",
-   "fecha": "2026-10-07"
+   "director": "Bernardo Hernández",
+   "fecha": "2026-10-10"
   },
   "El maestro de la piqueria": {
-   "director": "",
-   "fecha": "2026-10-07"
+   "director": "Yinet Molero",
+   "fecha": "2026-10-10"
   },
   "Ellas, gardiennes de l'Amazonie": {
    "director": "Estelle Lalisse, Jade Fort",
@@ -2574,17 +2758,9 @@
    "director": "",
    "fecha": "2026-10-07"
   },
-  "Historias del buen Valle": {
-   "director": "",
-   "fecha": "2026-10-07"
-  },
   "Infinita canción: el secreto": {
    "director": "Juanita Zapata, Camila Caballero",
    "fecha": "2026-10-08"
-  },
-  "Khazana": {
-   "director": "",
-   "fecha": "2026-10-07"
   },
   "Killah": {
    "director": "Manuelita Rosero",
@@ -2594,17 +2770,9 @@
    "director": "Santiago Díaz-Vence, Luis Celedón",
    "fecha": "2026-10-08"
   },
-  "La bola negra": {
-   "director": "",
-   "fecha": "2026-10-07"
-  },
   "La fuga": {
-   "director": "",
-   "fecha": "2026-10-07"
-  },
-  "La libertad doble": {
-   "director": "",
-   "fecha": "2026-10-07"
+   "director": "Óscar Gilberto Vesga",
+   "fecha": "2026-10-10"
   },
   "Nancy Resabiada": {
    "director": "Valeria Martí, El Kalvo",
@@ -2613,6 +2781,10 @@
   "No me devoro-PC6. La gula": {
    "director": "Álvaro Varón",
    "fecha": "2026-10-07"
+  },
+  "Ona": {
+   "director": "Matilde Gimeno",
+   "fecha": "2026-10-10"
   },
   "Pajariscopio": {
    "director": "Laia Alba, Diego Martínez",
@@ -2631,18 +2803,14 @@
    "fecha": "2026-10-08"
   },
   "Quinto primera": {
-   "director": "",
-   "fecha": "2026-10-07"
+   "director": "Fran Menchón",
+   "fecha": "2026-10-10"
   },
   "Reloj": {
    "director": "Juan José Narváez",
    "fecha": "2026-10-08"
   },
   "Rodilla Negra + El Coloso": {
-   "director": "",
-   "fecha": "2026-10-07"
-  },
-  "Runa Simi": {
    "director": "",
    "fecha": "2026-10-07"
   },
@@ -2684,19 +2852,23 @@
   },
   "Vanguardias Afro e Indígena – Prog 1": {
    "director": "",
-   "fecha": "2026-10-08"
+   "fecha": "2026-10-10"
   },
   "Vanguardias Afro e Indígena – Prog 2": {
    "director": "",
-   "fecha": "2026-10-08"
+   "fecha": "2026-10-10"
+  },
+  "Vértigo": {
+   "director": "Jimmy Llamas",
+   "fecha": "2026-10-10"
   },
   "We Cam Fest 3": {
    "director": "",
    "fecha": "2026-10-07"
   },
   "¿Dónde está Richard?": {
-   "director": "",
-   "fecha": "2026-10-07"
+   "director": "Juan Carlos Álvarez",
+   "fecha": "2026-10-10"
   },
   "Árbol en pie": {
    "director": "Red Comunitaria Trans, Rodrigo Torrijos, Mapa López",

@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "ficcali.com — Programación 2026 (WP 14870) + fichas de la Selección 2026",
-  "capturado": "2026-10-09",
+  "capturado": "2026-10-10",
   "url": "https://ficcali.com/programacion-ficcali-2026/",
   "metodo": "tarjeta por función; obra por la ficha del catálogo"
  },
@@ -635,6 +635,8 @@
    },
    "titulo": "La libertad doble",
    "seccion": "Proyecciones",
+   "director": "Lisandro Alonso",
+   "anio": 2026,
    "pais": "Argentina",
    "duracion_min": 100
   },
@@ -758,7 +760,7 @@
      "titulo": "Muchas, muchas gracias",
      "director": "Oiyi Kan",
      "pais": "Colombia",
-     "anio": 2025,
+     "anio": 2015,
      "duracion_min": 20,
      "genero": "Documental",
      "sinopsis": "Entre China y Colombia, una abuela y su nieto heredan historias de hambre, abundancia y migración, al intentar descubrir dónde pertenece una familia entre dos mundos."
@@ -914,10 +916,14 @@
     "date": "2026-10-06",
     "tarjeta": 14018
    },
-   "titulo": "Runa Simi",
-   "seccion": "Proyecciones",
+   "titulo": "Runa simi",
+   "director": "Augusto Zegarra",
    "pais": "Perú",
-   "duracion_min": 85
+   "anio": 2025,
+   "duracion_min": 85,
+   "sinopsis": "Un indígena está tratando de salvar a su lengua de la extinción. Fernando, actor de doblaje cusqueño, sueña con doblar El rey león al quechua. Este viaje, junto a su hijo Dylan, se convierte en una odisea profundamente personal, de paternidad y activismo, que pondrá a prueba su compromiso con su lengua y su cultura.",
+   "seccion": "Muestras de Muestras",
+   "duracion_obra": 85
   },
   {
    "dia": "2026-10-22",
@@ -1446,10 +1452,10 @@
     "tarjeta": 14025
    },
    "titulo": "En construcción",
-   "seccion": "Proyecciones",
    "director": "José Luis Guerín",
    "anio": 2001,
-   "pais": "España",
+   "seccion": "Muestras de Muestras",
+   "duracion_obra": 124,
    "duracion_min": 124
   },
   {
@@ -1832,56 +1838,79 @@
    "obras": [
     {
      "titulo": "Alivios",
+     "director": "Juan Manuel González",
      "pais": "México, Venezuela",
      "anio": 2025,
      "duracion_min": 18,
-     "sinopsis": "Carlos se acerca a la mediana edad, atrapado en una crisis personal que se ha prolongado demasiado. Rosa, su madre, sufre un dolor incapacitante que solo se mitiga con las cálidas aguas de la hidroterapia. Una noche, ella se ofrece a hacer el sacrificio máximo para que ambos puedan transitar a un lugar mejor. Un cortometraje sobre el amor, la esperanza y el alivio que todos anhelamos. Director y guionista Juan Manuel González"
+     "sinopsis": "Carlos se acerca a la mediana edad, atrapado en una crisis personal que se ha prolongado demasiado. Rosa, su madre, sufre un dolor incapacitante que solo se mitiga con las cálidas aguas de la hidroterapia. Una noche, ella se ofrece a hacer el sacrificio máximo para que ambos puedan transitar a un lugar mejor. Un cortometraje sobre el amor, la esperanza y el alivio que todos anhelamos."
     },
     {
      "titulo": "El bitcoin de oro",
+     "director": "Bernardo Hernández",
      "pais": "España",
      "anio": 2026,
      "duracion_min": 18,
-     "sinopsis": "Cuando Asofem está a punto de cerrar por una grave crisis económica, un grupo de usuarios y su monitor deciden embarcarse en una disparatada misión para salvar el centro al que consideran su hogar. Director y guionista Bernardo Hernández"
+     "sinopsis": "Cuando Asofem está a punto de cerrar por una grave crisis económica, un grupo de usuarios y su monitor deciden embarcarse en una disparatada misión para salvar el centro al que consideran su hogar."
     },
     {
      "titulo": "El maestro de la piqueria",
+     "director": "Yinet Molero",
      "pais": "Colombia",
      "anio": 2025,
      "duracion_min": 8,
      "genero": "Documental",
-     "sinopsis": "La piqueria, género musical autóctono del Caribe, ha representado durante décadas las raíces culturales de diversas generaciones. En La Guajira, Alcides Manjarrez es uno de los últimos maestros de este arte. Invidente de nacimiento, desde su infancia ha cimentado esta tradición. En la actualidad, además de ser referente en el folclor, impulsa la recuperación de esta tradición entre las nuevas generaciones. Director y guionista Yinet Molero"
+     "sinopsis": "La piqueria, género musical autóctono del Caribe, ha representado durante décadas las raíces culturales de diversas generaciones. En La Guajira, Alcides Manjarrez es uno de los últimos maestros de este arte. Invidente de nacimiento, desde su infancia ha cimentado esta tradición. En la actualidad, además de ser referente en el folclor, impulsa la recuperación de esta tradición entre las nuevas generaciones."
     },
     {
      "titulo": "Khazana",
+     "director": "Basir Ahmed",
      "pais": "Pakistán",
      "anio": 2025,
      "duracion_min": 19,
-     "sinopsis": "Un recolector de basura sordo, en Karachi, se topa con un descubrimiento impactante en un vertedero. Esto lo lleva a un enfrentamiento peligroso con un despiadado gánster, solo para descubrir un tesoro que cambiará su vida para siempre. Director y guionista Basir Ahmed"
+     "sinopsis": "Un recolector de basura sordo, en Karachi, se topa con un descubrimiento impactante en un vertedero. Esto lo lleva a un enfrentamiento peligroso con un despiadado gánster, solo para descubrir un tesoro que cambiará su vida para siempre."
     },
     {
      "titulo": "La fuga",
+     "director": "Óscar Gilberto Vesga",
      "pais": "Colombia",
      "anio": 2025,
      "duracion_min": 20,
-     "sinopsis": "Fermín (ochenta y siete) fue pescador. Está recluido en el asilo de un pueblo y, aunque tiene movilidad reducida, debe huir para cumplirle una promesa al río. Con ayuda de Martina (siete), la hija de la cocinera, diseña un plan para fugarse. El hospicio es caótico y está en serios problemas financieros. Ante la fuga inminente, Martina decide acompañarlo. La pareja de prófugos aborda un camión que la lleva hacia el río, mientras desciende por la cordillera. A través de la ventana del copiloto, Fermín ve personas que desempeñan oficios y saberes extintos y olvidados. Director y guionista Óscar Gilberto Vesga"
+     "sinopsis": "Fermín (ochenta y siete) fue pescador. Está recluido en el asilo de un pueblo y, aunque tiene movilidad reducida, debe huir para cumplirle una promesa al río. Con ayuda de Martina (siete), la hija de la cocinera, diseña un plan para fugarse. El hospicio es caótico y está en serios problemas financieros. Ante la fuga inminente, Martina decide acompañarlo. La pareja de prófugos aborda un camión que la lleva hacia el río, mientras desciende por la cordillera. A través de la ventana del copiloto, Fermín ve personas que desempeñan oficios y saberes extintos y olvidados."
+    },
+    {
+     "titulo": "Ona",
+     "director": "Matilde Gimeno",
+     "pais": "España",
+     "anio": 2026,
+     "duracion_min": 4,
+     "sinopsis": "Para Ona, la vida se ha convertido en una sucesión de malentendidos y conversaciones inconclusas. Arrastrada por un cansancio infinito, vaga por las calles de la ciudad, esforzándose constantemente por adaptarse a un ritmo que no le pertenece. En sus pensamientos percibimos su silenciosa lucha contra un mundo que ignora sus necesidades y malinterpreta su silencio. Lo que Ona reclama parece básico: sentirse presente, ser escuchada, ser mirada a los ojos, aunque sea por un instante. Y, sin embargo, nadie la ha conocido ni ha querido verla de verdad."
     },
     {
      "titulo": "Quinto primera",
+     "director": "Fran Menchón",
      "pais": "España",
      "anio": 2026,
      "duracion_min": 18,
-     "sinopsis": "Rafael vive encerrado en su mundo, su piso en L’Hospitalet de Llobregat. Cuando su mujer murió, hace varios años, él perdió las ganas de vivir y su espíritu guerrero. Llegó a L’Hospitalet en los años cincuenta, en la primera gran ola de inmigración. Fue un luchador por la democracia, la igualdad, la solidaridad y la justicia durante las décadas del setenta y ochenta, pero ahora, solitario, amargado y xenófobo, reniega del mundo y, en su soledad, les cobra su miseria a todos y, en especial, a los nuevos inmigrantes. Tampoco ayuda su alzhéimer, cada vez más presente. Director y guionista Fran Menchón"
+     "sinopsis": "Rafael vive encerrado en su mundo, su piso en L’Hospitalet de Llobregat. Cuando su mujer murió, hace varios años, él perdió las ganas de vivir y su espíritu guerrero. Llegó a L’Hospitalet en los años cincuenta, en la primera gran ola de inmigración. Fue un luchador por la democracia, la igualdad, la solidaridad y la justicia durante las décadas del setenta y ochenta, pero ahora, solitario, amargado y xenófobo, reniega del mundo y, en su soledad, les cobra su miseria a todos y, en especial, a los nuevos inmigrantes. Tampoco ayuda su alzhéimer, cada vez más presente."
+    },
+    {
+     "titulo": "Vértigo",
+     "director": "Jimmy Llamas",
+     "pais": "España",
+     "anio": 2025,
+     "duracion_min": 4,
+     "sinopsis": "Vértigo es el relato íntimo de una madre enfrentada al miedo más profundo: la enfermedad de su hijo. Desde una camilla de ecografía, la palabra «vertical» vuelve a sacudir su mundo varias décadas después. Lo que comenzó como una vivencia infantil llena de presión y miedo resurge en una consulta médica, ante un diagnóstico aparentemente fatídico. El vértigo se convierte en una metáfora del temor, de la incertidumbre y del amor incondicional. Entre recuerdos, voces externas y su propio diálogo interior, la protagonista se sumerge en una espiral de culpa, incertidumbre y amor."
     },
     {
      "titulo": "¿Dónde está Richard?",
+     "director": "Juan Carlos Álvarez",
      "pais": "España",
      "anio": 2025,
      "duracion_min": 6,
-     "sinopsis": "Catherine es una periodista sorda que está perdida en el barrio madrileño de Carabanchel. No va a llegar a tiempo a entrevistar a un importante actor estadounidense. Desesperada, le pide ayuda a la Lore, una vecina del barrio que pasaba por allí. Juntas trazan un plan para poder encontrarse con este conocido personaje. Director y guionista Juan Carlos Álvarez"
+     "sinopsis": "Catherine es una periodista sorda que está perdida en el barrio madrileño de Carabanchel. No va a llegar a tiempo a entrevistar a un importante actor estadounidense. Desesperada, le pide ayuda a la Lore, una vecina del barrio que pasaba por allí. Juntas trazan un plan para poder encontrarse con este conocido personaje."
     }
    ],
-   "duracion_min": 107
+   "duracion_min": 115
   },
   {
    "dia": "2026-10-24",
@@ -2021,9 +2050,11 @@
     "date": "2026-10-06",
     "tarjeta": 14037
    },
-   "titulo": "Historias del buen Valle",
-   "seccion": "Proyecciones",
-   "pais": "España",
+   "titulo": "Historias del buen valle",
+   "director": "José Luis Guerín",
+   "anio": 2025,
+   "seccion": "Muestras de Muestras",
+   "duracion_obra": 120,
    "duracion_min": 120
   },
   {
@@ -2039,6 +2070,8 @@
    },
    "titulo": "La bola negra",
    "seccion": "Proyecciones",
+   "director": "Javier Calvo, Javier Ambrossi",
+   "anio": 2026,
    "pais": "España",
    "duracion_min": 155
   },
@@ -2155,9 +2188,11 @@
     "date": "2026-10-06",
     "tarjeta": 14049
    },
-   "titulo": "Historias del buen Valle",
-   "seccion": "Proyecciones",
-   "pais": "España",
+   "titulo": "Historias del buen valle",
+   "director": "José Luis Guerín",
+   "anio": 2025,
+   "seccion": "Muestras de Muestras",
+   "duracion_obra": 120,
    "duracion_min": 120
   },
   {
@@ -2173,6 +2208,8 @@
    },
    "titulo": "La bola negra",
    "seccion": "Proyecciones",
+   "director": "Javier Calvo, Javier Ambrossi",
+   "anio": 2026,
    "pais": "España",
    "duracion_min": 155
   },
