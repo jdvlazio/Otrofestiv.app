@@ -2499,29 +2499,33 @@ except Exception as _e:
     warn(check, f'no se pudo verificar festival-chooser-canon: {_e}')
 
 # ── [diary-poster-grid] el Diario compartible es un muro de afiches, no una lista ─
-# Decisión Juan 19 jul: shareDiary dibuja un GRID de pósters (cover-fit) con chip
-# de estrellas, no la lista tipográfica vieja. Requisitos que NO pueden desaparecer:
-# (1) resolver el afiche por obra (getCortoItemPoster) y film (getFilmPoster);
-# (2) dibujarlo (drawImage); (3) el tile generativo de fallback para pósters no
-# dibujables (CORS/CDN) vía _sectionColor — sin él, un afiche caído deja hueco negro.
+# Decisión Juan 19 jul: GRID de pósters con chip de estrellas. Desde #1066 (10 oct)
+# lo dibuja shareGrilla (story.js), carrusel 4:5 con el lenguaje de la historia;
+# shareDiary solo lo delega. Requisitos que NO pueden desaparecer:
+# (1) el afiche sale de sus dueños (_modeloAfiche → posterModel/itemPosterParts);
+# (2) se dibuja (_afiche); (3) respaldo generativo para lo no dibujable
+# (_cargarConRespaldo) — sin él, un afiche caído deja hueco; (4) mejor nota primero.
 check = 'diary-poster-grid'
 try:
     _sh = open('src/controller/share.js', encoding='utf-8').read()
-    _dia = _sh[_sh.find('function shareDiary'):_sh.find('function sharePlan')] if 'function shareDiary' in _sh else ''
+    _st = open('src/controller/story.js', encoding='utf-8').read()
+    _del = _sh[_sh.find('function shareDiary'):_sh.find('function sharePlan')] if 'function shareDiary' in _sh else ''
+    _dia = _st[_st.find('async function shareGrilla'):] if 'async function shareGrilla' in _st else ''
     _errs = []
-    if 'getCortoItemPoster' not in _dia or 'getFilmPoster' not in _dia:
-        _errs.append('no resuelve el afiche por obra/film (getCortoItemPoster/getFilmPoster)')
-    if 'drawImage' not in _dia:
-        _errs.append('no dibuja el póster (drawImage) — ¿regresó a la lista tipográfica?')
-    if '_sectionColor' not in _dia:
-        _errs.append('falta el tile generativo de fallback (_sectionColor) para afiches no dibujables')
-    # Orden por calificación desc (decisión de Juan): el muro va de la mejor nota a la peor.
-    if 'rows.sort' not in _dia:
-        _errs.append('el muro no ordena por calificación (rows.sort — mejor nota primero)')
+    if 'shareGrilla' not in _del:
+        _errs.append('shareDiary ya no delega en shareGrilla')
+    if '_modeloAfiche' not in _dia:
+        _errs.append('no resuelve el afiche por su dueño (_modeloAfiche)')
+    if '_afiche(' not in _dia:
+        _errs.append('no dibuja el póster (_afiche) — ¿regresó a la lista tipográfica?')
+    if '_cargarConRespaldo' not in _dia:
+        _errs.append('falta el respaldo generativo (_cargarConRespaldo) para afiches no dibujables')
+    if 'b.rating-a.rating' not in _dia:
+        _errs.append('el muro no ordena por calificación (mejor nota primero)')
     if _errs:
         fail(check, 'diario-grid roto: ' + '; '.join(_errs[:3]))
     else:
-        ok(check, 'Diario compartible = grid de afiches con fallback generativo')
+        ok(check, 'Diario compartible = carrusel de afiches con respaldo generativo')
 except Exception as _e:
     warn(check, f'no se pudo verificar diary-poster-grid: {_e}')
 

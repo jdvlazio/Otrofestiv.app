@@ -2,12 +2,11 @@
 // p8 Step 7e — Compartir plan (canvas/imagen) + export ICS.
 
 import { FESTIVAL_CONFIG } from '../config.js';
-import {_langDates, starsText, vcfg, getFilmPoster, getCortoItemPoster, icsUid, icsNuevas, icsFantasmas, icsCampos, icsHuella, icsSeq, _icsEntrega, _icsUtc} from '../view/helpers.js';
-import { parseProgramTitle, _sectionColor } from '../view/components.js';
+import {vcfg, icsUid, icsNuevas, icsFantasmas, icsCampos, icsHuella, icsSeq, _icsEntrega, _icsUtc} from '../view/helpers.js';
+import { parseProgramTitle } from '../view/components.js';
 import { showToast, showActionModal } from '../view/feedback.js';
 import { _esRevisionActiva } from '../view/sheets.js';
 import { t } from '../i18n/i18n.js';
-import { effectiveWatched } from '../domain/film.js';
 import { state } from '../state/state.js';
 import { storage } from '../storage/storage.js';
 import { _getDisplayName, _promptDisplayName } from './auth.js';  // share→auth (sharePlan pide nombre)
@@ -48,119 +47,12 @@ export const cargarAfiche=src=>new Promise(res=>{
   im.onload=()=>res(im); im.onerror=()=>res(null); im.src=_u;
 });
 
-// ── shareDiary (F3 del Diario, rediseño 19 jul) — el diario como GRID de pósters.
-// Muro de afiches (3 col, 2:3) con chip de estrellas ámbar sobre scrim inferior.
-// Póster no dibujable (CORS/CDN) → tile generativo: fondo cálido + tinte de la
-// sección + título centrado. Tokens de la casa (fondo #0B0A08, ámbar #F59E0B,
-// blanco #F0EDE8). Mismo flujo de compartir que sharePlan (toBlob → Web Share → descarga).
+// ── shareDiary — la acción «Compartir mi Diario». Desde #1066 la dibuja
+// shareGrilla (story.js): carrusel 4:5 con el lenguaje de la historia. Se
+// importa al vuelo porque story.js ya importa de este módulo.
 export async function shareDiary(){
-  // RESTRICCIÓN 2 — de un festival en revisión no sale nada. Su programación
-  // es provisional y compartirla la hace circular como si fuera definitiva:
-  // una captura del plan o un .ics en el calendario de alguien sobreviven a
-  // la revisión y ya no se pueden desmentir. Se avisa, no se falla en silencio.
-  if(_esRevisionActiva()){ showToast(t('review_no_compartir')); return; }
-
-  const sched=(savedAgenda&&savedAgenda.schedule)||[];
-  const _seen=new Set(); const rows=[];
-  // Un programa se expande en sus OBRAS (lo que el usuario vio), cada una con su afiche + estrellas.
-  const _push=(day,title,src,section)=>rows.push({day,title,r:filmRatings[title]||0,src,section});
-  const _add=(day,title)=>{
-    const f=FILMS.find(fi=>fi.title===title);
-    if(!f) return;
-    if(f.is_cortos&&f.film_list&&f.film_list.length){
-      f.film_list.forEach(it=>_push(day,it.title,getCortoItemPoster(it),f.section));
-    } else _push(day,title,getFilmPoster(f),f.section);
-  };
-  // MISMO dueño que el muro del Diario (effectiveWatched): lo visto incluye las
-  // funciones del Plan que ya terminaron, no solo lo marcado a mano. Con `watched`
-  // a secas el Diario mostraba 25 obras y compartirlo decía «Nada visto» (Juan,
-  // iPhone, TIFF, 24 sep 2026; reproducido en Android).
-  const _vistas=effectiveWatched();
-  sched.forEach(sc=>{ if(_vistas.has(sc._title)&&!_seen.has(sc._title)){ _seen.add(sc._title); _add(sc.day,sc._title); } });
-  [..._vistas].forEach(tt=>{ if(!_seen.has(tt)&&FILMS.some(f=>f.title===tt)){ _seen.add(tt); _add(null,tt); } });
-  if(!rows.length){ showToast(t('diary_vacio'),'warn'); return; }
-  storage.setDiarioNotaVista();   // compartir = ya aceptó la lista; la nota se retira
-  // Orden del muro: de la MEJOR calificada a la peor (decisión de Juan). El grid es
-  // plano (no agrupa por días), así que la jerarquía la manda la nota. Array.sort es
-  // estable → los empates conservan el orden de recolección (cronológico); las obras
-  // sin calificar (r=0) caen al final.
-  rows.sort((a,b)=>b.r-a.r);
-  const cfg=FESTIVAL_CONFIG[_activeFestId]||{};
-  // ── geometría del grid ──
-  const W=1080, PAD=64, COLS=3, GAP=28, RAD=20;
-  const cw=(W-PAD*2-GAP*(COLS-1))/COLS, ch=cw*3/2;
-  const rn=Math.ceil(rows.length/COLS);
-  const HDR=232, FOOT=128;
-  const c=document.createElement('canvas'); c.width=W; c.height=HDR+rn*ch+(rn-1)*GAP+FOOT;
-  const x=c.getContext('2d');
-  x.fillStyle='#0B0A08'; x.fillRect(0,0,W,c.height);
-  // encabezado
-  x.textBaseline='alphabetic'; x.textAlign='left';
-  x.fillStyle='#F59E0B'; x.font='700 30px system-ui'; x.fillText((t('diary_eyebrow')||'Diario').toUpperCase(),PAD,84);
-  x.fillStyle='#F0EDE8'; x.font='800 56px system-ui';
-  const _fn=(cfg.name||''); x.fillText(_fn.length>28?_fn.slice(0,26)+'…':_fn,PAD,148);
-  x.fillStyle='#8A8A8A'; x.font='500 29px system-ui';
-  const _n=`${rows.length} ${rows.length===1?t('label_vista'):t('label_vistas')}`;
-  // Por el dueño (_langDates): un festival aplazado NO hornea «10–17 AGO» en un
-  // PNG que viaja por WhatsApp — la imagen decía fechas que el festival desmintió.
-  const _dt=_langDates(cfg);
-  x.fillText(_dt?`${_n} · ${String(_dt).toUpperCase()}`:_n,PAD,192);
-  // helpers
-  const rr=(px,py,w,h,r)=>{ x.beginPath(); x.moveTo(px+r,py); x.arcTo(px+w,py,px+w,py+h,r); x.arcTo(px+w,py+h,px,py+h,r); x.arcTo(px,py+h,px,py,r); x.arcTo(px,py,px+w,py,r); x.closePath(); };
-  const imgs=await Promise.all(rows.map(rw=>cargarAfiche(rw.src)));
-  // celdas
-  for(let i=0;i<rows.length;i++){
-    const rw=rows[i], col=i%COLS, row=Math.floor(i/COLS);
-    const cx=PAD+col*(cw+GAP), cy=HDR+row*(ch+GAP);
-    const{displayTitle:dt}=parseProgramTitle(rw.title);
-    x.save(); rr(cx,cy,cw,ch,RAD); x.clip();
-    const im=imgs[i];
-    if(im&&im.width){
-      // cover: escalar al lado corto y centrar
-      const s=Math.max(cw/im.width,ch/im.height), dw=im.width*s, dh=im.height*s;
-      x.drawImage(im,cx+(cw-dw)/2,cy+(ch-dh)/2,dw,dh);
-    } else {
-      // tile generativo: cálido + tinte de sección + título
-      const acc=_sectionColor(rw.section||'')||'#3A342B';
-      x.fillStyle='#1B1917'; x.fillRect(cx,cy,cw,ch);
-      x.save(); x.globalAlpha=.20; x.fillStyle=acc; x.fillRect(cx,cy,cw,ch); x.restore();
-      x.fillStyle='#F0EDE8'; x.font='700 30px system-ui'; x.textAlign='center';
-      const _words=dt.split(/\s+/); let _ln='', _ly=cy+ch/2-18; const _lines=[];
-      _words.forEach(w=>{ const test=_ln?_ln+' '+w:w; if(x.measureText(test).width>cw-40&&_ln){_lines.push(_ln);_ln=w;}else _ln=test; });
-      if(_ln)_lines.push(_ln);
-      _lines.slice(0,4).forEach((ln,k)=>x.fillText(ln,cx+cw/2,_ly+k*38));
-      x.textAlign='left';
-    }
-    // scrim inferior + chip de estrellas
-    const g=x.createLinearGradient(0,cy+ch-140,0,cy+ch); g.addColorStop(0,'rgba(0,0,0,0)'); g.addColorStop(1,'rgba(0,0,0,.78)');
-    x.fillStyle=g; x.fillRect(cx,cy+ch-140,cw,140);
-    x.textAlign='center';
-    x.fillStyle=rw.r?'#F59E0B':'#8A8A8A'; x.font='600 30px system-ui';
-    x.fillText(rw.r?starsText(rw.r):'·',cx+cw/2,cy+ch-28);
-    x.textAlign='left';
-    x.restore();
-  }
-  // footer — wordmark
-  x.font='800 34px system-ui';
-  const _fy=c.height-58;
-  x.fillStyle='#F0EDE8'; const _w1=x.measureText('Otro').width;
-  x.fillText('Otro',PAD,_fy);
-  x.fillStyle='#F59E0B'; x.fillText('festiv',PAD+_w1,_fy);
-  x.fillStyle='#6A6A6A'; x.font='500 26px system-ui'; x.textAlign='right';
-  x.fillText('otrofestiv.app',W-PAD,_fy); x.textAlign='left';
-  const fname=`otrofestiv-diario-${(cfg.shortName||'fest').toLowerCase().replace(/\s+/g,'-')}.png`;
-  try{
-    const blob=await new Promise(r=>c.toBlob(r,'image/png'));
-    const file=blob?new File([blob],fname,{type:'image/png'}):null;
-    if(file&&navigator.share&&navigator.canShare&&navigator.canShare({files:[file]})){
-      await navigator.share({files:[file],title:`${t('diary_eyebrow')} · ${cfg.name||'Otrofestiv'}`});
-      showToast(t('toast_compartido'),'info');
-      return;
-    }
-  }catch(e){ if(e&&e.name==='AbortError') return; }
-  const _durl=c.toDataURL('image/png');
-  if(await _shareNativeImage(fname,_durl,`${t('diary_eyebrow')} · ${cfg.name||'Otrofestiv'}`)) return;
-  _dlDirect(_durl);
+  const S=await import('./story.js');
+  return S.shareGrilla();
 }
 
 export async function sharePlan(_yaPregunte){
@@ -373,6 +265,27 @@ export async function _shareNativeImage(fname,dataUrl,title){
     if(/^share cancel/i.test(String(e?.message||''))) return true;
     console.error('share image error:',e);
     showToast(t('toast_compartir_err'),'err'); // la imagen SÍ se generó: lo que falló fue compartirla
+  }
+  return true;
+}
+
+// _shareNativeImages — como _shareNativeImage, con VARIAS imágenes en un solo
+// menú del sistema (el carrusel del Diario). [{fname,dataUrl}] → true si era nativo.
+export async function _shareNativeImages(list,title){
+  if(!window.Capacitor?.isNativePlatform()) return false;
+  try{
+    const {Filesystem,Share}=window.Capacitor.Plugins;
+    const uris=[];
+    for(const it of list){
+      const r=await Filesystem.writeFile({path:it.fname,data:it.dataUrl.split(',')[1],directory:'CACHE'});
+      uris.push(r.uri);
+    }
+    await Share.share({title,files:uris});
+    showToast(t('toast_compartido'),'info');
+  }catch(e){
+    if(/^share cancel/i.test(String(e?.message||''))) return true;
+    console.error('share images error:',e);
+    showToast(t('toast_compartir_err'),'err');
   }
   return true;
 }

@@ -21,18 +21,18 @@ import { showToast, showActionModal } from '../view/feedback.js';
 import { _esRevisionActiva } from '../view/sheets.js';
 import { t } from '../i18n/i18n.js';
 import { storage } from '../storage/storage.js';
-import { cargarAfiche, shareDiary, sharePlan, _shareNativeImage, _dlDirect } from './share.js';
+import { cargarAfiche, sharePlan, _shareNativeImage, _shareNativeImages, _dlDirect } from './share.js';
 
 const W=1080, H=1920, M=92;
 const BG='#0B0A08', HUESO='#F0EDE8', AMBAR='#F59E0B', GRIS='#8A8A8A', GRIS2='#6A6A6A';
 const F="'Plus Jakarta Sans', system-ui, sans-serif";
 
 // abrirCompartirFestival — la hoja «Historia / Grilla». La Grilla es el export
-// de siempre (shareDiary); la Historia es la pieza nueva para stories.
+// en carrusel 4:5 para el feed (shareGrilla); la Historia, la pieza para stories.
 export function abrirCompartirFestival(){
   if(_esRevisionActiva()){ showToast(t('review_no_compartir')); return; }
   showActionModal(t('recap_compartir'),'',t('share_historia'),()=>shareStory(),undefined,
-    {altLabel:t('share_grilla'), altCb:()=>shareDiary()});
+    {altLabel:t('share_grilla'), altCb:()=>shareGrilla()});
 }
 
 // abrirCompartirPlan — la hoja «Historia / Calendario» de Mi Plan (#1064). El
@@ -333,4 +333,95 @@ async function _cargarConRespaldo(afs){
     a.kind='image';
     return cargarAfiche(a.respaldo());
   }));
+}
+
+// ── shareGrilla — el Diario como carrusel 4:5 para el feed (#1066) ─────────────
+// Mismo lenguaje que la historia: acreditación espaciada, titular en primera
+// persona, resplandor ámbar, wordmark. Tarjetas con estrellas (la razón de ser
+// de la Grilla), de la mejor nota a la peor. Hasta 12 por lámina y REPARTIDAS
+// PAREJO (Juan, 10 oct: en un carrusel cada lámina se ve sola — 18 → 9+9).
+// Afiches: los mismos dueños que la historia (_modeloAfiche) con respaldo
+// generativo para lo que no se puede dibujar (_cargarConRespaldo).
+const G_W=1080, G_H=1350, G_P=80, G_GAP=14, G_RAD=16, G_Y0=222, G_MAX=12;
+
+// geometriaGrilla(k) — cómo se acomodan k tarjetas en una lámina 4:5.
+//   ≤6 → 3 columnas grandes; 9 → 3×3; el resto → 4 columnas. Centrada.
+export function geometriaGrilla(k){
+  const ancho=(G_W-G_P*2-G_GAP*3)/4;                 // tarjeta de 4 columnas
+  const cols=k<=6?3:(k===9?3:4);
+  const cw=k<=6?(G_W-G_P*2-G_GAP*2)/3:ancho;
+  const x0=(G_W-(cols*cw+(cols-1)*G_GAP))/2;
+  return {cols, cw, ch:cw*1.5, x0, filas:Math.ceil(k/cols)};
+}
+// repartoLaminas(n) → cuántas tarjetas va en cada lámina, parejo.
+export function repartoLaminas(n){
+  const L=Math.ceil(n/G_MAX), base=Math.floor(n/L), extra=n%L;
+  return Array.from({length:L},(_,i)=>base+(i<extra?1:0));
+}
+
+export async function shareGrilla(){
+  if(_esRevisionActiva()){ showToast(t('review_no_compartir')); return; }
+  const rec=festivalRecap();
+  if(!rec.obras.length){ showToast(t('diary_vacio'),'warn'); return; }
+  storage.setDiarioNotaVista();   // compartir = ya aceptó la lista; la nota se retira
+  // De la MEJOR calificada a la peor (decisión de Juan); sort estable → los
+  // empates conservan el orden cronológico, y las sin nota caen al final.
+  const obras=rec.obras.slice().sort((a,b)=>b.rating-a.rating);
+  await _fuentes();
+  const cfg=FESTIVAL_CONFIG[_activeFestId]||{};
+  const afs=obras.map(_modeloAfiche), imgs=await _cargarConRespaldo(afs);
+  const T=recapTitular(rec,true);
+  const reparto=repartoLaminas(obras.length);
+  const lams=[]; let k0=0;
+  reparto.forEach((k,L)=>{
+    const c=document.createElement('canvas'); c.width=G_W; c.height=G_H;
+    const x=c.getContext('2d');
+    x.fillStyle=BG; x.fillRect(0,0,G_W,G_H);
+    const g=x.createRadialGradient(G_W*0.86,0,0,G_W*0.86,0,520);
+    g.addColorStop(0,'rgba(245,158,11,.22)'); g.addColorStop(1,'rgba(245,158,11,0)');
+    x.fillStyle=g; x.fillRect(0,0,G_W,600);
+    x.textBaseline='alphabetic'; x.textAlign='left';
+    const _cred=[cfg.name||'', cfg.city||''].filter(Boolean).join(' · ').toUpperCase();
+    _tracked(x,_cred,G_P,92,`700 24px ${F}`,GRIS,0.32*24);
+    if(reparto.length>1){ x.font=`600 24px ${F}`; x.fillStyle=GRIS; x.textAlign='right'; x.fillText(`${L+1}/${reparto.length}`,G_W-G_P,92); x.textAlign='left'; }
+    x.font=`800 76px ${F}`; x.fillStyle=HUESO; x.fillText(T.verbo+' ',G_P,186);
+    const wv=x.measureText(T.verbo+' ').width;
+    x.fillStyle=AMBAR; x.fillText(`${T.n} ${T.unidad}.`,G_P+wv,186);
+    const geo=geometriaGrilla(k);
+    for(let j=0;j<k;j++){
+      const i=k0+j, o=obras[i];
+      const cx=geo.x0+(j%geo.cols)*(geo.cw+G_GAP), cy=G_Y0+Math.floor(j/geo.cols)*(geo.ch+G_GAP);
+      x.save(); _rr(x,cx,cy,geo.cw,geo.ch,G_RAD); x.clip();
+      _afiche(x,afs[i],imgs[i],cx,cy,geo.cw,geo.ch);
+      const sg=x.createLinearGradient(0,cy+geo.ch-110,0,cy+geo.ch); sg.addColorStop(0,'rgba(0,0,0,0)'); sg.addColorStop(1,'rgba(0,0,0,.8)');
+      x.fillStyle=sg; x.fillRect(cx,cy+geo.ch-110,geo.cw,110);
+      x.textAlign='center'; x.fillStyle=o.rating?AMBAR:GRIS; x.font=`600 ${geo.cw>260?32:26}px ${F}`;
+      x.fillText(o.rating?starsText(o.rating):'·',cx+geo.cw/2,cy+geo.ch-22); x.textAlign='left';
+      x.restore();
+    }
+    k0+=k;
+    const yw=G_H-46;
+    x.font=`800 38px ${F}`; x.fillStyle=HUESO; const w1=x.measureText('Otro').width;
+    x.fillText('Otro',G_P,yw); x.fillStyle=AMBAR; x.fillText('festiv',G_P+w1,yw);
+    x.font=`500 26px ${F}`; x.fillStyle=GRIS2; x.textAlign='right'; x.fillText('otrofestiv.app',G_W-G_P,yw); x.textAlign='left';
+    lams.push(c);
+  });
+
+  const base=`otrofestiv-diario-${(cfg.shortName||'fest').toLowerCase().replace(/\s+/g,'-')}`;
+  const nom=i=>lams.length>1?`${base}-${i+1}.png`:`${base}.png`;
+  const titulo=`${t('diary_eyebrow')} · ${cfg.name||'Otrofestiv'}`;
+  // Web Share con TODAS las láminas: el sistema las entrega juntas y en orden,
+  // que es lo que Instagram arma como carrusel.
+  try{
+    const blobs=await Promise.all(lams.map(c=>new Promise(r=>c.toBlob(r,'image/png'))));
+    const files=blobs.every(Boolean)?blobs.map((b,i)=>new File([b],nom(i),{type:'image/png'})):null;
+    if(files&&navigator.share&&navigator.canShare&&navigator.canShare({files})){
+      await navigator.share({files,title:titulo});
+      _etiqueta(cfg);
+      return;
+    }
+  }catch(e){ if(e&&e.name==='AbortError') return; }
+  const urls=lams.map(c=>c.toDataURL('image/png'));
+  if(await _shareNativeImages(urls.map((u,i)=>({fname:nom(i),dataUrl:u})),titulo)) return;
+  urls.forEach(u=>_dlDirect(u));
 }

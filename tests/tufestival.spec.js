@@ -166,3 +166,33 @@ test('TF4 — Mi plan: hoja Historia/Calendario, prioridades primero y voz en pr
   r.geo.forEach(x => { expect(x.dos3, `${x.n}: 2:3`).toBe(true); expect(x.sangre).toBe(1080); expect(x.alto).toBeLessThanOrEqual(470); });
   expect(r.tu, 'la pantalla le habla a él').toBe('Viste');
 });
+
+// TF5 — la Grilla del Diario como carrusel 4:5 (#1066): láminas de 1080×1350,
+// repartidas parejo (18 → 9+9), todas al menú de compartir de una vez y en orden.
+test('TF5 — Grilla: carrusel 4:5 repartido parejo y compartido de una vez', async ({ page }) => {
+  await enterFestival(page, 'biff2026', '2026-10-15T12:00:00-05:00');
+  const r = await page.evaluate(async () => {
+    const S = await import('/src/controller/story.js');
+    const vis = [...new Set(FILMS.filter(f => f.type !== 'event' && !f.is_cortos && f.day).map(f => f.title))].slice(0, 18);
+    state.set('watched', new Set(vis));
+    state.set('savedAgenda', { scenarioIdx: 0, schedule: vis.map(t => Object.assign({}, FILMS.find(f => f.title === t), { _title: t })) });
+    let enviado = null;
+    navigator.canShare = () => true;
+    navigator.share = async (d) => { enviado = d; };
+    await S.shareGrilla();
+    const dims = [];
+    for (const f of (enviado ? enviado.files : [])) { const b = await createImageBitmap(f); dims.push([b.width, b.height]); }
+    const cabe = [1, 3, 6, 7, 9, 12].every(k => { const g = S.geometriaGrilla(k);
+      return 222 + g.filas * g.ch + (g.filas - 1) * 14 <= 1250 && g.x0 >= 79 && g.cols * g.cw + (g.cols - 1) * 14 + g.x0 * 2 <= 1080.5; });
+    return { dims, nombres: enviado ? enviado.files.map(f => f.name) : [],
+      r18: S.repartoLaminas(18), r12: S.repartoLaminas(12), r13: S.repartoLaminas(13), r25: S.repartoLaminas(25), cabe };
+  });
+  expect(r.r18, '18 → 9+9').toEqual([9, 9]);
+  expect(r.r12, 'hasta 12, una lámina').toEqual([12]);
+  expect(r.r13).toEqual([7, 6]);
+  expect(r.r25).toEqual([9, 8, 8]);
+  expect(r.cabe, 'cada acomodo entra en la lámina sin pisar el wordmark').toBe(true);
+  expect(r.dims, 'dos láminas 4:5 en un solo envío').toEqual([[1080, 1350], [1080, 1350]]);
+  expect(r.nombres[0]).toMatch(/^otrofestiv-diario-.*-1\.png$/);
+  expect(r.nombres[1]).toMatch(/-2\.png$/);
+});
