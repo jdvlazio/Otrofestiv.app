@@ -1,0 +1,900 @@
+{
+ "_provenance": {
+  "fuente": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+  "capturado": "2026-10-10",
+  "metodo": "tabla HTML de la Selección Oficial"
+ },
+ "obras": [
+  {
+   "titulo": "10 meters above",
+   "titulo_tabla": "10 METERS ABOVE",
+   "director": "Irene Baqué",
+   "pais": "España",
+   "categoria": "Documental",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "A la vejez, viruelas",
+   "titulo_tabla": "A LA VEJEZ, VIRUELAS",
+   "director": "Pol Aguilera",
+   "pais": "España",
+   "categoria": "Ficción",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "Agachar el rostro",
+   "titulo_tabla": "AGACHAR EL ROSTRO",
+   "director": "Camilo Medina Noy",
+   "pais": "Colombia",
+   "categoria": "Ficción",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "Appol-o",
+   "titulo_tabla": "APPOL-O",
+   "director": "Juan José Calvo Lozano, Nicolás Castro Herrera, Cristian Felipe Ossa Castro",
+   "pais": "Colombia",
+   "categoria": "Animación",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "Belleza letal",
+   "titulo_tabla": "BELLEZA LETAL",
+   "director": "Juan Abello, Felipe Moreno, Valeria Rúa, Andrés Benavides, German París, Santiago Rodriguez, Fiama Castor, Juan Olmos, Cindy Caffroni, Ronald Marquez",
+   "pais": "Colombia / Barranquilla",
+   "categoria": "Documental",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "Bestiaire",
+   "titulo_tabla": "BESTIAIRE",
+   "director": "Anne Zinn-justin",
+   "pais": "Francia",
+   "categoria": "Ficción",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "Capitão lima",
+   "titulo_tabla": "CAPITÃO LIMA",
+   "director": "Filipe Carvalho",
+   "pais": "Brasil",
+   "categoria": "Ficción",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "Carne de segunda",
+   "titulo_tabla": "CARNE DE SEGUNDA",
+   "director": "Ruben Casalins",
+   "pais": "Colombia",
+   "categoria": "Ficción",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "Cayenas libertarias",
+   "titulo_tabla": "CAYENAS LIBERTARIAS",
+   "director": "Javier Camilo Aranguren",
+   "pais": "Colombia",
+   "categoria": "Documental",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "Chaika",
+   "titulo_tabla": "CHAIKA",
+   "director": "Ingrid Bonilla",
+   "pais": "Colombia",
+   "categoria": "Híbrido",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "Chro",
+   "titulo_tabla": "CHRO",
+   "director": "Hamed Bahrami",
+   "pais": "Iran",
+   "categoria": "Ficción",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "Citizenship test",
+   "titulo_tabla": "CITIZENSHIP TEST",
+   "director": "Alejandro de los Ríos",
+   "pais": "Estados Unidos",
+   "categoria": "Ficción",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "Cómo limpiar un espejo",
+   "titulo_tabla": "CÓMO LIMPIAR UN ESPEJO",
+   "director": "Jacobo Giraldo Ruiz",
+   "pais": "Colombia",
+   "categoria": "Ficción",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "Compraventa",
+   "titulo_tabla": "COMPRAVENTA",
+   "director": null,
+   "pais": "Argentina",
+   "categoria": "Ficción",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "Decaer",
+   "titulo_tabla": "DECAER",
+   "director": "Juan Camilo Gonzales",
+   "pais": "Colombia",
+   "categoria": "Animación",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "Desarraigo",
+   "titulo_tabla": "DESARRAIGO",
+   "director": "Cristian Nicolas Patiño Hortua Andres Santiago Cely Orjuela",
+   "pais": "Colombia",
+   "categoria": "Ficción",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "Do rocks dream of flying?",
+   "titulo_tabla": "DO ROCKS DREAM OF FLYING?",
+   "director": "Mathieu Ciulla & Simon Zorraquin",
+   "pais": "España, Francia y Argentina",
+   "categoria": "Documental",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "Dong shen shi",
+   "titulo_tabla": "DONG SHEN SHI",
+   "director": "Guoju Wang",
+   "pais": "China",
+   "categoria": "Ficción",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "Eject: el último rebobinado",
+   "titulo_tabla": "EJECT: EL ÚLTIMO REBOBINADO",
+   "director": "Martin Desoto / Senin Porto",
+   "pais": "España",
+   "categoria": "Documental",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "El arca de nora",
+   "titulo_tabla": "EL ARCA DE NORA",
+   "director": "Endre Lund Eriksen, Isak Gjertsen",
+   "pais": "Croatia, Norway",
+   "categoria": "Animación",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "El mundo de humberto",
+   "titulo_tabla": "EL MUNDO DE HUMBERTO",
+   "director": "Natalia Polo López",
+   "pais": "Colombia",
+   "categoria": "Documental",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "El segundo",
+   "titulo_tabla": "EL SEGUNDO",
+   "director": "Pedro Miguel Rozo Flores",
+   "pais": "Colombia",
+   "categoria": "Ficción",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "Emechiche, el renacer de los cabeciblancos",
+   "titulo_tabla": "EMECHICHE, EL RENACER DE LOS CABECIBLANCOS",
+   "director": "Juan Camilo Gonzales",
+   "pais": "Colombia",
+   "categoria": "Animación",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "En nombre del amor",
+   "titulo_tabla": "EN NOMBRE DEL AMOR",
+   "director": "Mariana Pallas, Alexander Dieppa, Luciana Martins, Socorro Lira",
+   "pais": "Cuba",
+   "categoria": "Documental",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "Enfermedad",
+   "titulo_tabla": "ENFERMEDAD",
+   "director": "Male Guette",
+   "pais": "Colombia / Barranquilla",
+   "categoria": "Ficción",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "Esta noite minha alma partirá",
+   "titulo_tabla": "ESTA NOITE MINHA ALMA PARTIRÁ",
+   "director": "Igor Vasco",
+   "pais": "Brasil",
+   "categoria": "Ficción",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "Goteras",
+   "titulo_tabla": "GOTERAS",
+   "director": "Vicente Gonzalez Monroy",
+   "pais": "Colombia",
+   "categoria": "Ficción",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "Gramática práctica italiana",
+   "titulo_tabla": "GRAMÁTICA PRÁCTICA ITALIANA",
+   "director": "Daniel Cortés",
+   "pais": "Colombia / Cuba",
+   "categoria": "Documental",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "Hay algo detrás de ti",
+   "titulo_tabla": "HAY ALGO DETRÁS DE TI",
+   "director": "Julián Andrés Gómez Reyes",
+   "pais": "Colombia",
+   "categoria": "Animación",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "In turn",
+   "titulo_tabla": "IN TURN",
+   "director": "Sahra Asadollahi / Atefeh Salehi",
+   "pais": "Irán",
+   "categoria": "Ficción",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "Jacaré",
+   "titulo_tabla": "JACARÉ",
+   "director": "Victor Quintanilha",
+   "pais": "Brasil",
+   "categoria": "Ficción",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "Juego de damas",
+   "titulo_tabla": "JUEGO DE DAMAS",
+   "director": "Enrique Vargas",
+   "pais": "Colombia / Barranquilla",
+   "categoria": "Ficción",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "La ceremonia",
+   "titulo_tabla": "LA CEREMONIA",
+   "director": "Julián García Valero / Deimer Vergara Torres",
+   "pais": "Colombia",
+   "categoria": "Ficción",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "La culpa es del cine",
+   "titulo_tabla": "LA CULPA ES DEL CINE",
+   "director": "Eduardo Rivera Aburto",
+   "pais": "Chile",
+   "categoria": "Ficción",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "La fiesta votada",
+   "titulo_tabla": "LA FIESTA VOTADA",
+   "director": "Lady Vasquez Casupa",
+   "pais": "Colombia",
+   "categoria": "Documental",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "La gran hazaña",
+   "titulo_tabla": "LA GRAN HAZAÑA",
+   "director": "Luber Yesid Zúñiga Ordóñez.",
+   "pais": "Colombia",
+   "categoria": "Ficción",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "La guerra de los tomates",
+   "titulo_tabla": "LA GUERRA DE LOS TOMATES",
+   "director": "Juan Carlos Gutierrez",
+   "pais": "Colombia",
+   "categoria": "Ficción",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "La independencia",
+   "titulo_tabla": "LA INDEPENDENCIA",
+   "director": "John Agudelo",
+   "pais": "Colombia",
+   "categoria": "Ficción",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "La mona",
+   "titulo_tabla": "LA MONA",
+   "director": "Laura Gutierrez",
+   "pais": "Colombia",
+   "categoria": "Ficción",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "La tranquilidad de los pájaros",
+   "titulo_tabla": "LA TRANQUILIDAD DE LOS PÁJAROS",
+   "director": "Edgar De Luque Jácome",
+   "pais": "Colombia / Barranquilla",
+   "categoria": "Ficción",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "Las zapatillas mágicas",
+   "titulo_tabla": "LAS ZAPATILLAS MÁGICAS",
+   "director": "Luber Yesid Zúñiga Ordóñez.",
+   "pais": "Colombia",
+   "categoria": "Animación",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "Le mur du son",
+   "titulo_tabla": "LE MUR DU SON",
+   "director": "Antonio La Camera",
+   "pais": "Suiza",
+   "categoria": "Ficción",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "Like friend, like deer",
+   "titulo_tabla": "LIKE FRIEND, LIKE DEER",
+   "director": "Malek Eghbali",
+   "pais": "Iran",
+   "categoria": "Animación",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "Living well",
+   "titulo_tabla": "LIVING WELL",
+   "director": "Zoé Nathalie Kugler",
+   "pais": "Suiza / Ecuador",
+   "categoria": "Documental",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "Los pliegues de la falda",
+   "titulo_tabla": "LOS PLIEGUES DE LA FALDA",
+   "director": "Blanca Muñoz Avila",
+   "pais": "Colombia",
+   "categoria": "Ficción",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "Luis antonio",
+   "titulo_tabla": "LUIS ANTONIO",
+   "director": "Juan José Arias Gil",
+   "pais": "Colombia",
+   "categoria": "Ficción",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "Malas posturas",
+   "titulo_tabla": "MALAS POSTURAS",
+   "director": "Juan Pablo Castro",
+   "pais": "Colombia",
+   "categoria": "Ficción",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "Ma-ma",
+   "titulo_tabla": "MA-MA",
+   "director": "Isabel María Monge Guerrero / Diego Castañeda Delgado / Mario Ruiz Reguer",
+   "pais": "España",
+   "categoria": "Animación",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "Marina y la falda",
+   "titulo_tabla": "MARINA Y LA FALDA",
+   "director": "Tania Huidobro Moreno",
+   "pais": "México",
+   "categoria": "Ficción",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "Más allá",
+   "titulo_tabla": "MÁS ALLÁ",
+   "director": "Bettina Lopez Mendoza",
+   "pais": "Venezuela/US/Canada/Colombia",
+   "categoria": "Ficción",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "Memoria colectiva",
+   "titulo_tabla": "MEMORIA COLECTIVA",
+   "director": "Cristina Colmenares",
+   "pais": "Perú",
+   "categoria": "Animación",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "Memoria de un pibe",
+   "titulo_tabla": "MEMORIA DE UN PIBE",
+   "director": "Pedro Santi",
+   "pais": "Brasil",
+   "categoria": "Ficción",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "New york",
+   "titulo_tabla": "NEW YORK",
+   "director": "Amir Karami",
+   "pais": "Iran",
+   "categoria": "Ficción",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "Niña chilapa",
+   "titulo_tabla": "NIÑA CHILAPA",
+   "director": "Juana Lotero",
+   "pais": "Colombia",
+   "categoria": "Documental",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "Para no volver",
+   "titulo_tabla": "PARA NO VOLVER",
+   "director": "Tania Galvis",
+   "pais": "Colombia",
+   "categoria": "Ficción",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "Pawa",
+   "titulo_tabla": "PAWA",
+   "director": "Marbel Ina Vanegas Jusayu",
+   "pais": "Colombia",
+   "categoria": "Ficción",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "Plástico",
+   "titulo_tabla": "PLÁSTICO",
+   "director": "Daniel Jimenez V",
+   "pais": "Colombia",
+   "categoria": "Ficción",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "Post-familia",
+   "titulo_tabla": "POST-FAMILIA",
+   "director": "Alexis Tafour",
+   "pais": "Colombia",
+   "categoria": "Ficción",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "Presépio (el pesebre)",
+   "titulo_tabla": "PRESÉPIO (EL PESEBRE)",
+   "director": "Felipe Bibian",
+   "pais": "Brasil",
+   "categoria": "Ficción",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "Prueba de cámara",
+   "titulo_tabla": "PRUEBA DE CÁMARA",
+   "director": "David Correa Franco",
+   "pais": "Colombia",
+   "categoria": "Documental",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "Que el cielo nos perdone",
+   "titulo_tabla": "QUE EL CIELO NOS PERDONE",
+   "director": "Andrés Buitrago",
+   "pais": "Colombia",
+   "categoria": "Ficción",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "Rastro",
+   "titulo_tabla": "RASTRO",
+   "director": "Dominique Jeanneret",
+   "pais": "Colombia",
+   "categoria": "Documental",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "Recordando mi jerga",
+   "titulo_tabla": "RECORDANDO MI JERGA",
+   "director": "Xilenys Rojas Ortega",
+   "pais": "Colombia / Barranquilla",
+   "categoria": "Documental",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "Refraccion",
+   "titulo_tabla": "REFRACCION",
+   "director": "Isabella Palacio Mesa",
+   "pais": "Colombia",
+   "categoria": "Ficción",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "Replay",
+   "titulo_tabla": "REPLAY",
+   "director": "Simón Matallana",
+   "pais": "Colombia",
+   "categoria": "Animación",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "Safo",
+   "titulo_tabla": "SAFO",
+   "director": "Rosana Urbes",
+   "pais": "Brasil",
+   "categoria": "Animación",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "Saq nikté y el espíritu de la máscara",
+   "titulo_tabla": "SAQ NIKTÉ Y EL ESPÍRITU DE LA MÁSCARA",
+   "director": "Ester Weiner",
+   "pais": "Guatemala, Uruguay",
+   "categoria": "Animación",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "Snorri - catch me if you candy",
+   "titulo_tabla": "SNORRI - CATCH ME IF YOU CANDY",
+   "director": "Thierry Marchand",
+   "pais": "Alemania",
+   "categoria": "Animación",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "Sombra lejana",
+   "titulo_tabla": "SOMBRA LEJANA",
+   "director": "Antonio J. Camargo",
+   "pais": "Colombia",
+   "categoria": "Ficción",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "Sombras en la niebla",
+   "titulo_tabla": "SOMBRAS EN LA NIEBLA",
+   "director": "Pedro Pablo Vega",
+   "pais": "Colombia",
+   "categoria": "Documental",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "Sopro",
+   "titulo_tabla": "SOPRO",
+   "director": "Fernanda Beling",
+   "pais": "Brasil",
+   "categoria": "Ficción",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "Stakkars meg",
+   "titulo_tabla": "STAKKARS MEG",
+   "director": "Liv Joelle Barbosa Blad",
+   "pais": "Noruega",
+   "categoria": "Ficción",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "Tejiendo un árbol",
+   "titulo_tabla": "TEJIENDO UN ÁRBOL",
+   "director": "Alvaro Cardona",
+   "pais": "Colombia",
+   "categoria": "Documental",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "The dreaming witness",
+   "titulo_tabla": "THE DREAMING WITNESS",
+   "director": "Shayan Naghibi",
+   "pais": "Irán",
+   "categoria": "Ficción",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "The mould",
+   "titulo_tabla": "THE MOULD",
+   "director": "Moahammad Reza Nourmandipour",
+   "pais": "Iran",
+   "categoria": "Ficción",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "The remaining dregs",
+   "titulo_tabla": "THE REMAINING DREGS",
+   "director": "Paria Alaei",
+   "pais": "Irán",
+   "categoria": "Ficción",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "The torch i carry",
+   "titulo_tabla": "THE TORCH I CARRY",
+   "director": "Namuungoo Enkhbat",
+   "pais": "Estados Unidos",
+   "categoria": "Animación",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "Tuktu, padre maíz",
+   "titulo_tabla": "TUKTU, PADRE MAÍZ",
+   "director": "Mauricio Prieto Muriel",
+   "pais": "Colombia",
+   "categoria": "Animación",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "Una torreta en llamas",
+   "titulo_tabla": "UNA TORRETA EN LLAMAS",
+   "director": "Humberto Flores Jaruégui",
+   "pais": "México",
+   "categoria": "Ficción",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "When the tiger roars",
+   "titulo_tabla": "WHEN THE TIGER ROARS",
+   "director": "Lam Can-Zhao",
+   "pais": "China",
+   "categoria": "Ficción",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+    "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "Zizuma, nuestra casa de agua y nubes",
+   "titulo_tabla": "ZIZUMA, NUESTRA CASA DE AGUA Y NUBES",
+   "director": "Fátima Correa",
+   "pais": "Colombia",
+   "categoria": "Animación",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+    "date": "2026-10-10"
+   }
+  }
+ ]
+}

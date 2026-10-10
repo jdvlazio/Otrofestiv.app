@@ -1,0 +1,2683 @@
+{
+ "_provenance": {
+  "fuente": "TMDB + letterboxd.com/tmdb/<id>, con el MISMO candado de enriquecer.py: director ✓ y (año ±1 o duración ±3 min). Lo que no verifica no entra.",
+  "capturado": "2026-10-10"
+ },
+ "_origen": "ficica-2026-catalogo.json",
+ "obras": [
+  {
+   "titulo": "A la vejez, viruelas",
+   "tmdb_id": 1424789,
+   "titulo_original": "A la vejez, viruelas",
+   "poster_path": "/f2X3BMlGS3GMnY17R2LXVCD1kUp.jpg",
+   "synopsis_es": "Quique y Alfonso, dos abuelos gruñones de 80 años, deben adentrarse a un Club de intercambio de parejas para encontrar a uno de sus amigos. ¿Les ayudará ese ambiente a rehacer su complicada amistad?",
+   "synopsis_en": "Quique and Alfonso, two grumpy 80-year-old grandpas, must venture into a swingers' club to find one of their friends who has been raped. Will this unconventional setting help them rebuild their complicated friendship?",
+   "genero": "Comedia",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 13,
+   "pais_tmdb": "",
+   "title_en": "Golden Swingers",
+   "lbSlug": "golden-swingers",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+  },
+  {
+   "titulo": "Agachar el rostro",
+   "tmdb_id": 1595079,
+   "titulo_original": "Agachar el rostro",
+   "poster_path": "/vXjVnfIMxnhyvsRfjlEb6jkrmp7.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Shrouded in fog and crumbling stone, a teacher moves through his final day at a rural school, soon to be shut down for lack of students. In quiet solitude, he parts ways with a place that has been his craft and his shelter for years.",
+   "genero": "Drama",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 12,
+   "pais_tmdb": "Colombia",
+   "title_en": "Lowering the Gaze",
+   "lbSlug": "lowering-the-gaze",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_ya_publicada": [
+    {
+     "festival": "filcmar-2026",
+     "titulo": "Agachar el rostro",
+     "tmdb_id": 1595079,
+     "poster": "/assets/filcmar-2026/agachar-el-rostro.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "lowering-the-gaze",
+     "sinopsis": "Entre la niebla y las paredes agrietadas, un maestro transcurre su último día en una escuela rural que pronto cerrará sus puertas por falta de alumnos. En silenciosa soledad, se despide de un lugar que ha sido su oficio y su refugio durante años."
+    }
+   ]
+  },
+  {
+   "titulo": "Belleza letal",
+   "_ya_publicada": [
+    {
+     "festival": "mamut-2026",
+     "titulo": "Belleza letal",
+     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_afiche%20belleza%20letal%20-%20Samuel%20Moreno.jpg?itok=ZrOw0nvZ",
+     "posterSource": "oficial"
+    }
+   ]
+  },
+  {
+   "titulo": "Bestiaire",
+   "tmdb_id": 1479275,
+   "titulo_original": "Bestiaire",
+   "poster_path": "/uFnbKSyq8Ar4NNSW2gDd2udHMAc.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Sylvie, a car mechanic, is raising her rebellious teenage daughter, Léa, on her own. During a freezing autumn, the animals' behavior suddenly changes: nature is in revolt. In their isolated house on the edge of the forest, mother and daughter have only themselves to rely on.",
+   "genero": "Drama",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 25,
+   "pais_tmdb": "France",
+   "title_en": "Bestiary",
+   "lbSlug": "bestiary-2025-1",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+  },
+  {
+   "titulo": "Capitão lima",
+   "tmdb_id": 1693923,
+   "titulo_original": "Capitão Lima",
+   "poster_path": "/fgzcAPtZdbEhFHQK9ncRWNR0S3d.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "In the future, no one could be free. A man travels back in time and returns to Capitão Lima St., in northeastern Brazil, trying to relive the party where he kissed another boy for the first time. With only some minutes to spare, he discovers he has arrived in the wrong year and that now he only has the memories from the street to rediscover his freedom. Just like the film’s director, who found his own freedom in the same place, the man realizes it is not in his memory where he will be free.",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 20,
+   "pais_tmdb": "",
+   "title_en": "Captain Lima",
+   "lbSlug": "captain-lima",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+  },
+  {
+   "titulo": "Cayenas libertarias",
+   "tmdb_id": 1737961,
+   "titulo_original": "Cayenas libertarias",
+   "poster_path": "/dQxbmxDq320B08UKcEOHgOkIy4b.jpg",
+   "synopsis_es": "En las llanuras de Colombia, un grupo de mujeres conserva y reinterpreta los lecos, o cantos de trabajo del llano, que durante generaciones fueron interpretados por hombres. A través de sus cantos de vaquería, resignifican su lugar en la tradición llanera, revelando su relación armónica con la naturaleza y su compleja conexión con el arraigo llanero.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 20,
+   "pais_tmdb": "",
+   "lbSlug": "cayenas-libertarias",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_ya_publicada": [
+    {
+     "festival": "ficdeh-2026",
+     "titulo": "Cayenas libertarias",
+     "poster": "/assets/ficdeh/bogota-underground-hip-hop.jpg",
+     "posterSource": "custom",
+     "lbSlug": "cayenas-libertarias",
+     "sinopsis": "En las llanuras de Colombia, un grupo de mujeres conserva y reinterpreta los lecos, o cantos de trabajo del llano, que durante generaciones fueron interpretados por hombres. A través de sus cantos de vaquería, resignifican su lugar en la tradición llanera, revelando su relación armónica con la naturaleza y su compleja conexión con el arraigo llanero."
+    },
+    {
+     "festival": "popayan-2026",
+     "titulo": "Cayenas libertarias",
+     "tmdb_id": 1737961,
+     "poster": "/assets/popayan-2026/cayenas-libertarias.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "cayenas-libertarias",
+     "sinopsis": "En las llanuras de Colombia, un grupo de mujeres conserva y reinterpreta los lecos o cantos de trabajo de llano que durante generaciones fueron entonadas por hombres. A través de sus cantos de vaquería, resignifican su lugar en la tradición Llanera, revelando su relación armónica con la naturaleza, y compleja con el arraigo llanero."
+    },
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "Cayenas libertarias",
+     "poster": "https://image.tmdb.org/t/p/w500/dQxbmxDq320B08UKcEOHgOkIy4b.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "cayenas-libertarias",
+     "sinopsis": "En las llanuras de Colombia, un grupo de mujeres conserva y reinterpreta los lecos, o cantos de trabajo del llano, que durante generaciones fueron interpretados por hombres. A través de sus cantos de vaquería, resignifican su lugar en la tradición llanera, revelando su relación armónica con la naturaleza y su compleja conexión con el arraigo llanero."
+    }
+   ]
+  },
+  {
+   "titulo": "Chaika",
+   "tmdb_id": 1689999,
+   "titulo_original": "Chaika",
+   "poster_path": "/fhvA2plccJRbTQgL6HRAAUPhPic.jpg",
+   "synopsis_es": "Valentina, una cosmonauta rusa de 76 años, llega a una Cuba ucrónica y nebulosa tras recibir, con treinta años de retraso, una invitación para una expedición agrícola a Marte. Entre paisajes difusos y promesas del pasado, busca las ruinas de un futuro que nunca llegó.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 15,
+   "pais_tmdb": "",
+   "lbSlug": "chaika-2025",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_ya_publicada": [
+    {
+     "festival": "cineautopsia-2026",
+     "titulo": "CHAIKA",
+     "tmdb_id": 1689999,
+     "poster": "/assets/cineautopsia/chaika.jpg",
+     "posterSource": "oficial",
+     "lbSlug": "chaika-2025",
+     "sinopsis": "Valentina, una cosmonauta rusa de 76 años, recibe una carta enviada desde Cuba con treinta años de retraso, en la que se le invita a unirse a una expedición agrícola a Marte. Viaja a la isla esperando encontrar una utopía científica y social, pero descubre un territorio asolado por una silenciosa crisis agrícola y ambiental; una Cuba ucrónica y nebulosa donde las promesas del pasado perduran como sombras. Los paisajes tiemblan, las formas se desdibujan y la política apenas se alcanza a discernir: un sistema exhausto que intenta sostener un ideal ya difuso. Los paisajes, trémulos y borrosos, se resisten a ser enfocados, como si la propia isla dudara de su existencia. En este territorio nebuloso, donde lo real y lo onírico se confunden, Valentina busca descubrir si aún es posible alzar el vuelo, mientras la nostalgia por el Caribe se mezcla con el eco de un futuro que nunca llegó."
+    },
+    {
+     "festival": "fantasmagoria-2026",
+     "titulo": "Chaika",
+     "tmdb_id": 1689999,
+     "poster": "/assets/fantasmagoria-2026/chaika.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "chaika-2025",
+     "sinopsis": "Valentina, una cosmonauta rusa de 76 años, llega a una Cuba ucrónica y nebulosa tras recibir, con treinta años de retraso, una invitación para una expedición agrícola a Marte. Entre paisajes difusos y promesas del pasado, busca las ruinas de un futuro que nunca llegó."
+    },
+    {
+     "festival": "fantasofest-2026",
+     "titulo": "Chaika",
+     "poster": "/assets/fantasofest/corto-chaika.jpg",
+     "posterSource": "editorial",
+     "lbSlug": "chaika-2026"
+    },
+    {
+     "festival": "ficpa-2026",
+     "titulo": "Chaika",
+     "tmdb_id": 1689999,
+     "poster": "/assets/ficpa-2026/chaika.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "chaika-2025",
+     "sinopsis": "Valentina, una cosmonauta rusa de 76 años, llega a una Cuba ucrónica y nebulosa tras recibir, con treinta años de retraso, una invitación para una expedición agrícola a Marte. Entre paisajes difusos y promesas del pasado, busca las ruinas de un futuro que nunca llegó."
+    },
+    {
+     "festival": "narrarelfuturo-2026",
+     "titulo": "Chaika",
+     "tmdb_id": 1689999,
+     "poster": "/assets/narrarelfuturo-2026/chaika.jpg",
+     "posterSource": "oficial",
+     "lbSlug": "chaika-2025",
+     "sinopsis": "Valentina, una cosmonauta rusa de 76 años, recibe una carta enviada desde Cuba con treinta años de retraso que la invita a unirse a una expedición agrícola a Marte. Viaja a la isla esperando encontrar una utopía científica y social, pero se topa con un territorio devastado por una silenciosa crisis agrícola y medioambiental: una Cuba ucrónica y nebulosa donde las promesas del pasado perduran como sombras. Los paisajes tiemblan, las formas se difuminan y la política apenas se percibe: es un sistema agotado que intenta sostener un ideal ya desdibujado. Los paisajes, trémulos y borrosos, se resisten a ser enfocados, como si la propia isla dudara de su existencia. En este territorio nebuloso, donde lo real y lo onírico se funden, Valentina busca averiguar si aún es posible emprender el vuelo, mientras la nostalgia por el Caribe se mezcla con el eco de un futuro que nunca llegó."
+    },
+    {
+     "festival": "popayan-2026",
+     "titulo": "Chaika",
+     "tmdb_id": 1689999,
+     "poster": "/assets/popayan-2026/chaika.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "chaika-2025",
+     "sinopsis": "Valentina, una cosmonauta rusa de 76 años, recibe una carta enviada desde Cuba con treinta años de retraso, invitándola a una expedición agrícola a Marte. Viaja a la isla esperando una utopía científico–social, pero encuentra un territorio golpeado por una silenciosa crisis agrícola y ambiental, una Cuba ucrónica y nebulosa donde las promesas del pasado persisten como sombras. Los paisajes tiemblan, las formas se desdibujan y la política apenas se intuye: un sistema agotado que intenta sostener un ideal ya difuso."
+    }
+   ]
+  },
+  {
+   "titulo": "Cómo limpiar un espejo",
+   "_ya_publicada": [
+    {
+     "festival": "ficma-2026",
+     "titulo": "Cómo limpiar un espejo",
+     "poster": "/assets/ficma/c-mo-limpiar-un-espejo.jpg",
+     "posterSource": "editorial",
+     "sinopsis": "Días antes de mudarse a Bogotá, Tomás enfrenta la culpa de haber traicionado a su mejor amigo, al ver cómo su propia situación se refleja en las acciones de su madre."
+    }
+   ]
+  },
+  {
+   "titulo": "Decaer",
+   "tmdb_id": 1668881,
+   "titulo_original": "decaer",
+   "poster_path": "/vG4HQdPsjfVOBuAN3L2Yea7HdQ4.jpg",
+   "synopsis_es": "Gracias a los chinos por la pólvora, parece que la hubieran hecho para mí. Su invención sucede como un accidente, pensada inicialmente para espantar los espíritus malos. Esta película inicia en China, luego un evento en Cartagena y se acaba siglos después en Bogotá.",
+   "synopsis_en": "I am grateful to the Chinese for the invention of gunpowder — it feels as if they made it for me. Its discovery happened by accident, originally conceived as a way to ward off evil spirits. This film begins in China, then moves to an event in Cartagena, and ends centuries later in Bogotá.",
+   "genero": "Animación",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 7,
+   "pais_tmdb": "Colombia",
+   "title_en": "decay",
+   "lbSlug": "decay-2026",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_ya_publicada": [
+    {
+     "festival": "cineautopsia-2026",
+     "titulo": "Decaer",
+     "tmdb_id": 1668881,
+     "poster": "https://image.tmdb.org/t/p/w500/vG4HQdPsjfVOBuAN3L2Yea7HdQ4.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "decay-2026",
+     "sinopsis": "Gracias a los chinos por la pólvora, parece que la hubieran hecho para mí. Su invención sucede como un accidente, pensada inicialmente para espantar los espíritus malos. Esta película inicia en China, luego un evento en Cartagena y se acaba siglos después en Bogotá."
+    },
+    {
+     "festival": "cinemancia-2026",
+     "titulo": "Decaer",
+     "tmdb_id": 1668881,
+     "poster": "https://image.tmdb.org/t/p/w500/vG4HQdPsjfVOBuAN3L2Yea7HdQ4.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "decay-2026",
+     "sinopsis": "Gracias a los chinos por la pólvora, parece que la hubieran hecho para mí. Su invención sucede como un accidente, pensada inicialmente para espantar los espíritus malos. Esta película inicia en China, luego un evento en Cartagena y se acaba siglos después en Bogotá."
+    },
+    {
+     "festival": "mamut-2026",
+     "titulo": "Decaer",
+     "tmdb_id": 1668881,
+     "poster": "/assets/mamut-2026/decaer.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "decay-2026",
+     "sinopsis": "Gracias a los chinos por la pólvora, parece que la hubieran hecho para mí. Su invención sucede como un accidente, pensada inicialmente para espantar los espíritus malos. Esta película inicia en China, luego un evento en Cartagena y se acaba siglos después en Bogotá."
+    },
+    {
+     "festival": "midbo-2026",
+     "titulo": "Decaer",
+     "tmdb_id": 1668881,
+     "poster": "/assets/midbo-2026/decaer.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "decay-2026",
+     "sinopsis": "Gracias a los chinos por la pólvora, parece que la hubieran hecho para mí. Su invención sucede como un accidente, pensada inicialmente para espantar los espíritus malos. Esta película inicia en China, luego un evento en Cartagena y se acaba siglos después en Bogotá."
+    },
+    {
+     "festival": "popayan-2026",
+     "titulo": "decaer",
+     "tmdb_id": 1668881,
+     "poster": "/assets/popayan-2026/decaer.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "decay-2026",
+     "sinopsis": "Gracias a los chinos por la pólvora, parece que la hubieran hecho para mí. Su invención sucede como un accidente, pensada inicialmente para espantar los espíritus malos. Esta película inicia en China, luego un evento en Cartagena y se acaba siglos después en Bogotá."
+    }
+   ]
+  },
+  {
+   "titulo": "Desarraigo",
+   "tmdb_id": 1510204,
+   "titulo_original": "Desarraigo",
+   "poster_path": "/ncFypC1QoQQVdm4rnhfTA9BgOGN.jpg",
+   "synopsis_es": "Tras la muerte de su esposa, Ángel enfrenta un duelo solitario en su hogar rural. Una gotera crece como una presencia abrumadora, transformando su espacio y empujándolo a decisiones irracionales mientras intenta reconciliarse con su pérdida.",
+   "synopsis_en": "",
+   "genero": "Drama",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 15,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "desarraigo-2026",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_ya_publicada": [
+    {
+     "festival": "filcmar-2026",
+     "titulo": "Desarraigo",
+     "tmdb_id": 1510204,
+     "poster": "/assets/filcmar-2026/desarraigo.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "desarraigo-2026",
+     "sinopsis": "Tras la muerte de su esposa, Ángel se enfrenta a un duelo solitario en su hogar rural. Una gotera se convierte en una presencia abrumadora, transformando su espacio y empujándolo a tomar decisiones irracionales mientras intenta asimilar su pérdida."
+    },
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "Desarraigo",
+     "poster": "https://image.tmdb.org/t/p/w500/ncFypC1QoQQVdm4rnhfTA9BgOGN.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "desarraigo-2026",
+     "sinopsis": "Tras la muerte de su esposa, Ángel enfrenta un duelo solitario en su hogar rural. Una gotera crece como una presencia abrumadora, transformando su espacio y empujándolo a decisiones irracionales mientras intenta reconciliarse con su pérdida."
+    }
+   ]
+  },
+  {
+   "titulo": "Do rocks dream of flying?",
+   "tmdb_id": 1452119,
+   "titulo_original": "Do Rocks Dream of Flying ?",
+   "poster_path": "/vFlWwjwz00aUrc1mEfzL2tAOwvU.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Two young documentarists travel around a forsaken island in the aftermath of a cataclysmic volcanic eruption.  Their wanders lead them to the encounter of Professor Pereda, an acoustic geologist, conducting researches on geo-acoustics.",
+   "genero": "Ciencia ficción",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 8,
+   "pais_tmdb": "Argentina",
+   "lbSlug": "do-rocks-dream-of-flying",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+  },
+  {
+   "titulo": "Dong shen shi",
+   "tmdb_id": 1613967,
+   "titulo_original": "Dōng Shèn Shì",
+   "poster_path": "/lNomGd1hVXNfuQNXJ1Cc0zwhQOH.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "In Chinese, ‘golden-age’ and ‘mirage’ share the same sound. Amid the 2024 economic decoupling, a single mother struggling to keep accessories business afloat in Yiwu, China’s largest export hub, must come to terms with memories of her late father's orchid on the Winter Solstice and reclaim her opera job to fund her son's overseas study. It’s my mother’s story, one day of her life.",
+   "genero": "Drama",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 30,
+   "pais_tmdb": "United Kingdom, China",
+   "title_en": "A Winter Mirage",
+   "lbSlug": "a-winter-mirage",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+  },
+  {
+   "titulo": "Eject: el último rebobinado",
+   "tmdb_id": 1714253,
+   "titulo_original": "Eject: El último rebobinado",
+   "poster_path": "/smL9OaSltUsDN1Vhu3jEle7mJ2b.jpg",
+   "synopsis_es": "En el cierre de los últimos videoclubes de la ciudad, este corto documental encuentra el punto de partida para reflexionar sobre la gentrificación urbana y el cambio de los hábitos de consumo. A través de espacios que desaparecen y de quienes los habitaron, la película conecta la pérdida de estos lugares con la transformación del audiovisual y la llegada de la inteligencia artificial, usada como metáfora de un cambio tecnológico imparable que redefine la forma de vivir, consumir y relacionarnos con la cultura, dejando abierta la pregunta de qué se pierde en el camino.",
+   "synopsis_en": "",
+   "genero": "Documental",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 11,
+   "pais_tmdb": "Spain",
+   "lbSlug": "eject-el-ultimo-rebobinado",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+  },
+  {
+   "titulo": "El segundo",
+   "_fuente": "cinecorto",
+   "_cinecorto": "https://cinecorto.co/el-segundo/",
+   "_verificado": "cinecorto.co, dirección: Pedro Miguel Rozo",
+   "anio": 2025,
+   "duracion_min": 22,
+   "sinopsis": "Patricia Maldonado, Ariel Merchán ,Cecilia Ramírez, Mateo Galvis, Leodan Rojas, Randy Zambrano, Álvaro Quemba, Bernardo Sánchez, Wilson Cárdenas, Martha Cárdenas, Aura Rodríguez, Luis Blanco, Hirma Lunar, Diana Latorre, Producción: Merchán Producciones",
+   "_ya_publicada": [
+    {
+     "festival": "popayan-2026",
+     "titulo": "El Segundo",
+     "sinopsis": "Patricia Maldonado, Ariel Merchán ,Cecilia Ramírez, Mateo Galvis, Leodan Rojas, Randy Zambrano, Álvaro Quemba, Bernardo Sánchez, Wilson Cárdenas, Martha Cárdenas, Aura Rodríguez, Luis Blanco, Hirma Lunar, Diana Latorre, Producción: Merchán Producciones"
+    }
+   ]
+  },
+  {
+   "titulo": "Emechiche, el renacer de los cabeciblancos",
+   "tmdb_id": 1592964,
+   "titulo_original": "Emechiche, El renacer de los cabeciblancos",
+   "poster_path": "/a6MItsvgkatTwGoBzkPdho4OvU5.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "The Colombian Montes de María are home to the emechiche  (Saguinus oedipus). An endangered species, we will observe their complex relationship with their young and their environment. We will analyse their survival, allowing us to witness their feelings and wild instincts.",
+   "genero": "Animación",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 11,
+   "pais_tmdb": "Colombia, Argentina",
+   "title_en": "Emechiche, The Rebirth of White-Headed",
+   "lbSlug": "emechiche-the-rebirth-of-white-headed",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_ya_publicada": [
+    {
+     "festival": "ficmontanas-2026",
+     "titulo": "Emechiche"
+    },
+    {
+     "festival": "popayan-2026",
+     "titulo": "Emechiche, El renacer de los cabeciblancos",
+     "tmdb_id": 1592964,
+     "poster": "/assets/popayan-2026/emechiche-el-renacer-de-los-cabeciblancos.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "emechiche-the-rebirth-of-white-headed",
+     "sinopsis": "En los Montes de María Colombianos, habita el Emechiche (Saguinus oedipus). Una especie en peligro de extinción, observamos las complejas relaciones con sus crías y su entorno. Analizaremos su supervivencia, dejándonos ser testigos de sus sentimientos e instintos salvajes."
+    },
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "Emechiche, el renacer de los cabeciblancos",
+     "poster": "https://image.tmdb.org/t/p/w500/a6MItsvgkatTwGoBzkPdho4OvU5.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "emechiche-the-rebirth-of-white-headed"
+    }
+   ]
+  },
+  {
+   "titulo": "Esta noite minha alma partirá",
+   "tmdb_id": 1406890,
+   "titulo_original": "Esta Noite Minha Alma Partirá",
+   "poster_path": "/mg3q8CjyqDEgT0pGayq1IfcCxy3.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "",
+   "genero": "Terror",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "Brazil",
+   "lbSlug": "esta-noite-minha-alma-partira",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+  },
+  {
+   "titulo": "Goteras",
+   "tmdb_id": 1650585,
+   "titulo_original": "Goteras",
+   "poster_path": "/Aooln4Bfl2r6ZC53LILKsxd1g20.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Violeta and Cristian love each other, but they're starting to hate each other. During the pandemic lockdown, they live together in Violeta's mother's luxurious apartment, mired in clutter and a lack of affection. A water cut-off for non-payment forces them to confront the fragility of their privilege and the emotional neglect they endure.",
+   "genero": "Comedia",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 15,
+   "pais_tmdb": "Colombia",
+   "title_en": "Leaks",
+   "lbSlug": "leaks",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+  },
+  {
+   "titulo": "Gramática práctica italiana",
+   "tmdb_id": 1577564,
+   "titulo_original": "Gramática práctica italiana",
+   "poster_path": "/gtnKGTLEnXIx1WzqWdfmXqdzfkq.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Miguel and his family are preparing to emigrate from Cuba to Italy where his mother already lives. While they wait, they begin to take the first step in the life of every migrant: learning the language of the country they want to go to.",
+   "genero": "Documental",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 12,
+   "pais_tmdb": "Cuba, Colombia, Germany",
+   "title_en": "Practical Italian Grammar",
+   "lbSlug": "practical-italian-grammar",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_ya_publicada": [
+    {
+     "festival": "cinemancia-2026",
+     "titulo": "Gramática Práctica Italiana",
+     "tmdb_id": 1577564,
+     "poster": "https://image.tmdb.org/t/p/w500/gtnKGTLEnXIx1WzqWdfmXqdzfkq.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "practical-italian-grammar",
+     "sinopsis": "Miguel y su familia se preparan para emigrar de Cuba a Italia, donde ya vive su madre. Mientras esperan, comienzan a dar el primer paso en el viaje de todo migrante: aprender el idioma del país al que quieren mudarse."
+    }
+   ]
+  },
+  {
+   "titulo": "Hay algo detrás de ti",
+   "tmdb_id": 1559987,
+   "titulo_original": "Hay algo detras de ti",
+   "poster_path": "/7BwQU7W1A4CCp92HhUBy5RxuEri.jpg",
+   "synopsis_es": "¿Alguna vez has sentido que algo te observa en la oscuridad?¿Escuchas sonidos extraños en las noches? ¿Has querido despertar de un sueño y no has podido? Explora junto a Morgana, una astuta y enigmática gata negra, distintas historias de misterio vividas por niñas y niños en diferentes lugares y momentos de su vida.",
+   "synopsis_en": "",
+   "genero": "Animación",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 7,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "hay-algo-detras-de-ti",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+  },
+  {
+   "titulo": "Jacaré",
+   "tmdb_id": 1427549,
+   "titulo_original": "Jacaré",
+   "poster_path": "/e7A9GS8D1cjMpVzTwMdlRn7vqx1.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Pedro is a teenager who sells drinks in the traffic on a highway that brings thousands of people to the coast during the summer. Driven by curiosity and desire, he embarks on an adventure that transforms him profoundly.",
+   "genero": "Drama",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 17,
+   "pais_tmdb": "Brazil",
+   "lbSlug": "jacare-2025",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+  },
+  {
+   "titulo": "La ceremonia",
+   "_fuente": "proimagenes",
+   "_proimagenes_id": "2734",
+   "pais": "Colombia",
+   "_verificado": "Proimágenes, director: Sandra Lorena Montoya, Colbert García",
+   "anio": 2021,
+   "duracion_min": 91,
+   "sinopsis": "Julián es un tipo feo y poco agraciado; no sabe lo que es tener una novia y vive idealizando el encontrar la mujer perfecta con la cual pueda casarse, pues vive a la sombra de su amigo Chucky, a quien ve que le llueven las mujeres y quiere ser como él. Aburrido, Julián decide inscribirse en una agencia matrimonial que asegura tener la clave del éxito para conseguir la media naranja. Para su suerte, les asignan citas con mujeres muy hermosas, lo que lo llevara a divertidas situaciones llenas de equívocos y torpezas, donde él a su manera, intentará conquistarlas, fracasando en cada una de ellas. Marcela, amiga de Julián, en el fondo siempre ha estado enamorada de él, aunque él no la ve con los mismos ojos, pues el idealiza el amor perfecto con mujeres hermosas, por lo que no es nada amable con ella. Julián se ve metido en un problema enorme, al no tener como librarse del matrimonio obligado, Chucky y Marcela se convertirán en su única ayuda para impedir la ceremonia. Julián sigue los consejos Alberto y descubre en Marcela la mujer que siempre busco.",
+   "_ya_publicada": [
+    {
+     "festival": "leviza-2026",
+     "titulo": "La Ceremonia",
+     "lbSlug": "⚠️ LB PENDIENTE"
+    }
+   ]
+  },
+  {
+   "titulo": "La gran hazaña",
+   "tmdb_id": 1494003,
+   "titulo_original": "La gran hazaña",
+   "poster_path": "/luHjmi57PSrqdH20zGuojt6ivmt.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "A rescue with a spinning tops, feathers, eggs and friends.",
+   "genero": "Aventura",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 14,
+   "pais_tmdb": "Colombia",
+   "title_en": "The Great Feat",
+   "lbSlug": "the-great-feat",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_ya_publicada": [
+    {
+     "festival": "ficcali-2026",
+     "titulo": "La gran hazaña",
+     "tmdb_id": 1494003,
+     "poster": "/assets/ficcali-2026/la-gran-hazana.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "the-great-feat",
+     "sinopsis": "Pablo necesita rescatar a su amiga Pascualina, una gallina ponedora que termina secuestrada por el tendero del pueblo, después de que el niño quebrara la cubeta de huevos que llevaba para pagarle una deuda de su familia."
+    },
+    {
+     "festival": "ficdeh-2026",
+     "titulo": "La gran hazaña",
+     "poster": "/assets/ficdeh/la-gran-hazana.jpg",
+     "posterSource": "custom",
+     "lbSlug": "the-great-feat",
+     "sinopsis": "A Pablo le encanta jugar al trompo. Cuando Don Chucho, el usurero del pueblo, retiene a Pascualina, su amiga y mascota, Pablo debe enfrentarse a Felipe, el mejor jugador de trompo de la región, para rescatarla. Pero ganar no es suficiente: los demás niños del pueblo se unirán a él en un acto de solidaridad, amistad y trabajo en equipo para lograr esta gran hazaña."
+    },
+    {
+     "festival": "ficmontanas-2026",
+     "titulo": "La gran hazaña"
+    },
+    {
+     "festival": "popayan-2026",
+     "titulo": "La gran hazaña",
+     "tmdb_id": 1494003,
+     "poster": "/assets/popayan-2026/la-gran-hazana.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "the-great-feat",
+     "sinopsis": "Pablo (10) tendrá el desafío de rescatar a su mascota Pascualina, una gallina ponedora, de las garras de Don Chucho, el usurero del pueblo quien cobra las deudas con huevos. Este día Pablo tiene un accidente en su bicicleta y rompe los preciados huevos, ahora debe reponer la cubeta para saldar la deuda. La única herramienta que tiene el niño para rescatar a Pascualina es una apuesta con su trompo de madera con Felipe el mejor jugador de trompo del pueblo. Aunque todo parece jugar a favor de Pablo, quien ha ganado la cubeta que rescatará a su querida Pascualina y realizar la gran hazaña, Valeria, la hermana de Felipe, impide que el premio sea entregado y les hace caer en cuenta que no basta ganar una apuesta si entorpece el trabajo de otra familia en la misma situación. Se desata una disertación en la que todos los niños empatizan con Pablo gracias a que reconocen los obstáculos que han tenido al tratar de sortear la dura actitud de Don Chucho. Ahora, es la unión de todos los niños lo que permite que Pascualina sea rescatada. Finalmente, Pablo aprende la importancia del trabajo en equipo."
+    },
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "La gran hazaña",
+     "poster": "https://image.tmdb.org/t/p/w500/luHjmi57PSrqdH20zGuojt6ivmt.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "the-great-feat",
+     "sinopsis": "A Pablo le encanta jugar al trompo. Cuando Don Chucho, el usurero del pueblo, retiene a Pascualina, su amiga y mascota, Pablo debe enfrentarse a Felipe, el mejor jugador de trompo de la región, para rescatarla. Pero ganar no es suficiente: los demás niños del pueblo se unirán a él en un acto de solidaridad, amistad y trabajo en equipo para lograr esta gran hazaña."
+    }
+   ]
+  },
+  {
+   "titulo": "La guerra de los tomates",
+   "tmdb_id": 1753830,
+   "titulo_original": "La guerra de los tomates",
+   "poster_path": "/779prgLmt5WC2aHHHZtoUX6Mfzd.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Two groups of local and migrant children will represent the neighborhood in a tournament, an idea that will spark a tomato fight; a charismatic girl will bring out the best in everyone as she tries to unite an unlikely team against an unexpected rival.",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 15,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "la-guerra-de-los-tomates",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_ya_publicada": [
+    {
+     "festival": "popayan-2026",
+     "titulo": "La guerra de los tomates",
+     "tmdb_id": 1753830,
+     "poster": "/assets/popayan-2026/la-guerra-de-los-tomates.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "la-guerra-de-los-tomates"
+    }
+   ]
+  },
+  {
+   "titulo": "La independencia",
+   "tmdb_id": 1595081,
+   "titulo_original": "La independencia",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "Cecilia, a selfless 52-year-old woman, decides to break with her life of sacrifices after years of enduring her son s irresponsibility and her family s ingratitude, finally seeking her independence.",
+   "genero": "Drama",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 19,
+   "pais_tmdb": "Colombia",
+   "title_en": "Independence",
+   "lbSlug": "independence-2025",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_ya_publicada": [
+    {
+     "festival": "ficdeh-2026",
+     "titulo": "La independencia",
+     "poster": "/assets/ficdeh/la-independencia.jpg",
+     "posterSource": "custom",
+     "lbSlug": "independence-2025",
+     "sinopsis": "Cecilia, una mujer abnegada de 52 años, decide romper con su vida de sacrificios tras años de soportar la irresponsabilidad de su hijo y la ingratitud de su familia, buscando finalmente su independencia."
+    },
+    {
+     "festival": "leviza-2026",
+     "titulo": "La Independencia",
+     "poster": "/assets/leviza/LaIndependencia.webp",
+     "posterSource": "custom",
+     "lbSlug": "⚠️ LB PENDIENTE"
+    },
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "La independencia",
+     "poster": "/assets/ficdeh/la-independencia.jpg",
+     "posterSource": "oficial",
+     "lbSlug": "independence-2025",
+     "sinopsis": "Cecilia, una mujer abnegada de 52 años, decide romper con su vida de sacrificios tras años de soportar la irresponsabilidad de su hijo y la ingratitud de su familia, buscando finalmente su independencia."
+    },
+    {
+     "festival": "villadelcine-2026",
+     "titulo": "La independencia",
+     "tmdb_id": 1595081,
+     "poster": "/assets/villadelcine-2026/independence.jpg",
+     "posterSource": "oficial",
+     "lbSlug": "independence-2025",
+     "sinopsis": "Tras años de sacrificarse por una familia que da por sentado su cuidado, Cecilia, de 52 años, llega al límite. Cansada de la irresponsabilidad de su hijo y de vivir para los demás, decide romper con todo y recuperar una vida que también le pertenece."
+    }
+   ]
+  },
+  {
+   "titulo": "La mona",
+   "tmdb_id": 1444298,
+   "titulo_original": "La Mona",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "In the damp and dusty village of La Hondura, La Mona is ready to sacrifice everything to maintain her authority even if loneliness is the price she must pay. Her body, however, refuses to toe the line.",
+   "genero": "Drama",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 18,
+   "pais_tmdb": "Colombia",
+   "title_en": "Heat Wave",
+   "lbSlug": "heat-wave-2025",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_ya_publicada": [
+    {
+     "festival": "ficmontanas-2026",
+     "titulo": "La Mona"
+    },
+    {
+     "festival": "jardin-2026",
+     "titulo": "La Mona",
+     "tmdb_id": 1444298,
+     "poster": "/assets/jardin-2026/la-mona.jpg",
+     "posterSource": "editorial",
+     "lbSlug": "heat-wave-2025",
+     "sinopsis": "La Mona está dispuesta a cualquier sacrificio para garantizar su autoridad en La Hondura, aunque el precio que pague sea la soledad."
+    },
+    {
+     "festival": "popayan-2026",
+     "titulo": "La Mona",
+     "tmdb_id": 1444298,
+     "poster": "/assets/villadelcine-2026/la-mona.jpg",
+     "posterSource": "oficial",
+     "lbSlug": "heat-wave-2025"
+    },
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "La mona",
+     "poster": "/assets/siembrafest/la-mona.jpg",
+     "posterSource": "oficial",
+     "lbSlug": "heat-wave-2025"
+    },
+    {
+     "festival": "villadelcine-2026",
+     "titulo": "La Mona",
+     "tmdb_id": 1444298,
+     "poster": "/assets/villadelcine-2026/la-mona.jpg",
+     "posterSource": "oficial",
+     "lbSlug": "heat-wave-2025",
+     "sinopsis": "En La Hondura, un caserío abrasado por el polvo y el calor, La Mona impone el orden como integrante de un grupo paramilitar. Cuando la menstruación la obliga a detenerse, el cuerpo que intenta someter revela sus deseos, contradicciones y silencios, resquebrajando la autoridad con la que ha aprendido a sobrevivir."
+    }
+   ]
+  },
+  {
+   "titulo": "Las zapatillas mágicas",
+   "tmdb_id": 1424641,
+   "titulo_original": "Las zapatillas mágicas",
+   "poster_path": "/zut8TXtJYa11qAWXFxfxSexzgE3.jpg",
+   "synopsis_es": "Yan busca cómo conseguir las mejores zapatillas de ballet del mundo porque cree que son la clave del éxito como bailarina. Al no conseguirlos, acude con Lu con sus abuelos Adolfo y Rodolfo, quienes reviven una escena icónica de la película Cantando bajo la lluvia y aprenden juntos que lo más importante es bailar con el corazón.",
+   "synopsis_en": "Yan searches for the best ballet shoes in the world because she believes they are the key to success as a dancer. When she fails to find them, she goes with Lu to visit her grandparents Adolfo and Rodolfo, who reenact an iconic scene from the movie Singin' in the Rain, and together they learn that the most important thing is to dance with your heart.",
+   "genero": "Animación",
+   "anio_tmdb": 2024,
+   "duracion_tmdb": 9,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "las-zapatillas-magicas",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+  },
+  {
+   "titulo": "Le mur du son",
+   "tmdb_id": 1524550,
+   "titulo_original": "Le Mur du Son",
+   "poster_path": "/jfN8BCCp87w0lAbOJbcqj0f9xV9.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "In a large, empty gym, the protagonists Iris and Lea play hide-and-seek: time seems to stand still, while the approach of an airplane transforms reality in a mysterious and poetic way.",
+   "genero": "Drama",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 12,
+   "pais_tmdb": "Italy, Switzerland",
+   "lbSlug": "le-mur-du-son",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+  },
+  {
+   "titulo": "Like friend, like deer",
+   "tmdb_id": 1477148,
+   "titulo_original": "Like Friend, Like Deer",
+   "poster_path": "/dNxbgMn75t54vxrxwjOWGorofyc.jpg",
+   "synopsis_es": "Cortometraje experimental.",
+   "synopsis_en": "After killing an illegal hunter in self-defense, a wildlife ranger is forced to confront the blurred line between protector and predator, revealing the unsettling parallels between humans, animals, and the wilderness they inhabit.",
+   "genero": "Animación",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 12,
+   "pais_tmdb": "Iran",
+   "lbSlug": "like-friend-like-deer",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+  },
+  {
+   "titulo": "Los pliegues de la falda",
+   "tmdb_id": 1738777,
+   "titulo_original": "Los pliegues de la falda",
+   "poster_path": "/bJGWAlMlzNhfG4XlsMfdbvsspo8.jpg",
+   "synopsis_es": "Linda quiere ser la protagonista de la obra de teatro del colegio; pero, cuando Carlos descubre el rol “masculino” que su hija interpretará, intenta impedirlo. Conmovida por la tristeza de su hija, María decide ayudarla, aunque eso signifique nadar a contracorriente.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 18,
+   "pais_tmdb": "",
+   "lbSlug": "los-pliegues-de-la-falda",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_ya_publicada": [
+    {
+     "festival": "ficdeh-2026",
+     "titulo": "Los pliegues de la falda",
+     "poster": "/assets/ficdeh/los-pliegues-de-la-falda.jpg",
+     "posterSource": "custom",
+     "lbSlug": "los-pliegues-de-la-falda",
+     "sinopsis": "Linda quiere ser la protagonista de la obra de teatro del colegio; pero, cuando Carlos descubre el rol “masculino” que su hija interpretará, intenta impedirlo. Conmovida por la tristeza de su hija, María decide ayudarla, aunque eso signifique nadar a contracorriente."
+    },
+    {
+     "festival": "popayan-2026",
+     "titulo": "Los pliegues de la falda",
+     "tmdb_id": 1738777,
+     "poster": "/assets/popayan-2026/los-pliegues-de-la-falda.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "los-pliegues-de-la-falda",
+     "sinopsis": "Linda, Carlos y María son una familia convencional en la que casi todo encaja: el padre tiene la última palabra, la madre se encarga de la casa. Y Linda es una pequeña que se rehúsa a usar la falda. Ella no quiere ser la princesa de papá, solo quiere ser la protagonista de la obra de teatro del colegio; pero, cuando Carlos descubre el rol “masculino” que Linda interpretará, intenta impedirlo. Conmovida por la tristeza de su hija, María decide ayudarla. Después de la función, nada será igual."
+    }
+   ]
+  },
+  {
+   "titulo": "Luis antonio",
+   "_fuente": "cinecorto",
+   "_cinecorto": "https://cinecorto.co/luis-antonio/",
+   "_verificado": "cinecorto.co, dirección: Juan José Arias Gil",
+   "anio": 2025,
+   "duracion_min": 12,
+   "sinopsis": "La mañana de un sábado Luis Antonio, un niño de 8 años, quiere aprender a montar en bicicleta. Pero su madre tiene que trabajar y lo deja al cuidado de Ofelia, su estricta vecina.",
+   "_ya_publicada": [
+    {
+     "festival": "popayan-2026",
+     "titulo": "Luis Antonio",
+     "sinopsis": "La mañana de un sábado Luis Antonio, un niño de 8 años, quiere aprender a montar en bicicleta. Pero su madre tiene que trabajar y lo deja al cuidado de Ofelia, su estricta vecina."
+    }
+   ]
+  },
+  {
+   "titulo": "Malas posturas",
+   "tmdb_id": 1595060,
+   "titulo_original": "Malas posturas",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "The more Henry insists on fulfilling his role as a provider father, the further he drifts from the chance of returning home. From his brother’s farm, he tries to sell a calf in order to send money to his family—who no longer waits for him. Poor posture will collapse his body, worn out from insisting on a lost cause.",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 17,
+   "pais_tmdb": "Colombia",
+   "title_en": "Bad Postures",
+   "lbSlug": "bad-postures",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_ya_publicada": [
+    {
+     "festival": "jardin-2026",
+     "titulo": "Malas posturas",
+     "tmdb_id": 1595060,
+     "poster": "/assets/jardin-2026/malas-posturas.jpg",
+     "posterSource": "editorial",
+     "lbSlug": "bad-postures",
+     "sinopsis": "Entre más insiste en cumplir su rol de padre proveedor, Henry más se aleja de la posibilidad de volver a su hogar. Desde la finca de su hermano, él busca vender un ternero para así enviar dinero a su casa. Las malas posturas arrojarán su cuerpo, cansado de insistir."
+    }
+   ]
+  },
+  {
+   "titulo": "Marina y la falda",
+   "tmdb_id": 1712668,
+   "titulo_original": "Marina y la Falda",
+   "poster_path": "/xRVcgBcTHAUVQSI1fgIZR3K8nrj.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Marina receives a skirt as a gift but dislikes it because she believes it prevents her from playing soccer. She hides it away in a drawer, but the skirt magically comes to life, giving Marina the chance to discover that they can have fun together and that she does not have to give up what she loves in order to wear it.",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "",
+   "lbSlug": "marina-y-la-falda",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+  },
+  {
+   "titulo": "Más allá",
+   "tmdb_id": 1488751,
+   "titulo_original": "Más Allá",
+   "poster_path": "/1F7ck0bVWovhSlRqco5RePKQJZt.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "After being separated from her mother while crossing the treacherous jungle between Colombia and Panama, Zuli, a young Venezuelan migrant, is forced to abandon her childhood to survive in this dangerous place. While working for a coyote to help guide other migrants through the jungle, Zuli discovers a portal to a magical land, where she must turn to her imagination to reconnect with her innocence and, ultimately, learn how to be a kid again.",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 15,
+   "pais_tmdb": "",
+   "title_en": "Beyond",
+   "lbSlug": "beyond-2025",
+   "_verificado": "el tmdb_id con que ya la publicamos en popayan-2026, y TMDB confirma la dirección",
+   "_ya_publicada": [
+    {
+     "festival": "ficdeh-2026",
+     "titulo": "Más allá",
+     "poster": "/assets/ficdeh/pasta-negra.jpg",
+     "posterSource": "custom",
+     "lbSlug": "beyond-2025",
+     "sinopsis": "Después de haber sido separada de su madre mientras intentaban cruzar la selva entre Colombia y Panamá, una pequeña migrante venezolana se ve obligada a abandonar su infancia para sobrevivir. Zuli empieza a trabajar para un coyote que guía a migrantes dentro de la selva. En uno de sus viajes descubre un portal que la transporta a una tierra mágica donde se ve impulsada a reconectar con su inocencia y su imaginación, aprendiendo a ser una niña otra vez."
+    },
+    {
+     "festival": "popayan-2026",
+     "titulo": "Más allá",
+     "tmdb_id": 1488751,
+     "poster": "/assets/popayan-2026/mas-alla.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "beyond-2025",
+     "sinopsis": "Después de haber sido separada de su madre mientras intentaban cruzar la selva entre Colombia y Panamá, una pequeña migrante venezolana, se ve obligada a abandonar su infancia para sobrevivir y empieza a trabajar para un coyote que guía a migrantes dentro de la selva. En uno de sus viajes Zuli tropieza con un portal que la transporta a una tierra mágica donde se ve impulsada a reconectar con su inocencia y su imaginación, aprendiendo a ser una niña otra vez."
+    }
+   ]
+  },
+  {
+   "titulo": "Memoria colectiva",
+   "tmdb_id": 1520364,
+   "titulo_original": "Memoria Colectiva",
+   "poster_path": "/m7AYGrMWkbSoAGptuSs9fErArAZ.jpg",
+   "synopsis_es": "En 1983, durante los días más oscuros del Conflicto Armado en el Perú, soldados enmascarados entraron a la casa de Adelina y se llevaron a su marido por la fuerza. Ella nunca lo volvería a ver. Después de toparse con el silencio y el desprecio de la policía y el ejército, Adelina une fuerzas con las muchas otras mujeres que perdieron a sus maridos e hijos a manos de soldados que se suponía debían protegerlas. Juntos, se unirán para encontrarlos y exigir justicia.",
+   "synopsis_en": "In 1983, during the darkest days of Peru’s Armed Conflict with the Shining Path, masked soldiers entered Adelina’s home and took her husband away. She would never see him again. After facing silence and contempt from the Police and Army, Adelina joins forces with the many other women who have lost their husbands and children to soldiers who were supposed to protect them. Together, they will unite to demand justice.",
+   "genero": "Animación",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 12,
+   "pais_tmdb": "Peru, France",
+   "lbSlug": "memoria-colectiva",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_ya_publicada": [
+    {
+     "festival": "ficmontanas-2026",
+     "titulo": "Memoria Colectiva"
+    },
+    {
+     "festival": "villadelcine-2026",
+     "titulo": "Memoria colectiva",
+     "tmdb_id": 1520364,
+     "poster": "/assets/villadelcine-2026/collective-memory.jpg",
+     "posterSource": "oficial",
+     "lbSlug": "memoria-colectiva",
+     "sinopsis": "En 1983, soldados encapuchados irrumpen en la casa de Adelina y se llevan a su esposo, quien jamás regresa. Ante el silencio de las autoridades, ella se une a otras mujeres marcadas por la misma ausencia. Juntas convierten el dolor en memoria y la memoria en una exigencia de justicia."
+    }
+   ]
+  },
+  {
+   "titulo": "Niña chilapa",
+   "tmdb_id": 1456186,
+   "titulo_original": "Niña chilapa",
+   "poster_path": "/AjNWPyDDpMsn1Q5nH111jtRGKZN.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Sometimes one, orphaned of one's own lungs, feels that one is drowning.  One suddenly remembers the body, breathes again, and begins to laugh. To laugh very hard. To run around the corners of the world breathing and laughing. Yulieth talks to her mother. She dances. She floats on the water. She laughs.",
+   "genero": "Documental",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 17,
+   "pais_tmdb": "Colombia",
+   "title_en": "Chilapa Girl",
+   "lbSlug": "chilapa-girl",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_ya_publicada": [
+    {
+     "festival": "cinemancia-2025",
+     "titulo": "Niña Chilapa",
+     "poster": "https://cinemanciafestival.com/wp-content/uploads/2025/08/Nina-Chilapa-Still-3-scaled.jpg",
+     "posterSource": "editorial",
+     "sinopsis": "Yulieth es una niña en un momento que mide su relación con el mundo: no es todavía una adolescente pero sus experiencias la hacen sentirse una mujer grande. Ese difícil equilibrio se amplía con el espacio que la rodea: una naturaleza demasiado generosa, tupida y vasta."
+    },
+    {
+     "festival": "popayan-2026",
+     "titulo": "Niña Chilapa",
+     "tmdb_id": 1456186,
+     "poster": "/assets/popayan-2026/nina-chilapa.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "chilapa-girl",
+     "sinopsis": "Yulieth (11-13), se enfrenta a la dificultad de crecer en un territorio salvaje, donde coexiste la belleza natural y la hostilidad del machismo. Su identidad en construcción se disputa entre las pulsiones de sus sueños y su realidad."
+    }
+   ]
+  },
+  {
+   "titulo": "Para no volver",
+   "tmdb_id": 1743118,
+   "titulo_original": "Para no volver",
+   "poster_path": "/k2RvfqR0QSL4D5PzFkkomzRZJ8q.jpg",
+   "synopsis_es": "Cuando Karina se entera de que está embarazada del bebé de Charlie, ella y su mejor amiga Eli se disponen a encontrarlo por las calles nocturnas de Santa Marta. En el camino, se enfrentan al deseo, la maternidad y su vínculo cambiante. Al amanecer, el mar las abraza, y vuelven a jugar como niñas.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 11,
+   "pais_tmdb": "",
+   "lbSlug": "para-no-volver",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_ya_publicada": [
+    {
+     "festival": "biff-2026",
+     "titulo": "Para No Volver",
+     "tmdb_id": 1743118,
+     "poster": "/assets/biff-2026/para-no-volver.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "para-no-volver",
+     "sinopsis": "Cuando Karina se entera de que está embarazada del bebé de Charlie, ella y su mejor amiga Eli se disponen a encontrarlo por las calles nocturnas de Santa Marta. En el camino, se enfrentan al deseo, la maternidad y su vínculo cambiante. Al amanecer, el mar las abraza, y vuelven a jugar como niñas."
+    },
+    {
+     "festival": "cinemancia-2026",
+     "titulo": "Para no volver",
+     "tmdb_id": 1743118,
+     "poster": "https://image.tmdb.org/t/p/w500/k2RvfqR0QSL4D5PzFkkomzRZJ8q.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "para-no-volver",
+     "sinopsis": "Cuando Karina se entera de que está embarazada del bebé de Charlie, ella y su mejor amiga Eli se disponen a encontrarlo por las calles nocturnas de Santa Marta. En el camino, se enfrentan al deseo, la maternidad y su vínculo cambiante. Al amanecer, el mar las abraza, y vuelven a jugar como niñas."
+    },
+    {
+     "festival": "filcmar-2026",
+     "titulo": "Para no volver",
+     "tmdb_id": 1743118,
+     "poster": "/assets/filcmar-2026/para-no-volver.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "para-no-volver",
+     "sinopsis": "Cuando Karina descubre que está embarazada del bebé de Charlie, ella y su mejor amiga Eli emprenden un viaje para encontrarlo por las calles nocturnas de Santa Marta. En el camino, se enfrentan al deseo, la maternidad y sus propios sentimientos cambiantes."
+    }
+   ]
+  },
+  {
+   "titulo": "Pawa",
+   "tmdb_id": 1668893,
+   "titulo_original": "PAWA",
+   "poster_path": "/9qx2ERTvDEQQAc2RUHFoVjS2OvW.jpg",
+   "synopsis_es": "En una mañana tranquila en una ranchería en La Guajira, Indira (9) da de comer a los pavos y gallinas, debido a la sequía e inicio de clases Josefa, (60) abuela de Indira, emprende un viaje junto a su nieta a las comunidades aledañas, para tratar de vender a Taata, el Pavo más grande y así poder comprar útiles escolares y comida.  En su travesía, en una parada de tienda en medio del desierto, se encuentran a su único cliente del día, un chofer de un volteo que les pide descuento para comprarles el pavo, en medio de la burla por no saber hablar bien el español.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 20,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "pawa",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_ya_publicada": [
+    {
+     "festival": "ficdeh-2026",
+     "titulo": "Pawa",
+     "poster": "/assets/ficdeh/pawa.jpg",
+     "posterSource": "custom",
+     "lbSlug": "pawa",
+     "sinopsis": "En una tranquila mañana en una ranchería de La Guajira, Indira da de comer a los pavos y las gallinas. Ante la sequía y el inicio de clases, Josefa, abuela de Indira, emprende un viaje junto a su nieta por las comunidades aledañas con la esperanza de vender a Taata, el pavo más grande, para comprar útiles escolares y comida."
+    },
+    {
+     "festival": "leviza-2026",
+     "titulo": "Pawa",
+     "poster": "/assets/leviza/Pawa.jpeg",
+     "posterSource": "custom",
+     "lbSlug": "⚠️ LB PENDIENTE"
+    }
+   ]
+  },
+  {
+   "titulo": "Plástico",
+   "tmdb_id": 1599027,
+   "titulo_original": "Plástico",
+   "poster_path": "/4OsWTE92iy2uP7TbMqphyLpNad8.jpg",
+   "synopsis_es": "El recuerdo de Ela no sale de la cabeza de Darío. Una inesperada llamada de su exnovia termina en una tarde de risas y polas. Entre viejas emociones y sensaciones, ambos acaban en la cama, pero nada es como antes. Tragándose el llanto, Darío se deja llevar por la noche, los excesos y el desenfreno, descubriendo por primera vez que no puede escapar de sí mismo ni de lo que siente.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 12,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "plastico-2025-1",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+  },
+  {
+   "titulo": "Prueba de cámara",
+   "tmdb_id": 1743099,
+   "titulo_original": "Prueba de cámara",
+   "poster_path": "/iYSrgk7v0pSWbAA4YFF5CP8mi0j.jpg",
+   "synopsis_es": "Toda carta es un recuerdo, dedicado a películas en donde el archivo familiar aparece como una forma de correspondencia íntima: cartas a hijos, a padres, a abuelos, a quienes estuvieron y también a quienes fuimos. Entre fotografías, archivos domésticos, voces, objetos y gestos heredados, este programa reúne formas de mirar hacia atrás para decir algo en el presente: reconstruir un vínculo, nombrar una ausencia, acompañar una pérdida o afirmar una identidad.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 10,
+   "pais_tmdb": "",
+   "lbSlug": "prueba-de-camara",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_ya_publicada": [
+    {
+     "festival": "cinemancia-2026",
+     "titulo": "Prueba de cámara",
+     "tmdb_id": 1743099,
+     "poster": "https://image.tmdb.org/t/p/w500/iYSrgk7v0pSWbAA4YFF5CP8mi0j.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "prueba-de-camara",
+     "sinopsis": "Toda carta es un recuerdo, dedicado a películas en donde el archivo familiar aparece como una forma de correspondencia íntima: cartas a hijos, a padres, a abuelos, a quienes estuvieron y también a quienes fuimos. Entre fotografías, archivos domésticos, voces, objetos y gestos heredados, este programa reúne formas de mirar hacia atrás para decir algo en el presente: reconstruir un vínculo, nombrar una ausencia, acompañar una pérdida o afirmar una identidad."
+    }
+   ]
+  },
+  {
+   "titulo": "Que el cielo nos perdone",
+   "tmdb_id": 1565878,
+   "titulo_original": "Que el cielo nos perdone",
+   "poster_path": "/fyvT3ZlgNJO5lswCC8XdXkXFVnB.jpg",
+   "synopsis_es": "Colombia, 1951: En medio de La Violencia, el período de brutal guerra política entre liberales y conservadores, un par de chulavitas –asesinos a sueldo pagados por el gobierno– acechan a un sacerdote en la oscuridad de la noche, esperando que los conduzca a la cabaña en el bosque en donde se esconden sus próximas víctimas. Pero el horror que encontrarán allí es mil veces peor que el dolor que pensaban infligir.",
+   "synopsis_en": "",
+   "genero": "Terror",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "que-el-cielo-nos-perdone",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_ya_publicada": [
+    {
+     "festival": "fantasmagoria-2026",
+     "titulo": "Que El Cielo Nos Perdone",
+     "tmdb_id": 1565878,
+     "poster": "/assets/fantasmagoria-2026/que-el-cielo-nos-perdone.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "que-el-cielo-nos-perdone",
+     "sinopsis": "Colombia, 1951: En medio de La Violencia, el período de brutal guerra política entre liberales y conservadores, un par de chulavitas –asesinos a sueldo pagados por el gobierno– acechan a un sacerdote en la oscuridad de la noche, esperando que los conduzca a la cabaña en el bosque en donde se esconden sus próximas víctimas. Pero el horror que encontrarán allí es mil veces peor que el dolor que pensaban infligir."
+    },
+    {
+     "festival": "ficma-2026",
+     "titulo": "Que el cielo nos perdone",
+     "tmdb_id": 1565878,
+     "poster": "/assets/ficma/que-el-cielo-nos-perdone.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "que-el-cielo-nos-perdone",
+     "sinopsis": "Colombia, 1951: En medio de La Violencia, el período de brutal guerra política entre liberales y conservadores, un par de chulavitas —asesinos a sueldo pagados por el gobierno— acechan a un sacerdote en la oscuridad de la noche, esperando que los conduzca a la cabaña en el bosque en donde se esconden sus próximas víctimas. Pero el horror que encontrarán allí es mil veces peor que el dolor que pensaban infligir."
+    },
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "Que el cielo nos perdone",
+     "poster": "https://image.tmdb.org/t/p/w500/fyvT3ZlgNJO5lswCC8XdXkXFVnB.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "que-el-cielo-nos-perdone",
+     "sinopsis": "Colombia, 1951: En medio de La Violencia, el período de brutal guerra política entre liberales y conservadores, un par de chulavitas —asesinos a sueldo pagados por el gobierno— acechan a un sacerdote en la oscuridad de la noche, esperando que los conduzca a la cabaña en el bosque en donde se esconden sus próximas víctimas. Pero el horror que encontrarán allí es mil veces peor que el dolor que pensaban infligir."
+    },
+    {
+     "festival": "villadelcine-2026",
+     "titulo": "Que el cielo nos perdone",
+     "tmdb_id": 1565878,
+     "poster": "/assets/villadelcine-2026/que-el-cielo-nos-perdone.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "que-el-cielo-nos-perdone",
+     "sinopsis": "Colombia, 1951. En plena Violencia, dos chulavitas, sicarios al servicio del Gobierno, siguen a un sacerdote durante la noche, convencidos de que los conducirá hasta una cabaña donde se esconden sus víctimas. Al internarse en el bosque, descubrirán un horror mucho más oscuro que cualquiera de sus propios actos."
+    }
+   ]
+  },
+  {
+   "titulo": "Refraccion",
+   "tmdb_id": 1584776,
+   "titulo_original": "Refracción",
+   "poster_path": "/bzKNobO0N8Oqj6YU6eA2R28UgPI.jpg",
+   "synopsis_es": "Eloísa, una chica de 20 años, está en dos relaciones al mismo tiempo. Una noche, después de haber estado con ambas chicas, se siente agobiada por estar en esa situación de engaño y en medio de su confusión sale a recorrer las calles de Medellín en bicicleta, donde se dará cuenta de que no quiere reconocerse pero deberá encontrarse consigo misma.",
+   "synopsis_en": "Eloísa, a 20-year-old girl, is in two relationships at the same time. One night, after having been with both girls, she feels overwhelmed by living in this situation of deceit, and in the middle of her confusion she goes out to ride her bike through the streets of Medellín, where she will realize that she does not want to acknowledge who she is — but will ultimately have to come face-to-face with herself.",
+   "genero": "Drama",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 11,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "refraccion",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_ya_publicada": [
+    {
+     "festival": "cinemancia-2026",
+     "titulo": "Refracción",
+     "tmdb_id": 1584776,
+     "poster": "https://image.tmdb.org/t/p/w500/bzKNobO0N8Oqj6YU6eA2R28UgPI.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "refraccion",
+     "sinopsis": "Eloísa, una chica de 20 años, está en dos relaciones al mismo tiempo. Una noche, después de haber estado con ambas chicas, se siente agobiada por estar en esa situación de engaño y en medio de su confusión sale a recorrer las calles de Medellín en bicicleta, donde se dará cuenta de que no quiere reconocerse pero deberá encontrarse consigo misma."
+    },
+    {
+     "festival": "ficmontanas-2026",
+     "titulo": "Refracción"
+    },
+    {
+     "festival": "girardota-2026",
+     "titulo": "Refracción",
+     "tmdb_id": 1584776,
+     "poster": "/assets/girardota-2026/refraccion.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "refraccion",
+     "sinopsis": "Eloísa, una chica de 20 años, está en dos relaciones al mismo tiempo. Una noche, después de haber estado con ambas chicas, se siente agobiada por estar en esa situación de engaño y en medio de su confusión sale a recorrer las calles de Medellín en bicicleta, donde se dará cuenta de que no quiere reconocerse pero deberá encontrarse consigo misma."
+    },
+    {
+     "festival": "jardin-2026",
+     "titulo": "Refracción",
+     "tmdb_id": 1584776,
+     "poster": "/assets/jardin-2026/refraccion.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "refraccion",
+     "sinopsis": "Eloísa, una chica de 20 años, está en dos relaciones al mismo tiempo. Una noche, después de haber estado con ambas chicas, se siente agobiada por estar en esa situación de engaño y en medio de su confusión sale a recorrer las calles de Medellín en bicicleta, donde se dará cuenta de que no quiere reconocerse pero deberá encontrarse consigo misma."
+    },
+    {
+     "festival": "leviza-2026",
+     "titulo": "Refracción",
+     "poster": "/assets/leviza/Refraccio_n.jpeg",
+     "posterSource": "custom",
+     "lbSlug": "⚠️ LB PENDIENTE"
+    },
+    {
+     "festival": "narrarelfuturo-2026",
+     "titulo": "REFRACCIÓN",
+     "tmdb_id": 1584776,
+     "poster": "/assets/narrarelfuturo-2026/refraccion.jpg",
+     "posterSource": "oficial",
+     "lbSlug": "refraccion",
+     "sinopsis": "Eloísa, una chica de 20 años, está en dos relaciones al mismo tiempo. Una noche, después de haber estado con ambas chicas, se siente agobiada por estar en esa situación de engaño y en medio de su confusión sale a recorrer las calles de Medellín en bicicleta, donde se dará cuenta de que no quiere reconocerse pero deberá encontrarse consigo misma."
+    }
+   ]
+  },
+  {
+   "titulo": "Safo",
+   "tmdb_id": 1450073,
+   "titulo_original": "Safo",
+   "poster_path": "/g4RslFP6yKmiXTn9uYNsilpd2F9.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Inspired by fragments of poems by Sappho (Island of Lesbos, 600 BC), the first female author known to the Western World. The narrative alludes to Sappho’s poetic expressions and the multiple readings of her figure throughout history.",
+   "genero": "Animación",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 13,
+   "pais_tmdb": "Brazil",
+   "title_en": "Sappho",
+   "lbSlug": "sappho-2025",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+  },
+  {
+   "titulo": "Sombras en la niebla",
+   "tmdb_id": 1668876,
+   "titulo_original": "Sombras en la Niebla",
+   "poster_path": "/36fgDq5bvxmVXUlGHpFZLnogB5K.jpg",
+   "synopsis_es": "En el páramo de Chiscas, don Vicente Molina y su familia cuidan un enorme rebaño de ovejas. La cotidianidad de la familia transcurre entre montañas cubiertas de niebla y la cocina, cuyo fogón de leña los reúne en torno a la comida y el juego. Entre el grupo se encuentra Will, el niño de la familia, quien se debate entre jugar y acompañar a los mayores en las labores de pastoreo.",
+   "synopsis_en": "High in a páramo in Colombia, the sheep that Edualdo and Ana have tended for decades graze across the land. Amid the fog and the demands of herding, their youngest son, Will, grows up between childhood play and the rhythms of rural life.",
+   "genero": "Documental",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 25,
+   "pais_tmdb": "Colombia",
+   "title_en": "Into the fog",
+   "lbSlug": "into-the-fog-2026",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_ya_publicada": [
+    {
+     "festival": "cinemancia-2026",
+     "titulo": "Sombras en la niebla",
+     "tmdb_id": 1668876,
+     "poster": "https://image.tmdb.org/t/p/w500/36fgDq5bvxmVXUlGHpFZLnogB5K.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "into-the-fog-2026",
+     "sinopsis": "En el páramo de Chiscas, don Vicente Molina y su familia cuidan un enorme rebaño de ovejas. La cotidianidad de la familia transcurre entre montañas cubiertas de niebla y la cocina, cuyo fogón de leña los reúne en torno a la comida y el juego. Entre el grupo se encuentra Will, el niño de la familia, quien se debate entre jugar y acompañar a los mayores en las labores de pastoreo."
+    },
+    {
+     "festival": "ficmontanas-2026",
+     "titulo": "Sombras en la niebla"
+    },
+    {
+     "festival": "midbo-2026",
+     "titulo": "Sombras en la niebla",
+     "tmdb_id": 1668876,
+     "poster": "/assets/midbo-2026/sombras-en-la-niebla.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "into-the-fog-2026",
+     "sinopsis": "En lo alto del páramo de Chiscas, en Boyacá, viven las ovejas que Edualdo y Ana cuidan desde hace décadas. En medio de la niebla, Wilmer, su hijo menor, crece entre el juego y las rutinas del campo. En esta película, la geografía no es sólo escenario. El páramo se impone como una presencia viva, bella y a la vez agreste, que configura la experiencia de la familia, determinando sus afectos, sus tiempos y su relación con la vida y la muerte."
+    },
+    {
+     "festival": "popayan-2026",
+     "titulo": "Sombras en la Niebla",
+     "tmdb_id": 1668876,
+     "poster": "/assets/popayan-2026/sombras-en-la-niebla.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "into-the-fog-2026",
+     "sinopsis": "En el páramo de Chiscas, don Vicente Molina y su familia cuidan un enorme rebaño de ovejas. La cotidianidad de la familia transcurre entre montañas cubiertas de niebla y la cocina, cuyo fogón de leña los reúne en torno a la comida y el juego. Entre el grupo se encuentra Will, el niño de la familia, quien se debate entre jugar y acompañar a los mayores en las labores de pastoreo."
+    }
+   ]
+  },
+  {
+   "titulo": "Sopro",
+   "tmdb_id": 1667563,
+   "titulo_original": "Sopro",
+   "poster_path": "/tZuumpwZyIDzQsW3Fe0N3GMkGbL.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "On the seventh birthday of a child who lives with their perfect family in a doll house but doesn't fit into conventional gender norms, the social pressure imposed by their traditional family is so suffocating that the only way to escape is to make the magical birthday wish, before blowing out the candle on the cake.",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 14,
+   "pais_tmdb": "",
+   "title_en": "Blow",
+   "lbSlug": "blow-2026",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+  },
+  {
+   "titulo": "Stakkars meg",
+   "tmdb_id": 1543437,
+   "titulo_original": "Stakkars meg",
+   "poster_path": "/aDpvFe1PR2jm2O0DyFmZlXKMEmN.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Nora (15) is caught shoplifting, sparking a major argument with her parents about family values. When all blame falls on her, she pressures her younger sister, Amalie (11), to confess to her part in the stealing. But on Christmas Eve, they find out they aren’t the only thieves in the family.",
+   "genero": "Drama",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 20,
+   "pais_tmdb": "Norway",
+   "title_en": "Poor Me",
+   "lbSlug": "poor-me",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+  },
+  {
+   "titulo": "Tejiendo un árbol",
+   "_ya_publicada": [
+    {
+     "festival": "ficmontanas-2026",
+     "titulo": "Tejiendo un árbol"
+    }
+   ]
+  },
+  {
+   "titulo": "The mould",
+   "tmdb_id": 1469670,
+   "titulo_original": "The Mould",
+   "poster_path": "/9ZSGLaQWWnHKYnM2KEfDabMKJQr.jpg",
+   "synopsis_es": "Un padre afronta varios problemas con su único hijo tras la muerte de su esposa e intenta criarlo a su manera. (Endimaris)",
+   "synopsis_en": "After the death of his wife, a father confronts some problems with his only son and tries to raise him in his own way.",
+   "genero": "",
+   "anio_tmdb": 2024,
+   "duracion_tmdb": 24,
+   "pais_tmdb": "",
+   "lbSlug": "the-mould-2024",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+  },
+  {
+   "titulo": "Tuktu, padre maíz",
+   "tmdb_id": 1592955,
+   "titulo_original": "Tuktu, Padre Maíz",
+   "poster_path": "/qw4zntJUuj163JdkusNUnxHvOwg.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "In the mountains of Colombia, Juan, a 13-year-old indigenous peasant boy, is forced to flee from the monster of war. In his escape, between the whistling of bullets and the guidance of his ancestors, he awakens an ancestral power that transforms him into Tuktu: a Taita of extraordinary strength destined to return to sow the peace of the earth.",
+   "genero": "Animación",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 13,
+   "pais_tmdb": "Colombia",
+   "title_en": "Tuktu, Father Maize",
+   "lbSlug": "tuktu-father-maize",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_ya_publicada": [
+    {
+     "festival": "ficdeh-2026",
+     "titulo": "Tuktu, Padre Maíz",
+     "poster": "/assets/ficdeh/tuktu-padre-maiz.jpg",
+     "posterSource": "custom",
+     "lbSlug": "tuktu-father-maize",
+     "sinopsis": "En las montañas de Colombia, Juan, un niño mestizo de 13 años, se ve obligado a huir del monstruo de la guerra. En su travesía, la tierra misma lo protege y, guiado por las voces de sus ancestros, despierta un poder ancestral llamado Tucuna, que le permite transformarse y renacer. Convertido en Tuktu, un Taita de fuerza extraordinaria, comprende que su destino no es solo sobrevivir, sino regresar para sanar la herida de la guerra y sembrar la paz en la tierra que lo vio nacer."
+    },
+    {
+     "festival": "ficmontanas-2026",
+     "titulo": "Tuktu, Padre Maíz"
+    },
+    {
+     "festival": "ficpa-2026",
+     "titulo": "Tuktu, Padre Maíz",
+     "poster": "/assets/ficdeh/tuktu-padre-maiz.jpg",
+     "posterSource": "oficial",
+     "sinopsis": "En las montañas de Colombia, Juan, un niño mestizo de 13 años, se ve obligado a huir del monstruo de la guerra. En su travesía, la tierra misma lo protege y, guiado por las voces de sus ancestros, despierta un poder ancestral llamado Tucuna, que le permite transformarse y renacer. Convertido en Tuktu, un Taita de fuerza extraordinaria, comprende que su destino no es solo sobrevivir, sino regresar para sanar la herida de la guerra y sembrar la paz en la tierra que lo vio nacer."
+    },
+    {
+     "festival": "popayan-2026",
+     "titulo": "Tuktu, Padre Maíz",
+     "tmdb_id": 1592955,
+     "poster": "/assets/popayan-2026/tuktu-padre-maiz.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "tuktu-father-maize",
+     "sinopsis": "En las montañas de Colombia, Juan, un niño indígena campesino de 13 años, se ve obligado a huir del monstruo de la guerra. En su escape, entre el silbido de las balas y la guía de sus ancestros, despierta un poder ancestral que lo transforma en Tuktu: un Taita de fuerza extraordinaria destinado a volver para sembrar la paz en la tierra."
+    },
+    {
+     "festival": "villadelcine-2026",
+     "titulo": "Tuktu, Padre Maíz",
+     "tmdb_id": 1592955,
+     "poster": "/assets/villadelcine-2026/tuktu-padre-maiz.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "tuktu-father-maize",
+     "sinopsis": "Obligado a huir de la guerra, Juan, un niño indígena campesino, atraviesa las montañas guiado por la memoria de sus ancestros. En medio del peligro, despierta una fuerza que lo transforma en Tuktu, un poderoso taita llamado a proteger la tierra y regresar para sembrar la paz donde antes creció la violencia."
+    }
+   ]
+  },
+  {
+   "titulo": "Una torreta en llamas",
+   "tmdb_id": 1363835,
+   "titulo_original": "Una torreta en llamas",
+   "poster_path": "/3cNwWjjxumwywtnTtddn8zZknYP.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "After a violent confrontation, a wounded soldier is rescued by Yolanda, an elderly farmer, and her granddaughter Alejandra. The two live on a ranch in the middle of the mountains, where they hide the young man. While Yolanda decides whether they should help him, putting their own lives at risk, Alejandra will try to confirm her own suspicions.",
+   "genero": "Drama",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 22,
+   "pais_tmdb": "Mexico",
+   "title_en": "A Burning Turret",
+   "lbSlug": "a-burning-turret",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_ya_publicada": [
+    {
+     "festival": "ficdeh-2026",
+     "titulo": "Una torreta en llamas",
+     "poster": "/assets/ficdeh/the-steak-el-bistec.jpg",
+     "posterSource": "custom",
+     "lbSlug": "a-burning-turret",
+     "sinopsis": "Después de un violento enfrentamiento, un soldado herido es rescatado por Yolanda, una campesina que vive en las montañas con su nieta Alejandra. Mientras Yolanda decide si debe ayudarlo, arriesgando sus vidas, Alejandra intentará acercarse a él para confirmar sus propias sospechas."
+    },
+    {
+     "festival": "villadelcine-2026",
+     "titulo": "Una torreta en llamas",
+     "tmdb_id": 1363835,
+     "poster": "/assets/villadelcine-2026/a-burning-turret.jpg",
+     "posterSource": "oficial",
+     "lbSlug": "a-burning-turret",
+     "sinopsis": "Tras un violento enfrentamiento, Yolanda y su nieta Alejandra encuentran a un soldado herido cerca de su rancho en las montañas. Mientras la abuela debate entre la cautela y la compasión, la joven se acerca al desconocido para confirmar una sospecha que podría ponerlas a ambas en peligro."
+    }
+   ]
+  },
+  {
+   "titulo": "When the tiger roars",
+   "tmdb_id": 1555607,
+   "titulo_original": "肉食动物",
+   "poster_path": "/dbW65DccBhZJJ20iDFHP7VUfebz.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "A tiger's escape shatters the long silence between a father and his son, with suppressed love shining through the crack.",
+   "genero": "Drama",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 15,
+   "pais_tmdb": "China, Malaysia, Switzerland",
+   "lbSlug": "when-the-tiger-roars",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+  },
+  {
+   "titulo": "Zizuma, nuestra casa de agua y nubes",
+   "_ya_publicada": [
+    {
+     "festival": "ficmontanas-2026",
+     "titulo": "Zizuma"
+    },
+    {
+     "festival": "ficmontanas-2026",
+     "titulo": "Zizuma, nuestra casa de agua y nubes"
+    },
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "Zizuma, nuestra casa de agua y nubes",
+     "poster": "/assets/siembrafest/zizuma-nuestra-casa-de-agua-y-nubes.jpg",
+     "posterSource": "oficial"
+    }
+   ]
+  }
+ ],
+ "verificadas": {
+  "A la vejez, viruelas": {
+   "tmdb_id": 1424789,
+   "titulo_original": "A la vejez, viruelas",
+   "poster_path": "/f2X3BMlGS3GMnY17R2LXVCD1kUp.jpg",
+   "synopsis_es": "Quique y Alfonso, dos abuelos gruñones de 80 años, deben adentrarse a un Club de intercambio de parejas para encontrar a uno de sus amigos. ¿Les ayudará ese ambiente a rehacer su complicada amistad?",
+   "synopsis_en": "Quique and Alfonso, two grumpy 80-year-old grandpas, must venture into a swingers' club to find one of their friends who has been raped. Will this unconventional setting help them rebuild their complicated friendship?",
+   "genero": "Comedia",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 13,
+   "pais_tmdb": "",
+   "title_en": "Golden Swingers",
+   "lbSlug": "golden-swingers",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+  },
+  "Agachar el rostro": {
+   "tmdb_id": 1595079,
+   "titulo_original": "Agachar el rostro",
+   "poster_path": "/vXjVnfIMxnhyvsRfjlEb6jkrmp7.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Shrouded in fog and crumbling stone, a teacher moves through his final day at a rural school, soon to be shut down for lack of students. In quiet solitude, he parts ways with a place that has been his craft and his shelter for years.",
+   "genero": "Drama",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 12,
+   "pais_tmdb": "Colombia",
+   "title_en": "Lowering the Gaze",
+   "lbSlug": "lowering-the-gaze",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_ya_publicada": [
+    {
+     "festival": "filcmar-2026",
+     "titulo": "Agachar el rostro",
+     "tmdb_id": 1595079,
+     "poster": "/assets/filcmar-2026/agachar-el-rostro.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "lowering-the-gaze",
+     "sinopsis": "Entre la niebla y las paredes agrietadas, un maestro transcurre su último día en una escuela rural que pronto cerrará sus puertas por falta de alumnos. En silenciosa soledad, se despide de un lugar que ha sido su oficio y su refugio durante años."
+    }
+   ]
+  },
+  "Bestiaire": {
+   "tmdb_id": 1479275,
+   "titulo_original": "Bestiaire",
+   "poster_path": "/uFnbKSyq8Ar4NNSW2gDd2udHMAc.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Sylvie, a car mechanic, is raising her rebellious teenage daughter, Léa, on her own. During a freezing autumn, the animals' behavior suddenly changes: nature is in revolt. In their isolated house on the edge of the forest, mother and daughter have only themselves to rely on.",
+   "genero": "Drama",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 25,
+   "pais_tmdb": "France",
+   "title_en": "Bestiary",
+   "lbSlug": "bestiary-2025-1",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+  },
+  "Capitão lima": {
+   "tmdb_id": 1693923,
+   "titulo_original": "Capitão Lima",
+   "poster_path": "/fgzcAPtZdbEhFHQK9ncRWNR0S3d.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "In the future, no one could be free. A man travels back in time and returns to Capitão Lima St., in northeastern Brazil, trying to relive the party where he kissed another boy for the first time. With only some minutes to spare, he discovers he has arrived in the wrong year and that now he only has the memories from the street to rediscover his freedom. Just like the film’s director, who found his own freedom in the same place, the man realizes it is not in his memory where he will be free.",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 20,
+   "pais_tmdb": "",
+   "title_en": "Captain Lima",
+   "lbSlug": "captain-lima",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+  },
+  "Cayenas libertarias": {
+   "tmdb_id": 1737961,
+   "titulo_original": "Cayenas libertarias",
+   "poster_path": "/dQxbmxDq320B08UKcEOHgOkIy4b.jpg",
+   "synopsis_es": "En las llanuras de Colombia, un grupo de mujeres conserva y reinterpreta los lecos, o cantos de trabajo del llano, que durante generaciones fueron interpretados por hombres. A través de sus cantos de vaquería, resignifican su lugar en la tradición llanera, revelando su relación armónica con la naturaleza y su compleja conexión con el arraigo llanero.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 20,
+   "pais_tmdb": "",
+   "lbSlug": "cayenas-libertarias",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_ya_publicada": [
+    {
+     "festival": "ficdeh-2026",
+     "titulo": "Cayenas libertarias",
+     "poster": "/assets/ficdeh/bogota-underground-hip-hop.jpg",
+     "posterSource": "custom",
+     "lbSlug": "cayenas-libertarias",
+     "sinopsis": "En las llanuras de Colombia, un grupo de mujeres conserva y reinterpreta los lecos, o cantos de trabajo del llano, que durante generaciones fueron interpretados por hombres. A través de sus cantos de vaquería, resignifican su lugar en la tradición llanera, revelando su relación armónica con la naturaleza y su compleja conexión con el arraigo llanero."
+    },
+    {
+     "festival": "popayan-2026",
+     "titulo": "Cayenas libertarias",
+     "tmdb_id": 1737961,
+     "poster": "/assets/popayan-2026/cayenas-libertarias.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "cayenas-libertarias",
+     "sinopsis": "En las llanuras de Colombia, un grupo de mujeres conserva y reinterpreta los lecos o cantos de trabajo de llano que durante generaciones fueron entonadas por hombres. A través de sus cantos de vaquería, resignifican su lugar en la tradición Llanera, revelando su relación armónica con la naturaleza, y compleja con el arraigo llanero."
+    },
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "Cayenas libertarias",
+     "poster": "https://image.tmdb.org/t/p/w500/dQxbmxDq320B08UKcEOHgOkIy4b.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "cayenas-libertarias",
+     "sinopsis": "En las llanuras de Colombia, un grupo de mujeres conserva y reinterpreta los lecos, o cantos de trabajo del llano, que durante generaciones fueron interpretados por hombres. A través de sus cantos de vaquería, resignifican su lugar en la tradición llanera, revelando su relación armónica con la naturaleza y su compleja conexión con el arraigo llanero."
+    }
+   ]
+  },
+  "Chaika": {
+   "tmdb_id": 1689999,
+   "titulo_original": "Chaika",
+   "poster_path": "/fhvA2plccJRbTQgL6HRAAUPhPic.jpg",
+   "synopsis_es": "Valentina, una cosmonauta rusa de 76 años, llega a una Cuba ucrónica y nebulosa tras recibir, con treinta años de retraso, una invitación para una expedición agrícola a Marte. Entre paisajes difusos y promesas del pasado, busca las ruinas de un futuro que nunca llegó.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 15,
+   "pais_tmdb": "",
+   "lbSlug": "chaika-2025",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_ya_publicada": [
+    {
+     "festival": "cineautopsia-2026",
+     "titulo": "CHAIKA",
+     "tmdb_id": 1689999,
+     "poster": "/assets/cineautopsia/chaika.jpg",
+     "posterSource": "oficial",
+     "lbSlug": "chaika-2025",
+     "sinopsis": "Valentina, una cosmonauta rusa de 76 años, recibe una carta enviada desde Cuba con treinta años de retraso, en la que se le invita a unirse a una expedición agrícola a Marte. Viaja a la isla esperando encontrar una utopía científica y social, pero descubre un territorio asolado por una silenciosa crisis agrícola y ambiental; una Cuba ucrónica y nebulosa donde las promesas del pasado perduran como sombras. Los paisajes tiemblan, las formas se desdibujan y la política apenas se alcanza a discernir: un sistema exhausto que intenta sostener un ideal ya difuso. Los paisajes, trémulos y borrosos, se resisten a ser enfocados, como si la propia isla dudara de su existencia. En este territorio nebuloso, donde lo real y lo onírico se confunden, Valentina busca descubrir si aún es posible alzar el vuelo, mientras la nostalgia por el Caribe se mezcla con el eco de un futuro que nunca llegó."
+    },
+    {
+     "festival": "fantasmagoria-2026",
+     "titulo": "Chaika",
+     "tmdb_id": 1689999,
+     "poster": "/assets/fantasmagoria-2026/chaika.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "chaika-2025",
+     "sinopsis": "Valentina, una cosmonauta rusa de 76 años, llega a una Cuba ucrónica y nebulosa tras recibir, con treinta años de retraso, una invitación para una expedición agrícola a Marte. Entre paisajes difusos y promesas del pasado, busca las ruinas de un futuro que nunca llegó."
+    },
+    {
+     "festival": "fantasofest-2026",
+     "titulo": "Chaika",
+     "poster": "/assets/fantasofest/corto-chaika.jpg",
+     "posterSource": "editorial",
+     "lbSlug": "chaika-2026"
+    },
+    {
+     "festival": "ficpa-2026",
+     "titulo": "Chaika",
+     "tmdb_id": 1689999,
+     "poster": "/assets/ficpa-2026/chaika.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "chaika-2025",
+     "sinopsis": "Valentina, una cosmonauta rusa de 76 años, llega a una Cuba ucrónica y nebulosa tras recibir, con treinta años de retraso, una invitación para una expedición agrícola a Marte. Entre paisajes difusos y promesas del pasado, busca las ruinas de un futuro que nunca llegó."
+    },
+    {
+     "festival": "narrarelfuturo-2026",
+     "titulo": "Chaika",
+     "tmdb_id": 1689999,
+     "poster": "/assets/narrarelfuturo-2026/chaika.jpg",
+     "posterSource": "oficial",
+     "lbSlug": "chaika-2025",
+     "sinopsis": "Valentina, una cosmonauta rusa de 76 años, recibe una carta enviada desde Cuba con treinta años de retraso que la invita a unirse a una expedición agrícola a Marte. Viaja a la isla esperando encontrar una utopía científica y social, pero se topa con un territorio devastado por una silenciosa crisis agrícola y medioambiental: una Cuba ucrónica y nebulosa donde las promesas del pasado perduran como sombras. Los paisajes tiemblan, las formas se difuminan y la política apenas se percibe: es un sistema agotado que intenta sostener un ideal ya desdibujado. Los paisajes, trémulos y borrosos, se resisten a ser enfocados, como si la propia isla dudara de su existencia. En este territorio nebuloso, donde lo real y lo onírico se funden, Valentina busca averiguar si aún es posible emprender el vuelo, mientras la nostalgia por el Caribe se mezcla con el eco de un futuro que nunca llegó."
+    },
+    {
+     "festival": "popayan-2026",
+     "titulo": "Chaika",
+     "tmdb_id": 1689999,
+     "poster": "/assets/popayan-2026/chaika.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "chaika-2025",
+     "sinopsis": "Valentina, una cosmonauta rusa de 76 años, recibe una carta enviada desde Cuba con treinta años de retraso, invitándola a una expedición agrícola a Marte. Viaja a la isla esperando una utopía científico–social, pero encuentra un territorio golpeado por una silenciosa crisis agrícola y ambiental, una Cuba ucrónica y nebulosa donde las promesas del pasado persisten como sombras. Los paisajes tiemblan, las formas se desdibujan y la política apenas se intuye: un sistema agotado que intenta sostener un ideal ya difuso."
+    }
+   ]
+  },
+  "Decaer": {
+   "tmdb_id": 1668881,
+   "titulo_original": "decaer",
+   "poster_path": "/vG4HQdPsjfVOBuAN3L2Yea7HdQ4.jpg",
+   "synopsis_es": "Gracias a los chinos por la pólvora, parece que la hubieran hecho para mí. Su invención sucede como un accidente, pensada inicialmente para espantar los espíritus malos. Esta película inicia en China, luego un evento en Cartagena y se acaba siglos después en Bogotá.",
+   "synopsis_en": "I am grateful to the Chinese for the invention of gunpowder — it feels as if they made it for me. Its discovery happened by accident, originally conceived as a way to ward off evil spirits. This film begins in China, then moves to an event in Cartagena, and ends centuries later in Bogotá.",
+   "genero": "Animación",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 7,
+   "pais_tmdb": "Colombia",
+   "title_en": "decay",
+   "lbSlug": "decay-2026",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_ya_publicada": [
+    {
+     "festival": "cineautopsia-2026",
+     "titulo": "Decaer",
+     "tmdb_id": 1668881,
+     "poster": "https://image.tmdb.org/t/p/w500/vG4HQdPsjfVOBuAN3L2Yea7HdQ4.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "decay-2026",
+     "sinopsis": "Gracias a los chinos por la pólvora, parece que la hubieran hecho para mí. Su invención sucede como un accidente, pensada inicialmente para espantar los espíritus malos. Esta película inicia en China, luego un evento en Cartagena y se acaba siglos después en Bogotá."
+    },
+    {
+     "festival": "cinemancia-2026",
+     "titulo": "Decaer",
+     "tmdb_id": 1668881,
+     "poster": "https://image.tmdb.org/t/p/w500/vG4HQdPsjfVOBuAN3L2Yea7HdQ4.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "decay-2026",
+     "sinopsis": "Gracias a los chinos por la pólvora, parece que la hubieran hecho para mí. Su invención sucede como un accidente, pensada inicialmente para espantar los espíritus malos. Esta película inicia en China, luego un evento en Cartagena y se acaba siglos después en Bogotá."
+    },
+    {
+     "festival": "mamut-2026",
+     "titulo": "Decaer",
+     "tmdb_id": 1668881,
+     "poster": "/assets/mamut-2026/decaer.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "decay-2026",
+     "sinopsis": "Gracias a los chinos por la pólvora, parece que la hubieran hecho para mí. Su invención sucede como un accidente, pensada inicialmente para espantar los espíritus malos. Esta película inicia en China, luego un evento en Cartagena y se acaba siglos después en Bogotá."
+    },
+    {
+     "festival": "midbo-2026",
+     "titulo": "Decaer",
+     "tmdb_id": 1668881,
+     "poster": "/assets/midbo-2026/decaer.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "decay-2026",
+     "sinopsis": "Gracias a los chinos por la pólvora, parece que la hubieran hecho para mí. Su invención sucede como un accidente, pensada inicialmente para espantar los espíritus malos. Esta película inicia en China, luego un evento en Cartagena y se acaba siglos después en Bogotá."
+    },
+    {
+     "festival": "popayan-2026",
+     "titulo": "decaer",
+     "tmdb_id": 1668881,
+     "poster": "/assets/popayan-2026/decaer.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "decay-2026",
+     "sinopsis": "Gracias a los chinos por la pólvora, parece que la hubieran hecho para mí. Su invención sucede como un accidente, pensada inicialmente para espantar los espíritus malos. Esta película inicia en China, luego un evento en Cartagena y se acaba siglos después en Bogotá."
+    }
+   ]
+  },
+  "Desarraigo": {
+   "tmdb_id": 1510204,
+   "titulo_original": "Desarraigo",
+   "poster_path": "/ncFypC1QoQQVdm4rnhfTA9BgOGN.jpg",
+   "synopsis_es": "Tras la muerte de su esposa, Ángel enfrenta un duelo solitario en su hogar rural. Una gotera crece como una presencia abrumadora, transformando su espacio y empujándolo a decisiones irracionales mientras intenta reconciliarse con su pérdida.",
+   "synopsis_en": "",
+   "genero": "Drama",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 15,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "desarraigo-2026",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_ya_publicada": [
+    {
+     "festival": "filcmar-2026",
+     "titulo": "Desarraigo",
+     "tmdb_id": 1510204,
+     "poster": "/assets/filcmar-2026/desarraigo.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "desarraigo-2026",
+     "sinopsis": "Tras la muerte de su esposa, Ángel se enfrenta a un duelo solitario en su hogar rural. Una gotera se convierte en una presencia abrumadora, transformando su espacio y empujándolo a tomar decisiones irracionales mientras intenta asimilar su pérdida."
+    },
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "Desarraigo",
+     "poster": "https://image.tmdb.org/t/p/w500/ncFypC1QoQQVdm4rnhfTA9BgOGN.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "desarraigo-2026",
+     "sinopsis": "Tras la muerte de su esposa, Ángel enfrenta un duelo solitario en su hogar rural. Una gotera crece como una presencia abrumadora, transformando su espacio y empujándolo a decisiones irracionales mientras intenta reconciliarse con su pérdida."
+    }
+   ]
+  },
+  "Do rocks dream of flying?": {
+   "tmdb_id": 1452119,
+   "titulo_original": "Do Rocks Dream of Flying ?",
+   "poster_path": "/vFlWwjwz00aUrc1mEfzL2tAOwvU.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Two young documentarists travel around a forsaken island in the aftermath of a cataclysmic volcanic eruption.  Their wanders lead them to the encounter of Professor Pereda, an acoustic geologist, conducting researches on geo-acoustics.",
+   "genero": "Ciencia ficción",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 8,
+   "pais_tmdb": "Argentina",
+   "lbSlug": "do-rocks-dream-of-flying",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+  },
+  "Dong shen shi": {
+   "tmdb_id": 1613967,
+   "titulo_original": "Dōng Shèn Shì",
+   "poster_path": "/lNomGd1hVXNfuQNXJ1Cc0zwhQOH.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "In Chinese, ‘golden-age’ and ‘mirage’ share the same sound. Amid the 2024 economic decoupling, a single mother struggling to keep accessories business afloat in Yiwu, China’s largest export hub, must come to terms with memories of her late father's orchid on the Winter Solstice and reclaim her opera job to fund her son's overseas study. It’s my mother’s story, one day of her life.",
+   "genero": "Drama",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 30,
+   "pais_tmdb": "United Kingdom, China",
+   "title_en": "A Winter Mirage",
+   "lbSlug": "a-winter-mirage",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+  },
+  "Eject: el último rebobinado": {
+   "tmdb_id": 1714253,
+   "titulo_original": "Eject: El último rebobinado",
+   "poster_path": "/smL9OaSltUsDN1Vhu3jEle7mJ2b.jpg",
+   "synopsis_es": "En el cierre de los últimos videoclubes de la ciudad, este corto documental encuentra el punto de partida para reflexionar sobre la gentrificación urbana y el cambio de los hábitos de consumo. A través de espacios que desaparecen y de quienes los habitaron, la película conecta la pérdida de estos lugares con la transformación del audiovisual y la llegada de la inteligencia artificial, usada como metáfora de un cambio tecnológico imparable que redefine la forma de vivir, consumir y relacionarnos con la cultura, dejando abierta la pregunta de qué se pierde en el camino.",
+   "synopsis_en": "",
+   "genero": "Documental",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 11,
+   "pais_tmdb": "Spain",
+   "lbSlug": "eject-el-ultimo-rebobinado",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+  },
+  "El segundo": {
+   "_fuente": "cinecorto",
+   "_cinecorto": "https://cinecorto.co/el-segundo/",
+   "_verificado": "cinecorto.co, dirección: Pedro Miguel Rozo",
+   "anio": 2025,
+   "duracion_min": 22,
+   "sinopsis": "Patricia Maldonado, Ariel Merchán ,Cecilia Ramírez, Mateo Galvis, Leodan Rojas, Randy Zambrano, Álvaro Quemba, Bernardo Sánchez, Wilson Cárdenas, Martha Cárdenas, Aura Rodríguez, Luis Blanco, Hirma Lunar, Diana Latorre, Producción: Merchán Producciones",
+   "_ya_publicada": [
+    {
+     "festival": "popayan-2026",
+     "titulo": "El Segundo",
+     "sinopsis": "Patricia Maldonado, Ariel Merchán ,Cecilia Ramírez, Mateo Galvis, Leodan Rojas, Randy Zambrano, Álvaro Quemba, Bernardo Sánchez, Wilson Cárdenas, Martha Cárdenas, Aura Rodríguez, Luis Blanco, Hirma Lunar, Diana Latorre, Producción: Merchán Producciones"
+    }
+   ]
+  },
+  "Emechiche, el renacer de los cabeciblancos": {
+   "tmdb_id": 1592964,
+   "titulo_original": "Emechiche, El renacer de los cabeciblancos",
+   "poster_path": "/a6MItsvgkatTwGoBzkPdho4OvU5.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "The Colombian Montes de María are home to the emechiche  (Saguinus oedipus). An endangered species, we will observe their complex relationship with their young and their environment. We will analyse their survival, allowing us to witness their feelings and wild instincts.",
+   "genero": "Animación",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 11,
+   "pais_tmdb": "Colombia, Argentina",
+   "title_en": "Emechiche, The Rebirth of White-Headed",
+   "lbSlug": "emechiche-the-rebirth-of-white-headed",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_ya_publicada": [
+    {
+     "festival": "ficmontanas-2026",
+     "titulo": "Emechiche"
+    },
+    {
+     "festival": "popayan-2026",
+     "titulo": "Emechiche, El renacer de los cabeciblancos",
+     "tmdb_id": 1592964,
+     "poster": "/assets/popayan-2026/emechiche-el-renacer-de-los-cabeciblancos.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "emechiche-the-rebirth-of-white-headed",
+     "sinopsis": "En los Montes de María Colombianos, habita el Emechiche (Saguinus oedipus). Una especie en peligro de extinción, observamos las complejas relaciones con sus crías y su entorno. Analizaremos su supervivencia, dejándonos ser testigos de sus sentimientos e instintos salvajes."
+    },
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "Emechiche, el renacer de los cabeciblancos",
+     "poster": "https://image.tmdb.org/t/p/w500/a6MItsvgkatTwGoBzkPdho4OvU5.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "emechiche-the-rebirth-of-white-headed"
+    }
+   ]
+  },
+  "Esta noite minha alma partirá": {
+   "tmdb_id": 1406890,
+   "titulo_original": "Esta Noite Minha Alma Partirá",
+   "poster_path": "/mg3q8CjyqDEgT0pGayq1IfcCxy3.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "",
+   "genero": "Terror",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "Brazil",
+   "lbSlug": "esta-noite-minha-alma-partira",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+  },
+  "Goteras": {
+   "tmdb_id": 1650585,
+   "titulo_original": "Goteras",
+   "poster_path": "/Aooln4Bfl2r6ZC53LILKsxd1g20.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Violeta and Cristian love each other, but they're starting to hate each other. During the pandemic lockdown, they live together in Violeta's mother's luxurious apartment, mired in clutter and a lack of affection. A water cut-off for non-payment forces them to confront the fragility of their privilege and the emotional neglect they endure.",
+   "genero": "Comedia",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 15,
+   "pais_tmdb": "Colombia",
+   "title_en": "Leaks",
+   "lbSlug": "leaks",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+  },
+  "Gramática práctica italiana": {
+   "tmdb_id": 1577564,
+   "titulo_original": "Gramática práctica italiana",
+   "poster_path": "/gtnKGTLEnXIx1WzqWdfmXqdzfkq.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Miguel and his family are preparing to emigrate from Cuba to Italy where his mother already lives. While they wait, they begin to take the first step in the life of every migrant: learning the language of the country they want to go to.",
+   "genero": "Documental",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 12,
+   "pais_tmdb": "Cuba, Colombia, Germany",
+   "title_en": "Practical Italian Grammar",
+   "lbSlug": "practical-italian-grammar",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_ya_publicada": [
+    {
+     "festival": "cinemancia-2026",
+     "titulo": "Gramática Práctica Italiana",
+     "tmdb_id": 1577564,
+     "poster": "https://image.tmdb.org/t/p/w500/gtnKGTLEnXIx1WzqWdfmXqdzfkq.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "practical-italian-grammar",
+     "sinopsis": "Miguel y su familia se preparan para emigrar de Cuba a Italia, donde ya vive su madre. Mientras esperan, comienzan a dar el primer paso en el viaje de todo migrante: aprender el idioma del país al que quieren mudarse."
+    }
+   ]
+  },
+  "Hay algo detrás de ti": {
+   "tmdb_id": 1559987,
+   "titulo_original": "Hay algo detras de ti",
+   "poster_path": "/7BwQU7W1A4CCp92HhUBy5RxuEri.jpg",
+   "synopsis_es": "¿Alguna vez has sentido que algo te observa en la oscuridad?¿Escuchas sonidos extraños en las noches? ¿Has querido despertar de un sueño y no has podido? Explora junto a Morgana, una astuta y enigmática gata negra, distintas historias de misterio vividas por niñas y niños en diferentes lugares y momentos de su vida.",
+   "synopsis_en": "",
+   "genero": "Animación",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 7,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "hay-algo-detras-de-ti",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+  },
+  "Jacaré": {
+   "tmdb_id": 1427549,
+   "titulo_original": "Jacaré",
+   "poster_path": "/e7A9GS8D1cjMpVzTwMdlRn7vqx1.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Pedro is a teenager who sells drinks in the traffic on a highway that brings thousands of people to the coast during the summer. Driven by curiosity and desire, he embarks on an adventure that transforms him profoundly.",
+   "genero": "Drama",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 17,
+   "pais_tmdb": "Brazil",
+   "lbSlug": "jacare-2025",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+  },
+  "La ceremonia": {
+   "_fuente": "proimagenes",
+   "_proimagenes_id": "2734",
+   "pais": "Colombia",
+   "_verificado": "Proimágenes, director: Sandra Lorena Montoya, Colbert García",
+   "anio": 2021,
+   "duracion_min": 91,
+   "sinopsis": "Julián es un tipo feo y poco agraciado; no sabe lo que es tener una novia y vive idealizando el encontrar la mujer perfecta con la cual pueda casarse, pues vive a la sombra de su amigo Chucky, a quien ve que le llueven las mujeres y quiere ser como él. Aburrido, Julián decide inscribirse en una agencia matrimonial que asegura tener la clave del éxito para conseguir la media naranja. Para su suerte, les asignan citas con mujeres muy hermosas, lo que lo llevara a divertidas situaciones llenas de equívocos y torpezas, donde él a su manera, intentará conquistarlas, fracasando en cada una de ellas. Marcela, amiga de Julián, en el fondo siempre ha estado enamorada de él, aunque él no la ve con los mismos ojos, pues el idealiza el amor perfecto con mujeres hermosas, por lo que no es nada amable con ella. Julián se ve metido en un problema enorme, al no tener como librarse del matrimonio obligado, Chucky y Marcela se convertirán en su única ayuda para impedir la ceremonia. Julián sigue los consejos Alberto y descubre en Marcela la mujer que siempre busco.",
+   "_ya_publicada": [
+    {
+     "festival": "leviza-2026",
+     "titulo": "La Ceremonia",
+     "lbSlug": "⚠️ LB PENDIENTE"
+    }
+   ]
+  },
+  "La gran hazaña": {
+   "tmdb_id": 1494003,
+   "titulo_original": "La gran hazaña",
+   "poster_path": "/luHjmi57PSrqdH20zGuojt6ivmt.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "A rescue with a spinning tops, feathers, eggs and friends.",
+   "genero": "Aventura",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 14,
+   "pais_tmdb": "Colombia",
+   "title_en": "The Great Feat",
+   "lbSlug": "the-great-feat",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_ya_publicada": [
+    {
+     "festival": "ficcali-2026",
+     "titulo": "La gran hazaña",
+     "tmdb_id": 1494003,
+     "poster": "/assets/ficcali-2026/la-gran-hazana.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "the-great-feat",
+     "sinopsis": "Pablo necesita rescatar a su amiga Pascualina, una gallina ponedora que termina secuestrada por el tendero del pueblo, después de que el niño quebrara la cubeta de huevos que llevaba para pagarle una deuda de su familia."
+    },
+    {
+     "festival": "ficdeh-2026",
+     "titulo": "La gran hazaña",
+     "poster": "/assets/ficdeh/la-gran-hazana.jpg",
+     "posterSource": "custom",
+     "lbSlug": "the-great-feat",
+     "sinopsis": "A Pablo le encanta jugar al trompo. Cuando Don Chucho, el usurero del pueblo, retiene a Pascualina, su amiga y mascota, Pablo debe enfrentarse a Felipe, el mejor jugador de trompo de la región, para rescatarla. Pero ganar no es suficiente: los demás niños del pueblo se unirán a él en un acto de solidaridad, amistad y trabajo en equipo para lograr esta gran hazaña."
+    },
+    {
+     "festival": "ficmontanas-2026",
+     "titulo": "La gran hazaña"
+    },
+    {
+     "festival": "popayan-2026",
+     "titulo": "La gran hazaña",
+     "tmdb_id": 1494003,
+     "poster": "/assets/popayan-2026/la-gran-hazana.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "the-great-feat",
+     "sinopsis": "Pablo (10) tendrá el desafío de rescatar a su mascota Pascualina, una gallina ponedora, de las garras de Don Chucho, el usurero del pueblo quien cobra las deudas con huevos. Este día Pablo tiene un accidente en su bicicleta y rompe los preciados huevos, ahora debe reponer la cubeta para saldar la deuda. La única herramienta que tiene el niño para rescatar a Pascualina es una apuesta con su trompo de madera con Felipe el mejor jugador de trompo del pueblo. Aunque todo parece jugar a favor de Pablo, quien ha ganado la cubeta que rescatará a su querida Pascualina y realizar la gran hazaña, Valeria, la hermana de Felipe, impide que el premio sea entregado y les hace caer en cuenta que no basta ganar una apuesta si entorpece el trabajo de otra familia en la misma situación. Se desata una disertación en la que todos los niños empatizan con Pablo gracias a que reconocen los obstáculos que han tenido al tratar de sortear la dura actitud de Don Chucho. Ahora, es la unión de todos los niños lo que permite que Pascualina sea rescatada. Finalmente, Pablo aprende la importancia del trabajo en equipo."
+    },
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "La gran hazaña",
+     "poster": "https://image.tmdb.org/t/p/w500/luHjmi57PSrqdH20zGuojt6ivmt.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "the-great-feat",
+     "sinopsis": "A Pablo le encanta jugar al trompo. Cuando Don Chucho, el usurero del pueblo, retiene a Pascualina, su amiga y mascota, Pablo debe enfrentarse a Felipe, el mejor jugador de trompo de la región, para rescatarla. Pero ganar no es suficiente: los demás niños del pueblo se unirán a él en un acto de solidaridad, amistad y trabajo en equipo para lograr esta gran hazaña."
+    }
+   ]
+  },
+  "La guerra de los tomates": {
+   "tmdb_id": 1753830,
+   "titulo_original": "La guerra de los tomates",
+   "poster_path": "/779prgLmt5WC2aHHHZtoUX6Mfzd.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Two groups of local and migrant children will represent the neighborhood in a tournament, an idea that will spark a tomato fight; a charismatic girl will bring out the best in everyone as she tries to unite an unlikely team against an unexpected rival.",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 15,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "la-guerra-de-los-tomates",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_ya_publicada": [
+    {
+     "festival": "popayan-2026",
+     "titulo": "La guerra de los tomates",
+     "tmdb_id": 1753830,
+     "poster": "/assets/popayan-2026/la-guerra-de-los-tomates.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "la-guerra-de-los-tomates"
+    }
+   ]
+  },
+  "La independencia": {
+   "tmdb_id": 1595081,
+   "titulo_original": "La independencia",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "Cecilia, a selfless 52-year-old woman, decides to break with her life of sacrifices after years of enduring her son s irresponsibility and her family s ingratitude, finally seeking her independence.",
+   "genero": "Drama",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 19,
+   "pais_tmdb": "Colombia",
+   "title_en": "Independence",
+   "lbSlug": "independence-2025",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_ya_publicada": [
+    {
+     "festival": "ficdeh-2026",
+     "titulo": "La independencia",
+     "poster": "/assets/ficdeh/la-independencia.jpg",
+     "posterSource": "custom",
+     "lbSlug": "independence-2025",
+     "sinopsis": "Cecilia, una mujer abnegada de 52 años, decide romper con su vida de sacrificios tras años de soportar la irresponsabilidad de su hijo y la ingratitud de su familia, buscando finalmente su independencia."
+    },
+    {
+     "festival": "leviza-2026",
+     "titulo": "La Independencia",
+     "poster": "/assets/leviza/LaIndependencia.webp",
+     "posterSource": "custom",
+     "lbSlug": "⚠️ LB PENDIENTE"
+    },
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "La independencia",
+     "poster": "/assets/ficdeh/la-independencia.jpg",
+     "posterSource": "oficial",
+     "lbSlug": "independence-2025",
+     "sinopsis": "Cecilia, una mujer abnegada de 52 años, decide romper con su vida de sacrificios tras años de soportar la irresponsabilidad de su hijo y la ingratitud de su familia, buscando finalmente su independencia."
+    },
+    {
+     "festival": "villadelcine-2026",
+     "titulo": "La independencia",
+     "tmdb_id": 1595081,
+     "poster": "/assets/villadelcine-2026/independence.jpg",
+     "posterSource": "oficial",
+     "lbSlug": "independence-2025",
+     "sinopsis": "Tras años de sacrificarse por una familia que da por sentado su cuidado, Cecilia, de 52 años, llega al límite. Cansada de la irresponsabilidad de su hijo y de vivir para los demás, decide romper con todo y recuperar una vida que también le pertenece."
+    }
+   ]
+  },
+  "La mona": {
+   "tmdb_id": 1444298,
+   "titulo_original": "La Mona",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "In the damp and dusty village of La Hondura, La Mona is ready to sacrifice everything to maintain her authority even if loneliness is the price she must pay. Her body, however, refuses to toe the line.",
+   "genero": "Drama",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 18,
+   "pais_tmdb": "Colombia",
+   "title_en": "Heat Wave",
+   "lbSlug": "heat-wave-2025",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_ya_publicada": [
+    {
+     "festival": "ficmontanas-2026",
+     "titulo": "La Mona"
+    },
+    {
+     "festival": "jardin-2026",
+     "titulo": "La Mona",
+     "tmdb_id": 1444298,
+     "poster": "/assets/jardin-2026/la-mona.jpg",
+     "posterSource": "editorial",
+     "lbSlug": "heat-wave-2025",
+     "sinopsis": "La Mona está dispuesta a cualquier sacrificio para garantizar su autoridad en La Hondura, aunque el precio que pague sea la soledad."
+    },
+    {
+     "festival": "popayan-2026",
+     "titulo": "La Mona",
+     "tmdb_id": 1444298,
+     "poster": "/assets/villadelcine-2026/la-mona.jpg",
+     "posterSource": "oficial",
+     "lbSlug": "heat-wave-2025"
+    },
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "La mona",
+     "poster": "/assets/siembrafest/la-mona.jpg",
+     "posterSource": "oficial",
+     "lbSlug": "heat-wave-2025"
+    },
+    {
+     "festival": "villadelcine-2026",
+     "titulo": "La Mona",
+     "tmdb_id": 1444298,
+     "poster": "/assets/villadelcine-2026/la-mona.jpg",
+     "posterSource": "oficial",
+     "lbSlug": "heat-wave-2025",
+     "sinopsis": "En La Hondura, un caserío abrasado por el polvo y el calor, La Mona impone el orden como integrante de un grupo paramilitar. Cuando la menstruación la obliga a detenerse, el cuerpo que intenta someter revela sus deseos, contradicciones y silencios, resquebrajando la autoridad con la que ha aprendido a sobrevivir."
+    }
+   ]
+  },
+  "Las zapatillas mágicas": {
+   "tmdb_id": 1424641,
+   "titulo_original": "Las zapatillas mágicas",
+   "poster_path": "/zut8TXtJYa11qAWXFxfxSexzgE3.jpg",
+   "synopsis_es": "Yan busca cómo conseguir las mejores zapatillas de ballet del mundo porque cree que son la clave del éxito como bailarina. Al no conseguirlos, acude con Lu con sus abuelos Adolfo y Rodolfo, quienes reviven una escena icónica de la película Cantando bajo la lluvia y aprenden juntos que lo más importante es bailar con el corazón.",
+   "synopsis_en": "Yan searches for the best ballet shoes in the world because she believes they are the key to success as a dancer. When she fails to find them, she goes with Lu to visit her grandparents Adolfo and Rodolfo, who reenact an iconic scene from the movie Singin' in the Rain, and together they learn that the most important thing is to dance with your heart.",
+   "genero": "Animación",
+   "anio_tmdb": 2024,
+   "duracion_tmdb": 9,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "las-zapatillas-magicas",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+  },
+  "Le mur du son": {
+   "tmdb_id": 1524550,
+   "titulo_original": "Le Mur du Son",
+   "poster_path": "/jfN8BCCp87w0lAbOJbcqj0f9xV9.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "In a large, empty gym, the protagonists Iris and Lea play hide-and-seek: time seems to stand still, while the approach of an airplane transforms reality in a mysterious and poetic way.",
+   "genero": "Drama",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 12,
+   "pais_tmdb": "Italy, Switzerland",
+   "lbSlug": "le-mur-du-son",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+  },
+  "Like friend, like deer": {
+   "tmdb_id": 1477148,
+   "titulo_original": "Like Friend, Like Deer",
+   "poster_path": "/dNxbgMn75t54vxrxwjOWGorofyc.jpg",
+   "synopsis_es": "Cortometraje experimental.",
+   "synopsis_en": "After killing an illegal hunter in self-defense, a wildlife ranger is forced to confront the blurred line between protector and predator, revealing the unsettling parallels between humans, animals, and the wilderness they inhabit.",
+   "genero": "Animación",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 12,
+   "pais_tmdb": "Iran",
+   "lbSlug": "like-friend-like-deer",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+  },
+  "Los pliegues de la falda": {
+   "tmdb_id": 1738777,
+   "titulo_original": "Los pliegues de la falda",
+   "poster_path": "/bJGWAlMlzNhfG4XlsMfdbvsspo8.jpg",
+   "synopsis_es": "Linda quiere ser la protagonista de la obra de teatro del colegio; pero, cuando Carlos descubre el rol “masculino” que su hija interpretará, intenta impedirlo. Conmovida por la tristeza de su hija, María decide ayudarla, aunque eso signifique nadar a contracorriente.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 18,
+   "pais_tmdb": "",
+   "lbSlug": "los-pliegues-de-la-falda",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_ya_publicada": [
+    {
+     "festival": "ficdeh-2026",
+     "titulo": "Los pliegues de la falda",
+     "poster": "/assets/ficdeh/los-pliegues-de-la-falda.jpg",
+     "posterSource": "custom",
+     "lbSlug": "los-pliegues-de-la-falda",
+     "sinopsis": "Linda quiere ser la protagonista de la obra de teatro del colegio; pero, cuando Carlos descubre el rol “masculino” que su hija interpretará, intenta impedirlo. Conmovida por la tristeza de su hija, María decide ayudarla, aunque eso signifique nadar a contracorriente."
+    },
+    {
+     "festival": "popayan-2026",
+     "titulo": "Los pliegues de la falda",
+     "tmdb_id": 1738777,
+     "poster": "/assets/popayan-2026/los-pliegues-de-la-falda.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "los-pliegues-de-la-falda",
+     "sinopsis": "Linda, Carlos y María son una familia convencional en la que casi todo encaja: el padre tiene la última palabra, la madre se encarga de la casa. Y Linda es una pequeña que se rehúsa a usar la falda. Ella no quiere ser la princesa de papá, solo quiere ser la protagonista de la obra de teatro del colegio; pero, cuando Carlos descubre el rol “masculino” que Linda interpretará, intenta impedirlo. Conmovida por la tristeza de su hija, María decide ayudarla. Después de la función, nada será igual."
+    }
+   ]
+  },
+  "Luis antonio": {
+   "_fuente": "cinecorto",
+   "_cinecorto": "https://cinecorto.co/luis-antonio/",
+   "_verificado": "cinecorto.co, dirección: Juan José Arias Gil",
+   "anio": 2025,
+   "duracion_min": 12,
+   "sinopsis": "La mañana de un sábado Luis Antonio, un niño de 8 años, quiere aprender a montar en bicicleta. Pero su madre tiene que trabajar y lo deja al cuidado de Ofelia, su estricta vecina.",
+   "_ya_publicada": [
+    {
+     "festival": "popayan-2026",
+     "titulo": "Luis Antonio",
+     "sinopsis": "La mañana de un sábado Luis Antonio, un niño de 8 años, quiere aprender a montar en bicicleta. Pero su madre tiene que trabajar y lo deja al cuidado de Ofelia, su estricta vecina."
+    }
+   ]
+  },
+  "Malas posturas": {
+   "tmdb_id": 1595060,
+   "titulo_original": "Malas posturas",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "The more Henry insists on fulfilling his role as a provider father, the further he drifts from the chance of returning home. From his brother’s farm, he tries to sell a calf in order to send money to his family—who no longer waits for him. Poor posture will collapse his body, worn out from insisting on a lost cause.",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 17,
+   "pais_tmdb": "Colombia",
+   "title_en": "Bad Postures",
+   "lbSlug": "bad-postures",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_ya_publicada": [
+    {
+     "festival": "jardin-2026",
+     "titulo": "Malas posturas",
+     "tmdb_id": 1595060,
+     "poster": "/assets/jardin-2026/malas-posturas.jpg",
+     "posterSource": "editorial",
+     "lbSlug": "bad-postures",
+     "sinopsis": "Entre más insiste en cumplir su rol de padre proveedor, Henry más se aleja de la posibilidad de volver a su hogar. Desde la finca de su hermano, él busca vender un ternero para así enviar dinero a su casa. Las malas posturas arrojarán su cuerpo, cansado de insistir."
+    }
+   ]
+  },
+  "Marina y la falda": {
+   "tmdb_id": 1712668,
+   "titulo_original": "Marina y la Falda",
+   "poster_path": "/xRVcgBcTHAUVQSI1fgIZR3K8nrj.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Marina receives a skirt as a gift but dislikes it because she believes it prevents her from playing soccer. She hides it away in a drawer, but the skirt magically comes to life, giving Marina the chance to discover that they can have fun together and that she does not have to give up what she loves in order to wear it.",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "",
+   "lbSlug": "marina-y-la-falda",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+  },
+  "Más allá": {
+   "tmdb_id": 1488751,
+   "titulo_original": "Más Allá",
+   "poster_path": "/1F7ck0bVWovhSlRqco5RePKQJZt.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "After being separated from her mother while crossing the treacherous jungle between Colombia and Panama, Zuli, a young Venezuelan migrant, is forced to abandon her childhood to survive in this dangerous place. While working for a coyote to help guide other migrants through the jungle, Zuli discovers a portal to a magical land, where she must turn to her imagination to reconnect with her innocence and, ultimately, learn how to be a kid again.",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 15,
+   "pais_tmdb": "",
+   "title_en": "Beyond",
+   "lbSlug": "beyond-2025",
+   "_verificado": "el tmdb_id con que ya la publicamos en popayan-2026, y TMDB confirma la dirección",
+   "_ya_publicada": [
+    {
+     "festival": "ficdeh-2026",
+     "titulo": "Más allá",
+     "poster": "/assets/ficdeh/pasta-negra.jpg",
+     "posterSource": "custom",
+     "lbSlug": "beyond-2025",
+     "sinopsis": "Después de haber sido separada de su madre mientras intentaban cruzar la selva entre Colombia y Panamá, una pequeña migrante venezolana se ve obligada a abandonar su infancia para sobrevivir. Zuli empieza a trabajar para un coyote que guía a migrantes dentro de la selva. En uno de sus viajes descubre un portal que la transporta a una tierra mágica donde se ve impulsada a reconectar con su inocencia y su imaginación, aprendiendo a ser una niña otra vez."
+    },
+    {
+     "festival": "popayan-2026",
+     "titulo": "Más allá",
+     "tmdb_id": 1488751,
+     "poster": "/assets/popayan-2026/mas-alla.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "beyond-2025",
+     "sinopsis": "Después de haber sido separada de su madre mientras intentaban cruzar la selva entre Colombia y Panamá, una pequeña migrante venezolana, se ve obligada a abandonar su infancia para sobrevivir y empieza a trabajar para un coyote que guía a migrantes dentro de la selva. En uno de sus viajes Zuli tropieza con un portal que la transporta a una tierra mágica donde se ve impulsada a reconectar con su inocencia y su imaginación, aprendiendo a ser una niña otra vez."
+    }
+   ]
+  },
+  "Memoria colectiva": {
+   "tmdb_id": 1520364,
+   "titulo_original": "Memoria Colectiva",
+   "poster_path": "/m7AYGrMWkbSoAGptuSs9fErArAZ.jpg",
+   "synopsis_es": "En 1983, durante los días más oscuros del Conflicto Armado en el Perú, soldados enmascarados entraron a la casa de Adelina y se llevaron a su marido por la fuerza. Ella nunca lo volvería a ver. Después de toparse con el silencio y el desprecio de la policía y el ejército, Adelina une fuerzas con las muchas otras mujeres que perdieron a sus maridos e hijos a manos de soldados que se suponía debían protegerlas. Juntos, se unirán para encontrarlos y exigir justicia.",
+   "synopsis_en": "In 1983, during the darkest days of Peru’s Armed Conflict with the Shining Path, masked soldiers entered Adelina’s home and took her husband away. She would never see him again. After facing silence and contempt from the Police and Army, Adelina joins forces with the many other women who have lost their husbands and children to soldiers who were supposed to protect them. Together, they will unite to demand justice.",
+   "genero": "Animación",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 12,
+   "pais_tmdb": "Peru, France",
+   "lbSlug": "memoria-colectiva",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_ya_publicada": [
+    {
+     "festival": "ficmontanas-2026",
+     "titulo": "Memoria Colectiva"
+    },
+    {
+     "festival": "villadelcine-2026",
+     "titulo": "Memoria colectiva",
+     "tmdb_id": 1520364,
+     "poster": "/assets/villadelcine-2026/collective-memory.jpg",
+     "posterSource": "oficial",
+     "lbSlug": "memoria-colectiva",
+     "sinopsis": "En 1983, soldados encapuchados irrumpen en la casa de Adelina y se llevan a su esposo, quien jamás regresa. Ante el silencio de las autoridades, ella se une a otras mujeres marcadas por la misma ausencia. Juntas convierten el dolor en memoria y la memoria en una exigencia de justicia."
+    }
+   ]
+  },
+  "Niña chilapa": {
+   "tmdb_id": 1456186,
+   "titulo_original": "Niña chilapa",
+   "poster_path": "/AjNWPyDDpMsn1Q5nH111jtRGKZN.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Sometimes one, orphaned of one's own lungs, feels that one is drowning.  One suddenly remembers the body, breathes again, and begins to laugh. To laugh very hard. To run around the corners of the world breathing and laughing. Yulieth talks to her mother. She dances. She floats on the water. She laughs.",
+   "genero": "Documental",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 17,
+   "pais_tmdb": "Colombia",
+   "title_en": "Chilapa Girl",
+   "lbSlug": "chilapa-girl",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_ya_publicada": [
+    {
+     "festival": "cinemancia-2025",
+     "titulo": "Niña Chilapa",
+     "poster": "https://cinemanciafestival.com/wp-content/uploads/2025/08/Nina-Chilapa-Still-3-scaled.jpg",
+     "posterSource": "editorial",
+     "sinopsis": "Yulieth es una niña en un momento que mide su relación con el mundo: no es todavía una adolescente pero sus experiencias la hacen sentirse una mujer grande. Ese difícil equilibrio se amplía con el espacio que la rodea: una naturaleza demasiado generosa, tupida y vasta."
+    },
+    {
+     "festival": "popayan-2026",
+     "titulo": "Niña Chilapa",
+     "tmdb_id": 1456186,
+     "poster": "/assets/popayan-2026/nina-chilapa.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "chilapa-girl",
+     "sinopsis": "Yulieth (11-13), se enfrenta a la dificultad de crecer en un territorio salvaje, donde coexiste la belleza natural y la hostilidad del machismo. Su identidad en construcción se disputa entre las pulsiones de sus sueños y su realidad."
+    }
+   ]
+  },
+  "Para no volver": {
+   "tmdb_id": 1743118,
+   "titulo_original": "Para no volver",
+   "poster_path": "/k2RvfqR0QSL4D5PzFkkomzRZJ8q.jpg",
+   "synopsis_es": "Cuando Karina se entera de que está embarazada del bebé de Charlie, ella y su mejor amiga Eli se disponen a encontrarlo por las calles nocturnas de Santa Marta. En el camino, se enfrentan al deseo, la maternidad y su vínculo cambiante. Al amanecer, el mar las abraza, y vuelven a jugar como niñas.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 11,
+   "pais_tmdb": "",
+   "lbSlug": "para-no-volver",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_ya_publicada": [
+    {
+     "festival": "biff-2026",
+     "titulo": "Para No Volver",
+     "tmdb_id": 1743118,
+     "poster": "/assets/biff-2026/para-no-volver.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "para-no-volver",
+     "sinopsis": "Cuando Karina se entera de que está embarazada del bebé de Charlie, ella y su mejor amiga Eli se disponen a encontrarlo por las calles nocturnas de Santa Marta. En el camino, se enfrentan al deseo, la maternidad y su vínculo cambiante. Al amanecer, el mar las abraza, y vuelven a jugar como niñas."
+    },
+    {
+     "festival": "cinemancia-2026",
+     "titulo": "Para no volver",
+     "tmdb_id": 1743118,
+     "poster": "https://image.tmdb.org/t/p/w500/k2RvfqR0QSL4D5PzFkkomzRZJ8q.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "para-no-volver",
+     "sinopsis": "Cuando Karina se entera de que está embarazada del bebé de Charlie, ella y su mejor amiga Eli se disponen a encontrarlo por las calles nocturnas de Santa Marta. En el camino, se enfrentan al deseo, la maternidad y su vínculo cambiante. Al amanecer, el mar las abraza, y vuelven a jugar como niñas."
+    },
+    {
+     "festival": "filcmar-2026",
+     "titulo": "Para no volver",
+     "tmdb_id": 1743118,
+     "poster": "/assets/filcmar-2026/para-no-volver.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "para-no-volver",
+     "sinopsis": "Cuando Karina descubre que está embarazada del bebé de Charlie, ella y su mejor amiga Eli emprenden un viaje para encontrarlo por las calles nocturnas de Santa Marta. En el camino, se enfrentan al deseo, la maternidad y sus propios sentimientos cambiantes."
+    }
+   ]
+  },
+  "Pawa": {
+   "tmdb_id": 1668893,
+   "titulo_original": "PAWA",
+   "poster_path": "/9qx2ERTvDEQQAc2RUHFoVjS2OvW.jpg",
+   "synopsis_es": "En una mañana tranquila en una ranchería en La Guajira, Indira (9) da de comer a los pavos y gallinas, debido a la sequía e inicio de clases Josefa, (60) abuela de Indira, emprende un viaje junto a su nieta a las comunidades aledañas, para tratar de vender a Taata, el Pavo más grande y así poder comprar útiles escolares y comida.  En su travesía, en una parada de tienda en medio del desierto, se encuentran a su único cliente del día, un chofer de un volteo que les pide descuento para comprarles el pavo, en medio de la burla por no saber hablar bien el español.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 20,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "pawa",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_ya_publicada": [
+    {
+     "festival": "ficdeh-2026",
+     "titulo": "Pawa",
+     "poster": "/assets/ficdeh/pawa.jpg",
+     "posterSource": "custom",
+     "lbSlug": "pawa",
+     "sinopsis": "En una tranquila mañana en una ranchería de La Guajira, Indira da de comer a los pavos y las gallinas. Ante la sequía y el inicio de clases, Josefa, abuela de Indira, emprende un viaje junto a su nieta por las comunidades aledañas con la esperanza de vender a Taata, el pavo más grande, para comprar útiles escolares y comida."
+    },
+    {
+     "festival": "leviza-2026",
+     "titulo": "Pawa",
+     "poster": "/assets/leviza/Pawa.jpeg",
+     "posterSource": "custom",
+     "lbSlug": "⚠️ LB PENDIENTE"
+    }
+   ]
+  },
+  "Plástico": {
+   "tmdb_id": 1599027,
+   "titulo_original": "Plástico",
+   "poster_path": "/4OsWTE92iy2uP7TbMqphyLpNad8.jpg",
+   "synopsis_es": "El recuerdo de Ela no sale de la cabeza de Darío. Una inesperada llamada de su exnovia termina en una tarde de risas y polas. Entre viejas emociones y sensaciones, ambos acaban en la cama, pero nada es como antes. Tragándose el llanto, Darío se deja llevar por la noche, los excesos y el desenfreno, descubriendo por primera vez que no puede escapar de sí mismo ni de lo que siente.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 12,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "plastico-2025-1",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+  },
+  "Prueba de cámara": {
+   "tmdb_id": 1743099,
+   "titulo_original": "Prueba de cámara",
+   "poster_path": "/iYSrgk7v0pSWbAA4YFF5CP8mi0j.jpg",
+   "synopsis_es": "Toda carta es un recuerdo, dedicado a películas en donde el archivo familiar aparece como una forma de correspondencia íntima: cartas a hijos, a padres, a abuelos, a quienes estuvieron y también a quienes fuimos. Entre fotografías, archivos domésticos, voces, objetos y gestos heredados, este programa reúne formas de mirar hacia atrás para decir algo en el presente: reconstruir un vínculo, nombrar una ausencia, acompañar una pérdida o afirmar una identidad.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 10,
+   "pais_tmdb": "",
+   "lbSlug": "prueba-de-camara",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_ya_publicada": [
+    {
+     "festival": "cinemancia-2026",
+     "titulo": "Prueba de cámara",
+     "tmdb_id": 1743099,
+     "poster": "https://image.tmdb.org/t/p/w500/iYSrgk7v0pSWbAA4YFF5CP8mi0j.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "prueba-de-camara",
+     "sinopsis": "Toda carta es un recuerdo, dedicado a películas en donde el archivo familiar aparece como una forma de correspondencia íntima: cartas a hijos, a padres, a abuelos, a quienes estuvieron y también a quienes fuimos. Entre fotografías, archivos domésticos, voces, objetos y gestos heredados, este programa reúne formas de mirar hacia atrás para decir algo en el presente: reconstruir un vínculo, nombrar una ausencia, acompañar una pérdida o afirmar una identidad."
+    }
+   ]
+  },
+  "Que el cielo nos perdone": {
+   "tmdb_id": 1565878,
+   "titulo_original": "Que el cielo nos perdone",
+   "poster_path": "/fyvT3ZlgNJO5lswCC8XdXkXFVnB.jpg",
+   "synopsis_es": "Colombia, 1951: En medio de La Violencia, el período de brutal guerra política entre liberales y conservadores, un par de chulavitas –asesinos a sueldo pagados por el gobierno– acechan a un sacerdote en la oscuridad de la noche, esperando que los conduzca a la cabaña en el bosque en donde se esconden sus próximas víctimas. Pero el horror que encontrarán allí es mil veces peor que el dolor que pensaban infligir.",
+   "synopsis_en": "",
+   "genero": "Terror",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "que-el-cielo-nos-perdone",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_ya_publicada": [
+    {
+     "festival": "fantasmagoria-2026",
+     "titulo": "Que El Cielo Nos Perdone",
+     "tmdb_id": 1565878,
+     "poster": "/assets/fantasmagoria-2026/que-el-cielo-nos-perdone.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "que-el-cielo-nos-perdone",
+     "sinopsis": "Colombia, 1951: En medio de La Violencia, el período de brutal guerra política entre liberales y conservadores, un par de chulavitas –asesinos a sueldo pagados por el gobierno– acechan a un sacerdote en la oscuridad de la noche, esperando que los conduzca a la cabaña en el bosque en donde se esconden sus próximas víctimas. Pero el horror que encontrarán allí es mil veces peor que el dolor que pensaban infligir."
+    },
+    {
+     "festival": "ficma-2026",
+     "titulo": "Que el cielo nos perdone",
+     "tmdb_id": 1565878,
+     "poster": "/assets/ficma/que-el-cielo-nos-perdone.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "que-el-cielo-nos-perdone",
+     "sinopsis": "Colombia, 1951: En medio de La Violencia, el período de brutal guerra política entre liberales y conservadores, un par de chulavitas —asesinos a sueldo pagados por el gobierno— acechan a un sacerdote en la oscuridad de la noche, esperando que los conduzca a la cabaña en el bosque en donde se esconden sus próximas víctimas. Pero el horror que encontrarán allí es mil veces peor que el dolor que pensaban infligir."
+    },
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "Que el cielo nos perdone",
+     "poster": "https://image.tmdb.org/t/p/w500/fyvT3ZlgNJO5lswCC8XdXkXFVnB.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "que-el-cielo-nos-perdone",
+     "sinopsis": "Colombia, 1951: En medio de La Violencia, el período de brutal guerra política entre liberales y conservadores, un par de chulavitas —asesinos a sueldo pagados por el gobierno— acechan a un sacerdote en la oscuridad de la noche, esperando que los conduzca a la cabaña en el bosque en donde se esconden sus próximas víctimas. Pero el horror que encontrarán allí es mil veces peor que el dolor que pensaban infligir."
+    },
+    {
+     "festival": "villadelcine-2026",
+     "titulo": "Que el cielo nos perdone",
+     "tmdb_id": 1565878,
+     "poster": "/assets/villadelcine-2026/que-el-cielo-nos-perdone.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "que-el-cielo-nos-perdone",
+     "sinopsis": "Colombia, 1951. En plena Violencia, dos chulavitas, sicarios al servicio del Gobierno, siguen a un sacerdote durante la noche, convencidos de que los conducirá hasta una cabaña donde se esconden sus víctimas. Al internarse en el bosque, descubrirán un horror mucho más oscuro que cualquiera de sus propios actos."
+    }
+   ]
+  },
+  "Refraccion": {
+   "tmdb_id": 1584776,
+   "titulo_original": "Refracción",
+   "poster_path": "/bzKNobO0N8Oqj6YU6eA2R28UgPI.jpg",
+   "synopsis_es": "Eloísa, una chica de 20 años, está en dos relaciones al mismo tiempo. Una noche, después de haber estado con ambas chicas, se siente agobiada por estar en esa situación de engaño y en medio de su confusión sale a recorrer las calles de Medellín en bicicleta, donde se dará cuenta de que no quiere reconocerse pero deberá encontrarse consigo misma.",
+   "synopsis_en": "Eloísa, a 20-year-old girl, is in two relationships at the same time. One night, after having been with both girls, she feels overwhelmed by living in this situation of deceit, and in the middle of her confusion she goes out to ride her bike through the streets of Medellín, where she will realize that she does not want to acknowledge who she is — but will ultimately have to come face-to-face with herself.",
+   "genero": "Drama",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 11,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "refraccion",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_ya_publicada": [
+    {
+     "festival": "cinemancia-2026",
+     "titulo": "Refracción",
+     "tmdb_id": 1584776,
+     "poster": "https://image.tmdb.org/t/p/w500/bzKNobO0N8Oqj6YU6eA2R28UgPI.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "refraccion",
+     "sinopsis": "Eloísa, una chica de 20 años, está en dos relaciones al mismo tiempo. Una noche, después de haber estado con ambas chicas, se siente agobiada por estar en esa situación de engaño y en medio de su confusión sale a recorrer las calles de Medellín en bicicleta, donde se dará cuenta de que no quiere reconocerse pero deberá encontrarse consigo misma."
+    },
+    {
+     "festival": "ficmontanas-2026",
+     "titulo": "Refracción"
+    },
+    {
+     "festival": "girardota-2026",
+     "titulo": "Refracción",
+     "tmdb_id": 1584776,
+     "poster": "/assets/girardota-2026/refraccion.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "refraccion",
+     "sinopsis": "Eloísa, una chica de 20 años, está en dos relaciones al mismo tiempo. Una noche, después de haber estado con ambas chicas, se siente agobiada por estar en esa situación de engaño y en medio de su confusión sale a recorrer las calles de Medellín en bicicleta, donde se dará cuenta de que no quiere reconocerse pero deberá encontrarse consigo misma."
+    },
+    {
+     "festival": "jardin-2026",
+     "titulo": "Refracción",
+     "tmdb_id": 1584776,
+     "poster": "/assets/jardin-2026/refraccion.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "refraccion",
+     "sinopsis": "Eloísa, una chica de 20 años, está en dos relaciones al mismo tiempo. Una noche, después de haber estado con ambas chicas, se siente agobiada por estar en esa situación de engaño y en medio de su confusión sale a recorrer las calles de Medellín en bicicleta, donde se dará cuenta de que no quiere reconocerse pero deberá encontrarse consigo misma."
+    },
+    {
+     "festival": "leviza-2026",
+     "titulo": "Refracción",
+     "poster": "/assets/leviza/Refraccio_n.jpeg",
+     "posterSource": "custom",
+     "lbSlug": "⚠️ LB PENDIENTE"
+    },
+    {
+     "festival": "narrarelfuturo-2026",
+     "titulo": "REFRACCIÓN",
+     "tmdb_id": 1584776,
+     "poster": "/assets/narrarelfuturo-2026/refraccion.jpg",
+     "posterSource": "oficial",
+     "lbSlug": "refraccion",
+     "sinopsis": "Eloísa, una chica de 20 años, está en dos relaciones al mismo tiempo. Una noche, después de haber estado con ambas chicas, se siente agobiada por estar en esa situación de engaño y en medio de su confusión sale a recorrer las calles de Medellín en bicicleta, donde se dará cuenta de que no quiere reconocerse pero deberá encontrarse consigo misma."
+    }
+   ]
+  },
+  "Safo": {
+   "tmdb_id": 1450073,
+   "titulo_original": "Safo",
+   "poster_path": "/g4RslFP6yKmiXTn9uYNsilpd2F9.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Inspired by fragments of poems by Sappho (Island of Lesbos, 600 BC), the first female author known to the Western World. The narrative alludes to Sappho’s poetic expressions and the multiple readings of her figure throughout history.",
+   "genero": "Animación",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 13,
+   "pais_tmdb": "Brazil",
+   "title_en": "Sappho",
+   "lbSlug": "sappho-2025",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+  },
+  "Sombras en la niebla": {
+   "tmdb_id": 1668876,
+   "titulo_original": "Sombras en la Niebla",
+   "poster_path": "/36fgDq5bvxmVXUlGHpFZLnogB5K.jpg",
+   "synopsis_es": "En el páramo de Chiscas, don Vicente Molina y su familia cuidan un enorme rebaño de ovejas. La cotidianidad de la familia transcurre entre montañas cubiertas de niebla y la cocina, cuyo fogón de leña los reúne en torno a la comida y el juego. Entre el grupo se encuentra Will, el niño de la familia, quien se debate entre jugar y acompañar a los mayores en las labores de pastoreo.",
+   "synopsis_en": "High in a páramo in Colombia, the sheep that Edualdo and Ana have tended for decades graze across the land. Amid the fog and the demands of herding, their youngest son, Will, grows up between childhood play and the rhythms of rural life.",
+   "genero": "Documental",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 25,
+   "pais_tmdb": "Colombia",
+   "title_en": "Into the fog",
+   "lbSlug": "into-the-fog-2026",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_ya_publicada": [
+    {
+     "festival": "cinemancia-2026",
+     "titulo": "Sombras en la niebla",
+     "tmdb_id": 1668876,
+     "poster": "https://image.tmdb.org/t/p/w500/36fgDq5bvxmVXUlGHpFZLnogB5K.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "into-the-fog-2026",
+     "sinopsis": "En el páramo de Chiscas, don Vicente Molina y su familia cuidan un enorme rebaño de ovejas. La cotidianidad de la familia transcurre entre montañas cubiertas de niebla y la cocina, cuyo fogón de leña los reúne en torno a la comida y el juego. Entre el grupo se encuentra Will, el niño de la familia, quien se debate entre jugar y acompañar a los mayores en las labores de pastoreo."
+    },
+    {
+     "festival": "ficmontanas-2026",
+     "titulo": "Sombras en la niebla"
+    },
+    {
+     "festival": "midbo-2026",
+     "titulo": "Sombras en la niebla",
+     "tmdb_id": 1668876,
+     "poster": "/assets/midbo-2026/sombras-en-la-niebla.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "into-the-fog-2026",
+     "sinopsis": "En lo alto del páramo de Chiscas, en Boyacá, viven las ovejas que Edualdo y Ana cuidan desde hace décadas. En medio de la niebla, Wilmer, su hijo menor, crece entre el juego y las rutinas del campo. En esta película, la geografía no es sólo escenario. El páramo se impone como una presencia viva, bella y a la vez agreste, que configura la experiencia de la familia, determinando sus afectos, sus tiempos y su relación con la vida y la muerte."
+    },
+    {
+     "festival": "popayan-2026",
+     "titulo": "Sombras en la Niebla",
+     "tmdb_id": 1668876,
+     "poster": "/assets/popayan-2026/sombras-en-la-niebla.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "into-the-fog-2026",
+     "sinopsis": "En el páramo de Chiscas, don Vicente Molina y su familia cuidan un enorme rebaño de ovejas. La cotidianidad de la familia transcurre entre montañas cubiertas de niebla y la cocina, cuyo fogón de leña los reúne en torno a la comida y el juego. Entre el grupo se encuentra Will, el niño de la familia, quien se debate entre jugar y acompañar a los mayores en las labores de pastoreo."
+    }
+   ]
+  },
+  "Sopro": {
+   "tmdb_id": 1667563,
+   "titulo_original": "Sopro",
+   "poster_path": "/tZuumpwZyIDzQsW3Fe0N3GMkGbL.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "On the seventh birthday of a child who lives with their perfect family in a doll house but doesn't fit into conventional gender norms, the social pressure imposed by their traditional family is so suffocating that the only way to escape is to make the magical birthday wish, before blowing out the candle on the cake.",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 14,
+   "pais_tmdb": "",
+   "title_en": "Blow",
+   "lbSlug": "blow-2026",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+  },
+  "Stakkars meg": {
+   "tmdb_id": 1543437,
+   "titulo_original": "Stakkars meg",
+   "poster_path": "/aDpvFe1PR2jm2O0DyFmZlXKMEmN.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Nora (15) is caught shoplifting, sparking a major argument with her parents about family values. When all blame falls on her, she pressures her younger sister, Amalie (11), to confess to her part in the stealing. But on Christmas Eve, they find out they aren’t the only thieves in the family.",
+   "genero": "Drama",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 20,
+   "pais_tmdb": "Norway",
+   "title_en": "Poor Me",
+   "lbSlug": "poor-me",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+  },
+  "The mould": {
+   "tmdb_id": 1469670,
+   "titulo_original": "The Mould",
+   "poster_path": "/9ZSGLaQWWnHKYnM2KEfDabMKJQr.jpg",
+   "synopsis_es": "Un padre afronta varios problemas con su único hijo tras la muerte de su esposa e intenta criarlo a su manera. (Endimaris)",
+   "synopsis_en": "After the death of his wife, a father confronts some problems with his only son and tries to raise him in his own way.",
+   "genero": "",
+   "anio_tmdb": 2024,
+   "duracion_tmdb": 24,
+   "pais_tmdb": "",
+   "lbSlug": "the-mould-2024",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+  },
+  "Tuktu, padre maíz": {
+   "tmdb_id": 1592955,
+   "titulo_original": "Tuktu, Padre Maíz",
+   "poster_path": "/qw4zntJUuj163JdkusNUnxHvOwg.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "In the mountains of Colombia, Juan, a 13-year-old indigenous peasant boy, is forced to flee from the monster of war. In his escape, between the whistling of bullets and the guidance of his ancestors, he awakens an ancestral power that transforms him into Tuktu: a Taita of extraordinary strength destined to return to sow the peace of the earth.",
+   "genero": "Animación",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 13,
+   "pais_tmdb": "Colombia",
+   "title_en": "Tuktu, Father Maize",
+   "lbSlug": "tuktu-father-maize",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_ya_publicada": [
+    {
+     "festival": "ficdeh-2026",
+     "titulo": "Tuktu, Padre Maíz",
+     "poster": "/assets/ficdeh/tuktu-padre-maiz.jpg",
+     "posterSource": "custom",
+     "lbSlug": "tuktu-father-maize",
+     "sinopsis": "En las montañas de Colombia, Juan, un niño mestizo de 13 años, se ve obligado a huir del monstruo de la guerra. En su travesía, la tierra misma lo protege y, guiado por las voces de sus ancestros, despierta un poder ancestral llamado Tucuna, que le permite transformarse y renacer. Convertido en Tuktu, un Taita de fuerza extraordinaria, comprende que su destino no es solo sobrevivir, sino regresar para sanar la herida de la guerra y sembrar la paz en la tierra que lo vio nacer."
+    },
+    {
+     "festival": "ficmontanas-2026",
+     "titulo": "Tuktu, Padre Maíz"
+    },
+    {
+     "festival": "ficpa-2026",
+     "titulo": "Tuktu, Padre Maíz",
+     "poster": "/assets/ficdeh/tuktu-padre-maiz.jpg",
+     "posterSource": "oficial",
+     "sinopsis": "En las montañas de Colombia, Juan, un niño mestizo de 13 años, se ve obligado a huir del monstruo de la guerra. En su travesía, la tierra misma lo protege y, guiado por las voces de sus ancestros, despierta un poder ancestral llamado Tucuna, que le permite transformarse y renacer. Convertido en Tuktu, un Taita de fuerza extraordinaria, comprende que su destino no es solo sobrevivir, sino regresar para sanar la herida de la guerra y sembrar la paz en la tierra que lo vio nacer."
+    },
+    {
+     "festival": "popayan-2026",
+     "titulo": "Tuktu, Padre Maíz",
+     "tmdb_id": 1592955,
+     "poster": "/assets/popayan-2026/tuktu-padre-maiz.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "tuktu-father-maize",
+     "sinopsis": "En las montañas de Colombia, Juan, un niño indígena campesino de 13 años, se ve obligado a huir del monstruo de la guerra. En su escape, entre el silbido de las balas y la guía de sus ancestros, despierta un poder ancestral que lo transforma en Tuktu: un Taita de fuerza extraordinaria destinado a volver para sembrar la paz en la tierra."
+    },
+    {
+     "festival": "villadelcine-2026",
+     "titulo": "Tuktu, Padre Maíz",
+     "tmdb_id": 1592955,
+     "poster": "/assets/villadelcine-2026/tuktu-padre-maiz.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "tuktu-father-maize",
+     "sinopsis": "Obligado a huir de la guerra, Juan, un niño indígena campesino, atraviesa las montañas guiado por la memoria de sus ancestros. En medio del peligro, despierta una fuerza que lo transforma en Tuktu, un poderoso taita llamado a proteger la tierra y regresar para sembrar la paz donde antes creció la violencia."
+    }
+   ]
+  },
+  "Una torreta en llamas": {
+   "tmdb_id": 1363835,
+   "titulo_original": "Una torreta en llamas",
+   "poster_path": "/3cNwWjjxumwywtnTtddn8zZknYP.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "After a violent confrontation, a wounded soldier is rescued by Yolanda, an elderly farmer, and her granddaughter Alejandra. The two live on a ranch in the middle of the mountains, where they hide the young man. While Yolanda decides whether they should help him, putting their own lives at risk, Alejandra will try to confirm her own suspicions.",
+   "genero": "Drama",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 22,
+   "pais_tmdb": "Mexico",
+   "title_en": "A Burning Turret",
+   "lbSlug": "a-burning-turret",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_ya_publicada": [
+    {
+     "festival": "ficdeh-2026",
+     "titulo": "Una torreta en llamas",
+     "poster": "/assets/ficdeh/the-steak-el-bistec.jpg",
+     "posterSource": "custom",
+     "lbSlug": "a-burning-turret",
+     "sinopsis": "Después de un violento enfrentamiento, un soldado herido es rescatado por Yolanda, una campesina que vive en las montañas con su nieta Alejandra. Mientras Yolanda decide si debe ayudarlo, arriesgando sus vidas, Alejandra intentará acercarse a él para confirmar sus propias sospechas."
+    },
+    {
+     "festival": "villadelcine-2026",
+     "titulo": "Una torreta en llamas",
+     "tmdb_id": 1363835,
+     "poster": "/assets/villadelcine-2026/a-burning-turret.jpg",
+     "posterSource": "oficial",
+     "lbSlug": "a-burning-turret",
+     "sinopsis": "Tras un violento enfrentamiento, Yolanda y su nieta Alejandra encuentran a un soldado herido cerca de su rancho en las montañas. Mientras la abuela debate entre la cautela y la compasión, la joven se acerca al desconocido para confirmar una sospecha que podría ponerlas a ambas en peligro."
+    }
+   ]
+  },
+  "When the tiger roars": {
+   "tmdb_id": 1555607,
+   "titulo_original": "肉食动物",
+   "poster_path": "/dbW65DccBhZJJ20iDFHP7VUfebz.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "A tiger's escape shatters the long silence between a father and his son, with suppressed love shining through the crack.",
+   "genero": "Drama",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 15,
+   "pais_tmdb": "China, Malaysia, Switzerland",
+   "lbSlug": "when-the-tiger-roars",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+  }
+ },
+ "sin_ficha": [
+  "10 meters above",
+  "Appol-o",
+  "Belleza letal",
+  "Carne de segunda",
+  "Chro",
+  "Citizenship test",
+  "Compraventa",
+  "Cómo limpiar un espejo",
+  "El arca de nora",
+  "El mundo de humberto",
+  "En nombre del amor",
+  "Enfermedad",
+  "In turn",
+  "Juego de damas",
+  "La culpa es del cine",
+  "La fiesta votada",
+  "La tranquilidad de los pájaros",
+  "Living well",
+  "Ma-ma",
+  "Memoria de un pibe",
+  "New york",
+  "Post-familia",
+  "Presépio (el pesebre)",
+  "Rastro",
+  "Recordando mi jerga",
+  "Replay",
+  "Saq nikté y el espíritu de la máscara",
+  "Snorri - catch me if you candy",
+  "Sombra lejana",
+  "Tejiendo un árbol",
+  "The dreaming witness",
+  "The remaining dregs",
+  "The torch i carry",
+  "Zizuma, nuestra casa de agua y nubes"
+ ]
+}
