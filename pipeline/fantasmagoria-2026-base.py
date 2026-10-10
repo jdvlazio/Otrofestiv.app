@@ -130,7 +130,9 @@ def parecido(a, b):
 # y ninguna de las dos se buscaba en TMDB (8 oct).
 OBRAS_DOBLE = {
     '2026-10-22-17-00-kondor-el-mago-el-cigarro-mortal-de-jairo-pinilla': [
-        {'titulo': 'Kondor, El Mago', 'director': 'Jairo Pinilla', 'pais': 'Colombia', 'anio': 1975},
+        # 12 min: filmografía de Cuadernos de Cine Colombiano n.º 8 (Cinemateca
+        # Distrital), «Cóndor, el mago», 1975, 35 mm; TMDB lo tiene en 0
+        {'titulo': 'Kondor, El Mago', 'director': 'Jairo Pinilla', 'pais': 'Colombia', 'anio': 1975, 'duracion_min': 12},
         {'titulo': 'El Cigarro Mortal', 'director': 'Jairo Pinilla', 'pais': 'Colombia'}],
 }
 

@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, emparejado con ficha_verifica() (director + año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-10-08"
+  "capturado": "2026-10-10"
  },
  "obras": [
   {
@@ -372,7 +372,7 @@
    "lbSlug": "fight-against-evil-3",
    "_verificado": "declarada a mano: TMDB «Fight Against Evil 3» (东北警察故事3): Yang Bingjia, 2026, 100 min, China — los cuatro datos del festival. La búsqueda por la romanización del festival no la devuelve.",
    "_director": "Bingjia Yang",
-   "_sondeado": "2026-10-08",
+   "_sondeado": "2026-10-10",
    "poster": "/assets/fantasmagoria-2026/dong-bei-jing-cha-gu-shi-3-fight-against-evil-3.jpg",
    "posterSource": "tmdb"
   },
@@ -605,7 +605,7 @@
    "lbSlug": "herencia-2025-1",
    "_verificado": "declarada a mano: Cristóbal Miranda Cáceres, 2025, la misma dirección y año. TMDB no da duración.",
    "_director": "Cristóbal Miranda Cáceres",
-   "_sondeado": "2026-10-08",
+   "_sondeado": "2026-10-10",
    "poster": "/assets/fantasmagoria-2026/herencia.jpg",
    "posterSource": "tmdb"
   },
@@ -739,7 +739,7 @@
    "lbSlug": "crystal-iris",
    "_verificado": "declarada a mano: TMDB «Crystal Iris» (Iris de Cristal): Diego Gaviria, Colombia, 2024, 13 min, la única obra con ese título. El programa 2026 no da la dirección; el propio Fantasmagoría la programó en 2025 como «Iris de cristal de Diego Gaviria», y esta función es su proyección con autodescripción (Narrafilms). Ligada por decisión de Juan (30 sep).",
    "_director": "",
-   "_sondeado": "2026-10-08",
+   "_sondeado": "2026-10-10",
    "poster": "/assets/fantasmagoria-2026/iris-de-cristal.jpg",
    "posterSource": "tmdb"
   },
@@ -757,7 +757,7 @@
    "lbSlug": "kondor-el-mago",
    "_verificado": "declarada a mano: la doble de Jairo Pinilla del 22 oct (Archivo Fantasmagoría) junta dos obras; TMDB tiene «Kondor, El Mago» (Jairo Pinilla, Colombia, 1975) con afiche. Verificado a mano el 8 oct.",
    "_director": "Jairo Pinilla",
-   "_sondeado": "2026-10-08",
+   "_sondeado": "2026-10-10",
    "poster": "/assets/fantasmagoria-2026/kondor-el-mago.jpg",
    "posterSource": "tmdb"
   },
@@ -794,7 +794,7 @@
    "lbSlug": "the-flower-of-fear",
    "_verificado": "declarada a mano: TMDB «The Flower of Fear»: Jorge Florez Arcila, la misma dirección; ganó en Oldenburg 2025 con ese título. TMDB no tiene año NI duración, así que el candado no puede corroborar: se declara a mano (decisión de Juan, 30 sep).",
    "_director": "Jorge Flórez Arcila",
-   "_sondeado": "2026-10-08"
+   "_sondeado": "2026-10-10"
   },
   {
    "titulo": "La Frecuencia Kirlian",
@@ -942,8 +942,10 @@
    "lbSlug": "line-12",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Line 12",
-   "_director": "Saskia Stirn y Christopher Schmier",
-   "_sondeado": "2026-09-29",
+   "_director": "Sarah Schulz y Christopher Schmier",
+   "_sondeado": "2026-10-10",
+   "sinopsis": "En un mundo de montañas imponentes, Peregrin, un meticuloso conductor de tren, mantiene su máquina en marcha con precisión. Cuando la inquieta música Clara se cuela en la cabina, una catástrofe los obliga a superar sus diferencias para evitar el descarrilamiento.",
+   "_sinopsis": "BAFICI 28, ficha de la película (https://bafici.org/pelicula/line-12/), leída el 10 oct 2026; el mismo texto en TMDB es-MX",
    "poster": "/assets/fantasmagoria-2026/line-12.jpg",
    "posterSource": "tmdb"
   },
@@ -961,7 +963,7 @@
    "lbSlug": "lullaby-2026-2",
    "_verificado": "declarada a mano: Helena Melin, 2026, la misma dirección y año. TMDB no da duración ni afiche.",
    "_director": "Helena Melin",
-   "_sondeado": "2026-10-08"
+   "_sondeado": "2026-10-10"
   },
   {
    "titulo": "Luz",
@@ -977,7 +979,7 @@
    "lbSlug": "luz-2019-2",
    "_verificado": "declarada a mano: Tilman Singer, 70 min, Alemania (TMDB la fecha 2019; su estreno fue la Berlinale 2018, el año del festival). «Luz» es un título genérico: las demás «Luz» de TMDB tienen otra dirección.",
    "_director": "Tilman Singer",
-   "_sondeado": "2026-10-08",
+   "_sondeado": "2026-10-10",
    "poster": "/assets/fantasmagoria-2026/luz.jpg",
    "posterSource": "tmdb"
   },
@@ -1176,7 +1178,7 @@
    "anio": 2025,
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 1 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas: título, filmografía del director, Letterboxd): Sebastián Flórez, 2025 (ficha de Macabro 2026: «CORTO INT · Colombia · 2025»; publicábamos 2026), 17 min, Colombia, Terror (apocalipsis zombi), sinopsis de Macabro y su afiche oficial recortado arriba y abajo a 2:3. Letterboxd: no-es-el-fin-del-mundo. El género se declara aquí porque la API de TMDB tardaba en servir la ficha recién editada; es el mismo que cargamos en TMDB.",
    "_director": "Sebastián Flórez",
-   "_sondeado": "2026-10-08",
+   "_sondeado": "2026-10-10",
    "poster": "/assets/fantasmagoria-2026/no-es-el-fin-del-mundo.jpg",
    "posterSource": "tmdb"
   },
@@ -1275,7 +1277,7 @@
    "anio": 2023,
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 1 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas: título, filmografía del director, Letterboxd): Alejandro Vargas, 2023 (Bogoshorts 2023 la programó; publicábamos 2026, el año del festival), 20 min, Colombia, Ciencia ficción (por la sinopsis), sinopsis del festival y su afiche oficial. Letterboxd: quazar. El género se declara aquí porque la API de TMDB tardaba en servir la ficha recién editada; es el mismo que cargamos en TMDB.",
    "_director": "Alejandro Vargas",
-   "_sondeado": "2026-10-08",
+   "_sondeado": "2026-10-10",
    "poster": "/assets/fantasmagoria-2026/quazar.jpg",
    "posterSource": "tmdb"
   },
@@ -1532,7 +1534,7 @@
    "lbSlug": "vida-2016",
    "_verificado": "declarada a mano: Carlos Santiago Amézquita Villamizar, 2016: la dirección completa y el año de la ficha de la página de largometrajes. TMDB no da duración.",
    "_director": "Carlos Amézquita",
-   "_sondeado": "2026-10-08",
+   "_sondeado": "2026-10-10",
    "poster": "/assets/fantasmagoria-2026/vida.jpg",
    "posterSource": "tmdb"
   },
@@ -1951,7 +1953,7 @@
    "lbSlug": "fight-against-evil-3",
    "_verificado": "declarada a mano: TMDB «Fight Against Evil 3» (东北警察故事3): Yang Bingjia, 2026, 100 min, China — los cuatro datos del festival. La búsqueda por la romanización del festival no la devuelve.",
    "_director": "Bingjia Yang",
-   "_sondeado": "2026-10-08",
+   "_sondeado": "2026-10-10",
    "poster": "/assets/fantasmagoria-2026/dong-bei-jing-cha-gu-shi-3-fight-against-evil-3.jpg",
    "posterSource": "tmdb"
   },
@@ -2146,7 +2148,7 @@
    "lbSlug": "herencia-2025-1",
    "_verificado": "declarada a mano: Cristóbal Miranda Cáceres, 2025, la misma dirección y año. TMDB no da duración.",
    "_director": "Cristóbal Miranda Cáceres",
-   "_sondeado": "2026-10-08",
+   "_sondeado": "2026-10-10",
    "poster": "/assets/fantasmagoria-2026/herencia.jpg",
    "posterSource": "tmdb"
   },
@@ -2273,7 +2275,7 @@
    "lbSlug": "crystal-iris",
    "_verificado": "declarada a mano: TMDB «Crystal Iris» (Iris de Cristal): Diego Gaviria, Colombia, 2024, 13 min, la única obra con ese título. El programa 2026 no da la dirección; el propio Fantasmagoría la programó en 2025 como «Iris de cristal de Diego Gaviria», y esta función es su proyección con autodescripción (Narrafilms). Ligada por decisión de Juan (30 sep).",
    "_director": "",
-   "_sondeado": "2026-10-08",
+   "_sondeado": "2026-10-10",
    "poster": "/assets/fantasmagoria-2026/iris-de-cristal.jpg",
    "posterSource": "tmdb"
   },
@@ -2290,7 +2292,7 @@
    "lbSlug": "kondor-el-mago",
    "_verificado": "declarada a mano: la doble de Jairo Pinilla del 22 oct (Archivo Fantasmagoría) junta dos obras; TMDB tiene «Kondor, El Mago» (Jairo Pinilla, Colombia, 1975) con afiche. Verificado a mano el 8 oct.",
    "_director": "Jairo Pinilla",
-   "_sondeado": "2026-10-08",
+   "_sondeado": "2026-10-10",
    "poster": "/assets/fantasmagoria-2026/kondor-el-mago.jpg",
    "posterSource": "tmdb"
   },
@@ -2325,7 +2327,7 @@
    "lbSlug": "the-flower-of-fear",
    "_verificado": "declarada a mano: TMDB «The Flower of Fear»: Jorge Florez Arcila, la misma dirección; ganó en Oldenburg 2025 con ese título. TMDB no tiene año NI duración, así que el candado no puede corroborar: se declara a mano (decisión de Juan, 30 sep).",
    "_director": "Jorge Flórez Arcila",
-   "_sondeado": "2026-10-08"
+   "_sondeado": "2026-10-10"
   },
   "La Frecuencia Kirlian": {
    "tmdb_id": 1239261,
@@ -2466,8 +2468,10 @@
    "lbSlug": "line-12",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Line 12",
-   "_director": "Saskia Stirn y Christopher Schmier",
-   "_sondeado": "2026-09-29",
+   "_director": "Sarah Schulz y Christopher Schmier",
+   "_sondeado": "2026-10-10",
+   "sinopsis": "En un mundo de montañas imponentes, Peregrin, un meticuloso conductor de tren, mantiene su máquina en marcha con precisión. Cuando la inquieta música Clara se cuela en la cabina, una catástrofe los obliga a superar sus diferencias para evitar el descarrilamiento.",
+   "_sinopsis": "BAFICI 28, ficha de la película (https://bafici.org/pelicula/line-12/), leída el 10 oct 2026; el mismo texto en TMDB es-MX",
    "poster": "/assets/fantasmagoria-2026/line-12.jpg",
    "posterSource": "tmdb"
   },
@@ -2484,7 +2488,7 @@
    "lbSlug": "lullaby-2026-2",
    "_verificado": "declarada a mano: Helena Melin, 2026, la misma dirección y año. TMDB no da duración ni afiche.",
    "_director": "Helena Melin",
-   "_sondeado": "2026-10-08"
+   "_sondeado": "2026-10-10"
   },
   "Luz": {
    "tmdb_id": 498062,
@@ -2499,7 +2503,7 @@
    "lbSlug": "luz-2019-2",
    "_verificado": "declarada a mano: Tilman Singer, 70 min, Alemania (TMDB la fecha 2019; su estreno fue la Berlinale 2018, el año del festival). «Luz» es un título genérico: las demás «Luz» de TMDB tienen otra dirección.",
    "_director": "Tilman Singer",
-   "_sondeado": "2026-10-08",
+   "_sondeado": "2026-10-10",
    "poster": "/assets/fantasmagoria-2026/luz.jpg",
    "posterSource": "tmdb"
   },
@@ -2689,7 +2693,7 @@
    "anio": 2025,
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 1 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas: título, filmografía del director, Letterboxd): Sebastián Flórez, 2025 (ficha de Macabro 2026: «CORTO INT · Colombia · 2025»; publicábamos 2026), 17 min, Colombia, Terror (apocalipsis zombi), sinopsis de Macabro y su afiche oficial recortado arriba y abajo a 2:3. Letterboxd: no-es-el-fin-del-mundo. El género se declara aquí porque la API de TMDB tardaba en servir la ficha recién editada; es el mismo que cargamos en TMDB.",
    "_director": "Sebastián Flórez",
-   "_sondeado": "2026-10-08",
+   "_sondeado": "2026-10-10",
    "poster": "/assets/fantasmagoria-2026/no-es-el-fin-del-mundo.jpg",
    "posterSource": "tmdb"
   },
@@ -2785,7 +2789,7 @@
    "anio": 2023,
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 1 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas: título, filmografía del director, Letterboxd): Alejandro Vargas, 2023 (Bogoshorts 2023 la programó; publicábamos 2026, el año del festival), 20 min, Colombia, Ciencia ficción (por la sinopsis), sinopsis del festival y su afiche oficial. Letterboxd: quazar. El género se declara aquí porque la API de TMDB tardaba en servir la ficha recién editada; es el mismo que cargamos en TMDB.",
    "_director": "Alejandro Vargas",
-   "_sondeado": "2026-10-08",
+   "_sondeado": "2026-10-10",
    "poster": "/assets/fantasmagoria-2026/quazar.jpg",
    "posterSource": "tmdb"
   },
@@ -3030,7 +3034,7 @@
    "lbSlug": "vida-2016",
    "_verificado": "declarada a mano: Carlos Santiago Amézquita Villamizar, 2016: la dirección completa y el año de la ficha de la página de largometrajes. TMDB no da duración.",
    "_director": "Carlos Amézquita",
-   "_sondeado": "2026-10-08",
+   "_sondeado": "2026-10-10",
    "poster": "/assets/fantasmagoria-2026/vida.jpg",
    "posterSource": "tmdb"
   },
