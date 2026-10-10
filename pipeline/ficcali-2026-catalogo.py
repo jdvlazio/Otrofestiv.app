@@ -41,8 +41,26 @@ DESTINO = f'{REPO}/festivals/staging/ficcali-2026-catalogo.json'
 # FICHAS PROGRAMADAS FUERA DE LAS SUBPÁGINAS: la sección no tiene subpágina
 # (¡Que viva la música!), pero la obra está en la programación 2026 —el
 # lanzamiento del sáb 3 en La Tertulia— y su ficha existe
-EXTRA = {'https://ficcali.com/pelicula/para-vivir-el-implacable-tiempo-de-pablo-milanes/': '¡Que viva la música!'}
+EXTRA = {'https://ficcali.com/pelicula/para-vivir-el-implacable-tiempo-de-pablo-milanes/': '¡Que viva la música!',
+         # LAS FICHAS DE LOS PROGRAMAS (10 oct 2026). Existen en ficcali.com
+         # pero ninguna subpágina de la Selección las enlaza: sus obras salían
+         # sin sinopsis ni director aunque el festival los publica. Halladas
+         # por la API /wp-json/wp/v2/pelicula; la sección es el programa.
+         **{f'https://ficcali.com/pelicula/{s}/': sec for s, sec in [
+             ('a-fabulosa-maquina-do-tempo', 'Primer plano: las infancias y el futuro'),
+             ('por-que-se-esconde-dracula', 'Trópico interior: Todos los colores de la oscuridad'),
+             ('alivios', 'We Cam Fest 3'), ('borrador-automatico-5', 'We Cam Fest 3'),
+             ('el-maestro-de-la-piqueria', 'We Cam Fest 3'), ('khazana', 'We Cam Fest 3'),
+             ('la-fuga', 'We Cam Fest 3'), ('quinto-primera', 'We Cam Fest 3'),
+             ('donde-esta-richard', 'We Cam Fest 3'),
+             ('bankolombia', 'Plano sonoro: muestra de videoclips'),
+             ('infinita-cancion-el-secreto', 'Plano sonoro: muestra de videoclips'),
+             ('nancy-resabiada', 'Plano sonoro: muestra de videoclips'),
+             ('sense-of-reality', 'Plano sonoro: muestra de videoclips'),
+             ('sentenciados', 'Plano sonoro: muestra de videoclips'),
+             ('una-cancion-para-mi-tierra', 'Canción para mi tierra')]}}
 UA = 'Mozilla/5.0 (Macintosh) AppleWebKit/605.1.15 Version/17.0 Safari/605.1.15'
+ETIQUETA_DIR = re.compile(r'^Director(a|es|as)?(\s+y\s+\w+)?$', re.I)
 CAMPO = re.compile(r'^(Género|Duración|País|Año|Idioma):\s*(.*)$')
 # LOS RÓTULOS DE SECCIÓN que la ficha pone entre el título y la sinopsis: los
 # nombres de categoría del sitio (categorias.json) más «Competencia». Lo que no
@@ -86,7 +104,13 @@ def ficha(L):
         i += 1
     titulo = L[i]
     fin = L.index('Funciones') if 'Funciones' in L else len(L)
-    resto = L[i + 1:fin]
+    # LA ETIQUETA DEL DIRECTOR no siempre es «Dirigido por»: las fichas de We Cam
+    # Fest y de los videoclips dicen «Director y guionista», «Directora»,
+    # «Dirección»… (10 oct 2026). Sin esto el nombre quedaba pegado al final de
+    # la sinopsis y la obra sin director.
+    j = (L.index('Dirigido por') if 'Dirigido por' in L else
+         next((k for k in range(i + 1, fin) if ETIQUETA_DIR.match(L[k])), None))
+    resto = L[i + 1:j if j is not None and j < fin else fin]
     # el rótulo de la sección: «Competencia» suelto y debajo la competencia, o
     # directamente la sección; la sinopsis es lo que sigue (líneas largas)
     rot = []
@@ -94,8 +118,14 @@ def ficha(L):
         rot.append(resto.pop(0))
     # las cursivas parten la frase en renglones: se pegan con espacio, y sin
     # espacio delante de la puntuación que las sigue
+    # LA FICHA VACÍA (10 oct 2026): el sitio publicó fichas nuevas sin texto
+    # (En construcción, Historias del buen valle) y lo único que había después
+    # del título era el PIE DEL SITIO —«Síguenos Instagram Facebook-f…»—, que
+    # entraba como sinopsis y le ganaba a la buena. El pie no es de la obra.
+    if 'Síguenos' in resto:
+        resto = resto[:resto.index('Síguenos')]
     sinopsis = re.sub(r'\s+([,.;:)])', r'\1', re.sub(r'\s+', ' ', ' '.join(resto))).strip()
-    j = L.index('Dirigido por') + 1 if 'Dirigido por' in L else None
+    j = j + 1 if j is not None else None
     director = L[j] if j is not None and j < len(L) else None
     # SIN NOMBRE: hay fichas donde debajo de «Dirigido por» va directo la
     # biografía (Aguapanela). No se adivina: queda vacío y lo resuelve la cascada

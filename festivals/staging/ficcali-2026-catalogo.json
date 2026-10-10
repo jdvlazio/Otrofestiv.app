@@ -1,11 +1,29 @@
 {
  "_provenance": {
   "fuente": "ficcali.com, Selección de películas 2026 (11 subpáginas de la página 12862)",
-  "capturado": "2026-10-08",
+  "capturado": "2026-10-10",
   "url": "https://ficcali.com/seleccion-de-peliculas-2026/",
   "metodo": "subpágina por sección → ficha `pelicula` de cada obra (HTML)"
  },
  "obras": [
+  {
+   "titulo": "A fabulosa máquina do tempo",
+   "director": "Eliza Capai",
+   "pais": "Brasil",
+   "anio": 2026,
+   "duracion_min": 70,
+   "genero": "Documental",
+   "idioma": "Portugués",
+   "rotulo": "Competencia · Primer plano: las infancias y el futuro",
+   "sinopsis": "En el corazón del árido sertão brasileño, un grupo de niñas de diez años juega a inventar máquinas del tiempo imaginarias. Las pequeñas viajan al pasado para explorar la dura realidad de supervivencia que vivieron sus madres y abuelas, al mismo tiempo que se proyectan. El documental utiliza la inocencia y la imaginación infantil como un poderoso catalizador para debatir con madurez sobre la autonomía de las mujeres, el género, el ciclo de la pobreza y sus propios sueños de libertad.",
+   "url": "https://ficcali.com/pelicula/a-fabulosa-maquina-do-tempo",
+   "secciones": [
+    "Muestras de Muestras",
+    "Primer plano",
+    "ZOOM",
+    "Primer plano: las infancias y el futuro"
+   ]
+  },
   {
    "titulo": "Afilando memoria",
    "director": "Eugenio Gómez",
@@ -14,7 +32,7 @@
    "duracion_min": 7,
    "genero": "Experimental",
    "idioma": "Español",
-   "rotulo": "Competencia · Cali Ciudad Abierta",
+   "rotulo": "Cali Ciudad Abierta",
    "sinopsis": "Afilando memoria es un ritual lleno de piel, sudor y danza. Cuerpos que encarnan a los que ya no están. Cuerpos que fueron barco, semilla, raíz, diáspora, saber expropiado, territorio tatuado y ombligo sembrado. Cuerpos que cantan: ¡Soy Congo, Mandinga, Arará, Lucumí, soy Campáz, Cetré, Ocoró, Cundumí! Afilando memoria es machete territorio, machete ancestral, machete resistencia, machete libertad.",
    "url": "https://ficcali.com/pelicula/afilando-memoria",
    "secciones": [
@@ -88,17 +106,18 @@
   },
   {
    "titulo": "Alivios",
-   "director": null,
+   "director": "Juan Manuel González",
    "pais": "México, Venezuela",
    "anio": 2025,
    "duracion_min": 18,
    "genero": "Ficción",
    "idioma": "Español",
-   "rotulo": "Competencia · We Cam Fest",
-   "sinopsis": "Carlos se acerca a la mediana edad, atrapado en una crisis personal que se ha prolongado demasiado. Rosa, su madre, sufre un dolor incapacitante que solo se mitiga con las cálidas aguas de la hidroterapia. Una noche, ella se ofrece a hacer el sacrificio máximo para que ambos puedan transitar a un lugar mejor. Un cortometraje sobre el amor, la esperanza y el alivio que todos anhelamos. Director y guionista Juan Manuel González",
+   "rotulo": "We Cam Fest",
+   "sinopsis": "Carlos se acerca a la mediana edad, atrapado en una crisis personal que se ha prolongado demasiado. Rosa, su madre, sufre un dolor incapacitante que solo se mitiga con las cálidas aguas de la hidroterapia. Una noche, ella se ofrece a hacer el sacrificio máximo para que ambos puedan transitar a un lugar mejor. Un cortometraje sobre el amor, la esperanza y el alivio que todos anhelamos.",
    "url": "https://ficcali.com/pelicula/alivios",
    "secciones": [
-    "Muestras de Muestras"
+    "Muestras de Muestras",
+    "We Cam Fest 3"
    ]
   },
   {
@@ -174,7 +193,8 @@
    "url": "https://ficcali.com/pelicula/bankolombia",
    "secciones": [
     "Muestras de Muestras",
-    "Plano sonoro"
+    "Plano sonoro",
+    "Plano sonoro: muestra de videoclips"
    ]
   },
   {
@@ -279,7 +299,7 @@
    "duracion_min": 24,
    "genero": "Documental fantástico",
    "idioma": "Español",
-   "rotulo": "Competencia · Cali Ciudad Abierta",
+   "rotulo": "Cali Ciudad Abierta",
    "sinopsis": "En el cuarto piso de un edificio de la Universidad del Valle, conocido como el 383, se ocultan historias de revoluciones, exilios y muertes silenciadas durante cinco décadas. Se dice que una mujer espera allí desde hace muchos años. No se sabe exactamente qué. Algunos aseguran haberla visto después de las seis; casi todos se marchan antes. Maite investiga la memoria del edificio entre cintas, fotografías y voces que regresan desde otras épocas. Los archivos dejan de parecer inertes. Algo insiste en ellos. Un rostro reaparece. Un hombre atraviesa los pasillos, como Asterión que espera a su redentor.",
    "url": "https://ficcali.com/pelicula/despues-de-las-seis",
    "secciones": [
@@ -303,17 +323,18 @@
   },
   {
    "titulo": "El bitcoin de oro",
-   "director": null,
+   "director": "Bernardo Hernández",
    "pais": "España",
    "anio": 2026,
    "duracion_min": 18,
    "genero": "Ficción",
    "idioma": "Español",
-   "rotulo": "Competencia · We Cam Fest",
-   "sinopsis": "Cuando Asofem está a punto de cerrar por una grave crisis económica, un grupo de usuarios y su monitor deciden embarcarse en una disparatada misión para salvar el centro al que consideran su hogar. Director y guionista Bernardo Hernández",
+   "rotulo": "We Cam Fest",
+   "sinopsis": "Cuando Asofem está a punto de cerrar por una grave crisis económica, un grupo de usuarios y su monitor deciden embarcarse en una disparatada misión para salvar el centro al que consideran su hogar.",
    "url": "https://ficcali.com/pelicula/borrador-automatico-5",
    "secciones": [
-    "Muestras de Muestras"
+    "Muestras de Muestras",
+    "We Cam Fest 3"
    ]
   },
   {
@@ -333,17 +354,18 @@
   },
   {
    "titulo": "El maestro de la piqueria",
-   "director": null,
+   "director": "Yinet Molero",
    "pais": "Colombia",
    "anio": 2025,
    "duracion_min": 8,
    "genero": "Documental",
    "idioma": "Español",
-   "rotulo": "Competencia · We Cam Fest",
-   "sinopsis": "La piqueria, género musical autóctono del Caribe, ha representado durante décadas las raíces culturales de diversas generaciones. En La Guajira, Alcides Manjarrez es uno de los últimos maestros de este arte. Invidente de nacimiento, desde su infancia ha cimentado esta tradición. En la actualidad, además de ser referente en el folclor, impulsa la recuperación de esta tradición entre las nuevas generaciones. Director y guionista Yinet Molero",
+   "rotulo": "We Cam Fest",
+   "sinopsis": "La piqueria, género musical autóctono del Caribe, ha representado durante décadas las raíces culturales de diversas generaciones. En La Guajira, Alcides Manjarrez es uno de los últimos maestros de este arte. Invidente de nacimiento, desde su infancia ha cimentado esta tradición. En la actualidad, además de ser referente en el folclor, impulsa la recuperación de esta tradición entre las nuevas generaciones.",
    "url": "https://ficcali.com/pelicula/el-maestro-de-la-piqueria",
    "secciones": [
-    "Muestras de Muestras"
+    "Muestras de Muestras",
+    "We Cam Fest 3"
    ]
   },
   {
@@ -354,7 +376,7 @@
    "duracion_min": 14,
    "genero": "No ficción",
    "idioma": "Español",
-   "rotulo": "Competencia · Cali Ciudad Abierta",
+   "rotulo": "Cali Ciudad Abierta",
    "sinopsis": "En el corazón de Cali está Kiss Me, la caverna del amor, un edificio de arquitectura ecléctica diseñado por Humberto Villegas, creador de sus 190 habitaciones temáticas, en las que confluyen el sexo, el arte y la política. El mundo de Humberto es una inmersión en este espacio insólito, sensual y poético, que Humberto transforma continuamente con la complicidad de Neneco, artista autodidacta que esculpe, pinta y moldea, para darles forma tangible a sus visiones, mientras el motel continúa operando como escenario de deseo y fantasía.",
    "url": "https://ficcali.com/pelicula/el-mundo-de-humberto",
    "secciones": [
@@ -404,6 +426,21 @@
    "url": "https://ficcali.com/pelicula/emechiche-el-renacer-de-los-cabeciblancos",
    "secciones": [
     "Cortometraje Nacional 2026"
+   ]
+  },
+  {
+   "titulo": "En construcción",
+   "director": null,
+   "pais": null,
+   "anio": null,
+   "duracion_min": null,
+   "genero": null,
+   "idioma": null,
+   "rotulo": null,
+   "sinopsis": null,
+   "url": "https://ficcali.com/pelicula/en-construccion",
+   "secciones": [
+    "Muestras de Muestras"
    ]
   },
   {
@@ -483,6 +520,21 @@
    ]
   },
   {
+   "titulo": "Historias del buen valle",
+   "director": null,
+   "pais": null,
+   "anio": null,
+   "duracion_min": null,
+   "genero": null,
+   "idioma": null,
+   "rotulo": null,
+   "sinopsis": null,
+   "url": "https://ficcali.com/pelicula/historias-del-buen-valle",
+   "secciones": [
+    "Muestras de Muestras"
+   ]
+  },
+  {
    "titulo": "Héroes del silencio",
    "director": "Atikeinis Durán",
    "pais": "Colombia",
@@ -520,7 +572,7 @@
    "duracion_min": 121,
    "genero": "Drama",
    "idioma": "Español",
-   "rotulo": "Competencia · Competencia Largometraje Nacional",
+   "rotulo": "Competencia · Competencia Largometraje Nacional · Competencia · Competencia Largometraje Nacional",
    "sinopsis": "Iluminada tiene visiones que trata de entender escribiendo diarios íntimos. Sus textos son poesía que nadie más escucha. Su vida en los barrios periféricos de Bogotá, plagados de dificultades, no le da tiempo ni espacio, hasta que conoce a Juan, un muchacho que parece abrirle otro mundo. No obstante, su relación con alguien extraño no es del agrado de quienes controlan el barrio. A partir de un trabajo muy cercano con sus actrices, Nicolás Rincón compone con ellas personajes que ahondan en sus mundos, llenos de sabiduría y poesía. Si bien las formas en las que se encarnan las violencias no dan un respiro, la fuerza de las mujeres (actrices y personajes) consiguen transmitirnos energía vital y esperanza.",
    "url": "https://ficcali.com/pelicula/iluminada",
    "secciones": [
@@ -539,8 +591,8 @@
    "sinopsis": "Video oficial del álbum visual El principio, de Margarita Siempre Viva.",
    "url": "https://ficcali.com/pelicula/infinita-cancion-el-secreto",
    "secciones": [
-    "Muestras de Muestras",
-    "Plano sonoro"
+    "Plano sonoro",
+    "Plano sonoro: muestra de videoclips"
    ]
   },
   {
@@ -575,17 +627,18 @@
   },
   {
    "titulo": "Khazana",
-   "director": null,
+   "director": "Basir Ahmed",
    "pais": "Pakistán",
    "anio": 2025,
    "duracion_min": 19,
    "genero": "Ficción",
    "idioma": "Sin diálogos",
-   "rotulo": "Competencia · We Cam Fest",
-   "sinopsis": "Un recolector de basura sordo, en Karachi, se topa con un descubrimiento impactante en un vertedero. Esto lo lleva a un enfrentamiento peligroso con un despiadado gánster, solo para descubrir un tesoro que cambiará su vida para siempre. Director y guionista Basir Ahmed",
+   "rotulo": "We Cam Fest",
+   "sinopsis": "Un recolector de basura sordo, en Karachi, se topa con un descubrimiento impactante en un vertedero. Esto lo lleva a un enfrentamiento peligroso con un despiadado gánster, solo para descubrir un tesoro que cambiará su vida para siempre.",
    "url": "https://ficcali.com/pelicula/khazana",
    "secciones": [
-    "Muestras de Muestras"
+    "Muestras de Muestras",
+    "We Cam Fest 3"
    ]
   },
   {
@@ -618,7 +671,6 @@
    "sinopsis": "Con una fusión de realismo mágico con paisajes urbanos, Killah sigue a Tabi mientras atraviesa un umbral entre la vulnerabilidad y la resistencia. Los rituales, las sombras y las presencias espectrales se convierten en metáforas de una experiencia colectiva, al tiempo que las calles pasan de ser lugares de amenaza a espacios recuperados mediante el coraje, la solidaridad y la imaginación.",
    "url": "https://ficcali.com/pelicula/killah",
    "secciones": [
-    "Muestras de Muestras",
     "Plano sonoro"
    ]
   },
@@ -655,17 +707,18 @@
   },
   {
    "titulo": "La fuga",
-   "director": null,
+   "director": "Óscar Gilberto Vesga",
    "pais": "Colombia",
    "anio": 2025,
    "duracion_min": 20,
    "genero": "Ficción",
    "idioma": "Español",
-   "rotulo": "Competencia · We Cam Fest",
-   "sinopsis": "Fermín (ochenta y siete) fue pescador. Está recluido en el asilo de un pueblo y, aunque tiene movilidad reducida, debe huir para cumplirle una promesa al río. Con ayuda de Martina (siete), la hija de la cocinera, diseña un plan para fugarse. El hospicio es caótico y está en serios problemas financieros. Ante la fuga inminente, Martina decide acompañarlo. La pareja de prófugos aborda un camión que la lleva hacia el río, mientras desciende por la cordillera. A través de la ventana del copiloto, Fermín ve personas que desempeñan oficios y saberes extintos y olvidados. Director y guionista Óscar Gilberto Vesga",
+   "rotulo": "We Cam Fest",
+   "sinopsis": "Fermín (ochenta y siete) fue pescador. Está recluido en el asilo de un pueblo y, aunque tiene movilidad reducida, debe huir para cumplirle una promesa al río. Con ayuda de Martina (siete), la hija de la cocinera, diseña un plan para fugarse. El hospicio es caótico y está en serios problemas financieros. Ante la fuga inminente, Martina decide acompañarlo. La pareja de prófugos aborda un camión que la lleva hacia el río, mientras desciende por la cordillera. A través de la ventana del copiloto, Fermín ve personas que desempeñan oficios y saberes extintos y olvidados.",
    "url": "https://ficcali.com/pelicula/la-fuga",
    "secciones": [
-    "Muestras de Muestras"
+    "Muestras de Muestras",
+    "We Cam Fest 3"
    ]
   },
   {
@@ -706,7 +759,7 @@
    "duracion_min": 86,
    "genero": "Drama",
    "idioma": "Español",
-   "rotulo": "Competencia · Cali Ciudad Abierta",
+   "rotulo": "Cali Ciudad Abierta",
    "sinopsis": "En una vieja y misteriosa casona tropical cohabitan el supuesto dueño, un fraile, un piloto convaleciente, el sirviente haitiano, el guardián mercenario y la Machiche, hembra madura y dominante. Allí llega una joven modelo para desatar todo tipo de pasiones.",
    "url": "https://ficcali.com/pelicula/la-mansion-de-araucaima",
    "secciones": [
@@ -736,7 +789,7 @@
    "duracion_min": 76,
    "genero": "No ficción",
    "idioma": "Español",
-   "rotulo": "Competencia · Competencia Largometraje Nacional",
+   "rotulo": "Competencia · Competencia Largometraje Nacional · Competencia · Competencia Largometraje Nacional",
    "sinopsis": "En Colombia, el obispo Miguel Ángel Builes impuso sus doctrinas ultraconservadoras, basadas en represión y miedo. Su ideología permeó el pensamiento de un país y creó el caldo de cultivo para el nacimiento de uno de los primeros grupos paramilitares de Colombia, Los doce apóstoles, en esa región, durante los años noventa del siglo XX. Su jefe supremo era un cura admirador de las ideas del obispo. «Por medio de archivos familiares, represento algunos de sus desvelos. El hilo de la película son las pesadillas de Builes, que él registraba en su “Diario espiritual”. Propongo un viaje, un acto de provocación a un obispo muerto, una pequeña victoria ante el pensamiento conservador y los miles de puritanos en el mundo que aún son soldados de esa ideología».",
    "url": "https://ficcali.com/pelicula/las-pesadillas-del-siervo",
    "secciones": [
@@ -751,7 +804,7 @@
    "duracion_min": 115,
    "genero": "Drama",
    "idioma": "Español",
-   "rotulo": "Competencia · Competencia Largometraje Nacional",
+   "rotulo": "Competencia · Competencia Largometraje Nacional · Competencia · Competencia Largometraje Nacional",
    "sinopsis": "Luis se jubila después de cuarenta años de trabajo como profesor de historia. Presionado por su familia, busca qué hacer mientras su esposa, Amelia, se entrega a la pintura y al ejercicio grupal con nuevos amigos. Desde Bogotá llega su hijo Alejandro, quien desarrolla un proyecto musical al que invita a su padre, que toca muy bien el acordeón. Sin embargo, Luis da con un grupo de músicos de su edad con quienes concuerda mucho más y con los que disfruta el hallazgo de un muy buen público en casas geriátricas. Padre e hijo chocan, sin imaginar que la música los une al igual que el vacío sin rumbo de sus generaciones.",
    "url": "https://ficcali.com/pelicula/luis-tercero",
    "secciones": [
@@ -770,6 +823,7 @@
    "sinopsis": "Metrópolis es una película de ciencia ficción ambientada en una ciudad futurista profundamente dividida entre clases sociales. En la superficie viven los poderosos y privilegiados, mientras que, bajo tierra, miles de trabajadores realizan duras labores para mantener la ciudad en funcionamiento. Freder, hijo de Joh Fredersen, el gobernante de Metrópolis, lleva una vida cómoda hasta que conoce a María, una joven que defiende la unión y el entendimiento entre ricos y pobres. Con una poderosa crítica a la desigualdad social y a la deshumanización industrial, Metrópolis transmite su famoso mensaje: el corazón debe ser el mediador entre la cabeza y las manos.",
    "url": "https://ficcali.com/pelicula/metropolis",
    "secciones": [
+    "Clásicos",
     "Muestras de Muestras"
    ]
   },
@@ -817,7 +871,7 @@
    "duracion_min": 82,
    "genero": "Animación",
    "idioma": "Español",
-   "rotulo": "Competencia · Competencia Largometraje Nacional",
+   "rotulo": "Competencia · Competencia Largometraje Nacional · Competencia · Competencia Largometraje Nacional",
    "sinopsis": "En una tierra acechada por monstruos hechos de vegetación, Cleo, de trece años, afronta su peor pesadilla cuando Martín, su hermano, es atrapado por uno de ellos. Con ayuda de Iolo, una anciana mágica, y una osa hormiguera, Cleo se adentra en la selva para atrapar a Mukira, quien se llevó a Martín, y celebrar un ritual para recuperar al niño; pronto aprende que los monstruos ocultan un sorprendente secreto bajo su enorme capa de pelo. Es una valiente apuesta de la animación colombiana que, con gran imaginación, propone una forma de entender cómo afrontar nuestros miedos y violencias, y hallar maneras de superar las dinámicas que nos hacen enfrentar a quienes no tienen que ser nuestros enemigos.",
    "url": "https://ficcali.com/pelicula/mu-ki-ra",
    "secciones": [
@@ -828,11 +882,11 @@
    "titulo": "Muchas, muchas gracias",
    "director": "Oiyi Kan",
    "pais": "Colombia",
-   "anio": 2025,
+   "anio": 2015,
    "duracion_min": 20,
    "genero": "Documental",
    "idioma": "Español",
-   "rotulo": "Competencia · Cali ciudad creativa",
+   "rotulo": "Cali Ciudad Abierta",
    "sinopsis": "Entre China y Colombia, una abuela y su nieto heredan historias de hambre, abundancia y migración, al intentar descubrir dónde pertenece una familia entre dos mundos.",
    "url": "https://ficcali.com/pelicula/muchas-muchas-gracias",
    "secciones": [
@@ -883,7 +937,8 @@
    "url": "https://ficcali.com/pelicula/nancy-resabiada",
    "secciones": [
     "Muestras de Muestras",
-    "Plano sonoro"
+    "Plano sonoro",
+    "Plano sonoro: muestra de videoclips"
    ]
   },
   {
@@ -898,6 +953,7 @@
    "sinopsis": "En Tepoztlán, un pueblo mágico al pie del cerro del Tepozteco, Karla, una joven de quince años, navega entre la libertad de su hogar y los prejuicios de su escuela mientras busca afirmar su identidad. Niñxs retrata con sensibilidad y humor su viaje de autodescubrimiento y refleja las complejidades de crecer en el México rural contemporáneo.",
    "url": "https://ficcali.com/pelicula/ninxs",
    "secciones": [
+    "Primer plano",
     "ZOOM"
    ],
    "_conservado": [
@@ -930,7 +986,7 @@
    "duracion_min": 168,
    "genero": "No ficción",
    "idioma": "francés",
-   "rotulo": "Competencia · Foco: Claire Simon",
+   "rotulo": "Competencia · Foco: Claire Simon · Competencia · Foco: Claire Simon",
    "sinopsis": "En un hospital público de París, Claire Simon explora lo que significa habitar cuerpos de mujer, mediante la filmación de su diversidad, singularidad y belleza en todas las etapas de la vida. Se relatan historias únicas de deseos, miedos y luchas, incluida la de la propia cineasta.",
    "url": "https://ficcali.com/pelicula/notre-corps",
    "secciones": [
@@ -949,6 +1005,7 @@
    "sinopsis": "Semillites y Tania, dos hermanos queer unidos por una poderosa amistad, recorren el terreno pardo de sus propios cuerpos: tierras que alguna vez rechazaron. Atraviesan paisajes de piel, sueños y vísceras, y se adentran en lugares que laten con la memoria de sus antepasados. En el camino, se encuentran con una constelación de flores, saltamontes y fósiles. Por medio del collage, la animación, el manifiesto, la danza y la intimidad, la película transita entre las escalas del cuerpo y del territorio, para imaginar la identidad más allá de las narrativas coloniales de México",
    "url": "https://ficcali.com/pelicula/nuestro-cuerpo-es-una-estrella-que-se-expande",
    "secciones": [
+    "Primer plano",
     "ZOOM"
    ],
    "_conservado": [
@@ -956,6 +1013,21 @@
     "director",
     "duracion_min",
     "sinopsis"
+   ]
+  },
+  {
+   "titulo": "Ona",
+   "director": "Matilde Gimeno",
+   "pais": "España",
+   "anio": 2026,
+   "duracion_min": 4,
+   "genero": "Ficción",
+   "idioma": "Español",
+   "rotulo": "We Cam Fest",
+   "sinopsis": "Para Ona, la vida se ha convertido en una sucesión de malentendidos y conversaciones inconclusas. Arrastrada por un cansancio infinito, vaga por las calles de la ciudad, esforzándose constantemente por adaptarse a un ritmo que no le pertenece. En sus pensamientos percibimos su silenciosa lucha contra un mundo que ignora sus necesidades y malinterpreta su silencio. Lo que Ona reclama parece básico: sentirse presente, ser escuchada, ser mirada a los ojos, aunque sea por un instante. Y, sin embargo, nadie la ha conocido ni ha querido verla de verdad.",
+   "url": "https://ficcali.com/pelicula/ona",
+   "secciones": [
+    "Muestras de Muestras"
    ]
   },
   {
@@ -986,7 +1058,6 @@
    "sinopsis": "Una historia de amor surge en Bogotá entre una mujer-pájaro y un soñador tímido. Tras herirla sin querer en el bosque, la lleva a casa para curarla. En medio de este encuentro nace un amor surreal. Pajariscopio es una comedia romántica cantada con bossa nova e indie pop.",
    "url": "https://ficcali.com/pelicula/pajariscopio",
    "secciones": [
-    "Muestras de Muestras",
     "Plano sonoro"
    ]
   },
@@ -1000,8 +1071,9 @@
    "idioma": "Español, inglés, portugués",
    "rotulo": "Competencia",
    "sinopsis": "Fabien Pisani, hijo adoptivo de Pablo Milanés, acompaña al músico durante sus últimos años. En las conversaciones, recorren su trayectoria como artista político. Con entrevistas a otros músicos —Serrat, Harry Belafonte y Fito Páez— y a las mujeres más importantes de su vida, muestra un retrato del cantautor y del lugar del amor en su música. La película es un panorama de su época: revisar la historia de América Latina junto a la vida de Milanés es adentrarse en las luchas por una sociedad justa. Al hacer con él su último viaje a Cuba, observamos el difícil momento de la isla y su proyecto político, mientras atestiguamos los distanciamientos entre Milanés y sus colegas en el sueño de la Revolución.",
-   "url": "https://ficcali.com/pelicula/para-vivir-el-implacable-tiempo-de-pablo-milanes/",
+   "url": "https://ficcali.com/pelicula/para-vivir-el-implacable-tiempo-de-pablo-milanes",
    "secciones": [
+    "¡Que Viva la Música!",
     "¡Que viva la música!"
    ],
    "_conservado": [
@@ -1058,17 +1130,18 @@
   },
   {
    "titulo": "Quinto primera",
-   "director": null,
+   "director": "Fran Menchón",
    "pais": "España",
    "anio": 2026,
    "duracion_min": 18,
    "genero": "Ficción",
    "idioma": "Español",
-   "rotulo": "Competencia · We Cam Fest",
-   "sinopsis": "Rafael vive encerrado en su mundo, su piso en L’Hospitalet de Llobregat. Cuando su mujer murió, hace varios años, él perdió las ganas de vivir y su espíritu guerrero. Llegó a L’Hospitalet en los años cincuenta, en la primera gran ola de inmigración. Fue un luchador por la democracia, la igualdad, la solidaridad y la justicia durante las décadas del setenta y ochenta, pero ahora, solitario, amargado y xenófobo, reniega del mundo y, en su soledad, les cobra su miseria a todos y, en especial, a los nuevos inmigrantes. Tampoco ayuda su alzhéimer, cada vez más presente. Director y guionista Fran Menchón",
+   "rotulo": "We Cam Fest",
+   "sinopsis": "Rafael vive encerrado en su mundo, su piso en L’Hospitalet de Llobregat. Cuando su mujer murió, hace varios años, él perdió las ganas de vivir y su espíritu guerrero. Llegó a L’Hospitalet en los años cincuenta, en la primera gran ola de inmigración. Fue un luchador por la democracia, la igualdad, la solidaridad y la justicia durante las décadas del setenta y ochenta, pero ahora, solitario, amargado y xenófobo, reniega del mundo y, en su soledad, les cobra su miseria a todos y, en especial, a los nuevos inmigrantes. Tampoco ayuda su alzhéimer, cada vez más presente.",
    "url": "https://ficcali.com/pelicula/quinto-primera",
    "secciones": [
-    "Muestras de Muestras"
+    "Muestras de Muestras",
+    "We Cam Fest 3"
    ]
   },
   {
@@ -1094,7 +1167,7 @@
    "duracion_min": 97,
    "genero": "No ficción",
    "idioma": "Español",
-   "rotulo": "Competencia · Competencia Largometraje Nacional",
+   "rotulo": "Competencia · Competencia Largometraje Nacional · Competencia · Competencia Largometraje Nacional",
    "sinopsis": "En algún lugar del norte de la Amazonía colombiana está el viejo Sixto Muñoz, el «último indio tinigua». Según cuentan en la región donde ha vivido durante las últimas décadas, a sus ciento cinco años ha decidido dejar su casa junto a la laguna para emprender su «último viaje» hacia la selva. En un recorrido por el río Guayabero, desde La Macarena hasta el Guaviare, el director sigue su rastro con la esperanza de encontrarlo antes de su muerte. El viaje y todas las entrevistas brindan una imagen compleja y contradictoria del personaje, una hermosa crónica de los múltiples modos de mestizaje en esos territorios y de las variadas economías y formas de intercambio y solidaridad que estructuran la vida allí.",
    "url": "https://ficcali.com/pelicula/relicto",
    "secciones": [
@@ -1115,6 +1188,23 @@
    "secciones": [
     "Muestras de Muestras",
     "Plano sonoro"
+   ]
+  },
+  {
+   "titulo": "Runa simi",
+   "director": "Augusto Zegarra",
+   "pais": "Perú",
+   "anio": 2025,
+   "duracion_min": 85,
+   "genero": "No ficción",
+   "idioma": "Español, quechua, inglés",
+   "rotulo": "Competencia · Primer plano: las infancias y el futuro",
+   "sinopsis": "Un indígena está tratando de salvar a su lengua de la extinción. Fernando, actor de doblaje cusqueño, sueña con doblar El rey león al quechua. Este viaje, junto a su hijo Dylan, se convierte en una odisea profundamente personal, de paternidad y activismo, que pondrá a prueba su compromiso con su lengua y su cultura.",
+   "url": "https://ficcali.com/pelicula/runa-simi",
+   "secciones": [
+    "Muestras de Muestras",
+    "Primer plano",
+    "ZOOM"
    ]
   },
   {
@@ -1145,7 +1235,8 @@
    "url": "https://ficcali.com/pelicula/sense-of-reality",
    "secciones": [
     "Muestras de Muestras",
-    "Plano sonoro"
+    "Plano sonoro",
+    "Plano sonoro: muestra de videoclips"
    ]
   },
   {
@@ -1160,8 +1251,8 @@
    "sinopsis": "Sentenciados es un videoclip filmado en cine Super-8 para Rito. Es un grito por la no militarización y el uso de seres humanos y animales como carne cañón.",
    "url": "https://ficcali.com/pelicula/sentenciados",
    "secciones": [
-    "Muestras de Muestras",
-    "Plano sonoro"
+    "Plano sonoro",
+    "Plano sonoro: muestra de videoclips"
    ]
   },
   {
@@ -1187,7 +1278,7 @@
    "duracion_min": 208,
    "genero": "Documental",
    "idioma": "Español",
-   "rotulo": "Competencia · Cali Ciudad Abierta",
+   "rotulo": "Cali Ciudad Abierta",
    "sinopsis": "Todo comenzó por el fin es el autorretrato del Grupo de Cali, también conocido como Caliwood, un conjunto de cinéfilos que, en medio de la rumba y del caos histórico de los años setenta y ochenta del siglo XX, logró producir un corpus cinematográfico que ya forma parte fundamental de la historia del cine colombiano. A su vez, es la historia clínica del propio realizador, quien se enfermó gravemente durante la producción del filme. Es la historia de un sobreviviente.",
    "url": "https://ficcali.com/pelicula/borrador-automatico-8",
    "secciones": [
@@ -1207,6 +1298,39 @@
    "url": "https://ficcali.com/pelicula/tuktu-padre-maiz",
    "secciones": [
     "Cortometraje Nacional 2026"
+   ]
+  },
+  {
+   "titulo": "Una canción para mi tierra",
+   "director": "Mauricio Albornoz",
+   "pais": "Argentina, Colombia, Alemania",
+   "anio": 2024,
+   "duracion_min": 96,
+   "genero": "Documental, musical",
+   "idioma": "Español",
+   "rotulo": "Competencia · Primer plano: las infancias y el futuro",
+   "sinopsis": "En un pueblo rural argentino, Ramiro, un carismático maestro de música, descubre una situación alarmante que afecta a su comunidad: aviones y máquinas fumigadoras asperjan agroquímicos cerca de las escuelas, lo que pone en riesgo la salud de sus alumnos. Decidido a actuar, se une a los estudiantes para componer canciones que visibilicen el problema y despierten conciencia. Sin embargo, la iniciativa enfrenta una gran resistencia. Parte de la comunidad, vinculada al modelo productivo local, rechaza el proyecto, al tiempo que algunos medios evitan hacer eco al reclamo.",
+   "url": "https://ficcali.com/pelicula/una-cancion-para-mi-tierra",
+   "secciones": [
+    "Muestras de Muestras",
+    "Primer plano",
+    "ZOOM",
+    "Canción para mi tierra"
+   ]
+  },
+  {
+   "titulo": "Vértigo",
+   "director": "Jimmy Llamas",
+   "pais": "España",
+   "anio": 2025,
+   "duracion_min": 4,
+   "genero": "Ficción",
+   "idioma": "Español",
+   "rotulo": "We Cam Fest",
+   "sinopsis": "Vértigo es el relato íntimo de una madre enfrentada al miedo más profundo: la enfermedad de su hijo. Desde una camilla de ecografía, la palabra «vertical» vuelve a sacudir su mundo varias décadas después. Lo que comenzó como una vivencia infantil llena de presión y miedo resurge en una consulta médica, ante un diagnóstico aparentemente fatídico. El vértigo se convierte en una metáfora del temor, de la incertidumbre y del amor incondicional. Entre recuerdos, voces externas y su propio diálogo interior, la protagonista se sumerge en una espiral de culpa, incertidumbre y amor.",
+   "url": "https://ficcali.com/pelicula/vertigo",
+   "secciones": [
+    "Muestras de Muestras"
    ]
   },
   {
@@ -1244,17 +1368,33 @@
   },
   {
    "titulo": "¿Dónde está Richard?",
-   "director": null,
+   "director": "Juan Carlos Álvarez",
    "pais": "España",
    "anio": 2025,
    "duracion_min": 6,
    "genero": "Ficción",
    "idioma": "Español",
-   "rotulo": "Competencia · We Cam Fest",
-   "sinopsis": "Catherine es una periodista sorda que está perdida en el barrio madrileño de Carabanchel. No va a llegar a tiempo a entrevistar a un importante actor estadounidense. Desesperada, le pide ayuda a la Lore, una vecina del barrio que pasaba por allí. Juntas trazan un plan para poder encontrarse con este conocido personaje. Director y guionista Juan Carlos Álvarez",
+   "rotulo": "We Cam Fest",
+   "sinopsis": "Catherine es una periodista sorda que está perdida en el barrio madrileño de Carabanchel. No va a llegar a tiempo a entrevistar a un importante actor estadounidense. Desesperada, le pide ayuda a la Lore, una vecina del barrio que pasaba por allí. Juntas trazan un plan para poder encontrarse con este conocido personaje.",
    "url": "https://ficcali.com/pelicula/donde-esta-richard",
    "secciones": [
-    "Muestras de Muestras"
+    "Muestras de Muestras",
+    "We Cam Fest 3"
+   ]
+  },
+  {
+   "titulo": "¿Por qué se esconde Drácula?",
+   "director": "Camila Loboguerrero",
+   "pais": "Colombia",
+   "anio": 1980,
+   "duracion_min": 11,
+   "genero": "Ficción",
+   "idioma": "Español",
+   "rotulo": "Competencia · Curadurías Invitadas",
+   "sinopsis": "Lolita, secretaria de una oficina de finca raíz, debe llevar el contrato de venta de un inmueble a donde un cliente un poco especial. Se verá envuelta en una misteriosa aventura que terminará de una manera no menos extraña.",
+   "url": "https://ficcali.com/pelicula/por-que-se-esconde-dracula/",
+   "secciones": [
+    "Trópico interior: Todos los colores de la oscuridad"
    ]
   },
   {
@@ -1265,7 +1405,7 @@
    "duracion_min": 94,
    "genero": "Drama",
    "idioma": "Español",
-   "rotulo": "Competencia · Cali Ciudad Abierta",
+   "rotulo": "Cali Ciudad Abierta",
    "sinopsis": "Alex, que está a punto de convertirse en papá por primera vez, descubre unas antiguas fotografías familiares que sugieren la participación de su padre en hechos intrigantes vinculados a la historia de su país. Este hallazgo lo obligará a confrontar sus lealtades familiares y a preguntarse hasta qué punto es posible construir un futuro y su propia paternidad sin enfrentar las sombras del pasado.",
    "url": "https://ficcali.com/pelicula/album-de-familia",
    "secciones": [
@@ -1284,7 +1424,6 @@
    "sinopsis": "La Ceroxylon quindiuense, palma de cera del Quindío, es el árbol nacional de Colombia. Encarna una paradoja perfecta para un país marcado por el machismo, la misoginia y la transfobia, pues es una planta capaz de cambiar de sexo. Es una «palma trans» y la inspiración para que Magdalena Morales, líder trans afrocolombiana, se una a la Red Comunitaria Trans y siembre una semilla de luz rebelde en el horizonte de la música tradicional del Caribe colombiano.",
    "url": "https://ficcali.com/pelicula/arbol-en-pie",
    "secciones": [
-    "Muestras de Muestras",
     "Plano sonoro"
    ]
   },
@@ -1296,7 +1435,7 @@
    "duracion_min": 90,
    "genero": "No ficción",
    "idioma": "Francés",
-   "rotulo": "Competencia · Foco: Claire Simon",
+   "rotulo": "Competencia · Foco: Claire Simon · Competencia · Foco: Claire Simon",
    "sinopsis": "Con una mirada atenta, la cineasta Claire Simon enfrenta estudiantes y profesores de bachillerato a los libros de Annie Ernaux, primera mujer francesa en recibir el Premio Nobel de Literatura.",
    "url": "https://ficcali.com/pelicula/ecrire-la-vie-annie-ernaux-racontee-par-des-lyceennes-et-des-lyceens",
    "secciones": [

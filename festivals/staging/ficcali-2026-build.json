@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "ficcali.com — Programación 2026 (WP 14870) + fichas de la Selección 2026",
-  "capturado": "2026-10-09",
+  "capturado": "2026-10-10",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "radar": 1024,
@@ -25,6 +25,7 @@
  "dias_vacios": [],
  "_por_que_sedes": "Tabla canónica: el nombre de la tarjeta → (sede, sala), en el crudo (SEDES). Pines: 28 a mano con dos fuentes, 2 aproximados (Ciudad Pacífica, Alto Meléndez) y la transmisión en línea sin pin. Preguntas al festival en el _pregunta de cada sede del -venues-geo.",
  "_fuentes_versionadas": {
+  "festivals/staging/ficcali-2026-sinopsis.json": "las sinopsis declaradas a mano (texto oficial de ficcali.com o traducción nuestra de la oficial en inglés), cada una con su fuente; la lee enriquecer.py",
   "festivals/staging/ficcali-2026-radar.json": "el volcado del radar #1024, que escribe y relee pipeline/radar.py"
  },
  "_por_que_slot_compartido": "8 oct: la edición de la programación pone «Guapi: ritmo y balsada» (30 min) y «La fabulosa máquina del tiempo» (70 min) a las 6:00 p. m. del 21 en Comfandi — la misma franja; se publica como UNA función (anclaje). Es el único slot compartido de Ficcali. Preguntado al festival.",
@@ -208,18 +209,18 @@
    "archetype": "Retrospectiva / Tributo",
    "order": 9
   },
+  "🎞️ Muestras de Muestras": {
+   "en": "Showcase of Showcases",
+   "archetype": "Cortos / Programas",
+   "order": 10
+  },
   "🔍 Zoom": {
    "en": "Zoom",
    "archetype": "Perspectivas / Miradas",
-   "order": 10
+   "order": 11
   },
   "🎵 Plano Sonoro": {
    "en": "Sound Frame",
-   "archetype": "Cortos / Programas",
-   "order": 11
-  },
-  "🎞️ Muestras de Muestras": {
-   "en": "Showcase of Showcases",
    "archetype": "Cortos / Programas",
    "order": 12
   },
@@ -1132,6 +1133,8 @@
    "day_order": 5,
    "venue": "Centro Cultural Comfandi - Cali",
    "has_qa": false,
+   "synopsis": "En el corazón del árido sertão brasileño, un grupo de niñas de diez años juega a inventar máquinas del tiempo imaginarias. Las pequeñas viajan al pasado para explorar la dura realidad de supervivencia que vivieron sus madres y abuelas, al mismo tiempo que se proyectan. El documental utiliza la inocencia y la imaginación infantil como un poderoso catalizador para debatir con madurez sobre la autonomía de las mujeres, el género, el ciclo de la pobreza y sus propios sueños de libertad.",
+   "synopsis_lang": "es",
    "poster": "/assets/ficcali-2026/la-fabulosa-maquina-del-tiempo.jpg",
    "posterSource": "tmdb",
    "_src": {
@@ -1148,24 +1151,35 @@
    "title": "La libertad doble",
    "type": "film",
    "section": "📽️ Proyecciones",
+   "director": "Lisandro Alonso",
+   "year": 2026,
    "country": "Argentina",
    "flags": "🇦🇷",
    "duration": "100 min",
+   "genre": "Drama",
    "day": "2026-10-21",
    "time": "18:00",
    "day_order": 5,
    "venue": "Teatro Municipal Enrique Buenaventura - Cali",
    "sala": "Teatrino",
    "has_qa": false,
-   "synopsis": "Misael trabaja solo con su hacha, talando árboles en el bosque. Una responsabilidad inesperada trastoca su vida, y la lógica de sus días se desvanece en una naturaleza donde la razón humana carece de sentido.",
-   "synopsis_lang": "es",
-   "poster": "/assets/biff-2026/la-libertad-doble-v2.jpg",
-   "posterSource": "oficial",
+   "poster": "/assets/ficcali-2026/la-libertad-doble-v2.jpg",
+   "posterSource": "tmdb",
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
     "tarjeta": 14003
-   }
+   },
+   "lbSlug": "double-freedom",
+   "tmdb_id": 1387981,
+   "synopsis_en": "Misael works alone with his axe, cutting down trees in the woods. An unexpected responsibility upends his life, and the logic of his days fades away in a nature where human reason holds no meaning.",
+   "title_en": "Double Freedom",
+   "synopsis": "Misael trabaja solo con su hacha, talando árboles en el bosque. Una responsabilidad inesperada trastoca su vida, y la lógica de sus días se desvanece en una naturaleza donde la razón humana carece de sentido.",
+   "synopsis_lang": "es",
+   "_conservado": [
+    "synopsis",
+    "synopsis_lang"
+   ]
   },
   {
    "title": "CHARLAS ALAPAR: Pablo Solarz. (Argentina)",
@@ -1319,7 +1333,7 @@
      "director": "Oiyi Kan",
      "country": "Colombia",
      "flags": "🇨🇴",
-     "year": 2025,
+     "year": 2015,
      "duration": "20 min",
      "synopsis": "Entre China y Colombia, una abuela y su nieto heredan historias de hambre, abundancia y migración, al intentar descubrir dónde pertenece una familia entre dos mundos.",
      "genre": "Documental",
@@ -1502,27 +1516,36 @@
    "title_en": "Donkey Princess"
   },
   {
-   "title": "Runa Simi",
+   "title": "Runa simi",
    "type": "film",
-   "section": "📽️ Proyecciones",
+   "section": "🎞️ Muestras de Muestras",
+   "director": "Augusto Zegarra",
+   "year": 2025,
    "country": "Perú",
    "flags": "🇵🇪",
    "duration": "85 min",
+   "genre": "Documental",
    "day": "2026-10-22",
    "time": "18:00",
    "day_order": 6,
    "venue": "Teatro Municipal Enrique Buenaventura - Cali",
    "sala": "Teatrino",
    "has_qa": false,
-   "synopsis": "Un actor de doblaje peruano busca convencer a Disney de doblar El Rey León al quechua. El viaje se convierte en una odisea personal de paternidad y activismo.",
+   "synopsis": "Un indígena está tratando de salvar a su lengua de la extinción. Fernando, actor de doblaje cusqueño, sueña con doblar El rey león al quechua. Este viaje, junto a su hijo Dylan, se convierte en una odisea profundamente personal, de paternidad y activismo, que pondrá a prueba su compromiso con su lengua y su cultura.",
    "synopsis_lang": "es",
-   "poster": "https://image.tmdb.org/t/p/w185/eXeQscX8CHbp2orMEF33d4OAshA.jpg",
+   "poster": "/assets/ficcali-2026/runa-simi.jpg",
    "posterSource": "tmdb",
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
     "tarjeta": 14018
-   }
+   },
+   "lbSlug": "runa-simi",
+   "tmdb_id": 1465974,
+   "synopsis_en": "Single father and Cusco radio host Fernando shares a modest yet endearing hobby with his son: dubbing classic animated clips into Quechua, an Indigenous language spoken by a relatively small population. When one of their dubs unexpectedly goes viral, a private passion transforms into something far more ambitious and meaningful.",
+   "titulos_anteriores": [
+    "Runa Simi"
+   ]
   },
   {
    "title": "Taller Interrupción sónica: Escuchar el archivo, perturbar la imagen",
@@ -1654,7 +1677,9 @@
      "posterSource": "tmdb",
      "lbSlug": "rodilla-negra",
      "tmdb_id": 947607,
-     "synopsis_en": "In this short film, the title of which translates as \"Black Knee\", a team of football players (played by members of the Barrios Unidos Cali team) encounter a pair of skinnydipping hippies out in the fields and steal their transistor radio.  This seems to trigger something in their most legendary player, Jonny Mosquera: a terrible syndrome that makes him literally fall to his knees.  Like La hamaca, Agarrando pueblo, Carne de tu Carne and other films made by Mayolo, this film blends deeply unsettling imagery and lowkey genre filmmaking into an equally unsettling and exhilarating realism."
+     "synopsis": "Un equipo de fútbol, interpretado por jugadores del Barrios Unidos de Cali, se topa en el campo con una pareja de hippies que se bañan desnudos y les roba el radio de transistores. Eso parece desatar algo en su jugador más legendario, Jonny Mosquera: un síndrome terrible que lo hace caer, literalmente, de rodillas.",
+     "synopsis_en": "In this short film, the title of which translates as \"Black Knee\", a team of football players (played by members of the Barrios Unidos Cali team) encounter a pair of skinnydipping hippies out in the fields and steal their transistor radio.  This seems to trigger something in their most legendary player, Jonny Mosquera: a terrible syndrome that makes him literally fall to his knees.  Like La hamaca, Agarrando pueblo, Carne de tu Carne and other films made by Mayolo, this film blends deeply unsettling imagery and lowkey genre filmmaking into an equally unsettling and exhilarating realism.",
+     "synopsis_lang": "es"
     },
     {
      "title": "El Coloso",
@@ -1667,8 +1692,10 @@
      "posterSource": "tmdb",
      "lbSlug": "el-coloso",
      "tmdb_id": 1566489,
+     "synopsis": "El Coloso cuenta la vida y el legado de Freddy Rincón, un gigante del fútbol colombiano que conquistó Brasil con su fuerza y su talento, llenó estadios en España y le dio a su país uno de sus goles más inolvidables, contra Alemania. De sus raíces en Buenaventura a convertirse en símbolo de orgullo nacional, Rincón trascendió la cancha para inspirar a toda una generación. Más que un futbolista, fue un faro de esperanza cuya grandeza sigue viva en la memoria de los colombianos.",
      "synopsis_en": "“El Coloso” tells the story of the life and legacy of Freddy Rincón, a giant of Colombian soccer who conquered Brazil with his strength and talent, filled stadiums in Spain, and gave his country one of its most unforgettable goals against Germany. From his roots in Buenaventura to becoming a symbol of national pride, Rincón transcended the soccer field to inspire an entire generation. More than just a soccer player, he was a beacon of hope, whose greatness lives on in the memory of Colombians.",
-     "genre": "Documental"
+     "genre": "Documental",
+     "synopsis_lang": "es"
     }
    ]
   },
@@ -1736,8 +1763,10 @@
      "posterSource": "tmdb",
      "lbSlug": "por-que-se-esconde-dracula",
      "tmdb_id": 1033710,
+     "synopsis": "Lolita, secretaria de una oficina de finca raíz, debe llevar el contrato de venta de un inmueble a donde un cliente un poco especial. Se verá envuelta en una misteriosa aventura que terminará de una manera no menos extraña.",
      "synopsis_en": "Lolita, a secretary from an estate company, must bring the contract of the sale of a new house to a very peculiar and thirsty customer.",
-     "genre": "Terror"
+     "genre": "Terror",
+     "synopsis_lang": "es"
     },
     {
      "title": "Sirenas en la niebla",
@@ -1750,9 +1779,11 @@
      "posterSource": "tmdb",
      "lbSlug": "mermaids-in-the-mist",
      "tmdb_id": 1117116,
+     "synopsis": "Mariela luchará contra la creencia del pueblo de que una sirena se está llevando a los jóvenes y, en el camino, descubrirá al verdadero monstruo.",
      "synopsis_en": "Mariela will fight against the belief of the people that a mermaid is leading to young people, discovering the true monster on her journey.",
      "title_en": "Mermaids in the Mist",
-     "genre": "Drama"
+     "genre": "Drama",
+     "synopsis_lang": "es"
     },
     {
      "title": "El ocaso de las criaturas",
@@ -1765,9 +1796,11 @@
      "posterSource": "tmdb",
      "lbSlug": "creatures-under-the-sun",
      "tmdb_id": 1216479,
+     "synopsis": "Una joven melancólica deambula por las calles solitarias del centro en busca de comida, mientras su mente está conectada con una dimensión paralela en la que sueña en voz alta cartas para su hermana. Su curiosidad y la posibilidad de volver a ver un atardecer ponen en riesgo su regreso a casa.",
      "synopsis_en": "A melancholy young woman wanders the lonely streets of downtown in search of food. While her mind is connected to a parallel dimension where she dreams aloud letters to her sister. Her curiosity and the possibility of seeing a sunset again jeopardize her return home.",
      "title_en": "Creatures under the sun",
-     "genre": "Animación"
+     "genre": "Animación",
+     "synopsis_lang": "es"
     },
     {
      "title": "Estirpe",
@@ -1780,8 +1813,10 @@
      "posterSource": "tmdb",
      "lbSlug": "lineage-2024",
      "tmdb_id": 1327925,
+     "synopsis": "Entre los vivos y los muertos hay una memoria compartida.",
      "synopsis_en": "Among the living and the dead, there is a shared memory",
-     "title_en": "LINEAGE"
+     "title_en": "LINEAGE",
+     "synopsis_lang": "es"
     },
     {
      "title": "Mi Demonio",
@@ -1794,9 +1829,11 @@
      "posterSource": "tmdb",
      "lbSlug": "my-demon-2024",
      "tmdb_id": 1463453,
+     "synopsis": "En un extraordinario plano secuencia de 17 minutos acompañamos a una pareja joven y disfuncional que está a punto de tener su primer hijo. Camino al hospital, los dolores de parto se mezclan con los reproches mutuos, y las llamadas de los familiares suman comentarios imprudentes a una situación más que desesperada.",
      "synopsis_en": "Through an extraordinary 17-minute sequence shot, we accompany a young and dysfunctional couple who are about to have their first child. On the way to the hospital, labor pains mix with mutual complaints, and calls from relatives add reckless comments to a more than desperate situation.",
      "title_en": "My Demon",
-     "genre": "Drama"
+     "genre": "Drama",
+     "synopsis_lang": "es"
     },
     {
      "title": "Liebres",
@@ -1807,8 +1844,10 @@
      "duration": "13 min",
      "lbSlug": "hare",
      "tmdb_id": 1392101,
+     "synopsis": "Valentina y Pilar, dos adolescentes de contextos socioculturales distintos, viven un hecho violento que las cambiará para siempre: rompe las barreras que las separan y las hace habitar un mismo cuerpo herido.",
      "synopsis_en": "The short film follows Valentina and Pilar, two young teenagers from different socio-cultural contexts who will experience a violent event that will change them forever, breaking the barriers that distance them and making them live in the same wounded body.",
-     "title_en": "Hare"
+     "title_en": "Hare",
+     "synopsis_lang": "es"
     },
     {
      "title": "Somnolítico",
@@ -2180,11 +2219,11 @@
   {
    "title": "En construcción",
    "type": "film",
-   "section": "📽️ Proyecciones",
+   "section": "🎞️ Muestras de Muestras",
    "director": "José Luis Guerín",
    "year": 2001,
-   "country": "España",
-   "flags": "🇪🇸",
+   "country": "Spain, France",
+   "flags": "🇪🇸🇫🇷",
    "duration": "124 min",
    "genre": "Documental",
    "day": "2026-10-23",
@@ -2685,7 +2724,7 @@
    "section": "🎞️ Muestras de Muestras",
    "country": "México, Venezuela, España, Colombia, Pakistán",
    "flags": "🇲🇽🇻🇪🇪🇸🇨🇴🇵🇰",
-   "duration": "107 min",
+   "duration": "115 min",
    "day": "2026-10-24",
    "time": "15:00",
    "day_order": 8,
@@ -2701,33 +2740,41 @@
    "film_list": [
     {
      "title": "Alivios",
+     "director": "Juan Manuel González",
      "country": "México, Venezuela",
      "flags": "🇲🇽🇻🇪",
      "year": 2025,
      "duration": "18 min",
-     "synopsis": "Carlos se acerca a la mediana edad, atrapado en una crisis personal que se ha prolongado demasiado. Rosa, su madre, sufre un dolor incapacitante que solo se mitiga con las cálidas aguas de la hidroterapia. Una noche, ella se ofrece a hacer el sacrificio máximo para que ambos puedan transitar a un lugar mejor. Un cortometraje sobre el amor, la esperanza y el alivio que todos anhelamos. Director y guionista Juan Manuel González",
+     "synopsis": "Carlos se acerca a la mediana edad, atrapado en una crisis personal que se ha prolongado demasiado. Rosa, su madre, sufre un dolor incapacitante que solo se mitiga con las cálidas aguas de la hidroterapia. Una noche, ella se ofrece a hacer el sacrificio máximo para que ambos puedan transitar a un lugar mejor. Un cortometraje sobre el amor, la esperanza y el alivio que todos anhelamos.",
      "synopsis_lang": "es",
-     "poster": "/assets/villadelcine-2026/alivios.jpg",
-     "posterSource": "oficial"
+     "poster": "/assets/ficcali-2026/alivios.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "reliefs-2025",
+     "tmdb_id": 1469210,
+     "synopsis_en": "Carlos is approaching midlife trapped in a personal crisis that has lingered too long. Rosa, his mother, suffers from disabling pain that is only mitigated by the warm waters of hydrotherapy. One night, she offers to make the ultimate sacrifice so that they can both transit to a better place. A short film about love, hope and relief we all long for.",
+     "title_en": "Reliefs",
+     "genre": "Drama"
     },
     {
      "title": "El bitcoin de oro",
+     "director": "Bernardo Hernández",
      "country": "España",
      "flags": "🇪🇸",
      "year": 2026,
      "duration": "18 min",
-     "synopsis": "Cuando Asofem está a punto de cerrar por una grave crisis económica, un grupo de usuarios y su monitor deciden embarcarse en una disparatada misión para salvar el centro al que consideran su hogar. Director y guionista Bernardo Hernández",
+     "synopsis": "Cuando Asofem está a punto de cerrar por una grave crisis económica, un grupo de usuarios y su monitor deciden embarcarse en una disparatada misión para salvar el centro al que consideran su hogar.",
      "synopsis_lang": "es",
      "poster": "/assets/ficcali-2026/el-bitcoin-de-oro.jpg",
      "posterSource": "oficial"
     },
     {
      "title": "El maestro de la piqueria",
+     "director": "Yinet Molero",
      "country": "Colombia",
      "flags": "🇨🇴",
      "year": 2025,
      "duration": "8 min",
-     "synopsis": "La piqueria, género musical autóctono del Caribe, ha representado durante décadas las raíces culturales de diversas generaciones. En La Guajira, Alcides Manjarrez es uno de los últimos maestros de este arte. Invidente de nacimiento, desde su infancia ha cimentado esta tradición. En la actualidad, además de ser referente en el folclor, impulsa la recuperación de esta tradición entre las nuevas generaciones. Director y guionista Yinet Molero",
+     "synopsis": "La piqueria, género musical autóctono del Caribe, ha representado durante décadas las raíces culturales de diversas generaciones. En La Guajira, Alcides Manjarrez es uno de los últimos maestros de este arte. Invidente de nacimiento, desde su infancia ha cimentado esta tradición. En la actualidad, además de ser referente en el folclor, impulsa la recuperación de esta tradición entre las nuevas generaciones.",
      "genre": "Documental",
      "synopsis_lang": "es",
      "poster": "/assets/ficcali-2026/el-maestro-de-la-piqueria.jpg",
@@ -2735,44 +2782,77 @@
     },
     {
      "title": "Khazana",
+     "director": "Basir Ahmed",
      "country": "Pakistán",
      "flags": "🇵🇰",
      "year": 2025,
      "duration": "19 min",
-     "synopsis": "Un recolector de basura sordo, en Karachi, se topa con un descubrimiento impactante en un vertedero. Esto lo lleva a un enfrentamiento peligroso con un despiadado gánster, solo para descubrir un tesoro que cambiará su vida para siempre. Director y guionista Basir Ahmed",
+     "synopsis": "Un recolector de basura sordo, en Karachi, se topa con un descubrimiento impactante en un vertedero. Esto lo lleva a un enfrentamiento peligroso con un despiadado gánster, solo para descubrir un tesoro que cambiará su vida para siempre.",
      "synopsis_lang": "es",
      "poster": "/assets/ficcali-2026/khazana.jpg",
-     "posterSource": "oficial"
+     "posterSource": "tmdb",
+     "lbSlug": "treasure-2025",
+     "tmdb_id": 1431611,
+     "synopsis_en": "A Deaf waste collector in Karachi stumbles upon a shocking discovery at a landfill, leading to a dangerous clash with a ruthless gangster - only to uncover a treasure that changes his life forever.",
+     "title_en": "Treasure",
+     "genre": "Drama"
     },
     {
      "title": "La fuga",
+     "director": "Óscar Gilberto Vesga",
      "country": "Colombia",
      "flags": "🇨🇴",
      "year": 2025,
      "duration": "20 min",
-     "synopsis": "Fermín (ochenta y siete) fue pescador. Está recluido en el asilo de un pueblo y, aunque tiene movilidad reducida, debe huir para cumplirle una promesa al río. Con ayuda de Martina (siete), la hija de la cocinera, diseña un plan para fugarse. El hospicio es caótico y está en serios problemas financieros. Ante la fuga inminente, Martina decide acompañarlo. La pareja de prófugos aborda un camión que la lleva hacia el río, mientras desciende por la cordillera. A través de la ventana del copiloto, Fermín ve personas que desempeñan oficios y saberes extintos y olvidados. Director y guionista Óscar Gilberto Vesga",
+     "synopsis": "Fermín (ochenta y siete) fue pescador. Está recluido en el asilo de un pueblo y, aunque tiene movilidad reducida, debe huir para cumplirle una promesa al río. Con ayuda de Martina (siete), la hija de la cocinera, diseña un plan para fugarse. El hospicio es caótico y está en serios problemas financieros. Ante la fuga inminente, Martina decide acompañarlo. La pareja de prófugos aborda un camión que la lleva hacia el río, mientras desciende por la cordillera. A través de la ventana del copiloto, Fermín ve personas que desempeñan oficios y saberes extintos y olvidados.",
      "synopsis_lang": "es",
      "poster": "/assets/ficcali-2026/la-fuga.jpg",
      "posterSource": "oficial"
     },
     {
+     "title": "Ona",
+     "director": "Matilde Gimeno",
+     "country": "España",
+     "flags": "🇪🇸",
+     "year": 2026,
+     "duration": "4 min",
+     "synopsis": "Para Ona, la vida se ha convertido en una sucesión de malentendidos y conversaciones inconclusas. Arrastrada por un cansancio infinito, vaga por las calles de la ciudad, esforzándose constantemente por adaptarse a un ritmo que no le pertenece. En sus pensamientos percibimos su silenciosa lucha contra un mundo que ignora sus necesidades y malinterpreta su silencio. Lo que Ona reclama parece básico: sentirse presente, ser escuchada, ser mirada a los ojos, aunque sea por un instante. Y, sin embargo, nadie la ha conocido ni ha querido verla de verdad.",
+     "synopsis_lang": "es",
+     "poster": "/assets/ficcali-2026/ona.jpg",
+     "posterSource": "oficial"
+    },
+    {
      "title": "Quinto primera",
+     "director": "Fran Menchón",
      "country": "España",
      "flags": "🇪🇸",
      "year": 2026,
      "duration": "18 min",
-     "synopsis": "Rafael vive encerrado en su mundo, su piso en L’Hospitalet de Llobregat. Cuando su mujer murió, hace varios años, él perdió las ganas de vivir y su espíritu guerrero. Llegó a L’Hospitalet en los años cincuenta, en la primera gran ola de inmigración. Fue un luchador por la democracia, la igualdad, la solidaridad y la justicia durante las décadas del setenta y ochenta, pero ahora, solitario, amargado y xenófobo, reniega del mundo y, en su soledad, les cobra su miseria a todos y, en especial, a los nuevos inmigrantes. Tampoco ayuda su alzhéimer, cada vez más presente. Director y guionista Fran Menchón",
+     "synopsis": "Rafael vive encerrado en su mundo, su piso en L’Hospitalet de Llobregat. Cuando su mujer murió, hace varios años, él perdió las ganas de vivir y su espíritu guerrero. Llegó a L’Hospitalet en los años cincuenta, en la primera gran ola de inmigración. Fue un luchador por la democracia, la igualdad, la solidaridad y la justicia durante las décadas del setenta y ochenta, pero ahora, solitario, amargado y xenófobo, reniega del mundo y, en su soledad, les cobra su miseria a todos y, en especial, a los nuevos inmigrantes. Tampoco ayuda su alzhéimer, cada vez más presente.",
      "synopsis_lang": "es",
      "poster": "/assets/ficcali-2026/quinto-primera.jpg",
      "posterSource": "oficial"
     },
     {
+     "title": "Vértigo",
+     "director": "Jimmy Llamas",
+     "country": "España",
+     "flags": "🇪🇸",
+     "year": 2025,
+     "duration": "4 min",
+     "synopsis": "Vértigo es el relato íntimo de una madre enfrentada al miedo más profundo: la enfermedad de su hijo. Desde una camilla de ecografía, la palabra «vertical» vuelve a sacudir su mundo varias décadas después. Lo que comenzó como una vivencia infantil llena de presión y miedo resurge en una consulta médica, ante un diagnóstico aparentemente fatídico. El vértigo se convierte en una metáfora del temor, de la incertidumbre y del amor incondicional. Entre recuerdos, voces externas y su propio diálogo interior, la protagonista se sumerge en una espiral de culpa, incertidumbre y amor.",
+     "synopsis_lang": "es",
+     "poster": "/assets/ficcali-2026/vertigo.jpg",
+     "posterSource": "oficial"
+    },
+    {
      "title": "¿Dónde está Richard?",
+     "director": "Juan Carlos Álvarez",
      "country": "España",
      "flags": "🇪🇸",
      "year": 2025,
      "duration": "6 min",
-     "synopsis": "Catherine es una periodista sorda que está perdida en el barrio madrileño de Carabanchel. No va a llegar a tiempo a entrevistar a un importante actor estadounidense. Desesperada, le pide ayuda a la Lore, una vecina del barrio que pasaba por allí. Juntas trazan un plan para poder encontrarse con este conocido personaje. Director y guionista Juan Carlos Álvarez",
+     "synopsis": "Catherine es una periodista sorda que está perdida en el barrio madrileño de Carabanchel. No va a llegar a tiempo a entrevistar a un importante actor estadounidense. Desesperada, le pide ayuda a la Lore, una vecina del barrio que pasaba por allí. Juntas trazan un plan para poder encontrarse con este conocido personaje.",
      "synopsis_lang": "es",
      "poster": "/assets/ficcali-2026/donde-esta-richard.jpg",
      "posterSource": "oficial"
@@ -2937,6 +3017,8 @@
    "day_order": 8,
    "venue": "Cine Colombia Unicentro - Cali",
    "has_qa": false,
+   "synopsis": "El Coloso cuenta la vida y el legado de Freddy Rincón, un gigante del fútbol colombiano que conquistó Brasil con su fuerza y su talento, llenó estadios en España y le dio a su país uno de sus goles más inolvidables, contra Alemania. De sus raíces en Buenaventura a convertirse en símbolo de orgullo nacional, Rincón trascendió la cancha para inspirar a toda una generación. Más que un futbolista, fue un faro de esperanza cuya grandeza sigue viva en la memoria de los colombianos.",
+   "synopsis_lang": "es",
    "poster": "/assets/ficcali-2026/el-coloso.jpg",
    "posterSource": "tmdb",
    "_src": {
@@ -2949,48 +3031,64 @@
    "synopsis_en": "“El Coloso” tells the story of the life and legacy of Freddy Rincón, a giant of Colombian soccer who conquered Brazil with his strength and talent, filled stadiums in Spain, and gave his country one of its most unforgettable goals against Germany. From his roots in Buenaventura to becoming a symbol of national pride, Rincón transcended the soccer field to inspire an entire generation. More than just a soccer player, he was a beacon of hope, whose greatness lives on in the memory of Colombians."
   },
   {
-   "title": "Historias del buen Valle",
+   "title": "Historias del buen valle",
    "type": "film",
-   "section": "📽️ Proyecciones",
-   "country": "España",
-   "flags": "🇪🇸",
+   "section": "🎞️ Muestras de Muestras",
+   "director": "José Luis Guerín",
+   "year": 2025,
+   "country": "France, Spain",
+   "flags": "🇫🇷🇪🇸",
    "duration": "120 min",
+   "genre": "Documental",
    "day": "2026-10-24",
    "time": "19:30",
    "day_order": 8,
    "venue": "Cinemateca La Tertulia - Cali",
    "has_qa": false,
-   "synopsis": "De nuevo, José Luis Guerín ofrece una lección de cine documental, como lo reconoció el jurado del Festival de Cine de San Sebastián, que le otorgó su Premio Especial.",
+   "synopsis": "En un barrio periférico donde se encuentran el mundo rural y el urbano, las casas de los primeros migrantes de la posguerra conviven con los nuevos bloques de una ciudad dormitorio donde se concentra la última oleada migratoria. Este rincón humilde se ha convertido en una auténtica aldea global, un retrato sereno y humanista de los conflictos sociales, generacionales e identitarios del mundo actual.",
    "synopsis_lang": "es",
-   "poster": "https://image.tmdb.org/t/p/w500/tRuNQ4ncAUrhfClwL8GJYUE9HYJ.jpg",
+   "poster": "/assets/ficcali-2026/historias-del-buen-valle.jpg",
    "posterSource": "tmdb",
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
     "tarjeta": 14037
-   }
+   },
+   "lbSlug": "good-valley-stories",
+   "tmdb_id": 1457842,
+   "synopsis_en": "In a peripheral neighbourhood, where the rural and urban worlds meet, the houses of the first migrants who arrived after the post-war period coexist with the new blocks of the dormitory city, where the latest wave of migration is concentrated. This humble corner is now an authentic global village. Good Valley Stories is a sum of constructs, of social, generational and identity, urban and ecological conflicts, but it is also a calm and humanistic look at today’s world.",
+   "title_en": "Good Valley Stories",
+   "titulos_anteriores": [
+    "Historias del buen Valle"
+   ]
   },
   {
    "title": "La bola negra",
    "type": "film",
    "section": "📽️ Proyecciones",
+   "director": "Javier Calvo, Javier Ambrossi",
+   "year": 2026,
    "country": "España",
    "flags": "🇪🇸",
    "duration": "155 min",
+   "genre": "Drama",
    "day": "2026-10-24",
    "time": "20:30",
    "day_order": 8,
    "venue": "Cine Colombia Unicentro - Cali",
    "has_qa": false,
-   "synopsis": "LA BOLA NEGRA narra las vidas de tres hombres en tres épocas distintas —1932, 1937 y 2017— cuyas historias se entrelazan a través del deseo, el dolor y la herencia. Inspirada en una de las últimas obras inacabadas de Federico GARCÍA LORCA.",
+   "synopsis": "Las vidas interconectadas de tres hombres en tres épocas distintas, tres existencias íntimamente ligadas por la sexualidad y el deseo, el dolor y la herencia.",
    "synopsis_lang": "es",
-   "poster": "/assets/biff-2026/la-bola-negra.jpg",
-   "posterSource": "oficial",
+   "poster": "/assets/ficcali-2026/la-bola-negra.jpg",
+   "posterSource": "tmdb",
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
     "tarjeta": 14041
-   }
+   },
+   "lbSlug": "la-bola-negra",
+   "tmdb_id": 1422041,
+   "synopsis_en": "The intertwined lives of three men in three different eras, three lives intimately linked by sexuality and desire, pain, and legacy."
   },
   {
    "title": "Para vivir, el implacable tiempo de Pablo Milanés",
@@ -3127,48 +3225,64 @@
    "title_en": "Family Album"
   },
   {
-   "title": "Historias del buen Valle",
+   "title": "Historias del buen valle",
    "type": "film",
-   "section": "📽️ Proyecciones",
-   "country": "España",
-   "flags": "🇪🇸",
+   "section": "🎞️ Muestras de Muestras",
+   "director": "José Luis Guerín",
+   "year": 2025,
+   "country": "France, Spain",
+   "flags": "🇫🇷🇪🇸",
    "duration": "120 min",
+   "genre": "Documental",
    "day": "2026-10-25",
    "time": "20:30",
    "day_order": 9,
    "venue": "Cine Colombia Unicentro - Cali",
    "has_qa": false,
-   "synopsis": "De nuevo, José Luis Guerín ofrece una lección de cine documental, como lo reconoció el jurado del Festival de Cine de San Sebastián, que le otorgó su Premio Especial.",
+   "synopsis": "En un barrio periférico donde se encuentran el mundo rural y el urbano, las casas de los primeros migrantes de la posguerra conviven con los nuevos bloques de una ciudad dormitorio donde se concentra la última oleada migratoria. Este rincón humilde se ha convertido en una auténtica aldea global, un retrato sereno y humanista de los conflictos sociales, generacionales e identitarios del mundo actual.",
    "synopsis_lang": "es",
-   "poster": "https://image.tmdb.org/t/p/w500/tRuNQ4ncAUrhfClwL8GJYUE9HYJ.jpg",
+   "poster": "/assets/ficcali-2026/historias-del-buen-valle.jpg",
    "posterSource": "tmdb",
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
     "tarjeta": 14049
-   }
+   },
+   "lbSlug": "good-valley-stories",
+   "tmdb_id": 1457842,
+   "synopsis_en": "In a peripheral neighbourhood, where the rural and urban worlds meet, the houses of the first migrants who arrived after the post-war period coexist with the new blocks of the dormitory city, where the latest wave of migration is concentrated. This humble corner is now an authentic global village. Good Valley Stories is a sum of constructs, of social, generational and identity, urban and ecological conflicts, but it is also a calm and humanistic look at today’s world.",
+   "title_en": "Good Valley Stories",
+   "titulos_anteriores": [
+    "Historias del buen Valle"
+   ]
   },
   {
    "title": "La bola negra",
    "type": "film",
    "section": "📽️ Proyecciones",
+   "director": "Javier Calvo, Javier Ambrossi",
+   "year": 2026,
    "country": "España",
    "flags": "🇪🇸",
    "duration": "155 min",
+   "genre": "Drama",
    "day": "2026-10-25",
    "time": "20:30",
    "day_order": 9,
    "venue": "Cinemateca La Tertulia - Cali",
    "has_qa": false,
-   "synopsis": "LA BOLA NEGRA narra las vidas de tres hombres en tres épocas distintas —1932, 1937 y 2017— cuyas historias se entrelazan a través del deseo, el dolor y la herencia. Inspirada en una de las últimas obras inacabadas de Federico GARCÍA LORCA.",
+   "synopsis": "Las vidas interconectadas de tres hombres en tres épocas distintas, tres existencias íntimamente ligadas por la sexualidad y el deseo, el dolor y la herencia.",
    "synopsis_lang": "es",
-   "poster": "/assets/biff-2026/la-bola-negra.jpg",
-   "posterSource": "oficial",
+   "poster": "/assets/ficcali-2026/la-bola-negra.jpg",
+   "posterSource": "tmdb",
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
     "tarjeta": 14046
-   }
+   },
+   "lbSlug": "la-bola-negra",
+   "tmdb_id": 1422041,
+   "synopsis_en": "The intertwined lives of three men in three different eras, three lives intimately linked by sexuality and desire, pain, and legacy."
   },
   {
    "title": "La mansión de Araucaima",
@@ -3207,8 +3321,8 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-09T08:32:40",
-  "plan_sha": "54b63bd268851ff8",
+  "fecha": "2026-10-10T08:38:29",
+  "plan_sha": "3cbc8f0090f8219c",
   "paso": 8,
   "cmd": "python3 pipeline/ensamblar.py ficcali-2026"
  }

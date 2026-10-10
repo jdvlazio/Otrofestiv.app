@@ -267,6 +267,7 @@
   "dias_vacios": [],
   "_por_que_sedes": "Tabla canónica: el nombre de la tarjeta → (sede, sala), en el crudo (SEDES). Pines: 28 a mano con dos fuentes, 2 aproximados (Ciudad Pacífica, Alto Meléndez) y la transmisión en línea sin pin. Preguntas al festival en el _pregunta de cada sede del -venues-geo.",
   "_fuentes_versionadas": {
+   "festivals/staging/ficcali-2026-sinopsis.json": "las sinopsis declaradas a mano (texto oficial de ficcali.com o traducción nuestra de la oficial en inglés), cada una con su fuente; la lee enriquecer.py",
    "festivals/staging/ficcali-2026-radar.json": "el volcado del radar #1024, que escribe y relee pipeline/radar.py"
   },
   "_por_que_slot_compartido": "8 oct: la edición de la programación pone «Guapi: ritmo y balsada» (30 min) y «La fabulosa máquina del tiempo» (70 min) a las 6:00 p. m. del 21 en Comfandi — la misma franja; se publica como UNA función (anclaje). Es el único slot compartido de Ficcali. Preguntado al festival."
