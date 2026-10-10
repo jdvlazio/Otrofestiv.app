@@ -124,6 +124,8 @@ ACTIVIDAD = {
     'Tintico Charlado: Mercado MORA — El cine ¿es medio o es fin?': 'charla',
     'Tintico Charlado: Mercado MORA — Antioquia Film Friendly': 'charla',
     'Conversatorio: Secretos de chifonier': 'conversatorio',
+    'Tintico Charlado: Mercado MORA — Secretos de chifonier': 'charla',
+    'Proyección: Mercado MORA — Películas universitarias Universidad ITM y Tecnológico de Artes Débora Arango': 'evento',
     'Mercado MORA — Pitch público Películas en Camino MORA': 'evento',
     'Concierto Central: Edson Velandia': 'evento',
     'CAMINATA FOTOGRÁFICA': 'experiencia',
@@ -210,6 +212,54 @@ PAIS_8MM = 'Colombia'
 DIRECTOR_DECLARADO = {'HDLT': 'Colectivo Artefactum Suba'}
 
 PAIS = {'Brazil': 'Brasil', 'Colombia / Estados Unidos': 'Colombia, Estados Unidos'}
+
+
+# LA ACTUALIZACIÓN DE LOS TINTICOS (p/DeTF7nfDS9t, 9 oct 2026, «Avisos
+# parroquiales: los tinticos charlados tienen actualizaciones»). Cuatro láminas,
+# una por franja de las 2:00 p. m. en el Teatro Municipal Simona Duque:
+#   · sáb 10: «Secretos de chifonier», con los MISMOS invitados que el
+#     conversatorio de las 3:00 p. m. en la Galería San José: es esa charla,
+#     movida al tintico. «Oriente como destino audiovisual» sale;
+#   · dom 11: «El cine ¿es medio o es fin?», igual que antes;
+#   · lun 12: «Antioquia Film Friendly» sale; entra una PROYECCIÓN de películas
+#     universitarias del ITM y del Débora Arango, sin obras nombradas.
+# La lectura a ojo del carrusel no se toca (sigue confirmándose contra su OCR):
+# la actualización se aplica después, y el verificador la importa de acá.
+# Texto de cada lámina, literal. Aplicado el 10 oct (Juan pidió revisar FILCMAR).
+POST_ACTUALIZACION = 'DeTF7nfDS9t'
+ACTUALIZACION = {
+    'Tintico Charlado: Mercado MORA — Oriente como destino audiovisual': {
+        'titulo': 'Tintico Charlado: Mercado MORA — Secretos de chifonier',
+        'credito': 'Louie Cuervo y Anamaria Jaramillo Ceballos', 'lamina': 1},
+    'Conversatorio: Secretos de chifonier': None,
+    'Tintico Charlado: Mercado MORA — Antioquia Film Friendly': {
+        'titulo': 'Proyección: Mercado MORA — Películas universitarias Universidad ITM y '
+                  'Tecnológico de Artes Débora Arango',
+        'credito': None, 'lamina': 3},
+}
+SINOPSIS_ACTUALIZACION = {
+    'Tintico Charlado: Mercado MORA — Secretos de chifonier':
+        '¿Cómo el ajuar del arriero lo protege y proyecta ante el mundo? '
+        'Invitados: Louie Cuervo y Anamaria Jaramillo Ceballos.',
+    'Proyección: Mercado MORA — Películas universitarias Universidad ITM y Tecnológico de Artes Débora Arango':
+        'Acompáñanos a descubrir las nuevas inquietudes y secretos que rodean el cine que se '
+        'está haciendo al día de hoy en las montañas antioqueñas.',
+}
+
+
+def vigentes(ojos):
+    """La lectura del carrusel con la actualización de los tinticos aplicada."""
+    out = []
+    for a in ojos:
+        t = a.get('titulo')
+        if t in ACTUALIZACION:
+            nuevo = ACTUALIZACION[t]
+            if nuevo is None:
+                continue
+            a = {**a, 'titulo': nuevo['titulo'], 'credito': nuevo['credito'],
+                 '_actualizado': {'post': POST_ACTUALIZACION, 'lamina': nuevo['lamina'], 'antes': t}}
+        out.append(a)
+    return out
 
 
 def plano(s):
@@ -309,6 +359,7 @@ def main():
     if fallos:
         sys.exit('✗ la transcripción y la OCR no coinciden:\n  · ' + '\n  · '.join(fallos))
     cat = {plano(o['titulo']): o for o in json.load(io.open(CATALOGO, encoding='utf-8'))['obras']}
+    ojos = vigentes(ojos)
 
     funciones, fuera = [], []
     for a in ojos:
@@ -323,6 +374,10 @@ def main():
                 'acceso': 'Entrada libre',
                 '_src': {'url': f'https://www.instagram.com/p/{POST}/', 'date': '2026-10-01',
                          'lamina': a['lamina']}}
+        if a.get('_actualizado'):
+            u = a['_actualizado']
+            base['_src'] = {'url': f'https://www.instagram.com/p/{u["post"]}/', 'date': '2026-10-09',
+                            'lamina': u['lamina'], 'reemplaza': u['antes']}
         if a.get('edad'):
             base['clasificacion'] = a['edad']
         if a.get('presencia'):
@@ -357,6 +412,8 @@ def main():
                 reg['sinopsis'] = a['texto'].rstrip('.') + '.'
             if t in SINOPSIS:
                 reg['sinopsis'] = SINOPSIS[t]
+            if t in SINOPSIS_ACTUALIZACION:
+                reg['sinopsis'] = SINOPSIS_ACTUALIZACION[t]
             if t in DURACION_DE_OTRA_FUENTE:
                 reg['duracion_min'] = DURACION_DE_OTRA_FUENTE[t]
             reg['hora'] = HORA_DE_OTRA_FUENTE.get((t, a['dia'], a['hora']), reg['hora'])
