@@ -258,6 +258,27 @@
    "posterSource": "tmdb"
   },
   {
+   "titulo": "Esperando a los bárbaros",
+   "tmdb_id": 1712139,
+   "titulo_original": "Περιμένοντας τους Βαρβάρους",
+   "poster_path": "/dJ4XjUDqRJoDJ8BpmGNNS0v6nJV.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "In a city - evoking, without specificity, a city of the Roman Empire - the poem depicts a state of waiting: the arrival of the ‘Barbarians’ has been announced. The city holds its breath in anticipation… But who, exactly, are these “Barbarians”? And what if they do not come?",
+   "genero": "Animación",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 12,
+   "pais_tmdb": "Greece, France",
+   "title_en": "Waiting for the Barbarians",
+   "lbSlug": "waiting-for-the-barbarians-2026",
+   "_verificado": "declarada a mano: Existe en TMDB como «Waiting for the Barbarians» (orig. «Περιμένοντας τους Βαρβάρους»), Georges Sifianos, 2026, GR/FR, 12 min: mismo director y país que publica FICPA. Encontrada por la filmografía del director el 10 oct 2026.",
+   "_director": "Georges Sifianos",
+   "_sondeado": "2026-10-10",
+   "sinopsis": "En una ciudad que evoca, sin precisarla, una ciudad del Imperio romano, el poema retrata un estado de espera: se ha anunciado la llegada de los «bárbaros». La ciudad contiene el aliento… Pero ¿quiénes son, exactamente, esos «bárbaros»? ¿Y si no llegan?",
+   "_sinopsis": "traducción nuestra con contexto (Content Design, 10 oct 2026) de la sinopsis oficial en inglés: https://www.themoviedb.org/movie/1712139",
+   "poster": "/assets/ficpa-2026/esperando-a-los-barbaros.jpg",
+   "posterSource": "tmdb"
+  },
+  {
    "titulo": "Harvey & Maude",
    "tmdb_id": 1688858,
    "titulo_original": "Harvey & Maude",
@@ -751,6 +772,26 @@
    "poster": "/assets/ficpa-2026/en-su-sombra-fertil.jpg",
    "posterSource": "tmdb"
   },
+  "Esperando a los bárbaros": {
+   "tmdb_id": 1712139,
+   "titulo_original": "Περιμένοντας τους Βαρβάρους",
+   "poster_path": "/dJ4XjUDqRJoDJ8BpmGNNS0v6nJV.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "In a city - evoking, without specificity, a city of the Roman Empire - the poem depicts a state of waiting: the arrival of the ‘Barbarians’ has been announced. The city holds its breath in anticipation… But who, exactly, are these “Barbarians”? And what if they do not come?",
+   "genero": "Animación",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 12,
+   "pais_tmdb": "Greece, France",
+   "title_en": "Waiting for the Barbarians",
+   "lbSlug": "waiting-for-the-barbarians-2026",
+   "_verificado": "declarada a mano: Existe en TMDB como «Waiting for the Barbarians» (orig. «Περιμένοντας τους Βαρβάρους»), Georges Sifianos, 2026, GR/FR, 12 min: mismo director y país que publica FICPA. Encontrada por la filmografía del director el 10 oct 2026.",
+   "_director": "Georges Sifianos",
+   "_sondeado": "2026-10-10",
+   "sinopsis": "En una ciudad que evoca, sin precisarla, una ciudad del Imperio romano, el poema retrata un estado de espera: se ha anunciado la llegada de los «bárbaros». La ciudad contiene el aliento… Pero ¿quiénes son, exactamente, esos «bárbaros»? ¿Y si no llegan?",
+   "_sinopsis": "traducción nuestra con contexto (Content Design, 10 oct 2026) de la sinopsis oficial en inglés: https://www.themoviedb.org/movie/1712139",
+   "poster": "/assets/ficpa-2026/esperando-a-los-barbaros.jpg",
+   "posterSource": "tmdb"
+  },
   "Harvey & Maude": {
    "tmdb_id": 1688858,
    "titulo_original": "Harvey & Maude",
@@ -980,7 +1021,6 @@
   "El Reflejo de Doña Gloria",
   "El sueño del Cusillo",
   "Ellir",
-  "Esperando a los bárbaros",
   "Flor de un Día",
   "Hijas de Eva",
   "La Abuela Científica",
@@ -1116,10 +1156,6 @@
   },
   "Ellir": {
    "director": "Laura Quintanilla",
-   "fecha": "2026-10-10"
-  },
-  "Esperando a los bárbaros": {
-   "director": "Georges Sifianos",
    "fecha": "2026-10-10"
   },
   "Flor de un Día": {
