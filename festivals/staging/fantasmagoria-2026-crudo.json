@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "festivalfantasmagoriamedellin.com, noticia de programación (wp-json post 6481)",
-  "capturado": "2026-10-07",
+  "capturado": "2026-10-10",
   "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
   "metodo": "bloques por hora, ficha entre paréntesis, sede y acceso tras «/»"
  },
@@ -286,7 +286,7 @@
    "obras": [
     {
      "titulo": "Line 12",
-     "director": "Saskia Stirn y Christopher Schmier",
+     "director": "Sarah Schulz y Christopher Schmier",
      "pais": "Alemania",
      "anio": 2026,
      "duracion_min": 9
@@ -530,9 +530,9 @@
    "seccion": "Aniversario 40 años",
    "invitados": "Conversatorio sobre vida extraterrestre con Malory Agudelo y Cristian Jaramillo.",
    "sinopsis": "Ocho alienígenas hambrientos llegan a la Tierra buscando alimento. En su camino se encuentran con la familia Brown que, sin saberlo, se convierte en el plato principal de su menú. Sin embargo, los Brown contarán con la ayuda inesperada de una pareja de cazadores intergalácticos… Inspirada en «Gremlins», filme de bichos peligrosos que gozó de considerable apoyo entre los fanáticos del género, conociendo hasta 3 secuelas.",
+   "sala": "Auditorio",
    "has_qa": true,
-   "qa_type": "team",
-   "sala": "Auditorio"
+   "qa_type": "team"
   },
   {
    "dia": "2026-10-17",
@@ -762,8 +762,8 @@
     "base_version": 2,
     "id": "2026-10-18-19-00-the-x-files-y-lectura-de-la-verdad-esta-ahi-afuera-antologia-de-cuentos"
    },
-   "duracion_min": 60,
-   "sala": "Auditorio"
+   "sala": "Auditorio",
+   "duracion_min": 60
   },
   {
    "dia": "2026-10-18",
@@ -946,9 +946,9 @@
    "event_kind": "conversatorio",
    "sinopsis": "El terror análogico, entre la estética y el medio al VHS y a los programas de televisión con Cristian Jaramillo.",
    "duracion_min": 60,
+   "sala": "Auditorio Santa Rita",
    "has_qa": true,
-   "qa_type": "team",
-   "sala": "Auditorio Santa Rita"
+   "qa_type": "team"
   },
   {
    "dia": "2026-10-20",
@@ -1005,10 +1005,10 @@
     "base_version": 2,
     "id": "2026-10-20-17-30-conversatorio-con-alberto-romo-y-andres-buitrago"
    },
+   "sala": "Plazoleta de la Luz",
    "has_qa": true,
    "qa_type": "team",
-   "duracion_min": 30,
-   "sala": "Plazoleta de la Luz"
+   "duracion_min": 30
   },
   {
    "dia": "2026-10-20",
@@ -1091,9 +1091,9 @@
    "duracion_min": 70,
    "genero": "Documental",
    "seccion": "Muestra Catalana",
+   "sala": "Sala 2",
    "has_qa": true,
-   "qa_type": "team",
-   "sala": "Sala 2"
+   "qa_type": "team"
   },
   {
    "dia": "2026-10-20",
@@ -1182,9 +1182,9 @@
    "seccion": "Jornada Fantasmeet",
    "sinopsis": "Muestra Cortometrajes universitarios de Medellín + Conversatorio con los directores y Alberto Romo.",
    "duracion_min": 90,
+   "sala": "Auditorio",
    "has_qa": true,
-   "qa_type": "team",
-   "sala": "Auditorio"
+   "qa_type": "team"
   },
   {
    "dia": "2026-10-21",
@@ -1203,9 +1203,9 @@
    "event_kind": "conversatorio",
    "sinopsis": "De Cinema Zombie a Zinema Zombie con Jose Andrés Gómez, Andrés Buitrago y Pablo Marín.",
    "duracion_min": 60,
+   "sala": "Auditorio",
    "has_qa": true,
-   "qa_type": "team",
-   "sala": "Auditorio"
+   "qa_type": "team"
   },
   {
    "dia": "2026-10-21",
@@ -1426,23 +1426,24 @@
     "base_version": 2,
     "id": "2026-10-22-17-00-kondor-el-mago-el-cigarro-mortal-de-jairo-pinilla"
    },
+   "sala": "Mediateca",
    "has_qa": true,
    "qa_type": "team",
-   "duracion_min": 60,
-   "sala": "Mediateca",
    "obras": [
     {
      "titulo": "Kondor, El Mago",
      "director": "Jairo Pinilla",
      "pais": "Colombia",
-     "anio": 1975
+     "anio": 1975,
+     "duracion_min": 12
     },
     {
      "titulo": "El Cigarro Mortal",
      "director": "Jairo Pinilla",
      "pais": "Colombia"
     }
-   ]
+   ],
+   "duracion_min": 60
   },
   {
    "titulo": "Fremde Welten: los extraños universos de Tilman Singer",
@@ -1832,7 +1833,7 @@
    "obras": [
     {
      "titulo": "Line 12",
-     "director": "Saskia Stirn y Christopher Schmier",
+     "director": "Sarah Schulz y Christopher Schmier",
      "pais": "Alemania",
      "anio": 2026,
      "duracion_min": 9
@@ -2285,12 +2286,40 @@
   "url": "https://www.cartelerafantasmagoria.fan/",
   "version": 2,
   "creada": "2026-10-06T23:59:26.792836+00:00",
-  "nuevas": [],
-  "movidas": [
-   "Torneos TCG: One Piece y Pokemón TCG: 2026-10-16 19:00 Draco Hobby → 2026-10-16 18:00 Draco Hobby",
-   "Schichinin No Samurai (Seven Samurai): 2026-10-16 19:00 Centro Colombo Americano Sala 1 → 2026-10-16 18:30 Centro Colombo Americano Sala 2",
-   "Almas en pena: fiesta de disfraces, baile de á: 2026-10-16 21:30 Silencio → 2026-10-16 22:00 Silencio"
+  "nuevas": [
+   "2026-10-14 13:00 Taller Fantasmagoritos con la Corporación Trama",
+   "2026-10-14 21:00 Charla virtual: María, Rosa y Sina. Las murallas de la desig",
+   "2026-10-16 13:00 Taller Fantasmagoritos con la Corporación Trama",
+   "2026-10-16 22:00 Almas en pena: fiesta de disfraces, baile de ánimas y sustos",
+   "2026-10-18 19:00 The X Files y Lectura de La Verdad Está Ahí Afuera: Antologí",
+   "2026-10-20 17:30 Conversatorio con Alberto Romo y Andrés Buitrago",
+   "2026-10-21 13:00 Cortometrajes y Taller Fantasmagoritos con la Corporación Tr",
+   "2026-10-22 17:00 Fremde Welten: los extraños universos de Tilman Singer",
+   "2026-10-22 17:00 Kondor, El Mago + El Cigarro Mortal de Jairo Pinilla",
+   "2026-10-23 13:00 Cortometrajes en competencia: deliberación del Jurado Infant",
+   "2026-10-24 15:00 Presentación de Libros Ediciones Sociedad Fantasmagoría: Col"
   ],
-  "fuera_de_la_base": []
+  "movidas": [
+   "Decorado: 2026-10-15 19:00 Centro Colombo Americano → 2026-10-15 19:00 Centro Colombo Americano Sala 1",
+   "Schichinin No Samurai (Seven Samurai): 2026-10-16 18:30 Centro Colombo Americano → 2026-10-16 18:30 Centro Colombo Americano Sala 2",
+   "Critters: 2026-10-18 19:00 Planetario de Medellín Auditorio → 2026-10-17 19:00 Planetario de Medellín Auditorio",
+   "Pura Sangre: 2026-10-20 18:30 Universidad Nacional Plazoleta de la Luz → 2026-10-20 18:00 Universidad Nacional Plazoleta de la Luz",
+   "Taller animación análoga con Óscar Triana: 2026-10-21 10:00 Parque Biblioteca Belén → 2026-10-21 10:00 Parque Biblioteca Belén Auditorio",
+   "De Cinema Zombie a Zinema Zombie: 2026-10-21 18:00 Cámara de Comercio de Medellín Auditorio → 2026-10-21 15:30 Cámara de Comercio de Medellín Auditorio",
+   "Ana Rosa: 2026-10-21 17:00 Centro Colombo Americano Sala X → 2026-10-21 17:00 Centro Colombo Americano",
+   "Charla: De las Trincheras del Somme a la caída: 2026-10-21 17:00 La Grieta → 2026-10-21 17:00 Casa Libre",
+   "Presentaciones de productoras/colectivos y Mad: 2026-10-21 15:30 Cámara de Comercio de Medellín Auditorio → 2026-10-21 17:00 Cámara de Comercio de Medellín Auditorio",
+   "Taller: Parche de collage – Construcción de fo: 2026-10-21 18:00 La Grieta → 2026-10-21 18:00 Casa Libre",
+   "Club de la Medianoche: Club de lectura: 2026-10-22 18:00 Universidad Nacional Plaza de la Biblioteca → 2026-10-22 18:00 Universidad Nacional Jardín Bloque 41",
+   "Motherwitch: 2026-10-23 16:00 Centro Colombo Americano → 2026-10-23 16:00 Centro Colombo Americano Sala 1",
+   "Asedios y otras tácticas militares en la saga : 2026-10-23 16:00 Librería Antimateria → 2026-10-23 17:00 Librería Antimateria",
+   "Selección Oficial de Cortometrajes de Animació: 2026-10-23 17:30 Librería Antimateria → 2026-10-23 18:30 Librería Antimateria",
+   "Manual Para Invocar Fantasmas: 2026-10-23 19:00 Centro Colombo Americano Sala X → 2026-10-23 19:00 Centro Colombo Americano",
+   "The Craft: 2026-10-24 19:30 Centro Colombo Americano Sala X → 2026-10-24 19:30 Centro Colombo Americano"
+  ],
+  "fuera_de_la_base": [
+   "2026-10-16 22:00 Fiesta Gótico Tropical",
+   "2026-10-17 19:00 Expediente Fantasmagoría – Contacto"
+  ]
  }
 }
