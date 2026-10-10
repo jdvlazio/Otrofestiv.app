@@ -256,19 +256,23 @@ test('PS07 — el export dibuja los afiches, no sus reemplazos', async ({ page }
     };
     const bt = document.createElement('button'); bt.setAttribute('data-action', 'shareDiary');
     document.body.appendChild(bt); bt.click(); bt.remove();
-    await new Promise(r => setTimeout(r, 6000));
+    // esperar la SEÑAL (la imagen), no un tiempo fijo: con fuentes y afiches de
+    // otro origen el carrusel (#1066) a veces pasaba de los 6 s del reloj viejo.
+    for (let i = 0; i < 150 && !blob; i++) await new Promise(r => setTimeout(r, 100));
     HTMLCanvasElement.prototype.toBlob = origTB;
     if (!blob) return { pintados, sinBlob: true, toast: document.getElementById('prio-toast')?.textContent };
 
     const bmp = await createImageBitmap(blob);
     const cv = document.createElement('canvas'); cv.width = bmp.width; cv.height = bmp.height;
     const cx = cv.getContext('2d'); cx.drawImage(bmp, 0, 0);
-    const COLS = 3, PAD = 64, HDR = 240, GAP = 24;
-    const cw = Math.floor((bmp.width - PAD * 2 - GAP * (COLS - 1)) / COLS), ch = Math.round(cw * 1.5);
+    // Geometría del carrusel 4:5 (#1066), pedida a su dueño: no se copia acá.
+    const S = await import('/src/controller/story.js');
+    const G = S.geometriaGrilla(3), HDR = Math.round(G.y0), GAP = 14;
+    const cw = Math.floor(G.cw), ch = Math.round(G.ch);
     const celdas = [];
     for (let i = 0; i < 3; i++) {
-      const col = i % COLS, row = Math.floor(i / COLS);
-      const d = cx.getImageData(PAD + col * (cw + GAP) + 4, HDR + row * (ch + GAP) + 4, cw - 8, ch - 8).data;
+      const col = i % G.cols, row = Math.floor(i / G.cols);
+      const d = cx.getImageData(Math.round(G.x0 + col * (G.cw + GAP)) + 4, HDR + row * (ch + GAP) + 4, cw - 8, Math.round(ch * 0.6)).data;
       const s = new Set();
       for (let p = 0; p < d.length; p += 4 * 97) s.add(`${d[p]},${d[p + 1]},${d[p + 2]}`);
       celdas.push(s.size);

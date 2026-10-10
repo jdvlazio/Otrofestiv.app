@@ -14,9 +14,11 @@ import { parseProgramTitle } from './components.js';
 // (Juan, 9 oct 2026: «se respeta lo visto de lo asistido»): «Viste 14 obras».
 // Lo asistido (charlas, talleres, ceremonias) va a la línea del recorrido. Si no
 // viste ninguna obra y solo fuiste a actividades: «Fuiste a 3 actividades».
-export function recapTitular(rec){
-  if(rec.peliculas) return {verbo:t('plan_viste_n'), n:rec.peliculas, unidad:t(rec.peliculas===1?'recap_u_obra':'recap_u_obras')};
-  return {verbo:t('recap_fuiste_a'), n:rec.eventos, unidad:t(rec.eventos===1?'recap_u_actividad':'recap_u_actividades')};
+// `yo`: la HISTORIA habla en primera persona (#1064) — la publica el asistente;
+// la pantalla le habla a él («Viste»), la imagen habla por él («Vi»).
+export function recapTitular(rec, yo=false){
+  if(rec.peliculas) return {verbo:t(yo?'story_vi':'plan_viste_n'), n:rec.peliculas, unidad:t(rec.peliculas===1?'recap_u_obra':'recap_u_obras')};
+  return {verbo:t(yo?'story_fui_a':'recap_fuiste_a'), n:rec.eventos, unidad:t(rec.eventos===1?'recap_u_actividad':'recap_u_actividades')};
 }
 
 // recorridoPartes(rec) → [{n, unidad}] en orden fijo: días · sedes|ciudades ·

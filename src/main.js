@@ -147,7 +147,7 @@ import {
 import {
   sharePlan, shareDiary, exportICS,
 } from './controller/share.js';
-import { abrirCompartirFestival } from './controller/story.js';
+import { abrirCompartirFestival, abrirCompartirPlan } from './controller/story.js';
 
 // ── Step 7e: controller/poster-err.js ────────────────────────────────────────────
 import {
@@ -301,6 +301,7 @@ const ACTION_REGISTRY = {
   closePalmares:       ()      => closePalmares(),
   shareDiary:          ()      => shareDiary(),
   abrirCompartirFestival: ()    => abrirCompartirFestival(),
+  abrirCompartirPlan:    ()    => abrirCompartirPlan(),
   scrollToSuggestions: ()      => _scrollToSuggestions(),
   removeConflictModal: ()      => _removeConflictModal(),
   scrollToTop:         ()      => _scrollToTop(),
@@ -504,7 +505,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202610100936';
+const BUILD_VERSION='202610101026';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
