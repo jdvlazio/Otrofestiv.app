@@ -1779,7 +1779,7 @@
      "posterSource": "tmdb",
      "lbSlug": "mermaids-in-the-mist",
      "tmdb_id": 1117116,
-     "synopsis": "Mariela luchará contra la creencia del pueblo de que una sirena se está llevando a los jóvenes y, en el camino, descubrirá al verdadero monstruo.",
+     "synopsis": "Mariela se enfrenta a la creencia del pueblo de que una sirena se está llevando a los jóvenes y, en el camino, descubre al verdadero monstruo.",
      "synopsis_en": "Mariela will fight against the belief of the people that a mermaid is leading to young people, discovering the true monster on her journey.",
      "title_en": "Mermaids in the Mist",
      "genre": "Drama",
@@ -1844,7 +1844,7 @@
      "duration": "13 min",
      "lbSlug": "hare",
      "tmdb_id": 1392101,
-     "synopsis": "Valentina y Pilar, dos adolescentes de contextos socioculturales distintos, viven un hecho violento que las cambiará para siempre: rompe las barreras que las separan y las hace habitar un mismo cuerpo herido.",
+     "synopsis": "Valentina y Pilar, dos adolescentes de mundos sociales distintos, viven un hecho violento que las cambia para siempre: rompe las barreras que las separaban y las hace habitar un mismo cuerpo herido.",
      "synopsis_en": "The short film follows Valentina and Pilar, two young teenagers from different socio-cultural contexts who will experience a violent event that will change them forever, breaking the barriers that distance them and making them live in the same wounded body.",
      "title_en": "Hare",
      "synopsis_lang": "es"
@@ -3321,7 +3321,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-10T08:38:29",
+  "fecha": "2026-10-10T11:05:57",
   "plan_sha": "3cbc8f0090f8219c",
   "paso": 8,
   "cmd": "python3 pipeline/ensamblar.py ficcali-2026"
