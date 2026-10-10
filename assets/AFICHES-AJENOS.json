@@ -5,6 +5,13 @@
   "regla": "un afiche ajeno se publica solo con veredicto «afiche» y huella vigente"
  },
  "afiches": {
+  "/assets/cineautopsia/atmosphaira.jpg": {
+   "sha1": "67bcdb696a54acc52415dba639953caeaec7c1ab",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficpa-2026"
+   ]
+  },
   "/assets/cineautopsia/somnolitico.jpg": {
    "sha1": "866286218380149b0d207e30ddc414df95615649",
    "veredicto": "afiche",
