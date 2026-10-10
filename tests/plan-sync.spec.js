@@ -256,7 +256,9 @@ test('PS07 — el export dibuja los afiches, no sus reemplazos', async ({ page }
     };
     const bt = document.createElement('button'); bt.setAttribute('data-action', 'shareDiary');
     document.body.appendChild(bt); bt.click(); bt.remove();
-    await new Promise(r => setTimeout(r, 6000));
+    // esperar la SEÑAL (la imagen), no un tiempo fijo: con fuentes y afiches de
+    // otro origen el carrusel (#1066) a veces pasaba de los 6 s del reloj viejo.
+    for (let i = 0; i < 150 && !blob; i++) await new Promise(r => setTimeout(r, 100));
     HTMLCanvasElement.prototype.toBlob = origTB;
     if (!blob) return { pintados, sinBlob: true, toast: document.getElementById('prio-toast')?.textContent };
 

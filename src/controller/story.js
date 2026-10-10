@@ -5,8 +5,8 @@
 //   y 358  titular 112px: verbo hueso + cifra y unidad en ámbar
 //   y 618  recorrido en una línea: números 700 hueso, unidades 500 gris
 //   y 698  mosaico de tarjetas redondeadas 2:3, ≤470 de alto (geometriaMosaico)
-//   +62    etiqueta («Mis mejores» / «No me las pierdo») + tarjetas
-//   +72    wordmark + otrofestiv.app — todo desde el final REAL del mosaico
+//   +56    etiqueta («Mis mejores» / «No me las pierdo») + tarjetas
+//   +120   wordmark + otrofestiv.app — todo desde el final REAL del mosaico
 //   y 1440–1920 LIBRE: ahí el usuario pone el sticker del festival.
 // Sin nombre de usuario. Fuente de marca cargada ANTES de dibujar (está
 // autoalojada; sin esperar, el canvas pinta con la del sistema).
@@ -15,7 +15,7 @@ import { FESTIVAL_CONFIG } from '../config.js';
 import { festivalRecap, planRecap } from '../domain/festival.js';
 import { recapTitular, recorridoPartes } from '../view/recap.js';
 import { parseProgramTitle, _sectionColor, makeProgramPoster } from '../view/components.js';
-import { starsText, posterModel, itemPosterParts, dayLabel } from '../view/helpers.js';
+import { starsText, posterModel, itemPosterParts, dayLabel, _langDates } from '../view/helpers.js';
 import { state } from '../state/state.js';
 import { showToast, showActionModal } from '../view/feedback.js';
 import { _esRevisionActiva } from '../view/sheets.js';
@@ -77,12 +77,12 @@ export function geometriaMosaico(n, altoMax=470){
 // Retícula vertical (maqueta con guías de #1064, bajada 50 px el 10 oct: la
 // franja superior —~250 px, foto y nombre de quien publica— tapaba la
 // acreditación): el mosaico arranca en Y_MOS;
-// debajo, etiqueta (+62), tarjetas (+33, 93 de alto, filas cada 120) y el
-// wordmark (+72 desde el final de lo que haya arriba). Todo termina antes de
+// debajo, etiqueta (+56), tarjetas (+30, 93 de alto, filas cada 120) y el
+// wordmark (+120 desde el final de lo que haya arriba). Todo termina antes de
 // Y_LIBRE: el cuarto inferior es del sticker del festival.
-const Y_MOS=698, Y_LIBRE=1428, G_MARCA=72; // 72: con 1 fila de tarjetas el mosaico conserva sus 470
+const Y_MOS=698, Y_LIBRE=1428, G_MARCA=120; // 120: aire entre las tarjetas y el wordmark (Juan, 10 oct: «muy poca»); con 1 fila el mosaico aún entra 14 → 7+7
 function _altoBloque(filasTarjetas){
-  return filasTarjetas ? 62+33+filasTarjetas*93+(filasTarjetas-1)*27+G_MARCA : G_MARCA;
+  return filasTarjetas ? 56+30+filasTarjetas*93+(filasTarjetas-1)*27+G_MARCA : G_MARCA;
 }
 function _altoMosaico(filasTarjetas){
   return Math.min(470, Y_LIBRE-Y_MOS-_altoBloque(filasTarjetas));
@@ -100,13 +100,13 @@ export async function shareStory(){
 
   // «Mis mejores» (primera persona: la historia la publica el asistente)
   if(rec.top.length){
-    const ye=yMos+62;
+    const ye=yMos+56;
     _tracked(x,t('story_mis_mejores').toUpperCase(),M,ye,`700 22px ${F}`,GRIS,0.32*22);
     const topAfs=rec.top.map(_modeloAfiche);
     const tops=await _cargarConRespaldo(topAfs);
     const col=(W-M*2)/3;
     rec.top.forEach((o,i)=>{
-      const bx=M+i*col, by=ye+33; yFin=by+93;
+      const bx=M+i*col, by=ye+30; yFin=by+93;
       x.font=`800 40px ${F}`; x.fillStyle=AMBAR; x.fillText(String(i+1),bx,by+60);
       const px=bx+44; _rr(x,px,by,62,93,8); x.save(); x.clip(); _afiche(x,topAfs[i],tops[i],px,by,62,93); x.restore();
       const tx=px+80, tw=col-(tx-bx)-12;
@@ -139,14 +139,14 @@ export async function shareStoryPlan(){
   let yFin=yMos;
 
   if(pr.prios.length){
-    const ye=yMos+62;
+    const ye=yMos+56;
     _tracked(x,t('story_no_me_las_pierdo').toUpperCase(),M,ye,`700 22px ${F}`,GRIS,0.32*22);
     const afs=pr.prios.map(p=>_modeloAfiche({film:p.film}));
     const ims=await _cargarConRespaldo(afs);
     // Hasta 3 por fila (el máximo de prioridades es 5 → dos filas a lo sumo).
     const col=(W-M*2)/3;
     pr.prios.forEach((p,i)=>{
-      const bx=M+(i%3)*col, by=ye+33+Math.floor(i/3)*120; yFin=Math.max(yFin,by+93);
+      const bx=M+(i%3)*col, by=ye+30+Math.floor(i/3)*120; yFin=Math.max(yFin,by+93);
       _rr(x,bx,by,62,93,8); x.save(); x.clip(); _afiche(x,afs[i],ims[i],bx,by,62,93); x.restore();
       const tx=bx+80, tw=col-80-12;
       const {displayTitle:dt}=parseProgramTitle(p.title);
@@ -169,8 +169,7 @@ async function _lienzo(T, partes){
   _fondo(x,W,H);
   x.textBaseline='alphabetic'; x.textAlign='left';
   // acreditación: nombre · ciudad, con tracking
-  const _cred=[cfg.name||'', cfg.city||''].filter(Boolean).join(' · ').toUpperCase();
-  _tracked(x,_cred,M,286,`700 26px ${F}`,GRIS,0.32*26);
+  _tracked(x,credito(cfg),M,286,`700 26px ${F}`,GRIS,0.32*26);
   // titular
   x.font=`800 112px ${F}`; x.fillStyle=HUESO; x.fillText(T.verbo,M,358+96);
   x.fillStyle=AMBAR; x.fillText(`${T.n} ${T.unidad}.`,M,358+96+116);
@@ -207,6 +206,14 @@ async function _mosaico(x, obras, altoMax){
     }
   });
   return y0+geo.filas*geo.ch+(geo.filas-1)*geo.gap;
+}
+
+// _credito — «NOMBRE · CIUDAD» sin repetir la ciudad cuando el nombre ya la dice
+// (Juan, 10 oct: «Festival de Cine de Jardín · Jardín»).
+function _sinTildes(v){ return String(v||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase(); }
+export function credito(cfg){
+  const n=cfg.name||'', c=cfg.city||'';
+  return (c&&!_sinTildes(n).includes(_sinTildes(c))?`${n} · ${c}`:n).toUpperCase();
 }
 
 // _fondo — el mismo fondo para la historia y la Grilla (Juan, 10 oct: «mejor
@@ -362,7 +369,7 @@ async function _cargarConRespaldo(afs){
 // PAREJO (Juan, 10 oct: en un carrusel cada lámina se ve sola — 18 → 9+9).
 // Afiches: los mismos dueños que la historia (_modeloAfiche) con respaldo
 // generativo para lo que no se puede dibujar (_cargarConRespaldo).
-const G_W=1080, G_H=1350, G_P=80, G_GAP=14, G_RAD=16, G_Y0=222, G_FIN=1250, G_MAX=12;
+const G_W=1080, G_H=1350, G_P=84, G_GAP=14, G_RAD=16, G_Y0=236, G_FIN=1250, G_MAX=12;
 
 // geometriaGrilla(k) — cómo se acomodan k tarjetas en una lámina 4:5.
 //   ≤6 → 3 columnas grandes; 9 → 3×3; el resto → 4 columnas. Centrada.
@@ -402,12 +409,18 @@ export async function shareGrilla(){
     const x=c.getContext('2d');
     _fondo(x,G_W,G_H);
     x.textBaseline='alphabetic'; x.textAlign='left';
-    const _cred=[cfg.name||'', cfg.city||''].filter(Boolean).join(' · ').toUpperCase();
-    _tracked(x,_cred,G_P,92,`700 24px ${F}`,GRIS,0.32*24);
-    if(reparto.length>1){ x.font=`600 24px ${F}`; x.fillStyle=GRIS; x.textAlign='right'; x.fillText(`${L+1}/${reparto.length}`,G_W-G_P,92); x.textAlign='left'; }
-    x.font=`800 76px ${F}`; x.fillStyle=HUESO; x.fillText(T.verbo+' ',G_P,186);
-    const wv=x.measureText(T.verbo+' ').width;
-    x.fillStyle=AMBAR; x.fillText(`${T.n} ${T.unidad}.`,G_P+wv,186);
+    // Jerarquía del Diario de siempre (Juan, 10 oct): DIARIO ámbar → el nombre
+    // del festival → la cuenta y la fecha. La cuenta en ámbar y sin «Vi»: la
+    // etiqueta DIARIO ya dice que es lo visto.
+    _tracked(x,t('diary_eyebrow').toUpperCase(),G_P,84,`700 24px ${F}`,AMBAR,0.32*24);
+    if(reparto.length>1){ x.font=`600 24px ${F}`; x.fillStyle=GRIS; x.textAlign='right'; x.fillText(`${L+1}/${reparto.length}`,G_W-G_P,84); x.textAlign='left'; }
+    let fz=60; x.font=`800 ${fz}px ${F}`;
+    while(x.measureText(cfg.name||'').width>G_W-G_P*2&&fz>40){ fz-=2; x.font=`800 ${fz}px ${F}`; }
+    x.fillStyle=HUESO; x.fillText(cfg.name||'',G_P,150);
+    const cuenta=`${T.n} ${T.unidad}`;
+    x.font=`800 36px ${F}`; x.fillStyle=AMBAR; x.fillText(cuenta,G_P,198);
+    const wc=x.measureText(cuenta).width, fecha=_langDates(cfg);
+    if(fecha){ x.font=`500 30px ${F}`; x.fillStyle=GRIS; x.fillText(` · ${String(fecha).toUpperCase()}`,G_P+wc,198); }
     const geo=geometriaGrilla(k);
     for(let j=0;j<k;j++){
       const i=k0+j, o=obras[i];

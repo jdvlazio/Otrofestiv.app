@@ -185,8 +185,10 @@ test('TF5 — Grilla: carrusel 4:5 repartido parejo y compartido de una vez', as
     const cabe = [1, 3, 6, 7, 9, 12].every(k => { const g = S.geometriaGrilla(k);
       return g.y0 >= 222 && g.y0 + g.filas * g.ch + (g.filas - 1) * 14 <= 1250 && g.x0 >= 79 && g.cols * g.cw + (g.cols - 1) * 14 + g.x0 * 2 <= 1080.5; });
     return { dims, nombres: enviado ? enviado.files.map(f => f.name) : [],
+      cred: [S.credito({ name: 'Festival de Cine de Jardín', city: 'Jardín' }), S.credito({ name: 'BIFF', city: 'Bogotá' })],
       r18: S.repartoLaminas(18), r12: S.repartoLaminas(12), r13: S.repartoLaminas(13), r25: S.repartoLaminas(25), cabe };
   });
+  expect(r.cred, 'la ciudad no se repite si el nombre ya la dice').toEqual(['FESTIVAL DE CINE DE JARDÍN', 'BIFF · BOGOTÁ']);
   expect(r.r18, '18 → 9+9').toEqual([9, 9]);
   expect(r.r12, 'hasta 12, una lámina').toEqual([12]);
   expect(r.r13).toEqual([7, 6]);
