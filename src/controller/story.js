@@ -316,8 +316,7 @@ function _cover(x,im,cx,cy,cw,ch,title){
 // para cortos de un programa — docs/POSTERS.md):
 //   · original 2:3 → a sangre en la celda
 //   · fotograma 16:9 (editorial) → ENTERO, nunca recortado (regla «16:9
-//     intacto»): en la posición del marco editorial de la app, sobre fondo cálido
-//     con el filete del color de la sección
+//     intacto»), centrado sobre fondo cálido, sin filete
 //   · sin imagen → el póster generativo de la app (el mismo de la ficha)
 function _modeloAfiche(o){
   const f=o.film||{};
@@ -338,9 +337,9 @@ function _afiche(x,a,im,cx,cy,cw,ch){
   if(a&&a.kind==='editorial'&&im&&im.width){
     x.save(); x.beginPath(); x.rect(cx,cy,cw,ch); x.clip();
     x.fillStyle='#1B1917'; x.fillRect(cx,cy,cw,ch);
-    // Forma B de la app: un campo 16:9 de todo el ancho, a 3,5/12 del alto.
-    const sh=cw*9/16, sy=cy+ch*3.5/12;
-    x.fillStyle=a.accent||AMBAR; x.fillRect(cx,sy-Math.max(2,cw*0.02),cw,Math.max(2,cw*0.02));
+    // El fotograma ENTERO (regla «16:9 intacto») y centrado en la tarjeta, sin
+    // la línea de color: en tamaño chico la línea lo hacía ver roto (Juan, 10 oct).
+    const sh=cw*9/16, sy=cy+(ch-sh)/2;
     const s=Math.min(cw/im.width, sh/im.height), dw=im.width*s, dh=im.height*s;
     x.drawImage(im,cx+(cw-dw)/2,sy+(sh-dh)/2,dw,dh);
     x.restore();
