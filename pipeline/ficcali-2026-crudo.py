@@ -86,6 +86,7 @@ SECCION = {
     'ZOOM': 'Zoom',
     'Foco: Claire Simon': 'Foco Claire Simon',
     '¡Que viva la música!': '¡Que viva la música!',
+    '¡Que Viva la Música!': '¡Que viva la música!',   # la subpágina del 10 oct, otra caja
 }
 # LA SEDE: el nombre de la tarjeta → (sede, sala). Investigada sede por sede
 # (7 oct) con dos fuentes por pin; la página de sedes 2025 del festival (Wayback)
@@ -187,7 +188,16 @@ DATOS_TARJETA = {14002: {'anio': 1963},
                  14025: {'director': 'José Luis Guerín', 'anio': 2001},            # En construcción
                  14001: {'director': 'Eliza Capai', 'anio': 2026},                 # La fabulosa máquina del tiempo
                  13904: {'director': 'Eliza Capai', 'anio': 2026},
-                 14038: {'director': 'José Varón', 'anio': 2025}}             # El Coloso (sáb 24)
+                 14038: {'director': 'José Varón', 'anio': 2025},             # El Coloso (sáb 24)
+                 # LA TARJETA CALLA DIRECTOR Y AÑO y la misma obra ya está publicada,
+                 # completa, en otro festival nuestro; confirmado contra la ficha
+                 # TMDB (director, año y duración) el 10 oct 2026
+                 14003: {'director': 'Lisandro Alonso', 'anio': 2026},       # La libertad doble (BIFF 12)
+                 14018: {'director': 'Augusto Zegarra', 'anio': 2025},       # Runa Simi (AFF 2026)
+                 14037: {'director': 'José Luis Guerín', 'anio': 2025},      # Historias del buen Valle (FICCI 65)
+                 14049: {'director': 'José Luis Guerín', 'anio': 2025},
+                 14041: {'director': 'Javier Calvo, Javier Ambrossi', 'anio': 2026},  # La bola negra (BIFF 12, TIFF)
+                 14046: {'director': 'Javier Calvo, Javier Ambrossi', 'anio': 2026}}
 OBRAS_TARJETA = {
     14016: [{'titulo': 'Rodilla Negra', 'pais': 'Colombia', 'director': 'Carlos Mayolo', 'anio': 1975, 'duracion_min': 14},
             {'titulo': 'El Coloso', 'pais': 'Colombia', 'director': 'José Varón', 'anio': 2025, 'duracion_min': 70}],
@@ -289,8 +299,15 @@ def main():
     fallos, funciones, fuera = [], [], []
 
 
+    # LA SECCIÓN DECLARADA PRIMERO (10 oct 2026): la web sumó una subpágina
+    # «Primer plano» que también enlaza obras de Zoom y de Muestras de Muestras.
+    # Una obra listada en varias va en la primera que el plan ya declara; una
+    # sección nueva entra solo cuando Juan la declara en el plan.
+    _plan_secs = set(json.load(io.open(f'{REPO}/pipeline/ficcali-2026.plan.json', encoding='utf-8'))['festival']['secciones'])
+
     def seccion_de(o):
-        return SECCION.get(o['secciones'][0], o['secciones'][0])
+        cands = [SECCION.get(x, x) for x in o['secciones']]
+        return next((c for c in cands if c in _plan_secs), cands[0])
 
     for x in T:
         if not (DESDE <= x['dia'] <= HASTA):
@@ -350,6 +367,11 @@ def main():
             r.update({'titulo': nombre, 'seccion': SECCION_TARJETA.get(cat, 'Proyecciones')})
         elif o and es_proy:
             r.update(_obra(o))
+            # lo que la ficha calla y la tarjeta declara (DATOS_TARJETA) se suma;
+            # nunca pisa un dato de la ficha
+            for k_, v_ in (DATOS_TARJETA.get(x['id']) or {}).items():
+                if not r.get(k_):
+                    r[k_] = v_
             r['seccion'] = seccion_de(o)
             if plano(o['titulo']) != k:
                 r['titulo_es'] = nombre
