@@ -361,3 +361,38 @@ test('T188 — pedir opciones deja constancia de que acá ya se calculó', async
   expect(r.despues.estado, 'pedir opciones la pone').toBe(true);
   expect(r.despues.disco, 'y sobrevive a la recarga (va a disco)').toBe(true);
 });
+
+// T189 — la prioridad se ve en el plan (#1060). Fjord es prioridad y sus dos
+// funciones vivas caen en noches bloqueadas: la línea dice «2 de 3», Fjord
+// encabeza «No incluidas» con su marca y la razón es la disponibilidad, no
+// «Ya pasó» (que era lo que decía). Papaya, dentro, lleva la marca en su fila.
+test('T189 — prioridades: cuántas entraron, marca en la fila y razón de disponibilidad', async ({ page }) => {
+  await enterFestival(page, 'biff2026', '2026-10-09T09:00:00-05:00');
+  await page.evaluate(() => {
+    const pr = ['Fjord', 'Cobarde', 'Papaya'];
+    watchlist.clear(); prioritized.clear(); watched.clear();
+    // Heat solo se da en esas mismas noches: queda fuera por la misma razón y
+    // va ANTES que Fjord en Intereses — así se prueba que la prioridad sube.
+    watchlist.add('Heat');
+    pr.forEach(x => { watchlist.add(x); prioritized.add(x); });
+    state.set('availability', { ...availability,
+      '2026-10-12': { blocks: [{ from: '18:00', to: '23:59' }] },
+      '2026-10-14': { blocks: [{ from: '18:00', to: '23:59' }] } });
+  });
+  await goToPlanear(page);
+  await page.locator('.av-calc-btn').click();
+  await esperarCalculo(page);
+  await expect(page.locator('.dato-resultado')).toContainText('2 de 3 prioridades');
+  const primera = page.locator('.ag-excl-block .int-item').first();
+  await expect(primera).toHaveAttribute('data-title', 'Fjord');
+  await expect(primera.locator('.int-item-title svg')).toHaveCount(1);
+  await expect(primera.locator('.excl-reason')).toHaveText('Choca con tu disponibilidad');
+  const papaya = page.locator('#ag-result .saved-item', { hasText: 'Papaya' });
+  await expect(papaya.locator('.saved-time svg')).toHaveCount(1);
+  // Sin bloqueos, entran las tres: la línea las cuenta sin «de».
+  await page.evaluate(() => { state.set('availability', Object.fromEntries(Object.keys(availability).map(d => [d, { blocks: [] }]))); });
+  await page.locator('.av-calc-btn').click();
+  await esperarCalculo(page);
+  await expect(page.locator('.dato-resultado')).toContainText('3 prioridades');
+  await expect(page.locator('.dato-resultado')).not.toContainText(' de 3');
+});
