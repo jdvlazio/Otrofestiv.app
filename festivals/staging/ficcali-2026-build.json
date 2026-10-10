@@ -648,7 +648,9 @@
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
     "tarjeta": 13934
-   }
+   },
+   "lbSlug": "ellas-gardiennes-de-lamazonie",
+   "tmdb_id": 1793997
   },
   {
    "title": "Siempre soy tu animal materno",
@@ -1856,10 +1858,18 @@
      "flags": "🇨🇴",
      "year": 2026,
      "duration": "13 min",
-     "poster": "/assets/cineautopsia/somnolitico.jpg",
+     "poster": "/assets/ficcali-2026/somnolitico.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "somnolytic",
+     "tmdb_id": 1590709,
+     "synopsis_en": "A strange being loses its way in the chaos of the transportation system without finding an exit. The pathways are overwhelmed by accelerated flows that come and go like human waterfalls. The passersby, faceless, move automatically, creating a maze in which the routes seem endless. Sleepy and exhausted people merge with the surroundings, and as the bus continues on its way, the being finally manages to discover itself.",
+     "title_en": "Somnolytic",
      "synopsis": "Un ser extraño pierde su rumbo en el caos del sistema de transporte, desplazándose de un lugar a otro sin encontrar una salida. Los trayectos se ven desbordados por flujos acelerados que van y vienen como cascadas humanas. Los transeúntes, desdibujados y sin rostro, se mueven de manera automática, creando un laberinto en el que las rutas parecen infinitas. Personas adormiladas se funden con el entorno y, mientras el autobús sigue su marcha, el ser finalmente se descubre a sí mismo.",
-     "posterSource": "oficial",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "_conservado": [
+      "synopsis",
+      "synopsis_lang"
+     ]
     }
    ]
   },
@@ -2765,7 +2775,9 @@
      "synopsis": "Cuando Asofem está a punto de cerrar por una grave crisis económica, un grupo de usuarios y su monitor deciden embarcarse en una disparatada misión para salvar el centro al que consideran su hogar.",
      "synopsis_lang": "es",
      "poster": "/assets/ficcali-2026/el-bitcoin-de-oro.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "lbSlug": "el-bitcoin-de-oro",
+     "tmdb_id": 1793999
     },
     {
      "title": "El maestro de la piqueria",
@@ -2778,7 +2790,9 @@
      "genre": "Documental",
      "synopsis_lang": "es",
      "poster": "/assets/ficcali-2026/el-maestro-de-la-piqueria.jpg",
-     "posterSource": "oficial"
+     "posterSource": "tmdb",
+     "lbSlug": "el-maestro-de-la-piqueria",
+     "tmdb_id": 1794001
     },
     {
      "title": "Khazana",
@@ -2819,7 +2833,9 @@
      "synopsis": "Para Ona, la vida se ha convertido en una sucesión de malentendidos y conversaciones inconclusas. Arrastrada por un cansancio infinito, vaga por las calles de la ciudad, esforzándose constantemente por adaptarse a un ritmo que no le pertenece. En sus pensamientos percibimos su silenciosa lucha contra un mundo que ignora sus necesidades y malinterpreta su silencio. Lo que Ona reclama parece básico: sentirse presente, ser escuchada, ser mirada a los ojos, aunque sea por un instante. Y, sin embargo, nadie la ha conocido ni ha querido verla de verdad.",
      "synopsis_lang": "es",
      "poster": "/assets/ficcali-2026/ona.jpg",
-     "posterSource": "oficial"
+     "posterSource": "tmdb",
+     "lbSlug": "ona-2026",
+     "tmdb_id": 1794003
     },
     {
      "title": "Quinto primera",
@@ -2831,7 +2847,9 @@
      "synopsis": "Rafael vive encerrado en su mundo, su piso en L’Hospitalet de Llobregat. Cuando su mujer murió, hace varios años, él perdió las ganas de vivir y su espíritu guerrero. Llegó a L’Hospitalet en los años cincuenta, en la primera gran ola de inmigración. Fue un luchador por la democracia, la igualdad, la solidaridad y la justicia durante las décadas del setenta y ochenta, pero ahora, solitario, amargado y xenófobo, reniega del mundo y, en su soledad, les cobra su miseria a todos y, en especial, a los nuevos inmigrantes. Tampoco ayuda su alzhéimer, cada vez más presente.",
      "synopsis_lang": "es",
      "poster": "/assets/ficcali-2026/quinto-primera.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "lbSlug": "quinto-primera",
+     "tmdb_id": 1794005
     },
     {
      "title": "Vértigo",
@@ -2843,7 +2861,10 @@
      "synopsis": "Vértigo es el relato íntimo de una madre enfrentada al miedo más profundo: la enfermedad de su hijo. Desde una camilla de ecografía, la palabra «vertical» vuelve a sacudir su mundo varias décadas después. Lo que comenzó como una vivencia infantil llena de presión y miedo resurge en una consulta médica, ante un diagnóstico aparentemente fatídico. El vértigo se convierte en una metáfora del temor, de la incertidumbre y del amor incondicional. Entre recuerdos, voces externas y su propio diálogo interior, la protagonista se sumerge en una espiral de culpa, incertidumbre y amor.",
      "synopsis_lang": "es",
      "poster": "/assets/ficcali-2026/vertigo.jpg",
-     "posterSource": "oficial"
+     "posterSource": "tmdb",
+     "lbSlug": "vertigo-2025-1",
+     "tmdb_id": 1783080,
+     "genre": "Drama"
     },
     {
      "title": "¿Dónde está Richard?",
@@ -2855,7 +2876,9 @@
      "synopsis": "Catherine es una periodista sorda que está perdida en el barrio madrileño de Carabanchel. No va a llegar a tiempo a entrevistar a un importante actor estadounidense. Desesperada, le pide ayuda a la Lore, una vecina del barrio que pasaba por allí. Juntas trazan un plan para poder encontrarse con este conocido personaje.",
      "synopsis_lang": "es",
      "poster": "/assets/ficcali-2026/donde-esta-richard.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "lbSlug": "donde-esta-richard",
+     "tmdb_id": 1794009
     }
    ]
   },
@@ -3321,7 +3344,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-10T11:05:57",
+  "fecha": "2026-10-10T15:46:15",
   "plan_sha": "3cbc8f0090f8219c",
   "paso": 8,
   "cmd": "python3 pipeline/ensamblar.py ficcali-2026"
