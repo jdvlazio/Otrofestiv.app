@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "festicinepopayan.com, página de programación 2026 (wp-json, id 12543)",
-  "capturado": "2026-10-06",
+  "capturado": "2026-10-09",
   "que_aporta": "día, hora, sede y obras de cada bloque; el resto de la ficha, del catálogo",
   "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
   "metodo": "wp-json + parser de renglones; cruce con el catálogo por título y dirección"
@@ -70,7 +70,7 @@
    "acceso": "Entrada libre",
    "_src": {
     "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
-    "date": "2026-10-06"
+    "date": "2026-10-08"
    },
    "tipo": "evento",
    "event_kind": "apertura",
@@ -86,7 +86,7 @@
    "acceso": "Entrada libre",
    "_src": {
     "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
-    "date": "2026-10-06"
+    "date": "2026-10-08"
    },
    "seccion": "Selección Oficial Documental",
    "obras": [
@@ -149,7 +149,7 @@
    "acceso": "Entrada libre",
    "_src": {
     "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
-    "date": "2026-10-06"
+    "date": "2026-10-08"
    },
    "has_qa": true,
    "qa_type": "team",
@@ -202,7 +202,7 @@
    "acceso": "Entrada libre",
    "_src": {
     "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
-    "date": "2026-10-06"
+    "date": "2026-10-08"
    },
    "sala": "Auditorio Maya",
    "seccion": "Selección Oficial Experimental",
@@ -294,7 +294,7 @@
    "acceso": "Entrada libre",
    "_src": {
     "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
-    "date": "2026-10-06"
+    "date": "2026-10-08"
    },
    "has_qa": true,
    "qa_type": "team",
@@ -345,7 +345,7 @@
    "acceso": "Entrada libre",
    "_src": {
     "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
-    "date": "2026-10-06"
+    "date": "2026-10-08"
    },
    "seccion": "Selección Oficial Indígena",
    "obras": [
@@ -390,7 +390,7 @@
    "acceso": "Entrada libre",
    "_src": {
     "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
-    "date": "2026-10-06"
+    "date": "2026-10-08"
    },
    "tipo": "evento",
    "event_kind": "conversatorio",
@@ -407,7 +407,7 @@
    "acceso": "Entrada libre",
    "_src": {
     "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
-    "date": "2026-10-06"
+    "date": "2026-10-08"
    },
    "seccion": "Selección Oficial Afro",
    "obras": [
@@ -470,7 +470,7 @@
    "acceso": "Entrada libre",
    "_src": {
     "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
-    "date": "2026-10-06"
+    "date": "2026-10-08"
    },
    "seccion": "Selección Oficial Animación",
    "obras": [
@@ -561,7 +561,7 @@
    "acceso": "Entrada libre",
    "_src": {
     "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
-    "date": "2026-10-06"
+    "date": "2026-10-08"
    },
    "seccion": "Selección Oficial Comunitario",
    "obras": [
@@ -616,7 +616,7 @@
    "acceso": "Entrada libre",
    "_src": {
     "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
-    "date": "2026-10-06"
+    "date": "2026-10-08"
    },
    "seccion": "Selección Oficial Documental",
    "obras": [
@@ -658,6 +658,73 @@
    "duracion_min": 91
   },
   {
+   "titulo": "Cine Corto al barrio",
+   "dia": "2026-10-08",
+   "hora": "18:30",
+   "sede": "Mikuna Casa Cultural",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
+    "date": "2026-10-08"
+   },
+   "seccion": "Cine Corto al barrio",
+   "obras": [
+    {
+     "titulo": "Chicanoa",
+     "director": "Carlos Alberto Mera Jiménez",
+     "anio": 2025,
+     "pais_respaldo": "Colombia",
+     "duracion_min": 9,
+     "sinopsis": "Lura lucia Carabali Otero, Yineth Mera Mejia, Luz Adiana Serna Lasso, Jorge Olmedo Serna Lasso, Eddy Valeria Carabali Lasso, Eddy Valeria Carabali Lasso, Ibeth Karina Correa Fajardo, Coni Estefani Lasso Gonzalias"
+    },
+    {
+     "titulo": "Abuelita caza vampiros",
+     "director": "Mariana Betancourt Chaves",
+     "anio": 2026,
+     "pais_respaldo": "Colombia",
+     "duracion_min": 2,
+     "sinopsis": "En medio de la noche, un vampiro irrumpe en la casa de una abuelita latinoamericana esperando encontrar una presa fácil. En su lugar, se enfrenta a una mujer valiente, dispuesta a pelear por su vida. Con la ayuda inesperada de su fiel pug, la abuelita se envuelve en una batalla bizarra por la supervivencia. Mezclando humor con una atmósfera inquietante, Abuelita Caza Vampiros es una comedia gótica tropical inspirada en memorias familiares, donde el coraje y un toque de lo absurdo transforman una noche común en un enfrentamiento inolvidable."
+    },
+    {
+     "titulo": "Pájaros huérfanos",
+     "director": "Leonardo Rafael Montes Pérez",
+     "anio": 2026,
+     "pais_respaldo": "Colombia",
+     "duracion_min": 6,
+     "sinopsis": "Un juego de caza en el bosque termina en un espejo inesperado. Tres hermanos logran abatir a una paloma, solo para descubrir que han dejado un nido de pichones huérfanos. En la fragilidad de esas crías, los niños reviven el trauma de su propio pasado y el vacío que dejó el conflicto en su hogar. Una historia sobre la pérdida, la memoria y el ciclo del dolor que intentan sanar al llevarse consigo aquello que ellos mismos rompieron."
+    },
+    {
+     "titulo": "Gris",
+     "director": "Loren Escandon",
+     "anio": 2025,
+     "pais_respaldo": "Colombia",
+     "duracion_min": 15,
+     "sinopsis": "Sofía; una niña curiosa e imaginativa; enfrenta desafíos en la escuela mientras comienza a navegar las complejidades de su identidad multirracial. Sus dibujos cobran vida en animaciones llenas de fantasía y la acompañan en un viaje de autoconocimiento; marcado por dudas; resiliencia y aprendizajes sobre el sentido de pertenencia. Sofía aprende a abrazar los matices que la definen; fusionando amor; cultura e individualidad en una narrativa única."
+    },
+    {
+     "titulo": "Juan PorOcho",
+     "director": "Marquitos Cárdenas",
+     "pais_respaldo": "Colombia",
+     "duracion_min": 10
+    },
+    {
+     "titulo": "La gran hazaña",
+     "director": "Luber Yesid Zúñiga Ordóñez",
+     "anio": 2024,
+     "pais_respaldo": "Colombia",
+     "duracion_min": 15,
+     "sinopsis": "Pablo (10) tendrá el desafío de rescatar a su mascota Pascualina, una gallina ponedora, de las garras de Don Chucho, el usurero del pueblo quien cobra las deudas con huevos. Este día Pablo tiene un accidente en su bicicleta y rompe los preciados huevos, ahora debe reponer la cubeta para saldar la deuda. La única herramienta que tiene el niño para rescatar a Pascualina es una apuesta con su trompo de madera con Felipe el mejor jugador de trompo del pueblo. Aunque todo parece jugar a favor de Pablo, quien ha ganado la cubeta que rescatará a su querida Pascualina y realizar la gran hazaña, Valeria, la hermana de Felipe, impide que el premio sea entregado y les hace caer en cuenta que no basta ganar una apuesta si entorpece el trabajo de otra familia en la misma situación. Se desata una disertación en la que todos los niños empatizan con Pablo gracias a que reconocen los obstáculos que han tenido al tratar de sortear la dura actitud de Don Chucho. Ahora, es la unión de todos los niños lo que permite que Pascualina sea rescatada. Finalmente, Pablo aprende la importancia del trabajo en equipo."
+    },
+    {
+     "titulo": "La guerra de los tomates",
+     "director": "Juancarlos Gutiérrez",
+     "pais_respaldo": "Colombia",
+     "duracion_min": 15
+    }
+   ],
+   "duracion_min": 72
+  },
+  {
    "titulo": "Selección Oficial Ficción Primer bloque",
    "dia": "2026-10-08",
    "hora": "19:00",
@@ -665,7 +732,7 @@
    "acceso": "Entrada libre",
    "_src": {
     "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
-    "date": "2026-10-06"
+    "date": "2026-10-08"
    },
    "seccion": "Selección Oficial Ficción",
    "obras": [
@@ -725,7 +792,7 @@
    "acceso": "Entrada libre",
    "_src": {
     "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
-    "date": "2026-10-06"
+    "date": "2026-10-08"
    },
    "seccion": "Muestra de Cortos Internacionales",
    "duracion_min": 90,
@@ -741,7 +808,7 @@
    "acceso": "Entrada libre",
    "_src": {
     "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
-    "date": "2026-10-06"
+    "date": "2026-10-08"
    },
    "sala": "Pantalla gigante",
    "tipo": "evento",
@@ -758,7 +825,7 @@
    "acceso": "Entrada libre",
    "_src": {
     "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
-    "date": "2026-10-06"
+    "date": "2026-10-08"
    },
    "sala": "Pantalla gigante",
    "seccion": "Cine Corto Familiar",
@@ -796,7 +863,7 @@
    "acceso": "Entrada libre",
    "_src": {
     "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
-    "date": "2026-10-06"
+    "date": "2026-10-08"
    },
    "sala": "Pantalla gigante",
    "tipo": "evento",
@@ -814,7 +881,7 @@
    "acceso": "Entrada libre",
    "_src": {
     "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
-    "date": "2026-10-06"
+    "date": "2026-10-08"
    },
    "sala": "Pantalla gigante",
    "seccion": "Cine Corto Familiar",
@@ -882,7 +949,7 @@
    "acceso": "Entrada libre",
    "_src": {
     "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
-    "date": "2026-10-06"
+    "date": "2026-10-08"
    },
    "seccion": "Selección Oficial Ficción",
    "obras": [
@@ -940,7 +1007,7 @@
    "acceso": "Entrada libre",
    "_src": {
     "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
-    "date": "2026-10-06"
+    "date": "2026-10-08"
    },
    "tipo": "evento",
    "event_kind": "acto",
@@ -956,7 +1023,7 @@
    "acceso": "Entrada libre",
    "_src": {
     "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
-    "date": "2026-10-06"
+    "date": "2026-10-08"
    },
    "seccion": "Selección Oficial Infantil",
    "obras": [
@@ -1043,7 +1110,7 @@
    "acceso": "Entrada libre",
    "_src": {
     "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
-    "date": "2026-10-06"
+    "date": "2026-10-08"
    },
    "sala": "Pantalla gigante",
    "seccion": "Cine Corto Familiar",
@@ -1091,7 +1158,7 @@
    "acceso": "Entrada libre",
    "_src": {
     "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
-    "date": "2026-10-06"
+    "date": "2026-10-08"
    },
    "sala": "Pantalla gigante",
    "tipo": "evento",
@@ -1109,7 +1176,7 @@
    "acceso": "Entrada libre",
    "_src": {
     "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
-    "date": "2026-10-06"
+    "date": "2026-10-08"
    },
    "sala": "Pantalla gigante",
    "seccion": "Cine Corto Familiar",
@@ -1155,7 +1222,7 @@
    "acceso": "Entrada libre",
    "_src": {
     "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
-    "date": "2026-10-06"
+    "date": "2026-10-08"
    },
    "sala": "Pantalla gigante",
    "tipo": "evento",
@@ -1173,7 +1240,7 @@
    "acceso": "Entrada libre",
    "_src": {
     "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
-    "date": "2026-10-06"
+    "date": "2026-10-08"
    },
    "sala": "Pantalla gigante",
    "seccion": "Cine Corto Familiar",
@@ -1215,7 +1282,7 @@
    "acceso": "Entrada libre",
    "_src": {
     "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
-    "date": "2026-10-06"
+    "date": "2026-10-08"
    },
    "seccion": "CineCorto en el Barrio",
    "obras": [
@@ -1272,7 +1339,7 @@
    "acceso": "Entrada libre",
    "_src": {
     "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
-    "date": "2026-10-06"
+    "date": "2026-10-08"
    },
    "sala": "Pantalla gigante",
    "seccion": "Cine Corto Familiar",

@@ -5983,6 +5983,71 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar abierta-sin-info: {_e}')
 
+# ── [programa-sin-desglosar] «A + B» en un título es dos obras, no una ──────────
+# Ficcali publicó «Rodilla Negra + El Coloso» y Fantasmagoría «Kondor, El Mago +
+# El Cigarro Mortal» como UNA obra: ninguna de las dos se buscaba en TMDB y las
+# dos salían sin afiche (8–9 oct 2026). La tarjeta del festival junta dos obras en
+# una función; en la app eso es un programa con `film_list`, cada obra con su
+# ficha. Un título de proyección con « + » sin `film_list` es el error, en los
+# festivales vivos. El falso positivo (un « + » que es parte del nombre de UNA
+# obra) se declara en _DESGLOSE_NO con su porqué.
+check = 'programa-sin-desglosar'
+try:
+    import json as _jpd
+    _DESGLOSE_NO = {}   # (festival, título): porqué
+    _malos_pd = []
+    for _fpd in _festivalesVivos():
+        try:
+            _dpd = _jpd.load(open(f'festivals/{_fpd}.json', encoding='utf-8'))
+        except FileNotFoundError:
+            continue
+        for _x in _dpd.get('films') or []:
+            if _x.get('type') == 'event' or _x.get('event_kind') or _x.get('film_list'):
+                continue
+            _tt = _x.get('title') or ''
+            if ' + ' in _tt and (_fpd, _tt) not in _DESGLOSE_NO:
+                _malos_pd.append(f'{_fpd}: «{_tt[:45]}»')
+    if _malos_pd:
+        fail(check, 'función «A + B» publicada como UNA obra (va como programa con film_list, o se declara en _DESGLOSE_NO): '
+             + ' · '.join(sorted(set(_malos_pd))[:5]))
+    else:
+        ok(check, 'ninguna función «A + B» de un festival vivo se publica como una sola obra')
+except Exception as _e:
+    warn(check, f'no se pudo verificar programa-sin-desglosar: {_e}')
+
+# ── [proyeccion-que-es-actividad] el título dice que no es una película ────────
+# Mamut publicó «Programa SHUB: Hocico de cerdo» como proyección: la lámina decía
+# «Presentación Cuadernos de Cine Colombiano #35 · Conversación con…». Era una
+# actividad (encuentro) y salía como obra sin afiche (9 oct 2026). Una obra cuyo
+# título empieza por presentación, lanzamiento, conversatorio, charla, taller,
+# panel, clase magistral o masterclass se clasifica a mano: o es evento, o se
+# declara en _ACTIVIDAD_NO que sí es una obra («Charla» puede ser un título).
+check = 'proyeccion-que-es-actividad'
+try:
+    import json as _jpa, re as _repa
+    _PAL_ACT = _repa.compile(r'(?i)^(presentaci[oó]n|lanzamiento|conversatorio|charla|taller|panel|clase magistral|masterclass|m[aá]ster class)\b')
+    _ACTIVIDAD_NO = {}   # (festival, título): porqué
+    _malos_pa = []
+    for _fpa in _festivalesVivos():
+        try:
+            _dpa = _jpa.load(open(f'festivals/{_fpa}.json', encoding='utf-8'))
+        except FileNotFoundError:
+            continue
+        for _x in _dpa.get('films') or []:
+            if _x.get('type') == 'event' or _x.get('event_kind'):
+                continue
+            for _o in [_x] + list(_x.get('film_list') or []):
+                _tt = _o.get('title') or ''
+                if _PAL_ACT.search(_tt) and (_fpa, _tt) not in _ACTIVIDAD_NO:
+                    _malos_pa.append(f'{_fpa}: «{_tt[:45]}»')
+    if _malos_pa:
+        fail(check, 'obra cuyo título dice que es una actividad (va como evento con event_kind, o se declara en _ACTIVIDAD_NO): '
+             + ' · '.join(sorted(set(_malos_pa))[:5]))
+    else:
+        ok(check, 'ninguna obra de un festival vivo se titula como una actividad')
+except Exception as _e:
+    warn(check, f'no se pudo verificar proyeccion-que-es-actividad: {_e}')
+
 # ── [afiche-cobertura] una obra sin afiche lleva el porqué ESCRITO ───────────
 # COBERTURA INVERSA, la doctrina que ya teníamos escrita y no habíamos aplicado
 # a los afiches: verificar lo transcrito no verifica lo DESCARTADO. El 21 sep
