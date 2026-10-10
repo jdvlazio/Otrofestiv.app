@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "Instagram @filcmar — el carrusel de programación (16 láminas)",
-  "capturado": "2026-10-09",
+  "capturado": "2026-10-10",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_sedes": "El nombre que imprime cada lámina, tal cual; la sala va aparte (Foso, Hall, Capilla).",
@@ -408,7 +408,7 @@
    "title": "MAPISTAS Expo FILCMAR 8",
    "type": "event",
    "section": "🐓 Programación Cultural",
-   "duration": "60 min",
+   "duration": "90 min",
    "day": "2026-10-10",
    "time": "14:00",
    "day_order": 1,
@@ -425,7 +425,7 @@
    "is_free": true
   },
   {
-   "title": "Tintico Charlado: Mercado MORA — Oriente como destino audiovisual",
+   "title": "Tintico Charlado: Mercado MORA — Secretos de chifonier",
    "type": "event",
    "section": "🐎 Programación MORA",
    "duration": "90 min",
@@ -436,32 +436,13 @@
    "event_kind": "charla",
    "has_qa": false,
    "_src": {
-    "url": "https://www.instagram.com/p/Dd-Wc29Dhkd/",
-    "date": "2026-10-01",
-    "lamina": 4
+    "url": "https://www.instagram.com/p/DeTF7nfDS9t/",
+    "date": "2026-10-09",
+    "lamina": 1,
+    "reemplaza": "Tintico Charlado: Mercado MORA — Oriente como destino audiovisual"
    },
    "is_free": true,
-   "description": "Oriente como destino audiovisual. Comisión Fílmica de Antioquia.",
-   "description_lang": "es"
-  },
-  {
-   "title": "Conversatorio: Secretos de chifonier",
-   "type": "event",
-   "section": "🐓 Programación Cultural",
-   "duration": "90 min",
-   "day": "2026-10-10",
-   "time": "15:00",
-   "day_order": 1,
-   "venue": "Galería San José - CBA Marinilla - Marinilla",
-   "event_kind": "conversatorio",
-   "has_qa": false,
-   "_src": {
-    "url": "https://www.instagram.com/p/Dd-Wc29Dhkd/",
-    "date": "2026-10-01",
-    "lamina": 5
-   },
-   "is_free": true,
-   "description": "Invitados: Louie Cuervo - Anamaria Jaramillo Ceballos.",
+   "description": "¿Cómo el ajuar del arriero lo protege y proyecta ante el mundo? Invitados: Louie Cuervo y Anamaria Jaramillo Ceballos.",
    "description_lang": "es"
   },
   {
@@ -1172,7 +1153,7 @@
    "is_free": true
   },
   {
-   "title": "Tintico Charlado: Mercado MORA — Antioquia Film Friendly",
+   "title": "Proyección: Mercado MORA — Películas universitarias Universidad ITM y Tecnológico de Artes Débora Arango",
    "type": "event",
    "section": "🐎 Programación MORA",
    "duration": "90 min",
@@ -1180,15 +1161,16 @@
    "time": "14:00",
    "day_order": 3,
    "venue": "Teatro Municipal Simona Duque - Marinilla",
-   "event_kind": "charla",
+   "event_kind": "evento",
    "has_qa": false,
    "_src": {
-    "url": "https://www.instagram.com/p/Dd-Wc29Dhkd/",
-    "date": "2026-10-01",
-    "lamina": 11
+    "url": "https://www.instagram.com/p/DeTF7nfDS9t/",
+    "date": "2026-10-09",
+    "lamina": 3,
+    "reemplaza": "Tintico Charlado: Mercado MORA — Antioquia Film Friendly"
    },
    "is_free": true,
-   "description": "Antioquia Film Friendly. Comisión Fílmica de Antioquia.",
+   "description": "Acompáñanos a descubrir las nuevas inquietudes y secretos que rodean el cine que se está haciendo al día de hoy en las montañas antioqueñas.",
    "description_lang": "es"
   },
   {
@@ -1459,7 +1441,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-09T07:50:08",
+  "fecha": "2026-10-10T05:16:13",
   "plan_sha": "23096bf87098b953",
   "paso": 8,
   "cmd": "python3 pipeline/ensamblar.py filcmar-2026"

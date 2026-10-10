@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "Instagram @filcmar — el carrusel de programación (16 láminas)",
-  "capturado": "2026-10-09",
+  "capturado": "2026-10-10",
   "que_aporta": "la programación entera: día, hora, lugar, sección y créditos",
   "url": "https://www.instagram.com/p/Dd-Wc29Dhkd/",
   "metodo": "lectura a ojo lámina por lámina, confirmada con la OCR de las mismas láminas, en los dos sentidos"
@@ -195,42 +195,25 @@
    "event_kind": "evento",
    "is_recurring": true,
    "info": true,
-   "duracion_min": 60,
-   "_duracion_de": "el hueco hasta la siguiente actividad en la misma sede"
+   "duracion_min": 90,
+   "_duracion_de": "90 min declarados: la lámina no la da"
   },
   {
-   "titulo": "Tintico Charlado: Mercado MORA — Oriente como destino audiovisual",
+   "titulo": "Tintico Charlado: Mercado MORA — Secretos de chifonier",
    "dia": "2026-10-10",
    "hora": "14:00",
    "sede": "Teatro Municipal Simona Duque",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://www.instagram.com/p/Dd-Wc29Dhkd/",
-    "date": "2026-10-01",
-    "lamina": 4
+    "url": "https://www.instagram.com/p/DeTF7nfDS9t/",
+    "date": "2026-10-09",
+    "lamina": 1,
+    "reemplaza": "Tintico Charlado: Mercado MORA — Oriente como destino audiovisual"
    },
    "seccion": "Programación MORA",
    "tipo": "evento",
    "event_kind": "charla",
-   "sinopsis": "Oriente como destino audiovisual. Comisión Fílmica de Antioquia.",
-   "duracion_min": 90,
-   "_duracion_de": "90 min declarados: la lámina no la da"
-  },
-  {
-   "titulo": "Conversatorio: Secretos de chifonier",
-   "dia": "2026-10-10",
-   "hora": "15:00",
-   "sede": "Galería San José - CBA Marinilla",
-   "acceso": "Entrada libre",
-   "_src": {
-    "url": "https://www.instagram.com/p/Dd-Wc29Dhkd/",
-    "date": "2026-10-01",
-    "lamina": 5
-   },
-   "seccion": "Programación Cultural",
-   "tipo": "evento",
-   "event_kind": "conversatorio",
-   "invitados": "Invitados: Louie Cuervo - Anamaria Jaramillo Ceballos.",
+   "sinopsis": "¿Cómo el ajuar del arriero lo protege y proyecta ante el mundo? Invitados: Louie Cuervo y Anamaria Jaramillo Ceballos.",
    "duracion_min": 90,
    "_duracion_de": "90 min declarados: la lámina no la da"
   },
@@ -743,20 +726,21 @@
    "_duracion_de": "90 min declarados: la lámina no la da"
   },
   {
-   "titulo": "Tintico Charlado: Mercado MORA — Antioquia Film Friendly",
+   "titulo": "Proyección: Mercado MORA — Películas universitarias Universidad ITM y Tecnológico de Artes Débora Arango",
    "dia": "2026-10-12",
    "hora": "14:00",
    "sede": "Teatro Municipal Simona Duque",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://www.instagram.com/p/Dd-Wc29Dhkd/",
-    "date": "2026-10-01",
-    "lamina": 11
+    "url": "https://www.instagram.com/p/DeTF7nfDS9t/",
+    "date": "2026-10-09",
+    "lamina": 3,
+    "reemplaza": "Tintico Charlado: Mercado MORA — Antioquia Film Friendly"
    },
    "seccion": "Programación MORA",
    "tipo": "evento",
-   "event_kind": "charla",
-   "sinopsis": "Antioquia Film Friendly. Comisión Fílmica de Antioquia.",
+   "event_kind": "evento",
+   "sinopsis": "Acompáñanos a descubrir las nuevas inquietudes y secretos que rodean el cine que se está haciendo al día de hoy en las montañas antioqueñas.",
    "duracion_min": 90,
    "_duracion_de": "90 min declarados: la lámina no la da"
   },
