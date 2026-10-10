@@ -9,8 +9,8 @@
 //      el reload forzado por deploy, se sirve ese HTML en vez de OFFLINE_HTML (una
 //      sesión viva ya no se destruye por un deploy con señal mala). Audit P3 #10.
 
-const CACHE_NAME = 'otrofestiv-v202610100917';
-const BUILD = '202610100917';
+const CACHE_NAME = 'otrofestiv-v202610100923';
+const BUILD = '202610100923';
 // Caché PERSISTENTE de assets inmutables (pósters, iconos, fonts): NO se borra
 // en activate. Durante un festival deployamos a diario; sin esto, cada deploy
 // obligaba a re-descargar ~8MB de pósters ya vistos (señal rural en sede).
