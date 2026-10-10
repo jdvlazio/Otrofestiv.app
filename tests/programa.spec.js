@@ -910,10 +910,14 @@ test('T70 — el Diario y el Recuerdo cuentan lo mismo, incluidos los talleres',
   const retro = await page.evaluate(async () => {
     _simTime = '2026-08-21T12:00:00-05:00'; showAgView();
     await new Promise(r => setTimeout(r, 1200));
-    return (document.body.innerText.match(/Viste [^\n]*/) || [null])[0];
+    return { tit: (document.body.innerText.match(/Viste [^\n]*/) || [null])[0],
+      rec: (document.querySelector('.recap-recorrido') || {}).textContent || '' };
   });
-  expect(retro, 'el Recuerdo dice el MISMO número, con el paraguas correcto')
-    .toBe('Viste 3 actividades');
+  // «Se respeta lo visto de lo asistido» (Juan, 9 oct): el titular cuenta OBRAS
+  // y el taller va en la línea del recorrido. El total sigue siendo el del
+  // Diario (3): 2 obras + 1 actividad.
+  expect(retro.tit, 'el titular cuenta solo las obras').toBe('Viste 2 obras');
+  expect(retro.rec, 'y el taller va en el recorrido').toMatch(/1 actividad\b/);
 });
 
 // 18 ago (vista asumida): la banda del Plan quedó solo con su cuenta y el día —
