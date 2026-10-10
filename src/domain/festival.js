@@ -19,9 +19,9 @@
 //   eval(name).toString(). [worker-overlap] valida.
 
 import { FESTIVAL_CONFIG, DEFAULT_DURATION_MIN, FESTIVAL_BUFFER } from "../config.js";
-import { toMin, simNow, simTodayStr, festivalEnded, _festNowMin } from "./time.js";
+import { toMin, simNow, simTodayStr, festivalEnded, _festNowMin, parseDur, durEstimada } from "./time.js";
 import { blockDuration } from "./film.js";
-import { screeningPassed, _classifyTodayScreenings, _endedStats, effectiveWatched } from "./film.js";
+import { screeningPassed, _classifyTodayScreenings, _endedStats, effectiveWatched, seCalifica, obrasDe } from "./film.js";
 export function _resolveVenue(name,venues){
   if(!name) return{short:''};
   if(!venues) return{short:name};
@@ -137,4 +137,77 @@ export function _getFestivalPhase(){
 
   // NEXT: próxima función en ≤ 45 min, o función en curso
   return{phase:'next',next,minsUntil,isNow:active.length>0};
+}
+
+// ── festivalRecap — «Tu festival» (#1055, F1) ────────────────────────────────
+// El recorrido del asistente cuando el festival terminó: cuántas vio, en cuántos
+// días y sedes, cuántas horas en sala, de cuántos países, y sus tres mejores.
+// Vive acá y no en film.js (como decía el diseño) porque necesita la ciudad de
+// la sede (_resolveVenue + FESTIVAL_CONFIG) y film.js no puede importar de este
+// módulo sin cerrar un ciclo.
+//
+// REGLA DE ORO: ningún número que no se pueda afirmar. Lo que no se deriva con
+// certeza se devuelve null y la vista lo omite; nunca se estima.
+//   · «qué viste» = effectiveWatched (dueño único); cuenta por obra como _endedStats.
+//   · día/sede de cada vista: del Plan si estaba ahí; si no, de watchedMeta (lo que
+//     el usuario marcó desde el botón o una ficha con una sola función). Una obra
+//     vista SIN función conocida cuenta como vista pero no suma día ni sede.
+//     Si alguna vista quedó sin función, dias/sedes salen null: afirmar «3 días»
+//     cuando pudo haber un cuarto sería mentir.
+//   · horas: solo películas (seCalifica) con duración DECLARADA; si menos del 80 %
+//     la declara, null. Un programa de cortos aporta la duración del programa.
+//   · países: de películas, separados por coma; distintos. Null si ninguna lo trae.
+//   · top: las 3 mejor calificadas; empate → orden cronológico (día+hora), y lo
+//     sin fecha al final. Solo obras con estrellas.
+//   · multiciudad: ciudades distintas aparte; la vista elige cuál mostrar.
+export function festivalRecap(){
+  const vistas=[...effectiveWatched()];
+  const _byTitle=new Map();
+  (FILMS||[]).forEach(f=>{ if(!_byTitle.has(f.title)) _byTitle.set(f.title,[]); _byTitle.get(f.title).push(f); });
+  // Función conocida por título: el Plan manda (es la elección), luego watchedMeta.
+  const _fn=new Map();
+  ((savedAgenda&&savedAgenda.schedule)||[]).forEach(s=>{ if(s&&s._title&&s.day&&!_fn.has(s._title)) _fn.set(s._title,{day:s.day,time:s.time||'',venue:s.venue||''}); });
+  Object.entries((typeof watchedMeta!=='undefined'&&watchedMeta)||{}).forEach(([t,m])=>{ if(m&&m.day&&!_fn.has(t)) _fn.set(t,m); });
+  const _vs=(FESTIVAL_CONFIG[_activeFestId]||{}).venues||{};
+  const _city=v=>v?(_resolveVenue(v,_vs).city||''):'';
+
+  let peliculas=0, eventos=0, sinFuncion=0, conDur=0, minutos=0, basesDur=0;
+  const dias=new Set(), sedes=new Set(), ciudades=new Set(), paises=new Set();
+  const obras=[]; // {title, rating, day, time, poster-able film}
+  vistas.forEach(t=>{
+    const fs=_byTitle.get(t); if(!fs||!fs.length) return;
+    const f=fs[0];
+    const fn=_fn.get(t)||null;
+    if(fn){ dias.add(fn.day); if(fn.venue){ sedes.add(_resolveVenue(fn.venue,_vs).short||fn.venue); const c=_city(fn.venue); if(c) ciudades.add(c); } }
+    else sinFuncion++;
+    // Lo asistido: el evento cuenta como actividad. Lo visto: sus obras (obrasDe),
+    // que pueden ser ninguna (una charla) o las que el festival declaró adentro.
+    const esEvento=!seCalifica(f);
+    if(esEvento) eventos++;
+    const items=obrasDe(f);
+    peliculas+=items.length;
+    items.forEach(it=>{
+      String(it.country||(!esEvento&&it!==f?f.country:'')||'').split(/\s*[,/]\s*/).map(x=>x.trim()).filter(Boolean).forEach(c=>paises.add(c));
+      const r=filmRatings[it.title]||0;
+      obras.push({title:it.title, rating:r, day:fn?fn.day:'', time:fn?fn.time:'', film:it===f?f:{...it,_prog:f}});
+    });
+    // Horas en sala: lo que se proyectó. Obra o programa → su duración (la del
+    // programa, una vez). Evento → solo la duración declarada de cada obra que
+    // proyectó; la ceremonia o la charla no son «horas en sala».
+    if(!esEvento){ basesDur++; if(!durEstimada(f.duration)){ conDur++; minutos+=parseDur(f.duration); } }
+    else items.forEach(it=>{ basesDur++; if(!durEstimada(it.duration)){ conDur++; minutos+=parseDur(it.duration); } });
+  });
+  const horas=(basesDur&&conDur/basesDur>=0.8)?Math.round(minutos/60):null;
+  const conEstrellas=obras.filter(o=>o.rating>0).sort((a,b)=>
+    (b.rating-a.rating)||((a.day||'\uffff')<(b.day||'\uffff')?-1:(a.day||'\uffff')>(b.day||'\uffff')?1:0)||(toMin(a.time||'99:99')-toMin(b.time||'99:99')));
+  return {
+    peliculas, eventos, actividades:peliculas+eventos,
+    dias: sinFuncion?null:dias.size,
+    sedes: sinFuncion?null:sedes.size,
+    ciudades: sinFuncion?null:ciudades.size,
+    horas,
+    paises: paises.size||null,
+    top: conEstrellas.slice(0,3),
+    obras,
+  };
 }

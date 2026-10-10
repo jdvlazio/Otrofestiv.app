@@ -47,6 +47,12 @@ export const FESTIVAL_STATE = [
   { key:'notWatched',  empty:()=>new Set(), storage:'NotWatched',  cloud:'notwatched',
     hydrate:()=>new Set([...storage.getNotWatched()].map(normTitle)),
     toCloud:_setToCloud, fromCloud:_setFromCloud },
+  // watchedMeta — la función en que se vio cada obra marcada fuera del Plan
+  // (#1055). Objeto por título, como ratings: parcial MERGEA, wholesale reemplaza.
+  { key:'watchedMeta', empty:()=>({}),      storage:'WatchedMeta', cloud:'watched_meta',
+    hydrate:()=>({...state.get('watchedMeta'), ...storage.getWatchedMeta()}),
+    toCloud:_id,
+    fromCloud:(d,whole,cur)=> (whole||(d&&Object.keys(d).length)) ? (whole?(d||{}):{...cur,...d}) : undefined },
   { key:'prioritized', empty:()=>new Set(), storage:'Prioritized', cloud:'prioritized',
     hydrate:()=>new Set([...storage.getPrioritized()].map(normTitle)),
     toCloud:_setToCloud, fromCloud:_setFromCloud },

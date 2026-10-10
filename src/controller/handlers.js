@@ -13,7 +13,7 @@ import { _renderProgramaContent, lugarClose, render, renderNoticesBanner, _notic
 import { renderAgenda, updateCardState, updateHorarioPrioBtn } from '../view/agenda.js';
 import { keepCityOnly, planCityVenues } from '../view/helpers.js';
 import { runCalc, _planCityVenues } from './calc.js';
-import { commitPlan, saveDelays, saveLastSlot, savePrio, saveSavedAgenda, saveState, saveWL, saveWatched, saveNotWatched } from './persistence.js';
+import { commitPlan, saveDelays, saveLastSlot, savePrio, saveSavedAgenda, saveState, saveWL, saveWatched, saveNotWatched, saveWatchedMeta } from './persistence.js';
 import { cloudReportDelay, cloudClearDelay, cloudScreeningKey } from './delays-cloud.js';
 import { _getProgramaPhase, _reRenderIntereses, _updateProgramaActiveFilter, initProgramaModeBar, showAgView, showDayView, switchMainNav, updateAgTab, _syncPmodeTabs } from './pipeline.js';
 import { searchClose, seccionClose } from './overlays.js';
@@ -213,6 +213,10 @@ export function toggleWatched(title,e){
         watched: state._addToSet(state.snapshot().watched, title),
         notWatched: state._delFromSet(state.snapshot().notWatched, title),
       });
+      // Desde la ficha no sabemos en cuál función: con UNA sola se infiere; con
+      // varias queda sin meta (no se adivina) — #1055.
+      const _fns=FILMS.filter(fi=>fi.title===title&&fi.day&&fi.time);
+      _guardarWatchedMeta(title, _fns.length===1?{day:_fns[0].day,time:_fns[0].time,venue:_fns[0].venue||''}:null);
       saveWatched();saveNotWatched();updateCardState(title);
       // la ficha abierta se entera: su pie pasa a Vista encendida + Calificar (#919)
       repaintPelFoot(title);
@@ -645,6 +649,8 @@ export function markWatchedFromPlan(title, day, time, venue, duration, e){
   // Branch B: marcar como vista + post-view rating modal
   // 3. MUTATE
   state.update('watched', s=>state._addToSet(s, title));
+  // La función en que la viste (#1055): el botón ya la trae y la descartaba.
+  _guardarWatchedMeta(title, day&&time?{day,time,venue:venue||''}:null);
   // 4. PERSIST + surgical (render automático vía pipeline)
   saveWatched();
   updateCardState(title);
@@ -1214,4 +1220,11 @@ function _scrollToMplanDetail(){
   const tb=document.querySelector('.topbar');
   const tbH=tb?Math.ceil(tb.getBoundingClientRect().height):86;
   window.scrollTo({top:Math.max(0,el.getBoundingClientRect().top+window.scrollY-tbH-8),behavior:'smooth'});
+}
+
+// _guardarWatchedMeta — dueño único de «en qué función la vi». null = no se sabe
+// (varias funciones posibles): se borra lo que hubiera para no afirmar de más.
+function _guardarWatchedMeta(title, meta){
+  state.update('watchedMeta', m=>{ const o={...(m||{})}; if(meta) o[title]=meta; else delete o[title]; return o; });
+  saveWatchedMeta();
 }

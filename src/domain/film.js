@@ -318,6 +318,19 @@ export function prioLiveCount(){
 // ofrecían estrellas igual. Guardián [califica-dueno].
 export function seCalifica(f){ return !!f && f.type!=='event'; }
 
+// obrasDe — DUEÑO ÚNICO de «qué obras viste al estar en esto» (Juan, 9 oct 2026:
+// «se respeta lo visto de lo asistido»). Obra suelta → ella; programa de cortos
+// → sus cortos; EVENTO → las obras que el festival declaró en su film_list (una
+// apertura que proyecta una película, un cineconcierto, un Award Screening ya
+// anunciado), o ninguna. El evento sigue contando como actividad aparte: una
+// apertura con «Gabin» es 1 actividad Y 1 obra. Nunca se infiere por el título.
+export function obrasDe(f){
+  if(!f) return [];
+  const lista=(f.film_list&&f.film_list.length)?f.film_list:null;
+  if(f.type==='event') return lista||[];
+  return (f.is_cortos&&lista)?lista:[f];
+}
+
 export function effectiveWatched(){
   const out=new Set(watched);
   if(savedAgenda&&savedAgenda.schedule){
@@ -349,7 +362,7 @@ export function _endedStats(){
   [...effectiveWatched()].forEach(t=>{
     const f=FILMS.find(fi=>fi.title===t);
     if(!f) return;
-    if(!seCalifica(f)){ totalWatched+=1; return; }
+    if(!seCalifica(f)){ totalWatched+=1+obrasDe(f).length; return; }
     if(f.is_cortos&&f.film_list&&f.film_list.length){
       totalWatched+=f.film_list.length;
       pendingRatings+=f.film_list.filter(it=>!filmRatings[it.title]).length;

@@ -782,7 +782,7 @@ export const FESTIVAL_CONFIG={
     // el botón PROGRAMACIÓN de su web apuntaba a un PDF de 2023. Son 53
     // funciones en 4 sedes, y 22 de ellas son programas de cortos con nombre
     // propio («Nuevas Miradas: UMBRALES»), que es como el festival los agrupa.
-    storageKey:'villadelcine2026_',
+    instagram:'festivalvilladelcine', storageKey:'villadelcine2026_',
     festivalStartStr:'2026-10-14T00:00:00',festivalEndStr:'2026-10-17T23:59:00',
     prioLimit:4,ticketing_model:'mixed',
   },
@@ -1120,7 +1120,7 @@ export const FESTIVAL_CONFIG={
     // EL LEMA DE LA EDICIÓN, el del afiche. La edición («9° Festival
     // Audiovisual…») ya está en fullName.
     tagline:'Fantasía Tropical',
-    storageKey:'girardota2026_',festivalStartStr:'2026-09-30T00:00:00',festivalEndStr:'2026-10-04T23:59:00',
+    instagram:'festigirardota', storageKey:'girardota2026_',festivalStartStr:'2026-09-30T00:00:00',festivalEndStr:'2026-10-04T23:59:00',
     festivalDates:{'2026-09-30':'2026-09-30','2026-10-01':'2026-10-01','2026-10-02':'2026-10-02','2026-10-03':'2026-10-03','2026-10-04':'2026-10-04'},
     days:[{k:'2026-09-30',d:30,lbl:'MIÉ'},{k:'2026-10-01',d:1,lbl:'JUE'},{k:'2026-10-02',d:2,lbl:'VIE'},{k:'2026-10-03',d:3,lbl:'SÁB'},{k:'2026-10-04',d:4,lbl:'DOM'}],
     dayKeys:['2026-09-30','2026-10-01','2026-10-02','2026-10-03','2026-10-04'],
@@ -1134,7 +1134,7 @@ export const FESTIVAL_CONFIG={
     name:'BIFF',displayName:'BIFF',fullName:'BIFF 12 — Bogota International Film Festival',shortName:'BIFF',
     city:'Bogotá',country:'CO',
     dates:'8–14 OCT',dates_en:'OCT 8–14',year:2026,timezoneOffset:'-05:00',
-    storageKey:'biff2026_',festivalStartStr:'2026-10-08T00:00:00',festivalEndStr:'2026-10-14T23:59:00',
+    instagram:'biffcol', storageKey:'biff2026_',festivalStartStr:'2026-10-08T00:00:00',festivalEndStr:'2026-10-14T23:59:00',
     festivalDates:{'2026-10-08':'2026-10-08','2026-10-09':'2026-10-09','2026-10-10':'2026-10-10','2026-10-11':'2026-10-11','2026-10-12':'2026-10-12','2026-10-13':'2026-10-13','2026-10-14':'2026-10-14'},
     days:[{k:'2026-10-08',d:8,lbl:'JUE'},{k:'2026-10-09',d:9,lbl:'VIE'},{k:'2026-10-10',d:10,lbl:'SÁB'},{k:'2026-10-11',d:11,lbl:'DOM'},{k:'2026-10-12',d:12,lbl:'LUN'},{k:'2026-10-13',d:13,lbl:'MAR'},{k:'2026-10-14',d:14,lbl:'MIÉ'}],
     dayKeys:['2026-10-08','2026-10-09','2026-10-10','2026-10-11','2026-10-12','2026-10-13','2026-10-14'],
@@ -1160,7 +1160,7 @@ export const FESTIVAL_CONFIG={
     // «5–11 octubre 2026 · teatro Bolívar · entrada libre»). 1:1 estirado a 2:3.
     keyArt:'/assets/keyart/popayan2026-v1.jpg',
     tagline:'Festival de Cortometraje Colombiano',
-    storageKey:'popayan2026_',festivalStartStr:'2026-10-05T00:00:00',festivalEndStr:'2026-10-11T23:59:00',
+    instagram:'cinecortofest', storageKey:'popayan2026_',festivalStartStr:'2026-10-05T00:00:00',festivalEndStr:'2026-10-11T23:59:00',
     festivalDates:{'2026-10-05':'2026-10-05','2026-10-06':'2026-10-06','2026-10-07':'2026-10-07','2026-10-08':'2026-10-08','2026-10-09':'2026-10-09','2026-10-10':'2026-10-10','2026-10-11':'2026-10-11'},
     days:[{k:'2026-10-05',d:5,lbl:'LUN'},{k:'2026-10-06',d:6,lbl:'MAR'},{k:'2026-10-07',d:7,lbl:'MIÉ'},{k:'2026-10-08',d:8,lbl:'JUE'},{k:'2026-10-09',d:9,lbl:'VIE'},{k:'2026-10-10',d:10,lbl:'SÁB'},{k:'2026-10-11',d:11,lbl:'DOM'}],
     dayKeys:['2026-10-05','2026-10-06','2026-10-07','2026-10-08','2026-10-09','2026-10-10','2026-10-11'],
@@ -1180,7 +1180,7 @@ export const FESTIVAL_CONFIG={
     keyArt:'/assets/keyart/mamut2026-v3.jpg',
     // lo que el festival dice de sí mismo; «Mamut» ya es el nombre
     tagline:'Festival de Memoria Audiovisual',
-    storageKey:'mamut2026_',festivalStartStr:'2026-10-05T00:00:00',festivalEndStr:'2026-10-11T23:59:00',
+    instagram:'mamut_festival', storageKey:'mamut2026_',festivalStartStr:'2026-10-05T00:00:00',festivalEndStr:'2026-10-11T23:59:00',
     festivalDates:{'2026-10-05':'2026-10-05','2026-10-06':'2026-10-06','2026-10-07':'2026-10-07','2026-10-08':'2026-10-08','2026-10-09':'2026-10-09','2026-10-10':'2026-10-10','2026-10-11':'2026-10-11'},
     days:[{k:'2026-10-05',d:5,lbl:'LUN'},{k:'2026-10-06',d:6,lbl:'MAR'},{k:'2026-10-07',d:7,lbl:'MIÉ'},{k:'2026-10-08',d:8,lbl:'JUE'},{k:'2026-10-09',d:9,lbl:'VIE'},{k:'2026-10-10',d:10,lbl:'SÁB'},{k:'2026-10-11',d:11,lbl:'DOM'}],
     dayKeys:['2026-10-05','2026-10-06','2026-10-07','2026-10-08','2026-10-09','2026-10-10','2026-10-11'],
@@ -1200,7 +1200,7 @@ export const FESTIVAL_CONFIG={
     keyArt:'/assets/keyart/filcmar2026-v2.jpg',
     // lo que el festival dice de sí mismo (bio de @filcmar: «8º Festival de Cine de Marinilla»)
     tagline:'Festival de Cine de Marinilla',
-    storageKey:'filcmar2026_',festivalStartStr:'2026-10-09T00:00:00',festivalEndStr:'2026-10-13T23:59:00',
+    instagram:'filcmar', storageKey:'filcmar2026_',festivalStartStr:'2026-10-09T00:00:00',festivalEndStr:'2026-10-13T23:59:00',
     festivalDates:{'2026-10-09':'2026-10-09','2026-10-10':'2026-10-10','2026-10-11':'2026-10-11','2026-10-12':'2026-10-12','2026-10-13':'2026-10-13'},
     days:[{k:'2026-10-09',d:9,lbl:'VIE'},{k:'2026-10-10',d:10,lbl:'SÁB'},{k:'2026-10-11',d:11,lbl:'DOM'},{k:'2026-10-12',d:12,lbl:'LUN'},{k:'2026-10-13',d:13,lbl:'MAR'}],
     dayKeys:['2026-10-09','2026-10-10','2026-10-11','2026-10-12','2026-10-13'],

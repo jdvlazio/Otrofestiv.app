@@ -34,8 +34,9 @@ import { sameEntry,
   isScreeningBlocked, screeningPlannable, screensConflict, screensConflictReason,
 } from '../domain/schedule.js';
 import {
-  _getFestivalPhase, travelMins,
+  _getFestivalPhase, travelMins, festivalRecap,
 } from '../domain/festival.js';
+import { recapTitular, renderRecapExtraHTML } from './recap.js';
 import {
   state,
 } from '../state/state.js';
@@ -808,12 +809,15 @@ export function renderContextualHeader(state, consensus){
   // ── ENDED ─────────────────────────────────────────────────
   if(ph.phase==='ended'){
     const{totalWatched,pendingRatings}=ph;
+    const _rec=festivalRecap();
     const mainTitle=totalWatched===0
       ?((FESTIVAL_CONFIG[_activeFestId]||{}).name||t('misc_festival_default'))+` ${t('plan_fest_terminado')}`
       // ACTIVIDADES y no «obras»: la cuenta incluye los talleres y charlas que
       // marcaste (son lo que el Diario muestra, y el chip ya los contaba). Un
       // taller no es una obra, pero sí es una actividad — el paraguas correcto.
-      :`${t('plan_viste_n')} ${totalWatched} ${totalWatched!==1?t('misc_actividades'):t('misc_actividad')}`;
+      // «obras» si todo se califica, «actividades» si hubo eventos (recapTitular,
+      // dueño único con la historia 9:16 — #1055).
+      :(()=>{ const T=recapTitular(_rec); return `${T.verbo} ${T.n} ${T.unidad}`; })();
     // Header del Recuerdo (rediseño 21 jul 2026): título + el estado de calificación
     // como CHIP semántico en la MISMA línea, no un subtítulo suelto debajo. Verde
     // "Todo calificado" (logrado) / ámbar "N sin calificar" (pendiente) — mismos tokens
@@ -829,7 +833,7 @@ export function renderContextualHeader(state, consensus){
     return`<div class="recap-hdr">
       <span class="ctx-main-title">${mainTitle}</span>
       ${_chip}
-    </div>`;
+    </div>${totalWatched?renderRecapExtraHTML(_rec):''}`;
   }
 
   // ── BEFORE ─────────────────────────────────────────────────
@@ -1374,8 +1378,9 @@ function _renderSavedAgendaHTML(state, consensus){
       <div class="mb-2 sec-hdr">${ICONS.bookOpen} <span>${t('diary_eyebrow')}</span></div>
       ${renderDiaryHTML(state)}</div>`:'';
     // Compartir mi festival (RFC F2): reutiliza el export del Diario.
-    const _shareBtn=_eff.size>0?`<button class="ag-save-btn" data-action="shareDiary">${ICONS.share} ${t('recap_compartir')}</button>`:'';
-    if(_recap||_vivido) return`<div class="saved-agenda">${_recap}${_hero}${_vivido}${_shareBtn}</div>`;
+    const _shareBtn=_eff.size>0?`<button class="ag-save-btn" data-action="abrirCompartirFestival">${ICONS.share} ${t('recap_compartir')}</button>`:'';
+    // «Tu festival» (#1055): compartir sube debajo del recorrido, antes del Diario.
+    if(_recap||_vivido) return`<div class="saved-agenda">${_recap}${_shareBtn}${_hero}${_vivido}</div>`;
     // Sin vistas NI plan: empty state canónico
     const _festNameMp=(FESTIVAL_CONFIG[_activeFestId]||{}).name||t('misc_festival_default');
     return emptyStateHero(ICONS.sparkles,`${_festNameMp} ${t('plan_fest_terminado')}`,t('empty_vistas'),t('plan_ir_programa'),'mnav-cartelera');

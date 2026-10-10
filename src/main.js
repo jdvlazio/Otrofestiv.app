@@ -147,6 +147,7 @@ import {
 import {
   sharePlan, shareDiary, exportICS,
 } from './controller/share.js';
+import { abrirCompartirFestival } from './controller/story.js';
 
 // ── Step 7e: controller/poster-err.js ────────────────────────────────────────────
 import {
@@ -299,6 +300,7 @@ const ACTION_REGISTRY = {
   openPalmares:        ()      => openPalmares(),
   closePalmares:       ()      => closePalmares(),
   shareDiary:          ()      => shareDiary(),
+  abrirCompartirFestival: ()    => abrirCompartirFestival(),
   scrollToSuggestions: ()      => _scrollToSuggestions(),
   removeConflictModal: ()      => _removeConflictModal(),
   scrollToTop:         ()      => _scrollToTop(),
@@ -1020,6 +1022,9 @@ try{
   const _capApp=window.Capacitor?.Plugins?.App;
   if(window.Capacitor?.isNativePlatform?.()&&_capApp?.addListener){
     _capApp.addListener('backButton',()=>{ if(!_closeTopSheet()) _capApp.minimizeApp?.(); });
+    // Tocar un aviso que trae destino (el del día después: «Tu festival») abre Mi Plan.
+    window.Capacitor.Plugins?.LocalNotifications?.addListener?.('localNotificationActionPerformed',
+      a=>{ if(a?.notification?.extra?.abrir==='miplan'){ try{ switchMainNav('mnav-miplan'); showAgView(); }catch(e){} } });
   }
 }catch(e){ /* sin plugin: comportamiento de siempre */ }
 
