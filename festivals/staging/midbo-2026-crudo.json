@@ -45,12 +45,17 @@
   "2026-11-25 18:30 Instrucciones para cuando no esté: fuera del 27 oct–4 nov oficial (MAMM, El Poblado, Medellín)",
   "2026-11-28 16:30 De cierta manera: fuera del 27 oct–4 nov oficial (MAMM, El Poblado, Medellín)",
   "2026-11-07 19:00 De cierta manera: fuera del 27 oct–4 nov oficial (Cinemateca del Caribe, Barranquilla)",
+  "2026-10-27 14:00 L’Evangile de la Révolution: función fuera de Bogotá (Santa Marta)",
   "2026-11-06 11:30 Retratos de Churcampa: fuera del 27 oct–4 nov oficial (Sala 3, Cinemateca de Bogotá)",
   "2026-11-13 11:30 Retratos de Churcampa: fuera del 27 oct–4 nov oficial (Sala 3, Cinemateca de Bogotá)",
   "2026-11-27 11:30 Retratos de Churcampa: fuera del 27 oct–4 nov oficial (Sala 3, Cinemateca de Bogotá)",
   "2026-12-11 11:30 Retratos de Churcampa: fuera del 27 oct–4 nov oficial (Sala 3, Cinemateca de Bogotá)",
   "2026-11-22 17:00 Bojayá: la verdad desde adentro: fuera del 27 oct–4 nov oficial (Cinemateca La Tertulia, Cali)",
   "2026-10-28 09:00 Boyuna: función dentro de un centro penitenciario («MIDBO va a las cárceles»)",
+  "2026-10-28 18:00 Un lugar más grande: función fuera de Bogotá (Medellín)",
+  "2026-10-30 18:30 Montaña luminosa: función fuera de Bogotá (Minca)",
+  "2026-10-30 18:30 Un río de aguas profundas y luminosas: función fuera de Bogotá (Minca)",
+  "2026-10-30 18:30 La forma y la raíz: función fuera de Bogotá (Minca)",
   "2026-11-29 15:00 El coloquio de los pájaros: fuera del 27 oct–4 nov oficial (MAMM, El Poblado, Medellín)",
   "2026-10-27 16:00 Foco Claire Simon: no es una actividad del público (registro, presentación o proyección ya publicada)",
   "2026-10-28 08:00 Registro y acreditaciones al Seminario Pensar lo R: no es una actividad del público (registro, presentación o proyección ya publicada)",
@@ -62,33 +67,6 @@
   "2026-10-30 08:50 Presentación: no es una actividad del público (registro, presentación o proyección ya publicada)"
  ],
  "funciones": [
-  {
-   "titulo": "Programa 7: Reactivar los archivos para el presente",
-   "dia": "2026-10-27",
-   "hora": "14:00",
-   "sede": "Universidad del Magdalena",
-   "sala": "Sala Langosta Azul",
-   "ciudad": "Santa Marta",
-   "acceso": "Entrada libre",
-   "_src": {
-    "url": "https://midbo.co/peliculas/l-evangile-de-la-revolution/",
-    "date": "2026-10-10"
-   },
-   "has_qa": true,
-   "qa_type": "team",
-   "seccion": "Espejos: Gestos de reparación",
-   "obras": [
-    {
-     "titulo": "L'Evangile de la Révolution",
-     "director": "François-Xavier Drouet",
-     "pais": "Francia, Bélgica",
-     "anio": 2024,
-     "duracion_min": 115,
-     "sinopsis": "El auge revolucionario de América Latina en el siglo XX se debe mucho a la participación de millones de cristianos, comprometidos en luchas políticas en nombre de la fe. Inspirados por la teología de la liberación, desafiaron a los regímenes militares y a las oligarquías. Cuestionando la idea de la religión como opio del pueblo, la película va al encuentro de los que vieron en la revolución la llegada del Reino de Dios, en la tierra antes que en el cielo."
-    }
-   ],
-   "duracion_min": 115
-  },
   {
    "dia": "2026-10-27",
    "hora": "16:00",
@@ -148,28 +126,6 @@
     }
    ],
    "duracion_min": 88
-  },
-  {
-   "dia": "2026-10-28",
-   "hora": "18:00",
-   "sede": "Universidad de Antioquia",
-   "sala": "Paraninfo",
-   "ciudad": "Medellín",
-   "ticket_url": "https://tuboleta.com/es/eventos/un-lugar-mas-grande",
-   "acceso": "Boletería en TuBoleta",
-   "_src": {
-    "url": "https://midbo.co/peliculas/un-lugar-mas-grande/",
-    "date": "2026-10-10"
-   },
-   "has_qa": true,
-   "qa_type": "team",
-   "seccion": "Competencia Iberoamericana de Largometraje Documental",
-   "titulo": "Un lugar más grande",
-   "director": "Nicolas Défossé",
-   "pais": "México, Francia",
-   "anio": 2025,
-   "duracion_min": 115,
-   "sinopsis": "Chiapas, sureste de México. Cuando los habitantes del pueblo de Tila y de varias aldeas expulsan al ayuntamiento y a la policía, se enfrentan al reto del autogobierno. «Un lugar más grande» explora la construcción de la autonomía en el día a día, revelando un amplio tejido de personas, generaciones, espíritus y paisajes, así como imágenes inéditas. Nos sumerge en el corazón de un proceso colectivo, cuando el autogobierno se convierte en una responsabilidad frente a uno mismo y a los demás. Una aventura de inspiración zapatista en territorio maya ch’ol."
   },
   {
    "dia": "2026-10-28",
@@ -614,46 +570,6 @@
     }
    ],
    "duracion_min": 71
-  },
-  {
-   "titulo": "Competencia Nacional de Cortometraje Documental",
-   "dia": "2026-10-30",
-   "hora": "18:30",
-   "sede": "Cine club Cine 40",
-   "ciudad": "Minca",
-   "acceso": "desconocido",
-   "_src": {
-    "url": "https://midbo.co/peliculas/montana-luminosa/",
-    "date": "2026-10-10"
-   },
-   "seccion": "Competencia Nacional de Cortometraje Documental",
-   "obras": [
-    {
-     "titulo": "Montaña luminosa",
-     "director": "Lony Welter",
-     "pais": "Colombia",
-     "anio": 2026,
-     "duracion_min": 26,
-     "sinopsis": "En La Jagua, un pequeño pueblo ribereño del Huila, la llegada de los hombres que vienen a abrir la tierra para construir una represa hidroeléctrica altera el delicado pulso del territorio. Nidia (55), una mujer campesina y maestra artesana del fique, espera con silenciosa tristeza la partida de su único hijo, quien se marcha en busca de un futuro «mejor». A medida que la ansiedad y el insomnio se instalan en su vida, una extraña sensación comienza a crecer en su interior: una presencia inquietante que no logra nombrar. Mientras la tierra es abierta y herida, Nidia se debate entre expulsar o abrazar aquello que la rodea, aquello que se filtra en su cuerpo. Entre el barro, el viento, las lágrimas y las alucinantes e intoxicantes flores del borrachero, avanza hacia una revelación: una que contiene el antídoto para su dolor y el último aliento necesario para que la montaña dé a luz."
-    },
-    {
-     "titulo": "Un río de aguas profundas y luminosas",
-     "director": "Andrés Dávila",
-     "pais": "Colombia",
-     "anio": 2026,
-     "duracion_min": 30,
-     "sinopsis": "En los años setenta, siendo niña, Susana acompañó a su padre, Pedro Juajibioy, en distintos viajes por el Putumayo, donde él recolectaba plantas mientras soñaba con crear un jardín botánico en Sibundoy, su lugar de origen. Hoy, junto a Susana y Brayan, un joven botánico de Sibundoy, recorremos esos mismos caminos en la Amazonía colombiana, siguiendo las huellas de Pedro, reconocido por haber acompañado al etnobotánico Richard Evans Schultes en sus exploraciones por la región entre 1941 y 1953. Ese legado continúa en la labor de Brayan, quien, inspirado en el jardín de Pedro, destruido por una avalancha en la década de 1990, creó en Sibundoy un nuevo espacio de conservación y reanudó su trabajo de recolección y cuidado de las plantas. «Un río de aguas profundas y luminosas» acompaña estos recorridos, en los que se puede observar cómo el conocimiento se transmite entre generaciones y permanece vivo en quienes continúan practicándolo en su territorio. Andrés Dávila Colombia 2026 30 min Producción: Andrés Dávila, Laura Dávila, Carolina Mejía Fotografía: Andrés Dávila Sonido: Arsenio Cadea, Daniela Cano Montaje: Andrés Dávila"
-    },
-    {
-     "titulo": "La forma y la raíz",
-     "director": "Nathalia Quimbay Cadena y Valeria Moraima Berríos",
-     "pais": "Colombia, Cuba",
-     "anio": 2025,
-     "duracion_min": 14,
-     "sinopsis": "Un retrato de la vida en transformación en el campo: se nace, crece y muere. Es una invitación a percibir la existencia con mayor calma, prestando atención a aquellos pequeños detalles y micro-mundos que suelen pasar desapercibidos en nuestra cotidianidad, en donde se mezcla la vida de las plantas y los animales en su constante transcurso de crecimiento y muerte. Esta contemplación de la vida rural se captura a través de planos fijos y visualmente serenos, que contrastan con un vasto y dinámico movimiento de sonido, creando una experiencia sensorial inmersiva y profundamente reflexiva. Nos invita a recordar lo insignificantes que somos en este ciclo eterno, donde finalmente todos nos convertimos en polvo."
-    }
-   ],
-   "duracion_min": 64
   },
   {
    "dia": "2026-10-30",

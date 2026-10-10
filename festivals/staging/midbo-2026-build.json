@@ -142,34 +142,34 @@
   "2026-11-04": "Miércoles 4 de noviembre"
  },
  "sections": {
-  "🪞 Espejos: Gestos de reparación": {
-   "en": "Mirrors: Gestures of Repair",
-   "archetype": "Perspectivas / Miradas",
-   "order": 1
-  },
   "🔎 Foco Claire Simon": {
    "en": "Focus: Claire Simon",
    "archetype": "Retrospectiva / Tributo",
-   "order": 2
+   "order": 1
   },
-  "🌎 Competencia Iberoamericana de Largometraje Documental": {
-   "en": "Ibero-American Feature Documentary Competition",
-   "archetype": "Competencia",
-   "order": 3
+  "🪞 Espejos: Gestos de reparación": {
+   "en": "Mirrors: Gestures of Repair",
+   "archetype": "Perspectivas / Miradas",
+   "order": 2
   },
   "🏆 Competencia Nacional de Largometraje Documental": {
    "en": "National Feature Documentary Competition",
    "archetype": "Competencia",
-   "order": 4
+   "order": 3
   },
   "✨ Programas especiales": {
    "en": "Special Programs",
    "archetype": "Especiales / Eventos",
-   "order": 5
+   "order": 4
   },
   "🎬 Proyecciones": {
    "en": "Screenings",
    "archetype": "Especiales / Eventos",
+   "order": 5
+  },
+  "🌎 Competencia Iberoamericana de Largometraje Documental": {
+   "en": "Ibero-American Feature Documentary Competition",
+   "archetype": "Competencia",
    "order": 6
   },
   "🌍 Panorama Internacional de Largometraje Documental": {
@@ -234,16 +234,6 @@
   }
  },
  "venues": {
-  "Universidad del Magdalena - Santa Marta": {
-   "short": "Universidad del Magdalena",
-   "city": "Santa Marta",
-   "n": 1,
-   "lat": 11.2262461,
-   "lng": -74.1873608,
-   "_prec": "manual",
-   "_match": "Google Maps: Universidad del Magdalena (sala Langosta Azul dentro del campus) (10 oct 2026)",
-   "address": "Carrera 32 #22-08"
-  },
   "Alianza Francesa - Bogotá": {
    "short": "Alianza Francesa",
    "city": "Bogotá",
@@ -253,17 +243,6 @@
    "_match": "Google Maps: Alianza Francesa de Bogotá - Sede Centro (el seminario dice «Sede Centro»; las fichas de película, solo «Alianza Francesa») (10 oct 2026)",
    "n": 10,
    "address": "Cra. 3 #18-45"
-  },
-  "Universidad de Antioquia - Medellín": {
-   "short": "Universidad de Antioquia",
-   "city": "Medellín",
-   "n": 1,
-   "_prec": "manual",
-   "_todo": "buscar a mano (sedes-html.py genera la página)",
-   "lat": 6.2464191,
-   "lng": -75.564178,
-   "_match": "Google Maps: Edificio Paraninfo Universidad de Antioquia (10 oct 2026)",
-   "address": "Cra. 44 #48-72"
   },
   "Cinemateca de Bogotá - Bogotá": {
    "short": "Cinemateca de Bogotá",
@@ -314,16 +293,6 @@
    "_match": "Google Maps: Centro de Memoria, Paz y Reconciliación (10 oct 2026)",
    "address": "Cra. 19B #24-86"
   },
-  "Cine club Cine 40 - Minca": {
-   "short": "Cine club Cine 40",
-   "city": "Minca",
-   "n": 2,
-   "_prec": "manual",
-   "_todo": "buscar a mano (sedes-html.py genera la página)",
-   "lat": 11.1426579,
-   "lng": -74.1165712,
-   "_match": "APROXIMADO: el cineclub no figura en Google Maps; pin en la parroquia Nuestra Señora del Perpetuo Socorro, centro de Minca (10 oct 2026). Pendiente preguntar al festival."
-  },
   "Potocine - Bogotá": {
    "short": "Potocine",
    "city": "Bogotá",
@@ -346,38 +315,6 @@
   }
  },
  "films": [
-  {
-   "title": "L'Evangile de la Révolution",
-   "type": "film",
-   "section": "🪞 Espejos: Gestos de reparación",
-   "director": "François-Xavier Drouet",
-   "country": "Francia, Bélgica",
-   "flags": "🇫🇷🇧🇪",
-   "duration": "115 min",
-   "genre": "Documental",
-   "day": "2026-10-27",
-   "time": "14:00",
-   "day_order": 0,
-   "venue": "Universidad del Magdalena - Santa Marta",
-   "sala": "Sala Langosta Azul",
-   "has_qa": true,
-   "qa_type": "team",
-   "synopsis": "El auge revolucionario de América Latina en el siglo XX se debe mucho a la participación de millones de cristianos, comprometidos en luchas políticas en nombre de la fe. Inspirados por la teología de la liberación, desafiaron a los regímenes militares y a las oligarquías. Cuestionando la idea de la religión como opio del pueblo, la película va al encuentro de los que vieron en la revolución la llegada del Reino de Dios, en la tierra antes que en el cielo.",
-   "synopsis_lang": "es",
-   "poster": "/assets/midbo-2026/l-evangile-de-la-revolution.jpg",
-   "posterSource": "tmdb",
-   "_src": {
-    "url": "https://midbo.co/peliculas/l-evangile-de-la-revolution/",
-    "date": "2026-10-10"
-   },
-   "is_free": true,
-   "year": 2024,
-   "lbSlug": "the-gospel-of-revolution",
-   "tmdb_id": 1303398,
-   "synopsis_en": "The revolutions that swept Latin America in the second half of the 20th century owe much to the participation of millions of Christians who engaged in political struggles in the name of their faith, paying a heavy toll for undermining the traditional relationship between the Church and power. Driven by Liberation theology, they challenged military regimes and oligarchies, risking their lives. Far from Marx's idea of religion as 'opium of the people', here the people fought for the advent of the Kingdom of God on Earth, rather than in Heaven.",
-   "title_en": "The Gospel of Revolution",
-   "_programa_original": "Programa 7: Reactivar los archivos para el presente"
-  },
   {
    "title": "Notre corps",
    "type": "film",
@@ -465,37 +402,6 @@
      "tmdb_id": 1738942
     }
    ]
-  },
-  {
-   "title": "Un lugar más grande",
-   "type": "film",
-   "section": "🌎 Competencia Iberoamericana de Largometraje Documental",
-   "director": "Nicolas Défossé",
-   "year": 2025,
-   "country": "México, Francia",
-   "flags": "🇲🇽🇫🇷",
-   "duration": "115 min",
-   "genre": "Documental",
-   "day": "2026-10-28",
-   "time": "18:00",
-   "day_order": 1,
-   "venue": "Universidad de Antioquia - Medellín",
-   "sala": "Paraninfo",
-   "has_qa": true,
-   "qa_type": "team",
-   "synopsis": "Chiapas, sureste de México. Cuando los habitantes del pueblo de Tila y de varias aldeas expulsan al ayuntamiento y a la policía, se enfrentan al reto del autogobierno. «Un lugar más grande» explora la construcción de la autonomía en el día a día, revelando un amplio tejido de personas, generaciones, espíritus y paisajes, así como imágenes inéditas. Nos sumerge en el corazón de un proceso colectivo, cuando el autogobierno se convierte en una responsabilidad frente a uno mismo y a los demás. Una aventura de inspiración zapatista en territorio maya ch’ol.",
-   "synopsis_lang": "es",
-   "poster": "/assets/midbo-2026/un-lugar-mas-grande.jpg",
-   "posterSource": "tmdb",
-   "_src": {
-    "url": "https://midbo.co/peliculas/un-lugar-mas-grande/",
-    "date": "2026-10-10"
-   },
-   "ticket_url": "https://tuboleta.com/es/eventos/un-lugar-mas-grande",
-   "lbSlug": "a-bigger-place",
-   "tmdb_id": 1338573,
-   "synopsis_en": "Chiapas, southeastern Mexico. When the inhabitants of several villages and towns expel the mayor and the police from their territory, they face the challenge of self-government.",
-   "title_en": "A Bigger Place"
   },
   {
    "title": "El hogar fue sepultado en esa tierra que nunca pudimos encontrar",
@@ -1117,65 +1023,6 @@
      "tmdb_id": 1604094,
      "synopsis_en": "Fragments of pottery. Gold, silver, jewellery. Contemporary art. Luciana Decker Orozco visits various museums and collections in London, tracing a homegrown past present on another continent. Each piece are windows that open and close, briefly revealing what they hide, a mystery that she encapsulates in her celluloid and magical editing.",
      "title_en": "Shards"
-    }
-   ]
-  },
-  {
-   "title": "Competencia Nacional de Cortometraje Documental",
-   "type": "film",
-   "section": "🎞️ Competencia Nacional de Cortometraje Documental",
-   "country": "Colombia, Cuba",
-   "flags": "🇨🇴🇨🇺",
-   "duration": "64 min",
-   "day": "2026-10-30",
-   "time": "18:30",
-   "day_order": 3,
-   "venue": "Cine club Cine 40 - Minca",
-   "has_qa": false,
-   "_src": {
-    "url": "https://midbo.co/peliculas/montana-luminosa/",
-    "date": "2026-10-10"
-   },
-   "is_cortos": true,
-   "film_list": [
-    {
-     "title": "Montaña luminosa",
-     "director": "Lony Welter",
-     "country": "Colombia",
-     "flags": "🇨🇴",
-     "year": 2026,
-     "duration": "26 min",
-     "synopsis": "En La Jagua, un pequeño pueblo ribereño del Huila, la llegada de los hombres que vienen a abrir la tierra para construir una represa hidroeléctrica altera el delicado pulso del territorio. Nidia (55), una mujer campesina y maestra artesana del fique, espera con silenciosa tristeza la partida de su único hijo, quien se marcha en busca de un futuro «mejor». A medida que la ansiedad y el insomnio se instalan en su vida, una extraña sensación comienza a crecer en su interior: una presencia inquietante que no logra nombrar. Mientras la tierra es abierta y herida, Nidia se debate entre expulsar o abrazar aquello que la rodea, aquello que se filtra en su cuerpo. Entre el barro, el viento, las lágrimas y las alucinantes e intoxicantes flores del borrachero, avanza hacia una revelación: una que contiene el antídoto para su dolor y el último aliento necesario para que la montaña dé a luz.",
-     "synopsis_lang": "es",
-     "poster": "/assets/midbo-2026/montana-luminosa.jpg",
-     "posterSource": "tmdb",
-     "lbSlug": "montana-luminosa",
-     "tmdb_id": 1668886
-    },
-    {
-     "title": "Un río de aguas profundas y luminosas",
-     "director": "Andrés Dávila",
-     "country": "Colombia",
-     "flags": "🇨🇴",
-     "year": 2026,
-     "duration": "30 min",
-     "synopsis": "En los años setenta, siendo niña, Susana acompañó a su padre, Pedro Juajibioy, en distintos viajes por el Putumayo, donde él recolectaba plantas mientras soñaba con crear un jardín botánico en Sibundoy, su lugar de origen. Hoy, junto a Susana y Brayan, un joven botánico de Sibundoy, recorremos esos mismos caminos en la Amazonía colombiana, siguiendo las huellas de Pedro, reconocido por haber acompañado al etnobotánico Richard Evans Schultes en sus exploraciones por la región entre 1941 y 1953. Ese legado continúa en la labor de Brayan, quien, inspirado en el jardín de Pedro, destruido por una avalancha en la década de 1990, creó en Sibundoy un nuevo espacio de conservación y reanudó su trabajo de recolección y cuidado de las plantas. «Un río de aguas profundas y luminosas» acompaña estos recorridos, en los que se puede observar cómo el conocimiento se transmite entre generaciones y permanece vivo en quienes continúan practicándolo en su territorio. Andrés Dávila Colombia 2026 30 min Producción: Andrés Dávila, Laura Dávila, Carolina Mejía Fotografía: Andrés Dávila Sonido: Arsenio Cadea, Daniela Cano Montaje: Andrés Dávila",
-     "synopsis_lang": "es"
-    },
-    {
-     "title": "La forma y la raíz",
-     "director": "Nathalia Quimbay Cadena y Valeria Moraima Berríos",
-     "country": "Colombia, Cuba",
-     "flags": "🇨🇴🇨🇺",
-     "year": 2025,
-     "duration": "14 min",
-     "synopsis": "Un retrato de la vida en transformación en el campo: se nace, crece y muere. Es una invitación a percibir la existencia con mayor calma, prestando atención a aquellos pequeños detalles y micro-mundos que suelen pasar desapercibidos en nuestra cotidianidad, en donde se mezcla la vida de las plantas y los animales en su constante transcurso de crecimiento y muerte. Esta contemplación de la vida rural se captura a través de planos fijos y visualmente serenos, que contrastan con un vasto y dinámico movimiento de sonido, creando una experiencia sensorial inmersiva y profundamente reflexiva. Nos invita a recordar lo insignificantes que somos en este ciclo eterno, donde finalmente todos nos convertimos en polvo.",
-     "synopsis_lang": "es",
-     "poster": "/assets/midbo-2026/la-forma-y-la-raiz.jpg",
-     "posterSource": "tmdb",
-     "lbSlug": "la-forma-y-la-raiz",
-     "tmdb_id": 1660700,
-     "genre": "Documental"
     }
    ]
   },
@@ -3394,12 +3241,9 @@
    "description_lang": "es"
   }
  ],
- "_avisos_duracion": [
-  "programa «Competencia Nacional de Cortometraje Documental» (2026-10-30 18:30): sus obras suman 70 min (3 de 3 con duración) y la función dura 64"
- ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-10T13:37:13",
+  "fecha": "2026-10-10T14:36:29",
   "plan_sha": "7059f54ea57383c2",
   "paso": 6,
   "cmd": "python3 pipeline/ensamblar.py midbo-2026"

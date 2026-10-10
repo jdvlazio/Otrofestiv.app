@@ -72,6 +72,12 @@ SEDE_FUERA = {
     'Colegio Manuelita Sáenz': 'función dentro de un colegio («MIDBO va a los colegios»)',
     'Auditorio Caldas, Servicio Forjar Restaurativo Arborizadora Baja, Ciudad Bolívar':
         'función dentro de un servicio de justicia restaurativa juvenil',
+    # FUERA DE BOGOTÁ (decisión de Juan, 10 oct): 3 de 73 funciones, una por
+    # ciudad; encenderían el selector de ciudad para todo el festival
+    'Sala Langosta Azul, Universidad del Magdalena, Santa Marta': 'función fuera de Bogotá (Santa Marta)',
+    'Cine club Cine 40 de Minca, Santa Marta': 'función fuera de Bogotá (Minca)',
+    'MAMM, El Poblado, Medellín': 'función fuera de Bogotá (Medellín)',
+    'Universidad de Antioquia, Paraninfo, sala de cine': 'función fuera de Bogotá (Medellín)',
 }
 
 
