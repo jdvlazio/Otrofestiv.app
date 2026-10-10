@@ -3243,7 +3243,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-10T14:36:29",
+  "fecha": "2026-10-10T16:35:40",
   "plan_sha": "7059f54ea57383c2",
   "paso": 6,
   "cmd": "python3 pipeline/ensamblar.py midbo-2026"
