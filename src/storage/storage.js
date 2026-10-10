@@ -125,6 +125,9 @@ export const storage = {
   // persistido para siempre, pisando el idioma del celular — el default
   // correcto). Regla: el idioma del DISPOSITIVO manda en el arranque; solo una
   // elección explícita POSTERIOR en el toggle (que escribe v2) lo pisa.
+  // Identificador al azar del dispositivo para reportar retrasos sin cuenta
+  // (migración 0006). No es una cuenta; null si no hay almacenamiento.
+  getDispositivo() { try { let t = localStorage.getItem('otrofestiv_dispositivo'); if (!t) { t = crypto.randomUUID(); localStorage.setItem('otrofestiv_dispositivo', t); } return t; } catch (e) { return null; } },
   getLang() { return localStorage.getItem('otrofestiv_lang_v2'); },
   setLang(l) { try { localStorage.setItem('otrofestiv_lang_v2', l); localStorage.removeItem('otrofestiv_lang'); } catch(e) {} },
 
