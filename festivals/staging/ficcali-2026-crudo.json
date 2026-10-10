@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "ficcali.com — Programación 2026 (WP 14870) + fichas de la Selección 2026",
-  "capturado": "2026-10-08",
+  "capturado": "2026-10-09",
   "url": "https://ficcali.com/programacion-ficcali-2026/",
   "metodo": "tarjeta por función; obra por la ficha del catálogo"
  },
@@ -817,6 +817,8 @@
     "tarjeta": 14017
    },
    "titulo": "Conversatorio \"Territorios y Voces Indígenas\" Presentan Concip y Telepacífico",
+   "tipo": "evento",
+   "event_kind": "conversatorio",
    "seccion": "Proyecciones",
    "duracion_min": 90,
    "_duracion_de": "el hueco hasta la siguiente en la misma sede (tope 90, 60 si es la última)"

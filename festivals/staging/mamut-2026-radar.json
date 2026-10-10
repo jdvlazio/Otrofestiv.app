@@ -1,10 +1,10 @@
 {
  "_provenance": {
   "fuente": "issue de radar #964 — https://github.com/jdvlazio/Otrofestiv.app/issues/964",
-  "capturado": "2026-09-29",
+  "capturado": "2026-10-09",
   "titulo": "RADAR: Mamut 11 — Medellín, 5–11 OCT 2026",
   "estado": "OPEN",
-  "comentarios": 5
+  "comentarios": 7
  },
  "issue": 964,
  "titulo": "RADAR: Mamut 11 — Medellín, 5–11 OCT 2026",
@@ -30,6 +30,14 @@
   {
    "fecha": "2026-09-29",
    "cuerpo": "ESTADO: 28 sep 2026 (noche) · **MONTADO en [#983](https://github.com/jdvlazio/Otrofestiv.app/pull/983), sin mergear** (espera el visto bueno de Juan).\n\n- La fuente es la **versión corregida** del carrusel, [p/Dd2ckXgiYW9](https://www.instagram.com/p/Dd2ckXgiYW9/), que el festival volvió a publicar después de p/Dd2bBTciVpN. Cambia horas, sedes y salas y agrega conversatorios.\n- **29 actividades en 8 sedes**, con entrada libre. Quedan fuera los 3 laboratorios con convocatoria cerrada.\n- El build está verificado contra las láminas: 29/29.\n- Sin pin: Lab UNAL y Capilla, Comfama. Pendiente del festival: qué cortos van en cada programa."
+  },
+  {
+   "fecha": "2026-09-30",
+   "cuerpo": "ESTADO: 30 sep 2026 · fuente: **IG @mamut_festival** (navegador: bio + grid + carrusel de programación pasado lámina por lámina) — **publicado; la programación del festival coincide con la nuestra.**\n\nROJO a **5 días** (arranca el lun 5 oct).\n\n## 1. Publicado\n\n[#983](https://github.com/jdvlazio/Otrofestiv.app/pull/983) se mergeó el 29 sep; después entraron [#991](https://github.com/jdvlazio/Otrofestiv.app/pull/991) (reparto de los cortos del martes) y [#992](https://github.com/jdvlazio/Otrofestiv.app/pull/992) (sedes, acceso y sinopsis). Cambio la etiqueta a `radar:publicado`.\n\n## 2. La fuente cambió de post, no de contenido\n\n- El carrusel que citaba el ESTADO del 28 sep, `p/Dd2ckXgiYW9`, **ya no existe** («the post may have been removed»).\n- La programación vigente es [p/Dd4A9NxERJA](https://www.instagram.com/p/Dd4A9NxERJA/) (29 sep, 11 láminas, sin sello «Edited»). `festivals/mamut-2026.json` en `main` ya lo cita en las 29 entradas.\n- Leídas hoy las láminas 2–9 (lun 5 a dom 11) contra el build: **las 29 actividades públicas coinciden en día, hora y sede.** Lámina 10: 6 sedes con dirección. Lámina 11: créditos.\n- [p/Dd4271OCShq](https://www.instagram.com/p/Dd4271OCShq/): reparto de los 16 cortos en los Programas 01 y 02. Es el mismo que ya está en el build (8 + 8; las duraciones suman 111 y 117 min, igual que en el build).\n\n## 3. Lo que el carrusel muestra y el build deja fuera, a propósito\n\nTalleres con inscripción previa: *Archivos no hegemónicos* / *Archivistas salvajes* (Daniel Saucedo, Lab UNAL, sesiones 01–04, mar 6 a vie 9); *Mitos, mitómanos y misterios* (Clemente Castor: mié 7 en Maker Lab, Colombo; jue 8 en el Centro Colombo Americano); *Residencia de archivos* (Daniel Cortés, Maker Lab, Colombo: vie 9 de 4 a 7 p. m. y sáb 10 de 9 a. m. a 1 p. m.); *Tarjetas de visita* (Silvia Córdoba, Coocine, dom 11).\n\nSobre la duda del 28 sep (vie 9, 4 p. m., Colombo): la programación trae **una sola** entrada en esa franja, «Residencia de archivos · Taller: Daniel Cortes · Sesión 01 · Inscripción previa». La socialización de `p/DdpXsi1CeWG` no aparece como actividad aparte. Con eso no alcanza para saber si la socialización se canceló o si es parte de esa sesión.\n\n## 4. Lo que el festival no dice\n\nEl carrusel no dice qué cortos van en la **Muestra de cortos 1 y 2 del dom 11** (Coocine, 4 p. m.).\n"
+  },
+  {
+   "fecha": "2026-10-03",
+   "cuerpo": "ESTADO: 3 oct 2026 · fuente: **IG @mamut_festival** (navegador: grid + pies por embed) — **hay una actividad del festival que no está en el build.**\n\nROJO a **2 días** (arranca el lun 5 oct).\n\n## 1. Presentación de *Cuadernos de Cine Colombiano* n.º 35: no está en el build\n\nPost [Dd9jnplCUEL](https://www.instagram.com/mamut_festival/p/Dd9jnplCUEL/), verbatim: «presentación de la edición 35 de Cuadernos de Cine Colombiano: Prácticas documentales en el marco de #Mamut11 […] **Sábado 10 de octubre · 5:00 p. m. · 📍Centro Colombo Americano (Sala 2)** · 💬 Conversación con: Juana Schlenker, Daniel Cortés, Ana Tiagx y Tomás Campuzano. **Entrada libre.**»\n\n`origin/main:festivals/mamut-2026.json` tiene cuatro entradas el sáb 10: Programa SHUB 17:00 (Colombo), *Geographies of Solitude* 17:00 (MAMM), Archivistas salvajes 18:00 (Colombo) y *Yo soy la muerte* 20:00 (Colombo). **Ninguna es esta.** No sé si la dejaron fuera a propósito o si no estaba en el carrusel de programación: hay que mirar la lámina del sábado.\n\n## 2. Coinciden con el build\n\n- [DeAsIjYCSN1](https://www.instagram.com/mamut_festival/p/DeAsIjYCSN1/), programa de Santiago Herrera: jue 8, 5:00 p. m., Colombo sala 1, «El labrador de violines - 13 minutos · Desde la ventana - 26 minutos». En el build está como «Programa inédito: Santiago Herrera», jue 8 17:00, 39 min. Un detalle: el build dice «Labrador de violines», **sin el artículo** que pone el post.\n- Inauguración lun 5, 6 p. m., en La Pascasia ([Dd97iCtAW0T](https://www.instagram.com/mamut_festival/p/Dd97iCtAW0T/)): en el build, *Soplo de vida* y *Bombardeo a Washington*, lun 5 18:00, La Pascasia.\n- *Frío metal*: jue 8, 6:30 p. m., MAMM (colaboración con @fuego.cine). En el build, jue 8 18:30 MAMM.\n"
   }
  ]
 }

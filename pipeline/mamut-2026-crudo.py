@@ -80,6 +80,8 @@ SEDES = {
     # cual y sin pin hasta saberlo.
     'Capilla, Comfama': 'Capilla, Comfama',
     'Maker Lab, Colombo': 'Maker Lab, Colombo',
+    # la sala histórica que cerró en 2008 y abre una última vez (ver FUNCIONES_DE_OTRO_POST)
+    'Cine Centro': 'Cine Centro',
 }
 
 # ── LAS SECCIONES. El festival no agrupa por secciones; como en Girardota,
@@ -149,6 +151,24 @@ SINOPSIS_DE_OTRA_FUENTE = {
 # acompañadas de conversaciones con sus Directores»; la lámina solo la marcaba en
 # dos de las tres.
 QA_DE_OTRA_FUENTE = {'La memoria de las mariposas': 'https://www.instagram.com/p/DeAIFYqJAQE/'}
+
+# LA FUNCIÓN QUE EL CARRUSEL NO TRAE Y OTRO POST DEL FESTIVAL SÍ (9 oct 2026).
+# p/DeQQqCqiUdb (8 oct): «¡La última función del Cine Centro!» — la sala que
+# programó entre 1990 y 2008 abre una última vez. Lámina: «LOLITA EN HONDA ·
+# Daniel Torres. Colombia. 2026. 60 min. · ÚLTIMA FUNCIÓN DEL TEATRO CINE
+# CENTRO · SÁBADO 10 DE OCTUBRE · Conversación + Proyección en 16 mm · 2:30
+# p. m. · Cine Centro - Esquina de la Avenida Oriental (Carrera 46) con la calle
+# Ecuador (Carrera 48) · Entrada libre». El pie: con presencia del director y de
+# Luis Carlos Uribe, fundador de Cine Centro, y «algunos cortos en 16 mm» que no
+# nombra (no se inventan). Juan aprobó sumarla el 9 oct. Es una SEGUNDA función
+# de una obra que ya está, no una obra nueva.
+FUNCIONES_DE_OTRO_POST = [
+    {'titulo': 'Lolita en Honda', 'dia': '2026-10-10', 'hora': '14:30', 'sede': 'Cine Centro',
+     # los invitados (Daniel Torres y Luis Carlos Uribe) NO van en `invitados`: el
+     # ensamblador los pega a la sinopsis y la misma obra quedaría con dos
+     # sinopsis ([programa-mismo-titulo]). La conversación la marca has_qa.
+     'post': 'DeQQqCqiUdb', 'fecha_post': '2026-10-08'},
+]
 
 # El Q&A lo dice la lámina corregida («CONVERSACION CON DIRECTOR», `qa` en la
 # transcripción). Con invitados nombrados, `guests` y la lista va a la ficha.
@@ -340,6 +360,19 @@ def main():
                 and t not in ACTIVIDAD and not reg.get('sinopsis') and a.get('credito')):
             c = CREDITO_REESCRITO.get(t) or a['credito'].strip().capitalize()
             reg['sinopsis'] = c if c.endswith('.') else c + '.'
+        funciones.append(reg)
+
+    for x in FUNCIONES_DE_OTRO_POST:
+        reg = {'titulo': x['titulo'], 'dia': x['dia'], 'hora': x['hora'], 'sede': SEDES[x['sede']],
+               'acceso': 'Entrada libre', 'seccion': SECCION_PROYECCION,
+               'has_qa': True, 'qa_type': 'guests',
+               '_src': {'url': f'https://www.instagram.com/p/{x["post"]}/', 'date': x['fecha_post']}}
+        o = catalogo.get(x['titulo'])
+        if not o:
+            sys.exit(f'✗ {x["titulo"]!r} no está en el catálogo de la programación')
+        for c in ('director', 'pais', 'anio', 'duracion_min'):
+            if o.get(c):
+                reg[c] = o[c]
         funciones.append(reg)
 
     duracion_sin_dato(funciones)

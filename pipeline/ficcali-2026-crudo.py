@@ -171,6 +171,10 @@ PROGRAMA = {
 # ficha en el catálogo): cada obra con lo que la tarjeta dice de ella; la ficha
 # de TMDB se declara en -correcciones.json. Antes se publicaban como UNA obra
 # («Rodilla Negra + El Coloso») y ninguna de las dos se buscaba (8 oct).
+# UNA ACTIVIDAD EN LA CATEGORÍA «PROYECCIONES»: la tarjeta 14017 es un conversatorio
+# (Concip y Telepacífico) y salía como película sin afiche; [proyeccion-que-es-actividad]
+# lo cazó el 9 oct. Por id, porque la categoría de la tarjeta miente.
+EVENTO_EN_PROYECCIONES = {14017: 'conversatorio'}
 # LO QUE LA TARJETA CALLA y otra fuente dice (8 oct): «Guapi: ritmo y balsada» es
 # el documental de la Expedición Guapi 1963 del Instituto Popular de Cultura
 # (nexus.univalle.edu.co/index.php/nexus/article/view/13321; trasmishuellas.univalle.edu.co),
@@ -320,7 +324,7 @@ def main():
         k = plano(nombre)
         o = idx.get(k) or idx.get(plano(ALIAS.get(k, '')))
         cat = x['categoria']
-        es_proy = cat in ('Proyecciones', 'Cine sin límites') or x.get('duracion_min')
+        es_proy = (cat in ('Proyecciones', 'Cine sin límites') or x.get('duracion_min')) and x['id'] not in EVENTO_EN_PROYECCIONES
         if x['id'] in PROGRAMA:
             p = PROGRAMA[x['id']]
             if isinstance(p, list):
@@ -357,7 +361,7 @@ def main():
                       'pais': x.get('pais') if x.get('pais') not in ('Cali, Colombia', 'Cali') else None,
                       'duracion_min': x.get('duracion_min')})
         else:
-            kind = next((v for w, v in KIND if w in nombre.lower()), 'evento')
+            kind = EVENTO_EN_PROYECCIONES.get(x['id']) or next((v for w, v in KIND if w in nombre.lower()), 'evento')
             r.update({'titulo': nombre, 'tipo': 'evento', 'event_kind': kind,
                       'seccion': SECCION_TARJETA.get(cat, 'Académico' if cat not in SECCION_TARJETA else cat)})
             if detalle:

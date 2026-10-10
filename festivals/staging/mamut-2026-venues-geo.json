@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "Nominatim con verificación: caja de ciudad + token distintivo + clase de lugar (una sede fija nunca es un barrio). _prec:manual intocable.",
-  "capturado": "2026-09-29"
+  "capturado": "2026-10-09"
  },
  "Centro Colombo Americano": {
   "n": 0,
@@ -66,5 +66,13 @@
   "lat": 6.2458698,
   "lng": -75.5639884,
   "_nota": "La Capilla: sala de cine patrimonial en el 2.º piso del Claustro Comfama San Ignacio (comfama.com, «Cineclub La Capilla»). Google Maps: Comfama Claustro San Ignacio, Cra. 44 #48-18 (29 sep)."
+ },
+ "Cine Centro": {
+  "n": 1,
+  "lat": 6.2538534,
+  "lng": -75.5636238,
+  "_prec": "manual",
+  "_match": "APROXIMADO (9 oct 2026): la sala cerró en 2008 y no está en Google Maps ni en OSM. La lámina dice «Esquina de la Avenida Oriental (Carrera 46) con la calle Ecuador (Carrera 48)»; El Colombiano la ubica en el eje del Parque de Bolívar. Pin sobre Ecuador (Cra 48) frente al parque, punto de Nominatim; pendiente confirmar la esquina con el festival.",
+  "address": "Av. Oriental (Cra. 46) con Ecuador (Cra. 48)"
  }
 }
