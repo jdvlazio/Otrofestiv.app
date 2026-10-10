@@ -78,6 +78,21 @@
    "posterSource": "tmdb"
   },
   {
+   "titulo": "AtmoSphaira",
+   "_ya_publicada": [
+    {
+     "festival": "cineautopsia-2026",
+     "titulo": "AtmoSphaira",
+     "poster": "/assets/cineautopsia/atmosphaira.jpg",
+     "posterSource": "oficial",
+     "sinopsis": "Sin la protección de una atmósfera, la vida cesa. Este fino barniz gaseoso, un compuesto de ἀτμός (vapor o aire) y σφαῖρα (esfera), nos permite existir mientras flotamos en el infinito. De ahí parte esta película, con el canto grabado del último pájaro hawaiano Kauaʻi ʻōʻō superviviente —y ahora extinto—. AtmoSphaira se subdivide en capítulos epistolares, en bitácoras de viaje o cartas de confrontación con la naturaleza humana y no humana. Cada segmento teje la urdimbre sonora y visual de dos cíclopes que, desde su punto de vista esférico, nos conceden —a veces de forma abstracta, otras de forma frontal y muy a menudo en silueta— una mirada a sus mundos. Desde los páramos andinos hasta el mar Mediterráneo, esta película nos guía con texturas fotosensibles y capas superpuestas a través de un multiverso que evoca la nostalgia de días mejores, la extinción de y dentro de los cuerpos, la ampliación de nuestra concepción de los acontecimientos en el espacio y el tiempo, así como la memoria física e inmaterial. Los sujetos de esta pieza son controladores insignificantes que se enfrentan a un flujo finito en sus cuerpos caducos, excretando imágenes crujientes y perfectas… megapíxeles que no muestran nada. AtmoSphaira nos invita a recorrer este paisaje, enfrentándonos a nuestra miopía vital: somos cíclopes de pantalla. Invoca la contradicción en nuestros cuerpos —efímeros y en el límite entre lo analógico y lo digital—, superando lo visible y envolviéndonos en lo sensible. Aquí nos convertimos en una nebulosa, un destello de luz que fertiliza la experiencia de una realidad trémula, revelando la sacralidad de la impureza tangible y confirmando que errar es verdaderamente humano."
+    }
+   ],
+   "poster": "/assets/cineautopsia/atmosphaira.jpg",
+   "_verificado": "ya publicada en cineautopsia-2026: se reusa su afiche",
+   "sinopsis": "Sin la protección de una atmósfera, la vida cesa. Este fino barniz gaseoso, un compuesto de ἀτμός (vapor o aire) y σφαῖρα (esfera), nos permite existir mientras flotamos en el infinito. De ahí parte esta película, con el canto grabado del último pájaro hawaiano Kauaʻi ʻōʻō superviviente —y ahora extinto—. AtmoSphaira se subdivide en capítulos epistolares, en bitácoras de viaje o cartas de confrontación con la naturaleza humana y no humana. Cada segmento teje la urdimbre sonora y visual de dos cíclopes que, desde su punto de vista esférico, nos conceden —a veces de forma abstracta, otras de forma frontal y muy a menudo en silueta— una mirada a sus mundos. Desde los páramos andinos hasta el mar Mediterráneo, esta película nos guía con texturas fotosensibles y capas superpuestas a través de un multiverso que evoca la nostalgia de días mejores, la extinción de y dentro de los cuerpos, la ampliación de nuestra concepción de los acontecimientos en el espacio y el tiempo, así como la memoria física e inmaterial. Los sujetos de esta pieza son controladores insignificantes que se enfrentan a un flujo finito en sus cuerpos caducos, excretando imágenes crujientes y perfectas… megapíxeles que no muestran nada. AtmoSphaira nos invita a recorrer este paisaje, enfrentándonos a nuestra miopía vital: somos cíclopes de pantalla. Invoca la contradicción en nuestros cuerpos —efímeros y en el límite entre lo analógico y lo digital—, superando lo visible y envolviéndonos en lo sensible. Aquí nos convertimos en una nebulosa, un destello de luz que fertiliza la experiencia de una realidad trémula, revelando la sacralidad de la impureza tangible y confirmando que errar es verdaderamente humano."
+  },
+  {
    "titulo": "Carlitos",
    "tmdb_id": 1193058,
    "titulo_original": "Carlitos",
@@ -255,6 +270,27 @@
    ],
    "_sinopsis_de": "ya publicada en siembrafest-2026",
    "poster": "/assets/ficpa-2026/en-su-sombra-fertil.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Esperando a los bárbaros",
+   "tmdb_id": 1712139,
+   "titulo_original": "Περιμένοντας τους Βαρβάρους",
+   "poster_path": "/dJ4XjUDqRJoDJ8BpmGNNS0v6nJV.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "In a city - evoking, without specificity, a city of the Roman Empire - the poem depicts a state of waiting: the arrival of the ‘Barbarians’ has been announced. The city holds its breath in anticipation… But who, exactly, are these “Barbarians”? And what if they do not come?",
+   "genero": "Animación",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 12,
+   "pais_tmdb": "Greece, France",
+   "title_en": "Waiting for the Barbarians",
+   "lbSlug": "waiting-for-the-barbarians-2026",
+   "_verificado": "declarada a mano: Existe en TMDB como «Waiting for the Barbarians» (orig. «Περιμένοντας τους Βαρβάρους»), Georges Sifianos, 2026, GR/FR, 12 min: mismo director y país que publica FICPA. Encontrada por la filmografía del director el 10 oct 2026.",
+   "_director": "Georges Sifianos",
+   "_sondeado": "2026-10-10",
+   "sinopsis": "En una ciudad que evoca, sin precisarla, una ciudad del Imperio romano, el poema retrata un estado de espera: se ha anunciado la llegada de los «bárbaros». La ciudad contiene el aliento… Pero ¿quiénes son, exactamente, esos «bárbaros»? ¿Y si no llegan?",
+   "_sinopsis": "traducción nuestra con contexto (Content Design, 10 oct 2026) de la sinopsis oficial en inglés: https://www.themoviedb.org/movie/1712139",
+   "poster": "/assets/ficpa-2026/esperando-a-los-barbaros.jpg",
    "posterSource": "tmdb"
   },
   {
@@ -751,6 +787,26 @@
    "poster": "/assets/ficpa-2026/en-su-sombra-fertil.jpg",
    "posterSource": "tmdb"
   },
+  "Esperando a los bárbaros": {
+   "tmdb_id": 1712139,
+   "titulo_original": "Περιμένοντας τους Βαρβάρους",
+   "poster_path": "/dJ4XjUDqRJoDJ8BpmGNNS0v6nJV.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "In a city - evoking, without specificity, a city of the Roman Empire - the poem depicts a state of waiting: the arrival of the ‘Barbarians’ has been announced. The city holds its breath in anticipation… But who, exactly, are these “Barbarians”? And what if they do not come?",
+   "genero": "Animación",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 12,
+   "pais_tmdb": "Greece, France",
+   "title_en": "Waiting for the Barbarians",
+   "lbSlug": "waiting-for-the-barbarians-2026",
+   "_verificado": "declarada a mano: Existe en TMDB como «Waiting for the Barbarians» (orig. «Περιμένοντας τους Βαρβάρους»), Georges Sifianos, 2026, GR/FR, 12 min: mismo director y país que publica FICPA. Encontrada por la filmografía del director el 10 oct 2026.",
+   "_director": "Georges Sifianos",
+   "_sondeado": "2026-10-10",
+   "sinopsis": "En una ciudad que evoca, sin precisarla, una ciudad del Imperio romano, el poema retrata un estado de espera: se ha anunciado la llegada de los «bárbaros». La ciudad contiene el aliento… Pero ¿quiénes son, exactamente, esos «bárbaros»? ¿Y si no llegan?",
+   "_sinopsis": "traducción nuestra con contexto (Content Design, 10 oct 2026) de la sinopsis oficial en inglés: https://www.themoviedb.org/movie/1712139",
+   "poster": "/assets/ficpa-2026/esperando-a-los-barbaros.jpg",
+   "posterSource": "tmdb"
+  },
   "Harvey & Maude": {
    "tmdb_id": 1688858,
    "titulo_original": "Harvey & Maude",
@@ -956,7 +1012,7 @@
   "80KM",
   "Achikanain",
   "Animación",
-  "AtmaSphaira",
+  "AtmoSphaira",
   "BOCA",
   "Buscando a papá",
   "Cantar de Noche Larga",
@@ -980,7 +1036,6 @@
   "El Reflejo de Doña Gloria",
   "El sueño del Cusillo",
   "Ellir",
-  "Esperando a los bárbaros",
   "Flor de un Día",
   "Hijas de Eva",
   "La Abuela Científica",
@@ -1022,7 +1077,7 @@
    "director": "",
    "fecha": "2026-10-10"
   },
-  "AtmaSphaira": {
+  "AtmoSphaira": {
    "director": "Sandra Rengifo",
    "fecha": "2026-10-10"
   },
@@ -1116,10 +1171,6 @@
   },
   "Ellir": {
    "director": "Laura Quintanilla",
-   "fecha": "2026-10-10"
-  },
-  "Esperando a los bárbaros": {
-   "director": "Georges Sifianos",
    "fecha": "2026-10-10"
   },
   "Flor de un Día": {
