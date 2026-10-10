@@ -1054,7 +1054,7 @@
   {
    "title": "Cortos experimentales internacionales y colombianos",
    "type": "film",
-   "section": "🌍 Ecos del Mundo",
+   "section": "💓 Latidos del Cine Colombiano",
    "country": "Grecia, Colombia/Cuba",
    "flags": "🇬🇷🇨🇴🇨🇺",
    "duration": "39 min",
@@ -1076,7 +1076,18 @@
      "title": "Esperando a los bárbaros",
      "director": "Georges Sifianos",
      "country": "Grecia",
-     "flags": "🇬🇷"
+     "flags": "🇬🇷",
+     "poster": "/assets/ficpa-2026/esperando-a-los-barbaros.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "waiting-for-the-barbarians-2026",
+     "tmdb_id": 1712139,
+     "synopsis": "En una ciudad que evoca, sin precisarla, una ciudad del Imperio romano, el poema retrata un estado de espera: se ha anunciado la llegada de los «bárbaros». La ciudad contiene el aliento… Pero ¿quiénes son, exactamente, esos «bárbaros»? ¿Y si no llegan?",
+     "synopsis_en": "In a city - evoking, without specificity, a city of the Roman Empire - the poem depicts a state of waiting: the arrival of the ‘Barbarians’ has been announced. The city holds its breath in anticipation… But who, exactly, are these “Barbarians”? And what if they do not come?",
+     "title_en": "Waiting for the Barbarians",
+     "genre": "Animación",
+     "year": 2026,
+     "synopsis_lang": "es",
+     "duration": "12 min"
     },
     {
      "title": "Chaika",
@@ -1814,7 +1825,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-10T12:59:06",
+  "fecha": "2026-10-10T16:31:28",
   "plan_sha": "572c264052fc30e6",
   "paso": 6,
   "cmd": "python3 pipeline/ensamblar.py ficpa-2026"
