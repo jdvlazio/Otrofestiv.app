@@ -33,3 +33,9 @@ language sql stable security definer set search_path to '' as $$
 $$;
 revoke all on function public.consenso_festival(text) from public;
 grant execute on function public.consenso_festival(text) to anon, authenticated;
+
+-- 3 · La edge function `reportar` escribe con service_role, que en este proyecto
+--     NO tenía permisos de escritura sobre la tabla (medido: 500 en la primera
+--     prueba contra producción). Aplicado aparte como 0006b; queda acá para que
+--     el archivo diga todo lo que se hizo.
+grant select, insert, update, delete on table public.screening_reports to service_role;
