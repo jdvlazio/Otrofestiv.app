@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "Instagram @filcmar — el carrusel de programación (16 láminas)",
-  "capturado": "2026-10-10",
+  "capturado": "2026-10-11",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_sedes": "El nombre que imprime cada lámina, tal cual; la sala va aparte (Foso, Hall, Capilla).",
@@ -475,7 +475,9 @@
      "synopsis": "Convencido de que a Flor solo le interesan los rockeros tatuados, Raúl intenta reinventarse para conquistarla. Con la ayuda de su vecina, quien le hace un tatuaje de henna, y de su abuelo (también llamado Raúl), que le enseña a tocar la guitarra, emprende un dulce y torpe intento por llamar su atención.",
      "synopsis_lang": "es",
      "poster": "/assets/filcmar-2026/the-raules.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "lbSlug": "the-raules",
+     "tmdb_id": 1794424
     },
     {
      "title": "Desarraigo",
@@ -1441,7 +1443,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-10T05:16:13",
+  "fecha": "2026-10-11T07:49:24",
   "plan_sha": "23096bf87098b953",
   "paso": 8,
   "cmd": "python3 pipeline/ensamblar.py filcmar-2026"
