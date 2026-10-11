@@ -205,6 +205,12 @@ def ficha(L, BLOQUES):
     d = {}
     if 'Sinopsis' in L:
         fin = next((j for j in range(k + 1, len(L)) if L[j] in ('Reseña', 'Trailer', 'Funciones')), k + 2)
+        # las fichas de CREAndo traen la ficha técnica DESPUÉS de la sinopsis
+        # (dirección · país · año · «N min» · «Producción: …»): la sinopsis
+        # termina donde empieza la dirección, o se publicaban pegadas (10 oct)
+        _dur = next((j for j in range(k + 1, fin) if re.fullmatch(r'\d+ min', L[j])), None)
+        if _dur and _dur - 3 > k:
+            fin = _dur - 3
         d['sinopsis'] = ' '.join(L[k + 1:fin])
     dur = next((j for j in range(len(L)) if re.fullmatch(r'\d+ min', L[j])), None)
     if dur:
