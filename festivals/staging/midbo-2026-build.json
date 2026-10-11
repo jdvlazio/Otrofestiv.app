@@ -587,6 +587,7 @@
    "country": "Perú, México",
    "flags": "🇵🇪🇲🇽",
    "duration": "83 min",
+   "genre": "Documental",
    "day": "2026-10-29",
    "time": "16:00",
    "day_order": 2,
@@ -597,13 +598,17 @@
    "synopsis": "Hace 50 años se filmó la lucha por las tierras en diversas comunidades campesinas del Cusco. Un grupo de cineastas trae estas imágenes de vuelta a la provincia de Paucartambo (Cusco), y les propone a los pobladores de la zona representar su memoria comunitaria a través de la creación de una nueva película.",
    "synopsis_lang": "es",
    "poster": "/assets/midbo-2026/buenos-dias-wiracocha.jpg",
-   "posterSource": "oficial",
+   "posterSource": "tmdb",
    "_src": {
     "url": "https://midbo.co/peliculas/buenos-dias-wiracocha/",
     "date": "2026-10-10"
    },
    "ticket_url": "https://tuboleta.com/es/eventos/buenos-dias-wiraqocha",
    "year": 2025,
+   "lbSlug": "good-morning-wiraqocha",
+   "tmdb_id": 1517473,
+   "synopsis_en": "Fifty years ago, the struggle for the lands in rural communities of Cuzco was filmed. A group of filmmakers brought these images back to the province of Paucartambo (Cuzco) and proposed to the villagers of the area to build a community memory through the creation of a new film.",
+   "title_en": "Good Morning, Wiraqocha",
    "_programa_original": "Programa 6: Restitución de archivos para una memoria política latinoamericana"
   },
   {
@@ -723,6 +728,7 @@
    "country": "Camerún, España",
    "flags": "🇨🇲🇪🇸",
    "duration": "60 min",
+   "genre": "Documental",
    "day": "2026-10-29",
    "time": "19:00",
    "day_order": 2,
@@ -732,13 +738,16 @@
    "synopsis": "En la frontera entre Marruecos y España, aguardamos impacientes el boza – la travesía a Europa. Entre los sucesivos intentos fallidos, sobrevivimos, y yo, como el «artista», debo mantener viva la llama de la esperanza del grupo. Con una cámara y un puñado de canciones, hicimos juntos esta película.",
    "synopsis_lang": "es",
    "poster": "/assets/midbo-2026/the-travelers.jpg",
-   "posterSource": "oficial",
+   "posterSource": "tmdb",
    "_src": {
     "url": "https://midbo.co/peliculas/the-travelers/",
     "date": "2026-10-10"
    },
    "ticket_url": "https://tuboleta.com/es/eventos/travelers-les-voyageurs",
-   "premiere": "Estreno en Bogotá"
+   "premiere": "Estreno en Bogotá",
+   "lbSlug": "the-travelers-2025",
+   "tmdb_id": 1463516,
+   "synopsis_en": "On the border between Morocco and Spain, a group of travelers is eagerly waiting to cross over to Europe."
   },
   {
    "title": "Programa 1: Pasaje entre mundos: duelo y memoria",
@@ -894,6 +903,7 @@
    "country": "Cuba",
    "flags": "🇨🇺",
    "duration": "79 min",
+   "genre": "Drama",
    "day": "2026-10-30",
    "time": "15:00",
    "day_order": 3,
@@ -903,12 +913,16 @@
    "synopsis": "El barrio de Miraflores, construido en 1962 por las mismas personas que lo habitarían, es resultado de los primeros esfuerzos de la Revolución Cubana por erradicar los barrios marginales. La película cuenta la historia de este barrio a través de la relación entre un trabajador negro y una maestra blanca. El filme combina el documental y la ficción para revelar las complejidades de la marginalización, la modernización revolucionaria, la raza y el género.",
    "synopsis_lang": "es",
    "poster": "/assets/midbo-2026/de-cierta-manera.jpg",
-   "posterSource": "oficial",
+   "posterSource": "tmdb",
    "_src": {
     "url": "https://midbo.co/peliculas/de-cierta-manera/",
     "date": "2026-10-10"
    },
    "ticket_url": "https://tuboleta.com/es/eventos/de-cierta-manera-0",
+   "lbSlug": "one-way-or-another-1975",
+   "tmdb_id": 162505,
+   "synopsis_en": "In Miraflores, Cuba, the growing romance between Mario, a factory worker, and Yolanda, a schoolteacher, throws into relief the differences in their perspectives and values in Revolutionary Cuba.",
+   "title_en": "One Way or Another",
    "year": 1977,
    "_programa_original": "De cierta manera"
   },
@@ -1715,7 +1729,11 @@
      "synopsis": "Mi padre utilizó una cámara una sola vez en su vida. Treinta años después, me pidió que digitalizara el material que había grabado en VHS. Me preguntaba qué recordaba él.",
      "synopsis_lang": "es",
      "poster": "/assets/midbo-2026/wild-flowers.jpg",
-     "posterSource": "oficial"
+     "posterSource": "tmdb",
+     "lbSlug": "wild-flowers-2022-2",
+     "tmdb_id": 1051799,
+     "synopsis_en": "My father only used a camera once in his life. Thirty years later, he asked me to digitise the material he had filmed. I was wondering what he remembers. Created from an impulse to rethink and rewatch personal archive footage, the film explores memory and its relation to documentation and non-institutional archive practices. Connecting politics with intimate spaces, the documentary questions both the influence of war on private archives and the role of gardens as places of new begginings.",
+     "genre": "Documental"
     },
     {
      "title": "Yrupẽ",
@@ -1787,6 +1805,7 @@
    "country": "Bélgica",
    "flags": "🇧🇪",
    "duration": "79 min",
+   "genre": "Documental",
    "day": "2026-11-01",
    "time": "19:30",
    "day_order": 5,
@@ -1796,12 +1815,15 @@
    "synopsis": "El 11 de marzo de 2011 ocurrió uno de los peores desastres nucleares de la historia. Sin embargo, más de una década después, la región, todavía gravemente contaminada, parece estar reconstruyéndose. El Gobierno japonés planea reactivar su programa nuclear. Este documental se sitúa en un contexto de consentimiento social tácito, en el que un acontecimiento dramático parece desvanecerse en el olvido. Fukushima puede alimentar fantasías posapocalípticas, pero la realidad es muy distinta. El accidente se ha disuelto en las plantas y el suelo hasta volverse invisible. En lugar de ofrecer otra mirada sobre los últimos supervivientes que habitan las zonas contaminadas, la película adopta el enfoque contrario: años después, observa la reconstrucción y la extraña aceptación de la vida en un espacio contaminado, cueste lo que cueste. Incluso si ello implica ignorar la radiactividad invisible, porque, al fin y al cabo, no deberíamos ser «radiofóbicos». Detrás de todo esto surge una pregunta: ¿por qué persistimos en un camino que conduce a la ruina cuando todos los indicios nos señalan que deberíamos tomar decisiones opuestas? Japón destaca en este sentido. Tierra de desastres naturales, funciona como un faro que ilumina el camino que estamos dispuestos a seguir para mantener nuestro mundo de hiperconsumo. Las decisiones de los gobiernos afectan a poblaciones que sufren sus consecuencias. Y, sin embargo, esas mismas poblaciones, sin dejarse engañar, soportan las peores situaciones en las que se ven sumidas. Esta sociología del desastre, traducida al lenguaje cinematográfico, ofrece un amplio abanico de posibilidades que la película explora.",
    "synopsis_lang": "es",
    "poster": "/assets/midbo-2026/back-to-fukushima.jpg",
-   "posterSource": "oficial",
+   "posterSource": "tmdb",
    "_src": {
     "url": "https://midbo.co/peliculas/back-to-fukushima/",
     "date": "2026-10-10"
    },
-   "premiere": "Estreno en Latinoamérica"
+   "premiere": "Estreno en Latinoamérica",
+   "lbSlug": "retour-a-fukushima",
+   "tmdb_id": 1592063,
+   "synopsis_en": "For a few years now, the Japanese government has been building complexes called \"renewal housing estates\" in the very heart of Fukushima Prefecture. More than a decade after the accident, the region, still heavily contaminated, has seen the emergence of these concrete neighborhoods, enclosed in the midst of wild, radioactive nature. This film paints an intimate portrait of the people who live there and offers a poetic reflection on the region."
   },
   {
    "title": "Relicto",
@@ -2078,7 +2100,11 @@
      "synopsis": "Dos mujeres intercambian cartas fílmicas que cruzan el pasado y el presente, entrelazando material de archivo de películas amateur con material ficticio actual filmado en 16 mm. Nunca se conocen en persona, sólo en sus películas. Heidrun, una vienesa retratada mediante material de archivo, y Sara, una inmigrante colombiana que trabaja en el archivo fílmico del Museo Austriaco del Cine. Ambas viven en Viena en diferentes épocas y observan la ciudad desde sus respectivas y sus situaciones de vida. La película aborda temas como la migración, el desarraigo y el racismo, y adopta una dimensión ensayística al cuestionar qué merece ser archivado y qué no.",
      "synopsis_lang": "es",
      "poster": "/assets/midbo-2026/invierno-flores-jardin.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "lbSlug": "winter-flowers-garden",
+     "tmdb_id": 1655475,
+     "synopsis_en": "Two women exchange cinematic letters that connect the past and present. Heidrun, a Viennese woman, and Sara, a Colombian migrant, live in the city at different times—whether in fiction or reality is not always clear.",
+     "title_en": "Winter Flowers Garden"
     }
    ]
   },
@@ -2227,7 +2253,11 @@
      "synopsis": "Tal vez el documental más aclamado de Santiago Álvarez. Apenas seis minutos le bastan al artista para, tomando como fondo la canción interpretada por Lena Horne, conformar este contundente alegato a favor de los derechos civiles de los negros en los Estados Unidos. Para algunos, el antecedente de lo que hoy conocemos como «video clip».",
      "synopsis_lang": "es",
      "poster": "/assets/midbo-2026/now.jpg",
-     "posterSource": "oficial"
+     "posterSource": "tmdb",
+     "lbSlug": "now",
+     "tmdb_id": 145762,
+     "synopsis_en": "Using morgue photos, newsreel footage, and a recording by Lena Horne, Cuban filmmaker Santiago Alvarez fired off 'Now!', one of the most powerful bursts of propaganda rendered in the 1960s.",
+     "genre": "Documental"
     },
     {
      "title": "79 primaveras",
@@ -2483,6 +2513,7 @@
    "country": "Perú, México",
    "flags": "🇵🇪🇲🇽",
    "duration": "83 min",
+   "genre": "Documental",
    "day": "2026-11-03",
    "time": "14:30",
    "day_order": 7,
@@ -2492,13 +2523,17 @@
    "synopsis": "Hace 50 años se filmó la lucha por las tierras en diversas comunidades campesinas del Cusco. Un grupo de cineastas trae estas imágenes de vuelta a la provincia de Paucartambo (Cusco), y les propone a los pobladores de la zona representar su memoria comunitaria a través de la creación de una nueva película.",
    "synopsis_lang": "es",
    "poster": "/assets/midbo-2026/buenos-dias-wiracocha.jpg",
-   "posterSource": "oficial",
+   "posterSource": "tmdb",
    "_src": {
     "url": "https://midbo.co/peliculas/buenos-dias-wiracocha/",
     "date": "2026-10-10"
    },
    "ticket_url": "https://tuboleta.com/es/eventos/buenos-dias-wiraqocha",
    "year": 2025,
+   "lbSlug": "good-morning-wiraqocha",
+   "tmdb_id": 1517473,
+   "synopsis_en": "Fifty years ago, the struggle for the lands in rural communities of Cuzco was filmed. A group of filmmakers brought these images back to the province of Paucartambo (Cuzco) and proposed to the villagers of the area to build a community memory through the creation of a new film.",
+   "title_en": "Good Morning, Wiraqocha",
    "_programa_original": "Programa 6: Restitución de archivos para una memoria política latinoamericana"
   },
   {
@@ -3243,7 +3278,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-10T16:35:40",
+  "fecha": "2026-10-10T23:31:14",
   "plan_sha": "7059f54ea57383c2",
   "paso": 6,
   "cmd": "python3 pipeline/ensamblar.py midbo-2026"
