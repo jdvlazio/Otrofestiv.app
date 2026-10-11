@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, con el MISMO candado de enriquecer.py: director ✓ y (año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-10-10"
+  "capturado": "2026-10-11"
  },
  "_origen": "ficica-2026-catalogo.json",
  "obras": [
@@ -345,6 +345,21 @@
    "pais_tmdb": "Spain",
    "lbSlug": "eject-el-ultimo-rebobinado",
    "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+  },
+  {
+   "titulo": "El arca de nora",
+   "tmdb_id": 1620644,
+   "titulo_original": "Noras ark",
+   "poster_path": "/6IUEFD6Gt55A1ONnyp1sdwSSM1n.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Nora has an unusual best friend – Billy the beetle. When climate change causes a major flood and her father fills his ark with animals, Nora launches her own rescue mission: she wants to save all the insects. But her dad dislikes bothersome critters that can spread disease and death, and refuses outright. So Nora prepares her own boat, Nora’s Ark. Father and daughter are drawn into a deep conflict that threatens not only their relationship, but the entire tiny ecosystem aboard Nora’s Ark.",
+   "genero": "Animación",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 20,
+   "pais_tmdb": "Croatia, Norway",
+   "title_en": "Nora's ark",
+   "lbSlug": "noras-ark",
+   "_verificado": "declarada a mano: Existe en TMDB con otro título o sin año ni duración, y el candado no la casaba sola: «Nora's ark» (2026), Endre Lund Eriksen; mismo director que publica FICICA. Verificada el 11 oct 2026."
   },
   {
    "titulo": "El segundo",
@@ -724,6 +739,20 @@
    "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
   },
   {
+   "titulo": "Living well",
+   "tmdb_id": 1566310,
+   "titulo_original": "buen vivir – ñutse canseye",
+   "poster_path": "/q8dqnssJKh3r0MVi476Y52oTV7Q.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Oil extraction in the Amazon region is contaminating the land and water of a natural paradise. A slow process that threatens the health and traditional culture of local communities. Thirteen women raise their voices against the destruction of their land. Through protests and silent resistance, they confront an opaque global power structure.",
+   "genero": "Documental",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 17,
+   "pais_tmdb": "",
+   "lbSlug": "buen-vivir-nutse-canseye",
+   "_verificado": "declarada a mano: Existe en TMDB con otro título o sin año ni duración, y el candado no la casaba sola: «buen vivir – ñutse canseye» (2025), Zoé Nathalie Kugler; mismo director que publica FICICA. Verificada el 11 oct 2026."
+  },
+  {
    "titulo": "Los pliegues de la falda",
    "tmdb_id": 1738777,
    "titulo_original": "Los pliegues de la falda",
@@ -797,6 +826,20 @@
      "sinopsis": "Entre más insiste en cumplir su rol de padre proveedor, Henry más se aleja de la posibilidad de volver a su hogar. Desde la finca de su hermano, él busca vender un ternero para así enviar dinero a su casa. Las malas posturas arrojarán su cuerpo, cansado de insistir."
     }
    ]
+  },
+  {
+   "titulo": "Ma-ma",
+   "tmdb_id": 1704333,
+   "titulo_original": "MA-MA",
+   "poster_path": null,
+   "synopsis_es": "Eva visita a su madre María, enferma de Alzheimer. A través de preguntas, Eva provoca recuerdos de la infancia en su madre.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 5,
+   "pais_tmdb": "",
+   "lbSlug": "ma-ma-1",
+   "_verificado": "declarada a mano: Existe en TMDB con otro título o sin año ni duración, y el candado no la casaba sola: «MA-MA», Isabel María Monge Guerrero; mismo director que publica FICICA. Verificada el 11 oct 2026."
   },
   {
    "titulo": "Marina y la falda",
@@ -874,6 +917,20 @@
      "sinopsis": "En 1983, soldados encapuchados irrumpen en la casa de Adelina y se llevan a su esposo, quien jamás regresa. Ante el silencio de las autoridades, ella se une a otras mujeres marcadas por la misma ausencia. Juntas convierten el dolor en memoria y la memoria en una exigencia de justicia."
     }
    ]
+  },
+  {
+   "titulo": "Memoria de un pibe",
+   "tmdb_id": 1533600,
+   "titulo_original": "Memória de Pivete",
+   "poster_path": "/7Nr49QULt5oCEQoXygbxXXyNegc.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "",
+   "lbSlug": "memoria-de-pivete",
+   "_verificado": "declarada a mano: Existe en TMDB con otro título o sin año ni duración, y el candado no la casaba sola: «Memória de Pivete», Pedro Santi; mismo director que publica FICICA. Verificada el 11 oct 2026."
   },
   {
    "titulo": "Niña chilapa",
@@ -995,6 +1052,21 @@
    "pais_tmdb": "Colombia",
    "lbSlug": "plastico-2025-1",
    "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+  },
+  {
+   "titulo": "Presépio (el pesebre)",
+   "tmdb_id": 1543600,
+   "titulo_original": "Presépio",
+   "poster_path": "/6iyzA9HcJYerRUOYfi7Z3uxnM1r.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "On Christmas Eve, Dejair, a former resistance fighter against the military dictatorship, gathers with his family in the backyard. During a Secret Santa game, the contrast between appearances and private truths emerges. A water gun gift leads Dejair to denounce the absurdity of giving a child a weapon.",
+   "genero": "Drama",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 18,
+   "pais_tmdb": "Brazil",
+   "title_en": "Nativity Scene",
+   "lbSlug": "nativity-scene",
+   "_verificado": "declarada a mano: Existe en TMDB con otro título o sin año ni duración, y el candado no la casaba sola: «Nativity Scene» (2025), Felipe Bibian; mismo director que publica FICICA. Verificada el 11 oct 2026."
   },
   {
    "titulo": "Prueba de cámara",
@@ -1136,6 +1208,20 @@
    ]
   },
   {
+   "titulo": "Replay",
+   "tmdb_id": 1677190,
+   "titulo_original": "Replay",
+   "poster_path": "/W9xvtCLFRZtbklQGnhpNJCwuL.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Set in a distant galaxy, a strange humanoid creature called Hunter X must fight against a dozen robot lizards to retrieve a peculiar disk-shaped device.",
+   "genero": "Animación",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 6,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "replay-2026",
+   "_verificado": "declarada a mano: Existe en TMDB con otro título o sin año ni duración, y el candado no la casaba sola: «Replay» (2026), Simón Matallana Nossa; mismo director que publica FICICA. Verificada el 11 oct 2026."
+  },
+  {
    "titulo": "Safo",
    "tmdb_id": 1450073,
    "titulo_original": "Safo",
@@ -1149,6 +1235,20 @@
    "title_en": "Sappho",
    "lbSlug": "sappho-2025",
    "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+  },
+  {
+   "titulo": "Saq nikté y el espíritu de la máscara",
+   "tmdb_id": 1487481,
+   "titulo_original": "Saq Nikté and the Spirit of the Mask",
+   "poster_path": "/3BnXjphTm2KfY9auOxQYrZ7rZiE.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "In a forgotten community, an artisan girl puts an old K'iche' invocation to the test and summons a curious spirit into our world.",
+   "genero": "Animación",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 5,
+   "pais_tmdb": "United States of America",
+   "lbSlug": "saq-nikte-and-the-spirit-of-the-mask",
+   "_verificado": "declarada a mano: Existe en TMDB con otro título o sin año ni duración, y el candado no la casaba sola: «Saq Nikté and the Spirit of the Mask» (2025), Ester Weiner; mismo director que publica FICICA. Verificada el 11 oct 2026."
   },
   {
    "titulo": "Sombras en la niebla",
@@ -1681,6 +1781,20 @@
    "lbSlug": "eject-el-ultimo-rebobinado",
    "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
   },
+  "El arca de nora": {
+   "tmdb_id": 1620644,
+   "titulo_original": "Noras ark",
+   "poster_path": "/6IUEFD6Gt55A1ONnyp1sdwSSM1n.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Nora has an unusual best friend – Billy the beetle. When climate change causes a major flood and her father fills his ark with animals, Nora launches her own rescue mission: she wants to save all the insects. But her dad dislikes bothersome critters that can spread disease and death, and refuses outright. So Nora prepares her own boat, Nora’s Ark. Father and daughter are drawn into a deep conflict that threatens not only their relationship, but the entire tiny ecosystem aboard Nora’s Ark.",
+   "genero": "Animación",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 20,
+   "pais_tmdb": "Croatia, Norway",
+   "title_en": "Nora's ark",
+   "lbSlug": "noras-ark",
+   "_verificado": "declarada a mano: Existe en TMDB con otro título o sin año ni duración, y el candado no la casaba sola: «Nora's ark» (2026), Endre Lund Eriksen; mismo director que publica FICICA. Verificada el 11 oct 2026."
+  },
   "El segundo": {
    "_fuente": "cinecorto",
    "_cinecorto": "https://cinecorto.co/el-segundo/",
@@ -2043,6 +2157,19 @@
    "lbSlug": "like-friend-like-deer",
    "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
   },
+  "Living well": {
+   "tmdb_id": 1566310,
+   "titulo_original": "buen vivir – ñutse canseye",
+   "poster_path": "/q8dqnssJKh3r0MVi476Y52oTV7Q.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Oil extraction in the Amazon region is contaminating the land and water of a natural paradise. A slow process that threatens the health and traditional culture of local communities. Thirteen women raise their voices against the destruction of their land. Through protests and silent resistance, they confront an opaque global power structure.",
+   "genero": "Documental",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 17,
+   "pais_tmdb": "",
+   "lbSlug": "buen-vivir-nutse-canseye",
+   "_verificado": "declarada a mano: Existe en TMDB con otro título o sin año ni duración, y el candado no la casaba sola: «buen vivir – ñutse canseye» (2025), Zoé Nathalie Kugler; mismo director que publica FICICA. Verificada el 11 oct 2026."
+  },
   "Los pliegues de la falda": {
    "tmdb_id": 1738777,
    "titulo_original": "Los pliegues de la falda",
@@ -2114,6 +2241,19 @@
      "sinopsis": "Entre más insiste en cumplir su rol de padre proveedor, Henry más se aleja de la posibilidad de volver a su hogar. Desde la finca de su hermano, él busca vender un ternero para así enviar dinero a su casa. Las malas posturas arrojarán su cuerpo, cansado de insistir."
     }
    ]
+  },
+  "Ma-ma": {
+   "tmdb_id": 1704333,
+   "titulo_original": "MA-MA",
+   "poster_path": null,
+   "synopsis_es": "Eva visita a su madre María, enferma de Alzheimer. A través de preguntas, Eva provoca recuerdos de la infancia en su madre.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 5,
+   "pais_tmdb": "",
+   "lbSlug": "ma-ma-1",
+   "_verificado": "declarada a mano: Existe en TMDB con otro título o sin año ni duración, y el candado no la casaba sola: «MA-MA», Isabel María Monge Guerrero; mismo director que publica FICICA. Verificada el 11 oct 2026."
   },
   "Marina y la falda": {
    "tmdb_id": 1712668,
@@ -2188,6 +2328,19 @@
      "sinopsis": "En 1983, soldados encapuchados irrumpen en la casa de Adelina y se llevan a su esposo, quien jamás regresa. Ante el silencio de las autoridades, ella se une a otras mujeres marcadas por la misma ausencia. Juntas convierten el dolor en memoria y la memoria en una exigencia de justicia."
     }
    ]
+  },
+  "Memoria de un pibe": {
+   "tmdb_id": 1533600,
+   "titulo_original": "Memória de Pivete",
+   "poster_path": "/7Nr49QULt5oCEQoXygbxXXyNegc.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "",
+   "lbSlug": "memoria-de-pivete",
+   "_verificado": "declarada a mano: Existe en TMDB con otro título o sin año ni duración, y el candado no la casaba sola: «Memória de Pivete», Pedro Santi; mismo director que publica FICICA. Verificada el 11 oct 2026."
   },
   "Niña chilapa": {
    "tmdb_id": 1456186,
@@ -2305,6 +2458,20 @@
    "pais_tmdb": "Colombia",
    "lbSlug": "plastico-2025-1",
    "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+  },
+  "Presépio (el pesebre)": {
+   "tmdb_id": 1543600,
+   "titulo_original": "Presépio",
+   "poster_path": "/6iyzA9HcJYerRUOYfi7Z3uxnM1r.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "On Christmas Eve, Dejair, a former resistance fighter against the military dictatorship, gathers with his family in the backyard. During a Secret Santa game, the contrast between appearances and private truths emerges. A water gun gift leads Dejair to denounce the absurdity of giving a child a weapon.",
+   "genero": "Drama",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 18,
+   "pais_tmdb": "Brazil",
+   "title_en": "Nativity Scene",
+   "lbSlug": "nativity-scene",
+   "_verificado": "declarada a mano: Existe en TMDB con otro título o sin año ni duración, y el candado no la casaba sola: «Nativity Scene» (2025), Felipe Bibian; mismo director que publica FICICA. Verificada el 11 oct 2026."
   },
   "Prueba de cámara": {
    "tmdb_id": 1743099,
@@ -2442,6 +2609,19 @@
     }
    ]
   },
+  "Replay": {
+   "tmdb_id": 1677190,
+   "titulo_original": "Replay",
+   "poster_path": "/W9xvtCLFRZtbklQGnhpNJCwuL.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Set in a distant galaxy, a strange humanoid creature called Hunter X must fight against a dozen robot lizards to retrieve a peculiar disk-shaped device.",
+   "genero": "Animación",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 6,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "replay-2026",
+   "_verificado": "declarada a mano: Existe en TMDB con otro título o sin año ni duración, y el candado no la casaba sola: «Replay» (2026), Simón Matallana Nossa; mismo director que publica FICICA. Verificada el 11 oct 2026."
+  },
   "Safo": {
    "tmdb_id": 1450073,
    "titulo_original": "Safo",
@@ -2455,6 +2635,19 @@
    "title_en": "Sappho",
    "lbSlug": "sappho-2025",
    "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+  },
+  "Saq nikté y el espíritu de la máscara": {
+   "tmdb_id": 1487481,
+   "titulo_original": "Saq Nikté and the Spirit of the Mask",
+   "poster_path": "/3BnXjphTm2KfY9auOxQYrZ7rZiE.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "In a forgotten community, an artisan girl puts an old K'iche' invocation to the test and summons a curious spirit into our world.",
+   "genero": "Animación",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 5,
+   "pais_tmdb": "United States of America",
+   "lbSlug": "saq-nikte-and-the-spirit-of-the-mask",
+   "_verificado": "declarada a mano: Existe en TMDB con otro título o sin año ni duración, y el candado no la casaba sola: «Saq Nikté and the Spirit of the Mask» (2025), Ester Weiner; mismo director que publica FICICA. Verificada el 11 oct 2026."
   },
   "Sombras en la niebla": {
    "tmdb_id": 1668876,
@@ -2653,7 +2846,6 @@
   "Citizenship test",
   "Compraventa",
   "Cómo limpiar un espejo",
-  "El arca de nora",
   "El mundo de humberto",
   "En nombre del amor",
   "Enfermedad",
@@ -2662,16 +2854,10 @@
   "La culpa es del cine",
   "La fiesta votada",
   "La tranquilidad de los pájaros",
-  "Living well",
-  "Ma-ma",
-  "Memoria de un pibe",
   "New york",
   "Post-familia",
-  "Presépio (el pesebre)",
   "Rastro",
   "Recordando mi jerga",
-  "Replay",
-  "Saq nikté y el espíritu de la máscara",
   "Snorri - catch me if you candy",
   "Sombra lejana",
   "Tejiendo un árbol",
