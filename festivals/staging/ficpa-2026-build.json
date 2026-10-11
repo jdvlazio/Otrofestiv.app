@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "ficpa.co — Programación oficial 2026 (WP programacion2026) + Selección Oficial",
-  "capturado": "2026-10-10",
+  "capturado": "2026-10-11",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_secciones": "Las de la Selección Oficial, tal cual (Ecos del Mundo y Latidos del Cine Colombiano son las dos mitades de «Sol de los Pastos»); Academia e Industria son los dos menús del sitio; «Programación alterna» es el nombre que el sitio da a las funciones fuera de las salas principales.",
@@ -209,14 +209,14 @@
    "_match": "Google Maps: Teatro Colombia (10 oct 2026)",
    "address": "Cl. 17 #21A-51"
   },
-  "Chachagüí - Chachagüí": {
-   "short": "Chachagüí",
+  "Parque Central de Chachagüí - Chachagüí": {
+   "short": "Parque Central de Chachagüí",
    "city": "Chachagüí",
    "n": 1,
-   "lat": 1.3587528,
-   "lng": -77.2825742,
+   "lat": 1.358433,
+   "lng": -77.2829544,
    "_prec": "manual",
-   "_match": "APROXIMADO (10 oct 2026): Google Maps «Alcaldía Chachagüí», centro del casco urbano. La tarjeta dice solo «Chachagüí» (Animación, mié 14, 7:00 p. m.); el taller de la mañana es en la I.E. Chachagüí, no esta función. Pendiente preguntar al festival el lugar exacto."
+   "_match": "Google Maps (11 oct 2026): «Eco Parque Nuestra Señora de Fátima», la plaza frente a la Parroquia Nuestra Señora de Fátima (1.3588168,-77.2830696), centro de Chachagüí. La tarjeta de Animación (mié 14, 7:00 p. m.) dice «Chachagüí - Parque Central»."
   },
   "Parque Principal de Yacuanquer - Yacuanquer": {
    "short": "Parque Principal de Yacuanquer",
@@ -711,7 +711,7 @@
    "day": "2026-10-14",
    "time": "19:00",
    "day_order": 1,
-   "venue": "Chachagüí - Chachagüí",
+   "venue": "Parque Central de Chachagüí - Chachagüí",
    "has_qa": false,
    "_src": {
     "url": "https://www.ficpa.co/programacion2026/",
@@ -1054,7 +1054,7 @@
   {
    "title": "Cortos experimentales internacionales y colombianos",
    "type": "film",
-   "section": "💓 Latidos del Cine Colombiano",
+   "section": "🌍 Ecos del Mundo",
    "country": "Grecia, Colombia/Cuba, Colombia",
    "flags": "🇬🇷🇨🇴🇨🇺🇨🇴",
    "duration": "39 min",
@@ -1833,8 +1833,8 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-10T18:07:21",
-  "plan_sha": "572c264052fc30e6",
+  "fecha": "2026-10-11T10:37:21",
+  "plan_sha": "e3a55f932981c213",
   "paso": 6,
   "cmd": "python3 pipeline/ensamblar.py ficpa-2026"
  }
