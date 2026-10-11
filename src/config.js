@@ -623,7 +623,7 @@ export const NOTICES=[
     type:'rescheduled',
     title:'La memoria de las mariposas',
     id:'mamut-mariposas-domingo',
-    note:'<b>La memoria de las mariposas</b>: «Evento reprogramado para el domingo 11 de octubre».',
+    note:'<b>La memoria de las mariposas</b>: «Evento reprogramado para el domingo 11 de octubre». Sin hora confirmada.',
     url:'https://www.instagram.com/p/DeSPVs5CcQW/',
   },
 ];
