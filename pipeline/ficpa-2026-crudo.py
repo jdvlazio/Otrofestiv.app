@@ -160,7 +160,8 @@ SEDES = {
     'Universidad Mariana · Sala Audiovisual Pedro Schumacher': ('Universidad Mariana', 'Sala Audiovisual Pedro Schumacher', 'Pasto'),
     'Fundación Universitaria San Martín · Sede Mijitayo': ('Fundación Universitaria San Martín, Sede Mijitayo', '', 'Pasto'),
     'Corregimiento Jamondino · Salón Comunal El Rosario': ('Salón Comunal El Rosario, Jamondino', '', 'Pasto'),
-    'Chachagüí': ('Chachagüí', '', 'Chachagüí'),
+    # la tarjeta la encabeza «Chachagüí» y la cierra «Chachagüí - Parque Central»
+    'Chachagüí': ('Parque Central de Chachagüí', '', 'Chachagüí'),
     'Yacuanquer · Parque Principal': ('Parque Principal de Yacuanquer', '', 'Yacuanquer'),
     'La Florida · Parque Principal': ('Parque Principal de La Florida', '', 'La Florida'),
 }
