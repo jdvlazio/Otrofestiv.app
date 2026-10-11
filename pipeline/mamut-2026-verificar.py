@@ -48,8 +48,10 @@ def main():
         t = crudo.TITULO_UNIFICADO.get(a['titulo'], a['titulo'])
         if t in crudo.EXCLUIDOS:
             continue
-        lam[(a['dia'], a['hora'], plano(t))] = (crudo.SEDES[a['sede']],
-                                                a.get('sala') or crudo.SALA_DE_OTRA_FUENTE.get(t, ''))
+        # la historia del domingo corrige la lámina (crudo.DEL_DOMINGO): misma tabla
+        aj = crudo.DEL_DOMINGO.get((t, a['dia']), {})
+        lam[(a['dia'], aj.get('hora', a['hora']), plano(t))] = (
+            crudo.SEDES[a['sede']], aj.get('sala') or a.get('sala') or crudo.SALA_DE_OTRA_FUENTE.get(t, ''))
     for x in crudo.FUNCIONES_DE_OTRO_POST:
         lam[(x['dia'], x['hora'], plano(x['titulo']))] = (crudo.SEDES[x['sede']], '')
     pub = {(f['day'], f['time'], plano(f['title'])): (f['venue'], f.get('sala') or '')
