@@ -1099,7 +1099,7 @@ export function openPlanConfirm(schedule){
   // La invitación a la cuenta: solo sin sesión, una línea, en la hoja que ya se
   // abre al guardar el Plan — el momento en que perderlo más importa.
   const _cta=document.getElementById('plan-confirm-cuenta');
-  if(_cta){ _cta.style.display=_sbUser?'none':''; if(!_sbUser) _cta.innerHTML=t('invita_plan'); }
+  if(_cta){ _cta.style.display=_sbUser?'none':''; if(!_sbUser) _cta.textContent=t('invita_plan'); }
   const _pcSheet=document.getElementById('plan-confirm-sheet');
   if(_pcSheet){ _pcSheet.style.display=''; requestAnimationFrame(()=>_pcSheet.classList.add('open')); }
   document.getElementById('plan-confirm-overlay').classList.add('open');

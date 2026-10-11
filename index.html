@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202610111034">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202610111034">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202610111058">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202610111058">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -1648,7 +1648,6 @@ mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100
 /* Base = .link-gray-xs (el enlace gris canónico, regla 5); acá solo el
    acomodo: a la izquierda como la pantalla y 44pt de toque (regla 10). */
 .invitar-cuenta{display:block;width:100%;min-height:44px;padding:0;text-align:left}
-.invitar-cuenta b{color:var(--white);font-weight:var(--w-bold)}
 /* Debajo de «Compartir mi festival»: la línea va pegada al botón y se lleva el
    margen que el botón reserva para no quedar bajo la barra de navegación. */
 .saved-agenda:has(.ag-save-btn) .ag-save-btn:has(+ .invitar-cuenta){margin-bottom:0}
@@ -3750,7 +3749,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202610111034";
+    s.src="/src/main.js?v=202610111058";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el
