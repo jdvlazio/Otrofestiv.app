@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "Instagram @mamut_festival — el carrusel de programación (11 láminas)",
-  "capturado": "2026-10-10",
+  "capturado": "2026-10-11",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_sedes": "El nombre que imprime cada lámina de día, tal cual; la sala va aparte (crudo `sala`). La lámina 10 da la dirección de seis. «Capilla, Comfama» y «Lab UNAL» no están en esa lámina.",
@@ -1096,7 +1096,7 @@
    "section": "🎪 Actividades",
    "duration": "90 min",
    "day": "2026-10-11",
-   "time": "12:00",
+   "time": "14:30",
    "day_order": 6,
    "venue": "Coocine - Medellín",
    "event_kind": "convite",
@@ -1104,7 +1104,8 @@
    "_src": {
     "url": "https://www.instagram.com/p/Dd4A9NxERJA/",
     "date": "2026-09-29",
-    "lamina": 8
+    "lamina": 8,
+    "corrige": "historia de @mamut_festival, 11 oct 2026 (captura de Juan)"
    },
    "is_free": true
   },
@@ -1378,6 +1379,7 @@
    "time": "17:00",
    "day_order": 6,
    "venue": "Coocine - Medellín",
+   "sala": "Sala 0",
    "has_qa": false,
    "synopsis": "Film experimental hecho con materiales de archivo encontrados mediante los cuales, por medio del montaje, se crea la ilusión que Washington es bombardeada desde el aire.",
    "synopsis_lang": "es",
@@ -1386,7 +1388,8 @@
    "_src": {
     "url": "https://www.instagram.com/p/Dd4A9NxERJA/",
     "date": "2026-09-29",
-    "lamina": 9
+    "lamina": 9,
+    "corrige": "historia de @mamut_festival, 11 oct 2026 (captura de Juan)"
    },
    "is_free": true,
    "lbSlug": "the-bombing-of-washington",
@@ -1415,7 +1418,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-10T12:27:43",
+  "fecha": "2026-10-11T10:22:53",
   "plan_sha": "3725c84df2834966",
   "paso": 8,
   "cmd": "python3 pipeline/ensamblar.py mamut-2026"
