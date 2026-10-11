@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202610111024">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202610111024">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202610111111">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202610111111">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -1643,6 +1643,15 @@ mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100
    medido, el pie quedaba a 0px del botón primario y a 16px de la lista que
    resume — pegado a lo que no es suyo y suelto de lo que sí. */
 .plan-confirm-cta{width:100%;margin-top:var(--sp-5)} /* anatomía: regla dueña */
+/* Invitación a la cuenta (#invitar): UNA línea gris tocable dentro de una
+   pantalla que ya está abierta — no es aviso ni ventana. Solo sin sesión. */
+/* Base = .link-gray-xs (el enlace gris canónico, regla 5); acá solo el
+   acomodo: a la izquierda como la pantalla y 44pt de toque (regla 10). */
+.invitar-cuenta{display:block;width:100%;min-height:44px;padding:0;text-align:left}
+/* Debajo de «Compartir mi festival»: la línea va pegada al botón y se lleva el
+   margen que el botón reserva para no quedar bajo la barra de navegación. */
+.saved-agenda:has(.ag-save-btn) .ag-save-btn:has(+ .invitar-cuenta){margin-bottom:0}
+.saved-agenda:has(.ag-save-btn) .ag-save-btn + .invitar-cuenta{margin-bottom:calc(var(--nav-h,56px) + max(env(safe-area-inset-bottom),20px) + 16px)}
 .rating-action-btn.skip{background:none;color:var(--gray)}
 .rating-action-btn.save{background:var(--amber-10);border:1px solid var(--amber-30);color:var(--amber)}
 
@@ -3614,6 +3623,7 @@ setTimeout(function(){
   </div>
   <div class="plan-confirm-films" id="plan-confirm-films"></div>
   <div class="dato-linea" id="plan-confirm-mas"></div>
+  <button class="link-gray-xs invitar-cuenta" id="plan-confirm-cuenta" data-action="invitarCuenta" style="display:none"></button>
   <button class="plan-confirm-cta" data-i18n="cta_mi_plan" data-action="closePlanConfirm" data-force="1">Ver Mi Plan</button>
 </div>
 <!-- ── Rating Sheet ── -->
@@ -3739,7 +3749,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202610111024";
+    s.src="/src/main.js?v=202610111111";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el

@@ -1379,8 +1379,11 @@ function _renderSavedAgendaHTML(state, consensus){
       ${renderDiaryHTML(state)}</div>`:'';
     // Compartir mi festival (RFC F2): reutiliza el export del Diario.
     const _shareBtn=_eff.size>0?`<button class="ag-save-btn" data-action="abrirCompartirFestival">${ICONS.share} ${t('recap_compartir')}</button>`:'';
+    // Sin sesión, una línea debajo: el Diario recién completado es lo que más
+    // vale guardar (invitación a la cuenta, la menos invasiva posible).
+    const _invita=_eff.size>0&&!_sbUser?`<button class="link-gray-xs invitar-cuenta" data-action="openAuthSheet">${t('invita_diario')}</button>`:'';
     // «Tu festival» (#1055): compartir sube debajo del recorrido, antes del Diario.
-    if(_recap||_vivido) return`<div class="saved-agenda">${_recap}${_shareBtn}${_hero}${_vivido}</div>`;
+    if(_recap||_vivido) return`<div class="saved-agenda">${_recap}${_shareBtn}${_invita}${_hero}${_vivido}</div>`;
     // Sin vistas NI plan: empty state canónico
     const _festNameMp=(FESTIVAL_CONFIG[_activeFestId]||{}).name||t('misc_festival_default');
     return emptyStateHero(ICONS.sparkles,`${_festNameMp} ${t('plan_fest_terminado')}`,t('empty_vistas'),t('plan_ir_programa'),'mnav-cartelera');
