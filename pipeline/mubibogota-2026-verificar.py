@@ -21,7 +21,7 @@ t = html.unescape(re.sub(r'<[^>]+>', '\n', re.sub(r'<script.*?</script>|<style.*
 L = [x.strip() for x in t.split('\n') if x.strip()]
 
 
-def hora24(h):
+def hora_tarjeta(h):
     m = re.match(r'(\d{1,2}):(\d{2})\s*([ap]m)?', h.lower().replace(' ', ''))
     hh, mm, ap = int(m.group(1)), m.group(2), m.group(3)
     if ap == 'pm' and hh < 12:
@@ -37,9 +37,9 @@ for i, x in enumerate(L):
     if m and k < len(L) and re.match(r'\d{1,2}:\d{2}', L[k]):
         # el título es la última línea en mayúsculas antes del crédito/fecha
         tit = next(L[j] for j in (i - 1, i - 2) if L[j].isupper() and L[j] not in ('GRATIS',))
-        web.add((f'2026-10-{m.group(1)}', hora24(L[k]), tit))
+        web.add((f'2026-10-{m.group(1)}', hora_tarjeta(L[k]), tit))
         if L[i - 1].isupper() and L[i - 2].isupper() and not L[i - 2].startswith(('ESTRENO', 'Q&A', 'EPÍLOGO')):
-            web.add((f'2026-10-{m.group(1)}', hora24(L[k]), L[i - 2]))
+            web.add((f'2026-10-{m.group(1)}', hora_tarjeta(L[k]), L[i - 2]))
 build = json.load(io.open(f'{REPO}/festivals/staging/{FID}-build.json', encoding='utf-8'))
 crudo = json.load(io.open(f'{REPO}/festivals/staging/{FID}-crudo.json', encoding='utf-8'))
 fuente = {f['titulo']: f['titulo_fuente'] for f in crudo['funciones']}
