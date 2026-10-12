@@ -1273,6 +1273,7 @@ export const FESTIVAL_CONFIG={
     dayShort_en:{'2026-10-27':'TUE 27','2026-10-28':'WED 28','2026-10-29':'THU 29','2026-10-30':'FRI 30','2026-10-31':'SAT 31','2026-11-01':'SUN 1','2026-11-02':'MON 2','2026-11-03':'TUE 3','2026-11-04':'WED 4'},
     dayLong:{'2026-10-27':'Martes 27 de octubre','2026-10-28':'Miércoles 28 de octubre','2026-10-29':'Jueves 29 de octubre','2026-10-30':'Viernes 30 de octubre','2026-10-31':'Sábado 31 de octubre','2026-11-01':'Domingo 1 de noviembre','2026-11-02':'Lunes 2 de noviembre','2026-11-03':'Martes 3 de noviembre','2026-11-04':'Miércoles 4 de noviembre'},
     prioLimit:5,
+    ticketing_model:'mixed', // boletería de la Cinemateca en TuBoleta ($7.000 + servicio, ticket_url por función) + entrada libre en las demás sedes; el seminario, gratis con inscripción
     films:null,posters:null,lbSlugs:{}
   },
   'narrarelfuturo2026': {
