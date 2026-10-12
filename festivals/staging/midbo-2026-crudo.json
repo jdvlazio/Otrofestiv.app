@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "midbo.co — ficha de cada obra (bloque «Funciones») + API pelicula/seccion",
-  "capturado": "2026-10-11",
+  "capturado": "2026-10-12",
   "url": "https://midbo.co/",
   "metodo": "120 fichas; sección = categoría madre, programa = hija"
  },
@@ -72,7 +72,7 @@
    "hora": "16:00",
    "sede": "Alianza Francesa",
    "ciudad": "Bogotá",
-   "acceso": "desconocido",
+   "acceso": "Entrada gratuita con inscripción (cupos limitados)",
    "_src": {
     "url": "https://midbo.co/peliculas/notre-corps/",
     "date": "2026-10-10"
@@ -245,7 +245,7 @@
    "hora": "16:00",
    "sede": "Alianza Francesa",
    "ciudad": "Bogotá",
-   "acceso": "desconocido",
+   "acceso": "Entrada gratuita con inscripción (cupos limitados)",
    "_src": {
     "url": "https://midbo.co/peliculas/cuando-cierro-los-ojos/",
     "date": "2026-10-10"
@@ -1530,8 +1530,7 @@
    "hora": "14:30",
    "sede": "Alianza Francesa",
    "ciudad": "Bogotá",
-   "ticket_url": "https://tuboleta.com/es/eventos/buenos-dias-wiraqocha",
-   "acceso": "Boletería en TuBoleta",
+   "acceso": "Entrada libre",
    "_src": {
     "url": "https://midbo.co/peliculas/buenos-dias-wiracocha/",
     "date": "2026-10-10"
@@ -1917,7 +1916,7 @@
    "event_kind": "masterclass",
    "seccion": "Encuentro Pensar lo Real",
    "duracion_min": 90,
-   "acceso": "desconocido",
+   "acceso": "Entrada gratuita con inscripción (cupos limitados)",
    "invitados": "Invitada: Claire Simon · Modera: Gustavo Vasco.",
    "_src": {
     "url": "https://midbo.co/encuentro-pensar-lo-real/seminario/",
@@ -1935,7 +1934,7 @@
    "event_kind": "conversatorio",
    "seccion": "Encuentro Pensar lo Real",
    "duracion_min": 90,
-   "acceso": "desconocido",
+   "acceso": "Entrada gratuita con inscripción (cupos limitados)",
    "invitados": "Invitados: Eduardo Rencurrel, Jacobo del Castillo · Modera: Adriana H. Bocanegra.",
    "_src": {
     "url": "https://midbo.co/encuentro-pensar-lo-real/seminario/",
@@ -1953,7 +1952,7 @@
    "event_kind": "dialogo",
    "seccion": "Encuentro Pensar lo Real",
    "duracion_min": 60,
-   "acceso": "desconocido",
+   "acceso": "Entrada gratuita con inscripción (cupos limitados)",
    "invitados": "Invitades: Marta Rodríguez y Felipe Colmenares.",
    "_src": {
     "url": "https://midbo.co/encuentro-pensar-lo-real/seminario/",
@@ -1971,7 +1970,7 @@
    "event_kind": "charla",
    "seccion": "Encuentro Pensar lo Real",
    "duracion_min": 90,
-   "acceso": "desconocido",
+   "acceso": "Entrada gratuita con inscripción (cupos limitados)",
    "invitados": "Invitados: Luis Guillermo Torres (ATMedios) y Andrés Carmona, director Estancia (2024) · Modera: Julio Lamaña.",
    "_src": {
     "url": "https://midbo.co/encuentro-pensar-lo-real/seminario/",
@@ -1989,7 +1988,7 @@
    "event_kind": "masterclass",
    "seccion": "Encuentro Pensar lo Real",
    "duracion_min": 90,
-   "acceso": "desconocido",
+   "acceso": "Entrada gratuita con inscripción (cupos limitados)",
    "invitados": "Invitada: Mercedes Gaviría · Modera: María Fernanda Carrillo.",
    "_src": {
     "url": "https://midbo.co/encuentro-pensar-lo-real/seminario/",
@@ -2007,7 +2006,7 @@
    "event_kind": "conversatorio",
    "seccion": "Encuentro Pensar lo Real",
    "duracion_min": 90,
-   "acceso": "desconocido",
+   "acceso": "Entrada gratuita con inscripción (cupos limitados)",
    "invitados": "Invitades: Archipiélago Sonoro y Guateque Cine · Modera: Laura Alhach.",
    "_src": {
     "url": "https://midbo.co/encuentro-pensar-lo-real/seminario/",
@@ -2025,7 +2024,7 @@
    "event_kind": "dialogo",
    "seccion": "Encuentro Pensar lo Real",
    "duracion_min": 60,
-   "acceso": "desconocido",
+   "acceso": "Entrada gratuita con inscripción (cupos limitados)",
    "invitados": "Invitadas: Azul Aizenberg y Juana Schlenker.",
    "_src": {
     "url": "https://midbo.co/encuentro-pensar-lo-real/seminario/",
@@ -2043,7 +2042,7 @@
    "event_kind": "evento",
    "seccion": "Encuentro Pensar lo Real",
    "duracion_min": 90,
-   "acceso": "desconocido",
+   "acceso": "Entrada gratuita con inscripción (cupos limitados)",
    "invitados": "Invitades: Ana María López y equipo de producción.",
    "_src": {
     "url": "https://midbo.co/encuentro-pensar-lo-real/seminario/",
@@ -2061,7 +2060,7 @@
    "event_kind": "masterclass",
    "seccion": "Encuentro Pensar lo Real",
    "duracion_min": 90,
-   "acceso": "desconocido",
+   "acceso": "Entrada gratuita con inscripción (cupos limitados)",
    "invitados": "Invitado: Samuel Larson · Modera: Andrew Tucker.",
    "_src": {
     "url": "https://midbo.co/encuentro-pensar-lo-real/seminario/",
@@ -2079,7 +2078,7 @@
    "event_kind": "dialogo",
    "seccion": "Encuentro Pensar lo Real",
    "duracion_min": 60,
-   "acceso": "desconocido",
+   "acceso": "Entrada gratuita con inscripción (cupos limitados)",
    "_src": {
     "url": "https://midbo.co/encuentro-pensar-lo-real/seminario/",
     "date": "2026-10-10"
@@ -2096,7 +2095,7 @@
    "event_kind": "conversatorio",
    "seccion": "Encuentro Pensar lo Real",
    "duracion_min": 90,
-   "acceso": "desconocido",
+   "acceso": "Entrada gratuita con inscripción (cupos limitados)",
    "invitados": "Invitados: Nelson Vergara, Pablo Mora, Carlos Santa · Modera: Jorjan Betancurt.",
    "_src": {
     "url": "https://midbo.co/encuentro-pensar-lo-real/seminario/",

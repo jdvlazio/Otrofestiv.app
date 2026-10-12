@@ -88,6 +88,11 @@ SEDE_FUERA = {
 # proyección comentada ya es función de su obra; el martes 27 cae fuera.
 SEMINARIO = f'{DIR}/paginas/seminario.html'
 SECCION_SEMINARIO = 'Encuentro Pensar lo Real'
+# la página del seminario no dice cómo se entra; el post de @midbo_doc del 7 oct
+# (instagram.com/p/DeNxY8XDTYG) sí: «Inscripción gratuita. Cupos limitados.»
+# Vale para sus actividades y para las proyecciones que «hacen parte del
+# Seminario» (Notre corps, Cuando cierro los ojos).
+ACCESO_SEMINARIO = 'Entrada gratuita con inscripción (cupos limitados)'
 KIND_SEM = {'master class': 'masterclass', 'mesa redonda': 'conversatorio', 'diálogo': 'dialogo',
             'charla': 'charla', 'lanzamiento': 'evento'}
 SEDE_SEM = {'Sala Capital, Cinemateca de Bogotá': ('Cinemateca de Bogotá', 'Sala Capital'),
@@ -139,7 +144,7 @@ def seminario():
                     out.append({'titulo': act, 'dia': dia, 'hora': ini, 'sede': sede, **({'sala': sala} if sala else {}),
                                 'ciudad': 'Bogotá', 'tipo': 'evento', 'event_kind': kind, 'seccion': SECCION_SEMINARIO,
                                 'duracion_min': (int(fin[:2]) * 60 + int(fin[3:])) - (int(ini[:2]) * 60 + int(ini[3:])),
-                                'acceso': 'desconocido',
+                                'acceso': ACCESO_SEMINARIO,
                                 **({'invitados': ' · '.join(inv) + '.'} if inv else {}),
                                 '_src': {'url': 'https://midbo.co/encuentro-pensar-lo-real/seminario/', 'date': '2026-10-10'}})
                 i = j
@@ -273,11 +278,22 @@ def main():
     for k, s in sorted(slots.items(), key=lambda kv: (kv[0][0], kv[1]['hora'])):
         dia, hora = k[0], s['hora']
         notas = s['notas']
+        # LA BOLETA ES DE LA CINEMATECA. Las observaciones valen para todas las
+        # funciones de la obra: «Buenos días, Wiracocha» dice «Entrada libre» y
+        # «Adquiere tus entradas» a la vez, y su enlace de TuBoleta es el de la
+        # Sala 2 el 29 oct; el 3 nov en la Alianza Francesa es libre. Con los dos
+        # avisos, el enlace va a la Cinemateca y la entrada libre a lo demás.
+        if any(n.startswith('TICKET ') for n in notas) and any('entrada libre' in n.lower() for n in notas):
+            notas = [n for n in notas if not n.startswith('TICKET ')] if 'Cinemateca' not in s['sede'] else \
+                    [n for n in notas if 'entrada libre' not in n.lower()]
+        # …salvo que tenga boleta: «Writing Life» es del seminario y se vende en TuBoleta ($7.000)
+        seminario_obra = any('seminario' in n.lower() for n in notas) and not any(n.startswith('TICKET ') for n in notas)
         base = {'dia': dia, 'hora': hora, 'sede': s['sede'], **({'sala': s['sala']} if s['sala'] else {}),
                 'ciudad': s['ciudad'],
                 **({'ticket_url': next(n[7:] for n in notas if n.startswith('TICKET '))}
                    if any(n.startswith('TICKET ') for n in notas) else {}),
-                'acceso': 'Boletería en TuBoleta' if any(n.startswith('TICKET ') for n in notas) else
+                'acceso': ACCESO_SEMINARIO if seminario_obra else
+                          'Boletería en TuBoleta' if any(n.startswith('TICKET ') for n in notas) else
                           ('Entrada libre' if any('entrada libre' in n.lower() for n in notas) else 'desconocido'),
                 '_src': {'url': s['obras'][0]['url'], 'date': '2026-10-10'}}
         if any('con presencia' in n.lower() for n in notas):
