@@ -94,16 +94,49 @@ def redirige(work_id, fus):
     return work_id
 
 
-def obra_de(obs, fid, titulo, tmdb=None):
+def indice(obs):
+    """(festival, huella) → work_ids, y tmdb → work_ids: para resolver miles de
+    presentaciones sin recalcular la huella de cada obra cada vez."""
+    por_h, por_t = {}, {}
+    for wid, o in obs.items():
+        hs = {huella(o['titulo_original'])} | {huella(a['titulo']) for a in o.get('aliases') or []}
+        for fid in o.get('presentaciones') or []:
+            for h in hs:
+                por_h.setdefault((fid, h), set()).add(wid)
+        t = (o.get('xref') or {}).get('tmdb')
+        if t:
+            por_t.setdefault(t, set()).add(wid)
+    return por_h, por_t
+
+
+def obra_de(obs, fid, titulo, tmdb=None, ix=None):
     """El work_id de una obra de un festival: la que lo lista en sus
     presentaciones y cuyo título (original o alias) tiene la misma huella; o la
     que lleva su tmdb. Ninguna o más de una → None (no se adivina)."""
-    h = huella(titulo)
-    hits = {wid for wid, o in obs.items() if fid in (o.get('presentaciones') or [])
-            and h in {huella(o['titulo_original'])} | {huella(a['titulo']) for a in o.get('aliases') or []}}
-    if not hits and tmdb:
-        hits = {wid for wid, o in obs.items() if (o.get('xref') or {}).get('tmdb') == tmdb}
-    return hits.pop() if len(hits) == 1 else None
+    por_h, por_t = ix or indice(obs)
+    hits = por_h.get((fid, huella(titulo))) or (por_t.get(tmdb) if tmdb else None) or set()
+    return next(iter(hits)) if len(hits) == 1 else None
+
+
+def enlazar(d, fid, obs, ix=None):
+    """Pone `work_id` a cada obra del festival (también las de un programa de
+    cortos; las actividades no). Devuelve los títulos que no resolvieron: obras
+    nuevas que el catálogo todavía no tiene (catalogo_construir.py --escribir)."""
+    ix = ix or indice(obs)
+    faltan = []
+    for f in d.get('films', []):
+        if f.get('type') == 'event':
+            continue
+        for o in (f.get('film_list') or [f]):
+            if o.get('type') == 'event' or not o.get('title'):
+                continue
+            w = obra_de(obs, fid, o['title'], o.get('tmdb_id'), ix)
+            if w:
+                o['work_id'] = w
+            else:
+                o.pop('work_id', None)
+                faltan.append(o['title'])
+    return faltan
 
 
 # ── los cinco invariantes (funciones puras: datos → lista de problemas) ───────

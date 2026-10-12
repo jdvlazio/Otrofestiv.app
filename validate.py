@@ -4026,8 +4026,9 @@ try:
     #   flags        — derivado por countryToFlags; solo se llena si el derivado falla
     #   screenings   — forma intermedia del ensamblador (el loader lo explota)
     #   info, is_recurring, is_programa — legacy / casos que la doctrina cubre aparte
+    #   work_id      — lo pone publicar.py desde el catálogo, nunca el onboarding a mano
     _OMIT = {'tematica', 'qa_detail', 'flags', 'screenings', 'info', 'is_recurring',
-             'is_programa', 'date'}
+             'is_programa', 'date', 'work_id'}
     _tpl = _json.load(open('pipeline/festival-template.json', encoding='utf-8'))
     _tf = set(_tpl.keys())
     for _f in _tpl.get('films', []):
@@ -6708,7 +6709,7 @@ try:
             'xref-unico': _cat.xref_repetido(_obs),
             'obra-sin-duracion': _cat.duracion_en_obra(_obs),
             'decision-pisada': _cat.decision_pisada(_obs, _decs),
-            'presentacion-con-obra': _cat.presentacion_sin_obra(_fests, _obs, _fus),
+            'presentacion-con-obra': _cat.presentacion_sin_obra(_fests, _obs, _fus, exigir=bool(_obs)),
             'candidato-sin-resolver': _cat.candidatos_abiertos(),
             'catalogo-ids': _cat.ids_validos(_obs)}
 except Exception as _e:
@@ -6982,6 +6983,7 @@ try:
         'synopsis_lang': 'lo consumen los guardianes ([paridad-derivados])',
         'description_lang': 'el idioma de la descripción de un programa o actividad; mismo dueño que synopsis_lang (lib.separar_descripcion)',
         'tmdb_id': 'lo usa el pipeline para reenriquecer sin volver a buscar',
+        'work_id': 'enlaza la presentación con su obra del catálogo (pipeline/catalogo.py, [presentacion-con-obra])',
     }
     # DEUDA DECLARADA (17 ago 2026). No crece: cada uno se cablea o se borra.
     # Los dos primeros pares son EL MISMO DATO CON DOS NOMBRES — ahí no sobra el

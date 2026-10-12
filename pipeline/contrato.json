@@ -306,6 +306,10 @@
    "tipo": "array",
    "lector": "ninguno todavía",
    "nota": "Accesibilidad de la función (p. ej. «oc» = subtítulos descriptivos). Sin superficie que la muestre."
+  },
+  "work_id": {
+   "tipo": "string",
+   "nota": "La obra del catálogo único (catalogo/obras/<work_id>.json, docs/CATALOGO-OBRAS.md). Lo ponen publicar.py y catalogo_construir.py --escribir, nunca a mano. Va en cada obra, también dentro de film_list; las actividades no llevan. [presentacion-con-obra] frena el push si falta o apunta a una obra que no existe."
   }
  },
  "raiz": {
