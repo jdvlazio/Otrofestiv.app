@@ -46,6 +46,10 @@ export const storage = {
   getWatchedMeta() { try { const r=localStorage.getItem(FESTIVAL_STORAGE_KEY+'wmeta'); const p=r?JSON.parse(r):{}; return p&&typeof p==='object'&&!Array.isArray(p)?p:{}; } catch(e) { return {}; } },
   setWatchedMeta(o) { try { localStorage.setItem(FESTIVAL_STORAGE_KEY+'wmeta', JSON.stringify(o||{})); } catch(e) {} },
   getNotWatched() { try { const r=localStorage.getItem(FESTIVAL_STORAGE_KEY+'notWatched'); return r?new Set(JSON.parse(r)):new Set(); } catch(e) { return new Set(); } },
+  // ticketed — funciones del Plan marcadas «Tengo boleta» (#1077). Claves
+  // «título|día|hora» (una función, no una obra: se compra la entrada a ESA).
+  getTicketed() { try { const r=localStorage.getItem(FESTIVAL_STORAGE_KEY+'tickets'); return r?new Set(JSON.parse(r)):new Set(); } catch(e) { return new Set(); } },
+  setTicketed(s) { try { localStorage.setItem(FESTIVAL_STORAGE_KEY+'tickets', JSON.stringify([...s])); } catch(e) {} },
   setNotWatched(s) { try { localStorage.setItem(FESTIVAL_STORAGE_KEY+'notWatched', JSON.stringify([...s])); } catch(e) {} },
 
   getPrioritized() { try { const r=localStorage.getItem(FESTIVAL_STORAGE_KEY+'prio'); return r?new Set(JSON.parse(r)):new Set(); } catch(e) { return new Set(); } },

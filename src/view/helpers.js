@@ -14,7 +14,7 @@ import {
 // components — el ciclo decide dónde vive; ver el comentario del dueño).
 export { _langDates };
 import { toMin, minToStr, durEstimada, simNow, simTodayStr, _festDate, _festNowMin } from '../domain/time.js';
-import { blockDuration, effectiveDuration, screeningBlockEndMin, screeningQaOnly , abiertaFase, _djb2, premiereBadgeKey} from '../domain/film.js';
+import { blockDuration, effectiveDuration, screeningBlockEndMin, screeningQaOnly , abiertaFase, _djb2, premiereBadgeKey, screeningPassed} from '../domain/film.js';
 import { _resolveVenue, travelMins } from '../domain/festival.js';
 import { state } from '../state/state.js';
 import { t } from '../i18n/i18n.js';
@@ -1073,6 +1073,32 @@ export function ticketBadgeTarget(){
   }
   _tbCache={id,val};
   return val;
+}
+
+// ── Boleta, nivel 1 (#1077) ─────────────────────────────────────────────────
+// funcionPaga — DUEÑA ÚNICA de «esta función se paga» para Boleta. Mismo
+// criterio que el distintivo CON BOLETA y el enlace de compra de la ficha:
+// festival 'paid', o 'mixed' sin is_free:true. Cancelada o con invitación: no
+// hay nada que comprar. Sin ticketing_model en la config, nada es paga — no se
+// inventa (los datos los marca Onboarding).
+export function funcionPaga(f){
+  if(!f||f._cancelled||f.by_invitation||f.is_free===true) return false;
+  const m=(FESTIVAL_CONFIG[_activeFestId]||{}).ticketing_model;
+  return m==='paid'||m==='mixed';
+}
+// urlCompra — el ticket_url de la función pisa al del festival (como la ficha);
+// solo https. '' si no hay dónde comprar.
+export function urlCompra(f){
+  const ok=u=>typeof u==='string'&&/^https:\/\//.test(u);
+  if(f&&ok(f.ticket_url)) return f.ticket_url;
+  const g=(FESTIVAL_CONFIG[_activeFestId]||{}).ticket_url;
+  return ok(g)?g:'';
+}
+// claveBoleta — una FUNCIÓN, no una obra: la entrada se compra para esa hora.
+export const claveBoleta=s=>`${s._title||s.title||''}|${s.day||''}|${s.time||''}`;
+// faltaBoleta(s, f) — entrada del Plan paga, sin marcar y que todavía no pasó.
+export function faltaBoleta(s, f){
+  return !!f&&funcionPaga(f)&&!screeningPassed(s)&&!(typeof ticketed!=='undefined'&&ticketed.has(claveBoleta(s)));
 }
 
 export function _metaBadges(f){

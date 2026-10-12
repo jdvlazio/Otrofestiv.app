@@ -53,6 +53,10 @@ export const FESTIVAL_STATE = [
     hydrate:()=>({...state.get('watchedMeta'), ...storage.getWatchedMeta()}),
     toCloud:_id,
     fromCloud:(d,whole,cur)=> (whole||(d&&Object.keys(d).length)) ? (whole?(d||{}):{...cur,...d}) : undefined },
+  // ticketed — funciones con boleta comprada (#1077), «título|día|hora».
+  { key:'ticketed',    empty:()=>new Set(), storage:'Ticketed',    cloud:'ticketed',
+    hydrate:()=>storage.getTicketed(),
+    toCloud:_setToCloud, fromCloud:_setFromCloud },
   { key:'prioritized', empty:()=>new Set(), storage:'Prioritized', cloud:'prioritized',
     hydrate:()=>new Set([...storage.getPrioritized()].map(normTitle)),
     toCloud:_setToCloud, fromCloud:_setFromCloud },
