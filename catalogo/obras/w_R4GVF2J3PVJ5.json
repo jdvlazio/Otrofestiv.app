@@ -1,0 +1,38 @@
+{
+ "id": "w_R4GVF2J3PVJ5",
+ "titulo_original": "Mi vecino Totoro",
+ "anio": 1988,
+ "paises": [
+  "JP"
+ ],
+ "directores": [
+  "Hayao Miyazaki"
+ ],
+ "aliases": [
+  {
+   "titulo": "My Neighbor Totoro",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "En los años cincuenta, una familia japonesa se traslada al campo. Las dos hijas, Satsuki y Mei, entablan amistad con Totoro, un espíritu del bosque. El padre es un profesor universitario que estimula la imaginación de sus hijas relatándoles fábulas e historias mágicas sobre duendes, fantasmas y espíritus protectores de los hogares, mientras la madre se encuentra enferma en el hospital.",
+  "en": "Two sisters move to the country with their father in order to be closer to their hospitalized mother, and discover the surrounding trees are inhabited by Totoros, magical spirits of the forest. When the youngest runs away from home, the older sister seeks help from the spirits to find her."
+ },
+ "afiche": {
+  "archivo": "/assets/ficcali-2026/mi-vecino-totoro.jpg"
+ },
+ "xref": {
+  "tmdb": 8392,
+  "letterboxd": "my-neighbor-totoro"
+ },
+ "versiones": [
+  {
+   "etiqueta": "86 min",
+   "duracion_min": 86
+  }
+ ],
+ "presentaciones": [
+  "ficcali-2026"
+ ]
+}

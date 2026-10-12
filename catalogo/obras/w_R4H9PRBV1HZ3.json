@@ -1,0 +1,39 @@
+{
+ "id": "w_R4H9PRBV1HZ3",
+ "titulo_original": "Álbum de familia",
+ "anio": 2026,
+ "paises": [
+  "PE",
+  "ES"
+ ],
+ "directores": [
+  "Joel Calero"
+ ],
+ "aliases": [
+  {
+   "titulo": "Family Album",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "Alex, que está a punto de convertirse en papá por primera vez, descubre unas antiguas fotografías familiares que sugieren la participación de su padre en hechos intrigantes vinculados a la historia de su país. Este hallazgo lo obligará a confrontar sus lealtades familiares y a preguntarse hasta qué punto es posible construir un futuro y su propia paternidad sin enfrentar las sombras del pasado.",
+  "en": "Alex will soon become a father. In a storage room, he discovers deeply disturbing family photographs. Some suggest his mother’s marital infidelity; others indicate his father, a retired officer, was involved in various acts of violence. Alex’s investigation leads him to a town devastated years before by the violence of the Internal Armed Conflict, where he uncovers his true and intricate family album."
+ },
+ "afiche": {
+  "archivo": "/assets/ficcali-2026/album-de-familia.jpg"
+ },
+ "xref": {
+  "tmdb": 1320915,
+  "letterboxd": "family-album-2024"
+ },
+ "versiones": [
+  {
+   "etiqueta": "94 min",
+   "duracion_min": 94
+  }
+ ],
+ "presentaciones": [
+  "ficcali-2026"
+ ]
+}

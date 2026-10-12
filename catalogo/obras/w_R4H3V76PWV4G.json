@@ -1,0 +1,44 @@
+{
+ "id": "w_R4H3V76PWV4G",
+ "titulo_original": "Somnolítico",
+ "anio": 2025,
+ "paises": [
+  "CO"
+ ],
+ "directores": [
+  "Abril Velasquez"
+ ],
+ "aliases": [
+  {
+   "titulo": "Somnolytic",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "Un ser extraño pierde su rumbo en el caos del sistema de transporte, desplazándose de un lugar a otro sin encontrar una salida. Los trayectos se ven desbordados por flujos acelerados que van y vienen como cascadas humanas. Los transeúntes, desdibujados y sin rostro, se mueven de manera automática, creando un laberinto en el que las rutas parecen infinitas. Personas adormiladas se funden con el entorno y, mientras el autobús sigue su marcha, el ser finalmente se descubre a sí mismo.",
+  "en": "A strange being loses its way in the chaos of the transportation system without finding an exit. The pathways are overwhelmed by accelerated flows that come and go like human waterfalls. The passersby, faceless, move automatically, creating a maze in which the routes seem endless. Sleepy and exhausted people merge with the surroundings, and as the bus continues on its way, the being finally manages to discover itself."
+ },
+ "afiche": {
+  "archivo": "/assets/ficcali-2026/somnolitico.jpg"
+ },
+ "xref": {
+  "tmdb": 1590709,
+  "letterboxd": "somnolytic"
+ },
+ "versiones": [
+  {
+   "etiqueta": "11 min",
+   "duracion_min": 11
+  },
+  {
+   "etiqueta": "13 min",
+   "duracion_min": 13
+  }
+ ],
+ "presentaciones": [
+  "ficcali-2026",
+  "filcmar-2026",
+  "jardin-2026"
+ ]
+}

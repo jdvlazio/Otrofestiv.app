@@ -1,0 +1,44 @@
+{
+ "id": "w_R4E4R74EAVJZ",
+ "titulo_original": "Coward",
+ "anio": 2026,
+ "paises": [
+  "BE",
+  "FR",
+  "NL"
+ ],
+ "directores": [
+  "Lukas Dhont"
+ ],
+ "aliases": [
+  {
+   "titulo": "Cobarde",
+   "tipo": "festival"
+  }
+ ],
+ "sinopsis": {
+  "es": "A medida que la Primera Guerra Mundial se prolonga, Pierre, un soldado recién llegado al frente, está deseando demostrar su valía. Detrás de las líneas, conoce a Francis, quien decide levantar el ánimo de sus compañeros organizando una obra de teatro. Mientras la violencia continúa, ambos intentan encontrar formas de escapar de la brutalidad de la guerra, aunque solo sea por un momento.",
+  "en": "Pierre, a young Belgian soldier, wants to prove himself on the battlefield during the First World War. Behind the frontlines, he meets Francis, who is asked to find a way to boost morale."
+ },
+ "afiche": {
+  "archivo": "/assets/biff-2026/cobarde.jpg"
+ },
+ "xref": {
+  "tmdb": 1437981,
+  "letterboxd": "coward-2026"
+ },
+ "versiones": [
+  {
+   "etiqueta": "120 min",
+   "duracion_min": 120
+  },
+  {
+   "etiqueta": "125 min",
+   "duracion_min": 125
+  }
+ ],
+ "presentaciones": [
+  "biff-2026",
+  "tiff-2026"
+ ]
+}

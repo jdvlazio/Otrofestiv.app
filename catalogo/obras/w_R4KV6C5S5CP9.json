@@ -1,0 +1,39 @@
+{
+ "id": "w_R4KV6C5S5CP9",
+ "titulo_original": "Los Viajeros",
+ "anio": 2025,
+ "paises": [
+  "CM",
+  "ES"
+ ],
+ "directores": [
+  "David Bingong"
+ ],
+ "aliases": [
+  {
+   "titulo": "The Travelers",
+   "tipo": "festival"
+  }
+ ],
+ "sinopsis": {
+  "es": "En la frontera entre Marruecos y España, aguardamos impacientes el boza – la travesía a Europa. Entre los sucesivos intentos fallidos, sobrevivimos, y yo, como el «artista», debo mantener viva la llama de la esperanza del grupo. Con una cámara y un puñado de canciones, hicimos juntos esta película.",
+  "en": "On the border between Morocco and Spain, a group of travelers is eagerly waiting to cross over to Europe."
+ },
+ "afiche": {
+  "archivo": "/assets/midbo-2026/the-travelers.jpg"
+ },
+ "xref": {
+  "tmdb": 1463516,
+  "letterboxd": "the-travelers-2025"
+ },
+ "versiones": [
+  {
+   "etiqueta": "60 min",
+   "duracion_min": 60
+  }
+ ],
+ "presentaciones": [
+  "midbo-2026",
+  "qaff-2026"
+ ]
+}

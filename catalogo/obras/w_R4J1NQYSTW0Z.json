@@ -1,0 +1,51 @@
+{
+ "id": "w_R4J1NQYSTW0Z",
+ "titulo_original": "Llueve sobre Babel",
+ "anio": 2026,
+ "paises": [
+  "CO",
+  "US",
+  "ES"
+ ],
+ "directores": [
+  "Gala del Sol"
+ ],
+ "aliases": [
+  {
+   "titulo": "Rains Over Babel",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "En el bar Babel, donde vivos y muertos se mezclan, Dante busca recordar su pasado antes de que la Flaca, la Muerte en esta ciudad, cobre su deuda. Jacob esconde de su padre, un sacerdote fanático, su deseo de ser drag queen, mientras Uma, una gitana con su propia apuesta, intenta engañar a la Flaca para salvar a su hija. Entre pactos y desafíos, sus destinos chocan en una lucha contra lo inevitable.",
+  "en": "In a retro-futuristic, tropical-punk twist on Dante’s Inferno, a group of misfits converges at Babel, a legendary dive bar that doubles as purgatory, where La Flaca—the city’s Grim Reaper—presides. Here, souls gamble years of their lives with her, daring to outwit Death Herself."
+ },
+ "afiche": {
+  "archivo": "/assets/ficma/llueve-sobre-babel.jpg"
+ },
+ "xref": {
+  "tmdb": 1388977,
+  "letterboxd": "rains-over-babel"
+ },
+ "versiones": [
+  {
+   "etiqueta": "111 min",
+   "duracion_min": 111
+  },
+  {
+   "etiqueta": "113 min",
+   "duracion_min": 113
+  },
+  {
+   "etiqueta": "120 min",
+   "duracion_min": 120
+  }
+ ],
+ "presentaciones": [
+  "ficma-2026",
+  "girardota-2026",
+  "narrarelfuturo-2026",
+  "villadelcine-2026"
+ ]
+}

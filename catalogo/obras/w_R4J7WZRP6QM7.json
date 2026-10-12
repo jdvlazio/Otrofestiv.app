@@ -1,0 +1,43 @@
+{
+ "id": "w_R4J7WZRP6QM7",
+ "titulo_original": "Memoria Colectiva",
+ "anio": 2025,
+ "paises": [
+  "PE",
+  "FR"
+ ],
+ "directores": [
+  "Cristina Colmenares"
+ ],
+ "aliases": [
+  {
+   "titulo": "Memoria colectiva",
+   "tipo": "festival"
+  }
+ ],
+ "sinopsis": {
+  "es": "En 1983, soldados encapuchados irrumpen en la casa de Adelina y se llevan a su esposo, quien jamás regresa. Ante el silencio de las autoridades, ella se une a otras mujeres marcadas por la misma ausencia. Juntas convierten el dolor en memoria y la memoria en una exigencia de justicia.",
+  "en": "In 1983, during the darkest days of Peru’s Armed Conflict with the Shining Path, masked soldiers entered Adelina’s home and took her husband away. She would never see him again. After facing silence and contempt from the Police and Army, Adelina joins forces with the many other women who have lost their husbands and children to soldiers who were supposed to protect them. Together, they will unite to demand justice."
+ },
+ "afiche": {
+  "archivo": "/assets/villadelcine-2026/collective-memory.jpg"
+ },
+ "xref": {
+  "tmdb": 1520364,
+  "letterboxd": "memoria-colectiva"
+ },
+ "versiones": [
+  {
+   "etiqueta": "12 min",
+   "duracion_min": 12
+  },
+  {
+   "etiqueta": "15 min",
+   "duracion_min": 15
+  }
+ ],
+ "presentaciones": [
+  "ficmontanas-2026",
+  "villadelcine-2026"
+ ]
+}

@@ -6,7 +6,7 @@ y escribe INFORMES en una carpeta de trabajo (--salida), nunca en catalogo/.
 Nada se publica ni se fusiona solo.
 
 El reconocimiento tiene TRES salidas (EIDR / DAMA-DMBOK):
-  · COINCIDE   — mismo tmdb_id; o misma huella de título + mismo apellido de
+  · COINCIDE   — mismo tmdb_id o slug de Letterboxd; o misma huella de título + mismo apellido de
                  director + año ±1 (o año ausente en uno de los dos lados).
   · CANDIDATO  — va a Juan: misma huella y una fuente sin director; o mismo
                  director y año con título parecido (≥ 0,85, traducciones/akas);
@@ -15,6 +15,11 @@ El reconocimiento tiene TRES salidas (EIDR / DAMA-DMBOK):
 Un candidato NUNCA se une solo: queda en candidatos.json hasta que Juan decida.
 
     python3 pipeline/catalogo_construir.py --salida <carpeta>
+    TMDB_API_KEY=… python3 pipeline/catalogo_construir.py --escribir
+
+--escribir (fase 3) materializa catalogo/obras/, procedencia/ y decisiones.json.
+Re-correrlo es idempotente: cada grupo conserva el id de la obra que ya lo
+contenía (catalogo.obra_de), y las decisiones ya guardadas mandan.
 """
 import difflib
 import glob
@@ -26,8 +31,9 @@ import sys
 from collections import defaultdict
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import catalogo  # noqa: E402
 from catalogo import huella, apellido  # noqa: E402
-from lib import sinacento  # noqa: E402
+from lib import sinacento, banderas, tmdb_get  # noqa: E402
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 UMBRAL = 0.85
@@ -54,7 +60,8 @@ def registros():
                 out.append({'fest': fid, 'titulo': o['title'], 'director': (o.get('director') or '').strip(),
                             'anio': int(anio) if str(anio or '').isdigit() else None,
                             'duracion': int(dur.group()) if dur else None,
-                            'pais': o.get('country'), 'tmdb': o.get('tmdb_id'), 'lb': o.get('lbSlug'),
+                            'pais': o.get('country'), 'tmdb': o.get('tmdb_id'),
+                            'lb': o.get('lbSlug') if re.fullmatch(r'[a-z0-9-]+', str(o.get('lbSlug') or '')) else None,   # «⚠️ LB PENDIENTE» no es un slug
                             'poster': o.get('poster'), 'sinopsis': o.get('synopsis'),
                             'sinopsis_en': o.get('synopsis_en'), 'title_en': o.get('title_en')})
     return out
@@ -90,6 +97,15 @@ def construir(R):
     for ids in por_tmdb.values():
         for j in ids[1:]:
             U.une(ids[0], j)
+    # 1b. mismo slug de Letterboxd: también es un xref (salvo dos tmdb distintos)
+    por_lb = defaultdict(list)
+    for i, r in enumerate(R):
+        if r['lb']:
+            por_lb[r['lb']].append(i)
+    for ids in por_lb.values():
+        for j in ids[1:]:
+            if not (R[ids[0]]['tmdb'] and R[j]['tmdb'] and R[ids[0]]['tmdb'] != R[j]['tmdb']):
+                U.une(ids[0], j)
     # 2. misma huella + mismo apellido + año compatible
     por_h = defaultdict(list)
     for i, r in enumerate(R):
@@ -182,7 +198,158 @@ def contradicciones(R, grupo):
     return out
 
 
+# ── fase 3: materializar ────────────────────────────────────────────────────
+def _iso(pais):
+    """«Colombia, Francia» → ['CO', 'FR'] (por la bandera: dos letras regionales)."""
+    return [''.join(chr(ord(c) - 0x1F1E6 + 65) for c in f) for f in banderas(pais or '')]
+
+
+def _directores(s):
+    return [d.strip() for d in re.split(r',| y | & |/', s or '') if d.strip()]
+
+
+def _tildes(s):
+    return sum(1 for c in s if ord(c) > 127)
+
+
+def _tmdb(tid, key, cache):
+    if tid not in cache:
+        m = tmdb_get(f'/movie/{tid}', key, append_to_response='credits') if key else {}
+        cache[tid] = {'anio': int(m['release_date'][:4]) if (m.get('release_date') or '')[:4].isdigit() else None,
+                      'paises': [c['iso_3166_1'] for c in m.get('production_countries') or []],
+                      'directores': [c['name'] for c in (m.get('credits') or {}).get('crew', []) if c.get('job') == 'Director']}
+    return cache[tid]
+
+
+def materializar(R, grupos, key, cache):
+    """Un grupo → una obra, con la supervivencia de §4.2 y procedencia por campo."""
+    obs_viejas = catalogo.obras()
+    rev = json.load(io.open(os.path.join(REPO, 'catalogo', 'revision-fase2.json'), encoding='utf-8'))
+    hoy = rev['fecha']
+    nuevas, proc, usados = {}, {}, set()
+    fus = catalogo.fusiones()
+    for g in grupos:
+        regs = [R[i] for i in g]
+        viejos = sorted({w for w in (catalogo.obra_de(obs_viejas, r['fest'], r['titulo'], r['tmdb']) for r in regs) if w})
+        wid = viejos[0] if viejos else None
+        for w in viejos[1:]:            # dos obras de ayer son hoy la misma: un id nunca se borra, se redirige
+            fus.append({'absorbido': w, 'superviviente': wid, 'fecha': hoy, 'motivo': 'el constructor las reconoce como la misma obra'})
+        if not wid or wid in usados:
+            wid = catalogo.nuevo_id()
+            while wid in usados or wid in obs_viejas:
+                wid = catalogo.nuevo_id()
+        usados.add(wid)
+        pr = {}
+        titulos = defaultdict(list)
+        for r in regs:
+            titulos[r['titulo']].append(r['fest'])
+        titulo = max(titulos, key=lambda t: (len(titulos[t]), _tildes(t), -len(t)))
+        pr['titulo_original'] = {'fuente': 'festival:' + ','.join(sorted(titulos[titulo])), 'regla': 'el título que más festivales imprimen'}
+        tm = sorted({r['tmdb'] for r in regs if r['tmdb']})
+        t = _tmdb(tm[0], key, cache) if len(tm) == 1 else None
+        dirs = max((_directores(r['director']) for r in regs), key=lambda d: (len(d) > 0, _tildes(' '.join(d)), len(' '.join(d))))
+        pr['directores'] = {'fuente': 'festival', 'regla': 'la grafía más completa que acreditan los festivales'}
+        if t and t['directores'] and [_dir(x) for x in t['directores']] != [_dir(x) for x in dirs]:
+            if sorted(_dir(x) for x in t['directores']) != sorted(_dir(x) for x in dirs):
+                dirs = t['directores']
+                pr['directores'] = {'fuente': f'tmdb:{tm[0]}', 'regla': 'tmdb-manda'}
+        anios = sorted({r['anio'] for r in regs if r['anio']})
+        anio = anios[0] if anios else None
+        pr['anio'] = {'fuente': 'festival', 'regla': 'anio-mas-temprano' if len(anios) > 1 else 'único'}
+        if t and t['anio']:
+            anio = t['anio']
+            pr['anio'] = {'fuente': f'tmdb:{tm[0]}', 'regla': 'tmdb-manda'}
+        paises = []
+        for r in regs:
+            paises += [c for c in _iso(r['pais']) if c not in paises]
+        pr['paises'] = {'fuente': 'festival', 'regla': 'pais-union'}
+        if t and t['paises']:
+            paises = t['paises']
+            pr['paises'] = {'fuente': f'tmdb:{tm[0]}', 'regla': 'tmdb-manda'}
+        o = {'id': wid, 'titulo_original': titulo, 'anio': anio, 'paises': paises, 'directores': dirs}
+        al = [{'titulo': x, 'tipo': 'festival'} for x in sorted(titulos) if x != titulo]
+        al += [{'titulo': x, 'idioma': 'en', 'tipo': 'traduccion'} for x in sorted({r['title_en'] for r in regs if r.get('title_en')}) if x != titulo]
+        if al:
+            o['aliases'] = al
+        sin = {k: v for k, v in (('es', next((r['sinopsis'] for r in regs if r['sinopsis']), None)),
+                                 ('en', next((r['sinopsis_en'] for r in regs if r['sinopsis_en']), None))) if v}
+        if sin:
+            o['sinopsis'] = sin
+        af = next((r['poster'] for r in regs if r['poster']), None)
+        if af:
+            o['afiche'] = {'archivo': af}
+        lb = next((r['lb'] for r in regs if r['lb']), None)
+        o['xref'] = {k: v for k, v in (('tmdb', tm[0] if len(tm) == 1 else None), ('letterboxd', lb)) if v}
+        durs = sorted({r['duracion'] for r in regs if r['duracion']})
+        if durs:
+            o['versiones'] = [{'etiqueta': f'{d} min', 'duracion_min': d} for d in durs]
+        o['presentaciones'] = sorted({r['fest'] for r in regs})
+        nuevas[wid], proc[wid] = o, pr
+    # las decisiones de la revisión, por título → por work_id
+    decs = [d for d in catalogo.decisiones()]
+    ya = {(d['work_id'], d['campo']) for d in decs}
+    for d in rev['datos']:
+        wids = [w for w, o in nuevas.items() if huella(d['obra']) in {huella(o['titulo_original'])} | {huella(a['titulo']) for a in o.get('aliases', [])}]
+        if len(wids) > 1:            # las decisiones salieron de la hoja de contradicciones: obras en varios festivales
+            wids = [w for w in wids if len(nuevas[w]['presentaciones']) > 1]
+        if len(wids) != 1:
+            sys.exit(f'✗ la decisión sobre «{d["obra"]}» no apunta a UNA obra ({len(wids)})')
+        if (wids[0], d['campo']) not in ya:
+            decs.append({'work_id': wids[0], 'campo': d['campo'], 'valor': d['valor'], 'motivo': d['motivo'],
+                         'fecha': hoy, 'quien': rev['quien']})
+    for d in rev['identidad']:
+        if not d['misma']:
+            a = catalogo.obra_de(nuevas, *d['a']); b = catalogo.obra_de(nuevas, *d['b'])
+            if (a, 'no-es') not in ya:
+                decs.append({'work_id': a, 'campo': 'no-es', 'valor': b, 'motivo': d['motivo'], 'fecha': hoy, 'quien': rev['quien']})
+    # prioridad máxima: la decisión humana
+    reemplazadas = {d.get('reemplaza') for d in decs}
+    for i, d in enumerate(decs):
+        if i in reemplazadas or d['campo'] in ('no-es', 'no-alta-tmdb') or d['work_id'] not in nuevas:
+            continue
+        o = nuevas[d['work_id']]
+        partes = d['campo'].split('.')
+        for k in partes[:-1]:
+            o = o.setdefault(k, {})
+        o[partes[-1]] = d['valor']
+        proc[d['work_id']][d['campo']] = {'fuente': 'humano', 'regla': 'decisión', 'motivo': d['motivo'], 'fecha': d['fecha']}
+    return nuevas, proc, decs, fus
+
+
+def escribir(R, grupos):
+    key = os.environ.get('TMDB_API_KEY')
+    if not key:
+        sys.exit('falta TMDB_API_KEY (source ~/.zshrc)')
+    cp = os.path.expanduser('~/.cache/otrofestiv/catalogo-tmdb.json')   # fuera del repo
+    cache = {int(k): v for k, v in json.load(io.open(cp, encoding='utf-8')).items()} if os.path.exists(cp) else {}
+    try:
+        obs, proc, decs, fus = materializar(R, grupos, key, cache)
+    finally:
+        os.makedirs(os.path.dirname(cp), exist_ok=True)
+        json.dump(cache, io.open(cp, 'w', encoding='utf-8'), ensure_ascii=False)
+    for sub in ('obras', 'procedencia'):
+        d = os.path.join(REPO, 'catalogo', sub)
+        for p in glob.glob(f'{d}/w_*.json'):
+            if os.path.basename(p)[:-5] not in obs:
+                os.remove(p)             # una obra que ya no existe se redirige por fusión, no queda colgando
+    for wid, o in obs.items():
+        json.dump(o, io.open(f'{REPO}/catalogo/obras/{wid}.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+        json.dump(proc[wid], io.open(f'{REPO}/catalogo/procedencia/{wid}.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+    json.dump(fus, io.open(f'{REPO}/catalogo/fusiones.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+    json.dump(decs, io.open(f'{REPO}/catalogo/decisiones.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+    sin_resolver = [(r['fest'], r['titulo']) for r in R if not catalogo.obra_de(obs, r['fest'], r['titulo'], r['tmdb'])]
+    print(f'✓ {len(obs)} obras, {len(decs)} decisiones; {len(sin_resolver)} presentaciones sin obra única')
+    for x in sin_resolver[:20]:
+        print('  ·', x)
+
+
 def main():
+    if '--escribir' in sys.argv:
+        R = registros()
+        grupos, cand = construir(R)
+        if cand:
+            sys.exit(f'✗ {len(cand)} candidatos sin resolver: primero la revisión (--salida)')
+        return escribir(R, grupos)
     if '--salida' not in sys.argv:
         sys.exit('uso: catalogo_construir.py --salida <carpeta>  (simulación: nunca escribe catalogo/)')
     sal = sys.argv[sys.argv.index('--salida') + 1]

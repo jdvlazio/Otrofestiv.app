@@ -1,0 +1,18 @@
+{
+ "titulo_original": {
+  "fuente": "festival:tiff-2026,tiff-2026,tiff-2026,tiff-2026",
+  "regla": "el título que más festivales imprimen"
+ },
+ "directores": {
+  "fuente": "tmdb:1736318",
+  "regla": "tmdb-manda"
+ },
+ "anio": {
+  "fuente": "tmdb:1736318",
+  "regla": "tmdb-manda"
+ },
+ "paises": {
+  "fuente": "tmdb:1736318",
+  "regla": "tmdb-manda"
+ }
+}

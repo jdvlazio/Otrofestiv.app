@@ -1,0 +1,20 @@
+{
+ "titulo_original": {
+  "fuente": "festival:girardota-2026",
+  "regla": "el título que más festivales imprimen"
+ },
+ "directores": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "nombre completo (Jardín lo abrevia «Mateo M. Correa»)",
+  "fecha": "2026-10-12"
+ },
+ "anio": {
+  "fuente": "festival",
+  "regla": "único"
+ },
+ "paises": {
+  "fuente": "festival",
+  "regla": "pais-union"
+ }
+}

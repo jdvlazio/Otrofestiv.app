@@ -1,0 +1,20 @@
+{
+ "titulo_original": {
+  "fuente": "festival:jardin-2026,vartex-2026",
+  "regla": "el título que más festivales imprimen"
+ },
+ "directores": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "Jardín acredita la codirección; Vartex solo al primero",
+  "fecha": "2026-10-12"
+ },
+ "anio": {
+  "fuente": "festival",
+  "regla": "único"
+ },
+ "paises": {
+  "fuente": "festival",
+  "regla": "pais-union"
+ }
+}

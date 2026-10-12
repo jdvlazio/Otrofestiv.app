@@ -1,0 +1,18 @@
+{
+ "titulo_original": {
+  "fuente": "festival:popayan-2026",
+  "regla": "el título que más festivales imprimen"
+ },
+ "directores": {
+  "fuente": "tmdb:1700918",
+  "regla": "tmdb-manda"
+ },
+ "anio": {
+  "fuente": "festival",
+  "regla": "único"
+ },
+ "paises": {
+  "fuente": "festival",
+  "regla": "pais-union"
+ }
+}

@@ -12,4 +12,8 @@ Esquema: [`esquema.json`](esquema.json). Lectura e invariantes: `pipeline/catalo
 | `candidatos.json` | pares de obras que pueden ser la misma, pendientes de Juan |
 | `revision-fase2.json` | la primera revisión (12 oct): 4 reglas generales, 8 decisiones de identidad y 25 de datos, por título; se convierten en `decisiones.json` al asignar ids |
 
-Fase 0 (12 oct 2026): vacío a propósito. La fase 1 lo construye desde los festivales publicados.
+Fase 3a (12 oct 2026): materializado con `python3 pipeline/catalogo_construir.py --escribir`
+(requiere TMDB_API_KEY; caché fuera del repo, en `~/.cache/otrofestiv/`). 2.133 obras desde 4.104
+presentaciones de los festivales publicados; 28 decisiones; cada presentación resuelve a UNA obra
+(`catalogo.obra_de`). Re-correrlo conserva los ids; si dos obras se reconocen como una, la absorbida
+queda en `fusiones.json`. Los festivales todavía no llevan `work_id` (fase 3b).

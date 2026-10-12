@@ -1,0 +1,50 @@
+{
+ "id": "w_R4DPMJ507WN8",
+ "titulo_original": "Double Freedom",
+ "anio": 2026,
+ "paises": [
+  "CL",
+  "AR",
+  "LU",
+  "DE",
+  "IT",
+  "UY",
+  "GB",
+  "US"
+ ],
+ "directores": [
+  "Lisandro Alonso"
+ ],
+ "aliases": [
+  {
+   "titulo": "La Libertad Doble",
+   "tipo": "festival"
+  },
+  {
+   "titulo": "La libertad doble",
+   "tipo": "festival"
+  }
+ ],
+ "sinopsis": {
+  "es": "Misael trabaja solo con su hacha, talando árboles en el bosque. Una responsabilidad inesperada trastoca su vida, y la lógica de sus días se desvanece en una naturaleza donde la razón humana carece de sentido.",
+  "en": "Misael works alone with his axe, cutting down trees in the woods. An unexpected responsibility upends his life, and the logic of his days fades away in a nature where human reason holds no meaning."
+ },
+ "afiche": {
+  "archivo": "/assets/biff-2026/la-libertad-doble-v2.jpg"
+ },
+ "xref": {
+  "tmdb": 1387981,
+  "letterboxd": "double-freedom"
+ },
+ "versiones": [
+  {
+   "etiqueta": "100 min",
+   "duracion_min": 100
+  }
+ ],
+ "presentaciones": [
+  "biff-2026",
+  "ficcali-2026",
+  "tiff-2026"
+ ]
+}

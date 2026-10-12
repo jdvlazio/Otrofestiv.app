@@ -1,0 +1,46 @@
+{
+ "id": "w_R4J7H92GTG6Q",
+ "titulo_original": "La Mona",
+ "anio": 2025,
+ "paises": [
+  "CO"
+ ],
+ "directores": [
+  "Laura Gutiérrez Ardila"
+ ],
+ "aliases": [
+  {
+   "titulo": "La mona",
+   "tipo": "festival"
+  },
+  {
+   "titulo": "Heat Wave",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "La Mona está dispuesta a cualquier sacrificio para garantizar su autoridad en La Hondura, aunque el precio que pague sea la soledad.",
+  "en": "In the damp and dusty village of La Hondura, La Mona is ready to sacrifice everything to maintain her authority even if loneliness is the price she must pay. Her body, however, refuses to toe the line."
+ },
+ "afiche": {
+  "archivo": "/assets/jardin-2026/la-mona.jpg"
+ },
+ "xref": {
+  "tmdb": 1444298,
+  "letterboxd": "heat-wave-2025"
+ },
+ "versiones": [
+  {
+   "etiqueta": "18 min",
+   "duracion_min": 18
+  }
+ ],
+ "presentaciones": [
+  "ficmontanas-2026",
+  "jardin-2026",
+  "popayan-2026",
+  "siembrafest-2026",
+  "villadelcine-2026"
+ ]
+}

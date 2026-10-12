@@ -1,0 +1,18 @@
+{
+ "titulo_original": {
+  "fuente": "festival:cinemancia-2026,ficci-65,ficci-65,ficmontanas-2026,midbo-2026",
+  "regla": "el título que más festivales imprimen"
+ },
+ "directores": {
+  "fuente": "tmdb:1668876",
+  "regla": "tmdb-manda"
+ },
+ "anio": {
+  "fuente": "tmdb:1668876",
+  "regla": "tmdb-manda"
+ },
+ "paises": {
+  "fuente": "tmdb:1668876",
+  "regla": "tmdb-manda"
+ }
+}
