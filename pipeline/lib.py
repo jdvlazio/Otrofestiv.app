@@ -526,7 +526,7 @@ def arquetipos():
 SIGLAS = {
     # sedes y las instituciones que las nombran
     'AECID', 'ALADOS', 'ALITIC', 'ASAB', 'BMCC', 'CCEBA', 'CDAE', 'CEFE', 'CESMAG', 'COMFAMA', 'FUGA',
-    'LGBTIQ', 'MAMB', 'MAMM', 'SENA', 'TPAC', 'UNAL', 'UNIAGRARIA', 'UNIBAC', 'VISA',
+    'LGBTIQ', 'MAMB', 'MAMM', 'MUBI', 'SENA', 'TPAC', 'UNAL', 'UNIAGRARIA', 'UNIBAC', 'VISA',
     # festivales nombrados dentro de una sección o una sede
     'BIFF', 'FICCI', 'FICDH', 'TIFF',
     # «Programación MORA» de FILCMAR: Mercado Oriente Audiovisual (su lámina 1)

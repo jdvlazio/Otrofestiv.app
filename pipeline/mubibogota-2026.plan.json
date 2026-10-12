@@ -1,0 +1,103 @@
+{
+ "_nota": "MUBI Fest Bogotá 2026 (Gimnasio Moderno, 24–25 oct). Fuente: mubifest.com/es/bogota (__NUXT_DATA__). Lo organiza MUBI; Juan aprobó montarlo el 11 oct (radar #1090). Títulos en caja de frase: propuesta a Juan. El acceso es el botón de cada función, verbatim («BOLETAS PRONTO» = desconocido).",
+ "radar": 1090,
+ "pasos": [
+  {
+   "cmd": "python3 pipeline/radar.py mubibogota-2026",
+   "que": "el volcado del radar #1090"
+  },
+  {
+   "cmd": "python3 pipeline/mubibogota-2026-crudo.py",
+   "que": "los 16 eventos del sitio → crudo"
+  },
+  {
+   "cmd": "python3 pipeline/enriquecer.py mubibogota-2026 --posters",
+   "que": "la cascada de TMDB y lo ya publicado"
+  },
+  {
+   "cmd": "python3 pipeline/geocodificar.py mubibogota-2026 --centro 4.6589,-74.0555 --ciudad \"Bogotá\"",
+   "que": "pines: el manual se respeta"
+  },
+  {
+   "cmd": "python3 pipeline/ensamblar.py mubibogota-2026",
+   "que": "el build"
+  },
+  {
+   "cmd": "python3 pipeline/encuadrar-posters.py mubibogota-2026 --aplicar --desde festivals/staging/mubibogota-2026-build.json",
+   "que": "los pósters a 2:3"
+  },
+  {
+   "cmd": "python3 pipeline/mubibogota-2026-verificar.py",
+   "que": "verificador: el build contra la página, por otra lectura"
+  }
+ ],
+ "festival": {
+  "crudo": "festivals/staging/mubibogota-2026-crudo.json",
+  "enriquecido": "festivals/staging/mubibogota-2026-enriquecido.json",
+  "geo": "festivals/staging/mubibogota-2026-venues-geo.json",
+  "_por_que_secciones": "El sitio no tiene secciones: tiene ETIQUETAS en cada tarjeta. Se usan tal cual; con varias, manda la más específica (Foco > Restaurada > Estreno MUBI > Función al aire libre).",
+  "secciones": {
+   "Estreno MUBI": {
+    "emoji": "🎬",
+    "en": "MUBI Premiere",
+    "archetype": "Muestra / País"
+   },
+   "Función al aire libre": {
+    "emoji": "🌙",
+    "en": "Open-air Screening",
+    "archetype": "Especiales / Eventos"
+   },
+   "Foco": {
+    "emoji": "🔎",
+    "en": "Focus",
+    "archetype": "Retrospectiva / Tributo"
+   },
+   "Restaurada": {
+    "emoji": "🎞️",
+    "en": "Restored",
+    "archetype": "Retrospectiva / Tributo"
+   },
+   "Charla en vivo": {
+    "emoji": "🎙️",
+    "en": "Live Talk",
+    "archetype": "Charlas / Industria"
+   },
+   "Al aire libre": {
+    "emoji": "🎲",
+    "en": "Outdoors",
+    "archetype": "Especiales / Eventos"
+   },
+   "MUBI Library": {
+    "emoji": "📚",
+    "en": "MUBI Library",
+    "archetype": "Especiales / Eventos"
+   }
+  },
+  "sedes": {
+   "Gimnasio Moderno": [
+    "Gimnasio Moderno - Bogotá",
+    ""
+   ]
+  },
+  "name": "MUBI Fest",
+  "displayName": "MUBI Fest Bogotá",
+  "fullName": "MUBI Fest Bogotá 2026",
+  "shortName": "MUBI Fest",
+  "tagline": "Festival de cine de MUBI",
+  "city": "Bogotá",
+  "country": "CO",
+  "dates": "24–25 OCT",
+  "dates_en": "OCT 24–25",
+  "year": 2026,
+  "timezoneOffset": "-05:00",
+  "storageKey": "mubibogota2026_",
+  "festivalStartStr": "2026-10-24T00:00:00",
+  "festivalEndStr": "2026-10-25T23:59:00",
+  "sharedSlotIsOneScreening": false,
+  "mes_es": "octubre",
+  "dias_vacios": [],
+  "_fuentes_versionadas": {
+   "festivals/staging/mubibogota-2026-radar.json": "el volcado del radar #1090"
+  }
+ }
+}

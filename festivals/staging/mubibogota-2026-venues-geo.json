@@ -1,0 +1,14 @@
+{
+ "_provenance": {
+  "fuente": "Nominatim con verificación: caja de ciudad + token distintivo + clase de lugar (una sede fija nunca es un barrio). _prec:manual intocable.",
+  "capturado": "2026-10-11"
+ },
+ "Gimnasio Moderno": {
+  "n": 16,
+  "lat": 4.6589052,
+  "lng": -74.0554918,
+  "address": "Cra. 9 #74-99, Bogotá",
+  "_prec": "manual",
+  "_match": "Google Maps «Gimnasio Moderno» (11 oct 2026), Cra. 9 #74-99. Sede única del festival según mubifest.com."
+ }
+}
