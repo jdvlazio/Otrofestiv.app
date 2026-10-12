@@ -33,7 +33,7 @@ import time
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(REPO, 'pipeline'))
-from lib import provenance  # noqa: E402
+from lib import json_wp, provenance  # noqa: E402
 
 DIR = f'{REPO}/fuentes/ficcali-2026'
 SECCIONES = f'{DIR}/seleccion-secciones.json'
@@ -76,7 +76,7 @@ ROTULOS = {'competencia', 'cali ciudad creativa', 'muestra infantil'} | ({v[0].s
 def bajar_secciones():
     r = subprocess.run(['curl', '-s', 'https://ficcali.com/wp-json/wp/v2/pages?parent=12862&per_page=100'],
                        capture_output=True, text=True).stdout
-    pags = json.loads(r, strict=False)
+    pags = json_wp(r)
     out = {}
     for p in pags:
         c = p['content']['rendered']

@@ -268,6 +268,10 @@ def acceso(x):
     t = ' '.join(filter(None, [x['titulo'], x.get('meta_impresa') or '']))
     if x['id'] == 13880:          # el lanzamiento (nota oficial del festival)
         return 'Entrada libre y gratuita hasta completar aforo'
+    # la inauguración: «🎟️ Entrada libre hasta completar aforo» (@festivaldecinecali,
+    # instagram.com/p/DeQLkfeESTZ, 8 oct: Los Cristales, viernes 16, 6 p. m.)
+    if x['id'] == 13924:          # MUKIRA, Teatro Los Cristales, 16 oct
+        return 'Entrada libre hasta completar aforo'
     if re.search(r'inscripci[oó]n|cupo', t, re.I):
         return 'Inscripción previa' + (f' · {m.group()}' if (m := re.search(r'Cupo:\s*\d+(\s*personas)?', t)) else '')
     return DESCONOCIDO
