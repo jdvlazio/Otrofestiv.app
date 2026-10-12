@@ -878,38 +878,6 @@
    "description_lang": "es"
   },
   {
-   "title": "La memoria de las mariposas",
-   "type": "film",
-   "section": "🎬 Proyecciones",
-   "director": "Tatiana Fuentes Sadowski",
-   "year": 2026,
-   "country": "Perú, Portugal",
-   "flags": "🇵🇪🇵🇹",
-   "duration": "77 min",
-   "genre": "Documental",
-   "day": "2026-10-09",
-   "time": "16:30",
-   "day_order": 4,
-   "venue": "Las Américas - Medellín",
-   "sala": "Sala 3",
-   "has_qa": true,
-   "qa_type": "team",
-   "synopsis": "Emergiendo de la era del caucho, las historias perdidas de Omarino y Aredomi se revelan a través de un viaje sensorial que entrelaza la propia historia de la cineasta con archivos de la Amazonía de inicios del siglo veinte. La película es a la vez un ritual y una invocación a dialogar entre vivos y muertos, reflexionando sobre los límites de la investigación, la especulación, el poder, la memoria y las reparaciones.",
-   "synopsis_lang": "es",
-   "poster": "/assets/mamut-2026/la-memoria-de-las-mariposas.jpg",
-   "posterSource": "tmdb",
-   "_src": {
-    "url": "https://www.instagram.com/p/Dd4A9NxERJA/",
-    "date": "2026-09-29",
-    "lamina": 6
-   },
-   "is_free": true,
-   "lbSlug": "the-memory-of-butterflies",
-   "tmdb_id": 1418601,
-   "synopsis_en": "A photo of two indigenous boys brought by force to Europe opens an investigation of the past with meditations on the filmmaker’s own family using roughly textured analogue footage. A monument for the indigenous victims of the rubber trade in Peru.",
-   "title_en": "The Memory of Butterflies"
-  },
-  {
    "title": "Manual para invocar fantasmas",
    "type": "film",
    "section": "🎬 Proyecciones",
@@ -1089,6 +1057,38 @@
    },
    "premiere": "Pre estreno nacional",
    "is_free": true
+  },
+  {
+   "title": "La memoria de las mariposas",
+   "type": "film",
+   "section": "🎬 Proyecciones",
+   "director": "Tatiana Fuentes Sadowski",
+   "year": 2026,
+   "country": "Perú, Portugal",
+   "flags": "🇵🇪🇵🇹",
+   "duration": "77 min",
+   "genre": "Documental",
+   "day": "2026-10-11",
+   "time": "14:30",
+   "day_order": 6,
+   "venue": "Centro Colombo Americano - Medellín",
+   "has_qa": true,
+   "qa_type": "team",
+   "synopsis": "Emergiendo de la era del caucho, las historias perdidas de Omarino y Aredomi se revelan a través de un viaje sensorial que entrelaza la propia historia de la cineasta con archivos de la Amazonía de inicios del siglo veinte. La película es a la vez un ritual y una invocación a dialogar entre vivos y muertos, reflexionando sobre los límites de la investigación, la especulación, el poder, la memoria y las reparaciones.",
+   "synopsis_lang": "es",
+   "poster": "/assets/mamut-2026/la-memoria-de-las-mariposas.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd4A9NxERJA/",
+    "date": "2026-09-29",
+    "lamina": 6,
+    "corrige": "historia de @mamut_festival, 11 oct 2026 (captura de Juan)"
+   },
+   "is_free": true,
+   "lbSlug": "the-memory-of-butterflies",
+   "tmdb_id": 1418601,
+   "synopsis_en": "A photo of two indigenous boys brought by force to Europe opens an investigation of the past with meditations on the filmmaker’s own family using roughly textured analogue footage. A monument for the indigenous victims of the rubber trade in Peru.",
+   "title_en": "The Memory of Butterflies"
   },
   {
    "title": "¡Sancocho!",
@@ -1418,7 +1418,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-11T10:22:53",
+  "fecha": "2026-10-11T20:41:08",
   "plan_sha": "3725c84df2834966",
   "paso": 8,
   "cmd": "python3 pipeline/ensamblar.py mamut-2026"

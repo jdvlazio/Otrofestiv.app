@@ -137,7 +137,12 @@ SALA_DE_OTRA_FUENTE = {'Frío metal': 'Teatro'}
 # Sancocho es a las 2:30 p. m. (no a las 12) y Bombardeo a Washington va en la
 # Sala 0 de Coocine. Por (título, día): Bombardeo también abrió la inauguración.
 DEL_DOMINGO = {('¡Sancocho!', '2026-10-11'): {'hora': '14:30'},
-               ('Bombardeo a Washington', '2026-10-11'): {'sala': 'Sala 0'}}
+               ('Bombardeo a Washington', '2026-10-11'): {'sala': 'Sala 0'},
+               # REPROGRAMADA (p/DeSPVs5CcQW) del vie 9 a: «Domingo 11 de Octubre ·
+               # 2:30 pm · Centro Colombo Americano» (p/DeXPxuopBmt, 11 oct;
+               # fuentes/mamut-2026/mariposas-domingo-DeXPxuopBmt.jpg)
+               ('La memoria de las mariposas', '2026-10-09'): {
+                   'dia': '2026-10-11', 'hora': '14:30', 'sede': 'Centro Colombo Americano', 'sala': None}}
 # EL RENGLÓN DE LA LÁMINA, REESCRITO (decisión de Juan, 1 oct 2026). Va en
 # mayúscula sostenida y sin tildes («(VERSIÓN RESTAURADA) CONVERSACION CON
 # DIRECTOR»); pasado a minúsculas quedaba «(versión restaurada) conversacion con
@@ -367,7 +372,11 @@ def main():
             c = CREDITO_REESCRITO.get(t) or a['credito'].strip().capitalize()
             reg['sinopsis'] = c if c.endswith('.') else c + '.'
         if (t, a['dia']) in DEL_DOMINGO:
-            reg.update(DEL_DOMINGO[(t, a['dia'])])
+            for k, v in DEL_DOMINGO[(t, a['dia'])].items():
+                if v is None:
+                    reg.pop(k, None)
+                else:
+                    reg[k] = SEDES[v] if k == 'sede' else v
             reg['_src']['corrige'] = 'historia de @mamut_festival, 11 oct 2026 (captura de Juan)'
         funciones.append(reg)
 

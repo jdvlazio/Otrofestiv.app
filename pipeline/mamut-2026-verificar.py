@@ -50,8 +50,10 @@ def main():
             continue
         # la historia del domingo corrige la lámina (crudo.DEL_DOMINGO): misma tabla
         aj = crudo.DEL_DOMINGO.get((t, a['dia']), {})
-        lam[(a['dia'], aj.get('hora', a['hora']), plano(t))] = (
-            crudo.SEDES[a['sede']], aj.get('sala') or a.get('sala') or crudo.SALA_DE_OTRA_FUENTE.get(t, ''))
+        sala = '' if 'sala' in aj and aj['sala'] is None else (
+            aj.get('sala') or a.get('sala') or crudo.SALA_DE_OTRA_FUENTE.get(t, ''))
+        lam[(aj.get('dia', a['dia']), aj.get('hora', a['hora']), plano(t))] = (
+            crudo.SEDES[aj.get('sede', a['sede'])], sala)
     for x in crudo.FUNCIONES_DE_OTRO_POST:
         lam[(x['dia'], x['hora'], plano(x['titulo']))] = (crudo.SEDES[x['sede']], '')
     pub = {(f['day'], f['time'], plano(f['title'])): (f['venue'], f.get('sala') or '')
