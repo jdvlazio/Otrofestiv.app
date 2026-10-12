@@ -151,14 +151,14 @@ Restricción dura: `titulo_original`, `directores` y `anio` no pueden quedar vac
 en una obra publicada. Si falta, va a la cola de excepciones; no se publica en
 silencio (es la regla de «sin ficha no se publica», llevada a la obra).
 
-### 4.3 Guardianes nuevos (validate.py)
+### 4.3 Guardianes propuestos (no existen aún; se escriben en la fase 0 como tests que fallan)
 
-- `[xref-unico]`: un `tmdb`/`imdb` en una sola obra.
-- `[obra-sin-duracion]`: la duración nunca en la obra.
-- `[decision-pisada]`: ningún valor publicado contradice una decisión vigente.
-- `[presentacion-con-obra]`: toda función con `type:film` lleva `work_id` válido
+- `xref-unico`: un `tmdb`/`imdb` en una sola obra.
+- `obra-sin-duracion`: la duración nunca en la obra.
+- `decision-pisada`: ningún valor publicado contradice una decisión vigente.
+- `presentacion-con-obra`: toda función con `type:film` lleva `work_id` válido
   (o está en `fusiones` como redirigida).
-- `[candidato-sin-resolver]`: un onboarding no publica con candidatos abiertos.
+- `candidato-sin-resolver`: un onboarding no publica con candidatos abiertos.
 
 ## 5. Cómo encaja con el pipeline de hoy
 
