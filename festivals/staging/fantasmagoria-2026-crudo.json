@@ -1230,29 +1230,6 @@
   {
    "dia": "2026-10-21",
    "hora": "17:00",
-   "sede": "Centro Colombo Americano",
-   "acceso": "Entrada libre",
-   "_src": {
-    "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-11",
-    "base_version": 19,
-    "id": "2026-10-21-17-00-ana-rosa"
-   },
-   "titulo": "Ana Rosa",
-   "director": "Catalina Villar",
-   "pais": "Francia, Colombia",
-   "anio": 2022,
-   "duracion_min": 93,
-   "genero": "Documental",
-   "seccion": "Colombia es Fantástica",
-   "invitados": "Conversatorio con Alejandra Rocas y Ángela Tobón.",
-   "sinopsis": "Al desocupar la casa de sus padres, Catalina Villar encuentra en el fondo de un cajón una antigua tarjeta de identidad con la foto de Ana Rosa, la abuela paterna de quien lo único que sabe es que fue sometida a una lobotomía a finales de los años 50. La pregunta por el porqué de tal intervención recorre esta película y conduce a descomponer un relato familiar marcado por el silencio. Entrevistas a prestigiosos psiquiatras, visitas familiares y archivos de diversos orígenes ponen en evidencia un memorial de coincidencias y siniestros que trascienden la tragedia privada y revelan una historia colectiva, una historia de control sobre los cuerpos de las mujeres.",
-   "has_qa": true,
-   "qa_type": "team"
-  },
-  {
-   "dia": "2026-10-21",
-   "hora": "17:00",
    "sede": "Comfama San Ignacio",
    "acceso": "Entrada libre",
    "_src": {
@@ -1307,6 +1284,29 @@
    "tipo": "evento",
    "event_kind": "taller",
    "duracion_min": 60
+  },
+  {
+   "dia": "2026-10-21",
+   "hora": "18:00",
+   "sede": "Centro Colombo Americano",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-11",
+    "base_version": 19,
+    "id": "2026-10-21-17-00-ana-rosa"
+   },
+   "titulo": "Ana Rosa",
+   "director": "Catalina Villar",
+   "pais": "Francia, Colombia",
+   "anio": 2022,
+   "duracion_min": 93,
+   "genero": "Documental",
+   "seccion": "Colombia es Fantástica",
+   "invitados": "Conversatorio con Alejandra Rocas y Ángela Tobón.",
+   "sinopsis": "Al desocupar la casa de sus padres, Catalina Villar encuentra en el fondo de un cajón una antigua tarjeta de identidad con la foto de Ana Rosa, la abuela paterna de quien lo único que sabe es que fue sometida a una lobotomía a finales de los años 50. La pregunta por el porqué de tal intervención recorre esta película y conduce a descomponer un relato familiar marcado por el silencio. Entrevistas a prestigiosos psiquiatras, visitas familiares y archivos de diversos orígenes ponen en evidencia un memorial de coincidencias y siniestros que trascienden la tragedia privada y revelan una historia colectiva, una historia de control sobre los cuerpos de las mujeres.",
+   "has_qa": true,
+   "qa_type": "team"
   },
   {
    "dia": "2026-10-21",
@@ -1626,29 +1626,6 @@
   {
    "dia": "2026-10-22",
    "hora": "18:30",
-   "sede": "Cineprox Las Américas",
-   "acceso": "Con boleta",
-   "_src": {
-    "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-11",
-    "base_version": 19,
-    "id": "2026-10-22-18-40-you-are-the-film"
-   },
-   "titulo": "You Are The Film",
-   "director": "Makoto Ueda",
-   "pais": "Japón",
-   "anio": 2026,
-   "duracion_min": 68,
-   "genero": "Ciencia ficción",
-   "seccion": "Selección Oficial Largometrajes de Ficción",
-   "invitados": "Hoodsteps (cortometraje).",
-   "sinopsis": "La historia transcurre en tiempo real en un pequeño cine independiente de Shimokitazawa, Tokio. Todo comienza cuando las vidas cotidianas de Madoka, una dramaturga, y Kazuma, un músico, empiezan a transmitirse en vivo y en directo en la pantalla de la sala de cine sin explicación alguna. Mientras ellos caminan por los locales cercanos del barrio, el público del cine observa cada uno de sus movimientos en tiempo real. La situación se sale de control cuando las interacciones de los espectadores y los eventos del exterior empiezan a cruzarse, borrando por completo el límite entre la realidad y la ficción cinematográfica.",
-   "premiere": "Estreno latinoamericano",
-   "sala": "Sala 3"
-  },
-  {
-   "dia": "2026-10-22",
-   "hora": "18:30",
    "sede": "Museo de Arte Moderno de Medellín - MAMM",
    "acceso": "Con boleta",
    "_src": {
@@ -1684,6 +1661,29 @@
    "sinopsis": "Club de lectura – Sesión presencial.",
    "duracion_min": 60,
    "sala": "Jardín Bloque 41"
+  },
+  {
+   "dia": "2026-10-22",
+   "hora": "18:40",
+   "sede": "Cineprox Las Américas",
+   "acceso": "Con boleta",
+   "_src": {
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-11",
+    "base_version": 19,
+    "id": "2026-10-22-18-40-you-are-the-film"
+   },
+   "titulo": "You Are The Film",
+   "director": "Makoto Ueda",
+   "pais": "Japón",
+   "anio": 2026,
+   "duracion_min": 68,
+   "genero": "Ciencia ficción",
+   "seccion": "Selección Oficial Largometrajes de Ficción",
+   "invitados": "Hoodsteps (cortometraje).",
+   "sinopsis": "La historia transcurre en tiempo real en un pequeño cine independiente de Shimokitazawa, Tokio. Todo comienza cuando las vidas cotidianas de Madoka, una dramaturga, y Kazuma, un músico, empiezan a transmitirse en vivo y en directo en la pantalla de la sala de cine sin explicación alguna. Mientras ellos caminan por los locales cercanos del barrio, el público del cine observa cada uno de sus movimientos en tiempo real. La situación se sale de control cuando las interacciones de los espectadores y los eventos del exterior empiezan a cruzarse, borrando por completo el límite entre la realidad y la ficción cinematográfica.",
+   "premiere": "Estreno latinoamericano",
+   "sala": "Sala 3"
   },
   {
    "dia": "2026-10-22",
@@ -1764,28 +1764,6 @@
    "sinopsis": "Chipre, 1882: Eleni, una pintora marginada, intenta resucitar a sus hijos muertos, pero en su lugar desata criaturas míticas sobre su pueblo. Sólo si se convierte en una buena madre para un niño con talento, pero maltratado, podrá revertir la maldición.",
    "premiere": "Estreno suramericano",
    "sala": "Sala 1"
-  },
-  {
-   "dia": "2026-10-23",
-   "hora": "16:00",
-   "sede": "Museo de Arte Moderno de Medellín - MAMM",
-   "acceso": "Con boleta",
-   "_src": {
-    "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-11",
-    "base_version": 19,
-    "id": "2026-10-23-16-00-you-are-the-film"
-   },
-   "titulo": "You Are The Film",
-   "director": "Makoto Ueda",
-   "pais": "Japón",
-   "anio": 2026,
-   "duracion_min": 68,
-   "genero": "Ciencia ficción",
-   "seccion": "Selección Oficial Largometrajes de Ficción",
-   "invitados": "Hoodsteps (cortometraje).",
-   "sinopsis": "La historia transcurre en tiempo real en un pequeño cine independiente de Shimokitazawa, Tokio. Todo comienza cuando las vidas cotidianas de Madoka, una dramaturga, y Kazuma, un músico, empiezan a transmitirse en vivo y en directo en la pantalla de la sala de cine sin explicación alguna. Mientras ellos caminan por los locales cercanos del barrio, el público del cine observa cada uno de sus movimientos en tiempo real. La situación se sale de control cuando las interacciones de los espectadores y los eventos del exterior empiezan a cruzarse, borrando por completo el límite entre la realidad y la ficción cinematográfica.",
-   "premiere": "Estreno latinoamericano"
   },
   {
    "dia": "2026-10-23",
@@ -1902,6 +1880,28 @@
   },
   {
    "dia": "2026-10-23",
+   "hora": "18:30",
+   "sede": "Museo de Arte Moderno de Medellín - MAMM",
+   "acceso": "Con boleta",
+   "_src": {
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-11",
+    "base_version": 19,
+    "id": "2026-10-23-16-00-you-are-the-film"
+   },
+   "titulo": "You Are The Film",
+   "director": "Makoto Ueda",
+   "pais": "Japón",
+   "anio": 2026,
+   "duracion_min": 68,
+   "genero": "Ciencia ficción",
+   "seccion": "Selección Oficial Largometrajes de Ficción",
+   "invitados": "Hoodsteps (cortometraje).",
+   "sinopsis": "La historia transcurre en tiempo real en un pequeño cine independiente de Shimokitazawa, Tokio. Todo comienza cuando las vidas cotidianas de Madoka, una dramaturga, y Kazuma, un músico, empiezan a transmitirse en vivo y en directo en la pantalla de la sala de cine sin explicación alguna. Mientras ellos caminan por los locales cercanos del barrio, el público del cine observa cada uno de sus movimientos en tiempo real. La situación se sale de control cuando las interacciones de los espectadores y los eventos del exterior empiezan a cruzarse, borrando por completo el límite entre la realidad y la ficción cinematográfica.",
+   "premiere": "Estreno latinoamericano"
+  },
+  {
+   "dia": "2026-10-23",
    "hora": "18:40",
    "sede": "Cineprox Las Américas",
    "acceso": "Con boleta",
@@ -2008,7 +2008,7 @@
   },
   {
    "dia": "2026-10-23",
-   "hora": "21:30",
+   "hora": "21:00",
    "sede": "La Pascasia",
    "acceso": "Entrada libre",
    "_src": {
@@ -2314,17 +2314,18 @@
    "Pura Sangre: 2026-10-20 18:30 Universidad Nacional Plazoleta de la Luz → 2026-10-20 18:00 Universidad Nacional Plazoleta de la Luz",
    "Taller animación análoga con Óscar Triana: 2026-10-21 10:00 Parque Biblioteca Belén → 2026-10-21 10:00 Parque Biblioteca Belén Auditorio",
    "De Cinema Zombie a Zinema Zombie: 2026-10-21 18:00 Cámara de Comercio de Medellín Auditorio → 2026-10-21 15:30 Cámara de Comercio de Medellín Auditorio",
-   "Ana Rosa: 2026-10-21 17:00 Centro Colombo Americano Sala X → 2026-10-21 17:00 Centro Colombo Americano",
+   "Ana Rosa: 2026-10-21 17:00 Centro Colombo Americano Sala X → 2026-10-21 18:00 Centro Colombo Americano",
    "Charla: De las Trincheras del Somme a la caída: 2026-10-21 17:00 La Grieta → 2026-10-21 17:00 Casa Libre",
    "Presentaciones de productoras/colectivos y Mad: 2026-10-21 15:30 Cámara de Comercio de Medellín Auditorio → 2026-10-21 17:00 Cámara de Comercio de Medellín Auditorio",
    "Taller: Parche de collage – Construcción de fo: 2026-10-21 18:00 La Grieta → 2026-10-21 18:00 Casa Libre",
    "Club de la Medianoche: Club de lectura: 2026-10-22 18:00 Universidad Nacional Plaza de la Biblioteca → 2026-10-22 18:30 Universidad Nacional Jardín Bloque 41",
-   "You Are The Film: 2026-10-22 18:40 Cineprox Las Américas Sala 3 → 2026-10-22 18:30 Cineprox Las Américas Sala 3",
    "Carrie: 2026-10-22 19:00 Museo de Arte Moderno de Medellín - MAMM → 2026-10-22 18:30 Museo de Arte Moderno de Medellín - MAMM",
    "Motherwitch: 2026-10-23 16:00 Centro Colombo Americano → 2026-10-23 16:00 Centro Colombo Americano Sala 1",
+   "You Are The Film: 2026-10-23 16:00 Museo de Arte Moderno de Medellín - MAMM → 2026-10-23 18:30 Museo de Arte Moderno de Medellín - MAMM",
    "Asedios y otras tácticas militares en la saga : 2026-10-23 16:00 Librería Antimateria → 2026-10-23 17:00 Librería Antimateria",
    "Selección Oficial de Cortometrajes de Animació: 2026-10-23 17:30 Librería Antimateria → 2026-10-23 18:30 Librería Antimateria",
    "Manual Para Invocar Fantasmas: 2026-10-23 19:00 Centro Colombo Americano Sala X → 2026-10-23 19:00 Centro Colombo Americano Sala 1",
+   "Fiesta Fantasmagoría: Brujas, Espectros y Otro: 2026-10-23 21:30 La Pascasia → 2026-10-23 21:00 La Pascasia",
    "The Craft: 2026-10-24 19:30 Centro Colombo Americano Sala X → 2026-10-24 19:30 Centro Colombo Americano"
   ],
   "fuera_de_la_base": [

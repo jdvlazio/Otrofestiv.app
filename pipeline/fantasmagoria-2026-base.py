@@ -89,6 +89,16 @@ SEDES = {
     'Instituto Alexander von Humboldt': 'Instituto Cultural Alexander von Humboldt',
 }
 # la sala: la de la base, salvo las que no son una sala
+# LA LÁMINA DE IG MANDA SOBRE LA BASE cuando se contradicen (Juan, 11 oct: «si
+# publicaron hace poco en IG, confiemos en esa información»). Las 28 láminas de
+# la programación oficial (p/DeX20XnlD0R, p/DeX4HHplB6z, 11 oct, ~1:40 p. m.)
+# salieron después de la base v19 (12:57 p. m.). (título en la base, fecha, hora) → hora.
+HORA_IG = {
+    ('You Are The Film', '2026-10-22', '18:30'): '18:40',
+    ('Ana Rosa', '2026-10-21', '17:00'): '18:00',
+    ('You Are The Film', '2026-10-23', '16:00'): '18:30',
+    ('Brujas, Espectros y Otros Fantasmas', '2026-10-23', '21:30'): '21:00',
+}
 SALA = {'Sala por confirmar': '', 'Transmisión en línea': '', 'San Ignacio': '',
         'Mediateca (San Ignacio)': 'Mediateca', 'Librerías y café (Laureles)': '',
         'Paraninfo UdeA': ''}   # repite la sede
@@ -166,6 +176,8 @@ def main():
     viejas = cr['funciones']
     fallos, usados, salida, nuevas, movidas = [], set(), [], [], []
     for r in sorted(base, key=lambda r: (r['fecha'], r['hora'])):
+        if (r['titulo'], r['fecha'], r['hora']) in HORA_IG:
+            r = {**r, 'hora': HORA_IG[(r['titulo'], r['fecha'], r['hora'])]}
         if r['sede'] not in SEDES:
             fallos.append(f'{r["fecha"]} {r["hora"]}: sede sin entrada en la tabla: {r["sede"]!r}')
             continue
