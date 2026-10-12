@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "Instagram @filcmar — el carrusel de programación (16 láminas)",
-  "capturado": "2026-10-11",
+  "capturado": "2026-10-12",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_sedes": "El nombre que imprime cada lámina, tal cual; la sala va aparte (Foso, Hall, Capilla).",
@@ -172,10 +172,10 @@
    "short": "Teatro Municipal Simona Duque",
    "city": "Marinilla",
    "n": 0,
-   "lat": 6.1729564,
-   "lng": -75.3341178,
+   "lat": 6.173035,
+   "lng": -75.3347087,
    "_prec": "manual",
-   "_match": "Google Maps: Teatro Municipal Simona Duque, Marinilla"
+   "_match": "Google Maps: Teatro Municipal Simona Duque, Marinilla (place 0x3a48097ef241b462, 12 oct 2026; el pin anterior caía ~65 m al oriente)"
   },
   "Parque Principal de Marinilla - Marinilla": {
    "short": "Parque Principal de Marinilla",
@@ -475,7 +475,7 @@
      "synopsis": "Convencido de que a Flor solo le interesan los rockeros tatuados, Raúl intenta reinventarse para conquistarla. Con la ayuda de su vecina, quien le hace un tatuaje de henna, y de su abuelo (también llamado Raúl), que le enseña a tocar la guitarra, emprende un dulce y torpe intento por llamar su atención.",
      "synopsis_lang": "es",
      "poster": "/assets/filcmar-2026/the-raules.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "the-raules",
      "tmdb_id": 1794424
     },
@@ -1443,7 +1443,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-11T07:49:24",
+  "fecha": "2026-10-12T15:58:05",
   "plan_sha": "23096bf87098b953",
   "paso": 8,
   "cmd": "python3 pipeline/ensamblar.py filcmar-2026"
