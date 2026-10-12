@@ -1,0 +1,60 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://otrofestiv.app/catalogo/esquema.json",
+ "title": "Catálogo único de obras — Otrofestiv",
+ "description": "Diseño en docs/CATALOGO-OBRAS.md. Tres capas: obra (invariante) → versión (opcional) → presentación (la función del festival, en festivals/<fid>.json). Procedencia, decisiones y fusiones viven aparte.",
+ "$defs": {
+  "id_obra": {"type": "string", "pattern": "^w_[0-9A-HJKMNP-TV-Z]{12}$",
+   "description": "Opaco, propio, asignado una vez. Nunca derivado del título."},
+  "obra": {
+   "type": "object",
+   "required": ["id", "titulo_original", "directores"],
+   "additionalProperties": false,
+   "properties": {
+    "id": {"$ref": "#/$defs/id_obra"},
+    "titulo_original": {"type": "string", "minLength": 1},
+    "idioma_original": {"type": ["string", "null"], "pattern": "^[a-z]{2}$"},
+    "anio": {"type": ["integer", "null"], "minimum": 1880, "maximum": 2100},
+    "paises": {"type": "array", "items": {"type": "string", "pattern": "^[A-Z]{2}$"}},
+    "directores": {"type": "array", "items": {"type": "string", "minLength": 1}},
+    "tipo": {"enum": ["largometraje", "cortometraje", "mediometraje", "serie", "videoclip", "instalacion", "otro", null]},
+    "aliases": {"type": "array", "items": {
+     "type": "object", "required": ["titulo"], "additionalProperties": false,
+     "properties": {"titulo": {"type": "string"}, "idioma": {"type": ["string", "null"]},
+      "pais": {"type": ["string", "null"]}, "tipo": {"enum": ["traduccion", "festival", "trabajo", "distribucion", "otro"]}}}},
+    "sinopsis": {"type": "object", "additionalProperties": false,
+     "properties": {"es": {"type": "string"}, "en": {"type": "string"}}},
+    "afiche": {"type": ["object", "null"], "additionalProperties": false,
+     "properties": {"archivo": {"type": "string"}, "veredicto": {"enum": ["oficial", "oficial-festival", "compuesto", "fotograma", "sin-afiche"]}}},
+    "xref": {"type": "object", "additionalProperties": false,
+     "properties": {"tmdb": {"type": ["integer", "null"]}, "imdb": {"type": ["string", "null"], "pattern": "^tt\\d+$"},
+      "wikidata": {"type": ["string", "null"], "pattern": "^Q\\d+$"}, "letterboxd": {"type": ["string", "null"]},
+      "proimagenes": {"type": ["string", "null"]}}},
+    "versiones": {"type": "array", "items": {
+     "type": "object", "required": ["etiqueta"], "additionalProperties": false,
+     "properties": {"etiqueta": {"type": "string"}, "duracion_min": {"type": ["integer", "null"]},
+      "idioma_audio": {"type": ["string", "null"]}, "subtitulos": {"type": "array", "items": {"type": "string"}},
+      "corte": {"type": ["string", "null"]}}}},
+    "presentaciones": {"type": "array", "items": {"type": "string", "pattern": "^[a-z0-9]+-\\d{4}$"}}
+   },
+   "not": {"anyOf": [{"required": ["duracion_min"]}, {"required": ["duration"]}]}
+  },
+  "decision": {
+   "type": "object", "required": ["work_id", "campo", "motivo", "fecha"], "additionalProperties": false,
+   "properties": {
+    "work_id": {"$ref": "#/$defs/id_obra"},
+    "campo": {"type": "string", "description": "campo de la obra, o «no-es» (decisión negativa de identidad), o «no-alta-tmdb»"},
+    "valor": {},
+    "motivo": {"type": "string", "minLength": 1},
+    "fecha": {"type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$"},
+    "quien": {"type": "string"},
+    "reemplaza": {"type": ["integer", "null"], "description": "índice de la decisión que esta reemplaza"}
+   }
+  },
+  "fusion": {
+   "type": "object", "required": ["absorbido", "superviviente", "fecha", "motivo"], "additionalProperties": false,
+   "properties": {"absorbido": {"$ref": "#/$defs/id_obra"}, "superviviente": {"$ref": "#/$defs/id_obra"},
+    "fecha": {"type": "string"}, "motivo": {"type": "string"}}
+  }
+ }
+}

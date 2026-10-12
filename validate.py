@@ -6686,6 +6686,60 @@ try:
 except Exception as _e:
     fail(check, f'el guardián no pudo correr: {_e}')
 
+# ── [catalogo-*] el catálogo único de obras (docs/CATALOGO-OBRAS.md) ─────────
+# Fase 0 (12 oct 2026): el catálogo todavía está vacío, así que estos guardianes
+# pasan sin más; lo que SÍ corre siempre es la autoprueba —cada invariante tiene
+# que atrapar su cebo en memoria—, para que no nazcan ciegos («un guardián que
+# nunca falló no es de fiar»). La lógica vive en pipeline/catalogo.py: aquí solo
+# se llama, una función, un dueño.
+_CAT = {}
+try:
+    import sys as _sysc, glob as _gc, json as _jc, os as _osc
+    _sysc.path.insert(0, 'pipeline')
+    import catalogo as _cat
+    _obs, _decs, _fus = _cat.obras(), _cat.decisiones(), _cat.fusiones()
+    _fests = {}
+    for _p in _gc.glob('festivals/*.json'):
+        try:
+            _fests[_osc.path.basename(_p)[:-5]] = _jc.load(open(_p, encoding='utf-8'))
+        except Exception:
+            pass
+    _CAT = {'catalogo-autoprueba': _cat.autoprueba(),
+            'xref-unico': _cat.xref_repetido(_obs),
+            'obra-sin-duracion': _cat.duracion_en_obra(_obs),
+            'decision-pisada': _cat.decision_pisada(_obs, _decs),
+            'presentacion-con-obra': _cat.presentacion_sin_obra(_fests, _obs, _fus),
+            'candidato-sin-resolver': _cat.candidatos_abiertos(),
+            'catalogo-ids': _cat.ids_validos(_obs)}
+except Exception as _e:
+    _CAT = {'catalogo-autoprueba': [f'el guardián no pudo correr: {_e}']}
+
+
+def _cat_rep(_chk, _bien):
+    _p = _CAT.get(_chk)
+    if _p is None:
+        fail(_chk, 'el guardián no corrió (ver catalogo-autoprueba)')
+    elif _p:
+        fail(_chk, f'{len(_p)} problema(s): ' + ' · '.join(_p[:6]))
+    else:
+        ok(_chk, _bien)
+
+
+check = 'catalogo-autoprueba'
+_cat_rep(check, 'los invariantes del catálogo atrapan sus cebos')
+check = 'xref-unico'
+_cat_rep(check, 'cada tmdb/imdb/wikidata en una sola obra')
+check = 'obra-sin-duracion'
+_cat_rep(check, 'ninguna obra lleva duración suelta (va en la versión)')
+check = 'decision-pisada'
+_cat_rep(check, 'ninguna obra contradice una decisión vigente')
+check = 'presentacion-con-obra'
+_cat_rep(check, 'todo work_id de un festival apunta a una obra vigente')
+check = 'candidato-sin-resolver'
+_cat_rep(check, 'sin pares de obras pendientes de decisión')
+check = 'catalogo-ids'
+_cat_rep(check, 'toda obra con id válido y archivo con su nombre')
+
 # ── [css-huerfana] toda clase del <style> la emite alguien ───────────────────────
 # Medido el 5 sep 2026: 825 clases en index.html, 45 que nada emitía — 14 nunca
 # en toda la historia, 27 cuya emisión se quitó (17 en agosto), 3 solo en
