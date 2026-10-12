@@ -1407,6 +1407,14 @@ export const SECTION_ARCHETYPES = {
   '🌎 Muestra de Cortos Internacionales': 'Muestra / País',
   '🏘️ CineCorto en el Barrio': 'Cortos / Programas',
   '🏡 Cine Corto al barrio': 'Cortos / Programas',
+  // MUBI Fest Bogotá 2026 (las etiquetas de las tarjetas de mubifest.com)
+  '🎬 Estreno MUBI': 'Muestra / País',
+  '🌙 Función al aire libre': 'Especiales / Eventos',
+  '🔎 Foco': 'Retrospectiva / Tributo',
+  '🎞️ Restaurada': 'Retrospectiva / Tributo',
+  '🎙️ Charla en vivo': 'Charlas / Industria',
+  '🎲 Al aire libre': 'Especiales / Eventos',
+  '📚 MUBI Library': 'Especiales / Eventos',
   // FICPA 2026 (la Selección Oficial y los dos menús del sitio)
   '🌍 Ecos del Mundo': 'Competencia',
   '💓 Latidos del Cine Colombiano': 'Competencia',
