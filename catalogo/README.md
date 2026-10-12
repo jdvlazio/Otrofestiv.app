@@ -10,5 +10,6 @@ Esquema: [`esquema.json`](esquema.json). Lectura e invariantes: `pipeline/catalo
 | `decisiones.json` | decisiones humanas; ganan siempre, también las negativas («no es la misma obra») |
 | `fusiones.json` | id absorbido → superviviente; un id nunca se borra |
 | `candidatos.json` | pares de obras que pueden ser la misma, pendientes de Juan |
+| `revision-fase2.json` | la primera revisión (12 oct): 4 reglas generales, 8 decisiones de identidad y 25 de datos, por título; se convierten en `decisiones.json` al asignar ids |
 
 Fase 0 (12 oct 2026): vacío a propósito. La fase 1 lo construye desde los festivales publicados.
