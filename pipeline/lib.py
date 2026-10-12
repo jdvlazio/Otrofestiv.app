@@ -456,6 +456,18 @@ _INSCRIPCION = ('inscripcion', 'inscribir', 'registro previo', 'cupo limitado',
                 'previa inscripcion', 'formulario')
 
 
+def json_wp(texto):
+    """La respuesta de la API de WordPress, aunque el sitio le pegue CSS delante.
+
+    POR QUÉ (12 oct 2026). ficcali.com empezó a anteponer un `<style
+    id="elementor-post-…">` a /wp-json/: HTTP 200, `application/json`, y el
+    json.loads del primer carácter reventaba el catálogo, la programación y los
+    afiches a la vez. El JSON empieza en el primer `[{"` o `{"`; lo de antes
+    se descarta."""
+    i = min((k for k in (texto.find('[{"'), texto.find('{"'), texto.find('[]')) if k >= 0), default=0)
+    return json.loads(texto[i:], strict=False)
+
+
 def acceso_campos(texto, url=''):
     """De la palabra del festival a los 4 campos que la app lee.
 

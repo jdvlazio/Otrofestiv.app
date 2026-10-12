@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, emparejado con ficha_verifica() (director + año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-10-10"
+  "capturado": "2026-10-12"
  },
  "obras": [
   {
@@ -18,7 +18,7 @@
    "lbSlug": "afilando-memoria",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Eugenio Gómez, 2026, 7 min, CO; sinopsis del festival y afiche original de ficcali.com (biblioteca de medios).",
    "_director": "Eugenio Gómez",
-   "_sondeado": "2026-10-10",
+   "_sondeado": "2026-10-12",
    "poster": "/assets/ficcali-2026/afilando-memoria.jpg",
    "posterSource": "tmdb"
   },
@@ -183,7 +183,7 @@
    "lbSlug": "boato",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Alexandra Julio, 2026, 7 min, CO; sinopsis del festival y afiche original de ficcali.com (biblioteca de medios).",
    "_director": "Alexandra Julio",
-   "_sondeado": "2026-10-10",
+   "_sondeado": "2026-10-12",
    "poster": "/assets/ficcali-2026/boato.jpg",
    "posterSource": "tmdb"
   },
@@ -220,7 +220,7 @@
    "lbSlug": "despues-de-las-seis",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Diana Kuellar (1740740, directora de Marímbula), 2026, 24 min, CO; sinopsis del festival y afiche original de ficcali.com (biblioteca de medios).",
    "_director": "Diana Kuéllar",
-   "_sondeado": "2026-10-10",
+   "_sondeado": "2026-10-12",
    "poster": "/assets/ficcali-2026/despues-de-las-seis.jpg",
    "posterSource": "tmdb"
   },
@@ -255,7 +255,7 @@
    "lbSlug": "el-coloso",
    "_verificado": "declarada a mano: Proyección especial fuera de la Selección: la tarjeta solo dice Colombia, 70 min. TMDB: «El coloso», José Varón, Colombia, 2025, 66 min (la otra ficha homónima, 1612550, es un corto peruano de 17 min). Verificado a mano el 8 oct.",
    "_director": "José Varón",
-   "_sondeado": "2026-10-10",
+   "_sondeado": "2026-10-12",
    "sinopsis": "El Coloso cuenta la vida y el legado de Freddy Rincón, un gigante del fútbol colombiano que conquistó Brasil con su fuerza y su talento, llenó estadios en España y le dio a su país uno de sus goles más inolvidables, contra Alemania. De sus raíces en Buenaventura a convertirse en símbolo de orgullo nacional, Rincón trascendió la cancha para inspirar a toda una generación. Más que un futbolista, fue un faro de esperanza cuya grandeza sigue viva en la memoria de los colombianos.",
    "_sinopsis": "traducción nuestra con contexto (Content Design, 10 oct 2026) de la sinopsis en inglés de TMDB: https://www.themoviedb.org/movie/1566489",
    "poster": "/assets/ficcali-2026/el-coloso.jpg",
@@ -265,7 +265,7 @@
    "titulo": "El bitcoin de oro",
    "tmdb_id": 1793999,
    "titulo_original": "El bitcoin de oro",
-   "poster_path": null,
+   "poster_path": "/nWYYJWUKTP9I9DwuaKrbZPmeXBZ.jpg",
    "synopsis_es": "Cuando Asofem está a punto de cerrar por una grave crisis económica, un grupo de usuarios y su monitor deciden embarcarse en una disparatada misión para salvar el centro al que consideran su hogar.",
    "synopsis_en": "",
    "genero": "",
@@ -275,10 +275,9 @@
    "lbSlug": "el-bitcoin-de-oro",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 10 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título, por director y en Letterboxd): Bernardo Hernández, 2026, 18 min, ES; sinopsis del festival y afiche original de ficcali.com (biblioteca de medios).",
    "_director": "Bernardo Hernández",
-   "_sondeado": "2026-10-10",
+   "_sondeado": "2026-10-12",
    "poster": "/assets/ficcali-2026/el-bitcoin-de-oro.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/09/poster-el-bitcoin-de-oro-scaled.webp (1704×2560)"
+   "posterSource": "tmdb"
   },
   {
    "titulo": "El maestro de la piqueria",
@@ -294,7 +293,7 @@
    "lbSlug": "el-maestro-de-la-piqueria",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 10 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título, por director y en Letterboxd): Yinet Molero, 2025, 8 min, CO; sinopsis del festival y afiche original de ficcali.com (biblioteca de medios).",
    "_director": "Yinet Molero",
-   "_sondeado": "2026-10-10",
+   "_sondeado": "2026-10-12",
    "poster": "/assets/ficcali-2026/el-maestro-de-la-piqueria.jpg",
    "posterSource": "tmdb"
   },
@@ -312,7 +311,7 @@
    "lbSlug": "el-mundo-de-humberto",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Paula Ortiz, 2025, 14 min, CO; sinopsis del festival y afiche original de ficcali.com (biblioteca de medios).",
    "_director": "Paula Ortiz",
-   "_sondeado": "2026-10-10",
+   "_sondeado": "2026-10-12",
    "poster": "/assets/ficcali-2026/el-mundo-de-humberto.jpg",
    "posterSource": "tmdb"
   },
@@ -352,7 +351,7 @@
    "lbSlug": "el-viaje-2026",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Ana Sofía Franco, 2026, 8 min, CO; sinopsis del festival y afiche original de ficcali.com (biblioteca de medios).",
    "_director": "Ana Sofía Franco",
-   "_sondeado": "2026-10-10",
+   "_sondeado": "2026-10-12",
    "poster": "/assets/ficcali-2026/el-viaje.jpg",
    "posterSource": "tmdb"
   },
@@ -360,20 +359,19 @@
    "titulo": "Ellas, gardiennes de l'Amazonie",
    "tmdb_id": 1793997,
    "titulo_original": "Ellas, gardiennes de l'Amazonie",
-   "poster_path": null,
+   "poster_path": "/4baH1ReFMpCIfPkT5cV65KRPNnF.jpg",
    "synopsis_es": "Jade y Estelle, dos jóvenes francesas de veintidós años, emprendieron un viaje de tres meses por la Amazonía para conocer a mujeres indígenas de Colombia, Ecuador y Perú, y profundizar en la comprensión del ecofeminismo en los territorios. Gracias a las historias de vida de tres lideresas, el documental explora un movimiento que establece una estrecha relación entre la defensa de la naturaleza y la lucha por los derechos de las mujeres.",
    "synopsis_en": "",
    "genero": "",
-   "anio_tmdb": 0,
+   "anio_tmdb": 2022,
    "duracion_tmdb": 39,
    "pais_tmdb": "",
    "lbSlug": "ellas-gardiennes-de-lamazonie",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 10 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título, por director y en Letterboxd): Estelle Lalisse y Jade Fort, 2022, 39 min, CO/PE/EC; sinopsis del festival y afiche original de ficcali.com (biblioteca de medios).",
    "_director": "Estelle Lalisse, Jade Fort",
-   "_sondeado": "2026-10-10",
+   "_sondeado": "2026-10-12",
    "poster": "/assets/ficcali-2026/ellas-gardiennes-de-l-amazonie.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/10/poster-ellas.jpg (842×1191)"
+   "posterSource": "tmdb"
   },
   {
    "titulo": "En construcción",
@@ -390,7 +388,7 @@
    "lbSlug": "work-in-progress",
    "_verificado": "declarada a mano: Proyección especial: la tarjeta dice España, 124 min. TMDB: José Luis Guerín, 2001, 125 min, España. Verificado a mano el 8 oct.",
    "_director": "José Luis Guerín",
-   "_sondeado": "2026-10-10",
+   "_sondeado": "2026-10-12",
    "poster": "/assets/ficcali-2026/en-construccion.jpg",
    "posterSource": "tmdb"
   },
@@ -431,7 +429,7 @@
    "lbSlug": "good-valley-stories",
    "_verificado": "declarada a mano: FICCI 65 la publicó (José Luis Guerín, 2025); TMDB: Guerín, 2025, 125 min contra 120 de la tarjeta (10 oct 2026). La tarjeta de Ficcali no da director ni año: sin ellos el candado no podía corroborar.",
    "_director": "José Luis Guerín",
-   "_sondeado": "2026-10-10",
+   "_sondeado": "2026-10-12",
    "poster": "/assets/ficcali-2026/historias-del-buen-valle.jpg",
    "posterSource": "tmdb"
   },
@@ -519,7 +517,7 @@
    "lbSlug": "la-bola-negra",
    "_verificado": "declarada a mano: BIFF 12 y TIFF 2026 la publican con esta ficha; director, año (2026) y duración (155 min) coinciden (10 oct 2026). La tarjeta de Ficcali no da director ni año: sin ellos el candado no podía corroborar.",
    "_director": "Javier Calvo, Javier Ambrossi",
-   "_sondeado": "2026-10-10",
+   "_sondeado": "2026-10-12",
    "poster": "/assets/ficcali-2026/la-bola-negra.jpg",
    "posterSource": "tmdb"
   },
@@ -538,7 +536,7 @@
    "lbSlug": "the-fabulous-time-machine",
    "_verificado": "declarada a mano: Proyección especial: la tarjeta dice Brasil, 70 min. TMDB: «A Fabulosa Máquina do Tempo», Eliza Capai, 2026, 73 min, Brasil. Verificado a mano el 8 oct.",
    "_director": "Eliza Capai",
-   "_sondeado": "2026-10-10",
+   "_sondeado": "2026-10-12",
    "sinopsis": "En el corazón del árido sertão brasileño, un grupo de niñas de diez años juega a inventar máquinas del tiempo imaginarias. Las pequeñas viajan al pasado para explorar la dura realidad de supervivencia que vivieron sus madres y abuelas, al mismo tiempo que se proyectan. El documental utiliza la inocencia y la imaginación infantil como un poderoso catalizador para debatir con madurez sobre la autonomía de las mujeres, el género, el ciclo de la pobreza y sus propios sueños de libertad.",
    "_sinopsis": "ficha de ficcali.com, verbatim (https://ficcali.com/pelicula/a-fabulosa-maquina-do-tempo), leída el 10 oct 2026",
    "poster": "/assets/ficcali-2026/la-fabulosa-maquina-del-tiempo.jpg",
@@ -611,7 +609,7 @@
    "lbSlug": "double-freedom",
    "_verificado": "declarada a mano: BIFF 12 la publica con esta ficha; Lisandro Alonso, 2026, 100 min coinciden (10 oct 2026). La tarjeta de Ficcali no da director ni año: sin ellos el candado no podía corroborar.",
    "_director": "Lisandro Alonso",
-   "_sondeado": "2026-10-10",
+   "_sondeado": "2026-10-12",
    "poster": "/assets/ficcali-2026/la-libertad-doble-v2.jpg",
    "posterSource": "tmdb"
   },
@@ -660,7 +658,7 @@
    "lbSlug": "las-pesadillas-del-siervo",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Manuel Villa (1711036, director de No amanece igual para todos), 2025, 90 min, CO; sinopsis del festival y afiche original de ficcali.com (biblioteca de medios).",
    "_director": "Manuel Villa",
-   "_sondeado": "2026-10-10",
+   "_sondeado": "2026-10-12",
    "poster": "/assets/ficcali-2026/las-pesadillas-del-siervo.jpg",
    "posterSource": "tmdb"
   },
@@ -765,13 +763,13 @@
    "synopsis_en": "When Gleb, a successful company director, finds himself under siege from mounting corporate pressures, an increasingly unstable world, and the discovery of his wife's affair, the collapse of his carefully ordered life accelerates toward violence.",
    "genero": "Drama",
    "anio_tmdb": 2026,
-   "duracion_tmdb": 135,
+   "duracion_tmdb": 141,
    "pais_tmdb": "France, Latvia, Germany, United States of America, Switzerland",
    "title_en": "Minotaur",
    "lbSlug": "minotaur-2026",
    "_verificado": "declarada a mano: Proyección especial: la tarjeta dice Rusia, 135 min. TMDB: «Minotaur», Andrey Zvyagintsev, 2026, 135 min exactos (origen FR por la coproducción; el director es ruso). Verificado a mano el 8 oct.",
    "_director": "Andrey Zvyagintsev",
-   "_sondeado": "2026-10-10",
+   "_sondeado": "2026-10-12",
    "poster": "/assets/ficcali-2026/minotauro.jpg",
    "posterSource": "tmdb"
   },
@@ -896,7 +894,7 @@
    "lbSlug": "ona-2026",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 10 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título, por director y en Letterboxd): Matilde Gimeno, 2026, 4 min, ES; sinopsis del festival y afiche original de ficcali.com (biblioteca de medios).",
    "_director": "Matilde Gimeno",
-   "_sondeado": "2026-10-10",
+   "_sondeado": "2026-10-12",
    "poster": "/assets/ficcali-2026/ona.jpg",
    "posterSource": "tmdb"
   },
@@ -987,20 +985,19 @@
    "titulo": "Quinto primera",
    "tmdb_id": 1794005,
    "titulo_original": "Quinto primera",
-   "poster_path": null,
+   "poster_path": "/dY6OtXCnMdqzTEzeg5Rrl8RbAww.jpg",
    "synopsis_es": "Rafael vive encerrado en su mundo, su piso en L’Hospitalet de Llobregat. Cuando su mujer murió, hace varios años, él perdió las ganas de vivir y su espíritu guerrero. Llegó a L’Hospitalet en los años cincuenta, en la primera gran ola de inmigración. Fue un luchador por la democracia, la igualdad, la solidaridad y la justicia durante las décadas del setenta y ochenta, pero ahora, solitario, amargado y xenófobo, reniega del mundo y, en su soledad, les cobra su miseria a todos y, en especial, a los nuevos inmigrantes. Tampoco ayuda su alzhéimer, cada vez más presente.",
    "synopsis_en": "",
    "genero": "",
-   "anio_tmdb": 0,
-   "duracion_tmdb": 0,
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 18,
    "pais_tmdb": "",
    "lbSlug": "quinto-primera",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 10 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título, por director y en Letterboxd): Fran Menchón, 2026, 18 min, ES; sinopsis del festival y afiche original de ficcali.com (biblioteca de medios).",
    "_director": "Fran Menchón",
-   "_sondeado": "2026-10-10",
+   "_sondeado": "2026-10-12",
    "poster": "/assets/ficcali-2026/quinto-primera.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/09/poster-quinto-primera.jpg (1587×2245)"
+   "posterSource": "tmdb"
   },
   {
    "titulo": "Relicto",
@@ -1035,7 +1032,7 @@
    "lbSlug": "rodilla-negra",
    "_verificado": "declarada a mano: Proyección especial junto a El Coloso: la tarjeta solo dice Colombia. Es «Rodilla negra» de Carlos Mayolo (Cali, 1975, 14 min), el único título así en TMDB; cuadra con un festival caleño. Verificado a mano el 8 oct.",
    "_director": "Carlos Mayolo",
-   "_sondeado": "2026-10-10",
+   "_sondeado": "2026-10-12",
    "sinopsis": "Un equipo de fútbol, interpretado por jugadores del Barrios Unidos de Cali, se topa en el campo con una pareja de hippies que se bañan desnudos y les roba el radio de transistores. Eso parece desatar algo en su jugador más legendario, Jonny Mosquera: un síndrome terrible que lo hace caer, literalmente, de rodillas.",
    "_sinopsis": "traducción nuestra con contexto (Content Design, 10 oct 2026) de la sinopsis en inglés de TMDB: https://www.themoviedb.org/movie/947607",
    "poster": "/assets/ficcali-2026/rodilla-negra.jpg",
@@ -1055,7 +1052,7 @@
    "lbSlug": "runa-simi",
    "_verificado": "declarada a mano: AFF 2026 la publicó (Augusto Zegarra, 2025); TMDB: Zegarra, 2025, 81 min contra 85 de la tarjeta (10 oct 2026). La tarjeta de Ficcali no da director ni año: sin ellos el candado no podía corroborar.",
    "_director": "Augusto Zegarra",
-   "_sondeado": "2026-10-10",
+   "_sondeado": "2026-10-12",
    "poster": "/assets/ficcali-2026/runa-simi.jpg",
    "posterSource": "tmdb"
   },
@@ -1158,7 +1155,7 @@
    "lbSlug": "somnolytic",
    "_verificado": "declarada a mano: Ya existía en TMDB con su título en inglés, «Somnolytic» (original «Somnolithic»), de Abril Velasquez: la misma directora (Abril Natalia Velázquez). La encontró la búsqueda de personas el 10 oct 2026.",
    "_director": "Abril Natalia Velázquez",
-   "_sondeado": "2026-10-10",
+   "_sondeado": "2026-10-12",
    "poster": "/assets/ficcali-2026/somnolitico.jpg",
    "posterSource": "tmdb"
   },
@@ -1196,7 +1193,7 @@
    "lbSlug": "vertigo-2025-1",
    "_verificado": "declarada a mano: Ya existía en TMDB (Jimmy Llamas, 2025) y el enriquecido no la casó; la encontró la sonda por título el 10 oct 2026.",
    "_director": "Jimmy Llamas",
-   "_sondeado": "2026-10-10",
+   "_sondeado": "2026-10-12",
    "poster": "/assets/ficcali-2026/vertigo.jpg",
    "posterSource": "tmdb"
   },
@@ -1204,7 +1201,7 @@
    "titulo": "¿Dónde está Richard?",
    "tmdb_id": 1794009,
    "titulo_original": "¿Dónde está Richard?",
-   "poster_path": null,
+   "poster_path": "/x5MNjTPXz8ztLlbFLu5RCcGTCEV.jpg",
    "synopsis_es": "Catherine es una periodista sorda que está perdida en el barrio madrileño de Carabanchel. No va a llegar a tiempo a entrevistar a un importante actor estadounidense. Desesperada, le pide ayuda a la Lore, una vecina del barrio que pasaba por allí. Juntas trazan un plan para poder encontrarse con este conocido personaje.",
    "synopsis_en": "",
    "genero": "",
@@ -1214,10 +1211,9 @@
    "lbSlug": "donde-esta-richard",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 10 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título, por director y en Letterboxd): Juan Carlos Álvarez, 2025, 6 min, ES; sinopsis del festival y afiche original de ficcali.com (biblioteca de medios).",
    "_director": "Juan Carlos Álvarez",
-   "_sondeado": "2026-10-10",
+   "_sondeado": "2026-10-12",
    "poster": "/assets/ficcali-2026/donde-esta-richard.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/09/poster-donde-esta-richard.jpg (595×842)"
+   "posterSource": "tmdb"
   },
   {
    "titulo": "¿Por qué se esconde Drácula?",
@@ -1517,7 +1513,7 @@
    "lbSlug": "afilando-memoria",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Eugenio Gómez, 2026, 7 min, CO; sinopsis del festival y afiche original de ficcali.com (biblioteca de medios).",
    "_director": "Eugenio Gómez",
-   "_sondeado": "2026-10-10",
+   "_sondeado": "2026-10-12",
    "poster": "/assets/ficcali-2026/afilando-memoria.jpg",
    "posterSource": "tmdb"
   },
@@ -1662,7 +1658,7 @@
    "lbSlug": "boato",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Alexandra Julio, 2026, 7 min, CO; sinopsis del festival y afiche original de ficcali.com (biblioteca de medios).",
    "_director": "Alexandra Julio",
-   "_sondeado": "2026-10-10",
+   "_sondeado": "2026-10-12",
    "poster": "/assets/ficcali-2026/boato.jpg",
    "posterSource": "tmdb"
   },
@@ -1697,7 +1693,7 @@
    "lbSlug": "despues-de-las-seis",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Diana Kuellar (1740740, directora de Marímbula), 2026, 24 min, CO; sinopsis del festival y afiche original de ficcali.com (biblioteca de medios).",
    "_director": "Diana Kuéllar",
-   "_sondeado": "2026-10-10",
+   "_sondeado": "2026-10-12",
    "poster": "/assets/ficcali-2026/despues-de-las-seis.jpg",
    "posterSource": "tmdb"
   },
@@ -1714,7 +1710,7 @@
    "lbSlug": "el-coloso",
    "_verificado": "declarada a mano: Proyección especial fuera de la Selección: la tarjeta solo dice Colombia, 70 min. TMDB: «El coloso», José Varón, Colombia, 2025, 66 min (la otra ficha homónima, 1612550, es un corto peruano de 17 min). Verificado a mano el 8 oct.",
    "_director": "José Varón",
-   "_sondeado": "2026-10-10",
+   "_sondeado": "2026-10-12",
    "sinopsis": "El Coloso cuenta la vida y el legado de Freddy Rincón, un gigante del fútbol colombiano que conquistó Brasil con su fuerza y su talento, llenó estadios en España y le dio a su país uno de sus goles más inolvidables, contra Alemania. De sus raíces en Buenaventura a convertirse en símbolo de orgullo nacional, Rincón trascendió la cancha para inspirar a toda una generación. Más que un futbolista, fue un faro de esperanza cuya grandeza sigue viva en la memoria de los colombianos.",
    "_sinopsis": "traducción nuestra con contexto (Content Design, 10 oct 2026) de la sinopsis en inglés de TMDB: https://www.themoviedb.org/movie/1566489",
    "poster": "/assets/ficcali-2026/el-coloso.jpg",
@@ -1723,7 +1719,7 @@
   "El bitcoin de oro": {
    "tmdb_id": 1793999,
    "titulo_original": "El bitcoin de oro",
-   "poster_path": null,
+   "poster_path": "/nWYYJWUKTP9I9DwuaKrbZPmeXBZ.jpg",
    "synopsis_es": "Cuando Asofem está a punto de cerrar por una grave crisis económica, un grupo de usuarios y su monitor deciden embarcarse en una disparatada misión para salvar el centro al que consideran su hogar.",
    "synopsis_en": "",
    "genero": "",
@@ -1733,10 +1729,9 @@
    "lbSlug": "el-bitcoin-de-oro",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 10 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título, por director y en Letterboxd): Bernardo Hernández, 2026, 18 min, ES; sinopsis del festival y afiche original de ficcali.com (biblioteca de medios).",
    "_director": "Bernardo Hernández",
-   "_sondeado": "2026-10-10",
+   "_sondeado": "2026-10-12",
    "poster": "/assets/ficcali-2026/el-bitcoin-de-oro.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/09/poster-el-bitcoin-de-oro-scaled.webp (1704×2560)"
+   "posterSource": "tmdb"
   },
   "El maestro de la piqueria": {
    "tmdb_id": 1794001,
@@ -1751,7 +1746,7 @@
    "lbSlug": "el-maestro-de-la-piqueria",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 10 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título, por director y en Letterboxd): Yinet Molero, 2025, 8 min, CO; sinopsis del festival y afiche original de ficcali.com (biblioteca de medios).",
    "_director": "Yinet Molero",
-   "_sondeado": "2026-10-10",
+   "_sondeado": "2026-10-12",
    "poster": "/assets/ficcali-2026/el-maestro-de-la-piqueria.jpg",
    "posterSource": "tmdb"
   },
@@ -1768,7 +1763,7 @@
    "lbSlug": "el-mundo-de-humberto",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Paula Ortiz, 2025, 14 min, CO; sinopsis del festival y afiche original de ficcali.com (biblioteca de medios).",
    "_director": "Paula Ortiz",
-   "_sondeado": "2026-10-10",
+   "_sondeado": "2026-10-12",
    "poster": "/assets/ficcali-2026/el-mundo-de-humberto.jpg",
    "posterSource": "tmdb"
   },
@@ -1806,27 +1801,26 @@
    "lbSlug": "el-viaje-2026",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Ana Sofía Franco, 2026, 8 min, CO; sinopsis del festival y afiche original de ficcali.com (biblioteca de medios).",
    "_director": "Ana Sofía Franco",
-   "_sondeado": "2026-10-10",
+   "_sondeado": "2026-10-12",
    "poster": "/assets/ficcali-2026/el-viaje.jpg",
    "posterSource": "tmdb"
   },
   "Ellas, gardiennes de l'Amazonie": {
    "tmdb_id": 1793997,
    "titulo_original": "Ellas, gardiennes de l'Amazonie",
-   "poster_path": null,
+   "poster_path": "/4baH1ReFMpCIfPkT5cV65KRPNnF.jpg",
    "synopsis_es": "Jade y Estelle, dos jóvenes francesas de veintidós años, emprendieron un viaje de tres meses por la Amazonía para conocer a mujeres indígenas de Colombia, Ecuador y Perú, y profundizar en la comprensión del ecofeminismo en los territorios. Gracias a las historias de vida de tres lideresas, el documental explora un movimiento que establece una estrecha relación entre la defensa de la naturaleza y la lucha por los derechos de las mujeres.",
    "synopsis_en": "",
    "genero": "",
-   "anio_tmdb": 0,
+   "anio_tmdb": 2022,
    "duracion_tmdb": 39,
    "pais_tmdb": "",
    "lbSlug": "ellas-gardiennes-de-lamazonie",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 10 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título, por director y en Letterboxd): Estelle Lalisse y Jade Fort, 2022, 39 min, CO/PE/EC; sinopsis del festival y afiche original de ficcali.com (biblioteca de medios).",
    "_director": "Estelle Lalisse, Jade Fort",
-   "_sondeado": "2026-10-10",
+   "_sondeado": "2026-10-12",
    "poster": "/assets/ficcali-2026/ellas-gardiennes-de-l-amazonie.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/10/poster-ellas.jpg (842×1191)"
+   "posterSource": "tmdb"
   },
   "En construcción": {
    "tmdb_id": 148353,
@@ -1842,7 +1836,7 @@
    "lbSlug": "work-in-progress",
    "_verificado": "declarada a mano: Proyección especial: la tarjeta dice España, 124 min. TMDB: José Luis Guerín, 2001, 125 min, España. Verificado a mano el 8 oct.",
    "_director": "José Luis Guerín",
-   "_sondeado": "2026-10-10",
+   "_sondeado": "2026-10-12",
    "poster": "/assets/ficcali-2026/en-construccion.jpg",
    "posterSource": "tmdb"
   },
@@ -1881,7 +1875,7 @@
    "lbSlug": "good-valley-stories",
    "_verificado": "declarada a mano: FICCI 65 la publicó (José Luis Guerín, 2025); TMDB: Guerín, 2025, 125 min contra 120 de la tarjeta (10 oct 2026). La tarjeta de Ficcali no da director ni año: sin ellos el candado no podía corroborar.",
    "_director": "José Luis Guerín",
-   "_sondeado": "2026-10-10",
+   "_sondeado": "2026-10-12",
    "poster": "/assets/ficcali-2026/historias-del-buen-valle.jpg",
    "posterSource": "tmdb"
   },
@@ -1965,7 +1959,7 @@
    "lbSlug": "la-bola-negra",
    "_verificado": "declarada a mano: BIFF 12 y TIFF 2026 la publican con esta ficha; director, año (2026) y duración (155 min) coinciden (10 oct 2026). La tarjeta de Ficcali no da director ni año: sin ellos el candado no podía corroborar.",
    "_director": "Javier Calvo, Javier Ambrossi",
-   "_sondeado": "2026-10-10",
+   "_sondeado": "2026-10-12",
    "poster": "/assets/ficcali-2026/la-bola-negra.jpg",
    "posterSource": "tmdb"
   },
@@ -1983,7 +1977,7 @@
    "lbSlug": "the-fabulous-time-machine",
    "_verificado": "declarada a mano: Proyección especial: la tarjeta dice Brasil, 70 min. TMDB: «A Fabulosa Máquina do Tempo», Eliza Capai, 2026, 73 min, Brasil. Verificado a mano el 8 oct.",
    "_director": "Eliza Capai",
-   "_sondeado": "2026-10-10",
+   "_sondeado": "2026-10-12",
    "sinopsis": "En el corazón del árido sertão brasileño, un grupo de niñas de diez años juega a inventar máquinas del tiempo imaginarias. Las pequeñas viajan al pasado para explorar la dura realidad de supervivencia que vivieron sus madres y abuelas, al mismo tiempo que se proyectan. El documental utiliza la inocencia y la imaginación infantil como un poderoso catalizador para debatir con madurez sobre la autonomía de las mujeres, el género, el ciclo de la pobreza y sus propios sueños de libertad.",
    "_sinopsis": "ficha de ficcali.com, verbatim (https://ficcali.com/pelicula/a-fabulosa-maquina-do-tempo), leída el 10 oct 2026",
    "poster": "/assets/ficcali-2026/la-fabulosa-maquina-del-tiempo.jpg",
@@ -2054,7 +2048,7 @@
    "lbSlug": "double-freedom",
    "_verificado": "declarada a mano: BIFF 12 la publica con esta ficha; Lisandro Alonso, 2026, 100 min coinciden (10 oct 2026). La tarjeta de Ficcali no da director ni año: sin ellos el candado no podía corroborar.",
    "_director": "Lisandro Alonso",
-   "_sondeado": "2026-10-10",
+   "_sondeado": "2026-10-12",
    "poster": "/assets/ficcali-2026/la-libertad-doble-v2.jpg",
    "posterSource": "tmdb"
   },
@@ -2101,7 +2095,7 @@
    "lbSlug": "las-pesadillas-del-siervo",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Manuel Villa (1711036, director de No amanece igual para todos), 2025, 90 min, CO; sinopsis del festival y afiche original de ficcali.com (biblioteca de medios).",
    "_director": "Manuel Villa",
-   "_sondeado": "2026-10-10",
+   "_sondeado": "2026-10-12",
    "poster": "/assets/ficcali-2026/las-pesadillas-del-siervo.jpg",
    "posterSource": "tmdb"
   },
@@ -2201,13 +2195,13 @@
    "synopsis_en": "When Gleb, a successful company director, finds himself under siege from mounting corporate pressures, an increasingly unstable world, and the discovery of his wife's affair, the collapse of his carefully ordered life accelerates toward violence.",
    "genero": "Drama",
    "anio_tmdb": 2026,
-   "duracion_tmdb": 135,
+   "duracion_tmdb": 141,
    "pais_tmdb": "France, Latvia, Germany, United States of America, Switzerland",
    "title_en": "Minotaur",
    "lbSlug": "minotaur-2026",
    "_verificado": "declarada a mano: Proyección especial: la tarjeta dice Rusia, 135 min. TMDB: «Minotaur», Andrey Zvyagintsev, 2026, 135 min exactos (origen FR por la coproducción; el director es ruso). Verificado a mano el 8 oct.",
    "_director": "Andrey Zvyagintsev",
-   "_sondeado": "2026-10-10",
+   "_sondeado": "2026-10-12",
    "poster": "/assets/ficcali-2026/minotauro.jpg",
    "posterSource": "tmdb"
   },
@@ -2327,7 +2321,7 @@
    "lbSlug": "ona-2026",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 10 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título, por director y en Letterboxd): Matilde Gimeno, 2026, 4 min, ES; sinopsis del festival y afiche original de ficcali.com (biblioteca de medios).",
    "_director": "Matilde Gimeno",
-   "_sondeado": "2026-10-10",
+   "_sondeado": "2026-10-12",
    "poster": "/assets/ficcali-2026/ona.jpg",
    "posterSource": "tmdb"
   },
@@ -2414,20 +2408,19 @@
   "Quinto primera": {
    "tmdb_id": 1794005,
    "titulo_original": "Quinto primera",
-   "poster_path": null,
+   "poster_path": "/dY6OtXCnMdqzTEzeg5Rrl8RbAww.jpg",
    "synopsis_es": "Rafael vive encerrado en su mundo, su piso en L’Hospitalet de Llobregat. Cuando su mujer murió, hace varios años, él perdió las ganas de vivir y su espíritu guerrero. Llegó a L’Hospitalet en los años cincuenta, en la primera gran ola de inmigración. Fue un luchador por la democracia, la igualdad, la solidaridad y la justicia durante las décadas del setenta y ochenta, pero ahora, solitario, amargado y xenófobo, reniega del mundo y, en su soledad, les cobra su miseria a todos y, en especial, a los nuevos inmigrantes. Tampoco ayuda su alzhéimer, cada vez más presente.",
    "synopsis_en": "",
    "genero": "",
-   "anio_tmdb": 0,
-   "duracion_tmdb": 0,
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 18,
    "pais_tmdb": "",
    "lbSlug": "quinto-primera",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 10 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título, por director y en Letterboxd): Fran Menchón, 2026, 18 min, ES; sinopsis del festival y afiche original de ficcali.com (biblioteca de medios).",
    "_director": "Fran Menchón",
-   "_sondeado": "2026-10-10",
+   "_sondeado": "2026-10-12",
    "poster": "/assets/ficcali-2026/quinto-primera.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/09/poster-quinto-primera.jpg (1587×2245)"
+   "posterSource": "tmdb"
   },
   "Relicto": {
    "tmdb_id": 1633353,
@@ -2460,7 +2453,7 @@
    "lbSlug": "rodilla-negra",
    "_verificado": "declarada a mano: Proyección especial junto a El Coloso: la tarjeta solo dice Colombia. Es «Rodilla negra» de Carlos Mayolo (Cali, 1975, 14 min), el único título así en TMDB; cuadra con un festival caleño. Verificado a mano el 8 oct.",
    "_director": "Carlos Mayolo",
-   "_sondeado": "2026-10-10",
+   "_sondeado": "2026-10-12",
    "sinopsis": "Un equipo de fútbol, interpretado por jugadores del Barrios Unidos de Cali, se topa en el campo con una pareja de hippies que se bañan desnudos y les roba el radio de transistores. Eso parece desatar algo en su jugador más legendario, Jonny Mosquera: un síndrome terrible que lo hace caer, literalmente, de rodillas.",
    "_sinopsis": "traducción nuestra con contexto (Content Design, 10 oct 2026) de la sinopsis en inglés de TMDB: https://www.themoviedb.org/movie/947607",
    "poster": "/assets/ficcali-2026/rodilla-negra.jpg",
@@ -2479,7 +2472,7 @@
    "lbSlug": "runa-simi",
    "_verificado": "declarada a mano: AFF 2026 la publicó (Augusto Zegarra, 2025); TMDB: Zegarra, 2025, 81 min contra 85 de la tarjeta (10 oct 2026). La tarjeta de Ficcali no da director ni año: sin ellos el candado no podía corroborar.",
    "_director": "Augusto Zegarra",
-   "_sondeado": "2026-10-10",
+   "_sondeado": "2026-10-12",
    "poster": "/assets/ficcali-2026/runa-simi.jpg",
    "posterSource": "tmdb"
   },
@@ -2578,7 +2571,7 @@
    "lbSlug": "somnolytic",
    "_verificado": "declarada a mano: Ya existía en TMDB con su título en inglés, «Somnolytic» (original «Somnolithic»), de Abril Velasquez: la misma directora (Abril Natalia Velázquez). La encontró la búsqueda de personas el 10 oct 2026.",
    "_director": "Abril Natalia Velázquez",
-   "_sondeado": "2026-10-10",
+   "_sondeado": "2026-10-12",
    "poster": "/assets/ficcali-2026/somnolitico.jpg",
    "posterSource": "tmdb"
   },
@@ -2614,14 +2607,14 @@
    "lbSlug": "vertigo-2025-1",
    "_verificado": "declarada a mano: Ya existía en TMDB (Jimmy Llamas, 2025) y el enriquecido no la casó; la encontró la sonda por título el 10 oct 2026.",
    "_director": "Jimmy Llamas",
-   "_sondeado": "2026-10-10",
+   "_sondeado": "2026-10-12",
    "poster": "/assets/ficcali-2026/vertigo.jpg",
    "posterSource": "tmdb"
   },
   "¿Dónde está Richard?": {
    "tmdb_id": 1794009,
    "titulo_original": "¿Dónde está Richard?",
-   "poster_path": null,
+   "poster_path": "/x5MNjTPXz8ztLlbFLu5RCcGTCEV.jpg",
    "synopsis_es": "Catherine es una periodista sorda que está perdida en el barrio madrileño de Carabanchel. No va a llegar a tiempo a entrevistar a un importante actor estadounidense. Desesperada, le pide ayuda a la Lore, una vecina del barrio que pasaba por allí. Juntas trazan un plan para poder encontrarse con este conocido personaje.",
    "synopsis_en": "",
    "genero": "",
@@ -2631,10 +2624,9 @@
    "lbSlug": "donde-esta-richard",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 10 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título, por director y en Letterboxd): Juan Carlos Álvarez, 2025, 6 min, ES; sinopsis del festival y afiche original de ficcali.com (biblioteca de medios).",
    "_director": "Juan Carlos Álvarez",
-   "_sondeado": "2026-10-10",
+   "_sondeado": "2026-10-12",
    "poster": "/assets/ficcali-2026/donde-esta-richard.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/09/poster-donde-esta-richard.jpg (595×842)"
+   "posterSource": "tmdb"
   },
   "¿Por qué se esconde Drácula?": {
    "tmdb_id": 1033710,

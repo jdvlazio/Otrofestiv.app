@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "ficcali.com — Programación 2026 (WP 14870) + fichas de la Selección 2026",
-  "capturado": "2026-10-10",
+  "capturado": "2026-10-12",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "radar": 1024,
@@ -461,6 +461,7 @@
     "date": "2026-10-06",
     "tarjeta": 13924
    },
+   "is_free": true,
    "lbSlug": "mu-ki-ra",
    "tmdb_id": 1446898,
    "synopsis_en": "When her brother is kidnapped by Mu-Ki-Ra, Cleo ventures into a monster-plagued jungle with unlikely allies."
@@ -643,7 +644,7 @@
    "synopsis": "Jade y Estelle, dos jóvenes francesas de veintidós años, emprendieron un viaje de tres meses por la Amazonía para conocer a mujeres indígenas de Colombia, Ecuador y Perú, y profundizar en la comprensión del ecofeminismo en los territorios. Gracias a las historias de vida de tres lideresas, el documental explora un movimiento que establece una estrecha relación entre la defensa de la naturaleza y la lucha por los derechos de las mujeres.",
    "synopsis_lang": "es",
    "poster": "/assets/ficcali-2026/ellas-gardiennes-de-l-amazonie.jpg",
-   "posterSource": "oficial",
+   "posterSource": "tmdb",
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
@@ -2775,7 +2776,7 @@
      "synopsis": "Cuando Asofem está a punto de cerrar por una grave crisis económica, un grupo de usuarios y su monitor deciden embarcarse en una disparatada misión para salvar el centro al que consideran su hogar.",
      "synopsis_lang": "es",
      "poster": "/assets/ficcali-2026/el-bitcoin-de-oro.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "el-bitcoin-de-oro",
      "tmdb_id": 1793999
     },
@@ -2847,7 +2848,7 @@
      "synopsis": "Rafael vive encerrado en su mundo, su piso en L’Hospitalet de Llobregat. Cuando su mujer murió, hace varios años, él perdió las ganas de vivir y su espíritu guerrero. Llegó a L’Hospitalet en los años cincuenta, en la primera gran ola de inmigración. Fue un luchador por la democracia, la igualdad, la solidaridad y la justicia durante las décadas del setenta y ochenta, pero ahora, solitario, amargado y xenófobo, reniega del mundo y, en su soledad, les cobra su miseria a todos y, en especial, a los nuevos inmigrantes. Tampoco ayuda su alzhéimer, cada vez más presente.",
      "synopsis_lang": "es",
      "poster": "/assets/ficcali-2026/quinto-primera.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "quinto-primera",
      "tmdb_id": 1794005
     },
@@ -2876,7 +2877,7 @@
      "synopsis": "Catherine es una periodista sorda que está perdida en el barrio madrileño de Carabanchel. No va a llegar a tiempo a entrevistar a un importante actor estadounidense. Desesperada, le pide ayuda a la Lore, una vecina del barrio que pasaba por allí. Juntas trazan un plan para poder encontrarse con este conocido personaje.",
      "synopsis_lang": "es",
      "poster": "/assets/ficcali-2026/donde-esta-richard.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "donde-esta-richard",
      "tmdb_id": 1794009
     }
@@ -3344,7 +3345,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-10T15:46:15",
+  "fecha": "2026-10-12T13:57:57",
   "plan_sha": "3cbc8f0090f8219c",
   "paso": 8,
   "cmd": "python3 pipeline/ensamblar.py ficcali-2026"
