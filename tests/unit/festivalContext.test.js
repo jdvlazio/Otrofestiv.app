@@ -77,6 +77,7 @@ test('deriveCloudSave — fila desde el state (Set→array, solo columnas cloud)
   state.set('watchlist', new Set(['A', 'B']));
   state.set('watched', new Set(['C']));
   state.set('notWatched', new Set(['N']));
+  state.set('ticketed', new Set(['A|d1|19:00']));
   state.set('prioritized', new Set(['A']));
   state.set('filmRatings', { A: 5 });
   state.set('savedAgenda', { schedule: [] });
@@ -86,6 +87,7 @@ test('deriveCloudSave — fila desde el state (Set→array, solo columnas cloud)
   assert.deepStrictEqual(row.watched, ['C']);
   assert.deepStrictEqual(row.notwatched, ['N'], 'columna notwatched ← notWatched (vista asumida, 18 ago)');
   assert.deepStrictEqual(row.prioritized, ['A']);
+  assert.deepStrictEqual(row.ticketed, ['A|d1|19:00'], 'columna ticketed ← funciones con boleta (#1077)');
   assert.deepStrictEqual(row.ratings, { A: 5 }, 'columna ratings ← filmRatings');
   assert.deepStrictEqual(row.saved_agenda, { schedule: [] }, 'columna saved_agenda');
   assert.deepStrictEqual(row.availability, { d1: { blocks: [1] } });
@@ -165,9 +167,9 @@ test('deriveCloudMerge — TODAS las keys dirty (push de fila entera) → todo l
   // local entero aunque exista fila remota (si no, el merge devolvía el remoto para
   // todo, la subida era un no-op y el flag dirty se limpiaba → edición offline perdida).
   const local  = { watchlist: ['offline-edit'], watched: ['W'], notwatched: ['N'], prioritized: [], ratings: { A: 5 },
-                   saved_agenda: { s: 2 }, availability: { d1: { blocks: ['b'] } }, watched_meta: { W: { day: 'd1' } } };
+                   saved_agenda: { s: 2 }, availability: { d1: { blocks: ['b'] } }, watched_meta: { W: { day: 'd1' } }, ticketed: ['W|d1|19:00'] };
   const remote = { watchlist: ['stale'], watched: [], notwatched: [], prioritized: ['P'], ratings: {},
-                   saved_agenda: null, availability: {}, watched_meta: {} };
+                   saved_agenda: null, availability: {}, watched_meta: {}, ticketed: [] };
   const allDirty = new Set(FC.FESTIVAL_STATE.filter(e => e.cloud).map(e => e.key));
   const merged = FC.deriveCloudMerge(local, remote, allDirty);
   assert.deepStrictEqual(merged, local, 'fila entera dirty → el local gana en TODAS las columnas');

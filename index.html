@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202610121017">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202610121017">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202610121125">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202610121125">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -1643,6 +1643,14 @@ mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100
    medido, el pie quedaba a 0px del botón primario y a 16px de la lista que
    resume — pegado a lo que no es suyo y suelto de lo que sí. */
 .plan-confirm-cta{width:100%;margin-top:var(--sp-5)} /* anatomía: regla dueña */
+/* Boleta, nivel 1 (#1077): la fila bajo la sede de Mi Plan y el filtro de la banda. */
+/* Base = .mplan-prog-toggle (el botón chico de la fila, regla 5); acá solo el
+   color —marcar es secundario, gris; comprar es la acción, ámbar— y 44pt de toque. */
+.mplan-boleta{display:flex;align-items:center;gap:var(--sp-4);margin-top:var(--sp-1)}
+.mplan-boleta .boleta-marcar{color:var(--gray);min-height:44px;margin-top:0}
+.boleta-comprar{font-size:var(--t-sm);color:var(--amber);text-decoration:none;min-height:44px;display:inline-flex;align-items:center}
+.boleta-falta{display:inline-flex;align-items:center;gap:var(--sp-1);margin-left:var(--sp-2);background:none;border:0;padding:0;min-height:44px;color:var(--amber);font:inherit;font-size:var(--t-sm);cursor:pointer}
+.boleta-falta.on{text-decoration:underline}
 /* Invitación a la cuenta (#invitar): UNA línea gris tocable dentro de una
    pantalla que ya está abierta — no es aviso ni ventana. Solo sin sesión. */
 /* Base = .link-gray-xs (el enlace gris canónico, regla 5); acá solo el
@@ -3749,7 +3757,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202610121017";
+    s.src="/src/main.js?v=202610121125";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el

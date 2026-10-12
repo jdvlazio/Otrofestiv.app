@@ -10,10 +10,10 @@ import { ICONS, parseProgramTitle } from '../view/components.js';
 import { closeAuthSheet, closeCitySheet, closePrioLimit } from '../view/sheets.js';
 import { showActionModal, showToast } from '../view/feedback.js';
 import { _renderProgramaContent, lugarClose, render, renderNoticesBanner, _noticeKey, scrollDtabsToActive } from '../view/programa.js';
-import { renderAgenda, updateCardState, updateHorarioPrioBtn } from '../view/agenda.js';
+import { renderAgenda, updateCardState, updateHorarioPrioBtn, soloSinBoleta, setSoloSinBoleta, funcionesSinBoleta } from '../view/agenda.js';
 import { keepCityOnly, planCityVenues } from '../view/helpers.js';
 import { runCalc, _planCityVenues } from './calc.js';
-import { commitPlan, saveDelays, saveLastSlot, savePrio, saveSavedAgenda, saveState, saveWL, saveWatched, saveNotWatched, saveWatchedMeta } from './persistence.js';
+import { commitPlan, saveDelays, saveLastSlot, savePrio, saveSavedAgenda, saveState, saveWL, saveWatched, saveNotWatched, saveWatchedMeta, saveTicketed } from './persistence.js';
 import { cloudReportDelay, cloudClearDelay, cloudScreeningKey } from './delays-cloud.js';
 import { _getProgramaPhase, _reRenderIntereses, _updateProgramaActiveFilter, initProgramaModeBar, showAgView, showDayView, switchMainNav, updateAgTab, _syncPmodeTabs } from './pipeline.js';
 import { searchClose, seccionClose } from './overlays.js';
@@ -628,6 +628,31 @@ export function swapPriority(removeTitle, addTitle){
   closePrioLimit();
   const{displayTitle}=parseProgramTitle(addTitle);
   showToast(`${ICONS.bookmarkFill} ${t('toast_priorizada',{title:displayTitle})}`,'info');
+}
+
+// ── Boleta, nivel 1 (#1077) ──
+// toggleBoleta — marca/desmarca «Tengo boleta» para UNA función (clave
+// título|día|hora). Se guarda como lo visto (local + nube) y reprograma los
+// avisos: marcar la última de mañana retira el de la víspera.
+export function toggleBoleta(key){
+  if(!key) return;
+  state.update('ticketed', s=>{ const n=new Set(s); n.has(key)?n.delete(key):n.add(key); return n; });
+  saveTicketed();
+  // con el filtro puesto, la que se marcó sale de la lista; si no queda ninguna,
+  // el filtro se cae solo (no deja una lista vacía con el filtro «prendido»)
+  if(soloSinBoleta()&&!funcionesSinBoleta((savedAgenda&&savedAgenda.schedule)||[]).length) setSoloSinBoleta(false);
+  renderAgenda();
+}
+// toggleSoloSinBoleta — «N sin boleta» en la banda de Mi Plan. Prender el filtro
+// lleva al primer día que tiene alguna que falta.
+export function toggleSoloSinBoleta(){
+  const on=!soloSinBoleta();
+  setSoloSinBoleta(on);
+  if(on){
+    const f=funcionesSinBoleta((savedAgenda&&savedAgenda.schedule)||[]).map(s=>DAY_KEYS.indexOf(s.day)).filter(i=>i>=0).sort((a,b)=>a-b)[0];
+    if(f!==undefined) activeMiPlanDay=f;
+  }
+  renderAgenda();
 }
 
 export function markWatchedFromPlan(title, day, time, venue, duration, e){
