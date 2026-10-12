@@ -26,6 +26,8 @@ plano = crudo.plano
 
 def main():
     oficial, alterna = crudo.tarjetas()
+    # lo que IG cambió después de la web: la misma tabla del crudo (DEL_IG)
+    alterna = [{**t, **crudo.DEL_IG.get((t['grupo'], t['titulo']), {})} for t in alterna]
     build = json.load(io.open(f'{REPO}/festivals/staging/{FID}-build.json', encoding='utf-8'))
     geo = json.load(io.open(f'{REPO}/festivals/staging/{FID}-venues-geo.json', encoding='utf-8'))
     pub = {}

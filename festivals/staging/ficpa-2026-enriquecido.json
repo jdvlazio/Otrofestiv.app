@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, emparejado con ficha_verifica() (director + año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-10-11"
+  "capturado": "2026-10-12"
  },
  "obras": [
   {
@@ -71,7 +71,7 @@
    "lbSlug": "alla",
    "_verificado": "declarada a mano: director confirmado en TMDB (Montserrat Larqué, México, 101 min; TMDB la titula «Allá»); el título del festival no casaba solo (10 oct 2026)",
    "_director": "Montserrat Larqué",
-   "_sondeado": "2026-10-11",
+   "_sondeado": "2026-10-12",
    "sinopsis": "Ante la muerte inminente de su padre, el cartero del pueblo, Óscar vuelve por primera vez a México y descubre que es el único hombre entre las pocas mujeres que habitan ese lugar pequeño, adonde nunca llegaron el teléfono ni internet. Mientras intenta regresar a Estados Unidos, se encarga del correo y así conoce las historias y los deseos de sus habitantes, entre ellos un niño que pregunta por las cartas de su padre. Óscar le escribe las cartas tan esperadas y empieza a encariñarse con él y con Martha, su madre. Cuando por fin puede irse, ya no quiere, y tendrá que decidir entre volver o quedarse a rehacer su vida.",
    "_sinopsis": "traducción nuestra con contexto (Content Design, 10 oct 2026) de la sinopsis oficial en inglés: https://www.themoviedb.org/movie/1130565",
    "poster": "/assets/ficpa-2026/alla-cartas-al-corazon.jpg",
@@ -188,7 +188,7 @@
    "lbSlug": "where-the-sun-shines-bright",
    "_verificado": "declarada a mano: director confirmado en TMDB (Lam Can-zhao, China, 68 min («Where the Sun Shines Bright»)); el título del festival no casaba solo (10 oct 2026)",
    "_director": "Can-zhao Lam",
-   "_sondeado": "2026-10-11",
+   "_sondeado": "2026-10-12",
    "sinopsis": "Un joven de 18 años, frente a la incertidumbre de la adultez, ve su propia historia reflejada en la vida de cuatro niños de su mismo pueblo: infancias paralelas de niños que se quedaron atrás, marcadas por la resiliencia y la frágil luminosidad de crecer.",
    "_sinopsis": "traducción nuestra con contexto (Content Design, 10 oct 2026) de la sinopsis oficial en inglés: https://www.themoviedb.org/movie/1668458",
    "poster": "/assets/ficpa-2026/donde-el-sol-brilla-con-fuerza.jpg",
@@ -287,7 +287,7 @@
    "lbSlug": "waiting-for-the-barbarians-2026",
    "_verificado": "declarada a mano: Existe en TMDB como «Waiting for the Barbarians» (orig. «Περιμένοντας τους Βαρβάρους»), Georges Sifianos, 2026, GR/FR, 12 min: mismo director y país que publica FICPA. Encontrada por la filmografía del director el 10 oct 2026.",
    "_director": "Georges Sifianos",
-   "_sondeado": "2026-10-11",
+   "_sondeado": "2026-10-12",
    "sinopsis": "En una ciudad que evoca, sin precisarla, una ciudad del Imperio romano, el poema retrata un estado de espera: se ha anunciado la llegada de los «bárbaros». La ciudad contiene el aliento… Pero ¿quiénes son, exactamente, esos «bárbaros»? ¿Y si no llegan?",
    "_sinopsis": "traducción nuestra con contexto (Content Design, 10 oct 2026) de la sinopsis oficial en inglés: https://www.themoviedb.org/movie/1712139",
    "poster": "/assets/ficpa-2026/esperando-a-los-barbaros.jpg",
@@ -307,7 +307,7 @@
    "lbSlug": "harvey-maude",
    "_verificado": "declarada a mano: director confirmado en TMDB (Álex Mineralex, España, 2026, 8 min); el título del festival no casaba solo (10 oct 2026)",
    "_director": "Alex Minerales",
-   "_sondeado": "2026-10-11",
+   "_sondeado": "2026-10-12",
    "poster": "/assets/ficpa-2026/harvey-maude.jpg",
    "posterSource": "tmdb"
   },
@@ -326,7 +326,7 @@
    "lbSlug": "kueka-ancestral-memory",
    "_verificado": "declarada a mano: director confirmado en TMDB (María de los Ángeles Peña Fonseca, Venezuela, 64 min); el título del festival no casaba solo (10 oct 2026)",
    "_director": "María de los Ángeles Peña Fonseca",
-   "_sondeado": "2026-10-11",
+   "_sondeado": "2026-10-12",
    "sinopsis": "Tres generaciones del pueblo pemón luchan por recuperar a su abuela ancestral: el espíritu de Kowai Kueka, encarnado en una piedra sagrada de jaspe rojo, fue llevado de Venezuela a Alemania como obra de arte sin su consentimiento.",
    "_sinopsis": "traducción nuestra con contexto (Content Design, 10 oct 2026) de la sinopsis oficial en inglés: https://www.themoviedb.org/movie/1514102",
    "poster": "/assets/ficpa-2026/kueka-memoria-ancestral.jpg",
@@ -486,41 +486,22 @@
   },
   {
    "titulo": "Tuktu, Padre Maíz",
-   "_ya_publicada": [
-    {
-     "festival": "ficdeh-2026",
-     "titulo": "Tuktu, Padre Maíz",
-     "poster": "/assets/ficdeh/tuktu-padre-maiz.jpg",
-     "posterSource": "custom",
-     "lbSlug": "tuktu-father-maize",
-     "sinopsis": "En las montañas de Colombia, Juan, un niño mestizo de 13 años, se ve obligado a huir del monstruo de la guerra. En su travesía, la tierra misma lo protege y, guiado por las voces de sus ancestros, despierta un poder ancestral llamado Tucuna, que le permite transformarse y renacer. Convertido en Tuktu, un Taita de fuerza extraordinaria, comprende que su destino no es solo sobrevivir, sino regresar para sanar la herida de la guerra y sembrar la paz en la tierra que lo vio nacer."
-    },
-    {
-     "festival": "ficmontanas-2026",
-     "titulo": "Tuktu, Padre Maíz"
-    },
-    {
-     "festival": "popayan-2026",
-     "titulo": "Tuktu, Padre Maíz",
-     "tmdb_id": 1592955,
-     "poster": "/assets/popayan-2026/tuktu-padre-maiz.jpg",
-     "posterSource": "tmdb",
-     "lbSlug": "tuktu-father-maize",
-     "sinopsis": "En las montañas de Colombia, Juan, un niño indígena campesino de 13 años, se ve obligado a huir del monstruo de la guerra. En su escape, entre el silbido de las balas y la guía de sus ancestros, despierta un poder ancestral que lo transforma en Tuktu: un Taita de fuerza extraordinaria destinado a volver para sembrar la paz en la tierra."
-    },
-    {
-     "festival": "villadelcine-2026",
-     "titulo": "Tuktu, Padre Maíz",
-     "tmdb_id": 1592955,
-     "poster": "/assets/villadelcine-2026/tuktu-padre-maiz.jpg",
-     "posterSource": "tmdb",
-     "lbSlug": "tuktu-father-maize",
-     "sinopsis": "Obligado a huir de la guerra, Juan, un niño indígena campesino, atraviesa las montañas guiado por la memoria de sus ancestros. En medio del peligro, despierta una fuerza que lo transforma en Tuktu, un poderoso taita llamado a proteger la tierra y regresar para sembrar la paz donde antes creció la violencia."
-    }
-   ],
+   "tmdb_id": 1592955,
+   "titulo_original": "Tuktu, Padre Maíz",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "In the mountains of Colombia, Juan, a 13-year-old indigenous peasant boy, is forced to flee from the monster of war. In his escape, between the whistling of bullets and the guidance of his ancestors, he awakens an ancestral power that transforms him into Tuktu: a Taita of extraordinary strength destined to return to sow the peace of the earth.",
+   "genero": "Animación",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 13,
+   "pais_tmdb": "Colombia",
+   "title_en": "Tuktu, Father Maize",
+   "lbSlug": "tuktu-father-maize",
+   "_verificado": "declarada a mano: el catálogo único ya la tiene verificada (Popayán y Villa del Cine la publicaron con esta ficha; 2025, 13 min). TMDB escribe «Pietro»: se queda «Prieto Muriel», como lo acreditan los seis festivales (12 oct 2026). Afiche: el de color que ya publicamos (FICDEH, Popayán…), no el boceto de TMDB; los dos son oficiales",
+   "_director": "Mauricio Prieto",
+   "_sondeado": "2026-10-12",
    "poster": "/assets/ficdeh/tuktu-padre-maiz.jpg",
-   "_verificado": "ya publicada en ficdeh-2026: se reusa su afiche",
-   "sinopsis": "En las montañas de Colombia, Juan, un niño mestizo de 13 años, se ve obligado a huir del monstruo de la guerra. En su travesía, la tierra misma lo protege y, guiado por las voces de sus ancestros, despierta un poder ancestral llamado Tucuna, que le permite transformarse y renacer. Convertido en Tuktu, un Taita de fuerza extraordinaria, comprende que su destino no es solo sobrevivir, sino regresar para sanar la herida de la guerra y sembrar la paz en la tierra que lo vio nacer."
+   "_afiche": "ya publicada en ficdeh-2026: se reusa su afiche"
   },
   {
    "titulo": "Viena, Gijón",
@@ -607,7 +588,7 @@
    "lbSlug": "alla",
    "_verificado": "declarada a mano: director confirmado en TMDB (Montserrat Larqué, México, 101 min; TMDB la titula «Allá»); el título del festival no casaba solo (10 oct 2026)",
    "_director": "Montserrat Larqué",
-   "_sondeado": "2026-10-11",
+   "_sondeado": "2026-10-12",
    "sinopsis": "Ante la muerte inminente de su padre, el cartero del pueblo, Óscar vuelve por primera vez a México y descubre que es el único hombre entre las pocas mujeres que habitan ese lugar pequeño, adonde nunca llegaron el teléfono ni internet. Mientras intenta regresar a Estados Unidos, se encarga del correo y así conoce las historias y los deseos de sus habitantes, entre ellos un niño que pregunta por las cartas de su padre. Óscar le escribe las cartas tan esperadas y empieza a encariñarse con él y con Martha, su madre. Cuando por fin puede irse, ya no quiere, y tendrá que decidir entre volver o quedarse a rehacer su vida.",
    "_sinopsis": "traducción nuestra con contexto (Content Design, 10 oct 2026) de la sinopsis oficial en inglés: https://www.themoviedb.org/movie/1130565",
    "poster": "/assets/ficpa-2026/alla-cartas-al-corazon.jpg",
@@ -706,7 +687,7 @@
    "lbSlug": "where-the-sun-shines-bright",
    "_verificado": "declarada a mano: director confirmado en TMDB (Lam Can-zhao, China, 68 min («Where the Sun Shines Bright»)); el título del festival no casaba solo (10 oct 2026)",
    "_director": "Can-zhao Lam",
-   "_sondeado": "2026-10-11",
+   "_sondeado": "2026-10-12",
    "sinopsis": "Un joven de 18 años, frente a la incertidumbre de la adultez, ve su propia historia reflejada en la vida de cuatro niños de su mismo pueblo: infancias paralelas de niños que se quedaron atrás, marcadas por la resiliencia y la frágil luminosidad de crecer.",
    "_sinopsis": "traducción nuestra con contexto (Content Design, 10 oct 2026) de la sinopsis oficial en inglés: https://www.themoviedb.org/movie/1668458",
    "poster": "/assets/ficpa-2026/donde-el-sol-brilla-con-fuerza.jpg",
@@ -801,7 +782,7 @@
    "lbSlug": "waiting-for-the-barbarians-2026",
    "_verificado": "declarada a mano: Existe en TMDB como «Waiting for the Barbarians» (orig. «Περιμένοντας τους Βαρβάρους»), Georges Sifianos, 2026, GR/FR, 12 min: mismo director y país que publica FICPA. Encontrada por la filmografía del director el 10 oct 2026.",
    "_director": "Georges Sifianos",
-   "_sondeado": "2026-10-11",
+   "_sondeado": "2026-10-12",
    "sinopsis": "En una ciudad que evoca, sin precisarla, una ciudad del Imperio romano, el poema retrata un estado de espera: se ha anunciado la llegada de los «bárbaros». La ciudad contiene el aliento… Pero ¿quiénes son, exactamente, esos «bárbaros»? ¿Y si no llegan?",
    "_sinopsis": "traducción nuestra con contexto (Content Design, 10 oct 2026) de la sinopsis oficial en inglés: https://www.themoviedb.org/movie/1712139",
    "poster": "/assets/ficpa-2026/esperando-a-los-barbaros.jpg",
@@ -820,7 +801,7 @@
    "lbSlug": "harvey-maude",
    "_verificado": "declarada a mano: director confirmado en TMDB (Álex Mineralex, España, 2026, 8 min); el título del festival no casaba solo (10 oct 2026)",
    "_director": "Alex Minerales",
-   "_sondeado": "2026-10-11",
+   "_sondeado": "2026-10-12",
    "poster": "/assets/ficpa-2026/harvey-maude.jpg",
    "posterSource": "tmdb"
   },
@@ -838,7 +819,7 @@
    "lbSlug": "kueka-ancestral-memory",
    "_verificado": "declarada a mano: director confirmado en TMDB (María de los Ángeles Peña Fonseca, Venezuela, 64 min); el título del festival no casaba solo (10 oct 2026)",
    "_director": "María de los Ángeles Peña Fonseca",
-   "_sondeado": "2026-10-11",
+   "_sondeado": "2026-10-12",
    "sinopsis": "Tres generaciones del pueblo pemón luchan por recuperar a su abuela ancestral: el espíritu de Kowai Kueka, encarnado en una piedra sagrada de jaspe rojo, fue llevado de Venezuela a Alemania como obra de arte sin su consentimiento.",
    "_sinopsis": "traducción nuestra con contexto (Content Design, 10 oct 2026) de la sinopsis oficial en inglés: https://www.themoviedb.org/movie/1514102",
    "poster": "/assets/ficpa-2026/kueka-memoria-ancestral.jpg",
@@ -990,6 +971,24 @@
    "sinopsis": "Brenda Romo creció en Jesús María, Jalisco, y quiere estudiar para ser maestra tequilera, quien vigila el proceso con que se hace el tequila. Tendrá que enfrentar las ideas anticuadas de su pueblo y una industria dominada por hombres que la subestiman por ser mujer. Con la fuerza y el apoyo incondicional de su madre, Brenda llega a ser una maestra tequilera reconocida y le abre camino a su hermana menor. Un cortometraje documental sobre su vida profesional y sus luchas.",
    "_sinopsis": "traducción nuestra con contexto (Content Design, 10 oct 2026) de la sinopsis oficial en inglés: https://www.themoviedb.org/movie/1644042"
   },
+  "Tuktu, Padre Maíz": {
+   "tmdb_id": 1592955,
+   "titulo_original": "Tuktu, Padre Maíz",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "In the mountains of Colombia, Juan, a 13-year-old indigenous peasant boy, is forced to flee from the monster of war. In his escape, between the whistling of bullets and the guidance of his ancestors, he awakens an ancestral power that transforms him into Tuktu: a Taita of extraordinary strength destined to return to sow the peace of the earth.",
+   "genero": "Animación",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 13,
+   "pais_tmdb": "Colombia",
+   "title_en": "Tuktu, Father Maize",
+   "lbSlug": "tuktu-father-maize",
+   "_verificado": "declarada a mano: el catálogo único ya la tiene verificada (Popayán y Villa del Cine la publicaron con esta ficha; 2025, 13 min). TMDB escribe «Pietro»: se queda «Prieto Muriel», como lo acreditan los seis festivales (12 oct 2026). Afiche: el de color que ya publicamos (FICDEH, Popayán…), no el boceto de TMDB; los dos son oficiales",
+   "_director": "Mauricio Prieto",
+   "_sondeado": "2026-10-12",
+   "poster": "/assets/ficdeh/tuktu-padre-maiz.jpg",
+   "_afiche": "ya publicada en ficdeh-2026: se reusa su afiche"
+  },
   "Viena, Gijón": {
    "tmdb_id": 1636690,
    "titulo_original": "Viena Gijón",
@@ -1061,7 +1060,6 @@
   "Tierra Palestina",
   "Trabajo, economías y futuro",
   "Tudnum, Tierra Sagrada",
-  "Tuktu, Padre Maíz",
   "Videoclips nariñenses"
  ],
  "_sin_ficha_sondeo": {
@@ -1273,10 +1271,6 @@
    "director": "William Ceballos",
    "fecha": "2026-10-10"
   },
-  "Tuktu, Padre Maíz": {
-   "director": "Mauricio Prieto",
-   "fecha": "2026-10-10"
-  },
   "Videoclips nariñenses": {
    "director": "",
    "fecha": "2026-10-10"
@@ -1285,7 +1279,7 @@
  "_fuentes": [
   {
    "fuente": "proimagenescolombia.com — la base oficial del cine colombiano",
-   "capturado": "2026-10-11",
+   "capturado": "2026-10-12",
    "que_aporta": "país, año, duración, género, sinopsis y afiche de las obras que TMDB no registra",
    "metodo": "búsqueda por título en los catálogos de largos y cortos, y el MISMO candado del director que TMDB: el buscador es laxo y también mira dentro de la sinopsis"
   }
