@@ -233,3 +233,11 @@ Reglas del informe:
 
 Límites de recursos: máximo ~10 WebFetch por corrida. git/gh NO cuentan (son locales, medí sin miedo). Las lecturas de IG en el navegador tampoco cuentan como WebFetch, pero tienen su propio tope: ~6 perfiles por corrida. Si la vigilancia del día excede los topes, priorizá por urgencia real: ZONA DE EMERGENCIA primero, después ROJO, después AMARILLO — y anotá en SIN MOVIMIENTO cuáles quedaron sin revisar.
 ```
+
+
+## Lista ancla y fuentes fijas (11 oct 2026)
+
+El radar ya no depende solo del calendario de Proimágenes. Dos archivos versionados:
+
+- `docs/radar-ancla.json`: todo festival que conocemos, con su **mes habitual**. Si se acerca el mes de un festival y no hay señales, es alerta («sin señales este año»), no silencio. Nació porque Miradas Medellín (3–8 nov) no estaba en ningún lado y porque el primer barrido (7 oct) usó una lista que se perdió en un scratchpad.
+- `docs/radar-fuentes.json`: las webs (Proimágenes completo, cinematecas, agendas de cultura de las alcaldías, MinCulturas, Festhome, FilmFreeway) y las cuentas de Instagram **paraguas** (entidades que anuncian festivales ajenos), cada una con cómo se lee.
