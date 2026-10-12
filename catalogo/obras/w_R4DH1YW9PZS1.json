@@ -1,0 +1,43 @@
+{
+ "id": "w_R4DH1YW9PZS1",
+ "titulo_original": "La reserva",
+ "anio": 2025,
+ "paises": [
+  "MX"
+ ],
+ "directores": [
+  "Pablo Pérez Lombardini"
+ ],
+ "aliases": [
+  {
+   "titulo": "The Reserve",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "Una guardabosques convence a su comunidad de expulsar a un grupo de invasores de su reserva natural, provocando una amenaza mucho mayor.",
+  "en": "A park ranger convinces her community to expel a group of intruders from their nature reserve, only to trigger a far greater threat."
+ },
+ "afiche": {
+  "archivo": "https://image.tmdb.org/t/p/w185/fMu0fMn9c9r7UJMu8CIsFSGmK6z.jpg"
+ },
+ "xref": {
+  "tmdb": 1537613,
+  "letterboxd": "the-reserve-2025"
+ },
+ "versiones": [
+  {
+   "etiqueta": "92 min",
+   "duracion_min": 92
+  },
+  {
+   "etiqueta": "93 min",
+   "duracion_min": 93
+  }
+ ],
+ "presentaciones": [
+  "aff-2026",
+  "jardin-2026"
+ ]
+}

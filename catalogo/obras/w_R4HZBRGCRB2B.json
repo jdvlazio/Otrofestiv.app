@@ -1,0 +1,38 @@
+{
+ "id": "w_R4HZBRGCRB2B",
+ "titulo_original": "Dossier 137",
+ "anio": 2025,
+ "paises": [
+  "FR"
+ ],
+ "directores": [
+  "Dominik Moll"
+ ],
+ "aliases": [
+  {
+   "titulo": "Case 137",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "Stéphanie, agente de policía de Asuntos Internos, es asignada a un caso relacionado con un joven gravemente herido durante una tensa y caótica manifestación en París. Si bien no encuentra pruebas de violencia policial ilegítima, el caso adquiere un cariz personal al descubrir que la víctima es de su ciudad natal y transformará el caso 137 en algo más que un simple número.",
+  "en": "When Internal Affairs officer Stéphanie investigates a young man severely injured during a chaotic Paris demonstration and finds no police misconduct, the routine case hits close to home upon her discovering the victim is from her native town."
+ },
+ "afiche": {
+  "archivo": "/assets/ficma/dossier-137.jpg"
+ },
+ "xref": {
+  "tmdb": 1294698,
+  "letterboxd": "case-137-2025"
+ },
+ "versiones": [
+  {
+   "etiqueta": "115 min",
+   "duracion_min": 115
+  }
+ ],
+ "presentaciones": [
+  "ficma-2026"
+ ]
+}

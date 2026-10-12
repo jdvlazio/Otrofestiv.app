@@ -1,0 +1,44 @@
+{
+ "id": "w_R4EN6JNPV8ZS",
+ "titulo_original": "Los Años del Conejo",
+ "anio": 2025,
+ "paises": [
+  "CO"
+ ],
+ "directores": [
+  "Raquel Tamayo Gutiérrez"
+ ],
+ "aliases": [
+  {
+   "titulo": "Los años del conejo",
+   "tipo": "festival"
+  },
+  {
+   "titulo": "The Years of the rabbit",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "Recuerdo muy poco de aquellos años: los años del conejo. Mi animal favorito, mi color favorito, la montaña frente a mi casa, los rostros de mis amigos, los juegos con mis hermanas. Dejar mi vida en México de esa manera me borró la memoria. Coloreo estos recuerdos como un intento de reunirlos. Para siempre.",
+  "en": "I remember very little from those years: the years of the rabbit. My favorite animal, my favorite color, the mountain in front of my house, my friends’ faces, the games with my sisters. Leaving my life in Mexico like that erased my memory. I color in these memories as an attempt to gather them. Forever."
+ },
+ "afiche": {
+  "archivo": "/assets/cineautopsia/los-anos-del-conejo.jpg"
+ },
+ "xref": {
+  "tmdb": 1617929,
+  "letterboxd": "the-years-of-the-rabbit"
+ },
+ "versiones": [
+  {
+   "etiqueta": "9 min",
+   "duracion_min": 9
+  }
+ ],
+ "presentaciones": [
+  "cineautopsia-2026",
+  "girardota-2026",
+  "jardin-2026"
+ ]
+}

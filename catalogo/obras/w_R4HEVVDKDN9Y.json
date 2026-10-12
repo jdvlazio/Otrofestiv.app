@@ -1,0 +1,52 @@
+{
+ "id": "w_R4HEVVDKDN9Y",
+ "titulo_original": "La tinaja",
+ "anio": 2025,
+ "paises": [
+  "C",
+  "O",
+  "A",
+  "R"
+ ],
+ "directores": [
+  "Ernestina Miranda",
+  "Mar Ajé"
+ ],
+ "aliases": [
+  {
+   "titulo": "La Tinaja",
+   "tipo": "festival"
+  },
+  {
+   "titulo": "The Clay Vase",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "Musicos: Rosalina Cañate “La Paloma”, Emelia Reyes Salgado “La Burgo”, Felipa Tejedor, Brenda Torres, Sofia Obeso, Anita Marimón, Ali Navarro Salas “Ali MCPM”, Joao Salgado."
+ },
+ "afiche": {
+  "archivo": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_POSTER_SIN%20CREDITOS%20copia%20-%20Mar%20Aj%C3%A9.jpg?itok=Dhen7YE6"
+ },
+ "xref": {
+  "tmdb": 1668923,
+  "letterboxd": "la-tinaja"
+ },
+ "versiones": [
+  {
+   "etiqueta": "13 min",
+   "duracion_min": 13
+  },
+  {
+   "etiqueta": "14 min",
+   "duracion_min": 14
+  }
+ ],
+ "presentaciones": [
+  "ficci-65",
+  "popayan-2026",
+  "qaff-2026",
+  "siembrafest-2026"
+ ]
+}

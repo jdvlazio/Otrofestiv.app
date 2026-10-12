@@ -1,0 +1,38 @@
+{
+ "id": "w_R4NEB4F2XRAP",
+ "titulo_original": "Memorias de infancia",
+ "anio": 2025,
+ "paises": [
+  "B",
+  "R"
+ ],
+ "directores": [
+  "Pedro Santi"
+ ],
+ "aliases": [
+  {
+   "titulo": "Memória de Pivete",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "Una mirada nostálgica a la infancia, los barrios y las experiencias que construyen la relación entre fútbol, identidad y memoria.",
+  "en": "A nostalgic look at childhood, the neighborhoods and the experiences that build the relationship between football, identity and memory."
+ },
+ "afiche": {
+  "archivo": "/assets/tercertiempo/memorias-de-infancia.jpg"
+ },
+ "xref": {
+  "letterboxd": "memoria-de-pivete"
+ },
+ "versiones": [
+  {
+   "etiqueta": "15 min",
+   "duracion_min": 15
+  }
+ ],
+ "presentaciones": [
+  "tercertiempo-2026"
+ ]
+}

@@ -1,0 +1,20 @@
+{
+ "titulo_original": {
+  "fuente": "festival:siembrafest-2026",
+  "regla": "el título que más festivales imprimen"
+ },
+ "directores": {
+  "fuente": "festival",
+  "regla": "la grafía más completa que acreditan los festivales"
+ },
+ "anio": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "regla anio-mas-temprano",
+  "fecha": "2026-10-12"
+ },
+ "paises": {
+  "fuente": "festival",
+  "regla": "pais-union"
+ }
+}

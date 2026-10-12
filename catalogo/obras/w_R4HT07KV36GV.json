@@ -1,0 +1,35 @@
+{
+ "id": "w_R4HT07KV36GV",
+ "titulo_original": "My Favourite Cake",
+ "anio": 2024,
+ "paises": [
+  "FR",
+  "DE",
+  "IR",
+  "SE"
+ ],
+ "directores": [
+  "Maryam Moghaddam",
+  "Behtash Sanaeeha"
+ ],
+ "sinopsis": {
+  "es": "Mahin, de 70 años, vive sola en Teherán desde que murió su marido y su hija se marchó a Europa. Una tarde, un té con amigos la lleva a romper su solitaria rutina y a revitalizar su vida amorosa. Pero cuando Mahin se abre a un nuevo romance, lo que comienza como un encuentro inesperado se convierte rápidamente en una velada imprevisible e inolvidable.",
+  "en": "Mahin lives alone in Tehran since her husband’s death and her daughter’s departure for Europe, until an afternoon tea with friends leads her to break her solitary routine and revitalize her love life."
+ },
+ "afiche": {
+  "archivo": "/assets/ficma/my-favourite-cake.jpg"
+ },
+ "xref": {
+  "tmdb": 1234591,
+  "letterboxd": "my-favourite-cake"
+ },
+ "versiones": [
+  {
+   "etiqueta": "93 min",
+   "duracion_min": 93
+  }
+ ],
+ "presentaciones": [
+  "ficma-2026"
+ ]
+}

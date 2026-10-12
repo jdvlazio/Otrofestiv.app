@@ -129,7 +129,7 @@ sin artículos iniciales, tokens ordenados. Bloqueo por año y por director: con
 
 | Salida | Cuándo | Qué pasa |
 |---|---|---|
-| **Coincide** | mismo `xref`, **o** huella del título igual + año ±1 + director coincide | se enlaza sola |
+| **Coincide** | mismo `xref` (tmdb o slug de Letterboxd: el slug compartido unió 17 obras partidas en la fase 3a), **o** huella del título igual + año ±1 + director coincide | se enlaza sola |
 | **Candidato** | título parecido (≥ 0,85) + año ±1; **o** título igual y una fuente sin director; **o** mismo director y año con otro título (traducción/aka) | va a tu revisión, con los dos lados a la vista; nunca se enlaza sola |
 | **No coincide** | director distinto y año distinto, aunque el título sea igual (homónimos, remakes) | obra nueva |
 

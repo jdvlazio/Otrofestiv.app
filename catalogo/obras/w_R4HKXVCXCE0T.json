@@ -1,0 +1,44 @@
+{
+ "id": "w_R4HKXVCXCE0T",
+ "titulo_original": "Un nuevo amanecer",
+ "anio": 2024,
+ "paises": [
+  "CO",
+  "BO",
+  "FR"
+ ],
+ "directores": [
+  "Priscila Padilla"
+ ],
+ "aliases": [
+  {
+   "titulo": "A New Dawn",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "Un Nuevo Amanecer narra la historia de cinco mujeres cuyos destinos fueron marcados por la guerra desde la infancia. Una de ellas logró cambiar el rumbo de su vida y, años después, decide reencontrarse con quienes sí empuñaron las armas para reconstruir, junto a ellas, un relato de memoria, amistad, amor, sororidad y esperanza. Hoy, al mirar el pasado, sus voces demuestran que la guerra dejó de ser una alternativa y que otro futuro es posible.",
+  "en": "A documentary on five former women combatants who signed Colombia's peace accord, and what it meant to inhabit a woman's body through war and disarmament."
+ },
+ "afiche": {
+  "archivo": "/assets/ficdeh/un-nuevo-amanecer.jpg"
+ },
+ "xref": {
+  "letterboxd": "a-new-dawn-2024"
+ },
+ "versiones": [
+  {
+   "etiqueta": "94 min",
+   "duracion_min": 94
+  },
+  {
+   "etiqueta": "96 min",
+   "duracion_min": 96
+  }
+ ],
+ "presentaciones": [
+  "ficdeh-2026",
+  "ficmontanas-2026"
+ ]
+}

@@ -94,6 +94,18 @@ def redirige(work_id, fus):
     return work_id
 
 
+def obra_de(obs, fid, titulo, tmdb=None):
+    """El work_id de una obra de un festival: la que lo lista en sus
+    presentaciones y cuyo título (original o alias) tiene la misma huella; o la
+    que lleva su tmdb. Ninguna o más de una → None (no se adivina)."""
+    h = huella(titulo)
+    hits = {wid for wid, o in obs.items() if fid in (o.get('presentaciones') or [])
+            and h in {huella(o['titulo_original'])} | {huella(a['titulo']) for a in o.get('aliases') or []}}
+    if not hits and tmdb:
+        hits = {wid for wid, o in obs.items() if (o.get('xref') or {}).get('tmdb') == tmdb}
+    return hits.pop() if len(hits) == 1 else None
+
+
 # ── los cinco invariantes (funciones puras: datos → lista de problemas) ───────
 def xref_repetido(obs):
     """Un tmdb / imdb / wikidata pertenece a UNA obra (regla distinct values de

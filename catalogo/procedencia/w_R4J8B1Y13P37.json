@@ -1,0 +1,20 @@
+{
+ "titulo_original": {
+  "fuente": "festival:ficmontanas-2026,jardin-2026,siembrafest-2026",
+  "regla": "el título que más festivales imprimen"
+ },
+ "directores": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "nombre completo, en 3 de 4 festivales",
+  "fecha": "2026-10-12"
+ },
+ "anio": {
+  "fuente": "festival",
+  "regla": "único"
+ },
+ "paises": {
+  "fuente": "festival",
+  "regla": "pais-union"
+ }
+}

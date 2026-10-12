@@ -1,0 +1,20 @@
+{
+ "titulo_original": {
+  "fuente": "festival:ficdeh-2026,ficdeh-2026,ficdeh-2026",
+  "regla": "el título que más festivales imprimen"
+ },
+ "directores": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "la grafía con tildes de los festivales; TMDB la escribe «John Edicson Agudelo Suarez»",
+  "fecha": "2026-10-12"
+ },
+ "anio": {
+  "fuente": "festival",
+  "regla": "único"
+ },
+ "paises": {
+  "fuente": "festival",
+  "regla": "pais-union"
+ }
+}

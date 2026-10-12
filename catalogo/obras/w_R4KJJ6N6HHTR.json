@@ -1,0 +1,38 @@
+{
+ "id": "w_R4KJJ6N6HHTR",
+ "titulo_original": "Bombardeo a Washington",
+ "anio": 1972,
+ "paises": [
+  "CO"
+ ],
+ "directores": [
+  "Luis Ospina"
+ ],
+ "aliases": [
+  {
+   "titulo": "The Bombing of Washington",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "Film experimental hecho con materiales de archivo encontrados mediante los cuales, por medio del montaje, se crea la ilusión que Washington es bombardeada desde el aire.",
+  "en": "Satirical short comprising wartime footage, purporting to be from the Soviet Film Agency and depicting a successful bomb strike on Washington."
+ },
+ "afiche": {
+  "archivo": "/assets/mamut-2026/bombardeo-a-washington.jpg"
+ },
+ "xref": {
+  "tmdb": 493152,
+  "letterboxd": "the-bombing-of-washington"
+ },
+ "versiones": [
+  {
+   "etiqueta": "1 min",
+   "duracion_min": 1
+  }
+ ],
+ "presentaciones": [
+  "mamut-2026"
+ ]
+}

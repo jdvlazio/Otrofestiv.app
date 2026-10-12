@@ -1,0 +1,42 @@
+{
+ "id": "w_R4J8Q0CCTKZ3",
+ "titulo_original": "En su Sombra Fértil",
+ "anio": 2025,
+ "paises": [
+  "CO"
+ ],
+ "directores": [
+  "Andrés Dávila"
+ ],
+ "aliases": [
+  {
+   "titulo": "En su sombra fértil",
+   "tipo": "festival"
+  }
+ ],
+ "sinopsis": {
+  "es": "Se acerca a la chagra de Mercedes Cuatindioy, donde el policultivo es cuidado, resistencia y transmisión de saberes.",
+  "en": "In the Sibundoy Valley, Mercedes Cuatindioy cultivates her chagra as an act of resistance and remembrance. Between seeds and polyculture practices, her life embodies the transmission of indigenous knowledge threatened by oblivion."
+ },
+ "afiche": {
+  "archivo": "/assets/ficpa-2026/en-su-sombra-fertil.jpg"
+ },
+ "xref": {
+  "tmdb": 1553616,
+  "letterboxd": "en-su-sombra-fertil"
+ },
+ "versiones": [
+  {
+   "etiqueta": "11 min",
+   "duracion_min": 11
+  },
+  {
+   "etiqueta": "12 min",
+   "duracion_min": 12
+  }
+ ],
+ "presentaciones": [
+  "ficpa-2026",
+  "siembrafest-2026"
+ ]
+}

@@ -1,0 +1,39 @@
+{
+ "id": "w_R4KBH39DVC2Z",
+ "titulo_original": "La sed del viento",
+ "anio": 2026,
+ "paises": [
+  "CA",
+  "CO"
+ ],
+ "directores": [
+  "Alejandro Valbuena"
+ ],
+ "aliases": [
+  {
+   "titulo": "The Wind's Thirst",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "En La Guajira, tres guardianes Wayuu defienden sus tierras ancestrales, el agua y sus tradiciones espirituales frente a proyectos mineros y de energía renovable que prometen desarrollo pero amenazan con transformar el territorio y ocupar lugares sagrados.",
+  "en": "In Colombia's La Guajira desert, three Wayuu guardians fight corporate powers exploiting their ancestral land, as green energy projects and a vital reservoir serve everyone but them."
+ },
+ "afiche": {
+  "archivo": "/assets/jardin-2026/la-sed-del-viento.jpg"
+ },
+ "xref": {
+  "tmdb": 1686191,
+  "letterboxd": "the-winds-thirst"
+ },
+ "versiones": [
+  {
+   "etiqueta": "84 min",
+   "duracion_min": 84
+  }
+ ],
+ "presentaciones": [
+  "jardin-2026"
+ ]
+}

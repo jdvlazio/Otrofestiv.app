@@ -1,0 +1,56 @@
+{
+ "id": "w_R4E2TNFGZSCY",
+ "titulo_original": "Minotauro",
+ "anio": 2026,
+ "paises": [
+  "FR",
+  "LV",
+  "DE",
+  "US",
+  "CH"
+ ],
+ "directores": [
+  "Andrey Zvyagintsev"
+ ],
+ "aliases": [
+  {
+   "titulo": "Minotaur",
+   "tipo": "festival"
+  },
+  {
+   "titulo": "Minotaur",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "Rusia, 2022. Cuando Gleb, un exitoso director de empresa, se ve acorralado por las crecientes presiones corporativas y un mundo cada vez más inestable, el colapso de su vida, tan cuidadosamente ordenada, se precipita hacia la violencia.",
+  "en": "When Gleb, a successful company director, finds himself under siege from mounting corporate pressures, an increasingly unstable world, and the discovery of his wife's affair, the collapse of his carefully ordered life accelerates toward violence."
+ },
+ "afiche": {
+  "archivo": "/assets/biff-2026/minotauro.jpg"
+ },
+ "xref": {
+  "tmdb": 848700,
+  "letterboxd": "minotaur-2026"
+ },
+ "versiones": [
+  {
+   "etiqueta": "135 min",
+   "duracion_min": 135
+  },
+  {
+   "etiqueta": "140 min",
+   "duracion_min": 140
+  },
+  {
+   "etiqueta": "141 min",
+   "duracion_min": 141
+  }
+ ],
+ "presentaciones": [
+  "biff-2026",
+  "ficcali-2026",
+  "tiff-2026"
+ ]
+}

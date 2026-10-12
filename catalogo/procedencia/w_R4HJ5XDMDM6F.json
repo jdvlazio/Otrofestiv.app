@@ -1,0 +1,28 @@
+{
+ "titulo_original": {
+  "fuente": "festival:ficdeh-2026",
+  "regla": "el título que más festivales imprimen"
+ },
+ "directores": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "TMDB 1739023",
+  "fecha": "2026-10-12"
+ },
+ "anio": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "TMDB 1739023",
+  "fecha": "2026-10-12"
+ },
+ "paises": {
+  "fuente": "festival",
+  "regla": "pais-union"
+ },
+ "xref.tmdb": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "TMDB",
+  "fecha": "2026-10-12"
+ }
+}

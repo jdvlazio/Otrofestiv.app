@@ -1,0 +1,26 @@
+{
+ "titulo_original": {
+  "fuente": "festival:ficci-65,ficci-65,ficdeh-2026,ficdeh-2026,ficdeh-2026,ficdeh-2026,ficdeh-2026,ficdeh-2026,ficdeh-2026,ficdeh-2026,ficdeh-2026,leviza-2026",
+  "regla": "el título que más festivales imprimen"
+ },
+ "directores": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "TMDB 1668893",
+  "fecha": "2026-10-12"
+ },
+ "anio": {
+  "fuente": "festival",
+  "regla": "único"
+ },
+ "paises": {
+  "fuente": "festival",
+  "regla": "pais-union"
+ },
+ "xref.tmdb": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "TMDB, misma directora",
+  "fecha": "2026-10-12"
+ }
+}

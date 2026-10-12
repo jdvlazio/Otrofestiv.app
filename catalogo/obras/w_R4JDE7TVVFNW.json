@@ -1,0 +1,42 @@
+{
+ "id": "w_R4JDE7TVVFNW",
+ "titulo_original": "La Gallina Saraviada",
+ "anio": 2026,
+ "paises": [
+  "CO"
+ ],
+ "directores": [
+  "Ingrid Paola Bonilla Rodriguez"
+ ],
+ "aliases": [
+  {
+   "titulo": "La gallina saraviada",
+   "tipo": "festival"
+  }
+ ],
+ "sinopsis": {
+  "es": "Convierte el empeño de una mujer mayor por preservar el linaje de su última gallina en un relato íntimo sobre la persistencia de la vida.",
+  "en": "An elderly peasant woman struggles to preserve the lineage of her last hen as it faces extinction; to do so, she draws on her ingenuity and uses various methods to incubate the last few eggs she has left. An elderly woman and her animals, holding on together, because in the small, everyday things, life always finds a way to go on."
+ },
+ "afiche": {
+  "archivo": "/assets/ficpa-2026/la-gallina-saraviada.jpg"
+ },
+ "xref": {
+  "tmdb": 1746279,
+  "letterboxd": "la-gallina-saraviada"
+ },
+ "versiones": [
+  {
+   "etiqueta": "11 min",
+   "duracion_min": 11
+  },
+  {
+   "etiqueta": "12 min",
+   "duracion_min": 12
+  }
+ ],
+ "presentaciones": [
+  "ficpa-2026",
+  "siembrafest-2026"
+ ]
+}

@@ -1,0 +1,32 @@
+{
+ "id": "w_R4EFS9K6KPFX",
+ "titulo_original": "Katabasis",
+ "anio": 2026,
+ "paises": [
+  "DE",
+  "IT"
+ ],
+ "directores": [
+  "Martin Moolhuijsen"
+ ],
+ "sinopsis": {
+  "es": "En una cueva situada entre los pliegues de las huellas dactilares de un ser humano, se despliega un encuentro primordial con la materia, la luz y el sonido. La Katábasis, el descenso mitológico occidental al inframundo, se despoja aquí de sus connotaciones míticas para revelar únicamente su función narrativa: la confrontación con el pasado y con aquello que se ha perdido. Katabasis es un cortometraje abstracto que fusiona técnicas analógicas sin cámara con procedimientos digitales como el montaje algorítmico. Las imágenes se crearon íntegramente a partir de diapositivas de 35 mm pintadas a mano y películas expuestas a la electricidad mediante una bobina de Tesla —un instrumento inventado por Nikola Tesla para generar arcos de rayos artificiales—. Estas mismas imágenes se introdujeron posteriormente en un algoritmo de desarrollo propio que las reordena en tiempo real según determinados parámetros preestablecidos, pero sin un orden enteramente predecible, dando lugar a un proceso de edición que se mantiene en el límite entre el caos y el control. Evocando la estructura de la película y ciñéndose fielmente a ella, la banda sonora se compuso a partir de grabaciones de campos electromagnéticos producidos por objetos cotidianos y gongs tocados con las manos, mazos o activados únicamente a través de retroalimentación acústica, sin contacto físico alguno.",
+  "en": "In a cave situated between the ridges of a human fingerprint, a primordial encounter with matter, light and sound unfolds."
+ },
+ "afiche": {
+  "archivo": "/assets/cineautopsia/katabasis.jpg"
+ },
+ "xref": {
+  "tmdb": 1616825,
+  "letterboxd": "katabasis-2026"
+ },
+ "versiones": [
+  {
+   "etiqueta": "15 min",
+   "duracion_min": 15
+  }
+ ],
+ "presentaciones": [
+  "cineautopsia-2026"
+ ]
+}
