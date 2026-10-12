@@ -167,6 +167,12 @@ SEDES = {
 }
 # la tarjeta abrevia el título que la Selección da completo
 ALIAS_SELECCION = {'Tierra Palestina': 'TIERRA PALESTINA. CAMBIO GLOBAL'}
+# LO QUE LA PROGRAMACIÓN DE IG CAMBIÓ después de la web. La web no se toca
+# desde el 9 oct; el carrusel «programación oficial» del 11 oct
+# (instagram.com/p/DeX3bswAPAG, lámina 8) pone los cortos de México en
+# Yacuanquer el JUEVES 15 a las 7 p. m., no el miércoles 14. Regla de Juan:
+# si publicaron hace poco en IG, se confía en IG.
+DEL_IG = {('Yacuanquer · Parque Principal', 'Cortos invitados de México'): {'dia': '2026-10-15'}}
 DIA_ALT = re.compile(r'(LUN|MAR|MIÉ|JUE|VIE|SÁB)\s+(\d{1,2})')
 
 
@@ -387,8 +393,11 @@ def main():
         if t['grupo'] in ALTERNA_FUERA:
             fuera.append(f'{t["dia"]} {t["hora"]} {t["titulo"][:50]} ({t["grupo"][:40]}): {ALTERNA_FUERA[t["grupo"]]}')
             continue
+        t = {**t, **DEL_IG.get((t['grupo'], t['titulo']), {})}
         reg = {**base(t, t['grupo']), 'acceso': 'Entrada libre'}
         reg['_src']['programacion'] = 'alterna'
+        if (t['grupo'], t['titulo']) in DEL_IG:
+            reg['_src'] = {'url': 'https://www.instagram.com/p/DeX3bswAPAG/', 'date': '2026-10-11', 'programacion': 'alterna'}
         cat, tit = t['categoria'], t['titulo']
         p = ' '.join(t['ps'])
         obras = obras_de_renglon(p)
@@ -398,7 +407,10 @@ def main():
             secs = [sel[plano(o['titulo'])]['seccion'] for o in obras if plano(o['titulo']) in sel]
             reg.update(titulo=tit, obras=obras,
                        seccion='Churo Cósmico' if CHURO.search(tit) else
-                       (max(set(secs), key=secs.count) if secs else SECCION_ALTERNA))
+                       # la más repetida; empatadas, la de la primera obra del programa
+                       # (max sobre un set dependía del orden del hash: los experimentales
+                       # salían Ecos o Latidos según la corrida, 12 oct)
+                       (max(secs, key=secs.count) if secs else SECCION_ALTERNA))
             m = re.search(r'Duración( total)?:\s*(\d+)\s*min', p)
             if m:
                 reg['duracion_min'] = int(m.group(2))

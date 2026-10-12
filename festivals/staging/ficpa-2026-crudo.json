@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "ficpa.co — Programación oficial 2026 (WP programacion2026) + Selección Oficial",
-  "capturado": "2026-10-11",
+  "capturado": "2026-10-12",
   "url": "https://www.ficpa.co/programacion2026/",
   "metodo": "HTML estructurado de la página, tarjeta por tarjeta; la sección y el crédito, de la página de seleccionados"
  },
@@ -416,47 +416,6 @@
   },
   {
    "dia": "2026-10-14",
-   "hora": "19:00",
-   "sede": "Parque Principal de Yacuanquer",
-   "ciudad": "Yacuanquer",
-   "_src": {
-    "url": "https://www.ficpa.co/programacion2026/",
-    "date": "2026-10-09",
-    "programacion": "alterna"
-   },
-   "acceso": "Entrada libre",
-   "titulo": "Cortos invitados de México",
-   "obras": [
-    {
-     "titulo": "Ellir",
-     "director": "Laura Quintanilla"
-    },
-    {
-     "titulo": "Tres viudas",
-     "director": "Clara Toscano"
-    },
-    {
-     "titulo": "La casa que nunca fue",
-     "director": "Emil María Ravelero"
-    },
-    {
-     "titulo": "Chihuato",
-     "director": "Óscar Tovar"
-    },
-    {
-     "titulo": "Las almas errantes",
-     "director": "Gael Romero"
-    },
-    {
-     "titulo": "BOCA",
-     "director": "Diego Villaseñor"
-    }
-   ],
-   "seccion": "Programación alterna",
-   "duracion_min": 90
-  },
-  {
-   "dia": "2026-10-14",
    "hora": "19:30",
    "sede": "Teatro Colombia",
    "ciudad": "Pasto",
@@ -757,6 +716,47 @@
    "pais": "Colombia",
    "duracion_min": 94,
    "seccion": "Latidos del Cine Colombiano"
+  },
+  {
+   "dia": "2026-10-15",
+   "hora": "19:00",
+   "sede": "Parque Principal de Yacuanquer",
+   "ciudad": "Yacuanquer",
+   "_src": {
+    "url": "https://www.instagram.com/p/DeX3bswAPAG/",
+    "date": "2026-10-11",
+    "programacion": "alterna"
+   },
+   "acceso": "Entrada libre",
+   "titulo": "Cortos invitados de México",
+   "obras": [
+    {
+     "titulo": "Ellir",
+     "director": "Laura Quintanilla"
+    },
+    {
+     "titulo": "Tres viudas",
+     "director": "Clara Toscano"
+    },
+    {
+     "titulo": "La casa que nunca fue",
+     "director": "Emil María Ravelero"
+    },
+    {
+     "titulo": "Chihuato",
+     "director": "Óscar Tovar"
+    },
+    {
+     "titulo": "Las almas errantes",
+     "director": "Gael Romero"
+    },
+    {
+     "titulo": "BOCA",
+     "director": "Diego Villaseñor"
+    }
+   ],
+   "seccion": "Programación alterna",
+   "duracion_min": 90
   },
   {
    "dia": "2026-10-15",

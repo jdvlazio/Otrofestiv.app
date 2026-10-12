@@ -240,6 +240,18 @@ def publicar(fid, forzar=False):
     if mudas:
         print(f'⚠ --forzar: se publican {len(mudas)} obra(s) sin afiche y sin porqué')
 
+    # cada obra apunta a la suya del catálogo (docs/CATALOGO-OBRAS.md, fase 3b);
+    # ANTES de la compuerta de pérdida, que cuenta campos: puestos después, la
+    # compuerta leía «work_id: 65 → 0» (FICPA, 12 oct) y frenaba con razón
+    import catalogo
+    _obs = catalogo.obras()
+    if _obs:
+        _nuevas = catalogo.enlazar(out, fid, _obs)
+        if _nuevas:
+            print(f'  ⚠ {len(_nuevas)} obras que el catálogo no tiene todavía (el push queda frenado hasta sumarlas):')
+            for t in _nuevas[:10]:
+                print(f'    · {t}')
+            print('  → TMDB_API_KEY=… python3 pipeline/catalogo_construir.py --escribir')
     # ── ¿esta publicación PIERDE datos? ─────────────────────────────────────
     if os.path.exists(out_p):
         viejo = json.load(open(out_p, encoding='utf-8'))
@@ -306,17 +318,6 @@ def publicar(fid, forzar=False):
         if perdidos and forzar:
             print('⚠ --forzar: se publican MENOS datos de los que había:', dict(perdidos))
 
-    # cada obra apunta a la suya del catálogo (docs/CATALOGO-OBRAS.md, fase 3b);
-    # sin esto, republicar borraría los work_id y [presentacion-con-obra] frenaría
-    import catalogo
-    _obs = catalogo.obras()
-    if _obs:
-        _nuevas = catalogo.enlazar(out, fid, _obs)
-        if _nuevas:
-            print(f'  ⚠ {len(_nuevas)} obras que el catálogo no tiene todavía (el push queda frenado hasta sumarlas):')
-            for t in _nuevas[:10]:
-                print(f'    · {t}')
-            print('  → TMDB_API_KEY=… python3 pipeline/catalogo_construir.py --escribir')
     json.dump(out, open(out_p, 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
     kb = os.path.getsize(out_p) // 1024
     print(f'✓ {out_p}  {kb} KB · {len(out["films"])} funciones · {len(out["venues"])} sedes')
