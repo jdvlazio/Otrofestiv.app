@@ -131,11 +131,28 @@ def construir(R):
                 s = difflib.SequenceMatcher(None, a['_h'], b['_h']).ratio()
                 if s >= UMBRAL:
                     candidatos.append((ids[x], ids[y], f'mismo director y año, títulos parecidos ({s:.2f})'))
-    # los candidatos que ya quedaron unidos por otra vía no se preguntan
+    # 4. las decisiones de identidad ya tomadas (catalogo/revision-fase2.json):
+    #    «sí» une; «no» queda registrado y el par no se vuelve a preguntar
+    rev_p = os.path.join(REPO, 'catalogo', 'revision-fase2.json')
+    no_es = set()
+    if os.path.exists(rev_p):
+        idx = defaultdict(list)
+        for i, r in enumerate(R):
+            idx[(r['fest'], r['titulo'])].append(i)
+        for d in json.load(io.open(rev_p, encoding='utf-8')).get('identidad', []):
+            ia, ib = idx.get(tuple(d['a'])), idx.get(tuple(d['b']))
+            if not ia or not ib:
+                sys.exit(f'✗ decisión de identidad sobre una obra que no está publicada: {d["a"]} / {d["b"]}')
+            if d['misma']:
+                U.une(ia[0], ib[0])
+            else:
+                no_es.add(tuple(sorted((U.raiz(ia[0]), U.raiz(ib[0])))))
+    # los candidatos que ya quedaron unidos, o que ya se decidió que no son la
+    # misma obra, no se preguntan
     vistos, cand = set(), []
     for x, y, por in candidatos:
         k = tuple(sorted((U.raiz(x), U.raiz(y))))
-        if k[0] == k[1] or k in vistos:
+        if k[0] == k[1] or k in vistos or k in no_es:
             continue
         vistos.add(k)
         cand.append((x, y, por))
