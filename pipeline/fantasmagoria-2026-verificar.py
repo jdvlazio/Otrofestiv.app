@@ -39,6 +39,11 @@ CONTRADICCIONES = {
     ('Pura Sangre', '2026-10-20', '18:00'): 'ver la de las 18:30',
     # la base v5 (7 oct) la pasa a las 19:00 en la Sala 1; la página de largos sigue en 18:30
     ('Schichinin No Samurai (Seven Samurai)', '2026-10-16', '19:00'): 'la página de largos dice 6:30 p. m. (Sala 2); la base v5, 19:00 en la Sala 1. Se publica la base',
+    ('Carrie', '2026-10-22', '19:00'): 'la página de largos (sin cambios desde el 28 sep) dice 7:00 p. m.; la base v19 (11 oct) y las láminas de IG del mismo día (p/DeX4HHplB6z) dicen 6:30 p. m. Se publica la base',
+    ('Carrie', '2026-10-22', '18:30'): 'la página de largos (sin cambios desde el 28 sep) dice 7:00 p. m.; la base v19 (11 oct) y las láminas de IG del mismo día (p/DeX4HHplB6z) dicen 6:30 p. m. Se publica la base',
+    ('You Are The Film', '2026-10-22', '18:40'): 'la página de largos (sin cambios desde el 28 sep) y la lámina de IG del 11 oct (p/DeX4HHplB6z) dicen 6:40 p. m.; la base v19 (11 oct), 6:30 p. m. Se publica la base, PENDIENTE confirmar con el festival',
+    ('You Are The Film', '2026-10-22', '18:30'): 'la página de largos (sin cambios desde el 28 sep) y la lámina de IG del 11 oct (p/DeX4HHplB6z) dicen 6:40 p. m.; la base v19 (11 oct), 6:30 p. m. Se publica la base, PENDIENTE confirmar con el festival',
+    ('Motherwitch', '2026-10-16', '19:00'): 'la página de largos (sin cambios desde el 28 sep) dice entrada libre; la base v19 (11 oct) y las láminas de IG del mismo día (p/DeX4HHplB6z) dicen entrada con boleta. Se publica la base',
 }
 
 
