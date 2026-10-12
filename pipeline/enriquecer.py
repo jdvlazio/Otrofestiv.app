@@ -31,6 +31,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from lib import (cargar_crudo, ficha_verifica, norm, provenance, slug,
                  tmdb_get, UA, ficha_tmdb, director_coincide, ya_publicada,
                  obras_publicadas)
+import catalogo  # noqa: E402
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ST = f'{REPO}/festivals/staging'
@@ -164,6 +165,29 @@ def ficha_de_tmdb(cid, key, titulo):
     if sl:
         out['lbSlug'] = sl
     return det, out
+
+
+_OBS = None
+
+
+def cascada_obra(o, key, alias, pub, obs=None):
+    """La cascada con el catálogo único primero (docs/CATALOGO-OBRAS.md §5): si
+    la obra ya está en catalogo/obras con ficha TMDB —reconocida por título,
+    director y año, las reglas del constructor—, se toma esa ficha sin volver a
+    buscar en TMDB. Si no, la cascada de siempre."""
+    global _OBS
+    if obs is None:
+        _OBS = catalogo.obras() if _OBS is None else _OBS
+        obs = _OBS
+    wid, _ = catalogo.reconocer(obs, o.get('titulo'), o.get('director') or '',
+                                o.get('anio'), o.get('duracion_min'))
+    tid = ((obs.get(wid) or {}).get('xref') or {}).get('tmdb') if wid else None
+    if tid:
+        _det, e = ficha_de_tmdb(tid, key, o['titulo'])
+        e['_verificado'] = f'el catálogo ya la tiene ({wid}, {", ".join(obs[wid]["presentaciones"])})'
+        e['work_id'] = wid
+        return e, 'catálogo'
+    return cascada_tmdb(o, key, alias, pub)
 
 
 def cascada_tmdb(o, key, alias, pub):
@@ -427,6 +451,7 @@ def main():
     # lo que ya publicamos: se anota en cada obra y es el tercer camino de la
     # cascada (ver cascada_tmdb). El festival propio se excluye.
     publicadas = obras_publicadas(REPO, excluir=(fid,))
+    _obs = catalogo.obras()
     ok, sin, sin_sondeo, reuso = {}, [], {}, 0
     for i, (t, f) in enumerate(sorted(obras.items()), 1):
         _dir = (f.get('director') or '').strip()
@@ -469,7 +494,7 @@ def main():
             continue
 
         pub = ya_publicada({**f, 'titulo': t}, publicadas)
-        e, fuente = cascada_tmdb({**f, 'titulo': t}, key, alias, pub)
+        e, fuente = cascada_obra({**f, 'titulo': t}, key, alias, pub, _obs)
         if e:
             e['_director'], e['_sondeado'] = _dir, _hoy
             if pub:

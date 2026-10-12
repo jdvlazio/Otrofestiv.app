@@ -118,6 +118,35 @@ def obra_de(obs, fid, titulo, tmdb=None, ix=None):
     return next(iter(hits)) if len(hits) == 1 else None
 
 
+def reconocer(obs, titulo, director='', anio=None, duracion=None, excluir=None):
+    """Una obra que llega de un festival NUEVO → (work_id, 'coincide') o (None, None).
+    Las mismas reglas que el constructor (§4.1): misma huella de título (original
+    o alias) Y mismo apellido de director Y año ±1; o, si a un lado le falta
+    director, la huella corroborada por año ±1 o duración ±3. Más de una obra
+    posible = no se adivina. `excluir` deja fuera un festival (para probar
+    contra lo publicado sin verse a sí mismo)."""
+    h, ap = huella(titulo), apellido(director)
+    if not h:
+        return None, None
+    hits = set()
+    for wid, o in obs.items():
+        pres = [p for p in o.get('presentaciones') or [] if p != excluir]
+        if not pres:
+            continue
+        if h not in {huella(o['titulo_original'])} | {huella(a['titulo']) for a in o.get('aliases') or []}:
+            continue
+        a_ok = anio is None or o.get('anio') is None or abs(anio - o['anio']) <= 1
+        aps = {apellido(d) for d in o.get('directores') or []}
+        if ap and aps - {''}:
+            if ap in aps and a_ok:
+                hits.add(wid)
+        elif (anio and o.get('anio') and abs(anio - o['anio']) <= 1) or \
+                (duracion and any(v.get('duracion_min') and abs(v['duracion_min'] - duracion) <= 3
+                                  for v in o.get('versiones') or [])):
+            hits.add(wid)
+    return (hits.pop(), 'coincide') if len(hits) == 1 else (None, None)
+
+
 def enlazar(d, fid, obs, ix=None):
     """Pone `work_id` a cada obra del festival (también las de un programa de
     cortos; las actividades no). Devuelve los títulos que no resolvieron: obras
