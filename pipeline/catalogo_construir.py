@@ -337,7 +337,19 @@ def escribir(R, grupos):
         json.dump(proc[wid], io.open(f'{REPO}/catalogo/procedencia/{wid}.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     json.dump(fus, io.open(f'{REPO}/catalogo/fusiones.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     json.dump(decs, io.open(f'{REPO}/catalogo/decisiones.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
-    sin_resolver = [(r['fest'], r['titulo']) for r in R if not catalogo.obra_de(obs, r['fest'], r['titulo'], r['tmdb'])]
+    # la presentación apunta a su obra (fase 3b): solo se agrega `work_id`
+    ix, sin_resolver = catalogo.indice(obs), []
+    for p in sorted(glob.glob(f'{REPO}/festivals/*.json')):
+        fid = os.path.basename(p)[:-5]
+        crudo = io.open(p, encoding='utf-8').read()
+        d = json.loads(crudo)
+        sin_resolver += [(fid, t) for t in catalogo.enlazar(d, fid, obs, ix)]
+        # el mismo formato que ya tiene el archivo: el diff es solo `work_id`
+        compacto = json.dumps(json.loads(crudo), ensure_ascii=False, separators=(',', ':')) == crudo.rstrip('\n')
+        nuevo = json.dumps(d, ensure_ascii=False, **({'separators': (',', ':')} if compacto else {'indent': 1}))
+        nuevo += '\n' if crudo.endswith('\n') else ''
+        if nuevo != crudo:
+            io.open(p, 'w', encoding='utf-8').write(nuevo)
     print(f'✓ {len(obs)} obras, {len(decs)} decisiones; {len(sin_resolver)} presentaciones sin obra única')
     for x in sin_resolver[:20]:
         print('  ·', x)

@@ -354,6 +354,7 @@ está pasando de verdad — no lo que alguien recordaba al escribirlo.
 | `format` | string | — | 1 fest | Formato de proyección (DCP, 35mm). Lo publica el festival; TIFF es el único que lo trae. |
 | `section_tags` | array | — | 1 fest | no lo lee la vista: ninguno todavía Sellos del festival (TIFF). Decisión de Juan: etiqueta, no sección. Falta cablearlo en la vista. |
 | `accessibility` | array | — | 1 fest | no lo lee la vista: ninguno todavía Accesibilidad de la función (p. ej. «oc» = subtítulos descriptivos). Sin superficie que la muestre. |
+| `work_id` | string | — | 30 fest | La obra del catálogo único (catalogo/obras/<work_id>.json, docs/CATALOGO-OBRAS.md). Lo ponen publicar.py y catalogo_construir.py --escribir, nunca a mano. Va en cada obra, también dentro de film_list; las actividades no llevan. [presentacion-con-obra] frena el push si falta o apunta a una obra que no existe. |
 
 ### Excepciones congeladas (festivales archivados)
 
