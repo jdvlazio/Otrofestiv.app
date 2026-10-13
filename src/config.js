@@ -587,6 +587,29 @@ export const PALMARES=[
    titulo:'Deus ex necro machina', autoria:'Mateo M. Correa', obra:'Deus ex necro machina'},
   {fest:'jardin2026', categoria:'Caleidoscopio · Experimental', nivel:'mencion',
    titulo:'Una vez en un cuerpo', autoria:'María Cristina Pérez', obra:'Una vez en un cuerpo'},
+
+  // ── POPAYÁN 2026 (17 Festival de Cine Corto) — acta del jurado, @cinecortofest
+  // p/DeZ_Hy-ltCW, 12 oct. Nueve premios, sin menciones; las 11 láminas (un afiche
+  // con su laurel por premio) coinciden con el pie. Categorías verbatim del acta
+  // («Mejor corto infantil» y «Mejor corto Cauca» van en minúscula, así las escribe).
+  {fest:'popayan2026', categoria:'Mejor Corto de Ficción', nivel:'ganadora',
+   titulo:'Camino al cielo', autoria:'Miguel Vargas Mejia', obra:'Camino al cielo'},
+  {fest:'popayan2026', categoria:'Mejor Corto Experimental', nivel:'ganadora',
+   titulo:'La Europa', autoria:'Jorge Perez Aldana', obra:'La Europa'},
+  {fest:'popayan2026', categoria:'Mejor Corto Afro', nivel:'ganadora',
+   titulo:'La Tinaja', autoria:'Ernestina Miranda y Mar Ajé', obra:'La tinaja'},
+  {fest:'popayan2026', categoria:'Mejor Corto Animación', nivel:'ganadora',
+   titulo:'Sapos por todos lados', autoria:'Juan Jacobo Albán Torres', obra:'Sapos por todos lados'},
+  {fest:'popayan2026', categoria:'Mejor Corto Comunitario', nivel:'ganadora',
+   titulo:'HDLT Hijo de la Tierra', autoria:'Colectivo Artefactum Suba', obra:'HDLT Hijo de la Tierra'},
+  {fest:'popayan2026', categoria:'Mejor Corto Indígena', nivel:'ganadora',
+   titulo:'Akababuru', autoria:'Irati Dojura Landa Yagarí', obra:'Akababuru: Expresión de asombro'},
+  {fest:'popayan2026', categoria:'Mejor corto infantil', nivel:'ganadora',
+   titulo:'Juan PorOcho', autoria:'Marquitos Cárdenas', obra:'Juan PorOcho'},
+  {fest:'popayan2026', categoria:'Mejor Corto Documental', nivel:'ganadora',
+   titulo:'Cayenas libertarias', autoria:'Javier Camilo Aranguren Montañez', obra:'Cayenas libertarias'},
+  {fest:'popayan2026', categoria:'Mejor corto Cauca', nivel:'ganadora',
+   titulo:'Yo soy yo', autoria:'Andrés Stiven Victoria Devia', obra:'Yo soy yo'},
 ];
 
 // ── NOTICES ──────────────────────────────────────────────────────────────────
