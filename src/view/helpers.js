@@ -517,6 +517,51 @@ export function vcfg(v){
   return _resolveVenue(v,festVenues);
 }
 
+// filterCity(v) — la ciudad de una sede PARA FILTRAR Y AGRUPAR (dueño único,
+// 13 oct 2026). Igual a vcfg(v).city salvo los MUNICIPIOS SATÉLITE: una ciudad
+// con UNA sola función y a < 50 km de la principal (la de más funciones; distancia
+// desde el centroide de sus sedes) se integra a la principal. Caso: FICPA —
+// Chachagüí, Yacuanquer y La Florida, 1 función cada uno a 16–17 km de Pasto—
+// salía como festival de 4 ciudades: «¿A cuál ciudad vas?» y una semana vacía
+// al elegir un municipio. El dato NO cambia (city sigue diciendo el municipio,
+// venueCity/badge y pin intactos); solo deja de contar como ciudad aparte.
+// FICDEH (ciudades lejanas) y las de ≥ 2 funciones no se tocan (Juan: «con
+// una sola, no justifica» — Cinemancia, con 2 por municipio, sigue aparte).
+function _satelites(){
+  const MAX_FUNCIONES=2, MAX_KM=50;   // umbrales de Juan: UNA sola función (13 oct)
+  const _c=_satelites._c||{};
+  const films=(typeof FILMS!=='undefined'&&FILMS)||[];
+  if(_c.key===_activeFestId&&_c.films===films) return _c.map;
+  const cnt={}, pts={};
+  films.forEach(f=>{
+    if(f.info||!f.venue||!f.day) return;
+    const c=vcfg(f.venue); if(!c.city) return;
+    cnt[c.city]=(cnt[c.city]||0)+1;
+  });
+  Object.values((FESTIVAL_CONFIG[_activeFestId]||{}).venues||{}).forEach(v=>{
+    const lng=v&&(v.lng??v.lon);
+    if(v&&v.city&&v.lat&&lng) (pts[v.city] ||= []).push([v.lat,lng]);
+  });
+  const map={};
+  const orden=Object.keys(cnt).sort((a,b)=>cnt[b]-cnt[a]);
+  const main=orden[0];
+  const _cen=c=>{const p=pts[c];if(!p||!p.length) return null;return [p.reduce((a,x)=>a+x[0],0)/p.length,p.reduce((a,x)=>a+x[1],0)/p.length];};
+  const m=main&&_cen(main);
+  if(m) orden.slice(1).forEach(c=>{
+    if(cnt[c]>=MAX_FUNCIONES) return;
+    const q=_cen(c); if(!q) return;
+    const R=6371, r=Math.PI/180, dLa=(q[0]-m[0])*r, dLo=(q[1]-m[1])*r;
+    const h=Math.sin(dLa/2)**2+Math.cos(m[0]*r)*Math.cos(q[0]*r)*Math.sin(dLo/2)**2;
+    if(2*R*Math.asin(Math.sqrt(h))<MAX_KM) map[c]=main;
+  });
+  _satelites._c={key:_activeFestId,films,map};
+  return map;
+}
+export function filterCity(v){
+  const c=vcfg(v).city||'';
+  return (c&&_satelites()[c])||c;
+}
+
 // venueMatches — EL predicado del filtro de lugar (dueño único, 5 ago 2026).
 // `sel` es 'all', un short de sede, o el centinela 'city:<Ciudad>' (filtro de
 // ciudad entera — festivales multiciudad, FICDEH/Cinemancia). Antes cada
@@ -561,13 +606,13 @@ export function secMatches(f, sel){
 
 export function venueMatches(v, sel){
   if(sel==='all') return true;
-  if(sel&&sel.startsWith('city:')) return (vcfg(v).city||'')===sel.slice(5);
+  if(sel&&sel.startsWith('city:')) return filterCity(v)===sel.slice(5);
   if(sel&&sel.startsWith('sede:')){
     const i=sel.indexOf(SEDE_SEP);
     if(i<0) return vcfg(v).short===sel.slice(5);
     const ciudad=sel.slice(5,i), short=sel.slice(i+1);
     const c=vcfg(v);
-    return c.short===short && (c.city||'')===ciudad;
+    return c.short===short && filterCity(v)===ciudad;
   }
   return vcfg(v).short===sel;
 }
@@ -610,7 +655,7 @@ export function festivalCities(films){
   const map={};
   (films||[]).forEach(f=>{
     if(f.info||!f.venue||!f.day) return;
-    const c=vcfg(f.venue).city;
+    const c=filterCity(f.venue);
     if(!c) return;
     (map[c] ||= {name:c,count:0,vivas:0,days:new Set()});
     map[c].count++;
