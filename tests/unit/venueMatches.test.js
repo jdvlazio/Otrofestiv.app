@@ -118,7 +118,7 @@ test('venueSelLabel muestra la sede, no el centinela', () => {
 });
 
 // ── Municipios satélite (13 oct 2026, FICPA) ──────────────────────────────────
-// < 5 funciones y < 50 km de la ciudad principal → se integra a ella para
+// 1 sola función y < 50 km de la ciudad principal → se integra a ella para
 // filtrar y agrupar. Datos con la forma real de FICPA (Pasto + 3 municipios a
 // 16–18 km con 1 función cada uno) y un control lejano tipo FICDEH.
 function loadSat(films, venues) {
@@ -142,8 +142,8 @@ test('satélite: municipio con 1 función a 16 km se integra a la principal', ()
   assert.strictEqual(venueMatches('Parque Chacha', 'city:Pasto'), true);
 });
 
-test('satélite: con 5 funciones sigue siendo ciudad aparte', () => {
-  const films = [...fn('Teatro Pasto', 48), ...fn('Parque Chacha', 5)];
+test('satélite: con 2 funciones sigue siendo ciudad aparte (Cinemancia)', () => {
+  const films = [...fn('Teatro Pasto', 48), ...fn('Parque Chacha', 2)];
   const { festivalCities } = loadSat(films, PV);
   assert.deepStrictEqual(festivalCities(films).map(c => c.name), ['Pasto', 'Chachagüí']);
 });

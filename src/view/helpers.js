@@ -519,15 +519,16 @@ export function vcfg(v){
 
 // filterCity(v) — la ciudad de una sede PARA FILTRAR Y AGRUPAR (dueño único,
 // 13 oct 2026). Igual a vcfg(v).city salvo los MUNICIPIOS SATÉLITE: una ciudad
-// con < 5 funciones y a < 50 km de la principal (la de más funciones; distancia
+// con UNA sola función y a < 50 km de la principal (la de más funciones; distancia
 // desde el centroide de sus sedes) se integra a la principal. Caso: FICPA —
 // Chachagüí, Yacuanquer y La Florida, 1 función cada uno a 16–17 km de Pasto—
 // salía como festival de 4 ciudades: «¿A cuál ciudad vas?» y una semana vacía
 // al elegir un municipio. El dato NO cambia (city sigue diciendo el municipio,
 // venueCity/badge y pin intactos); solo deja de contar como ciudad aparte.
-// FICDEH (ciudades lejanas) y las de ≥ 5 funciones no se tocan.
+// FICDEH (ciudades lejanas) y las de ≥ 2 funciones no se tocan (Juan: «con
+// una sola, no justifica» — Cinemancia, con 2 por municipio, sigue aparte).
 function _satelites(){
-  const MAX_FUNCIONES=5, MAX_KM=50;   // los dos umbrales aprobados por Juan
+  const MAX_FUNCIONES=2, MAX_KM=50;   // umbrales de Juan: UNA sola función (13 oct)
   const _c=_satelites._c||{};
   const films=(typeof FILMS!=='undefined'&&FILMS)||[];
   if(_c.key===_activeFestId&&_c.films===films) return _c.map;
