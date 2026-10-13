@@ -1,7 +1,7 @@
 {
  "id": "w_R4JE5AY017BR",
  "titulo_original": "Laureano",
- "anio": null,
+ "anio": 2025,
  "paises": [
   "C",
   "O"
@@ -15,7 +15,10 @@
  "afiche": {
   "archivo": "/assets/ficpa-2026/laureano.jpg"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 1796539,
+  "letterboxd": "laureano"
+ },
  "versiones": [
   {
    "etiqueta": "15 min",

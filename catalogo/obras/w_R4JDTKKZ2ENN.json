@@ -1,7 +1,7 @@
 {
  "id": "w_R4JDTKKZ2ENN",
  "titulo_original": "Después del Espanto",
- "anio": null,
+ "anio": 2025,
  "paises": [
   "C",
   "O"
@@ -15,7 +15,10 @@
  "afiche": {
   "archivo": "/assets/ficpa-2026/despues-del-espanto.jpg"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 1796538,
+  "letterboxd": "despues-del-espanto"
+ },
  "versiones": [
   {
    "etiqueta": "11 min",

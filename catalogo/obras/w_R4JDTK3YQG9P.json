@@ -1,7 +1,7 @@
 {
  "id": "w_R4JDTK3YQG9P",
  "titulo_original": "Achikanain",
- "anio": null,
+ "anio": 2025,
  "paises": [
   "C",
   "O"
@@ -15,7 +15,10 @@
  "afiche": {
   "archivo": "/assets/ficpa-2026/achikanain.jpg"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 1796537,
+  "letterboxd": "achikanain"
+ },
  "versiones": [
   {
    "etiqueta": "4 min",

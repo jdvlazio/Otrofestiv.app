@@ -1,7 +1,7 @@
 {
  "id": "w_R4J8Q0ZKDSH3",
  "titulo_original": "Recuerdos",
- "anio": null,
+ "anio": 2025,
  "paises": [],
  "directores": [
   "Victoria Valentina López Paz"
@@ -12,7 +12,10 @@
  "afiche": {
   "archivo": "/assets/ficpa-2026/recuerdos.jpg"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 1796544,
+  "letterboxd": "recuerdos-2025"
+ },
  "versiones": [
   {
    "etiqueta": "8 min",
