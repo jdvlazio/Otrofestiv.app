@@ -116,16 +116,21 @@ def _cobertura(films):
     Es simétrico —los dos lados se cuentan igual—, así que la comparación
     sigue siendo válida y además deja de mentir sobre los festivales que usan
     programas, que son casi todos los de cortos."""
+    # `_conservado` es una NOTA, no un dato: dice que un campo se arrastró de la
+    # publicación anterior. Cuando el campo llega por fin de su fuente, la nota
+    # se va y el dato se queda; contarla frenaba esa mejora como pérdida
+    # (FICPA, 13 oct: la sinopsis oficial de «Tuktu» reemplazó a la conservada).
+    NOTAS = {'_conservado'}
     c = collections.Counter()
     for f in films:
         for k, v in f.items():
-            if k == 'film_list':
+            if k == 'film_list' or k in NOTAS:
                 continue
             if v not in (None, '', [], {}):
                 c[k] += 1
         for it in (f.get('film_list') or []):
             for k, v in it.items():
-                if v not in (None, '', [], {}):
+                if k not in NOTAS and v not in (None, '', [], {}):
                     c[k] += 1
     return c
 
