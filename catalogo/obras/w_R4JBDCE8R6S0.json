@@ -1,7 +1,7 @@
 {
  "id": "w_R4JBDCE8R6S0",
  "titulo_original": "El Perdón",
- "anio": null,
+ "anio": 2025,
  "paises": [
   "E",
   "S"
@@ -15,7 +15,10 @@
  "afiche": {
   "archivo": "/assets/ficpa-2026/el-perdon.jpg"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 1796542,
+  "letterboxd": "el-perdon"
+ },
  "versiones": [
   {
    "etiqueta": "83 min",

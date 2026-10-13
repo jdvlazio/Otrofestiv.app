@@ -12,7 +12,10 @@
  "afiche": {
   "archivo": "/assets/ficpa-2026/muerta-la-ilusion.jpg"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 1796527,
+  "letterboxd": "muerta-la-ilusion"
+ },
  "versiones": [
   {
    "etiqueta": "10 min",

@@ -1,13 +1,13 @@
 {
  "id": "w_R4JC5FDMS8ZX",
  "titulo_original": "El Huaquero",
- "anio": null,
+ "anio": 2025,
  "paises": [
   "C",
   "O"
  ],
  "directores": [
-  "Harold DeVasten"
+  "Harold de Vasten"
  ],
  "sinopsis": {
   "es": "Manuel no se resigna a quedarse en la vereda con Silvio y Etelvina, sus padres septuagenarios. Todos sus hermanos han salido de la región, como la mayoría de los jóvenes, seducidos por las luces del mundo. Sin embargo, al conocer a Ezequiel, un viejo buscador de tesoros, que, al parecer, ha encontrado algo grande, le hacen confrontar su ambición, el amor, sus valores y los anhelos profundos de la vida."
@@ -15,7 +15,10 @@
  "afiche": {
   "archivo": "/assets/ficpa-2026/el-huaquero.jpg"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 1796534,
+  "letterboxd": "el-huaquero"
+ },
  "versiones": [
   {
    "etiqueta": "94 min",

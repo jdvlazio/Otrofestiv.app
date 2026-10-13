@@ -1,7 +1,7 @@
 {
  "id": "w_R4J8Q0Z0YE9M",
  "titulo_original": "Matas, marchitas vivas",
- "anio": null,
+ "anio": 2025,
  "paises": [],
  "directores": [
   "Johanna Martínez"
@@ -12,7 +12,10 @@
  "afiche": {
   "archivo": "/assets/ficpa-2026/matas-marchitas-vivas.jpg"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 1796547,
+  "letterboxd": "matas-marchitas-vivas"
+ },
  "versiones": [
   {
    "etiqueta": "6 min",

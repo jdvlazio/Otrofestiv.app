@@ -1,7 +1,7 @@
 {
  "id": "w_R4JE5ARYECGR",
  "titulo_original": "Sinfonía de las sombras en el fuego etéreo",
- "anio": null,
+ "anio": 2025,
  "paises": [
   "C",
   "O"
@@ -15,7 +15,10 @@
  "afiche": {
   "archivo": "/assets/ficpa-2026/sinfonia-de-las-sombras-en-el-fuego-etereo.jpg"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 1796540,
+  "letterboxd": "sinfonia-de-las-sombras-en-el-fuego-etereo"
+ },
  "versiones": [
   {
    "etiqueta": "5 min",

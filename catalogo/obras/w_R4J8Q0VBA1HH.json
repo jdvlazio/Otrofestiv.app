@@ -12,7 +12,10 @@
  "afiche": {
   "archivo": "/assets/ficpa-2026/cantar-de-noche-larga.jpg"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 1796546,
+  "letterboxd": "cantar-de-noche-larga"
+ },
  "versiones": [
   {
    "etiqueta": "8 min",

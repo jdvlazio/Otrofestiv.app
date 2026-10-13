@@ -12,7 +12,10 @@
  "afiche": {
   "archivo": "/assets/ficpa-2026/contaminado.jpg"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 1796529,
+  "letterboxd": "contaminado"
+ },
  "versiones": [
   {
    "etiqueta": "6 min",

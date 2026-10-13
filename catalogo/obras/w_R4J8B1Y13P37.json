@@ -21,7 +21,10 @@
  "afiche": {
   "archivo": "/assets/ficpa-2026/relatos-del-camino.jpg"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 1796541,
+  "letterboxd": "relatos-del-camino"
+ },
  "versiones": [
   {
    "etiqueta": "12 min",

@@ -15,7 +15,10 @@
  "afiche": {
   "archivo": "/assets/ficpa-2026/el-cielo-al-reves.jpg"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 1796545,
+  "letterboxd": "el-cielo-al-reves"
+ },
  "versiones": [
   {
    "etiqueta": "63 min",
