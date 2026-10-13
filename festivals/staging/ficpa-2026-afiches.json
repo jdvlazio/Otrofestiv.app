@@ -120,11 +120,23 @@
   "La Ruana de mi Compadre": {
    "archivo": "fuentes/afiches/ficpa-2026/la-ruana-de-mi-compadre.jpg",
    "fuente": "Drive del festival, «Afiches_Selección oficial 2026», archivo «LA RUANA DE MI COMPADRE_ POSTER.jpg» (13 oct 2026)"
+  },
+  "La Abuela Científica": {
+   "archivo": "fuentes/afiches/ficpa-2026/la-abuela-cientifica.jpg",
+   "fuente": "Drive del festival, «Afiches_Selección oficial 2026», archivo «La Abuela Científica_Poster.jpg» (13 oct 2026)",
+   "editorial": true,
+   "_forma": "still 16:9 oficial: va entero en el marco editorial"
+  },
+  "Loto": {
+   "archivo": "fuentes/afiches/ficpa-2026/loto.jpeg",
+   "fuente": "Drive del festival, «Afiches_Selección oficial 2026», archivo «LOTO_ póster.jpeg» (13 oct 2026)",
+   "editorial": true,
+   "_forma": "still 16:9 oficial: va entero en el marco editorial"
+  },
+  "Que Generosa Sos mi Tierra": {
+   "fuente": "Drive del festival, «Afiches_Selección oficial 2026», archivo «Que Generos sos mi Tierra_ Póster.jpeg» (13 oct 2026)",
+   "lamina": "fuentes/afiches/ficpa-2026/que-generosa-sos-mi-tierra.jpeg",
+   "_forma": "cuadrado: se estira entero a 2:3, sin recorte (regla de Popayán, 29 sep)"
   }
- },
- "_fuera": {
-  "La Abuela Científica": "apaisado 16:9: recortarlo a 2:3 se come el título (regla: 16:9 intacto)",
-  "Loto": "apaisado 16:9 (misma regla)",
-  "Que Generosa Sos mi Tierra": "cuadrado: el recorte corta el título"
  }
 }

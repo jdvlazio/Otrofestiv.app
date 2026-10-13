@@ -1540,7 +1540,9 @@
      "director": "Juliana Alexandra Insadará Arteaga",
      "duration": "4 min",
      "synopsis": "La Abuela Científica, cuenta la historia de Máxima, una peculiar inventora que intenta despertar a una sociedad hipnotizada por las pantallas. Cuando la tierra es amenazada por el invasor Axxus que codicia sus recursos naturales, un gran apagón obliga a las personas a levantar la vista de sus dispositivos. Guiados por la abuela Máxima, niños y adultos emprenden el reto de vivir una semana aprendiendo a valorar el medio ambiente, la energía limpia y las relaciones con los demás, hasta que descubren algo asombroso.",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "poster": "/assets/ficpa-2026/la-abuela-cientifica.jpg",
+     "posterSource": "editorial"
     },
     {
      "title": "Viena, Gijón",
@@ -1867,7 +1869,9 @@
      "flags": "🇨🇴",
      "duration": "5 min",
      "synopsis": "Qué generosa es mi tierra” es un viaje visual y poético por los paisajes de Nariño, donde la figura femenina representa el alma viva de la naturaleza y la esencia de la tierra nariñense. A través de cascadas, montañas, flores y la Laguna de La Cocha, una mujer de belleza natural recorre descalza distintos escenarios naturales, fusionándose con el entorno y transmitiendo libertad, belleza y conexión espiritual. Cada paisaje revela la riqueza cultural y natural del territorio, mientras la protagonista avanza hacia un encuentro más humano y emocional. El recorrido culmina en las calles y en el descubrimiento del amor pasional, cerrando la historia con una unión entre tierra, mujer y sentimiento.",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "poster": "/assets/ficpa-2026/que-generosa-sos-mi-tierra.jpg",
+     "posterSource": "custom"
     },
     {
      "title": "Flor de un Día",
@@ -1887,7 +1891,9 @@
      "flags": "🇨🇴",
      "duration": "6 min",
      "synopsis": "Loto es un llamado para creer en nuestros adentros, parar en el momento de nuestras vidas en que sintamos que todo está mal, observar alrededor y darnos cuenta de nuestros propios errores, reconocer el pasado para poder surgir en el futuro, ya que aun estando en el fango, podemos florecer como un loto, en medio de las aguas turbias, dar paso a lo inesperado.",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "poster": "/assets/ficpa-2026/loto.jpg",
+     "posterSource": "editorial"
     },
     {
      "title": "La Tejedora",
@@ -2051,7 +2057,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-13T09:46:07",
+  "fecha": "2026-10-13T09:59:45",
   "plan_sha": "928fb849ba5b43a1",
   "paso": 6,
   "cmd": "python3 pipeline/ensamblar.py ficpa-2026"

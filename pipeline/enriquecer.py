@@ -553,16 +553,21 @@ def main():
             os.makedirs(f'{REPO}/assets/{fid}', exist_ok=True)
             dest = f'{REPO}/assets/{fid}/{slug(t)}.jpg'
             origen = f'{REPO}/{d.get("lamina") or d["archivo"]}'
+            # `editorial: true` — un still 16:9 OFICIAL (el que el festival manda
+            # como «afiche» de una obra que no tiene uno vertical): va ENTERO, sin
+            # recorte, y la app lo enmarca con la banda de sección (POSTERS.md,
+            # regla dura 1: el 16:9 se respeta entero). No pasa por el criterio de
+            # afiche, que está hecho para piezas 2:3 (FICPA, 13 oct)
             if not os.path.exists(dest):
                 a_poster(origen, dest, lamina=bool(d.get('lamina')))
                 from afiche_criterio import veredicto
-                _m = veredicto(dest)
+                _m = None if d.get('editorial') else veredicto(dest)
                 if _m:
                     os.remove(dest)
                     print(f'   afiche declarado RECHAZADO · {t}: {_m}')
                     continue
             e = {**e, 'poster': f'/assets/{fid}/{slug(t)}.jpg',
-                 'posterSource': 'custom' if d.get('lamina') else 'oficial',
+                 'posterSource': 'editorial' if d.get('editorial') else 'custom' if d.get('lamina') else 'oficial',
                  '_afiche': f'declarado: {d["fuente"]}'}
             ok[t] = e
             declarados += 1
