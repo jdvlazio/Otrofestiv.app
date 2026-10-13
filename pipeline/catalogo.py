@@ -159,7 +159,10 @@ def enlazar(d, fid, obs, ix=None):
         for o in (f.get('film_list') or [f]):
             if o.get('type') == 'event' or not o.get('title'):
                 continue
-            w = obra_de(obs, fid, o['title'], o.get('tmdb_id'), ix)
+            # un renombre (`titulos_anteriores`, PR #1040) sigue siendo la misma
+            # obra: «También nuestra» → «También nosotras» (FICPA, 13 oct)
+            w = next((x for x in (obra_de(obs, fid, t, o.get('tmdb_id'), ix)
+                                  for t in [o['title']] + list(o.get('titulos_anteriores') or [])) if x), None)
             if w:
                 o['work_id'] = w
             else:

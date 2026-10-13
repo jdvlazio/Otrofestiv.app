@@ -63,7 +63,8 @@ def registros():
                             'pais': o.get('country'), 'tmdb': o.get('tmdb_id'),
                             'lb': o.get('lbSlug') if re.fullmatch(r'[a-z0-9-]+', str(o.get('lbSlug') or '')) else None,   # «⚠️ LB PENDIENTE» no es un slug
                             'poster': o.get('poster'), 'sinopsis': o.get('synopsis'),
-                            'sinopsis_en': o.get('synopsis_en'), 'title_en': o.get('title_en')})
+                            'sinopsis_en': o.get('synopsis_en'), 'title_en': o.get('title_en'),
+                            'anteriores': list(o.get('titulos_anteriores') or [])})
     return out
 
 
@@ -230,7 +231,9 @@ def materializar(R, grupos, key, cache):
     fus = catalogo.fusiones()
     for g in grupos:
         regs = [R[i] for i in g]
-        viejos = sorted({w for w in (catalogo.obra_de(obs_viejas, r['fest'], r['titulo'], r['tmdb']) for r in regs) if w})
+        # con sus títulos anteriores: un renombre conserva el id (FICPA, 13 oct)
+        viejos = sorted({w for w in (catalogo.obra_de(obs_viejas, r['fest'], t, r['tmdb'])
+                                     for r in regs for t in [r['titulo']] + r['anteriores']) if w})
         wid = viejos[0] if viejos else None
         for w in viejos[1:]:            # dos obras de ayer son hoy la misma: un id nunca se borra, se redirige
             fus.append({'absorbido': w, 'superviviente': wid, 'fecha': hoy, 'motivo': 'el constructor las reconoce como la misma obra'})
@@ -267,7 +270,7 @@ def materializar(R, grupos, key, cache):
             paises = t['paises']
             pr['paises'] = {'fuente': f'tmdb:{tm[0]}', 'regla': 'tmdb-manda'}
         o = {'id': wid, 'titulo_original': titulo, 'anio': anio, 'paises': paises, 'directores': dirs}
-        al = [{'titulo': x, 'tipo': 'festival'} for x in sorted(titulos) if x != titulo]
+        al = [{'titulo': x, 'tipo': 'festival'} for x in sorted(set(titulos) | {a for r in regs for a in r['anteriores']}) if x != titulo]
         al += [{'titulo': x, 'idioma': 'en', 'tipo': 'traduccion'} for x in sorted({r['title_en'] for r in regs if r.get('title_en')}) if x != titulo]
         if al:
             o['aliases'] = al

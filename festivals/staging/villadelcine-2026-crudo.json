@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "PROGRAMACIÓN «Caminos del tiempo» 2026 (PDF) + las fichas de obra de villadelcine.com",
-  "capturado": "2026-10-08",
+  "capturado": "2026-10-13",
   "que_aporta": "las funciones del festival con día, hora, sede, sala, sección y la lista de obras de cada programa de cortos",
   "url": "https://villadelcine.com/wp-content/uploads/2026/09/Programacion-caminos-del-tiempo-2026_compressed.pdf",
   "metodo": "la duración publicada es la REAL: cuando las obras suman más que la casilla dibujada, manda la suma (regla de Juan, 19 sep 2026)"
@@ -300,7 +300,7 @@
      "categoria": "Mejor Cortometraje Escolar",
      "tmdb_id": 1791659,
      "poster": "/assets/villadelcine-2026/sua-y-sie-guardianes-de-la-vida.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "sua-y-sie-guardianes-de-la-vida",
      "formato": "CORTOMETRAJE ESCOLAR"
     },
@@ -341,7 +341,7 @@
      "categoria": "Mejor Cortometraje Escolar",
      "tmdb_id": 1791661,
      "poster": "/assets/villadelcine-2026/manos-rojas.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "manos-rojas",
      "formato": "CORTOMETRAJE ESCOLAR"
     },
@@ -396,7 +396,7 @@
      "categoria": "International Universities",
      "tmdb_id": 1791663,
      "poster": "/assets/villadelcine-2026/memorias-del-alba.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "memorias-del-alba",
      "formato": "CORTOMETRAJE APASIONADO INTERNACIONAL"
     },
@@ -936,7 +936,7 @@
      "categoria": "Mejor Ópera Prima Nacional",
      "tmdb_id": 1791664,
      "poster": "/assets/villadelcine-2026/volar.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "volar-1",
      "formato": "ÓPERA PRIMA NACIONAL"
     },
@@ -1136,7 +1136,7 @@
      "categoria": "Mejor Cortometraje con Celular",
      "tmdb_id": 1791665,
      "poster": "/assets/villadelcine-2026/la-ultima-historia.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "la-ultima-historia",
      "formato": "CORTOMETRAJE CON CELULAR"
     },
@@ -1278,7 +1278,7 @@
      "sinopsis": "En las montañas del Putumayo, las abuelas guardan el conocimiento medicinal de las plantas y lo transmiten de generación en generación. Sus tejidos convierten la relación con el agua, la chagra y el monte en símbolos vivos. Un acercamiento sensible a una naturaleza que conserva una memoria más antigua y extensa que la nuestra.",
      "tmdb_id": 1791666,
      "poster": "/assets/villadelcine-2026/monte-curandero.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "monte-curandero",
      "formato": "PLANETA"
     },
@@ -1371,7 +1371,7 @@
      "sinopsis": "James, de doce años, vive con Francisco en una granja hasta que la policía irrumpe y revela que el hombre que llama padre lo secuestró años atrás. Trasladado a un centro terapéutico, el niño deberá reconstruir su identidad y aprender a reconocerse detrás de los comportamientos que imita para sobrevivir.",
      "tmdb_id": 1791667,
      "poster": "/assets/villadelcine-2026/quimera.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "quimera-4",
      "formato": "BOYACÁ EN LOS CAMPOS"
     },
@@ -1384,7 +1384,7 @@
      "sinopsis": "Carmen, una campesina de sesenta años, rescata de la laguna de Tota a un desconocido que flota junto a un requinto. Él se niega a revelar su identidad, pero el canto de la mítica Diablo Ballena rompe el silencio y conduce a ambos hacia un pasado que aún busca redención.",
      "tmdb_id": 1791668,
      "poster": "/assets/villadelcine-2026/diablo-ballena.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "diablo-ballena",
      "formato": "BOYACÁ EN LOS CAMPOS"
     },
@@ -1704,8 +1704,8 @@
      "categoria": "Mejor Cortometraje YoungFilm",
      "tmdb_id": 1791669,
      "poster": "/assets/villadelcine-2026/la-silla.jpg",
-     "posterSource": "oficial",
-     "lbSlug": "la-silla-3",
+     "posterSource": "tmdb",
+     "lbSlug": "la-silla-2024",
      "formato": "YOUNGFILM"
     },
     {
@@ -1731,7 +1731,7 @@
      "categoria": "Mejor Cortometraje Apasionado",
      "tmdb_id": 1791672,
      "poster": "/assets/villadelcine-2026/la-sombrilla-de-mama.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "la-sombrilla-de-mama",
      "formato": "CORTOMETRAJE APASIONADO NACIONAL"
     },
@@ -1818,8 +1818,8 @@
      "categoria": "Mejor Cortometraje Escolar",
      "tmdb_id": 1791673,
      "poster": "/assets/villadelcine-2026/solo.jpg",
-     "posterSource": "oficial",
-     "lbSlug": "solo-3",
+     "posterSource": "tmdb",
+     "lbSlug": "solo-2026-2",
      "formato": "CORTOMETRAJE ESCOLAR"
     },
     {
@@ -1879,7 +1879,7 @@
      "sinopsis": "A través de archivos y testimonios de quienes abrieron camino, este documental reconstruye el nacimiento y la consolidación del ballet en Colombia. Las primeras academias, maestras y bailarinas revelan una historia de disciplina, migraciones y perseverancia, rescatando del olvido a las mujeres que transformaron el movimiento en memoria y profesión.",
      "tmdb_id": 1791674,
      "poster": "/assets/villadelcine-2026/momentos-en-movimiento-primeros-pasos-del-ballet-en-colombia.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "momentos-en-movimiento-primeros-pasos-del",
      "formato": "PODEROSAS"
     },
@@ -1933,7 +1933,7 @@
     },
     {
      "titulo": "O Cravista",
-     "director": "Luis E. Ozório",
+     "director": "Luiz E. Ozório",
      "duracion_min": 104,
      "pais": "Brasil",
      "genero": "Documental biográfico",
@@ -1977,7 +1977,7 @@
      "categoria": "Mejor Videoclip",
      "tmdb_id": 1791675,
      "poster": "/assets/villadelcine-2026/benditos-los-viejos.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "benditos-los-viejos",
      "formato": "VIDEO MUSICAL"
     },
@@ -2004,7 +2004,7 @@
      "categoria": "Mejor Cortometraje con Celular",
      "tmdb_id": 1791676,
      "poster": "/assets/villadelcine-2026/no-se-fia-ni-aunque-lloren.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "no-se-fia-ni-aunque-lloren",
      "formato": "CORTOMETRAJE CON CELULAR"
     },
@@ -2019,7 +2019,7 @@
      "categoria": "Mejor Cortometraje Vertical",
      "tmdb_id": 1791677,
      "poster": "/assets/villadelcine-2026/anima-de-marea.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "anima-de-marea",
      "formato": "CORTOMETRAJE VERTICAL"
     },
@@ -2034,7 +2034,7 @@
      "categoria": "Mejor Cortometraje con Celular",
      "tmdb_id": 1791678,
      "poster": "/assets/villadelcine-2026/maleza.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "maleza-2026",
      "formato": "CORTOMETRAJE CON CELULAR"
     },
@@ -2342,7 +2342,7 @@
    "dia": "2026-10-17",
    "hora": "15:30",
    "sede": "Casa San Pedro Campestre - Villa de Leyva",
-   "duracion_min": 15,
+   "duracion_min": 30,
    "seccion": "Ruta Académica",
    "is_free": true,
    "acceso": "Entrada libre",

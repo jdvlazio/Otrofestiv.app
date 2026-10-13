@@ -93,6 +93,10 @@ TITULO = {
     # errata del festival: el corto de Sandra Rengifo es «AtmoSphaira» (IMDb
     # nm5653494 y CineAutopsia 2026); corregido con OK de Juan, 10 oct
     'AtmaSphaira': 'AtmoSphaira',
+    # la tarjeta de la programación dice «También nuestra»; la Selección Oficial
+    # («TAMBIÉN NOSOTRAS») y la lámina 7 del carrusel del 11 oct (p/DeX3bswAPAG)
+    # dicen «También nosotras». Lo cazó el vigía (13 oct)
+    'También nuestra': 'También nosotras',
     'Película Inaugural: Lactar': 'Lactar',
     'Cautivo – Con presencia del productor Alfredo Brito': 'Cautivo',
     'Corrientes del Amazonas, largometraje colombiano documental – en presencia del director': 'Corrientes del Amazonas',
@@ -173,6 +177,10 @@ ALIAS_SELECCION = {'Tierra Palestina': 'TIERRA PALESTINA. CAMBIO GLOBAL'}
 # Yacuanquer el JUEVES 15 a las 7 p. m., no el miércoles 14. Regla de Juan:
 # si publicaron hace poco en IG, se confía en IG.
 DEL_IG = {('Yacuanquer · Parque Principal', 'Cortos invitados de México'): {'dia': '2026-10-15'}}
+# la sección de un programa alterno que MEZCLA secciones, fijada como está
+# publicada: los experimentales juntan un corto de Ecos (Grecia) con dos de
+# Latidos, y la mayoría cambiaba sola según qué títulos se reconocían (13 oct)
+SECCION_PROGRAMA = {'Cortos experimentales internacionales y colombianos': 'Ecos del Mundo'}
 DIA_ALT = re.compile(r'(LUN|MAR|MIÉ|JUE|VIE|SÁB)\s+(\d{1,2})')
 
 
@@ -285,7 +293,7 @@ def obras_de_renglon(p):
     for parte in re.split(r';\s*', p):
         m = re.match(r'(.+?)\s+—\s+(.+?)(?:\s+\(([^)]+)\))?$', parte.strip())
         if m:
-            out.append({'titulo': m.group(1).strip(), 'director': m.group(2).strip(),
+            out.append({'titulo': TITULO.get(m.group(1).strip(), m.group(1).strip()), 'director': m.group(2).strip(),
                         **({'pais': m.group(3)} if m.group(3) else {})})
     return out
 
@@ -406,7 +414,8 @@ def main():
         elif len(obras) >= 2 or cat in ('Cortometrajes', 'Animación'):
             secs = [sel[plano(o['titulo'])]['seccion'] for o in obras if plano(o['titulo']) in sel]
             reg.update(titulo=tit, obras=obras,
-                       seccion='Churo Cósmico' if CHURO.search(tit) else
+                       seccion=SECCION_PROGRAMA[tit] if tit in SECCION_PROGRAMA else
+                       'Churo Cósmico' if CHURO.search(tit) else
                        # la más repetida; empatadas, la de la primera obra del programa
                        # (max sobre un set dependía del orden del hash: los experimentales
                        # salían Ecos o Latidos según la corrida, 12 oct)

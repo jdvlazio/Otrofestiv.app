@@ -1,14 +1,27 @@
 {
  "_provenance": {
   "fuente": "issue de radar #1071 — https://github.com/jdvlazio/Otrofestiv.app/issues/1071",
-  "capturado": "2026-10-12",
+  "capturado": "2026-10-13",
   "titulo": "RADAR: 22 FICPA — Festival Internacional de Cine de Pasto, 13–17 OCT 2026",
   "estado": "OPEN",
-  "comentarios": 0
+  "comentarios": 3
  },
  "issue": 1071,
  "titulo": "RADAR: 22 FICPA — Festival Internacional de Cine de Pasto, 13–17 OCT 2026",
  "estado": "OPEN",
  "cuerpo": "Fuente: calendario de Proimágenes (triaje del 10 oct 2026). No estaba en la lista ancla.\n\n- **Estado:** programación oficial PUBLICADA (web, WP `programacion2026`, modificada 9 oct) + Selección Oficial (`seleccionados2026`)\n- **Web:** https://www.ficpa.co/ · programación: https://www.ficpa.co/programacion2026/ · PDF: https://www.ficpa.co/wp-content/uploads/2026/10/PROGRAMACION-FICPA-IMPRESIONES-2026.pdf\n- **Formato:** 68 actividades oficiales en Pasto (Teatro Colombia, Banco de la República, Casa de la Cultura, universidades) + 24 de programación alterna (universidades, colegios y municipios de Nariño: Chachagüí, Yacuanquer, La Florida, Jamondino)\n- **Secciones (Selección Oficial):** Sol de los Pastos (Ecos del Mundo, Latidos del Cine Colombiano), Cámaras de Barniz (cine nariñense), Churo Cósmico (temática)\n- **Discrepancia:** la página de la película inaugural (Lactar) dice 7:00 p. m.; la programación, 6:30 p. m.\n\nPlan: onboarding en rama `data/ficpa-2026` (10 oct).",
- "comentarios": []
+ "comentarios": [
+  {
+   "fecha": "2026-10-12",
+   "cuerpo": "**Vigía 12 oct** — 1 contradicción\n\n- **«Cortos invitados de México», Yacuanquer, Parque Principal.** La programación oficial en láminas de @ficpapasto (https://www.instagram.com/p/DeX3bswAPAG/, 11 oct, lámina 8 «FICPA Expandido») dice **jueves 15, 7:00 p. m.** La web (ficpa.co/programacion2026, modificada el 9 oct) dice «MIÉ 14», y así la tiene la app (14 oct, 19:00). La lámina es más nueva y además es coherente con el patrón de cada municipio, donde el taller y la función caen el mismo día: Yacuanquer tiene el taller el jue 15, Chachagüí ambos el 14 y La Florida ambos el 16.\n- **Acción sugerida:** mover la función al jueves 15 a las 19:00, o confirmarlo con el festival.\n- El resto de las láminas (13–17 y la programación alterna) cuadra con la app. El networking del jue 15 (El Colibrí y el Mago, 9:00 o 9:30 p. m. según la fuente) es solo para acreditados y está fuera de la app.\n"
+  },
+  {
+   "fecha": "2026-10-12",
+   "cuerpo": "Vigía 12 oct 2026 (solo reporte): la web sigue con la modificación del 9 oct y el PDF también es del 9 oct. Hay una sola diferencia entre fuentes: la lámina de Academia del 10 oct ([DeU1FzgiRT0](https://www.instagram.com/p/DeU1FzgiRT0/), lámina 3) pone el **Foro de Cine y Pedagogía** el vie 16 a las **4:30 p. m.** La web y la programación oficial del 11 oct ([DeX3bswAPAG](https://www.instagram.com/p/DeX3bswAPAG/), lámina 5) dicen **3:00 p. m.**, igual que la app. Del mismo modo, el pie de [DeW5P5-FdHh](https://www.instagram.com/p/DeW5P5-FdHh/) pone el cine foro de medio ambiente a las 7:30 p. m., pero la programación oficial lo pone a las 10:00 a. m., como la app. No hace falta cambiar nada."
+  },
+  {
+   "fecha": "2026-10-13",
+   "cuerpo": "**Vigía 13 oct 2026** — la web (WP programacion2026, modificada el 12 oct 19:10) pasada por el mismo ficpa-2026-crudo.py da 51 funciones, que coinciden con producción en día, hora, título y sede. Los programas tienen las mismas obras, salvo una diferencia:\n- «Trabajo, economías y futuro» (16 oct, 15:00): la web lista **«También nosotras»** y la app dice **«También nuestra»**. Hay que ver cuál es el título correcto.\nIG @ficpapasto: lo nuevo no trae cambios (la master class de Trompetero sigue el 13 oct a las 10:00 en la Casa de la Cultura, igual que en la app)."
+  }
+ ]
 }

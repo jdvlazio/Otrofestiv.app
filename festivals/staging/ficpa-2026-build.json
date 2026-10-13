@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "ficpa.co — Programación oficial 2026 (WP programacion2026) + Selección Oficial",
-  "capturado": "2026-10-12",
+  "capturado": "2026-10-13",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_secciones": "Las de la Selección Oficial, tal cual (Ecos del Mundo y Latidos del Cine Colombiano son las dos mitades de «Sol de los Pastos»); Academia e Industria son los dos menús del sitio; «Programación alterna» es el nombre que el sitio da a las funciones fuera de las salas principales.",
@@ -1423,8 +1423,11 @@
    "is_cortos": true,
    "film_list": [
     {
-     "title": "También nuestra",
-     "director": "Lady Vanessa, Ana Portela, Clara Cuaspud y Amparo Cuaspud"
+     "title": "También nosotras",
+     "director": "Lady Vanessa, Ana Portela, Clara Cuaspud y Amparo Cuaspud",
+     "titulos_anteriores": [
+      "También nuestra"
+     ]
     },
     {
      "title": "La Abuela Científica",
@@ -1866,7 +1869,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-12T10:17:13",
+  "fecha": "2026-10-13T07:48:38",
   "plan_sha": "e3a55f932981c213",
   "paso": 6,
   "cmd": "python3 pipeline/ensamblar.py ficpa-2026"
