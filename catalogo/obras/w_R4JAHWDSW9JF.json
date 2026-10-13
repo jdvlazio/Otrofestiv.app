@@ -1,12 +1,29 @@
 {
  "id": "w_R4JAHWDSW9JF",
  "titulo_original": "BOCA",
- "anio": null,
- "paises": [],
+ "anio": 2024,
+ "paises": [
+  "MX"
+ ],
  "directores": [
   "Diego Villaseñor"
  ],
- "xref": {},
+ "sinopsis": {
+  "en": "Boca de Tomatlán, a small fishing village on the coast of Puerto Vallarta, has transformed from a remote haven into a tourist magnet. With its growing popularity, the question arises: Can its infrastructure keep pace with this boom without losing its essence?"
+ },
+ "afiche": {
+  "archivo": "/assets/ficpa-2026/boca.jpg"
+ },
+ "xref": {
+  "tmdb": 1381294,
+  "letterboxd": "boca-2024"
+ },
+ "versiones": [
+  {
+   "etiqueta": "18 min",
+   "duracion_min": 18
+  }
+ ],
  "presentaciones": [
   "ficpa-2026"
  ]
