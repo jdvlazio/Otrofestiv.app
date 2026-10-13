@@ -3777,3 +3777,34 @@ test('P-GQ — Gratis y Con Q&A filtran por función y solo aparecen donde separ
   });
   expect(v, 'todo gratis y sin Q&A: no aparece ninguna de las dos').toEqual([]);
 });
+
+// T-OJO — el ojo del Diario (Juan, 12 oct): en una vista es ESTADO, ámbar; la
+// estrella de una no calificada sigue tenue; tocar el ojo la saca y «Deshacer»
+// la devuelve tal cual (antes borraba sin vuelta y el ojo gris parecía apagado).
+test('T-OJO — Diario: ojo ámbar en la vista, estrella tenue sin nota, sacar se deshace', async ({ page }) => {
+  await enterFestival(page, 'jardin2026', '2026-09-28T12:00:00-05:00');
+  const r = await page.evaluate(async () => {
+    const w = ms => new Promise(res => setTimeout(res, ms));
+    const ts = ['La marcha del hambre', 'Romero'];
+    state.set('watched', new Set(ts)); state.set('filmRatings', {}); state.set('notWatched', new Set());
+    state.set('savedAgenda', { scenarioIdx: 0, schedule: [] });
+    switchMainNav('mnav-miplan'); showAgView(); await w(800);
+    const ojo = document.querySelector('.dw-ctrl.dw-vista');
+    const estrella = document.querySelector('.dw-ctrl-star');
+    const color = el => getComputedStyle(el).color;
+    const ambar = getComputedStyle(document.documentElement).getPropertyValue('--amber').trim();
+    const ojoColor = color(ojo), estrellaColor = color(estrella);
+    const titulo = ojo.dataset.title;
+    ojo.click(); await w(400);
+    const sacada = !watched.has(titulo);
+    const deshacer = [...document.querySelectorAll('#prio-toast button, .prio-toast button')].find(b => /Deshacer/.test(b.textContent));
+    deshacer && deshacer.click(); await w(400);
+    return { ojoColor, estrellaColor, ambar, sacada, hayDeshacer: !!deshacer, vuelta: watched.has(titulo) };
+  });
+  const rgb = h => { const n = parseInt(h.replace('#', ''), 16); return `rgb(${n >> 16}, ${(n >> 8) & 255}, ${n & 255})`; };
+  expect(r.ojoColor, 'el ojo de una vista es ámbar').toBe(rgb(r.ambar));
+  expect(r.estrellaColor, 'la estrella sin nota no es ámbar').not.toBe(rgb(r.ambar));
+  expect(r.sacada, 'tocar el ojo la saca').toBe(true);
+  expect(r.hayDeshacer, 'y ofrece Deshacer').toBe(true);
+  expect(r.vuelta, 'Deshacer la devuelve a vista').toBe(true);
+});

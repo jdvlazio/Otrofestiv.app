@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202610121558">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202610121558">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202610122011">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202610122011">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -1978,6 +1978,7 @@ mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100
 .dw-nota-2{font-size:var(--t-xs);color:var(--gray);margin-top:var(--sp-1)}
 .dw-nota-x{margin-left:auto;background:none;border:none;padding:0;min-width:32px;min-height:32px;display:flex;align-items:center;justify-content:center;color:var(--gray);cursor:pointer}
 .dw-ctrl svg{width:14px;height:14px}
+.dw-ctrl.dw-vista{color:var(--amber)} /* el ojo de una vista es estado, no invitación (12 oct) */
 .dw-ctrl-star svg{width:12px;height:12px;fill:currentColor;stroke:none}
 .dw-stars{display:flex;gap:2px;min-height:10px}
 .dw-star{display:flex;color:var(--white-20,rgba(240,237,232,.2))}
@@ -3757,7 +3758,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202610121558";
+    s.src="/src/main.js?v=202610122011";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el
