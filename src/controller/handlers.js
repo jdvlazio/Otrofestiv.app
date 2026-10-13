@@ -1192,7 +1192,19 @@ export function diaryToggleVista(title, e) {
     if(e) e.stopPropagation();
     state.batchUpdate({ notWatched: state._delFromSet(state.snapshot().notWatched, title) });
     saveNotWatched(); updateCardState(title);
-  } else toggleWatched(title, e);
+  } else {
+    // Sacar una VISTA del Diario siempre se puede deshacer (Juan, 12 oct: el ojo
+    // gris se leía «apagado» y tocarlo borraba sin vuelta). Se guarda lo de antes
+    // y el aviso ofrece «Deshacer», como al quitar de Intereses.
+    const {watched:w0, notWatched:n0, watchlist:l0}=state.snapshot();
+    const eraVista=effectiveWatched().has(title);
+    toggleWatched(title, e);
+    if(eraVista) showActionToast(t('plan_vuelta_a',{donde:_vueltaA(title)}),t('cta_deshacer'),()=>{
+      state.batchUpdate({ watched:w0, notWatched:n0, watchlist:l0 });
+      saveState('wl','watched','notWatched'); updateCardState(title); _reRenderIntereses();
+      _refreshDiaryIfOpen();
+    },6000);
+  }
   storage.setDiarioNotaVista();
   _refreshDiaryIfOpen();
 }

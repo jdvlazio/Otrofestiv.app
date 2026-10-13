@@ -1569,7 +1569,10 @@ function _dwCard(state,{title,poster,posterSVG,rating,off,califica=true}){
       :rating
       ?`<div class="dw-stars">${[1,2,3,4,5].map(i=>`<span class="dw-star${i<=rating?' on':''}">${ICONS.starFill}</span>`).join('')}</div>`
       :`<button class="dw-ctrl dw-ctrl-star" data-action="openRatingSheet" data-title="${safe}" data-stop="1" aria-label="${t('aria_calificar')}">${ICONS.starFill}</button>`)
-     +`<button class="dw-ctrl" data-action="diaryToggleVista" data-title="${safe}" data-stop="1" aria-label="${t('aria_no_la_vi')}">${ICONS.eye}</button>`;
+     // El ojo de una VISTA es su estado, en ámbar (Juan, 12 oct): gris se leía
+     // «apagado». Tocarlo la saca —con «Deshacer»—; la estrella sigue siendo la
+     // invitación tenue mientras no esté calificada.
+     +`<button class="dw-ctrl dw-vista" data-action="diaryToggleVista" data-title="${safe}" data-stop="1" aria-label="${t('aria_no_la_vi')}">${ICONS.eye}</button>`;
   return`<div class="dw-card">
     <div class="dw-poster${off?' dw-off':''} js-open-pel" data-title="${safe}">
       ${posterSVG
