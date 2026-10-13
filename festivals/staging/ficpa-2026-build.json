@@ -1318,7 +1318,17 @@
     },
     {
      "title": "BOCA",
-     "director": "Diego Villaseñor"
+     "director": "Diego Villaseñor",
+     "poster": "/assets/ficpa-2026/boca.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "boca-2024",
+     "tmdb_id": 1381294,
+     "synopsis_en": "Boca de Tomatlán, a small fishing village on the coast of Puerto Vallarta, has transformed from a remote haven into a tourist magnet. With its growing popularity, the question arises: Can its infrastructure keep pace with this boom without losing its essence?",
+     "genre": "Documental",
+     "country": "Mexico",
+     "year": 2024,
+     "duration": "18 min",
+     "flags": "🇲🇽"
     }
    ]
   },
@@ -2057,7 +2067,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-13T09:59:45",
+  "fecha": "2026-10-13T11:31:10",
   "plan_sha": "928fb849ba5b43a1",
   "paso": 6,
   "cmd": "python3 pipeline/ensamblar.py ficpa-2026"
