@@ -6,7 +6,19 @@
  "directores": [
   "Cristhian Izquierdo"
  ],
+ "sinopsis": {
+  "es": "Basado en la estética del cine en los años 50s y 60s con inspiración en Alfred Hitchcock, este cortometraje cuenta la historia de una mujer que sufre de misofobia, cuando su realidad se desmorona y descubre que la verdadera contaminación no está en su casa, sino en su mente."
+ },
+ "afiche": {
+  "archivo": "/assets/ficpa-2026/contaminado.jpg"
+ },
  "xref": {},
+ "versiones": [
+  {
+   "etiqueta": "6 min",
+   "duracion_min": 6
+  }
+ ],
  "presentaciones": [
   "ficpa-2026"
  ]

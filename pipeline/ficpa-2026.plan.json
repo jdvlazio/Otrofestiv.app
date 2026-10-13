@@ -160,7 +160,9 @@
   "_fuentes_versionadas": {
    "festivals/staging/ficpa-2026-radar.json": "el volcado del radar #1071, que escribe y relee pipeline/radar.py",
    "festivals/staging/ficpa-2026-correcciones.json": "fichas de TMDB declaradas a mano y el porqué de cada obra sin afiche",
-   "festivals/staging/ficpa-2026-sinopsis.json": "sinopsis declaradas (traducción nuestra de la oficial en inglés), cada una con su fuente; la lee enriquecer.py"
+   "festivals/staging/ficpa-2026-sinopsis.json": "sinopsis declaradas (traducción nuestra de la oficial en inglés), cada una con su fuente; la lee enriquecer.py",
+   "festivals/staging/ficpa-2026-afiches.json": "afiches oficiales que mandó el festival por Drive (13 oct), mirados en hoja de contacto; los lee enriquecer.py donde TMDB y lo ya publicado no tienen",
+   "festivals/staging/ficpa-2026-datos-oficiales.json": "el .docx de la Selección que mandó el festival (13 oct): dirección, duración, país y sinopsis; lo lee ficpa-2026-crudo.py"
   }
  }
 }

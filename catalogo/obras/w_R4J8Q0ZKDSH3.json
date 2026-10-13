@@ -4,9 +4,21 @@
  "anio": null,
  "paises": [],
  "directores": [
-  "Valentina López"
+  "Victoria Valentina López Paz"
  ],
+ "sinopsis": {
+  "es": "CHARLOTTE lleva años grabando videos para CRISTIAN, su mejor amigo de infancia. Comparte con él sus miedos, pérdidas, amores, crisis y sueños, mientras él permanece detenido en el tiempo con apenas nueve años. Un coming of age de ciencia ficción sobre crecer, recordar y aprender a vivir con aquello que nunca pudimos dejar atrás."
+ },
+ "afiche": {
+  "archivo": "/assets/ficpa-2026/recuerdos.jpg"
+ },
  "xref": {},
+ "versiones": [
+  {
+   "etiqueta": "8 min",
+   "duracion_min": 8
+  }
+ ],
  "presentaciones": [
   "ficpa-2026"
  ]

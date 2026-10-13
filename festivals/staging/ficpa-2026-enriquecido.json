@@ -122,9 +122,10 @@
    "duracion_tmdb": 15,
    "pais_tmdb": "",
    "lbSlug": "chaika-2025",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_verificado": "el catálogo ya la tiene (w_R4EP71550W43, cineautopsia-2026, fantasmagoria-2026, fantasofest-2026, ficpa-2026, narrarelfuturo-2026, popayan-2026)",
+   "work_id": "w_R4EP71550W43",
    "_director": "Ingrid Paola Bonilla Rodríguez",
-   "_sondeado": "2026-10-10",
+   "_sondeado": "2026-10-13",
    "_ya_publicada": [
     {
      "festival": "cineautopsia-2026",
@@ -206,9 +207,10 @@
    "duracion_tmdb": 14,
    "pais_tmdb": "",
    "lbSlug": "el-mundo-de-humberto",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
-   "_director": "Paula Ortiz",
-   "_sondeado": "2026-10-10",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "El Mundo de Humberto",
+   "_director": "Paula Ortiz Gónima",
+   "_sondeado": "2026-10-13",
    "_ya_publicada": [
     {
      "festival": "ficcali-2026",
@@ -255,9 +257,10 @@
    "duracion_tmdb": 12,
    "pais_tmdb": "Colombia",
    "lbSlug": "en-su-sombra-fertil",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
-   "_director": "Andrés Dávila",
-   "_sondeado": "2026-10-10",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "En su Sombra Fértil",
+   "_director": "Andrés Rodrigo Dávila Argoty",
+   "_sondeado": "2026-10-13",
    "_ya_publicada": [
     {
      "festival": "siembrafest-2026",
@@ -306,7 +309,7 @@
    "pais_tmdb": "",
    "lbSlug": "harvey-maude",
    "_verificado": "declarada a mano: director confirmado en TMDB (Álex Mineralex, España, 2026, 8 min); el título del festival no casaba solo (10 oct 2026)",
-   "_director": "Alex Minerales",
+   "_director": "Alex Mineralex",
    "_sondeado": "2026-10-13",
    "poster": "/assets/ficpa-2026/harvey-maude.jpg",
    "posterSource": "tmdb"
@@ -344,9 +347,10 @@
    "duracion_tmdb": 12,
    "pais_tmdb": "Colombia",
    "lbSlug": "la-gallina-saraviada",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
-   "_director": "Ingrid Bonilla",
-   "_sondeado": "2026-10-10",
+   "_verificado": "el catálogo ya la tiene (w_R4JDE7TVVFNW, ficpa-2026, siembrafest-2026)",
+   "work_id": "w_R4JDE7TVVFNW",
+   "_director": "Ingrid Paola Bonilla Rodriguez",
+   "_sondeado": "2026-10-13",
    "_ya_publicada": [
     {
      "festival": "siembrafest-2026",
@@ -373,9 +377,10 @@
    "duracion_tmdb": 19,
    "pais_tmdb": "Spain",
    "lbSlug": "la-fuerza-del-silencio",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
-   "_director": "Samuel Vela",
-   "_sondeado": "2026-10-10",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "La fuerza del silencio",
+   "_director": "Samuel Vela Pérez",
+   "_sondeado": "2026-10-13",
    "poster": "/assets/ficpa-2026/la-fuerza-del-silencio.jpg",
    "posterSource": "tmdb"
   },
@@ -428,9 +433,10 @@
    "duracion_tmdb": 0,
    "pais_tmdb": "",
    "lbSlug": "sierra-el-album-mortuorio",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
-   "_director": "Carlos Ortiz",
-   "_sondeado": "2026-10-10",
+   "_verificado": "el catálogo ya la tiene (w_R4JC5FP969FG, ficpa-2026, villadelcine-2026)",
+   "work_id": "w_R4JC5FP969FG",
+   "_director": "Carlos Ortiz Alarcón",
+   "_sondeado": "2026-10-13",
    "_ya_publicada": [
     {
      "festival": "villadelcine-2026",
@@ -446,6 +452,25 @@
    "posterSource": "tmdb"
   },
   {
+   "titulo": "También nosotras",
+   "tmdb_id": 1746367,
+   "titulo_original": "También nosotras",
+   "poster_path": "/xgyzaafDbegAT4J60f9QaRY9NGT.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Amparo and Ana get up at 5 a.m. to take care of their home, raise animals, and harvest potatoes. Their work sustains the community, even though many dismiss it by saying that “they don’t do anything.”",
+   "genero": "Documental",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 5,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "tambien-nosotras",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "También nosotras",
+   "_director": "Lady Vásquez, Ana Puertas, Alba Cuaspud, Amparo Cuaspud, Piedad Cuaspiud",
+   "_sondeado": "2026-10-13",
+   "poster": "/assets/ficpa-2026/tambien-nosotras.jpg",
+   "posterSource": "tmdb"
+  },
+  {
    "titulo": "Tinku",
    "tmdb_id": 1475741,
    "titulo_original": "Tinku",
@@ -457,9 +482,10 @@
    "duracion_tmdb": 12,
    "pais_tmdb": "Bolivia",
    "lbSlug": "tinku-2025",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
-   "_director": "Román Nina",
-   "_sondeado": "2026-10-10",
+   "_verificado": "el catálogo ya la tiene (w_R4J9QZDYNKV8, ficpa-2026)",
+   "work_id": "w_R4J9QZDYNKV8",
+   "_director": "Román Nina Nina",
+   "_sondeado": "2026-10-13",
    "poster": "/assets/ficpa-2026/tinku.jpg",
    "posterSource": "tmdb"
   },
@@ -498,7 +524,7 @@
    "title_en": "Tuktu, Father Maize",
    "lbSlug": "tuktu-father-maize",
    "_verificado": "declarada a mano: el catálogo único ya la tiene verificada (Popayán y Villa del Cine la publicaron con esta ficha; 2025, 13 min). TMDB escribe «Pietro»: se queda «Prieto Muriel», como lo acreditan los seis festivales (12 oct 2026). Afiche: el de color que ya publicamos (FICDEH, Popayán…), no el boceto de TMDB; los dos son oficiales",
-   "_director": "Mauricio Prieto",
+   "_director": "Mauricio Prieto Muriel",
    "_sondeado": "2026-10-13",
    "poster": "/assets/ficdeh/tuktu-padre-maiz.jpg",
    "_afiche": "ya publicada en ficdeh-2026: se reusa su afiche"
@@ -520,6 +546,192 @@
    "_sondeado": "2026-10-10",
    "poster": "/assets/ficpa-2026/viena-gijon.jpg",
    "posterSource": "tmdb"
+  },
+  {
+   "titulo": "El Huaquero",
+   "poster": "/assets/ficpa-2026/el-huaquero.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: Drive del festival, «Afiches_Selección oficial 2026», archivo «EL HUAQUERO_Póster.jpg» (13 oct 2026)"
+  },
+  {
+   "titulo": "Relatos del Camino",
+   "poster": "/assets/ficpa-2026/relatos-del-camino.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: Drive del festival, «Afiches_Selección oficial 2026», archivo «Relatos del camino_Afiche.jpg» (13 oct 2026)"
+  },
+  {
+   "titulo": "Achikanain",
+   "poster": "/assets/ficpa-2026/achikanain.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: Drive del festival, «Afiches_Selección oficial 2026», archivo «Achikanain_Poster.png» (13 oct 2026)"
+  },
+  {
+   "titulo": "Después del Espanto",
+   "poster": "/assets/ficpa-2026/despues-del-espanto.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: Drive del festival, «Afiches_Selección oficial 2026», archivo «Después del  Espanto_Poster.jpg» (13 oct 2026)"
+  },
+  {
+   "titulo": "Corrientes del Amazonas",
+   "poster": "/assets/ficpa-2026/corrientes-del-amazonas.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: Drive del festival, «Afiches_Selección oficial 2026», archivo «PosterAmazonas_ImprimirVertical.png» (13 oct 2026)"
+  },
+  {
+   "titulo": "El Cielo al Revés",
+   "poster": "/assets/ficpa-2026/el-cielo-al-reves.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: Drive del festival, «Afiches_Selección oficial 2026», archivo «El cielo al revés.jpg» (13 oct 2026)"
+  },
+  {
+   "titulo": "Tierra Palestina",
+   "poster": "/assets/ficpa-2026/tierra-palestina.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: Drive del festival, «Afiches_Selección oficial 2026», archivo «Tierra Palestina. Cambio Global_ Poster.png» (13 oct 2026)"
+  },
+  {
+   "titulo": "Cautivo",
+   "poster": "/assets/ficpa-2026/cautivo.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: Drive del festival, «Afiches_Selección oficial 2026», archivo «CAUTIVO_ Póster.png» (13 oct 2026)"
+  },
+  {
+   "titulo": "El Perdón",
+   "poster": "/assets/ficpa-2026/el-perdon.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: Drive del festival, «Afiches_Selección oficial 2026», archivo «El Perdón_póster.jpeg» (13 oct 2026)"
+  },
+  {
+   "titulo": "Tudnum, Tierra Sagrada",
+   "poster": "/assets/ficpa-2026/tudnum-tierra-sagrada.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: Drive del festival, «Afiches_Selección oficial 2026», archivo «AFICHE TUDNUM 72 PPP.jpg» (13 oct 2026)"
+  },
+  {
+   "titulo": "Memoria, territorio y vida",
+   "poster": "/assets/ficpa-2026/memoria-territorio-y-vida.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: Drive del festival, «Afiches_Selección oficial 2026», archivo «Memoria, territorio y vida.png» (13 oct 2026)"
+  },
+  {
+   "titulo": "El Reflejo de Doña Gloria",
+   "poster": "/assets/ficpa-2026/el-reflejo-de-dona-gloria.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: Drive del festival, «Afiches_Selección oficial 2026», archivo «EL REFLEJO DE DOÑA GLORIA PSO -01.jpg.jpeg» (13 oct 2026)"
+  },
+  {
+   "titulo": "La Pandemia del Feminicidio",
+   "poster": "/assets/ficpa-2026/la-pandemia-del-feminicidio.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: Drive del festival, «Afiches_Selección oficial 2026», archivo «LA PANDEMIA DEL FEMINICIDIO_ POSTER.jpg» (13 oct 2026)"
+  },
+  {
+   "titulo": "Pacto de libertad",
+   "poster": "/assets/ficpa-2026/pacto-de-libertad.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: Drive del festival, «Afiches_Selección oficial 2026», archivo «Pacto de libertad_ afiche.jpg» (13 oct 2026)"
+  },
+  {
+   "titulo": "Sinfonía de las sombras en el fuego etéreo",
+   "poster": "/assets/ficpa-2026/sinfonia-de-las-sombras-en-el-fuego-etereo.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: Drive del festival, «Afiches_Selección oficial 2026», archivo «Sinfonía de las sombras en el fuego etéreo_Poster.jpg» (13 oct 2026)"
+  },
+  {
+   "titulo": "El sueño del Cusillo",
+   "poster": "/assets/ficpa-2026/el-sueno-del-cusillo.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: Drive del festival, «Afiches_Selección oficial 2026», archivo «El sueño del Cusillo_Póster.jpg» (13 oct 2026)"
+  },
+  {
+   "titulo": "Coyima, lugar sagrado",
+   "poster": "/assets/ficpa-2026/coyima-lugar-sagrado.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: Drive del festival, «Afiches_Selección oficial 2026», archivo «Coyima, lugar sagrado.png» (13 oct 2026)"
+  },
+  {
+   "titulo": "80KM",
+   "poster": "/assets/ficpa-2026/80km.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: Drive del festival, «Afiches_Selección oficial 2026», archivo «80KM_afiche oficial.jpg» (13 oct 2026)"
+  },
+  {
+   "titulo": "Retorno",
+   "poster": "/assets/ficpa-2026/retorno.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: Drive del festival, «Afiches_Selección oficial 2026», archivo «Retorno_ Póster.png» (13 oct 2026)"
+  },
+  {
+   "titulo": "Laureano",
+   "poster": "/assets/ficpa-2026/laureano.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: Drive del festival, «Afiches_Selección oficial 2026», archivo «Afiche Laureano 3.jpg» (13 oct 2026)"
+  },
+  {
+   "titulo": "Muerta la ilusión",
+   "poster": "/assets/ficpa-2026/muerta-la-ilusion.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: Drive del festival, «Afiches_Selección oficial 2026», archivo «Muerta la ilusión_poster.jpg» (13 oct 2026)"
+  },
+  {
+   "titulo": "Cantar de Noche Larga",
+   "poster": "/assets/ficpa-2026/cantar-de-noche-larga.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: Drive del festival, «Afiches_Selección oficial 2026», archivo «CANTAR DE NOCHE LARGA_ Póster.png» (13 oct 2026)"
+  },
+  {
+   "titulo": "Contaminado",
+   "poster": "/assets/ficpa-2026/contaminado.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: Drive del festival, «Afiches_Selección oficial 2026», archivo «Contaminado_Póster.jpeg» (13 oct 2026)"
+  },
+  {
+   "titulo": "Recuerdos",
+   "poster": "/assets/ficpa-2026/recuerdos.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: Drive del festival, «Afiches_Selección oficial 2026», archivo «Recuerdos_Póster.jpg» (13 oct 2026)"
+  },
+  {
+   "titulo": "Matas, marchitas vivas",
+   "poster": "/assets/ficpa-2026/matas-marchitas-vivas.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: Drive del festival, «Afiches_Selección oficial 2026», archivo «Matas marchitas_Póster.png» (13 oct 2026)"
+  },
+  {
+   "titulo": "Flor de un Día",
+   "poster": "/assets/ficpa-2026/flor-de-un-dia.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: Drive del festival, «Afiches_Selección oficial 2026», archivo «Flor de un Día _  Póster.jpeg» (13 oct 2026)"
+  },
+  {
+   "titulo": "La Tejedora",
+   "poster": "/assets/ficpa-2026/la-tejedora.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: Drive del festival, «Afiches_Selección oficial 2026», archivo «La Tejedora_Póster.png» (13 oct 2026)"
+  },
+  {
+   "titulo": "La Ruana de mi Compadre",
+   "poster": "/assets/ficpa-2026/la-ruana-de-mi-compadre.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: Drive del festival, «Afiches_Selección oficial 2026», archivo «LA RUANA DE MI COMPADRE_ POSTER.jpg» (13 oct 2026)"
+  },
+  {
+   "titulo": "La Abuela Científica",
+   "poster": "/assets/ficpa-2026/la-abuela-cientifica.jpg",
+   "posterSource": "editorial",
+   "_afiche": "declarado: Drive del festival, «Afiches_Selección oficial 2026», archivo «La Abuela Científica_Poster.jpg» (13 oct 2026)"
+  },
+  {
+   "titulo": "Loto",
+   "poster": "/assets/ficpa-2026/loto.jpg",
+   "posterSource": "editorial",
+   "_afiche": "declarado: Drive del festival, «Afiches_Selección oficial 2026», archivo «LOTO_ póster.jpeg» (13 oct 2026)"
+  },
+  {
+   "titulo": "Que Generosa Sos mi Tierra",
+   "poster": "/assets/ficpa-2026/que-generosa-sos-mi-tierra.jpg",
+   "posterSource": "custom",
+   "_afiche": "declarado: Drive del festival, «Afiches_Selección oficial 2026», archivo «Que Generos sos mi Tierra_ Póster.jpeg» (13 oct 2026)"
   }
  ],
  "verificadas": {
@@ -622,9 +834,10 @@
    "duracion_tmdb": 15,
    "pais_tmdb": "",
    "lbSlug": "chaika-2025",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_verificado": "el catálogo ya la tiene (w_R4EP71550W43, cineautopsia-2026, fantasmagoria-2026, fantasofest-2026, ficpa-2026, narrarelfuturo-2026, popayan-2026)",
+   "work_id": "w_R4EP71550W43",
    "_director": "Ingrid Paola Bonilla Rodríguez",
-   "_sondeado": "2026-10-10",
+   "_sondeado": "2026-10-13",
    "_ya_publicada": [
     {
      "festival": "cineautopsia-2026",
@@ -704,9 +917,10 @@
    "duracion_tmdb": 14,
    "pais_tmdb": "",
    "lbSlug": "el-mundo-de-humberto",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
-   "_director": "Paula Ortiz",
-   "_sondeado": "2026-10-10",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "El Mundo de Humberto",
+   "_director": "Paula Ortiz Gónima",
+   "_sondeado": "2026-10-13",
    "_ya_publicada": [
     {
      "festival": "ficcali-2026",
@@ -751,9 +965,10 @@
    "duracion_tmdb": 12,
    "pais_tmdb": "Colombia",
    "lbSlug": "en-su-sombra-fertil",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
-   "_director": "Andrés Dávila",
-   "_sondeado": "2026-10-10",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "En su Sombra Fértil",
+   "_director": "Andrés Rodrigo Dávila Argoty",
+   "_sondeado": "2026-10-13",
    "_ya_publicada": [
     {
      "festival": "siembrafest-2026",
@@ -800,7 +1015,7 @@
    "pais_tmdb": "",
    "lbSlug": "harvey-maude",
    "_verificado": "declarada a mano: director confirmado en TMDB (Álex Mineralex, España, 2026, 8 min); el título del festival no casaba solo (10 oct 2026)",
-   "_director": "Alex Minerales",
+   "_director": "Alex Mineralex",
    "_sondeado": "2026-10-13",
    "poster": "/assets/ficpa-2026/harvey-maude.jpg",
    "posterSource": "tmdb"
@@ -836,9 +1051,10 @@
    "duracion_tmdb": 12,
    "pais_tmdb": "Colombia",
    "lbSlug": "la-gallina-saraviada",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
-   "_director": "Ingrid Bonilla",
-   "_sondeado": "2026-10-10",
+   "_verificado": "el catálogo ya la tiene (w_R4JDE7TVVFNW, ficpa-2026, siembrafest-2026)",
+   "work_id": "w_R4JDE7TVVFNW",
+   "_director": "Ingrid Paola Bonilla Rodriguez",
+   "_sondeado": "2026-10-13",
    "_ya_publicada": [
     {
      "festival": "siembrafest-2026",
@@ -864,9 +1080,10 @@
    "duracion_tmdb": 19,
    "pais_tmdb": "Spain",
    "lbSlug": "la-fuerza-del-silencio",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
-   "_director": "Samuel Vela",
-   "_sondeado": "2026-10-10",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "La fuerza del silencio",
+   "_director": "Samuel Vela Pérez",
+   "_sondeado": "2026-10-13",
    "poster": "/assets/ficpa-2026/la-fuerza-del-silencio.jpg",
    "posterSource": "tmdb"
   },
@@ -917,9 +1134,10 @@
    "duracion_tmdb": 0,
    "pais_tmdb": "",
    "lbSlug": "sierra-el-album-mortuorio",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
-   "_director": "Carlos Ortiz",
-   "_sondeado": "2026-10-10",
+   "_verificado": "el catálogo ya la tiene (w_R4JC5FP969FG, ficpa-2026, villadelcine-2026)",
+   "work_id": "w_R4JC5FP969FG",
+   "_director": "Carlos Ortiz Alarcón",
+   "_sondeado": "2026-10-13",
    "_ya_publicada": [
     {
      "festival": "villadelcine-2026",
@@ -934,6 +1152,24 @@
    "poster": "/assets/ficpa-2026/sierra-el-album-mortuorio.jpg",
    "posterSource": "tmdb"
   },
+  "También nosotras": {
+   "tmdb_id": 1746367,
+   "titulo_original": "También nosotras",
+   "poster_path": "/xgyzaafDbegAT4J60f9QaRY9NGT.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Amparo and Ana get up at 5 a.m. to take care of their home, raise animals, and harvest potatoes. Their work sustains the community, even though many dismiss it by saying that “they don’t do anything.”",
+   "genero": "Documental",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 5,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "tambien-nosotras",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "También nosotras",
+   "_director": "Lady Vásquez, Ana Puertas, Alba Cuaspud, Amparo Cuaspud, Piedad Cuaspiud",
+   "_sondeado": "2026-10-13",
+   "poster": "/assets/ficpa-2026/tambien-nosotras.jpg",
+   "posterSource": "tmdb"
+  },
   "Tinku": {
    "tmdb_id": 1475741,
    "titulo_original": "Tinku",
@@ -945,9 +1181,10 @@
    "duracion_tmdb": 12,
    "pais_tmdb": "Bolivia",
    "lbSlug": "tinku-2025",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
-   "_director": "Román Nina",
-   "_sondeado": "2026-10-10",
+   "_verificado": "el catálogo ya la tiene (w_R4J9QZDYNKV8, ficpa-2026)",
+   "work_id": "w_R4J9QZDYNKV8",
+   "_director": "Román Nina Nina",
+   "_sondeado": "2026-10-13",
    "poster": "/assets/ficpa-2026/tinku.jpg",
    "posterSource": "tmdb"
   },
@@ -984,7 +1221,7 @@
    "title_en": "Tuktu, Father Maize",
    "lbSlug": "tuktu-father-maize",
    "_verificado": "declarada a mano: el catálogo único ya la tiene verificada (Popayán y Villa del Cine la publicaron con esta ficha; 2025, 13 min). TMDB escribe «Pietro»: se queda «Prieto Muriel», como lo acreditan los seis festivales (12 oct 2026). Afiche: el de color que ya publicamos (FICDEH, Popayán…), no el boceto de TMDB; los dos son oficiales",
-   "_director": "Mauricio Prieto",
+   "_director": "Mauricio Prieto Muriel",
    "_sondeado": "2026-10-13",
    "poster": "/assets/ficdeh/tuktu-padre-maiz.jpg",
    "_afiche": "ya publicada en ficdeh-2026: se reusa su afiche"
@@ -1056,7 +1293,6 @@
   "Selección Churo Cósmico: Identidades",
   "Selección Churo Cósmico: Sociedad y Libertades",
   "Sinfonía de las sombras en el fuego etéreo",
-  "También nosotras",
   "Tierra Palestina",
   "Trabajo, economías y futuro",
   "Tudnum, Tierra Sagrada",
@@ -1068,8 +1304,8 @@
    "fecha": "2026-10-10"
   },
   "Achikanain": {
-   "director": "Dana Sofía Florez",
-   "fecha": "2026-10-10"
+   "director": "Dana Sofía Florez Muñoz",
+   "fecha": "2026-10-13"
   },
   "Animación": {
    "director": "",
@@ -1088,8 +1324,8 @@
    "fecha": "2026-10-10"
   },
   "Cantar de Noche Larga": {
-   "director": "Eller Solarte",
-   "fecha": "2026-10-10"
+   "director": "Euler Solarte",
+   "fecha": "2026-10-13"
   },
   "Cautivo": {
    "director": "Hernani Rodríguez",
@@ -1164,8 +1400,8 @@
    "fecha": "2026-10-10"
   },
   "El sueño del Cusillo": {
-   "director": "Marcela Hidalgo",
-   "fecha": "2026-10-10"
+   "director": "Marcela Hidalgo Paz",
+   "fecha": "2026-10-13"
   },
   "Ellir": {
    "director": "Laura Quintanilla",
@@ -1176,24 +1412,24 @@
    "fecha": "2026-10-10"
   },
   "Hijas de Eva": {
-   "director": "Daniela Narváez",
-   "fecha": "2026-10-10"
+   "director": "Daniela Alejandra Narváez Huertas",
+   "fecha": "2026-10-13"
   },
   "La Abuela Científica": {
-   "director": "Juliana Insandara",
-   "fecha": "2026-10-10"
+   "director": "Juliana Alexandra Insadará Arteaga",
+   "fecha": "2026-10-13"
   },
   "La Pandemia del Feminicidio": {
    "director": "Alejandra Calderón",
    "fecha": "2026-10-10"
   },
   "La Ruana de mi Compadre": {
-   "director": "Luis Aníbal Quiroz",
-   "fecha": "2026-10-10"
+   "director": "Carlos Iván Ceballos Mueses",
+   "fecha": "2026-10-13"
   },
   "La Tejedora": {
-   "director": "Diego D'Alba",
-   "fecha": "2026-10-10"
+   "director": "Diego A. Portilla Montenegro",
+   "fecha": "2026-10-13"
   },
   "La casa que nunca fue": {
    "director": "Emil María Ravelero",
@@ -1204,44 +1440,44 @@
    "fecha": "2026-10-10"
   },
   "Laureano": {
-   "director": "Esteban Cabrera",
-   "fecha": "2026-10-10"
+   "director": "Juan Esteban Cabrera Estupiñan",
+   "fecha": "2026-10-13"
   },
   "Loto": {
-   "director": "Las Tres Piedras",
-   "fecha": "2026-10-10"
+   "director": "Nicolo Meneses",
+   "fecha": "2026-10-13"
   },
   "Matas, marchitas vivas": {
    "director": "Johanna Martínez",
    "fecha": "2026-10-10"
   },
   "Memoria, territorio y vida": {
-   "director": "Amparo Cuaspud, Alba Cuaspud y Mónica Cuaspud",
-   "fecha": "2026-10-10"
+   "director": "Amparo Cuaspud, Alba Cuaspud, Mónica Cuasialpud",
+   "fecha": "2026-10-13"
   },
   "Muerta la ilusión": {
-   "director": "Camilo Yandún",
-   "fecha": "2026-10-10"
+   "director": "Camilo Alejandro Yandún Ordoñez",
+   "fecha": "2026-10-13"
   },
   "Pacto de libertad": {
-   "director": "Julián Esteban Maya",
-   "fecha": "2026-10-10"
+   "director": "Julián Esteban Maya Noguera",
+   "fecha": "2026-10-13"
   },
   "Que Generosa Sos mi Tierra": {
-   "director": "David Bry feat. Piero",
-   "fecha": "2026-10-10"
+   "director": "David Bry",
+   "fecha": "2026-10-13"
   },
   "Recuerdos": {
-   "director": "Valentina López",
-   "fecha": "2026-10-10"
+   "director": "Victoria Valentina López Paz",
+   "fecha": "2026-10-13"
   },
   "Relatos del Camino": {
-   "director": "Daniel Prieto",
-   "fecha": "2026-10-10"
+   "director": "Daniel Prieto Muriel",
+   "fecha": "2026-10-13"
   },
   "Retorno": {
-   "director": "Silvia Guzmán",
-   "fecha": "2026-10-10"
+   "director": "Silvia Mercedes Guzmán Botina",
+   "fecha": "2026-10-13"
   },
   "Selección Churo Cósmico: Identidades": {
    "director": "",
@@ -1255,10 +1491,6 @@
    "director": "Álvaro De La Cruz",
    "fecha": "2026-10-10"
   },
-  "También nosotras": {
-   "director": "Lady Vanessa, Ana Portela, Clara Cuaspud y Amparo Cuaspud",
-   "fecha": "2026-10-13"
-  },
   "Tierra Palestina": {
    "director": "Claudio Lara",
    "fecha": "2026-10-10"
@@ -1268,8 +1500,8 @@
    "fecha": "2026-10-10"
   },
   "Tudnum, Tierra Sagrada": {
-   "director": "William Ceballos",
-   "fecha": "2026-10-10"
+   "director": "William Ceballos Chalapud",
+   "fecha": "2026-10-13"
   },
   "Videoclips nariñenses": {
    "director": "",

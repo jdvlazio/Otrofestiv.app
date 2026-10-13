@@ -84,6 +84,9 @@ ALTERNA_FUERA = {
 # en frase; la presencia del equipo va como has_qa.
 # Datos que FICPA no publica de una obra y que ya publicamos de la MISMA obra
 # en otro festival nuestro (mismo título y misma dirección). OK de Juan, 10 oct.
+# lo que mandó el festival por Drive: festivals/staging/ficpa-2026-datos-oficiales.json
+_OF = f'{REPO}/festivals/staging/ficpa-2026-datos-oficiales.json'
+OFICIALES = json.load(io.open(_OF, encoding='utf-8'))['obras'] if os.path.exists(_OF) else {}
 DATOS_PUBLICADOS = {
     # CineAutopsia 2026 (festivals/cineautopsia-2026.json) e IMDb nm5653494
     'AtmoSphaira': {'anio': 2024, 'duracion_min': 12, 'pais': 'Colombia'},
@@ -480,6 +483,21 @@ def main():
             # lo que el festival no publica y ya publicamos de la misma obra
             for k, v in DATOS_PUBLICADOS.get(o.get('titulo'), {}).items():
                 o.setdefault(k, v)
+            # LOS DATOS QUE MANDÓ EL FESTIVAL (.docx de la Selección, 13 oct):
+            # el crédito de dirección manda —es el completo, y en los videoclips
+            # la programación ponía al artista—; lo demás, solo donde falta
+            dof = OFICIALES.get(o.get('titulo')) or {}
+            if dof.get('director'):
+                # …pero con las tildes que ya teníamos: el .docx escribe
+                # «Rodriguez», «Yandun»; el mismo nombre con tilde se conserva
+                # (la regla del catálogo, revision-fase2 · tmdb-manda)
+                prev = {plano(w): w for w in re.findall(r'[\wÀ-ÿ]+', o.get('director') or '')}
+                o['director'] = re.sub(r'[\wÀ-ÿ]+', lambda m: prev.get(plano(m.group()), m.group()), dof['director'])
+            for k in ('duracion_min', 'sinopsis'):
+                if dof.get(k):
+                    o.setdefault(k, dof[k])
+            if dof.get('pais') and not o.get('pais'):
+                o['pais'] = pais(dof['pais'])
         # COMILLAS RECTAS en el título ([title-normalization])
         f['titulo'] = f['titulo'].translate(str.maketrans({'“': '"', '”': '"', '«': '"', '»': '"'}))
     funciones = [{k: v for k, v in f.items() if v not in (None, '')} for f in funciones]

@@ -4,9 +4,21 @@
  "anio": null,
  "paises": [],
  "directores": [
-  "William Ceballos"
+  "William Ceballos Chalapud"
  ],
+ "sinopsis": {
+  "es": "Paguay es un abuelo sabedor indígena del pueblo de los Pastos, quien desde su palabra sabia y de experiencia enseña a través de su historia de vida, a su nieta Luna la importancia del “Tudnum, tierra sagrada” desde los saberes ancestrales, culturales y milenarios entorno a las huacas prehispánicas encontradas en el territorio, el relato trasporta a Luna a un viaje al pasado donde su abuelo joven desde la ley natural es perseguido por un destello de luz de minacures y los seres que acompañan y protegen la huaca. Paguay en su caminar tras la búsqueda con un amigo se enfrenta a diferentes situaciones como el mal aire, la mala hora, las energías negativas que impiden encontrarla, sin embargo, un tres de mayo el día que arden las huacas encuentran este tesoro ancestral y mágico, desde ese día Paguay se dedicó a buscar y encontrar las guacas en la comunidad."
+ },
+ "afiche": {
+  "archivo": "/assets/ficpa-2026/tudnum-tierra-sagrada.jpg"
+ },
  "xref": {},
+ "versiones": [
+  {
+   "etiqueta": "24 min",
+   "duracion_min": 24
+  }
+ ],
  "presentaciones": [
   "ficpa-2026"
  ]

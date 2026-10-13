@@ -2,7 +2,10 @@
  "id": "w_R4JD10ZMAF04",
  "titulo_original": "Viena, Gijón",
  "anio": 2025,
- "paises": [],
+ "paises": [
+  "E",
+  "S"
+ ],
  "directores": [
   "Ana G. Argüelles"
  ],
@@ -19,8 +22,8 @@
  },
  "versiones": [
   {
-   "etiqueta": "5 min",
-   "duracion_min": 5
+   "etiqueta": "7 min",
+   "duracion_min": 7
   }
  ],
  "presentaciones": [
