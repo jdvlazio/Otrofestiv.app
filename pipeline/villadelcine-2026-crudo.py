@@ -875,6 +875,15 @@ def main():
                 reg['_src_ficha'] = fa['_src']
         funciones.append(reg)
 
+    # LA MUESTRA EUREKA (Juan, 14 oct): la retícula del PDF dice «Exhibición
+    # Especial: NUEVA OLA ROLA — Festival de Cine EUREKA — Muestra + Q&A»; el
+    # nombre publicado se conserva (la watchlist guarda por título) y entra lo
+    # que faltaba: el conversatorio y de qué se trata
+    for f in funciones:
+        if f.get('titulo') == 'Muestra especial: Festival de Cine Eureka':
+            f['has_qa'], f['qa_type'] = True, 'team'
+            f.setdefault('sinopsis', 'Exhibición especial «Nueva Ola Rola»: muestra del Festival de Cine Eureka, con Q&A.')
+
     json.dump({'_provenance': provenance(
         'PROGRAMACIÓN «Caminos del tiempo» 2026 (PDF) + las fichas de obra de '
         'villadelcine.com',

@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "PROGRAMACIÓN «Caminos del tiempo» 2026 (PDF) + las fichas de obra de villadelcine.com",
-  "capturado": "2026-10-13",
+  "capturado": "2026-10-14",
   "que_aporta": "las funciones del festival con día, hora, sede, sala, sección y la lista de obras de cada programa de cortos",
   "url": "https://villadelcine.com/wp-content/uploads/2026/09/Programacion-caminos-del-tiempo-2026_compressed.pdf",
   "metodo": "la duración publicada es la REAL: cuando las obras suman más que la casilla dibujada, manda la suma (regla de Juan, 19 sep 2026)"
@@ -430,7 +430,10 @@
     "date": "2026-09-19"
    },
    "tipo": "evento",
-   "event_kind": "experiencia"
+   "event_kind": "experiencia",
+   "has_qa": true,
+   "qa_type": "team",
+   "sinopsis": "Exhibición especial «Nueva Ola Rola»: muestra del Festival de Cine Eureka, con Q&A."
   },
   {
    "titulo": "X-Plora Cine",

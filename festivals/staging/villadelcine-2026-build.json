@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "PROGRAMACIÓN «Caminos del tiempo» 2026 (PDF) + las fichas de obra de villadelcine.com",
-  "capturado": "2026-10-13",
+  "capturado": "2026-10-14",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "acceso_por_defecto": {
@@ -629,12 +629,15 @@
    "venue": "Hotel Mesón de los Virreyes - Villa de Leyva",
    "sala": "Auditorio",
    "event_kind": "experiencia",
-   "has_qa": false,
+   "has_qa": true,
+   "qa_type": "team",
    "_src": {
     "url": "https://villadelcine.com/ (PROGRAMACIÓN 2026.pdf) p4",
     "date": "2026-09-19"
    },
-   "is_free": true
+   "is_free": true,
+   "description": "Exhibición especial «Nueva Ola Rola»: muestra del Festival de Cine Eureka, con Q&A.",
+   "description_lang": "es"
   },
   {
    "title": "X-Plora Cine",
@@ -2790,7 +2793,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-13T08:06:07",
+  "fecha": "2026-10-14T06:49:23",
   "plan_sha": "59bf137b7d874efe",
   "paso": 16,
   "cmd": "python3 pipeline/ensamblar.py villadelcine-2026"

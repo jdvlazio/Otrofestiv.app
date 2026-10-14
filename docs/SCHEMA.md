@@ -337,7 +337,7 @@ está pasando de verdad — no lo que alguien recordaba al escribirlo.
 | `sessions` | array | — | 1 fest |  |
 | `has_qa` | boolean | — | 25 fest | Afecta conflictos vía durationForTravel. |
 | `titulos_anteriores` | array | — | 2 fest | Títulos con que el festival publicó ANTES esta obra. Lo llena Onboarding cuando un festival renombra (p. ej. «Tránsito» → «Tránsitos»). La app mueve en silencio lo que el usuario guardó bajo el viejo (Interés, Plan, vista, prioridad, calificación, retrasos) — domain/titulos.js. Obra partida en dos: el viejo va en las dos y gana la primera del catálogo. Nunca un título que siga vigente. |
-| `qa_type` | string | `team` · `guests` | 14 fest | La variante del Q&A. Se pinta traducida; NO se escribe la frase en el dato. |
+| `qa_type` | string | `team` · `guests` | 15 fest | La variante del Q&A. Se pinta traducida; NO se escribe la frase en el dato. |
 | `competencia` | string | — | 1 fest |  |
 | `premium` | boolean | — | 1 fest |  |
 | `sala` | string | — | 18 fest | Sala DENTRO de la sede. Que no aparezca en el nombre de la sede ([sala-en-sede]). |
