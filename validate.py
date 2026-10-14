@@ -6667,7 +6667,8 @@ try:
     import glob as _g9, os as _os9, re as _re9
     # `-titulos-anteriores.json` lo lee ensamblar.py para CUALQUIER festival (con
     # f-string, por eso su nombre no está literal en el corpus) — 8 oct 2026
-    _CANON = {'crudo.json', 'correcciones.json', 'build.json', 'titulos-anteriores.json'}
+    _CANON = {'crudo.json', 'correcciones.json', 'build.json', 'titulos-anteriores.json',
+              'quitar.json'}  # `-quitar.json` lo lee ensamblar.py (f-string), 14 oct 2026
     _viv = ['pipeline/lib.py','pipeline/ensamblar.py','pipeline/correr.py','pipeline/publicar.py'] + \
            sorted(_f for _f in _g9.glob('pipeline/*.py') if _re9.search(r'^pipeline/[a-z]+-20\d\d-', _f))
     _corp = '\n'.join(open(_f, encoding='utf-8', errors='ignore').read() for _f in _viv if _os9.path.exists(_f)) + \

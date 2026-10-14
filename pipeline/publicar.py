@@ -287,6 +287,16 @@ def publicar(fid, forzar=False):
         # o gana los campos que son de la sede (sala, dirección). Eso no es
         # perder datos: es la corrección misma. Lo que sí es pérdida es que una
         # función quieta amanezca sin un campo que ayer tenía.
+        # LO RETIRADO A PROPÓSITO no es pérdida (14 oct 2026): se le quita a la
+        # copia de producción exactamente lo declarado en <fid>-quitar.json
+        # (lib.quitados), y se compara parejo. Cualquier otra baja sigue frenando
+        _qt = lib.quitados(fid)
+        if _qt:
+            for _f in viejo.get('films') or []:
+                for _o in [_f] + (_f.get('film_list') or []):
+                    for _t, _c in _qt:
+                        if _o.get('title') == _t:
+                            _o.pop(_c, None)
         _movidos = {t for t, _a, _b in _mov}
         _quietas = lambda fs: [f for f in fs if f.get('title') not in _movidos]
         ca, cb = _cobertura(_quietas(viejo.get('films') or [])), _cobertura(_quietas(out['films']))
