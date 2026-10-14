@@ -212,7 +212,23 @@ def _conservar_publicado(fid, films):
     programas) que YA está en festivals/<fid>.json, un campo conservable vacío
     toma el valor publicado y queda anotado en `_conservado` (clave interna: el
     publicador no la escribe). Solo rellena huecos: lo que la fuente SÍ dice,
-    manda. Una obra que cambia de título no se reconoce (titulos_anteriores)."""
+    manda. Una obra que cambia de título no se reconoce (titulos_anteriores).
+
+    LO QUE SE QUITA A PROPÓSITO (14 oct 2026). Conservar todo hacía imposible
+    sacar un dato MALO ya publicado: Cinemancia 2026 publicó para «Borrachos
+    mientras escuchamos las gotas caer» un title_en viejo y en español; se
+    corrigió la fuente y esto lo volvía a poner. Lo que se retira se declara en
+    festivals/staging/<id>-quitar.json — {"quitar": [{"titulo", "campo",
+    "por_que"}]} — y no se conserva. Se ABORTA si la obra no está en el build o
+    el campo no es conservable: una declaración que no apunta a nada no quita
+    nada y nadie se entera."""
+    quitar = lib.quitados(fid)
+    _tit = {o.get('title') for f in films for o in [f] + (f.get('film_list') or [])}
+    for _t, _c in quitar:
+        if _t not in _tit:
+            sys.exit(f'✗ {fid}-quitar.json: «{_t}» no está en el build')
+        if _c not in CONSERVABLES:
+            sys.exit(f'✗ {fid}-quitar.json: «{_c}» no es un campo conservable')
     p = f'{REPO}/festivals/{fid}.json'
     if not os.path.exists(p):
         return
@@ -227,7 +243,8 @@ def _conservar_publicado(fid, films):
             v = pub.get(o.get('title'))
             if not v:
                 continue
-            kept = [k for k in CONSERVABLES if not o.get(k) and v.get(k)]
+            kept = [k for k in CONSERVABLES if not o.get(k) and v.get(k)
+                    and (o.get('title'), k) not in quitar]
             for k in kept:
                 o[k] = v[k]
             if kept:

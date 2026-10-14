@@ -188,6 +188,22 @@ def tmdb_ficha_autoprueba():
     except TMDBRed:
         pass
     return mal
+def quitados(fid):
+    """{(título, campo)} declarados en festivals/staging/<fid>-quitar.json: lo
+    que se retira A PROPÓSITO de lo publicado y por eso no se conserva. Lo leen
+    todos los caminos que reponen lo publicado (ensamblar._conservar_publicado y
+    los crudos que lo hacen por su cuenta, como Cinemancia): uno solo lee el
+    archivo. Sin `por_que`, aborta."""
+    p = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+                     'festivals', 'staging', f'{fid}-quitar.json')
+    if not os.path.exists(p):
+        return set()
+    out = set()
+    for x in json.load(open(p, encoding='utf-8')).get('quitar') or []:
+        if not x.get('por_que'):
+            raise SystemExit(f'✗ {os.path.basename(p)}: «{x.get("titulo")}» · {x.get("campo")} sin por_que')
+        out.add((x.get('titulo'), x.get('campo')))
+    return out
 
 # ── verificación (la lección Tribeca, ejecutable) ────────────────────────────
 def director_coincide(esperado, nombres):

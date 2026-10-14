@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "PDF oficial de programación + hoja de programas y charlas enviada por el festival",
-  "capturado": "2026-09-13",
+  "capturado": "2026-10-14",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "name": "Cinemancia",
@@ -690,8 +690,8 @@
    "poster": "/assets/cinemancia/seccion-alquimia-de-la-luz-luciana-decker.jpg",
    "posterSource": "oficial",
    "_src": "hoja «Otros programas» que envió el festival (orden de proyección)",
-   "is_free": true,
    "is_cortos": true,
+   "is_free": true,
    "film_list": [
     {
      "title": "Larama",
@@ -1856,7 +1856,7 @@
      "posterSource": "tmdb",
      "lbSlug": "solo-qu3r3mos-un-poco-de-amor",
      "tmdb_id": 1388911,
-     "synopsis": "hace tiempo que decidí no hacer mas sinopsis  De mis películas  Quiero que la gente llegue sin saber  que va A mirar.  Tampoco habrá un tráiler – son mentirosos  Y nunca reflejan realmente  El espíritu de la película.  Gracias por comprender.",
+     "synopsis": "Hace tiempo que decidí no hacer mas sinopsis  De mis películas  Quiero que la gente llegue sin saber  que va A mirar.  Tampoco habrá un tráiler – son mentirosos  Y nunca reflejan realmente  El espíritu de la película.  Gracias por comprender.",
      "synopsis_lang": "es"
     }
    ]
@@ -2051,10 +2051,9 @@
      "flags": "🇨🇴",
      "year": 2026,
      "duration": "22 min",
-     "title_en": "Borrachos escuchando las gotas de lluvia caer",
      "poster": "https://image.tmdb.org/t/p/w500/3R73xUlBIBGXY5q8i9HZYLEidLy.jpg",
      "posterSource": "tmdb",
-     "lbSlug": "borrachos-escuchando-las-gotas-de-lluvia",
+     "lbSlug": "borrachos-mientras-escuchamos-las-gotas-caer",
      "tmdb_id": 1743109,
      "synopsis": "Retrata la historia de León Ramírez e Isabel Velásquez, dos ancianos de casi 90 años que atienden una tienda de barrio para sobrevivir. El cortometraje aborda de forma íntima y crítica temas como la resignación de la vejez, el abandono a la tercera edad, el desarraigo territorial y los impactos colaterales del conflicto armado en Colombia (abusos del Estado, ELN y AUC).",
      "synopsis_lang": "es"
@@ -2122,8 +2121,8 @@
    "poster": "/assets/cinemancia/seccion-alquimia-de-la-luz-luciana-decker.jpg",
    "posterSource": "oficial",
    "_src": "hoja «Otros programas» que envió el festival (orden de proyección)",
-   "is_free": true,
    "is_cortos": true,
+   "is_free": true,
    "film_list": [
     {
      "title": "Larama",
@@ -2625,8 +2624,8 @@
    "poster": "/assets/cinemancia/seccion-alquimia-de-la-luz-luciana-decker.jpg",
    "posterSource": "oficial",
    "_src": "hoja «Otros programas» que envió el festival (orden de proyección)",
-   "is_free": true,
    "is_cortos": true,
+   "is_free": true,
    "film_list": [
     {
      "title": "Derroteros, Derroteros, Derroteros, Derroteros, Derroteros, Derroteros, Derroteros",
@@ -3518,10 +3517,9 @@
      "flags": "🇨🇴",
      "year": 2026,
      "duration": "22 min",
-     "title_en": "Borrachos escuchando las gotas de lluvia caer",
      "poster": "https://image.tmdb.org/t/p/w500/3R73xUlBIBGXY5q8i9HZYLEidLy.jpg",
      "posterSource": "tmdb",
-     "lbSlug": "borrachos-escuchando-las-gotas-de-lluvia",
+     "lbSlug": "borrachos-mientras-escuchamos-las-gotas-caer",
      "tmdb_id": 1743109,
      "synopsis": "Retrata la historia de León Ramírez e Isabel Velásquez, dos ancianos de casi 90 años que atienden una tienda de barrio para sobrevivir. El cortometraje aborda de forma íntima y crítica temas como la resignación de la vejez, el abandono a la tercera edad, el desarraigo territorial y los impactos colaterales del conflicto armado en Colombia (abusos del Estado, ELN y AUC).",
      "synopsis_lang": "es"
@@ -3879,8 +3877,8 @@
    "sala": "Sala 2",
    "has_qa": false,
    "_src": "hoja «Otros programas» que envió el festival (orden de proyección)",
-   "is_free": true,
    "is_cortos": true,
+   "is_free": true,
    "film_list": [
     {
      "title": "Eyes",
@@ -4336,8 +4334,8 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-13T13:40:00",
-  "plan_sha": "1acf3548b90c0acc",
+  "fecha": "2026-10-14T14:50:23",
+  "plan_sha": "1bfed46a7c769cf0",
   "paso": 3,
   "cmd": "python3 pipeline/ensamblar.py cinemancia-2026"
  }
