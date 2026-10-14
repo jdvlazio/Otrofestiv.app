@@ -52,14 +52,25 @@ final class LiveActivityBridge: NSObject, WKScriptMessageHandler {
         for a in Activity<OtrofestivLiveAttributes>.activities {
             if a.attributes.festival == fest && key == UserDefaults.standard.string(forKey: "otf.live.\(a.id)") {
                 await a.update(content); kept = true
+                Self.register(a, state)
             } else {
                 await a.end(nil, dismissalPolicy: .immediate)
             }
         }
         guard !kept else { return }
-        if let a = try? Activity.request(attributes: OtrofestivLiveAttributes(festival: fest),
-                                         content: content, pushType: nil) {
+        // pushType .token (14 oct 2026): el token de la tarjeta va al servidor con su
+        // hora de fin, y el servidor la cierra a esa hora (edge function live-end).
+        // Si no hay push (sin permiso, simulador), se crea igual sin token.
+        let attrs = OtrofestivLiveAttributes(festival: fest)
+        if let a = (try? Activity.request(attributes: attrs, content: content, pushType: .token))
+                ?? (try? Activity.request(attributes: attrs, content: content, pushType: nil)) {
             UserDefaults.standard.set(key, forKey: "otf.live.\(a.id)")
+            Task {
+                for await data in a.pushTokenUpdates {
+                    UserDefaults.standard.set(data.map { String(format: "%02x", $0) }.joined(), forKey: "otf.live.tok.\(a.id)")
+                    Self.register(a, a.content.state)
+                }
+            }
         }
     }
 
@@ -77,7 +88,30 @@ final class LiveActivityBridge: NSObject, WKScriptMessageHandler {
             st.end = st.end.addingTimeInterval(shift)
             st.delayMin = minutes
             await a.update(ActivityContent(state: st, staleDate: st.start, relevanceScore: 100))
+            register(a, st)
         }
+    }
+
+    // ── Cierre a la hora de fin (14 oct 2026, migración 0008) ─────────────────
+    // Manda al servidor el token de la tarjeta, su fin REAL y el estado a mostrar
+    // al cerrar. Se repite en cada actualización (un retraso corre el fin). Sin
+    // token todavía (llega async por pushTokenUpdates) no hace nada: cuando llega,
+    // se registra desde ahí.
+    private static let liveEndURL = URL(string: "https://eytxrvbnwzxuedbmnnqr.supabase.co/functions/v1/live-end")!
+    static func register(_ a: Activity<OtrofestivLiveAttributes>, _ st: OtrofestivLiveAttributes.ContentState) {
+        guard let tok = UserDefaults.standard.string(forKey: "otf.live.tok.\(a.id)"),
+              let stData = try? JSONEncoder().encode(st),   // mismo encoder que ActivityKit: fechas = segundos desde 2001
+              let stObj = try? JSONSerialization.jsonObject(with: stData) else { return }
+        #if DEBUG
+        let env = "sandbox"
+        #else
+        let env = "production"
+        #endif
+        let body: [String: Any] = ["token": tok, "end_at": st.end.timeIntervalSince1970 * 1000, "env": env, "state": stObj]
+        guard let data = try? JSONSerialization.data(withJSONObject: body) else { return }
+        var req = URLRequest(url: liveEndURL); req.httpMethod = "POST"; req.httpBody = data
+        req.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        URLSession.shared.dataTask(with: req).resume()
     }
 
     // La extensión no baja imágenes: el póster queda en el App Group, chico.
