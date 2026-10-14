@@ -499,6 +499,7 @@ una hipótesis sobre la fuente, y se comprueba contra ella.
 - [ ] `_etapa` dice la verdad (se actualiza al publicar)
 - [ ] validate.py + validate-festivals + tests + QA visual
 - [ ] Gate humano de Juan: revisión film-por-film (`tools/audit.html?fest=<id>`)
+- [ ] Después de publicar: `python3 pipeline/matriz.py` y republicar la **Matriz de obras** (Artifact, `pipeline/matriz.html` + el `matriz.json` generado) en su misma URL: https://claude.ai/artifact/MXLnqMqR2iT4J3MXQMGEh6
 
 ---
 
