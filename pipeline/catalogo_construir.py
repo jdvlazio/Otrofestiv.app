@@ -64,6 +64,7 @@ def registros():
                             'lb': o.get('lbSlug') if re.fullmatch(r'[a-z0-9-]+', str(o.get('lbSlug') or '')) else None,   # «⚠️ LB PENDIENTE» no es un slug
                             'poster': o.get('poster'), 'sinopsis': o.get('synopsis'),
                             'sinopsis_en': o.get('synopsis_en'), 'title_en': o.get('title_en'),
+                            'genero': (o.get('genre') or '').strip() or None,
                             'anteriores': list(o.get('titulos_anteriores') or [])})
     return out
 
@@ -278,6 +279,19 @@ def materializar(R, grupos, key, cache):
                                  ('en', next((r['sinopsis_en'] for r in regs if r['sinopsis_en']), None))) if v}
         if sin:
             o['sinopsis'] = sin
+        # EL GÉNERO, tal como lo publicó cada festival (14 oct 2026). No estaba en
+        # la obra: el «Drama» de La paga en Cinemancia 2025 no llegaba a FILCMAR
+        # ni a MUBI, que salían sin género porque TMDB no lo tiene. Se guardan
+        # TODOS los distintos, del más publicado al menos: los festivales no
+        # coinciden («Drama» / «Ficción», «Animation», hasta un país), y elegir
+        # uno acá sería decidir por ellos. Quien lo hereda decide (enriquecer.py)
+        _gen = {}
+        for r in regs:
+            if r.get('genero'):
+                _gen[r['genero']] = _gen.get(r['genero'], 0) + 1
+        if _gen:
+            o['generos'] = sorted(_gen, key=lambda g: -_gen[g])
+            pr['generos'] = {'fuente': 'festival', 'regla': 'todos los publicados, del más al menos frecuente'}
         af = next((r['poster'] for r in regs if r['poster']), None)
         if af:
             o['afiche'] = {'archivo': af}

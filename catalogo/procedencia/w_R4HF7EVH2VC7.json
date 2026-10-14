@@ -19,6 +19,10 @@
   "fuente": "tmdb:1595081",
   "regla": "tmdb-manda"
  },
+ "generos": {
+  "fuente": "festival",
+  "regla": "todos los publicados, del más al menos frecuente"
+ },
  "xref.tmdb": {
   "fuente": "humano",
   "regla": "decisión",

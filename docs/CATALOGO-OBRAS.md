@@ -169,6 +169,10 @@ silencio (es la regla de «sin ficha no se publica», llevada a la obra).
   3) TMDB con el candado, 4) Proimágenes, 5) cinecorto. Si el catálogo ya tiene la
   obra, **no se sondea ni se re-revisa**: hereda ficha, afiche, sinopsis, EN,
   Letterboxd, año, país.
+  *Implementado hasta hoy:* el id de TMDB y, desde el 14 oct 2026, el **género**
+  (`generos` en la obra: todos los que publicaron los festivales; se hereda solo
+  donde TMDB no lo trae y si todos coinciden — *La paga*, «Drama» de Cinemancia
+  2025, para MUBI Fest). Afiche, sinopsis, EN, año y país siguen sin heredarse.
 - **Lo nuevo escribe de vuelta al catálogo** al final del onboarding (hoy nada
   vuelve al festival viejo). La hoja de contacto solo muestra obras nuevas o con
   candidatos.

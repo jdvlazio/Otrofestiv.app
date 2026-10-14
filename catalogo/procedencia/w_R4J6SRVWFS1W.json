@@ -19,6 +19,10 @@
   "motivo": "TMDB 1243032",
   "fecha": "2026-10-12"
  },
+ "generos": {
+  "fuente": "festival",
+  "regla": "todos los publicados, del más al menos frecuente"
+ },
  "xref.tmdb": {
   "fuente": "humano",
   "regla": "decisión",

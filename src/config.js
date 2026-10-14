@@ -1299,6 +1299,27 @@ export const FESTIVAL_CONFIG={
     ticketing_model:'mixed', // boletería de la Cinemateca en TuBoleta ($7.000 + servicio, ticket_url por función) + entrada libre en las demás sedes; el seminario, gratis con inscripción
     films:null,posters:null,lbSlugs:{}
   },
+  'mubibogota2026': {
+    name:'MUBI Fest',displayName:'MUBI Fest',fullName:'MUBI Fest Bogotá 2026',shortName:'MUBI Fest',
+    city:'Bogotá',country:'CO',
+    dates:'24–25 OCT',dates_en:'OCT 24–25',year:2026,timezoneOffset:'-05:00',
+    // EL ARTE OFICIAL de Bogotá: el reel de @mubilat del 10 sep (DdHG4RVEsOy),
+    // 9:16 recortado por arriba a 2:3 por indicación de Juan (14 oct)
+    keyArt:'/assets/keyart/mubibogota2026.jpg',
+    // lo que el festival dice de sí mismo en su arte: «Ve gran cine»
+    tagline:'Ve Gran Cine',
+    instagram:'mubilat', storageKey:'mubibogota2026_',festivalStartStr:'2026-10-24T00:00:00',festivalEndStr:'2026-10-25T23:59:00',
+    festivalDates:{'2026-10-24':'2026-10-24','2026-10-25':'2026-10-25'},
+    days:[{k:'2026-10-24',d:24,lbl:'SÁB'},{k:'2026-10-25',d:25,lbl:'DOM'}],
+    dayKeys:['2026-10-24','2026-10-25'],
+    dayShort:{'2026-10-24':'SÁB 24','2026-10-25':'DOM 25'},
+    dayShort_en:{'2026-10-24':'SAT 24','2026-10-25':'SUN 25'},
+    dayLong:{'2026-10-24':'Sábado 24 de octubre','2026-10-25':'Domingo 25 de octubre'},
+    prioLimit:5,
+    ticketing_model:'mixed', // al aire libre gratis; seis funciones en sala con boleta en Entradas Inteligentes (enlace por función)
+    eventPosterLabel:['EVENTO',''],
+    films:null,posters:null,lbSlugs:{}
+  },
   'narrarelfuturo2026': {
     name:'#NarrarElFuturo',fullName:'#NarrarElFuturo — Festival de Cine & Nuevos Medios',shortName:'NEF',
     city:'Bogotá',country:'CO',
@@ -1407,6 +1428,14 @@ export const SECTION_ARCHETYPES = {
   '🌎 Muestra de Cortos Internacionales': 'Muestra / País',
   '🏘️ CineCorto en el Barrio': 'Cortos / Programas',
   '🏡 Cine Corto al barrio': 'Cortos / Programas',
+  // MUBI Fest Bogotá 2026 (las etiquetas de las tarjetas de mubifest.com)
+  '🎬 Estreno MUBI': 'Muestra / País',
+  '🌙 Función al aire libre': 'Especiales / Eventos',
+  '🔎 Foco': 'Retrospectiva / Tributo',
+  '🎞️ Restaurada': 'Retrospectiva / Tributo',
+  '🎙️ Charla en vivo': 'Charlas / Industria',
+  '🎲 Al aire libre': 'Especiales / Eventos',
+  '📚 MUBI Library': 'Especiales / Eventos',
   // FICPA 2026 (la Selección Oficial y los dos menús del sitio)
   '🌍 Ecos del Mundo': 'Competencia',
   '💓 Latidos del Cine Colombiano': 'Competencia',

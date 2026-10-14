@@ -1,0 +1,41 @@
+{
+ "id": "w_X5FR3FQ3YATN",
+ "titulo_original": "La cosa",
+ "anio": 1982,
+ "paises": [
+  "US"
+ ],
+ "directores": [
+  "John Carpenter"
+ ],
+ "aliases": [
+  {
+   "titulo": "The Thing",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "En pleno invierno, en las profundidades de la Antártida, unos científicos estadounidenses descubren restos humanos mutados en una estación de investigación noruega abandonada. Tras una autopsia, los investigadores descubren algo que los sumerge en una destructiva espiral de paranoia y locura.",
+  "en": "A research team in Antarctica is hunted by a shape-shifting alien that assumes the appearance of its victims."
+ },
+ "generos": [
+  "Terror"
+ ],
+ "afiche": {
+  "archivo": "/assets/mubibogota-2026/la-cosa.jpg"
+ },
+ "xref": {
+  "tmdb": 1091,
+  "letterboxd": "the-thing"
+ },
+ "versiones": [
+  {
+   "etiqueta": "109 min",
+   "duracion_min": 109
+  }
+ ],
+ "presentaciones": [
+  "mubibogota-2026"
+ ]
+}

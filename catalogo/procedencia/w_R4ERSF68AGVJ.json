@@ -1,6 +1,6 @@
 {
  "titulo_original": {
-  "fuente": "festival:cinemancia-2025,filcmar-2026",
+  "fuente": "festival:cinemancia-2025,filcmar-2026,mubibogota-2026",
   "regla": "el título que más festivales imprimen"
  },
  "directores": {
@@ -14,5 +14,9 @@
  "paises": {
   "fuente": "tmdb:1363770",
   "regla": "tmdb-manda"
+ },
+ "generos": {
+  "fuente": "festival",
+  "regla": "todos los publicados, del más al menos frecuente"
  }
 }
