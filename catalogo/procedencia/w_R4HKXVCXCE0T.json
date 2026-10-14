@@ -18,5 +18,9 @@
   "regla": "decisión",
   "motivo": "regla pais-union (FICDEH: Colombia, Bolivia, Francia)",
   "fecha": "2026-10-12"
+ },
+ "generos": {
+  "fuente": "festival",
+  "regla": "todos los publicados, del más al menos frecuente"
  }
 }

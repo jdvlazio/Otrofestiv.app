@@ -24,6 +24,8 @@
       "pais": {"type": ["string", "null"]}, "tipo": {"enum": ["traduccion", "festival", "trabajo", "distribucion", "otro"]}}}},
     "sinopsis": {"type": "object", "additionalProperties": false,
      "properties": {"es": {"type": "string"}, "en": {"type": "string"}}},
+    "generos": {"type": "array", "items": {"type": "string", "minLength": 1},
+     "description": "Los que publicaron los festivales, del más al menos frecuente. Se hereda solo si es uno (enriquecer.py)."},
     "afiche": {"type": ["object", "null"], "additionalProperties": false,
      "properties": {"archivo": {"type": "string"}, "veredicto": {"enum": ["oficial", "oficial-festival", "compuesto", "fotograma", "sin-afiche"]}}},
     "xref": {"type": "object", "additionalProperties": false,

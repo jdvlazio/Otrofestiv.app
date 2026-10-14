@@ -556,6 +556,7 @@
    "country": "Venezuela, Colombia",
    "flags": "🇻🇪🇨🇴",
    "duration": "62 min",
+   "genre": "Drama",
    "rating": "Para mayores de 18 años",
    "day": "2026-10-25",
    "time": "17:30",
@@ -644,7 +645,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-14T08:33:22",
+  "fecha": "2026-10-14T10:15:23",
   "plan_sha": "d7f550dc832ae067",
   "paso": 5,
   "cmd": "python3 pipeline/ensamblar.py mubibogota-2026"

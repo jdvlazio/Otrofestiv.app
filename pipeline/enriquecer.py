@@ -609,6 +609,26 @@ def main():
                 e['posterSource'] = 'tmdb'
         print(f'pósters en assets/{fid}/: {n}')
 
+    # EL GÉNERO DEL CATÁLOGO (14 oct 2026), donde TMDB no lo trae. La paga no
+    # tiene género en TMDB y Cinemancia 2025 la publicó «Drama»; FILCMAR y MUBI
+    # salían vacías porque el catálogo no lo guardaba y de acá no se leía. Solo
+    # si TODOS los festivales que la publicaron dicen lo mismo: con dos géneros
+    # distintos («Drama» / «Ficción») heredar uno sería elegir por ellos.
+    _hg = 0
+    for t, e in ok.items():
+        if (e.get('genero') or '').strip():
+            continue
+        f = obras.get(t) or {}
+        wid = e.get('work_id') or catalogo.reconocer(
+            _obs, t, f.get('director') or '', f.get('anio'), f.get('duracion_min'))[0]
+        gen = (_obs.get(wid) or {}).get('generos') or [] if wid else []
+        if len(gen) == 1:
+            e['genero'] = gen[0]
+            e['_genero_de'] = f'catálogo {wid} ({", ".join(_obs[wid]["presentaciones"])})'
+            _hg += 1
+    if _hg:
+        print(f'género heredado del catálogo: {_hg}')
+
     json.dump({'_provenance': provenance(
         'TMDB + letterboxd.com/tmdb/<id>, emparejado con ficha_verifica() '
         '(director + año ±1 o duración ±3 min). Lo que no verifica no entra.'),
