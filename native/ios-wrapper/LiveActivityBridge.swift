@@ -1,6 +1,6 @@
 // ── LiveActivityBridge.swift — web → Live Activity (fase 1, 28 sep 2026)
 // La web (persistence.js → _planLiveActivity) manda la función que corresponde AHORA
-// —la que está en curso o la próxima dentro de 2 h, del festival activo— cada vez que
+// —la que está en curso o la próxima dentro de 1 h (Juan, 14 oct), del festival activo— cada vez que
 // cambia el Plan o un retraso, y al volver a la app:
 //   {festival, lang, item: {title, venue, start(ms), end(ms), delayMin, poster(url)?,
 //    posterEditorial, kindLabel?} | null}
@@ -43,7 +43,9 @@ final class LiveActivityBridge: NSObject, WKScriptMessageHandler {
             start: start, end: end, delayMin: (item["delayMin"] as? NSNumber)?.intValue ?? 0,
             posterFile: posterFile, posterEditorial: item["posterEditorial"] as? Bool ?? false,
             kindLabel: item["kindLabel"] as? String, lang: body["lang"] as? String ?? "es")
-        let content = ActivityContent(state: state, staleDate: end, relevanceScore: 100)
+        // staleDate = el INICIO real (14 oct 2026): a esa hora iOS redibuja la tarjeta
+        // con isStale = true y pasa sola de «Empieza en» a «Termina en», sin la app.
+        let content = ActivityContent(state: state, staleDate: start, relevanceScore: 100)
 
         // La misma función se ACTUALIZA (p. ej. un retraso); otra distinta reemplaza.
         var kept = false
@@ -58,6 +60,23 @@ final class LiveActivityBridge: NSObject, WKScriptMessageHandler {
         if let a = try? Activity.request(attributes: OtrofestivLiveAttributes(festival: fest),
                                          content: content, pushType: nil) {
             UserDefaults.standard.set(key, forKey: "otf.live.\(a.id)")
+        }
+    }
+
+    // Retraso marcado en el RELOJ (14 oct 2026): corre la tarjeta sin pasar por la
+    // web, que puede estar dormida. Inicio y fin = programados + el retraso nuevo.
+    // El staleDate se mueve con el inicio: es lo que cambia «Empieza en» por
+    // «Termina en» a la hora real.
+    static func applyDelay(key: String, minutes: Int) async {
+        for a in Activity<OtrofestivLiveAttributes>.activities
+        where UserDefaults.standard.string(forKey: "otf.live.\(a.id)") == key {
+            var st = a.content.state
+            let shift = TimeInterval((minutes - st.delayMin) * 60)
+            guard shift != 0 else { continue }
+            st.start = st.start.addingTimeInterval(shift)
+            st.end = st.end.addingTimeInterval(shift)
+            st.delayMin = minutes
+            await a.update(ActivityContent(state: st, staleDate: st.start, relevanceScore: 100))
         }
     }
 

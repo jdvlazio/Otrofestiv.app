@@ -77,15 +77,40 @@ private struct Poster: View {
     }
 }
 
-// Cuenta regresiva del sistema: antes de empezar muestra la duración completa quieta;
-// desde el inicio corre sola hasta el fin. Nunca afirma una fase que no sabe.
+// Dos fases (14 oct 2026, aprobado por Juan): ANTES cuenta hasta el inicio
+// («Empieza en», ámbar); DESDE el inicio cuenta lo que queda («Termina en»). La
+// corre el reloj del sistema. El cambio de fase lo hace iOS solo: el staleDate
+// es el inicio real, y a esa hora redibuja la tarjeta con isStale = true.
+private func started(_ st: OtrofestivLiveAttributes.ContentState, _ stale: Bool) -> Bool {
+    stale || st.start <= Date()
+}
+private func phaseLabel(_ st: OtrofestivLiveAttributes.ContentState, _ live: Bool) -> String {
+    switch (live, st.lang == "en") {
+    case (true, true): return "Ends in"
+    case (true, false): return "Termina en"
+    case (false, true): return "Starts in"
+    case (false, false): return "Empieza en"
+    }
+}
 private struct Countdown: View {
     let st: OtrofestivLiveAttributes.ContentState
+    let live: Bool
     var size: CGFloat = 20
     var body: some View {
-        Text(timerInterval: st.start...st.end, countsDown: true)
-            .font(Brand.font(size, 800)).monospacedDigit().foregroundStyle(Brand.warm)
+        if live {
+            Text(timerInterval: st.start...st.end, countsDown: true)
+                .font(Brand.font(size, 800)).monospacedDigit().foregroundStyle(Brand.warm)
+        } else {
+            Text(timerInterval: min(Date(), st.start)...st.start, countsDown: true)
+                .font(Brand.font(size, 800)).monospacedDigit().foregroundStyle(Brand.amber)
+        }
     }
+}
+// Horas: con retraso, la programada tachada y la real al lado (como Mi Plan).
+private func hoursText(_ st: OtrofestivLiveAttributes.ContentState) -> Text {
+    let real = Text("\(hhmm(st.start)) – \(hhmm(st.end)) · \(st.venue)")
+    guard st.delayMin > 0 else { return real }
+    return Text(hhmm(st.start.addingTimeInterval(TimeInterval(-st.delayMin * 60)))).strikethrough() + Text(" ") + real
 }
 private struct Bar: View {
     let st: OtrofestivLiveAttributes.ContentState
@@ -98,7 +123,7 @@ private struct Bar: View {
 struct OtrofestivLiveActivity: Widget {
     var body: some WidgetConfiguration {
         ActivityConfiguration(for: OtrofestivLiveAttributes.self) { ctx in
-            LockView(st: ctx.state)
+            LockView(st: ctx.state, live: started(ctx.state, ctx.isStale))
                 .widgetURL(URL(string: "otrofestiv://plan"))
                 .activityBackgroundTint(Brand.bg)
                 .activitySystemActionForegroundColor(Brand.amber)
@@ -109,13 +134,15 @@ struct OtrofestivLiveActivity: Widget {
                 DynamicIslandExpandedRegion(.center) {
                     VStack(alignment: .leading, spacing: 2) {
                         Text(ctx.state.title).font(Brand.font(15, 800)).foregroundStyle(Brand.warm).lineLimit(1)
-                        Text("\(hhmm(ctx.state.start)) – \(hhmm(ctx.state.end)) · \(ctx.state.venue)")
+                        hoursText(ctx.state)
                             .font(Brand.font(11, 600)).foregroundStyle(Brand.sec).lineLimit(1)
                     }.frame(maxWidth: .infinity, alignment: .leading)
                 }
                 DynamicIslandExpandedRegion(.bottom) {
                     VStack(alignment: .leading, spacing: 4) {
-                        HStack { Countdown(st: ctx.state, size: 18); Spacer()
+                        HStack(alignment: .lastTextBaseline, spacing: 6) {
+                            Text(phaseLabel(ctx.state, started(ctx.state, ctx.isStale))).font(Brand.font(11, 700)).foregroundStyle(Brand.sec)
+                            Countdown(st: ctx.state, live: started(ctx.state, ctx.isStale), size: 18); Spacer()
                             if ctx.state.delayMin > 0 { Text(lateText(ctx.state)).font(Brand.font(11, 700)).foregroundStyle(Brand.amber) } }
                         Bar(st: ctx.state)
                     }
@@ -123,8 +150,8 @@ struct OtrofestivLiveActivity: Widget {
             } compactLeading: {
                 Poster(st: ctx.state, height: 22)
             } compactTrailing: {
-                Text(timerInterval: ctx.state.start...ctx.state.end, countsDown: true)
-                    .font(Brand.font(13, 700)).monospacedDigit().foregroundStyle(Brand.amber)
+                Countdown(st: ctx.state, live: started(ctx.state, ctx.isStale), size: 13)
+                    .foregroundStyle(Brand.amber)
                     .frame(maxWidth: 52)
             } minimal: {
                 BrandIcon(size: 18)
@@ -139,13 +166,15 @@ struct OtrofestivLiveActivity: Widget {
 // Pantalla bloqueada (y el reloj, en su tamaño chico).
 private struct LockView: View {
     let st: OtrofestivLiveAttributes.ContentState
+    let live: Bool
     @Environment(\.activityFamily) var family
     var body: some View {
         if family == .small {
             VStack(alignment: .leading, spacing: 3) {
                 HStack(spacing: 5) { BrandIcon(size: 12)
                     Text(st.title).font(Brand.font(13, 800)).foregroundStyle(Brand.warm).lineLimit(1) }
-                Countdown(st: st, size: 15)
+                Text(phaseLabel(st, live)).font(Brand.font(10, 700)).foregroundStyle(Brand.sec)
+                Countdown(st: st, live: live, size: 15)
                 Bar(st: st)
             }.padding(8)
         } else {
@@ -157,10 +186,11 @@ private struct LockView: View {
                         Spacer(minLength: 6)
                         BrandIcon(size: 16)
                     }
-                    Text("\(hhmm(st.start)) – \(hhmm(st.end)) · \(st.venue)")
+                    hoursText(st)
                         .font(Brand.font(11.5, 600)).foregroundStyle(Brand.sec).lineLimit(1)
                     Spacer(minLength: 2)
-                    Countdown(st: st)
+                    Text(phaseLabel(st, live)).font(Brand.font(11, 700)).foregroundStyle(Brand.sec)
+                    Countdown(st: st, live: live)
                     Bar(st: st)
                     if st.delayMin > 0 {
                         Text(lateText(st)).font(Brand.font(11, 700)).foregroundStyle(Brand.amber)

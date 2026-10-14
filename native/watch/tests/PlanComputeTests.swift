@@ -59,6 +59,16 @@ enum PlanComputeTests {
               PlanCompute.delayKey(bpV) == "Bedford Park|2026-09-12|14:30|TIFF Lightbox")
         check("applyDelays pone el retraso por llave",
               PlanCompute.applyDelays([bpV], ["Bedford Park|2026-09-12|14:30|TIFF Lightbox": 30]).first?.delayMin == 30)
+        // Control de retraso en el reloj (14 oct 2026): desde 15 min antes de la hora
+        // programada hasta el fin REAL (con el retraso ya marcado).
+        if let s0 = PlanCompute.startDate(bpV) {
+            check("retraso: el control no aparece 16 min antes", !PlanCompute.canMarkDelay(bpV, now: s0.addingTimeInterval(-16 * 60)))
+            check("retraso: el control aparece 15 min antes", PlanCompute.canMarkDelay(bpV, now: s0.addingTimeInterval(-15 * 60)))
+            check("retraso: el control sigue en curso", PlanCompute.canMarkDelay(bpV, now: s0.addingTimeInterval(60 * 60)))
+            check("retraso: se va al terminar (121 min)", !PlanCompute.canMarkDelay(bpV, now: s0.addingTimeInterval(121 * 60)))
+            var bp30 = bpV; bp30.delayMin = 30
+            check("retraso: con 30 min marcados sigue hasta el fin corrido", PlanCompute.canMarkDelay(bp30, now: s0.addingTimeInterval(140 * 60)))
+        } else { check("retraso: startDate de Bedford Park", false) }
         // redondeo hacia arriba: a 16:30:20 todavía falta 1 min, no 0
         check("minutesLeft 16:30:20 → 1", PlanCompute.minutesLeft(bp, now: bpStart.addingTimeInterval(120 * 60 + 20)) == 1)
         check("minutesLeft en el primer segundo → 121", PlanCompute.minutesLeft(bp, now: bpStart) == 121)

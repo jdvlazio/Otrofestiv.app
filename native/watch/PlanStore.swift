@@ -58,6 +58,48 @@ final class PlanStore: ObservableObject {
         }
     }
 
+    // ── Marcar el retraso desde el reloj (14 oct 2026) ────────────────────────
+    // Total de minutos (no un delta), como el teléfono. Se aplica al instante en
+    // pantalla y en la complication; la nube y el teléfono, 1,2 s después del último
+    // toque (el control va de a 5 min y la tabla limita 30 reportes por hora).
+    func item(id: String) -> ScheduleItem? { sections.lazy.flatMap { $0.items }.first { $0.id == id } }
+    private var delayTasks: [String: Task<Void, Never>] = [:]
+    func setDelay(_ item: ScheduleItem, minutes: Int) {
+        let mins = max(0, min(240, minutes))
+        let key = PlanCompute.delayKey(item)
+        sections = sections.map { sec in
+            DaySection(id: sec.id, label: sec.label, items: sec.items.map { i in
+                guard PlanCompute.delayKey(i) == key else { return i }
+                var c = i; c.delayMin = mins > 0 ? mins : nil; return c
+            })
+        }
+        publishNextUp()
+        let fest = festival
+        delayTasks[key]?.cancel()
+        delayTasks[key] = Task { [weak self] in
+            try? await Task.sleep(nanoseconds: 1_200_000_000)
+            guard !Task.isCancelled else { return }
+            await Self.saveDelay(festival: fest, key: key, minutes: mins)
+            WatchAuthManager.sendDelayToPhone(festival: fest, key: key, title: item.title,
+                                              day: item.dayStr ?? "", time: item.time ?? "", minutes: mins)
+            self?.delayTasks[key] = nil
+        }
+    }
+    private struct DelayUpsert: Encodable {
+        let festival_id: String; let screening_key: String; let delay_min: Int
+    }
+    // La misma fila que escribe el teléfono (cloudReportDelay / cloudClearDelay):
+    // reporter_id lo pone el servidor (auth.uid()) y la RLS solo deja tocar la propia.
+    private static func saveDelay(festival: String, key: String, minutes: Int) async {
+        let db = WatchAuthManager.supabase.from("screening_reports")
+        if minutes > 0 {
+            _ = try? await db.upsert(DelayUpsert(festival_id: festival, screening_key: key, delay_min: minutes),
+                                     onConflict: "festival_id,screening_key,reporter_id").execute()
+        } else {
+            _ = try? await db.delete().eq("festival_id", value: festival).eq("screening_key", value: key).execute()
+        }
+    }
+
     private struct DelayRow: Decodable {
         let screeningKey: String; let delayMin: Int
         enum CodingKeys: String, CodingKey { case screeningKey = "screening_key", delayMin = "delay_min" }

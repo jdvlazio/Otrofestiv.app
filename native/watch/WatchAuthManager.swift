@@ -127,6 +127,25 @@ enum WatchAuthError: LocalizedError {
     }
 }
 
+// Retraso marcado en el reloj → teléfono (14 oct 2026). El teléfono lo guarda en
+// su Mi Plan y corre la Live Activity. Alcanzable → sendMessage; si no o si falla,
+// transferUserInfo (cola: llega cuando el teléfono vuelva). La nube ya lo tiene.
+extension WatchAuthManager {
+    static func sendDelayToPhone(festival: String, key: String, title: String,
+                                 day: String, time: String, minutes: Int) {
+        let s = WCSession.default
+        guard s.activationState == .activated else { return }
+        let info: [String: Any] = ["type": "delay", "festival": festival, "key": key, "title": title,
+                                   "day": day, "time": time, "minutes": minutes,
+                                   "at": Date().timeIntervalSince1970]
+        if s.isReachable {
+            s.sendMessage(info, replyHandler: nil, errorHandler: { _ in s.transferUserInfo(info) })
+        } else {
+            s.transferUserInfo(info)
+        }
+    }
+}
+
 // WCSessionDelegate — mínimo para watchOS (sin los métodos iOS-only).
 extension WatchAuthManager: WCSessionDelegate {
     nonisolated func session(_ session: WCSession,

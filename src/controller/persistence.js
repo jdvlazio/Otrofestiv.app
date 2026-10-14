@@ -600,7 +600,8 @@ function _avisoRecap(now){
 
 // ── Live Activity del iPhone (fase 1, aprobada por Juan el 28 sep 2026) ──────
 // DUEÑO ÚNICO de «qué función va en la tarjeta»: la que está EN CURSO o, si no hay,
-// la próxima del festival activo que empiece dentro de 2 h. Horas REALES (con el
+// la próxima del festival activo que empiece dentro de 1 h (Juan, 14 oct 2026:
+// 2 h ocupaba la pantalla mientras veías otra cosa; Apple pide que aparezca cuando se espera). Horas REALES (con el
 // retraso marcado): las mismas cuentas que Mi Plan y el reloj, así que nunca se
 // contradicen. Sin función → item null y el iPhone cierra la tarjeta.
 // Solo existe en el wrapper de iOS (messageHandler «liveActivity»); en el resto no hace nada.
@@ -614,7 +615,7 @@ export function _planLiveActivity(){
     const dl=delayMinOf(s);
     const start=st0.getTime()+dl*60000;
     const end=start+(blockDuration(s)||90)*60000;
-    if(end<=now||start-now>2*3600*1000) continue;
+    if(end<=now||start-now>3600*1000) continue;
     cands.push({s,start,end,dl,st0:st0.getTime()});
   }
   cands.sort((a,b)=>a.start-b.start);
