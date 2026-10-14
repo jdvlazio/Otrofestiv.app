@@ -39,6 +39,15 @@ enum L {
     // Retraso v2 (aprobado por Juan, 25 sep 2026) — la misma frase que Mi Plan.
     static func startedLate(_ n: Int) -> String { t("Empezó \(n) min tarde", "Started \(n) min late") }
     static func minLate(_ n: Int) -> String { t("\(n) min tarde", "\(n) min late") }
+    // Marcar el retraso desde el reloj (14 oct 2026, aprobado por Juan): las MISMAS
+    // frases del control de Mi Plan en el teléfono (retraso_* en i18n.js).
+    static var delayAsk: String       { t("¿Empezó a tiempo?", "Did it start on time?") }
+    static var delayHelp: String      { t("Si empezó tarde, corregimos la hora de salida", "If it started late, we'll fix the end time") }
+    static var delayState: String     { t("Empezó con retraso", "Started late") }
+    static func delayScheduled(_ h: String) -> String { t("Programada a las \(h)", "Scheduled for \(h)") }
+    static func delayMins(_ n: Int) -> String { "\(n) min" }
+    static var minus5: String         { t("Restar 5 min", "Subtract 5 min") }
+    static var plus5: String          { t("Sumar 5 min", "Add 5 min") }
     // Progreso en vivo (21 sep 2026): UNA sola frase, la misma que Mi Plan usa en
     // el teléfono («Termina en»). Se retiró «faltan» en la revisión de copy.
     static func endsIn(_ min: Int) -> String { t("Termina en \(min) min", "Ends in \(min) min") }
@@ -52,5 +61,5 @@ enum L {
     // «Programa de hace 3 h» — la caché envejeció y la red no la renovó.
     static func scheduleFrom(hours h: Int) -> String { t("Programa de hace \(h) h", "Schedule from \(h) h ago") }
     static var complicationName: String { t("Próxima función", "Next screening") }
-    static var complicationDesc: String { t("Tu próxima película del festival.", "Your next festival film.") }
+    static var complicationDesc: String { t("Tu próxima obra del festival.", "Your next festival film.") }
 }

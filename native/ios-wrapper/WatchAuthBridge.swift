@@ -83,6 +83,27 @@ final class WatchAuthBridge: NSObject, WCSessionDelegate, WKScriptMessageHandler
         }
     }
 
+    // ── Reloj → teléfono: retraso marcado en el reloj (14 oct 2026) ─────────────
+    // Llega por sendMessage (sin respuesta) o transferUserInfo (cola). Dos destinos:
+    //  · la Live Activity, NATIVO: corre inicio y fin aunque la web esté dormida;
+    //  · la web (Mi Plan), si está viva: guarda el retraso como si lo marcaras ahí.
+    // Si la web no estaba viva, al abrir la app lee tus reportes de la nube.
+    func session(_ session: WCSession, didReceiveMessage message: [String: Any]) { applyDelay(message) }
+    func session(_ session: WCSession, didReceiveUserInfo userInfo: [String: Any] = [:]) { applyDelay(userInfo) }
+    private func applyDelay(_ m: [String: Any]) {
+        guard (m["type"] as? String) == "delay",
+              let title = m["title"] as? String, let day = m["day"] as? String,
+              let time = m["time"] as? String, let mins = (m["minutes"] as? NSNumber)?.intValue else { return }
+        Task { await LiveActivityBridge.applyDelay(key: "\(title)|\(day)|\(time)", minutes: mins) }
+        guard let data = try? JSONSerialization.data(withJSONObject: [
+            "festival": m["festival"] as? String ?? "", "key": m["key"] as? String ?? "", "minutes": mins]),
+              let json = String(data: data, encoding: .utf8) else { return }
+        DispatchQueue.main.async { [weak self] in
+            self?.webView?.evaluateJavaScript("window.__otfWatchDelay && window.__otfWatchDelay(\(json))",
+                                              completionHandler: nil)
+        }
+    }
+
     // WCSessionDelegate — stubs requeridos en iOS.
     func session(_ s: WCSession, activationDidCompleteWith st: WCSessionActivationState, error: Error?) {}
     func sessionDidBecomeInactive(_ s: WCSession) {}

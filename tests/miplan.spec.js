@@ -3196,7 +3196,7 @@ test('T200 — eventos: el Diario, la ficha y la hoja de calificar no ofrecen es
 // ── T202 — Live Activity: la web manda al iPhone la función correcta con horas reales
 // Fase 1 aprobada por Juan (28 sep 2026): la tarjeta muestra horas y sede FIJAS y el
 // reloj del sistema hace la cuenta; las horas tienen que ser las mismas de Mi Plan.
-test('T202 — Live Activity: en curso con retraso, próxima dentro de 2 h, y nada si no hay', async ({ page }) => {
+test('T202 — Live Activity: en curso con retraso, próxima dentro de 1 h, y nada si no hay', async ({ page }) => {
   await enterFestival(page, 'tiff2026', '2026-09-12T15:40:00-04:00');
   const r = await page.evaluate(async () => {
     const got = [];
@@ -3220,5 +3220,61 @@ test('T202 — Live Activity: en curso con retraso, próxima dentro de 2 h, y na
   expect(hm(r.conRetraso.start) + '–' + hm(r.conRetraso.end), 'con 30 min de retraso, las mismas horas que Mi Plan').toBe('15:00–17:01');
   expect(r.conRetraso.delayMin).toBe(30);
   expect(r.msg.festival, 'viaja por el puente del iPhone').toBe('tiff2026');
-  expect(r.lejos, 'una función a más de 2 h no abre tarjeta').toBeNull();
+  expect(r.lejos, 'una función a más de 1 h no abre tarjeta').toBeNull();
 });
+
+// ── T-LA1 — Live Activity desde 1 h antes, no 2 (Juan, 14 oct 2026) ──────────
+// Apple pide que aparezca cuando se espera; 2 h ocupaba la pantalla mientras
+// veías otra cosa. I Play Rocky empieza 18:00: a las 16:55 no, a las 17:05 sí.
+test('T-LA1 — Live Activity: la próxima función entra a 1 h del inicio', async ({ page }) => {
+  await enterFestival(page, 'tiff2026', '2026-09-12T16:55:00-04:00');
+  const r = await page.evaluate(async () => {
+    const P = await import('/src/controller/persistence.js');
+    const rk = FILMS.find(x => x.day === '2026-09-12' && x.title === 'I Play Rocky');
+    state.set('savedAgenda', { schedule: [{ ...rk, _title: rk.title }] });
+    const a65 = P._planLiveActivity();
+    return { a65, time: rk.time };
+  });
+  expect(r.time).toBe('18:00');
+  expect(r.a65, 'a 65 min no aparece').toBeNull();
+  await enterFestival(page, 'tiff2026', '2026-09-12T17:05:00-04:00');
+  const b = await page.evaluate(async () => {
+    const P = await import('/src/controller/persistence.js');
+    const rk = FILMS.find(x => x.day === '2026-09-12' && x.title === 'I Play Rocky');
+    state.set('savedAgenda', { schedule: [{ ...rk, _title: rk.title }] });
+    return P._planLiveActivity();
+  });
+  expect(b?.title, 'a 55 min sí').toBe('I Play Rocky');
+});
+
+// ── T-RELOJ1 — El retraso marcado en el reloj llega a Mi Plan (14 oct 2026) ───
+// El reloj escribe tu reporte y avisa al teléfono por WCSession → el wrapper
+// llama __otfWatchDelay con la clave de la nube y el TOTAL de minutos. Mi Plan
+// lo toma como si lo hubieras marcado ahí, y la Live Activity se corre.
+test('T-RELOJ1 — retraso desde el reloj: Mi Plan y la Live Activity se corren', async ({ page }) => {
+  await enterFestival(page, 'tiff2026', '2026-09-12T15:40:00-04:00');
+  const r = await page.evaluate(async () => {
+    const w = ms => new Promise(r => setTimeout(r, ms));
+    const got = [];
+    window.webkit = { messageHandlers: { liveActivity: { postMessage: m => got.push(m) } } };
+    const D = await import('/src/domain/delays.js');
+    const bp = FILMS.find(x => x.day === '2026-09-12' && x.title === 'Bedford Park');
+    state.set('savedAgenda', { schedule: [{ ...bp, _title: bp.title }] }); saveSavedAgenda();
+    switchMainNav('mnav-miplan'); showAgView(); await w(400);
+    const key = D.cloudScreeningKey(bp.title, bp.day, bp.time, bp.venue);
+    window.__otfWatchDelay({ festival: 'tiff2026', key, minutes: 15 }); await w(300);
+    const tras15 = { fd: state.get('filmDelays')[`Bedford Park|${bp.day}|${bp.time}`], em: document.querySelector('.delay-step em')?.textContent, la: got[got.length - 1]?.item?.delayMin };
+    window.__otfWatchDelay({ festival: 'otro2026', key, minutes: 40 }); await w(100);
+    const otroFest = state.get('filmDelays')[`Bedford Park|${bp.day}|${bp.time}`];
+    window.__otfWatchDelay({ festival: 'tiff2026', key, minutes: 0 }); await w(300);
+    const tras0 = state.get('filmDelays')[`Bedford Park|${bp.day}|${bp.time}`];
+    delete window.webkit;
+    return { tras15, otroFest, tras0 };
+  });
+  expect(r.tras15.fd, 'Mi Plan guarda los 15 min').toBe(15);
+  expect(r.tras15.em, 'el control del teléfono muestra 15').toBe('15 min');
+  expect(r.tras15.la, 'la Live Activity recibe el retraso').toBe(15);
+  expect(r.otroFest, 'un aviso de otro festival no toca este').toBe(15);
+  expect(r.tras0, 'en 0 el retraso se quita').toBeUndefined();
+});
+

@@ -306,6 +306,24 @@ export function undoDelay(title,day,time,venue){
   if(prev>0) cloudReportDelay(sk,prev); else cloudClearDelay(sk);
 }
 
+// applyOwnCloudDelay — un retraso TUYO que llega de afuera (14 oct 2026): lo
+// marcaste en el reloj. Llega por el aviso del wrapper (__otfWatchDelay) o por tu
+// propio reporte en screening_reports (Realtime / carga inicial). Total de
+// minutos, no delta. Igual que setDelay pero SIN volver a escribir la nube (ya
+// está escrito; reescribirlo gastaría el límite de 30 por hora en un eco).
+export function applyOwnCloudDelay(screeningKey, mins){
+  const {filmDelays, savedAgenda}=state.snapshot();
+  const sch=(savedAgenda&&savedAgenda.schedule)||[];
+  const s=sch.find(e=>cloudScreeningKey(e._title,e.day,e.time,e.venue)===screeningKey);
+  if(!s) return false;
+  const k=s._title+'|'+s.day+'|'+s.time;
+  const m=Math.max(0,Math.min(240,Math.round(+mins||0)));
+  if((filmDelays[k]||0)===m) return false;
+  state.update('filmDelays', fd => m===0 ? state._omit(fd, k) : {...fd, [k]: m});
+  saveDelays();
+  return true;
+}
+
 export function clearDelay(title,day,time,venue){
   // 1. READ — args local
   const k=title+'|'+day+'|'+time;

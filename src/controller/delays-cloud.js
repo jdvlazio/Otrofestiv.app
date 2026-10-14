@@ -42,6 +42,7 @@ function _reportarSinCuenta(screeningKey, delayMin){
 export function cloudReportDelay(screeningKey, delayMin){
   if(!_sb || !screeningKey) return;
   if(!_sbUser){ if(REPORTES_SIN_EMAIL) _reportarSinCuenta(screeningKey, delayMin); return; }
+  _marcarEco(screeningKey);
   _sb.from('screening_reports').upsert(
     { festival_id: _activeFestId, screening_key: screeningKey, delay_min: delayMin },
     { onConflict: 'festival_id,screening_key,reporter_id' }
@@ -55,6 +56,7 @@ export function cloudReportDelay(screeningKey, delayMin){
 export function cloudClearDelay(screeningKey){
   if(!_sb || !screeningKey) return;
   if(!_sbUser){ if(REPORTES_SIN_EMAIL) _reportarSinCuenta(screeningKey, 0); return; }
+  _marcarEco(screeningKey);
   _sb.from('screening_reports').delete()
     .eq('festival_id', _activeFestId)
     .eq('screening_key', screeningKey)
@@ -70,6 +72,15 @@ let _channelFest = null;   // festival al que está suscrito el canal actual
 let _rerenderCb = null;    // callback de re-render (lo cablea main.js, evita import circular)
 
 export function setDelaysRerender(cb){ _rerenderCb = cb; }
+// Tu propio reporte llegó de afuera (lo marcaste en el reloj, 14 oct 2026): el
+// callback lo pasa a tu Mi Plan. Lo cablea main.js (evita el import circular).
+let _ownCb = null;
+export function setOwnDelayCb(cb){ _ownCb = cb; }
+// Eco: lo que ESTE teléfono acaba de escribir vuelve por Realtime. Con toques
+// rápidos (5 → 10 → 15) el eco del 5 llega cuando ya vas en 15 y te devolvería
+// atrás. Durante 15 s después de escribir una función, sus ecos se ignoran.
+const _eco = new Map();
+function _marcarEco(k){ _eco.set(k, Date.now() + 15000); }
 function _rerender(){ if(typeof _rerenderCb === 'function') { try{ _rerenderCb(); }catch(e){ /* noop */ } } }
 
 function _applyRow(row, removed){
@@ -83,6 +94,9 @@ function _applyRow(row, removed){
   let m = _reports.get(k);
   if(!m){ m = new Map(); _reports.set(k, m); }
   m.set(row.reporter_id, { delayMin: row.delay_min, createdAtMs: Date.parse(row.created_at) || Date.now() });
+  if(_sbUser && row.reporter_id === _sbUser.id && typeof _ownCb === 'function' && !((_eco.get(k)||0) > Date.now())){
+    try{ _ownCb(k, row.delay_min); }catch(e){ /* noop */ }
+  }
 }
 
 // (Re)suscribe al festival activo. Idempotente por festival; tearing-down al cambiar.
