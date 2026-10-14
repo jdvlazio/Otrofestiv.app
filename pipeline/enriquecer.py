@@ -473,6 +473,13 @@ def main():
             # lo mismo la sinopsis declarada: si se retira del sidecar, se va
             if c.get('_sinopsis'):
                 c = {k: v for k, v in c.items() if k not in ('sinopsis', '_sinopsis')}
+            # y lo HEREDADO del catálogo (14 oct 2026): leído de la caché pasaba
+            # por dato de TMDB y ya no se volvía a juzgar — el título en inglés
+            # malo de Cinemancia quedaba pegado aunque el candado lo rechazara.
+            # Se borra y se recalcula abajo, con el catálogo de hoy
+            _her = set(c.get('_heredado') or ()) | ({'genero'} if c.get('_genero_de') else set())
+            if _her:
+                c = {k: v for k, v in c.items() if k not in _her | {'_heredado', '_genero_de'}}
             ok[t] = c
             reuso += 1
             print(f'[{i:3}/{len(obras)}] ··  {t[:46]:48} tmdb {c["tmdb_id"]} '
@@ -609,25 +616,59 @@ def main():
                 e['posterSource'] = 'tmdb'
         print(f'pósters en assets/{fid}/: {n}')
 
-    # EL GÉNERO DEL CATÁLOGO (14 oct 2026), donde TMDB no lo trae. La paga no
-    # tiene género en TMDB y Cinemancia 2025 la publicó «Drama»; FILCMAR y MUBI
-    # salían vacías porque el catálogo no lo guardaba y de acá no se leía. Solo
-    # si TODOS los festivales que la publicaron dicen lo mismo: con dos géneros
-    # distintos («Drama» / «Ficción») heredar uno sería elegir por ellos.
-    _hg = 0
-    for t, e in ok.items():
-        if (e.get('genero') or '').strip():
-            continue
-        f = obras.get(t) or {}
+    # LO QUE EL CATÁLOGO YA SABE (14 oct 2026), donde TMDB y la fuente callan.
+    # Hasta hoy del catálogo solo se tomaba el id de TMDB: La paga salió «Drama»
+    # en Cinemancia 2025 y vacía en FILCMAR y MUBI, y nada lo medía (guardián
+    # [dato-que-no-viaja]). Cada campo se hereda SOLO si está vacío y si el
+    # catálogo da UN valor: con dos géneros distintos («Drama» / «Ficción») o
+    # dos títulos en inglés, heredar uno sería elegir por los festivales. Vale
+    # también para las obras sin ficha de TMDB: son las que más lo necesitan.
+    def _uno(xs):
+        xs = [x for x in dict.fromkeys(xs) if x]
+        return xs[0] if len(xs) == 1 else None
+    HEREDA = (
+        ('genero', lambda w: _uno(w.get('generos') or [])),
+        ('title_en', lambda w: _uno(a['titulo'] for a in w.get('aliases') or []
+                                    if a.get('idioma') == 'en')),
+        ('lbSlug', lambda w: (w.get('xref') or {}).get('letterboxd')),
+        ('anio', lambda w: w.get('anio')),
+    )
+    _hered = {}
+    for t, f in obras.items():
+        e = ok.get(t) or {}
         wid = e.get('work_id') or catalogo.reconocer(
             _obs, t, f.get('director') or '', f.get('anio'), f.get('duracion_min'))[0]
-        gen = (_obs.get(wid) or {}).get('generos') or [] if wid else []
-        if len(gen) == 1:
-            e['genero'] = gen[0]
-            e['_genero_de'] = f'catálogo {wid} ({", ".join(_obs[wid]["presentaciones"])})'
-            _hg += 1
-    if _hg:
-        print(f'género heredado del catálogo: {_hg}')
+        w = _obs.get(wid) if wid else None
+        if not w:
+            continue
+        de = f'catálogo {wid} ({", ".join(w["presentaciones"])})'
+        for campo, valor in HEREDA:
+            # el año ya puede venir de TMDB (anio_tmdb) o de la fuente (anio)
+            if campo == 'anio' and (e.get('anio_tmdb') or f.get('anio')):
+                continue
+            if (str(e.get(campo) or '')).strip():
+                continue
+            v = valor(w)
+            # un title_en igual al título no es un título en inglés
+            if campo == 'title_en' and v and norm(v) == norm(t):
+                continue
+            # CON FICHA DE TMDB, el inglés lo dice TMDB: Cinemancia 2026 publicó
+            # «Borrachos escuchando las gotas de lluvia caer» como título en
+            # inglés de una obra que en TMDB se llama igual en los dos idiomas
+            # (un título viejo, en caché). Se hereda solo si coincide con el
+            # inglés de TMDB; sin ficha, lo nuestro es lo único que hay
+            if campo == 'title_en' and v and e.get('tmdb_id'):
+                _en = (tmdb_get(f'/movie/{e["tmdb_id"]}', key, language='en-US') or {}).get('title') or ''
+                if norm(v) != norm(_en):
+                    continue
+            if v:
+                e[campo] = v
+                e.setdefault('_heredado', {})[campo] = de
+                _hered[campo] = _hered.get(campo, 0) + 1
+        if e.get('_heredado') and t not in ok:
+            ok[t] = e
+    if _hered:
+        print('heredado del catálogo: ' + ', '.join(f'{c} {n}' for c, n in _hered.items()))
 
     json.dump({'_provenance': provenance(
         'TMDB + letterboxd.com/tmdb/<id>, emparejado con ficha_verifica() '
