@@ -4,8 +4,10 @@
   "regla": "el título que más festivales imprimen"
  },
  "directores": {
-  "fuente": "tmdb:1510204",
-  "regla": "tmdb-manda"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "TMDB 1510204, con un apellido (regla de Juan)",
+  "fecha": "2026-10-14"
  },
  "anio": {
   "fuente": "tmdb:1510204",

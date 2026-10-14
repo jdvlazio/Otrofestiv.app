@@ -254,5 +254,88 @@
   "motivo": "en LEVIZA es un filminuto de la clausura; en FICPA un largo español de 83 min",
   "fecha": "2026-10-12",
   "quien": "Claude, por encargo de Juan («haz la revisión vos y toma la mejor decisión»)"
+ },
+ {
+  "work_id": "w_R4G1R6GM6QWF",
+  "campo": "directores",
+  "valor": [
+   "Estefanía Piñeres"
+  ],
+  "motivo": "TMDB 1446898 la acredita así; «Stephania Piñeros» (Ficmontañas) es un error",
+  "fecha": "2026-10-14",
+  "quien": "Claude, por encargo de Juan (14 oct 2026: «aprueba así»)"
+ },
+ {
+  "work_id": "w_R4G1R6GM6QWF",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "estreno en Colombia el 16 abr 2026 (TMDB); el 2027 era el estreno comercial en España",
+  "fecha": "2026-10-14",
+  "quien": "Claude, por encargo de Juan (14 oct 2026: «aprueba así»)"
+ },
+ {
+  "work_id": "w_R4H50AY1TEJ8",
+  "campo": "directores",
+  "valor": [
+   "Juan Manuel González"
+  ],
+  "motivo": "TMDB 1469210",
+  "fecha": "2026-10-14",
+  "quien": "Claude, por encargo de Juan (14 oct 2026: «aprueba así»)"
+ },
+ {
+  "work_id": "w_R4JFQPYNC87A",
+  "campo": "directores",
+  "valor": [
+   "Nicolás Patiño",
+   "Santiago Cely"
+  ],
+  "motivo": "TMDB 1510204, con un apellido (regla de Juan)",
+  "fecha": "2026-10-14",
+  "quien": "Claude, por encargo de Juan (14 oct 2026: «aprueba así»)"
+ },
+ {
+  "work_id": "w_R4ETZY9VSZMZ",
+  "campo": "directores",
+  "valor": [
+   "María Ardila",
+   "Liliana Correa"
+  ],
+  "motivo": "TMDB 1538892; «Mária» era errata",
+  "fecha": "2026-10-14",
+  "quien": "Claude, por encargo de Juan (14 oct 2026: «aprueba así»)"
+ },
+ {
+  "work_id": "w_R4KDDV9T1SQQ",
+  "campo": "directores",
+  "valor": [
+   "Leonardo Rúa"
+  ],
+  "motivo": "TMDB 1794426; «Leo» es apodo",
+  "fecha": "2026-10-14",
+  "quien": "Claude, por encargo de Juan (14 oct 2026: «aprueba así»)"
+ },
+ {
+  "work_id": "w_R4HK6J8YDJZC",
+  "campo": "directores",
+  "valor": [
+   "Jacobo Albán",
+   "Carlos Zerpa",
+   "Beltrán Pérez"
+  ],
+  "motivo": "FICDEH acredita a los tres; TMDB omite a Albán y Popayán a los otros dos",
+  "fecha": "2026-10-14",
+  "quien": "Claude, por encargo de Juan (14 oct 2026: «aprueba así»)"
+ },
+ {
+  "work_id": "w_R4K2J1GTCCD1",
+  "campo": "directores",
+  "valor": [
+   "Mateo Montoya"
+  ],
+  "motivo": "decisión de Juan (Girardota «Mateo Montoya Correa», Jardín «Mateo M. Correa»; un apellido)",
+  "fecha": "2026-10-14",
+  "quien": "Claude, por encargo de Juan (14 oct 2026: «aprueba así»)",
+  "reemplaza": 13
  }
 ]

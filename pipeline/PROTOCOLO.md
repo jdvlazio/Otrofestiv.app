@@ -290,6 +290,12 @@ final. La jerarquía de fuentes va COMENTADA en su cabecera, y toda excepción
 (duración corregida, título del afiche, cambio anunciado después del PDF) en
 **tabla explícita con fecha**, nunca editando el crudo.
 
+Para la duración hay una tabla genérica: `festivals/staging/<id>-duraciones.json`
+(`titulo`, `min`, `fuente`, `por_que`), que `ensamblar.py` aplica después de
+conservar lo publicado. Para retirar a propósito un dato ya publicado, la
+equivalente es `<id>-quitar.json` (`titulo`, `campo`, `por_que`). Las dos abortan
+si apuntan a una obra que no está en el build.
+
 #### La palabra la pone el festival — no se traduce en la salida
 
 **Si la fuente ya trae la palabra, se PASA.** El error no es capturar mal un

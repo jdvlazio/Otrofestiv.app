@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "festivalfantasmagoriamedellin.com, noticia de programación (wp-json post 6481)",
-  "capturado": "2026-10-11",
+  "capturado": "2026-10-14",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_sedes": "El nombre de la parrilla, normalizado (la escribe de varias formas); la sala aparte. Otraparte está en Envigado, pero se publica en la ciudad «Medellín» (decisión de Juan, 30 sep): con una sola sede fuera, la app abría con «¿A cuál ciudad vas?» para 2 de 85 funciones. La dirección y el pin son los reales de Envigado, y el traslado se calcula con ellos.",
@@ -2044,7 +2044,7 @@
    "year": 1982,
    "country": "Colombia",
    "flags": "🇨🇴",
-   "duration": "80 min",
+   "duration": "98 min",
    "genre": "Terror",
    "day": "2026-10-20",
    "time": "18:00",
@@ -2066,7 +2066,8 @@
    "lbSlug": "pure-blood-1982",
    "tmdb_id": 134245,
    "synopsis_en": "Roberto Hurtado suffers from a rare disease that requires massive transfusions of blood from children or adolescents. His son blackmails three employees to get blood for him and they resort to unscrupulous methods to obtain it.",
-   "title_en": "Pure Blood"
+   "title_en": "Pure Blood",
+   "_duracion_corregida": "retrospectiva Luis Ospina, cali.gov.co (98 min); spectacletheater.com (98 min); TMDB 99"
   },
   {
    "title": "The Last Unicorn",
@@ -3910,7 +3911,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-11T20:52:25",
+  "fecha": "2026-10-14T18:52:33",
   "plan_sha": "bcc190a548850b59",
   "paso": 8,
   "cmd": "python3 pipeline/ensamblar.py fantasmagoria-2026"

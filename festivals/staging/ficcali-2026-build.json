@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "ficcali.com — Programación 2026 (WP 14870) + fichas de la Selección 2026",
-  "capturado": "2026-10-12",
+  "capturado": "2026-10-14",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "radar": 1024,
@@ -3005,7 +3005,7 @@
    "year": 2026,
    "country": "Rusia",
    "flags": "🇷🇺",
-   "duration": "135 min",
+   "duration": "140 min",
    "genre": "Drama",
    "day": "2026-10-24",
    "time": "18:00",
@@ -3024,7 +3024,8 @@
    "lbSlug": "minotaur-2026",
    "tmdb_id": 848700,
    "synopsis_en": "When Gleb, a successful company director, finds himself under siege from mounting corporate pressures, an increasingly unstable world, and the discovery of his wife's affair, the collapse of his carefully ordered life accelerates toward violence.",
-   "title_en": "Minotaur"
+   "title_en": "Minotaur",
+   "_duracion_corregida": "festival-cannes.com/en/f/minotaur (Durée 140 min); TIFF 140"
   },
   {
    "title": "El Coloso",
@@ -3345,7 +3346,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-12T13:57:57",
+  "fecha": "2026-10-14T18:52:33",
   "plan_sha": "3cbc8f0090f8219c",
   "paso": 8,
   "cmd": "python3 pipeline/ensamblar.py ficcali-2026"

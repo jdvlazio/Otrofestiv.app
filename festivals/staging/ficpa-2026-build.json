@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "ficpa.co — Programación oficial 2026 (WP programacion2026) + Selección Oficial",
-  "capturado": "2026-10-13",
+  "capturado": "2026-10-14",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_secciones": "Las de la Selección Oficial, tal cual (Ecos del Mundo y Latidos del Cine Colombiano son las dos mitades de «Sol de los Pastos»); Academia e Industria son los dos menús del sitio; «Programación alterna» es el nombre que el sitio da a las funciones fuera de las salas principales.",
@@ -1381,7 +1381,7 @@
    "year": 2026,
    "country": "Colombia",
    "flags": "🇨🇴",
-   "duration": "102 min",
+   "duration": "89 min",
    "genre": "Terror",
    "day": "2026-10-15",
    "time": "19:30",
@@ -1399,7 +1399,8 @@
    },
    "is_free": true,
    "lbSlug": "sierra-el-album-mortuorio",
-   "tmdb_id": 1789536
+   "tmdb_id": 1789536,
+   "_duracion_corregida": "datos oficiales del propio FICPA (ficpa-2026-datos-oficiales.json: 89); Villa del Cine 88"
   },
   {
    "title": "Taller Nuestro Talento \"Galeras 2037. Del plano al mundo jugable (AAA aplicados al cine)\"",
@@ -2126,7 +2127,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-13T14:32:05",
+  "fecha": "2026-10-14T18:52:33",
   "plan_sha": "928fb849ba5b43a1",
   "paso": 6,
   "cmd": "python3 pipeline/ensamblar.py ficpa-2026"

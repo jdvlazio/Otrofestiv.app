@@ -4,8 +4,10 @@
   "regla": "el título que más festivales imprimen"
  },
  "directores": {
-  "fuente": "tmdb:1538892",
-  "regla": "tmdb-manda"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "TMDB 1538892; «Mária» era errata",
+  "fecha": "2026-10-14"
  },
  "anio": {
   "fuente": "tmdb:1538892",

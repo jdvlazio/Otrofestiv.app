@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "PDF oficial del BIFF 12 + agenda de la Cinemateca de Bogotá + biff.co",
-  "capturado": "2026-10-07",
+  "capturado": "2026-10-14",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_sedes": "El nombre de la sede como la presenta el PDF (págs. 28–31); la sala va aparte, desde las fichas.",
@@ -672,7 +672,7 @@
    "year": 2026,
    "country": "Alemania, Austria",
    "flags": "🇩🇪🇦🇹",
-   "duration": "124 min",
+   "duration": "119 min",
    "language": "Alemán",
    "genre": "Drama",
    "day": "2026-10-08",
@@ -692,7 +692,8 @@
    "ticket_url": "https://www.cinecolombia.com/films/everytime/HO00000833/",
    "lbSlug": "everytime",
    "tmdb_id": 1655419,
-   "synopsis_en": "A tragedy brings a mother, daughter, and teenage boy together. Struggling with blame and forgiveness, the unlikely trio take a trip to Tenerife  for a family holiday that never happened. Under the glow of the sun,  past and present quietly start to overlap."
+   "synopsis_en": "A tragedy brings a mother, daughter, and teenage boy together. Struggling with blame and forgiveness, the unlikely trio take a trip to Tenerife  for a family holiday that never happened. Under the glow of the sun,  past and present quietly start to overlap.",
+   "_duracion_corregida": "TMDB 1655419 (119, Cannes 2026); TIFF 119"
   },
   {
    "title": "Muestra de cortometrajes BIFF Bang",
@@ -1891,7 +1892,7 @@
    "year": 2026,
    "country": "Francia, Alemania, Letonia",
    "flags": "🇫🇷🇩🇪🇱🇻",
-   "duration": "141 min",
+   "duration": "140 min",
    "language": "Ruso",
    "genre": "Drama",
    "day": "2026-10-09",
@@ -1912,7 +1913,8 @@
    "lbSlug": "minotaur-2026",
    "tmdb_id": 848700,
    "synopsis_en": "When Gleb, a successful company director, finds himself under siege from mounting corporate pressures, an increasingly unstable world, and the discovery of his wife's affair, the collapse of his carefully ordered life accelerates toward violence.",
-   "title_en": "Minotaur"
+   "title_en": "Minotaur",
+   "_duracion_corregida": "festival-cannes.com/en/f/minotaur (Durée 140 min); TIFF 140"
   },
   {
    "title": "Dua",
@@ -2061,7 +2063,7 @@
    "year": 2026,
    "country": "Bélgica, Francia, Países Bajos",
    "flags": "🇧🇪🇫🇷🇳🇱",
-   "duration": "125 min",
+   "duration": "120 min",
    "language": "Francés, Neerlandés",
    "genre": "Drama histórico",
    "day": "2026-10-10",
@@ -2081,7 +2083,8 @@
    "ticket_url": "https://www.cinecolombia.com/films/coward/HO00000828/",
    "lbSlug": "coward-2026",
    "tmdb_id": 1437981,
-   "synopsis_en": "Pierre, a young Belgian soldier, wants to prove himself on the battlefield during the First World War. Behind the frontlines, he meets Francis, who is asked to find a way to boost morale."
+   "synopsis_en": "Pierre, a young Belgian soldier, wants to prove himself on the battlefield during the First World War. Behind the frontlines, he meets Francis, who is asked to find a way to boost morale.",
+   "_duracion_corregida": "TMDB 1437981 (120, Cannes 2026); MUBI Fest y TIFF 120"
   },
   {
    "title": "Lejos de los Árboles",
@@ -2216,7 +2219,7 @@
    "year": 2026,
    "country": "Alemania, Austria",
    "flags": "🇩🇪🇦🇹",
-   "duration": "124 min",
+   "duration": "119 min",
    "language": "Alemán",
    "genre": "Drama",
    "day": "2026-10-10",
@@ -2236,7 +2239,8 @@
    "ticket_url": "https://www.cinecolombia.com/films/everytime/HO00000833/",
    "lbSlug": "everytime",
    "tmdb_id": 1655419,
-   "synopsis_en": "A tragedy brings a mother, daughter, and teenage boy together. Struggling with blame and forgiveness, the unlikely trio take a trip to Tenerife  for a family holiday that never happened. Under the glow of the sun,  past and present quietly start to overlap."
+   "synopsis_en": "A tragedy brings a mother, daughter, and teenage boy together. Struggling with blame and forgiveness, the unlikely trio take a trip to Tenerife  for a family holiday that never happened. Under the glow of the sun,  past and present quietly start to overlap.",
+   "_duracion_corregida": "TMDB 1655419 (119, Cannes 2026); TIFF 119"
   },
   {
    "title": "Aquí",
@@ -2511,7 +2515,7 @@
    "year": 2026,
    "country": "Francia, Alemania, Letonia",
    "flags": "🇫🇷🇩🇪🇱🇻",
-   "duration": "141 min",
+   "duration": "140 min",
    "language": "Ruso",
    "genre": "Drama",
    "day": "2026-10-10",
@@ -2532,7 +2536,8 @@
    "lbSlug": "minotaur-2026",
    "tmdb_id": 848700,
    "synopsis_en": "When Gleb, a successful company director, finds himself under siege from mounting corporate pressures, an increasingly unstable world, and the discovery of his wife's affair, the collapse of his carefully ordered life accelerates toward violence.",
-   "title_en": "Minotaur"
+   "title_en": "Minotaur",
+   "_duracion_corregida": "festival-cannes.com/en/f/minotaur (Durée 140 min); TIFF 140"
   },
   {
    "title": "Goodbye Cruel World",
@@ -3535,7 +3540,7 @@
    "year": 2026,
    "country": "Bélgica, Francia, Países Bajos",
    "flags": "🇧🇪🇫🇷🇳🇱",
-   "duration": "125 min",
+   "duration": "120 min",
    "language": "Francés, Neerlandés",
    "genre": "Drama histórico",
    "day": "2026-10-11",
@@ -3555,7 +3560,8 @@
    "ticket_url": "https://www.cinecolombia.com/films/coward/HO00000828/",
    "lbSlug": "coward-2026",
    "tmdb_id": 1437981,
-   "synopsis_en": "Pierre, a young Belgian soldier, wants to prove himself on the battlefield during the First World War. Behind the frontlines, he meets Francis, who is asked to find a way to boost morale."
+   "synopsis_en": "Pierre, a young Belgian soldier, wants to prove himself on the battlefield during the First World War. Behind the frontlines, he meets Francis, who is asked to find a way to boost morale.",
+   "_duracion_corregida": "TMDB 1437981 (120, Cannes 2026); MUBI Fest y TIFF 120"
   },
   {
    "title": "Aquí",
@@ -3796,7 +3802,7 @@
    "year": 2026,
    "country": "Francia, Alemania, Letonia",
    "flags": "🇫🇷🇩🇪🇱🇻",
-   "duration": "141 min",
+   "duration": "140 min",
    "language": "Ruso",
    "genre": "Drama",
    "day": "2026-10-12",
@@ -3817,7 +3823,8 @@
    "lbSlug": "minotaur-2026",
    "tmdb_id": 848700,
    "synopsis_en": "When Gleb, a successful company director, finds himself under siege from mounting corporate pressures, an increasingly unstable world, and the discovery of his wife's affair, the collapse of his carefully ordered life accelerates toward violence.",
-   "title_en": "Minotaur"
+   "title_en": "Minotaur",
+   "_duracion_corregida": "festival-cannes.com/en/f/minotaur (Durée 140 min); TIFF 140"
   },
   {
    "title": "Papaya",
@@ -3919,7 +3926,7 @@
    "year": 2026,
    "country": "Alemania, Austria",
    "flags": "🇩🇪🇦🇹",
-   "duration": "124 min",
+   "duration": "119 min",
    "language": "Alemán",
    "genre": "Drama",
    "day": "2026-10-12",
@@ -3939,7 +3946,8 @@
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=1023057…",
    "lbSlug": "everytime",
    "tmdb_id": 1655419,
-   "synopsis_en": "A tragedy brings a mother, daughter, and teenage boy together. Struggling with blame and forgiveness, the unlikely trio take a trip to Tenerife  for a family holiday that never happened. Under the glow of the sun,  past and present quietly start to overlap."
+   "synopsis_en": "A tragedy brings a mother, daughter, and teenage boy together. Struggling with blame and forgiveness, the unlikely trio take a trip to Tenerife  for a family holiday that never happened. Under the glow of the sun,  past and present quietly start to overlap.",
+   "_duracion_corregida": "TMDB 1655419 (119, Cannes 2026); TIFF 119"
   },
   {
    "title": "La Gradiva",
@@ -5653,7 +5661,7 @@
    "year": 2026,
    "country": "Bélgica, Francia, Países Bajos",
    "flags": "🇧🇪🇫🇷🇳🇱",
-   "duration": "125 min",
+   "duration": "120 min",
    "language": "Francés, Neerlandés",
    "genre": "Drama histórico",
    "day": "2026-10-14",
@@ -5674,7 +5682,8 @@
    "premiere": "Clausura",
    "lbSlug": "coward-2026",
    "tmdb_id": 1437981,
-   "synopsis_en": "Pierre, a young Belgian soldier, wants to prove himself on the battlefield during the First World War. Behind the frontlines, he meets Francis, who is asked to find a way to boost morale."
+   "synopsis_en": "Pierre, a young Belgian soldier, wants to prove himself on the battlefield during the First World War. Behind the frontlines, he meets Francis, who is asked to find a way to boost morale.",
+   "_duracion_corregida": "TMDB 1437981 (120, Cannes 2026); MUBI Fest y TIFF 120"
   },
   {
    "title": "Princesa Burro",
@@ -5830,7 +5839,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-07T15:20:07",
+  "fecha": "2026-10-14T18:52:33",
   "plan_sha": "1aaa37e1829a6d31",
   "paso": 9,
   "cmd": "python3 pipeline/ensamblar.py biff-2026"

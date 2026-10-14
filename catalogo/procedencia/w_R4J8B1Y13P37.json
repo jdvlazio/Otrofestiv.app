@@ -10,8 +10,8 @@
   "fecha": "2026-10-12"
  },
  "anio": {
-  "fuente": "festival",
-  "regla": "único"
+  "fuente": "tmdb:1796541",
+  "regla": "tmdb-manda"
  },
  "paises": {
   "fuente": "festival",

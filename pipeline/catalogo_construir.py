@@ -215,12 +215,24 @@ def _tildes(s):
     return sum(1 for c in s if ord(c) > 127)
 
 
+# v2 (14 oct 2026): el año pasó a ser el del primer estreno; una entrada de la
+# caché sin `v` se calculó con la regla vieja y se vuelve a pedir
+_CACHE_V = 2
+
+
 def _tmdb(tid, key, cache):
-    if tid not in cache:
+    if tid not in cache or cache[tid].get('v') != _CACHE_V:
         # por id: una ficha vacía por la red escribía año, país y director de
         # festival como si TMDB no los tuviera (lib.tmdb_ficha, 14 oct 2026)
-        m = tmdb_ficha(tid, key, append_to_response='credits') if key else {}
-        cache[tid] = {'anio': int(m['release_date'][:4]) if (m.get('release_date') or '')[:4].isdigit() else None,
+        m = tmdb_ficha(tid, key, append_to_response='credits,release_dates') if key else {}
+        # EL AÑO ES EL DEL PRIMER ESTRENO (14 oct 2026): `release_date` es el
+        # estreno principal de TMDB, que puede ser el comercial de otro país
+        # años después del festival — «Mu-Ki-Ra» salía 2027 (España) siendo de
+        # 2026 (Colombia, abril). Se toma la fecha más temprana de todas
+        _f = sorted(d.get('release_date', '')[:4] for r in (m.get('release_dates') or {}).get('results', [])
+                    for d in r.get('release_dates', []) if (d.get('release_date') or '')[:4].isdigit())
+        _a = _f[0] if _f else (m.get('release_date') or '')[:4]
+        cache[tid] = {'v': _CACHE_V, 'anio': int(_a) if _a.isdigit() else None,
                       'paises': [c['iso_3166_1'] for c in m.get('production_countries') or []],
                       'directores': [c['name'] for c in (m.get('credits') or {}).get('crew', []) if c.get('job') == 'Director']}
     return cache[tid]

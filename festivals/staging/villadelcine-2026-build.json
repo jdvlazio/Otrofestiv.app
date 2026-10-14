@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "PROGRAMACIÓN «Caminos del tiempo» 2026 (PDF) + las fichas de obra de villadelcine.com",
-  "capturado": "2026-10-13",
+  "capturado": "2026-10-14",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "acceso_por_defecto": {
@@ -1059,7 +1059,7 @@
    "year": 2026,
    "country": "Colombia",
    "flags": "🇨🇴",
-   "duration": "120 min",
+   "duration": "113 min",
    "genre": "Fantasía / Drama / Comedia",
    "day": "2026-10-15",
    "time": "17:15",
@@ -1079,7 +1079,8 @@
    "lbSlug": "rains-over-babel",
    "tmdb_id": 1388977,
    "synopsis_en": "In a retro-futuristic, tropical-punk twist on Dante’s Inferno, a group of misfits converges at Babel, a legendary dive bar that doubles as purgatory, where La Flaca—the city’s Grim Reaper—presides. Here, souls gamble years of their lives with her, daring to outwit Death Herself.",
-   "title_en": "Rains Over Babel"
+   "title_en": "Rains Over Babel",
+   "_duracion_corregida": "TMDB 1388977 (113, Sundance 2025); FICMA y Girardota 111, Narrar el futuro 113"
   },
   {
    "title": "Umbrales",
@@ -2766,7 +2767,7 @@
    "year": 2025,
    "country": "Colombia",
    "flags": "🇨🇴",
-   "duration": "120 min",
+   "duration": "123 min",
    "genre": "Comedia / Drama",
    "day": "2026-10-17",
    "time": "19:15",
@@ -2785,12 +2786,13 @@
    "lbSlug": "a-poet",
    "tmdb_id": 1465563,
    "synopsis_en": "An aging poet finds purpose mentoring Yurlady, a talented teen, though exposing her to the poetry scene might be unwise. His own poetic pursuits led nowhere, leaving him a stereotypical obscure writer.",
-   "title_en": "A Poet"
+   "title_en": "A Poet",
+   "_duracion_corregida": "TMDB 1465563 (123, Cannes 2025); Ficmontañas 124"
   }
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-13T08:06:07",
+  "fecha": "2026-10-14T18:52:32",
   "plan_sha": "59bf137b7d874efe",
   "paso": 16,
   "cmd": "python3 pipeline/ensamblar.py villadelcine-2026"
