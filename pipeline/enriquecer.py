@@ -631,7 +631,20 @@ def main():
                                     if a.get('idioma') == 'en')),
         ('lbSlug', lambda w: (w.get('xref') or {}).get('letterboxd')),
         ('anio', lambda w: w.get('anio')),
+        # LA SINOPSIS (14 oct 2026): «Bertha» salió sin sinopsis en BIFF con la
+        # de QAFF publicada; «Madres de nacimiento», sin la inglesa en cinco
+        # festivales teniéndola FICDEH. Es texto que ya pasó por un montaje
+        ('synopsis_es', lambda w: (w.get('sinopsis') or {}).get('es')),
+        ('synopsis_en', lambda w: (w.get('sinopsis') or {}).get('en')),
+        # EL AFICHE: nunca un fotograma (veredicto del catálogo)
+        ('poster', lambda w: (w.get('afiche') or {}).get('archivo')
+                   if (w.get('afiche') or {}).get('veredicto') != 'fotograma' else None),
     )
+    # lo que la FUENTE ya trae manda: no se hereda encima (el ensamblador
+    # tampoco lo pisaría, pero así lo heredado no queda anotado de mentira)
+    _DE_LA_FUENTE = {'synopsis_es': ('sinopsis', 'synopsis_es'), 'synopsis_en': ('sinopsis_en', 'synopsis_en'),
+                     'poster': ('poster',), 'genero': ('genero',), 'title_en': ('title_en',),
+                     'lbSlug': ('lbSlug',), 'anio': ('anio',)}
     _hered = {}
     for t, f in obras.items():
         e = ok.get(t) or {}
@@ -640,6 +653,13 @@ def main():
         w = _obs.get(wid) if wid else None
         if not w:
             continue
+        # LA SINOPSIS NO SE HEREDA DE SÍ MISMA (14 oct 2026): si el único
+        # festival que publicó la obra es este, su «sinopsis» del catálogo es el
+        # texto que este mismo ensamblado ya armó — Itagüí recibía su propia
+        # nota de invitados y el ensamblador la duplicaba. El Letterboxd o el
+        # afiche propios SÍ vuelven: son lo publicado tal cual (SiembraFest los
+        # tiene en producción y no en su crudo)
+        _solo_propia = set(w.get('presentaciones') or []) <= {fid}
         de = f'catálogo {wid} ({", ".join(w["presentaciones"])})'
         for campo, valor in HEREDA:
             # el año ya puede venir de TMDB (anio_tmdb) o de la fuente (anio)
@@ -647,7 +667,25 @@ def main():
                 continue
             if (str(e.get(campo) or '')).strip():
                 continue
+            if any(f.get(x) for x in _DE_LA_FUENTE.get(campo, ())):
+                continue
+            if _solo_propia and campo in ('synopsis_es', 'synopsis_en'):
+                continue
+            # la española también puede estar ya como `sinopsis` (lo publicado),
+            # y el afiche como `poster_path` (TMDB)
+            if campo == 'synopsis_es' and (e.get('sinopsis') or '').strip():
+                continue
+            if campo == 'poster' and e.get('poster_path'):
+                continue
             v = valor(w)
+            # EL AFICHE AJENO, con las reglas de reuso_publicada: que no sea el
+            # de este mismo festival de vuelta, que exista en disco, y que SEA un
+            # afiche (afiche_criterio: ni tarjeta de sección ni solo texto)
+            if campo == 'poster' and v:
+                _v = str(v)
+                if _v.startswith(f'/assets/{fid}/') or (_v.startswith('/assets/') and (
+                        not os.path.exists(REPO + _v) or not afiche_ajeno_vale(_v))):
+                    continue
             # un title_en igual al título no es un título en inglés
             if campo == 'title_en' and v and norm(v) == norm(t):
                 continue
@@ -662,6 +700,11 @@ def main():
                     continue
             if v:
                 e[campo] = v
+                if campo == 'poster':
+                    _ver = (w.get('afiche') or {}).get('veredicto')
+                    e['posterSource'] = ('tmdb' if 'image.tmdb.org' in str(v)
+                                         else 'custom' if _ver == 'oficial-festival' else 'oficial')
+                    e['_heredado']= {**e.get('_heredado', {}), 'posterSource': de}
                 e.setdefault('_heredado', {})[campo] = de
                 _hered[campo] = _hered.get(campo, 0) + 1
         if e.get('_heredado') and t not in ok:

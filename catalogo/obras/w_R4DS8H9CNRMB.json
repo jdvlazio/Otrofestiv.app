@@ -17,11 +17,6 @@
   {
    "titulo": "Drunk hearing the rain drops fall",
    "tipo": "festival"
-  },
-  {
-   "titulo": "Borrachos escuchando las gotas de lluvia caer",
-   "idioma": "en",
-   "tipo": "traduccion"
   }
  ],
  "sinopsis": {
@@ -32,7 +27,8 @@
   "Documental Híbrido / Drama"
  ],
  "afiche": {
-  "archivo": "/assets/biff-2026/borrachos-mientras-escuchamos-las-gotas-caer.jpg"
+  "archivo": "/assets/biff-2026/borrachos-mientras-escuchamos-las-gotas-caer.jpg",
+  "veredicto": "oficial"
  },
  "xref": {
   "tmdb": 1743109,
