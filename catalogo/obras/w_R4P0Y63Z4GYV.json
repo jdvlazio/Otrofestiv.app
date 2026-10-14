@@ -8,12 +8,18 @@
  "directores": [
   "Fernando Eimbcke"
  ],
+ "aliases": [
+  {
+   "titulo": "Moscas",
+   "tipo": "festival"
+  }
+ ],
  "sinopsis": {
-  "es": "Cuando una mujer solitaria le alquila un cuarto a un padre con un familiar hospitalizado, surge un vínculo inesperado con su hijo pequeño, en este relato tierno de Fernando Eimbcke sobre el cuidado, el encuentro y la transformación callada.",
-  "en": "When a lonely woman rents a room to a father with a hospitalized relative, she forms an unexpected bond with his young son, in Fernando Eimbcke’s tender story about care, connection, and quiet transformation."
+  "es": "Olga vive en un enorme multifamiliar en donde lleva una existencia solitaria, regida por hábitos inalterables. Pero cuando, por necesidad económica, renta un cuarto de su departamento a un hombre quien a escondidas mete también a su hijo de nueve años, Olga se enfrenta a lo que más miedo le tiene, la conexión emocional. Q&A con el director",
+  "en": "Olga lives a strictly regulated life without attachments in a vast apartment block. When out of financial necessity she rents a room in her apartment to a man who also sneaks-in his nine-year-old son, an unlikely bond forms. Her carefully controlled world begins to shift, and their lives become intertwined against her will."
  },
  "afiche": {
-  "archivo": "https://image.tmdb.org/t/p/w500/tff1IQnQIfx4akKYbD2rsGk31pU.jpg"
+  "archivo": "/assets/mubibogota-2026/moscas.jpg"
  },
  "xref": {
   "tmdb": 1437703,
@@ -23,9 +29,14 @@
   {
    "etiqueta": "101 min",
    "duracion_min": 101
+  },
+  {
+   "etiqueta": "102 min",
+   "duracion_min": 102
   }
  ],
  "presentaciones": [
+  "mubibogota-2026",
   "tiff-2026"
  ]
 }

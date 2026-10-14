@@ -292,9 +292,9 @@ está pasando de verdad — no lo que alguien recordaba al escribirlo.
 
 | campo | tipo | formato / valores | lo usan | notas |
 |---|---|---|---|---|
-| `ticket_url` | string | `^https://` | 8 fest | URL de compra de ESTA función. En snake_case: `ticketUrl` no lo lee nadie. |
-| `is_free` | boolean | — | 23 fest | Entrada libre. Booleano de verdad — la app compara con === true. |
-| `requires_registration` | boolean | — | 11 fest |  |
+| `ticket_url` | string | `^https://` | 9 fest | URL de compra de ESTA función. En snake_case: `ticketUrl` no lo lee nadie. |
+| `is_free` | boolean | — | 24 fest | Entrada libre. Booleano de verdad — la app compara con === true. |
+| `requires_registration` | boolean | — | 12 fest |  |
 | `registration_url` | string | `^https://` | 6 fest |  |
 | `by_invitation` | boolean | — | 2 fest | Función CERRADA al público, solo con invitación. Anula el badge de precio y el plan no la propone (screeningPlannable); se agenda a mano. Por función: la gala sí, las demás funciones de la obra no. |
 | `online` | boolean | — | 1 fest | Función EN LÍNEA (una charla por Twitch): su sede no tiene pin a propósito y el planificador no le suma traslado (travelMins da 0 sin coordenadas); choca solo por horario. Por función. |
@@ -323,8 +323,8 @@ está pasando de verdad — no lo que alguien recordaba al escribirlo.
 | `description_en` | string | — | 5 fest |  |
 | `description_es` | string | — | 1 fest |  |
 | `description_lang` | string | `es` · `en` · `pt` | 28 fest |  |
-| `rating` | string | — | 5 fest |  |
-| `premiere` | string | — | 12 fest | Texto libre del festival («World Premiere», «Estreno argentino»). |
+| `rating` | string | — | 6 fest |  |
+| `premiere` | string | — | 13 fest | Texto libre del festival («World Premiere», «Estreno argentino»). |
 | `type` | string | `film` · `event` · `short` | 29 fest |  |
 | `event_kind` | string | — | 22 fest | Palabra del festival, verbatim (charla, taller, masterclass). Enum en validate-festivals. |
 | `is_cortos` | boolean | — | 29 fest | exige `film_list` Programa curado: exige film_list no vacío. |
@@ -332,7 +332,7 @@ está pasando de verdad — no lo que alguien recordaba al escribirlo.
 | `is_programa` | boolean | — | 3 fest |  |
 | `is_recurring` | boolean | — | 4 fest |  |
 | `is_awards_screening` | boolean | — | 1 fest |  |
-| `info` | boolean | — | 8 fest | Drop-in sin hora fija: NO entra al plan ni a conflictos. |
+| `info` | boolean | — | 9 fest | Drop-in sin hora fija: NO entra al plan ni a conflictos. |
 | `unscheduled` | boolean | — | 1 fest | En catálogo sin jornada. Única exención de day/time/venue. |
 | `sessions` | array | — | 1 fest |  |
 | `has_qa` | boolean | — | 26 fest | Afecta conflictos vía durationForTravel. |
@@ -340,7 +340,7 @@ está pasando de verdad — no lo que alguien recordaba al escribirlo.
 | `qa_type` | string | `team` · `guests` | 14 fest | La variante del Q&A. Se pinta traducida; NO se escribe la frase en el dato. |
 | `competencia` | string | — | 1 fest |  |
 | `premium` | boolean | — | 1 fest |  |
-| `sala` | string | — | 18 fest | Sala DENTRO de la sede. Que no aparezca en el nombre de la sede ([sala-en-sede]). |
+| `sala` | string | — | 19 fest | Sala DENTRO de la sede. Que no aparezca en el nombre de la sede ([sala-en-sede]). |
 | `date` | string | `^\d{4}-\d{2}-\d{2}$` | 6 fest | Requerido si hay screenings[]. Tres festivales legacy lo tienen como número de día. |
 | `screenings` | array | — | 3 fest |  |
 | `poster` | string | — | 32 fest | URL, /assets/… o path TMDB. poster:"" está PROHIBIDO. Reglas: docs/POSTERS.md |
@@ -354,7 +354,7 @@ está pasando de verdad — no lo que alguien recordaba al escribirlo.
 | `format` | string | — | 1 fest | Formato de proyección (DCP, 35mm). Lo publica el festival; TIFF es el único que lo trae. |
 | `section_tags` | array | — | 1 fest | no lo lee la vista: ninguno todavía Sellos del festival (TIFF). Decisión de Juan: etiqueta, no sección. Falta cablearlo en la vista. |
 | `accessibility` | array | — | 1 fest | no lo lee la vista: ninguno todavía Accesibilidad de la función (p. ej. «oc» = subtítulos descriptivos). Sin superficie que la muestre. |
-| `work_id` | string | — | 30 fest | La obra del catálogo único (catalogo/obras/<work_id>.json, docs/CATALOGO-OBRAS.md). Lo ponen publicar.py y catalogo_construir.py --escribir, nunca a mano. Va en cada obra, también dentro de film_list; las actividades no llevan. [presentacion-con-obra] frena el push si falta o apunta a una obra que no existe. |
+| `work_id` | string | — | 31 fest | La obra del catálogo único (catalogo/obras/<work_id>.json, docs/CATALOGO-OBRAS.md). Lo ponen publicar.py y catalogo_construir.py --escribir, nunca a mano. Va en cada obra, también dentro de film_list; las actividades no llevan. [presentacion-con-obra] frena el push si falta o apunta a una obra que no existe. |
 
 ### Excepciones congeladas (festivales archivados)
 

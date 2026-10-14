@@ -35,7 +35,9 @@ SEDE = 'Gimnasio Moderno'
 
 ACCESO = {'ENTRADA LIBRE': 'Entrada libre', 'ASISTE GRATIS': 'Entrada libre',
           'REGISTRO PRÓXIMAMENTE': 'Entrada libre con inscripción previa',
-          'BOLETAS PRONTO': DESCONOCIDO}
+          'BOLETAS PRONTO': DESCONOCIDO,
+          # desde el 13 oct: la venta abrió en Entradas Inteligentes, enlace por función
+          'COMPRAR BOLETAS': 'Con boleta'}
 # la sección es la ETIQUETA del festival (no hay otra taxonomía en el sitio); si
 # una obra lleva varias, manda la más específica, en este orden
 SECCION_ORDEN = ['FOCO', 'RESTAURADA', 'ESTRENO MUBI', 'FUNCIÓN AL AIRE LIBRE']
@@ -72,6 +74,8 @@ SECCION_PUBLICADA = {'FOCO': 'Foco', 'RESTAURADA': 'Restaurada', 'ESTRENO MUBI':
 # de frase; los subtítulos que son reclamo («GANA MERCH…») no son invitados
 INVITADOS = {
     'MOSCAS': 'Q&A con el director',
+    # «COMMON PEOPLE: MÚSICA PARA OUTSIDERS» — «El DJ Alejandro Marín», «Duración DJ set: 45 min»
+    'PULP: ¿QUÉ HARÍAS POR UNA CANCIÓN MÁS?': 'DJ set de Alejandro Marín (45 min)',
     'LA PAGA': 'Q&A con Vladimir Durán y Pedro Adrián Zuluaga',
     'TIERRA DE MI PADRE': 'Epílogo sonoro con Julio Victoria',
     'CAMP EN EL CINE: ENTRE EL EXCESO Y EL ARTIFICIO': 'Con Vanessa Rosales, Felipe Cuéllar, Jimmy Rangel y Andrés Suárez',
@@ -127,13 +131,18 @@ def main():
                 sys.exit(f'✗ {t}: hora fuera de la zona de Bogotá ({loc})')
             reg = {'titulo': TITULO[t], 'titulo_fuente': t, 'dia': loc[:10], 'hora': loc[11:16],
                    'sede': SEDE, 'acceso': ACCESO[s['button'].strip()],
-                   '_src': {'url': URL, 'date': '2026-10-11', 'boton': s['button'].strip()}}
+                   **({'ticket_url': s['url']} if s.get('url') else {}),
+                   '_src': {'url': URL, 'date': '2026-10-14', 'boton': s['button'].strip()}}
             dur = re.match(r'\s*(\d+)', e.get('duration') or '')
             if dur:
                 reg['duracion_min'] = int(dur.group(1))
             if t in ACTIVIDAD:
                 sec, kind = ACTIVIDAD[t]
                 reg.update(tipo='evento', event_kind=kind, seccion=sec)
+                # MUBI Library es un ESPACIO abierto los dos días («oct 24 - oct 25»,
+                # desde la 1 p. m., sin duración): se visita, no se agenda (info:true)
+                if t == 'MUBI LIBRARY':
+                    reg['info'] = True
             else:
                 reg['director'] = DIRECTOR[t]
                 reg['seccion'] = SECCION_PUBLICADA[next(x for x in SECCION_ORDEN if x in etiquetas or (e.get('eyebrow') or '').upper() == x)]
@@ -141,6 +150,19 @@ def main():
                     reg['has_qa'] = True
             if t in INVITADOS:
                 reg['invitados'] = INVITADOS[t]
+            # lo que dice la prosa de cada tarjeta (lectura A, 14 oct): el estreno
+            # («PREMIERE EN COLOMBIA») y que TODO el festival es para mayores de 18
+            # LA SALA (lectura C, 14 oct): la boletería de Entradas Inteligentes pone
+            # las seis funciones pagas en el «Auditorio Gimnasio Moderno»; las que la
+            # tarjeta marca «al aire libre», afuera. Las demás no lo dicen
+            if s.get('url'):
+                reg['sala'] = 'Auditorio'
+            elif any('AIRE LIBRE' in x for x in etiquetas) or 'AIRE LIBRE' in (e.get('eyebrow') or '').upper():
+                reg['sala'] = 'Al aire libre'
+            if 'PREMIERE EN COLOMBIA' in (e.get('eyebrow') or '').upper():
+                reg['premiere'] = 'Premiere en Colombia'
+            if re.search(r'mayores de 18', desc or '', re.I):
+                reg['clasificacion'] = 'Para mayores de 18 años'
             if desc:
                 reg['sinopsis'] = desc.split('\n')[0]
             funciones.append(reg)
