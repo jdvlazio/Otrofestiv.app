@@ -6711,7 +6711,8 @@ try:
             'decision-pisada': _cat.decision_pisada(_obs, _decs),
             'presentacion-con-obra': _cat.presentacion_sin_obra(_fests, _obs, _fus, exigir=bool(_obs)),
             'candidato-sin-resolver': _cat.candidatos_abiertos(),
-            'catalogo-ids': _cat.ids_validos(_obs)}
+            'catalogo-ids': _cat.ids_validos(_obs),
+            'dato-que-no-viaja': _cat.techo_superado(_fests)}
 except Exception as _e:
     _CAT = {'catalogo-autoprueba': [f'el guardián no pudo correr: {_e}']}
 
@@ -6740,6 +6741,19 @@ check = 'candidato-sin-resolver'
 _cat_rep(check, 'sin pares de obras pendientes de decisión')
 check = 'catalogo-ids'
 _cat_rep(check, 'toda obra con id válido y archivo con su nombre')
+# [dato-que-no-viaja] lo que un festival nuestro ya publicó de una obra y otro
+# festival nuestro publica vacío (14 oct 2026: La paga, «Drama» en Cinemancia
+# 2025 y sin género en FILCMAR y MUBI). Trinquete: falla si sube del techo
+# medido (catalogo.TECHO) y avisa si baja, para bajarlo.
+check = 'dato-que-no-viaja'
+_cat_rep(check, 'ningún campo de obra pierde más presentaciones que su techo')
+try:
+    _hv = _cat.dato_que_no_viaja(_fests)
+    _baja = [f'{_c} {len(_v)} < {_cat.TECHO[_c]}' for _c, _v in _hv.items() if len(_v) < _cat.TECHO[_c]]
+    if _baja:
+        warn(check, 'bajó el hueco — bajar catalogo.TECHO: ' + ', '.join(_baja))
+except Exception:
+    pass
 
 # ── [css-huerfana] toda clase del <style> la emite alguien ───────────────────────
 # Medido el 5 sep 2026: 825 clases en index.html, 45 que nada emitía — 14 nunca

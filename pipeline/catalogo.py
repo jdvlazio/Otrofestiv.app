@@ -248,6 +248,51 @@ def ids_validos(obs):
             if o.get('_archivo') and o['_archivo'] != f'{wid}.json']
 
 
+# ── el dato que no viaja (14 oct 2026) ──────────────────────────────────────
+# El catálogo existe para que lo que un festival ya resolvió llegue al siguiente
+# (§5 del diseño), y la fase 3b solo hizo viajar el id de TMDB: La paga salió
+# «Drama» en Cinemancia 2025 y vacía en FILCMAR y MUBI, y nadie lo vio. Esto
+# cuenta, por campo, las presentaciones VACÍAS de una obra que otro festival
+# nuestro SÍ publicó con ese campo. TECHO es lo medido el 14 oct: el guardián
+# falla si sube (un montaje nuevo que no heredó) y avisa si baja (bajar el techo:
+# es un trinquete, la deuda solo se achica).
+CAMPOS_QUE_VIAJAN = ('genre', 'title_en', 'synopsis', 'synopsis_en', 'year',
+                     'country', 'duration', 'director', 'poster', 'lbSlug')
+TECHO = {'genre': 143, 'title_en': 167, 'synopsis': 100, 'synopsis_en': 103,
+         'year': 92, 'country': 6, 'duration': 16, 'director': 63, 'poster': 26,
+         'lbSlug': 122}
+
+
+def dato_que_no_viaja(festivales):
+    """{campo: [(festival, título), …]} — presentaciones vacías en un campo que
+    otra presentación de la misma obra (mismo work_id) sí tiene."""
+    por_obra = {}
+    for fid, d in festivales.items():
+        for f in (d or {}).get('films', []):
+            if f.get('type') == 'event':
+                continue
+            for o in (f.get('film_list') or [f]):
+                if o.get('work_id') and o.get('type') != 'event':
+                    por_obra.setdefault(o['work_id'], []).append((fid, o))
+    huecos = {c: [] for c in CAMPOS_QUE_VIAJAN}
+    for regs in por_obra.values():
+        if len(regs) < 2:
+            continue
+        for c in CAMPOS_QUE_VIAJAN:
+            if any(o.get(c) for _, o in regs):
+                huecos[c] += [(fid, o.get('title')) for fid, o in regs if not o.get(c)]
+    return huecos
+
+
+def techo_superado(festivales, techo=None):
+    """Los campos cuyo hueco pasa el techo → lista de problemas (vacía = sano)."""
+    techo = TECHO if techo is None else techo
+    h = dato_que_no_viaja(festivales)
+    return [f'{c}: {len(v)} > techo {techo.get(c, 0)} (p. ej. ' +
+            ', '.join(f'«{t}» en {fid}' for fid, t in v[-3:]) + ')'
+            for c, v in h.items() if len(v) > techo.get(c, 0)]
+
+
 # ── autoprueba: cada invariante atrapa su caso roto ──────────────────────────
 def autoprueba():
     """Cebos en memoria (prefijo zzz, nunca en disco: un cebo en disco pisó un
@@ -272,6 +317,13 @@ def autoprueba():
         ciegos.append('ids_validos')
     if huella('La niña santa') != huella('Niña Santa, La') or huella('Rose') == huella('Rosa'):
         ciegos.append('huella')
+    _w = 'w_000000ZZZ003'
+    _f = {'zzz-2025': {'films': [{'title': 'zzz', 'work_id': _w, 'genre': 'Drama'}]},
+          'zzz-2026': {'films': [{'title': 'zzz', 'work_id': _w}]}}
+    _t0 = {c: 0 for c in CAMPOS_QUE_VIAJAN}
+    if not techo_superado(_f, _t0) or techo_superado(_f, {**_t0, 'genre': 1}) \
+            or techo_superado({'zzz-2026': _f['zzz-2026']}, _t0):
+        ciegos.append('techo_superado')
     if not ID.match(nuevo_id()):
         ciegos.append('nuevo_id')
     return ciegos
