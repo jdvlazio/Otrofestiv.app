@@ -33,7 +33,7 @@ from collections import defaultdict
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import catalogo  # noqa: E402
 from catalogo import huella, apellido  # noqa: E402
-from lib import sinacento, banderas, tmdb_get  # noqa: E402
+from lib import sinacento, banderas, tmdb_ficha  # noqa: E402
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 UMBRAL = 0.85
@@ -216,7 +216,9 @@ def _tildes(s):
 
 def _tmdb(tid, key, cache):
     if tid not in cache:
-        m = tmdb_get(f'/movie/{tid}', key, append_to_response='credits') if key else {}
+        # por id: una ficha vacía por la red escribía año, país y director de
+        # festival como si TMDB no los tuviera (lib.tmdb_ficha, 14 oct 2026)
+        m = tmdb_ficha(tid, key, append_to_response='credits') if key else {}
         cache[tid] = {'anio': int(m['release_date'][:4]) if (m.get('release_date') or '')[:4].isdigit() else None,
                       'paises': [c['iso_3166_1'] for c in m.get('production_countries') or []],
                       'directores': [c['name'] for c in (m.get('credits') or {}).get('crew', []) if c.get('job') == 'Director']}

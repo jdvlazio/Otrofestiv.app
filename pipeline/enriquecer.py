@@ -29,7 +29,7 @@ import json, os, re, subprocess, sys, time
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from lib import (cargar_crudo, ficha_verifica, norm, provenance, slug,
-                 tmdb_get, UA, ficha_tmdb, director_coincide, ya_publicada,
+                 tmdb_get, tmdb_ficha, UA, ficha_tmdb, director_coincide, ya_publicada,
                  obras_publicadas)
 import catalogo  # noqa: E402
 
@@ -101,10 +101,9 @@ def ficha_de_tmdb(cid, key, titulo):
     """(ficha TMDB cruda, campos extraídos). DUEÑO ÚNICO de qué se saca de una
     ficha: lo llaman la búsqueda automática y la declaración a mano, que
     difieren solo en quién responde por el emparejamiento."""
-    det = tmdb_get(f'/movie/{cid}', key, language='es-ES',
-                   append_to_response='credits')
-    det_en = tmdb_get(f'/movie/{cid}', key, language='en-US',
-                      append_to_response='credits')
+    # por id: vacía por la red ya no se arma (lib.tmdb_ficha, 14 oct 2026)
+    det = tmdb_ficha(cid, key, language='es-ES', append_to_response='credits')
+    det_en = tmdb_ficha(cid, key, language='en-US', append_to_response='credits')
     # créditos de ambos idiomas: los en-US vienen romanizados
     # (宮崎吾朗 → «Goro Miyazaki») y sin ellos el director nunca casa
     det.setdefault('credits', {}).setdefault('crew', []).extend(

@@ -149,6 +149,46 @@ def tmdb_get(path, api_key, **params):
     return {}
 
 
+
+class TMDBRed(Exception):
+    """TMDB no respondió (red). NO es «no existe»: una ficha pedida por id
+    vuelve con datos o con el error 34; vacía, es que no llegó."""
+
+
+def tmdb_ficha(cid, api_key, _get=None, **params):
+    """Una ficha POR ID: la ficha, {} si TMDB dice que no existe (34), o
+    TMDBRed si no respondió.
+
+    POR QUÉ (14 oct 2026). tmdb_get devuelve {} cuando agota los reintentos, y
+    en una BÚSQUEDA eso a lo sumo pierde una ficha. Pedida por id, la ficha
+    vacía se armaba igual: «En construcción», «La bola negra» e «Historias del
+    buen valle» —declaradas a mano en Ficcali— volvieron sin afiche, sin país y
+    sin sinopsis en inglés en una corrida con la red cortando, sin un solo
+    aviso, y así se habrían publicado. Que pare: el sidecar de la corrida
+    anterior queda intacto y se vuelve a correr."""
+    d = (_get or tmdb_get)(f'/movie/{cid}', api_key, **params)
+    if d.get('id'):
+        return d
+    if d.get('status_code') == 34:
+        return {}
+    raise TMDBRed(f'TMDB no respondió por la ficha {cid} (red): se para antes '
+                  f'de escribir nada; volver a correr')
+
+
+def tmdb_ficha_autoprueba():
+    """Los tres casos con un tmdb_get de mentira. Lista de fallos: vacía = sana."""
+    mal = []
+    if tmdb_ficha(1, 'k', _get=lambda *a, **k: {'id': 1, 'title': 'zzz'}).get('title') != 'zzz':
+        mal.append('ficha que llega')
+    if tmdb_ficha(1, 'k', _get=lambda *a, **k: {'success': False, 'status_code': 34}) != {}:
+        mal.append('ficha que no existe (34)')
+    try:
+        tmdb_ficha(1, 'k', _get=lambda *a, **k: {})
+        mal.append('red caída: no paró')
+    except TMDBRed:
+        pass
+    return mal
+
 # ── verificación (la lección Tribeca, ejecutable) ────────────────────────────
 def director_coincide(esperado, nombres):
     """¿Algún nombre de TMDB casa con el director de la fuente? Compara por

@@ -6687,6 +6687,23 @@ try:
 except Exception as _e:
     fail(check, f'el guardián no pudo correr: {_e}')
 
+# ── [tmdb-ficha-ruidosa] una ficha pedida por id no vuelve vacía en silencio ──
+# 14 oct 2026: con la red cortando, tres fichas declaradas a mano de Ficcali
+# volvieron sin afiche, país ni sinopsis EN, sin aviso. lib.tmdb_ficha separa
+# «llegó» / «no existe» (34) / «no respondió» (para). Su autoprueba corre aquí.
+check = 'tmdb-ficha-ruidosa'
+try:
+    import sys as _syst
+    _syst.path.insert(0, 'pipeline')
+    import lib as _libt
+    _mt = _libt.tmdb_ficha_autoprueba()
+    if _mt:
+        fail(check, 'lib.tmdb_ficha ciega en: ' + ', '.join(_mt))
+    else:
+        ok(check, 'una ficha por id llega, no existe, o para la corrida')
+except Exception as _e:
+    fail(check, f'el guardián no pudo correr: {_e}')
+
 # ── [catalogo-*] el catálogo único de obras (docs/CATALOGO-OBRAS.md) ─────────
 # Fase 0 (12 oct 2026): el catálogo todavía está vacío, así que estos guardianes
 # pasan sin más; lo que SÍ corre siempre es la autoprueba —cada invariante tiene
