@@ -81,7 +81,7 @@
  },
  "_provenance": {
   "fuente": "Nominatim con verificación: caja de ciudad + token distintivo + clase de lugar (una sede fija nunca es un barrio). _prec:manual intocable.",
-  "capturado": "2026-10-12"
+  "capturado": "2026-10-13"
  },
  "Universidad del Magdalena": {
   "n": 1,
@@ -90,5 +90,37 @@
   "_prec": "manual",
   "_match": "Google Maps: Universidad del Magdalena (sala Langosta Azul dentro del campus) (10 oct 2026)",
   "address": "Carrera 32 #22-08"
+ },
+ "Bodega Insurgesta": {
+  "lat": 4.5682746,
+  "lng": -74.1701952,
+  "_prec": "manual",
+  "_match": "Google Maps: Bodega in-surgesta, Cl. 79b Sur #42-39 (13 oct 2026)",
+  "n": 0,
+  "address": "Cl. 79b Sur #42-39"
+ },
+ "Servicio Forjar Restaurativo Arborizadora Baja": {
+  "lat": 4.5749445,
+  "lng": -74.1512321,
+  "_prec": "manual",
+  "_match": "Google Maps: Servicio Centro Forjar Ciudad Bolívar, Cl. 58c Sur (Arborizadora Baja) (13 oct 2026)",
+  "n": 0,
+  "address": "Cl. 58c Sur"
+ },
+ "Centro Ático, Universidad Javeriana": {
+  "lat": 4.6269751,
+  "lng": -74.0650621,
+  "_prec": "manual",
+  "_match": "Google Maps: Centro Ático, Cl. 40b #6-23 (13 oct 2026)",
+  "n": 0,
+  "address": "Cl. 40b #6-23"
+ },
+ "La Mecánica": {
+  "lat": 4.6559406,
+  "lng": -74.0722361,
+  "_prec": "manual",
+  "_match": "Google Maps: La Mecánica Original (centro cultural), Cra. 25 #63f-21 (13 oct 2026)",
+  "n": 0,
+  "address": "Cra. 25 #63f-21"
  }
 }
