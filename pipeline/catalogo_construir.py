@@ -62,7 +62,8 @@ def registros():
                             'duracion': int(dur.group()) if dur else None,
                             'pais': o.get('country'), 'tmdb': o.get('tmdb_id'),
                             'lb': o.get('lbSlug') if re.fullmatch(r'[a-z0-9-]+', str(o.get('lbSlug') or '')) else None,   # «⚠️ LB PENDIENTE» no es un slug
-                            'poster': o.get('poster'), 'sinopsis': o.get('synopsis'),
+                            'poster': o.get('poster'), 'posterSource': o.get('posterSource'),
+                            'sinopsis': o.get('synopsis'),
                             'sinopsis_en': o.get('synopsis_en'), 'title_en': o.get('title_en'),
                             'genero': (o.get('genre') or '').strip() or None,
                             'anteriores': list(o.get('titulos_anteriores') or [])})
@@ -294,9 +295,22 @@ def materializar(R, grupos, key, cache):
         if _gen:
             o['generos'] = sorted(_gen, key=lambda g: -_gen[g])
             pr['generos'] = {'fuente': 'festival', 'regla': 'todos los publicados, del más al menos frecuente'}
-        af = next((r['poster'] for r in regs if r['poster']), None)
-        if af:
-            o['afiche'] = {'archivo': af}
+        # EL AFICHE QUE VIAJA (14 oct 2026): el primero que fuera AFICHE. Antes
+        # se guardaba el primer póster a secas, y un fotograma 16:9 (posterSource
+        # `editorial`, «Acto de ver» en Cinemancia 2025) quedaba como afiche de
+        # la obra. Un /assets/ que ya no está en disco tampoco vale. El
+        # veredicto dice de dónde vino: oficial (TMDB o la casa), del festival
+        # (lámina `custom`) o fotograma — que nunca se hereda (enriquecer.py)
+        _VER = {'editorial': 'fotograma', 'custom': 'oficial-festival'}
+        _vale = [r for r in regs if r['poster'] and r.get('posterSource') != 'editorial'
+                 and not (str(r['poster']).startswith('/assets/')
+                          and not os.path.exists(REPO + r['poster']))]
+        _fot = [r for r in regs if r['poster'] and r.get('posterSource') == 'editorial']
+        if _vale:
+            o['afiche'] = {'archivo': _vale[0]['poster'],
+                           'veredicto': _VER.get(_vale[0].get('posterSource'), 'oficial')}
+        elif _fot:
+            o['afiche'] = {'archivo': _fot[0]['poster'], 'veredicto': 'fotograma'}
         lb = next((r['lb'] for r in regs if r['lb']), None)
         o['xref'] = {k: v for k, v in (('tmdb', tm[0] if len(tm) == 1 else None), ('letterboxd', lb)) if v}
         durs = sorted({r['duracion'] for r in regs if r['duracion']})

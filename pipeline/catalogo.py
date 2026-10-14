@@ -256,11 +256,21 @@ def ids_validos(obs):
 # nuestro SÍ publicó con ese campo. TECHO es lo medido el 14 oct: el guardián
 # falla si sube (un montaje nuevo que no heredó) y avisa si baja (bajar el techo:
 # es un trinquete, la deuda solo se achica).
+# `poster` subió de 26 a 44 el mismo 14 oct al dejar de contar un fotograma
+# como afiche (_tiene): no empeoró nada, se mide lo que es.
 CAMPOS_QUE_VIAJAN = ('genre', 'title_en', 'synopsis', 'synopsis_en', 'year',
                      'country', 'duration', 'director', 'poster', 'lbSlug')
 TECHO = {'genre': 143, 'title_en': 167, 'synopsis': 100, 'synopsis_en': 103,
-         'year': 92, 'country': 6, 'duration': 16, 'director': 63, 'poster': 26,
+         'year': 92, 'country': 6, 'duration': 16, 'director': 63, 'poster': 44,
          'lbSlug': 122}
+
+
+def _tiene(o, campo):
+    """Un fotograma 16:9 (posterSource `editorial`) no es un afiche: ni cuenta
+    como que la obra lo tiene ni viaja (14 oct 2026, «Acto de ver»)."""
+    if campo == 'poster':
+        return bool(o.get('poster')) and o.get('posterSource') != 'editorial'
+    return bool(o.get(campo))
 
 
 def dato_que_no_viaja(festivales):
@@ -279,8 +289,8 @@ def dato_que_no_viaja(festivales):
         if len(regs) < 2:
             continue
         for c in CAMPOS_QUE_VIAJAN:
-            if any(o.get(c) for _, o in regs):
-                huecos[c] += [(fid, o.get('title')) for fid, o in regs if not o.get(c)]
+            if any(_tiene(o, c) for _, o in regs):
+                huecos[c] += [(fid, o.get('title')) for fid, o in regs if not _tiene(o, c)]
     return huecos
 
 
