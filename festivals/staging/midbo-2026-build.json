@@ -548,7 +548,7 @@
    "tmdb_id": 1303398,
    "synopsis_en": "The revolutions that swept Latin America in the second half of the 20th century owe much to the participation of millions of Christians who engaged in political struggles in the name of their faith, paying a heavy toll for undermining the traditional relationship between the Church and power. Driven by Liberation theology, they challenged military regimes and oligarchies, risking their lives. Far from Marx's idea of religion as 'opium of the people', here the people fought for the advent of the Kingdom of God on Earth, rather than in Heaven.",
    "title_en": "The Gospel of Revolution",
-   "_programa_original": "Programa 7: Reactivar los archivos para el presente"
+   "_programa_original": "Programa 7: Reactivar los archivos para el presente — Universidad Nacional de Colombia"
   },
   {
    "title": "El valor de la palabra",
@@ -785,7 +785,7 @@
    "title_en": "Our Body Is an Expanding Star"
   },
   {
-   "title": "Programa 3: Creadoras de vida",
+   "title": "Programa 3: Creadoras de vida — Bodega Insurgesta",
    "type": "film",
    "section": "🎞️ Competencia Nacional de Cortometraje Documental",
    "country": "Colombia, Francia, Austria",
@@ -967,7 +967,7 @@
     "date": "2026-10-10"
    },
    "ticket_url": "https://tuboleta.com/es/eventos/pasaje-entre-mundos-duelo-y-memoria",
-   "premiere": "Estreno en Bogotá",
+   "premiere": "Estreno en Colombia",
    "is_cortos": true,
    "film_list": [
     {
@@ -2374,7 +2374,7 @@
     "url": "https://midbo.co/peliculas/geografia-espectral/",
     "date": "2026-10-10"
    },
-   "premiere": "Estreno en Bogotá",
+   "premiere": "Estreno en Colombia",
    "is_cortos": true,
    "film_list": [
     {
@@ -2626,7 +2626,7 @@
    ]
   },
   {
-   "title": "Programa 2: Geografías en resistencia",
+   "title": "Programa 2: Geografías en resistencia — Canterbury Café",
    "type": "film",
    "section": "🎞️ Competencia Nacional de Cortometraje Documental",
    "country": "Colombia, Cuba",
@@ -3113,7 +3113,7 @@
     "url": "https://midbo.co/peliculas/el-leon/",
     "date": "2026-10-10"
    },
-   "premiere": "Estreno en Bogotá",
+   "premiere": "Estreno en Colombia",
    "is_free": true,
    "is_cortos": true,
    "film_list": [
@@ -3644,7 +3644,7 @@
     "url": "https://midbo.co/peliculas/statues-also-die/",
     "date": "2026-10-10"
    },
-   "premiere": "Estreno en Iberoamérica",
+   "premiere": "Estreno en Colombia",
    "is_cortos": true,
    "film_list": [
     {
@@ -4010,7 +4010,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-13T20:33:55",
+  "fecha": "2026-10-13T20:38:13",
   "plan_sha": "3bda549d3825e850",
   "paso": 6,
   "cmd": "python3 pipeline/ensamblar.py midbo-2026"

@@ -365,6 +365,15 @@ def main():
     for f in funciones:
         if f.get('obras') and len(_vistos[f['titulo']]) > 1 and not f['titulo'].startswith('Programa'):
             f['titulo'] = ' + '.join(o['titulo'] for o in f['obras'])
+    # UN PROGRAMA NUMERADO que en otra sede va con MENOS obras (la web del 13
+    # oct: «Creadoras de vida» en la Bodega in-surgesta sin «Geografía
+    # espectral»): la función incompleta lleva la sede en el título, o la app
+    # mostraría las cinco obras en las dos ([programa-mismo-titulo])
+    for f in funciones:
+        if f.get('obras') and f['titulo'].startswith('Programa') and len(_vistos[f['titulo']]) > 1:
+            mayor = max(len(x) for x in _vistos[f['titulo']])
+            if len(f['obras']) < mayor:
+                f['titulo'] = f"{f['titulo']} — {f['sede']}"
     # COMILLAS RECTAS en el título ([title-normalization])
     for f in funciones:
         f['titulo'] = f['titulo'].replace('’', "'").replace('‘', "'")
