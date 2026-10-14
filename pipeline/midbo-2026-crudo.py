@@ -54,9 +54,25 @@ SEDES = {
     'Potocine, Ciudad Bolívar': ('Potocine', '', 'Bogotá'),
     'Auditorio Caldas, Universidad Central': ('Universidad Central', 'Auditorio Caldas', 'Bogotá'),
     'Canterbury Café, Kennedy': ('Canterbury Café', '', 'Bogotá'),
+    # nueva en la web del 13 oct («Cuba y la noche»): otro edificio del mismo campus;
+    # el pin de la sede es el del campus, la sala dice cuál edificio
+    'Auditorio 422, edificio 303C (NEA), Universidad Nacional de Colombia, sede Bogotá':
+        ('Universidad Nacional de Colombia', 'Auditorio 422, edificio 303C (NEA)', 'Bogotá'),
     'Auditorio Virginia Guitérrez, Posgrados de Ciencias Humanas, Universidad Nacional de Colombia, Bogotá':
         ('Universidad Nacional de Colombia', 'Auditorio Virginia Gutiérrez', 'Bogotá'),
     'Auditorio Salmona, Centro Cultural Gabriel García Márquez': ('Centro Cultural Gabriel García Márquez', 'Auditorio Salmona', 'Bogotá'),
+    # ── LO QUE LA WEB SUMÓ EL 13 OCT (programación en universidades y barrios) ──
+    'Cinemateca Sala Alterna, UNAL, Auditorio 105, edificio 301': ('Universidad Nacional de Colombia', 'Cinemateca Sala Alterna, Auditorio 105, edificio 301', 'Bogotá'),
+    'Auditorio 313, edificio 303C (NEA), Universidad Nacional de Colombia, sede Bogotá': ('Universidad Nacional de Colombia', 'Auditorio 313, edificio 303C (NEA)', 'Bogotá'),
+    'Auditorio 313, Edificio 303C (NEA), Universidad Nacional de Colombia, sede Bogotá': ('Universidad Nacional de Colombia', 'Auditorio 313, edificio 303C (NEA)', 'Bogotá'),
+    'Sala AMA, edificio 303C (NEA), Universidad Nacional de Colombia, sede Bogotá': ('Universidad Nacional de Colombia', 'Sala AMA, edificio 303C (NEA)', 'Bogotá'),
+    'Canterbury Café Kennedy': ('Canterbury Café', '', 'Bogotá'),
+    'Auditorio, Centro de Memoria, Paz y Reconciliación': ('Centro de Memoria, Paz y Reconciliación', 'Auditorio', 'Bogotá'),
+    'Auditorio Santander, Universidad Central': ('Universidad Central', 'Auditorio Santander', 'Bogotá'),
+    'Bodega Insurgesta, Potosí, Ciudad Bolívar': ('Bodega Insurgesta', '', 'Bogotá'),
+    'Servicio Forjar Restaurativo Arborizadora Baja, Ciudad Bolívar': ('Servicio Forjar Restaurativo Arborizadora Baja', '', 'Bogotá'),
+    'Centro Ático, Universidad Javeriana': ('Centro Ático, Universidad Javeriana', '', 'Bogotá'),
+    'La Mecánica': ('La Mecánica', '', 'Bogotá'),
     'Cinemateca del Caribe, Barranquilla': ('Cinemateca del Caribe', '', 'Barranquilla'),
     'UniNorte, Barranquilla': ('Universidad del Norte', '', 'Barranquilla'),
     'Sala Langosta Azul, Universidad del Magdalena, Santa Marta': ('Universidad del Magdalena', 'Sala Langosta Azul', 'Santa Marta'),
@@ -197,9 +213,20 @@ def bloques(p):
     out = []
     for n, li in enumerate(re.findall(r'<li>(.*?)</li>', seg, re.S)):
         c = re.search(r'f-cuando">(.*?)</span>', li, re.S); d = re.search(r'f-donde">(.*?)</span>', li, re.S)
+        # LA WEB DEL 13 OCT pone el acceso EN CADA FUNCIÓN: <a class="… f-compra">
+        # (TuBoleta) o <span class="f-entrada">Entrada libre</span>. Cuando la
+        # función lo trae, manda sobre las observaciones comunes de la obra
+        propias = []
+        cm = re.search(r'class="[^"]*f-compra[^"]*" href="([^"]+)"', li)
+        if cm:
+            propias.append('TICKET ' + html.unescape(cm.group(1)))
+        for e in re.findall(r'f-entrada">(.*?)</span>', li, re.S):
+            propias.append(re.sub(r'\s+', ' ', t(e)))
+        base = ([x for x in comun if not x.startswith('TICKET ') and 'entrada libre' not in x.lower()]
+                if propias else comun)
         if c and d:
             out.append(([re.sub(r'\s+', ' ', t(c.group(1))), re.sub(r'\s+', ' ', t(d.group(1)))],
-                        comun + tramos.get(n, [])))
+                        base + tramos.get(n, []) + propias))
     return out
 
 
@@ -294,7 +321,12 @@ def main():
                    if any(n.startswith('TICKET ') for n in notas) else {}),
                 'acceso': ACCESO_SEMINARIO if seminario_obra else
                           'Boletería en TuBoleta' if any(n.startswith('TICKET ') for n in notas) else
-                          ('Entrada libre' if any('entrada libre' in n.lower() for n in notas) else 'desconocido'),
+                          ('Entrada libre' if any('entrada libre' in n.lower() for n in notas) else
+                           # REGLA DE JUAN (13 oct): «cuando no se anuncie pago, es
+                           # porque es gratis». La venta de MIDBO es la de la
+                           # Cinemateca (TuBoleta); fuera de ella, sin aviso = libre
+                           'desconocido' if 'Cinemateca' in s['sede'] else
+                           'Entrada libre (no se anuncia pago)'),
                 '_src': {'url': s['obras'][0]['url'], 'date': '2026-10-10'}}
         if any('con presencia' in n.lower() for n in notas):
             base['has_qa'], base['qa_type'] = True, 'team'
