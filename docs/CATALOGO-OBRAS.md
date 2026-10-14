@@ -160,6 +160,7 @@ silencio (es la regla de «sin ficha no se publica», llevada a la obra).
   (o está en `fusiones` como redirigida).
 - `[candidato-sin-resolver]`: un onboarding no publica con candidatos abiertos.
 - `[catalogo-ids]`: todo id con la forma `w_` + 12 caracteres Crockford, y cada archivo se llama como su id.
+- `[dato-que-no-viaja]`: por campo de obra (género, EN, sinopsis, año, país, duración, director, afiche, Letterboxd), las presentaciones vacías de una obra que otro festival nuestro sí publicó. Trinquete sobre `catalogo.TECHO` (medido el 14 oct 2026): falla si sube, avisa si baja.
 - `[catalogo-autoprueba]`: cada uno de los anteriores tiene que atrapar un cebo en memoria; si alguno queda ciego, el push se bloquea.
 
 ## 5. Cómo encaja con el pipeline de hoy
