@@ -181,6 +181,7 @@
     "date": "2026-10-14",
     "boton": "ENTRADA LIBRE"
    },
+   "title_en": "Pulp: What Do You Do for an Encore?",
    "is_free": true,
    "lbSlug": "pulp-what-do-you-do-for-an-encore",
    "tmdb_id": 1715598,
@@ -244,6 +245,7 @@
     "date": "2026-10-14",
     "boton": "ENTRADA LIBRE"
    },
+   "title_en": "The Adventures of Priscilla, Queen of the Desert",
    "is_free": true,
    "lbSlug": "the-adventures-of-priscilla-queen-of-the-desert",
    "tmdb_id": 2759,
@@ -330,6 +332,7 @@
     "date": "2026-10-14",
     "boton": "ENTRADA LIBRE"
    },
+   "title_en": "Teenage Sex and Death at Camp Miasma",
    "is_free": true,
    "lbSlug": "teenage-sex-and-death-at-camp-miasma",
    "tmdb_id": 1240889,
@@ -426,6 +429,8 @@
    "type": "film",
    "section": "🔎 Foco",
    "director": "Agnès Varda",
+   "country": "Francia, Cuba",
+   "flags": "🇫🇷🇨🇺",
    "duration": "85 min",
    "rating": "Para mayores de 18 años",
    "day": "2026-10-25",
@@ -434,14 +439,81 @@
    "venue": "Gimnasio Moderno - Bogotá",
    "sala": "Auditorio",
    "has_qa": false,
-   "synopsis": "«En mis películas siempre quise hacer que la gente mirara en profundidad». —Agnès Varda",
-   "synopsis_lang": "es",
    "_src": {
     "url": "https://mubifest.com/es/bogota",
     "date": "2026-10-14",
     "boton": "COMPRAR BOLETAS"
    },
-   "ticket_url": "https://www.entradasinteligentes.com/event/mubi-fest-bogota-voila-varda"
+   "ticket_url": "https://www.entradasinteligentes.com/event/mubi-fest-bogota-voila-varda",
+   "title_en": "Voilà Varda: Short Films by Agnès Varda",
+   "is_cortos": true,
+   "film_list": [
+    {
+     "title": "Uncle Yanco",
+     "director": "Agnès Varda",
+     "country": "Francia",
+     "flags": "🇫🇷",
+     "year": 1967,
+     "duration": "18 min",
+     "tmdb_id": 277677,
+     "poster": "/assets/mubibogota-2026/uncle-yanco.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "uncle-yanco",
+     "synopsis": "Durante la estancia de Varda en San Francisco en octubre de 1967 para promocionar su última película, tuvo noticia a través de su amigo Tom Luddy, de que vivía por allí un familiar, un tío de ella, del que no había oído hablar antes: Jean Varda, apodado Yanco. Éste vivía en un barco en Sausalito, era pintor, había adoptado el estilo de vida hippie y amaba la vida. El encuentro fue un momento muy feliz.",
+     "synopsis_en": "While in San Francisco for the promotion of her last film in October 1967, Agnès Varda, tipped by her friend Tom Luddy, gets to know a relative she had never heard of before, Jean Varda, nicknamed \"Yanco\". This hitherto unknown uncle lives on a boat in Sausalito, is a painter, has adopted a hippie lifestyle and loves life. The meeting is a very happy one.",
+     "genre": "Documental",
+     "synopsis_lang": "es"
+    },
+    {
+     "title": "Black Panthers",
+     "director": "Agnès Varda",
+     "country": "Francia",
+     "flags": "🇫🇷",
+     "year": 1968,
+     "duration": "28 min",
+     "tmdb_id": 144597,
+     "poster": "/assets/mubibogota-2026/black-panthers.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "black-panthers",
+     "synopsis": "Documental del año 1968 que parte del arresto de Huey Newton, uno de los fundadores de Panteras Negras, tras el supuesto asesinato de un policía. El film se centra en las protestas que congregaron a más de 5000 personas, en las que se produjeron durísimos enfrentamientos entre la policía y los manifestantes...",
+     "synopsis_en": "A film shot during the summer of 1968 in Oakland, California around the meetings organised by the Black Panthers Party to free Huey Newton, one of their leaders, and to turn his trial into a political debate. They tried and succeeded in catching America’s attention.",
+     "genre": "Documental",
+     "synopsis_lang": "es"
+    },
+    {
+     "title": "Women Reply",
+     "director": "Agnès Varda",
+     "country": "Francia",
+     "flags": "🇫🇷",
+     "year": 1975,
+     "duration": "8 min",
+     "tmdb_id": 186365,
+     "poster": "/assets/mubibogota-2026/women-reply.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "women-reply",
+     "synopsis_en": "What does being a woman really mean? How do women live the status society reserves for them? A group of women, beautiful or not, young or not, gifted with motherly instinct or not, answer before Agnès Varda's camera.",
+     "genre": "Documental"
+    },
+    {
+     "title": "Salut les Cubains",
+     "director": "Agnès Varda",
+     "country": "Cuba, Francia",
+     "flags": "🇨🇺🇫🇷",
+     "year": 1963,
+     "duration": "30 min",
+     "tmdb_id": 144599,
+     "poster": "/assets/mubibogota-2026/salut-les-cubains.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "hello-cubans",
+     "synopsis": "“Salut les Cubains” anima mil quinientas de las más de cuatro mil instantáneas que Varda tomó durante sus vacaciones en Cuba. Mediante el montaje, la realizadora consigue que las personas retratadas canten y bailen, en lo que ella denomina como \"socialismo y cha cha cha\". (FILMAFFINITY)",
+     "synopsis_en": "A photo montage of Cubans filmed by Agnès Varda during her visit to Cuba in 1963, four years after Fidel Castro came to power. This black & white documentary explores their socialist culture and society while making use of 1500 pictures (out of 4000!) the filmmaker took while on the island.",
+     "title_en": "Hello Cubans",
+     "genre": "Documental",
+     "synopsis_lang": "es"
+    }
+   ],
+   "description": "«En mis películas siempre quise hacer que la gente mirara en profundidad». —Agnès Varda",
+   "description_lang": "es"
   },
   {
    "title": "La cosa",
@@ -469,6 +541,7 @@
     "date": "2026-10-14",
     "boton": "ENTRADA LIBRE"
    },
+   "title_en": "The Thing",
    "is_free": true,
    "lbSlug": "the-thing",
    "tmdb_id": 1091,
@@ -563,6 +636,7 @@
     "boton": "COMPRAR BOLETAS"
    },
    "ticket_url": "https://www.entradasinteligentes.com/event/mubi-fest-bogota-coward",
+   "title_en": "Coward",
    "lbSlug": "coward-2026",
    "tmdb_id": 1437981,
    "synopsis_en": "Pierre, a young Belgian soldier, wants to prove himself on the battlefield during the First World War. Behind the frontlines, he meets Francis, who is asked to find a way to boost morale."
@@ -570,8 +644,8 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-14T07:18:40",
-  "plan_sha": "d4ac31fb8c546586",
+  "fecha": "2026-10-14T08:33:22",
+  "plan_sha": "d7f550dc832ae067",
   "paso": 5,
   "cmd": "python3 pipeline/ensamblar.py mubibogota-2026"
  }

@@ -88,6 +88,29 @@ DIRECTOR = {'ROSE': 'Markus Schleinzer', 'PULP: ¿QUÉ HARÍAS POR UNA CANCIÓN 
             'LA COSA': 'John Carpenter', 'THELMA & LOUISE': 'Ridley Scott',
             'COBARDE': 'Lukas Dhont', 'LA PAGA': 'Ciro Durán'}
 
+# TÍTULO EN INGLÉS (14 oct): el enriquecedor no lo escribe cuando coincide con el
+# original, y aquí el título publicado es el español del festival, así que la
+# vista en inglés pintaba «La cosa». Es el título de TMDB en inglés; Rose y
+# Thelma & Louise se llaman igual en los dos idiomas y no lo necesitan
+TITULO_EN = {
+    'PULP: ¿QUÉ HARÍAS POR UNA CANCIÓN MÁS?': 'Pulp: What Do You Do for an Encore?',
+    'LAS AVENTURAS DE PRISCILLA, REINA DEL DESIERTO': 'The Adventures of Priscilla, Queen of the Desert',
+    'ADOLESCENCIA, SEXO Y MUERTE EN CAMPAMENTO MIASMA': 'Teenage Sex and Death at Camp Miasma',
+    'LA COSA': 'The Thing',
+    'COBARDE': 'Coward',
+    'VOILÀ VARDA: CORTOMETRAJES DE AGNÈS VARDA': 'Voilà Varda: Short Films by Agnès Varda',
+}
+# LOS CORTOS DE VOILÀ VARDA: la página de la función (/es/bogota/co_agnesvarda)
+# los nombra: «Ve UNCLE YANCO, BLACK PANTHERS, WOMEN REPLY y SALUT LES CUBAINS».
+# Títulos como los escribe el festival, en caja de frase; año, país y duración de
+# TMDB (id verificado: dirección Agnès Varda). Suman 84 min contra 85 de la franja
+VARDA = [
+    {'titulo': 'Uncle Yanco', 'director': 'Agnès Varda', 'tmdb_id': 277677, 'anio': 1967, 'pais': 'Francia', 'duracion_min': 18},
+    {'titulo': 'Black Panthers', 'director': 'Agnès Varda', 'tmdb_id': 144597, 'anio': 1968, 'pais': 'Francia', 'duracion_min': 28},
+    {'titulo': 'Women Reply', 'director': 'Agnès Varda', 'tmdb_id': 186365, 'anio': 1975, 'pais': 'Francia', 'duracion_min': 8},
+    {'titulo': 'Salut les Cubains', 'director': 'Agnès Varda', 'tmdb_id': 144599, 'anio': 1963, 'pais': 'Cuba, Francia', 'duracion_min': 30},
+]
+
 
 def nuxt(s):
     a = json.loads(re.search(r'<script[^>]*id="__NUXT_DATA__"[^>]*>(.*?)</script>', s, re.S).group(1))
@@ -148,6 +171,10 @@ def main():
                 reg['seccion'] = SECCION_PUBLICADA[next(x for x in SECCION_ORDEN if x in etiquetas or (e.get('eyebrow') or '').upper() == x)]
                 if 'Q&A' in etiquetas:
                     reg['has_qa'] = True
+            if t in TITULO_EN:
+                reg['title_en'] = TITULO_EN[t]
+            if t == 'VOILÀ VARDA: CORTOMETRAJES DE AGNÈS VARDA':
+                reg['obras'] = [dict(o) for o in VARDA]
             if t in INVITADOS:
                 reg['invitados'] = INVITADOS[t]
             # lo que dice la prosa de cada tarjeta (lectura A, 14 oct): el estreno

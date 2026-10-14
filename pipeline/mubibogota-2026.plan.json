@@ -99,5 +99,8 @@
   "_fuentes_versionadas": {
    "festivals/staging/mubibogota-2026-radar.json": "el volcado del radar #1090"
   }
+ },
+ "_fuentes_versionadas": {
+  "festivals/staging/mubibogota-2026-afiches.json": "afiches declarados (mirados a mano); los leen pipeline/enriquecer.py y pipeline/encuadrar-posters.py, que no recorta los declarados"
  }
 }

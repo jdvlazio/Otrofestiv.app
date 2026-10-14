@@ -327,8 +327,8 @@ está pasando de verdad — no lo que alguien recordaba al escribirlo.
 | `premiere` | string | — | 13 fest | Texto libre del festival («World Premiere», «Estreno argentino»). |
 | `type` | string | `film` · `event` · `short` | 29 fest |  |
 | `event_kind` | string | — | 22 fest | Palabra del festival, verbatim (charla, taller, masterclass). Enum en validate-festivals. |
-| `is_cortos` | boolean | — | 29 fest | exige `film_list` Programa curado: exige film_list no vacío. |
-| `film_list` | array | — | 28 fest |  |
+| `is_cortos` | boolean | — | 30 fest | exige `film_list` Programa curado: exige film_list no vacío. |
+| `film_list` | array | — | 29 fest |  |
 | `is_programa` | boolean | — | 3 fest |  |
 | `is_recurring` | boolean | — | 4 fest |  |
 | `is_awards_screening` | boolean | — | 1 fest |  |
