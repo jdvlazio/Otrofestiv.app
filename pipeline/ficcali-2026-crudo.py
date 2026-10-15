@@ -135,6 +135,17 @@ SEDES = {
     'Boulevard del Rio': ('Bulevar del Río', ''),
 }
 EN_LINEA = 'En línea'
+# LO QUE ANUNCIÓ IG Y LA WEB NO TIENE (vigía 15 oct 2026, #1024; OK de Juan).
+# Cada una con día, hora y lugar dichos por la fuente; sin aviso de pago, libre.
+_CINE_EXPANDIDO = 'https://www.instagram.com/p/DefUB_ksTlh/'
+DEL_IG = (
+    [{'dia': d, 'hora': '15:00', 'duracion_min': 180, 'titulo': 'Taller Gemelos Digitales', 'fuente': _CINE_EXPANDIDO}
+     for d in ('2026-10-16', '2026-10-19', '2026-10-20')] +  # el 15 queda fuera del 16–25 oficial
+    [{'dia': d, 'hora': '14:00', 'duracion_min': 240, 'titulo': 'Taller Cine Atmosférico', 'fuente': _CINE_EXPANDIDO}
+     for d in ('2026-10-21', '2026-10-22', '2026-10-23')])
+# la SEGUNDA función del cineconcierto: la anuncia la sede (@centrodecreacion.musical,
+# IG p/Deg4GpNHCB_, 15 oct), no el festival — va con la misma ficha que la del 21
+METROPOLIS_24 = {'dia': '2026-10-24', 'fuente': 'https://www.instagram.com/p/Deg4GpNHCB_/'}
 
 # la categoría de la tarjeta, cuando la obra no tiene ficha o es una actividad
 SECCION_TARJETA = {'Proyecciones': 'Proyecciones', 'Cine sin límites': 'Cine Sin Límites',
@@ -435,6 +446,15 @@ def main():
         fallos.append(f'{len(T)} tarjetas y {len(funciones)} funciones + {len(fuera)} fuera')
     if fallos:
         sys.exit('✗ el crudo no cuadra:\n  · ' + '\n  · '.join(fallos))
+    for x in DEL_IG:
+        funciones.append({'dia': x['dia'], 'hora': x['hora'], 'sede': 'Yawa', 'sede_cruda': 'YAWA',
+                          'acceso': 'Entrada libre (no se anuncia pago)', 'titulo': x['titulo'],
+                          'tipo': 'evento', 'event_kind': 'taller', 'seccion': 'Académico',
+                          'is_recurring': True, 'duracion_min': x['duracion_min'],
+                          '_src': {'url': x['fuente'], 'date': '2026-10-14'}})
+    _m21 = next(f for f in funciones if f.get('titulo') == 'Cineconcierto: Metrópolis')
+    funciones.append({**_m21, 'dia': METROPOLIS_24['dia'],
+                      '_src': {'url': METROPOLIS_24['fuente'], 'date': '2026-10-15'}})
     io.open(DESTINO, 'w', encoding='utf-8').write(json.dumps({
         '_provenance': provenance('ficcali.com — Programación 2026 (WP 14870) + fichas de la Selección 2026',
                                   url=URL, metodo='tarjeta por función; obra por la ficha del catálogo'),
