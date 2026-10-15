@@ -1581,6 +1581,7 @@
      "lbSlug": "chaika-2025",
      "tmdb_id": 1689999,
      "synopsis": "Valentina, una cosmonauta rusa de 76 años, llega a una Cuba ucrónica y nebulosa tras recibir, con treinta años de retraso, una invitación para una expedición agrícola a Marte. Entre paisajes difusos y promesas del pasado, busca las ruinas de un futuro que nunca llegó.",
+     "genre": "Ciencia Ficción",
      "synopsis_lang": "es"
     },
     {
@@ -1635,6 +1636,7 @@
      "duration": "18 min",
      "poster": "/assets/filcmar-2026/hdlt.jpg",
      "synopsis": "Después del ataque que sufrió, Luz trata de entender lo que le sucedió: el Hijo de la Tierra vino a destruir a la humanidad robando sus recuerdos más tristes y felices. Pero desembarcó en Suba, el distrito más lejano de Bogotá, donde una extraña adicción cambiará el curso de la historia.",
+     "genre": "Drama",
      "posterSource": "oficial",
      "synopsis_lang": "es"
     },
@@ -1644,7 +1646,9 @@
      "country": "Colombia",
      "flags": "🇨🇴",
      "year": 2026,
-     "duration": "14 min"
+     "duration": "14 min",
+     "poster": "/assets/bhff-2026/vientre.jpg",
+     "posterSource": "oficial"
     },
     {
      "title": "Pudor Ante el Asalto de los Ojos Furtivos",
@@ -2855,7 +2859,12 @@
      "year": 2026,
      "duration": "17 min",
      "poster": "/assets/fantasmagoria-2026/siempre-hay-un-monstruo.jpg",
-     "posterSource": "oficial"
+     "posterSource": "tmdb",
+     "lbSlug": "siempre-hay-un-monstruo",
+     "tmdb_id": 1794456,
+     "synopsis": "Un grupo de agentes investiga un incidente ocurrido durante una fiesta privada en la casa de un joven actor. Lo que comienza como un caso rutinario se convierte rápidamente en el caso más monstruoso y aterrador de sus vidas.",
+     "genre": "Terror",
+     "synopsis_lang": "es"
     },
     {
      "title": "Morana",
@@ -2885,6 +2894,7 @@
      "lbSlug": "que-el-cielo-nos-perdone",
      "tmdb_id": 1565878,
      "synopsis": "Colombia, 1951: En medio de La Violencia, el período de brutal guerra política entre liberales y conservadores, un par de chulavitas –asesinos a sueldo pagados por el gobierno– acechan a un sacerdote en la oscuridad de la noche, esperando que los conduzca a la cabaña en el bosque en donde se esconden sus próximas víctimas. Pero el horror que encontrarán allí es mil veces peor que el dolor que pensaban infligir.",
+     "synopsis_en": "Colombia, 1951. In the thick of La Violencia, the period of brutal political war between Liberals and Conservatives, two chulavitas —hired killers on the government’s payroll— stalk a priest through the dark, waiting for him to lead them to the cabin in the woods where their next victims are hiding. But the horror they find there is a thousand times worse than the pain they meant to inflict.",
      "genre": "Terror",
      "synopsis_lang": "es"
     }
@@ -3701,7 +3711,12 @@
      "year": 2026,
      "duration": "17 min",
      "poster": "/assets/fantasmagoria-2026/siempre-hay-un-monstruo.jpg",
-     "posterSource": "oficial"
+     "posterSource": "tmdb",
+     "lbSlug": "siempre-hay-un-monstruo",
+     "tmdb_id": 1794456,
+     "synopsis": "Un grupo de agentes investiga un incidente ocurrido durante una fiesta privada en la casa de un joven actor. Lo que comienza como un caso rutinario se convierte rápidamente en el caso más monstruoso y aterrador de sus vidas.",
+     "genre": "Terror",
+     "synopsis_lang": "es"
     },
     {
      "title": "Morana",
@@ -3731,6 +3746,7 @@
      "lbSlug": "que-el-cielo-nos-perdone",
      "tmdb_id": 1565878,
      "synopsis": "Colombia, 1951: En medio de La Violencia, el período de brutal guerra política entre liberales y conservadores, un par de chulavitas –asesinos a sueldo pagados por el gobierno– acechan a un sacerdote en la oscuridad de la noche, esperando que los conduzca a la cabaña en el bosque en donde se esconden sus próximas víctimas. Pero el horror que encontrarán allí es mil veces peor que el dolor que pensaban infligir.",
+     "synopsis_en": "Colombia, 1951. In the thick of La Violencia, the period of brutal political war between Liberals and Conservatives, two chulavitas —hired killers on the government’s payroll— stalk a priest through the dark, waiting for him to lead them to the cabin in the woods where their next victims are hiding. But the horror they find there is a thousand times worse than the pain they meant to inflict.",
      "genre": "Terror",
      "synopsis_lang": "es"
     }
@@ -3911,7 +3927,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-15T06:02:29",
+  "fecha": "2026-10-15T09:56:28",
   "plan_sha": "bcc190a548850b59",
   "paso": 8,
   "cmd": "python3 pipeline/ensamblar.py fantasmagoria-2026"
