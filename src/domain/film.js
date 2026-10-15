@@ -398,6 +398,9 @@ export function explodeScreenings(films){
           ...(s.by_invitation?{by_invitation:true}:{}), // por-función: la gala, no las demás
           // EN LÍNEA (Fantasmagoría 8: dos charlas por Twitch): por función, con su canal
           ...(s.online?{online:true,stream_url:s.stream_url||'',stream_platform:s.stream_platform||''}:{}),
+          // La obra empieza después de que abre la función (Parapeto, BHFF): solo
+          // informa en la ficha; card y plan siguen con `time`.
+          ...(s.film_start?{film_start:s.film_start}:{}),
           // El formulario es de ESA actividad, no del festival (la Master Class de
           // FICDEH se titula con su propio nombre) → viaja por función, como is_free.
           ...(s.registration_url?{registration_url:s.registration_url}:{})

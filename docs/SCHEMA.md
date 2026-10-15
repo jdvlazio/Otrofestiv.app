@@ -306,6 +306,7 @@ está pasando de verdad — no lo que alguien recordaba al escribirlo.
 
 | campo | tipo | formato / valores | lo usan | notas |
 |---|---|---|---|---|
+| `film_start` | string | `^\d{2}:\d{2}$` | 1 fest | Hora en que EMPIEZA LA OBRA cuando la función abre antes (BHFF: Parapeto abre 19:00, la obra 19:30). Solo informa: el aviso «Inicio» de la ficha; la card y el plan siguen con `time`. Por función. |
 | `title_en` | string | — | 24 fest |  |
 | `title_es` | string | — | — | Título en español, SOLO cuando el festival titula en otro idioma y el afiche que mostramos dice el español. El buscador lo mira además de `title`: la única pista que el usuario tiene delante es el afiche. No es una traducción de cortesía; `title` sigue siendo el nombre oficial. |
 | `director` | string | — | 32 fest |  |

@@ -244,8 +244,10 @@
    "posterSource": "oficial",
    "_src": {
     "url": "https://bogotahorrorfilmfest.com/programacion/",
-    "date": "2026-09-26"
+    "date": "2026-09-26",
+    "film_start": "https://www.instagram.com/p/DcxA28kjgVo/"
    },
+   "film_start": "19:30",
    "premiere": "Inauguración",
    "lbSlug": "parapeto",
    "tmdb_id": 1662539
@@ -1256,7 +1258,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-15T08:14:34",
+  "fecha": "2026-10-15T08:39:24",
   "plan_sha": "2ffdc359c921f8c4",
   "paso": 7,
   "cmd": "python3 pipeline/ensamblar.py bhff-2026"

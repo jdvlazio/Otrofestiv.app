@@ -349,6 +349,15 @@ function validateFestival(fname, data) {
     const isEvent = film.type === 'event';
     const isCortos = !!film.is_cortos;
 
+    // ── [inicio-obra]: film_start cae DENTRO de la función ─────────────────
+    // Es la hora en que empieza la obra cuando la función abre antes (Parapeto,
+    // BHFF). Antes de que abra, o después de que termine, es un dato roto.
+    if (film.film_start != null) {
+      const _m = h => /^\d{2}:\d{2}$/.test(h || '') ? +h.slice(0, 2) * 60 + +h.slice(3) : null;
+      const _a = _m(film.time), _i = _m(film.film_start), _d = parseInt(film.duration) || 0;
+      if (_i == null || _a == null || _i <= _a || (_d && _i >= _a + _d))
+        errors.push(`GATE BLOQUEANTE [inicio-obra]: "${title}": film_start='${film.film_start}' no cae dentro de la función (${film.time}, ${film.duration || 'sin duración'})`);
+    }
     // ── RULE 1: day must exist in dayKeys ─────────────────────────────────
     // 'TBD' es un marcador DELIBERADO: la función existe y el festival aún no
     // anunció su fecha (Tribeca la usa junto con time:'TBD'). No es un día roto,

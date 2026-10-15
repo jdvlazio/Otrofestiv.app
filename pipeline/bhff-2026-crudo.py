@@ -66,6 +66,10 @@ DIRECTOR = {
 # (IG p/DecSAQRkevW, lámina 3) dicen «El Teatro — Cuidado con lo que deseas»,
 # «De el director Nicolás Bernal», «Escrito por Alexander Mosquera». Manda el
 # título del afiche de la obra
+# LA OBRA EMPIEZA DESPUÉS DE QUE ABRE LA FUNCIÓN: la web dice 7:00 p. m. y la
+# pieza de IG p/DcxA28kjgVo, 7:30. La función se queda en la hora de la web
+# (card y plan) y la ficha avisa cuándo empieza la obra (decisión de Juan, 15 oct).
+INICIO_OBRA = {'Parapeto': ('19:30', 'https://www.instagram.com/p/DcxA28kjgVo/')}
 TITULO_OBRA = {'El Teatro: Monólogo de Horror': 'El Teatro'}
 DIRECTOR['El Teatro'] = ('Nicolás Bernal', 'afiche y pie de IG p/DecSAQRkevW (lámina 3): «De el director Nicolás Bernal»')
 
@@ -250,6 +254,8 @@ def main():
                     r['titulo'] = ' + '.join(o['titulo'] for o in obras)
                     r['obras'] = obras
                     r['duracion_min'] = sum(o.get('duracion_min') or 0 for o in obras) or None
+            if r.get('titulo') in INICIO_OBRA:
+                r['film_start'], r['_src']['film_start'] = INICIO_OBRA[r['titulo']]
             funciones.append({k: v for k, v in r.items() if v not in (None, '')})
     for x in TALLERES:
         funciones.append({'dia': x['dia'], 'hora': x['hora'], 'sede': 'Cinemateca de Bogotá', 'sala': 'Lab 1',
