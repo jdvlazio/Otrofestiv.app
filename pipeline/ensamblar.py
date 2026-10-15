@@ -316,6 +316,13 @@ def _titulos_anteriores(fid, films):
     renombres = json.load(open(p, encoding='utf-8')).get('renombres') or []
     obras = [o for f in films for o in [f] + (f.get('film_list') or [])]
     vigentes = {o.get('title') for o in obras}
+    # UN RENOMBRE VIEJO HACIA UN PROGRAMA QUE AHORA SALE EN TÍTULO ([caja-titulo],
+    # 15 oct 2026): «Cali, ciudad abierta (cortos)» → «…– Prog. Cortos» apunta a un
+    # nombre que el build ya publica como «Cali, Ciudad Abierta – Prog. Cortos».
+    # Se encadena al nombre en Título: lo guardado bajo el más viejo también llega
+    renombres = [dict(r, ahora=caja.titulo(r['ahora']))
+                 if r['ahora'] not in vigentes and caja.titulo(r['ahora']) in vigentes else r
+                 for r in renombres]
     malos = [f"«{r['antes']}» → «{r['ahora']}»: " + ('el nuevo no está en el build' if r['ahora'] not in vigentes
                                                     else 'el viejo sigue vigente')
              for r in renombres if r['ahora'] not in vigentes or r['antes'] in vigentes]

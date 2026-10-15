@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "ficpa.co — Programación oficial 2026 (WP programacion2026) + Selección Oficial",
-  "capturado": "2026-10-13",
+  "capturado": "2026-10-15",
   "url": "https://www.ficpa.co/programacion2026/",
   "metodo": "HTML estructurado de la página, tarjeta por tarjeta; la sección y el crédito, de la página de seleccionados"
  },
@@ -519,12 +519,13 @@
   },
   {
    "dia": "2026-10-15",
-   "hora": "14:00",
+   "hora": "14:30",
    "sede": "Casa de la Cultura",
    "ciudad": "Pasto",
    "_src": {
     "url": "https://www.ficpa.co/programacion2026/",
-    "date": "2026-10-09"
+    "date": "2026-10-09",
+    "hora": "https://www.instagram.com/p/Def342cAKLA/"
    },
    "acceso": "Entrada libre",
    "titulo": "Taller Central \"Dirección de actores para el cine de Terror\"",
@@ -532,7 +533,7 @@
    "event_kind": "taller",
    "seccion": "Academia",
    "invitados": "A cargo de Carlos Ortiz (Bogotá).",
-   "duracion_min": 240
+   "duracion_min": 150
   },
   {
    "dia": "2026-10-15",

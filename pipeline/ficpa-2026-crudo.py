@@ -180,6 +180,8 @@ ALIAS_SELECCION = {'Tierra Palestina': 'TIERRA PALESTINA. CAMBIO GLOBAL'}
 # Yacuanquer el JUEVES 15 a las 7 p. m., no el miércoles 14. Regla de Juan:
 # si publicaron hace poco en IG, se confía en IG.
 DEL_IG = {('Yacuanquer · Parque Principal', 'Cortos invitados de México'): {'dia': '2026-10-15'}}
+HORA_DEL_IG = {('2026-10-15', 'Taller Central "Dirección de actores para el cine de Terror"'):
+               {'hora': '14:30', 'duracion_min': 150, 'fuente': 'https://www.instagram.com/p/Def342cAKLA/'}}
 # la sección de un programa alterno que MEZCLA secciones, fijada como está
 # publicada: los experimentales juntan un corto de Ecos (Grecia) con dos de
 # Latidos, y la mayoría cambiaba sola según qué títulos se reconocían (13 oct)
@@ -502,6 +504,15 @@ def main():
         f['titulo'] = f['titulo'].translate(str.maketrans({'“': '"', '”': '"', '«': '"', '»': '"'}))
     funciones = [{k: v for k, v in f.items() if v not in (None, '')} for f in funciones]
     funciones.sort(key=lambda f: (f['dia'], f['hora'], f['sede'], f['titulo']))
+    # LA HORA QUE CORRIGIÓ LA LÁMINA (vigía, 15 oct 2026): el carrusel del día 3
+    # (instagram.com/p/Def342cAKLA, 14 oct) pone el taller de Carlos Ortiz de
+    # 2:30 a 5:00 p. m.; la web sigue en 2:00–6:00. Regla de Juan: lo publicado
+    # hace poco en IG manda, y Juan lo aprobó
+    for f in funciones:
+        _c = HORA_DEL_IG.get((f.get('dia'), f.get('titulo')))
+        if _c:
+            f['hora'], f['duracion_min'] = _c['hora'], _c['duracion_min']
+            f['_src'] = {**f.get('_src', {}), 'hora': _c['fuente']}
     io.open(OUT, 'w', encoding='utf-8').write(json.dumps({
         '_provenance': provenance('ficpa.co — Programación oficial 2026 (WP programacion2026) + Selección Oficial',
                                   url=URL, metodo='HTML estructurado de la página, tarjeta por tarjeta; '

@@ -91,7 +91,15 @@ def main():
     plan = json.load(io.open(f'{REPO}/pipeline/{FID}.plan.json', encoding='utf-8'))['festival']
     cats = json.load(io.open(f'{DIR}/categorias.json', encoding='utf-8'))
 
-    por_tarjeta = {f['_src']['tarjeta']: f for f in crudo['funciones']}
+    por_tarjeta = {f['_src']['tarjeta']: f for f in crudo['funciones'] if 'tarjeta' in f['_src']}
+    # LO QUE SOLO ANUNCIÓ IG (sin tarjeta en la web): se contrasta con la tabla del
+    # crudo (DEL_IG + la segunda función de Metrópolis), la misma que lo agrega
+    import importlib.util as _iu
+    _sp = _iu.spec_from_file_location('crudo_py', f'{REPO}/pipeline/{FID}-crudo.py')
+    _cm = _iu.module_from_spec(_sp); _sp.loader.exec_module(_cm)
+    _esperadas = sorted([(x['dia'], x['hora'], x['titulo']) for x in _cm.DEL_IG] +
+                        [(_cm.METROPOLIS_24['dia'], '20:00', 'Cineconcierto: Metrópolis')])
+    _sin_tarjeta = sorted((f['dia'], f['hora'], f['titulo']) for f in crudo['funciones'] if 'tarjeta' not in f['_src'])
     # las que el crudo declara FUERA por su id (hoy: sede nueva sin pin, 8 oct)
     declaradas = {int(n) for n in re.findall(r'tarjeta (\d+) ·', ' '.join(crudo.get('_fuera') or []))}
     fallos, vistas = [], set()
@@ -126,6 +134,8 @@ def main():
     for t, f in por_tarjeta.items():
         if t not in vistas:
             fallos.append(f'en el crudo y en NINGUNA tarjeta del 16–25 de la API: {f["dia"]} {f["hora"]} «{f["titulo"][:50]}»')
+    if _sin_tarjeta != _esperadas:
+        fallos.append(f'funciones sin tarjeta que no son las de IG declaradas: {_sin_tarjeta} vs {_esperadas}')
     # el build es el crudo ensamblado: misma cuenta, mismas franjas
     bk = sorted((x['day'], x['time']) for x in build['films'])
     ck = sorted((f['dia'], f['hora']) for f in crudo['funciones'])
