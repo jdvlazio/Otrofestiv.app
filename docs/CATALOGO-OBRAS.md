@@ -161,7 +161,7 @@ silencio (es la regla de «sin ficha no se publica», llevada a la obra).
 - `[candidato-sin-resolver]`: un onboarding no publica con candidatos abiertos.
 - `[catalogo-ids]`: todo id con la forma `w_` + 12 caracteres Crockford, y cada archivo se llama como su id.
 - `[tmdb-ficha-ruidosa]`: `lib.tmdb_ficha` (toda ficha pedida por id) distingue «llegó», «no existe» (34) y «no respondió»; la última para la corrida antes de escribir. Corre su autoprueba.
-- `[dato-que-no-viaja]`: por campo de obra (género, EN, sinopsis, año, país, duración, director, afiche, Letterboxd), las presentaciones vacías de una obra que otro festival nuestro sí publicó. Trinquete sobre `catalogo.TECHO` (medido el 14 oct 2026): falla si sube, avisa si baja.
+- `[dato-que-no-viaja]`: por campo de obra (género, EN, sinopsis, año, país, duración, director, afiche, Letterboxd), las presentaciones vacías de una obra que otro festival nuestro sí publicó. Trinquete **por festival** sobre `catalogo/techo.json` (15 oct 2026; antes un techo global que un montaje nuevo con huecos obligaba a subir, y al subir tapaba los retrocesos de los demás): falla si un festival pasa SU techo —el de otro no lo cubre—, y uno que no está tiene techo 0. Entrar con huecos se declara midiendo: `python3 pipeline/catalogo.py --medir <fest>`; sin festival, el comando solo baja techos.
 - `[catalogo-autoprueba]`: cada uno de los anteriores tiene que atrapar un cebo en memoria; si alguno queda ciego, el push se bloquea.
 
 ## 5. Cómo encaja con el pipeline de hoy

@@ -6766,14 +6766,13 @@ _cat_rep(check, 'toda obra con id válido y archivo con su nombre')
 # [dato-que-no-viaja] lo que un festival nuestro ya publicó de una obra y otro
 # festival nuestro publica vacío (14 oct 2026: La paga, «Drama» en Cinemancia
 # 2025 y sin género en FILCMAR y MUBI). Trinquete: falla si sube del techo
-# medido (catalogo.TECHO) y avisa si baja, para bajarlo.
+# medido POR FESTIVAL (catalogo/techo.json, 15 oct) y avisa si baja, para bajarlo.
 check = 'dato-que-no-viaja'
 _cat_rep(check, 'ningún campo de obra pierde más presentaciones que su techo')
 try:
-    _hv = _cat.dato_que_no_viaja(_fests)
-    _baja = [f'{_c} {len(_v)} < {_cat.TECHO[_c]}' for _c, _v in _hv.items() if len(_v) < _cat.TECHO[_c]]
+    _baja = _cat.techo_holgado(_fests)
     if _baja:
-        warn(check, 'bajó el hueco — bajar catalogo.TECHO: ' + ', '.join(_baja))
+        warn(check, 'bajó el hueco — correr python3 pipeline/catalogo.py --medir: ' + ', '.join(_baja[:8]))
 except Exception:
     pass
 
