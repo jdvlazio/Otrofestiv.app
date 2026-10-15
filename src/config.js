@@ -610,6 +610,61 @@ export const PALMARES=[
    titulo:'Cayenas libertarias', autoria:'Javier Camilo Aranguren Montañez', obra:'Cayenas libertarias'},
   {fest:'popayan2026', categoria:'Mejor corto Cauca', nivel:'ganadora',
    titulo:'Yo soy yo', autoria:'Andrés Stiven Victoria Devia', obra:'Yo soy yo'},
+
+  // ── Festigirardota 2026 (9.º, Girardota) — post del 4 oct con @girardotaescultura ──
+  // https://www.instagram.com/p/DeE9UlknBvj/ — 8 láminas: la 1 «Ganadores ·
+  // Competencia oficial de cortometrajes», de la 2 a la 7 un premio por lámina,
+  // la 8 los logos. Leído sin sesión por la tarea palmares-ig el 15 oct 2026.
+  {fest:'girardota2026', categoria:'Categoría documental', nivel:'ganadora',
+   titulo:'Los Años del Conejo', autoria:'Raquel Tamayo Gutiérrez', obra:'Los Años del Conejo'},
+  {fest:'girardota2026', categoria:'Categoría documental', nivel:'mencion', premio:'Mención de Honor',
+   titulo:'Elementales', autoria:'Camilo Botero Jaramillo', obra:'Elementales'},
+  {fest:'girardota2026', categoria:'Categoría ficción', nivel:'ganadora',
+   titulo:'Bajo el Último Aliento', autoria:'Pedro Valencia', obra:'Bajo el Último Aliento'},
+  {fest:'girardota2026', categoria:'Categoría ficción', nivel:'mencion', premio:'Mención de Honor',
+   titulo:'Refracción', autoria:'Isabella Palacio Mesa', obra:'Refracción'},
+  {fest:'girardota2026', categoria:'Categoría experimental o videoclip', nivel:'ganadora',
+   // la lámina 6 dice «Flora Rodríguez y Andrés Muñoz», pero Muñoz es el
+   // PRODUCTOR: la web del Festival de Cine Corto de Popayán la da «dirigido por
+   // Flora Rodríguez y producido por Andrés Muñoz Escobar» (DIRECTOR_ERRATA en
+   // pipeline/girardota-2026-crudo.py)
+   titulo:'La Rebelión de un Fantasma', autoria:'Flora Rodríguez', obra:'La Rebelión de un Fantasma'},
+  {fest:'girardota2026', categoria:'Categoría experimental o videoclip', nivel:'mencion', premio:'Mención de Honor',
+   titulo:'De lo Oculto', autoria:'Daniel Rúa', obra:'De lo Oculto'},
+
+  // ── TIFF 2026 (Toronto) — anunciado el 20 sep ──
+  // tiff.net no abrió desde aquí: SOLO lo que dicen al menos dos fuentes
+  // independientes (AP en local10/ny1/ajc, thewrap.com, app.com.pk,
+  // nowtoronto.com, screendaily.com). Quedan fuera, con una sola fuente
+  // (blackgirlnerds.com): Midnight Madness, el corto animado, los finalistas
+  // de las categorías secundarias y las menciones de honor. Se suman cuando
+  // se confirmen en tiff.net (decisión de Juan, 15 oct 2026).
+  {fest:'tiff2026', categoria:"People's Choice Award", nivel:'ganadora',
+   titulo:'La Bola Negra', autoria:'Javier Calvo y Javier Ambrossi', obra:'La Bola Negra'},
+  {fest:'tiff2026', categoria:"People's Choice Award", nivel:'mencion', premio:'1.er finalista',
+   titulo:'I Play Rocky', autoria:'Peter Farrelly', obra:'I Play Rocky'},
+  {fest:'tiff2026', categoria:"People's Choice Award", nivel:'mencion', premio:'2.º finalista',
+   titulo:'Being Heumann', autoria:'Siân Heder', obra:'Being Heumann'},
+  {fest:'tiff2026', categoria:"International People's Choice Award", nivel:'ganadora',
+   titulo:'Elsinore', autoria:'Simon Stone', obra:'Elsinore'},
+  {fest:'tiff2026', categoria:"People's Choice Documentary Award", nivel:'ganadora',
+   titulo:"Darlene Love: I Know Where I've Been", autoria:'Barry Avrich', obra:"Darlene Love: I Know Where I've Been"},
+  {fest:'tiff2026', categoria:'Platform', nivel:'ganadora', premio:'Platform Prize',
+   titulo:'Angh', autoria:'Theja Rio', obra:'Angh'},
+  {fest:'tiff2026', categoria:'Platform', nivel:'mencion', premio:'Platform Special Jury Award',
+   titulo:'Brace Your Heart', autoria:'Amanda Kernell', obra:'Brace Your Heart'},
+  {fest:'tiff2026', categoria:'Best Canadian Feature Film', nivel:'ganadora',
+   titulo:'Sunburn', autoria:'Serville Poblete', obra:'Sunburn'},
+  {fest:'tiff2026', categoria:'Best Canadian Discovery', nivel:'ganadora',
+   titulo:'Smudge the Blades', autoria:'Cody Lightning', obra:'Smudge the Blades'},
+  {fest:'tiff2026', categoria:'FIPRESCI Prize', nivel:'ganadora',
+   titulo:'Ancestors', autoria:'David Turpin', obra:'Ancestors'},
+  {fest:'tiff2026', categoria:'NETPAC Award', nivel:'ganadora',
+   titulo:'Thirteen in Gaza', autoria:'Hosam Abu Dan', obra:'Thirteen in Gaza'},
+  {fest:'tiff2026', categoria:'Short Cuts', nivel:'ganadora', premio:'Best International Short Film',
+   titulo:'MAMMALIA', autoria:'Elia Kalogianni', obra:'MAMMALIA'},
+  {fest:'tiff2026', categoria:'Short Cuts', nivel:'ganadora', premio:'Best Canadian Short Film',
+   titulo:'Fight Kid', autoria:'Michael Del Monte', obra:'Fight Kid'},
 ];
 
 // ── NOTICES ──────────────────────────────────────────────────────────────────
