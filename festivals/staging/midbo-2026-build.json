@@ -1338,8 +1338,6 @@
      "duration": "14 min",
      "synopsis": "Dos viajes se entrelazan anacrónicamente: el de un médico inglés en Bolivia durante la década los 30 y el de la cineasta en Londres en 2024. La película aborda la problemática del arte a través de fragmentos, entendidos como esquirlas de mundos más amplios: ventanas o espejos que se abren y se cierran, revelando brevemente lo que hay más allá. A través del cine, los objetos se abordan como rastros de trayectorias del pasado y del presente, proponiendo maneras sensibles y afectivas de relacionarse con ellos. La exploración se desarrolla desde la colección de arte boliviano del Museo Británico, pasando por la colección de joyas del Museo V&A, hasta una colección privada de arte latinoamericano, todo ello contextualizado en Londres.",
      "synopsis_lang": "es",
-     "poster": "/assets/midbo-2026/trizas.jpg",
-     "posterSource": "tmdb",
      "lbSlug": "shards-2026",
      "tmdb_id": 1604094,
      "synopsis_en": "Fragments of pottery. Gold, silver, jewellery. Contemporary art. Luciana Decker Orozco visits various museums and collections in London, tracing a homegrown past present on another continent. Each piece are windows that open and close, briefly revealing what they hide, a mystery that she encapsulates in her celluloid and magical editing.",
@@ -4036,7 +4034,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-15T12:20:00",
+  "fecha": "2026-10-15T13:09:00",
   "plan_sha": "3bda549d3825e850",
   "paso": 6,
   "cmd": "python3 pipeline/ensamblar.py midbo-2026"
