@@ -59,14 +59,48 @@ test('BL2 — aviso de la víspera a las 20:00, solo si falta alguna, y se retir
     // marcar TIENE que reprogramar: sin un lote nuevo, «no hay aviso» no prueba nada
     const reprogramo = lotes.length > 0;
     const a2 = lee();
-    return { a1: a1.map(a => ({ title: a.title, body: a.body, at: new Date(a.at).toISOString(), abrir: a.abrir })), a2: a2.length, reprogramo, dia };
+    return { a1: a1.map(a => ({ title: a.title, body: a.body, at: new Date(a.at).toISOString(), abrir: a.abrir, filtro: a.filtro, adia: a.dia })), a2: a2.length, reprogramo, dia };
   });
   expect(r.a1.length, 'un aviso para ese día').toBe(1);
   expect(r.a1[0].title).toBe('2 funciones de mañana sin boleta');
   // 20:00 en Medellín (UTC-5) del día anterior = 01:00Z del día de la función
   expect(r.a1[0].at).toBe(`${r.dia}T01:00:00.000Z`);
   expect(r.a1[0].abrir).toBe('miplan');
+  expect(r.a1[0].filtro, 'el aviso lleva el filtro').toBe('sinboleta');
+  expect(r.a1[0].adia, 'y el día al que se refiere').toBe(r.dia);
   expect(r.a1[0].body).toMatch(/ y .+\.$/);
   expect(r.reprogramo, 'marcar reprograma los avisos').toBe(true);
   expect(r.a2, 'con todas marcadas no hay aviso').toBe(0);
+});
+
+// ── BL3 — tocar el aviso abre Mi Plan en ESE día con «sin boleta» (15 oct 2026)
+// Juan: el aviso pide una acción, la lista filtrada es esa acción. Mismo camino
+// en iPhone (__otfAbrirAviso) y Android (extra del aviso → abrirAviso).
+test('BL3 — tocar el aviso: Mi Plan en ese día, filtrado; sin faltantes, sin filtro', async ({ page }) => {
+  await enterFestival(page, 'fantasmagoria2026', '2026-10-14T10:00:00-05:00');
+  const r = await page.evaluate(async () => {
+    const w = ms => new Promise(res => setTimeout(res, ms));
+    const H = await import('/src/view/helpers.js');
+    const A = await import('/src/view/agenda.js');
+    const pagas = FILMS.filter(f => f.day && f.time && H.funcionPaga(f));
+    const dias = [...new Set(pagas.map(f => f.day))].sort();
+    const d1 = dias[0], d2 = dias[1];
+    const sel = [pagas.find(f => f.day === d1), ...pagas.filter(f => f.day === d2).slice(0, 2)].map(f => Object.assign({}, f, { _title: f.title }));
+    state.set('savedAgenda', { scenarioIdx: 0, schedule: sel }); state.set('ticketed', new Set());
+    switchMainNav('mnav-cartelera'); await w(300);
+    const ok = window.__otfAbrirAviso({ abrir: 'miplan', filtro: 'sinboleta', dia: d2 }); await w(500);
+    const enMiPlan = !!document.querySelector('.boleta-falta, .mplan-row');
+    const filtro = A.soloSinBoleta();
+    const dia = DAY_KEYS[activeMiPlanDay];
+    const filas = [...document.querySelectorAll('.mplan-row')].length;
+    state.set('ticketed', new Set(sel.map(H.claveBoleta)));
+    window.__otfAbrirAviso({ abrir: 'miplan', filtro: 'sinboleta', dia: d2 }); await w(400);
+    return { ok, enMiPlan, filtro, dia, d2, filas, filtroSinFaltantes: A.soloSinBoleta() };
+  });
+  expect(r.ok, 'la web atiende el aviso').toBe(true);
+  expect(r.enMiPlan, 'abre Mi Plan').toBe(true);
+  expect(r.filtro, 'con «sin boleta» prendido').toBe(true);
+  expect(r.dia, 'en el día del aviso').toBe(r.d2);
+  expect(r.filas, 'las dos de ese día').toBe(2);
+  expect(r.filtroSinFaltantes, 'ya marcadas: sin filtro, no una lista vacía').toBe(false);
 });
