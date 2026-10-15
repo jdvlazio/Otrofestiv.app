@@ -640,6 +640,18 @@ def main():
         if not w:
             continue
         de = f'catálogo {wid} ({", ".join(w["presentaciones"])})'
+        # EL FOTOGRAMA DECLARADO (15 oct 2026): si una decisión del catálogo dice
+        # que la imagen de TMDB de esta obra es un fotograma (Trizas: un rostro
+        # sin título ni créditos, la única imagen de su ficha), no se publica
+        # aunque afiche_criterio la deje pasar — lo vio una persona
+        _af = w.get('afiche') or {}
+        _pp = e.get('poster_path') or ''
+        if _af.get('veredicto') == 'fotograma' and _pp and str(_af.get('archivo') or '').endswith(_pp):
+            e['_afiche_rechazado'] = f'TMDB {_pp}: fotograma según el catálogo ({wid})'
+            e['poster_path'] = None
+            if str(e.get('poster') or '').startswith('/assets/') and e.get('posterSource') == 'tmdb':
+                e.pop('poster', None)
+                e.pop('posterSource', None)
         for campo in herencia.CAMPOS:
             # el año ya puede venir de TMDB (anio_tmdb) o de la fuente (anio)
             if campo == 'anio' and (e.get('anio_tmdb') or f.get('anio')):
