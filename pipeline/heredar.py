@@ -18,6 +18,10 @@ el diff campo por campo; con --escribir lo guarda. Después: correr
 
     python3 pipeline/heredar.py ficmontanas-2026
     python3 pipeline/heredar.py ficmontanas-2026 --escribir
+    python3 pipeline/heredar.py ficci-65 --sin=poster   # un campo que no se hereda
+
+`--sin` deja afuera los campos que la hoja de contacto rechazó (Trizas en FICCI:
+el afiche de TMDB es un rostro sin título ni créditos, no un afiche).
 
 Para festivales CON pipeline no se usa: se re-arman (correr.py), que hereda en
 su paso de enriquecido y no se pierde en el próximo montaje.
@@ -41,7 +45,7 @@ def _vacio(o, pub):
     return not str(o.get(pub) or '').strip()
 
 
-def heredar(d, fid, obs, key=None):
+def heredar(d, fid, obs, key=None, sin=()):
     """Llena `d` en el lugar. Devuelve [(título, campo, valor, de)]."""
     cambios = []
     for f in d.get('films', []):
@@ -53,7 +57,7 @@ def heredar(d, fid, obs, key=None):
                 continue
             de = f'catálogo {w["id"]} ({", ".join(w.get("presentaciones") or [])})'
             for campo, pub in herencia.CAMPOS.items():
-                if not _vacio(o, pub):
+                if pub in sin or not _vacio(o, pub):
                     continue
                 if campo == 'synopsis_es' and (o.get('synopsis') or '').strip():
                     continue
@@ -85,7 +89,8 @@ def main():
         sys.exit(f'✗ {fid} tiene pipeline: re-armalo con correr.py (hereda en el enriquecido '
                  'y no se pierde en el próximo montaje)')
     d = json.load(open(p, encoding='utf-8'))
-    cambios = heredar(d, fid, catalogo.obras(), os.environ.get('TMDB_API_KEY'))
+    sin = {c for a in sys.argv if a.startswith('--sin=') for c in a[6:].split(',') if c}
+    cambios = heredar(d, fid, catalogo.obras(), os.environ.get('TMDB_API_KEY'), sin)
     for t, c, v, de in cambios:
         print(f'  «{t}» · {c} ← {str(v)[:70]}{"…" if len(str(v)) > 70 else ""}   [{de}]')
     print(f'{"✓" if cambios else "·"} {fid}: {len(cambios)} dato(s) heredado(s)')
