@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, emparejado con ficha_verifica() (director + año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-10-13"
+  "capturado": "2026-10-14"
  },
  "obras": [
   {
@@ -114,7 +114,7 @@
    "lbSlug": "derriere-la-porte-2026",
    "_verificado": "declarada a mano: Existía en TMDB como «Derrière la porte» (Leonardo Valenti, Francia, 2026): mismo director, país y año que la ficha de Villa del Cine; la sonda por filmografía del director la encontró el 8 oct.",
    "_director": "Leonardo Valenti",
-   "_sondeado": "2026-10-13",
+   "_sondeado": "2026-10-14",
    "poster": "/assets/villadelcine-2026/behind-the-door.jpg",
    "posterSource": "tmdb"
   },
@@ -132,7 +132,7 @@
    "lbSlug": "benditos-los-viejos",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Camilo Duque Zuluaga y Santiago Rubio López, 2026, 4 min, CO; sinopsis del festival y afiche original de villadelcine.com (ficha de la obra), recortado 6% para la proporción de TMDB.",
    "_director": "Camilo Duque y Santiago Rubio",
-   "_sondeado": "2026-10-13",
+   "_sondeado": "2026-10-14",
    "poster": "/assets/villadelcine-2026/benditos-los-viejos.jpg",
    "posterSource": "tmdb"
   },
@@ -242,9 +242,25 @@
    "lbSlug": "diablo-ballena",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Camilo Alfredo Barón Riveros, sin año (el festival no lo publica), 15 min, CO; sinopsis del festival y afiche original de villadelcine.com (ficha de la obra).",
    "_director": "Camilo Barón",
-   "_sondeado": "2026-10-13",
+   "_sondeado": "2026-10-14",
    "poster": "/assets/villadelcine-2026/diablo-ballena.jpg",
    "posterSource": "tmdb"
+  },
+  {
+   "titulo": "El último campeón",
+   "tmdb_id": 1797487,
+   "titulo_original": "El último campeón",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "Atlético Bucaramanga waited 75 years for its first Colombian league title, won on penalties in June 2024. The film follows that season through the club's supporters: a 60-year-old man who promises to have the crest tattooed on his chest, a 90-year-old grandmother, a teacher working to keep children away from crime, former barra members who left violence behind, and the city that adopted the Cumbia de los trapos as its anthem.",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 77,
+   "pais_tmdb": "",
+   "lbSlug": "el-ultimo-campeon",
+   "_verificado": "declarada a mano: creada en TMDB el 14 oct 2026 (alta para 24·90, aprobada por Juan): Daniel J. Parra, Colombia, 77 min, Cineexperiencia; la web de Villa del Cine la registra con 77 min (01:17:12). En «Génesis» se proyectan 5 min como Work in Progress de la misma obra. El buscador de TMDB todavía no la indexa, por eso se declara",
+   "_director": "Daniel J. Parra",
+   "_sondeado": "2026-10-14"
   },
   {
    "titulo": "Estepa",
@@ -280,9 +296,13 @@
    "lbSlug": "sheltering-gestures",
    "_verificado": "declarada a mano: verificada el 19–21 sep por el candado (director ✓ + año/duración) con el título de septiembre; el PDF del 6 oct la titula en español («Gestos de refugio»); en septiembre era «Sheltering Gestures», mismos directores Adrián Villa-Dávila y Andrés Prado y por eso ya no casa sola. Es la misma obra: mismo director y misma sección.",
    "_director": "Adrián Villa-Dávila y Andrés Prado",
-   "_sondeado": "2026-10-13",
+   "_sondeado": "2026-10-14",
    "poster": "/assets/villadelcine-2026/gestos-de-refugio.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "anio": 2026,
+   "_heredado": {
+    "anio": "catálogo w_R4N5JQDH0WFG (qaff-2026, siembrafest-2026, villadelcine-2026)"
+   }
   },
   {
    "titulo": "I don't know what to do",
@@ -352,7 +372,7 @@
    "lbSlug": "la-sombrilla-de-mama",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Mateo Forero, 2025, 20 min, CO; sinopsis del festival y afiche original de villadelcine.com (ficha de la obra).",
    "_director": "Mateo Forero",
-   "_sondeado": "2026-10-13",
+   "_sondeado": "2026-10-14",
    "poster": "/assets/villadelcine-2026/la-sombrilla-de-mama.jpg",
    "posterSource": "tmdb"
   },
@@ -416,7 +436,7 @@
    "lbSlug": "la-presencia-de-blanco",
    "_verificado": "declarada a mano: verificada el 19–21 sep por el candado (director ✓ + año/duración) con el título de septiembre; el PDF del 6 oct escribe «del Blanco» (antes «de Blanco») y abrevia al director (Néstor J. Serpa) y por eso ya no casa sola. Es la misma obra: mismo director y misma sección.",
    "_director": "Néstor J. Serpa",
-   "_sondeado": "2026-10-13",
+   "_sondeado": "2026-10-14",
    "poster": "/assets/villadelcine-2026/la-presencia-del-blanco.jpg",
    "posterSource": "tmdb"
   },
@@ -434,7 +454,7 @@
    "lbSlug": "la-silla-2024",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Clara García y Mariano Reinaldos, 2024, 6 min, ES; sinopsis del festival y afiche original de villadelcine.com (ficha de la obra).",
    "_director": "Clara García y Mariano Reinaldos",
-   "_sondeado": "2026-10-13",
+   "_sondeado": "2026-10-14",
    "poster": "/assets/villadelcine-2026/la-silla.jpg",
    "posterSource": "tmdb"
   },
@@ -452,7 +472,7 @@
    "lbSlug": "la-ultima-historia",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Eberto Manotas y Mauro Andrade, 2025, 7 min, CO; sinopsis del festival y afiche original de villadelcine.com (ficha de la obra).",
    "_director": "Eberto Manotas y Mauro Andrade",
-   "_sondeado": "2026-10-13",
+   "_sondeado": "2026-10-14",
    "poster": "/assets/villadelcine-2026/la-ultima-historia.jpg",
    "posterSource": "tmdb"
   },
@@ -508,7 +528,7 @@
    "lbSlug": "maleza-2026",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Nicolle Estrada Diaz y Marcela Palacio Montoya, 2026, 11 min, CO; sinopsis del festival y afiche original de villadelcine.com (ficha de la obra), recortado 5% para la proporción de TMDB.",
    "_director": "Nicolle Estrada y Marcela Palacio",
-   "_sondeado": "2026-10-13",
+   "_sondeado": "2026-10-14",
    "poster": "/assets/villadelcine-2026/maleza.jpg",
    "posterSource": "tmdb"
   },
@@ -526,7 +546,7 @@
    "lbSlug": "manos-rojas",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Julian Camilo Monroy, 2026, 5 min, CO; sinopsis del festival y afiche original de villadelcine.com (ficha de la obra).",
    "_director": "Julián C. Monroy",
-   "_sondeado": "2026-10-13",
+   "_sondeado": "2026-10-14",
    "poster": "/assets/villadelcine-2026/manos-rojas.jpg",
    "posterSource": "tmdb"
   },
@@ -569,7 +589,7 @@
    "lbSlug": "memorias-del-alba",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Aldair Acosta Moctezuma, sin año (el festival no lo publica), 8 min, MX; sinopsis del festival y afiche original de villadelcine.com (ficha de la obra).",
    "_director": "Aldair Acosta",
-   "_sondeado": "2026-10-13",
+   "_sondeado": "2026-10-14",
    "poster": "/assets/villadelcine-2026/memorias-del-alba.jpg",
    "posterSource": "tmdb"
   },
@@ -587,7 +607,7 @@
    "lbSlug": "momentos-en-movimiento-primeros-pasos-del",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Marybel Acevedo, sin año (el festival no lo publica), 19 min, CO; sinopsis del festival y afiche original de villadelcine.com (ficha de la obra).",
    "_director": "Marybel Acevedo",
-   "_sondeado": "2026-10-13",
+   "_sondeado": "2026-10-14",
    "poster": "/assets/villadelcine-2026/momentos-en-movimiento-primeros-pasos-del-ballet-en-colombia.jpg",
    "posterSource": "tmdb"
   },
@@ -605,7 +625,7 @@
    "lbSlug": "monte-curandero",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Andrés Felipe Velasco, sin año (el festival no lo publica), 9 min, CO; sinopsis del festival y afiche original de villadelcine.com (ficha de la obra).",
    "_director": "Andrés F. Velasco",
-   "_sondeado": "2026-10-13",
+   "_sondeado": "2026-10-14",
    "poster": "/assets/villadelcine-2026/monte-curandero.jpg",
    "posterSource": "tmdb"
   },
@@ -653,7 +673,7 @@
    "lbSlug": "no-se-fia-ni-aunque-lloren",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Natalia Hernández Sánchez, 2025, 7 min, CO; sinopsis del festival y afiche original de villadelcine.com (ficha de la obra).",
    "_director": "Natalia Hernández",
-   "_sondeado": "2026-10-13",
+   "_sondeado": "2026-10-14",
    "poster": "/assets/villadelcine-2026/no-se-fia-ni-aunque-lloren.jpg",
    "posterSource": "tmdb"
   },
@@ -672,7 +692,7 @@
    "lbSlug": "the-harpsichordist",
    "_verificado": "declarada a mano: verificada el 19–21 sep por el candado (director ✓ + año/duración) con el título de septiembre; el PDF del 6 oct escribe al director «Luis E. Ozório» (antes «Luiz Eduardo Ozóri») y por eso ya no casa sola. Es la misma obra: mismo director y misma sección.",
    "_director": "Luiz E. Ozório",
-   "_sondeado": "2026-10-13",
+   "_sondeado": "2026-10-14",
    "poster": "/assets/villadelcine-2026/o-cravista.jpg",
    "posterSource": "tmdb"
   },
@@ -712,7 +732,7 @@
    "titulo_original": "Que el cielo nos perdone",
    "poster_path": "/fyvT3ZlgNJO5lswCC8XdXkXFVnB.jpg",
    "synopsis_es": "Colombia, 1951: En medio de La Violencia, el período de brutal guerra política entre liberales y conservadores, un par de chulavitas –asesinos a sueldo pagados por el gobierno– acechan a un sacerdote en la oscuridad de la noche, esperando que los conduzca a la cabaña en el bosque en donde se esconden sus próximas víctimas. Pero el horror que encontrarán allí es mil veces peor que el dolor que pensaban infligir.",
-   "synopsis_en": "",
+   "synopsis_en": "Colombia, 1951. In the thick of La Violencia, the period of brutal political war between Liberals and Conservatives, two chulavitas —hired killers on the government’s payroll— stalk a priest through the dark, waiting for him to lead them to the cabin in the woods where their next victims are hiding. But the horror they find there is a thousand times worse than the pain they meant to inflict.",
    "genero": "Terror",
    "anio_tmdb": 2025,
    "duracion_tmdb": 0,
@@ -750,7 +770,10 @@
     }
    ],
    "poster": "/assets/villadelcine-2026/que-el-cielo-nos-perdone.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "_heredado": {
+    "synopsis_en": "catálogo w_R4GP49AWA2ZH (fantasmagoria-2026, ficma-2026, siembrafest-2026, villadelcine-2026)"
+   }
   },
   {
    "titulo": "Quimera",
@@ -766,7 +789,7 @@
    "lbSlug": "quimera-4",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Santiago Rincón, sin año (el festival no lo publica), 10 min, CO; sinopsis del festival y afiche original de villadelcine.com (ficha de la obra).",
    "_director": "Santiago Rincón",
-   "_sondeado": "2026-10-13",
+   "_sondeado": "2026-10-14",
    "poster": "/assets/villadelcine-2026/quimera.jpg",
    "posterSource": "tmdb"
   },
@@ -784,7 +807,7 @@
    "lbSlug": "solo-2026-2",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Agustina Lecaros Chavez, 2026, 6 min, CO; sinopsis del festival y afiche original de villadelcine.com (ficha de la obra).",
    "_director": "Agustina Lecaros",
-   "_sondeado": "2026-10-13",
+   "_sondeado": "2026-10-14",
    "poster": "/assets/villadelcine-2026/solo.jpg",
    "posterSource": "tmdb"
   },
@@ -802,7 +825,7 @@
    "lbSlug": "sua-y-sie-guardianes-de-la-vida",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Johanna Emilce Cortés Daza, 2025, 4 min, CO; sinopsis del festival y afiche original de villadelcine.com (ficha de la obra).",
    "_director": "Johanna Cortés",
-   "_sondeado": "2026-10-13",
+   "_sondeado": "2026-10-14",
    "poster": "/assets/villadelcine-2026/sua-y-sie-guardianes-de-la-vida.jpg",
    "posterSource": "tmdb"
   },
@@ -892,7 +915,7 @@
    "lbSlug": "tuktu-father-maize",
    "_verificado": "declarada a mano: misma declaración que en Popayán: TMDB escribe «Mauricio Pietro Muriel» (sic) y el PDF «Mauricio Prieto»; el nombre de pila solo no alcanza para el candado estricto. Título idéntico y 2025.",
    "_director": "Mauricio Prieto",
-   "_sondeado": "2026-10-13",
+   "_sondeado": "2026-10-14",
    "poster": "/assets/villadelcine-2026/tuktu-padre-maiz.jpg",
    "posterSource": "tmdb"
   },
@@ -910,7 +933,7 @@
    "lbSlug": "un-amor-a-primera-vista",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía; sondas por título y por director): Andrés Quintero Campos, 30 min, Colombia; sinopsis y afiche original de villadelcine.com. Título del afiche (el festival la publica sin «Un»); el viejo va en titulos-anteriores.",
    "_director": "Andrés Quintero",
-   "_sondeado": "2026-10-13",
+   "_sondeado": "2026-10-14",
    "poster": "/assets/villadelcine-2026/un-amor-a-primera-vista.jpg",
    "posterSource": "tmdb"
   },
@@ -979,7 +1002,7 @@
    "lbSlug": "volar-1",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Jeiver Pinto (1587803, ya en TMDB por Todas para uno y El bolero de Rubén), sin año (el festival no lo publica), 139 min, CO; sinopsis del festival y afiche original de villadelcine.com (ficha de la obra).",
    "_director": "Jeiver Pinto",
-   "_sondeado": "2026-10-13",
+   "_sondeado": "2026-10-14",
    "poster": "/assets/villadelcine-2026/volar.jpg",
    "posterSource": "tmdb"
   },
@@ -997,7 +1020,7 @@
    "lbSlug": "via-crusis",
    "_verificado": "declarada a mano: verificada el 19–21 sep por el candado (director ✓ + año/duración) con el título de septiembre; el PDF del 6 oct corrige «Via Crusis» a «Via Crucis» y abrevia al director (Juan L. Neira) y por eso ya no casa sola. Es la misma obra: mismo director y misma sección.",
    "_director": "Juan L. Neira",
-   "_sondeado": "2026-10-13",
+   "_sondeado": "2026-10-14",
    "poster": "/assets/villadelcine-2026/via-crucis.jpg",
    "posterSource": "tmdb"
   },
@@ -1053,7 +1076,7 @@
    "lbSlug": "anima-de-marea",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Laury T. Herrera, 2026, 4 min, CO; sinopsis del festival y afiche original de villadelcine.com (ficha de la obra).",
    "_director": "Laury T. Herrera",
-   "_sondeado": "2026-10-13",
+   "_sondeado": "2026-10-14",
    "poster": "/assets/villadelcine-2026/anima-de-marea.jpg",
    "posterSource": "tmdb"
   }
@@ -1139,7 +1162,7 @@
    "lbSlug": "derriere-la-porte-2026",
    "_verificado": "declarada a mano: Existía en TMDB como «Derrière la porte» (Leonardo Valenti, Francia, 2026): mismo director, país y año que la ficha de Villa del Cine; la sonda por filmografía del director la encontró el 8 oct.",
    "_director": "Leonardo Valenti",
-   "_sondeado": "2026-10-13",
+   "_sondeado": "2026-10-14",
    "poster": "/assets/villadelcine-2026/behind-the-door.jpg",
    "posterSource": "tmdb"
   },
@@ -1156,7 +1179,7 @@
    "lbSlug": "benditos-los-viejos",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Camilo Duque Zuluaga y Santiago Rubio López, 2026, 4 min, CO; sinopsis del festival y afiche original de villadelcine.com (ficha de la obra), recortado 6% para la proporción de TMDB.",
    "_director": "Camilo Duque y Santiago Rubio",
-   "_sondeado": "2026-10-13",
+   "_sondeado": "2026-10-14",
    "poster": "/assets/villadelcine-2026/benditos-los-viejos.jpg",
    "posterSource": "tmdb"
   },
@@ -1247,9 +1270,24 @@
    "lbSlug": "diablo-ballena",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Camilo Alfredo Barón Riveros, sin año (el festival no lo publica), 15 min, CO; sinopsis del festival y afiche original de villadelcine.com (ficha de la obra).",
    "_director": "Camilo Barón",
-   "_sondeado": "2026-10-13",
+   "_sondeado": "2026-10-14",
    "poster": "/assets/villadelcine-2026/diablo-ballena.jpg",
    "posterSource": "tmdb"
+  },
+  "El último campeón": {
+   "tmdb_id": 1797487,
+   "titulo_original": "El último campeón",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "Atlético Bucaramanga waited 75 years for its first Colombian league title, won on penalties in June 2024. The film follows that season through the club's supporters: a 60-year-old man who promises to have the crest tattooed on his chest, a 90-year-old grandmother, a teacher working to keep children away from crime, former barra members who left violence behind, and the city that adopted the Cumbia de los trapos as its anthem.",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 77,
+   "pais_tmdb": "",
+   "lbSlug": "el-ultimo-campeon",
+   "_verificado": "declarada a mano: creada en TMDB el 14 oct 2026 (alta para 24·90, aprobada por Juan): Daniel J. Parra, Colombia, 77 min, Cineexperiencia; la web de Villa del Cine la registra con 77 min (01:17:12). En «Génesis» se proyectan 5 min como Work in Progress de la misma obra. El buscador de TMDB todavía no la indexa, por eso se declara",
+   "_director": "Daniel J. Parra",
+   "_sondeado": "2026-10-14"
   },
   "Estepa": {
    "tmdb_id": 1249468,
@@ -1283,9 +1321,13 @@
    "lbSlug": "sheltering-gestures",
    "_verificado": "declarada a mano: verificada el 19–21 sep por el candado (director ✓ + año/duración) con el título de septiembre; el PDF del 6 oct la titula en español («Gestos de refugio»); en septiembre era «Sheltering Gestures», mismos directores Adrián Villa-Dávila y Andrés Prado y por eso ya no casa sola. Es la misma obra: mismo director y misma sección.",
    "_director": "Adrián Villa-Dávila y Andrés Prado",
-   "_sondeado": "2026-10-13",
+   "_sondeado": "2026-10-14",
    "poster": "/assets/villadelcine-2026/gestos-de-refugio.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "anio": 2026,
+   "_heredado": {
+    "anio": "catálogo w_R4N5JQDH0WFG (qaff-2026, siembrafest-2026, villadelcine-2026)"
+   }
   },
   "I don't know what to do": {
    "tmdb_id": 1560415,
@@ -1351,7 +1393,7 @@
    "lbSlug": "la-sombrilla-de-mama",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Mateo Forero, 2025, 20 min, CO; sinopsis del festival y afiche original de villadelcine.com (ficha de la obra).",
    "_director": "Mateo Forero",
-   "_sondeado": "2026-10-13",
+   "_sondeado": "2026-10-14",
    "poster": "/assets/villadelcine-2026/la-sombrilla-de-mama.jpg",
    "posterSource": "tmdb"
   },
@@ -1413,7 +1455,7 @@
    "lbSlug": "la-presencia-de-blanco",
    "_verificado": "declarada a mano: verificada el 19–21 sep por el candado (director ✓ + año/duración) con el título de septiembre; el PDF del 6 oct escribe «del Blanco» (antes «de Blanco») y abrevia al director (Néstor J. Serpa) y por eso ya no casa sola. Es la misma obra: mismo director y misma sección.",
    "_director": "Néstor J. Serpa",
-   "_sondeado": "2026-10-13",
+   "_sondeado": "2026-10-14",
    "poster": "/assets/villadelcine-2026/la-presencia-del-blanco.jpg",
    "posterSource": "tmdb"
   },
@@ -1430,7 +1472,7 @@
    "lbSlug": "la-silla-2024",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Clara García y Mariano Reinaldos, 2024, 6 min, ES; sinopsis del festival y afiche original de villadelcine.com (ficha de la obra).",
    "_director": "Clara García y Mariano Reinaldos",
-   "_sondeado": "2026-10-13",
+   "_sondeado": "2026-10-14",
    "poster": "/assets/villadelcine-2026/la-silla.jpg",
    "posterSource": "tmdb"
   },
@@ -1447,7 +1489,7 @@
    "lbSlug": "la-ultima-historia",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Eberto Manotas y Mauro Andrade, 2025, 7 min, CO; sinopsis del festival y afiche original de villadelcine.com (ficha de la obra).",
    "_director": "Eberto Manotas y Mauro Andrade",
-   "_sondeado": "2026-10-13",
+   "_sondeado": "2026-10-14",
    "poster": "/assets/villadelcine-2026/la-ultima-historia.jpg",
    "posterSource": "tmdb"
   },
@@ -1500,7 +1542,7 @@
    "lbSlug": "maleza-2026",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Nicolle Estrada Diaz y Marcela Palacio Montoya, 2026, 11 min, CO; sinopsis del festival y afiche original de villadelcine.com (ficha de la obra), recortado 5% para la proporción de TMDB.",
    "_director": "Nicolle Estrada y Marcela Palacio",
-   "_sondeado": "2026-10-13",
+   "_sondeado": "2026-10-14",
    "poster": "/assets/villadelcine-2026/maleza.jpg",
    "posterSource": "tmdb"
   },
@@ -1517,7 +1559,7 @@
    "lbSlug": "manos-rojas",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Julian Camilo Monroy, 2026, 5 min, CO; sinopsis del festival y afiche original de villadelcine.com (ficha de la obra).",
    "_director": "Julián C. Monroy",
-   "_sondeado": "2026-10-13",
+   "_sondeado": "2026-10-14",
    "poster": "/assets/villadelcine-2026/manos-rojas.jpg",
    "posterSource": "tmdb"
   },
@@ -1558,7 +1600,7 @@
    "lbSlug": "memorias-del-alba",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Aldair Acosta Moctezuma, sin año (el festival no lo publica), 8 min, MX; sinopsis del festival y afiche original de villadelcine.com (ficha de la obra).",
    "_director": "Aldair Acosta",
-   "_sondeado": "2026-10-13",
+   "_sondeado": "2026-10-14",
    "poster": "/assets/villadelcine-2026/memorias-del-alba.jpg",
    "posterSource": "tmdb"
   },
@@ -1575,7 +1617,7 @@
    "lbSlug": "momentos-en-movimiento-primeros-pasos-del",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Marybel Acevedo, sin año (el festival no lo publica), 19 min, CO; sinopsis del festival y afiche original de villadelcine.com (ficha de la obra).",
    "_director": "Marybel Acevedo",
-   "_sondeado": "2026-10-13",
+   "_sondeado": "2026-10-14",
    "poster": "/assets/villadelcine-2026/momentos-en-movimiento-primeros-pasos-del-ballet-en-colombia.jpg",
    "posterSource": "tmdb"
   },
@@ -1592,7 +1634,7 @@
    "lbSlug": "monte-curandero",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Andrés Felipe Velasco, sin año (el festival no lo publica), 9 min, CO; sinopsis del festival y afiche original de villadelcine.com (ficha de la obra).",
    "_director": "Andrés F. Velasco",
-   "_sondeado": "2026-10-13",
+   "_sondeado": "2026-10-14",
    "poster": "/assets/villadelcine-2026/monte-curandero.jpg",
    "posterSource": "tmdb"
   },
@@ -1638,7 +1680,7 @@
    "lbSlug": "no-se-fia-ni-aunque-lloren",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Natalia Hernández Sánchez, 2025, 7 min, CO; sinopsis del festival y afiche original de villadelcine.com (ficha de la obra).",
    "_director": "Natalia Hernández",
-   "_sondeado": "2026-10-13",
+   "_sondeado": "2026-10-14",
    "poster": "/assets/villadelcine-2026/no-se-fia-ni-aunque-lloren.jpg",
    "posterSource": "tmdb"
   },
@@ -1656,7 +1698,7 @@
    "lbSlug": "the-harpsichordist",
    "_verificado": "declarada a mano: verificada el 19–21 sep por el candado (director ✓ + año/duración) con el título de septiembre; el PDF del 6 oct escribe al director «Luis E. Ozório» (antes «Luiz Eduardo Ozóri») y por eso ya no casa sola. Es la misma obra: mismo director y misma sección.",
    "_director": "Luiz E. Ozório",
-   "_sondeado": "2026-10-13",
+   "_sondeado": "2026-10-14",
    "poster": "/assets/villadelcine-2026/o-cravista.jpg",
    "posterSource": "tmdb"
   },
@@ -1694,7 +1736,7 @@
    "titulo_original": "Que el cielo nos perdone",
    "poster_path": "/fyvT3ZlgNJO5lswCC8XdXkXFVnB.jpg",
    "synopsis_es": "Colombia, 1951: En medio de La Violencia, el período de brutal guerra política entre liberales y conservadores, un par de chulavitas –asesinos a sueldo pagados por el gobierno– acechan a un sacerdote en la oscuridad de la noche, esperando que los conduzca a la cabaña en el bosque en donde se esconden sus próximas víctimas. Pero el horror que encontrarán allí es mil veces peor que el dolor que pensaban infligir.",
-   "synopsis_en": "",
+   "synopsis_en": "Colombia, 1951. In the thick of La Violencia, the period of brutal political war between Liberals and Conservatives, two chulavitas —hired killers on the government’s payroll— stalk a priest through the dark, waiting for him to lead them to the cabin in the woods where their next victims are hiding. But the horror they find there is a thousand times worse than the pain they meant to inflict.",
    "genero": "Terror",
    "anio_tmdb": 2025,
    "duracion_tmdb": 0,
@@ -1732,7 +1774,10 @@
     }
    ],
    "poster": "/assets/villadelcine-2026/que-el-cielo-nos-perdone.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "_heredado": {
+    "synopsis_en": "catálogo w_R4GP49AWA2ZH (fantasmagoria-2026, ficma-2026, siembrafest-2026, villadelcine-2026)"
+   }
   },
   "Quimera": {
    "tmdb_id": 1791667,
@@ -1747,7 +1792,7 @@
    "lbSlug": "quimera-4",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Santiago Rincón, sin año (el festival no lo publica), 10 min, CO; sinopsis del festival y afiche original de villadelcine.com (ficha de la obra).",
    "_director": "Santiago Rincón",
-   "_sondeado": "2026-10-13",
+   "_sondeado": "2026-10-14",
    "poster": "/assets/villadelcine-2026/quimera.jpg",
    "posterSource": "tmdb"
   },
@@ -1764,7 +1809,7 @@
    "lbSlug": "solo-2026-2",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Agustina Lecaros Chavez, 2026, 6 min, CO; sinopsis del festival y afiche original de villadelcine.com (ficha de la obra).",
    "_director": "Agustina Lecaros",
-   "_sondeado": "2026-10-13",
+   "_sondeado": "2026-10-14",
    "poster": "/assets/villadelcine-2026/solo.jpg",
    "posterSource": "tmdb"
   },
@@ -1781,7 +1826,7 @@
    "lbSlug": "sua-y-sie-guardianes-de-la-vida",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Johanna Emilce Cortés Daza, 2025, 4 min, CO; sinopsis del festival y afiche original de villadelcine.com (ficha de la obra).",
    "_director": "Johanna Cortés",
-   "_sondeado": "2026-10-13",
+   "_sondeado": "2026-10-14",
    "poster": "/assets/villadelcine-2026/sua-y-sie-guardianes-de-la-vida.jpg",
    "posterSource": "tmdb"
   },
@@ -1867,7 +1912,7 @@
    "lbSlug": "tuktu-father-maize",
    "_verificado": "declarada a mano: misma declaración que en Popayán: TMDB escribe «Mauricio Pietro Muriel» (sic) y el PDF «Mauricio Prieto»; el nombre de pila solo no alcanza para el candado estricto. Título idéntico y 2025.",
    "_director": "Mauricio Prieto",
-   "_sondeado": "2026-10-13",
+   "_sondeado": "2026-10-14",
    "poster": "/assets/villadelcine-2026/tuktu-padre-maiz.jpg",
    "posterSource": "tmdb"
   },
@@ -1884,7 +1929,7 @@
    "lbSlug": "un-amor-a-primera-vista",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía; sondas por título y por director): Andrés Quintero Campos, 30 min, Colombia; sinopsis y afiche original de villadelcine.com. Título del afiche (el festival la publica sin «Un»); el viejo va en titulos-anteriores.",
    "_director": "Andrés Quintero",
-   "_sondeado": "2026-10-13",
+   "_sondeado": "2026-10-14",
    "poster": "/assets/villadelcine-2026/un-amor-a-primera-vista.jpg",
    "posterSource": "tmdb"
   },
@@ -1950,7 +1995,7 @@
    "lbSlug": "volar-1",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Jeiver Pinto (1587803, ya en TMDB por Todas para uno y El bolero de Rubén), sin año (el festival no lo publica), 139 min, CO; sinopsis del festival y afiche original de villadelcine.com (ficha de la obra).",
    "_director": "Jeiver Pinto",
-   "_sondeado": "2026-10-13",
+   "_sondeado": "2026-10-14",
    "poster": "/assets/villadelcine-2026/volar.jpg",
    "posterSource": "tmdb"
   },
@@ -1967,7 +2012,7 @@
    "lbSlug": "via-crusis",
    "_verificado": "declarada a mano: verificada el 19–21 sep por el candado (director ✓ + año/duración) con el título de septiembre; el PDF del 6 oct corrige «Via Crusis» a «Via Crucis» y abrevia al director (Juan L. Neira) y por eso ya no casa sola. Es la misma obra: mismo director y misma sección.",
    "_director": "Juan L. Neira",
-   "_sondeado": "2026-10-13",
+   "_sondeado": "2026-10-14",
    "poster": "/assets/villadelcine-2026/via-crucis.jpg",
    "posterSource": "tmdb"
   },
@@ -2020,7 +2065,7 @@
    "lbSlug": "anima-de-marea",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Laury T. Herrera, 2026, 4 min, CO; sinopsis del festival y afiche original de villadelcine.com (ficha de la obra).",
    "_director": "Laury T. Herrera",
-   "_sondeado": "2026-10-13",
+   "_sondeado": "2026-10-14",
    "poster": "/assets/villadelcine-2026/anima-de-marea.jpg",
    "posterSource": "tmdb"
   }
@@ -2045,7 +2090,6 @@
   "Ecos",
   "El cine dentro del cine",
   "El fósil mágico",
-  "El último campeón",
   "En medio",
   "Encrucijadas",
   "Enemigo en el espejo",
@@ -2126,7 +2170,7 @@
   },
   "Catatumbo: casa del trueno, memoria y dignidad": {
    "director": "Jhonattan Sarmiento",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-14"
   },
   "Cos de vidre": {
    "director": "Marc Comabella",
@@ -2134,11 +2178,11 @@
   },
   "Cuadrilleros, orgullo y legado": {
    "director": "Fabián E. Moreno",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-14"
   },
   "Cuba 2001: imágenes del futuro": {
    "director": "Felipe Moreno",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-14"
   },
   "Después de tanto amor": {
    "director": "Mercedes Oviedo",
@@ -2150,7 +2194,7 @@
   },
   "Duelo": {
    "director": "Nicolás Patiño y Andrés Cely",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-14"
   },
   "Eclipses": {
    "director": "",
@@ -2162,19 +2206,15 @@
   },
   "El cine dentro del cine": {
    "director": "Diana Kuéllar y Manuel Silva",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-14"
   },
   "El fósil mágico": {
    "director": "Estudiantes IE Nueva Generación (Sáchica, Boyacá)",
-   "fecha": "2026-10-07"
-  },
-  "El último campeón": {
-   "director": "Daniel J. Parra",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-14"
   },
   "En medio": {
    "director": "Carlos A. Paniagua",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-14"
   },
   "Encrucijadas": {
    "director": "",
@@ -2202,7 +2242,7 @@
   },
   "Fragmentos perdidos de una convulsión": {
    "director": "Michael Martinez",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-14"
   },
   "Génesis": {
    "director": "",
@@ -2222,7 +2262,7 @@
   },
   "La sinfonía Guanentá": {
    "director": "Victor Jarmillo",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-14"
   },
   "Language Of The Wind": {
    "director": "Shimataver Igbawua",
@@ -2270,7 +2310,7 @@
   },
   "Pros y contras de soñar despierto": {
    "director": "Lorena López",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-14"
   },
   "Protecting Our Territory 360": {
    "director": "Christopher Boulton",
@@ -2294,7 +2334,7 @@
   },
   "Sabor a mí (acústico / bolero jazz)": {
    "director": "Franco Zornosa",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-14"
   },
   "Señales": {
    "director": "",
@@ -2306,7 +2346,7 @@
   },
   "Solo un ave más": {
    "director": "Julián Gómez",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-14"
   },
   "Sun Coffee": {
    "director": "Zoé Filloux y Estudiantes del MicroLycée Périer",
@@ -2326,7 +2366,7 @@
   },
   "Toma 10": {
    "director": "Ángel Campaña y Juan D. Arias",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-14"
   },
   "Tránsitos": {
    "director": "",
