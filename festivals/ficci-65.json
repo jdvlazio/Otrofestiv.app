@@ -93,7 +93,15 @@
    "synopsis_lang": "es",
    "posterSource": "tmdb",
    "poster": "https://image.tmdb.org/t/p/w185/7aR0r9KVSfbzmCOGXGfulpmKOBj.jpg",
-   "work_id": "w_R4HAG78W53PV"
+   "work_id": "w_R4HAG78W53PV",
+   "genre": "Drama",
+   "_src": {
+    "heredado": {
+     "genre": "catálogo w_R4HAG78W53PV (ficci-65, ficdeh-2026)",
+     "lbSlug": "catálogo w_R4HAG78W53PV (ficci-65, ficdeh-2026)"
+    }
+   },
+   "lbSlug": "gugus-world"
   },
   {
    "title": "Queimada",
@@ -248,7 +256,17 @@
    "synopsis_lang": "es",
    "posterSource": "tmdb",
    "poster": "https://image.tmdb.org/t/p/w500/k5qYkuNLpN07AtXJ9nudLIifPQ5.jpg",
-   "work_id": "w_R4FJFY7626WB"
+   "work_id": "w_R4FJFY7626WB",
+   "genre": "Drama",
+   "_src": {
+    "heredado": {
+     "genre": "catálogo w_R4FJFY7626WB (cinemancia-2026, ficci-65, midbo-2026)",
+     "lbSlug": "catálogo w_R4FJFY7626WB (cinemancia-2026, ficci-65, midbo-2026)",
+     "year": "catálogo w_R4FJFY7626WB (cinemancia-2026, ficci-65, midbo-2026)"
+    }
+   },
+   "lbSlug": "las-almas-ni-los-ojos",
+   "year": 2026
   },
   {
    "title": "Lolita en Honda",
@@ -269,7 +287,15 @@
    "synopsis_lang": "es",
    "posterSource": "tmdb",
    "poster": "https://image.tmdb.org/t/p/w500/sKIm7ZwfuBnKuGeHJAUOYhg8DlV.jpg",
-   "work_id": "w_R4FPSFY03SBY"
+   "work_id": "w_R4FPSFY03SBY",
+   "lbSlug": "lolita-en-honda",
+   "_src": {
+    "heredado": {
+     "lbSlug": "catálogo w_R4FPSFY03SBY (cinemancia-2026, ficci-65, mamut-2026, midbo-2026)",
+     "year": "catálogo w_R4FPSFY03SBY (cinemancia-2026, ficci-65, mamut-2026, midbo-2026)"
+    }
+   },
+   "year": 2026
   },
   {
    "title": "Prog. Cortometrajes — Jorge Cadena",
@@ -356,7 +382,15 @@
    "synopsis_lang": "es",
    "posterSource": "tmdb",
    "poster": "https://image.tmdb.org/t/p/w185/1DwT5nA0yWUMNU9Po2lzwRv6XOA.jpg",
-   "work_id": "w_R4GY6YGMWCSK"
+   "work_id": "w_R4GY6YGMWCSK",
+   "genre": "Documental",
+   "_src": {
+    "heredado": {
+     "genre": "catálogo w_R4GY6YGMWCSK (ficcali-2026, ficci-65)",
+     "lbSlug": "catálogo w_R4GY6YGMWCSK (ficcali-2026, ficci-65)"
+    }
+   },
+   "lbSlug": "the-fabulous-time-machine"
   },
   {
    "title": "Die papierene Brücke",
@@ -404,7 +438,13 @@
    "synopsis_lang": "es",
    "posterSource": "tmdb",
    "poster": "https://image.tmdb.org/t/p/w500/aHIvJmr4s6gnUsdLs0t1FaCZOyz.jpg",
-   "work_id": "w_R4HAG9H5XRYK"
+   "work_id": "w_R4HAG9H5XRYK",
+   "lbSlug": "if-we-dont-burn-how-do-we-light-up-the-night",
+   "_src": {
+    "heredado": {
+     "lbSlug": "catálogo w_R4HAG9H5XRYK (ficci-65, filcmar-2026)"
+    }
+   }
   },
   {
    "title": "Iván & Hadoum",
@@ -457,7 +497,22 @@
      "duration": "85 min",
      "posterSource": "custom",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/RUNA%20SIMI%20POSTER%20AF%20-%20Claudia%20chavez%20levano.jpg?itok=ObXBIPVJ",
-     "work_id": "w_R4DHSYGCHRN0"
+     "work_id": "w_R4DHSYGCHRN0",
+     "genre": "Documental",
+     "_src": {
+      "heredado": {
+       "genre": "catálogo w_R4DHSYGCHRN0 (aff-2026, ficcali-2026, ficci-65)",
+       "lbSlug": "catálogo w_R4DHSYGCHRN0 (aff-2026, ficcali-2026, ficci-65)",
+       "year": "catálogo w_R4DHSYGCHRN0 (aff-2026, ficcali-2026, ficci-65)",
+       "synopsis": "catálogo w_R4DHSYGCHRN0 (aff-2026, ficcali-2026, ficci-65)",
+       "synopsis_en": "catálogo w_R4DHSYGCHRN0 (aff-2026, ficcali-2026, ficci-65)"
+      }
+     },
+     "lbSlug": "runa-simi",
+     "year": 2025,
+     "synopsis": "Un actor de doblaje peruano busca convencer a Disney de doblar El Rey León al quechua. El viaje se convierte en una odisea personal de paternidad y activismo.",
+     "synopsis_lang": "es",
+     "synopsis_en": "A Peruvian voice actor sets out to convince Disney to dub The Lion King into Quechua. The journey becomes a personal odyssey of fatherhood and activism."
     }
    ]
   },
@@ -481,7 +536,15 @@
    "synopsis_lang": "es",
    "posterSource": "tmdb",
    "poster": "https://image.tmdb.org/t/p/w500/i7xnqfBINWSDHPNXhAqpThZJ8Fw.jpg",
-   "work_id": "w_R4GR2FGPV8X4"
+   "work_id": "w_R4GR2FGPV8X4",
+   "genre": "Documental",
+   "_src": {
+    "heredado": {
+     "genre": "catálogo w_R4GR2FGPV8X4 (fantasmagoria-2026, ficci-65, mamut-2026)",
+     "lbSlug": "catálogo w_R4GR2FGPV8X4 (fantasmagoria-2026, ficci-65, mamut-2026)"
+    }
+   },
+   "lbSlug": "manual-para-invocar-fantasmas"
   },
   {
    "title": "Las corrientes",
@@ -763,7 +826,13 @@
    "synopsis_lang": "es",
    "posterSource": "tmdb",
    "poster": "https://image.tmdb.org/t/p/w500/r5brsK8rdog4ewLZPihvb0tntZh.jpg",
-   "work_id": "w_R4HAT5A0J0QY"
+   "work_id": "w_R4HAT5A0J0QY",
+   "lbSlug": "forest-up-in-the-mountain",
+   "_src": {
+    "heredado": {
+     "lbSlug": "catálogo w_R4HAT5A0J0QY (ficci-65, midbo-2026)"
+    }
+   }
   },
   {
    "title": "Puntos de fuga",
@@ -809,7 +878,15 @@
    "synopsis_lang": "es",
    "poster": "https://image.tmdb.org/t/p/w185/7aR0r9KVSfbzmCOGXGfulpmKOBj.jpg",
    "posterSource": "tmdb",
-   "work_id": "w_R4HAG78W53PV"
+   "work_id": "w_R4HAG78W53PV",
+   "genre": "Drama",
+   "_src": {
+    "heredado": {
+     "genre": "catálogo w_R4HAG78W53PV (ficci-65, ficdeh-2026)",
+     "lbSlug": "catálogo w_R4HAG78W53PV (ficci-65, ficdeh-2026)"
+    }
+   },
+   "lbSlug": "gugus-world"
   },
   {
    "title": "Animación Porosa — Prog. de Cortos",
@@ -1155,7 +1232,15 @@
    "synopsis_lang": "es",
    "poster": "https://image.tmdb.org/t/p/w185/1DwT5nA0yWUMNU9Po2lzwRv6XOA.jpg",
    "posterSource": "tmdb",
-   "work_id": "w_R4GY6YGMWCSK"
+   "work_id": "w_R4GY6YGMWCSK",
+   "genre": "Documental",
+   "_src": {
+    "heredado": {
+     "genre": "catálogo w_R4GY6YGMWCSK (ficcali-2026, ficci-65)",
+     "lbSlug": "catálogo w_R4GY6YGMWCSK (ficcali-2026, ficci-65)"
+    }
+   },
+   "lbSlug": "the-fabulous-time-machine"
   },
   {
    "title": "Cine Afro — Prog. de Cortos",
@@ -1289,7 +1374,13 @@
    "synopsis_lang": "es",
    "posterSource": "tmdb",
    "poster": "https://image.tmdb.org/t/p/w500/usQn5xDRN7eeKmCaQDCSpXD8j8K.jpg",
-   "work_id": "w_R4HB86VE5454"
+   "work_id": "w_R4HB86VE5454",
+   "lbSlug": "the-prince-of-nanawa",
+   "_src": {
+    "heredado": {
+     "lbSlug": "catálogo w_R4HB86VE5454 (ficci-65, ficma-2026)"
+    }
+   }
   },
   {
    "title": "Risa y la cabina del viento",
@@ -1335,7 +1426,24 @@
      "duration": "7 min",
      "posterSource": "custom",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Captura%20de%20pantalla%202026-04-04%20a%20la%28s%29%203.43.18%20p.m..jpg?itok=SfE8u2Hj",
-     "work_id": "w_R4EPHC0WCQM5"
+     "work_id": "w_R4EPHC0WCQM5",
+     "genre": "Animación",
+     "_src": {
+      "heredado": {
+       "genre": "catálogo w_R4EPHC0WCQM5 (cineautopsia-2026, cinemancia-2026, ficci-65, mamut-2026, midbo-2026, popayan-2026)",
+       "title_en": "catálogo w_R4EPHC0WCQM5 (cineautopsia-2026, cinemancia-2026, ficci-65, mamut-2026, midbo-2026, popayan-2026)",
+       "lbSlug": "catálogo w_R4EPHC0WCQM5 (cineautopsia-2026, cinemancia-2026, ficci-65, mamut-2026, midbo-2026, popayan-2026)",
+       "year": "catálogo w_R4EPHC0WCQM5 (cineautopsia-2026, cinemancia-2026, ficci-65, mamut-2026, midbo-2026, popayan-2026)",
+       "synopsis": "catálogo w_R4EPHC0WCQM5 (cineautopsia-2026, cinemancia-2026, ficci-65, mamut-2026, midbo-2026, popayan-2026)",
+       "synopsis_en": "catálogo w_R4EPHC0WCQM5 (cineautopsia-2026, cinemancia-2026, ficci-65, mamut-2026, midbo-2026, popayan-2026)"
+      }
+     },
+     "title_en": "decay",
+     "lbSlug": "decay-2026",
+     "year": 2026,
+     "synopsis": "Gracias a los chinos por la pólvora, parece que la hubieran hecho para mí. Su invención sucede como un accidente, pensada inicialmente para espantar los espíritus malos. Esta película inicia en China, luego un evento en Cartagena y se acaba siglos después en Bogotá.",
+     "synopsis_lang": "es",
+     "synopsis_en": "I am grateful to the Chinese for the invention of gunpowder — it feels as if they made it for me. Its discovery happened by accident, originally conceived as a way to ward off evil spirits. This film begins in China, then moves to an event in Cartagena, and ends centuries later in Bogotá."
     },
     {
      "title": "La garganta del diablo",
@@ -1351,7 +1459,18 @@
      "duration": "16 min",
      "posterSource": "custom",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_LFM_poster_Ficci_595x842%20-%20Maria%20Paula%20Lorgia.jpg?itok=5XCaIr83",
-     "work_id": "w_R4FSHA335BXS"
+     "work_id": "w_R4FSHA335BXS",
+     "lbSlug": "las-formas-de-la-magia",
+     "_src": {
+      "heredado": {
+       "lbSlug": "catálogo w_R4FSHA335BXS (cinemancia-2026, ficci-65, midbo-2026)",
+       "year": "catálogo w_R4FSHA335BXS (cinemancia-2026, ficci-65, midbo-2026)",
+       "synopsis": "catálogo w_R4FSHA335BXS (cinemancia-2026, ficci-65, midbo-2026)"
+      }
+     },
+     "year": 2026,
+     "synopsis": "Un año después de la muerte de su padre, el reconocido mago colombiano Gustavo Lorgia, la directora realiza una exploración por sus archivos de video que revelan su trayectoria como artista, su rol como padre y la estética televisiva de una época. Una película que acude al archivo como medio para atravesar el duelo y a la memoria como forma de resistir a la desaparición.",
+     "synopsis_lang": "es"
     },
     {
      "title": "Madres de nacimiento",
@@ -1359,7 +1478,22 @@
      "duration": "8 min",
      "posterSource": "custom",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_MDN_Poster_Blanco_WEB.jpg?itok=OR2_OCi0",
-     "work_id": "w_R4FH541S52JK"
+     "work_id": "w_R4FH541S52JK",
+     "genre": "Documental",
+     "_src": {
+      "heredado": {
+       "genre": "catálogo w_R4FH541S52JK (cinemancia-2026, ficci-65, ficdeh-2026, ficmontanas-2026, jardin-2026, midbo-2026, popayan-2026)",
+       "lbSlug": "catálogo w_R4FH541S52JK (cinemancia-2026, ficci-65, ficdeh-2026, ficmontanas-2026, jardin-2026, midbo-2026, popayan-2026)",
+       "year": "catálogo w_R4FH541S52JK (cinemancia-2026, ficci-65, ficdeh-2026, ficmontanas-2026, jardin-2026, midbo-2026, popayan-2026)",
+       "synopsis": "catálogo w_R4FH541S52JK (cinemancia-2026, ficci-65, ficdeh-2026, ficmontanas-2026, jardin-2026, midbo-2026, popayan-2026)",
+       "synopsis_en": "catálogo w_R4FH541S52JK (cinemancia-2026, ficci-65, ficdeh-2026, ficmontanas-2026, jardin-2026, midbo-2026, popayan-2026)"
+      }
+     },
+     "lbSlug": "madres-de-nacimiento",
+     "year": 2026,
+     "synopsis": "Del olvido y la oscuridad hay imágenes y sonidos que resurgen para controlar los cuerpos de las mujeres latinoamericanas, quienes desde niñas han sido consideradas madres de nacimiento. Pero en estos archivos emerge una interferencia que proviene del pasado para evocar un mensaje de lucha, memoria y libertad.",
+     "synopsis_lang": "es",
+     "synopsis_en": "Out of oblivion and darkness, images and sounds resurface to control the bodies of Latin American women, regarded since childhood as mothers by birth. But within these archives an interference emerges from the past, carrying a message of struggle, memory and freedom."
     },
     {
      "title": "Todas las manos que solté",
@@ -1375,7 +1509,24 @@
      "duration": "15 min",
      "posterSource": "custom",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Captura%20de%20pantalla%202026-03-23%20202933.png?itok=fJ60ATsd",
-     "work_id": "w_R4FT5JJDASKV"
+     "work_id": "w_R4FT5JJDASKV",
+     "genre": "Documental",
+     "_src": {
+      "heredado": {
+       "genre": "catálogo w_R4FT5JJDASKV (cinemancia-2026, ficci-65, midbo-2026)",
+       "title_en": "catálogo w_R4FT5JJDASKV (cinemancia-2026, ficci-65, midbo-2026)",
+       "lbSlug": "catálogo w_R4FT5JJDASKV (cinemancia-2026, ficci-65, midbo-2026)",
+       "year": "catálogo w_R4FT5JJDASKV (cinemancia-2026, ficci-65, midbo-2026)",
+       "synopsis": "catálogo w_R4FT5JJDASKV (cinemancia-2026, ficci-65, midbo-2026)",
+       "synopsis_en": "catálogo w_R4FT5JJDASKV (cinemancia-2026, ficci-65, midbo-2026)"
+      }
+     },
+     "title_en": "Tigers Can Be Seen In The Rain",
+     "lbSlug": "tigers-can-be-seen-in-the-rain",
+     "year": 2025,
+     "synopsis": "Entre formatos de imagen en movimiento, texturas locales y voces de otro tiempo, Óscar Ruiz Navia piensa la pérdida y el duelo como experiencias de dislocación temporal.",
+     "synopsis_lang": "es",
+     "synopsis_en": "Drifting between moving-image formats and collaging local textures and bygone voices, Oscar Ruiz Navia’s film reflects on loss and mourning as experiences of temporal dislocation."
     }
    ]
   },
@@ -1398,7 +1549,17 @@
    "synopsis_lang": "es",
    "posterSource": "tmdb",
    "poster": "https://image.tmdb.org/t/p/w500/Al31xYPYyul6k0XyMnmaA357CHw.jpg",
-   "work_id": "w_R4HBNA1T7S2G"
+   "work_id": "w_R4HBNA1T7S2G",
+   "genre": "Documental",
+   "_src": {
+    "heredado": {
+     "genre": "catálogo w_R4HBNA1T7S2G (ficci-65, ficdeh-2026, midbo-2026)",
+     "lbSlug": "catálogo w_R4HBNA1T7S2G (ficci-65, ficdeh-2026, midbo-2026)",
+     "year": "catálogo w_R4HBNA1T7S2G (ficci-65, ficdeh-2026, midbo-2026)"
+    }
+   },
+   "lbSlug": "el-valor-de-la-palabra",
+   "year": 2026
   },
   {
    "title": "Dao",
@@ -1446,7 +1607,13 @@
    "synopsis_lang": "es",
    "posterSource": "tmdb",
    "poster": "https://image.tmdb.org/t/p/w500/tRuNQ4ncAUrhfClwL8GJYUE9HYJ.jpg",
-   "work_id": "w_R4H8812VN6A2"
+   "work_id": "w_R4H8812VN6A2",
+   "lbSlug": "good-valley-stories",
+   "_src": {
+    "heredado": {
+     "lbSlug": "catálogo w_R4H8812VN6A2 (ficcali-2026, ficci-65, olhar-2026)"
+    }
+   }
   },
   {
    "title": "Two Years at Sea",
@@ -1578,7 +1745,20 @@
      "duration": "14 min",
      "posterSource": "custom",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_poster%20la%20forma%20y%20la%20raiz%20-%20Nathalia%20Quimbay%20Cadena.jpg?itok=dR-4fsTr",
-     "work_id": "w_R4HC1FD68XAQ"
+     "work_id": "w_R4HC1FD68XAQ",
+     "genre": "Documental",
+     "_src": {
+      "heredado": {
+       "genre": "catálogo w_R4HC1FD68XAQ (ficci-65, midbo-2026)",
+       "lbSlug": "catálogo w_R4HC1FD68XAQ (ficci-65, midbo-2026)",
+       "year": "catálogo w_R4HC1FD68XAQ (ficci-65, midbo-2026)",
+       "synopsis": "catálogo w_R4HC1FD68XAQ (ficci-65, midbo-2026)"
+      }
+     },
+     "lbSlug": "la-forma-y-la-raiz",
+     "year": 2026,
+     "synopsis": "Un retrato de la vida en transformación en el campo: se nace, crece y muere. Es una invitación a percibir la existencia con mayor calma, prestando atención a aquellos pequeños detalles y micro-mundos que suelen pasar desapercibidos en nuestra cotidianidad, en donde se mezcla la vida de las plantas y los animales en su constante transcurso de crecimiento y muerte. Esta contemplación de la vida rural se captura a través de planos fijos y visualmente serenos, que contrastan con un vasto y dinámico movimiento de sonido, creando una experiencia sensorial inmersiva y profundamente reflexiva. Nos invita a recordar lo insignificantes que somos en este ciclo eterno, donde finalmente todos nos convertimos en polvo.",
+     "synopsis_lang": "es"
     },
     {
      "title": "Montaña luminosa",
@@ -1586,7 +1766,18 @@
      "duration": "25 min",
      "posterSource": "custom",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_ML%20Poster%20FICCI%2065%20-2026%20-%20Lony%20Welter.png?itok=0KYb7rep",
-     "work_id": "w_R4HC9RW9N29F"
+     "work_id": "w_R4HC9RW9N29F",
+     "lbSlug": "montana-luminosa",
+     "_src": {
+      "heredado": {
+       "lbSlug": "catálogo w_R4HC9RW9N29F (ficci-65, midbo-2026)",
+       "year": "catálogo w_R4HC9RW9N29F (ficci-65, midbo-2026)",
+       "synopsis": "catálogo w_R4HC9RW9N29F (ficci-65, midbo-2026)"
+      }
+     },
+     "year": 2026,
+     "synopsis": "En La Jagua, un pequeño pueblo ribereño del Huila, la llegada de los hombres que vienen a abrir la tierra para construir una represa hidroeléctrica altera el delicado pulso del territorio. Nidia (55), una mujer campesina y maestra artesana del fique, espera con silenciosa tristeza la partida de su único hijo, quien se marcha en busca de un futuro «mejor». A medida que la ansiedad y el insomnio se instalan en su vida, una extraña sensación comienza a crecer en su interior: una presencia inquietante que no logra nombrar. Mientras la tierra es abierta y herida, Nidia se debate entre expulsar o abrazar aquello que la rodea, aquello que se filtra en su cuerpo. Entre el barro, el viento, las lágrimas y las alucinantes e intoxicantes flores del borrachero, avanza hacia una revelación: una que contiene el antídoto para su dolor y el último aliento necesario para que la montaña dé a luz.",
+     "synopsis_lang": "es"
     },
     {
      "title": "Pawa",
@@ -1594,7 +1785,22 @@
      "duration": "22 min",
      "posterSource": "custom",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Portada%20Pawa%20png%20-%20Aguacate%20Audiovisual.jpg?itok=qWnn1F5-",
-     "work_id": "w_R4HCNBABG3FG"
+     "work_id": "w_R4HCNBABG3FG",
+     "genre": "Ficción",
+     "_src": {
+      "heredado": {
+       "genre": "catálogo w_R4HCNBABG3FG (ficci-65, ficdeh-2026, leviza-2026)",
+       "lbSlug": "catálogo w_R4HCNBABG3FG (ficci-65, ficdeh-2026, leviza-2026)",
+       "year": "catálogo w_R4HCNBABG3FG (ficci-65, ficdeh-2026, leviza-2026)",
+       "synopsis": "catálogo w_R4HCNBABG3FG (ficci-65, ficdeh-2026, leviza-2026)",
+       "synopsis_en": "catálogo w_R4HCNBABG3FG (ficci-65, ficdeh-2026, leviza-2026)"
+      }
+     },
+     "lbSlug": "pawa",
+     "year": 2026,
+     "synopsis": "En una tranquila mañana en una ranchería de La Guajira, Indira da de comer a los pavos y las gallinas. Ante la sequía y el inicio de clases, Josefa, abuela de Indira, emprende un viaje junto a su nieta por las comunidades aledañas con la esperanza de vender a Taata, el pavo más grande, para comprar útiles escolares y comida.",
+     "synopsis_lang": "es",
+     "synopsis_en": "On a quiet morning in a ranchería in La Guajira, Indira feeds the turkeys and hens. With the drought and the school year about to start, her grandmother Josefa sets out with her through the neighboring communities, hoping to sell Taata, the largest turkey, and buy school supplies and food."
     },
     {
      "title": "Sombras en la niebla",
@@ -1602,7 +1808,24 @@
      "duration": "25 min",
      "posterSource": "custom",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_afiche%20SELN%20-%20Pedro%20Vega_0.jpg?itok=2FqonkaA",
-     "work_id": "w_R4FRTV2Q7YA2"
+     "work_id": "w_R4FRTV2Q7YA2",
+     "genre": "Documental",
+     "_src": {
+      "heredado": {
+       "genre": "catálogo w_R4FRTV2Q7YA2 (cinemancia-2026, ficci-65, ficmontanas-2026, midbo-2026, popayan-2026)",
+       "title_en": "catálogo w_R4FRTV2Q7YA2 (cinemancia-2026, ficci-65, ficmontanas-2026, midbo-2026, popayan-2026)",
+       "lbSlug": "catálogo w_R4FRTV2Q7YA2 (cinemancia-2026, ficci-65, ficmontanas-2026, midbo-2026, popayan-2026)",
+       "year": "catálogo w_R4FRTV2Q7YA2 (cinemancia-2026, ficci-65, ficmontanas-2026, midbo-2026, popayan-2026)",
+       "synopsis": "catálogo w_R4FRTV2Q7YA2 (cinemancia-2026, ficci-65, ficmontanas-2026, midbo-2026, popayan-2026)",
+       "synopsis_en": "catálogo w_R4FRTV2Q7YA2 (cinemancia-2026, ficci-65, ficmontanas-2026, midbo-2026, popayan-2026)"
+      }
+     },
+     "title_en": "Into the fog",
+     "lbSlug": "into-the-fog-2026",
+     "year": 2026,
+     "synopsis": "En el páramo de Chiscas, don Vicente Molina y su familia cuidan un enorme rebaño de ovejas. La cotidianidad de la familia transcurre entre montañas cubiertas de niebla y la cocina, cuyo fogón de leña los reúne en torno a la comida y el juego. Entre el grupo se encuentra Will, el niño de la familia, quien se debate entre jugar y acompañar a los mayores en las labores de pastoreo.",
+     "synopsis_lang": "es",
+     "synopsis_en": "High in a páramo in Colombia, the sheep that Edualdo and Ana have tended for decades graze across the land. Amid the fog and the demands of herding, their youngest son, Will, grows up between childhood play and the rhythms of rural life."
     }
    ]
   },
@@ -1796,7 +2019,22 @@
      "duration": "85 min",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/RUNA%20SIMI%20POSTER%20AF%20-%20Claudia%20chavez%20levano.jpg?itok=ObXBIPVJ",
      "posterSource": "custom",
-     "work_id": "w_R4DHSYGCHRN0"
+     "work_id": "w_R4DHSYGCHRN0",
+     "genre": "Documental",
+     "_src": {
+      "heredado": {
+       "genre": "catálogo w_R4DHSYGCHRN0 (aff-2026, ficcali-2026, ficci-65)",
+       "lbSlug": "catálogo w_R4DHSYGCHRN0 (aff-2026, ficcali-2026, ficci-65)",
+       "year": "catálogo w_R4DHSYGCHRN0 (aff-2026, ficcali-2026, ficci-65)",
+       "synopsis": "catálogo w_R4DHSYGCHRN0 (aff-2026, ficcali-2026, ficci-65)",
+       "synopsis_en": "catálogo w_R4DHSYGCHRN0 (aff-2026, ficcali-2026, ficci-65)"
+      }
+     },
+     "lbSlug": "runa-simi",
+     "year": 2025,
+     "synopsis": "Un actor de doblaje peruano busca convencer a Disney de doblar El Rey León al quechua. El viaje se convierte en una odisea personal de paternidad y activismo.",
+     "synopsis_lang": "es",
+     "synopsis_en": "A Peruvian voice actor sets out to convince Disney to dub The Lion King into Quechua. The journey becomes a personal odyssey of fatherhood and activism."
     }
    ]
   },
@@ -2221,7 +2459,17 @@
    "synopsis_lang": "es",
    "poster": "https://image.tmdb.org/t/p/w500/k5qYkuNLpN07AtXJ9nudLIifPQ5.jpg",
    "posterSource": "tmdb",
-   "work_id": "w_R4FJFY7626WB"
+   "work_id": "w_R4FJFY7626WB",
+   "genre": "Drama",
+   "_src": {
+    "heredado": {
+     "genre": "catálogo w_R4FJFY7626WB (cinemancia-2026, ficci-65, midbo-2026)",
+     "lbSlug": "catálogo w_R4FJFY7626WB (cinemancia-2026, ficci-65, midbo-2026)",
+     "year": "catálogo w_R4FJFY7626WB (cinemancia-2026, ficci-65, midbo-2026)"
+    }
+   },
+   "lbSlug": "las-almas-ni-los-ojos",
+   "year": 2026
   },
   {
    "title": "Chicas tristes",
@@ -2290,7 +2538,24 @@
      "duration": "13 min",
      "posterSource": "custom",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Captura%20de%20pantalla%202026-03-30%20170710.png?itok=dXa68A0J",
-     "work_id": "w_R4FS61XPY9M6"
+     "work_id": "w_R4FS61XPY9M6",
+     "genre": "Drama",
+     "_src": {
+      "heredado": {
+       "genre": "catálogo w_R4FS61XPY9M6 (cinemancia-2026, ficci-65, filcmar-2026)",
+       "title_en": "catálogo w_R4FS61XPY9M6 (cinemancia-2026, ficci-65, filcmar-2026)",
+       "lbSlug": "catálogo w_R4FS61XPY9M6 (cinemancia-2026, ficci-65, filcmar-2026)",
+       "year": "catálogo w_R4FS61XPY9M6 (cinemancia-2026, ficci-65, filcmar-2026)",
+       "synopsis": "catálogo w_R4FS61XPY9M6 (cinemancia-2026, ficci-65, filcmar-2026)",
+       "synopsis_en": "catálogo w_R4FS61XPY9M6 (cinemancia-2026, ficci-65, filcmar-2026)"
+      }
+     },
+     "title_en": "The Hunter",
+     "lbSlug": "the-hunter-2026-1",
+     "year": 2026,
+     "synopsis": "En un paisaje ondulante, la tierra es escrita y reescrita por El Cazador. La relación entre él y el territorio revelan la esencia de una geografía. Su obsesión por el oro lo lleva a una búsqueda incesante de tesoros. El poder está en el significado que otorga a lo que encuentra. En las profundidades de la tierra y de sí mismo, descubre la verdad que le permite perpetuar su búsqueda.",
+     "synopsis_lang": "es",
+     "synopsis_en": "Metal detector in hand, the Hunter roams through forest and city in search of treasure. It is his way of life, his calling: the summons of Lord Gold."
     },
     {
      "title": "Filme Pin",
@@ -2298,7 +2563,22 @@
      "duration": "7 min",
      "posterSource": "custom",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_POSTER-FILME-PIN-2026%20-%20La%20Vulcanizadora.jpg?itok=qrKWWtjf",
-     "work_id": "w_R4EPV0KGHMRN"
+     "work_id": "w_R4EPV0KGHMRN",
+     "genre": "Documental",
+     "_src": {
+      "heredado": {
+       "genre": "catálogo w_R4EPV0KGHMRN (cineautopsia-2026, ficci-65, midbo-2026, popayan-2026)",
+       "lbSlug": "catálogo w_R4EPV0KGHMRN (cineautopsia-2026, ficci-65, midbo-2026, popayan-2026)",
+       "year": "catálogo w_R4EPV0KGHMRN (cineautopsia-2026, ficci-65, midbo-2026, popayan-2026)",
+       "synopsis": "catálogo w_R4EPV0KGHMRN (cineautopsia-2026, ficci-65, midbo-2026, popayan-2026)",
+       "synopsis_en": "catálogo w_R4EPV0KGHMRN (cineautopsia-2026, ficci-65, midbo-2026, popayan-2026)"
+      }
+     },
+     "lbSlug": "filme-pin",
+     "year": 2026,
+     "synopsis": "Entre luz, metal y plata, Filme Pin transforma una colección de pines solidarios en un archivo a otra escala: espectros del exilio y de la lucha internacional contra el régimen fascista y colonial de Portugal.",
+     "synopsis_lang": "es",
+     "synopsis_en": "Between light, metal and silver, a collection of solidarity pins turns into an archive of another scale: spectres of exile and international struggle against Portugal’s fascist and colonial regime."
     },
     {
      "title": "Futuros luminosos",
@@ -2306,7 +2586,24 @@
      "duration": "25 min",
      "posterSource": "custom",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_P%C3%B3ster%20Futuros%20luminosos%20-%20Ismael%20Garcia.jpg?itok=6WCvT13b",
-     "work_id": "w_R4FBMPTV0JG2"
+     "work_id": "w_R4FBMPTV0JG2",
+     "genre": "Ficción",
+     "_src": {
+      "heredado": {
+       "genre": "catálogo w_R4FBMPTV0JG2 (cinemancia-2026, ficci-65, jardin-2026)",
+       "title_en": "catálogo w_R4FBMPTV0JG2 (cinemancia-2026, ficci-65, jardin-2026)",
+       "lbSlug": "catálogo w_R4FBMPTV0JG2 (cinemancia-2026, ficci-65, jardin-2026)",
+       "year": "catálogo w_R4FBMPTV0JG2 (cinemancia-2026, ficci-65, jardin-2026)",
+       "synopsis": "catálogo w_R4FBMPTV0JG2 (cinemancia-2026, ficci-65, jardin-2026)",
+       "synopsis_en": "catálogo w_R4FBMPTV0JG2 (cinemancia-2026, ficci-65, jardin-2026)"
+      }
+     },
+     "title_en": "A Brighter Future",
+     "lbSlug": "a-brighter-future",
+     "year": 2026,
+     "synopsis": "En un lugar extraño y oscuro, un grupo de jóvenes de colores proyecta su futuro.",
+     "synopsis_lang": "es",
+     "synopsis_en": "In a strange, dark place, a colourful group of young people project their future."
     },
     {
      "title": "Lejanía",
@@ -2314,7 +2611,20 @@
      "duration": "17 min",
      "posterSource": "custom",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_PO%CC%81STER%20LEJANIA%20-%20Carolina%20Zarate%20Garcia.png?itok=UPHrcFZ4",
-     "work_id": "w_R4HCND964DS3"
+     "work_id": "w_R4HCND964DS3",
+     "genre": "Documental",
+     "_src": {
+      "heredado": {
+       "genre": "catálogo w_R4HCND964DS3 (ficci-65, jardin-2026)",
+       "lbSlug": "catálogo w_R4HCND964DS3 (ficci-65, jardin-2026)",
+       "year": "catálogo w_R4HCND964DS3 (ficci-65, jardin-2026)",
+       "synopsis": "catálogo w_R4HCND964DS3 (ficci-65, jardin-2026)"
+      }
+     },
+     "lbSlug": "lejania-1",
+     "year": 2026,
+     "synopsis": "Un viajero se dirige hacia Lejanía, una playa en una isla escondida en la inmensidad del océano pacífico, donde se presume, sus visitantes tienen visiones sobrenaturales. En medio de paisajes fragmentados y presencias clandestinas entre las sombras ,la realidad se desdibuja y el tiempo se deshace.",
+     "synopsis_lang": "es"
     },
     {
      "title": "Winter Blumen Garten",
@@ -2571,7 +2881,13 @@
      "duration": "27 min",
      "posterSource": "custom",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_afiche%20belleza%20letal%20-%20Samuel%20Moreno.jpg?itok=ZrOw0nvZ",
-     "work_id": "w_R4HD24FCSZJ0"
+     "work_id": "w_R4HD24FCSZJ0",
+     "year": 2026,
+     "_src": {
+      "heredado": {
+       "year": "catálogo w_R4HD24FCSZJ0 (ficci-65, mamut-2026)"
+      }
+     }
     },
     {
      "title": "Consagración",
@@ -2587,7 +2903,22 @@
      "duration": "15 min",
      "posterSource": "custom",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_MFTA_Final_Untextured_Low-Res%20-%20MEDIOCIELO%20Cine%20%281%29.jpg?itok=MXASl-yt",
-     "work_id": "w_R4F45MWYW0TY"
+     "work_id": "w_R4F45MWYW0TY",
+     "title_en": "My Friend, The Architect",
+     "_src": {
+      "heredado": {
+       "title_en": "catálogo w_R4F45MWYW0TY (cinemancia-2026, ficci-65)",
+       "lbSlug": "catálogo w_R4F45MWYW0TY (cinemancia-2026, ficci-65)",
+       "year": "catálogo w_R4F45MWYW0TY (cinemancia-2026, ficci-65)",
+       "synopsis": "catálogo w_R4F45MWYW0TY (cinemancia-2026, ficci-65)",
+       "synopsis_en": "catálogo w_R4F45MWYW0TY (cinemancia-2026, ficci-65)"
+      }
+     },
+     "lbSlug": "my-friend-the-architect",
+     "year": 2026,
+     "synopsis": "Una mujer inventa un relato para evocar una amistad perdida. Junto a sus amigos imagina una fábula: la historia de dos pájaros que un día se hicieron humanos, un Ornitólogo y su amigo, El Arquitecto.",
+     "synopsis_lang": "es",
+     "synopsis_en": "A woman invents a story to evoke a lost friendship. Along with her friends, they imagine a fable: the story of two birds that one day became human — an Ornithologist and his friend, The Architect."
     },
     {
      "title": "Sirena mecánica",
@@ -2595,7 +2926,20 @@
      "duration": "9 min",
      "posterSource": "custom",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Captura%20de%20pantalla%202026-03-23%20205043.png?itok=BR7oyf-o",
-     "work_id": "w_R4HD241JZEE7"
+     "work_id": "w_R4HD241JZEE7",
+     "genre": "Experimental",
+     "_src": {
+      "heredado": {
+       "genre": "catálogo w_R4HD241JZEE7 (ficci-65, jardin-2026, popayan-2026)",
+       "lbSlug": "catálogo w_R4HD241JZEE7 (ficci-65, jardin-2026, popayan-2026)",
+       "year": "catálogo w_R4HD241JZEE7 (ficci-65, jardin-2026, popayan-2026)",
+       "synopsis": "catálogo w_R4HD241JZEE7 (ficci-65, jardin-2026, popayan-2026)"
+      }
+     },
+     "lbSlug": "sirena-mecanica",
+     "year": 2026,
+     "synopsis": "Sirena Mecánica es un documental fantástico que desde de los estudios transfeministas reinterpreta el modo en cómo se representa el cuerpo (material y social) femenino dentro del mito de la sirena. Este procedimiento subversivo narra a través de los recuerdos de la primera infancia y los procesos de sanación en la relación intima de la pareja codirectora de la pieza. En el desencuentro con la realidad, SM transita entre paisajes materialmente confusos (fílmicos y plásticos) TRANSitando en la ambigüedad de la protección, amenaza, belleza y violencia.",
+     "synopsis_lang": "es"
     },
     {
      "title": "Suite intercontinental",
@@ -2603,7 +2947,20 @@
      "duration": "24 min",
      "posterSource": "custom",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Capture_decran_2025-05-28_a_15.57.26%20-%20Marianna%20Manili.jpg?itok=alqasZXz",
-     "work_id": "w_R4HDE4TF8RNM"
+     "work_id": "w_R4HDE4TF8RNM",
+     "lbSlug": "suite-intercontinental",
+     "_src": {
+      "heredado": {
+       "lbSlug": "catálogo w_R4HDE4TF8RNM (ficci-65, popayan-2026)",
+       "year": "catálogo w_R4HDE4TF8RNM (ficci-65, popayan-2026)",
+       "synopsis": "catálogo w_R4HDE4TF8RNM (ficci-65, popayan-2026)",
+       "synopsis_en": "catálogo w_R4HDE4TF8RNM (ficci-65, popayan-2026)"
+      }
+     },
+     "year": 2026,
+     "synopsis": "Desde el piso 30 de una torre de cristal, la ciudad de Cali, presa de la tensión, bulle bajo la mirada de Margot. Cegada por el sol tropical, Margot deambula por la ciudad, ajena a todo. Lejos de los demás y de su entorno, sus fantasías se funden con la realidad. Su mirada se cruza con la de un hombre en la calle, de torso desnudo y ojos penetrantes. Cada día, Margot sigue al joven, acercándose lentamente al objeto de su deseo.",
+     "synopsis_lang": "es",
+     "synopsis_en": "From the 30th floor of a glass tower, the city of Cali, gripped by tension, bubbles beneath Margot’s gaze. Blinded by the tropical sun, Margot wanders through the city, oblivious to it all. Far from others and her surroundings, her fantasies merge with reality. Her gaze meets that of a man on the street, his chest bare and his eyes piercing. Every day, Margot follows the young man, slowly drawing closer to the object of her desire."
     }
    ]
   },
@@ -2627,7 +2984,24 @@
      "duration": "12 min",
      "posterSource": "custom",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_PORTADAS%20CASA%20EN%20EL%20%20aire%202-im%C3%A1genes-0%20-%20Aguacate%20Audiovisual.jpg?itok=b37CurBg",
-     "work_id": "w_R4HDSRY0KBZB"
+     "work_id": "w_R4HDSRY0KBZB",
+     "genre": "Documental",
+     "_src": {
+      "heredado": {
+       "genre": "catálogo w_R4HDSRY0KBZB (ficci-65, ficdeh-2026, midbo-2026)",
+       "title_en": "catálogo w_R4HDSRY0KBZB (ficci-65, ficdeh-2026, midbo-2026)",
+       "lbSlug": "catálogo w_R4HDSRY0KBZB (ficci-65, ficdeh-2026, midbo-2026)",
+       "year": "catálogo w_R4HDSRY0KBZB (ficci-65, ficdeh-2026, midbo-2026)",
+       "synopsis": "catálogo w_R4HDSRY0KBZB (ficci-65, ficdeh-2026, midbo-2026)",
+       "synopsis_en": "catálogo w_R4HDSRY0KBZB (ficci-65, ficdeh-2026, midbo-2026)"
+      }
+     },
+     "title_en": "The House of the Wind",
+     "lbSlug": "the-house-of-the-wind-2026",
+     "year": 2026,
+     "synopsis": "Ana Rosa Jusayu (mi madre), lideresa ancestral de la comunidad Apotnojushi ubicada en cercanias del cerro de la teta en la alta Guajira colombiana, trata de recuperar el tejido y la unión familiar que se vieron alterados por el “desarrollo sostenible” invasivo. En medio de las pocas esperanzas de sobrevivir en lo desolado de su territorio ancestral, la familia comparte su añoranza de permanecer allí, enfrentándose a las dificultades y los cambios económicos que afectan al pueblo wayuu.",
+     "synopsis_lang": "es",
+     "synopsis_en": "Ana Rosa Jusayu (My Mother), an ancestral leader of the Apotnojushi community located near Cerro de la Teta in the upper Guajira region of Colombia, is trying to rebuild the family fabric and unity that was disrupted by invasive “sustainable development.” Amidst the slim hopes of surviving in the desolation of their ancestral territory, the family shares their longing to remain there, facing the hardships and economic changes that affect the Wayuu people."
     },
     {
      "title": "La Raya",
@@ -2635,7 +3009,24 @@
      "duration": "80 min",
      "posterSource": "custom",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Captura%20de%20pantalla%202026-03-29%20235923.png?itok=0Rlq5ukp",
-     "work_id": "w_R4HE76B833SH"
+     "work_id": "w_R4HE76B833SH",
+     "genre": "Drama",
+     "_src": {
+      "heredado": {
+       "genre": "catálogo w_R4HE76B833SH (ficci-65, ficdeh-2026)",
+       "title_en": "catálogo w_R4HE76B833SH (ficci-65, ficdeh-2026)",
+       "lbSlug": "catálogo w_R4HE76B833SH (ficci-65, ficdeh-2026)",
+       "year": "catálogo w_R4HE76B833SH (ficci-65, ficdeh-2026)",
+       "synopsis": "catálogo w_R4HE76B833SH (ficci-65, ficdeh-2026)",
+       "synopsis_en": "catálogo w_R4HE76B833SH (ficci-65, ficdeh-2026)"
+      }
+     },
+     "title_en": "Town Of La Raya",
+     "lbSlug": "town-of-la-raya",
+     "year": 2025,
+     "synopsis": "La llegada de un refrigerador cambia la vida en La Raya, un pueblo abandonado en la sierra sur de Oaxaca. Sotera y su amigo Erick intentan venderlo y hacer negocio. Sin embargo, el refrigerador pronto empieza a revelar cosas misteriosas a la gente que se le acerca.",
+     "synopsis_lang": "es",
+     "synopsis_en": "The arrival of a refrigerator changes life in La Raya, an abandoned village in the southern mountains of Oaxaca. Sotera and her friend Erick try to sell it and make a business. However, the fridge soon begins to reveal mysterious things to the people who approach it."
     }
    ]
   },
@@ -2685,7 +3076,13 @@
    "synopsis_lang": "es",
    "poster": "https://image.tmdb.org/t/p/w500/tRuNQ4ncAUrhfClwL8GJYUE9HYJ.jpg",
    "posterSource": "tmdb",
-   "work_id": "w_R4H8812VN6A2"
+   "work_id": "w_R4H8812VN6A2",
+   "lbSlug": "good-valley-stories",
+   "_src": {
+    "heredado": {
+     "lbSlug": "catálogo w_R4H8812VN6A2 (ficcali-2026, ficci-65, olhar-2026)"
+    }
+   }
   },
   {
    "title": "La noche está marchándose ya",
@@ -2709,7 +3106,13 @@
    "synopsis_lang": "es",
    "posterSource": "tmdb",
    "poster": "https://image.tmdb.org/t/p/w500/39jzHk0VK2kdt9lRAb8CqNuGcGc.jpg",
-   "work_id": "w_R4HE768025KE"
+   "work_id": "w_R4HE768025KE",
+   "lbSlug": "the-night-is-fading-away",
+   "_src": {
+    "heredado": {
+     "lbSlug": "catálogo w_R4HE768025KE (ficci-65, olhar-2026)"
+    }
+   }
   },
   {
    "title": "Tóc, Giấy và Nước…",
@@ -2755,7 +3158,22 @@
      "duration": "13 min",
      "posterSource": "custom",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Abortion%20Party%20-%20Poster.png?itok=Vh79cJxK",
-     "work_id": "w_R4HE76VVXEXH"
+     "work_id": "w_R4HE76VVXEXH",
+     "genre": "Animación",
+     "_src": {
+      "heredado": {
+       "genre": "catálogo w_R4HE76VVXEXH (ficci-65, midbo-2026)",
+       "lbSlug": "catálogo w_R4HE76VVXEXH (ficci-65, midbo-2026)",
+       "year": "catálogo w_R4HE76VVXEXH (ficci-65, midbo-2026)",
+       "synopsis": "catálogo w_R4HE76VVXEXH (ficci-65, midbo-2026)",
+       "synopsis_en": "catálogo w_R4HE76VVXEXH (ficci-65, midbo-2026)"
+      }
+     },
+     "lbSlug": "abortion-party",
+     "year": 2025,
+     "synopsis": "Después de conseguir reunir el dinero para pagar un aborto tras quedar embarazada de su novio polaco de intercambio, la directora decide celebrarlo con una fiesta. Entre los invitados están su vecino músico de ska de edad avanzada, unos miembros semirretirados de una pandilla, su compañero de piso gay y sucio, y las siempre presentes chinches.",
+     "synopsis_lang": "es",
+     "synopsis_en": "After managing to scrape together money to pay for a pregnancy after her Polish exchange student boyfriend gets her pregnant, the director decides to celebrate with a party. In attendance are her geriatric ska musician neighbor, semi-retired gang affiliates, her dirty gay roomate, and ever present bedbugs."
     },
     {
      "title": "A donde nos lleva la fe de José Gerónimo",
@@ -2769,7 +3187,22 @@
      "duration": "18 min",
      "posterSource": "custom",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Captura%20de%20pantalla%202026-04-01%20a%20la%28s%29%207.42.27%20p.m..jpg?itok=Ygi-1TlW",
-     "work_id": "w_R4HEGBYCA03G"
+     "work_id": "w_R4HEGBYCA03G",
+     "genre": "Documental",
+     "_src": {
+      "heredado": {
+       "genre": "catálogo w_R4HEGBYCA03G (ficci-65, midbo-2026)",
+       "lbSlug": "catálogo w_R4HEGBYCA03G (ficci-65, midbo-2026)",
+       "year": "catálogo w_R4HEGBYCA03G (ficci-65, midbo-2026)",
+       "synopsis": "catálogo w_R4HEGBYCA03G (ficci-65, midbo-2026)",
+       "synopsis_en": "catálogo w_R4HEGBYCA03G (ficci-65, midbo-2026)"
+      }
+     },
+     "lbSlug": "agua-fria-2025",
+     "year": 2025,
+     "synopsis": "En el campamento Ribera del Río, en Talagante, Ángel (9) y Kimberly (11), dos niñxs atravesados por la migración, convierten una furgoneta estacionada en su nave imaginaria para emprender un viaje en busca de su amiga Sofía (9), quien recientemente tuvo que volver a su país natal, Colombia. En el viaje, recorren lugares que habitan en sus recuerdos, exploran su pasado y presente por medio de conversaciones, y se encuentran con otros niños que se suman a la aventura. En este espacio entre la realidad y la fantasía experimentan la construcción de la identidad, la sensación de pertenencia y la amistad en medio del desarraigo.",
+     "synopsis_lang": "es",
+     "synopsis_en": "Ángel and Kimberly, two children affected by migration, turn a parked van into an imaginary vessel to go look for their friend Sofía, who returned to her homeland, Colombia. In this space between reality and fantasy, they build their sense of identity, belonging, and friendship amid uprooting."
     },
     {
      "title": "Fim de Rodovia",
@@ -3119,7 +3552,15 @@
    "synopsis_lang": "es",
    "poster": "https://image.tmdb.org/t/p/w500/sKIm7ZwfuBnKuGeHJAUOYhg8DlV.jpg",
    "posterSource": "tmdb",
-   "work_id": "w_R4FPSFY03SBY"
+   "work_id": "w_R4FPSFY03SBY",
+   "lbSlug": "lolita-en-honda",
+   "_src": {
+    "heredado": {
+     "lbSlug": "catálogo w_R4FPSFY03SBY (cinemancia-2026, ficci-65, mamut-2026, midbo-2026)",
+     "year": "catálogo w_R4FPSFY03SBY (cinemancia-2026, ficci-65, mamut-2026, midbo-2026)"
+    }
+   },
+   "year": 2026
   },
   {
    "title": "Cortos Colombia — Prog. 2",
@@ -3141,7 +3582,20 @@
      "duration": "14 min",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_poster%20la%20forma%20y%20la%20raiz%20-%20Nathalia%20Quimbay%20Cadena.jpg?itok=dR-4fsTr",
      "posterSource": "custom",
-     "work_id": "w_R4HC1FD68XAQ"
+     "work_id": "w_R4HC1FD68XAQ",
+     "genre": "Documental",
+     "_src": {
+      "heredado": {
+       "genre": "catálogo w_R4HC1FD68XAQ (ficci-65, midbo-2026)",
+       "lbSlug": "catálogo w_R4HC1FD68XAQ (ficci-65, midbo-2026)",
+       "year": "catálogo w_R4HC1FD68XAQ (ficci-65, midbo-2026)",
+       "synopsis": "catálogo w_R4HC1FD68XAQ (ficci-65, midbo-2026)"
+      }
+     },
+     "lbSlug": "la-forma-y-la-raiz",
+     "year": 2026,
+     "synopsis": "Un retrato de la vida en transformación en el campo: se nace, crece y muere. Es una invitación a percibir la existencia con mayor calma, prestando atención a aquellos pequeños detalles y micro-mundos que suelen pasar desapercibidos en nuestra cotidianidad, en donde se mezcla la vida de las plantas y los animales en su constante transcurso de crecimiento y muerte. Esta contemplación de la vida rural se captura a través de planos fijos y visualmente serenos, que contrastan con un vasto y dinámico movimiento de sonido, creando una experiencia sensorial inmersiva y profundamente reflexiva. Nos invita a recordar lo insignificantes que somos en este ciclo eterno, donde finalmente todos nos convertimos en polvo.",
+     "synopsis_lang": "es"
     },
     {
      "title": "Montaña luminosa",
@@ -3149,7 +3603,18 @@
      "duration": "25 min",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_ML%20Poster%20FICCI%2065%20-2026%20-%20Lony%20Welter.png?itok=0KYb7rep",
      "posterSource": "custom",
-     "work_id": "w_R4HC9RW9N29F"
+     "work_id": "w_R4HC9RW9N29F",
+     "lbSlug": "montana-luminosa",
+     "_src": {
+      "heredado": {
+       "lbSlug": "catálogo w_R4HC9RW9N29F (ficci-65, midbo-2026)",
+       "year": "catálogo w_R4HC9RW9N29F (ficci-65, midbo-2026)",
+       "synopsis": "catálogo w_R4HC9RW9N29F (ficci-65, midbo-2026)"
+      }
+     },
+     "year": 2026,
+     "synopsis": "En La Jagua, un pequeño pueblo ribereño del Huila, la llegada de los hombres que vienen a abrir la tierra para construir una represa hidroeléctrica altera el delicado pulso del territorio. Nidia (55), una mujer campesina y maestra artesana del fique, espera con silenciosa tristeza la partida de su único hijo, quien se marcha en busca de un futuro «mejor». A medida que la ansiedad y el insomnio se instalan en su vida, una extraña sensación comienza a crecer en su interior: una presencia inquietante que no logra nombrar. Mientras la tierra es abierta y herida, Nidia se debate entre expulsar o abrazar aquello que la rodea, aquello que se filtra en su cuerpo. Entre el barro, el viento, las lágrimas y las alucinantes e intoxicantes flores del borrachero, avanza hacia una revelación: una que contiene el antídoto para su dolor y el último aliento necesario para que la montaña dé a luz.",
+     "synopsis_lang": "es"
     },
     {
      "title": "Pawa",
@@ -3157,7 +3622,22 @@
      "duration": "22 min",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Portada%20Pawa%20png%20-%20Aguacate%20Audiovisual.jpg?itok=qWnn1F5-",
      "posterSource": "custom",
-     "work_id": "w_R4HCNBABG3FG"
+     "work_id": "w_R4HCNBABG3FG",
+     "genre": "Ficción",
+     "_src": {
+      "heredado": {
+       "genre": "catálogo w_R4HCNBABG3FG (ficci-65, ficdeh-2026, leviza-2026)",
+       "lbSlug": "catálogo w_R4HCNBABG3FG (ficci-65, ficdeh-2026, leviza-2026)",
+       "year": "catálogo w_R4HCNBABG3FG (ficci-65, ficdeh-2026, leviza-2026)",
+       "synopsis": "catálogo w_R4HCNBABG3FG (ficci-65, ficdeh-2026, leviza-2026)",
+       "synopsis_en": "catálogo w_R4HCNBABG3FG (ficci-65, ficdeh-2026, leviza-2026)"
+      }
+     },
+     "lbSlug": "pawa",
+     "year": 2026,
+     "synopsis": "En una tranquila mañana en una ranchería de La Guajira, Indira da de comer a los pavos y las gallinas. Ante la sequía y el inicio de clases, Josefa, abuela de Indira, emprende un viaje junto a su nieta por las comunidades aledañas con la esperanza de vender a Taata, el pavo más grande, para comprar útiles escolares y comida.",
+     "synopsis_lang": "es",
+     "synopsis_en": "On a quiet morning in a ranchería in La Guajira, Indira feeds the turkeys and hens. With the drought and the school year about to start, her grandmother Josefa sets out with her through the neighboring communities, hoping to sell Taata, the largest turkey, and buy school supplies and food."
     },
     {
      "title": "Sombras en la niebla",
@@ -3165,7 +3645,24 @@
      "duration": "25 min",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_afiche%20SELN%20-%20Pedro%20Vega_0.jpg?itok=2FqonkaA",
      "posterSource": "custom",
-     "work_id": "w_R4FRTV2Q7YA2"
+     "work_id": "w_R4FRTV2Q7YA2",
+     "genre": "Documental",
+     "_src": {
+      "heredado": {
+       "genre": "catálogo w_R4FRTV2Q7YA2 (cinemancia-2026, ficci-65, ficmontanas-2026, midbo-2026, popayan-2026)",
+       "title_en": "catálogo w_R4FRTV2Q7YA2 (cinemancia-2026, ficci-65, ficmontanas-2026, midbo-2026, popayan-2026)",
+       "lbSlug": "catálogo w_R4FRTV2Q7YA2 (cinemancia-2026, ficci-65, ficmontanas-2026, midbo-2026, popayan-2026)",
+       "year": "catálogo w_R4FRTV2Q7YA2 (cinemancia-2026, ficci-65, ficmontanas-2026, midbo-2026, popayan-2026)",
+       "synopsis": "catálogo w_R4FRTV2Q7YA2 (cinemancia-2026, ficci-65, ficmontanas-2026, midbo-2026, popayan-2026)",
+       "synopsis_en": "catálogo w_R4FRTV2Q7YA2 (cinemancia-2026, ficci-65, ficmontanas-2026, midbo-2026, popayan-2026)"
+      }
+     },
+     "title_en": "Into the fog",
+     "lbSlug": "into-the-fog-2026",
+     "year": 2026,
+     "synopsis": "En el páramo de Chiscas, don Vicente Molina y su familia cuidan un enorme rebaño de ovejas. La cotidianidad de la familia transcurre entre montañas cubiertas de niebla y la cocina, cuyo fogón de leña los reúne en torno a la comida y el juego. Entre el grupo se encuentra Will, el niño de la familia, quien se debate entre jugar y acompañar a los mayores en las labores de pastoreo.",
+     "synopsis_lang": "es",
+     "synopsis_en": "High in a páramo in Colombia, the sheep that Edualdo and Ana have tended for decades graze across the land. Amid the fog and the demands of herding, their youngest son, Will, grows up between childhood play and the rhythms of rural life."
     }
    ]
   },
@@ -3188,7 +3685,17 @@
    "synopsis_lang": "es",
    "poster": "https://image.tmdb.org/t/p/w500/Al31xYPYyul6k0XyMnmaA357CHw.jpg",
    "posterSource": "tmdb",
-   "work_id": "w_R4HBNA1T7S2G"
+   "work_id": "w_R4HBNA1T7S2G",
+   "genre": "Documental",
+   "_src": {
+    "heredado": {
+     "genre": "catálogo w_R4HBNA1T7S2G (ficci-65, ficdeh-2026, midbo-2026)",
+     "lbSlug": "catálogo w_R4HBNA1T7S2G (ficci-65, ficdeh-2026, midbo-2026)",
+     "year": "catálogo w_R4HBNA1T7S2G (ficci-65, ficdeh-2026, midbo-2026)"
+    }
+   },
+   "lbSlug": "el-valor-de-la-palabra",
+   "year": 2026
   },
   {
    "title": "Costas — Prog. 1",
@@ -3210,7 +3717,22 @@
      "duration": "77 min",
      "posterSource": "custom",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Captura%20de%20pantalla%202026-04-01%20a%20la%28s%29%2016.28.13.png?itok=znYWjLkI",
-     "work_id": "w_R4GTPYZRA4KK"
+     "work_id": "w_R4GTPYZRA4KK",
+     "genre": "Documental",
+     "_src": {
+      "heredado": {
+       "genre": "catálogo w_R4GTPYZRA4KK (ficcali-2026, ficci-65, olhar-2026)",
+       "lbSlug": "catálogo w_R4GTPYZRA4KK (ficcali-2026, ficci-65, olhar-2026)",
+       "year": "catálogo w_R4GTPYZRA4KK (ficcali-2026, ficci-65, olhar-2026)",
+       "synopsis": "catálogo w_R4GTPYZRA4KK (ficcali-2026, ficci-65, olhar-2026)",
+       "synopsis_en": "catálogo w_R4GTPYZRA4KK (ficcali-2026, ficci-65, olhar-2026)"
+      }
+     },
+     "lbSlug": "an-incomplete-calendar",
+     "year": 2026,
+     "synopsis": "Un disco de vinilo de 1980 es el punto de partida. Rhymes and Songs for OPEC es una grabación especial del coro de la Universidad Central de Venezuela, para conmemorar el vigésimo aniversario de la Organización de Países Exportadores de Petróleo. Mediante una superposición de canciones y material inédito o poco visto, se replantea el petróleo como una herramienta política al servicio de las luchas de liberación en Palestina y del fortalecimiento de la solidaridad panárabe entre 1960 y 1970. Se propone una revisión aguda de la geopolítica de los últimos cincuenta años, desde representaciones como la música, las estampillas y el arte; señala cómo las alianzas de los países petroleros buscan formas de contrarrestar el poder.",
+     "synopsis_lang": "es",
+     "synopsis_en": "A forgotten musical record connects Caracas to Tehran, revealing untold stories of oil, not as a commodity, but as a political leverage for the liberation struggles in Palestine and building Pan-Arab solidarity between 1960-1970."
     },
     {
      "title": "Fuego en el mar",
@@ -3298,7 +3820,13 @@
    "synopsis_lang": "es",
    "poster": "https://image.tmdb.org/t/p/w500/r5brsK8rdog4ewLZPihvb0tntZh.jpg",
    "posterSource": "tmdb",
-   "work_id": "w_R4HAT5A0J0QY"
+   "work_id": "w_R4HAT5A0J0QY",
+   "lbSlug": "forest-up-in-the-mountain",
+   "_src": {
+    "heredado": {
+     "lbSlug": "catálogo w_R4HAT5A0J0QY (ficci-65, midbo-2026)"
+    }
+   }
   },
   {
    "title": "Cortos Colombia — Prog. 1",
@@ -3320,7 +3848,24 @@
      "duration": "7 min",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Captura%20de%20pantalla%202026-04-04%20a%20la%28s%29%203.43.18%20p.m..jpg?itok=SfE8u2Hj",
      "posterSource": "custom",
-     "work_id": "w_R4EPHC0WCQM5"
+     "work_id": "w_R4EPHC0WCQM5",
+     "genre": "Animación",
+     "_src": {
+      "heredado": {
+       "genre": "catálogo w_R4EPHC0WCQM5 (cineautopsia-2026, cinemancia-2026, ficci-65, mamut-2026, midbo-2026, popayan-2026)",
+       "title_en": "catálogo w_R4EPHC0WCQM5 (cineautopsia-2026, cinemancia-2026, ficci-65, mamut-2026, midbo-2026, popayan-2026)",
+       "lbSlug": "catálogo w_R4EPHC0WCQM5 (cineautopsia-2026, cinemancia-2026, ficci-65, mamut-2026, midbo-2026, popayan-2026)",
+       "year": "catálogo w_R4EPHC0WCQM5 (cineautopsia-2026, cinemancia-2026, ficci-65, mamut-2026, midbo-2026, popayan-2026)",
+       "synopsis": "catálogo w_R4EPHC0WCQM5 (cineautopsia-2026, cinemancia-2026, ficci-65, mamut-2026, midbo-2026, popayan-2026)",
+       "synopsis_en": "catálogo w_R4EPHC0WCQM5 (cineautopsia-2026, cinemancia-2026, ficci-65, mamut-2026, midbo-2026, popayan-2026)"
+      }
+     },
+     "title_en": "decay",
+     "lbSlug": "decay-2026",
+     "year": 2026,
+     "synopsis": "Gracias a los chinos por la pólvora, parece que la hubieran hecho para mí. Su invención sucede como un accidente, pensada inicialmente para espantar los espíritus malos. Esta película inicia en China, luego un evento en Cartagena y se acaba siglos después en Bogotá.",
+     "synopsis_lang": "es",
+     "synopsis_en": "I am grateful to the Chinese for the invention of gunpowder — it feels as if they made it for me. Its discovery happened by accident, originally conceived as a way to ward off evil spirits. This film begins in China, then moves to an event in Cartagena, and ends centuries later in Bogotá."
     },
     {
      "title": "La garganta del diablo",
@@ -3336,7 +3881,18 @@
      "duration": "16 min",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_LFM_poster_Ficci_595x842%20-%20Maria%20Paula%20Lorgia.jpg?itok=5XCaIr83",
      "posterSource": "custom",
-     "work_id": "w_R4FSHA335BXS"
+     "work_id": "w_R4FSHA335BXS",
+     "lbSlug": "las-formas-de-la-magia",
+     "_src": {
+      "heredado": {
+       "lbSlug": "catálogo w_R4FSHA335BXS (cinemancia-2026, ficci-65, midbo-2026)",
+       "year": "catálogo w_R4FSHA335BXS (cinemancia-2026, ficci-65, midbo-2026)",
+       "synopsis": "catálogo w_R4FSHA335BXS (cinemancia-2026, ficci-65, midbo-2026)"
+      }
+     },
+     "year": 2026,
+     "synopsis": "Un año después de la muerte de su padre, el reconocido mago colombiano Gustavo Lorgia, la directora realiza una exploración por sus archivos de video que revelan su trayectoria como artista, su rol como padre y la estética televisiva de una época. Una película que acude al archivo como medio para atravesar el duelo y a la memoria como forma de resistir a la desaparición.",
+     "synopsis_lang": "es"
     },
     {
      "title": "Madres de nacimiento",
@@ -3344,7 +3900,22 @@
      "duration": "8 min",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_MDN_Poster_Blanco_WEB.jpg?itok=OR2_OCi0",
      "posterSource": "custom",
-     "work_id": "w_R4FH541S52JK"
+     "work_id": "w_R4FH541S52JK",
+     "genre": "Documental",
+     "_src": {
+      "heredado": {
+       "genre": "catálogo w_R4FH541S52JK (cinemancia-2026, ficci-65, ficdeh-2026, ficmontanas-2026, jardin-2026, midbo-2026, popayan-2026)",
+       "lbSlug": "catálogo w_R4FH541S52JK (cinemancia-2026, ficci-65, ficdeh-2026, ficmontanas-2026, jardin-2026, midbo-2026, popayan-2026)",
+       "year": "catálogo w_R4FH541S52JK (cinemancia-2026, ficci-65, ficdeh-2026, ficmontanas-2026, jardin-2026, midbo-2026, popayan-2026)",
+       "synopsis": "catálogo w_R4FH541S52JK (cinemancia-2026, ficci-65, ficdeh-2026, ficmontanas-2026, jardin-2026, midbo-2026, popayan-2026)",
+       "synopsis_en": "catálogo w_R4FH541S52JK (cinemancia-2026, ficci-65, ficdeh-2026, ficmontanas-2026, jardin-2026, midbo-2026, popayan-2026)"
+      }
+     },
+     "lbSlug": "madres-de-nacimiento",
+     "year": 2026,
+     "synopsis": "Del olvido y la oscuridad hay imágenes y sonidos que resurgen para controlar los cuerpos de las mujeres latinoamericanas, quienes desde niñas han sido consideradas madres de nacimiento. Pero en estos archivos emerge una interferencia que proviene del pasado para evocar un mensaje de lucha, memoria y libertad.",
+     "synopsis_lang": "es",
+     "synopsis_en": "Out of oblivion and darkness, images and sounds resurface to control the bodies of Latin American women, regarded since childhood as mothers by birth. But within these archives an interference emerges from the past, carrying a message of struggle, memory and freedom."
     },
     {
      "title": "Todas las manos que solté",
@@ -3360,7 +3931,24 @@
      "duration": "15 min",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Captura%20de%20pantalla%202026-03-23%20202933.png?itok=fJ60ATsd",
      "posterSource": "custom",
-     "work_id": "w_R4FT5JJDASKV"
+     "work_id": "w_R4FT5JJDASKV",
+     "genre": "Documental",
+     "_src": {
+      "heredado": {
+       "genre": "catálogo w_R4FT5JJDASKV (cinemancia-2026, ficci-65, midbo-2026)",
+       "title_en": "catálogo w_R4FT5JJDASKV (cinemancia-2026, ficci-65, midbo-2026)",
+       "lbSlug": "catálogo w_R4FT5JJDASKV (cinemancia-2026, ficci-65, midbo-2026)",
+       "year": "catálogo w_R4FT5JJDASKV (cinemancia-2026, ficci-65, midbo-2026)",
+       "synopsis": "catálogo w_R4FT5JJDASKV (cinemancia-2026, ficci-65, midbo-2026)",
+       "synopsis_en": "catálogo w_R4FT5JJDASKV (cinemancia-2026, ficci-65, midbo-2026)"
+      }
+     },
+     "title_en": "Tigers Can Be Seen In The Rain",
+     "lbSlug": "tigers-can-be-seen-in-the-rain",
+     "year": 2025,
+     "synopsis": "Entre formatos de imagen en movimiento, texturas locales y voces de otro tiempo, Óscar Ruiz Navia piensa la pérdida y el duelo como experiencias de dislocación temporal.",
+     "synopsis_lang": "es",
+     "synopsis_en": "Drifting between moving-image formats and collaging local textures and bygone voices, Oscar Ruiz Navia’s film reflects on loss and mourning as experiences of temporal dislocation."
     }
    ]
   },
@@ -3398,7 +3986,22 @@
      "title": "Trizas",
      "country": "Bolivia/Inglaterra",
      "duration": "15 min",
-     "work_id": "w_R4F1D2Q71DK4"
+     "work_id": "w_R4F1D2Q71DK4",
+     "title_en": "Shards",
+     "_src": {
+      "heredado": {
+       "title_en": "catálogo w_R4F1D2Q71DK4 (cinemancia-2026, ficci-65, midbo-2026)",
+       "lbSlug": "catálogo w_R4F1D2Q71DK4 (cinemancia-2026, ficci-65, midbo-2026)",
+       "year": "catálogo w_R4F1D2Q71DK4 (cinemancia-2026, ficci-65, midbo-2026)",
+       "synopsis": "catálogo w_R4F1D2Q71DK4 (cinemancia-2026, ficci-65, midbo-2026)",
+       "synopsis_en": "catálogo w_R4F1D2Q71DK4 (cinemancia-2026, ficci-65, midbo-2026)"
+      }
+     },
+     "lbSlug": "shards-2026",
+     "year": 2026,
+     "synopsis": "Dos viajes se cruzan de forma anacrónica: el de un médico inglés en Bolivia en los años treinta y el de la cineasta en Londres en 2024. La película aborda los objetos como fragmentos inestables, restos de mundos más amplios, como espejos que solo se dejan entrever momentáneamente. El recorrido pasa por la colección de las Américas del Museo Británico, la colección de joyería y fotografía del V&A y una colección privada de arte latinoamericano en Londres.",
+     "synopsis_lang": "es",
+     "synopsis_en": "Fragments of pottery. Gold, silver, jewellery. Contemporary art. Luciana Decker Orozco visits various museums and collections in London, tracing a homegrown past present on another continent. Each piece are windows that open and close, briefly revealing what they hide, a mystery that she encapsulates in her celluloid and magical editing."
     }
    ]
   },
@@ -3462,7 +4065,20 @@
      "duration": "13 min",
      "posterSource": "custom",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_4_He%CC%81roes%20del%20Silencio_Po%CC%81ster%20-%20Santiago%20Alejandro%20Mu%C3%B1oz%20Marrugo.jpg?itok=NGH1UWzS",
-     "work_id": "w_R4HEVVQPTDC1"
+     "work_id": "w_R4HEVVQPTDC1",
+     "lbSlug": "heroes-del-silencio",
+     "_src": {
+      "heredado": {
+       "lbSlug": "catálogo w_R4HEVVQPTDC1 (ficci-65, ficdeh-2026)",
+       "year": "catálogo w_R4HEVVQPTDC1 (ficci-65, ficdeh-2026)",
+       "synopsis": "catálogo w_R4HEVVQPTDC1 (ficci-65, ficdeh-2026)",
+       "synopsis_en": "catálogo w_R4HEVVQPTDC1 (ficci-65, ficdeh-2026)"
+      }
+     },
+     "year": 2026,
+     "synopsis": "Cortometraje rodado por los niños y niñas de la comunidad indígena de Morotrwa, en la Sierra Nevada de Gonawindua. A través de sus propias fotografías y vídeos, documentan sus vidas y su territorio, eligiendo libremente qué mostrar.",
+     "synopsis_lang": "es",
+     "synopsis_en": "Heroes of the silence is a short film shot by the children of the Morotrwa indigenous community in the Sierra Nevada de Gonawindua. Through their own photographs and videos, they document their lives and their territory, freely choosing what to show."
     },
     {
      "title": "Kuagro",
@@ -3478,7 +4094,22 @@
      "duration": "13 min",
      "posterSource": "custom",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_POSTER_SIN%20CREDITOS%20copia%20-%20Mar%20Aj%C3%A9.jpg?itok=Dhen7YE6",
-     "work_id": "w_R4HEVVDKDN9Y"
+     "work_id": "w_R4HEVVDKDN9Y",
+     "genre": "Experimental",
+     "_src": {
+      "heredado": {
+       "genre": "catálogo w_R4HEVVDKDN9Y (ficci-65, popayan-2026, qaff-2026, siembrafest-2026)",
+       "title_en": "catálogo w_R4HEVVDKDN9Y (ficci-65, popayan-2026, qaff-2026, siembrafest-2026)",
+       "lbSlug": "catálogo w_R4HEVVDKDN9Y (ficci-65, popayan-2026, qaff-2026, siembrafest-2026)",
+       "year": "catálogo w_R4HEVVDKDN9Y (ficci-65, popayan-2026, qaff-2026, siembrafest-2026)",
+       "synopsis": "catálogo w_R4HEVVDKDN9Y (ficci-65, popayan-2026, qaff-2026, siembrafest-2026)"
+      }
+     },
+     "title_en": "The Clay Vase",
+     "lbSlug": "la-tinaja",
+     "year": 2025,
+     "synopsis": "Musicos: Rosalina Cañate “La Paloma”, Emelia Reyes Salgado “La Burgo”, Felipa Tejedor, Brenda Torres, Sofia Obeso, Anita Marimón, Ali Navarro Salas “Ali MCPM”, Joao Salgado.",
+     "synopsis_lang": "es"
     },
     {
      "title": "Piratas de La Boquilla",
@@ -3628,7 +4259,13 @@
    "synopsis_lang": "es",
    "poster": "https://image.tmdb.org/t/p/w500/39jzHk0VK2kdt9lRAb8CqNuGcGc.jpg",
    "posterSource": "tmdb",
-   "work_id": "w_R4HE768025KE"
+   "work_id": "w_R4HE768025KE",
+   "lbSlug": "the-night-is-fading-away",
+   "_src": {
+    "heredado": {
+     "lbSlug": "catálogo w_R4HE768025KE (ficci-65, olhar-2026)"
+    }
+   }
   },
   {
    "title": "El príncipe de Nanawa",
@@ -3652,7 +4289,13 @@
    "synopsis_lang": "es",
    "poster": "https://image.tmdb.org/t/p/w500/usQn5xDRN7eeKmCaQDCSpXD8j8K.jpg",
    "posterSource": "tmdb",
-   "work_id": "w_R4HB86VE5454"
+   "work_id": "w_R4HB86VE5454",
+   "lbSlug": "the-prince-of-nanawa",
+   "_src": {
+    "heredado": {
+     "lbSlug": "catálogo w_R4HB86VE5454 (ficci-65, ficma-2026)"
+    }
+   }
   },
   {
    "title": "Los cruces",
@@ -3721,7 +4364,22 @@
      "duration": "13 min",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Abortion%20Party%20-%20Poster.png?itok=Vh79cJxK",
      "posterSource": "custom",
-     "work_id": "w_R4HE76VVXEXH"
+     "work_id": "w_R4HE76VVXEXH",
+     "genre": "Animación",
+     "_src": {
+      "heredado": {
+       "genre": "catálogo w_R4HE76VVXEXH (ficci-65, midbo-2026)",
+       "lbSlug": "catálogo w_R4HE76VVXEXH (ficci-65, midbo-2026)",
+       "year": "catálogo w_R4HE76VVXEXH (ficci-65, midbo-2026)",
+       "synopsis": "catálogo w_R4HE76VVXEXH (ficci-65, midbo-2026)",
+       "synopsis_en": "catálogo w_R4HE76VVXEXH (ficci-65, midbo-2026)"
+      }
+     },
+     "lbSlug": "abortion-party",
+     "year": 2025,
+     "synopsis": "Después de conseguir reunir el dinero para pagar un aborto tras quedar embarazada de su novio polaco de intercambio, la directora decide celebrarlo con una fiesta. Entre los invitados están su vecino músico de ska de edad avanzada, unos miembros semirretirados de una pandilla, su compañero de piso gay y sucio, y las siempre presentes chinches.",
+     "synopsis_lang": "es",
+     "synopsis_en": "After managing to scrape together money to pay for a pregnancy after her Polish exchange student boyfriend gets her pregnant, the director decides to celebrate with a party. In attendance are her geriatric ska musician neighbor, semi-retired gang affiliates, her dirty gay roomate, and ever present bedbugs."
     },
     {
      "title": "A donde nos lleva la fe de José Gerónimo",
@@ -3735,7 +4393,22 @@
      "duration": "18 min",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Captura%20de%20pantalla%202026-04-01%20a%20la%28s%29%207.42.27%20p.m..jpg?itok=Ygi-1TlW",
      "posterSource": "custom",
-     "work_id": "w_R4HEGBYCA03G"
+     "work_id": "w_R4HEGBYCA03G",
+     "genre": "Documental",
+     "_src": {
+      "heredado": {
+       "genre": "catálogo w_R4HEGBYCA03G (ficci-65, midbo-2026)",
+       "lbSlug": "catálogo w_R4HEGBYCA03G (ficci-65, midbo-2026)",
+       "year": "catálogo w_R4HEGBYCA03G (ficci-65, midbo-2026)",
+       "synopsis": "catálogo w_R4HEGBYCA03G (ficci-65, midbo-2026)",
+       "synopsis_en": "catálogo w_R4HEGBYCA03G (ficci-65, midbo-2026)"
+      }
+     },
+     "lbSlug": "agua-fria-2025",
+     "year": 2025,
+     "synopsis": "En el campamento Ribera del Río, en Talagante, Ángel (9) y Kimberly (11), dos niñxs atravesados por la migración, convierten una furgoneta estacionada en su nave imaginaria para emprender un viaje en busca de su amiga Sofía (9), quien recientemente tuvo que volver a su país natal, Colombia. En el viaje, recorren lugares que habitan en sus recuerdos, exploran su pasado y presente por medio de conversaciones, y se encuentran con otros niños que se suman a la aventura. En este espacio entre la realidad y la fantasía experimentan la construcción de la identidad, la sensación de pertenencia y la amistad en medio del desarraigo.",
+     "synopsis_lang": "es",
+     "synopsis_en": "Ángel and Kimberly, two children affected by migration, turn a parked van into an imaginary vessel to go look for their friend Sofía, who returned to her homeland, Colombia. In this space between reality and fantasy, they build their sense of identity, belonging, and friendship amid uprooting."
     },
     {
      "title": "Fim de Rodovia",
@@ -3885,7 +4558,15 @@
    "synopsis_lang": "es",
    "poster": "https://image.tmdb.org/t/p/w500/i7xnqfBINWSDHPNXhAqpThZJ8Fw.jpg",
    "posterSource": "tmdb",
-   "work_id": "w_R4GR2FGPV8X4"
+   "work_id": "w_R4GR2FGPV8X4",
+   "genre": "Documental",
+   "_src": {
+    "heredado": {
+     "genre": "catálogo w_R4GR2FGPV8X4 (fantasmagoria-2026, ficci-65, mamut-2026)",
+     "lbSlug": "catálogo w_R4GR2FGPV8X4 (fantasmagoria-2026, ficci-65, mamut-2026)"
+    }
+   },
+   "lbSlug": "manual-para-invocar-fantasmas"
   },
   {
    "title": "Isabel",
@@ -4174,7 +4855,24 @@
      "duration": "13 min",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Captura%20de%20pantalla%202026-03-30%20170710.png?itok=dXa68A0J",
      "posterSource": "custom",
-     "work_id": "w_R4FS61XPY9M6"
+     "work_id": "w_R4FS61XPY9M6",
+     "genre": "Drama",
+     "_src": {
+      "heredado": {
+       "genre": "catálogo w_R4FS61XPY9M6 (cinemancia-2026, ficci-65, filcmar-2026)",
+       "title_en": "catálogo w_R4FS61XPY9M6 (cinemancia-2026, ficci-65, filcmar-2026)",
+       "lbSlug": "catálogo w_R4FS61XPY9M6 (cinemancia-2026, ficci-65, filcmar-2026)",
+       "year": "catálogo w_R4FS61XPY9M6 (cinemancia-2026, ficci-65, filcmar-2026)",
+       "synopsis": "catálogo w_R4FS61XPY9M6 (cinemancia-2026, ficci-65, filcmar-2026)",
+       "synopsis_en": "catálogo w_R4FS61XPY9M6 (cinemancia-2026, ficci-65, filcmar-2026)"
+      }
+     },
+     "title_en": "The Hunter",
+     "lbSlug": "the-hunter-2026-1",
+     "year": 2026,
+     "synopsis": "En un paisaje ondulante, la tierra es escrita y reescrita por El Cazador. La relación entre él y el territorio revelan la esencia de una geografía. Su obsesión por el oro lo lleva a una búsqueda incesante de tesoros. El poder está en el significado que otorga a lo que encuentra. En las profundidades de la tierra y de sí mismo, descubre la verdad que le permite perpetuar su búsqueda.",
+     "synopsis_lang": "es",
+     "synopsis_en": "Metal detector in hand, the Hunter roams through forest and city in search of treasure. It is his way of life, his calling: the summons of Lord Gold."
     },
     {
      "title": "Filme Pin",
@@ -4182,7 +4880,22 @@
      "duration": "7 min",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_POSTER-FILME-PIN-2026%20-%20La%20Vulcanizadora.jpg?itok=qrKWWtjf",
      "posterSource": "custom",
-     "work_id": "w_R4EPV0KGHMRN"
+     "work_id": "w_R4EPV0KGHMRN",
+     "genre": "Documental",
+     "_src": {
+      "heredado": {
+       "genre": "catálogo w_R4EPV0KGHMRN (cineautopsia-2026, ficci-65, midbo-2026, popayan-2026)",
+       "lbSlug": "catálogo w_R4EPV0KGHMRN (cineautopsia-2026, ficci-65, midbo-2026, popayan-2026)",
+       "year": "catálogo w_R4EPV0KGHMRN (cineautopsia-2026, ficci-65, midbo-2026, popayan-2026)",
+       "synopsis": "catálogo w_R4EPV0KGHMRN (cineautopsia-2026, ficci-65, midbo-2026, popayan-2026)",
+       "synopsis_en": "catálogo w_R4EPV0KGHMRN (cineautopsia-2026, ficci-65, midbo-2026, popayan-2026)"
+      }
+     },
+     "lbSlug": "filme-pin",
+     "year": 2026,
+     "synopsis": "Entre luz, metal y plata, Filme Pin transforma una colección de pines solidarios en un archivo a otra escala: espectros del exilio y de la lucha internacional contra el régimen fascista y colonial de Portugal.",
+     "synopsis_lang": "es",
+     "synopsis_en": "Between light, metal and silver, a collection of solidarity pins turns into an archive of another scale: spectres of exile and international struggle against Portugal’s fascist and colonial regime."
     },
     {
      "title": "Futuros luminosos",
@@ -4190,7 +4903,24 @@
      "duration": "25 min",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_P%C3%B3ster%20Futuros%20luminosos%20-%20Ismael%20Garcia.jpg?itok=6WCvT13b",
      "posterSource": "custom",
-     "work_id": "w_R4FBMPTV0JG2"
+     "work_id": "w_R4FBMPTV0JG2",
+     "genre": "Ficción",
+     "_src": {
+      "heredado": {
+       "genre": "catálogo w_R4FBMPTV0JG2 (cinemancia-2026, ficci-65, jardin-2026)",
+       "title_en": "catálogo w_R4FBMPTV0JG2 (cinemancia-2026, ficci-65, jardin-2026)",
+       "lbSlug": "catálogo w_R4FBMPTV0JG2 (cinemancia-2026, ficci-65, jardin-2026)",
+       "year": "catálogo w_R4FBMPTV0JG2 (cinemancia-2026, ficci-65, jardin-2026)",
+       "synopsis": "catálogo w_R4FBMPTV0JG2 (cinemancia-2026, ficci-65, jardin-2026)",
+       "synopsis_en": "catálogo w_R4FBMPTV0JG2 (cinemancia-2026, ficci-65, jardin-2026)"
+      }
+     },
+     "title_en": "A Brighter Future",
+     "lbSlug": "a-brighter-future",
+     "year": 2026,
+     "synopsis": "En un lugar extraño y oscuro, un grupo de jóvenes de colores proyecta su futuro.",
+     "synopsis_lang": "es",
+     "synopsis_en": "In a strange, dark place, a colourful group of young people project their future."
     },
     {
      "title": "Lejanía",
@@ -4198,7 +4928,20 @@
      "duration": "17 min",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_PO%CC%81STER%20LEJANIA%20-%20Carolina%20Zarate%20Garcia.png?itok=UPHrcFZ4",
      "posterSource": "custom",
-     "work_id": "w_R4HCND964DS3"
+     "work_id": "w_R4HCND964DS3",
+     "genre": "Documental",
+     "_src": {
+      "heredado": {
+       "genre": "catálogo w_R4HCND964DS3 (ficci-65, jardin-2026)",
+       "lbSlug": "catálogo w_R4HCND964DS3 (ficci-65, jardin-2026)",
+       "year": "catálogo w_R4HCND964DS3 (ficci-65, jardin-2026)",
+       "synopsis": "catálogo w_R4HCND964DS3 (ficci-65, jardin-2026)"
+      }
+     },
+     "lbSlug": "lejania-1",
+     "year": 2026,
+     "synopsis": "Un viajero se dirige hacia Lejanía, una playa en una isla escondida en la inmensidad del océano pacífico, donde se presume, sus visitantes tienen visiones sobrenaturales. En medio de paisajes fragmentados y presencias clandestinas entre las sombras ,la realidad se desdibuja y el tiempo se deshace.",
+     "synopsis_lang": "es"
     },
     {
      "title": "Winter Blumen Garten",
@@ -4230,7 +4973,24 @@
      "duration": "12 min",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_PORTADAS%20CASA%20EN%20EL%20%20aire%202-im%C3%A1genes-0%20-%20Aguacate%20Audiovisual.jpg?itok=b37CurBg",
      "posterSource": "custom",
-     "work_id": "w_R4HDSRY0KBZB"
+     "work_id": "w_R4HDSRY0KBZB",
+     "genre": "Documental",
+     "_src": {
+      "heredado": {
+       "genre": "catálogo w_R4HDSRY0KBZB (ficci-65, ficdeh-2026, midbo-2026)",
+       "title_en": "catálogo w_R4HDSRY0KBZB (ficci-65, ficdeh-2026, midbo-2026)",
+       "lbSlug": "catálogo w_R4HDSRY0KBZB (ficci-65, ficdeh-2026, midbo-2026)",
+       "year": "catálogo w_R4HDSRY0KBZB (ficci-65, ficdeh-2026, midbo-2026)",
+       "synopsis": "catálogo w_R4HDSRY0KBZB (ficci-65, ficdeh-2026, midbo-2026)",
+       "synopsis_en": "catálogo w_R4HDSRY0KBZB (ficci-65, ficdeh-2026, midbo-2026)"
+      }
+     },
+     "title_en": "The House of the Wind",
+     "lbSlug": "the-house-of-the-wind-2026",
+     "year": 2026,
+     "synopsis": "Ana Rosa Jusayu (mi madre), lideresa ancestral de la comunidad Apotnojushi ubicada en cercanias del cerro de la teta en la alta Guajira colombiana, trata de recuperar el tejido y la unión familiar que se vieron alterados por el “desarrollo sostenible” invasivo. En medio de las pocas esperanzas de sobrevivir en lo desolado de su territorio ancestral, la familia comparte su añoranza de permanecer allí, enfrentándose a las dificultades y los cambios económicos que afectan al pueblo wayuu.",
+     "synopsis_lang": "es",
+     "synopsis_en": "Ana Rosa Jusayu (My Mother), an ancestral leader of the Apotnojushi community located near Cerro de la Teta in the upper Guajira region of Colombia, is trying to rebuild the family fabric and unity that was disrupted by invasive “sustainable development.” Amidst the slim hopes of surviving in the desolation of their ancestral territory, the family shares their longing to remain there, facing the hardships and economic changes that affect the Wayuu people."
     },
     {
      "title": "La Raya",
@@ -4238,7 +4998,24 @@
      "duration": "80 min",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Captura%20de%20pantalla%202026-03-29%20235923.png?itok=0Rlq5ukp",
      "posterSource": "custom",
-     "work_id": "w_R4HE76B833SH"
+     "work_id": "w_R4HE76B833SH",
+     "genre": "Drama",
+     "_src": {
+      "heredado": {
+       "genre": "catálogo w_R4HE76B833SH (ficci-65, ficdeh-2026)",
+       "title_en": "catálogo w_R4HE76B833SH (ficci-65, ficdeh-2026)",
+       "lbSlug": "catálogo w_R4HE76B833SH (ficci-65, ficdeh-2026)",
+       "year": "catálogo w_R4HE76B833SH (ficci-65, ficdeh-2026)",
+       "synopsis": "catálogo w_R4HE76B833SH (ficci-65, ficdeh-2026)",
+       "synopsis_en": "catálogo w_R4HE76B833SH (ficci-65, ficdeh-2026)"
+      }
+     },
+     "title_en": "Town Of La Raya",
+     "lbSlug": "town-of-la-raya",
+     "year": 2025,
+     "synopsis": "La llegada de un refrigerador cambia la vida en La Raya, un pueblo abandonado en la sierra sur de Oaxaca. Sotera y su amigo Erick intentan venderlo y hacer negocio. Sin embargo, el refrigerador pronto empieza a revelar cosas misteriosas a la gente que se le acerca.",
+     "synopsis_lang": "es",
+     "synopsis_en": "The arrival of a refrigerator changes life in La Raya, an abandoned village in the southern mountains of Oaxaca. Sotera and her friend Erick try to sell it and make a business. However, the fridge soon begins to reveal mysterious things to the people who approach it."
     }
    ]
   },
@@ -4357,7 +5134,20 @@
      "duration": "13 min",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_4_He%CC%81roes%20del%20Silencio_Po%CC%81ster%20-%20Santiago%20Alejandro%20Mu%C3%B1oz%20Marrugo.jpg?itok=NGH1UWzS",
      "posterSource": "custom",
-     "work_id": "w_R4HEVVQPTDC1"
+     "work_id": "w_R4HEVVQPTDC1",
+     "lbSlug": "heroes-del-silencio",
+     "_src": {
+      "heredado": {
+       "lbSlug": "catálogo w_R4HEVVQPTDC1 (ficci-65, ficdeh-2026)",
+       "year": "catálogo w_R4HEVVQPTDC1 (ficci-65, ficdeh-2026)",
+       "synopsis": "catálogo w_R4HEVVQPTDC1 (ficci-65, ficdeh-2026)",
+       "synopsis_en": "catálogo w_R4HEVVQPTDC1 (ficci-65, ficdeh-2026)"
+      }
+     },
+     "year": 2026,
+     "synopsis": "Cortometraje rodado por los niños y niñas de la comunidad indígena de Morotrwa, en la Sierra Nevada de Gonawindua. A través de sus propias fotografías y vídeos, documentan sus vidas y su territorio, eligiendo libremente qué mostrar.",
+     "synopsis_lang": "es",
+     "synopsis_en": "Heroes of the silence is a short film shot by the children of the Morotrwa indigenous community in the Sierra Nevada de Gonawindua. Through their own photographs and videos, they document their lives and their territory, freely choosing what to show."
     },
     {
      "title": "Kuagro",
@@ -4373,7 +5163,22 @@
      "duration": "13 min",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_POSTER_SIN%20CREDITOS%20copia%20-%20Mar%20Aj%C3%A9.jpg?itok=Dhen7YE6",
      "posterSource": "custom",
-     "work_id": "w_R4HEVVDKDN9Y"
+     "work_id": "w_R4HEVVDKDN9Y",
+     "genre": "Experimental",
+     "_src": {
+      "heredado": {
+       "genre": "catálogo w_R4HEVVDKDN9Y (ficci-65, popayan-2026, qaff-2026, siembrafest-2026)",
+       "title_en": "catálogo w_R4HEVVDKDN9Y (ficci-65, popayan-2026, qaff-2026, siembrafest-2026)",
+       "lbSlug": "catálogo w_R4HEVVDKDN9Y (ficci-65, popayan-2026, qaff-2026, siembrafest-2026)",
+       "year": "catálogo w_R4HEVVDKDN9Y (ficci-65, popayan-2026, qaff-2026, siembrafest-2026)",
+       "synopsis": "catálogo w_R4HEVVDKDN9Y (ficci-65, popayan-2026, qaff-2026, siembrafest-2026)"
+      }
+     },
+     "title_en": "The Clay Vase",
+     "lbSlug": "la-tinaja",
+     "year": 2025,
+     "synopsis": "Musicos: Rosalina Cañate “La Paloma”, Emelia Reyes Salgado “La Burgo”, Felipa Tejedor, Brenda Torres, Sofia Obeso, Anita Marimón, Ali Navarro Salas “Ali MCPM”, Joao Salgado.",
+     "synopsis_lang": "es"
     },
     {
      "title": "Piratas de La Boquilla",
@@ -4447,12 +5252,21 @@
    "film_list": [],
    "synopsis": "Tras los muros que protegen la aldea se extiende una selva mágica y misteriosa, habitada por criaturas consideradas peligrosas. Durante años, los habitantes se han formado como guerreros desde jóvenes.",
    "director": "",
-   "year": null,
+   "year": 2026,
    "synopsis_en": "Beyond the walls that protect the village stretches a magical and mysterious jungle, inhabited by creatures considered dangerous. For years, the villagers have trained as warriors from a young age.",
    "synopsis_lang": "es",
    "posterSource": "tmdb",
    "poster": "https://image.tmdb.org/t/p/w500/mVX41bOzeT1hQHjK66MFTgMTuWi.jpg",
-   "work_id": "w_R4G1R6GM6QWF"
+   "work_id": "w_R4G1R6GM6QWF",
+   "genre": "Animación",
+   "_src": {
+    "heredado": {
+     "genre": "catálogo w_R4G1R6GM6QWF (fantasmagoria-2026, ficcali-2026, ficci-65, ficmontanas-2026, filcmar-2026)",
+     "lbSlug": "catálogo w_R4G1R6GM6QWF (fantasmagoria-2026, ficcali-2026, ficci-65, ficmontanas-2026, filcmar-2026)",
+     "year": "catálogo w_R4G1R6GM6QWF (fantasmagoria-2026, ficcali-2026, ficci-65, ficmontanas-2026, filcmar-2026)"
+    }
+   },
+   "lbSlug": "mu-ki-ra"
   },
   {
    "title": "Frío metal",
@@ -4545,7 +5359,13 @@
      "duration": "27 min",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_afiche%20belleza%20letal%20-%20Samuel%20Moreno.jpg?itok=ZrOw0nvZ",
      "posterSource": "custom",
-     "work_id": "w_R4HD24FCSZJ0"
+     "work_id": "w_R4HD24FCSZJ0",
+     "year": 2026,
+     "_src": {
+      "heredado": {
+       "year": "catálogo w_R4HD24FCSZJ0 (ficci-65, mamut-2026)"
+      }
+     }
     },
     {
      "title": "Consagración",
@@ -4561,7 +5381,22 @@
      "duration": "15 min",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_MFTA_Final_Untextured_Low-Res%20-%20MEDIOCIELO%20Cine%20%281%29.jpg?itok=MXASl-yt",
      "posterSource": "custom",
-     "work_id": "w_R4F45MWYW0TY"
+     "work_id": "w_R4F45MWYW0TY",
+     "title_en": "My Friend, The Architect",
+     "_src": {
+      "heredado": {
+       "title_en": "catálogo w_R4F45MWYW0TY (cinemancia-2026, ficci-65)",
+       "lbSlug": "catálogo w_R4F45MWYW0TY (cinemancia-2026, ficci-65)",
+       "year": "catálogo w_R4F45MWYW0TY (cinemancia-2026, ficci-65)",
+       "synopsis": "catálogo w_R4F45MWYW0TY (cinemancia-2026, ficci-65)",
+       "synopsis_en": "catálogo w_R4F45MWYW0TY (cinemancia-2026, ficci-65)"
+      }
+     },
+     "lbSlug": "my-friend-the-architect",
+     "year": 2026,
+     "synopsis": "Una mujer inventa un relato para evocar una amistad perdida. Junto a sus amigos imagina una fábula: la historia de dos pájaros que un día se hicieron humanos, un Ornitólogo y su amigo, El Arquitecto.",
+     "synopsis_lang": "es",
+     "synopsis_en": "A woman invents a story to evoke a lost friendship. Along with her friends, they imagine a fable: the story of two birds that one day became human — an Ornithologist and his friend, The Architect."
     },
     {
      "title": "Sirena mecánica",
@@ -4569,7 +5404,20 @@
      "duration": "9 min",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Captura%20de%20pantalla%202026-03-23%20205043.png?itok=BR7oyf-o",
      "posterSource": "custom",
-     "work_id": "w_R4HD241JZEE7"
+     "work_id": "w_R4HD241JZEE7",
+     "genre": "Experimental",
+     "_src": {
+      "heredado": {
+       "genre": "catálogo w_R4HD241JZEE7 (ficci-65, jardin-2026, popayan-2026)",
+       "lbSlug": "catálogo w_R4HD241JZEE7 (ficci-65, jardin-2026, popayan-2026)",
+       "year": "catálogo w_R4HD241JZEE7 (ficci-65, jardin-2026, popayan-2026)",
+       "synopsis": "catálogo w_R4HD241JZEE7 (ficci-65, jardin-2026, popayan-2026)"
+      }
+     },
+     "lbSlug": "sirena-mecanica",
+     "year": 2026,
+     "synopsis": "Sirena Mecánica es un documental fantástico que desde de los estudios transfeministas reinterpreta el modo en cómo se representa el cuerpo (material y social) femenino dentro del mito de la sirena. Este procedimiento subversivo narra a través de los recuerdos de la primera infancia y los procesos de sanación en la relación intima de la pareja codirectora de la pieza. En el desencuentro con la realidad, SM transita entre paisajes materialmente confusos (fílmicos y plásticos) TRANSitando en la ambigüedad de la protección, amenaza, belleza y violencia.",
+     "synopsis_lang": "es"
     },
     {
      "title": "Suite intercontinental",
@@ -4577,7 +5425,20 @@
      "duration": "24 min",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Capture_decran_2025-05-28_a_15.57.26%20-%20Marianna%20Manili.jpg?itok=alqasZXz",
      "posterSource": "custom",
-     "work_id": "w_R4HDE4TF8RNM"
+     "work_id": "w_R4HDE4TF8RNM",
+     "lbSlug": "suite-intercontinental",
+     "_src": {
+      "heredado": {
+       "lbSlug": "catálogo w_R4HDE4TF8RNM (ficci-65, popayan-2026)",
+       "year": "catálogo w_R4HDE4TF8RNM (ficci-65, popayan-2026)",
+       "synopsis": "catálogo w_R4HDE4TF8RNM (ficci-65, popayan-2026)",
+       "synopsis_en": "catálogo w_R4HDE4TF8RNM (ficci-65, popayan-2026)"
+      }
+     },
+     "year": 2026,
+     "synopsis": "Desde el piso 30 de una torre de cristal, la ciudad de Cali, presa de la tensión, bulle bajo la mirada de Margot. Cegada por el sol tropical, Margot deambula por la ciudad, ajena a todo. Lejos de los demás y de su entorno, sus fantasías se funden con la realidad. Su mirada se cruza con la de un hombre en la calle, de torso desnudo y ojos penetrantes. Cada día, Margot sigue al joven, acercándose lentamente al objeto de su deseo.",
+     "synopsis_lang": "es",
+     "synopsis_en": "From the 30th floor of a glass tower, the city of Cali, gripped by tension, bubbles beneath Margot’s gaze. Blinded by the tropical sun, Margot wanders through the city, oblivious to it all. Far from others and her surroundings, her fantasies merge with reality. Her gaze meets that of a man on the street, his chest bare and his eyes piercing. Every day, Margot follows the young man, slowly drawing closer to the object of her desire."
     }
    ]
   },
@@ -4638,7 +5499,22 @@
      "title": "Trizas",
      "country": "Bolivia/Inglaterra",
      "duration": "15 min",
-     "work_id": "w_R4F1D2Q71DK4"
+     "work_id": "w_R4F1D2Q71DK4",
+     "title_en": "Shards",
+     "_src": {
+      "heredado": {
+       "title_en": "catálogo w_R4F1D2Q71DK4 (cinemancia-2026, ficci-65, midbo-2026)",
+       "lbSlug": "catálogo w_R4F1D2Q71DK4 (cinemancia-2026, ficci-65, midbo-2026)",
+       "year": "catálogo w_R4F1D2Q71DK4 (cinemancia-2026, ficci-65, midbo-2026)",
+       "synopsis": "catálogo w_R4F1D2Q71DK4 (cinemancia-2026, ficci-65, midbo-2026)",
+       "synopsis_en": "catálogo w_R4F1D2Q71DK4 (cinemancia-2026, ficci-65, midbo-2026)"
+      }
+     },
+     "lbSlug": "shards-2026",
+     "year": 2026,
+     "synopsis": "Dos viajes se cruzan de forma anacrónica: el de un médico inglés en Bolivia en los años treinta y el de la cineasta en Londres en 2024. La película aborda los objetos como fragmentos inestables, restos de mundos más amplios, como espejos que solo se dejan entrever momentáneamente. El recorrido pasa por la colección de las Américas del Museo Británico, la colección de joyería y fotografía del V&A y una colección privada de arte latinoamericano en Londres.",
+     "synopsis_lang": "es",
+     "synopsis_en": "Fragments of pottery. Gold, silver, jewellery. Contemporary art. Luciana Decker Orozco visits various museums and collections in London, tracing a homegrown past present on another continent. Each piece are windows that open and close, briefly revealing what they hide, a mystery that she encapsulates in her celluloid and magical editing."
     }
    ]
   },
@@ -4842,7 +5718,15 @@
    "synopsis_lang": "es",
    "poster": "https://image.tmdb.org/t/p/w185/7aR0r9KVSfbzmCOGXGfulpmKOBj.jpg",
    "posterSource": "tmdb",
-   "work_id": "w_R4HAG78W53PV"
+   "work_id": "w_R4HAG78W53PV",
+   "genre": "Drama",
+   "_src": {
+    "heredado": {
+     "genre": "catálogo w_R4HAG78W53PV (ficci-65, ficdeh-2026)",
+     "lbSlug": "catálogo w_R4HAG78W53PV (ficci-65, ficdeh-2026)"
+    }
+   },
+   "lbSlug": "gugus-world"
   },
   {
    "title": "Dao",
@@ -4998,7 +5882,20 @@
      "duration": "13 min",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_4_He%CC%81roes%20del%20Silencio_Po%CC%81ster%20-%20Santiago%20Alejandro%20Mu%C3%B1oz%20Marrugo.jpg?itok=NGH1UWzS",
      "posterSource": "custom",
-     "work_id": "w_R4HEVVQPTDC1"
+     "work_id": "w_R4HEVVQPTDC1",
+     "lbSlug": "heroes-del-silencio",
+     "_src": {
+      "heredado": {
+       "lbSlug": "catálogo w_R4HEVVQPTDC1 (ficci-65, ficdeh-2026)",
+       "year": "catálogo w_R4HEVVQPTDC1 (ficci-65, ficdeh-2026)",
+       "synopsis": "catálogo w_R4HEVVQPTDC1 (ficci-65, ficdeh-2026)",
+       "synopsis_en": "catálogo w_R4HEVVQPTDC1 (ficci-65, ficdeh-2026)"
+      }
+     },
+     "year": 2026,
+     "synopsis": "Cortometraje rodado por los niños y niñas de la comunidad indígena de Morotrwa, en la Sierra Nevada de Gonawindua. A través de sus propias fotografías y vídeos, documentan sus vidas y su territorio, eligiendo libremente qué mostrar.",
+     "synopsis_lang": "es",
+     "synopsis_en": "Heroes of the silence is a short film shot by the children of the Morotrwa indigenous community in the Sierra Nevada de Gonawindua. Through their own photographs and videos, they document their lives and their territory, freely choosing what to show."
     },
     {
      "title": "Kuagro",
@@ -5014,7 +5911,22 @@
      "duration": "13 min",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_POSTER_SIN%20CREDITOS%20copia%20-%20Mar%20Aj%C3%A9.jpg?itok=Dhen7YE6",
      "posterSource": "custom",
-     "work_id": "w_R4HEVVDKDN9Y"
+     "work_id": "w_R4HEVVDKDN9Y",
+     "genre": "Experimental",
+     "_src": {
+      "heredado": {
+       "genre": "catálogo w_R4HEVVDKDN9Y (ficci-65, popayan-2026, qaff-2026, siembrafest-2026)",
+       "title_en": "catálogo w_R4HEVVDKDN9Y (ficci-65, popayan-2026, qaff-2026, siembrafest-2026)",
+       "lbSlug": "catálogo w_R4HEVVDKDN9Y (ficci-65, popayan-2026, qaff-2026, siembrafest-2026)",
+       "year": "catálogo w_R4HEVVDKDN9Y (ficci-65, popayan-2026, qaff-2026, siembrafest-2026)",
+       "synopsis": "catálogo w_R4HEVVDKDN9Y (ficci-65, popayan-2026, qaff-2026, siembrafest-2026)"
+      }
+     },
+     "title_en": "The Clay Vase",
+     "lbSlug": "la-tinaja",
+     "year": 2025,
+     "synopsis": "Musicos: Rosalina Cañate “La Paloma”, Emelia Reyes Salgado “La Burgo”, Felipa Tejedor, Brenda Torres, Sofia Obeso, Anita Marimón, Ali Navarro Salas “Ali MCPM”, Joao Salgado.",
+     "synopsis_lang": "es"
     },
     {
      "title": "Piratas de La Boquilla",
