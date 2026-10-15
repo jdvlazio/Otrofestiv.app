@@ -296,7 +296,8 @@ def publicar(fid, forzar=False):
                 for _o in [_f] + (_f.get('film_list') or []):
                     for _t, _c in _qt:
                         if _o.get('title') == _t:
-                            _o.pop(_c, None)
+                            for _x in lib.RETIRABLES.get(_c, (_c,)):
+                                _o.pop(_x, None)
         _movidos = {t for t, _a, _b in _mov}
         _quietas = lambda fs: [f for f in fs if f.get('title') not in _movidos]
         ca, cb = _cobertura(_quietas(viejo.get('films') or [])), _cobertura(_quietas(out['films']))

@@ -188,6 +188,12 @@ def tmdb_ficha_autoprueba():
     except TMDBRed:
         pass
     return mal
+# Lo que `quitar.json` puede retirar aunque no se conserve de lo publicado, con
+# los campos que se van con él (un afiche se lleva su procedencia). Lo leen
+# ensamblar (lo saca del build) y publicar (no lo cuenta como pérdida).
+RETIRABLES = {'poster': ('poster', 'posterSource')}
+
+
 def quitados(fid):
     """{(título, campo)} declarados en festivals/staging/<fid>-quitar.json: lo
     que se retira A PROPÓSITO de lo publicado y por eso no se conserva. Lo leen

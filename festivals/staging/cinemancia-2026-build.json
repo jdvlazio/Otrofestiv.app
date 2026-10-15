@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "PDF oficial de programación + hoja de programas y charlas enviada por el festival",
-  "capturado": "2026-10-14",
+  "capturado": "2026-10-15",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "name": "Cinemancia",
@@ -782,8 +782,6 @@
      "duration": "15 min",
      "title_en": "Shards",
      "synopsis_en": "Fragments of pottery. Gold, silver, jewellery. Contemporary art. Luciana Decker Orozco visits various museums and collections in London, tracing a homegrown past present on another continent. Each piece are windows that open and close, briefly revealing what they hide, a mystery that she encapsulates in her celluloid and magical editing.",
-     "poster": "https://image.tmdb.org/t/p/w500/6561nDr66xGl3MFVSMsVqGEKtn.jpg",
-     "posterSource": "tmdb",
      "lbSlug": "shards-2026",
      "tmdb_id": 1604094,
      "synopsis": "Dos viajes se cruzan de forma anacrónica: el de un médico inglés en Bolivia en los años treinta y el de la cineasta en Londres en 2024. La película aborda los objetos como fragmentos inestables, restos de mundos más amplios, como espejos que solo se dejan entrever momentáneamente. El recorrido pasa por la colección de las Américas del Museo Británico, la colección de joyería y fotografía del V&A y una colección privada de arte latinoamericano en Londres.",
@@ -2213,8 +2211,6 @@
      "duration": "15 min",
      "title_en": "Shards",
      "synopsis_en": "Fragments of pottery. Gold, silver, jewellery. Contemporary art. Luciana Decker Orozco visits various museums and collections in London, tracing a homegrown past present on another continent. Each piece are windows that open and close, briefly revealing what they hide, a mystery that she encapsulates in her celluloid and magical editing.",
-     "poster": "https://image.tmdb.org/t/p/w500/6561nDr66xGl3MFVSMsVqGEKtn.jpg",
-     "posterSource": "tmdb",
      "lbSlug": "shards-2026",
      "tmdb_id": 1604094,
      "synopsis": "Dos viajes se cruzan de forma anacrónica: el de un médico inglés en Bolivia en los años treinta y el de la cineasta en Londres en 2024. La película aborda los objetos como fragmentos inestables, restos de mundos más amplios, como espejos que solo se dejan entrever momentáneamente. El recorrido pasa por la colección de las Américas del Museo Británico, la colección de joyería y fotografía del V&A y una colección privada de arte latinoamericano en Londres.",
@@ -4334,7 +4330,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-14T14:50:23",
+  "fecha": "2026-10-15T11:14:31",
   "plan_sha": "1bfed46a7c769cf0",
   "paso": 3,
   "cmd": "python3 pipeline/ensamblar.py cinemancia-2026"

@@ -227,8 +227,16 @@ def _conservar_publicado(fid, films):
     for _t, _c in quitar:
         if _t not in _tit:
             sys.exit(f'✗ {fid}-quitar.json: «{_t}» no está en el build')
-        if _c not in CONSERVABLES:
+        if _c not in CONSERVABLES and _c not in lib.RETIRABLES:
             sys.exit(f'✗ {fid}-quitar.json: «{_c}» no es un campo conservable')
+    # UN AFICHE QUE NO LO ES SE RETIRA DEL BUILD (15 oct 2026): `poster` no se
+    # conserva de lo publicado —llega fresco de su fuente—, así que declararlo
+    # acá no bastaba: Trizas volvía a salir con el fotograma de TMDB en cada
+    # montaje. Lo declarado se saca del build, con su procedencia
+    for f in films:
+        for o in [f] + (f.get('film_list') or []):
+            for _c in lib.RETIRABLES.get(next((c for t, c in quitar if t == o.get('title') and c in lib.RETIRABLES), ''), ()):
+                o.pop(_c, None)
     p = f'{REPO}/festivals/{fid}.json'
     if not os.path.exists(p):
         return
