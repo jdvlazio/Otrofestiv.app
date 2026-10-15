@@ -23,6 +23,7 @@ QUÉ ES DE CADA QUIEN:
 import json, os, re, sys, collections
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import caja  # noqa: E402
 import lib
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -609,6 +610,18 @@ def ensamblar(fid, escribir=True):
                     _o[_k] = mayuscula_inicial(_o[_k])
         # programa o actividad: su texto es DESCRIPCIÓN, no sinopsis (lib)
         lib.separar_descripcion(_f)
+    # PROGRAMAS Y SECCIONES EN TÍTULO (regla de Juan, 15 oct 2026): las
+    # palabras son del festival, la caja es de la app (pipeline/caja.py). Antes
+    # de conservar lo publicado y de los títulos anteriores, que comparan por
+    # nombre con lo que ya está en producción
+    if fid not in caja.OTRO_IDIOMA:
+        for _f in films:
+            if caja.es_programa(_f):
+                _f['title'] = caja.titulo(_f['title'])
+            for _o in [_f] + (_f.get('film_list') or []):
+                if _o.get('section'):
+                    _o['section'] = caja.seccion(_o['section'])
+        out['sections'] = {caja.seccion(k): v for k, v in out['sections'].items()}
     _conservar_publicado(fid, films)
     _duraciones_corregidas(fid, films)
     _titulos_anteriores(fid, films)

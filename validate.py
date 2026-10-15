@@ -5726,7 +5726,7 @@ try:
     # 2025 son CUATRO cosas con el mismo nombre —una ponencia y tres
     # proyecciones de 4, 5 y 6 obras— en un festival archivado. Hallazgo real
     # del día que nació, no falso positivo: se nombra para que no crezca.
-    _DEUDA = {('cinemancia-2025', '¿Qué es la ficción?')}
+    _DEUDA = {('cinemancia-2025', '¿Qué es la Ficción?')}  # en Título desde el 15 oct ([caja-titulo])
     _IDENT = ('director', 'country', 'year', 'genre', 'poster', 'synopsis')
     _malos, _vistos = [], 0
     for _f in sorted(_gp.glob('festivals/*.json')):
@@ -6775,6 +6775,38 @@ try:
         warn(check, 'bajó el hueco — correr python3 pipeline/catalogo.py --medir: ' + ', '.join(_baja[:8]))
 except Exception:
     pass
+
+# ── [caja-titulo] programas y secciones en Título (regla de Juan, 15 oct 2026) ──
+# «Muestra de Cortos», «Colombia Viva»: las palabras son del festival y la caja
+# de la app (pipeline/caja.py, el único dueño). Los títulos de obra no se miran.
+# Se coló «Selección oficial de cortometrajes latinoamericanos» porque
+# [caja-sostenida] solo veía mayúsculas sostenidas y solo en secciones.
+check = 'caja-titulo'
+try:
+    import caja as _caja
+    _ct = []
+    for _p in sorted(_gc.glob('festivals/*.json')):
+        _fid = _osc.path.basename(_p)[:-5]
+        try:
+            _d = _jc.load(open(_p, encoding='utf-8'))
+        except Exception:
+            continue
+        _ct += [f'{_fid}: {_k} «{_a}» → «{_b}»' for _k, _a, _b in _caja.fuera_de_caja(_d, _fid)]
+    # autoprueba: el cebo en minúscula se ve, el bueno no, y una obra no se toca
+    _cebo = {'films': [{'title': 'Muestra de cortos', 'is_cortos': True, 'section': '🎬 Colombia viva',
+                        'film_list': [{'title': 'Otra'}]},
+                       {'title': 'Esperando abril + La otra', 'is_cortos': True,
+                        'film_list': [{'title': 'Esperando abril'}, {'title': 'La otra'}]}]}
+    _sano = {'films': [{'title': 'Muestra de Cortos', 'is_cortos': True, 'section': '🎬 Colombia Viva',
+                        'film_list': [{'title': 'Otra'}]}]}
+    if len(_caja.fuera_de_caja(_cebo, 'zzz')) != 2 or _caja.fuera_de_caja(_sano, 'zzz'):
+        fail(check, 'el guardián no distingue el cebo (pipeline/caja.py)')
+    elif _ct:
+        fail(check, f'{len(_ct)} nombre(s) fuera de Título — python3 pipeline/caja-titulo.py --escribir: ' + ' · '.join(_ct[:5]))
+    else:
+        ok(check, 'programas y secciones en Título (obras intactas)')
+except Exception as _e:
+    fail(check, f'no pudo correr: {_e}')
 
 # ── [css-huerfana] toda clase del <style> la emite alguien ───────────────────────
 # Medido el 5 sep 2026: 825 clases en index.html, 45 que nada emitía — 14 nunca

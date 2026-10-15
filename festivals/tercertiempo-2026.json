@@ -200,7 +200,7 @@
    "work_id": "w_R4NEB32QWB1A"
   },
   {
-   "title": "Más allá del Fútbol",
+   "title": "Más Allá del Fútbol",
    "is_cortos": true,
    "poster": "/assets/tercertiempo/sesion-mas-alla-del-futbol.jpg",
    "duration": "50 min",
@@ -281,7 +281,7 @@
    "day": "2026-07-15",
    "time": "13:00",
    "venue": "Cinemateca Sala 2",
-   "section": "🏅 Más allá del Fútbol",
+   "section": "🏅 Más Allá del Fútbol",
    "_src": {
     "url": "https://cinematecadebogota.gov.co/node/peliculas/2565?sede=11",
     "date": "2026-07-10"
@@ -290,7 +290,10 @@
    "flags": "🇪🇸🇨🇴🇨🇱",
    "country": "España, Colombia, Chile",
    "day_order": 1,
-   "posterSource": "custom"
+   "posterSource": "custom",
+   "titulos_anteriores": [
+    "Más allá del Fútbol"
+   ]
   },
   {
    "title": "Barrio Caliente",
@@ -709,7 +712,7 @@
    "posterSource": "custom"
   },
   {
-   "title": "Brasil: Juego, memoria y pasión",
+   "title": "Brasil: Juego, Memoria y Pasión",
    "is_cortos": true,
    "poster": "/assets/tercertiempo/sesion-brasil.jpg",
    "duration": "108 min",
@@ -765,7 +768,7 @@
    "day": "2026-07-18",
    "time": "19:00",
    "venue": "Cinemateca Sala 2",
-   "section": "🇧🇷 Brasil: Juego, memoria y pasión",
+   "section": "🇧🇷 Brasil: Juego, Memoria y Pasión",
    "_src": {
     "url": "https://cinematecadebogota.gov.co/node/peliculas/2574?sede=11",
     "date": "2026-07-10"
@@ -774,10 +777,13 @@
    "flags": "🇧🇷",
    "country": "Brasil",
    "day_order": 4,
-   "posterSource": "custom"
+   "posterSource": "custom",
+   "titulos_anteriores": [
+    "Brasil: Juego, memoria y pasión"
+   ]
   },
   {
-   "title": "Programa de cortos: Raíces del juego",
+   "title": "Programa de Cortos: Raíces del Juego",
    "is_cortos": true,
    "poster": "/assets/tercertiempo/sesion-raices-locales.jpg",
    "duration": "105 min",
@@ -839,7 +845,10 @@
    "flags": "🇪🇸🇨🇴🇲🇽",
    "country": "España, Colombia, México",
    "day_order": 2,
-   "posterSource": "custom"
+   "posterSource": "custom",
+   "titulos_anteriores": [
+    "Programa de cortos: Raíces del juego"
+   ]
   },
   {
    "title": "Juegan como niñas",

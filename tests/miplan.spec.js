@@ -2336,7 +2336,7 @@ test('T168 — el bloque de una obra corta dice su título en una línea', async
   };
 
   // 1 · el caso que se cortaba: 43 min, título de dos líneas, faltaban 26px
-  const corto = await medir({ tit: 'Fuera de competencia programa 2' }, '2026-09-10');
+  const corto = await medir({ tit: 'Fuera de Competencia Programa 2' }, '2026-09-10');
   expect(corto, 'Cinemancia tiene la función corta del censo').not.toBeNull();
   expect(corto.unaLinea, 'el bloque pasa a una línea').toBe(true);
   expect(corto.excede, `el título entra en el bloque de ${corto.h}px`).toBeLessThanOrEqual(0.5);
@@ -3087,7 +3087,7 @@ test('T197b — Ir a las dos no se ofrece si la nueva chocaría con otra cosa de
     const D = await import('/src/domain/schedule.js');
     const F = await import('/src/domain/film.js');
     const f = t => FILMS.find(x => x.day === '2026-09-25' && x.title.startsWith(t));
-    const charla = f('Presentación del libro'), peli = f('Soñé su nombre'), otra = f('Competencia nacional');
+    const charla = f('Presentación del libro'), peli = f('Soñé su nombre'), otra = f('Competencia Nacional');
     // Soñé su nombre 19:45 choca con Competencia 19:15 → no hay «dos» que valgan
     state.set('savedAgenda', { schedule: [{ ...charla, _title: charla.title }, { ...otra, _title: otra.title }] }); saveSavedAgenda();
     openConflictSheet(peli.title, peli, savedAgenda.schedule[0]);
