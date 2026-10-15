@@ -1390,6 +1390,18 @@ tiene huecos. CineAutopsia fue la excepción.
 guardián ignora los festivales legacy con rótulos en vez de fechas ISO (Leviza).
 
 
+### `[caja-titulo]` — programas y secciones en Título
+
+Regla de Juan (15 oct 2026): «Muestra de Cortos», «Selección Oficial de
+Cortometrajes Latinoamericanos», «Colombia Viva». Las palabras son del festival
+y la caja de la app: mayúscula en las palabras con peso y conectores en
+minúscula, como pide la RAE para nombres de eventos y colecciones. Los títulos
+de obra —también las uniones «Obra + Obra»— van tal cual, en sentence case.
+Un dueño, `pipeline/caja.py`: lo aplica `ensamblar.py` en cada montaje,
+`pipeline/caja-titulo.py --escribir` sobre lo ya publicado (con
+`titulos_anteriores` para no perder lo guardado) y `validate.py` lo vigila.
+Festivales en otro idioma (Olhar, Tribeca, TIFF) quedan fuera.
+
 ### `[inicio-obra]` — la obra empieza dentro de su función
 
 `film_start` es la hora en que empieza la OBRA cuando la función abre antes
