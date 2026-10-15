@@ -1717,6 +1717,10 @@ function _avisosBand(f, opts){
   const _onl=_con('online');
   if(_onl.length){const _o=_onl[0], _tx=t('aviso_online',{plataforma:_o.stream_platform||''});
     rows.push([t('badge_online'), (/^https:\/\//.test(_o.stream_url||'')?`<a href="${_o.stream_url}" target="_blank" rel="noopener">${_tx}</a>`:_tx)+_cual(_onl)]);}
+  // INICIO: la función abre antes y la obra empieza después (Parapeto, BHFF).
+  // Solo informa: la card y el plan siguen con la hora de la función.
+  const _ini=_con('film_start');
+  if(_ini.length) rows.push([t('badge_inicio'), t('aviso_inicio',{hora:_ini[0].film_start})+_cual(_ini)]);
   // Precio: la ficha dice lo MISMO que la card — ticketBadgeTarget es el dueño
   // único de qué se marca (la minoría). Si la card de una función dice CON
   // BOLETA y su ficha dijera GRATIS, se contradirían.

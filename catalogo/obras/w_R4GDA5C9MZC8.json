@@ -13,7 +13,7 @@
   "es": "Quién no se ha visto en las altas horas de la noche, cayendo en un agujero de conejo virtual que nos atrapa por horas en vez de hacer nuestras labores?… Que tal que ese tema se convirtiera en realidad? Un relato de terror digital que estremecerá a todos los trabajadores independientes."
  },
  "afiche": {
-  "archivo": "/assets/fantasmagoria-2026/ubicua.jpg",
+  "archivo": "/assets/bhff-2026/ubicua.jpg",
   "veredicto": "oficial"
  },
  "xref": {
@@ -22,11 +22,16 @@
  },
  "versiones": [
   {
+   "etiqueta": "12 min",
+   "duracion_min": 12
+  },
+  {
    "etiqueta": "13 min",
    "duracion_min": 13
   }
  ],
  "presentaciones": [
+  "bhff-2026",
   "fantasmagoria-2026"
  ]
 }

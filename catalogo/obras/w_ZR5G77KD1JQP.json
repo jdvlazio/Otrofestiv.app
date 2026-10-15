@@ -1,0 +1,43 @@
+{
+ "id": "w_ZR5G77KD1JQP",
+ "titulo_original": "Paseo Nocturno",
+ "anio": 2026,
+ "paises": [
+  "E",
+  "S"
+ ],
+ "directores": [
+  "Víctor Martín León"
+ ],
+ "aliases": [
+  {
+   "titulo": "Night Walk",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "Laura no puede volver a dormir después de tener una pesadilla y saca a su perro de paseo por el parque.",
+  "en": "Laura cannot sleep after a nightmare, so she goes for a walk with her dog."
+ },
+ "generos": [
+  "Terror"
+ ],
+ "afiche": {
+  "archivo": "/assets/bhff-2026/paseo-nocturno.jpg",
+  "veredicto": "oficial"
+ },
+ "xref": {
+  "tmdb": 1744980,
+  "letterboxd": "night-walk-1"
+ },
+ "versiones": [
+  {
+   "etiqueta": "9 min",
+   "duracion_min": 9
+  }
+ ],
+ "presentaciones": [
+  "bhff-2026"
+ ]
+}

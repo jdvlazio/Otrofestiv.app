@@ -92,6 +92,12 @@
    "grupo": "acceso",
    "nota": "Dónde se transmite una función en línea («Twitch»): completa el aviso «Se transmite en línea por …»."
   },
+  "film_start": {
+   "tipo": "string",
+   "formato": "^\\d{2}:\\d{2}$",
+   "grupo": "horario",
+   "nota": "Hora en que EMPIEZA LA OBRA cuando la función abre antes (BHFF: Parapeto abre 19:00, la obra 19:30). Solo informa: el aviso «Inicio» de la ficha; la card y el plan siguen con `time`. Por función."
+  },
   "title_en": {
    "tipo": "string"
   },

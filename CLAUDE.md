@@ -107,6 +107,7 @@ deliberada existe la etiqueta `frontera-ok`.
 | `mamut2026` | Mamut | Medellín | 5–11 OCT | Recién terminado |
 | `filcmar2026` | FILCMAR | Marinilla | 9–13 OCT | Recién terminado |
 | `ficcali2026` | FICCALI | Cali | 16–25 OCT | **Próximo / activo** |
+| `bhff2026` | Bogotá Horror | Bogotá | 22–31 OCT | **Próximo / activo** |
 | `fantasmagoria2026` | Fantasmagoría | Medellín | 14–25 OCT | **Próximo / activo** |
 | `midbo2026` | MIDBO | Bogotá | 27 OCT–4 NOV | **Próximo / activo** |
 | `mubibogota2026` | MUBI Fest | Bogotá | 24–25 OCT | **Próximo / activo** |

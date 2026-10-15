@@ -9,11 +9,19 @@
  "directores": [
   "Edwin Daniel Díaz"
  ],
+ "sinopsis": {
+  "es": "Helena, una joven atormentada por inquietantes visiones, se encuentra en una antigua habitación infantil donde es inundada por recuerdos aterradores. A través de las visiones, es testigo del sufrimiento de un niño llamado Gabriel, quien fue maltratado y asesinado por su padre violento y borracho. Elena descubre un diario que parece contar la trágica historia de Gabriel."
+ },
  "generos": [
   "Ficción"
  ],
+ "afiche": {
+  "archivo": "/assets/bhff-2026/gabriel.jpg",
+  "veredicto": "oficial"
+ },
  "xref": {},
  "presentaciones": [
+  "bhff-2026",
   "ficmontanas-2026"
  ]
 }

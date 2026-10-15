@@ -1390,6 +1390,14 @@ tiene huecos. CineAutopsia fue la excepción.
 guardián ignora los festivales legacy con rótulos en vez de fechas ISO (Leviza).
 
 
+### `[inicio-obra]` — la obra empieza dentro de su función
+
+`film_start` es la hora en que empieza la OBRA cuando la función abre antes
+(Parapeto, BHFF 2026: la web dice 19:00 y la pieza de IG 19:30). Solo informa:
+la ficha muestra el aviso «Inicio»; la card y el plan siguen con `time`
+(decisión de Juan, 15 oct 2026). `scripts/validate-festivals.js` bloquea un
+`film_start` que no caiga después de `time` y antes de que termine la función.
+
 ### `[genero-unico]` — una obra, un género, y de los comunes
 
 **Regla (Juan, 24 ago 2026):** cada obra declara **un solo género**: el
