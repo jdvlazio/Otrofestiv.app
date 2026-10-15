@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "midbo.co — ficha de cada obra (bloque «Funciones») + API pelicula/seccion",
-  "capturado": "2026-10-13",
+  "capturado": "2026-10-15",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_secciones": "Las categorías madre de la taxonomía `seccion` de midbo.co, tal cual; «Encuentro Pensar lo Real» es el nombre del menú del seminario; «Proyecciones» (nuestra) para la única obra sin sección.",
@@ -431,7 +431,8 @@
      "poster": "/assets/midbo-2026/ubuntu-la-metrica-de-los-afectos.jpg",
      "posterSource": "tmdb",
      "lbSlug": "ubuntu-la-metrica-de-los-afectos",
-     "tmdb_id": 1794426
+     "tmdb_id": 1794426,
+     "genre": "Documental"
     }
    ]
   },
@@ -443,6 +444,7 @@
    "country": "Colombia",
    "flags": "🇨🇴",
    "duration": "33 min",
+   "genre": "Documental",
    "day": "2026-10-28",
    "time": "16:00",
    "day_order": 1,
@@ -460,6 +462,7 @@
    "year": 2025,
    "lbSlug": "si-la-escombrera-hablara",
    "tmdb_id": 1738942,
+   "synopsis_en": "Medellín’s Comuna 13 is home to the largest urban mass grave in Latin America. La Escombrera has been identified by families of victims of enforced disappearance as the site where many of the territory’s 503 disappeared persons are buried. Mujeres Caminando por la Verdad leads the forensic search that, after two decades of denialism, led to the discovery of human remains in 2024. This historic event sent a clear message across Colombia: the earth has begun to speak.",
    "_programa_original": "Programa 2: Comunidades que siguen en búsqueda"
   },
   {
@@ -471,6 +474,7 @@
    "country": "Colombia",
    "flags": "🇨🇴",
    "duration": "92 min",
+   "genre": "Documental",
    "day": "2026-10-28",
    "time": "19:00",
    "day_order": 1,
@@ -488,7 +492,9 @@
    "premiere": "Inauguración",
    "is_free": true,
    "lbSlug": "our-home-was-buried-in-a-land-we-could-never",
-   "tmdb_id": 1663181
+   "tmdb_id": 1663181,
+   "synopsis_en": "Home is gone; the house was paradise, and also hell. Though the war tried to destroy everything in its path, the family tries to return. Between longing and nightmare they build a new territory, a refuge where they find their friends and their community again. There they make it back to the big house, the amusement park of childhood, now inhabited by fantastical beings and spectres, where they try to conjure an embrace.",
+   "title_en": "Our Home Was Buried in a Land We Could Never Find"
   },
   {
    "title": "Lolita en Honda",
@@ -516,7 +522,8 @@
    },
    "is_free": true,
    "lbSlug": "lolita-en-honda",
-   "tmdb_id": 1665546
+   "tmdb_id": 1665546,
+   "synopsis_en": "Lolita en Honda is an intimate journey into family memory, in which Daniel Torres explores his grandmother's childhood to unravel the marks of abandonment and internalized violence that shaped her character."
   },
   {
    "title": "L'Evangile de la Révolution",
@@ -559,6 +566,7 @@
    "country": "Colombia",
    "flags": "🇨🇴",
    "duration": "79 min",
+   "genre": "Documental",
    "day": "2026-10-29",
    "time": "11:00",
    "day_order": 2,
@@ -575,7 +583,8 @@
    },
    "is_free": true,
    "lbSlug": "el-valor-de-la-palabra",
-   "tmdb_id": 1665557
+   "tmdb_id": 1665557,
+   "synopsis_en": "The long career of Colombian filmmaker Marta Rodríguez demonstrates a commitment to documenting the history of repression and struggle of indigenous and marginalized peoples."
   },
   {
    "title": "Hijo de tigre y mula",
@@ -790,7 +799,7 @@
    "section": "🎞️ Competencia Nacional de Cortometraje Documental",
    "country": "Colombia, Francia, Austria",
    "flags": "🇨🇴🇫🇷🇦🇹",
-   "duration": "99 min",
+   "duration": "76 min",
    "day": "2026-10-29",
    "time": "17:00",
    "day_order": 2,
@@ -801,7 +810,7 @@
     "url": "https://midbo.co/peliculas/montana-luminosa/",
     "date": "2026-10-10"
    },
-   "premiere": "Estreno en Bogotá",
+   "premiere": "Estreno mundial",
    "is_free": true,
    "is_cortos": true,
    "film_list": [
@@ -845,7 +854,9 @@
      "poster": "/assets/midbo-2026/madres-de-nacimiento.jpg",
      "posterSource": "tmdb",
      "lbSlug": "madres-de-nacimiento",
-     "tmdb_id": 1668902
+     "tmdb_id": 1668902,
+     "synopsis_en": "Out of oblivion and darkness, images and sounds resurface to control the bodies of Latin American women, regarded since childhood as mothers by birth. But within these archives an interference emerges from the past, carrying a message of struggle, memory and freedom.",
+     "genre": "Documental"
     },
     {
      "title": "Invierno Flores Jardín",
@@ -1272,7 +1283,7 @@
     "date": "2026-10-10"
    },
    "ticket_url": "https://tuboleta.com/es/eventos/materias-insumisas",
-   "premiere": "Estreno en Colombia",
+   "premiere": "Estreno internacional",
    "is_cortos": true,
    "film_list": [
     {
@@ -1327,8 +1338,6 @@
      "duration": "14 min",
      "synopsis": "Dos viajes se entrelazan anacrónicamente: el de un médico inglés en Bolivia durante la década los 30 y el de la cineasta en Londres en 2024. La película aborda la problemática del arte a través de fragmentos, entendidos como esquirlas de mundos más amplios: ventanas o espejos que se abren y se cierran, revelando brevemente lo que hay más allá. A través del cine, los objetos se abordan como rastros de trayectorias del pasado y del presente, proponiendo maneras sensibles y afectivas de relacionarse con ellos. La exploración se desarrolla desde la colección de arte boliviano del Museo Británico, pasando por la colección de joyas del Museo V&A, hasta una colección privada de arte latinoamericano, todo ello contextualizado en Londres.",
      "synopsis_lang": "es",
-     "poster": "/assets/midbo-2026/trizas.jpg",
-     "posterSource": "tmdb",
      "lbSlug": "shards-2026",
      "tmdb_id": 1604094,
      "synopsis_en": "Fragments of pottery. Gold, silver, jewellery. Contemporary art. Luciana Decker Orozco visits various museums and collections in London, tracing a homegrown past present on another continent. Each piece are windows that open and close, briefly revealing what they hide, a mystery that she encapsulates in her celluloid and magical editing.",
@@ -1536,7 +1545,7 @@
     "date": "2026-10-10"
    },
    "ticket_url": "https://tuboleta.com/es/eventos/desatender-el-mandato",
-   "premiere": "Estreno en Bogotá",
+   "premiere": "Estreno internacional",
    "is_cortos": true,
    "film_list": [
     {
@@ -1585,7 +1594,8 @@
      "posterSource": "tmdb",
      "lbSlug": "pacifico-2026-1",
      "tmdb_id": 1640216,
-     "synopsis_en": "In the waters of Colombia’s Pacific coast, life is celebrated through a particular kind of song: the Arrullos. This music honors life in a territory marked by violence and armed conflict, where enslaved people once found refuge at the end of colonial rule. In these same waters, each year, thousands of whales arrive from Antarctica to give birth. Pacífico weaves a polyphonic narrative around birth in an aquatic space where body, territory, and memory are deeply intertwined."
+     "synopsis_en": "In the waters of Colombia’s Pacific coast, life is celebrated through a particular kind of song: the Arrullos. This music honors life in a territory marked by violence and armed conflict, where enslaved people once found refuge at the end of colonial rule. In these same waters, each year, thousands of whales arrive from Antarctica to give birth. Pacífico weaves a polyphonic narrative around birth in an aquatic space where body, territory, and memory are deeply intertwined.",
+     "genre": "Documental"
     }
    ]
   },
@@ -1654,7 +1664,7 @@
    "section": "🎞️ Competencia Nacional de Cortometraje Documental",
    "country": "Colombia, Cuba",
    "flags": "🇨🇴🇨🇺",
-   "duration": "64 min",
+   "duration": "91 min",
    "day": "2026-11-01",
    "time": "14:30",
    "day_order": 5,
@@ -1666,7 +1676,7 @@
     "url": "https://midbo.co/peliculas/apotnojushi-la-casa-del-viento/",
     "date": "2026-10-10"
    },
-   "premiere": "Estreno en Bogotá",
+   "premiere": "Estreno mundial",
    "is_cortos": true,
    "film_list": [
     {
@@ -1683,7 +1693,8 @@
      "lbSlug": "the-house-of-the-wind-2026",
      "tmdb_id": 1668905,
      "synopsis_en": "In this expressive and community-centered work, Wayuú director Marbel Vanegas Jusayu documents the social, spiritual, and environmental impacts of the installation of a wind farm in Apotnojushi, a historically marginalized community that remains committed to its sovereignty. Women leaders such as Ana Rosa Jusayu, the director’s mother, work to strengthen the social fabric, activate historical memory, and assert their right to determine their future. Through the voices and living portraits of community members, the piece reflects in its vignettes the community’s deep connection to its ancestral territory.",
-     "title_en": "The House of the Wind"
+     "title_en": "The House of the Wind",
+     "genre": "Documental"
     },
     {
      "title": "Un río de aguas profundas y luminosas",
@@ -1978,6 +1989,7 @@
    "year": 2026,
    "lbSlug": "bojaya-la-verdad-desde-adentro",
    "tmdb_id": 1738325,
+   "synopsis_en": "Three leaders from Bojayá travel throughout the municipality carrying a \"truth chest\", gathering questions and demands from the community to confront those responsible for the armed conflict in their territory. After their journey, they share the answers they have found with the community, working together to construct a truth from within.",
    "_programa_original": "Programa 1: Reparación simbólica y búsquedas por justicia restaurativa"
   },
   {
@@ -2102,6 +2114,7 @@
    "country": "Colombia",
    "flags": "🇨🇴",
    "duration": "90 min",
+   "genre": "Documental",
    "day": "2026-11-01",
    "time": "19:00",
    "day_order": 5,
@@ -2374,7 +2387,7 @@
     "url": "https://midbo.co/peliculas/geografia-espectral/",
     "date": "2026-10-10"
    },
-   "premiere": "Estreno en Colombia",
+   "premiere": "Estreno mundial",
    "is_cortos": true,
    "film_list": [
     {
@@ -2433,7 +2446,9 @@
      "poster": "/assets/midbo-2026/madres-de-nacimiento.jpg",
      "posterSource": "tmdb",
      "lbSlug": "madres-de-nacimiento",
-     "tmdb_id": 1668902
+     "tmdb_id": 1668902,
+     "synopsis_en": "Out of oblivion and darkness, images and sounds resurface to control the bodies of Latin American women, regarded since childhood as mothers by birth. But within these archives an interference emerges from the past, carrying a message of struggle, memory and freedom.",
+     "genre": "Documental"
     },
     {
      "title": "Invierno Flores Jardín",
@@ -2660,7 +2675,8 @@
      "lbSlug": "the-house-of-the-wind-2026",
      "tmdb_id": 1668905,
      "synopsis_en": "In this expressive and community-centered work, Wayuú director Marbel Vanegas Jusayu documents the social, spiritual, and environmental impacts of the installation of a wind farm in Apotnojushi, a historically marginalized community that remains committed to its sovereignty. Women leaders such as Ana Rosa Jusayu, the director’s mother, work to strengthen the social fabric, activate historical memory, and assert their right to determine their future. Through the voices and living portraits of community members, the piece reflects in its vignettes the community’s deep connection to its ancestral territory.",
-     "title_en": "The House of the Wind"
+     "title_en": "The House of the Wind",
+     "genre": "Documental"
     },
     {
      "title": "El salto",
@@ -2727,7 +2743,7 @@
     "url": "https://midbo.co/peliculas/boyuna/",
     "date": "2026-10-10"
    },
-   "premiere": "Estreno en Latinoamérica",
+   "premiere": "Estreno internacional",
    "is_cortos": true,
    "film_list": [
     {
@@ -3025,6 +3041,7 @@
    "country": "Colombia",
    "flags": "🇨🇴",
    "duration": "33 min",
+   "genre": "Documental",
    "day": "2026-11-03",
    "time": "16:30",
    "day_order": 7,
@@ -3043,6 +3060,7 @@
    "year": 2025,
    "lbSlug": "si-la-escombrera-hablara",
    "tmdb_id": 1738942,
+   "synopsis_en": "Medellín’s Comuna 13 is home to the largest urban mass grave in Latin America. La Escombrera has been identified by families of victims of enforced disappearance as the site where many of the territory’s 503 disappeared persons are buried. Mujeres Caminando por la Verdad leads the forensic search that, after two decades of denialism, led to the discovery of human remains in 2024. This historic event sent a clear message across Colombia: the earth has begun to speak.",
    "_programa_original": "Programa 2: Comunidades que siguen en búsqueda"
   },
   {
@@ -3054,6 +3072,7 @@
    "country": "Colombia",
    "flags": "🇨🇴",
    "duration": "92 min",
+   "genre": "Documental",
    "day": "2026-11-03",
    "time": "17:30",
    "day_order": 7,
@@ -3071,7 +3090,9 @@
    "premiere": "Estreno en Bogotá",
    "is_free": true,
    "lbSlug": "our-home-was-buried-in-a-land-we-could-never",
-   "tmdb_id": 1663181
+   "tmdb_id": 1663181,
+   "synopsis_en": "Home is gone; the house was paradise, and also hell. Though the war tried to destroy everything in its path, the family tries to return. Between longing and nightmare they build a new territory, a refuge where they find their friends and their community again. There they make it back to the big house, the amusement park of childhood, now inhabited by fantastical beings and spectres, where they try to conjure an embrace.",
+   "title_en": "Our Home Was Buried in a Land We Could Never Find"
   },
   {
    "title": "Reexistir: entre lo político y lo íntimo",
@@ -3526,6 +3547,7 @@
    "country": "Colombia",
    "flags": "🇨🇴",
    "duration": "79 min",
+   "genre": "Documental",
    "day": "2026-11-04",
    "time": "14:30",
    "day_order": 8,
@@ -3542,7 +3564,8 @@
     "date": "2026-10-10"
    },
    "lbSlug": "el-valor-de-la-palabra",
-   "tmdb_id": 1665557
+   "tmdb_id": 1665557,
+   "synopsis_en": "The long career of Colombian filmmaker Marta Rodríguez demonstrates a commitment to documenting the history of repression and struggle of indigenous and marginalized peoples."
   },
   {
    "title": "Bojayá: la verdad desde adentro",
@@ -3569,6 +3592,7 @@
    "year": 2026,
    "lbSlug": "bojaya-la-verdad-desde-adentro",
    "tmdb_id": 1738325,
+   "synopsis_en": "Three leaders from Bojayá travel throughout the municipality carrying a \"truth chest\", gathering questions and demands from the community to confront those responsible for the armed conflict in their territory. After their journey, they share the answers they have found with the community, working together to construct a truth from within.",
    "_programa_original": "Programa 1: Reparación simbólica y búsquedas por justicia restaurativa"
   },
   {
@@ -3625,7 +3649,8 @@
     "date": "2026-10-10"
    },
    "lbSlug": "lolita-en-honda",
-   "tmdb_id": 1665546
+   "tmdb_id": 1665546,
+   "synopsis_en": "Lolita en Honda is an intimate journey into family memory, in which Daniel Torres explores his grandmother's childhood to unravel the marks of abandonment and internalized violence that shaped her character."
   },
   {
    "title": "Programa 2: Esta tierra canta premoniciones",
@@ -4005,12 +4030,11 @@
   }
  ],
  "_avisos_duracion": [
-  "programa «Programa 2: Geografías en resistencia» (2026-11-01 14:30): sus obras suman 93 min (5 de 5 con duración) y la función dura 64",
   "programa «Programa 7: Reactivar los archivos para el presente» (2026-11-04 14:00): sus obras suman 212 min (3 de 3 con duración) y la función dura 97"
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-13T20:38:13",
+  "fecha": "2026-10-15T13:09:00",
   "plan_sha": "3bda549d3825e850",
   "paso": 6,
   "cmd": "python3 pipeline/ensamblar.py midbo-2026"

@@ -19,10 +19,6 @@
   "es": "Dos viajes se cruzan de forma anacrónica: el de un médico inglés en Bolivia en los años treinta y el de la cineasta en Londres en 2024. La película aborda los objetos como fragmentos inestables, restos de mundos más amplios, como espejos que solo se dejan entrever momentáneamente. El recorrido pasa por la colección de las Américas del Museo Británico, la colección de joyería y fotografía del V&A y una colección privada de arte latinoamericano en Londres.",
   "en": "Fragments of pottery. Gold, silver, jewellery. Contemporary art. Luciana Decker Orozco visits various museums and collections in London, tracing a homegrown past present on another continent. Each piece are windows that open and close, briefly revealing what they hide, a mystery that she encapsulates in her celluloid and magical editing."
  },
- "afiche": {
-  "archivo": "https://image.tmdb.org/t/p/w500/6561nDr66xGl3MFVSMsVqGEKtn.jpg",
-  "veredicto": "fotograma"
- },
  "xref": {
   "tmdb": 1604094,
   "letterboxd": "shards-2026"
@@ -41,5 +37,9 @@
   "cinemancia-2026",
   "ficci-65",
   "midbo-2026"
- ]
+ ],
+ "afiche": {
+  "archivo": "https://image.tmdb.org/t/p/w500/6561nDr66xGl3MFVSMsVqGEKtn.jpg",
+  "veredicto": "fotograma"
+ }
 }
