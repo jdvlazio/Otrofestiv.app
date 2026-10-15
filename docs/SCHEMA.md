@@ -331,7 +331,7 @@ está pasando de verdad — no lo que alguien recordaba al escribirlo.
 | `is_cortos` | boolean | — | 31 fest | exige `film_list` Programa curado: exige film_list no vacío. |
 | `film_list` | array | — | 30 fest |  |
 | `is_programa` | boolean | — | 3 fest |  |
-| `is_recurring` | boolean | — | 4 fest |  |
+| `is_recurring` | boolean | — | 5 fest |  |
 | `is_awards_screening` | boolean | — | 1 fest |  |
 | `info` | boolean | — | 9 fest | Drop-in sin hora fija: NO entra al plan ni a conflictos. |
 | `unscheduled` | boolean | — | 1 fest | En catálogo sin jornada. Única exención de day/time/venue. |

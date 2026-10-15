@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "ficpa.co — Programación oficial 2026 (WP programacion2026) + Selección Oficial",
-  "capturado": "2026-10-14",
+  "capturado": "2026-10-15",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_secciones": "Las de la Selección Oficial, tal cual (Ecos del Mundo y Latidos del Cine Colombiano son las dos mitades de «Sol de los Pastos»); Academia e Industria son los dos menús del sitio; «Programación alterna» es el nombre que el sitio da a las funciones fuera de las salas principales.",
@@ -125,7 +125,7 @@
    "archetype": "Competencia",
    "order": 5
   },
-  "🗺️ Programación alterna": {
+  "🗺️ Programación Alterna": {
    "en": "Alternative Program",
    "archetype": "Muestra / País",
    "order": 6
@@ -474,7 +474,7 @@
    "description_lang": "es"
   },
   {
-   "title": "Cortos universitarios",
+   "title": "Cortos Universitarios",
    "type": "film",
    "section": "🎨 Cámaras de Barniz",
    "duration": "120 min",
@@ -499,9 +499,10 @@
      "synopsis": "José Mesías Ortega ha convertido la música en una voz de fortaleza y esperanza. Este documental recorre su historia, los desafíos que ha enfrentado debido a su discapacidad visual y el legado humano que ha construido a través de sus canciones. Un relato de resiliencia, dignidad y amor por la vida que invita a reflexionar sobre la verdadera capacidad de superar las adversidades.",
      "synopsis_lang": "es",
      "poster": "/assets/ficpa-2026/cantar-de-noche-larga.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "cantar-de-noche-larga",
-     "tmdb_id": 1796546
+     "tmdb_id": 1796546,
+     "year": 2025
     },
     {
      "title": "Matas, marchitas vivas",
@@ -510,7 +511,7 @@
      "synopsis": "Una historia emotiva sobre una casa en el campo, un relato íntimo. Los silencios, las ausencias y una voz que deja entrever el peso invisible de quienes ya no están.",
      "synopsis_lang": "es",
      "poster": "/assets/ficpa-2026/matas-marchitas-vivas.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "matas-marchitas-vivas",
      "tmdb_id": 1796547,
      "year": 2025
@@ -522,9 +523,10 @@
      "synopsis": "En medio del territorio colombiano un grupo de amigos en la flor de su juventud celebran anualmente su amistad en el cerro Vellones, donde las nubes se tocan con las manos y los sueños se vuelven realidad. Este suceso marca un antes y un después en su historia con una realidad social impregnada de violencia silenciosa y esa cálida ternura de amistad, mostrando que tan frágil una ilusión puede romperse de manera inesperada.",
      "synopsis_lang": "es",
      "poster": "/assets/ficpa-2026/muerta-la-ilusion.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "muerta-la-ilusion",
-     "tmdb_id": 1796527
+     "tmdb_id": 1796527,
+     "year": 2025
     },
     {
      "title": "Contaminado",
@@ -533,9 +535,10 @@
      "synopsis": "Basado en la estética del cine en los años 50s y 60s con inspiración en Alfred Hitchcock, este cortometraje cuenta la historia de una mujer que sufre de misofobia, cuando su realidad se desmorona y descubre que la verdadera contaminación no está en su casa, sino en su mente.",
      "synopsis_lang": "es",
      "poster": "/assets/ficpa-2026/contaminado.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "contaminado",
-     "tmdb_id": 1796529
+     "tmdb_id": 1796529,
+     "year": 2025
     },
     {
      "title": "Recuerdos",
@@ -544,11 +547,14 @@
      "synopsis": "CHARLOTTE lleva años grabando videos para CRISTIAN, su mejor amigo de infancia. Comparte con él sus miedos, pérdidas, amores, crisis y sueños, mientras él permanece detenido en el tiempo con apenas nueve años. Un coming of age de ciencia ficción sobre crecer, recordar y aprender a vivir con aquello que nunca pudimos dejar atrás.",
      "synopsis_lang": "es",
      "poster": "/assets/ficpa-2026/recuerdos.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "recuerdos-2025",
      "tmdb_id": 1796544,
      "year": 2025
     }
+   ],
+   "titulos_anteriores": [
+    "Cortos universitarios"
    ]
   },
   {
@@ -588,9 +594,10 @@
      "synopsis": "Paguay es un abuelo sabedor indígena del pueblo de los Pastos, quien desde su palabra sabia y de experiencia enseña a través de su historia de vida, a su nieta Luna la importancia del “Tudnum, tierra sagrada” desde los saberes ancestrales, culturales y milenarios entorno a las huacas prehispánicas encontradas en el territorio, el relato trasporta a Luna a un viaje al pasado donde su abuelo joven desde la ley natural es perseguido por un destello de luz de minacures y los seres que acompañan y protegen la huaca. Paguay en su caminar tras la búsqueda con un amigo se enfrenta a diferentes situaciones como el mal aire, la mala hora, las energías negativas que impiden encontrarla, sin embargo, un tres de mayo el día que arden las huacas encuentran este tesoro ancestral y mágico, desde ese día Paguay se dedicó a buscar y encontrar las guacas en la comunidad.",
      "synopsis_lang": "es",
      "poster": "/assets/ficpa-2026/tudnum-tierra-sagrada.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "tudnum-tierra-sagrada",
-     "tmdb_id": 1796531
+     "tmdb_id": 1796531,
+     "year": 2025
     },
     {
      "title": "En su Sombra Fértil",
@@ -689,7 +696,7 @@
    "description_lang": "es"
   },
   {
-   "title": "Cortos internacionales",
+   "title": "Cortos Internacionales",
    "type": "film",
    "section": "🌍 Ecos del Mundo",
    "country": "Venezuela, España, Etiopía /Mekelle/ Tigray/ Wukro",
@@ -717,7 +724,7 @@
      "synopsis": "En el corazón de Yaracuy, la danta transita una delgada línea entre lo sagrado y lo invisible. Cautivo utiliza la docu-ficción para contrastar la visión mística de este animal con la cruda realidad de su declive. Mediante una puesta en escena que combina la interpretación actoral con el rigor del documental de naturaleza, el cortometraje indaga en las causas de su desplazamiento y la erosión de los mitos que alguna vez la protegieron. Una reflexión urgente sobre el patrimonio natural venezolano y la supervivencia en tiempos de antropoceno.",
      "synopsis_lang": "es",
      "poster": "/assets/ficpa-2026/cautivo.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "cautivo-2025",
      "tmdb_id": 1796543,
      "year": 2025
@@ -738,6 +745,9 @@
      "genre": "Documental",
      "year": 2026
     }
+   ],
+   "titulos_anteriores": [
+    "Cortos internacionales"
    ]
   },
   {
@@ -745,6 +755,7 @@
    "type": "film",
    "section": "💓 Latidos del Cine Colombiano",
    "director": "Alberto Moncayo",
+   "year": 2025,
    "country": "Francia, Colombia",
    "flags": "🇫🇷🇨🇴",
    "duration": "52 min",
@@ -757,7 +768,7 @@
    "synopsis": "Milena, joven investigadora colombiana, quiere entender la controversia sobre el cambio climático. Desde la cordillera de los Andes, baja hacia la sede de la COP clima de Belém, al estuario del rio Amazonas. En el camino, encuentra varias pistas de respuesta a sus preguntas y al llegar se entera del tratamiento cientifico-politico de la crisis climática. La complejidad de las negociaciones y las diferencias de vistas al problema llevan a una nueva etapa del proceso y del viaje.",
    "synopsis_lang": "es",
    "poster": "/assets/ficpa-2026/corrientes-del-amazonas.jpg",
-   "posterSource": "oficial",
+   "posterSource": "tmdb",
    "_src": {
     "url": "https://www.ficpa.co/programacion2026/",
     "date": "2026-10-09"
@@ -844,9 +855,10 @@
      "synopsis": "Relatos del Camino es un cortometraje documental animado que reconstruye la memoria de Alberto, un hombre que creció en el campo colombiano en medio de la violencia, el trabajo forzado y el desplazamiento. A través de conversaciones con su hijo Daniel, sus recuerdos cobran vida mediante dibujos y animación, dando forma a un relato íntimo sobre la infancia, la migración y la resistencia. La película entrelaza pasado y presente para explorar cómo las historias familiares se convierten en memoria colectiva de un país marcado por el conflicto.",
      "synopsis_lang": "es",
      "poster": "/assets/ficpa-2026/relatos-del-camino.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "relatos-del-camino",
-     "tmdb_id": 1796541
+     "tmdb_id": 1796541,
+     "year": 2025
     }
    ]
   },
@@ -924,6 +936,7 @@
    "type": "film",
    "section": "💓 Latidos del Cine Colombiano",
    "director": "Jorge Enrique Rojas",
+   "year": 2025,
    "country": "Colombia",
    "flags": "🇨🇴",
    "duration": "63 min",
@@ -936,7 +949,7 @@
    "synopsis": "Grabado durante dos años con un teléfono, El Cielo al Revés cuenta la historia familiar de Johana Tenorio: una mamá que lucha por mantener a salvo a sus hijos mientras reconstruye su vida en el olvidado barrio Sucre del Centro de Cali. Rodado en el corazón geográfico de la ciudad reconocida como ‘sucursal del cielo’, este documental es el relato de una porción de su cielo menos visible, oculto casi siempre detrás del miedo.",
    "synopsis_lang": "es",
    "poster": "/assets/ficpa-2026/el-cielo-al-reves.jpg",
-   "posterSource": "oficial",
+   "posterSource": "tmdb",
    "_src": {
     "url": "https://www.ficpa.co/programacion2026/",
     "date": "2026-10-09",
@@ -950,16 +963,17 @@
    "title": "Taller Central \"Dirección de actores para el cine de Terror\"",
    "type": "event",
    "section": "🎓 Academia",
-   "duration": "240 min",
+   "duration": "150 min",
    "day": "2026-10-15",
-   "time": "14:00",
+   "time": "14:30",
    "day_order": 2,
    "venue": "Casa de la Cultura - Pasto",
    "event_kind": "taller",
    "has_qa": false,
    "_src": {
     "url": "https://www.ficpa.co/programacion2026/",
-    "date": "2026-10-09"
+    "date": "2026-10-09",
+    "hora": "https://www.instagram.com/p/Def342cAKLA/"
    },
    "is_free": true,
    "description": "A cargo de Carlos Ortiz (Bogotá).",
@@ -1074,7 +1088,7 @@
    "synopsis": "La muerte de un bebé en una cesárea lleva a la ginecóloga Ana a buscar respuestas. Su vínculo con Nala, la madre inmigrante, destapa la dura explotación laboral en Cartagena, enfrentando a Ana a un dilema ético que transformará su vida para siempre.",
    "synopsis_lang": "es",
    "poster": "/assets/ficpa-2026/el-perdon.jpg",
-   "posterSource": "oficial",
+   "posterSource": "tmdb",
    "_src": {
     "url": "https://www.ficpa.co/programacion2026/",
     "date": "2026-10-09",
@@ -1085,7 +1099,7 @@
    "tmdb_id": 1796542
   },
   {
-   "title": "Cortos experimentales internacionales y colombianos",
+   "title": "Cortos Experimentales Internacionales y Colombianos",
    "type": "film",
    "section": "🌍 Ecos del Mundo",
    "country": "Grecia, Colombia/Cuba, Colombia",
@@ -1134,6 +1148,7 @@
      "posterSource": "tmdb",
      "lbSlug": "chaika-2025",
      "tmdb_id": 1689999,
+     "genre": "Ciencia Ficción",
      "year": 2025
     },
     {
@@ -1148,10 +1163,13 @@
      "poster": "/assets/cineautopsia/atmosphaira.jpg",
      "posterSource": "oficial"
     }
+   ],
+   "titulos_anteriores": [
+    "Cortos experimentales internacionales y colombianos"
    ]
   },
   {
-   "title": "Cortos universitarios",
+   "title": "Cortos Universitarios",
    "type": "film",
    "section": "🎨 Cámaras de Barniz",
    "duration": "38 min",
@@ -1176,9 +1194,10 @@
      "synopsis": "José Mesías Ortega ha convertido la música en una voz de fortaleza y esperanza. Este documental recorre su historia, los desafíos que ha enfrentado debido a su discapacidad visual y el legado humano que ha construido a través de sus canciones. Un relato de resiliencia, dignidad y amor por la vida que invita a reflexionar sobre la verdadera capacidad de superar las adversidades.",
      "synopsis_lang": "es",
      "poster": "/assets/ficpa-2026/cantar-de-noche-larga.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "cantar-de-noche-larga",
-     "tmdb_id": 1796546
+     "tmdb_id": 1796546,
+     "year": 2025
     },
     {
      "title": "Matas, marchitas vivas",
@@ -1187,7 +1206,7 @@
      "synopsis": "Una historia emotiva sobre una casa en el campo, un relato íntimo. Los silencios, las ausencias y una voz que deja entrever el peso invisible de quienes ya no están.",
      "synopsis_lang": "es",
      "poster": "/assets/ficpa-2026/matas-marchitas-vivas.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "matas-marchitas-vivas",
      "tmdb_id": 1796547,
      "year": 2025
@@ -1199,9 +1218,10 @@
      "synopsis": "En medio del territorio colombiano un grupo de amigos en la flor de su juventud celebran anualmente su amistad en el cerro Vellones, donde las nubes se tocan con las manos y los sueños se vuelven realidad. Este suceso marca un antes y un después en su historia con una realidad social impregnada de violencia silenciosa y esa cálida ternura de amistad, mostrando que tan frágil una ilusión puede romperse de manera inesperada.",
      "synopsis_lang": "es",
      "poster": "/assets/ficpa-2026/muerta-la-ilusion.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "muerta-la-ilusion",
-     "tmdb_id": 1796527
+     "tmdb_id": 1796527,
+     "year": 2025
     },
     {
      "title": "Contaminado",
@@ -1210,9 +1230,10 @@
      "synopsis": "Basado en la estética del cine en los años 50s y 60s con inspiración en Alfred Hitchcock, este cortometraje cuenta la historia de una mujer que sufre de misofobia, cuando su realidad se desmorona y descubre que la verdadera contaminación no está en su casa, sino en su mente.",
      "synopsis_lang": "es",
      "poster": "/assets/ficpa-2026/contaminado.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "contaminado",
-     "tmdb_id": 1796529
+     "tmdb_id": 1796529,
+     "year": 2025
     },
     {
      "title": "Recuerdos",
@@ -1221,11 +1242,14 @@
      "synopsis": "CHARLOTTE lleva años grabando videos para CRISTIAN, su mejor amigo de infancia. Comparte con él sus miedos, pérdidas, amores, crisis y sueños, mientras él permanece detenido en el tiempo con apenas nueve años. Un coming of age de ciencia ficción sobre crecer, recordar y aprender a vivir con aquello que nunca pudimos dejar atrás.",
      "synopsis_lang": "es",
      "poster": "/assets/ficpa-2026/recuerdos.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "recuerdos-2025",
      "tmdb_id": 1796544,
      "year": 2025
     }
+   ],
+   "titulos_anteriores": [
+    "Cortos universitarios"
    ]
   },
   {
@@ -1295,7 +1319,7 @@
    "synopsis": "Manuel no se resigna a quedarse en la vereda con Silvio y Etelvina, sus padres septuagenarios. Todos sus hermanos han salido de la región, como la mayoría de los jóvenes, seducidos por las luces del mundo. Sin embargo, al conocer a Ezequiel, un viejo buscador de tesoros, que, al parecer, ha encontrado algo grande, le hacen confrontar su ambición, el amor, sus valores y los anhelos profundos de la vida.",
    "synopsis_lang": "es",
    "poster": "/assets/ficpa-2026/el-huaquero.jpg",
-   "posterSource": "oficial",
+   "posterSource": "tmdb",
    "_src": {
     "url": "https://www.ficpa.co/programacion2026/",
     "date": "2026-10-09"
@@ -1305,9 +1329,9 @@
    "tmdb_id": 1796534
   },
   {
-   "title": "Cortos invitados de México",
+   "title": "Cortos Invitados de México",
    "type": "film",
-   "section": "🗺️ Programación alterna",
+   "section": "🗺️ Programación Alterna",
    "country": "Mexico",
    "flags": "🇲🇽",
    "duration": "90 min",
@@ -1371,6 +1395,9 @@
      "duration": "18 min",
      "flags": "🇲🇽"
     }
+   ],
+   "titulos_anteriores": [
+    "Cortos invitados de México"
    ]
   },
   {
@@ -1536,9 +1563,10 @@
      "synopsis": "Expone la violencia que enfrentan las mujeres en un país marcado por la impunidad. El documental revela historias de activistas que alzan su voz frente al silencio institucional, el dolor, la memoria y la resistencia.",
      "synopsis_lang": "es",
      "poster": "/assets/ficpa-2026/la-pandemia-del-feminicidio.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "la-pandemia-del-feminicidio",
-     "tmdb_id": 1796536
+     "tmdb_id": 1796536,
+     "year": 2025
     },
     {
      "title": "Hijas de Eva",
@@ -1550,7 +1578,7 @@
    ]
   },
   {
-   "title": "Trabajo, economías y futuro",
+   "title": "Trabajo, Economías y Futuro",
    "type": "film",
    "section": "🌀 Churo Cósmico",
    "country": "Colombia, España",
@@ -1614,6 +1642,9 @@
      "year": 2025,
      "synopsis_lang": "es"
     }
+   ],
+   "titulos_anteriores": [
+    "Trabajo, economías y futuro"
    ]
   },
   {
@@ -1662,7 +1693,7 @@
    "description_lang": "es"
   },
   {
-   "title": "Cortos colombianos de ficción y documental",
+   "title": "Cortos Colombianos de Ficción y Documental",
    "type": "film",
    "section": "💓 Latidos del Cine Colombiano",
    "country": "Colombia",
@@ -1711,6 +1742,7 @@
      "lbSlug": "la-gallina-saraviada",
      "tmdb_id": 1746279,
      "synopsis_en": "An elderly peasant woman struggles to preserve the lineage of her last hen as it faces extinction; to do so, she draws on her ingenuity and uses various methods to incubate the last few eggs she has left. An elderly woman and her animals, holding on together, because in the small, everyday things, life always finds a way to go on.",
+     "genre": "Ficción",
      "year": 2026
     },
     {
@@ -1738,7 +1770,7 @@
      "synopsis": "Tras mudarse a la capital, Laila intenta buscar una mejor vida y prosperar. Atrapada en el desarraigo y la obsesión por no olvidar sus raíces, su cuerpo se convierte en un lugar donde el pasado insiste. A través del tejido, transforma el dolor en un acto de resistencia y reconciliación con su identidad.",
      "synopsis_lang": "es",
      "poster": "/assets/ficpa-2026/achikanain.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "achikanain",
      "tmdb_id": 1796537,
      "year": 2025
@@ -1752,9 +1784,10 @@
      "synopsis": "Relatos del Camino es un cortometraje documental animado que reconstruye la memoria de Alberto, un hombre que creció en el campo colombiano en medio de la violencia, el trabajo forzado y el desplazamiento. A través de conversaciones con su hijo Daniel, sus recuerdos cobran vida mediante dibujos y animación, dando forma a un relato íntimo sobre la infancia, la migración y la resistencia. La película entrelaza pasado y presente para explorar cómo las historias familiares se convierten en memoria colectiva de un país marcado por el conflicto.",
      "synopsis_lang": "es",
      "poster": "/assets/ficpa-2026/relatos-del-camino.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "relatos-del-camino",
-     "tmdb_id": 1796541
+     "tmdb_id": 1796541,
+     "year": 2025
     },
     {
      "title": "El Mundo de Humberto",
@@ -1779,7 +1812,7 @@
      "synopsis": "La Madre Monte ya no habita el mito: respira en la selva colombiana como una presencia que resiste al deseo humano de dominar el territorio. A través del pensamiento de Brigitte Baptiste, la memoria oral del sabedor puinave Delio Agapito “Apache” y una intervención de danza contemporánea, Después del Espanto construye un ensayo cinematográfico donde palabra, cuerpo y paisaje revelan que la naturaleza también guarda memoria, observa y responde.",
      "synopsis_lang": "es",
      "poster": "/assets/ficpa-2026/despues-del-espanto.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "despues-del-espanto",
      "tmdb_id": 1796538,
      "year": 2025
@@ -1797,10 +1830,13 @@
      "lbSlug": "carlitos-1",
      "tmdb_id": 1193058
     }
+   ],
+   "titulos_anteriores": [
+    "Cortos colombianos de ficción y documental"
    ]
   },
   {
-   "title": "Churo Cósmico: animación",
+   "title": "Churo Cósmico: Animación",
    "type": "film",
    "section": "🌀 Churo Cósmico",
    "country": "España, Bolivia, Colombia",
@@ -1877,10 +1913,14 @@
      "synopsis": "Relatos del Camino es un cortometraje documental animado que reconstruye la memoria de Alberto, un hombre que creció en el campo colombiano en medio de la violencia, el trabajo forzado y el desplazamiento. A través de conversaciones con su hijo Daniel, sus recuerdos cobran vida mediante dibujos y animación, dando forma a un relato íntimo sobre la infancia, la migración y la resistencia. La película entrelaza pasado y presente para explorar cómo las historias familiares se convierten en memoria colectiva de un país marcado por el conflicto.",
      "synopsis_lang": "es",
      "poster": "/assets/ficpa-2026/relatos-del-camino.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "relatos-del-camino",
-     "tmdb_id": 1796541
+     "tmdb_id": 1796541,
+     "year": 2025
     }
+   ],
+   "titulos_anteriores": [
+    "Churo Cósmico: animación"
    ]
   },
   {
@@ -1908,7 +1948,7 @@
    "is_free": true
   },
   {
-   "title": "Videoclips nariñenses",
+   "title": "Videoclips Nariñenses",
    "type": "film",
    "section": "🎨 Cámaras de Barniz",
    "country": "Colombia",
@@ -1981,10 +2021,13 @@
      "poster": "/assets/ficpa-2026/la-ruana-de-mi-compadre.jpg",
      "posterSource": "oficial"
     }
+   ],
+   "titulos_anteriores": [
+    "Videoclips nariñenses"
    ]
   },
   {
-   "title": "Cortometraje nariñense",
+   "title": "Cortometraje Nariñense",
    "type": "film",
    "section": "🎨 Cámaras de Barniz",
    "country": "Colombia",
@@ -2011,7 +2054,7 @@
      "synopsis": "Semblanza de Laureano Inampues Cuatín, líder del Pueblo Pasto inmolado.",
      "synopsis_lang": "es",
      "poster": "/assets/ficpa-2026/laureano.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "laureano",
      "tmdb_id": 1796539,
      "year": 2025
@@ -2069,7 +2112,7 @@
      "synopsis": "Entre velos, destellos y penumbras, un hombre corteja a una mujer esquiva en una danza de deseo y resistencia. El fuego etéreo en llamaradas fugaces marca el pulso de la seducción, hasta que, en el entrelazado de los dedos, ambos sellan su encuentro íntimo.",
      "synopsis_lang": "es",
      "poster": "/assets/ficpa-2026/sinfonia-de-las-sombras-en-el-fuego-etereo.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "sinfonia-de-las-sombras-en-el-fuego-etereo",
      "tmdb_id": 1796540,
      "year": 2025
@@ -2085,6 +2128,9 @@
      "poster": "/assets/ficpa-2026/retorno.jpg",
      "posterSource": "oficial"
     }
+   ],
+   "titulos_anteriores": [
+    "Cortometraje nariñense"
    ]
   },
   {
@@ -2127,7 +2173,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-14T18:52:33",
+  "fecha": "2026-10-15T17:35:46",
   "plan_sha": "928fb849ba5b43a1",
   "paso": 6,
   "cmd": "python3 pipeline/ensamblar.py ficpa-2026"
