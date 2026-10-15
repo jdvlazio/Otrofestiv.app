@@ -1,9 +1,15 @@
 {
  "id": "w_ZR5MJ0WXPKGX",
- "titulo_original": "El Teatro: Monólogo de Horror",
+ "titulo_original": "El Teatro",
  "anio": null,
  "paises": [],
- "directores": [],
+ "directores": [
+  "Nicolás Bernal"
+ ],
+ "afiche": {
+  "archivo": "/assets/bhff-2026/el-teatro.jpg",
+  "veredicto": "oficial"
+ },
  "xref": {},
  "presentaciones": [
   "bhff-2026"

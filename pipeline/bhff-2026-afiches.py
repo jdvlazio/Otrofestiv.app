@@ -39,6 +39,16 @@ BLANCO = 225
 # los largos no están en la Selección del sitio: su lámina (mismo formato) es la del
 # carrusel «Selección oficial — Largometraje nacional» de IG (p/DcxA28kjgVo, sin sesión)
 LAMINAS_IG = {'Parapeto': 'fuentes/ig/DcxA28kjgVo/2.jpg'}
+# YA RECORTADOS (15 oct): los dos afiches que el festival muestra lado a lado en
+# la lámina 3 del post de Casa 32 (IG p/DecSAQRkevW), leído sin sesión; cada uno
+# recortado del marco blanco y mirado en hoja de contacto. Chicos (≈421 px de
+# ancho) porque vienen dentro de la lámina, pero son los afiches de las obras
+PRERECORTADOS = {
+    'MEAT the Movie': ('fuentes/bhff-2026/afiches/ig-DecSAQRkevW-meat.jpg',
+                       'IG @bogotahorrorfest p/DecSAQRkevW, lámina 3: el afiche («a Roger Conners film»), 421×684'),
+    'El Teatro': ('fuentes/bhff-2026/afiches/ig-DecSAQRkevW-el-teatro.jpg',
+                  'IG @bogotahorrorfest p/DecSAQRkevW, lámina 3: el afiche («De el director Nicolás Bernal»), 427×676'),
+}
 
 
 def plano(s):
@@ -133,6 +143,8 @@ def main():
                       'fuente': (f'IG @bogotahorrorfest p/DcxA28kjgVo, lámina {f}: el afiche, ' if t in LAMINAS_IG else
                                  f'bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina {f}, ')
                                 + f'recortado por dentro del marco ({que})'}
+    for t, (ruta, fuente) in PRERECORTADOS.items():
+        afiches[t] = {'archivo': ruta, 'fuente': fuente}
     io.open(DESTINO, 'w', encoding='utf-8').write(json.dumps({
         '_provenance': {'fuente': 'bogotahorrorfilmfest.com, Selección 2026 (láminas de festivalData)',
                         'capturado': '2026-10-07', 'regla': 'solo donde TMDB y lo ya publicado no tienen afiche',

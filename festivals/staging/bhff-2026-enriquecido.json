@@ -107,7 +107,7 @@
    "posterSource": "tmdb",
    "genero": "Ciencia Ficción",
    "_heredado": {
-    "genero": "catálogo w_R4EP71550W43 (cineautopsia-2026, fantasmagoria-2026, fantasofest-2026, ficpa-2026, narrarelfuturo-2026, popayan-2026)"
+    "genero": "catálogo w_R4EP71550W43 (bhff-2026, cineautopsia-2026, fantasmagoria-2026, fantasofest-2026, ficpa-2026, narrarelfuturo-2026, popayan-2026)"
    }
   },
   {
@@ -678,7 +678,7 @@
    "posterSource": "tmdb",
    "synopsis_en": "Colombia, 1951. In the thick of La Violencia, the period of brutal political war between Liberals and Conservatives, two chulavitas —hired killers on the government’s payroll— stalk a priest through the dark, waiting for him to lead them to the cabin in the woods where their next victims are hiding. But the horror they find there is a thousand times worse than the pain they meant to inflict.",
    "_heredado": {
-    "synopsis_en": "catálogo w_R4GP49AWA2ZH (fantasmagoria-2026, ficma-2026, siembrafest-2026, villadelcine-2026)"
+    "synopsis_en": "catálogo w_R4GP49AWA2ZH (bhff-2026, fantasmagoria-2026, ficma-2026, siembrafest-2026, villadelcine-2026)"
    }
   },
   {
@@ -861,7 +861,7 @@
    "_afiche": "declarado: bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-31.webp, recortado por dentro del marco (700×1105, marco 15 px)",
    "genero": "Thriller",
    "_heredado": {
-    "genero": "catálogo w_R4NEB2NAGK3C (siembrafest-2026)"
+    "genero": "catálogo w_R4NEB2NAGK3C (bhff-2026, siembrafest-2026)"
    }
   },
   {
@@ -895,6 +895,12 @@
    "_afiche": "declarado: bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-46.webp, recortado por dentro del marco (782×1025, marco 14 px)"
   },
   {
+   "titulo": "El Teatro",
+   "poster": "/assets/bhff-2026/el-teatro.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: IG @bogotahorrorfest p/DecSAQRkevW, lámina 3: el afiche («De el director Nicolás Bernal»), 427×676"
+  },
+  {
    "titulo": "Enigma",
    "poster": "/assets/bhff-2026/enigma.jpg",
    "posterSource": "oficial",
@@ -909,7 +915,7 @@
    "_sinopsis": "https://lavillaproducciones.com/gabriel",
    "genero": "Ficción",
    "_heredado": {
-    "genero": "catálogo w_R4J76XTP6BB4 (ficmontanas-2026)"
+    "genero": "catálogo w_R4J76XTP6BB4 (bhff-2026, ficmontanas-2026)"
    }
   },
   {
@@ -937,6 +943,14 @@
    "_afiche": "declarado: bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-37.webp, recortado por dentro del marco (698×1103, marco 16 px)"
   },
   {
+   "titulo": "MEAT the Movie",
+   "poster": "/assets/bhff-2026/meat-the-movie.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: IG @bogotahorrorfest p/DecSAQRkevW, lámina 3: el afiche («a Roger Conners film»), 421×684",
+   "synopsis_en": "After a night of drugs and debauchery results in the fatal overdose of an underage gay man, an innocent bystander is left to take the blame. Upon his release from prison, the guilty party becomes the focus of an eccentric killer’s revenge.",
+   "_sinopsis": "https://pqff.au/wp-content/uploads/2026/02/PQFF-Program-2026_Master_Perth_LR_Spreads.pdf"
+  },
+  {
    "titulo": "Parásitos",
    "poster": "/assets/bhff-2026/parasitos.jpg",
    "posterSource": "oficial",
@@ -959,11 +973,6 @@
    "poster": "/assets/bhff-2026/vientre.jpg",
    "posterSource": "oficial",
    "_afiche": "declarado: bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-48.webp, recortado por dentro del marco (780×1106, marco 15 px)"
-  },
-  {
-   "titulo": "MEAT the Movie",
-   "synopsis_en": "After a night of drugs and debauchery results in the fatal overdose of an underage gay man, an innocent bystander is left to take the blame. Upon his release from prison, the guilty party becomes the focus of an eccentric killer’s revenge.",
-   "_sinopsis": "https://pqff.au/wp-content/uploads/2026/02/PQFF-Program-2026_Master_Perth_LR_Spreads.pdf"
   },
   {
    "titulo": "The Callback",
@@ -1072,7 +1081,7 @@
    "posterSource": "tmdb",
    "genero": "Ciencia Ficción",
    "_heredado": {
-    "genero": "catálogo w_R4EP71550W43 (cineautopsia-2026, fantasmagoria-2026, fantasofest-2026, ficpa-2026, narrarelfuturo-2026, popayan-2026)"
+    "genero": "catálogo w_R4EP71550W43 (bhff-2026, cineautopsia-2026, fantasmagoria-2026, fantasofest-2026, ficpa-2026, narrarelfuturo-2026, popayan-2026)"
    }
   },
   "Donde Duermen los Sueños": {
@@ -1594,7 +1603,7 @@
    "posterSource": "tmdb",
    "synopsis_en": "Colombia, 1951. In the thick of La Violencia, the period of brutal political war between Liberals and Conservatives, two chulavitas —hired killers on the government’s payroll— stalk a priest through the dark, waiting for him to lead them to the cabin in the woods where their next victims are hiding. But the horror they find there is a thousand times worse than the pain they meant to inflict.",
    "_heredado": {
-    "synopsis_en": "catálogo w_R4GP49AWA2ZH (fantasmagoria-2026, ficma-2026, siembrafest-2026, villadelcine-2026)"
+    "synopsis_en": "catálogo w_R4GP49AWA2ZH (bhff-2026, fantasmagoria-2026, ficma-2026, siembrafest-2026, villadelcine-2026)"
    }
   },
   "Replay": {
@@ -1768,7 +1777,7 @@
   "El Festín de las Moscas",
   "El Laberinto del Cuerpo",
   "El Susurro + Esquirlas de Caracol",
-  "El Teatro: Monólogo de Horror",
+  "El Teatro",
   "Enigma",
   "Gabriel",
   "Happy",
@@ -1780,7 +1789,7 @@
   "La Noche De Las Bestias",
   "Los Lobo",
   "MEAT the Movie",
-  "MEAT the Movie + El Teatro: Monólogo de Horror",
+  "MEAT the Movie + El Teatro",
   "Mamá, la Casa No Es Segura",
   "Moviedreams + Chaika",
   "Niños Bien - Amanecer",
@@ -1837,8 +1846,8 @@
    "director": "",
    "fecha": "2026-10-15"
   },
-  "El Teatro: Monólogo de Horror": {
-   "director": "",
+  "El Teatro": {
+   "director": "Nicolás Bernal",
    "fecha": "2026-10-15"
   },
   "Enigma": {
@@ -1885,7 +1894,7 @@
    "director": "Roger Conners",
    "fecha": "2026-10-15"
   },
-  "MEAT the Movie + El Teatro: Monólogo de Horror": {
+  "MEAT the Movie + El Teatro": {
    "director": "",
    "fecha": "2026-10-15"
   },

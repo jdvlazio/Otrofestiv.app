@@ -1021,7 +1021,7 @@
    ]
   },
   {
-   "title": "MEAT the Movie + El Teatro: Monólogo de Horror",
+   "title": "MEAT the Movie + El Teatro",
    "type": "film",
    "section": "📽️ Proyecciones",
    "country": "Estados Unidos",
@@ -1046,10 +1046,15 @@
      "flags": "🇺🇸",
      "year": 2025,
      "duration": "134 min",
+     "poster": "/assets/bhff-2026/meat-the-movie.jpg",
+     "posterSource": "oficial",
      "synopsis_en": "After a night of drugs and debauchery results in the fatal overdose of an underage gay man, an innocent bystander is left to take the blame. Upon his release from prison, the guilty party becomes the focus of an eccentric killer’s revenge."
     },
     {
-     "title": "El Teatro: Monólogo de Horror"
+     "title": "El Teatro",
+     "director": "Nicolás Bernal",
+     "poster": "/assets/bhff-2026/el-teatro.jpg",
+     "posterSource": "oficial"
     }
    ]
   },
@@ -1251,7 +1256,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-15T07:21:11",
+  "fecha": "2026-10-15T08:14:34",
   "plan_sha": "2ffdc359c921f8c4",
   "paso": 7,
   "cmd": "python3 pipeline/ensamblar.py bhff-2026"

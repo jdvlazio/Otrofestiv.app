@@ -61,6 +61,14 @@ DIRECTOR = {
                                     'dicen «Rous»; la parrilla, «Roux»'),
 }
 
+# «EL TEATRO» (15 oct, decisión de Juan): la parrilla lo llama «El Teatro:
+# Monólogo de Horror» y no da director; el afiche y el pie del post de Casa 32
+# (IG p/DecSAQRkevW, lámina 3) dicen «El Teatro — Cuidado con lo que deseas»,
+# «De el director Nicolás Bernal», «Escrito por Alexander Mosquera». Manda el
+# título del afiche de la obra
+TITULO_OBRA = {'El Teatro: Monólogo de Horror': 'El Teatro'}
+DIRECTOR['El Teatro'] = ('Nicolás Bernal', 'afiche y pie de IG p/DecSAQRkevW (lámina 3): «De el director Nicolás Bernal»')
+
 # EL AÑO que la parrilla da distinto de todas las demás fuentes
 ANIO = {
     'Quazar': (2023, 'TMDB 1786245 (estreno 2023), Fantasmagoría 2026 y Villa del Cine 2026 dicen 2023; '
@@ -233,6 +241,7 @@ def main():
                     # LA FUNCIÓN DOBLE: el largo + el corto que lo acompaña («<b>+ Chaika</b>»)
                     obras = [{'titulo': t, **principal}] + cortos
                     for o in obras:
+                        o['titulo'] = TITULO_OBRA.get(o['titulo'], o['titulo'])
                         if o['titulo'] in DIRECTOR:
                             o['director'], o['_director_fuente'] = DIRECTOR[o['titulo']]
                         if not o.get('pais') and (O.get(plano(o['titulo'])) or {}).get('pais'):
