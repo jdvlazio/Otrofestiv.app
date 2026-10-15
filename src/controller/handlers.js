@@ -673,6 +673,25 @@ export function toggleSoloSinBoleta(){
   renderAgenda();
 }
 
+// abrirAviso — destino de un aviso tocado (15 oct 2026). El de Boleta («2
+// funciones de mañana sin boleta») abre Mi Plan EN ESE DÍA con «sin boleta»
+// prendido: el aviso pide una acción, y la lista ya filtrada es esa acción. Si
+// ya las marcaste todas, abre Mi Plan en ese día sin filtro (no una lista vacía).
+// Lo llaman Android (extra del aviso) e iOS (userInfo → __otfAbrirAviso).
+export function abrirAviso(a){
+  if(!a||a.abrir!=='miplan') return false;
+  switchMainNav('mnav-miplan'); showAgView();
+  if(a.filtro==='sinboleta'){
+    const faltan=funcionesSinBoleta((savedAgenda&&savedAgenda.schedule)||[]);
+    const idx=DAY_KEYS.indexOf(a.dia);
+    setSoloSinBoleta(faltan.length>0);
+    if(idx>=0) activeMiPlanDay=idx;
+    else if(faltan.length){ const f=faltan.map(s=>DAY_KEYS.indexOf(s.day)).filter(i=>i>=0).sort((x,y)=>x-y)[0]; if(f!==undefined) activeMiPlanDay=f; }
+    renderAgenda();
+  }
+  return true;
+}
+
 export function markWatchedFromPlan(title, day, time, venue, duration, e){
   if(e) e.stopPropagation();
   // 1. READ

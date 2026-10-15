@@ -578,7 +578,7 @@ function _avisosBoleta(now){
       ? (tit.length===1?tit[0]:`${tit.slice(0,-1).join(', ')} ${t('misc_y')} ${tit[tit.length-1]}`)
       : `${tit.slice(0,2).join(', ')} ${t('misc_y')} ${t('aviso_boleta_mas',{k:tit.length-2})}`;
     out.push({slot:_SLOT_BOLETA0+idx, title:faltan.length===1?t('aviso_boleta_1'):t('aviso_boleta_n',{n:faltan.length}),
-      body:cuerpo+'.', at, abrir:'miplan'});
+      body:cuerpo+'.', at, abrir:'miplan', filtro:'sinboleta', dia:k});
   });
   return out;
 }
@@ -645,7 +645,7 @@ async function _scheduleNotifications(){
   const _wk=window.webkit?.messageHandlers?.notifications;
   if(_wk){
     try{
-      _wk.postMessage({festival:_activeFestId||'', avisos:_planAvisos().map(a=>({id:String(a.slot),title:a.title,body:a.body,at:a.at.getTime(),...(a.abrir?{abrir:a.abrir}:{})}))});
+      _wk.postMessage({festival:_activeFestId||'', avisos:_planAvisos().map(a=>({id:String(a.slot),title:a.title,body:a.body,at:a.at.getTime(),...(a.abrir?{abrir:a.abrir}:{}),...(a.filtro?{filtro:a.filtro,dia:a.dia}:{})}))});
     }catch(e){console.warn('Notifications (iOS) error:',e);}
     return;
   }
@@ -661,7 +661,7 @@ async function _scheduleNotifications(){
     const _base=_notifBase(_activeFestId);
     const notifications=_planAvisos().map(a=>({
       id:_base+a.slot, title:a.title, body:a.body,
-      schedule:{at:a.at,allowWhileIdle:true}, sound:null, extra:a.abrir?{abrir:a.abrir}:null
+      schedule:{at:a.at,allowWhileIdle:true}, sound:null, extra:a.abrir?{abrir:a.abrir,...(a.filtro?{filtro:a.filtro,dia:a.dia}:{})}:null
     }));
     if(notifications.length){
       await LocalNotifications.schedule({notifications});

@@ -122,7 +122,7 @@ import {
 // ── Step 7d-3: controller/handlers.js — mutators+filters+composites. ─────────
 import {
   citySheetPick, citySheetAll,
-  toggleWL, toggleWatched, diaryToggleVista, diaryNotaCerrar, togglePelPrio, togglePelWL, setDelay, undoDelay, clearDelay, applyOwnCloudDelay, removeFromAgenda, addSuggestion, addRecurringBlock, removeRecurringBlock, _planFixNotice,  forceInclude, includeAnyway, togglePriority, swapPriority, markWatchedFromPlan, toggleBoleta, toggleSoloSinBoleta, confirmReplace, removeFilmFromScenario, _dismissNotice, selectMiPlanDay, miPlanNav, toggleMplanProg, setActivePlanFilm, selectFromDetail, toggleFilmAlternatives, _toggleEveningFilms, filterByVenue, filterByDay, filterBySection, setProgramaMode, toggleProgramaView, setProgramaView, setProgramaChip, clearProgramaChip, _pafClearSec, _pafClearVenue, _toggleWLFromList, saveCurrentScenario, _setExpandedFilm, _closePelAndRemove, _closePelAndRate, _navTo, _closeAuthAndReset, _toggleCtxOlder, _toggleWatchedAndClose, _toggleWLAndClose, _activatePlanFilm, _scrollToSuggestions, _removeConflictModal, _scrollToTop, _searchOpenFilm, _searchOpenCorto,
+  toggleWL, toggleWatched, diaryToggleVista, diaryNotaCerrar, togglePelPrio, togglePelWL, setDelay, undoDelay, clearDelay, applyOwnCloudDelay, removeFromAgenda, addSuggestion, addRecurringBlock, removeRecurringBlock, _planFixNotice,  forceInclude, includeAnyway, togglePriority, swapPriority, markWatchedFromPlan, toggleBoleta, toggleSoloSinBoleta, abrirAviso, confirmReplace, removeFilmFromScenario, _dismissNotice, selectMiPlanDay, miPlanNav, toggleMplanProg, setActivePlanFilm, selectFromDetail, toggleFilmAlternatives, _toggleEveningFilms, filterByVenue, filterByDay, filterBySection, setProgramaMode, toggleProgramaView, setProgramaView, setProgramaChip, clearProgramaChip, _pafClearSec, _pafClearVenue, _toggleWLFromList, saveCurrentScenario, _setExpandedFilm, _closePelAndRemove, _closePelAndRate, _navTo, _closeAuthAndReset, _toggleCtxOlder, _toggleWatchedAndClose, _toggleWLAndClose, _activatePlanFilm, _scrollToSuggestions, _removeConflictModal, _scrollToTop, _searchOpenFilm, _searchOpenCorto,
 } from './controller/handlers.js';
 import { setDelaysRerender, setOwnDelayCb } from './controller/delays-cloud.js';
 import { initWatchBridge } from './controller/watch-bridge.js';
@@ -508,7 +508,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202610150705';
+const BUILD_VERSION='202610150743';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -1028,7 +1028,7 @@ try{
     _capApp.addListener('backButton',()=>{ if(!_closeTopSheet()) _capApp.minimizeApp?.(); });
     // Tocar un aviso que trae destino (el del día después: «Tu festival») abre Mi Plan.
     window.Capacitor.Plugins?.LocalNotifications?.addListener?.('localNotificationActionPerformed',
-      a=>{ if(a?.notification?.extra?.abrir==='miplan'){ try{ switchMainNav('mnav-miplan'); showAgView(); }catch(e){} } });
+      a=>{ try{ abrirAviso(a?.notification?.extra); }catch(e){} });
   }
 }catch(e){ /* sin plugin: comportamiento de siempre */ }
 
@@ -1568,6 +1568,9 @@ setDelaysRerender(function(){
 // WCSession (__otfWatchDelay). Los dos terminan en applyOwnCloudDelay, que no
 // vuelve a escribir la nube.
 setOwnDelayCb((key, mins) => { if(applyOwnCloudDelay(key, mins) && activeMNav==='mnav-miplan' && activeView==='agenda') renderAgenda(); });
+// iOS: el wrapper (1.16+) pasa el destino del aviso tocado. Devuelve true si la
+// app ya estaba lista para atenderlo (si no, el wrapper reintenta).
+window.__otfAbrirAviso = (a) => { try{ return abrirAviso(a); }catch(e){ report(e,'abrirAviso'); return false; } };
 window.__otfWatchDelay = (m) => {
   try{
     if(!m || !m.key || (m.festival && m.festival!==_activeFestId)) return;
