@@ -2432,7 +2432,15 @@
      "lbSlug": "ballad-of-fishes-and-birds",
      "synopsis_es": "Carlina perdió a su padre en el conflicto armado colombiano y vive sola con su madre. El dolor todavía es abrumador, y ambas se aferran a sus recuerdos y objetos personales para sobrevivir. Todo cambia con la aparición de un pez místico que será el guía de Carlina durante su aventura.",
      "posterSource": "tmdb",
-     "work_id": "w_R4DKB1K2S5M9"
+     "work_id": "w_R4DKB1K2S5M9",
+     "genre": "Animación",
+     "_src": {
+      "heredado": {
+       "genre": "catálogo w_R4DKB1K2S5M9 (aff-2026, fantasmagoria-2026, olhar-2026)",
+       "title_en": "catálogo w_R4DKB1K2S5M9 (aff-2026, fantasmagoria-2026, olhar-2026)"
+      }
+     },
+     "title_en": "Ballad of Fishes and Birds"
     },
     {
      "title": "O Jardim Mágico",

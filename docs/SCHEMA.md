@@ -307,7 +307,7 @@ está pasando de verdad — no lo que alguien recordaba al escribirlo.
 | campo | tipo | formato / valores | lo usan | notas |
 |---|---|---|---|---|
 | `film_start` | string | `^\d{2}:\d{2}$` | 1 fest | Hora en que EMPIEZA LA OBRA cuando la función abre antes (BHFF: Parapeto abre 19:00, la obra 19:30). Solo informa: el aviso «Inicio» de la ficha; la card y el plan siguen con `time`. Por función. |
-| `title_en` | string | — | 24 fest |  |
+| `title_en` | string | — | 25 fest |  |
 | `title_es` | string | — | — | Título en español, SOLO cuando el festival titula en otro idioma y el afiche que mostramos dice el español. El buscador lo mira además de `title`: la única pista que el usuario tiene delante es el afiche. No es una traducción de cortesía; `title` sigue siendo el nombre oficial. |
 | `director` | string | — | 32 fest |  |
 | `year` | number | — | 31 fest | Entero. Dos festivales legacy lo tienen como string. |
@@ -347,11 +347,11 @@ está pasando de verdad — no lo que alguien recordaba al escribirlo.
 | `poster` | string | — | 33 fest | URL, /assets/… o path TMDB. poster:"" está PROHIBIDO. Reglas: docs/POSTERS.md |
 | `posterSource` | string | `tmdb` · `custom` · `editorial` · `letterboxd` · `oficial` | 33 fest | **derivado de `poster`** — no viene de ninguna fuente |
 | `posterPosition` | string | `center` · `top` · `bottom` | 1 fest |  |
-| `lbSlug` | string | — | 27 fest | Slug de Letterboxd. En camelCase: `lb_slug` no lo lee nadie. |
+| `lbSlug` | string | — | 30 fest | Slug de Letterboxd. En camelCase: `lb_slug` no lo lee nadie. |
 | `slug` | string | — | 1 fest |  |
 | `filmCategory` | string | — | 1 fest |  |
 | `tmdb_id` | number | — | 23 fest | no lo lee la vista: pipeline No lo lee la vista: lo usa el pipeline para reenriquecer sin volver a buscar. |
-| `_src` | — | — | 25 fest | De dónde salió el dato. Toda obra nueva lo lleva. |
+| `_src` | — | — | 29 fest | De dónde salió el dato. Toda obra nueva lo lleva. |
 | `format` | string | — | 1 fest | Formato de proyección (DCP, 35mm). Lo publica el festival; TIFF es el único que lo trae. |
 | `section_tags` | array | — | 1 fest | no lo lee la vista: ninguno todavía Sellos del festival (TIFF). Decisión de Juan: etiqueta, no sección. Falta cablearlo en la vista. |
 | `accessibility` | array | — | 1 fest | no lo lee la vista: ninguno todavía Accesibilidad de la función (p. ej. «oc» = subtítulos descriptivos). Sin superficie que la muestre. |

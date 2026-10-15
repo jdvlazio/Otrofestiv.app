@@ -1,10 +1,10 @@
 {
  "_provenance": {
   "fuente": "issue de radar #963 — https://github.com/jdvlazio/Otrofestiv.app/issues/963",
-  "capturado": "2026-10-11",
+  "capturado": "2026-10-15",
   "titulo": "RADAR: Fantasmagoría 8 — Medellín, 15–25 OCT 2026",
   "estado": "OPEN",
-  "comentarios": 4
+  "comentarios": 5
  },
  "issue": 963,
  "titulo": "RADAR: Fantasmagoría 8 — Medellín, 15–25 OCT 2026",
@@ -26,6 +26,10 @@
   {
    "fecha": "2026-10-03",
    "cuerpo": "ESTADO: 3 oct 2026 · fuente: **web** (`curl`) — **la web volvió a leerse, y el build coincide con la noticia de programación. Queda cerrado lo pendiente del 1 oct.**\n\nROJO a **12 días**.\n\n- La pantalla anti-bot del 1 oct ya no aparece: `curl` trae la portada, el `post-sitemap.xml` y la noticia [ya-puedes-empezar-a-programarte-para-fantasmagoria-2026](https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/). Su `lastmod` sigue siendo el del 28 sep 20:03 UTC; no hay posts más nuevos.\n- Lo comparé con `origin/main:festivals/fantasmagoria-2026.json`:\n  - ***Familia Teme Enfrentar Una Nueva Noche de Terror***: la noticia la pone el **vie 16 a las 9:00 p. m.** y el **sáb 17 a las 6:40 p. m.** (Las Américas Sala 3, «Entrada con Boleta»). El build tiene 16 a las 21:00 y 17 a las 18:40. **Coincide.** La página de largos sigue diciendo «Viernes 17»; ese error es del festival, no nuestro.\n  - ***Seven Samurai***: la noticia dice vie 16, 6:30 p. m., Colombo, «Entrada Libre». El build tiene 16 a las 18:30, Colombo, `is_free: true`. **Coincide.**\n  - La pestaña «Domingo 19 de Octubre» sigue en la noticia. Es un rótulo de la página del festival.\n- **IG no se pudo leer hoy:** Instagram pidió una verificación de seguridad de la cuenta en el navegador. Ver el issue RADAR CIEGO. Queda pendiente mirarlo a mano.\n"
+  },
+  {
+   "fecha": "2026-10-15",
+   "cuerpo": "Vigía 14 oct 2026 (noche) — Fantasmagoría\n\n- ⚠ **Ana Rosa — la hora cambió (o volvió atrás).** La lámina nueva del Colombo Americano ([DefDK-RlLH5](https://www.instagram.com/p/DefDK-RlLH5/), 14 oct 13:40, lámina 10 de 17) dice **miércoles 21 oct · 5:00 p. m. · Colombo Americano**. La base del festival **v21** (14 oct 16:54) también dice **17:00**. La app publica **18:00** por el override `HORA_IG` de `fantasmagoria-2026-base.py` (lámina del 11 oct). Las dos fuentes más nuevas coinciden en 17:00 → sugerido: quitar ese override y republicar.\n- Las otras 14 funciones de esa misma serie de láminas coinciden con la app (día, hora y sede).\n- Base v21 contra la app: 94 funciones, 0 nuevas, 0 salen; fuera de Ana Rosa, solo difieren las otras correcciones deliberadas de `HORA_IG` (You Are The Film ×2, Brujas…) y nombres de sede o sala normalizados.\n- Siete samuráis (vie 16, 7:00 p. m., Colombo, [DeftsiehQ-3](https://www.instagram.com/p/DeftsiehQ-3/)): ya está.\n"
   }
  ]
 }
