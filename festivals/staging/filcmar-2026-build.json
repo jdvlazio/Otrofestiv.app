@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "Instagram @filcmar — el carrusel de programación (16 láminas)",
-  "capturado": "2026-10-12",
+  "capturado": "2026-10-15",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_sedes": "El nombre que imprime cada lámina, tal cual; la sala va aparte (Foso, Hall, Capilla).",
@@ -506,7 +506,8 @@
      "poster": "/assets/filcmar-2026/para-no-volver.jpg",
      "posterSource": "tmdb",
      "lbSlug": "para-no-volver",
-     "tmdb_id": 1743118
+     "tmdb_id": 1743118,
+     "genre": "Drama"
     },
     {
      "title": "Miguel Ángel, Federico, y el carro que pasó encima de las gafas",
@@ -706,7 +707,8 @@
      "synopsis": "Después del ataque que sufrió, Luz trata de entender lo que le sucedió: el Hijo de la Tierra vino a destruir a la humanidad robando sus recuerdos más tristes y felices. Pero desembarcó en Suba, el distrito más lejano de Bogotá, donde una extraña adicción cambiará el curso de la historia.",
      "synopsis_lang": "es",
      "poster": "/assets/filcmar-2026/hdlt.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "genre": "Drama"
     },
     {
      "title": "Show de Ziggy: La maldición del mariachi bondage",
@@ -929,7 +931,8 @@
      "synopsis": "En una ciudad bulliciosa, un robot mecánico lleva una vida rutinaria, hasta que el casco de cristal que protege su cabeza se rompe. Obligado a encontrar un reemplazo, el robot emprende un viaje, solo para darse cuenta poco a poco de que lo que ocultaba el cristal tal vez no sea tan temible después de todo.",
      "synopsis_lang": "es",
      "poster": "/assets/filcmar-2026/la-pecera.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "genre": "Animación"
     },
     {
      "title": "Reverb",
@@ -1267,7 +1270,8 @@
      "lbSlug": "somnolytic",
      "tmdb_id": 1590709,
      "synopsis_en": "A strange being loses its way in the chaos of the transportation system without finding an exit. The pathways are overwhelmed by accelerated flows that come and go like human waterfalls. The passersby, faceless, move automatically, creating a maze in which the routes seem endless. Sleepy and exhausted people merge with the surroundings, and as the bus continues on its way, the being finally manages to discover itself.",
-     "title_en": "Somnolytic"
+     "title_en": "Somnolytic",
+     "genre": "Experimental"
     }
    ]
   },
@@ -1419,6 +1423,7 @@
    "country": "Colombia",
    "flags": "🇨🇴",
    "duration": "62 min",
+   "genre": "Drama",
    "day": "2026-10-13",
    "time": "18:00",
    "day_order": 4,
@@ -1443,7 +1448,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-12T15:58:05",
+  "fecha": "2026-10-15T09:01:13",
   "plan_sha": "23096bf87098b953",
   "paso": 8,
   "cmd": "python3 pipeline/ensamblar.py filcmar-2026"
