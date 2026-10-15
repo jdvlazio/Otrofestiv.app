@@ -8,8 +8,8 @@
   "regla": "la grafía más completa que acreditan los festivales"
  },
  "anio": {
-  "fuente": "festival",
-  "regla": "único"
+  "fuente": "tmdb:1444298",
+  "regla": "tmdb-manda"
  },
  "paises": {
   "fuente": "tmdb:1444298",

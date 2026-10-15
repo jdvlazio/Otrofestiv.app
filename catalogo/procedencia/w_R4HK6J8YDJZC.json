@@ -4,8 +4,10 @@
   "regla": "el título que más festivales imprimen"
  },
  "directores": {
-  "fuente": "tmdb:1738917",
-  "regla": "tmdb-manda"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "FICDEH acredita a los tres; TMDB omite a Albán y Popayán a los otros dos",
+  "fecha": "2026-10-14"
  },
  "anio": {
   "fuente": "tmdb:1738917",

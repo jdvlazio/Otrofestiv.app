@@ -254,6 +254,44 @@ def _conservar_publicado(fid, films):
         print(f'  conservado de lo publicado: {n} obra(s) con campos que la fuente dejó de decir')
 
 
+def _duraciones_corregidas(fid, films):
+    """La duración que el festival publicó mal, corregida con su fuente.
+
+    PROTOCOLO §5·bis: «toda excepción (duración corregida…) en tabla explícita
+    con fecha, nunca editando el crudo». El 14 oct 2026 Juan aprobó corregir 8
+    duraciones de festivales en curso que no cuadraban con la fuente primaria
+    (Cannes, San Sebastián, TMDB, los datos oficiales del propio festival):
+    Villa del Cine programó «Llueve sobre Babel» a 120 min y dura 113; FICPA
+    publicó «Sierra» a 102 y sus datos oficiales dicen 89. Con la duración mal,
+    la app calcula mal los choques. Va en festivals/staging/<id>-duraciones.json
+    — {"duraciones": [{"titulo", "min", "fuente", "por_que"}]} — y se aplica
+    DESPUÉS de conservar lo publicado, para que gane. Se ABORTA si la obra no
+    está en el build: una corrección que no apunta a nada no corrige nada."""
+    p = f'{REPO}/festivals/staging/{fid}-duraciones.json'
+    if not os.path.exists(p):
+        return
+    tabla = json.load(open(p, encoding='utf-8')).get('duraciones') or []
+    n = 0
+    for x in tabla:
+        if not (x.get('fuente') and x.get('por_que') and int(x.get('min') or 0) > 0):
+            sys.exit(f'✗ {fid}-duraciones.json: «{x.get("titulo")}» sin fuente, porqué o minutos')
+        hit = 0
+        for f in films:
+            obras = f.get('film_list') or []
+            for o in [f] + obras:
+                if o.get('title') == x['titulo']:
+                    o['duration'] = f"{int(x['min'])} min"
+                    o['_duracion_corregida'] = x['fuente']
+                    hit += 1
+            # una función de UNA obra: su franja es la obra
+            if len(obras) == 1 and obras[0].get('title') == x['titulo']:
+                f['duration'] = f"{int(x['min'])} min"
+        if not hit:
+            sys.exit(f'✗ {fid}-duraciones.json: «{x["titulo"]}» no está en el build')
+        n += hit
+    print(f'  duraciones corregidas ({os.path.basename(p)}): {n}')
+
+
 def _titulos_anteriores(fid, films):
     """`titulos_anteriores` desde festivals/staging/<id>-titulos-anteriores.json.
 
@@ -564,6 +602,7 @@ def ensamblar(fid, escribir=True):
         # programa o actividad: su texto es DESCRIPCIÓN, no sinopsis (lib)
         lib.separar_descripcion(_f)
     _conservar_publicado(fid, films)
+    _duraciones_corregidas(fid, films)
     _titulos_anteriores(fid, films)
     out['films'] = films
 

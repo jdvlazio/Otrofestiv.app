@@ -8,8 +8,8 @@
   "regla": "tmdb-manda"
  },
  "anio": {
-  "fuente": "festival",
-  "regla": "único"
+  "fuente": "tmdb:1536706",
+  "regla": "tmdb-manda"
  },
  "paises": {
   "fuente": "tmdb:1536706",
