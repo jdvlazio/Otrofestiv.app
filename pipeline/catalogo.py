@@ -253,7 +253,7 @@ def ids_validos(obs):
 # (§5 del diseño), y la fase 3b solo hizo viajar el id de TMDB: La paga salió
 # «Drama» en Cinemancia 2025 y vacía en FILCMAR y MUBI, y nadie lo vio. Esto
 # cuenta, por campo, las presentaciones VACÍAS de una obra que otro festival
-# nuestro SÍ publicó con ese campo. TECHO es lo medido el 14 oct: el guardián
+# nuestro SÍ publicó con ese campo. El techo es lo medido: el guardián
 # falla si sube (un montaje nuevo que no heredó) y avisa si baja (bajar el techo:
 # es un trinquete, la deuda solo se achica).
 # `poster` subió de 26 a 44 el mismo 14 oct al dejar de contar un fotograma
@@ -262,10 +262,20 @@ def ids_validos(obs):
 # BHFF tuviera esos huecos (su único hueco propio es un title_en): BHFF trae
 # datos que festivales viejos no tenían, y al compartir obras deja a la vista
 # huecos que ya existían en ellos. El trinquete no distingue «el nuevo no
-# heredó» de «el nuevo es más completo»: pendiente contarlo por festival.
+# heredó» de «el nuevo es más completo» — por eso, abajo, el techo por festival.
 CAMPOS_QUE_VIAJAN = ('genre', 'title_en', 'synopsis', 'synopsis_en', 'year',
                      'country', 'duration', 'director', 'poster', 'lbSlug')
-TECHO = {'genre': 145, 'title_en': 167, 'synopsis': 103, 'synopsis_en': 103, 'year': 92, 'country': 6, 'duration': 16, 'director': 64, 'poster': 46, 'lbSlug': 124}
+# POR FESTIVAL (15 oct 2026). Un techo GLOBAL dejaba que un montaje nuevo con
+# huecos (BHFF) obligara a subirlo, y al subirlo tapaba cualquier retroceso de
+# otro festival. Cada festival tiene el suyo en catalogo/techo.json; uno que no
+# está ahí tiene techo 0: entrar con huecos se declara a propósito midiendo
+# (`python3 pipeline/catalogo.py --medir <fest>`), y ese número queda en el diff.
+TECHO_ARCHIVO = os.path.join(DIR, 'techo.json')
+
+
+def techo(archivo=TECHO_ARCHIVO):
+    """{festival: {campo: n}} — lo medido por festival; lo que falta es 0."""
+    return json.load(io.open(archivo, encoding='utf-8')) if os.path.exists(archivo) else {}
 
 
 def _tiene(o, campo):
@@ -297,13 +307,58 @@ def dato_que_no_viaja(festivales):
     return huecos
 
 
-def techo_superado(festivales, techo=None):
-    """Los campos cuyo hueco pasa el techo → lista de problemas (vacía = sano)."""
-    techo = TECHO if techo is None else techo
-    h = dato_que_no_viaja(festivales)
-    return [f'{c}: {len(v)} > techo {techo.get(c, 0)} (p. ej. ' +
-            ', '.join(f'«{t}» en {fid}' for fid, t in v[-3:]) + ')'
-            for c, v in h.items() if len(v) > techo.get(c, 0)]
+def _por_festival(festivales):
+    """{festival: {campo: n}} — el hueco medido, contado por festival."""
+    h = {}
+    for c, v in dato_que_no_viaja(festivales).items():
+        for fid, _ in v:
+            h.setdefault(fid, {}).setdefault(c, 0)
+            h[fid][c] += 1
+    return h
+
+
+def techo_superado(festivales, tope=None):
+    """Los (festival, campo) cuyo hueco pasa SU techo → problemas (vacía = sano).
+    El techo de un festival no cubre a otro."""
+    tope = techo() if tope is None else tope
+    regs = dato_que_no_viaja(festivales)
+    out = []
+    for fid, cs in sorted(_por_festival(festivales).items()):
+        for c, n in sorted(cs.items()):
+            t = (tope.get(fid) or {}).get(c, 0)
+            if n > t:
+                ej = [tt for f, tt in regs[c] if f == fid][-3:]
+                out.append(f'{fid} · {c}: {n} > techo {t} (p. ej. ' + ', '.join(f'«{x}»' for x in ej) + ')')
+    return out
+
+
+def techo_holgado(festivales, tope=None):
+    """Los (festival, campo) que bajaron de su techo: hay que bajarlo (trinquete)."""
+    tope = techo() if tope is None else tope
+    h = _por_festival(festivales)
+    return [f'{fid} · {c} {(h.get(fid) or {}).get(c, 0)} < {t}'
+            for fid, cs in sorted(tope.items()) for c, t in sorted(cs.items())
+            if (h.get(fid) or {}).get(c, 0) < t]
+
+
+def medir(festivales, solo=None, archivo=TECHO_ARCHIVO):
+    """Escribe el techo. Sin `solo`, SOLO BAJA (el trinquete). Con `solo`, fija
+    lo medido de esos festivales aunque suba: entrar con huecos a propósito."""
+    actual, h = techo(archivo), _por_festival(festivales)
+    nuevo = {}
+    for fid in sorted(set(actual) | set(h)):
+        med, viejo = h.get(fid) or {}, actual.get(fid) or {}
+        if solo and fid in solo:
+            cs = med
+        else:
+            cs = {c: min(t, med.get(c, 0)) for c, t in viejo.items()}
+        cs = {c: n for c, n in sorted(cs.items()) if n}
+        if cs:
+            nuevo[fid] = cs
+    io.open(archivo, 'w', encoding='utf-8').write(
+        '{\n' + ',\n'.join(f' {json.dumps(f)}: {json.dumps(cs, ensure_ascii=False)}'
+                            for f, cs in nuevo.items()) + '\n}\n')
+    return nuevo
 
 
 # ── autoprueba: cada invariante atrapa su caso roto ──────────────────────────
@@ -333,15 +388,26 @@ def autoprueba():
     _w = 'w_000000ZZZ003'
     _f = {'zzz-2025': {'films': [{'title': 'zzz', 'work_id': _w, 'genre': 'Drama'}]},
           'zzz-2026': {'films': [{'title': 'zzz', 'work_id': _w}]}}
-    _t0 = {c: 0 for c in CAMPOS_QUE_VIAJAN}
-    if not techo_superado(_f, _t0) or techo_superado(_f, {**_t0, 'genre': 1}) \
-            or techo_superado({'zzz-2026': _f['zzz-2026']}, _t0):
+    if not techo_superado(_f, {}) or techo_superado(_f, {'zzz-2026': {'genre': 1}}) \
+            or techo_superado({'zzz-2026': _f['zzz-2026']}, {}) \
+            or not techo_superado(_f, {'zzz-2025': {'genre': 1}}):  # el techo ajeno no cubre
         ciegos.append('techo_superado')
+    if techo_holgado(_f, {'zzz-2026': {'genre': 1}}) or not techo_holgado(_f, {'zzz-2026': {'genre': 2}}):
+        ciegos.append('techo_holgado')
     if not ID.match(nuevo_id()):
         ciegos.append('nuevo_id')
     return ciegos
 
 
 if __name__ == '__main__':
+    import sys
+    if '--medir' in sys.argv:
+        _solo = [a for a in sys.argv[1:] if not a.startswith('--')]
+        _fs = {os.path.basename(p)[:-5]: json.load(io.open(p, encoding='utf-8'))
+               for p in glob.glob(os.path.join(REPO, 'festivals', '*.json'))}
+        _n = medir(_fs, set(_solo) or None)
+        print(f'✓ catalogo/techo.json — {len(_n)} festivales con hueco'
+              + (f' · fijado: {", ".join(_solo)}' if _solo else ' · solo bajó'))
+        sys.exit(0)
     c = autoprueba()
     print('✗ invariantes ciegos: ' + ', '.join(c) if c else '✓ los invariantes del catálogo atrapan sus cebos')
