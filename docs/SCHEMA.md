@@ -354,7 +354,7 @@ está pasando de verdad — no lo que alguien recordaba al escribirlo.
 | `format` | string | — | 1 fest | Formato de proyección (DCP, 35mm). Lo publica el festival; TIFF es el único que lo trae. |
 | `section_tags` | array | — | 1 fest | no lo lee la vista: ninguno todavía Sellos del festival (TIFF). Decisión de Juan: etiqueta, no sección. Falta cablearlo en la vista. |
 | `accessibility` | array | — | 1 fest | no lo lee la vista: ninguno todavía Accesibilidad de la función (p. ej. «oc» = subtítulos descriptivos). Sin superficie que la muestre. |
-| `work_id` | string | — | 31 fest | La obra del catálogo único (catalogo/obras/<work_id>.json, docs/CATALOGO-OBRAS.md). Lo ponen publicar.py y catalogo_construir.py --escribir, nunca a mano. Va en cada obra, también dentro de film_list; las actividades no llevan. [presentacion-con-obra] frena el push si falta o apunta a una obra que no existe. |
+| `work_id` | string | — | 32 fest | La obra del catálogo único (catalogo/obras/<work_id>.json, docs/CATALOGO-OBRAS.md). Lo ponen publicar.py y catalogo_construir.py --escribir, nunca a mano. Va en cada obra, también dentro de film_list; las actividades no llevan. [presentacion-con-obra] frena el push si falta o apunta a una obra que no existe. |
 
 ### Excepciones congeladas (festivales archivados)
 
@@ -386,6 +386,7 @@ fiestas, conciertos, performances, presentaciones virtuales.
 - Regla de clasificación al montar: *¿el asistente "reserva" ese horario?* Sí →
   `duration` (planificable). No (entra/sale cuando quiere) → `info: true`.
 - `info` se propaga a los screenings exploded vía el `Object.assign` del loader.
+- **Y `validate.py` vigila el olvido** con `[abierta-sin-info]`: en los festivales vivos, un evento cuyo título dice exposición, expo, instalación, exhibición o muestra fotográfica y no lleva `info` es un error (MAPISTAS, FILCMAR, 9 oct 2026: cuatro funciones ancladas en el plan). Un falso positivo se declara en `_ABIERTA_NO` con su porqué.
 - **Lo vigila `validate-festivals.js`** en las dos direcciones: `[info-solo-evento]` exige que `info` vaya sobre `type: 'event'`, y la advertencia de *duración anómala* (techo de 400 min) **no le aplica**, porque su duración es la VENTANA en que está abierta y no un compromiso del asistente. Una duración de cero sigue siendo dato roto.
 
 ### Bloques de cortos: `is_cortos` + `film_list` (+ `unscheduled`)
@@ -394,12 +395,21 @@ Un **bloque de cortos** agrupa varios cortometrajes que se proyectan juntos:
 
 ```jsonc
 { "title": "Cortometraje Documental", "section": "📽️ Cortometrajes",
-  "type": "event", "is_cortos": true, "flags": "<derivado>",
+  "type": "film", "is_cortos": true, "flags": "<derivado>",
   "film_list": [ { "title": "Madres de nacimiento", "director": "...",
                    "country": "Colombia/Francia", "genre": "Documental",
                    "duration": "18 min" }, ... ] }
 ```
 
+- **Un bloque de cortos NO es `type: "event"`** (va como `film` o sin `type`):
+  con `event` sus cortos dejaban de calificarse y de contar como obras vistas
+  (FICMontañas y Tribeca, corregidos en #1058).
+- **Evento que proyecta obras** (apertura con película, cineconcierto, Award
+  Screening ya anunciado): sigue siendo `type: "event"` y las obras van en su
+  `film_list`, verbatim. Regla «lo visto y lo asistido» (Juan, 9 oct 2026):
+  cuenta 1 actividad + sus obras (`obrasDe`, `domain/film.js`). Nunca se
+  infiere por el título. También aplica a una actividad abierta (`info: true`)
+  que expone obras.
 - `is_cortos: true` **requiere** `film_list` no vacío (guard bloqueante en
   `validate-festivals.js` — un bloque vacío invisibiliza cortos que sí están).
 - Cada item del `film_list` es **buscable como card propia** (`_searchAll` los

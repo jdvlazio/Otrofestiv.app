@@ -1328,6 +1328,10 @@ export const FESTIVAL_CONFIG={
     dayShort_en:{'2026-10-22':'THU 22','2026-10-23':'FRI 23','2026-10-24':'SAT 24','2026-10-25':'SUN 25','2026-10-26':'MON 26','2026-10-27':'TUE 27','2026-10-28':'WED 28','2026-10-29':'THU 29','2026-10-30':'FRI 30','2026-10-31':'SAT 31'},
     dayLong:{'2026-10-22':'Jueves 22 de octubre','2026-10-23':'Viernes 23 de octubre','2026-10-24':'Sábado 24 de octubre','2026-10-25':'Domingo 25 de octubre','2026-10-26':'Lunes 26 de octubre','2026-10-27':'Martes 27 de octubre','2026-10-28':'Miércoles 28 de octubre','2026-10-29':'Jueves 29 de octubre','2026-10-30':'Viernes 30 de octubre','2026-10-31':'Sábado 31 de octubre'},
     prioLimit:5,eventPosterLabel:['EVENTO',''],
+    // Boleta de $7.000 en la Cinemateca de Bogotá; entrada libre hasta completar
+    // aforo en las sedes comunitarias (Canal Trece). Sin este campo la app no
+    // pintaba ninguna función como paga (revisión del 15 oct 2026).
+    ticketing_model:'mixed',
     films:null,posters:null,lbSlugs:{}
   },
   'fantasmagoria2026': {

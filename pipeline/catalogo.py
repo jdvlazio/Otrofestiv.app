@@ -258,11 +258,14 @@ def ids_validos(obs):
 # es un trinquete, la deuda solo se achica).
 # `poster` subió de 26 a 44 el mismo 14 oct al dejar de contar un fotograma
 # como afiche (_tiene): no empeoró nada, se mide lo que es.
+# 15 oct 2026, BHFF: subieron genre, synopsis, director, poster y lbSlug SIN que
+# BHFF tuviera esos huecos (su único hueco propio es un title_en): BHFF trae
+# datos que festivales viejos no tenían, y al compartir obras deja a la vista
+# huecos que ya existían en ellos. El trinquete no distingue «el nuevo no
+# heredó» de «el nuevo es más completo»: pendiente contarlo por festival.
 CAMPOS_QUE_VIAJAN = ('genre', 'title_en', 'synopsis', 'synopsis_en', 'year',
                      'country', 'duration', 'director', 'poster', 'lbSlug')
-TECHO = {'genre': 143, 'title_en': 167, 'synopsis': 100, 'synopsis_en': 103,
-         'year': 92, 'country': 6, 'duration': 16, 'director': 63, 'poster': 44,
-         'lbSlug': 122}
+TECHO = {'genre': 145, 'title_en': 167, 'synopsis': 103, 'synopsis_en': 103, 'year': 92, 'country': 6, 'duration': 16, 'director': 64, 'poster': 46, 'lbSlug': 124}
 
 
 def _tiene(o, campo):

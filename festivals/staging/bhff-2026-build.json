@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "bogotahorrorfilmfest.com/programacion/ (arreglo PROGRAMACION del HTML) + IG p/DdcszK2Dn7g (franjas nacionales)",
-  "capturado": "2026-10-07",
+  "capturado": "2026-10-15",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "radar": 1030,
@@ -379,6 +379,7 @@
      "lbSlug": "chaika-2025",
      "tmdb_id": 1689999,
      "synopsis": "Valentina, una cosmonauta rusa de 76 años, llega a una Cuba ucrónica y nebulosa tras recibir, con treinta años de retraso, una invitación para una expedición agrícola a Marte. Entre paisajes difusos y promesas del pasado, busca las ruinas de un futuro que nunca llegó.",
+     "genre": "Ciencia Ficción",
      "synopsis_lang": "es"
     }
    ]
@@ -410,7 +411,14 @@
      "flags": "🇰🇷",
      "year": 2024,
      "duration": "105 min",
-     "synopsis": "República de Corea, 2010. Durante la epidemia de la enfermedad de manos, pies y boca que ha condenado a miles de animales a ser sacrificados de forma brutal, un cerdo logra escapar y sobrevivir con un sueño: convertirse en humano. En otra parte del país, un soldado humillado por sus superiores mata a un oficial y se da a la fuga con una idea en la cabeza: el deseo de transformarse en un animal.",
+     "poster": "/assets/bhff-2026/cerdo-que-sobrevivio-a-la-fiebre-aftosa.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "pig-that-survived-foot-and-mouth-disease",
+     "tmdb_id": 1298085,
+     "synopsis": "Un cerdo que quiere ser humano está dispuesto a darlo todo, cueste lo que cueste. Un humano que quiere ser animal está dispuesto a renunciar a todo.",
+     "synopsis_en": "A pig wanting to be a human is ready to give it his all, whatever the cost. A human wanting to be an animal is ready to give up everything.",
+     "title_en": "Pig That Survived Foot-and-Mouth Disease",
+     "genre": "Animación",
      "synopsis_lang": "es"
     },
     {
@@ -459,9 +467,14 @@
      "flags": "🇨🇴",
      "year": 2025,
      "duration": "19 min",
-     "poster": "/assets/filcmar-2026/el-ocaso-de-los-dioses.jpg",
-     "synopsis": "Aurora, una joven que forma parte de una secta religiosa junto a su madre, duda de la veracidad de las palabras de Bernabé, el líder, y busca la manera de hacerles comprender a ella y al resto de la comunidad que la verdad no está ahí. Todo se vuelve caótico cuando Aurora comienza a tener vínculos con el ídolo sagrado y su objetivo cambia drásticamente, alterando la normalidad de la comunidad.",
-     "posterSource": "oficial",
+     "poster": "/assets/bhff-2026/el-ocaso-de-los-dioses.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "el-ocaso-de-los-dioses-nightfall-of-gods",
+     "tmdb_id": 1526356,
+     "synopsis": "Aurora, una joven que junto a su madre hace parte de una secta religiosa, duda de la veracidad de las palabras de Bernabé, el líder y busca la manera de hacerle entender tanto a su madre como a el resto de la comunidad que en ese lugar no está la verdad. Todo se torna caótico cuando Aurora comienza a tener conexiones con el ídolo sagrado y su objetivo cambia drásticamente, cambiando la normalidad de la comunidad.",
+     "synopsis_en": "Aurora, a young woman who is part of a religious sect with her mother, doubts the veracity of the words of Bernabé, the leader, and seeks a way to make her mother and the rest of the community understand that the truth is not there. Everything becomes chaotic when Aurora begins to have connections with the sacred idol and her objective changes drastically, changing the normality of the community.",
+     "title_en": "El Ocaso de los Dioses (Nightfall of Gods)",
+     "genre": "Drama",
      "synopsis_lang": "es"
     },
     {
@@ -770,7 +783,12 @@
      "flags": "🇺🇸",
      "year": 2025,
      "duration": "90 min",
-     "synopsis_en": "It tells the story of Lita (Hannah Fierman), a dominatrix who falls on hard times and takes up a side gig as a phony spiritual medium. One night during a séance, an actual incubus demon (Nivek Ogre) is accidentally summoned and attaches itself to her. Lita seeks the help of Father Veto (Aurelio Voltaire), the priest who presides over the church across the street from her dungeon, and together they join forces to try and send the demon back to Hell!"
+     "poster": "/assets/bhff-2026/la-demonatrix.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "the-demonatrix",
+     "tmdb_id": 1567192,
+     "synopsis_en": "A dominatrix accidentally summons an incubus during a séance, requiring her to team up with the neighborhood priest to exorcise the demon.",
+     "genre": "Terror"
     },
     {
      "title": "Gabriel",
@@ -780,6 +798,7 @@
      "poster": "/assets/bhff-2026/gabriel.jpg",
      "posterSource": "oficial",
      "synopsis": "Helena, una joven atormentada por inquietantes visiones, se encuentra en una antigua habitación infantil donde es inundada por recuerdos aterradores. A través de las visiones, es testigo del sufrimiento de un niño llamado Gabriel, quien fue maltratado y asesinado por su padre violento y borracho. Elena descubre un diario que parece contar la trágica historia de Gabriel.",
+     "genre": "Ficción",
      "synopsis_lang": "es"
     }
    ]
@@ -851,6 +870,7 @@
      "lbSlug": "que-el-cielo-nos-perdone",
      "tmdb_id": 1565878,
      "synopsis": "Colombia, 1951: En medio de La Violencia, el período de brutal guerra política entre liberales y conservadores, un par de chulavitas –asesinos a sueldo pagados por el gobierno– acechan a un sacerdote en la oscuridad de la noche, esperando que los conduzca a la cabaña en el bosque en donde se esconden sus próximas víctimas. Pero el horror que encontrarán allí es mil veces peor que el dolor que pensaban infligir.",
+     "synopsis_en": "Colombia, 1951. In the thick of La Violencia, the period of brutal political war between Liberals and Conservatives, two chulavitas —hired killers on the government’s payroll— stalk a priest through the dark, waiting for him to lead them to the cabin in the woods where their next victims are hiding. But the horror they find there is a thousand times worse than the pain they meant to inflict.",
      "genre": "Terror",
      "synopsis_lang": "es"
     },
@@ -928,8 +948,11 @@
      "year": 2025,
      "duration": "15 min",
      "poster": "/assets/bhff-2026/nocturna.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
+     "lbSlug": "nocturna-2024-2",
+     "tmdb_id": 1355178,
      "synopsis": "Max regresa a casa después de un largo día de trabajo. Una mujer ebria se sube al mismo vagón de metro en el que viaja él. Su actuar errante llama la atención de otro pasajero que no tiene buenas intenciones. Max será testigo de lo que pasa en el Metro por las noches.",
+     "genre": "Terror",
      "synopsis_lang": "es"
     },
     {
@@ -1073,8 +1096,13 @@
      "flags": "🇪🇸",
      "year": 2026,
      "duration": "17 min",
-     "poster": "/assets/fantasmagoria-2026/siempre-hay-un-monstruo.jpg",
-     "posterSource": "oficial"
+     "poster": "/assets/bhff-2026/siempre-hay-un-monstruo.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "siempre-hay-un-monstruo",
+     "tmdb_id": 1794456,
+     "synopsis": "Un grupo de agentes investiga un incidente ocurrido durante una fiesta privada en la casa de un joven actor. Lo que comienza como un caso rutinario se convierte rápidamente en el caso más monstruoso y aterrador de sus vidas.",
+     "genre": "Terror",
+     "synopsis_lang": "es"
     }
    ]
   },
@@ -1179,7 +1207,8 @@
      "year": 2026,
      "duration": "13 min",
      "poster": "/assets/bhff-2026/bajo-el-mismo-techo.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "genre": "Thriller"
     },
     {
      "title": "Ubicua",
@@ -1188,9 +1217,11 @@
      "flags": "🇨🇴",
      "year": 2026,
      "duration": "12 min",
-     "poster": "/assets/fantasmagoria-2026/ubicua.jpg",
-     "synopsis": "Un hombre comienza a notar un patrón: en cada lugar que descubre con ayuda de una web de mapas, la misma presencia ya está allí, esperándolo.",
-     "posterSource": "oficial",
+     "poster": "/assets/bhff-2026/ubicua.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "ubicua",
+     "tmdb_id": 1794425,
+     "synopsis": "Quién no se ha visto en las altas horas de la noche, cayendo en un agujero de conejo virtual que nos atrapa por horas en vez de hacer nuestras labores?… Que tal que ese tema se convirtiera en realidad? Un relato de terror digital que estremecerá a todos los trabajadores independientes.",
      "synopsis_lang": "es"
     }
    ]
@@ -1220,7 +1251,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-07T19:21:32",
+  "fecha": "2026-10-15T07:21:11",
   "plan_sha": "2ffdc359c921f8c4",
   "paso": 7,
   "cmd": "python3 pipeline/ensamblar.py bhff-2026"

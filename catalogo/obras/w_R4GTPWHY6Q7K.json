@@ -3,13 +3,11 @@
  "titulo_original": "El Susurro",
  "anio": 2025,
  "paises": [
-  "U",
-  "Y",
-  "A",
-  "R"
+  "AR",
+  "UY"
  ],
  "directores": [
-  "Gustavo Hernández Ibáñez"
+  "Gustavo Hernández"
  ],
  "aliases": [
   {
@@ -19,26 +17,32 @@
   }
  ],
  "sinopsis": {
-  "es": "Lucía y Adrián, dos hermanos que huyen de la oscura herencia de su padre vampiro, llegan a una casona aislada en el bosque, buscando refugio del pasado. Su intento de olvidar se interrumpe cuando un gato les trae un dedo humano, lo que revela un secreto aterrador: sus vecinos forman parte de una red criminal que secuestra adolescentes para producir películas snuff, y planean deshacerse de ellos. Mientras Lucía lucha por proteger a su hermano, deberá enfrentar una oscura maldición familiar que los persigue en su aparente refugio.",
-  "en": "Lucía and Adrián, two siblings fleeing the dark legacy of their vampire father, arrive at an isolated house in the woods seeking refuge from the past. Their attempt to forget is shattered when a cat brings them a human finger, revealing a terrifying secret: their neighbors belong to a criminal ring that abducts teenagers to produce snuff films, and they plan to get rid of them too. As Lucía fights to protect her brother, she must face a dark family curse that follows them into their supposed sanctuary."
+  "es": "Lucía y Adrián huyen de su padre violento a una mansión. Descubren una red de snuff y una maldición familiar.",
+  "en": "Fleeing from their violent father, siblings Lucía and Adrián take refuge in a remote mansion. With the help of a hidden micro-camera on a cat, Lucía uncovers a terrifying secret: their neighbors are part of a criminal network that kidnaps teenage girls to make snuff films, and they intend to get rid of the siblings. As Lucía fights to protect her brother, she must face a dark family curse that follows them into their newfound sanctuary."
  },
  "generos": [
   "Terror"
  ],
  "afiche": {
-  "archivo": "/assets/fantasofest/el-susurro.jpg",
-  "veredicto": "oficial-festival"
+  "archivo": "/assets/bhff-2026/el-susurro.jpg",
+  "veredicto": "oficial"
  },
  "xref": {
+  "tmdb": 1534530,
   "letterboxd": "the-whisper-2025"
  },
  "versiones": [
+  {
+   "etiqueta": "89 min",
+   "duracion_min": 89
+  },
   {
    "etiqueta": "100 min",
    "duracion_min": 100
   }
  ],
  "presentaciones": [
+  "bhff-2026",
   "fantasofest-2026"
  ]
 }

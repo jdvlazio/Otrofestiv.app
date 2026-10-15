@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, emparejado con ficha_verifica() (director + año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-10-07"
+  "capturado": "2026-10-15"
  },
  "obras": [
   {
@@ -25,13 +25,31 @@
    "posterSource": "tmdb"
   },
   {
+   "titulo": "Cerdo que Sobrevivió a la Fiebre Aftosa",
+   "tmdb_id": 1298085,
+   "titulo_original": "구제역에서 살아 돌아온 돼지",
+   "poster_path": "/mdLBV4hI97tteESkXJRPbDm8Hhu.jpg",
+   "synopsis_es": "Un cerdo que quiere ser humano está dispuesto a darlo todo, cueste lo que cueste. Un humano que quiere ser animal está dispuesto a renunciar a todo.",
+   "synopsis_en": "A pig wanting to be a human is ready to give it his all, whatever the cost. A human wanting to be an animal is ready to give up everything.",
+   "genero": "Animación",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 105,
+   "pais_tmdb": "South Korea",
+   "title_en": "Pig That Survived Foot-and-Mouth Disease",
+   "lbSlug": "pig-that-survived-foot-and-mouth-disease",
+   "_verificado": "declarada a mano: «The Pig That Survived Foot-and-Mouth Disease», Hur Bum-wook, 105 min: director y obra coinciden con la parrilla; el título en español no casa solo con TMDB",
+   "_director": "Hur Bum-Wook",
+   "_sondeado": "2026-10-15",
+   "poster": "/assets/bhff-2026/cerdo-que-sobrevivio-a-la-fiebre-aftosa.jpg",
+   "posterSource": "tmdb"
+  },
+  {
    "titulo": "Chaika",
    "tmdb_id": 1689999,
    "titulo_original": "Chaika",
    "poster_path": "/fhvA2plccJRbTQgL6HRAAUPhPic.jpg",
    "synopsis_es": "Valentina, una cosmonauta rusa de 76 años, llega a una Cuba ucrónica y nebulosa tras recibir, con treinta años de retraso, una invitación para una expedición agrícola a Marte. Entre paisajes difusos y promesas del pasado, busca las ruinas de un futuro que nunca llegó.",
    "synopsis_en": "",
-   "genero": "",
    "anio_tmdb": 2025,
    "duracion_tmdb": 15,
    "pais_tmdb": "",
@@ -86,7 +104,11 @@
     }
    ],
    "poster": "/assets/bhff-2026/chaika.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "genero": "Ciencia Ficción",
+   "_heredado": {
+    "genero": "catálogo w_R4EP71550W43 (cineautopsia-2026, fantasmagoria-2026, fantasofest-2026, ficpa-2026, narrarelfuturo-2026, popayan-2026)"
+   }
   },
   {
    "titulo": "Donde Duermen los Sueños",
@@ -112,18 +134,34 @@
   },
   {
    "titulo": "El Ocaso De Los Dioses",
+   "tmdb_id": 1526356,
+   "titulo_original": "El Ocaso de los Dioses",
+   "poster_path": "/bpxLaIkyd7L0dtlGkAZh4fednki.jpg",
+   "synopsis_es": "Aurora, una joven que junto a su madre hace parte de una secta religiosa, duda de la veracidad de las palabras de Bernabé, el líder y busca la manera de hacerle entender tanto a su madre como a el resto de la comunidad que en ese lugar no está la verdad. Todo se torna caótico cuando Aurora comienza a tener conexiones con el ídolo sagrado y su objetivo cambia drásticamente, cambiando la normalidad de la comunidad.",
+   "synopsis_en": "Aurora, a young woman who is part of a religious sect with her mother, doubts the veracity of the words of Bernabé, the leader, and seeks a way to make her mother and the rest of the community understand that the truth is not there. Everything becomes chaotic when Aurora begins to have connections with the sacred idol and her objective changes drastically, changing the normality of the community.",
+   "genero": "Drama",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 24,
+   "pais_tmdb": "Colombia",
+   "title_en": "El Ocaso de los Dioses (Nightfall of Gods)",
+   "lbSlug": "el-ocaso-de-los-dioses-nightfall-of-gods",
+   "_verificado": "el catálogo ya la tiene (w_R4JN02952TSE, filcmar-2026)",
+   "work_id": "w_R4JN02952TSE",
+   "_director": "Juan Pablo Rendón",
+   "_sondeado": "2026-10-15",
    "_ya_publicada": [
     {
      "festival": "filcmar-2026",
      "titulo": "El ocaso de los dioses",
+     "tmdb_id": 1526356,
      "poster": "/assets/filcmar-2026/el-ocaso-de-los-dioses.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
+     "lbSlug": "el-ocaso-de-los-dioses-nightfall-of-gods",
      "sinopsis": "Aurora, una joven que forma parte de una secta religiosa junto a su madre, duda de la veracidad de las palabras de Bernabé, el líder, y busca la manera de hacerles comprender a ella y al resto de la comunidad que la verdad no está ahí. Todo se vuelve caótico cuando Aurora comienza a tener vínculos con el ídolo sagrado y su objetivo cambia drásticamente, alterando la normalidad de la comunidad."
     }
    ],
-   "poster": "/assets/filcmar-2026/el-ocaso-de-los-dioses.jpg",
-   "_verificado": "ya publicada en filcmar-2026: se reusa su afiche",
-   "sinopsis": "Aurora, una joven que forma parte de una secta religiosa junto a su madre, duda de la veracidad de las palabras de Bernabé, el líder, y busca la manera de hacerles comprender a ella y al resto de la comunidad que la verdad no está ahí. Todo se vuelve caótico cuando Aurora comienza a tener vínculos con el ídolo sagrado y su objetivo cambia drásticamente, alterando la normalidad de la comunidad."
+   "poster": "/assets/bhff-2026/el-ocaso-de-los-dioses.jpg",
+   "posterSource": "tmdb"
   },
   {
    "titulo": "El Susurro",
@@ -270,6 +308,24 @@
     }
    ],
    "poster": "/assets/bhff-2026/iris-de-cristal.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "La Demonatrix",
+   "tmdb_id": 1567192,
+   "titulo_original": "The Demonatrix",
+   "poster_path": "/9thgK2W75YfY7zSw82YQBNt39FF.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "A dominatrix accidentally summons an incubus during a séance, requiring her to team up with the neighborhood priest to exorcise the demon.",
+   "genero": "Terror",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 90,
+   "pais_tmdb": "",
+   "lbSlug": "the-demonatrix",
+   "_verificado": "declarada a mano: «The Demonatrix», Aurelio Voltaire y Jeff Ferrell, 90 min: los dos directores coinciden con la parrilla; el título en español no casa solo con TMDB",
+   "_director": "Jeff Ferrell, Aurelio Voltair",
+   "_sondeado": "2026-10-15",
+   "poster": "/assets/bhff-2026/la-demonatrix.jpg",
    "posterSource": "tmdb"
   },
   {
@@ -451,6 +507,25 @@
    "posterSource": "tmdb"
   },
   {
+   "titulo": "Nocturna",
+   "tmdb_id": 1355178,
+   "titulo_original": "Nocturna",
+   "poster_path": "/sZtS0DaOK5SNrIp8mqzAFg6QEUb.jpg",
+   "synopsis_es": "Max regresa a casa después de un largo día de trabajo. Una mujer ebria se sube al mismo vagón de metro en el que viaja él. Su actuar errante llama la atención de otro pasajero que no tiene buenas intenciones. Max será testigo de lo que pasa en el Metro por las noches.",
+   "synopsis_en": "",
+   "genero": "Terror",
+   "anio_tmdb": 2024,
+   "duracion_tmdb": 14,
+   "pais_tmdb": "Mexico",
+   "lbSlug": "nocturna-2024-2",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Nocturna",
+   "_director": "Pablo Olmos Arrayales",
+   "_sondeado": "2026-10-15",
+   "poster": "/assets/bhff-2026/nocturna.jpg",
+   "posterSource": "tmdb"
+  },
+  {
    "titulo": "Pactum",
    "tmdb_id": 1647552,
    "titulo_original": "Pactum",
@@ -553,7 +628,6 @@
    "titulo_original": "Que el cielo nos perdone",
    "poster_path": "/fyvT3ZlgNJO5lswCC8XdXkXFVnB.jpg",
    "synopsis_es": "Colombia, 1951: En medio de La Violencia, el período de brutal guerra política entre liberales y conservadores, un par de chulavitas –asesinos a sueldo pagados por el gobierno– acechan a un sacerdote en la oscuridad de la noche, esperando que los conduzca a la cabaña en el bosque en donde se esconden sus próximas víctimas. Pero el horror que encontrarán allí es mil veces peor que el dolor que pensaban infligir.",
-   "synopsis_en": "",
    "genero": "Terror",
    "anio_tmdb": 2025,
    "duracion_tmdb": 0,
@@ -601,7 +675,11 @@
     }
    ],
    "poster": "/assets/bhff-2026/que-el-cielo-nos-perdone.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "synopsis_en": "Colombia, 1951. In the thick of La Violencia, the period of brutal political war between Liberals and Conservatives, two chulavitas —hired killers on the government’s payroll— stalk a priest through the dark, waiting for him to lead them to the cabin in the woods where their next victims are hiding. But the horror they find there is a thousand times worse than the pain they meant to inflict.",
+   "_heredado": {
+    "synopsis_en": "catálogo w_R4GP49AWA2ZH (fantasmagoria-2026, ficma-2026, siembrafest-2026, villadelcine-2026)"
+   }
   },
   {
    "titulo": "Replay",
@@ -624,6 +702,20 @@
   },
   {
    "titulo": "Siempre hay un monstruo",
+   "tmdb_id": 1794456,
+   "titulo_original": "Siempre hay un Monstruo",
+   "poster_path": "/y86znNNqzkzwJSMXwcFCcoJ4mpN.jpg",
+   "synopsis_es": "Un grupo de agentes investiga un incidente ocurrido durante una fiesta privada en la casa de un joven actor. Lo que comienza como un caso rutinario se convierte rápidamente en el caso más monstruoso y aterrador de sus vidas.",
+   "synopsis_en": "",
+   "genero": "Terror",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 16,
+   "pais_tmdb": "",
+   "lbSlug": "siempre-hay-un-monstruo",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Siempre hay un monstruo",
+   "_director": "Gastón Haag",
+   "_sondeado": "2026-10-15",
    "_ya_publicada": [
     {
      "festival": "fantasmagoria-2026",
@@ -632,8 +724,8 @@
      "posterSource": "oficial"
     }
    ],
-   "poster": "/assets/fantasmagoria-2026/siempre-hay-un-monstruo.jpg",
-   "_verificado": "ya publicada en fantasmagoria-2026: se reusa su afiche"
+   "poster": "/assets/bhff-2026/siempre-hay-un-monstruo.jpg",
+   "posterSource": "tmdb"
   },
   {
    "titulo": "Sierra: El Álbum Mortuorio",
@@ -704,18 +796,33 @@
   },
   {
    "titulo": "Ubicua",
+   "tmdb_id": 1794425,
+   "titulo_original": "Ubicua",
+   "poster_path": "/cVJGywwUIUXNgtMSEZzNzIvDvGU.jpg",
+   "synopsis_es": "Quién no se ha visto en las altas horas de la noche, cayendo en un agujero de conejo virtual que nos atrapa por horas en vez de hacer nuestras labores?… Que tal que ese tema se convirtiera en realidad? Un relato de terror digital que estremecerá a todos los trabajadores independientes.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 13,
+   "pais_tmdb": "",
+   "lbSlug": "ubicua",
+   "_verificado": "el catálogo ya la tiene (w_R4GDA5C9MZC8, fantasmagoria-2026)",
+   "work_id": "w_R4GDA5C9MZC8",
+   "_director": "Juan González Henao",
+   "_sondeado": "2026-10-15",
    "_ya_publicada": [
     {
      "festival": "fantasmagoria-2026",
      "titulo": "Ubicua",
+     "tmdb_id": 1794425,
      "poster": "/assets/fantasmagoria-2026/ubicua.jpg",
-     "posterSource": "oficial"
+     "posterSource": "tmdb",
+     "lbSlug": "ubicua",
+     "sinopsis": "Quién no se ha visto en las altas horas de la noche, cayendo en un agujero de conejo virtual que nos atrapa por horas en vez de hacer nuestras labores?… Que tal que ese tema se convirtiera en realidad? Un relato de terror digital que estremecerá a todos los trabajadores independientes."
     }
    ],
-   "poster": "/assets/fantasmagoria-2026/ubicua.jpg",
-   "_verificado": "ya publicada en fantasmagoria-2026: se reusa su afiche",
-   "sinopsis": "Un hombre comienza a notar un patrón: en cada lugar que descubre con ayuda de una web de mapas, la misma presencia ya está allí, esperándolo.",
-   "_sinopsis": "https://www.semana.com/cultura/arte/articulo/agendese-en-bogota-porque-este-junio-es-muy-cultural/202613/"
+   "poster": "/assets/bhff-2026/ubicua.jpg",
+   "posterSource": "tmdb"
   },
   {
    "titulo": "Yatsi y el Espíritu del Río",
@@ -751,7 +858,11 @@
    "titulo": "Bajo El Mismo Techo",
    "poster": "/assets/bhff-2026/bajo-el-mismo-techo.jpg",
    "posterSource": "oficial",
-   "_afiche": "declarado: bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-31.webp, recortado por dentro del marco (700×1105, marco 15 px)"
+   "_afiche": "declarado: bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-31.webp, recortado por dentro del marco (700×1105, marco 15 px)",
+   "genero": "Thriller",
+   "_heredado": {
+    "genero": "catálogo w_R4NEB2NAGK3C (siembrafest-2026)"
+   }
   },
   {
    "titulo": "Búhos",
@@ -795,7 +906,11 @@
    "posterSource": "oficial",
    "_afiche": "declarado: bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-51.webp, recortado por dentro del marco (714×1076, marco 15 px)",
    "sinopsis": "Helena, una joven atormentada por inquietantes visiones, se encuentra en una antigua habitación infantil donde es inundada por recuerdos aterradores. A través de las visiones, es testigo del sufrimiento de un niño llamado Gabriel, quien fue maltratado y asesinado por su padre violento y borracho. Elena descubre un diario que parece contar la trágica historia de Gabriel.",
-   "_sinopsis": "https://lavillaproducciones.com/gabriel"
+   "_sinopsis": "https://lavillaproducciones.com/gabriel",
+   "genero": "Ficción",
+   "_heredado": {
+    "genero": "catálogo w_R4J76XTP6BB4 (ficmontanas-2026)"
+   }
   },
   {
    "titulo": "Happy",
@@ -822,14 +937,6 @@
    "_afiche": "declarado: bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-37.webp, recortado por dentro del marco (698×1103, marco 16 px)"
   },
   {
-   "titulo": "Nocturna",
-   "poster": "/assets/bhff-2026/nocturna.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-13.webp, recortado por dentro del marco (764×1078, marco 11 px)",
-   "sinopsis": "Max regresa a casa después de un largo día de trabajo. Una mujer ebria se sube al mismo vagón de metro en el que viaja él. Su actuar errante llama la atención de otro pasajero que no tiene buenas intenciones. Max será testigo de lo que pasa en el Metro por las noches.",
-   "_sinopsis": "https://www.feratumfilmfest.com/nocturna/"
-  },
-  {
    "titulo": "Parásitos",
    "poster": "/assets/bhff-2026/parasitos.jpg",
    "posterSource": "oficial",
@@ -852,16 +959,6 @@
    "poster": "/assets/bhff-2026/vientre.jpg",
    "posterSource": "oficial",
    "_afiche": "declarado: bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-48.webp, recortado por dentro del marco (780×1106, marco 15 px)"
-  },
-  {
-   "titulo": "Cerdo que Sobrevivió a la Fiebre Aftosa",
-   "sinopsis": "República de Corea, 2010. Durante la epidemia de la enfermedad de manos, pies y boca que ha condenado a miles de animales a ser sacrificados de forma brutal, un cerdo logra escapar y sobrevivir con un sueño: convertirse en humano. En otra parte del país, un soldado humillado por sus superiores mata a un oficial y se da a la fuga con una idea en la cabeza: el deseo de transformarse en un animal.",
-   "_sinopsis": "https://sitgesfilmfestival.com/es/film/2024/pig-survived-foot-and-mouth-disease"
-  },
-  {
-   "titulo": "La Demonatrix",
-   "synopsis_en": "It tells the story of Lita (Hannah Fierman), a dominatrix who falls on hard times and takes up a side gig as a phony spiritual medium. One night during a séance, an actual incubus demon (Nivek Ogre) is accidentally summoned and attaches itself to her. Lita seeks the help of Father Veto (Aurelio Voltaire), the priest who presides over the church across the street from her dungeon, and together they join forces to try and send the demon back to Hell!",
-   "_sinopsis": "https://www.cine-excess.co.uk/the-demonatrix-aurelio-voltaire-jeff-ferrell-usa-2025.html"
   },
   {
    "titulo": "MEAT the Movie",
@@ -894,13 +991,30 @@
    "poster": "/assets/bhff-2026/ano-de-casados.jpg",
    "posterSource": "tmdb"
   },
+  "Cerdo que Sobrevivió a la Fiebre Aftosa": {
+   "tmdb_id": 1298085,
+   "titulo_original": "구제역에서 살아 돌아온 돼지",
+   "poster_path": "/mdLBV4hI97tteESkXJRPbDm8Hhu.jpg",
+   "synopsis_es": "Un cerdo que quiere ser humano está dispuesto a darlo todo, cueste lo que cueste. Un humano que quiere ser animal está dispuesto a renunciar a todo.",
+   "synopsis_en": "A pig wanting to be a human is ready to give it his all, whatever the cost. A human wanting to be an animal is ready to give up everything.",
+   "genero": "Animación",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 105,
+   "pais_tmdb": "South Korea",
+   "title_en": "Pig That Survived Foot-and-Mouth Disease",
+   "lbSlug": "pig-that-survived-foot-and-mouth-disease",
+   "_verificado": "declarada a mano: «The Pig That Survived Foot-and-Mouth Disease», Hur Bum-wook, 105 min: director y obra coinciden con la parrilla; el título en español no casa solo con TMDB",
+   "_director": "Hur Bum-Wook",
+   "_sondeado": "2026-10-15",
+   "poster": "/assets/bhff-2026/cerdo-que-sobrevivio-a-la-fiebre-aftosa.jpg",
+   "posterSource": "tmdb"
+  },
   "Chaika": {
    "tmdb_id": 1689999,
    "titulo_original": "Chaika",
    "poster_path": "/fhvA2plccJRbTQgL6HRAAUPhPic.jpg",
    "synopsis_es": "Valentina, una cosmonauta rusa de 76 años, llega a una Cuba ucrónica y nebulosa tras recibir, con treinta años de retraso, una invitación para una expedición agrícola a Marte. Entre paisajes difusos y promesas del pasado, busca las ruinas de un futuro que nunca llegó.",
    "synopsis_en": "",
-   "genero": "",
    "anio_tmdb": 2025,
    "duracion_tmdb": 15,
    "pais_tmdb": "",
@@ -955,7 +1069,11 @@
     }
    ],
    "poster": "/assets/bhff-2026/chaika.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "genero": "Ciencia Ficción",
+   "_heredado": {
+    "genero": "catálogo w_R4EP71550W43 (cineautopsia-2026, fantasmagoria-2026, fantasofest-2026, ficpa-2026, narrarelfuturo-2026, popayan-2026)"
+   }
   },
   "Donde Duermen los Sueños": {
    "tmdb_id": 1168428,
@@ -977,6 +1095,36 @@
    "posterSource": "tmdb",
    "sinopsis": "Luego de un accidente de tránsito, un hombre cae en un coma, quedando inmerso en un mundo onírico en donde la mujer que ama, y que perdió en el accidente, sigue con vida. A partir de entonces, empieza un viaje entre los sueños y la realidad, en el que el hombre debe decidir si quedarse con la mujer que ama, o dejarla ir y seguir con su vida.",
    "_sinopsis": "https://festivaldelima.com/2026/pelicula/donde-duermen-los-suenos/"
+  },
+  "El Ocaso De Los Dioses": {
+   "tmdb_id": 1526356,
+   "titulo_original": "El Ocaso de los Dioses",
+   "poster_path": "/bpxLaIkyd7L0dtlGkAZh4fednki.jpg",
+   "synopsis_es": "Aurora, una joven que junto a su madre hace parte de una secta religiosa, duda de la veracidad de las palabras de Bernabé, el líder y busca la manera de hacerle entender tanto a su madre como a el resto de la comunidad que en ese lugar no está la verdad. Todo se torna caótico cuando Aurora comienza a tener conexiones con el ídolo sagrado y su objetivo cambia drásticamente, cambiando la normalidad de la comunidad.",
+   "synopsis_en": "Aurora, a young woman who is part of a religious sect with her mother, doubts the veracity of the words of Bernabé, the leader, and seeks a way to make her mother and the rest of the community understand that the truth is not there. Everything becomes chaotic when Aurora begins to have connections with the sacred idol and her objective changes drastically, changing the normality of the community.",
+   "genero": "Drama",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 24,
+   "pais_tmdb": "Colombia",
+   "title_en": "El Ocaso de los Dioses (Nightfall of Gods)",
+   "lbSlug": "el-ocaso-de-los-dioses-nightfall-of-gods",
+   "_verificado": "el catálogo ya la tiene (w_R4JN02952TSE, filcmar-2026)",
+   "work_id": "w_R4JN02952TSE",
+   "_director": "Juan Pablo Rendón",
+   "_sondeado": "2026-10-15",
+   "_ya_publicada": [
+    {
+     "festival": "filcmar-2026",
+     "titulo": "El ocaso de los dioses",
+     "tmdb_id": 1526356,
+     "poster": "/assets/filcmar-2026/el-ocaso-de-los-dioses.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "el-ocaso-de-los-dioses-nightfall-of-gods",
+     "sinopsis": "Aurora, una joven que forma parte de una secta religiosa junto a su madre, duda de la veracidad de las palabras de Bernabé, el líder, y busca la manera de hacerles comprender a ella y al resto de la comunidad que la verdad no está ahí. Todo se vuelve caótico cuando Aurora comienza a tener vínculos con el ídolo sagrado y su objetivo cambia drásticamente, alterando la normalidad de la comunidad."
+    }
+   ],
+   "poster": "/assets/bhff-2026/el-ocaso-de-los-dioses.jpg",
+   "posterSource": "tmdb"
   },
   "El Susurro": {
    "tmdb_id": 1534530,
@@ -1089,6 +1237,23 @@
     }
    ],
    "poster": "/assets/bhff-2026/iris-de-cristal.jpg",
+   "posterSource": "tmdb"
+  },
+  "La Demonatrix": {
+   "tmdb_id": 1567192,
+   "titulo_original": "The Demonatrix",
+   "poster_path": "/9thgK2W75YfY7zSw82YQBNt39FF.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "A dominatrix accidentally summons an incubus during a séance, requiring her to team up with the neighborhood priest to exorcise the demon.",
+   "genero": "Terror",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 90,
+   "pais_tmdb": "",
+   "lbSlug": "the-demonatrix",
+   "_verificado": "declarada a mano: «The Demonatrix», Aurelio Voltaire y Jeff Ferrell, 90 min: los dos directores coinciden con la parrilla; el título en español no casa solo con TMDB",
+   "_director": "Jeff Ferrell, Aurelio Voltair",
+   "_sondeado": "2026-10-15",
+   "poster": "/assets/bhff-2026/la-demonatrix.jpg",
    "posterSource": "tmdb"
   },
   "La Habitación del Macho Cabrío": {
@@ -1263,6 +1428,24 @@
    "poster": "/assets/bhff-2026/no-es-el-fin-del-mundo.jpg",
    "posterSource": "tmdb"
   },
+  "Nocturna": {
+   "tmdb_id": 1355178,
+   "titulo_original": "Nocturna",
+   "poster_path": "/sZtS0DaOK5SNrIp8mqzAFg6QEUb.jpg",
+   "synopsis_es": "Max regresa a casa después de un largo día de trabajo. Una mujer ebria se sube al mismo vagón de metro en el que viaja él. Su actuar errante llama la atención de otro pasajero que no tiene buenas intenciones. Max será testigo de lo que pasa en el Metro por las noches.",
+   "synopsis_en": "",
+   "genero": "Terror",
+   "anio_tmdb": 2024,
+   "duracion_tmdb": 14,
+   "pais_tmdb": "Mexico",
+   "lbSlug": "nocturna-2024-2",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Nocturna",
+   "_director": "Pablo Olmos Arrayales",
+   "_sondeado": "2026-10-15",
+   "poster": "/assets/bhff-2026/nocturna.jpg",
+   "posterSource": "tmdb"
+  },
   "Pactum": {
    "tmdb_id": 1647552,
    "titulo_original": "Pactum",
@@ -1361,7 +1544,6 @@
    "titulo_original": "Que el cielo nos perdone",
    "poster_path": "/fyvT3ZlgNJO5lswCC8XdXkXFVnB.jpg",
    "synopsis_es": "Colombia, 1951: En medio de La Violencia, el período de brutal guerra política entre liberales y conservadores, un par de chulavitas –asesinos a sueldo pagados por el gobierno– acechan a un sacerdote en la oscuridad de la noche, esperando que los conduzca a la cabaña en el bosque en donde se esconden sus próximas víctimas. Pero el horror que encontrarán allí es mil veces peor que el dolor que pensaban infligir.",
-   "synopsis_en": "",
    "genero": "Terror",
    "anio_tmdb": 2025,
    "duracion_tmdb": 0,
@@ -1409,7 +1591,11 @@
     }
    ],
    "poster": "/assets/bhff-2026/que-el-cielo-nos-perdone.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "synopsis_en": "Colombia, 1951. In the thick of La Violencia, the period of brutal political war between Liberals and Conservatives, two chulavitas —hired killers on the government’s payroll— stalk a priest through the dark, waiting for him to lead them to the cabin in the woods where their next victims are hiding. But the horror they find there is a thousand times worse than the pain they meant to inflict.",
+   "_heredado": {
+    "synopsis_en": "catálogo w_R4GP49AWA2ZH (fantasmagoria-2026, ficma-2026, siembrafest-2026, villadelcine-2026)"
+   }
   },
   "Replay": {
    "tmdb_id": 1677190,
@@ -1427,6 +1613,32 @@
    "_director": "Simón Matallana Nossa",
    "_sondeado": "2026-10-07",
    "poster": "/assets/bhff-2026/replay.jpg",
+   "posterSource": "tmdb"
+  },
+  "Siempre hay un monstruo": {
+   "tmdb_id": 1794456,
+   "titulo_original": "Siempre hay un Monstruo",
+   "poster_path": "/y86znNNqzkzwJSMXwcFCcoJ4mpN.jpg",
+   "synopsis_es": "Un grupo de agentes investiga un incidente ocurrido durante una fiesta privada en la casa de un joven actor. Lo que comienza como un caso rutinario se convierte rápidamente en el caso más monstruoso y aterrador de sus vidas.",
+   "synopsis_en": "",
+   "genero": "Terror",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 16,
+   "pais_tmdb": "",
+   "lbSlug": "siempre-hay-un-monstruo",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Siempre hay un monstruo",
+   "_director": "Gastón Haag",
+   "_sondeado": "2026-10-15",
+   "_ya_publicada": [
+    {
+     "festival": "fantasmagoria-2026",
+     "titulo": "Siempre Hay un Monstruo",
+     "poster": "/assets/fantasmagoria-2026/siempre-hay-un-monstruo.jpg",
+     "posterSource": "oficial"
+    }
+   ],
+   "poster": "/assets/bhff-2026/siempre-hay-un-monstruo.jpg",
    "posterSource": "tmdb"
   },
   "Sierra: El Álbum Mortuorio": {
@@ -1493,6 +1705,35 @@
    "poster": "/assets/bhff-2026/tarde-o-temprano.jpg",
    "posterSource": "tmdb"
   },
+  "Ubicua": {
+   "tmdb_id": 1794425,
+   "titulo_original": "Ubicua",
+   "poster_path": "/cVJGywwUIUXNgtMSEZzNzIvDvGU.jpg",
+   "synopsis_es": "Quién no se ha visto en las altas horas de la noche, cayendo en un agujero de conejo virtual que nos atrapa por horas en vez de hacer nuestras labores?… Que tal que ese tema se convirtiera en realidad? Un relato de terror digital que estremecerá a todos los trabajadores independientes.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 13,
+   "pais_tmdb": "",
+   "lbSlug": "ubicua",
+   "_verificado": "el catálogo ya la tiene (w_R4GDA5C9MZC8, fantasmagoria-2026)",
+   "work_id": "w_R4GDA5C9MZC8",
+   "_director": "Juan González Henao",
+   "_sondeado": "2026-10-15",
+   "_ya_publicada": [
+    {
+     "festival": "fantasmagoria-2026",
+     "titulo": "Ubicua",
+     "tmdb_id": 1794425,
+     "poster": "/assets/fantasmagoria-2026/ubicua.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "ubicua",
+     "sinopsis": "Quién no se ha visto en las altas horas de la noche, cayendo en un agujero de conejo virtual que nos atrapa por horas en vez de hacer nuestras labores?… Que tal que ese tema se convirtiera en realidad? Un relato de terror digital que estremecerá a todos los trabajadores independientes."
+    }
+   ],
+   "poster": "/assets/bhff-2026/ubicua.jpg",
+   "posterSource": "tmdb"
+  },
   "Yatsi y el Espíritu del Río": {
    "tmdb_id": 1321232,
    "titulo_original": "Yatsi y el Espíritu del Río",
@@ -1520,14 +1761,12 @@
   "Anax",
   "Bajo El Mismo Techo",
   "Búhos",
-  "Cerdo que Sobrevivió a la Fiebre Aftosa",
   "Cerdo que Sobrevivió a la Fiebre Aftosa + Yatsi y el Espíritu del Río",
   "Dentro del Santiago Horror: Horror sin Fronteras",
   "Eco",
   "El Diente Negro",
   "El Festín de las Moscas",
   "El Laberinto del Cuerpo",
-  "El Ocaso De Los Dioses",
   "El Susurro + Esquirlas de Caracol",
   "El Teatro: Monólogo de Horror",
   "Enigma",
@@ -1536,7 +1775,6 @@
   "Hasta que Amanezca",
   "Hay Algo Esperando",
   "Hush",
-  "La Demonatrix",
   "La Demonatrix + Gabriel",
   "La Muerte No Llega Sola",
   "La Noche De Las Bestias",
@@ -1546,177 +1784,150 @@
   "Mamá, la Casa No Es Segura",
   "Moviedreams + Chaika",
   "Niños Bien - Amanecer",
-  "Nocturna",
   "Parásitos",
   "Prototipo",
   "Ruth",
-  "Siempre hay un monstruo",
   "Tarde o Temprano + Siempre hay un monstruo",
   "The Callback",
-  "Ubicua",
   "Vientre",
   "Work in Progress"
  ],
  "_sin_ficha_sondeo": {
   "Algo No Está Bien": {
    "director": "",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-15"
   },
   "Anax": {
    "director": "LSDavid, Miguel Solís",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-15"
   },
   "Bajo El Mismo Techo": {
    "director": "Sophia Cadavid",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-15"
   },
   "Búhos": {
    "director": "Luis Enrique Vanegas",
-   "fecha": "2026-10-07"
-  },
-  "Cerdo que Sobrevivió a la Fiebre Aftosa": {
-   "director": "Hur Bum-Wook",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-15"
   },
   "Cerdo que Sobrevivió a la Fiebre Aftosa + Yatsi y el Espíritu del Río": {
    "director": "",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-15"
   },
   "Dentro del Santiago Horror: Horror sin Fronteras": {
    "director": "",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-15"
   },
   "Eco": {
    "director": "Valeria Lopera Salas",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-15"
   },
   "El Diente Negro": {
    "director": "Anita Serrano",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-15"
   },
   "El Festín de las Moscas": {
    "director": "Katerine Franco Garzón",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-15"
   },
   "El Laberinto del Cuerpo": {
    "director": "Esteban J. Corzo",
-   "fecha": "2026-10-07"
-  },
-  "El Ocaso De Los Dioses": {
-   "director": "Juan Pablo Rendón",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-15"
   },
   "El Susurro + Esquirlas de Caracol": {
    "director": "",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-15"
   },
   "El Teatro: Monólogo de Horror": {
    "director": "",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-15"
   },
   "Enigma": {
    "director": "Andrés Pulido",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-15"
   },
   "Gabriel": {
    "director": "Edwin Daniel Díaz",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-15"
   },
   "Happy": {
    "director": "Víctor Basallote",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-15"
   },
   "Hasta que Amanezca": {
    "director": "Sebastián Rosas Santamaría",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-15"
   },
   "Hay Algo Esperando": {
    "director": "",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-15"
   },
   "Hush": {
    "director": "Santiago Franco",
-   "fecha": "2026-10-07"
-  },
-  "La Demonatrix": {
-   "director": "Jeff Ferrell, Aurelio Voltair",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-15"
   },
   "La Demonatrix + Gabriel": {
    "director": "",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-15"
   },
   "La Muerte No Llega Sola": {
    "director": "",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-15"
   },
   "La Noche De Las Bestias": {
    "director": "Eduart Zapata",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-15"
   },
   "Los Lobo": {
    "director": "Saeed García Pérez",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-15"
   },
   "MEAT the Movie": {
    "director": "Roger Conners",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-15"
   },
   "MEAT the Movie + El Teatro: Monólogo de Horror": {
    "director": "",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-15"
   },
   "Mamá, la Casa No Es Segura": {
    "director": "",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-15"
   },
   "Moviedreams + Chaika": {
    "director": "",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-15"
   },
   "Niños Bien - Amanecer": {
    "director": "Daniel Vargas",
-   "fecha": "2026-10-07"
-  },
-  "Nocturna": {
-   "director": "Pablo Olmos Arrayales",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-15"
   },
   "Parásitos": {
    "director": "Samuel Andrés Ruiz Pico",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-15"
   },
   "Prototipo": {
    "director": "Jeff Ruiz Rave",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-15"
   },
   "Ruth": {
    "director": "Santiago Correa, Raquel Zapata, Marvin Cardona",
-   "fecha": "2026-10-07"
-  },
-  "Siempre hay un monstruo": {
-   "director": "Gastón Haag",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-15"
   },
   "Tarde o Temprano + Siempre hay un monstruo": {
    "director": "",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-15"
   },
   "The Callback": {
    "director": "Alvaro Pruneda",
-   "fecha": "2026-10-07"
-  },
-  "Ubicua": {
-   "director": "Juan González Henao",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-15"
   },
   "Vientre": {
    "director": "Pablo Sánchez Mejía, Moisés Cataño Rivillas",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-15"
   },
   "Work in Progress": {
    "director": "Diego Mezarina",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-15"
   }
  }
 }

@@ -16,13 +16,13 @@
   }
  ],
  "sinopsis": {
-  "es": "Narrafilms: Proyección con autodescripción – Personas con discapacidad visual."
+  "es": "Iris es una niña de 11 años que vive con su abuela y su gata Cris- tal. Una noche, mientras la abuela y la niña duermen, la Muerte llega inesperadamente para llevarse el alma de la abuela, pero por error extrae el alma de Iris. La gata Cristal, al presenciar lo ocurrido, intenta detener a la Muerte, quien escapa al más allá a través de un espejo, sin lograr atraparla."
  },
  "generos": [
   "Animación"
  ],
  "afiche": {
-  "archivo": "/assets/fantasmagoria-2026/iris-de-cristal.jpg",
+  "archivo": "/assets/bhff-2026/iris-de-cristal.jpg",
   "veredicto": "oficial"
  },
  "xref": {
@@ -31,11 +31,16 @@
  },
  "versiones": [
   {
+   "etiqueta": "12 min",
+   "duracion_min": 12
+  },
+  {
    "etiqueta": "13 min",
    "duracion_min": 13
   }
  ],
  "presentaciones": [
+  "bhff-2026",
   "fantasmagoria-2026"
  ]
 }

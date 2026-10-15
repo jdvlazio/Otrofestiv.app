@@ -1,14 +1,19 @@
 {
  "_provenance": {
   "fuente": "issue de radar #1030 — https://github.com/jdvlazio/Otrofestiv.app/issues/1030",
-  "capturado": "2026-10-07",
+  "capturado": "2026-10-15",
   "titulo": "RADAR: Bogotá Horror Film Festival (BHFF) — Bogotá, 22–31 OCT (8ª)",
   "estado": "OPEN",
-  "comentarios": 0
+  "comentarios": 1
  },
  "issue": 1030,
  "titulo": "RADAR: Bogotá Horror Film Festival (BHFF) — Bogotá, 22–31 OCT (8ª)",
  "estado": "OPEN",
  "cuerpo": "Fuente: lista ancla del radar (`pipeline/radar-ancla.json`) · detectado 7 oct 2026. No está en el calendario de Proimágenes.\n\n- **Estado:** anunciado 2026 (22–31 OCT)\n- **Web:** https://bogotahorrorfilmfest.com/ · **IG:** @bogotahorrorfest\n- **Programación:** https://bogotahorrorfilmfest.com/programacion/\n- **Notas:** Programación 2026 publicada (página + PDF descargable); sede principal Cinemateca de Bogotá. Estuvo en Proimágenes 2025, no en 2026.\n\nFuentes:\n- https://bogotahorrorfilmfest.com/programacion/\n- https://www.publimetro.co/cultura/2026/09/17/cine-de-horror-suspenso-y-fantasia-oscura-llegan-a-bogota-en-octubre/\n- https://www.proimagenescolombia.com/secciones/eventos/eventos.php?tipo=1&pagina=7",
- "comentarios": []
+ "comentarios": [
+  {
+   "fecha": "2026-10-14",
+   "cuerpo": "Vigía 14 oct 2026 — BHFF (rama `data/bhff-2026-v2`, PR #1041 sin publicar)\n\n- Web /programacion/: sin cambios desde el 7 oct (los datos embebidos son idénticos).\n- IG [Decnn1xiY2_](https://www.instagram.com/p/Decnn1xiY2_/) (Moscahouse, 29 oct 6:00 p. m.: La Demonatrix + Gabriel) y [DecSAQRkevW](https://www.instagram.com/p/DecSAQRkevW/) (Casa 32: Sigilo jue 23 · 6:00 p. m.; MEAT the Movie + El Teatro vie 30 · 6:00 p. m.): **ya están en la rama** con ese día, hora y sede.\n- ⚠ Discrepancia menor: la cuenta de la película [@parapetomovie (DeJZxuwBOTI, 6 oct)](https://www.instagram.com/p/DeJZxuwBOTI/) dice «22 de octubre a las 7:30pm» en la Cinemateca; la programación oficial de la web y la rama dicen **7:00 p. m.** (Sala Capital). Manda la del festival; solo para tenerlo presente si el festival la corrige."
+  }
+ ]
 }
