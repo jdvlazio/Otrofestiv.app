@@ -95,7 +95,9 @@ SEDES = {
 # salieron después de la base v19 (12:57 p. m.). (título en la base, fecha, hora) → hora.
 HORA_IG = {
     ('You Are The Film', '2026-10-22', '18:30'): '18:40',
-    ('Ana Rosa', '2026-10-21', '17:00'): '18:00',
+    # «Ana Rosa» ya NO se mueve a las 18:00 (15 oct): la lámina 10 del post del
+    # Colombo Americano del 14 oct (DefDK-RlLH5) dice «Miércoles 21 oct, 5:00 p.m.»,
+    # igual que la base v21; la de las 18:00 era la lámina del 11 oct
     ('You Are The Film', '2026-10-23', '16:00'): '18:30',
     ('Brujas, Espectros y Otros Fantasmas', '2026-10-23', '21:30'): '21:00',
 }
