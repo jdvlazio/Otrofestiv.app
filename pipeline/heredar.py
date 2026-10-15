@@ -90,7 +90,16 @@ def main():
         print(f'  «{t}» · {c} ← {str(v)[:70]}{"…" if len(str(v)) > 70 else ""}   [{de}]')
     print(f'{"✓" if cambios else "·"} {fid}: {len(cambios)} dato(s) heredado(s)')
     if cambios and '--escribir' in sys.argv:
-        json.dump(d, open(p, 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
+        # LA FORMA DEL ARCHIVO SE RESPETA: unos festivales están en una línea y
+        # otros indentados (Olhar, Leviza). Reescribirlos compactos hacía un diff
+        # de miles de líneas que tapaba los pocos datos heredados
+        crudo = open(p, encoding='utf-8').read()
+        if '\n' in crudo.strip():
+            sangria = len(crudo.split('\n')[1]) - len(crudo.split('\n')[1].lstrip(' '))
+            txt = json.dumps(d, ensure_ascii=False, indent=sangria or 1)
+        else:
+            txt = json.dumps(d, ensure_ascii=False, separators=(',', ':'))
+        open(p, 'w', encoding='utf-8').write(txt + ('\n' if crudo.endswith('\n') else ''))
         print(f'  escrito {os.path.relpath(p, REPO)} — ahora: python3 pipeline/catalogo.py --medir')
     elif cambios:
         print('  (solo muestra; --escribir para guardarlo)')
