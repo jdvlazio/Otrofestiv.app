@@ -42,6 +42,9 @@ FECHA = re.compile(r'^(\d{1,2}) de (octubre|noviembre|diciembre) / (\d{1,2}):(\d
 NOTA = re.compile(r'^(Adquiere tus entradas|Entrada libre.*|Estreno .*|\*Con presencia .*|MIDBO en Regiones|'
                   r'Duración total.*|Esta proyección hace parte .*|Función \d+:.*|\(.*\))$', re.I)
 
+# el estreno más alto manda en un programa con obras de estrenos distintos
+_RANGO_ESTRENO = {'mundial': 5, 'internacional': 4, 'Latinoamérica': 3, 'Colombia': 2, 'Bogotá': 1}
+
 # LAS SEDES: lo que imprime la ficha → (sede, sala, ciudad)
 SEDES = {
     'Sala Capital, Cinemateca de Bogotá': ('Cinemateca de Bogotá', 'Sala Capital', 'Bogotá'),
@@ -292,13 +295,16 @@ def main():
             # y la función arranca con el primero.
             conjunta = any('proyección conjunta' in n.lower() for n in f['notas'])
             k = (f['dia'], f['lugar'], html.unescape(hija['name'])) if hija and not conjunta else (f['dia'], f['hora'], f['lugar'])
-            s = slots.setdefault(k, {'obras': [], 'notas': set(), 'programa': None, 'hora': f['hora'],
+            s = slots.setdefault(k, {'obras': [], 'notas': [], 'por_obra': [], 'programa': None, 'hora': f['hora'],
                                      'sede': sede, 'sala': sala, 'ciudad': ciudad})
             s['hora'] = min(s['hora'], f['hora'])
             s['gala'] = gala
             s['obras'].append({'titulo': titulo, 'url': o['link'], 'madre': madre['name'] if madre else None,
                                **{c: d[c] for c in ('director', 'pais', 'anio', 'duracion_min', 'sinopsis') if d.get(c)}})
-            s['notas'].update(f['notas'])
+            # en ORDEN y sin repetir: un set no tiene orden y el «primer» estreno
+            # o la «primera» duración salían distintos en cada corrida (15 oct)
+            s['notas'] += [n for n in f['notas'] if n not in s['notas']]
+            s['por_obra'].append(f['notas'])
             if hija and not conjunta:
                 s['programa'] = html.unescape(hija['name'])
     funciones = []
@@ -330,7 +336,14 @@ def main():
                 '_src': {'url': s['obras'][0]['url'], 'date': '2026-10-10'}}
         if any('con presencia' in n.lower() for n in notas):
             base['has_qa'], base['qa_type'] = True, 'team'
-        est = next((re.search(r'Estreno en [A-ZÁÉÍÓÚ][\wáéíóú]+', n).group() for n in notas if re.search(r'Estreno en [A-ZÁÉÍÓÚ]', n)), None)
+        # EL ESTRENO ES DE CADA OBRA (15 oct 2026): en «Creadoras de vida» una es
+        # estreno mundial, otra en Colombia y el resto en Bogotá. El programa
+        # lleva el MAYOR de sus obras —es verdad que el programa trae ese
+        # estreno—, y no el primero que cayera
+        est = max((x for x in (re.search(r'Estreno (?:mundial|internacional|en [A-ZÁÉÍÓÚ][\wáéíóú]+)', n)
+                               for n in notas) if x),
+                  key=lambda x: _RANGO_ESTRENO.get(x.group().split()[-1], 0), default=None)
+        est = est.group() if est else None
         if est:
             base['premiere'] = est
         if s.get('gala'):
@@ -345,11 +358,34 @@ def main():
             madres = {x['madre'] for x in s['obras']}
             titulo = s['programa'] or (html.unescape(madres.pop()) if len(madres) == 1 and None not in madres
                                        else ' + '.join(x['titulo'] for x in s['obras']))
-            dt = next((re.search(r"Duración total[^0-9]*(\d+)'", n) for n in notas if re.search(r"Duración total[^0-9]*\d+'", n)), None)
+            # LA DURACIÓN DEL PROGRAMA, POR MAYORÍA DE SUS OBRAS (15 oct 2026): las
+            # observaciones de una ficha valen para TODAS sus funciones, y
+            # «Montaña luminosa» trae el 64′ de su función en Minca junto al 99′
+            # del programa; el «primero» salía 64 o 99 según la corrida. Cada
+            # obra vota una vez por cada valor que dice; gana el más votado
+            _votos = {}
+            for _ns in s['por_obra']:
+                for _v in {m.group(1) for m in (re.search(r"Duración total[^0-9]*(\d+)'", n) for n in _ns) if m}:
+                    _votos[_v] = _votos.get(_v, 0) + 1
+            # …Y CONTRA LA SUMA DE ESTA FUNCIÓN (regla de Juan: la suma de un
+            # programa contra su franja). La versión de Canterbury o de la Bodega
+            # trae una obra menos que la de la Cinemateca, y la ficha da un solo
+            # total para las dos: un valor que no cuadra con lo que se proyecta
+            # aquí no es de aquí. Un total ÚNICO lo dice el festival y manda aunque
+            # no cuadre (CREAndo: 100′ para 74′ de obras, hay más que obras); solo
+            # cuando las fichas dan totales DISTINTOS y ninguno cuadra (±5′), la suma
+            _suma = sum(x.get('duracion_min') or 0 for x in s['obras'])
+            _cuadran = [v for v in _votos if _suma and abs(int(v) - _suma) <= 5]
+            if _cuadran:
+                _dur = int(max(sorted(_cuadran), key=lambda v: _votos[v]))
+            elif _suma and len(_votos) > 1:
+                _dur = _suma
+            else:
+                _dur = int(max(sorted(_votos), key=lambda v: _votos[v])) if _votos else None
             reg = {'titulo': titulo, **base, 'seccion': madre,
                    'obras': [{k: v for k, v in x.items() if k in ('titulo', 'director', 'pais', 'anio', 'duracion_min', 'sinopsis')}
                              for x in s['obras']],
-                   'duracion_min': int(dt.group(1)) if dt else sum(x.get('duracion_min') or 0 for x in s['obras']) or None}
+                   'duracion_min': _dur}
         else:
             x = s['obras'][0]
             reg = {**base, 'seccion': madre,
