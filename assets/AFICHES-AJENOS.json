@@ -5,18 +5,18 @@
   "regla": "un afiche ajeno se publica solo con veredicto «afiche» y huella vigente"
  },
  "afiches": {
+  "/assets/bhff-2026/gabriel.jpg": {
+   "sha1": "849e543c4b7ba2a261651966bfcc85a03b05c49c",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficmontanas-2026"
+   ]
+  },
   "/assets/cineautopsia/atmosphaira.jpg": {
    "sha1": "67bcdb696a54acc52415dba639953caeaec7c1ab",
    "veredicto": "afiche",
    "usado_en": [
     "ficpa-2026"
-   ]
-  },
-  "/assets/cineautopsia/somnolitico.jpg": {
-   "sha1": "866286218380149b0d207e30ddc414df95615649",
-   "veredicto": "afiche",
-   "usado_en": [
-    "ficcali-2026"
    ]
   },
   "/assets/ficcali-2026/despues-de-tanto-amor.jpg": {
@@ -26,18 +26,11 @@
     "villadelcine-2026"
    ]
   },
-  "/assets/fantasmagoria-2026/siempre-hay-un-monstruo.jpg": {
-   "sha1": "c997c855a5651b0662d528d6debb78bf5a975f4f",
+  "/assets/ficcali-2026/la-gran-hazana.jpg": {
+   "sha1": "4c7c2e178325254dac6cd6de1526fd9cd82bc4f1",
    "veredicto": "afiche",
    "usado_en": [
-    "bhff-2026"
-   ]
-  },
-  "/assets/fantasmagoria-2026/ubicua.jpg": {
-   "sha1": "e69e0e2c446e1ff2c54e310a887e6684d6fc0c70",
-   "veredicto": "afiche",
-   "usado_en": [
-    "bhff-2026"
+    "ficmontanas-2026"
    ]
   },
   "/assets/ficdeh/la-independencia.jpg": {
@@ -54,10 +47,18 @@
     "ficma-2026"
    ]
   },
+  "/assets/ficdeh/sukua.jpg": {
+   "sha1": "1fed047cf6ac3691001f1651b309bb43cbd76411",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficmontanas-2026"
+   ]
+  },
   "/assets/ficdeh/tuktu-padre-maiz.jpg": {
    "sha1": "eb464529f5096aef1984f9f771075085e918d637",
    "veredicto": "afiche",
    "usado_en": [
+    "ficmontanas-2026",
     "ficpa-2026"
    ]
   },
@@ -68,11 +69,11 @@
     "siembrafest-2026"
    ]
   },
-  "/assets/filcmar-2026/el-ocaso-de-los-dioses.jpg": {
-   "sha1": "fb873a5c031f755f6d99b1c99303d07c50c62887",
+  "/assets/ficpa-2026/relatos-del-camino.jpg": {
+   "sha1": "d80d0cd2b6870329c3e54ef6524a4ae10231168a",
    "veredicto": "afiche",
    "usado_en": [
-    "bhff-2026"
+    "ficmontanas-2026"
    ]
   },
   "/assets/filcmar-2026/hdlt.jpg": {
@@ -83,6 +84,20 @@
     "popayan-2026"
    ]
   },
+  "/assets/filcmar-2026/hush.jpg": {
+   "sha1": "b2b1ba5f854bf90410dad477f50ebb4d8cebad9e",
+   "veredicto": "afiche",
+   "usado_en": [
+    "bhff-2026"
+   ]
+  },
+  "/assets/finca/mi-casa-es-su-casa.jpg": {
+   "sha1": "e1e1d8e2dc26e4d861cc9a7e0cd30f451939c17f",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficmontanas-2026"
+   ]
+  },
   "/assets/mamut-2026/no-menguara-el-fuego-de-esta-luna.jpg": {
    "sha1": "aa40d660205b7c41d527d003730bd572d0605a71",
    "veredicto": "afiche",
@@ -90,11 +105,11 @@
     "midbo-2026"
    ]
   },
-  "/assets/filcmar-2026/hush.jpg": {
-   "sha1": "b2b1ba5f854bf90410dad477f50ebb4d8cebad9e",
+  "/assets/popayan-2026/la-asociacion.jpg": {
+   "sha1": "733a83cfe94ba8d5bb5312f5d5c8278908534f3a",
    "veredicto": "afiche",
    "usado_en": [
-    "bhff-2026"
+    "ficmontanas-2026"
    ]
   },
   "/assets/popayan-2026/la-rebelion-de-un-fantasma.jpg": {
@@ -104,6 +119,13 @@
     "girardota-2026"
    ]
   },
+  "/assets/qaff/kanekalon.jpg": {
+   "sha1": "2885106a92de9f76e7d7efc8f05157b686cb7296",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficmontanas-2026"
+   ]
+  },
   "/assets/villadelcine-2026/aguapanela.jpg": {
    "sha1": "848f1f258e3d961dd733268ff4e320a80430206d",
    "veredicto": "afiche",
@@ -111,10 +133,18 @@
     "ficcali-2026"
    ]
   },
+  "/assets/villadelcine-2026/collective-memory.jpg": {
+   "sha1": "0141c3bec8fc5fd9af2770e9bd52975dbb6977cc",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficmontanas-2026"
+   ]
+  },
   "/assets/villadelcine-2026/la-mona.jpg": {
    "sha1": "da74bd576bbdaf21048e41691c1f2cb097048cde",
    "veredicto": "afiche",
    "usado_en": [
+    "ficmontanas-2026",
     "popayan-2026"
    ]
   },
