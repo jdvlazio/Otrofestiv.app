@@ -836,7 +836,9 @@ DESCRIPCION_DE = {'synopsis': 'description', 'synopsis_en': 'description_en',
 
 def lleva_descripcion(f):
     """¿El texto de esta función describe un programa o una actividad (y no una obra)?"""
-    return f.get('type') == 'event' or bool(f.get('event_kind')) or bool(f.get('film_list'))
+    # …o un programa que todavía no lista sus obras (FICICA, 15 oct 2026: «muy pronto»)
+    return (f.get('type') == 'event' or bool(f.get('event_kind')) or bool(f.get('film_list'))
+            or bool(f.get('is_programa')))
 
 
 def separar_descripcion(f):

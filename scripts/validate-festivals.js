@@ -1062,8 +1062,10 @@ for (const fname of files) {
   const _coveredKeys = new Set(
     [...Object.keys(data.customPosters || {}), ...Object.keys(data.posters || {})].map(_normKey)
   );
+  // un programa que todavía no lista sus cortos (FICICA, «muy pronto») no es una
+  // obra: no tiene afiche propio, como un bloque de cortos (catalogo.no_es_obra)
   const filmableFilms = (data.films || []).filter(f =>
-    f.type !== 'event' && !f.is_cortos
+    f.type !== 'event' && !f.is_cortos && !(f.is_programa && !(f.film_list || []).length)
   );
   const _isCovered = f => (f.poster && f.poster !== '') || _coveredKeys.has(_normKey(f.title));
   const totalPosters = filmableFilms.filter(_isCovered).length;

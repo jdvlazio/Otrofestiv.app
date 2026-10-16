@@ -1,0 +1,76 @@
+{
+ "_provenance": {
+  "fuente": "Nominatim con verificación: caja de ciudad + token distintivo + clase de lugar (una sede fija nunca es un barrio). _prec:manual intocable.",
+  "capturado": "2026-10-15"
+ },
+ "Cinemateca del Caribe": {
+  "_prec": "manual",
+  "_nota": "Google Maps (búsqueda en el navegador, 15 oct 2026): «Cinemateca del Caribe - Sala Country», la dirección de la programación. Sala «Sede Combarranquilla Country».",
+  "lat": 11.0055967,
+  "lng": -74.8022166,
+  "address": "Cl. 76 #57-61"
+ },
+ "Alianza Francesa de Barranquilla": {
+  "_prec": "manual",
+  "_nota": "Google Maps (búsqueda en el navegador, 15 oct 2026): «Alianza Francesa de Barranquilla».",
+  "lat": 10.9934124,
+  "lng": -74.7890175,
+  "address": "Calle 52 #54-75"
+ },
+ "Universidad de la Costa – CUC": {
+  "_prec": "manual",
+  "_nota": "Google Maps (búsqueda en el navegador, 15 oct 2026): «Universidad De La Costa, CUC entrada #2» — la programación dice «Entrada #2».",
+  "lat": 10.9953387,
+  "lng": -74.78881,
+  "address": "Entrada #2, Calle 52 #56A-75"
+ },
+ "La Fábrica de Cultura": {
+  "_prec": "manual",
+  "_nota": "Google Maps (búsqueda en el navegador, 15 oct 2026): «Fábrica de Cultura», en el cruce que da la programación.",
+  "lat": 10.988688,
+  "lng": -74.7806353,
+  "address": "Calle 40 con Carrera 50"
+ },
+ "Universidad del Atlántico, sede Norte": {
+  "_prec": "manual",
+  "_nota": "Google Maps (búsqueda en el navegador, 15 oct 2026): «Universidad del Atlántico» (la sede norte, km 7 vía Puerto Colombia). La programación no da dirección.",
+  "lat": 11.0191881,
+  "lng": -74.8731999,
+  "address": "Ciudadela Universitaria, Puerto Colombia"
+ },
+ "Universidad del Norte": {
+  "_prec": "manual",
+  "_nota": "Google Maps (búsqueda en el navegador, 15 oct 2026): «Universidad del Norte».",
+  "lat": 11.0193206,
+  "lng": -74.8504426,
+  "address": "Km 5, vía Puerto Colombia"
+ },
+ "Fábrica de la Cultura 2": {
+  "_prec": "aproximado",
+  "_nota": "Google Maps (búsqueda en el navegador, 15 oct 2026): «Centro Cultural Villas de San Pablo», en el barrio que da la programación; el cruce exacto (Cra. 9C con Cl. 136) Maps no lo resuelve. Aproximado.",
+  "lat": 10.9603756,
+  "lng": -74.857826,
+  "address": "Carrera 9C con Calle 136, Villas de San Pablo"
+ },
+ "Parque Las Flores": {
+  "_prec": "aproximado",
+  "_nota": "Google Maps (búsqueda en el navegador, 15 oct 2026): el barrio «Las flores» (la programación solo dice «Barrio Las Flores»). Maps también da un «Parque las flores» en 10.90,-74.81, que es otro lugar (al sur). Aproximado al barrio.",
+  "lat": 11.0386208,
+  "lng": -74.8284037,
+  "address": "Barrio Las Flores"
+ },
+ "Barrio Villas de la Cordialidad": {
+  "_prec": "aproximado",
+  "_nota": "Google Maps (búsqueda en el navegador, 15 oct 2026): «Villas De La Cordialidad» (la función es en la cancha de baloncesto del barrio). Aproximado al barrio.",
+  "lat": 10.9280767,
+  "lng": -74.8070963,
+  "address": "Carrera 4 Sur #144, sobre la vía Cordialidad"
+ },
+ "Parque Sagrado Corazón": {
+  "_prec": "manual",
+  "_nota": "Google Maps (búsqueda en el navegador, 15 oct 2026): «Parque Sagrado Corazón». Sala «Concha Acústica».",
+  "lat": 10.9933967,
+  "lng": -74.8183852,
+  "address": ""
+ }
+}

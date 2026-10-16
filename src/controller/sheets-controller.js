@@ -392,7 +392,7 @@ export function openPelSheet(title){
     })()}
     ${(()=>{
       // Programa o actividad → DESCRIPCIÓN; obra → SINOPSIS (lib.separar_descripcion).
-      const _esDesc=f.type==='event'||!!f.event_kind||!!(f.film_list&&f.film_list.length);
+      const _esDesc=f.type==='event'||!!f.event_kind||!!(f.film_list&&f.film_list.length)||!!f.is_programa;  // …o un programa que aún no lista sus obras (FICICA)
       const _txt=_esDesc?locDescription(f):locSynopsis(f);
       if(!_txt) return '';
       return `    <div class="sec-hdr sm">${ICONS.text} <span>${_esDesc?t('label_descripcion'):t('label_sinopsis')}</span></div>

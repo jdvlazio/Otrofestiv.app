@@ -1334,6 +1334,24 @@ export const FESTIVAL_CONFIG={
     ticketing_model:'mixed',
     films:null,posters:null,lbSlugs:{}
   },
+  'ficica2026': {
+    name:'FICICA',displayName:'FICICA',fullName:'FICICA 2026 — Festival Internacional de Cortometrajes Cine a la Calle',shortName:'FICICA',
+    // LA IMAGEN DE LA EDICIÓN: el escudo «FICICA 26» de su web (pin-festival-main,
+    // 823×1080), estirado a 2:3. Propuesta, a confirmar con Juan (15 oct).
+    keyArt:'/assets/keyart/ficica2026-v1.jpg',
+    tagline:'Festival Internacional de Cortometrajes',
+    city:'Barranquilla',country:'CO',
+    dates:'20–24 OCT',dates_en:'OCT 20–24',year:2026,timezoneOffset:'-05:00',
+    storageKey:'ficica2026_',festivalStartStr:'2026-10-20T00:00:00',festivalEndStr:'2026-10-24T23:59:00',
+    festivalDates:{'2026-10-20':'2026-10-20','2026-10-21':'2026-10-21','2026-10-22':'2026-10-22','2026-10-23':'2026-10-23','2026-10-24':'2026-10-24'},
+    days:[{k:'2026-10-20',d:20,lbl:'MAR'},{k:'2026-10-21',d:21,lbl:'MIÉ'},{k:'2026-10-22',d:22,lbl:'JUE'},{k:'2026-10-23',d:23,lbl:'VIE'},{k:'2026-10-24',d:24,lbl:'SÁB'}],
+    dayKeys:['2026-10-20','2026-10-21','2026-10-22','2026-10-23','2026-10-24'],
+    dayShort:{'2026-10-20':'MAR 20','2026-10-21':'MIÉ 21','2026-10-22':'JUE 22','2026-10-23':'VIE 23','2026-10-24':'SÁB 24'},
+    dayShort_en:{'2026-10-20':'TUE 20','2026-10-21':'WED 21','2026-10-22':'THU 22','2026-10-23':'FRI 23','2026-10-24':'SAT 24'},
+    dayLong:{'2026-10-20':'Martes 20 de octubre','2026-10-21':'Miércoles 21 de octubre','2026-10-22':'Jueves 22 de octubre','2026-10-23':'Viernes 23 de octubre','2026-10-24':'Sábado 24 de octubre'},
+    prioLimit:3,eventPosterLabel:['EVENTO',''],
+    films:null,posters:null,lbSlugs:{}
+  },
   'fantasmagoria2026': {
     name:'Fantasmagoría',displayName:'Fantasmagoría',fullName:'Fantasmagoría 8 — Festival Internacional de Cine Fantástico y de Terror de Medellín',shortName:'FANTASMAGORÍA',
     city:'Medellín',country:'CO',
@@ -1616,6 +1634,10 @@ export const SECTION_ARCHETYPES = {
   '🏛️ TIFF Classics': 'Retrospectiva / Tributo',
   '🎪 Special Events': 'Especiales / Eventos',
   '✂️ Short Cuts': 'Cortos / Programas',
+  // ── FICICA 2026 · Barranquilla (las cuatro categorías de su programación) ──
+  '🎬 Exhibiciones': 'Cortos / Programas',
+  '🤝 Industria': 'Charlas / Industria',
+  '✨ Eventos Especiales': 'Apertura / Gala',
   // ── Cinemancia 2026 · Valle de Aburrá ─────────────────────────────────
   '⭐ Función Inaugural': 'Apertura / Gala',
   '🎬 Función de Clausura': 'Clausura',
