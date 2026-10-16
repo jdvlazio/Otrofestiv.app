@@ -38,7 +38,10 @@ OUT = f'{REPO}/festivals/staging/midbo-2026-crudo.json'
 # noviembre de 2026», @midbo_doc p/DeSf11QJ-Mp); el radar decía 28
 DESDE, HASTA = '2026-10-27', '2026-11-04'
 MES = {'octubre': 10, 'noviembre': 11, 'diciembre': 12}
-FECHA = re.compile(r'^(\d{1,2}) de (octubre|noviembre|diciembre) / (\d{1,2}):(\d{2}) H$')
+# «29 de octubre / 14:30 H», y también «29 octubre / 14:30 H» (sin «de»): así viene
+# la ficha de Fordlândia panacea, y se descartaba EN SILENCIO (lo cazó la agenda de
+# la Cinemateca, 15 oct 2026). Lo que no lee esta regla ya no se calla: va a `_fuera`
+FECHA = re.compile(r'^(\d{1,2}) (?:de )?(octubre|noviembre|diciembre) / (\d{1,2}):(\d{2}) H$')
 NOTA = re.compile(r'^(Adquiere tus entradas|Entrada libre.*|Estreno .*|\*Con presencia .*|MIDBO en Regiones|'
                   r'Duración total.*|Esta proyección hace parte .*|Función \d+:.*|\(.*\))$', re.I)
 
@@ -259,6 +262,8 @@ def ficha(L, BLOQUES):
         if m:
             fun.append({'dia': f'2026-{MES[m.group(2)]:02d}-{int(m.group(1)):02d}',
                         'hora': f'{int(m.group(3)):02d}:{m.group(4)}', 'lugar': li[1], 'notas': obs})
+        else:
+            d.setdefault('ilegibles', []).append(f'{li[0]} · {li[1]}')
     d['funciones'] = fun
     return d
 
@@ -279,6 +284,8 @@ def main():
                                                      and s['name'] != 'Inauguración y clausura'), None)
         _p = f'{DIR}/fichas/{o["slug"]}.html'
         d = ficha(lineas(_p), bloques(_p))
+        for x in d.get('ilegibles') or []:
+            fuera.append(f'{titulo[:50]}: función que la regla de fecha no lee ({x})')
         for f in d['funciones']:
             if not (DESDE <= f['dia'] <= HASTA):
                 fuera.append(f'{f["dia"]} {f["hora"]} {titulo[:50]}: fuera del 27 oct–4 nov oficial ({f["lugar"]})')

@@ -17,6 +17,8 @@
   "2026-10-15 12:30 ¿Quién quemó el bus?: fuera del 27 oct–4 nov oficial (Colegio Alejandro Obregón)",
   "2026-10-16 09:00 ¿Quién quemó el bus?: fuera del 27 oct–4 nov oficial (Colegio Manuelita Sáenz)",
   "2026-10-16 15:00 ¿Quién quemó el bus?: fuera del 27 oct–4 nov oficial (Colegio Manuelita Sáenz)",
+  "Chanson pour le nouveau monde: función que la regla de fecha no lee (6 de noviembre / por confirmar H · UniNorte, Barranquilla)",
+  "Ciclón: función que la regla de fecha no lee (6 de noviembre / por confirmar H · UniNorte, Barranquilla)",
   "2026-11-07 16:30 Iré a Santiago: fuera del 27 oct–4 nov oficial (Cinemateca del Caribe, Barranquilla)",
   "2026-11-10 14:30 Iré a Santiago: fuera del 27 oct–4 nov oficial (Sala Langosta Azul, Universidad del Magdalena, Santa Marta)",
   "2026-11-14 16:30 Iré a Santiago: fuera del 27 oct–4 nov oficial (Cinemateca La Tertulia, Cali)",
@@ -42,6 +44,7 @@
   "2026-11-10 14:30 79 primaveras: fuera del 27 oct–4 nov oficial (Sala Langosta Azul, Universidad del Magdalena, Santa Marta)",
   "2026-11-14 16:30 79 primaveras: fuera del 27 oct–4 nov oficial (Cinemateca La Tertulia, Cali)",
   "2026-11-25 18:30 Instrucciones para cuando no esté: fuera del 27 oct–4 nov oficial (MAMM, El Poblado, Medellín)",
+  "Nacer de nuevo: función que la regla de fecha no lee (6 de noviembre / por confirmar H · UniNorte, Barranquilla)",
   "2026-11-28 16:30 De cierta manera: fuera del 27 oct–4 nov oficial (MAMM, El Poblado, Medellín)",
   "2026-11-07 19:00 De cierta manera: fuera del 27 oct–4 nov oficial (Cinemateca del Caribe, Barranquilla)",
   "2026-10-27 14:00 L’Evangile de la Révolution: función fuera de Bogotá (Santa Marta)",
@@ -295,6 +298,27 @@
      "sinopsis": "En un ejercicio de mímesis, un grupo de jóvenes de Medellín juegan a intercambiar parte de sus vidas cotidianas teniendo como única guía un objeto y un par de instrucciones para vivir en ese mundo aparentemente ajeno. Mientras cada uno visita y descubre el «nuevo mundo» que le ha sido asignado, el grupo completo construye colectivamente la historia de una película de ficción donde son los protagonistas. En el ejercicio de creación y al habitar la nueva piel descubren que muchas de sus historias son compartidas. El hogar, la muerte y el cuidado aparecen como hilos que sostienen un tejido invisible que los une."
     }
    ]
+  },
+  {
+   "dia": "2026-10-29",
+   "hora": "14:30",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala 3",
+   "ciudad": "Bogotá",
+   "ticket_url": "https://tuboleta.com/es/eventos/fordlandia-panacea",
+   "acceso": "Boletería en TuBoleta",
+   "_src": {
+    "url": "https://midbo.co/peliculas/fordlandia-panacea/",
+    "date": "2026-10-10"
+   },
+   "premiere": "Estreno en Colombia",
+   "seccion": "Competencia Iberoamericana de Largometraje Documental",
+   "titulo": "Fordlândia Panacea",
+   "director": "Susana de Sousa Dias",
+   "pais": "Portugal, Brasil",
+   "anio": 2025,
+   "duracion_min": 66,
+   "sinopsis": "Fordlândia suele presentarse en internet como un «pueblo fantasma» y como un proyecto utópico de Henry Ford. Sin embargo, la ciudad empresarial amazónica, fundada en 1928, nunca fue una utopía. Tampoco es un pueblo fantasma; por el contrario, está llena de vida. Aquí, los fantasmas son fuerzas históricas activas: Ford, capitalismo, extractivismo. «Fordlândia Panacea» aborda los puntos ciegos de esta historia y revela el entrelazamiento entre pasado y presente, así como la tensión entre lo espectral y la vida."
   },
   {
    "dia": "2026-10-29",
