@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, con el MISMO candado de enriquecer.py: director ✓ y (año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-10-11"
+  "capturado": "2026-10-15"
  },
  "_origen": "ficica-2026-catalogo.json",
  "obras": [
@@ -33,7 +33,8 @@
    "pais_tmdb": "Colombia",
    "title_en": "Lowering the Gaze",
    "lbSlug": "lowering-the-gaze",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_verificado": "el catálogo ya la tiene (w_R4JG4KR5FX9V, filcmar-2026)",
+   "work_id": "w_R4JG4KR5FX9V",
    "_ya_publicada": [
     {
      "festival": "filcmar-2026",
@@ -143,6 +144,15 @@
    "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
    "_ya_publicada": [
     {
+     "festival": "bhff-2026",
+     "titulo": "Chaika",
+     "tmdb_id": 1689999,
+     "poster": "/assets/bhff-2026/chaika.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "chaika-2025",
+     "sinopsis": "Valentina, una cosmonauta rusa de 76 años, llega a una Cuba ucrónica y nebulosa tras recibir, con treinta años de retraso, una invitación para una expedición agrícola a Marte. Entre paisajes difusos y promesas del pasado, busca las ruinas de un futuro que nunca llegó."
+    },
+    {
      "festival": "cineautopsia-2026",
      "titulo": "CHAIKA",
      "tmdb_id": 1689999,
@@ -165,7 +175,8 @@
      "titulo": "Chaika",
      "poster": "/assets/fantasofest/corto-chaika.jpg",
      "posterSource": "editorial",
-     "lbSlug": "chaika-2026"
+     "lbSlug": "chaika-2026",
+     "sinopsis": "Valentina, una cosmonauta rusa de 76 años, llega a una Cuba ucrónica y nebulosa tras recibir, con treinta años de retraso, una invitación para una expedición agrícola a Marte. Entre paisajes difusos y promesas del pasado, busca las ruinas de un futuro que nunca llegó."
     },
     {
      "festival": "ficpa-2026",
@@ -174,7 +185,7 @@
      "poster": "/assets/ficpa-2026/chaika.jpg",
      "posterSource": "tmdb",
      "lbSlug": "chaika-2025",
-     "sinopsis": "Valentina, una cosmonauta rusa de 76 años, llega a una Cuba ucrónica y nebulosa tras recibir, con treinta años de retraso, una invitación para una expedición agrícola a Marte. Entre paisajes difusos y promesas del pasado, busca las ruinas de un futuro que nunca llegó."
+     "sinopsis": "Valentina, una cosmonauta rusa de 76 años, recibe una carta desde Cuba con treinta años de retraso, invitándola a una expedición agrícola a Marte. Viaja a una isla onírica y difusa, donde la utopía soñada se desvanece entre paisajes borrosos y nostalgia suspendida, Valentina busca si aún es posible levantar vuelo mientras la nostalgia del Caribe se mezcla con el eco de un futuro que nunca llegó."
     },
     {
      "festival": "narrarelfuturo-2026",
@@ -456,7 +467,8 @@
    "pais_tmdb": "Cuba, Colombia, Germany",
    "title_en": "Practical Italian Grammar",
    "lbSlug": "practical-italian-grammar",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_verificado": "el catálogo ya la tiene (w_R4FGS28EE01T, cinemancia-2026)",
+   "work_id": "w_R4FGS28EE01T",
    "_ya_publicada": [
     {
      "festival": "cinemancia-2026",
@@ -548,7 +560,11 @@
     },
     {
      "festival": "ficmontanas-2026",
-     "titulo": "La gran hazaña"
+     "titulo": "La gran hazaña",
+     "poster": "/assets/ficcali-2026/la-gran-hazana.jpg",
+     "posterSource": "oficial",
+     "lbSlug": "the-great-feat",
+     "sinopsis": "Pablo necesita rescatar a su amiga Pascualina, una gallina ponedora que termina secuestrada por el tendero del pueblo, después de que el niño quebrara la cubeta de huevos que llevaba para pagarle una deuda de su familia."
     },
     {
      "festival": "popayan-2026",
@@ -581,7 +597,8 @@
    "duracion_tmdb": 15,
    "pais_tmdb": "Colombia",
    "lbSlug": "la-guerra-de-los-tomates",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_verificado": "el catálogo ya la tiene (w_R4MYH1FJ6Q71, popayan-2026)",
+   "work_id": "w_R4MYH1FJ6Q71",
    "_ya_publicada": [
     {
      "festival": "popayan-2026",
@@ -621,7 +638,8 @@
      "titulo": "La Independencia",
      "poster": "/assets/leviza/LaIndependencia.webp",
      "posterSource": "custom",
-     "lbSlug": "⚠️ LB PENDIENTE"
+     "lbSlug": "⚠️ LB PENDIENTE",
+     "sinopsis": "Cecilia, una mujer abnegada de 52 años, decide romper con su vida de sacrificios tras años de soportar la irresponsabilidad de su hijo y la ingratitud de su familia, buscando finalmente su independencia."
     },
     {
      "festival": "siembrafest-2026",
@@ -659,7 +677,11 @@
    "_ya_publicada": [
     {
      "festival": "ficmontanas-2026",
-     "titulo": "La Mona"
+     "titulo": "La Mona",
+     "poster": "/assets/villadelcine-2026/la-mona.jpg",
+     "posterSource": "oficial",
+     "lbSlug": "heat-wave-2025",
+     "sinopsis": "La Mona está dispuesta a cualquier sacrificio para garantizar su autoridad en La Hondura, aunque el precio que pague sea la soledad."
     },
     {
      "festival": "jardin-2026",
@@ -764,7 +786,8 @@
    "duracion_tmdb": 18,
    "pais_tmdb": "",
    "lbSlug": "los-pliegues-de-la-falda",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_verificado": "el catálogo ya la tiene (w_R4HHC4K8GBRC, ficdeh-2026, popayan-2026)",
+   "work_id": "w_R4HHC4K8GBRC",
    "_ya_publicada": [
     {
      "festival": "ficdeh-2026",
@@ -814,7 +837,8 @@
    "pais_tmdb": "Colombia",
    "title_en": "Bad Postures",
    "lbSlug": "bad-postures",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_verificado": "el catálogo ya la tiene (w_R4KECG9BFSX8, jardin-2026)",
+   "work_id": "w_R4KECG9BFSX8",
    "_ya_publicada": [
     {
      "festival": "jardin-2026",
@@ -868,7 +892,8 @@
    "pais_tmdb": "",
    "title_en": "Beyond",
    "lbSlug": "beyond-2025",
-   "_verificado": "el tmdb_id con que ya la publicamos en popayan-2026, y TMDB confirma la dirección",
+   "_verificado": "el catálogo ya la tiene (w_R4HHSYKXBWCD, ficdeh-2026, popayan-2026)",
+   "work_id": "w_R4HHSYKXBWCD",
    "_ya_publicada": [
     {
      "festival": "ficdeh-2026",
@@ -901,11 +926,16 @@
    "duracion_tmdb": 12,
    "pais_tmdb": "Peru, France",
    "lbSlug": "memoria-colectiva",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_verificado": "el catálogo ya la tiene (w_R4J7WZRP6QM7, ficmontanas-2026, villadelcine-2026)",
+   "work_id": "w_R4J7WZRP6QM7",
    "_ya_publicada": [
     {
      "festival": "ficmontanas-2026",
-     "titulo": "Memoria Colectiva"
+     "titulo": "Memoria Colectiva",
+     "poster": "/assets/villadelcine-2026/collective-memory.jpg",
+     "posterSource": "oficial",
+     "lbSlug": "memoria-colectiva",
+     "sinopsis": "En 1983, soldados encapuchados irrumpen en la casa de Adelina y se llevan a su esposo, quien jamás regresa. Ante el silencio de las autoridades, ella se une a otras mujeres marcadas por la misma ausencia. Juntas convierten el dolor en memoria y la memoria en una exigencia de justicia."
     },
     {
      "festival": "villadelcine-2026",
@@ -945,13 +975,15 @@
    "pais_tmdb": "Colombia",
    "title_en": "Chilapa Girl",
    "lbSlug": "chilapa-girl",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_verificado": "el catálogo ya la tiene (w_R4ETMKK7J5T0, cinemancia-2025, popayan-2026)",
+   "work_id": "w_R4ETMKK7J5T0",
    "_ya_publicada": [
     {
      "festival": "cinemancia-2025",
      "titulo": "Niña Chilapa",
      "poster": "https://cinemanciafestival.com/wp-content/uploads/2025/08/Nina-Chilapa-Still-3-scaled.jpg",
      "posterSource": "editorial",
+     "lbSlug": "chilapa-girl",
      "sinopsis": "Yulieth es una niña en un momento que mide su relación con el mundo: no es todavía una adolescente pero sus experiencias la hacen sentirse una mujer grande. Ese difícil equilibrio se amplía con el espacio que la rodea: una naturaleza demasiado generosa, tupida y vasta."
     },
     {
@@ -977,7 +1009,8 @@
    "duracion_tmdb": 11,
    "pais_tmdb": "",
    "lbSlug": "para-no-volver",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_verificado": "el catálogo ya la tiene (w_R4DRKZWFVT9V, biff-2026, cinemancia-2026, filcmar-2026)",
+   "work_id": "w_R4DRKZWFVT9V",
    "_ya_publicada": [
     {
      "festival": "biff-2026",
@@ -1020,7 +1053,8 @@
    "duracion_tmdb": 20,
    "pais_tmdb": "Colombia",
    "lbSlug": "pawa",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_verificado": "el catálogo ya la tiene (w_R4HCNBABG3FG, ficci-65, ficdeh-2026, leviza-2026)",
+   "work_id": "w_R4HCNBABG3FG",
    "_ya_publicada": [
     {
      "festival": "ficdeh-2026",
@@ -1035,7 +1069,8 @@
      "titulo": "Pawa",
      "poster": "/assets/leviza/Pawa.jpeg",
      "posterSource": "custom",
-     "lbSlug": "⚠️ LB PENDIENTE"
+     "lbSlug": "⚠️ LB PENDIENTE",
+     "sinopsis": "En una tranquila mañana en una ranchería de La Guajira, Indira da de comer a los pavos y las gallinas. Ante la sequía y el inicio de clases, Josefa, abuela de Indira, emprende un viaje junto a su nieta por las comunidades aledañas con la esperanza de vender a Taata, el pavo más grande, para comprar útiles escolares y comida."
     }
    ]
   },
@@ -1105,8 +1140,18 @@
    "duracion_tmdb": 0,
    "pais_tmdb": "Colombia",
    "lbSlug": "que-el-cielo-nos-perdone",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_verificado": "el catálogo ya la tiene (w_R4GP49AWA2ZH, bhff-2026, fantasmagoria-2026, ficma-2026, siembrafest-2026, villadelcine-2026)",
+   "work_id": "w_R4GP49AWA2ZH",
    "_ya_publicada": [
+    {
+     "festival": "bhff-2026",
+     "titulo": "Que El Cielo Nos Perdone",
+     "tmdb_id": 1565878,
+     "poster": "/assets/bhff-2026/que-el-cielo-nos-perdone.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "que-el-cielo-nos-perdone",
+     "sinopsis": "Colombia, 1951: En medio de La Violencia, el período de brutal guerra política entre liberales y conservadores, un par de chulavitas –asesinos a sueldo pagados por el gobierno– acechan a un sacerdote en la oscuridad de la noche, esperando que los conduzca a la cabaña en el bosque en donde se esconden sus próximas víctimas. Pero el horror que encontrarán allí es mil veces peor que el dolor que pensaban infligir."
+    },
     {
      "festival": "fantasmagoria-2026",
      "titulo": "Que El Cielo Nos Perdone",
@@ -1156,7 +1201,8 @@
    "duracion_tmdb": 11,
    "pais_tmdb": "Colombia",
    "lbSlug": "refraccion",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_verificado": "el catálogo ya la tiene (w_R4F8T5DKXC9W, cinemancia-2026, ficmontanas-2026, girardota-2026, jardin-2026, narrarelfuturo-2026)",
+   "work_id": "w_R4F8T5DKXC9W",
    "_ya_publicada": [
     {
      "festival": "cinemancia-2026",
@@ -1169,7 +1215,11 @@
     },
     {
      "festival": "ficmontanas-2026",
-     "titulo": "Refracción"
+     "titulo": "Refracción",
+     "poster": "https://image.tmdb.org/t/p/w500/bzKNobO0N8Oqj6YU6eA2R28UgPI.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "refraccion",
+     "sinopsis": "Eloísa, una chica de 20 años, está en dos relaciones al mismo tiempo. Una noche, después de haber estado con ambas chicas, se siente agobiada por estar en esa situación de engaño y en medio de su confusión sale a recorrer las calles de Medellín en bicicleta, donde se dará cuenta de que no quiere reconocerse pero deberá encontrarse consigo misma."
     },
     {
      "festival": "girardota-2026",
@@ -1219,7 +1269,17 @@
    "duracion_tmdb": 6,
    "pais_tmdb": "Colombia",
    "lbSlug": "replay-2026",
-   "_verificado": "declarada a mano: Existe en TMDB con otro título o sin año ni duración, y el candado no la casaba sola: «Replay» (2026), Simón Matallana Nossa; mismo director que publica FICICA. Verificada el 11 oct 2026."
+   "_verificado": "declarada a mano: Existe en TMDB con otro título o sin año ni duración, y el candado no la casaba sola: «Replay» (2026), Simón Matallana Nossa; mismo director que publica FICICA. Verificada el 11 oct 2026.",
+   "_ya_publicada": [
+    {
+     "festival": "bhff-2026",
+     "titulo": "Replay",
+     "tmdb_id": 1677190,
+     "poster": "/assets/bhff-2026/replay.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "replay-2026"
+    }
+   ]
   },
   {
    "titulo": "Safo",
@@ -1263,7 +1323,8 @@
    "pais_tmdb": "Colombia",
    "title_en": "Into the fog",
    "lbSlug": "into-the-fog-2026",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_verificado": "el catálogo ya la tiene (w_R4FRTV2Q7YA2, cinemancia-2026, ficci-65, ficmontanas-2026, midbo-2026, popayan-2026)",
+   "work_id": "w_R4FRTV2Q7YA2",
    "_ya_publicada": [
     {
      "festival": "cinemancia-2026",
@@ -1276,7 +1337,11 @@
     },
     {
      "festival": "ficmontanas-2026",
-     "titulo": "Sombras en la niebla"
+     "titulo": "Sombras en la niebla",
+     "poster": "https://image.tmdb.org/t/p/w500/36fgDq5bvxmVXUlGHpFZLnogB5K.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "into-the-fog-2026",
+     "sinopsis": "En el páramo de Chiscas, don Vicente Molina y su familia cuidan un enorme rebaño de ovejas. La cotidianidad de la familia transcurre entre montañas cubiertas de niebla y la cocina, cuyo fogón de leña los reúne en torno a la comida y el juego. Entre el grupo se encuentra Will, el niño de la familia, quien se debate entre jugar y acompañar a los mayores en las labores de pastoreo."
     },
     {
      "festival": "midbo-2026",
@@ -1364,7 +1429,8 @@
    "pais_tmdb": "Colombia",
    "title_en": "Tuktu, Father Maize",
    "lbSlug": "tuktu-father-maize",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_verificado": "el catálogo ya la tiene (w_R4HJFE6HF274, ficdeh-2026, ficmontanas-2026, ficpa-2026, popayan-2026, villadelcine-2026)",
+   "work_id": "w_R4HJFE6HF274",
    "_ya_publicada": [
     {
      "festival": "ficdeh-2026",
@@ -1376,14 +1442,20 @@
     },
     {
      "festival": "ficmontanas-2026",
-     "titulo": "Tuktu, Padre Maíz"
+     "titulo": "Tuktu, Padre Maíz",
+     "poster": "/assets/ficdeh/tuktu-padre-maiz.jpg",
+     "posterSource": "custom",
+     "lbSlug": "tuktu-father-maize",
+     "sinopsis": "En las montañas de Colombia, Juan, un niño mestizo de 13 años, se ve obligado a huir del monstruo de la guerra. En su travesía, la tierra misma lo protege y, guiado por las voces de sus ancestros, despierta un poder ancestral llamado Tucuna, que le permite transformarse y renacer. Convertido en Tuktu, un Taita de fuerza extraordinaria, comprende que su destino no es solo sobrevivir, sino regresar para sanar la herida de la guerra y sembrar la paz en la tierra que lo vio nacer."
     },
     {
      "festival": "ficpa-2026",
      "titulo": "Tuktu, Padre Maíz",
+     "tmdb_id": 1592955,
      "poster": "/assets/ficdeh/tuktu-padre-maiz.jpg",
      "posterSource": "oficial",
-     "sinopsis": "En las montañas de Colombia, Juan, un niño mestizo de 13 años, se ve obligado a huir del monstruo de la guerra. En su travesía, la tierra misma lo protege y, guiado por las voces de sus ancestros, despierta un poder ancestral llamado Tucuna, que le permite transformarse y renacer. Convertido en Tuktu, un Taita de fuerza extraordinaria, comprende que su destino no es solo sobrevivir, sino regresar para sanar la herida de la guerra y sembrar la paz en la tierra que lo vio nacer."
+     "lbSlug": "tuktu-father-maize",
+     "sinopsis": "En las montañas de Colombia, Juan, un niño indígena de 13 años, huye del monstruo de la guerra. En su travesía, guiado por sus ancestros, despierta un poder ancestral que lo convierte en Tuktu, un Taita destinado a sembrar paz en su tierra."
     },
     {
      "festival": "popayan-2026",
@@ -1500,7 +1572,8 @@
    "pais_tmdb": "Colombia",
    "title_en": "Lowering the Gaze",
    "lbSlug": "lowering-the-gaze",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_verificado": "el catálogo ya la tiene (w_R4JG4KR5FX9V, filcmar-2026)",
+   "work_id": "w_R4JG4KR5FX9V",
    "_ya_publicada": [
     {
      "festival": "filcmar-2026",
@@ -1595,6 +1668,15 @@
    "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
    "_ya_publicada": [
     {
+     "festival": "bhff-2026",
+     "titulo": "Chaika",
+     "tmdb_id": 1689999,
+     "poster": "/assets/bhff-2026/chaika.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "chaika-2025",
+     "sinopsis": "Valentina, una cosmonauta rusa de 76 años, llega a una Cuba ucrónica y nebulosa tras recibir, con treinta años de retraso, una invitación para una expedición agrícola a Marte. Entre paisajes difusos y promesas del pasado, busca las ruinas de un futuro que nunca llegó."
+    },
+    {
      "festival": "cineautopsia-2026",
      "titulo": "CHAIKA",
      "tmdb_id": 1689999,
@@ -1617,7 +1699,8 @@
      "titulo": "Chaika",
      "poster": "/assets/fantasofest/corto-chaika.jpg",
      "posterSource": "editorial",
-     "lbSlug": "chaika-2026"
+     "lbSlug": "chaika-2026",
+     "sinopsis": "Valentina, una cosmonauta rusa de 76 años, llega a una Cuba ucrónica y nebulosa tras recibir, con treinta años de retraso, una invitación para una expedición agrícola a Marte. Entre paisajes difusos y promesas del pasado, busca las ruinas de un futuro que nunca llegó."
     },
     {
      "festival": "ficpa-2026",
@@ -1626,7 +1709,7 @@
      "poster": "/assets/ficpa-2026/chaika.jpg",
      "posterSource": "tmdb",
      "lbSlug": "chaika-2025",
-     "sinopsis": "Valentina, una cosmonauta rusa de 76 años, llega a una Cuba ucrónica y nebulosa tras recibir, con treinta años de retraso, una invitación para una expedición agrícola a Marte. Entre paisajes difusos y promesas del pasado, busca las ruinas de un futuro que nunca llegó."
+     "sinopsis": "Valentina, una cosmonauta rusa de 76 años, recibe una carta desde Cuba con treinta años de retraso, invitándola a una expedición agrícola a Marte. Viaja a una isla onírica y difusa, donde la utopía soñada se desvanece entre paisajes borrosos y nostalgia suspendida, Valentina busca si aún es posible levantar vuelo mientras la nostalgia del Caribe se mezcla con el eco de un futuro que nunca llegó."
     },
     {
      "festival": "narrarelfuturo-2026",
@@ -1885,7 +1968,8 @@
    "pais_tmdb": "Cuba, Colombia, Germany",
    "title_en": "Practical Italian Grammar",
    "lbSlug": "practical-italian-grammar",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_verificado": "el catálogo ya la tiene (w_R4FGS28EE01T, cinemancia-2026)",
+   "work_id": "w_R4FGS28EE01T",
    "_ya_publicada": [
     {
      "festival": "cinemancia-2026",
@@ -1973,7 +2057,11 @@
     },
     {
      "festival": "ficmontanas-2026",
-     "titulo": "La gran hazaña"
+     "titulo": "La gran hazaña",
+     "poster": "/assets/ficcali-2026/la-gran-hazana.jpg",
+     "posterSource": "oficial",
+     "lbSlug": "the-great-feat",
+     "sinopsis": "Pablo necesita rescatar a su amiga Pascualina, una gallina ponedora que termina secuestrada por el tendero del pueblo, después de que el niño quebrara la cubeta de huevos que llevaba para pagarle una deuda de su familia."
     },
     {
      "festival": "popayan-2026",
@@ -2005,7 +2093,8 @@
    "duracion_tmdb": 15,
    "pais_tmdb": "Colombia",
    "lbSlug": "la-guerra-de-los-tomates",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_verificado": "el catálogo ya la tiene (w_R4MYH1FJ6Q71, popayan-2026)",
+   "work_id": "w_R4MYH1FJ6Q71",
    "_ya_publicada": [
     {
      "festival": "popayan-2026",
@@ -2044,7 +2133,8 @@
      "titulo": "La Independencia",
      "poster": "/assets/leviza/LaIndependencia.webp",
      "posterSource": "custom",
-     "lbSlug": "⚠️ LB PENDIENTE"
+     "lbSlug": "⚠️ LB PENDIENTE",
+     "sinopsis": "Cecilia, una mujer abnegada de 52 años, decide romper con su vida de sacrificios tras años de soportar la irresponsabilidad de su hijo y la ingratitud de su familia, buscando finalmente su independencia."
     },
     {
      "festival": "siembrafest-2026",
@@ -2081,7 +2171,11 @@
    "_ya_publicada": [
     {
      "festival": "ficmontanas-2026",
-     "titulo": "La Mona"
+     "titulo": "La Mona",
+     "poster": "/assets/villadelcine-2026/la-mona.jpg",
+     "posterSource": "oficial",
+     "lbSlug": "heat-wave-2025",
+     "sinopsis": "La Mona está dispuesta a cualquier sacrificio para garantizar su autoridad en La Hondura, aunque el precio que pague sea la soledad."
     },
     {
      "festival": "jardin-2026",
@@ -2181,7 +2275,8 @@
    "duracion_tmdb": 18,
    "pais_tmdb": "",
    "lbSlug": "los-pliegues-de-la-falda",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_verificado": "el catálogo ya la tiene (w_R4HHC4K8GBRC, ficdeh-2026, popayan-2026)",
+   "work_id": "w_R4HHC4K8GBRC",
    "_ya_publicada": [
     {
      "festival": "ficdeh-2026",
@@ -2229,7 +2324,8 @@
    "pais_tmdb": "Colombia",
    "title_en": "Bad Postures",
    "lbSlug": "bad-postures",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_verificado": "el catálogo ya la tiene (w_R4KECG9BFSX8, jardin-2026)",
+   "work_id": "w_R4KECG9BFSX8",
    "_ya_publicada": [
     {
      "festival": "jardin-2026",
@@ -2280,7 +2376,8 @@
    "pais_tmdb": "",
    "title_en": "Beyond",
    "lbSlug": "beyond-2025",
-   "_verificado": "el tmdb_id con que ya la publicamos en popayan-2026, y TMDB confirma la dirección",
+   "_verificado": "el catálogo ya la tiene (w_R4HHSYKXBWCD, ficdeh-2026, popayan-2026)",
+   "work_id": "w_R4HHSYKXBWCD",
    "_ya_publicada": [
     {
      "festival": "ficdeh-2026",
@@ -2312,11 +2409,16 @@
    "duracion_tmdb": 12,
    "pais_tmdb": "Peru, France",
    "lbSlug": "memoria-colectiva",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_verificado": "el catálogo ya la tiene (w_R4J7WZRP6QM7, ficmontanas-2026, villadelcine-2026)",
+   "work_id": "w_R4J7WZRP6QM7",
    "_ya_publicada": [
     {
      "festival": "ficmontanas-2026",
-     "titulo": "Memoria Colectiva"
+     "titulo": "Memoria Colectiva",
+     "poster": "/assets/villadelcine-2026/collective-memory.jpg",
+     "posterSource": "oficial",
+     "lbSlug": "memoria-colectiva",
+     "sinopsis": "En 1983, soldados encapuchados irrumpen en la casa de Adelina y se llevan a su esposo, quien jamás regresa. Ante el silencio de las autoridades, ella se une a otras mujeres marcadas por la misma ausencia. Juntas convierten el dolor en memoria y la memoria en una exigencia de justicia."
     },
     {
      "festival": "villadelcine-2026",
@@ -2354,13 +2456,15 @@
    "pais_tmdb": "Colombia",
    "title_en": "Chilapa Girl",
    "lbSlug": "chilapa-girl",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_verificado": "el catálogo ya la tiene (w_R4ETMKK7J5T0, cinemancia-2025, popayan-2026)",
+   "work_id": "w_R4ETMKK7J5T0",
    "_ya_publicada": [
     {
      "festival": "cinemancia-2025",
      "titulo": "Niña Chilapa",
      "poster": "https://cinemanciafestival.com/wp-content/uploads/2025/08/Nina-Chilapa-Still-3-scaled.jpg",
      "posterSource": "editorial",
+     "lbSlug": "chilapa-girl",
      "sinopsis": "Yulieth es una niña en un momento que mide su relación con el mundo: no es todavía una adolescente pero sus experiencias la hacen sentirse una mujer grande. Ese difícil equilibrio se amplía con el espacio que la rodea: una naturaleza demasiado generosa, tupida y vasta."
     },
     {
@@ -2385,7 +2489,8 @@
    "duracion_tmdb": 11,
    "pais_tmdb": "",
    "lbSlug": "para-no-volver",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_verificado": "el catálogo ya la tiene (w_R4DRKZWFVT9V, biff-2026, cinemancia-2026, filcmar-2026)",
+   "work_id": "w_R4DRKZWFVT9V",
    "_ya_publicada": [
     {
      "festival": "biff-2026",
@@ -2427,7 +2532,8 @@
    "duracion_tmdb": 20,
    "pais_tmdb": "Colombia",
    "lbSlug": "pawa",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_verificado": "el catálogo ya la tiene (w_R4HCNBABG3FG, ficci-65, ficdeh-2026, leviza-2026)",
+   "work_id": "w_R4HCNBABG3FG",
    "_ya_publicada": [
     {
      "festival": "ficdeh-2026",
@@ -2442,7 +2548,8 @@
      "titulo": "Pawa",
      "poster": "/assets/leviza/Pawa.jpeg",
      "posterSource": "custom",
-     "lbSlug": "⚠️ LB PENDIENTE"
+     "lbSlug": "⚠️ LB PENDIENTE",
+     "sinopsis": "En una tranquila mañana en una ranchería de La Guajira, Indira da de comer a los pavos y las gallinas. Ante la sequía y el inicio de clases, Josefa, abuela de Indira, emprende un viaje junto a su nieta por las comunidades aledañas con la esperanza de vender a Taata, el pavo más grande, para comprar útiles escolares y comida."
     }
    ]
   },
@@ -2508,8 +2615,18 @@
    "duracion_tmdb": 0,
    "pais_tmdb": "Colombia",
    "lbSlug": "que-el-cielo-nos-perdone",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_verificado": "el catálogo ya la tiene (w_R4GP49AWA2ZH, bhff-2026, fantasmagoria-2026, ficma-2026, siembrafest-2026, villadelcine-2026)",
+   "work_id": "w_R4GP49AWA2ZH",
    "_ya_publicada": [
+    {
+     "festival": "bhff-2026",
+     "titulo": "Que El Cielo Nos Perdone",
+     "tmdb_id": 1565878,
+     "poster": "/assets/bhff-2026/que-el-cielo-nos-perdone.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "que-el-cielo-nos-perdone",
+     "sinopsis": "Colombia, 1951: En medio de La Violencia, el período de brutal guerra política entre liberales y conservadores, un par de chulavitas –asesinos a sueldo pagados por el gobierno– acechan a un sacerdote en la oscuridad de la noche, esperando que los conduzca a la cabaña en el bosque en donde se esconden sus próximas víctimas. Pero el horror que encontrarán allí es mil veces peor que el dolor que pensaban infligir."
+    },
     {
      "festival": "fantasmagoria-2026",
      "titulo": "Que El Cielo Nos Perdone",
@@ -2558,7 +2675,8 @@
    "duracion_tmdb": 11,
    "pais_tmdb": "Colombia",
    "lbSlug": "refraccion",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_verificado": "el catálogo ya la tiene (w_R4F8T5DKXC9W, cinemancia-2026, ficmontanas-2026, girardota-2026, jardin-2026, narrarelfuturo-2026)",
+   "work_id": "w_R4F8T5DKXC9W",
    "_ya_publicada": [
     {
      "festival": "cinemancia-2026",
@@ -2571,7 +2689,11 @@
     },
     {
      "festival": "ficmontanas-2026",
-     "titulo": "Refracción"
+     "titulo": "Refracción",
+     "poster": "https://image.tmdb.org/t/p/w500/bzKNobO0N8Oqj6YU6eA2R28UgPI.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "refraccion",
+     "sinopsis": "Eloísa, una chica de 20 años, está en dos relaciones al mismo tiempo. Una noche, después de haber estado con ambas chicas, se siente agobiada por estar en esa situación de engaño y en medio de su confusión sale a recorrer las calles de Medellín en bicicleta, donde se dará cuenta de que no quiere reconocerse pero deberá encontrarse consigo misma."
     },
     {
      "festival": "girardota-2026",
@@ -2620,7 +2742,17 @@
    "duracion_tmdb": 6,
    "pais_tmdb": "Colombia",
    "lbSlug": "replay-2026",
-   "_verificado": "declarada a mano: Existe en TMDB con otro título o sin año ni duración, y el candado no la casaba sola: «Replay» (2026), Simón Matallana Nossa; mismo director que publica FICICA. Verificada el 11 oct 2026."
+   "_verificado": "declarada a mano: Existe en TMDB con otro título o sin año ni duración, y el candado no la casaba sola: «Replay» (2026), Simón Matallana Nossa; mismo director que publica FICICA. Verificada el 11 oct 2026.",
+   "_ya_publicada": [
+    {
+     "festival": "bhff-2026",
+     "titulo": "Replay",
+     "tmdb_id": 1677190,
+     "poster": "/assets/bhff-2026/replay.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "replay-2026"
+    }
+   ]
   },
   "Safo": {
    "tmdb_id": 1450073,
@@ -2661,7 +2793,8 @@
    "pais_tmdb": "Colombia",
    "title_en": "Into the fog",
    "lbSlug": "into-the-fog-2026",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_verificado": "el catálogo ya la tiene (w_R4FRTV2Q7YA2, cinemancia-2026, ficci-65, ficmontanas-2026, midbo-2026, popayan-2026)",
+   "work_id": "w_R4FRTV2Q7YA2",
    "_ya_publicada": [
     {
      "festival": "cinemancia-2026",
@@ -2674,7 +2807,11 @@
     },
     {
      "festival": "ficmontanas-2026",
-     "titulo": "Sombras en la niebla"
+     "titulo": "Sombras en la niebla",
+     "poster": "https://image.tmdb.org/t/p/w500/36fgDq5bvxmVXUlGHpFZLnogB5K.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "into-the-fog-2026",
+     "sinopsis": "En el páramo de Chiscas, don Vicente Molina y su familia cuidan un enorme rebaño de ovejas. La cotidianidad de la familia transcurre entre montañas cubiertas de niebla y la cocina, cuyo fogón de leña los reúne en torno a la comida y el juego. Entre el grupo se encuentra Will, el niño de la familia, quien se debate entre jugar y acompañar a los mayores en las labores de pastoreo."
     },
     {
      "festival": "midbo-2026",
@@ -2749,7 +2886,8 @@
    "pais_tmdb": "Colombia",
    "title_en": "Tuktu, Father Maize",
    "lbSlug": "tuktu-father-maize",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_verificado": "el catálogo ya la tiene (w_R4HJFE6HF274, ficdeh-2026, ficmontanas-2026, ficpa-2026, popayan-2026, villadelcine-2026)",
+   "work_id": "w_R4HJFE6HF274",
    "_ya_publicada": [
     {
      "festival": "ficdeh-2026",
@@ -2761,14 +2899,20 @@
     },
     {
      "festival": "ficmontanas-2026",
-     "titulo": "Tuktu, Padre Maíz"
+     "titulo": "Tuktu, Padre Maíz",
+     "poster": "/assets/ficdeh/tuktu-padre-maiz.jpg",
+     "posterSource": "custom",
+     "lbSlug": "tuktu-father-maize",
+     "sinopsis": "En las montañas de Colombia, Juan, un niño mestizo de 13 años, se ve obligado a huir del monstruo de la guerra. En su travesía, la tierra misma lo protege y, guiado por las voces de sus ancestros, despierta un poder ancestral llamado Tucuna, que le permite transformarse y renacer. Convertido en Tuktu, un Taita de fuerza extraordinaria, comprende que su destino no es solo sobrevivir, sino regresar para sanar la herida de la guerra y sembrar la paz en la tierra que lo vio nacer."
     },
     {
      "festival": "ficpa-2026",
      "titulo": "Tuktu, Padre Maíz",
+     "tmdb_id": 1592955,
      "poster": "/assets/ficdeh/tuktu-padre-maiz.jpg",
      "posterSource": "oficial",
-     "sinopsis": "En las montañas de Colombia, Juan, un niño mestizo de 13 años, se ve obligado a huir del monstruo de la guerra. En su travesía, la tierra misma lo protege y, guiado por las voces de sus ancestros, despierta un poder ancestral llamado Tucuna, que le permite transformarse y renacer. Convertido en Tuktu, un Taita de fuerza extraordinaria, comprende que su destino no es solo sobrevivir, sino regresar para sanar la herida de la guerra y sembrar la paz en la tierra que lo vio nacer."
+     "lbSlug": "tuktu-father-maize",
+     "sinopsis": "En las montañas de Colombia, Juan, un niño indígena de 13 años, huye del monstruo de la guerra. En su travesía, guiado por sus ancestros, despierta un poder ancestral que lo convierte en Tuktu, un Taita destinado a sembrar paz en su tierra."
     },
     {
      "festival": "popayan-2026",
