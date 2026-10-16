@@ -6808,6 +6808,32 @@ try:
 except Exception as _e:
     fail(check, f'no pudo correr: {_e}')
 
+# ── [funcion-tests] y [funcion-autoprueba] el modelo de la función (docs/FUNCION.md) ──
+# Las reglas de cada casilla viven en pipeline/funcion.py (único dueño). Sus tests
+# se escribieron antes que el código y se probaron por mutación (11 de 11
+# atrapadas, 15 oct 2026). La autoprueba repite lo esencial en memoria.
+check = 'funcion-tests'
+try:
+    import subprocess as _spf
+    _rf = _spf.run([_sysc.executable, '-m', 'unittest', 'discover', '-s', 'tests/pipeline'],
+                   capture_output=True, text=True, timeout=120)
+    if _rf.returncode:
+        fail(check, 'tests del modelo de la función en rojo: ' + (_rf.stderr.strip().splitlines() or ['?'])[-1])
+    else:
+        ok(check, 'tests del modelo de la función en verde')
+except Exception as _e:
+    fail(check, f'no pudo correr: {_e}')
+check = 'funcion-autoprueba'
+try:
+    import funcion as _fn
+    _cf = _fn.autoprueba()
+    if _cf:
+        fail(check, 'reglas ciegas: ' + ', '.join(_cf))
+    else:
+        ok(check, 'cada regla de la función atrapa su cebo')
+except Exception as _e:
+    fail(check, f'no pudo correr: {_e}')
+
 # ── [css-huerfana] toda clase del <style> la emite alguien ───────────────────────
 # Medido el 5 sep 2026: 825 clases en index.html, 45 que nada emitía — 14 nunca
 # en toda la historia, 27 cuya emisión se quitó (17 en agosto), 3 solo en
