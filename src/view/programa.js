@@ -222,7 +222,7 @@ function renderProgramaListHTML(state){
         <div class="plist-info">
           <div class="plist-title">${noticeBadge}<span class="plist-title-txt">${dt}</span>${nowDot}</div>
           ${(()=>{const _mb=_metaBadges(f);return _mb||qaDot?`<div class="plist-badges">${_mb}${qaDot}</div>`:'';})()}
-          <div class="plist-meta" style="${f._cancelled?'text-decoration:line-through':''}">${vc.short}${sala(f.venue)?' · '+sala(f.venue):''}${venueCity(f.venue)?` · <span class="plist-city">${venueCity(f.venue)}</span>`:''}${f.duration&&!f.info?' · '+durFmt(f.duration):''}${f.info?` · <span class="plist-abierta">${abiertaLabel(f)}</span>`:''}</div>
+          <div class="plist-meta" style="${f._cancelled?'text-decoration:line-through':''}">${vc.short}${sala(f)?' · '+sala(f):''}${venueCity(f.venue)?` · <span class="plist-city">${venueCity(f.venue)}</span>`:''}${f.duration&&!f.info?' · '+durFmt(f.duration):''}${f.info?` · <span class="plist-abierta">${abiertaLabel(f)}</span>`:''}</div>
           ${noticeNote||`<div class="plist-sec">${_secLabelFull(f.section||'')}</div>`}
         </div>
         <div class="plist-heart${inWL?'':' empty'}" data-title="${f.title.replace(/"/g,'&quot;')}" data-action="toggleWLFromList" data-stop="1">${inWL?ICONS.heartFill:ICONS.heart}</div>

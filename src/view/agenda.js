@@ -710,7 +710,7 @@ export function renderMiPlanCalendar(state){
             return `<span class="mp-void-t">${_fin}</span>`;
           })()}${_voidFix}${prioritized.has(s._title)?` <span class="txt-amber60-xs">${ICONS.bookmarkFill}</span>`:''}${_rowStars?` <span class="txt-amber-sm">${_rowStars}</span>`:''}${isNow?` <span class="txt-green-semi">${t('label_en_curso_min')}</span>`:''}</div>
           <div>${(()=>{const{displayTitle:_dt,progSuffix:_ps}=parseProgramTitle(s._title||'');const _mfqa=FILMS.find(fi=>sameEntry(fi,s));const _qab=_mfqa?.has_qa?`<span class="meta-badge sm">Q&A</span>`:'';return`<div class="mplan-rtitle${_isEventRow?' mp-event-title':''}"><span class="mplan-rtitle-txt">${_dt}</span>${_qab}</div>${_ps?`<div class="prog-suffix">${_ps}</div>`:''}`;})()} </div>
-          <div class="mplan-rvenue${_isEventRow?' mp-event-venue':''}">${ICONS.pin} ${vcfg(s.venue).short||s.venue}${venueCity(s.venue)?` · <span class="plist-city">${venueCity(s.venue)}</span>`:''}${sala(s.venue)?' \u00b7 '+sala(s.venue):''}</div>
+          <div class="mplan-rvenue${_isEventRow?' mp-event-venue':''}">${ICONS.pin} ${vcfg(s.venue).short||s.venue}${venueCity(s.venue)?` · <span class="plist-city">${venueCity(s.venue)}</span>`:''}${sala(s)?' \u00b7 '+sala(s):''}</div>
           ${_sesionDeBloque(s)}
           ${_filaBoleta(s)}
           ${(()=>{const _mf=FILMS.find(fi=>sameEntry(fi,s));if(!_mf||!_mf.is_cortos||!_mf.film_list||!_mf.film_list.length) return'';return`<button class="row-xs mplan-prog-toggle" data-action="toggleMplanProg">${ICONS.chevronR} ${t('label_programa')}</button>`;})()}
@@ -797,7 +797,7 @@ export function renderFilmAlternatives(state,title,day,time){
       <div class="checkin-opt-info">
         <div class="checkin-opt-time">${f.time} · ${f.info?abiertaLabel(f):durFmt(f.duration)}</div>
         <div class="checkin-opt-title">${short}</div>
-        <div class="checkin-opt-venue">${ICONS.pin} ${vc2.short}${sala(f.venue)?' \u00b7 '+sala(f.venue):''}</div>
+        <div class="checkin-opt-venue">${ICONS.pin} ${vc2.short}${sala(f)?' \u00b7 '+sala(f):''}</div>
       </div>
       <div class="checkin-opt-add" data-action="confirmReplace" data-rmtitle="${safeT}" data-newtitle="${safeTNew}" data-day="${f.day}" data-time="${f.time}">${ICONS.plus}</div>
     </div>`;
@@ -997,7 +997,7 @@ export function renderContextualHeader(state, consensus){
             <div class="ctx-next-title">${dt}</div>
             ${badge}
           </div>
-          <div class="ctx-next-detail">${next.time} · ${vc.short}${sala(next.venue)?' \u00b7 '+sala(next.venue):''}</div>
+          <div class="ctx-next-detail">${next.time} · ${vc.short}${sala(next)?' \u00b7 '+sala(next):''}</div>
         </div>
       </div>
       ${consensusHtml}${delayHtml}${warnHtml}
@@ -1027,7 +1027,7 @@ export function renderContextualHeader(state, consensus){
           <div class="ctx-suggest-badge">${gapSuggestion.time}</div>
           <div class="ctx-suggest-info">
             <div class="ctx-suggest-title">${dt.length>26?dt.slice(0,24)+'…':dt}</div>
-            <div class="ctx-suggest-venue">${vc2.short}${sala(gapSuggestion.venue)?' \u00b7 '+sala(gapSuggestion.venue):''}</div>
+            <div class="ctx-suggest-venue">${vc2.short}${sala(gapSuggestion)?' \u00b7 '+sala(gapSuggestion):''}</div>
           </div>
         </div>`;
     })():'';
@@ -1508,7 +1508,7 @@ function _renderSavedAgendaHTML(state, consensus){
     suggDays.forEach(day=>{
       html+=`<div class="suggestion-day-lbl">${dayLabelLong(day)}</div>`;
       html+=suggsByDay[day].map(f=>{
-        const vc2=vcfg(f.venue),sl=sala(f.venue);
+        const vc2=vcfg(f.venue),sl=sala(f);
         const _sph=_posterThumb(f,'lb-poster');
         return`<div class="suggestion-item js-open-pel" data-title="${escXML(f.title)}">
           ${_sph}
@@ -2042,7 +2042,7 @@ export function mkAgendaRow(s, mode='saved'){
   const f=FILMS.find(fi=>fi.title===title);
   const _phInner=_posterThumb(f,'lb-poster');
   const _ph=`<div class="js-open-pel" data-title="${escXML(title)}" style="flex-shrink:0;cursor:pointer">${_phInner}</div>`;
-  const vc2=vcfg(s.venue),sl=sala(s.venue);
+  const vc2=vcfg(s.venue),sl=sala(s);
   const safeT=(s._title||'').replace(/"/g,'&quot;');
   const isDone=watched.has(title);
   // altBadge ("X alt.") eliminado del template — rediseño visual: las
