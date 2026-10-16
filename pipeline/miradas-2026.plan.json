@@ -1,0 +1,22 @@
+{
+ "_nota": "Miradas Medellín 2026 — Festival de cine y artes audiovisuales (Medellín, 3–8 nov 2026; Secretaría de Cultura, entrada libre). PRE-ONBOARDING: la selección de @cinematecademedellin (3 carruseles, 11–15 oct). Las iberoamericanas ya traen sus funciones (guardadas en funciones_lamina); falta la parrilla completa (Hecho en Medellín, cine expandido, comunitario, LAB). Cuando salga se agregan crudo/enriquecer/ensamblar, ya en el modelo de la función (docs/FUNCION.md).",
+ "radar": 1088,
+ "pasos": [
+  {
+   "cmd": "python3 pipeline/miradas-2026-catalogo.py",
+   "que": "las láminas de los 3 carruseles → catálogo (42 obras: 11 largos y 7 cortos iberoamericanos con ficha y funciones, 24 de Cine hecho en Medellín)"
+  },
+  {
+   "cmd": "python3 pipeline/enriquecer_catalogo.py festivals/staging/miradas-2026-catalogo.json",
+   "que": "la cascada de TMDB y lo ya publicado → catálogo enriquecido"
+  },
+  {
+   "cmd": "python3 pipeline/ig-lecturas.py DefnwMYDHVV DeiGFLoIKqz DeX03IEDKSe",
+   "que": "verificador: cuatro lecturas independientes de las láminas (16 oct: 0 diferencias en títulos, directores, horas, duraciones; solo logos)"
+  }
+ ],
+ "_fuentes_versionadas": {
+  "festivals/staging/miradas-2026-catalogo.json": "la selección (42 obras) con las funciones de las iberoamericanas; la leerá el crudo",
+  "festivals/staging/miradas-2026-catalogo-enriquecido.json": "las fichas TMDB/cascada (23 de 42), que escribe el paso 2. Es el trabajo que el montaje reusa cuando salga la parrilla."
+ }
+}
