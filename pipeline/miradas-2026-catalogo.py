@@ -15,6 +15,11 @@ ojo (HECHO_EN_MEDELLIN, abajo), lámina por lámina.
 Las funciones que traen las láminas se guardan en `funciones_lamina` de cada
 obra, verbatim, para el crudo que llegará con la parrilla completa.
 
+OJO (Juan, 16 oct 2026): @cinematecademedellin publica TODA la programación de
+la Cinemateca, y Miradas es UN festival dentro de ella, con sus fechas. Por eso
+el script FRENA si un post no nombra a Miradas en el pie o si una función de
+una lámina cae fuera del 3–8 nov: lo que no es del festival no entra.
+
 Escribe festivals/staging/miradas-2026-catalogo.json
 """
 import glob, io, json, os, re, sys
@@ -117,10 +122,25 @@ def ibero(sc, seccion):
     return obras
 
 
+DIAS_FESTIVAL = range(3, 9)   # 3–8 de noviembre
+
+
+def es_de_miradas(sc):
+    pie = json.load(open(f'{REPO}/fuentes/ig/{sc}/post.json', encoding='utf-8')).get('pie') or ''
+    if 'miradas' not in pie.lower():
+        sys.exit(f'✗ {sc}: el pie no nombra a Miradas — puede ser programación regular de la Cinemateca')
+
+
 def main():
+    for sc in [*POSTS, 'DeX03IEDKSe']:
+        es_de_miradas(sc)
     obras = []
     for sc, sec in POSTS.items():
         obras += ibero(sc, sec)
+    fuera = [(o['titulo'], f) for o in obras for f in o['funciones_lamina']
+             if int(re.search(r'(\d+) de noviembre', f).group(1)) not in DIAS_FESTIVAL]
+    if fuera:
+        sys.exit(f'✗ funciones fuera del 3–8 nov (¿programación regular de la Cinemateca?): {fuera}')
     for lam, sec, tit, dire in HECHO_EN_MEDELLIN:
         obras.append({'titulo': tit, 'seccion': 'Cine hecho en Medellín · ' + sec, 'director': dire,
                       '_src': {'url': URL.format('DeX03IEDKSe'), 'lamina': lam, 'date': '2026-10-16'}})
