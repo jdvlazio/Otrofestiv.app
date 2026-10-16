@@ -1,0 +1,639 @@
+{
+ "_provenance": {
+  "fuente": "agenda de la Cinemateca de Bogotá (15 oct) e IG de Parapeto",
+  "capturado": "2026-10-16",
+  "metodo": "una afirmación por casilla, con su fuente (docs/FUNCION.md)"
+ },
+ "afirmaciones": [
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá",
+    "dia": "2026-10-22",
+    "hora": "19:00"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3619?sede=11",
+    "fecha": "2026-10-15"
+   },
+   "casilla": "sala",
+   "valor": "Sala Capital",
+   "evidencia": "Parapeto · Cinemateca de Bogotá Centro · 2026-10-22 19:00 · Sala Capital"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá",
+    "dia": "2026-10-22",
+    "hora": "19:00"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3619?sede=11",
+    "fecha": "2026-10-15"
+   },
+   "casilla": "entrada",
+   "valor": "boleta",
+   "evidencia": "Parapeto · Cinemateca de Bogotá Centro · 2026-10-22 19:00 · Sala Capital · link de TuBoleta"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá",
+    "dia": "2026-10-22",
+    "hora": "19:00"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3619?sede=11",
+    "fecha": "2026-10-15"
+   },
+   "casilla": "ticket_url",
+   "valor": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839533",
+   "evidencia": "Parapeto · Cinemateca de Bogotá Centro · 2026-10-22 19:00 · Sala Capital"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá",
+    "dia": "2026-10-23",
+    "hora": "19:00"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3620?sede=11",
+    "fecha": "2026-10-15"
+   },
+   "casilla": "sala",
+   "valor": "Sala 2",
+   "evidencia": "Hiperrealidad · Cinemateca de Bogotá Centro · 2026-10-23 19:00 · Sala 2"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá",
+    "dia": "2026-10-23",
+    "hora": "19:00"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3620?sede=11",
+    "fecha": "2026-10-15"
+   },
+   "casilla": "entrada",
+   "valor": "boleta",
+   "evidencia": "Hiperrealidad · Cinemateca de Bogotá Centro · 2026-10-23 19:00 · Sala 2 · link de TuBoleta"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá",
+    "dia": "2026-10-23",
+    "hora": "19:00"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3620?sede=11",
+    "fecha": "2026-10-15"
+   },
+   "casilla": "ticket_url",
+   "valor": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839534",
+   "evidencia": "Hiperrealidad · Cinemateca de Bogotá Centro · 2026-10-23 19:00 · Sala 2"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá",
+    "dia": "2026-10-24",
+    "hora": "19:30"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3621?sede=11",
+    "fecha": "2026-10-15"
+   },
+   "casilla": "sala",
+   "valor": "Sala Capital",
+   "evidencia": "Sierra: El álbum mortuorio · Cinemateca de Bogotá Centro · 2026-10-24 19:30 · Sala Capital"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá",
+    "dia": "2026-10-24",
+    "hora": "19:30"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3621?sede=11",
+    "fecha": "2026-10-15"
+   },
+   "casilla": "entrada",
+   "valor": "boleta",
+   "evidencia": "Sierra: El álbum mortuorio · Cinemateca de Bogotá Centro · 2026-10-24 19:30 · Sala Capital · link de TuBoleta"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá",
+    "dia": "2026-10-24",
+    "hora": "19:30"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3621?sede=11",
+    "fecha": "2026-10-15"
+   },
+   "casilla": "ticket_url",
+   "valor": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839535",
+   "evidencia": "Sierra: El álbum mortuorio · Cinemateca de Bogotá Centro · 2026-10-24 19:30 · Sala Capital"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá",
+    "dia": "2026-10-25",
+    "hora": "18:30"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3622?sede=11",
+    "fecha": "2026-10-15"
+   },
+   "casilla": "sala",
+   "valor": "Sala 2",
+   "evidencia": "Moviedreams / Chaika · Cinemateca de Bogotá Centro · 2026-10-25 18:30 · Sala 2"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá",
+    "dia": "2026-10-25",
+    "hora": "18:30"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3622?sede=11",
+    "fecha": "2026-10-15"
+   },
+   "casilla": "entrada",
+   "valor": "boleta",
+   "evidencia": "Moviedreams / Chaika · Cinemateca de Bogotá Centro · 2026-10-25 18:30 · Sala 2 · link de TuBoleta"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá",
+    "dia": "2026-10-25",
+    "hora": "18:30"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3622?sede=11",
+    "fecha": "2026-10-15"
+   },
+   "casilla": "ticket_url",
+   "valor": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839536",
+   "evidencia": "Moviedreams / Chaika · Cinemateca de Bogotá Centro · 2026-10-25 18:30 · Sala 2"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá",
+    "dia": "2026-10-27",
+    "hora": "17:00"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3623?sede=11",
+    "fecha": "2026-10-15"
+   },
+   "casilla": "sala",
+   "valor": "Sala 3",
+   "evidencia": "Cerdo que sobrevivió a la fiebre aftosa · Cinemateca de Bogotá Centro · 2026-10-27 17:00 · Sala 3"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá",
+    "dia": "2026-10-27",
+    "hora": "17:00"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3623?sede=11",
+    "fecha": "2026-10-15"
+   },
+   "casilla": "entrada",
+   "valor": "boleta",
+   "evidencia": "Cerdo que sobrevivió a la fiebre aftosa · Cinemateca de Bogotá Centro · 2026-10-27 17:00 · Sala 3 · link de TuBoleta"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá",
+    "dia": "2026-10-27",
+    "hora": "17:00"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3623?sede=11",
+    "fecha": "2026-10-15"
+   },
+   "casilla": "ticket_url",
+   "valor": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839537",
+   "evidencia": "Cerdo que sobrevivió a la fiebre aftosa · Cinemateca de Bogotá Centro · 2026-10-27 17:00 · Sala 3"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá",
+    "dia": "2026-10-27",
+    "hora": "19:30"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3624?sede=11",
+    "fecha": "2026-10-15"
+   },
+   "casilla": "sala",
+   "valor": "Sala 3",
+   "evidencia": "La muerte no llega sola · Cinemateca de Bogotá Centro · 2026-10-27 19:30 · Sala 3"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá",
+    "dia": "2026-10-27",
+    "hora": "19:30"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3624?sede=11",
+    "fecha": "2026-10-15"
+   },
+   "casilla": "entrada",
+   "valor": "boleta",
+   "evidencia": "La muerte no llega sola · Cinemateca de Bogotá Centro · 2026-10-27 19:30 · Sala 3 · link de TuBoleta"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá",
+    "dia": "2026-10-27",
+    "hora": "19:30"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3624?sede=11",
+    "fecha": "2026-10-15"
+   },
+   "casilla": "ticket_url",
+   "valor": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839538",
+   "evidencia": "La muerte no llega sola · Cinemateca de Bogotá Centro · 2026-10-27 19:30 · Sala 3"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá",
+    "dia": "2026-10-28",
+    "hora": "16:00"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3625?sede=11",
+    "fecha": "2026-10-15"
+   },
+   "casilla": "sala",
+   "valor": "Sala 2",
+   "evidencia": "Work in progress · Cinemateca de Bogotá Centro · 2026-10-28 16:00 · Sala 2"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá",
+    "dia": "2026-10-28",
+    "hora": "16:00"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3625?sede=11",
+    "fecha": "2026-10-15"
+   },
+   "casilla": "entrada",
+   "valor": "boleta",
+   "evidencia": "Work in progress · Cinemateca de Bogotá Centro · 2026-10-28 16:00 · Sala 2 · link de TuBoleta"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá",
+    "dia": "2026-10-28",
+    "hora": "16:00"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3625?sede=11",
+    "fecha": "2026-10-15"
+   },
+   "casilla": "ticket_url",
+   "valor": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839539",
+   "evidencia": "Work in progress · Cinemateca de Bogotá Centro · 2026-10-28 16:00 · Sala 2"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá",
+    "dia": "2026-10-28",
+    "hora": "16:30"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3626?sede=11",
+    "fecha": "2026-10-15"
+   },
+   "casilla": "sala",
+   "valor": "Sala 3",
+   "evidencia": "Dentro del Santiago Horror: Horror sin fronteras · Cinemateca de Bogotá Centro · 2026-10-28 16:30 · Sala 3"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá",
+    "dia": "2026-10-28",
+    "hora": "16:30"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3626?sede=11",
+    "fecha": "2026-10-15"
+   },
+   "casilla": "entrada",
+   "valor": "boleta",
+   "evidencia": "Dentro del Santiago Horror: Horror sin fronteras · Cinemateca de Bogotá Centro · 2026-10-28 16:30 · Sala 3 · link de TuBoleta"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá",
+    "dia": "2026-10-28",
+    "hora": "16:30"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3626?sede=11",
+    "fecha": "2026-10-15"
+   },
+   "casilla": "ticket_url",
+   "valor": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839540",
+   "evidencia": "Dentro del Santiago Horror: Horror sin fronteras · Cinemateca de Bogotá Centro · 2026-10-28 16:30 · Sala 3"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá",
+    "dia": "2026-10-29",
+    "hora": "17:00"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3627?sede=11",
+    "fecha": "2026-10-15"
+   },
+   "casilla": "sala",
+   "valor": "Sala 3",
+   "evidencia": "El Susurro / Esquirlas de Caracol · Cinemateca de Bogotá Centro · 2026-10-29 17:00 · Sala 3"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá",
+    "dia": "2026-10-29",
+    "hora": "17:00"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3627?sede=11",
+    "fecha": "2026-10-15"
+   },
+   "casilla": "entrada",
+   "valor": "boleta",
+   "evidencia": "El Susurro / Esquirlas de Caracol · Cinemateca de Bogotá Centro · 2026-10-29 17:00 · Sala 3 · link de TuBoleta"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá",
+    "dia": "2026-10-29",
+    "hora": "17:00"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3627?sede=11",
+    "fecha": "2026-10-15"
+   },
+   "casilla": "ticket_url",
+   "valor": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839542",
+   "evidencia": "El Susurro / Esquirlas de Caracol · Cinemateca de Bogotá Centro · 2026-10-29 17:00 · Sala 3"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá",
+    "dia": "2026-10-29",
+    "hora": "19:30"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3628?sede=11",
+    "fecha": "2026-10-15"
+   },
+   "casilla": "sala",
+   "valor": "Sala 3",
+   "evidencia": "Algo no está bien · Cinemateca de Bogotá Centro · 2026-10-29 19:30 · Sala 3"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá",
+    "dia": "2026-10-29",
+    "hora": "19:30"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3628?sede=11",
+    "fecha": "2026-10-15"
+   },
+   "casilla": "entrada",
+   "valor": "boleta",
+   "evidencia": "Algo no está bien · Cinemateca de Bogotá Centro · 2026-10-29 19:30 · Sala 3 · link de TuBoleta"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá",
+    "dia": "2026-10-29",
+    "hora": "19:30"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3628?sede=11",
+    "fecha": "2026-10-15"
+   },
+   "casilla": "ticket_url",
+   "valor": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839543",
+   "evidencia": "Algo no está bien · Cinemateca de Bogotá Centro · 2026-10-29 19:30 · Sala 3"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá",
+    "dia": "2026-10-30",
+    "hora": "17:00"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3629?sede=11",
+    "fecha": "2026-10-15"
+   },
+   "casilla": "sala",
+   "valor": "Sala 3",
+   "evidencia": "Hay algo esperando · Cinemateca de Bogotá Centro · 2026-10-30 17:00 · Sala 3"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá",
+    "dia": "2026-10-30",
+    "hora": "17:00"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3629?sede=11",
+    "fecha": "2026-10-15"
+   },
+   "casilla": "entrada",
+   "valor": "boleta",
+   "evidencia": "Hay algo esperando · Cinemateca de Bogotá Centro · 2026-10-30 17:00 · Sala 3 · link de TuBoleta"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá",
+    "dia": "2026-10-30",
+    "hora": "17:00"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3629?sede=11",
+    "fecha": "2026-10-15"
+   },
+   "casilla": "ticket_url",
+   "valor": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839544",
+   "evidencia": "Hay algo esperando · Cinemateca de Bogotá Centro · 2026-10-30 17:00 · Sala 3"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá",
+    "dia": "2026-10-30",
+    "hora": "19:30"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3630?sede=11",
+    "fecha": "2026-10-15"
+   },
+   "casilla": "sala",
+   "valor": "Sala 3",
+   "evidencia": "Tarde o temprano / Siempre hay un monstruo · Cinemateca de Bogotá Centro · 2026-10-30 19:30 · Sala 3"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá",
+    "dia": "2026-10-30",
+    "hora": "19:30"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3630?sede=11",
+    "fecha": "2026-10-15"
+   },
+   "casilla": "entrada",
+   "valor": "boleta",
+   "evidencia": "Tarde o temprano / Siempre hay un monstruo · Cinemateca de Bogotá Centro · 2026-10-30 19:30 · Sala 3 · link de TuBoleta"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá",
+    "dia": "2026-10-30",
+    "hora": "19:30"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3630?sede=11",
+    "fecha": "2026-10-15"
+   },
+   "casilla": "ticket_url",
+   "valor": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839545",
+   "evidencia": "Tarde o temprano / Siempre hay un monstruo · Cinemateca de Bogotá Centro · 2026-10-30 19:30 · Sala 3"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá",
+    "dia": "2026-10-31",
+    "hora": "16:00"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3631?sede=11",
+    "fecha": "2026-10-15"
+   },
+   "casilla": "sala",
+   "valor": "Sala 2",
+   "evidencia": "Mamá, la casa no es segura · Cinemateca de Bogotá Centro · 2026-10-31 16:00 · Sala 2"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá",
+    "dia": "2026-10-31",
+    "hora": "16:00"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3631?sede=11",
+    "fecha": "2026-10-15"
+   },
+   "casilla": "entrada",
+   "valor": "boleta",
+   "evidencia": "Mamá, la casa no es segura · Cinemateca de Bogotá Centro · 2026-10-31 16:00 · Sala 2 · link de TuBoleta"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá",
+    "dia": "2026-10-31",
+    "hora": "16:00"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3631?sede=11",
+    "fecha": "2026-10-15"
+   },
+   "casilla": "ticket_url",
+   "valor": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839546",
+   "evidencia": "Mamá, la casa no es segura · Cinemateca de Bogotá Centro · 2026-10-31 16:00 · Sala 2"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá",
+    "dia": "2026-10-31",
+    "hora": "19:00"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3632?sede=11",
+    "fecha": "2026-10-15"
+   },
+   "casilla": "sala",
+   "valor": "Sala Capital",
+   "evidencia": "Clausura BHFF · Cinemateca de Bogotá Centro · 2026-10-31 19:00 · Sala Capital"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá",
+    "dia": "2026-10-31",
+    "hora": "19:00"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3632?sede=11",
+    "fecha": "2026-10-15"
+   },
+   "casilla": "entrada",
+   "valor": "libre",
+   "evidencia": "Clausura BHFF · Cinemateca de Bogotá Centro · 2026-10-31 19:00 · Sala Capital · «Entrada libre»"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá",
+    "dia": "2026-10-22",
+    "hora": "19:00"
+   },
+   "casilla": "film_start",
+   "valor": "19:30",
+   "fuente": {
+    "tipo": "festival-ig",
+    "url": "https://www.instagram.com/p/DcxA28kjgVo/",
+    "fecha": "2026-09-01"
+   },
+   "evidencia": "IG @bogotahorrorfest p/DcxA28kjgVo (1 sep, Selección oficial — largometraje nacional), lámina de Parapeto: 7:30 p. m.; la web del festival dice 7:00 p. m. Decisión de Juan (15 oct): la función a las 19:00 y el aviso de inicio a las 19:30"
+  }
+ ]
+}

@@ -22,6 +22,9 @@ import subprocess
 import sys
 import unicodedata
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import funcion  # noqa: E402
+
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 HTML = f'{REPO}/fuentes/bhff-2026/programacion.html'
 BUILD = f'{REPO}/festivals/staging/bhff-2026-build.json'
@@ -63,7 +66,15 @@ def hora_de_la_parrilla(h, p):
 def main():
     P = parrilla()
     B = json.load(io.open(BUILD, encoding='utf-8'))
-    fuera = json.load(io.open(CRUDO, encoding='utf-8'))['_fuera']
+    _crudo = json.load(io.open(CRUDO, encoding='utf-8'))
+    fuera = _crudo['_fuera']
+    # LO QUE ESPERA, POR EL MISMO CAMINO QUE EL BUILD (docs/FUNCION.md §5): la
+    # lectura de la parrilla pasa por funcion.resolver con las afirmaciones del
+    # festival. Una sala que la Cinemateca corrigió se espera corregida, sin
+    # enseñarle la excepción a este verificador
+    AFS = funcion.cargar('bhff-2026') or []
+    _plan = json.load(io.open(f'{REPO}/pipeline/bhff-2026.plan.json', encoding='utf-8'))['festival']
+    CTX = funcion.contexto(_crudo, _plan, funcion.ticketing_model_de('bhff-2026'))
     films = B['films']
     usadas, fallos, n = set(), [], 0
     for d in P:
@@ -78,7 +89,13 @@ def main():
                 continue
             sede, sala = SALA[e['sala']]
             h = hora_de_la_parrilla(e['hora'], e['periodo'])
-            c = [i for i, f in enumerate(films) if f['day'] == dia and f['time'] == h and f['venue'] == sede
+            _ancla = (sede.rsplit(' - ', 1)[0], dia, h)
+            _esp = funcion.resolver([{'title': t, 'type': 'film', 'day': dia, 'time': h, 'venue': sede,
+                                      'sala': sala, '_ancla': _ancla}],
+                                    funcion.de_ancla(AFS, _ancla), CTX).funciones[0]
+            h = _esp['time']
+            sala = _esp.get('sala') if sala is not None else None
+            c = [i for i, f in enumerate(films) if f['day'] == _esp['day'] and f['time'] == h and f['venue'] == sede
                  and (sala is None or f.get('sala') == sala) and plano(f['title']).startswith(plano(t))]
             if len(c) != 1:
                 fallos.append(f'{dia} {h} {e["sala"]} «{t}»: {len(c)} funciones en el build')
