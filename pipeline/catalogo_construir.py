@@ -50,7 +50,7 @@ def registros():
         except Exception:
             continue
         for f in d.get('films', []):
-            if f.get('type') == 'event':
+            if catalogo.no_es_obra(f):
                 continue
             for o in (f.get('film_list') if f.get('film_list') else [f]):
                 if o.get('type') == 'event' or not o.get('title'):

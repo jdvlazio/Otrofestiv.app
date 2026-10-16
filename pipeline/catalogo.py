@@ -72,6 +72,13 @@ def obras(raiz=DIR):
     return out
 
 
+def no_es_obra(f):
+    """Una función que no es (ni contiene) una obra: una actividad, o un programa
+    que todavía no lista sus cortos (FICICA, 15 oct 2026: «muy pronto»). Su título
+    es el del programa, no el de una película, y no entra al catálogo."""
+    return f.get('type') == 'event' or (bool(f.get('is_programa')) and not f.get('film_list'))
+
+
 def _lista(raiz, nombre):
     p = os.path.join(raiz, nombre)
     return json.load(io.open(p, encoding='utf-8')) if os.path.exists(p) else []
@@ -154,7 +161,7 @@ def enlazar(d, fid, obs, ix=None):
     ix = ix or indice(obs)
     faltan = []
     for f in d.get('films', []):
-        if f.get('type') == 'event':
+        if no_es_obra(f):
             continue
         for o in (f.get('film_list') or [f]):
             if o.get('type') == 'event' or not o.get('title'):
@@ -223,7 +230,7 @@ def presentacion_sin_obra(festivales, obs, fus, exigir=False):
     for fid, d in festivales.items():
         for f in d.get('films', []):
             for o in (f.get('film_list') or [f]):
-                if o.get('type') == 'event' or f.get('type') == 'event':
+                if o.get('type') == 'event' or no_es_obra(f):
                     continue
                 w = o.get('work_id')
                 if w is None:
@@ -292,7 +299,7 @@ def dato_que_no_viaja(festivales):
     por_obra = {}
     for fid, d in festivales.items():
         for f in (d or {}).get('films', []):
-            if f.get('type') == 'event':
+            if no_es_obra(f):
                 continue
             for o in (f.get('film_list') or [f]):
                 if o.get('work_id') and o.get('type') != 'event':
