@@ -1,0 +1,32 @@
+{
+ "titulo_original": {
+  "fuente": "festival:ficdeh-2026,ficdeh-2026,ficdeh-2026,ficdeh-2026,ficdeh-2026,ficdeh-2026,ficdeh-2026,ficdeh-2026,ficdeh-2026,ficdeh-2026,siembrafest-2026,villadelcine-2026",
+  "regla": "el título que más festivales imprimen"
+ },
+ "directores": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "la grafía con tildes de los festivales; TMDB 1595081 la escribe sin tildes",
+  "fecha": "2026-10-12"
+ },
+ "anio": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "TMDB 1595081 (estreno 8 dic 2025)",
+  "fecha": "2026-10-12"
+ },
+ "paises": {
+  "fuente": "tmdb:1595081",
+  "regla": "tmdb-manda"
+ },
+ "generos": {
+  "fuente": "festival",
+  "regla": "todos los publicados, del más al menos frecuente"
+ },
+ "xref.tmdb": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "TMDB",
+  "fecha": "2026-10-12"
+ }
+}

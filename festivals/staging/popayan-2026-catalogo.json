@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "festicinepopayan.com (Selección Oficial 2026, vía wp-json) + cinecorto.co (ficha de cada corto, confirmada por dirección)",
-  "capturado": "2026-10-09",
+  "capturado": "2026-10-11",
   "que_aporta": "sección, título y crédito (la web); año, duración y sinopsis (cinecorto.co)",
   "url": "https://festicinepopayan.com/fest2026/seleccion-oficial-2026/",
   "metodo": "la lista emparejada pestaña por pestaña y contada contra ESPERADAS; la ficha aceptada solo si su dirección casa"
@@ -202,6 +202,11 @@
      "festival": "mamut-2026",
      "titulo": "Decaer",
      "poster": "/assets/mamut-2026/decaer.jpg"
+    },
+    {
+     "festival": "midbo-2026",
+     "titulo": "Decaer",
+     "poster": "/assets/midbo-2026/decaer.jpg"
     }
    ]
   },
@@ -342,6 +347,11 @@
     {
      "festival": "ficmontanas-2026",
      "titulo": "Tuktu, Padre Maíz"
+    },
+    {
+     "festival": "ficpa-2026",
+     "titulo": "Tuktu, Padre Maíz",
+     "poster": "/assets/ficdeh/tuktu-padre-maiz.jpg"
     },
     {
      "festival": "villadelcine-2026",
@@ -619,6 +629,11 @@
      "festival": "jardin-2026",
      "titulo": "Madres de nacimiento",
      "poster": "/assets/jardin-2026/madres-de-nacimiento.jpg"
+    },
+    {
+     "festival": "midbo-2026",
+     "titulo": "Madres de nacimiento",
+     "poster": "/assets/midbo-2026/madres-de-nacimiento.jpg"
     }
    ]
   },
@@ -708,6 +723,11 @@
     {
      "festival": "ficmontanas-2026",
      "titulo": "Sombras en la niebla"
+    },
+    {
+     "festival": "midbo-2026",
+     "titulo": "Sombras en la niebla",
+     "poster": "/assets/midbo-2026/sombras-en-la-niebla.jpg"
     }
    ]
   },
@@ -801,6 +821,11 @@
      "poster": "/assets/fantasofest/corto-chaika.jpg"
     },
     {
+     "festival": "ficpa-2026",
+     "titulo": "Chaika",
+     "poster": "/assets/ficpa-2026/chaika.jpg"
+    },
+    {
      "festival": "narrarelfuturo-2026",
      "titulo": "Chaika",
      "poster": "/assets/narrarelfuturo-2026/chaika.jpg"
@@ -847,6 +872,11 @@
      "festival": "cineautopsia-2026",
      "titulo": "Filme Pin",
      "poster": "/assets/cineautopsia/filme-pin.jpg"
+    },
+    {
+     "festival": "midbo-2026",
+     "titulo": "Filme Pin",
+     "poster": "/assets/midbo-2026/filme-pin.jpg"
     }
    ]
   },
@@ -984,6 +1014,11 @@
      "festival": "ficdeh-2026",
      "titulo": "Akababuru: Expresión de asombro",
      "poster": "/assets/ficdeh/herminda.jpg"
+    },
+    {
+     "festival": "ficpa-2026",
+     "titulo": "Akababuru",
+     "poster": "/assets/ficpa-2026/akababuru.jpg"
     }
    ]
   },

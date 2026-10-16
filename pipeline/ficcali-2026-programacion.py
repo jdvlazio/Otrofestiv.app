@@ -33,7 +33,7 @@ import sys
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(REPO, 'pipeline'))
-from lib import provenance  # noqa: E402
+from lib import json_wp, provenance  # noqa: E402
 
 DIR = f'{REPO}/fuentes/ficcali-2026'
 FUENTE = f'{DIR}/programacion.json'
@@ -49,7 +49,7 @@ SOLA = re.compile(rf'^{_H}$', re.I)
 def bajar():
     r = subprocess.run(['curl', '-s', 'https://ficcali.com/wp-json/wp/v2/pages/14870'],
                        capture_output=True, text=True).stdout
-    d = json.loads(r, strict=False)
+    d = json_wp(r)
     if not d.get('content'):
         sys.exit('✗ la página de programación no devolvió contenido')
     json.dump(d, io.open(FUENTE, 'w', encoding='utf-8'), ensure_ascii=False)

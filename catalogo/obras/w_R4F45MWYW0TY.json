@@ -1,0 +1,44 @@
+{
+ "id": "w_R4F45MWYW0TY",
+ "titulo_original": "Mi amigo, el arquitecto",
+ "anio": 2026,
+ "paises": [
+  "CO"
+ ],
+ "directores": [
+  "Óscar Garzón"
+ ],
+ "aliases": [
+  {
+   "titulo": "My Friend, The Architect",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "Una mujer inventa un relato para evocar una amistad perdida. Junto a sus amigos imagina una fábula: la historia de dos pájaros que un día se hicieron humanos, un Ornitólogo y su amigo, El Arquitecto.",
+  "en": "A woman invents a story to evoke a lost friendship. Along with her friends, they imagine a fable: the story of two birds that one day became human — an Ornithologist and his friend, The Architect."
+ },
+ "afiche": {
+  "archivo": "https://image.tmdb.org/t/p/w500/sMB00Njgb5QlOHPoD16Am79twm5.jpg",
+  "veredicto": "oficial"
+ },
+ "xref": {
+  "tmdb": 1655621,
+  "letterboxd": "my-friend-the-architect"
+ },
+ "versiones": [
+  {
+   "etiqueta": "15 min",
+   "duracion_min": 15
+  },
+  {
+   "etiqueta": "16 min",
+   "duracion_min": 16
+  }
+ ],
+ "presentaciones": [
+  "cinemancia-2026",
+  "ficci-65"
+ ]
+}

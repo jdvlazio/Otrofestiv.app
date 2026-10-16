@@ -1,0 +1,43 @@
+{
+ "id": "w_R4HGMP5833HG",
+ "titulo_original": "Desierto verde",
+ "anio": 2025,
+ "paises": [
+  "CL"
+ ],
+ "directores": [
+  "Meliza Luna Venegas"
+ ],
+ "aliases": [
+  {
+   "titulo": "Green Desert",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "¿Cómo puede sobrevivir el linaje de una curandera sin un bosque? La cineasta recorre los caminos de su infancia en busca de las mujeres de su familia y de las flores que una vez brotaron en las montañas. Pero ahora, interminables hileras de pinos cubren la tierra, extraños, sedientos y a la espera de arder de nuevo.",
+  "en": "How can the lineage of a healer survive without a forest? A filmmaker retraces the paths of her childhood, looking for the women in her family and the flowers that once bloomed in the mountains. But now, endless rows of pine trees cover the land—foreign, thirsty, and waiting to burn again."
+ },
+ "generos": [
+  "Documental"
+ ],
+ "afiche": {
+  "archivo": "/assets/ficdeh/desierto-verde.jpg",
+  "veredicto": "oficial-festival"
+ },
+ "xref": {
+  "tmdb": 898274,
+  "letterboxd": "green-desert"
+ },
+ "versiones": [
+  {
+   "etiqueta": "70 min",
+   "duracion_min": 70
+  }
+ ],
+ "presentaciones": [
+  "ficdeh-2026",
+  "ficma-2026"
+ ]
+}

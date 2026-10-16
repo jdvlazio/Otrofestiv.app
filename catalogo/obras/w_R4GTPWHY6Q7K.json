@@ -1,0 +1,48 @@
+{
+ "id": "w_R4GTPWHY6Q7K",
+ "titulo_original": "El Susurro",
+ "anio": 2025,
+ "paises": [
+  "AR",
+  "UY"
+ ],
+ "directores": [
+  "Gustavo Hernández"
+ ],
+ "aliases": [
+  {
+   "titulo": "The Whisper",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "Lucía y Adrián huyen de su padre violento a una mansión. Descubren una red de snuff y una maldición familiar.",
+  "en": "Fleeing from their violent father, siblings Lucía and Adrián take refuge in a remote mansion. With the help of a hidden micro-camera on a cat, Lucía uncovers a terrifying secret: their neighbors are part of a criminal network that kidnaps teenage girls to make snuff films, and they intend to get rid of the siblings. As Lucía fights to protect her brother, she must face a dark family curse that follows them into their newfound sanctuary."
+ },
+ "generos": [
+  "Terror"
+ ],
+ "afiche": {
+  "archivo": "/assets/bhff-2026/el-susurro.jpg",
+  "veredicto": "oficial"
+ },
+ "xref": {
+  "tmdb": 1534530,
+  "letterboxd": "the-whisper-2025"
+ },
+ "versiones": [
+  {
+   "etiqueta": "89 min",
+   "duracion_min": 89
+  },
+  {
+   "etiqueta": "100 min",
+   "duracion_min": 100
+  }
+ ],
+ "presentaciones": [
+  "bhff-2026",
+  "fantasofest-2026"
+ ]
+}

@@ -1,0 +1,24 @@
+{
+ "titulo_original": {
+  "fuente": "festival:ficcali-2026,villadelcine-2026",
+  "regla": "el título que más festivales imprimen"
+ },
+ "directores": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "TMDB 1469210",
+  "fecha": "2026-10-14"
+ },
+ "anio": {
+  "fuente": "tmdb:1469210",
+  "regla": "tmdb-manda"
+ },
+ "paises": {
+  "fuente": "tmdb:1469210",
+  "regla": "tmdb-manda"
+ },
+ "generos": {
+  "fuente": "festival",
+  "regla": "todos los publicados, del más al menos frecuente"
+ }
+}

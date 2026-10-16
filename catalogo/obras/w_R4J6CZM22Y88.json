@@ -1,0 +1,50 @@
+{
+ "id": "w_R4J6CZM22Y88",
+ "titulo_original": "Un poeta",
+ "anio": 2025,
+ "paises": [
+  "CO",
+  "DE",
+  "SE"
+ ],
+ "directores": [
+  "Simón Mesa Soto"
+ ],
+ "aliases": [
+  {
+   "titulo": "A Poet",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "Un poeta entrado en años encuentra un propósito al guiar a Yurlady, una joven talentosa, aunque exponerla al mundo de la poesía quizás no sea la mejor idea.",
+  "en": "An aging poet finds purpose mentoring Yurlady, a talented teen, though exposing her to the poetry scene might be unwise."
+ },
+ "generos": [
+  "Comedia",
+  "Comedia / Drama"
+ ],
+ "afiche": {
+  "archivo": "/assets/ficmontanas/un-poeta.jpg",
+  "veredicto": "oficial-festival"
+ },
+ "xref": {
+  "tmdb": 1465563,
+  "letterboxd": "a-poet"
+ },
+ "versiones": [
+  {
+   "etiqueta": "123 min",
+   "duracion_min": 123
+  },
+  {
+   "etiqueta": "124 min",
+   "duracion_min": 124
+  }
+ ],
+ "presentaciones": [
+  "ficmontanas-2026",
+  "villadelcine-2026"
+ ]
+}

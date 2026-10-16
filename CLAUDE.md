@@ -92,7 +92,7 @@ deliberada existe la etiqueta `frontera-ok`.
 | `ficma2026` | FICMA | Manizales | 19–26 SEP | Recién terminado |
 | `ficdeh2026` | FICDEH | Colombia | 12–19 AGO | Archivado |
 | `finca2026` | FINCA | Buenos Aires | 12–19 AGO | Archivado |
-| `cinemancia2026` | Cinemancia | Valle de Aburrá | 3–12 SEP | Recién terminado |
+| `cinemancia2026` | Cinemancia | Valle de Aburrá | 3–12 SEP | Archivado |
 | `cineautopsia2026` | CineAutopsia | Bogotá | 21–29 AGO | Archivado |
 | `vartex2026` | Vartex | Medellín | 19–22 AGO | Archivado |
 | `qaff2026` |  |  |  | desconocido |
@@ -103,12 +103,14 @@ deliberada existe la etiqueta `frontera-ok`.
 | `itagui2026` | Festicine Itagüí | Itagüí | 23–27 SEP | Recién terminado |
 | `girardota2026` | Festigirardota | Girardota | 30 SEP–4 OCT | Recién terminado |
 | `biff2026` | BIFF | Bogotá | 8–14 OCT | **Próximo / activo** |
-| `popayan2026` | Cine Corto Popayán | Popayán | 5–11 OCT | **Próximo / activo** |
-| `mamut2026` | Mamut | Medellín | 5–11 OCT | **Próximo / activo** |
-| `filcmar2026` | FILCMAR | Marinilla | 9–13 OCT | **Próximo / activo** |
+| `popayan2026` | Cine Corto Popayán | Popayán | 5–11 OCT | Recién terminado |
+| `mamut2026` | Mamut | Medellín | 5–11 OCT | Recién terminado |
+| `filcmar2026` | FILCMAR | Marinilla | 9–13 OCT | Recién terminado |
 | `ficcali2026` | FICCALI | Cali | 16–25 OCT | **Próximo / activo** |
+| `bhff2026` | Bogotá Horror | Bogotá | 22–31 OCT | **Próximo / activo** |
 | `fantasmagoria2026` | Fantasmagoría | Medellín | 14–25 OCT | **Próximo / activo** |
 | `midbo2026` | MIDBO | Bogotá | 27 OCT–4 NOV | **Próximo / activo** |
+| `mubibogota2026` | MUBI Fest | Bogotá | 24–25 OCT | **Próximo / activo** |
 | `narrarelfuturo2026` | #NarrarElFuturo | Bogotá | 15–20 SEP | Recién terminado |
 
 ### Features activas (desde `.specify/features/`)

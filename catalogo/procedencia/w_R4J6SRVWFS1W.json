@@ -1,0 +1,32 @@
+{
+ "titulo_original": {
+  "fuente": "festival:ficmontanas-2026,qaff-2026",
+  "regla": "el título que más festivales imprimen"
+ },
+ "directores": {
+  "fuente": "festival",
+  "regla": "la grafía más completa que acreditan los festivales"
+ },
+ "anio": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "TMDB 1243032 (92 min, estreno 21 abr 2026); la «Nunkui» de 2022 es otro corto, «La historia de Nunkui»",
+  "fecha": "2026-10-12"
+ },
+ "paises": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "TMDB 1243032",
+  "fecha": "2026-10-12"
+ },
+ "generos": {
+  "fuente": "festival",
+  "regla": "todos los publicados, del más al menos frecuente"
+ },
+ "xref.tmdb": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "TMDB",
+  "fecha": "2026-10-12"
+ }
+}

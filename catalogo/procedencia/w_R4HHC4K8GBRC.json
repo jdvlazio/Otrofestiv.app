@@ -1,0 +1,22 @@
+{
+ "titulo_original": {
+  "fuente": "festival:ficdeh-2026,ficdeh-2026,ficdeh-2026,popayan-2026,popayan-2026",
+  "regla": "el título que más festivales imprimen"
+ },
+ "directores": {
+  "fuente": "festival",
+  "regla": "la grafía más completa que acreditan los festivales"
+ },
+ "anio": {
+  "fuente": "tmdb:1738777",
+  "regla": "tmdb-manda"
+ },
+ "paises": {
+  "fuente": "festival",
+  "regla": "pais-union"
+ },
+ "generos": {
+  "fuente": "festival",
+  "regla": "todos los publicados, del más al menos frecuente"
+ }
+}

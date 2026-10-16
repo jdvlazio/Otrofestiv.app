@@ -10,10 +10,10 @@ import { ICONS, parseProgramTitle } from '../view/components.js';
 import { closeAuthSheet, closeCitySheet, closePrioLimit } from '../view/sheets.js';
 import { showActionModal, showToast } from '../view/feedback.js';
 import { _renderProgramaContent, lugarClose, render, renderNoticesBanner, _noticeKey, scrollDtabsToActive } from '../view/programa.js';
-import { renderAgenda, updateCardState, updateHorarioPrioBtn } from '../view/agenda.js';
+import { renderAgenda, updateCardState, updateHorarioPrioBtn, soloSinBoleta, setSoloSinBoleta, funcionesSinBoleta } from '../view/agenda.js';
 import { keepCityOnly, planCityVenues } from '../view/helpers.js';
 import { runCalc, _planCityVenues } from './calc.js';
-import { commitPlan, saveDelays, saveLastSlot, savePrio, saveSavedAgenda, saveState, saveWL, saveWatched, saveNotWatched, saveWatchedMeta } from './persistence.js';
+import { commitPlan, saveDelays, saveLastSlot, savePrio, saveSavedAgenda, saveState, saveWL, saveWatched, saveNotWatched, saveWatchedMeta, saveTicketed } from './persistence.js';
 import { cloudReportDelay, cloudClearDelay, cloudScreeningKey } from './delays-cloud.js';
 import { _getProgramaPhase, _reRenderIntereses, _updateProgramaActiveFilter, initProgramaModeBar, showAgView, showDayView, switchMainNav, updateAgTab, _syncPmodeTabs } from './pipeline.js';
 import { searchClose, seccionClose } from './overlays.js';
@@ -304,6 +304,24 @@ export function undoDelay(title,day,time,venue){
   // 5. DUAL-WRITE colaborativo (Fase A) — reflejar el valor revertido en la nube
   const sk=cloudScreeningKey(title,day,time,venue);
   if(prev>0) cloudReportDelay(sk,prev); else cloudClearDelay(sk);
+}
+
+// applyOwnCloudDelay — un retraso TUYO que llega de afuera (14 oct 2026): lo
+// marcaste en el reloj. Llega por el aviso del wrapper (__otfWatchDelay) o por tu
+// propio reporte en screening_reports (Realtime / carga inicial). Total de
+// minutos, no delta. Igual que setDelay pero SIN volver a escribir la nube (ya
+// está escrito; reescribirlo gastaría el límite de 30 por hora en un eco).
+export function applyOwnCloudDelay(screeningKey, mins){
+  const {filmDelays, savedAgenda}=state.snapshot();
+  const sch=(savedAgenda&&savedAgenda.schedule)||[];
+  const s=sch.find(e=>cloudScreeningKey(e._title,e.day,e.time,e.venue)===screeningKey);
+  if(!s) return false;
+  const k=s._title+'|'+s.day+'|'+s.time;
+  const m=Math.max(0,Math.min(240,Math.round(+mins||0)));
+  if((filmDelays[k]||0)===m) return false;
+  state.update('filmDelays', fd => m===0 ? state._omit(fd, k) : {...fd, [k]: m});
+  saveDelays();
+  return true;
 }
 
 export function clearDelay(title,day,time,venue){
@@ -628,6 +646,50 @@ export function swapPriority(removeTitle, addTitle){
   closePrioLimit();
   const{displayTitle}=parseProgramTitle(addTitle);
   showToast(`${ICONS.bookmarkFill} ${t('toast_priorizada',{title:displayTitle})}`,'info');
+}
+
+// ── Boleta, nivel 1 (#1077) ──
+// toggleBoleta — marca/desmarca «Tengo boleta» para UNA función (clave
+// título|día|hora). Se guarda como lo visto (local + nube) y reprograma los
+// avisos: marcar la última de mañana retira el de la víspera.
+export function toggleBoleta(key){
+  if(!key) return;
+  state.update('ticketed', s=>{ const n=new Set(s); n.has(key)?n.delete(key):n.add(key); return n; });
+  saveTicketed();
+  // con el filtro puesto, la que se marcó sale de la lista; si no queda ninguna,
+  // el filtro se cae solo (no deja una lista vacía con el filtro «prendido»)
+  if(soloSinBoleta()&&!funcionesSinBoleta((savedAgenda&&savedAgenda.schedule)||[]).length) setSoloSinBoleta(false);
+  renderAgenda();
+}
+// toggleSoloSinBoleta — «N sin boleta» en la banda de Mi Plan. Prender el filtro
+// lleva al primer día que tiene alguna que falta.
+export function toggleSoloSinBoleta(){
+  const on=!soloSinBoleta();
+  setSoloSinBoleta(on);
+  if(on){
+    const f=funcionesSinBoleta((savedAgenda&&savedAgenda.schedule)||[]).map(s=>DAY_KEYS.indexOf(s.day)).filter(i=>i>=0).sort((a,b)=>a-b)[0];
+    if(f!==undefined) activeMiPlanDay=f;
+  }
+  renderAgenda();
+}
+
+// abrirAviso — destino de un aviso tocado (15 oct 2026). El de Boleta («2
+// funciones de mañana sin boleta») abre Mi Plan EN ESE DÍA con «sin boleta»
+// prendido: el aviso pide una acción, y la lista ya filtrada es esa acción. Si
+// ya las marcaste todas, abre Mi Plan en ese día sin filtro (no una lista vacía).
+// Lo llaman Android (extra del aviso) e iOS (userInfo → __otfAbrirAviso).
+export function abrirAviso(a){
+  if(!a||a.abrir!=='miplan') return false;
+  switchMainNav('mnav-miplan'); showAgView();
+  if(a.filtro==='sinboleta'){
+    const faltan=funcionesSinBoleta((savedAgenda&&savedAgenda.schedule)||[]);
+    const idx=DAY_KEYS.indexOf(a.dia);
+    setSoloSinBoleta(faltan.length>0);
+    if(idx>=0) activeMiPlanDay=idx;
+    else if(faltan.length){ const f=faltan.map(s=>DAY_KEYS.indexOf(s.day)).filter(i=>i>=0).sort((x,y)=>x-y)[0]; if(f!==undefined) activeMiPlanDay=f; }
+    renderAgenda();
+  }
+  return true;
 }
 
 export function markWatchedFromPlan(title, day, time, venue, duration, e){
@@ -1167,7 +1229,19 @@ export function diaryToggleVista(title, e) {
     if(e) e.stopPropagation();
     state.batchUpdate({ notWatched: state._delFromSet(state.snapshot().notWatched, title) });
     saveNotWatched(); updateCardState(title);
-  } else toggleWatched(title, e);
+  } else {
+    // Sacar una VISTA del Diario siempre se puede deshacer (Juan, 12 oct: el ojo
+    // gris se leía «apagado» y tocarlo borraba sin vuelta). Se guarda lo de antes
+    // y el aviso ofrece «Deshacer», como al quitar de Intereses.
+    const {watched:w0, notWatched:n0, watchlist:l0}=state.snapshot();
+    const eraVista=effectiveWatched().has(title);
+    toggleWatched(title, e);
+    if(eraVista) showActionToast(t('plan_vuelta_a',{donde:_vueltaA(title)}),t('cta_deshacer'),()=>{
+      state.batchUpdate({ watched:w0, notWatched:n0, watchlist:l0 });
+      saveState('wl','watched','notWatched'); updateCardState(title); _reRenderIntereses();
+      _refreshDiaryIfOpen();
+    },6000);
+  }
   storage.setDiarioNotaVista();
   _refreshDiaryIfOpen();
 }

@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "Instagram @mamut_festival — el carrusel de programación (11 láminas)",
-  "capturado": "2026-10-10",
+  "capturado": "2026-10-11",
   "que_aporta": "la programación entera: día, hora, lugar y créditos",
   "url": "https://www.instagram.com/p/Dd4A9NxERJA/",
   "metodo": "lectura a ojo lámina por lámina, confirmada con la OCR de cajas de las mismas láminas, en los dos sentidos"
@@ -461,25 +461,6 @@
    "is_recurring": true
   },
   {
-   "titulo": "La memoria de las mariposas",
-   "dia": "2026-10-09",
-   "hora": "16:30",
-   "sede": "Las Américas",
-   "sala": "Sala 3",
-   "acceso": "Entrada libre",
-   "_src": {
-    "url": "https://www.instagram.com/p/Dd4A9NxERJA/",
-    "date": "2026-09-29",
-    "lamina": 6
-   },
-   "seccion": "Proyecciones",
-   "director": "Tatiana Fuentes Sadowski",
-   "pais": "Perú, Portugal",
-   "duracion_min": 77,
-   "has_qa": true,
-   "qa_type": "team"
-  },
-  {
    "titulo": "Manual para invocar fantasmas",
    "dia": "2026-10-09",
    "hora": "18:30",
@@ -608,21 +589,41 @@
    "qa_type": "team"
   },
   {
+   "titulo": "La memoria de las mariposas",
+   "dia": "2026-10-11",
+   "hora": "14:30",
+   "sede": "Centro Colombo Americano",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd4A9NxERJA/",
+    "date": "2026-09-29",
+    "lamina": 6,
+    "corrige": "historia de @mamut_festival, 11 oct 2026 (captura de Juan)"
+   },
+   "seccion": "Proyecciones",
+   "director": "Tatiana Fuentes Sadowski",
+   "pais": "Perú, Portugal",
+   "duracion_min": 77,
+   "has_qa": true,
+   "qa_type": "team"
+  },
+  {
    "titulo": "¡Sancocho!",
    "dia": "2026-10-11",
-   "hora": "12:00",
+   "hora": "14:30",
    "sede": "Coocine",
    "acceso": "Entrada libre",
    "_src": {
     "url": "https://www.instagram.com/p/Dd4A9NxERJA/",
     "date": "2026-09-29",
-    "lamina": 8
+    "lamina": 8,
+    "corrige": "historia de @mamut_festival, 11 oct 2026 (captura de Juan)"
    },
    "tipo": "evento",
    "event_kind": "convite",
    "seccion": "Actividades",
    "duracion_min": 90,
-   "_duracion_de": "90 min declarados: la lámina no la da y el hueco hasta la siguiente en la sede es de 240 min"
+   "_duracion_de": "el hueco hasta la siguiente actividad en la misma sede"
   },
   {
    "titulo": "Muestra de cortos 1",
@@ -779,13 +780,15 @@
    "_src": {
     "url": "https://www.instagram.com/p/Dd4A9NxERJA/",
     "date": "2026-09-29",
-    "lamina": 9
+    "lamina": 9,
+    "corrige": "historia de @mamut_festival, 11 oct 2026 (captura de Juan)"
    },
    "seccion": "Proyecciones",
    "director": "Luis Ospina",
    "pais": "Colombia",
    "anio": 1972,
-   "duracion_min": 1
+   "duracion_min": 1,
+   "sala": "Sala 0"
   },
   {
    "titulo": "Fiesta clausura #MAMUT11",

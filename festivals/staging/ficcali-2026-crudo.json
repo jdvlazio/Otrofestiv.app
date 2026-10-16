@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "ficcali.com — Programación 2026 (WP 14870) + fichas de la Selección 2026",
-  "capturado": "2026-10-10",
+  "capturado": "2026-10-15",
   "url": "https://ficcali.com/programacion-ficcali-2026/",
   "metodo": "tarjeta por función; obra por la ficha del catálogo"
  },
@@ -59,7 +59,7 @@
    "hora": "18:00",
    "sede": "Teatro al Aire Libre Los Cristales",
    "sede_cruda": "TEATRO LOS CRISTALES",
-   "acceso": "desconocido",
+   "acceso": "Entrada libre hasta completar aforo",
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
@@ -2233,6 +2233,126 @@
    "sinopsis": "En una vieja y misteriosa casona tropical cohabitan el supuesto dueño, un fraile, un piloto convaleciente, el sirviente haitiano, el guardián mercenario y la Machiche, hembra madura y dominante. Allí llega una joven modelo para desatar todo tipo de pasiones.",
    "seccion": "Cali Ciudad Abierta",
    "duracion_obra": 86
+  },
+  {
+   "dia": "2026-10-16",
+   "hora": "15:00",
+   "sede": "Yawa",
+   "sede_cruda": "YAWA",
+   "acceso": "Entrada libre (no se anuncia pago)",
+   "titulo": "Taller Gemelos Digitales",
+   "tipo": "evento",
+   "event_kind": "taller",
+   "seccion": "Académico",
+   "is_recurring": true,
+   "duracion_min": 180,
+   "_src": {
+    "url": "https://www.instagram.com/p/DefUB_ksTlh/",
+    "date": "2026-10-14"
+   }
+  },
+  {
+   "dia": "2026-10-19",
+   "hora": "15:00",
+   "sede": "Yawa",
+   "sede_cruda": "YAWA",
+   "acceso": "Entrada libre (no se anuncia pago)",
+   "titulo": "Taller Gemelos Digitales",
+   "tipo": "evento",
+   "event_kind": "taller",
+   "seccion": "Académico",
+   "is_recurring": true,
+   "duracion_min": 180,
+   "_src": {
+    "url": "https://www.instagram.com/p/DefUB_ksTlh/",
+    "date": "2026-10-14"
+   }
+  },
+  {
+   "dia": "2026-10-20",
+   "hora": "15:00",
+   "sede": "Yawa",
+   "sede_cruda": "YAWA",
+   "acceso": "Entrada libre (no se anuncia pago)",
+   "titulo": "Taller Gemelos Digitales",
+   "tipo": "evento",
+   "event_kind": "taller",
+   "seccion": "Académico",
+   "is_recurring": true,
+   "duracion_min": 180,
+   "_src": {
+    "url": "https://www.instagram.com/p/DefUB_ksTlh/",
+    "date": "2026-10-14"
+   }
+  },
+  {
+   "dia": "2026-10-21",
+   "hora": "14:00",
+   "sede": "Yawa",
+   "sede_cruda": "YAWA",
+   "acceso": "Entrada libre (no se anuncia pago)",
+   "titulo": "Taller Cine Atmosférico",
+   "tipo": "evento",
+   "event_kind": "taller",
+   "seccion": "Académico",
+   "is_recurring": true,
+   "duracion_min": 240,
+   "_src": {
+    "url": "https://www.instagram.com/p/DefUB_ksTlh/",
+    "date": "2026-10-14"
+   }
+  },
+  {
+   "dia": "2026-10-22",
+   "hora": "14:00",
+   "sede": "Yawa",
+   "sede_cruda": "YAWA",
+   "acceso": "Entrada libre (no se anuncia pago)",
+   "titulo": "Taller Cine Atmosférico",
+   "tipo": "evento",
+   "event_kind": "taller",
+   "seccion": "Académico",
+   "is_recurring": true,
+   "duracion_min": 240,
+   "_src": {
+    "url": "https://www.instagram.com/p/DefUB_ksTlh/",
+    "date": "2026-10-14"
+   }
+  },
+  {
+   "dia": "2026-10-23",
+   "hora": "14:00",
+   "sede": "Yawa",
+   "sede_cruda": "YAWA",
+   "acceso": "Entrada libre (no se anuncia pago)",
+   "titulo": "Taller Cine Atmosférico",
+   "tipo": "evento",
+   "event_kind": "taller",
+   "seccion": "Académico",
+   "is_recurring": true,
+   "duracion_min": 240,
+   "_src": {
+    "url": "https://www.instagram.com/p/DefUB_ksTlh/",
+    "date": "2026-10-14"
+   }
+  },
+  {
+   "dia": "2026-10-24",
+   "hora": "20:00",
+   "sede": "Casa Ethel",
+   "sede_cruda": "CCMI",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://www.instagram.com/p/Deg4GpNHCB_/",
+    "date": "2026-10-15"
+   },
+   "titulo": "Cineconcierto: Metrópolis",
+   "tipo": "evento",
+   "event_kind": "evento",
+   "seccion": "Proyecciones",
+   "invitados": "Alemania | 120 min",
+   "duracion_min": 60,
+   "_duracion_de": "el hueco hasta la siguiente en la misma sede (tope 90, 60 si es la última)"
   }
  ]
 }

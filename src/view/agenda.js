@@ -14,7 +14,7 @@ import {
 } from './components.js';
 import {
   DAYS, DAY_SHORT_EN, _dayChips, _lblLocalized, _minFmt, _mkCortoItemHtml, _posterThumb, hayEvento, getCortoItemPoster, dayLabel, dayLabelLong, durFmt, emptyState, emptyStateHero, flagFmt, getFilmPoster, isToday, keepCityOnly, mplanBlockType, mplanEndStr, programParts, planCityVenues, planInputSignature, sala, starsText, travelWarn, vcfg, venueCity, venueMatches, delayConsensusBadge, conflictAccount,
- abiertaLabel } from './helpers.js';
+ abiertaLabel, funcionPaga, urlCompra, claveBoleta, faltaBoleta } from './helpers.js';
 import {
   _festNowMin, dayFullyPassed, durEstimada, festivalEnded, minToStr, simNow, simTodayStr, toMin,
 } from '../domain/time.js';
@@ -347,6 +347,30 @@ function _mismaFuncion(a,b){
   const ka=_slotKeyOf(a); return !!ka&&ka===_slotKeyOf(b);
 }
 
+// ── Boleta, nivel 1 (#1077) ─────────────────────────────────────────────────
+// El filtro «sin boleta» vive acá (vista): tocar «N sin boleta» en la banda de
+// Mi Plan deja en la lista solo las funciones pagas sin marcar. Otro toque lo saca.
+let _soloSinBoleta=false;
+export const soloSinBoleta=()=>_soloSinBoleta;
+export function setSoloSinBoleta(v){ _soloSinBoleta=!!v; }
+const _filmDe=s=>FILMS.find(fi=>sameEntry(fi,s));
+// funcionesSinBoleta(schedule) — las entradas del Plan que faltan, una vez cada una.
+export function funcionesSinBoleta(schedule){
+  const vistas=new Set();
+  return (schedule||[]).filter(s=>{ const k=claveBoleta(s); if(vistas.has(k)) return false; vistas.add(k); return faltaBoleta(s,_filmDe(s)); });
+}
+// _filaBoleta(s) — debajo de la sede: «Ya tengo boleta» + «Comprar →», o, ya
+// marcada, «Tengo boleta» en gris (tocar de nuevo desmarca). Solo pagas y vivas.
+function _filaBoleta(s){
+  const f=_filmDe(s);
+  if(!f||!funcionPaga(f)||screeningPassed(s)) return '';
+  const k=claveBoleta(s).replace(/"/g,'&quot;');
+  if(ticketed.has(claveBoleta(s)))
+    return `<div class="mplan-boleta"><button class="mplan-prog-toggle boleta-marcar" data-action="toggleBoleta" data-key="${k}" data-stop="1">${ICONS.check} ${t('boleta_tengo')}</button></div>`;
+  const url=urlCompra(f);
+  return `<div class="mplan-boleta"><button class="mplan-prog-toggle boleta-marcar" data-action="toggleBoleta" data-key="${k}" data-stop="1">${ICONS.ticket} ${t('boleta_ya_tengo')}</button>${url?`<a class="boleta-comprar" href="${url.replace(/"/g,'&quot;')}" target="_blank" rel="noopener" data-stop="1">${t('boleta_comprar')}</a>`:''}</div>`;
+}
+
 export function renderMiPlanCalendar(state){
   const {savedAgenda, FILMS, prioritized, watched, filmRatings, FESTIVAL_DATES} = state.snapshot();
   if(!savedAgenda||!savedAgenda.schedule.length) return'';
@@ -525,7 +549,7 @@ export function renderMiPlanCalendar(state){
 
   // ── Detail list for active day ──
   const activeKey=DAY_KEYS[activeMiPlanDay];
-  const dayFilms=schedule.filter(s=>s.day===activeKey).sort((a,b)=>toMin(a.time)-toMin(b.time));
+  const dayFilms=schedule.filter(s=>s.day===activeKey&&(!_soloSinBoleta||faltaBoleta(s,_filmDe(s)))).sort((a,b)=>toMin(a.time)-toMin(b.time));
   const isPastDay=nowDayIdx>=0&&activeMiPlanDay<nowDayIdx;
 
   // Día landmark en formato largo (mismo patrón que Planear/buildResultHTML).
@@ -688,6 +712,7 @@ export function renderMiPlanCalendar(state){
           <div>${(()=>{const{displayTitle:_dt,progSuffix:_ps}=parseProgramTitle(s._title||'');const _mfqa=FILMS.find(fi=>sameEntry(fi,s));const _qab=_mfqa?.has_qa?`<span class="meta-badge sm">Q&A</span>`:'';return`<div class="mplan-rtitle${_isEventRow?' mp-event-title':''}"><span class="mplan-rtitle-txt">${_dt}</span>${_qab}</div>${_ps?`<div class="prog-suffix">${_ps}</div>`:''}`;})()} </div>
           <div class="mplan-rvenue${_isEventRow?' mp-event-venue':''}">${ICONS.pin} ${vcfg(s.venue).short||s.venue}${venueCity(s.venue)?` · <span class="plist-city">${venueCity(s.venue)}</span>`:''}${sala(s.venue)?' \u00b7 '+sala(s.venue):''}</div>
           ${_sesionDeBloque(s)}
+          ${_filaBoleta(s)}
           ${(()=>{const _mf=FILMS.find(fi=>sameEntry(fi,s));if(!_mf||!_mf.is_cortos||!_mf.film_list||!_mf.film_list.length) return'';return`<button class="row-xs mplan-prog-toggle" data-action="toggleMplanProg">${ICONS.chevronR} ${t('label_programa')}</button>`;})()}
         </div>
         <div class="col-end">
@@ -1379,8 +1404,11 @@ function _renderSavedAgendaHTML(state, consensus){
       ${renderDiaryHTML(state)}</div>`:'';
     // Compartir mi festival (RFC F2): reutiliza el export del Diario.
     const _shareBtn=_eff.size>0?`<button class="ag-save-btn" data-action="abrirCompartirFestival">${ICONS.share} ${t('recap_compartir')}</button>`:'';
+    // Sin sesión, una línea debajo: el Diario recién completado es lo que más
+    // vale guardar (invitación a la cuenta, la menos invasiva posible).
+    const _invita=_eff.size>0&&!_sbUser?`<button class="link-gray-xs invitar-cuenta" data-action="openAuthSheet">${t('invita_diario')}</button>`:'';
     // «Tu festival» (#1055): compartir sube debajo del recorrido, antes del Diario.
-    if(_recap||_vivido) return`<div class="saved-agenda">${_recap}${_shareBtn}${_hero}${_vivido}</div>`;
+    if(_recap||_vivido) return`<div class="saved-agenda">${_recap}${_shareBtn}${_invita}${_hero}${_vivido}</div>`;
     // Sin vistas NI plan: empty state canónico
     const _festNameMp=(FESTIVAL_CONFIG[_activeFestId]||{}).name||t('misc_festival_default');
     return emptyStateHero(ICONS.sparkles,`${_festNameMp} ${t('plan_fest_terminado')}`,t('empty_vistas'),t('plan_ir_programa'),'mnav-cartelera');
@@ -1427,7 +1455,10 @@ function _renderSavedAgendaHTML(state, consensus){
   // en ámbar con chevron, «Día 7 de 8» en gris — solo uno invita al tacto.
   // El chip del Diario murió (18 ago): la sección DIARIO al final del tab lo
   // reemplaza — la banda del Plan queda solo con su cuenta y el día.
-  const progressBar=`<div class="sec-hdr">${ICONS.calendar} <span>${t('label_mi_plan_hdr')}</span> <span class="count-badge cb-neutral">${all.length}</span><span class="hdr-end">${currentDayNum?`<span class="sec-hdr-opt">${t('label_dia_prog')} <b>${currentDayNum}</b> ${t('label_de_dias')} ${totalDays}</span>`:''}</span></div>`;
+  // «N sin boleta» (#1077): a la derecha de «Mi Plan · 18», en ámbar; tocar filtra.
+  const _nSin=funcionesSinBoleta(all).length;
+  const _sinBoleta=(_nSin||_soloSinBoleta)?`<button class="boleta-falta${_soloSinBoleta?' on':''}" data-action="toggleSoloSinBoleta">${ICONS.ticket} ${t('boleta_sin',{n:_nSin})}</button>`:'';
+  const progressBar=`<div class="sec-hdr">${ICONS.calendar} <span>${t('label_mi_plan_hdr')}</span> <span class="count-badge cb-neutral">${all.length}</span>${_sinBoleta}<span class="hdr-end">${currentDayNum?`<span class="sec-hdr-opt">${t('label_dia_prog')} <b>${currentDayNum}</b> ${t('label_de_dias')} ${totalDays}</span>`:''}</span></div>`;
 
   const _ctxHeader=renderContextualHeader(state, consensus);
   let html=`<div class="saved-agenda">
@@ -1538,7 +1569,10 @@ function _dwCard(state,{title,poster,posterSVG,rating,off,califica=true}){
       :rating
       ?`<div class="dw-stars">${[1,2,3,4,5].map(i=>`<span class="dw-star${i<=rating?' on':''}">${ICONS.starFill}</span>`).join('')}</div>`
       :`<button class="dw-ctrl dw-ctrl-star" data-action="openRatingSheet" data-title="${safe}" data-stop="1" aria-label="${t('aria_calificar')}">${ICONS.starFill}</button>`)
-     +`<button class="dw-ctrl" data-action="diaryToggleVista" data-title="${safe}" data-stop="1" aria-label="${t('aria_no_la_vi')}">${ICONS.eye}</button>`;
+     // El ojo de una VISTA es su estado, en ámbar (Juan, 12 oct): gris se leía
+     // «apagado». Tocarlo la saca —con «Deshacer»—; la estrella sigue siendo la
+     // invitación tenue mientras no esté calificada.
+     +`<button class="dw-ctrl dw-vista" data-action="diaryToggleVista" data-title="${safe}" data-stop="1" aria-label="${t('aria_no_la_vi')}">${ICONS.eye}</button>`;
   return`<div class="dw-card">
     <div class="dw-poster${off?' dw-off':''} js-open-pel" data-title="${safe}">
       ${posterSVG

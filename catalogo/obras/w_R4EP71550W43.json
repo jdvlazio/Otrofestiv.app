@@ -1,0 +1,52 @@
+{
+ "id": "w_R4EP71550W43",
+ "titulo_original": "Chaika",
+ "anio": 2025,
+ "paises": [
+  "C",
+  "O",
+  "U"
+ ],
+ "directores": [
+  "Ingrid Paola Bonilla Rodríguez"
+ ],
+ "aliases": [
+  {
+   "titulo": "CHAIKA",
+   "tipo": "festival"
+  }
+ ],
+ "sinopsis": {
+  "es": "Valentina, una cosmonauta rusa de 76 años, llega a una Cuba ucrónica y nebulosa tras recibir, con treinta años de retraso, una invitación para una expedición agrícola a Marte. Entre paisajes difusos y promesas del pasado, busca las ruinas de un futuro que nunca llegó."
+ },
+ "generos": [
+  "Ciencia Ficción"
+ ],
+ "afiche": {
+  "archivo": "/assets/bhff-2026/chaika.jpg",
+  "veredicto": "oficial"
+ },
+ "xref": {
+  "tmdb": 1689999,
+  "letterboxd": "chaika-2025"
+ },
+ "versiones": [
+  {
+   "etiqueta": "14 min",
+   "duracion_min": 14
+  },
+  {
+   "etiqueta": "15 min",
+   "duracion_min": 15
+  }
+ ],
+ "presentaciones": [
+  "bhff-2026",
+  "cineautopsia-2026",
+  "fantasmagoria-2026",
+  "fantasofest-2026",
+  "ficpa-2026",
+  "narrarelfuturo-2026",
+  "popayan-2026"
+ ]
+}

@@ -24,6 +24,8 @@ import sys
 import unicodedata
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.join(REPO, 'pipeline'))
+from lib import json_wp  # noqa: E402
 DIR = f'{REPO}/fuentes/ficcali-2026'
 MEDIA = f'{DIR}/media-posters.json'
 CAT = f'{REPO}/festivals/staging/ficcali-2026-catalogo.json'
@@ -62,7 +64,7 @@ def bajar_media():
                             f'&page={n}&after=2026-07-01T00:00:00&_fields=id,source_url,media_details,date,slug'],
                            capture_output=True, text=True).stdout
         try:
-            d = json.loads(r, strict=False)
+            d = json_wp(r)
         except ValueError:
             break
         if not isinstance(d, list) or not d:

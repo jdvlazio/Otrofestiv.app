@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "festivalfantasmagoriamedellin.com, noticia de programación (wp-json post 6481)",
-  "capturado": "2026-10-10",
+  "capturado": "2026-10-15",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_sedes": "El nombre de la parrilla, normalizado (la escribe de varias formas); la sala aparte. Otraparte está en Envigado, pero se publica en la ciudad «Medellín» (decisión de Juan, 30 sep): con una sola sede fuera, la app abría con «¿A cuál ciudad vas?» para 2 de 85 funciones. La dirección y el pin son los reales de Envigado, y el traslado se calcula con ellos.",
@@ -204,14 +204,14 @@
    "archetype": "Competencia",
    "order": 6
   },
-  "🎪 Actividades": {
-   "en": "Activities",
-   "archetype": "Especiales / Eventos",
-   "order": 7
-  },
   "🏰 Selección Asedio: Las murallas del miedo": {
    "en": "Siege: The Walls of Fear",
    "archetype": "Perspectivas / Miradas",
+   "order": 7
+  },
+  "🎪 Actividades": {
+   "en": "Activities",
+   "archetype": "Especiales / Eventos",
    "order": 8
   },
   "✏️ Selección de Cortometrajes Animados": {
@@ -309,14 +309,14 @@
    "archetype": "Especiales / Eventos",
    "order": 27
   },
-  "📖 Club de la Medianoche": {
-   "en": "Midnight Club",
-   "archetype": "Especiales / Eventos",
-   "order": 28
-  },
   "🩸 Aniversario 50 años": {
    "en": "50th Anniversary",
    "archetype": "Retrospectiva / Tributo",
+   "order": 28
+  },
+  "📖 Club de la Medianoche": {
+   "en": "Midnight Club",
+   "archetype": "Especiales / Eventos",
    "order": 29
   },
   "💥 Muestra de acción A Quemarropa": {
@@ -389,15 +389,6 @@
    "_prec": "manual",
    "_nota": "Google Maps «Metro Cable Estación Andalucía»"
   },
-  "Draco Hobby - Medellín": {
-   "short": "Draco Hobby",
-   "city": "Medellín",
-   "lat": 6.2315525,
-   "lng": -75.601953,
-   "address": "Av. 80 #30-18",
-   "_prec": "manual",
-   "_nota": "Google Maps «Draco Hobby Center»"
-  },
   "La Pascasia - Medellín": {
    "short": "La Pascasia",
    "city": "Medellín",
@@ -415,6 +406,15 @@
    "address": "Dg. 75B #2A-120",
    "_prec": "manual",
    "_nota": "verificada en Mamut"
+  },
+  "Draco Hobby - Medellín": {
+   "short": "Draco Hobby",
+   "city": "Medellín",
+   "lat": 6.2315525,
+   "lng": -75.601953,
+   "address": "Av. 80 #30-18",
+   "_prec": "manual",
+   "_nota": "Google Maps «Draco Hobby Center»"
   },
   "Nueva Villa de Aburrá - Medellín": {
    "short": "Nueva Villa de Aburrá",
@@ -568,8 +568,8 @@
    "posterSource": "custom",
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-14-13-00-taller-fantasmagoritos-con-la-corporacion-trama"
    },
    "by_invitation": true
@@ -587,8 +587,8 @@
    "has_qa": false,
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-14-21-00-charla-virtual-maria-rosa-y-sina-las-murallas-de-la-desigualdad-en-shingeki-no-kyojin"
    },
    "online": true,
@@ -620,8 +620,8 @@
    "posterSource": "tmdb",
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-15-19-00-decorado"
    },
    "premiere": "Inauguración",
@@ -645,8 +645,8 @@
    "posterSource": "custom",
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-16-13-00-taller-fantasmagoritos-con-la-corporacion-trama"
    },
    "by_invitation": true
@@ -665,6 +665,7 @@
    "time": "16:00",
    "day_order": 2,
    "venue": "Centro Colombo Americano - Medellín",
+   "sala": "Sala 2",
    "has_qa": false,
    "synopsis": "Ángel y su hija son raptados por un poderoso hombre llamado Léder, quien en el pasado habría sido víctima de un grupo de secuestradores del que formaba parte Ángel. Durante el secuestro Léder perdió la movilidad de sus piernas. Ahora varios años después, en silla de ruedas, y acompañado de su hermana Oceane, Léder está dispuesto a todo con tal de lograr venganza contra quienes destruyeron su vida. Contra su voluntad, Ángel deberá ser el instrumento de venganza de Léder, aniquilando a todos los que participaron en el secuestro de Léder y quienes alguna vez fueron sus compañeros y amigos, si es que quiere ver a su hija con vida.",
    "synopsis_lang": "es",
@@ -672,8 +673,8 @@
    "posterSource": "tmdb",
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-16-16-00-saluda-al-diablo-de-mi-parte"
    },
    "is_free": true,
@@ -703,8 +704,8 @@
    "posterSource": "tmdb",
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-16-16-30-coracao-das-trevas"
    },
    "premiere": "Estreno colombiano",
@@ -735,8 +736,8 @@
    "posterSource": "tmdb",
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-16-17-00-hammer-heroes-legends-and-monsters"
    },
    "premiere": "Estreno latinoamericano",
@@ -766,65 +767,14 @@
    "posterSource": "tmdb",
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-16-17-00-mu-ki-ra"
    },
    "is_free": true,
    "lbSlug": "mu-ki-ra",
    "tmdb_id": 1446898,
    "synopsis_en": "When her brother is kidnapped by Mu-Ki-Ra, Cleo ventures into a monster-plagued jungle with unlikely allies."
-  },
-  {
-   "title": "Torneos TCG: One Piece y Pokemón TCG",
-   "type": "event",
-   "section": "🎪 Actividades",
-   "duration": "60 min",
-   "day": "2026-10-16",
-   "time": "18:00",
-   "day_order": 2,
-   "venue": "Draco Hobby - Medellín",
-   "event_kind": "torneo",
-   "has_qa": false,
-   "_src": {
-    "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
-    "id": "2026-10-16-18-00-one-piece-y-pokemon-tcg"
-   },
-   "is_free": true
-  },
-  {
-   "title": "Schichinin No Samurai (Seven Samurai)",
-   "type": "film",
-   "section": "🏰 Selección Asedio: Las murallas del miedo",
-   "director": "Akira Kurosawa",
-   "year": 1954,
-   "country": "Japón",
-   "flags": "🇯🇵",
-   "duration": "207 min",
-   "genre": "Acción",
-   "day": "2026-10-16",
-   "time": "18:30",
-   "day_order": 2,
-   "venue": "Centro Colombo Americano - Medellín",
-   "sala": "Sala 2",
-   "has_qa": false,
-   "synopsis": "Japón, Siglo XVI. Una aldea de campesinos indefensos es repetidamente atacada y saqueada por una banda de forajidos. Aconsejados por el anciano de la aldea, unos aldeanos acuden a la ciudad con el objetivo de contratar a un grupo de samuráis para protegerlos. A pesar de que el único salario es comida y techo, varios samuráis se van incorporando uno a uno al singular grupo que finalmente se dirige a la aldea.",
-   "synopsis_lang": "es",
-   "poster": "/assets/fantasmagoria-2026/schichinin-no-samurai-seven-samurai.jpg",
-   "posterSource": "tmdb",
-   "_src": {
-    "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
-    "id": "2026-10-16-18-30-shichinin-no-samurai"
-   },
-   "is_free": true,
-   "lbSlug": "seven-samurai",
-   "tmdb_id": 346,
-   "synopsis_en": "A samurai answers a village's request for protection after he falls on hard times. The town needs protection from bandits, so the samurai gathers six others to help him teach the people how to defend themselves, and the villagers provide the soldiers with food.",
-   "title_en": "Seven Samurai"
   },
   {
    "title": "Grabación en vivo del podcast Gente que hace cine \"Colombia es Fantástica\"",
@@ -840,8 +790,8 @@
    "qa_type": "team",
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-16-18-30-gente-que-hace-cine-colombia-es-fantastica"
    },
    "is_free": true,
@@ -870,8 +820,8 @@
    "posterSource": "tmdb",
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-16-18-40-el-despertar"
    },
    "premiere": "Estreno colombiano",
@@ -879,6 +829,38 @@
    "tmdb_id": 1657630,
    "synopsis_en": "An elite military unit ventures into the South American tropical jungle on a mission to eliminate an enemy target. What begins as a tactical operation quickly turns into a nightmare when they encounter supernatural forces emerging from the depths of the jungle. Five hundred years earlier, a Spanish conquistador expedition was consumed by the same relentless force. Separated by centuries but connected by the same hostile territory, both incursions discover something hidden in the jungle: an ancient presence that cannot be controlled.",
    "title_en": "The Awakening"
+  },
+  {
+   "title": "Schichinin No Samurai (Seven Samurai)",
+   "type": "film",
+   "section": "🏰 Selección Asedio: Las murallas del miedo",
+   "director": "Akira Kurosawa",
+   "year": 1954,
+   "country": "Japón",
+   "flags": "🇯🇵",
+   "duration": "207 min",
+   "genre": "Acción",
+   "day": "2026-10-16",
+   "time": "19:00",
+   "day_order": 2,
+   "venue": "Centro Colombo Americano - Medellín",
+   "sala": "Sala 1",
+   "has_qa": false,
+   "synopsis": "Japón, Siglo XVI. Una aldea de campesinos indefensos es repetidamente atacada y saqueada por una banda de forajidos. Aconsejados por el anciano de la aldea, unos aldeanos acuden a la ciudad con el objetivo de contratar a un grupo de samuráis para protegerlos. A pesar de que el único salario es comida y techo, varios samuráis se van incorporando uno a uno al singular grupo que finalmente se dirige a la aldea.",
+   "synopsis_lang": "es",
+   "poster": "/assets/fantasmagoria-2026/schichinin-no-samurai-seven-samurai.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-14",
+    "base_version": 21,
+    "id": "2026-10-16-18-30-shichinin-no-samurai"
+   },
+   "is_free": true,
+   "lbSlug": "seven-samurai",
+   "tmdb_id": 346,
+   "synopsis_en": "A samurai answers a village's request for protection after he falls on hard times. The town needs protection from bandits, so the samurai gathers six others to help him teach the people how to defend themselves, and the villagers provide the soldiers with food.",
+   "title_en": "Seven Samurai"
   },
   {
    "title": "Motherwitch",
@@ -902,15 +884,33 @@
    "posterSource": "tmdb",
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-16-19-00-motherwitch"
    },
    "premiere": "Estreno suramericano",
-   "is_free": true,
    "lbSlug": "motherwitch",
    "tmdb_id": 1461870,
    "synopsis_en": "Cyprus, 1882: Eleni, an outcast painter, tries to resurrect her dead children but instead unleashes mythical creatures upon her village. Only by becoming a good mother to a talented, but abused child can she reverse the curse."
+  },
+  {
+   "title": "Torneos TCG: One Piece y Pokemón TCG",
+   "type": "event",
+   "section": "🎪 Actividades",
+   "duration": "60 min",
+   "day": "2026-10-16",
+   "time": "19:00",
+   "day_order": 2,
+   "venue": "Draco Hobby - Medellín",
+   "event_kind": "torneo",
+   "has_qa": false,
+   "_src": {
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-14",
+    "base_version": 21,
+    "id": "2026-10-16-18-00-one-piece-y-pokemon-tcg"
+   },
+   "is_free": true
   },
   {
    "title": "Selección Oficial de Cortometrajes de Animación + Cortometrajes de Macondo",
@@ -926,8 +926,8 @@
    "has_qa": false,
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-16-20-00-seleccion-oficial-de-cortometrajes-de-animacion"
    },
    "is_free": true,
@@ -1103,8 +1103,8 @@
    "posterSource": "tmdb",
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-16-21-00-familia-teme-enfrentar-una-nueva-noche-de-terror"
    },
    "premiere": "Estreno colombiano",
@@ -1114,20 +1114,20 @@
    "title_en": "Family Fears Another Night of Terror"
   },
   {
-   "title": "Almas en pena: fiesta de disfraces, baile de ánimas y sustos que dan gusto",
+   "title": "Almas en plena: fiesta de disfraces, baile de ánimas y sustos que dan gusto",
    "type": "event",
    "section": "🎪 Actividades",
    "duration": "60 min",
    "day": "2026-10-16",
-   "time": "22:00",
+   "time": "21:30",
    "day_order": 2,
    "venue": "Silencio - Medellín",
    "event_kind": "fiesta",
    "has_qa": false,
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-16-22-00-fiesta-gotico-tropical"
    },
    "is_free": true,
@@ -1148,8 +1148,8 @@
    "posterSource": "custom",
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-17-15-00-cortometrajes-infantiles"
    },
    "is_free": true
@@ -1167,6 +1167,7 @@
    "time": "16:00",
    "day_order": 3,
    "venue": "Centro Colombo Americano - Medellín",
+   "sala": "Sala 2",
    "has_qa": false,
    "synopsis": "Narrafilms: Proyección con autodescripción – Personas con discapacidad visual.",
    "synopsis_lang": "es",
@@ -1174,8 +1175,8 @@
    "posterSource": "tmdb",
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-17-16-00-iris-de-cristal"
    },
    "is_free": true,
@@ -1204,8 +1205,8 @@
    "posterSource": "tmdb",
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-17-16-30-black-moon"
    },
    "lbSlug": "black-moon-1975",
@@ -1234,8 +1235,8 @@
    "posterSource": "tmdb",
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-17-18-30-siu-lam-juk-kau"
    },
    "is_free": true,
@@ -1265,8 +1266,8 @@
    "posterSource": "tmdb",
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-17-18-30-al-final-del-espectro"
    },
    "is_free": true,
@@ -1298,8 +1299,8 @@
    "posterSource": "tmdb",
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-17-18-40-familia-teme-enfrentar-una-nueva-noche-de-terror"
    },
    "premiere": "Estreno colombiano",
@@ -1331,8 +1332,8 @@
    "posterSource": "tmdb",
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-17-19-00-critters"
    },
    "is_free": true,
@@ -1362,8 +1363,8 @@
    "posterSource": "tmdb",
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-17-21-00-huo-zhe-yan"
    },
    "premiere": "Estreno colombiano",
@@ -1385,8 +1386,8 @@
    "has_qa": false,
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-17-22-00-lectura-de-cuentos-de-terror"
    },
    "is_free": true
@@ -1412,8 +1413,8 @@
    "posterSource": "tmdb",
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-18-15-00-la-sinfonia-de-los-bichos-raros"
    },
    "is_free": true,
@@ -1442,8 +1443,8 @@
    "posterSource": "tmdb",
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-18-16-00-historia-de-lo-oculto"
    },
    "is_free": true,
@@ -1473,8 +1474,8 @@
    "posterSource": "tmdb",
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-18-16-00-rio-bravo"
    },
    "lbSlug": "rio-bravo",
@@ -1503,8 +1504,8 @@
    "posterSource": "tmdb",
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-18-17-00-coracao-das-trevas"
    },
    "premiere": "Estreno colombiano",
@@ -1535,8 +1536,8 @@
    "posterSource": "tmdb",
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-18-18-40-hablando-con-extranos"
    },
    "premiere": "Estreno colombiano",
@@ -1556,12 +1557,13 @@
    "time": "19:00",
    "day_order": 4,
    "venue": "Centro Colombo Americano - Medellín",
+   "sala": "Sala 2",
    "has_qa": true,
    "qa_type": "team",
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-18-19-00-seleccion-oficial-de-cortometrajes-colombianos"
    },
    "is_free": true,
@@ -1579,6 +1581,7 @@
      "lbSlug": "chaika-2025",
      "tmdb_id": 1689999,
      "synopsis": "Valentina, una cosmonauta rusa de 76 años, llega a una Cuba ucrónica y nebulosa tras recibir, con treinta años de retraso, una invitación para una expedición agrícola a Marte. Entre paisajes difusos y promesas del pasado, busca las ruinas de un futuro que nunca llegó.",
+     "genre": "Ciencia Ficción",
      "synopsis_lang": "es"
     },
     {
@@ -1633,6 +1636,7 @@
      "duration": "18 min",
      "poster": "/assets/filcmar-2026/hdlt.jpg",
      "synopsis": "Después del ataque que sufrió, Luz trata de entender lo que le sucedió: el Hijo de la Tierra vino a destruir a la humanidad robando sus recuerdos más tristes y felices. Pero desembarcó en Suba, el distrito más lejano de Bogotá, donde una extraña adicción cambiará el curso de la historia.",
+     "genre": "Drama",
      "posterSource": "oficial",
      "synopsis_lang": "es"
     },
@@ -1642,7 +1646,9 @@
      "country": "Colombia",
      "flags": "🇨🇴",
      "year": 2026,
-     "duration": "14 min"
+     "duration": "14 min",
+     "poster": "/assets/bhff-2026/vientre.jpg",
+     "posterSource": "oficial"
     },
     {
      "title": "Pudor Ante el Asalto de los Ojos Furtivos",
@@ -1679,8 +1685,8 @@
    "has_qa": false,
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-18-19-00-the-x-files-y-lectura-de-la-verdad-esta-ahi-afuera-antologia-de-cuentos"
    },
    "is_free": true
@@ -1707,8 +1713,8 @@
    "posterSource": "tmdb",
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-18-21-00-assault-on-precinct-13"
    },
    "lbSlug": "assault-on-precinct-13",
@@ -1729,8 +1735,8 @@
    "has_qa": false,
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-19-15-00-seleccion-oficial-de-cortometrajes-latinoamericanos"
    },
    "is_free": true,
@@ -1790,7 +1796,9 @@
      "year": 2026,
      "duration": "13 min",
      "poster": "/assets/fantasmagoria-2026/ubicua.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
+     "lbSlug": "ubicua",
+     "tmdb_id": 1794425,
      "synopsis": "Quién no se ha visto en las altas horas de la noche, cayendo en un agujero de conejo virtual que nos atrapa por horas en vez de hacer nuestras labores?… Que tal que ese tema se convirtiera en realidad? Un relato de terror digital que estremecerá a todos los trabajadores independientes.",
      "synopsis_lang": "es"
     },
@@ -1840,8 +1848,8 @@
    "posterSource": "tmdb",
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-19-18-30-black-zombie"
    },
    "premiere": "Estreno colombiano",
@@ -1863,8 +1871,8 @@
    "has_qa": false,
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-19-19-00-entrevista-a-luigi-cozzi-con-jose-andres-gomez"
    },
    "online": true,
@@ -1885,8 +1893,8 @@
    "has_qa": false,
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-19-20-30-charla-virtual-una-psicologia-de-los-asedios-explicada-con-pelis-de-zombies-con-pedro-alejandro-gonzalez"
    },
    "online": true,
@@ -1917,8 +1925,8 @@
    "posterSource": "tmdb",
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-19-21-00-la-frecuencia-kirlian"
    },
    "lbSlug": "the-kirlian-frequency",
@@ -1941,8 +1949,8 @@
    "qa_type": "team",
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-20-14-00-conversatorio-con-cristian-ponce-el-terror-analogico-entre-la-estetica-y-el-medio-al-vhs-y-a-los-programas-de-television-con-cristian-jaramillo"
    },
    "is_free": true,
@@ -1970,8 +1978,8 @@
    "posterSource": "tmdb",
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-20-15-00-horror-and-love"
    },
    "premiere": "Estreno colombiano",
@@ -2001,8 +2009,8 @@
    "posterSource": "tmdb",
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-20-17-00-al-final-del-espectro"
    },
    "is_free": true,
@@ -2026,8 +2034,8 @@
    "qa_type": "team",
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-20-17-30-conversatorio-con-alberto-romo-y-andres-buitrago"
    },
    "is_free": true
@@ -2040,7 +2048,7 @@
    "year": 1982,
    "country": "Colombia",
    "flags": "🇨🇴",
-   "duration": "80 min",
+   "duration": "98 min",
    "genre": "Terror",
    "day": "2026-10-20",
    "time": "18:00",
@@ -2054,15 +2062,16 @@
    "posterSource": "tmdb",
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-20-18-30-pura-sangre"
    },
    "is_free": true,
    "lbSlug": "pure-blood-1982",
    "tmdb_id": 134245,
    "synopsis_en": "Roberto Hurtado suffers from a rare disease that requires massive transfusions of blood from children or adolescents. His son blackmails three employees to get blood for him and they resort to unscrupulous methods to obtain it.",
-   "title_en": "Pure Blood"
+   "title_en": "Pure Blood",
+   "_duracion_corregida": "retrospectiva Luis Ospina, cali.gov.co (98 min); spectacletheater.com (98 min); TMDB 99"
   },
   {
    "title": "The Last Unicorn",
@@ -2085,8 +2094,8 @@
    "posterSource": "tmdb",
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-20-18-30-the-last-unicorn"
    },
    "is_free": true,
@@ -2116,8 +2125,8 @@
    "posterSource": "tmdb",
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-20-18-40-ghost-in-the-cell"
    },
    "premiere": "Estreno suramericano",
@@ -2148,8 +2157,8 @@
    "posterSource": "tmdb",
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-20-19-30-cuadecuc-vampir"
    },
    "is_free": true,
@@ -2180,8 +2189,8 @@
    "posterSource": "tmdb",
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-20-21-00-green-room"
    },
    "lbSlug": "green-room",
@@ -2202,8 +2211,8 @@
    "has_qa": false,
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-21-10-00-taller-de-animacion-con-oscar-triana"
    }
   },
@@ -2221,8 +2230,8 @@
    "posterSource": "custom",
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-21-13-00-cortometrajes-y-taller-fantasmagoritos-con-la-corporacion-trama"
    },
    "by_invitation": true
@@ -2241,8 +2250,8 @@
    "has_qa": false,
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-21-13-00-charla-el-camino-de-la-produccion-y-la-animacion-con-alejandra-morales"
    },
    "is_free": true
@@ -2265,8 +2274,8 @@
    "posterSource": "custom",
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-21-14-00-fantascatedra-muestra-cortometrajes-universitarios-de-medellin"
    },
    "is_free": true
@@ -2286,8 +2295,8 @@
    "qa_type": "team",
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-21-18-00-conversatorio-de-cinema-zombie-a-zinema-zombie-con-jose-andres-gomez-andres-buitrago-y-pablo-marin"
    },
    "is_free": true,
@@ -2307,8 +2316,8 @@
    "has_qa": false,
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-21-17-00-de-las-trincheras-del-somme-a-la-caida-de-gondolin-por-camilo-lopez"
    },
    "is_free": true
@@ -2335,8 +2344,8 @@
    "posterSource": "tmdb",
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-21-17-00-ana-rosa"
    },
    "is_free": true,
@@ -2366,8 +2375,8 @@
    "posterSource": "tmdb",
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-21-17-00-theatre-of-horrors-the-sordid-story-of-paris-grand-guignol"
    },
    "premiere": "Estreno suramericano",
@@ -2390,8 +2399,8 @@
    "has_qa": false,
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-21-15-30-presentaciones-de-productoras-colectivos-y-made-in-medellin-cortometrajes-hechos-en-medellin"
    },
    "is_free": true,
@@ -2411,8 +2420,8 @@
    "has_qa": false,
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-21-18-00-taller-parche-de-collage-construccion-de-fortalezas"
    },
    "is_free": true
@@ -2439,8 +2448,8 @@
    "posterSource": "tmdb",
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-21-18-40-el-despertar"
    },
    "premiere": "Estreno colombiano",
@@ -2471,8 +2480,8 @@
    "posterSource": "tmdb",
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-21-19-00-la-mancha"
    },
    "is_free": true,
@@ -2504,8 +2513,8 @@
    "posterSource": "tmdb",
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-21-21-00-cuckoo"
    },
    "lbSlug": "cuckoo-2024",
@@ -2526,11 +2535,33 @@
    "has_qa": false,
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-22-10-00-taller-con-oscar-triana"
    },
    "by_invitation": true
+  },
+  {
+   "title": "Fremde Welten: los extraños universos de Tilman Singer",
+   "type": "event",
+   "section": "🔦 Retrospectiva Tilman Singer",
+   "duration": "60 min",
+   "day": "2026-10-22",
+   "time": "16:00",
+   "day_order": 8,
+   "venue": "Instituto Cultural Alexander von Humboldt - Medellín",
+   "event_kind": "evento",
+   "has_qa": true,
+   "qa_type": "team",
+   "_src": {
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-14",
+    "base_version": 21,
+    "id": "2026-10-22-17-00-fremde-welten-los-extranos-universos-de-tilman-singer"
+   },
+   "is_free": true,
+   "description": "Conversatorio con Tilman Singer y Sebastián Tobón.",
+   "description_lang": "es"
   },
   {
    "title": "Blood on Méliès' Moon",
@@ -2554,8 +2585,8 @@
    "posterSource": "tmdb",
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-22-17-00-blood-on-melies-moon"
    },
    "is_free": true,
@@ -2579,8 +2610,8 @@
    "qa_type": "team",
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-22-17-00-kondor-el-mago-el-cigarro-mortal-de-jairo-pinilla"
    },
    "is_free": true,
@@ -2612,28 +2643,6 @@
    "description_lang": "es"
   },
   {
-   "title": "Fremde Welten: los extraños universos de Tilman Singer",
-   "type": "event",
-   "section": "🔦 Retrospectiva Tilman Singer",
-   "duration": "60 min",
-   "day": "2026-10-22",
-   "time": "17:00",
-   "day_order": 8,
-   "venue": "Instituto Cultural Alexander von Humboldt - Medellín",
-   "event_kind": "evento",
-   "has_qa": true,
-   "qa_type": "team",
-   "_src": {
-    "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
-    "id": "2026-10-22-17-00-fremde-welten-los-extranos-universos-de-tilman-singer"
-   },
-   "is_free": true,
-   "description": "Conversatorio con Tilman Singer y Sebastián Tobón.",
-   "description_lang": "es"
-  },
-  {
    "title": "Selección Oficial de Cortometrajes Latinoamericanos",
    "type": "film",
    "section": "🌎 Selección Latinoamericana de Cortometrajes",
@@ -2648,8 +2657,8 @@
    "has_qa": false,
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-22-17-00-seleccion-oficial-de-cortometrajes-latinoamericanos"
    },
    "is_free": true,
@@ -2709,7 +2718,9 @@
      "year": 2026,
      "duration": "13 min",
      "poster": "/assets/fantasmagoria-2026/ubicua.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
+     "lbSlug": "ubicua",
+     "tmdb_id": 1794425,
      "synopsis": "Quién no se ha visto en las altas horas de la noche, cayendo en un agujero de conejo virtual que nos atrapa por horas en vez de hacer nuestras labores?… Que tal que ese tema se convirtiera en realidad? Un relato de terror digital que estremecerá a todos los trabajadores independientes.",
      "synopsis_lang": "es"
     },
@@ -2754,8 +2765,8 @@
    "qa_type": "team",
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-22-18-00-seleccion-oficial-de-cortometrajes"
    },
    "is_free": true,
@@ -2848,7 +2859,12 @@
      "year": 2026,
      "duration": "17 min",
      "poster": "/assets/fantasmagoria-2026/siempre-hay-un-monstruo.jpg",
-     "posterSource": "oficial"
+     "posterSource": "tmdb",
+     "lbSlug": "siempre-hay-un-monstruo",
+     "tmdb_id": 1794456,
+     "synopsis": "Un grupo de agentes investiga un incidente ocurrido durante una fiesta privada en la casa de un joven actor. Lo que comienza como un caso rutinario se convierte rápidamente en el caso más monstruoso y aterrador de sus vidas.",
+     "genre": "Terror",
+     "synopsis_lang": "es"
     },
     {
      "title": "Morana",
@@ -2878,6 +2894,7 @@
      "lbSlug": "que-el-cielo-nos-perdone",
      "tmdb_id": 1565878,
      "synopsis": "Colombia, 1951: En medio de La Violencia, el período de brutal guerra política entre liberales y conservadores, un par de chulavitas –asesinos a sueldo pagados por el gobierno– acechan a un sacerdote en la oscuridad de la noche, esperando que los conduzca a la cabaña en el bosque en donde se esconden sus próximas víctimas. Pero el horror que encontrarán allí es mil veces peor que el dolor que pensaban infligir.",
+     "synopsis_en": "Colombia, 1951. In the thick of La Violencia, the period of brutal political war between Liberals and Conservatives, two chulavitas —hired killers on the government’s payroll— stalk a priest through the dark, waiting for him to lead them to the cabin in the woods where their next victims are hiding. But the horror they find there is a thousand times worse than the pain they meant to inflict.",
      "genre": "Terror",
      "synopsis_lang": "es"
     }
@@ -2898,8 +2915,8 @@
    "has_qa": false,
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-22-18-00-juegos-de-mesa"
    },
    "is_free": true,
@@ -2907,12 +2924,41 @@
    "description_lang": "es"
   },
   {
+   "title": "Carrie",
+   "type": "film",
+   "section": "🩸 Aniversario 50 años",
+   "director": "Brian De Palma",
+   "year": 1976,
+   "country": "Estados Unidos",
+   "flags": "🇺🇸",
+   "duration": "98 min",
+   "genre": "Terror",
+   "day": "2026-10-22",
+   "time": "18:30",
+   "day_order": 8,
+   "venue": "Museo de Arte Moderno de Medellín - MAMM - Medellín",
+   "has_qa": false,
+   "synopsis": "Carrie White, una tímida adolescente que vive con su madre, una fanática religiosa, es objeto de las burlas constantes de sus compañeros de instituto. Cuando, en las duchas del gimnasio, la chica sufre un ataque de histeria al tener su primera menstruación, a una de sus compañeras se le ocurre gastarle una broma macabra durante la fiesta de graduación. Lo que todos ignoran es que Carrie posee poderes telequinésicos",
+   "synopsis_lang": "es",
+   "poster": "/assets/fantasmagoria-2026/carrie.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-14",
+    "base_version": 21,
+    "id": "2026-10-22-19-00-carrie"
+   },
+   "lbSlug": "carrie-1976",
+   "tmdb_id": 7340,
+   "synopsis_en": "Withdrawn and sensitive teenager Carrie White faces bullying from her classmates and abuse from her fanatically pious mother. When she begins to suspect that she has supernatural powers, things take a dark and violent turn."
+  },
+  {
    "title": "Club de la Medianoche: Club de lectura",
    "type": "event",
    "section": "📖 Club de la Medianoche",
    "duration": "60 min",
    "day": "2026-10-22",
-   "time": "18:00",
+   "time": "18:30",
    "day_order": 8,
    "venue": "Universidad Nacional - Medellín",
    "sala": "Jardín Bloque 41",
@@ -2920,8 +2966,8 @@
    "has_qa": false,
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-22-18-00-club-de-lectura-sesion-presencial"
    },
    "is_free": true,
@@ -2950,43 +2996,14 @@
    "posterSource": "tmdb",
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-22-18-40-you-are-the-film"
    },
    "premiere": "Estreno latinoamericano",
    "lbSlug": "you-are-the-film",
    "tmdb_id": 1631314,
    "synopsis_en": "Madoka writes plays. Kazuma composes music. One day, they decide to go to the cinema. But once there, they realise they can interact through the screen itself, sending fiction into joyful freefall in an absurd and inventive adventure."
-  },
-  {
-   "title": "Carrie",
-   "type": "film",
-   "section": "🩸 Aniversario 50 años",
-   "director": "Brian De Palma",
-   "year": 1976,
-   "country": "Estados Unidos",
-   "flags": "🇺🇸",
-   "duration": "98 min",
-   "genre": "Terror",
-   "day": "2026-10-22",
-   "time": "19:00",
-   "day_order": 8,
-   "venue": "Museo de Arte Moderno de Medellín - MAMM - Medellín",
-   "has_qa": false,
-   "synopsis": "Carrie White, una tímida adolescente que vive con su madre, una fanática religiosa, es objeto de las burlas constantes de sus compañeros de instituto. Cuando, en las duchas del gimnasio, la chica sufre un ataque de histeria al tener su primera menstruación, a una de sus compañeras se le ocurre gastarle una broma macabra durante la fiesta de graduación. Lo que todos ignoran es que Carrie posee poderes telequinésicos",
-   "synopsis_lang": "es",
-   "poster": "/assets/fantasmagoria-2026/carrie.jpg",
-   "posterSource": "tmdb",
-   "_src": {
-    "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
-    "id": "2026-10-22-19-00-carrie"
-   },
-   "lbSlug": "carrie-1976",
-   "tmdb_id": 7340,
-   "synopsis_en": "Withdrawn and sensitive teenager Carrie White faces bullying from her classmates and abuse from her fanatically pious mother. When she begins to suspect that she has supernatural powers, things take a dark and violent turn."
   },
   {
    "title": "Dèmoni",
@@ -3010,8 +3027,8 @@
    "posterSource": "tmdb",
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-22-20-10-demoni"
    },
    "is_free": true,
@@ -3042,8 +3059,8 @@
    "posterSource": "tmdb",
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-22-21-00-hablando-con-extranos"
    },
    "premiere": "Estreno colombiano",
@@ -3066,8 +3083,8 @@
    "posterSource": "custom",
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-23-13-00-cortometrajes-en-competencia-deliberacion-del-jurado-infantil"
    },
    "is_free": true
@@ -3094,8 +3111,8 @@
    "posterSource": "tmdb",
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-23-16-00-motherwitch"
    },
    "premiere": "Estreno suramericano",
@@ -3103,36 +3120,6 @@
    "lbSlug": "motherwitch",
    "tmdb_id": 1461870,
    "synopsis_en": "Cyprus, 1882: Eleni, an outcast painter, tries to resurrect her dead children but instead unleashes mythical creatures upon her village. Only by becoming a good mother to a talented, but abused child can she reverse the curse."
-  },
-  {
-   "title": "You Are The Film",
-   "type": "film",
-   "section": "🏆 Selección Oficial Largometrajes de Ficción",
-   "director": "Makoto Ueda",
-   "year": 2026,
-   "country": "Japón",
-   "flags": "🇯🇵",
-   "duration": "68 min",
-   "genre": "Ciencia ficción",
-   "day": "2026-10-23",
-   "time": "16:00",
-   "day_order": 9,
-   "venue": "Museo de Arte Moderno de Medellín - MAMM - Medellín",
-   "has_qa": false,
-   "synopsis": "La historia transcurre en tiempo real en un pequeño cine independiente de Shimokitazawa, Tokio. Todo comienza cuando las vidas cotidianas de Madoka, una dramaturga, y Kazuma, un músico, empiezan a transmitirse en vivo y en directo en la pantalla de la sala de cine sin explicación alguna. Mientras ellos caminan por los locales cercanos del barrio, el público del cine observa cada uno de sus movimientos en tiempo real. La situación se sale de control cuando las interacciones de los espectadores y los eventos del exterior empiezan a cruzarse, borrando por completo el límite entre la realidad y la ficción cinematográfica. Hoodsteps (cortometraje).",
-   "synopsis_lang": "es",
-   "poster": "/assets/fantasmagoria-2026/you-are-the-film.jpg",
-   "posterSource": "tmdb",
-   "_src": {
-    "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
-    "id": "2026-10-23-16-00-you-are-the-film"
-   },
-   "premiere": "Estreno latinoamericano",
-   "lbSlug": "you-are-the-film",
-   "tmdb_id": 1631314,
-   "synopsis_en": "Madoka writes plays. Kazuma composes music. One day, they decide to go to the cinema. But once there, they realise they can interact through the screen itself, sending fiction into joyful freefall in an absurd and inventive adventure."
   },
   {
    "title": "Muestra Catalana: Cortometrajes C-Trencada",
@@ -3147,8 +3134,8 @@
    "has_qa": false,
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-23-17-00-cortometrajes-c-trencada"
    },
    "is_free": true
@@ -3166,8 +3153,8 @@
    "has_qa": false,
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-23-16-00-asedios-y-otras-tacticas-militares-en-la-saga-dune-de-frank-herbert-por-alejandro-vesga"
    },
    "is_free": true
@@ -3186,8 +3173,8 @@
    "has_qa": false,
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-23-17-30-seleccion-oficial-de-cortometrajes-de-animacion"
    },
    "is_free": true,
@@ -3341,6 +3328,36 @@
    ]
   },
   {
+   "title": "You Are The Film",
+   "type": "film",
+   "section": "🏆 Selección Oficial Largometrajes de Ficción",
+   "director": "Makoto Ueda",
+   "year": 2026,
+   "country": "Japón",
+   "flags": "🇯🇵",
+   "duration": "68 min",
+   "genre": "Ciencia ficción",
+   "day": "2026-10-23",
+   "time": "18:30",
+   "day_order": 9,
+   "venue": "Museo de Arte Moderno de Medellín - MAMM - Medellín",
+   "has_qa": false,
+   "synopsis": "La historia transcurre en tiempo real en un pequeño cine independiente de Shimokitazawa, Tokio. Todo comienza cuando las vidas cotidianas de Madoka, una dramaturga, y Kazuma, un músico, empiezan a transmitirse en vivo y en directo en la pantalla de la sala de cine sin explicación alguna. Mientras ellos caminan por los locales cercanos del barrio, el público del cine observa cada uno de sus movimientos en tiempo real. La situación se sale de control cuando las interacciones de los espectadores y los eventos del exterior empiezan a cruzarse, borrando por completo el límite entre la realidad y la ficción cinematográfica. Hoodsteps (cortometraje).",
+   "synopsis_lang": "es",
+   "poster": "/assets/fantasmagoria-2026/you-are-the-film.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-14",
+    "base_version": 21,
+    "id": "2026-10-23-16-00-you-are-the-film"
+   },
+   "premiere": "Estreno latinoamericano",
+   "lbSlug": "you-are-the-film",
+   "tmdb_id": 1631314,
+   "synopsis_en": "Madoka writes plays. Kazuma composes music. One day, they decide to go to the cinema. But once there, they realise they can interact through the screen itself, sending fiction into joyful freefall in an absurd and inventive adventure."
+  },
+  {
    "title": "Mag Mag",
    "type": "film",
    "section": "🐉 Muestra Asiática El Oriente Es Rojo",
@@ -3362,8 +3379,8 @@
    "posterSource": "tmdb",
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-23-18-40-mag-mag"
    },
    "lbSlug": "mag-mag",
@@ -3384,6 +3401,7 @@
    "time": "19:00",
    "day_order": 9,
    "venue": "Centro Colombo Americano - Medellín",
+   "sala": "Sala 1",
    "has_qa": true,
    "qa_type": "team",
    "synopsis": "En un internado abandonado en las montañas de Antioquia, un grupo de actrices recrea las denuncias de 43 mujeres contra el Opus Dei. Lo que comienza como un ejercicio teatral pronto despierta a las fantasmas del pasado, que sedientas de justicia, toman el control de la cámara y de la película misma. Conversatorio con Alejandra Rocas y Juliana Zuluaga.",
@@ -3392,8 +3410,8 @@
    "posterSource": "tmdb",
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-23-19-00-manual-para-invocar-fantasmas"
    },
    "is_free": true,
@@ -3423,8 +3441,8 @@
    "posterSource": "tmdb",
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-23-19-00-vida"
    },
    "is_free": true,
@@ -3444,8 +3462,8 @@
    "has_qa": false,
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-23-19-30-charla-musicalizada-sinners-el-asedio-de-los-condenados-por-mario-fernando-castano"
    },
    "is_free": true
@@ -3472,8 +3490,8 @@
    "posterSource": "tmdb",
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-23-21-00-ghost-in-the-cell"
    },
    "premiere": "Estreno suramericano",
@@ -3487,15 +3505,15 @@
    "section": "🎪 Actividades",
    "duration": "60 min",
    "day": "2026-10-23",
-   "time": "21:30",
+   "time": "21:00",
    "day_order": 9,
    "venue": "La Pascasia - Medellín",
    "event_kind": "fiesta",
    "has_qa": false,
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-23-21-30-brujas-espectros-y-otros-fantasmas"
    },
    "is_free": true,
@@ -3515,8 +3533,8 @@
    "has_qa": false,
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-25-15-00-presentacion-de-libros-ediciones-sociedad-fantasmagoria-colombia-es-fantastica-y-las-murallas-del-miedo"
    },
    "is_free": true
@@ -3542,8 +3560,8 @@
    "posterSource": "tmdb",
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-24-16-30-il-deserto-rosso"
    },
    "lbSlug": "red-desert",
@@ -3574,8 +3592,8 @@
    "posterSource": "tmdb",
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-24-17-00-luz"
    },
    "is_free": true,
@@ -3599,8 +3617,8 @@
    "qa_type": "team",
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-24-18-30-seleccion-oficial-de-cortometrajes"
    },
    "is_free": true,
@@ -3693,7 +3711,12 @@
      "year": 2026,
      "duration": "17 min",
      "poster": "/assets/fantasmagoria-2026/siempre-hay-un-monstruo.jpg",
-     "posterSource": "oficial"
+     "posterSource": "tmdb",
+     "lbSlug": "siempre-hay-un-monstruo",
+     "tmdb_id": 1794456,
+     "synopsis": "Un grupo de agentes investiga un incidente ocurrido durante una fiesta privada en la casa de un joven actor. Lo que comienza como un caso rutinario se convierte rápidamente en el caso más monstruoso y aterrador de sus vidas.",
+     "genre": "Terror",
+     "synopsis_lang": "es"
     },
     {
      "title": "Morana",
@@ -3723,6 +3746,7 @@
      "lbSlug": "que-el-cielo-nos-perdone",
      "tmdb_id": 1565878,
      "synopsis": "Colombia, 1951: En medio de La Violencia, el período de brutal guerra política entre liberales y conservadores, un par de chulavitas –asesinos a sueldo pagados por el gobierno– acechan a un sacerdote en la oscuridad de la noche, esperando que los conduzca a la cabaña en el bosque en donde se esconden sus próximas víctimas. Pero el horror que encontrarán allí es mil veces peor que el dolor que pensaban infligir.",
+     "synopsis_en": "Colombia, 1951. In the thick of La Violencia, the period of brutal political war between Liberals and Conservatives, two chulavitas —hired killers on the government’s payroll— stalk a priest through the dark, waiting for him to lead them to the cabin in the woods where their next victims are hiding. But the horror they find there is a thousand times worse than the pain they meant to inflict.",
      "genre": "Terror",
      "synopsis_lang": "es"
     }
@@ -3752,8 +3776,8 @@
    "posterSource": "tmdb",
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-24-18-40-dong-bei-jing-cha-gu-shi-3"
    },
    "lbSlug": "fight-against-evil-3",
@@ -3776,8 +3800,8 @@
    "synopsis_lang": "es",
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-24-19-00-cortometrajes-colombianos-que-miran-al-cielo"
    },
    "is_free": true
@@ -3804,8 +3828,8 @@
    "posterSource": "tmdb",
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-24-19-30-the-craft"
    },
    "is_free": true,
@@ -3836,8 +3860,8 @@
    "posterSource": "tmdb",
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-24-21-00-huo-zhe-yan"
    },
    "premiere": "Estreno colombiano",
@@ -3859,8 +3883,8 @@
    "has_qa": false,
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-25-17-00-premiacion-y-presentacion-musical"
    },
    "is_free": true
@@ -3886,8 +3910,8 @@
    "posterSource": "tmdb",
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
-    "date": "2026-10-06",
-    "base_version": 2,
+    "date": "2026-10-14",
+    "base_version": 21,
     "id": "2026-10-25-19-00-ikatan-darah"
    },
    "premiere": "Clausura",
@@ -3903,7 +3927,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-10T11:05:16",
+  "fecha": "2026-10-15T09:56:28",
   "plan_sha": "bcc190a548850b59",
   "paso": 8,
   "cmd": "python3 pipeline/ensamblar.py fantasmagoria-2026"

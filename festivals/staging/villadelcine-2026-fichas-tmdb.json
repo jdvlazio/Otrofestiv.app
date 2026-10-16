@@ -1,10 +1,10 @@
 {
  "_provenance": {
   "fuente": "TMDB (api.themoviedb.org) + Letterboxd por el redirect /tmdb/<id>",
-  "capturado": "2026-10-07",
+  "capturado": "2026-10-13",
   "que_aporta": "año, duración, país, género, sinopsis, póster y lbSlug de los cortos de la Selección Oficial que TMDB tiene",
   "candado": "lib.ficha_tmdb — director ✓ SIEMPRE; en un festival de cortos el título solo no distingue nada («Solo», «Human», «Far»)",
-  "alcance": "21 de 68 cortos con ficha; los demás no están en TMDB y su dato hay que pedírselo al festival"
+  "alcance": "29 de 68 cortos con ficha; los demás no están en TMDB y su dato hay que pedírselo al festival"
  },
  "fichas": {
   "Witch and Frog": {
@@ -19,6 +19,30 @@
    "poster": "/assets/villadelcine-2026/witch-and-frog.jpg",
    "posterSource": "tmdb",
    "lbSlug": "witch-and-frog"
+  },
+  "Sua y Sie: Guardianes de la vida": {
+   "tmdb_id": 1791659,
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_director": "Johanna Cortés",
+   "_sondeado": "2026-10-13",
+   "anio": 2025,
+   "duracion_min": 4,
+   "sinopsis": "En el páramo de Mata de Mora, dos niños encarnan a Sua, el Sol, y Sie, el Agua. Hablando en muisca y español, estas fuerzas sagradas dialogan sobre el equilibrio de la vida e invitan a proteger el territorio, la memoria ancestral y las fuentes que sostienen a su comunidad.",
+   "poster": "/assets/villadelcine-2026/sua-y-sie-guardianes-de-la-vida.jpg",
+   "posterSource": "tmdb",
+   "lbSlug": "sua-y-sie-guardianes-de-la-vida"
+  },
+  "Manos Rojas": {
+   "tmdb_id": 1791661,
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_director": "Julián Monroy",
+   "_sondeado": "2026-10-13",
+   "anio": 2026,
+   "duracion_min": 5,
+   "sinopsis": "En medio del conflicto armado colombiano, una comunidad ve cómo el miedo y los secuestros alteran su vida cotidiana. Mientras las familias atraviesan ausencias, separaciones y decisiones dolorosas, surge una pregunta urgente: ¿cómo conservar la esperanza? Una historia sobre las huellas de la guerra y la posibilidad de construir paz desde la memoria.",
+   "poster": "/assets/villadelcine-2026/manos-rojas.jpg",
+   "posterSource": "tmdb",
+   "lbSlug": "manos-rojas"
   },
   "La Presencia de Blanco": {
    "tmdb_id": 1753870,
@@ -35,6 +59,30 @@
    "posterSource": "tmdb",
    "lbSlug": "la-presencia-de-blanco"
   },
+  "No se fía, ni aunque lloren": {
+   "tmdb_id": 1791676,
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_director": "Natalia Hernández Sánchez",
+   "_sondeado": "2026-10-13",
+   "anio": 2025,
+   "duracion_min": 7,
+   "sinopsis": "Tras despedirse de su abuela Rosa, Mateo decide prepararse para asumir el legado familiar. Su única guía es una lista de reglas escrita durante la infancia, que lo conduce por misiones tan absurdas como solemnes. Entre planes criminales y recuerdos, descubrirá que algunos legados no se reciben: se comprenden.",
+   "poster": "/assets/villadelcine-2026/no-se-fia-ni-aunque-lloren.jpg",
+   "posterSource": "tmdb",
+   "lbSlug": "no-se-fia-ni-aunque-lloren"
+  },
+  "La Última Historia": {
+   "tmdb_id": 1791665,
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_director": "Eberto Manotas y Mauro Andrade",
+   "_sondeado": "2026-10-13",
+   "anio": 2025,
+   "duracion_min": 7,
+   "sinopsis": "Pipe, un escritor anciano que enfrenta el Alzheimer, intenta terminar la que podría ser su última obra. Mientras escribe, sus recuerdos se confunden con historias ajenas hasta llevarlo de regreso a su infancia, cuando, sin zapatos y con un balón de trapo, soñaba con vestir la camiseta de la Selección Colombia.",
+   "poster": "/assets/villadelcine-2026/la-ultima-historia.jpg",
+   "posterSource": "tmdb",
+   "lbSlug": "la-ultima-historia"
+  },
   "A body without a horse?": {
    "tmdb_id": 1659047,
    "_verificado": "director ✓ + título idéntico; no hay año ni duración en ambos lados con qué contrastar",
@@ -50,6 +98,18 @@
    "posterSource": "tmdb",
    "lbSlug": "a-body-without-a-horse"
   },
+  "Ánima de Marea": {
+   "tmdb_id": 1791677,
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_director": "Laury T. Herrera",
+   "_sondeado": "2026-10-13",
+   "anio": 2026,
+   "duracion_min": 4,
+   "sinopsis": "Durante el Día de los Muertos, José ignora la advertencia de su esposa y sale a pescar en las aguas de La Boquilla. Cuando el mar comienza a devolverle señales imposibles, una presencia sobrenatural lo enfrenta a su mayor temor. En ese territorio, algunas tradiciones no son supersticiones: son reglas de supervivencia.",
+   "poster": "/assets/villadelcine-2026/anima-de-marea.jpg",
+   "posterSource": "tmdb",
+   "lbSlug": "anima-de-marea"
+  },
   "Behind the Door": {
    "tmdb_id": 1696442,
    "_verificado": "director ✓ + título idéntico; no hay año ni duración en ambos lados con qué contrastar",
@@ -64,6 +124,18 @@
    "posterSource": "tmdb",
    "lbSlug": "derriere-la-porte-2026"
   },
+  "Benditos los viejos": {
+   "tmdb_id": 1791675,
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_director": "Camilo Duque Zuluaga y Santiago Rubio López",
+   "_sondeado": "2026-10-13",
+   "anio": 2026,
+   "duracion_min": 4,
+   "sinopsis": "En el corazón de una maloca, una mujer atraviesa un ritual de gestación acompañado por el fuego, la danza y figuras de barro trazadas sobre su cuerpo. Mientras la naturaleza anuncia el nacimiento de una nueva vida, el parto se transforma en una celebración de la memoria ancestral, la gratitud y los ciclos que conectan el cuerpo, la tierra y las generaciones.",
+   "poster": "/assets/villadelcine-2026/benditos-los-viejos.jpg",
+   "posterSource": "tmdb",
+   "lbSlug": "benditos-los-viejos"
+  },
   "Vía Crucis": {
    "tmdb_id": 1697484,
    "_verificado": "director ✓ + título idéntico; no hay año ni duración en ambos lados con qué contrastar",
@@ -75,6 +147,18 @@
    "poster": "/assets/villadelcine-2026/via-crucis.jpg",
    "posterSource": "tmdb",
    "lbSlug": "via-crusis"
+  },
+  "La Sombrilla de Mamá": {
+   "tmdb_id": 1791672,
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_director": "Mateo Forero",
+   "_sondeado": "2026-10-13",
+   "anio": 2025,
+   "duracion_min": 20,
+   "sinopsis": "En la Colombia de los años cincuenta, Luz pierde la sombrilla que tomó prestada de su madre. La furia de Waldina convierte el hogar en un lugar de miedo, pero, al descubrir el dolor oculto tras su rabia, la niña encuentra un gesto silencioso capaz de acercarlas y comenzar a sanar.",
+   "poster": "/assets/villadelcine-2026/la-sombrilla-de-mama.jpg",
+   "posterSource": "tmdb",
+   "lbSlug": "la-sombrilla-de-mama"
   },
   "I Don’t Know What to Do": {
    "tmdb_id": 1560415,
@@ -105,6 +189,17 @@
    "poster": "/assets/villadelcine-2026/tv-entreaberta.jpg",
    "posterSource": "tmdb",
    "lbSlug": "tv-entreaberta"
+  },
+  "Memorias del Alba": {
+   "tmdb_id": 1791663,
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_director": "Aldair Acosta",
+   "_sondeado": "2026-10-13",
+   "duracion_min": 8,
+   "sinopsis": "Tatao crece junto a su abuela Alba, unidos por una rutina que da forma a su vida cotidiana. Cuando la memoria empieza a desvanecerse, su relación se transforma, revelando cómo el amor perdura incluso a medida que los recuerdos desaparecen lentamente.",
+   "poster": "/assets/villadelcine-2026/memorias-del-alba.jpg",
+   "posterSource": "tmdb",
+   "lbSlug": "memorias-del-alba"
   },
   "Tuktu, Padre Maíz": {
    "tmdb_id": 1592955,
@@ -312,283 +407,235 @@
    "titulo": "Tiro Libre",
    "director": "Inti Deus",
    "categoria": "Mejor Cortometraje YoungFilm",
-   "_sondeado": "2026-10-06"
+   "_sondeado": "2026-10-13"
   },
   {
    "titulo": "Sun Coffee",
    "director": "Zoé Filloux",
    "categoria": "Mejor Cortometraje YoungFilm",
-   "_sondeado": "2026-10-06"
+   "_sondeado": "2026-10-13"
   },
   {
    "titulo": "La Silla",
    "director": "Clara García",
    "categoria": "Mejor Cortometraje YoungFilm",
-   "_sondeado": "2026-10-06"
+   "_sondeado": "2026-10-13"
   },
   {
    "titulo": "Far",
    "director": "We Are Central Asia Collective",
    "categoria": "Mejor Cortometraje YoungFilm",
-   "_sondeado": "2026-10-06"
-  },
-  {
-   "titulo": "Sua y Sie: Guardianes de la vida",
-   "director": "Johanna Cortés",
-   "categoria": "Mejor Cortometraje Escolar",
-   "_sondeado": "2026-10-06"
+   "_sondeado": "2026-10-13"
   },
   {
    "titulo": "Solo",
    "director": "Agustina Lecaros",
    "categoria": "Mejor Cortometraje Escolar",
-   "_sondeado": "2026-10-06"
-  },
-  {
-   "titulo": "Manos Rojas",
-   "director": "Julián Monroy",
-   "categoria": "Mejor Cortometraje Escolar",
-   "_sondeado": "2026-10-06"
+   "_sondeado": "2026-10-13"
   },
   {
    "titulo": "In Between",
    "director": "Carlos Andrés Paniagua",
    "categoria": "Mejor Cortometraje Escolar",
-   "_sondeado": "2026-10-06"
+   "_sondeado": "2026-10-13"
   },
   {
    "titulo": "Prompt Zero",
    "director": "Tomás Etter Gómez",
    "categoria": "Mejor Cortometraje IA",
-   "_sondeado": "2026-10-06"
+   "_sondeado": "2026-10-13"
   },
   {
    "titulo": "Catatumbo: House of Thunder, Memory, and Dignity",
    "director": "Jhonattan Sarmiento",
    "categoria": "Mejor Cortometraje IA",
-   "_sondeado": "2026-10-06"
+   "_sondeado": "2026-10-13"
   },
   {
    "titulo": "Lens",
    "director": "Eduardo Rodriguez",
    "categoria": "Mejor Cortometraje IA",
-   "_sondeado": "2026-10-06"
+   "_sondeado": "2026-10-13"
   },
   {
    "titulo": "They Call It Sausage",
    "director": "Timm Osterhold",
    "categoria": "Mejor Cortometraje IA",
-   "_sondeado": "2026-10-06"
+   "_sondeado": "2026-10-13"
   },
   {
    "titulo": "Life is a Chessboard; Every Move is Final",
    "director": "Wang Zhi-Zhong",
    "categoria": "Mejor Cortometraje IA",
-   "_sondeado": "2026-10-06"
-  },
-  {
-   "titulo": "No se fía, ni aunque lloren",
-   "director": "Natalia Hernández Sánchez",
-   "categoria": "Mejor Cortometraje con Celular",
-   "_sondeado": "2026-10-06"
-  },
-  {
-   "titulo": "La Última Historia",
-   "director": "Eberto Manotas y Mauro Andrade",
-   "categoria": "Mejor Cortometraje con Celular",
-   "_sondeado": "2026-10-06"
+   "_sondeado": "2026-10-13"
   },
   {
    "titulo": "Maleza",
    "director": "Nicolle Estrada Díaz y Marcela Palacio Montoya",
    "categoria": "Mejor Cortometraje con Celular",
-   "_sondeado": "2026-10-06"
+   "_sondeado": "2026-10-13"
   },
   {
    "titulo": "Ventajas y desventaja de soñar despierto",
    "director": "Lorena López",
    "categoria": "Mejor Cortometraje con Celular",
-   "_sondeado": "2026-10-06"
-  },
-  {
-   "titulo": "Ánima de Marea",
-   "director": "Laury T. Herrera",
-   "categoria": "Mejor Cortometraje Vertical",
-   "_sondeado": "2026-10-06"
+   "_sondeado": "2026-10-13"
   },
   {
    "titulo": "Nahuales",
    "director": "Alejandro Cervantes",
    "categoria": "Mejor Cortometraje Vertical",
-   "_sondeado": "2026-10-06"
+   "_sondeado": "2026-10-13"
   },
   {
    "titulo": "4 Minutes",
    "director": "Rogerio Troiani",
    "categoria": "Mejor Cortometraje Vertical",
-   "_sondeado": "2026-10-06"
+   "_sondeado": "2026-10-13"
   },
   {
    "titulo": "Shorts",
    "director": "Daniel Baena Pacheco",
    "categoria": "Mejor Cortometraje Vertical",
-   "_sondeado": "2026-10-06"
+   "_sondeado": "2026-10-13"
   },
   {
    "titulo": "Floppy the Robot – El último contacto",
    "director": "Jacobo Rendón",
    "categoria": "Mejor VR",
-   "_sondeado": "2026-10-06"
+   "_sondeado": "2026-10-13"
   },
   {
    "titulo": "Human",
    "director": "Debora Bergamini",
    "categoria": "Mejor VR",
-   "_sondeado": "2026-10-06"
+   "_sondeado": "2026-10-13"
   },
   {
    "titulo": "Protecting Our Territory",
    "director": "Christopher Boulton",
    "categoria": "Mejor VR",
-   "_sondeado": "2026-10-06"
+   "_sondeado": "2026-10-13"
   },
   {
    "titulo": "Después de tanto amor",
    "director": "Mercedes Oviedo",
    "categoria": "Mejor Videoclip",
-   "_sondeado": "2026-10-06"
+   "_sondeado": "2026-10-13"
   },
   {
    "titulo": "Mucho gusto",
    "director": "Cintia Obando",
    "categoria": "Mejor Videoclip",
-   "_sondeado": "2026-10-06"
+   "_sondeado": "2026-10-13"
   },
   {
    "titulo": "A pesar de mí",
    "director": "Thomas Mejía Lozano",
    "categoria": "Mejor Videoclip",
-   "_sondeado": "2026-10-06"
-  },
-  {
-   "titulo": "Benditos los viejos",
-   "director": "Camilo Duque Zuluaga y Santiago Rubio López",
-   "categoria": "Mejor Videoclip",
-   "_sondeado": "2026-10-06"
+   "_sondeado": "2026-10-13"
   },
   {
    "titulo": "Aguapanela",
    "director": "Juan José Narváez",
    "categoria": "Mejor Videoclip",
-   "_sondeado": "2026-10-06"
+   "_sondeado": "2026-10-13"
   },
   {
    "titulo": "1 paseo por la ciudad",
    "director": "Sara Coello Coello y Alejandro Acuña Sevilla",
    "categoria": "Mejor Cortometraje Apasionado",
-   "_sondeado": "2026-10-06"
-  },
-  {
-   "titulo": "La Sombrilla de Mamá",
-   "director": "Mateo Forero",
-   "categoria": "Mejor Cortometraje Apasionado",
-   "_sondeado": "2026-10-06"
+   "_sondeado": "2026-10-13"
   },
   {
    "titulo": "Grief",
    "director": "Nicolas Patiño Hortua y Andrés Santiago Cely Orjuela",
    "categoria": "Mejor Cortometraje Apasionado",
-   "_sondeado": "2026-10-06"
+   "_sondeado": "2026-10-13"
   },
   {
    "titulo": "Lost Fragments of a Seizure",
    "director": "Michael Martinez",
    "categoria": "Mejor Cortometraje Apasionado",
-   "_sondeado": "2026-10-06"
+   "_sondeado": "2026-10-13"
   },
   {
    "titulo": "Beyond the End",
    "director": "Sara Sangiorgio",
    "categoria": "International Universities",
-   "_sondeado": "2026-10-06"
+   "_sondeado": "2026-10-13"
   },
   {
    "titulo": "Final Act",
    "director": "Babi Astolfi y Lisa Soares",
    "categoria": "International Universities",
-   "_sondeado": "2026-10-06"
-  },
-  {
-   "titulo": "Memorias del Alba",
-   "director": "Aldair Acosta",
-   "categoria": "International Universities",
-   "_sondeado": "2026-10-06"
+   "_sondeado": "2026-10-13"
   },
   {
    "titulo": "On Hold",
    "director": "Krishna Kumar Shukla",
    "categoria": "Mejor Corto Internacional",
-   "_sondeado": "2026-10-06"
+   "_sondeado": "2026-10-13"
   },
   {
    "titulo": "El último campeón",
    "director": "Daniel Jesús Parra Jaimes",
    "categoria": "Mejor Work in Progress",
-   "_sondeado": "2026-10-06"
+   "_sondeado": "2026-10-13"
   },
   {
    "titulo": "Mi Tesoro",
    "director": "Dayana Gonzalez y Brian Congolez",
    "categoria": "Mejor Work in Progress",
-   "_sondeado": "2026-10-06"
+   "_sondeado": "2026-10-13"
   },
   {
    "titulo": "Extinction",
    "director": "Frank Benitez",
    "categoria": "Mejor Work in Progress",
-   "_sondeado": "2026-10-06"
+   "_sondeado": "2026-10-13"
   },
   {
    "titulo": "El cine dentro del cine dentro del cine",
    "director": "Diana Kuéllar y Manuel Silva",
    "categoria": "Mejor Work in Progress",
-   "_sondeado": "2026-10-06"
+   "_sondeado": "2026-10-13"
   },
   {
    "titulo": "Cuba 2001. Imágenes del futuro I",
    "director": "Felipe Moreno Salazar",
    "categoria": "Mejor Work in Progress",
-   "_sondeado": "2026-10-06"
+   "_sondeado": "2026-10-13"
   },
   {
    "titulo": "Volar",
    "director": "Jeiver Pinto Vargas",
    "categoria": "Mejor Ópera Prima Nacional",
-   "_sondeado": "2026-10-06"
+   "_sondeado": "2026-10-13"
   },
   {
    "titulo": "Arenas",
    "director": "John Bolívar",
    "categoria": "Mejor Ópera Prima Nacional",
-   "_sondeado": "2026-10-06"
+   "_sondeado": "2026-10-13"
   },
   {
    "titulo": "Estepa el lugar menos esperado",
    "director": "Mariano Benito",
    "categoria": "Mejor Ópera Prima Internacional",
-   "_sondeado": "2026-10-06"
+   "_sondeado": "2026-10-13"
   },
   {
    "titulo": "Language Of The Wind",
    "director": "Shimataver Igbawua",
    "categoria": "Mejor Ópera Prima Internacional",
-   "_sondeado": "2026-10-06"
+   "_sondeado": "2026-10-13"
   },
   {
    "titulo": "Cos de vidre",
    "director": "Marc Comabella",
    "categoria": "Mejor Ópera Prima Internacional",
-   "_sondeado": "2026-10-06"
+   "_sondeado": "2026-10-13"
   }
  ],
  "en_duda": {

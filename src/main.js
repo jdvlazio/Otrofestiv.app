@@ -111,7 +111,7 @@ import {
 
 // ── Step 7d-1: controller/sheets-controller.js — sheets+rating+AV+toast+utils. ──
 import {
-  openPelSheet, closePelSheet, _closeTopSheet, quedarmeHastaFinal, openCortoSheet, openCortoSheetFromEl, _openCombinedFilmSheet, _findParentProgram, openConflictSheet, closeConflictSheet, openPrioLimit, openPlanConfirm, closePlanConfirm, openPostViewRating, openRatingSheet, closeRatingSheet, openAvSheet, selectAvDay, setAvType, confirmAvBlock, renderAvDay, addBlock, removeBlock, toggleFullDay, _setAvAddOpen, showActionToast, _dismissToastAction, countryToFlags, filmDisplayTitle, _genreEN, _removePlanItem, savePVRating, pvLater, openDiary, closeDiary, openPalmares, closePalmares, openVenueSheet, closeVenueSheet,
+  openPelSheet, closePelSheet, _closeTopSheet, quedarmeHastaFinal, openCortoSheet, openCortoSheetFromEl, _openCombinedFilmSheet, _findParentProgram, openConflictSheet, closeConflictSheet, openPrioLimit, openPlanConfirm, closePlanConfirm, invitarCuenta, openPostViewRating, openRatingSheet, closeRatingSheet, openAvSheet, selectAvDay, setAvType, confirmAvBlock, renderAvDay, addBlock, removeBlock, toggleFullDay, _setAvAddOpen, showActionToast, _dismissToastAction, countryToFlags, filmDisplayTitle, _genreEN, _removePlanItem, savePVRating, pvLater, openDiary, closeDiary, openPalmares, closePalmares, openVenueSheet, closeVenueSheet,
 } from './controller/sheets-controller.js';
 
 // ── Step 7d-2: controller/overlays.js — seccion/search/lugar dropdowns. ──────
@@ -122,9 +122,9 @@ import {
 // ── Step 7d-3: controller/handlers.js — mutators+filters+composites. ─────────
 import {
   citySheetPick, citySheetAll,
-  toggleWL, toggleWatched, diaryToggleVista, diaryNotaCerrar, togglePelPrio, togglePelWL, setDelay, undoDelay, clearDelay, removeFromAgenda, addSuggestion, addRecurringBlock, removeRecurringBlock, _planFixNotice,  forceInclude, includeAnyway, togglePriority, swapPriority, markWatchedFromPlan, confirmReplace, removeFilmFromScenario, _dismissNotice, selectMiPlanDay, miPlanNav, toggleMplanProg, setActivePlanFilm, selectFromDetail, toggleFilmAlternatives, _toggleEveningFilms, filterByVenue, filterByDay, filterBySection, setProgramaMode, toggleProgramaView, setProgramaView, setProgramaChip, clearProgramaChip, _pafClearSec, _pafClearVenue, _toggleWLFromList, saveCurrentScenario, _setExpandedFilm, _closePelAndRemove, _closePelAndRate, _navTo, _closeAuthAndReset, _toggleCtxOlder, _toggleWatchedAndClose, _toggleWLAndClose, _activatePlanFilm, _scrollToSuggestions, _removeConflictModal, _scrollToTop, _searchOpenFilm, _searchOpenCorto,
+  toggleWL, toggleWatched, diaryToggleVista, diaryNotaCerrar, togglePelPrio, togglePelWL, setDelay, undoDelay, clearDelay, applyOwnCloudDelay, removeFromAgenda, addSuggestion, addRecurringBlock, removeRecurringBlock, _planFixNotice,  forceInclude, includeAnyway, togglePriority, swapPriority, markWatchedFromPlan, toggleBoleta, toggleSoloSinBoleta, abrirAviso, confirmReplace, removeFilmFromScenario, _dismissNotice, selectMiPlanDay, miPlanNav, toggleMplanProg, setActivePlanFilm, selectFromDetail, toggleFilmAlternatives, _toggleEveningFilms, filterByVenue, filterByDay, filterBySection, setProgramaMode, toggleProgramaView, setProgramaView, setProgramaChip, clearProgramaChip, _pafClearSec, _pafClearVenue, _toggleWLFromList, saveCurrentScenario, _setExpandedFilm, _closePelAndRemove, _closePelAndRate, _navTo, _closeAuthAndReset, _toggleCtxOlder, _toggleWatchedAndClose, _toggleWLAndClose, _activatePlanFilm, _scrollToSuggestions, _removeConflictModal, _scrollToTop, _searchOpenFilm, _searchOpenCorto,
 } from './controller/handlers.js';
-import { setDelaysRerender } from './controller/delays-cloud.js';
+import { setDelaysRerender, setOwnDelayCb } from './controller/delays-cloud.js';
 import { initWatchBridge } from './controller/watch-bridge.js';
 
 // ── Step 8d-4: controller/loader.js (loadFestival + dismissSplash) ───────────
@@ -239,6 +239,7 @@ const ACTION_REGISTRY = {
   closePVRating:         ()      => closePVRating(),
   pvLater:               ()      => pvLater(),
   closePlanConfirm:      (el)    => closePlanConfirm(el.dataset.force === '1'),
+  invitarCuenta:         ()      => invitarCuenta(),
   closePrioLimit:        ()      => closePrioLimit(),
   dismissSplash:         ()      => dismissSplash(),
   searchOpen:            ()      => searchOpen(),
@@ -312,6 +313,8 @@ const ACTION_REGISTRY = {
   setActivePlanFilm:     (el)    => setActivePlanFilm(el),
   toggleFilmAlternatives:(el)    => toggleFilmAlternatives(el.dataset.key, el.dataset.title, el.dataset.day, el.dataset.time),
   toggleMplanProg:       (el, e) => toggleMplanProg(el, e),
+  toggleBoleta:          (el)    => toggleBoleta(el.dataset.key),
+  toggleSoloSinBoleta:   ()      => toggleSoloSinBoleta(),
   markWatchedFromPlan:   (el, e) => markWatchedFromPlan(el.dataset.title, el.dataset.day, el.dataset.time, el.dataset.venue, el.dataset.dur, e),
   sharePlan:             ()      => sharePlan(),
   exportICS:             ()      => exportICS(),
@@ -505,7 +508,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202610110805';
+const BUILD_VERSION='202610151755';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -1025,7 +1028,7 @@ try{
     _capApp.addListener('backButton',()=>{ if(!_closeTopSheet()) _capApp.minimizeApp?.(); });
     // Tocar un aviso que trae destino (el del día después: «Tu festival») abre Mi Plan.
     window.Capacitor.Plugins?.LocalNotifications?.addListener?.('localNotificationActionPerformed',
-      a=>{ if(a?.notification?.extra?.abrir==='miplan'){ try{ switchMainNav('mnav-miplan'); showAgView(); }catch(e){} } });
+      a=>{ try{ abrirAviso(a?.notification?.extra); }catch(e){} });
   }
 }catch(e){ /* sin plugin: comportamiento de siempre */ }
 
@@ -1560,6 +1563,20 @@ updateAgTab();
 setDelaysRerender(function(){
   if(activeMNav==='mnav-miplan' && activeView==='agenda') renderAgenda();
 });
+// Retraso marcado en el RELOJ (14 oct 2026): tu propio reporte llega por Realtime
+// o la carga inicial (setOwnDelayCb), o directo del wrapper de iOS por
+// WCSession (__otfWatchDelay). Los dos terminan en applyOwnCloudDelay, que no
+// vuelve a escribir la nube.
+setOwnDelayCb((key, mins) => { if(applyOwnCloudDelay(key, mins) && activeMNav==='mnav-miplan' && activeView==='agenda') renderAgenda(); });
+// iOS: el wrapper (1.16+) pasa el destino del aviso tocado. Devuelve true si la
+// app ya estaba lista para atenderlo (si no, el wrapper reintenta).
+window.__otfAbrirAviso = (a) => { try{ return abrirAviso(a); }catch(e){ report(e,'abrirAviso'); return false; } };
+window.__otfWatchDelay = (m) => {
+  try{
+    if(!m || !m.key || (m.festival && m.festival!==_activeFestId)) return;
+    if(applyOwnCloudDelay(m.key, m.minutes) && activeMNav==='mnav-miplan' && activeView==='agenda') renderAgenda();
+  }catch(e){ report(e,'watchDelay'); }
+};
 
 // Sync del plan EN VIVO (F0.5): al llegar un cambio de OTRO dispositivo por Realtime,
 // repintar la vista ACTIVA sin navegar. renderActiveView() rutea internamente

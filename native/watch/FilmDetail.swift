@@ -8,7 +8,12 @@ import SwiftUI
 import WatchKit   // screenBounds: el tope de alto del póster es proporcional a la pantalla
 
 struct FilmDetail: View {
-    let item: ScheduleItem
+    @EnvironmentObject var plan: PlanStore
+    private let initial: ScheduleItem
+    init(item: ScheduleItem) { initial = item }
+    // La versión VIVA del plan: al marcar un retraso, la cuenta y la barra se corren
+    // acá mismo (el valor de navegación es una copia de cuando se abrió).
+    private var item: ScheduleItem { plan.item(id: initial.id) ?? initial }
     private var dayTimeLine: String {
         let day = item.dayStr.map { PlanCompute.dayLabel($0) } ?? ""
         let time = item.time ?? ""
@@ -61,6 +66,10 @@ struct FilmDetail: View {
                         }
                         .padding(.horizontal, 8)
                         .accessibilityElement(children: .combine)
+                    }
+
+                    if PlanCompute.canMarkDelay(item, now: ctx.date) {
+                        DelayControl(item: item).padding(.horizontal, 8)
                     }
 
                     VStack(alignment: .leading, spacing: 7) {
@@ -126,5 +135,52 @@ private struct MetaRow: View {
             Text(text).font(.footnote).foregroundStyle(OT.warm)
                 .fixedSize(horizontal: false, vertical: true)
         }
+    }
+}
+
+// ── Marcar el retraso desde el reloj (14 oct 2026, aprobado por Juan) ─────────
+// El mismo control de Mi Plan en el teléfono: pregunta + − / + de a 5 min, y la
+// corona (tocar el número le da el foco). Sin botón de confirmar: se guarda solo.
+private struct DelayControl: View {
+    @EnvironmentObject var plan: PlanStore
+    let item: ScheduleItem
+    @State private var crown: Double = 0
+    @FocusState private var focused: Bool
+    private var mins: Int { PlanCompute.delay(item) }
+    private func set(_ m: Int) {
+        guard m != mins, m >= 0 else { return }
+        WKInterfaceDevice.current().play(.click)
+        plan.setDelay(item, minutes: m)
+    }
+    var body: some View {
+        VStack(alignment: .leading, spacing: 6) {
+            VStack(alignment: .leading, spacing: 1) {
+                Text(mins > 0 ? L.delayState : L.delayAsk)
+                    .font(.footnote).fontWeight(.semibold)
+                    .foregroundStyle(mins > 0 ? OT.amber : OT.warm)
+                Text(mins > 0 ? L.delayScheduled(item.time ?? "") : L.delayHelp)
+                    .font(.caption2).foregroundStyle(OT.secondary)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+            HStack {
+                Button { set(mins - 5) } label: { Image(systemName: "minus").font(.body.weight(.bold)) }
+                    .frame(width: 44, height: 44).disabled(mins == 0)
+                    .accessibilityLabel(L.minus5)
+                Spacer()
+                Text(L.delayMins(mins)).font(.title3).fontWeight(.heavy).monospacedDigit()
+                    .foregroundStyle(mins > 0 ? OT.amber : OT.warm)
+                    .focusable().focused($focused)
+                    .digitalCrownRotation($crown, from: 0, through: 240, by: 5, sensitivity: .low,
+                                          isContinuous: false, isHapticFeedbackEnabled: true)
+                    .onChange(of: crown) { _, v in set(Int((v / 5).rounded()) * 5) }
+                Spacer()
+                Button { set(mins + 5) } label: { Image(systemName: "plus").font(.body.weight(.bold)) }
+                    .frame(width: 44, height: 44)
+                    .accessibilityLabel(L.plus5)
+            }
+            .buttonStyle(.bordered)
+        }
+        .onAppear { crown = Double(mins) }
+        .onChange(of: mins) { _, m in if Int(crown) != m { crown = Double(m) } }
     }
 }

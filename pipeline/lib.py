@@ -149,6 +149,68 @@ def tmdb_get(path, api_key, **params):
     return {}
 
 
+
+class TMDBRed(Exception):
+    """TMDB no respondió (red). NO es «no existe»: una ficha pedida por id
+    vuelve con datos o con el error 34; vacía, es que no llegó."""
+
+
+def tmdb_ficha(cid, api_key, _get=None, **params):
+    """Una ficha POR ID: la ficha, {} si TMDB dice que no existe (34), o
+    TMDBRed si no respondió.
+
+    POR QUÉ (14 oct 2026). tmdb_get devuelve {} cuando agota los reintentos, y
+    en una BÚSQUEDA eso a lo sumo pierde una ficha. Pedida por id, la ficha
+    vacía se armaba igual: «En construcción», «La bola negra» e «Historias del
+    buen valle» —declaradas a mano en Ficcali— volvieron sin afiche, sin país y
+    sin sinopsis en inglés en una corrida con la red cortando, sin un solo
+    aviso, y así se habrían publicado. Que pare: el sidecar de la corrida
+    anterior queda intacto y se vuelve a correr."""
+    d = (_get or tmdb_get)(f'/movie/{cid}', api_key, **params)
+    if d.get('id'):
+        return d
+    if d.get('status_code') == 34:
+        return {}
+    raise TMDBRed(f'TMDB no respondió por la ficha {cid} (red): se para antes '
+                  f'de escribir nada; volver a correr')
+
+
+def tmdb_ficha_autoprueba():
+    """Los tres casos con un tmdb_get de mentira. Lista de fallos: vacía = sana."""
+    mal = []
+    if tmdb_ficha(1, 'k', _get=lambda *a, **k: {'id': 1, 'title': 'zzz'}).get('title') != 'zzz':
+        mal.append('ficha que llega')
+    if tmdb_ficha(1, 'k', _get=lambda *a, **k: {'success': False, 'status_code': 34}) != {}:
+        mal.append('ficha que no existe (34)')
+    try:
+        tmdb_ficha(1, 'k', _get=lambda *a, **k: {})
+        mal.append('red caída: no paró')
+    except TMDBRed:
+        pass
+    return mal
+# Lo que `quitar.json` puede retirar aunque no se conserve de lo publicado, con
+# los campos que se van con él (un afiche se lleva su procedencia). Lo leen
+# ensamblar (lo saca del build) y publicar (no lo cuenta como pérdida).
+RETIRABLES = {'poster': ('poster', 'posterSource')}
+
+
+def quitados(fid):
+    """{(título, campo)} declarados en festivals/staging/<fid>-quitar.json: lo
+    que se retira A PROPÓSITO de lo publicado y por eso no se conserva. Lo leen
+    todos los caminos que reponen lo publicado (ensamblar._conservar_publicado y
+    los crudos que lo hacen por su cuenta, como Cinemancia): uno solo lee el
+    archivo. Sin `por_que`, aborta."""
+    p = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+                     'festivals', 'staging', f'{fid}-quitar.json')
+    if not os.path.exists(p):
+        return set()
+    out = set()
+    for x in json.load(open(p, encoding='utf-8')).get('quitar') or []:
+        if not x.get('por_que'):
+            raise SystemExit(f'✗ {os.path.basename(p)}: «{x.get("titulo")}» · {x.get("campo")} sin por_que')
+        out.add((x.get('titulo'), x.get('campo')))
+    return out
+
 # ── verificación (la lección Tribeca, ejecutable) ────────────────────────────
 def director_coincide(esperado, nombres):
     """¿Algún nombre de TMDB casa con el director de la fuente? Compara por
@@ -456,6 +518,18 @@ _INSCRIPCION = ('inscripcion', 'inscribir', 'registro previo', 'cupo limitado',
                 'previa inscripcion', 'formulario')
 
 
+def json_wp(texto):
+    """La respuesta de la API de WordPress, aunque el sitio le pegue CSS delante.
+
+    POR QUÉ (12 oct 2026). ficcali.com empezó a anteponer un `<style
+    id="elementor-post-…">` a /wp-json/: HTTP 200, `application/json`, y el
+    json.loads del primer carácter reventaba el catálogo, la programación y los
+    afiches a la vez. El JSON empieza en el primer `[{"` o `{"`; lo de antes
+    se descarta."""
+    i = min((k for k in (texto.find('[{"'), texto.find('{"'), texto.find('[]')) if k >= 0), default=0)
+    return json.loads(texto[i:], strict=False)
+
+
 def acceso_campos(texto, url=''):
     """De la palabra del festival a los 4 campos que la app lee.
 
@@ -514,7 +588,7 @@ def arquetipos():
 SIGLAS = {
     # sedes y las instituciones que las nombran
     'AECID', 'ALADOS', 'ALITIC', 'ASAB', 'BMCC', 'CCEBA', 'CDAE', 'CEFE', 'CESMAG', 'COMFAMA', 'FUGA',
-    'LGBTIQ', 'MAMB', 'MAMM', 'SENA', 'TPAC', 'UNAL', 'UNIAGRARIA', 'UNIBAC', 'VISA',
+    'LGBTIQ', 'MAMB', 'MAMM', 'MUBI', 'SENA', 'TPAC', 'UNAL', 'UNIAGRARIA', 'UNIBAC', 'VISA',
     # festivales nombrados dentro de una sección o una sede
     'BIFF', 'FICCI', 'FICDH', 'TIFF',
     # «Programación MORA» de FILCMAR: Mercado Oriente Audiovisual (su lámina 1)

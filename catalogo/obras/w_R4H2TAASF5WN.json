@@ -1,0 +1,41 @@
+{
+ "id": "w_R4H2TAASF5WN",
+ "titulo_original": "Estirpe",
+ "anio": 2024,
+ "paises": [
+  "C",
+  "O"
+ ],
+ "directores": [
+  "Ana María Ferro Gómez",
+  "Daniela Ruiz Coconubo"
+ ],
+ "aliases": [
+  {
+   "titulo": "LINEAGE",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "Entre los vivos y los muertos hay una memoria compartida.",
+  "en": "Among the living and the dead, there is a shared memory"
+ },
+ "afiche": {
+  "archivo": "/assets/ficcali-2026/estirpe.jpg",
+  "veredicto": "oficial"
+ },
+ "xref": {
+  "tmdb": 1327925,
+  "letterboxd": "lineage-2024"
+ },
+ "versiones": [
+  {
+   "etiqueta": "16 min",
+   "duracion_min": 16
+  }
+ ],
+ "presentaciones": [
+  "ficcali-2026"
+ ]
+}

@@ -42,6 +42,9 @@ FECHA = re.compile(r'^(\d{1,2}) de (octubre|noviembre|diciembre) / (\d{1,2}):(\d
 NOTA = re.compile(r'^(Adquiere tus entradas|Entrada libre.*|Estreno .*|\*Con presencia .*|MIDBO en Regiones|'
                   r'Duración total.*|Esta proyección hace parte .*|Función \d+:.*|\(.*\))$', re.I)
 
+# el estreno más alto manda en un programa con obras de estrenos distintos
+_RANGO_ESTRENO = {'mundial': 5, 'internacional': 4, 'Latinoamérica': 3, 'Colombia': 2, 'Bogotá': 1}
+
 # LAS SEDES: lo que imprime la ficha → (sede, sala, ciudad)
 SEDES = {
     'Sala Capital, Cinemateca de Bogotá': ('Cinemateca de Bogotá', 'Sala Capital', 'Bogotá'),
@@ -54,9 +57,25 @@ SEDES = {
     'Potocine, Ciudad Bolívar': ('Potocine', '', 'Bogotá'),
     'Auditorio Caldas, Universidad Central': ('Universidad Central', 'Auditorio Caldas', 'Bogotá'),
     'Canterbury Café, Kennedy': ('Canterbury Café', '', 'Bogotá'),
+    # nueva en la web del 13 oct («Cuba y la noche»): otro edificio del mismo campus;
+    # el pin de la sede es el del campus, la sala dice cuál edificio
+    'Auditorio 422, edificio 303C (NEA), Universidad Nacional de Colombia, sede Bogotá':
+        ('Universidad Nacional de Colombia', 'Auditorio 422, edificio 303C (NEA)', 'Bogotá'),
     'Auditorio Virginia Guitérrez, Posgrados de Ciencias Humanas, Universidad Nacional de Colombia, Bogotá':
         ('Universidad Nacional de Colombia', 'Auditorio Virginia Gutiérrez', 'Bogotá'),
     'Auditorio Salmona, Centro Cultural Gabriel García Márquez': ('Centro Cultural Gabriel García Márquez', 'Auditorio Salmona', 'Bogotá'),
+    # ── LO QUE LA WEB SUMÓ EL 13 OCT (programación en universidades y barrios) ──
+    'Cinemateca Sala Alterna, UNAL, Auditorio 105, edificio 301': ('Universidad Nacional de Colombia', 'Cinemateca Sala Alterna, Auditorio 105, edificio 301', 'Bogotá'),
+    'Auditorio 313, edificio 303C (NEA), Universidad Nacional de Colombia, sede Bogotá': ('Universidad Nacional de Colombia', 'Auditorio 313, edificio 303C (NEA)', 'Bogotá'),
+    'Auditorio 313, Edificio 303C (NEA), Universidad Nacional de Colombia, sede Bogotá': ('Universidad Nacional de Colombia', 'Auditorio 313, edificio 303C (NEA)', 'Bogotá'),
+    'Sala AMA, edificio 303C (NEA), Universidad Nacional de Colombia, sede Bogotá': ('Universidad Nacional de Colombia', 'Sala AMA, edificio 303C (NEA)', 'Bogotá'),
+    'Canterbury Café Kennedy': ('Canterbury Café', '', 'Bogotá'),
+    'Auditorio, Centro de Memoria, Paz y Reconciliación': ('Centro de Memoria, Paz y Reconciliación', 'Auditorio', 'Bogotá'),
+    'Auditorio Santander, Universidad Central': ('Universidad Central', 'Auditorio Santander', 'Bogotá'),
+    'Bodega Insurgesta, Potosí, Ciudad Bolívar': ('Bodega Insurgesta', '', 'Bogotá'),
+    'Servicio Forjar Restaurativo Arborizadora Baja, Ciudad Bolívar': ('Servicio Forjar Restaurativo Arborizadora Baja', '', 'Bogotá'),
+    'Centro Ático, Universidad Javeriana': ('Centro Ático, Universidad Javeriana', '', 'Bogotá'),
+    'La Mecánica': ('La Mecánica', '', 'Bogotá'),
     'Cinemateca del Caribe, Barranquilla': ('Cinemateca del Caribe', '', 'Barranquilla'),
     'UniNorte, Barranquilla': ('Universidad del Norte', '', 'Barranquilla'),
     'Sala Langosta Azul, Universidad del Magdalena, Santa Marta': ('Universidad del Magdalena', 'Sala Langosta Azul', 'Santa Marta'),
@@ -88,6 +107,11 @@ SEDE_FUERA = {
 # proyección comentada ya es función de su obra; el martes 27 cae fuera.
 SEMINARIO = f'{DIR}/paginas/seminario.html'
 SECCION_SEMINARIO = 'Encuentro Pensar lo Real'
+# la página del seminario no dice cómo se entra; el post de @midbo_doc del 7 oct
+# (instagram.com/p/DeNxY8XDTYG) sí: «Inscripción gratuita. Cupos limitados.»
+# Vale para sus actividades y para las proyecciones que «hacen parte del
+# Seminario» (Notre corps, Cuando cierro los ojos).
+ACCESO_SEMINARIO = 'Entrada gratuita con inscripción (cupos limitados)'
 KIND_SEM = {'master class': 'masterclass', 'mesa redonda': 'conversatorio', 'diálogo': 'dialogo',
             'charla': 'charla', 'lanzamiento': 'evento'}
 SEDE_SEM = {'Sala Capital, Cinemateca de Bogotá': ('Cinemateca de Bogotá', 'Sala Capital'),
@@ -139,7 +163,7 @@ def seminario():
                     out.append({'titulo': act, 'dia': dia, 'hora': ini, 'sede': sede, **({'sala': sala} if sala else {}),
                                 'ciudad': 'Bogotá', 'tipo': 'evento', 'event_kind': kind, 'seccion': SECCION_SEMINARIO,
                                 'duracion_min': (int(fin[:2]) * 60 + int(fin[3:])) - (int(ini[:2]) * 60 + int(ini[3:])),
-                                'acceso': 'desconocido',
+                                'acceso': ACCESO_SEMINARIO,
                                 **({'invitados': ' · '.join(inv) + '.'} if inv else {}),
                                 '_src': {'url': 'https://midbo.co/encuentro-pensar-lo-real/seminario/', 'date': '2026-10-10'}})
                 i = j
@@ -192,9 +216,20 @@ def bloques(p):
     out = []
     for n, li in enumerate(re.findall(r'<li>(.*?)</li>', seg, re.S)):
         c = re.search(r'f-cuando">(.*?)</span>', li, re.S); d = re.search(r'f-donde">(.*?)</span>', li, re.S)
+        # LA WEB DEL 13 OCT pone el acceso EN CADA FUNCIÓN: <a class="… f-compra">
+        # (TuBoleta) o <span class="f-entrada">Entrada libre</span>. Cuando la
+        # función lo trae, manda sobre las observaciones comunes de la obra
+        propias = []
+        cm = re.search(r'class="[^"]*f-compra[^"]*" href="([^"]+)"', li)
+        if cm:
+            propias.append('TICKET ' + html.unescape(cm.group(1)))
+        for e in re.findall(r'f-entrada">(.*?)</span>', li, re.S):
+            propias.append(re.sub(r'\s+', ' ', t(e)))
+        base = ([x for x in comun if not x.startswith('TICKET ') and 'entrada libre' not in x.lower()]
+                if propias else comun)
         if c and d:
             out.append(([re.sub(r'\s+', ' ', t(c.group(1))), re.sub(r'\s+', ' ', t(d.group(1)))],
-                        comun + tramos.get(n, [])))
+                        base + tramos.get(n, []) + propias))
     return out
 
 
@@ -205,6 +240,12 @@ def ficha(L, BLOQUES):
     d = {}
     if 'Sinopsis' in L:
         fin = next((j for j in range(k + 1, len(L)) if L[j] in ('Reseña', 'Trailer', 'Funciones')), k + 2)
+        # las fichas de CREAndo traen la ficha técnica DESPUÉS de la sinopsis
+        # (dirección · país · año · «N min» · «Producción: …»): la sinopsis
+        # termina donde empieza la dirección, o se publicaban pegadas (10 oct)
+        _dur = next((j for j in range(k + 1, fin) if re.fullmatch(r'\d+ min', L[j])), None)
+        if _dur and _dur - 3 > k:
+            fin = _dur - 3
         d['sinopsis'] = ' '.join(L[k + 1:fin])
     dur = next((j for j in range(len(L)) if re.fullmatch(r'\d+ min', L[j])), None)
     if dur:
@@ -254,29 +295,55 @@ def main():
             # y la función arranca con el primero.
             conjunta = any('proyección conjunta' in n.lower() for n in f['notas'])
             k = (f['dia'], f['lugar'], html.unescape(hija['name'])) if hija and not conjunta else (f['dia'], f['hora'], f['lugar'])
-            s = slots.setdefault(k, {'obras': [], 'notas': set(), 'programa': None, 'hora': f['hora'],
+            s = slots.setdefault(k, {'obras': [], 'notas': [], 'por_obra': [], 'programa': None, 'hora': f['hora'],
                                      'sede': sede, 'sala': sala, 'ciudad': ciudad})
             s['hora'] = min(s['hora'], f['hora'])
             s['gala'] = gala
             s['obras'].append({'titulo': titulo, 'url': o['link'], 'madre': madre['name'] if madre else None,
                                **{c: d[c] for c in ('director', 'pais', 'anio', 'duracion_min', 'sinopsis') if d.get(c)}})
-            s['notas'].update(f['notas'])
+            # en ORDEN y sin repetir: un set no tiene orden y el «primer» estreno
+            # o la «primera» duración salían distintos en cada corrida (15 oct)
+            s['notas'] += [n for n in f['notas'] if n not in s['notas']]
+            s['por_obra'].append(f['notas'])
             if hija and not conjunta:
                 s['programa'] = html.unescape(hija['name'])
     funciones = []
     for k, s in sorted(slots.items(), key=lambda kv: (kv[0][0], kv[1]['hora'])):
         dia, hora = k[0], s['hora']
         notas = s['notas']
+        # LA BOLETA ES DE LA CINEMATECA. Las observaciones valen para todas las
+        # funciones de la obra: «Buenos días, Wiracocha» dice «Entrada libre» y
+        # «Adquiere tus entradas» a la vez, y su enlace de TuBoleta es el de la
+        # Sala 2 el 29 oct; el 3 nov en la Alianza Francesa es libre. Con los dos
+        # avisos, el enlace va a la Cinemateca y la entrada libre a lo demás.
+        if any(n.startswith('TICKET ') for n in notas) and any('entrada libre' in n.lower() for n in notas):
+            notas = [n for n in notas if not n.startswith('TICKET ')] if 'Cinemateca' not in s['sede'] else \
+                    [n for n in notas if 'entrada libre' not in n.lower()]
+        # …salvo que tenga boleta: «Writing Life» es del seminario y se vende en TuBoleta ($7.000)
+        seminario_obra = any('seminario' in n.lower() for n in notas) and not any(n.startswith('TICKET ') for n in notas)
         base = {'dia': dia, 'hora': hora, 'sede': s['sede'], **({'sala': s['sala']} if s['sala'] else {}),
                 'ciudad': s['ciudad'],
                 **({'ticket_url': next(n[7:] for n in notas if n.startswith('TICKET '))}
                    if any(n.startswith('TICKET ') for n in notas) else {}),
-                'acceso': 'Boletería en TuBoleta' if any(n.startswith('TICKET ') for n in notas) else
-                          ('Entrada libre' if any('entrada libre' in n.lower() for n in notas) else 'desconocido'),
+                'acceso': ACCESO_SEMINARIO if seminario_obra else
+                          'Boletería en TuBoleta' if any(n.startswith('TICKET ') for n in notas) else
+                          ('Entrada libre' if any('entrada libre' in n.lower() for n in notas) else
+                           # REGLA DE JUAN (13 oct): «cuando no se anuncie pago, es
+                           # porque es gratis». La venta de MIDBO es la de la
+                           # Cinemateca (TuBoleta); fuera de ella, sin aviso = libre
+                           'desconocido' if 'Cinemateca' in s['sede'] else
+                           'Entrada libre (no se anuncia pago)'),
                 '_src': {'url': s['obras'][0]['url'], 'date': '2026-10-10'}}
         if any('con presencia' in n.lower() for n in notas):
             base['has_qa'], base['qa_type'] = True, 'team'
-        est = next((re.search(r'Estreno en [A-ZÁÉÍÓÚ][\wáéíóú]+', n).group() for n in notas if re.search(r'Estreno en [A-ZÁÉÍÓÚ]', n)), None)
+        # EL ESTRENO ES DE CADA OBRA (15 oct 2026): en «Creadoras de vida» una es
+        # estreno mundial, otra en Colombia y el resto en Bogotá. El programa
+        # lleva el MAYOR de sus obras —es verdad que el programa trae ese
+        # estreno—, y no el primero que cayera
+        est = max((x for x in (re.search(r'Estreno (?:mundial|internacional|en [A-ZÁÉÍÓÚ][\wáéíóú]+)', n)
+                               for n in notas) if x),
+                  key=lambda x: _RANGO_ESTRENO.get(x.group().split()[-1], 0), default=None)
+        est = est.group() if est else None
         if est:
             base['premiere'] = est
         if s.get('gala'):
@@ -291,11 +358,34 @@ def main():
             madres = {x['madre'] for x in s['obras']}
             titulo = s['programa'] or (html.unescape(madres.pop()) if len(madres) == 1 and None not in madres
                                        else ' + '.join(x['titulo'] for x in s['obras']))
-            dt = next((re.search(r"Duración total[^0-9]*(\d+)'", n) for n in notas if re.search(r"Duración total[^0-9]*\d+'", n)), None)
+            # LA DURACIÓN DEL PROGRAMA, POR MAYORÍA DE SUS OBRAS (15 oct 2026): las
+            # observaciones de una ficha valen para TODAS sus funciones, y
+            # «Montaña luminosa» trae el 64′ de su función en Minca junto al 99′
+            # del programa; el «primero» salía 64 o 99 según la corrida. Cada
+            # obra vota una vez por cada valor que dice; gana el más votado
+            _votos = {}
+            for _ns in s['por_obra']:
+                for _v in {m.group(1) for m in (re.search(r"Duración total[^0-9]*(\d+)'", n) for n in _ns) if m}:
+                    _votos[_v] = _votos.get(_v, 0) + 1
+            # …Y CONTRA LA SUMA DE ESTA FUNCIÓN (regla de Juan: la suma de un
+            # programa contra su franja). La versión de Canterbury o de la Bodega
+            # trae una obra menos que la de la Cinemateca, y la ficha da un solo
+            # total para las dos: un valor que no cuadra con lo que se proyecta
+            # aquí no es de aquí. Un total ÚNICO lo dice el festival y manda aunque
+            # no cuadre (CREAndo: 100′ para 74′ de obras, hay más que obras); solo
+            # cuando las fichas dan totales DISTINTOS y ninguno cuadra (±5′), la suma
+            _suma = sum(x.get('duracion_min') or 0 for x in s['obras'])
+            _cuadran = [v for v in _votos if _suma and abs(int(v) - _suma) <= 5]
+            if _cuadran:
+                _dur = int(max(sorted(_cuadran), key=lambda v: _votos[v]))
+            elif _suma and len(_votos) > 1:
+                _dur = _suma
+            else:
+                _dur = int(max(sorted(_votos), key=lambda v: _votos[v])) if _votos else None
             reg = {'titulo': titulo, **base, 'seccion': madre,
                    'obras': [{k: v for k, v in x.items() if k in ('titulo', 'director', 'pais', 'anio', 'duracion_min', 'sinopsis')}
                              for x in s['obras']],
-                   'duracion_min': int(dt.group(1)) if dt else sum(x.get('duracion_min') or 0 for x in s['obras']) or None}
+                   'duracion_min': _dur}
         else:
             x = s['obras'][0]
             reg = {**base, 'seccion': madre,
@@ -311,6 +401,15 @@ def main():
     for f in funciones:
         if f.get('obras') and len(_vistos[f['titulo']]) > 1 and not f['titulo'].startswith('Programa'):
             f['titulo'] = ' + '.join(o['titulo'] for o in f['obras'])
+    # UN PROGRAMA NUMERADO que en otra sede va con MENOS obras (la web del 13
+    # oct: «Creadoras de vida» en la Bodega in-surgesta sin «Geografía
+    # espectral»): la función incompleta lleva la sede en el título, o la app
+    # mostraría las cinco obras en las dos ([programa-mismo-titulo])
+    for f in funciones:
+        if f.get('obras') and f['titulo'].startswith('Programa') and len(_vistos[f['titulo']]) > 1:
+            mayor = max(len(x) for x in _vistos[f['titulo']])
+            if len(f['obras']) < mayor:
+                f['titulo'] = f"{f['titulo']} — {f['sede']}"
     # COMILLAS RECTAS en el título ([title-normalization])
     for f in funciones:
         f['titulo'] = f['titulo'].replace('’', "'").replace('‘', "'")

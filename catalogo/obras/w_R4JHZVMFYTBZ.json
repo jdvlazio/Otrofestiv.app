@@ -1,0 +1,43 @@
+{
+ "id": "w_R4JHZVMFYTBZ",
+ "titulo_original": "Petra y el sol",
+ "anio": 2025,
+ "paises": [
+  "CL"
+ ],
+ "directores": [
+  "Malu Furche",
+  "Stefania Malacchini"
+ ],
+ "aliases": [
+  {
+   "titulo": "Petra and the Sun",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "Durante un fuerte derretimiento de nieve en los Andes, Petra, de 71 años, descubre el cuerpo preservado de un alpinista del siglo pasado. Inicialmente vacilante, ella lo llevó a su chalet de madera, lo que provocó una historia romántica inesperada.",
+  "en": "During a heavy snowmelt in the Andes, Petra, 71, discovers the perfectly preserved corpse of a mountaineer from the last century."
+ },
+ "generos": [
+  "Animación"
+ ],
+ "afiche": {
+  "archivo": "/assets/filcmar-2026/petra-y-el-sol.jpg",
+  "veredicto": "oficial"
+ },
+ "xref": {
+  "tmdb": 1484063,
+  "letterboxd": "petra-and-the-sun"
+ },
+ "versiones": [
+  {
+   "etiqueta": "10 min",
+   "duracion_min": 10
+  }
+ ],
+ "presentaciones": [
+  "filcmar-2026"
+ ]
+}

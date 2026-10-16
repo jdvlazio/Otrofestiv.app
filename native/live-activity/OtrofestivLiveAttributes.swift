@@ -2,9 +2,9 @@
 // COPIA IDÉNTICA en la app (Otrofestiv/OtrofestivLiveAttributes.swift): ActivityKit
 // empareja por nombre de tipo y forma Codable. Si cambia uno, cambia el otro.
 //
-// Fase 1 = sin servidor: la tarjeta solo muestra lo que es cierto en TODO momento
-// (horas y sede fijas) y deja que el reloj del sistema haga la cuenta y la barra.
-// Nunca dice «Próxima» ni «En curso»: sin push no puede cambiar de fase sola.
+// Fase 1 = sin servidor: horas y sede fijas, y el reloj del sistema hace la cuenta
+// y la barra. Desde el 14 oct 2026 cambia de fase sola sin push: el staleDate es el
+// inicio real, e iOS la redibuja a esa hora («Empieza en» → «Termina en»).
 import ActivityKit
 import Foundation
 

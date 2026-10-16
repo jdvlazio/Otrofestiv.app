@@ -1,0 +1,58 @@
+{
+ "id": "w_R4HF7EVH2VC7",
+ "titulo_original": "La independencia",
+ "anio": 2025,
+ "paises": [
+  "CO"
+ ],
+ "directores": [
+  "John Agudelo Suárez"
+ ],
+ "aliases": [
+  {
+   "titulo": "Independence",
+   "tipo": "festival"
+  },
+  {
+   "titulo": "La Independencia",
+   "tipo": "festival"
+  },
+  {
+   "titulo": "Independence",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "Cecilia, una mujer abnegada de 52 años, decide romper con su vida de sacrificios tras años de soportar la irresponsabilidad de su hijo y la ingratitud de su familia, buscando finalmente su independencia.",
+  "en": "Cecilia, a selfless 52-year-old woman, decides to break with her life of sacrifices after years of enduring her son s irresponsibility and her family s ingratitude, finally seeking her independence."
+ },
+ "generos": [
+  "Drama",
+  "Ficción"
+ ],
+ "afiche": {
+  "archivo": "/assets/ficdeh/la-independencia.jpg",
+  "veredicto": "oficial-festival"
+ },
+ "xref": {
+  "tmdb": 1595081,
+  "letterboxd": "independence-2025"
+ },
+ "versiones": [
+  {
+   "etiqueta": "19 min",
+   "duracion_min": 19
+  },
+  {
+   "etiqueta": "20 min",
+   "duracion_min": 20
+  }
+ ],
+ "presentaciones": [
+  "ficdeh-2026",
+  "leviza-2026",
+  "siembrafest-2026",
+  "villadelcine-2026"
+ ]
+}

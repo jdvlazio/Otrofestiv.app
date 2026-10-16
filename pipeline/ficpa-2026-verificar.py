@@ -26,6 +26,12 @@ plano = crudo.plano
 
 def main():
     oficial, alterna = crudo.tarjetas()
+    # lo que IG cambió después de la web: la misma tabla del crudo (DEL_IG)
+    alterna = [{**t, **crudo.DEL_IG.get((t['grupo'], t['titulo']), {})} for t in alterna]
+    # …y la hora que corrigió la lámina (HORA_DEL_IG, la misma tabla del crudo)
+    _rect = lambda x: x.translate(str.maketrans({'“': '"', '”': '"', '«': '"', '»': '"'}))
+    oficial = [{**t, 'hora': crudo.HORA_DEL_IG[(t['dia'], _rect(t['titulo']))]['hora']}
+               if (t['dia'], _rect(t['titulo'])) in crudo.HORA_DEL_IG else t for t in oficial]
     build = json.load(io.open(f'{REPO}/festivals/staging/{FID}-build.json', encoding='utf-8'))
     geo = json.load(io.open(f'{REPO}/festivals/staging/{FID}-venues-geo.json', encoding='utf-8'))
     pub = {}

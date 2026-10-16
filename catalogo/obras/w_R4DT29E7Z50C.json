@@ -1,0 +1,42 @@
+{
+ "id": "w_R4DT29E7Z50C",
+ "titulo_original": "Yo Es Otro",
+ "anio": 2026,
+ "paises": [
+  "MX"
+ ],
+ "directores": [
+  "Jorge Daniel Carmona Colín",
+  "Luis Ángel Carmona"
+ ],
+ "aliases": [
+  {
+   "titulo": "I is another",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "en": "In the heart of a ravine far from the city, a young soccer player flees from someone stalking him. When he finds himself with no way out, he is fatally wounded, causing his consciousness to split just before he dies."
+ },
+ "generos": [
+  "Drama"
+ ],
+ "afiche": {
+  "archivo": "/assets/biff-2026/yo-es-otro.jpg",
+  "veredicto": "oficial"
+ },
+ "xref": {
+  "tmdb": 1566646,
+  "letterboxd": "i-is-another"
+ },
+ "versiones": [
+  {
+   "etiqueta": "9 min",
+   "duracion_min": 9
+  }
+ ],
+ "presentaciones": [
+  "biff-2026"
+ ]
+}

@@ -1,0 +1,20 @@
+{
+ "titulo_original": {
+  "fuente": "festival:cinemancia-2025,cinemancia-2025,popayan-2026",
+  "regla": "el título que más festivales imprimen"
+ },
+ "directores": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "TMDB 1538892; «Mária» era errata",
+  "fecha": "2026-10-14"
+ },
+ "anio": {
+  "fuente": "tmdb:1538892",
+  "regla": "tmdb-manda"
+ },
+ "paises": {
+  "fuente": "tmdb:1538892",
+  "regla": "tmdb-manda"
+ }
+}

@@ -1,0 +1,39 @@
+{
+ "id": "w_R4FFXYPD6R22",
+ "titulo_original": "El sueño de Ana",
+ "anio": 2017,
+ "paises": [
+  "CL"
+ ],
+ "directores": [
+  "José Luis Torres Leiva"
+ ],
+ "aliases": [
+  {
+   "titulo": "Ana's Dream",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "No sabemos muy bien cómo pero, de manera inesperada, ha fallecido la pareja de Ana. Así de intempestivo como el momento de su muerte, Ana tiene un sueño con y sobre su pareja, finalmente, después de tanta ausencia.",
+  "en": "Stark formal choices counterbalance profound emotions and vulnerability in this poignant lover’s goodbye."
+ },
+ "afiche": {
+  "archivo": "/assets/cinemancia/el-sueno-de-ana.jpg",
+  "veredicto": "fotograma"
+ },
+ "xref": {
+  "tmdb": 478536,
+  "letterboxd": "anas-dream"
+ },
+ "versiones": [
+  {
+   "etiqueta": "9 min",
+   "duracion_min": 9
+  }
+ ],
+ "presentaciones": [
+  "cinemancia-2026"
+ ]
+}

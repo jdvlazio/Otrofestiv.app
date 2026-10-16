@@ -1,0 +1,46 @@
+{
+ "id": "w_R4EZ7VK937KA",
+ "titulo_original": "Vampir Cuadecuc",
+ "anio": 1971,
+ "paises": [
+  "ES"
+ ],
+ "directores": [
+  "Pere Portabella"
+ ],
+ "aliases": [
+  {
+   "titulo": "Cuadecuc, Vampir",
+   "tipo": "festival"
+  }
+ ],
+ "sinopsis": {
+  "es": "Un ensayo atmosférico, que viene a ser una versión alternativa de «El conde Drácula», película dirigida por Jesús Franco en 1970; una narración fantasmal entre la ficción y la realidad.",
+  "en": "An atmospheric essay, which is an alternative version of Count Dracula, a film directed by Jess Franco in 1970; a ghostly narration between fiction and reality."
+ },
+ "generos": [
+  "Documental"
+ ],
+ "afiche": {
+  "archivo": "https://image.tmdb.org/t/p/w500/6Ktgs4F6wfphozsi0KOgZzHeKCq.jpg",
+  "veredicto": "oficial"
+ },
+ "xref": {
+  "tmdb": 126278,
+  "letterboxd": "vampir-cuadecuc"
+ },
+ "versiones": [
+  {
+   "etiqueta": "67 min",
+   "duracion_min": 67
+  },
+  {
+   "etiqueta": "70 min",
+   "duracion_min": 70
+  }
+ ],
+ "presentaciones": [
+  "cinemancia-2026",
+  "fantasmagoria-2026"
+ ]
+}

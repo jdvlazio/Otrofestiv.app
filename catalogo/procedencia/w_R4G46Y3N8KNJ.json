@@ -1,0 +1,22 @@
+{
+ "titulo_original": {
+  "fuente": "festival:fantasmagoria-2026,fantasmagoria-2026",
+  "regla": "el título que más festivales imprimen"
+ },
+ "directores": {
+  "fuente": "tmdb:1515864",
+  "regla": "tmdb-manda"
+ },
+ "anio": {
+  "fuente": "tmdb:1515864",
+  "regla": "tmdb-manda"
+ },
+ "paises": {
+  "fuente": "tmdb:1515864",
+  "regla": "tmdb-manda"
+ },
+ "generos": {
+  "fuente": "festival",
+  "regla": "todos los publicados, del más al menos frecuente"
+ }
+}

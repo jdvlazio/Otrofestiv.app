@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "ficcali.com — Programación 2026 (WP 14870) + fichas de la Selección 2026",
-  "capturado": "2026-10-10",
+  "capturado": "2026-10-15",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "radar": 1024,
@@ -224,7 +224,7 @@
    "archetype": "Cortos / Programas",
    "order": 12
   },
-  "🎶 ¡Que viva la música!": {
+  "🎶 ¡Que Viva la Música!": {
    "en": "Long Live Music!",
    "archetype": "Especiales / Eventos",
    "order": 13
@@ -461,6 +461,7 @@
     "date": "2026-10-06",
     "tarjeta": 13924
    },
+   "is_free": true,
    "lbSlug": "mu-ki-ra",
    "tmdb_id": 1446898,
    "synopsis_en": "When her brother is kidnapped by Mu-Ki-Ra, Cleo ventures into a monster-plagued jungle with unlikely allies."
@@ -643,7 +644,7 @@
    "synopsis": "Jade y Estelle, dos jóvenes francesas de veintidós años, emprendieron un viaje de tres meses por la Amazonía para conocer a mujeres indígenas de Colombia, Ecuador y Perú, y profundizar en la comprensión del ecofeminismo en los territorios. Gracias a las historias de vida de tres lideresas, el documental explora un movimiento que establece una estrecha relación entre la defensa de la naturaleza y la lucha por los derechos de las mujeres.",
    "synopsis_lang": "es",
    "poster": "/assets/ficcali-2026/ellas-gardiennes-de-l-amazonie.jpg",
-   "posterSource": "oficial",
+   "posterSource": "tmdb",
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
@@ -759,7 +760,7 @@
    "description_lang": "es"
   },
   {
-   "title": "Cortos infantiles FICCALI / Mi vecino Totoro",
+   "title": "Cortos Infantiles FICCALI / Mi Vecino Totoro",
    "type": "film",
    "section": "🏘️ Cine Sin Límites",
    "country": "Japón, Colombia",
@@ -841,6 +842,9 @@
      "synopsis_en": "A rescue with a spinning tops, feathers, eggs and friends.",
      "title_en": "The Great Feat"
     }
+   ],
+   "titulos_anteriores": [
+    "Cortos infantiles FICCALI / Mi vecino Totoro"
    ]
   },
   {
@@ -1165,6 +1169,8 @@
    "venue": "Teatro Municipal Enrique Buenaventura - Cali",
    "sala": "Teatrino",
    "has_qa": false,
+   "synopsis": "Misael trabaja solo con su hacha, talando árboles en el bosque. Una responsabilidad inesperada trastoca su vida, y la lógica de sus días se desvanece en una naturaleza donde la razón humana carece de sentido.",
+   "synopsis_lang": "es",
    "poster": "/assets/ficcali-2026/la-libertad-doble-v2.jpg",
    "posterSource": "tmdb",
    "_src": {
@@ -1175,13 +1181,7 @@
    "lbSlug": "double-freedom",
    "tmdb_id": 1387981,
    "synopsis_en": "Misael works alone with his axe, cutting down trees in the woods. An unexpected responsibility upends his life, and the logic of his days fades away in a nature where human reason holds no meaning.",
-   "title_en": "Double Freedom",
-   "synopsis": "Misael trabaja solo con su hacha, talando árboles en el bosque. Una responsabilidad inesperada trastoca su vida, y la lógica de sus días se desvanece en una naturaleza donde la razón humana carece de sentido.",
-   "synopsis_lang": "es",
-   "_conservado": [
-    "synopsis",
-    "synopsis_lang"
-   ]
+   "title_en": "Double Freedom"
   },
   {
    "title": "CHARLAS ALAPAR: Pablo Solarz. (Argentina)",
@@ -1268,7 +1268,7 @@
    "description_lang": "es"
   },
   {
-   "title": "Cali, ciudad abierta – Prog. Cortos",
+   "title": "Cali, Ciudad Abierta – Prog. Cortos",
    "type": "film",
    "section": "🏙️ Cali Ciudad Abierta",
    "country": "Colombia",
@@ -1349,7 +1349,8 @@
     }
    ],
    "titulos_anteriores": [
-    "Cali, ciudad abierta (cortos)"
+    "Cali, ciudad abierta (cortos)",
+    "Cali, ciudad abierta – Prog. Cortos"
    ]
   },
   {
@@ -1735,7 +1736,7 @@
    ]
   },
   {
-   "title": "Trópico interior: Todos los colores de la oscuridad",
+   "title": "Trópico Interior: Todos los Colores de la Oscuridad",
    "type": "film",
    "section": "📽️ Proyecciones",
    "country": "Colombia",
@@ -1871,6 +1872,9 @@
       "synopsis_lang"
      ]
     }
+   ],
+   "titulos_anteriores": [
+    "Trópico interior: Todos los colores de la oscuridad"
    ]
   },
   {
@@ -2331,7 +2335,7 @@
    ]
   },
   {
-   "title": "Plano sonoro: muestra de videoclips",
+   "title": "Plano Sonoro: Muestra de Videoclips",
    "type": "film",
    "section": "🎵 Plano Sonoro",
    "country": "Colombia, Estados Unidos",
@@ -2359,6 +2363,7 @@
      "synopsis": "En un universo mezclado entre Colombia y la mitología griega, Miguel es atacado por un cupido en sandalias y alas de tela que intenta flecharlo. En esta persecución, Miguel recibe un cáliz de aguapanela de manos de David y Manuel, deidades musicales. Cargado de energía celestial, emprende su venganza contra el amor. Pero justo cuando cree haber vencido, una última flecha lo alcanza… por más que uno corra, del amor no se escapa.",
      "synopsis_lang": "es",
      "poster": "/assets/villadelcine-2026/aguapanela.jpg",
+     "genre": "Fantasía y Comedia",
      "posterSource": "oficial"
     },
     {
@@ -2393,7 +2398,8 @@
      "synopsis": "Tras una ruptura amorosa, una mujer transita el duelo y reconstruye su mundo interior entre recuerdos, dolor, deseo y esperanza.",
      "synopsis_lang": "es",
      "poster": "/assets/ficcali-2026/despues-de-tanto-amor.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "genre": "Drama y Experimental"
     },
     {
      "title": "Infinita canción: el secreto",
@@ -2507,6 +2513,9 @@
      "poster": "/assets/ficcali-2026/arbol-en-pie.jpg",
      "posterSource": "oficial"
     }
+   ],
+   "titulos_anteriores": [
+    "Plano sonoro: muestra de videoclips"
    ]
   },
   {
@@ -2775,7 +2784,7 @@
      "synopsis": "Cuando Asofem está a punto de cerrar por una grave crisis económica, un grupo de usuarios y su monitor deciden embarcarse en una disparatada misión para salvar el centro al que consideran su hogar.",
      "synopsis_lang": "es",
      "poster": "/assets/ficcali-2026/el-bitcoin-de-oro.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "el-bitcoin-de-oro",
      "tmdb_id": 1793999
     },
@@ -2847,7 +2856,7 @@
      "synopsis": "Rafael vive encerrado en su mundo, su piso en L’Hospitalet de Llobregat. Cuando su mujer murió, hace varios años, él perdió las ganas de vivir y su espíritu guerrero. Llegó a L’Hospitalet en los años cincuenta, en la primera gran ola de inmigración. Fue un luchador por la democracia, la igualdad, la solidaridad y la justicia durante las décadas del setenta y ochenta, pero ahora, solitario, amargado y xenófobo, reniega del mundo y, en su soledad, les cobra su miseria a todos y, en especial, a los nuevos inmigrantes. Tampoco ayuda su alzhéimer, cada vez más presente.",
      "synopsis_lang": "es",
      "poster": "/assets/ficcali-2026/quinto-primera.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "quinto-primera",
      "tmdb_id": 1794005
     },
@@ -2876,7 +2885,7 @@
      "synopsis": "Catherine es una periodista sorda que está perdida en el barrio madrileño de Carabanchel. No va a llegar a tiempo a entrevistar a un importante actor estadounidense. Desesperada, le pide ayuda a la Lore, una vecina del barrio que pasaba por allí. Juntas trazan un plan para poder encontrarse con este conocido personaje.",
      "synopsis_lang": "es",
      "poster": "/assets/ficcali-2026/donde-esta-richard.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "donde-esta-richard",
      "tmdb_id": 1794009
     }
@@ -3004,7 +3013,7 @@
    "year": 2026,
    "country": "Rusia",
    "flags": "🇷🇺",
-   "duration": "135 min",
+   "duration": "140 min",
    "genre": "Drama",
    "day": "2026-10-24",
    "time": "18:00",
@@ -3023,7 +3032,8 @@
    "lbSlug": "minotaur-2026",
    "tmdb_id": 848700,
    "synopsis_en": "When Gleb, a successful company director, finds himself under siege from mounting corporate pressures, an increasingly unstable world, and the discovery of his wife's affair, the collapse of his carefully ordered life accelerates toward violence.",
-   "title_en": "Minotaur"
+   "title_en": "Minotaur",
+   "_duracion_corregida": "festival-cannes.com/en/f/minotaur (Durée 140 min); TIFF 140"
   },
   {
    "title": "El Coloso",
@@ -3116,7 +3126,7 @@
   {
    "title": "Para vivir, el implacable tiempo de Pablo Milanés",
    "type": "film",
-   "section": "🎶 ¡Que viva la música!",
+   "section": "🎶 ¡Que Viva la Música!",
    "director": "Fabien Pisani",
    "year": 2025,
    "country": "México, España, Cuba, Estados Unidos",
@@ -3335,6 +3345,132 @@
    "tmdb_id": 327176,
    "synopsis_en": "In an old and mysterious tropical mansion cohabit the supposed owner, a friar, a convalescent pilot, the Haitian servant, the mercenary guardian and the Machiche, a mature and dominant female. A young model arrives there to unleash all kinds of passions.",
    "title_en": "The Manor of Araucaima"
+  },
+  {
+   "title": "Taller Gemelos Digitales",
+   "type": "event",
+   "section": "🎓 Académico",
+   "duration": "180 min",
+   "day": "2026-10-16",
+   "time": "15:00",
+   "day_order": 0,
+   "venue": "Yawa - Cali",
+   "event_kind": "taller",
+   "is_recurring": true,
+   "has_qa": false,
+   "_src": {
+    "url": "https://www.instagram.com/p/DefUB_ksTlh/",
+    "date": "2026-10-14"
+   },
+   "is_free": true
+  },
+  {
+   "title": "Taller Gemelos Digitales",
+   "type": "event",
+   "section": "🎓 Académico",
+   "duration": "180 min",
+   "day": "2026-10-19",
+   "time": "15:00",
+   "day_order": 3,
+   "venue": "Yawa - Cali",
+   "event_kind": "taller",
+   "is_recurring": true,
+   "has_qa": false,
+   "_src": {
+    "url": "https://www.instagram.com/p/DefUB_ksTlh/",
+    "date": "2026-10-14"
+   },
+   "is_free": true
+  },
+  {
+   "title": "Taller Gemelos Digitales",
+   "type": "event",
+   "section": "🎓 Académico",
+   "duration": "180 min",
+   "day": "2026-10-20",
+   "time": "15:00",
+   "day_order": 4,
+   "venue": "Yawa - Cali",
+   "event_kind": "taller",
+   "is_recurring": true,
+   "has_qa": false,
+   "_src": {
+    "url": "https://www.instagram.com/p/DefUB_ksTlh/",
+    "date": "2026-10-14"
+   },
+   "is_free": true
+  },
+  {
+   "title": "Taller Cine Atmosférico",
+   "type": "event",
+   "section": "🎓 Académico",
+   "duration": "240 min",
+   "day": "2026-10-21",
+   "time": "14:00",
+   "day_order": 5,
+   "venue": "Yawa - Cali",
+   "event_kind": "taller",
+   "is_recurring": true,
+   "has_qa": false,
+   "_src": {
+    "url": "https://www.instagram.com/p/DefUB_ksTlh/",
+    "date": "2026-10-14"
+   },
+   "is_free": true
+  },
+  {
+   "title": "Taller Cine Atmosférico",
+   "type": "event",
+   "section": "🎓 Académico",
+   "duration": "240 min",
+   "day": "2026-10-22",
+   "time": "14:00",
+   "day_order": 6,
+   "venue": "Yawa - Cali",
+   "event_kind": "taller",
+   "is_recurring": true,
+   "has_qa": false,
+   "_src": {
+    "url": "https://www.instagram.com/p/DefUB_ksTlh/",
+    "date": "2026-10-14"
+   },
+   "is_free": true
+  },
+  {
+   "title": "Taller Cine Atmosférico",
+   "type": "event",
+   "section": "🎓 Académico",
+   "duration": "240 min",
+   "day": "2026-10-23",
+   "time": "14:00",
+   "day_order": 7,
+   "venue": "Yawa - Cali",
+   "event_kind": "taller",
+   "is_recurring": true,
+   "has_qa": false,
+   "_src": {
+    "url": "https://www.instagram.com/p/DefUB_ksTlh/",
+    "date": "2026-10-14"
+   },
+   "is_free": true
+  },
+  {
+   "title": "Cineconcierto: Metrópolis",
+   "type": "event",
+   "section": "📽️ Proyecciones",
+   "duration": "60 min",
+   "day": "2026-10-24",
+   "time": "20:00",
+   "day_order": 8,
+   "venue": "Casa Ethel - Cali",
+   "event_kind": "evento",
+   "has_qa": false,
+   "_src": {
+    "url": "https://www.instagram.com/p/Deg4GpNHCB_/",
+    "date": "2026-10-15"
+   },
+   "description": "Alemania | 120 min",
+   "description_lang": "es"
   }
  ],
  "_avisos_duracion": [
@@ -3344,7 +3480,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-10T15:46:15",
+  "fecha": "2026-10-15T17:53:05",
   "plan_sha": "3cbc8f0090f8219c",
   "paso": 8,
   "cmd": "python3 pipeline/ensamblar.py ficcali-2026"

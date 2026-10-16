@@ -1,0 +1,42 @@
+{
+ "id": "w_R4HS58X1YZ4A",
+ "titulo_original": "La infiltrada",
+ "anio": 2024,
+ "paises": [
+  "ES"
+ ],
+ "directores": [
+  "Arantxa Echevarria"
+ ],
+ "aliases": [
+  {
+   "titulo": "Undercover",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "País Vasco, España, finales de los años noventa. Una joven policía consigue infiltrarse en la despiadada banda terrorista ETA.",
+  "en": "Basque Country, Spain, late nineties. A young policewoman manages to infiltrate the ruthless terrorist gang ETA."
+ },
+ "generos": [
+  "Drama"
+ ],
+ "afiche": {
+  "archivo": "/assets/ficma/la-infiltrada.jpg",
+  "veredicto": "oficial"
+ },
+ "xref": {
+  "tmdb": 1215185,
+  "letterboxd": "undercover-2024-1"
+ },
+ "versiones": [
+  {
+   "etiqueta": "118 min",
+   "duracion_min": 118
+  }
+ ],
+ "presentaciones": [
+  "ficma-2026"
+ ]
+}

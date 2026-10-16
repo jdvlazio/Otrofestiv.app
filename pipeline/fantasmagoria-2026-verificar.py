@@ -39,7 +39,20 @@ CONTRADICCIONES = {
     ('Pura Sangre', '2026-10-20', '18:00'): 'ver la de las 18:30',
     # la base v5 (7 oct) la pasa a las 19:00 en la Sala 1; la página de largos sigue en 18:30
     ('Schichinin No Samurai (Seven Samurai)', '2026-10-16', '19:00'): 'la página de largos dice 6:30 p. m. (Sala 2); la base v5, 19:00 en la Sala 1. Se publica la base',
+    ('Carrie', '2026-10-22', '19:00'): 'la página de largos (sin cambios desde el 28 sep) dice 7:00 p. m.; la base v19 (11 oct) y las láminas de IG del mismo día (p/DeX4HHplB6z) dicen 6:30 p. m. Se publica la base',
+    ('Carrie', '2026-10-22', '18:30'): 'la página de largos (sin cambios desde el 28 sep) dice 7:00 p. m.; la base v19 (11 oct) y las láminas de IG del mismo día (p/DeX4HHplB6z) dicen 6:30 p. m. Se publica la base',
+    ('Motherwitch', '2026-10-16', '19:00'): 'la página de largos (sin cambios desde el 28 sep) dice entrada libre; la base v19 (11 oct) y las láminas de IG del mismo día (p/DeX4HHplB6z) dicen entrada con boleta. Se publica la base',
 }
+
+# lo que la base corrige por la lámina de IG (base.HORA_IG) se acepta aquí por el
+# MISMO camino: la página de largos no cambia desde el 28 sep
+import importlib.util as _ilu  # noqa: E402
+_sb = _ilu.spec_from_file_location('base', os.path.join(os.path.dirname(os.path.abspath(__file__)), 'fantasmagoria-2026-base.py'))
+_base = _ilu.module_from_spec(_sb)
+_sb.loader.exec_module(_base)
+for (_t, _d, _h), _n in _base.HORA_IG.items():
+    for _x in (_h, _n):
+        CONTRADICCIONES.setdefault((_t, _d, _x), f'la lámina de IG del 11 oct dice {_n}; la base, {_h}; la página de largos no cambia desde el 28 sep. Manda la lámina (Juan, 11 oct)')
 
 
 def plano(s):

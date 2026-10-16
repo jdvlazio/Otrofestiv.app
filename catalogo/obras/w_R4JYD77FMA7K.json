@@ -1,0 +1,40 @@
+{
+ "id": "w_R4JYD77FMA7K",
+ "titulo_original": "Cuidemos el planeta",
+ "anio": 2025,
+ "paises": [
+  "A",
+  "R"
+ ],
+ "directores": [
+  "Carolina Feity"
+ ],
+ "aliases": [
+  {
+   "titulo": "Save the Planet",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "La serie Cuidemos el planeta invita a niñas y niños a convertirse en creadores de mensajes ambientales. Mediante talleres y procesos de creación narrativa, imaginan, ilustran y narran historias sobre sostenibilidad, biodiversidad y convivencia con la naturaleza. A través de cortos animados, sus dibujos y voces hacen llegar su mensaje a audiencias masivas.",
+  "en": "The series Cuidemos el planeta invites children to become the creators of environmental messages. Through workshops and storytelling activities, they imagine, illustrate, and tell stories about sustainability, biodiversity, and living in harmony with nature. Through animated shorts, their drawings and voices convey their message to a wide audience."
+ },
+ "generos": [
+  "Animación"
+ ],
+ "afiche": {
+  "archivo": "/assets/finca/cuidemos-el-planeta.jpg",
+  "veredicto": "fotograma"
+ },
+ "xref": {},
+ "versiones": [
+  {
+   "etiqueta": "6 min",
+   "duracion_min": 6
+  }
+ ],
+ "presentaciones": [
+  "finca-2026"
+ ]
+}
