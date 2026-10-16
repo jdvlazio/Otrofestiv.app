@@ -6853,6 +6853,21 @@ try:
         _tope = 0 if _osc.path.exists(f'festivals/staging/{_fid}-afirmaciones.json') else _d9['sin_entrada'].get(_fid, 0)
         (_D9['sobre'] if _n > _tope else _D9['bajo'] if _n < _tope else []).append(f'{_fid} {_n}/{_tope}')
     _D9['n_entrada'] = sum(_d9['sin_entrada'].values())
+    # festival mixed: la falta de is_free YA NO es la señal de «paga» — tiene que
+    # decirlo (funcion.paga_supuesta, misma regla que ensamblar; 16 oct 2026)
+    _D9['mixta'] = []
+    for _p in sorted(_gc.glob('festivals/*.json')):
+        _fid = _osc.path.basename(_p)[:-5]
+        try:
+            _fs = _jc.load(open(_p, encoding='utf-8')).get('films') or []
+        except Exception:
+            continue
+        if not any(_x.get('is_free') is None and not _x.get('by_invitation') for _x in _fs):
+            continue
+        _m9 = _fn9.ticketing_model_de(_fid.replace('-', ''))
+        _k9 = sum(_fn9.paga_supuesta(_x, _m9) for _x in _fs)
+        if _k9:
+            _D9['mixta'].append(f'{_fid} ({_k9})')
     _D9['afs'] = []
     for _p in sorted(_gc.glob('festivals/staging/*-afirmaciones.json')):
         _fid = _osc.path.basename(_p)[:-len('-afirmaciones.json')]
@@ -6884,6 +6899,15 @@ else:
     ok(check, f'ninguna función nueva sin entrada ({_D9["n_entrada"]} de deuda)')
     if _D9['bajo']:
         warn(check, 'bajó la deuda en ' + ', '.join(_D9['bajo']) + ' — python3 pipeline/funcion.py --bajar-deuda')
+
+check = 'entrada-mixta'
+if 'error' in _D9:
+    fail(check, f'no pudo medirse: {_D9["error"]}')
+elif _D9['mixta']:
+    fail(check, 'festival mixed con funciones que no dicen si se pagan (la falta del dato no puede ser la señal de «paga») — '
+                're-armar o python3 pipeline/entrada-paga-supuesta.py <fid>: ' + ', '.join(_D9['mixta']))
+else:
+    ok(check, 'en todo festival mixed, cada función dice si se paga')
 
 check = 'afirmaciones-validas'
 if 'error' in _D9:

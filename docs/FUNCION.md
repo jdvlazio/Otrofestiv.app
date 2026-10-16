@@ -142,6 +142,7 @@ Todavía no existen; se escriben sin corchetes para no confundirlos con los acti
 | `[conflicto-abierto]` (activo) | No hay conflictos sin decisión. |
 | `[excepcion-en-crudo]` (activo, deuda en `pipeline/funcion-deuda.json`) | Ningún crudo tiene tablas de corrección de función. Lista de deuda que solo baja, como `[dato-que-no-viaja]`. |
 | `[entrada-explicita]` (activo, deuda por festival; 0 si está en el modelo) | Toda función publicada dice su entrada, aunque sea un supuesto marcado. |
+| `[entrada-mixta]` (activo) | En un festival `mixed`, toda función dice si se paga (`is_free` explícito, salvo invitación). La regla `funcion.paga_supuesta` escribe `is_free: false` con marca `supuesto` donde nadie dijo nada; antes la app lo deducía de la falta del dato. Bisturí para festivales que no se re-arman: `pipeline/entrada-paga-supuesta.py`. Festivales sin `ticketing_model`: todo libre, supuesto declarado aquí y no por función (16 oct 2026). |
 | `casilla-obligatoria` | Día, hora, sede, título y tipo en toda función. |
 
 ## 7. Plan

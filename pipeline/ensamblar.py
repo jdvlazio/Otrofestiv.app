@@ -677,6 +677,13 @@ def ensamblar(fid, escribir=True):
     _conservar_publicado(fid, films, sin=('duration',) if _afs is not None else ())
     _duraciones_corregidas(fid, films)
     _titulos_anteriores(fid, films)
+    # Festival mixed: la función sin dato de entrada es PAGA — explícito y
+    # marcado supuesto, no deducido por la app de la falta del dato (16 oct 2026).
+    # Después de reponer lo publicado: un is_free que la fuente dejó de decir vuelve
+    # primero, y el supuesto solo llena lo que de verdad nadie dijo
+    _n = funcion.marcar_paga_supuesta(films, funcion.ticketing_model_de(fid))
+    if _n:
+        print(f'  entrada: {_n} función(es) paga(s) por supuesto (festival mixed, sin dato)')
     # C2: la duración que siga vacía se ESTIMA al final, después de reponer lo
     # publicado y las duraciones corregidas — nunca antes
     if _afs is not None:

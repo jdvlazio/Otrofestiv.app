@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "https://mubifest.com/es/bogota",
-  "capturado": "2026-10-14",
+  "capturado": "2026-10-16",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_secciones": "El sitio no tiene secciones: tiene ETIQUETAS en cada tarjeta. Se usan tal cual; con varias, manda la más específica (Foco > Restaurada > Estreno MUBI > Función al aire libre).",
@@ -68,7 +68,7 @@
    "archetype": "Especiales / Eventos",
    "order": 1
   },
-  "🎙️ Charla en vivo": {
+  "🎙️ Charla en Vivo": {
    "en": "Live Talk",
    "archetype": "Charlas / Industria",
    "order": 2
@@ -78,12 +78,12 @@
    "archetype": "Muestra / País",
    "order": 3
   },
-  "🌙 Función al aire libre": {
+  "🌙 Función al Aire Libre": {
    "en": "Open-air Screening",
    "archetype": "Especiales / Eventos",
    "order": 4
   },
-  "🎲 Al aire libre": {
+  "🎲 Al Aire Libre": {
    "en": "Outdoors",
    "archetype": "Especiales / Eventos",
    "order": 5
@@ -117,6 +117,11 @@
    "type": "event",
    "section": "📚 MUBI Library",
    "rating": "Para mayores de 18 años",
+   "_ancla": [
+    "Gimnasio Moderno - Bogotá",
+    "2026-10-24",
+    "13:00"
+   ],
    "day": "2026-10-24",
    "time": "13:00",
    "day_order": 0,
@@ -136,9 +141,14 @@
   {
    "title": "MUBI Podcast Encuentros: Fernando Eimbcke & Franco Lolli",
    "type": "event",
-   "section": "🎙️ Charla en vivo",
+   "section": "🎙️ Charla en Vivo",
    "duration": "120 min",
    "rating": "Para mayores de 18 años",
+   "_ancla": [
+    "Gimnasio Moderno - Bogotá",
+    "2026-10-24",
+    "14:00"
+   ],
    "day": "2026-10-24",
    "time": "14:00",
    "day_order": 0,
@@ -166,6 +176,11 @@
    "duration": "90 min",
    "genre": "Documental",
    "rating": "Para mayores de 18 años",
+   "_ancla": [
+    "Gimnasio Moderno - Bogotá",
+    "2026-10-24",
+    "14:00"
+   ],
    "day": "2026-10-24",
    "time": "14:00",
    "day_order": 0,
@@ -198,6 +213,11 @@
    "duration": "94 min",
    "genre": "Drama",
    "rating": "Para mayores de 18 años",
+   "_ancla": [
+    "Gimnasio Moderno - Bogotá",
+    "2026-10-24",
+    "14:30"
+   ],
    "day": "2026-10-24",
    "time": "14:30",
    "day_order": 0,
@@ -217,12 +237,20 @@
    "premiere": "Premiere en Colombia",
    "lbSlug": "rose-2026",
    "tmdb_id": 1176962,
-   "synopsis_en": "In the early 17th century, a soldier arrives at an isolated Protestant village in Germany claiming to be the heir to an abandoned farmstead. Even though he proves to be a good man, the villagers’ suspicions about his identity grow and they force a reckoning."
+   "synopsis_en": "In the early 17th century, a soldier arrives at an isolated Protestant village in Germany claiming to be the heir to an abandoned farmstead. Even though he proves to be a good man, the villagers’ suspicions about his identity grow and they force a reckoning.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Las aventuras de Priscilla, reina del desierto",
    "type": "film",
-   "section": "🌙 Función al aire libre",
+   "section": "🌙 Función al Aire Libre",
    "director": "Stephan Elliott",
    "year": 1994,
    "country": "Australia, United States of America",
@@ -230,6 +258,11 @@
    "duration": "103 min",
    "genre": "Drama",
    "rating": "Para mayores de 18 años",
+   "_ancla": [
+    "Gimnasio Moderno - Bogotá",
+    "2026-10-24",
+    "16:30"
+   ],
    "day": "2026-10-24",
    "time": "16:30",
    "day_order": 0,
@@ -262,6 +295,11 @@
    "duration": "102 min",
    "genre": "Drama",
    "rating": "Para mayores de 18 años",
+   "_ancla": [
+    "Gimnasio Moderno - Bogotá",
+    "2026-10-24",
+    "17:00"
+   ],
    "day": "2026-10-24",
    "time": "17:00",
    "day_order": 0,
@@ -281,14 +319,27 @@
    "lbSlug": "flies-2026",
    "tmdb_id": 1437703,
    "synopsis_en": "Olga lives a strictly regulated life without attachments in a vast apartment block. When out of financial necessity she rents a room in her apartment to a man who also sneaks-in his nine-year-old son, an unlikely bond forms. Her carefully controlled world begins to shift, and their lives become intertwined against her will.",
-   "title_en": "Flies"
+   "title_en": "Flies",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Desafío sorpresa con Lesley Wolf",
    "type": "event",
-   "section": "🎲 Al aire libre",
+   "section": "🎲 Al Aire Libre",
    "duration": "60 min",
    "rating": "Para mayores de 18 años",
+   "_ancla": [
+    "Gimnasio Moderno - Bogotá",
+    "2026-10-24",
+    "18:30"
+   ],
    "day": "2026-10-24",
    "time": "18:30",
    "day_order": 0,
@@ -317,6 +368,11 @@
    "duration": "112 min",
    "genre": "Comedia",
    "rating": "Para mayores de 18 años",
+   "_ancla": [
+    "Gimnasio Moderno - Bogotá",
+    "2026-10-24",
+    "20:00"
+   ],
    "day": "2026-10-24",
    "time": "20:00",
    "day_order": 0,
@@ -349,6 +405,11 @@
    "duration": "82 min",
    "genre": "Drama",
    "rating": "Para mayores de 18 años",
+   "_ancla": [
+    "Gimnasio Moderno - Bogotá",
+    "2026-10-24",
+    "20:30"
+   ],
    "day": "2026-10-24",
    "time": "20:30",
    "day_order": 0,
@@ -368,12 +429,20 @@
    "lbSlug": "fatherland-2026",
    "tmdb_id": 1437696,
    "synopsis_en": "In 1949, German writer Thomas Mann and his daughter Erika embark on a road trip across a Germany in ruins, from US-dominated Frankfurt to Soviet-controlled Weimar.",
-   "title_en": "Fatherland"
+   "title_en": "Fatherland",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "La niña santa",
    "type": "film",
-   "section": "🌙 Función al aire libre",
+   "section": "🌙 Función al Aire Libre",
    "director": "Lucrecia Martel",
    "year": 2004,
    "country": "Argentina, Italy, Netherlands, Spain",
@@ -381,6 +450,11 @@
    "duration": "100 min",
    "genre": "Drama",
    "rating": "Para mayores de 18 años",
+   "_ancla": [
+    "Gimnasio Moderno - Bogotá",
+    "2026-10-25",
+    "13:30"
+   ],
    "day": "2026-10-25",
    "time": "13:30",
    "day_order": 1,
@@ -405,9 +479,14 @@
   {
    "title": "Camp en el cine: entre el exceso y el artificio",
    "type": "event",
-   "section": "🎙️ Charla en vivo",
+   "section": "🎙️ Charla en Vivo",
    "duration": "130 min",
    "rating": "Para mayores de 18 años",
+   "_ancla": [
+    "Gimnasio Moderno - Bogotá",
+    "2026-10-25",
+    "14:30"
+   ],
    "day": "2026-10-25",
    "time": "14:30",
    "day_order": 1,
@@ -425,7 +504,7 @@
    "description_lang": "es"
   },
   {
-   "title": "Voilà Varda: cortometrajes de Agnès Varda",
+   "title": "Voilà Varda: Cortometrajes de Agnès Varda",
    "type": "film",
    "section": "🔎 Foco",
    "director": "Agnès Varda",
@@ -433,6 +512,11 @@
    "flags": "🇫🇷🇨🇺",
    "duration": "85 min",
    "rating": "Para mayores de 18 años",
+   "_ancla": [
+    "Gimnasio Moderno - Bogotá",
+    "2026-10-25",
+    "15:00"
+   ],
    "day": "2026-10-25",
    "time": "15:00",
    "day_order": 1,
@@ -513,12 +597,23 @@
     }
    ],
    "description": "«En mis películas siempre quise hacer que la gente mirara en profundidad». —Agnès Varda",
-   "description_lang": "es"
+   "description_lang": "es",
+   "titulos_anteriores": [
+    "Voilà Varda: cortometrajes de Agnès Varda"
+   ],
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "La cosa",
    "type": "film",
-   "section": "🌙 Función al aire libre",
+   "section": "🌙 Función al Aire Libre",
    "director": "John Carpenter",
    "year": 1982,
    "country": "United States of America",
@@ -526,6 +621,11 @@
    "duration": "109 min",
    "genre": "Terror",
    "rating": "Para mayores de 18 años",
+   "_ancla": [
+    "Gimnasio Moderno - Bogotá",
+    "2026-10-25",
+    "16:00"
+   ],
    "day": "2026-10-25",
    "time": "16:00",
    "day_order": 1,
@@ -558,6 +658,11 @@
    "duration": "62 min",
    "genre": "Drama",
    "rating": "Para mayores de 18 años",
+   "_ancla": [
+    "Gimnasio Moderno - Bogotá",
+    "2026-10-25",
+    "17:30"
+   ],
    "day": "2026-10-25",
    "time": "17:30",
    "day_order": 1,
@@ -577,12 +682,20 @@
    "lbSlug": "the-wage",
    "tmdb_id": 1363770,
    "synopsis_en": "In the Colombian-Venezuelan Andes, a peasant works the land under exploitative conditions to ensure the survival of his family. His son is ill, his wife is pregnant, and he himself reproduces the violence that surrounds him. With no money for medical treatment, one night he gets drunk and is arrested. In jail, in a burst of fury, he rebels against the town's political boss in the only way he can.  La Paga was a pioneering work of social and political cinema in Latin America, released the same year as Barravento, Glauber Rocha’s debut feature, and anticipating movements such as Third Cinema. Influenced by Italian Neorealism and Soviet cinema in its aesthetics, forms, and ideological approach, the film uses the archetypal representation of characters and the social and economic forces they embody. Based on the director’s childhood observations in his hometown, La Paga denounces the exploitation of the rural peasantry.",
-   "title_en": "The Wage"
+   "title_en": "The Wage",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Thelma & Louise",
    "type": "film",
-   "section": "🌙 Función al aire libre",
+   "section": "🌙 Función al Aire Libre",
    "director": "Ridley Scott",
    "year": 1991,
    "country": "United Kingdom, United States of America, France",
@@ -590,6 +703,11 @@
    "duration": "130 min",
    "genre": "Drama",
    "rating": "Para mayores de 18 años",
+   "_ancla": [
+    "Gimnasio Moderno - Bogotá",
+    "2026-10-25",
+    "18:30"
+   ],
    "day": "2026-10-25",
    "time": "18:30",
    "day_order": 1,
@@ -621,6 +739,11 @@
    "duration": "120 min",
    "genre": "Drama",
    "rating": "Para mayores de 18 años",
+   "_ancla": [
+    "Gimnasio Moderno - Bogotá",
+    "2026-10-25",
+    "19:45"
+   ],
    "day": "2026-10-25",
    "time": "19:45",
    "day_order": 1,
@@ -640,12 +763,20 @@
    "title_en": "Coward",
    "lbSlug": "coward-2026",
    "tmdb_id": 1437981,
-   "synopsis_en": "Pierre, a young Belgian soldier, wants to prove himself on the battlefield during the First World War. Behind the frontlines, he meets Francis, who is asked to find a way to boost morale."
+   "synopsis_en": "Pierre, a young Belgian soldier, wants to prove himself on the battlefield during the First World War. Behind the frontlines, he meets Francis, who is asked to find a way to boost morale.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   }
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-14T10:15:23",
+  "fecha": "2026-10-16T11:02:41",
   "plan_sha": "d7f550dc832ae067",
   "paso": 5,
   "cmd": "python3 pipeline/ensamblar.py mubibogota-2026"

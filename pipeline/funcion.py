@@ -563,6 +563,25 @@ def comparar_deuda(hoy, deuda):
     return [x for x in h if x not in d], [x for x in d if x not in h]
 
 
+def paga_supuesta(f, modelo):
+    """Festival `mixed`: la función que no dice cómo se entra se PAGA. La app ya
+    lo deducía de la falta del dato; esto lo vuelve explícito y marcado. Con
+    invitación no hay nada que vender. Dueña única de la regla."""
+    return modelo == 'mixed' and f.get('is_free') not in (True, False) and not f.get('by_invitation')
+
+
+def marcar_paga_supuesta(films, modelo):
+    """Escribe is_free: false + marca supuesto donde paga_supuesta. → cuántas."""
+    n = 0
+    for f in films:
+        if paga_supuesta(f, modelo):
+            f['is_free'] = False
+            f.setdefault('_procedencia', {})['entrada'] = {
+                'tipo': 'regla', 'regla': 'mixed: sin dato de entrada = boleta', 'marca': 'supuesto'}
+            n += 1
+    return n
+
+
 def sin_entrada(festival):
     """Títulos de las funciones publicadas que no dicen cómo se entra. La
     inscripción no es una entrada (C8)."""
