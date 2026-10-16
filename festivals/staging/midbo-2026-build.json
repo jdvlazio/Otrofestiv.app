@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "midbo.co — ficha de cada obra (bloque «Funciones») + API pelicula/seccion",
-  "capturado": "2026-10-15",
+  "capturado": "2026-10-16",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_secciones": "Las categorías madre de la taxonomía `seccion` de midbo.co, tal cual; «Encuentro Pensar lo Real» es el nombre del menú del seminario; «Proyecciones» (nuestra) para la única obra sin sección.",
@@ -365,6 +365,11 @@
    "flags": "🇫🇷",
    "duration": "168 min",
    "genre": "Documental",
+   "_ancla": [
+    "Alianza Francesa - Bogotá",
+    "2026-10-27",
+    "16:00"
+   ],
    "day": "2026-10-27",
    "time": "16:00",
    "day_order": 0,
@@ -392,6 +397,11 @@
    "country": "Colombia",
    "flags": "🇨🇴",
    "duration": "57 min",
+   "_ancla": [
+    "Alianza Francesa - Bogotá",
+    "2026-10-28",
+    "16:00"
+   ],
    "day": "2026-10-28",
    "time": "16:00",
    "day_order": 1,
@@ -448,6 +458,11 @@
    "flags": "🇨🇴",
    "duration": "33 min",
    "genre": "Documental",
+   "_ancla": [
+    "Alianza Francesa - Bogotá",
+    "2026-10-28",
+    "16:00"
+   ],
    "day": "2026-10-28",
    "time": "16:00",
    "day_order": 1,
@@ -478,6 +493,11 @@
    "flags": "🇨🇴",
    "duration": "92 min",
    "genre": "Documental",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-28",
+    "19:00"
+   ],
    "day": "2026-10-28",
    "time": "19:00",
    "day_order": 1,
@@ -508,6 +528,11 @@
    "country": "Colombia",
    "flags": "🇨🇴",
    "duration": "61 min",
+   "_ancla": [
+    "Centro Cultural Gabriel García Márquez - Bogotá",
+    "2026-10-29",
+    "09:00"
+   ],
    "day": "2026-10-29",
    "time": "09:00",
    "day_order": 2,
@@ -537,6 +562,11 @@
    "flags": "🇫🇷🇧🇪",
    "duration": "115 min",
    "genre": "Documental",
+   "_ancla": [
+    "Universidad Nacional de Colombia - Bogotá",
+    "2026-10-29",
+    "11:00"
+   ],
    "day": "2026-10-29",
    "time": "11:00",
    "day_order": 2,
@@ -570,6 +600,11 @@
    "flags": "🇨🇴",
    "duration": "79 min",
    "genre": "Documental",
+   "_ancla": [
+    "Centro Ático, Universidad Javeriana - Bogotá",
+    "2026-10-29",
+    "11:00"
+   ],
    "day": "2026-10-29",
    "time": "11:00",
    "day_order": 2,
@@ -598,6 +633,11 @@
    "flags": "🇵🇦🇨🇴",
    "duration": "103 min",
    "genre": "Documental",
+   "_ancla": [
+    "Universidad Central - Bogotá",
+    "2026-10-29",
+    "14:00"
+   ],
    "day": "2026-10-29",
    "time": "14:00",
    "day_order": 2,
@@ -630,6 +670,11 @@
    "flags": "🇫🇷",
    "duration": "90 min",
    "genre": "Documental",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-29",
+    "14:00"
+   ],
    "day": "2026-10-29",
    "time": "14:00",
    "day_order": 2,
@@ -647,7 +692,15 @@
    "ticket_url": "https://tuboleta.com/es/eventos/writing-life-annie-ernaux-through-eyes-high-school",
    "lbSlug": "writing-life-annie-ernaux-through-the-eyes",
    "tmdb_id": 1518673,
-   "synopsis_en": "A major figure in contemporary feminism and the first Frenchwoman to win the Nobel Prize for Literature, Annie Ernaux is seen by many as a source of individual and collective emancipation, blending the intimate with the universal. Filmmaker Claire Simon has devoted an original portrait to her, giving students and teachers a voice."
+   "synopsis_en": "A major figure in contemporary feminism and the first Frenchwoman to win the Nobel Prize for Literature, Annie Ernaux is seen by many as a source of individual and collective emancipation, blending the intimate with the universal. Filmmaker Claire Simon has devoted an original portrait to her, giving students and teachers a voice.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Instrucciones para cuando no esté",
@@ -657,6 +710,11 @@
    "country": "Colombia",
    "flags": "🇨🇴",
    "duration": "63 min",
+   "_ancla": [
+    "Servicio Forjar Restaurativo Arborizadora Baja - Bogotá",
+    "2026-10-29",
+    "14:00"
+   ],
    "day": "2026-10-29",
    "time": "14:00",
    "day_order": 2,
@@ -685,6 +743,11 @@
    "flags": "🇵🇹🇧🇷",
    "duration": "66 min",
    "genre": "Documental",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-29",
+    "14:30"
+   ],
    "day": "2026-10-29",
    "time": "14:30",
    "day_order": 2,
@@ -703,7 +766,15 @@
    "premiere": "Estreno en Colombia",
    "lbSlug": "fordlandia-panacea",
    "tmdb_id": 1559606,
-   "synopsis_en": "In 1928, industrialist Henry Ford built a company town in the Brazilian jungle and established a rubber plantation. Within a few years his industrial utopia collapsed, coming to an end in 1945. Fordlândia was largely abandoned and became known as a ghost town."
+   "synopsis_en": "In 1928, industrialist Henry Ford built a company town in the Brazilian jungle and established a rubber plantation. Within a few years his industrial utopia collapsed, coming to an end in 1945. Fordlândia was largely abandoned and became known as a ghost town.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Cuando cierro los ojos",
@@ -715,6 +786,11 @@
    "flags": "🇲🇽",
    "duration": "63 min",
    "genre": "Documental",
+   "_ancla": [
+    "Alianza Francesa - Bogotá",
+    "2026-10-29",
+    "16:00"
+   ],
    "day": "2026-10-29",
    "time": "16:00",
    "day_order": 2,
@@ -744,6 +820,11 @@
    "flags": "🇵🇪🇲🇽",
    "duration": "83 min",
    "genre": "Documental",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-29",
+    "16:00"
+   ],
    "day": "2026-10-29",
    "time": "16:00",
    "day_order": 2,
@@ -765,7 +846,15 @@
    "tmdb_id": 1517473,
    "synopsis_en": "Fifty years ago, the struggle for the lands in rural communities of Cuzco was filmed. A group of filmmakers brought these images back to the province of Paucartambo (Cuzco) and proposed to the villagers of the area to build a community memory through the creation of a new film.",
    "title_en": "Good Morning, Wiraqocha",
-   "_programa_original": "Programa 6: Restitución de archivos para una memoria política latinoamericana"
+   "_programa_original": "Programa 6: Restitución de archivos para una memoria política latinoamericana",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Latidos",
@@ -775,6 +864,11 @@
    "country": "España",
    "flags": "🇪🇸",
    "duration": "54 min",
+   "_ancla": [
+    "Centro de Memoria, Paz y Reconciliación - Bogotá",
+    "2026-10-29",
+    "16:00"
+   ],
    "day": "2026-10-29",
    "time": "16:00",
    "day_order": 2,
@@ -805,6 +899,11 @@
    "flags": "🇲🇽",
    "duration": "84 min",
    "genre": "Documental",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-29",
+    "17:00"
+   ],
    "day": "2026-10-29",
    "time": "17:00",
    "day_order": 2,
@@ -824,7 +923,15 @@
    "lbSlug": "our-body-is-an-expanding-star",
    "tmdb_id": 1567796,
    "synopsis_en": "Two siblings, their queer bodies and the deep bond they share. They read the brown skin they once wished they didn’t have as a landscape. Associatively, with extreme close-ups, animations, projections or razor-sharp nature photography, pores become desert landscapes, skin cells become salt flats.",
-   "title_en": "Our Body Is an Expanding Star"
+   "title_en": "Our Body Is an Expanding Star",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Programa 3: Creadoras de Vida — Bodega Insurgesta",
@@ -833,6 +940,11 @@
    "country": "Colombia, Francia, Austria",
    "flags": "🇨🇴🇫🇷🇦🇹",
    "duration": "76 min",
+   "_ancla": [
+    "Bodega Insurgesta - Bogotá",
+    "2026-10-29",
+    "17:00"
+   ],
    "day": "2026-10-29",
    "time": "17:00",
    "day_order": 2,
@@ -919,6 +1031,11 @@
    "country": "Honduras, Portugal, Hungría, Bélgica, Ecuador",
    "flags": "🇭🇳🇵🇹🇭🇺🇧🇪🇪🇨",
    "duration": "96 min",
+   "_ancla": [
+    "Centro de Memoria, Paz y Reconciliación - Bogotá",
+    "2026-10-29",
+    "17:30"
+   ],
    "day": "2026-10-29",
    "time": "17:30",
    "day_order": 2,
@@ -978,6 +1095,11 @@
    "flags": "🇨🇲🇪🇸",
    "duration": "60 min",
    "genre": "Documental",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-29",
+    "19:00"
+   ],
    "day": "2026-10-29",
    "time": "19:00",
    "day_order": 2,
@@ -996,7 +1118,15 @@
    "premiere": "Estreno en Bogotá",
    "lbSlug": "the-travelers-2025",
    "tmdb_id": 1463516,
-   "synopsis_en": "On the border between Morocco and Spain, a group of travelers is eagerly waiting to cross over to Europe."
+   "synopsis_en": "On the border between Morocco and Spain, a group of travelers is eagerly waiting to cross over to Europe.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Programa 1: Pasaje entre Mundos: Duelo y Memoria",
@@ -1005,6 +1135,11 @@
    "country": "Colombia, Canadá",
    "flags": "🇨🇴🇨🇦",
    "duration": "90 min",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-29",
+    "19:30"
+   ],
    "day": "2026-10-29",
    "time": "19:30",
    "day_order": 2,
@@ -1118,7 +1253,15 @@
    ],
    "titulos_anteriores": [
     "Programa 1: Pasaje entre mundos: duelo y memoria"
-   ]
+   ],
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Las almas ni los ojos",
@@ -1130,6 +1273,11 @@
    "flags": "🇨🇴",
    "duration": "75 min",
    "genre": "Drama",
+   "_ancla": [
+    "Universidad Nacional de Colombia - Bogotá",
+    "2026-10-30",
+    "10:00"
+   ],
    "day": "2026-10-30",
    "time": "10:00",
    "day_order": 3,
@@ -1160,6 +1308,11 @@
    "flags": "🇲🇽🇫🇷",
    "duration": "115 min",
    "genre": "Documental",
+   "_ancla": [
+    "Universidad Central - Bogotá",
+    "2026-10-30",
+    "14:00"
+   ],
    "day": "2026-10-30",
    "time": "14:00",
    "day_order": 3,
@@ -1180,7 +1333,15 @@
    "lbSlug": "a-bigger-place",
    "tmdb_id": 1338573,
    "synopsis_en": "Chiapas, southeastern Mexico. When the inhabitants of several villages and towns expel the mayor and the police from their territory, they face the challenge of self-government.",
-   "title_en": "A Bigger Place"
+   "title_en": "A Bigger Place",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Bosque arriba en la montaña",
@@ -1192,6 +1353,11 @@
    "flags": "🇦🇷",
    "duration": "91 min",
    "genre": "Documental",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-30",
+    "14:00"
+   ],
    "day": "2026-10-30",
    "time": "14:00",
    "day_order": 3,
@@ -1211,7 +1377,15 @@
    "lbSlug": "forest-up-in-the-mountain",
    "tmdb_id": 1616844,
    "synopsis_en": "In 2017, young Mapuche Rafael Nahuel was killed by police in the Patagonian forest. Site visits, court proceedings – the film unites the elements involved in solving the crime. Meticulously observed: the struggle for civil rights and narrating history.",
-   "title_en": "Forest up in the Mountain"
+   "title_en": "Forest up in the Mountain",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Hombres perdidos",
@@ -1223,6 +1397,11 @@
    "flags": "🇨🇷🇬🇹",
    "duration": "84 min",
    "genre": "Documental",
+   "_ancla": [
+    "Universidad Nacional de Colombia - Bogotá",
+    "2026-10-30",
+    "14:00"
+   ],
    "day": "2026-10-30",
    "time": "14:00",
    "day_order": 3,
@@ -1253,6 +1432,11 @@
    "flags": "🇨🇺",
    "duration": "79 min",
    "genre": "Drama",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-30",
+    "15:00"
+   ],
    "day": "2026-10-30",
    "time": "15:00",
    "day_order": 3,
@@ -1273,7 +1457,15 @@
    "synopsis_en": "In Miraflores, Cuba, the growing romance between Mario, a factory worker, and Yolanda, a schoolteacher, throws into relief the differences in their perspectives and values in Revolutionary Cuba.",
    "title_en": "One Way or Another",
    "year": 1977,
-   "_programa_original": "De cierta manera"
+   "_programa_original": "De cierta manera",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Cartas a mis padres muertos",
@@ -1285,6 +1477,11 @@
    "flags": "🇨🇱",
    "duration": "106 min",
    "genre": "Documental",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-30",
+    "16:00"
+   ],
    "day": "2026-10-30",
    "time": "16:00",
    "day_order": 3,
@@ -1305,7 +1502,15 @@
    "lbSlug": "letters-to-my-dead-parents",
    "tmdb_id": 1493026,
    "synopsis_en": "What do you tell your dead parents? Combining family archives and glimpses of today, the filmmaker weaves together fifty years of his life and the socio-political history of Chile. The montage wanders through the ages, between light and shadow, without ever leaving the joy.",
-   "title_en": "Letters to My Dead Parents"
+   "title_en": "Letters to My Dead Parents",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Programa 1: Materias Insumisas",
@@ -1314,6 +1519,11 @@
    "country": "Brasil, Argentina, Colombia, Portugal, Bolivia",
    "flags": "🇧🇷🇦🇷🇨🇴🇵🇹🇧🇴",
    "duration": "71 min",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-30",
+    "17:30"
+   ],
    "day": "2026-10-30",
    "time": "17:30",
    "day_order": 3,
@@ -1388,7 +1598,15 @@
    ],
    "titulos_anteriores": [
     "Programa 1: Materias insumisas"
-   ]
+   ],
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Muchedumbre",
@@ -1399,6 +1617,11 @@
    "country": "Colombia",
    "flags": "🇨🇴",
    "duration": "73 min",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-30",
+    "19:00"
+   ],
    "day": "2026-10-30",
    "time": "19:00",
    "day_order": 3,
@@ -1419,7 +1642,15 @@
    "lbSlug": "the-crowd-2026",
    "tmdb_id": 1708574,
    "synopsis_en": "A filmmaker accidentally comes across a ruined village where silent souls refuse to revive the past. The remnants of a film shot years earlier constitute the only clue to understanding what once happened there.",
-   "title_en": "The Crowd"
+   "title_en": "The Crowd",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Colors of White Rock",
@@ -1431,6 +1662,11 @@
    "flags": "🇫🇷🇲🇳",
    "duration": "81 min",
    "genre": "Documental",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-30",
+    "20:00"
+   ],
    "day": "2026-10-30",
    "time": "20:00",
    "day_order": 3,
@@ -1449,7 +1685,15 @@
    "premiere": "Estreno en Latinoamérica",
    "lbSlug": "colors-of-white-rock",
    "tmdb_id": 874510,
-   "synopsis_en": "Ever since its shift toward liberalism after the Cold War, Mongolia has opened up its mines in the Gobi desert for exploitation – resulting in an onslaught of truck convoys transporting Mongolian coal to China. Within this arduous, predominantly-male line of work, Maikhuu – a former taxi driver and hairdresser —– stands alone as one of the only female truck drivers working the mining boom."
+   "synopsis_en": "Ever since its shift toward liberalism after the Cold War, Mongolia has opened up its mines in the Gobi desert for exploitation – resulting in an onslaught of truck convoys transporting Mongolian coal to China. Within this arduous, predominantly-male line of work, Maikhuu – a former taxi driver and hairdresser —– stands alone as one of the only female truck drivers working the mining boom.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Revolutionaries Never Die",
@@ -1461,6 +1705,11 @@
    "flags": "🇵🇸🇧🇪🇶🇦",
    "duration": "80 min",
    "genre": "Documental",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-31",
+    "14:00"
+   ],
    "day": "2026-10-31",
    "time": "14:00",
    "day_order": 4,
@@ -1479,7 +1728,15 @@
    "premiere": "Estreno en Latinoamérica",
    "lbSlug": "revolutionaries-never-die",
    "tmdb_id": 1729657,
-   "synopsis_en": "Seeking to decode a final, unanswered invitation, a filmmaker explores why the renowned Lebanese director Jocelyne Saab reached out for a collaboration just two months before her passing."
+   "synopsis_en": "Seeking to decode a final, unanswered invitation, a filmmaker explores why the renowned Lebanese director Jocelyne Saab reached out for a collaboration just two months before her passing.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Un lugar más grande",
@@ -1491,6 +1748,11 @@
    "flags": "🇲🇽🇫🇷",
    "duration": "115 min",
    "genre": "Documental",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-31",
+    "14:30"
+   ],
    "day": "2026-10-31",
    "time": "14:30",
    "day_order": 4,
@@ -1510,7 +1772,15 @@
    "lbSlug": "a-bigger-place",
    "tmdb_id": 1338573,
    "synopsis_en": "Chiapas, southeastern Mexico. When the inhabitants of several villages and towns expel the mayor and the police from their territory, they face the challenge of self-government.",
-   "title_en": "A Bigger Place"
+   "title_en": "A Bigger Place",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Cien niños esperando un tren",
@@ -1522,6 +1792,11 @@
    "flags": "🇨🇱",
    "duration": "56 min",
    "genre": "Documental",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-31",
+    "16:30"
+   ],
    "day": "2026-10-31",
    "time": "16:30",
    "day_order": 4,
@@ -1540,7 +1815,15 @@
    "lbSlug": "one-hundred-children-waiting-for-a-train",
    "tmdb_id": 130269,
    "synopsis_en": "Tells the story of a group of Chilean children who discover a larger reality and a different world through the cinema. Each Saturday, Alicia Vega transforms the chapel of Lo Hermida into a film screening room as she conducts a workshop for children under the auspices of the Catholic church. The hundred or so children involved had never seen a movie, and in the workshop they see and learn about the cinema: photograms and moving images, projection, camera angles and movement, film genres, and much more. And they watch movies: Chaplin, Disney, Lamorisse's 'The Red Balloon,' the Lumieres' 'The Arrival of the Train to the Station.' Finally, each child designs his own film with drawings. And then, for the first time in most of their lives, the children got to the movies in downtown Santiago.",
-   "title_en": "One Hundred Children Waiting for a Train"
+   "title_en": "One Hundred Children Waiting for a Train",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Alea Jacarandas",
@@ -1552,6 +1835,11 @@
    "flags": "🇩🇿🇫🇷",
    "duration": "78 min",
    "genre": "Documental",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-31",
+    "17:30"
+   ],
    "day": "2026-10-31",
    "time": "17:30",
    "day_order": 4,
@@ -1570,7 +1858,15 @@
    "premiere": "Estreno en Latinoamérica",
    "lbSlug": "alea-jacarandas",
    "tmdb_id": 1658120,
-   "synopsis_en": "In the streets of Algiers, jacaranda trees bloom like shards of memory. Following in the footsteps of his father, Ameziane, a writer haunted by these purple trees, Hassen Ferhani explores the city, legacy and love. A rich and intimate quest in which writing, filming or choosing beauty become acts of resistance."
+   "synopsis_en": "In the streets of Algiers, jacaranda trees bloom like shards of memory. Following in the footsteps of his father, Ameziane, a writer haunted by these purple trees, Hassen Ferhani explores the city, legacy and love. A rich and intimate quest in which writing, filming or choosing beauty become acts of resistance.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Programa 1: Desatender el Mandato",
@@ -1579,6 +1875,11 @@
    "country": "Colombia, Países Bajos, Francia",
    "flags": "🇨🇴🇳🇱🇫🇷",
    "duration": "82 min",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-31",
+    "19:30"
+   ],
    "day": "2026-10-31",
    "time": "19:30",
    "day_order": 4,
@@ -1645,7 +1946,15 @@
    ],
    "titulos_anteriores": [
     "Programa 1: Desatender el mandato"
-   ]
+   ],
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "The Red Moon Eclipse",
@@ -1657,6 +1966,11 @@
    "flags": "🇧🇪",
    "duration": "77 min",
    "genre": "Documental",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-31",
+    "20:00"
+   ],
    "day": "2026-10-31",
    "time": "20:00",
    "day_order": 4,
@@ -1675,7 +1989,15 @@
    "premiere": "Estreno en Latinoamérica",
    "lbSlug": "leclipse-de-la-lune-rouge",
    "tmdb_id": 1559700,
-   "synopsis_en": "Caroline's mother has cancer, she herself has just become pregnant. In the short time that remains she tries to understand the past in tender images."
+   "synopsis_en": "Caroline's mother has cancer, she herself has just become pregnant. In the short time that remains she tries to understand the past in tender images.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Como me da la gana",
@@ -1687,6 +2009,11 @@
    "flags": "🇨🇱",
    "duration": "30 min",
    "genre": "Documental",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-11-01",
+    "14:00"
+   ],
    "day": "2026-11-01",
    "time": "14:00",
    "day_order": 5,
@@ -1704,7 +2031,15 @@
    "lbSlug": "the-way-i-like-it",
    "tmdb_id": 387705,
    "synopsis_en": "Agüero interrupts the filming of 5 films that are being made in Chile in 1984, to ask each director the meaning in their work, at a time when making films in Chile was almost prohibited.",
-   "title_en": "The Way I Like It"
+   "title_en": "The Way I Like It",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Programa 2: Geografías en Resistencia",
@@ -1713,6 +2048,11 @@
    "country": "Colombia, Cuba",
    "flags": "🇨🇴🇨🇺",
    "duration": "91 min",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-11-01",
+    "14:30"
+   ],
    "day": "2026-11-01",
    "time": "14:30",
    "day_order": 5,
@@ -1803,7 +2143,15 @@
    ],
    "titulos_anteriores": [
     "Programa 2: Geografías en resistencia"
-   ]
+   ],
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Programa 5: Gestos de Expresión sobre Violencias Basadas en Género",
@@ -1812,6 +2160,11 @@
    "country": "México, Guatemala, Estados Unidos",
    "flags": "🇲🇽🇬🇹🇺🇸",
    "duration": "107 min",
+   "_ancla": [
+    "Potocine - Bogotá",
+    "2026-11-01",
+    "15:00"
+   ],
    "day": "2026-11-01",
    "time": "15:00",
    "day_order": 5,
@@ -1868,6 +2221,11 @@
    "country": "Canada, Haití, Cuba, Colombia",
    "flags": "🇨🇦🇭🇹🇨🇺🇨🇴",
    "duration": "60 min",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-11-01",
+    "16:00"
+   ],
    "day": "2026-11-01",
    "time": "16:00",
    "day_order": 5,
@@ -1930,7 +2288,15 @@
    ],
    "titulos_anteriores": [
     "Programa 3: Nacer de nuevo, escuchar la vida"
-   ]
+   ],
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Cortometrajes Restaurados",
@@ -1939,6 +2305,11 @@
    "country": "Cuba",
    "flags": "🇨🇺",
    "duration": "86 min",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-11-01",
+    "17:00"
+   ],
    "day": "2026-11-01",
    "time": "17:00",
    "day_order": 5,
@@ -2022,7 +2393,15 @@
    ],
    "titulos_anteriores": [
     "Cortometrajes restaurados"
-   ]
+   ],
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Bojayá: la verdad desde adentro",
@@ -2032,6 +2411,11 @@
    "country": "Colombia",
    "flags": "🇨🇴",
    "duration": "106 min",
+   "_ancla": [
+    "Canterbury Café - Bogotá",
+    "2026-11-01",
+    "17:00"
+   ],
    "day": "2026-11-01",
    "time": "17:00",
    "day_order": 5,
@@ -2062,6 +2446,11 @@
    "flags": "🇨🇷🇬🇹",
    "duration": "84 min",
    "genre": "Documental",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-11-01",
+    "17:00"
+   ],
    "day": "2026-11-01",
    "time": "17:00",
    "day_order": 5,
@@ -2080,7 +2469,15 @@
    "lbSlug": "lost-men",
    "tmdb_id": 1405578,
    "synopsis_en": "My grandfather, married for 57 years in Costa Rica, died in a fire in 2019. My father revealed to me that, like myself, my grandfather was gay. After this revelation, together we revisit my grandfather's life, seeking to give him one last act of liberation while discovering ourselves in the process.",
-   "title_en": "Lost Men"
+   "title_en": "Lost Men",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Programa 2: Algún Día escribire(mos) sobre Flores como si Fueran Nuestras",
@@ -2089,6 +2486,11 @@
    "country": "Escocia (Reino Unido), Croacia, España, Colombia",
    "flags": "🇬🇧🇭🇷🇪🇸🇨🇴",
    "duration": "114 min",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-11-01",
+    "18:30"
+   ],
    "day": "2026-11-01",
    "time": "18:30",
    "day_order": 5,
@@ -2167,7 +2569,15 @@
    ],
    "titulos_anteriores": [
     "Programa 2: Algún día escribire(mos) sobre flores como si fueran nuestras"
-   ]
+   ],
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Iniciación en la Octava Dimensión",
@@ -2178,6 +2588,11 @@
    "flags": "🇨🇴",
    "duration": "90 min",
    "genre": "Documental",
+   "_ancla": [
+    "La Mecánica - Bogotá",
+    "2026-11-01",
+    "19:00"
+   ],
    "day": "2026-11-01",
    "time": "19:00",
    "day_order": 5,
@@ -2209,6 +2624,11 @@
    "flags": "🇧🇪",
    "duration": "79 min",
    "genre": "Documental",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-11-01",
+    "19:30"
+   ],
    "day": "2026-11-01",
    "time": "19:30",
    "day_order": 5,
@@ -2226,7 +2646,15 @@
    "premiere": "Estreno en Latinoamérica",
    "lbSlug": "retour-a-fukushima",
    "tmdb_id": 1592063,
-   "synopsis_en": "For a few years now, the Japanese government has been building complexes called \"renewal housing estates\" in the very heart of Fukushima Prefecture. More than a decade after the accident, the region, still heavily contaminated, has seen the emergence of these concrete neighborhoods, enclosed in the midst of wild, radioactive nature. This film paints an intimate portrait of the people who live there and offers a poetic reflection on the region."
+   "synopsis_en": "For a few years now, the Japanese government has been building complexes called \"renewal housing estates\" in the very heart of Fukushima Prefecture. More than a decade after the accident, the region, still heavily contaminated, has seen the emergence of these concrete neighborhoods, enclosed in the midst of wild, radioactive nature. This film paints an intimate portrait of the people who live there and offers a poetic reflection on the region.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Relicto",
@@ -2238,6 +2666,11 @@
    "flags": "🇨🇴🇫🇷",
    "duration": "97 min",
    "genre": "Documental",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-11-01",
+    "19:30"
+   ],
    "day": "2026-11-01",
    "time": "19:30",
    "day_order": 5,
@@ -2255,7 +2688,15 @@
    },
    "lbSlug": "relicto",
    "tmdb_id": 1633353,
-   "synopsis_en": "\"At 105, Sixto Muñoz, known as 'the last Tinigua man', left his home for one final journey into the Amazon and disappeared. Following his trail along the Guayabero River, the film retraces his fading world and the extinction of an entire culture.\""
+   "synopsis_en": "\"At 105, Sixto Muñoz, known as 'the last Tinigua man', left his home for one final journey into the Amazon and disappeared. Following his trail along the Guayabero River, the film retraces his fading world and the extinction of an entire culture.\"",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "CREAndo Documental en los Barrios",
@@ -2264,6 +2705,11 @@
    "country": "Colombia",
    "flags": "🇨🇴",
    "duration": "100 min",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-11-02",
+    "10:00"
+   ],
    "day": "2026-11-02",
    "time": "10:00",
    "day_order": 6,
@@ -2391,7 +2837,15 @@
    ],
    "titulos_anteriores": [
     "CREAndo documental en los barrios"
-   ]
+   ],
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "¿Quién paga el pato? + Crónica de un baile de muñeco",
@@ -2400,6 +2854,11 @@
    "country": "Colombia",
    "flags": "🇨🇴",
    "duration": "80 min",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-11-02",
+    "14:00"
+   ],
    "day": "2026-11-02",
    "time": "14:00",
    "day_order": 6,
@@ -2433,7 +2892,15 @@
      "synopsis": "En la selva amazónica colombiana el pueblo indígena Yucuna de Puerto Córdoba se dispone a celebrar un ritual ancestral sobre el origen sagrado de los animales. Con el fin de experimentar con nuevas formas de transmisión cultural, el chamán invita a una pareja de antropólogos documentalistas. Poco antes de su llegada el chamán muere. Sin saber los pormenores del proyecto, la comunidad espera con expectativa la llegada de los blancos. Esta es la historia contada por los indígenas.",
      "synopsis_lang": "es"
     }
-   ]
+   ],
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Programa 3: Creadoras de Vida",
@@ -2442,6 +2909,11 @@
    "country": "Colombia, Francia, Austria",
    "flags": "🇨🇴🇫🇷🇦🇹",
    "duration": "99 min",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-11-02",
+    "14:00"
+   ],
    "day": "2026-11-02",
    "time": "14:00",
    "day_order": 6,
@@ -2535,7 +3007,15 @@
    ],
    "titulos_anteriores": [
     "Programa 3: Creadoras de vida"
-   ]
+   ],
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Programa 2: Imágenes para Otro Pasado",
@@ -2544,6 +3024,11 @@
    "country": "Cuba, Bolivia, Perú, Chile, España, Países Bajos",
    "flags": "🇨🇺🇧🇴🇵🇪🇨🇱🇪🇸🇳🇱",
    "duration": "93 min",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-11-02",
+    "16:30"
+   ],
    "day": "2026-11-02",
    "time": "16:30",
    "day_order": 6,
@@ -2622,7 +3107,15 @@
    ],
    "titulos_anteriores": [
     "Programa 2: Imágenes para otro pasado"
-   ]
+   ],
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Foco Santiago Álvarez",
@@ -2631,6 +3124,11 @@
    "country": "Cuba",
    "flags": "🇨🇺",
    "duration": "80 min",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-11-02",
+    "17:00"
+   ],
    "day": "2026-11-02",
    "time": "17:00",
    "day_order": 6,
@@ -2710,7 +3208,15 @@
      "title_en": "79 Springs",
      "genre": "Documental"
     }
-   ]
+   ],
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Programa 2: Geografías en Resistencia — Canterbury Café",
@@ -2719,6 +3225,11 @@
    "country": "Colombia, Cuba",
    "flags": "🇨🇴🇨🇺",
    "duration": "64 min",
+   "_ancla": [
+    "Canterbury Café - Bogotá",
+    "2026-11-02",
+    "17:00"
+   ],
    "day": "2026-11-02",
    "time": "17:00",
    "day_order": 6,
@@ -2808,6 +3319,11 @@
    "country": "Francia, Finlandia, Suiza",
    "flags": "🇫🇷🇫🇮🇨🇭",
    "duration": "83 min",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-11-02",
+    "17:00"
+   ],
    "day": "2026-11-02",
    "time": "17:00",
    "day_order": 6,
@@ -2887,7 +3403,15 @@
    ],
    "titulos_anteriores": [
     "Programa 1: Miradas convulsas desde el presente"
-   ]
+   ],
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Programa 1: Tanto Trabajo por Hacer",
@@ -2896,6 +3420,11 @@
    "country": "Japón, Cuba",
    "flags": "🇯🇵🇨🇺",
    "duration": "58 min",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-11-02",
+    "19:00"
+   ],
    "day": "2026-11-02",
    "time": "19:00",
    "day_order": 6,
@@ -2938,7 +3467,15 @@
    ],
    "titulos_anteriores": [
     "Programa 1: Tanto trabajo por hacer"
-   ]
+   ],
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Hair, Paper, Water…",
@@ -2950,6 +3487,11 @@
    "flags": "🇧🇪🇫🇷🇻🇳",
    "duration": "71 min",
    "genre": "Drama",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-11-02",
+    "19:30"
+   ],
    "day": "2026-11-02",
    "time": "19:30",
    "day_order": 6,
@@ -2967,7 +3509,15 @@
    "premiere": "Estreno en Bogotá",
    "lbSlug": "hair-paper-water",
    "tmdb_id": 1510333,
-   "synopsis_en": "She was born in a cave, more than 60 years ago. Now she lives in a village, with many children and grandchildren to look after. Sometimes, she dreams of her dead mother calling her home – to the cave."
+   "synopsis_en": "She was born in a cave, more than 60 years ago. Now she lives in a village, with many children and grandchildren to look after. Sometimes, she dreams of her dead mother calling her home – to the cave.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Las almas ni los ojos",
@@ -2979,6 +3529,11 @@
    "flags": "🇨🇴",
    "duration": "75 min",
    "genre": "Drama",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-11-02",
+    "19:30"
+   ],
    "day": "2026-11-02",
    "time": "19:30",
    "day_order": 6,
@@ -2996,7 +3551,15 @@
    },
    "lbSlug": "las-almas-ni-los-ojos",
    "tmdb_id": 1665538,
-   "synopsis_en": "After fleeing violence at age 15, Pacho spends four decades away from Anserma. Now a photograph sparks a desire to return, and on his journey home —imagined as an interstellar voyage— he searches for what he left behind. The lingering traces of death intertwine with a landscape of rural expressionism, memory, and history"
+   "synopsis_en": "After fleeing violence at age 15, Pacho spends four decades away from Anserma. Now a photograph sparks a desire to return, and on his journey home —imagined as an interstellar voyage— he searches for what he left behind. The lingering traces of death intertwine with a landscape of rural expressionism, memory, and history",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Sey Arimaku, la otra oscuridad + Galu Dugbis – La memoria de las abuelas",
@@ -3005,6 +3568,11 @@
    "country": "Colombia",
    "flags": "🇨🇴",
    "duration": "67 min",
+   "_ancla": [
+    "Alianza Francesa - Bogotá",
+    "2026-11-03",
+    "10:00"
+   ],
    "day": "2026-11-03",
    "time": "10:00",
    "day_order": 7,
@@ -3044,6 +3612,11 @@
    "flags": "🇵🇪🇲🇽",
    "duration": "83 min",
    "genre": "Documental",
+   "_ancla": [
+    "Alianza Francesa - Bogotá",
+    "2026-11-03",
+    "14:30"
+   ],
    "day": "2026-11-03",
    "time": "14:30",
    "day_order": 7,
@@ -3073,6 +3646,11 @@
    "country": "Japón, Cuba",
    "flags": "🇯🇵🇨🇺",
    "duration": "58 min",
+   "_ancla": [
+    "Alianza Francesa - Bogotá",
+    "2026-11-03",
+    "16:30"
+   ],
    "day": "2026-11-03",
    "time": "16:30",
    "day_order": 7,
@@ -3126,6 +3704,11 @@
    "flags": "🇨🇴",
    "duration": "33 min",
    "genre": "Documental",
+   "_ancla": [
+    "Centro de Memoria, Paz y Reconciliación - Bogotá",
+    "2026-11-03",
+    "16:30"
+   ],
    "day": "2026-11-03",
    "time": "16:30",
    "day_order": 7,
@@ -3157,6 +3740,11 @@
    "flags": "🇨🇴",
    "duration": "92 min",
    "genre": "Documental",
+   "_ancla": [
+    "Centro de Memoria, Paz y Reconciliación - Bogotá",
+    "2026-11-03",
+    "17:30"
+   ],
    "day": "2026-11-03",
    "time": "17:30",
    "day_order": 7,
@@ -3187,6 +3775,11 @@
    "country": "Colombia, Francia",
    "flags": "🇨🇴🇫🇷",
    "duration": "18 min",
+   "_ancla": [
+    "Alianza Francesa - Bogotá",
+    "2026-11-03",
+    "18:30"
+   ],
    "day": "2026-11-03",
    "time": "18:30",
    "day_order": 7,
@@ -3207,6 +3800,11 @@
    "country": "Colombia, Canadá",
    "flags": "🇨🇴🇨🇦",
    "duration": "90 min",
+   "_ancla": [
+    "Universidad Nacional de Colombia - Bogotá",
+    "2026-11-03",
+    "18:30"
+   ],
    "day": "2026-11-03",
    "time": "18:30",
    "day_order": 7,
@@ -3329,6 +3927,11 @@
    "country": "Colombia",
    "flags": "🇨🇴",
    "duration": "67 min",
+   "_ancla": [
+    "Alianza Francesa - Bogotá",
+    "2026-11-04",
+    "10:00"
+   ],
    "day": "2026-11-04",
    "time": "10:00",
    "day_order": 8,
@@ -3369,6 +3972,11 @@
    "flags": "🇪🇸🇨🇺🇨🇴",
    "duration": "100 min",
    "genre": "Documental",
+   "_ancla": [
+    "Universidad Nacional de Colombia - Bogotá",
+    "2026-11-04",
+    "10:00"
+   ],
    "day": "2026-11-04",
    "time": "10:00",
    "day_order": 8,
@@ -3399,6 +4007,11 @@
    "flags": "🇨🇴🇫🇷",
    "duration": "97 min",
    "genre": "Documental",
+   "_ancla": [
+    "Universidad Nacional de Colombia - Bogotá",
+    "2026-11-04",
+    "10:00"
+   ],
    "day": "2026-11-04",
    "time": "10:00",
    "day_order": 8,
@@ -3426,6 +4039,11 @@
    "country": "Chile, México, Portugal, España, Argentina, Brasil",
    "flags": "🇨🇱🇲🇽🇵🇹🇪🇸🇦🇷🇧🇷",
    "duration": "89 min",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-11-04",
+    "14:00"
+   ],
    "day": "2026-11-04",
    "time": "14:00",
    "day_order": 8,
@@ -3555,7 +4173,15 @@
    ],
    "titulos_anteriores": [
     "Programa 3: Volvemos a nacer"
-   ]
+   ],
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Programa 7: Reactivar los Archivos para el Presente",
@@ -3564,6 +4190,11 @@
    "country": "Francia, Bélgica, Brasil, Chile, Argentina",
    "flags": "🇫🇷🇧🇪🇧🇷🇨🇱🇦🇷",
    "duration": "97 min",
+   "_ancla": [
+    "Alianza Francesa - Bogotá",
+    "2026-11-04",
+    "14:00"
+   ],
    "day": "2026-11-04",
    "time": "14:00",
    "day_order": 8,
@@ -3641,6 +4272,11 @@
    "flags": "🇨🇴",
    "duration": "79 min",
    "genre": "Documental",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-11-04",
+    "14:30"
+   ],
    "day": "2026-11-04",
    "time": "14:30",
    "day_order": 8,
@@ -3658,7 +4294,15 @@
    },
    "lbSlug": "el-valor-de-la-palabra",
    "tmdb_id": 1665557,
-   "synopsis_en": "The long career of Colombian filmmaker Marta Rodríguez demonstrates a commitment to documenting the history of repression and struggle of indigenous and marginalized peoples."
+   "synopsis_en": "The long career of Colombian filmmaker Marta Rodríguez demonstrates a commitment to documenting the history of repression and struggle of indigenous and marginalized peoples.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Bojayá: la verdad desde adentro",
@@ -3668,6 +4312,11 @@
    "country": "Colombia",
    "flags": "🇨🇴",
    "duration": "106 min",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-11-04",
+    "16:00"
+   ],
    "day": "2026-11-04",
    "time": "16:00",
    "day_order": 8,
@@ -3686,7 +4335,15 @@
    "lbSlug": "bojaya-la-verdad-desde-adentro",
    "tmdb_id": 1738325,
    "synopsis_en": "Three leaders from Bojayá travel throughout the municipality carrying a \"truth chest\", gathering questions and demands from the community to confront those responsible for the armed conflict in their territory. After their journey, they share the answers they have found with the community, working together to construct a truth from within.",
-   "_programa_original": "Programa 1: Reparación simbólica y búsquedas por justicia restaurativa"
+   "_programa_original": "Programa 1: Reparación simbólica y búsquedas por justicia restaurativa",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Cuba y la noche",
@@ -3698,6 +4355,11 @@
    "flags": "🇪🇸🇨🇺🇨🇴",
    "duration": "100 min",
    "genre": "Documental",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-11-04",
+    "17:00"
+   ],
    "day": "2026-11-04",
    "time": "17:00",
    "day_order": 8,
@@ -3715,7 +4377,15 @@
    "lbSlug": "the-long-cuban-night",
    "tmdb_id": 1714180,
    "synopsis_en": "Captured entirely on phone footage, a group of Cuban artists risk everything to document their uprising against a government trying to silence them.",
-   "title_en": "The Long Cuban Night"
+   "title_en": "The Long Cuban Night",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Lolita en Honda",
@@ -3726,6 +4396,11 @@
    "country": "Colombia",
    "flags": "🇨🇴",
    "duration": "61 min",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-11-04",
+    "17:00"
+   ],
    "day": "2026-11-04",
    "time": "17:00",
    "day_order": 8,
@@ -3743,7 +4418,15 @@
    },
    "lbSlug": "lolita-en-honda",
    "tmdb_id": 1665546,
-   "synopsis_en": "Lolita en Honda is an intimate journey into family memory, in which Daniel Torres explores his grandmother's childhood to unravel the marks of abandonment and internalized violence that shaped her character."
+   "synopsis_en": "Lolita en Honda is an intimate journey into family memory, in which Daniel Torres explores his grandmother's childhood to unravel the marks of abandonment and internalized violence that shaped her character.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Programa 2: Esta Tierra Canta Premoniciones",
@@ -3752,6 +4435,11 @@
    "country": "Brasil, Hungría, Portugal, Bélgica, Francia, Marruecos, Italia, Catar",
    "flags": "🇧🇷🇭🇺🇵🇹🇧🇪🇫🇷🇲🇦🇮🇹🇶🇦",
    "duration": "100 min",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-11-04",
+    "19:30"
+   ],
    "day": "2026-11-04",
    "time": "19:30",
    "day_order": 8,
@@ -3834,7 +4522,15 @@
    ],
    "titulos_anteriores": [
     "Programa 2: Esta tierra canta premoniciones"
-   ]
+   ],
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "El coloquio de los pájaros",
@@ -3846,6 +4542,11 @@
    "flags": "🇵🇪",
    "duration": "60 min",
    "genre": "Documental",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-11-04",
+    "19:30"
+   ],
    "day": "2026-11-04",
    "time": "19:30",
    "day_order": 8,
@@ -3864,7 +4565,15 @@
    "lbSlug": "the-colloquium-of-the-birds",
    "tmdb_id": 1657856,
    "synopsis_en": "There was once a group of Peruvian anarchist poets forced into hiding who, during their secret meetings, sought to assume a non-human identity. Drawing on the famous Persian fable of the same name, the filmmaker translates the power of poetry and friendship into images and sound, serving as def iant stances against the established order.",
-   "title_en": "The Colloquium of the Birds"
+   "title_en": "The Colloquium of the Birds",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Les sœurs Pathan",
@@ -3876,6 +4585,11 @@
    "flags": "🇫🇷",
    "duration": "77 min",
    "genre": "Documental",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-11-04",
+    "20:00"
+   ],
    "day": "2026-11-04",
    "time": "20:00",
    "day_order": 8,
@@ -3893,13 +4607,26 @@
    "lbSlug": "the-pathan-sisters",
    "tmdb_id": 1148809,
    "synopsis_en": "Gujarat, West of India. Sofia and Suzain are two teenage sisters brought up in a humble household, taken care of by their father since their mother left. They were too young to remember, but 20 years ago, their family barely escaped the deadly 2002 Gujarat anti-Muslim riots. Refusing the grim day-to-day routine and the shadow of the past, Sofia and Suzain want to embrace life to the fullest. While they grow up, reality comes knocking.",
-   "title_en": "The Pathan Sisters"
+   "title_en": "The Pathan Sisters",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Master Class: La escucha en el cine directo",
    "type": "event",
    "section": "🎙️ Encuentro Pensar lo Real",
    "duration": "90 min",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-28",
+    "09:00"
+   ],
    "day": "2026-10-28",
    "time": "09:00",
    "day_order": 1,
@@ -3921,6 +4648,11 @@
    "type": "event",
    "section": "🎙️ Encuentro Pensar lo Real",
    "duration": "90 min",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-28",
+    "10:30"
+   ],
    "day": "2026-10-28",
    "time": "10:30",
    "day_order": 1,
@@ -3942,6 +4674,11 @@
    "type": "event",
    "section": "🎙️ Encuentro Pensar lo Real",
    "duration": "60 min",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-28",
+    "12:00"
+   ],
    "day": "2026-10-28",
    "time": "12:00",
    "day_order": 1,
@@ -3963,6 +4700,11 @@
    "type": "event",
    "section": "🎙️ Encuentro Pensar lo Real",
    "duration": "90 min",
+   "_ancla": [
+    "Alianza Francesa - Bogotá",
+    "2026-10-28",
+    "14:30"
+   ],
    "day": "2026-10-28",
    "time": "14:30",
    "day_order": 1,
@@ -3984,6 +4726,11 @@
    "type": "event",
    "section": "🎙️ Encuentro Pensar lo Real",
    "duration": "90 min",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-29",
+    "09:00"
+   ],
    "day": "2026-10-29",
    "time": "09:00",
    "day_order": 2,
@@ -4005,6 +4752,11 @@
    "type": "event",
    "section": "🎙️ Encuentro Pensar lo Real",
    "duration": "90 min",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-29",
+    "10:30"
+   ],
    "day": "2026-10-29",
    "time": "10:30",
    "day_order": 2,
@@ -4026,6 +4778,11 @@
    "type": "event",
    "section": "🎙️ Encuentro Pensar lo Real",
    "duration": "60 min",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-29",
+    "12:00"
+   ],
    "day": "2026-10-29",
    "time": "12:00",
    "day_order": 2,
@@ -4047,6 +4804,11 @@
    "type": "event",
    "section": "🎙️ Encuentro Pensar lo Real",
    "duration": "90 min",
+   "_ancla": [
+    "Alianza Francesa - Bogotá",
+    "2026-10-29",
+    "14:30"
+   ],
    "day": "2026-10-29",
    "time": "14:30",
    "day_order": 2,
@@ -4068,6 +4830,11 @@
    "type": "event",
    "section": "🎙️ Encuentro Pensar lo Real",
    "duration": "90 min",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-30",
+    "09:00"
+   ],
    "day": "2026-10-30",
    "time": "09:00",
    "day_order": 3,
@@ -4089,6 +4856,11 @@
    "type": "event",
    "section": "🎙️ Encuentro Pensar lo Real",
    "duration": "60 min",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-30",
+    "10:30"
+   ],
    "day": "2026-10-30",
    "time": "10:30",
    "day_order": 3,
@@ -4108,6 +4880,11 @@
    "type": "event",
    "section": "🎙️ Encuentro Pensar lo Real",
    "duration": "90 min",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-30",
+    "11:30"
+   ],
    "day": "2026-10-30",
    "time": "11:30",
    "day_order": 3,
@@ -4130,7 +4907,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-15T21:10:29",
+  "fecha": "2026-10-16T11:02:40",
   "plan_sha": "3bda549d3825e850",
   "paso": 6,
   "cmd": "python3 pipeline/ensamblar.py midbo-2026"

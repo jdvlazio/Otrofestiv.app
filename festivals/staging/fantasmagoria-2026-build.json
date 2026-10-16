@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "festivalfantasmagoriamedellin.com, noticia de programación (wp-json post 6481)",
-  "capturado": "2026-10-15",
+  "capturado": "2026-10-16",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_sedes": "El nombre de la parrilla, normalizado (la escribe de varias formas); la sala aparte. Otraparte está en Envigado, pero se publica en la ciudad «Medellín» (decisión de Juan, 30 sep): con una sola sede fuera, la app abría con «¿A cuál ciudad vas?» para 2 de 85 funciones. La dirección y el pin son los reales de Envigado, y el traslado se calcula con ellos.",
@@ -204,7 +204,7 @@
    "archetype": "Competencia",
    "order": 6
   },
-  "🏰 Selección Asedio: Las murallas del miedo": {
+  "🏰 Selección Asedio: Las Murallas del Miedo": {
    "en": "Siege: The Walls of Fear",
    "archetype": "Perspectivas / Miradas",
    "order": 7
@@ -219,7 +219,7 @@
    "archetype": "Competencia",
    "order": 9
   },
-  "🦯 Muestra especial": {
+  "🦯 Muestra Especial": {
    "en": "Special Screening",
    "archetype": "Especiales / Eventos",
    "order": 10
@@ -234,7 +234,7 @@
    "archetype": "Muestra / País",
    "order": 12
   },
-  "👽 Aniversario 40 años": {
+  "👽 Aniversario 40 Años": {
    "en": "40th Anniversary",
    "archetype": "Retrospectiva / Tributo",
    "order": 13
@@ -309,7 +309,7 @@
    "archetype": "Especiales / Eventos",
    "order": 27
   },
-  "🩸 Aniversario 50 años": {
+  "🩸 Aniversario 50 Años": {
    "en": "50th Anniversary",
    "archetype": "Retrospectiva / Tributo",
    "order": 28
@@ -319,12 +319,12 @@
    "archetype": "Especiales / Eventos",
    "order": 29
   },
-  "💥 Muestra de acción A Quemarropa": {
+  "💥 Muestra de Acción A Quemarropa": {
    "en": "Action Showcase: Point Blank",
    "archetype": "Perspectivas / Miradas",
    "order": 30
   },
-  "🕯️ Aniversario 30 años": {
+  "🕯️ Aniversario 30 Años": {
    "en": "30th Anniversary",
    "archetype": "Retrospectiva / Tributo",
    "order": 31
@@ -558,6 +558,11 @@
    "type": "event",
    "section": "🧸 Muestra Fantasmagoritos",
    "duration": "60 min",
+   "_ancla": [
+    "Biblioteca Comfenalco Castilla - Medellín",
+    "2026-10-14",
+    "13:00"
+   ],
    "day": "2026-10-14",
    "time": "13:00",
    "day_order": 0,
@@ -579,6 +584,11 @@
    "type": "event",
    "section": "🎓 Fantasmagoría Académica",
    "duration": "60 min",
+   "_ancla": [
+    "Twitch · Sociedad Fantasmagoría - Medellín",
+    "2026-10-14",
+    "21:00"
+   ],
    "day": "2026-10-14",
    "time": "21:00",
    "day_order": 0,
@@ -608,6 +618,11 @@
    "flags": "🇪🇸🇵🇹",
    "duration": "95 min",
    "genre": "Fantasía",
+   "_ancla": [
+    "Centro Colombo Americano - Medellín",
+    "2026-10-15",
+    "19:00"
+   ],
    "day": "2026-10-15",
    "time": "19:00",
    "day_order": 1,
@@ -635,6 +650,11 @@
    "type": "event",
    "section": "🧸 Muestra Fantasmagoritos",
    "duration": "60 min",
+   "_ancla": [
+    "Biblioteca Comfenalco Castilla - Medellín",
+    "2026-10-16",
+    "13:00"
+   ],
    "day": "2026-10-16",
    "time": "13:00",
    "day_order": 2,
@@ -661,6 +681,11 @@
    "flags": "🇨🇴🇲🇽🇺🇸",
    "duration": "90 min",
    "genre": "Thriller",
+   "_ancla": [
+    "Centro Colombo Americano - Medellín",
+    "2026-10-16",
+    "16:00"
+   ],
    "day": "2026-10-16",
    "time": "16:00",
    "day_order": 2,
@@ -693,6 +718,11 @@
    "flags": "🇧🇷",
    "duration": "84 min",
    "genre": "Animación",
+   "_ancla": [
+    "Museo de Arte Moderno de Medellín - MAMM - Medellín",
+    "2026-10-16",
+    "16:30"
+   ],
    "day": "2026-10-16",
    "time": "16:30",
    "day_order": 2,
@@ -712,7 +742,15 @@
    "lbSlug": "heart-of-darkness-2025",
    "tmdb_id": 588801,
    "synopsis_en": "Rio de Janeiro, near future. Marlow is a police officer assigned to a mission to find Captain Kurtz, a famous policeman who went missing in mysterious circumstances. Marlow has to do his mission in a boat, undertaking a dangerous journey through the outskirts of Rio de Janeiro.",
-   "title_en": "Heart of Darkness"
+   "title_en": "Heart of Darkness",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Hammer: Heroes, Legends and Monsters",
@@ -724,6 +762,11 @@
    "flags": "🇬🇧",
    "duration": "90 min",
    "genre": "Documental",
+   "_ancla": [
+    "Comfama San Ignacio - Medellín",
+    "2026-10-16",
+    "17:00"
+   ],
    "day": "2026-10-16",
    "time": "17:00",
    "day_order": 2,
@@ -756,6 +799,11 @@
    "flags": "🇨🇴🇪🇸",
    "duration": "81 min",
    "genre": "Animación",
+   "_ancla": [
+    "Estación Metrocable Andalucía - Medellín",
+    "2026-10-16",
+    "17:00"
+   ],
    "day": "2026-10-16",
    "time": "17:00",
    "day_order": 2,
@@ -781,6 +829,11 @@
    "type": "event",
    "section": "🦜 Colombia es Fantástica",
    "duration": "60 min",
+   "_ancla": [
+    "La Pascasia - Medellín",
+    "2026-10-16",
+    "18:30"
+   ],
    "day": "2026-10-16",
    "time": "18:30",
    "day_order": 2,
@@ -808,6 +861,11 @@
    "flags": "🇨🇴",
    "duration": "96 min",
    "genre": "Terror",
+   "_ancla": [
+    "Cineprox Las Américas - Medellín",
+    "2026-10-16",
+    "18:40"
+   ],
    "day": "2026-10-16",
    "time": "18:40",
    "day_order": 2,
@@ -828,18 +886,31 @@
    "lbSlug": "the-awakening-2026",
    "tmdb_id": 1657630,
    "synopsis_en": "An elite military unit ventures into the South American tropical jungle on a mission to eliminate an enemy target. What begins as a tactical operation quickly turns into a nightmare when they encounter supernatural forces emerging from the depths of the jungle. Five hundred years earlier, a Spanish conquistador expedition was consumed by the same relentless force. Separated by centuries but connected by the same hostile territory, both incursions discover something hidden in the jungle: an ancient presence that cannot be controlled.",
-   "title_en": "The Awakening"
+   "title_en": "The Awakening",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Schichinin No Samurai (Seven Samurai)",
    "type": "film",
-   "section": "🏰 Selección Asedio: Las murallas del miedo",
+   "section": "🏰 Selección Asedio: Las Murallas del Miedo",
    "director": "Akira Kurosawa",
    "year": 1954,
    "country": "Japón",
    "flags": "🇯🇵",
    "duration": "207 min",
    "genre": "Acción",
+   "_ancla": [
+    "Centro Colombo Americano - Medellín",
+    "2026-10-16",
+    "19:00"
+   ],
    "day": "2026-10-16",
    "time": "19:00",
    "day_order": 2,
@@ -872,6 +943,11 @@
    "flags": "🇨🇾🇺🇸",
    "duration": "104 min",
    "genre": "Terror",
+   "_ancla": [
+    "Comfama San Ignacio - Medellín",
+    "2026-10-16",
+    "19:00"
+   ],
    "day": "2026-10-16",
    "time": "19:00",
    "day_order": 2,
@@ -891,13 +967,26 @@
    "premiere": "Estreno suramericano",
    "lbSlug": "motherwitch",
    "tmdb_id": 1461870,
-   "synopsis_en": "Cyprus, 1882: Eleni, an outcast painter, tries to resurrect her dead children but instead unleashes mythical creatures upon her village. Only by becoming a good mother to a talented, but abused child can she reverse the curse."
+   "synopsis_en": "Cyprus, 1882: Eleni, an outcast painter, tries to resurrect her dead children but instead unleashes mythical creatures upon her village. Only by becoming a good mother to a talented, but abused child can she reverse the curse.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Torneos TCG: One Piece y Pokemón TCG",
    "type": "event",
    "section": "🎪 Actividades",
    "duration": "60 min",
+   "_ancla": [
+    "Draco Hobby - Medellín",
+    "2026-10-16",
+    "19:00"
+   ],
    "day": "2026-10-16",
    "time": "19:00",
    "day_order": 2,
@@ -919,6 +1008,11 @@
    "country": "Alemania, Estados Unidos, Colombia y España, Colombia, México, Chile, Inglaterra y Australia, Irlanda",
    "flags": "🇩🇪🇺🇸🇨🇴🇪🇸🇨🇴🇲🇽🇨🇱🇬🇧🇦🇺🇮🇪",
    "duration": "78 min",
+   "_ancla": [
+    "Nueva Villa de Aburrá - Medellín",
+    "2026-10-16",
+    "20:00"
+   ],
    "day": "2026-10-16",
    "time": "20:00",
    "day_order": 2,
@@ -1090,6 +1184,11 @@
    "flags": "🇦🇷",
    "duration": "81 min",
    "genre": "Terror",
+   "_ancla": [
+    "Cineprox Las Américas - Medellín",
+    "2026-10-16",
+    "21:00"
+   ],
    "day": "2026-10-16",
    "time": "21:00",
    "day_order": 2,
@@ -1111,13 +1210,26 @@
    "lbSlug": "family-fears-another-night-of-terror",
    "tmdb_id": 1737289,
    "synopsis_en": "Every night, a family of four faces the terror of living in a haunted house. Except the house is not really a house, but a television set where darkness reigns instead of walls. If existence is merely a grotesque performance, who is hiding behind the camera?",
-   "title_en": "Family Fears Another Night of Terror"
+   "title_en": "Family Fears Another Night of Terror",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Almas en plena: fiesta de disfraces, baile de ánimas y sustos que dan gusto",
    "type": "event",
    "section": "🎪 Actividades",
    "duration": "60 min",
+   "_ancla": [
+    "Silencio - Medellín",
+    "2026-10-16",
+    "21:30"
+   ],
    "day": "2026-10-16",
    "time": "21:30",
    "day_order": 2,
@@ -1139,6 +1251,11 @@
    "type": "film",
    "section": "🧸 Muestra Fantasmagoritos",
    "duration": "60 min",
+   "_ancla": [
+    "Centro de Desarrollo Cultural de Moravia - Medellín",
+    "2026-10-17",
+    "15:00"
+   ],
    "day": "2026-10-17",
    "time": "15:00",
    "day_order": 3,
@@ -1157,12 +1274,17 @@
   {
    "title": "Iris de Cristal",
    "type": "film",
-   "section": "🦯 Muestra especial",
+   "section": "🦯 Muestra Especial",
    "year": 2024,
    "country": "Colombia",
    "flags": "🇨🇴",
    "duration": "13 min",
    "genre": "Animación",
+   "_ancla": [
+    "Centro Colombo Americano - Medellín",
+    "2026-10-17",
+    "16:00"
+   ],
    "day": "2026-10-17",
    "time": "16:00",
    "day_order": 3,
@@ -1194,6 +1316,11 @@
    "flags": "🇫🇷🇩🇪",
    "duration": "100 min",
    "genre": "Fantasía",
+   "_ancla": [
+    "Museo de Arte Moderno de Medellín - MAMM - Medellín",
+    "2026-10-17",
+    "16:30"
+   ],
    "day": "2026-10-17",
    "time": "16:30",
    "day_order": 3,
@@ -1211,7 +1338,15 @@
    },
    "lbSlug": "black-moon-1975",
    "tmdb_id": 27361,
-   "synopsis_en": "There is a global gender war between men and women. A teenage girl tries to escape this reality and arrives at a hidden place where a strange unicorn lives with a family: sister, brother, many children and an old, bedridden woman who stays in contact with the world through her radio."
+   "synopsis_en": "There is a global gender war between men and women. A teenage girl tries to escape this reality and arrives at a hidden place where a strange unicorn lives with a family: sister, brother, many children and an old, bedridden woman who stays in contact with the world through her radio.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Siu Lam Juk Kau -Shaolin Soccer",
@@ -1223,6 +1358,11 @@
    "flags": "🇭🇰🇨🇳",
    "duration": "113 min",
    "genre": "Comedia",
+   "_ancla": [
+    "Comfama San Ignacio - Medellín",
+    "2026-10-17",
+    "18:30"
+   ],
    "day": "2026-10-17",
    "time": "18:30",
    "day_order": 3,
@@ -1255,6 +1395,11 @@
    "flags": "🇨🇴",
    "duration": "92 min",
    "genre": "Terror",
+   "_ancla": [
+    "Parque de los Deseos - Medellín",
+    "2026-10-17",
+    "18:30"
+   ],
    "day": "2026-10-17",
    "time": "18:30",
    "day_order": 3,
@@ -1286,6 +1431,11 @@
    "flags": "🇦🇷",
    "duration": "81 min",
    "genre": "Terror",
+   "_ancla": [
+    "Cineprox Las Américas - Medellín",
+    "2026-10-17",
+    "18:40"
+   ],
    "day": "2026-10-17",
    "time": "18:40",
    "day_order": 3,
@@ -1307,18 +1457,31 @@
    "lbSlug": "family-fears-another-night-of-terror",
    "tmdb_id": 1737289,
    "synopsis_en": "Every night, a family of four faces the terror of living in a haunted house. Except the house is not really a house, but a television set where darkness reigns instead of walls. If existence is merely a grotesque performance, who is hiding behind the camera?",
-   "title_en": "Family Fears Another Night of Terror"
+   "title_en": "Family Fears Another Night of Terror",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Critters",
    "type": "film",
-   "section": "👽 Aniversario 40 años",
+   "section": "👽 Aniversario 40 Años",
    "director": "Stephen Herek",
    "year": 1986,
    "country": "Estados Unidos",
    "flags": "🇺🇸",
    "duration": "86 min",
    "genre": "Terror",
+   "_ancla": [
+    "Planetario de Medellín - Medellín",
+    "2026-10-17",
+    "19:00"
+   ],
    "day": "2026-10-17",
    "time": "19:00",
    "day_order": 3,
@@ -1351,6 +1514,11 @@
    "flags": "🇭🇰",
    "duration": "113 min",
    "genre": "Acción",
+   "_ancla": [
+    "Cineprox Las Américas - Medellín",
+    "2026-10-17",
+    "21:00"
+   ],
    "day": "2026-10-17",
    "time": "21:00",
    "day_order": 3,
@@ -1371,13 +1539,26 @@
    "lbSlug": "the-furious",
    "tmdb_id": 1280738,
    "synopsis_en": "After a criminal network kidnaps Wang Wei's daughter and the corrupt police refuse to assist him, Wei sets out on his own to locate her. Navin, a tenacious journalist whose wife has mysteriously vanished, is his only ally. In this explosive martial arts showdown, the unlikely duo fights the kidnappers ruthlessly driven by a furious vengeance.",
-   "title_en": "The Furious"
+   "title_en": "The Furious",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Noche de Librerías: Lectura de Cuentos de Terror",
    "type": "event",
    "section": "📚 Noche de Librerías",
    "duration": "60 min",
+   "_ancla": [
+    "Librería Antimateria - Medellín",
+    "2026-10-17",
+    "22:00"
+   ],
    "day": "2026-10-17",
    "time": "22:00",
    "day_order": 3,
@@ -1402,6 +1583,11 @@
    "flags": "🇨🇴",
    "duration": "90 min",
    "genre": "Familia",
+   "_ancla": [
+    "Centro de Desarrollo Cultural de Moravia - Medellín",
+    "2026-10-18",
+    "15:00"
+   ],
    "day": "2026-10-18",
    "time": "15:00",
    "day_order": 4,
@@ -1431,6 +1617,11 @@
    "flags": "🇦🇷🇲🇽",
    "duration": "82 min",
    "genre": "Terror",
+   "_ancla": [
+    "Centro Colombo Americano - Medellín",
+    "2026-10-18",
+    "16:00"
+   ],
    "day": "2026-10-18",
    "time": "16:00",
    "day_order": 4,
@@ -1456,13 +1647,18 @@
   {
    "title": "Rio Bravo",
    "type": "film",
-   "section": "🏰 Selección Asedio: Las murallas del miedo",
+   "section": "🏰 Selección Asedio: Las Murallas del Miedo",
    "director": "Howard Hawks",
    "year": 1959,
    "country": "Estados Unidos",
    "flags": "🇺🇸",
    "duration": "141 min",
    "genre": "Western",
+   "_ancla": [
+    "Museo de Arte Moderno de Medellín - MAMM - Medellín",
+    "2026-10-18",
+    "16:00"
+   ],
    "day": "2026-10-18",
    "time": "16:00",
    "day_order": 4,
@@ -1480,7 +1676,15 @@
    },
    "lbSlug": "rio-bravo",
    "tmdb_id": 301,
-   "synopsis_en": "A small-town sheriff in the American West enlists the help of a disabled man, a drunk, and a young gunfighter in his efforts to hold in jail the brother of the local bad guy."
+   "synopsis_en": "A small-town sheriff in the American West enlists the help of a disabled man, a drunk, and a young gunfighter in his efforts to hold in jail the brother of the local bad guy.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Coração das Trevas (Heart of Darkness)",
@@ -1492,6 +1696,11 @@
    "flags": "🇧🇷",
    "duration": "84 min",
    "genre": "Animación",
+   "_ancla": [
+    "Comfama San Ignacio - Medellín",
+    "2026-10-18",
+    "17:00"
+   ],
    "day": "2026-10-18",
    "time": "17:00",
    "day_order": 4,
@@ -1512,7 +1721,15 @@
    "lbSlug": "heart-of-darkness-2025",
    "tmdb_id": 588801,
    "synopsis_en": "Rio de Janeiro, near future. Marlow is a police officer assigned to a mission to find Captain Kurtz, a famous policeman who went missing in mysterious circumstances. Marlow has to do his mission in a boat, undertaking a dangerous journey through the outskirts of Rio de Janeiro.",
-   "title_en": "Heart of Darkness"
+   "title_en": "Heart of Darkness",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Hablando con Extraños",
@@ -1524,6 +1741,11 @@
    "flags": "🇲🇽",
    "duration": "104 min",
    "genre": "Terror",
+   "_ancla": [
+    "Cineprox Las Américas - Medellín",
+    "2026-10-18",
+    "18:40"
+   ],
    "day": "2026-10-18",
    "time": "18:40",
    "day_order": 4,
@@ -1544,7 +1766,15 @@
    "lbSlug": "talking-to-a-stranger",
    "tmdb_id": 1600099,
    "synopsis_en": "A grieving mother is confronted by an uncanny presence that wears the face of her lost child.",
-   "title_en": "Talking to a Stranger"
+   "title_en": "Talking to a Stranger",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Selección Oficial de Cortometrajes Colombianos",
@@ -1553,6 +1783,11 @@
    "country": "Colombia y Cuba, Colombia, Colombia-Estados Unidos",
    "flags": "🇨🇴🇨🇺🇨🇴🇨🇴🇺🇸",
    "duration": "88 min",
+   "_ancla": [
+    "Centro Colombo Americano - Medellín",
+    "2026-10-18",
+    "19:00"
+   ],
    "day": "2026-10-18",
    "time": "19:00",
    "day_order": 4,
@@ -1676,6 +1911,11 @@
    "type": "event",
    "section": "🛸 Expediente Fantasmagoría",
    "duration": "60 min",
+   "_ancla": [
+    "Planetario de Medellín - Medellín",
+    "2026-10-18",
+    "19:00"
+   ],
    "day": "2026-10-18",
    "time": "19:00",
    "day_order": 4,
@@ -1694,13 +1934,18 @@
   {
    "title": "Assault on Precinct 13",
    "type": "film",
-   "section": "🏰 Selección Asedio: Las murallas del miedo",
+   "section": "🏰 Selección Asedio: Las Murallas del Miedo",
    "director": "John Carpenter",
    "year": 1976,
    "country": "Estados Unidos",
    "flags": "🇺🇸",
    "duration": "91 min",
    "genre": "Thriller",
+   "_ancla": [
+    "Cineprox Las Américas - Medellín",
+    "2026-10-18",
+    "21:00"
+   ],
    "day": "2026-10-18",
    "time": "21:00",
    "day_order": 4,
@@ -1719,15 +1964,28 @@
    },
    "lbSlug": "assault-on-precinct-13",
    "tmdb_id": 17814,
-   "synopsis_en": "A highway patrol officer, two criminals, and a station secretary form an unlikely alliance to defend a defunct Los Angeles precinct against a siege by a bloodthirsty street gang."
+   "synopsis_en": "A highway patrol officer, two criminals, and a station secretary form an unlikely alliance to defend a defunct Los Angeles precinct against a siege by a bloodthirsty street gang.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
-   "title": "Selección oficial de cortometrajes latinoamericanos",
+   "title": "Selección Oficial de Cortometrajes Latinoamericanos",
    "type": "film",
    "section": "🌎 Selección Latinoamericana de Cortometrajes",
    "country": "Colombia, Brasil, Chile, Argentina",
    "flags": "🇨🇴🇧🇷🇨🇱🇦🇷",
    "duration": "88 min",
+   "_ancla": [
+    "Paraninfo Universidad de Antioquia - Medellín",
+    "2026-10-19",
+    "15:00"
+   ],
    "day": "2026-10-19",
    "time": "15:00",
    "day_order": 5,
@@ -1825,6 +2083,9 @@
      "synopsis_en": "In this atmospheric and metaphysical short film that is truly captivating, two men traverse the forest in search of a mysterious object, while in an abandoned house, a tearful woman remains unmoved by her companion's words of comfort. \"Huasi\" is one of those films that appeals to the senses more than it speaks to the intellect, yet it still poses a question to us : saving one human being—does that mean saving all of humanity ?",
      "synopsis_lang": "es"
     }
+   ],
+   "titulos_anteriores": [
+    "Selección oficial de cortometrajes latinoamericanos"
    ]
   },
   {
@@ -1837,6 +2098,11 @@
    "flags": "🇨🇦",
    "duration": "90 min",
    "genre": "Documental",
+   "_ancla": [
+    "Comfama Otraparte - Medellín",
+    "2026-10-19",
+    "18:30"
+   ],
    "day": "2026-10-19",
    "time": "18:30",
    "day_order": 5,
@@ -1863,6 +2129,11 @@
    "type": "event",
    "section": "🌕 Homenaje a Luigi Cozzi",
    "duration": "90 min",
+   "_ancla": [
+    "Twitch · Sociedad Fantasmagoría - Medellín",
+    "2026-10-19",
+    "19:00"
+   ],
    "day": "2026-10-19",
    "time": "19:00",
    "day_order": 5,
@@ -1885,6 +2156,11 @@
    "type": "event",
    "section": "🎓 Fantasmagoría Académica",
    "duration": "60 min",
+   "_ancla": [
+    "Twitch · Sociedad Fantasmagoría - Medellín",
+    "2026-10-19",
+    "20:30"
+   ],
    "day": "2026-10-19",
    "time": "20:30",
    "day_order": 5,
@@ -1912,6 +2188,11 @@
    "flags": "🇦🇷",
    "duration": "94 min",
    "genre": "Animación",
+   "_ancla": [
+    "Cineprox Las Américas - Medellín",
+    "2026-10-19",
+    "21:00"
+   ],
    "day": "2026-10-19",
    "time": "21:00",
    "day_order": 5,
@@ -1932,13 +2213,26 @@
    "lbSlug": "the-kirlian-frequency",
    "tmdb_id": 1239261,
    "synopsis_en": "A late-night radio station, a cadaverous host, and five guests with five unusual stories of horror and science fiction are the focus of the film adaptation of the cult animated series The Kirlian Frequency.  What really happened that night to the radio station, the city, and its inhabitants? And most importantly... Why?",
-   "title_en": "The Kirlian Frequency"
+   "title_en": "The Kirlian Frequency",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Conversatorio con Cristian Ponce",
    "type": "event",
    "section": "📼 Retrospectiva Cristian Ponce",
    "duration": "60 min",
+   "_ancla": [
+    "Universidad Católica Luis Amigó - Medellín",
+    "2026-10-20",
+    "14:00"
+   ],
    "day": "2026-10-20",
    "time": "14:00",
    "day_order": 6,
@@ -1967,6 +2261,11 @@
    "flags": "🇪🇸",
    "duration": "75 min",
    "genre": "Documental",
+   "_ancla": [
+    "Paraninfo Universidad de Antioquia - Medellín",
+    "2026-10-20",
+    "15:00"
+   ],
    "day": "2026-10-20",
    "time": "15:00",
    "day_order": 6,
@@ -1998,6 +2297,11 @@
    "flags": "🇨🇴",
    "duration": "92 min",
    "genre": "Terror",
+   "_ancla": [
+    "Centro Colombo Americano - Medellín",
+    "2026-10-20",
+    "17:00"
+   ],
    "day": "2026-10-20",
    "time": "17:00",
    "day_order": 6,
@@ -2024,6 +2328,11 @@
    "type": "event",
    "section": "🦜 Colombia es Fantástica",
    "duration": "30 min",
+   "_ancla": [
+    "Universidad Nacional - Medellín",
+    "2026-10-20",
+    "17:30"
+   ],
    "day": "2026-10-20",
    "time": "17:30",
    "day_order": 6,
@@ -2050,6 +2359,11 @@
    "flags": "🇨🇴",
    "duration": "98 min",
    "genre": "Terror",
+   "_ancla": [
+    "Universidad Nacional - Medellín",
+    "2026-10-20",
+    "18:00"
+   ],
    "day": "2026-10-20",
    "time": "18:00",
    "day_order": 6,
@@ -2083,6 +2397,11 @@
    "flags": "🇺🇸",
    "duration": "92 min",
    "genre": "Fantasía",
+   "_ancla": [
+    "Comfama Otraparte - Medellín",
+    "2026-10-20",
+    "18:30"
+   ],
    "day": "2026-10-20",
    "time": "18:30",
    "day_order": 6,
@@ -2113,6 +2432,11 @@
    "flags": "🇮🇩🇰🇷",
    "duration": "106 min",
    "genre": "Terror",
+   "_ancla": [
+    "Cineprox Las Américas - Medellín",
+    "2026-10-20",
+    "18:40"
+   ],
    "day": "2026-10-20",
    "time": "18:40",
    "day_order": 6,
@@ -2132,7 +2456,15 @@
    "premiere": "Estreno suramericano",
    "lbSlug": "ghost-in-the-cell",
    "tmdb_id": 1393326,
-   "synopsis_en": "In a notorious prison, an invisible force begins killing inmates brutally, compelling enemy gangs and corrupt guards to work together as they try to survive the mounting bloodshed."
+   "synopsis_en": "In a notorious prison, an invisible force begins killing inmates brutally, compelling enemy gangs and corrupt guards to work together as they try to survive the mounting bloodshed.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Cuadecuc, Vampir",
@@ -2144,6 +2476,11 @@
    "flags": "🇪🇸",
    "duration": "70 min",
    "genre": "Documental",
+   "_ancla": [
+    "Centro Colombo Americano - Medellín",
+    "2026-10-20",
+    "19:30"
+   ],
    "day": "2026-10-20",
    "time": "19:30",
    "day_order": 6,
@@ -2170,13 +2507,18 @@
   {
    "title": "Green Room",
    "type": "film",
-   "section": "🏰 Selección Asedio: Las murallas del miedo",
+   "section": "🏰 Selección Asedio: Las Murallas del Miedo",
    "director": "Jeremy Saulnier",
    "year": 2015,
    "country": "Estados Unidos",
    "flags": "🇺🇸",
    "duration": "94 min",
    "genre": "Thiller",
+   "_ancla": [
+    "Cineprox Las Américas - Medellín",
+    "2026-10-20",
+    "21:00"
+   ],
    "day": "2026-10-20",
    "time": "21:00",
    "day_order": 6,
@@ -2195,13 +2537,26 @@
    },
    "lbSlug": "green-room",
    "tmdb_id": 313922,
-   "synopsis_en": "Members of a punk rock band and a tough young woman are forced to fight for survival after witnessing an act of violence at a skinhead bar."
+   "synopsis_en": "Members of a punk rock band and a tough young woman are forced to fight for survival after witnessing an act of violence at a skinhead bar.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Taller animación análoga con Óscar Triana",
    "type": "event",
    "section": "🎓 Fantasmagoría Académica",
    "duration": "60 min",
+   "_ancla": [
+    "Parque Biblioteca Belén - Medellín",
+    "2026-10-21",
+    "10:00"
+   ],
    "day": "2026-10-21",
    "time": "10:00",
    "day_order": 7,
@@ -2214,6 +2569,14 @@
     "date": "2026-10-14",
     "base_version": 21,
     "id": "2026-10-21-10-00-taller-de-animacion-con-oscar-triana"
+   },
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
    }
   },
   {
@@ -2221,6 +2584,11 @@
    "type": "film",
    "section": "🧸 Muestra Fantasmagoritos",
    "duration": "60 min",
+   "_ancla": [
+    "Biblioteca Comfenalco Castilla - Medellín",
+    "2026-10-21",
+    "13:00"
+   ],
    "day": "2026-10-21",
    "time": "13:00",
    "day_order": 7,
@@ -2241,6 +2609,11 @@
    "type": "event",
    "section": "🎓 Fantasmagoría Académica",
    "duration": "60 min",
+   "_ancla": [
+    "Parque Biblioteca Belén - Medellín",
+    "2026-10-21",
+    "13:00"
+   ],
    "day": "2026-10-21",
    "time": "13:00",
    "day_order": 7,
@@ -2261,6 +2634,11 @@
    "type": "film",
    "section": "🤝 Jornada Fantasmeet",
    "duration": "90 min",
+   "_ancla": [
+    "Cámara de Comercio de Medellín - Medellín",
+    "2026-10-21",
+    "14:00"
+   ],
    "day": "2026-10-21",
    "time": "14:00",
    "day_order": 7,
@@ -2285,6 +2663,11 @@
    "type": "event",
    "section": "🤝 Jornada Fantasmeet",
    "duration": "60 min",
+   "_ancla": [
+    "Cámara de Comercio de Medellín - Medellín",
+    "2026-10-21",
+    "15:30"
+   ],
    "day": "2026-10-21",
    "time": "15:30",
    "day_order": 7,
@@ -2308,6 +2691,11 @@
    "type": "event",
    "section": "🎓 Fantasmagoría Académica",
    "duration": "60 min",
+   "_ancla": [
+    "Casa Libre - Medellín",
+    "2026-10-21",
+    "17:00"
+   ],
    "day": "2026-10-21",
    "time": "17:00",
    "day_order": 7,
@@ -2332,6 +2720,11 @@
    "flags": "🇫🇷🇨🇴",
    "duration": "93 min",
    "genre": "Documental",
+   "_ancla": [
+    "Centro Colombo Americano - Medellín",
+    "2026-10-21",
+    "17:00"
+   ],
    "day": "2026-10-21",
    "time": "17:00",
    "day_order": 7,
@@ -2363,6 +2756,11 @@
    "flags": "🇫🇷",
    "duration": "90 min",
    "genre": "Documental",
+   "_ancla": [
+    "Comfama San Ignacio - Medellín",
+    "2026-10-21",
+    "17:00"
+   ],
    "day": "2026-10-21",
    "time": "17:00",
    "day_order": 7,
@@ -2390,6 +2788,11 @@
    "type": "event",
    "section": "🤝 Jornada Fantasmeet",
    "duration": "90 min",
+   "_ancla": [
+    "Cámara de Comercio de Medellín - Medellín",
+    "2026-10-21",
+    "17:00"
+   ],
    "day": "2026-10-21",
    "time": "17:00",
    "day_order": 7,
@@ -2412,6 +2815,11 @@
    "type": "event",
    "section": "🎓 Fantasmagoría Académica",
    "duration": "60 min",
+   "_ancla": [
+    "Casa Libre - Medellín",
+    "2026-10-21",
+    "18:00"
+   ],
    "day": "2026-10-21",
    "time": "18:00",
    "day_order": 7,
@@ -2436,6 +2844,11 @@
    "flags": "🇨🇴",
    "duration": "96 min",
    "genre": "Terror",
+   "_ancla": [
+    "Cineprox Las Américas - Medellín",
+    "2026-10-21",
+    "18:40"
+   ],
    "day": "2026-10-21",
    "time": "18:40",
    "day_order": 7,
@@ -2456,7 +2869,15 @@
    "lbSlug": "the-awakening-2026",
    "tmdb_id": 1657630,
    "synopsis_en": "An elite military unit ventures into the South American tropical jungle on a mission to eliminate an enemy target. What begins as a tactical operation quickly turns into a nightmare when they encounter supernatural forces emerging from the depths of the jungle. Five hundred years earlier, a Spanish conquistador expedition was consumed by the same relentless force. Separated by centuries but connected by the same hostile territory, both incursions discover something hidden in the jungle: an ancient presence that cannot be controlled.",
-   "title_en": "The Awakening"
+   "title_en": "The Awakening",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "La Mancha",
@@ -2468,6 +2889,11 @@
    "flags": "🇦🇷🇲🇽",
    "duration": "74 min",
    "genre": "Terror",
+   "_ancla": [
+    "Comfama San Ignacio - Medellín",
+    "2026-10-21",
+    "19:00"
+   ],
    "day": "2026-10-21",
    "time": "19:00",
    "day_order": 7,
@@ -2500,6 +2926,11 @@
    "flags": "🇺🇸🇩🇪",
    "duration": "102 min",
    "genre": "Terror",
+   "_ancla": [
+    "Cineprox Las Américas - Medellín",
+    "2026-10-21",
+    "21:00"
+   ],
    "day": "2026-10-21",
    "time": "21:00",
    "day_order": 7,
@@ -2519,13 +2950,26 @@
    },
    "lbSlug": "cuckoo-2024",
    "tmdb_id": 869291,
-   "synopsis_en": "After reluctantly moving to the German Alps with her father and his new family, Gretchen discovers that their new town hides sinister secrets, as she's plagued by strange noises and frightening visions of a woman pursuing her."
+   "synopsis_en": "After reluctantly moving to the German Alps with her father and his new family, Gretchen discovers that their new town hides sinister secrets, as she's plagued by strange noises and frightening visions of a woman pursuing her.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Taller: Animación digital con Óscar Triana",
    "type": "event",
    "section": "🎓 Fantasmagoría Académica",
    "duration": "60 min",
+   "_ancla": [
+    "Universidad Católica Luis Amigó - Medellín",
+    "2026-10-22",
+    "10:00"
+   ],
    "day": "2026-10-22",
    "time": "10:00",
    "day_order": 8,
@@ -2546,6 +2990,11 @@
    "type": "event",
    "section": "🔦 Retrospectiva Tilman Singer",
    "duration": "60 min",
+   "_ancla": [
+    "Instituto Cultural Alexander von Humboldt - Medellín",
+    "2026-10-22",
+    "16:00"
+   ],
    "day": "2026-10-22",
    "time": "16:00",
    "day_order": 8,
@@ -2573,6 +3022,11 @@
    "flags": "🇮🇹",
    "duration": "125 min",
    "genre": "Fantasía",
+   "_ancla": [
+    "Comfama San Ignacio - Medellín",
+    "2026-10-22",
+    "17:00"
+   ],
    "day": "2026-10-22",
    "time": "17:00",
    "day_order": 8,
@@ -2601,6 +3055,11 @@
    "country": "Colombia",
    "flags": "🇨🇴",
    "duration": "60 min",
+   "_ancla": [
+    "Comfama San Ignacio - Medellín",
+    "2026-10-22",
+    "17:00"
+   ],
    "day": "2026-10-22",
    "time": "17:00",
    "day_order": 8,
@@ -2649,6 +3108,11 @@
    "country": "Colombia, Brasil, Chile, Argentina",
    "flags": "🇨🇴🇧🇷🇨🇱🇦🇷",
    "duration": "88 min",
+   "_ancla": [
+    "Universidad Nacional - Medellín",
+    "2026-10-22",
+    "17:00"
+   ],
    "day": "2026-10-22",
    "time": "17:00",
    "day_order": 8,
@@ -2747,6 +3211,9 @@
      "synopsis_en": "In this atmospheric and metaphysical short film that is truly captivating, two men traverse the forest in search of a mysterious object, while in an abandoned house, a tearful woman remains unmoved by her companion's words of comfort. \"Huasi\" is one of those films that appeals to the senses more than it speaks to the intellect, yet it still poses a question to us : saving one human being—does that mean saving all of humanity ?",
      "synopsis_lang": "es"
     }
+   ],
+   "titulos_anteriores": [
+    "Selección oficial de cortometrajes latinoamericanos"
    ]
   },
   {
@@ -2756,6 +3223,11 @@
    "country": "Canadá, Estados Unidos, España, República Checa, Inglaterra, Colombia",
    "flags": "🇨🇦🇺🇸🇪🇸🇨🇿🇬🇧🇨🇴",
    "duration": "109 min",
+   "_ancla": [
+    "Centro Colombo Americano - Medellín",
+    "2026-10-22",
+    "18:00"
+   ],
    "day": "2026-10-22",
    "time": "18:00",
    "day_order": 8,
@@ -2907,6 +3379,11 @@
    "type": "event",
    "section": "🎲 Jornada Juegos de Mesa Fantastable",
    "duration": "60 min",
+   "_ancla": [
+    "La Comarca - Medellín",
+    "2026-10-22",
+    "18:00"
+   ],
    "day": "2026-10-22",
    "time": "18:00",
    "day_order": 8,
@@ -2926,13 +3403,18 @@
   {
    "title": "Carrie",
    "type": "film",
-   "section": "🩸 Aniversario 50 años",
+   "section": "🩸 Aniversario 50 Años",
    "director": "Brian De Palma",
    "year": 1976,
    "country": "Estados Unidos",
    "flags": "🇺🇸",
    "duration": "98 min",
    "genre": "Terror",
+   "_ancla": [
+    "Museo de Arte Moderno de Medellín - MAMM - Medellín",
+    "2026-10-22",
+    "18:30"
+   ],
    "day": "2026-10-22",
    "time": "18:30",
    "day_order": 8,
@@ -2950,13 +3432,26 @@
    },
    "lbSlug": "carrie-1976",
    "tmdb_id": 7340,
-   "synopsis_en": "Withdrawn and sensitive teenager Carrie White faces bullying from her classmates and abuse from her fanatically pious mother. When she begins to suspect that she has supernatural powers, things take a dark and violent turn."
+   "synopsis_en": "Withdrawn and sensitive teenager Carrie White faces bullying from her classmates and abuse from her fanatically pious mother. When she begins to suspect that she has supernatural powers, things take a dark and violent turn.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Club de la Medianoche: Club de lectura",
    "type": "event",
    "section": "📖 Club de la Medianoche",
    "duration": "60 min",
+   "_ancla": [
+    "Universidad Nacional - Medellín",
+    "2026-10-22",
+    "18:30"
+   ],
    "day": "2026-10-22",
    "time": "18:30",
    "day_order": 8,
@@ -2984,6 +3479,11 @@
    "flags": "🇯🇵",
    "duration": "68 min",
    "genre": "Ciencia ficción",
+   "_ancla": [
+    "Cineprox Las Américas - Medellín",
+    "2026-10-22",
+    "18:40"
+   ],
    "day": "2026-10-22",
    "time": "18:40",
    "day_order": 8,
@@ -3003,18 +3503,31 @@
    "premiere": "Estreno latinoamericano",
    "lbSlug": "you-are-the-film",
    "tmdb_id": 1631314,
-   "synopsis_en": "Madoka writes plays. Kazuma composes music. One day, they decide to go to the cinema. But once there, they realise they can interact through the screen itself, sending fiction into joyful freefall in an absurd and inventive adventure."
+   "synopsis_en": "Madoka writes plays. Kazuma composes music. One day, they decide to go to the cinema. But once there, they realise they can interact through the screen itself, sending fiction into joyful freefall in an absurd and inventive adventure.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Dèmoni",
    "type": "film",
-   "section": "🏰 Selección Asedio: Las murallas del miedo",
+   "section": "🏰 Selección Asedio: Las Murallas del Miedo",
    "director": "Lamberto Bava",
    "year": 1985,
    "country": "Italia",
    "flags": "🇮🇹",
    "duration": "88 min",
    "genre": "Terror",
+   "_ancla": [
+    "Centro Colombo Americano - Medellín",
+    "2026-10-22",
+    "20:10"
+   ],
    "day": "2026-10-22",
    "time": "20:10",
    "day_order": 8,
@@ -3047,6 +3560,11 @@
    "flags": "🇲🇽",
    "duration": "104 min",
    "genre": "Terror",
+   "_ancla": [
+    "Cineprox Las Américas - Medellín",
+    "2026-10-22",
+    "21:00"
+   ],
    "day": "2026-10-22",
    "time": "21:00",
    "day_order": 8,
@@ -3067,13 +3585,26 @@
    "lbSlug": "talking-to-a-stranger",
    "tmdb_id": 1600099,
    "synopsis_en": "A grieving mother is confronted by an uncanny presence that wears the face of her lost child.",
-   "title_en": "Talking to a Stranger"
+   "title_en": "Talking to a Stranger",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Cortometrajes en competencia: deliberación del Jurado Infantil",
    "type": "film",
    "section": "🧸 Muestra Fantasmagoritos",
    "duration": "60 min",
+   "_ancla": [
+    "Biblioteca Comfenalco Castilla - Medellín",
+    "2026-10-23",
+    "13:00"
+   ],
    "day": "2026-10-23",
    "time": "13:00",
    "day_order": 9,
@@ -3099,6 +3630,11 @@
    "flags": "🇨🇾🇺🇸",
    "duration": "104 min",
    "genre": "Terror",
+   "_ancla": [
+    "Centro Colombo Americano - Medellín",
+    "2026-10-23",
+    "16:00"
+   ],
    "day": "2026-10-23",
    "time": "16:00",
    "day_order": 9,
@@ -3126,6 +3662,11 @@
    "type": "film",
    "section": "🎞️ Muestra Catalana",
    "duration": "60 min",
+   "_ancla": [
+    "Comfama San Ignacio - Medellín",
+    "2026-10-23",
+    "17:00"
+   ],
    "day": "2026-10-23",
    "time": "17:00",
    "day_order": 9,
@@ -3145,6 +3686,11 @@
    "type": "event",
    "section": "🎓 Fantasmagoría Académica",
    "duration": "90 min",
+   "_ancla": [
+    "Librería Antimateria - Medellín",
+    "2026-10-23",
+    "17:00"
+   ],
    "day": "2026-10-23",
    "time": "17:00",
    "day_order": 9,
@@ -3166,6 +3712,11 @@
    "country": "Alemania, Estados Unidos, Colombia y España, Colombia, México, Chile, Inglaterra y Australia, Irlanda",
    "flags": "🇩🇪🇺🇸🇨🇴🇪🇸🇨🇴🇲🇽🇨🇱🇬🇧🇦🇺🇮🇪",
    "duration": "78 min",
+   "_ancla": [
+    "Librería Antimateria - Medellín",
+    "2026-10-23",
+    "18:30"
+   ],
    "day": "2026-10-23",
    "time": "18:30",
    "day_order": 9,
@@ -3337,6 +3888,11 @@
    "flags": "🇯🇵",
    "duration": "68 min",
    "genre": "Ciencia ficción",
+   "_ancla": [
+    "Museo de Arte Moderno de Medellín - MAMM - Medellín",
+    "2026-10-23",
+    "18:30"
+   ],
    "day": "2026-10-23",
    "time": "18:30",
    "day_order": 9,
@@ -3355,7 +3911,15 @@
    "premiere": "Estreno latinoamericano",
    "lbSlug": "you-are-the-film",
    "tmdb_id": 1631314,
-   "synopsis_en": "Madoka writes plays. Kazuma composes music. One day, they decide to go to the cinema. But once there, they realise they can interact through the screen itself, sending fiction into joyful freefall in an absurd and inventive adventure."
+   "synopsis_en": "Madoka writes plays. Kazuma composes music. One day, they decide to go to the cinema. But once there, they realise they can interact through the screen itself, sending fiction into joyful freefall in an absurd and inventive adventure.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Mag Mag",
@@ -3367,6 +3931,11 @@
    "flags": "🇯🇵",
    "duration": "112 min",
    "genre": "Terror",
+   "_ancla": [
+    "Cineprox Las Américas - Medellín",
+    "2026-10-23",
+    "18:40"
+   ],
    "day": "2026-10-23",
    "time": "18:40",
    "day_order": 9,
@@ -3385,7 +3954,15 @@
    },
    "lbSlug": "mag-mag",
    "tmdb_id": 1536720,
-   "synopsis_en": "The revenge story of a woman whose partner is murdered by a ghost, and who will soon discover the true identity of the one she must avenge."
+   "synopsis_en": "The revenge story of a woman whose partner is murdered by a ghost, and who will soon discover the true identity of the one she must avenge.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Manual Para Invocar Fantasmas",
@@ -3397,6 +3974,11 @@
    "flags": "🇨🇴",
    "duration": "71 min",
    "genre": "Documental",
+   "_ancla": [
+    "Centro Colombo Americano - Medellín",
+    "2026-10-23",
+    "19:00"
+   ],
    "day": "2026-10-23",
    "time": "19:00",
    "day_order": 9,
@@ -3429,6 +4011,11 @@
    "flags": "🇨🇴",
    "duration": "64 min",
    "genre": "Ciencia ficción",
+   "_ancla": [
+    "Planetario de Medellín - Medellín",
+    "2026-10-23",
+    "19:00"
+   ],
    "day": "2026-10-23",
    "time": "19:00",
    "day_order": 9,
@@ -3454,6 +4041,11 @@
    "type": "event",
    "section": "🎓 Fantasmagoría Académica",
    "duration": "90 min",
+   "_ancla": [
+    "La Pascasia - Medellín",
+    "2026-10-23",
+    "19:30"
+   ],
    "day": "2026-10-23",
    "time": "19:30",
    "day_order": 9,
@@ -3478,6 +4070,11 @@
    "flags": "🇮🇩🇰🇷",
    "duration": "106 min",
    "genre": "Terror",
+   "_ancla": [
+    "Cineprox Las Américas - Medellín",
+    "2026-10-23",
+    "21:00"
+   ],
    "day": "2026-10-23",
    "time": "21:00",
    "day_order": 9,
@@ -3497,13 +4094,26 @@
    "premiere": "Estreno suramericano",
    "lbSlug": "ghost-in-the-cell",
    "tmdb_id": 1393326,
-   "synopsis_en": "In a notorious prison, an invisible force begins killing inmates brutally, compelling enemy gangs and corrupt guards to work together as they try to survive the mounting bloodshed."
+   "synopsis_en": "In a notorious prison, an invisible force begins killing inmates brutally, compelling enemy gangs and corrupt guards to work together as they try to survive the mounting bloodshed.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Fiesta Fantasmagoría: Brujas, Espectros y Otros Fantasmas",
    "type": "event",
    "section": "🎪 Actividades",
    "duration": "60 min",
+   "_ancla": [
+    "La Pascasia - Medellín",
+    "2026-10-23",
+    "21:00"
+   ],
    "day": "2026-10-23",
    "time": "21:00",
    "day_order": 9,
@@ -3525,6 +4135,11 @@
    "type": "event",
    "section": "🎓 Fantasmagoría Académica",
    "duration": "60 min",
+   "_ancla": [
+    "Librería Antimateria - Medellín",
+    "2026-10-24",
+    "15:00"
+   ],
    "day": "2026-10-24",
    "time": "15:00",
    "day_order": 10,
@@ -3549,6 +4164,11 @@
    "flags": "🇮🇹🇫🇷",
    "duration": "117 min",
    "genre": "Drama",
+   "_ancla": [
+    "Museo de Arte Moderno de Medellín - MAMM - Medellín",
+    "2026-10-24",
+    "16:30"
+   ],
    "day": "2026-10-24",
    "time": "16:30",
    "day_order": 10,
@@ -3567,7 +4187,15 @@
    "lbSlug": "red-desert",
    "tmdb_id": 26638,
    "synopsis_en": "In an industrializing Italian town, a married woman, rendered mentally unstable after a traffic accident, drifts into an affair with a friend of her husband.",
-   "title_en": "Red Desert"
+   "title_en": "Red Desert",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Luz",
@@ -3579,6 +4207,11 @@
    "flags": "🇩🇪",
    "duration": "70 min",
    "genre": "Terror",
+   "_ancla": [
+    "Centro Colombo Americano - Medellín",
+    "2026-10-24",
+    "17:00"
+   ],
    "day": "2026-10-24",
    "time": "17:00",
    "day_order": 10,
@@ -3608,6 +4241,11 @@
    "country": "Canadá, Estados Unidos, España, República Checa, Inglaterra, Colombia",
    "flags": "🇨🇦🇺🇸🇪🇸🇨🇿🇬🇧🇨🇴",
    "duration": "109 min",
+   "_ancla": [
+    "Comfama San Ignacio - Medellín",
+    "2026-10-24",
+    "18:30"
+   ],
    "day": "2026-10-24",
    "time": "18:30",
    "day_order": 10,
@@ -3757,13 +4395,18 @@
   {
    "title": "Dong Bei Jing Cha Gu Shi 3 – Fight Against Evil 3",
    "type": "film",
-   "section": "💥 Muestra de acción A Quemarropa",
+   "section": "💥 Muestra de Acción A Quemarropa",
    "director": "Bingjia Yang",
    "year": 2026,
    "country": "China",
    "flags": "🇨🇳",
    "duration": "100 min",
    "genre": "Acción",
+   "_ancla": [
+    "Cineprox Las Américas - Medellín",
+    "2026-10-24",
+    "18:40"
+   ],
    "day": "2026-10-24",
    "time": "18:40",
    "day_order": 10,
@@ -3783,13 +4426,26 @@
    "lbSlug": "fight-against-evil-3",
    "tmdb_id": 1618784,
    "synopsis_en": "Li Hongqi is forced to travel for his wedding but must team up with a local cop to rescue a girl from human traffickers, fighting criminals while racing against his wedding date.",
-   "title_en": "Fight Against Evil 3"
+   "title_en": "Fight Against Evil 3",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Cortometrajes colombianos que miran al cielo",
    "type": "film",
    "section": "🦜 Colombia es Fantástica",
    "duration": "60 min",
+   "_ancla": [
+    "Planetario de Medellín - Medellín",
+    "2026-10-24",
+    "19:00"
+   ],
    "day": "2026-10-24",
    "time": "19:00",
    "day_order": 10,
@@ -3809,13 +4465,18 @@
   {
    "title": "The Craft",
    "type": "film",
-   "section": "🕯️ Aniversario 30 años",
+   "section": "🕯️ Aniversario 30 Años",
    "director": "Andrew Fleming",
    "year": 1996,
    "country": "Estados Unidos",
    "flags": "🇺🇸",
    "duration": "101 min",
    "genre": "Terror",
+   "_ancla": [
+    "Centro Colombo Americano - Medellín",
+    "2026-10-24",
+    "19:30"
+   ],
    "day": "2026-10-24",
    "time": "19:30",
    "day_order": 10,
@@ -3847,6 +4508,11 @@
    "flags": "🇭🇰",
    "duration": "113 min",
    "genre": "Acción",
+   "_ancla": [
+    "Cineprox Las Américas - Medellín",
+    "2026-10-24",
+    "21:00"
+   ],
    "day": "2026-10-24",
    "time": "21:00",
    "day_order": 10,
@@ -3868,13 +4534,26 @@
    "lbSlug": "the-furious",
    "tmdb_id": 1280738,
    "synopsis_en": "After a criminal network kidnaps Wang Wei's daughter and the corrupt police refuse to assist him, Wei sets out on his own to locate her. Navin, a tenacious journalist whose wife has mysteriously vanished, is his only ally. In this explosive martial arts showdown, the unlikely duo fights the kidnappers ruthlessly driven by a furious vengeance.",
-   "title_en": "The Furious"
+   "title_en": "The Furious",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Evento de Clausura: Premiación y Presentación musical",
    "type": "event",
    "section": "🌙 Evento de Clausura",
    "duration": "90 min",
+   "_ancla": [
+    "Comfama San Ignacio - Medellín",
+    "2026-10-25",
+    "17:00"
+   ],
    "day": "2026-10-25",
    "time": "17:00",
    "day_order": 11,
@@ -3899,6 +4578,11 @@
    "flags": "🇮🇩",
    "duration": "119 min",
    "genre": "Acción",
+   "_ancla": [
+    "Comfama San Ignacio - Medellín",
+    "2026-10-25",
+    "19:00"
+   ],
    "day": "2026-10-25",
    "time": "19:00",
    "day_order": 11,
@@ -3927,7 +4611,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-15T09:56:28",
+  "fecha": "2026-10-16T11:02:41",
   "plan_sha": "bcc190a548850b59",
   "paso": 8,
   "cmd": "python3 pipeline/ensamblar.py fantasmagoria-2026"
