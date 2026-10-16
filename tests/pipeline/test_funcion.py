@@ -61,6 +61,14 @@ class MasReciente(unittest.TestCase):
         r = resolver([base()], [af('time', '19:30', tipo='festival-ig', fecha='2026-10-14', url=IG)])
         self.assertEqual(r.funciones[0]['time'], '19:30')
 
+    def test_la_fecha_de_la_fuente_principal_es_la_de_la_funcion(self):
+        # el crudo se regenera hoy, pero la web se leyó el 26 sep: el IG del 14 oct
+        # es más nuevo y gana la hora
+        f = base(_src={'url': 'https://festival.example/p', 'date': '2026-09-26'})
+        r = resolver([f], [af('time', '19:30', tipo='festival-ig', fecha='2026-10-14', url=IG)],
+                     fuente_principal={'tipo': 'festival-web', 'fecha': '2026-10-16', 'url': 'https://festival.example/p'})
+        self.assertEqual(r.funciones[0]['time'], '19:30')
+
     def test_lo_viejo_no_pisa_lo_nuevo(self):
         r = resolver([base()], [af('time', '18:00', tipo='festival-ig', fecha='2026-10-01', url=IG)])
         self.assertEqual(r.funciones[0]['time'], '19:00')
@@ -199,6 +207,56 @@ class Validez(unittest.TestCase):
     def test_casilla_obligatoria(self):
         self.assertEqual(funcion.faltan_obligatorias(base()), [])
         self.assertIn('time', funcion.faltan_obligatorias(base(time=None)))
+
+
+class Carga(unittest.TestCase):
+    """cargar() y contexto(): el archivo del festival y su contexto, validados."""
+
+    def setUp(self):
+        import tempfile
+        self.d = tempfile.mkdtemp()
+        os.makedirs(os.path.join(self.d, 'festivals', 'staging'))
+
+    def _escribir(self, nombre, data):
+        import json
+        with open(os.path.join(self.d, 'festivals', 'staging', nombre), 'w', encoding='utf-8') as f:
+            json.dump(data, f)
+
+    def test_sin_archivo_no_hay_afirmaciones(self):
+        self.assertIsNone(funcion.cargar('zzz-2026', raiz=self.d))
+
+    def test_archivo_sin_provenance_se_rechaza(self):
+        self._escribir('zzz-2026-afirmaciones.json', {'afirmaciones': []})
+        with self.assertRaises(funcion.AfirmacionInvalida):
+            funcion.cargar('zzz-2026', raiz=self.d)
+
+    def test_archivo_valida_cada_afirmacion(self):
+        self._escribir('zzz-2026-afirmaciones.json', {'_provenance': {'capturado': '2026-10-16'},
+                                                      'afirmaciones': [af('precio', '$7.000')]})
+        with self.assertRaises(funcion.AfirmacionInvalida):
+            funcion.cargar('zzz-2026', raiz=self.d)
+
+    def test_contexto_de_la_fuente_principal(self):
+        crudo = {'_provenance': {'url': 'https://festival.example/p', 'capturado': '2026-09-26'}}
+        c = funcion.contexto(crudo, plan={'fuente_principal': 'festival-web'}, ticketing_model='mixed')
+        self.assertEqual(c['fuente_principal'], {'tipo': 'festival-web', 'url': 'https://festival.example/p',
+                                                 'fecha': '2026-09-26'})
+        self.assertIn(CINE, c['sedes_que_cobran'])
+        self.assertEqual(c['ticketing_model'], 'mixed')
+
+    def test_contexto_sin_fecha_de_la_fuente_principal_falla(self):
+        with self.assertRaises(funcion.AfirmacionInvalida):
+            funcion.contexto({'_provenance': {'url': 'https://x'}}, plan={})
+
+    def test_afirmaciones_de_una_ancla(self):
+        xs = [af('sala', 'Sala 2'), af('sala', 'Sala 1', ancla=(CINE, '2026-10-24', '19:00'))]
+        self.assertEqual(len(funcion.de_ancla(xs, (CINE, '2026-10-23', '19:00'))), 1)
+
+
+class SedesQueCobran(unittest.TestCase):
+    def test_cada_sede_que_cobra_cita_su_fuente(self):
+        for sede, fuente in funcion.SEDES_QUE_COBRAN.items():
+            self.assertTrue(str(fuente).strip(), sede)
 
 
 class Autoprueba(unittest.TestCase):

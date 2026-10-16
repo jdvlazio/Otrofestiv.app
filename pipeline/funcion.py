@@ -12,6 +12,8 @@ Una función base trae `_ancla = (sede, día, hora)` tal como la dio la fuente
 principal. Las afirmaciones apuntan a esa ancla, que no cambia aunque una
 afirmación mueva la hora.
 """
+import json
+import os
 import re
 
 # ── las fuentes ──────────────────────────────────────────────────────────────
@@ -45,6 +47,13 @@ RANGO = {
     'existe':           [_J, _FESTIVAL | {'sala'}],
 }
 OBLIGATORIAS = ('title', 'type', 'day', 'time', 'venue')
+
+# LAS SEDES QUE SIEMPRE COBRAN: ahí, lo que nadie dice es «boleta», no «libre».
+# Una tabla, con la fuente de cada una (docs/FUNCION.md §4).
+SEDES_QUE_COBRAN = {
+    'Cinemateca de Bogotá': 'cinematecadebogota.gov.co: cada función paga trae su link de TuBoleta y '
+                            'lo libre lo dice («Entrada libre»); regla de Juan, MIDBO 13 oct 2026',
+}
 
 # ── la entrada: un enum que se traduce a los campos que la app lee ───────────
 ENTRADAS = ('libre', 'boleta', 'inscripcion', 'invitacion', 'en_linea')
@@ -175,6 +184,11 @@ def resolver(funciones, afirmaciones, contexto):
     for k in orden:
         f = por_ancla[k]
         proc = dict(f.get('_procedencia') or {})
+        # LA FECHA DE LA FUENTE PRINCIPAL ES LA DE LA FUNCIÓN: el crudo se regenera
+        # cualquier día, pero la web se leyó cuando dice su `_src.date`. Con la
+        # fecha del crudo, la web «de hoy» le ganaría la hora a un IG más nuevo
+        _d = str((f.get('_src') or {}).get('date') or '') if isinstance(f.get('_src'), dict) else ''
+        fp = dict(principal, fecha=_d) if _FECHA.match(_d) else principal
         mias = afs.get(k, [])
         # quitar
         g, c = _elegir('existe', [(a['valor'] is not False, a['fuente']) for a in mias if a['casilla'] == 'existe'])
@@ -191,7 +205,7 @@ def resolver(funciones, afirmaciones, contexto):
             else:
                 base_v = f.get(casilla)
             if base_v not in (None, '') and casilla not in proc:
-                cand.append((base_v, principal))
+                cand.append((base_v, fp))
             elif base_v not in (None, '') and casilla in proc:
                 cand.append((base_v, proc[casilla]))
             if not cand:
@@ -199,7 +213,7 @@ def resolver(funciones, afirmaciones, contexto):
             g, c = _elegir(casilla, cand)
             if c:
                 conflictos.append({'ancla': k, **c})
-                g = next(((v, fu) for v, fu in cand if fu is principal or fu is proc.get(casilla)), None)
+                g = next(((v, fu) for v, fu in cand if fu is fp or fu is proc.get(casilla)), None)
                 if not g:
                     continue
             v, fu = g[0], g[1]
@@ -229,6 +243,45 @@ def resolver(funciones, afirmaciones, contexto):
         f['duration'] = f'{n} min'
         f['_procedencia']['duration'] = {'tipo': 'regla', 'marca': 'estimado'}
     return Resultado(salida, conflictos)
+
+
+# ── el archivo de un festival y su contexto ──────────────────────────────────
+REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+
+def cargar(fid, raiz=REPO):
+    """Las afirmaciones de festivals/staging/<fid>-afirmaciones.json, validadas,
+    o None si el festival todavía no usa el modelo."""
+    p = os.path.join(raiz, 'festivals', 'staging', f'{fid}-afirmaciones.json')
+    if not os.path.exists(p):
+        return None
+    d = json.load(open(p, encoding='utf-8'))
+    if not (d.get('_provenance') or {}).get('capturado'):
+        raise AfirmacionInvalida(f'{os.path.basename(p)}: sin _provenance.capturado')
+    xs = d.get('afirmaciones') or []
+    for a in xs:
+        validar(a)
+    return xs
+
+
+def contexto(crudo, plan, ticketing_model=None):
+    """El contexto de resolver(): la fuente principal sale de la procedencia del
+    crudo (url y fecha de captura; el tipo lo dice el plan, `festival-web` si
+    no), más las sedes que cobran y el modelo de boletería del festival."""
+    pv = crudo.get('_provenance') or {}
+    fecha = str(pv.get('capturado') or '')[:10]
+    if not _FECHA.match(fecha):
+        raise AfirmacionInvalida('la fuente principal (crudo._provenance) no tiene fecha de captura')
+    tipo = (plan or {}).get('fuente_principal') or 'festival-web'
+    if tipo not in TIPOS:
+        raise AfirmacionInvalida(f'fuente principal de tipo desconocido «{tipo}»')
+    return {'fuente_principal': {'tipo': tipo, 'url': pv.get('url') or '', 'fecha': fecha},
+            'sedes_que_cobran': set(SEDES_QUE_COBRAN), 'ticketing_model': ticketing_model}
+
+
+def de_ancla(afirmaciones, ancla):
+    return [a for a in afirmaciones
+            if (a['ancla']['sede'], a['ancla']['dia'], a['ancla']['hora']) == tuple(ancla)]
 
 
 # ── autoprueba: cada regla atrapa su cebo (en memoria, nunca en disco) ───────
