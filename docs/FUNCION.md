@@ -135,7 +135,8 @@ Todavía no existen; se escriben sin corchetes para no confundirlos con los acti
 
 | Guardián | Qué vigila |
 |---|---|
-| `funcion-autoprueba` | Cada regla de la §4 atrapa su cebo (rango, más reciente, conflicto, supuesto, estimado). |
+| `[funcion-tests]` (activo) | Los tests de `tests/pipeline/test_funcion.py`: una regla por caso, probados por mutación (11/11). |
+| `[funcion-autoprueba]` (activo) | Cada regla de la §4 atrapa su cebo (rango, más reciente, conflicto, supuesto, estimado). |
 | `afirmacion-con-fuente` | Toda afirmación tiene tipo, url o frase, y fecha. Sin fuente no entra. |
 | `afirmacion-con-ancla` | Toda afirmación encuentra su función base. Si no, aborta (nunca se ignora en silencio). |
 | `conflicto-abierto` | No hay conflictos sin decisión. |
