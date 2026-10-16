@@ -129,6 +129,14 @@ publicar → igual que hoy
 - Los sidecars genéricos que ya existen sobre la función (`-duraciones`, y la parte de función de `-quitar`) se vuelven afirmaciones. `-titulos-anteriores`, `-correcciones` y `-sinopsis` siguen siendo de la obra.
 - Las herramientas que leen fuentes secundarias (el vigía, la revisión de salas, `ig-programa.py`) **proponen afirmaciones**: un archivo de propuestas que Juan aprueba por lote. No escriben en `-afirmaciones.json` solas.
 
+### 5.1 La cola de propuestas (`pipeline/propuestas.py`, 16 oct 2026)
+
+- `festivals/staging/<fid>-propuestas.json`: cada propuesta es `{id, estado: pendiente|aceptada|rechazada, por, fecha, afirmacion, decision?: {fecha, frase}, rechazada_antes?}`.
+- El **id** es el de *un dato de una fuente* (qué + quién + cuándo). La misma fuente con la misma fecha no se repite; una fuente más nueva con el mismo valor entra otra vez, y si ese valor ya se rechazó lo muestra con la frase de Juan.
+- Nadie propone en nombre de Juan (`tipo: juan` no entra por la cola). Solo un festival del modelo tiene cola.
+- **Aceptar** corre el armado real (`ensamblar.py <fid> --ver`) antes y después: si aparece un fallo nuevo, se deshace todo. La afirmación aceptada lleva `propuesta: <id>` (clave declarada; `validar` la ignora).
+- Comandos: `python3 pipeline/propuestas.py` (pendientes) · `proponer <fid> <a.json> --por <quién>` · `aceptar|rechazar <fid> <ids…|todas> --frase "…"`.
+
 ## 6. Guardianes (validate.py) — a implementar en la fase 1
 
 Todavía no existen; se escriben sin corchetes para no confundirlos con los activos. Al implementarse, cada uno toma su nombre entre corchetes.
@@ -142,6 +150,7 @@ Todavía no existen; se escriben sin corchetes para no confundirlos con los acti
 | `[conflicto-abierto]` (activo) | No hay conflictos sin decisión. |
 | `[excepcion-en-crudo]` (activo, deuda en `pipeline/funcion-deuda.json`) | Ningún crudo tiene tablas de corrección de función. Lista de deuda que solo baja, como `[dato-que-no-viaja]`. |
 | `[entrada-explicita]` (activo, deuda por festival; 0 si está en el modelo) | Toda función publicada dice su entrada, aunque sea un supuesto marcado. |
+| `[propuestas-validas]` (activo) | La cola `festivals/staging/<fid>-propuestas.json` (`pipeline/propuestas.py`): estado conocido, id que corresponde a su afirmación, decisión con frase y fecha, y toda aceptada presente en `-afirmaciones.json`. |
 | `[entrada-mixta]` (activo) | En un festival `mixed`, toda función dice si se paga (`is_free` explícito, salvo invitación). La regla `funcion.paga_supuesta` escribe `is_free: false` con marca `supuesto` donde nadie dijo nada; antes la app lo deducía de la falta del dato. Bisturí para festivales que no se re-arman: `pipeline/entrada-paga-supuesta.py`. Festivales sin `ticketing_model`: todo libre, supuesto declarado aquí y no por función (16 oct 2026). |
 | `casilla-obligatoria` | Día, hora, sede, título y tipo en toda función. |
 
