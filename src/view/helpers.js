@@ -697,7 +697,9 @@ export function keepCityOnly(sel){ return isCitySel(sel)?sel:'all'; }
 // El regex se conserva como respaldo, no por nostalgia: los festivales ya
 // montados (FICCI 65 con 9 sedes-sala, Cinemancia, Tercer Tiempo) traen la sala
 // dentro del nombre y seguirían funcionando sin re-onboardearlos.
+// Con LA FUNCIÓN (objeto) su `sala` manda: el modelo la publica por función (BHFF).
 export function sala(v){
+  if(v&&typeof v==='object'){ if(String(v.sala||'').trim()) return String(v.sala).trim(); v=v.venue; }
   const _room=(vcfg(v)||{}).room;
   if(_room) return String(_room).trim();
   const s=String(v||'');
@@ -715,7 +717,8 @@ export function sala(v){
 // Frente a la clave cruda tiene además la ventaja de ser legible: «UNIBAC · Sala 1»
 // en vez de «Salón 1 ‒ Miguel Sebastián Guerrero, unibac».
 export function venueLabel(v){
-  const nombre=(vcfg(v)||{}).short||String(v||'');
+  const _sede=v&&typeof v==='object'?v.venue:v;
+  const nombre=(vcfg(_sede)||{}).short||String(_sede||'');
   const _sala=sala(v);
   return _sala?`${nombre} · ${_sala}`:nombre;
 }
@@ -828,7 +831,7 @@ export function icsCampos(s){
   return {
     uid:icsUid(s), start, end,
     summary:_p(s._title),
-    location:_p(venueLabel(s.venue)),          // edificio · sala (dueño único)
+    location:_p(venueLabel(s)),          // edificio · sala (dueño único)
     description:`${_p(cfg.name||'Festival')} - ${_p(s.section)} - ${_dur}`,
     seccion:_p(s.section),                      // el puente nativo la usa aparte
   };

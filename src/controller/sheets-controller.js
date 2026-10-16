@@ -81,7 +81,7 @@ const _PRESS_ICO=`<svg width="12" height="12" viewBox="0 0 24 24" fill="none" st
 function _screeningRows(pairs, opts){
   return pairs.map(({s,owner})=>{
     const dayAbb=dayLabel(s.day)||s.day;
-    const vc=vcfg(s.venue),sl=sala(s.venue);
+    const vc=vcfg(s.venue),sl=sala(s);
     const _festCity=(FESTIVAL_CONFIG[_activeFestId]||{}).city||'';
     // sinCiudad: la ficha ya filtró por ciudad y la nombra arriba — acá sobra.
     const _city=(opts&&opts.sinCiudad)?'':(_festCity&&vc.city&&vc.city!==_festCity?vc.city:'');

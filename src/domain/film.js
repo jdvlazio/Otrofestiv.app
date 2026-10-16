@@ -384,6 +384,8 @@ export function _endedStats(){
 // explodeScreenings — screenings[] → un objeto plano por función.
 // Compatibilidad total con el formato plano existente (day/time/venue).
 export function explodeScreenings(films){
+  const _CASILLAS_FUNCION=['has_qa','qa_type','premiere','ticket_url','requires_registration','duration','invitados'];
+
   const exploded=[];
   (films||[]).forEach(f=>{
     if(Array.isArray(f.screenings)&&f.screenings.length){
@@ -403,7 +405,10 @@ export function explodeScreenings(films){
           ...(s.film_start?{film_start:s.film_start}:{}),
           // El formulario es de ESA actividad, no del festival (la Master Class de
           // FICDEH se titula con su propio nombre) → viaja por función, como is_free.
-          ...(s.registration_url?{registration_url:s.registration_url}:{})
+          ...(s.registration_url?{registration_url:s.registration_url}:{}),
+          // El resto de las casillas de la función (docs/FUNCION.md §4): si la
+          // función la dice, manda sobre la de la obra; si no, queda la de la obra.
+          ...Object.fromEntries(_CASILLAS_FUNCION.filter(k=>s[k]!=null&&s[k]!=='').map(k=>[k,s[k]]))
         }));
       });
     } else {
