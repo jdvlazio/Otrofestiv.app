@@ -204,7 +204,7 @@ def mayuscula_inicial(s):
 CONSERVABLES = ('director', 'year', 'duration', 'country', 'synopsis', 'synopsis_lang', 'genre', 'title_en')
 
 
-def _conservar_publicado(fid, films):
+def _conservar_publicado(fid, films, sin=()):
     """Lo que ya publicamos de una obra no se pierde porque la fuente lo calle.
 
     Ficcali, 8 oct 2026: la edición del sitio borró año, duración, dirección o
@@ -253,7 +253,7 @@ def _conservar_publicado(fid, films):
             v = pub.get(o.get('title'))
             if not v:
                 continue
-            kept = [k for k in CONSERVABLES if not o.get(k) and v.get(k)
+            kept = [k for k in CONSERVABLES if k not in sin and not o.get(k) and v.get(k)
                     and (o.get('title'), k) not in quitar]
             for k in kept:
                 o[k] = v[k]
@@ -403,9 +403,10 @@ def ensamblar(fid, escribir=True):
             'language': f.get('idioma') or None,
             'genre': f.get('genero') or None,
             'rating': f.get('clasificacion') or None,
-            # EL ANCLA de la función (docs/FUNCION.md §3.1): sede, día y hora tal como
-            # los dio la fuente principal. Las afirmaciones apuntan acá
-            '_ancla': (f.get('sede'), f.get('dia'), f.get('hora')),
+            # EL ANCLA de la función (docs/FUNCION.md §3.1): el venue PUBLICADO (con
+            # su ciudad: «Cinema Local» existe en Bogotá y en Cali, FICDEH), día y
+            # hora tal como los dio la fuente principal
+            '_ancla': (sede, f.get('dia'), f.get('hora')),
             'day': f.get('dia'), 'time': f.get('hora'), 'day_order': orden.get(f.get('dia')),
             'venue': sede, 'sala': sala or None,
             'event_kind': f.get('event_kind') or None,
@@ -634,21 +635,52 @@ def ensamblar(fid, escribir=True):
                     _o['section'] = caja.seccion(_o['section'])
         out['sections'] = {caja.seccion(k): v for k, v in out['sections'].items()}
     # EL MODELO DE LA FUNCIÓN (docs/FUNCION.md): si el festival tiene
-    # <fid>-afirmaciones.json, cada casilla se resuelve con su regla. Un conflicto
-    # (dos fuentes del mismo rango que no coinciden) FRENA: lo decide Juan
+    # <fid>-afirmaciones.json, cada función recibe su id estable (C1), cada
+    # casilla se resuelve con su regla, y un conflicto o una afirmación que no
+    # encuentra su función FRENA con un reporte en <fid>-conflictos.json (C9)
     _afs = funcion.cargar(fid)
+    _conf_p = f'{REPO}/festivals/staging/{fid}-conflictos.json'
     if _afs is not None:
-        _r = funcion.resolver(films, _afs, funcion.contexto(crudo, cfg, funcion.ticketing_model_de(fid)))
-        if _r.conflictos:
-            sys.exit(f'✗ {fid}: {len(_r.conflictos)} conflicto(s) entre fuentes, sin decisión:\n  · ' +
-                     '\n  · '.join(f"{c['ancla']} · {c['casilla']}: " +
-                                    ' / '.join(f"{o['valor']!r} ({o['fuente']['tipo']} {o['fuente']['fecha']})"
-                                               for o in c['opciones']) for c in _r.conflictos))
+        _reg_p = f'{REPO}/festivals/staging/{fid}-funciones-ids.json'
+        _reg = json.load(open(_reg_p, encoding='utf-8')) if os.path.exists(_reg_p) else {}
+        films[:], _reg, _avisos = funcion.asignar_ids(films, _reg)
+        for _x in _avisos:
+            print(f'  · función: {_x}')
+        try:
+            _r = funcion.resolver(films, _afs, funcion.contexto(crudo, cfg, funcion.ticketing_model_de(fid)))
+            _conf = _r.conflictos
+        except (funcion.AnclaPerdida, funcion.AfirmacionInvalida) as _e:
+            _r, _conf = None, [{'tipo': 'afirmacion-rota', 'detalle': str(_e)}]
+        if _conf:
+            if escribir:   # H2: --ver no escribe nada
+                json.dump({'_provenance': lib.provenance('ensamblar.py: conflictos del modelo de la función'),
+                           'conflictos': _conf}, open(_conf_p, 'w', encoding='utf-8'), ensure_ascii=False, indent=1, default=str)
+            sys.exit(f'✗ {fid}: {len(_conf)} conflicto(s) del modelo de la función, sin decisión → '
+                     f'{os.path.relpath(_conf_p, REPO)}\n  · ' + '\n  · '.join(
+                         c.get('detalle') or f"{c.get('funcion')} · {c.get('casilla')} ({c.get('tipo', 'empate')}): " +
+                         ' / '.join(f"{o['valor']!r} ({o['fuente']['tipo']} {o['fuente'].get('publicado') or o['fuente']['fecha']})"
+                                    for o in c.get('opciones', [])) for c in _conf))
+        if escribir:   # H2: --ver no escribe nada
+            if os.path.exists(_conf_p):
+                os.remove(_conf_p)
+            # L7: el registro se reescribe solo si cambió lo que guarda (sin ruido diario)
+            _viejo = json.load(open(_reg_p, encoding='utf-8')).get('funciones') if os.path.exists(_reg_p) else None
+            if _viejo != _reg['funciones']:
+                json.dump({'_provenance': lib.provenance('ensamblar.py: ids estables de las funciones (docs/FUNCION.md C1)'),
+                           **_reg}, open(_reg_p, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
         films[:] = _r.funciones
         print(f'  modelo de la función: {len(_afs)} afirmaciones · {len(films)} funciones')
-    _conservar_publicado(fid, films)
+    # H1 (revisión del 16 oct): en un festival del modelo la duración NO se repone
+    # de lo publicado — lo publicado puede ser una ESTIMACIÓN de la corrida
+    # anterior, y volvería como dato. Las correcciones reales van por -duraciones
+    # o por afirmaciones
+    _conservar_publicado(fid, films, sin=('duration',) if _afs is not None else ())
     _duraciones_corregidas(fid, films)
     _titulos_anteriores(fid, films)
+    # C2: la duración que siga vacía se ESTIMA al final, después de reponer lo
+    # publicado y las duraciones corregidas — nunca antes
+    if _afs is not None:
+        funcion.estimar_duraciones(films)
     out['films'] = films
 
     print(f'  {fid}: {len(films)} funciones · {len(venues)} sedes · {len(secciones)} secciones '

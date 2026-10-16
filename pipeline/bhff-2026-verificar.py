@@ -89,7 +89,7 @@ def main():
                 continue
             sede, sala = SALA[e['sala']]
             h = hora_de_la_parrilla(e['hora'], e['periodo'])
-            _ancla = (sede.rsplit(' - ', 1)[0], dia, h)
+            _ancla = (sede, dia, h)
             _esp = funcion.resolver([{'title': t, 'type': 'film', 'day': dia, 'time': h, 'venue': sede,
                                       'sala': sala, '_ancla': _ancla}],
                                     funcion.de_ancla(AFS, _ancla), CTX).funciones[0]
