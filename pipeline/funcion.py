@@ -279,6 +279,20 @@ def contexto(crudo, plan, ticketing_model=None):
             'sedes_que_cobran': set(SEDES_QUE_COBRAN), 'ticketing_model': ticketing_model}
 
 
+def ticketing_model_de(fid, config_js=None):
+    """El `ticketing_model` del festival en src/config.js ('paid' | 'mixed'), o
+    None. Se lee del bloque del festival, hasta su cierre."""
+    if config_js is None:
+        config_js = open(os.path.join(REPO, 'src', 'config.js'), encoding='utf-8').read()
+    clave = fid.replace('-', '')
+    i = config_js.find(f"'{clave}': {{")
+    if i < 0:
+        return None
+    j = config_js.find('\n  },', i)
+    m = re.search(r"ticketing_model:\s*'(paid|mixed)'", config_js[i:j if j > 0 else None])
+    return m.group(1) if m else None
+
+
 def de_ancla(afirmaciones, ancla):
     return [a for a in afirmaciones
             if (a['ancla']['sede'], a['ancla']['dia'], a['ancla']['hora']) == tuple(ancla)]

@@ -253,6 +253,17 @@ class Carga(unittest.TestCase):
         self.assertEqual(len(funcion.de_ancla(xs, (CINE, '2026-10-23', '19:00'))), 1)
 
 
+class Boleteria(unittest.TestCase):
+    def test_modelo_de_boleteria_desde_config(self):
+        cfg = "  'zzz2026': {\n    name:'Z',\n    ticketing_model:'mixed',\n    films:null\n  },\n  'yyy2026': {\n    name:'Y',films:null\n  },"
+        self.assertEqual(funcion.ticketing_model_de('zzz-2026', cfg), 'mixed')
+        self.assertIsNone(funcion.ticketing_model_de('yyy-2026', cfg))
+        self.assertIsNone(funcion.ticketing_model_de('xxx-2026', cfg))
+
+    def test_bhff_es_mixto_en_el_repo(self):
+        self.assertEqual(funcion.ticketing_model_de('bhff-2026'), 'mixed')
+
+
 class SedesQueCobran(unittest.TestCase):
     def test_cada_sede_que_cobra_cita_su_fuente(self):
         for sede, fuente in funcion.SEDES_QUE_COBRAN.items():

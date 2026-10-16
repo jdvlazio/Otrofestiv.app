@@ -24,6 +24,7 @@ import json, os, re, sys, collections
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import caja  # noqa: E402
+import funcion  # noqa: E402
 import lib
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -402,6 +403,9 @@ def ensamblar(fid, escribir=True):
             'language': f.get('idioma') or None,
             'genre': f.get('genero') or None,
             'rating': f.get('clasificacion') or None,
+            # EL ANCLA de la función (docs/FUNCION.md §3.1): sede, día y hora tal como
+            # los dio la fuente principal. Las afirmaciones apuntan acá
+            '_ancla': (f.get('sede'), f.get('dia'), f.get('hora')),
             'day': f.get('dia'), 'time': f.get('hora'), 'day_order': orden.get(f.get('dia')),
             'venue': sede, 'sala': sala or None,
             'event_kind': f.get('event_kind') or None,
@@ -629,6 +633,19 @@ def ensamblar(fid, escribir=True):
                 if _o.get('section'):
                     _o['section'] = caja.seccion(_o['section'])
         out['sections'] = {caja.seccion(k): v for k, v in out['sections'].items()}
+    # EL MODELO DE LA FUNCIÓN (docs/FUNCION.md): si el festival tiene
+    # <fid>-afirmaciones.json, cada casilla se resuelve con su regla. Un conflicto
+    # (dos fuentes del mismo rango que no coinciden) FRENA: lo decide Juan
+    _afs = funcion.cargar(fid)
+    if _afs is not None:
+        _r = funcion.resolver(films, _afs, funcion.contexto(crudo, cfg, funcion.ticketing_model_de(fid)))
+        if _r.conflictos:
+            sys.exit(f'✗ {fid}: {len(_r.conflictos)} conflicto(s) entre fuentes, sin decisión:\n  · ' +
+                     '\n  · '.join(f"{c['ancla']} · {c['casilla']}: " +
+                                    ' / '.join(f"{o['valor']!r} ({o['fuente']['tipo']} {o['fuente']['fecha']})"
+                                               for o in c['opciones']) for c in _r.conflictos))
+        films[:] = _r.funciones
+        print(f'  modelo de la función: {len(_afs)} afirmaciones · {len(films)} funciones')
     _conservar_publicado(fid, films)
     _duraciones_corregidas(fid, films)
     _titulos_anteriores(fid, films)
