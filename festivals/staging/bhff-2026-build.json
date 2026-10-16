@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "bogotahorrorfilmfest.com/programacion/ (arreglo PROGRAMACION del HTML) + IG p/DdcszK2Dn7g (franjas nacionales)",
-  "capturado": "2026-10-15",
+  "capturado": "2026-10-16",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "radar": 1030,
@@ -231,6 +231,11 @@
    "flags": "🇨🇴",
    "duration": "124 min",
    "genre": "Comedia",
+   "_ancla": [
+    "Cinemateca de Bogotá",
+    "2026-10-22",
+    "19:00"
+   ],
    "day": "2026-10-22",
    "time": "19:00",
    "day_order": 0,
@@ -244,13 +249,81 @@
    "posterSource": "oficial",
    "_src": {
     "url": "https://bogotahorrorfilmfest.com/programacion/",
-    "date": "2026-09-26",
-    "film_start": "https://www.instagram.com/p/DcxA28kjgVo/"
+    "date": "2026-09-26"
    },
-   "film_start": "19:30",
    "premiere": "Inauguración",
    "lbSlug": "parapeto",
-   "tmdb_id": 1662539
+   "tmdb_id": 1662539,
+   "is_free": false,
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839533",
+   "film_start": "19:30",
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "sala": {
+     "tipo": "sala",
+     "fecha": "2026-10-15",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/3619?sede=11"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "entrada": {
+     "tipo": "sala",
+     "fecha": "2026-10-15",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/3619?sede=11"
+    },
+    "ticket_url": {
+     "tipo": "sala",
+     "fecha": "2026-10-15",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/3619?sede=11"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "qa_type": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "film_start": {
+     "tipo": "festival-ig",
+     "fecha": "2026-09-01",
+     "url": "https://www.instagram.com/p/DcxA28kjgVo/"
+    },
+    "premiere": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    }
+   }
   },
   {
    "title": "Sigilo",
@@ -261,6 +334,11 @@
    "country": "Argentina",
    "flags": "🇦🇷",
    "duration": "70 min",
+   "_ancla": [
+    "Casa 32",
+    "2026-10-23",
+    "18:00"
+   ],
    "day": "2026-10-23",
    "time": "18:00",
    "day_order": 1,
@@ -274,9 +352,51 @@
     "url": "https://bogotahorrorfilmfest.com/programacion/",
     "date": "2026-09-26"
    },
-   "is_free": true,
    "lbSlug": "sigilo-1",
-   "tmdb_id": 1387484
+   "tmdb_id": 1387484,
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    }
+   }
   },
   {
    "title": "Hiperrealidad",
@@ -288,11 +408,16 @@
    "flags": "🇦🇷",
    "duration": "81 min",
    "genre": "Terror",
+   "_ancla": [
+    "Cinemateca de Bogotá",
+    "2026-10-23",
+    "19:00"
+   ],
    "day": "2026-10-23",
    "time": "19:00",
    "day_order": 1,
    "venue": "Cinemateca de Bogotá - Bogotá",
-   "sala": "Sala 3",
+   "sala": "Sala 2",
    "has_qa": false,
    "synopsis": "En la antesala de su concierto, Santiago, un joven director de orquesta, recibe una noticia trágica que lo arrastra a un viaje de culpa, distorsión y terror.  La realidad se quiebra: bucles temporales, un monstruo que acecha y la posible extinción de la humanidad envuelven su mundo.",
    "synopsis_lang": "es",
@@ -304,7 +429,61 @@
    },
    "lbSlug": "hiperrealidad",
    "tmdb_id": 1568478,
-   "synopsis_en": "Just before his concert, Santiago, a young conductor, receives tragic news that sends him on a journey of guilt, distortion, and terror. Reality shatters: time loops, a lurking monster, and the possible extinction of humanity engulf his world."
+   "synopsis_en": "Just before his concert, Santiago, a young conductor, receives tragic news that sends him on a journey of guilt, distortion, and terror. Reality shatters: time loops, a lurking monster, and the possible extinction of humanity engulf his world.",
+   "is_free": false,
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839534",
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "sala": {
+     "tipo": "sala",
+     "fecha": "2026-10-15",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/3620?sede=11"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "entrada": {
+     "tipo": "sala",
+     "fecha": "2026-10-15",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/3620?sede=11"
+    },
+    "ticket_url": {
+     "tipo": "sala",
+     "fecha": "2026-10-15",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/3620?sede=11"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    }
+   }
   },
   {
    "title": "Sierra: El Álbum Mortuorio",
@@ -316,6 +495,11 @@
    "flags": "🇨🇴",
    "duration": "88 min",
    "genre": "Terror",
+   "_ancla": [
+    "Cinemateca de Bogotá",
+    "2026-10-24",
+    "19:30"
+   ],
    "day": "2026-10-24",
    "time": "19:30",
    "day_order": 2,
@@ -332,7 +516,66 @@
     "date": "2026-09-26"
    },
    "lbSlug": "sierra-el-album-mortuorio",
-   "tmdb_id": 1789536
+   "tmdb_id": 1789536,
+   "is_free": false,
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839535",
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "sala": {
+     "tipo": "sala",
+     "fecha": "2026-10-15",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/3621?sede=11"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "entrada": {
+     "tipo": "sala",
+     "fecha": "2026-10-15",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/3621?sede=11"
+    },
+    "ticket_url": {
+     "tipo": "sala",
+     "fecha": "2026-10-15",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/3621?sede=11"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "qa_type": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    }
+   }
   },
   {
    "title": "Moviedreams + Chaika",
@@ -341,11 +584,16 @@
    "country": "Argentina, Colombia",
    "flags": "🇦🇷🇨🇴",
    "duration": "122 min",
+   "_ancla": [
+    "Cinemateca de Bogotá",
+    "2026-10-25",
+    "18:30"
+   ],
    "day": "2026-10-25",
    "time": "18:30",
    "day_order": 3,
    "venue": "Cinemateca de Bogotá - Bogotá",
-   "sala": "Sala 3",
+   "sala": "Sala 2",
    "has_qa": true,
    "qa_type": "team",
    "_src": {
@@ -384,7 +632,71 @@
      "genre": "Ciencia Ficción",
      "synopsis_lang": "es"
     }
-   ]
+   ],
+   "is_free": false,
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839536",
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "sala": {
+     "tipo": "sala",
+     "fecha": "2026-10-15",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/3622?sede=11"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "entrada": {
+     "tipo": "sala",
+     "fecha": "2026-10-15",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/3622?sede=11"
+    },
+    "ticket_url": {
+     "tipo": "sala",
+     "fecha": "2026-10-15",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/3622?sede=11"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "qa_type": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    }
+   }
   },
   {
    "title": "Cerdo que Sobrevivió a la Fiebre Aftosa + Yatsi y el Espíritu del Río",
@@ -393,6 +705,11 @@
    "country": "Corea del Sur, Perú",
    "flags": "🇰🇷🇵🇪",
    "duration": "114 min",
+   "_ancla": [
+    "Cinemateca de Bogotá",
+    "2026-10-27",
+    "17:00"
+   ],
    "day": "2026-10-27",
    "time": "17:00",
    "day_order": 5,
@@ -440,7 +757,71 @@
      "genre": "Animación",
      "synopsis_lang": "es"
     }
-   ]
+   ],
+   "is_free": false,
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839537",
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "sala": {
+     "tipo": "sala",
+     "fecha": "2026-10-15",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/3623?sede=11"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "entrada": {
+     "tipo": "sala",
+     "fecha": "2026-10-15",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/3623?sede=11"
+    },
+    "ticket_url": {
+     "tipo": "sala",
+     "fecha": "2026-10-15",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/3623?sede=11"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "qa_type": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    }
+   }
   },
   {
    "title": "La Muerte No Llega Sola",
@@ -449,6 +830,11 @@
    "country": "Colombia",
    "flags": "🇨🇴",
    "duration": "95 min",
+   "_ancla": [
+    "Cinemateca de Bogotá",
+    "2026-10-27",
+    "19:30"
+   ],
    "day": "2026-10-27",
    "time": "19:30",
    "day_order": 5,
@@ -565,7 +951,66 @@
      "poster": "/assets/bhff-2026/el-laberinto-del-cuerpo.jpg",
      "posterSource": "oficial"
     }
-   ]
+   ],
+   "is_free": false,
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839538",
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "sala": {
+     "tipo": "sala",
+     "fecha": "2026-10-15",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/3624?sede=11"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "entrada": {
+     "tipo": "sala",
+     "fecha": "2026-10-15",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/3624?sede=11"
+    },
+    "ticket_url": {
+     "tipo": "sala",
+     "fecha": "2026-10-15",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/3624?sede=11"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    }
+   }
   },
   {
    "title": "Work in Progress",
@@ -576,16 +1021,80 @@
    "country": "Perú",
    "flags": "🇵🇪",
    "duration": "119 min",
+   "_ancla": [
+    "Cinemateca de Bogotá",
+    "2026-10-28",
+    "16:00"
+   ],
    "day": "2026-10-28",
    "time": "16:00",
    "day_order": 6,
    "venue": "Cinemateca de Bogotá - Bogotá",
-   "sala": "Sala 3",
+   "sala": "Sala 2",
    "has_qa": true,
    "qa_type": "team",
    "_src": {
     "url": "https://bogotahorrorfilmfest.com/programacion/",
     "date": "2026-09-26"
+   },
+   "is_free": false,
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839539",
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "sala": {
+     "tipo": "sala",
+     "fecha": "2026-10-15",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/3625?sede=11"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "entrada": {
+     "tipo": "sala",
+     "fecha": "2026-10-15",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/3625?sede=11"
+    },
+    "ticket_url": {
+     "tipo": "sala",
+     "fecha": "2026-10-15",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/3625?sede=11"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "qa_type": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    }
    }
   },
   {
@@ -595,6 +1104,11 @@
    "country": "España, Chile",
    "flags": "🇪🇸🇨🇱",
    "duration": "70 min",
+   "_ancla": [
+    "Cinemateca de Bogotá",
+    "2026-10-28",
+    "16:30"
+   ],
    "day": "2026-10-28",
    "time": "16:30",
    "day_order": 6,
@@ -672,7 +1186,71 @@
      "tmdb_id": 1647552,
      "synopsis_en": "Six high-society women gather in a mansion bound by a secret pact, a pact one of them has broken and whose consequences will be disastrous. Who is the traitor?"
     }
-   ]
+   ],
+   "is_free": false,
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839540",
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "sala": {
+     "tipo": "sala",
+     "fecha": "2026-10-15",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/3626?sede=11"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "entrada": {
+     "tipo": "sala",
+     "fecha": "2026-10-15",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/3626?sede=11"
+    },
+    "ticket_url": {
+     "tipo": "sala",
+     "fecha": "2026-10-15",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/3626?sede=11"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "qa_type": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    }
+   }
   },
   {
    "title": "El Susurro + Esquirlas de Caracol",
@@ -681,6 +1259,11 @@
    "country": "Uruguay, Argentina, Colombia",
    "flags": "🇺🇾🇦🇷🇨🇴",
    "duration": "100 min",
+   "_ancla": [
+    "Cinemateca de Bogotá",
+    "2026-10-29",
+    "17:00"
+   ],
    "day": "2026-10-29",
    "time": "17:00",
    "day_order": 7,
@@ -726,7 +1309,66 @@
     }
    ],
    "description": "Lucía y Adrián, dos hermanos que huyen de la oscura herencia de su padre vampiro, llegan a una casona aislada en el bosque, buscando refugio del pasado. Su intento de olvidar se interrumpe cuando un gato les trae un dedo humano, lo que revela un secreto aterrador: sus vecinos forman parte de una red criminal que secuestra adolescentes para producir películas snuff, y planean deshacerse de ellos. Mientras Lucía lucha por proteger a su hermano, deberá enfrentar una oscura maldición familiar que los persigue en su aparente refugio.",
-   "description_lang": "es"
+   "description_lang": "es",
+   "is_free": false,
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839542",
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "sala": {
+     "tipo": "sala",
+     "fecha": "2026-10-15",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/3627?sede=11"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "entrada": {
+     "tipo": "sala",
+     "fecha": "2026-10-15",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/3627?sede=11"
+    },
+    "ticket_url": {
+     "tipo": "sala",
+     "fecha": "2026-10-15",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/3627?sede=11"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    }
+   }
   },
   {
    "title": "Donde Duermen los Sueños",
@@ -738,6 +1380,11 @@
    "flags": "🇵🇪",
    "duration": "78 min",
    "genre": "Drama",
+   "_ancla": [
+    "Centro Felicidad Chapinero",
+    "2026-10-29",
+    "17:30"
+   ],
    "day": "2026-10-29",
    "time": "17:30",
    "day_order": 7,
@@ -752,11 +1399,58 @@
     "url": "https://bogotahorrorfilmfest.com/programacion/",
     "date": "2026-09-26"
    },
-   "is_free": true,
    "lbSlug": "where-dreams-sleep",
    "tmdb_id": 1168428,
    "synopsis_en": "A man plunged into grief connects through his dreams with the love he lost in a car accident.",
-   "title_en": "Where Dreams Sleep"
+   "title_en": "Where Dreams Sleep",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "qa_type": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    }
+   }
   },
   {
    "title": "La Demonatrix + Gabriel",
@@ -765,6 +1459,11 @@
    "country": "Estados Unidos, Colombia",
    "flags": "🇺🇸🇨🇴",
    "duration": "90 min",
+   "_ancla": [
+    "Co.Laboratorio",
+    "2026-10-29",
+    "18:00"
+   ],
    "day": "2026-10-29",
    "time": "18:00",
    "day_order": 7,
@@ -775,7 +1474,6 @@
     "url": "https://bogotahorrorfilmfest.com/programacion/",
     "date": "2026-09-26"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -803,7 +1501,60 @@
      "genre": "Ficción",
      "synopsis_lang": "es"
     }
-   ]
+   ],
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "qa_type": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    }
+   }
   },
   {
    "title": "Algo No Está Bien",
@@ -812,6 +1563,11 @@
    "country": "Colombia",
    "flags": "🇨🇴",
    "duration": "95 min",
+   "_ancla": [
+    "Cinemateca de Bogotá",
+    "2026-10-29",
+    "19:30"
+   ],
    "day": "2026-10-29",
    "time": "19:30",
    "day_order": 7,
@@ -921,7 +1677,66 @@
      "genre": "Ciencia ficción",
      "synopsis_lang": "es"
     }
-   ]
+   ],
+   "is_free": false,
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839543",
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "sala": {
+     "tipo": "sala",
+     "fecha": "2026-10-15",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/3628?sede=11"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "entrada": {
+     "tipo": "sala",
+     "fecha": "2026-10-15",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/3628?sede=11"
+    },
+    "ticket_url": {
+     "tipo": "sala",
+     "fecha": "2026-10-15",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/3628?sede=11"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    }
+   }
   },
   {
    "title": "Hay Algo Esperando",
@@ -930,6 +1745,11 @@
    "country": "México, España, Argentina",
    "flags": "🇲🇽🇪🇸🇦🇷",
    "duration": "100 min",
+   "_ancla": [
+    "Cinemateca de Bogotá",
+    "2026-10-30",
+    "17:00"
+   ],
    "day": "2026-10-30",
    "time": "17:00",
    "day_order": 8,
@@ -1020,7 +1840,66 @@
      "title_en": "Unit 8",
      "genre": "Fantasía"
     }
-   ]
+   ],
+   "is_free": false,
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839544",
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "sala": {
+     "tipo": "sala",
+     "fecha": "2026-10-15",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/3629?sede=11"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "entrada": {
+     "tipo": "sala",
+     "fecha": "2026-10-15",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/3629?sede=11"
+    },
+    "ticket_url": {
+     "tipo": "sala",
+     "fecha": "2026-10-15",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/3629?sede=11"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    }
+   }
   },
   {
    "title": "MEAT the Movie + El Teatro",
@@ -1029,6 +1908,11 @@
    "country": "Estados Unidos",
    "flags": "🇺🇸",
    "duration": "134 min",
+   "_ancla": [
+    "Casa 32",
+    "2026-10-30",
+    "18:00"
+   ],
    "day": "2026-10-30",
    "time": "18:00",
    "day_order": 8,
@@ -1038,7 +1922,6 @@
     "url": "https://bogotahorrorfilmfest.com/programacion/",
     "date": "2026-09-26"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -1058,7 +1941,55 @@
      "poster": "/assets/bhff-2026/el-teatro.jpg",
      "posterSource": "oficial"
     }
-   ]
+   ],
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    }
+   }
   },
   {
    "title": "Tarde o Temprano + Siempre hay un monstruo",
@@ -1067,6 +1998,11 @@
    "country": "Colombia, España",
    "flags": "🇨🇴🇪🇸",
    "duration": "91 min",
+   "_ancla": [
+    "Cinemateca de Bogotá",
+    "2026-10-30",
+    "19:30"
+   ],
    "day": "2026-10-30",
    "time": "19:30",
    "day_order": 8,
@@ -1111,7 +2047,71 @@
      "genre": "Terror",
      "synopsis_lang": "es"
     }
-   ]
+   ],
+   "is_free": false,
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839545",
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "sala": {
+     "tipo": "sala",
+     "fecha": "2026-10-15",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/3630?sede=11"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "entrada": {
+     "tipo": "sala",
+     "fecha": "2026-10-15",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/3630?sede=11"
+    },
+    "ticket_url": {
+     "tipo": "sala",
+     "fecha": "2026-10-15",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/3630?sede=11"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "qa_type": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    }
+   }
   },
   {
    "title": "Mamá, la Casa No Es Segura",
@@ -1120,11 +2120,16 @@
    "country": "Colombia",
    "flags": "🇨🇴",
    "duration": "105 min",
+   "_ancla": [
+    "Cinemateca de Bogotá",
+    "2026-10-31",
+    "16:00"
+   ],
    "day": "2026-10-31",
    "time": "16:00",
    "day_order": 9,
    "venue": "Cinemateca de Bogotá - Bogotá",
-   "sala": "Sala 3",
+   "sala": "Sala 2",
    "has_qa": true,
    "qa_type": "team",
    "_src": {
@@ -1231,13 +2236,82 @@
      "synopsis": "Quién no se ha visto en las altas horas de la noche, cayendo en un agujero de conejo virtual que nos atrapa por horas en vez de hacer nuestras labores?… Que tal que ese tema se convirtiera en realidad? Un relato de terror digital que estremecerá a todos los trabajadores independientes.",
      "synopsis_lang": "es"
     }
-   ]
+   ],
+   "is_free": false,
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839546",
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "sala": {
+     "tipo": "sala",
+     "fecha": "2026-10-15",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/3631?sede=11"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "entrada": {
+     "tipo": "sala",
+     "fecha": "2026-10-15",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/3631?sede=11"
+    },
+    "ticket_url": {
+     "tipo": "sala",
+     "fecha": "2026-10-15",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/3631?sede=11"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "qa_type": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    }
+   }
   },
   {
    "title": "Clausura + Proyección Corto Nacional Ganador",
    "type": "event",
    "section": "🌙 Clausura",
    "duration": "120 min",
+   "_ancla": [
+    "Cinemateca de Bogotá",
+    "2026-10-31",
+    "19:00"
+   ],
    "day": "2026-10-31",
    "time": "19:00",
    "day_order": 9,
@@ -1250,7 +2324,60 @@
     "date": "2026-09-26"
    },
    "description": "Cierre del festival · Entrega de premios.",
-   "description_lang": "es"
+   "description_lang": "es",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "sala": {
+     "tipo": "sala",
+     "fecha": "2026-10-15",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/3632?sede=11"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "entrada": {
+     "tipo": "sala",
+     "fecha": "2026-10-15",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/3632?sede=11"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    }
+   }
   }
  ],
  "_avisos_duracion": [
@@ -1258,7 +2385,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-15T08:39:24",
+  "fecha": "2026-10-16T05:10:44",
   "plan_sha": "2ffdc359c921f8c4",
   "paso": 7,
   "cmd": "python3 pipeline/ensamblar.py bhff-2026"
