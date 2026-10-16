@@ -974,6 +974,25 @@
    "posterSource": "tmdb"
   },
   {
+   "titulo": "Fordlândia Panacea",
+   "tmdb_id": 1559606,
+   "titulo_original": "Fordlândia Panacea",
+   "poster_path": "/pbOBnjauFPr7g8gJ8CSNq5JLjT5.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "In 1928, industrialist Henry Ford built a company town in the Brazilian jungle and established a rubber plantation. Within a few years his industrial utopia collapsed, coming to an end in 1945. Fordlândia was largely abandoned and became known as a ghost town.",
+   "genero": "Documental",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 66,
+   "pais_tmdb": "Brazil",
+   "lbSlug": "fordlandia-panacea",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Fordlândia Panacea",
+   "_director": "Susana de Sousa Dias",
+   "_sondeado": "2026-10-15",
+   "poster": "/assets/midbo-2026/fordlandia-panacea.jpg",
+   "posterSource": "tmdb"
+  },
+  {
    "titulo": "Geografía espectral",
    "tmdb_id": 1657838,
    "titulo_original": "Geografía Espectral",
@@ -3565,6 +3584,24 @@
    ],
    "_sinopsis_de": "ya publicada en cineautopsia-2026",
    "poster": "/assets/midbo-2026/filme-pin.jpg",
+   "posterSource": "tmdb"
+  },
+  "Fordlândia Panacea": {
+   "tmdb_id": 1559606,
+   "titulo_original": "Fordlândia Panacea",
+   "poster_path": "/pbOBnjauFPr7g8gJ8CSNq5JLjT5.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "In 1928, industrialist Henry Ford built a company town in the Brazilian jungle and established a rubber plantation. Within a few years his industrial utopia collapsed, coming to an end in 1945. Fordlândia was largely abandoned and became known as a ghost town.",
+   "genero": "Documental",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 66,
+   "pais_tmdb": "Brazil",
+   "lbSlug": "fordlandia-panacea",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Fordlândia Panacea",
+   "_director": "Susana de Sousa Dias",
+   "_sondeado": "2026-10-15",
+   "poster": "/assets/midbo-2026/fordlandia-panacea.jpg",
    "posterSource": "tmdb"
   },
   "Geografía espectral": {

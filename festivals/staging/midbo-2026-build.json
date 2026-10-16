@@ -147,7 +147,7 @@
    "archetype": "Retrospectiva / Tributo",
    "order": 1
   },
-  "🪞 Espejos: Gestos de reparación": {
+  "🪞 Espejos: Gestos de Reparación": {
    "en": "Mirrors: Gestures of Repair",
    "archetype": "Perspectivas / Miradas",
    "order": 2
@@ -157,7 +157,7 @@
    "archetype": "Competencia",
    "order": 3
   },
-  "✨ Programas especiales": {
+  "✨ Programas Especiales": {
    "en": "Special Programs",
    "archetype": "Especiales / Eventos",
    "order": 4
@@ -167,14 +167,14 @@
    "archetype": "Muestra / País",
    "order": 5
   },
-  "🎬 Proyecciones": {
-   "en": "Screenings",
-   "archetype": "Especiales / Eventos",
-   "order": 6
-  },
   "🌎 Competencia Iberoamericana de Largometraje Documental": {
    "en": "Ibero-American Feature Documentary Competition",
    "archetype": "Competencia",
+   "order": 6
+  },
+  "🎬 Proyecciones": {
+   "en": "Screenings",
+   "archetype": "Especiales / Eventos",
    "order": 7
   },
   "🎞️ Competencia Nacional de Cortometraje Documental": {
@@ -202,12 +202,12 @@
    "archetype": "Competencia",
    "order": 12
   },
-  "🏘️ CREAndo documental en los barrios": {
+  "🏘️ CREAndo Documental en los Barrios": {
    "en": "CREAndo: Documentary in the Neighborhoods",
    "archetype": "Cortos / Programas",
    "order": 13
   },
-  "🏅 Homenaje a Pablo Mora Calderón. Premio ALADOS a toda una vida": {
+  "🏅 Homenaje a Pablo Mora Calderón. Premio ALADOS a Toda una Vida": {
    "en": "Tribute to Pablo Mora Calderón — ALADOS Lifetime Award",
    "archetype": "Retrospectiva / Tributo",
    "order": 14
@@ -386,9 +386,9 @@
    "title_en": "Our Body"
   },
   {
-   "title": "Espejos: Gestos de reparación",
+   "title": "Espejos: Gestos de Reparación",
    "type": "film",
-   "section": "🪞 Espejos: Gestos de reparación",
+   "section": "🪞 Espejos: Gestos de Reparación",
    "country": "Colombia",
    "flags": "🇨🇴",
    "duration": "57 min",
@@ -434,12 +434,15 @@
      "tmdb_id": 1794426,
      "genre": "Documental"
     }
+   ],
+   "titulos_anteriores": [
+    "Espejos: Gestos de reparación"
    ]
   },
   {
    "title": "Si La Escombrera hablara",
    "type": "film",
-   "section": "🪞 Espejos: Gestos de reparación",
+   "section": "🪞 Espejos: Gestos de Reparación",
    "director": "Juan Prado",
    "country": "Colombia",
    "flags": "🇨🇴",
@@ -528,7 +531,7 @@
   {
    "title": "L'Evangile de la Révolution",
    "type": "film",
-   "section": "🪞 Espejos: Gestos de reparación",
+   "section": "🪞 Espejos: Gestos de Reparación",
    "director": "François-Xavier Drouet",
    "country": "Francia, Bélgica",
    "flags": "🇫🇷🇧🇪",
@@ -589,7 +592,7 @@
   {
    "title": "Hijo de tigre y mula",
    "type": "film",
-   "section": "✨ Programas especiales",
+   "section": "✨ Programas Especiales",
    "director": "Annie Canavaggio",
    "country": "Panamá, Colombia",
    "flags": "🇵🇦🇨🇴",
@@ -673,6 +676,36 @@
    "_programa_original": "Programa 3: Instrucciones para cuando no esté"
   },
   {
+   "title": "Fordlândia Panacea",
+   "type": "film",
+   "section": "🌎 Competencia Iberoamericana de Largometraje Documental",
+   "director": "Susana de Sousa Dias",
+   "year": 2025,
+   "country": "Portugal, Brasil",
+   "flags": "🇵🇹🇧🇷",
+   "duration": "66 min",
+   "genre": "Documental",
+   "day": "2026-10-29",
+   "time": "14:30",
+   "day_order": 2,
+   "venue": "Cinemateca de Bogotá - Bogotá",
+   "sala": "Sala 3",
+   "has_qa": false,
+   "synopsis": "Fordlândia suele presentarse en internet como un «pueblo fantasma» y como un proyecto utópico de Henry Ford. Sin embargo, la ciudad empresarial amazónica, fundada en 1928, nunca fue una utopía. Tampoco es un pueblo fantasma; por el contrario, está llena de vida. Aquí, los fantasmas son fuerzas históricas activas: Ford, capitalismo, extractivismo. «Fordlândia Panacea» aborda los puntos ciegos de esta historia y revela el entrelazamiento entre pasado y presente, así como la tensión entre lo espectral y la vida.",
+   "synopsis_lang": "es",
+   "poster": "/assets/midbo-2026/fordlandia-panacea.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://midbo.co/peliculas/fordlandia-panacea/",
+    "date": "2026-10-10"
+   },
+   "ticket_url": "https://tuboleta.com/es/eventos/fordlandia-panacea",
+   "premiere": "Estreno en Colombia",
+   "lbSlug": "fordlandia-panacea",
+   "tmdb_id": 1559606,
+   "synopsis_en": "In 1928, industrialist Henry Ford built a company town in the Brazilian jungle and established a rubber plantation. Within a few years his industrial utopia collapsed, coming to an end in 1945. Fordlândia was largely abandoned and became known as a ghost town."
+  },
+  {
    "title": "Cuando cierro los ojos",
    "type": "film",
    "section": "🎬 Proyecciones",
@@ -705,7 +738,7 @@
   {
    "title": "Buenos días, Wiracocha",
    "type": "film",
-   "section": "🪞 Espejos: Gestos de reparación",
+   "section": "🪞 Espejos: Gestos de Reparación",
    "director": "Mauricio Godoy",
    "country": "Perú, México",
    "flags": "🇵🇪🇲🇽",
@@ -737,7 +770,7 @@
   {
    "title": "Latidos",
    "type": "film",
-   "section": "🪞 Espejos: Gestos de reparación",
+   "section": "🪞 Espejos: Gestos de Reparación",
    "director": "Baptista Joao",
    "country": "España",
    "flags": "🇪🇸",
@@ -794,7 +827,7 @@
    "title_en": "Our Body Is an Expanding Star"
   },
   {
-   "title": "Programa 3: Creadoras de vida — Bodega Insurgesta",
+   "title": "Programa 3: Creadoras de Vida — Bodega Insurgesta",
    "type": "film",
    "section": "🎞️ Competencia Nacional de Cortometraje Documental",
    "country": "Colombia, Francia, Austria",
@@ -874,12 +907,15 @@
      "synopsis_en": "Two women exchange cinematic letters that connect the past and present. Heidrun, a Viennese woman, and Sara, a Colombian migrant, live in the city at different times—whether in fiction or reality is not always clear.",
      "title_en": "Winter Flowers Garden"
     }
+   ],
+   "titulos_anteriores": [
+    "Programa 3: Creadoras de vida — Bodega Insurgesta"
    ]
   },
   {
-   "title": "Programa 3: Acompañar y restituir la memoria familiar y colectiva",
+   "title": "Programa 3: Acompañar y Restituir la Memoria Familiar y Colectiva",
    "type": "film",
-   "section": "🪞 Espejos: Gestos de reparación",
+   "section": "🪞 Espejos: Gestos de Reparación",
    "country": "Honduras, Portugal, Hungría, Bélgica, Ecuador",
    "flags": "🇭🇳🇵🇹🇭🇺🇧🇪🇪🇨",
    "duration": "96 min",
@@ -927,6 +963,9 @@
      "synopsis_en": "Chronicle of the judicial process for the murder of 16-year-old student Paúl Guañuna, committed by police officers in 2007. The fight of a father and thousands of young people against racism, authoritarianism and impunity.",
      "genre": "Documental"
     }
+   ],
+   "titulos_anteriores": [
+    "Programa 3: Acompañar y restituir la memoria familiar y colectiva"
    ]
   },
   {
@@ -960,7 +999,7 @@
    "synopsis_en": "On the border between Morocco and Spain, a group of travelers is eagerly waiting to cross over to Europe."
   },
   {
-   "title": "Programa 1: Pasaje entre mundos: duelo y memoria",
+   "title": "Programa 1: Pasaje entre Mundos: Duelo y Memoria",
    "type": "film",
    "section": "🎞️ Competencia Nacional de Cortometraje Documental",
    "country": "Colombia, Canadá",
@@ -1076,6 +1115,9 @@
      "lbSlug": "lo-que-no-esta",
      "tmdb_id": 1794415
     }
+   ],
+   "titulos_anteriores": [
+    "Programa 1: Pasaje entre mundos: duelo y memoria"
    ]
   },
   {
@@ -1266,7 +1308,7 @@
    "title_en": "Letters to My Dead Parents"
   },
   {
-   "title": "Programa 1: Materias insumisas",
+   "title": "Programa 1: Materias Insumisas",
    "type": "film",
    "section": "📽️ Competencia Iberoamericana de Cortometraje Documental",
    "country": "Brasil, Argentina, Colombia, Portugal, Bolivia",
@@ -1343,6 +1385,9 @@
      "synopsis_en": "Fragments of pottery. Gold, silver, jewellery. Contemporary art. Luciana Decker Orozco visits various museums and collections in London, tracing a homegrown past present on another continent. Each piece are windows that open and close, briefly revealing what they hide, a mystery that she encapsulates in her celluloid and magical editing.",
      "title_en": "Shards"
     }
+   ],
+   "titulos_anteriores": [
+    "Programa 1: Materias insumisas"
    ]
   },
   {
@@ -1528,7 +1573,7 @@
    "synopsis_en": "In the streets of Algiers, jacaranda trees bloom like shards of memory. Following in the footsteps of his father, Ameziane, a writer haunted by these purple trees, Hassen Ferhani explores the city, legacy and love. A rich and intimate quest in which writing, filming or choosing beauty become acts of resistance."
   },
   {
-   "title": "Programa 1: Desatender el mandato",
+   "title": "Programa 1: Desatender el Mandato",
    "type": "film",
    "section": "🇨🇴 Panorama Nacional de Documental",
    "country": "Colombia, Países Bajos, Francia",
@@ -1597,6 +1642,9 @@
      "synopsis_en": "In the waters of Colombia’s Pacific coast, life is celebrated through a particular kind of song: the Arrullos. This music honors life in a territory marked by violence and armed conflict, where enslaved people once found refuge at the end of colonial rule. In these same waters, each year, thousands of whales arrive from Antarctica to give birth. Pacífico weaves a polyphonic narrative around birth in an aquatic space where body, territory, and memory are deeply intertwined.",
      "genre": "Documental"
     }
+   ],
+   "titulos_anteriores": [
+    "Programa 1: Desatender el mandato"
    ]
   },
   {
@@ -1659,7 +1707,7 @@
    "title_en": "The Way I Like It"
   },
   {
-   "title": "Programa 2: Geografías en resistencia",
+   "title": "Programa 2: Geografías en Resistencia",
    "type": "film",
    "section": "🎞️ Competencia Nacional de Cortometraje Documental",
    "country": "Colombia, Cuba",
@@ -1752,12 +1800,15 @@
      "title_en": "Into the fog",
      "genre": "Documental"
     }
+   ],
+   "titulos_anteriores": [
+    "Programa 2: Geografías en resistencia"
    ]
   },
   {
-   "title": "Programa 5: Gestos de expresión sobre violencias basadas en género",
+   "title": "Programa 5: Gestos de Expresión sobre Violencias Basadas en Género",
    "type": "film",
-   "section": "🪞 Espejos: Gestos de reparación",
+   "section": "🪞 Espejos: Gestos de Reparación",
    "country": "México, Guatemala, Estados Unidos",
    "flags": "🇲🇽🇬🇹🇺🇸",
    "duration": "107 min",
@@ -1805,12 +1856,15 @@
      "synopsis_en": "From the shadows of a Guatemalan neighbourhood scared into silence, two sisters lead a luminous rebellion—unleashing joy, art, and radical truth in a fight for survival.",
      "genre": "Documental"
     }
+   ],
+   "titulos_anteriores": [
+    "Programa 5: Gestos de expresión sobre violencias basadas en género"
    ]
   },
   {
-   "title": "Programa 3: Nacer de nuevo, escuchar la vida",
+   "title": "Programa 3: Nacer de Nuevo, Escuchar la Vida",
    "type": "film",
-   "section": "✨ Programas especiales",
+   "section": "✨ Programas Especiales",
    "country": "Canada, Haití, Cuba, Colombia",
    "flags": "🇨🇦🇭🇹🇨🇺🇨🇴",
    "duration": "60 min",
@@ -1873,10 +1927,13 @@
      "tmdb_id": 1476255,
      "genre": "Documental"
     }
+   ],
+   "titulos_anteriores": [
+    "Programa 3: Nacer de nuevo, escuchar la vida"
    ]
   },
   {
-   "title": "Cortometrajes restaurados",
+   "title": "Cortometrajes Restaurados",
    "type": "film",
    "section": "🕰️ Retrospectiva: Sara Gómez",
    "country": "Cuba",
@@ -1962,12 +2019,15 @@
      "title_en": "Treasure Island",
      "genre": "Documental"
     }
+   ],
+   "titulos_anteriores": [
+    "Cortometrajes restaurados"
    ]
   },
   {
    "title": "Bojayá: la verdad desde adentro",
    "type": "film",
-   "section": "🪞 Espejos: Gestos de reparación",
+   "section": "🪞 Espejos: Gestos de Reparación",
    "director": "Ramón Alexander Valencia Córdoba",
    "country": "Colombia",
    "flags": "🇨🇴",
@@ -2023,9 +2083,9 @@
    "title_en": "Lost Men"
   },
   {
-   "title": "Programa 2: Algún día escribire(mos) sobre flores como si fueran nuestras",
+   "title": "Programa 2: Algún Día escribire(mos) sobre Flores como si Fueran Nuestras",
    "type": "film",
-   "section": "✨ Programas especiales",
+   "section": "✨ Programas Especiales",
    "country": "Escocia (Reino Unido), Croacia, España, Colombia",
    "flags": "🇬🇧🇭🇷🇪🇸🇨🇴",
    "duration": "114 min",
@@ -2104,6 +2164,9 @@
      "lbSlug": "sol-de-niebla",
      "tmdb_id": 1791609
     }
+   ],
+   "titulos_anteriores": [
+    "Programa 2: Algún día escribire(mos) sobre flores como si fueran nuestras"
    ]
   },
   {
@@ -2195,9 +2258,9 @@
    "synopsis_en": "\"At 105, Sixto Muñoz, known as 'the last Tinigua man', left his home for one final journey into the Amazon and disappeared. Following his trail along the Guayabero River, the film retraces his fading world and the extinction of an entire culture.\""
   },
   {
-   "title": "CREAndo documental en los barrios",
+   "title": "CREAndo Documental en los Barrios",
    "type": "film",
-   "section": "🏘️ CREAndo documental en los barrios",
+   "section": "🏘️ CREAndo Documental en los Barrios",
    "country": "Colombia",
    "flags": "🇨🇴",
    "duration": "100 min",
@@ -2325,12 +2388,15 @@
      "lbSlug": "legados-de-un-mismo-suelo",
      "tmdb_id": 1794414
     }
+   ],
+   "titulos_anteriores": [
+    "CREAndo documental en los barrios"
    ]
   },
   {
    "title": "¿Quién paga el pato? + Crónica de un baile de muñeco",
    "type": "film",
-   "section": "🏅 Homenaje a Pablo Mora Calderón. Premio ALADOS a toda una vida",
+   "section": "🏅 Homenaje a Pablo Mora Calderón. Premio ALADOS a Toda una Vida",
    "country": "Colombia",
    "flags": "🇨🇴",
    "duration": "80 min",
@@ -2370,7 +2436,7 @@
    ]
   },
   {
-   "title": "Programa 3: Creadoras de vida",
+   "title": "Programa 3: Creadoras de Vida",
    "type": "film",
    "section": "🎞️ Competencia Nacional de Cortometraje Documental",
    "country": "Colombia, Francia, Austria",
@@ -2466,10 +2532,13 @@
      "synopsis_en": "Two women exchange cinematic letters that connect the past and present. Heidrun, a Viennese woman, and Sara, a Colombian migrant, live in the city at different times—whether in fiction or reality is not always clear.",
      "title_en": "Winter Flowers Garden"
     }
+   ],
+   "titulos_anteriores": [
+    "Programa 3: Creadoras de vida"
    ]
   },
   {
-   "title": "Programa 2: Imágenes para otro pasado",
+   "title": "Programa 2: Imágenes para Otro Pasado",
    "type": "film",
    "section": "📽️ Competencia Iberoamericana de Cortometraje Documental",
    "country": "Cuba, Bolivia, Perú, Chile, España, Países Bajos",
@@ -2550,6 +2619,9 @@
      "synopsis_en": "Albert Kuhn uses a personal, analytical, and cinematic lens to examine how an untold family history leaves its mark on the second and third generations. Kuhn’s father emigrated from Germany to Barcelona in the 1970s, leaving behind his native country and the family he was born into.",
      "genre": "Documental"
     }
+   ],
+   "titulos_anteriores": [
+    "Programa 2: Imágenes para otro pasado"
    ]
   },
   {
@@ -2641,7 +2713,7 @@
    ]
   },
   {
-   "title": "Programa 2: Geografías en resistencia — Canterbury Café",
+   "title": "Programa 2: Geografías en Resistencia — Canterbury Café",
    "type": "film",
    "section": "🎞️ Competencia Nacional de Cortometraje Documental",
    "country": "Colombia, Cuba",
@@ -2724,10 +2796,13 @@
      "title_en": "Into the fog",
      "genre": "Documental"
     }
+   ],
+   "titulos_anteriores": [
+    "Programa 2: Geografías en resistencia — Canterbury Café"
    ]
   },
   {
-   "title": "Programa 1: Miradas convulsas desde el presente",
+   "title": "Programa 1: Miradas Convulsas desde el Presente",
    "type": "film",
    "section": "🗺️ Panorama Internacional de Cortometraje Documental",
    "country": "Francia, Finlandia, Suiza",
@@ -2809,12 +2884,15 @@
      "synopsis_en": "How does a machine learn to read the world? Testimonies and screen recordings introduce the experience of online micro-workers from the Global South: their job is to teach the AI of self-driving cars to navigate the streets of the Global North.",
      "genre": "Documental"
     }
+   ],
+   "titulos_anteriores": [
+    "Programa 1: Miradas convulsas desde el presente"
    ]
   },
   {
-   "title": "Programa 1: Tanto trabajo por hacer",
+   "title": "Programa 1: Tanto Trabajo por Hacer",
    "type": "film",
-   "section": "✨ Programas especiales",
+   "section": "✨ Programas Especiales",
    "country": "Japón, Cuba",
    "flags": "🇯🇵🇨🇺",
    "duration": "58 min",
@@ -2857,6 +2935,9 @@
      "title_en": "My Contribution",
      "genre": "Documental"
     }
+   ],
+   "titulos_anteriores": [
+    "Programa 1: Tanto trabajo por hacer"
    ]
   },
   {
@@ -2920,7 +3001,7 @@
   {
    "title": "Sey Arimaku, la otra oscuridad + Galu Dugbis – La memoria de las abuelas",
    "type": "film",
-   "section": "🏅 Homenaje a Pablo Mora Calderón. Premio ALADOS a toda una vida",
+   "section": "🏅 Homenaje a Pablo Mora Calderón. Premio ALADOS a Toda una Vida",
    "country": "Colombia",
    "flags": "🇨🇴",
    "duration": "67 min",
@@ -2957,7 +3038,7 @@
   {
    "title": "Buenos días, Wiracocha",
    "type": "film",
-   "section": "🪞 Espejos: Gestos de reparación",
+   "section": "🪞 Espejos: Gestos de Reparación",
    "director": "Mauricio Godoy",
    "country": "Perú, México",
    "flags": "🇵🇪🇲🇽",
@@ -2986,9 +3067,9 @@
    "_programa_original": "Programa 6: Restitución de archivos para una memoria política latinoamericana"
   },
   {
-   "title": "Programa 1: Tanto trabajo por hacer",
+   "title": "Programa 1: Tanto Trabajo por Hacer",
    "type": "film",
-   "section": "✨ Programas especiales",
+   "section": "✨ Programas Especiales",
    "country": "Japón, Cuba",
    "flags": "🇯🇵🇨🇺",
    "duration": "58 min",
@@ -3031,12 +3112,15 @@
      "title_en": "My Contribution",
      "genre": "Documental"
     }
+   ],
+   "titulos_anteriores": [
+    "Programa 1: Tanto trabajo por hacer"
    ]
   },
   {
    "title": "Si La Escombrera hablara",
    "type": "film",
-   "section": "🪞 Espejos: Gestos de reparación",
+   "section": "🪞 Espejos: Gestos de Reparación",
    "director": "Juan Prado",
    "country": "Colombia",
    "flags": "🇨🇴",
@@ -3117,7 +3201,7 @@
    "is_free": true
   },
   {
-   "title": "Programa 1: Pasaje entre mundos: duelo y memoria",
+   "title": "Programa 1: Pasaje entre Mundos: Duelo y Memoria",
    "type": "film",
    "section": "🎞️ Competencia Nacional de Cortometraje Documental",
    "country": "Colombia, Canadá",
@@ -3233,12 +3317,15 @@
      "lbSlug": "lo-que-no-esta",
      "tmdb_id": 1794415
     }
+   ],
+   "titulos_anteriores": [
+    "Programa 1: Pasaje entre mundos: duelo y memoria"
    ]
   },
   {
    "title": "Sey Arimaku, la otra oscuridad + Galu Dugbis – La memoria de las abuelas",
    "type": "film",
-   "section": "🏅 Homenaje a Pablo Mora Calderón. Premio ALADOS a toda una vida",
+   "section": "🏅 Homenaje a Pablo Mora Calderón. Premio ALADOS a Toda una Vida",
    "country": "Colombia",
    "flags": "🇨🇴",
    "duration": "67 min",
@@ -3333,7 +3420,7 @@
    "synopsis_en": "\"At 105, Sixto Muñoz, known as 'the last Tinigua man', left his home for one final journey into the Amazon and disappeared. Following his trail along the Guayabero River, the film retraces his fading world and the extinction of an entire culture.\""
   },
   {
-   "title": "Programa 3: Volvemos a nacer",
+   "title": "Programa 3: Volvemos a Nacer",
    "type": "film",
    "section": "📽️ Competencia Iberoamericana de Cortometraje Documental",
    "country": "Chile, México, Portugal, España, Argentina, Brasil",
@@ -3465,12 +3552,15 @@
      "synopsis_en": "Four children play an online multiplayer game, collaborating on strategies to advance while each trying to stay alive.",
      "genre": "Documental"
     }
+   ],
+   "titulos_anteriores": [
+    "Programa 3: Volvemos a nacer"
    ]
   },
   {
-   "title": "Programa 7: Reactivar los archivos para el presente",
+   "title": "Programa 7: Reactivar los Archivos para el Presente",
    "type": "film",
-   "section": "🪞 Espejos: Gestos de reparación",
+   "section": "🪞 Espejos: Gestos de Reparación",
    "country": "Francia, Bélgica, Brasil, Chile, Argentina",
    "flags": "🇫🇷🇧🇪🇧🇷🇨🇱🇦🇷",
    "duration": "97 min",
@@ -3536,6 +3626,9 @@
      "title_en": "An Oscillating Shadow",
      "genre": "Documental"
     }
+   ],
+   "titulos_anteriores": [
+    "Programa 7: Reactivar los archivos para el presente"
    ]
   },
   {
@@ -3570,7 +3663,7 @@
   {
    "title": "Bojayá: la verdad desde adentro",
    "type": "film",
-   "section": "🪞 Espejos: Gestos de reparación",
+   "section": "🪞 Espejos: Gestos de Reparación",
    "director": "Ramón Alexander Valencia Córdoba",
    "country": "Colombia",
    "flags": "🇨🇴",
@@ -3653,7 +3746,7 @@
    "synopsis_en": "Lolita en Honda is an intimate journey into family memory, in which Daniel Torres explores his grandmother's childhood to unravel the marks of abandonment and internalized violence that shaped her character."
   },
   {
-   "title": "Programa 2: Esta tierra canta premoniciones",
+   "title": "Programa 2: Esta Tierra Canta Premoniciones",
    "type": "film",
    "section": "🗺️ Panorama Internacional de Cortometraje Documental",
    "country": "Brasil, Hungría, Portugal, Bélgica, Francia, Marruecos, Italia, Catar",
@@ -3738,6 +3831,9 @@
      "title_en": "The Orchards",
      "genre": "Documental"
     }
+   ],
+   "titulos_anteriores": [
+    "Programa 2: Esta tierra canta premoniciones"
    ]
   },
   {
@@ -4034,7 +4130,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-15T13:09:00",
+  "fecha": "2026-10-15T21:10:29",
   "plan_sha": "3bda549d3825e850",
   "paso": 6,
   "cmd": "python3 pipeline/ensamblar.py midbo-2026"
