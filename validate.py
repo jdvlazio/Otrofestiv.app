@@ -6909,6 +6909,20 @@ elif _D9['mixta']:
 else:
     ok(check, 'en todo festival mixed, cada función dice si se paga')
 
+check = 'propuestas-validas'
+try:
+    import os as _ospr9, sys as _syspr9
+    _syspr9.path.insert(0, _ospr9.path.join(_ospr9.path.dirname(_ospr9.path.abspath(__file__)), 'pipeline'))
+    import propuestas as _pr9
+    _PR9 = _pr9.verificar()
+    if _PR9:
+        fail(check, 'la cola de propuestas no cuadra: ' + ' · '.join(_PR9[:8]))
+    else:
+        _np9 = sum(len(v) for v in _pr9.pendientes().values())
+        ok(check, f'cola de propuestas sana ({_np9} pendiente/s)')
+except Exception as _e:
+    fail(check, f'no pudo medirse: {_e}')
+
 check = 'afirmaciones-validas'
 if 'error' in _D9:
     fail(check, f'no pudo medirse: {_D9["error"]}')
