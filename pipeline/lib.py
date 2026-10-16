@@ -761,10 +761,44 @@ def sellar_build(fid, paso, cmd, repo=None):
     if not os.path.exists(b):
         return None
     d = json.load(open(b, encoding='utf-8'))
+    # un FALLO de un paso posterior sobrevive a un sello nuevo de un paso anterior:
+    # volver a ensamblar no arregla el verificador que falló después
+    _f = (d.get('_corrido') or {}).get('fallo')
     d['_corrido'] = {'por': 'pipeline/correr.py', 'fecha': datetime.datetime.now().isoformat(timespec='seconds'),
-                     'plan_sha': sello_plan(fid, R), 'paso': paso, 'cmd': cmd}
+                     'plan_sha': sello_plan(fid, R), 'paso': paso, 'cmd': cmd,
+                     **({'fallo': _f} if _f and _f.get('paso', 0) > paso else {})}
     json.dump(d, open(b, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     return d['_corrido']
+
+
+def _corrido_editar(fid, repo, fn):
+    b = f'{repo or REPO}/festivals/staging/{fid}-build.json'
+    if not os.path.exists(b):
+        return
+    d = json.load(open(b, encoding='utf-8'))
+    if not d.get('_corrido'):
+        return
+    fn(d['_corrido'])
+    json.dump(d, open(b, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+
+
+def marcar_fallo(fid, paso, cmd, repo=None):
+    """correr.py: el paso `paso` falló. El build sellado antes deja de ser
+    publicable hasta que ese paso vuelva a pasar (16 oct 2026: se publicó dos
+    veces en local un build cuyo verificador había fallado)."""
+    _corrido_editar(fid, repo, lambda c: c.update(fallo={'paso': paso, 'cmd': cmd,
+                    'fecha': datetime.datetime.now().isoformat(timespec='seconds')}))
+
+
+def limpiar_fallo(fid, paso, repo=None, cmd=None):
+    """correr.py: el paso `paso` (con su comando) pasó; si era el que había
+    fallado, se limpia. Se compara también el comando: si el plan se renumeró,
+    otro paso con el mismo número no limpia un fallo ajeno."""
+    def _l(c):
+        fa = c.get('fallo') or {}
+        if fa.get('paso') == paso and (cmd is None or fa.get('cmd') == cmd):
+            c.pop('fallo')
+    _corrido_editar(fid, repo, _l)
 
 
 def sello_valido(fid, build, repo=None):
@@ -772,6 +806,9 @@ def sello_valido(fid, build, repo=None):
     c = (build or {}).get('_corrido') or {}
     if not c:
         return False, 'el build no lleva sello: no lo produjo pipeline/correr.py'
+    if c.get('fallo'):
+        return False, (f'después del sello falló el paso {c["fallo"]["paso"]} ({c["fallo"]["cmd"]}): '
+                       f'repetilo con --paso {c["fallo"]["paso"]} hasta que pase')
     if c.get('plan_sha') != sello_plan(fid, repo):
         return False, (f'el sello es de otro plan (sha {c.get("plan_sha")} ≠ {sello_plan(fid, repo)}): '
                        f'el plan cambió después de correr')

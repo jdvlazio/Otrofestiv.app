@@ -232,7 +232,7 @@
    "duration": "124 min",
    "genre": "Comedia",
    "_ancla": [
-    "Cinemateca de Bogotá",
+    "Cinemateca de Bogotá - Bogotá",
     "2026-10-22",
     "19:00"
    ],
@@ -254,6 +254,7 @@
    "premiere": "Inauguración",
    "lbSlug": "parapeto",
    "tmdb_id": 1662539,
+   "_fid": "f_4def04d293",
    "is_free": false,
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839533",
    "film_start": "19:30",
@@ -335,7 +336,7 @@
    "flags": "🇦🇷",
    "duration": "70 min",
    "_ancla": [
-    "Casa 32",
+    "Casa 32 - Bogotá",
     "2026-10-23",
     "18:00"
    ],
@@ -354,6 +355,7 @@
    },
    "lbSlug": "sigilo-1",
    "tmdb_id": 1387484,
+   "_fid": "f_48787e7295",
    "is_free": true,
    "_procedencia": {
     "day": {
@@ -409,7 +411,7 @@
    "duration": "81 min",
    "genre": "Terror",
    "_ancla": [
-    "Cinemateca de Bogotá",
+    "Cinemateca de Bogotá - Bogotá",
     "2026-10-23",
     "19:00"
    ],
@@ -430,6 +432,7 @@
    "lbSlug": "hiperrealidad",
    "tmdb_id": 1568478,
    "synopsis_en": "Just before his concert, Santiago, a young conductor, receives tragic news that sends him on a journey of guilt, distortion, and terror. Reality shatters: time loops, a lurking monster, and the possible extinction of humanity engulf his world.",
+   "_fid": "f_747a1b55a9",
    "is_free": false,
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839534",
    "_procedencia": {
@@ -496,7 +499,7 @@
    "duration": "88 min",
    "genre": "Terror",
    "_ancla": [
-    "Cinemateca de Bogotá",
+    "Cinemateca de Bogotá - Bogotá",
     "2026-10-24",
     "19:30"
    ],
@@ -517,6 +520,7 @@
    },
    "lbSlug": "sierra-el-album-mortuorio",
    "tmdb_id": 1789536,
+   "_fid": "f_c89a65a296",
    "is_free": false,
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839535",
    "_procedencia": {
@@ -585,7 +589,7 @@
    "flags": "🇦🇷🇨🇴",
    "duration": "122 min",
    "_ancla": [
-    "Cinemateca de Bogotá",
+    "Cinemateca de Bogotá - Bogotá",
     "2026-10-25",
     "18:30"
    ],
@@ -633,6 +637,7 @@
      "synopsis_lang": "es"
     }
    ],
+   "_fid": "f_7c6fef807c",
    "is_free": false,
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839536",
    "_procedencia": {
@@ -706,7 +711,7 @@
    "flags": "🇰🇷🇵🇪",
    "duration": "114 min",
    "_ancla": [
-    "Cinemateca de Bogotá",
+    "Cinemateca de Bogotá - Bogotá",
     "2026-10-27",
     "17:00"
    ],
@@ -758,6 +763,7 @@
      "synopsis_lang": "es"
     }
    ],
+   "_fid": "f_c466b733d4",
    "is_free": false,
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839537",
    "_procedencia": {
@@ -831,7 +837,7 @@
    "flags": "🇨🇴",
    "duration": "95 min",
    "_ancla": [
-    "Cinemateca de Bogotá",
+    "Cinemateca de Bogotá - Bogotá",
     "2026-10-27",
     "19:30"
    ],
@@ -952,6 +958,7 @@
      "posterSource": "oficial"
     }
    ],
+   "_fid": "f_a2c9656691",
    "is_free": false,
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839538",
    "_procedencia": {
@@ -1022,7 +1029,7 @@
    "flags": "🇵🇪",
    "duration": "119 min",
    "_ancla": [
-    "Cinemateca de Bogotá",
+    "Cinemateca de Bogotá - Bogotá",
     "2026-10-28",
     "16:00"
    ],
@@ -1037,6 +1044,7 @@
     "url": "https://bogotahorrorfilmfest.com/programacion/",
     "date": "2026-09-26"
    },
+   "_fid": "f_0e2be82d02",
    "is_free": false,
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839539",
    "_procedencia": {
@@ -1105,7 +1113,7 @@
    "flags": "🇪🇸🇨🇱",
    "duration": "70 min",
    "_ancla": [
-    "Cinemateca de Bogotá",
+    "Cinemateca de Bogotá - Bogotá",
     "2026-10-28",
     "16:30"
    ],
@@ -1187,6 +1195,7 @@
      "synopsis_en": "Six high-society women gather in a mansion bound by a secret pact, a pact one of them has broken and whose consequences will be disastrous. Who is the traitor?"
     }
    ],
+   "_fid": "f_77f76646a6",
    "is_free": false,
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839540",
    "_procedencia": {
@@ -1260,7 +1269,7 @@
    "flags": "🇺🇾🇦🇷🇨🇴",
    "duration": "100 min",
    "_ancla": [
-    "Cinemateca de Bogotá",
+    "Cinemateca de Bogotá - Bogotá",
     "2026-10-29",
     "17:00"
    ],
@@ -1310,6 +1319,7 @@
    ],
    "description": "Lucía y Adrián, dos hermanos que huyen de la oscura herencia de su padre vampiro, llegan a una casona aislada en el bosque, buscando refugio del pasado. Su intento de olvidar se interrumpe cuando un gato les trae un dedo humano, lo que revela un secreto aterrador: sus vecinos forman parte de una red criminal que secuestra adolescentes para producir películas snuff, y planean deshacerse de ellos. Mientras Lucía lucha por proteger a su hermano, deberá enfrentar una oscura maldición familiar que los persigue en su aparente refugio.",
    "description_lang": "es",
+   "_fid": "f_fed20a6a39",
    "is_free": false,
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839542",
    "_procedencia": {
@@ -1381,7 +1391,7 @@
    "duration": "78 min",
    "genre": "Drama",
    "_ancla": [
-    "Centro Felicidad Chapinero",
+    "Centro Felicidad Chapinero - Bogotá",
     "2026-10-29",
     "17:30"
    ],
@@ -1403,6 +1413,7 @@
    "tmdb_id": 1168428,
    "synopsis_en": "A man plunged into grief connects through his dreams with the love he lost in a car accident.",
    "title_en": "Where Dreams Sleep",
+   "_fid": "f_f9eb6c114e",
    "is_free": true,
    "_procedencia": {
     "day": {
@@ -1460,7 +1471,7 @@
    "flags": "🇺🇸🇨🇴",
    "duration": "90 min",
    "_ancla": [
-    "Co.Laboratorio",
+    "Co.Laboratorio - Bogotá",
     "2026-10-29",
     "18:00"
    ],
@@ -1502,6 +1513,7 @@
      "synopsis_lang": "es"
     }
    ],
+   "_fid": "f_1e2d4a411e",
    "is_free": true,
    "_procedencia": {
     "day": {
@@ -1564,7 +1576,7 @@
    "flags": "🇨🇴",
    "duration": "95 min",
    "_ancla": [
-    "Cinemateca de Bogotá",
+    "Cinemateca de Bogotá - Bogotá",
     "2026-10-29",
     "19:30"
    ],
@@ -1678,6 +1690,7 @@
      "synopsis_lang": "es"
     }
    ],
+   "_fid": "f_2214cc37cb",
    "is_free": false,
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839543",
    "_procedencia": {
@@ -1746,7 +1759,7 @@
    "flags": "🇲🇽🇪🇸🇦🇷",
    "duration": "100 min",
    "_ancla": [
-    "Cinemateca de Bogotá",
+    "Cinemateca de Bogotá - Bogotá",
     "2026-10-30",
     "17:00"
    ],
@@ -1841,6 +1854,7 @@
      "genre": "Fantasía"
     }
    ],
+   "_fid": "f_e13938e01b",
    "is_free": false,
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839544",
    "_procedencia": {
@@ -1909,7 +1923,7 @@
    "flags": "🇺🇸",
    "duration": "134 min",
    "_ancla": [
-    "Casa 32",
+    "Casa 32 - Bogotá",
     "2026-10-30",
     "18:00"
    ],
@@ -1942,6 +1956,7 @@
      "posterSource": "oficial"
     }
    ],
+   "_fid": "f_220193b425",
    "is_free": true,
    "_procedencia": {
     "day": {
@@ -1999,7 +2014,7 @@
    "flags": "🇨🇴🇪🇸",
    "duration": "91 min",
    "_ancla": [
-    "Cinemateca de Bogotá",
+    "Cinemateca de Bogotá - Bogotá",
     "2026-10-30",
     "19:30"
    ],
@@ -2048,6 +2063,7 @@
      "synopsis_lang": "es"
     }
    ],
+   "_fid": "f_2d97ac3aaf",
    "is_free": false,
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839545",
    "_procedencia": {
@@ -2121,7 +2137,7 @@
    "flags": "🇨🇴",
    "duration": "105 min",
    "_ancla": [
-    "Cinemateca de Bogotá",
+    "Cinemateca de Bogotá - Bogotá",
     "2026-10-31",
     "16:00"
    ],
@@ -2237,6 +2253,7 @@
      "synopsis_lang": "es"
     }
    ],
+   "_fid": "f_ae36afd246",
    "is_free": false,
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839546",
    "_procedencia": {
@@ -2308,7 +2325,7 @@
    "section": "🌙 Clausura",
    "duration": "120 min",
    "_ancla": [
-    "Cinemateca de Bogotá",
+    "Cinemateca de Bogotá - Bogotá",
     "2026-10-31",
     "19:00"
    ],
@@ -2325,6 +2342,7 @@
    },
    "description": "Cierre del festival · Entrega de premios.",
    "description_lang": "es",
+   "_fid": "f_7de649346b",
    "is_free": true,
    "_procedencia": {
     "day": {
@@ -2385,7 +2403,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-16T05:10:44",
+  "fecha": "2026-10-16T05:45:00",
   "plan_sha": "2ffdc359c921f8c4",
   "paso": 7,
   "cmd": "python3 pipeline/ensamblar.py bhff-2026"

@@ -137,11 +137,11 @@ Todavía no existen; se escriben sin corchetes para no confundirlos con los acti
 |---|---|
 | `[funcion-tests]` (activo) | Los tests de `tests/pipeline/test_funcion.py`: una regla por caso, probados por mutación (11/11). |
 | `[funcion-autoprueba]` (activo) | Cada regla de la §4 atrapa su cebo (rango, más reciente, conflicto, supuesto, estimado). |
-| `afirmacion-con-fuente` | Toda afirmación tiene tipo, url o frase, y fecha. Sin fuente no entra. |
+| `[afirmaciones-validas]` (activo; reúne fuente, formato y rango) | Toda afirmación tiene tipo, url o frase, y fecha. Sin fuente no entra. |
 | `afirmacion-con-ancla` | Toda afirmación encuentra su función base. Si no, aborta (nunca se ignora en silencio). |
-| `conflicto-abierto` | No hay conflictos sin decisión. |
-| `excepcion-en-crudo` | Ningún crudo tiene tablas de corrección de función. Lista de deuda que solo baja, como `[dato-que-no-viaja]`. |
-| `entrada-explicita` | Toda función publicada dice su entrada, aunque sea un supuesto marcado. |
+| `[conflicto-abierto]` (activo) | No hay conflictos sin decisión. |
+| `[excepcion-en-crudo]` (activo, deuda en `pipeline/funcion-deuda.json`) | Ningún crudo tiene tablas de corrección de función. Lista de deuda que solo baja, como `[dato-que-no-viaja]`. |
+| `[entrada-explicita]` (activo, deuda por festival; 0 si está en el modelo) | Toda función publicada dice su entrada, aunque sea un supuesto marcado. |
 | `casilla-obligatoria` | Día, hora, sede, título y tipo en toda función. |
 
 ## 7. Plan
@@ -159,3 +159,52 @@ Todavía no existen; se escriben sin corchetes para no confundirlos con los acti
 - **Ancla que cambia en la fuente principal.** Si el festival mueve una función en su propia web, el ancla vieja ya no está. El guardián aborta y alguien re-ancla. Es ruidoso a propósito.
 - **Migración que cambia datos sin querer.** Cada festival se compara contra producción antes de publicar (memoria «arreglo aguas abajo se pierde»).
 - **Dos rutas a la vez durante la migración.** Mientras quede un crudo con tablas, conviven. `excepcion-en-crudo` mide la deuda y solo puede bajar.
+
+## 9. Auditoría del 16 oct 2026 (senior dev + tech lead) y correcciones
+
+Dos auditorías independientes sobre la fase 3 (BHFF). Ninguna afecta a BHFF
+(sin anclas repetidas ni duraciones estimadas; su resultado se comparó campo
+por campo), pero el modelo **no está listo para migrar más festivales**. Nada
+se migra hasta cerrar C1–C6.
+
+| # | Hallazgo | Severidad | Corrección |
+|---|---|---|---|
+| C1 | El ancla `(sede, día, hora)` choca con dos salas a la misma hora (22 de 34 festivales; FICDEH 175, TIFF 134): el resolver revienta o pierde una función | bloqueante | **id estable por función** (`func_id`), registro `<fest>-funciones-ids.json` y redirecciones, como `work_id` del catálogo. Las afirmaciones apuntan al id |
+| C2 | La duración estimada se calcula antes de reponer lo publicado (`_conservar_publicado`) y de `-duraciones`: puede pisar un dato real (la cicatriz de Ficcali) | bloqueante | la estimación sale del resolver y va como último paso, solo donde siga vacía |
+| C3 | Se cae con una fuente sin rango para la casilla, al correr dos veces sobre su salida, sin `_ancla`; un conflicto entre funciones nuevas se pierde; `libre` deja el link de compra; horas comparadas como texto | crítica | correcciones puntuales, cada una con su test |
+| C4 | `validar` deja pasar formatos que la app no usa (`7pm`, `75`, `None` en obligatorias, fechas imposibles o futuras, url sin https) | alta | tabla de formato por casilla |
+| C5 | Las decisiones de Juan no caducan | alta | cada decisión guarda `contra` (el valor que pisó); si ese valor cambia, vuelve a revisión (como `catalogo.decision_pisada`) |
+| C6 | Fechas no comparables (publicación contra captura) | alta | `fuente.publicado` y `fuente.capturado`; la regla usa `publicado` |
+| C7 | `ticketing_model_de` lee el config como texto | media | leer `FESTIVAL_CONFIG` como dato (node) |
+| C8 | Inscripción implica «gratis» | media | `requires_registration` deja de ser un valor de `entrada`: casilla propia, combinable con `boleta` |
+| C9 | Sin cola de conflictos ni de propuestas, sin informe de decisiones, 4 guardianes de §6 sin implementar, sin herramienta para migrar las tablas | media | `<fest>-conflictos.json`, `<fest>-propuestas.json` con estado, `funcion.py informe`, los guardianes, y un migrador tabla → afirmaciones |
+| C10 | Casillas de la función y de la obra mezcladas (`title`, `duration`, `film_list`, `premiere`) | media | `nivel: funcion|obra` por casilla; las de obra van a las decisiones del catálogo |
+
+Pendiente de Juan: ¿las actividades (eventos, actividad abierta) también van
+«libre» por supuesto, como las proyecciones? Hoy sí (regla «sin aviso de pago
+es gratis»).
+
+**Estado (16 oct 2026):**
+- **Corregidos, con tests escritos antes y probados por mutación (15 de 16; el que sobrevive es un mutante equivalente, una guarda redundante): C1 (id estable y registro; el ancla usa el venue publicado, con su ciudad — «Cinema Local» existe en Bogotá y en Cali), C2, C3, C4, C5, C6, C7, C8.** Los 34 festivales publicados pasan por `asignar_ids` + `resolver` sin pérdidas ni caídas; BHFF re-armado sobre el modelo corregido da exactamente lo mismo.
+- **C9 hechos:** los guardianes `[excepcion-en-crudo]` (72 tablas de deuda), `[entrada-explicita]` (836 funciones de deuda; 0 para un festival en el modelo), `[afirmaciones-validas]` y `[conflicto-abierto]`, probados por mutación sobre datos reales; `python3 pipeline/funcion.py informe <fest>` (qué se decidió, de dónde y contra qué); y `publicar.py` rechaza un build de una corrida fallida (el sello guarda el paso que falló).
+- **C10 hecho:** toda casilla es de la función (`NIVEL`); lo de la obra no es una casilla y va por el catálogo.
+- **Pendientes de C9:** la cola de propuestas (`-propuestas.json` con estado y aceptación) y el migrador de tablas → afirmaciones. Son las herramientas de la fase 4; hasta tenerlas, no se migra otro festival.
+
+### 9.1 Revisión previa al merge (16 oct 2026)
+
+Antes de abrir el PR de C1–C10, una revisión independiente encontró 10 hallazgos más. Todos tienen su reproducción como test (`tests/pipeline/test_funcion_revision.py`) y se probaron por mutación (10 de 10, después de reforzar los dos tests que la primera vuelta dejó pasar):
+
+| # | Hallazgo | Corrección |
+|---|---|---|
+| R1 | una duración ESTIMADA volvía en el montaje siguiente como «conservada de lo publicado» (deshacía C2) | en un festival del modelo, `_conservar_publicado` no repone `duration` |
+| R2 | `ensamblar --ver` escribía el registro de ids y los conflictos | toda escritura del modelo depende de `escribir` |
+| R3 | una función ausente prestaba su id a otra función con el mismo título | las ausentes quedan marcadas y solo vuelven por su clave exacta, con aviso |
+| R4 | una hora mala en la base tumbaba el montaje; `99:99` pasaba | rango de hora; un día u hora fuera de formato en la base es un conflicto `formato-base`, no una caída |
+| R5 | el detector de tablas no veía asignaciones anotadas, `dict(...)`, tablas dentro de un `if` o de `main()`, ni los nombres `CORRECCION`, `SEDE_…`, `TITULO…`, `QUITAR` | cubiertos; la deuda pasó de 72 a 98 por la definición, no por tablas nuevas. Límite declarado: un nombre que no se parezca, o una mutación (`X['k'] = v`), no se ve |
+| R6–R10 | node ausente, ruido diario del registro, idempotencia al borrar una decisión, fallo limpiado por otro paso con el mismo número, fecha de la máquina | corregidos |
+
+**Límite conocido:** cinco festivales viejos, sin pipeline, publican el día y la hora en otro formato (`'MAR 21'`, `'Miércoles'`, `'8:00 PM'`: AFF, Cinemancia 2025, FICCI 65, Leviza, Tribeca). La app los entiende, pero el modelo los marca como `formato-base`. Como no tienen pipeline no pasan por el modelo; para migrar alguno, primero hay que normalizar su formato.
+
+**Otros dos límites, aceptados:**
+- Si una función desaparece de la fuente y vuelve **movida** (otra sede, día u hora), no recupera su id: recibe uno nuevo y sus afirmaciones fallan con `AnclaPerdida`, en voz alta. Arreglo: re-apuntar el `ancla` de la afirmación a la función nueva.
+- El registro de ids no se poda: las ausentes se quedan, marcadas. Son inofensivas (no prestan su id) y el archivo crece unas decenas de líneas por festival.

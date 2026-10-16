@@ -6672,7 +6672,9 @@ try:
     # `-titulos-anteriores.json` lo lee ensamblar.py para CUALQUIER festival (con
     # f-string, por eso su nombre no está literal en el corpus) — 8 oct 2026
     _CANON = {'crudo.json', 'correcciones.json', 'build.json', 'titulos-anteriores.json',
-              'quitar.json', 'duraciones.json'}  # `-quitar.json` lo lee ensamblar.py (f-string), 14 oct 2026
+              'quitar.json', 'duraciones.json',  # `-quitar.json` lo lee ensamblar.py (f-string), 14 oct 2026
+              # el modelo de la función (docs/FUNCION.md): funcion.cargar y ensamblar, 16 oct 2026
+              'afirmaciones.json', 'funciones-ids.json', 'conflictos.json'}
     _viv = ['pipeline/lib.py','pipeline/ensamblar.py','pipeline/correr.py','pipeline/publicar.py'] + \
            sorted(_f for _f in _g9.glob('pipeline/*.py') if _re9.search(r'^pipeline/[a-z]+-20\d\d-', _f))
     _corp = '\n'.join(open(_f, encoding='utf-8', errors='ignore').read() for _f in _viv if _os9.path.exists(_f)) + \
@@ -6833,6 +6835,71 @@ try:
         ok(check, 'cada regla de la función atrapa su cebo')
 except Exception as _e:
     fail(check, f'no pudo correr: {_e}')
+
+# ── la deuda del modelo de la función (docs/FUNCION.md §6, C9) — solo puede bajar ──
+_D9 = {}
+try:
+    import funcion as _fn9
+    _d9 = _jc.load(open(_fn9.DEUDA, encoding='utf-8'))
+    _D9['nuevas'], _D9['saldadas'] = _fn9.comparar_deuda(_fn9.excepciones_en_scripts(), _d9['excepciones'])
+    _D9['n_tablas'] = len(_d9['excepciones'])
+    _D9['sobre'], _D9['bajo'] = [], []
+    for _p in sorted(_gc.glob('festivals/*.json')):
+        _fid = _osc.path.basename(_p)[:-5]
+        try:
+            _n = len(_fn9.sin_entrada(_jc.load(open(_p, encoding='utf-8'))))
+        except Exception:
+            continue
+        _tope = 0 if _osc.path.exists(f'festivals/staging/{_fid}-afirmaciones.json') else _d9['sin_entrada'].get(_fid, 0)
+        (_D9['sobre'] if _n > _tope else _D9['bajo'] if _n < _tope else []).append(f'{_fid} {_n}/{_tope}')
+    _D9['n_entrada'] = sum(_d9['sin_entrada'].values())
+    _D9['afs'] = []
+    for _p in sorted(_gc.glob('festivals/staging/*-afirmaciones.json')):
+        _fid = _osc.path.basename(_p)[:-len('-afirmaciones.json')]
+        try:
+            _fn9.cargar(_fid)
+        except Exception as _e:
+            _D9['afs'].append(f'{_fid}: {_e}')
+    _D9['conflictos'] = _fn9.conflictos_abiertos()
+except Exception as _e:
+    _D9['error'] = str(_e)
+
+check = 'excepcion-en-crudo'
+if 'error' in _D9:
+    fail(check, f'la deuda del modelo no pudo medirse: {_D9["error"]}')
+elif _D9['nuevas']:
+    fail(check, 'tabla(s) de excepciones NUEVA(S) en un script de festival — una corrección de función es '
+                'una afirmación (docs/FUNCION.md): ' + ', '.join(f'{a}:{b}' for a, b in _D9['nuevas']))
+else:
+    ok(check, f'ninguna tabla nueva con nombre de corrección en un script de festival ({_D9["n_tablas"]} de deuda; el detector mira nombres, no mutaciones)')
+    if _D9['saldadas']:
+        warn(check, f'bajó la deuda ({len(_D9["saldadas"])} saldada/s) — python3 pipeline/funcion.py --bajar-deuda')
+
+check = 'entrada-explicita'
+if 'error' in _D9:
+    fail(check, f'no pudo medirse: {_D9["error"]}')
+elif _D9['sobre']:
+    fail(check, 'funciones que no dicen cómo se entra, por encima de su deuda (en el modelo: 0): ' + ', '.join(_D9['sobre']))
+else:
+    ok(check, f'ninguna función nueva sin entrada ({_D9["n_entrada"]} de deuda)')
+    if _D9['bajo']:
+        warn(check, 'bajó la deuda en ' + ', '.join(_D9['bajo']) + ' — python3 pipeline/funcion.py --bajar-deuda')
+
+check = 'afirmaciones-validas'
+if 'error' in _D9:
+    fail(check, f'no pudo medirse: {_D9["error"]}')
+elif _D9['afs']:
+    fail(check, ' · '.join(_D9['afs']))
+else:
+    ok(check, 'toda afirmación con fuente, formato y rango')
+
+check = 'conflicto-abierto'
+if 'error' in _D9:
+    fail(check, f'no pudo medirse: {_D9["error"]}')
+elif _D9['conflictos']:
+    fail(check, 'conflictos sin decisión: ' + ', '.join(_D9['conflictos']))
+else:
+    ok(check, 'sin conflictos abiertos')
 
 # ── [css-huerfana] toda clase del <style> la emite alguien ───────────────────────
 # Medido el 5 sep 2026: 825 clases en index.html, 45 que nada emitía — 14 nunca

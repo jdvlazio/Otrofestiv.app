@@ -50,7 +50,7 @@ class Rango(unittest.TestCase):
         self.assertEqual(r.funciones[0]['time'], '19:00')
 
     def test_juan_gana_siempre(self):
-        r = resolver([base()], [af('sala', 'Sala 2'), af('sala', 'Sala Capital', tipo='juan', url='«ponela en la Capital»')])
+        r = resolver([base()], [af('sala', 'Sala 2'), af('sala', 'Sala Capital', tipo='juan', url='«ponela en la Capital»', contra='Sala 2')])
         self.assertEqual(r.funciones[0]['sala'], 'Sala Capital')
         self.assertEqual(r.funciones[0]['_procedencia']['sala']['tipo'], 'juan')
 
@@ -88,7 +88,7 @@ class Conflicto(unittest.TestCase):
 
     def test_una_decision_cierra_el_conflicto(self):
         r = resolver([base()], [af('sala', 'Sala 2'), af('sala', 'Sala 1', url=SALA_URL + '?b'),
-                                af('sala', 'Sala 2', tipo='juan', url='«la 2»')])
+                                af('sala', 'Sala 2', tipo='juan', url='«la 2»', contra='Sala 3')])
         self.assertEqual(r.conflictos, [])
         self.assertEqual(r.funciones[0]['sala'], 'Sala 2')
 
@@ -121,7 +121,8 @@ class Entrada(unittest.TestCase):
         self.assertNotIn('7.000', repr({k: v for k, v in f.items() if not k.startswith('_')}))
 
     def test_entrada_de_la_fuente_principal_se_respeta(self):
-        r = resolver([base(requires_registration=True)], [])
+        # la entrada que trae la fuente principal no es un supuesto
+        r = resolver([base(is_free=True, requires_registration=True)], [])
         f = r.funciones[0]
         self.assertIs(f['requires_registration'], True)
         self.assertNotIn('marca', f['_procedencia']['entrada'])
@@ -139,16 +140,15 @@ class Duracion(unittest.TestCase):
     def test_sin_duracion_se_estima_hasta_la_siguiente(self):
         a = base(duration=None)
         b = base(title='Otra', time='20:00', _ancla=(CINE, '2026-10-23', '20:00'))
-        r = resolver([a, b], [])
-        f = r.funciones[0]
+        f = funcion.estimar_duraciones(resolver([a, b], []).funciones)[0]
         self.assertEqual(f['duration'], '60 min')
         self.assertEqual(f['_procedencia']['duration']['marca'], 'estimado')
 
     def test_estimada_tope_90_y_60_si_es_la_ultima(self):
         a = base(duration=None)
-        self.assertEqual(resolver([a], []).funciones[0]['duration'], '60 min')
+        self.assertEqual(funcion.estimar_duraciones(resolver([a], []).funciones)[0]['duration'], '60 min')
         b = base(title='Otra', time='23:00', _ancla=(CINE, '2026-10-23', '23:00'))
-        self.assertEqual(resolver([base(duration=None), b], []).funciones[0]['duration'], '90 min')
+        self.assertEqual(funcion.estimar_duraciones(resolver([base(duration=None), b], []).funciones)[0]['duration'], '90 min')
 
     def test_duracion_afirmada_no_se_estima(self):
         r = resolver([base(duration=None)], [af('duration', '75 min', tipo='festival-ig', url=IG)])
