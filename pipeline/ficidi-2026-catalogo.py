@@ -21,7 +21,8 @@ a lo sumo 24 px, a la línea donde el salto entre adentro y afuera es mayor. Una
 imagen apaisada (null en la transcripción) no es un afiche: la obra va sin.
 
 Escribe festivals/staging/ficidi-2026-catalogo.json y los afiches en
-fuentes/ficidi-2026/afiches/.
+assets/ficidi-2026/ (VERSIONADOS: hasta el 18 oct iban a fuentes/, que no se
+versiona, y los 64 recortes se perdieron con la purga de /tmp).
 """
 import io
 import json
@@ -68,13 +69,12 @@ def ocr_cajas(rutas):
     faltan = [r for r in rutas if os.path.relpath(r, REPO) not in hecho]
     # la herramienta devuelve los resultados POR NOMBRE DE ARCHIVO, y todos los
     # carruseles tienen un 02.jpg: se llama una vez por carpeta, o se pisan
-    for carpeta in sorted({os.path.dirname(p) for p in faltan}):
-        lote = [p for p in faltan if os.path.dirname(p) == carpeta]
-        r = subprocess.run(['swift', f'{REPO}/pipeline/ficma-2026-ocr.swift'] + lote,
+    # UNA LÁMINA POR VEZ (18 oct 2026): en lote la herramienta se saltaba
+    # archivos (DeKb-mdlH_S/03.jpg) y el KeyError cortaba todo
+    for p in faltan:
+        r = subprocess.run(['swift', f'{REPO}/pipeline/ficma-2026-ocr.swift', p],
                            capture_output=True, text=True)
-        out = json.loads(r.stdout)
-        for p in lote:
-            hecho[os.path.relpath(p, REPO)] = out[os.path.basename(p)]
+        hecho[os.path.relpath(p, REPO)] = json.loads(r.stdout)[os.path.basename(p)]
     if faltan:
         os.makedirs(DIR, exist_ok=True)
         json.dump(hecho, open(cache, 'w'), ensure_ascii=False)
@@ -110,40 +110,10 @@ def ajustar(im, caja):
 # mayúscula sostenida, y eso no se publica. Minúscula salvo nombres propios, con
 # los acentos que trae el AFICHE cuando el pie los omite (Ansío, Gaitán, mí), y
 # los títulos en inglés con mayúscula de título. Llave = el pie de la lámina.
-TITULO = {
-    'EXILIO': 'Exilio', 'VERDULERA': 'Verdulera', 'LA MUJER SENTADA': 'La mujer sentada',
-    'EL BAÑADOR': 'El bañador', 'LOS PÁJAROS': 'Los pájaros', 'MUÑECAS DE PORCELANA': 'Muñecas de porcelana',
-    'A MI EDAD': 'A mi edad', 'BLUE BERRI': 'Blue Berri', 'TÍA MORGANA': 'Tía Morgana', 'COURAÇA': 'Couraça',
-    'AR-DOR': 'Ar-dor', 'VERANO': 'Verano', 'PENDIENTE DE ESTRELLA': 'Pendiente de estrella', 'CAST ME': 'Cast Me',
-    'AQUÍ DONDE SOY': 'Aquí donde soy', 'VERDADES': 'Verdades', 'IUS DEL TIEMPO': 'Ius del tiempo',
-    'CIELO DE ENERO': 'Cielo de enero', 'JUGO EN POLVO': 'Jugo en polvo',
-    '¿ME VAS A ESTAR ESPERANDO?': '¿Me vas a estar esperando?', 'INÉS': 'Inés',
-    'DE AQUELLOS POLVOS': 'De aquellos polvos', 'HÁ SINAIS': 'Há sinais', 'ONADES': 'Onades', '621 KM': '621 km',
-    'YOUNG WILD THINGS': 'Young Wild Things', 'SOLO NATALIE': 'Solo Natalie',
-    'TODOS LOS NOMBRES EMPIEZAN CON M': 'Todos los nombres empiezan con M', 'PERROS': 'Perros',
-    'REINA DE POLVO Y LUZ': 'Reina de polvo y luz',
-    'TRAVESTIS, BOMBAS Y UN CORTEJO FÚNEBRE': 'Travestis, bombas y un cortejo fúnebre',
-    'LO QUE FUIMOS': 'Lo que fuimos', '90 SEGUNDOS': '90 segundos', 'DAFNE Y POL': 'Dafne y Pol',
-    'LA OTRA MITAD DEL DOLOR': 'La otra mitad del dolor', 'TUESDAY SESSION': 'Tuesday Session',
-    'TRAVAS SOBREVIVIENTES': 'Travas sobrevivientes', 'A SIN DE FELLA STORY': 'A Sin de Fella Story',
-    'LA MASCULINIDAD ES UNA PREGUNTA': 'La masculinidad es una pregunta',
-    'MIL MORTES DE UM SOBREVIVENTE': 'Mil mortes de um sobrevivente', 'ALWASIYYA': 'Alwasiyya', 'KIBOKO': 'Kiboko',
-    'O DIÁRIO IMAGINADO': 'O diário imaginado', 'JAMÁS VOLVEREMOS': 'Jamás volveremos',
-    'LAS COSAS QUE NO TE DIJE': 'Las cosas que no te dije',
-    'PEPA GAITAN PRESENTE, AHORA Y SIEMPRE.': 'Pepa Gaitán presente, ahora y siempre',
-    'CORPO E IDENTIDADE': 'Corpo e identidade', 'ANSIO DESPERTAR': 'Ansío despertar',
-    '¿QUIÉN SE LLEVA LAS ESTRELLAS?': '¿Quién se lleva las estrellas?',
-    'TODO LO QUE PASARÁ MAÑANA': 'Todo lo que pasará mañana', 'AMOR EN POSITIVO': 'Amor en positivo',
-    'REFRACCIÓN': 'Refracción', 'AGUIJÓN ROJO': 'Aguijón rojo', 'FIELMENTE': 'Fielmente', 'NO': 'No',
-    'DANZAN LAS LUCIÉRNAGAS': 'Danzan las luciérnagas', 'TRANSITAR LO MARICA NEGRO': 'Transitar lo marica negro',
-    'YO SOY YO': 'Yo soy yo', 'MARICONES': 'Maricones',
-    '¿A MI QUIÉN ME CUIDA? EXPERIENCIAS NEGRAS DIVERSAS EN EL PARO NACIONAL DEL 2021':
-        '¿A mí quién me cuida? Experiencias negras diversas en el paro nacional del 2021',
-    'ESPACIOS HÚMEDOS': 'Espacios húmedos', 'MÁS ALLÁ DE LA CORONA': 'Más allá de la corona',
-    'MIRADAS TRANS-PARENTES': 'Miradas trans-parentes',
-    '1AÑO Y UN MEZ EN COLOMBIAMARICX': '1 año y un mez en Colombiamaricx',
-    'MADE TO SHINE': 'Made to Shine', 'FRAGMENTOS': 'Fragmentos',
-}
+# LA CAJA de cada título (las láminas van en MAYÚSCULA SOSTENIDA): es un dato, y
+# vive en festivals/staging/ficidi-2026-correcciones.json («titulo_caja»), no en
+# una tabla del script ([excepcion-en-crudo], 18 oct 2026)
+TITULO = json.load(io.open(f'{REPO}/festivals/staging/ficidi-2026-correcciones.json', encoding='utf-8'))['titulo_caja']
 
 
 def main():
@@ -158,7 +128,7 @@ def main():
         n_ojo = sum(1 for o in ojos if o[0] == sc and o[1] == f)
         if n_ocr != n_ojo:
             fallos.append(f'{sc}/{f}: la OCR lee {n_ocr} «Dir.» y hay {n_ojo} transcritas')
-    os.makedirs(f'{DIR}/afiches', exist_ok=True)
+    os.makedirs(f'{REPO}/assets/ficidi-2026', exist_ok=True)
     obras = []
     for k, (sc, f, titulo, director, pais, caja) in enumerate(ojos):
         r = f'{IG}/{sc}/{f}'
@@ -177,8 +147,8 @@ def main():
             if not 1.1 < hh / ww < 1.9:
                 fallos.append(f'{sc}/{f}: el afiche de «{titulo}» quedó {ww}×{hh}, fuera de proporción')
             nombre = f'{sc}-{f[:-4]}-{k:02d}.jpg'
-            im.crop(c).save(f'{DIR}/afiches/{nombre}', quality=92)
-            o['afiche'] = f'fuentes/ficidi-2026/afiches/{nombre}'
+            im.crop(c).save(f'{REPO}/assets/ficidi-2026/{nombre}', quality=92)
+            o['afiche'] = f'assets/ficidi-2026/{nombre}'
             o['_src']['caja'] = list(c)
         else:
             o['_sin_afiche'] = 'la lámina trae una imagen apaisada, no un afiche'

@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, con el MISMO candado de enriquecer.py: director ✓ y (año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-10-07"
+  "capturado": "2026-10-18"
  },
  "_origen": "ficidi-2026-catalogo.json",
  "obras": [
@@ -116,7 +116,8 @@
    "anio_tmdb": 2026,
    "duracion_tmdb": 19,
    "pais_tmdb": "Brazil",
-   "lbSlug": "ar-dor",
+   "title_en": "Tell me a Lie",
+   "lbSlug": "tell-me-a-lie",
    "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
   },
   {
@@ -345,7 +346,8 @@
    "duracion_tmdb": 11,
    "pais_tmdb": "Colombia",
    "lbSlug": "refraccion",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_verificado": "el catálogo ya la tiene (w_R4F8T5DKXC9W, cinemancia-2026, ficica-2026, ficmontanas-2026, girardota-2026, jardin-2026, narrarelfuturo-2026)",
+   "work_id": "w_R4F8T5DKXC9W",
    "_ya_publicada": [
     {
      "festival": "cinemancia-2026",
@@ -354,11 +356,38 @@
      "poster": "https://image.tmdb.org/t/p/w500/bzKNobO0N8Oqj6YU6eA2R28UgPI.jpg",
      "posterSource": "tmdb",
      "lbSlug": "refraccion",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "11 min",
+     "synopsis_en": "Eloísa, a 20-year-old girl, is in two relationships at the same time. One night, after having been with both girls, she feels overwhelmed by living in this situation of deceit, and in the middle of her confusion she goes out to ride her bike through the streets of Medellín, where she will realize that she does not want to acknowledge who she is — but will ultimately have to come face-to-face with herself.",
+     "sinopsis": "Eloísa, una chica de 20 años, está en dos relaciones al mismo tiempo. Una noche, después de haber estado con ambas chicas, se siente agobiada por estar en esa situación de engaño y en medio de su confusión sale a recorrer las calles de Medellín en bicicleta, donde se dará cuenta de que no quiere reconocerse pero deberá encontrarse consigo misma."
+    },
+    {
+     "festival": "ficica-2026",
+     "titulo": "Refraccion",
+     "tmdb_id": 1584776,
+     "poster": "/assets/ficica-2026/refraccion.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "refraccion",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "11 min",
+     "genre": "Drama",
+     "synopsis_en": "Eloísa, a 20-year-old girl, is in two relationships at the same time. One night, after having been with both girls, she feels overwhelmed by living in this situation of deceit, and in the middle of her confusion she goes out to ride her bike through the streets of Medellín, where she will realize that she does not want to acknowledge who she is — but will ultimately have to come face-to-face with herself.",
      "sinopsis": "Eloísa, una chica de 20 años, está en dos relaciones al mismo tiempo. Una noche, después de haber estado con ambas chicas, se siente agobiada por estar en esa situación de engaño y en medio de su confusión sale a recorrer las calles de Medellín en bicicleta, donde se dará cuenta de que no quiere reconocerse pero deberá encontrarse consigo misma."
     },
     {
      "festival": "ficmontanas-2026",
-     "titulo": "Refracción"
+     "titulo": "Refracción",
+     "poster": "https://image.tmdb.org/t/p/w500/bzKNobO0N8Oqj6YU6eA2R28UgPI.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "refraccion",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "11 min",
+     "genre": "Ficción",
+     "synopsis_en": "Eloísa, a 20-year-old girl, is in two relationships at the same time. One night, after having been with both girls, she feels overwhelmed by living in this situation of deceit, and in the middle of her confusion she goes out to ride her bike through the streets of Medellín, where she will realize that she does not want to acknowledge who she is — but will ultimately have to come face-to-face with herself.",
+     "sinopsis": "Eloísa, una chica de 20 años, está en dos relaciones al mismo tiempo. Una noche, después de haber estado con ambas chicas, se siente agobiada por estar en esa situación de engaño y en medio de su confusión sale a recorrer las calles de Medellín en bicicleta, donde se dará cuenta de que no quiere reconocerse pero deberá encontrarse consigo misma."
     },
     {
      "festival": "girardota-2026",
@@ -367,6 +396,11 @@
      "poster": "/assets/girardota-2026/refraccion.jpg",
      "posterSource": "tmdb",
      "lbSlug": "refraccion",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "11 min",
+     "genre": "Drama",
+     "synopsis_en": "Eloísa, a 20-year-old girl, is in two relationships at the same time. One night, after having been with both girls, she feels overwhelmed by living in this situation of deceit, and in the middle of her confusion she goes out to ride her bike through the streets of Medellín, where she will realize that she does not want to acknowledge who she is — but will ultimately have to come face-to-face with herself.",
      "sinopsis": "Eloísa, una chica de 20 años, está en dos relaciones al mismo tiempo. Una noche, después de haber estado con ambas chicas, se siente agobiada por estar en esa situación de engaño y en medio de su confusión sale a recorrer las calles de Medellín en bicicleta, donde se dará cuenta de que no quiere reconocerse pero deberá encontrarse consigo misma."
     },
     {
@@ -376,6 +410,11 @@
      "poster": "/assets/jardin-2026/refraccion.jpg",
      "posterSource": "tmdb",
      "lbSlug": "refraccion",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "11 min",
+     "genre": "Ficción",
+     "synopsis_en": "Eloísa, a 20-year-old girl, is in two relationships at the same time. One night, after having been with both girls, she feels overwhelmed by living in this situation of deceit, and in the middle of her confusion she goes out to ride her bike through the streets of Medellín, where she will realize that she does not want to acknowledge who she is — but will ultimately have to come face-to-face with herself.",
      "sinopsis": "Eloísa, una chica de 20 años, está en dos relaciones al mismo tiempo. Una noche, después de haber estado con ambas chicas, se siente agobiada por estar en esa situación de engaño y en medio de su confusión sale a recorrer las calles de Medellín en bicicleta, donde se dará cuenta de que no quiere reconocerse pero deberá encontrarse consigo misma."
     },
     {
@@ -383,7 +422,8 @@
      "titulo": "Refracción",
      "poster": "/assets/leviza/Refraccio_n.jpeg",
      "posterSource": "custom",
-     "lbSlug": "⚠️ LB PENDIENTE"
+     "lbSlug": "⚠️ LB PENDIENTE",
+     "country": "Colombia"
     },
     {
      "festival": "narrarelfuturo-2026",
@@ -392,6 +432,11 @@
      "poster": "/assets/narrarelfuturo-2026/refraccion.jpg",
      "posterSource": "oficial",
      "lbSlug": "refraccion",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "11 min",
+     "genre": "Ficción",
+     "synopsis_en": "Eloísa, a 20-year-old girl, is in two relationships at the same time. One night, after having been with both girls, she feels overwhelmed by living in this situation of deceit, and in the middle of her confusion she goes out to ride her bike through the streets of Medellín, where she will realize that she does not want to acknowledge who she is — but will ultimately have to come face-to-face with herself.",
      "sinopsis": "Eloísa, una chica de 20 años, está en dos relaciones al mismo tiempo. Una noche, después de haber estado con ambas chicas, se siente agobiada por estar en esa situación de engaño y en medio de su confusión sale a recorrer las calles de Medellín en bicicleta, donde se dará cuenta de que no quiere reconocerse pero deberá encontrarse consigo misma."
     }
    ]
@@ -437,7 +482,8 @@
    "duracion_tmdb": 15,
    "pais_tmdb": "",
    "lbSlug": "maricones",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_verificado": "el catálogo ya la tiene (w_R4K1F412E5VW, girardota-2026)",
+   "work_id": "w_R4K1F412E5VW",
    "_ya_publicada": [
     {
      "festival": "girardota-2026",
@@ -446,6 +492,10 @@
      "poster": "/assets/girardota-2026/maricones.jpg",
      "posterSource": "tmdb",
      "lbSlug": "maricones",
+     "year": 2026,
+     "duration": "15 min",
+     "genre": "Documental",
+     "synopsis_en": "Since they were little, Ginger and Louie knew they were different. Two young Queers who, living in different spaces, face social prejudices that try to limit their way of being. This tension confronts them with their identity process and leads them to question the need for external validation. Thus, they decide to use fashion and their bodies as a tool to express and build their identity as a process of constant fluidity, free and without labels.",
      "sinopsis": "Desde pequeños, Ginger y Louie sabían que eran distintos. Dos jóvenes Queer que, al habitar distintos espacios, enfrentan prejuicios sociales que intentan limitar su forma de ser. Esta tensión los confronta con su proceso identitario y los lleva a cuestionar la necesidad de validación externa. Así, deciden usar la moda y sus cuerpos como herramienta para expresar y construir su identidad como un proceso de constante fluidez, libre y sin etiquetas."
     }
    ]
@@ -470,6 +520,11 @@
      "poster": "/assets/ficdeh/sed-el-flagelo-guajiro.jpg",
      "posterSource": "custom",
      "lbSlug": "mas-alla-de-la-corona",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "14 min",
+     "genre": "Documental",
+     "synopsis_en": "Ángel must answer three questions and clear a series of obstacles before reaching her dream: to be crowned Trans Queen of Palmira, Colombia.",
      "sinopsis": "Ángel debe responder tres preguntas y superar una serie de obstáculos antes de lograr su sueño: ser coronada Reina Trans de Palmira, Colombia."
     }
    ]
@@ -579,7 +634,8 @@
    "anio_tmdb": 2026,
    "duracion_tmdb": 19,
    "pais_tmdb": "Brazil",
-   "lbSlug": "ar-dor",
+   "title_en": "Tell me a Lie",
+   "lbSlug": "tell-me-a-lie",
    "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
   },
   "Aquí donde soy": {
@@ -792,7 +848,8 @@
    "duracion_tmdb": 11,
    "pais_tmdb": "Colombia",
    "lbSlug": "refraccion",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_verificado": "el catálogo ya la tiene (w_R4F8T5DKXC9W, cinemancia-2026, ficica-2026, ficmontanas-2026, girardota-2026, jardin-2026, narrarelfuturo-2026)",
+   "work_id": "w_R4F8T5DKXC9W",
    "_ya_publicada": [
     {
      "festival": "cinemancia-2026",
@@ -801,11 +858,38 @@
      "poster": "https://image.tmdb.org/t/p/w500/bzKNobO0N8Oqj6YU6eA2R28UgPI.jpg",
      "posterSource": "tmdb",
      "lbSlug": "refraccion",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "11 min",
+     "synopsis_en": "Eloísa, a 20-year-old girl, is in two relationships at the same time. One night, after having been with both girls, she feels overwhelmed by living in this situation of deceit, and in the middle of her confusion she goes out to ride her bike through the streets of Medellín, where she will realize that she does not want to acknowledge who she is — but will ultimately have to come face-to-face with herself.",
+     "sinopsis": "Eloísa, una chica de 20 años, está en dos relaciones al mismo tiempo. Una noche, después de haber estado con ambas chicas, se siente agobiada por estar en esa situación de engaño y en medio de su confusión sale a recorrer las calles de Medellín en bicicleta, donde se dará cuenta de que no quiere reconocerse pero deberá encontrarse consigo misma."
+    },
+    {
+     "festival": "ficica-2026",
+     "titulo": "Refraccion",
+     "tmdb_id": 1584776,
+     "poster": "/assets/ficica-2026/refraccion.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "refraccion",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "11 min",
+     "genre": "Drama",
+     "synopsis_en": "Eloísa, a 20-year-old girl, is in two relationships at the same time. One night, after having been with both girls, she feels overwhelmed by living in this situation of deceit, and in the middle of her confusion she goes out to ride her bike through the streets of Medellín, where she will realize that she does not want to acknowledge who she is — but will ultimately have to come face-to-face with herself.",
      "sinopsis": "Eloísa, una chica de 20 años, está en dos relaciones al mismo tiempo. Una noche, después de haber estado con ambas chicas, se siente agobiada por estar en esa situación de engaño y en medio de su confusión sale a recorrer las calles de Medellín en bicicleta, donde se dará cuenta de que no quiere reconocerse pero deberá encontrarse consigo misma."
     },
     {
      "festival": "ficmontanas-2026",
-     "titulo": "Refracción"
+     "titulo": "Refracción",
+     "poster": "https://image.tmdb.org/t/p/w500/bzKNobO0N8Oqj6YU6eA2R28UgPI.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "refraccion",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "11 min",
+     "genre": "Ficción",
+     "synopsis_en": "Eloísa, a 20-year-old girl, is in two relationships at the same time. One night, after having been with both girls, she feels overwhelmed by living in this situation of deceit, and in the middle of her confusion she goes out to ride her bike through the streets of Medellín, where she will realize that she does not want to acknowledge who she is — but will ultimately have to come face-to-face with herself.",
+     "sinopsis": "Eloísa, una chica de 20 años, está en dos relaciones al mismo tiempo. Una noche, después de haber estado con ambas chicas, se siente agobiada por estar en esa situación de engaño y en medio de su confusión sale a recorrer las calles de Medellín en bicicleta, donde se dará cuenta de que no quiere reconocerse pero deberá encontrarse consigo misma."
     },
     {
      "festival": "girardota-2026",
@@ -814,6 +898,11 @@
      "poster": "/assets/girardota-2026/refraccion.jpg",
      "posterSource": "tmdb",
      "lbSlug": "refraccion",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "11 min",
+     "genre": "Drama",
+     "synopsis_en": "Eloísa, a 20-year-old girl, is in two relationships at the same time. One night, after having been with both girls, she feels overwhelmed by living in this situation of deceit, and in the middle of her confusion she goes out to ride her bike through the streets of Medellín, where she will realize that she does not want to acknowledge who she is — but will ultimately have to come face-to-face with herself.",
      "sinopsis": "Eloísa, una chica de 20 años, está en dos relaciones al mismo tiempo. Una noche, después de haber estado con ambas chicas, se siente agobiada por estar en esa situación de engaño y en medio de su confusión sale a recorrer las calles de Medellín en bicicleta, donde se dará cuenta de que no quiere reconocerse pero deberá encontrarse consigo misma."
     },
     {
@@ -823,6 +912,11 @@
      "poster": "/assets/jardin-2026/refraccion.jpg",
      "posterSource": "tmdb",
      "lbSlug": "refraccion",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "11 min",
+     "genre": "Ficción",
+     "synopsis_en": "Eloísa, a 20-year-old girl, is in two relationships at the same time. One night, after having been with both girls, she feels overwhelmed by living in this situation of deceit, and in the middle of her confusion she goes out to ride her bike through the streets of Medellín, where she will realize that she does not want to acknowledge who she is — but will ultimately have to come face-to-face with herself.",
      "sinopsis": "Eloísa, una chica de 20 años, está en dos relaciones al mismo tiempo. Una noche, después de haber estado con ambas chicas, se siente agobiada por estar en esa situación de engaño y en medio de su confusión sale a recorrer las calles de Medellín en bicicleta, donde se dará cuenta de que no quiere reconocerse pero deberá encontrarse consigo misma."
     },
     {
@@ -830,7 +924,8 @@
      "titulo": "Refracción",
      "poster": "/assets/leviza/Refraccio_n.jpeg",
      "posterSource": "custom",
-     "lbSlug": "⚠️ LB PENDIENTE"
+     "lbSlug": "⚠️ LB PENDIENTE",
+     "country": "Colombia"
     },
     {
      "festival": "narrarelfuturo-2026",
@@ -839,6 +934,11 @@
      "poster": "/assets/narrarelfuturo-2026/refraccion.jpg",
      "posterSource": "oficial",
      "lbSlug": "refraccion",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "11 min",
+     "genre": "Ficción",
+     "synopsis_en": "Eloísa, a 20-year-old girl, is in two relationships at the same time. One night, after having been with both girls, she feels overwhelmed by living in this situation of deceit, and in the middle of her confusion she goes out to ride her bike through the streets of Medellín, where she will realize that she does not want to acknowledge who she is — but will ultimately have to come face-to-face with herself.",
      "sinopsis": "Eloísa, una chica de 20 años, está en dos relaciones al mismo tiempo. Una noche, después de haber estado con ambas chicas, se siente agobiada por estar en esa situación de engaño y en medio de su confusión sale a recorrer las calles de Medellín en bicicleta, donde se dará cuenta de que no quiere reconocerse pero deberá encontrarse consigo misma."
     }
    ]
@@ -881,7 +981,8 @@
    "duracion_tmdb": 15,
    "pais_tmdb": "",
    "lbSlug": "maricones",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_verificado": "el catálogo ya la tiene (w_R4K1F412E5VW, girardota-2026)",
+   "work_id": "w_R4K1F412E5VW",
    "_ya_publicada": [
     {
      "festival": "girardota-2026",
@@ -890,6 +991,10 @@
      "poster": "/assets/girardota-2026/maricones.jpg",
      "posterSource": "tmdb",
      "lbSlug": "maricones",
+     "year": 2026,
+     "duration": "15 min",
+     "genre": "Documental",
+     "synopsis_en": "Since they were little, Ginger and Louie knew they were different. Two young Queers who, living in different spaces, face social prejudices that try to limit their way of being. This tension confronts them with their identity process and leads them to question the need for external validation. Thus, they decide to use fashion and their bodies as a tool to express and build their identity as a process of constant fluidity, free and without labels.",
      "sinopsis": "Desde pequeños, Ginger y Louie sabían que eran distintos. Dos jóvenes Queer que, al habitar distintos espacios, enfrentan prejuicios sociales que intentan limitar su forma de ser. Esta tensión los confronta con su proceso identitario y los lleva a cuestionar la necesidad de validación externa. Así, deciden usar la moda y sus cuerpos como herramienta para expresar y construir su identidad como un proceso de constante fluidez, libre y sin etiquetas."
     }
    ]
@@ -913,6 +1018,11 @@
      "poster": "/assets/ficdeh/sed-el-flagelo-guajiro.jpg",
      "posterSource": "custom",
      "lbSlug": "mas-alla-de-la-corona",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "14 min",
+     "genre": "Documental",
+     "synopsis_en": "Ángel must answer three questions and clear a series of obstacles before reaching her dream: to be crowned Trans Queen of Palmira, Colombia.",
      "sinopsis": "Ángel debe responder tres preguntas y superar una serie de obstáculos antes de lograr su sueño: ser coronada Reina Trans de Palmira, Colombia."
     }
    ]
