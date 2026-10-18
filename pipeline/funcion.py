@@ -244,7 +244,45 @@ def _nuevo_id(c):
     return 'f_' + hashlib.sha1('|'.join(c[k] for k in ('sede', 'dia', 'hora', 'sala', 'titulo')).encode()).hexdigest()[:10]
 
 
-def asignar_ids(funciones, registro):
+def _tupla(c):
+    c = c if isinstance(c, dict) else {}
+    return tuple(_plano(c.get(k)) if k == 'titulo' else (c.get(k) or '') for k in ('sede', 'dia', 'hora', 'sala', 'titulo'))
+
+
+def _validar_decisiones(decisiones, viejas):
+    """<fid>-funciones-decisiones.json (§11.3.4, §11.4): cada decisión nombra un
+    id que existe y dice por qué, quién y cuándo. Una de cuatro formas:
+    misma (`nuevo`: clave), es_otra (`nuevo`: "es_otra"), partida (`partida`:
+    [claves]) o fusión (`nuevo`: clave + `absorbe`: [ids])."""
+    for d in decisiones:
+        falta = [k for k in ('viejo', 'por_que', 'quien', 'fecha') if not d.get(k)]
+        if falta:
+            raise AfirmacionInvalida(f'decisión de id sin {", ".join(falta)}: {d}')
+        for i in [d['viejo']] + list(d.get('absorbe') or []):
+            if i not in viejas:
+                raise AfirmacionInvalida(f'decisión de id: {i} no está en el registro')
+        if bool(d.get('partida')) == bool(d.get('nuevo')):
+            raise AfirmacionInvalida(f'decisión de id {d["viejo"]}: lleva `nuevo` o `partida`, una de las dos')
+    # un id y una clave destino, en UNA sola decisión: dos que se contradicen,
+    # que apuntan a la misma función o que se absorben a sí mismas darían un id
+    # repetido (auditoría 18 oct)
+    tocados = [i for d in decisiones for i in [d['viejo']] + list(d.get('absorbe') or [])]
+    destinos = [_tupla(c) for d in decisiones for c in
+                ([d['nuevo']] if isinstance(d.get('nuevo'), dict) else []) + list(d.get('partida') or [])]
+    for nombre, xs in (('el id', tocados), ('la clave', destinos)):
+        rep = [x for x in xs if xs.count(x) > 1]
+        if rep:
+            raise AfirmacionInvalida(f'decisiones de id: {nombre} {rep[0]} aparece en más de una decisión')
+
+
+def _sigue_decidida(v, c):
+    """`decidida` vale solo mientras la función siga en la clave que se decidió:
+    si después cambia otra vez, el guardián vuelve a medirla (auditoría 18 oct)."""
+    d = (v or {}).get('decidida')
+    return isinstance(d, dict) and tuple(d.get('clave') or ()) == _tupla(c)
+
+
+def asignar_ids(funciones, registro, decisiones=None):
     """Da a cada función base su `_fid` estable → (funciones, registro, avisos).
 
     El registro (<fest>-funciones-ids.json) guarda, por id, la clave con que se
@@ -254,14 +292,59 @@ def asignar_ids(funciones, registro):
     renombró—. Con más de una candidata es AMBIGUA: id nuevo y aviso, nunca se
     elige en silencio. Dos funciones base con la misma clave son un error."""
     viejas = dict((registro or {}).get('funciones') or {})
-    por_clave = {tuple(v[k] for k in ('sede', 'dia', 'hora', 'sala', 'titulo')): i for i, v in viejas.items()}
+    # una partida o fusionada ya no es dueña de su clave: su id migró, no se reusa
+    por_clave = {tuple(v[k] for k in ('sede', 'dia', 'hora', 'sala', 'titulo')): i for i, v in viejas.items()
+                 if not (v.get('partida_en') or v.get('fusionada_en'))}
     claves = [_clave(f) for f in funciones]
     if len({tuple(c.values()) for c in claves}) != len(claves):
         dup = [c for c in claves if claves.count(c) > 1][0]
         raise AfirmacionInvalida(f'dos funciones base con la misma clave {dup}')
     usados, ids, avisos = set(), [None] * len(funciones), []
+    decisiones = list(decisiones or [])
+    _validar_decisiones(decisiones, viejas)
+    # LAS DECISIONES PRIMERO (§11.3.4): lo que un humano registró le gana a la
+    # heurística. es_otra / partida / absorbida: ese id viejo no presta su id
+    vetados, anteriores, marcas, decidido = set(), {}, {}, set()
+    pos = {_tupla(c): n for n, c in enumerate(claves)}
+    presentes = {por_clave.get(tuple(c.values())) for c in claves} - {None}
+    for d in decisiones:
+        # la decisión dice que salió (es otra, se partió, se fusionó) y sigue en la fuente
+        salio = ([d['viejo']] if d.get('partida') or d.get('nuevo') == 'es_otra' else []) + list(d.get('absorbe') or [])
+        for i in salio:
+            if i in presentes:
+                raise AfirmacionInvalida(f'decisión de id {d["viejo"]}: {i} sigue en la fuente con su clave exacta')
+    for d in decisiones:
+        v = d['viejo']
+        if d.get('partida'):
+            hijas = [pos.get(_tupla(c)) for c in d['partida']]
+            if None in hijas:
+                avisos.append(f'⚠ decisión {v}: alguna hija de la partida no está en este montaje — revisar la decisión')
+                continue
+            vetados.add(v)
+            marcas[v] = {'partida_en': hijas}
+            anteriores.setdefault(hijas[0], []).append(v)
+            continue
+        if d['nuevo'] == 'es_otra':
+            vetados.add(v)
+            decidido.add(v)
+            continue
+        n = pos.get(_tupla(d['nuevo']))
+        if n is None:
+            avisos.append(f'⚠ decisión {v}: su función no está en este montaje — revisar la decisión')
+            continue
+        ids[n] = v
+        usados.add(v)
+        marcas[v] = {'decidida': {'fecha': d['fecha'], 'clave': list(_tupla(d['nuevo']))}}
+        for b in d.get('absorbe') or []:
+            vetados.add(b)
+            marcas[b] = {'fusionada_en': v}
+            anteriores.setdefault(n, []).append(b)
     for n, (f, c) in enumerate(zip(funciones, claves)):
+        if ids[n]:
+            continue
         i = por_clave.get(tuple(c.values()))
+        if i in usados:
+            i = None
         if i:
             usados.add(i)
             ids[n] = i
@@ -273,16 +356,21 @@ def asignar_ids(funciones, registro):
             continue
         # una función AUSENTE no presta su id: si otra aparece con su título en otra
         # hora, es otra función (revisión del 16 oct); solo vuelve con su clave exacta
-        libres = {i: v for i, v in viejas.items() if i not in usados and not v.get('ausente')}
+        libres = {i: v for i, v in viejas.items() if i not in usados and i not in vetados and not v.get('ausente')
+                  and not (v.get('partida_en') or v.get('fusionada_en'))}
         movida = [i for i, v in libres.items() if (v['sede'], v['titulo']) == (c['sede'], c['titulo'])]
         renombrada = [i for i, v in libres.items()
                       if (v['sede'], v['dia'], v['hora'], v['sala']) == (c['sede'], c['dia'], c['hora'], c['sala'])]
-        cand = movida or renombrada
+        # §11.3.3: un solo cambio de sede (el sismo de FICMA, la sala de BHFF)
+        trasladada = [i for i, v in libres.items()
+                      if (v['titulo'], v['dia'], v['hora']) == (c['titulo'], c['dia'], c['hora'])]
+        cand = movida or renombrada or trasladada
         if len(cand) == 1:
             i, v = cand[0], viejas[cand[0]]
             avisos.append(f'{i} «{f.get("title")}»: ' + (
                 f'movida de {v["dia"]} {v["hora"]} {v["sala"]} a {c["dia"]} {c["hora"]} {c["sala"]}'.strip()
-                if movida else f'renombrada (antes «{v["titulo"]}»)'))
+                if movida else f'renombrada (antes «{v["titulo"]}»)' if renombrada
+                else f'trasladada de {v["sede"]} a {c["sede"]}'))
             usados.add(i)
             ids[n] = i
             continue
@@ -294,16 +382,25 @@ def asignar_ids(funciones, registro):
         ids[n] = i
     out = []
     nacidos = []
-    for f, c, i in zip(funciones, claves, ids):
-        out.append({**f, '_fid': i})
-        nuevo[i] = c
+    for v, m in marcas.items():
+        if 'partida_en' in m:
+            m['partida_en'] = [ids[h] for h in m['partida_en']]
+    for n, (f, c, i) in enumerate(zip(funciones, claves, ids)):
+        # ids_anteriores (§11.4): los de esta decisión + los que ya traía el registro
+        ant = list(dict.fromkeys((viejas.get(i) or {}).get('ids_anteriores', []) + anteriores.get(n, [])))
+        out.append({**f, '_fid': i, **({'_ids_anteriores': ant} if ant else {})})
+        nuevo[i] = {**c, **({'ids_anteriores': ant} if ant else {}), **marcas.get(i, {}),
+                    **({'decidida': viejas[i]['decidida']} if i not in marcas and _sigue_decidida(viejas.get(i), c) else {})}
         if i not in viejas:
             nacidos.append((i, f, c))
     # EL CAMBIO DOBLE, VISIBLE (Juan, 18 oct 2026): en el mismo montaje sale una
     # función y nace otra que no se pudo casar con ella (cambió título Y hora, o
     # sede Y hora). Puede ser la misma: quien la tenía en su plan la pierde. Se
     # avisa con las dos, para registrar la decisión si lo es (§11.3)
-    salen = [(i, v) for i, v in viejas.items() if i not in {x for x in ids} and not v.get('ausente')]
+    salen = [(i, v) for i, v in viejas.items()
+             if i not in set(ids) and not v.get('ausente') and i not in vetados and i not in decidido]
+    hijas = {h for m in marcas.values() for h in m.get("partida_en", [])}
+    nacidos = [x for x in nacidos if x[0] not in hijas]
     for i, f, c in nacidos if salen else []:
         cerca = [(j, v) for j, v in salen if v['sede'] == c['sede'] or v['titulo'] == c['titulo'] or v['dia'] == c['dia']]
         for j, v in cerca or salen:
@@ -312,9 +409,12 @@ def asignar_ids(funciones, registro):
                           f'tenía en su plan la pierde')
     for i, v in viejas.items():
         if i not in nuevo:
-            if not v.get('ausente'):
+            if i in marcas:                       # partida o fusionada: sale, con su destino
+                nuevo[i] = {**v, **marcas[i]}
+                continue
+            if not v.get('ausente') and not (v.get('partida_en') or v.get('fusionada_en')):
                 avisos.append(f'{i} «{v["titulo"]}» {v["dia"]} {v["hora"]}: ya no está en la fuente principal')
-            nuevo[i] = {**v, 'ausente': True}
+            nuevo[i] = {**v, 'ausente': True} if not (v.get('partida_en') or v.get('fusionada_en')) else v
     return out, {'funciones': nuevo}, avisos
 
 
@@ -338,9 +438,14 @@ def ids_estables(viejo, nuevo, registro):
             r = reg.get(i) or {}
             if not (r.get('ausente') or r.get('partida_en') or r.get('fusionada_en')):
                 mal.append(f'{i} «{f.get("title")}» {f.get("day")} {f.get("time")}: desapareció sin registro')
+            # a donde se fue tiene que estar publicado: si no, la app no tiene a qué migrar
+            destino = [r['fusionada_en']] if r.get('fusionada_en') else list(r.get('partida_en') or [])
+            for j in destino:
+                if j not in ahora:
+                    mal.append(f'{i} «{f.get("title")}»: su destino {j} no está publicado')
             continue
         slot = lambda x: (x.get('day'), x.get('time'), x.get('venue'))
-        if f.get('title') != g.get('title') and slot(f) != slot(g):
+        if f.get('title') != g.get('title') and slot(f) != slot(g) and not (reg.get(i) or {}).get('decidida'):
             mal.append(f'{i}: cambió de función — «{f.get("title")}» {f.get("day")} {f.get("time")} → '
                        f'«{g.get("title")}» {g.get("day")} {g.get("time")}')
     return mal

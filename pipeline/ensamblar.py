@@ -650,7 +650,13 @@ def ensamblar(fid, escribir=True):
     if _afs is not None:
         _reg_p = f'{REPO}/festivals/staging/{fid}-funciones-ids.json'
         _reg = json.load(open(_reg_p, encoding='utf-8')) if os.path.exists(_reg_p) else {}
-        films[:], _reg, _avisos = funcion.asignar_ids(films, _reg)
+        # §11.3.4: las decisiones de un humano sobre cambios dobles, partidas y fusiones
+        _dec_p = f'{REPO}/festivals/staging/{fid}-funciones-decisiones.json'
+        _dec = json.load(open(_dec_p, encoding='utf-8')).get('decisiones') if os.path.exists(_dec_p) else []
+        try:
+            films[:], _reg, _avisos = funcion.asignar_ids(films, _reg, _dec)
+        except funcion.AfirmacionInvalida as _e:
+            sys.exit(f'✗ {fid}: {_e} → {os.path.relpath(_dec_p, REPO)}')
         for _x in _avisos:
             print(f'  · función: {_x}')
         try:
@@ -681,6 +687,8 @@ def ensamblar(fid, escribir=True):
         for _f in films:
             if _f.get('_fid'):
                 _f['id'] = _f['_fid']
+            if _f.get('_ids_anteriores'):   # §11.4: partida / fusión, para que la app migre
+                _f['ids_anteriores'] = _f['_ids_anteriores']
         # los avisos de ids (movida, renombrada, cambio doble) viajan en el build
         # para que publicar.py los muestre: un id nuevo por cambio doble no puede
         # quedar solo en un registro (Juan, 18 oct)
