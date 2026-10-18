@@ -478,10 +478,19 @@ export function sameEntry(a, b){
   // cubre la función que se partió o se fusionó (el código viejo vive en la
   // nueva). Sin código en alguna de las dos (plan guardado antes, festival sin
   // migrar) se reconoce como siempre: título + día + hora + sede.
+  //
+  // PERO un cambio de DÍA u HORA no se sigue en silencio (regresión cazada por
+  // T52/T124, 18 oct 2026): quien tenía la función guardada tiene que ENTERARSE
+  // de que se movió —la fila dice REPROGRAMADA y ofrece «Actualizar», regla de
+  // Juan—. Lo mismo con la SEDE: es otro lugar al que ir. Por eso el código
+  // reconoce la función a través de un cambio de TÍTULO, y un cambio de día,
+  // hora o sede sigue siendo «otra función» para el plan: eso dispara el aviso.
   if(a.id && b.id){
-    return a.id === b.id
+    const mismoCodigo = a.id === b.id
       || (Array.isArray(b.ids_anteriores) && b.ids_anteriores.includes(a.id))
       || (Array.isArray(a.ids_anteriores) && a.ids_anteriores.includes(b.id));
+    return mismoCodigo && a.day === b.day && a.time === b.time
+      && (!a.venue || !b.venue || a.venue === b.venue);
   }
   const ta = a._title || a.title, tb = b._title || b.title;
   if(!ta || ta !== tb) return false;
@@ -504,7 +513,10 @@ export function syncScheduleWithCatalog(schedule, films){
     // cancelada que los avisos marcan con badge y salida — nunca un swap mudo.
     const live=(films||[]).find(f=>sameEntry(f, e));
     if(!live) return e;
-    const out={...live,_title:e._title};
+    // _title es la elección del usuario (normalizada); si la función se reconoció
+    // por su CÓDIGO y el festival le cambió el título, se toma el título nuevo.
+    const _renombrada=e.id&&live.id&&(live.title||'')!==(e._title||e.title||'');
+    const out={...live,_title:_renombrada?live.title:e._title};
     if(e._squeezed) out._squeezed=e._squeezed;
     // La salida es una decisión del USUARIO sobre esa entrada, no un dato del
     // catálogo: sin esta línea «Ir a las dos» se deshacía solo al recargar.
