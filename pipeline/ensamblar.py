@@ -140,7 +140,7 @@ def _enriquece(dst, it):
                           # genérico se caía entero. Itagüí publicó 15 películas
                           # colombianas sin bandera teniendo TMDB el país de cada
                           # una, y ninguna con año (23 sep).
-                          ('country', ('pais', 'country', 'pais_tmdb')),
+                          ('country', ('pais', 'country', 'pais_tmdb', 'pais_heredado')),
                           # el director que la fuente no da y el catálogo sí (herencia.py)
                           ('director', ('director_heredado',)),
                           ('year', ('anio', 'year', 'anio_tmdb'))):
