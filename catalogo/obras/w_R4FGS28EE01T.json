@@ -12,6 +12,10 @@
  ],
  "aliases": [
   {
+   "titulo": "Gramática práctica italiana",
+   "tipo": "festival"
+  },
+  {
    "titulo": "Practical Italian Grammar",
    "idioma": "en",
    "tipo": "traduccion"
@@ -21,6 +25,9 @@
   "es": "Miguel y su familia se preparan para emigrar de Cuba a Italia, donde ya vive su madre. Mientras esperan, comienzan a dar el primer paso en el viaje de todo migrante: aprender el idioma del país al que quieren mudarse.",
   "en": "Miguel and his family are preparing to emigrate from Cuba to Italy where his mother already lives. While they wait, they begin to take the first step in the life of every migrant: learning the language of the country they want to go to."
  },
+ "generos": [
+  "Documental"
+ ],
  "afiche": {
   "archivo": "https://image.tmdb.org/t/p/w500/gtnKGTLEnXIx1WzqWdfmXqdzfkq.jpg",
   "veredicto": "oficial"
@@ -31,11 +38,16 @@
  },
  "versiones": [
   {
+   "etiqueta": "12 min",
+   "duracion_min": 12
+  },
+  {
    "etiqueta": "13 min",
    "duracion_min": 13
   }
  ],
  "presentaciones": [
-  "cinemancia-2026"
+  "cinemancia-2026",
+  "ficica-2026"
  ]
 }

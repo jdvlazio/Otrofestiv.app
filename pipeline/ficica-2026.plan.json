@@ -3,6 +3,10 @@
  "radar": 1029,
  "pasos": [
   {
+   "cmd": "python3 pipeline/ficica-2026-programas.py",
+   "que": "la página Programas → los cortos de cada programa (sidecar que lee el crudo)"
+  },
+  {
    "cmd": "python3 pipeline/ficica-2026-catalogo.py",
    "que": "la tabla de la Selección Oficial → catálogo (81 cortos)"
   },
@@ -15,12 +19,12 @@
    "que": "verificador: el catálogo contra la tabla, por una segunda lectura"
   },
   {
-   "cmd": "python3 pipeline/ficica-2026-programas.py",
-   "que": "la página Programas → los cortos de cada programa (sidecar que lee el crudo)"
-  },
-  {
    "cmd": "python3 pipeline/ficica-2026-crudo.py",
    "que": "la Programación General → crudo (solo acceso libre; cineforo pegado a su programa)"
+  },
+  {
+   "cmd": "python3 pipeline/enriquecer.py ficica-2026 --posters",
+   "que": "TMDB + cascada + afiches de las obras de cada programa (16 oct: los programas ya listan sus cortos)"
   },
   {
    "cmd": "python3 pipeline/geocodificar.py ficica-2026 --centro 10.9685,-74.7813 --ciudad \"Barranquilla\"",
@@ -34,7 +38,8 @@
  "_fuentes_versionadas": {
   "festivals/staging/ficica-2026-catalogo-enriquecido.json": "las fichas TMDB de las 81 obras del catálogo (47 verificadas), que escribe el paso 2. Es el trabajo que el montaje reusa cuando salga la parrilla.",
   "festivals/staging/ficica-2026-catalogo.json": "la Selección Oficial (81 cortos); la leerá el crudo",
-  "festivals/staging/ficica-2026-programas.json": "los 20 programas con sus cortos (página Programas, 16 oct); lo escribe el paso de programas y lo lee el crudo"
+  "festivals/staging/ficica-2026-programas.json": "los 20 programas con sus cortos (página Programas, 16 oct); lo escribe el paso de programas y lo lee el crudo",
+  "festivals/staging/ficica-2026-enriquecido.json": "fichas y afiches de los cortos de los programas; lo escribe enriquecer.py"
  },
  "festival": {
   "radar": 1029,
@@ -123,6 +128,7 @@
   "sharedSlotIsOneScreening": false,
   "mes_es": "octubre",
   "dias_vacios": [],
-  "prioLimit": 3
+  "prioLimit": 3,
+  "enriquecido": "festivals/staging/ficica-2026-enriquecido.json"
  }
 }

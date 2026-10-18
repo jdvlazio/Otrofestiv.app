@@ -1,0 +1,45 @@
+{
+ "id": "w_6M6QNB0DR73X",
+ "titulo_original": "Memoria de un pibe",
+ "anio": 2025,
+ "paises": [
+  "B",
+  "R"
+ ],
+ "directores": [
+  "Pedro Santi"
+ ],
+ "aliases": [
+  {
+   "titulo": "Memorias de infancia",
+   "tipo": "festival"
+  },
+  {
+   "titulo": "Memória de Pivete",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "Una mirada nostálgica a la infancia, los barrios y las experiencias que construyen la relación entre fútbol, identidad y memoria.",
+  "en": "A nostalgic look at childhood, the neighborhoods and the experiences that build the relationship between football, identity and memory."
+ },
+ "afiche": {
+  "archivo": "/assets/ficica-2026/memoria-de-un-pibe.jpg",
+  "veredicto": "oficial"
+ },
+ "xref": {
+  "tmdb": 1533600,
+  "letterboxd": "memoria-de-pivete"
+ },
+ "versiones": [
+  {
+   "etiqueta": "15 min",
+   "duracion_min": 15
+  }
+ ],
+ "presentaciones": [
+  "ficica-2026",
+  "tercertiempo-2026"
+ ]
+}

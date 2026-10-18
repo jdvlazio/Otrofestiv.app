@@ -311,8 +311,8 @@ está pasando de verdad — no lo que alguien recordaba al escribirlo.
 | `title_es` | string | — | — | Título en español, SOLO cuando el festival titula en otro idioma y el afiche que mostramos dice el español. El buscador lo mira además de `title`: la única pista que el usuario tiene delante es el afiche. No es una traducción de cortesía; `title` sigue siendo el nombre oficial. |
 | `director` | string | — | 32 fest |  |
 | `year` | number | — | 31 fest | Entero. Dos festivales legacy lo tienen como string. |
-| `country` | string | — | 33 fest |  |
-| `flags` | string | — | 33 fest | **derivado de `country`** — no viene de ninguna fuente Emoji de bandera. NUNCA viene de la fuente: se calcula del país. |
+| `country` | string | — | 34 fest |  |
+| `flags` | string | — | 34 fest | **derivado de `country`** — no viene de ninguna fuente Emoji de bandera. NUNCA viene de la fuente: se calcula del país. |
 | `duration` | string | `^\d+ min$` | 34 fest | «90 min». No es un número, y la doc dijo lo contrario durante meses. |
 | `language` | string | — | 9 fest |  |
 | `genre` | string | — | 29 fest |  |
@@ -328,8 +328,8 @@ está pasando de verdad — no lo que alguien recordaba al escribirlo.
 | `premiere` | string | — | 15 fest | Texto libre del festival («World Premiere», «Estreno argentino»). |
 | `type` | string | `film` · `event` · `short` | 31 fest |  |
 | `event_kind` | string | — | 24 fest | Palabra del festival, verbatim (charla, taller, masterclass). Enum en validate-festivals. |
-| `is_cortos` | boolean | — | 31 fest | exige `film_list` Programa curado: exige film_list no vacío. |
-| `film_list` | array | — | 30 fest |  |
+| `is_cortos` | boolean | — | 32 fest | exige `film_list` Programa curado: exige film_list no vacío. |
+| `film_list` | array | — | 31 fest |  |
 | `is_programa` | boolean | — | 4 fest |  |
 | `is_recurring` | boolean | — | 5 fest |  |
 | `is_awards_screening` | boolean | — | 1 fest |  |

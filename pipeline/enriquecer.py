@@ -434,6 +434,15 @@ def main():
     # Un título mal copiado en el sidecar no haría nada y nadie se enteraría —
     # el mismo fallo mudo de siempre, escribir un dato que nadie lee.
     _huerf = [t for t in declaradas if t not in obras]
+    # …salvo la obra que el festival SÍ tiene en su catálogo pero no proyecta en
+    # ninguna función pública (FICICA, «Ma-ma»: solo en colegios, 18 oct). Eso no
+    # es un título mal copiado: se avisa y se sigue
+    _cat_p = f'{ST}/{fid}-catalogo.json'
+    if _huerf and os.path.exists(_cat_p):
+        _en_cat = {norm(o.get('titulo') or '') for o in json.load(open(_cat_p, encoding='utf-8')).get('obras') or []}
+        for t in [t for t in _huerf if norm(t) in _en_cat]:
+            print(f'  · ficha declarada de «{t}»: está en el catálogo del festival y no en una función pública; no se usa')
+        _huerf = [t for t in _huerf if norm(t) not in _en_cat]
     if _huerf:
         sys.exit('ficha declarada para un título que no está en el programa: '
                  + ' · '.join(_huerf))

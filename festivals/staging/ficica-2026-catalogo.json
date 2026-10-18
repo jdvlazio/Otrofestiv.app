@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "https://ficica.cinealacalle.org/seleccion-oficial.html",
-  "capturado": "2026-10-15",
+  "capturado": "2026-10-17",
   "metodo": "tabla HTML de la Selección Oficial"
  },
  "obras": [
@@ -228,7 +228,7 @@
   {
    "titulo": "El mundo de humberto",
    "titulo_tabla": "EL MUNDO DE HUMBERTO",
-   "director": "Natalia Polo López",
+   "director": "Paula Ortiz",
    "pais": "Colombia",
    "categoria": "Documental",
    "_src": {
@@ -894,6 +894,318 @@
    "_src": {
     "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
     "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "La tormenta",
+   "titulo_tabla": "LA TORMENTA",
+   "director": null,
+   "pais": "Colombia",
+   "categoria": "Concurso MINI",
+   "fuera_de_seleccion": true,
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/programas.html",
+    "date": "2026-10-16"
+   }
+  },
+  {
+   "titulo": "Queener",
+   "titulo_tabla": "QUEENER",
+   "director": null,
+   "pais": "Colombia",
+   "categoria": "Concurso MINI",
+   "fuera_de_seleccion": true,
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/programas.html",
+    "date": "2026-10-16"
+   }
+  },
+  {
+   "titulo": "Gracias, antonio",
+   "titulo_tabla": "GRACIAS, ANTONIO",
+   "director": null,
+   "pais": "Colombia",
+   "categoria": "Concurso MINI",
+   "fuera_de_seleccion": true,
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/programas.html",
+    "date": "2026-10-16"
+   }
+  },
+  {
+   "titulo": "¿Quién heredará el sabor de mompox?",
+   "titulo_tabla": "¿QUIÉN HEREDARÁ EL SABOR DE MOMPOX?",
+   "director": null,
+   "pais": "Colombia",
+   "categoria": "Concurso MINI",
+   "fuera_de_seleccion": true,
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/programas.html",
+    "date": "2026-10-16"
+   }
+  },
+  {
+   "titulo": "La despedida",
+   "titulo_tabla": "LA DESPEDIDA",
+   "director": null,
+   "pais": "Colombia",
+   "categoria": "Concurso MINI",
+   "fuera_de_seleccion": true,
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/programas.html",
+    "date": "2026-10-16"
+   }
+  },
+  {
+   "titulo": "Bartolo",
+   "titulo_tabla": "BARTOLO",
+   "director": null,
+   "pais": "Colombia",
+   "categoria": "Concurso MINI",
+   "fuera_de_seleccion": true,
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/programas.html",
+    "date": "2026-10-16"
+   }
+  },
+  {
+   "titulo": "Alivios",
+   "titulo_tabla": "ALIVIOS",
+   "director": null,
+   "pais": "México, Venezuela",
+   "categoria": "Cine accesible",
+   "fuera_de_seleccion": true,
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/programas.html",
+    "date": "2026-10-16"
+   }
+  },
+  {
+   "titulo": "El bitcoin de oro",
+   "titulo_tabla": "EL BITCOIN DE ORO",
+   "director": null,
+   "pais": "España",
+   "categoria": "Cine accesible",
+   "fuera_de_seleccion": true,
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/programas.html",
+    "date": "2026-10-16"
+   }
+  },
+  {
+   "titulo": "El maestro de la piquería",
+   "titulo_tabla": "EL MAESTRO DE LA PIQUERÍA",
+   "director": null,
+   "pais": "Colombia",
+   "categoria": "Cine accesible",
+   "fuera_de_seleccion": true,
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/programas.html",
+    "date": "2026-10-16"
+   }
+  },
+  {
+   "titulo": "Khazana",
+   "titulo_tabla": "KHAZANA",
+   "director": null,
+   "pais": "Pakistán",
+   "categoria": "Cine accesible",
+   "fuera_de_seleccion": true,
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/programas.html",
+    "date": "2026-10-16"
+   }
+  },
+  {
+   "titulo": "Quinto primera",
+   "titulo_tabla": "QUINTO PRIMERA",
+   "director": null,
+   "pais": "España",
+   "categoria": "Cine accesible",
+   "fuera_de_seleccion": true,
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/programas.html",
+    "date": "2026-10-16"
+   }
+  },
+  {
+   "titulo": "El silencio de las semillas",
+   "titulo_tabla": "EL SILENCIO DE LAS SEMILLAS",
+   "director": null,
+   "pais": "Colombia",
+   "categoria": "Territorios vivos",
+   "fuera_de_seleccion": true,
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/programas.html",
+    "date": "2026-10-16"
+   }
+  },
+  {
+   "titulo": "Memorias piedras de boca e’ caña",
+   "titulo_tabla": "MEMORIAS PIEDRAS DE BOCA E’ CAÑA",
+   "director": null,
+   "pais": "Colombia",
+   "categoria": "Territorios vivos",
+   "fuera_de_seleccion": true,
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/programas.html",
+    "date": "2026-10-16"
+   }
+  },
+  {
+   "titulo": "Princesado mokaná: el legado del cerro de las hermosas",
+   "titulo_tabla": "PRINCESADO MOKANÁ: EL LEGADO DEL CERRO DE LAS HERMOSAS",
+   "director": null,
+   "pais": "Colombia",
+   "categoria": "Territorios vivos",
+   "fuera_de_seleccion": true,
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/programas.html",
+    "date": "2026-10-16"
+   }
+  },
+  {
+   "titulo": "Proowa",
+   "titulo_tabla": "PROOWA",
+   "director": null,
+   "pais": "Colombia",
+   "categoria": "Territorios vivos",
+   "fuera_de_seleccion": true,
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/programas.html",
+    "date": "2026-10-16"
+   }
+  },
+  {
+   "titulo": "Seguridad en el territorio del pueblo ette ennka chimila",
+   "titulo_tabla": "SEGURIDAD EN EL TERRITORIO DEL PUEBLO ETTE ENNKA CHIMILA",
+   "director": null,
+   "pais": "Colombia",
+   "categoria": "Territorios vivos",
+   "fuera_de_seleccion": true,
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/programas.html",
+    "date": "2026-10-16"
+   }
+  },
+  {
+   "titulo": "Capitán cartagena",
+   "titulo_tabla": "CAPITÁN CARTAGENA",
+   "director": null,
+   "pais": "Colombia",
+   "categoria": "Retrospectiva del corto colombiano",
+   "fuera_de_seleccion": true,
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/programas.html",
+    "date": "2026-10-16"
+   }
+  },
+  {
+   "titulo": "Concierto sentido",
+   "titulo_tabla": "CONCIERTO SENTIDO",
+   "director": null,
+   "pais": "Colombia",
+   "categoria": "Retrospectiva del corto colombiano",
+   "fuera_de_seleccion": true,
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/programas.html",
+    "date": "2026-10-16"
+   }
+  },
+  {
+   "titulo": "Frágil o embalados",
+   "titulo_tabla": "FRÁGIL O EMBALADOS",
+   "director": null,
+   "pais": "Colombia",
+   "categoria": "Retrospectiva del corto colombiano",
+   "fuera_de_seleccion": true,
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/programas.html",
+    "date": "2026-10-16"
+   }
+  },
+  {
+   "titulo": "Dientes de yuca",
+   "titulo_tabla": "DIENTES DE YUCA",
+   "director": null,
+   "pais": "Colombia",
+   "categoria": "Retrospectiva del corto colombiano",
+   "fuera_de_seleccion": true,
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/programas.html",
+    "date": "2026-10-16"
+   }
+  },
+  {
+   "titulo": "Dulce",
+   "titulo_tabla": "DULCE",
+   "director": null,
+   "pais": "Colombia",
+   "categoria": "Retrospectiva del corto colombiano",
+   "fuera_de_seleccion": true,
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/programas.html",
+    "date": "2026-10-16"
+   }
+  },
+  {
+   "titulo": "Plan de fuga",
+   "titulo_tabla": "PLAN DE FUGA",
+   "director": null,
+   "pais": "Colombia",
+   "categoria": "Retrospectiva del corto colombiano",
+   "fuera_de_seleccion": true,
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/programas.html",
+    "date": "2026-10-16"
+   }
+  },
+  {
+   "titulo": "El kanto del kajambá",
+   "titulo_tabla": "EL KANTO DEL KAJAMBÁ",
+   "director": null,
+   "pais": "Colombia",
+   "categoria": "Retrospectiva del corto colombiano",
+   "fuera_de_seleccion": true,
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/programas.html",
+    "date": "2026-10-16"
+   }
+  },
+  {
+   "titulo": "El abrazo del sol",
+   "titulo_tabla": "EL ABRAZO DEL SOL",
+   "director": null,
+   "pais": "Colombia",
+   "categoria": "Cine comunitario (REDACO)",
+   "fuera_de_seleccion": true,
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/programas.html",
+    "date": "2026-10-16"
+   }
+  },
+  {
+   "titulo": "Cabica",
+   "titulo_tabla": "CABICA",
+   "director": null,
+   "pais": "Colombia",
+   "categoria": "Cine comunitario (REDACO)",
+   "fuera_de_seleccion": true,
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/programas.html",
+    "date": "2026-10-16"
+   }
+  },
+  {
+   "titulo": "Arlequín",
+   "titulo_tabla": "ARLEQUÍN",
+   "director": null,
+   "pais": "Colombia",
+   "categoria": "Cine comunitario (REDACO)",
+   "fuera_de_seleccion": true,
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/programas.html",
+    "date": "2026-10-16"
    }
   }
  ]

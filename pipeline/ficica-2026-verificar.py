@@ -17,7 +17,10 @@ s = io.open(f'{REPO}/fuentes/ficica-2026/seleccion-oficial.html', encoding='utf-
 celdas = [re.sub(r'\s+', ' ', html.unescape(re.sub(r'<[^>]+>', ' ', c))).strip()
           for c in re.findall(r'<td[^>]*>(.*?)</td>', s, re.S)]
 filas = {(celdas[i], celdas[i + 3].rstrip(',').strip()) for i in range(0, len(celdas), 4)}
-cat = json.load(io.open(f'{REPO}/festivals/staging/ficica-2026-catalogo.json', encoding='utf-8'))['obras']
+# solo la Selección: los cortos de programas que no son de ella (fuera_de_seleccion,
+# 16 oct) los da la página Programas, no esta tabla
+cat = [o for o in json.load(io.open(f'{REPO}/festivals/staging/ficica-2026-catalogo.json', encoding='utf-8'))['obras']
+       if not o.get('fuera_de_seleccion')]
 pub = {(o['titulo_tabla'], o.get('director') or '') for o in cat}
 fallos = [f'en la tabla y NO en el catálogo: {t}' for t in sorted(filas - pub)] + \
          [f'en el catálogo y NO en la tabla: {t}' for t in sorted(pub - filas)]

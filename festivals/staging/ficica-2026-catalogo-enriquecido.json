@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, con el MISMO candado de enriquecer.py: director ✓ y (año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-10-15"
+  "capturado": "2026-10-17"
  },
  "_origen": "ficica-2026-catalogo.json",
  "obras": [
@@ -33,7 +33,7 @@
    "pais_tmdb": "Colombia",
    "title_en": "Lowering the Gaze",
    "lbSlug": "lowering-the-gaze",
-   "_verificado": "el catálogo ya la tiene (w_R4JG4KR5FX9V, filcmar-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4JG4KR5FX9V, ficica-2026, filcmar-2026)",
    "work_id": "w_R4JG4KR5FX9V",
    "_ya_publicada": [
     {
@@ -373,6 +373,41 @@
    "_verificado": "declarada a mano: Existe en TMDB con otro título o sin año ni duración, y el candado no la casaba sola: «Nora's ark» (2026), Endre Lund Eriksen; mismo director que publica FICICA. Verificada el 11 oct 2026."
   },
   {
+   "titulo": "El mundo de humberto",
+   "tmdb_id": 1791688,
+   "titulo_original": "El mundo de Humberto",
+   "poster_path": "/5LT4v4mj28KFFh3xAXH2y6DIQyo.jpg",
+   "synopsis_es": "En el corazón de Cali está Kiss Me, la caverna del amor, un edificio de arquitectura ecléctica diseñado por Humberto Villegas, creador de sus 190 habitaciones temáticas, en las que confluyen el sexo, el arte y la política. El mundo de Humberto es una inmersión en este espacio insólito, sensual y poético, que Humberto transforma continuamente con la complicidad de Neneco, artista autodidacta que esculpe, pinta y moldea, para darles forma tangible a sus visiones, mientras el motel continúa operando como escenario de deseo y fantasía.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 14,
+   "pais_tmdb": "",
+   "lbSlug": "el-mundo-de-humberto",
+   "_verificado": "el catálogo ya la tiene (w_R4GZE0GF3135, ficcali-2026, ficpa-2026)",
+   "work_id": "w_R4GZE0GF3135",
+   "_ya_publicada": [
+    {
+     "festival": "ficcali-2026",
+     "titulo": "El mundo de Humberto",
+     "tmdb_id": 1791688,
+     "poster": "/assets/ficcali-2026/el-mundo-de-humberto.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "el-mundo-de-humberto",
+     "sinopsis": "En el corazón de Cali está Kiss Me, la caverna del amor, un edificio de arquitectura ecléctica diseñado por Humberto Villegas, creador de sus 190 habitaciones temáticas, en las que confluyen el sexo, el arte y la política. El mundo de Humberto es una inmersión en este espacio insólito, sensual y poético, que Humberto transforma continuamente con la complicidad de Neneco, artista autodidacta que esculpe, pinta y moldea, para darles forma tangible a sus visiones, mientras el motel continúa operando como escenario de deseo y fantasía."
+    },
+    {
+     "festival": "ficpa-2026",
+     "titulo": "El Mundo de Humberto",
+     "tmdb_id": 1791688,
+     "poster": "/assets/ficpa-2026/el-mundo-de-humberto.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "el-mundo-de-humberto",
+     "sinopsis": "En el corazón de Cali (Colombia), un motel de 190 habitaciones temáticas se convierte en una obra de arte viva: un universo insólito, sensual y político concebido por Humberto Villegas, que Neneco, su cómplice escultor, materializa."
+    }
+   ]
+  },
+  {
    "titulo": "El segundo",
    "_fuente": "cinecorto",
    "_cinecorto": "https://cinecorto.co/el-segundo/",
@@ -467,7 +502,7 @@
    "pais_tmdb": "Cuba, Colombia, Germany",
    "title_en": "Practical Italian Grammar",
    "lbSlug": "practical-italian-grammar",
-   "_verificado": "el catálogo ya la tiene (w_R4FGS28EE01T, cinemancia-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4FGS28EE01T, cinemancia-2026, ficica-2026)",
    "work_id": "w_R4FGS28EE01T",
    "_ya_publicada": [
     {
@@ -597,7 +632,7 @@
    "duracion_tmdb": 15,
    "pais_tmdb": "Colombia",
    "lbSlug": "la-guerra-de-los-tomates",
-   "_verificado": "el catálogo ya la tiene (w_R4MYH1FJ6Q71, popayan-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4MYH1FJ6Q71, ficica-2026, popayan-2026)",
    "work_id": "w_R4MYH1FJ6Q71",
    "_ya_publicada": [
     {
@@ -664,7 +699,7 @@
    "titulo": "La mona",
    "tmdb_id": 1444298,
    "titulo_original": "La Mona",
-   "poster_path": null,
+   "poster_path": "/lJLol3jUunTLininhCPI65A32xN.jpg",
    "synopsis_es": "",
    "synopsis_en": "In the damp and dusty village of La Hondura, La Mona is ready to sacrifice everything to maintain her authority even if loneliness is the price she must pay. Her body, however, refuses to toe the line.",
    "genero": "Drama",
@@ -786,7 +821,7 @@
    "duracion_tmdb": 18,
    "pais_tmdb": "",
    "lbSlug": "los-pliegues-de-la-falda",
-   "_verificado": "el catálogo ya la tiene (w_R4HHC4K8GBRC, ficdeh-2026, popayan-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4HHC4K8GBRC, ficdeh-2026, ficica-2026, popayan-2026)",
    "work_id": "w_R4HHC4K8GBRC",
    "_ya_publicada": [
     {
@@ -837,7 +872,7 @@
    "pais_tmdb": "Colombia",
    "title_en": "Bad Postures",
    "lbSlug": "bad-postures",
-   "_verificado": "el catálogo ya la tiene (w_R4KECG9BFSX8, jardin-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4KECG9BFSX8, ficica-2026, jardin-2026)",
    "work_id": "w_R4KECG9BFSX8",
    "_ya_publicada": [
     {
@@ -892,7 +927,7 @@
    "pais_tmdb": "",
    "title_en": "Beyond",
    "lbSlug": "beyond-2025",
-   "_verificado": "el catálogo ya la tiene (w_R4HHSYKXBWCD, ficdeh-2026, popayan-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4HHSYKXBWCD, ficdeh-2026, ficica-2026, popayan-2026)",
    "work_id": "w_R4HHSYKXBWCD",
    "_ya_publicada": [
     {
@@ -926,7 +961,7 @@
    "duracion_tmdb": 12,
    "pais_tmdb": "Peru, France",
    "lbSlug": "memoria-colectiva",
-   "_verificado": "el catálogo ya la tiene (w_R4J7WZRP6QM7, ficmontanas-2026, villadelcine-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4J7WZRP6QM7, ficica-2026, ficmontanas-2026, villadelcine-2026)",
    "work_id": "w_R4J7WZRP6QM7",
    "_ya_publicada": [
     {
@@ -975,8 +1010,7 @@
    "pais_tmdb": "Colombia",
    "title_en": "Chilapa Girl",
    "lbSlug": "chilapa-girl",
-   "_verificado": "el catálogo ya la tiene (w_R4ETMKK7J5T0, cinemancia-2025, popayan-2026)",
-   "work_id": "w_R4ETMKK7J5T0",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
    "_ya_publicada": [
     {
      "festival": "cinemancia-2025",
@@ -1053,7 +1087,7 @@
    "duracion_tmdb": 20,
    "pais_tmdb": "Colombia",
    "lbSlug": "pawa",
-   "_verificado": "el catálogo ya la tiene (w_R4HCNBABG3FG, ficci-65, ficdeh-2026, leviza-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4HCNBABG3FG, ficci-65, ficdeh-2026, ficica-2026, leviza-2026)",
    "work_id": "w_R4HCNBABG3FG",
    "_ya_publicada": [
     {
@@ -1140,7 +1174,7 @@
    "duracion_tmdb": 0,
    "pais_tmdb": "Colombia",
    "lbSlug": "que-el-cielo-nos-perdone",
-   "_verificado": "el catálogo ya la tiene (w_R4GP49AWA2ZH, bhff-2026, fantasmagoria-2026, ficma-2026, siembrafest-2026, villadelcine-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4GP49AWA2ZH, bhff-2026, fantasmagoria-2026, ficica-2026, ficma-2026, siembrafest-2026, villadelcine-2026)",
    "work_id": "w_R4GP49AWA2ZH",
    "_ya_publicada": [
     {
@@ -1201,7 +1235,7 @@
    "duracion_tmdb": 11,
    "pais_tmdb": "Colombia",
    "lbSlug": "refraccion",
-   "_verificado": "el catálogo ya la tiene (w_R4F8T5DKXC9W, cinemancia-2026, ficmontanas-2026, girardota-2026, jardin-2026, narrarelfuturo-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4F8T5DKXC9W, cinemancia-2026, ficica-2026, ficmontanas-2026, girardota-2026, jardin-2026, narrarelfuturo-2026)",
    "work_id": "w_R4F8T5DKXC9W",
    "_ya_publicada": [
     {
@@ -1323,7 +1357,7 @@
    "pais_tmdb": "Colombia",
    "title_en": "Into the fog",
    "lbSlug": "into-the-fog-2026",
-   "_verificado": "el catálogo ya la tiene (w_R4FRTV2Q7YA2, cinemancia-2026, ficci-65, ficmontanas-2026, midbo-2026, popayan-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4FRTV2Q7YA2, cinemancia-2026, ficci-65, ficica-2026, ficmontanas-2026, midbo-2026, popayan-2026)",
    "work_id": "w_R4FRTV2Q7YA2",
    "_ya_publicada": [
     {
@@ -1429,7 +1463,7 @@
    "pais_tmdb": "Colombia",
    "title_en": "Tuktu, Father Maize",
    "lbSlug": "tuktu-father-maize",
-   "_verificado": "el catálogo ya la tiene (w_R4HJFE6HF274, ficdeh-2026, ficmontanas-2026, ficpa-2026, popayan-2026, villadelcine-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4HJFE6HF274, ficdeh-2026, ficica-2026, ficmontanas-2026, ficpa-2026, popayan-2026, villadelcine-2026)",
    "work_id": "w_R4HJFE6HF274",
    "_ya_publicada": [
     {
@@ -1572,7 +1606,7 @@
    "pais_tmdb": "Colombia",
    "title_en": "Lowering the Gaze",
    "lbSlug": "lowering-the-gaze",
-   "_verificado": "el catálogo ya la tiene (w_R4JG4KR5FX9V, filcmar-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4JG4KR5FX9V, ficica-2026, filcmar-2026)",
    "work_id": "w_R4JG4KR5FX9V",
    "_ya_publicada": [
     {
@@ -1878,6 +1912,40 @@
    "lbSlug": "noras-ark",
    "_verificado": "declarada a mano: Existe en TMDB con otro título o sin año ni duración, y el candado no la casaba sola: «Nora's ark» (2026), Endre Lund Eriksen; mismo director que publica FICICA. Verificada el 11 oct 2026."
   },
+  "El mundo de humberto": {
+   "tmdb_id": 1791688,
+   "titulo_original": "El mundo de Humberto",
+   "poster_path": "/5LT4v4mj28KFFh3xAXH2y6DIQyo.jpg",
+   "synopsis_es": "En el corazón de Cali está Kiss Me, la caverna del amor, un edificio de arquitectura ecléctica diseñado por Humberto Villegas, creador de sus 190 habitaciones temáticas, en las que confluyen el sexo, el arte y la política. El mundo de Humberto es una inmersión en este espacio insólito, sensual y poético, que Humberto transforma continuamente con la complicidad de Neneco, artista autodidacta que esculpe, pinta y moldea, para darles forma tangible a sus visiones, mientras el motel continúa operando como escenario de deseo y fantasía.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 14,
+   "pais_tmdb": "",
+   "lbSlug": "el-mundo-de-humberto",
+   "_verificado": "el catálogo ya la tiene (w_R4GZE0GF3135, ficcali-2026, ficpa-2026)",
+   "work_id": "w_R4GZE0GF3135",
+   "_ya_publicada": [
+    {
+     "festival": "ficcali-2026",
+     "titulo": "El mundo de Humberto",
+     "tmdb_id": 1791688,
+     "poster": "/assets/ficcali-2026/el-mundo-de-humberto.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "el-mundo-de-humberto",
+     "sinopsis": "En el corazón de Cali está Kiss Me, la caverna del amor, un edificio de arquitectura ecléctica diseñado por Humberto Villegas, creador de sus 190 habitaciones temáticas, en las que confluyen el sexo, el arte y la política. El mundo de Humberto es una inmersión en este espacio insólito, sensual y poético, que Humberto transforma continuamente con la complicidad de Neneco, artista autodidacta que esculpe, pinta y moldea, para darles forma tangible a sus visiones, mientras el motel continúa operando como escenario de deseo y fantasía."
+    },
+    {
+     "festival": "ficpa-2026",
+     "titulo": "El Mundo de Humberto",
+     "tmdb_id": 1791688,
+     "poster": "/assets/ficpa-2026/el-mundo-de-humberto.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "el-mundo-de-humberto",
+     "sinopsis": "En el corazón de Cali (Colombia), un motel de 190 habitaciones temáticas se convierte en una obra de arte viva: un universo insólito, sensual y político concebido por Humberto Villegas, que Neneco, su cómplice escultor, materializa."
+    }
+   ]
+  },
   "El segundo": {
    "_fuente": "cinecorto",
    "_cinecorto": "https://cinecorto.co/el-segundo/",
@@ -1968,7 +2036,7 @@
    "pais_tmdb": "Cuba, Colombia, Germany",
    "title_en": "Practical Italian Grammar",
    "lbSlug": "practical-italian-grammar",
-   "_verificado": "el catálogo ya la tiene (w_R4FGS28EE01T, cinemancia-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4FGS28EE01T, cinemancia-2026, ficica-2026)",
    "work_id": "w_R4FGS28EE01T",
    "_ya_publicada": [
     {
@@ -2093,7 +2161,7 @@
    "duracion_tmdb": 15,
    "pais_tmdb": "Colombia",
    "lbSlug": "la-guerra-de-los-tomates",
-   "_verificado": "el catálogo ya la tiene (w_R4MYH1FJ6Q71, popayan-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4MYH1FJ6Q71, ficica-2026, popayan-2026)",
    "work_id": "w_R4MYH1FJ6Q71",
    "_ya_publicada": [
     {
@@ -2158,7 +2226,7 @@
   "La mona": {
    "tmdb_id": 1444298,
    "titulo_original": "La Mona",
-   "poster_path": null,
+   "poster_path": "/lJLol3jUunTLininhCPI65A32xN.jpg",
    "synopsis_es": "",
    "synopsis_en": "In the damp and dusty village of La Hondura, La Mona is ready to sacrifice everything to maintain her authority even if loneliness is the price she must pay. Her body, however, refuses to toe the line.",
    "genero": "Drama",
@@ -2275,7 +2343,7 @@
    "duracion_tmdb": 18,
    "pais_tmdb": "",
    "lbSlug": "los-pliegues-de-la-falda",
-   "_verificado": "el catálogo ya la tiene (w_R4HHC4K8GBRC, ficdeh-2026, popayan-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4HHC4K8GBRC, ficdeh-2026, ficica-2026, popayan-2026)",
    "work_id": "w_R4HHC4K8GBRC",
    "_ya_publicada": [
     {
@@ -2324,7 +2392,7 @@
    "pais_tmdb": "Colombia",
    "title_en": "Bad Postures",
    "lbSlug": "bad-postures",
-   "_verificado": "el catálogo ya la tiene (w_R4KECG9BFSX8, jardin-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4KECG9BFSX8, ficica-2026, jardin-2026)",
    "work_id": "w_R4KECG9BFSX8",
    "_ya_publicada": [
     {
@@ -2376,7 +2444,7 @@
    "pais_tmdb": "",
    "title_en": "Beyond",
    "lbSlug": "beyond-2025",
-   "_verificado": "el catálogo ya la tiene (w_R4HHSYKXBWCD, ficdeh-2026, popayan-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4HHSYKXBWCD, ficdeh-2026, ficica-2026, popayan-2026)",
    "work_id": "w_R4HHSYKXBWCD",
    "_ya_publicada": [
     {
@@ -2409,7 +2477,7 @@
    "duracion_tmdb": 12,
    "pais_tmdb": "Peru, France",
    "lbSlug": "memoria-colectiva",
-   "_verificado": "el catálogo ya la tiene (w_R4J7WZRP6QM7, ficmontanas-2026, villadelcine-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4J7WZRP6QM7, ficica-2026, ficmontanas-2026, villadelcine-2026)",
    "work_id": "w_R4J7WZRP6QM7",
    "_ya_publicada": [
     {
@@ -2456,8 +2524,7 @@
    "pais_tmdb": "Colombia",
    "title_en": "Chilapa Girl",
    "lbSlug": "chilapa-girl",
-   "_verificado": "el catálogo ya la tiene (w_R4ETMKK7J5T0, cinemancia-2025, popayan-2026)",
-   "work_id": "w_R4ETMKK7J5T0",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
    "_ya_publicada": [
     {
      "festival": "cinemancia-2025",
@@ -2532,7 +2599,7 @@
    "duracion_tmdb": 20,
    "pais_tmdb": "Colombia",
    "lbSlug": "pawa",
-   "_verificado": "el catálogo ya la tiene (w_R4HCNBABG3FG, ficci-65, ficdeh-2026, leviza-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4HCNBABG3FG, ficci-65, ficdeh-2026, ficica-2026, leviza-2026)",
    "work_id": "w_R4HCNBABG3FG",
    "_ya_publicada": [
     {
@@ -2615,7 +2682,7 @@
    "duracion_tmdb": 0,
    "pais_tmdb": "Colombia",
    "lbSlug": "que-el-cielo-nos-perdone",
-   "_verificado": "el catálogo ya la tiene (w_R4GP49AWA2ZH, bhff-2026, fantasmagoria-2026, ficma-2026, siembrafest-2026, villadelcine-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4GP49AWA2ZH, bhff-2026, fantasmagoria-2026, ficica-2026, ficma-2026, siembrafest-2026, villadelcine-2026)",
    "work_id": "w_R4GP49AWA2ZH",
    "_ya_publicada": [
     {
@@ -2675,7 +2742,7 @@
    "duracion_tmdb": 11,
    "pais_tmdb": "Colombia",
    "lbSlug": "refraccion",
-   "_verificado": "el catálogo ya la tiene (w_R4F8T5DKXC9W, cinemancia-2026, ficmontanas-2026, girardota-2026, jardin-2026, narrarelfuturo-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4F8T5DKXC9W, cinemancia-2026, ficica-2026, ficmontanas-2026, girardota-2026, jardin-2026, narrarelfuturo-2026)",
    "work_id": "w_R4F8T5DKXC9W",
    "_ya_publicada": [
     {
@@ -2793,7 +2860,7 @@
    "pais_tmdb": "Colombia",
    "title_en": "Into the fog",
    "lbSlug": "into-the-fog-2026",
-   "_verificado": "el catálogo ya la tiene (w_R4FRTV2Q7YA2, cinemancia-2026, ficci-65, ficmontanas-2026, midbo-2026, popayan-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4FRTV2Q7YA2, cinemancia-2026, ficci-65, ficica-2026, ficmontanas-2026, midbo-2026, popayan-2026)",
    "work_id": "w_R4FRTV2Q7YA2",
    "_ya_publicada": [
     {
@@ -2886,7 +2953,7 @@
    "pais_tmdb": "Colombia",
    "title_en": "Tuktu, Father Maize",
    "lbSlug": "tuktu-father-maize",
-   "_verificado": "el catálogo ya la tiene (w_R4HJFE6HF274, ficdeh-2026, ficmontanas-2026, ficpa-2026, popayan-2026, villadelcine-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4HJFE6HF274, ficdeh-2026, ficica-2026, ficmontanas-2026, ficpa-2026, popayan-2026, villadelcine-2026)",
    "work_id": "w_R4HJFE6HF274",
    "_ya_publicada": [
     {
@@ -2983,31 +3050,56 @@
  },
  "sin_ficha": [
   "10 meters above",
+  "Alivios",
   "Appol-o",
+  "Arlequín",
+  "Bartolo",
   "Belleza letal",
+  "Cabica",
+  "Capitán cartagena",
   "Carne de segunda",
   "Chro",
   "Citizenship test",
   "Compraventa",
+  "Concierto sentido",
   "Cómo limpiar un espejo",
-  "El mundo de humberto",
+  "Dientes de yuca",
+  "Dulce",
+  "El abrazo del sol",
+  "El bitcoin de oro",
+  "El kanto del kajambá",
+  "El maestro de la piquería",
+  "El silencio de las semillas",
   "En nombre del amor",
   "Enfermedad",
+  "Frágil o embalados",
+  "Gracias, antonio",
   "In turn",
   "Juego de damas",
+  "Khazana",
   "La culpa es del cine",
+  "La despedida",
   "La fiesta votada",
+  "La tormenta",
   "La tranquilidad de los pájaros",
+  "Memorias piedras de boca e’ caña",
   "New york",
+  "Plan de fuga",
   "Post-familia",
+  "Princesado mokaná: el legado del cerro de las hermosas",
+  "Proowa",
+  "Queener",
+  "Quinto primera",
   "Rastro",
   "Recordando mi jerga",
+  "Seguridad en el territorio del pueblo ette ennka chimila",
   "Snorri - catch me if you candy",
   "Sombra lejana",
   "Tejiendo un árbol",
   "The dreaming witness",
   "The remaining dregs",
   "The torch i carry",
-  "Zizuma, nuestra casa de agua y nubes"
+  "Zizuma, nuestra casa de agua y nubes",
+  "¿Quién heredará el sabor de mompox?"
  ]
 }

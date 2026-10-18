@@ -1,0 +1,47 @@
+{
+ "id": "w_6M6QFHFH8RFY",
+ "titulo_original": "Presépio (el pesebre)",
+ "anio": 2025,
+ "paises": [
+  "BR"
+ ],
+ "directores": [
+  "Felipe Bibian"
+ ],
+ "aliases": [
+  {
+   "titulo": "El pesebre",
+   "tipo": "festival"
+  },
+  {
+   "titulo": "Nativity Scene",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "En la víspera de Navidad, Dejair, un ex luchador de la resistencia contra la dictadura militar, se reúne con su familia en el patio trasero. Un regalo de pistola de agua lleva a Dejair a denunciar lo absurdo de darle un arma a un niño.",
+  "en": "On Christmas Eve, Dejair, a former resistance fighter against the military dictatorship, gathers with his family in the backyard. During a Secret Santa game, the contrast between appearances and private truths emerges. A water gun gift leads Dejair to denounce the absurdity of giving a child a weapon."
+ },
+ "generos": [
+  "Drama"
+ ],
+ "afiche": {
+  "archivo": "/assets/ficica-2026/presepio-el-pesebre.jpg",
+  "veredicto": "oficial"
+ },
+ "xref": {
+  "tmdb": 1543600,
+  "letterboxd": "nativity-scene"
+ },
+ "versiones": [
+  {
+   "etiqueta": "18 min",
+   "duracion_min": 18
+  }
+ ],
+ "presentaciones": [
+  "ficica-2026",
+  "filcmar-2026"
+ ]
+}
