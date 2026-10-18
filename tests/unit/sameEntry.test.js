@@ -58,9 +58,14 @@ test('obras distintas nunca son la misma entrada, coincidan día y sede', () => 
 // el título y la función sigue siendo la misma. Sin código, como siempre.
 const FUN = { id: 'f_5ac7fb72c7', title: 'Critters', day: '2026-10-18', time: '19:00', venue: 'Planetario' };
 
-test('código: misma función aunque cambien hora, sala y título', () => {
-  const movida = { ...FUN, time: '17:00', venue: 'Otra sala', title: 'Critters (versión restaurada)' };
-  assert.equal(sameEntry({ ...FUN, _title: FUN.title }, movida), true);
+test('código: misma función aunque el festival le cambie el TÍTULO', () => {
+  assert.equal(sameEntry({ ...FUN, _title: FUN.title }, { ...FUN, title: 'Critters (versión restaurada)' }), true);
+});
+
+test('código: un cambio de día, hora o sede NO se sigue en silencio (el plan avisa REPROGRAMADA)', () => {
+  assert.equal(sameEntry(FUN, { ...FUN, time: '17:00' }), false, 'hora');
+  assert.equal(sameEntry(FUN, { ...FUN, day: '2026-10-19' }), false, 'día');
+  assert.equal(sameEntry(FUN, { ...FUN, venue: 'Otra sede' }), false, 'sede');
 });
 
 test('código: dos funciones distintas no se confunden aunque coincidan en todo lo demás', () => {
