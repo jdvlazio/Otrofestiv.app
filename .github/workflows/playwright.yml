@@ -29,7 +29,60 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  # CAMINO DE DATOS (17–18 oct 2026, decisión de Juan): un PR que solo toca las
+  # rutas de .github/camino-datos.txt corre el job «Regression tests (datos)»
+  # —smoke, festivales, planificador, Mi Plan y recorrido, los specs que consumen
+  # el JSON— y el de la suite completa queda SALTADO (no verde: el check no
+  # promete lo que no corrió). En main (push) corre siempre la suite completa.
+  clasificar:
+    runs-on: ubuntu-latest
+    outputs:
+      datos: ${{ steps.camino.outputs.datos }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - name: Clasificar el PR
+        id: camino
+        run: |
+          if [ "${{ github.event_name }}" != "pull_request" ]; then echo "datos=false" >> "$GITHUB_OUTPUT"; exit 0; fi
+          c=$(node scripts/ci-camino.js "${{ github.base_ref }}")
+          [ "$c" = "datos" ] && echo "datos=true" >> "$GITHUB_OUTPUT" || echo "datos=false" >> "$GITHUB_OUTPUT"
+
+  datos:
+    needs: clasificar
+    if: needs.clasificar.outputs.datos == 'true'
+    runs-on: ubuntu-latest
+    name: Regression tests (datos)
+    container:
+      image: mcr.microsoft.com/playwright:v1.60.0-noble
+      options: --user 1001
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '20'
+          cache: 'npm'
+      - run: npm ci
+      - name: Smoke tests
+        run: ./scripts/test.sh tests/smoke.spec.js
+      - name: Festivales, planificador y Mi Plan (consumen el JSON)
+        run: ./scripts/test.sh tests/festivals.spec.js tests/planner.spec.js tests/miplan.spec.js
+      - name: Recorrido por festival
+        run: ./scripts/test.sh tests/recorrido-festival.spec.js
+      - name: Upload report on failure
+        if: failure()
+        uses: actions/upload-artifact@v6
+        with:
+          name: playwright-report-datos
+          path: |
+            playwright-report/
+            test-results.json
+          retention-days: 7
+
   test:
+    needs: clasificar
+    if: needs.clasificar.outputs.datos != 'true'
     runs-on: ubuntu-latest
     name: Regression tests
     # Imagen oficial de Playwright: trae chromium y webkit YA INSTALADOS. El paso
@@ -95,6 +148,8 @@ jobs:
         run: ./scripts/test.sh tests/responsive.spec.js
 
       - name: Run visual audit
+        # Solo en main (17 oct 2026): saca capturas para revisar, no bloquea un PR.
+        if: github.event_name == 'push'
         # Sin `|| true`: el archivo promete fallar «si un selector crítico no
         # existe (la pantalla no cargó)», y con el fallo tragado esa promesa no
         # llegaba a ninguna parte — tres capturas se tomaron de la pantalla
@@ -106,7 +161,7 @@ jobs:
 
       - name: Upload screenshots (visual audit)
         uses: actions/upload-artifact@v6
-        if: always()
+        if: always() && github.event_name == 'push'
         with:
           name: visual-audit-screenshots
           path: test-results/visual/
