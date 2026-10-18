@@ -137,7 +137,11 @@ def main():
     if _sin_tarjeta != _esperadas:
         fallos.append(f'funciones sin tarjeta que no son las de IG declaradas: {_sin_tarjeta} vs {_esperadas}')
     # el build es el crudo ensamblado: misma cuenta, mismas franjas
-    bk = sorted((x['day'], x['time']) for x in build['films'])
+    # por el ANCLA (día y hora de la fuente principal): en el modelo de la función
+    # una afirmación puede mover la hora publicada —la decisión de Juan del 17 oct
+    # sobre Vanguardias Prog 2— y el ancla conserva la de la fuente (FUNCION.md §3.1)
+    bk = sorted((tuple(x['_ancla'])[1], tuple(x['_ancla'])[2]) if x.get('_ancla') else (x['day'], x['time'])
+                for x in build['films'])
     ck = sorted((f['dia'], f['hora']) for f in crudo['funciones'])
     if bk != ck:
         fallos.append(f'el build ({len(bk)}) no tiene las mismas franjas que el crudo ({len(ck)})')

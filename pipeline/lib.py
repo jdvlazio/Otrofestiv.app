@@ -387,7 +387,10 @@ def ya_publicada(obra, idx):
                 if not (dur_ok or anio_ok):
                     continue
             r = {'festival': fest, 'titulo': o['title']}
-            for campo in ('tmdb_id', 'poster', 'posterSource', 'lbSlug'):
+            # todo lo que ya mostramos de la obra (17 oct 2026): la cascada solo
+            # traía afiche y sinopsis, y país/año/duración/género se quedaban atrás
+            for campo in ('tmdb_id', 'poster', 'posterSource', 'lbSlug', 'country', 'year',
+                          'duration', 'genre', 'synopsis_en'):
                 if o.get(campo):
                     r[campo] = o[campo]
             if o.get('synopsis'):

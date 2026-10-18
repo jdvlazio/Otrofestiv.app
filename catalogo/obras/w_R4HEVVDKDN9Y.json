@@ -30,8 +30,8 @@
   "Experimental"
  ],
  "afiche": {
-  "archivo": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_POSTER_SIN%20CREDITOS%20copia%20-%20Mar%20Aj%C3%A9.jpg?itok=Dhen7YE6",
-  "veredicto": "oficial-festival"
+  "archivo": "/assets/ficcali-2026/la-tinaja.jpg",
+  "veredicto": "oficial"
  },
  "xref": {
   "tmdb": 1668923,
@@ -48,6 +48,7 @@
   }
  ],
  "presentaciones": [
+  "ficcali-2026",
   "ficci-65",
   "popayan-2026",
   "qaff-2026",

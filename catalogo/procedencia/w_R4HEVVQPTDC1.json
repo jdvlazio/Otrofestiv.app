@@ -1,11 +1,11 @@
 {
  "titulo_original": {
-  "fuente": "festival:ficci-65,ficci-65,ficci-65,ficdeh-2026,ficdeh-2026,ficdeh-2026,ficdeh-2026,ficdeh-2026,ficdeh-2026,ficdeh-2026,ficdeh-2026,ficdeh-2026,ficdeh-2026,ficdeh-2026",
+  "fuente": "festival:ficcali-2026,ficci-65,ficci-65,ficci-65,ficdeh-2026,ficdeh-2026,ficdeh-2026,ficdeh-2026,ficdeh-2026,ficdeh-2026,ficdeh-2026,ficdeh-2026,ficdeh-2026,ficdeh-2026,ficdeh-2026",
   "regla": "el título que más festivales imprimen"
  },
  "directores": {
-  "fuente": "festival",
-  "regla": "la grafía más completa que acreditan los festivales"
+  "fuente": "tmdb:1668935",
+  "regla": "tmdb-manda"
  },
  "anio": {
   "fuente": "festival",

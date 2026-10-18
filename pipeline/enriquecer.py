@@ -290,6 +290,11 @@ def afiche_tmdb(e, fid, base, key):
 from herencia import afiche_ajeno_vale  # noqa: E402  (dueño: herencia.py)
 
 
+def _min_de(v):
+    m = re.search(r'\d+', str(v or ''))
+    return int(m.group()) if m else None
+
+
 def reuso_publicada(pub, fid=None):
     """Sin ficha, pero ya la publicamos con afiche: se reusa el afiche y la
     sinopsis que mostramos entonces —ya pasaron por un montaje—. «Belleza letal»
@@ -313,16 +318,26 @@ def reuso_publicada(pub, fid=None):
     # la SINOPSIS se reusa de donde esté, aunque el afiche de ese festival fuera
     # un fotograma: son dos datos distintos (Girardota perdía 2 sinopsis)
     s = next((y for y in pub if y.get('sinopsis')), None)
-    if not x and not s:
+    # y lo demás que ya mostramos (17 oct 2026), de donde esté: cada dato del
+    # primer festival que lo tenga
+    _de = lambda c: next((y[c] for y in pub if y.get(c)), None)
+    resto = {k: v for k, v in (('pais', _de('country')), ('anio', _de('year')),
+                                ('duracion_tmdb', _min_de(_de('duration'))),
+                                ('genero', _de('genre')), ('synopsis_en', _de('synopsis_en')),
+                                ('lbSlug', _de('lbSlug'))) if v}
+    if not x and not s and not resto:
         return None
     e = {'_ya_publicada': pub}
     if x:
         e['poster'] = x['poster']
         e['_verificado'] = f'ya publicada en {x["festival"]}: se reusa su afiche'
-    else:
+    elif s:
         e['_verificado'] = f'ya publicada en {s["festival"]}: se reusa su sinopsis'
     if s:
         e['sinopsis'] = s['sinopsis']
+    if not x and not s:
+        e['_verificado'] = f'ya publicada en {pub[0]["festival"]}: se reusan sus datos'
+    e.update(resto)
     return e
 
 
