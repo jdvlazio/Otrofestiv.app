@@ -15,6 +15,7 @@ import { _renderProgramaContent, lugarClose, scrollDtabsToActive } from '../view
 import { _fixStickyOffset, renderAgenda } from '../view/agenda.js';
 import { loadState, _cloudLoad, _cloudSave, subscribePlanCloud, _flushCloudSave } from './persistence.js';
 import { report } from '../telemetry.js';
+import { cargarDatosFestival } from './datos-fuente.js';
 import { subscribeDelaysCloud } from './delays-cloud.js';
 import { renderFestBar } from './festival.js';
 import { _updateProgramaActiveFilter, initProgramaModeBar, showAgView, showDayView, switchMainNav, _syncPmodeTabs } from './pipeline.js';
@@ -378,7 +379,7 @@ export async function loadFestival(id){
       // Sin banner de error: el catch externo muestra el toast y reporta a Sentry.
       // (El banner rojo fixed nunca se removía → quedaba tapando el topbar tras un
       // retry exitoso.)
-      const data=await _fetchFestivalJson(festivalJsonUrl(id));
+      const data=await cargarDatosFestival(id);
       _ingerirDatosFestival(id, cfg, data);
 
     }catch(e){

@@ -17,7 +17,7 @@ import { createClient } from "npm:@supabase/supabase-js@2";
 
 const REPO = "jdvlazio/Otrofestiv.app";
 const RAMA = "datos";
-const RE_FEST = /^[a-z0-9_-]{3,40}$/;
+const RE_FEST = /^([a-z0-9_-]{3,40}|_control)$/;
 const RE_SHA = /^[0-9a-f]{40}$/;
 
 const json = (status: number, body: unknown) =>
@@ -44,6 +44,24 @@ Deno.serve(async (req) => {
   if (!gh.ok) return json(502, { error: `GitHub ${gh.status}` });
   const punta = (await gh.json())?.commit?.sha;
   if (punta !== sha) return json(409, { error: "el sha no es la punta de la rama datos", punta });
+
+  // Interruptor (festival = "_control"): lee datos-control.json de ESE commit y
+  // fija `apagado` en el índice. Apagado → la app vuelve a la copia de la web.
+  if (fest === "_control") {
+    const c = await fetch(`https://raw.githubusercontent.com/${REPO}/${sha}/datos-control.json`);
+    if (!c.ok) return json(404, { error: "no existe datos-control.json en ese commit" });
+    let ctl: Record<string, unknown>;
+    try { ctl = await c.json(); } catch { return json(422, { error: "datos-control.json no es JSON" }); }
+    const sbc = createClient(Deno.env.get("SUPABASE_URL")!, Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!, { auth: { persistSession: false } });
+    const stc = sbc.storage.from("datos");
+    let ix: Record<string, unknown> = { version: 1, festivales: {} };
+    const pv = await stc.download("indice.json");
+    if (pv.data) { try { ix = JSON.parse(await pv.data.text()); } catch { /* se rehace */ } }
+    ix.apagado = ctl.apagado === true;
+    const w = await stc.upload("indice.json", new TextEncoder().encode(JSON.stringify(ix)), { contentType: "application/json", cacheControl: "30", upsert: true });
+    if (w.error) return json(500, { error: "no se pudo actualizar el índice" });
+    return json(200, { ok: true, apagado: ix.apagado });
+  }
 
   // 2. El archivo de ESE commit.
   const raw = await fetch(`https://raw.githubusercontent.com/${REPO}/${sha}/festivals/${fest}.json`);
