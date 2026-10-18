@@ -16,7 +16,10 @@ export const origenDatos={};   // de dónde salió cada festival cargado (diagn�
 async function _indiceDatos(){
   if(_indice && Date.now()-_indiceAt<60000) return _indice;   // un minuto de caché
   try{
-    const j=await _fetchFestivalJson(DATOS_URL+'indice.json',1,3000);
+    // ?m=<minuto>: el CDN de Supabase guarda el índice ~3 min aunque cambie
+    // (medido el 18 oct con Fantasmagoría). Una URL por minuto lo esquiva: una
+    // corrección llega en ≤1 min, y el CDN sigue sirviendo a todos el mismo minuto.
+    const j=await _fetchFestivalJson(DATOS_URL+'indice.json?m='+Math.floor(Date.now()/60000),1,3000);
     if(j && j.festivales && typeof j.festivales==='object'){ _indice=j; _indiceAt=Date.now(); }
   }catch(e){ /* sin almacén: el camino de siempre */ }
   return _indice;
