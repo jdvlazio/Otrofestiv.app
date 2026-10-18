@@ -71,7 +71,13 @@ def medir(raiz=REPO):
             # YA SALIÓ: lo publicado lo vigila [afiche-cobertura] (acepta el rastro
             # de que se buscó y no se halló). Este guardián es para el PRE-onboarding
             continue
-        con = _con_afiche(fid, raiz)
+        con = _con_afiche(fid, raiz) or set()
+        # el afiche RECORTADO que el catálogo declara (FICIDI: de la lámina) cuenta
+        # solo si el archivo está EN EL REPO: en fuentes/ (gitignored) se pierde —
+        # 64 de FICIDI apuntaban ahí y ya no existían (18 oct 2026)
+        con |= {plano(o.get('titulo')) for o in obras
+                if (o.get('afiche') or o.get('poster')) and str(o.get('afiche') or o.get('poster')).startswith(('assets/', '/assets/'))
+                and os.path.exists(os.path.join(raiz, str(o.get('afiche') or o.get('poster')).lstrip('/')))}
         cp = os.path.join(raiz, 'festivals', 'staging', f'{fid}-correcciones.json')
         exp = {plano(t) for t in (json.load(open(cp, encoding='utf-8')).get('sin_afiche') or {})} if os.path.exists(cp) else set()
         out[fid] = [o.get('titulo') for o in obras

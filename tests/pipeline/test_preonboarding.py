@@ -24,6 +24,13 @@ class Pre(unittest.TestCase):
         self.w('festivals/staging/x-correcciones.json', {'sin_afiche': {'B': 'no hay afiche público'}})
         self.assertEqual(P.medir(self.r), {'x': []})
 
+    def test_afiche_recortado_cuenta_solo_si_esta_en_el_repo(self):
+        os.makedirs(os.path.join(self.r, 'assets', 'x'))
+        open(os.path.join(self.r, 'assets', 'x', 'a.jpg'), 'w').write('jpg')
+        self.w('festivals/staging/x-catalogo.json', {'obras': [{'titulo': 'A', 'afiche': 'assets/x/a.jpg'},
+                                                              {'titulo': 'B', 'afiche': 'fuentes/x/b.jpg'}]})
+        self.assertEqual(P.medir(self.r), {'x': ['B']})
+
     def test_publicado_no_se_mide_aca(self):
         self.w('festivals/x.json', {'films': [{'title': 'A'}]})
         self.assertEqual(P.medir(self.r), {})
