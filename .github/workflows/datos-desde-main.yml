@@ -2,8 +2,9 @@
 # La app lee los festivales del almacén (migración 0009). Si un festival cambia
 # por el camino de siempre (PR → main), este job lo republica al almacén. Los
 # guardianes ya corrieron en el PR (CI requerido), así que acá se publica tal cual.
-# Publica TODO festival cambiado, esté o no en el índice: así, cuando la app pase
-# a leer un festival del almacén, ya está al día.
+# Solo republica los festivales que YA están en el índice del almacén (Juan, 18
+# oct 2026): un festival entra al almacén A PROPÓSITO, de a uno, con
+# publicar-datos.py — nunca de golpe porque un PR tocó muchos JSON.
 name: Datos al almacén
 on:
   push:
@@ -35,6 +36,11 @@ jobs:
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@users.noreply.github.com"
+          indice=$(curl -fsS "https://eytxrvbnwzxuedbmnnqr.supabase.co/storage/v1/object/public/datos/indice.json" || echo '{"festivales":{}}')
           for f in ${{ steps.cambios.outputs.lista }}; do
-            python3 pipeline/publicar-datos.py "$f" --desde-main
+            if echo "$indice" | python3 -c "import json,sys; sys.exit(0 if sys.argv[1] in json.load(sys.stdin).get('festivales',{}) else 1)" "$f"; then
+              python3 pipeline/publicar-datos.py "$f" --desde-main
+            else
+              echo "· $f no está en el almacén: se queda en la web (entra con publicar-datos.py a propósito)"
+            fi
           done
