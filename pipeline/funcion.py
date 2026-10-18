@@ -115,7 +115,9 @@ _CAMPOS_ENTRADA = ('is_free', 'by_invitation', 'online')
 
 def _entrada_a_campos(v):
     return {'libre': {'is_free': True}, 'boleta': {'is_free': False},
-            'invitacion': {'by_invitation': True}, 'en_linea': {'online': True}}[v]
+            # «en línea» dice DÓNDE, no cuánto cuesta: sin aviso de pago es libre
+            # (las charlas por Twitch de Fantasmagoría, 17 oct 2026)
+            'invitacion': {'by_invitation': True}, 'en_linea': {'online': True, 'is_free': True}}[v]
 
 
 def _entrada_de(f):
