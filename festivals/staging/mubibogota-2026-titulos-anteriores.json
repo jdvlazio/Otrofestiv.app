@@ -1,10 +1,14 @@
 {
  "_provenance": {
-  "fuente": "mubifest.com/es/bogota (17 oct 2026)",
-  "capturado": "2026-10-17",
-  "metodo": "renombres del festival"
+  "fuente": "caja-titulo.py: programas en Título (regla de Juan)",
+  "capturado": "2026-10-15"
  },
  "renombres": [
+  {
+   "antes": "Voilà Varda: cortometrajes de Agnès Varda",
+   "ahora": "Voilà Varda: Cortometrajes de Agnès Varda",
+   "por_que": "programa en Título (regla de Juan, 15 oct 2026)"
+  },
   {
    "antes": "Desafío sorpresa con Lesley Wolf",
    "ahora": "Desafío con Lesley Wolf",

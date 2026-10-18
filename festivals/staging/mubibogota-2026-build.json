@@ -604,6 +604,9 @@
    ],
    "description": "«En mis películas siempre quise hacer que la gente mirara en profundidad». —Agnès Varda",
    "description_lang": "es",
+   "titulos_anteriores": [
+    "Voilà Varda: cortometrajes de Agnès Varda"
+   ],
    "is_free": false,
    "_procedencia": {
     "entrada": {
@@ -779,7 +782,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-17T21:55:24",
+  "fecha": "2026-10-17T22:32:01",
   "plan_sha": "d7f550dc832ae067",
   "paso": 7,
   "cmd": "python3 pipeline/mubibogota-2026-verificar.py"
