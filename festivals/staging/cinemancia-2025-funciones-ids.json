@@ -1,0 +1,617 @@
+{
+ "_provenance": {
+  "fuente": "ids-legado.py: ids estables congelados desde lo publicado (docs/FUNCION.md §11.2)",
+  "capturado": "2026-10-18"
+ },
+ "funciones": {
+  "f_77022e90b3": {
+   "sede": "Teatro Comfama",
+   "dia": "JUE 11",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "la paga"
+  },
+  "f_9e058f8fc2": {
+   "sede": "Colombo Sala 1",
+   "dia": "VIE 12",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "de todos modos juan te llamas"
+  },
+  "f_8b68aa3314": {
+   "sede": "Colombo Sala 2",
+   "dia": "VIE 12",
+   "hora": "14:30",
+   "sala": "",
+   "titulo": "una visita a producciones ogawa"
+  },
+  "f_1aa100da8f": {
+   "sede": "Colombo Sala 2",
+   "dia": "VIE 12",
+   "hora": "16:30",
+   "sala": "",
+   "titulo": "irlande cahier bleu"
+  },
+  "f_91b550abb7": {
+   "sede": "Colombo Sala 1",
+   "dia": "VIE 12",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "una cita de amor"
+  },
+  "f_74681640f1": {
+   "sede": "Colombo Sala 2",
+   "dia": "VIE 12",
+   "hora": "19:30",
+   "sala": "",
+   "titulo": "proyeccion sorpresa"
+  },
+  "f_5c4ef6c4c3": {
+   "sede": "Colombo Sala 1",
+   "dia": "VIE 12",
+   "hora": "20:30",
+   "sala": "",
+   "titulo": "invention"
+  },
+  "f_f9a34f4928": {
+   "sede": "Capilla Comfama",
+   "dia": "VIE 12",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "esperando a godoy"
+  },
+  "f_4688f5b66b": {
+   "sede": "Biblioteca Sabaneta",
+   "dia": "VIE 12",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "eureka"
+  },
+  "f_30b95de06b": {
+   "sede": "Terko Bar",
+   "dia": "VIE 12",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "programa de cortos 4"
+  },
+  "f_dc9161f8d9": {
+   "sede": "Academia Municipal Girardota",
+   "dia": "VIE 12",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "programa de cortos 1"
+  },
+  "f_365809ae6c": {
+   "sede": "Biblioteca Barbosa",
+   "dia": "VIE 12",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "los estudiantes oprimidos"
+  },
+  "f_81d19e5d55": {
+   "sede": "Colombo Sala 1",
+   "dia": "SÁB 13",
+   "hora": "10:00",
+   "sala": "",
+   "titulo": "un poco demasiada ficcion"
+  },
+  "f_87ce3b892e": {
+   "sede": "Colombo Sala 1",
+   "dia": "SÁB 13",
+   "hora": "14:30",
+   "sala": "",
+   "titulo": "la bella durmiente"
+  },
+  "f_a2fb97a75f": {
+   "sede": "Cine MAMM",
+   "dia": "SÁB 13",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "andariega"
+  },
+  "f_16c5364825": {
+   "sede": "Colombo Sala 1",
+   "dia": "SÁB 13",
+   "hora": "16:30",
+   "sala": "",
+   "titulo": "classical period"
+  },
+  "f_1c7f974a32": {
+   "sede": "Colombo Sala 2",
+   "dia": "SÁB 13",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "noticias noticias"
+  },
+  "f_7ccdb9d01d": {
+   "sede": "Capilla Comfama",
+   "dia": "SÁB 13",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "programa de cortos 1"
+  },
+  "f_52627acc51": {
+   "sede": "Procinal Las Américas",
+   "dia": "SÁB 13",
+   "hora": "16:30",
+   "sala": "",
+   "titulo": "the sealed soil"
+  },
+  "f_693f048c2e": {
+   "sede": "Colombo Sala 2",
+   "dia": "SÁB 13",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "las artes de la palabra"
+  },
+  "f_6892315ed9": {
+   "sede": "Capilla Comfama",
+   "dia": "SÁB 13",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "sanrizuka campesinos de la segunda fortaleza"
+  },
+  "f_e3c8ae693e": {
+   "sede": "Auditorio Ciro Mendía Caldas",
+   "dia": "SÁB 13",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "el frente de batalla por la liberacion de japon verano en sanrizuka"
+  },
+  "f_b779dc0fa8": {
+   "sede": "Auditorio Ciro Mendía Caldas",
+   "dia": "SÁB 13",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "cortos competencia nuevas voces 1"
+  },
+  "f_a3797d7b7e": {
+   "sede": "Fiesta del Libro Parque de los Deseos",
+   "dia": "SÁB 13",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "una cita de amor"
+  },
+  "f_26f47e0c30": {
+   "sede": "Teatro Caribe",
+   "dia": "SÁB 13",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "devocion una pelicula sobre producciones ogawa"
+  },
+  "f_295a1e9699": {
+   "sede": "Colombo Sala 1",
+   "dia": "DOM 14",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "prefacio para el dialoguito"
+  },
+  "f_803fa43ea1": {
+   "sede": "Colombo Sala 2",
+   "dia": "DOM 14",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "los juegos del tiempo"
+  },
+  "f_5264216a11": {
+   "sede": "Colombo Sala 1",
+   "dia": "DOM 14",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "memoria"
+  },
+  "f_e6726ff839": {
+   "sede": "Cine MAMM",
+   "dia": "DOM 14",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "sanrizuka el pueblo de heta"
+  },
+  "f_a33a3c62ac": {
+   "sede": "Procinal Las Américas",
+   "dia": "DOM 14",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "tres hermanas"
+  },
+  "f_e76749518c": {
+   "sede": "Teatro Caribe",
+   "dia": "DOM 14",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "que es la ficcion"
+  },
+  "f_c6b4829f64": {
+   "sede": "Teatro Baggenuff",
+   "dia": "DOM 14",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "cortos competencia nuevas voces 2"
+  },
+  "f_0422c9e3f9": {
+   "sede": "Planetario",
+   "dia": "LUN 15",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "pequeno grande y lejos"
+  },
+  "f_8b18db069b": {
+   "sede": "Teatro Otraparte",
+   "dia": "LUN 15",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "cortos competencia nuevas voces 1"
+  },
+  "f_3f3647d0b4": {
+   "sede": "Teatro Caribe",
+   "dia": "LUN 15",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "7 caminadas con mark brown"
+  },
+  "f_7b0dccadaa": {
+   "sede": "Museo Casa Consistorial",
+   "dia": "LUN 15",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "tres hermanas"
+  },
+  "f_6f56d8074d": {
+   "sede": "Procinal Parque Fabricato",
+   "dia": "LUN 15",
+   "hora": "13:00",
+   "sala": "",
+   "titulo": "la piel en primavera"
+  },
+  "f_c9bcadf83a": {
+   "sede": "Colombo Sala 1",
+   "dia": "MAR 16",
+   "hora": "17:30",
+   "sala": "",
+   "titulo": "paroles images vitez"
+  },
+  "f_38d1f890ae": {
+   "sede": "Colombo Sala 1",
+   "dia": "MAR 16",
+   "hora": "20:00",
+   "sala": "",
+   "titulo": "canciones de verano"
+  },
+  "f_007a48faac": {
+   "sede": "Colombo Sala 2",
+   "dia": "MAR 16",
+   "hora": "14:30",
+   "sala": "",
+   "titulo": "selectito"
+  },
+  "f_212110a2db": {
+   "sede": "Colombo Sala 2",
+   "dia": "MAR 16",
+   "hora": "14:30",
+   "sala": "",
+   "titulo": "el vuelo del cangrejo"
+  },
+  "f_04080388d1": {
+   "sede": "Capilla Comfama",
+   "dia": "MAR 16",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "programa ewelina rosinska"
+  },
+  "f_6eb6f1ed52": {
+   "sede": "Antimateria Libros y Café",
+   "dia": "MAR 16",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "sanrizuka campesinos de la segunda fortaleza"
+  },
+  "f_4f18b8af0e": {
+   "sede": "Colombo Sala 2",
+   "dia": "MAR 16",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "cortos competencia nuevas voces 2"
+  },
+  "f_ef6ab1bbd7": {
+   "sede": "I.E. Pedro Luis Álvarez Caldas",
+   "dia": "MAR 16",
+   "hora": "09:00",
+   "sala": "",
+   "titulo": "de todos modos juan te llamas"
+  },
+  "f_972c67d753": {
+   "sede": "Procinal Parque Fabricato",
+   "dia": "MAR 16",
+   "hora": "13:00",
+   "sala": "",
+   "titulo": "la piel en primavera"
+  },
+  "f_95b3a95de9": {
+   "sede": "Colombo Sala 1",
+   "dia": "MIÉ 17",
+   "hora": "10:00",
+   "sala": "",
+   "titulo": "la carta escondida"
+  },
+  "f_fab11ea0a4": {
+   "sede": "Colombo Sala 1",
+   "dia": "MIÉ 17",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "las tierras del cielo"
+  },
+  "f_33d18de184": {
+   "sede": "Colombo Sala 2",
+   "dia": "MIÉ 17",
+   "hora": "16:30",
+   "sala": "",
+   "titulo": "esperando abril los bandidos del hotel azul"
+  },
+  "f_a0d7c0cbc3": {
+   "sede": "Capilla Comfama",
+   "dia": "MIÉ 17",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "cartas a mis padres muertos"
+  },
+  "f_00bcdc2526": {
+   "sede": "Procinal Las Américas",
+   "dia": "MIÉ 17",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "bluish"
+  },
+  "f_d486820379": {
+   "sede": "Colombo Sala 2",
+   "dia": "MIÉ 17",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "programa de cortos 2"
+  },
+  "f_4b214065c8": {
+   "sede": "Capilla Comfama",
+   "dia": "MIÉ 17",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "cortos competencia nuevas voces 2"
+  },
+  "f_bb5267075c": {
+   "sede": "Teatro Caribe",
+   "dia": "MIÉ 17",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "esperando a godoy"
+  },
+  "f_3f136d2350": {
+   "sede": "Museo Casa Consistorial",
+   "dia": "MIÉ 17",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "programa minuca villaverde"
+  },
+  "f_f688a169e9": {
+   "sede": "I.E. Pedro Luis Álvarez Caldas",
+   "dia": "MIÉ 17",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "prefacio para el dialoguito tu me abrasas"
+  },
+  "f_ff77c196b6": {
+   "sede": "Procinal Parque Fabricato",
+   "dia": "MIÉ 17",
+   "hora": "13:00",
+   "sala": "",
+   "titulo": "la piel en primavera"
+  },
+  "f_05b1be9d14": {
+   "sede": "Colombo Sala 1",
+   "dia": "JUE 18",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "programa de cortos 3"
+  },
+  "f_5d009870c6": {
+   "sede": "Colombo Sala 1",
+   "dia": "JUE 18",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "proyecciones especiales"
+  },
+  "f_a06b5eb78c": {
+   "sede": "Colombo Sala 1",
+   "dia": "JUE 18",
+   "hora": "21:00",
+   "sala": "",
+   "titulo": "debut or objects of the field of debris as currently catalogued"
+  },
+  "f_35b9f38e8b": {
+   "sede": "Colombo Sala 2",
+   "dia": "JUE 18",
+   "hora": "16:30",
+   "sala": "",
+   "titulo": "los estudiantes oprimidos"
+  },
+  "f_517096b554": {
+   "sede": "Colombo Sala 2",
+   "dia": "JUE 18",
+   "hora": "19:30",
+   "sala": "",
+   "titulo": "las artes de la palabra"
+  },
+  "f_5a6c06fd72": {
+   "sede": "Antimateria Libros y Café",
+   "dia": "JUE 18",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "sanrizuka el pueblo de heta"
+  },
+  "f_472c46ba0d": {
+   "sede": "Procinal Las Américas Sala 3",
+   "dia": "JUE 18",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "eureka"
+  },
+  "f_6da019d9bb": {
+   "sede": "Teatro Otraparte",
+   "dia": "JUE 18",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "ewelina rosinska nubes del este reflexiones sobre la imagen y el territorio"
+  },
+  "f_6b7bb4314b": {
+   "sede": "Teatro Caribe",
+   "dia": "JUE 18",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "andariega"
+  },
+  "f_8e7acd7b93": {
+   "sede": "Fiesta del Libro Parque de los Deseos",
+   "dia": "JUE 18",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "denominacion de origen"
+  },
+  "f_b9290a0784": {
+   "sede": "Colombo Sala 1",
+   "dia": "VIE 19",
+   "hora": "14:30",
+   "sala": "",
+   "titulo": "la babosa y el caracol molinos del tiempo"
+  },
+  "f_609fe95f8d": {
+   "sede": "Colombo Sala 2",
+   "dia": "VIE 19",
+   "hora": "16:30",
+   "sala": "",
+   "titulo": "red persimmons"
+  },
+  "f_7c780245d7": {
+   "sede": "Colombo Sala 2",
+   "dia": "VIE 19",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "programa minuca villaverde"
+  },
+  "f_2e9749b06e": {
+   "sede": "Procinal Las Américas",
+   "dia": "VIE 19",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "las tierras del cielo"
+  },
+  "f_76615b59d4": {
+   "sede": "Capilla Comfama",
+   "dia": "VIE 19",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "irlande cahier bleu"
+  },
+  "f_d636fd4056": {
+   "sede": "Colombo Sala 1",
+   "dia": "VIE 19",
+   "hora": "21:00",
+   "sala": "",
+   "titulo": "que es la ficcion"
+  },
+  "f_a4916d09d0": {
+   "sede": "Teatro Caribe",
+   "dia": "VIE 19",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "programa de cortos 2"
+  },
+  "f_0446dcfc8e": {
+   "sede": "Biblioteca Sabaneta",
+   "dia": "VIE 19",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "proyecciones especiales"
+  },
+  "f_a88fc7ec02": {
+   "sede": "Biblioteca Comfama Bello",
+   "dia": "VIE 19",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "una visita a producciones ogawa"
+  },
+  "f_1ff36e9444": {
+   "sede": "Antimateria Libros y Café",
+   "dia": "VIE 19",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "el frente de batalla por la liberacion de japon verano en sanrizuka"
+  },
+  "f_7906a37779": {
+   "sede": "Colombo Sala 2",
+   "dia": "VIE 19",
+   "hora": "20:30",
+   "sala": "",
+   "titulo": "portales las muchas muertes de antonio parreiras"
+  },
+  "f_a612c43df9": {
+   "sede": "Colombo Sala 1",
+   "dia": "SÁB 20",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "7 caminadas con mark brown"
+  },
+  "f_6ebeed7141": {
+   "sede": "Colombo Sala 2",
+   "dia": "SÁB 20",
+   "hora": "16:30",
+   "sala": "",
+   "titulo": "the sealed soil"
+  },
+  "f_a6fbbbc3c0": {
+   "sede": "Colombo Sala 1",
+   "dia": "SÁB 20",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "cobre"
+  },
+  "f_31c9a14b9b": {
+   "sede": "Procinal Las Américas",
+   "dia": "VIE 12",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "parado mirando"
+  },
+  "f_c3567f3651": {
+   "sede": "Procinal Las Américas",
+   "dia": "VIE 12",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "ensayos y errores"
+  },
+  "f_8933fb1854": {
+   "sede": "Auditorio Ciro Mendía Caldas",
+   "dia": "DOM 14",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "programa de cortos 3"
+  },
+  "f_0037ebfd67": {
+   "sede": "Centro Colombo Americano",
+   "dia": "VIE 19",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "programa de cortos 4"
+  },
+  "f_c9f740a913": {
+   "sede": "La Capilla del Claustro Comfama",
+   "dia": "VIE 12",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "que es la ficcion"
+  },
+  "f_016b1a75a1": {
+   "sede": "Colombo Sala 2",
+   "dia": "SÁB 13",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "la durmiente las reglas del juego"
+  }
+ }
+}

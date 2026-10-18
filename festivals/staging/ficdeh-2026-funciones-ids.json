@@ -1,0 +1,3137 @@
+{
+ "_provenance": {
+  "fuente": "ids-legado.py: ids estables congelados desde lo publicado (docs/FUNCION.md §11.2)",
+  "capturado": "2026-10-18"
+ },
+ "funciones": {
+  "f_44529dd4d4": {
+   "sede": "Centro Cultural Panóptico de Ibagué - Ibagué",
+   "dia": "2026-08-12",
+   "hora": "14:00",
+   "sala": "Celda Teatro Ibagué - Proyección en loop",
+   "titulo": "madres de nacimiento"
+  },
+  "f_c49f9dc92b": {
+   "sede": "Centro Cultural Panóptico de Ibagué - Ibagué",
+   "dia": "2026-08-12",
+   "hora": "14:00",
+   "sala": "Celda Teatro Ibagué - Proyección en loop",
+   "titulo": "sukua"
+  },
+  "f_bb53934fd2": {
+   "sede": "Centro Cultural Panóptico de Ibagué - Ibagué",
+   "dia": "2026-08-12",
+   "hora": "14:00",
+   "sala": "Celda Teatro Ibagué - Proyección en loop",
+   "titulo": "la independencia"
+  },
+  "f_eb23c0edcb": {
+   "sede": "Centro Cultural Panóptico de Ibagué - Ibagué",
+   "dia": "2026-08-12",
+   "hora": "14:00",
+   "sala": "Celda Teatro Ibagué - Proyección en loop",
+   "titulo": "cartas a la tierra"
+  },
+  "f_92ac150cd3": {
+   "sede": "Centro Cultural Panóptico de Ibagué - Ibagué",
+   "dia": "2026-08-12",
+   "hora": "14:00",
+   "sala": "Celda Teatro Ibagué - Proyección en loop",
+   "titulo": "pawa"
+  },
+  "f_a08e442a14": {
+   "sede": "Fundación Batuta Caldas - Manizales",
+   "dia": "2026-08-12",
+   "hora": "15:30",
+   "sala": "",
+   "titulo": "el juego de la vida"
+  },
+  "f_e008207fb8": {
+   "sede": "Cineland - Quibdó",
+   "dia": "2026-08-12",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "bojaya la verdad desde adentro"
+  },
+  "f_b9503ace9f": {
+   "sede": "Cinemateca de Tunja - Tunja",
+   "dia": "2026-08-12",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "akababuru expresion de asombro"
+  },
+  "f_4bfbad70fc": {
+   "sede": "Cinemateca de Tunja - Tunja",
+   "dia": "2026-08-12",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "todos los dias"
+  },
+  "f_4fe070d579": {
+   "sede": "Cinemateca de Tunja - Tunja",
+   "dia": "2026-08-12",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "sukua"
+  },
+  "f_eff14f0967": {
+   "sede": "Cinemateca de Tunja - Tunja",
+   "dia": "2026-08-12",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "la gran hazana"
+  },
+  "f_b6d13d17c7": {
+   "sede": "Centro Cultural Panóptico de Ibagué - Ibagué",
+   "dia": "2026-08-12",
+   "hora": "17:00",
+   "sala": "Auditorio",
+   "titulo": "la raya"
+  },
+  "f_ac1a1a573d": {
+   "sede": "Teatro Colón - Bogotá",
+   "dia": "2026-08-12",
+   "hora": "17:30",
+   "sala": "",
+   "titulo": "bojaya la verdad desde adentro"
+  },
+  "f_16fc8bd750": {
+   "sede": "Auditorio Centro Cultural Universitario Rogelio Salmona - Manizales",
+   "dia": "2026-08-12",
+   "hora": "17:30",
+   "sala": "",
+   "titulo": "por una gota de leche"
+  },
+  "f_c1d9898e41": {
+   "sede": "Universidad de Ibagué - Ibagué",
+   "dia": "2026-08-12",
+   "hora": "18:00",
+   "sala": "Auditorio Central",
+   "titulo": "semillas"
+  },
+  "f_74d7964d0e": {
+   "sede": "Universidad de Caldas - Auditorio Roberto Vélez Correa - Manizales",
+   "dia": "2026-08-12",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "desierto verde"
+  },
+  "f_fb424ca7ab": {
+   "sede": "Cine Bajo las Estrellas programa de exhibición y circulación - Armenia",
+   "dia": "2026-08-12",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "semillas"
+  },
+  "f_6d77f10688": {
+   "sede": "Alianza Francesa - Barranquilla",
+   "dia": "2026-08-12",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "ninxs"
+  },
+  "f_53a780c1ae": {
+   "sede": "Plazoleta del Samán - Cali",
+   "dia": "2026-08-12",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "los reyes del mundo"
+  },
+  "f_a703b748c8": {
+   "sede": "Centro de Formación de la Cooperación Española - Cartagena",
+   "dia": "2026-08-12",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "trenzando caminos de paz"
+  },
+  "f_8fd41373e0": {
+   "sede": "Centro de Formación de la Cooperación Española - Cartagena",
+   "dia": "2026-08-12",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "el silencio de los palafitos"
+  },
+  "f_928a3388b8": {
+   "sede": "Cinemateca de Tunja - Tunja",
+   "dia": "2026-08-12",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "three black men"
+  },
+  "f_90f5f5bc8f": {
+   "sede": "Auditorio Centro Cultural Universitario Rogelio Salmona - Manizales",
+   "dia": "2026-08-12",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "si la escombrera hablara"
+  },
+  "f_b0ef855a8f": {
+   "sede": "Cámara de Comercio de Pereira - Pereira",
+   "dia": "2026-08-12",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "eva"
+  },
+  "f_90105856fc": {
+   "sede": "Casa de la Juventud Iwoka - Bogotá",
+   "dia": "2026-08-13",
+   "hora": "10:00",
+   "sala": "",
+   "titulo": "mujeres modernas"
+  },
+  "f_12a57c1c1e": {
+   "sede": "Centro de Formación de la Cooperación Española - Cartagena",
+   "dia": "2026-08-13",
+   "hora": "10:00",
+   "sala": "",
+   "titulo": "cobija de recuerdos"
+  },
+  "f_ffa40748e1": {
+   "sede": "Centro de Formación de la Cooperación Española - Cartagena",
+   "dia": "2026-08-13",
+   "hora": "10:00",
+   "sala": "",
+   "titulo": "espeletia bk frailejon desarticulado"
+  },
+  "f_34a72bb05b": {
+   "sede": "Centro de Formación de la Cooperación Española - Cartagena",
+   "dia": "2026-08-13",
+   "hora": "10:00",
+   "sala": "",
+   "titulo": "cuando la palabra se hace busqueda"
+  },
+  "f_44e308f05f": {
+   "sede": "Centro de Formación de la Cooperación Española - Cartagena",
+   "dia": "2026-08-13",
+   "hora": "10:00",
+   "sala": "",
+   "titulo": "amalgama"
+  },
+  "f_2e7443b023": {
+   "sede": "Biblioteca Pública CEFE Fontanar Del Río - Bogotá",
+   "dia": "2026-08-13",
+   "hora": "11:00",
+   "sala": "",
+   "titulo": "sukua"
+  },
+  "f_ea163389a0": {
+   "sede": "Biblioteca Pública CEFE Fontanar Del Río - Bogotá",
+   "dia": "2026-08-13",
+   "hora": "11:00",
+   "sala": "",
+   "titulo": "los pliegues de la falda"
+  },
+  "f_e9446e0ced": {
+   "sede": "Biblioteca Pública CEFE Fontanar Del Río - Bogotá",
+   "dia": "2026-08-13",
+   "hora": "11:00",
+   "sala": "",
+   "titulo": "mas alla"
+  },
+  "f_c507bf289b": {
+   "sede": "Biblioteca Pública CEFE Fontanar Del Río - Bogotá",
+   "dia": "2026-08-13",
+   "hora": "11:00",
+   "sala": "",
+   "titulo": "la cerrillana"
+  },
+  "f_232f2be39b": {
+   "sede": "Biblioteca Pública CEFE Fontanar Del Río - Bogotá",
+   "dia": "2026-08-13",
+   "hora": "11:00",
+   "sala": "",
+   "titulo": "chaski pacha"
+  },
+  "f_e4e9ae9a14": {
+   "sede": "Teatro El Ensueño - Bogotá",
+   "dia": "2026-08-13",
+   "hora": "11:00",
+   "sala": "",
+   "titulo": "la raya"
+  },
+  "f_9bc3d94bf0": {
+   "sede": "Biblioteca Pública La Victoria - Bogotá",
+   "dia": "2026-08-13",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "la independencia"
+  },
+  "f_8bffc471a3": {
+   "sede": "Biblioteca Pública La Victoria - Bogotá",
+   "dia": "2026-08-13",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "una torreta en llamas"
+  },
+  "f_fe86a10f17": {
+   "sede": "Biblioteca Pública La Victoria - Bogotá",
+   "dia": "2026-08-13",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "la gran hazana"
+  },
+  "f_8d9af6e43e": {
+   "sede": "Biblioteca Pública La Victoria - Bogotá",
+   "dia": "2026-08-13",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "el paraiso de ainara"
+  },
+  "f_bcbcae2dd8": {
+   "sede": "Biblioteca Pública Las Ferias - Bogotá",
+   "dia": "2026-08-13",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "herencia los cantos de la tierra"
+  },
+  "f_d924b77ed0": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-08-13",
+   "hora": "14:00",
+   "sala": "Sala Capital",
+   "titulo": "ninxs"
+  },
+  "f_8b868176c8": {
+   "sede": "Centro Cultural Panóptico de Ibagué - Ibagué",
+   "dia": "2026-08-13",
+   "hora": "14:00",
+   "sala": "Celda Teatro Ibagué - Proyección en loop",
+   "titulo": "madres de nacimiento"
+  },
+  "f_874c3cff75": {
+   "sede": "Centro Cultural Panóptico de Ibagué - Ibagué",
+   "dia": "2026-08-13",
+   "hora": "14:00",
+   "sala": "Celda Teatro Ibagué - Proyección en loop",
+   "titulo": "sukua"
+  },
+  "f_db7fe28300": {
+   "sede": "Centro Cultural Panóptico de Ibagué - Ibagué",
+   "dia": "2026-08-13",
+   "hora": "14:00",
+   "sala": "Celda Teatro Ibagué - Proyección en loop",
+   "titulo": "la independencia"
+  },
+  "f_3d3fd78da3": {
+   "sede": "Centro Cultural Panóptico de Ibagué - Ibagué",
+   "dia": "2026-08-13",
+   "hora": "14:00",
+   "sala": "Celda Teatro Ibagué - Proyección en loop",
+   "titulo": "cartas a la tierra"
+  },
+  "f_712330442d": {
+   "sede": "Centro Cultural Panóptico de Ibagué - Ibagué",
+   "dia": "2026-08-13",
+   "hora": "14:00",
+   "sala": "Celda Teatro Ibagué - Proyección en loop",
+   "titulo": "pawa"
+  },
+  "f_3a6b66ced5": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-08-13",
+   "hora": "14:30",
+   "sala": "Sala 2",
+   "titulo": "el silencio de la tierra"
+  },
+  "f_7ed77638cb": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-08-13",
+   "hora": "15:00",
+   "sala": "Sala 3",
+   "titulo": "aminetu"
+  },
+  "f_728ead177b": {
+   "sede": "Cineland - Quibdó",
+   "dia": "2026-08-13",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "bojaya la verdad desde adentro"
+  },
+  "f_85d1de3f1b": {
+   "sede": "Cinemateca de Tunja - Tunja",
+   "dia": "2026-08-13",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "akababuru expresion de asombro"
+  },
+  "f_8851e43567": {
+   "sede": "Cinemateca de Tunja - Tunja",
+   "dia": "2026-08-13",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "todos los dias"
+  },
+  "f_7597d77a70": {
+   "sede": "Cinemateca de Tunja - Tunja",
+   "dia": "2026-08-13",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "sukua"
+  },
+  "f_4762db1537": {
+   "sede": "Cinemateca de Tunja - Tunja",
+   "dia": "2026-08-13",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "la gran hazana"
+  },
+  "f_a91658f2e3": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-08-13",
+   "hora": "16:30",
+   "sala": "Sala Capital",
+   "titulo": "la raya"
+  },
+  "f_1629747fa0": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-08-13",
+   "hora": "17:00",
+   "sala": "Sala 2",
+   "titulo": "xie defensa de la vida"
+  },
+  "f_cca7ca9902": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-08-13",
+   "hora": "17:00",
+   "sala": "Sala 2",
+   "titulo": "las guardianas del agua"
+  },
+  "f_8dfcaccea7": {
+   "sede": "Centro Cultural de Cali - Cali",
+   "dia": "2026-08-13",
+   "hora": "17:00",
+   "sala": "Sala Audiovisual",
+   "titulo": "aminetu"
+  },
+  "f_a1d47059b4": {
+   "sede": "Centro Cultural Panóptico de Ibagué - Ibagué",
+   "dia": "2026-08-13",
+   "hora": "17:00",
+   "sala": "Auditorio",
+   "titulo": "la raya"
+  },
+  "f_cff9248f45": {
+   "sede": "Auditorio Centro Cultural Universitario Rogelio Salmona - Manizales",
+   "dia": "2026-08-13",
+   "hora": "17:30",
+   "sala": "",
+   "titulo": "el silencio de la tierra"
+  },
+  "f_e50b1eeaff": {
+   "sede": "Cinemateca del Caribe - Barranquilla",
+   "dia": "2026-08-13",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "violencias de genero en barranquilla"
+  },
+  "f_683eb243df": {
+   "sede": "Fundación Alianza Tecnologica y Desarrollo Educativo - ALITIC - Barranquilla",
+   "dia": "2026-08-13",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "la cerrillana"
+  },
+  "f_55abf2b34b": {
+   "sede": "Fundación Alianza Tecnologica y Desarrollo Educativo - ALITIC - Barranquilla",
+   "dia": "2026-08-13",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "madres de nacimiento"
+  },
+  "f_11c6246e85": {
+   "sede": "Fundación Alianza Tecnologica y Desarrollo Educativo - ALITIC - Barranquilla",
+   "dia": "2026-08-13",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "mas alla"
+  },
+  "f_12b77c195d": {
+   "sede": "Fundación Alianza Tecnologica y Desarrollo Educativo - ALITIC - Barranquilla",
+   "dia": "2026-08-13",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "celeste"
+  },
+  "f_c478a1ce73": {
+   "sede": "Fundación Alianza Tecnologica y Desarrollo Educativo - ALITIC - Barranquilla",
+   "dia": "2026-08-13",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "muerto no"
+  },
+  "f_c94b823c62": {
+   "sede": "Fundación Alianza Tecnologica y Desarrollo Educativo - ALITIC - Barranquilla",
+   "dia": "2026-08-13",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "sukua"
+  },
+  "f_5daf21c283": {
+   "sede": "Universidad Minuto de Dios - Bogotá",
+   "dia": "2026-08-13",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "semillas"
+  },
+  "f_491246a498": {
+   "sede": "Universidad de Ibagué - Ibagué",
+   "dia": "2026-08-13",
+   "hora": "18:00",
+   "sala": "Auditorio Central",
+   "titulo": "semillas"
+  },
+  "f_8511ba1031": {
+   "sede": "Cine Bajo las Estrellas programa de exhibición y circulación - Armenia",
+   "dia": "2026-08-13",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "semillas"
+  },
+  "f_248682f453": {
+   "sede": "Museo de Arte Moderno - MAMB - Barranquilla",
+   "dia": "2026-08-13",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "desierto verde"
+  },
+  "f_1f29dcadcc": {
+   "sede": "Cinema Local - Bogotá",
+   "dia": "2026-08-13",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "feito pipa"
+  },
+  "f_446cd6ab2b": {
+   "sede": "Cinema Local - Cali",
+   "dia": "2026-08-13",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "feito pipa"
+  },
+  "f_d783f977b0": {
+   "sede": "Cinemateca del Museo La Tertulia - Cali",
+   "dia": "2026-08-13",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "bojaya la verdad desde adentro"
+  },
+  "f_cacdef9322": {
+   "sede": "Cinefilo - UdeC San Agustín, Patio de Humanidades - Cartagena",
+   "dia": "2026-08-13",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "semillas"
+  },
+  "f_ba43fbe24d": {
+   "sede": "Colombo Americano - Medellín",
+   "dia": "2026-08-13",
+   "hora": "18:30",
+   "sala": "SALA 1",
+   "titulo": "one in a million"
+  },
+  "f_50361188fd": {
+   "sede": "Cinemateca de Tunja - Tunja",
+   "dia": "2026-08-13",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "three black men"
+  },
+  "f_705da734e9": {
+   "sede": "Cinemateca del Caribe - Barranquilla",
+   "dia": "2026-08-13",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "cayenas libertarias"
+  },
+  "f_cd407ae4ba": {
+   "sede": "Auditorio Centro Cultural Universitario Rogelio Salmona - Manizales",
+   "dia": "2026-08-13",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "volver a creer"
+  },
+  "f_16fe58c1bf": {
+   "sede": "Cámara de Comercio de Pereira - Pereira",
+   "dia": "2026-08-13",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "eva"
+  },
+  "f_63364c96e9": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-08-13",
+   "hora": "19:30",
+   "sala": "Sala 2",
+   "titulo": "cartas a la tierra"
+  },
+  "f_08403230f5": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-08-13",
+   "hora": "19:30",
+   "sala": "Sala 2",
+   "titulo": "mas alla"
+  },
+  "f_d6cf36fe90": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-08-13",
+   "hora": "19:30",
+   "sala": "Sala 2",
+   "titulo": "pawa"
+  },
+  "f_b874be0d9d": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-08-13",
+   "hora": "19:30",
+   "sala": "Sala 2",
+   "titulo": "clemencia"
+  },
+  "f_8c101057a4": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-08-13",
+   "hora": "19:30",
+   "sala": "Sala 2",
+   "titulo": "tuktu padre maiz"
+  },
+  "f_93e44a7ad4": {
+   "sede": "Sena Galán - Armenia",
+   "dia": "2026-08-14",
+   "hora": "10:00",
+   "sala": "",
+   "titulo": "produccion y animacion 2d"
+  },
+  "f_c8a5fc5db3": {
+   "sede": "Universidad Minuto de Dios - Bogotá",
+   "dia": "2026-08-14",
+   "hora": "10:00",
+   "sala": "Auditorio C202",
+   "titulo": "de los deepfakes y otras violencias digitales"
+  },
+  "f_045633ddcb": {
+   "sede": "Centro de Formación de la Cooperación Española - Cartagena",
+   "dia": "2026-08-14",
+   "hora": "10:00",
+   "sala": "",
+   "titulo": "una ciudad para quien"
+  },
+  "f_c63e6aff2d": {
+   "sede": "Casa de la Juventud Diego Felipe Becerra - Bogotá",
+   "dia": "2026-08-14",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "honorable"
+  },
+  "f_da46915c04": {
+   "sede": "Cinemateca Fontanar del Río - Bogotá",
+   "dia": "2026-08-14",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "el bosque"
+  },
+  "f_8b01aa0948": {
+   "sede": "Fundación Gilberto Alzate Avendaño - Biblioteca - Bogotá",
+   "dia": "2026-08-14",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "padamlagan"
+  },
+  "f_f1cf6af2a1": {
+   "sede": "Centro Cultural Panóptico de Ibagué - Ibagué",
+   "dia": "2026-08-14",
+   "hora": "14:00",
+   "sala": "Celda Teatro Ibagué (Proyección en loop)",
+   "titulo": "pawa"
+  },
+  "f_d3ba7e604b": {
+   "sede": "Centro Cultural Panóptico de Ibagué - Ibagué",
+   "dia": "2026-08-14",
+   "hora": "14:00",
+   "sala": "Celda Teatro Ibagué (Proyección en loop)",
+   "titulo": "madres de nacimiento"
+  },
+  "f_a316775b0c": {
+   "sede": "Centro Cultural Panóptico de Ibagué - Ibagué",
+   "dia": "2026-08-14",
+   "hora": "14:00",
+   "sala": "Celda Teatro Ibagué (Proyección en loop)",
+   "titulo": "sukua"
+  },
+  "f_0c854b57a6": {
+   "sede": "Centro Cultural Panóptico de Ibagué - Ibagué",
+   "dia": "2026-08-14",
+   "hora": "14:00",
+   "sala": "Celda Teatro Ibagué (Proyección en loop)",
+   "titulo": "la independencia"
+  },
+  "f_4df7aac5e4": {
+   "sede": "Centro Cultural Panóptico de Ibagué - Ibagué",
+   "dia": "2026-08-14",
+   "hora": "14:00",
+   "sala": "Celda Teatro Ibagué (Proyección en loop)",
+   "titulo": "cartas a la tierra"
+  },
+  "f_78a208e949": {
+   "sede": "Fundación Malabareando las Calles - Pereira",
+   "dia": "2026-08-14",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "la gran hazana"
+  },
+  "f_120a02e2f0": {
+   "sede": "Fundación Malabareando las Calles - Pereira",
+   "dia": "2026-08-14",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "heroes del silencio"
+  },
+  "f_eda19137c1": {
+   "sede": "Casa de la Juventud José Saramago - Bogotá",
+   "dia": "2026-08-14",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "por una gota de leche"
+  },
+  "f_f3085fad3c": {
+   "sede": "Casa LGBTIQ Sebastián Romero - Bogotá",
+   "dia": "2026-08-14",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "la cerrillana"
+  },
+  "f_6c008e1cf5": {
+   "sede": "Casa LGBTIQ Sebastián Romero - Bogotá",
+   "dia": "2026-08-14",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "apolo"
+  },
+  "f_846ae8b1ba": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-08-14",
+   "hora": "15:00",
+   "sala": "Sala Capital",
+   "titulo": "amor rebelde"
+  },
+  "f_7d5d957b5a": {
+   "sede": "Manzana del Cuidado Mochuelo - Bogotá",
+   "dia": "2026-08-14",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "semillas"
+  },
+  "f_8cf19ddee4": {
+   "sede": "Universidad de Ibagué - Ibagué",
+   "dia": "2026-08-14",
+   "hora": "15:00",
+   "sala": "Biblioteca Sala 4",
+   "titulo": "la luz por primera vez"
+  },
+  "f_4c338294a3": {
+   "sede": "Colombo Americano - Medellín",
+   "dia": "2026-08-14",
+   "hora": "15:00",
+   "sala": "SALA 2",
+   "titulo": "el valor de la palabra"
+  },
+  "f_91a302103a": {
+   "sede": "Escuela de Administración y Mercadotecnia del Quindío (EAM) - Armenia",
+   "dia": "2026-08-14",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "in four stops"
+  },
+  "f_607c052e18": {
+   "sede": "Escuela de Administración y Mercadotecnia del Quindío (EAM) - Armenia",
+   "dia": "2026-08-14",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "my grandmother is a skydiver"
+  },
+  "f_a13d8a7f96": {
+   "sede": "Escuela de Administración y Mercadotecnia del Quindío (EAM) - Armenia",
+   "dia": "2026-08-14",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "tuktu padre maiz"
+  },
+  "f_37166fd87a": {
+   "sede": "Escuela de Administración y Mercadotecnia del Quindío (EAM) - Armenia",
+   "dia": "2026-08-14",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "sapos por todos lados"
+  },
+  "f_b649b31daf": {
+   "sede": "Cinemateca del Caribe - Barranquilla",
+   "dia": "2026-08-14",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "semillas"
+  },
+  "f_3d200f94fa": {
+   "sede": "Casa de la Juventud Antonio Nariño - Bogotá",
+   "dia": "2026-08-14",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "del otro lado"
+  },
+  "f_288745ba81": {
+   "sede": "Casa de la Juventud Ayelen - Bogotá",
+   "dia": "2026-08-14",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "el bosque"
+  },
+  "f_bd0064d3c0": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-08-14",
+   "hora": "16:00",
+   "sala": "Sala 2",
+   "titulo": "1982"
+  },
+  "f_7337983a9c": {
+   "sede": "Cinemateca Fontanar del Río - Bogotá",
+   "dia": "2026-08-14",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "ninxs"
+  },
+  "f_999075a0ab": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-08-14",
+   "hora": "16:00",
+   "sala": "Laboratorio 1 y 2",
+   "titulo": "hackeando los mandatos de la delgadez"
+  },
+  "f_508a075705": {
+   "sede": "COMFAMA - Cineclub Bello - Medellín",
+   "dia": "2026-08-14",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "hija del volcan"
+  },
+  "f_117d18e69e": {
+   "sede": "Fundación Malabareando las Calles - Pereira",
+   "dia": "2026-08-14",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "pintando realidades"
+  },
+  "f_e76b86fb36": {
+   "sede": "Cineland - Quibdó",
+   "dia": "2026-08-14",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "bojaya la verdad desde adentro"
+  },
+  "f_22b4324d6d": {
+   "sede": "Cinemateca de Tunja - Tunja",
+   "dia": "2026-08-14",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "cuando la palabra se hace busqueda"
+  },
+  "f_fd8bae36e9": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-08-14",
+   "hora": "16:30",
+   "sala": "Sala 3",
+   "titulo": "cuando un rio se convierte en mar"
+  },
+  "f_15bc0373fb": {
+   "sede": "La Pascasia - Medellín",
+   "dia": "2026-08-14",
+   "hora": "16:30",
+   "sala": "",
+   "titulo": "1982"
+  },
+  "f_7a09dca138": {
+   "sede": "Casa de la Juventud Chapinero - Bogotá",
+   "dia": "2026-08-14",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "la luz por primera vez"
+  },
+  "f_34c88b2134": {
+   "sede": "Centro Cultural Panóptico de Ibagué - Ibagué",
+   "dia": "2026-08-14",
+   "hora": "17:00",
+   "sala": "Auditorio",
+   "titulo": "volver a creer"
+  },
+  "f_37cc25274c": {
+   "sede": "Centro Cultural Panóptico de Ibagué - Ibagué",
+   "dia": "2026-08-14",
+   "hora": "17:00",
+   "sala": "Auditorio",
+   "titulo": "cuando la palabra se hace busqueda"
+  },
+  "f_2fe7f6f1d6": {
+   "sede": "Ágora Casa Cultural (La Ceja) - Medellín",
+   "dia": "2026-08-14",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "republic of amnesia"
+  },
+  "f_497ae9f1f4": {
+   "sede": "COMFAMA - Capilla del Claustro - Medellín",
+   "dia": "2026-08-14",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "aqui no entra luz"
+  },
+  "f_99466c9cbd": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-08-14",
+   "hora": "17:30",
+   "sala": "Sala Capital",
+   "titulo": "silenciada"
+  },
+  "f_8d1d2a8222": {
+   "sede": "Universidad de Ibagué - Ibagué",
+   "dia": "2026-08-14",
+   "hora": "18:00",
+   "sala": "Media Torta Facultad de Humanidades",
+   "titulo": "chaski pacha"
+  },
+  "f_f8a5004f36": {
+   "sede": "Universidad de Ibagué - Ibagué",
+   "dia": "2026-08-14",
+   "hora": "18:00",
+   "sala": "Media Torta Facultad de Humanidades",
+   "titulo": "muerto no"
+  },
+  "f_8dcb56cab2": {
+   "sede": "Universidad de Ibagué - Ibagué",
+   "dia": "2026-08-14",
+   "hora": "18:00",
+   "sala": "Media Torta Facultad de Humanidades",
+   "titulo": "la cerrillana"
+  },
+  "f_e693313009": {
+   "sede": "Universidad de Ibagué - Ibagué",
+   "dia": "2026-08-14",
+   "hora": "18:00",
+   "sala": "Media Torta Facultad de Humanidades",
+   "titulo": "una torreta en llamas"
+  },
+  "f_6821effc8d": {
+   "sede": "Universidad de Ibagué - Ibagué",
+   "dia": "2026-08-14",
+   "hora": "18:00",
+   "sala": "Media Torta Facultad de Humanidades",
+   "titulo": "celeste"
+  },
+  "f_49f0ba716c": {
+   "sede": "Universidad Nacional de Colombia - Auditorio Juan Hurtado - Manizales",
+   "dia": "2026-08-14",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "tierra que habla"
+  },
+  "f_55c2a12862": {
+   "sede": "Cine a la Calle - Pereira",
+   "dia": "2026-08-14",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "semillas"
+  },
+  "f_ebcdd4a49a": {
+   "sede": "Colombo Americano de Pereira - Pereira",
+   "dia": "2026-08-14",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "mujeres juventudes y activismo politico en la era digital"
+  },
+  "f_9894397154": {
+   "sede": "Caas Morón - Barranquilla",
+   "dia": "2026-08-14",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "herencia los cantos de la tierra"
+  },
+  "f_0b23ed64a4": {
+   "sede": "CasArte3962 - Barranquilla",
+   "dia": "2026-08-14",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "la luz por primera vez"
+  },
+  "f_326ac5a69e": {
+   "sede": "Bulevar del Oriente - Cali",
+   "dia": "2026-08-14",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "cobija de recuerdos"
+  },
+  "f_6a1e190b48": {
+   "sede": "Bulevar del Oriente - Cali",
+   "dia": "2026-08-14",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "y el rio lloro"
+  },
+  "f_fc1ae0f0e6": {
+   "sede": "Bulevar del Oriente - Cali",
+   "dia": "2026-08-14",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "cuando la palabra se hace busqueda"
+  },
+  "f_82a1685e38": {
+   "sede": "Cinema Local - Cali",
+   "dia": "2026-08-14",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "hija del volcan"
+  },
+  "f_cc99d9d8ff": {
+   "sede": "Cinemateca del Museo La Tertulia - Cali",
+   "dia": "2026-08-14",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "el valor de la palabra"
+  },
+  "f_f42861f925": {
+   "sede": "Lugar del Poema - Cartagena",
+   "dia": "2026-08-14",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "sone su nombre"
+  },
+  "f_49baf7cfef": {
+   "sede": "Centro Cultural Panóptico de Ibagué - Ibagué",
+   "dia": "2026-08-14",
+   "hora": "18:30",
+   "sala": "Auditorio",
+   "titulo": "tierra que habla"
+  },
+  "f_73524c4e79": {
+   "sede": "Museo Casa de la Memoria - Medellín",
+   "dia": "2026-08-14",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "juntos podemos curar"
+  },
+  "f_bdd6ded711": {
+   "sede": "Museo Casa de la Memoria - Medellín",
+   "dia": "2026-08-14",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "apotnojushi la casa del viento"
+  },
+  "f_baa5019616": {
+   "sede": "Museo Casa de la Memoria - Medellín",
+   "dia": "2026-08-14",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "kaugsankamalla mientras vivamos"
+  },
+  "f_ae0b8879b4": {
+   "sede": "Cinemateca de Tunja - Tunja",
+   "dia": "2026-08-14",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "el hogar fue sepultado en esa tierra que nunca pudimos encontrar"
+  },
+  "f_9b986b6954": {
+   "sede": "Cinema Local - Bogotá",
+   "dia": "2026-08-14",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "hija del volcan"
+  },
+  "f_3961545c1a": {
+   "sede": "Parque de los Deseos - Medellín",
+   "dia": "2026-08-14",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "el juego de la vida"
+  },
+  "f_b2d1732c3b": {
+   "sede": "Cine Club La Florida - Pereira",
+   "dia": "2026-08-14",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "apotnojushi la casa del viento"
+  },
+  "f_8b5e8cf8d9": {
+   "sede": "Cine Club La Florida - Pereira",
+   "dia": "2026-08-14",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "la raya"
+  },
+  "f_d5a8e03c2b": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-08-14",
+   "hora": "20:00",
+   "sala": "Sala 3",
+   "titulo": "carmela y los caminantes"
+  },
+  "f_72adf1ff84": {
+   "sede": "Universidad Tecnológica de Pereira -UTP - Pereira",
+   "dia": "2026-08-15",
+   "hora": "09:00",
+   "sala": "Bloque 7A / 118",
+   "titulo": "barrismo social construyendo comunidad desde el aguante"
+  },
+  "f_86ac151f1e": {
+   "sede": "Colegio Carrasquilla (Cra. 7ma) - Quibdó",
+   "dia": "2026-08-15",
+   "hora": "09:00",
+   "sala": "",
+   "titulo": "actuacion para cine"
+  },
+  "f_20c74eb7aa": {
+   "sede": "Contacto Escuela de Fotografía - Armenia",
+   "dia": "2026-08-15",
+   "hora": "10:00",
+   "sala": "",
+   "titulo": "hija del volcan"
+  },
+  "f_d6685e23bf": {
+   "sede": "Parque Arqueológico de Usme - Bogotá",
+   "dia": "2026-08-15",
+   "hora": "10:00",
+   "sala": "",
+   "titulo": "heroes del silencio"
+  },
+  "f_91d42ed233": {
+   "sede": "Parque Arqueológico de Usme - Bogotá",
+   "dia": "2026-08-15",
+   "hora": "10:00",
+   "sala": "",
+   "titulo": "el paraiso de ainara"
+  },
+  "f_1ffcd8ef9b": {
+   "sede": "Parque Arqueológico de Usme - Bogotá",
+   "dia": "2026-08-15",
+   "hora": "10:00",
+   "sala": "",
+   "titulo": "in four stops"
+  },
+  "f_e8bd78dc18": {
+   "sede": "Parque Arqueológico de Usme - Bogotá",
+   "dia": "2026-08-15",
+   "hora": "10:00",
+   "sala": "",
+   "titulo": "akababuru expresion de asombro"
+  },
+  "f_aab818d567": {
+   "sede": "Parque Arqueológico de Usme - Bogotá",
+   "dia": "2026-08-15",
+   "hora": "10:00",
+   "sala": "",
+   "titulo": "la gran hazana"
+  },
+  "f_dac02f51f3": {
+   "sede": "Centro Cultural Banco de la República - Medellín",
+   "dia": "2026-08-15",
+   "hora": "10:00",
+   "sala": "",
+   "titulo": "el paraiso de ainara"
+  },
+  "f_5d68565f93": {
+   "sede": "Centro Cultural Banco de la República - Medellín",
+   "dia": "2026-08-15",
+   "hora": "10:00",
+   "sala": "",
+   "titulo": "in four stops"
+  },
+  "f_c0cf6ff4ab": {
+   "sede": "Centro Cultural Banco de la República - Medellín",
+   "dia": "2026-08-15",
+   "hora": "10:00",
+   "sala": "",
+   "titulo": "la gran hazana"
+  },
+  "f_86c9496b1b": {
+   "sede": "Centro Cultural Banco de la República - Medellín",
+   "dia": "2026-08-15",
+   "hora": "10:00",
+   "sala": "",
+   "titulo": "heroes del silencio"
+  },
+  "f_fa81c70caa": {
+   "sede": "Colombo Americano de Pereira - Pereira",
+   "dia": "2026-08-15",
+   "hora": "10:00",
+   "sala": "",
+   "titulo": "el paraiso de ainara"
+  },
+  "f_6267748553": {
+   "sede": "Colombo Americano de Pereira - Pereira",
+   "dia": "2026-08-15",
+   "hora": "10:00",
+   "sala": "",
+   "titulo": "in four stops"
+  },
+  "f_52fbc09df2": {
+   "sede": "Colombo Americano de Pereira - Pereira",
+   "dia": "2026-08-15",
+   "hora": "10:00",
+   "sala": "",
+   "titulo": "akababuru expresion de asombro"
+  },
+  "f_74737fe623": {
+   "sede": "Colombo Americano de Pereira - Pereira",
+   "dia": "2026-08-15",
+   "hora": "10:00",
+   "sala": "",
+   "titulo": "la gran hazana"
+  },
+  "f_2c70931371": {
+   "sede": "Colombo Americano de Pereira - Pereira",
+   "dia": "2026-08-15",
+   "hora": "10:00",
+   "sala": "",
+   "titulo": "heroes del silencio"
+  },
+  "f_04981e7c0f": {
+   "sede": "CEFE Cometas - Bogotá",
+   "dia": "2026-08-15",
+   "hora": "11:00",
+   "sala": "",
+   "titulo": "la independencia"
+  },
+  "f_8a2e21c0f8": {
+   "sede": "CEFE Cometas - Bogotá",
+   "dia": "2026-08-15",
+   "hora": "11:00",
+   "sala": "",
+   "titulo": "una torreta en llamas"
+  },
+  "f_970236f88a": {
+   "sede": "CEFE Cometas - Bogotá",
+   "dia": "2026-08-15",
+   "hora": "11:00",
+   "sala": "",
+   "titulo": "la gran hazana"
+  },
+  "f_a084601a25": {
+   "sede": "CEFE Cometas - Bogotá",
+   "dia": "2026-08-15",
+   "hora": "11:00",
+   "sala": "",
+   "titulo": "el paraiso de ainara"
+  },
+  "f_7c5d4f6b1c": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-08-15",
+   "hora": "11:00",
+   "sala": "Sala 3",
+   "titulo": "semillas"
+  },
+  "f_87d5a88b08": {
+   "sede": "Casa de la Juventud Aldea De Pensadores - Bogotá",
+   "dia": "2026-08-15",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "por una gota de leche"
+  },
+  "f_e869606fe2": {
+   "sede": "Casa de la Juventud Damawha - Bogotá",
+   "dia": "2026-08-15",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "bojaya la verdad desde adentro"
+  },
+  "f_d50fefce28": {
+   "sede": "Centro Integral de Justicia Campo Verde - Bogotá",
+   "dia": "2026-08-15",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "el valor de la palabra"
+  },
+  "f_566b343afc": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-08-15",
+   "hora": "14:00",
+   "sala": "Sala 3",
+   "titulo": "desierto verde"
+  },
+  "f_ddb25da8c4": {
+   "sede": "Cinemateca Fontanar del Río - Bogotá",
+   "dia": "2026-08-15",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "la raya"
+  },
+  "f_0258e0798c": {
+   "sede": "Fundación Gilberto Alzate Avendaño - Biblioteca - Bogotá",
+   "dia": "2026-08-15",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "un nuevo amanecer"
+  },
+  "f_5528099011": {
+   "sede": "Parque Arqueológico de Usme - Bogotá",
+   "dia": "2026-08-15",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "herencia los cantos de la tierra"
+  },
+  "f_e8d27528e0": {
+   "sede": "Fundación Gilberto Alzate Avendaño - Biblioteca - Bogotá",
+   "dia": "2026-08-15",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "lo que sentimos"
+  },
+  "f_34069102d1": {
+   "sede": "Centro Cultural Panóptico de Ibagué - Ibagué",
+   "dia": "2026-08-15",
+   "hora": "14:00",
+   "sala": "Celda Teatro Ibagué (Proyección en loop)",
+   "titulo": "madres de nacimiento"
+  },
+  "f_362eda8991": {
+   "sede": "Centro Cultural Panóptico de Ibagué - Ibagué",
+   "dia": "2026-08-15",
+   "hora": "14:00",
+   "sala": "Celda Teatro Ibagué (Proyección en loop)",
+   "titulo": "sukua"
+  },
+  "f_549fca7b3f": {
+   "sede": "Centro Cultural Panóptico de Ibagué - Ibagué",
+   "dia": "2026-08-15",
+   "hora": "14:00",
+   "sala": "Celda Teatro Ibagué (Proyección en loop)",
+   "titulo": "la independencia"
+  },
+  "f_d8561fbc0b": {
+   "sede": "Centro Cultural Panóptico de Ibagué - Ibagué",
+   "dia": "2026-08-15",
+   "hora": "14:00",
+   "sala": "Celda Teatro Ibagué (Proyección en loop)",
+   "titulo": "cartas a la tierra"
+  },
+  "f_861726b43f": {
+   "sede": "Centro Cultural Panóptico de Ibagué - Ibagué",
+   "dia": "2026-08-15",
+   "hora": "14:00",
+   "sala": "Celda Teatro Ibagué (Proyección en loop)",
+   "titulo": "pawa"
+  },
+  "f_529198d8b2": {
+   "sede": "Colombo Americano - Medellín",
+   "dia": "2026-08-15",
+   "hora": "14:00",
+   "sala": "SALA 1",
+   "titulo": "los reyes del mundo"
+  },
+  "f_85321d8bb9": {
+   "sede": "Jardín Botánico de Medellín - Medellín",
+   "dia": "2026-08-15",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "desde el centro de la tierra"
+  },
+  "f_22dbf63bc4": {
+   "sede": "Biblioteca Pública Usaquén Servitá - Bogotá",
+   "dia": "2026-08-15",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "indiamenta"
+  },
+  "f_47fd3f60a1": {
+   "sede": "Biblioteca Pública Usaquén Servitá - Bogotá",
+   "dia": "2026-08-15",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "muerto no"
+  },
+  "f_279d4f789c": {
+   "sede": "Biblioteca Pública Usaquén Servitá - Bogotá",
+   "dia": "2026-08-15",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "celeste"
+  },
+  "f_d438dba744": {
+   "sede": "Biblioteca Pública Usaquén Servitá - Bogotá",
+   "dia": "2026-08-15",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "mas alla de la corona"
+  },
+  "f_fbeba78572": {
+   "sede": "Casa Cultural y Comunitaria Casa Sin Raza - Bogotá",
+   "dia": "2026-08-15",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "floresmiro"
+  },
+  "f_97b6f5f2f1": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-08-15",
+   "hora": "15:00",
+   "sala": "Sala Capital",
+   "titulo": "cuando la palabra se hace busqueda"
+  },
+  "f_69d4675b10": {
+   "sede": "All Cine Cable Plaza - Manizales",
+   "dia": "2026-08-15",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "notas sobre un destierro"
+  },
+  "f_e87a804623": {
+   "sede": "Jardín Botánico de Medellín - Medellín",
+   "dia": "2026-08-15",
+   "hora": "15:00",
+   "sala": "Auditorio Aurita López",
+   "titulo": "juntos podemos curar"
+  },
+  "f_4606615cd6": {
+   "sede": "Librería Bagatá - Quibdó",
+   "dia": "2026-08-15",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "juntas por la paz del choco"
+  },
+  "f_46e6be1de4": {
+   "sede": "Librería Bagatá - Quibdó",
+   "dia": "2026-08-15",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "despues del frio"
+  },
+  "f_b2e4deb2db": {
+   "sede": "Casa de la Juventud El Cacma - Bogotá",
+   "dia": "2026-08-15",
+   "hora": "15:30",
+   "sala": "",
+   "titulo": "la luz por primera vez"
+  },
+  "f_8330898460": {
+   "sede": "Casa de las Luciérnagas - Bogotá",
+   "dia": "2026-08-15",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "la raya"
+  },
+  "f_f9be731302": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-08-15",
+   "hora": "16:00",
+   "sala": "Sala 2",
+   "titulo": "aqui no entra luz"
+  },
+  "f_9f421a678f": {
+   "sede": "Cinemateca Fontanar del Río - Bogotá",
+   "dia": "2026-08-15",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "semillas"
+  },
+  "f_aa936d670d": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-08-15",
+   "hora": "16:00",
+   "sala": "Laboratorio 1 y 2",
+   "titulo": "visibilizar lo invisible taller de herramientas frente a las violencias de genero"
+  },
+  "f_c9dd757256": {
+   "sede": "Centro Cultural Panóptico de Ibagué - Ibagué",
+   "dia": "2026-08-15",
+   "hora": "16:00",
+   "sala": "Auditorio",
+   "titulo": "indiamenta"
+  },
+  "f_289a04524b": {
+   "sede": "Cinemateca de Tunja - Tunja",
+   "dia": "2026-08-15",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "la luz por primera vez"
+  },
+  "f_8113101f94": {
+   "sede": "Casa Cromo Casa Cultural - Armenia",
+   "dia": "2026-08-15",
+   "hora": "16:30",
+   "sala": "",
+   "titulo": "conversatorio mujeres en el audiovisual"
+  },
+  "f_45bcfe12fc": {
+   "sede": "Museo Panóptico de Ibagué - Ibagué",
+   "dia": "2026-08-15",
+   "hora": "16:30",
+   "sala": "",
+   "titulo": "resistencias indigenas en ibague"
+  },
+  "f_1a39383606": {
+   "sede": "Cinemateca del Caribe - Barranquilla",
+   "dia": "2026-08-15",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "el juego de la vida"
+  },
+  "f_5d197a5d14": {
+   "sede": "La Trocha - Casa de la Paz - Bogotá",
+   "dia": "2026-08-15",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "el arte de la paz"
+  },
+  "f_83c8c1fec5": {
+   "sede": "La Trocha - Casa de la Paz - Bogotá",
+   "dia": "2026-08-15",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "la luz que nos queda"
+  },
+  "f_1cc6bde7e3": {
+   "sede": "La Trocha - Casa de la Paz - Bogotá",
+   "dia": "2026-08-15",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "lo que sentimos"
+  },
+  "f_3c4bc5aa3e": {
+   "sede": "Cinema Local - Cali",
+   "dia": "2026-08-15",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "el silencio de los palafitos"
+  },
+  "f_3b46525339": {
+   "sede": "Cinemateca del Museo La Tertulia - Cali",
+   "dia": "2026-08-15",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "mas alla de la corona"
+  },
+  "f_e25a17c7fc": {
+   "sede": "Cinemateca del Museo La Tertulia - Cali",
+   "dia": "2026-08-15",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "honorable"
+  },
+  "f_b6e41ba517": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-08-15",
+   "hora": "17:30",
+   "sala": "Sala Capital",
+   "titulo": "eva"
+  },
+  "f_f70ba39d7d": {
+   "sede": "Book Times - Barranquilla",
+   "dia": "2026-08-15",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "sone su nombre"
+  },
+  "f_6c7183da98": {
+   "sede": "Casa B - Bogotá",
+   "dia": "2026-08-15",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "sone su nombre"
+  },
+  "f_128280bead": {
+   "sede": "Casa B - Bogotá",
+   "dia": "2026-08-15",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "ni un minuto de silencio toda una vida de busqueda"
+  },
+  "f_3691aea9bb": {
+   "sede": "Centro Cultural Panóptico de Ibagué - Ibagué",
+   "dia": "2026-08-15",
+   "hora": "18:00",
+   "sala": "Auditorio",
+   "titulo": "aqui no entra luz"
+  },
+  "f_c9312b23c3": {
+   "sede": "Centro Cultural Panóptico de Ibagué - Ibagué",
+   "dia": "2026-08-15",
+   "hora": "18:00",
+   "sala": "Auditorio",
+   "titulo": "muerto no"
+  },
+  "f_7254e3ebb4": {
+   "sede": "CasArte3962 - Barranquilla",
+   "dia": "2026-08-15",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "el silencio de los palafitos"
+  },
+  "f_487d0e0528": {
+   "sede": "El Teatrino - Cartagena",
+   "dia": "2026-08-15",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "muerto no"
+  },
+  "f_a6f6b532fd": {
+   "sede": "El Teatrino - Cartagena",
+   "dia": "2026-08-15",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "aqui no entra luz"
+  },
+  "f_a9b55e6afa": {
+   "sede": "COMFAMA - Capilla del Claustro - Medellín",
+   "dia": "2026-08-15",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "la luz por primera vez"
+  },
+  "f_ef889985f1": {
+   "sede": "Cinemateca de Tunja - Tunja",
+   "dia": "2026-08-15",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "andariega"
+  },
+  "f_19f2ac420e": {
+   "sede": "Casa Cromo Casa Cultural - Armenia",
+   "dia": "2026-08-15",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "madres de nacimiento"
+  },
+  "f_7ab2b8d57d": {
+   "sede": "Casa Cromo Casa Cultural - Armenia",
+   "dia": "2026-08-15",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "celeste"
+  },
+  "f_bdbbf3498f": {
+   "sede": "Casa Cromo Casa Cultural - Armenia",
+   "dia": "2026-08-15",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "pawa"
+  },
+  "f_f735af684e": {
+   "sede": "Casa Cromo Casa Cultural - Armenia",
+   "dia": "2026-08-15",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "heroes del silencio"
+  },
+  "f_06041930ed": {
+   "sede": "Casa Cromo Casa Cultural - Armenia",
+   "dia": "2026-08-15",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "mas alla"
+  },
+  "f_8a587ecfac": {
+   "sede": "Casa Cromo Casa Cultural - Armenia",
+   "dia": "2026-08-15",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "clemencia"
+  },
+  "f_0af5ba85ec": {
+   "sede": "Casa Cromo Casa Cultural - Armenia",
+   "dia": "2026-08-15",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "la luz que nos queda"
+  },
+  "f_bfdace2e23": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-08-15",
+   "hora": "19:00",
+   "sala": "Sala 2",
+   "titulo": "one in a million"
+  },
+  "f_d0ebe8a153": {
+   "sede": "Cinemateca del Museo La Tertulia - Cali",
+   "dia": "2026-08-15",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "la hija condor"
+  },
+  "f_d03d575037": {
+   "sede": "Lember Cinéma - Ibagué",
+   "dia": "2026-08-15",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "el hogar fue sepultado en esa tierra que nunca pudimos encontrar"
+  },
+  "f_095f36e32f": {
+   "sede": "Colombo Americano - Medellín",
+   "dia": "2026-08-15",
+   "hora": "19:00",
+   "sala": "SALA 1",
+   "titulo": "bojaya la verdad desde adentro"
+  },
+  "f_ba7b336bfd": {
+   "sede": "Cine Club Alef - Casa Hoja - Pereira",
+   "dia": "2026-08-15",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "muerto no"
+  },
+  "f_2147fe7d9a": {
+   "sede": "Cine Club Alef - Casa Hoja - Pereira",
+   "dia": "2026-08-15",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "el silencio de los palafitos"
+  },
+  "f_85c1bb7b3d": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-08-15",
+   "hora": "20:00",
+   "sala": "Sala Capital",
+   "titulo": "la bonga"
+  },
+  "f_ae90fe0ce4": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-08-16",
+   "hora": "11:00",
+   "sala": "Sala 3",
+   "titulo": "feito pipa"
+  },
+  "f_24f8db01fb": {
+   "sede": "Casa Aparte - Armenia",
+   "dia": "2026-08-16",
+   "hora": "12:30",
+   "sala": "",
+   "titulo": "trenzando caminos de paz"
+  },
+  "f_67ec3c8e6f": {
+   "sede": "Casa Aparte - Armenia",
+   "dia": "2026-08-16",
+   "hora": "12:30",
+   "sala": "",
+   "titulo": "juntas por la paz del choco"
+  },
+  "f_5aa2800044": {
+   "sede": "Casa Aparte - Armenia",
+   "dia": "2026-08-16",
+   "hora": "12:30",
+   "sala": "",
+   "titulo": "indiamenta"
+  },
+  "f_d425c60278": {
+   "sede": "Aguas Fieras - Medellín",
+   "dia": "2026-08-16",
+   "hora": "13:00",
+   "sala": "",
+   "titulo": "los frutos que dan vida siembra autosostenible casera"
+  },
+  "f_17d69cf68b": {
+   "sede": "Cinemateca Fontanar del Río - Bogotá",
+   "dia": "2026-08-16",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "heroes del silencio"
+  },
+  "f_e26180e9ce": {
+   "sede": "Cinemateca Fontanar del Río - Bogotá",
+   "dia": "2026-08-16",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "el paraiso de ainara"
+  },
+  "f_faee5ff41d": {
+   "sede": "Cinemateca Fontanar del Río - Bogotá",
+   "dia": "2026-08-16",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "in four stops"
+  },
+  "f_9d9c9c2a92": {
+   "sede": "Cinemateca Fontanar del Río - Bogotá",
+   "dia": "2026-08-16",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "akababuru expresion de asombro"
+  },
+  "f_95dbab2ba5": {
+   "sede": "Cinemateca Fontanar del Río - Bogotá",
+   "dia": "2026-08-16",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "la gran hazana"
+  },
+  "f_ef2f8ea917": {
+   "sede": "Colombo Americano - Medellín",
+   "dia": "2026-08-16",
+   "hora": "14:30",
+   "sala": "SALA 2",
+   "titulo": "mas alla"
+  },
+  "f_afd1000f0c": {
+   "sede": "Colombo Americano - Medellín",
+   "dia": "2026-08-16",
+   "hora": "14:30",
+   "sala": "SALA 2",
+   "titulo": "celeste"
+  },
+  "f_d55f5a7ae0": {
+   "sede": "Colombo Americano - Medellín",
+   "dia": "2026-08-16",
+   "hora": "14:30",
+   "sala": "SALA 2",
+   "titulo": "akababuru expresion de asombro"
+  },
+  "f_3059a9b8a9": {
+   "sede": "Colombo Americano - Medellín",
+   "dia": "2026-08-16",
+   "hora": "14:30",
+   "sala": "SALA 2",
+   "titulo": "todos los dias"
+  },
+  "f_6a1f97a09f": {
+   "sede": "Colombo Americano - Medellín",
+   "dia": "2026-08-16",
+   "hora": "14:30",
+   "sala": "SALA 2",
+   "titulo": "muerto no"
+  },
+  "f_ff3a652a2b": {
+   "sede": "Colombo Americano - Medellín",
+   "dia": "2026-08-16",
+   "hora": "14:30",
+   "sala": "SALA 2",
+   "titulo": "sukua"
+  },
+  "f_4f2db5e477": {
+   "sede": "Colombo Americano - Medellín",
+   "dia": "2026-08-16",
+   "hora": "14:30",
+   "sala": "SALA 2",
+   "titulo": "la cerrillana"
+  },
+  "f_e5bb1385ac": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-08-16",
+   "hora": "15:30",
+   "sala": "Laboratorio 1 y 2",
+   "titulo": "colombia 20 una decada de periodismo para la paz"
+  },
+  "f_a8f72e90e6": {
+   "sede": "Fundación Batuta Caldas - Manizales",
+   "dia": "2026-08-16",
+   "hora": "15:30",
+   "sala": "",
+   "titulo": "el juego de la vida"
+  },
+  "f_49bd036f5b": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-08-16",
+   "hora": "16:00",
+   "sala": "Sala 2",
+   "titulo": "por una gota de leche"
+  },
+  "f_d27430440d": {
+   "sede": "Centro Cultural Panóptico de Ibagué - Ibagué",
+   "dia": "2026-08-16",
+   "hora": "16:00",
+   "sala": "Auditorio",
+   "titulo": "el paraiso de ainara"
+  },
+  "f_55fa2a4177": {
+   "sede": "Centro Cultural Panóptico de Ibagué - Ibagué",
+   "dia": "2026-08-16",
+   "hora": "16:00",
+   "sala": "Auditorio",
+   "titulo": "akababuru expresion de asombro"
+  },
+  "f_bde0fc8dae": {
+   "sede": "Centro Cultural Panóptico de Ibagué - Ibagué",
+   "dia": "2026-08-16",
+   "hora": "16:00",
+   "sala": "Auditorio",
+   "titulo": "la gran hazana"
+  },
+  "f_e481872a2c": {
+   "sede": "Centro Cultural Panóptico de Ibagué - Ibagué",
+   "dia": "2026-08-16",
+   "hora": "16:00",
+   "sala": "Auditorio",
+   "titulo": "heroes del silencio"
+  },
+  "f_80b019417d": {
+   "sede": "Centro Cultural Panóptico de Ibagué - Ibagué",
+   "dia": "2026-08-16",
+   "hora": "16:00",
+   "sala": "Auditorio",
+   "titulo": "in four stops"
+  },
+  "f_9a5b9c6163": {
+   "sede": "Cinemateca de Tunja - Tunja",
+   "dia": "2026-08-16",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "la raya"
+  },
+  "f_b8d6db0c9e": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-08-16",
+   "hora": "17:00",
+   "sala": "Sala Capital",
+   "titulo": "three black men"
+  },
+  "f_8d00921f36": {
+   "sede": "Cinemateca del Museo La Tertulia - Cali",
+   "dia": "2026-08-16",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "un nuevo amanecer"
+  },
+  "f_7c3a1731e4": {
+   "sede": "COMFAMA - Capilla del Claustro - Medellín",
+   "dia": "2026-08-16",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "el verano de jahia"
+  },
+  "f_b35f98b385": {
+   "sede": "Centro Cultural del Socorro - Cartagena",
+   "dia": "2026-08-16",
+   "hora": "17:30",
+   "sala": "",
+   "titulo": "tuktu padre maiz"
+  },
+  "f_e551ccf1e2": {
+   "sede": "Centro Cultural del Socorro - Cartagena",
+   "dia": "2026-08-16",
+   "hora": "17:30",
+   "sala": "",
+   "titulo": "el paraiso de ainara"
+  },
+  "f_476e522e4a": {
+   "sede": "Centro Cultural del Socorro - Cartagena",
+   "dia": "2026-08-16",
+   "hora": "17:30",
+   "sala": "",
+   "titulo": "heroes del silencio"
+  },
+  "f_67a6eb23d9": {
+   "sede": "Centro Cultural del Socorro - Cartagena",
+   "dia": "2026-08-16",
+   "hora": "17:30",
+   "sala": "",
+   "titulo": "in four stops"
+  },
+  "f_7f69561c8f": {
+   "sede": "Centro Cultural del Socorro - Cartagena",
+   "dia": "2026-08-16",
+   "hora": "17:30",
+   "sala": "",
+   "titulo": "my grandmother is a skydiver"
+  },
+  "f_c45feea476": {
+   "sede": "Auditorio Centro Cultural Universitario Rogelio Salmona - Manizales",
+   "dia": "2026-08-16",
+   "hora": "17:30",
+   "sala": "",
+   "titulo": "por una gota de leche"
+  },
+  "f_3db5ce14fd": {
+   "sede": "Colombo Americano - Medellín",
+   "dia": "2026-08-16",
+   "hora": "17:30",
+   "sala": "SALA 2",
+   "titulo": "la hija condor"
+  },
+  "f_172b09bff3": {
+   "sede": "Book Times - Barranquilla",
+   "dia": "2026-08-16",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "del otro lado"
+  },
+  "f_92067d3bb2": {
+   "sede": "Universidad de Caldas - Auditorio Roberto Vélez Correa - Manizales",
+   "dia": "2026-08-16",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "desierto verde"
+  },
+  "f_af04206cd2": {
+   "sede": "Función Aire Libre - Malecón - Quibdó",
+   "dia": "2026-08-16",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "el juego de la vida"
+  },
+  "f_0bced5ff02": {
+   "sede": "Cinemateca de Tunja - Tunja",
+   "dia": "2026-08-16",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "semillas"
+  },
+  "f_3784b6d371": {
+   "sede": "Cinemateca del Caribe - Barranquilla",
+   "dia": "2026-08-16",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "notas sobre un destierro"
+  },
+  "f_ecadefa055": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-08-16",
+   "hora": "19:00",
+   "sala": "Sala 2",
+   "titulo": "notas sobre un destierro"
+  },
+  "f_fd857aaff7": {
+   "sede": "Cinemateca del Museo La Tertulia - Cali",
+   "dia": "2026-08-16",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "andariega"
+  },
+  "f_7be2c54cd9": {
+   "sede": "Auditorio Centro Cultural Universitario Rogelio Salmona - Manizales",
+   "dia": "2026-08-16",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "si la escombrera hablara"
+  },
+  "f_a689aa3c62": {
+   "sede": "Cámara de Comercio de Pereira - Pereira",
+   "dia": "2026-08-16",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "eva"
+  },
+  "f_ad67619684": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-08-16",
+   "hora": "19:30",
+   "sala": "Sala Capital",
+   "titulo": "el silencio de los palafitos"
+  },
+  "f_1e8ea6779f": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-08-17",
+   "hora": "13:00",
+   "sala": "Sala 2",
+   "titulo": "andariega"
+  },
+  "f_8850d0a809": {
+   "sede": "Aguas Fieras - Medellín",
+   "dia": "2026-08-17",
+   "hora": "13:00",
+   "sala": "",
+   "titulo": "los frutos que dan vida siembra autosostenible casera"
+  },
+  "f_feb0959ced": {
+   "sede": "Centro Cultural Panóptico de Ibagué - Ibagué",
+   "dia": "2026-08-17",
+   "hora": "14:00",
+   "sala": "Celda Teatro Ibagué - Proyección en loop",
+   "titulo": "madres de nacimiento"
+  },
+  "f_0c8642fd71": {
+   "sede": "Centro Cultural Panóptico de Ibagué - Ibagué",
+   "dia": "2026-08-17",
+   "hora": "14:00",
+   "sala": "Celda Teatro Ibagué - Proyección en loop",
+   "titulo": "sukua"
+  },
+  "f_5b4b67d49c": {
+   "sede": "Centro Cultural Panóptico de Ibagué - Ibagué",
+   "dia": "2026-08-17",
+   "hora": "14:00",
+   "sala": "Celda Teatro Ibagué - Proyección en loop",
+   "titulo": "la independencia"
+  },
+  "f_0ba94a1aa5": {
+   "sede": "Centro Cultural Panóptico de Ibagué - Ibagué",
+   "dia": "2026-08-17",
+   "hora": "14:00",
+   "sala": "Celda Teatro Ibagué - Proyección en loop",
+   "titulo": "cartas a la tierra"
+  },
+  "f_e5a1fa2272": {
+   "sede": "Centro Cultural Panóptico de Ibagué - Ibagué",
+   "dia": "2026-08-17",
+   "hora": "14:00",
+   "sala": "Celda Teatro Ibagué - Proyección en loop",
+   "titulo": "pawa"
+  },
+  "f_a4700ab225": {
+   "sede": "Museo Intangible del Confinamiento. Casa de la Cultura Alfonso López - Pereira",
+   "dia": "2026-08-17",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "el paraiso de ainara"
+  },
+  "f_480746980c": {
+   "sede": "Museo Intangible del Confinamiento. Casa de la Cultura Alfonso López - Pereira",
+   "dia": "2026-08-17",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "in four stops"
+  },
+  "f_65271d542e": {
+   "sede": "Museo Intangible del Confinamiento. Casa de la Cultura Alfonso López - Pereira",
+   "dia": "2026-08-17",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "akababuru expresion de asombro"
+  },
+  "f_1b8e16a7d4": {
+   "sede": "Museo Intangible del Confinamiento. Casa de la Cultura Alfonso López - Pereira",
+   "dia": "2026-08-17",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "la gran hazana"
+  },
+  "f_42011111a5": {
+   "sede": "Museo Intangible del Confinamiento. Casa de la Cultura Alfonso López - Pereira",
+   "dia": "2026-08-17",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "heroes del silencio"
+  },
+  "f_4a7a1c855e": {
+   "sede": "Cinemateca del Caribe - Barranquilla",
+   "dia": "2026-08-17",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "three black men"
+  },
+  "f_e89123c600": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-08-17",
+   "hora": "15:00",
+   "sala": "Sala Capital",
+   "titulo": "american doctor"
+  },
+  "f_3f3e425687": {
+   "sede": "Biblioteca Pública Deptal Arnoldo de los Santos Palacios Mosquera - Quibdó",
+   "dia": "2026-08-17",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "chaski pacha"
+  },
+  "f_f3ef537c74": {
+   "sede": "Biblioteca Pública Deptal Arnoldo de los Santos Palacios Mosquera - Quibdó",
+   "dia": "2026-08-17",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "muerto no"
+  },
+  "f_2641a3774a": {
+   "sede": "Biblioteca Pública Deptal Arnoldo de los Santos Palacios Mosquera - Quibdó",
+   "dia": "2026-08-17",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "y el rio lloro"
+  },
+  "f_a1e317a0b4": {
+   "sede": "Biblioteca Pública Deptal Arnoldo de los Santos Palacios Mosquera - Quibdó",
+   "dia": "2026-08-17",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "apotnojushi la casa del viento"
+  },
+  "f_c4b5d0a01f": {
+   "sede": "Biblioteca Pública Deptal Arnoldo de los Santos Palacios Mosquera - Quibdó",
+   "dia": "2026-08-17",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "mas alla de la corona"
+  },
+  "f_8a0d4fd30c": {
+   "sede": "Centro Comunitario Nueva Colombia / Biblioteca Pa To Ma Suto - Barranquilla",
+   "dia": "2026-08-17",
+   "hora": "15:30",
+   "sala": "",
+   "titulo": "la bonga"
+  },
+  "f_12663bdbda": {
+   "sede": "Fundación Batuta Caldas - Manizales",
+   "dia": "2026-08-17",
+   "hora": "15:30",
+   "sala": "",
+   "titulo": "el juego de la vida"
+  },
+  "f_e4d50774f8": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-08-17",
+   "hora": "16:00",
+   "sala": "Sala 2",
+   "titulo": "los pliegues de la falda"
+  },
+  "f_876194cea1": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-08-17",
+   "hora": "16:00",
+   "sala": "Sala 2",
+   "titulo": "la cerrillana"
+  },
+  "f_66d2741f04": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-08-17",
+   "hora": "16:00",
+   "sala": "Sala 2",
+   "titulo": "existimos infancias trans en colombia"
+  },
+  "f_e1ad7eb088": {
+   "sede": "Biblioteca Pública Deptal Arnoldo de los Santos Palacios Mosquera - Quibdó",
+   "dia": "2026-08-17",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "cuando la palabra se hace busqueda"
+  },
+  "f_eed8d56707": {
+   "sede": "Cinemateca de Tunja - Tunja",
+   "dia": "2026-08-17",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "akababuru expresion de asombro"
+  },
+  "f_64836c74b2": {
+   "sede": "Cinemateca de Tunja - Tunja",
+   "dia": "2026-08-17",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "todos los dias"
+  },
+  "f_e6fe86bbb2": {
+   "sede": "Cinemateca de Tunja - Tunja",
+   "dia": "2026-08-17",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "sukua"
+  },
+  "f_4241df1fa6": {
+   "sede": "Cinemateca de Tunja - Tunja",
+   "dia": "2026-08-17",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "la gran hazana"
+  },
+  "f_87f638093e": {
+   "sede": "Cineprox - Medellín",
+   "dia": "2026-08-17",
+   "hora": "16:30",
+   "sala": "SALA 3",
+   "titulo": "semillas"
+  },
+  "f_8f96d6c792": {
+   "sede": "Centro Cultural Panóptico de Ibagué - Ibagué",
+   "dia": "2026-08-17",
+   "hora": "17:00",
+   "sala": "Auditorio",
+   "titulo": "la raya"
+  },
+  "f_eaee4ce3f2": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-08-17",
+   "hora": "17:30",
+   "sala": "Sala Capital",
+   "titulo": "la independencia"
+  },
+  "f_f0e3db4e70": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-08-17",
+   "hora": "17:30",
+   "sala": "Sala Capital",
+   "titulo": "cayenas libertarias"
+  },
+  "f_1be0730fa9": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-08-17",
+   "hora": "17:30",
+   "sala": "Sala Capital",
+   "titulo": "el paraiso de ainara"
+  },
+  "f_20a203183e": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-08-17",
+   "hora": "17:30",
+   "sala": "Sala Capital",
+   "titulo": "todos los dias"
+  },
+  "f_68441124e5": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-08-17",
+   "hora": "17:30",
+   "sala": "Sala Capital",
+   "titulo": "sukua"
+  },
+  "f_ac83cb0671": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-08-17",
+   "hora": "17:30",
+   "sala": "Laboratorio 1 y 2",
+   "titulo": "tercera charla derechos audiovisuales"
+  },
+  "f_0e757fa189": {
+   "sede": "Auditorio Centro Cultural Universitario Rogelio Salmona - Manizales",
+   "dia": "2026-08-17",
+   "hora": "17:30",
+   "sala": "",
+   "titulo": "por una gota de leche"
+  },
+  "f_f307643f67": {
+   "sede": "Universidad de Ibagué - Ibagué",
+   "dia": "2026-08-17",
+   "hora": "18:00",
+   "sala": "Auditorio Central",
+   "titulo": "semillas"
+  },
+  "f_07779e3b42": {
+   "sede": "Universidad de Caldas - Auditorio Roberto Vélez Correa - Manizales",
+   "dia": "2026-08-17",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "desierto verde"
+  },
+  "f_a0970b8a01": {
+   "sede": "Cine Bajo las Estrellas programa de exhibición y circulación - Armenia",
+   "dia": "2026-08-17",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "semillas"
+  },
+  "f_8a04b24bb0": {
+   "sede": "Alianza Francesa - Cartagena",
+   "dia": "2026-08-17",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "la cerrillana"
+  },
+  "f_b981c76253": {
+   "sede": "Alianza Francesa - Cartagena",
+   "dia": "2026-08-17",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "apolo"
+  },
+  "f_512fd3e6af": {
+   "sede": "Cinemateca de Tunja - Tunja",
+   "dia": "2026-08-17",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "three black men"
+  },
+  "f_b6c92eeb3b": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-08-17",
+   "hora": "19:00",
+   "sala": "Sala 2",
+   "titulo": "el juego de la vida"
+  },
+  "f_f1da8471fc": {
+   "sede": "Auditorio Centro Cultural Universitario Rogelio Salmona - Manizales",
+   "dia": "2026-08-17",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "si la escombrera hablara"
+  },
+  "f_2a6cfcb9a7": {
+   "sede": "Universidad de Ibagué - Ibagué",
+   "dia": "2026-08-18",
+   "hora": "09:00",
+   "sala": "La Casona",
+   "titulo": "aminetu"
+  },
+  "f_0a932ad9f4": {
+   "sede": "Institución Educativa Los Arrieritos - Manizales",
+   "dia": "2026-08-18",
+   "hora": "09:00",
+   "sala": "",
+   "titulo": "cobija de recuerdos"
+  },
+  "f_2e4b9dd7e8": {
+   "sede": "Universidad Tecnológica de Pereira -UTP - Pereira",
+   "dia": "2026-08-18",
+   "hora": "09:00",
+   "sala": "Bloque 7A / 118",
+   "titulo": "crear para resistir la creacion de contenido como un acto de responsabilidad"
+  },
+  "f_863b0bd960": {
+   "sede": "Institución Educativa Los Arrieritos - Manizales",
+   "dia": "2026-08-18",
+   "hora": "09:30",
+   "sala": "",
+   "titulo": "heroes del silencio"
+  },
+  "f_4ff4282612": {
+   "sede": "Universidad Minuto de Dios - Bogotá",
+   "dia": "2026-08-18",
+   "hora": "10:00",
+   "sala": "Auditorio C202",
+   "titulo": "el arte de moldear la ia"
+  },
+  "f_fb058ad315": {
+   "sede": "Universidad del Quindío - Armenia",
+   "dia": "2026-08-18",
+   "hora": "10:30",
+   "sala": "",
+   "titulo": "amalgama"
+  },
+  "f_2d2fe59ecf": {
+   "sede": "Universidad del Quindío - Armenia",
+   "dia": "2026-08-18",
+   "hora": "10:30",
+   "sala": "",
+   "titulo": "cobija de recuerdos"
+  },
+  "f_7c5126f12f": {
+   "sede": "Universidad del Quindío - Armenia",
+   "dia": "2026-08-18",
+   "hora": "10:30",
+   "sala": "",
+   "titulo": "espeletia bk frailejon desarticulado"
+  },
+  "f_250c791e7c": {
+   "sede": "Universidad del Quindío - Armenia",
+   "dia": "2026-08-18",
+   "hora": "10:30",
+   "sala": "",
+   "titulo": "cuando la palabra se hace busqueda"
+  },
+  "f_11bdde06ff": {
+   "sede": "Fundación Alianza Tecnologica y Desarrollo Educativo - ALITIC - Barranquilla",
+   "dia": "2026-08-18",
+   "hora": "11:00",
+   "sala": "",
+   "titulo": "shelter"
+  },
+  "f_ccef50e816": {
+   "sede": "Fundación Alianza Tecnologica y Desarrollo Educativo - ALITIC - Barranquilla",
+   "dia": "2026-08-18",
+   "hora": "11:00",
+   "sala": "",
+   "titulo": "my grandmother is a skydiver"
+  },
+  "f_6cd6aed978": {
+   "sede": "Fundación Alianza Tecnologica y Desarrollo Educativo - ALITIC - Barranquilla",
+   "dia": "2026-08-18",
+   "hora": "11:00",
+   "sala": "",
+   "titulo": "todos los dias"
+  },
+  "f_4298d7434a": {
+   "sede": "Fundación Alianza Tecnologica y Desarrollo Educativo - ALITIC - Barranquilla",
+   "dia": "2026-08-18",
+   "hora": "11:00",
+   "sala": "",
+   "titulo": "sapos por todos lados"
+  },
+  "f_8389dcaf6e": {
+   "sede": "Fundación Alianza Tecnologica y Desarrollo Educativo - ALITIC - Barranquilla",
+   "dia": "2026-08-18",
+   "hora": "11:00",
+   "sala": "",
+   "titulo": "chaski pacha"
+  },
+  "f_d3a58a8168": {
+   "sede": "Fundación Alianza Tecnologica y Desarrollo Educativo - ALITIC - Barranquilla",
+   "dia": "2026-08-18",
+   "hora": "11:00",
+   "sala": "",
+   "titulo": "outside"
+  },
+  "f_63b3e97f50": {
+   "sede": "Casa de la Juventud Usaquén - Bogotá",
+   "dia": "2026-08-18",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "mujeres modernas"
+  },
+  "f_ae93a288ee": {
+   "sede": "Centro Cultural Panóptico de Ibagué - Ibagué",
+   "dia": "2026-08-18",
+   "hora": "14:00",
+   "sala": "Celda Teatro Ibagué (Proyección en loop)",
+   "titulo": "madres de nacimiento"
+  },
+  "f_508310da94": {
+   "sede": "Centro Cultural Panóptico de Ibagué - Ibagué",
+   "dia": "2026-08-18",
+   "hora": "14:00",
+   "sala": "Celda Teatro Ibagué (Proyección en loop)",
+   "titulo": "sukua"
+  },
+  "f_256745eefb": {
+   "sede": "Centro Cultural Panóptico de Ibagué - Ibagué",
+   "dia": "2026-08-18",
+   "hora": "14:00",
+   "sala": "Celda Teatro Ibagué (Proyección en loop)",
+   "titulo": "la independencia"
+  },
+  "f_657cb0dfc8": {
+   "sede": "Centro Cultural Panóptico de Ibagué - Ibagué",
+   "dia": "2026-08-18",
+   "hora": "14:00",
+   "sala": "Celda Teatro Ibagué (Proyección en loop)",
+   "titulo": "cartas a la tierra"
+  },
+  "f_b2272c53c7": {
+   "sede": "Centro Cultural Panóptico de Ibagué - Ibagué",
+   "dia": "2026-08-18",
+   "hora": "14:00",
+   "sala": "Celda Teatro Ibagué (Proyección en loop)",
+   "titulo": "pawa"
+  },
+  "f_7cc0277855": {
+   "sede": "Universidad Tecnológica de Pereira -UTP - Pereira",
+   "dia": "2026-08-18",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "cuando la palabra se hace busqueda"
+  },
+  "f_31a0292534": {
+   "sede": "Universidad del Quindío - Armenia",
+   "dia": "2026-08-18",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "del otro lado"
+  },
+  "f_be05ca5079": {
+   "sede": "Biblioteca Pública Gabriel García Márquez - Bogotá",
+   "dia": "2026-08-18",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "floresmiro"
+  },
+  "f_8cbeac480f": {
+   "sede": "Biblioteca Pública Manuel Zapata Olivella - Bogotá",
+   "dia": "2026-08-18",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "semillas"
+  },
+  "f_4e6173a6bb": {
+   "sede": "Casa de la Juventud Nacho Sánchez - Bogotá",
+   "dia": "2026-08-18",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "la luz por primera vez"
+  },
+  "f_4b7381735d": {
+   "sede": "Universidad de Ibagué - Ibagué",
+   "dia": "2026-08-18",
+   "hora": "15:00",
+   "sala": "Auditorio de Ingeniería",
+   "titulo": "andariega"
+  },
+  "f_50ca3ba610": {
+   "sede": "All Cine Cable Plaza - Manizales",
+   "dia": "2026-08-18",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "notas sobre un destierro"
+  },
+  "f_233062d3a1": {
+   "sede": "Colombo Americano - Medellín",
+   "dia": "2026-08-18",
+   "hora": "15:00",
+   "sala": "SALA 2",
+   "titulo": "cuando un rio se convierte en mar"
+  },
+  "f_e47d74e6c0": {
+   "sede": "Librería Bagatá - Quibdó",
+   "dia": "2026-08-18",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "el silencio de los palafitos"
+  },
+  "f_d5e6f84097": {
+   "sede": "Casa de la Juventud El Frailejón - Bogotá",
+   "dia": "2026-08-18",
+   "hora": "15:30",
+   "sala": "",
+   "titulo": "por una gota de leche"
+  },
+  "f_d0d2acfcbf": {
+   "sede": "Biblioteca Pública Francisco José de Caldas - Bogotá",
+   "dia": "2026-08-18",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "herencia los cantos de la tierra"
+  },
+  "f_9e876c0d2d": {
+   "sede": "Biblioteca Pública Julio Mario Santodomingo - Bogotá",
+   "dia": "2026-08-18",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "sukua"
+  },
+  "f_fa20c35e91": {
+   "sede": "Biblioteca Pública Julio Mario Santodomingo - Bogotá",
+   "dia": "2026-08-18",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "los pliegues de la falda"
+  },
+  "f_ae72dad9ee": {
+   "sede": "Biblioteca Pública Julio Mario Santodomingo - Bogotá",
+   "dia": "2026-08-18",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "mas alla"
+  },
+  "f_bc2139d20a": {
+   "sede": "Biblioteca Pública Julio Mario Santodomingo - Bogotá",
+   "dia": "2026-08-18",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "la cerrillana"
+  },
+  "f_b0c556ea90": {
+   "sede": "Biblioteca Pública Julio Mario Santodomingo - Bogotá",
+   "dia": "2026-08-18",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "chaski pacha"
+  },
+  "f_357ebfe1e1": {
+   "sede": "Biblioteca Pública La Marichuela - Bogotá",
+   "dia": "2026-08-18",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "el silencio de los palafitos"
+  },
+  "f_e691c371da": {
+   "sede": "Universidad Tecnológica de Pereira -UTP - Pereira",
+   "dia": "2026-08-18",
+   "hora": "16:00",
+   "sala": "Bloque 13, Sala Magistral 1",
+   "titulo": "de poleka kasue al rio otun quien cuida el agua del rio mas importante de la region"
+  },
+  "f_78d550d0d1": {
+   "sede": "Librería Bagatá - Quibdó",
+   "dia": "2026-08-18",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "hablemos de salud mental"
+  },
+  "f_282e10ea40": {
+   "sede": "Cinemateca de Tunja - Tunja",
+   "dia": "2026-08-18",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "akababuru expresion de asombro"
+  },
+  "f_4b16d94567": {
+   "sede": "Cinemateca de Tunja - Tunja",
+   "dia": "2026-08-18",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "todos los dias"
+  },
+  "f_0e55859129": {
+   "sede": "Cinemateca de Tunja - Tunja",
+   "dia": "2026-08-18",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "sukua"
+  },
+  "f_b277db17cb": {
+   "sede": "Cinemateca de Tunja - Tunja",
+   "dia": "2026-08-18",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "la gran hazana"
+  },
+  "f_392060b738": {
+   "sede": "Cineprox - Medellín",
+   "dia": "2026-08-18",
+   "hora": "16:30",
+   "sala": "SALA 3",
+   "titulo": "como filmar un pais en guerra"
+  },
+  "f_8dbfc19350": {
+   "sede": "Universidad del Quindío - Armenia",
+   "dia": "2026-08-18",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "cuando la palabra se hace busqueda"
+  },
+  "f_c0a5a5e40a": {
+   "sede": "Casa de las Luciérnagas - Bogotá",
+   "dia": "2026-08-18",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "akababuru expresion de asombro"
+  },
+  "f_da7d98750c": {
+   "sede": "Casa de las Luciérnagas - Bogotá",
+   "dia": "2026-08-18",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "la gran hazana"
+  },
+  "f_481b88e517": {
+   "sede": "Casa de las Luciérnagas - Bogotá",
+   "dia": "2026-08-18",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "heroes del silencio"
+  },
+  "f_73c02da6ca": {
+   "sede": "Casa de las Luciérnagas - Bogotá",
+   "dia": "2026-08-18",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "el paraiso de ainara"
+  },
+  "f_07cce37adf": {
+   "sede": "Casa de las Luciérnagas - Bogotá",
+   "dia": "2026-08-18",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "in four stops"
+  },
+  "f_1ba2a58e6e": {
+   "sede": "Casa B - Bogotá",
+   "dia": "2026-08-18",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "la raya"
+  },
+  "f_beb2465f4f": {
+   "sede": "COMFAMA - Cineclub Bello - Medellín",
+   "dia": "2026-08-18",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "desierto verde"
+  },
+  "f_87030bad70": {
+   "sede": "La Pascasia - Medellín",
+   "dia": "2026-08-18",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "el silencio de los palafitos"
+  },
+  "f_aef7ab6796": {
+   "sede": "La Pascasia - Medellín",
+   "dia": "2026-08-18",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "lo que sentimos"
+  },
+  "f_0819ec8c0d": {
+   "sede": "Cinema Local - Bogotá",
+   "dia": "2026-08-18",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "el valor de la palabra"
+  },
+  "f_7e714d3e9f": {
+   "sede": "Cinema Local - Cali",
+   "dia": "2026-08-18",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "the beauty of the donkey"
+  },
+  "f_c6ffaea0f1": {
+   "sede": "Centro de Formación de la Cooperación Española - Cartagena",
+   "dia": "2026-08-18",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "trenzando caminos de paz"
+  },
+  "f_8f8073e118": {
+   "sede": "Centro de Formación de la Cooperación Española - Cartagena",
+   "dia": "2026-08-18",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "el silencio de los palafitos"
+  },
+  "f_cedccf34ba": {
+   "sede": "Rueda Libre (La Ceja) - Medellín",
+   "dia": "2026-08-18",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "la raya"
+  },
+  "f_a75f9c44e3": {
+   "sede": "Cinemateca de Tunja - Tunja",
+   "dia": "2026-08-18",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "three black men"
+  },
+  "f_216e063d3f": {
+   "sede": "Shuffle live music - Pereira",
+   "dia": "2026-08-18",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "herencia los cantos de la tierra"
+  },
+  "f_e13f85532a": {
+   "sede": "Casa Cultural El Bordillo - Barranquilla",
+   "dia": "2026-08-18",
+   "hora": "19:30",
+   "sala": "",
+   "titulo": "kaugsankamalla mientras vivamos"
+  },
+  "f_ef72c6f197": {
+   "sede": "Cinemateca del Caribe - Barranquilla",
+   "dia": "2026-08-18",
+   "hora": "20:00",
+   "sala": "",
+   "titulo": "padamlagan"
+  },
+  "f_ef5f5ca054": {
+   "sede": "Auditorio Principal - UNIAGRARIA - Bogotá",
+   "dia": "2026-08-19",
+   "hora": "09:00",
+   "sala": "",
+   "titulo": "reconocer atender y reparar 15 anos de la ley de victimas"
+  },
+  "f_4bb560bdec": {
+   "sede": "Institución Educativa Los Arrieritos - Manizales",
+   "dia": "2026-08-19",
+   "hora": "09:00",
+   "sala": "",
+   "titulo": "sapos por todos lados"
+  },
+  "f_30c7fba5ff": {
+   "sede": "Institución Educativa Los Arrieritos - Manizales",
+   "dia": "2026-08-19",
+   "hora": "09:30",
+   "sala": "",
+   "titulo": "la gran hazana"
+  },
+  "f_982f2c6818": {
+   "sede": "Centro de Conciliación y Arbitraje - Universidad del Norte - Barranquilla",
+   "dia": "2026-08-19",
+   "hora": "10:00",
+   "sala": "",
+   "titulo": "andariega"
+  },
+  "f_449eb8dd8e": {
+   "sede": "Universidad Jorge Tadeo Lozano Salón Oval - Bogotá",
+   "dia": "2026-08-19",
+   "hora": "10:00",
+   "sala": "",
+   "titulo": "gritemos corte"
+  },
+  "f_e6d5df7aeb": {
+   "sede": "Auditorio Tulio Gómez Estrada, Facultad de Ciencias Jurídicas y Sociales - Manizales",
+   "dia": "2026-08-19",
+   "hora": "10:30",
+   "sala": "",
+   "titulo": "cuando la palabra se hace busqueda"
+  },
+  "f_50af75e79d": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-08-19",
+   "hora": "13:00",
+   "sala": "Sala 2",
+   "titulo": "la luz por primera vez"
+  },
+  "f_66ef3407a8": {
+   "sede": "Casa de la Juventud Huitaca - Bogotá",
+   "dia": "2026-08-19",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "el bosque"
+  },
+  "f_6317b6e81f": {
+   "sede": "Centro Cultural Panóptico de Ibagué - Ibagué",
+   "dia": "2026-08-19",
+   "hora": "14:00",
+   "sala": "Celda Teatro Ibagué (Proyección en loop)",
+   "titulo": "madres de nacimiento"
+  },
+  "f_9d1410fd34": {
+   "sede": "Centro Cultural Panóptico de Ibagué - Ibagué",
+   "dia": "2026-08-19",
+   "hora": "14:00",
+   "sala": "Celda Teatro Ibagué (Proyección en loop)",
+   "titulo": "sukua"
+  },
+  "f_64865016ba": {
+   "sede": "Centro Cultural Panóptico de Ibagué - Ibagué",
+   "dia": "2026-08-19",
+   "hora": "14:00",
+   "sala": "Celda Teatro Ibagué (Proyección en loop)",
+   "titulo": "la independencia"
+  },
+  "f_3df876b832": {
+   "sede": "Centro Cultural Panóptico de Ibagué - Ibagué",
+   "dia": "2026-08-19",
+   "hora": "14:00",
+   "sala": "Celda Teatro Ibagué (Proyección en loop)",
+   "titulo": "cartas a la tierra"
+  },
+  "f_f3a28333e5": {
+   "sede": "Centro Cultural Panóptico de Ibagué - Ibagué",
+   "dia": "2026-08-19",
+   "hora": "14:00",
+   "sala": "Celda Teatro Ibagué (Proyección en loop)",
+   "titulo": "pawa"
+  },
+  "f_153d32bd88": {
+   "sede": "Museo Casa de la Memoria - Medellín",
+   "dia": "2026-08-19",
+   "hora": "14:30",
+   "sala": "",
+   "titulo": "la luz que nos queda"
+  },
+  "f_82d99564e6": {
+   "sede": "Museo Casa de la Memoria - Medellín",
+   "dia": "2026-08-19",
+   "hora": "14:30",
+   "sala": "",
+   "titulo": "cuando la palabra se hace busqueda"
+  },
+  "f_08afa6a919": {
+   "sede": "Museo Casa de la Memoria - Medellín",
+   "dia": "2026-08-19",
+   "hora": "14:30",
+   "sala": "",
+   "titulo": "cobija de recuerdos"
+  },
+  "f_4b313e53ba": {
+   "sede": "Cinemateca del Caribe - Barranquilla",
+   "dia": "2026-08-19",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "la bonga"
+  },
+  "f_0d13697924": {
+   "sede": "Casa de la Juventud Chiguazá - Bogotá",
+   "dia": "2026-08-19",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "el bosque"
+  },
+  "f_bdc4eb615b": {
+   "sede": "Colombo Americano - Medellín",
+   "dia": "2026-08-19",
+   "hora": "15:00",
+   "sala": "SALA 2",
+   "titulo": "tierra que habla"
+  },
+  "f_8310bb3d84": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-08-19",
+   "hora": "15:30",
+   "sala": "Sala 2",
+   "titulo": "halima una guia para ser fuerte"
+  },
+  "f_9343b0f23c": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-08-19",
+   "hora": "15:30",
+   "sala": "Sala 2",
+   "titulo": "no mas mutilacion genital femenina en colombia"
+  },
+  "f_da377d3c9d": {
+   "sede": "Universidad Alexander von Humboldt - Armenia",
+   "dia": "2026-08-19",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "bojaya la verdad desde adentro"
+  },
+  "f_827a8bcb9a": {
+   "sede": "Universidad del Atlántico - Centro de Convenciones - Barranquilla",
+   "dia": "2026-08-19",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "republic of amnesia"
+  },
+  "f_34ad96ab1c": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-08-19",
+   "hora": "16:00",
+   "sala": "Sala Capital",
+   "titulo": "floresmiro"
+  },
+  "f_4df8763b56": {
+   "sede": "Biblioteca Pública Deptal Arnoldo de los Santos Palacios Mosquera - Quibdó",
+   "dia": "2026-08-19",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "carmela y los caminantes"
+  },
+  "f_9fafa0a13e": {
+   "sede": "Cinemateca de Tunja - Tunja",
+   "dia": "2026-08-19",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "akababuru expresion de asombro"
+  },
+  "f_b220fb617c": {
+   "sede": "Cinemateca de Tunja - Tunja",
+   "dia": "2026-08-19",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "todos los dias"
+  },
+  "f_4ee5692b25": {
+   "sede": "Cinemateca de Tunja - Tunja",
+   "dia": "2026-08-19",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "sukua"
+  },
+  "f_bbf7e00939": {
+   "sede": "Cinemateca de Tunja - Tunja",
+   "dia": "2026-08-19",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "la gran hazana"
+  },
+  "f_18f781c52e": {
+   "sede": "Biblioteca Pública Carlos E. Restrepo - Bogotá",
+   "dia": "2026-08-19",
+   "hora": "16:30",
+   "sala": "",
+   "titulo": "el silencio de los palafitos"
+  },
+  "f_11237cfaea": {
+   "sede": "Cinemateca del Museo La Tertulia - Cali",
+   "dia": "2026-08-19",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "cuando la palabra se hace busqueda"
+  },
+  "f_684096009f": {
+   "sede": "Auditorio Tulio Gómez Estrada, Facultad de Ciencias Jurídicas y Sociales - Manizales",
+   "dia": "2026-08-19",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "bojaya la verdad desde adentro"
+  },
+  "f_3d46fc3ddb": {
+   "sede": "Ágora Casa Cultural (La Ceja) - Medellín",
+   "dia": "2026-08-19",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "amor rebelde"
+  },
+  "f_b2d47eff2c": {
+   "sede": "Auditorio Tulio Gómez Estrada, Facultad de Ciencias Jurídicas y Sociales - Manizales",
+   "dia": "2026-08-19",
+   "hora": "17:30",
+   "sala": "",
+   "titulo": "bojaya la verdad desde adentro"
+  },
+  "f_49e3be098d": {
+   "sede": "Fundación Puerto Colombia - Barranquilla",
+   "dia": "2026-08-19",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "la raya"
+  },
+  "f_4d3184ee95": {
+   "sede": "Universidad de Ibagué - Ibagué",
+   "dia": "2026-08-19",
+   "hora": "18:00",
+   "sala": "Media Torta Facultad de Humanidades",
+   "titulo": "hija del volcan"
+  },
+  "f_059bfdc1c2": {
+   "sede": "Maloka Cultural - Barranquilla",
+   "dia": "2026-08-19",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "honorable"
+  },
+  "f_c02cea2f84": {
+   "sede": "Maloka Cultural - Barranquilla",
+   "dia": "2026-08-19",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "trenzando caminos de paz"
+  },
+  "f_f4fee3ff2b": {
+   "sede": "Maloka Cultural - Barranquilla",
+   "dia": "2026-08-19",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "volver a creer"
+  },
+  "f_0b4212a940": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-08-19",
+   "hora": "18:30",
+   "sala": "Sala Capital",
+   "titulo": "despues del frio"
+  },
+  "f_b149b09298": {
+   "sede": "Centro de Formación de la Cooperación Española - Cartagena",
+   "dia": "2026-08-19",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "trenzando caminos de paz"
+  },
+  "f_b0c3f71b30": {
+   "sede": "Centro de Formación de la Cooperación Española - Cartagena",
+   "dia": "2026-08-19",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "el silencio de los palafitos"
+  },
+  "f_d16c40131c": {
+   "sede": "Cineprox - Medellín",
+   "dia": "2026-08-19",
+   "hora": "18:30",
+   "sala": "SALA 3",
+   "titulo": "feito pipa"
+  },
+  "f_f2cef366f6": {
+   "sede": "Colombo Americano de Pereira - Pereira",
+   "dia": "2026-08-19",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "bojaya la verdad desde adentro"
+  },
+  "f_ca76feac71": {
+   "sede": "Colombo Americano de Pereira - Pereira",
+   "dia": "2026-08-19",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "lo que sentimos"
+  },
+  "f_5e05b69cfa": {
+   "sede": "Cinemateca de Tunja - Tunja",
+   "dia": "2026-08-19",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "three black men"
+  },
+  "f_005e4fe8dc": {
+   "sede": "Auditorio Tulio Gómez Estrada, Facultad de Ciencias Jurídicas y Sociales - Manizales",
+   "dia": "2026-08-19",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "madres de nacimiento"
+  },
+  "f_de627a8d0b": {
+   "sede": "Teatro Los Fundadores - Manizales",
+   "dia": "2026-08-19",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "el juego de la vida"
+  },
+  "f_6e38d9d1ba": {
+   "sede": "Universidad del Quindío - Armenia",
+   "dia": "2026-08-18",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "con la paz entre las manos"
+  },
+  "f_90217c9969": {
+   "sede": "Fundación Universitaria Agraria UNIAGRARIA - Bogotá",
+   "dia": "2026-08-19",
+   "hora": "09:00",
+   "sala": "",
+   "titulo": "con la paz entre las manos"
+  },
+  "f_ca239c799c": {
+   "sede": "Universidad de Ibagué - Ibagué",
+   "dia": "2026-08-19",
+   "hora": "09:00",
+   "sala": "",
+   "titulo": "gestion y programacion de muestras y festivales de cine"
+  }
+ }
+}

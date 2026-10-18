@@ -641,24 +641,30 @@ def ensamblar(fid, escribir=True):
                 if _o.get('section'):
                     _o['section'] = caja.seccion(_o['section'])
         out['sections'] = {caja.seccion(k): v for k, v in out['sections'].items()}
-    # EL MODELO DE LA FUNCIÓN (docs/FUNCION.md): si el festival tiene
-    # <fid>-afirmaciones.json, cada función recibe su id estable (C1), cada
-    # casilla se resuelve con su regla, y un conflicto o una afirmación que no
-    # encuentra su función FRENA con un reporte en <fid>-conflictos.json (C9)
     _afs = funcion.cargar(fid)
     _conf_p = f'{REPO}/festivals/staging/{fid}-conflictos.json'
+    # EL ID ESTABLE, PARA TODO FESTIVAL (docs/FUNCION.md §11.6 paso 4): cada
+    # función recibe su id del registro <fid>-funciones-ids.json, con las
+    # decisiones humanas de <fid>-funciones-decisiones.json, y lo publica
+    _reg_p = f'{REPO}/festivals/staging/{fid}-funciones-ids.json'
+    _reg = json.load(open(_reg_p, encoding='utf-8')) if os.path.exists(_reg_p) else {}
+    _dec_p = f'{REPO}/festivals/staging/{fid}-funciones-decisiones.json'
+    _dec = json.load(open(_dec_p, encoding='utf-8')).get('decisiones') if os.path.exists(_dec_p) else []
+    try:
+        films[:], _reg, _avisos = funcion.ids_del_montaje(films, _reg, _dec)
+    except funcion.AfirmacionInvalida as _e:
+        sys.exit(f'✗ {fid}: {_e} → {os.path.relpath(_dec_p, REPO)}')
+    for _x in _avisos:
+        print(f'  · función: {_x}')
+    # los avisos de ids (movida, renombrada, cambio doble) viajan en el build
+    # para que publicar.py los muestre: un id nuevo por cambio doble no puede
+    # quedar solo en un registro (Juan, 18 oct)
+    out['_avisos_id'] = [x for x in _avisos if x.startswith('⚠')]
+    # EL MODELO DE LA FUNCIÓN (docs/FUNCION.md): si el festival tiene
+    # <fid>-afirmaciones.json, cada casilla se resuelve con su regla, y un
+    # conflicto o una afirmación que no encuentra su función FRENA con un
+    # reporte en <fid>-conflictos.json (C9)
     if _afs is not None:
-        _reg_p = f'{REPO}/festivals/staging/{fid}-funciones-ids.json'
-        _reg = json.load(open(_reg_p, encoding='utf-8')) if os.path.exists(_reg_p) else {}
-        # §11.3.4: las decisiones de un humano sobre cambios dobles, partidas y fusiones
-        _dec_p = f'{REPO}/festivals/staging/{fid}-funciones-decisiones.json'
-        _dec = json.load(open(_dec_p, encoding='utf-8')).get('decisiones') if os.path.exists(_dec_p) else []
-        try:
-            films[:], _reg, _avisos = funcion.asignar_ids(films, _reg, _dec)
-        except funcion.AfirmacionInvalida as _e:
-            sys.exit(f'✗ {fid}: {_e} → {os.path.relpath(_dec_p, REPO)}')
-        for _x in _avisos:
-            print(f'  · función: {_x}')
         try:
             _r = funcion.resolver(films, _afs, funcion.contexto(crudo, cfg, funcion.ticketing_model_de(fid)))
             _conf = _r.conflictos
@@ -673,27 +679,17 @@ def ensamblar(fid, escribir=True):
                          c.get('detalle') or f"{c.get('funcion')} · {c.get('casilla')} ({c.get('tipo', 'empate')}): " +
                          ' / '.join(f"{o['valor']!r} ({o['fuente']['tipo']} {o['fuente'].get('publicado') or o['fuente']['fecha']})"
                                     for o in c.get('opciones', [])) for c in _conf))
-        if escribir:   # H2: --ver no escribe nada
-            if os.path.exists(_conf_p):
-                os.remove(_conf_p)
-            # L7: el registro se reescribe solo si cambió lo que guarda (sin ruido diario)
-            _viejo = json.load(open(_reg_p, encoding='utf-8')).get('funciones') if os.path.exists(_reg_p) else None
-            if _viejo != _reg['funciones']:
-                json.dump({'_provenance': lib.provenance('ensamblar.py: ids estables de las funciones (docs/FUNCION.md C1)'),
-                           **_reg}, open(_reg_p, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+        if escribir and os.path.exists(_conf_p):   # H2: --ver no escribe nada
+            os.remove(_conf_p)
         films[:] = _r.funciones
-        # EL ID ESTABLE, PUBLICADO (docs/FUNCION.md §11): el `_fid` interno pasa a
-        # `id`, que publicar deja pasar. La app no lo lee todavía (18 oct 2026)
-        for _f in films:
-            if _f.get('_fid'):
-                _f['id'] = _f['_fid']
-            if _f.get('_ids_anteriores'):   # §11.4: partida / fusión, para que la app migre
-                _f['ids_anteriores'] = _f['_ids_anteriores']
-        # los avisos de ids (movida, renombrada, cambio doble) viajan en el build
-        # para que publicar.py los muestre: un id nuevo por cambio doble no puede
-        # quedar solo en un registro (Juan, 18 oct)
-        out['_avisos_id'] = [x for x in _avisos if x.startswith('⚠')]
         print(f'  modelo de la función: {len(_afs)} afirmaciones · {len(films)} funciones')
+    # L7: el registro se reescribe solo si cambió lo que guarda (sin ruido diario),
+    # y solo después de que el modelo no frenó
+    if escribir and _reg.get('funciones'):
+        _viejo = json.load(open(_reg_p, encoding='utf-8')).get('funciones') if os.path.exists(_reg_p) else None
+        if _viejo != _reg['funciones']:
+            json.dump({'_provenance': lib.provenance('ensamblar.py: ids estables de las funciones (docs/FUNCION.md C1)'),
+                       **_reg}, open(_reg_p, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     # H1 (revisión del 16 oct): en un festival del modelo la duración NO se repone
     # de lo publicado — lo publicado puede ser una ESTIMACIÓN de la corrida
     # anterior, y volvería como dato. Las correcciones reales van por -duraciones

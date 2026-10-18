@@ -241,7 +241,7 @@ Pedido de Juan vía la sesión Main: hoy la app reconoce una función por títul
 
 ### 11.2 Quién lo asigna
 - El **pipeline**, en `ensamblar` (`funcion.asignar_ids`), para TODO festival con plan, no solo los del modelo. El registro `<fid>-funciones-ids.json` se versiona y es la fuente.
-- Festivales sin pipeline (legado): un script de una pasada les asigna ids y congela su registro.
+- Festivales sin pipeline (legado): `pipeline/ids-legado.py` les asigna ids desde lo publicado y congela su registro.
 - `publicar.py` deja pasar `id` (hoy descarta todo lo que empieza con `_`).
 
 ### 11.3 Cómo se casa una función nueva con una vieja al re-armar
@@ -277,5 +277,5 @@ Contra `main`: (a) todo `id` publicado antes sigue publicado, o figura `ausente`
 1. Esta propuesta → Juan.
 2. ✓ `id` publicado + `ids_anteriores` + guardián, en los 3 festivales que ya tienen registro (BHFF, Fantasmagoría, Ficcali). La app no lo lee todavía.
 3. ✓ Reglas nuevas (trasladada, decisión registrada, partir/fusionar), con tests primero.
-4. Todo festival con plan; luego los de legado con su registro congelado.
+4. ✓ Todo festival: el ensamblador da id a todos (`funcion.ids_del_montaje`) y `pipeline/ids-legado.py` lo dio a los 31 publicados sin rearmarlos, por el invariante de `publicar-datos.py` (si `publicar.py` reproduce lo publicado, va al build; si no, al JSON publicado). Rearmar conserva cada id por clave exacta: 21/21 verificados.
 5. (Main) la app: plan, retrasos, boleta y avisos apuntan al `id`.

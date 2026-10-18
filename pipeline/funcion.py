@@ -418,6 +418,53 @@ def asignar_ids(funciones, registro, decisiones=None):
     return out, {'funciones': nuevo}, avisos
 
 
+def ids_del_montaje(funciones, registro, decisiones):
+    """El paso del ensamblador para TODO festival, tenga o no afirmaciones
+    (§11.6 paso 4) → (funciones con `id` e `ids_anteriores`, registro, avisos).
+    Un montaje sin _ancla (build viejo) no recibe id: sin ancla no hay con qué
+    casar, y uno inventado se rompería en el siguiente montaje."""
+    registro = registro or {'funciones': {}}
+    sin = sum(1 for f in funciones if not f.get('_ancla'))
+    if not funciones or sin:
+        return funciones, registro, ([f'{sin} función(es) sin _ancla: este montaje no recibe id'] if sin else [])
+    out, registro, avisos = asignar_ids(funciones, registro, decisiones)
+    for f in out:
+        f['id'] = f['_fid']
+        if f.get('_ids_anteriores'):          # §11.4: partida / fusión, para que la app migre
+            f['ids_anteriores'] = f['_ids_anteriores']
+    return out, registro, avisos
+
+
+def ids_para_publicado(films, registro):
+    """La pasada de legado (§11.2): da `id` a las funciones de un festival YA
+    publicado sin rearmarlo → (films, registro). Solo agrega `id`; una entrada
+    sin sede, día y hora no es una función y queda igual. La clave es la misma
+    que usa el ensamblador (_ancla = sede, día, hora), así que rearmar después
+    conserva cada id. Un id ya publicado se respeta."""
+    reg = {'funciones': dict((registro or {}).get('funciones') or {})}
+    hay = [n for n, f in enumerate(films) if f.get('venue') and f.get('day') and f.get('time')]
+    base = [{**films[n], '_ancla': (films[n]['venue'], films[n]['day'], films[n]['time'])} for n in hay]
+    for f in base:
+        if f.get('id') and f['id'] not in reg['funciones']:
+            reg['funciones'][f['id']] = _clave(f)
+    asig, reg, _ = asignar_ids(base, reg)
+    out = [dict(f) for f in films]
+    for n, f in zip(hay, asig):
+        out[n]['id'] = f['_fid']
+    return out, reg
+
+
+def volcar_como(raw, d):
+    """`d` en el mismo formato que `raw` (compacto o con sangría 1/2, con o sin
+    salto final): la pasada de legado no puede cambiar nada más que lo que
+    agrega. Un formato que no se reconoce FRENA, no se adivina."""
+    for kw in ({'separators': (',', ':')}, {}, {'indent': 1}, {'indent': 2}):
+        for fin in ('', '\n'):
+            if json.dumps(json.loads(raw), ensure_ascii=False, **kw) + fin == raw:
+                return json.dumps(d, ensure_ascii=False, **kw) + fin
+    raise AfirmacionInvalida('formato de JSON que no se reconoce: no se reescribe')
+
+
 def ids_estables(viejo, nuevo, registro):
     """[id-funcion-estable] (docs/FUNCION.md §11.5): lo publicado en main contra
     lo de ahora → problemas. Un id publicado no desaparece salvo que el registro

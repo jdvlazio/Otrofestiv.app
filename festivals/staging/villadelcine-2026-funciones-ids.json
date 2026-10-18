@@ -1,0 +1,400 @@
+{
+ "_provenance": {
+  "fuente": "ids-legado.py: ids estables congelados desde lo publicado (docs/FUNCION.md §11.2)",
+  "capturado": "2026-10-18"
+ },
+ "funciones": {
+  "f_383f2e7d98": {
+   "sede": "Casa San Pedro Campestre - Villa de Leyva",
+   "dia": "2026-10-14",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "ceremonia unquy de apertura"
+  },
+  "f_5e9bfdf952": {
+   "sede": "Casa San Pedro Campestre - Villa de Leyva",
+   "dia": "2026-10-14",
+   "hora": "17:30",
+   "sala": "",
+   "titulo": "cine concierto caminos sonoros leon quintero"
+  },
+  "f_79bdc95515": {
+   "sede": "Casa San Pedro Campestre - Villa de Leyva",
+   "dia": "2026-10-14",
+   "hora": "17:45",
+   "sala": "",
+   "titulo": "un amor a primera vista"
+  },
+  "f_e002b38974": {
+   "sede": "Casa San Pedro Campestre - Villa de Leyva",
+   "dia": "2026-10-14",
+   "hora": "18:15",
+   "sala": "",
+   "titulo": "mucho gusto"
+  },
+  "f_17c46a90c5": {
+   "sede": "Casa San Pedro Campestre - Villa de Leyva",
+   "dia": "2026-10-14",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "arenas"
+  },
+  "f_2f5c3af039": {
+   "sede": "Casa San Pedro Campestre - Villa de Leyva",
+   "dia": "2026-10-15",
+   "hora": "09:00",
+   "sala": "",
+   "titulo": "x plora cine"
+  },
+  "f_1f83876c6d": {
+   "sede": "Hotel Mesón de los Virreyes - Villa de Leyva",
+   "dia": "2026-10-15",
+   "hora": "09:15",
+   "sala": "Biblioteca",
+   "titulo": "entre vistas entrevistas a seleccionados"
+  },
+  "f_f30a2d10e2": {
+   "sede": "Hotel Mesón de los Virreyes - Villa de Leyva",
+   "dia": "2026-10-15",
+   "hora": "09:30",
+   "sala": "Auditorio",
+   "titulo": "club de pitch encuentro work in progress"
+  },
+  "f_595da2b0da": {
+   "sede": "Casa San Pedro Campestre - Villa de Leyva",
+   "dia": "2026-10-15",
+   "hora": "09:45",
+   "sala": "",
+   "titulo": "el fosil magico"
+  },
+  "f_2025b74966": {
+   "sede": "Museo Casa Antonio Nariño - Villa de Leyva",
+   "dia": "2026-10-15",
+   "hora": "10:00",
+   "sala": "",
+   "titulo": "claquetazo laboratorio de creacion"
+  },
+  "f_7df0a8ab81": {
+   "sede": "Casa San Pedro Campestre - Villa de Leyva",
+   "dia": "2026-10-15",
+   "hora": "10:30",
+   "sala": "",
+   "titulo": "farmeando el tunjo taller de creacion con inteligencia artificial"
+  },
+  "f_46484779e4": {
+   "sede": "Galería Pérez Rojas - Villa de Leyva",
+   "dia": "2026-10-15",
+   "hora": "11:00",
+   "sala": "",
+   "titulo": "ecos"
+  },
+  "f_2fa6513fb3": {
+   "sede": "Hotel Mesón de los Virreyes - Villa de Leyva",
+   "dia": "2026-10-15",
+   "hora": "11:30",
+   "sala": "Auditorio",
+   "titulo": "muestra especial festival de cine eureka"
+  },
+  "f_cd493317ee": {
+   "sede": "Casa San Pedro Campestre - Villa de Leyva",
+   "dia": "2026-10-15",
+   "hora": "12:30",
+   "sala": "",
+   "titulo": "x plora cine"
+  },
+  "f_5f81c1cc81": {
+   "sede": "Galería Pérez Rojas - Villa de Leyva",
+   "dia": "2026-10-15",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "voces"
+  },
+  "f_fc2afbbc60": {
+   "sede": "Hotel Mesón de los Virreyes - Villa de Leyva",
+   "dia": "2026-10-15",
+   "hora": "14:00",
+   "sala": "Auditorio",
+   "titulo": "eclipses"
+  },
+  "f_7305d5ae4f": {
+   "sede": "Hotel Mesón de los Virreyes - Villa de Leyva",
+   "dia": "2026-10-15",
+   "hora": "14:00",
+   "sala": "Biblioteca",
+   "titulo": "senales"
+  },
+  "f_b2aa3e6ed5": {
+   "sede": "Museo Casa Antonio Nariño - Villa de Leyva",
+   "dia": "2026-10-15",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "claquetazo laboratorio de creacion"
+  },
+  "f_304db14dd9": {
+   "sede": "Galería Pérez Rojas - Villa de Leyva",
+   "dia": "2026-10-15",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "estacion iguaque"
+  },
+  "f_96f9fe960a": {
+   "sede": "Galería Pérez Rojas - Villa de Leyva",
+   "dia": "2026-10-15",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "genesis"
+  },
+  "f_b19dc9eee3": {
+   "sede": "Hotel Mesón de los Virreyes - Villa de Leyva",
+   "dia": "2026-10-15",
+   "hora": "17:15",
+   "sala": "Auditorio",
+   "titulo": "llueve sobre babel"
+  },
+  "f_d1a056eeb9": {
+   "sede": "Galería Pérez Rojas - Villa de Leyva",
+   "dia": "2026-10-15",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "umbrales"
+  },
+  "f_a470b63a96": {
+   "sede": "Hotel Mesón de los Virreyes - Villa de Leyva",
+   "dia": "2026-10-15",
+   "hora": "19:15",
+   "sala": "Auditorio",
+   "titulo": "transitos"
+  },
+  "f_20551faf59": {
+   "sede": "Casa San Pedro Campestre - Villa de Leyva",
+   "dia": "2026-10-16",
+   "hora": "09:00",
+   "sala": "",
+   "titulo": "x plora cine"
+  },
+  "f_d1096fbd00": {
+   "sede": "Hotel Mesón de los Virreyes - Villa de Leyva",
+   "dia": "2026-10-16",
+   "hora": "09:15",
+   "sala": "Biblioteca",
+   "titulo": "entre vistas entrevistas a seleccionados"
+  },
+  "f_134b734b54": {
+   "sede": "Casa San Pedro Campestre - Villa de Leyva",
+   "dia": "2026-10-16",
+   "hora": "09:45",
+   "sala": "",
+   "titulo": "cianotipia taller de fotografia analogica"
+  },
+  "f_31a6944cf2": {
+   "sede": "Museo Casa Antonio Nariño - Villa de Leyva",
+   "dia": "2026-10-16",
+   "hora": "10:00",
+   "sala": "",
+   "titulo": "claquetazo laboratorio de creacion"
+  },
+  "f_38f269ac52": {
+   "sede": "Galería Pérez Rojas - Villa de Leyva",
+   "dia": "2026-10-16",
+   "hora": "10:00",
+   "sala": "",
+   "titulo": "portales"
+  },
+  "f_d0550b6491": {
+   "sede": "Hotel Plaza Mayor - Villa de Leyva",
+   "dia": "2026-10-16",
+   "hora": "10:00",
+   "sala": "",
+   "titulo": "taller eureka del collage al poster"
+  },
+  "f_1176208484": {
+   "sede": "Hotel Mesón de los Virreyes - Villa de Leyva",
+   "dia": "2026-10-16",
+   "hora": "10:30",
+   "sala": "Auditorio",
+   "titulo": "proceso de restauracion de la paga y aquileo venganza"
+  },
+  "f_0ccfed895e": {
+   "sede": "Galería Pérez Rojas - Villa de Leyva",
+   "dia": "2026-10-16",
+   "hora": "11:45",
+   "sala": "",
+   "titulo": "planeta"
+  },
+  "f_f2d6e267a9": {
+   "sede": "Casa San Pedro Campestre - Villa de Leyva",
+   "dia": "2026-10-16",
+   "hora": "11:45",
+   "sala": "",
+   "titulo": "x plora cine"
+  },
+  "f_aba0bacbf3": {
+   "sede": "Galería Pérez Rojas - Villa de Leyva",
+   "dia": "2026-10-16",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "boyaca en los campos"
+  },
+  "f_977dfd73e1": {
+   "sede": "Hotel Mesón de los Virreyes - Villa de Leyva",
+   "dia": "2026-10-16",
+   "hora": "14:00",
+   "sala": "Auditorio",
+   "titulo": "metamorfosis"
+  },
+  "f_22cdf2b25b": {
+   "sede": "Hotel Mesón de los Virreyes - Villa de Leyva",
+   "dia": "2026-10-16",
+   "hora": "14:00",
+   "sala": "Biblioteca",
+   "titulo": "senales"
+  },
+  "f_410a9ef39d": {
+   "sede": "Hotel Plaza Mayor - Villa de Leyva",
+   "dia": "2026-10-16",
+   "hora": "14:15",
+   "sala": "",
+   "titulo": "trazos charla con realizadores"
+  },
+  "f_08cd2d8386": {
+   "sede": "Museo Casa Antonio Nariño - Villa de Leyva",
+   "dia": "2026-10-16",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "claquetazo laboratorio de creacion"
+  },
+  "f_f0b820844b": {
+   "sede": "Galería Pérez Rojas - Villa de Leyva",
+   "dia": "2026-10-16",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "estacion iguaque"
+  },
+  "f_d3f389f636": {
+   "sede": "Hotel Plaza Mayor - Villa de Leyva",
+   "dia": "2026-10-16",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "reconocimiento a los heroes de la montana"
+  },
+  "f_e016b09d7f": {
+   "sede": "Galería Pérez Rojas - Villa de Leyva",
+   "dia": "2026-10-16",
+   "hora": "16:30",
+   "sala": "",
+   "titulo": "encrucijadas"
+  },
+  "f_b27f6c4e27": {
+   "sede": "Hotel Mesón de los Virreyes - Villa de Leyva",
+   "dia": "2026-10-16",
+   "hora": "17:00",
+   "sala": "Auditorio",
+   "titulo": "destellos"
+  },
+  "f_ef3f321ea5": {
+   "sede": "Hotel Mesón de los Virreyes - Villa de Leyva",
+   "dia": "2026-10-16",
+   "hora": "19:00",
+   "sala": "Auditorio",
+   "titulo": "poderosas"
+  },
+  "f_fd120a01c3": {
+   "sede": "Galería Pérez Rojas - Villa de Leyva",
+   "dia": "2026-10-16",
+   "hora": "19:30",
+   "sala": "",
+   "titulo": "resurgencias"
+  },
+  "f_51a9d8451d": {
+   "sede": "Hotel Mesón de los Virreyes - Villa de Leyva",
+   "dia": "2026-10-16",
+   "hora": "20:15",
+   "sala": "Auditorio",
+   "titulo": "retornos"
+  },
+  "f_220eeb53f6": {
+   "sede": "Hotel Mesón de los Virreyes - Villa de Leyva",
+   "dia": "2026-10-17",
+   "hora": "09:15",
+   "sala": "Biblioteca",
+   "titulo": "entre vistas entrevistas a seleccionados"
+  },
+  "f_cb124f93ce": {
+   "sede": "Museo Casa Antonio Nariño - Villa de Leyva",
+   "dia": "2026-10-17",
+   "hora": "10:00",
+   "sala": "",
+   "titulo": "maquillaje transformaciones del tiempo"
+  },
+  "f_df10287b52": {
+   "sede": "Hotel Mesón de los Virreyes - Villa de Leyva",
+   "dia": "2026-10-17",
+   "hora": "10:00",
+   "sala": "Auditorio",
+   "titulo": "dirigir el tiempo"
+  },
+  "f_a9cf24cbf8": {
+   "sede": "Hotel Mesón de los Virreyes - Villa de Leyva",
+   "dia": "2026-10-17",
+   "hora": "11:45",
+   "sala": "Auditorio",
+   "titulo": "raices"
+  },
+  "f_3c9bc25b18": {
+   "sede": "Galería Pérez Rojas - Villa de Leyva",
+   "dia": "2026-10-17",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "estacion iguaque"
+  },
+  "f_291b5dfd26": {
+   "sede": "Hotel Mesón de los Virreyes - Villa de Leyva",
+   "dia": "2026-10-17",
+   "hora": "14:00",
+   "sala": "Auditorio",
+   "titulo": "resistencias"
+  },
+  "f_71fb7be250": {
+   "sede": "Casa San Pedro Campestre - Villa de Leyva",
+   "dia": "2026-10-17",
+   "hora": "15:15",
+   "sala": "",
+   "titulo": "reconocimiento a mabel teresa velosa"
+  },
+  "f_1b2c1f46e7": {
+   "sede": "Casa San Pedro Campestre - Villa de Leyva",
+   "dia": "2026-10-17",
+   "hora": "15:30",
+   "sala": "",
+   "titulo": "claquetazo laboratorio de creacion"
+  },
+  "f_523a0f866c": {
+   "sede": "Casa San Pedro Campestre - Villa de Leyva",
+   "dia": "2026-10-17",
+   "hora": "15:45",
+   "sala": "",
+   "titulo": "aquileo venganza"
+  },
+  "f_eeafe8a6c7": {
+   "sede": "Casa San Pedro Campestre - Villa de Leyva",
+   "dia": "2026-10-17",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "tributo a aquileo venganza joyce ventura"
+  },
+  "f_dc97726d36": {
+   "sede": "Casa San Pedro Campestre - Villa de Leyva",
+   "dia": "2026-10-17",
+   "hora": "17:15",
+   "sala": "",
+   "titulo": "ceremonia tamsa premiacion y clausura"
+  },
+  "f_ff178d90b0": {
+   "sede": "Casa San Pedro Campestre - Villa de Leyva",
+   "dia": "2026-10-17",
+   "hora": "19:15",
+   "sala": "",
+   "titulo": "un poeta"
+  }
+ }
+}

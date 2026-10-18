@@ -1,0 +1,204 @@
+{
+ "_provenance": {
+  "fuente": "ids-legado.py: ids estables congelados desde lo publicado (docs/FUNCION.md §11.2)",
+  "capturado": "2026-10-18"
+ },
+ "funciones": {
+  "f_f67ad057a4": {
+   "sede": "Teatro Bolívar - Popayán",
+   "dia": "2026-10-05",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "apertura del festival"
+  },
+  "f_a265ca98bb": {
+   "sede": "Teatro Bolívar - Popayán",
+   "dia": "2026-10-05",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "seleccion oficial documental primer bloque"
+  },
+  "f_4239d66d03": {
+   "sede": "Teatro Bolívar - Popayán",
+   "dia": "2026-10-06",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "seleccion oficial cauca primer bloque"
+  },
+  "f_0d1fd56266": {
+   "sede": "Facultad de Artes Unicauca - Popayán",
+   "dia": "2026-10-06",
+   "hora": "18:00",
+   "sala": "Auditorio Maya",
+   "titulo": "seleccion oficial experimental"
+  },
+  "f_764e3cc185": {
+   "sede": "Teatro Bolívar - Popayán",
+   "dia": "2026-10-06",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "seleccion oficial cauca segundo bloque"
+  },
+  "f_a64dc66818": {
+   "sede": "Teatro Bolívar - Popayán",
+   "dia": "2026-10-07",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "seleccion oficial indigena"
+  },
+  "f_b8f1a0ae0d": {
+   "sede": "Teatro Bolívar - Popayán",
+   "dia": "2026-10-07",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "conversatorio autorepresentacion y cosmovisiones desde los pueblos originarios en el cine"
+  },
+  "f_f82f59a2e6": {
+   "sede": "Teatro Bolívar - Popayán",
+   "dia": "2026-10-07",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "seleccion oficial afro"
+  },
+  "f_1ec7610f83": {
+   "sede": "Teatro Bolívar - Popayán",
+   "dia": "2026-10-07",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "seleccion oficial animacion"
+  },
+  "f_386a626e23": {
+   "sede": "Teatro Bolívar - Popayán",
+   "dia": "2026-10-08",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "seleccion oficial comunitario"
+  },
+  "f_a35ee22fe5": {
+   "sede": "Teatro Bolívar - Popayán",
+   "dia": "2026-10-08",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "seleccion oficial documental segundo bloque"
+  },
+  "f_a2083e171a": {
+   "sede": "Mikuna Casa Cultural - Popayán",
+   "dia": "2026-10-08",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "cine corto al barrio"
+  },
+  "f_dd83b603d4": {
+   "sede": "Teatro Bolívar - Popayán",
+   "dia": "2026-10-08",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "seleccion oficial ficcion primer bloque"
+  },
+  "f_8a9a328e0c": {
+   "sede": "Teatro Bolívar - Popayán",
+   "dia": "2026-10-09",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "muestra de cortos internacionales"
+  },
+  "f_4465dc2638": {
+   "sede": "Centro Comercial Terra Plaza - Popayán",
+   "dia": "2026-10-09",
+   "hora": "15:00",
+   "sala": "Pantalla gigante",
+   "titulo": "apertura muestra banda de la academia militar general tomas cipriano de mosquera"
+  },
+  "f_38c26e6f34": {
+   "sede": "Centro Comercial Terra Plaza - Popayán",
+   "dia": "2026-10-09",
+   "hora": "16:00",
+   "sala": "Pantalla gigante",
+   "titulo": "proyeccion cine corto familiar parte 1"
+  },
+  "f_cb8b8f7404": {
+   "sede": "Centro Comercial Terra Plaza - Popayán",
+   "dia": "2026-10-09",
+   "hora": "16:30",
+   "sala": "Pantalla gigante",
+   "titulo": "vodcast en vivo"
+  },
+  "f_55c0d1a4af": {
+   "sede": "Centro Comercial Terra Plaza - Popayán",
+   "dia": "2026-10-09",
+   "hora": "17:30",
+   "sala": "Pantalla gigante",
+   "titulo": "proyeccion cine corto familiar parte 2"
+  },
+  "f_acf60ff4ac": {
+   "sede": "Teatro Bolívar - Popayán",
+   "dia": "2026-10-09",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "seleccion oficial ficcion segundo bloque"
+  },
+  "f_f9f783aebb": {
+   "sede": "Teatro Bolívar - Popayán",
+   "dia": "2026-10-09",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "ceremonia de premiacion"
+  },
+  "f_7f430a15b0": {
+   "sede": "Teatro Bolívar - Popayán",
+   "dia": "2026-10-10",
+   "hora": "10:00",
+   "sala": "",
+   "titulo": "seleccion oficial infantil"
+  },
+  "f_81aed89ad7": {
+   "sede": "Centro Comercial Terra Plaza - Popayán",
+   "dia": "2026-10-10",
+   "hora": "14:00",
+   "sala": "Pantalla gigante",
+   "titulo": "proyeccion cine corto familiar parte 3"
+  },
+  "f_662b4b1ec6": {
+   "sede": "Centro Comercial Terra Plaza - Popayán",
+   "dia": "2026-10-10",
+   "hora": "15:00",
+   "sala": "Pantalla gigante",
+   "titulo": "vodcast en vivo"
+  },
+  "f_7b30f7b586": {
+   "sede": "Centro Comercial Terra Plaza - Popayán",
+   "dia": "2026-10-10",
+   "hora": "16:00",
+   "sala": "Pantalla gigante",
+   "titulo": "proyeccion cine corto familiar parte 4"
+  },
+  "f_09ab60cf77": {
+   "sede": "Centro Comercial Terra Plaza - Popayán",
+   "dia": "2026-10-10",
+   "hora": "17:00",
+   "sala": "Pantalla gigante",
+   "titulo": "vodcast en vivo"
+  },
+  "f_b884d79742": {
+   "sede": "Centro Comercial Terra Plaza - Popayán",
+   "dia": "2026-10-10",
+   "hora": "18:00",
+   "sala": "Pantalla gigante",
+   "titulo": "proyeccion cine corto familiar parte 5"
+  },
+  "f_7e2e73d404": {
+   "sede": "Casa Taller Sirirí - Popayán",
+   "dia": "2026-10-10",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "cinecorto en el barrio"
+  },
+  "f_357919bc0e": {
+   "sede": "Centro Comercial Terra Plaza - Popayán",
+   "dia": "2026-10-11",
+   "hora": "16:00",
+   "sala": "Pantalla gigante",
+   "titulo": "proyeccion cine corto familiar parte 6"
+  }
+ }
+}

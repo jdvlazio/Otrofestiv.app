@@ -134,6 +134,8 @@
  "films": [
   {
    "_tipo": "Tipo 1 — Largometraje (una función). Misma obra con 2 funciones = 2 entradas, mismo title.",
+   "id": "f_0123456789",
+   "_id_nota": "Id estable de la función (docs/FUNCION.md §11). NO se escribe a mano: lo asigna el ensamblador desde festivals/staging/<fid>-funciones-ids.json y sobrevive a cambios de hora, sala, sede y título.",
    "title": "Título con el que se exhibe",
    "title_en": "English title (si difiere)",
    "type": "film",

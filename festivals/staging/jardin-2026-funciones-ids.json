@@ -1,0 +1,442 @@
+{
+ "_provenance": {
+  "fuente": "ids-legado.py: ids estables congelados desde lo publicado (docs/FUNCION.md §11.2)",
+  "capturado": "2026-10-18"
+ },
+ "funciones": {
+  "f_3ea4e2abe5": {
+   "sede": "Teatro Municipal de Jardín - Jardín",
+   "dia": "2026-09-24",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "origen y conceptualizacion de la categoria de lider social"
+  },
+  "f_91fb7f6629": {
+   "sede": "Teatro Municipal de Jardín - Jardín",
+   "dia": "2026-09-24",
+   "hora": "20:00",
+   "sala": "",
+   "titulo": "la creciente"
+  },
+  "f_c21bbeae71": {
+   "sede": "Casa de la Cultura - Jardín",
+   "dia": "2026-09-25",
+   "hora": "10:00",
+   "sala": "",
+   "titulo": "alma provinciana"
+  },
+  "f_dbf0d74300": {
+   "sede": "Placa deportiva Simón Bolívar - Jardín",
+   "dia": "2026-09-25",
+   "hora": "10:00",
+   "sala": "",
+   "titulo": "panel desarrollo del liderazgo y procesos sociales"
+  },
+  "f_997ede9e9f": {
+   "sede": "Teatro Municipal de Jardín - Jardín",
+   "dia": "2026-09-25",
+   "hora": "10:00",
+   "sala": "",
+   "titulo": "la sed del viento"
+  },
+  "f_4df1434200": {
+   "sede": "Casa de la Cultura - Jardín",
+   "dia": "2026-09-25",
+   "hora": "13:00",
+   "sala": "",
+   "titulo": "midnight oil the hardest line"
+  },
+  "f_db7fbd91e7": {
+   "sede": "Teatro Municipal de Jardín - Jardín",
+   "dia": "2026-09-25",
+   "hora": "13:00",
+   "sala": "",
+   "titulo": "cuando las aguas se juntan"
+  },
+  "f_188fcead52": {
+   "sede": "Placa deportiva Simón Bolívar - Jardín",
+   "dia": "2026-09-25",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "panel la defensa del liderazgo social"
+  },
+  "f_7e0f630674": {
+   "sede": "Casa de la Cultura - Jardín",
+   "dia": "2026-09-25",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "muestra red de audiovisuales de medellin"
+  },
+  "f_800f5c7b61": {
+   "sede": "Coliseo Municipal - Jardín",
+   "dia": "2026-09-25",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "cuando las montanas tiemblan"
+  },
+  "f_87c028f829": {
+   "sede": "Teatro Municipal de Jardín - Jardín",
+   "dia": "2026-09-25",
+   "hora": "16:30",
+   "sala": "",
+   "titulo": "agora por el derecho a defender"
+  },
+  "f_aa9a9af302": {
+   "sede": "Teatro Municipal de Jardín - Jardín",
+   "dia": "2026-09-25",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "premiacion del concurso de fotografia"
+  },
+  "f_ff3cad8fa0": {
+   "sede": "Casa de la Cultura - Jardín",
+   "dia": "2026-09-25",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "la creciente"
+  },
+  "f_cc8c689989": {
+   "sede": "Coliseo Municipal - Jardín",
+   "dia": "2026-09-25",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "romero"
+  },
+  "f_f0efcdbd25": {
+   "sede": "Escuela Jahel Peláez Montoya - Jardín",
+   "dia": "2026-09-25",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "tres mujeres guerreras ubuntu la metrica de los afectos"
+  },
+  "f_1d6d10fc41": {
+   "sede": "Hotel Hacienda Balandú - Jardín",
+   "dia": "2026-09-25",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "presentacion del libro morir es un pais que amabas poesia y memoria por nuestros lideres y lideresas sociales"
+  },
+  "f_bb517d305c": {
+   "sede": "Placa deportiva Simón Bolívar - Jardín",
+   "dia": "2026-09-25",
+   "hora": "19:15",
+   "sala": "",
+   "titulo": "competencia nacional de cortometrajes parte 1"
+  },
+  "f_74dc3c57cc": {
+   "sede": "Teatro Municipal de Jardín - Jardín",
+   "dia": "2026-09-25",
+   "hora": "19:45",
+   "sala": "",
+   "titulo": "sone su nombre"
+  },
+  "f_694ee66321": {
+   "sede": "Casa de la Cultura - Jardín",
+   "dia": "2026-09-25",
+   "hora": "22:00",
+   "sala": "",
+   "titulo": "muestra memoria y territorio"
+  },
+  "f_d2856fce5d": {
+   "sede": "Coliseo Municipal - Jardín",
+   "dia": "2026-09-25",
+   "hora": "22:00",
+   "sala": "",
+   "titulo": "cien anos de soledad t2 e6 eran mas de tres mil"
+  },
+  "f_d1de4f88fd": {
+   "sede": "Escuela Jahel Peláez Montoya - Jardín",
+   "dia": "2026-09-25",
+   "hora": "22:00",
+   "sala": "",
+   "titulo": "la casa del trueno"
+  },
+  "f_a3fd986dea": {
+   "sede": "Placa deportiva Simón Bolívar - Jardín",
+   "dia": "2026-09-25",
+   "hora": "22:00",
+   "sala": "",
+   "titulo": "la reserva"
+  },
+  "f_106911c903": {
+   "sede": "Teatro Municipal de Jardín - Jardín",
+   "dia": "2026-09-25",
+   "hora": "22:30",
+   "sala": "",
+   "titulo": "una cancion para mi tierra"
+  },
+  "f_a74c174471": {
+   "sede": "Placa deportiva Simón Bolívar - Jardín",
+   "dia": "2026-09-26",
+   "hora": "09:30",
+   "sala": "",
+   "titulo": "charla arte verdad y compromiso social"
+  },
+  "f_b8df605b27": {
+   "sede": "Casa de la Cultura - Jardín",
+   "dia": "2026-09-26",
+   "hora": "10:00",
+   "sala": "",
+   "titulo": "muestra de cortos"
+  },
+  "f_921ffae3cd": {
+   "sede": "Coliseo Municipal - Jardín",
+   "dia": "2026-09-26",
+   "hora": "10:00",
+   "sala": "",
+   "titulo": "una sola golondrina no hace llover"
+  },
+  "f_f31853869f": {
+   "sede": "Escuela Jahel Peláez Montoya - Jardín",
+   "dia": "2026-09-26",
+   "hora": "10:00",
+   "sala": "",
+   "titulo": "muestra documental defender la vida y la naturaleza"
+  },
+  "f_fb84a1df47": {
+   "sede": "Teatro Municipal de Jardín - Jardín",
+   "dia": "2026-09-26",
+   "hora": "10:00",
+   "sala": "",
+   "titulo": "alma provinciana"
+  },
+  "f_63ee34e097": {
+   "sede": "Placa deportiva Simón Bolívar - Jardín",
+   "dia": "2026-09-26",
+   "hora": "11:00",
+   "sala": "",
+   "titulo": "panel memoria historica construccion de imaginarios y representacion"
+  },
+  "f_7616bb4062": {
+   "sede": "Casa de la Cultura - Jardín",
+   "dia": "2026-09-26",
+   "hora": "13:00",
+   "sala": "",
+   "titulo": "muestra estudiantil la mostra"
+  },
+  "f_b1c8a69600": {
+   "sede": "Coliseo Municipal - Jardín",
+   "dia": "2026-09-26",
+   "hora": "13:00",
+   "sala": "",
+   "titulo": "cuando las aguas se juntan"
+  },
+  "f_0cfaa3bdb8": {
+   "sede": "Escuela Jahel Peláez Montoya - Jardín",
+   "dia": "2026-09-26",
+   "hora": "13:00",
+   "sala": "",
+   "titulo": "la sed del viento"
+  },
+  "f_9f99d77a94": {
+   "sede": "Teatro Municipal de Jardín - Jardín",
+   "dia": "2026-09-26",
+   "hora": "13:00",
+   "sala": "",
+   "titulo": "la marcha del hambre"
+  },
+  "f_d0fd74bb9a": {
+   "sede": "Placa deportiva Simón Bolívar - Jardín",
+   "dia": "2026-09-26",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "panel diversidad de liderazgos y relevo generacional"
+  },
+  "f_8936594453": {
+   "sede": "Coliseo Municipal - Jardín",
+   "dia": "2026-09-26",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "muestra memoria y territorio"
+  },
+  "f_ecf0e26b13": {
+   "sede": "Escuela Jahel Peláez Montoya - Jardín",
+   "dia": "2026-09-26",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "sone su nombre"
+  },
+  "f_d610dd0b16": {
+   "sede": "Teatro Municipal de Jardín - Jardín",
+   "dia": "2026-09-26",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "la creciente"
+  },
+  "f_18ba0d5a02": {
+   "sede": "Casa de la Cultura - Jardín",
+   "dia": "2026-09-26",
+   "hora": "16:30",
+   "sala": "",
+   "titulo": "volver"
+  },
+  "f_a323aa2443": {
+   "sede": "Casa de la Cultura - Jardín",
+   "dia": "2026-09-26",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "la casa del trueno"
+  },
+  "f_ecd3575d3e": {
+   "sede": "Coliseo Municipal - Jardín",
+   "dia": "2026-09-26",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "la reserva"
+  },
+  "f_2023a773bf": {
+   "sede": "Escuela Jahel Peláez Montoya - Jardín",
+   "dia": "2026-09-26",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "una cancion para mi tierra"
+  },
+  "f_c5a852ec15": {
+   "sede": "Placa deportiva Simón Bolívar - Jardín",
+   "dia": "2026-09-26",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "competencia nacional de cortometrajes parte 2"
+  },
+  "f_cfc4827e5f": {
+   "sede": "Teatro Municipal de Jardín - Jardín",
+   "dia": "2026-09-26",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "cien anos de soledad t2 e6 eran mas de tres mil"
+  },
+  "f_d3c59c064f": {
+   "sede": "Casa de la Cultura - Jardín",
+   "dia": "2026-09-26",
+   "hora": "22:00",
+   "sala": "",
+   "titulo": "romero"
+  },
+  "f_49ece29d09": {
+   "sede": "Coliseo Municipal - Jardín",
+   "dia": "2026-09-26",
+   "hora": "22:00",
+   "sala": "",
+   "titulo": "midnight oil the hardest line"
+  },
+  "f_9368775bc6": {
+   "sede": "Escuela Jahel Peláez Montoya - Jardín",
+   "dia": "2026-09-26",
+   "hora": "22:00",
+   "sala": "",
+   "titulo": "la marcha del hambre"
+  },
+  "f_0017df35f5": {
+   "sede": "Teatro Municipal de Jardín - Jardín",
+   "dia": "2026-09-26",
+   "hora": "22:00",
+   "sala": "",
+   "titulo": "una sola golondrina no hace llover"
+  },
+  "f_693edfe8c5": {
+   "sede": "Placa deportiva Simón Bolívar - Jardín",
+   "dia": "2026-09-26",
+   "hora": "23:00",
+   "sala": "",
+   "titulo": "acto de premiacion caleidoscopio"
+  },
+  "f_a5c2fe008d": {
+   "sede": "Casa de la Cultura - Jardín",
+   "dia": "2026-09-27",
+   "hora": "10:00",
+   "sala": "",
+   "titulo": "tres mujeres guerreras ubuntu la metrica de los afectos"
+  },
+  "f_ff532af078": {
+   "sede": "Placa deportiva Simón Bolívar - Jardín",
+   "dia": "2026-09-27",
+   "hora": "10:00",
+   "sala": "",
+   "titulo": "panel liderazgo y educacion"
+  },
+  "f_1c5b14d345": {
+   "sede": "Teatro Municipal de Jardín - Jardín",
+   "dia": "2026-09-27",
+   "hora": "10:00",
+   "sala": "",
+   "titulo": "muestra documental defender la vida y la naturaleza"
+  },
+  "f_427cf3fb02": {
+   "sede": "Placa deportiva Simón Bolívar - Jardín",
+   "dia": "2026-09-27",
+   "hora": "11:30",
+   "sala": "",
+   "titulo": "panel liderazgo y territorio"
+  },
+  "f_685f0f96dc": {
+   "sede": "Casa de la Cultura - Jardín",
+   "dia": "2026-09-27",
+   "hora": "13:00",
+   "sala": "",
+   "titulo": "proyeccion resultados del taller de la ideacion a la accion"
+  },
+  "f_8af9b31eb2": {
+   "sede": "Teatro Municipal de Jardín - Jardín",
+   "dia": "2026-09-27",
+   "hora": "13:00",
+   "sala": "",
+   "titulo": "cuando las montanas tiemblan"
+  },
+  "f_6eb4ee9a22": {
+   "sede": "Placa deportiva Simón Bolívar - Jardín",
+   "dia": "2026-09-27",
+   "hora": "14:30",
+   "sala": "",
+   "titulo": "presentacion del libro dias de noche cronicas de cine victor gaviria"
+  },
+  "f_43c85b710b": {
+   "sede": "Casa de la Cultura - Jardín",
+   "dia": "2026-09-27",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "gustavo el observador invisible"
+  },
+  "f_7525eff63f": {
+   "sede": "Teatro Municipal de Jardín - Jardín",
+   "dia": "2026-09-27",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "la reserva"
+  },
+  "f_c1bbf39c8d": {
+   "sede": "Teatro Municipal de Jardín - Jardín",
+   "dia": "2026-09-27",
+   "hora": "19:30",
+   "sala": "",
+   "titulo": "mupa madre"
+  },
+  "f_cd11a394bb": {
+   "sede": "Institución Educativa San Antonio - Jardín",
+   "dia": "2026-09-24",
+   "hora": "09:00",
+   "sala": "",
+   "titulo": "lo que vemos lo que decimos"
+  },
+  "f_ba5d9a98eb": {
+   "sede": "Institución Educativa San Antonio - Jardín",
+   "dia": "2026-09-25",
+   "hora": "09:00",
+   "sala": "",
+   "titulo": "masculinidades para la igualdad"
+  },
+  "f_58cf84a83c": {
+   "sede": "Teatro Municipal de Jardín - Jardín",
+   "dia": "2026-09-26",
+   "hora": "11:00",
+   "sala": "Café Tinta y Tinto, piso 2",
+   "titulo": "taller cartacartografias de memorias territoriales"
+  },
+  "f_94c19fd56f": {
+   "sede": "Casa de la Cultura - Jardín",
+   "dia": "2026-09-26",
+   "hora": "13:00",
+   "sala": "",
+   "titulo": "intervencion artistica"
+  }
+ }
+}

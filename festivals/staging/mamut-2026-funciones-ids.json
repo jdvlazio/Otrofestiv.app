@@ -1,0 +1,218 @@
+{
+ "_provenance": {
+  "fuente": "ids-legado.py: ids estables congelados desde lo publicado (docs/FUNCION.md §11.2)",
+  "capturado": "2026-10-18"
+ },
+ "funciones": {
+  "f_8ab6c01e88": {
+   "sede": "La Pascasia - Medellín",
+   "dia": "2026-10-05",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "soplo de vida"
+  },
+  "f_ac10efa9dd": {
+   "sede": "La Pascasia - Medellín",
+   "dia": "2026-10-05",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "bombardeo a washington"
+  },
+  "f_8fa65037e8": {
+   "sede": "Lab UNAL - Medellín",
+   "dia": "2026-10-06",
+   "hora": "09:00",
+   "sala": "",
+   "titulo": "archivos no hegemonicos"
+  },
+  "f_0ebed6a4d2": {
+   "sede": "Centro Colombo Americano - Medellín",
+   "dia": "2026-10-06",
+   "hora": "17:00",
+   "sala": "Sala 2",
+   "titulo": "programa de cortos 1"
+  },
+  "f_4c5f77e948": {
+   "sede": "Centro Colombo Americano - Medellín",
+   "dia": "2026-10-06",
+   "hora": "18:00",
+   "sala": "Sala 2",
+   "titulo": "programa de cortos 2"
+  },
+  "f_e2c4926760": {
+   "sede": "Lab UNAL - Medellín",
+   "dia": "2026-10-07",
+   "hora": "09:00",
+   "sala": "",
+   "titulo": "archivos no hegemonicos"
+  },
+  "f_105ecd3618": {
+   "sede": "Las Américas - Medellín",
+   "dia": "2026-10-07",
+   "hora": "16:30",
+   "sala": "Sala 3",
+   "titulo": "el hogar fue sepultado en esa tierra que nunca pudimos encontrar"
+  },
+  "f_ab1d09a264": {
+   "sede": "Centro Colombo Americano - Medellín",
+   "dia": "2026-10-07",
+   "hora": "17:00",
+   "sala": "Sala 1",
+   "titulo": "suenos sobre un mantel vacio"
+  },
+  "f_9e44659abc": {
+   "sede": "Capilla, Comfama - Medellín",
+   "dia": "2026-10-07",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "apocalipsur"
+  },
+  "f_69fcde2ee3": {
+   "sede": "Persona - Medellín",
+   "dia": "2026-10-07",
+   "hora": "20:00",
+   "sala": "",
+   "titulo": "huella mi frente"
+  },
+  "f_0708b4fc85": {
+   "sede": "Persona - Medellín",
+   "dia": "2026-10-07",
+   "hora": "23:30",
+   "sala": "",
+   "titulo": "minuto fatal"
+  },
+  "f_4b31d74e83": {
+   "sede": "Lab UNAL - Medellín",
+   "dia": "2026-10-08",
+   "hora": "09:00",
+   "sala": "",
+   "titulo": "archivos no hegemonicos"
+  },
+  "f_1e80f43c96": {
+   "sede": "Las Américas - Medellín",
+   "dia": "2026-10-08",
+   "hora": "16:30",
+   "sala": "Sala 3",
+   "titulo": "lolita en honda"
+  },
+  "f_cf195dd0a1": {
+   "sede": "Centro Colombo Americano - Medellín",
+   "dia": "2026-10-08",
+   "hora": "17:00",
+   "sala": "Sala 1",
+   "titulo": "programa inedito santiago herrera"
+  },
+  "f_58e89ffab1": {
+   "sede": "Centro Colombo Americano - Medellín",
+   "dia": "2026-10-08",
+   "hora": "18:30",
+   "sala": "Sala 2",
+   "titulo": "programa alberto giraldo"
+  },
+  "f_e43c00ccfc": {
+   "sede": "Museo de Arte Moderno de Medellín - MAMM - Medellín",
+   "dia": "2026-10-08",
+   "hora": "18:30",
+   "sala": "Teatro",
+   "titulo": "frio metal"
+  },
+  "f_f51776f5b5": {
+   "sede": "Lab UNAL - Medellín",
+   "dia": "2026-10-09",
+   "hora": "09:00",
+   "sala": "",
+   "titulo": "archivos no hegemonicos"
+  },
+  "f_2f245f72d9": {
+   "sede": "Museo de Arte Moderno de Medellín - MAMM - Medellín",
+   "dia": "2026-10-09",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "manual para invocar fantasmas"
+  },
+  "f_1c6c907c48": {
+   "sede": "Centro Colombo Americano - Medellín",
+   "dia": "2026-10-09",
+   "hora": "19:30",
+   "sala": "Sala 2",
+   "titulo": "carne de tu carne"
+  },
+  "f_0ca217aaf3": {
+   "sede": "Cine Centro - Medellín",
+   "dia": "2026-10-10",
+   "hora": "14:30",
+   "sala": "",
+   "titulo": "lolita en honda"
+  },
+  "f_cd2b2dc743": {
+   "sede": "Centro Colombo Americano - Medellín",
+   "dia": "2026-10-10",
+   "hora": "17:00",
+   "sala": "Sala 2",
+   "titulo": "programa shub hocico de cerdo"
+  },
+  "f_7d66539315": {
+   "sede": "Museo de Arte Moderno de Medellín - MAMM - Medellín",
+   "dia": "2026-10-10",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "geographies of solitude"
+  },
+  "f_05e178aff4": {
+   "sede": "Centro Colombo Americano - Medellín",
+   "dia": "2026-10-10",
+   "hora": "18:00",
+   "sala": "Sala 2",
+   "titulo": "muestra archivistas salvajes"
+  },
+  "f_1da0561bc9": {
+   "sede": "Centro Colombo Americano - Medellín",
+   "dia": "2026-10-10",
+   "hora": "20:00",
+   "sala": "Sala 1",
+   "titulo": "yo soy la muerte"
+  },
+  "f_ae34ea74f6": {
+   "sede": "Centro Colombo Americano - Medellín",
+   "dia": "2026-10-11",
+   "hora": "14:30",
+   "sala": "",
+   "titulo": "la memoria de las mariposas"
+  },
+  "f_a328185f44": {
+   "sede": "Coocine - Medellín",
+   "dia": "2026-10-11",
+   "hora": "14:30",
+   "sala": "",
+   "titulo": "sancocho"
+  },
+  "f_509cd2db13": {
+   "sede": "Coocine - Medellín",
+   "dia": "2026-10-11",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "muestra de cortos 1"
+  },
+  "f_acb2802b8d": {
+   "sede": "Coocine - Medellín",
+   "dia": "2026-10-11",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "muestra de cortos 2"
+  },
+  "f_9d44216f65": {
+   "sede": "Coocine - Medellín",
+   "dia": "2026-10-11",
+   "hora": "17:00",
+   "sala": "Sala 0",
+   "titulo": "bombardeo a washington"
+  },
+  "f_f356d34192": {
+   "sede": "Coocine - Medellín",
+   "dia": "2026-10-11",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "fiesta clausura mamut11"
+  }
+ }
+}
