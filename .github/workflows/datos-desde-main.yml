@@ -1,0 +1,40 @@
+# datos-desde-main — el almacén `datos` nunca queda atrás de main (18 oct 2026).
+# La app lee los festivales del almacén (migración 0009). Si un festival cambia
+# por el camino de siempre (PR → main), este job lo republica al almacén. Los
+# guardianes ya corrieron en el PR (CI requerido), así que acá se publica tal cual.
+# Publica TODO festival cambiado, esté o no en el índice: así, cuando la app pase
+# a leer un festival del almacén, ya está al día.
+name: Datos al almacén
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'festivals/*.json'
+permissions:
+  contents: write   # empujar la rama `datos`
+concurrency:
+  group: datos-almacen
+  cancel-in-progress: false
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - name: Festivales cambiados
+        id: cambios
+        run: |
+          f=$(git diff --name-only HEAD~1 HEAD -- 'festivals/*.json' | sed -n 's|^festivals/\(.*\)\.json$|\1|p' | tr '\n' ' ')
+          echo "lista=$f" >> "$GITHUB_OUTPUT"
+          echo "Cambiados: $f"
+      - name: Publicar al almacén
+        if: steps.cambios.outputs.lista != ''
+        env:
+          OTF_POR: github-actions
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
+          for f in ${{ steps.cambios.outputs.lista }}; do
+            python3 pipeline/publicar-datos.py "$f" --desde-main
+          done
