@@ -101,3 +101,31 @@ class Config(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
+
+class Robustez(unittest.TestCase):
+    """Auditoría del 17 oct: un comando colgado no cuelga la tarea, y una falla
+    deja la copia limpia también de archivos NUEVOS."""
+
+    def test_comando_colgado_es_falla_no_cuelgue(self):
+        viejo = actualizar.TIEMPO
+        actualizar.TIEMPO = 1
+        try:
+            r = actualizar._correr([sys.executable, '-c', 'import time; time.sleep(5)'])
+        finally:
+            actualizar.TIEMPO = viejo
+        self.assertEqual(r.returncode, 124)
+
+    def test_deshacer_borra_lo_nuevo(self):
+        import tempfile, subprocess
+        d = tempfile.mkdtemp()
+        subprocess.run(['git', 'init', '-q', d])
+        os.makedirs(os.path.join(d, 'festivals', 'staging'))
+        open(os.path.join(d, 'festivals', 'staging', 'nuevo.json'), 'w').write('{}')
+        viejo = actualizar.REPO
+        actualizar.REPO = d
+        try:
+            actualizar._deshacer()
+        finally:
+            actualizar.REPO = viejo
+        self.assertFalse(os.path.exists(os.path.join(d, 'festivals', 'staging', 'nuevo.json')))

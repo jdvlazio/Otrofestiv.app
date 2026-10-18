@@ -97,6 +97,28 @@ def _git(*a):
     return subprocess.run(['git', '-C', REPO, *a], capture_output=True, text=True)
 
 
+# TIEMPO MÁXIMO por comando (auditoría del 17 oct): una fuente colgada colgaba la
+# tarea sin aviso. Bajar una base son segundos; un paso del plan, menos de un minuto
+TIEMPO = 300
+
+
+def _correr(cmd, **kw):
+    """subprocess con tope; un comando que se pasa del tope cuenta como falla."""
+    try:
+        return subprocess.run(cmd, cwd=REPO, capture_output=True, text=True, timeout=TIEMPO, **kw)
+    except subprocess.TimeoutExpired as e:
+        return subprocess.CompletedProcess(cmd, 124, (e.stdout or b'').decode(errors='replace') if isinstance(e.stdout, bytes) else (e.stdout or ''),
+                                           f'se pasó de {TIEMPO} s')
+
+
+def _deshacer():
+    """Deja la copia como estaba: lo modificado Y lo nuevo (auditoría del 17 oct:
+    sin el `clean`, un archivo nuevo en staging dejaba la copia sucia y la
+    corrida siguiente abortaba)."""
+    _git('checkout', '--', '.')
+    _git('clean', '-fdq', 'festivals', 'assets')
+
+
 def main():
     fid = sys.argv[1] if len(sys.argv) > 1 else sys.exit(__doc__)
     cfg = json.load(open(CONFIG, encoding='utf-8'))
@@ -110,25 +132,24 @@ def main():
     pub = f'festivals/{fid}.json'
     viejo = json.loads(_git('show', f'HEAD:{pub}').stdout)
     for cmd in cfg['festivales'][fid].get('antes') or []:   # bajar la fuente
-        r = subprocess.run(cmd, shell=True, cwd=REPO, capture_output=True, text=True)
+        r = _correr(cmd, shell=True)
         if r.returncode:
-            _git('checkout', '--', '.')
+            _deshacer()
             json.dump({'estado': 'frenado', 'frenos': [f'falló «{cmd}»'], 'salida': (r.stdout + r.stderr)[-1500:]},
                       open(salida, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
             print(f'✗ {fid}: falló «{cmd}» — frenado')
             return 2
     for n in cfg['festivales'][fid]['pasos']:
-        r = subprocess.run([sys.executable, 'pipeline/correr.py', fid, '--paso', str(n)], cwd=REPO,
-                           capture_output=True, text=True)
+        r = _correr([sys.executable, 'pipeline/correr.py', fid, '--paso', str(n)])
         if r.returncode:
-            _git('checkout', '--', '.')
+            _deshacer()
             json.dump({'estado': 'frenado', 'frenos': [f'el paso {n} falló'], 'salida': r.stdout[-1500:]},
                       open(salida, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
             print(f'✗ {fid}: el paso {n} falló — frenado (detalle en {salida})')
             return 2
-    r = subprocess.run([sys.executable, 'pipeline/publicar.py', fid], cwd=REPO, capture_output=True, text=True)
+    r = _correr([sys.executable, 'pipeline/publicar.py', fid])
     if r.returncode:
-        _git('checkout', '--', '.')
+        _deshacer()
         json.dump({'estado': 'frenado', 'frenos': ['publicar.py no aceptó el build'], 'salida': r.stdout[-1500:]},
                   open(salida, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
         print(f'✗ {fid}: publicar.py no aceptó el build — frenado')
@@ -136,8 +157,7 @@ def main():
     nuevo = json.load(open(os.path.join(REPO, pub), encoding='utf-8'))
     cambios, frenos = comparar(viejo, nuevo, cfg.get('tope', 5))
     if frenos or not cambios:
-        _git('checkout', '--', '.')
-        _git('clean', '-fdq', 'festivals/staging')
+        _deshacer()
     if frenos:
         json.dump({'estado': 'frenado', 'frenos': frenos, 'cambios': cambios},
                   open(salida, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
