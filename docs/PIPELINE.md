@@ -1400,6 +1400,7 @@ de obra —también las uniones «Obra + Obra»— van tal cual, en sentence cas
 Un dueño, `pipeline/caja.py`: lo aplica `ensamblar.py` en cada montaje,
 `pipeline/caja-titulo.py --escribir` sobre lo ya publicado (con
 `titulos_anteriores` para no perder lo guardado) y `validate.py` lo vigila.
+`[renombre-no-se-borra]` compara cada `-titulos-anteriores.json` contra `main`: un renombre que estaba no puede desaparecer (17 oct 2026, #1146 — reescribir el sidecar en vez de sumarle se llevaba el de «Voilà Varda»). Se agrega, nunca se reescribe.
 Festivales en otro idioma (Olhar, Tribeca, TIFF) quedan fuera.
 
 ### `[inicio-obra]` — la obra empieza dentro de su función
