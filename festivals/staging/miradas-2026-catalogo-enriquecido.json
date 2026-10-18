@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, con el MISMO candado de enriquecer.py: director ✓ y (año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-10-16"
+  "capturado": "2026-10-18"
  },
  "_origen": "miradas-2026-catalogo.json",
  "obras": [
@@ -339,6 +339,20 @@
    "lbSlug": "last-seen-long-time-ago",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Última vez hace mucho tiempo"
+  },
+  {
+   "titulo": "La pesadilla del siervo",
+   "tmdb_id": 1791689,
+   "titulo_original": "Las pesadillas del siervo",
+   "poster_path": "/kJOypmaBdirRsCsr9iwAT6X4H71.jpg",
+   "synopsis_es": "En Colombia, el obispo Miguel Ángel Builes impuso sus doctrinas ultraconservadoras, basadas en represión y miedo. Su ideología permeó el pensamiento de un país y creó el caldo de cultivo para el nacimiento de uno de los primeros grupos paramilitares de Colombia, Los doce apóstoles, en esa región, durante los años noventa del siglo XX. Su jefe supremo era un cura admirador de las ideas del obispo.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 90,
+   "pais_tmdb": "",
+   "lbSlug": "las-pesadillas-del-siervo",
+   "_verificado": "declarada a mano: la lámina de Miradas la nombra en singular; es «Las pesadillas del siervo» (Manuel Villa, Proimágenes id 2699), la misma que FICCALI 2026 publicó con esta ficha. Verificada el 18 oct 2026."
   },
   {
    "titulo": "Uno vuelve siempre",
@@ -925,6 +939,19 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Última vez hace mucho tiempo"
   },
+  "La pesadilla del siervo": {
+   "tmdb_id": 1791689,
+   "titulo_original": "Las pesadillas del siervo",
+   "poster_path": "/kJOypmaBdirRsCsr9iwAT6X4H71.jpg",
+   "synopsis_es": "En Colombia, el obispo Miguel Ángel Builes impuso sus doctrinas ultraconservadoras, basadas en represión y miedo. Su ideología permeó el pensamiento de un país y creó el caldo de cultivo para el nacimiento de uno de los primeros grupos paramilitares de Colombia, Los doce apóstoles, en esa región, durante los años noventa del siglo XX. Su jefe supremo era un cura admirador de las ideas del obispo.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 90,
+   "pais_tmdb": "",
+   "lbSlug": "las-pesadillas-del-siervo",
+   "_verificado": "declarada a mano: la lámina de Miradas la nombra en singular; es «Las pesadillas del siervo» (Manuel Villa, Proimágenes id 2699), la misma que FICCALI 2026 publicó con esta ficha. Verificada el 18 oct 2026."
+  },
   "Uno vuelve siempre": {
    "tmdb_id": 1521051,
    "titulo_original": "Uno vuelve siempre",
@@ -1179,7 +1206,6 @@
   "La danza de los ángeles",
   "La escucha, la razón",
   "La muerte nos declaró adultos",
-  "La pesadilla del siervo",
   "Mamá Chila raíz y corazón de la comunidad",
   "Oro molido #2",
   "Paralelo",
