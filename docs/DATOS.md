@@ -28,8 +28,11 @@ festivals/<id>.json ─ publicar-datos.py ─▶ guardianes (≈2 min) ─▶ ra
 - **Respaldo:** si el festival no está en el índice, si el almacén falla o si el
   índice trae `apagado: true`, la app lee la copia de la web de siempre.
 - **Main sigue siendo la historia:** el PR de datos se hace después. Al entrar a
-  main, el job «Datos al almacén» republica ese festival, así el almacén nunca
-  queda atrás de main.
+  main, el job «Datos al almacén» republica ese festival **si ya está en el
+  almacén**, así el almacén nunca queda atrás de main.
+- **Un festival entra al almacén a propósito, de a uno** (Juan, 18 oct): la
+  primera vez con `publicar-datos.py`. Un PR que toca muchos JSON no mueve a
+  nadie al almacén.
 - **Registro:** cada publicación queda en `publicaciones_datos` (quién, cuándo,
   qué versión).
 
