@@ -351,7 +351,12 @@ def ensamblar(fid, escribir=True):
         for it in _lista:
             k = lib.norm(it.get('titulo') or it.get('title') or '')
             if k:
-                enr[k] = it
+                # DOS ENTRADAS DE LA MISMA OBRA (17 oct 2026): «La Tinaja» con su
+                # ficha y «La tinaja» con solo el afiche declarado. La segunda
+                # PISABA a la primera y la obra perdía sinopsis, género, año y
+                # duración ([dato-que-no-viaja], Ficcali). Se combinan: la primera
+                # manda en lo que tiene, la otra completa lo que falta
+                enr[k] = {**it, **enr[k]} if k in enr else it
 
 
     geo = {}

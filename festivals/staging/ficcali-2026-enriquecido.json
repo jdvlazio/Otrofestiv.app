@@ -30,16 +30,20 @@
      "titulo": "Aguapanela",
      "poster": "/assets/villadelcine-2026/aguapanela.jpg",
      "posterSource": "oficial",
+     "country": "Colombia",
+     "year": 2026,
+     "duration": "3 min",
+     "genre": "Fantasía y Comedia",
      "sinopsis": "En un barrio colombiano donde los dioses griegos toman aguapanela, Miguel huye de un Cupido decidido a flecharlo. Con la ayuda de dos deidades musicales y un cáliz cargado de energía celestial, emprende una divertida venganza contra el amor. Sin embargo, ni siquiera un héroe mitológico puede escapar para siempre de sus flechas."
     }
    ],
    "poster": "/assets/villadelcine-2026/aguapanela.jpg",
    "_verificado": "ya publicada en villadelcine-2026: se reusa su afiche",
    "sinopsis": "En un barrio colombiano donde los dioses griegos toman aguapanela, Miguel huye de un Cupido decidido a flecharlo. Con la ayuda de dos deidades musicales y un cáliz cargado de energía celestial, emprende una divertida venganza contra el amor. Sin embargo, ni siquiera un héroe mitológico puede escapar para siempre de sus flechas.",
-   "genero": "Fantasía y Comedia",
-   "_heredado": {
-    "genero": "catálogo w_R4H509VY0YAJ (ficcali-2026, villadelcine-2026)"
-   }
+   "pais": "Colombia",
+   "anio": 2026,
+   "duracion_tmdb": 3,
+   "genero": "Fantasía y Comedia"
   },
   {
    "titulo": "Akababuru: Expresión de Asombro",
@@ -275,18 +279,22 @@
      "titulo": "Después de tanto amor",
      "poster": "/assets/ficcali-2026/despues-de-tanto-amor.jpg",
      "posterSource": "oficial",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "4 min",
+     "genre": "Drama y Experimental",
      "sinopsis": "Después de una ruptura, una mujer convierte el duelo en un ritual hecho de colores, palabras y objetos. Entre espinas que brotan del pecho, una casa rota y la silueta del amor ausente, atraviesa el dolor hasta encontrar una nueva forma de habitar aquello que permanece después de tanto amor."
     }
    ],
    "_verificado": "ya publicada en villadelcine-2026: se reusa su sinopsis",
    "sinopsis": "Después de una ruptura, una mujer convierte el duelo en un ritual hecho de colores, palabras y objetos. Entre espinas que brotan del pecho, una casa rota y la silueta del amor ausente, atraviesa el dolor hasta encontrar una nueva forma de habitar aquello que permanece después de tanto amor.",
+   "pais": "Colombia",
+   "anio": 2025,
+   "duracion_tmdb": 4,
+   "genero": "Drama y Experimental",
    "poster": "/assets/ficcali-2026/despues-de-tanto-amor.jpg",
    "posterSource": "oficial",
-   "_afiche": "declarado: ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/10/poster-despues-de-tanto-amor.jpeg (904×1280)",
-   "genero": "Drama y Experimental",
-   "_heredado": {
-    "genero": "catálogo w_R4H50ADAKX17 (ficcali-2026, villadelcine-2026)"
-   }
+   "_afiche": "declarado: ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/10/poster-despues-de-tanto-amor.jpeg (904×1280)"
   },
   {
    "titulo": "El Coloso",
@@ -486,7 +494,6 @@
    "titulo_original": "Héroes del Silencio",
    "poster_path": "/uVyAB0Y2U9vHJx83p2y9zwwLcp5.jpg",
    "synopsis_es": "En uno de los territorios más sagrados y vitales de Colombia, la Sierra Nevada de Gonawindua, los niños de la comunidad indígena Morotrwa alzan sus voces para narrar el territorio a través de un primer acercamiento a la creación audiovisual. Héroes del silencio es un viaje íntimo a la cotidianidad, un retrato auténtico, alejado de miradas externas, donde ellos deciden qué contar y cómo hacerlo.",
-   "synopsis_en": "Heroes of the silence is a short film shot by the children of the Morotrwa indigenous community in the Sierra Nevada de Gonawindua. Through their own photographs and videos, they document their lives and their territory, freely choosing what to show.",
    "genero": "",
    "anio_tmdb": 0,
    "duracion_tmdb": 13,
@@ -511,7 +518,8 @@
    "_heredado": {
     "anio": "catálogo w_R4HEVVQPTDC1 (ficcali-2026, ficci-65, ficdeh-2026)",
     "synopsis_en": "catálogo w_R4HEVVQPTDC1 (ficcali-2026, ficci-65, ficdeh-2026)"
-   }
+   },
+   "synopsis_en": "Heroes of the silence is a short film shot by the children of the Morotrwa indigenous community in the Sierra Nevada de Gonawindua. Through their own photographs and videos, they document their lives and their territory, freely choosing what to show."
   },
   {
    "titulo": "I Built a Rocket Imagining your Arrival",
@@ -608,7 +616,6 @@
    "poster_path": "/air1XOw7h9fKgRq6V7vTAt4WCIB.jpg",
    "synopsis_es": "¿Dónde guardamos nuestras memorias? ¿Dónde perviven? ¿Cómo las recordamos?  Una epifanía despeja olvidos y repara el vínculo de Esther, la protagonista, con su ancestralidad a través del contacto con el mundo de los sueños, las memorias de su madre y la cura de una tinaja heredada. Gestado de manera grupal, este cortometraje navega de manera íntima y poética, los instantes de un rito de paso.  Sumergido en la cosmovisión palenquera y narrado sin pretensiones de develar los misterios pero sí de percibirlos, esta obra es una ventana al universo de esos sentires que crecen en ciénagas y arroyos.",
    "synopsis_en": "",
-   "genero": "Experimental",
    "anio_tmdb": 0,
    "duracion_tmdb": 14,
    "pais_tmdb": "",
@@ -646,6 +653,7 @@
    ],
    "poster": "/assets/ficcali-2026/la-tinaja.jpg",
    "posterSource": "tmdb",
+   "genero": "Experimental",
    "_heredado": {
     "genero": "catálogo w_R4HEVVDKDN9Y (ficcali-2026, ficci-65, popayan-2026, qaff-2026, siembrafest-2026)",
     "anio": "catálogo w_R4HEVVDKDN9Y (ficcali-2026, ficci-65, popayan-2026, qaff-2026, siembrafest-2026)"
@@ -2086,7 +2094,6 @@
    "titulo_original": "Héroes del Silencio",
    "poster_path": "/uVyAB0Y2U9vHJx83p2y9zwwLcp5.jpg",
    "synopsis_es": "En uno de los territorios más sagrados y vitales de Colombia, la Sierra Nevada de Gonawindua, los niños de la comunidad indígena Morotrwa alzan sus voces para narrar el territorio a través de un primer acercamiento a la creación audiovisual. Héroes del silencio es un viaje íntimo a la cotidianidad, un retrato auténtico, alejado de miradas externas, donde ellos deciden qué contar y cómo hacerlo.",
-   "synopsis_en": "Heroes of the silence is a short film shot by the children of the Morotrwa indigenous community in the Sierra Nevada de Gonawindua. Through their own photographs and videos, they document their lives and their territory, freely choosing what to show.",
    "genero": "",
    "anio_tmdb": 0,
    "duracion_tmdb": 13,
@@ -2111,7 +2118,8 @@
    "_heredado": {
     "anio": "catálogo w_R4HEVVQPTDC1 (ficcali-2026, ficci-65, ficdeh-2026)",
     "synopsis_en": "catálogo w_R4HEVVQPTDC1 (ficcali-2026, ficci-65, ficdeh-2026)"
-   }
+   },
+   "synopsis_en": "Heroes of the silence is a short film shot by the children of the Morotrwa indigenous community in the Sierra Nevada de Gonawindua. Through their own photographs and videos, they document their lives and their territory, freely choosing what to show."
   },
   "I Built a Rocket Imagining your Arrival": {
    "tmdb_id": 1616523,
@@ -2203,7 +2211,6 @@
    "poster_path": "/air1XOw7h9fKgRq6V7vTAt4WCIB.jpg",
    "synopsis_es": "¿Dónde guardamos nuestras memorias? ¿Dónde perviven? ¿Cómo las recordamos?  Una epifanía despeja olvidos y repara el vínculo de Esther, la protagonista, con su ancestralidad a través del contacto con el mundo de los sueños, las memorias de su madre y la cura de una tinaja heredada. Gestado de manera grupal, este cortometraje navega de manera íntima y poética, los instantes de un rito de paso.  Sumergido en la cosmovisión palenquera y narrado sin pretensiones de develar los misterios pero sí de percibirlos, esta obra es una ventana al universo de esos sentires que crecen en ciénagas y arroyos.",
    "synopsis_en": "",
-   "genero": "Experimental",
    "anio_tmdb": 0,
    "duracion_tmdb": 14,
    "pais_tmdb": "",
@@ -2241,6 +2248,7 @@
    ],
    "poster": "/assets/ficcali-2026/la-tinaja.jpg",
    "posterSource": "tmdb",
+   "genero": "Experimental",
    "_heredado": {
     "genero": "catálogo w_R4HEVVDKDN9Y (ficcali-2026, ficci-65, popayan-2026, qaff-2026, siembrafest-2026)",
     "anio": "catálogo w_R4HEVVDKDN9Y (ficcali-2026, ficci-65, popayan-2026, qaff-2026, siembrafest-2026)"

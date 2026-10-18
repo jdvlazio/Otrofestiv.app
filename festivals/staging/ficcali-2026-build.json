@@ -5119,7 +5119,14 @@
      "title": "La Tinaja",
      "director": "Ernestina Miranda, Mar Ajé",
      "poster": "/assets/ficcali-2026/la-tinaja.jpg",
-     "posterSource": "oficial"
+     "posterSource": "tmdb",
+     "lbSlug": "la-tinaja",
+     "tmdb_id": 1668923,
+     "synopsis": "¿Dónde guardamos nuestras memorias? ¿Dónde perviven? ¿Cómo las recordamos?  Una epifanía despeja olvidos y repara el vínculo de Esther, la protagonista, con su ancestralidad a través del contacto con el mundo de los sueños, las memorias de su madre y la cura de una tinaja heredada. Gestado de manera grupal, este cortometraje navega de manera íntima y poética, los instantes de un rito de paso.  Sumergido en la cosmovisión palenquera y narrado sin pretensiones de develar los misterios pero sí de percibirlos, esta obra es una ventana al universo de esos sentires que crecen en ciénagas y arroyos.",
+     "genre": "Experimental",
+     "year": 2025,
+     "synopsis_lang": "es",
+     "duration": "14 min"
     },
     {
      "title": "Y el río lloró",
@@ -9031,7 +9038,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-17T22:19:52",
+  "fecha": "2026-10-17T22:26:47",
   "plan_sha": "159aaf2851adf3ee",
   "paso": 11,
   "cmd": "python3 pipeline/ficcali-2026-verificar.py"
