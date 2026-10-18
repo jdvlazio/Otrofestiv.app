@@ -6879,6 +6879,29 @@ try:
 except Exception as _e:
     _D9['error'] = str(_e)
 
+check = 'renombre-no-se-borra'
+# Un renombre de <fid>-titulos-anteriores.json es lo que deja a la app mover lo
+# que el usuario guardó bajo el título viejo. Si una edición lo saca, quien
+# guardó la obra antes y no abrió la app desde entonces la pierde, sin síntoma
+# (#1146, 17 oct 2026: reescribí el de MUBI y se perdía «Voilà Varda»).
+# Se compara contra main: todo renombre que estaba sigue estando.
+try:
+    import subprocess as _sp9
+    _perdidos = []
+    for _p in sorted(_gc.glob('festivals/staging/*-titulos-anteriores.json')):
+        _r = _sp9.run(['git', 'show', f'origin/main:{_p}'], capture_output=True, text=True)
+        if _r.returncode:
+            continue
+        _antes = {(x['antes'], x['ahora']) for x in _jc.loads(_r.stdout).get('renombres') or []}
+        _ahora = {(x['antes'], x['ahora']) for x in _jc.load(open(_p, encoding='utf-8')).get('renombres') or []}
+        _perdidos += [f'{_osc.path.basename(_p)}: «{a}» → «{b}»' for a, b in sorted(_antes - _ahora)]
+    if _perdidos:
+        fail(check, 'renombre(s) que estaban en main y ya no: ' + ' · '.join(_perdidos[:6]))
+    else:
+        ok(check, 'ningún renombre salió de los -titulos-anteriores.json')
+except Exception as _e:
+    fail(check, f'no pudo medirse: {_e}')
+
 check = 'excepcion-en-crudo'
 if 'error' in _D9:
     fail(check, f'la deuda del modelo no pudo medirse: {_D9["error"]}')

@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "https://mubifest.com/es/bogota",
-  "capturado": "2026-10-16",
+  "capturado": "2026-10-17",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_secciones": "El sitio no tiene secciones: tiene ETIQUETAS en cada tarjeta. Se usan tal cual; con varias, manda la más específica (Foco > Restaurada > Estreno MUBI > Función al aire libre).",
@@ -158,8 +158,9 @@
    "_src": {
     "url": "https://mubifest.com/es/bogota",
     "date": "2026-10-14",
-    "boton": "REGISTRO PRÓXIMAMENTE"
+    "boton": "REGÍSTRATE AQUÍ"
    },
+   "registration_url": "https://www.eventbrite.co/e/mubi-podcast-encuentros-fernando-eimbcke-franco-lolli-tickets-2002227001861",
    "is_free": true,
    "requires_registration": true,
    "description": "Una conversación entre el director mexicano Fernando Eimbcke y el director colombiano Franco Lolli sobre sus experiencias, procesos creativos y formas de entender el cine. A partir de experiencias personales, reflexionarán sobre sus trayectorias, prácticas cinematográficas e influencias.",
@@ -330,7 +331,7 @@
    }
   },
   {
-   "title": "Desafío sorpresa con Lesley Wolf",
+   "title": "Desafío con Lesley Wolf",
    "type": "event",
    "section": "🎲 Al Aire Libre",
    "duration": "60 min",
@@ -350,12 +351,16 @@
    "_src": {
     "url": "https://mubifest.com/es/bogota",
     "date": "2026-10-14",
-    "boton": "REGISTRO PRÓXIMAMENTE"
+    "boton": "REGÍSTRATE AQUÍ"
    },
+   "registration_url": "https://www.eventbrite.co/e/desafio-con-lesley-wolf-tickets-2003506581117",
    "is_free": true,
    "requires_registration": true,
    "description": "Es hora de jugar bingo. Y no cualquier bingo: Lesley Wolf, una de las drag queens más icónicas de Colombia, será la anfitriona de un juego especial inspirado en Camp Miasma. Marca tus casillas, cruza los dedos y prepárate para ganar merchandising exclusivo de MUBI.",
-   "description_lang": "es"
+   "description_lang": "es",
+   "titulos_anteriores": [
+    "Desafío sorpresa con Lesley Wolf"
+   ]
   },
   {
    "title": "Adolescencia, sexo y muerte en Campamento Miasma",
@@ -496,8 +501,9 @@
    "_src": {
     "url": "https://mubifest.com/es/bogota",
     "date": "2026-10-14",
-    "boton": "REGISTRO PRÓXIMAMENTE"
+    "boton": "REGÍSTRATE AQUÍ"
    },
+   "registration_url": "https://www.eventbrite.co/e/charla-camp-en-el-cine-entre-el-exceso-y-el-artificio-tickets-2003512126704",
    "is_free": true,
    "requires_registration": true,
    "description": "El camp es una sensibilidad estética que encuentra en el exceso, la teatralidad, el artificio y lo extravagante una forma particular de mirar y crear. Pero ¿qué hace que una imagen sea camp? ¿Qué ocurre cuando el exceso, el artificio y la teatralidad dejan de ser recursos para convertirse en una sensibilidad estética? Con Vanessa Rosales, Felipe Cuéllar, Jimmy Rangel y Andrés Suárez",
@@ -776,9 +782,9 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-16T11:02:41",
+  "fecha": "2026-10-17T22:32:01",
   "plan_sha": "d7f550dc832ae067",
-  "paso": 5,
-  "cmd": "python3 pipeline/ensamblar.py mubibogota-2026"
+  "paso": 7,
+  "cmd": "python3 pipeline/mubibogota-2026-verificar.py"
  }
 }
