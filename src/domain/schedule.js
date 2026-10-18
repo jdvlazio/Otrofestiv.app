@@ -472,6 +472,17 @@ export function computeScenarios(titles){
 // Acá el olvido es un no-op — se nota, pero no destruye.
 export function sameEntry(a, b){
   if(!a || !b) return false;
+  // IDENTIDAD ESTABLE (18 oct 2026, docs/FUNCION.md §11). Si las dos traen el
+  // código de la función, MANDA el código: la función sigue siendo la misma
+  // aunque el festival le cambie la hora, la sala o el título. `ids_anteriores`
+  // cubre la función que se partió o se fusionó (el código viejo vive en la
+  // nueva). Sin código en alguna de las dos (plan guardado antes, festival sin
+  // migrar) se reconoce como siempre: título + día + hora + sede.
+  if(a.id && b.id){
+    return a.id === b.id
+      || (Array.isArray(b.ids_anteriores) && b.ids_anteriores.includes(a.id))
+      || (Array.isArray(a.ids_anteriores) && a.ids_anteriores.includes(b.id));
+  }
   const ta = a._title || a.title, tb = b._title || b.title;
   if(!ta || ta !== tb) return false;
   if(!a.day || !b.day || a.day !== b.day) return false;

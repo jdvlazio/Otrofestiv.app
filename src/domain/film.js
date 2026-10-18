@@ -391,11 +391,15 @@ export function explodeScreenings(films){
     if(Array.isArray(f.screenings)&&f.screenings.length){
       const base=Object.assign({},f);
       delete base.screenings;
+      // un código a nivel OBRA no es de ninguna función: cada función trae el suyo
+      delete base.id; delete base.ids_anteriores;
       f.screenings.forEach((s,i)=>{
         exploded.push(Object.assign({},base,{
           day:s.day||s.date,date:s.date||s.day,time:s.time,venue:s.venue||'',
           day_order:s.day_order!==undefined?s.day_order:i,
           sala:s.sala||'',
+          // el código estable es de la FUNCIÓN, no de la obra (docs/FUNCION.md §11)
+          ...(s.id?{id:s.id}:{}), ...(Array.isArray(s.ids_anteriores)?{ids_anteriores:s.ids_anteriores}:{}),
           ...(s.is_free!=null?{is_free:s.is_free}:{}), // por-función (festivales mixed)
           ...(s.by_invitation?{by_invitation:true}:{}), // por-función: la gala, no las demás
           // EN LÍNEA (Fantasmagoría 8: dos charlas por Twitch): por función, con su canal
