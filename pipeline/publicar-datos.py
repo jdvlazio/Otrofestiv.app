@@ -4,6 +4,7 @@
 Uso:
   python3 pipeline/publicar-datos.py <festival>            # p. ej. bhff-2026
   python3 pipeline/publicar-datos.py <festival> --probar   # valida y muestra; no sube nada
+  (--desde-main: solo lo usa el job «Datos al almacén» de GitHub, tras un merge a main)
 
 Qué hace, en orden (si un paso falla, no sigue). Los GUARDIANES son los mismos
 que protegen hoy un PR de datos — publicar aparte no se salta ninguno (Juan, 18 oct):
@@ -94,7 +95,60 @@ def guardianes(fest, ruta, contenido):
              '-g', cfg, '--workers=1', '--reporter=line'], tiempo=600)
 
 
+def _commit_en_datos(ruta, contenido, mensaje):
+    """Pone `contenido` en `ruta` sobre la punta de la rama `datos` (sin tocar el
+    checkout) y la empuja. Devuelve el sha de la punta (el mismo si no cambió)."""
+    git('fetch', '-q', 'origin', 'main')
+    hay = subprocess.run(['git', '-C', REPO, 'ls-remote', '--exit-code', '--heads', 'origin', RAMA],
+                         capture_output=True, timeout=TIEMPO).returncode == 0
+    if hay:
+        git('fetch', '-q', 'origin', RAMA)
+    base = git('rev-parse', f'origin/{RAMA}' if hay else 'origin/main')
+    blob = git('hash-object', '-w', '--stdin', entrada=contenido)
+    act = subprocess.run(['git', '-C', REPO, 'rev-parse', f'{base}:{ruta}'], capture_output=True, timeout=TIEMPO)
+    if hay and act.returncode == 0 and act.stdout.decode().strip() == blob:
+        print(f'· {ruta} ya es igual en la punta de {RAMA} ({base[:7]})')
+        return base
+    idx = os.path.join(tempfile.gettempdir(), f'publicar-datos-{os.getpid()}.idx')
+    env = {**os.environ, 'GIT_INDEX_FILE': idx}
+    try:
+        for cmd in (['read-tree', base], ['update-index', '--add', '--cacheinfo', f'100644,{blob},{ruta}']):
+            r = subprocess.run(['git', '-C', REPO, *cmd], env=env, capture_output=True, timeout=TIEMPO)
+            if r.returncode != 0:
+                sys.exit(f'✗ git {cmd[0]}: {r.stderr.decode()[:300]}')
+        arbol = subprocess.run(['git', '-C', REPO, 'write-tree'], env=env, capture_output=True,
+                               timeout=TIEMPO).stdout.decode().strip()
+    finally:
+        if os.path.exists(idx):
+            os.remove(idx)
+    sha = git('commit-tree', arbol, '-p', base, '-m', mensaje)
+    git('push', '-q', 'origin', f'{sha}:refs/heads/{RAMA}')
+    print(f'✓ rama {RAMA} → {sha[:7]}')
+    return sha
+
+
+def _llamar(cuerpo):
+    req = urllib.request.Request(FUNCION, data=json.dumps(cuerpo).encode(),
+                                 headers={'Content-Type': 'application/json'}, method='POST')
+    try:
+        with urllib.request.urlopen(req, timeout=TIEMPO) as r:
+            return json.loads(r.read())
+    except urllib.error.HTTPError as e:
+        sys.exit(f'✗ publicar-datos {e.code}: {e.read().decode()[:300]}')
+
+
+def interruptor(apagado):
+    sha = _commit_en_datos('datos-control.json', json.dumps({'apagado': apagado}).encode(),
+                           f'datos: {"apagar" if apagado else "encender"} el almacén')
+    res = _llamar({'festival': '_control', 'sha': sha})
+    if not res.get('ok'):
+        sys.exit(f'✗ {res}')
+    print(f'✓ almacén {"APAGADO: la app lee la web" if res["apagado"] else "encendido"}')
+
+
 def main():
+    if '--apagar' in sys.argv or '--encender' in sys.argv:
+        return interruptor('--apagar' in sys.argv)
     args = [a for a in sys.argv[1:] if not a.startswith('--')]
     if len(args) != 1:
         sys.exit(__doc__)
@@ -111,8 +165,15 @@ def main():
     if not d.get('films'):
         sys.exit(f'✗ {ruta} no tiene films: no se publica un festival vacío')
 
-    # 1. GUARDIANES — los mismos de un PR de datos; si uno falla, no se publica
-    guardianes(fest, ruta, contenido)
+    # 1. GUARDIANES — los mismos de un PR de datos; si uno falla, no se publica.
+    # --desde-main: solo el job «Datos al almacén» de GitHub, sobre lo que ya entró
+    # a main con su CI requerido (los guardianes ya corrieron en el PR).
+    if '--desde-main' in sys.argv:
+        if os.environ.get('GITHUB_ACTIONS') != 'true' or os.environ.get('GITHUB_REF') != 'refs/heads/main':
+            sys.exit('✗ --desde-main es solo para el job de GitHub sobre main')
+        print('  · desde main: los guardianes ya corrieron en el PR')
+    else:
+        guardianes(fest, ruta, contenido)
     huella = hashlib.sha256(contenido).hexdigest()
     print(f'✓ guardianes OK · {len(d["films"])} obras · {len(contenido):,} bytes · {huella[:12]}')
     if '--probar' in sys.argv:

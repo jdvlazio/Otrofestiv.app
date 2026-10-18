@@ -365,7 +365,23 @@ worker genera escenarios), Mi Plan, cambio de festival limpia estado. Mirar la
 app encuentra lo que ninguna validación ve: el póster roto, el filtro
 desbordado y el badge invertido salieron los tres en pantalla.
 
-Publicar: `node scripts/bump-version.js` → commit (los 5 archivos del bump
+**Publicar los datos (desde el 18 oct 2026): un comando, sin esperar el CI de
+la app.** Los datos se publican APARTE del código (migración 0009, `docs/DATOS.md`):
+
+```bash
+python3 pipeline/publicar-datos.py <id>          # p. ej. bhff-2026 — ~2 min
+python3 pipeline/publicar-datos.py <id> --probar # solo guardianes, no sube nada
+```
+
+Corre los mismos guardianes de un PR de datos (validate-festivals, validate.py,
+«igual a lo que genera publicar.py» si hay pipeline, tests de navegador de ese
+festival) y publica al almacén: la app lo ve en minutos. **Una corrección de
+datos se publica así PRIMERO**; el PR de abajo va después, sin apuro, para dejar
+la historia en main (al entrar, el job «Datos al almacén» lo republica: el
+almacén nunca queda atrás de main). Volver atrás: revertir el archivo y correr
+el comando otra vez.
+
+PR de historia: `node scripts/bump-version.js` → commit (los 5 archivos del bump
 JUNTOS) → push → PR **de datos** (la frontera código/datos es un guardián de
 CI; mezcla deliberada = etiqueta `frontera-ok`) → CI verde → merge (el dueño
 de la rama la lleva hasta el final) → **verificar el deploy de Pages y el JSON
