@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "https://mubifest.com/es/bogota",
-  "capturado": "2026-10-14",
+  "capturado": "2026-10-17",
   "metodo": "__NUXT_DATA__ de mubifest.com (devalue), 16 eventos"
  },
  "funciones": [
@@ -31,10 +31,11 @@
    "hora": "14:00",
    "sede": "Gimnasio Moderno",
    "acceso": "Entrada libre con inscripción previa",
+   "registration_url": "https://www.eventbrite.co/e/mubi-podcast-encuentros-fernando-eimbcke-franco-lolli-tickets-2002227001861",
    "_src": {
     "url": "https://mubifest.com/es/bogota",
     "date": "2026-10-14",
-    "boton": "REGISTRO PRÓXIMAMENTE"
+    "boton": "REGÍSTRATE AQUÍ"
    },
    "duracion_min": 120,
    "tipo": "evento",
@@ -128,16 +129,17 @@
    "sinopsis": "Olga vive en un enorme multifamiliar en donde lleva una existencia solitaria, regida por hábitos inalterables. Pero cuando, por necesidad económica, renta un cuarto de su departamento a un hombre quien a escondidas mete también a su hijo de nueve años, Olga se enfrenta a lo que más miedo le tiene, la conexión emocional."
   },
   {
-   "titulo": "Desafío sorpresa con Lesley Wolf",
-   "titulo_fuente": "DESAFÍO SORPRESA CON LESLEY WOLF",
+   "titulo": "Desafío con Lesley Wolf",
+   "titulo_fuente": "DESAFÍO CON LESLEY WOLF",
    "dia": "2026-10-24",
    "hora": "18:30",
    "sede": "Gimnasio Moderno",
    "acceso": "Entrada libre con inscripción previa",
+   "registration_url": "https://www.eventbrite.co/e/desafio-con-lesley-wolf-tickets-2003506581117",
    "_src": {
     "url": "https://mubifest.com/es/bogota",
     "date": "2026-10-14",
-    "boton": "REGISTRO PRÓXIMAMENTE"
+    "boton": "REGÍSTRATE AQUÍ"
    },
    "duracion_min": 60,
    "tipo": "evento",
@@ -214,10 +216,11 @@
    "hora": "14:30",
    "sede": "Gimnasio Moderno",
    "acceso": "Entrada libre con inscripción previa",
+   "registration_url": "https://www.eventbrite.co/e/charla-camp-en-el-cine-entre-el-exceso-y-el-artificio-tickets-2003512126704",
    "_src": {
     "url": "https://mubifest.com/es/bogota",
     "date": "2026-10-14",
-    "boton": "REGISTRO PRÓXIMAMENTE"
+    "boton": "REGÍSTRATE AQUÍ"
    },
    "duracion_min": 130,
    "tipo": "evento",
