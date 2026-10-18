@@ -8,7 +8,7 @@
 
 import { FESTIVAL_CONFIG } from '../config.js';
 import { _festDate, simNow } from '../domain/time.js';
-import { syncScheduleWithCatalog, verifyPlan } from '../domain/schedule.js';
+import { syncScheduleWithCatalog, verifyPlan, clavesMovidas } from '../domain/schedule.js';
 import { report } from '../telemetry.js';
 import { FESTIVAL_STATE, deriveHydrate, deriveCloudSave, deriveCloudApply, deriveCloudMerge, migrarTitulosAnteriores } from '../state/festival-context.js';
 import { closeAuthSheet, _esRevisionActiva } from '../view/sheets.js';
@@ -35,6 +35,27 @@ export function saveWL(){ storage.setWatchlist(watchlist); _cloudSave('watchlist
 
 export function saveWatched(){ storage.setWatched(watched); _cloudSave('watched'); }
 export function saveWatchedMeta(){ storage.setWatchedMeta(watchedMeta); _cloudSave('watchedMeta'); }
+// sincronizarPlan — DUEÑO ÚNICO del «plan contra el catálogo vivo» (loader y
+// nube). Además del sync, si una función del plan cambió de título, día u hora
+// (el festival la movió y el plan la siguió por su código estable, 18 oct 2026)
+// lleva con ella su retraso y su boleta, que están atados a «título|día|hora».
+// Sin código no hay movidas: el sync deja la entrada intacta, como siempre.
+export function sincronizarPlan(films){
+  const antes=((state.get('savedAgenda')||{}).schedule)||[];
+  if(!antes.length) return;
+  const despues=syncScheduleWithCatalog(antes, films);
+  state.update('savedAgenda', a=>({...a, schedule: despues}));
+  const mov=clavesMovidas(antes, despues);
+  if(!mov.length) return;
+  const {filmDelays, ticketed}=state.snapshot();
+  let fd=null, tk=null;
+  mov.forEach(([v,n])=>{
+    if(filmDelays&&filmDelays[v]!=null&&filmDelays[n]==null){ fd=fd||{...filmDelays}; fd[n]=fd[v]; delete fd[v]; }
+    if(ticketed&&ticketed.has(v)&&!ticketed.has(n)){ tk=tk||new Set(ticketed); tk.delete(v); tk.add(n); }
+  });
+  if(fd){ state.set('filmDelays', fd); saveDelays(); }
+  if(tk){ state.set('ticketed', tk); saveTicketed(); }
+}
 export function saveTicketed(){ storage.setTicketed(ticketed); _cloudSave('ticketed'); _scheduleNotifications(); }
 export function saveNotWatched(){ storage.setNotWatched(notWatched); _cloudSave('notWatched'); }
 
@@ -263,9 +284,7 @@ export function _applyCloudRow(data, opts){
   // dispositivo con catálogo viejo). Se re-deriva contra el catálogo vivo — la
   // misma normalización del loader; ver syncScheduleWithCatalog. Solo si FILMS
   // ya existe (en boot temprano no hay catálogo todavía; el loader la corre después).
-  if(_u.savedAgenda&&_u.savedAgenda.schedule&&FILMS&&FILMS.length){
-    state.update('savedAgenda', a=>({...a, schedule: syncScheduleWithCatalog(a.schedule, FILMS)}));
-  }
+  if(_u.savedAgenda&&_u.savedAgenda.schedule&&FILMS&&FILMS.length) sincronizarPlan(FILMS);
   // Persistir en local (identidad de arrays/Sets vía globals bridgeados).
   storage.setWatchlist(watchlist);storage.setWatched(watched);storage.setWatchedMeta(watchedMeta);storage.setTicketed(ticketed);
   storage.setPrioritized(prioritized);storage.setSavedAgenda(savedAgenda);

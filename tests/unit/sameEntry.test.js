@@ -78,3 +78,11 @@ test('sin código en alguna de las dos: título + día + hora + sede, como siemp
   assert.equal(sameEntry(sinCodigo, FUN), true, 'plan guardado antes del código');
   assert.equal(sameEntry(sinCodigo, { ...FUN, time: '17:00' }), false, 'sin código, otra hora es otra función');
 });
+
+test('clavesMovidas: solo las entradas que cambiaron de título, día u hora', () => {
+  const { clavesMovidas } = loadDomain({ functions: ['clavesMovidas'], globals: {} });
+  const a = [{ _title: 'A', day: 'd', time: '19:00' }, { _title: 'B', day: 'd', time: '20:00' }];
+  const d = [{ _title: 'A', day: 'd', time: '17:00' }, { _title: 'B', day: 'd', time: '20:00' }];
+  assert.deepEqual(clavesMovidas(a, d), [['A|d|19:00', 'A|d|17:00']]);
+  assert.deepEqual(clavesMovidas(a, a), []);
+});
