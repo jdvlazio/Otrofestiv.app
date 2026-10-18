@@ -59,6 +59,15 @@
    "titulo": "Belleza letal",
    "_ya_publicada": [
     {
+     "festival": "ficci-65",
+     "titulo": "Belleza letal",
+     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_afiche%20belleza%20letal%20-%20Samuel%20Moreno.jpg?itok=ZrOw0nvZ",
+     "posterSource": "custom",
+     "country": "Colombia",
+     "year": 2026,
+     "duration": "27 min"
+    },
+    {
      "festival": "mamut-2026",
      "titulo": "Belleza letal",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_afiche%20belleza%20letal%20-%20Samuel%20Moreno.jpg?itok=ZrOw0nvZ",
@@ -69,10 +78,10 @@
     }
    ],
    "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_afiche%20belleza%20letal%20-%20Samuel%20Moreno.jpg?itok=ZrOw0nvZ",
-   "_verificado": "ya publicada en mamut-2026: se reusa su afiche",
+   "_verificado": "ya publicada en ficci-65: se reusa su afiche",
    "pais": "Colombia",
    "anio": 2026,
-   "duracion_tmdb": 26
+   "duracion_tmdb": 27
   },
   {
    "titulo": "Bestiaire",
@@ -3498,7 +3507,7 @@
    "fecha": "2026-10-18"
   },
   "Bartolo": {
-   "director": "",
+   "director": "Sergio Andrés Fernández Buitrago",
    "fecha": "2026-10-18"
   },
   "Belleza letal": {
@@ -3602,7 +3611,7 @@
    "fecha": "2026-10-18"
   },
   "Gracias, antonio": {
-   "director": "",
+   "director": "Keren Berrio",
    "fecha": "2026-10-18"
   },
   "In turn": {
@@ -3626,7 +3635,7 @@
    "fecha": "2026-10-18"
   },
   "La despedida": {
-   "director": "",
+   "director": "Ana Marcela Meza Vargas",
    "fecha": "2026-10-18"
   },
   "La fiesta votada": {
@@ -3634,7 +3643,7 @@
    "fecha": "2026-10-18"
   },
   "La tormenta": {
-   "director": "",
+   "director": "Pierre Jiménez",
    "fecha": "2026-10-18"
   },
   "La tranquilidad de los pájaros": {
@@ -3682,7 +3691,7 @@
    "fecha": "2026-10-18"
   },
   "Queener": {
-   "director": "",
+   "director": "Sebastián López Murillo",
    "fecha": "2026-10-18"
   },
   "Quinto primera": {
@@ -3750,7 +3759,7 @@
    "fecha": "2026-10-18"
   },
   "¿Quién heredará el sabor de mompox?": {
-   "director": "",
+   "director": "Jonatan José Hernández González",
    "fecha": "2026-10-18"
   }
  }

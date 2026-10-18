@@ -59,6 +59,42 @@
      "pais": "Colombia",
      "genero": "Ficción",
      "director": "Edgar De Luque Jácome"
+    },
+    {
+     "titulo": "LA TORMENTA",
+     "pais": "Colombia",
+     "genero": "Experimental",
+     "director": "Pierre Jiménez"
+    },
+    {
+     "titulo": "QUEENER",
+     "pais": "Colombia",
+     "genero": "Animación",
+     "director": "Sebastián López Murillo"
+    },
+    {
+     "titulo": "GRACIAS, ANTONIO",
+     "pais": "Colombia",
+     "genero": "Ficción",
+     "director": "Keren Berrio"
+    },
+    {
+     "titulo": "¿QUIÉN HEREDARÁ EL SABOR DE MOMPOX?",
+     "pais": "Colombia",
+     "genero": "Documental",
+     "director": "Jonatan José Hernández González"
+    },
+    {
+     "titulo": "LA DESPEDIDA",
+     "pais": "Colombia",
+     "genero": "Ficción",
+     "director": "Ana Marcela Meza Vargas"
+    },
+    {
+     "titulo": "BARTOLO",
+     "pais": "Colombia",
+     "genero": "Docuficción",
+     "director": "Sergio Andrés Fernández Buitrago"
     }
    ]
   },
@@ -865,32 +901,38 @@
     {
      "titulo": "LA TORMENTA",
      "pais": "Colombia",
-     "genero": "M1NI"
+     "genero": "Experimental",
+     "director": "Pierre Jiménez"
     },
     {
      "titulo": "QUEENER",
      "pais": "Colombia",
-     "genero": "M1NI"
+     "genero": "Animación",
+     "director": "Sebastián López Murillo"
     },
     {
      "titulo": "GRACIAS, ANTONIO",
      "pais": "Colombia",
-     "genero": "M1NI"
+     "genero": "Ficción",
+     "director": "Keren Berrio"
     },
     {
      "titulo": "¿QUIÉN HEREDARÁ EL SABOR DE MOMPOX?",
      "pais": "Colombia",
-     "genero": "M1NI"
+     "genero": "Documental",
+     "director": "Jonatan José Hernández González"
     },
     {
      "titulo": "LA DESPEDIDA",
      "pais": "Colombia",
-     "genero": "M1NI"
+     "genero": "Ficción",
+     "director": "Ana Marcela Meza Vargas"
     },
     {
      "titulo": "BARTOLO",
      "pais": "Colombia",
-     "genero": "M1NI"
+     "genero": "Docuficción",
+     "director": "Sergio Andrés Fernández Buitrago"
     }
    ]
   },

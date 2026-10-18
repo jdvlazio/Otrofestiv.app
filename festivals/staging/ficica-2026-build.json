@@ -208,6 +208,7 @@
    "address": ""
   }
  },
+ "_avisos_id": [],
  "films": [
   {
    "title": "Inauguración",
@@ -333,8 +334,45 @@
      "director": "Edgar De Luque Jácome",
      "country": "Colombia / Barranquilla",
      "flags": "🇨🇴"
+    },
+    {
+     "title": "La tormenta",
+     "director": "Pierre Jiménez",
+     "country": "Colombia",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Queener",
+     "director": "Sebastián López Murillo",
+     "country": "Colombia",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Gracias, antonio",
+     "director": "Keren Berrio",
+     "country": "Colombia",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "¿Quién heredará el sabor de mompox?",
+     "director": "Jonatan José Hernández González",
+     "country": "Colombia",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "La despedida",
+     "director": "Ana Marcela Meza Vargas",
+     "country": "Colombia",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Bartolo",
+     "director": "Sergio Andrés Fernández Buitrago",
+     "country": "Colombia",
+     "flags": "🇨🇴"
     }
    ],
+   "_fid": "f_7d4d7b73bd",
    "id": "f_7d4d7b73bd"
   },
   {
@@ -424,6 +462,7 @@
    ],
    "description": "Programa de cortometrajes que exploran cómo el dolor, la introspección y las crisis revelan las huellas que nos definen y transforman.",
    "description_lang": "es",
+   "_fid": "f_1581d43260",
    "id": "f_1581d43260"
   },
   {
@@ -549,6 +588,7 @@
    ],
    "description": "Películas que reflexionan sobre la naturaleza y la relación que construimos con ella, cómo la habitamos, la entendemos y la escuchamos.",
    "description_lang": "es",
+   "_fid": "f_d42e1e089e",
    "id": "f_d42e1e089e"
   },
   {
@@ -597,6 +637,7 @@
    ],
    "description": "Una muestra de historias creadas por las comunidades, que encuentran en el cine una herramienta para narrar sus realidades, preservar sus memorias y compartir sus miradas del mundo. Con cineforo. Juan Pinto Siabatto (Moderador: Docente e Investigador de la Universidad del Atlántico (Barranquilla)) · Alejandro Valencia Beltrán (Colectivo de Cine Comunitario Cinexclusión (Barranquilla)) · Heidy Mejía Sánchez (Fundación Cultural Territorios, Arte y Paz, fundadora, directora y formadora de la Escuela Itinerante de Cine Comunitario y comunicación popular Narrando en Positivo (Soledad)) · Rubén Casalins (Director, Tengo Fe Academy (Barranquilla))",
    "description_lang": "es",
+   "_fid": "f_8eab560042",
    "id": "f_8eab560042"
   },
   {
@@ -690,6 +731,7 @@
    ],
    "description": "Un panorama del cortometraje contemporáneo realizado en Irán. Sus limitaciones y deseos.",
    "description_lang": "es",
+   "_fid": "f_a55d1c53fe",
    "id": "f_a55d1c53fe"
   },
   {
@@ -763,6 +805,7 @@
    ],
    "description": "Una selección de cortometrajes realizados por cineastas y comunidades afrodescendientes del Caribe colombiano que celebra la diversidad de sus miradas, voces y formas de creación audiovisual. Con cineforo. Harold Ballesteros Valencia (Moderador: Investigador y magíster en Ciencias de la Comunicación (Barranquilla)) · Rodolfo Palomino Casianni (Director del Colectivo de Comunicaciones Narradoras y Narradores de la Memoria «Kuchá Suto» de San Basilio de Palenque (San Basilio de Palenque)) · Jhon Narváez Escudero (Realizador audiovisual y productor independiente (Cartagena)) · Yurieth Romero Velásquez (Realizadora y Directora Audiovisual, Productora de La Caracola Films (Santa Marta))",
    "description_lang": "es",
+   "_fid": "f_ffa0062f82",
    "id": "f_ffa0062f82"
   },
   {
@@ -864,6 +907,7 @@
    ],
    "description": "Narrativas y géneros cinematográficos en un mismo espacio, del terror a la comedia.",
    "description_lang": "es",
+   "_fid": "f_1e83a18831",
    "id": "f_1e83a18831"
   },
   {
@@ -970,6 +1014,7 @@
    ],
    "description": "Cortometrajes que abordan las diversas formas de familias y sus complejidades.",
    "description_lang": "es",
+   "_fid": "f_8169535a17",
    "id": "f_8169535a17"
   },
   {
@@ -1140,6 +1185,7 @@
    ],
    "description": "Películas animadas con temáticas que exploran diversas formas y gestos creativos que producen imágenes singulares.",
    "description_lang": "es",
+   "_fid": "f_36ff12a18e",
    "id": "f_36ff12a18e"
   },
   {
@@ -1241,6 +1287,7 @@
    ],
    "description": "Un viaje a través de la mirada de mujeres que habitan y cuestionan su lugar en el mundo, que se buscan y se encuentran a través del cine.",
    "description_lang": "es",
+   "_fid": "f_2f5fb6e760",
    "id": "f_2f5fb6e760"
   },
   {
@@ -1385,6 +1432,7 @@
    ],
    "description": "Un programa para disfrutar en familia en las calles y plazas. Miradas infantiles y juveniles que cautivan a pequeños y grandes.",
    "description_lang": "es",
+   "_fid": "f_f50605f6ee",
    "id": "f_f50605f6ee"
   },
   {
@@ -1412,6 +1460,7 @@
    "is_free": true,
    "description": "Un espacio de encuentro y reflexión sobre los desafíos y las oportunidades que plantea la inteligencia artificial en los procesos de creación, producción y circulación audiovisual. A través de una conversación abierta, exploraremos sus posibilidades creativas, sus implicaciones éticas y sus efectos en la formación, los oficios y el futuro del sector audiovisual. Daniela Arregoces Campo (Moderadora: Coordinadora de comunicaciones, Cuarenta y Tres B (Guajira)) · Dougglas Hurtado Carmona (Director de Programa Ingeniería Multimedia - Universidad Simón Bolívar (Barranquilla)) · Julio Caballero Truyol (Docente, Programa de Comunicación Audiovisual - Universidad Autónoma (Barranquilla)) · María Cecilia Reyes (Docente, Departamento de Comunicación Social - Universidad del Norte (Barranquilla)) · Andrew Simon Tucker (Docente, Programa de Cine y Audiovisuales - Universidad del Magdalena (Santa Marta))",
    "description_lang": "es",
+   "_fid": "f_0955c5c379",
    "id": "f_0955c5c379"
   },
   {
@@ -1439,6 +1488,7 @@
    "is_free": true,
    "description": "Un encuentro para conectar a realizadores, productores, gestores, organizaciones y demás agentes del sector audiovisual del Distrito de Barranquilla y del departamento del Atlántico. Este espacio busca propiciar el intercambio de experiencias, el reconocimiento de capacidades y la construcción de alianzas para fortalecer el ecosistema audiovisual de la Región. Como parte de la jornada, se realizará la charla «Políticas públicas del audiovisual: un proceso de construcción en el Distrito de Barranquilla», una conversación sobre la participación del sector y las oportunidades para construir políticas públicas que respondan a sus necesidades y contribuyan a su desarrollo. Iván Movilla Díaz (Ponente de la charla introductoria: Asesor de Despacho de la Secretaría de Cultura y Patrimonio, Alcaldía Distrital de Barranquilla) · Consejo de Cine Departamental (Secretaría de Cultura y Patrimonio – Gobernación del Atlántico) · Asamblea de Cine y Audiovisuales de Barranquilla (Invitación abierta a todos sus miembros y agentes del sector audiovisual Distrital y Departamental)",
    "description_lang": "es",
+   "_fid": "f_923f5b11bf",
    "id": "f_923f5b11bf"
   },
   {
@@ -1546,6 +1596,7 @@
    ],
    "description": "Una selección de cortometrajes realizados en Latinoamérica que reúne diversas voces, sensibilidades y formas de narrar nuestras realidades.",
    "description_lang": "es",
+   "_fid": "f_4c262dc210",
    "id": "f_4c262dc210"
   },
   {
@@ -1578,37 +1629,44 @@
    "film_list": [
     {
      "title": "La tormenta",
+     "director": "Pierre Jiménez",
      "country": "Colombia",
      "flags": "🇨🇴"
     },
     {
      "title": "Queener",
+     "director": "Sebastián López Murillo",
      "country": "Colombia",
      "flags": "🇨🇴"
     },
     {
      "title": "Gracias, antonio",
+     "director": "Keren Berrio",
      "country": "Colombia",
      "flags": "🇨🇴"
     },
     {
      "title": "¿Quién heredará el sabor de mompox?",
+     "director": "Jonatan José Hernández González",
      "country": "Colombia",
      "flags": "🇨🇴"
     },
     {
      "title": "La despedida",
+     "director": "Ana Marcela Meza Vargas",
      "country": "Colombia",
      "flags": "🇨🇴"
     },
     {
      "title": "Bartolo",
+     "director": "Sergio Andrés Fernández Buitrago",
      "country": "Colombia",
      "flags": "🇨🇴"
     }
    ],
    "description": "Selección de filminutos del Caribe Colombiano en competencia. Con cineforo. Harold Ospina Hincapié (Moderador: Director general y creativo del Festival Internacional de Cortometrajes Cine a la Calle FICICA (Pereira)) · Con la participación de los seleccionados del Concurso de Filminutos MINI y sus obras",
    "description_lang": "es",
+   "_fid": "f_f8e6d9294d",
    "id": "f_f8e6d9294d"
   },
   {
@@ -1636,6 +1694,7 @@
    "is_free": true,
    "description": "Un espacio para conocer herramientas y estrategias de accesibilidad audiovisual que facilitan el disfrute del cine por parte de personas con discapacidad visual y auditiva. Una invitación a reflexionar sobre la inclusión y el derecho de todas las personas a participar de la experiencia cinematográfica. Convocatoria dirigida a público con discapacidad visual y auditiva, así como público general interesado. Entrada libre hasta completar aforo. Luis Guillermo Torres (Moderador: presidente de AT Medios, accesibilidad y tecnología (Bogotá))",
    "description_lang": "es",
+   "_fid": "f_6941bfdf4d",
    "id": "f_6941bfdf4d"
   },
   {
@@ -1663,6 +1722,7 @@
    "is_free": true,
    "description": "Un acercamiento a los principios y herramientas narrativas para crear personajes sólidos, creíbles y memorables. Una conversación sobre cómo desarrollar sus motivaciones, conflictos, características y transformaciones para dar fuerza a las historias cinematográficas. Juan Manuel Cáceres (Creador y guionista de series y comedias de televisión, Red Colombiana de Escritores Audiovisuales - REDES SGC (Bogotá))",
    "description_lang": "es",
+   "_fid": "f_2b70ce9a48",
    "id": "f_2b70ce9a48"
   },
   {
@@ -1783,6 +1843,7 @@
    ],
    "description": "Cortos que abordan la cotidianidad y el paso del tiempo como forma de narración y construcción de historias sencillas que se vuelven extraordinarias.",
    "description_lang": "es",
+   "_fid": "f_186fabe242",
    "id": "f_186fabe242"
   },
   {
@@ -1928,6 +1989,7 @@
    ],
    "description": "Un programa para disfrutar en familia en las calles y plazas. Miradas infantiles y juveniles que cautivan a pequeños y grandes.",
    "description_lang": "es",
+   "_fid": "f_51ceeb4088",
    "id": "f_51ceeb4088"
   },
   {
@@ -2037,6 +2099,7 @@
    ],
    "description": "El cine es para todas las personas. Este programa reúne obras audiovisuales que incorporan herramientas de accesibilidad para personas sordas y ciegas, ofreciendo una experiencia cinematográfica más inclusiva y significativa. Convocatoria dirigida a público con discapacidad visual y auditiva, así como público general interesado. Entrada libre hasta completar aforo. Con cineforo. Luis Guillermo Torres (Moderador: presidente de AT Medios, accesibilidad y tecnología (Bogotá))",
    "description_lang": "es",
+   "_fid": "f_a8898411bd",
    "id": "f_a8898411bd"
   },
   {
@@ -2064,6 +2127,7 @@
    "is_free": true,
    "description": "Una charla dirigida a autores, compositores y creadores interesados en conocer cómo proteger sus obras y aprovechar las oportunidades que brinda la gestión colectiva. Esta masterclass abordará los beneficios del derecho de autor, de la afiliación a sociedades de gestión colectiva y las herramientas para garantizar el reconocimiento y la remuneración a los creadores por el uso y explotación de sus obras. Mónica Guzmán Sánchez (Coordinadora de Bienestar Social, Red Colombiana de Escritores Audiovisuales - REDES SGC (Bogotá)) · Héctor Rodríguez Cuellar (Libretista y guionista colombiano, Red Colombiana de Escritores Audiovisuales – REDES SGC (Bogotá))",
    "description_lang": "es",
+   "_fid": "f_ece05cd016",
    "id": "f_ece05cd016"
   },
   {
@@ -2173,6 +2237,7 @@
    ],
    "description": "El cine es para todas las personas. Este programa reúne obras audiovisuales que incorporan herramientas de accesibilidad para personas sordas y ciegas, ofreciendo una experiencia cinematográfica más inclusiva y significativa. Convocatoria dirigida a público con discapacidad visual y auditiva, así como público general interesado. Entrada libre hasta completar aforo. Con cineforo. Luis Guillermo Torres (Moderador: presidente de AT Medios, accesibilidad y tecnología (Bogotá))",
    "description_lang": "es",
+   "_fid": "f_6a4aa12f6d",
    "id": "f_6a4aa12f6d"
   },
   {
@@ -2200,6 +2265,7 @@
    "is_free": true,
    "description": "«La Paridad Importa» es un diagnóstico que abre la conversación sobre las brechas de género en los festivales de cortometrajes en Colombia (2008–2020). Esta investigación funciona como una herramienta de acción afirmativa orientada a visibilizar y combatir la exclusión histórica de las mujeres y diversidades de género en la industria audiovisual del país, aportando datos y reflexiones clave para impulsar la equidad en el cine nacional. Jimena Prieto Sarmiento (Realizadora Audiovisual y Gestora Cultural, fundadora y directora de Cine en Femenino)",
    "description_lang": "es",
+   "_fid": "f_380d3aa18b",
    "id": "f_380d3aa18b"
   },
   {
@@ -2258,6 +2324,7 @@
    ],
    "description": "Diversas voces, culturas y formas de ver el mundo se encuentran en la pantalla. Este año Territorios Vivos reúne obras audiovisuales realizadas por comunidades indígenas del Caribe Colombiano. Con cineforo. Jair Vega (Moderador: Sociólogo, docente e investigador (Barranquilla)) · Liz Dany Macías (Realizadora Audiovisual Comunidad Mokaná (Puerto Colombia)) · Elizabeth Pirela González (Realizadora Audiovisual, directora y guionista Wayuu del clan Epieyü, Casa productora MAITUUI FILMS S.A.S. (Guajira)) · Cristóbal Mendoza Carmona (Realizador Audiovisual comunidad Ette Ennaka (Santa Marta, Sierra Nevada))",
    "description_lang": "es",
+   "_fid": "f_d206d70806",
    "id": "f_d206d70806"
   },
   {
@@ -2321,7 +2388,7 @@
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_afiche%20belleza%20letal%20-%20Samuel%20Moreno.jpg?itok=ZrOw0nvZ",
      "year": 2026,
      "posterSource": "oficial",
-     "duration": "26 min"
+     "duration": "27 min"
     },
     {
      "title": "Recordando mi jerga",
@@ -2374,6 +2441,7 @@
    ],
    "description": "Películas documentales que exploran diversos dispositivos narrativos e historias que conectan con sus territorios.",
    "description_lang": "es",
+   "_fid": "f_acd8b8309b",
    "id": "f_acd8b8309b"
   },
   {
@@ -2519,6 +2587,7 @@
    ],
    "description": "Un programa para disfrutar en familia en las calles y plazas. Miradas infantiles y juveniles que cautivan a pequeños y grandes.",
    "description_lang": "es",
+   "_fid": "f_7e5f414637",
    "id": "f_7e5f414637"
   },
   {
@@ -2636,23 +2705,24 @@
      "duration": "14 min"
     }
    ],
+   "_fid": "f_2297b54435",
    "id": "f_2297b54435"
   }
  ],
  "_avisos_duracion": [
-  "programa «Inauguración» (2026-10-20 18:30): sus obras suman 86 min (6 de 7 con duración) y la función dura 60",
+  "programa «Inauguración» (2026-10-20 18:30): sus obras suman 86 min (6 de 13 con duración) y la función dura 60",
   "programa «Líneas y rayas» (2026-10-21 17:00): sus obras suman 93 min (8 de 10 con duración) y la función dura 60",
   "programa «Encuentros» (2026-10-21 18:00): sus obras suman 84 min (7 de 8 con duración) y la función dura 60",
   "programa «Una mirada latina» (2026-10-22 14:00): sus obras suman 75 min (4 de 6 con duración) y la función dura 60",
   "programa «Y así pasan los días» (2026-10-22 18:00): sus obras suman 101 min (6 de 6 con duración) y la función dura 60",
   "programa «Encuentros» (2026-10-22 18:00): sus obras suman 84 min (7 de 8 con duración) y la función dura 60",
-  "programa «¿Eso es real?» (2026-10-23 18:00): sus obras suman 69 min (5 de 8 con duración) y la función dura 60",
+  "programa «¿Eso es real?» (2026-10-23 18:00): sus obras suman 70 min (5 de 8 con duración) y la función dura 60",
   "programa «Encuentros» (2026-10-23 18:00): sus obras suman 84 min (7 de 8 con duración) y la función dura 60",
   "programa «Clausura» (2026-10-24 18:30): sus obras suman 77 min (5 de 7 con duración) y la función dura 60"
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-18T02:24:11",
+  "fecha": "2026-10-18T11:52:54",
   "plan_sha": "06fc8fe6efd34f4b",
   "paso": 8,
   "cmd": "python3 pipeline/ensamblar.py ficica-2026"

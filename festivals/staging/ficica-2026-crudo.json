@@ -76,6 +76,36 @@
      "titulo": "La tranquilidad de los pájaros",
      "director": "Edgar De Luque Jácome",
      "pais": "Colombia / Barranquilla"
+    },
+    {
+     "titulo": "La tormenta",
+     "director": "Pierre Jiménez",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Queener",
+     "director": "Sebastián López Murillo",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Gracias, antonio",
+     "director": "Keren Berrio",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "¿Quién heredará el sabor de mompox?",
+     "director": "Jonatan José Hernández González",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "La despedida",
+     "director": "Ana Marcela Meza Vargas",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Bartolo",
+     "director": "Sergio Andrés Fernández Buitrago",
+     "pais": "Colombia"
     }
    ],
    "duracion_min": 60,
@@ -704,26 +734,32 @@
    "obras": [
     {
      "titulo": "La tormenta",
+     "director": "Pierre Jiménez",
      "pais": "Colombia"
     },
     {
      "titulo": "Queener",
+     "director": "Sebastián López Murillo",
      "pais": "Colombia"
     },
     {
      "titulo": "Gracias, antonio",
+     "director": "Keren Berrio",
      "pais": "Colombia"
     },
     {
      "titulo": "¿Quién heredará el sabor de mompox?",
+     "director": "Jonatan José Hernández González",
      "pais": "Colombia"
     },
     {
      "titulo": "La despedida",
+     "director": "Ana Marcela Meza Vargas",
      "pais": "Colombia"
     },
     {
      "titulo": "Bartolo",
+     "director": "Sergio Andrés Fernández Buitrago",
      "pais": "Colombia"
     }
    ]
