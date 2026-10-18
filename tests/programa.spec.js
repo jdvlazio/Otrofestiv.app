@@ -1,7 +1,7 @@
 // @ts-check
 // programa.spec.js — Tab Programa: lista, grid, filtros, posters, topbar.
 const { test, expect } = require('@playwright/test');
-const { LEVIZA_SIMTIME, abrirHojaCiudad, enterFestival, goToPlanear, reentrar, esperarCalculo } = require('./helpers');
+const { LEVIZA_SIMTIME, abrirHojaCiudad, enterFestival, goToPlanear, reentrar, esperarCalculo, soloWeb } = require('./helpers');
 
 // T01 — Apóstrofe: corazón en lista agrega al watchlist
 test('T01 — apóstrofe: corazón en lista agrega al watchlist', async ({ page }) => {
@@ -2488,6 +2488,8 @@ test('T102 — sin API de service worker, el poll igual ofrece el build nuevo', 
 
 test.describe('T103/T104 — capa 2: los datos se refrescan en caliente (sin SW: page.route no ve fetches vía SW)', () => {
   test.use({ serviceWorkers: 'block' });
+  // Interceptan el JSON del festival: el almacén va cortado para que la app lo lea de la web.
+  test.beforeEach(async ({ page }) => { await soloWeb(page); });
 
 test('T103 — un cambio de sede aterriza EN SILENCIO, en su casilla, sin scroll ni toast', async ({ page }) => {
   test.setTimeout(90000);
