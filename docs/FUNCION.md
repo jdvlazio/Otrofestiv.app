@@ -145,7 +145,8 @@ El vigía AVISA; el actualizador ACTÚA, dentro de una frontera estrecha (senior
 - **Tope:** más de 5 funciones cambiadas en una corrida → frena (suele ser una fuente rota).
 - **Interruptor:** `activo: false` lo apaga sin tocar código.
 - **Sin cambios no publica:** cada deploy hace recargar a los teléfonos.
-- **Corre cada hora** desde una tarea programada, en su propia copia: si hay cambios publicables, validadores → PR → CI → merge → confirma que el dato nuevo está en otrofestiv.app → avisa a Juan. Empieza solo con Fantasmagoría; se suman otros tras una semana sin sorpresas.
+- **Corre cada hora** desde una tarea programada, en su propia copia: si hay cambios publicables, validadores → **abre el PR y avisa a Juan; NO fusiona solo** (decisión de Juan, 18 oct). Lo fusiona Juan, o Claude cuando él lo pida. Si en un par de festivales no propone nada equivocado, gana el merge automático con el tope de 5. Empieza solo con Fantasmagoría.
+- **Tope de tiempo** por comando (300 s: una fuente colgada no cuelga la tarea) y, al fallar o frenar, **deshace también lo nuevo** (`git clean` además del `checkout`), para que la corrida siguiente no aborte por copia sucia.
 
 ## 6. Guardianes (validate.py) — a implementar en la fase 1
 
