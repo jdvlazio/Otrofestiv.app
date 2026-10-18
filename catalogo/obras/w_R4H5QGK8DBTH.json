@@ -1,12 +1,18 @@
 {
  "id": "w_R4H5QGK8DBTH",
- "titulo_original": "El maestro de la piqueria",
+ "titulo_original": "El maestro de la piquería",
  "anio": 2025,
  "paises": [
   "CO"
  ],
  "directores": [
   "Yinet Molero"
+ ],
+ "aliases": [
+  {
+   "titulo": "El maestro de la piqueria",
+   "tipo": "festival"
+  }
  ],
  "sinopsis": {
   "es": "La piqueria, género musical autóctono del Caribe, ha representado durante décadas las raíces culturales de diversas generaciones. En La Guajira, Alcides Manjarrez es uno de los últimos maestros de este arte. Invidente de nacimiento, desde su infancia ha cimentado esta tradición. En la actualidad, además de ser referente en el folclor, impulsa la recuperación de esta tradición entre las nuevas generaciones."
@@ -29,6 +35,7 @@
   }
  ],
  "presentaciones": [
-  "ficcali-2026"
+  "ficcali-2026",
+  "ficica-2026"
  ]
 }

@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "ficica.cinealacalle.org — Programación General 2026 (JSON embebido en la página)",
-  "capturado": "2026-10-15",
+  "capturado": "2026-10-18",
   "url": "https://ficica.cinealacalle.org/programacion-general.html",
   "metodo": "actividad por función; solo acceso libre; cineforo pegado a su programa"
  },
@@ -41,6 +41,43 @@
    "tipo": "evento",
    "event_kind": "apertura",
    "premiere": "Inauguración",
+   "obras": [
+    {
+     "titulo": "La mona",
+     "director": "Laura Gutierrez",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Bestiaire",
+     "director": "Anne Zinn-justin",
+     "pais": "Francia"
+    },
+    {
+     "titulo": "Le mur du son",
+     "director": "Antonio La Camera",
+     "pais": "Suiza"
+    },
+    {
+     "titulo": "Saq nikté y el espíritu de la máscara",
+     "director": "Ester Weiner",
+     "pais": "Guatemala, Uruguay"
+    },
+    {
+     "titulo": "Eject: el último rebobinado",
+     "director": "Martin Desoto / Senin Porto",
+     "pais": "España"
+    },
+    {
+     "titulo": "Memoria de un pibe",
+     "director": "Pedro Santi",
+     "pais": "Brasil"
+    },
+    {
+     "titulo": "La tranquilidad de los pájaros",
+     "director": "Edgar De Luque Jácome",
+     "pais": "Colombia / Barranquilla"
+    }
+   ],
    "duracion_min": 60,
    "_duracion_de": "estimada: el hueco hasta la siguiente en la misma sede (tope 90, 60 si es la última)"
   },
@@ -59,6 +96,33 @@
    },
    "is_programa": true,
    "sinopsis": "Programa de cortometrajes que exploran cómo el dolor, la introspección y las crisis revelan las huellas que nos definen y transforman.",
+   "obras": [
+    {
+     "titulo": "Tejiendo un árbol",
+     "director": "Alvaro Cardona",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Agachar el rostro",
+     "director": "Camilo Medina Noy",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "El segundo",
+     "director": "Pedro Miguel Rozo Flores",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Sombra lejana",
+     "director": "Antonio J. Camargo",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Pawa",
+     "director": "Marbel Ina Vanegas Jusayu",
+     "pais": "Colombia"
+    }
+   ],
    "duracion_min": 90,
    "_duracion_de": "estimada: el hueco hasta la siguiente en la misma sede (tope 90, 60 si es la última)"
   },
@@ -77,6 +141,43 @@
    },
    "is_programa": true,
    "sinopsis": "Películas que reflexionan sobre la naturaleza y la relación que construimos con ella, cómo la habitamos, la entendemos y la escuchamos.",
+   "obras": [
+    {
+     "titulo": "Sombras en la niebla",
+     "director": "Pedro Pablo Vega",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "10 meters above",
+     "director": "Irene Baqué",
+     "pais": "España"
+    },
+    {
+     "titulo": "Do rocks dream of flying?",
+     "director": "Mathieu Ciulla & Simon Zorraquin",
+     "pais": "España, Francia y Argentina"
+    },
+    {
+     "titulo": "Zizuma, nuestra casa de agua y nubes",
+     "director": "Fátima Correa",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Emechiche, el renacer de los cabeciblancos",
+     "director": "Juan Camilo Gonzales",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Living well",
+     "director": "Zoé Nathalie Kugler",
+     "pais": "Suiza / Ecuador"
+    },
+    {
+     "titulo": "Cayenas libertarias",
+     "director": "Javier Camilo Aranguren",
+     "pais": "Colombia"
+    }
+   ],
    "duracion_min": 90,
    "_duracion_de": "estimada: el hueco hasta la siguiente en la misma sede (tope 90, 60 si es la última)"
   },
@@ -97,7 +198,21 @@
    "is_programa": true,
    "duracion_min": 90,
    "invitados": "Juan Pinto Siabatto (Moderador: Docente e Investigador de la Universidad del Atlántico (Barranquilla)) · Alejandro Valencia Beltrán (Colectivo de Cine Comunitario Cinexclusión (Barranquilla)) · Heidy Mejía Sánchez (Fundación Cultural Territorios, Arte y Paz, fundadora, directora y formadora de la Escuela Itinerante de Cine Comunitario y comunicación popular Narrando en Positivo (Soledad)) · Rubén Casalins (Director, Tengo Fe Academy (Barranquilla))",
-   "sinopsis": "Una muestra de historias creadas por las comunidades, que encuentran en el cine una herramienta para narrar sus realidades, preservar sus memorias y compartir sus miradas del mundo. Con cineforo."
+   "sinopsis": "Una muestra de historias creadas por las comunidades, que encuentran en el cine una herramienta para narrar sus realidades, preservar sus memorias y compartir sus miradas del mundo. Con cineforo.",
+   "obras": [
+    {
+     "titulo": "El abrazo del sol",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Cabica",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Arlequín",
+     "pais": "Colombia"
+    }
+   ]
   },
   {
    "dia": "2026-10-21",
@@ -114,6 +229,43 @@
    },
    "is_programa": true,
    "sinopsis": "Un panorama del cortometraje contemporáneo realizado en Irán. Sus limitaciones y deseos.",
+   "obras": [
+    {
+     "titulo": "The remaining dregs",
+     "director": "Paria Alaei",
+     "pais": "Irán"
+    },
+    {
+     "titulo": "New york",
+     "director": "Amir Karami",
+     "pais": "Iran"
+    },
+    {
+     "titulo": "The mould",
+     "director": "Moahammad Reza Nourmandipour",
+     "pais": "Iran"
+    },
+    {
+     "titulo": "Chro",
+     "director": "Hamed Bahrami",
+     "pais": "Iran"
+    },
+    {
+     "titulo": "The dreaming witness",
+     "director": "Shayan Naghibi",
+     "pais": "Irán"
+    },
+    {
+     "titulo": "In turn",
+     "director": "Sahra Asadollahi / Atefeh Salehi",
+     "pais": "Irán"
+    },
+    {
+     "titulo": "Like friend, like deer",
+     "director": "Malek Eghbali",
+     "pais": "Iran"
+    }
+   ],
    "duracion_min": 90,
    "_duracion_de": "estimada: el hueco hasta la siguiente en la misma sede (tope 90, 60 si es la última)"
   },
@@ -134,7 +286,37 @@
    "is_programa": true,
    "duracion_min": 120,
    "invitados": "Harold Ballesteros Valencia (Moderador: Investigador y magíster en Ciencias de la Comunicación (Barranquilla)) · Rodolfo Palomino Casianni (Director del Colectivo de Comunicaciones Narradoras y Narradores de la Memoria «Kuchá Suto» de San Basilio de Palenque (San Basilio de Palenque)) · Jhon Narváez Escudero (Realizador audiovisual y productor independiente (Cartagena)) · Yurieth Romero Velásquez (Realizadora y Directora Audiovisual, Productora de La Caracola Films (Santa Marta))",
-   "sinopsis": "Una selección de cortometrajes realizados por cineastas y comunidades afrodescendientes del Caribe colombiano que celebra la diversidad de sus miradas, voces y formas de creación audiovisual. Con cineforo."
+   "sinopsis": "Una selección de cortometrajes realizados por cineastas y comunidades afrodescendientes del Caribe colombiano que celebra la diversidad de sus miradas, voces y formas de creación audiovisual. Con cineforo.",
+   "obras": [
+    {
+     "titulo": "Capitán cartagena",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Concierto sentido",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Frágil o embalados",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Dientes de yuca",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Dulce",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Plan de fuga",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "El kanto del kajambá",
+     "pais": "Colombia"
+    }
+   ]
   },
   {
    "dia": "2026-10-21",
@@ -151,6 +333,39 @@
    },
    "is_programa": true,
    "sinopsis": "Narrativas y géneros cinematográficos en un mismo espacio, del terror a la comedia.",
+   "obras": [
+    {
+     "titulo": "Carne de segunda",
+     "director": "Ruben Casalins",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Que el cielo nos perdone",
+     "director": "Andrés Buitrago",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Esta noite minha alma partirá",
+     "director": "Igor Vasco",
+     "pais": "Brasil",
+     "sinopsis": "En su último día de trabajo como empleada doméstica, la joven Kumani presencia cosas extrañas en la casa de sus patrones. No sabe que su propio destino podría estar en peligro."
+    },
+    {
+     "titulo": "La culpa es del cine",
+     "director": "Eduardo Rivera Aburto",
+     "pais": "Chile"
+    },
+    {
+     "titulo": "A la vejez, viruelas",
+     "director": "Pol Aguilera",
+     "pais": "España"
+    },
+    {
+     "titulo": "Citizenship test",
+     "director": "Alejandro de los Ríos",
+     "pais": "Estados Unidos"
+    }
+   ],
    "duracion_min": 60,
    "_duracion_de": "estimada: el hueco hasta la siguiente en la misma sede (tope 90, 60 si es la última)"
   },
@@ -169,6 +384,43 @@
    },
    "is_programa": true,
    "sinopsis": "Cortometrajes que abordan las diversas formas de familias y sus complejidades.",
+   "obras": [
+    {
+     "titulo": "La ceremonia",
+     "director": "Julián García Valero / Deimer Vergara Torres",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Juego de damas",
+     "director": "Enrique Vargas",
+     "pais": "Colombia / Barranquilla"
+    },
+    {
+     "titulo": "La independencia",
+     "director": "John Agudelo",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Desarraigo",
+     "director": "Cristian Nicolas Patiño Hortua Andres Santiago Cely Orjuela",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Post-familia",
+     "director": "Alexis Tafour",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "La tranquilidad de los pájaros",
+     "director": "Edgar De Luque Jácome",
+     "pais": "Colombia / Barranquilla"
+    },
+    {
+     "titulo": "Presépio (el pesebre)",
+     "director": "Felipe Bibian",
+     "pais": "Brasil"
+    }
+   ],
    "duracion_min": 60,
    "_duracion_de": "estimada: el hueco hasta la siguiente en la misma sede (tope 90, 60 si es la última)"
   },
@@ -186,6 +438,58 @@
    },
    "is_programa": true,
    "sinopsis": "Películas animadas con temáticas que exploran diversas formas y gestos creativos que producen imágenes singulares.",
+   "obras": [
+    {
+     "titulo": "El arca de nora",
+     "director": "Endre Lund Eriksen, Isak Gjertsen",
+     "pais": "Croatia, Norway"
+    },
+    {
+     "titulo": "Saq nikté y el espíritu de la máscara",
+     "director": "Ester Weiner",
+     "pais": "Guatemala, Uruguay"
+    },
+    {
+     "titulo": "Appol-o",
+     "director": "Juan José Calvo Lozano, Nicolás Castro Herrera, Cristian Felipe Ossa Castro",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Emechiche, el renacer de los cabeciblancos",
+     "director": "Juan Camilo Gonzales",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Decaer",
+     "director": "Juan Camilo Gonzales",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Tuktu, padre maíz",
+     "director": "Mauricio Prieto Muriel",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Safo",
+     "director": "Rosana Urbes",
+     "pais": "Brasil"
+    },
+    {
+     "titulo": "Memoria colectiva",
+     "director": "Cristina Colmenares",
+     "pais": "Perú"
+    },
+    {
+     "titulo": "Like friend, like deer",
+     "director": "Malek Eghbali",
+     "pais": "Iran"
+    },
+    {
+     "titulo": "The torch i carry",
+     "director": "Namuungoo Enkhbat",
+     "pais": "Estados Unidos"
+    }
+   ],
    "duracion_min": 60,
    "_duracion_de": "estimada: el hueco hasta la siguiente en la misma sede (tope 90, 60 si es la última)"
   },
@@ -203,6 +507,33 @@
    },
    "is_programa": true,
    "sinopsis": "Un viaje a través de la mirada de mujeres que habitan y cuestionan su lugar en el mundo, que se buscan y se encuentran a través del cine.",
+   "obras": [
+    {
+     "titulo": "Rastro",
+     "director": "Dominique Jeanneret",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Niña chilapa",
+     "director": "Juana Lotero",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Pawa",
+     "director": "Marbel Ina Vanegas Jusayu",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Refraccion",
+     "director": "Isabella Palacio Mesa",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Chaika",
+     "director": "Ingrid Bonilla",
+     "pais": "Colombia"
+    }
+   ],
    "duracion_min": 60,
    "_duracion_de": "estimada: el hueco hasta la siguiente en la misma sede (tope 90, 60 si es la última)"
   },
@@ -220,6 +551,48 @@
    },
    "is_programa": true,
    "sinopsis": "Un programa para disfrutar en familia en las calles y plazas. Miradas infantiles y juveniles que cautivan a pequeños y grandes.",
+   "obras": [
+    {
+     "titulo": "Memoria de un pibe",
+     "director": "Pedro Santi",
+     "pais": "Brasil"
+    },
+    {
+     "titulo": "La guerra de los tomates",
+     "director": "Juan Carlos Gutierrez",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "La gran hazaña",
+     "director": "Luber Yesid Zúñiga Ordóñez.",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Los pliegues de la falda",
+     "director": "Blanca Muñoz Avila",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Las zapatillas mágicas",
+     "director": "Luber Yesid Zúñiga Ordóñez.",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Replay",
+     "director": "Simón Matallana",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Hay algo detrás de ti",
+     "director": "Julián Andrés Gómez Reyes",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Appol-o",
+     "director": "Juan José Calvo Lozano, Nicolás Castro Herrera, Cristian Felipe Ossa Castro",
+     "pais": "Colombia"
+    }
+   ],
    "duracion_min": 60,
    "_duracion_de": "estimada: el hueco hasta la siguiente en la misma sede (tope 90, 60 si es la última)"
   },
@@ -276,6 +649,37 @@
    },
    "is_programa": true,
    "sinopsis": "Una selección de cortometrajes realizados en Latinoamérica que reúne diversas voces, sensibilidades y formas de narrar nuestras realidades.",
+   "obras": [
+    {
+     "titulo": "En nombre del amor",
+     "director": "Mariana Pallas, Alexander Dieppa, Luciana Martins, Socorro Lira",
+     "pais": "Cuba"
+    },
+    {
+     "titulo": "Capitão lima",
+     "director": "Filipe Carvalho",
+     "pais": "Brasil"
+    },
+    {
+     "titulo": "Una torreta en llamas",
+     "director": "Humberto Flores Jaruégui",
+     "pais": "México"
+    },
+    {
+     "titulo": "Compraventa",
+     "pais": "Argentina"
+    },
+    {
+     "titulo": "Más allá",
+     "director": "Bettina Lopez Mendoza",
+     "pais": "Venezuela/US/Canada/Colombia"
+    },
+    {
+     "titulo": "Presépio (el pesebre)",
+     "director": "Felipe Bibian",
+     "pais": "Brasil"
+    }
+   ],
    "duracion_min": 60,
    "_duracion_de": "estimada: el hueco hasta la siguiente en la misma sede (tope 90, 60 si es la última)"
   },
@@ -296,7 +700,33 @@
    "is_programa": true,
    "duracion_min": 75,
    "invitados": "Harold Ospina Hincapié (Moderador: Director general y creativo del Festival Internacional de Cortometrajes Cine a la Calle FICICA (Pereira)) · Con la participación de los seleccionados del Concurso de Filminutos MINI y sus obras",
-   "sinopsis": "Selección de filminutos del Caribe Colombiano en competencia. Con cineforo."
+   "sinopsis": "Selección de filminutos del Caribe Colombiano en competencia. Con cineforo.",
+   "obras": [
+    {
+     "titulo": "La tormenta",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Queener",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Gracias, antonio",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "¿Quién heredará el sabor de mompox?",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "La despedida",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Bartolo",
+     "pais": "Colombia"
+    }
+   ]
   },
   {
    "dia": "2026-10-22",
@@ -350,6 +780,38 @@
    },
    "is_programa": true,
    "sinopsis": "Cortos que abordan la cotidianidad y el paso del tiempo como forma de narración y construcción de historias sencillas que se vuelven extraordinarias.",
+   "obras": [
+    {
+     "titulo": "Gramática práctica italiana",
+     "director": "Daniel Cortés",
+     "pais": "Colombia / Cuba"
+    },
+    {
+     "titulo": "Goteras",
+     "director": "Vicente Gonzalez Monroy",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Malas posturas",
+     "director": "Juan Pablo Castro",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Plástico",
+     "director": "Daniel Jimenez V",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Dong shen shi",
+     "director": "Guoju Wang",
+     "pais": "China"
+    },
+    {
+     "titulo": "When the tiger roars",
+     "director": "Lam Can-Zhao",
+     "pais": "China"
+    }
+   ],
    "duracion_min": 60,
    "_duracion_de": "estimada: el hueco hasta la siguiente en la misma sede (tope 90, 60 si es la última)"
   },
@@ -368,6 +830,48 @@
    },
    "is_programa": true,
    "sinopsis": "Un programa para disfrutar en familia en las calles y plazas. Miradas infantiles y juveniles que cautivan a pequeños y grandes.",
+   "obras": [
+    {
+     "titulo": "Memoria de un pibe",
+     "director": "Pedro Santi",
+     "pais": "Brasil"
+    },
+    {
+     "titulo": "La guerra de los tomates",
+     "director": "Juan Carlos Gutierrez",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "La gran hazaña",
+     "director": "Luber Yesid Zúñiga Ordóñez.",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Los pliegues de la falda",
+     "director": "Blanca Muñoz Avila",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Las zapatillas mágicas",
+     "director": "Luber Yesid Zúñiga Ordóñez.",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Replay",
+     "director": "Simón Matallana",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Hay algo detrás de ti",
+     "director": "Julián Andrés Gómez Reyes",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Appol-o",
+     "director": "Juan José Calvo Lozano, Nicolás Castro Herrera, Cristian Felipe Ossa Castro",
+     "pais": "Colombia"
+    }
+   ],
    "duracion_min": 60,
    "_duracion_de": "estimada: el hueco hasta la siguiente en la misma sede (tope 90, 60 si es la última)"
   },
@@ -388,7 +892,29 @@
    "is_programa": true,
    "duracion_min": 120,
    "invitados": "Luis Guillermo Torres (Moderador: presidente de AT Medios, accesibilidad y tecnología (Bogotá))",
-   "sinopsis": "El cine es para todas las personas. Este programa reúne obras audiovisuales que incorporan herramientas de accesibilidad para personas sordas y ciegas, ofreciendo una experiencia cinematográfica más inclusiva y significativa. Convocatoria dirigida a público con discapacidad visual y auditiva, así como público general interesado. Entrada libre hasta completar aforo. Con cineforo."
+   "sinopsis": "El cine es para todas las personas. Este programa reúne obras audiovisuales que incorporan herramientas de accesibilidad para personas sordas y ciegas, ofreciendo una experiencia cinematográfica más inclusiva y significativa. Convocatoria dirigida a público con discapacidad visual y auditiva, así como público general interesado. Entrada libre hasta completar aforo. Con cineforo.",
+   "obras": [
+    {
+     "titulo": "Alivios",
+     "pais": "México, Venezuela"
+    },
+    {
+     "titulo": "El bitcoin de oro",
+     "pais": "España"
+    },
+    {
+     "titulo": "El maestro de la piquería",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Khazana",
+     "pais": "Pakistán"
+    },
+    {
+     "titulo": "Quinto primera",
+     "pais": "España"
+    }
+   ]
   },
   {
    "dia": "2026-10-23",
@@ -426,7 +952,29 @@
    "is_programa": true,
    "duracion_min": 120,
    "invitados": "Luis Guillermo Torres (Moderador: presidente de AT Medios, accesibilidad y tecnología (Bogotá))",
-   "sinopsis": "El cine es para todas las personas. Este programa reúne obras audiovisuales que incorporan herramientas de accesibilidad para personas sordas y ciegas, ofreciendo una experiencia cinematográfica más inclusiva y significativa. Convocatoria dirigida a público con discapacidad visual y auditiva, así como público general interesado. Entrada libre hasta completar aforo. Con cineforo."
+   "sinopsis": "El cine es para todas las personas. Este programa reúne obras audiovisuales que incorporan herramientas de accesibilidad para personas sordas y ciegas, ofreciendo una experiencia cinematográfica más inclusiva y significativa. Convocatoria dirigida a público con discapacidad visual y auditiva, así como público general interesado. Entrada libre hasta completar aforo. Con cineforo.",
+   "obras": [
+    {
+     "titulo": "Alivios",
+     "pais": "México, Venezuela"
+    },
+    {
+     "titulo": "El bitcoin de oro",
+     "pais": "España"
+    },
+    {
+     "titulo": "El maestro de la piquería",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Khazana",
+     "pais": "Pakistán"
+    },
+    {
+     "titulo": "Quinto primera",
+     "pais": "España"
+    }
+   ]
   },
   {
    "dia": "2026-10-23",
@@ -464,7 +1012,29 @@
    "is_programa": true,
    "duracion_min": 120,
    "invitados": "Jair Vega (Moderador: Sociólogo, docente e investigador (Barranquilla)) · Liz Dany Macías (Realizadora Audiovisual Comunidad Mokaná (Puerto Colombia)) · Elizabeth Pirela González (Realizadora Audiovisual, directora y guionista Wayuu del clan Epieyü, Casa productora MAITUUI FILMS S.A.S. (Guajira)) · Cristóbal Mendoza Carmona (Realizador Audiovisual comunidad Ette Ennaka (Santa Marta, Sierra Nevada))",
-   "sinopsis": "Diversas voces, culturas y formas de ver el mundo se encuentran en la pantalla. Este año Territorios Vivos reúne obras audiovisuales realizadas por comunidades indígenas del Caribe Colombiano. Con cineforo."
+   "sinopsis": "Diversas voces, culturas y formas de ver el mundo se encuentran en la pantalla. Este año Territorios Vivos reúne obras audiovisuales realizadas por comunidades indígenas del Caribe Colombiano. Con cineforo.",
+   "obras": [
+    {
+     "titulo": "El silencio de las semillas",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Memorias piedras de boca e’ caña",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Princesado mokaná: el legado del cerro de las hermosas",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Proowa",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Seguridad en el territorio del pueblo ette ennka chimila",
+     "pais": "Colombia"
+    }
+   ]
   },
   {
    "dia": "2026-10-23",
@@ -480,6 +1050,48 @@
    },
    "is_programa": true,
    "sinopsis": "Películas documentales que exploran diversos dispositivos narrativos e historias que conectan con sus territorios.",
+   "obras": [
+    {
+     "titulo": "Eject: el último rebobinado",
+     "director": "Martin Desoto / Senin Porto",
+     "pais": "España"
+    },
+    {
+     "titulo": "La fiesta votada",
+     "director": "Lady Vasquez Casupa",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "In turn",
+     "director": "Sahra Asadollahi / Atefeh Salehi",
+     "pais": "Irán"
+    },
+    {
+     "titulo": "Belleza letal",
+     "director": "Juan Abello, Felipe Moreno, Valeria Rúa, Andrés Benavides, German París, Santiago Rodriguez, Fiama Castor, Juan Olmos, Cindy Caffroni, Ronald Marquez",
+     "pais": "Colombia / Barranquilla"
+    },
+    {
+     "titulo": "Recordando mi jerga",
+     "director": "Xilenys Rojas Ortega",
+     "pais": "Colombia / Barranquilla"
+    },
+    {
+     "titulo": "El mundo de humberto",
+     "director": "Paula Ortiz",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Do rocks dream of flying?",
+     "director": "Mathieu Ciulla & Simon Zorraquin",
+     "pais": "España, Francia y Argentina"
+    },
+    {
+     "titulo": "Prueba de cámara",
+     "director": "David Correa Franco",
+     "pais": "Colombia"
+    }
+   ],
    "duracion_min": 60,
    "_duracion_de": "estimada: el hueco hasta la siguiente en la misma sede (tope 90, 60 si es la última)"
   },
@@ -498,6 +1110,48 @@
    },
    "is_programa": true,
    "sinopsis": "Un programa para disfrutar en familia en las calles y plazas. Miradas infantiles y juveniles que cautivan a pequeños y grandes.",
+   "obras": [
+    {
+     "titulo": "Memoria de un pibe",
+     "director": "Pedro Santi",
+     "pais": "Brasil"
+    },
+    {
+     "titulo": "La guerra de los tomates",
+     "director": "Juan Carlos Gutierrez",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "La gran hazaña",
+     "director": "Luber Yesid Zúñiga Ordóñez.",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Los pliegues de la falda",
+     "director": "Blanca Muñoz Avila",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Las zapatillas mágicas",
+     "director": "Luber Yesid Zúñiga Ordóñez.",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Replay",
+     "director": "Simón Matallana",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Hay algo detrás de ti",
+     "director": "Julián Andrés Gómez Reyes",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Appol-o",
+     "director": "Juan José Calvo Lozano, Nicolás Castro Herrera, Cristian Felipe Ossa Castro",
+     "pais": "Colombia"
+    }
+   ],
    "duracion_min": 60,
    "_duracion_de": "estimada: el hueco hasta la siguiente en la misma sede (tope 90, 60 si es la última)"
   },
@@ -516,6 +1170,43 @@
    },
    "tipo": "evento",
    "event_kind": "clausura",
+   "obras": [
+    {
+     "titulo": "Cayenas libertarias",
+     "director": "Javier Camilo Aranguren",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Recordando mi jerga",
+     "director": "Xilenys Rojas Ortega",
+     "pais": "Colombia / Barranquilla"
+    },
+    {
+     "titulo": "Emechiche, el renacer de los cabeciblancos",
+     "director": "Juan Camilo Gonzales",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Stakkars meg",
+     "director": "Liv Joelle Barbosa Blad",
+     "pais": "Noruega"
+    },
+    {
+     "titulo": "Luis antonio",
+     "director": "Juan José Arias Gil",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Chro",
+     "director": "Hamed Bahrami",
+     "pais": "Iran"
+    },
+    {
+     "titulo": "La gran hazaña",
+     "director": "Luber Yesid Zúñiga Ordóñez.",
+     "pais": "Colombia"
+    }
+   ],
    "duracion_min": 60,
    "_duracion_de": "estimada: el hueco hasta la siguiente en la misma sede (tope 90, 60 si es la última)"
   }

@@ -10,6 +10,10 @@
  ],
  "aliases": [
   {
+   "titulo": "Niña chilapa",
+   "tipo": "festival"
+  },
+  {
    "titulo": "Chilapa Girl",
    "idioma": "en",
    "tipo": "traduccion"
@@ -23,7 +27,7 @@
   "Documental"
  ],
  "afiche": {
-  "archivo": "/assets/popayan-2026/nina-chilapa.jpg",
+  "archivo": "/assets/ficica-2026/nina-chilapa.jpg",
   "veredicto": "oficial"
  },
  "xref": {
@@ -38,6 +42,7 @@
  ],
  "presentaciones": [
   "cinemancia-2025",
+  "ficica-2026",
   "popayan-2026"
  ]
 }
