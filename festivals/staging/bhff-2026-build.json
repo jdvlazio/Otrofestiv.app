@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "bogotahorrorfilmfest.com/programacion/ (arreglo PROGRAMACION del HTML) + IG p/DdcszK2Dn7g (franjas nacionales)",
-  "capturado": "2026-10-16",
+  "capturado": "2026-10-18",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "radar": 1030,
@@ -220,6 +220,7 @@
    "address": "Cra. 17 #32A-34, Teusaquillo"
   }
  },
+ "_avisos_id": [],
  "films": [
   {
    "title": "Parapeto",
@@ -324,7 +325,8 @@
      "fecha": "2026-09-26",
      "url": "https://bogotahorrorfilmfest.com/programacion/"
     }
-   }
+   },
+   "id": "f_4def04d293"
   },
   {
    "title": "Sigilo",
@@ -398,7 +400,8 @@
      "fecha": "2026-09-26",
      "url": "https://bogotahorrorfilmfest.com/programacion/"
     }
-   }
+   },
+   "id": "f_48787e7295"
   },
   {
    "title": "Hiperrealidad",
@@ -486,7 +489,8 @@
      "fecha": "2026-09-26",
      "url": "https://bogotahorrorfilmfest.com/programacion/"
     }
-   }
+   },
+   "id": "f_747a1b55a9"
   },
   {
    "title": "Sierra: El Álbum Mortuorio",
@@ -579,7 +583,8 @@
      "fecha": "2026-09-26",
      "url": "https://bogotahorrorfilmfest.com/programacion/"
     }
-   }
+   },
+   "id": "f_c89a65a296"
   },
   {
    "title": "Moviedreams + Chaika",
@@ -701,7 +706,8 @@
      "fecha": "2026-09-26",
      "url": "https://bogotahorrorfilmfest.com/programacion/"
     }
-   }
+   },
+   "id": "f_7c6fef807c"
   },
   {
    "title": "Cerdo que Sobrevivió a la Fiebre Aftosa + Yatsi y el Espíritu del Río",
@@ -827,7 +833,8 @@
      "fecha": "2026-09-26",
      "url": "https://bogotahorrorfilmfest.com/programacion/"
     }
-   }
+   },
+   "id": "f_c466b733d4"
   },
   {
    "title": "La Muerte No Llega Sola",
@@ -1017,7 +1024,8 @@
      "fecha": "2026-09-26",
      "url": "https://bogotahorrorfilmfest.com/programacion/"
     }
-   }
+   },
+   "id": "f_a2c9656691"
   },
   {
    "title": "Work in Progress",
@@ -1103,7 +1111,8 @@
      "fecha": "2026-09-26",
      "url": "https://bogotahorrorfilmfest.com/programacion/"
     }
-   }
+   },
+   "id": "f_0e2be82d02"
   },
   {
    "title": "Dentro del Santiago Horror: Horror sin Fronteras",
@@ -1259,7 +1268,8 @@
      "fecha": "2026-09-26",
      "url": "https://bogotahorrorfilmfest.com/programacion/"
     }
-   }
+   },
+   "id": "f_77f76646a6"
   },
   {
    "title": "El Susurro + Esquirlas de Caracol",
@@ -1378,7 +1388,8 @@
      "fecha": "2026-09-26",
      "url": "https://bogotahorrorfilmfest.com/programacion/"
     }
-   }
+   },
+   "id": "f_fed20a6a39"
   },
   {
    "title": "Donde Duermen los Sueños",
@@ -1461,7 +1472,8 @@
      "fecha": "2026-09-26",
      "url": "https://bogotahorrorfilmfest.com/programacion/"
     }
-   }
+   },
+   "id": "f_f9eb6c114e"
   },
   {
    "title": "La Demonatrix + Gabriel",
@@ -1566,7 +1578,8 @@
      "fecha": "2026-09-26",
      "url": "https://bogotahorrorfilmfest.com/programacion/"
     }
-   }
+   },
+   "id": "f_1e2d4a411e"
   },
   {
    "title": "Algo No Está Bien",
@@ -1749,7 +1762,8 @@
      "fecha": "2026-09-26",
      "url": "https://bogotahorrorfilmfest.com/programacion/"
     }
-   }
+   },
+   "id": "f_2214cc37cb"
   },
   {
    "title": "Hay Algo Esperando",
@@ -1913,7 +1927,8 @@
      "fecha": "2026-09-26",
      "url": "https://bogotahorrorfilmfest.com/programacion/"
     }
-   }
+   },
+   "id": "f_e13938e01b"
   },
   {
    "title": "MEAT the Movie + El Teatro",
@@ -2004,7 +2019,8 @@
      "fecha": "2026-09-26",
      "url": "https://bogotahorrorfilmfest.com/programacion/"
     }
-   }
+   },
+   "id": "f_220193b425"
   },
   {
    "title": "Tarde o Temprano + Siempre hay un monstruo",
@@ -2127,7 +2143,8 @@
      "fecha": "2026-09-26",
      "url": "https://bogotahorrorfilmfest.com/programacion/"
     }
-   }
+   },
+   "id": "f_2d97ac3aaf"
   },
   {
    "title": "Mamá, la Casa No Es Segura",
@@ -2317,7 +2334,8 @@
      "fecha": "2026-09-26",
      "url": "https://bogotahorrorfilmfest.com/programacion/"
     }
-   }
+   },
+   "id": "f_ae36afd246"
   },
   {
    "title": "Clausura + Proyección Corto Nacional Ganador",
@@ -2395,7 +2413,8 @@
      "fecha": "2026-09-26",
      "url": "https://bogotahorrorfilmfest.com/programacion/"
     }
-   }
+   },
+   "id": "f_7de649346b"
   }
  ],
  "_avisos_duracion": [
@@ -2403,7 +2422,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-16T05:45:00",
+  "fecha": "2026-10-18T06:28:34",
   "plan_sha": "2ffdc359c921f8c4",
   "paso": 7,
   "cmd": "python3 pipeline/ensamblar.py bhff-2026"

@@ -316,6 +316,15 @@
   "work_id": {
    "tipo": "string",
    "nota": "La obra del catálogo único (catalogo/obras/<work_id>.json, docs/CATALOGO-OBRAS.md). Lo ponen publicar.py y catalogo_construir.py --escribir, nunca a mano. Va en cada obra, también dentro de film_list; las actividades no llevan. [presentacion-con-obra] frena el push si falta o apunta a una obra que no existe."
+  },
+  "id": {
+   "tipo": "string",
+   "formato": "^f_[0-9a-f]{10}$",
+   "nota": "Identificador ESTABLE de esta función (schema.org ScreeningEvent.identifier; docs/FUNCION.md §11). Lo asigna ensamblar UNA vez (funcion.asignar_ids, registro <fid>-funciones-ids.json) y nunca se recalcula: sobrevive a cambios de hora, sala, sede y título. Único dentro del festival. [id-funcion-estable] frena si un id publicado desaparece o cambia de función. La app no lo lee todavía (18 oct 2026)."
+  },
+  "ids_anteriores": {
+   "tipo": "array",
+   "nota": "Ids de funciones que esta REEMPLAZA (partida, fusionada o casada por decisión registrada; docs/FUNCION.md §11.4). Hermano de titulos_anteriores: la app mueve lo guardado bajo el id viejo."
   }
  },
  "raiz": {

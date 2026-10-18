@@ -341,6 +341,10 @@ def publicar(fid, forzar=False):
         print('  contrato aplicado:', dict(rep))
     sin_src = sum(1 for f in out['films'] if not f.get('_src'))
     print(f'  films sin _src: {sin_src}')
+    # LOS IDS QUE NACIERON POR UN CAMBIO DOBLE (Juan, 18 oct 2026): visibles al
+    # publicar, con la función vieja y la nueva — no solo en un registro
+    for _x in b.get('_avisos_id') or []:
+        print(f'  {_x}')
     return out
 
 

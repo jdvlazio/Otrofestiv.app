@@ -6922,6 +6922,27 @@ try:
 except Exception as _e:
     fail(check, f'no pudo medirse: {_e}')
 
+check = 'id-funcion-estable'
+# El id estable de la función (docs/FUNCION.md §11): contra main, ningún id
+# publicado desaparece sin registro ni cambia de función; ninguno se repite.
+try:
+    import subprocess as _spid, json as _jid, glob as _gid, os as _osid
+    _mal_id = []
+    for _p in sorted(_gid.glob('festivals/*.json')):
+        _r = _spid.run(['git', 'show', f'origin/main:{_p}'], capture_output=True, text=True)
+        if _r.returncode:
+            continue
+        _fid = _osid.path.basename(_p)[:-5]
+        _rp = f'festivals/staging/{_fid}-funciones-ids.json'
+        _reg = _jid.load(open(_rp, encoding='utf-8')) if _osid.path.exists(_rp) else {}
+        _mal_id += [f'{_fid}: {x}' for x in _fn9.ids_estables(_jid.loads(_r.stdout), _jid.load(open(_p, encoding='utf-8')), _reg)]
+    if _mal_id:
+        fail(check, ' · '.join(_mal_id[:6]))
+    else:
+        ok(check, 'ningún id de función desapareció, cambió de función ni se repite')
+except Exception as _e:
+    fail(check, f'no pudo medirse: {_e}')
+
 check = 'excepcion-en-crudo'
 if 'error' in _D9:
     fail(check, f'la deuda del modelo no pudo medirse: {_D9["error"]}')
