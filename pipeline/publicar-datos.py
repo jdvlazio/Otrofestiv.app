@@ -121,11 +121,11 @@ def guardianes(fest, ruta, contenido):
 def _commit_en_datos(ruta, contenido, mensaje):
     """Pone `contenido` en `ruta` sobre la punta de la rama `datos` (sin tocar el
     checkout) y la empuja. Devuelve el sha de la punta (el mismo si no cambió)."""
-    git('fetch', '-q', 'origin', 'main')
+    git('fetch', '-q', 'origin', '+refs/heads/main:refs/remotes/origin/main')
     hay = subprocess.run(['git', '-C', REPO, 'ls-remote', '--exit-code', '--heads', 'origin', RAMA],
                          capture_output=True, timeout=TIEMPO).returncode == 0
     if hay:
-        git('fetch', '-q', 'origin', RAMA)
+        git('fetch', '-q', 'origin', f'+refs/heads/{RAMA}:refs/remotes/origin/{RAMA}')  # explícito: un clon que nunca bajó la rama no crea origin/datos
     base = git('rev-parse', f'origin/{RAMA}' if hay else 'origin/main')
     blob = git('hash-object', '-w', '--stdin', entrada=contenido)
     act = subprocess.run(['git', '-C', REPO, 'rev-parse', f'{base}:{ruta}'], capture_output=True, timeout=TIEMPO)
@@ -203,11 +203,11 @@ def main():
         print('· --probar: no se sube nada'); return
 
     # 2. a la rama `datos`, sin tocar el checkout
-    git('fetch', '-q', 'origin', 'main')
+    git('fetch', '-q', 'origin', '+refs/heads/main:refs/remotes/origin/main')
     hay_rama = subprocess.run(['git', '-C', REPO, 'ls-remote', '--exit-code', '--heads', 'origin', RAMA],
                               capture_output=True, timeout=TIEMPO).returncode == 0
     if hay_rama:
-        git('fetch', '-q', 'origin', RAMA)
+        git('fetch', '-q', 'origin', f'+refs/heads/{RAMA}:refs/remotes/origin/{RAMA}')  # explícito: un clon que nunca bajó la rama no crea origin/datos
     base = git('rev-parse', f'origin/{RAMA}' if hay_rama else 'origin/main')
     blob = git('hash-object', '-w', '--stdin', entrada=contenido)
     actual = subprocess.run(['git', '-C', REPO, 'rev-parse', f'{base}:{ruta}'], capture_output=True, timeout=TIEMPO)
