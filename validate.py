@@ -6674,7 +6674,8 @@ try:
     _CANON = {'crudo.json', 'correcciones.json', 'build.json', 'titulos-anteriores.json',
               'quitar.json', 'duraciones.json',  # `-quitar.json` lo lee ensamblar.py (f-string), 14 oct 2026
               # el modelo de la función (docs/FUNCION.md): funcion.cargar y ensamblar, 16 oct 2026
-              'afirmaciones.json', 'funciones-ids.json', 'conflictos.json'}
+              'afirmaciones.json', 'funciones-ids.json', 'conflictos.json',
+              'funciones-decisiones.json'}  # §11.3.4, 18 oct 2026
     _viv = ['pipeline/lib.py','pipeline/ensamblar.py','pipeline/correr.py','pipeline/publicar.py'] + \
            sorted(_f for _f in _g9.glob('pipeline/*.py') if _re9.search(r'^pipeline/[a-z]+-20\d\d-', _f))
     _corp = '\n'.join(open(_f, encoding='utf-8', errors='ignore').read() for _f in _viv if _os9.path.exists(_f)) + \
