@@ -181,6 +181,13 @@ enum PlanCompute {
         guard !byKey.isEmpty else { return items }
         return items.map { var i = $0; i.delayMin = byKey[delayKey($0)]; return i }
     }
+    // Ventana del control de retraso en el reloj (14 oct 2026, Juan): desde 15 min
+    // antes de la hora PROGRAMADA hasta el fin real. Antes no tiene sentido decir
+    // «empezó tarde»; 15 min cubre la sala que todavía no abre.
+    static func canMarkDelay(_ item: ScheduleItem, now: Date) -> Bool {
+        guard let s = startDate(item), let e = endDate(item) else { return false }
+        return now >= s.addingTimeInterval(-15 * 60) && now < e
+    }
     static func isLive(_ item: ScheduleItem, now: Date) -> Bool {
         guard let s = startDate(item), let e = endDate(item) else { return false }
         return s <= now && now < e

@@ -1,0 +1,51 @@
+{
+ "id": "w_R4HHSYKXBWCD",
+ "titulo_original": "Más allá",
+ "anio": 2025,
+ "paises": [
+  "VE",
+  "CO",
+  "US",
+  "CA"
+ ],
+ "directores": [
+  "Bettina López Mendoza"
+ ],
+ "aliases": [
+  {
+   "titulo": "Beyond",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "Después de haber sido separada de su madre mientras intentaban cruzar la selva entre Colombia y Panamá, una pequeña migrante venezolana se ve obligada a abandonar su infancia para sobrevivir. Zuli empieza a trabajar para un coyote que guía a migrantes dentro de la selva. En uno de sus viajes descubre un portal que la transporta a una tierra mágica donde se ve impulsada a reconectar con su inocencia y su imaginación, aprendiendo a ser una niña otra vez.",
+  "en": "After being separated from her mother while crossing the treacherous jungle between Colombia and Panama, Zuli, a young Venezuelan migrant, is forced to abandon her childhood to survive in this dangerous place. While working for a coyote to help guide other migrants through the jungle, Zuli discovers a portal to a magical land, where she must turn to her imagination to reconnect with her innocence and, ultimately, learn how to be a kid again."
+ },
+ "generos": [
+  "Ficción"
+ ],
+ "afiche": {
+  "archivo": "/assets/ficdeh/pasta-negra.jpg",
+  "veredicto": "oficial-festival"
+ },
+ "xref": {
+  "tmdb": 1488751,
+  "letterboxd": "beyond-2025"
+ },
+ "versiones": [
+  {
+   "etiqueta": "15 min",
+   "duracion_min": 15
+  },
+  {
+   "etiqueta": "16 min",
+   "duracion_min": 16
+  }
+ ],
+ "presentaciones": [
+  "ficdeh-2026",
+  "ficica-2026",
+  "popayan-2026"
+ ]
+}

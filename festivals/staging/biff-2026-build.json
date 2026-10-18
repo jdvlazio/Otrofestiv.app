@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "PDF oficial del BIFF 12 + agenda de la Cinemateca de Bogotá + biff.co",
-  "capturado": "2026-10-07",
+  "capturado": "2026-10-16",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_sedes": "El nombre de la sede como la presenta el PDF (págs. 28–31); la sala va aparte, desde las fichas.",
@@ -122,17 +122,17 @@
    "archetype": "Charlas / Industria",
    "order": 1
   },
-  "✨ Espíritu joven": {
+  "✨ Espíritu Joven": {
    "en": "Young Spirit",
    "archetype": "Competencia",
    "order": 2
   },
-  "🧬 Relatos mutantes": {
+  "🧬 Relatos Mutantes": {
    "en": "Mutant Tales",
    "archetype": "Perspectivas / Miradas",
    "order": 3
   },
-  "✊ Clases de lucha": {
+  "✊ Clases de Lucha": {
    "en": "Fighting Classes",
    "archetype": "Perspectivas / Miradas",
    "order": 4
@@ -142,7 +142,7 @@
    "archetype": "Perspectivas / Miradas",
    "order": 5
   },
-  "👻 Fantasmas del pasado": {
+  "👻 Fantasmas del Pasado": {
    "en": "Ghosts of the Past",
    "archetype": "Perspectivas / Miradas",
    "order": 6
@@ -152,7 +152,7 @@
    "archetype": "Retrospectiva / Tributo",
    "order": 7
   },
-  "🎬 Muestra de cortometrajes BIFF Bang": {
+  "🎬 Muestra de Cortometrajes BIFF Bang": {
    "en": "BIFF BANG Short Film Showcase",
    "archetype": "Cortos / Programas",
    "order": 8
@@ -162,12 +162,12 @@
    "archetype": "Especiales / Eventos",
    "order": 9
   },
-  "🇨🇴 Colombia viva": {
+  "🇨🇴 Colombia Viva": {
    "en": "Colombia Viva",
    "archetype": "Muestra / País",
    "order": 10
   },
-  "🎤 Charlas abiertas BIFF Bang": {
+  "🎤 Charlas Abiertas BIFF Bang": {
    "en": "BIFF BANG Open Talks",
    "archetype": "Charlas / Industria",
    "order": 11
@@ -306,6 +306,11 @@
    "type": "event",
    "section": "🎙️ Paneles de Industria",
    "duration": "60 min",
+   "_ancla": [
+    "Cámara de Comercio de Bogotá - Sede Chapinero - Bogotá",
+    "2026-10-08",
+    "09:15"
+   ],
    "day": "2026-10-08",
    "time": "09:15",
    "day_order": 0,
@@ -324,7 +329,7 @@
   {
    "title": "Gabin",
    "type": "film",
-   "section": "✨ Espíritu joven",
+   "section": "✨ Espíritu Joven",
    "director": "Maxence Voiseux",
    "year": 2026,
    "country": "Francia, Alemania, Suiza",
@@ -332,6 +337,11 @@
    "duration": "105 min",
    "language": "Francés",
    "genre": "Documental",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-08",
+    "13:00"
+   ],
    "day": "2026-10-08",
    "time": "13:00",
    "day_order": 0,
@@ -349,12 +359,20 @@
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=1023057…",
    "lbSlug": "gabin",
    "tmdb_id": 1312310,
-   "synopsis_en": "Gabin, the youngest child of the Jourdel family, is set to take over his father's butcher shop. Torn between family loyalty and a desire to break free, he has other dreams."
+   "synopsis_en": "Gabin, the youngest child of the Jourdel family, is set to take over his father's butcher shop. Torn between family loyalty and a desire to break free, he has other dreams.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "We Are Aliens",
    "type": "film",
-   "section": "✨ Espíritu joven",
+   "section": "✨ Espíritu Joven",
    "director": "Kohei Kadowaki",
    "year": 2026,
    "country": "Japón, Francia",
@@ -362,6 +380,11 @@
    "duration": "117 min",
    "language": "Japonés",
    "genre": "Animación",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-08",
+    "14:00"
+   ],
    "day": "2026-10-08",
    "time": "14:00",
    "day_order": 0,
@@ -379,12 +402,20 @@
    "ticket_url": "https://www.cinecolombia.com/films/we-are-aliens/HO00000859/",
    "lbSlug": "we-are-aliens-2026",
    "tmdb_id": 1496928,
-   "synopsis_en": "One summer in the third grade, a quiet boy named Tsubasa meets Gyotaro, a boy everyone in the class looked up to, and the two become close friends. Within their small world, they share irreplaceable moments—until a small incident suddenly tears them apart."
+   "synopsis_en": "One summer in the third grade, a quiet boy named Tsubasa meets Gyotaro, a boy everyone in the class looked up to, and the two become close friends. Within their small world, they share irreplaceable moments—until a small incident suddenly tears them apart.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Como Todo Mortal",
    "type": "film",
-   "section": "🧬 Relatos mutantes",
+   "section": "🧬 Relatos Mutantes",
    "director": "María Molina Peiró",
    "year": 2026,
    "country": "Países Bajos, España",
@@ -392,6 +423,11 @@
    "duration": "93 min",
    "language": "Español, Inglés",
    "genre": "Documental",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-08",
+    "14:00"
+   ],
    "day": "2026-10-08",
    "time": "14:00",
    "day_order": 0,
@@ -409,12 +445,20 @@
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=1023057…",
    "lbSlug": "como-todo-mortal",
    "tmdb_id": 1651710,
-   "synopsis_en": "On a distant planet, a robot searches for minerals and signs of life. Light-years away, in an ancient mine, its inhabitants live surrounded by mineral waste, while astrobiologists investigate a hidden biosphere. Like Any Other Mortal weaves together documentary, flamenco and science fiction, questioning the boundaries between the living and the non-living."
+   "synopsis_en": "On a distant planet, a robot searches for minerals and signs of life. Light-years away, in an ancient mine, its inhabitants live surrounded by mineral waste, while astrobiologists investigate a hidden biosphere. Like Any Other Mortal weaves together documentary, flamenco and science fiction, questioning the boundaries between the living and the non-living.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Heat",
    "type": "film",
-   "section": "✊ Clases de lucha",
+   "section": "✊ Clases de Lucha",
    "director": "Jacqueline Zünd",
    "year": 2026,
    "country": "Suiza",
@@ -422,6 +466,11 @@
    "duration": "84 min",
    "language": "Árabe, Inglés",
    "genre": "Documental",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-08",
+    "14:30"
+   ],
    "day": "2026-10-08",
    "time": "14:30",
    "day_order": 0,
@@ -439,12 +488,20 @@
    "ticket_url": "https://www.cinecolombia.com/films/heat/HO00000837/",
    "lbSlug": "heat-2026",
    "tmdb_id": 1658185,
-   "synopsis_en": "Climate change disrupts lives and relationships – especially in the Persian Gulf, where temperatures can exceed 50°C and society is divided between the privileged few who can protect themselves, and migrants who have no choice but to endure the heat in order to make ends meet."
+   "synopsis_en": "Climate change disrupts lives and relationships – especially in the Persian Gulf, where temperatures can exceed 50°C and society is divided between the privileged few who can protect themselves, and migrants who have no choice but to endure the heat in order to make ends meet.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Eklipse",
    "type": "film",
-   "section": "✨ Espíritu joven",
+   "section": "✨ Espíritu Joven",
    "director": "Manuel Wetscher",
    "year": 2026,
    "country": "Austria, Italia",
@@ -452,6 +509,11 @@
    "duration": "91 min",
    "language": "Alemán",
    "genre": "Drama",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-08",
+    "14:30"
+   ],
    "day": "2026-10-08",
    "time": "14:30",
    "day_order": 0,
@@ -469,12 +531,20 @@
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=1023057…",
    "lbSlug": "eklipse-2026",
    "tmdb_id": 1724831,
-   "synopsis_en": "Twelve-year-old Tomy spends the summer of the 1999 solar eclipse with his best friend Chris on an alpine pasture. When Chris learns that Tomy's father is in hospital with AIDS, their friendship falls apart – and Tomy suddenly finds himself torn between exclusion and the secrecy of his own family."
+   "synopsis_en": "Twelve-year-old Tomy spends the summer of the 1999 solar eclipse with his best friend Chris on an alpine pasture. When Chris learns that Tomy's father is in hospital with AIDS, their friendship falls apart – and Tomy suddenly finds himself torn between exclusion and the secrecy of his own family.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Tristan Forever",
    "type": "film",
-   "section": "✊ Clases de lucha",
+   "section": "✊ Clases de Lucha",
    "director": "Tobias Nölle, Loran Bonnardot",
    "year": 2026,
    "country": "Suiza",
@@ -482,6 +552,11 @@
    "duration": "90 min",
    "language": "Inglés, Francés",
    "genre": "Docu-ficción",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-08",
+    "15:00"
+   ],
    "day": "2026-10-08",
    "time": "15:00",
    "day_order": 0,
@@ -499,13 +574,26 @@
    "ticket_url": "https://www.cinecolombia.com/films/tristan-forever/HO00000857/",
    "lbSlug": "tristan-forever",
    "tmdb_id": 1616138,
-   "synopsis_en": "For 30 years, a doctor from Paris has maintained a friendship with a fisherman on Tristan da Cunha, the most isolated inhabited island in the world. Now he travels back one more time, with the plan to stay there for good."
+   "synopsis_en": "For 30 years, a doctor from Paris has maintained a friendship with a fisherman on Tristan da Cunha, the most isolated inhabited island in the world. Now he travels back one more time, with the plan to stay there for good.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Arquitectura de lo Invisible: Montaje y Trabajo Actoral",
    "type": "event",
    "section": "🎙️ Paneles de Industria",
    "duration": "120 min",
+   "_ancla": [
+    "Cámara de Comercio de Bogotá - Sede Chapinero - Bogotá",
+    "2026-10-08",
+    "15:00"
+   ],
    "day": "2026-10-08",
    "time": "15:00",
    "day_order": 0,
@@ -532,6 +620,11 @@
    "duration": "100 min",
    "language": "Español",
    "genre": "Reino Unido",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-08",
+    "15:30"
+   ],
    "day": "2026-10-08",
    "time": "15:30",
    "day_order": 0,
@@ -550,12 +643,20 @@
    "lbSlug": "double-freedom",
    "tmdb_id": 1387981,
    "synopsis_en": "Misael works alone with his axe, cutting down trees in the woods. An unexpected responsibility upends his life, and the logic of his days fades away in a nature where human reason holds no meaning.",
-   "title_en": "Double Freedom"
+   "title_en": "Double Freedom",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Trial of Hein",
    "type": "film",
-   "section": "👻 Fantasmas del pasado",
+   "section": "👻 Fantasmas del Pasado",
    "director": "Kai Stänicke",
    "year": 2026,
    "country": "Alemania",
@@ -563,6 +664,11 @@
    "duration": "122 min",
    "language": "Alemán",
    "genre": "Drama",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-08",
+    "16:00"
+   ],
    "day": "2026-10-08",
    "time": "16:00",
    "day_order": 0,
@@ -580,13 +686,26 @@
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=1023057…",
    "lbSlug": "trial-of-hein",
    "tmdb_id": 1476466,
-   "synopsis_en": "After 14 years away, Hein returns to his home village on a remote island, only to discover that the close-knit community no longer recognises him. Suspecting him to be an impostor, they demand a trial to determine his true identity."
+   "synopsis_en": "After 14 years away, Hein returns to his home village on a remote island, only to discover that the close-knit community no longer recognises him. Suspecting him to be an impostor, they demand a trial to determine his true identity.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Del trópico al norte: industria documental y posibilidades de coproducción",
    "type": "event",
    "section": "🎙️ Paneles de Industria",
    "duration": "60 min",
+   "_ancla": [
+    "Cámara de Comercio de Bogotá - Sede Chapinero - Bogotá",
+    "2026-10-08",
+    "16:00"
+   ],
    "day": "2026-10-08",
    "time": "16:00",
    "day_order": 0,
@@ -613,6 +732,11 @@
    "duration": "95 min",
    "language": "Español",
    "genre": "Drama",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-08",
+    "16:30"
+   ],
    "day": "2026-10-08",
    "time": "16:30",
    "day_order": 0,
@@ -632,7 +756,15 @@
    "lbSlug": "the-intruder-2020",
    "tmdb_id": 667757,
    "synopsis_en": "Inés works as a dubbing actress and sings in a choir in Buenos Aires. While on an idyllic trip she suffers a traumatic episode that she can’t recover from. She has trouble sleeping and experiences very vivid nightmares as strange sounds begin to emerge from inside her. Awake, Inés feels suddenly surrounded by people that seem to come from her dreams.",
-   "title_en": "The Intruder"
+   "title_en": "The Intruder",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "The Man I Love",
@@ -645,6 +777,11 @@
    "duration": "97 min",
    "language": "Inglés",
    "genre": "Drama",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-08",
+    "16:30"
+   ],
    "day": "2026-10-08",
    "time": "16:30",
    "day_order": 0,
@@ -662,19 +799,32 @@
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=1023057…",
    "lbSlug": "the-man-i-love-2026",
    "tmdb_id": 1458914,
-   "synopsis_en": "In late 1980s New York, a theater artist living with AIDS takes on one possibly last great role."
+   "synopsis_en": "In late 1980s New York, a theater artist living with AIDS takes on one possibly last great role.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Everytime",
    "type": "film",
-   "section": "🧬 Relatos mutantes",
+   "section": "🧬 Relatos Mutantes",
    "director": "Sandra Wollner",
    "year": 2026,
    "country": "Alemania, Austria",
    "flags": "🇩🇪🇦🇹",
-   "duration": "124 min",
+   "duration": "119 min",
    "language": "Alemán",
    "genre": "Drama",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-08",
+    "17:00"
+   ],
    "day": "2026-10-08",
    "time": "17:00",
    "day_order": 0,
@@ -692,15 +842,29 @@
    "ticket_url": "https://www.cinecolombia.com/films/everytime/HO00000833/",
    "lbSlug": "everytime",
    "tmdb_id": 1655419,
-   "synopsis_en": "A tragedy brings a mother, daughter, and teenage boy together. Struggling with blame and forgiveness, the unlikely trio take a trip to Tenerife  for a family holiday that never happened. Under the glow of the sun,  past and present quietly start to overlap."
+   "synopsis_en": "A tragedy brings a mother, daughter, and teenage boy together. Struggling with blame and forgiveness, the unlikely trio take a trip to Tenerife  for a family holiday that never happened. Under the glow of the sun,  past and present quietly start to overlap.",
+   "_duracion_corregida": "TMDB 1655419 (119, Cannes 2026); TIFF 119",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
-   "title": "Muestra de cortometrajes BIFF Bang",
+   "title": "Muestra de Cortometrajes BIFF Bang",
    "type": "film",
-   "section": "🎬 Muestra de cortometrajes BIFF Bang",
+   "section": "🎬 Muestra de Cortometrajes BIFF Bang",
    "country": "Uruguay, Colombia, México",
    "flags": "🇺🇾🇨🇴🇲🇽",
    "duration": "101 min",
+   "_ancla": [
+    "Centro Felicidad Chapinero - Bogotá",
+    "2026-10-08",
+    "17:30"
+   ],
    "day": "2026-10-08",
    "time": "17:30",
    "day_order": 0,
@@ -837,12 +1001,15 @@
      "synopsis": "En los baños de la Universidad Nacional de Colombia, las paredes hablan. Los grafismos que emergen de ellas se transforman en un viaje vivo por la memoria estudiantil, la disputa política y la construcción de identidad, revelando cómo incluso un espacio íntimo y cotidiano puede convertirse en un escenario de resistencia y expresión colectiva.",
      "synopsis_lang": "es"
     }
+   ],
+   "titulos_anteriores": [
+    "Muestra de cortometrajes BIFF Bang"
    ]
   },
   {
    "title": "6 Meses en el Edificio Rosa con Azul",
    "type": "film",
-   "section": "✨ Espíritu joven",
+   "section": "✨ Espíritu Joven",
    "director": "Bruno Santamaría Razo",
    "year": 2026,
    "country": "México",
@@ -850,6 +1017,11 @@
    "duration": "104 min",
    "language": "Español",
    "genre": "Drama",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-08",
+    "17:30"
+   ],
    "day": "2026-10-08",
    "time": "17:30",
    "day_order": 0,
@@ -868,12 +1040,20 @@
    "lbSlug": "six-months-in-a-pink-and-blue-building",
    "tmdb_id": 1025407,
    "synopsis_en": "Mexico City, early 90s. The day Bruno turns 11, his growing feelings for his best friend Vladimir clash with the sudden announcement that his father has HIV. Like in salsa songs, his family tries to sing and dance their pain away. Thirty years later, Bruno films and reimagine the memory of what he could not quite perceive as a child.",
-   "title_en": "Six Months in a Pink and Blue Building"
+   "title_en": "Six Months in a Pink and Blue Building",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Objet A",
    "type": "film",
-   "section": "🧬 Relatos mutantes",
+   "section": "🧬 Relatos Mutantes",
    "director": "Ann Oren",
    "year": 2026,
    "country": "Alemania, Luxemburgo, Grecia",
@@ -881,6 +1061,11 @@
    "duration": "95 min",
    "language": "Alemán",
    "genre": "Drama",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-08",
+    "18:00"
+   ],
    "day": "2026-10-08",
    "time": "18:00",
    "day_order": 0,
@@ -898,12 +1083,20 @@
    "ticket_url": "https://www.cinecolombia.com/films/objet-a/HO00000848/",
    "lbSlug": "objet-a",
    "tmdb_id": 1228841,
-   "synopsis_en": "Ingeborg and Adam are visionary hand surgeons bound by love, control, and irresistible fixations. She is compelled to steal objects; he longs to become one. When an accident brings the enigmatic Gaia into their lives, unexpected desires begin to take shape, unsettling the careful balance that has long defined their relationship."
+   "synopsis_en": "Ingeborg and Adam are visionary hand surgeons bound by love, control, and irresistible fixations. She is compelled to steal objects; he longs to become one. When an accident brings the enigmatic Gaia into their lives, unexpected desires begin to take shape, unsettling the careful balance that has long defined their relationship.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Filipiñana",
    "type": "film",
-   "section": "🧬 Relatos mutantes",
+   "section": "🧬 Relatos Mutantes",
    "director": "Rafael Manuel",
    "year": 2026,
    "country": "Singapur, Reino Unido, Filipinas, Francia,",
@@ -911,6 +1104,11 @@
    "duration": "99 min",
    "language": "Filipino, Inglés, Ilocano",
    "genre": "Países Bajos",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-08",
+    "18:30"
+   ],
    "day": "2026-10-08",
    "time": "18:30",
    "day_order": 0,
@@ -928,12 +1126,20 @@
    "ticket_url": "https://www.cinecolombia.com/films/filipiana/HO00000835/",
    "lbSlug": "filipinana-2026",
    "tmdb_id": 1417935,
-   "synopsis_en": "While working at an elite country club outside Manila, a 17-year-old Ilocana worker uncovers the violent truths of her workplace, her country, and her own past after attempting to return a lost golf club to the club's president."
+   "synopsis_en": "While working at an elite country club outside Manila, a 17-year-old Ilocana worker uncovers the violent truths of her workplace, her country, and her own past after attempting to return a lost golf club to the club's president.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Princesa Burro",
    "type": "film",
-   "section": "🧬 Relatos mutantes",
+   "section": "🧬 Relatos Mutantes",
    "director": "Cristóbal León, Joaquín Cociña",
    "year": 2026,
    "country": "Chile, Francia, Países Bajos, Uruguay, Alemania",
@@ -941,6 +1147,11 @@
    "duration": "90 min",
    "language": "Español",
    "genre": "Fantasía",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-08",
+    "19:00"
+   ],
    "day": "2026-10-08",
    "time": "19:00",
    "day_order": 0,
@@ -959,7 +1170,15 @@
    "lbSlug": "donkey-princess",
    "tmdb_id": 1536431,
    "synopsis_en": "Diana is the princess of an ancient kingdom. Her father, King Arthur, forbids love. When Diana falls in love with Lalo, he banishes him. Using a magical bracelet, Diana travels to other worlds in search of her love.",
-   "title_en": "Donkey Princess"
+   "title_en": "Donkey Princess",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Fjord",
@@ -972,6 +1191,11 @@
    "duration": "146 min",
    "language": "Inglés, Rumano, Noruego, Sueco",
    "genre": "Drama",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-08",
+    "19:00"
+   ],
    "day": "2026-10-08",
    "time": "19:00",
    "day_order": 0,
@@ -995,7 +1219,7 @@
   {
    "title": "Hangar Rojo",
    "type": "film",
-   "section": "✊ Clases de lucha",
+   "section": "✊ Clases de Lucha",
    "director": "Juan Pablo Sallato",
    "year": 2026,
    "country": "Chile, Argentina, Italia",
@@ -1003,6 +1227,11 @@
    "duration": "83 min",
    "language": "Español",
    "genre": "Thriller político",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-08",
+    "19:30"
+   ],
    "day": "2026-10-08",
    "time": "19:30",
    "day_order": 0,
@@ -1021,12 +1250,20 @@
    "lbSlug": "the-red-hangar",
    "tmdb_id": 1563588,
    "synopsis_en": "Chile, 1973. The military coup will force Jorge Silva, an Air Force captain, to face the unfolding horror. Inside a military base, he must choose between becoming part of the repression or helping those fighting to stay alive.",
-   "title_en": "The Red Hangar"
+   "title_en": "The Red Hangar",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Goodbye Cruel World",
    "type": "film",
-   "section": "✨ Espíritu joven",
+   "section": "✨ Espíritu Joven",
    "director": "Félix De Givry",
    "year": 2026,
    "country": "Francia, Bélgica",
@@ -1034,6 +1271,11 @@
    "duration": "93 min",
    "language": "Francés",
    "genre": "Drama",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-08",
+    "20:00"
+   ],
    "day": "2026-10-08",
    "time": "20:00",
    "day_order": 0,
@@ -1051,12 +1293,20 @@
    "ticket_url": "https://www.cinecolombia.com/films/adieu-monde-cruel/HO00000869/",
    "lbSlug": "goodbye-cruel-world-2026",
    "tmdb_id": 1352304,
-   "synopsis_en": "Fourteen-year-old Otto writes a suicide letter to his family and classmates, but his attempt fails. Too ashamed to go back home, he hides. As night falls, he roams the city streets like a ghost—until a girl from his high school, Léna, recognizes him."
+   "synopsis_en": "Fourteen-year-old Otto writes a suicide letter to his family and classmates, but his attempt fails. Too ashamed to go back home, he hides. As night falls, he roams the city streets like a ghost—until a girl from his high school, Léna, recognizes him.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Mariinka",
    "type": "film",
-   "section": "✊ Clases de lucha",
+   "section": "✊ Clases de Lucha",
    "director": "Pieter-Jan De Pue",
    "year": 2026,
    "country": "Bélgica, Países Bajos, Alemania, Suecia",
@@ -1064,6 +1314,11 @@
    "duration": "94 min",
    "language": "Inglés, Ucraniano, Ruso",
    "genre": "Documental",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-08",
+    "20:30"
+   ],
    "day": "2026-10-08",
    "time": "20:30",
    "day_order": 0,
@@ -1081,12 +1336,20 @@
    "ticket_url": "https://www.cinecolombia.com/films/mariinka/HO00000845/",
    "lbSlug": "mariinka",
    "tmdb_id": 1625655,
-   "synopsis_en": "In Eastern Ukraine, childhood neighbors find their lives violently derailed by a shifting frontline. Natasha, a promising boxing talent, becomes a military paramedic. Angela, who lost her parents at a young age, survives by moving goods to both sides of the front. Caught in a modern Greek tragedy, brothers Mark and Ruslan now fight on opposite sides – against each other. In the safety of his adoptive family in the United States, their youngest brother Daniil follows the war from afar."
+   "synopsis_en": "In Eastern Ukraine, childhood neighbors find their lives violently derailed by a shifting frontline. Natasha, a promising boxing talent, becomes a military paramedic. Angela, who lost her parents at a young age, survives by moving goods to both sides of the front. Caught in a modern Greek tragedy, brothers Mark and Ruslan now fight on opposite sides – against each other. In the safety of his adoptive family in the United States, their youngest brother Daniil follows the war from afar.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Variations on a Theme",
    "type": "film",
-   "section": "👻 Fantasmas del pasado",
+   "section": "👻 Fantasmas del Pasado",
    "director": "Jason Jacobs, Devon Delmar",
    "year": 2026,
    "country": "Sudáfrica, Países Bajos, Qatar",
@@ -1094,6 +1357,11 @@
    "duration": "65 min",
    "language": "Afrikáans",
    "genre": "Drama",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-08",
+    "21:00"
+   ],
    "day": "2026-10-08",
    "time": "21:00",
    "day_order": 0,
@@ -1111,7 +1379,15 @@
    "ticket_url": "https://www.cinecolombia.com/films/variasies-op-n-tema/HO00000858/",
    "lbSlug": "variations-on-a-theme-2026",
    "tmdb_id": 1599249,
-   "synopsis_en": "An elderly goat herder falls victim to a scam promising long-awaited reparations for her father's WWII service. Structured as a series of recurring visual 'variations', Variations on a Theme is a portrait of endurance and loss."
+   "synopsis_en": "An elderly goat herder falls victim to a scam promising long-awaited reparations for her father's WWII service. Structured as a series of recurring visual 'variations', Variations on a Theme is a portrait of endurance and loss.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Let Us Through, Dear Ancestors",
@@ -1124,6 +1400,11 @@
    "duration": "151 min",
    "language": "Filipino",
    "genre": "Drama",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-08",
+    "21:30"
+   ],
    "day": "2026-10-08",
    "time": "21:30",
    "day_order": 0,
@@ -1141,13 +1422,26 @@
    "ticket_url": "https://www.cinecolombia.com/films/makikiraan-po/HO00000872/",
    "lbSlug": "let-us-through-dear-ancestors",
    "tmdb_id": 1736478,
-   "synopsis_en": "1617, Las Islas Filipinas. The Spanish friar, Father Enciso, the encomendero of one of the islands, rules with unrelenting toughness and an insatiable libido to tame the savages."
+   "synopsis_en": "1617, Las Islas Filipinas. The Spanish friar, Father Enciso, the encomendero of one of the islands, rules with unrelenting toughness and an insatiable libido to tame the savages.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Arquitectura de lo Invisible: Montaje y Guion",
    "type": "event",
    "section": "🎙️ Paneles de Industria",
    "duration": "90 min",
+   "_ancla": [
+    "Cámara de Comercio de Bogotá - Sede Chapinero - Bogotá",
+    "2026-10-09",
+    "09:00"
+   ],
    "day": "2026-10-09",
    "time": "09:00",
    "day_order": 1,
@@ -1168,6 +1462,11 @@
    "type": "event",
    "section": "🎙️ Paneles de Industria",
    "duration": "120 min",
+   "_ancla": [
+    "Cámara de Comercio de Bogotá - Sede Chapinero - Bogotá",
+    "2026-10-09",
+    "11:00"
+   ],
    "day": "2026-10-09",
    "time": "11:00",
    "day_order": 1,
@@ -1186,7 +1485,7 @@
   {
    "title": "Mariinka",
    "type": "film",
-   "section": "✊ Clases de lucha",
+   "section": "✊ Clases de Lucha",
    "director": "Pieter-Jan De Pue",
    "year": 2026,
    "country": "Bélgica, Países Bajos, Alemania, Suecia",
@@ -1194,6 +1493,11 @@
    "duration": "94 min",
    "language": "Inglés, Ucraniano, Ruso",
    "genre": "Documental",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-09",
+    "13:00"
+   ],
    "day": "2026-10-09",
    "time": "13:00",
    "day_order": 1,
@@ -1211,7 +1515,15 @@
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=1023057…",
    "lbSlug": "mariinka",
    "tmdb_id": 1625655,
-   "synopsis_en": "In Eastern Ukraine, childhood neighbors find their lives violently derailed by a shifting frontline. Natasha, a promising boxing talent, becomes a military paramedic. Angela, who lost her parents at a young age, survives by moving goods to both sides of the front. Caught in a modern Greek tragedy, brothers Mark and Ruslan now fight on opposite sides – against each other. In the safety of his adoptive family in the United States, their youngest brother Daniil follows the war from afar."
+   "synopsis_en": "In Eastern Ukraine, childhood neighbors find their lives violently derailed by a shifting frontline. Natasha, a promising boxing talent, becomes a military paramedic. Angela, who lost her parents at a young age, survives by moving goods to both sides of the front. Caught in a modern Greek tragedy, brothers Mark and Ruslan now fight on opposite sides – against each other. In the safety of his adoptive family in the United States, their youngest brother Daniil follows the war from afar.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Tierra de Mi Padre",
@@ -1224,6 +1536,11 @@
    "duration": "82 min",
    "language": "Alemán, Inglés, Francés, Ruso",
    "genre": "Drama",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-09",
+    "14:00"
+   ],
    "day": "2026-10-09",
    "time": "14:00",
    "day_order": 1,
@@ -1242,7 +1559,15 @@
    "lbSlug": "fatherland-2026",
    "tmdb_id": 1437696,
    "synopsis_en": "In 1949, German writer Thomas Mann and his daughter Erika embark on a road trip across a Germany in ruins, from US-dominated Frankfurt to Soviet-controlled Weimar.",
-   "title_en": "Fatherland"
+   "title_en": "Fatherland",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "La Libertad Doble",
@@ -1255,6 +1580,11 @@
    "duration": "100 min",
    "language": "Español",
    "genre": "Reino Unido",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-09",
+    "14:00"
+   ],
    "day": "2026-10-09",
    "time": "14:00",
    "day_order": 1,
@@ -1273,12 +1603,20 @@
    "lbSlug": "double-freedom",
    "tmdb_id": 1387981,
    "synopsis_en": "Misael works alone with his axe, cutting down trees in the woods. An unexpected responsibility upends his life, and the logic of his days fades away in a nature where human reason holds no meaning.",
-   "title_en": "Double Freedom"
+   "title_en": "Double Freedom",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Como Todo Mortal",
    "type": "film",
-   "section": "🧬 Relatos mutantes",
+   "section": "🧬 Relatos Mutantes",
    "director": "María Molina Peiró",
    "year": 2026,
    "country": "Países Bajos, España",
@@ -1286,6 +1624,11 @@
    "duration": "93 min",
    "language": "Español, Inglés",
    "genre": "Documental",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-09",
+    "14:30"
+   ],
    "day": "2026-10-09",
    "time": "14:30",
    "day_order": 1,
@@ -1303,12 +1646,20 @@
    "ticket_url": "https://www.cinecolombia.com/films/como-todo-mortal/HO00000862/",
    "lbSlug": "como-todo-mortal",
    "tmdb_id": 1651710,
-   "synopsis_en": "On a distant planet, a robot searches for minerals and signs of life. Light-years away, in an ancient mine, its inhabitants live surrounded by mineral waste, while astrobiologists investigate a hidden biosphere. Like Any Other Mortal weaves together documentary, flamenco and science fiction, questioning the boundaries between the living and the non-living."
+   "synopsis_en": "On a distant planet, a robot searches for minerals and signs of life. Light-years away, in an ancient mine, its inhabitants live surrounded by mineral waste, while astrobiologists investigate a hidden biosphere. Like Any Other Mortal weaves together documentary, flamenco and science fiction, questioning the boundaries between the living and the non-living.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Trial of Hein",
    "type": "film",
-   "section": "👻 Fantasmas del pasado",
+   "section": "👻 Fantasmas del Pasado",
    "director": "Kai Stänicke",
    "year": 2026,
    "country": "Alemania",
@@ -1316,6 +1667,11 @@
    "duration": "122 min",
    "language": "Alemán",
    "genre": "Drama",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-09",
+    "15:00"
+   ],
    "day": "2026-10-09",
    "time": "15:00",
    "day_order": 1,
@@ -1333,7 +1689,15 @@
    "ticket_url": "https://www.cinecolombia.com/films/der-heimatlose/HO00000856/",
    "lbSlug": "trial-of-hein",
    "tmdb_id": 1476466,
-   "synopsis_en": "After 14 years away, Hein returns to his home village on a remote island, only to discover that the close-knit community no longer recognises him. Suspecting him to be an impostor, they demand a trial to determine his true identity."
+   "synopsis_en": "After 14 years away, Hein returns to his home village on a remote island, only to discover that the close-knit community no longer recognises him. Suspecting him to be an impostor, they demand a trial to determine his true identity.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Red Rocks",
@@ -1346,6 +1710,11 @@
    "duration": "90 min",
    "language": "Francés",
    "genre": "Drama",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-09",
+    "15:00"
+   ],
    "day": "2026-10-09",
    "time": "15:00",
    "day_order": 1,
@@ -1363,12 +1732,20 @@
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=1023057…",
    "lbSlug": "red-rocks-2026",
    "tmdb_id": 1265831,
-   "synopsis_en": "On the French Riviera, two gangs of kids compete in the perilous game of cliff jumping. Géo, barely five years old, discovers over the course of a summer a world where friendship blends with rivalry, and where the first stirrings of the heart emerge against the dazzling Mediterranean landscape."
+   "synopsis_en": "On the French Riviera, two gangs of kids compete in the perilous game of cliff jumping. Géo, barely five years old, discovers over the course of a summer a world where friendship blends with rivalry, and where the first stirrings of the heart emerge against the dazzling Mediterranean landscape.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Nina Roza",
    "type": "film",
-   "section": "👻 Fantasmas del pasado",
+   "section": "👻 Fantasmas del Pasado",
    "director": "Geneviève Dulude-de Celles",
    "year": 2026,
    "country": "Canadá, Bélgica, Bulgaria, Italia",
@@ -1376,6 +1753,11 @@
    "duration": "103 min",
    "language": "Francés, Búlgaro",
    "genre": "Drama",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-09",
+    "15:30"
+   ],
    "day": "2026-10-09",
    "time": "15:30",
    "day_order": 1,
@@ -1393,7 +1775,15 @@
    "ticket_url": "https://www.cinecolombia.com/films/nina-roza/HO00000847/",
    "lbSlug": "fleur-bleue-1",
    "tmdb_id": 1527449,
-   "synopsis_en": "A viral video of an 8-year-old Bulgarian artist catches the eye of a major art collector, and Mihail is sent there, 30 years after leaving his home country, to assess the value of the girl's work and confront ghosts from his past."
+   "synopsis_en": "A viral video of an 8-year-old Bulgarian artist catches the eye of a major art collector, and Mihail is sent there, 30 years after leaving his home country, to assess the value of the girl's work and confront ghosts from his past.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Temporada de Caza",
@@ -1406,6 +1796,11 @@
    "duration": "105 min",
    "language": "Español",
    "genre": "Qatar",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-09",
+    "16:00"
+   ],
    "day": "2026-10-09",
    "time": "16:00",
    "day_order": 1,
@@ -1425,12 +1820,20 @@
    "lbSlug": "hunting-season-2017",
    "tmdb_id": 449891,
    "synopsis_en": "La Patagonia, southern Argentina. After his mother's death, Nahuel, a violent teenager, meets his biological father, Ernesto, a skillful hunting guide; but their reunion is harsh, since their souls are only ruled by pride and resentment.",
-   "title_en": "Hunting Season"
+   "title_en": "Hunting Season",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Siempre Soy Tu Animal Materno",
    "type": "film",
-   "section": "✨ Espíritu joven",
+   "section": "✨ Espíritu Joven",
    "director": "Valentina Maurel",
    "year": 2026,
    "country": "Bélgica, Francia, México",
@@ -1438,6 +1841,11 @@
    "duration": "108 min",
    "language": "Español",
    "genre": "Drama",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-09",
+    "16:30"
+   ],
    "day": "2026-10-09",
    "time": "16:30",
    "day_order": 1,
@@ -1456,7 +1864,15 @@
    "lbSlug": "forever-your-maternal-animal",
    "tmdb_id": 1661932,
    "synopsis_en": "After years studying in Europe, Elsa returns to Costa Rica to reunite with her family. She finds her younger sister living alone in the family home, growing increasingly distant and reclusive, as if slipping into a world of her own. Their parents, meanwhile, are absorbed in their own lives. Her father drifts through a series of affairs, while her mother is immersed in republishing the erotic poems of her youth, neither fully grasping the urgency of the situation. Elsa’s return draws the three women into a confrontation with what still binds them, despite everything.",
-   "title_en": "Forever Your Maternal Animal"
+   "title_en": "Forever Your Maternal Animal",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "El Rapto",
@@ -1469,6 +1885,11 @@
    "duration": "95 min",
    "language": "Español",
    "genre": "Drama",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-09",
+    "16:30"
+   ],
    "day": "2026-10-09",
    "time": "16:30",
    "day_order": 1,
@@ -1488,7 +1909,15 @@
    "lbSlug": "the-rescue-the-weight-of-the-world",
    "tmdb_id": 1002459,
    "synopsis_en": "Julio returns with his family to Argentina after the downfall of the brutal dictatorship that overpowered long-standing democracy. Things soon take an ugly turn as his brother is kidnapped and Julio becomes the lead negotiator with the criminals.",
-   "title_en": "The Rescue: The Weight of the World"
+   "title_en": "The Rescue: The Weight of the World",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Let Us Through, Dear Ancestors",
@@ -1501,6 +1930,11 @@
    "duration": "151 min",
    "language": "Filipino",
    "genre": "Drama",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-09",
+    "17:00"
+   ],
    "day": "2026-10-09",
    "time": "17:00",
    "day_order": 1,
@@ -1518,12 +1952,20 @@
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=1023057…",
    "lbSlug": "let-us-through-dear-ancestors",
    "tmdb_id": 1736478,
-   "synopsis_en": "1617, Las Islas Filipinas. The Spanish friar, Father Enciso, the encomendero of one of the islands, rules with unrelenting toughness and an insatiable libido to tame the savages."
+   "synopsis_en": "1617, Las Islas Filipinas. The Spanish friar, Father Enciso, the encomendero of one of the islands, rules with unrelenting toughness and an insatiable libido to tame the savages.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Gabin",
    "type": "film",
-   "section": "✨ Espíritu joven",
+   "section": "✨ Espíritu Joven",
    "director": "Maxence Voiseux",
    "year": 2026,
    "country": "Francia, Alemania, Suiza",
@@ -1531,6 +1973,11 @@
    "duration": "105 min",
    "language": "Francés",
    "genre": "Documental",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-09",
+    "17:30"
+   ],
    "day": "2026-10-09",
    "time": "17:30",
    "day_order": 1,
@@ -1548,7 +1995,15 @@
    "ticket_url": "https://www.cinecolombia.com/films/gabin/HO00000868/",
    "lbSlug": "gabin",
    "tmdb_id": 1312310,
-   "synopsis_en": "Gabin, the youngest child of the Jourdel family, is set to take over his father's butcher shop. Torn between family loyalty and a desire to break free, he has other dreams."
+   "synopsis_en": "Gabin, the youngest child of the Jourdel family, is set to take over his father's butcher shop. Torn between family loyalty and a desire to break free, he has other dreams.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "El Prófugo",
@@ -1561,6 +2016,11 @@
    "duration": "95 min",
    "language": "Español",
    "genre": "Drama",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-09",
+    "18:00"
+   ],
    "day": "2026-10-09",
    "time": "18:00",
    "day_order": 1,
@@ -1580,7 +2040,15 @@
    "lbSlug": "the-intruder-2020",
    "tmdb_id": 667757,
    "synopsis_en": "Inés works as a dubbing actress and sings in a choir in Buenos Aires. While on an idyllic trip she suffers a traumatic episode that she can’t recover from. She has trouble sleeping and experiences very vivid nightmares as strange sounds begin to emerge from inside her. Awake, Inés feels suddenly surrounded by people that seem to come from her dreams.",
-   "title_en": "The Intruder"
+   "title_en": "The Intruder",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Soumsoum, The Night Of The Stars",
@@ -1593,6 +2061,11 @@
    "duration": "101 min",
    "language": "Francés, Árabe chadiano",
    "genre": "Drama",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-09",
+    "18:30"
+   ],
    "day": "2026-10-09",
    "time": "18:30",
    "day_order": 1,
@@ -1610,15 +2083,28 @@
    "ticket_url": "https://www.cinecolombia.com/films/soumsoum-la-nuit-des-astres/HO00000854/",
    "lbSlug": "soumsoum-the-night-of-the-stars",
    "tmdb_id": 1376457,
-   "synopsis_en": "Seventeen-year-old Kellou has been gifted with supernatural powers she does not understand. Her disquiet and uncertainty only change when she meets Aya. It is an encounter with destiny that forges a mystical world where the visible and invisible converge."
+   "synopsis_en": "Seventeen-year-old Kellou has been gifted with supernatural powers she does not understand. Her disquiet and uncertainty only change when she meets Aya. It is an encounter with destiny that forges a mystical world where the visible and invisible converge.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
-   "title": "Muestra de cortometrajes BIFF Bang",
+   "title": "Muestra de Cortometrajes BIFF Bang",
    "type": "film",
-   "section": "🎬 Muestra de cortometrajes BIFF Bang",
+   "section": "🎬 Muestra de Cortometrajes BIFF Bang",
    "country": "Uruguay, Colombia, México",
    "flags": "🇺🇾🇨🇴🇲🇽",
    "duration": "101 min",
+   "_ancla": [
+    "Pontificia Universidad Javeriana - Bogotá",
+    "2026-10-09",
+    "18:30"
+   ],
    "day": "2026-10-09",
    "time": "18:30",
    "day_order": 1,
@@ -1756,6 +2242,9 @@
      "synopsis": "En los baños de la Universidad Nacional de Colombia, las paredes hablan. Los grafismos que emergen de ellas se transforman en un viaje vivo por la memoria estudiantil, la disputa política y la construcción de identidad, revelando cómo incluso un espacio íntimo y cotidiano puede convertirse en un escenario de resistencia y expresión colectiva.",
      "synopsis_lang": "es"
     }
+   ],
+   "titulos_anteriores": [
+    "Muestra de cortometrajes BIFF Bang"
    ]
   },
   {
@@ -1769,6 +2258,11 @@
    "duration": "79 min",
    "language": "Español",
    "genre": "Drama",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-09",
+    "19:00"
+   ],
    "day": "2026-10-09",
    "time": "19:00",
    "day_order": 1,
@@ -1788,7 +2282,15 @@
    "lbSlug": "history-of-fear",
    "tmdb_id": 254719,
    "synopsis_en": "Buenos Aires, during the summer heart, in gated communities surrounded by wastelands covered with trash. The barking of stray dogs, repeated power outages, and uncontrollable clouds of smoke drive the inhabitants to confront their most primitive instincts.",
-   "title_en": "History of Fear"
+   "title_en": "History of Fear",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Zama",
@@ -1801,6 +2303,11 @@
    "duration": "115 min",
    "language": "Español",
    "genre": "Unidos",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-09",
+    "19:30"
+   ],
    "day": "2026-10-09",
    "time": "19:30",
    "day_order": 1,
@@ -1819,7 +2326,15 @@
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=1023057…",
    "lbSlug": "zama",
    "tmdb_id": 326382,
-   "synopsis_en": "In a remote South American colony in the late 18th century, officer Zama of the Spanish crown waits in vain for a transfer to a more prestigious location. He suffers small humiliations and petty politicking as he increasingly succumbs to lust and paranoia."
+   "synopsis_en": "In a remote South American colony in the late 18th century, officer Zama of the Spanish crown waits in vain for a transfer to a more prestigious location. He suffers small humiliations and petty politicking as he increasingly succumbs to lust and paranoia.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Slave Bird",
@@ -1832,6 +2347,11 @@
    "duration": "116 min",
    "language": "Alemán",
    "genre": "Drama",
+   "_ancla": [
+    "Teatro El Ensueño - Bogotá",
+    "2026-10-09",
+    "19:30"
+   ],
    "day": "2026-10-09",
    "time": "19:30",
    "day_order": 1,
@@ -1849,12 +2369,20 @@
    "lbSlug": "prisoner-number-seven",
    "tmdb_id": 235576,
    "synopsis_en": "A young woman, a prisoner who was set up to steal by her lover, is in jail. She would like to see her sweetheart. One night she succeeds in persuading the doctor of the prison who also is a woman, to be released. She finds the man, a waiter in an elegant hotel, behaving as a cynical Don Juan. He was preparing to rob the safe of the hotel and go away with his new lover, a dancer.",
-   "title_en": "Prisoner Number Seven"
+   "title_en": "Prisoner Number Seven",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "El Despertar",
    "type": "film",
-   "section": "🇨🇴 Colombia viva",
+   "section": "🇨🇴 Colombia Viva",
    "director": "Jaime Osorio Márquez",
    "year": 2026,
    "country": "Colombia",
@@ -1862,6 +2390,11 @@
    "duration": "96 min",
    "language": "Español",
    "genre": "Acción",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-09",
+    "20:00"
+   ],
    "day": "2026-10-09",
    "time": "20:00",
    "day_order": 1,
@@ -1881,7 +2414,15 @@
    "lbSlug": "the-awakening-2026",
    "tmdb_id": 1657630,
    "synopsis_en": "An elite military unit ventures into the South American tropical jungle on a mission to eliminate an enemy target. What begins as a tactical operation quickly turns into a nightmare when they encounter supernatural forces emerging from the depths of the jungle. Five hundred years earlier, a Spanish conquistador expedition was consumed by the same relentless force. Separated by centuries but connected by the same hostile territory, both incursions discover something hidden in the jungle: an ancient presence that cannot be controlled.",
-   "title_en": "The Awakening"
+   "title_en": "The Awakening",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Minotauro",
@@ -1891,9 +2432,14 @@
    "year": 2026,
    "country": "Francia, Alemania, Letonia",
    "flags": "🇫🇷🇩🇪🇱🇻",
-   "duration": "141 min",
+   "duration": "140 min",
    "language": "Ruso",
    "genre": "Drama",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-09",
+    "20:30"
+   ],
    "day": "2026-10-09",
    "time": "20:30",
    "day_order": 1,
@@ -1912,12 +2458,21 @@
    "lbSlug": "minotaur-2026",
    "tmdb_id": 848700,
    "synopsis_en": "When Gleb, a successful company director, finds himself under siege from mounting corporate pressures, an increasingly unstable world, and the discovery of his wife's affair, the collapse of his carefully ordered life accelerates toward violence.",
-   "title_en": "Minotaur"
+   "title_en": "Minotaur",
+   "_duracion_corregida": "festival-cannes.com/en/f/minotaur (Durée 140 min); TIFF 140",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Dua",
    "type": "film",
-   "section": "✨ Espíritu joven",
+   "section": "✨ Espíritu Joven",
    "director": "Blerta Basholli",
    "year": 2026,
    "country": "Kosovo, Suiza, Francia",
@@ -1925,6 +2480,11 @@
    "duration": "101 min",
    "language": "Albanés, Serbio",
    "genre": "Drama",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-09",
+    "21:00"
+   ],
    "day": "2026-10-09",
    "time": "21:00",
    "day_order": 1,
@@ -1942,12 +2502,20 @@
    "ticket_url": "https://www.cinecolombia.com/films/dua/HO00000829/",
    "lbSlug": "dua",
    "tmdb_id": 1472825,
-   "synopsis_en": "Prishtina, Kosova, late 1990s. As war looms and ethnic tensions escalate, 13-year-old Dua struggles to find her place among her peers and within her changing body. After an incident shakes her community, she becomes a target herself and bonds with a fearless girl, Maki, who draws her toward an unexpected form of resistance. Between the daily violence and the growing threat of exile, there is little room for quiet awakenings."
+   "synopsis_en": "Prishtina, Kosova, late 1990s. As war looms and ethnic tensions escalate, 13-year-old Dua struggles to find her place among her peers and within her changing body. After an incident shakes her community, she becomes a target herself and bonds with a fearless girl, Maki, who draws her toward an unexpected form of resistance. Between the daily violence and the growing threat of exile, there is little room for quiet awakenings.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "El Deshielo",
    "type": "film",
-   "section": "👻 Fantasmas del pasado",
+   "section": "👻 Fantasmas del Pasado",
    "director": "Manuela Martelli",
    "year": 2026,
    "country": "Chile, Estados Unidos, España, México",
@@ -1955,6 +2523,11 @@
    "duration": "108 min",
    "language": "Español, Inglés, Alemán",
    "genre": "Drama",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-09",
+    "21:00"
+   ],
    "day": "2026-10-09",
    "time": "21:00",
    "day_order": 1,
@@ -1973,12 +2546,20 @@
    "lbSlug": "the-meltdown",
    "tmdb_id": 1210268,
    "synopsis_en": "1992, Chile. Inés parents are away on business and she is left in the care of her grandparents, who own a hotel at the foot of a ski resort. Inés befriends Hanna, a European skier who has come to train in Chile. One night, Hanna disappears. The process of her search will unveil a series of hidden situations.",
-   "title_en": "The Meltdown"
+   "title_en": "The Meltdown",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Elephants in the Fog",
    "type": "film",
-   "section": "✊ Clases de lucha",
+   "section": "✊ Clases de Lucha",
    "director": "Abinash Bikram Shah",
    "year": 2026,
    "country": "Nepal, Alemania, Brasil, Francia, Noruega",
@@ -1986,6 +2567,11 @@
    "duration": "108 min",
    "language": "Nepalí",
    "genre": "Drama",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-09",
+    "21:30"
+   ],
    "day": "2026-10-09",
    "time": "21:30",
    "day_order": 1,
@@ -2003,13 +2589,26 @@
    "ticket_url": "https://www.cinecolombia.com/films/elephants-in-the-fog/HO00000866/",
    "lbSlug": "elephants-in-the-fog",
    "tmdb_id": 1661926,
-   "synopsis_en": "In a small Nepalese village nestled in the heart of a forest populated by wild elephants, Pirati is the matriarch of a Kinnar community. She dreams of escaping to a “normal” life with the man she is in love with. But when one of her daughters disappears, she must investigate and choose between love and responsibility to her community."
+   "synopsis_en": "In a small Nepalese village nestled in the heart of a forest populated by wild elephants, Pirati is the matriarch of a Kinnar community. She dreams of escaping to a “normal” life with the man she is in love with. But when one of her daughters disappears, she must investigate and choose between love and responsibility to her community.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Cortos que llegan lejos, historias que empiezan en el biff bang",
    "type": "event",
-   "section": "🎤 Charlas abiertas BIFF Bang",
+   "section": "🎤 Charlas Abiertas BIFF Bang",
    "duration": "90 min",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-10",
+    "11:00"
+   ],
    "day": "2026-10-10",
    "time": "11:00",
    "day_order": 2,
@@ -2034,6 +2633,11 @@
    "duration": "75 min",
    "language": "Sin diálogos",
    "genre": "Animación",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-10",
+    "13:30"
+   ],
    "day": "2026-10-10",
    "time": "13:30",
    "day_order": 2,
@@ -2051,19 +2655,32 @@
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=1023057…",
    "lbSlug": "papaya-2025",
    "tmdb_id": 1534205,
-   "synopsis_en": "Passionate about flying, a tiny papaya seed in the Amazonian forest must keep moving to avoid rooting. Through perseverance, she discovers the power of her roots, triggering a revolution that transforms her world and fulfills her dreams in an unexpected way."
+   "synopsis_en": "Passionate about flying, a tiny papaya seed in the Amazonian forest must keep moving to avoid rooting. Through perseverance, she discovers the power of her roots, triggering a revolution that transforms her world and fulfills her dreams in an unexpected way.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Cobarde",
    "type": "film",
-   "section": "✨ Espíritu joven",
+   "section": "✨ Espíritu Joven",
    "director": "Lukas Dhont",
    "year": 2026,
    "country": "Bélgica, Francia, Países Bajos",
    "flags": "🇧🇪🇫🇷🇳🇱",
-   "duration": "125 min",
+   "duration": "120 min",
    "language": "Francés, Neerlandés",
    "genre": "Drama histórico",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-10",
+    "14:00"
+   ],
    "day": "2026-10-10",
    "time": "14:00",
    "day_order": 2,
@@ -2081,12 +2698,21 @@
    "ticket_url": "https://www.cinecolombia.com/films/coward/HO00000828/",
    "lbSlug": "coward-2026",
    "tmdb_id": 1437981,
-   "synopsis_en": "Pierre, a young Belgian soldier, wants to prove himself on the battlefield during the First World War. Behind the frontlines, he meets Francis, who is asked to find a way to boost morale."
+   "synopsis_en": "Pierre, a young Belgian soldier, wants to prove himself on the battlefield during the First World War. Behind the frontlines, he meets Francis, who is asked to find a way to boost morale.",
+   "_duracion_corregida": "TMDB 1437981 (120, Cannes 2026); MUBI Fest y TIFF 120",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Lejos de los Árboles",
    "type": "film",
-   "section": "👻 Fantasmas del pasado",
+   "section": "👻 Fantasmas del Pasado",
    "director": "Meritxell Colell Aparicio",
    "year": 2026,
    "country": "España, Perú, Italia",
@@ -2094,6 +2720,11 @@
    "duration": "121 min",
    "language": "Español, Catalán, Quechua",
    "genre": "Drama",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-10",
+    "14:00"
+   ],
    "day": "2026-10-10",
    "time": "14:00",
    "day_order": 2,
@@ -2113,12 +2744,20 @@
    "lbSlug": "far-from-the-trees-2026",
    "tmdb_id": 1025391,
    "synopsis_en": "Adela, a Mexican sound artist, travels from the jungle to the Peruvian Andes alongside Lucho, a guide and translator. Following the legacy of her grandfather, a Republican exiled in Mexico, she weaves a sound map of endangered languages. When the fear of death breaks in, reality fractures. The journey turns into an intimate passage that confronts her with memory, grief, uprooting and identity.",
-   "title_en": "Far From the Trees"
+   "title_en": "Far From the Trees",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Hermanas",
    "type": "film",
-   "section": "✊ Clases de lucha",
+   "section": "✊ Clases de Lucha",
    "director": "Ione Hernández Sáenz",
    "year": 2026,
    "country": "España",
@@ -2126,6 +2765,11 @@
    "duration": "101 min",
    "language": "Español, Euskera",
    "genre": "Drama",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-10",
+    "14:30"
+   ],
    "day": "2026-10-10",
    "time": "14:30",
    "day_order": 2,
@@ -2145,12 +2789,20 @@
    "lbSlug": "sisters-2026",
    "tmdb_id": 1556887,
    "synopsis_en": "Two sisters bring their families together for a summer weekend near Madrid to celebrate milestones and the San Juan Festival. The celebration turns dark when a child makes a serious sexual abuse allegation.",
-   "title_en": "Sisters"
+   "title_en": "Sisters",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "La Gradiva",
    "type": "film",
-   "section": "✨ Espíritu joven",
+   "section": "✨ Espíritu Joven",
    "director": "Marine Atlan",
    "year": 2026,
    "country": "Francia, Italia",
@@ -2158,6 +2810,11 @@
    "duration": "145 min",
    "language": "Francés, Italiano",
    "genre": "Drama",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-10",
+    "14:30"
+   ],
    "day": "2026-10-10",
    "time": "14:30",
    "day_order": 2,
@@ -2175,7 +2832,15 @@
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=1023057…",
    "lbSlug": "la-gradiva",
    "tmdb_id": 1154730,
-   "synopsis_en": "Amid the ancient ruins of Pompeii, a group of French teenagers on a class trip to Naples grapple with anxiety and exhilaration ahead of their high school graduation."
+   "synopsis_en": "Amid the ancient ruins of Pompeii, a group of French teenagers on a class trip to Naples grapple with anxiety and exhilaration ahead of their high school graduation.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Zama",
@@ -2188,6 +2853,11 @@
    "duration": "115 min",
    "language": "Español",
    "genre": "Unidos",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-10",
+    "15:00"
+   ],
    "day": "2026-10-10",
    "time": "15:00",
    "day_order": 2,
@@ -2206,19 +2876,32 @@
    "ticket_url": "https://www.cinecolombia.com/films/zama/HO00000860/",
    "lbSlug": "zama",
    "tmdb_id": 326382,
-   "synopsis_en": "In a remote South American colony in the late 18th century, officer Zama of the Spanish crown waits in vain for a transfer to a more prestigious location. He suffers small humiliations and petty politicking as he increasingly succumbs to lust and paranoia."
+   "synopsis_en": "In a remote South American colony in the late 18th century, officer Zama of the Spanish crown waits in vain for a transfer to a more prestigious location. He suffers small humiliations and petty politicking as he increasingly succumbs to lust and paranoia.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Everytime",
    "type": "film",
-   "section": "🧬 Relatos mutantes",
+   "section": "🧬 Relatos Mutantes",
    "director": "Sandra Wollner",
    "year": 2026,
    "country": "Alemania, Austria",
    "flags": "🇩🇪🇦🇹",
-   "duration": "124 min",
+   "duration": "119 min",
    "language": "Alemán",
    "genre": "Drama",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-10",
+    "15:30"
+   ],
    "day": "2026-10-10",
    "time": "15:30",
    "day_order": 2,
@@ -2236,12 +2919,21 @@
    "ticket_url": "https://www.cinecolombia.com/films/everytime/HO00000833/",
    "lbSlug": "everytime",
    "tmdb_id": 1655419,
-   "synopsis_en": "A tragedy brings a mother, daughter, and teenage boy together. Struggling with blame and forgiveness, the unlikely trio take a trip to Tenerife  for a family holiday that never happened. Under the glow of the sun,  past and present quietly start to overlap."
+   "synopsis_en": "A tragedy brings a mother, daughter, and teenage boy together. Struggling with blame and forgiveness, the unlikely trio take a trip to Tenerife  for a family holiday that never happened. Under the glow of the sun,  past and present quietly start to overlap.",
+   "_duracion_corregida": "TMDB 1655419 (119, Cannes 2026); TIFF 119",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Aquí",
    "type": "film",
-   "section": "🧬 Relatos mutantes",
+   "section": "🧬 Relatos Mutantes",
    "director": "Tiago Guedes",
    "year": 2026,
    "country": "Portugal, España",
@@ -2249,6 +2941,11 @@
    "duration": "204 min",
    "language": "Español",
    "genre": "Drama",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-10",
+    "15:30"
+   ],
    "day": "2026-10-10",
    "time": "15:30",
    "day_order": 2,
@@ -2266,7 +2963,15 @@
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=1023057…",
    "lbSlug": "aqui-2026",
    "tmdb_id": 1548931,
-   "synopsis_en": "In a new land where everyone receives a new name and begins again without a past, Simón takes responsibility for David, a child he met on the crossing to a new life. Driven by an inexplicable conviction, he sets out to find the boy’s mother despite the fact David remembers nothing about her. When he recognizes Inés as the right woman, she accepts the role and an unlikely bond forms between them. While society imposes rules and treats difference as a threat, David resists being shaped and stands for imagination and freedom."
+   "synopsis_en": "In a new land where everyone receives a new name and begins again without a past, Simón takes responsibility for David, a child he met on the crossing to a new life. Driven by an inexplicable conviction, he sets out to find the boy’s mother despite the fact David remembers nothing about her. When he recognizes Inés as the right woman, she accepts the role and an unlikely bond forms between them. While society imposes rules and treats difference as a threat, David resists being shaped and stands for imagination and freedom.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "No Quiero Ser un Hombre",
@@ -2279,6 +2984,11 @@
    "duration": "45 min",
    "language": "Alemán",
    "genre": "Comedia",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-10",
+    "16:00"
+   ],
    "day": "2026-10-10",
    "time": "16:00",
    "day_order": 2,
@@ -2310,6 +3020,11 @@
    "duration": "90 min",
    "language": "Francés",
    "genre": "Drama",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-10",
+    "17:00"
+   ],
    "day": "2026-10-10",
    "time": "17:00",
    "day_order": 2,
@@ -2327,12 +3042,20 @@
    "ticket_url": "https://www.cinecolombia.com/films/les-roches-rouges/HO00000852/",
    "lbSlug": "red-rocks-2026",
    "tmdb_id": 1265831,
-   "synopsis_en": "On the French Riviera, two gangs of kids compete in the perilous game of cliff jumping. Géo, barely five years old, discovers over the course of a summer a world where friendship blends with rivalry, and where the first stirrings of the heart emerge against the dazzling Mediterranean landscape."
+   "synopsis_en": "On the French Riviera, two gangs of kids compete in the perilous game of cliff jumping. Géo, barely five years old, discovers over the course of a summer a world where friendship blends with rivalry, and where the first stirrings of the heart emerge against the dazzling Mediterranean landscape.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Luis Tercero",
    "type": "film",
-   "section": "🇨🇴 Colombia viva",
+   "section": "🇨🇴 Colombia Viva",
    "director": "Iván David Gaona",
    "year": 2026,
    "country": "Colombia",
@@ -2340,6 +3063,11 @@
    "duration": "115 min",
    "language": "Español",
    "genre": "Drama",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-10",
+    "17:00"
+   ],
    "day": "2026-10-10",
    "time": "17:00",
    "day_order": 2,
@@ -2357,15 +3085,28 @@
    },
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=1023057…",
    "lbSlug": "luis-tercero",
-   "tmdb_id": 1774071
+   "tmdb_id": 1774071,
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
-   "title": "Muestra de cortometrajes BIFF Bang",
+   "title": "Muestra de Cortometrajes BIFF Bang",
    "type": "film",
-   "section": "🎬 Muestra de cortometrajes BIFF Bang",
+   "section": "🎬 Muestra de Cortometrajes BIFF Bang",
    "country": "Uruguay, Colombia, México",
    "flags": "🇺🇾🇨🇴🇲🇽",
    "duration": "101 min",
+   "_ancla": [
+    "Parque Santander - Bogotá",
+    "2026-10-10",
+    "17:00"
+   ],
    "day": "2026-10-10",
    "time": "17:00",
    "day_order": 2,
@@ -2501,6 +3242,9 @@
      "synopsis": "En los baños de la Universidad Nacional de Colombia, las paredes hablan. Los grafismos que emergen de ellas se transforman en un viaje vivo por la memoria estudiantil, la disputa política y la construcción de identidad, revelando cómo incluso un espacio íntimo y cotidiano puede convertirse en un escenario de resistencia y expresión colectiva.",
      "synopsis_lang": "es"
     }
+   ],
+   "titulos_anteriores": [
+    "Muestra de cortometrajes BIFF Bang"
    ]
   },
   {
@@ -2511,9 +3255,14 @@
    "year": 2026,
    "country": "Francia, Alemania, Letonia",
    "flags": "🇫🇷🇩🇪🇱🇻",
-   "duration": "141 min",
+   "duration": "140 min",
    "language": "Ruso",
    "genre": "Drama",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-10",
+    "17:30"
+   ],
    "day": "2026-10-10",
    "time": "17:30",
    "day_order": 2,
@@ -2532,12 +3281,21 @@
    "lbSlug": "minotaur-2026",
    "tmdb_id": 848700,
    "synopsis_en": "When Gleb, a successful company director, finds himself under siege from mounting corporate pressures, an increasingly unstable world, and the discovery of his wife's affair, the collapse of his carefully ordered life accelerates toward violence.",
-   "title_en": "Minotaur"
+   "title_en": "Minotaur",
+   "_duracion_corregida": "festival-cannes.com/en/f/minotaur (Durée 140 min); TIFF 140",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Goodbye Cruel World",
    "type": "film",
-   "section": "✨ Espíritu joven",
+   "section": "✨ Espíritu Joven",
    "director": "Félix De Givry",
    "year": 2026,
    "country": "Francia, Bélgica",
@@ -2545,6 +3303,11 @@
    "duration": "93 min",
    "language": "Francés",
    "genre": "Drama",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-10",
+    "17:30"
+   ],
    "day": "2026-10-10",
    "time": "17:30",
    "day_order": 2,
@@ -2562,7 +3325,15 @@
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=1023057…",
    "lbSlug": "goodbye-cruel-world-2026",
    "tmdb_id": 1352304,
-   "synopsis_en": "Fourteen-year-old Otto writes a suicide letter to his family and classmates, but his attempt fails. Too ashamed to go back home, he hides. As night falls, he roams the city streets like a ghost—until a girl from his high school, Léna, recognizes him."
+   "synopsis_en": "Fourteen-year-old Otto writes a suicide letter to his family and classmates, but his attempt fails. Too ashamed to go back home, he hides. As night falls, he roams the city streets like a ghost—until a girl from his high school, Léna, recognizes him.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "El Rapto",
@@ -2575,6 +3346,11 @@
    "duration": "95 min",
    "language": "Español",
    "genre": "Drama",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-10",
+    "18:00"
+   ],
    "day": "2026-10-10",
    "time": "18:00",
    "day_order": 2,
@@ -2594,7 +3370,15 @@
    "lbSlug": "the-rescue-the-weight-of-the-world",
    "tmdb_id": 1002459,
    "synopsis_en": "Julio returns with his family to Argentina after the downfall of the brutal dictatorship that overpowered long-standing democracy. Things soon take an ugly turn as his brother is kidnapped and Julio becomes the lead negotiator with the criminals.",
-   "title_en": "The Rescue: The Weight of the World"
+   "title_en": "The Rescue: The Weight of the World",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Temporada de Caza",
@@ -2607,6 +3391,11 @@
    "duration": "105 min",
    "language": "Español",
    "genre": "Qatar",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-10",
+    "18:30"
+   ],
    "day": "2026-10-10",
    "time": "18:30",
    "day_order": 2,
@@ -2626,12 +3415,20 @@
    "lbSlug": "hunting-season-2017",
    "tmdb_id": 449891,
    "synopsis_en": "La Patagonia, southern Argentina. After his mother's death, Nahuel, a violent teenager, meets his biological father, Ernesto, a skillful hunting guide; but their reunion is harsh, since their souls are only ruled by pride and resentment.",
-   "title_en": "Hunting Season"
+   "title_en": "Hunting Season",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "9 Temples to Heaven",
    "type": "film",
-   "section": "✊ Clases de lucha",
+   "section": "✊ Clases de Lucha",
    "director": "Sompot Chidgasornpongse",
    "year": 2026,
    "country": "Tailandia, Singapur, Francia, Noruega, China,",
@@ -2639,6 +3436,11 @@
    "duration": "140 min",
    "language": "Tailandés",
    "genre": "Hong Kong",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-10",
+    "19:30"
+   ],
    "day": "2026-10-10",
    "time": "19:30",
    "day_order": 2,
@@ -2656,12 +3458,20 @@
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=1023057…",
    "lbSlug": "9-temples-to-heaven",
    "tmdb_id": 1046304,
-   "synopsis_en": "A man takes his sick mother and nine family members on a single-day temple pilgrimage after his boss predicts she may die soon."
+   "synopsis_en": "A man takes his sick mother and nine family members on a single-day temple pilgrimage after his boss predicts she may die soon.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Iluminada",
    "type": "film",
-   "section": "🇨🇴 Colombia viva",
+   "section": "🇨🇴 Colombia Viva",
    "director": "Nicolás Rincón Gille",
    "year": 2026,
    "country": "Bélgica",
@@ -2669,6 +3479,11 @@
    "duration": "120 min",
    "language": "Español",
    "genre": "Drama",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-10",
+    "19:30"
+   ],
    "day": "2026-10-10",
    "time": "19:30",
    "day_order": 2,
@@ -2687,12 +3502,20 @@
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=1023057…",
    "lbSlug": "iluminada",
    "tmdb_id": 1000097,
-   "synopsis_en": "Iluminada has visions. She tries to understand them by writing in private journals. Her writings are poetry that no one else hears. Her life in the peripheral neighbourhoods of Bogotá, riddled with hardships, leaves her with no time or space. Until she meets Juan, a young man who seems to open up another world for her. But her relationship with a stranger is not welcomed by those who control the neighborhood."
+   "synopsis_en": "Iluminada has visions. She tries to understand them by writing in private journals. Her writings are poetry that no one else hears. Her life in the peripheral neighbourhoods of Bogotá, riddled with hardships, leaves her with no time or space. Until she meets Juan, a young man who seems to open up another world for her. But her relationship with a stranger is not welcomed by those who control the neighborhood.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "La Bola Negra",
    "type": "film",
-   "section": "👻 Fantasmas del pasado",
+   "section": "👻 Fantasmas del Pasado",
    "director": "Javier Calvo, Javier Ambrossi",
    "year": 2026,
    "country": "España, Francia",
@@ -2700,6 +3523,11 @@
    "duration": "155 min",
    "language": "Español, Inglés",
    "genre": "Drama",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-10",
+    "20:00"
+   ],
    "day": "2026-10-10",
    "time": "20:00",
    "day_order": 2,
@@ -2716,12 +3544,20 @@
    },
    "lbSlug": "la-bola-negra",
    "tmdb_id": 1422041,
-   "synopsis_en": "The intertwined lives of three men in three different eras, three lives intimately linked by sexuality and desire, pain, and legacy."
+   "synopsis_en": "The intertwined lives of three men in three different eras, three lives intimately linked by sexuality and desire, pain, and legacy.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Variations on a Theme",
    "type": "film",
-   "section": "👻 Fantasmas del pasado",
+   "section": "👻 Fantasmas del Pasado",
    "director": "Jason Jacobs, Devon Delmar",
    "year": 2026,
    "country": "Sudáfrica, Países Bajos, Qatar",
@@ -2729,6 +3565,11 @@
    "duration": "65 min",
    "language": "Afrikáans",
    "genre": "Drama",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-10",
+    "20:00"
+   ],
    "day": "2026-10-10",
    "time": "20:00",
    "day_order": 2,
@@ -2746,12 +3587,20 @@
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=1023057…",
    "lbSlug": "variations-on-a-theme-2026",
    "tmdb_id": 1599249,
-   "synopsis_en": "An elderly goat herder falls victim to a scam promising long-awaited reparations for her father's WWII service. Structured as a series of recurring visual 'variations', Variations on a Theme is a portrait of endurance and loss."
+   "synopsis_en": "An elderly goat herder falls victim to a scam promising long-awaited reparations for her father's WWII service. Structured as a series of recurring visual 'variations', Variations on a Theme is a portrait of endurance and loss.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Light Pillar",
    "type": "film",
-   "section": "👻 Fantasmas del pasado",
+   "section": "👻 Fantasmas del Pasado",
    "director": "Xu Zao",
    "year": 2026,
    "country": "China",
@@ -2759,6 +3608,11 @@
    "duration": "90 min",
    "language": "Chino, Mandarín",
    "genre": "Animación",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-10",
+    "20:30"
+   ],
    "day": "2026-10-10",
    "time": "20:30",
    "day_order": 2,
@@ -2776,7 +3630,15 @@
    "ticket_url": "https://www.cinecolombia.com/films/light-pillar/HO00000843/",
    "lbSlug": "light-pillar",
    "tmdb_id": 1601885,
-   "synopsis_en": "The future. Winter. Space travel is no longer a dream. A lonely janitor tends the grounds of a dilapidated bankrupt film studio with only a former cat actor for company until he embarks on a romantic journey with a female player in a beautiful virtual world."
+   "synopsis_en": "The future. Winter. Space travel is no longer a dream. A lonely janitor tends the grounds of a dilapidated bankrupt film studio with only a former cat actor for company until he embarks on a romantic journey with a female player in a beautiful virtual world.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Historia del Miedo",
@@ -2789,6 +3651,11 @@
    "duration": "79 min",
    "language": "Español",
    "genre": "Drama",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-10",
+    "21:00"
+   ],
    "day": "2026-10-10",
    "time": "21:00",
    "day_order": 2,
@@ -2808,12 +3675,20 @@
    "lbSlug": "history-of-fear",
    "tmdb_id": 254719,
    "synopsis_en": "Buenos Aires, during the summer heart, in gated communities surrounded by wastelands covered with trash. The barking of stray dogs, repeated power outages, and uncontrollable clouds of smoke drive the inhabitants to confront their most primitive instincts.",
-   "title_en": "History of Fear"
+   "title_en": "History of Fear",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "A Providência e a Guitarra",
    "type": "film",
-   "section": "🧬 Relatos mutantes",
+   "section": "🧬 Relatos Mutantes",
    "director": "João Nicolau",
    "year": 2026,
    "country": "Portugal",
@@ -2821,6 +3696,11 @@
    "duration": "125 min",
    "language": "Portugués",
    "genre": "Comedia",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-10",
+    "21:30"
+   ],
    "day": "2026-10-10",
    "time": "21:30",
    "day_order": 2,
@@ -2840,13 +3720,26 @@
    "lbSlug": "providence-and-the-guitar",
    "tmdb_id": 1440397,
    "synopsis_en": "In a distant past, Léon and Elvira Berthelini, itinerant artists, make their living hopping from town to town. In Covarronca, harassed by the Police Commissioner, they are forced to spend the night out in the open. That’s when they meet Stubbs, a young Cambridge student, with whom they find shelter in the home of a painter at odds with his wife. In return for the hospitality, they remind their hosts that the love of art resolves the art of love. Meanwhile, an unusual curse sends them on absurd journeys into the 21st century, where the future of social security and of a rock band are at stake.",
-   "title_en": "Providence and the Guitar"
+   "title_en": "Providence and the Guitar",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "De la mirada propia a una forma de cine",
    "type": "event",
-   "section": "🎤 Charlas abiertas BIFF Bang",
+   "section": "🎤 Charlas Abiertas BIFF Bang",
    "duration": "90 min",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-11",
+    "11:00"
+   ],
    "day": "2026-10-11",
    "time": "11:00",
    "day_order": 3,
@@ -2863,7 +3756,7 @@
   {
    "title": "6 Meses en el Edificio Rosa con Azul",
    "type": "film",
-   "section": "✨ Espíritu joven",
+   "section": "✨ Espíritu Joven",
    "director": "Bruno Santamaría Razo",
    "year": 2026,
    "country": "México",
@@ -2871,6 +3764,11 @@
    "duration": "104 min",
    "language": "Español",
    "genre": "Drama",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-11",
+    "13:30"
+   ],
    "day": "2026-10-11",
    "time": "13:30",
    "day_order": 3,
@@ -2889,12 +3787,20 @@
    "lbSlug": "six-months-in-a-pink-and-blue-building",
    "tmdb_id": 1025407,
    "synopsis_en": "Mexico City, early 90s. The day Bruno turns 11, his growing feelings for his best friend Vladimir clash with the sudden announcement that his father has HIV. Like in salsa songs, his family tries to sing and dance their pain away. Thirty years later, Bruno films and reimagine the memory of what he could not quite perceive as a child.",
-   "title_en": "Six Months in a Pink and Blue Building"
+   "title_en": "Six Months in a Pink and Blue Building",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Luis Tercero",
    "type": "film",
-   "section": "🇨🇴 Colombia viva",
+   "section": "🇨🇴 Colombia Viva",
    "director": "Iván David Gaona",
    "year": 2026,
    "country": "Colombia",
@@ -2902,6 +3808,11 @@
    "duration": "115 min",
    "language": "Español",
    "genre": "Drama",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-11",
+    "14:00"
+   ],
    "day": "2026-10-11",
    "time": "14:00",
    "day_order": 3,
@@ -2919,12 +3830,20 @@
    },
    "ticket_url": "https://www.cinecolombia.com/films/luis-tercero/HO00000873/",
    "lbSlug": "luis-tercero",
-   "tmdb_id": 1774071
+   "tmdb_id": 1774071,
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Hermanas",
    "type": "film",
-   "section": "✊ Clases de lucha",
+   "section": "✊ Clases de Lucha",
    "director": "Ione Hernández Sáenz",
    "year": 2026,
    "country": "España",
@@ -2932,6 +3851,11 @@
    "duration": "101 min",
    "language": "Español, Euskera",
    "genre": "Drama",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-11",
+    "14:00"
+   ],
    "day": "2026-10-11",
    "time": "14:00",
    "day_order": 3,
@@ -2951,12 +3875,20 @@
    "lbSlug": "sisters-2026",
    "tmdb_id": 1556887,
    "synopsis_en": "Two sisters bring their families together for a summer weekend near Madrid to celebrate milestones and the San Juan Festival. The celebration turns dark when a child makes a serious sexual abuse allegation.",
-   "title_en": "Sisters"
+   "title_en": "Sisters",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Dua",
    "type": "film",
-   "section": "✨ Espíritu joven",
+   "section": "✨ Espíritu Joven",
    "director": "Blerta Basholli",
    "year": 2026,
    "country": "Kosovo, Suiza, Francia",
@@ -2964,6 +3896,11 @@
    "duration": "101 min",
    "language": "Albanés, Serbio",
    "genre": "Drama",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-11",
+    "14:30"
+   ],
    "day": "2026-10-11",
    "time": "14:30",
    "day_order": 3,
@@ -2982,12 +3919,20 @@
    "ticket_url": "https://www.cinecolombia.com/films/dua/HO00000829/",
    "lbSlug": "dua",
    "tmdb_id": 1472825,
-   "synopsis_en": "Prishtina, Kosova, late 1990s. As war looms and ethnic tensions escalate, 13-year-old Dua struggles to find her place among her peers and within her changing body. After an incident shakes her community, she becomes a target herself and bonds with a fearless girl, Maki, who draws her toward an unexpected form of resistance. Between the daily violence and the growing threat of exile, there is little room for quiet awakenings."
+   "synopsis_en": "Prishtina, Kosova, late 1990s. As war looms and ethnic tensions escalate, 13-year-old Dua struggles to find her place among her peers and within her changing body. After an incident shakes her community, she becomes a target herself and bonds with a fearless girl, Maki, who draws her toward an unexpected form of resistance. Between the daily violence and the growing threat of exile, there is little room for quiet awakenings.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Nina Roza",
    "type": "film",
-   "section": "👻 Fantasmas del pasado",
+   "section": "👻 Fantasmas del Pasado",
    "director": "Geneviève Dulude-de Celles",
    "year": 2026,
    "country": "Canadá, Bélgica, Bulgaria, Italia",
@@ -2995,6 +3940,11 @@
    "duration": "103 min",
    "language": "Francés, Búlgaro",
    "genre": "Drama",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-11",
+    "14:30"
+   ],
    "day": "2026-10-11",
    "time": "14:30",
    "day_order": 3,
@@ -3012,7 +3962,15 @@
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=1023057…",
    "lbSlug": "fleur-bleue-1",
    "tmdb_id": 1527449,
-   "synopsis_en": "A viral video of an 8-year-old Bulgarian artist catches the eye of a major art collector, and Mihail is sent there, 30 years after leaving his home country, to assess the value of the girl's work and confront ghosts from his past."
+   "synopsis_en": "A viral video of an 8-year-old Bulgarian artist catches the eye of a major art collector, and Mihail is sent there, 30 years after leaving his home country, to assess the value of the girl's work and confront ghosts from his past.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Los Nuevos",
@@ -3025,6 +3983,11 @@
    "duration": "79 min",
    "language": "Español",
    "genre": "Familiar",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-11",
+    "15:00"
+   ],
    "day": "2026-10-11",
    "time": "15:00",
    "day_order": 3,
@@ -3043,12 +4006,20 @@
    "lbSlug": "the-newcomers-2026",
    "tmdb_id": 1735053,
    "synopsis_en": "Three tweens investigate what is poisoning their village's rivers. Mateo narrates as he, his brother Tomas, refugee Tiana, and her dog Nube embark on an adventure to uncover the source of pollution.",
-   "title_en": "The Newcomers"
+   "title_en": "The Newcomers",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Eklipse",
    "type": "film",
-   "section": "✨ Espíritu joven",
+   "section": "✨ Espíritu Joven",
    "director": "Manuel Wetscher",
    "year": 2026,
    "country": "Austria, Italia",
@@ -3056,6 +4027,11 @@
    "duration": "91 min",
    "language": "Alemán",
    "genre": "Drama",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-11",
+    "15:30"
+   ],
    "day": "2026-10-11",
    "time": "15:30",
    "day_order": 3,
@@ -3073,12 +4049,20 @@
    "ticket_url": "https://www.cinecolombia.com/films/eklipse/HO00000864/",
    "lbSlug": "eklipse-2026",
    "tmdb_id": 1724831,
-   "synopsis_en": "Twelve-year-old Tomy spends the summer of the 1999 solar eclipse with his best friend Chris on an alpine pasture. When Chris learns that Tomy's father is in hospital with AIDS, their friendship falls apart – and Tomy suddenly finds himself torn between exclusion and the secrecy of his own family."
+   "synopsis_en": "Twelve-year-old Tomy spends the summer of the 1999 solar eclipse with his best friend Chris on an alpine pasture. When Chris learns that Tomy's father is in hospital with AIDS, their friendship falls apart – and Tomy suddenly finds himself torn between exclusion and the secrecy of his own family.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Filipiñana",
    "type": "film",
-   "section": "🧬 Relatos mutantes",
+   "section": "🧬 Relatos Mutantes",
    "director": "Rafael Manuel",
    "year": 2026,
    "country": "Singapur, Reino Unido, Filipinas, Francia,",
@@ -3086,6 +4070,11 @@
    "duration": "99 min",
    "language": "Filipino, Inglés, Ilocano",
    "genre": "Países Bajos",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-11",
+    "16:00"
+   ],
    "day": "2026-10-11",
    "time": "16:00",
    "day_order": 3,
@@ -3103,12 +4092,20 @@
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=1023057…",
    "lbSlug": "filipinana-2026",
    "tmdb_id": 1417935,
-   "synopsis_en": "While working at an elite country club outside Manila, a 17-year-old Ilocana worker uncovers the violent truths of her workplace, her country, and her own past after attempting to return a lost golf club to the club's president."
+   "synopsis_en": "While working at an elite country club outside Manila, a 17-year-old Ilocana worker uncovers the violent truths of her workplace, her country, and her own past after attempting to return a lost golf club to the club's president.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "A Providência e a Guitarra",
    "type": "film",
-   "section": "🧬 Relatos mutantes",
+   "section": "🧬 Relatos Mutantes",
    "director": "João Nicolau",
    "year": 2026,
    "country": "Portugal",
@@ -3116,6 +4113,11 @@
    "duration": "125 min",
    "language": "Portugués",
    "genre": "Comedia",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-11",
+    "16:30"
+   ],
    "day": "2026-10-11",
    "time": "16:30",
    "day_order": 3,
@@ -3135,12 +4137,20 @@
    "lbSlug": "providence-and-the-guitar",
    "tmdb_id": 1440397,
    "synopsis_en": "In a distant past, Léon and Elvira Berthelini, itinerant artists, make their living hopping from town to town. In Covarronca, harassed by the Police Commissioner, they are forced to spend the night out in the open. That’s when they meet Stubbs, a young Cambridge student, with whom they find shelter in the home of a painter at odds with his wife. In return for the hospitality, they remind their hosts that the love of art resolves the art of love. Meanwhile, an unusual curse sends them on absurd journeys into the 21st century, where the future of social security and of a rock band are at stake.",
-   "title_en": "Providence and the Guitar"
+   "title_en": "Providence and the Guitar",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Iluminada",
    "type": "film",
-   "section": "🇨🇴 Colombia viva",
+   "section": "🇨🇴 Colombia Viva",
    "director": "Nicolás Rincón Gille",
    "year": 2026,
    "country": "Bélgica",
@@ -3148,6 +4158,11 @@
    "duration": "120 min",
    "language": "Español",
    "genre": "Drama",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-11",
+    "17:00"
+   ],
    "day": "2026-10-11",
    "time": "17:00",
    "day_order": 3,
@@ -3166,12 +4181,20 @@
    "ticket_url": "https://www.cinecolombia.com/films/iluminada/HO00000839/",
    "lbSlug": "iluminada",
    "tmdb_id": 1000097,
-   "synopsis_en": "Iluminada has visions. She tries to understand them by writing in private journals. Her writings are poetry that no one else hears. Her life in the peripheral neighbourhoods of Bogotá, riddled with hardships, leaves her with no time or space. Until she meets Juan, a young man who seems to open up another world for her. But her relationship with a stranger is not welcomed by those who control the neighborhood."
+   "synopsis_en": "Iluminada has visions. She tries to understand them by writing in private journals. Her writings are poetry that no one else hears. Her life in the peripheral neighbourhoods of Bogotá, riddled with hardships, leaves her with no time or space. Until she meets Juan, a young man who seems to open up another world for her. But her relationship with a stranger is not welcomed by those who control the neighborhood.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "The Burning Giants",
    "type": "film",
-   "section": "🧬 Relatos mutantes",
+   "section": "🧬 Relatos Mutantes",
    "director": "Phuttiphong Aroonpheng",
    "year": 2026,
    "country": "Tailandia, Singapur, Francia, Países Bajos",
@@ -3179,6 +4202,11 @@
    "duration": "118 min",
    "language": "Tailandés, Lengua Karen",
    "genre": "Drama",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-11",
+    "17:00"
+   ],
    "day": "2026-10-11",
    "time": "17:00",
    "day_order": 3,
@@ -3196,15 +4224,28 @@
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=1023057…",
    "lbSlug": "the-burning-giants",
    "tmdb_id": 1730542,
-   "synopsis_en": "Follows an environmental and Indigenous rights activist from the Karen group who is killed after protesting the forced eviction of his village from a protected forest."
+   "synopsis_en": "Follows an environmental and Indigenous rights activist from the Karen group who is killed after protesting the forced eviction of his village from a protected forest.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
-   "title": "Muestra de cortometrajes BIFF Bang",
+   "title": "Muestra de Cortometrajes BIFF Bang",
    "type": "film",
-   "section": "🎬 Muestra de cortometrajes BIFF Bang",
+   "section": "🎬 Muestra de Cortometrajes BIFF Bang",
    "country": "Uruguay, Colombia, México",
    "flags": "🇺🇾🇨🇴🇲🇽",
    "duration": "101 min",
+   "_ancla": [
+    "Plaza Distrital de Mercado La Concordia - Bogotá",
+    "2026-10-11",
+    "17:00"
+   ],
    "day": "2026-10-11",
    "time": "17:00",
    "day_order": 3,
@@ -3340,12 +4381,15 @@
      "synopsis": "En los baños de la Universidad Nacional de Colombia, las paredes hablan. Los grafismos que emergen de ellas se transforman en un viaje vivo por la memoria estudiantil, la disputa política y la construcción de identidad, revelando cómo incluso un espacio íntimo y cotidiano puede convertirse en un escenario de resistencia y expresión colectiva.",
      "synopsis_lang": "es"
     }
+   ],
+   "titulos_anteriores": [
+    "Muestra de cortometrajes BIFF Bang"
    ]
   },
   {
    "title": "Sants",
    "type": "film",
-   "section": "✊ Clases de lucha",
+   "section": "✊ Clases de Lucha",
    "director": "Mikel Gurrea",
    "year": 2026,
    "country": "España, Italia",
@@ -3353,6 +4397,11 @@
    "duration": "103 min",
    "language": "Catalán, Español",
    "genre": "Drama",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-11",
+    "17:30"
+   ],
    "day": "2026-10-11",
    "time": "17:30",
    "day_order": 3,
@@ -3370,12 +4419,20 @@
    "ticket_url": "https://www.cinecolombia.com/films/sants/HO00000874/",
    "lbSlug": "sants",
    "tmdb_id": 1736709,
-   "synopsis_en": "While dealing with her mother’s impending death, Lali joins a gang of thieves dedicated to stealing religious artefacts. ​"
+   "synopsis_en": "While dealing with her mother’s impending death, Lali joins a gang of thieves dedicated to stealing religious artefacts. ​",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Lejos de los Árboles",
    "type": "film",
-   "section": "👻 Fantasmas del pasado",
+   "section": "👻 Fantasmas del Pasado",
    "director": "Meritxell Colell Aparicio",
    "year": 2026,
    "country": "España, Perú, Italia",
@@ -3383,6 +4440,11 @@
    "duration": "121 min",
    "language": "Español, Catalán, Quechua",
    "genre": "Drama",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-11",
+    "18:00"
+   ],
    "day": "2026-10-11",
    "time": "18:00",
    "day_order": 3,
@@ -3402,12 +4464,20 @@
    "lbSlug": "far-from-the-trees-2026",
    "tmdb_id": 1025391,
    "synopsis_en": "Adela, a Mexican sound artist, travels from the jungle to the Peruvian Andes alongside Lucho, a guide and translator. Following the legacy of her grandfather, a Republican exiled in Mexico, she weaves a sound map of endangered languages. When the fear of death breaks in, reality fractures. The journey turns into an intimate passage that confronts her with memory, grief, uprooting and identity.",
-   "title_en": "Far From the Trees"
+   "title_en": "Far From the Trees",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "We Are Aliens",
    "type": "film",
-   "section": "✨ Espíritu joven",
+   "section": "✨ Espíritu Joven",
    "director": "Kohei Kadowaki",
    "year": 2026,
    "country": "Japón, Francia",
@@ -3415,6 +4485,11 @@
    "duration": "117 min",
    "language": "Japonés",
    "genre": "Animación",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-11",
+    "18:30"
+   ],
    "day": "2026-10-11",
    "time": "18:30",
    "day_order": 3,
@@ -3432,12 +4507,20 @@
    "ticket_url": "https://www.cinecolombia.com/films/we-are-aliens/HO00000859/",
    "lbSlug": "we-are-aliens-2026",
    "tmdb_id": 1496928,
-   "synopsis_en": "One summer in the third grade, a quiet boy named Tsubasa meets Gyotaro, a boy everyone in the class looked up to, and the two become close friends. Within their small world, they share irreplaceable moments—until a small incident suddenly tears them apart."
+   "synopsis_en": "One summer in the third grade, a quiet boy named Tsubasa meets Gyotaro, a boy everyone in the class looked up to, and the two become close friends. Within their small world, they share irreplaceable moments—until a small incident suddenly tears them apart.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "El Deshielo",
    "type": "film",
-   "section": "👻 Fantasmas del pasado",
+   "section": "👻 Fantasmas del Pasado",
    "director": "Manuela Martelli",
    "year": 2026,
    "country": "Chile, Estados Unidos, España, México",
@@ -3445,6 +4528,11 @@
    "duration": "108 min",
    "language": "Español, Inglés, Alemán",
    "genre": "Drama",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-11",
+    "19:00"
+   ],
    "day": "2026-10-11",
    "time": "19:00",
    "day_order": 3,
@@ -3463,12 +4551,20 @@
    "lbSlug": "the-meltdown",
    "tmdb_id": 1210268,
    "synopsis_en": "1992, Chile. Inés parents are away on business and she is left in the care of her grandparents, who own a hotel at the foot of a ski resort. Inés befriends Hanna, a European skier who has come to train in Chile. One night, Hanna disappears. The process of her search will unveil a series of hidden situations.",
-   "title_en": "The Meltdown"
+   "title_en": "The Meltdown",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Elephants in the Fog",
    "type": "film",
-   "section": "✊ Clases de lucha",
+   "section": "✊ Clases de Lucha",
    "director": "Abinash Bikram Shah",
    "year": 2026,
    "country": "Nepal, Alemania, Brasil, Francia, Noruega",
@@ -3476,6 +4572,11 @@
    "duration": "108 min",
    "language": "Nepalí",
    "genre": "Drama",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-11",
+    "19:30"
+   ],
    "day": "2026-10-11",
    "time": "19:30",
    "day_order": 3,
@@ -3493,12 +4594,20 @@
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=1023057…",
    "lbSlug": "elephants-in-the-fog",
    "tmdb_id": 1661926,
-   "synopsis_en": "In a small Nepalese village nestled in the heart of a forest populated by wild elephants, Pirati is the matriarch of a Kinnar community. She dreams of escaping to a “normal” life with the man she is in love with. But when one of her daughters disappears, she must investigate and choose between love and responsibility to her community."
+   "synopsis_en": "In a small Nepalese village nestled in the heart of a forest populated by wild elephants, Pirati is the matriarch of a Kinnar community. She dreams of escaping to a “normal” life with the man she is in love with. But when one of her daughters disappears, she must investigate and choose between love and responsibility to her community.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Donde Comienza el Río",
    "type": "film",
-   "section": "🇨🇴 Colombia viva",
+   "section": "🇨🇴 Colombia Viva",
    "director": "Juan Andrés Arango",
    "year": 2026,
    "country": "Colombia, Canadá",
@@ -3506,6 +4615,11 @@
    "duration": "102 min",
    "language": "Español, Emberá",
    "genre": "Drama",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-11",
+    "19:30"
+   ],
    "day": "2026-10-11",
    "time": "19:30",
    "day_order": 3,
@@ -3525,19 +4639,32 @@
    "lbSlug": "where-the-river-begins",
    "tmdb_id": 865567,
    "synopsis_en": "Yajaira, a young but strong Embera woman, lives with her daughter Maria in a violent Bogotá neighborhood. Haunted by dreams of the jungle, she longs to return to the village she once called home. After a tragedy strikes, they have no choice but to leave. Jhon, a charismatic young gang member, joins them on their dangerous journey to the Andágueda River, driven by motives he keeps hidden.  Donde Comienza el Río is a poignant, poetic film where a perilous escape becomes a journey of healing. As the jungle reemerges through memory and dream, masks fall and reality is touched by the magic of Yajaira’s inner world.",
-   "title_en": "Where the River Begins"
+   "title_en": "Where the River Begins",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Cobarde",
    "type": "film",
-   "section": "✨ Espíritu joven",
+   "section": "✨ Espíritu Joven",
    "director": "Lukas Dhont",
    "year": 2026,
    "country": "Bélgica, Francia, Países Bajos",
    "flags": "🇧🇪🇫🇷🇳🇱",
-   "duration": "125 min",
+   "duration": "120 min",
    "language": "Francés, Neerlandés",
    "genre": "Drama histórico",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-11",
+    "20:00"
+   ],
    "day": "2026-10-11",
    "time": "20:00",
    "day_order": 3,
@@ -3555,12 +4682,21 @@
    "ticket_url": "https://www.cinecolombia.com/films/coward/HO00000828/",
    "lbSlug": "coward-2026",
    "tmdb_id": 1437981,
-   "synopsis_en": "Pierre, a young Belgian soldier, wants to prove himself on the battlefield during the First World War. Behind the frontlines, he meets Francis, who is asked to find a way to boost morale."
+   "synopsis_en": "Pierre, a young Belgian soldier, wants to prove himself on the battlefield during the First World War. Behind the frontlines, he meets Francis, who is asked to find a way to boost morale.",
+   "_duracion_corregida": "TMDB 1437981 (120, Cannes 2026); MUBI Fest y TIFF 120",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Aquí",
    "type": "film",
-   "section": "🧬 Relatos mutantes",
+   "section": "🧬 Relatos Mutantes",
    "director": "Tiago Guedes",
    "year": 2026,
    "country": "Portugal, España",
@@ -3568,6 +4704,11 @@
    "duration": "204 min",
    "language": "Español",
    "genre": "Drama",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-11",
+    "20:30"
+   ],
    "day": "2026-10-11",
    "time": "20:30",
    "day_order": 3,
@@ -3585,12 +4726,20 @@
    "ticket_url": "https://www.cinecolombia.com/films/aqu/HO00000827/",
    "lbSlug": "aqui-2026",
    "tmdb_id": 1548931,
-   "synopsis_en": "In a new land where everyone receives a new name and begins again without a past, Simón takes responsibility for David, a child he met on the crossing to a new life. Driven by an inexplicable conviction, he sets out to find the boy’s mother despite the fact David remembers nothing about her. When he recognizes Inés as the right woman, she accepts the role and an unlikely bond forms between them. While society imposes rules and treats difference as a threat, David resists being shaped and stands for imagination and freedom."
+   "synopsis_en": "In a new land where everyone receives a new name and begins again without a past, Simón takes responsibility for David, a child he met on the crossing to a new life. Driven by an inexplicable conviction, he sets out to find the boy’s mother despite the fact David remembers nothing about her. When he recognizes Inés as the right woman, she accepts the role and an unlikely bond forms between them. While society imposes rules and treats difference as a threat, David resists being shaped and stands for imagination and freedom.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Como Todo Mortal",
    "type": "film",
-   "section": "🧬 Relatos mutantes",
+   "section": "🧬 Relatos Mutantes",
    "director": "María Molina Peiró",
    "year": 2026,
    "country": "Países Bajos, España",
@@ -3598,6 +4747,11 @@
    "duration": "93 min",
    "language": "Español, Inglés",
    "genre": "Documental",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-11",
+    "21:00"
+   ],
    "day": "2026-10-11",
    "time": "21:00",
    "day_order": 3,
@@ -3615,7 +4769,15 @@
    "ticket_url": "https://www.cinecolombia.com/films/como-todo-mortal/HO00000862/",
    "lbSlug": "como-todo-mortal",
    "tmdb_id": 1651710,
-   "synopsis_en": "On a distant planet, a robot searches for minerals and signs of life. Light-years away, in an ancient mine, its inhabitants live surrounded by mineral waste, while astrobiologists investigate a hidden biosphere. Like Any Other Mortal weaves together documentary, flamenco and science fiction, questioning the boundaries between the living and the non-living."
+   "synopsis_en": "On a distant planet, a robot searches for minerals and signs of life. Light-years away, in an ancient mine, its inhabitants live surrounded by mineral waste, while astrobiologists investigate a hidden biosphere. Like Any Other Mortal weaves together documentary, flamenco and science fiction, questioning the boundaries between the living and the non-living.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "The Man I Love",
@@ -3628,6 +4790,11 @@
    "duration": "97 min",
    "language": "Inglés",
    "genre": "Drama",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-11",
+    "21:30"
+   ],
    "day": "2026-10-11",
    "time": "21:30",
    "day_order": 3,
@@ -3645,13 +4812,26 @@
    "ticket_url": "https://www.cinecolombia.com/films/the-man-i-love/HO00000876/",
    "lbSlug": "the-man-i-love-2026",
    "tmdb_id": 1458914,
-   "synopsis_en": "In late 1980s New York, a theater artist living with AIDS takes on one possibly last great role."
+   "synopsis_en": "In late 1980s New York, a theater artist living with AIDS takes on one possibly last great role.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "El cine como camino de regreso",
    "type": "event",
-   "section": "🎤 Charlas abiertas BIFF Bang",
+   "section": "🎤 Charlas Abiertas BIFF Bang",
    "duration": "90 min",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-12",
+    "11:00"
+   ],
    "day": "2026-10-12",
    "time": "11:00",
    "day_order": 4,
@@ -3676,6 +4856,11 @@
    "duration": "79 min",
    "language": "Español",
    "genre": "Familiar",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-12",
+    "13:30"
+   ],
    "day": "2026-10-12",
    "time": "13:30",
    "day_order": 4,
@@ -3694,7 +4879,15 @@
    "lbSlug": "the-newcomers-2026",
    "tmdb_id": 1735053,
    "synopsis_en": "Three tweens investigate what is poisoning their village's rivers. Mateo narrates as he, his brother Tomas, refugee Tiana, and her dog Nube embark on an adventure to uncover the source of pollution.",
-   "title_en": "The Newcomers"
+   "title_en": "The Newcomers",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "The Man I Love",
@@ -3707,6 +4900,11 @@
    "duration": "97 min",
    "language": "Inglés",
    "genre": "Drama",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-12",
+    "14:00"
+   ],
    "day": "2026-10-12",
    "time": "14:00",
    "day_order": 4,
@@ -3724,7 +4922,15 @@
    "ticket_url": "https://www.cinecolombia.com/films/the-man-i-love/HO00000876/",
    "lbSlug": "the-man-i-love-2026",
    "tmdb_id": 1458914,
-   "synopsis_en": "In late 1980s New York, a theater artist living with AIDS takes on one possibly last great role."
+   "synopsis_en": "In late 1980s New York, a theater artist living with AIDS takes on one possibly last great role.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Soumsoum, The Night Of The Stars",
@@ -3737,6 +4943,11 @@
    "duration": "101 min",
    "language": "Francés, Árabe chadiano",
    "genre": "Drama",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-12",
+    "14:00"
+   ],
    "day": "2026-10-12",
    "time": "14:00",
    "day_order": 4,
@@ -3754,12 +4965,20 @@
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=1023057…",
    "lbSlug": "soumsoum-the-night-of-the-stars",
    "tmdb_id": 1376457,
-   "synopsis_en": "Seventeen-year-old Kellou has been gifted with supernatural powers she does not understand. Her disquiet and uncertainty only change when she meets Aya. It is an encounter with destiny that forges a mystical world where the visible and invisible converge."
+   "synopsis_en": "Seventeen-year-old Kellou has been gifted with supernatural powers she does not understand. Her disquiet and uncertainty only change when she meets Aya. It is an encounter with destiny that forges a mystical world where the visible and invisible converge.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Lejos de los Árboles",
    "type": "film",
-   "section": "👻 Fantasmas del pasado",
+   "section": "👻 Fantasmas del Pasado",
    "director": "Meritxell Colell Aparicio",
    "year": 2026,
    "country": "España, Perú, Italia",
@@ -3767,6 +4986,11 @@
    "duration": "121 min",
    "language": "Español, Catalán, Quechua",
    "genre": "Drama",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-12",
+    "14:30"
+   ],
    "day": "2026-10-12",
    "time": "14:30",
    "day_order": 4,
@@ -3786,7 +5010,15 @@
    "lbSlug": "far-from-the-trees-2026",
    "tmdb_id": 1025391,
    "synopsis_en": "Adela, a Mexican sound artist, travels from the jungle to the Peruvian Andes alongside Lucho, a guide and translator. Following the legacy of her grandfather, a Republican exiled in Mexico, she weaves a sound map of endangered languages. When the fear of death breaks in, reality fractures. The journey turns into an intimate passage that confronts her with memory, grief, uprooting and identity.",
-   "title_en": "Far From the Trees"
+   "title_en": "Far From the Trees",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Minotauro",
@@ -3796,9 +5028,14 @@
    "year": 2026,
    "country": "Francia, Alemania, Letonia",
    "flags": "🇫🇷🇩🇪🇱🇻",
-   "duration": "141 min",
+   "duration": "140 min",
    "language": "Ruso",
    "genre": "Drama",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-12",
+    "14:30"
+   ],
    "day": "2026-10-12",
    "time": "14:30",
    "day_order": 4,
@@ -3817,7 +5054,16 @@
    "lbSlug": "minotaur-2026",
    "tmdb_id": 848700,
    "synopsis_en": "When Gleb, a successful company director, finds himself under siege from mounting corporate pressures, an increasingly unstable world, and the discovery of his wife's affair, the collapse of his carefully ordered life accelerates toward violence.",
-   "title_en": "Minotaur"
+   "title_en": "Minotaur",
+   "_duracion_corregida": "festival-cannes.com/en/f/minotaur (Durée 140 min); TIFF 140",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Papaya",
@@ -3830,6 +5076,11 @@
    "duration": "75 min",
    "language": "Sin diálogos",
    "genre": "Animación",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-12",
+    "15:00"
+   ],
    "day": "2026-10-12",
    "time": "15:00",
    "day_order": 4,
@@ -3847,12 +5098,20 @@
    "ticket_url": "https://www.cinecolombia.com/films/papaya/HO00000849/",
    "lbSlug": "papaya-2025",
    "tmdb_id": 1534205,
-   "synopsis_en": "Passionate about flying, a tiny papaya seed in the Amazonian forest must keep moving to avoid rooting. Through perseverance, she discovers the power of her roots, triggering a revolution that transforms her world and fulfills her dreams in an unexpected way."
+   "synopsis_en": "Passionate about flying, a tiny papaya seed in the Amazonian forest must keep moving to avoid rooting. Through perseverance, she discovers the power of her roots, triggering a revolution that transforms her world and fulfills her dreams in an unexpected way.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Princesa Burro",
    "type": "film",
-   "section": "🧬 Relatos mutantes",
+   "section": "🧬 Relatos Mutantes",
    "director": "Cristóbal León, Joaquín Cociña",
    "year": 2026,
    "country": "Chile, Francia, Países Bajos, Uruguay, Alemania",
@@ -3860,6 +5119,11 @@
    "duration": "90 min",
    "language": "Español",
    "genre": "Fantasía",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-12",
+    "15:30"
+   ],
    "day": "2026-10-12",
    "time": "15:30",
    "day_order": 4,
@@ -3878,12 +5142,20 @@
    "lbSlug": "donkey-princess",
    "tmdb_id": 1536431,
    "synopsis_en": "Diana is the princess of an ancient kingdom. Her father, King Arthur, forbids love. When Diana falls in love with Lalo, he banishes him. Using a magical bracelet, Diana travels to other worlds in search of her love.",
-   "title_en": "Donkey Princess"
+   "title_en": "Donkey Princess",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Dua",
    "type": "film",
-   "section": "✨ Espíritu joven",
+   "section": "✨ Espíritu Joven",
    "director": "Blerta Basholli",
    "year": 2026,
    "country": "Kosovo, Suiza, Francia",
@@ -3891,6 +5163,11 @@
    "duration": "101 min",
    "language": "Albanés, Serbio",
    "genre": "Drama",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-12",
+    "16:00"
+   ],
    "day": "2026-10-12",
    "time": "16:00",
    "day_order": 4,
@@ -3909,19 +5186,32 @@
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=1023057…",
    "lbSlug": "dua",
    "tmdb_id": 1472825,
-   "synopsis_en": "Prishtina, Kosova, late 1990s. As war looms and ethnic tensions escalate, 13-year-old Dua struggles to find her place among her peers and within her changing body. After an incident shakes her community, she becomes a target herself and bonds with a fearless girl, Maki, who draws her toward an unexpected form of resistance. Between the daily violence and the growing threat of exile, there is little room for quiet awakenings."
+   "synopsis_en": "Prishtina, Kosova, late 1990s. As war looms and ethnic tensions escalate, 13-year-old Dua struggles to find her place among her peers and within her changing body. After an incident shakes her community, she becomes a target herself and bonds with a fearless girl, Maki, who draws her toward an unexpected form of resistance. Between the daily violence and the growing threat of exile, there is little room for quiet awakenings.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Everytime",
    "type": "film",
-   "section": "🧬 Relatos mutantes",
+   "section": "🧬 Relatos Mutantes",
    "director": "Sandra Wollner",
    "year": 2026,
    "country": "Alemania, Austria",
    "flags": "🇩🇪🇦🇹",
-   "duration": "124 min",
+   "duration": "119 min",
    "language": "Alemán",
    "genre": "Drama",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-12",
+    "16:30"
+   ],
    "day": "2026-10-12",
    "time": "16:30",
    "day_order": 4,
@@ -3939,12 +5229,21 @@
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=1023057…",
    "lbSlug": "everytime",
    "tmdb_id": 1655419,
-   "synopsis_en": "A tragedy brings a mother, daughter, and teenage boy together. Struggling with blame and forgiveness, the unlikely trio take a trip to Tenerife  for a family holiday that never happened. Under the glow of the sun,  past and present quietly start to overlap."
+   "synopsis_en": "A tragedy brings a mother, daughter, and teenage boy together. Struggling with blame and forgiveness, the unlikely trio take a trip to Tenerife  for a family holiday that never happened. Under the glow of the sun,  past and present quietly start to overlap.",
+   "_duracion_corregida": "TMDB 1655419 (119, Cannes 2026); TIFF 119",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "La Gradiva",
    "type": "film",
-   "section": "✨ Espíritu joven",
+   "section": "✨ Espíritu Joven",
    "director": "Marine Atlan",
    "year": 2026,
    "country": "Francia, Italia",
@@ -3952,6 +5251,11 @@
    "duration": "145 min",
    "language": "Francés, Italiano",
    "genre": "Drama",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-12",
+    "17:00"
+   ],
    "day": "2026-10-12",
    "time": "17:00",
    "day_order": 4,
@@ -3969,15 +5273,28 @@
    "ticket_url": "https://www.cinecolombia.com/films/la-gradiva/HO00000871/",
    "lbSlug": "la-gradiva",
    "tmdb_id": 1154730,
-   "synopsis_en": "Amid the ancient ruins of Pompeii, a group of French teenagers on a class trip to Naples grapple with anxiety and exhilaration ahead of their high school graduation."
+   "synopsis_en": "Amid the ancient ruins of Pompeii, a group of French teenagers on a class trip to Naples grapple with anxiety and exhilaration ahead of their high school graduation.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
-   "title": "Muestra de cortometrajes BIFF Bang",
+   "title": "Muestra de Cortometrajes BIFF Bang",
    "type": "film",
-   "section": "🎬 Muestra de cortometrajes BIFF Bang",
+   "section": "🎬 Muestra de Cortometrajes BIFF Bang",
    "country": "Uruguay, Colombia, México",
    "flags": "🇺🇾🇨🇴🇲🇽",
    "duration": "101 min",
+   "_ancla": [
+    "City U - Bogotá",
+    "2026-10-12",
+    "17:00"
+   ],
    "day": "2026-10-12",
    "time": "17:00",
    "day_order": 4,
@@ -4114,6 +5431,9 @@
      "synopsis": "En los baños de la Universidad Nacional de Colombia, las paredes hablan. Los grafismos que emergen de ellas se transforman en un viaje vivo por la memoria estudiantil, la disputa política y la construcción de identidad, revelando cómo incluso un espacio íntimo y cotidiano puede convertirse en un escenario de resistencia y expresión colectiva.",
      "synopsis_lang": "es"
     }
+   ],
+   "titulos_anteriores": [
+    "Muestra de cortometrajes BIFF Bang"
    ]
   },
   {
@@ -4127,6 +5447,11 @@
    "duration": "116 min",
    "language": "Alemán",
    "genre": "Drama",
+   "_ancla": [
+    "Teatro Mayor Julio Mario Santo Domingo - Bogotá",
+    "2026-10-12",
+    "17:00"
+   ],
    "day": "2026-10-12",
    "time": "17:00",
    "day_order": 4,
@@ -4145,12 +5470,20 @@
    "lbSlug": "prisoner-number-seven",
    "tmdb_id": 235576,
    "synopsis_en": "A young woman, a prisoner who was set up to steal by her lover, is in jail. She would like to see her sweetheart. One night she succeeds in persuading the doctor of the prison who also is a woman, to be released. She finds the man, a waiter in an elegant hotel, behaving as a cynical Don Juan. He was preparing to rob the safe of the hotel and go away with his new lover, a dancer.",
-   "title_en": "Prisoner Number Seven"
+   "title_en": "Prisoner Number Seven",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Hermanas",
    "type": "film",
-   "section": "✊ Clases de lucha",
+   "section": "✊ Clases de Lucha",
    "director": "Ione Hernández Sáenz",
    "year": 2026,
    "country": "España",
@@ -4158,6 +5491,11 @@
    "duration": "101 min",
    "language": "Español, Euskera",
    "genre": "Drama",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-12",
+    "17:30"
+   ],
    "day": "2026-10-12",
    "time": "17:30",
    "day_order": 4,
@@ -4177,12 +5515,20 @@
    "lbSlug": "sisters-2026",
    "tmdb_id": 1556887,
    "synopsis_en": "Two sisters bring their families together for a summer weekend near Madrid to celebrate milestones and the San Juan Festival. The celebration turns dark when a child makes a serious sexual abuse allegation.",
-   "title_en": "Sisters"
+   "title_en": "Sisters",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Sants",
    "type": "film",
-   "section": "✊ Clases de lucha",
+   "section": "✊ Clases de Lucha",
    "director": "Mikel Gurrea",
    "year": 2026,
    "country": "España, Italia",
@@ -4190,6 +5536,11 @@
    "duration": "103 min",
    "language": "Catalán, Español",
    "genre": "Drama",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-12",
+    "17:30"
+   ],
    "day": "2026-10-12",
    "time": "17:30",
    "day_order": 4,
@@ -4207,12 +5558,20 @@
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=1023057…",
    "lbSlug": "sants",
    "tmdb_id": 1736709,
-   "synopsis_en": "While dealing with her mother’s impending death, Lali joins a gang of thieves dedicated to stealing religious artefacts. ​"
+   "synopsis_en": "While dealing with her mother’s impending death, Lali joins a gang of thieves dedicated to stealing religious artefacts. ​",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "A Providência e a Guitarra",
    "type": "film",
-   "section": "🧬 Relatos mutantes",
+   "section": "🧬 Relatos Mutantes",
    "director": "João Nicolau",
    "year": 2026,
    "country": "Portugal",
@@ -4220,6 +5579,11 @@
    "duration": "125 min",
    "language": "Portugués",
    "genre": "Comedia",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-12",
+    "18:00"
+   ],
    "day": "2026-10-12",
    "time": "18:00",
    "day_order": 4,
@@ -4239,12 +5603,20 @@
    "lbSlug": "providence-and-the-guitar",
    "tmdb_id": 1440397,
    "synopsis_en": "In a distant past, Léon and Elvira Berthelini, itinerant artists, make their living hopping from town to town. In Covarronca, harassed by the Police Commissioner, they are forced to spend the night out in the open. That’s when they meet Stubbs, a young Cambridge student, with whom they find shelter in the home of a painter at odds with his wife. In return for the hospitality, they remind their hosts that the love of art resolves the art of love. Meanwhile, an unusual curse sends them on absurd journeys into the 21st century, where the future of social security and of a rock band are at stake.",
-   "title_en": "Providence and the Guitar"
+   "title_en": "Providence and the Guitar",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Tristan Forever",
    "type": "film",
-   "section": "✊ Clases de lucha",
+   "section": "✊ Clases de Lucha",
    "director": "Tobias Nölle, Loran Bonnardot",
    "year": 2026,
    "country": "Suiza",
@@ -4252,6 +5624,11 @@
    "duration": "90 min",
    "language": "Inglés, Francés",
    "genre": "Docu-ficción",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-12",
+    "18:30"
+   ],
    "day": "2026-10-12",
    "time": "18:30",
    "day_order": 4,
@@ -4269,12 +5646,20 @@
    "ticket_url": "https://www.cinecolombia.com/films/tristan-forever/HO00000857/",
    "lbSlug": "tristan-forever",
    "tmdb_id": 1616138,
-   "synopsis_en": "For 30 years, a doctor from Paris has maintained a friendship with a fisherman on Tristan da Cunha, the most isolated inhabited island in the world. Now he travels back one more time, with the plan to stay there for good."
+   "synopsis_en": "For 30 years, a doctor from Paris has maintained a friendship with a fisherman on Tristan da Cunha, the most isolated inhabited island in the world. Now he travels back one more time, with the plan to stay there for good.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Objet A",
    "type": "film",
-   "section": "🧬 Relatos mutantes",
+   "section": "🧬 Relatos Mutantes",
    "director": "Ann Oren",
    "year": 2026,
    "country": "Alemania, Luxemburgo, Grecia",
@@ -4282,6 +5667,11 @@
    "duration": "95 min",
    "language": "Alemán",
    "genre": "Drama",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-12",
+    "19:00"
+   ],
    "day": "2026-10-12",
    "time": "19:00",
    "day_order": 4,
@@ -4299,12 +5689,20 @@
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=1023057…",
    "lbSlug": "objet-a",
    "tmdb_id": 1228841,
-   "synopsis_en": "Ingeborg and Adam are visionary hand surgeons bound by love, control, and irresistible fixations. She is compelled to steal objects; he longs to become one. When an accident brings the enigmatic Gaia into their lives, unexpected desires begin to take shape, unsettling the careful balance that has long defined their relationship."
+   "synopsis_en": "Ingeborg and Adam are visionary hand surgeons bound by love, control, and irresistible fixations. She is compelled to steal objects; he longs to become one. When an accident brings the enigmatic Gaia into their lives, unexpected desires begin to take shape, unsettling the careful balance that has long defined their relationship.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "We Are Aliens",
    "type": "film",
-   "section": "✨ Espíritu joven",
+   "section": "✨ Espíritu Joven",
    "director": "Kohei Kadowaki",
    "year": 2026,
    "country": "Japón, Francia",
@@ -4312,6 +5710,11 @@
    "duration": "117 min",
    "language": "Japonés",
    "genre": "Animación",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-12",
+    "19:30"
+   ],
    "day": "2026-10-12",
    "time": "19:30",
    "day_order": 4,
@@ -4329,7 +5732,15 @@
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=1023057…",
    "lbSlug": "we-are-aliens-2026",
    "tmdb_id": 1496928,
-   "synopsis_en": "One summer in the third grade, a quiet boy named Tsubasa meets Gyotaro, a boy everyone in the class looked up to, and the two become close friends. Within their small world, they share irreplaceable moments—until a small incident suddenly tears them apart."
+   "synopsis_en": "One summer in the third grade, a quiet boy named Tsubasa meets Gyotaro, a boy everyone in the class looked up to, and the two become close friends. Within their small world, they share irreplaceable moments—until a small incident suddenly tears them apart.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Fjord",
@@ -4342,6 +5753,11 @@
    "duration": "146 min",
    "language": "Inglés, Rumano, Noruego, Sueco",
    "genre": "Drama",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-12",
+    "20:00"
+   ],
    "day": "2026-10-12",
    "time": "20:00",
    "day_order": 4,
@@ -4359,7 +5775,15 @@
    "ticket_url": "https://www.cinecolombia.com/films/fjord/HO00000867/",
    "lbSlug": "fjord-2026",
    "tmdb_id": 1401459,
-   "synopsis_en": "Following the deaths of Mihai's parents, Mihai and Lisbeth Gheorghiu leave their life behind in Romania and move with their children to a remote village in Norway, hoping to rebuild their lives near Lisbeth's family. There, they grow close to their neighbors, the Halbergs, whose warmth gives them hope for a fresh start. But the fragile peace begins to unravel when the Gheorghiu family’s young daughter, Elia, arrives at school covered in bruises."
+   "synopsis_en": "Following the deaths of Mihai's parents, Mihai and Lisbeth Gheorghiu leave their life behind in Romania and move with their children to a remote village in Norway, hoping to rebuild their lives near Lisbeth's family. There, they grow close to their neighbors, the Halbergs, whose warmth gives them hope for a fresh start. But the fragile peace begins to unravel when the Gheorghiu family’s young daughter, Elia, arrives at school covered in bruises.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Tierra de Mi Padre",
@@ -4372,6 +5796,11 @@
    "duration": "82 min",
    "language": "Alemán, Inglés, Francés, Ruso",
    "genre": "Drama",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-12",
+    "20:00"
+   ],
    "day": "2026-10-12",
    "time": "20:00",
    "day_order": 4,
@@ -4390,12 +5819,20 @@
    "lbSlug": "fatherland-2026",
    "tmdb_id": 1437696,
    "synopsis_en": "In 1949, German writer Thomas Mann and his daughter Erika embark on a road trip across a Germany in ruins, from US-dominated Frankfurt to Soviet-controlled Weimar.",
-   "title_en": "Fatherland"
+   "title_en": "Fatherland",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Siempre Soy Tu Animal Materno",
    "type": "film",
-   "section": "✨ Espíritu joven",
+   "section": "✨ Espíritu Joven",
    "director": "Valentina Maurel",
    "year": 2026,
    "country": "Bélgica, Francia, México",
@@ -4403,6 +5840,11 @@
    "duration": "108 min",
    "language": "Español",
    "genre": "Drama",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-12",
+    "20:30"
+   ],
    "day": "2026-10-12",
    "time": "20:30",
    "day_order": 4,
@@ -4421,12 +5863,20 @@
    "lbSlug": "forever-your-maternal-animal",
    "tmdb_id": 1661932,
    "synopsis_en": "After years studying in Europe, Elsa returns to Costa Rica to reunite with her family. She finds her younger sister living alone in the family home, growing increasingly distant and reclusive, as if slipping into a world of her own. Their parents, meanwhile, are absorbed in their own lives. Her father drifts through a series of affairs, while her mother is immersed in republishing the erotic poems of her youth, neither fully grasping the urgency of the situation. Elsa’s return draws the three women into a confrontation with what still binds them, despite everything.",
-   "title_en": "Forever Your Maternal Animal"
+   "title_en": "Forever Your Maternal Animal",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Hangar Rojo",
    "type": "film",
-   "section": "✊ Clases de lucha",
+   "section": "✊ Clases de Lucha",
    "director": "Juan Pablo Sallato",
    "year": 2026,
    "country": "Chile, Argentina, Italia",
@@ -4434,6 +5884,11 @@
    "duration": "83 min",
    "language": "Español",
    "genre": "Thriller político",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-12",
+    "21:00"
+   ],
    "day": "2026-10-12",
    "time": "21:00",
    "day_order": 4,
@@ -4452,12 +5907,20 @@
    "lbSlug": "the-red-hangar",
    "tmdb_id": 1563588,
    "synopsis_en": "Chile, 1973. The military coup will force Jorge Silva, an Air Force captain, to face the unfolding horror. Inside a military base, he must choose between becoming part of the repression or helping those fighting to stay alive.",
-   "title_en": "The Red Hangar"
+   "title_en": "The Red Hangar",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Heat",
    "type": "film",
-   "section": "✊ Clases de lucha",
+   "section": "✊ Clases de Lucha",
    "director": "Jacqueline Zünd",
    "year": 2026,
    "country": "Suiza",
@@ -4465,6 +5928,11 @@
    "duration": "84 min",
    "language": "Árabe, Inglés",
    "genre": "Documental",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-12",
+    "21:30"
+   ],
    "day": "2026-10-12",
    "time": "21:30",
    "day_order": 4,
@@ -4482,12 +5950,20 @@
    "ticket_url": "https://www.cinecolombia.com/films/heat/HO00000837/",
    "lbSlug": "heat-2026",
    "tmdb_id": 1658185,
-   "synopsis_en": "Climate change disrupts lives and relationships – especially in the Persian Gulf, where temperatures can exceed 50°C and society is divided between the privileged few who can protect themselves, and migrants who have no choice but to endure the heat in order to make ends meet."
+   "synopsis_en": "Climate change disrupts lives and relationships – especially in the Persian Gulf, where temperatures can exceed 50°C and society is divided between the privileged few who can protect themselves, and migrants who have no choice but to endure the heat in order to make ends meet.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Light Pillar",
    "type": "film",
-   "section": "👻 Fantasmas del pasado",
+   "section": "👻 Fantasmas del Pasado",
    "director": "Xu Zao",
    "year": 2026,
    "country": "China",
@@ -4495,6 +5971,11 @@
    "duration": "90 min",
    "language": "Chino, Mandarín",
    "genre": "Animación",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-13",
+    "14:00"
+   ],
    "day": "2026-10-13",
    "time": "14:00",
    "day_order": 5,
@@ -4512,7 +5993,15 @@
    "ticket_url": "https://www.cinecolombia.com/films/light-pillar/HO00000843/",
    "lbSlug": "light-pillar",
    "tmdb_id": 1601885,
-   "synopsis_en": "The future. Winter. Space travel is no longer a dream. A lonely janitor tends the grounds of a dilapidated bankrupt film studio with only a former cat actor for company until he embarks on a romantic journey with a female player in a beautiful virtual world."
+   "synopsis_en": "The future. Winter. Space travel is no longer a dream. A lonely janitor tends the grounds of a dilapidated bankrupt film studio with only a former cat actor for company until he embarks on a romantic journey with a female player in a beautiful virtual world.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Let Us Through, Dear Ancestors",
@@ -4525,6 +6014,11 @@
    "duration": "151 min",
    "language": "Filipino",
    "genre": "Drama",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-13",
+    "14:30"
+   ],
    "day": "2026-10-13",
    "time": "14:30",
    "day_order": 5,
@@ -4542,12 +6036,20 @@
    "ticket_url": "https://www.cinecolombia.com/films/makikiraan-po/HO00000872/",
    "lbSlug": "let-us-through-dear-ancestors",
    "tmdb_id": 1736478,
-   "synopsis_en": "1617, Las Islas Filipinas. The Spanish friar, Father Enciso, the encomendero of one of the islands, rules with unrelenting toughness and an insatiable libido to tame the savages."
+   "synopsis_en": "1617, Las Islas Filipinas. The Spanish friar, Father Enciso, the encomendero of one of the islands, rules with unrelenting toughness and an insatiable libido to tame the savages.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Gabin",
    "type": "film",
-   "section": "✨ Espíritu joven",
+   "section": "✨ Espíritu Joven",
    "director": "Maxence Voiseux",
    "year": 2026,
    "country": "Francia, Alemania, Suiza",
@@ -4555,6 +6057,11 @@
    "duration": "105 min",
    "language": "Francés",
    "genre": "Documental",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-13",
+    "15:00"
+   ],
    "day": "2026-10-13",
    "time": "15:00",
    "day_order": 5,
@@ -4572,12 +6079,20 @@
    "ticket_url": "https://www.cinecolombia.com/films/gabin/HO00000868/",
    "lbSlug": "gabin",
    "tmdb_id": 1312310,
-   "synopsis_en": "Gabin, the youngest child of the Jourdel family, is set to take over his father's butcher shop. Torn between family loyalty and a desire to break free, he has other dreams."
+   "synopsis_en": "Gabin, the youngest child of the Jourdel family, is set to take over his father's butcher shop. Torn between family loyalty and a desire to break free, he has other dreams.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "The Burning Giants",
    "type": "film",
-   "section": "🧬 Relatos mutantes",
+   "section": "🧬 Relatos Mutantes",
    "director": "Phuttiphong Aroonpheng",
    "year": 2026,
    "country": "Tailandia, Singapur, Francia, Países Bajos",
@@ -4585,6 +6100,11 @@
    "duration": "118 min",
    "language": "Tailandés, Lengua Karen",
    "genre": "Drama",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-13",
+    "15:30"
+   ],
    "day": "2026-10-13",
    "time": "15:30",
    "day_order": 5,
@@ -4602,15 +6122,28 @@
    "ticket_url": "https://www.cinecolombia.com/films/yak-mai/HO00000875/",
    "lbSlug": "the-burning-giants",
    "tmdb_id": 1730542,
-   "synopsis_en": "Follows an environmental and Indigenous rights activist from the Karen group who is killed after protesting the forced eviction of his village from a protected forest."
+   "synopsis_en": "Follows an environmental and Indigenous rights activist from the Karen group who is killed after protesting the forced eviction of his village from a protected forest.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
-   "title": "Muestra de cortometrajes BIFF Bang",
+   "title": "Muestra de Cortometrajes BIFF Bang",
    "type": "film",
-   "section": "🎬 Muestra de cortometrajes BIFF Bang",
+   "section": "🎬 Muestra de Cortometrajes BIFF Bang",
    "country": "Uruguay, Colombia, México",
    "flags": "🇺🇾🇨🇴🇲🇽",
    "duration": "101 min",
+   "_ancla": [
+    "Universidad Central - Bogotá",
+    "2026-10-13",
+    "16:00"
+   ],
    "day": "2026-10-13",
    "time": "16:00",
    "day_order": 5,
@@ -4748,12 +6281,15 @@
      "synopsis": "En los baños de la Universidad Nacional de Colombia, las paredes hablan. Los grafismos que emergen de ellas se transforman en un viaje vivo por la memoria estudiantil, la disputa política y la construcción de identidad, revelando cómo incluso un espacio íntimo y cotidiano puede convertirse en un escenario de resistencia y expresión colectiva.",
      "synopsis_lang": "es"
     }
+   ],
+   "titulos_anteriores": [
+    "Muestra de cortometrajes BIFF Bang"
    ]
   },
   {
    "title": "Donde Comienza el Río",
    "type": "film",
-   "section": "🇨🇴 Colombia viva",
+   "section": "🇨🇴 Colombia Viva",
    "director": "Juan Andrés Arango",
    "year": 2026,
    "country": "Colombia, Canadá",
@@ -4761,6 +6297,11 @@
    "duration": "102 min",
    "language": "Español, Emberá",
    "genre": "Drama",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-13",
+    "17:00"
+   ],
    "day": "2026-10-13",
    "time": "17:00",
    "day_order": 5,
@@ -4780,7 +6321,15 @@
    "lbSlug": "where-the-river-begins",
    "tmdb_id": 865567,
    "synopsis_en": "Yajaira, a young but strong Embera woman, lives with her daughter Maria in a violent Bogotá neighborhood. Haunted by dreams of the jungle, she longs to return to the village she once called home. After a tragedy strikes, they have no choice but to leave. Jhon, a charismatic young gang member, joins them on their dangerous journey to the Andágueda River, driven by motives he keeps hidden.  Donde Comienza el Río is a poignant, poetic film where a perilous escape becomes a journey of healing. As the jungle reemerges through memory and dream, masks fall and reality is touched by the magic of Yajaira’s inner world.",
-   "title_en": "Where the River Begins"
+   "title_en": "Where the River Begins",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Red Rocks",
@@ -4793,6 +6342,11 @@
    "duration": "90 min",
    "language": "Francés",
    "genre": "Drama",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-13",
+    "17:30"
+   ],
    "day": "2026-10-13",
    "time": "17:30",
    "day_order": 5,
@@ -4810,7 +6364,15 @@
    "ticket_url": "https://www.cinecolombia.com/films/les-roches-rouges/HO00000852/",
    "lbSlug": "red-rocks-2026",
    "tmdb_id": 1265831,
-   "synopsis_en": "On the French Riviera, two gangs of kids compete in the perilous game of cliff jumping. Géo, barely five years old, discovers over the course of a summer a world where friendship blends with rivalry, and where the first stirrings of the heart emerge against the dazzling Mediterranean landscape."
+   "synopsis_en": "On the French Riviera, two gangs of kids compete in the perilous game of cliff jumping. Géo, barely five years old, discovers over the course of a summer a world where friendship blends with rivalry, and where the first stirrings of the heart emerge against the dazzling Mediterranean landscape.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Los Nuevos",
@@ -4823,6 +6385,11 @@
    "duration": "79 min",
    "language": "Español",
    "genre": "Familiar",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-13",
+    "18:00"
+   ],
    "day": "2026-10-13",
    "time": "18:00",
    "day_order": 5,
@@ -4841,12 +6408,20 @@
    "lbSlug": "the-newcomers-2026",
    "tmdb_id": 1735053,
    "synopsis_en": "Three tweens investigate what is poisoning their village's rivers. Mateo narrates as he, his brother Tomas, refugee Tiana, and her dog Nube embark on an adventure to uncover the source of pollution.",
-   "title_en": "The Newcomers"
+   "title_en": "The Newcomers",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "9 Temples to Heaven",
    "type": "film",
-   "section": "✊ Clases de lucha",
+   "section": "✊ Clases de Lucha",
    "director": "Sompot Chidgasornpongse",
    "year": 2026,
    "country": "Tailandia, Singapur, Francia, Noruega, China,",
@@ -4854,6 +6429,11 @@
    "duration": "140 min",
    "language": "Tailandés",
    "genre": "Hong Kong",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-13",
+    "18:30"
+   ],
    "day": "2026-10-13",
    "time": "18:30",
    "day_order": 5,
@@ -4871,12 +6451,20 @@
    "ticket_url": "https://www.cinecolombia.com/films/9-temples-to-heaven/HO00000861/",
    "lbSlug": "9-temples-to-heaven",
    "tmdb_id": 1046304,
-   "synopsis_en": "A man takes his sick mother and nine family members on a single-day temple pilgrimage after his boss predicts she may die soon."
+   "synopsis_en": "A man takes his sick mother and nine family members on a single-day temple pilgrimage after his boss predicts she may die soon.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "La Bola Negra",
    "type": "film",
-   "section": "👻 Fantasmas del pasado",
+   "section": "👻 Fantasmas del Pasado",
    "director": "Javier Calvo, Javier Ambrossi",
    "year": 2026,
    "country": "España, Francia",
@@ -4884,6 +6472,11 @@
    "duration": "155 min",
    "language": "Español, Inglés",
    "genre": "Drama",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-13",
+    "20:00"
+   ],
    "day": "2026-10-13",
    "time": "20:00",
    "day_order": 5,
@@ -4900,7 +6493,15 @@
    },
    "lbSlug": "la-bola-negra",
    "tmdb_id": 1422041,
-   "synopsis_en": "The intertwined lives of three men in three different eras, three lives intimately linked by sexuality and desire, pain, and legacy."
+   "synopsis_en": "The intertwined lives of three men in three different eras, three lives intimately linked by sexuality and desire, pain, and legacy.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Slave Bird",
@@ -4913,6 +6514,11 @@
    "duration": "116 min",
    "language": "Alemán",
    "genre": "Drama",
+   "_ancla": [
+    "Teatro Mayor Julio Mario Santo Domingo - Bogotá",
+    "2026-10-13",
+    "20:00"
+   ],
    "day": "2026-10-13",
    "time": "20:00",
    "day_order": 5,
@@ -4931,7 +6537,15 @@
    "lbSlug": "prisoner-number-seven",
    "tmdb_id": 235576,
    "synopsis_en": "A young woman, a prisoner who was set up to steal by her lover, is in jail. She would like to see her sweetheart. One night she succeeds in persuading the doctor of the prison who also is a woman, to be released. She finds the man, a waiter in an elegant hotel, behaving as a cynical Don Juan. He was preparing to rob the safe of the hotel and go away with his new lover, a dancer.",
-   "title_en": "Prisoner Number Seven"
+   "title_en": "Prisoner Number Seven",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Tierra de Mi Padre",
@@ -4944,6 +6558,11 @@
    "duration": "82 min",
    "language": "Alemán, Inglés, Francés, Ruso",
    "genre": "Drama",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-13",
+    "20:30"
+   ],
    "day": "2026-10-13",
    "time": "20:30",
    "day_order": 5,
@@ -4962,7 +6581,15 @@
    "lbSlug": "fatherland-2026",
    "tmdb_id": 1437696,
    "synopsis_en": "In 1949, German writer Thomas Mann and his daughter Erika embark on a road trip across a Germany in ruins, from US-dominated Frankfurt to Soviet-controlled Weimar.",
-   "title_en": "Fatherland"
+   "title_en": "Fatherland",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "La Libertad Doble",
@@ -4975,6 +6602,11 @@
    "duration": "100 min",
    "language": "Español",
    "genre": "Reino Unido",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-13",
+    "21:00"
+   ],
    "day": "2026-10-13",
    "time": "21:00",
    "day_order": 5,
@@ -4993,12 +6625,20 @@
    "lbSlug": "double-freedom",
    "tmdb_id": 1387981,
    "synopsis_en": "Misael works alone with his axe, cutting down trees in the woods. An unexpected responsibility upends his life, and the logic of his days fades away in a nature where human reason holds no meaning.",
-   "title_en": "Double Freedom"
+   "title_en": "Double Freedom",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Nina Roza",
    "type": "film",
-   "section": "👻 Fantasmas del pasado",
+   "section": "👻 Fantasmas del Pasado",
    "director": "Geneviève Dulude-de Celles",
    "year": 2026,
    "country": "Canadá, Bélgica, Bulgaria, Italia",
@@ -5006,6 +6646,11 @@
    "duration": "103 min",
    "language": "Francés, Búlgaro",
    "genre": "Drama",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-13",
+    "21:30"
+   ],
    "day": "2026-10-13",
    "time": "21:30",
    "day_order": 5,
@@ -5023,13 +6668,26 @@
    "ticket_url": "https://www.cinecolombia.com/films/nina-roza/HO00000847/",
    "lbSlug": "fleur-bleue-1",
    "tmdb_id": 1527449,
-   "synopsis_en": "A viral video of an 8-year-old Bulgarian artist catches the eye of a major art collector, and Mihail is sent there, 30 years after leaving his home country, to assess the value of the girl's work and confront ghosts from his past."
+   "synopsis_en": "A viral video of an 8-year-old Bulgarian artist catches the eye of a major art collector, and Mihail is sent there, 30 years after leaving his home country, to assess the value of the girl's work and confront ghosts from his past.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Construir un mundo para la cámara desde la actuación",
    "type": "event",
-   "section": "🎤 Charlas abiertas BIFF Bang",
+   "section": "🎤 Charlas Abiertas BIFF Bang",
    "duration": "90 min",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-14",
+    "11:00"
+   ],
    "day": "2026-10-14",
    "time": "11:00",
    "day_order": 6,
@@ -5046,7 +6704,7 @@
   {
    "title": "Variations on a Theme",
    "type": "film",
-   "section": "👻 Fantasmas del pasado",
+   "section": "👻 Fantasmas del Pasado",
    "director": "Jason Jacobs, Devon Delmar",
    "year": 2026,
    "country": "Sudáfrica, Países Bajos, Qatar",
@@ -5054,6 +6712,11 @@
    "duration": "65 min",
    "language": "Afrikáans",
    "genre": "Drama",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-14",
+    "13:00"
+   ],
    "day": "2026-10-14",
    "time": "13:00",
    "day_order": 6,
@@ -5071,12 +6734,20 @@
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=1023057…",
    "lbSlug": "variations-on-a-theme-2026",
    "tmdb_id": 1599249,
-   "synopsis_en": "An elderly goat herder falls victim to a scam promising long-awaited reparations for her father's WWII service. Structured as a series of recurring visual 'variations', Variations on a Theme is a portrait of endurance and loss."
+   "synopsis_en": "An elderly goat herder falls victim to a scam promising long-awaited reparations for her father's WWII service. Structured as a series of recurring visual 'variations', Variations on a Theme is a portrait of endurance and loss.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Siempre Soy Tu Animal Materno",
    "type": "film",
-   "section": "✨ Espíritu joven",
+   "section": "✨ Espíritu Joven",
    "director": "Valentina Maurel",
    "year": 2026,
    "country": "Bélgica, Francia, México",
@@ -5084,6 +6755,11 @@
    "duration": "108 min",
    "language": "Español",
    "genre": "Drama",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-14",
+    "13:30"
+   ],
    "day": "2026-10-14",
    "time": "13:30",
    "day_order": 6,
@@ -5102,12 +6778,20 @@
    "lbSlug": "forever-your-maternal-animal",
    "tmdb_id": 1661932,
    "synopsis_en": "After years studying in Europe, Elsa returns to Costa Rica to reunite with her family. She finds her younger sister living alone in the family home, growing increasingly distant and reclusive, as if slipping into a world of her own. Their parents, meanwhile, are absorbed in their own lives. Her father drifts through a series of affairs, while her mother is immersed in republishing the erotic poems of her youth, neither fully grasping the urgency of the situation. Elsa’s return draws the three women into a confrontation with what still binds them, despite everything.",
-   "title_en": "Forever Your Maternal Animal"
+   "title_en": "Forever Your Maternal Animal",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Hangar Rojo",
    "type": "film",
-   "section": "✊ Clases de lucha",
+   "section": "✊ Clases de Lucha",
    "director": "Juan Pablo Sallato",
    "year": 2026,
    "country": "Chile, Argentina, Italia",
@@ -5115,6 +6799,11 @@
    "duration": "83 min",
    "language": "Español",
    "genre": "Thriller político",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-14",
+    "14:00"
+   ],
    "day": "2026-10-14",
    "time": "14:00",
    "day_order": 6,
@@ -5133,12 +6822,20 @@
    "lbSlug": "the-red-hangar",
    "tmdb_id": 1563588,
    "synopsis_en": "Chile, 1973. The military coup will force Jorge Silva, an Air Force captain, to face the unfolding horror. Inside a military base, he must choose between becoming part of the repression or helping those fighting to stay alive.",
-   "title_en": "The Red Hangar"
+   "title_en": "The Red Hangar",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Elephants in the Fog",
    "type": "film",
-   "section": "✊ Clases de lucha",
+   "section": "✊ Clases de Lucha",
    "director": "Abinash Bikram Shah",
    "year": 2026,
    "country": "Nepal, Alemania, Brasil, Francia, Noruega",
@@ -5146,6 +6843,11 @@
    "duration": "108 min",
    "language": "Nepalí",
    "genre": "Drama",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-14",
+    "14:00"
+   ],
    "day": "2026-10-14",
    "time": "14:00",
    "day_order": 6,
@@ -5163,12 +6865,20 @@
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=1023057…",
    "lbSlug": "elephants-in-the-fog",
    "tmdb_id": 1661926,
-   "synopsis_en": "In a small Nepalese village nestled in the heart of a forest populated by wild elephants, Pirati is the matriarch of a Kinnar community. She dreams of escaping to a “normal” life with the man she is in love with. But when one of her daughters disappears, she must investigate and choose between love and responsibility to her community."
+   "synopsis_en": "In a small Nepalese village nestled in the heart of a forest populated by wild elephants, Pirati is the matriarch of a Kinnar community. She dreams of escaping to a “normal” life with the man she is in love with. But when one of her daughters disappears, she must investigate and choose between love and responsibility to her community.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Filipiñana",
    "type": "film",
-   "section": "🧬 Relatos mutantes",
+   "section": "🧬 Relatos Mutantes",
    "director": "Rafael Manuel",
    "year": 2026,
    "country": "Singapur, Reino Unido, Filipinas, Francia,",
@@ -5176,6 +6886,11 @@
    "duration": "99 min",
    "language": "Filipino, Inglés, Ilocano",
    "genre": "Países Bajos",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-14",
+    "14:30"
+   ],
    "day": "2026-10-14",
    "time": "14:30",
    "day_order": 6,
@@ -5193,12 +6908,20 @@
    "ticket_url": "https://www.cinecolombia.com/films/filipiana/HO00000835/",
    "lbSlug": "filipinana-2026",
    "tmdb_id": 1417935,
-   "synopsis_en": "While working at an elite country club outside Manila, a 17-year-old Ilocana worker uncovers the violent truths of her workplace, her country, and her own past after attempting to return a lost golf club to the club's president."
+   "synopsis_en": "While working at an elite country club outside Manila, a 17-year-old Ilocana worker uncovers the violent truths of her workplace, her country, and her own past after attempting to return a lost golf club to the club's president.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Mariinka",
    "type": "film",
-   "section": "✊ Clases de lucha",
+   "section": "✊ Clases de Lucha",
    "director": "Pieter-Jan De Pue",
    "year": 2026,
    "country": "Bélgica, Países Bajos, Alemania, Suecia",
@@ -5206,6 +6929,11 @@
    "duration": "94 min",
    "language": "Inglés, Ucraniano, Ruso",
    "genre": "Documental",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-14",
+    "15:00"
+   ],
    "day": "2026-10-14",
    "time": "15:00",
    "day_order": 6,
@@ -5223,12 +6951,20 @@
    "ticket_url": "https://www.cinecolombia.com/films/mariinka/HO00000845/",
    "lbSlug": "mariinka",
    "tmdb_id": 1625655,
-   "synopsis_en": "In Eastern Ukraine, childhood neighbors find their lives violently derailed by a shifting frontline. Natasha, a promising boxing talent, becomes a military paramedic. Angela, who lost her parents at a young age, survives by moving goods to both sides of the front. Caught in a modern Greek tragedy, brothers Mark and Ruslan now fight on opposite sides – against each other. In the safety of his adoptive family in the United States, their youngest brother Daniil follows the war from afar."
+   "synopsis_en": "In Eastern Ukraine, childhood neighbors find their lives violently derailed by a shifting frontline. Natasha, a promising boxing talent, becomes a military paramedic. Angela, who lost her parents at a young age, survives by moving goods to both sides of the front. Caught in a modern Greek tragedy, brothers Mark and Ruslan now fight on opposite sides – against each other. In the safety of his adoptive family in the United States, their youngest brother Daniil follows the war from afar.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Aquí",
    "type": "film",
-   "section": "🧬 Relatos mutantes",
+   "section": "🧬 Relatos Mutantes",
    "director": "Tiago Guedes",
    "year": 2026,
    "country": "Portugal, España",
@@ -5236,6 +6972,11 @@
    "duration": "204 min",
    "language": "Español",
    "genre": "Drama",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-14",
+    "15:00"
+   ],
    "day": "2026-10-14",
    "time": "15:00",
    "day_order": 6,
@@ -5253,12 +6994,20 @@
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=1023057…",
    "lbSlug": "aqui-2026",
    "tmdb_id": 1548931,
-   "synopsis_en": "In a new land where everyone receives a new name and begins again without a past, Simón takes responsibility for David, a child he met on the crossing to a new life. Driven by an inexplicable conviction, he sets out to find the boy’s mother despite the fact David remembers nothing about her. When he recognizes Inés as the right woman, she accepts the role and an unlikely bond forms between them. While society imposes rules and treats difference as a threat, David resists being shaped and stands for imagination and freedom."
+   "synopsis_en": "In a new land where everyone receives a new name and begins again without a past, Simón takes responsibility for David, a child he met on the crossing to a new life. Driven by an inexplicable conviction, he sets out to find the boy’s mother despite the fact David remembers nothing about her. When he recognizes Inés as the right woman, she accepts the role and an unlikely bond forms between them. While society imposes rules and treats difference as a threat, David resists being shaped and stands for imagination and freedom.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "La Gradiva",
    "type": "film",
-   "section": "✨ Espíritu joven",
+   "section": "✨ Espíritu Joven",
    "director": "Marine Atlan",
    "year": 2026,
    "country": "Francia, Italia",
@@ -5266,6 +7015,11 @@
    "duration": "145 min",
    "language": "Francés, Italiano",
    "genre": "Drama",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-14",
+    "15:30"
+   ],
    "day": "2026-10-14",
    "time": "15:30",
    "day_order": 6,
@@ -5283,12 +7037,20 @@
    "ticket_url": "https://www.cinecolombia.com/films/la-gradiva/HO00000871/",
    "lbSlug": "la-gradiva",
    "tmdb_id": 1154730,
-   "synopsis_en": "Amid the ancient ruins of Pompeii, a group of French teenagers on a class trip to Naples grapple with anxiety and exhilaration ahead of their high school graduation."
+   "synopsis_en": "Amid the ancient ruins of Pompeii, a group of French teenagers on a class trip to Naples grapple with anxiety and exhilaration ahead of their high school graduation.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "La Bola Negra",
    "type": "film",
-   "section": "👻 Fantasmas del pasado",
+   "section": "👻 Fantasmas del Pasado",
    "director": "Javier Calvo, Javier Ambrossi",
    "year": 2026,
    "country": "España, Francia",
@@ -5296,6 +7058,11 @@
    "duration": "155 min",
    "language": "Español, Inglés",
    "genre": "Drama",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-14",
+    "16:00"
+   ],
    "day": "2026-10-14",
    "time": "16:00",
    "day_order": 6,
@@ -5313,15 +7080,28 @@
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=1023057…",
    "lbSlug": "la-bola-negra",
    "tmdb_id": 1422041,
-   "synopsis_en": "The intertwined lives of three men in three different eras, three lives intimately linked by sexuality and desire, pain, and legacy."
+   "synopsis_en": "The intertwined lives of three men in three different eras, three lives intimately linked by sexuality and desire, pain, and legacy.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
-   "title": "Muestra de cortometrajes BIFF Bang",
+   "title": "Muestra de Cortometrajes BIFF Bang",
    "type": "film",
-   "section": "🎬 Muestra de cortometrajes BIFF Bang",
+   "section": "🎬 Muestra de Cortometrajes BIFF Bang",
    "country": "Uruguay, Colombia, México",
    "flags": "🇺🇾🇨🇴🇲🇽",
    "duration": "101 min",
+   "_ancla": [
+    "Universidad Jorge Tadeo Lozano - Bogotá",
+    "2026-10-14",
+    "16:00"
+   ],
    "day": "2026-10-14",
    "time": "16:00",
    "day_order": 6,
@@ -5459,6 +7239,9 @@
      "synopsis": "En los baños de la Universidad Nacional de Colombia, las paredes hablan. Los grafismos que emergen de ellas se transforman en un viaje vivo por la memoria estudiantil, la disputa política y la construcción de identidad, revelando cómo incluso un espacio íntimo y cotidiano puede convertirse en un escenario de resistencia y expresión colectiva.",
      "synopsis_lang": "es"
     }
+   ],
+   "titulos_anteriores": [
+    "Muestra de cortometrajes BIFF Bang"
    ]
   },
   {
@@ -5472,6 +7255,11 @@
    "duration": "101 min",
    "language": "Francés, Árabe chadiano",
    "genre": "Drama",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-14",
+    "16:30"
+   ],
    "day": "2026-10-14",
    "time": "16:30",
    "day_order": 6,
@@ -5489,12 +7277,20 @@
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=1023057…",
    "lbSlug": "soumsoum-the-night-of-the-stars",
    "tmdb_id": 1376457,
-   "synopsis_en": "Seventeen-year-old Kellou has been gifted with supernatural powers she does not understand. Her disquiet and uncertainty only change when she meets Aya. It is an encounter with destiny that forges a mystical world where the visible and invisible converge."
+   "synopsis_en": "Seventeen-year-old Kellou has been gifted with supernatural powers she does not understand. Her disquiet and uncertainty only change when she meets Aya. It is an encounter with destiny that forges a mystical world where the visible and invisible converge.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "El Despertar",
    "type": "film",
-   "section": "🇨🇴 Colombia viva",
+   "section": "🇨🇴 Colombia Viva",
    "director": "Jaime Osorio Márquez",
    "year": 2026,
    "country": "Colombia",
@@ -5502,6 +7298,11 @@
    "duration": "96 min",
    "language": "Español",
    "genre": "Acción",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-14",
+    "17:00"
+   ],
    "day": "2026-10-14",
    "time": "17:00",
    "day_order": 6,
@@ -5521,12 +7322,20 @@
    "lbSlug": "the-awakening-2026",
    "tmdb_id": 1657630,
    "synopsis_en": "An elite military unit ventures into the South American tropical jungle on a mission to eliminate an enemy target. What begins as a tactical operation quickly turns into a nightmare when they encounter supernatural forces emerging from the depths of the jungle. Five hundred years earlier, a Spanish conquistador expedition was consumed by the same relentless force. Separated by centuries but connected by the same hostile territory, both incursions discover something hidden in the jungle: an ancient presence that cannot be controlled.",
-   "title_en": "The Awakening"
+   "title_en": "The Awakening",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "El Deshielo",
    "type": "film",
-   "section": "👻 Fantasmas del pasado",
+   "section": "👻 Fantasmas del Pasado",
    "director": "Manuela Martelli",
    "year": 2026,
    "country": "Chile, Estados Unidos, España, México",
@@ -5534,6 +7343,11 @@
    "duration": "108 min",
    "language": "Español, Inglés, Alemán",
    "genre": "Drama",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-14",
+    "17:30"
+   ],
    "day": "2026-10-14",
    "time": "17:30",
    "day_order": 6,
@@ -5552,12 +7366,20 @@
    "lbSlug": "the-meltdown",
    "tmdb_id": 1210268,
    "synopsis_en": "1992, Chile. Inés parents are away on business and she is left in the care of her grandparents, who own a hotel at the foot of a ski resort. Inés befriends Hanna, a European skier who has come to train in Chile. One night, Hanna disappears. The process of her search will unveil a series of hidden situations.",
-   "title_en": "The Meltdown"
+   "title_en": "The Meltdown",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "6 Meses en el Edificio Rosa con Azul",
    "type": "film",
-   "section": "✨ Espíritu joven",
+   "section": "✨ Espíritu Joven",
    "director": "Bruno Santamaría Razo",
    "year": 2026,
    "country": "México",
@@ -5565,6 +7387,11 @@
    "duration": "104 min",
    "language": "Español",
    "genre": "Drama",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-14",
+    "18:00"
+   ],
    "day": "2026-10-14",
    "time": "18:00",
    "day_order": 6,
@@ -5583,12 +7410,20 @@
    "lbSlug": "six-months-in-a-pink-and-blue-building",
    "tmdb_id": 1025407,
    "synopsis_en": "Mexico City, early 90s. The day Bruno turns 11, his growing feelings for his best friend Vladimir clash with the sudden announcement that his father has HIV. Like in salsa songs, his family tries to sing and dance their pain away. Thirty years later, Bruno films and reimagine the memory of what he could not quite perceive as a child.",
-   "title_en": "Six Months in a Pink and Blue Building"
+   "title_en": "Six Months in a Pink and Blue Building",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Eklipse",
    "type": "film",
-   "section": "✨ Espíritu joven",
+   "section": "✨ Espíritu Joven",
    "director": "Manuel Wetscher",
    "year": 2026,
    "country": "Austria, Italia",
@@ -5596,6 +7431,11 @@
    "duration": "91 min",
    "language": "Alemán",
    "genre": "Drama",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-14",
+    "18:30"
+   ],
    "day": "2026-10-14",
    "time": "18:30",
    "day_order": 6,
@@ -5613,12 +7453,20 @@
    "ticket_url": "https://www.cinecolombia.com/films/eklipse/HO00000864/",
    "lbSlug": "eklipse-2026",
    "tmdb_id": 1724831,
-   "synopsis_en": "Twelve-year-old Tomy spends the summer of the 1999 solar eclipse with his best friend Chris on an alpine pasture. When Chris learns that Tomy's father is in hospital with AIDS, their friendship falls apart – and Tomy suddenly finds himself torn between exclusion and the secrecy of his own family."
+   "synopsis_en": "Twelve-year-old Tomy spends the summer of the 1999 solar eclipse with his best friend Chris on an alpine pasture. When Chris learns that Tomy's father is in hospital with AIDS, their friendship falls apart – and Tomy suddenly finds himself torn between exclusion and the secrecy of his own family.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "The Burning Giants",
    "type": "film",
-   "section": "🧬 Relatos mutantes",
+   "section": "🧬 Relatos Mutantes",
    "director": "Phuttiphong Aroonpheng",
    "year": 2026,
    "country": "Tailandia, Singapur, Francia, Países Bajos",
@@ -5626,6 +7474,11 @@
    "duration": "118 min",
    "language": "Tailandés, Lengua Karen",
    "genre": "Drama",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-14",
+    "19:00"
+   ],
    "day": "2026-10-14",
    "time": "19:00",
    "day_order": 6,
@@ -5643,19 +7496,32 @@
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=1023057…",
    "lbSlug": "the-burning-giants",
    "tmdb_id": 1730542,
-   "synopsis_en": "Follows an environmental and Indigenous rights activist from the Karen group who is killed after protesting the forced eviction of his village from a protected forest."
+   "synopsis_en": "Follows an environmental and Indigenous rights activist from the Karen group who is killed after protesting the forced eviction of his village from a protected forest.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Cobarde",
    "type": "film",
-   "section": "✨ Espíritu joven",
+   "section": "✨ Espíritu Joven",
    "director": "Lukas Dhont",
    "year": 2026,
    "country": "Bélgica, Francia, Países Bajos",
    "flags": "🇧🇪🇫🇷🇳🇱",
-   "duration": "125 min",
+   "duration": "120 min",
    "language": "Francés, Neerlandés",
    "genre": "Drama histórico",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-14",
+    "19:30"
+   ],
    "day": "2026-10-14",
    "time": "19:30",
    "day_order": 6,
@@ -5674,12 +7540,21 @@
    "premiere": "Clausura",
    "lbSlug": "coward-2026",
    "tmdb_id": 1437981,
-   "synopsis_en": "Pierre, a young Belgian soldier, wants to prove himself on the battlefield during the First World War. Behind the frontlines, he meets Francis, who is asked to find a way to boost morale."
+   "synopsis_en": "Pierre, a young Belgian soldier, wants to prove himself on the battlefield during the First World War. Behind the frontlines, he meets Francis, who is asked to find a way to boost morale.",
+   "_duracion_corregida": "TMDB 1437981 (120, Cannes 2026); MUBI Fest y TIFF 120",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Princesa Burro",
    "type": "film",
-   "section": "🧬 Relatos mutantes",
+   "section": "🧬 Relatos Mutantes",
    "director": "Cristóbal León, Joaquín Cociña",
    "year": 2026,
    "country": "Chile, Francia, Países Bajos, Uruguay, Alemania",
@@ -5687,6 +7562,11 @@
    "duration": "90 min",
    "language": "Español",
    "genre": "Fantasía",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-14",
+    "20:00"
+   ],
    "day": "2026-10-14",
    "time": "20:00",
    "day_order": 6,
@@ -5705,12 +7585,20 @@
    "lbSlug": "donkey-princess",
    "tmdb_id": 1536431,
    "synopsis_en": "Diana is the princess of an ancient kingdom. Her father, King Arthur, forbids love. When Diana falls in love with Lalo, he banishes him. Using a magical bracelet, Diana travels to other worlds in search of her love.",
-   "title_en": "Donkey Princess"
+   "title_en": "Donkey Princess",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Light Pillar",
    "type": "film",
-   "section": "👻 Fantasmas del pasado",
+   "section": "👻 Fantasmas del Pasado",
    "director": "Xu Zao",
    "year": 2026,
    "country": "China",
@@ -5718,6 +7606,11 @@
    "duration": "90 min",
    "language": "Chino, Mandarín",
    "genre": "Animación",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-14",
+    "20:00"
+   ],
    "day": "2026-10-14",
    "time": "20:00",
    "day_order": 6,
@@ -5735,12 +7628,20 @@
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=1023057…",
    "lbSlug": "light-pillar",
    "tmdb_id": 1601885,
-   "synopsis_en": "The future. Winter. Space travel is no longer a dream. A lonely janitor tends the grounds of a dilapidated bankrupt film studio with only a former cat actor for company until he embarks on a romantic journey with a female player in a beautiful virtual world."
+   "synopsis_en": "The future. Winter. Space travel is no longer a dream. A lonely janitor tends the grounds of a dilapidated bankrupt film studio with only a former cat actor for company until he embarks on a romantic journey with a female player in a beautiful virtual world.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Trial of Hein",
    "type": "film",
-   "section": "👻 Fantasmas del pasado",
+   "section": "👻 Fantasmas del Pasado",
    "director": "Kai Stänicke",
    "year": 2026,
    "country": "Alemania",
@@ -5748,6 +7649,11 @@
    "duration": "122 min",
    "language": "Alemán",
    "genre": "Drama",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-14",
+    "20:30"
+   ],
    "day": "2026-10-14",
    "time": "20:30",
    "day_order": 6,
@@ -5765,12 +7671,20 @@
    "ticket_url": "https://www.cinecolombia.com/films/der-heimatlose/HO00000856/",
    "lbSlug": "trial-of-hein",
    "tmdb_id": 1476466,
-   "synopsis_en": "After 14 years away, Hein returns to his home village on a remote island, only to discover that the close-knit community no longer recognises him. Suspecting him to be an impostor, they demand a trial to determine his true identity."
+   "synopsis_en": "After 14 years away, Hein returns to his home village on a remote island, only to discover that the close-knit community no longer recognises him. Suspecting him to be an impostor, they demand a trial to determine his true identity.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Objet A",
    "type": "film",
-   "section": "🧬 Relatos mutantes",
+   "section": "🧬 Relatos Mutantes",
    "director": "Ann Oren",
    "year": 2026,
    "country": "Alemania, Luxemburgo, Grecia",
@@ -5778,6 +7692,11 @@
    "duration": "95 min",
    "language": "Alemán",
    "genre": "Drama",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-14",
+    "21:00"
+   ],
    "day": "2026-10-14",
    "time": "21:00",
    "day_order": 6,
@@ -5795,7 +7714,15 @@
    "ticket_url": "https://www.cinecolombia.com/films/objet-a/HO00000848/",
    "lbSlug": "objet-a",
    "tmdb_id": 1228841,
-   "synopsis_en": "Ingeborg and Adam are visionary hand surgeons bound by love, control, and irresistible fixations. She is compelled to steal objects; he longs to become one. When an accident brings the enigmatic Gaia into their lives, unexpected desires begin to take shape, unsettling the careful balance that has long defined their relationship."
+   "synopsis_en": "Ingeborg and Adam are visionary hand surgeons bound by love, control, and irresistible fixations. She is compelled to steal objects; he longs to become one. When an accident brings the enigmatic Gaia into their lives, unexpected desires begin to take shape, unsettling the careful balance that has long defined their relationship.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   },
   {
    "title": "Fjord",
@@ -5808,6 +7735,11 @@
    "duration": "146 min",
    "language": "Inglés, Rumano, Noruego, Sueco",
    "genre": "Drama",
+   "_ancla": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    "2026-10-14",
+    "21:30"
+   ],
    "day": "2026-10-14",
    "time": "21:30",
    "day_order": 6,
@@ -5825,12 +7757,20 @@
    "ticket_url": "https://www.cinecolombia.com/films/fjord/HO00000867/",
    "lbSlug": "fjord-2026",
    "tmdb_id": 1401459,
-   "synopsis_en": "Following the deaths of Mihai's parents, Mihai and Lisbeth Gheorghiu leave their life behind in Romania and move with their children to a remote village in Norway, hoping to rebuild their lives near Lisbeth's family. There, they grow close to their neighbors, the Halbergs, whose warmth gives them hope for a fresh start. But the fragile peace begins to unravel when the Gheorghiu family’s young daughter, Elia, arrives at school covered in bruises."
+   "synopsis_en": "Following the deaths of Mihai's parents, Mihai and Lisbeth Gheorghiu leave their life behind in Romania and move with their children to a remote village in Norway, hoping to rebuild their lives near Lisbeth's family. There, they grow close to their neighbors, the Halbergs, whose warmth gives them hope for a fresh start. But the fragile peace begins to unravel when the Gheorghiu family’s young daughter, Elia, arrives at school covered in bruises.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
   }
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-07T15:20:07",
+  "fecha": "2026-10-16T11:02:40",
   "plan_sha": "1aaa37e1829a6d31",
   "paso": 9,
   "cmd": "python3 pipeline/ensamblar.py biff-2026"

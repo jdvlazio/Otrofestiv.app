@@ -149,6 +149,68 @@ def tmdb_get(path, api_key, **params):
     return {}
 
 
+
+class TMDBRed(Exception):
+    """TMDB no respondió (red). NO es «no existe»: una ficha pedida por id
+    vuelve con datos o con el error 34; vacía, es que no llegó."""
+
+
+def tmdb_ficha(cid, api_key, _get=None, **params):
+    """Una ficha POR ID: la ficha, {} si TMDB dice que no existe (34), o
+    TMDBRed si no respondió.
+
+    POR QUÉ (14 oct 2026). tmdb_get devuelve {} cuando agota los reintentos, y
+    en una BÚSQUEDA eso a lo sumo pierde una ficha. Pedida por id, la ficha
+    vacía se armaba igual: «En construcción», «La bola negra» e «Historias del
+    buen valle» —declaradas a mano en Ficcali— volvieron sin afiche, sin país y
+    sin sinopsis en inglés en una corrida con la red cortando, sin un solo
+    aviso, y así se habrían publicado. Que pare: el sidecar de la corrida
+    anterior queda intacto y se vuelve a correr."""
+    d = (_get or tmdb_get)(f'/movie/{cid}', api_key, **params)
+    if d.get('id'):
+        return d
+    if d.get('status_code') == 34:
+        return {}
+    raise TMDBRed(f'TMDB no respondió por la ficha {cid} (red): se para antes '
+                  f'de escribir nada; volver a correr')
+
+
+def tmdb_ficha_autoprueba():
+    """Los tres casos con un tmdb_get de mentira. Lista de fallos: vacía = sana."""
+    mal = []
+    if tmdb_ficha(1, 'k', _get=lambda *a, **k: {'id': 1, 'title': 'zzz'}).get('title') != 'zzz':
+        mal.append('ficha que llega')
+    if tmdb_ficha(1, 'k', _get=lambda *a, **k: {'success': False, 'status_code': 34}) != {}:
+        mal.append('ficha que no existe (34)')
+    try:
+        tmdb_ficha(1, 'k', _get=lambda *a, **k: {})
+        mal.append('red caída: no paró')
+    except TMDBRed:
+        pass
+    return mal
+# Lo que `quitar.json` puede retirar aunque no se conserve de lo publicado, con
+# los campos que se van con él (un afiche se lleva su procedencia). Lo leen
+# ensamblar (lo saca del build) y publicar (no lo cuenta como pérdida).
+RETIRABLES = {'poster': ('poster', 'posterSource')}
+
+
+def quitados(fid):
+    """{(título, campo)} declarados en festivals/staging/<fid>-quitar.json: lo
+    que se retira A PROPÓSITO de lo publicado y por eso no se conserva. Lo leen
+    todos los caminos que reponen lo publicado (ensamblar._conservar_publicado y
+    los crudos que lo hacen por su cuenta, como Cinemancia): uno solo lee el
+    archivo. Sin `por_que`, aborta."""
+    p = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+                     'festivals', 'staging', f'{fid}-quitar.json')
+    if not os.path.exists(p):
+        return set()
+    out = set()
+    for x in json.load(open(p, encoding='utf-8')).get('quitar') or []:
+        if not x.get('por_que'):
+            raise SystemExit(f'✗ {os.path.basename(p)}: «{x.get("titulo")}» · {x.get("campo")} sin por_que')
+        out.add((x.get('titulo'), x.get('campo')))
+    return out
+
 # ── verificación (la lección Tribeca, ejecutable) ────────────────────────────
 def director_coincide(esperado, nombres):
     """¿Algún nombre de TMDB casa con el director de la fuente? Compara por
@@ -325,7 +387,10 @@ def ya_publicada(obra, idx):
                 if not (dur_ok or anio_ok):
                     continue
             r = {'festival': fest, 'titulo': o['title']}
-            for campo in ('tmdb_id', 'poster', 'posterSource', 'lbSlug'):
+            # todo lo que ya mostramos de la obra (17 oct 2026): la cascada solo
+            # traía afiche y sinopsis, y país/año/duración/género se quedaban atrás
+            for campo in ('tmdb_id', 'poster', 'posterSource', 'lbSlug', 'country', 'year',
+                          'duration', 'genre', 'synopsis_en'):
                 if o.get(campo):
                     r[campo] = o[campo]
             if o.get('synopsis'):
@@ -456,6 +521,18 @@ _INSCRIPCION = ('inscripcion', 'inscribir', 'registro previo', 'cupo limitado',
                 'previa inscripcion', 'formulario')
 
 
+def json_wp(texto):
+    """La respuesta de la API de WordPress, aunque el sitio le pegue CSS delante.
+
+    POR QUÉ (12 oct 2026). ficcali.com empezó a anteponer un `<style
+    id="elementor-post-…">` a /wp-json/: HTTP 200, `application/json`, y el
+    json.loads del primer carácter reventaba el catálogo, la programación y los
+    afiches a la vez. El JSON empieza en el primer `[{"` o `{"`; lo de antes
+    se descarta."""
+    i = min((k for k in (texto.find('[{"'), texto.find('{"'), texto.find('[]')) if k >= 0), default=0)
+    return json.loads(texto[i:], strict=False)
+
+
 def acceso_campos(texto, url=''):
     """De la palabra del festival a los 4 campos que la app lee.
 
@@ -478,6 +555,11 @@ def acceso_campos(texto, url=''):
         out['requires_registration'] = True
     if any(x in t for x in _INVITACION):
         out['by_invitation'] = True
+    # la BOLETA que la fuente afirma, aunque no traiga link (17 oct 2026). Lo
+    # libre y lo cerrado ganan; «reserva por boletería» no dice que se pague
+    if ('is_free' not in out and 'by_invitation' not in out
+            and (t.startswith('con boleta') or 'boleteria en' in t or t == 'boleteria')):
+        out['is_free'] = False
     return out
 
 
@@ -514,7 +596,7 @@ def arquetipos():
 SIGLAS = {
     # sedes y las instituciones que las nombran
     'AECID', 'ALADOS', 'ALITIC', 'ASAB', 'BMCC', 'CCEBA', 'CDAE', 'CEFE', 'CESMAG', 'COMFAMA', 'FUGA',
-    'LGBTIQ', 'MAMB', 'MAMM', 'SENA', 'TPAC', 'UNAL', 'UNIAGRARIA', 'UNIBAC', 'VISA',
+    'LGBTIQ', 'MAMB', 'MAMM', 'MUBI', 'SENA', 'TPAC', 'UNAL', 'UNIAGRARIA', 'UNIBAC', 'VISA',
     # festivales nombrados dentro de una sección o una sede
     'BIFF', 'FICCI', 'FICDH', 'TIFF',
     # «Programación MORA» de FILCMAR: Mercado Oriente Audiovisual (su lámina 1)
@@ -687,10 +769,44 @@ def sellar_build(fid, paso, cmd, repo=None):
     if not os.path.exists(b):
         return None
     d = json.load(open(b, encoding='utf-8'))
+    # un FALLO de un paso posterior sobrevive a un sello nuevo de un paso anterior:
+    # volver a ensamblar no arregla el verificador que falló después
+    _f = (d.get('_corrido') or {}).get('fallo')
     d['_corrido'] = {'por': 'pipeline/correr.py', 'fecha': datetime.datetime.now().isoformat(timespec='seconds'),
-                     'plan_sha': sello_plan(fid, R), 'paso': paso, 'cmd': cmd}
+                     'plan_sha': sello_plan(fid, R), 'paso': paso, 'cmd': cmd,
+                     **({'fallo': _f} if _f and _f.get('paso', 0) > paso else {})}
     json.dump(d, open(b, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     return d['_corrido']
+
+
+def _corrido_editar(fid, repo, fn):
+    b = f'{repo or REPO}/festivals/staging/{fid}-build.json'
+    if not os.path.exists(b):
+        return
+    d = json.load(open(b, encoding='utf-8'))
+    if not d.get('_corrido'):
+        return
+    fn(d['_corrido'])
+    json.dump(d, open(b, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+
+
+def marcar_fallo(fid, paso, cmd, repo=None):
+    """correr.py: el paso `paso` falló. El build sellado antes deja de ser
+    publicable hasta que ese paso vuelva a pasar (16 oct 2026: se publicó dos
+    veces en local un build cuyo verificador había fallado)."""
+    _corrido_editar(fid, repo, lambda c: c.update(fallo={'paso': paso, 'cmd': cmd,
+                    'fecha': datetime.datetime.now().isoformat(timespec='seconds')}))
+
+
+def limpiar_fallo(fid, paso, repo=None, cmd=None):
+    """correr.py: el paso `paso` (con su comando) pasó; si era el que había
+    fallado, se limpia. Se compara también el comando: si el plan se renumeró,
+    otro paso con el mismo número no limpia un fallo ajeno."""
+    def _l(c):
+        fa = c.get('fallo') or {}
+        if fa.get('paso') == paso and (cmd is None or fa.get('cmd') == cmd):
+            c.pop('fallo')
+    _corrido_editar(fid, repo, _l)
 
 
 def sello_valido(fid, build, repo=None):
@@ -698,6 +814,9 @@ def sello_valido(fid, build, repo=None):
     c = (build or {}).get('_corrido') or {}
     if not c:
         return False, 'el build no lleva sello: no lo produjo pipeline/correr.py'
+    if c.get('fallo'):
+        return False, (f'después del sello falló el paso {c["fallo"]["paso"]} ({c["fallo"]["cmd"]}): '
+                       f'repetilo con --paso {c["fallo"]["paso"]} hasta que pase')
     if c.get('plan_sha') != sello_plan(fid, repo):
         return False, (f'el sello es de otro plan (sha {c.get("plan_sha")} ≠ {sello_plan(fid, repo)}): '
                        f'el plan cambió después de correr')
@@ -762,7 +881,9 @@ DESCRIPCION_DE = {'synopsis': 'description', 'synopsis_en': 'description_en',
 
 def lleva_descripcion(f):
     """¿El texto de esta función describe un programa o una actividad (y no una obra)?"""
-    return f.get('type') == 'event' or bool(f.get('event_kind')) or bool(f.get('film_list'))
+    # …o un programa que todavía no lista sus obras (FICICA, 15 oct 2026: «muy pronto»)
+    return (f.get('type') == 'event' or bool(f.get('event_kind')) or bool(f.get('film_list'))
+            or bool(f.get('is_programa')))
 
 
 def separar_descripcion(f):
@@ -885,6 +1006,15 @@ def _selftest():
     t('acceso cerrada al público (web BIFF)', acceso_campos('Función cerrada al público. No hay boletería disponible'),
       {'by_invitation': True})
     t('reserva no es gratis', acceso_campos('Reserva por boletería online o presencial.'), {})
+    # BOLETA SIN LINK (17 oct 2026): la fuente lo AFIRMA y se perdía. En
+    # Fantasmagoría, ya en el modelo de la función, 12 funciones «Con boleta»
+    # salían como libres por el supuesto. Lo libre gana: «libre con boleta» es libre
+    t('con boleta (Fantasmagoría)', acceso_campos('Con boleta'), {'is_free': False})
+    t('con boleta y precio', acceso_campos('Con boleta: $7.000'), {'is_free': False})
+    t('boletería en TuBoleta', acceso_campos('Boletería en TuBoleta'), {'is_free': False})
+    t('boletería, a secas', acceso_campos('Boletería'), {'is_free': False})
+    t('libre con boleta es libre', acceso_campos('Entrada libre con boleta (en orden de llegada)'), {'is_free': True})
+    t('gratis reclamando boleta es libre', acceso_campos('Entrada gratis reclamando boleta en taquilla'), {'is_free': True})
     t('declarado: vacío no cuenta', acceso_declarado({'acceso': '  '}), False)
     t('declarado: desconocido SÍ cuenta', acceso_declarado({'acceso': DESCONOCIDO}), True)
     t('ficha ok', ficha_verifica(

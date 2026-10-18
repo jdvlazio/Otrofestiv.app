@@ -1,0 +1,48 @@
+{
+ "id": "w_R4MX6E365FH2",
+ "titulo_original": "Corazón galvánico",
+ "anio": 2024,
+ "paises": [
+  "CO"
+ ],
+ "directores": [
+  "Valentina Valencia"
+ ],
+ "aliases": [
+  {
+   "titulo": "Galvanic Heart",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "Ivy, ciudadana de un futuro en decadencia, se ve ahogada en una perpetua melancolía tras separarse de su enamorada. OHM, su asistente robótico y regente del nuevo orden mundial, le presenta la oportunidad única de reencontrarse con ella y trascender su forma humana.",
+  "en": "This is a story set on the future Caribbean coast, which is almost  uninhabitable due to pollution and climate change. Amidst the gloomy landscape of the new world order OHM, we find Ivy, our protagonist, who, after a heartbreaking breakup, is left in a very delicate emotional state."
+ },
+ "generos": [
+  "Ciencia ficción",
+  "Animación"
+ ],
+ "afiche": {
+  "archivo": "/assets/popayan-2026/corazon-galvanico.jpg",
+  "veredicto": "oficial"
+ },
+ "xref": {
+  "tmdb": 1376037,
+  "letterboxd": "galvanic-heart"
+ },
+ "versiones": [
+  {
+   "etiqueta": "11 min",
+   "duracion_min": 11
+  },
+  {
+   "etiqueta": "14 min",
+   "duracion_min": 14
+  }
+ ],
+ "presentaciones": [
+  "popayan-2026",
+  "siembrafest-2026"
+ ]
+}

@@ -1,0 +1,26 @@
+{
+ "titulo_original": {
+  "fuente": "festival:fantasmagoria-2026,ficci-65,filcmar-2026",
+  "regla": "el título que más festivales imprimen"
+ },
+ "directores": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "TMDB 1446898 la acredita así; «Stephania Piñeros» (Ficmontañas) es un error",
+  "fecha": "2026-10-14"
+ },
+ "anio": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "estreno en Colombia el 16 abr 2026 (TMDB); el 2027 era el estreno comercial en España",
+  "fecha": "2026-10-14"
+ },
+ "paises": {
+  "fuente": "tmdb:1446898",
+  "regla": "tmdb-manda"
+ },
+ "generos": {
+  "fuente": "festival",
+  "regla": "todos los publicados, del más al menos frecuente"
+ }
+}

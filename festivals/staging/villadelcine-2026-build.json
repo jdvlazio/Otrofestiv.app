@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "PROGRAMACIÓN «Caminos del tiempo» 2026 (PDF) + las fichas de obra de villadelcine.com",
-  "capturado": "2026-10-08",
+  "capturado": "2026-10-14",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "acceso_por_defecto": {
@@ -254,7 +254,7 @@
     "date": "2026-09-19"
    },
    "is_free": true,
-   "lbSlug": "amor-a-primera-vista",
+   "lbSlug": "un-amor-a-primera-vista",
    "tmdb_id": 1791658,
    "titulos_anteriores": [
     "Amor a primera vista"
@@ -494,7 +494,7 @@
      "year": 2025,
      "duration": "4 min",
      "poster": "/assets/villadelcine-2026/sua-y-sie-guardianes-de-la-vida.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "sua-y-sie-guardianes-de-la-vida",
      "tmdb_id": 1791659,
      "synopsis": "En el páramo de Mata de Mora, dos niños encarnan a Sua, el Sol, y Sie, el Agua. Hablando en muisca y español, estas fuerzas sagradas dialogan sobre el equilibrio de la vida e invitan a proteger el territorio, la memoria ancestral y las fuentes que sostienen a su comunidad.",
@@ -535,7 +535,7 @@
      "year": 2026,
      "duration": "5 min",
      "poster": "/assets/villadelcine-2026/manos-rojas.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "manos-rojas",
      "tmdb_id": 1791661,
      "synopsis": "En medio del conflicto armado colombiano, una comunidad ve cómo el miedo y los secuestros alteran su vida cotidiana. Mientras las familias atraviesan ausencias, separaciones y decisiones dolorosas, surge una pregunta urgente: ¿cómo conservar la esperanza? Una historia sobre las huellas de la guerra y la posibilidad de construir paz desde la memoria.",
@@ -597,7 +597,7 @@
      "flags": "🇲🇽",
      "duration": "8 min",
      "poster": "/assets/villadelcine-2026/memorias-del-alba.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "memorias-del-alba",
      "tmdb_id": 1791663,
      "synopsis": "Tatao crece junto a su abuela Alba, unidos por una rutina que da forma a su vida cotidiana. Cuando la memoria empieza a desvanecerse, su relación se transforma, revelando cómo el amor perdura incluso a medida que los recuerdos desaparecen lentamente.",
@@ -805,7 +805,8 @@
      "tmdb_id": 1565878,
      "synopsis": "Colombia, 1951. En plena Violencia, dos chulavitas, sicarios al servicio del Gobierno, siguen a un sacerdote durante la noche, convencidos de que los conducirá hasta una cabaña donde se esconden sus víctimas. Al internarse en el bosque, descubrirán un horror mucho más oscuro que cualquiera de sus propios actos.",
      "genre": "Drama / Terror",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "synopsis_en": "Colombia, 1951. In the thick of La Violencia, the period of brutal political war between Liberals and Conservatives, two chulavitas —hired killers on the government’s payroll— stalk a priest through the dark, waiting for him to lead them to the cabin in the woods where their next victims are hiding. But the horror they find there is a thousand times worse than the pain they meant to inflict."
     },
     {
      "title": "Sierra: El álbum mortuorio",
@@ -1003,6 +1004,9 @@
      "synopsis": "Tras 75 años de espera, Atlético Bucaramanga conquista su primera estrella. A través de hinchas de distintas generaciones, barristas y líderes comunitarios, el documental retrata cómo el fútbol transformó heridas, recuperó esperanzas y unió a toda una ciudad alrededor de una celebración largamente soñada.",
      "genre": "Documental",
      "synopsis_lang": "es",
+     "lbSlug": "el-ultimo-campeon",
+     "tmdb_id": 1797487,
+     "synopsis_en": "Atlético Bucaramanga waited 75 years for its first Colombian league title, won on penalties in June 2024. The film follows that season through the club's supporters: a 60-year-old man who promises to have the crest tattooed on his chest, a 90-year-old grandmother, a teacher working to keep children away from crime, former barra members who left violence behind, and the city that adopted the Cumbia de los trapos as its anthem.",
      "titulos_anteriores": [
       "The Last Champion"
      ]
@@ -1059,7 +1063,7 @@
    "year": 2026,
    "country": "Colombia",
    "flags": "🇨🇴",
-   "duration": "120 min",
+   "duration": "113 min",
    "genre": "Fantasía / Drama / Comedia",
    "day": "2026-10-15",
    "time": "17:15",
@@ -1079,7 +1083,8 @@
    "lbSlug": "rains-over-babel",
    "tmdb_id": 1388977,
    "synopsis_en": "In a retro-futuristic, tropical-punk twist on Dante’s Inferno, a group of misfits converges at Babel, a legendary dive bar that doubles as purgatory, where La Flaca—the city’s Grim Reaper—presides. Here, souls gamble years of their lives with her, daring to outwit Death Herself.",
-   "title_en": "Rains Over Babel"
+   "title_en": "Rains Over Babel",
+   "_duracion_corregida": "TMDB 1388977 (113, Sundance 2025); FICMA y Girardota 111, Narrar el futuro 113"
   },
   {
    "title": "Umbrales",
@@ -1185,7 +1190,7 @@
      "flags": "🇨🇴",
      "duration": "139 min",
      "poster": "/assets/villadelcine-2026/volar.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "volar-1",
      "tmdb_id": 1791664,
      "synopsis": "Tras la desaparición de Claudia, Alirio, un niño habitante de calle, se niega a quedar nuevamente solo. Por eso se lleva a Alicia, una anciana olvidada en un parque. Lo que comienza como un rapto transforma dos vidas invisibles: juntos construyen el afecto y el hogar que la ciudad les había negado.",
@@ -1402,7 +1407,7 @@
      "year": 2025,
      "duration": "7 min",
      "poster": "/assets/villadelcine-2026/la-ultima-historia.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "la-ultima-historia",
      "tmdb_id": 1791665,
      "synopsis": "Pipe, un escritor anciano que enfrenta el Alzheimer, intenta terminar la que podría ser su última obra. Mientras escribe, sus recuerdos se confunden con historias ajenas hasta llevarlo de regreso a su infancia, cuando, sin zapatos y con un balón de trapo, soñaba con vestir la camiseta de la Selección Colombia.",
@@ -1542,7 +1547,7 @@
      "flags": "🇨🇴",
      "duration": "9 min",
      "poster": "/assets/villadelcine-2026/monte-curandero.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "monte-curandero",
      "tmdb_id": 1791666,
      "synopsis": "En las montañas del Putumayo, las abuelas guardan el conocimiento medicinal de las plantas y lo transmiten de generación en generación. Sus tejidos convierten la relación con el agua, la chagra y el monte en símbolos vivos. Un acercamiento sensible a una naturaleza que conserva una memoria más antigua y extensa que la nuestra.",
@@ -1652,7 +1657,7 @@
      "flags": "🇨🇴",
      "duration": "10 min",
      "poster": "/assets/villadelcine-2026/quimera.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "quimera-4",
      "tmdb_id": 1791667,
      "synopsis": "James, de doce años, vive con Francisco en una granja hasta que la policía irrumpe y revela que el hombre que llama padre lo secuestró años atrás. Trasladado a un centro terapéutico, el niño deberá reconstruir su identidad y aprender a reconocerse detrás de los comportamientos que imita para sobrevivir.",
@@ -1666,7 +1671,7 @@
      "flags": "🇨🇴",
      "duration": "15 min",
      "poster": "/assets/villadelcine-2026/diablo-ballena.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "diablo-ballena",
      "tmdb_id": 1791668,
      "synopsis": "Carmen, una campesina de sesenta años, rescata de la laguna de Tota a un desconocido que flota junto a un requinto. Él se niega a revelar su identidad, pero el canto de la mítica Diablo Ballena rompe el silencio y conduce a ambos hacia un pasado que aún busca redención.",
@@ -1996,8 +2001,8 @@
      "year": 2024,
      "duration": "6 min",
      "poster": "/assets/villadelcine-2026/la-silla.jpg",
-     "posterSource": "oficial",
-     "lbSlug": "la-silla-3",
+     "posterSource": "tmdb",
+     "lbSlug": "la-silla-2024",
      "tmdb_id": 1791669,
      "synopsis": "En un instituto, dos jóvenes sufren discriminación de formas distintas: uno por desplazarse en silla de ruedas y otro por no encajar en las expectativas de quienes lo rodean. Un encuentro inesperado les permite ponerse en el lugar del otro y descubrir que la empatía puede transformar la forma de mirar y actuar.",
      "genre": "Comedia / Drama",
@@ -2027,7 +2032,7 @@
      "year": 2025,
      "duration": "20 min",
      "poster": "/assets/villadelcine-2026/la-sombrilla-de-mama.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "la-sombrilla-de-mama",
      "tmdb_id": 1791672,
      "synopsis": "En la Colombia de los años cincuenta, Luz pierde la sombrilla que tomó prestada de su madre. La furia de Waldina convierte el hogar en un lugar de miedo, pero, al descubrir el dolor oculto tras su rabia, la niña encuentra un gesto silencioso capaz de acercarlas y comenzar a sanar.",
@@ -2121,8 +2126,8 @@
      "year": 2026,
      "duration": "6 min",
      "poster": "/assets/villadelcine-2026/solo.jpg",
-     "posterSource": "oficial",
-     "lbSlug": "solo-3",
+     "posterSource": "tmdb",
+     "lbSlug": "solo-2026-2",
      "tmdb_id": 1791673,
      "synopsis": "Cansado de una rutina que parece no conducirlo a ningún lugar, un joven decide ascender solo a Monserrate. El esfuerzo físico, la música y el paisaje transforman el recorrido en una prueba interior, donde cada paso despierta emociones distintas y le revela que romper la monotonía también depende de atreverse a comenzar.",
      "genre": "Drama / Experimental",
@@ -2187,7 +2192,7 @@
      "flags": "🇨🇴",
      "duration": "19 min",
      "poster": "/assets/villadelcine-2026/momentos-en-movimiento-primeros-pasos-del-ballet-en-colombia.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "momentos-en-movimiento-primeros-pasos-del",
      "tmdb_id": 1791674,
      "synopsis": "A través de archivos y testimonios de quienes abrieron camino, este documental reconstruye el nacimiento y la consolidación del ballet en Colombia. Las primeras academias, maestras y bailarinas revelan una historia de disciplina, migraciones y perseverancia, rescatando del olvido a las mujeres que transformaron el movimiento en memoria y profesión.",
@@ -2251,7 +2256,7 @@
     },
     {
      "title": "O Cravista",
-     "director": "Luis E. Ozório",
+     "director": "Luiz E. Ozório",
      "country": "Brasil",
      "flags": "🇧🇷",
      "year": 2026,
@@ -2296,7 +2301,7 @@
      "year": 2026,
      "duration": "4 min",
      "poster": "/assets/villadelcine-2026/benditos-los-viejos.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "benditos-los-viejos",
      "tmdb_id": 1791675,
      "synopsis": "En el corazón de una maloca, una mujer atraviesa un ritual de gestación acompañado por el fuego, la danza y figuras de barro trazadas sobre su cuerpo. Mientras la naturaleza anuncia el nacimiento de una nueva vida, el parto se transforma en una celebración de la memoria ancestral, la gratitud y los ciclos que conectan el cuerpo, la tierra y las generaciones.",
@@ -2327,7 +2332,7 @@
      "year": 2025,
      "duration": "7 min",
      "poster": "/assets/villadelcine-2026/no-se-fia-ni-aunque-lloren.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "no-se-fia-ni-aunque-lloren",
      "tmdb_id": 1791676,
      "synopsis": "Tras despedirse de su abuela Rosa, Mateo decide prepararse para asumir el legado familiar. Su única guía es una lista de reglas escrita durante la infancia, que lo conduce por misiones tan absurdas como solemnes. Entre planes criminales y recuerdos, descubrirá que algunos legados no se reciben: se comprenden.",
@@ -2342,7 +2347,7 @@
      "year": 2026,
      "duration": "4 min",
      "poster": "/assets/villadelcine-2026/anima-de-marea.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "anima-de-marea",
      "tmdb_id": 1791677,
      "synopsis": "Durante el Día de los Muertos, José ignora la advertencia de su esposa y sale a pescar en las aguas de La Boquilla. Cuando el mar comienza a devolverle señales imposibles, una presencia sobrenatural lo enfrenta a su mayor temor. En ese territorio, algunas tradiciones no son supersticiones: son reglas de supervivencia.",
@@ -2357,7 +2362,7 @@
      "year": 2026,
      "duration": "11 min",
      "poster": "/assets/villadelcine-2026/maleza.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "maleza-2026",
      "tmdb_id": 1791678,
      "synopsis": "Alba, una sanadora y partera solitaria, ha dedicado su existencia a preservar la vida. Guiada por el espíritu de su gato, recibe una noche a una joven desesperada cuya petición sacude sus convicciones. Entre dolor y silencios, deberá comprender que acompañar también significa permitir que cada quien elija su propio camino.",
@@ -2579,6 +2584,7 @@
      "genre": "Videodanza",
      "synopsis_lang": "es",
      "title_en": "Sheltering Gestures",
+     "year": 2026,
      "titulos_anteriores": [
       "Sheltering Gestures"
      ]
@@ -2677,7 +2683,7 @@
    "title": "Claquetazo — Laboratorio de creación",
    "type": "event",
    "section": "🎓 Ruta Académica",
-   "duration": "15 min",
+   "duration": "30 min",
    "day": "2026-10-17",
    "time": "15:30",
    "day_order": 3,
@@ -2766,7 +2772,7 @@
    "year": 2025,
    "country": "Colombia",
    "flags": "🇨🇴",
-   "duration": "120 min",
+   "duration": "123 min",
    "genre": "Comedia / Drama",
    "day": "2026-10-17",
    "time": "19:15",
@@ -2785,12 +2791,16 @@
    "lbSlug": "a-poet",
    "tmdb_id": 1465563,
    "synopsis_en": "An aging poet finds purpose mentoring Yurlady, a talented teen, though exposing her to the poetry scene might be unwise. His own poetic pursuits led nowhere, leaving him a stereotypical obscure writer.",
-   "title_en": "A Poet"
+   "title_en": "A Poet",
+   "_duracion_corregida": "TMDB 1465563 (123, Cannes 2025); Ficmontañas 124"
   }
+ ],
+ "_avisos_duracion": [
+  "«El último campeón»: 5 min en el festival, 77 en TMDB"
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-08T09:31:02",
+  "fecha": "2026-10-14T20:03:25",
   "plan_sha": "59bf137b7d874efe",
   "paso": 16,
   "cmd": "python3 pipeline/ensamblar.py villadelcine-2026"

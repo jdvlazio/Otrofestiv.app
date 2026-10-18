@@ -1,0 +1,729 @@
+{
+ "_provenance": {
+  "fuente": "ensamblar.py: ids estables de las funciones (docs/FUNCION.md C1)",
+  "capturado": "2026-10-18"
+ },
+ "funciones": {
+  "f_7660ad6422": {
+   "sede": "Universidad Autónoma de Occidente - Cali",
+   "dia": "2026-10-16",
+   "hora": "09:00",
+   "sala": "Aulas 4, Torreón 1A",
+   "titulo": "encuentro local estudiantes de cine 2026 bailar con el caos"
+  },
+  "f_f66d49bb1b": {
+   "sede": "Teatro al Aire Libre Los Cristales - Cali",
+   "dia": "2026-10-16",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "mu ki ra"
+  },
+  "f_b9351a23f7": {
+   "sede": "Curador - Cali",
+   "dia": "2026-10-17",
+   "hora": "14:30",
+   "sala": "",
+   "titulo": "iii encuentro sectorial local"
+  },
+  "f_930ac1e01c": {
+   "sede": "Yawa - Cali",
+   "dia": "2026-10-17",
+   "hora": "15:00",
+   "sala": "Domo",
+   "titulo": "muestra vr"
+  },
+  "f_516ff1799f": {
+   "sede": "Cinemateca La Tertulia - Cali",
+   "dia": "2026-10-17",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "an incomplete calendar"
+  },
+  "f_c5ac151fc4": {
+   "sede": "Cinemateca La Tertulia - Cali",
+   "dia": "2026-10-17",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "luis tercero"
+  },
+  "f_27251e6c9c": {
+   "sede": "Plazoleta La Maceta - Cali",
+   "dia": "2026-10-17",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "cancion para mi tierra"
+  },
+  "f_4792785a05": {
+   "sede": "Yawa - Cali",
+   "dia": "2026-10-17",
+   "hora": "19:00",
+   "sala": "Domo",
+   "titulo": "domo live camoflux incendio igapo"
+  },
+  "f_94dc59c92b": {
+   "sede": "Cinemateca La Tertulia - Cali",
+   "dia": "2026-10-17",
+   "hora": "21:00",
+   "sala": "",
+   "titulo": "princesa burro"
+  },
+  "f_becc2863ca": {
+   "sede": "Madame Blue - Cali",
+   "dia": "2026-10-18",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "ellas gardiennes de l amazonie"
+  },
+  "f_360bbb0132": {
+   "sede": "Cinemateca La Tertulia - Cali",
+   "dia": "2026-10-18",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "siempre soy tu animal materno"
+  },
+  "f_9ac4fd3339": {
+   "sede": "Centro Cultural Brisas de Mayo - Cali",
+   "dia": "2026-10-18",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "mu ki ra"
+  },
+  "f_ff11c0b7f6": {
+   "sede": "Cinemateca La Tertulia - Cali",
+   "dia": "2026-10-18",
+   "hora": "21:00",
+   "sala": "",
+   "titulo": "seis meses en el edificio rosa con azul"
+  },
+  "f_3f99588d3b": {
+   "sede": "Centro Cultural Comfandi - Cali",
+   "dia": "2026-10-19",
+   "hora": "09:00",
+   "sala": "",
+   "titulo": "desarmar la mirada taller de critica para pensar el cine"
+  },
+  "f_17fc2cf996": {
+   "sede": "Tecnocentro Cultural Somos Pacífico - Cali",
+   "dia": "2026-10-19",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "cortos infantiles ficcali mi vecino totoro"
+  },
+  "f_6e0791b5a0": {
+   "sede": "Centro Cultural Comfandi - Cali",
+   "dia": "2026-10-20",
+   "hora": "09:00",
+   "sala": "",
+   "titulo": "desarmar la mirada taller de critica para pensar el cine"
+  },
+  "f_ce012167f9": {
+   "sede": "Cinemateca La Tertulia - Cali",
+   "dia": "2026-10-20",
+   "hora": "09:00",
+   "sala": "",
+   "titulo": "xv encuentro de investigacion en cine pantallas que piensan"
+  },
+  "f_80df636939": {
+   "sede": "Teatro La Unión - Cali",
+   "dia": "2026-10-20",
+   "hora": "15:30",
+   "sala": "",
+   "titulo": "arco corto akababuru"
+  },
+  "f_ca03e8d57b": {
+   "sede": "Cinemateca La Tertulia - Cali",
+   "dia": "2026-10-20",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "competencia corto nacional prog 1"
+  },
+  "f_68581bab4b": {
+   "sede": "Yawa - Cali",
+   "dia": "2026-10-20",
+   "hora": "19:00",
+   "sala": "Domo",
+   "titulo": "domo hub muestra local universitaria de cortometrajes inmersivos"
+  },
+  "f_93921bc39b": {
+   "sede": "Cinemateca La Tertulia - Cali",
+   "dia": "2026-10-20",
+   "hora": "21:00",
+   "sala": "",
+   "titulo": "i built a rocket imagining your arrival"
+  },
+  "f_691b3893e5": {
+   "sede": "Café Macondo - Cali",
+   "dia": "2026-10-21",
+   "hora": "09:00",
+   "sala": "",
+   "titulo": "parche con andres porras y carlos moreno"
+  },
+  "f_4ecd4582e9": {
+   "sede": "Cinemateca La Tertulia - Cali",
+   "dia": "2026-10-21",
+   "hora": "09:00",
+   "sala": "",
+   "titulo": "xv encuentro de investigacion en cine pantallas que piensan indagar en formas de investigacion creativa"
+  },
+  "f_12ac272009": {
+   "sede": "Café Macondo - Cali",
+   "dia": "2026-10-21",
+   "hora": "10:30",
+   "sala": "",
+   "titulo": "parche con marleyda soto"
+  },
+  "f_ce517e8b90": {
+   "sede": "BlackGround - Cali",
+   "dia": "2026-10-21",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "boca vieja"
+  },
+  "f_2e1cadac0f": {
+   "sede": "Cinemateca La Tertulia - Cali",
+   "dia": "2026-10-21",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "competencia corto nacional prog 2"
+  },
+  "f_73ecab6b0a": {
+   "sede": "Centro Cultural Comfandi - Cali",
+   "dia": "2026-10-21",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "guapi ritmo y balsada"
+  },
+  "f_842ebbc4ea": {
+   "sede": "Centro Cultural Comfandi - Cali",
+   "dia": "2026-10-21",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "la fabulosa maquina del tiempo"
+  },
+  "f_a74ef96f94": {
+   "sede": "Teatro Municipal Enrique Buenaventura - Cali",
+   "dia": "2026-10-21",
+   "hora": "18:00",
+   "sala": "Teatrino",
+   "titulo": "la libertad doble"
+  },
+  "f_9e04458025": {
+   "sede": "Madame Blue - Cali",
+   "dia": "2026-10-21",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "charlas alapar pablo solarz argentina"
+  },
+  "f_3f21d8ed29": {
+   "sede": "Yawa - Cali",
+   "dia": "2026-10-21",
+   "hora": "19:00",
+   "sala": "Domo",
+   "titulo": "domo lleno idartes beca videoarte"
+  },
+  "f_9a1a86853e": {
+   "sede": "CineQuanon - Cali",
+   "dia": "2026-10-21",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "luis tercero"
+  },
+  "f_ccede7bd0f": {
+   "sede": "Casa Ethel - Cali",
+   "dia": "2026-10-21",
+   "hora": "20:00",
+   "sala": "",
+   "titulo": "cineconcierto metropolis"
+  },
+  "f_1197e237b4": {
+   "sede": "Teatro Municipal Enrique Buenaventura - Cali",
+   "dia": "2026-10-21",
+   "hora": "20:30",
+   "sala": "Teatrino",
+   "titulo": "cali ciudad abierta prog cortos"
+  },
+  "f_cb7604f13a": {
+   "sede": "Cinemateca La Tertulia - Cali",
+   "dia": "2026-10-21",
+   "hora": "21:00",
+   "sala": "",
+   "titulo": "relicto"
+  },
+  "f_7c0b26519e": {
+   "sede": "SENA Salomia - Cali",
+   "dia": "2026-10-22",
+   "hora": "09:00",
+   "sala": "",
+   "titulo": "taller de doblaje en el cine"
+  },
+  "f_9e8b947fb7": {
+   "sede": "Teatro Municipal Enrique Buenaventura - Cali",
+   "dia": "2026-10-22",
+   "hora": "15:00",
+   "sala": "Teatrino",
+   "titulo": "conversatorio territorios y voces indigenas presentan concip y telepacifico"
+  },
+  "f_1347e2e9ec": {
+   "sede": "Cinemateca La Tertulia - Cali",
+   "dia": "2026-10-22",
+   "hora": "15:30",
+   "sala": "",
+   "titulo": "master class claire simon francia"
+  },
+  "f_ece2c963a3": {
+   "sede": "Cinemateca La Tertulia - Cali",
+   "dia": "2026-10-22",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "ecrire la vie annie ernaux racontee par des lyceennes et des lyceens"
+  },
+  "f_10c9bdaa79": {
+   "sede": "Centro Cultural Comfandi - Cali",
+   "dia": "2026-10-22",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "panel de inclusion y cine accesible contraplano"
+  },
+  "f_6c978e2329": {
+   "sede": "Cine Colombia Unicentro - Cali",
+   "dia": "2026-10-22",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "princesa burro"
+  },
+  "f_23449e2e2e": {
+   "sede": "Teatro Municipal Enrique Buenaventura - Cali",
+   "dia": "2026-10-22",
+   "hora": "18:00",
+   "sala": "Teatrino",
+   "titulo": "runa simi"
+  },
+  "f_b1a048f6b0": {
+   "sede": "BlackGround - Cali",
+   "dia": "2026-10-22",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "taller interrupcion sonica escuchar el archivo perturbar la imagen"
+  },
+  "f_b47d7c304f": {
+   "sede": "Cine Colombia Unicentro - Cali",
+   "dia": "2026-10-22",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "iluminada"
+  },
+  "f_84d3db28d1": {
+   "sede": "Yawa - Cali",
+   "dia": "2026-10-22",
+   "hora": "19:00",
+   "sala": "Domo",
+   "titulo": "domo internacional desorientaciones"
+  },
+  "f_c7c803a04d": {
+   "sede": "Espectra - Cali",
+   "dia": "2026-10-22",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "nuestro cuerpo es una estrella que se expande"
+  },
+  "f_3543a4745f": {
+   "sede": "Centro Cultural Comfandi - Cali",
+   "dia": "2026-10-22",
+   "hora": "20:00",
+   "sala": "",
+   "titulo": "rodilla negra el coloso"
+  },
+  "f_e9f086d490": {
+   "sede": "Curador - Cali",
+   "dia": "2026-10-22",
+   "hora": "20:00",
+   "sala": "",
+   "titulo": "salseando ando convergencias"
+  },
+  "f_2e8bafb3a8": {
+   "sede": "Teatro Municipal Enrique Buenaventura - Cali",
+   "dia": "2026-10-22",
+   "hora": "20:00",
+   "sala": "Teatrino",
+   "titulo": "tropico interior todos los colores de la oscuridad"
+  },
+  "f_4f974e83fd": {
+   "sede": "Cine Colombia Unicentro - Cali",
+   "dia": "2026-10-22",
+   "hora": "20:30",
+   "sala": "",
+   "titulo": "i built a rocket imagining your arrival"
+  },
+  "f_4214350555": {
+   "sede": "Cinemateca La Tertulia - Cali",
+   "dia": "2026-10-22",
+   "hora": "21:00",
+   "sala": "",
+   "titulo": "las pesadillas del siervo"
+  },
+  "f_4c97745ffa": {
+   "sede": "Cine Colombia Unicentro - Cali",
+   "dia": "2026-10-22",
+   "hora": "21:00",
+   "sala": "",
+   "titulo": "relicto"
+  },
+  "f_f6fc1a1df8": {
+   "sede": "Cinemateca La Tertulia - Cali",
+   "dia": "2026-10-23",
+   "hora": "09:00",
+   "sala": "",
+   "titulo": "master class de sapcine"
+  },
+  "f_fbb3538c7c": {
+   "sede": "Centro Cultural Comfandi - Cali",
+   "dia": "2026-10-23",
+   "hora": "09:00",
+   "sala": "",
+   "titulo": "desarmar la mirada taller de critica para pensar el cine"
+  },
+  "f_1d549c64cc": {
+   "sede": "Centro Cultural Comfandi - Cali",
+   "dia": "2026-10-23",
+   "hora": "10:00",
+   "sala": "",
+   "titulo": "panel direccion propia la realizacion en comunidades etnicas"
+  },
+  "f_bd475f92ed": {
+   "sede": "Centro Cultural Comfandi - Cali",
+   "dia": "2026-10-23",
+   "hora": "11:00",
+   "sala": "",
+   "titulo": "panel plataformas alternativas archivo y soberania audiovisual"
+  },
+  "f_48cc1ff63e": {
+   "sede": "Bulevar del Río - Cali",
+   "dia": "2026-10-23",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "agujero"
+  },
+  "f_7914922647": {
+   "sede": "Teatro Municipal Enrique Buenaventura - Cali",
+   "dia": "2026-10-23",
+   "hora": "15:00",
+   "sala": "Teatrino",
+   "titulo": "vanguardias afro e indigena prog 1"
+  },
+  "f_056f52eb0e": {
+   "sede": "Cinemateca La Tertulia - Cali",
+   "dia": "2026-10-23",
+   "hora": "15:30",
+   "sala": "",
+   "titulo": "master class los lugares del tiempo"
+  },
+  "f_bb4232be54": {
+   "sede": "Madame Blue - Cali",
+   "dia": "2026-10-23",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "panel el cortometraje animado y la libertad creativa"
+  },
+  "f_656ca5ad96": {
+   "sede": "Bulevar del Río - Cali",
+   "dia": "2026-10-23",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "el trabajo de la polilla en la llama"
+  },
+  "f_0eb0df1f1a": {
+   "sede": "Bulevar del Río - Cali",
+   "dia": "2026-10-23",
+   "hora": "16:30",
+   "sala": "",
+   "titulo": "vinetaira historia universal de las autoras del comic"
+  },
+  "f_f34772d3f6": {
+   "sede": "Madame Blue - Cali",
+   "dia": "2026-10-23",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "panel sostener producir cuidar desde el cine"
+  },
+  "f_7c453a66bc": {
+   "sede": "Espectra - Cali",
+   "dia": "2026-10-23",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "tardeo encuentro de conexiones"
+  },
+  "f_6f9f42bf99": {
+   "sede": "Bulevar del Río - Cali",
+   "dia": "2026-10-23",
+   "hora": "17:30",
+   "sala": "",
+   "titulo": "creatividad y escritura"
+  },
+  "f_ec05af8d70": {
+   "sede": "Centro Cultural Comfandi - Cali",
+   "dia": "2026-10-23",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "anima ve retrospectiva de maria cristina perez"
+  },
+  "f_810843f300": {
+   "sede": "Cinemateca La Tertulia - Cali",
+   "dia": "2026-10-23",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "en construccion"
+  },
+  "f_ba5422e306": {
+   "sede": "Cine Colombia Unicentro - Cali",
+   "dia": "2026-10-23",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "luis tercero"
+  },
+  "f_7c5c854376": {
+   "sede": "Cine Colombia Unicentro - Cali",
+   "dia": "2026-10-23",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "an incomplete calendar"
+  },
+  "f_995dfd11a8": {
+   "sede": "Teatro Municipal Enrique Buenaventura - Cali",
+   "dia": "2026-10-23",
+   "hora": "19:00",
+   "sala": "Teatrino",
+   "titulo": "vanguardias afro e indigena prog 2"
+  },
+  "f_e692b4a1d0": {
+   "sede": "Centro Cultural Comfandi - Cali",
+   "dia": "2026-10-23",
+   "hora": "20:00",
+   "sala": "",
+   "titulo": "plano sonoro muestra de videoclips"
+  },
+  "f_80f9a567f8": {
+   "sede": "Cine Colombia Unicentro - Cali",
+   "dia": "2026-10-23",
+   "hora": "20:30",
+   "sala": "",
+   "titulo": "las pesadillas del siervo"
+  },
+  "f_8b71b2da22": {
+   "sede": "Cinemateca La Tertulia - Cali",
+   "dia": "2026-10-23",
+   "hora": "21:00",
+   "sala": "",
+   "titulo": "iluminada"
+  },
+  "f_6951f1e97f": {
+   "sede": "Cine Colombia Unicentro - Cali",
+   "dia": "2026-10-23",
+   "hora": "21:00",
+   "sala": "",
+   "titulo": "siempre soy tu animal materno"
+  },
+  "f_4a4b054975": {
+   "sede": "Espectra - Cali",
+   "dia": "2026-10-24",
+   "hora": "09:00",
+   "sala": "",
+   "titulo": "un parche con frida muenala"
+  },
+  "f_340b4dc2c9": {
+   "sede": "Madame Blue - Cali",
+   "dia": "2026-10-24",
+   "hora": "10:00",
+   "sala": "",
+   "titulo": "foro local de proyectos"
+  },
+  "f_ee50e1cc5d": {
+   "sede": "Espectra - Cali",
+   "dia": "2026-10-24",
+   "hora": "10:30",
+   "sala": "",
+   "titulo": "un parche con marina arango"
+  },
+  "f_5890c80b60": {
+   "sede": "Cinemateca La Tertulia - Cali",
+   "dia": "2026-10-24",
+   "hora": "11:00",
+   "sala": "",
+   "titulo": "mu ki ra"
+  },
+  "f_367ddc3960": {
+   "sede": "Bulevar del Río - Cali",
+   "dia": "2026-10-24",
+   "hora": "13:30",
+   "sala": "Auditorio Celsia",
+   "titulo": "el juego de la vida"
+  },
+  "f_ad02ad026b": {
+   "sede": "Madame Blue - Cali",
+   "dia": "2026-10-24",
+   "hora": "14:30",
+   "sala": "",
+   "titulo": "master class lo esencial lo vital y lo persuasivo julian sanchez productor de mukira"
+  },
+  "f_1731b75b93": {
+   "sede": "Teatro Municipal Enrique Buenaventura - Cali",
+   "dia": "2026-10-24",
+   "hora": "15:00",
+   "sala": "Teatrino",
+   "titulo": "we cam fest 3"
+  },
+  "f_b381a5fc17": {
+   "sede": "Cinemateca La Tertulia - Cali",
+   "dia": "2026-10-24",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "notre corps"
+  },
+  "f_709197a59e": {
+   "sede": "Teatro Municipal Enrique Buenaventura - Cali",
+   "dia": "2026-10-24",
+   "hora": "17:00",
+   "sala": "Teatrino",
+   "titulo": "anima ve anibia"
+  },
+  "f_5cf9c3bd8f": {
+   "sede": "Bulevar del Río - Cali",
+   "dia": "2026-10-24",
+   "hora": "17:00",
+   "sala": "Carpa de la Red de Bibliotecas Públicas de Cali",
+   "titulo": "una mirada general del proceso del circuito cineclubes cali ccinec 2026"
+  },
+  "f_1a34661e89": {
+   "sede": "Cine Colombia Unicentro - Cali",
+   "dia": "2026-10-24",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "minotauro"
+  },
+  "f_2391844882": {
+   "sede": "Cine Colombia Unicentro - Cali",
+   "dia": "2026-10-24",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "el coloso"
+  },
+  "f_2450b741b4": {
+   "sede": "Cinemateca La Tertulia - Cali",
+   "dia": "2026-10-24",
+   "hora": "19:30",
+   "sala": "",
+   "titulo": "historias del buen valle"
+  },
+  "f_fa9b6d9b2d": {
+   "sede": "Cine Colombia Unicentro - Cali",
+   "dia": "2026-10-24",
+   "hora": "20:30",
+   "sala": "",
+   "titulo": "la bola negra"
+  },
+  "f_2a7886586a": {
+   "sede": "Cine Colombia Unicentro - Cali",
+   "dia": "2026-10-24",
+   "hora": "21:00",
+   "sala": "",
+   "titulo": "para vivir el implacable tiempo de pablo milanes"
+  },
+  "f_391c89d0d0": {
+   "sede": "Cinemateca La Tertulia - Cali",
+   "dia": "2026-10-25",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "anima ve mujeres en la animacion"
+  },
+  "f_8972958ff2": {
+   "sede": "Cine Colombia Unicentro - Cali",
+   "dia": "2026-10-25",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "todo comenzo por el fin"
+  },
+  "f_5c522eabd9": {
+   "sede": "Cinemateca La Tertulia - Cali",
+   "dia": "2026-10-25",
+   "hora": "17:30",
+   "sala": "",
+   "titulo": "once upon a time in harlem"
+  },
+  "f_3e8dbef530": {
+   "sede": "Cine Colombia Unicentro - Cali",
+   "dia": "2026-10-25",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "album de familia"
+  },
+  "f_be74bcc46d": {
+   "sede": "Cine Colombia Unicentro - Cali",
+   "dia": "2026-10-25",
+   "hora": "20:30",
+   "sala": "",
+   "titulo": "historias del buen valle"
+  },
+  "f_333c26f2ae": {
+   "sede": "Cinemateca La Tertulia - Cali",
+   "dia": "2026-10-25",
+   "hora": "20:30",
+   "sala": "",
+   "titulo": "la bola negra"
+  },
+  "f_084920af2e": {
+   "sede": "Cine Colombia Unicentro - Cali",
+   "dia": "2026-10-25",
+   "hora": "21:00",
+   "sala": "",
+   "titulo": "la mansion de araucaima"
+  },
+  "f_42ad88f68c": {
+   "sede": "Yawa - Cali",
+   "dia": "2026-10-16",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "taller gemelos digitales"
+  },
+  "f_dbfd3b875c": {
+   "sede": "Yawa - Cali",
+   "dia": "2026-10-19",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "taller gemelos digitales"
+  },
+  "f_8e9c29836c": {
+   "sede": "Yawa - Cali",
+   "dia": "2026-10-20",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "taller gemelos digitales"
+  },
+  "f_48a1432c55": {
+   "sede": "Yawa - Cali",
+   "dia": "2026-10-21",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "taller cine atmosferico"
+  },
+  "f_3b2c0134d8": {
+   "sede": "Yawa - Cali",
+   "dia": "2026-10-22",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "taller cine atmosferico"
+  },
+  "f_20ad3fcfd5": {
+   "sede": "Yawa - Cali",
+   "dia": "2026-10-23",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "taller cine atmosferico"
+  },
+  "f_359c6326a2": {
+   "sede": "Casa Ethel - Cali",
+   "dia": "2026-10-24",
+   "hora": "20:00",
+   "sala": "",
+   "titulo": "cineconcierto metropolis"
+  }
+ }
+}

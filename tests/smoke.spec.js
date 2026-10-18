@@ -58,17 +58,28 @@ test('T38 — JSON del festival tiene films', async ({ page }) => {
 //
 // Se cuenta el TRÁFICO REAL de la app a Supabase, no el estado interno: el
 // hallazgo era una petición que sale, y eso es lo que hay que ver salir.
-test('T136 — un visitante sin sesión no dispara peticiones a Supabase', async ({ page }) => {
+test('T136 — un visitante sin sesión solo pide el consenso público, una vez y sin 401', async ({ page }) => {
   const aSupabase = [];
   page.on('response', r => {
     const u = r.url();
     if (u.includes('supabase.co') && u.includes('/rest/')) {
-      aSupabase.push({ status: r.status(), tabla: u.includes('screening_reports') ? 'screening_reports' : u.slice(-40) });
+      aSupabase.push({ status: r.status(), tabla: u.includes('screening_reports') ? 'screening_reports' : u.slice(-40),
+        fest: (() => { try { return JSON.parse(r.request().postData() || '{}').p_festival; } catch (e) { return null; } })() });
     }
   });
   await enterFestival(page, 'cinemancia2026', '2026-09-04T10:00:00-05:00');
   await page.waitForTimeout(3000);
   const conSesion = await page.evaluate(() => !!(typeof _sbUser !== 'undefined' && _sbUser));
   expect(conSesion, 'el visitante del test no tiene sesión — es el caso del bug').toBe(false);
-  expect(aSupabase, 'sin sesión no se pide nada al REST de Supabase').toEqual([]);
+  // Regla nueva (migración 0006, 10 oct 2026): sin sesión SÍ se lee el consenso
+  // de retrasos, pero por la consulta pública — nunca la tabla — y una sola vez
+  // al entrar (el sondeo sigue cada 60 s). Lo que no puede volver es el 401.
+  expect(aSupabase.filter(x => x.tabla === 'screening_reports'), 'la tabla no se pide sin sesión').toEqual([]);
+  // El arranque pasa primero por el festival por defecto y después entra al
+  // pedido: una lectura por festival, nunca dos del mismo.
+  expect(aSupabase.every(x => x.status === 200 && x.tabla === 'upabase.co/rest/v1/rpc/consenso_festival'),
+    `solo la consulta pública del consenso y con 200: ${JSON.stringify(aSupabase)}`).toBe(true);
+  const fests = aSupabase.map(x => x.fest);
+  expect(new Set(fests).size, `una lectura por festival: ${fests}`).toBe(fests.length);
+  expect(fests[fests.length - 1], 'la última es la del festival en pantalla').toBe('cinemancia2026');
 });

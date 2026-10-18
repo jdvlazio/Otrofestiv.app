@@ -16,7 +16,7 @@ import { _getItemPoster, _mkCortoItemHtml, _posterStyle, _posterThumb, dayLabel,
 // el dato. Se re-exporta para no mover a sus llamadores.
 import { countryToFlags } from '../domain/banderas.js';
 export { countryToFlags };
-import { closeAvSheet, closePVRating, closePrioLimit } from '../view/sheets.js';
+import { closeAvSheet, closePVRating, closePrioLimit, openAuthSheet } from '../view/sheets.js';
 import { showActionModal, showConflictModal, showToast, _toastArriba } from '../view/feedback.js';
 import { renderAgenda, renderAvBlocks, renderDiaryHTML } from '../view/agenda.js';
 import { runCalc } from './calc.js';
@@ -81,7 +81,7 @@ const _PRESS_ICO=`<svg width="12" height="12" viewBox="0 0 24 24" fill="none" st
 function _screeningRows(pairs, opts){
   return pairs.map(({s,owner})=>{
     const dayAbb=dayLabel(s.day)||s.day;
-    const vc=vcfg(s.venue),sl=sala(s.venue);
+    const vc=vcfg(s.venue),sl=sala(s);
     const _festCity=(FESTIVAL_CONFIG[_activeFestId]||{}).city||'';
     // sinCiudad: la ficha ya filtró por ciudad y la nombra arriba — acá sobra.
     const _city=(opts&&opts.sinCiudad)?'':(_festCity&&vc.city&&vc.city!==_festCity?vc.city:'');
@@ -392,7 +392,7 @@ export function openPelSheet(title){
     })()}
     ${(()=>{
       // Programa o actividad → DESCRIPCIÓN; obra → SINOPSIS (lib.separar_descripcion).
-      const _esDesc=f.type==='event'||!!f.event_kind||!!(f.film_list&&f.film_list.length);
+      const _esDesc=f.type==='event'||!!f.event_kind||!!(f.film_list&&f.film_list.length)||!!f.is_programa;  // …o un programa que aún no lista sus obras (FICICA)
       const _txt=_esDesc?locDescription(f):locSynopsis(f);
       if(!_txt) return '';
       return `    <div class="sec-hdr sm">${ICONS.text} <span>${_esDesc?t('label_descripcion'):t('label_sinopsis')}</span></div>
@@ -1096,10 +1096,18 @@ export function openPlanConfirm(schedule){
     masEl.style.display=rest>0?'':'none';
   }
 
+  // La invitación a la cuenta: solo sin sesión, una línea, en la hoja que ya se
+  // abre al guardar el Plan — el momento en que perderlo más importa.
+  const _cta=document.getElementById('plan-confirm-cuenta');
+  if(_cta){ _cta.style.display=_sbUser?'none':''; if(!_sbUser) _cta.textContent=t('invita_plan'); }
   const _pcSheet=document.getElementById('plan-confirm-sheet');
   if(_pcSheet){ _pcSheet.style.display=''; requestAnimationFrame(()=>_pcSheet.classList.add('open')); }
   document.getElementById('plan-confirm-overlay').classList.add('open');
 }
+
+// invitarCuenta — desde la hoja «¡Tu Plan está listo!»: se cierra yendo al Plan
+// y se abre la hoja de cuenta de siempre (sin flujo nuevo).
+export function invitarCuenta(){ closePlanConfirm(true); setTimeout(()=>openAuthSheet(),360); }
 
 export function closePlanConfirm(goToPlan){
   document.getElementById('plan-confirm-overlay').classList.remove('open');
@@ -1709,6 +1717,10 @@ function _avisosBand(f, opts){
   const _onl=_con('online');
   if(_onl.length){const _o=_onl[0], _tx=t('aviso_online',{plataforma:_o.stream_platform||''});
     rows.push([t('badge_online'), (/^https:\/\//.test(_o.stream_url||'')?`<a href="${_o.stream_url}" target="_blank" rel="noopener">${_tx}</a>`:_tx)+_cual(_onl)]);}
+  // INICIO: la función abre antes y la obra empieza después (Parapeto, BHFF).
+  // Solo informa: la card y el plan siguen con la hora de la función.
+  const _ini=_con('film_start');
+  if(_ini.length) rows.push([t('badge_inicio'), t('aviso_inicio',{hora:_ini[0].film_start})+_cual(_ini)]);
   // Precio: la ficha dice lo MISMO que la card — ticketBadgeTarget es el dueño
   // único de qué se marca (la minoría). Si la card de una función dice CON
   // BOLETA y su ficha dijera GRATIS, se contradirían.

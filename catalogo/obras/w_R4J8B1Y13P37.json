@@ -1,0 +1,44 @@
+{
+ "id": "w_R4J8B1Y13P37",
+ "titulo_original": "Relatos del camino",
+ "anio": 2025,
+ "paises": [
+  "CO"
+ ],
+ "directores": [
+  "Daniel Prieto Muriel"
+ ],
+ "aliases": [
+  {
+   "titulo": "Relatos del Camino",
+   "tipo": "festival"
+  }
+ ],
+ "sinopsis": {
+  "es": "Relatos del Camino es un cortometraje documental animado que reconstruye la memoria de Alberto, un hombre que creció en el campo colombiano en medio de la violencia, el trabajo forzado y el desplazamiento. A través de conversaciones con su hijo Daniel, sus recuerdos cobran vida mediante dibujos y animación, dando forma a un relato íntimo sobre la infancia, la migración y la resistencia. La película entrelaza pasado y presente para explorar cómo las historias familiares se convierten en memoria colectiva de un país marcado por el conflicto."
+ },
+ "generos": [
+  "Animación",
+  "Documental"
+ ],
+ "afiche": {
+  "archivo": "/assets/ficpa-2026/relatos-del-camino.jpg",
+  "veredicto": "oficial"
+ },
+ "xref": {
+  "tmdb": 1796541,
+  "letterboxd": "relatos-del-camino"
+ },
+ "versiones": [
+  {
+   "etiqueta": "12 min",
+   "duracion_min": 12
+  }
+ ],
+ "presentaciones": [
+  "ficmontanas-2026",
+  "ficpa-2026",
+  "jardin-2026",
+  "siembrafest-2026"
+ ]
+}

@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "villadelcine.com — el afiche que el festival publica en la página de cada obra",
-  "capturado": "2026-10-08",
+  "capturado": "2026-10-13",
   "que_aporta": "el póster de las obras que no tienen ficha en TMDB, que en un festival de cortos son casi todas",
   "url": "https://villadelcine.com/festival-2024-2/",
   "metodo": "write-once: lo ya bajado no se vuelve a pedir, porque después pasa por encuadrar-posters.py y re-bajarlo desharía el encuadre"
@@ -12,13 +12,6 @@
    "posterSource": "editorial",
    "_url": "https://villadelcine.com/wp-content/uploads/2026/09/BA1C8821-94B2-45D4-95AD-D2A547F0DC5B-Gustavo-Nieto-Roa-scaled.webp",
    "_medida_original": "2560x1920",
-   "_categoria": "MEJOR ÓPERA PRIMA NACIONAL"
-  },
-  "VOLAR": {
-   "poster": "/assets/villadelcine-2026/volar.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/Poster_Volar_-Jeiver-Pinto-scaled.webp",
-   "_medida_original": "1781x2560",
    "_categoria": "MEJOR ÓPERA PRIMA NACIONAL"
   },
   "Enemigo en el espejo": {
@@ -87,13 +80,6 @@
    "_medida_original": "1023x1537",
    "_categoria": "MEJOR WORK-IN-PROGRESS"
   },
-  "SUA Y SIE: Guardianes de la vida": {
-   "poster": "/assets/villadelcine-2026/sua-y-sie-guardianes-de-la-vida.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/POSTER-SUA-Y-SIE-Juan-Pablo-Gonzalez.webp",
-   "_medida_original": "1131x1600",
-   "_categoria": "MEJOR CORTOMETRAJE ESCOLAR"
-  },
   "FAR": {
    "poster": "/assets/villadelcine-2026/far.jpg",
    "posterSource": "oficial",
@@ -108,25 +94,11 @@
    "_medida_original": "1080x1350",
    "_categoria": "MEJOR CORTOMETRAJE APASIONADO"
   },
-  "Manos Rojas": {
-   "poster": "/assets/villadelcine-2026/manos-rojas.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/WhatsApp-Image-2026-07-31-at-5.43.44-PM-Martha.webp",
-   "_medida_original": "1055x1491",
-   "_categoria": "MEJOR CORTOMETRAJE ESCOLAR"
-  },
   "FRAGMENTOS PERDIDOS DE UNA CONVULSIÓN": {
    "poster": "/assets/villadelcine-2026/fragmentos-perdidos-de-una-convulsion.jpg",
    "posterSource": "editorial",
    "_url": "https://villadelcine.com/wp-content/uploads/2026/09/19bb4fb8-4a6b-4efe-aece-6cc727e3b4de.webp",
    "_medida_original": "1280x689"
-  },
-  "Memorias del Alba": {
-   "poster": "/assets/villadelcine-2026/memorias-del-alba.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/614e42ad7c-poster.webp",
-   "_medida_original": "533x800",
-   "_categoria": "international universities"
   },
   "Beyond the end": {
    "poster": "/assets/villadelcine-2026/beyond-the-end.jpg",
@@ -135,25 +107,11 @@
    "_medida_original": "564x800",
    "_categoria": "international universities"
   },
-  "La silla": {
-   "poster": "/assets/villadelcine-2026/la-silla.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/20-poster_La-silla.webp",
-   "_medida_original": "1500x2121",
-   "_categoria": "YOUNGFILM"
-  },
   "EN MEDIO": {
    "poster": "/assets/villadelcine-2026/en-medio.jpg",
    "posterSource": "editorial",
    "_url": "https://villadelcine.com/wp-content/uploads/2026/09/still_2.webp",
    "_medida_original": "1672x941"
-  },
-  "La Sombrilla de Mamá": {
-   "poster": "/assets/villadelcine-2026/la-sombrilla-de-mama.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/58-poster_La-Sombrilla-de-Mama-scaled.webp",
-   "_medida_original": "1810x2560",
-   "_categoria": "MEJOR CORTOMETRAJE APASIONADO"
   },
   "Final Act": {
    "poster": "/assets/villadelcine-2026/final-act.jpg",
@@ -168,13 +126,6 @@
    "_url": "https://villadelcine.com/wp-content/uploads/2026/09/dd51e11a39-poster.webp",
    "_medida_original": "385x800",
    "_categoria": "YOUNGFILM"
-  },
-  "SOLO": {
-   "poster": "/assets/villadelcine-2026/solo.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/1789156451693.webp",
-   "_medida_original": "847x1264",
-   "_categoria": "MEJOR CORTOMETRAJE ESCOLAR"
   },
   "SUN COFFEE": {
    "poster": "/assets/villadelcine-2026/sun-coffee.jpg",
@@ -210,13 +161,6 @@
    "_medida_original": "639x800",
    "_categoria": "MEJOR VIDEOCLIP NACIONAL"
   },
-  "La última historia": {
-   "poster": "/assets/villadelcine-2026/la-ultima-historia.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/poster-la-ultima-historia-oficial-720-x-1080-px-Eberto-Manotas-ochoa.webp",
-   "_medida_original": "720x1080",
-   "_categoria": "MEJOR CORTOMETRAJE CON CELULAR"
-  },
   "Prompt Zero": {
    "poster": "/assets/villadelcine-2026/prompt-zero.jpg",
    "posterSource": "oficial",
@@ -237,34 +181,6 @@
    "_url": "https://villadelcine.com/wp-content/uploads/2026/09/5a322f0dc3-poster.webp",
    "_medida_original": "565x800",
    "_categoria": "MEJOR CORTOMETRAJE VERTICAL"
-  },
-  "Benditos los Viejos": {
-   "poster": "/assets/villadelcine-2026/benditos-los-viejos.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/4391a7540b-poster.webp",
-   "_medida_original": "600x800",
-   "_categoria": "MEJOR VIDEOCLIP NACIONAL"
-  },
-  "No se fía, ni aunque lloren": {
-   "poster": "/assets/villadelcine-2026/no-se-fia-ni-aunque-lloren.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/POSTER-OFICIAL-VERTICAL-NO-SE-FIA-NI-AUNQUE-LLOREN-Dumah-Films.webp",
-   "_medida_original": "720x1080",
-   "_categoria": "MEJOR CORTOMETRAJE CON CELULAR"
-  },
-  "Ánima de Marea": {
-   "poster": "/assets/villadelcine-2026/anima-de-marea.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/POSTER-OFICIAL-ANIMA-DE-MAREA-Laury-T.-Herrera-scaled.webp",
-   "_medida_original": "1811x2560",
-   "_categoria": "MEJOR CORTOMETRAJE VERTICAL"
-  },
-  "Maleza": {
-   "poster": "/assets/villadelcine-2026/maleza.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/575262d42d-poster.webp",
-   "_medida_original": "597x800",
-   "_categoria": "MEJOR CORTOMETRAJE CON CELULAR"
   },
   "Shorts": {
    "poster": "/assets/villadelcine-2026/shorts.jpg",
@@ -322,33 +238,12 @@
    "_medida_original": "1792x2560",
    "_categoria": "BOYACÁ EN LOS CAMPOS"
   },
-  "Monte curandero": {
-   "poster": "/assets/villadelcine-2026/monte-curandero.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/Poster-Monte-Curandero-Andres-Felipe-Velasco.webp",
-   "_medida_original": "1426x2026",
-   "_categoria": "PLANETA"
-  },
   "Aguas Grandes": {
    "poster": "/assets/villadelcine-2026/aguas-grandes.jpg",
    "posterSource": "oficial",
    "_url": "https://villadelcine.com/wp-content/uploads/2026/09/AGUAS_GRANDES_STILL_09_VERTICAL_9x16.webp",
    "_medida_original": "900x1600",
    "_categoria": "PLANETA"
-  },
-  "Quimera": {
-   "poster": "/assets/villadelcine-2026/quimera.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/poster-quimera-Santiago-Rincon-Duran.webp",
-   "_medida_original": "1587x2245",
-   "_categoria": "BOYACÁ EN LOS CAMPOS"
-  },
-  "DIABLO BALLENA": {
-   "poster": "/assets/villadelcine-2026/diablo-ballena.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/4f10d9c7c0-poster.webp",
-   "_medida_original": "566x800",
-   "_categoria": "BOYACÁ EN LOS CAMPOS"
   },
   "SABOR A MÍ (ACÚSTICO / BOLERO JAZZ)": {
    "poster": "/assets/villadelcine-2026/sabor-a-mi-acustico-bolero-jazz.jpg",
@@ -357,18 +252,18 @@
    "_medida_original": "1039x1053",
    "_categoria": "BOYACÁ EN LOS CAMPOS"
   },
-  "MOMENTOS EN MOVIMIENTO: PRIMEROS PASOS DEL BALLET EN COLOMBIA": {
-   "poster": "/assets/villadelcine-2026/momentos-en-movimiento-primeros-pasos-del-ballet-en-colombia.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/42-poster_Momentos-en-Movimiento.-Primeros-pasos-del-ballet-en-Colombia.webp",
-   "_medida_original": "595x842",
-   "_categoria": "PODEROSAS"
-  },
   "Korebaju Pai Rekocho": {
    "poster": "/assets/villadelcine-2026/korebaju-pai-rekocho.jpg",
    "posterSource": "oficial",
    "_url": "https://villadelcine.com/wp-content/uploads/2026/09/7f8bb9c2ee-poster.webp",
    "_medida_original": "566x800",
+   "_categoria": "RAÍCES"
+  },
+  "CUADRILLEROS, ORGULLO Y LEGADO": {
+   "poster": "/assets/villadelcine-2026/cuadrilleros-orgullo-y-legado.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/Cuadrilleros-POSTER-fabian-enrique-moreno-correa-scaled.webp",
+   "_medida_original": "1354x2560",
    "_categoria": "RAÍCES"
   },
   "Tierras de Lobeiras": {
@@ -519,9 +414,8 @@
     "_por_que": "tiene ficha verificada en TMDB y su afiche manda: es el original"
    },
    "VOLAR": {
-    "estado": "usada",
-    "medida": "1781x2560",
-    "categoria": "MEJOR ÓPERA PRIMA NACIONAL"
+    "estado": "tmdb",
+    "_por_que": "tiene ficha verificada en TMDB y su afiche manda: es el original"
    },
    "Tuktu, Padre Maíz": {
     "estado": "tmdb",
@@ -602,9 +496,8 @@
     "categoria": "MEJOR WORK-IN-PROGRESS"
    },
    "SUA Y SIE: Guardianes de la vida": {
-    "estado": "usada",
-    "medida": "1131x1600",
-    "categoria": "MEJOR CORTOMETRAJE ESCOLAR"
+    "estado": "tmdb",
+    "_por_que": "tiene ficha verificada en TMDB y su afiche manda: es el original"
    },
    "FAR": {
     "estado": "usada",
@@ -617,9 +510,8 @@
     "categoria": "MEJOR CORTOMETRAJE APASIONADO"
    },
    "Manos Rojas": {
-    "estado": "usada",
-    "medida": "1055x1491",
-    "categoria": "MEJOR CORTOMETRAJE ESCOLAR"
+    "estado": "tmdb",
+    "_por_que": "tiene ficha verificada en TMDB y su afiche manda: es el original"
    },
    "DUELO": {
     "estado": "sin_tarjeta",
@@ -634,9 +526,8 @@
     "medida": "1280x689"
    },
    "Memorias del Alba": {
-    "estado": "usada",
-    "medida": "533x800",
-    "categoria": "international universities"
+    "estado": "tmdb",
+    "_por_que": "tiene ficha verificada en TMDB y su afiche manda: es el original"
    },
    "Beyond the end": {
     "estado": "usada",
@@ -648,18 +539,16 @@
     "_por_que": "tiene ficha verificada en TMDB y su afiche manda: es el original"
    },
    "La silla": {
-    "estado": "usada",
-    "medida": "1500x2121",
-    "categoria": "YOUNGFILM"
+    "estado": "tmdb",
+    "_por_que": "tiene ficha verificada en TMDB y su afiche manda: es el original"
    },
    "EN MEDIO": {
     "estado": "usada",
     "medida": "1672x941"
    },
    "La Sombrilla de Mamá": {
-    "estado": "usada",
-    "medida": "1810x2560",
-    "categoria": "MEJOR CORTOMETRAJE APASIONADO"
+    "estado": "tmdb",
+    "_por_que": "tiene ficha verificada en TMDB y su afiche manda: es el original"
    },
    "TV Entreaberta": {
     "estado": "tmdb",
@@ -684,9 +573,8 @@
     "categoria": "YOUNGFILM"
    },
    "SOLO": {
-    "estado": "usada",
-    "medida": "847x1264",
-    "categoria": "MEJOR CORTOMETRAJE ESCOLAR"
+    "estado": "tmdb",
+    "_por_que": "tiene ficha verificada en TMDB y su afiche manda: es el original"
    },
    "SUN COFFEE": {
     "estado": "usada",
@@ -713,9 +601,8 @@
     "categoria": "MEJOR VIDEOCLIP NACIONAL"
    },
    "La última historia": {
-    "estado": "usada",
-    "medida": "720x1080",
-    "categoria": "MEJOR CORTOMETRAJE CON CELULAR"
+    "estado": "tmdb",
+    "_por_que": "tiene ficha verificada en TMDB y su afiche manda: es el original"
    },
    "Behind the Door": {
     "estado": "tmdb",
@@ -741,28 +628,24 @@
     "_por_que": "no tiene tarjeta en la página de Selección Oficial ni galería en su ficha: no hay imagen que bajar en ninguna fuente"
    },
    "Benditos los Viejos": {
-    "estado": "usada",
-    "medida": "600x800",
-    "categoria": "MEJOR VIDEOCLIP NACIONAL"
+    "estado": "tmdb",
+    "_por_que": "tiene ficha verificada en TMDB y su afiche manda: es el original"
    },
    "CATATUMBO: CASA DEL TRUENO, MEMORIA Y DIGNIDAD": {
     "estado": "sin_tarjeta",
     "_por_que": "no tiene tarjeta en la página de Selección Oficial ni galería en su ficha: no hay imagen que bajar en ninguna fuente"
    },
    "No se fía, ni aunque lloren": {
-    "estado": "usada",
-    "medida": "720x1080",
-    "categoria": "MEJOR CORTOMETRAJE CON CELULAR"
+    "estado": "tmdb",
+    "_por_que": "tiene ficha verificada en TMDB y su afiche manda: es el original"
    },
    "Ánima de Marea": {
-    "estado": "usada",
-    "medida": "1811x2560",
-    "categoria": "MEJOR CORTOMETRAJE VERTICAL"
+    "estado": "tmdb",
+    "_por_que": "tiene ficha verificada en TMDB y su afiche manda: es el original"
    },
    "Maleza": {
-    "estado": "usada",
-    "medida": "597x800",
-    "categoria": "MEJOR CORTOMETRAJE CON CELULAR"
+    "estado": "tmdb",
+    "_por_que": "tiene ficha verificada en TMDB y su afiche manda: es el original"
    },
    "Después de tanto amor": {
     "estado": "tmdb",
@@ -825,9 +708,8 @@
     "_por_que": "tiene ficha verificada en TMDB y su afiche manda: es el original"
    },
    "Monte curandero": {
-    "estado": "usada",
-    "medida": "1426x2026",
-    "categoria": "PLANETA"
+    "estado": "tmdb",
+    "_por_que": "tiene ficha verificada en TMDB y su afiche manda: es el original"
    },
    "Aguas Grandes": {
     "estado": "usada",
@@ -835,14 +717,12 @@
     "categoria": "PLANETA"
    },
    "Quimera": {
-    "estado": "usada",
-    "medida": "1587x2245",
-    "categoria": "BOYACÁ EN LOS CAMPOS"
+    "estado": "tmdb",
+    "_por_que": "tiene ficha verificada en TMDB y su afiche manda: es el original"
    },
    "DIABLO BALLENA": {
-    "estado": "usada",
-    "medida": "566x800",
-    "categoria": "BOYACÁ EN LOS CAMPOS"
+    "estado": "tmdb",
+    "_por_que": "tiene ficha verificada en TMDB y su afiche manda: es el original"
    },
    "SABOR A MÍ (ACÚSTICO / BOLERO JAZZ)": {
     "estado": "usada",
@@ -854,9 +734,8 @@
     "_por_que": "no tiene tarjeta en la página de Selección Oficial ni galería en su ficha: no hay imagen que bajar en ninguna fuente"
    },
    "MOMENTOS EN MOVIMIENTO: PRIMEROS PASOS DEL BALLET EN COLOMBIA": {
-    "estado": "usada",
-    "medida": "595x842",
-    "categoria": "PODEROSAS"
+    "estado": "tmdb",
+    "_por_que": "tiene ficha verificada en TMDB y su afiche manda: es el original"
    },
    "QUAZAR": {
     "estado": "sin_tarjeta",
@@ -868,8 +747,9 @@
     "categoria": "RAÍCES"
    },
    "CUADRILLEROS, ORGULLO Y LEGADO": {
-    "estado": "sin_tarjeta",
-    "_por_que": "no tiene tarjeta en la página de Selección Oficial ni galería en su ficha: no hay imagen que bajar en ninguna fuente"
+    "estado": "usada",
+    "medida": "1354x2560",
+    "categoria": "RAÍCES"
    },
    "LA SINFONÍA GUANENTÁ": {
     "estado": "sin_tarjeta",

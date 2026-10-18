@@ -1,0 +1,170 @@
+{
+ "_que": "Fuentes fijas que el vigía revisa cada semana para descubrir festivales nuevos (verificadas el 11 oct 2026). Las marcadas «no verificada» bloquean a curl: se leen con el navegador integrado, sin sesión. Instagram: solo sin sesión (regla del 6 oct).",
+ "webs": [
+  {
+   "nombre": "Proimágenes – Eventos (festivales)",
+   "url": "https://www.proimagenescolombia.com/secciones/eventos/eventos.php?tipo=1",
+   "como_se_lee": "HTML",
+   "verificada": "2026-10-11",
+   "nota": "Paginación: eventos.php?pagina=N&tipo=1 (vi hasta la pág. 8). Hay más tipos: 2, 3 y pres_col. Cada ficha está en evento_interna.php?ntd=ID; vigilar los ntd nuevos."
+  },
+  {
+   "nombre": "Idartes – Agenda",
+   "url": "https://idartes.gov.co/es/agenda",
+   "como_se_lee": "HTML",
+   "verificada": "2026-10-11",
+   "nota": "Sitio en Drupal y lento, tuvo timeouts sueltos. /wp-json no existe."
+  },
+  {
+   "nombre": "Cinemateca de Bogotá – Funciones/Agenda",
+   "url": "https://cinematecadebogota.gov.co/funciones",
+   "como_se_lee": "HTML",
+   "verificada": "2026-10-11",
+   "nota": "Drupal. También responde /agenda/11. Sin wp-json (404)."
+  },
+  {
+   "nombre": "Cultura Bogotá (SCRD) – Agenda",
+   "url": "https://www.culturarecreacionydeporte.gov.co/es/agenda",
+   "como_se_lee": "HTML",
+   "verificada": "2026-10-11",
+   "nota": "Agenda de la Secretaría Distrital de Cultura."
+  },
+  {
+   "nombre": "Cinemateca Distrital de Medellín (micrositio Alcaldía)",
+   "url": "https://www.medellin.gov.co/es/secretaria-cultura-ciudadana/nos-mueve-la-cultura/cinemateca-distrital-de-medellin/",
+   "como_se_lee": "HTML + API WordPress",
+   "verificada": "2026-10-11",
+   "nota": "No tiene dominio propio. API: https://www.medellin.gov.co/es/wp-json/wp/v2/posts?search=festival+cine. La consulta con search dio timeout y la raíz /es/wp-json/ sí respondió."
+  },
+  {
+   "nombre": "Secretaría de Cultura de Cali – publicaciones",
+   "url": "https://www.cali.gov.co/cultura/",
+   "como_se_lee": "HTML",
+   "verificada": "2026-10-11",
+   "nota": "Las noticias son /cultura/publicaciones/ID/slug y ahí sale el FICCali. El RSS da 403."
+  },
+  {
+   "nombre": "Museo La Tertulia – Cinemateca (Cali)",
+   "url": "https://www.museolatertulia.com/cinemateca",
+   "como_se_lee": "HTML (wp-json responde 200)",
+   "verificada": "2026-10-11",
+   "nota": "cinematecadecali.com no resuelve, así que se usa La Tertulia."
+  },
+  {
+   "nombre": "IPCC Cartagena",
+   "url": "https://ipcc.gov.co/feed/",
+   "como_se_lee": "RSS + API WordPress (/wp-json/ da 200 JSON)",
+   "verificada": "2026-10-11",
+   "nota": "Instituto de Patrimonio y Cultura de Cartagena."
+  },
+  {
+   "nombre": "IMCT Bucaramanga – Agenda",
+   "url": "https://imct.gov.co/agenda",
+   "como_se_lee": "HTML",
+   "verificada": "2026-10-11",
+   "nota": "Instituto Municipal de Cultura y Turismo."
+  },
+  {
+   "nombre": "Alcaldía de Pereira",
+   "url": "https://www.pereira.gov.co/",
+   "como_se_lee": "HTML",
+   "verificada": "2026-10-11",
+   "nota": "No encontré la agenda de la Secretaría de Cultura; queda el portal general."
+  },
+  {
+   "nombre": "Alcaldía de Manizales",
+   "url": "https://www.manizales.gov.co/",
+   "como_se_lee": "HTML",
+   "verificada": "2026-10-11",
+   "nota": "Portal general. El dominio del Instituto de Cultura y Turismo que probé no resuelve."
+  },
+  {
+   "nombre": "Alcaldía de Barranquilla – Cultura",
+   "url": "https://www.barranquilla.gov.co/cultura",
+   "como_se_lee": "HTML (bloqueado)",
+   "verificada": "no (403)",
+   "nota": "Responde 403 a curl (anti-bot). Hay que leerla con navegador."
+  },
+  {
+   "nombre": "Cinemateca del Caribe",
+   "url": "https://cinematecadelcaribe.com/",
+   "como_se_lee": "HTML (bloqueado)",
+   "verificada": "no (406)",
+   "nota": "Da 406 a curl y www. no responde. Hay que leerla con navegador."
+  },
+  {
+   "nombre": "Ministerio de las Culturas – Agenda",
+   "url": "https://www.mincultura.gov.co/agenda/Paginas/default.aspx",
+   "como_se_lee": "HTML (SharePoint)",
+   "verificada": "2026-10-11",
+   "nota": "La URL vieja de cinematografía da 404. Falta ubicar la sección de cine nueva."
+  },
+  {
+   "nombre": "Festhome – festivales en Colombia",
+   "url": "https://festhome.com/festivales/listado?country=CO",
+   "como_se_lee": "HTML",
+   "verificada": "2026-10-11",
+   "nota": "Fichas en /festival/ID. No confirmé que el parámetro country filtre de verdad; revisar los resultados."
+  },
+  {
+   "nombre": "FilmFreeway – festivales en Colombia",
+   "url": "https://filmfreeway.com/festivals?country=CO",
+   "como_se_lee": "HTML (bloqueado)",
+   "verificada": "no (403)",
+   "nota": "Cloudflare responde 403 a curl. Hay que usar navegador."
+  }
+ ],
+ "instagram": [
+  {
+   "entidad": "Proimágenes Colombia",
+   "handle": "@proimagenescolombia",
+   "confirmado_en": "https://www.proimagenescolombia.com/"
+  },
+  {
+   "entidad": "Cinemateca de Bogotá",
+   "handle": "@cinematecabta",
+   "confirmado_en": "https://www.cinematecadebogota.gov.co/"
+  },
+  {
+   "entidad": "Idartes",
+   "handle": "@idartes",
+   "confirmado_en": "https://idartes.gov.co/es/agenda"
+  },
+  {
+   "entidad": "Secretaría de Cultura de Bogotá",
+   "handle": "@culturaenbta",
+   "confirmado_en": "https://www.culturarecreacionydeporte.gov.co/"
+  },
+  {
+   "entidad": "Cinemateca Distrital de Medellín",
+   "handle": "@cinematecademedellin",
+   "confirmado_en": "https://www.medellin.gov.co/es/secretaria-cultura-ciudadana/nos-mueve-la-cultura/cinemateca-distrital-de-medellin/"
+  },
+  {
+   "entidad": "Secretaría de Cultura de Medellín",
+   "handle": "@nosmuevelacultura",
+   "confirmado_en": "https://www.medellin.gov.co/es/secretaria-cultura-ciudadana/nos-mueve-la-cultura/cinemateca-distrital-de-medellin/"
+  },
+  {
+   "entidad": "Secretaría de Cultura de Cali",
+   "handle": "@caliculturacol",
+   "confirmado_en": "https://www.cali.gov.co/cultura/"
+  },
+  {
+   "entidad": "IPCC Cartagena",
+   "handle": "@ipcc_cartagena",
+   "confirmado_en": "https://www.ipcc.gov.co/"
+  },
+  {
+   "entidad": "Ministerio de las Culturas",
+   "handle": "@mincultura",
+   "confirmado_en": "https://www.mincultura.gov.co/"
+  }
+ ],
+ "sin_confirmar": [
+  "@cultura.med (no aparece en el micrositio; lo menciona Telemedellín)",
+  "Cinemateca del Caribe (sitio bloqueado)",
+  "Cinemateca La Tertulia (el enlace no está en el HTML)",
+  "IMCT Bucaramanga, Pereira, Manizales y Barranquilla (no encontré un handle de cultura en su sitio)"
+ ]
+}

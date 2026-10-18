@@ -23,13 +23,6 @@
   "lng": -77.2786615,
   "_match": "Google Maps: Casa de la Cultura (Pasto) (10 oct 2026)"
  },
- "Chachagüí": {
-  "n": 1,
-  "lat": 1.3587528,
-  "lng": -77.2825742,
-  "_prec": "manual",
-  "_match": "APROXIMADO (10 oct 2026): Google Maps «Alcaldía Chachagüí», centro del casco urbano. La tarjeta dice solo «Chachagüí» (Animación, mié 14, 7:00 p. m.); el taller de la mañana es en la I.E. Chachagüí, no esta función. Pendiente preguntar al festival el lugar exacto."
- },
  "Cinemas Valle de Atriz": {
   "n": 1,
   "_prec": "manual",
@@ -115,6 +108,18 @@
  },
  "_provenance": {
   "fuente": "Nominatim con verificación: caja de ciudad + token distintivo + clase de lugar (una sede fija nunca es un barrio). _prec:manual intocable.",
-  "capturado": "2026-10-10"
+  "capturado": "2026-10-13"
+ },
+ "Parque Central de Chachagüí": {
+  "n": 1,
+  "lat": 1.358433,
+  "lng": -77.2829544,
+  "_prec": "manual",
+  "_match": "Google Maps (11 oct 2026): «Eco Parque Nuestra Señora de Fátima», la plaza frente a la Parroquia Nuestra Señora de Fátima (1.3588168,-77.2830696), centro de Chachagüí. La tarjeta de Animación (mié 14, 7:00 p. m.) dice «Chachagüí - Parque Central»."
+ },
+ "Chachagüí": {
+  "n": 0,
+  "_prec": "sin verificar",
+  "_todo": "buscar a mano (sedes-html.py genera la página)"
  }
 }

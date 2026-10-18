@@ -485,19 +485,21 @@ for (const festId of MAIN_FESTIVALS) {
   test(`P08 — ${festId}: una sede no arrastra funciones de otra ciudad`, async ({ page }) => {
     await enterFestival(page, festId);
     const r = await page.evaluate(async () => {
-      const { venueMatches, vcfg } = await import('/src/view/helpers.js');
-      const conCiudad = FILMS.filter(f => f.venue && f.day && (vcfg(f.venue).city || ''));
-      const ciudades = [...new Set(conCiudad.map(f => vcfg(f.venue).city))];
+      const { venueMatches, vcfg, filterCity } = await import('/src/view/helpers.js');
+      // La ciudad del centinela es la de FILTRAR (filterCity): un municipio
+      // satélite (FICPA: 1 función a <50 km) se agrupa en la principal.
+      const conCiudad = FILMS.filter(f => f.venue && f.day && filterCity(f.venue));
+      const ciudades = [...new Set(conCiudad.map(f => filterCity(f.venue)))];
       if (ciudades.length < 2) return { mono: true, ciudades: ciudades.length };
       // Se prueban TODAS las sedes visibles, no una muestra: son decenas, es barato,
       // y el caso que rompía era justo una sede puntual entre 113.
-      const sedes = [...new Set(conCiudad.map(f => vcfg(f.venue).city + '\u001F' + vcfg(f.venue).short))];
+      const sedes = [...new Set(conCiudad.map(f => filterCity(f.venue) + '\u001F' + vcfg(f.venue).short))];
       const cruces = [];
       sedes.forEach(k => {
         const [ciudad, short] = k.split('\u001F');
         const vis = FILMS.filter(f => f.venue && venueMatches(f.venue, 'sede:' + k));
-        const otras = vis.filter(f => (vcfg(f.venue).city || '') !== ciudad);
-        if (otras.length) cruces.push(`${short} (${ciudad}) trajo ${otras.length} de ${[...new Set(otras.map(f => vcfg(f.venue).city))].join('/')}`);
+        const otras = vis.filter(f => filterCity(f.venue) !== ciudad);
+        if (otras.length) cruces.push(`${short} (${ciudad}) trajo ${otras.length} de ${[...new Set(otras.map(f => filterCity(f.venue)))].join('/')}`);
         // y la sede tiene que existir: si el filtro la deja vacía, desapareció
         if (!vis.length) cruces.push(`${short} (${ciudad}) no devuelve ninguna función`);
       });

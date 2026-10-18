@@ -116,16 +116,21 @@ def _cobertura(films):
     Es simétrico —los dos lados se cuentan igual—, así que la comparación
     sigue siendo válida y además deja de mentir sobre los festivales que usan
     programas, que son casi todos los de cortos."""
+    # `_conservado` es una NOTA, no un dato: dice que un campo se arrastró de la
+    # publicación anterior. Cuando el campo llega por fin de su fuente, la nota
+    # se va y el dato se queda; contarla frenaba esa mejora como pérdida
+    # (FICPA, 13 oct: la sinopsis oficial de «Tuktu» reemplazó a la conservada).
+    NOTAS = {'_conservado'}
     c = collections.Counter()
     for f in films:
         for k, v in f.items():
-            if k == 'film_list':
+            if k == 'film_list' or k in NOTAS:
                 continue
             if v not in (None, '', [], {}):
                 c[k] += 1
         for it in (f.get('film_list') or []):
             for k, v in it.items():
-                if v not in (None, '', [], {}):
+                if k not in NOTAS and v not in (None, '', [], {}):
                     c[k] += 1
     return c
 
@@ -240,6 +245,18 @@ def publicar(fid, forzar=False):
     if mudas:
         print(f'⚠ --forzar: se publican {len(mudas)} obra(s) sin afiche y sin porqué')
 
+    # cada obra apunta a la suya del catálogo (docs/CATALOGO-OBRAS.md, fase 3b);
+    # ANTES de la compuerta de pérdida, que cuenta campos: puestos después, la
+    # compuerta leía «work_id: 65 → 0» (FICPA, 12 oct) y frenaba con razón
+    import catalogo
+    _obs = catalogo.obras()
+    if _obs:
+        _nuevas = catalogo.enlazar(out, fid, _obs)
+        if _nuevas:
+            print(f'  ⚠ {len(_nuevas)} obras que el catálogo no tiene todavía (el push queda frenado hasta sumarlas):')
+            for t in _nuevas[:10]:
+                print(f'    · {t}')
+            print('  → TMDB_API_KEY=… python3 pipeline/catalogo_construir.py --escribir')
     # ── ¿esta publicación PIERDE datos? ─────────────────────────────────────
     if os.path.exists(out_p):
         viejo = json.load(open(out_p, encoding='utf-8'))
@@ -270,6 +287,17 @@ def publicar(fid, forzar=False):
         # o gana los campos que son de la sede (sala, dirección). Eso no es
         # perder datos: es la corrección misma. Lo que sí es pérdida es que una
         # función quieta amanezca sin un campo que ayer tenía.
+        # LO RETIRADO A PROPÓSITO no es pérdida (14 oct 2026): se le quita a la
+        # copia de producción exactamente lo declarado en <fid>-quitar.json
+        # (lib.quitados), y se compara parejo. Cualquier otra baja sigue frenando
+        _qt = lib.quitados(fid)
+        if _qt:
+            for _f in viejo.get('films') or []:
+                for _o in [_f] + (_f.get('film_list') or []):
+                    for _t, _c in _qt:
+                        if _o.get('title') == _t:
+                            for _x in lib.RETIRABLES.get(_c, (_c,)):
+                                _o.pop(_x, None)
         _movidos = {t for t, _a, _b in _mov}
         _quietas = lambda fs: [f for f in fs if f.get('title') not in _movidos]
         ca, cb = _cobertura(_quietas(viejo.get('films') or [])), _cobertura(_quietas(out['films']))

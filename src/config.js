@@ -148,7 +148,7 @@ export const SECTION_EN = {
   '🌱 Raíces del Juego': 'Roots of the Game',
   '🧠 Juego Mental': 'Mind Game',
   '👟 El Rey Puma': 'El Rey Puma',
-  '🏅 Más allá del Fútbol': 'Beyond Football',
+  '🏅 Más Allá del Fútbol': 'Beyond Football',
   '🔥 Barrio Caliente': 'Barrio Caliente',
   '🚴 Pedal y Resistencia': 'Pedal & Resistance',
   '✍️ Fútbol Poético': 'Poetic Football',
@@ -157,7 +157,7 @@ export const SECTION_EN = {
   '🔟 El Diego': 'El Diego',
   '⚽ Juegan como Niñas': 'Juegan como Niñas',
   '🗺️ Territorios en Juego': 'Territories at Play',
-  '🇧🇷 Brasil: Juego, memoria y pasión': 'Brazil: Game, Memory & Passion',
+  '🇧🇷 Brasil: Juego, Memoria y Pasión': 'Brazil: Game, Memory & Passion',
   '🏘️ Cinematecas Locales': 'Local Cinematheques',
   // Olhar de Cinema (nombres oficiales del sitio EN)
   '🎬 Apertura':'Opening Film',
@@ -172,9 +172,9 @@ export const SECTION_EN = {
   '✨ Proyecciones Especiales':'Special Screenings',
   // Cinemancia (sin sitio EN — traducción mecánica aprobada)
   '⭐ Inauguración':'Opening',
-  '🎭 ¿Qué es la ficción?':'What Is Fiction?',
-  '🎞️ Competencia de cortometrajes':'Short Film Competition',
-  '🏆 Competencia central':'Main Competition',
+  '🎭 ¿Qué es la Ficción?':'What Is Fiction?',
+  '🎞️ Competencia de Cortometrajes':'Short Film Competition',
+  '🏆 Competencia Central':'Main Competition',
   '💡 Iluminaciones':'Illuminations',
   '🌱 Competencia Nuevas Voces':'New Voices Competition',
   '🎬 Clausura':'Closing',
@@ -587,6 +587,84 @@ export const PALMARES=[
    titulo:'Deus ex necro machina', autoria:'Mateo M. Correa', obra:'Deus ex necro machina'},
   {fest:'jardin2026', categoria:'Caleidoscopio · Experimental', nivel:'mencion',
    titulo:'Una vez en un cuerpo', autoria:'María Cristina Pérez', obra:'Una vez en un cuerpo'},
+
+  // ── POPAYÁN 2026 (17 Festival de Cine Corto) — acta del jurado, @cinecortofest
+  // p/DeZ_Hy-ltCW, 12 oct. Nueve premios, sin menciones; las 11 láminas (un afiche
+  // con su laurel por premio) coinciden con el pie. Categorías verbatim del acta
+  // («Mejor corto infantil» y «Mejor corto Cauca» van en minúscula, así las escribe).
+  {fest:'popayan2026', categoria:'Mejor Corto de Ficción', nivel:'ganadora',
+   titulo:'Camino al cielo', autoria:'Miguel Vargas Mejia', obra:'Camino al cielo'},
+  {fest:'popayan2026', categoria:'Mejor Corto Experimental', nivel:'ganadora',
+   titulo:'La Europa', autoria:'Jorge Perez Aldana', obra:'La Europa'},
+  {fest:'popayan2026', categoria:'Mejor Corto Afro', nivel:'ganadora',
+   titulo:'La Tinaja', autoria:'Ernestina Miranda y Mar Ajé', obra:'La tinaja'},
+  {fest:'popayan2026', categoria:'Mejor Corto Animación', nivel:'ganadora',
+   titulo:'Sapos por todos lados', autoria:'Juan Jacobo Albán Torres', obra:'Sapos por todos lados'},
+  {fest:'popayan2026', categoria:'Mejor Corto Comunitario', nivel:'ganadora',
+   titulo:'HDLT Hijo de la Tierra', autoria:'Colectivo Artefactum Suba', obra:'HDLT Hijo de la Tierra'},
+  {fest:'popayan2026', categoria:'Mejor Corto Indígena', nivel:'ganadora',
+   titulo:'Akababuru', autoria:'Irati Dojura Landa Yagarí', obra:'Akababuru: Expresión de asombro'},
+  {fest:'popayan2026', categoria:'Mejor corto infantil', nivel:'ganadora',
+   titulo:'Juan PorOcho', autoria:'Marquitos Cárdenas', obra:'Juan PorOcho'},
+  {fest:'popayan2026', categoria:'Mejor Corto Documental', nivel:'ganadora',
+   titulo:'Cayenas libertarias', autoria:'Javier Camilo Aranguren Montañez', obra:'Cayenas libertarias'},
+  {fest:'popayan2026', categoria:'Mejor corto Cauca', nivel:'ganadora',
+   titulo:'Yo soy yo', autoria:'Andrés Stiven Victoria Devia', obra:'Yo soy yo'},
+
+  // ── Festigirardota 2026 (9.º, Girardota) — post del 4 oct con @girardotaescultura ──
+  // https://www.instagram.com/p/DeE9UlknBvj/ — 8 láminas: la 1 «Ganadores ·
+  // Competencia oficial de cortometrajes», de la 2 a la 7 un premio por lámina,
+  // la 8 los logos. Leído sin sesión por la tarea palmares-ig el 15 oct 2026.
+  {fest:'girardota2026', categoria:'Categoría documental', nivel:'ganadora',
+   titulo:'Los Años del Conejo', autoria:'Raquel Tamayo Gutiérrez', obra:'Los Años del Conejo'},
+  {fest:'girardota2026', categoria:'Categoría documental', nivel:'mencion', premio:'Mención de Honor',
+   titulo:'Elementales', autoria:'Camilo Botero Jaramillo', obra:'Elementales'},
+  {fest:'girardota2026', categoria:'Categoría ficción', nivel:'ganadora',
+   titulo:'Bajo el Último Aliento', autoria:'Pedro Valencia', obra:'Bajo el Último Aliento'},
+  {fest:'girardota2026', categoria:'Categoría ficción', nivel:'mencion', premio:'Mención de Honor',
+   titulo:'Refracción', autoria:'Isabella Palacio Mesa', obra:'Refracción'},
+  {fest:'girardota2026', categoria:'Categoría experimental o videoclip', nivel:'ganadora',
+   // la lámina 6 dice «Flora Rodríguez y Andrés Muñoz», pero Muñoz es el
+   // PRODUCTOR: la web del Festival de Cine Corto de Popayán la da «dirigido por
+   // Flora Rodríguez y producido por Andrés Muñoz Escobar» (DIRECTOR_ERRATA en
+   // pipeline/girardota-2026-crudo.py)
+   titulo:'La Rebelión de un Fantasma', autoria:'Flora Rodríguez', obra:'La Rebelión de un Fantasma'},
+  {fest:'girardota2026', categoria:'Categoría experimental o videoclip', nivel:'mencion', premio:'Mención de Honor',
+   titulo:'De lo Oculto', autoria:'Daniel Rúa', obra:'De lo Oculto'},
+
+  // ── TIFF 2026 (Toronto) — anunciado el 20 sep ──
+  // tiff.net no abrió desde aquí: SOLO lo que dicen al menos dos fuentes
+  // independientes (AP en local10/ny1/ajc, thewrap.com, app.com.pk,
+  // nowtoronto.com, screendaily.com). Quedan fuera, con una sola fuente
+  // (blackgirlnerds.com): Midnight Madness, el corto animado, los finalistas
+  // de las categorías secundarias y las menciones de honor. Se suman cuando
+  // se confirmen en tiff.net (decisión de Juan, 15 oct 2026).
+  {fest:'tiff2026', categoria:"People's Choice Award", nivel:'ganadora',
+   titulo:'La Bola Negra', autoria:'Javier Calvo y Javier Ambrossi', obra:'La Bola Negra'},
+  {fest:'tiff2026', categoria:"People's Choice Award", nivel:'mencion', premio:'1.er finalista',
+   titulo:'I Play Rocky', autoria:'Peter Farrelly', obra:'I Play Rocky'},
+  {fest:'tiff2026', categoria:"People's Choice Award", nivel:'mencion', premio:'2.º finalista',
+   titulo:'Being Heumann', autoria:'Siân Heder', obra:'Being Heumann'},
+  {fest:'tiff2026', categoria:"International People's Choice Award", nivel:'ganadora',
+   titulo:'Elsinore', autoria:'Simon Stone', obra:'Elsinore'},
+  {fest:'tiff2026', categoria:"People's Choice Documentary Award", nivel:'ganadora',
+   titulo:"Darlene Love: I Know Where I've Been", autoria:'Barry Avrich', obra:"Darlene Love: I Know Where I've Been"},
+  {fest:'tiff2026', categoria:'Platform', nivel:'ganadora', premio:'Platform Prize',
+   titulo:'Angh', autoria:'Theja Rio', obra:'Angh'},
+  {fest:'tiff2026', categoria:'Platform', nivel:'mencion', premio:'Platform Special Jury Award',
+   titulo:'Brace Your Heart', autoria:'Amanda Kernell', obra:'Brace Your Heart'},
+  {fest:'tiff2026', categoria:'Best Canadian Feature Film', nivel:'ganadora',
+   titulo:'Sunburn', autoria:'Serville Poblete', obra:'Sunburn'},
+  {fest:'tiff2026', categoria:'Best Canadian Discovery', nivel:'ganadora',
+   titulo:'Smudge the Blades', autoria:'Cody Lightning', obra:'Smudge the Blades'},
+  {fest:'tiff2026', categoria:'FIPRESCI Prize', nivel:'ganadora',
+   titulo:'Ancestors', autoria:'David Turpin', obra:'Ancestors'},
+  {fest:'tiff2026', categoria:'NETPAC Award', nivel:'ganadora',
+   titulo:'Thirteen in Gaza', autoria:'Hosam Abu Dan', obra:'Thirteen in Gaza'},
+  {fest:'tiff2026', categoria:'Short Cuts', nivel:'ganadora', premio:'Best International Short Film',
+   titulo:'MAMMALIA', autoria:'Elia Kalogianni', obra:'MAMMALIA'},
+  {fest:'tiff2026', categoria:'Short Cuts', nivel:'ganadora', premio:'Best Canadian Short Film',
+   titulo:'Fight Kid', autoria:'Michael Del Monte', obra:'Fight Kid'},
 ];
 
 // ── NOTICES ──────────────────────────────────────────────────────────────────
@@ -611,20 +689,6 @@ export const NOTICES=[
     note:'FICDEH canceló su programación en <b>Quibdó, Cali, Pereira y Manizales</b> por el sismo. Sigue activa en las demás ciudades.',
     note_en:'FICDEH canceled its programming in Quibdó, Cali, Pereira and Manizales due to the earthquake. It remains active in all other cities.',
     url:'https://www.instagram.com/p/Db6xcU2FGb6/',
-  },
-  // MAMUT 11 — «La memoria de las mariposas» (vie 9 oct, 4:30 p. m.) pasa al
-  // domingo 11. El festival NO dio hora ni sala nuevas (lámina del día 05,
-  // p/DeSPVs5CcQW): por eso va SIN newDay/newTime — mover solo el día dejaría
-  // la hora de las 4:30 inventada. Texto del festival, verbatim (Juan, 9 oct).
-  // Sin `date`: el banner sigue hasta que el festival publique la hora; ese
-  // día se reemplaza por newDay/newTime/newVenue.
-  {
-    festival:'mamut2026',
-    type:'rescheduled',
-    title:'La memoria de las mariposas',
-    id:'mamut-mariposas-domingo',
-    note:'<b>La memoria de las mariposas</b>: «Evento reprogramado para el domingo 11 de octubre».',
-    url:'https://www.instagram.com/p/DeSPVs5CcQW/',
   },
 ];
 
@@ -1247,6 +1311,47 @@ export const FESTIVAL_CONFIG={
     prioLimit:5,eventPosterLabel:['EVENTO',''],
     films:null,posters:null,lbSlugs:{}
   },
+  'bhff2026': {
+    name:'Bogotá Horror',displayName:'Bogotá Horror',fullName:'Bogotá Horror Film Festival 8',shortName:'BHFF',
+    // LA IMAGEN DE LA 8ª EDICIÓN en vertical (la lápida de la convocatoria, sin
+    // texto): 582×775 (3:4), de la nota de prensa en mochilawild.com, estirada a
+    // 2:3. El festival no publica un afiche vertical propio. Aprobada por Juan (7 oct).
+    keyArt:'/assets/keyart/bhff2026-v1.jpg',
+    tagline:'Festival de Cine de Horror',
+    city:'Bogotá',country:'CO',
+    dates:'22–31 OCT',dates_en:'OCT 22–31',year:2026,timezoneOffset:'-05:00',
+    storageKey:'bhff2026_',festivalStartStr:'2026-10-22T00:00:00',festivalEndStr:'2026-10-31T23:59:00',
+    festivalDates:{'2026-10-22':'2026-10-22','2026-10-23':'2026-10-23','2026-10-24':'2026-10-24','2026-10-25':'2026-10-25','2026-10-26':'2026-10-26','2026-10-27':'2026-10-27','2026-10-28':'2026-10-28','2026-10-29':'2026-10-29','2026-10-30':'2026-10-30','2026-10-31':'2026-10-31'},
+    days:[{k:'2026-10-22',d:22,lbl:'JUE'},{k:'2026-10-23',d:23,lbl:'VIE'},{k:'2026-10-24',d:24,lbl:'SÁB'},{k:'2026-10-25',d:25,lbl:'DOM'},{k:'2026-10-26',d:26,lbl:'LUN'},{k:'2026-10-27',d:27,lbl:'MAR'},{k:'2026-10-28',d:28,lbl:'MIÉ'},{k:'2026-10-29',d:29,lbl:'JUE'},{k:'2026-10-30',d:30,lbl:'VIE'},{k:'2026-10-31',d:31,lbl:'SÁB'}],
+    dayKeys:['2026-10-22','2026-10-23','2026-10-24','2026-10-25','2026-10-26','2026-10-27','2026-10-28','2026-10-29','2026-10-30','2026-10-31'],
+    dayShort:{'2026-10-22':'JUE 22','2026-10-23':'VIE 23','2026-10-24':'SÁB 24','2026-10-25':'DOM 25','2026-10-26':'LUN 26','2026-10-27':'MAR 27','2026-10-28':'MIÉ 28','2026-10-29':'JUE 29','2026-10-30':'VIE 30','2026-10-31':'SÁB 31'},
+    dayShort_en:{'2026-10-22':'THU 22','2026-10-23':'FRI 23','2026-10-24':'SAT 24','2026-10-25':'SUN 25','2026-10-26':'MON 26','2026-10-27':'TUE 27','2026-10-28':'WED 28','2026-10-29':'THU 29','2026-10-30':'FRI 30','2026-10-31':'SAT 31'},
+    dayLong:{'2026-10-22':'Jueves 22 de octubre','2026-10-23':'Viernes 23 de octubre','2026-10-24':'Sábado 24 de octubre','2026-10-25':'Domingo 25 de octubre','2026-10-26':'Lunes 26 de octubre','2026-10-27':'Martes 27 de octubre','2026-10-28':'Miércoles 28 de octubre','2026-10-29':'Jueves 29 de octubre','2026-10-30':'Viernes 30 de octubre','2026-10-31':'Sábado 31 de octubre'},
+    prioLimit:5,eventPosterLabel:['EVENTO',''],
+    // Boleta de $7.000 en la Cinemateca de Bogotá; entrada libre hasta completar
+    // aforo en las sedes comunitarias (Canal Trece). Sin este campo la app no
+    // pintaba ninguna función como paga (revisión del 15 oct 2026).
+    ticketing_model:'mixed',
+    films:null,posters:null,lbSlugs:{}
+  },
+  'ficica2026': {
+    name:'FICICA',displayName:'FICICA',fullName:'FICICA 2026 — Festival Internacional de Cortometrajes Cine a la Calle',shortName:'FICICA',
+    // LA IMAGEN DE LA EDICIÓN: el escudo «FICICA 26» de su web (pin-festival-main,
+    // 823×1080), estirado a 2:3. Propuesta, a confirmar con Juan (15 oct).
+    keyArt:'/assets/keyart/ficica2026-v1.jpg',
+    tagline:'Festival Internacional de Cortometrajes',
+    city:'Barranquilla',country:'CO',
+    dates:'20–24 OCT',dates_en:'OCT 20–24',year:2026,timezoneOffset:'-05:00',
+    storageKey:'ficica2026_',festivalStartStr:'2026-10-20T00:00:00',festivalEndStr:'2026-10-24T23:59:00',
+    festivalDates:{'2026-10-20':'2026-10-20','2026-10-21':'2026-10-21','2026-10-22':'2026-10-22','2026-10-23':'2026-10-23','2026-10-24':'2026-10-24'},
+    days:[{k:'2026-10-20',d:20,lbl:'MAR'},{k:'2026-10-21',d:21,lbl:'MIÉ'},{k:'2026-10-22',d:22,lbl:'JUE'},{k:'2026-10-23',d:23,lbl:'VIE'},{k:'2026-10-24',d:24,lbl:'SÁB'}],
+    dayKeys:['2026-10-20','2026-10-21','2026-10-22','2026-10-23','2026-10-24'],
+    dayShort:{'2026-10-20':'MAR 20','2026-10-21':'MIÉ 21','2026-10-22':'JUE 22','2026-10-23':'VIE 23','2026-10-24':'SÁB 24'},
+    dayShort_en:{'2026-10-20':'TUE 20','2026-10-21':'WED 21','2026-10-22':'THU 22','2026-10-23':'FRI 23','2026-10-24':'SAT 24'},
+    dayLong:{'2026-10-20':'Martes 20 de octubre','2026-10-21':'Miércoles 21 de octubre','2026-10-22':'Jueves 22 de octubre','2026-10-23':'Viernes 23 de octubre','2026-10-24':'Sábado 24 de octubre'},
+    prioLimit:3,eventPosterLabel:['EVENTO',''],
+    films:null,posters:null,lbSlugs:{}
+  },
   'fantasmagoria2026': {
     name:'Fantasmagoría',displayName:'Fantasmagoría',fullName:'Fantasmagoría 8 — Festival Internacional de Cine Fantástico y de Terror de Medellín',shortName:'FANTASMAGORÍA',
     city:'Medellín',country:'CO',
@@ -1287,6 +1392,28 @@ export const FESTIVAL_CONFIG={
     dayShort_en:{'2026-10-27':'TUE 27','2026-10-28':'WED 28','2026-10-29':'THU 29','2026-10-30':'FRI 30','2026-10-31':'SAT 31','2026-11-01':'SUN 1','2026-11-02':'MON 2','2026-11-03':'TUE 3','2026-11-04':'WED 4'},
     dayLong:{'2026-10-27':'Martes 27 de octubre','2026-10-28':'Miércoles 28 de octubre','2026-10-29':'Jueves 29 de octubre','2026-10-30':'Viernes 30 de octubre','2026-10-31':'Sábado 31 de octubre','2026-11-01':'Domingo 1 de noviembre','2026-11-02':'Lunes 2 de noviembre','2026-11-03':'Martes 3 de noviembre','2026-11-04':'Miércoles 4 de noviembre'},
     prioLimit:5,
+    ticketing_model:'mixed', // boletería de la Cinemateca en TuBoleta ($7.000 + servicio, ticket_url por función) + entrada libre en las demás sedes; el seminario, gratis con inscripción
+    films:null,posters:null,lbSlugs:{}
+  },
+  'mubibogota2026': {
+    name:'MUBI Fest',displayName:'MUBI Fest',fullName:'MUBI Fest Bogotá 2026',shortName:'MUBI Fest',
+    city:'Bogotá',country:'CO',
+    dates:'24–25 OCT',dates_en:'OCT 24–25',year:2026,timezoneOffset:'-05:00',
+    // EL ARTE OFICIAL de Bogotá: el reel de @mubilat del 10 sep (DdHG4RVEsOy),
+    // 9:16 recortado por arriba a 2:3 por indicación de Juan (14 oct)
+    keyArt:'/assets/keyart/mubibogota2026.jpg',
+    // lo que el festival dice de sí mismo en su arte: «Ve gran cine»
+    tagline:'Ve Gran Cine',
+    instagram:'mubilat', storageKey:'mubibogota2026_',festivalStartStr:'2026-10-24T00:00:00',festivalEndStr:'2026-10-25T23:59:00',
+    festivalDates:{'2026-10-24':'2026-10-24','2026-10-25':'2026-10-25'},
+    days:[{k:'2026-10-24',d:24,lbl:'SÁB'},{k:'2026-10-25',d:25,lbl:'DOM'}],
+    dayKeys:['2026-10-24','2026-10-25'],
+    dayShort:{'2026-10-24':'SÁB 24','2026-10-25':'DOM 25'},
+    dayShort_en:{'2026-10-24':'SAT 24','2026-10-25':'SUN 25'},
+    dayLong:{'2026-10-24':'Sábado 24 de octubre','2026-10-25':'Domingo 25 de octubre'},
+    prioLimit:5,
+    ticketing_model:'mixed', // al aire libre gratis; seis funciones en sala con boleta en Entradas Inteligentes (enlace por función)
+    eventPosterLabel:['EVENTO',''],
     films:null,posters:null,lbSlugs:{}
   },
   'narrarelfuturo2026': {
@@ -1368,10 +1495,14 @@ export const SECTION_ARCHETYPES = {
   '🧒 Muestra Infantil': 'Especiales / Eventos',   // FICCALI 18
   '🔍 Zoom': 'Perspectivas / Miradas',   // FICCALI 18
   '🔦 Foco Claire Simon': 'Retrospectiva / Tributo',   // FICCALI 18
-  '🎶 ¡Que viva la música!': 'Especiales / Eventos',   // FICCALI 18
+  '🎶 ¡Que Viva la Música!': 'Especiales / Eventos',   // FICCALI 18
   '📽️ Proyecciones': 'Especiales / Eventos',   // FICCALI 18
   '🎓 Académico': 'Charlas / Industria',   // FICCALI 18
   '🤝 Conexiones': 'Charlas / Industria',   // FICCALI 18
+  '🎉 Inauguración': 'Apertura / Gala',   // Bogotá Horror 8
+  '🇨🇴 Franja Nacional': 'Competencia',   // Bogotá Horror 8
+  '🌍 Franja Internacional': 'Cortos / Programas',   // Bogotá Horror 8
+  '🌙 Clausura': 'Clausura',   // Bogotá Horror 8
   '🎙️ Comunicaciones': 'Charlas / Industria',
   // ── Festival de Cine de Jardín 11 · Jardín, Antioquia ──────────────────
   '🎬 Muestra Central': 'Muestra / País',
@@ -1396,13 +1527,21 @@ export const SECTION_ARCHETYPES = {
   '🎈 Selección Oficial Infantil': 'Competencia',
   '🌎 Muestra de Cortos Internacionales': 'Muestra / País',
   '🏘️ CineCorto en el Barrio': 'Cortos / Programas',
-  '🏡 Cine Corto al barrio': 'Cortos / Programas',
+  '🏡 Cine Corto al Barrio': 'Cortos / Programas',
+  // MUBI Fest Bogotá 2026 (las etiquetas de las tarjetas de mubifest.com)
+  '🎬 Estreno MUBI': 'Muestra / País',
+  '🌙 Función al Aire Libre': 'Especiales / Eventos',
+  '🔎 Foco': 'Retrospectiva / Tributo',
+  '🎞️ Restaurada': 'Retrospectiva / Tributo',
+  '🎙️ Charla en Vivo': 'Charlas / Industria',
+  '🎲 Al Aire Libre': 'Especiales / Eventos',
+  '📚 MUBI Library': 'Especiales / Eventos',
   // FICPA 2026 (la Selección Oficial y los dos menús del sitio)
   '🌍 Ecos del Mundo': 'Competencia',
   '💓 Latidos del Cine Colombiano': 'Competencia',
   '🎨 Cámaras de Barniz': 'Competencia',
   '🌀 Churo Cósmico': 'Perspectivas / Miradas',
-  '🗺️ Programación alterna': 'Muestra / País',
+  '🗺️ Programación Alterna': 'Muestra / País',
   '🎓 Academia': 'Charlas / Industria',
   '💼 Industria': 'Charlas / Industria',
   '🏆 Clausura': 'Clausura',
@@ -1414,22 +1553,22 @@ export const SECTION_ARCHETYPES = {
   '🌍 Panorama Internacional de Largometraje Documental': 'Muestra / País',
   '🗺️ Panorama Internacional de Cortometraje Documental': 'Muestra / País',
   '🇨🇴 Panorama Nacional de Documental': 'Muestra / País',
-  '🪞 Espejos: Gestos de reparación': 'Perspectivas / Miradas',
-  '✨ Programas especiales': 'Especiales / Eventos',
+  '🪞 Espejos: Gestos de Reparación': 'Perspectivas / Miradas',
+  '✨ Programas Especiales': 'Especiales / Eventos',
   '🔎 Foco Claire Simon': 'Retrospectiva / Tributo',
   '🔍 Foco Ignacio Agüero': 'Retrospectiva / Tributo',
   '🎯 Foco Santiago Álvarez': 'Retrospectiva / Tributo',
   '🕰️ Retrospectiva: Sara Gómez': 'Retrospectiva / Tributo',
-  '🏅 Homenaje a Pablo Mora Calderón. Premio ALADOS a toda una vida': 'Retrospectiva / Tributo',
+  '🏅 Homenaje a Pablo Mora Calderón. Premio ALADOS a Toda una Vida': 'Retrospectiva / Tributo',
   '🇫🇷 Comptoir du Doc': 'Muestra / País',
-  '🏘️ CREAndo documental en los barrios': 'Cortos / Programas',
+  '🏘️ CREAndo Documental en los Barrios': 'Cortos / Programas',
   '🎙️ Encuentro Pensar lo Real': 'Charlas / Industria',
   '🧒 Cine Corto Familiar': 'Cortos / Programas',
   '🎤 Actividades': 'Charlas / Industria',
   // Fantasmagoría 8 (29 sep 2026)
-  '🕯️ Aniversario 30 años': 'Retrospectiva / Tributo',
-  '👽 Aniversario 40 años': 'Retrospectiva / Tributo',
-  '🩸 Aniversario 50 años': 'Retrospectiva / Tributo',
+  '🕯️ Aniversario 30 Años': 'Retrospectiva / Tributo',
+  '👽 Aniversario 40 Años': 'Retrospectiva / Tributo',
+  '🩸 Aniversario 50 Años': 'Retrospectiva / Tributo',
   '📖 Club de la Medianoche': 'Especiales / Eventos',
   '🦜 Colombia es Fantástica': 'Muestra / País',
   '🎉 Evento Inaugural': 'Apertura / Gala',
@@ -1448,19 +1587,19 @@ export const SECTION_ARCHETYPES = {
   '🌎 Competencia Latinoamericana': 'Competencia',
   '🌙 Competencia Espíritu del Trasnoche': 'Competencia',
   '✏️ Cinescuela': 'Muestra / País',
-  '🐄 Viejos secretos del nuevo Oeste': 'Muestra / País',
+  '🐄 Viejos Secretos del Nuevo Oeste': 'Muestra / País',
   '📚 Programación Académica': 'Charlas / Industria',
   '🐎 Programación MORA': 'Charlas / Industria',
   '🐓 Programación Cultural': 'Especiales / Eventos',
   '🌀 Muestra Weird y Experimental': 'Perspectivas / Miradas',
-  '💥 Muestra de acción A Quemarropa': 'Perspectivas / Miradas',
-  '🦯 Muestra especial': 'Especiales / Eventos',   // autodescripción para personas con discapacidad visual
+  '💥 Muestra de Acción A Quemarropa': 'Perspectivas / Miradas',
+  '🦯 Muestra Especial': 'Especiales / Eventos',   // autodescripción para personas con discapacidad visual
   '📚 Noche de Librerías': 'Especiales / Eventos',
   '📼 Retrospectiva Cristian Ponce': 'Retrospectiva / Tributo',
   '🗃️ Archivo Fantasmagoría': 'Retrospectiva / Tributo',   // Fantasmagoría, base v2 (Jairo Pinilla)
   '🔦 Retrospectiva Tilman Singer': 'Retrospectiva / Tributo',
   '🌶️ Sangre Latina': 'Perspectivas / Miradas',
-  '🏰 Selección Asedio: Las murallas del miedo': 'Perspectivas / Miradas',
+  '🏰 Selección Asedio: Las Murallas del Miedo': 'Perspectivas / Miradas',
   '🌎 Selección Latinoamericana de Cortometrajes': 'Competencia',   // Premio «Jairo Pinilla», con jurado
   '🎬 Selección Oficial Cortometrajes': 'Competencia',
   '🎥 Selección Oficial Largometrajes Documentales': 'Competencia',
@@ -1468,17 +1607,17 @@ export const SECTION_ARCHETYPES = {
   '✏️ Selección de Cortometrajes Animados': 'Competencia',   // Premio «Gritos Animados», con jurado
   '🇨🇴 Selección de Cortometrajes Colombianos': 'Competencia',   // Premio «Madremonte», con jurado
   // BIFF 12 (29 sep 2026)
-  '🇨🇴 Colombia viva': 'Muestra / País',
-  '✨ Espíritu joven': 'Competencia',   // compite por el Premio de la Juventud
+  '🇨🇴 Colombia Viva': 'Muestra / País',
+  '✨ Espíritu Joven': 'Competencia',   // compite por el Premio de la Juventud
   '🎩 Masters': 'Perspectivas / Miradas',
-  '👻 Fantasmas del pasado': 'Perspectivas / Miradas',
-  '✊ Clases de lucha': 'Perspectivas / Miradas',
-  '🧬 Relatos mutantes': 'Perspectivas / Miradas',
+  '👻 Fantasmas del Pasado': 'Perspectivas / Miradas',
+  '✊ Clases de Lucha': 'Perspectivas / Miradas',
+  '🧬 Relatos Mutantes': 'Perspectivas / Miradas',
   '🎞️ Retrospectiva Rei Pictures': 'Retrospectiva / Tributo',
   '🧒 BIFF Kids': 'Especiales / Eventos',
   '🎻 Cine Conciertos': 'Especiales / Eventos',
-  '🎬 Muestra de cortometrajes BIFF Bang': 'Cortos / Programas',
-  '🎤 Charlas abiertas BIFF Bang': 'Charlas / Industria',
+  '🎬 Muestra de Cortometrajes BIFF Bang': 'Cortos / Programas',
+  '🎤 Charlas Abiertas BIFF Bang': 'Charlas / Industria',
   // el Bogotá Creative Connect (biff.co/eventos_Paneles.php, 6 oct)
   '🎙️ Paneles de Industria': 'Charlas / Industria',
   // ── TIFF 2026 · Toronto ────────────────────────────────────────────────
@@ -1495,20 +1634,22 @@ export const SECTION_ARCHETYPES = {
   '🏛️ TIFF Classics': 'Retrospectiva / Tributo',
   '🎪 Special Events': 'Especiales / Eventos',
   '✂️ Short Cuts': 'Cortos / Programas',
+  // ── FICICA 2026 · Barranquilla (las cuatro categorías de su programación) ──
+  '🎬 Exhibiciones': 'Cortos / Programas',
+  '🤝 Industria': 'Charlas / Industria',
+  '✨ Eventos Especiales': 'Apertura / Gala',
   // ── Cinemancia 2026 · Valle de Aburrá ─────────────────────────────────
-  '⭐ Función inaugural': 'Apertura / Gala',
-  '🎬 Función de clausura': 'Clausura',
-  '🏆 Competencia Central': 'Competencia',
-  '🎞️ Competencia de Cortometrajes': 'Competencia',
-  '🔺 Programa 1. El espesor de las formas': 'Cortos / Programas',
-  '👁️ Programa 2. Teoremas sobre la mirada': 'Cortos / Programas',
+  '⭐ Función Inaugural': 'Apertura / Gala',
+  '🎬 Función de Clausura': 'Clausura',
+  '🔺 Programa 1. El Espesor de las Formas': 'Cortos / Programas',
+  '👁️ Programa 2. Teoremas sobre la Mirada': 'Cortos / Programas',
   '⚗️ Alquimia de la luz. El cine de Luciana Decker': 'Retrospectiva / Tributo',
   '🃏 Carta blanca': 'Perspectivas / Miradas',
-  '🌷 La primavera llega para los que esperan. El cine de José Luis Torres Leiva': 'Retrospectiva / Tributo',
-  '🌡️ Febril incisión. El cine de Thomas Fürhapter': 'Retrospectiva / Tributo',
+  '🌷 La Primavera Llega para los que Esperan. El Cine de José Luis Torres Leiva': 'Retrospectiva / Tributo',
+  '🌡️ Febril Incisión. El Cine de Thomas Fürhapter': 'Retrospectiva / Tributo',
   '🖤 Sick and Dirty. Curaduría de Michael Koresky': 'Perspectivas / Miradas',
-  '📼 La sutil materia. Sergio Navarro': 'Retrospectiva / Tributo',
-  '🇦🇷 Historia(s) del cine: Argentina. Curaduría de José Miccio': 'Muestra / País',
+  '📼 La Sutil Materia. Sergio Navarro': 'Retrospectiva / Tributo',
+  '🇦🇷 Historia(s) del Cine: Argentina. Curaduría de José Miccio': 'Muestra / País',
   // VARTEX 14 — muestra de video y experimental, Medellín.
   '🌍 Muestra Internacional': 'Muestra / País',
   '🇨🇴 Muestra Nacional':     'Muestra / País',
@@ -1522,7 +1663,7 @@ export const SECTION_ARCHETYPES = {
   '🌱 Raíces del Juego': 'Perspectivas / Miradas',
   '🧠 Juego Mental': 'Perspectivas / Miradas',
   '👟 El Rey Puma': 'Apertura / Gala',
-  '🏅 Más allá del Fútbol': 'Muestra / País',
+  '🏅 Más Allá del Fútbol': 'Muestra / País',
   '🔥 Barrio Caliente': 'Muestra / País',
   '🚴 Pedal y Resistencia': 'Perspectivas / Miradas',
   '✍️ Fútbol Poético': 'Perspectivas / Miradas',
@@ -1531,7 +1672,7 @@ export const SECTION_ARCHETYPES = {
   '🔟 El Diego': 'Retrospectiva / Tributo',
   '⚽ Juegan como Niñas': 'Apertura / Gala',
   '🗺️ Territorios en Juego': 'Muestra / País',
-  '🇧🇷 Brasil: Juego, memoria y pasión': 'Muestra / País',
+  '🇧🇷 Brasil: Juego, Memoria y Pasión': 'Muestra / País',
   '🏘️ Cinematecas Locales': 'Muestra / País',
   '⏳ (s)paces of Time': 'Perspectivas / Miradas',
   '✊ Cine Afro': 'Muestra / País',
@@ -1576,8 +1717,8 @@ export const SECTION_ARCHETYPES = {
   '🌟 Gala': 'Apertura / Gala',
   '🌱 Competencia Nuevas Voces': 'Competencia',
   '🌱 Pequeñas Perspectivas': 'Perspectivas / Miradas',
-  '🌸 Fragmentos del cielo. El cine de Ewelina Rosińska': 'Retrospectiva / Tributo',
-  '🌿 Campo indómito: Shinsuke Ogawa': 'Retrospectiva / Tributo',
+  '🌸 Fragmentos del Cielo. El Cine de Ewelina Rosińska': 'Retrospectiva / Tributo',
+  '🌿 Campo Indómito: Shinsuke Ogawa': 'Retrospectiva / Tributo',
   '🌿 Cine al Natural': 'Muestra / País',
   '🌿 Free Outdoor Screenings': 'Especiales / Eventos',
   '🎉 Eventos Especiales': 'Especiales / Eventos',
@@ -1591,7 +1732,7 @@ export const SECTION_ARCHETYPES = {
   '🎖️ Tributo Ben Rivers': 'Retrospectiva / Tributo',
   '🎙️ Podcasts': 'Charlas / Industria',
   '🎞️ Clásicos': 'Retrospectiva / Tributo',
-  '🎞️ Competencia de cortometrajes': 'Competencia',
+  '🎞️ Competencia de Cortometrajes': 'Competencia',
   '🎞️ Proyecciones': 'Especiales / Eventos',
   '🎞️ Retrospectiva Leonardo Favio': 'Retrospectiva / Tributo',
   '🎨 Animación Porosa': 'Cortos / Programas',
@@ -1602,13 +1743,13 @@ export const SECTION_ARCHETYPES = {
   '🎬 Competencia Cortometrajes': 'Competencia',
   '🎬 Inauguración': 'Apertura / Gala',
   '🎬 Spotlight Narrative': 'Perspectivas / Miradas',
-  '🎭 ¿Qué es la ficción?': 'Perspectivas / Miradas',
+  '🎭 ¿Qué es la Ficción?': 'Perspectivas / Miradas',
   '🏅 Documentary Competition': 'Competencia',
   '🏆 Comp. Cine en los Barrios': 'Competencia',
   '🏆 Competencia Brasil': 'Competencia',
   '🏆 Competencia Largometrajes': 'Competencia',
   '🏆 Competencia Nacional de Ficción': 'Competencia',
-  '🏆 Competencia central': 'Competencia',
+  '🏆 Competencia Central': 'Competencia',
   '🏆 U.S. Narrative Competition': 'Competencia',
   '🏔️ Largometraje Cóndor Andino': 'Muestra / País',
   '🏛️ De Indias': 'Muestra / País',
@@ -1619,7 +1760,7 @@ export const SECTION_ARCHETYPES = {
   '💡 Iluminaciones': 'Perspectivas / Miradas',
   '💬 Conversatorios & Masterclass': 'Charlas / Industria',
   '📋 Industry Days': 'Charlas / Industria',
-  '📖 Según la palabra. El cine de Olivier Godin': 'Retrospectiva / Tributo',
+  '📖 Según la Palabra. El Cine de Olivier Godin': 'Retrospectiva / Tributo',
   '📱 NOW': 'Perspectivas / Miradas',
   '📹 Spotlight Documentary': 'Perspectivas / Miradas',
   '📺 TV': 'Especiales / Eventos',
@@ -1698,7 +1839,7 @@ export const SECTION_ARCHETYPES = {
   // SiembraFest 2026 (11°). Emoji alineado con la iconografia que el propio
   // festival publico en su story del 12 ago 2026; los tres arquetipos tematicos
   // se corrigieron (estaban como industria y apertura).
-  '🏺 Mujeres que sostienen la vida': 'Perspectivas / Miradas',
+  '🏺 Mujeres que Sostienen la Vida': 'Perspectivas / Miradas',
   '❤️‍🩹 Amores & Desamores': 'Perspectivas / Miradas',
   '👻 Cinema Patatús': 'Perspectivas / Miradas',
   '💀 Muertos de Risa': 'Perspectivas / Miradas',

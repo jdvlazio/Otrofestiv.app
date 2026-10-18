@@ -1,0 +1,18 @@
+{
+ "titulo_original": {
+  "fuente": "festival:ficcali-2026,ficci-65,ficci-65,ficci-65,ficdeh-2026,ficdeh-2026,ficdeh-2026,ficdeh-2026,ficdeh-2026,ficdeh-2026,ficdeh-2026,ficdeh-2026,ficdeh-2026,ficdeh-2026,ficdeh-2026",
+  "regla": "el título que más festivales imprimen"
+ },
+ "directores": {
+  "fuente": "tmdb:1668935",
+  "regla": "tmdb-manda"
+ },
+ "anio": {
+  "fuente": "festival",
+  "regla": "único"
+ },
+ "paises": {
+  "fuente": "festival",
+  "regla": "pais-union"
+ }
+}

@@ -135,6 +135,17 @@ SEDES = {
     'Boulevard del Rio': ('Bulevar del Río', ''),
 }
 EN_LINEA = 'En línea'
+# LO QUE ANUNCIÓ IG Y LA WEB NO TIENE (vigía 15 oct 2026, #1024; OK de Juan).
+# Cada una con día, hora y lugar dichos por la fuente; sin aviso de pago, libre.
+_CINE_EXPANDIDO = 'https://www.instagram.com/p/DefUB_ksTlh/'
+DEL_IG = (
+    [{'dia': d, 'hora': '15:00', 'duracion_min': 180, 'titulo': 'Taller Gemelos Digitales', 'fuente': _CINE_EXPANDIDO}
+     for d in ('2026-10-16', '2026-10-19', '2026-10-20')] +  # el 15 queda fuera del 16–25 oficial
+    [{'dia': d, 'hora': '14:00', 'duracion_min': 240, 'titulo': 'Taller Cine Atmosférico', 'fuente': _CINE_EXPANDIDO}
+     for d in ('2026-10-21', '2026-10-22', '2026-10-23')])
+# la SEGUNDA función del cineconcierto: la anuncia la sede (@centrodecreacion.musical,
+# IG p/Deg4GpNHCB_, 15 oct), no el festival — va con la misma ficha que la del 21
+METROPOLIS_24 = {'dia': '2026-10-24', 'fuente': 'https://www.instagram.com/p/Deg4GpNHCB_/'}
 
 # la categoría de la tarjeta, cuando la obra no tiene ficha o es una actividad
 SECCION_TARJETA = {'Proyecciones': 'Proyecciones', 'Cine sin límites': 'Cine Sin Límites',
@@ -268,6 +279,10 @@ def acceso(x):
     t = ' '.join(filter(None, [x['titulo'], x.get('meta_impresa') or '']))
     if x['id'] == 13880:          # el lanzamiento (nota oficial del festival)
         return 'Entrada libre y gratuita hasta completar aforo'
+    # la inauguración: «🎟️ Entrada libre hasta completar aforo» (@festivaldecinecali,
+    # instagram.com/p/DeQLkfeESTZ, 8 oct: Los Cristales, viernes 16, 6 p. m.)
+    if x['id'] == 13924:          # MUKIRA, Teatro Los Cristales, 16 oct
+        return 'Entrada libre hasta completar aforo'
     if re.search(r'inscripci[oó]n|cupo', t, re.I):
         return 'Inscripción previa' + (f' · {m.group()}' if (m := re.search(r'Cupo:\s*\d+(\s*personas)?', t)) else '')
     return DESCONOCIDO
@@ -290,6 +305,10 @@ def _obra(o):
     return {k: v for k, v in {'titulo': recta(o['titulo']), 'director': o.get('director'), 'pais': o.get('pais'),
                                   'anio': o.get('anio'), 'duracion_min': o.get('duracion_min'),
                                   'genero': genero_uno(o.get('genero')), 'sinopsis': o.get('sinopsis')}.items() if v}
+
+
+VANGUARDIAS = (json.load(io.open(f'{REPO}/festivals/staging/ficcali-2026-ig.json', encoding='utf-8'))['vanguardias']
+               if os.path.exists(f'{REPO}/festivals/staging/ficcali-2026-ig.json') else {})
 
 
 def main():
@@ -321,10 +340,13 @@ def main():
             continue
         partes = [p.strip() for p in x['titulo'].split('|')]
         nombre, detalle = partes[0], ' | '.join(partes[1:]) or None
-        if x['sede'] not in SEDES:
+        # sin distinguir mayúsculas: la web pasó «SALA MADAME BLUE» a «Sala Madame
+        # Blue» (17 oct) y tres tarjetas se caían de la tabla por la caja
+        _sedes = {k.upper(): v for k, v in SEDES.items()}
+        if x['sede'].upper() not in _sedes:
             fallos.append(f'tarjeta {x["id"]}: sede sin entrada en la tabla: {x["sede"]!r}')
             continue
-        sede, sala = SEDES[x['sede']]
+        sede, sala = _sedes[x['sede'].upper()]
         r = {'dia': x['dia'], 'hora': x['hora'], 'sede': sede, 'sala': sala, 'sede_cruda': x['sede'],
              'acceso': acceso(x),
              '_src': {'url': URL, 'date': '2026-10-06', 'tarjeta': x['id']}}
@@ -399,6 +421,12 @@ def main():
         if x['id'] in SALA_TARJETA:
             r['sala'] = SALA_TARJETA[x['id']]
         r['titulo'] = recta(r['titulo'])
+        # LAS OBRAS DE VANGUARDIAS (17 oct): la web publica los dos programas sin
+        # sus cortos; el IG del festival los lista (ficcali-2026-ig.py → sidecar)
+        _mv = re.match(r'Vanguardias Afro e Indígena\s*[–-]\s*Prog\.?\s*(\d+)', r.get('titulo') or '')
+        if _mv and VANGUARDIAS.get(_mv.group(1)):
+            r['obras'] = [dict(o) for o in VANGUARDIAS[_mv.group(1)]]
+            r['_src']['obras'] = 'https://www.instagram.com/p/DenDhbtmnyO/'
         funciones.append({k_: v for k_, v in r.items() if v not in (None, '')})
 
     # LA MISMA ACTIVIDAD EN VARIAS FECHAS lleva UN texto ([programa-mismo-titulo]):
@@ -431,6 +459,15 @@ def main():
         fallos.append(f'{len(T)} tarjetas y {len(funciones)} funciones + {len(fuera)} fuera')
     if fallos:
         sys.exit('✗ el crudo no cuadra:\n  · ' + '\n  · '.join(fallos))
+    for x in DEL_IG:
+        funciones.append({'dia': x['dia'], 'hora': x['hora'], 'sede': 'Yawa', 'sede_cruda': 'YAWA',
+                          'acceso': 'Entrada libre (no se anuncia pago)', 'titulo': x['titulo'],
+                          'tipo': 'evento', 'event_kind': 'taller', 'seccion': 'Académico',
+                          'is_recurring': True, 'duracion_min': x['duracion_min'],
+                          '_src': {'url': x['fuente'], 'date': '2026-10-14'}})
+    _m21 = next(f for f in funciones if f.get('titulo') == 'Cineconcierto: Metrópolis')
+    funciones.append({**_m21, 'dia': METROPOLIS_24['dia'],
+                      '_src': {'url': METROPOLIS_24['fuente'], 'date': '2026-10-15'}})
     io.open(DESTINO, 'w', encoding='utf-8').write(json.dumps({
         '_provenance': provenance('ficcali.com — Programación 2026 (WP 14870) + fichas de la Selección 2026',
                                   url=URL, metodo='tarjeta por función; obra por la ficha del catálogo'),

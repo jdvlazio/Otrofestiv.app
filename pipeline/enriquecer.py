@@ -29,8 +29,9 @@ import json, os, re, subprocess, sys, time
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from lib import (cargar_crudo, ficha_verifica, norm, provenance, slug,
-                 tmdb_get, UA, ficha_tmdb, director_coincide, ya_publicada,
+                 tmdb_get, tmdb_ficha, UA, ficha_tmdb, director_coincide, ya_publicada,
                  obras_publicadas)
+import catalogo  # noqa: E402
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ST = f'{REPO}/festivals/staging'
@@ -100,10 +101,9 @@ def ficha_de_tmdb(cid, key, titulo):
     """(ficha TMDB cruda, campos extraídos). DUEÑO ÚNICO de qué se saca de una
     ficha: lo llaman la búsqueda automática y la declaración a mano, que
     difieren solo en quién responde por el emparejamiento."""
-    det = tmdb_get(f'/movie/{cid}', key, language='es-ES',
-                   append_to_response='credits')
-    det_en = tmdb_get(f'/movie/{cid}', key, language='en-US',
-                      append_to_response='credits')
+    # por id: vacía por la red ya no se arma (lib.tmdb_ficha, 14 oct 2026)
+    det = tmdb_ficha(cid, key, language='es-ES', append_to_response='credits')
+    det_en = tmdb_ficha(cid, key, language='en-US', append_to_response='credits')
     # créditos de ambos idiomas: los en-US vienen romanizados
     # (宮崎吾朗 → «Goro Miyazaki») y sin ellos el director nunca casa
     det.setdefault('credits', {}).setdefault('crew', []).extend(
@@ -164,6 +164,29 @@ def ficha_de_tmdb(cid, key, titulo):
     if sl:
         out['lbSlug'] = sl
     return det, out
+
+
+_OBS = None
+
+
+def cascada_obra(o, key, alias, pub, obs=None):
+    """La cascada con el catálogo único primero (docs/CATALOGO-OBRAS.md §5): si
+    la obra ya está en catalogo/obras con ficha TMDB —reconocida por título,
+    director y año, las reglas del constructor—, se toma esa ficha sin volver a
+    buscar en TMDB. Si no, la cascada de siempre."""
+    global _OBS
+    if obs is None:
+        _OBS = catalogo.obras() if _OBS is None else _OBS
+        obs = _OBS
+    wid, _ = catalogo.reconocer(obs, o.get('titulo'), o.get('director') or '',
+                                o.get('anio'), o.get('duracion_min'))
+    tid = ((obs.get(wid) or {}).get('xref') or {}).get('tmdb') if wid else None
+    if tid:
+        _det, e = ficha_de_tmdb(tid, key, o['titulo'])
+        e['_verificado'] = f'el catálogo ya la tiene ({wid}, {", ".join(obs[wid]["presentaciones"])})'
+        e['work_id'] = wid
+        return e, 'catálogo'
+    return cascada_tmdb(o, key, alias, pub)
 
 
 def cascada_tmdb(o, key, alias, pub):
@@ -264,13 +287,12 @@ def afiche_tmdb(e, fid, base, key):
     return None
 
 
-def afiche_ajeno_vale(ruta_web):
-    """Un afiche de OTRO festival nuestro ¿es un afiche? (pipeline/afiche_criterio.py):
-    ni tarjeta de solo texto ni la tarjeta de sección que ese festival diseñó."""
-    from afiche_criterio import veredicto
-    from ocr import leer
-    r = REPO + ruta_web
-    return veredicto(r, ' '.join(leer([r]).get(r, [])), ajena=True) is None
+from herencia import afiche_ajeno_vale  # noqa: E402  (dueño: herencia.py)
+
+
+def _min_de(v):
+    m = re.search(r'\d+', str(v or ''))
+    return int(m.group()) if m else None
 
 
 def reuso_publicada(pub, fid=None):
@@ -296,16 +318,26 @@ def reuso_publicada(pub, fid=None):
     # la SINOPSIS se reusa de donde esté, aunque el afiche de ese festival fuera
     # un fotograma: son dos datos distintos (Girardota perdía 2 sinopsis)
     s = next((y for y in pub if y.get('sinopsis')), None)
-    if not x and not s:
+    # y lo demás que ya mostramos (17 oct 2026), de donde esté: cada dato del
+    # primer festival que lo tenga
+    _de = lambda c: next((y[c] for y in pub if y.get(c)), None)
+    resto = {k: v for k, v in (('pais', _de('country')), ('anio', _de('year')),
+                                ('duracion_tmdb', _min_de(_de('duration'))),
+                                ('genero', _de('genre')), ('synopsis_en', _de('synopsis_en')),
+                                ('lbSlug', _de('lbSlug'))) if v}
+    if not x and not s and not resto:
         return None
     e = {'_ya_publicada': pub}
     if x:
         e['poster'] = x['poster']
         e['_verificado'] = f'ya publicada en {x["festival"]}: se reusa su afiche'
-    else:
+    elif s:
         e['_verificado'] = f'ya publicada en {s["festival"]}: se reusa su sinopsis'
     if s:
         e['sinopsis'] = s['sinopsis']
+    if not x and not s:
+        e['_verificado'] = f'ya publicada en {pub[0]["festival"]}: se reusan sus datos'
+    e.update(resto)
     return e
 
 
@@ -417,6 +449,15 @@ def main():
     # Un título mal copiado en el sidecar no haría nada y nadie se enteraría —
     # el mismo fallo mudo de siempre, escribir un dato que nadie lee.
     _huerf = [t for t in declaradas if t not in obras]
+    # …salvo la obra que el festival SÍ tiene en su catálogo pero no proyecta en
+    # ninguna función pública (FICICA, «Ma-ma»: solo en colegios, 18 oct). Eso no
+    # es un título mal copiado: se avisa y se sigue
+    _cat_p = f'{ST}/{fid}-catalogo.json'
+    if _huerf and os.path.exists(_cat_p):
+        _en_cat = {norm(o.get('titulo') or '') for o in json.load(open(_cat_p, encoding='utf-8')).get('obras') or []}
+        for t in [t for t in _huerf if norm(t) in _en_cat]:
+            print(f'  · ficha declarada de «{t}»: está en el catálogo del festival y no en una función pública; no se usa')
+        _huerf = [t for t in _huerf if norm(t) not in _en_cat]
     if _huerf:
         sys.exit('ficha declarada para un título que no está en el programa: '
                  + ' · '.join(_huerf))
@@ -427,6 +468,7 @@ def main():
     # lo que ya publicamos: se anota en cada obra y es el tercer camino de la
     # cascada (ver cascada_tmdb). El festival propio se excluye.
     publicadas = obras_publicadas(REPO, excluir=(fid,))
+    _obs = catalogo.obras()
     ok, sin, sin_sondeo, reuso = {}, [], {}, 0
     for i, (t, f) in enumerate(sorted(obras.items()), 1):
         _dir = (f.get('director') or '').strip()
@@ -448,6 +490,13 @@ def main():
             # lo mismo la sinopsis declarada: si se retira del sidecar, se va
             if c.get('_sinopsis'):
                 c = {k: v for k, v in c.items() if k not in ('sinopsis', '_sinopsis')}
+            # y lo HEREDADO del catálogo (14 oct 2026): leído de la caché pasaba
+            # por dato de TMDB y ya no se volvía a juzgar — el título en inglés
+            # malo de Cinemancia quedaba pegado aunque el candado lo rechazara.
+            # Se borra y se recalcula abajo, con el catálogo de hoy
+            _her = set(c.get('_heredado') or ()) | ({'genero'} if c.get('_genero_de') else set())
+            if _her:
+                c = {k: v for k, v in c.items() if k not in _her | {'_heredado', '_genero_de'}}
             ok[t] = c
             reuso += 1
             print(f'[{i:3}/{len(obras)}] ··  {t[:46]:48} tmdb {c["tmdb_id"]} '
@@ -469,7 +518,7 @@ def main():
             continue
 
         pub = ya_publicada({**f, 'titulo': t}, publicadas)
-        e, fuente = cascada_tmdb({**f, 'titulo': t}, key, alias, pub)
+        e, fuente = cascada_obra({**f, 'titulo': t}, key, alias, pub, _obs)
         if e:
             e['_director'], e['_sondeado'] = _dir, _hoy
             if pub:
@@ -528,16 +577,21 @@ def main():
             os.makedirs(f'{REPO}/assets/{fid}', exist_ok=True)
             dest = f'{REPO}/assets/{fid}/{slug(t)}.jpg'
             origen = f'{REPO}/{d.get("lamina") or d["archivo"]}'
+            # `editorial: true` — un still 16:9 OFICIAL (el que el festival manda
+            # como «afiche» de una obra que no tiene uno vertical): va ENTERO, sin
+            # recorte, y la app lo enmarca con la banda de sección (POSTERS.md,
+            # regla dura 1: el 16:9 se respeta entero). No pasa por el criterio de
+            # afiche, que está hecho para piezas 2:3 (FICPA, 13 oct)
             if not os.path.exists(dest):
                 a_poster(origen, dest, lamina=bool(d.get('lamina')))
                 from afiche_criterio import veredicto
-                _m = veredicto(dest)
+                _m = None if d.get('editorial') else veredicto(dest)
                 if _m:
                     os.remove(dest)
                     print(f'   afiche declarado RECHAZADO · {t}: {_m}')
                     continue
             e = {**e, 'poster': f'/assets/{fid}/{slug(t)}.jpg',
-                 'posterSource': 'custom' if d.get('lamina') else 'oficial',
+                 'posterSource': 'editorial' if d.get('editorial') else 'custom' if d.get('lamina') else 'oficial',
                  '_afiche': f'declarado: {d["fuente"]}'}
             ok[t] = e
             declarados += 1
@@ -553,6 +607,14 @@ def main():
             if t not in obras:
                 sys.exit(f'sinopsis declarada para un título que no está en el programa: {t}')
             e = ok.get(t) or {}
+            # `idioma: en`: la única sinopsis que existe está en inglés; va a
+            # synopsis_en tal cual (no se traduce) y solo si no hay ninguna
+            if d.get('idioma') == 'en':
+                if e.get('sinopsis') or e.get('synopsis_es') or e.get('synopsis_en'):
+                    continue
+                ok[t] = {**e, 'synopsis_en': d['texto'], '_sinopsis': d['fuente']}
+                n_s += 1
+                continue
             if e.get('sinopsis') or e.get('synopsis_es'):
                 continue
             ok[t] = {**e, 'sinopsis': d['texto'], '_sinopsis': d['fuente']}
@@ -578,6 +640,74 @@ def main():
                 e['poster'] = dest[len(REPO):]
                 e['posterSource'] = 'tmdb'
         print(f'pósters en assets/{fid}/: {n}')
+
+    # LO QUE EL CATÁLOGO YA SABE (14 oct 2026), donde TMDB y la fuente callan.
+    # Hasta hoy del catálogo solo se tomaba el id de TMDB: La paga salió «Drama»
+    # en Cinemancia 2025 y vacía en FILCMAR y MUBI, y nada lo medía (guardián
+    # [dato-que-no-viaja]). Cada campo se hereda SOLO si está vacío y si el
+    # catálogo da UN valor: con dos géneros distintos («Drama» / «Ficción») o
+    # dos títulos en inglés, heredar uno sería elegir por los festivales. Vale
+    # también para las obras sin ficha de TMDB: son las que más lo necesitan.
+    # LAS REGLAS viven en herencia.py (las usa también heredar.py)
+    import herencia
+    # lo que la FUENTE ya trae manda: no se hereda encima (el ensamblador
+    # tampoco lo pisaría, pero así lo heredado no queda anotado de mentira)
+    _DE_LA_FUENTE = {'synopsis_es': ('sinopsis', 'synopsis_es'), 'synopsis_en': ('sinopsis_en', 'synopsis_en'),
+                     'poster': ('poster',), 'genero': ('genero',), 'title_en': ('title_en',),
+                     'lbSlug': ('lbSlug',), 'anio': ('anio',),
+                     'director_heredado': ('director',), 'duracion_tmdb': ('duracion_min',),
+                     'pais_heredado': ('pais',)}
+    _hered = {}
+    for t, f in obras.items():
+        e = ok.get(t) or {}
+        # primero LA PRESENTACIÓN (18 oct 2026): si el catálogo ya lista esta obra
+        # en este festival —una decisión de identidad la unió, FICICA: «Khazana»
+        # sin director, la misma que Ficcali con director—, esa es la obra. Solo
+        # si no, se reconoce por título + director, que sin director no puede
+        wid = (e.get('work_id') or catalogo.obra_de(_obs, fid, t, e.get('tmdb_id'))
+               or catalogo.reconocer(_obs, t, f.get('director') or '', f.get('anio'), f.get('duracion_min'))[0])
+        w = _obs.get(wid) if wid else None
+        if not w:
+            continue
+        de = f'catálogo {wid} ({", ".join(w["presentaciones"])})'
+        # EL FOTOGRAMA DECLARADO (15 oct 2026): si una decisión del catálogo dice
+        # que la imagen de TMDB de esta obra es un fotograma (Trizas: un rostro
+        # sin título ni créditos, la única imagen de su ficha), no se publica
+        # aunque afiche_criterio la deje pasar — lo vio una persona
+        _af = w.get('afiche') or {}
+        _pp = e.get('poster_path') or ''
+        if _af.get('veredicto') == 'fotograma' and _pp and str(_af.get('archivo') or '').endswith(_pp):
+            e['_afiche_rechazado'] = f'TMDB {_pp}: fotograma según el catálogo ({wid})'
+            e['poster_path'] = None
+            if str(e.get('poster') or '').startswith('/assets/') and e.get('posterSource') == 'tmdb':
+                e.pop('poster', None)
+                e.pop('posterSource', None)
+        for campo in herencia.CAMPOS:
+            # el año ya puede venir de TMDB (anio_tmdb) o de la fuente (anio)
+            if campo == 'anio' and (e.get('anio_tmdb') or f.get('anio')):
+                continue
+            if (str(e.get(campo) or '')).strip():
+                continue
+            if any(f.get(x) for x in _DE_LA_FUENTE.get(campo, ())):
+                continue
+            # la española también puede estar ya como `sinopsis` (lo publicado),
+            # y el afiche como `poster_path` (TMDB)
+            if campo == 'synopsis_es' and (e.get('sinopsis') or '').strip():
+                continue
+            if campo == 'poster' and e.get('poster_path'):
+                continue
+            v = herencia.valor(w, campo, fid, t, e.get('tmdb_id'), key)
+            if v:
+                e[campo] = v
+                if campo == 'poster':
+                    e['posterSource'] = herencia.poster_source(w, v)
+                    e['_heredado']= {**e.get('_heredado', {}), 'posterSource': de}
+                e.setdefault('_heredado', {})[campo] = de
+                _hered[campo] = _hered.get(campo, 0) + 1
+        if e.get('_heredado') and t not in ok:
+            ok[t] = e
+    if _hered:
+        print('heredado del catálogo: ' + ', '.join(f'{c} {n}' for c, n in _hered.items()))
 
     json.dump({'_provenance': provenance(
         'TMDB + letterboxd.com/tmdb/<id>, emparejado con ficha_verifica() '

@@ -1,0 +1,790 @@
+{
+ "_etapa": "build generado por pipeline/ensamblar.py",
+ "_provenance": {
+  "fuente": "https://mubifest.com/es/bogota",
+  "capturado": "2026-10-17",
+  "ensamblador": "pipeline/ensamblar.py"
+ },
+ "_por_que_secciones": "El sitio no tiene secciones: tiene ETIQUETAS en cada tarjeta. Se usan tal cual; con varias, manda la más específica (Foco > Restaurada > Estreno MUBI > Función al aire libre).",
+ "name": "MUBI Fest",
+ "displayName": "MUBI Fest Bogotá",
+ "fullName": "MUBI Fest Bogotá 2026",
+ "shortName": "MUBI Fest",
+ "tagline": "Festival de cine de MUBI",
+ "city": "Bogotá",
+ "country": "CO",
+ "dates": "24–25 OCT",
+ "dates_en": "OCT 24–25",
+ "year": 2026,
+ "timezoneOffset": "-05:00",
+ "storageKey": "mubibogota2026_",
+ "festivalStartStr": "2026-10-24T00:00:00",
+ "festivalEndStr": "2026-10-25T23:59:00",
+ "sharedSlotIsOneScreening": false,
+ "dias_vacios": [],
+ "_fuentes_versionadas": {
+  "festivals/staging/mubibogota-2026-radar.json": "el volcado del radar #1090"
+ },
+ "prioLimit": 3,
+ "dias": [
+  "2026-10-24",
+  "2026-10-25"
+ ],
+ "festivalDates": {
+  "2026-10-24": "2026-10-24",
+  "2026-10-25": "2026-10-25"
+ },
+ "days": [
+  {
+   "k": "2026-10-24",
+   "d": 24,
+   "lbl": "SÁB"
+  },
+  {
+   "k": "2026-10-25",
+   "d": 25,
+   "lbl": "DOM"
+  }
+ ],
+ "dayKeys": [
+  "2026-10-24",
+  "2026-10-25"
+ ],
+ "dayShort": {
+  "2026-10-24": "SÁB 24",
+  "2026-10-25": "DOM 25"
+ },
+ "dayShort_en": {
+  "2026-10-24": "SAT 24",
+  "2026-10-25": "SUN 25"
+ },
+ "dayLong": {
+  "2026-10-24": "Sábado 24 de octubre",
+  "2026-10-25": "Domingo 25 de octubre"
+ },
+ "sections": {
+  "📚 MUBI Library": {
+   "en": "MUBI Library",
+   "archetype": "Especiales / Eventos",
+   "order": 1
+  },
+  "🎙️ Charla en Vivo": {
+   "en": "Live Talk",
+   "archetype": "Charlas / Industria",
+   "order": 2
+  },
+  "🎬 Estreno MUBI": {
+   "en": "MUBI Premiere",
+   "archetype": "Muestra / País",
+   "order": 3
+  },
+  "🌙 Función al Aire Libre": {
+   "en": "Open-air Screening",
+   "archetype": "Especiales / Eventos",
+   "order": 4
+  },
+  "🎲 Al Aire Libre": {
+   "en": "Outdoors",
+   "archetype": "Especiales / Eventos",
+   "order": 5
+  },
+  "🔎 Foco": {
+   "en": "Focus",
+   "archetype": "Retrospectiva / Tributo",
+   "order": 6
+  },
+  "🎞️ Restaurada": {
+   "en": "Restored",
+   "archetype": "Retrospectiva / Tributo",
+   "order": 7
+  }
+ },
+ "venues": {
+  "Gimnasio Moderno - Bogotá": {
+   "short": "Gimnasio Moderno",
+   "city": "Bogotá",
+   "n": 16,
+   "lat": 4.6589052,
+   "lng": -74.0554918,
+   "address": "Cra. 9 #74-99, Bogotá",
+   "_prec": "manual",
+   "_match": "Google Maps «Gimnasio Moderno» (11 oct 2026), Cra. 9 #74-99. Sede única del festival según mubifest.com."
+  }
+ },
+ "films": [
+  {
+   "title": "MUBI Library",
+   "type": "event",
+   "section": "📚 MUBI Library",
+   "rating": "Para mayores de 18 años",
+   "_ancla": [
+    "Gimnasio Moderno - Bogotá",
+    "2026-10-24",
+    "13:00"
+   ],
+   "day": "2026-10-24",
+   "time": "13:00",
+   "day_order": 0,
+   "venue": "Gimnasio Moderno - Bogotá",
+   "event_kind": "experiencia",
+   "info": true,
+   "has_qa": false,
+   "_src": {
+    "url": "https://mubifest.com/es/bogota",
+    "date": "2026-10-14",
+    "boton": "ASISTE GRATIS"
+   },
+   "is_free": true,
+   "description": "MUBI Library es un espacio para hacer una pausa y descubrir MUBI más allá de la pantalla. Conoce Notebook, una revista dedicada al arte y la cultura del cine. También explora MUBI Editions, la editorial de MUBI dedicada al cine y las artes, con una selección de libros y publicaciones que exploran la cultura cinematográfica desde distintas perspectivas, formatos y géneros, en colaboración con artistas y cineastas.",
+   "description_lang": "es"
+  },
+  {
+   "title": "MUBI Podcast Encuentros: Fernando Eimbcke & Franco Lolli",
+   "type": "event",
+   "section": "🎙️ Charla en Vivo",
+   "duration": "120 min",
+   "rating": "Para mayores de 18 años",
+   "_ancla": [
+    "Gimnasio Moderno - Bogotá",
+    "2026-10-24",
+    "14:00"
+   ],
+   "day": "2026-10-24",
+   "time": "14:00",
+   "day_order": 0,
+   "venue": "Gimnasio Moderno - Bogotá",
+   "event_kind": "charla",
+   "has_qa": false,
+   "_src": {
+    "url": "https://mubifest.com/es/bogota",
+    "date": "2026-10-14",
+    "boton": "REGÍSTRATE AQUÍ"
+   },
+   "registration_url": "https://www.eventbrite.co/e/mubi-podcast-encuentros-fernando-eimbcke-franco-lolli-tickets-2002227001861",
+   "is_free": true,
+   "requires_registration": true,
+   "description": "Una conversación entre el director mexicano Fernando Eimbcke y el director colombiano Franco Lolli sobre sus experiencias, procesos creativos y formas de entender el cine. A partir de experiencias personales, reflexionarán sobre sus trayectorias, prácticas cinematográficas e influencias.",
+   "description_lang": "es"
+  },
+  {
+   "title": "Pulp: ¿Qué harías por una canción más?",
+   "type": "film",
+   "section": "🎬 Estreno MUBI",
+   "director": "Garth Jennings",
+   "year": 2026,
+   "country": "United Kingdom, United States of America",
+   "flags": "🇬🇧🇺🇸",
+   "duration": "90 min",
+   "genre": "Documental",
+   "rating": "Para mayores de 18 años",
+   "_ancla": [
+    "Gimnasio Moderno - Bogotá",
+    "2026-10-24",
+    "14:00"
+   ],
+   "day": "2026-10-24",
+   "time": "14:00",
+   "day_order": 0,
+   "venue": "Gimnasio Moderno - Bogotá",
+   "sala": "Al aire libre",
+   "has_qa": false,
+   "synopsis": "Para celebrar su primer álbum en 24 años, la icónica banda de pop Pulp se embarcó en una gira intercontinental. Como contexto de los conciertos, Garth Jennings explora los orígenes del grupo en Sheffield, su impacto en la cultura pop de los ’90 y la reinvención personal de su líder, Jarvis Cocker. DJ set de Alejandro Marín (45 min)",
+   "synopsis_lang": "es",
+   "poster": "/assets/mubibogota-2026/pulp-que-harias-por-una-cancion-mas.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://mubifest.com/es/bogota",
+    "date": "2026-10-14",
+    "boton": "ENTRADA LIBRE"
+   },
+   "title_en": "Pulp: What Do You Do for an Encore?",
+   "is_free": true,
+   "lbSlug": "pulp-what-do-you-do-for-an-encore",
+   "tmdb_id": 1715598,
+   "synopsis_en": "A fusion of the brilliantly choreographed stage spectacle of Pulp’s biggest ever arena show — part of the global tour for More, the band’s first album in 24 years — with four decades of colorful, never-seen-before archival material."
+  },
+  {
+   "title": "Rose",
+   "type": "film",
+   "section": "🎬 Estreno MUBI",
+   "director": "Markus Schleinzer",
+   "year": 2026,
+   "country": "Austria, Germany",
+   "flags": "🇦🇹🇩🇪",
+   "duration": "94 min",
+   "genre": "Drama",
+   "rating": "Para mayores de 18 años",
+   "_ancla": [
+    "Gimnasio Moderno - Bogotá",
+    "2026-10-24",
+    "14:30"
+   ],
+   "day": "2026-10-24",
+   "time": "14:30",
+   "day_order": 0,
+   "venue": "Gimnasio Moderno - Bogotá",
+   "sala": "Auditorio",
+   "has_qa": false,
+   "synopsis": "A principios del siglo XVII, un soldado llega a una aldea protestante aislada de Alemania afirmando ser el heredero de una granja abandonada. Aunque demuestra ser un buen hombre, las sospechas de los aldeanos sobre su identidad van en aumento y le obligan a dar explicaciones.",
+   "synopsis_lang": "es",
+   "poster": "/assets/mubibogota-2026/rose.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://mubifest.com/es/bogota",
+    "date": "2026-10-14",
+    "boton": "COMPRAR BOLETAS"
+   },
+   "ticket_url": "https://www.entradasinteligentes.com/event/mubi-fest-bogota-rose",
+   "premiere": "Premiere en Colombia",
+   "lbSlug": "rose-2026",
+   "tmdb_id": 1176962,
+   "synopsis_en": "In the early 17th century, a soldier arrives at an isolated Protestant village in Germany claiming to be the heir to an abandoned farmstead. Even though he proves to be a good man, the villagers’ suspicions about his identity grow and they force a reckoning.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
+  },
+  {
+   "title": "Las aventuras de Priscilla, reina del desierto",
+   "type": "film",
+   "section": "🌙 Función al Aire Libre",
+   "director": "Stephan Elliott",
+   "year": 1994,
+   "country": "Australia, United States of America",
+   "flags": "🇦🇺🇺🇸",
+   "duration": "103 min",
+   "genre": "Drama",
+   "rating": "Para mayores de 18 años",
+   "_ancla": [
+    "Gimnasio Moderno - Bogotá",
+    "2026-10-24",
+    "16:30"
+   ],
+   "day": "2026-10-24",
+   "time": "16:30",
+   "day_order": 0,
+   "venue": "Gimnasio Moderno - Bogotá",
+   "sala": "Al aire libre",
+   "has_qa": false,
+   "synopsis": "Cuando Tick acepta un trabajo de drag en Alice Springs, cruza el outback australiano con sus amigos Bernadette y Adam en el extravagante autobús llamado Priscilla. En el camino, su vínculo se pone a prueba ante la hostilidad, conexiones inesperadas y Bob, un mecánico que se suma a la travesía.",
+   "synopsis_lang": "es",
+   "poster": "/assets/mubibogota-2026/las-aventuras-de-priscilla-reina-del-desierto.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://mubifest.com/es/bogota",
+    "date": "2026-10-14",
+    "boton": "ENTRADA LIBRE"
+   },
+   "title_en": "The Adventures of Priscilla, Queen of the Desert",
+   "is_free": true,
+   "lbSlug": "the-adventures-of-priscilla-queen-of-the-desert",
+   "tmdb_id": 2759,
+   "synopsis_en": "Two drag performers and a transgender woman travel across the desert to perform their unique style of cabaret."
+  },
+  {
+   "title": "Moscas",
+   "type": "film",
+   "section": "🎬 Estreno MUBI",
+   "director": "Fernando Eimbcke",
+   "year": 2026,
+   "country": "Mexico",
+   "flags": "🇲🇽",
+   "duration": "102 min",
+   "genre": "Drama",
+   "rating": "Para mayores de 18 años",
+   "_ancla": [
+    "Gimnasio Moderno - Bogotá",
+    "2026-10-24",
+    "17:00"
+   ],
+   "day": "2026-10-24",
+   "time": "17:00",
+   "day_order": 0,
+   "venue": "Gimnasio Moderno - Bogotá",
+   "sala": "Auditorio",
+   "has_qa": true,
+   "synopsis": "Olga vive en un enorme multifamiliar en donde lleva una existencia solitaria, regida por hábitos inalterables. Pero cuando, por necesidad económica, renta un cuarto de su departamento a un hombre quien a escondidas mete también a su hijo de nueve años, Olga se enfrenta a lo que más miedo le tiene, la conexión emocional. Q&A con el director",
+   "synopsis_lang": "es",
+   "poster": "/assets/mubibogota-2026/moscas.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://mubifest.com/es/bogota",
+    "date": "2026-10-14",
+    "boton": "COMPRAR BOLETAS"
+   },
+   "ticket_url": "https://www.entradasinteligentes.com/event/mubi-fest-bogota-moscas",
+   "lbSlug": "flies-2026",
+   "tmdb_id": 1437703,
+   "synopsis_en": "Olga lives a strictly regulated life without attachments in a vast apartment block. When out of financial necessity she rents a room in her apartment to a man who also sneaks-in his nine-year-old son, an unlikely bond forms. Her carefully controlled world begins to shift, and their lives become intertwined against her will.",
+   "title_en": "Flies",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
+  },
+  {
+   "title": "Desafío con Lesley Wolf",
+   "type": "event",
+   "section": "🎲 Al Aire Libre",
+   "duration": "60 min",
+   "rating": "Para mayores de 18 años",
+   "_ancla": [
+    "Gimnasio Moderno - Bogotá",
+    "2026-10-24",
+    "18:30"
+   ],
+   "day": "2026-10-24",
+   "time": "18:30",
+   "day_order": 0,
+   "venue": "Gimnasio Moderno - Bogotá",
+   "sala": "Al aire libre",
+   "event_kind": "experiencia",
+   "has_qa": false,
+   "_src": {
+    "url": "https://mubifest.com/es/bogota",
+    "date": "2026-10-14",
+    "boton": "REGÍSTRATE AQUÍ"
+   },
+   "registration_url": "https://www.eventbrite.co/e/desafio-con-lesley-wolf-tickets-2003506581117",
+   "is_free": true,
+   "requires_registration": true,
+   "description": "Es hora de jugar bingo. Y no cualquier bingo: Lesley Wolf, una de las drag queens más icónicas de Colombia, será la anfitriona de un juego especial inspirado en Camp Miasma. Marca tus casillas, cruza los dedos y prepárate para ganar merchandising exclusivo de MUBI.",
+   "description_lang": "es",
+   "titulos_anteriores": [
+    "Desafío sorpresa con Lesley Wolf"
+   ]
+  },
+  {
+   "title": "Adolescencia, sexo y muerte en Campamento Miasma",
+   "type": "film",
+   "section": "🎬 Estreno MUBI",
+   "director": "Jane Schoenbrun",
+   "year": 2026,
+   "country": "United Kingdom, United States of America",
+   "flags": "🇬🇧🇺🇸",
+   "duration": "112 min",
+   "genre": "Comedia",
+   "rating": "Para mayores de 18 años",
+   "_ancla": [
+    "Gimnasio Moderno - Bogotá",
+    "2026-10-24",
+    "20:00"
+   ],
+   "day": "2026-10-24",
+   "time": "20:00",
+   "day_order": 0,
+   "venue": "Gimnasio Moderno - Bogotá",
+   "sala": "Al aire libre",
+   "has_qa": false,
+   "synopsis": "Una joven y entusiasta directora debe resucitar la franquicia de Campamento Miasma tras años de secuelas mediocres. Pero cuando visita a la protagonista de la película original, una actriz recluida y envuelta en misterio, ambas se sumergen en un mundo empapado de sangre, deseo, miedo y delirio.",
+   "synopsis_lang": "es",
+   "poster": "/assets/mubibogota-2026/adolescencia-sexo-y-muerte-en-campamento-miasma.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://mubifest.com/es/bogota",
+    "date": "2026-10-14",
+    "boton": "ENTRADA LIBRE"
+   },
+   "title_en": "Teenage Sex and Death at Camp Miasma",
+   "is_free": true,
+   "lbSlug": "teenage-sex-and-death-at-camp-miasma",
+   "tmdb_id": 1240889,
+   "synopsis_en": "An ambitious director sets out to revive a faded slasher franchise, but her meeting with the film’s reclusive original star spirals into a terrifying maze of obsession, fear, and blood-soaked delusion."
+  },
+  {
+   "title": "Tierra de mi padre",
+   "type": "film",
+   "section": "🎬 Estreno MUBI",
+   "director": "Paweł Pawlikowski",
+   "year": 2026,
+   "country": "Poland, Germany, France, Italy, United Kingdom",
+   "flags": "🇵🇱🇩🇪🇫🇷🇮🇹🇬🇧",
+   "duration": "82 min",
+   "genre": "Drama",
+   "rating": "Para mayores de 18 años",
+   "_ancla": [
+    "Gimnasio Moderno - Bogotá",
+    "2026-10-24",
+    "20:30"
+   ],
+   "day": "2026-10-24",
+   "time": "20:30",
+   "day_order": 0,
+   "venue": "Gimnasio Moderno - Bogotá",
+   "sala": "Auditorio",
+   "has_qa": false,
+   "synopsis": "En pleno apogeo de la Guerra Fría, el escritor Thomas Mann y su hija Erika, emprenden un viaje a través de una Alemania dividida y en ruinas. Epílogo sonoro con Julio Victoria",
+   "synopsis_lang": "es",
+   "poster": "/assets/mubibogota-2026/tierra-de-mi-padre.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://mubifest.com/es/bogota",
+    "date": "2026-10-14",
+    "boton": "COMPRAR BOLETAS"
+   },
+   "ticket_url": "https://www.entradasinteligentes.com/event/mubi-fest-bogota-tierra-de-mi-padre",
+   "lbSlug": "fatherland-2026",
+   "tmdb_id": 1437696,
+   "synopsis_en": "In 1949, German writer Thomas Mann and his daughter Erika embark on a road trip across a Germany in ruins, from US-dominated Frankfurt to Soviet-controlled Weimar.",
+   "title_en": "Fatherland",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
+  },
+  {
+   "title": "La niña santa",
+   "type": "film",
+   "section": "🌙 Función al Aire Libre",
+   "director": "Lucrecia Martel",
+   "year": 2004,
+   "country": "Argentina, Italy, Netherlands, Spain",
+   "flags": "🇦🇷🇮🇹🇳🇱🇪🇸",
+   "duration": "100 min",
+   "genre": "Drama",
+   "rating": "Para mayores de 18 años",
+   "_ancla": [
+    "Gimnasio Moderno - Bogotá",
+    "2026-10-25",
+    "13:30"
+   ],
+   "day": "2026-10-25",
+   "time": "13:30",
+   "day_order": 1,
+   "venue": "Gimnasio Moderno - Bogotá",
+   "sala": "Al aire libre",
+   "has_qa": false,
+   "synopsis": "Amalia es una niña como las otras del coro, que se cuestionan sus creencias religiosas. Cuando el Dr. Jano llega a dar una charla al hotel donde Amalia vive con su madre, ella siente que tiene una misión: librar del pecado a ese hombre que está seduciendo a su madre.",
+   "synopsis_lang": "es",
+   "poster": "/assets/mubibogota-2026/la-nina-santa.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://mubifest.com/es/bogota",
+    "date": "2026-10-14",
+    "boton": "ENTRADA LIBRE"
+   },
+   "is_free": true,
+   "lbSlug": "the-holy-girl",
+   "tmdb_id": 44413,
+   "synopsis_en": "Amalia is an adolescent girl who is caught in the throes of her emerging sexuality and her deeply held passion for her Catholic faith. These two drives mingle when the visiting Dr. Jano takes advantage of a crowd to get inappropriately close to the girl. Repulsed by him but inspired by an inner burning, Amalia decides it is her God-given mission to save the doctor from his behavior, and she begins to stalk Dr. Jano, becoming a most unusual voyeur.",
+   "title_en": "The Holy Girl"
+  },
+  {
+   "title": "Camp en el cine: entre el exceso y el artificio",
+   "type": "event",
+   "section": "🎙️ Charla en Vivo",
+   "duration": "130 min",
+   "rating": "Para mayores de 18 años",
+   "_ancla": [
+    "Gimnasio Moderno - Bogotá",
+    "2026-10-25",
+    "14:30"
+   ],
+   "day": "2026-10-25",
+   "time": "14:30",
+   "day_order": 1,
+   "venue": "Gimnasio Moderno - Bogotá",
+   "event_kind": "charla",
+   "has_qa": false,
+   "_src": {
+    "url": "https://mubifest.com/es/bogota",
+    "date": "2026-10-14",
+    "boton": "REGÍSTRATE AQUÍ"
+   },
+   "registration_url": "https://www.eventbrite.co/e/charla-camp-en-el-cine-entre-el-exceso-y-el-artificio-tickets-2003512126704",
+   "is_free": true,
+   "requires_registration": true,
+   "description": "El camp es una sensibilidad estética que encuentra en el exceso, la teatralidad, el artificio y lo extravagante una forma particular de mirar y crear. Pero ¿qué hace que una imagen sea camp? ¿Qué ocurre cuando el exceso, el artificio y la teatralidad dejan de ser recursos para convertirse en una sensibilidad estética? Con Vanessa Rosales, Felipe Cuéllar, Jimmy Rangel y Andrés Suárez",
+   "description_lang": "es"
+  },
+  {
+   "title": "Voilà Varda: Cortometrajes de Agnès Varda",
+   "type": "film",
+   "section": "🔎 Foco",
+   "director": "Agnès Varda",
+   "country": "Francia, Cuba",
+   "flags": "🇫🇷🇨🇺",
+   "duration": "85 min",
+   "rating": "Para mayores de 18 años",
+   "_ancla": [
+    "Gimnasio Moderno - Bogotá",
+    "2026-10-25",
+    "15:00"
+   ],
+   "day": "2026-10-25",
+   "time": "15:00",
+   "day_order": 1,
+   "venue": "Gimnasio Moderno - Bogotá",
+   "sala": "Auditorio",
+   "has_qa": false,
+   "_src": {
+    "url": "https://mubifest.com/es/bogota",
+    "date": "2026-10-14",
+    "boton": "COMPRAR BOLETAS"
+   },
+   "ticket_url": "https://www.entradasinteligentes.com/event/mubi-fest-bogota-voila-varda",
+   "title_en": "Voilà Varda: Short Films by Agnès Varda",
+   "is_cortos": true,
+   "film_list": [
+    {
+     "title": "Uncle Yanco",
+     "director": "Agnès Varda",
+     "country": "Francia",
+     "flags": "🇫🇷",
+     "year": 1967,
+     "duration": "18 min",
+     "tmdb_id": 277677,
+     "poster": "/assets/mubibogota-2026/uncle-yanco.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "uncle-yanco",
+     "synopsis": "Durante la estancia de Varda en San Francisco en octubre de 1967 para promocionar su última película, tuvo noticia a través de su amigo Tom Luddy, de que vivía por allí un familiar, un tío de ella, del que no había oído hablar antes: Jean Varda, apodado Yanco. Éste vivía en un barco en Sausalito, era pintor, había adoptado el estilo de vida hippie y amaba la vida. El encuentro fue un momento muy feliz.",
+     "synopsis_en": "While in San Francisco for the promotion of her last film in October 1967, Agnès Varda, tipped by her friend Tom Luddy, gets to know a relative she had never heard of before, Jean Varda, nicknamed \"Yanco\". This hitherto unknown uncle lives on a boat in Sausalito, is a painter, has adopted a hippie lifestyle and loves life. The meeting is a very happy one.",
+     "genre": "Documental",
+     "synopsis_lang": "es"
+    },
+    {
+     "title": "Black Panthers",
+     "director": "Agnès Varda",
+     "country": "Francia",
+     "flags": "🇫🇷",
+     "year": 1968,
+     "duration": "28 min",
+     "tmdb_id": 144597,
+     "poster": "/assets/mubibogota-2026/black-panthers.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "black-panthers",
+     "synopsis": "Documental del año 1968 que parte del arresto de Huey Newton, uno de los fundadores de Panteras Negras, tras el supuesto asesinato de un policía. El film se centra en las protestas que congregaron a más de 5000 personas, en las que se produjeron durísimos enfrentamientos entre la policía y los manifestantes...",
+     "synopsis_en": "A film shot during the summer of 1968 in Oakland, California around the meetings organised by the Black Panthers Party to free Huey Newton, one of their leaders, and to turn his trial into a political debate. They tried and succeeded in catching America’s attention.",
+     "genre": "Documental",
+     "synopsis_lang": "es"
+    },
+    {
+     "title": "Women Reply",
+     "director": "Agnès Varda",
+     "country": "Francia",
+     "flags": "🇫🇷",
+     "year": 1975,
+     "duration": "8 min",
+     "tmdb_id": 186365,
+     "poster": "/assets/mubibogota-2026/women-reply.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "women-reply",
+     "synopsis_en": "What does being a woman really mean? How do women live the status society reserves for them? A group of women, beautiful or not, young or not, gifted with motherly instinct or not, answer before Agnès Varda's camera.",
+     "genre": "Documental"
+    },
+    {
+     "title": "Salut les Cubains",
+     "director": "Agnès Varda",
+     "country": "Cuba, Francia",
+     "flags": "🇨🇺🇫🇷",
+     "year": 1963,
+     "duration": "30 min",
+     "tmdb_id": 144599,
+     "poster": "/assets/mubibogota-2026/salut-les-cubains.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "hello-cubans",
+     "synopsis": "“Salut les Cubains” anima mil quinientas de las más de cuatro mil instantáneas que Varda tomó durante sus vacaciones en Cuba. Mediante el montaje, la realizadora consigue que las personas retratadas canten y bailen, en lo que ella denomina como \"socialismo y cha cha cha\". (FILMAFFINITY)",
+     "synopsis_en": "A photo montage of Cubans filmed by Agnès Varda during her visit to Cuba in 1963, four years after Fidel Castro came to power. This black & white documentary explores their socialist culture and society while making use of 1500 pictures (out of 4000!) the filmmaker took while on the island.",
+     "title_en": "Hello Cubans",
+     "genre": "Documental",
+     "synopsis_lang": "es"
+    }
+   ],
+   "description": "«En mis películas siempre quise hacer que la gente mirara en profundidad». —Agnès Varda",
+   "description_lang": "es",
+   "titulos_anteriores": [
+    "Voilà Varda: cortometrajes de Agnès Varda"
+   ],
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
+  },
+  {
+   "title": "La cosa",
+   "type": "film",
+   "section": "🌙 Función al Aire Libre",
+   "director": "John Carpenter",
+   "year": 1982,
+   "country": "United States of America",
+   "flags": "🇺🇸",
+   "duration": "109 min",
+   "genre": "Terror",
+   "rating": "Para mayores de 18 años",
+   "_ancla": [
+    "Gimnasio Moderno - Bogotá",
+    "2026-10-25",
+    "16:00"
+   ],
+   "day": "2026-10-25",
+   "time": "16:00",
+   "day_order": 1,
+   "venue": "Gimnasio Moderno - Bogotá",
+   "sala": "Al aire libre",
+   "has_qa": false,
+   "synopsis": "En pleno invierno, en las profundidades de la Antártida, unos científicos estadounidenses descubren restos humanos mutados en una estación de investigación noruega abandonada. Tras una autopsia, los investigadores descubren algo que los sumerge en una destructiva espiral de paranoia y locura.",
+   "synopsis_lang": "es",
+   "poster": "/assets/mubibogota-2026/la-cosa.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://mubifest.com/es/bogota",
+    "date": "2026-10-14",
+    "boton": "ENTRADA LIBRE"
+   },
+   "title_en": "The Thing",
+   "is_free": true,
+   "lbSlug": "the-thing",
+   "tmdb_id": 1091,
+   "synopsis_en": "A research team in Antarctica is hunted by a shape-shifting alien that assumes the appearance of its victims."
+  },
+  {
+   "title": "La paga",
+   "type": "film",
+   "section": "🎞️ Restaurada",
+   "director": "Ciro Durán",
+   "year": 1962,
+   "country": "Venezuela, Colombia",
+   "flags": "🇻🇪🇨🇴",
+   "duration": "62 min",
+   "genre": "Drama",
+   "rating": "Para mayores de 18 años",
+   "_ancla": [
+    "Gimnasio Moderno - Bogotá",
+    "2026-10-25",
+    "17:30"
+   ],
+   "day": "2026-10-25",
+   "time": "17:30",
+   "day_order": 1,
+   "venue": "Gimnasio Moderno - Bogotá",
+   "sala": "Auditorio",
+   "has_qa": true,
+   "synopsis": "En los Andes colombo-venezolanos, un campesino trabaja la tierra en condiciones de explotación para asegurar la supervivencia de su familia. Su hijo está enfermo, su esposa embarazada, y él mismo reproduce la violencia que lo rodea. Sin dinero para tratamientos médicos, una noche se emborracha y es arrestado. En la cárcel, en un estallido de furia, se rebela contra el cacique político del pueblo de la única manera que le es posible. Q&A con Vladimir Durán y Pedro Adrián Zuluaga",
+   "synopsis_lang": "es",
+   "poster": "/assets/mubibogota-2026/la-paga.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://mubifest.com/es/bogota",
+    "date": "2026-10-14",
+    "boton": "COMPRAR BOLETAS"
+   },
+   "ticket_url": "https://www.entradasinteligentes.com/event/mubi-fest-bogota-la-paga",
+   "lbSlug": "the-wage",
+   "tmdb_id": 1363770,
+   "synopsis_en": "In the Colombian-Venezuelan Andes, a peasant works the land under exploitative conditions to ensure the survival of his family. His son is ill, his wife is pregnant, and he himself reproduces the violence that surrounds him. With no money for medical treatment, one night he gets drunk and is arrested. In jail, in a burst of fury, he rebels against the town's political boss in the only way he can.  La Paga was a pioneering work of social and political cinema in Latin America, released the same year as Barravento, Glauber Rocha’s debut feature, and anticipating movements such as Third Cinema. Influenced by Italian Neorealism and Soviet cinema in its aesthetics, forms, and ideological approach, the film uses the archetypal representation of characters and the social and economic forces they embody. Based on the director’s childhood observations in his hometown, La Paga denounces the exploitation of the rural peasantry.",
+   "title_en": "The Wage",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
+  },
+  {
+   "title": "Thelma & Louise",
+   "type": "film",
+   "section": "🌙 Función al Aire Libre",
+   "director": "Ridley Scott",
+   "year": 1991,
+   "country": "United Kingdom, United States of America, France",
+   "flags": "🇬🇧🇺🇸🇫🇷",
+   "duration": "130 min",
+   "genre": "Drama",
+   "rating": "Para mayores de 18 años",
+   "_ancla": [
+    "Gimnasio Moderno - Bogotá",
+    "2026-10-25",
+    "18:30"
+   ],
+   "day": "2026-10-25",
+   "time": "18:30",
+   "day_order": 1,
+   "venue": "Gimnasio Moderno - Bogotá",
+   "sala": "Al aire libre",
+   "has_qa": false,
+   "synopsis": "Louise, independiente y de carácter fuerte, convence a su tímida amiga Thelma de dejar a su marido controlador y emprender un viaje por carretera. Pero cuando Louise la salva de un ataque en un bar, ambas huyen a través del país, descubriendo en la fuga una libertad y un empoderamiento inesperados.",
+   "synopsis_lang": "es",
+   "poster": "/assets/mubibogota-2026/thelma-louise.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://mubifest.com/es/bogota",
+    "date": "2026-10-14",
+    "boton": "ENTRADA LIBRE"
+   },
+   "is_free": true,
+   "lbSlug": "thelma-louise",
+   "tmdb_id": 1541,
+   "synopsis_en": "Taking a break from their dreary lives, close friends Thelma and Louise embark on a short weekend trip that ends in unforeseen incriminating circumstances. As fugitives, both women rediscover the strength of their bond and their newfound resilience."
+  },
+  {
+   "title": "Cobarde",
+   "type": "film",
+   "section": "🎬 Estreno MUBI",
+   "director": "Lukas Dhont",
+   "year": 2026,
+   "country": "Belgium, France, Netherlands",
+   "flags": "🇧🇪🇫🇷🇳🇱",
+   "duration": "120 min",
+   "genre": "Drama",
+   "rating": "Para mayores de 18 años",
+   "_ancla": [
+    "Gimnasio Moderno - Bogotá",
+    "2026-10-25",
+    "19:45"
+   ],
+   "day": "2026-10-25",
+   "time": "19:45",
+   "day_order": 1,
+   "venue": "Gimnasio Moderno - Bogotá",
+   "sala": "Auditorio",
+   "has_qa": false,
+   "synopsis": "Pierre llega al frente de batalla como un joven soldado deseoso de encontrar su lugar en un mundo consumido por la violencia. Todo cambia cuando conoce a Francis, un alma afín cuya visión de montar un espectáculo teatral en primera línea le revela un mundo que Pierre no sabía que existía.",
+   "synopsis_lang": "es",
+   "poster": "/assets/mubibogota-2026/cobarde.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://mubifest.com/es/bogota",
+    "date": "2026-10-14",
+    "boton": "COMPRAR BOLETAS"
+   },
+   "ticket_url": "https://www.entradasinteligentes.com/event/mubi-fest-bogota-coward",
+   "title_en": "Coward",
+   "lbSlug": "coward-2026",
+   "tmdb_id": 1437981,
+   "synopsis_en": "Pierre, a young Belgian soldier, wants to prove himself on the battlefield during the First World War. Behind the frontlines, he meets Francis, who is asked to find a way to boost morale.",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   }
+  }
+ ],
+ "_corrido": {
+  "por": "pipeline/correr.py",
+  "fecha": "2026-10-17T22:32:01",
+  "plan_sha": "d7f550dc832ae067",
+  "paso": 7,
+  "cmd": "python3 pipeline/mubibogota-2026-verificar.py"
+ }
+}

@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, emparejado con ficha_verifica() (director + año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-10-10"
+  "capturado": "2026-10-15"
  },
  "obras": [
   {
@@ -182,7 +182,6 @@
    "poster_path": "/tSphCGspBA3tjEEyI15H4u24K5D.jpg",
    "synopsis_es": "Ana Rosa Jusayu (Mi Madre), lideresa ancestral de la comunidad Apotnojushi ubicada en cercanias del cerro de la teta en la alta Guajira Colombiana, trata de recuperar el tejido y unión familiar que ocasionó el “desarrollo sostenible” invasivo. En medio de las pocas esperanzas de sobrevivir en lo desolado de su territorio ancestral, la familia comparte su añoranza de permanecer en el territorio, enfrentando las dificultades y los cambios económicos que afectan al pueblo wayuu.",
    "synopsis_en": "In this expressive and community-centered work, Wayuú director Marbel Vanegas Jusayu documents the social, spiritual, and environmental impacts of the installation of a wind farm in Apotnojushi, a historically marginalized community that remains committed to its sovereignty. Women leaders such as Ana Rosa Jusayu, the director’s mother, work to strengthen the social fabric, activate historical memory, and assert their right to determine their future. Through the voices and living portraits of community members, the piece reflects in its vignettes the community’s deep connection to its ancestral territory.",
-   "genero": "",
    "anio_tmdb": 2026,
    "duracion_tmdb": 13,
    "pais_tmdb": "Colombia",
@@ -209,6 +208,28 @@
     }
    ],
    "poster": "/assets/midbo-2026/apotnojushi-la-casa-del-viento.jpg",
+   "posterSource": "tmdb",
+   "genero": "Documental",
+   "_heredado": {
+    "genero": "catálogo w_R4HDSRY0KBZB (ficci-65, ficdeh-2026, midbo-2026)"
+   }
+  },
+  {
+   "titulo": "Back to Fukushima",
+   "tmdb_id": 1592063,
+   "titulo_original": "Retour à Fukushima",
+   "poster_path": "/4JCLCDRW1Nn1Q7GJFT2t4WiBEQi.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "For a few years now, the Japanese government has been building complexes called \"renewal housing estates\" in the very heart of Fukushima Prefecture. More than a decade after the accident, the region, still heavily contaminated, has seen the emergence of these concrete neighborhoods, enclosed in the midst of wild, radioactive nature. This film paints an intimate portrait of the people who live there and offers a poetic reflection on the region.",
+   "genero": "Documental",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "",
+   "lbSlug": "retour-a-fukushima",
+   "_verificado": "declarada a mano: Ya existía en TMDB y el enriquecido no la casó: «Retour à Fukushima» (2026), Thomas Licata: mismo director y año; estaba con su título francés. Hallada por las tres sondas (título, filmografía del director, Letterboxd) el 10 oct 2026.",
+   "_director": "Thomas Licata",
+   "_sondeado": "2026-10-15",
+   "poster": "/assets/midbo-2026/back-to-fukushima.jpg",
    "posterSource": "tmdb"
   },
   {
@@ -217,7 +238,6 @@
    "titulo_original": "Bojayá, la verdad desde adentro",
    "poster_path": "/gabinMtzyF7DehSfulGfVpM1gtr.jpg",
    "synopsis_es": "Tres líderes de Bojayá recorren el municipio llevando el baúl de la verdad, recogiendo cuestionamientos y exigencias de la comunidad para enfrentar a los responsables del conflicto armado en su territorio. Después de su recorrido, comparten con la comunidad las respuestas encontradas y juntos construyen una verdad desde adentro.",
-   "synopsis_en": "",
    "genero": "",
    "anio_tmdb": 2026,
    "duracion_tmdb": 105,
@@ -238,7 +258,11 @@
     }
    ],
    "poster": "/assets/midbo-2026/bojaya-la-verdad-desde-adentro.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "synopsis_en": "Three leaders from Bojayá travel throughout the municipality carrying a \"truth chest\", gathering questions and demands from the community to confront those responsible for the armed conflict in their territory. After their journey, they share the answers they have found with the community, working together to construct a truth from within.",
+   "_heredado": {
+    "synopsis_en": "catálogo w_R4HFH16BHR3J (ficdeh-2026, midbo-2026)"
+   }
   },
   {
    "titulo": "Bosque arriba en la montaña",
@@ -307,6 +331,25 @@
    "_director": "Luna Marán",
    "_sondeado": "2026-10-10",
    "poster": "/assets/midbo-2026/bucan-tu-rhachhidu.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Buenos días, Wiracocha",
+   "tmdb_id": 1517473,
+   "titulo_original": "Buenos días, Wiraqocha",
+   "poster_path": "/5K2bX8TgGkP9sy8x0AcdaB8ihXO.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Fifty years ago, the struggle for the lands in rural communities of Cuzco was filmed. A group of filmmakers brought these images back to the province of Paucartambo (Cuzco) and proposed to the villagers of the area to build a community memory through the creation of a new film.",
+   "genero": "Documental",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 83,
+   "pais_tmdb": "Peru",
+   "title_en": "Good Morning, Wiraqocha",
+   "lbSlug": "good-morning-wiraqocha",
+   "_verificado": "declarada a mano: Ya existía en TMDB y el enriquecido no la casó: «Good Morning, Wiraqocha» (2025), Mauricio Godoy: mismo director y año; estaba con su título inglés. Hallada por las tres sondas (título, filmografía del director, Letterboxd) el 10 oct 2026.",
+   "_director": "Mauricio Godoy",
+   "_sondeado": "2026-10-15",
+   "poster": "/assets/midbo-2026/buenos-dias-wiracocha.jpg",
    "posterSource": "tmdb"
   },
   {
@@ -529,6 +572,25 @@
    "posterSource": "tmdb"
   },
   {
+   "titulo": "De cierta manera",
+   "tmdb_id": 162505,
+   "titulo_original": "De cierta manera",
+   "poster_path": "/sKxIvWYN0RQjb75kj83nXMpWvw5.jpg",
+   "synopsis_es": "El reparto Miraflores, construido en 1962 por los mismos que lo habitarían, es resultado de los primeros esfuerzos de la Revolución por erradicar los barrios marginales. Yolanda, nueva maestra de la comunidad, afronta las diferencias y conflictos que surgen en su relación amorosa con Mario, un obrero de la barriada, en la que se manifiesta el choque entre la antigua mentalidad y las nuevas actitudes.",
+   "synopsis_en": "In Miraflores, Cuba, the growing romance between Mario, a factory worker, and Yolanda, a schoolteacher, throws into relief the differences in their perspectives and values in Revolutionary Cuba.",
+   "genero": "Drama",
+   "anio_tmdb": 1977,
+   "duracion_tmdb": 78,
+   "pais_tmdb": "Cuba",
+   "title_en": "One Way or Another",
+   "lbSlug": "one-way-or-another-1975",
+   "_verificado": "declarada a mano: Ya existía en TMDB y el enriquecido no la casó: «One Way or Another» (1977), Sara Gómez. Hallada por las tres sondas (título, filmografía del director, Letterboxd) el 10 oct 2026.",
+   "_director": "",
+   "_sondeado": "2026-10-15",
+   "poster": "/assets/midbo-2026/de-cierta-manera.jpg",
+   "posterSource": "tmdb"
+  },
+  {
    "titulo": "Decaer",
    "tmdb_id": 1668881,
    "titulo_original": "decaer",
@@ -651,13 +713,29 @@
    "posterSource": "tmdb"
   },
   {
+   "titulo": "El espíritu de los Andes",
+   "tmdb_id": 1794407,
+   "titulo_original": "El espíritu de los Andes",
+   "poster_path": "/hLgrQQwRlROZ0yMWtQs1Dlquv1a.jpg",
+   "synopsis_es": "«El espíritu de los Andes» es un documental que, a través de la mirada de Diana Bautista y su cotidianidad, nos muestra cómo conviven las comunidades del páramo de Almorzadero con el cóndor andino y cómo han aprendido a proteger la especie a través de estrategias pedagógicas y de conservación, en las que intervienen distintos actores de la comunidad y organizaciones públicas y privadas de Santander y de Colombia en general.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 10,
+   "pais_tmdb": "",
+   "lbSlug": "el-espiritu-de-los-andes",
+   "_verificado": "declarada a mano: Ficha CREADA por nosotros el 11 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas): dirección, año, país, duración y sinopsis de la ficha de midbo.co, afiche original del festival.",
+   "_director": "Dirección: Francisco Ciri, Ingrid Hincapie",
+   "_sondeado": "2026-10-15",
+   "poster": "/assets/midbo-2026/el-espiritu-de-los-andes.jpg",
+   "posterSource": "tmdb"
+  },
+  {
    "titulo": "El hogar fue sepultado en esa tierra que nunca pudimos encontrar",
    "tmdb_id": 1663181,
    "titulo_original": "Our Home Was Buried in a Land We Could Never Find",
    "poster_path": "/sek5YZDIguocEvkRAaCcPb5wKW2.jpg",
    "synopsis_es": "“Esos diablos me quitaron todo, esos diablos me quitaron todo, esos diablos me quitaron todo”: este mantra de despojo se transfigura cada tanto en la familia, como una sentencia. Ellos anhelan reencontrarse con sus seres queridos desaparecidos, jugar de nuevo entre plataneras y seres fantásticos y… la casa… la casa quiere volver a ser hogar. Entre filmaciones caseras, archivos colectivos, imágenes familiares y una presencia espectral y mística, esta película habita los sueños y las pesadillas creadas por las huellas de la desaparición de lo amado. El ruido de las balas parece haber cesado; ahora la guerra parece distante, pero a su paso dejó un profundo dolor y la promesa de volver. Los amigos, la familia, el hogar y el territorio vuelven, invocados por este relato coral. El pasado es un fantasma y este filme especula sobre un paraíso y un infierno que ya no se pueden tocar, con la ilusión de habitar este nuevo lugar para conjurar en él un abrazo.",
-   "synopsis_en": "",
-   "genero": "",
    "anio_tmdb": 2026,
    "duracion_tmdb": 92,
    "pais_tmdb": "Colombia",
@@ -711,7 +789,15 @@
     }
    ],
    "poster": "/assets/midbo-2026/el-hogar-fue-sepultado-en-esa-tierra-que-nunca-pudimos-encon.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "genero": "Documental",
+   "_heredado": {
+    "genero": "catálogo w_R4FA9W7P4RY6 (cinemancia-2026, ficdeh-2026, ficma-2026, mamut-2026, midbo-2026)",
+    "title_en": "catálogo w_R4FA9W7P4RY6 (cinemancia-2026, ficdeh-2026, ficma-2026, mamut-2026, midbo-2026)",
+    "synopsis_en": "catálogo w_R4FA9W7P4RY6 (cinemancia-2026, ficdeh-2026, ficma-2026, mamut-2026, midbo-2026)"
+   },
+   "title_en": "Our Home Was Buried in a Land We Could Never Find",
+   "synopsis_en": "Home is gone; the house was paradise, and also hell. Though the war tried to destroy everything in its path, the family tries to return. Between longing and nightmare they build a new territory, a refuge where they find their friends and their community again. There they make it back to the big house, the amusement park of childhood, now inhabited by fantastical beings and spectres, where they try to conjure an embrace."
   },
   {
    "titulo": "El salto",
@@ -769,8 +855,6 @@
    "titulo_original": "El Valor de la Palabra",
    "poster_path": "/Al31xYPYyul6k0XyMnmaA357CHw.jpg",
    "synopsis_es": "Tres líderes indígenas Arhuaco fueron secuestrados y asesinados en 1990. Sus cuerpos fueron encontrados torturados. Más de tres décadas después, sus palabras siguen vivas y sus familias, su pueblo, aún esperan la verdad. Entre testimonios de dolor emerge una sabiduría ancestral donde el territorio es un ser vivo, la mujer es tejedora del conocimiento, y la palabra es el hilo que sostiene la existencia del pueblo Arhuaco. Surge así una reflexión profunda sobre el liderazgo, el género y la responsabilidad de tejer el \"hilo de la vida\" para las nuevas generaciones. Un documental que es acto de resistencia frente a la continua violencia colonial, religiosa, militar y la impunidad estructural en Colombia.  Una lección sobre lo que significa defender la vida.",
-   "synopsis_en": "",
-   "genero": "",
    "anio_tmdb": 0,
    "duracion_tmdb": 79,
    "pais_tmdb": "",
@@ -797,7 +881,13 @@
     }
    ],
    "poster": "/assets/midbo-2026/el-valor-de-la-palabra.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "genero": "Documental",
+   "_heredado": {
+    "genero": "catálogo w_R4HBNA1T7S2G (ficci-65, ficdeh-2026, midbo-2026)",
+    "synopsis_en": "catálogo w_R4HBNA1T7S2G (ficci-65, ficdeh-2026, midbo-2026)"
+   },
+   "synopsis_en": "The long career of Colombian filmmaker Marta Rodríguez demonstrates a commitment to documenting the history of repression and struggle of indigenous and marginalized peoples."
   },
   {
    "titulo": "En la otra isla",
@@ -817,6 +907,24 @@
    "_director": "Sara Gómez",
    "_sondeado": "2026-10-10",
    "poster": "/assets/midbo-2026/en-la-otra-isla.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Escrito sobre un cuerpo",
+   "tmdb_id": 1794409,
+   "titulo_original": "Escrito sobre un cuerpo",
+   "poster_path": "/jZxYZCLy7PLE2AlAYzTTH2Z9Ief.jpg",
+   "synopsis_es": "El lector es una voz y a la vez un cuerpo. ¿Cómo rearticular un lugar común para decir un texto cuando no es posible alzar ni la voz ni el cuerpo en protesta ni disidencia? Conjurar la solidaridad y el deseo de revuelta contra toda opresión. En vez de ofrecer una historia definitiva, ofrecer un mosaico, un archipiélago: destellos de personas que leen y espacios que contienen memorias.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 32,
+   "pais_tmdb": "",
+   "lbSlug": "escrito-sobre-un-cuerpo",
+   "_verificado": "declarada a mano: Ficha CREADA por nosotros el 11 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas): dirección, año, país, duración y sinopsis de la ficha de midbo.co, afiche original del festival.",
+   "_director": "Esteban Prudencio",
+   "_sondeado": "2026-10-15",
+   "poster": "/assets/midbo-2026/escrito-sobre-un-cuerpo.jpg",
    "posterSource": "tmdb"
   },
   {
@@ -863,6 +971,25 @@
    ],
    "_sinopsis_de": "ya publicada en cineautopsia-2026",
    "poster": "/assets/midbo-2026/filme-pin.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Fordlândia Panacea",
+   "tmdb_id": 1559606,
+   "titulo_original": "Fordlândia Panacea",
+   "poster_path": "/pbOBnjauFPr7g8gJ8CSNq5JLjT5.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "In 1928, industrialist Henry Ford built a company town in the Brazilian jungle and established a rubber plantation. Within a few years his industrial utopia collapsed, coming to an end in 1945. Fordlândia was largely abandoned and became known as a ghost town.",
+   "genero": "Documental",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 66,
+   "pais_tmdb": "Brazil",
+   "lbSlug": "fordlandia-panacea",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Fordlândia Panacea",
+   "_director": "Susana de Sousa Dias",
+   "_sondeado": "2026-10-15",
+   "poster": "/assets/midbo-2026/fordlandia-panacea.jpg",
    "posterSource": "tmdb"
   },
   {
@@ -1030,7 +1157,6 @@
    "poster_path": "/apQpk4kG29oQMpAJKYzeMC6aYhF.jpg",
    "synopsis_es": "Cinco personajes afrocolombianos en medio de Bogotá, cinco destinos dispares en una ciudad que les es hostil. Rubi Quejada, una joven modelo desplazada del Chocó; Shaka, un rapero y champetúo que trabaja en un cibercafé; Makambile, un cantante de champeta y mesero; Jah-Man, un profeta autodidacta de Buenaventura; y Afreeway, un joven pandillero que busca llegar lejos. 18",
    "synopsis_en": "Five Afro-Colombian characters in the middle of Bogotá, five disparate destinies in a city that is hostile to them. Rubi Quejada, a young model displaced from Chocó.",
-   "genero": "",
    "anio_tmdb": 2025,
    "duracion_tmdb": 90,
    "pais_tmdb": "",
@@ -1052,7 +1178,31 @@
    ],
    "_sinopsis_de": "ya publicada en qaff-2026",
    "poster": "/assets/midbo-2026/iniciacion-en-la-octava-dimension.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "genero": "Documental",
+   "_heredado": {
+    "genero": "catálogo w_R4M65FV9TXYC (midbo-2026, qaff-2026)"
+   }
+  },
+  {
+   "titulo": "Invierno Flores Jardín",
+   "tmdb_id": 1655475,
+   "titulo_original": "Winter Blumen Garten",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "Two women exchange cinematic letters that connect the past and present. Heidrun, a Viennese woman, and Sara, a Colombian migrant, live in the city at different times—whether in fiction or reality is not always clear.",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 28,
+   "pais_tmdb": "Austria",
+   "title_en": "Winter Flowers Garden",
+   "lbSlug": "winter-flowers-garden",
+   "_verificado": "declarada a mano: Ya existía en TMDB y el enriquecido no la casó: «Winter Flowers Garden» (2026), Sara Piñeros Cortés: misma directora y año; estaba con su título inglés. Hallada por las tres sondas (título, filmografía del director, Letterboxd) el 10 oct 2026.",
+   "_director": "Sara Piñeros Cortés",
+   "_sondeado": "2026-10-15",
+   "poster": "/assets/midbo-2026/invierno-flores-jardin.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: ficha de midbo.co, afiche oficial (https://midbo.co/wp-content/uploads/2026/10/peliculas-invierno-flores-jardin-afiche.jpg)"
   },
   {
    "titulo": "Iré a Santiago",
@@ -1181,6 +1331,42 @@
    "posterSource": "tmdb"
   },
   {
+   "titulo": "La verdad duerme en silencio",
+   "tmdb_id": 1794410,
+   "titulo_original": "La verdad duerme en silencio",
+   "poster_path": "/74cWsSB5AhAyXFmHWiubuHYkdgo.jpg",
+   "synopsis_es": "Antes de que hubiera tierra, había pensamiento. Antes de que hubiera luz, había oscuridad, y en la oscuridad se tejió el mundo. Los hermanos menores llegaron después. Nombraron la montaña Gonawidúa con otro nombre. Contaron su historia en quinientos años, como quien cuenta los días desde que llegó, no desde que el mundo fue pensado. Pero la memoria duerme en la selva, duerme en la piedra, duerme en el agua que baja de los picos nevados hacia las profundidades del mar. «La verdad duerme en silencio» escucha esa memoria, la siente. Entrelaza la palabra de los mayores con los relatos de la tierra, con lo que el territorio recuerda, aunque nadie lo diga. Recorre el tiempo de origen, el tiempo de las primeras ciudades, el tiempo en que llegaron los forasteros, el tiempo de las pérdidas y de lo que fue sacado sin permiso.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 27,
+   "pais_tmdb": "",
+   "lbSlug": "la-verdad-duerme-en-silencio",
+   "_verificado": "declarada a mano: Ficha CREADA por nosotros el 11 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas): dirección, año, país, duración y sinopsis de la ficha de midbo.co, afiche original del festival.",
+   "_director": "Andrew Simon Tucker",
+   "_sondeado": "2026-10-15",
+   "poster": "/assets/midbo-2026/la-verdad-duerme-en-silencio.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "La voz de los que no hablan",
+   "tmdb_id": 1794412,
+   "titulo_original": "La voz de los que no hablan",
+   "poster_path": "/7brBTLRGaNWR2aIjMHnx8YhaldM.jpg",
+   "synopsis_es": "Los animales comparten nuestro planeta, nuestros territorios y, en muchos casos, nuestros hogares, pero ¿alguna vez nos hemos preguntado qué sienten, qué necesitan o qué nos dirían si pudieran hablar? «La voz de los que no hablan» es un documental infantil que se acerca al mundo animal desde la curiosidad, el juego y la imaginación. A través de entrevistas, testimonios, historias, datos curiosos y experiencias cotidianas, niños y adultos descubren diferentes maneras en las que los animales se comunican y expresan sus necesidades. La propuesta combina realidad y ficción mediante la aparición de un animal que, por un momento, adquiere voz para contar su propia historia y poner en palabras aquello que muchas veces no sabemos escuchar. Desde esta mirada, el documental plantea preguntas sobre nuestra relación con los animales y con el entorno que habitamos. Más que hablar por los animales, la película busca despertar la capacidad de observar, escuchar y reconocer otras formas de vida.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 10,
+   "pais_tmdb": "",
+   "lbSlug": "la-voz-de-los-que-no-hablan",
+   "_verificado": "declarada a mano: Ficha CREADA por nosotros el 11 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas): dirección, año, país, duración y sinopsis de la ficha de midbo.co, afiche original del festival.",
+   "_director": "Dirección: Jerónimo Agudelo, Juan Fernando Ramírez",
+   "_sondeado": "2026-10-15",
+   "poster": "/assets/midbo-2026/la-voz-de-los-que-no-hablan.jpg",
+   "posterSource": "tmdb"
+  },
+  {
    "titulo": "Las almas ni los ojos",
    "tmdb_id": 1665538,
    "titulo_original": "Las almas ni los ojos",
@@ -1254,6 +1440,42 @@
    "posterSource": "tmdb"
   },
   {
+   "titulo": "Latidos",
+   "tmdb_id": 1794413,
+   "titulo_original": "Latidos",
+   "poster_path": "/6V8capVbjmLue3KsRSHMVCqUQFT.jpg",
+   "synopsis_es": "«Latidos» aborda la migración, la discriminación y el racismo desde la perspectiva de las propias personas afectadas, sin intermediarios ni reinterpretaciones externas. La obra construye un relato coral donde el arte se convierte en herramienta de resistencia y expresión política. A través de diversas manifestaciones culturales practicadas por colectivos migrantes y racializados en España, el documental expone las múltiples capas de una realidad marcada por la exclusión estructural. Una obra que interpela directamente al espectador y lo invita a reflexionar sobre la convivencia, la desigualdad y la humanidad compartida.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 54,
+   "pais_tmdb": "",
+   "lbSlug": "latidos-2026",
+   "_verificado": "declarada a mano: Ficha CREADA por nosotros el 11 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas): dirección, año, país, duración y sinopsis de la ficha de midbo.co, afiche original del festival.",
+   "_director": "Baptista Joao",
+   "_sondeado": "2026-10-15",
+   "poster": "/assets/midbo-2026/latidos.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Legados de un mismo suelo",
+   "tmdb_id": 1794414,
+   "titulo_original": "Legados de un mismo suelo",
+   "poster_path": "/usw9fzAMpeALq6p7ULAFtYBVwT3.jpg",
+   "synopsis_es": "«He cambiado de nombre, pero mi alma… mi alma sigue siendo la misma». Así habla el protagonista de esta historia: un edificio en el barrio Lucero Bajo, Ciudad Bolívar, que narra en primera persona su propia transformación. Nacido como el colegio Rómulo Gallegos —y vinculado a una sede hermana en Meissen—, este espacio fue levantado y sostenido por el amor y la entrega de Doña Lola y Don Julio, sus fundadores. A través de una íntima voz en off y los testimonios de fundadores, maestros y exalumnos, la estructura relata cómo «cambió de piel» al compás del tiempo. Los recuerdos de las viejas aulas se entrelazan con su presente: hoy, transformado en un centro CREA, sus pasillos renacen como laboratorios de creación donde niños y jóvenes exploran su sensibilidad artística.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 10,
+   "pais_tmdb": "",
+   "lbSlug": "legados-de-un-mismo-suelo",
+   "_verificado": "declarada a mano: Ficha CREADA por nosotros el 11 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas): dirección, año, país, duración y sinopsis de la ficha de midbo.co, afiche original del festival.",
+   "_director": "Dirección: Fraktal 19",
+   "_sondeado": "2026-10-15",
+   "poster": "/assets/midbo-2026/legados-de-un-mismo-suelo.jpg",
+   "posterSource": "tmdb"
+  },
+  {
    "titulo": "Lengua muerta",
    "tmdb_id": 1493312,
    "titulo_original": "Lengua muerta",
@@ -1294,12 +1516,29 @@
    "posterSource": "tmdb"
   },
   {
+   "titulo": "Lo que no está",
+   "tmdb_id": 1794415,
+   "titulo_original": "Lo que no está",
+   "poster_path": "/38iOvFZs9HYdj2jtXIX01KwQ21Q.jpg",
+   "synopsis_es": "«Lo que no está» es una pregunta abierta hacia la muerte: tras trece años de perder a un hermano, la imagen de Paulo Cesar acompaña al director en todas las imágenes que él captura con su cámara. Esta pieza es un encuentro entre la carga de un duelo y las imágenes.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 15,
+   "pais_tmdb": "",
+   "lbSlug": "lo-que-no-esta",
+   "_verificado": "declarada a mano: Ficha CREADA por nosotros el 11 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas): dirección, año, país, duración y sinopsis de la ficha de midbo.co, afiche original del festival.",
+   "_director": "Jean Paul Sánchez Flórez",
+   "_sondeado": "2026-10-15",
+   "poster": "/assets/midbo-2026/lo-que-no-esta.jpg",
+   "posterSource": "tmdb"
+  },
+  {
    "titulo": "Lolita en Honda",
    "tmdb_id": 1665546,
    "titulo_original": "Lolita en Honda",
    "poster_path": "/sKIm7ZwfuBnKuGeHJAUOYhg8DlV.jpg",
    "synopsis_es": "Detrás de los ojos de Lolita hay un velo que ciega sus palabras. Es el recuerdo de una infancia que, aún en la vejez, le oscurece la vista y no le permite escapar. Cuando habla me parece intuir, por el eco de las historias que repite, un mundo espectral de hambre, abandono, el estigma social de una madre soltera, la magia del Río Magdalena y todas las ilusiones y demonios de esa niñez.",
-   "synopsis_en": "",
    "genero": "",
    "anio_tmdb": 0,
    "duracion_tmdb": 0,
@@ -1336,6 +1575,28 @@
     }
    ],
    "poster": "/assets/midbo-2026/lolita-en-honda.jpg",
+   "posterSource": "tmdb",
+   "synopsis_en": "Lolita en Honda is an intimate journey into family memory, in which Daniel Torres explores his grandmother's childhood to unravel the marks of abandonment and internalized violence that shaped her character.",
+   "_heredado": {
+    "synopsis_en": "catálogo w_R4FPSFY03SBY (cinemancia-2026, ficci-65, mamut-2026, midbo-2026)"
+   }
+  },
+  {
+   "titulo": "Los guardianes del agua",
+   "tmdb_id": 1794416,
+   "titulo_original": "Los guardianes del agua",
+   "poster_path": "/kA1hpnXy9Qt8thRSgXSPQKAcwIw.jpg",
+   "synopsis_es": "¿Qué nos dice el agua cuando decidimos escucharla? En medio de una ciudad que no deja de crecer, el Humedal de Techo resiste como un territorio donde el agua y la vida aún encuentran refugio. El documental explora la relación entre el humedal y la expansión urbana, revelando las huellas del deterioro ambiental y la lucha silenciosa de un ecosistema por permanecer. Una mirada poética y crítica sobre lo que hemos perdido, lo que aún permanece y aquello que estamos a tiempo de proteger.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 9,
+   "pais_tmdb": "",
+   "lbSlug": "los-guardianes-del-agua",
+   "_verificado": "declarada a mano: Ficha CREADA por nosotros el 11 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas): dirección, año, país, duración y sinopsis de la ficha de midbo.co, afiche original del festival.",
+   "_director": "Dirección: Santiago Pulgarin, María Isabel Santos",
+   "_sondeado": "2026-10-15",
+   "poster": "/assets/midbo-2026/los-guardianes-del-agua.jpg",
    "posterSource": "tmdb"
   },
   {
@@ -1344,8 +1605,6 @@
    "titulo_original": "Madres de Nacimiento",
    "poster_path": "/kJreh6iEXQZ3NHaROQb7WJNle7l.jpg",
    "synopsis_es": "Del olvido y la oscuridad hay imágenes y sonidos que resurgen para controlar los cuerpos de las mujeres latinoamericanas, quienes desde niñas han sido consideradas madres de nacimiento. Pero en estos archivos emerge una interferencia que proviene del pasado para evocar un mensaje de lucha, memoria y libertad.",
-   "synopsis_en": "",
-   "genero": "",
    "anio_tmdb": 0,
    "duracion_tmdb": 8,
    "pais_tmdb": "",
@@ -1402,7 +1661,13 @@
     }
    ],
    "poster": "/assets/midbo-2026/madres-de-nacimiento.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "genero": "Documental",
+   "_heredado": {
+    "genero": "catálogo w_R4FH541S52JK (cinemancia-2026, ficci-65, ficdeh-2026, ficmontanas-2026, jardin-2026, midbo-2026, popayan-2026)",
+    "synopsis_en": "catálogo w_R4FH541S52JK (cinemancia-2026, ficci-65, ficdeh-2026, ficmontanas-2026, jardin-2026, midbo-2026, popayan-2026)"
+   },
+   "synopsis_en": "Out of oblivion and darkness, images and sounds resurface to control the bodies of Latin American women, regarded since childhood as mothers by birth. But within these archives an interference emerges from the past, carrying a message of struggle, memory and freedom."
   },
   {
    "titulo": "Mi aporte",
@@ -1489,6 +1754,24 @@
    "_sondeado": "2026-10-10"
   },
   {
+   "titulo": "No es una herida",
+   "tmdb_id": 1794417,
+   "titulo_original": "No es una herida",
+   "poster_path": "/3B0CQ3pKom0w3XCVYSY3QgYMfF5.jpg",
+   "synopsis_es": "Violeta, Maria José y Daniela tienen diagnósticos diferentes con un síntoma en común: dolor crónico al menstruar. Cada una reflexiona desde su experiencia cíclica afectada por la endometriosis, el SOMP (antes ovario poliquístico) y el VPH, enfermedades con tratamiento pero sin cura. A través de una puesta coreográfica y performática, las protagonistas se sumergen en su propia sangre intentando transfigurar una herida imaginaria que condiciona su relación con su cuerpo, con el dar vida, con el movimiento y la soledad. Acompañadas por la reflexión de Mónica, una mujer adulta que también ha tenido una experiencia menstrual dolorosa, se preguntan por qué, si no es una herida, duele.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 15,
+   "pais_tmdb": "",
+   "lbSlug": "no-es-una-herida",
+   "_verificado": "declarada a mano: Ficha CREADA por nosotros el 11 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas): dirección, año, país, duración y sinopsis de la ficha de midbo.co, afiche original del festival.",
+   "_director": "Violeta Zambrano",
+   "_sondeado": "2026-10-15",
+   "poster": "/assets/midbo-2026/no-es-una-herida.jpg",
+   "posterSource": "tmdb"
+  },
+  {
    "titulo": "No menguará el fuego de esta luna",
    "tmdb_id": 1593592,
    "titulo_original": "No menguará el fuego de esta luna",
@@ -1550,6 +1833,24 @@
    ],
    "_sinopsis_de": "ya publicada en ficcali-2026",
    "poster": "/assets/midbo-2026/notre-corps.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Now!",
+   "tmdb_id": 145762,
+   "titulo_original": "Now!",
+   "poster_path": "/kICPjLSIegbsphO0T18rjC8VzHK.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Using morgue photos, newsreel footage, and a recording by Lena Horne, Cuban filmmaker Santiago Alvarez fired off 'Now!', one of the most powerful bursts of propaganda rendered in the 1960s.",
+   "genero": "Documental",
+   "anio_tmdb": 1965,
+   "duracion_tmdb": 5,
+   "pais_tmdb": "Cuba",
+   "lbSlug": "now",
+   "_verificado": "declarada a mano: Ya existía en TMDB y el enriquecido no la casó: «Now!» (1965), Santiago Álvarez. Hallada por las tres sondas (título, filmografía del director, Letterboxd) el 10 oct 2026.",
+   "_director": "Santiago Álvarez",
+   "_sondeado": "2026-10-15",
+   "poster": "/assets/midbo-2026/now.jpg",
    "posterSource": "tmdb"
   },
   {
@@ -1686,7 +1987,6 @@
    "poster_path": "/6Yl2YKCrWJCrZpuag9aD2iZQMFp.jpg",
    "synopsis_es": "Pacífico es el nombre de una región, pero también de una fuerza. Una tierra donde la música acompaña la vida y donde uno puede renacer.",
    "synopsis_en": "In the waters of Colombia’s Pacific coast, life is celebrated through a particular kind of song: the Arrullos. This music honors life in a territory marked by violence and armed conflict, where enslaved people once found refuge at the end of colonial rule. In these same waters, each year, thousands of whales arrive from Antarctica to give birth. Pacífico weaves a polyphonic narrative around birth in an aquatic space where body, territory, and memory are deeply intertwined.",
-   "genero": "",
    "anio_tmdb": 2026,
    "duracion_tmdb": 22,
    "pais_tmdb": "France, Colombia",
@@ -1706,7 +2006,11 @@
    ],
    "_sinopsis_de": "ya publicada en aff-2026",
    "poster": "/assets/midbo-2026/pacifico.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "genero": "Documental",
+   "_heredado": {
+    "genero": "catálogo w_R4DJ5XYQ7SV3 (aff-2026, midbo-2026)"
+   }
   },
   {
    "titulo": "Para mí, ya no es cualquier baño",
@@ -1726,6 +2030,24 @@
    "_director": "Micaela Moreno Barril",
    "_sondeado": "2026-10-10",
    "poster": "/assets/midbo-2026/para-mi-ya-no-es-cualquier-bano.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Querida Engativá",
+   "tmdb_id": 1794419,
+   "titulo_original": "Querida Engativá",
+   "poster_path": "/8ieM8dp3umFybdfoMgCtTKBJxu0.jpg",
+   "synopsis_es": "A través de palabras y de un sentimiento que va más allá de lo superficial, «Querida Engativá» demuestra cómo un lugar puede ser más que un hogar, donde se reflejan las cosas buenas y malas que están en el territorio. Esta carta audiovisual presenta el lugar donde muchos crecieron, ese lugar que muchos ven como recuerdos, historias y enseñanzas; además de eso «Querida Engativá» no oculta lo malo, simplemente lo muestra de una manera natural, pues también hace parte del territorio. Engativá es más que calles y edificios: Engativá son las personas que habitan en ella. Por esta razón, «Querida Engativá» busca mostrar a su comunidad desde una mirada cercana y sincera, mostrar todo lo que las personas ven como algo común y sencillo de una manera diferente, una manera en la que Engativa también siente.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 8,
+   "pais_tmdb": "",
+   "lbSlug": "querida-engativa",
+   "_verificado": "declarada a mano: Ficha CREADA por nosotros el 11 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas): dirección, año, país, duración y sinopsis de la ficha de midbo.co, afiche original del festival.",
+   "_director": "Dirección: Carolina Martínez",
+   "_sondeado": "2026-10-15",
+   "poster": "/assets/midbo-2026/querida-engativa.jpg",
    "posterSource": "tmdb"
   },
   {
@@ -1779,13 +2101,29 @@
    "posterSource": "tmdb"
   },
   {
+   "titulo": "Salvando el proyecto",
+   "tmdb_id": 1794421,
+   "titulo_original": "Salvando el proyecto",
+   "poster_path": "/9AljsNlei7WTq2KFfrLxTmtLffr.jpg",
+   "synopsis_es": "En el Colegio Isabel II, en Bogotá, un grupo de estudiantes se enfrenta a un entorno marcado por la rutina, las barreras comunicativas y la dificultad para participar. Entre estudiantes sordos y oyentes surge la necesidad de encontrar nuevas formas de encontrarse, expresarse y ser escuchados. Así nace Voces Isabelinas, una emisora escolar que convierte un espacio olvidado del colegio en un lugar para crear, compartir y hacer comunidad. A través de la palabra, la música, las imágenes y la Lengua de Señas Colombiana, los estudiantes descubren que comunicarse no significa hacerlo todos de la misma manera. El proceso de creación de la emisora revela cómo el trabajo colectivo puede transformar no solo un espacio físico, sino también las relaciones dentro de la escuela, haciendo visible que todas las voces —incluso aquellas que no se escuchan con los oídos— tienen algo que contar.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 7,
+   "pais_tmdb": "",
+   "lbSlug": "salvando-el-proyecto",
+   "_verificado": "declarada a mano: Ficha CREADA por nosotros el 11 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas): dirección, año, país, duración y sinopsis de la ficha de midbo.co, afiche original del festival.",
+   "_director": "Dirección: Sindy Joya",
+   "_sondeado": "2026-10-15",
+   "poster": "/assets/midbo-2026/salvando-el-proyecto.jpg",
+   "posterSource": "tmdb"
+  },
+  {
    "titulo": "Si La Escombrera hablara",
    "tmdb_id": 1738942,
    "titulo_original": "Si La Escombrera hablara",
    "poster_path": "/9JYXhgh8rpdVSltDynKqqAQ471q.jpg",
    "synopsis_es": "En la comuna 13 de Medellín se encuentra la fosa urbana más grande de América Latina: La Escombrera. Las familias de las personas víctimas de desaparición forzada la señalan como el lugar donde están muchos de los 503 desaparecidos de este territorio. Tras dos décadas de negacionismo, la búsqueda forense liderada por el colectivo Mujeres Caminando por la Verdad desencadenó en 2024 el hallazgo de cuerpos. Este acontecimiento histórico envió un mensaje muy claro a toda Colombia: la tierra ha comenzado a hablar.",
-   "synopsis_en": "",
-   "genero": "",
    "anio_tmdb": 2025,
    "duracion_tmdb": 30,
    "pais_tmdb": "",
@@ -1805,7 +2143,13 @@
     }
    ],
    "poster": "/assets/midbo-2026/si-la-escombrera-hablara.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "genero": "Documental",
+   "_heredado": {
+    "genero": "catálogo w_R4HGZYH4PDB2 (ficdeh-2026, midbo-2026)",
+    "synopsis_en": "catálogo w_R4HGZYH4PDB2 (ficdeh-2026, midbo-2026)"
+   },
+   "synopsis_en": "Medellín’s Comuna 13 is home to the largest urban mass grave in Latin America. La Escombrera has been identified by families of victims of enforced disappearance as the site where many of the territory’s 503 disappeared persons are buried. Mujeres Caminando por la Verdad leads the forensic search that, after two decades of denialism, led to the discovery of human remains in 2024. This historic event sent a clear message across Colombia: the earth has begun to speak."
   },
   {
    "titulo": "Sol de niebla",
@@ -1935,6 +2279,24 @@
    "posterSource": "tmdb"
   },
   {
+   "titulo": "Tercer acto",
+   "tmdb_id": 1794423,
+   "titulo_original": "Tercer acto",
+   "poster_path": "/7BDHHzt3O2U7QFOFgLbfg2iyrpm.jpg",
+   "synopsis_es": "Hay una etapa de la vida en la que el tiempo deja de ser una promesa y se convierte en memoria. La vida se entreteje como un hilo de memorias, y en cada uno de nuestros recuerdos tejemos alegrías, esfuerzos y esperanzas. Antonio, Elsa y Rafael son héroes de su propia historia, entrelazando momentos que con el pasar de los años se convierten en recuerdos conservados a través de las fotografías, en los viejos álbumes que atesoran como guardianes del momento y que son testimonio de quienes son, hacia dónde van y cómo habitan su presente. «Tercer acto» es un ensayo cinematográfico que se acerca a personas que han llegado a una nueva etapa de sus vidas para descubrir, a través de sus recuerdos, sus silencios y sus palabras, las historias que las han convertido en quienes son.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 10,
+   "pais_tmdb": "",
+   "lbSlug": "tercer-acto-2026",
+   "_verificado": "declarada a mano: Ficha CREADA por nosotros el 11 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas): dirección, año, país, duración y sinopsis de la ficha de midbo.co, afiche original del festival.",
+   "_director": "Dirección: Entramados",
+   "_sondeado": "2026-10-15",
+   "poster": "/assets/midbo-2026/tercer-acto.jpg",
+   "posterSource": "tmdb"
+  },
+  {
    "titulo": "The Flowers Stand Silently, Witnessing",
    "tmdb_id": 1335789,
    "titulo_original": "The Flowers Stand Silently, Witnessing",
@@ -1970,6 +2332,24 @@
    "_director": "Caroline Guimbal",
    "_sondeado": "2026-10-10",
    "poster": "/assets/midbo-2026/the-red-moon-eclipse.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "The Travelers",
+   "tmdb_id": 1463516,
+   "titulo_original": "Les Voyageurs",
+   "poster_path": "/sSMEXMfV9njHYVuZpHCzReqYRs7.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "On the border between Morocco and Spain, a group of travelers is eagerly waiting to cross over to Europe.",
+   "genero": "Documental",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 60,
+   "pais_tmdb": "Cameroon, Spain",
+   "lbSlug": "the-travelers-2025",
+   "_verificado": "declarada a mano: Ya existía en TMDB y el enriquecido no la casó: «The Travelers» (2025), David Bingong. Hallada por las tres sondas (título, filmografía del director, Letterboxd) el 10 oct 2026.",
+   "_director": "David Bingong",
+   "_sondeado": "2026-10-15",
+   "poster": "/assets/midbo-2026/the-travelers.jpg",
    "posterSource": "tmdb"
   },
   {
@@ -2014,7 +2394,7 @@
    "titulo": "Trizas",
    "tmdb_id": 1604094,
    "titulo_original": "Trizas",
-   "poster_path": "/6561nDr66xGl3MFVSMsVqGEKtn.jpg",
+   "poster_path": null,
    "synopsis_es": "Dos viajes se cruzan de forma anacrónica: el de un médico inglés en Bolivia en los años treinta y el de la cineasta en Londres en 2024. La película aborda los objetos como fragmentos inestables, restos de mundos más amplios, como espejos que solo se dejan entrever momentáneamente. El recorrido pasa por la colección de las Américas del Museo Británico, la colección de joyería y fotografía del V&A y una colección privada de arte latinoamericano en Londres.",
    "synopsis_en": "Fragments of pottery. Gold, silver, jewellery. Contemporary art. Luciana Decker Orozco visits various museums and collections in London, tracing a homegrown past present on another continent. Each piece are windows that open and close, briefly revealing what they hide, a mystery that she encapsulates in her celluloid and magical editing.",
    "genero": "",
@@ -2043,8 +2423,28 @@
     }
    ],
    "_sinopsis_de": "ya publicada en cinemancia-2026",
-   "poster": "/assets/midbo-2026/trizas.jpg",
-   "posterSource": "tmdb"
+   "_afiche_rechazado": "TMDB /6561nDr66xGl3MFVSMsVqGEKtn.jpg: fotograma según el catálogo (w_R4F1D2Q71DK4)"
+  },
+  {
+   "titulo": "Ubuntú: la métrica de los afectos",
+   "tmdb_id": 1794426,
+   "titulo_original": "Ubuntú: la métrica de los afectos",
+   "poster_path": "/xiXVvYLZGQ5hO3WK09OWBV5LHUf.jpg",
+   "synopsis_es": "Es una historia de la lucha política del movimiento afro colombiano para ser reconocido como parte del país. Es un viaje realizado por el hijo de uno de los líderes del movimiento Carlos Rua. El director recorre los pasos de su padre conversando con algunos de sus compañeros y compañeras que aún están con vida. Las conversaciones recuerdan La Constituyente en Colombia, la titulación de tierras y la importancia del apoyo mutuo, la alianza, la tonga, y el ubuntú.",
+   "synopsis_en": "",
+   "genero": "Documental",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 30,
+   "pais_tmdb": "",
+   "lbSlug": "ubuntu-la-metrica-de-los-afectos",
+   "_verificado": "declarada a mano: Ficha CREADA por nosotros el 11 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas): dirección, año, país, duración y sinopsis de la ficha de midbo.co, afiche original del festival.",
+   "_director": "Leonardo Rua",
+   "_sondeado": "2026-10-15",
+   "poster": "/assets/midbo-2026/ubuntu-la-metrica-de-los-afectos.jpg",
+   "posterSource": "tmdb",
+   "_heredado": {
+    "genero": "catálogo w_R4KDDV9T1SQQ (jardin-2026, midbo-2026)"
+   }
   },
   {
    "titulo": "Un lugar más grande",
@@ -2135,6 +2535,42 @@
    "posterSource": "tmdb"
   },
   {
+   "titulo": "Voces y sombras",
+   "tmdb_id": 1794427,
+   "titulo_original": "Voces y sombras",
+   "poster_path": "/gam2KhL7F2Aqpdz6GaP0dQB6Ut6.jpg",
+   "synopsis_es": "En la fría monotonía de una penitenciaría, el tiempo se mide en rejas y silencios. Sin embargo, un grupo de personas privadas de la libertad ha encontrado una rendija de libertad a través de un colectivo que busca convertirse en una escuela de cine interna, con la que ya han dado vida a un cortometraje y un videoclip. Actualmente, el colectivo se enfrenta a su desafío más emotivo: finalizar su primer ejercicio documental. La obra que intentaba retratar a un hombre ciego y locutor de radio que, paradójicamente, ya ha salido en libertad, dejando atrás su voz grabada en un disco duro, transformó la idea inicial y la historia; el proceso documental se termina cruzando con las reflexiones del grupo sobre su propio encierro, la luz y la sombra que puede significar el estar allí y la necesidad vital de crear. La cámara registra no solo las voces del encierro sino la esperanza de libertad de cada uno de ellos.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 10,
+   "pais_tmdb": "",
+   "lbSlug": "voces-y-sombras",
+   "_verificado": "declarada a mano: Ficha CREADA por nosotros el 11 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas): dirección, año, país, duración y sinopsis de la ficha de midbo.co, afiche original del festival.",
+   "_director": "Dirección: Colectivo Cinescape",
+   "_sondeado": "2026-10-15",
+   "poster": "/assets/midbo-2026/voces-y-sombras.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Wild Flowers",
+   "tmdb_id": 1051799,
+   "titulo_original": "Divlje cvijeće",
+   "poster_path": "/t5NjWzgJWH4qORVNH4zw2TvKXSX.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "My father only used a camera once in his life. Thirty years later, he asked me to digitise the material he had filmed. I was wondering what he remembers. Created from an impulse to rethink and rewatch personal archive footage, the film explores memory and its relation to documentation and non-institutional archive practices. Connecting politics with intimate spaces, the documentary questions both the influence of war on private archives and the role of gardens as places of new begginings.",
+   "genero": "Documental",
+   "anio_tmdb": 2022,
+   "duracion_tmdb": 11,
+   "pais_tmdb": "Croatia, Spain",
+   "lbSlug": "wild-flowers-2022-2",
+   "_verificado": "declarada a mano: Ya existía en TMDB y el enriquecido no la casó: «Wild Flowers» (2022), Karla Crnčević. Hallada por las tres sondas (título, filmografía del director, Letterboxd) el 10 oct 2026.",
+   "_director": "Karla Crnčević",
+   "_sondeado": "2026-10-15",
+   "poster": "/assets/midbo-2026/wild-flowers.jpg",
+   "posterSource": "tmdb"
+  },
+  {
    "titulo": "Writing Life: Annie Ernaux Through the Eyes of High School Students",
    "tmdb_id": 1518673,
    "titulo_original": "Écrire la vie - Annie Ernaux racontée par des lycéennes et des lycéens",
@@ -2211,130 +2647,10 @@
    "posterSource": "tmdb"
   },
   {
-   "titulo": "Los guardianes del agua",
-   "poster": "/assets/midbo-2026/los-guardianes-del-agua.jpg",
+   "titulo": "Instrucciones para cuando no esté",
+   "poster": "/assets/midbo-2026/instrucciones-para-cuando-no-este.jpg",
    "posterSource": "oficial",
-   "_afiche": "declarado: ficha de midbo.co, afiche oficial (https://midbo.co/wp-content/uploads/2026/10/peliculas-los-guardianes-del-agua-afiche.jpg)"
-  },
-  {
-   "titulo": "Tercer acto",
-   "poster": "/assets/midbo-2026/tercer-acto.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: ficha de midbo.co, afiche oficial (https://midbo.co/wp-content/uploads/2026/10/peliculas-tercer-acto-afiche.jpg)"
-  },
-  {
-   "titulo": "Querida Engativá",
-   "poster": "/assets/midbo-2026/querida-engativa.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: ficha de midbo.co, afiche oficial (https://midbo.co/wp-content/uploads/2026/10/peliculas-querida-engativa-afiche.jpg)"
-  },
-  {
-   "titulo": "La voz de los que no hablan",
-   "poster": "/assets/midbo-2026/la-voz-de-los-que-no-hablan.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: ficha de midbo.co, afiche oficial (https://midbo.co/wp-content/uploads/2026/10/peliculas-la-voz-de-los-que-no-hablan-afiche.jpg)"
-  },
-  {
-   "titulo": "El espíritu de los Andes",
-   "poster": "/assets/midbo-2026/el-espiritu-de-los-andes.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: ficha de midbo.co, afiche oficial (https://midbo.co/wp-content/uploads/2026/10/peliculas-el-espiritu-de-los-andes-afiche.jpg)"
-  },
-  {
-   "titulo": "Voces y sombras",
-   "poster": "/assets/midbo-2026/voces-y-sombras.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: ficha de midbo.co, afiche oficial (https://midbo.co/wp-content/uploads/2026/10/peliculas-voces-y-sombras-afiche.jpg)"
-  },
-  {
-   "titulo": "Wild Flowers",
-   "poster": "/assets/midbo-2026/wild-flowers.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: ficha de midbo.co, afiche oficial (https://midbo.co/wp-content/uploads/2026/10/peliculas-wild-flowers-afiche.jpg)"
-  },
-  {
-   "titulo": "Now!",
-   "poster": "/assets/midbo-2026/now.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: ficha de midbo.co, afiche oficial (https://midbo.co/wp-content/uploads/2026/10/peliculas-now-afiche.jpg)"
-  },
-  {
-   "titulo": "Escrito sobre un cuerpo",
-   "poster": "/assets/midbo-2026/escrito-sobre-un-cuerpo.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: ficha de midbo.co, afiche oficial (https://midbo.co/wp-content/uploads/2026/10/peliculas-escrito-sobre-un-cuerpo-afiche.jpg)"
-  },
-  {
-   "titulo": "Salvando el proyecto",
-   "poster": "/assets/midbo-2026/salvando-el-proyecto.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: ficha de midbo.co, afiche oficial (https://midbo.co/wp-content/uploads/2026/10/peliculas-salvando-el-proyecto-afiche.jpg)"
-  },
-  {
-   "titulo": "Legados de un mismo suelo",
-   "poster": "/assets/midbo-2026/legados-de-un-mismo-suelo.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: ficha de midbo.co, afiche oficial (https://midbo.co/wp-content/uploads/2026/10/peliculas-legados-de-un-mismo-suelo-afiche.jpg)"
-  },
-  {
-   "titulo": "De cierta manera",
-   "poster": "/assets/midbo-2026/de-cierta-manera.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: ficha de midbo.co, afiche oficial (https://midbo.co/wp-content/uploads/2026/09/peliculas-de-cierta-manera-afiche.jpg)"
-  },
-  {
-   "titulo": "Buenos días, Wiracocha",
-   "poster": "/assets/midbo-2026/buenos-dias-wiracocha.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: ficha de midbo.co, afiche oficial (https://midbo.co/wp-content/uploads/2026/10/peliculas-buenos-dias-wiracocha-afiche.jpg)"
-  },
-  {
-   "titulo": "La verdad duerme en silencio",
-   "poster": "/assets/midbo-2026/la-verdad-duerme-en-silencio.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: ficha de midbo.co, afiche oficial (https://midbo.co/wp-content/uploads/2026/10/peliculas-la-verdad-duerme-en-silencio-afiche.jpg)"
-  },
-  {
-   "titulo": "Ubuntú: la métrica de los afectos",
-   "poster": "/assets/midbo-2026/ubuntu-la-metrica-de-los-afectos.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: ficha de midbo.co, afiche oficial (https://midbo.co/wp-content/uploads/2026/09/peliculas-ubuntu-la-metrica-de-los-afectos-afiche.jpg)"
-  },
-  {
-   "titulo": "Latidos",
-   "poster": "/assets/midbo-2026/latidos.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: ficha de midbo.co, afiche oficial (https://midbo.co/wp-content/uploads/2026/10/peliculas-latidos-afiche.jpg)"
-  },
-  {
-   "titulo": "Back to Fukushima",
-   "poster": "/assets/midbo-2026/back-to-fukushima.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: ficha de midbo.co, afiche oficial (https://midbo.co/wp-content/uploads/2026/10/peliculas-back-to-fukushima-afiche.jpg)"
-  },
-  {
-   "titulo": "The Travelers",
-   "poster": "/assets/midbo-2026/the-travelers.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: ficha de midbo.co, afiche oficial (https://midbo.co/wp-content/uploads/2026/10/peliculas-the-travelers-afiche.jpg)"
-  },
-  {
-   "titulo": "No es una herida",
-   "poster": "/assets/midbo-2026/no-es-una-herida.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: ficha de midbo.co, afiche oficial (https://midbo.co/wp-content/uploads/2026/10/peliculas-no-es-una-herida-afiche.jpg)"
-  },
-  {
-   "titulo": "Invierno Flores Jardín",
-   "poster": "/assets/midbo-2026/invierno-flores-jardin.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: ficha de midbo.co, afiche oficial (https://midbo.co/wp-content/uploads/2026/10/peliculas-invierno-flores-jardin-afiche.jpg)"
-  },
-  {
-   "titulo": "Lo que no está",
-   "poster": "/assets/midbo-2026/lo-que-no-esta.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: ficha de midbo.co, afiche oficial (https://midbo.co/wp-content/uploads/2026/10/peliculas-lo-que-no-esta-afiche.jpg)"
+   "_afiche": "declarado: ficha de midbo.co, afiche oficial (https://midbo.co/wp-content/uploads/2026/10/peliculas-instrucciones-para-cuando-no-este-afiche.jpg), mirado el 13 oct"
   }
  ],
  "verificadas": {
@@ -2507,7 +2823,6 @@
    "poster_path": "/tSphCGspBA3tjEEyI15H4u24K5D.jpg",
    "synopsis_es": "Ana Rosa Jusayu (Mi Madre), lideresa ancestral de la comunidad Apotnojushi ubicada en cercanias del cerro de la teta en la alta Guajira Colombiana, trata de recuperar el tejido y unión familiar que ocasionó el “desarrollo sostenible” invasivo. En medio de las pocas esperanzas de sobrevivir en lo desolado de su territorio ancestral, la familia comparte su añoranza de permanecer en el territorio, enfrentando las dificultades y los cambios económicos que afectan al pueblo wayuu.",
    "synopsis_en": "In this expressive and community-centered work, Wayuú director Marbel Vanegas Jusayu documents the social, spiritual, and environmental impacts of the installation of a wind farm in Apotnojushi, a historically marginalized community that remains committed to its sovereignty. Women leaders such as Ana Rosa Jusayu, the director’s mother, work to strengthen the social fabric, activate historical memory, and assert their right to determine their future. Through the voices and living portraits of community members, the piece reflects in its vignettes the community’s deep connection to its ancestral territory.",
-   "genero": "",
    "anio_tmdb": 2026,
    "duracion_tmdb": 13,
    "pais_tmdb": "Colombia",
@@ -2534,6 +2849,27 @@
     }
    ],
    "poster": "/assets/midbo-2026/apotnojushi-la-casa-del-viento.jpg",
+   "posterSource": "tmdb",
+   "genero": "Documental",
+   "_heredado": {
+    "genero": "catálogo w_R4HDSRY0KBZB (ficci-65, ficdeh-2026, midbo-2026)"
+   }
+  },
+  "Back to Fukushima": {
+   "tmdb_id": 1592063,
+   "titulo_original": "Retour à Fukushima",
+   "poster_path": "/4JCLCDRW1Nn1Q7GJFT2t4WiBEQi.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "For a few years now, the Japanese government has been building complexes called \"renewal housing estates\" in the very heart of Fukushima Prefecture. More than a decade after the accident, the region, still heavily contaminated, has seen the emergence of these concrete neighborhoods, enclosed in the midst of wild, radioactive nature. This film paints an intimate portrait of the people who live there and offers a poetic reflection on the region.",
+   "genero": "Documental",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "",
+   "lbSlug": "retour-a-fukushima",
+   "_verificado": "declarada a mano: Ya existía en TMDB y el enriquecido no la casó: «Retour à Fukushima» (2026), Thomas Licata: mismo director y año; estaba con su título francés. Hallada por las tres sondas (título, filmografía del director, Letterboxd) el 10 oct 2026.",
+   "_director": "Thomas Licata",
+   "_sondeado": "2026-10-15",
+   "poster": "/assets/midbo-2026/back-to-fukushima.jpg",
    "posterSource": "tmdb"
   },
   "Bojayá: la verdad desde adentro": {
@@ -2541,7 +2877,6 @@
    "titulo_original": "Bojayá, la verdad desde adentro",
    "poster_path": "/gabinMtzyF7DehSfulGfVpM1gtr.jpg",
    "synopsis_es": "Tres líderes de Bojayá recorren el municipio llevando el baúl de la verdad, recogiendo cuestionamientos y exigencias de la comunidad para enfrentar a los responsables del conflicto armado en su territorio. Después de su recorrido, comparten con la comunidad las respuestas encontradas y juntos construyen una verdad desde adentro.",
-   "synopsis_en": "",
    "genero": "",
    "anio_tmdb": 2026,
    "duracion_tmdb": 105,
@@ -2562,7 +2897,11 @@
     }
    ],
    "poster": "/assets/midbo-2026/bojaya-la-verdad-desde-adentro.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "synopsis_en": "Three leaders from Bojayá travel throughout the municipality carrying a \"truth chest\", gathering questions and demands from the community to confront those responsible for the armed conflict in their territory. After their journey, they share the answers they have found with the community, working together to construct a truth from within.",
+   "_heredado": {
+    "synopsis_en": "catálogo w_R4HFH16BHR3J (ficdeh-2026, midbo-2026)"
+   }
   },
   "Bosque arriba en la montaña": {
    "tmdb_id": 1616844,
@@ -2628,6 +2967,24 @@
    "_director": "Luna Marán",
    "_sondeado": "2026-10-10",
    "poster": "/assets/midbo-2026/bucan-tu-rhachhidu.jpg",
+   "posterSource": "tmdb"
+  },
+  "Buenos días, Wiracocha": {
+   "tmdb_id": 1517473,
+   "titulo_original": "Buenos días, Wiraqocha",
+   "poster_path": "/5K2bX8TgGkP9sy8x0AcdaB8ihXO.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Fifty years ago, the struggle for the lands in rural communities of Cuzco was filmed. A group of filmmakers brought these images back to the province of Paucartambo (Cuzco) and proposed to the villagers of the area to build a community memory through the creation of a new film.",
+   "genero": "Documental",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 83,
+   "pais_tmdb": "Peru",
+   "title_en": "Good Morning, Wiraqocha",
+   "lbSlug": "good-morning-wiraqocha",
+   "_verificado": "declarada a mano: Ya existía en TMDB y el enriquecido no la casó: «Good Morning, Wiraqocha» (2025), Mauricio Godoy: mismo director y año; estaba con su título inglés. Hallada por las tres sondas (título, filmografía del director, Letterboxd) el 10 oct 2026.",
+   "_director": "Mauricio Godoy",
+   "_sondeado": "2026-10-15",
+   "poster": "/assets/midbo-2026/buenos-dias-wiracocha.jpg",
    "posterSource": "tmdb"
   },
   "Cartas a mis padres muertos": {
@@ -2840,6 +3197,24 @@
    "poster": "/assets/midbo-2026/cuba-y-la-noche.jpg",
    "posterSource": "tmdb"
   },
+  "De cierta manera": {
+   "tmdb_id": 162505,
+   "titulo_original": "De cierta manera",
+   "poster_path": "/sKxIvWYN0RQjb75kj83nXMpWvw5.jpg",
+   "synopsis_es": "El reparto Miraflores, construido en 1962 por los mismos que lo habitarían, es resultado de los primeros esfuerzos de la Revolución por erradicar los barrios marginales. Yolanda, nueva maestra de la comunidad, afronta las diferencias y conflictos que surgen en su relación amorosa con Mario, un obrero de la barriada, en la que se manifiesta el choque entre la antigua mentalidad y las nuevas actitudes.",
+   "synopsis_en": "In Miraflores, Cuba, the growing romance between Mario, a factory worker, and Yolanda, a schoolteacher, throws into relief the differences in their perspectives and values in Revolutionary Cuba.",
+   "genero": "Drama",
+   "anio_tmdb": 1977,
+   "duracion_tmdb": 78,
+   "pais_tmdb": "Cuba",
+   "title_en": "One Way or Another",
+   "lbSlug": "one-way-or-another-1975",
+   "_verificado": "declarada a mano: Ya existía en TMDB y el enriquecido no la casó: «One Way or Another» (1977), Sara Gómez. Hallada por las tres sondas (título, filmografía del director, Letterboxd) el 10 oct 2026.",
+   "_director": "",
+   "_sondeado": "2026-10-15",
+   "poster": "/assets/midbo-2026/de-cierta-manera.jpg",
+   "posterSource": "tmdb"
+  },
   "Decaer": {
    "tmdb_id": 1668881,
    "titulo_original": "decaer",
@@ -2958,13 +3333,28 @@
    "poster": "/assets/midbo-2026/el-coloquio-de-los-pajaros.jpg",
    "posterSource": "tmdb"
   },
+  "El espíritu de los Andes": {
+   "tmdb_id": 1794407,
+   "titulo_original": "El espíritu de los Andes",
+   "poster_path": "/hLgrQQwRlROZ0yMWtQs1Dlquv1a.jpg",
+   "synopsis_es": "«El espíritu de los Andes» es un documental que, a través de la mirada de Diana Bautista y su cotidianidad, nos muestra cómo conviven las comunidades del páramo de Almorzadero con el cóndor andino y cómo han aprendido a proteger la especie a través de estrategias pedagógicas y de conservación, en las que intervienen distintos actores de la comunidad y organizaciones públicas y privadas de Santander y de Colombia en general.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 10,
+   "pais_tmdb": "",
+   "lbSlug": "el-espiritu-de-los-andes",
+   "_verificado": "declarada a mano: Ficha CREADA por nosotros el 11 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas): dirección, año, país, duración y sinopsis de la ficha de midbo.co, afiche original del festival.",
+   "_director": "Dirección: Francisco Ciri, Ingrid Hincapie",
+   "_sondeado": "2026-10-15",
+   "poster": "/assets/midbo-2026/el-espiritu-de-los-andes.jpg",
+   "posterSource": "tmdb"
+  },
   "El hogar fue sepultado en esa tierra que nunca pudimos encontrar": {
    "tmdb_id": 1663181,
    "titulo_original": "Our Home Was Buried in a Land We Could Never Find",
    "poster_path": "/sek5YZDIguocEvkRAaCcPb5wKW2.jpg",
    "synopsis_es": "“Esos diablos me quitaron todo, esos diablos me quitaron todo, esos diablos me quitaron todo”: este mantra de despojo se transfigura cada tanto en la familia, como una sentencia. Ellos anhelan reencontrarse con sus seres queridos desaparecidos, jugar de nuevo entre plataneras y seres fantásticos y… la casa… la casa quiere volver a ser hogar. Entre filmaciones caseras, archivos colectivos, imágenes familiares y una presencia espectral y mística, esta película habita los sueños y las pesadillas creadas por las huellas de la desaparición de lo amado. El ruido de las balas parece haber cesado; ahora la guerra parece distante, pero a su paso dejó un profundo dolor y la promesa de volver. Los amigos, la familia, el hogar y el territorio vuelven, invocados por este relato coral. El pasado es un fantasma y este filme especula sobre un paraíso y un infierno que ya no se pueden tocar, con la ilusión de habitar este nuevo lugar para conjurar en él un abrazo.",
-   "synopsis_en": "",
-   "genero": "",
    "anio_tmdb": 2026,
    "duracion_tmdb": 92,
    "pais_tmdb": "Colombia",
@@ -3018,7 +3408,15 @@
     }
    ],
    "poster": "/assets/midbo-2026/el-hogar-fue-sepultado-en-esa-tierra-que-nunca-pudimos-encon.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "genero": "Documental",
+   "_heredado": {
+    "genero": "catálogo w_R4FA9W7P4RY6 (cinemancia-2026, ficdeh-2026, ficma-2026, mamut-2026, midbo-2026)",
+    "title_en": "catálogo w_R4FA9W7P4RY6 (cinemancia-2026, ficdeh-2026, ficma-2026, mamut-2026, midbo-2026)",
+    "synopsis_en": "catálogo w_R4FA9W7P4RY6 (cinemancia-2026, ficdeh-2026, ficma-2026, mamut-2026, midbo-2026)"
+   },
+   "title_en": "Our Home Was Buried in a Land We Could Never Find",
+   "synopsis_en": "Home is gone; the house was paradise, and also hell. Though the war tried to destroy everything in its path, the family tries to return. Between longing and nightmare they build a new territory, a refuge where they find their friends and their community again. There they make it back to the big house, the amusement park of childhood, now inhabited by fantastical beings and spectres, where they try to conjure an embrace."
   },
   "El salto": {
    "tmdb_id": 1686065,
@@ -3073,8 +3471,6 @@
    "titulo_original": "El Valor de la Palabra",
    "poster_path": "/Al31xYPYyul6k0XyMnmaA357CHw.jpg",
    "synopsis_es": "Tres líderes indígenas Arhuaco fueron secuestrados y asesinados en 1990. Sus cuerpos fueron encontrados torturados. Más de tres décadas después, sus palabras siguen vivas y sus familias, su pueblo, aún esperan la verdad. Entre testimonios de dolor emerge una sabiduría ancestral donde el territorio es un ser vivo, la mujer es tejedora del conocimiento, y la palabra es el hilo que sostiene la existencia del pueblo Arhuaco. Surge así una reflexión profunda sobre el liderazgo, el género y la responsabilidad de tejer el \"hilo de la vida\" para las nuevas generaciones. Un documental que es acto de resistencia frente a la continua violencia colonial, religiosa, militar y la impunidad estructural en Colombia.  Una lección sobre lo que significa defender la vida.",
-   "synopsis_en": "",
-   "genero": "",
    "anio_tmdb": 0,
    "duracion_tmdb": 79,
    "pais_tmdb": "",
@@ -3101,7 +3497,13 @@
     }
    ],
    "poster": "/assets/midbo-2026/el-valor-de-la-palabra.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "genero": "Documental",
+   "_heredado": {
+    "genero": "catálogo w_R4HBNA1T7S2G (ficci-65, ficdeh-2026, midbo-2026)",
+    "synopsis_en": "catálogo w_R4HBNA1T7S2G (ficci-65, ficdeh-2026, midbo-2026)"
+   },
+   "synopsis_en": "The long career of Colombian filmmaker Marta Rodríguez demonstrates a commitment to documenting the history of repression and struggle of indigenous and marginalized peoples."
   },
   "En la otra isla": {
    "tmdb_id": 422031,
@@ -3120,6 +3522,23 @@
    "_director": "Sara Gómez",
    "_sondeado": "2026-10-10",
    "poster": "/assets/midbo-2026/en-la-otra-isla.jpg",
+   "posterSource": "tmdb"
+  },
+  "Escrito sobre un cuerpo": {
+   "tmdb_id": 1794409,
+   "titulo_original": "Escrito sobre un cuerpo",
+   "poster_path": "/jZxYZCLy7PLE2AlAYzTTH2Z9Ief.jpg",
+   "synopsis_es": "El lector es una voz y a la vez un cuerpo. ¿Cómo rearticular un lugar común para decir un texto cuando no es posible alzar ni la voz ni el cuerpo en protesta ni disidencia? Conjurar la solidaridad y el deseo de revuelta contra toda opresión. En vez de ofrecer una historia definitiva, ofrecer un mosaico, un archipiélago: destellos de personas que leen y espacios que contienen memorias.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 32,
+   "pais_tmdb": "",
+   "lbSlug": "escrito-sobre-un-cuerpo",
+   "_verificado": "declarada a mano: Ficha CREADA por nosotros el 11 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas): dirección, año, país, duración y sinopsis de la ficha de midbo.co, afiche original del festival.",
+   "_director": "Esteban Prudencio",
+   "_sondeado": "2026-10-15",
+   "poster": "/assets/midbo-2026/escrito-sobre-un-cuerpo.jpg",
    "posterSource": "tmdb"
   },
   "Filme Pin": {
@@ -3165,6 +3584,24 @@
    ],
    "_sinopsis_de": "ya publicada en cineautopsia-2026",
    "poster": "/assets/midbo-2026/filme-pin.jpg",
+   "posterSource": "tmdb"
+  },
+  "Fordlândia Panacea": {
+   "tmdb_id": 1559606,
+   "titulo_original": "Fordlândia Panacea",
+   "poster_path": "/pbOBnjauFPr7g8gJ8CSNq5JLjT5.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "In 1928, industrialist Henry Ford built a company town in the Brazilian jungle and established a rubber plantation. Within a few years his industrial utopia collapsed, coming to an end in 1945. Fordlândia was largely abandoned and became known as a ghost town.",
+   "genero": "Documental",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 66,
+   "pais_tmdb": "Brazil",
+   "lbSlug": "fordlandia-panacea",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Fordlândia Panacea",
+   "_director": "Susana de Sousa Dias",
+   "_sondeado": "2026-10-15",
+   "poster": "/assets/midbo-2026/fordlandia-panacea.jpg",
    "posterSource": "tmdb"
   },
   "Geografía espectral": {
@@ -3323,7 +3760,6 @@
    "poster_path": "/apQpk4kG29oQMpAJKYzeMC6aYhF.jpg",
    "synopsis_es": "Cinco personajes afrocolombianos en medio de Bogotá, cinco destinos dispares en una ciudad que les es hostil. Rubi Quejada, una joven modelo desplazada del Chocó; Shaka, un rapero y champetúo que trabaja en un cibercafé; Makambile, un cantante de champeta y mesero; Jah-Man, un profeta autodidacta de Buenaventura; y Afreeway, un joven pandillero que busca llegar lejos. 18",
    "synopsis_en": "Five Afro-Colombian characters in the middle of Bogotá, five disparate destinies in a city that is hostile to them. Rubi Quejada, a young model displaced from Chocó.",
-   "genero": "",
    "anio_tmdb": 2025,
    "duracion_tmdb": 90,
    "pais_tmdb": "",
@@ -3345,7 +3781,30 @@
    ],
    "_sinopsis_de": "ya publicada en qaff-2026",
    "poster": "/assets/midbo-2026/iniciacion-en-la-octava-dimension.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "genero": "Documental",
+   "_heredado": {
+    "genero": "catálogo w_R4M65FV9TXYC (midbo-2026, qaff-2026)"
+   }
+  },
+  "Invierno Flores Jardín": {
+   "tmdb_id": 1655475,
+   "titulo_original": "Winter Blumen Garten",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "Two women exchange cinematic letters that connect the past and present. Heidrun, a Viennese woman, and Sara, a Colombian migrant, live in the city at different times—whether in fiction or reality is not always clear.",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 28,
+   "pais_tmdb": "Austria",
+   "title_en": "Winter Flowers Garden",
+   "lbSlug": "winter-flowers-garden",
+   "_verificado": "declarada a mano: Ya existía en TMDB y el enriquecido no la casó: «Winter Flowers Garden» (2026), Sara Piñeros Cortés: misma directora y año; estaba con su título inglés. Hallada por las tres sondas (título, filmografía del director, Letterboxd) el 10 oct 2026.",
+   "_director": "Sara Piñeros Cortés",
+   "_sondeado": "2026-10-15",
+   "poster": "/assets/midbo-2026/invierno-flores-jardin.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: ficha de midbo.co, afiche oficial (https://midbo.co/wp-content/uploads/2026/10/peliculas-invierno-flores-jardin-afiche.jpg)"
   },
   "Iré a Santiago": {
    "tmdb_id": 262028,
@@ -3467,6 +3926,40 @@
    "poster": "/assets/midbo-2026/la-impronta.jpg",
    "posterSource": "tmdb"
   },
+  "La verdad duerme en silencio": {
+   "tmdb_id": 1794410,
+   "titulo_original": "La verdad duerme en silencio",
+   "poster_path": "/74cWsSB5AhAyXFmHWiubuHYkdgo.jpg",
+   "synopsis_es": "Antes de que hubiera tierra, había pensamiento. Antes de que hubiera luz, había oscuridad, y en la oscuridad se tejió el mundo. Los hermanos menores llegaron después. Nombraron la montaña Gonawidúa con otro nombre. Contaron su historia en quinientos años, como quien cuenta los días desde que llegó, no desde que el mundo fue pensado. Pero la memoria duerme en la selva, duerme en la piedra, duerme en el agua que baja de los picos nevados hacia las profundidades del mar. «La verdad duerme en silencio» escucha esa memoria, la siente. Entrelaza la palabra de los mayores con los relatos de la tierra, con lo que el territorio recuerda, aunque nadie lo diga. Recorre el tiempo de origen, el tiempo de las primeras ciudades, el tiempo en que llegaron los forasteros, el tiempo de las pérdidas y de lo que fue sacado sin permiso.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 27,
+   "pais_tmdb": "",
+   "lbSlug": "la-verdad-duerme-en-silencio",
+   "_verificado": "declarada a mano: Ficha CREADA por nosotros el 11 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas): dirección, año, país, duración y sinopsis de la ficha de midbo.co, afiche original del festival.",
+   "_director": "Andrew Simon Tucker",
+   "_sondeado": "2026-10-15",
+   "poster": "/assets/midbo-2026/la-verdad-duerme-en-silencio.jpg",
+   "posterSource": "tmdb"
+  },
+  "La voz de los que no hablan": {
+   "tmdb_id": 1794412,
+   "titulo_original": "La voz de los que no hablan",
+   "poster_path": "/7brBTLRGaNWR2aIjMHnx8YhaldM.jpg",
+   "synopsis_es": "Los animales comparten nuestro planeta, nuestros territorios y, en muchos casos, nuestros hogares, pero ¿alguna vez nos hemos preguntado qué sienten, qué necesitan o qué nos dirían si pudieran hablar? «La voz de los que no hablan» es un documental infantil que se acerca al mundo animal desde la curiosidad, el juego y la imaginación. A través de entrevistas, testimonios, historias, datos curiosos y experiencias cotidianas, niños y adultos descubren diferentes maneras en las que los animales se comunican y expresan sus necesidades. La propuesta combina realidad y ficción mediante la aparición de un animal que, por un momento, adquiere voz para contar su propia historia y poner en palabras aquello que muchas veces no sabemos escuchar. Desde esta mirada, el documental plantea preguntas sobre nuestra relación con los animales y con el entorno que habitamos. Más que hablar por los animales, la película busca despertar la capacidad de observar, escuchar y reconocer otras formas de vida.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 10,
+   "pais_tmdb": "",
+   "lbSlug": "la-voz-de-los-que-no-hablan",
+   "_verificado": "declarada a mano: Ficha CREADA por nosotros el 11 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas): dirección, año, país, duración y sinopsis de la ficha de midbo.co, afiche original del festival.",
+   "_director": "Dirección: Jerónimo Agudelo, Juan Fernando Ramírez",
+   "_sondeado": "2026-10-15",
+   "poster": "/assets/midbo-2026/la-voz-de-los-que-no-hablan.jpg",
+   "posterSource": "tmdb"
+  },
   "Las almas ni los ojos": {
    "tmdb_id": 1665538,
    "titulo_original": "Las almas ni los ojos",
@@ -3538,6 +4031,40 @@
    "poster": "/assets/midbo-2026/las-formas-de-la-magia.jpg",
    "posterSource": "tmdb"
   },
+  "Latidos": {
+   "tmdb_id": 1794413,
+   "titulo_original": "Latidos",
+   "poster_path": "/6V8capVbjmLue3KsRSHMVCqUQFT.jpg",
+   "synopsis_es": "«Latidos» aborda la migración, la discriminación y el racismo desde la perspectiva de las propias personas afectadas, sin intermediarios ni reinterpretaciones externas. La obra construye un relato coral donde el arte se convierte en herramienta de resistencia y expresión política. A través de diversas manifestaciones culturales practicadas por colectivos migrantes y racializados en España, el documental expone las múltiples capas de una realidad marcada por la exclusión estructural. Una obra que interpela directamente al espectador y lo invita a reflexionar sobre la convivencia, la desigualdad y la humanidad compartida.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 54,
+   "pais_tmdb": "",
+   "lbSlug": "latidos-2026",
+   "_verificado": "declarada a mano: Ficha CREADA por nosotros el 11 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas): dirección, año, país, duración y sinopsis de la ficha de midbo.co, afiche original del festival.",
+   "_director": "Baptista Joao",
+   "_sondeado": "2026-10-15",
+   "poster": "/assets/midbo-2026/latidos.jpg",
+   "posterSource": "tmdb"
+  },
+  "Legados de un mismo suelo": {
+   "tmdb_id": 1794414,
+   "titulo_original": "Legados de un mismo suelo",
+   "poster_path": "/usw9fzAMpeALq6p7ULAFtYBVwT3.jpg",
+   "synopsis_es": "«He cambiado de nombre, pero mi alma… mi alma sigue siendo la misma». Así habla el protagonista de esta historia: un edificio en el barrio Lucero Bajo, Ciudad Bolívar, que narra en primera persona su propia transformación. Nacido como el colegio Rómulo Gallegos —y vinculado a una sede hermana en Meissen—, este espacio fue levantado y sostenido por el amor y la entrega de Doña Lola y Don Julio, sus fundadores. A través de una íntima voz en off y los testimonios de fundadores, maestros y exalumnos, la estructura relata cómo «cambió de piel» al compás del tiempo. Los recuerdos de las viejas aulas se entrelazan con su presente: hoy, transformado en un centro CREA, sus pasillos renacen como laboratorios de creación donde niños y jóvenes exploran su sensibilidad artística.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 10,
+   "pais_tmdb": "",
+   "lbSlug": "legados-de-un-mismo-suelo",
+   "_verificado": "declarada a mano: Ficha CREADA por nosotros el 11 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas): dirección, año, país, duración y sinopsis de la ficha de midbo.co, afiche original del festival.",
+   "_director": "Dirección: Fraktal 19",
+   "_sondeado": "2026-10-15",
+   "poster": "/assets/midbo-2026/legados-de-un-mismo-suelo.jpg",
+   "posterSource": "tmdb"
+  },
   "Lengua muerta": {
    "tmdb_id": 1493312,
    "titulo_original": "Lengua muerta",
@@ -3576,12 +4103,28 @@
    "poster": "/assets/midbo-2026/les-s-urs-pathan.jpg",
    "posterSource": "tmdb"
   },
+  "Lo que no está": {
+   "tmdb_id": 1794415,
+   "titulo_original": "Lo que no está",
+   "poster_path": "/38iOvFZs9HYdj2jtXIX01KwQ21Q.jpg",
+   "synopsis_es": "«Lo que no está» es una pregunta abierta hacia la muerte: tras trece años de perder a un hermano, la imagen de Paulo Cesar acompaña al director en todas las imágenes que él captura con su cámara. Esta pieza es un encuentro entre la carga de un duelo y las imágenes.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 15,
+   "pais_tmdb": "",
+   "lbSlug": "lo-que-no-esta",
+   "_verificado": "declarada a mano: Ficha CREADA por nosotros el 11 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas): dirección, año, país, duración y sinopsis de la ficha de midbo.co, afiche original del festival.",
+   "_director": "Jean Paul Sánchez Flórez",
+   "_sondeado": "2026-10-15",
+   "poster": "/assets/midbo-2026/lo-que-no-esta.jpg",
+   "posterSource": "tmdb"
+  },
   "Lolita en Honda": {
    "tmdb_id": 1665546,
    "titulo_original": "Lolita en Honda",
    "poster_path": "/sKIm7ZwfuBnKuGeHJAUOYhg8DlV.jpg",
    "synopsis_es": "Detrás de los ojos de Lolita hay un velo que ciega sus palabras. Es el recuerdo de una infancia que, aún en la vejez, le oscurece la vista y no le permite escapar. Cuando habla me parece intuir, por el eco de las historias que repite, un mundo espectral de hambre, abandono, el estigma social de una madre soltera, la magia del Río Magdalena y todas las ilusiones y demonios de esa niñez.",
-   "synopsis_en": "",
    "genero": "",
    "anio_tmdb": 0,
    "duracion_tmdb": 0,
@@ -3618,6 +4161,27 @@
     }
    ],
    "poster": "/assets/midbo-2026/lolita-en-honda.jpg",
+   "posterSource": "tmdb",
+   "synopsis_en": "Lolita en Honda is an intimate journey into family memory, in which Daniel Torres explores his grandmother's childhood to unravel the marks of abandonment and internalized violence that shaped her character.",
+   "_heredado": {
+    "synopsis_en": "catálogo w_R4FPSFY03SBY (cinemancia-2026, ficci-65, mamut-2026, midbo-2026)"
+   }
+  },
+  "Los guardianes del agua": {
+   "tmdb_id": 1794416,
+   "titulo_original": "Los guardianes del agua",
+   "poster_path": "/kA1hpnXy9Qt8thRSgXSPQKAcwIw.jpg",
+   "synopsis_es": "¿Qué nos dice el agua cuando decidimos escucharla? En medio de una ciudad que no deja de crecer, el Humedal de Techo resiste como un territorio donde el agua y la vida aún encuentran refugio. El documental explora la relación entre el humedal y la expansión urbana, revelando las huellas del deterioro ambiental y la lucha silenciosa de un ecosistema por permanecer. Una mirada poética y crítica sobre lo que hemos perdido, lo que aún permanece y aquello que estamos a tiempo de proteger.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 9,
+   "pais_tmdb": "",
+   "lbSlug": "los-guardianes-del-agua",
+   "_verificado": "declarada a mano: Ficha CREADA por nosotros el 11 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas): dirección, año, país, duración y sinopsis de la ficha de midbo.co, afiche original del festival.",
+   "_director": "Dirección: Santiago Pulgarin, María Isabel Santos",
+   "_sondeado": "2026-10-15",
+   "poster": "/assets/midbo-2026/los-guardianes-del-agua.jpg",
    "posterSource": "tmdb"
   },
   "Madres de nacimiento": {
@@ -3625,8 +4189,6 @@
    "titulo_original": "Madres de Nacimiento",
    "poster_path": "/kJreh6iEXQZ3NHaROQb7WJNle7l.jpg",
    "synopsis_es": "Del olvido y la oscuridad hay imágenes y sonidos que resurgen para controlar los cuerpos de las mujeres latinoamericanas, quienes desde niñas han sido consideradas madres de nacimiento. Pero en estos archivos emerge una interferencia que proviene del pasado para evocar un mensaje de lucha, memoria y libertad.",
-   "synopsis_en": "",
-   "genero": "",
    "anio_tmdb": 0,
    "duracion_tmdb": 8,
    "pais_tmdb": "",
@@ -3683,7 +4245,13 @@
     }
    ],
    "poster": "/assets/midbo-2026/madres-de-nacimiento.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "genero": "Documental",
+   "_heredado": {
+    "genero": "catálogo w_R4FH541S52JK (cinemancia-2026, ficci-65, ficdeh-2026, ficmontanas-2026, jardin-2026, midbo-2026, popayan-2026)",
+    "synopsis_en": "catálogo w_R4FH541S52JK (cinemancia-2026, ficci-65, ficdeh-2026, ficmontanas-2026, jardin-2026, midbo-2026, popayan-2026)"
+   },
+   "synopsis_en": "Out of oblivion and darkness, images and sounds resurface to control the bodies of Latin American women, regarded since childhood as mothers by birth. But within these archives an interference emerges from the past, carrying a message of struggle, memory and freedom."
   },
   "Mi aporte": {
    "tmdb_id": 593516,
@@ -3765,6 +4333,23 @@
    "_director": "Marta Rodríguez",
    "_sondeado": "2026-10-10"
   },
+  "No es una herida": {
+   "tmdb_id": 1794417,
+   "titulo_original": "No es una herida",
+   "poster_path": "/3B0CQ3pKom0w3XCVYSY3QgYMfF5.jpg",
+   "synopsis_es": "Violeta, Maria José y Daniela tienen diagnósticos diferentes con un síntoma en común: dolor crónico al menstruar. Cada una reflexiona desde su experiencia cíclica afectada por la endometriosis, el SOMP (antes ovario poliquístico) y el VPH, enfermedades con tratamiento pero sin cura. A través de una puesta coreográfica y performática, las protagonistas se sumergen en su propia sangre intentando transfigurar una herida imaginaria que condiciona su relación con su cuerpo, con el dar vida, con el movimiento y la soledad. Acompañadas por la reflexión de Mónica, una mujer adulta que también ha tenido una experiencia menstrual dolorosa, se preguntan por qué, si no es una herida, duele.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 15,
+   "pais_tmdb": "",
+   "lbSlug": "no-es-una-herida",
+   "_verificado": "declarada a mano: Ficha CREADA por nosotros el 11 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas): dirección, año, país, duración y sinopsis de la ficha de midbo.co, afiche original del festival.",
+   "_director": "Violeta Zambrano",
+   "_sondeado": "2026-10-15",
+   "poster": "/assets/midbo-2026/no-es-una-herida.jpg",
+   "posterSource": "tmdb"
+  },
   "No menguará el fuego de esta luna": {
    "tmdb_id": 1593592,
    "titulo_original": "No menguará el fuego de esta luna",
@@ -3825,6 +4410,23 @@
    ],
    "_sinopsis_de": "ya publicada en ficcali-2026",
    "poster": "/assets/midbo-2026/notre-corps.jpg",
+   "posterSource": "tmdb"
+  },
+  "Now!": {
+   "tmdb_id": 145762,
+   "titulo_original": "Now!",
+   "poster_path": "/kICPjLSIegbsphO0T18rjC8VzHK.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Using morgue photos, newsreel footage, and a recording by Lena Horne, Cuban filmmaker Santiago Alvarez fired off 'Now!', one of the most powerful bursts of propaganda rendered in the 1960s.",
+   "genero": "Documental",
+   "anio_tmdb": 1965,
+   "duracion_tmdb": 5,
+   "pais_tmdb": "Cuba",
+   "lbSlug": "now",
+   "_verificado": "declarada a mano: Ya existía en TMDB y el enriquecido no la casó: «Now!» (1965), Santiago Álvarez. Hallada por las tres sondas (título, filmografía del director, Letterboxd) el 10 oct 2026.",
+   "_director": "Santiago Álvarez",
+   "_sondeado": "2026-10-15",
+   "poster": "/assets/midbo-2026/now.jpg",
    "posterSource": "tmdb"
   },
   "Nuestro cuerpo es una estrella que se expande": {
@@ -3955,7 +4557,6 @@
    "poster_path": "/6Yl2YKCrWJCrZpuag9aD2iZQMFp.jpg",
    "synopsis_es": "Pacífico es el nombre de una región, pero también de una fuerza. Una tierra donde la música acompaña la vida y donde uno puede renacer.",
    "synopsis_en": "In the waters of Colombia’s Pacific coast, life is celebrated through a particular kind of song: the Arrullos. This music honors life in a territory marked by violence and armed conflict, where enslaved people once found refuge at the end of colonial rule. In these same waters, each year, thousands of whales arrive from Antarctica to give birth. Pacífico weaves a polyphonic narrative around birth in an aquatic space where body, territory, and memory are deeply intertwined.",
-   "genero": "",
    "anio_tmdb": 2026,
    "duracion_tmdb": 22,
    "pais_tmdb": "France, Colombia",
@@ -3975,7 +4576,11 @@
    ],
    "_sinopsis_de": "ya publicada en aff-2026",
    "poster": "/assets/midbo-2026/pacifico.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "genero": "Documental",
+   "_heredado": {
+    "genero": "catálogo w_R4DJ5XYQ7SV3 (aff-2026, midbo-2026)"
+   }
   },
   "Para mí, ya no es cualquier baño": {
    "tmdb_id": 1689497,
@@ -3994,6 +4599,23 @@
    "_director": "Micaela Moreno Barril",
    "_sondeado": "2026-10-10",
    "poster": "/assets/midbo-2026/para-mi-ya-no-es-cualquier-bano.jpg",
+   "posterSource": "tmdb"
+  },
+  "Querida Engativá": {
+   "tmdb_id": 1794419,
+   "titulo_original": "Querida Engativá",
+   "poster_path": "/8ieM8dp3umFybdfoMgCtTKBJxu0.jpg",
+   "synopsis_es": "A través de palabras y de un sentimiento que va más allá de lo superficial, «Querida Engativá» demuestra cómo un lugar puede ser más que un hogar, donde se reflejan las cosas buenas y malas que están en el territorio. Esta carta audiovisual presenta el lugar donde muchos crecieron, ese lugar que muchos ven como recuerdos, historias y enseñanzas; además de eso «Querida Engativá» no oculta lo malo, simplemente lo muestra de una manera natural, pues también hace parte del territorio. Engativá es más que calles y edificios: Engativá son las personas que habitan en ella. Por esta razón, «Querida Engativá» busca mostrar a su comunidad desde una mirada cercana y sincera, mostrar todo lo que las personas ven como algo común y sencillo de una manera diferente, una manera en la que Engativa también siente.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 8,
+   "pais_tmdb": "",
+   "lbSlug": "querida-engativa",
+   "_verificado": "declarada a mano: Ficha CREADA por nosotros el 11 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas): dirección, año, país, duración y sinopsis de la ficha de midbo.co, afiche original del festival.",
+   "_director": "Dirección: Carolina Martínez",
+   "_sondeado": "2026-10-15",
+   "poster": "/assets/midbo-2026/querida-engativa.jpg",
    "posterSource": "tmdb"
   },
   "Relicto": {
@@ -4044,13 +4666,28 @@
    "poster": "/assets/midbo-2026/revolutionaries-never-die.jpg",
    "posterSource": "tmdb"
   },
+  "Salvando el proyecto": {
+   "tmdb_id": 1794421,
+   "titulo_original": "Salvando el proyecto",
+   "poster_path": "/9AljsNlei7WTq2KFfrLxTmtLffr.jpg",
+   "synopsis_es": "En el Colegio Isabel II, en Bogotá, un grupo de estudiantes se enfrenta a un entorno marcado por la rutina, las barreras comunicativas y la dificultad para participar. Entre estudiantes sordos y oyentes surge la necesidad de encontrar nuevas formas de encontrarse, expresarse y ser escuchados. Así nace Voces Isabelinas, una emisora escolar que convierte un espacio olvidado del colegio en un lugar para crear, compartir y hacer comunidad. A través de la palabra, la música, las imágenes y la Lengua de Señas Colombiana, los estudiantes descubren que comunicarse no significa hacerlo todos de la misma manera. El proceso de creación de la emisora revela cómo el trabajo colectivo puede transformar no solo un espacio físico, sino también las relaciones dentro de la escuela, haciendo visible que todas las voces —incluso aquellas que no se escuchan con los oídos— tienen algo que contar.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 7,
+   "pais_tmdb": "",
+   "lbSlug": "salvando-el-proyecto",
+   "_verificado": "declarada a mano: Ficha CREADA por nosotros el 11 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas): dirección, año, país, duración y sinopsis de la ficha de midbo.co, afiche original del festival.",
+   "_director": "Dirección: Sindy Joya",
+   "_sondeado": "2026-10-15",
+   "poster": "/assets/midbo-2026/salvando-el-proyecto.jpg",
+   "posterSource": "tmdb"
+  },
   "Si La Escombrera hablara": {
    "tmdb_id": 1738942,
    "titulo_original": "Si La Escombrera hablara",
    "poster_path": "/9JYXhgh8rpdVSltDynKqqAQ471q.jpg",
    "synopsis_es": "En la comuna 13 de Medellín se encuentra la fosa urbana más grande de América Latina: La Escombrera. Las familias de las personas víctimas de desaparición forzada la señalan como el lugar donde están muchos de los 503 desaparecidos de este territorio. Tras dos décadas de negacionismo, la búsqueda forense liderada por el colectivo Mujeres Caminando por la Verdad desencadenó en 2024 el hallazgo de cuerpos. Este acontecimiento histórico envió un mensaje muy claro a toda Colombia: la tierra ha comenzado a hablar.",
-   "synopsis_en": "",
-   "genero": "",
    "anio_tmdb": 2025,
    "duracion_tmdb": 30,
    "pais_tmdb": "",
@@ -4070,7 +4707,13 @@
     }
    ],
    "poster": "/assets/midbo-2026/si-la-escombrera-hablara.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "genero": "Documental",
+   "_heredado": {
+    "genero": "catálogo w_R4HGZYH4PDB2 (ficdeh-2026, midbo-2026)",
+    "synopsis_en": "catálogo w_R4HGZYH4PDB2 (ficdeh-2026, midbo-2026)"
+   },
+   "synopsis_en": "Medellín’s Comuna 13 is home to the largest urban mass grave in Latin America. La Escombrera has been identified by families of victims of enforced disappearance as the site where many of the territory’s 503 disappeared persons are buried. Mujeres Caminando por la Verdad leads the forensic search that, after two decades of denialism, led to the discovery of human remains in 2024. This historic event sent a clear message across Colombia: the earth has begun to speak."
   },
   "Sol de niebla": {
    "tmdb_id": 1791609,
@@ -4195,6 +4838,23 @@
    "poster": "/assets/midbo-2026/still-playing.jpg",
    "posterSource": "tmdb"
   },
+  "Tercer acto": {
+   "tmdb_id": 1794423,
+   "titulo_original": "Tercer acto",
+   "poster_path": "/7BDHHzt3O2U7QFOFgLbfg2iyrpm.jpg",
+   "synopsis_es": "Hay una etapa de la vida en la que el tiempo deja de ser una promesa y se convierte en memoria. La vida se entreteje como un hilo de memorias, y en cada uno de nuestros recuerdos tejemos alegrías, esfuerzos y esperanzas. Antonio, Elsa y Rafael son héroes de su propia historia, entrelazando momentos que con el pasar de los años se convierten en recuerdos conservados a través de las fotografías, en los viejos álbumes que atesoran como guardianes del momento y que son testimonio de quienes son, hacia dónde van y cómo habitan su presente. «Tercer acto» es un ensayo cinematográfico que se acerca a personas que han llegado a una nueva etapa de sus vidas para descubrir, a través de sus recuerdos, sus silencios y sus palabras, las historias que las han convertido en quienes son.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 10,
+   "pais_tmdb": "",
+   "lbSlug": "tercer-acto-2026",
+   "_verificado": "declarada a mano: Ficha CREADA por nosotros el 11 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas): dirección, año, país, duración y sinopsis de la ficha de midbo.co, afiche original del festival.",
+   "_director": "Dirección: Entramados",
+   "_sondeado": "2026-10-15",
+   "poster": "/assets/midbo-2026/tercer-acto.jpg",
+   "posterSource": "tmdb"
+  },
   "The Flowers Stand Silently, Witnessing": {
    "tmdb_id": 1335789,
    "titulo_original": "The Flowers Stand Silently, Witnessing",
@@ -4229,6 +4889,23 @@
    "_director": "Caroline Guimbal",
    "_sondeado": "2026-10-10",
    "poster": "/assets/midbo-2026/the-red-moon-eclipse.jpg",
+   "posterSource": "tmdb"
+  },
+  "The Travelers": {
+   "tmdb_id": 1463516,
+   "titulo_original": "Les Voyageurs",
+   "poster_path": "/sSMEXMfV9njHYVuZpHCzReqYRs7.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "On the border between Morocco and Spain, a group of travelers is eagerly waiting to cross over to Europe.",
+   "genero": "Documental",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 60,
+   "pais_tmdb": "Cameroon, Spain",
+   "lbSlug": "the-travelers-2025",
+   "_verificado": "declarada a mano: Ya existía en TMDB y el enriquecido no la casó: «The Travelers» (2025), David Bingong. Hallada por las tres sondas (título, filmografía del director, Letterboxd) el 10 oct 2026.",
+   "_director": "David Bingong",
+   "_sondeado": "2026-10-15",
+   "poster": "/assets/midbo-2026/the-travelers.jpg",
    "posterSource": "tmdb"
   },
   "Their Eyes": {
@@ -4270,7 +4947,7 @@
   "Trizas": {
    "tmdb_id": 1604094,
    "titulo_original": "Trizas",
-   "poster_path": "/6561nDr66xGl3MFVSMsVqGEKtn.jpg",
+   "poster_path": null,
    "synopsis_es": "Dos viajes se cruzan de forma anacrónica: el de un médico inglés en Bolivia en los años treinta y el de la cineasta en Londres en 2024. La película aborda los objetos como fragmentos inestables, restos de mundos más amplios, como espejos que solo se dejan entrever momentáneamente. El recorrido pasa por la colección de las Américas del Museo Británico, la colección de joyería y fotografía del V&A y una colección privada de arte latinoamericano en Londres.",
    "synopsis_en": "Fragments of pottery. Gold, silver, jewellery. Contemporary art. Luciana Decker Orozco visits various museums and collections in London, tracing a homegrown past present on another continent. Each piece are windows that open and close, briefly revealing what they hide, a mystery that she encapsulates in her celluloid and magical editing.",
    "genero": "",
@@ -4299,8 +4976,27 @@
     }
    ],
    "_sinopsis_de": "ya publicada en cinemancia-2026",
-   "poster": "/assets/midbo-2026/trizas.jpg",
-   "posterSource": "tmdb"
+   "_afiche_rechazado": "TMDB /6561nDr66xGl3MFVSMsVqGEKtn.jpg: fotograma según el catálogo (w_R4F1D2Q71DK4)"
+  },
+  "Ubuntú: la métrica de los afectos": {
+   "tmdb_id": 1794426,
+   "titulo_original": "Ubuntú: la métrica de los afectos",
+   "poster_path": "/xiXVvYLZGQ5hO3WK09OWBV5LHUf.jpg",
+   "synopsis_es": "Es una historia de la lucha política del movimiento afro colombiano para ser reconocido como parte del país. Es un viaje realizado por el hijo de uno de los líderes del movimiento Carlos Rua. El director recorre los pasos de su padre conversando con algunos de sus compañeros y compañeras que aún están con vida. Las conversaciones recuerdan La Constituyente en Colombia, la titulación de tierras y la importancia del apoyo mutuo, la alianza, la tonga, y el ubuntú.",
+   "synopsis_en": "",
+   "genero": "Documental",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 30,
+   "pais_tmdb": "",
+   "lbSlug": "ubuntu-la-metrica-de-los-afectos",
+   "_verificado": "declarada a mano: Ficha CREADA por nosotros el 11 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas): dirección, año, país, duración y sinopsis de la ficha de midbo.co, afiche original del festival.",
+   "_director": "Leonardo Rua",
+   "_sondeado": "2026-10-15",
+   "poster": "/assets/midbo-2026/ubuntu-la-metrica-de-los-afectos.jpg",
+   "posterSource": "tmdb",
+   "_heredado": {
+    "genero": "catálogo w_R4KDDV9T1SQQ (jardin-2026, midbo-2026)"
+   }
   },
   "Un lugar más grande": {
    "tmdb_id": 1338573,
@@ -4386,6 +5082,40 @@
    "poster": "/assets/midbo-2026/unlearning-motherhood.jpg",
    "posterSource": "tmdb"
   },
+  "Voces y sombras": {
+   "tmdb_id": 1794427,
+   "titulo_original": "Voces y sombras",
+   "poster_path": "/gam2KhL7F2Aqpdz6GaP0dQB6Ut6.jpg",
+   "synopsis_es": "En la fría monotonía de una penitenciaría, el tiempo se mide en rejas y silencios. Sin embargo, un grupo de personas privadas de la libertad ha encontrado una rendija de libertad a través de un colectivo que busca convertirse en una escuela de cine interna, con la que ya han dado vida a un cortometraje y un videoclip. Actualmente, el colectivo se enfrenta a su desafío más emotivo: finalizar su primer ejercicio documental. La obra que intentaba retratar a un hombre ciego y locutor de radio que, paradójicamente, ya ha salido en libertad, dejando atrás su voz grabada en un disco duro, transformó la idea inicial y la historia; el proceso documental se termina cruzando con las reflexiones del grupo sobre su propio encierro, la luz y la sombra que puede significar el estar allí y la necesidad vital de crear. La cámara registra no solo las voces del encierro sino la esperanza de libertad de cada uno de ellos.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 10,
+   "pais_tmdb": "",
+   "lbSlug": "voces-y-sombras",
+   "_verificado": "declarada a mano: Ficha CREADA por nosotros el 11 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas): dirección, año, país, duración y sinopsis de la ficha de midbo.co, afiche original del festival.",
+   "_director": "Dirección: Colectivo Cinescape",
+   "_sondeado": "2026-10-15",
+   "poster": "/assets/midbo-2026/voces-y-sombras.jpg",
+   "posterSource": "tmdb"
+  },
+  "Wild Flowers": {
+   "tmdb_id": 1051799,
+   "titulo_original": "Divlje cvijeće",
+   "poster_path": "/t5NjWzgJWH4qORVNH4zw2TvKXSX.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "My father only used a camera once in his life. Thirty years later, he asked me to digitise the material he had filmed. I was wondering what he remembers. Created from an impulse to rethink and rewatch personal archive footage, the film explores memory and its relation to documentation and non-institutional archive practices. Connecting politics with intimate spaces, the documentary questions both the influence of war on private archives and the role of gardens as places of new begginings.",
+   "genero": "Documental",
+   "anio_tmdb": 2022,
+   "duracion_tmdb": 11,
+   "pais_tmdb": "Croatia, Spain",
+   "lbSlug": "wild-flowers-2022-2",
+   "_verificado": "declarada a mano: Ya existía en TMDB y el enriquecido no la casó: «Wild Flowers» (2022), Karla Crnčević. Hallada por las tres sondas (título, filmografía del director, Letterboxd) el 10 oct 2026.",
+   "_director": "Karla Crnčević",
+   "_sondeado": "2026-10-15",
+   "poster": "/assets/midbo-2026/wild-flowers.jpg",
+   "posterSource": "tmdb"
+  },
   "Writing Life: Annie Ernaux Through the Eyes of High School Students": {
    "tmdb_id": 1518673,
    "titulo_original": "Écrire la vie - Annie Ernaux racontée par des lycéennes et des lycéens",
@@ -4462,27 +5192,14 @@
  },
  "sin_ficha": [
   "A Women 's College in the Village",
-  "Back to Fukushima",
-  "Buenos días, Wiracocha",
   "CREAndo documental en los barrios",
   "Cortometrajes restaurados",
   "Crónica de un baile de muñeco",
-  "De cierta manera",
-  "El espíritu de los Andes",
-  "Escrito sobre un cuerpo",
   "Espejos: Gestos de reparación",
   "Foco Santiago Álvarez",
   "Galu Dugbis – La memoria de las abuelas",
-  "Invierno Flores Jardín",
+  "Instrucciones para cuando no esté",
   "La taquigrafista",
-  "La verdad duerme en silencio",
-  "La voz de los que no hablan",
-  "Latidos",
-  "Legados de un mismo suelo",
-  "Lo que no está",
-  "Los guardianes del agua",
-  "No es una herida",
-  "Now!",
   "Programa 1: Desatender el mandato",
   "Programa 1: Materias insumisas",
   "Programa 1: Miradas convulsas desde el presente",
@@ -4493,10 +5210,13 @@
   "Programa 2: Comunidades que siguen en búsqueda",
   "Programa 2: Esta tierra canta premoniciones",
   "Programa 2: Geografías en resistencia",
+  "Programa 2: Geografías en resistencia — Canterbury Café",
   "Programa 2: Imágenes para otro pasado",
   "Programa 2: Iniciación en la octava dimensión",
   "Programa 3: Acompañar y restituir la memoria familiar y colectiva",
   "Programa 3: Creadoras de vida",
+  "Programa 3: Creadoras de vida — Bodega Insurgesta",
+  "Programa 3: Instrucciones para cuando no esté",
   "Programa 3: Nacer de nuevo, escuchar la vida",
   "Programa 3: Volvemos a nacer",
   "Programa 4: Hijo de tigre y mula: la historia de los tratados Torrijos-Carter",
@@ -4504,31 +5224,17 @@
   "Programa 5: Gestos de expresión sobre violencias basadas en género",
   "Programa 6: Restitución de archivos para una memoria política latinoamericana",
   "Programa 7: Reactivar los archivos para el presente",
-  "Querida Engativá",
+  "Programa 7: Reactivar los archivos para el presente — Universidad Nacional de Colombia",
   "Reexistir: entre lo político y lo íntimo",
-  "Salvando el proyecto",
   "Sey Arimaku, la otra oscuridad",
   "Sey Arimaku, la otra oscuridad + Galu Dugbis – La memoria de las abuelas",
-  "Tercer acto",
-  "The Travelers",
-  "Ubuntú: la métrica de los afectos",
   "Un río de aguas profundas y luminosas",
-  "Voces y sombras",
-  "Wild Flowers",
   "¿Quién paga el pato?",
   "¿Quién paga el pato? + Crónica de un baile de muñeco"
  ],
  "_sin_ficha_sondeo": {
   "A Women 's College in the Village": {
    "director": "Sumiko Haneda",
-   "fecha": "2026-10-10"
-  },
-  "Back to Fukushima": {
-   "director": "Thomas Licata",
-   "fecha": "2026-10-10"
-  },
-  "Buenos días, Wiracocha": {
-   "director": "Mauricio Godoy",
    "fecha": "2026-10-10"
   },
   "CREAndo documental en los barrios": {
@@ -4543,18 +5249,6 @@
    "director": "Pablo Mora",
    "fecha": "2026-10-10"
   },
-  "De cierta manera": {
-   "director": "",
-   "fecha": "2026-10-10"
-  },
-  "El espíritu de los Andes": {
-   "director": "El Cuarto Oscuro",
-   "fecha": "2026-10-10"
-  },
-  "Escrito sobre un cuerpo": {
-   "director": "Esteban Prudencio",
-   "fecha": "2026-10-10"
-  },
   "Espejos: Gestos de reparación": {
    "director": "",
    "fecha": "2026-10-10"
@@ -4567,44 +5261,12 @@
    "director": "Pablo Mora (asesor de dirección)",
    "fecha": "2026-10-10"
   },
-  "Invierno Flores Jardín": {
-   "director": "Sara Piñeros Cortés",
-   "fecha": "2026-10-10"
+  "Instrucciones para cuando no esté": {
+   "director": "Yira Plaza O´Byrne y Germán Arango a.k.a Luckas Perro",
+   "fecha": "2026-10-13"
   },
   "La taquigrafista": {
    "director": "Azul Aizenberg",
-   "fecha": "2026-10-10"
-  },
-  "La verdad duerme en silencio": {
-   "director": "Andrew Simon Tucker",
-   "fecha": "2026-10-10"
-  },
-  "La voz de los que no hablan": {
-   "director": "Ñefix",
-   "fecha": "2026-10-10"
-  },
-  "Latidos": {
-   "director": "Baptista Joao",
-   "fecha": "2026-10-10"
-  },
-  "Legados de un mismo suelo": {
-   "director": "Colectivo Fraktal 19",
-   "fecha": "2026-10-10"
-  },
-  "Lo que no está": {
-   "director": "Jean Paul Sánchez Flórez",
-   "fecha": "2026-10-10"
-  },
-  "Los guardianes del agua": {
-   "director": "Zensibiliso",
-   "fecha": "2026-10-10"
-  },
-  "No es una herida": {
-   "director": "Violeta Zambrano",
-   "fecha": "2026-10-10"
-  },
-  "Now!": {
-   "director": "Santiago Álvarez",
    "fecha": "2026-10-10"
   },
   "Programa 1: Desatender el mandato": {
@@ -4647,6 +5309,10 @@
    "director": "",
    "fecha": "2026-10-10"
   },
+  "Programa 2: Geografías en resistencia — Canterbury Café": {
+   "director": "",
+   "fecha": "2026-10-13"
+  },
   "Programa 2: Imágenes para otro pasado": {
    "director": "",
    "fecha": "2026-10-10"
@@ -4662,6 +5328,14 @@
   "Programa 3: Creadoras de vida": {
    "director": "",
    "fecha": "2026-10-10"
+  },
+  "Programa 3: Creadoras de vida — Bodega Insurgesta": {
+   "director": "",
+   "fecha": "2026-10-13"
+  },
+  "Programa 3: Instrucciones para cuando no esté": {
+   "director": "",
+   "fecha": "2026-10-13"
   },
   "Programa 3: Nacer de nuevo, escuchar la vida": {
    "director": "",
@@ -4691,16 +5365,12 @@
    "director": "",
    "fecha": "2026-10-10"
   },
-  "Querida Engativá": {
-   "director": "06 Frames",
-   "fecha": "2026-10-10"
+  "Programa 7: Reactivar los archivos para el presente — Universidad Nacional de Colombia": {
+   "director": "",
+   "fecha": "2026-10-13"
   },
   "Reexistir: entre lo político y lo íntimo": {
    "director": "Colectivo OJOS A LA OBRA",
-   "fecha": "2026-10-10"
-  },
-  "Salvando el proyecto": {
-   "director": "Voces Isabelinas",
    "fecha": "2026-10-10"
   },
   "Sey Arimaku, la otra oscuridad": {
@@ -4711,28 +5381,8 @@
    "director": "",
    "fecha": "2026-10-10"
   },
-  "Tercer acto": {
-   "director": "Entramados",
-   "fecha": "2026-10-10"
-  },
-  "The Travelers": {
-   "director": "David Bingong",
-   "fecha": "2026-10-10"
-  },
-  "Ubuntú: la métrica de los afectos": {
-   "director": "Leonardo Rua",
-   "fecha": "2026-10-10"
-  },
   "Un río de aguas profundas y luminosas": {
    "director": "Andrés Dávila",
-   "fecha": "2026-10-10"
-  },
-  "Voces y sombras": {
-   "director": "Cinescape",
-   "fecha": "2026-10-10"
-  },
-  "Wild Flowers": {
-   "director": "Karla Crnčević",
    "fecha": "2026-10-10"
   },
   "¿Quién paga el pato?": {
@@ -4747,7 +5397,7 @@
  "_fuentes": [
   {
    "fuente": "proimagenescolombia.com — la base oficial del cine colombiano",
-   "capturado": "2026-10-10",
+   "capturado": "2026-10-15",
    "que_aporta": "país, año, duración, género, sinopsis y afiche de las obras que TMDB no registra",
    "metodo": "búsqueda por título en los catálogos de largos y cortos, y el MISMO candado del director que TMDB: el buscador es laxo y también mira dentro de la sinopsis"
   }

@@ -82,7 +82,24 @@ ALTERNA_FUERA = {
 # («– Con presencia del director», «largometraje colombiano documental»). El
 # título publicado es el de la obra, tal como lo escribe la Selección Oficial
 # en frase; la presencia del equipo va como has_qa.
+# Datos que FICPA no publica de una obra y que ya publicamos de la MISMA obra
+# en otro festival nuestro (mismo título y misma dirección). OK de Juan, 10 oct.
+# lo que mandó el festival por Drive: festivals/staging/ficpa-2026-datos-oficiales.json
+_OF = f'{REPO}/festivals/staging/ficpa-2026-datos-oficiales.json'
+OFICIALES = json.load(io.open(_OF, encoding='utf-8'))['obras'] if os.path.exists(_OF) else {}
+DATOS_PUBLICADOS = {
+    # CineAutopsia 2026 (festivals/cineautopsia-2026.json) e IMDb nm5653494
+    'AtmoSphaira': {'anio': 2024, 'duracion_min': 12, 'pais': 'Colombia'},
+}
+
 TITULO = {
+    # errata del festival: el corto de Sandra Rengifo es «AtmoSphaira» (IMDb
+    # nm5653494 y CineAutopsia 2026); corregido con OK de Juan, 10 oct
+    'AtmaSphaira': 'AtmoSphaira',
+    # la tarjeta de la programación dice «También nuestra»; la Selección Oficial
+    # («TAMBIÉN NOSOTRAS») y la lámina 7 del carrusel del 11 oct (p/DeX3bswAPAG)
+    # dicen «También nosotras». Lo cazó el vigía (13 oct)
+    'También nuestra': 'También nosotras',
     'Película Inaugural: Lactar': 'Lactar',
     'Cautivo – Con presencia del productor Alfredo Brito': 'Cautivo',
     'Corrientes del Amazonas, largometraje colombiano documental – en presencia del director': 'Corrientes del Amazonas',
@@ -150,12 +167,25 @@ SEDES = {
     'Universidad Mariana · Sala Audiovisual Pedro Schumacher': ('Universidad Mariana', 'Sala Audiovisual Pedro Schumacher', 'Pasto'),
     'Fundación Universitaria San Martín · Sede Mijitayo': ('Fundación Universitaria San Martín, Sede Mijitayo', '', 'Pasto'),
     'Corregimiento Jamondino · Salón Comunal El Rosario': ('Salón Comunal El Rosario, Jamondino', '', 'Pasto'),
-    'Chachagüí': ('Chachagüí', '', 'Chachagüí'),
+    # la tarjeta la encabeza «Chachagüí» y la cierra «Chachagüí - Parque Central»
+    'Chachagüí': ('Parque Central de Chachagüí', '', 'Chachagüí'),
     'Yacuanquer · Parque Principal': ('Parque Principal de Yacuanquer', '', 'Yacuanquer'),
     'La Florida · Parque Principal': ('Parque Principal de La Florida', '', 'La Florida'),
 }
 # la tarjeta abrevia el título que la Selección da completo
 ALIAS_SELECCION = {'Tierra Palestina': 'TIERRA PALESTINA. CAMBIO GLOBAL'}
+# LO QUE LA PROGRAMACIÓN DE IG CAMBIÓ después de la web. La web no se toca
+# desde el 9 oct; el carrusel «programación oficial» del 11 oct
+# (instagram.com/p/DeX3bswAPAG, lámina 8) pone los cortos de México en
+# Yacuanquer el JUEVES 15 a las 7 p. m., no el miércoles 14. Regla de Juan:
+# si publicaron hace poco en IG, se confía en IG.
+DEL_IG = {('Yacuanquer · Parque Principal', 'Cortos invitados de México'): {'dia': '2026-10-15'}}
+HORA_DEL_IG = {('2026-10-15', 'Taller Central "Dirección de actores para el cine de Terror"'):
+               {'hora': '14:30', 'duracion_min': 150, 'fuente': 'https://www.instagram.com/p/Def342cAKLA/'}}
+# la sección de un programa alterno que MEZCLA secciones, fijada como está
+# publicada: los experimentales juntan un corto de Ecos (Grecia) con dos de
+# Latidos, y la mayoría cambiaba sola según qué títulos se reconocían (13 oct)
+SECCION_PROGRAMA = {'Cortos experimentales internacionales y colombianos': 'Ecos del Mundo'}
 DIA_ALT = re.compile(r'(LUN|MAR|MIÉ|JUE|VIE|SÁB)\s+(\d{1,2})')
 
 
@@ -268,7 +298,7 @@ def obras_de_renglon(p):
     for parte in re.split(r';\s*', p):
         m = re.match(r'(.+?)\s+—\s+(.+?)(?:\s+\(([^)]+)\))?$', parte.strip())
         if m:
-            out.append({'titulo': m.group(1).strip(), 'director': m.group(2).strip(),
+            out.append({'titulo': TITULO.get(m.group(1).strip(), m.group(1).strip()), 'director': m.group(2).strip(),
                         **({'pais': m.group(3)} if m.group(3) else {})})
     return out
 
@@ -376,8 +406,11 @@ def main():
         if t['grupo'] in ALTERNA_FUERA:
             fuera.append(f'{t["dia"]} {t["hora"]} {t["titulo"][:50]} ({t["grupo"][:40]}): {ALTERNA_FUERA[t["grupo"]]}')
             continue
+        t = {**t, **DEL_IG.get((t['grupo'], t['titulo']), {})}
         reg = {**base(t, t['grupo']), 'acceso': 'Entrada libre'}
         reg['_src']['programacion'] = 'alterna'
+        if (t['grupo'], t['titulo']) in DEL_IG:
+            reg['_src'] = {'url': 'https://www.instagram.com/p/DeX3bswAPAG/', 'date': '2026-10-11', 'programacion': 'alterna'}
         cat, tit = t['categoria'], t['titulo']
         p = ' '.join(t['ps'])
         obras = obras_de_renglon(p)
@@ -386,8 +419,12 @@ def main():
         elif len(obras) >= 2 or cat in ('Cortometrajes', 'Animación'):
             secs = [sel[plano(o['titulo'])]['seccion'] for o in obras if plano(o['titulo']) in sel]
             reg.update(titulo=tit, obras=obras,
-                       seccion='Churo Cósmico' if CHURO.search(tit) else
-                       (max(set(secs), key=secs.count) if secs else SECCION_ALTERNA))
+                       seccion=SECCION_PROGRAMA[tit] if tit in SECCION_PROGRAMA else
+                       'Churo Cósmico' if CHURO.search(tit) else
+                       # la más repetida; empatadas, la de la primera obra del programa
+                       # (max sobre un set dependía del orden del hash: los experimentales
+                       # salían Ecos o Latidos según la corrida, 12 oct)
+                       (max(secs, key=secs.count) if secs else SECCION_ALTERNA))
             m = re.search(r'Duración( total)?:\s*(\d+)\s*min', p)
             if m:
                 reg['duracion_min'] = int(m.group(2))
@@ -442,10 +479,40 @@ def main():
         for o in [f] + list(f.get('obras') or []):
             if o.get('pais'):
                 o['pais'] = pais(o['pais'])
+            # erratas del festival declaradas en TITULO, también dentro de un programa
+            if o.get('titulo') in ('AtmaSphaira',):
+                o['titulo'] = TITULO[o['titulo']]
+            # lo que el festival no publica y ya publicamos de la misma obra
+            for k, v in DATOS_PUBLICADOS.get(o.get('titulo'), {}).items():
+                o.setdefault(k, v)
+            # LOS DATOS QUE MANDÓ EL FESTIVAL (.docx de la Selección, 13 oct):
+            # el crédito de dirección manda —es el completo, y en los videoclips
+            # la programación ponía al artista—; lo demás, solo donde falta
+            dof = OFICIALES.get(o.get('titulo')) or {}
+            if dof.get('director'):
+                # …pero con las tildes que ya teníamos: el .docx escribe
+                # «Rodriguez», «Yandun»; el mismo nombre con tilde se conserva
+                # (la regla del catálogo, revision-fase2 · tmdb-manda)
+                prev = {plano(w): w for w in re.findall(r'[\wÀ-ÿ]+', o.get('director') or '')}
+                o['director'] = re.sub(r'[\wÀ-ÿ]+', lambda m: prev.get(plano(m.group()), m.group()), dof['director'])
+            for k in ('duracion_min', 'sinopsis'):
+                if dof.get(k):
+                    o.setdefault(k, dof[k])
+            if dof.get('pais') and not o.get('pais'):
+                o['pais'] = pais(dof['pais'])
         # COMILLAS RECTAS en el título ([title-normalization])
         f['titulo'] = f['titulo'].translate(str.maketrans({'“': '"', '”': '"', '«': '"', '»': '"'}))
     funciones = [{k: v for k, v in f.items() if v not in (None, '')} for f in funciones]
     funciones.sort(key=lambda f: (f['dia'], f['hora'], f['sede'], f['titulo']))
+    # LA HORA QUE CORRIGIÓ LA LÁMINA (vigía, 15 oct 2026): el carrusel del día 3
+    # (instagram.com/p/Def342cAKLA, 14 oct) pone el taller de Carlos Ortiz de
+    # 2:30 a 5:00 p. m.; la web sigue en 2:00–6:00. Regla de Juan: lo publicado
+    # hace poco en IG manda, y Juan lo aprobó
+    for f in funciones:
+        _c = HORA_DEL_IG.get((f.get('dia'), f.get('titulo')))
+        if _c:
+            f['hora'], f['duracion_min'] = _c['hora'], _c['duracion_min']
+            f['_src'] = {**f.get('_src', {}), 'hora': _c['fuente']}
     io.open(OUT, 'w', encoding='utf-8').write(json.dumps({
         '_provenance': provenance('ficpa.co — Programación oficial 2026 (WP programacion2026) + Selección Oficial',
                                   url=URL, metodo='HTML estructurado de la página, tarjeta por tarjeta; '

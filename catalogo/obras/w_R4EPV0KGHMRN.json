@@ -1,0 +1,40 @@
+{
+ "id": "w_R4EPV0KGHMRN",
+ "titulo_original": "Filme Pin",
+ "anio": 2026,
+ "paises": [
+  "CO",
+  "PT"
+ ],
+ "directores": [
+  "María Rojas Arias",
+  "Andrés Jurado"
+ ],
+ "sinopsis": {
+  "es": "Entre luz, metal y plata, Filme Pin transforma una colección de pines solidarios en un archivo a otra escala: espectros del exilio y de la lucha internacional contra el régimen fascista y colonial de Portugal.",
+  "en": "Between light, metal and silver, a collection of solidarity pins turns into an archive of another scale: spectres of exile and international struggle against Portugal’s fascist and colonial regime."
+ },
+ "generos": [
+  "Documental"
+ ],
+ "afiche": {
+  "archivo": "/assets/cineautopsia/filme-pin.jpg",
+  "veredicto": "oficial"
+ },
+ "xref": {
+  "tmdb": 1616856,
+  "letterboxd": "filme-pin"
+ },
+ "versiones": [
+  {
+   "etiqueta": "7 min",
+   "duracion_min": 7
+  }
+ ],
+ "presentaciones": [
+  "cineautopsia-2026",
+  "ficci-65",
+  "midbo-2026",
+  "popayan-2026"
+ ]
+}

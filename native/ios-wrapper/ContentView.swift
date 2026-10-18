@@ -111,21 +111,25 @@ struct WebViewContainer: UIViewRepresentable {
                     let now = Date().timeIntervalSince1970
                     // iOS guarda hasta 64 pendientes por app: los más próximos primero.
                     // «abrir»: destino al tocar el aviso (el del día después → Mi Plan, #1055).
-                    let todos = avisos.compactMap { a -> (String, String, String, Double, String?)? in
+                    let todos = avisos.compactMap { a -> (String, String, String, Double, String?, [String: String])? in
                         guard let id = a["id"] as? String, let t = a["title"] as? String,
                               let b = a["body"] as? String,
                               let at = (a["at"] as? NSNumber)?.doubleValue else { return nil }
-                        return (id, t, b, at / 1000, a["abrir"] as? String)
+                        // filtro + día (15 oct 2026): el de Boleta abre Mi Plan en ese
+                        // día con «sin boleta» prendido.
+                        var extra: [String: String] = [:]
+                        for k in ["filtro", "dia"] { if let v = a[k] as? String { extra[k] = v } }
+                        return (id, t, b, at / 1000, a["abrir"] as? String, extra)
                     }.filter { $0.3 > now + 1 }.sorted { $0.3 < $1.3 }
                     // El tope de 60 deja afuera los MÁS LEJANOS, y el del día después
                     // es siempre el último: los que llevan destino entran primero
                     // (Juan, 9 oct 2026), el resto completa por cercanía.
                     let conDestino = todos.filter { $0.4 != nil }
                     let prox = conDestino + todos.filter { $0.4 == nil }.prefix(max(0, 60 - conDestino.count))
-                    for (id, t, b, at, abrir) in prox {
+                    for (id, t, b, at, abrir, extra) in prox {
                         let c = UNMutableNotificationContent()
                         c.title = t; c.body = b; c.sound = .default
-                        if let abrir = abrir { c.userInfo = ["abrir": abrir] }
+                        if let abrir = abrir { c.userInfo = extra.merging(["abrir": abrir]) { a, _ in a } }
                         let trig = UNTimeIntervalNotificationTrigger(timeInterval: at - now, repeats: false)
                         center.add(UNNotificationRequest(identifier: prefix + id, content: c, trigger: trig))
                     }
@@ -141,10 +145,28 @@ struct WebViewContainer: UIViewRepresentable {
         // la Live Activity, otfOpenPlan). Sin destino, la app abre donde estaba.
         func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse,
                                     withCompletionHandler completionHandler: @escaping () -> Void) {
-            if (response.notification.request.content.userInfo["abrir"] as? String) == "miplan" {
-                NotificationCenter.default.post(name: .otfOpenPlan, object: nil)
+            let info = response.notification.request.content.userInfo
+            if (info["abrir"] as? String) == "miplan" {
+                if info["filtro"] != nil, let data = try? JSONSerialization.data(withJSONObject: info.reduce(into: [String: String]()) { r, kv in
+                       if let k = kv.key as? String, let v = kv.value as? String { r[k] = v } }),
+                   let json = String(data: data, encoding: .utf8) {
+                    abrirAviso(json, intentos: 15)
+                } else {
+                    NotificationCenter.default.post(name: .otfOpenPlan, object: nil)
+                }
             }
             completionHandler()
+        }
+
+        // Destino con filtro: la web lo atiende con __otfAbrirAviso. Si la app arrancó
+        // por el toque, la web todavía no cargó: reintenta cada segundo hasta que
+        // responda true (o 15 intentos).
+        private func abrirAviso(_ json: String, intentos: Int) {
+            webView?.evaluateJavaScript("!!(window.__otfAbrirAviso && window.__otfAbrirAviso(\(json)))") { [weak self] r, _ in
+                if (r as? Bool) != true, intentos > 1 {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1) { self?.abrirAviso(json, intentos: intentos - 1) }
+                }
+            }
         }
 
         func userContentController(_ uc: WKUserContentController,

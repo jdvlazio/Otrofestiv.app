@@ -1,0 +1,39 @@
+{
+ "id": "w_R4FRE635W5HC",
+ "titulo_original": "Ver y escuchar",
+ "anio": 2013,
+ "paises": [
+  "CL"
+ ],
+ "directores": [
+  "José Luis Torres Leiva"
+ ],
+ "aliases": [
+  {
+   "titulo": "See and Listen",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "Narra tres encuentros en donde personas ciegas y sordas intercambian y comparten experiencias, recuerdos y sensaciones sobre la luz, la oscuridad, el silencio y el sonido del mundo que los rodea.",
+  "en": "Blind and deaf people converse, question, surprise and educate each others. Fingers move about quickly, translation follows promptly, both visible and audible, hands get touched and squeezed, and out of their tactfulness, sentences, stories, reserve and emotions arise"
+ },
+ "afiche": {
+  "archivo": "/assets/cinemancia/ver-y-escuchar.jpg",
+  "veredicto": "fotograma"
+ },
+ "xref": {
+  "tmdb": 407151,
+  "letterboxd": "see-and-listen"
+ },
+ "versiones": [
+  {
+   "etiqueta": "90 min",
+   "duracion_min": 90
+  }
+ ],
+ "presentaciones": [
+  "cinemancia-2026"
+ ]
+}

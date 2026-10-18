@@ -290,6 +290,12 @@ final. La jerarquía de fuentes va COMENTADA en su cabecera, y toda excepción
 (duración corregida, título del afiche, cambio anunciado después del PDF) en
 **tabla explícita con fecha**, nunca editando el crudo.
 
+Para la duración hay una tabla genérica: `festivals/staging/<id>-duraciones.json`
+(`titulo`, `min`, `fuente`, `por_que`), que `ensamblar.py` aplica después de
+conservar lo publicado. Para retirar a propósito un dato ya publicado, la
+equivalente es `<id>-quitar.json` (`titulo`, `campo`, `por_que`). Las dos abortan
+si apuntan a una obra que no está en el build.
+
 #### La palabra la pone el festival — no se traduce en la salida
 
 **Si la fuente ya trae la palabra, se PASA.** El error no es capturar mal un
@@ -499,6 +505,7 @@ una hipótesis sobre la fuente, y se comprueba contra ella.
 - [ ] `_etapa` dice la verdad (se actualiza al publicar)
 - [ ] validate.py + validate-festivals + tests + QA visual
 - [ ] Gate humano de Juan: revisión film-por-film (`tools/audit.html?fest=<id>`)
+- [ ] Después de publicar: `python3 pipeline/matriz.py` y republicar la **Matriz de obras** (Artifact, `pipeline/matriz.html` + el `matriz.json` generado) en su misma URL: https://claude.ai/artifact/MXLnqMqR2iT4J3MXQMGEh6
 
 ---
 

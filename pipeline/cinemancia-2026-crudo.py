@@ -12,7 +12,9 @@ El catálogo previo (build.json) aporta sinopsis y datos de las obras que ya
 teníamos; las 15 obras nuevas de la competencia internacional entran con lo
 que trae la hoja.
 """
-import json, re, unicodedata, os
+import json, re, unicodedata, os, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import lib  # noqa: E402
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 S = f'{REPO}/festivals/staging'
@@ -321,6 +323,7 @@ def catalogo():
     # regenerado, así que el error se volvía permanente y crecía: las DOS obras
     # del programa acababan con 106′ cada una, y el programa «sumaba» 212′.
     # Se indexan solo las funciones que NO son contenedor.
+    QUITAR = lib.quitados('cinemancia-2026')
     pub = {}
     try:
         pd = json.load(open(f'{REPO}/festivals/cinemancia-2026.json', encoding='utf-8'))
@@ -344,7 +347,10 @@ def catalogo():
         # se publicaban sin país, que es lo que alimenta la bandera.
         if not o.get('country') and _l.get('country'):
             o['country'] = _l['country']
+        # lo retirado a propósito (lib.quitados, 14 oct 2026) no se repone: el
+        # title_en viejo de «Borrachos…» volvía desde lo publicado por aquí
         for campo_pub in ('synopsis_en', 'title_en', 'poster', 'posterSource', 'duration', 'country'):
+            if (o.get('title'), campo_pub) in QUITAR: continue
             if not o.get(campo_pub) and p.get(campo_pub): o[campo_pub] = p[campo_pub]
         # ORDEN DE PRIORIDAD — regla vieja de la casa, no una decisión de este
         # festival: un AFICHE siempre gana a un FOTOGRAMA. Un afiche es el arte

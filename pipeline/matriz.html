@@ -1,0 +1,203 @@
+<title>Matriz de obras</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: una hoja de rodaje — barra de filtros fija, lista de obras con su
+   tira de 10 casillas (un campo cada una), y la ficha que abre la matriz
+   festival × campo. Oscuro de sala por defecto, claro de papel de programa. */
+:root {
+  --bg: #f6f3ee; --surf: #ffffff; --surf2: #efebe4; --line: #ddd6cb;
+  --fg: #1b1814; --mute: #6d665c; --accent: #c98a00; --accent-ink: #1b1814;
+  --ok: #3f8a5a; --hole: #d69a1f; --clash: #c2452f; --none: #cfc8bc;
+  --f-ui: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-data: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --r: 10px; --s1: 4px; --s2: 8px; --s3: 12px; --s4: 16px; --s5: 24px; --s6: 32px;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #141210; --surf: #1c1a17; --surf2: #24211d; --line: #34302a;
+  --fg: #f1ece4; --mute: #a39b8f; --accent: #f2b233; --accent-ink: #141210;
+  --ok: #5fb47c; --hole: #f2b233; --clash: #ec6a52; --none: #3d3832; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #141210; --surf: #1c1a17; --surf2: #24211d; --line: #34302a;
+  --fg: #f1ece4; --mute: #a39b8f; --accent: #f2b233; --accent-ink: #141210;
+  --ok: #5fb47c; --hole: #f2b233; --clash: #ec6a52; --none: #3d3832; color-scheme: dark }
+
+* { box-sizing: border-box }
+body { background: var(--bg); color: var(--fg); font: 15px/1.5 var(--f-ui); margin: 0 }
+.wrap { max-width: 1100px; margin: 0 auto; padding-inline: var(--s4); padding-block: var(--s5) var(--s6) }
+h1 { font-size: 28px; font-weight: 800; letter-spacing: -.02em; margin: 0; text-wrap: balance }
+.sub { color: var(--mute); margin: var(--s1) 0 0; max-width: 65ch }
+.num { font-family: var(--f-data); font-variant-numeric: tabular-nums }
+
+.bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg);
+  padding-block: var(--s3); margin-top: var(--s4); border-bottom: 1px solid var(--line);
+  display: flex; flex-direction: column; gap: var(--s3) }
+.search { width: 100%; font: inherit; padding: 10px 14px; border-radius: var(--r);
+  border: 1px solid var(--line); background: var(--surf); color: var(--fg) }
+.search:focus-visible, button:focus-visible, select:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px }
+.chips { display: flex; flex-wrap: wrap; gap: var(--s2) }
+.chip { font: 600 13px var(--f-ui); padding: 6px 12px; border-radius: 999px; cursor: pointer;
+  border: 1px solid var(--line); background: var(--surf); color: var(--fg); display: inline-flex; gap: 6px; align-items: center }
+.chip .num { color: var(--mute); font-size: 12px }
+.chip[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); border-color: var(--accent) }
+.chip[aria-pressed="true"] .num { color: var(--accent-ink) }
+.row2 { display: flex; flex-wrap: wrap; gap: var(--s2); align-items: center; color: var(--mute); font-size: 13px }
+select { font: inherit; font-size: 13px; padding: 5px 8px; border-radius: 8px; border: 1px solid var(--line); background: var(--surf); color: var(--fg); max-width: 100% }
+
+.legend { display: flex; flex-wrap: wrap; gap: var(--s4); font-size: 12px; color: var(--mute); margin-top: var(--s3) }
+.legend span { display: inline-flex; align-items: center; gap: 6px }
+
+.list { display: flex; flex-direction: column; margin-top: var(--s2) }
+.obra { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: var(--s2) var(--s4); align-items: center;
+  padding: var(--s3) var(--s2); border-bottom: 1px solid var(--line); cursor: pointer; background: none;
+  border-left: 0; border-right: 0; border-top: 0; text-align: left; color: inherit; font: inherit; width: 100% }
+.obra:hover { background: var(--surf2) }
+.ot { font-weight: 700; min-width: 0; overflow-wrap: anywhere }
+.om { color: var(--mute); font-size: 13px; overflow-wrap: anywhere }
+.nf { font: 600 12px var(--f-data); padding: 2px 8px; border-radius: 999px; background: var(--surf2); color: var(--mute); white-space: nowrap }
+.nf.rep { background: var(--accent); color: var(--accent-ink) }
+.strip { display: flex; gap: 3px; grid-column: 1 / -1 }
+.cell { width: 18px; height: 8px; border-radius: 2px; background: var(--none) }
+.cell.ok { background: var(--ok) } .cell.hole { background: var(--hole) } .cell.clash { background: var(--clash) }
+.more { margin: var(--s4) auto 0; display: block }
+.empty { color: var(--mute); padding: var(--s6) 0; text-align: center }
+
+dialog { border: 0; padding: 0; background: var(--surf); color: var(--fg); border-radius: 14px;
+  width: min(1000px, calc(100vw - 32px)); max-height: calc(100vh - 48px) }
+dialog::backdrop { background: rgba(0,0,0,.55) }
+.dh { padding: var(--s5) var(--s5) var(--s3); display: flex; gap: var(--s4); justify-content: space-between; align-items: start }
+.dh h2 { margin: 0; font-size: 22px; font-weight: 800; letter-spacing: -.01em; text-wrap: balance }
+.close { font: 600 13px var(--f-ui); background: var(--surf2); color: var(--fg); border: 1px solid var(--line); border-radius: 8px; padding: 6px 12px; cursor: pointer }
+.facts { padding: 0 var(--s5); display: flex; flex-wrap: wrap; gap: var(--s2) var(--s5); font-size: 13px; color: var(--mute) }
+.facts b { color: var(--fg); font-weight: 600 }
+.tw { overflow-x: auto; margin: var(--s4) 0 0; padding: 0 var(--s5) var(--s5) }
+table { border-collapse: collapse; font-size: 12.5px; min-width: 760px; width: 100% }
+th, td { padding: 7px 8px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top }
+th { font-weight: 700; font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--mute); white-space: nowrap }
+td.f { font-weight: 600; white-space: nowrap }
+td.v { max-width: 180px; overflow-wrap: anywhere }
+td.no { color: var(--hole); font-weight: 700 }
+td.dif { box-shadow: inset 3px 0 0 var(--clash) }
+.foot { color: var(--mute); font-size: 12px; margin-top: var(--s5) }
+@media (max-width: 560px) { h1 { font-size: 23px } .cell { width: 14px } }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important } }
+</style>
+
+<div class="wrap">
+  <h1>Matriz de obras</h1>
+  <p class="sub">Cada obra del catálogo, una sola vez, con lo que publicó de ella cada festival. Las que se repiten en el circuito aparecen primero.</p>
+
+  <div class="bar">
+    <input id="q" class="search" type="search" placeholder="Buscar por título, director o festival" autocomplete="off">
+    <div class="chips" id="chips"></div>
+    <div class="row2">
+      <label for="fest">Festival</label>
+      <select id="fest"><option value="">Todos</option></select>
+      <label for="campo">Campo</label>
+      <select id="campo"><option value="">Cualquiera</option></select>
+      <span id="cuenta" class="num"></span>
+    </div>
+  </div>
+
+  <div class="legend" aria-hidden="true">
+    <span><i class="cell ok"></i>todos los festivales lo tienen</span>
+    <span><i class="cell hole"></i>uno lo tiene y otro no</span>
+    <span><i class="cell clash"></i>dicen cosas distintas</span>
+    <span><i class="cell"></i>nadie lo tiene</span>
+  </div>
+
+  <div class="list" id="list"><p class="empty">Cargando el catálogo…</p></div>
+  <button class="chip more" id="more" hidden>Mostrar más</button>
+  <p class="foot" id="foot"></p>
+</div>
+
+<dialog id="dlg" aria-labelledby="dt">
+  <div class="dh"><div><h2 id="dt"></h2><div class="om" id="dal"></div></div><button class="close" id="dc">Cerrar</button></div>
+  <div class="facts" id="dfacts"></div>
+  <div class="tw"><table id="dtab"></table></div>
+</dialog>
+
+<script>
+const NOMBRE = { director:'Dirección', year:'Año', country:'País', duration:'Duración', genre:'Género',
+  title_en:'Título EN', synopsis:'Sinopsis', synopsis_en:'Sinopsis EN', poster:'Afiche', lbSlug:'Letterboxd' };
+const FILTROS = [
+  ['todas', 'Todas', () => true],
+  ['rep', 'En 2+ festivales', o => o.pr.length > 1],
+  ['hueco', 'Con huecos', o => o.pr.length > 1 && Object.values(o.e).some(v => v[0] && v[1])],
+  ['clash', 'Con datos distintos', o => Object.values(o.e).some(v => v[2])],
+  ['sinaf', 'Sin afiche', o => !o.af],
+  ['fot', 'Solo fotograma', o => o.af === 'fotograma'],
+];
+let D, filtro = 'rep', paso = 80, vistos = 80;
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const norm = s => String(s ?? '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+const fname = f => { const x = D.festivales[f]; return x ? `${x.n} ${x.a ?? ''}`.trim() : f; };
+
+function estado(v) { return v[2] ? 'clash' : (v[0] && v[1]) ? 'hole' : v[0] ? 'ok' : ''; }
+
+function lista() {
+  const q = norm($('q').value.trim()), fs = $('fest').value, cp = $('campo').value;
+  const f = FILTROS.find(x => x[0] === filtro)[2];
+  return D.obras.filter(o => f(o)
+    && (!fs || o.pr.some(p => p.f === fs))
+    && (!cp || estado(o.e[cp]) === 'hole' || estado(o.e[cp]) === 'clash')
+    && (!q || o._k.includes(q)));
+}
+
+function pintar() {
+  const xs = lista();
+  $('cuenta').textContent = `${xs.length.toLocaleString('es-CO')} obras`;
+  if (!xs.length) { $('list').innerHTML = '<p class="empty">Ninguna obra con esos filtros.</p>'; $('more').hidden = true; return; }
+  $('list').innerHTML = xs.slice(0, vistos).map(o => {
+    const meta = [o.d, o.a, o.p.join(' · ')].filter(Boolean).join(' · ');
+    const strip = D.campos.map(c => `<i class="cell ${estado(o.e[c])}" title="${NOMBRE[c]}"></i>`).join('');
+    return `<button class="obra" data-id="${o.id}">
+      <div style="min-width:0"><div class="ot">${esc(o.t)}</div><div class="om">${esc(meta)}</div></div>
+      <span class="nf ${o.pr.length > 1 ? 'rep' : ''}">${o.pr.length} ${o.pr.length === 1 ? 'festival' : 'festivales'}</span>
+      <div class="strip" aria-hidden="true">${strip}</div></button>`;
+  }).join('');
+  $('more').hidden = xs.length <= vistos;
+}
+
+function ficha(id) {
+  const o = D.obras.find(x => x.id === id); if (!o) return;
+  $('dt').textContent = o.t;
+  $('dal').textContent = o.al.length ? 'También: ' + o.al.join(' · ') : '';
+  const fx = [['Dirección', o.d], ['Año', o.a], ['Países', o.p.join(', ')], ['Géneros', o.g.join(' / ')],
+    ['Afiche', o.af], ['TMDB', o.tm], ['Letterboxd', o.lb], ['Ficha', o.id]];
+  $('dfacts').innerHTML = fx.filter(x => x[1]).map(x => `<span>${x[0]} <b class="${x[0]==='Ficha'||x[0]==='TMDB'?'num':''}">${esc(x[1])}</b></span>`).join('');
+  const head = '<tr><th>Festival</th><th>Título publicado</th>' + D.campos.map(c => `<th>${NOMBRE[c]}</th>`).join('') + '</tr>';
+  const rows = o.pr.map(p => '<tr><td class="f">' + esc(fname(p.f)) + (p.n > 1 ? ` <span class="num" style="color:var(--mute)">×${p.n}</span>` : '') +
+    '</td><td class="v">' + esc(p.t) + '</td>' + D.campos.map(c => {
+      const v = p.v[c], dif = o.e[c][2] && v;
+      return v ? `<td class="v${dif ? ' dif' : ''}">${esc(c.startsWith('synopsis') ? v + '…' : v)}</td>` : '<td class="no">—</td>';
+    }).join('') + '</tr>').join('');
+  $('dtab').innerHTML = head + rows;
+  $('dlg').showModal();
+}
+
+function chips() {
+  $('chips').innerHTML = FILTROS.map(([k, n, f]) =>
+    `<button class="chip" data-f="${k}" aria-pressed="${k === filtro}">${n} <span class="num">${D.obras.filter(f).length.toLocaleString('es-CO')}</span></button>`).join('');
+}
+
+fetch('matriz.json').then(r => r.json()).then(d => {
+  D = d;
+  D.obras.forEach(o => o._k = norm([o.t, o.d, ...o.al, ...o.pr.map(p => p.t + ' ' + fname(p.f))].join(' ')));
+  Object.keys(D.festivales).sort((a, b) => fname(a).localeCompare(fname(b), 'es'))
+    .forEach(f => $('fest').insertAdjacentHTML('beforeend', `<option value="${f}">${esc(fname(f))}</option>`));
+  D.campos.forEach(c => $('campo').insertAdjacentHTML('beforeend', `<option value="${c}">${NOMBRE[c]} con hueco o distinto</option>`));
+  $('foot').textContent = `${D.obras.length.toLocaleString('es-CO')} obras de ${Object.keys(D.festivales).length} festivales publicados. Generado desde el catálogo (catalogo/obras) y los JSON de cada festival.`;
+  chips(); pintar();
+}).catch(() => { $('list').innerHTML = '<p class="empty">No se pudo cargar matriz.json. Volvé a abrir la página.</p>'; });
+
+$('chips').addEventListener('click', e => { const b = e.target.closest('.chip'); if (!b) return; filtro = b.dataset.f; vistos = paso;
+  document.querySelectorAll('#chips .chip').forEach(x => x.setAttribute('aria-pressed', x === b)); pintar(); });
+['q', 'fest', 'campo'].forEach(id => $(id).addEventListener('input', () => { vistos = paso; pintar(); }));
+$('more').addEventListener('click', () => { vistos += paso; pintar(); });
+$('list').addEventListener('click', e => { const b = e.target.closest('.obra'); if (b) ficha(b.dataset.id); });
+$('dc').addEventListener('click', () => $('dlg').close());
+$('dlg').addEventListener('click', e => { if (e.target === $('dlg')) $('dlg').close(); });
+</script>

@@ -1,0 +1,53 @@
+{
+ "id": "w_R4JP5M44WJ2P",
+ "titulo_original": "Everything Else is Noise",
+ "anio": 2026,
+ "paises": [
+  "MX",
+  "DE"
+ ],
+ "directores": [
+  "Nicolás Pereda"
+ ],
+ "aliases": [
+  {
+   "titulo": "Lo demás es ruido",
+   "tipo": "festival"
+  },
+  {
+   "titulo": "Everything Else Is Noise",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "Rosa, compositora de música contemporánea, da su primera entrevista televisiva en la casa de su colega Tere para ocultárselo a su marido. La charla se ve interrumpida por cortes de luz y un perro que no para de ladrar.",
+  "en": "Rosa, a contemporary music composer, agrees to give her first television interview at her colleague Tere’s apartment to keep it secret from her husband. What begins as a simple professional conversation turns into an absurd and comic portrait of rivalries and affections among three women—Rosa, Tere, and Tere’s daughter Luisa—interrupted by power outages, a constantly barking dog, and the visit of a famous composer. As the interview unravels, family and artistic tensions surface, revealing, with humor, both the fragility of prestige and the strength of complicity."
+ },
+ "generos": [
+  "Comedy",
+  "Comedia"
+ ],
+ "afiche": {
+  "archivo": "/assets/filcmar-2026/lo-demas-es-ruido.jpg",
+  "veredicto": "oficial"
+ },
+ "xref": {
+  "tmdb": 1616861,
+  "letterboxd": "everything-else-is-noise"
+ },
+ "versiones": [
+  {
+   "etiqueta": "70 min",
+   "duracion_min": 70
+  },
+  {
+   "etiqueta": "71 min",
+   "duracion_min": 71
+  }
+ ],
+ "presentaciones": [
+  "filcmar-2026",
+  "tiff-2026"
+ ]
+}

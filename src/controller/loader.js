@@ -8,7 +8,7 @@
 import { FESTIVAL_CONFIG, NOTICES, mergeFestivalSections } from '../config.js';
 import { lruTouch } from '../lru.js';
 import {DAY_ABBR, DAY_NUM, _classifyFestival} from '../view/components.js';
-import {DAYS, DAY_SHORT_EN, setCustomPosters, setDayShort, setDayShortEn, setPosters, keepCityOnly} from '../view/helpers.js';
+import {DAYS, DAY_SHORT_EN, setCustomPosters, setDayShort, setDayShortEn, setPosters, keepCityOnly, filterCity} from '../view/helpers.js';
 import { closeFestivalSheet, openCitySheet, openReviewSheet, _reviewDesbloqueado, _pintarBannerRevision } from '../view/sheets.js';
 import { showToast } from '../view/feedback.js';
 import { _renderProgramaContent, lugarClose, scrollDtabsToActive } from '../view/programa.js';
@@ -563,7 +563,8 @@ export async function loadFestival(id){
   const _savedCity=storage.getCityFilter();
   if(_savedCity&&_savedCity!=='all'){
     const _c=_savedCity.slice(5);
-    const _existe=Object.values(cfg.venues||{}).some(v=>v&&v.city===_c);
+    // filterCity: un municipio satélite guardado (FICPA) ya no es ciudad aparte.
+    const _existe=Object.keys(cfg.venues||{}).some(k=>filterCity(k)===_c);
     if(_existe) activeVenue=_savedCity; else storage.setCityFilter('');
   }
   // El sheet se abre DESPUÉS del primer render del programa (rAF doble): si se

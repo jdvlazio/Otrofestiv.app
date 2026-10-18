@@ -479,10 +479,22 @@ def academica():
             for p in sorted(porpag)]
 
 
+# LO QUE EL PDF NUEVO (8 oct) DESORDENÓ. En San Pedro el 17 oct pone la Ruta
+# Académica (Claquetazo) de 15:15 a 15:45, encima del Reconocimiento a Mabel
+# Velosa (15:15–15:30): el bloque se estiró sobre el de al lado. El PDF del 18
+# sep —y lo publicado— los daba en fila: Reconocimiento 15:15, Claquetazo 15:30.
+# Se conserva la fila; no se inventa hora (13 oct).
+HORA_PDF_ANTERIOR = {('2026-10-17', 'Ruta Académica: Presentación'): '15:30'}
+
+
 def main():
     if not os.path.exists(PDF):
         sys.exit(f'falta {PDF} — bajalo del botón PROGRAMACIÓN de villadelcine.com')
     pa, fuera = parrilla()
+    for b in pa:
+        h = HORA_PDF_ANTERIOR.get((b.get('dia'), (b.get('lineas') or [''])[0]))
+        if h:
+            b['hora'] = h
     fi, ac = fichas(), academica()
     os.makedirs(ST, exist_ok=True)
     json.dump({'_provenance': provenance(

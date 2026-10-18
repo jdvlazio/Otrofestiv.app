@@ -1,0 +1,42 @@
+{
+ "id": "w_R4JYD77GSGHJ",
+ "titulo_original": "El viaje de Luz",
+ "anio": 2026,
+ "paises": [
+  "AR"
+ ],
+ "directores": [
+  "Jorge Ortino"
+ ],
+ "aliases": [
+  {
+   "titulo": "Luz's Trip",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "Luz, un abejorro inquieto, emprende un viaje por la llanura pampeana y los sistemas serranos con el objetivo de encontrar un espacio natural intacto. En su recorrido enfrenta peligros causados por fenómenos extremos y el avance de la producción agropecuaria. Los encuentros con Lucio y Antelia reflejan el deterioro ambiental y la pérdida de hábitats, invitando a reflexionar sobre el impacto del desarrollo no planificado y la urgencia de preservar los ecosistemas.",
+  "en": "Luz, a restless bumblebee, sets out on a journey across the Pampas plains and the surrounding mountain systems with the aim of finding an untouched natural environment. Along the way, they face dangers caused by extreme natural phenomena and the expansion of agricultural production. Their encounters with Lucio and Antelia reflect environmental degradation and habitat loss, inviting to reflect on the impact of unplanned development and the urgent need to preserve ecosystems."
+ },
+ "generos": [
+  "Animación"
+ ],
+ "afiche": {
+  "archivo": "/assets/finca/el-viaje-de-luz.jpg",
+  "veredicto": "oficial-festival"
+ },
+ "xref": {
+  "tmdb": 1740154,
+  "letterboxd": "el-viaje-de-luz"
+ },
+ "versiones": [
+  {
+   "etiqueta": "11 min",
+   "duracion_min": 11
+  }
+ ],
+ "presentaciones": [
+  "finca-2026"
+ ]
+}

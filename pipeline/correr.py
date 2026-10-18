@@ -82,8 +82,10 @@ def main():
         _antes = os.path.getmtime(_b) if os.path.exists(_b) else 0
         r = subprocess.run(p['cmd'], shell=True, cwd=REPO)
         if r.returncode != 0:
+            lib.marcar_fallo(fid, i, p['cmd'])
             sys.exit(f'\n✗ el paso {i} falló (exit {r.returncode}) — se aborta aquí; '
-                     f'reanudar con --paso {i} tras corregir')
+                     f'reanudar con --paso {i} tras corregir (el build queda marcado: publicar.py no lo acepta)')
+        lib.limpiar_fallo(fid, i, cmd=p['cmd'])
         # si este paso reescribió el build, lleva el sello del runner y del plan
         if os.path.exists(_b) and os.path.getmtime(_b) > _antes:
             _c = lib.sellar_build(fid, i, p['cmd'])

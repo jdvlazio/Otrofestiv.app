@@ -1,0 +1,33 @@
+{
+ "id": "w_R4EGGZYP37B0",
+ "titulo_original": "XYZ",
+ "anio": 2026,
+ "paises": [
+  "LU",
+  "PT"
+ ],
+ "directores": [
+  "Alexandre Alagôa"
+ ],
+ "sinopsis": {
+  "es": "Una obsesiva exploración de las tres dimensiones geométricas con la esperanza de alcanzar una cuarta.",
+  "en": "An obsessive exploration of the three geometric dimensions in hopes of reaching a fourth."
+ },
+ "afiche": {
+  "archivo": "/assets/cineautopsia/xyz.jpg",
+  "veredicto": "oficial"
+ },
+ "xref": {
+  "tmdb": 1680596,
+  "letterboxd": "xyz-2026"
+ },
+ "versiones": [
+  {
+   "etiqueta": "11 min",
+   "duracion_min": 11
+  }
+ ],
+ "presentaciones": [
+  "cineautopsia-2026"
+ ]
+}
