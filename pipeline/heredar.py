@@ -104,7 +104,11 @@ def main():
             txt = json.dumps(d, ensure_ascii=False, indent=sangria or 1)
         else:
             txt = json.dumps(d, ensure_ascii=False, separators=(',', ':'))
-        open(p, 'w', encoding='utf-8').write(txt + ('\n' if crudo.endswith('\n') else ''))
+        # atómico (auditoría del 17 oct): un corte a mitad de la escritura dejaba
+        # el JSON PUBLICADO truncado; temporal + os.replace, como propuestas.py
+        with open(p + '.tmp', 'w', encoding='utf-8') as fh:
+            fh.write(txt + ('\n' if crudo.endswith('\n') else ''))
+        os.replace(p + '.tmp', p)
         print(f'  escrito {os.path.relpath(p, REPO)} — ahora: python3 pipeline/catalogo.py --medir')
     elif cambios:
         print('  (solo muestra; --escribir para guardarlo)')

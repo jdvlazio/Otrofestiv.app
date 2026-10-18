@@ -9038,7 +9038,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-17T22:26:47",
+  "fecha": "2026-10-17T22:29:47",
   "plan_sha": "159aaf2851adf3ee",
   "paso": 11,
   "cmd": "python3 pipeline/ficcali-2026-verificar.py"
