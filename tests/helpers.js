@@ -201,4 +201,12 @@ async function goToPlanear(page) {
   await page.waitForFunction(() => !!cachedResult, null, { timeout: 20000 }).catch(() => {});
 }
 
-module.exports = { LEVIZA_SIMTIME, abrirHojaCiudad, esperarCalculo, festivalTestIds, selectFestival, enterFestival, reentrar, freezeSimTime, addToWatchlist, goToPlanear };
+// soloWeb(page) — los datos de los festivales salen del almacén de Supabase desde
+// el 18 oct 2026 (datos-fuente.js). Un test que INTERCEPTA el JSON de un festival
+// con page.route('**/festivals/…') tiene que cortar el almacén para que la app
+// lea esa copia; si no, la intercepción no ve la descarga real (T103/T104/T-REN).
+async function soloWeb(page) {
+  await page.route('https://eytxrvbnwzxuedbmnnqr.supabase.co/storage/v1/object/public/datos/**', r => r.abort());
+}
+
+module.exports = { soloWeb, LEVIZA_SIMTIME, abrirHojaCiudad, esperarCalculo, festivalTestIds, selectFestival, enterFestival, reentrar, freezeSimTime, addToWatchlist, goToPlanear };
