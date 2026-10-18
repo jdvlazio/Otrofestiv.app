@@ -1,0 +1,114 @@
+{
+ "_provenance": {
+  "fuente": "agenda del MAMM y del Colombo Americano (revisión de salas, 16 oct)",
+  "capturado": "2026-10-17",
+  "metodo": "una afirmación por casilla, con su fuente (docs/FUNCION.md)"
+ },
+ "afirmaciones": [
+  {
+   "ancla": {
+    "sede": "Museo de Arte Moderno de Medellín - MAMM - Medellín",
+    "dia": "2026-10-16",
+    "hora": "16:30"
+   },
+   "casilla": "ticket_url",
+   "valor": "https://www.elmamm.org/producto/corazon-de-las-tinieblas/",
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://www.elmamm.org/cine/8o-festival-fantasmagoria/",
+    "fecha": "2026-10-16"
+   },
+   "evidencia": "Corazón de las tinieblas — página de compra del MAMM ($14.000; $10.000 mayores de 60, menores de 12 y estudiantes, solo en taquilla)"
+  },
+  {
+   "ancla": {
+    "sede": "Museo de Arte Moderno de Medellín - MAMM - Medellín",
+    "dia": "2026-10-17",
+    "hora": "16:30"
+   },
+   "casilla": "ticket_url",
+   "valor": "https://www.elmamm.org/producto/black-moon/",
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://www.elmamm.org/cine/8o-festival-fantasmagoria/",
+    "fecha": "2026-10-16"
+   },
+   "evidencia": "Black Moon — página de compra del MAMM ($14.000; $10.000 mayores de 60, menores de 12 y estudiantes, solo en taquilla)"
+  },
+  {
+   "ancla": {
+    "sede": "Museo de Arte Moderno de Medellín - MAMM - Medellín",
+    "dia": "2026-10-18",
+    "hora": "16:00"
+   },
+   "casilla": "ticket_url",
+   "valor": "https://www.elmamm.org/producto/rio-bravo/",
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://www.elmamm.org/cine/8o-festival-fantasmagoria/",
+    "fecha": "2026-10-16"
+   },
+   "evidencia": "Rio Bravo — página de compra del MAMM ($14.000; $10.000 mayores de 60, menores de 12 y estudiantes, solo en taquilla)"
+  },
+  {
+   "ancla": {
+    "sede": "Museo de Arte Moderno de Medellín - MAMM - Medellín",
+    "dia": "2026-10-22",
+    "hora": "18:30"
+   },
+   "casilla": "ticket_url",
+   "valor": "https://www.elmamm.org/producto/carrie/",
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://www.elmamm.org/cine/8o-festival-fantasmagoria/",
+    "fecha": "2026-10-16"
+   },
+   "evidencia": "Carrie — página de compra del MAMM ($14.000; $10.000 mayores de 60, menores de 12 y estudiantes, solo en taquilla)"
+  },
+  {
+   "ancla": {
+    "sede": "Museo de Arte Moderno de Medellín - MAMM - Medellín",
+    "dia": "2026-10-23",
+    "hora": "18:30"
+   },
+   "casilla": "ticket_url",
+   "valor": "https://www.elmamm.org/producto/you-are-the-film/",
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://www.elmamm.org/cine/8o-festival-fantasmagoria/",
+    "fecha": "2026-10-16"
+   },
+   "evidencia": "You Are the Film — página de compra del MAMM ($14.000; $10.000 mayores de 60, menores de 12 y estudiantes, solo en taquilla)"
+  },
+  {
+   "ancla": {
+    "sede": "Museo de Arte Moderno de Medellín - MAMM - Medellín",
+    "dia": "2026-10-24",
+    "hora": "16:30"
+   },
+   "casilla": "ticket_url",
+   "valor": "https://www.elmamm.org/producto/el-desierto-rojo/",
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://www.elmamm.org/cine/8o-festival-fantasmagoria/",
+    "fecha": "2026-10-16"
+   },
+   "evidencia": "El desierto rojo — página de compra del MAMM ($14.000; $10.000 mayores de 60, menores de 12 y estudiantes, solo en taquilla)"
+  },
+  {
+   "ancla": {
+    "sede": "Centro Colombo Americano - Medellín",
+    "dia": "2026-10-18",
+    "hora": "16:00"
+   },
+   "casilla": "sala",
+   "valor": "Sala 1",
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://www.colombomedellin.edu.co/programacion-por-salas/",
+    "fecha": "2026-10-16"
+   },
+   "evidencia": "Historia de lo Oculto · domingo 18 oct · 4:00 pm · Sala 1"
+  }
+ ]
+}

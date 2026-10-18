@@ -336,10 +336,13 @@ def main():
             continue
         partes = [p.strip() for p in x['titulo'].split('|')]
         nombre, detalle = partes[0], ' | '.join(partes[1:]) or None
-        if x['sede'] not in SEDES:
+        # sin distinguir mayúsculas: la web pasó «SALA MADAME BLUE» a «Sala Madame
+        # Blue» (17 oct) y tres tarjetas se caían de la tabla por la caja
+        _sedes = {k.upper(): v for k, v in SEDES.items()}
+        if x['sede'].upper() not in _sedes:
             fallos.append(f'tarjeta {x["id"]}: sede sin entrada en la tabla: {x["sede"]!r}')
             continue
-        sede, sala = SEDES[x['sede']]
+        sede, sala = _sedes[x['sede'].upper()]
         r = {'dia': x['dia'], 'hora': x['hora'], 'sede': sede, 'sala': sala, 'sede_cruda': x['sede'],
              'acceso': acceso(x),
              '_src': {'url': URL, 'date': '2026-10-06', 'tarjeta': x['id']}}
