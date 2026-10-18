@@ -324,7 +324,8 @@
    },
    "is_free": true,
    "description": "Festivales, circulación y nuevas alianzas para el cine local. Directores de festivales de distintos territorios de la región se encuentran para hablar sobre circulación, colaboración y nuevas formas de conectar películas, creadores y públicos. Una conversación sobre cómo fortalecer los vínculos entre nuestros festivales y abrir nuevos caminos para el cine iberoamericano.",
-   "description_lang": "es"
+   "description_lang": "es",
+   "id": "f_e305a6ff14"
   },
   {
    "title": "Gabin",
@@ -367,7 +368,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_cd5962648b"
   },
   {
    "title": "We Are Aliens",
@@ -410,7 +412,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_698de1edde"
   },
   {
    "title": "Como Todo Mortal",
@@ -453,7 +456,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_a1bd244fbf"
   },
   {
    "title": "Heat",
@@ -496,7 +500,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_bbd7e469e6"
   },
   {
    "title": "Eklipse",
@@ -539,7 +544,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_b8aa3d1044"
   },
   {
    "title": "Tristan Forever",
@@ -582,7 +588,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_ec39d7ef42"
   },
   {
    "title": "Arquitectura de lo Invisible: Montaje y Trabajo Actoral",
@@ -607,7 +614,8 @@
    },
    "is_free": true,
    "description": "Gustavo Vasco y Estefanía Piñeres conversarán sobre la relación entre el montaje y el trabajo actoral, a partir de sus experiencias como montajista y actriz, respectivamente, y desde el proceso que hoy comparten en el montaje de la ópera prima de Estefanía como directora. Una exploración sobre cómo el montaje transforma la actuación y cómo el trabajo actoral, a su vez, construye y revela nuevas posibilidades para la pieza audiovisual. En alianza con ECCA.",
-   "description_lang": "es"
+   "description_lang": "es",
+   "id": "f_ae68c9f6a5"
   },
   {
    "title": "La Libertad Doble",
@@ -651,7 +659,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_2528de7b82"
   },
   {
    "title": "Trial of Hein",
@@ -694,7 +703,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_9844726eb6"
   },
   {
    "title": "Del trópico al norte: industria documental y posibilidades de coproducción",
@@ -719,7 +729,8 @@
    },
    "is_free": true,
    "description": "¿Cómo funciona la industria audiovisual en los países nórdicos y qué posibilidades existen para colaborar desde otros territorios? Anders Riis-Hansen compartirá su experiencia en la industria documental nórdica y hablará sobre sus dinámicas de producción, así como sobre las posibilidades y retos de la coproducción internacional. Un espacio para conocer de primera mano cómo se mueve el documental en los países nórdicos y qué oportunidades pueden surgir del encuentro con otros contextos audiovisuales.",
-   "description_lang": "es"
+   "description_lang": "es",
+   "id": "f_f9c5d14f43"
   },
   {
    "title": "El Prófugo",
@@ -764,7 +775,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_3606ad3479"
   },
   {
    "title": "The Man I Love",
@@ -807,7 +819,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_72307e4584"
   },
   {
    "title": "Everytime",
@@ -851,7 +864,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_7dd738aae0"
   },
   {
    "title": "Muestra de Cortometrajes BIFF Bang",
@@ -1004,7 +1018,8 @@
    ],
    "titulos_anteriores": [
     "Muestra de cortometrajes BIFF Bang"
-   ]
+   ],
+   "id": "f_c57f4a8605"
   },
   {
    "title": "6 Meses en el Edificio Rosa con Azul",
@@ -1048,7 +1063,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_dbd8eec947"
   },
   {
    "title": "Objet A",
@@ -1091,7 +1107,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_0c4873f511"
   },
   {
    "title": "Filipiñana",
@@ -1134,7 +1151,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_acb47f98f0"
   },
   {
    "title": "Princesa Burro",
@@ -1178,7 +1196,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_4b9d71378c"
   },
   {
    "title": "Fjord",
@@ -1214,7 +1233,8 @@
    "by_invitation": true,
    "lbSlug": "fjord-2026",
    "tmdb_id": 1401459,
-   "synopsis_en": "Following the deaths of Mihai's parents, Mihai and Lisbeth Gheorghiu leave their life behind in Romania and move with their children to a remote village in Norway, hoping to rebuild their lives near Lisbeth's family. There, they grow close to their neighbors, the Halbergs, whose warmth gives them hope for a fresh start. But the fragile peace begins to unravel when the Gheorghiu family’s young daughter, Elia, arrives at school covered in bruises."
+   "synopsis_en": "Following the deaths of Mihai's parents, Mihai and Lisbeth Gheorghiu leave their life behind in Romania and move with their children to a remote village in Norway, hoping to rebuild their lives near Lisbeth's family. There, they grow close to their neighbors, the Halbergs, whose warmth gives them hope for a fresh start. But the fragile peace begins to unravel when the Gheorghiu family’s young daughter, Elia, arrives at school covered in bruises.",
+   "id": "f_c233e05e13"
   },
   {
    "title": "Hangar Rojo",
@@ -1258,7 +1278,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_38d69e0172"
   },
   {
    "title": "Goodbye Cruel World",
@@ -1301,7 +1322,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_63fbb5f45f"
   },
   {
    "title": "Mariinka",
@@ -1344,7 +1366,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_0eb18ac475"
   },
   {
    "title": "Variations on a Theme",
@@ -1387,7 +1410,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_57bfd457bb"
   },
   {
    "title": "Let Us Through, Dear Ancestors",
@@ -1430,7 +1454,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_d8cb83e602"
   },
   {
    "title": "Arquitectura de lo Invisible: Montaje y Guion",
@@ -1455,7 +1480,8 @@
    },
    "is_free": true,
    "description": "Aunque distantes en el proceso de creación de la obra audiovisual, el guión y el montaje se encuentran en su condición de escritura. Nicolás Serrano y María Alejandra Briganti compartirán una conversación sobre los cruces y divergencias de sus oficios, desde el vértigo frente al espacio en blanco a la versión final. En alianza con ECCA.",
-   "description_lang": "es"
+   "description_lang": "es",
+   "id": "f_766d90060d"
   },
   {
    "title": "Arquitectura de lo Invisible: Montaje y Composición Musical",
@@ -1480,7 +1506,8 @@
    },
    "is_free": true,
    "description": "Sebastián Hernández y Camilo Sanabria conversarán, a partir de su experiencia de trabajo compartida en la segunda temporada de la serie Cien Años de Soledad, sobre la conexión entre el montaje y la composición musical. Un acercamiento al diálogo creativo para tejer estructura, ritmo y emoción. En alianza con ECCA. Prueba logos Título de la película lorem ipsum dolor 1 Lorem ipsum dolor Páis | año Nunc elementum tellus id eleifend dignissim. Vestibulum sed luctus dui. Mauris feugiat lobortis leo, sit amet vulputate augue sollicitudin id. Nulla dictum mauris ac rhoncus accumsan. Integer sed sapien feugiat [...] Título de la película lorem ipsum dolor 2 Lorem ipsum dolor Páis | año Nunc elementum tellus id eleifend dignissim. Vestibulum sed luctus dui. Mauris feugiat lobortis leo, sit amet vulputate augue sollicitudin id. Nulla dictum mauris ac rhoncus accumsan. Integer sed sapien feugiat [...] prev next © 2026 - Todos los derechos reservados - Términos y condiciones .",
-   "description_lang": "es"
+   "description_lang": "es",
+   "id": "f_ae0a4d6093"
   },
   {
    "title": "Mariinka",
@@ -1523,7 +1550,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_5f413efca0"
   },
   {
    "title": "Tierra de Mi Padre",
@@ -1567,7 +1595,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_965aceb35b"
   },
   {
    "title": "La Libertad Doble",
@@ -1611,7 +1640,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_4657837efe"
   },
   {
    "title": "Como Todo Mortal",
@@ -1654,7 +1684,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_60ce7ac324"
   },
   {
    "title": "Trial of Hein",
@@ -1697,7 +1728,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_0124a5aac0"
   },
   {
    "title": "Red Rocks",
@@ -1740,7 +1772,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_ddf2a9d2ac"
   },
   {
    "title": "Nina Roza",
@@ -1783,7 +1816,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_83f713b075"
   },
   {
    "title": "Temporada de Caza",
@@ -1828,7 +1862,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_50b2572b65"
   },
   {
    "title": "Siempre Soy Tu Animal Materno",
@@ -1872,7 +1907,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_ce0b599404"
   },
   {
    "title": "El Rapto",
@@ -1917,7 +1953,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_aec5785041"
   },
   {
    "title": "Let Us Through, Dear Ancestors",
@@ -1960,7 +1997,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_21cafe9a42"
   },
   {
    "title": "Gabin",
@@ -2003,7 +2041,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_67cd1e9ee8"
   },
   {
    "title": "El Prófugo",
@@ -2048,7 +2087,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_03bbe609f1"
   },
   {
    "title": "Soumsoum, The Night Of The Stars",
@@ -2091,7 +2131,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_9b7781861e"
   },
   {
    "title": "Muestra de Cortometrajes BIFF Bang",
@@ -2245,7 +2286,8 @@
    ],
    "titulos_anteriores": [
     "Muestra de cortometrajes BIFF Bang"
-   ]
+   ],
+   "id": "f_85b5d6e1bf"
   },
   {
    "title": "Historia del Miedo",
@@ -2290,7 +2332,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_554cf944cb"
   },
   {
    "title": "Zama",
@@ -2334,7 +2377,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_f824fc2506"
   },
   {
    "title": "Slave Bird",
@@ -2377,7 +2421,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_5407fae75c"
   },
   {
    "title": "El Despertar",
@@ -2422,7 +2467,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_78d18bda10"
   },
   {
    "title": "Minotauro",
@@ -2467,7 +2513,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_ebdcaedc9a"
   },
   {
    "title": "Dua",
@@ -2510,7 +2557,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_435a8308f3"
   },
   {
    "title": "El Deshielo",
@@ -2554,7 +2602,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_2cce1df08e"
   },
   {
    "title": "Elephants in the Fog",
@@ -2597,7 +2646,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_15c4d0b8ff"
   },
   {
    "title": "Cortos que llegan lejos, historias que empiezan en el biff bang",
@@ -2620,7 +2670,8 @@
     "url": "https://biff.co/documentos/Programacion_BIFF_12_DIGITAL.pdf",
     "date": "2026-09-26"
    },
-   "is_free": true
+   "is_free": true,
+   "id": "f_656b66e114"
   },
   {
    "title": "Papaya",
@@ -2663,7 +2714,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_4b1b430aa1"
   },
   {
    "title": "Cobarde",
@@ -2707,7 +2759,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_f2c5dc1d4e"
   },
   {
    "title": "Lejos de los Árboles",
@@ -2752,7 +2805,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_7ed9eb261e"
   },
   {
    "title": "Hermanas",
@@ -2797,7 +2851,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_339fd5fce7"
   },
   {
    "title": "La Gradiva",
@@ -2840,7 +2895,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_4e874261d6"
   },
   {
    "title": "Zama",
@@ -2884,7 +2940,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_f10dabcc78"
   },
   {
    "title": "Everytime",
@@ -2928,7 +2985,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_b8a2dac354"
   },
   {
    "title": "Aquí",
@@ -2971,7 +3029,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_b3a5bd6a30"
   },
   {
    "title": "No Quiero Ser un Hombre",
@@ -3007,7 +3066,8 @@
    "lbSlug": "i-dont-want-to-be-a-man",
    "tmdb_id": 48263,
    "synopsis_en": "A teenage tomboy, tired of being bossed around by her strict guardian, impersonates a man so she can have more fun. She quickly discovers that being the opposite sex isn’t as easy as she had hoped for. What ensues is a gender-bending comedy decades ahead of its time.",
-   "title_en": "I Don't Want to Be a Man"
+   "title_en": "I Don't Want to Be a Man",
+   "id": "f_db6904820f"
   },
   {
    "title": "Red Rocks",
@@ -3050,7 +3110,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_30a4d0a3da"
   },
   {
    "title": "Luis Tercero",
@@ -3093,7 +3154,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_4960c010b0"
   },
   {
    "title": "Muestra de Cortometrajes BIFF Bang",
@@ -3245,7 +3307,8 @@
    ],
    "titulos_anteriores": [
     "Muestra de cortometrajes BIFF Bang"
-   ]
+   ],
+   "id": "f_111074fd18"
   },
   {
    "title": "Minotauro",
@@ -3290,7 +3353,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_e43a5d6c6b"
   },
   {
    "title": "Goodbye Cruel World",
@@ -3333,7 +3397,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_5b2bb684b1"
   },
   {
    "title": "El Rapto",
@@ -3378,7 +3443,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_da7a2cef0d"
   },
   {
    "title": "Temporada de Caza",
@@ -3423,7 +3489,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_0a23616550"
   },
   {
    "title": "9 Temples to Heaven",
@@ -3466,7 +3533,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_05c7bc2cec"
   },
   {
    "title": "Iluminada",
@@ -3510,7 +3578,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_2f4d84cb76"
   },
   {
    "title": "La Bola Negra",
@@ -3552,7 +3621,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_9c648f9907"
   },
   {
    "title": "Variations on a Theme",
@@ -3595,7 +3665,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_f5de79018a"
   },
   {
    "title": "Light Pillar",
@@ -3638,7 +3709,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_9bcc1466df"
   },
   {
    "title": "Historia del Miedo",
@@ -3683,7 +3755,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_88fac4296f"
   },
   {
    "title": "A Providência e a Guitarra",
@@ -3728,7 +3801,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_51a4c1fbc4"
   },
   {
    "title": "De la mirada propia a una forma de cine",
@@ -3751,7 +3825,8 @@
     "url": "https://biff.co/documentos/Programacion_BIFF_12_DIGITAL.pdf",
     "date": "2026-09-26"
    },
-   "is_free": true
+   "is_free": true,
+   "id": "f_70ca774d5f"
   },
   {
    "title": "6 Meses en el Edificio Rosa con Azul",
@@ -3795,7 +3870,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_942bde39f0"
   },
   {
    "title": "Luis Tercero",
@@ -3838,7 +3914,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_c8865ac56d"
   },
   {
    "title": "Hermanas",
@@ -3883,7 +3960,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_4fceab443f"
   },
   {
    "title": "Dua",
@@ -3927,7 +4005,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_009f6317ac"
   },
   {
    "title": "Nina Roza",
@@ -3970,7 +4049,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_797898147d"
   },
   {
    "title": "Los Nuevos",
@@ -4014,7 +4094,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_9e3c25e86e"
   },
   {
    "title": "Eklipse",
@@ -4057,7 +4138,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_a18ee18771"
   },
   {
    "title": "Filipiñana",
@@ -4100,7 +4182,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_173ae84e8a"
   },
   {
    "title": "A Providência e a Guitarra",
@@ -4145,7 +4228,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_5d9500a5c5"
   },
   {
    "title": "Iluminada",
@@ -4189,7 +4273,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_4fa316a6ab"
   },
   {
    "title": "The Burning Giants",
@@ -4232,7 +4317,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_150bad68d3"
   },
   {
    "title": "Muestra de Cortometrajes BIFF Bang",
@@ -4384,7 +4470,8 @@
    ],
    "titulos_anteriores": [
     "Muestra de cortometrajes BIFF Bang"
-   ]
+   ],
+   "id": "f_c2a0422929"
   },
   {
    "title": "Sants",
@@ -4427,7 +4514,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_666a2f2328"
   },
   {
    "title": "Lejos de los Árboles",
@@ -4472,7 +4560,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_e4a1f0842f"
   },
   {
    "title": "We Are Aliens",
@@ -4515,7 +4604,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_fc6e7ab6f7"
   },
   {
    "title": "El Deshielo",
@@ -4559,7 +4649,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_4b065bfd14"
   },
   {
    "title": "Elephants in the Fog",
@@ -4602,7 +4693,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_4dfd1d1712"
   },
   {
    "title": "Donde Comienza el Río",
@@ -4647,7 +4739,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_4d21b52a6d"
   },
   {
    "title": "Cobarde",
@@ -4691,7 +4784,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_26201fe297"
   },
   {
    "title": "Aquí",
@@ -4734,7 +4828,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_ef81c82888"
   },
   {
    "title": "Como Todo Mortal",
@@ -4777,7 +4872,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_83e6c9ecc7"
   },
   {
    "title": "The Man I Love",
@@ -4820,7 +4916,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_0a65fed868"
   },
   {
    "title": "El cine como camino de regreso",
@@ -4843,7 +4940,8 @@
     "url": "https://biff.co/documentos/Programacion_BIFF_12_DIGITAL.pdf",
     "date": "2026-09-26"
    },
-   "is_free": true
+   "is_free": true,
+   "id": "f_da161958ad"
   },
   {
    "title": "Los Nuevos",
@@ -4887,7 +4985,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_f103a8469e"
   },
   {
    "title": "The Man I Love",
@@ -4930,7 +5029,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_82bcbf007b"
   },
   {
    "title": "Soumsoum, The Night Of The Stars",
@@ -4973,7 +5073,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_9a9da9de70"
   },
   {
    "title": "Lejos de los Árboles",
@@ -5018,7 +5119,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_9e7ff1b013"
   },
   {
    "title": "Minotauro",
@@ -5063,7 +5165,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_1691964e99"
   },
   {
    "title": "Papaya",
@@ -5106,7 +5209,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_38d52260e3"
   },
   {
    "title": "Princesa Burro",
@@ -5150,7 +5254,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_22009518eb"
   },
   {
    "title": "Dua",
@@ -5194,7 +5299,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_5e4bc8e032"
   },
   {
    "title": "Everytime",
@@ -5238,7 +5344,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_1c5544baa0"
   },
   {
    "title": "La Gradiva",
@@ -5281,7 +5388,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_2a7a4a668f"
   },
   {
    "title": "Muestra de Cortometrajes BIFF Bang",
@@ -5434,7 +5542,8 @@
    ],
    "titulos_anteriores": [
     "Muestra de cortometrajes BIFF Bang"
-   ]
+   ],
+   "id": "f_9e0bb0216d"
   },
   {
    "title": "Slave Bird",
@@ -5478,7 +5587,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_ff7d88e958"
   },
   {
    "title": "Hermanas",
@@ -5523,7 +5633,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_7451b5d452"
   },
   {
    "title": "Sants",
@@ -5566,7 +5677,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_e7db88aaa0"
   },
   {
    "title": "A Providência e a Guitarra",
@@ -5611,7 +5723,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_196b75f69d"
   },
   {
    "title": "Tristan Forever",
@@ -5654,7 +5767,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_69272a9041"
   },
   {
    "title": "Objet A",
@@ -5697,7 +5811,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_3b3b105787"
   },
   {
    "title": "We Are Aliens",
@@ -5740,7 +5855,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_0a9369ca7b"
   },
   {
    "title": "Fjord",
@@ -5783,7 +5899,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_dc4571d7a5"
   },
   {
    "title": "Tierra de Mi Padre",
@@ -5827,7 +5944,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_274eeb145e"
   },
   {
    "title": "Siempre Soy Tu Animal Materno",
@@ -5871,7 +5989,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_e02561d701"
   },
   {
    "title": "Hangar Rojo",
@@ -5915,7 +6034,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_a998e41c4e"
   },
   {
    "title": "Heat",
@@ -5958,7 +6078,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_2b0b2917e5"
   },
   {
    "title": "Light Pillar",
@@ -6001,7 +6122,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_329789530a"
   },
   {
    "title": "Let Us Through, Dear Ancestors",
@@ -6044,7 +6166,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_656b4a897e"
   },
   {
    "title": "Gabin",
@@ -6087,7 +6210,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_b30ce6aaec"
   },
   {
    "title": "The Burning Giants",
@@ -6130,7 +6254,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_bb9bd00c55"
   },
   {
    "title": "Muestra de Cortometrajes BIFF Bang",
@@ -6284,7 +6409,8 @@
    ],
    "titulos_anteriores": [
     "Muestra de cortometrajes BIFF Bang"
-   ]
+   ],
+   "id": "f_f708b5541d"
   },
   {
    "title": "Donde Comienza el Río",
@@ -6329,7 +6455,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_8a93539bbf"
   },
   {
    "title": "Red Rocks",
@@ -6372,7 +6499,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_410d690936"
   },
   {
    "title": "Los Nuevos",
@@ -6416,7 +6544,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_87bdcdcc63"
   },
   {
    "title": "9 Temples to Heaven",
@@ -6459,7 +6588,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_b90cbbc0f4"
   },
   {
    "title": "La Bola Negra",
@@ -6501,7 +6631,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_5d5799fc35"
   },
   {
    "title": "Slave Bird",
@@ -6545,7 +6676,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_e9eb037e72"
   },
   {
    "title": "Tierra de Mi Padre",
@@ -6589,7 +6721,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_7ac6e6faba"
   },
   {
    "title": "La Libertad Doble",
@@ -6633,7 +6766,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_852c8a65c1"
   },
   {
    "title": "Nina Roza",
@@ -6676,7 +6810,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_4993335e2f"
   },
   {
    "title": "Construir un mundo para la cámara desde la actuación",
@@ -6699,7 +6834,8 @@
     "url": "https://biff.co/documentos/Programacion_BIFF_12_DIGITAL.pdf",
     "date": "2026-09-26"
    },
-   "is_free": true
+   "is_free": true,
+   "id": "f_813bb29333"
   },
   {
    "title": "Variations on a Theme",
@@ -6742,7 +6878,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_285034ea6f"
   },
   {
    "title": "Siempre Soy Tu Animal Materno",
@@ -6786,7 +6923,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_3553a3f0aa"
   },
   {
    "title": "Hangar Rojo",
@@ -6830,7 +6968,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_e602d50daa"
   },
   {
    "title": "Elephants in the Fog",
@@ -6873,7 +7012,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_ce8e96d834"
   },
   {
    "title": "Filipiñana",
@@ -6916,7 +7056,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_e29999deba"
   },
   {
    "title": "Mariinka",
@@ -6959,7 +7100,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_77ab22bfff"
   },
   {
    "title": "Aquí",
@@ -7002,7 +7144,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_944599dd52"
   },
   {
    "title": "La Gradiva",
@@ -7045,7 +7188,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_b9aee5c3c7"
   },
   {
    "title": "La Bola Negra",
@@ -7088,7 +7232,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_0bf12dd031"
   },
   {
    "title": "Muestra de Cortometrajes BIFF Bang",
@@ -7242,7 +7387,8 @@
    ],
    "titulos_anteriores": [
     "Muestra de cortometrajes BIFF Bang"
-   ]
+   ],
+   "id": "f_44fd8248f7"
   },
   {
    "title": "Soumsoum, The Night Of The Stars",
@@ -7285,7 +7431,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_f0ca56535b"
   },
   {
    "title": "El Despertar",
@@ -7330,7 +7477,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_4977d8337f"
   },
   {
    "title": "El Deshielo",
@@ -7374,7 +7522,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_e0225e9fe7"
   },
   {
    "title": "6 Meses en el Edificio Rosa con Azul",
@@ -7418,7 +7567,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_c191e3cdf1"
   },
   {
    "title": "Eklipse",
@@ -7461,7 +7611,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_5b2afa107a"
   },
   {
    "title": "The Burning Giants",
@@ -7504,7 +7655,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_14ff4ee114"
   },
   {
    "title": "Cobarde",
@@ -7549,7 +7701,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_a88fe809bf"
   },
   {
    "title": "Princesa Burro",
@@ -7593,7 +7746,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_822992290c"
   },
   {
    "title": "Light Pillar",
@@ -7636,7 +7790,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_0cf12ff13f"
   },
   {
    "title": "Trial of Hein",
@@ -7679,7 +7834,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_b7f4605cf8"
   },
   {
    "title": "Objet A",
@@ -7722,7 +7878,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_da5b940a39"
   },
   {
    "title": "Fjord",
@@ -7765,7 +7922,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_b213435cf6"
   }
  ],
  "_corrido": {

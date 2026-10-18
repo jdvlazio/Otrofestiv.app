@@ -1,0 +1,1436 @@
+{
+ "_provenance": {
+  "fuente": "ids-legado.py: ids estables congelados desde lo publicado (docs/FUNCION.md §11.2)",
+  "capturado": "2026-10-18"
+ },
+ "funciones": {
+  "f_9464934411": {
+   "sede": "OKX Theater at BMCC TPAC",
+   "dia": "2026-06-13",
+   "hora": "8:00 PM",
+   "sala": "",
+   "titulo": "closing night alicia keys girl from hell s kitchen"
+  },
+  "f_35d62d01af": {
+   "sede": "Beacon Theatre",
+   "dia": "2026-06-03",
+   "hora": "8:00 PM",
+   "sala": "",
+   "titulo": "opening night earth wind fire to be celestial vs that s the weight of the world"
+  },
+  "f_a2aaf7c802": {
+   "sede": "Beacon Theatre",
+   "dia": "2026-06-04",
+   "hora": "7:00 PM",
+   "sala": "",
+   "titulo": "sara bareilles good grief"
+  },
+  "f_3b581a5d23": {
+   "sede": "OKX Theater at BMCC TPAC",
+   "dia": "2026-06-11",
+   "hora": "8:00 PM",
+   "sala": "",
+   "titulo": "tribeca at 25 a conversation with co founders jane rosenthal and robert de niro"
+  },
+  "f_1ee8b62ed0": {
+   "sede": "Spring Studios",
+   "dia": "2026-06-11",
+   "hora": "4:00 PM",
+   "sala": "",
+   "titulo": "tribeca festival awards night"
+  },
+  "f_dbc7124c8e": {
+   "sede": "Spring Studios",
+   "dia": "2026-06-06",
+   "hora": "1:30 PM",
+   "sala": "",
+   "titulo": "doc meets world"
+  },
+  "f_37ac1fb938": {
+   "sede": "OKX Theater at BMCC TPAC",
+   "dia": "2026-06-04",
+   "hora": "8:00 PM",
+   "sala": "",
+   "titulo": "frampton"
+  },
+  "f_dd88a50c88": {
+   "sede": "OKX Theater at BMCC TPAC",
+   "dia": "2026-06-08",
+   "hora": "5:00 PM",
+   "sala": "",
+   "titulo": "hadestown the musical"
+  },
+  "f_92b53deb52": {
+   "sede": "Spring Studios",
+   "dia": "2026-06-04",
+   "hora": "8:30 PM",
+   "sala": "",
+   "titulo": "imaginal disk"
+  },
+  "f_58cdfd9604": {
+   "sede": "OKX Theater at BMCC TPAC",
+   "dia": "2026-06-08",
+   "hora": "8:30 PM",
+   "sala": "",
+   "titulo": "katy perry the lifetimes tour live from paris"
+  },
+  "f_4a758505e7": {
+   "sede": "SVA Theatre",
+   "dia": "2026-06-07",
+   "hora": "2:00 PM",
+   "sala": "",
+   "titulo": "miss representation rise up"
+  },
+  "f_3b7b284d5f": {
+   "sede": "OKX Theater at BMCC TPAC",
+   "dia": "2026-06-12",
+   "hora": "5:00 PM",
+   "sala": "",
+   "titulo": "mumford sons the house band"
+  },
+  "f_5fc39bef13": {
+   "sede": "OKX Theater at BMCC TPAC",
+   "dia": "2026-06-07",
+   "hora": "8:15 PM",
+   "sala": "",
+   "titulo": "noga"
+  },
+  "f_39b7ca9aac": {
+   "sede": "Spring Studios",
+   "dia": "2026-06-06",
+   "hora": "5:00 PM",
+   "sala": "",
+   "titulo": "playing potus"
+  },
+  "f_090590c5a8": {
+   "sede": "Spring Studios",
+   "dia": "2026-06-07",
+   "hora": "5:00 PM",
+   "sala": "",
+   "titulo": "the symphony of dance"
+  },
+  "f_8fcc39e82e": {
+   "sede": "Spring Studios",
+   "dia": "2026-06-11",
+   "hora": "8:00 PM",
+   "sala": "",
+   "titulo": "trinity the story of the lox"
+  },
+  "f_c6d7fa59c5": {
+   "sede": "Village East by Angelika",
+   "dia": "2026-06-10",
+   "hora": "8:30 PM",
+   "sala": "",
+   "titulo": "act one"
+  },
+  "f_ae7233cff3": {
+   "sede": "SVA Theatre",
+   "dia": "2026-06-11",
+   "hora": "8:00 PM",
+   "sala": "",
+   "titulo": "adults"
+  },
+  "f_8c8ff9536a": {
+   "sede": "SVA Theatre",
+   "dia": "2026-06-04",
+   "hora": "8:30 PM",
+   "sala": "",
+   "titulo": "alice and steve"
+  },
+  "f_ec698f2181": {
+   "sede": "Village East by Angelika",
+   "dia": "2026-06-07",
+   "hora": "2:30 PM",
+   "sala": "",
+   "titulo": "clean hands"
+  },
+  "f_c6b0032269": {
+   "sede": "OKX Theater at BMCC TPAC",
+   "dia": "2026-06-07",
+   "hora": "5:00 PM",
+   "sala": "",
+   "titulo": "finnegan s foursome"
+  },
+  "f_5cc2eb38ab": {
+   "sede": "OKX Theater at BMCC TPAC",
+   "dia": "2026-06-10",
+   "hora": "8:00 PM",
+   "sala": "",
+   "titulo": "gail daughtry and the celebrity sex pass"
+  },
+  "f_62293ee9da": {
+   "sede": "OKX Theater at BMCC TPAC",
+   "dia": "2026-06-06",
+   "hora": "5:00 PM",
+   "sala": "",
+   "titulo": "happy hours"
+  },
+  "f_a971967099": {
+   "sede": "Village East by Angelika",
+   "dia": "2026-06-09",
+   "hora": "8:30 PM",
+   "sala": "",
+   "titulo": "iconoclast"
+  },
+  "f_3a53004c66": {
+   "sede": "SVA Theatre",
+   "dia": "2026-06-07",
+   "hora": "8:00 PM",
+   "sala": "",
+   "titulo": "in memoriam"
+  },
+  "f_b6cc00615d": {
+   "sede": "SVA Theatre",
+   "dia": "2026-06-10",
+   "hora": "8:00 PM",
+   "sala": "",
+   "titulo": "in the hand of dante"
+  },
+  "f_18957b5939": {
+   "sede": "OKX Theater at BMCC TPAC",
+   "dia": "2026-06-09",
+   "hora": "8:00 PM",
+   "sala": "",
+   "titulo": "killing castro"
+  },
+  "f_e414360aab": {
+   "sede": "SVA Theatre",
+   "dia": "2026-06-09",
+   "hora": "5:00 PM",
+   "sala": "",
+   "titulo": "never change"
+  },
+  "f_6ab8b94efb": {
+   "sede": "SVA Theatre",
+   "dia": "2026-06-05",
+   "hora": "8:00 PM",
+   "sala": "",
+   "titulo": "next life"
+  },
+  "f_3a73ade371": {
+   "sede": "SVA Theatre",
+   "dia": "2026-06-06",
+   "hora": "2:30 PM",
+   "sala": "",
+   "titulo": "only what we carry"
+  },
+  "f_d6d49e077f": {
+   "sede": "SVA Theatre",
+   "dia": "2026-06-06",
+   "hora": "5:00 PM",
+   "sala": "",
+   "titulo": "rain reign"
+  },
+  "f_f6cd7562eb": {
+   "sede": "Village East by Angelika",
+   "dia": "2026-06-11",
+   "hora": "8:30 PM",
+   "sala": "",
+   "titulo": "seven o clock breakfast club for the brokenhearted"
+  },
+  "f_abf9b5206a": {
+   "sede": "SVA Theatre",
+   "dia": "2026-06-06",
+   "hora": "1:00 PM",
+   "sala": "",
+   "titulo": "take me home"
+  },
+  "f_96ed533c0b": {
+   "sede": "Village East by Angelika",
+   "dia": "2026-06-08",
+   "hora": "8:30 PM",
+   "sala": "",
+   "titulo": "that friend"
+  },
+  "f_b06fd3ad47": {
+   "sede": "SVA Theatre",
+   "dia": "2026-06-04",
+   "hora": "8:00 PM",
+   "sala": "",
+   "titulo": "the accompanist"
+  },
+  "f_25f6479755": {
+   "sede": "OKX Theater at BMCC TPAC",
+   "dia": "2026-06-06",
+   "hora": "8:00 PM",
+   "sala": "",
+   "titulo": "the last day"
+  },
+  "f_34fc26f018": {
+   "sede": "SVA Theatre",
+   "dia": "2026-06-05",
+   "hora": "5:00 PM",
+   "sala": "",
+   "titulo": "the leader"
+  },
+  "f_83ecc0b5b6": {
+   "sede": "Village East by Angelika",
+   "dia": "2026-06-07",
+   "hora": "5:30 PM",
+   "sala": "",
+   "titulo": "the long haul"
+  },
+  "f_458fa68b0f": {
+   "sede": "OKX Theater at BMCC TPAC",
+   "dia": "2026-06-05",
+   "hora": "5:00 PM",
+   "sala": "",
+   "titulo": "the revisionist"
+  },
+  "f_f3b95318b4": {
+   "sede": "Village East by Angelika",
+   "dia": "2026-06-08",
+   "hora": "5:30 PM",
+   "sala": "",
+   "titulo": "they fight"
+  },
+  "f_eacb6e5220": {
+   "sede": "AMC 19th St. East 6",
+   "dia": "2026-06-09",
+   "hora": "8:30 PM",
+   "sala": "",
+   "titulo": "unidentified"
+  },
+  "f_d8e1f34449": {
+   "sede": "SVA Theatre",
+   "dia": "2026-06-13",
+   "hora": "2:00 PM",
+   "sala": "",
+   "titulo": "young washington"
+  },
+  "f_eb70dac85a": {
+   "sede": "Village East by Angelika",
+   "dia": "2026-06-10",
+   "hora": "5:30 PM",
+   "sala": "",
+   "titulo": "4000 days"
+  },
+  "f_a7c1f3251a": {
+   "sede": "Village East by Angelika",
+   "dia": "2026-06-06",
+   "hora": "5:00 PM",
+   "sala": "",
+   "titulo": "ai probably nothing to worry about"
+  },
+  "f_fee5674434": {
+   "sede": "SVA Theatre",
+   "dia": "2026-06-06",
+   "hora": "8:00 PM",
+   "sala": "",
+   "titulo": "bob and david climb machu picchu"
+  },
+  "f_9e0a770387": {
+   "sede": "SVA Theatre",
+   "dia": "2026-06-12",
+   "hora": "8:00 PM",
+   "sala": "",
+   "titulo": "born melo"
+  },
+  "f_370d7329ef": {
+   "sede": "SVA Theatre",
+   "dia": "2026-06-10",
+   "hora": "5:00 PM",
+   "sala": "",
+   "titulo": "chris martina the final set"
+  },
+  "f_b264471136": {
+   "sede": "SVA Theatre",
+   "dia": "2026-06-08",
+   "hora": "7:30 PM",
+   "sala": "",
+   "titulo": "every year after"
+  },
+  "f_d226e2da09": {
+   "sede": "Village East by Angelika",
+   "dia": "2026-06-07",
+   "hora": "2:00 PM",
+   "sala": "",
+   "titulo": "full circle the first all black everest ascent"
+  },
+  "f_29647e3832": {
+   "sede": "SVA Theatre",
+   "dia": "2026-06-07",
+   "hora": "2:30 PM",
+   "sala": "",
+   "titulo": "grandmasters"
+  },
+  "f_e2f9625554": {
+   "sede": "SVA Theatre",
+   "dia": "2026-06-13",
+   "hora": "8:30 PM",
+   "sala": "",
+   "titulo": "guggi"
+  },
+  "f_b292712986": {
+   "sede": "Village East by Angelika",
+   "dia": "2026-06-11",
+   "hora": "5:30 PM",
+   "sala": "",
+   "titulo": "hanging by a wire"
+  },
+  "f_557c711584": {
+   "sede": "SVA Theatre",
+   "dia": "2026-06-07",
+   "hora": "5:30 PM",
+   "sala": "",
+   "titulo": "hollywood does abortion"
+  },
+  "f_e315842429": {
+   "sede": "Village East by Angelika",
+   "dia": "2026-06-12",
+   "hora": "5:30 PM",
+   "sala": "",
+   "titulo": "house of criticism"
+  },
+  "f_d1f3fd3993": {
+   "sede": "Village East by Angelika",
+   "dia": "2026-06-10",
+   "hora": "8:00 PM",
+   "sala": "",
+   "titulo": "how to feed a dictator"
+  },
+  "f_7126ce39d7": {
+   "sede": "AMC 19th St. East 6",
+   "dia": "2026-06-06",
+   "hora": "12:00 PM",
+   "sala": "",
+   "titulo": "humpty dumpty x"
+  },
+  "f_b9d2fad931": {
+   "sede": "Village East by Angelika",
+   "dia": "2026-06-04",
+   "hora": "8:45 PM",
+   "sala": "",
+   "titulo": "ix xi"
+  },
+  "f_f913207f32": {
+   "sede": "SVA Theatre",
+   "dia": "2026-06-11",
+   "hora": "5:30 PM",
+   "sala": "",
+   "titulo": "just look up"
+  },
+  "f_9ea2cb0cc8": {
+   "sede": "Village East by Angelika",
+   "dia": "2026-06-08",
+   "hora": "5:00 PM",
+   "sala": "",
+   "titulo": "march forth"
+  },
+  "f_d8366ba9ca": {
+   "sede": "SVA Theatre",
+   "dia": "2026-06-04",
+   "hora": "5:00 PM",
+   "sala": "",
+   "titulo": "mario"
+  },
+  "f_154e9530bc": {
+   "sede": "SVA Theatre",
+   "dia": "2026-06-06",
+   "hora": "5:30 PM",
+   "sala": "",
+   "titulo": "mineshaft the cruising murders"
+  },
+  "f_59e501d90d": {
+   "sede": "Spring Studios",
+   "dia": "2026-06-12",
+   "hora": "8:30 PM",
+   "sala": "",
+   "titulo": "mouth full of golds"
+  },
+  "f_6acbd1f154": {
+   "sede": "SVA Theatre",
+   "dia": "2026-06-07",
+   "hora": "8:30 PM",
+   "sala": "",
+   "titulo": "odyssey"
+  },
+  "f_8848c8f955": {
+   "sede": "Village East by Angelika",
+   "dia": "2026-06-09",
+   "hora": "5:30 PM",
+   "sala": "",
+   "titulo": "spin wars"
+  },
+  "f_dfae42b491": {
+   "sede": "Village East by Angelika",
+   "dia": "2026-06-05",
+   "hora": "5:00 PM",
+   "sala": "",
+   "titulo": "stealing magic"
+  },
+  "f_7d154b2b99": {
+   "sede": "SVA Theatre",
+   "dia": "2026-06-05",
+   "hora": "5:30 PM",
+   "sala": "",
+   "titulo": "the a word the future of aging"
+  },
+  "f_ee7b6a8230": {
+   "sede": "Spring Studios",
+   "dia": "2026-06-09",
+   "hora": "5:30 PM",
+   "sala": "",
+   "titulo": "the best summer"
+  },
+  "f_92c19411ab": {
+   "sede": "SVA Theatre",
+   "dia": "2026-06-11",
+   "hora": "8:30 PM",
+   "sala": "",
+   "titulo": "the lion queen"
+  },
+  "f_c28847634d": {
+   "sede": "SVA Theatre",
+   "dia": "2026-06-05",
+   "hora": "8:30 PM",
+   "sala": "",
+   "titulo": "the lorraine"
+  },
+  "f_3eba57345a": {
+   "sede": "SVA Theatre",
+   "dia": "2026-06-07",
+   "hora": "5:00 PM",
+   "sala": "",
+   "titulo": "threeasfour full circle"
+  },
+  "f_5ba610e1aa": {
+   "sede": "Village East by Angelika",
+   "dia": "2026-06-04",
+   "hora": "5:30 PM",
+   "sala": "",
+   "titulo": "tiktok never dies"
+  },
+  "f_573f39ea47": {
+   "sede": "SVA Theatre",
+   "dia": "2026-06-12",
+   "hora": "5:00 PM",
+   "sala": "",
+   "titulo": "whipple s world"
+  },
+  "f_2292726e03": {
+   "sede": "Village East by Angelika",
+   "dia": "2026-06-06",
+   "hora": "9:15 PM",
+   "sala": "",
+   "titulo": "breeder"
+  },
+  "f_a07223c579": {
+   "sede": "Village East by Angelika",
+   "dia": "2026-06-07",
+   "hora": "9:15 PM",
+   "sala": "",
+   "titulo": "dante"
+  },
+  "f_20fe567dae": {
+   "sede": "Village East by Angelika",
+   "dia": "2026-06-09",
+   "hora": "8:00 PM",
+   "sala": "",
+   "titulo": "death boom"
+  },
+  "f_048329c366": {
+   "sede": "Village East by Angelika",
+   "dia": "2026-06-10",
+   "hora": "5:00 PM",
+   "sala": "",
+   "titulo": "hallowarrior"
+  },
+  "f_fb5ddb095b": {
+   "sede": "AMC 19th St. East 6",
+   "dia": "2026-06-06",
+   "hora": "8:15 PM",
+   "sala": "",
+   "titulo": "mutter the diary of a mother"
+  },
+  "f_35105307fa": {
+   "sede": "Village East by Angelika",
+   "dia": "2026-06-04",
+   "hora": "9:15 PM",
+   "sala": "",
+   "titulo": "recluse"
+  },
+  "f_c51c9835dd": {
+   "sede": "Village East by Angelika",
+   "dia": "2026-06-05",
+   "hora": "9:15 PM",
+   "sala": "",
+   "titulo": "the haunting of pennhurst"
+  },
+  "f_c7a8008449": {
+   "sede": "AMC 19th St. East 6",
+   "dia": "2026-06-04",
+   "hora": "8:30 PM",
+   "sala": "",
+   "titulo": "turn it up"
+  },
+  "f_451474107e": {
+   "sede": "AMC 19th St. East 6",
+   "dia": "2026-06-05",
+   "hora": "5:15 PM",
+   "sala": "",
+   "titulo": "crocodile"
+  },
+  "f_9391b1d982": {
+   "sede": "Village East by Angelika",
+   "dia": "2026-06-07",
+   "hora": "6:15 PM",
+   "sala": "",
+   "titulo": "crooks"
+  },
+  "f_19a8d71384": {
+   "sede": "Village East by Angelika",
+   "dia": "2026-06-06",
+   "hora": "5:30 PM",
+   "sala": "",
+   "titulo": "deepfake"
+  },
+  "f_f00dce2601": {
+   "sede": "Village East by Angelika",
+   "dia": "2026-06-06",
+   "hora": "2:30 PM",
+   "sala": "",
+   "titulo": "human theories"
+  },
+  "f_45b08c0e8e": {
+   "sede": "Village East by Angelika",
+   "dia": "2026-06-04",
+   "hora": "8:15 PM",
+   "sala": "",
+   "titulo": "matinino"
+  },
+  "f_402bc15073": {
+   "sede": "Village East by Angelika",
+   "dia": "2026-06-05",
+   "hora": "5:45 PM",
+   "sala": "",
+   "titulo": "micronations"
+  },
+  "f_47bb47cf25": {
+   "sede": "Village East by Angelika",
+   "dia": "2026-06-05",
+   "hora": "6:00 PM",
+   "sala": "",
+   "titulo": "one woman one bra"
+  },
+  "f_d313bfa58f": {
+   "sede": "Village East by Angelika",
+   "dia": "2026-06-06",
+   "hora": "2:00 PM",
+   "sala": "",
+   "titulo": "something you should know about me"
+  },
+  "f_37573c5b26": {
+   "sede": "AMC 19th St. East 6",
+   "dia": "2026-06-05",
+   "hora": "8:15 PM",
+   "sala": "",
+   "titulo": "the keeper of the camphor tree"
+  },
+  "f_2f1634b063": {
+   "sede": "SVA Theatre",
+   "dia": "2026-06-09",
+   "hora": "5:30 PM",
+   "sala": "",
+   "titulo": "the man will burn"
+  },
+  "f_662953510d": {
+   "sede": "Village East by Angelika",
+   "dia": "2026-06-04",
+   "hora": "5:45 PM",
+   "sala": "",
+   "titulo": "the wedding entertainer the tale of moishe badhan"
+  },
+  "f_b8c8ed2fed": {
+   "sede": "AMC 19th St. East 6",
+   "dia": "2026-06-07",
+   "hora": "5:15 PM",
+   "sala": "",
+   "titulo": "vanishing tracks"
+  },
+  "f_a63322718f": {
+   "sede": "Village East by Angelika",
+   "dia": "2026-06-04",
+   "hora": "7:30 PM",
+   "sala": "",
+   "titulo": "arru"
+  },
+  "f_d6d29cb90c": {
+   "sede": "Village East by Angelika",
+   "dia": "2026-06-05",
+   "hora": "6:15 PM",
+   "sala": "",
+   "titulo": "airport blvd"
+  },
+  "f_1f2ada25be": {
+   "sede": "Village East by Angelika",
+   "dia": "2026-06-07",
+   "hora": "8:30 PM",
+   "sala": "",
+   "titulo": "caity"
+  },
+  "f_037c6a469b": {
+   "sede": "Village East by Angelika",
+   "dia": "2026-06-05",
+   "hora": "8:00 PM",
+   "sala": "",
+   "titulo": "cotton fever"
+  },
+  "f_d7b2994952": {
+   "sede": "Village East by Angelika",
+   "dia": "2026-06-07",
+   "hora": "5:00 PM",
+   "sala": "",
+   "titulo": "ephemera"
+  },
+  "f_38abe03e58": {
+   "sede": "SVA Theatre",
+   "dia": "2026-06-06",
+   "hora": "8:30 PM",
+   "sala": "",
+   "titulo": "here i m alive"
+  },
+  "f_e0bf727ffd": {
+   "sede": "Village East by Angelika",
+   "dia": "2026-06-04",
+   "hora": "5:30 PM",
+   "sala": "",
+   "titulo": "kingston"
+  },
+  "f_0f297040fc": {
+   "sede": "Village East by Angelika",
+   "dia": "2026-06-05",
+   "hora": "5:30 PM",
+   "sala": "",
+   "titulo": "lucy schulman"
+  },
+  "f_9782685e13": {
+   "sede": "Village East by Angelika",
+   "dia": "2026-06-05",
+   "hora": "8:45 PM",
+   "sala": "",
+   "titulo": "mother future self"
+  },
+  "f_fb55665786": {
+   "sede": "Village East by Angelika",
+   "dia": "2026-06-06",
+   "hora": "8:30 PM",
+   "sala": "",
+   "titulo": "ponderosa"
+  },
+  "f_3288a85371": {
+   "sede": "Village East by Angelika",
+   "dia": "2026-06-04",
+   "hora": "8:30 PM",
+   "sala": "",
+   "titulo": "she keeps me young"
+  },
+  "f_9d795530b3": {
+   "sede": "Village East by Angelika",
+   "dia": "2026-06-08",
+   "hora": "8:00 PM",
+   "sala": "",
+   "titulo": "summer of three"
+  },
+  "f_c761618087": {
+   "sede": "Village East by Angelika",
+   "dia": "2026-06-05",
+   "hora": "8:30 PM",
+   "sala": "",
+   "titulo": "via negativa"
+  },
+  "f_258443bb2f": {
+   "sede": "SVA Theatre",
+   "dia": "2026-06-04",
+   "hora": "5:30 PM",
+   "sala": "",
+   "titulo": "american zoo"
+  },
+  "f_b2cb6174bb": {
+   "sede": "SVA Theatre",
+   "dia": "2026-06-09",
+   "hora": "8:00 PM",
+   "sala": "",
+   "titulo": "bang my box the robin byrd story"
+  },
+  "f_650d7cd0fb": {
+   "sede": "Village East by Angelika",
+   "dia": "2026-06-07",
+   "hora": "5:15 PM",
+   "sala": "",
+   "titulo": "colors of white rock"
+  },
+  "f_5c3f4d2c57": {
+   "sede": "Village East by Angelika",
+   "dia": "2026-06-06",
+   "hora": "6:15 PM",
+   "sala": "",
+   "titulo": "harvest"
+  },
+  "f_38031e4d5f": {
+   "sede": "AMC 19th St. East 6",
+   "dia": "2026-06-06",
+   "hora": "5:30 PM",
+   "sala": "",
+   "titulo": "jail time records"
+  },
+  "f_8273cd2c5b": {
+   "sede": "Spring Studios",
+   "dia": "2026-06-05",
+   "hora": "7:30 PM",
+   "sala": "",
+   "titulo": "jean michel"
+  },
+  "f_177ac4ec0e": {
+   "sede": "Village East by Angelika",
+   "dia": "2026-06-04",
+   "hora": "6:15 PM",
+   "sala": "",
+   "titulo": "kids like me"
+  },
+  "f_671d5bc01b": {
+   "sede": "Village East by Angelika",
+   "dia": "2026-06-09",
+   "hora": "5:00 PM",
+   "sala": "",
+   "titulo": "mexicanamerican"
+  },
+  "f_2ee24c073b": {
+   "sede": "Village East by Angelika",
+   "dia": "2026-06-04",
+   "hora": "8:00 PM",
+   "sala": "",
+   "titulo": "retrieval"
+  },
+  "f_b31e2ef815": {
+   "sede": "SVA Theatre",
+   "dia": "2026-06-08",
+   "hora": "5:30 PM",
+   "sala": "",
+   "titulo": "the gymnasts of fisherman colony"
+  },
+  "f_8c50ffe91f": {
+   "sede": "Village East by Angelika",
+   "dia": "2026-06-07",
+   "hora": "8:00 PM",
+   "sala": "",
+   "titulo": "the siege of paradise"
+  },
+  "f_d746d0e88d": {
+   "sede": "Village East by Angelika",
+   "dia": "2026-06-06",
+   "hora": "8:15 PM",
+   "sala": "",
+   "titulo": "time warp"
+  },
+  "f_b54c61d70f": {
+   "sede": "AMC 19th St. East 6",
+   "dia": "2026-06-07",
+   "hora": "2:30 PM",
+   "sala": "",
+   "titulo": "against the flow"
+  },
+  "f_0f3f499766": {
+   "sede": "AMC 19th St. East 6",
+   "dia": "2026-06-05",
+   "hora": "8:30 PM",
+   "sala": "",
+   "titulo": "funk"
+  },
+  "f_2a82a80e2d": {
+   "sede": "AMC 19th St. East 6",
+   "dia": "2026-06-07",
+   "hora": "2:15 PM",
+   "sala": "",
+   "titulo": "i spy with my little eye"
+  },
+  "f_5002d37c51": {
+   "sede": "AMC 19th St. East 6",
+   "dia": "2026-06-06",
+   "hora": "8:30 PM",
+   "sala": "",
+   "titulo": "labrador autopsy of silence"
+  },
+  "f_736597565d": {
+   "sede": "Village East by Angelika",
+   "dia": "2026-06-06",
+   "hora": "8:15 PM",
+   "sala": "",
+   "titulo": "memorizu"
+  },
+  "f_889c147bbf": {
+   "sede": "Village East by Angelika",
+   "dia": "2026-06-04",
+   "hora": "5:15 PM",
+   "sala": "",
+   "titulo": "sad girlz"
+  },
+  "f_36456ad63b": {
+   "sede": "AMC 19th St. East 6",
+   "dia": "2026-06-04",
+   "hora": "8:15 PM",
+   "sala": "",
+   "titulo": "skateboarding is not for girls"
+  },
+  "f_27fa2aa5af": {
+   "sede": "Village East by Angelika",
+   "dia": "2026-06-06",
+   "hora": "3:15 PM",
+   "sala": "",
+   "titulo": "stand up"
+  },
+  "f_bc67b16a3c": {
+   "sede": "AMC 19th St. East 6",
+   "dia": "2026-06-07",
+   "hora": "5:30 PM",
+   "sala": "",
+   "titulo": "summer war"
+  },
+  "f_694b521d1c": {
+   "sede": "AMC 19th St. East 6",
+   "dia": "2026-06-05",
+   "hora": "5:30 PM",
+   "sala": "",
+   "titulo": "the tropic sun and his eyes"
+  },
+  "f_c5426b0c83": {
+   "sede": "AMC 19th St. East 6",
+   "dia": "2026-06-08",
+   "hora": "5:30 PM",
+   "sala": "",
+   "titulo": "what is to come"
+  },
+  "f_ce95c71a7d": {
+   "sede": "AMC 19th St. East 6",
+   "dia": "2026-06-06",
+   "hora": "2:30 PM",
+   "sala": "",
+   "titulo": "zejtune"
+  },
+  "f_e09e3c6995": {
+   "sede": "Spring Studios",
+   "dia": "2026-06-13",
+   "hora": "5:00 PM",
+   "sala": "",
+   "titulo": "9 11 reunited"
+  },
+  "f_d1dd93dc6f": {
+   "sede": "Spring Studios",
+   "dia": "2026-06-07",
+   "hora": "8:15 PM",
+   "sala": "",
+   "titulo": "bound 30th anniversary"
+  },
+  "f_6693eaf1bd": {
+   "sede": "OKX Theater at BMCC TPAC",
+   "dia": "2026-06-12",
+   "hora": "8:15 PM",
+   "sala": "",
+   "titulo": "bridget jones s diary with renee zellweger and sharon maguire"
+  },
+  "f_3633cefe27": {
+   "sede": "SVA Theatre",
+   "dia": "2026-06-08",
+   "hora": "8:30 PM",
+   "sala": "",
+   "titulo": "daft punk s electroma 4k remaster and 20th anniversary"
+  },
+  "f_88ecfe94d2": {
+   "sede": "AMC 19th St. East 6",
+   "dia": "2026-06-08",
+   "hora": "8:30 PM",
+   "sala": "",
+   "titulo": "small town gay bar"
+  },
+  "f_6fc33ffda1": {
+   "sede": "OKX Theater at BMCC TPAC",
+   "dia": "2026-06-05",
+   "hora": "8:00 PM",
+   "sala": "",
+   "titulo": "taxi driver"
+  },
+  "f_1795f63315": {
+   "sede": "SVA Theatre",
+   "dia": "2026-06-12",
+   "hora": "5:30 PM",
+   "sala": "",
+   "titulo": "dear england"
+  },
+  "f_26844665af": {
+   "sede": "AMC 19th St. East 6",
+   "dia": "2026-06-12",
+   "hora": "5:30 PM",
+   "sala": "",
+   "titulo": "espn deportes espn tribeca studios presents 13 4 seconds to nowhere shooting stars the adrian solano story"
+  },
+  "f_3d5230767a": {
+   "sede": "Hudson Yards Public Square and Gardens",
+   "dia": "2026-06-07",
+   "hora": "5:00 PM",
+   "sala": "",
+   "titulo": "fueled by the future"
+  },
+  "f_86305684da": {
+   "sede": "Spring Studios",
+   "dia": "2026-06-10",
+   "hora": "5:30 PM",
+   "sala": "",
+   "titulo": "not a very good murderer the palladino files event"
+  },
+  "f_c95ffa49c4": {
+   "sede": "SVA Theatre",
+   "dia": "TBD",
+   "hora": "TBD",
+   "sala": "",
+   "titulo": "vital stories premiere"
+  },
+  "f_2f16ae7eb0": {
+   "sede": "OKX Theater at BMCC TPAC",
+   "dia": "2026-06-10",
+   "hora": "6:00 PM",
+   "sala": "",
+   "titulo": "storytellers dwyane wade"
+  },
+  "f_c924419f3d": {
+   "sede": "Spring Studios",
+   "dia": "2026-06-09",
+   "hora": "8:00 PM",
+   "sala": "",
+   "titulo": "storytellers finneas with anthony willis"
+  },
+  "f_f57102e8ae": {
+   "sede": "SVA Theatre",
+   "dia": "2026-06-08",
+   "hora": "6:00 PM",
+   "sala": "",
+   "titulo": "storytellers keke palmer with whoopi goldberg"
+  },
+  "f_ee3fab9f98": {
+   "sede": "Spring Studios",
+   "dia": "2026-06-04",
+   "hora": "6:00 PM",
+   "sala": "",
+   "titulo": "storytellers paul rudd"
+  },
+  "f_888dd56447": {
+   "sede": "Spring Studios",
+   "dia": "2026-06-05",
+   "hora": "5:00 PM",
+   "sala": "",
+   "titulo": "storytellers sean penn with kaitlan collins"
+  },
+  "f_9463010cb6": {
+   "sede": "Spring Studios",
+   "dia": "2026-06-12",
+   "hora": "6:00 PM",
+   "sala": "",
+   "titulo": "cannonball live with wesley morris"
+  },
+  "f_26d3f82e01": {
+   "sede": "Le Poisson Rouge",
+   "dia": "2026-06-13",
+   "hora": "7:30 PM",
+   "sala": "",
+   "titulo": "concert conversation hrishikesh hirway moderated by adam scott"
+  },
+  "f_b9afbc4e0a": {
+   "sede": "SVA Theatre",
+   "dia": "2026-06-10",
+   "hora": "5:30 PM",
+   "sala": "",
+   "titulo": "death sex money live with guests peter dinklage erica schmidt"
+  },
+  "f_5c6e1b9ee4": {
+   "sede": "SVA Theatre",
+   "dia": "2026-06-09",
+   "hora": "12:30 PM",
+   "sala": "",
+   "titulo": "fashion neurosis live with guest laurie anderson"
+  },
+  "f_44a4e0666e": {
+   "sede": "SVA Theatre",
+   "dia": "2026-06-11",
+   "hora": "6:00 PM",
+   "sala": "",
+   "titulo": "lemme say this live with guest sydney lemmon"
+  },
+  "f_5c84c5513e": {
+   "sede": "Spring Studios",
+   "dia": "2026-06-10",
+   "hora": "8:15 PM",
+   "sala": "",
+   "titulo": "new yorker radio hour live with david remnick"
+  },
+  "f_7f71c976af": {
+   "sede": "Spring Studios",
+   "dia": "2026-06-08",
+   "hora": "8:00 PM",
+   "sala": "",
+   "titulo": "on with kara swisher with guest marc maron"
+  },
+  "f_6b3eb2d0ae": {
+   "sede": "OKX Theater at BMCC TPAC",
+   "dia": "2026-06-09",
+   "hora": "6:00 PM",
+   "sala": "",
+   "titulo": "radiolab live with latif nasser lulu miller"
+  },
+  "f_2688e50259": {
+   "sede": "Village East by Angelika",
+   "dia": "2026-06-04",
+   "hora": "5:00 PM",
+   "sala": "",
+   "titulo": "2026 indie tv documentary showcase"
+  },
+  "f_0a1936a4f7": {
+   "sede": "Shorts Theater at Spring Studios",
+   "dia": "2026-06-07",
+   "hora": "8:30 PM",
+   "sala": "",
+   "titulo": "2026 indie tv narrative showcase"
+  },
+  "f_85caee941c": {
+   "sede": "AMC 19th St. East 6",
+   "dia": "2026-06-10",
+   "hora": "8:30 PM",
+   "sala": "",
+   "titulo": "tribeca now creators showcase"
+  },
+  "f_324e1d5ce9": {
+   "sede": "AMC 19th St. East 6",
+   "dia": "2026-06-11",
+   "hora": "5:00 PM",
+   "sala": "",
+   "titulo": "tribeca now presents kareem rhama s keep the meter running"
+  },
+  "f_ad52077bb7": {
+   "sede": "AMC 19th St. East 6",
+   "dia": "2026-06-07",
+   "hora": "8:30 PM",
+   "sala": "",
+   "titulo": "tribeca now presents keytv s the rise and fall of divagurl with keke palmer lawrence murray"
+  },
+  "f_0b981f3c53": {
+   "sede": "Spring Studios",
+   "dia": "2026-06-06",
+   "hora": "2:30 PM",
+   "sala": "",
+   "titulo": "shorts animated shorts curated by whoopi g"
+  },
+  "f_6e5aa2dfa3": {
+   "sede": "Spring Studios",
+   "dia": "2026-06-06",
+   "hora": "5:30 PM",
+   "sala": "",
+   "titulo": "shorts care package"
+  },
+  "f_4eaf7157ae": {
+   "sede": "Spring Studios",
+   "dia": "2026-06-04",
+   "hora": "8:30 PM",
+   "sala": "",
+   "titulo": "shorts competitive edge"
+  },
+  "f_28a4556b5d": {
+   "sede": "Spring Studios",
+   "dia": "2026-06-13",
+   "hora": "8:30 PM",
+   "sala": "",
+   "titulo": "shorts fierce fashion"
+  },
+  "f_83db6c4577": {
+   "sede": "Spring Studios",
+   "dia": "2026-06-04",
+   "hora": "5:30 PM",
+   "sala": "",
+   "titulo": "shorts helpline"
+  },
+  "f_5131995de6": {
+   "sede": "Spring Studios",
+   "dia": "2026-06-05",
+   "hora": "8:30 PM",
+   "sala": "",
+   "titulo": "shorts love fictionally"
+  },
+  "f_a4d3125687": {
+   "sede": "Spring Studios",
+   "dia": "2026-06-09",
+   "hora": "8:30 PM",
+   "sala": "",
+   "titulo": "shorts music videos"
+  },
+  "f_079c774e24": {
+   "sede": "Spring Studios",
+   "dia": "2026-06-06",
+   "hora": "8:45 PM",
+   "sala": "",
+   "titulo": "shorts ny making it here"
+  },
+  "f_a647f786fe": {
+   "sede": "Spring Studios",
+   "dia": "2026-06-05",
+   "hora": "2:30 PM",
+   "sala": "",
+   "titulo": "shorts power to the people"
+  },
+  "f_c6a37d8a2f": {
+   "sede": "Spring Studios",
+   "dia": "2026-06-06",
+   "hora": "8:15 PM",
+   "sala": "",
+   "titulo": "shorts the dark web"
+  },
+  "f_b39b63a040": {
+   "sede": "Spring Studios",
+   "dia": "2026-06-05",
+   "hora": "5:30 PM",
+   "sala": "",
+   "titulo": "shorts think fast"
+  },
+  "f_8657ac90ed": {
+   "sede": "Spring Studios",
+   "dia": "2026-06-07",
+   "hora": "2:30 PM",
+   "sala": "",
+   "titulo": "shorts whatever it takes"
+  },
+  "f_8278ad409f": {
+   "sede": "Spring Studios",
+   "dia": "2026-06-07",
+   "hora": "5:30 PM",
+   "sala": "",
+   "titulo": "shorts where we belong"
+  },
+  "f_8eb6b4807b": {
+   "sede": "Spring Studios",
+   "dia": "2026-06-06",
+   "hora": "12:15 PM",
+   "sala": "",
+   "titulo": "shorts whoopi s wonderful world of animation"
+  },
+  "f_c73ca0f650": {
+   "sede": "Hudson Yards Public Square and Gardens",
+   "dia": "2026-06-14",
+   "hora": "7:00 PM",
+   "sala": "",
+   "titulo": "ascension"
+  },
+  "f_b9ab6606a1": {
+   "sede": "Hudson Yards Public Square and Gardens",
+   "dia": "2026-06-06",
+   "hora": "7:00 PM",
+   "sala": "",
+   "titulo": "best of tribeca shorts"
+  },
+  "f_e5d97b3e73": {
+   "sede": "Hudson Yards Public Square and Gardens",
+   "dia": "2026-06-09",
+   "hora": "7:00 PM",
+   "sala": "",
+   "titulo": "dior and i"
+  },
+  "f_17109dfcd9": {
+   "sede": "Hudson Yards Public Square and Gardens",
+   "dia": "2026-06-05",
+   "hora": "7:00 PM",
+   "sala": "",
+   "titulo": "guy and madeline on a park bench"
+  },
+  "f_8a18f17102": {
+   "sede": "Hudson Yards Public Square and Gardens",
+   "dia": "2026-06-06",
+   "hora": "7:00 PM",
+   "sala": "",
+   "titulo": "jane austen s period drama"
+  },
+  "f_8c907241db": {
+   "sede": "Hudson Yards Public Square and Gardens",
+   "dia": "2026-06-07",
+   "hora": "7:00 PM",
+   "sala": "",
+   "titulo": "jiro dreams of sushi"
+  },
+  "f_997c2b1610": {
+   "sede": "Hudson Yards Public Square and Gardens",
+   "dia": "2026-06-08",
+   "hora": "7:00 PM",
+   "sala": "",
+   "titulo": "let the right one in"
+  },
+  "f_c0fb76ebc6": {
+   "sede": "Hudson Yards Public Square and Gardens",
+   "dia": "2026-06-11",
+   "hora": "7:00 PM",
+   "sala": "",
+   "titulo": "little woods"
+  },
+  "f_cc85c8c2de": {
+   "sede": "Hudson Yards Public Square and Gardens",
+   "dia": "2026-06-06",
+   "hora": "7:00 PM",
+   "sala": "",
+   "titulo": "ripe"
+  },
+  "f_79a8edd571": {
+   "sede": "Hudson Yards Public Square and Gardens",
+   "dia": "2026-06-04",
+   "hora": "7:00 PM",
+   "sala": "",
+   "titulo": "the last play at shea"
+  },
+  "f_95fe170d0f": {
+   "sede": "Hudson Yards Public Square and Gardens",
+   "dia": "2026-06-06",
+   "hora": "7:00 PM",
+   "sala": "",
+   "titulo": "the queen of basketball"
+  },
+  "f_8f65f71a57": {
+   "sede": "Hudson Yards Public Square and Gardens",
+   "dia": "2026-06-13",
+   "hora": "7:00 PM",
+   "sala": "",
+   "titulo": "the short history of the long road"
+  },
+  "f_795ff089fb": {
+   "sede": "Hudson Yards Public Square and Gardens",
+   "dia": "2026-06-10",
+   "hora": "7:00 PM",
+   "sala": "",
+   "titulo": "virunga"
+  },
+  "f_74779a1a31": {
+   "sede": "AMC 19th St. East 6",
+   "dia": "2026-06-14",
+   "hora": "6:15 PM",
+   "sala": "",
+   "titulo": "award screening founders award for best u s narrative feature"
+  },
+  "f_39c7be4be2": {
+   "sede": "AMC 19th St. East 6",
+   "dia": "2026-06-14",
+   "hora": "3:15 PM",
+   "sala": "",
+   "titulo": "award screening best documentary feature"
+  },
+  "f_2032503465": {
+   "sede": "AMC 19th St. East 6",
+   "dia": "2026-06-14",
+   "hora": "3:00 PM",
+   "sala": "",
+   "titulo": "award screening best international narrative feature"
+  },
+  "f_842615ba4e": {
+   "sede": "AMC 19th St. East 6",
+   "dia": "2026-06-14",
+   "hora": "2:45 PM",
+   "sala": "",
+   "titulo": "award screening best new narrative director award"
+  },
+  "f_eb58dde971": {
+   "sede": "AMC 19th St. East 6",
+   "dia": "2026-06-14",
+   "hora": "8:30 PM",
+   "sala": "",
+   "titulo": "award screening audience award narrative first place"
+  },
+  "f_62d94788b0": {
+   "sede": "AMC 19th St. East 6",
+   "dia": "2026-06-14",
+   "hora": "8:45 PM",
+   "sala": "",
+   "titulo": "award screening the albert maysles award best new documentary director"
+  },
+  "f_f65a8f9ceb": {
+   "sede": "AMC 19th St. East 6",
+   "dia": "2026-06-14",
+   "hora": "8:15 PM",
+   "sala": "",
+   "titulo": "award screening the nora ephron award"
+  },
+  "f_52cc53ddf8": {
+   "sede": "AMC 19th St. East 6",
+   "dia": "2026-06-14",
+   "hora": "6:00 PM",
+   "sala": "",
+   "titulo": "award screening viewpoints winner"
+  },
+  "f_3af97ae84f": {
+   "sede": "Spring Studios",
+   "dia": "2026-06-13",
+   "hora": "2:00 PM",
+   "sala": "",
+   "titulo": "storytellers este haim"
+  },
+  "f_68d11ef695": {
+   "sede": "OKX Theater at BMCC TPAC",
+   "dia": "2026-06-13",
+   "hora": "4:30 PM",
+   "sala": "",
+   "titulo": "storytellers bruce springsteen receives the harry belafonte voices for social justice award"
+  },
+  "f_28c0292e38": {
+   "sede": "SVA Theatre",
+   "dia": "2026-06-14",
+   "hora": "2:30 PM",
+   "sala": "",
+   "titulo": "audio flux presents trash or treasure"
+  },
+  "f_06e22f12ac": {
+   "sede": "Shorts Theater at Spring Studios",
+   "dia": "2026-06-08",
+   "hora": "3:00 PM",
+   "sala": "",
+   "titulo": "official selections timbre"
+  },
+  "f_adc8430412": {
+   "sede": "Shorts Theater at Spring Studios",
+   "dia": "2026-06-09",
+   "hora": "2:30 PM",
+   "sala": "",
+   "titulo": "the showcase list texture"
+  },
+  "f_036d023d9e": {
+   "sede": "Shorts Theater at Spring Studios",
+   "dia": "2026-06-10",
+   "hora": "2:30 PM",
+   "sala": "",
+   "titulo": "official selections tone"
+  },
+  "f_c87c007532": {
+   "sede": "Shorts Theater at Spring Studios",
+   "dia": "2026-06-11",
+   "hora": "2:30 PM",
+   "sala": "",
+   "titulo": "the showcase list tempo"
+  },
+  "f_4ea251e857": {
+   "sede": "OKX Theater at BMCC TPAC",
+   "dia": "2026-06-04",
+   "hora": "5:00 PM",
+   "sala": "",
+   "titulo": "alejandro sanz when no one sees me"
+  },
+  "f_b7540ea747": {
+   "sede": "SVA Theatre",
+   "dia": "2026-06-13",
+   "hora": "2:30 PM",
+   "sala": "",
+   "titulo": "survival of the thickest"
+  },
+  "f_19d1f3f022": {
+   "sede": "OKX Theater at BMCC TPAC",
+   "dia": "2026-06-06",
+   "hora": "2:00 PM",
+   "sala": "",
+   "titulo": "survivor 50th season anniversary panel"
+  },
+  "f_9cb59c555e": {
+   "sede": "Shorts Theater at Spring Studios",
+   "dia": "2026-06-13",
+   "hora": "2:30 PM",
+   "sala": "",
+   "titulo": "x men 97"
+  }
+ }
+}

@@ -136,7 +136,8 @@
    },
    "is_free": true,
    "description": "MUBI Library es un espacio para hacer una pausa y descubrir MUBI más allá de la pantalla. Conoce Notebook, una revista dedicada al arte y la cultura del cine. También explora MUBI Editions, la editorial de MUBI dedicada al cine y las artes, con una selección de libros y publicaciones que exploran la cultura cinematográfica desde distintas perspectivas, formatos y géneros, en colaboración con artistas y cineastas.",
-   "description_lang": "es"
+   "description_lang": "es",
+   "id": "f_7dc654c576"
   },
   {
    "title": "MUBI Podcast Encuentros: Fernando Eimbcke & Franco Lolli",
@@ -164,7 +165,8 @@
    "is_free": true,
    "requires_registration": true,
    "description": "Una conversación entre el director mexicano Fernando Eimbcke y el director colombiano Franco Lolli sobre sus experiencias, procesos creativos y formas de entender el cine. A partir de experiencias personales, reflexionarán sobre sus trayectorias, prácticas cinematográficas e influencias.",
-   "description_lang": "es"
+   "description_lang": "es",
+   "id": "f_44ae517eed"
   },
   {
    "title": "Pulp: ¿Qué harías por una canción más?",
@@ -201,7 +203,8 @@
    "is_free": true,
    "lbSlug": "pulp-what-do-you-do-for-an-encore",
    "tmdb_id": 1715598,
-   "synopsis_en": "A fusion of the brilliantly choreographed stage spectacle of Pulp’s biggest ever arena show — part of the global tour for More, the band’s first album in 24 years — with four decades of colorful, never-seen-before archival material."
+   "synopsis_en": "A fusion of the brilliantly choreographed stage spectacle of Pulp’s biggest ever arena show — part of the global tour for More, the band’s first album in 24 years — with four decades of colorful, never-seen-before archival material.",
+   "id": "f_ae72da2767"
   },
   {
    "title": "Rose",
@@ -246,7 +249,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_2c2ce5a73e"
   },
   {
    "title": "Las aventuras de Priscilla, reina del desierto",
@@ -283,7 +287,8 @@
    "is_free": true,
    "lbSlug": "the-adventures-of-priscilla-queen-of-the-desert",
    "tmdb_id": 2759,
-   "synopsis_en": "Two drag performers and a transgender woman travel across the desert to perform their unique style of cabaret."
+   "synopsis_en": "Two drag performers and a transgender woman travel across the desert to perform their unique style of cabaret.",
+   "id": "f_98aaab9f1d"
   },
   {
    "title": "Moscas",
@@ -328,7 +333,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_f59b643ba4"
   },
   {
    "title": "Desafío con Lesley Wolf",
@@ -360,7 +366,8 @@
    "description_lang": "es",
    "titulos_anteriores": [
     "Desafío sorpresa con Lesley Wolf"
-   ]
+   ],
+   "id": "f_99e5c3259e"
   },
   {
    "title": "Adolescencia, sexo y muerte en Campamento Miasma",
@@ -397,7 +404,8 @@
    "is_free": true,
    "lbSlug": "teenage-sex-and-death-at-camp-miasma",
    "tmdb_id": 1240889,
-   "synopsis_en": "An ambitious director sets out to revive a faded slasher franchise, but her meeting with the film’s reclusive original star spirals into a terrifying maze of obsession, fear, and blood-soaked delusion."
+   "synopsis_en": "An ambitious director sets out to revive a faded slasher franchise, but her meeting with the film’s reclusive original star spirals into a terrifying maze of obsession, fear, and blood-soaked delusion.",
+   "id": "f_cc8e0589c6"
   },
   {
    "title": "Tierra de mi padre",
@@ -442,7 +450,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_6c0a9d9f7a"
   },
   {
    "title": "La niña santa",
@@ -479,7 +488,8 @@
    "lbSlug": "the-holy-girl",
    "tmdb_id": 44413,
    "synopsis_en": "Amalia is an adolescent girl who is caught in the throes of her emerging sexuality and her deeply held passion for her Catholic faith. These two drives mingle when the visiting Dr. Jano takes advantage of a crowd to get inappropriately close to the girl. Repulsed by him but inspired by an inner burning, Amalia decides it is her God-given mission to save the doctor from his behavior, and she begins to stalk Dr. Jano, becoming a most unusual voyeur.",
-   "title_en": "The Holy Girl"
+   "title_en": "The Holy Girl",
+   "id": "f_53c107bf0f"
   },
   {
    "title": "Camp en el cine: entre el exceso y el artificio",
@@ -507,7 +517,8 @@
    "is_free": true,
    "requires_registration": true,
    "description": "El camp es una sensibilidad estética que encuentra en el exceso, la teatralidad, el artificio y lo extravagante una forma particular de mirar y crear. Pero ¿qué hace que una imagen sea camp? ¿Qué ocurre cuando el exceso, el artificio y la teatralidad dejan de ser recursos para convertirse en una sensibilidad estética? Con Vanessa Rosales, Felipe Cuéllar, Jimmy Rangel y Andrés Suárez",
-   "description_lang": "es"
+   "description_lang": "es",
+   "id": "f_578d2d8797"
   },
   {
    "title": "Voilà Varda: Cortometrajes de Agnès Varda",
@@ -614,7 +625,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_857b47ec35"
   },
   {
    "title": "La cosa",
@@ -651,7 +663,8 @@
    "is_free": true,
    "lbSlug": "the-thing",
    "tmdb_id": 1091,
-   "synopsis_en": "A research team in Antarctica is hunted by a shape-shifting alien that assumes the appearance of its victims."
+   "synopsis_en": "A research team in Antarctica is hunted by a shape-shifting alien that assumes the appearance of its victims.",
+   "id": "f_fd525fa728"
   },
   {
    "title": "La paga",
@@ -696,7 +709,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_9e17c3bb04"
   },
   {
    "title": "Thelma & Louise",
@@ -732,7 +746,8 @@
    "is_free": true,
    "lbSlug": "thelma-louise",
    "tmdb_id": 1541,
-   "synopsis_en": "Taking a break from their dreary lives, close friends Thelma and Louise embark on a short weekend trip that ends in unforeseen incriminating circumstances. As fugitives, both women rediscover the strength of their bond and their newfound resilience."
+   "synopsis_en": "Taking a break from their dreary lives, close friends Thelma and Louise embark on a short weekend trip that ends in unforeseen incriminating circumstances. As fugitives, both women rediscover the strength of their bond and their newfound resilience.",
+   "id": "f_9c268fea2b"
   },
   {
    "title": "Cobarde",
@@ -777,7 +792,8 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   }
+   },
+   "id": "f_d00cc0a292"
   }
  ],
  "_corrido": {

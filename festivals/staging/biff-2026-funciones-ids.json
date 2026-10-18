@@ -1,0 +1,1114 @@
+{
+ "_provenance": {
+  "fuente": "ids-legado.py: ids estables congelados desde lo publicado (docs/FUNCION.md §11.2)",
+  "capturado": "2026-10-18"
+ },
+ "funciones": {
+  "f_e305a6ff14": {
+   "sede": "Cámara de Comercio de Bogotá - Sede Chapinero - Bogotá",
+   "dia": "2026-10-08",
+   "hora": "09:15",
+   "sala": "Auditorio principal",
+   "titulo": "puede iberoamerica crear su propio circuito de festivales"
+  },
+  "f_cd5962648b": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-10-08",
+   "hora": "13:00",
+   "sala": "Sala 2",
+   "titulo": "gabin"
+  },
+  "f_698de1edde": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-08",
+   "hora": "14:00",
+   "sala": "Sala 4",
+   "titulo": "we are aliens"
+  },
+  "f_a1bd244fbf": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-10-08",
+   "hora": "14:00",
+   "sala": "Sala 3",
+   "titulo": "como todo mortal"
+  },
+  "f_bbd7e469e6": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-08",
+   "hora": "14:30",
+   "sala": "Sala 1",
+   "titulo": "heat"
+  },
+  "f_b8aa3d1044": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-10-08",
+   "hora": "14:30",
+   "sala": "Sala Capital",
+   "titulo": "eklipse"
+  },
+  "f_ec39d7ef42": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-08",
+   "hora": "15:00",
+   "sala": "Sala 2",
+   "titulo": "tristan forever"
+  },
+  "f_ae68c9f6a5": {
+   "sede": "Cámara de Comercio de Bogotá - Sede Chapinero - Bogotá",
+   "dia": "2026-10-08",
+   "hora": "15:00",
+   "sala": "Salón 307/308",
+   "titulo": "arquitectura de lo invisible montaje y trabajo actoral"
+  },
+  "f_2528de7b82": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-08",
+   "hora": "15:30",
+   "sala": "Sala 3",
+   "titulo": "la libertad doble"
+  },
+  "f_9844726eb6": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-10-08",
+   "hora": "16:00",
+   "sala": "Sala 2",
+   "titulo": "trial of hein"
+  },
+  "f_f9c5d14f43": {
+   "sede": "Cámara de Comercio de Bogotá - Sede Chapinero - Bogotá",
+   "dia": "2026-10-08",
+   "hora": "16:00",
+   "sala": "Salón 303",
+   "titulo": "del tropico al norte industria documental y posibilidades de coproduccion"
+  },
+  "f_3606ad3479": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-10-08",
+   "hora": "16:30",
+   "sala": "Sala 3",
+   "titulo": "el profugo"
+  },
+  "f_72307e4584": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-10-08",
+   "hora": "16:30",
+   "sala": "Sala Capital",
+   "titulo": "the man i love"
+  },
+  "f_7dd738aae0": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-08",
+   "hora": "17:00",
+   "sala": "Sala 4",
+   "titulo": "everytime"
+  },
+  "f_c57f4a8605": {
+   "sede": "Centro Felicidad Chapinero - Bogotá",
+   "dia": "2026-10-08",
+   "hora": "17:30",
+   "sala": "Teatro",
+   "titulo": "muestra de cortometrajes biff bang"
+  },
+  "f_dbd8eec947": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-08",
+   "hora": "17:30",
+   "sala": "Sala 1",
+   "titulo": "6 meses en el edificio rosa con azul"
+  },
+  "f_0c4873f511": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-08",
+   "hora": "18:00",
+   "sala": "Sala 2",
+   "titulo": "objet a"
+  },
+  "f_acb47f98f0": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-08",
+   "hora": "18:30",
+   "sala": "Sala 3",
+   "titulo": "filipinana"
+  },
+  "f_4b9d71378c": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-10-08",
+   "hora": "19:00",
+   "sala": "Sala 2",
+   "titulo": "princesa burro"
+  },
+  "f_c233e05e13": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-10-08",
+   "hora": "19:00",
+   "sala": "Sala Capital",
+   "titulo": "fjord"
+  },
+  "f_38d69e0172": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-10-08",
+   "hora": "19:30",
+   "sala": "Sala 3",
+   "titulo": "hangar rojo"
+  },
+  "f_63fbb5f45f": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-08",
+   "hora": "20:00",
+   "sala": "Sala 4",
+   "titulo": "goodbye cruel world"
+  },
+  "f_0eb18ac475": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-08",
+   "hora": "20:30",
+   "sala": "Sala 1",
+   "titulo": "mariinka"
+  },
+  "f_57bfd457bb": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-08",
+   "hora": "21:00",
+   "sala": "Sala 2",
+   "titulo": "variations on a theme"
+  },
+  "f_d8cb83e602": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-08",
+   "hora": "21:30",
+   "sala": "Sala 3",
+   "titulo": "let us through dear ancestors"
+  },
+  "f_766d90060d": {
+   "sede": "Cámara de Comercio de Bogotá - Sede Chapinero - Bogotá",
+   "dia": "2026-10-09",
+   "hora": "09:00",
+   "sala": "Salón 307/308",
+   "titulo": "arquitectura de lo invisible montaje y guion"
+  },
+  "f_ae0a4d6093": {
+   "sede": "Cámara de Comercio de Bogotá - Sede Chapinero - Bogotá",
+   "dia": "2026-10-09",
+   "hora": "11:00",
+   "sala": "Salón 307/308",
+   "titulo": "arquitectura de lo invisible montaje y composicion musical"
+  },
+  "f_5f413efca0": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-10-09",
+   "hora": "13:00",
+   "sala": "Sala 2",
+   "titulo": "mariinka"
+  },
+  "f_965aceb35b": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-09",
+   "hora": "14:00",
+   "sala": "Sala 4",
+   "titulo": "tierra de mi padre"
+  },
+  "f_4657837efe": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-10-09",
+   "hora": "14:00",
+   "sala": "Sala 3",
+   "titulo": "la libertad doble"
+  },
+  "f_60ce7ac324": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-09",
+   "hora": "14:30",
+   "sala": "Sala 1",
+   "titulo": "como todo mortal"
+  },
+  "f_0124a5aac0": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-09",
+   "hora": "15:00",
+   "sala": "Sala 2",
+   "titulo": "trial of hein"
+  },
+  "f_ddf2a9d2ac": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-10-09",
+   "hora": "15:00",
+   "sala": "Sala Capital",
+   "titulo": "red rocks"
+  },
+  "f_83f713b075": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-09",
+   "hora": "15:30",
+   "sala": "Sala 3",
+   "titulo": "nina roza"
+  },
+  "f_50b2572b65": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-10-09",
+   "hora": "16:00",
+   "sala": "Sala 2",
+   "titulo": "temporada de caza"
+  },
+  "f_ce0b599404": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-09",
+   "hora": "16:30",
+   "sala": "Sala 4",
+   "titulo": "siempre soy tu animal materno"
+  },
+  "f_aec5785041": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-10-09",
+   "hora": "16:30",
+   "sala": "Sala 3",
+   "titulo": "el rapto"
+  },
+  "f_21cafe9a42": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-10-09",
+   "hora": "17:00",
+   "sala": "Sala Capital",
+   "titulo": "let us through dear ancestors"
+  },
+  "f_67cd1e9ee8": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-09",
+   "hora": "17:30",
+   "sala": "Sala 1",
+   "titulo": "gabin"
+  },
+  "f_03bbe609f1": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-09",
+   "hora": "18:00",
+   "sala": "Sala 2",
+   "titulo": "el profugo"
+  },
+  "f_9b7781861e": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-09",
+   "hora": "18:30",
+   "sala": "Sala 3",
+   "titulo": "soumsoum the night of the stars"
+  },
+  "f_85b5d6e1bf": {
+   "sede": "Pontificia Universidad Javeriana - Bogotá",
+   "dia": "2026-10-09",
+   "hora": "18:30",
+   "sala": "Aula Múltiple",
+   "titulo": "muestra de cortometrajes biff bang"
+  },
+  "f_554cf944cb": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-10-09",
+   "hora": "19:00",
+   "sala": "Sala 2",
+   "titulo": "historia del miedo"
+  },
+  "f_f824fc2506": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-10-09",
+   "hora": "19:30",
+   "sala": "Sala 3",
+   "titulo": "zama"
+  },
+  "f_5407fae75c": {
+   "sede": "Teatro El Ensueño - Bogotá",
+   "dia": "2026-10-09",
+   "hora": "19:30",
+   "sala": "",
+   "titulo": "slave bird"
+  },
+  "f_78d18bda10": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-10-09",
+   "hora": "20:00",
+   "sala": "Sala Capital",
+   "titulo": "el despertar"
+  },
+  "f_ebdcaedc9a": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-09",
+   "hora": "20:30",
+   "sala": "Sala 1",
+   "titulo": "minotauro"
+  },
+  "f_435a8308f3": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-09",
+   "hora": "21:00",
+   "sala": "Sala 2",
+   "titulo": "dua"
+  },
+  "f_2cce1df08e": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-09",
+   "hora": "21:00",
+   "sala": "Sala 4",
+   "titulo": "el deshielo"
+  },
+  "f_15c4d0b8ff": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-09",
+   "hora": "21:30",
+   "sala": "Sala 3",
+   "titulo": "elephants in the fog"
+  },
+  "f_656b66e114": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-10-10",
+   "hora": "11:00",
+   "sala": "Sala 3",
+   "titulo": "cortos que llegan lejos historias que empiezan en el biff bang"
+  },
+  "f_4b1b430aa1": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-10-10",
+   "hora": "13:30",
+   "sala": "Sala 2",
+   "titulo": "papaya"
+  },
+  "f_f2c5dc1d4e": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-10",
+   "hora": "14:00",
+   "sala": "Sala 4",
+   "titulo": "cobarde"
+  },
+  "f_7ed9eb261e": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-10-10",
+   "hora": "14:00",
+   "sala": "Sala Capital",
+   "titulo": "lejos de los arboles"
+  },
+  "f_339fd5fce7": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-10",
+   "hora": "14:30",
+   "sala": "Sala 1",
+   "titulo": "hermanas"
+  },
+  "f_4e874261d6": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-10-10",
+   "hora": "14:30",
+   "sala": "Sala 3",
+   "titulo": "la gradiva"
+  },
+  "f_f10dabcc78": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-10",
+   "hora": "15:00",
+   "sala": "Sala 2",
+   "titulo": "zama"
+  },
+  "f_b8a2dac354": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-10",
+   "hora": "15:30",
+   "sala": "Sala 3",
+   "titulo": "everytime"
+  },
+  "f_b3a5bd6a30": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-10-10",
+   "hora": "15:30",
+   "sala": "Sala 2",
+   "titulo": "aqui"
+  },
+  "f_db6904820f": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-10-10",
+   "hora": "16:00",
+   "sala": "Calle Museo",
+   "titulo": "no quiero ser un hombre"
+  },
+  "f_30a4d0a3da": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-10",
+   "hora": "17:00",
+   "sala": "Sala 4",
+   "titulo": "red rocks"
+  },
+  "f_4960c010b0": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-10-10",
+   "hora": "17:00",
+   "sala": "Sala Capital",
+   "titulo": "luis tercero"
+  },
+  "f_111074fd18": {
+   "sede": "Parque Santander - Bogotá",
+   "dia": "2026-10-10",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "muestra de cortometrajes biff bang"
+  },
+  "f_e43a5d6c6b": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-10",
+   "hora": "17:30",
+   "sala": "Sala 1",
+   "titulo": "minotauro"
+  },
+  "f_5b2bb684b1": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-10-10",
+   "hora": "17:30",
+   "sala": "Sala 3",
+   "titulo": "goodbye cruel world"
+  },
+  "f_da7a2cef0d": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-10",
+   "hora": "18:00",
+   "sala": "Sala 2",
+   "titulo": "el rapto"
+  },
+  "f_0a23616550": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-10",
+   "hora": "18:30",
+   "sala": "Sala 3",
+   "titulo": "temporada de caza"
+  },
+  "f_05c7bc2cec": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-10-10",
+   "hora": "19:30",
+   "sala": "Sala 3",
+   "titulo": "9 temples to heaven"
+  },
+  "f_2f4d84cb76": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-10-10",
+   "hora": "19:30",
+   "sala": "Sala Capital",
+   "titulo": "iluminada"
+  },
+  "f_9c648f9907": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-10",
+   "hora": "20:00",
+   "sala": "Sala 4",
+   "titulo": "la bola negra"
+  },
+  "f_f5de79018a": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-10-10",
+   "hora": "20:00",
+   "sala": "Sala 2",
+   "titulo": "variations on a theme"
+  },
+  "f_9bcc1466df": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-10",
+   "hora": "20:30",
+   "sala": "Sala 1",
+   "titulo": "light pillar"
+  },
+  "f_88fac4296f": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-10",
+   "hora": "21:00",
+   "sala": "Sala 2",
+   "titulo": "historia del miedo"
+  },
+  "f_51a4c1fbc4": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-10",
+   "hora": "21:30",
+   "sala": "Sala 3",
+   "titulo": "a providencia e a guitarra"
+  },
+  "f_70ca774d5f": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-10-11",
+   "hora": "11:00",
+   "sala": "Sala 3",
+   "titulo": "de la mirada propia a una forma de cine"
+  },
+  "f_942bde39f0": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-10-11",
+   "hora": "13:30",
+   "sala": "Sala 2",
+   "titulo": "6 meses en el edificio rosa con azul"
+  },
+  "f_c8865ac56d": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-11",
+   "hora": "14:00",
+   "sala": "Sala 4",
+   "titulo": "luis tercero"
+  },
+  "f_4fceab443f": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-10-11",
+   "hora": "14:00",
+   "sala": "Sala Capital",
+   "titulo": "hermanas"
+  },
+  "f_009f6317ac": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-11",
+   "hora": "14:30",
+   "sala": "Sala 1",
+   "titulo": "dua"
+  },
+  "f_797898147d": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-10-11",
+   "hora": "14:30",
+   "sala": "Sala 3",
+   "titulo": "nina roza"
+  },
+  "f_9e3c25e86e": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-11",
+   "hora": "15:00",
+   "sala": "Sala 2",
+   "titulo": "los nuevos"
+  },
+  "f_a18ee18771": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-11",
+   "hora": "15:30",
+   "sala": "Sala 3",
+   "titulo": "eklipse"
+  },
+  "f_173ae84e8a": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-10-11",
+   "hora": "16:00",
+   "sala": "Sala 2",
+   "titulo": "filipinana"
+  },
+  "f_5d9500a5c5": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-10-11",
+   "hora": "16:30",
+   "sala": "Sala Capital",
+   "titulo": "a providencia e a guitarra"
+  },
+  "f_4fa316a6ab": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-11",
+   "hora": "17:00",
+   "sala": "Sala 4",
+   "titulo": "iluminada"
+  },
+  "f_150bad68d3": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-10-11",
+   "hora": "17:00",
+   "sala": "Sala 3",
+   "titulo": "the burning giants"
+  },
+  "f_c2a0422929": {
+   "sede": "Plaza Distrital de Mercado La Concordia - Bogotá",
+   "dia": "2026-10-11",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "muestra de cortometrajes biff bang"
+  },
+  "f_666a2f2328": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-11",
+   "hora": "17:30",
+   "sala": "Sala 1",
+   "titulo": "sants"
+  },
+  "f_e4a1f0842f": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-11",
+   "hora": "18:00",
+   "sala": "Sala 2",
+   "titulo": "lejos de los arboles"
+  },
+  "f_fc6e7ab6f7": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-11",
+   "hora": "18:30",
+   "sala": "Sala 3",
+   "titulo": "we are aliens"
+  },
+  "f_4b065bfd14": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-10-11",
+   "hora": "19:00",
+   "sala": "Sala 2",
+   "titulo": "el deshielo"
+  },
+  "f_4dfd1d1712": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-10-11",
+   "hora": "19:30",
+   "sala": "Sala 3",
+   "titulo": "elephants in the fog"
+  },
+  "f_4d21b52a6d": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-10-11",
+   "hora": "19:30",
+   "sala": "Sala Capital",
+   "titulo": "donde comienza el rio"
+  },
+  "f_26201fe297": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-11",
+   "hora": "20:00",
+   "sala": "Sala 4",
+   "titulo": "cobarde"
+  },
+  "f_ef81c82888": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-11",
+   "hora": "20:30",
+   "sala": "Sala 1",
+   "titulo": "aqui"
+  },
+  "f_83e6c9ecc7": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-11",
+   "hora": "21:00",
+   "sala": "Sala 2",
+   "titulo": "como todo mortal"
+  },
+  "f_0a65fed868": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-11",
+   "hora": "21:30",
+   "sala": "Sala 3",
+   "titulo": "the man i love"
+  },
+  "f_da161958ad": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-10-12",
+   "hora": "11:00",
+   "sala": "Sala Capital",
+   "titulo": "el cine como camino de regreso"
+  },
+  "f_f103a8469e": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-10-12",
+   "hora": "13:30",
+   "sala": "Sala 2",
+   "titulo": "los nuevos"
+  },
+  "f_82bcbf007b": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-12",
+   "hora": "14:00",
+   "sala": "Sala 4",
+   "titulo": "the man i love"
+  },
+  "f_9a9da9de70": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-10-12",
+   "hora": "14:00",
+   "sala": "Sala 3",
+   "titulo": "soumsoum the night of the stars"
+  },
+  "f_9e7ff1b013": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-12",
+   "hora": "14:30",
+   "sala": "Sala 1",
+   "titulo": "lejos de los arboles"
+  },
+  "f_1691964e99": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-10-12",
+   "hora": "14:30",
+   "sala": "Sala Capital",
+   "titulo": "minotauro"
+  },
+  "f_38d52260e3": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-12",
+   "hora": "15:00",
+   "sala": "Sala 2",
+   "titulo": "papaya"
+  },
+  "f_22009518eb": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-12",
+   "hora": "15:30",
+   "sala": "Sala 3",
+   "titulo": "princesa burro"
+  },
+  "f_5e4bc8e032": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-10-12",
+   "hora": "16:00",
+   "sala": "Sala 2",
+   "titulo": "dua"
+  },
+  "f_1c5544baa0": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-10-12",
+   "hora": "16:30",
+   "sala": "Sala 3",
+   "titulo": "everytime"
+  },
+  "f_2a7a4a668f": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-12",
+   "hora": "17:00",
+   "sala": "Sala 4",
+   "titulo": "la gradiva"
+  },
+  "f_9e0bb0216d": {
+   "sede": "City U - Bogotá",
+   "dia": "2026-10-12",
+   "hora": "17:00",
+   "sala": "Plazoleta principal",
+   "titulo": "muestra de cortometrajes biff bang"
+  },
+  "f_ff7d88e958": {
+   "sede": "Teatro Mayor Julio Mario Santo Domingo - Bogotá",
+   "dia": "2026-10-12",
+   "hora": "17:00",
+   "sala": "Teatro Estudio",
+   "titulo": "slave bird"
+  },
+  "f_7451b5d452": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-12",
+   "hora": "17:30",
+   "sala": "Sala 1",
+   "titulo": "hermanas"
+  },
+  "f_e7db88aaa0": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-10-12",
+   "hora": "17:30",
+   "sala": "Sala Capital",
+   "titulo": "sants"
+  },
+  "f_196b75f69d": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-12",
+   "hora": "18:00",
+   "sala": "Sala 2",
+   "titulo": "a providencia e a guitarra"
+  },
+  "f_69272a9041": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-12",
+   "hora": "18:30",
+   "sala": "Sala 3",
+   "titulo": "tristan forever"
+  },
+  "f_3b3b105787": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-10-12",
+   "hora": "19:00",
+   "sala": "Sala 2",
+   "titulo": "objet a"
+  },
+  "f_0a9369ca7b": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-10-12",
+   "hora": "19:30",
+   "sala": "Sala 3",
+   "titulo": "we are aliens"
+  },
+  "f_dc4571d7a5": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-12",
+   "hora": "20:00",
+   "sala": "Sala 4",
+   "titulo": "fjord"
+  },
+  "f_274eeb145e": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-10-12",
+   "hora": "20:00",
+   "sala": "Sala Capital",
+   "titulo": "tierra de mi padre"
+  },
+  "f_e02561d701": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-12",
+   "hora": "20:30",
+   "sala": "Sala 1",
+   "titulo": "siempre soy tu animal materno"
+  },
+  "f_a998e41c4e": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-12",
+   "hora": "21:00",
+   "sala": "Sala 2",
+   "titulo": "hangar rojo"
+  },
+  "f_2b0b2917e5": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-12",
+   "hora": "21:30",
+   "sala": "Sala 3",
+   "titulo": "heat"
+  },
+  "f_329789530a": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-13",
+   "hora": "14:00",
+   "sala": "Sala 4",
+   "titulo": "light pillar"
+  },
+  "f_656b4a897e": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-13",
+   "hora": "14:30",
+   "sala": "Sala 1",
+   "titulo": "let us through dear ancestors"
+  },
+  "f_b30ce6aaec": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-13",
+   "hora": "15:00",
+   "sala": "Sala 2",
+   "titulo": "gabin"
+  },
+  "f_bb9bd00c55": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-13",
+   "hora": "15:30",
+   "sala": "Sala 3",
+   "titulo": "the burning giants"
+  },
+  "f_f708b5541d": {
+   "sede": "Universidad Central - Bogotá",
+   "dia": "2026-10-13",
+   "hora": "16:00",
+   "sala": "Auditorio Fundadores",
+   "titulo": "muestra de cortometrajes biff bang"
+  },
+  "f_8a93539bbf": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-13",
+   "hora": "17:00",
+   "sala": "Sala 4",
+   "titulo": "donde comienza el rio"
+  },
+  "f_410d690936": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-13",
+   "hora": "17:30",
+   "sala": "Sala 1",
+   "titulo": "red rocks"
+  },
+  "f_87bdcdcc63": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-13",
+   "hora": "18:00",
+   "sala": "Sala 2",
+   "titulo": "los nuevos"
+  },
+  "f_b90cbbc0f4": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-13",
+   "hora": "18:30",
+   "sala": "Sala 3",
+   "titulo": "9 temples to heaven"
+  },
+  "f_5d5799fc35": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-13",
+   "hora": "20:00",
+   "sala": "Sala 4",
+   "titulo": "la bola negra"
+  },
+  "f_e9eb037e72": {
+   "sede": "Teatro Mayor Julio Mario Santo Domingo - Bogotá",
+   "dia": "2026-10-13",
+   "hora": "20:00",
+   "sala": "Teatro Estudio",
+   "titulo": "slave bird"
+  },
+  "f_7ac6e6faba": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-13",
+   "hora": "20:30",
+   "sala": "Sala 1",
+   "titulo": "tierra de mi padre"
+  },
+  "f_852c8a65c1": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-13",
+   "hora": "21:00",
+   "sala": "Sala 2",
+   "titulo": "la libertad doble"
+  },
+  "f_4993335e2f": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-13",
+   "hora": "21:30",
+   "sala": "Sala 3",
+   "titulo": "nina roza"
+  },
+  "f_813bb29333": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-10-14",
+   "hora": "11:00",
+   "sala": "Sala Capital",
+   "titulo": "construir un mundo para la camara desde la actuacion"
+  },
+  "f_285034ea6f": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-10-14",
+   "hora": "13:00",
+   "sala": "Sala 2",
+   "titulo": "variations on a theme"
+  },
+  "f_3553a3f0aa": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-10-14",
+   "hora": "13:30",
+   "sala": "Sala Capital",
+   "titulo": "siempre soy tu animal materno"
+  },
+  "f_e602d50daa": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-14",
+   "hora": "14:00",
+   "sala": "Sala 4",
+   "titulo": "hangar rojo"
+  },
+  "f_ce8e96d834": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-10-14",
+   "hora": "14:00",
+   "sala": "Sala 3",
+   "titulo": "elephants in the fog"
+  },
+  "f_e29999deba": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-14",
+   "hora": "14:30",
+   "sala": "Sala 1",
+   "titulo": "filipinana"
+  },
+  "f_77ab22bfff": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-14",
+   "hora": "15:00",
+   "sala": "Sala 2",
+   "titulo": "mariinka"
+  },
+  "f_944599dd52": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-10-14",
+   "hora": "15:00",
+   "sala": "Sala 2",
+   "titulo": "aqui"
+  },
+  "f_b9aee5c3c7": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-14",
+   "hora": "15:30",
+   "sala": "Sala 3",
+   "titulo": "la gradiva"
+  },
+  "f_0bf12dd031": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-10-14",
+   "hora": "16:00",
+   "sala": "Sala Capital",
+   "titulo": "la bola negra"
+  },
+  "f_44fd8248f7": {
+   "sede": "Universidad Jorge Tadeo Lozano - Bogotá",
+   "dia": "2026-10-14",
+   "hora": "16:00",
+   "sala": "Aula Máxima",
+   "titulo": "muestra de cortometrajes biff bang"
+  },
+  "f_f0ca56535b": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-10-14",
+   "hora": "16:30",
+   "sala": "Sala 3",
+   "titulo": "soumsoum the night of the stars"
+  },
+  "f_4977d8337f": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-14",
+   "hora": "17:00",
+   "sala": "Sala 4",
+   "titulo": "el despertar"
+  },
+  "f_e0225e9fe7": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-14",
+   "hora": "17:30",
+   "sala": "Sala 1",
+   "titulo": "el deshielo"
+  },
+  "f_c191e3cdf1": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-14",
+   "hora": "18:00",
+   "sala": "Sala 2",
+   "titulo": "6 meses en el edificio rosa con azul"
+  },
+  "f_5b2afa107a": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-14",
+   "hora": "18:30",
+   "sala": "Sala 3",
+   "titulo": "eklipse"
+  },
+  "f_14ff4ee114": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-10-14",
+   "hora": "19:00",
+   "sala": "Sala 3",
+   "titulo": "the burning giants"
+  },
+  "f_a88fe809bf": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-10-14",
+   "hora": "19:30",
+   "sala": "Sala Capital",
+   "titulo": "cobarde"
+  },
+  "f_822992290c": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-14",
+   "hora": "20:00",
+   "sala": "Sala 4",
+   "titulo": "princesa burro"
+  },
+  "f_0cf12ff13f": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-10-14",
+   "hora": "20:00",
+   "sala": "Sala 2",
+   "titulo": "light pillar"
+  },
+  "f_b7f4605cf8": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-14",
+   "hora": "20:30",
+   "sala": "Sala 1",
+   "titulo": "trial of hein"
+  },
+  "f_da5b940a39": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-14",
+   "hora": "21:00",
+   "sala": "Sala 2",
+   "titulo": "objet a"
+  },
+  "f_b213435cf6": {
+   "sede": "Cine Colombia Multiplex Avenida Chile - Bogotá",
+   "dia": "2026-10-14",
+   "hora": "21:30",
+   "sala": "Sala 3",
+   "titulo": "fjord"
+  }
+ }
+}

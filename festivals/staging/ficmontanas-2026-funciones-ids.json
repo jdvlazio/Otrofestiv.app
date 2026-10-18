@@ -1,0 +1,330 @@
+{
+ "_provenance": {
+  "fuente": "ids-legado.py: ids estables congelados desde lo publicado (docs/FUNCION.md §11.2)",
+  "capturado": "2026-10-18"
+ },
+ "funciones": {
+  "f_2cd99450ef": {
+   "sede": "Cinemateca de Salento",
+   "dia": "2026-07-01",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "la hija del condor"
+  },
+  "f_af939c9c5b": {
+   "sede": "Cinemateca de Salento",
+   "dia": "2026-07-01",
+   "hora": "19:30",
+   "sala": "",
+   "titulo": "inauguracion oficial 12 edicion"
+  },
+  "f_79687d52ee": {
+   "sede": "Cinemateca de Salento",
+   "dia": "2026-07-01",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "inauguracion exposicion luces camara y comunidad dacmi"
+  },
+  "f_2f450780ca": {
+   "sede": "Cinemateca de Salento",
+   "dia": "2026-06-30",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "recorrido en bicicleta comparsa cultural"
+  },
+  "f_0fbdb579d3": {
+   "sede": "Cinemateca de Salento",
+   "dia": "2026-07-01",
+   "hora": "20:00",
+   "sala": "",
+   "titulo": "fresa y chocolate"
+  },
+  "f_aa1ad429d5": {
+   "sede": "Cinemateca de Salento",
+   "dia": "2026-07-05",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "titon de la habana a guantanamera"
+  },
+  "f_0833610ea1": {
+   "sede": "Cinemateca de Salento",
+   "dia": "2026-06-30",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "cronica de un nino solo"
+  },
+  "f_fa6c144a21": {
+   "sede": "Cinemateca de Salento",
+   "dia": "2026-07-01",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "nazareno cruz y el lobo"
+  },
+  "f_64d7233292": {
+   "sede": "Cinemateca de Salento",
+   "dia": "2026-07-02",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "sonar sonar"
+  },
+  "f_c01c75f43c": {
+   "sede": "Cinemateca de Salento",
+   "dia": "2026-07-03",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "gatica el mono"
+  },
+  "f_faab9085c9": {
+   "sede": "Cinemateca de Salento",
+   "dia": "2026-07-01",
+   "hora": "13:00",
+   "sala": "",
+   "titulo": "lanzamiento del libro leonardo favio nadie puede olvidarlo"
+  },
+  "f_d385df61f3": {
+   "sede": "Cinemateca de Salento",
+   "dia": "2026-07-02",
+   "hora": "20:00",
+   "sala": "",
+   "titulo": "un poeta"
+  },
+  "f_8ae01bfb98": {
+   "sede": "Cinemateca de Salento",
+   "dia": "2026-07-04",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "cuando la palabra se hace busqueda"
+  },
+  "f_26467d405d": {
+   "sede": "Cinemateca de Salento",
+   "dia": "2026-07-02",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "cada voz lleva su angustia"
+  },
+  "f_e177e000ab": {
+   "sede": "Cinemateca de Salento",
+   "dia": "2026-06-30",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "retina latina muestra de cortometrajes"
+  },
+  "f_a21afc5375": {
+   "sede": "Cinemateca de Salento",
+   "dia": "2026-07-03",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "senal memoria muestra de archivo"
+  },
+  "f_6f8ff14cef": {
+   "sede": "Cinemateca de Salento",
+   "dia": "2026-07-04",
+   "hora": "10:00",
+   "sala": "",
+   "titulo": "visitas guiadas exposicion luces camara y comunidad"
+  },
+  "f_cd996dc1a8": {
+   "sede": "Cinemateca de Salento",
+   "dia": "2026-07-04",
+   "hora": "11:00",
+   "sala": "",
+   "titulo": "exhibiciones especiales colectivos comunitarios"
+  },
+  "f_c8b1d4a3be": {
+   "sede": "Cinemateca de Salento",
+   "dia": "2026-07-02",
+   "hora": "17:30",
+   "sala": "",
+   "titulo": "conversatorio fundacion patrimonio filmico colombiano"
+  },
+  "f_617f3fa7d1": {
+   "sede": "Carpa Cinema - Parque Salento",
+   "dia": "2026-07-05",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "premiacion y cierre oficial 12 edicion"
+  },
+  "f_21c6d3fcba": {
+   "sede": "Carpa Cinema - Parque Salento",
+   "dia": "2026-07-04",
+   "hora": "22:00",
+   "sala": "",
+   "titulo": "fiesta caliwood dj jorge navas"
+  },
+  "f_f3ca0a7c1a": {
+   "sede": "Carpa Cinema - Parque Salento",
+   "dia": "2026-07-05",
+   "hora": "20:30",
+   "sala": "",
+   "titulo": "concierto de cierre artistas sorpresa"
+  },
+  "f_f1db6970c5": {
+   "sede": "Carpa Cinema - Parque Salento",
+   "dia": "2026-07-04",
+   "hora": "10:00",
+   "sala": "",
+   "titulo": "herencia los cantos de la tierra"
+  },
+  "f_dbc4c0ee80": {
+   "sede": "Carpa Cinema - Parque Salento",
+   "dia": "2026-07-04",
+   "hora": "12:00",
+   "sala": "",
+   "titulo": "trashumantes suso eliseo"
+  },
+  "f_e86aeef07c": {
+   "sede": "Carpa Cinema - Parque Salento",
+   "dia": "2026-07-04",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "nunkui"
+  },
+  "f_b6ba20e13d": {
+   "sede": "Carpa Cinema - Parque Salento",
+   "dia": "2026-07-04",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "neurotica anonima"
+  },
+  "f_68cb81a025": {
+   "sede": "Carpa Cinema - Parque Salento",
+   "dia": "2026-07-04",
+   "hora": "20:00",
+   "sala": "",
+   "titulo": "santa maria"
+  },
+  "f_045ff6a5ab": {
+   "sede": "Carpa Cinema - Parque Salento",
+   "dia": "2026-07-05",
+   "hora": "11:00",
+   "sala": "",
+   "titulo": "me dicen el panzer"
+  },
+  "f_816fa58234": {
+   "sede": "Carpa Cinema - Parque Salento",
+   "dia": "2026-07-05",
+   "hora": "13:00",
+   "sala": "",
+   "titulo": "el huaquero"
+  },
+  "f_417097c9f0": {
+   "sede": "Carpa Cinema - Parque Salento",
+   "dia": "2026-07-05",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "lactar"
+  },
+  "f_f06cb47445": {
+   "sede": "Carpa Cinema - Parque Salento",
+   "dia": "2026-07-04",
+   "hora": "09:00",
+   "sala": "",
+   "titulo": "chiribiquete un viaje a la memoria ancestral de america"
+  },
+  "f_de7dec968b": {
+   "sede": "Carpa Cinema - Parque Salento",
+   "dia": "2026-07-05",
+   "hora": "09:30",
+   "sala": "",
+   "titulo": "mu ki ra"
+  },
+  "f_4b76e2ee3f": {
+   "sede": "Cinemateca de Salento",
+   "dia": "2026-07-02",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "competencia dia 2"
+  },
+  "f_935ebad7ad": {
+   "sede": "Cinemateca de Salento",
+   "dia": "2026-07-03",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "competencia dia 3"
+  },
+  "f_84779ec04e": {
+   "sede": "Cinemateca de Salento",
+   "dia": "2026-07-04",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "competencia dia 4 cinemateca"
+  },
+  "f_f3deb54320": {
+   "sede": "Carpa Cinema - Parque Salento",
+   "dia": "2026-07-04",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "competencia dia 4 carpa cinema"
+  },
+  "f_4962497030": {
+   "sede": "Cinemateca de Salento",
+   "dia": "2026-07-05",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "competencia dia 5 cinemateca"
+  },
+  "f_7ac889586b": {
+   "sede": "Cinemateca de Salento",
+   "dia": "2026-07-01",
+   "hora": "17:30",
+   "sala": "",
+   "titulo": "conversatorio alvaro olmos torrico"
+  },
+  "f_1a27baf3f0": {
+   "sede": "Cinemateca de Salento",
+   "dia": "2026-07-02",
+   "hora": "10:00",
+   "sala": "",
+   "titulo": "recorrido exposicion luces camara y comunidad"
+  },
+  "f_86ab6cf6d4": {
+   "sede": "Cinemateca de Salento",
+   "dia": "2026-07-02",
+   "hora": "13:00",
+   "sala": "",
+   "titulo": "masterclass creacion con archivos filmicos"
+  },
+  "f_9655c1ce16": {
+   "sede": "Cinemateca de Salento",
+   "dia": "2026-07-03",
+   "hora": "09:00",
+   "sala": "",
+   "titulo": "masterclass mirada documental"
+  },
+  "f_c15904da91": {
+   "sede": "Cinemateca de Salento",
+   "dia": "2026-07-03",
+   "hora": "10:00",
+   "sala": "",
+   "titulo": "un nuevo amanecer"
+  },
+  "f_e7d008618c": {
+   "sede": "Cinemateca de Salento",
+   "dia": "2026-07-03",
+   "hora": "13:00",
+   "sala": "",
+   "titulo": "panel retina latina experiencias de circulacion"
+  },
+  "f_a5063ec4c6": {
+   "sede": "Cinemateca de Salento",
+   "dia": "2026-07-03",
+   "hora": "20:00",
+   "sala": "",
+   "titulo": "cinco historias de amor y un boleron desesperado"
+  },
+  "f_c40b15fb8c": {
+   "sede": "Cinemateca de Salento",
+   "dia": "2026-07-03",
+   "hora": "11:30",
+   "sala": "",
+   "titulo": "conversatorio dialogo con el publico"
+  },
+  "f_9bf915b242": {
+   "sede": "Carpa Cinema - Parque Salento",
+   "dia": "2026-07-05",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "competencia dia 5 carpa cinema"
+  }
+ }
+}
