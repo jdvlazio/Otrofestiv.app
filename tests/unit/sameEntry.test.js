@@ -52,3 +52,29 @@ test('FALLA CERRADO: sin día u hora no matchea NADA', () => {
 test('obras distintas nunca son la misma entrada, coincidan día y sede', () => {
   assert.equal(sameEntry(BOGOTA, { ...BOGOTA, title: 'Semillas' }), false);
 });
+
+// ── Código estable de la función (18 oct 2026, docs/FUNCION.md §11) ──────────
+// Si las dos traen código, MANDA el código: el festival movió la hora o cambió
+// el título y la función sigue siendo la misma. Sin código, como siempre.
+const FUN = { id: 'f_5ac7fb72c7', title: 'Critters', day: '2026-10-18', time: '19:00', venue: 'Planetario' };
+
+test('código: misma función aunque cambien hora, sala y título', () => {
+  const movida = { ...FUN, time: '17:00', venue: 'Otra sala', title: 'Critters (versión restaurada)' };
+  assert.equal(sameEntry({ ...FUN, _title: FUN.title }, movida), true);
+});
+
+test('código: dos funciones distintas no se confunden aunque coincidan en todo lo demás', () => {
+  assert.equal(sameEntry(FUN, { ...FUN, id: 'f_0000000001' }), false);
+});
+
+test('código anterior: la función que se partió o fusionó conserva lo guardado', () => {
+  const nueva = { ...FUN, id: 'f_aaaaaaaaaa', ids_anteriores: ['f_5ac7fb72c7'] };
+  assert.equal(sameEntry(FUN, nueva), true, 'el plan con el código viejo encuentra la nueva');
+  assert.equal(sameEntry(nueva, FUN), true, 'en los dos sentidos');
+});
+
+test('sin código en alguna de las dos: título + día + hora + sede, como siempre', () => {
+  const { id, ...sinCodigo } = FUN;
+  assert.equal(sameEntry(sinCodigo, FUN), true, 'plan guardado antes del código');
+  assert.equal(sameEntry(sinCodigo, { ...FUN, time: '17:00' }), false, 'sin código, otra hora es otra función');
+});
