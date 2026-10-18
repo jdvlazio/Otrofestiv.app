@@ -137,6 +137,16 @@ publicar → igual que hoy
 - **Aceptar** corre el armado real (`ensamblar.py <fid> --ver`) antes y después: si aparece un fallo nuevo, se deshace todo. La afirmación aceptada lleva `propuesta: <id>` (clave declarada; `validar` la ignora).
 - Comandos: `python3 pipeline/propuestas.py` (pendientes) · `proponer <fid> <a.json> --por <quién>` · `aceptar|rechazar <fid> <ids…|todas> --frase "…"`.
 
+### 5.2 El actualizador (`pipeline/actualizar.py`, 17 oct 2026)
+
+El vigía AVISA; el actualizador ACTÚA, dentro de una frontera estrecha (senior dev + tech lead, 17 oct):
+- **Qué fuente:** solo la estructurada del propio festival (la base de Fantasmagoría, el JSON de FICICA), lo que declara `pipeline/actualizador.json` por festival (`antes`: el comando que la baja; `pasos`: los del plan que re-corre). Lo de una sala o de Instagram va a la cola de propuestas.
+- **Qué cambio:** solo día, hora o sala de funciones que ya existen. Una función nueva o que sale, cualquier otro campo, o la raíz del festival → frena y avisa.
+- **Tope:** más de 5 funciones cambiadas en una corrida → frena (suele ser una fuente rota).
+- **Interruptor:** `activo: false` lo apaga sin tocar código.
+- **Sin cambios no publica:** cada deploy hace recargar a los teléfonos.
+- **Corre cada hora** desde una tarea programada, en su propia copia: si hay cambios publicables, validadores → PR → CI → merge → confirma que el dato nuevo está en otrofestiv.app → avisa a Juan. Empieza solo con Fantasmagoría; se suman otros tras una semana sin sorpresas.
+
 ## 6. Guardianes (validate.py) — a implementar en la fase 1
 
 Todavía no existen; se escriben sin corchetes para no confundirlos con los activos. Al implementarse, cada uno toma su nombre entre corchetes.
