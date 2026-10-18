@@ -1124,6 +1124,8 @@ guardián que nadie sabe qué protege es uno que el próximo que toque
 ./scripts/test.sh -g "T51"
 ```
 
+**Dos caminos de CI** (17 oct 2026). Un PR que toca SOLO las rutas de `.github/camino-datos.txt` (festivales, pipeline, docs) corre smoke + spec de festivales + recorrido por festival (~5 min) en vez de la suite completa (~44 min: la regresión de la interfaz son 21 min en serie, `workers: 1`). La suite completa corre igual en `main` tras el merge, y el visual audit solo ahí. `[camino-datos]` en validate.py prohíbe meter código de la app en la lista.
+
 **Por qué** (6 ago 2026 — el flaky que costó meses): Playwright **mata el
 servidor que él levantó** al terminar. Con `reuseExistingServer` (local), una
 segunda corrida reusa ese servidor en vez de levantar el suyo; si la primera
