@@ -513,6 +513,19 @@ export function syncScheduleWithCatalog(schedule, films){
   });
 }
 
+// clavesMovidas — la función de una entrada del plan cambió de título, día u
+// hora (el festival la movió; el plan la siguió por su código estable). Lo que
+// está atado a «título|día|hora» —el retraso reportado, la boleta marcada— tiene
+// que viajar con ella. Devuelve [[clave vieja, clave nueva]] de las entradas que
+// cambiaron. `antes` y `despues` son el plan antes y después de
+// syncScheduleWithCatalog (misma longitud y orden: el sync mapea 1 a 1).
+export function clavesMovidas(antes, despues){
+  const k=e=>`${e._title||e.title||''}|${e.day||''}|${e.time||''}`;
+  const out=[];
+  (antes||[]).forEach((a,i)=>{ const d=(despues||[])[i]; if(a&&d&&k(a)!==k(d)) out.push([k(a),k(d)]); });
+  return out;
+}
+
 // ── verifyPlan — CERTIFICADOR independiente del plan ──────────────────────────
 // Patrón "certifying algorithms": en vez de confiar en cómo se construyó el
 // plan, se verifica el RESULTADO contra las reglas del dominio. Barato de

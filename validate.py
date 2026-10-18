@@ -3465,7 +3465,9 @@ try:
     _sin = []
     for _pf, _marca in _puertas.items():
         _c = open(_pf, encoding='utf-8').read()
-        if _marca in _c and 'syncScheduleWithCatalog(' not in _c:
+        # 18 oct 2026: las dos puertas pasan por sincronizarPlan (persistence.js),
+        # dueño único del sync que además lleva retraso y boleta con la función movida.
+        if _marca in _c and 'syncScheduleWithCatalog(' not in _c and 'sincronizarPlan(' not in _c:
             _sin.append(_pf)
     if _sin:
         fail(check, 'puerta de hidratación del plan sin sync contra el catálogo: ' + '; '.join(_sin))
@@ -3485,8 +3487,10 @@ check = 'plan-write-chokepoint'
 try:
     import glob as _glob, re as _re
     # sitio permitido → nº exacto de escrituras directas esperadas
-    _allowed = {'src/controller/persistence.js': 2,  # commitPlan + puerta nube
-                'src/controller/loader.js': 1}       # puerta hydrate local
+    # 18 oct 2026: las dos puertas de hidratación (loader + nube) escriben por
+    # sincronizarPlan, en persistence.js → loader ya no escribe directo.
+    _allowed = {'src/controller/persistence.js': 2,  # commitPlan + sincronizarPlan
+                'src/controller/loader.js': 0}       # vía sincronizarPlan
     _off = []
     for _sf in _glob.glob('src/**/*.js', recursive=True):
         _n = _sf.replace('\\', '/')
