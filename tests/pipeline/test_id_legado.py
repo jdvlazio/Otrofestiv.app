@@ -47,13 +47,15 @@ class Legado(unittest.TestCase):
         out, reg = funcion.ids_para_publicado(fs, {})
         arm, _, av = funcion.asignar_ids([montaje(p) for p in fs], reg)
         self.assertEqual([x['id'] for x in out], [x['_fid'] for x in arm])
-        self.assertFalse([a for a in av if a.startswith('⚠')])
+        # por CLAVE EXACTA, no rescatada por la heurística (movida / renombrada)
+        self.assertEqual(av, [])
 
     def test_el_ensamblador_conserva_el_id_aunque_cambie_la_caja(self):
         # rearmar un festival viejo cambia la caja de títulos (Caja de Título, 15 oct)
         out, reg = funcion.ids_para_publicado([pub(title='EL PARAPETO')], {})
-        arm, _, _ = funcion.asignar_ids([montaje(pub(title='El Parapeto'))], reg)
+        arm, _, av = funcion.asignar_ids([montaje(pub(title='El Parapeto'))], reg)
         self.assertEqual(out[0]['id'], arm[0]['_fid'])
+        self.assertEqual(av, [])
 
     def test_un_id_ya_publicado_se_respeta(self):
         # BHFF/Fantasmagoría/Ficcali ya tienen id: la pasada no los recalcula
