@@ -229,3 +229,41 @@ Antes de abrir el PR de C1–C10, una revisión independiente encontró 10 halla
 **Otros dos límites, aceptados:**
 - Si una función desaparece de la fuente y vuelve **movida** (otra sede, día u hora), no recupera su id: recibe uno nuevo y sus afirmaciones fallan con `AnclaPerdida`, en voz alta. Arreglo: re-apuntar el `ancla` de la afirmación a la función nueva.
 - El registro de ids no se poda: las ausentes se quedan, marcadas. Son inofensivas (no prestan su id) y el archivo crece unas decenas de líneas por festival.
+
+## 11. El identificador estable de la función — PROPUESTA (18 oct 2026, sin implementar)
+
+Pedido de Juan vía la sesión Main: hoy la app reconoce una función por título + día + hora (+ sede). Si el festival cambia la hora o el título, la trata como otra: se rompen planes, retrasos, boleta y avisos, y `titulos_anteriores` es un parche. **El modelo ya tiene la mitad**: `asignar_ids` (C1) da un `_fid` y lo guarda en `<fid>-funciones-ids.json` (BHFF, Fantasmagoría, Ficcali). Esto lo completa.
+
+### 11.1 La forma
+- **`id`** en cada función publicada (schema.org: `ScreeningEvent.identifier`), opaco: `f_` + 10 hex. Se calcula UNA vez, al nacer la función, y **nunca se recalcula**: el registro es la fuente, no la fórmula. Sobrevive a cambios de hora, sala, sede y título.
+- Único **dentro del festival**; global = `<festival>/<id>`.
+- Alineación schema.org: función = `ScreeningEvent` (`identifier`, `startDate`, `location`), obra = `Movie` (`work_id` del catálogo, `workPresented`), sede = `Place` (`venue`), festival = `superEvent`. Solo nombres; el JSON no cambia de forma.
+
+### 11.2 Quién lo asigna
+- El **pipeline**, en `ensamblar` (`funcion.asignar_ids`), para TODO festival con plan, no solo los del modelo. El registro `<fid>-funciones-ids.json` se versiona y es la fuente.
+- Festivales sin pipeline (legado): un script de una pasada les asigna ids y congela su registro.
+- `publicar.py` deja pasar `id` (hoy descarta todo lo que empieza con `_`).
+
+### 11.3 Cómo se casa una función nueva con una vieja al re-armar
+En orden, como hoy, más lo que falta:
+1. **clave exacta** (sede, día, hora, sala, título) → mismo id;
+2. **una sola candidata** libre que coincida en (sede, título) → *movida*; o en (sede, día, hora, sala) → *renombrada*;
+3. **NUEVO — un solo cambio de sede**: (título, día, hora) iguales en otra sede → *trasladada* (el sismo de FICMA, la sala de BHFF);
+4. **NUEVO — cambio doble** (título Y hora, o sede Y hora): no se adivina. Va a una **decisión registrada** en `<fid>-funciones-decisiones.json` — `{"viejo": id, "nuevo": clave | "es_otra", "por_que", "quien", "fecha"}` —, como las decisiones de identidad del catálogo. Sin decisión: id nuevo y el armado AVISA (no frena: una función que de verdad es otra no debe bloquear).
+5. Más de una candidata → ambigua → decisión, nunca en silencio (como hoy).
+
+### 11.4 Partir y fusionar
+- **Se parte** (un programa pasa a ser dos funciones): el id viejo queda en el registro con `partida_en: [id1, id2]`; las hijas nacen con id nuevo. La app migra lo guardado a la primera hija y avisa.
+- **Se fusionan** (dos funciones pasan a ser una): la nueva conserva el id de la más antigua; la otra queda `fusionada_en: id`.
+- **Se cancela / sale**: el id queda `ausente` (como hoy) y nunca se reusa.
+- Todo eso viaja publicado en `ids_anteriores` de la función destino (el hermano de `titulos_anteriores`), para que la app migre sin leer el registro.
+
+### 11.5 Guardián `[id-funcion-estable]`
+Contra `main`: (a) todo `id` publicado antes sigue publicado, o figura `ausente` / `partida_en` / `fusionada_en` en el registro; (b) ningún `id` cambia de función salvo por una regla de §11.3 registrada; (c) un `id` nuevo solo para una función nueva. Con autoprueba (un cebo por regla) y mutación.
+
+### 11.6 Plan (PRs chicas)
+1. Esta propuesta → Juan.
+2. `id` publicado + `ids_anteriores` + guardián, en los 3 festivales que ya tienen registro (BHFF, Fantasmagoría, Ficcali). La app no lo lee todavía.
+3. Reglas nuevas (trasladada, decisión registrada, partir/fusionar), con tests primero.
+4. Todo festival con plan; luego los de legado con su registro congelado.
+5. (Main) la app: plan, retrasos, boleta y avisos apuntan al `id`.
