@@ -745,6 +745,13 @@ export function makeEventPoster(state,title,duration,eventKind,section,opts){
     'acto':         {accent:'#BA7517', headerLabel:'ACTO'},
     'fiesta':       {accent:'#22C55E', headerLabel:'FIESTA'},
     'social al parque':{accent:'#22C55E', headerLabel:'SOCIAL AL PARQUE'},
+    // Guatapé Film Fest 2026 (18 oct): las palabras de su lámina. Concierto y
+    // títeres son del parque (verde); la premiación va con apertura/clausura;
+    // la entrega de la maleta audiovisual a la biblioteca, también.
+    'concierto':    {accent:'#22C55E', headerLabel:'CONCIERTO'},
+    'obra de títeres':{accent:'#22C55E', headerLabel:'OBRA DE TÍTERES'},
+    'premiación':   {accent:'#BA7517', headerLabel:'PREMIACIÓN'},
+    'entrega':      {accent:'#BA7517', headerLabel:'ENTREGA'},
   };
   const _kindMapEN={
     'conversatorio':{accent:'#F59E0B', headerLabel:'TALK'},
@@ -773,6 +780,10 @@ export function makeEventPoster(state,title,duration,eventKind,section,opts){
     'acto':         {accent:'#BA7517', headerLabel:'CEREMONY'},
     'fiesta':       {accent:'#22C55E', headerLabel:'PARTY'},
     'social al parque':{accent:'#22C55E', headerLabel:'SOCIAL IN THE PARK'},
+    'concierto':    {accent:'#22C55E', headerLabel:'CONCERT'},
+    'obra de títeres':{accent:'#22C55E', headerLabel:'PUPPET SHOW'},
+    'premiación':   {accent:'#BA7517', headerLabel:'AWARDS CEREMONY'},
+    'entrega':      {accent:'#BA7517', headerLabel:'HANDOVER'},
   };
   const _kindMap=_lang==='es'?_kindMapES:_kindMapEN; // PT reutiliza EN (términos internacionales)
   // opts.untitled (regla anti-repetición del sheet): cuerpo vacío — el título ya

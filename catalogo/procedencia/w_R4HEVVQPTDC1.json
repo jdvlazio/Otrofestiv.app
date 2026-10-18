@@ -4,8 +4,8 @@
   "regla": "el título que más festivales imprimen"
  },
  "directores": {
-  "fuente": "tmdb:1668935",
-  "regla": "tmdb-manda"
+  "fuente": "festival",
+  "regla": "la grafía más completa que acreditan los festivales"
  },
  "anio": {
   "fuente": "festival",

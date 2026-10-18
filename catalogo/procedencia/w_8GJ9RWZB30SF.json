@@ -1,6 +1,6 @@
 {
  "titulo_original": {
-  "fuente": "festival:siembrafest-2026",
+  "fuente": "festival:guatape-2026",
   "regla": "el título que más festivales imprimen"
  },
  "directores": {
@@ -8,12 +8,12 @@
   "regla": "la grafía más completa que acreditan los festivales"
  },
  "anio": {
-  "fuente": "festival",
-  "regla": "único"
+  "fuente": "tmdb:1361852",
+  "regla": "tmdb-manda"
  },
  "paises": {
-  "fuente": "festival",
-  "regla": "pais-union"
+  "fuente": "tmdb:1361852",
+  "regla": "tmdb-manda"
  },
  "generos": {
   "fuente": "festival",

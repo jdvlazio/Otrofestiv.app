@@ -1,0 +1,386 @@
+{
+ "_provenance": {
+  "fuente": "ensamblar.py: ids estables de las funciones (docs/FUNCION.md C1)",
+  "capturado": "2026-10-18"
+ },
+ "funciones": {
+  "f_00c45f56ef": {
+   "sede": "I.E. Sede La Piedra - Guatapé",
+   "dia": "2026-10-21",
+   "hora": "09:00",
+   "sala": "",
+   "titulo": "cine para reflejar territorio"
+  },
+  "f_f1a4c7864a": {
+   "sede": "Centro Día Gerontológico - Guatapé",
+   "dia": "2026-10-21",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "alla cartas al corazon"
+  },
+  "f_3280bcfc20": {
+   "sede": "Casa 18 Gastro Bar - Guatapé",
+   "dia": "2026-10-21",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "competencia internacional de cortometrajes"
+  },
+  "f_6b27408f04": {
+   "sede": "Centro de Eventos Guatapé Plaza - Guatapé",
+   "dia": "2026-10-21",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "un poeta"
+  },
+  "f_37f464cb3e": {
+   "sede": "Parque Principal - Guatapé",
+   "dia": "2026-10-21",
+   "hora": "18:00",
+   "sala": "Domo",
+   "titulo": "ipatu"
+  },
+  "f_32cd489be4": {
+   "sede": "Parque Principal - Guatapé",
+   "dia": "2026-10-21",
+   "hora": "18:15",
+   "sala": "Domo",
+   "titulo": "la fuente"
+  },
+  "f_1a3322de1c": {
+   "sede": "Centro de Eventos Guatapé Plaza - Guatapé",
+   "dia": "2026-10-21",
+   "hora": "20:00",
+   "sala": "",
+   "titulo": "coctel inaugural"
+  },
+  "f_442ca98857": {
+   "sede": "Parque Principal - Guatapé",
+   "dia": "2026-10-22",
+   "hora": "10:30",
+   "sala": "",
+   "titulo": "el reflejo de la memoria"
+  },
+  "f_d942f47639": {
+   "sede": "Biblioteca Municipal - Guatapé",
+   "dia": "2026-10-22",
+   "hora": "11:00",
+   "sala": "",
+   "titulo": "el reflejo entre regiones"
+  },
+  "f_0d580be7a1": {
+   "sede": "Parque Principal - Guatapé",
+   "dia": "2026-10-22",
+   "hora": "13:00",
+   "sala": "",
+   "titulo": "me llamo tierra"
+  },
+  "f_1950a2c9f6": {
+   "sede": "Comfama - Guatapé",
+   "dia": "2026-10-22",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "territorios que filman"
+  },
+  "f_fbcd694e82": {
+   "sede": "Casa de la Juventud - Guatapé",
+   "dia": "2026-10-22",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "el reflejo de las generaciones"
+  },
+  "f_07579b3657": {
+   "sede": "Museo Comunitario - Guatapé",
+   "dia": "2026-10-22",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "el reflejo de un actor"
+  },
+  "f_857b42cf4b": {
+   "sede": "Museo Comunitario - Guatapé",
+   "dia": "2026-10-22",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "taller memoria y patrimonio visual"
+  },
+  "f_0a04a4a478": {
+   "sede": "Parque Principal - Guatapé",
+   "dia": "2026-10-22",
+   "hora": "18:00",
+   "sala": "Domo",
+   "titulo": "competencia nacional de cine universitario programa 1"
+  },
+  "f_a6d3e7afb3": {
+   "sede": "Muelle Corona - Guatapé",
+   "dia": "2026-10-22",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "coctel invitados"
+  },
+  "f_07965746a3": {
+   "sede": "Muelle Corona - Guatapé",
+   "dia": "2026-10-22",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "horizonte"
+  },
+  "f_4895088227": {
+   "sede": "Malecón - Guatapé",
+   "dia": "2026-10-22",
+   "hora": "18:00",
+   "sala": "Pantalla CORNARE",
+   "titulo": "la gran hazana"
+  },
+  "f_0e12d37c79": {
+   "sede": "Parque Principal - Guatapé",
+   "dia": "2026-10-22",
+   "hora": "18:30",
+   "sala": "Domo",
+   "titulo": "basta mama"
+  },
+  "f_5d90ed7f92": {
+   "sede": "Malecón - Guatapé",
+   "dia": "2026-10-22",
+   "hora": "18:30",
+   "sala": "Pantalla CORNARE",
+   "titulo": "ninos de las brisas"
+  },
+  "f_fb0ac215fa": {
+   "sede": "Museo del Zócalo - Guatapé",
+   "dia": "2026-10-23",
+   "hora": "09:00",
+   "sala": "",
+   "titulo": "territorios que filman"
+  },
+  "f_7c54fc1c6e": {
+   "sede": "Parque Principal - Guatapé",
+   "dia": "2026-10-23",
+   "hora": "13:00",
+   "sala": "",
+   "titulo": "detras del reflejo el productor"
+  },
+  "f_c97bfc1db5": {
+   "sede": "Museo Comunitario - Guatapé",
+   "dia": "2026-10-23",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "taller memoria y patrimonio visual"
+  },
+  "f_9e3694faa0": {
+   "sede": "Parque Educativo El Zócalo - Guatapé",
+   "dia": "2026-10-23",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "concept art para cine"
+  },
+  "f_b78e5d0d70": {
+   "sede": "Parque Educativo El Zócalo - Guatapé",
+   "dia": "2026-10-23",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "reflejos de un personaje"
+  },
+  "f_8348519f2b": {
+   "sede": "Parque Principal - Guatapé",
+   "dia": "2026-10-23",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "conversatorio actores"
+  },
+  "f_c0799142e3": {
+   "sede": "Parque Principal - Guatapé",
+   "dia": "2026-10-23",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "conversatorio historias que se juegan"
+  },
+  "f_609a2a84da": {
+   "sede": "Parque Principal - Guatapé",
+   "dia": "2026-10-23",
+   "hora": "18:00",
+   "sala": "Domo",
+   "titulo": "competencia nacional de cine universitario programa 2"
+  },
+  "f_716c324d5a": {
+   "sede": "Museo del Zócalo - Guatapé",
+   "dia": "2026-10-23",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "sobre las olas"
+  },
+  "f_d7f319c0ec": {
+   "sede": "Malecón - Guatapé",
+   "dia": "2026-10-23",
+   "hora": "18:00",
+   "sala": "Pantalla CORNARE",
+   "titulo": "luma"
+  },
+  "f_ee008fcc99": {
+   "sede": "Malecón - Guatapé",
+   "dia": "2026-10-23",
+   "hora": "18:20",
+   "sala": "Pantalla CORNARE",
+   "titulo": "luis antonio"
+  },
+  "f_b40714d20c": {
+   "sede": "Centro Día Gerontológico - Guatapé",
+   "dia": "2026-10-23",
+   "hora": "18:30",
+   "sala": "Auditorio",
+   "titulo": "historias que se juegan"
+  },
+  "f_8fb021eb0e": {
+   "sede": "Parque Principal - Guatapé",
+   "dia": "2026-10-23",
+   "hora": "18:30",
+   "sala": "Domo",
+   "titulo": "culebra negra"
+  },
+  "f_d76a757cef": {
+   "sede": "El Majagual - Guatapé",
+   "dia": "2026-10-23",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "leo tus labios"
+  },
+  "f_3a3306d132": {
+   "sede": "Parque Principal - Guatapé",
+   "dia": "2026-10-23",
+   "hora": "20:00",
+   "sala": "",
+   "titulo": "concierto el reflejo del cine"
+  },
+  "f_d1a1ca9b74": {
+   "sede": "Parque Educativo El Zócalo - Guatapé",
+   "dia": "2026-10-24",
+   "hora": "09:00",
+   "sala": "",
+   "titulo": "concept art para cine"
+  },
+  "f_b855134381": {
+   "sede": "Parque Educativo El Zócalo - Guatapé",
+   "dia": "2026-10-24",
+   "hora": "10:00",
+   "sala": "",
+   "titulo": "cine y nuevas narrativas"
+  },
+  "f_69e4d28aea": {
+   "sede": "Parque Principal - Guatapé",
+   "dia": "2026-10-24",
+   "hora": "13:30",
+   "sala": "Tarima Principal",
+   "titulo": "cine con legado social"
+  },
+  "f_13238822d4": {
+   "sede": "Parque Educativo El Zócalo - Guatapé",
+   "dia": "2026-10-24",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "reflejos de un personaje"
+  },
+  "f_ca1ad0d530": {
+   "sede": "Parque Principal - Guatapé",
+   "dia": "2026-10-24",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "reflejos sonoros"
+  },
+  "f_e569376207": {
+   "sede": "Parque Principal - Guatapé",
+   "dia": "2026-10-24",
+   "hora": "18:00",
+   "sala": "Domo",
+   "titulo": "muestra local"
+  },
+  "f_40663cdc40": {
+   "sede": "Finca La Manuela - Guatapé",
+   "dia": "2026-10-24",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "la sierra"
+  },
+  "f_b4dceab0ce": {
+   "sede": "Malecón - Guatapé",
+   "dia": "2026-10-24",
+   "hora": "18:00",
+   "sala": "Pantalla CORNARE",
+   "titulo": "cicatrices"
+  },
+  "f_448d492374": {
+   "sede": "Malecón - Guatapé",
+   "dia": "2026-10-24",
+   "hora": "18:30",
+   "sala": "Pantalla CORNARE",
+   "titulo": "el convento"
+  },
+  "f_0984eb2fd7": {
+   "sede": "Camping La Espacial - Guatapé",
+   "dia": "2026-10-24",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "volar"
+  },
+  "f_5fad3d47e5": {
+   "sede": "Parque Principal - Guatapé",
+   "dia": "2026-10-24",
+   "hora": "19:30",
+   "sala": "",
+   "titulo": "premiacion competencia y reconocimientos"
+  },
+  "f_0c865d99a3": {
+   "sede": "El Majagual - Guatapé",
+   "dia": "2026-10-24",
+   "hora": "21:00",
+   "sala": "",
+   "titulo": "fiesta electronica"
+  },
+  "f_57c91ccd6c": {
+   "sede": "Parque Principal - Guatapé",
+   "dia": "2026-10-25",
+   "hora": "11:00",
+   "sala": "",
+   "titulo": "el reflejo de los festivales"
+  },
+  "f_9aa546df2b": {
+   "sede": "Parque Principal - Guatapé",
+   "dia": "2026-10-25",
+   "hora": "13:30",
+   "sala": "Tarima Principal",
+   "titulo": "tres miradas un reflejo"
+  },
+  "f_33c2f94452": {
+   "sede": "Parque Principal - Guatapé",
+   "dia": "2026-10-25",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "sangre de palermo y su reflejo"
+  },
+  "f_e81aa42000": {
+   "sede": "Malecón - Guatapé",
+   "dia": "2026-10-25",
+   "hora": "18:00",
+   "sala": "Pantalla CORNARE",
+   "titulo": "canelones"
+  },
+  "f_fd04582b48": {
+   "sede": "Parque Principal - Guatapé",
+   "dia": "2026-10-25",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "la gallina saraviada"
+  },
+  "f_54abf6f35f": {
+   "sede": "Parque Principal - Guatapé",
+   "dia": "2026-10-25",
+   "hora": "18:20",
+   "sala": "",
+   "titulo": "sangre de palermo"
+  },
+  "f_94f35ed75d": {
+   "sede": "Bahía Plus - Guatapé",
+   "dia": "2026-10-25",
+   "hora": "20:00",
+   "sala": "",
+   "titulo": "clausura el reflejo del cine"
+  }
+ }
+}

@@ -1,11 +1,11 @@
 {
  "titulo_original": {
-  "fuente": "festival:ficpa-2026",
+  "fuente": "festival:ficpa-2026,guatape-2026",
   "regla": "el título que más festivales imprimen"
  },
  "directores": {
-  "fuente": "tmdb:1746279",
-  "regla": "tmdb-manda"
+  "fuente": "festival",
+  "regla": "la grafía más completa que acreditan los festivales"
  },
  "anio": {
   "fuente": "tmdb:1746279",

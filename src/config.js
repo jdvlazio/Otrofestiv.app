@@ -1213,6 +1213,28 @@ export const FESTIVAL_CONFIG={
     prioLimit:3,
     films:null,posters:null,lbSlugs:{}
   },
+  'guatape2026': {
+    // EL NOMBRE es el del festival (@guatapefilmfest); la edición va en fullName.
+    name:'Guatapé Film Fest',displayName:'Guatapé Film Fest',
+    fullName:'Guatapé Film Fest 2026 — 4.ª edición',shortName:'GUATAPÉ',
+    city:'Guatapé',country:'CO',
+    dates:'21–25 OCT',dates_en:'OCT 21–25',year:2026,timezoneOffset:'-05:00',
+    // PROVISORIO (18 oct 2026): el festival no publicó un afiche propio; es la
+    // portada de su carrusel de programación (@guatapefilmfest p/Def6fhKDSQy),
+    // estirada a 2:3 como todo keyArt. Se cambia cuando aparezca el afiche.
+    keyArt:'/assets/keyart/guatape2026-v1.jpg',
+    // EL LEMA DE LA 4.ª EDICIÓN
+    tagline:'El Reflejo del Cine',
+    instagram:'guatapefilmfest', storageKey:'guatape2026_',festivalStartStr:'2026-10-21T00:00:00',festivalEndStr:'2026-10-25T23:59:00',
+    festivalDates:{'2026-10-21':'2026-10-21','2026-10-22':'2026-10-22','2026-10-23':'2026-10-23','2026-10-24':'2026-10-24','2026-10-25':'2026-10-25'},
+    days:[{k:'2026-10-21',d:21,lbl:'MIÉ'},{k:'2026-10-22',d:22,lbl:'JUE'},{k:'2026-10-23',d:23,lbl:'VIE'},{k:'2026-10-24',d:24,lbl:'SÁB'},{k:'2026-10-25',d:25,lbl:'DOM'}],
+    dayKeys:['2026-10-21','2026-10-22','2026-10-23','2026-10-24','2026-10-25'],
+    dayShort:{'2026-10-21':'MIÉ 21','2026-10-22':'JUE 22','2026-10-23':'VIE 23','2026-10-24':'SÁB 24','2026-10-25':'DOM 25'},
+    dayShort_en:{'2026-10-21':'WED 21','2026-10-22':'THU 22','2026-10-23':'FRI 23','2026-10-24':'SAT 24','2026-10-25':'SUN 25'},
+    dayLong:{'2026-10-21':'Miércoles 21 de octubre','2026-10-22':'Jueves 22 de octubre','2026-10-23':'Viernes 23 de octubre','2026-10-24':'Sábado 24 de octubre','2026-10-25':'Domingo 25 de octubre'},
+    prioLimit:3,
+    films:null,posters:null,lbSlugs:{}
+  },
   'biff2026': {
     name:'BIFF',displayName:'BIFF',fullName:'BIFF 12 — Bogota International Film Festival',shortName:'BIFF',
     city:'Bogotá',country:'CO',
@@ -1473,6 +1495,20 @@ export const ARCHETYPE_COLORS = {
 // Cada sección de cada festival → su arquetipo. Generado por scripts/classify-posters
 // (arquetipos) + decisiones de diseño. Sección nueva sin entrada → gate lo caza.
 export const SECTION_ARCHETYPES = {
+  // ── Guatapé Film Fest 2026 · Guatapé ──────────────────────────────────
+  '🎬 Película Inaugural': 'Apertura / Gala',
+  '🏆 Competencia Internacional de Largometraje': 'Competencia',
+  '🏅 Competencia Internacional de Cortometrajes': 'Competencia',
+  '🎓 Competencia Nacional de Cine Universitario': 'Competencia',
+  '🎞️ Muestra de Cine Colombiano': 'Muestra / País',
+  '🤝 Muestra de Cine Comunitario Colombiano': 'Muestra / País',
+  '🦋 Rumbo a los Macondo': 'Perspectivas / Miradas',
+  '🌎 FIACINE': 'Muestra / País',
+  '🌙 Cinema Luna': 'Especiales / Eventos',
+  '🏡 Muestra Local': 'Muestra / País',
+  '👻 Terror': 'Especiales / Eventos',
+  '🪞 El Reflejo del Cine': 'Muestra / País',
+  // («🎪 Actividades» ya está, con el mismo arquetipo)
   // ── Villa del Cine 12 · Villa de Leyva ─────────────────────────────────
   '👁️ Nuevas Miradas': 'Perspectivas / Miradas',
   '🗺️ Territorios': 'Muestra / País',

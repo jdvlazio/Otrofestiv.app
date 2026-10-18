@@ -599,6 +599,9 @@ SIGLAS = {
     'LGBTIQ', 'MAMB', 'MAMM', 'MUBI', 'SENA', 'TPAC', 'UNAL', 'UNIAGRARIA', 'UNIBAC', 'VISA',
     # festivales nombrados dentro de una sección o una sede
     'BIFF', 'FICCI', 'FICDH', 'TIFF',
+    # Guatapé Film Fest (18 oct 2026): la Pantalla CORNARE (Corporación Autónoma Regional
+    # Rionegro-Nare) y la sección FIACINE (Federación Iberoamericana de Asociaciones de Cine)
+    'CORNARE', 'FIACINE',
     # «Programación MORA» de FILCMAR: Mercado Oriente Audiovisual (su lámina 1)
     'MORA',
     # MARCAS DE PROGRAMA que el festival escribe así —no son siglas y no
