@@ -1,0 +1,17 @@
+{
+ "_nota": "El actualizador (pipeline/actualizar.py, docs/FUNCION.md §5.2). activo=false lo apaga sin tocar código. Cada festival declara qué baja (antes) y qué pasos de su plan re-corre. Primero solo Fantasmagoría (tech lead, 17 oct): una semana sin sorpresas antes de sumar otros.",
+ "activo": true,
+ "tope": 5,
+ "festivales": {
+  "fantasmagoria-2026": {
+   "antes": [
+    "python3 pipeline/fantasmagoria-2026-base.py --bajar"
+   ],
+   "pasos": [
+    8,
+    10
+   ],
+   "fuente": "la base de la cartelera del festival (cartelerafantasmagoria.fan, programacion_publicada)"
+  }
+ }
+}
