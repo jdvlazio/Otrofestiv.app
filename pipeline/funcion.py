@@ -293,15 +293,57 @@ def asignar_ids(funciones, registro):
             i = 'f_' + hashlib.sha1(i.encode()).hexdigest()[:10]
         ids[n] = i
     out = []
+    nacidos = []
     for f, c, i in zip(funciones, claves, ids):
         out.append({**f, '_fid': i})
         nuevo[i] = c
+        if i not in viejas:
+            nacidos.append((i, f, c))
+    # EL CAMBIO DOBLE, VISIBLE (Juan, 18 oct 2026): en el mismo montaje sale una
+    # función y nace otra que no se pudo casar con ella (cambió título Y hora, o
+    # sede Y hora). Puede ser la misma: quien la tenía en su plan la pierde. Se
+    # avisa con las dos, para registrar la decisión si lo es (§11.3)
+    salen = [(i, v) for i, v in viejas.items() if i not in {x for x in ids} and not v.get('ausente')]
+    for i, f, c in nacidos if salen else []:
+        cerca = [(j, v) for j, v in salen if v['sede'] == c['sede'] or v['titulo'] == c['titulo'] or v['dia'] == c['dia']]
+        for j, v in cerca or salen:
+            avisos.append(f'⚠ id nuevo {i} «{f.get("title")}» {c["dia"]} {c["hora"]} — ¿es la que salió, {j} '
+                          f'«{v["titulo"]}» {v["dia"]} {v["hora"]}? Si lo es, registrá la decisión: quien la '
+                          f'tenía en su plan la pierde')
     for i, v in viejas.items():
         if i not in nuevo:
             if not v.get('ausente'):
                 avisos.append(f'{i} «{v["titulo"]}» {v["dia"]} {v["hora"]}: ya no está en la fuente principal')
             nuevo[i] = {**v, 'ausente': True}
     return out, {'funciones': nuevo}, avisos
+
+
+def ids_estables(viejo, nuevo, registro):
+    """[id-funcion-estable] (docs/FUNCION.md §11.5): lo publicado en main contra
+    lo de ahora → problemas. Un id publicado no desaparece salvo que el registro
+    lo marque ausente / partida_en / fusionada_en; un id no cambia de función
+    (título Y día-hora-sede a la vez); no hay ids repetidos."""
+    mal = []
+    nuevos = [f.get('id') for f in nuevo.get('films') or [] if f.get('id')]
+    for i in sorted({x for x in nuevos if nuevos.count(x) > 1}):
+        mal.append(f'{i}: id repetido en dos funciones')
+    ahora = {f['id']: f for f in nuevo.get('films') or [] if f.get('id')}
+    reg = (registro or {}).get('funciones') or {}
+    for f in viejo.get('films') or []:
+        i = f.get('id')
+        if not i:
+            continue
+        g = ahora.get(i)
+        if g is None:
+            r = reg.get(i) or {}
+            if not (r.get('ausente') or r.get('partida_en') or r.get('fusionada_en')):
+                mal.append(f'{i} «{f.get("title")}» {f.get("day")} {f.get("time")}: desapareció sin registro')
+            continue
+        slot = lambda x: (x.get('day'), x.get('time'), x.get('venue'))
+        if f.get('title') != g.get('title') and slot(f) != slot(g):
+            mal.append(f'{i}: cambió de función — «{f.get("title")}» {f.get("day")} {f.get("time")} → '
+                       f'«{g.get("title")}» {g.get("day")} {g.get("time")}')
+    return mal
 
 
 # ── la resolución ────────────────────────────────────────────────────────────

@@ -415,6 +415,7 @@
    "_pregunta": "Para los lanzamientos de libros en el Bulevar del Río: ¿en qué carpa/auditorio de CaliLee es cada uno (las tarjetas solo lo dicen en dos)?"
   }
  },
+ "_avisos_id": [],
  "films": [
   {
    "title": "Encuentro local estudiantes de cine 2026: Bailar con el caos",
@@ -499,7 +500,8 @@
      "marca": "supuesto",
      "valor": "libre"
     }
-   }
+   },
+   "id": "f_7660ad6422"
   },
   {
    "title": "Mu-ki-ra",
@@ -576,7 +578,8 @@
      "fecha": "2026-10-06",
      "url": "https://ficcali.com/programacion-ficcali-2026/"
     }
-   }
+   },
+   "id": "f_f66d49bb1b"
   },
   {
    "title": "III Encuentro sectorial local",
@@ -650,6 +653,7 @@
      "valor": "libre"
     }
    },
+   "id": "f_b9351a23f7",
    "titulos_anteriores": [
     "III Encuentro sectorial local: Invita el Consejo Distrital de Cine y Audiovisuales"
    ]
@@ -729,7 +733,8 @@
      "marca": "supuesto",
      "valor": "libre"
     }
-   }
+   },
+   "id": "f_930ac1e01c"
   },
   {
    "title": "An Incomplete Calendar",
@@ -806,7 +811,8 @@
      "marca": "supuesto",
      "valor": "libre"
     }
-   }
+   },
+   "id": "f_516ff1799f"
   },
   {
    "title": "Luis Tercero",
@@ -882,7 +888,8 @@
      "marca": "supuesto",
      "valor": "libre"
     }
-   }
+   },
+   "id": "f_c5ac151fc4"
   },
   {
    "title": "Canción para mi tierra",
@@ -947,7 +954,8 @@
      "marca": "supuesto",
      "valor": "libre"
     }
-   }
+   },
+   "id": "f_27251e6c9c"
   },
   {
    "title": "Domo Live Camoflux: Incendio Igapó",
@@ -1026,7 +1034,8 @@
      "marca": "supuesto",
      "valor": "libre"
     }
-   }
+   },
+   "id": "f_4792785a05"
   },
   {
    "title": "Princesa burro",
@@ -1104,7 +1113,8 @@
      "marca": "supuesto",
      "valor": "libre"
     }
-   }
+   },
+   "id": "f_94dc59c92b"
   },
   {
    "title": "Ellas, gardiennes de l'Amazonie",
@@ -1180,7 +1190,8 @@
      "marca": "supuesto",
      "valor": "libre"
     }
-   }
+   },
+   "id": "f_becc2863ca"
   },
   {
    "title": "Siempre soy tu animal materno",
@@ -1258,7 +1269,8 @@
      "marca": "supuesto",
      "valor": "libre"
     }
-   }
+   },
+   "id": "f_360bbb0132"
   },
   {
    "title": "Mu-ki-ra",
@@ -1335,7 +1347,8 @@
      "marca": "supuesto",
      "valor": "libre"
     }
-   }
+   },
+   "id": "f_9ac4fd3339"
   },
   {
    "title": "Seis meses en el edificio rosa con azul",
@@ -1413,7 +1426,8 @@
      "marca": "supuesto",
      "valor": "libre"
     }
-   }
+   },
+   "id": "f_ff11c0b7f6"
   },
   {
    "title": "Desarmar la mirada. Taller de crítica para pensar el cine",
@@ -1492,7 +1506,8 @@
      "marca": "supuesto",
      "valor": "libre"
     }
-   }
+   },
+   "id": "f_3f99588d3b"
   },
   {
    "title": "Cortos Infantiles FICCALI / Mi Vecino Totoro",
@@ -1632,6 +1647,7 @@
      "valor": "libre"
     }
    },
+   "id": "f_17fc2cf996",
    "titulos_anteriores": [
     "Cortos infantiles FICCALI / Mi vecino Totoro"
    ]
@@ -1713,7 +1729,8 @@
      "marca": "supuesto",
      "valor": "libre"
     }
-   }
+   },
+   "id": "f_6e0791b5a0"
   },
   {
    "title": "XV Encuentro de investigación en cine: Pantallas que piensan",
@@ -1786,7 +1803,8 @@
      "marca": "supuesto",
      "valor": "libre"
     }
-   }
+   },
+   "id": "f_ce012167f9"
   },
   {
    "title": "Arco + Corto Akababuru",
@@ -1894,6 +1912,7 @@
      "valor": "libre"
     }
    },
+   "id": "f_80df636939",
    "titulos_anteriores": [
     "Largo Arco + Corto Akababuru"
    ]
@@ -1961,7 +1980,8 @@
      "marca": "supuesto",
      "valor": "libre"
     }
-   }
+   },
+   "id": "f_ca03e8d57b"
   },
   {
    "title": "Domo Hub – Muestra local universitaria de cortometrajes inmersivos",
@@ -2038,7 +2058,8 @@
      "marca": "supuesto",
      "valor": "libre"
     }
-   }
+   },
+   "id": "f_68581bab4b"
   },
   {
    "title": "I Built a Rocket Imagining your Arrival",
@@ -2115,7 +2136,8 @@
      "marca": "supuesto",
      "valor": "libre"
     }
-   }
+   },
+   "id": "f_93921bc39b"
   },
   {
    "title": "Parche con… Andrés Porras y Carlos Moreno",
@@ -2188,7 +2210,8 @@
      "marca": "supuesto",
      "valor": "libre"
     }
-   }
+   },
+   "id": "f_691b3893e5"
   },
   {
    "title": "XV Encuentro de investigación en cine. Pantallas que piensan. Indagar en formas de investigación creativa",
@@ -2259,7 +2282,8 @@
      "marca": "supuesto",
      "valor": "libre"
     }
-   }
+   },
+   "id": "f_4ecd4582e9"
   },
   {
    "title": "Parche con… Marleyda Soto",
@@ -2333,6 +2357,7 @@
      "valor": "libre"
     }
    },
+   "id": "f_12ac272009",
    "titulos_anteriores": [
     "Parche con… Marleyda Soto – Experiencia de actuación en 100 años de soledad."
    ]
@@ -2411,7 +2436,8 @@
      "marca": "supuesto",
      "valor": "libre"
     }
-   }
+   },
+   "id": "f_ce517e8b90"
   },
   {
    "title": "Competencia corto nacional – Prog. 2",
@@ -2476,7 +2502,8 @@
      "marca": "supuesto",
      "valor": "libre"
     }
-   }
+   },
+   "id": "f_2e1cadac0f"
   },
   {
    "title": "Guapi: ritmo y balsada",
@@ -2544,7 +2571,8 @@
      "marca": "supuesto",
      "valor": "libre"
     }
-   }
+   },
+   "id": "f_73ecab6b0a"
   },
   {
    "title": "La fabulosa máquina del tiempo",
@@ -2622,7 +2650,8 @@
      "marca": "supuesto",
      "valor": "libre"
     }
-   }
+   },
+   "id": "f_842ebbc4ea"
   },
   {
    "title": "La libertad doble",
@@ -2706,7 +2735,8 @@
      "marca": "supuesto",
      "valor": "libre"
     }
-   }
+   },
+   "id": "f_a74ef96f94"
   },
   {
    "title": "CHARLAS ALAPAR: Pablo Solarz. (Argentina)",
@@ -2778,6 +2808,7 @@
      "valor": "libre"
     }
    },
+   "id": "f_9e04458025",
    "titulos_anteriores": [
     "CHARLAS ALAPAR, Pablo Solarz. (Argentina)."
    ]
@@ -2857,7 +2888,8 @@
      "marca": "supuesto",
      "valor": "libre"
     }
-   }
+   },
+   "id": "f_3f21d8ed29"
   },
   {
    "title": "Luis Tercero",
@@ -2933,7 +2965,8 @@
      "marca": "supuesto",
      "valor": "libre"
     }
-   }
+   },
+   "id": "f_9a1a86853e"
   },
   {
    "title": "Cineconcierto: Metrópolis",
@@ -3006,7 +3039,8 @@
      "marca": "supuesto",
      "valor": "libre"
     }
-   }
+   },
+   "id": "f_ccede7bd0f"
   },
   {
    "title": "Cali, Ciudad Abierta – Prog. Cortos",
@@ -3148,6 +3182,7 @@
      "valor": "libre"
     }
    },
+   "id": "f_1197e237b4",
    "titulos_anteriores": [
     "Cali, ciudad abierta (cortos)",
     "Cali, ciudad abierta – Prog. Cortos"
@@ -3228,7 +3263,8 @@
      "marca": "supuesto",
      "valor": "libre"
     }
-   }
+   },
+   "id": "f_cb7604f13a"
   },
   {
    "title": "Taller de doblaje en el cine",
@@ -3307,7 +3343,8 @@
      "marca": "supuesto",
      "valor": "libre"
     }
-   }
+   },
+   "id": "f_7c0b26519e"
   },
   {
    "title": "Conversatorio \"Territorios y Voces Indígenas\" Presentan Concip y Telepacífico",
@@ -3385,6 +3422,7 @@
      "valor": "libre"
     }
    },
+   "id": "f_9e8b947fb7",
    "titulos_anteriores": [
     "Telepacífico – Comisión Nacional de Comunicación de los Pueblos Indígenas"
    ]
@@ -3460,7 +3498,8 @@
      "marca": "supuesto",
      "valor": "libre"
     }
-   }
+   },
+   "id": "f_1347e2e9ec"
   },
   {
    "title": "Écrire la vie: Annie Ernaux racontée par des lycéennes et des lycéens",
@@ -3538,7 +3577,8 @@
      "marca": "supuesto",
      "valor": "libre"
     }
-   }
+   },
+   "id": "f_ece2c963a3"
   },
   {
    "title": "Panel de inclusión y cine accesible – Contraplano",
@@ -3611,7 +3651,8 @@
      "marca": "supuesto",
      "valor": "libre"
     }
-   }
+   },
+   "id": "f_10c9bdaa79"
   },
   {
    "title": "Princesa burro",
@@ -3689,7 +3730,8 @@
      "marca": "supuesto",
      "valor": "libre"
     }
-   }
+   },
+   "id": "f_6c978e2329"
   },
   {
    "title": "Runa simi",
@@ -3773,6 +3815,7 @@
      "valor": "libre"
     }
    },
+   "id": "f_23449e2e2e",
    "titulos_anteriores": [
     "Runa Simi"
    ]
@@ -3855,6 +3898,7 @@
      "valor": "libre"
     }
    },
+   "id": "f_b1a048f6b0",
    "titulos_anteriores": [
     "Taller Vanguardias: Interrupción sónica"
    ]
@@ -3934,7 +3978,8 @@
      "marca": "supuesto",
      "valor": "libre"
     }
-   }
+   },
+   "id": "f_b47d7c304f"
   },
   {
    "title": "Domo internacional DESORIENTACIONES",
@@ -4013,7 +4058,8 @@
      "marca": "supuesto",
      "valor": "libre"
     }
-   }
+   },
+   "id": "f_84d3db28d1"
   },
   {
    "title": "Nuestro cuerpo es una estrella que se expande",
@@ -4091,7 +4137,8 @@
      "marca": "supuesto",
      "valor": "libre"
     }
-   }
+   },
+   "id": "f_c7c803a04d"
   },
   {
    "title": "Rodilla Negra + El Coloso",
@@ -4197,7 +4244,8 @@
      "marca": "supuesto",
      "valor": "libre"
     }
-   }
+   },
+   "id": "f_3543a4745f"
   },
   {
    "title": "Salseando ando + Convergencias",
@@ -4284,7 +4332,8 @@
      "marca": "supuesto",
      "valor": "libre"
     }
-   }
+   },
+   "id": "f_e9f086d490"
   },
   {
    "title": "Trópico Interior: Todos los Colores de la Oscuridad",
@@ -4480,6 +4529,7 @@
      "valor": "libre"
     }
    },
+   "id": "f_2e8bafb3a8",
    "titulos_anteriores": [
     "Trópico interior: Todos los colores de la oscuridad"
    ]
@@ -4559,7 +4609,8 @@
      "marca": "supuesto",
      "valor": "libre"
     }
-   }
+   },
+   "id": "f_4f974e83fd"
   },
   {
    "title": "Las pesadillas del siervo",
@@ -4634,7 +4685,8 @@
      "marca": "supuesto",
      "valor": "libre"
     }
-   }
+   },
+   "id": "f_4214350555"
   },
   {
    "title": "Relicto",
@@ -4711,7 +4763,8 @@
      "marca": "supuesto",
      "valor": "libre"
     }
-   }
+   },
+   "id": "f_4c97745ffa"
   },
   {
    "title": "Master class de SAPCINE",
@@ -4784,7 +4837,8 @@
      "marca": "supuesto",
      "valor": "libre"
     }
-   }
+   },
+   "id": "f_f6fc1a1df8"
   },
   {
    "title": "Desarmar la mirada. Taller de crítica para pensar el cine",
@@ -4863,7 +4917,8 @@
      "marca": "supuesto",
      "valor": "libre"
     }
-   }
+   },
+   "id": "f_fbb3538c7c"
   },
   {
    "title": "PANEL: Dirección propia. La realización en comunidades étnicas",
@@ -4936,7 +4991,8 @@
      "marca": "supuesto",
      "valor": "libre"
     }
-   }
+   },
+   "id": "f_1d549c64cc"
   },
   {
    "title": "PANEL: Plataformas alternativas, archivo y soberanía audiovisual",
@@ -5009,7 +5065,8 @@
      "marca": "supuesto",
      "valor": "libre"
     }
-   }
+   },
+   "id": "f_bd475f92ed"
   },
   {
    "title": "Agujero",
@@ -5082,7 +5139,8 @@
      "marca": "supuesto",
      "valor": "libre"
     }
-   }
+   },
+   "id": "f_48cc1ff63e"
   },
   {
    "title": "Vanguardias Afro e Indígena – Prog 1",
@@ -5242,6 +5300,7 @@
      "valor": "libre"
     }
    },
+   "id": "f_7914922647",
    "titulos_anteriores": [
     "Vanguardias- Prog 1"
    ]
@@ -5317,7 +5376,8 @@
      "marca": "supuesto",
      "valor": "libre"
     }
-   }
+   },
+   "id": "f_056f52eb0e"
   },
   {
    "title": "PANEL: El cortometraje animado y la libertad creativa.",
@@ -5389,6 +5449,7 @@
      "valor": "libre"
     }
    },
+   "id": "f_bb4232be54",
    "titulos_anteriores": [
     "PANEL PREMIOS MACONDO: Nominados cortometrajes de Animación"
    ]
@@ -5464,7 +5525,8 @@
      "marca": "supuesto",
      "valor": "libre"
     }
-   }
+   },
+   "id": "f_656ca5ad96"
   },
   {
    "title": "Viñetaira. Historia universal de las autoras del cómic",
@@ -5537,7 +5599,8 @@
      "marca": "supuesto",
      "valor": "libre"
     }
-   }
+   },
+   "id": "f_0eb0df1f1a"
   },
   {
    "title": "PANEL Sostener, producir, cuidar desde el cine.",
@@ -5609,6 +5672,7 @@
      "valor": "libre"
     }
    },
+   "id": "f_f34772d3f6",
    "titulos_anteriores": [
     "PANEL PREMIOS MACONDO: Nominados Producción sostenible"
    ]
@@ -5683,6 +5747,7 @@
      "valor": "libre"
     }
    },
+   "id": "f_7c453a66bc",
    "titulos_anteriores": [
     "Parche Match – Encuentro de conexiones"
    ]
@@ -5758,7 +5823,8 @@
      "marca": "supuesto",
      "valor": "libre"
     }
-   }
+   },
+   "id": "f_6f9f42bf99"
   },
   {
    "title": "Animá Ve – Retrospectiva de Maria Cristina Pérez",
@@ -5824,6 +5890,7 @@
      "valor": "libre"
     }
    },
+   "id": "f_ec05af8d70",
    "titulos_anteriores": [
     "Anima Vé! Retrospectiva de Maria Cristina Pérez Q&A"
    ]
@@ -5904,7 +5971,8 @@
      "marca": "supuesto",
      "valor": "libre"
     }
-   }
+   },
+   "id": "f_810843f300"
   },
   {
    "title": "Luis Tercero",
@@ -5980,7 +6048,8 @@
      "marca": "supuesto",
      "valor": "libre"
     }
-   }
+   },
+   "id": "f_ba5422e306"
   },
   {
    "title": "An Incomplete Calendar",
@@ -6057,7 +6126,8 @@
      "marca": "supuesto",
      "valor": "libre"
     }
-   }
+   },
+   "id": "f_7c5c854376"
   },
   {
    "title": "Vanguardias Afro e Indígena – Prog 2",
@@ -6187,6 +6257,7 @@
      "valor": "libre"
     }
    },
+   "id": "f_995dfd11a8",
    "titulos_anteriores": [
     "Vanguardias – Prog 2"
    ]
@@ -6425,6 +6496,7 @@
      "valor": "libre"
     }
    },
+   "id": "f_e692b4a1d0",
    "titulos_anteriores": [
     "Plano sonoro: muestra de videoclips"
    ]
@@ -6502,7 +6574,8 @@
      "marca": "supuesto",
      "valor": "libre"
     }
-   }
+   },
+   "id": "f_80f9a567f8"
   },
   {
    "title": "Iluminada",
@@ -6579,7 +6652,8 @@
      "marca": "supuesto",
      "valor": "libre"
     }
-   }
+   },
+   "id": "f_8b71b2da22"
   },
   {
    "title": "Siempre soy tu animal materno",
@@ -6657,7 +6731,8 @@
      "marca": "supuesto",
      "valor": "libre"
     }
-   }
+   },
+   "id": "f_6951f1e97f"
   },
   {
    "title": "Un Parche con… Frida Muenala",
@@ -6731,6 +6806,7 @@
      "valor": "libre"
     }
    },
+   "id": "f_4a4b054975",
    "titulos_anteriores": [
     "Un Parche con… Frida Muenala – Realización indígena"
    ]
@@ -6807,6 +6883,7 @@
      "valor": "libre"
     }
    },
+   "id": "f_340b4dc2c9",
    "titulos_anteriores": [
     "Foro local de proyectos. Presentación de dosiers y pitch taller de fortalecimiento empresarial – Presencial"
    ]
@@ -6883,6 +6960,7 @@
      "valor": "libre"
     }
    },
+   "id": "f_ee50e1cc5d",
    "titulos_anteriores": [
     "Un Parche con… Marina Arango – Archivos étnicos"
    ]
@@ -6962,7 +7040,8 @@
      "marca": "supuesto",
      "valor": "libre"
     }
-   }
+   },
+   "id": "f_5890c80b60"
   },
   {
    "title": "El juego de la vida",
@@ -7041,7 +7120,8 @@
      "marca": "supuesto",
      "valor": "libre"
     }
-   }
+   },
+   "id": "f_367ddc3960"
   },
   {
    "title": "MÁSTER CLASS: Lo esencial, lo vital y lo persuasivo. Julián Sánchez, Productor de Mukira",
@@ -7115,6 +7195,7 @@
      "valor": "libre"
     }
    },
+   "id": "f_ad02ad026b",
    "titulos_anteriores": [
     "MÁSTER CLASS: Lo esencial, lo vital y lo persuasivo. Julian Sanchez, Productor de Mukira. En alianza con Animá Vé."
    ]
@@ -7330,7 +7411,8 @@
      "marca": "supuesto",
      "valor": "libre"
     }
-   }
+   },
+   "id": "f_1731b75b93"
   },
   {
    "title": "Notre corps",
@@ -7408,7 +7490,8 @@
      "marca": "supuesto",
      "valor": "libre"
     }
-   }
+   },
+   "id": "f_b381a5fc17"
   },
   {
    "title": "Animá Ve – Anibia",
@@ -7540,6 +7623,7 @@
      "valor": "libre"
     }
    },
+   "id": "f_709197a59e",
    "titulos_anteriores": [
     "Anima Vé! – Anibia"
    ]
@@ -7621,7 +7705,8 @@
      "marca": "supuesto",
      "valor": "libre"
     }
-   }
+   },
+   "id": "f_5cf9c3bd8f"
   },
   {
    "title": "Minotauro",
@@ -7700,6 +7785,7 @@
      "valor": "libre"
     }
    },
+   "id": "f_1a34661e89",
    "_duracion_corregida": "festival-cannes.com/en/f/minotaur (Durée 140 min); TIFF 140"
   },
   {
@@ -7777,7 +7863,8 @@
      "marca": "supuesto",
      "valor": "libre"
     }
-   }
+   },
+   "id": "f_2391844882"
   },
   {
    "title": "Historias del buen valle",
@@ -7856,6 +7943,7 @@
      "valor": "libre"
     }
    },
+   "id": "f_2450b741b4",
    "titulos_anteriores": [
     "Historias del buen Valle"
    ]
@@ -7935,7 +8023,8 @@
      "marca": "supuesto",
      "valor": "libre"
     }
-   }
+   },
+   "id": "f_fa9b6d9b2d"
   },
   {
    "title": "Para vivir, el implacable tiempo de Pablo Milanés",
@@ -8013,7 +8102,8 @@
      "marca": "supuesto",
      "valor": "libre"
     }
-   }
+   },
+   "id": "f_2a7886586a"
   },
   {
    "title": "Animá Ve – Mujeres en la animación",
@@ -8079,6 +8169,7 @@
      "valor": "libre"
     }
    },
+   "id": "f_391c89d0d0",
    "titulos_anteriores": [
     "Animá Vé – Retrospectiva"
    ]
@@ -8159,7 +8250,8 @@
      "marca": "supuesto",
      "valor": "libre"
     }
-   }
+   },
+   "id": "f_8972958ff2"
   },
   {
    "title": "Once Upon a Time in Harlem",
@@ -8236,7 +8328,8 @@
      "marca": "supuesto",
      "valor": "libre"
     }
-   }
+   },
+   "id": "f_5c522eabd9"
   },
   {
    "title": "Álbum de familia",
@@ -8314,7 +8407,8 @@
      "marca": "supuesto",
      "valor": "libre"
     }
-   }
+   },
+   "id": "f_3e8dbef530"
   },
   {
    "title": "Historias del buen valle",
@@ -8393,6 +8487,7 @@
      "valor": "libre"
     }
    },
+   "id": "f_be74bcc46d",
    "titulos_anteriores": [
     "Historias del buen Valle"
    ]
@@ -8472,7 +8567,8 @@
      "marca": "supuesto",
      "valor": "libre"
     }
-   }
+   },
+   "id": "f_333c26f2ae"
   },
   {
    "title": "La mansión de Araucaima",
@@ -8550,7 +8646,8 @@
      "marca": "supuesto",
      "valor": "libre"
     }
-   }
+   },
+   "id": "f_084920af2e"
   },
   {
    "title": "Taller Gemelos Digitales",
@@ -8621,7 +8718,8 @@
      "fecha": "2026-10-14",
      "url": "https://ficcali.com/programacion-ficcali-2026/"
     }
-   }
+   },
+   "id": "f_42ad88f68c"
   },
   {
    "title": "Taller Gemelos Digitales",
@@ -8692,7 +8790,8 @@
      "fecha": "2026-10-14",
      "url": "https://ficcali.com/programacion-ficcali-2026/"
     }
-   }
+   },
+   "id": "f_dbfd3b875c"
   },
   {
    "title": "Taller Gemelos Digitales",
@@ -8763,7 +8862,8 @@
      "fecha": "2026-10-14",
      "url": "https://ficcali.com/programacion-ficcali-2026/"
     }
-   }
+   },
+   "id": "f_8e9c29836c"
   },
   {
    "title": "Taller Cine Atmosférico",
@@ -8834,7 +8934,8 @@
      "fecha": "2026-10-14",
      "url": "https://ficcali.com/programacion-ficcali-2026/"
     }
-   }
+   },
+   "id": "f_48a1432c55"
   },
   {
    "title": "Taller Cine Atmosférico",
@@ -8905,7 +9006,8 @@
      "fecha": "2026-10-14",
      "url": "https://ficcali.com/programacion-ficcali-2026/"
     }
-   }
+   },
+   "id": "f_3b2c0134d8"
   },
   {
    "title": "Taller Cine Atmosférico",
@@ -8976,7 +9078,8 @@
      "fecha": "2026-10-14",
      "url": "https://ficcali.com/programacion-ficcali-2026/"
     }
-   }
+   },
+   "id": "f_20ad3fcfd5"
   },
   {
    "title": "Cineconcierto: Metrópolis",
@@ -9048,7 +9151,8 @@
      "marca": "supuesto",
      "valor": "libre"
     }
-   }
+   },
+   "id": "f_359c6326a2"
   }
  ],
  "_avisos_duracion": [
@@ -9058,9 +9162,9 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-18T03:07:39",
+  "fecha": "2026-10-18T06:28:35",
   "plan_sha": "159aaf2851adf3ee",
-  "paso": 11,
-  "cmd": "python3 pipeline/ficcali-2026-verificar.py"
+  "paso": 9,
+  "cmd": "python3 pipeline/ensamblar.py ficcali-2026"
  }
 }

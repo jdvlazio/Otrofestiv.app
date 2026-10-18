@@ -676,6 +676,15 @@ def ensamblar(fid, escribir=True):
                 json.dump({'_provenance': lib.provenance('ensamblar.py: ids estables de las funciones (docs/FUNCION.md C1)'),
                            **_reg}, open(_reg_p, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
         films[:] = _r.funciones
+        # EL ID ESTABLE, PUBLICADO (docs/FUNCION.md §11): el `_fid` interno pasa a
+        # `id`, que publicar deja pasar. La app no lo lee todavía (18 oct 2026)
+        for _f in films:
+            if _f.get('_fid'):
+                _f['id'] = _f['_fid']
+        # los avisos de ids (movida, renombrada, cambio doble) viajan en el build
+        # para que publicar.py los muestre: un id nuevo por cambio doble no puede
+        # quedar solo en un registro (Juan, 18 oct)
+        out['_avisos_id'] = [x for x in _avisos if x.startswith('⚠')]
         print(f'  modelo de la función: {len(_afs)} afirmaciones · {len(films)} funciones')
     # H1 (revisión del 16 oct): en un festival del modelo la duración NO se repone
     # de lo publicado — lo publicado puede ser una ESTIMACIÓN de la corrida

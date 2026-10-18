@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "festivalfantasmagoriamedellin.com, noticia de programación (wp-json post 6481)",
-  "capturado": "2026-10-17",
+  "capturado": "2026-10-18",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_sedes": "El nombre de la parrilla, normalizado (la escribe de varias formas); la sala aparte. Otraparte está en Envigado, pero se publica en la ciudad «Medellín» (decisión de Juan, 30 sep): con una sola sede fuera, la app abría con «¿A cuál ciudad vas?» para 2 de 85 funciones. La dirección y el pin son los reales de Envigado, y el traslado se calcula con ellos.",
@@ -552,6 +552,7 @@
    "_nota": "Google Maps «La Comarca Hobbies & Food» (juegos de mesa)"
   }
  },
+ "_avisos_id": [],
  "films": [
   {
    "title": "Taller Fantasmagoritos con la Corporación Trama",
@@ -625,7 +626,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_5ac7fb72c7"
   },
   {
    "title": "Charla virtual: María, Rosa y Sina. Las murallas de la desigualdad en Shingeki no Kyojin",
@@ -702,7 +704,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_7cefffa86e"
   },
   {
    "title": "Decorado",
@@ -792,7 +795,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_616d8d3706"
   },
   {
    "title": "Taller Fantasmagoritos con la Corporación Trama",
@@ -866,7 +870,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_8a5b0dae24"
   },
   {
    "title": "Saluda al Diablo de Mi Parte",
@@ -951,7 +956,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_68fd341b3d"
   },
   {
    "title": "Coração das Trevas (Heart of Darkness)",
@@ -1042,7 +1048,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_6d398ce3d3"
   },
   {
    "title": "Hammer: Heroes, Legends and Monsters",
@@ -1132,7 +1139,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_3032ba11cd"
   },
   {
    "title": "Mu-Ki-Ra",
@@ -1210,7 +1218,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_9eaf0533ab"
   },
   {
    "title": "Grabación en vivo del podcast Gente que hace cine \"Colombia es Fantástica\"",
@@ -1290,7 +1299,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_71622280dd"
   },
   {
    "title": "El Despertar",
@@ -1381,7 +1391,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_ce8e1c3e3b"
   },
   {
    "title": "Schichinin No Samurai (Seven Samurai)",
@@ -1466,7 +1477,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_791ef070ed"
   },
   {
    "title": "Motherwitch",
@@ -1556,7 +1568,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_e5c6bba8ff"
   },
   {
    "title": "Torneos TCG: One Piece y Pokemón TCG",
@@ -1628,7 +1641,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_3efcd0e556"
   },
   {
    "title": "Selección Oficial de Cortometrajes de Animación + Cortometrajes de Macondo",
@@ -1849,7 +1863,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_3ad87ad624"
   },
   {
    "title": "Familia Teme Enfrentar Una Nueva Noche de Terror",
@@ -1946,7 +1961,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_3e85908256"
   },
   {
    "title": "Almas en plena: fiesta de disfraces, baile de ánimas y sustos que dan gusto",
@@ -2020,7 +2036,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_6671f848db"
   },
   {
    "title": "Muestra Fantasmagoritos: Cortometrajes infantiles",
@@ -2088,7 +2105,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_db5e635c32"
   },
   {
    "title": "Iris de Cristal",
@@ -2171,7 +2189,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_ce8551648d"
   },
   {
    "title": "Black Moon",
@@ -2255,7 +2274,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_d8b6dbb8cb"
   },
   {
    "title": "Critters",
@@ -2345,7 +2365,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_1a50fcd1e3"
   },
   {
    "title": "Siu Lam Juk Kau -Shaolin Soccer",
@@ -2430,7 +2451,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_aea41d767c"
   },
   {
    "title": "Al Final del Espectro",
@@ -2509,7 +2531,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_eb89eef871"
   },
   {
    "title": "Familia Teme Enfrentar Una Nueva Noche de Terror",
@@ -2606,7 +2629,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_648ae9e4fc"
   },
   {
    "title": "Huo zhe yan (The Furious)",
@@ -2697,7 +2721,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_5daad4fb01"
   },
   {
    "title": "Noche de Librerías: Lectura de Cuentos de Terror",
@@ -2769,7 +2794,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_63de6e541f"
   },
   {
    "title": "La Sinfonía de los Bichos Raros",
@@ -2846,7 +2872,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_51d5a70e6b"
   },
   {
    "title": "Historia de lo Oculto",
@@ -2937,7 +2964,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_f922b58d57"
   },
   {
    "title": "Rio Bravo",
@@ -3021,7 +3049,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_df256816d9"
   },
   {
    "title": "Coração das Trevas (Heart of Darkness)",
@@ -3112,7 +3141,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_ff12951d65"
   },
   {
    "title": "The X Files y Lectura de La Verdad Está Ahí Afuera: Antología de Cuentos",
@@ -3190,7 +3220,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_837b10967a"
   },
   {
    "title": "Hablando con Extraños",
@@ -3281,7 +3312,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_fda125e919"
   },
   {
    "title": "Selección Oficial de Cortometrajes Colombianos",
@@ -3469,7 +3501,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_d10f2c53da"
   },
   {
    "title": "Assault on Precinct 13",
@@ -3553,7 +3586,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_5f586fa176"
   },
   {
    "title": "Selección Oficial de Cortometrajes Latinoamericanos",
@@ -3713,6 +3747,7 @@
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
    },
+   "id": "f_2c99f929c4",
    "titulos_anteriores": [
     "Selección oficial de cortometrajes latinoamericanos"
    ]
@@ -3799,7 +3834,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_369cd3e339"
   },
   {
    "title": "Entrevista a Luigi Cozzi con Jose Andrés Gómez",
@@ -3874,7 +3910,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_86a77a34dd"
   },
   {
    "title": "Una psicología de los asedios explicada con pelis de Zombies con Pedro Alejandro González",
@@ -3949,7 +3986,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_6d1887da36"
   },
   {
    "title": "La Frecuencia Kirlian",
@@ -4040,7 +4078,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_ce6e95c016"
   },
   {
    "title": "Conversatorio con Cristian Ponce",
@@ -4126,7 +4165,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_046528f965"
   },
   {
    "title": "Horror and Love",
@@ -4210,7 +4250,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_b188191cf3"
   },
   {
    "title": "Al Final del Espectro",
@@ -4289,7 +4330,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_67cabf6ac5"
   },
   {
    "title": "Conversatorio con Alberto Romo y Andrés Buitrago",
@@ -4373,7 +4415,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_580c051611"
   },
   {
    "title": "Pura Sangre",
@@ -4459,6 +4502,7 @@
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
    },
+   "id": "f_b7d599833b",
    "_duracion_corregida": "retrospectiva Luis Ospina, cali.gov.co (98 min); spectacletheater.com (98 min); TMDB 99"
   },
   {
@@ -4537,7 +4581,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_af356e73fb"
   },
   {
    "title": "Ghost in the Cell",
@@ -4627,7 +4672,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_3d242c0931"
   },
   {
    "title": "Cuadecuc, Vampir",
@@ -4718,7 +4764,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_1cf6122c0b"
   },
   {
    "title": "Green Room",
@@ -4802,7 +4849,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_e1bbf0fbf4"
   },
   {
    "title": "Taller animación análoga con Óscar Triana",
@@ -4880,7 +4928,8 @@
      "marca": "supuesto",
      "valor": "libre"
     }
-   }
+   },
+   "id": "f_f060938a2c"
   },
   {
    "title": "Cortometrajes y Taller Fantasmagoritos con la Corporación Trama",
@@ -4948,7 +4997,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_0966cb32c1"
   },
   {
    "title": "Charla: El camino de la producción y la animación con Alejandra Morales",
@@ -5026,7 +5076,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_f2869c9b28"
   },
   {
    "title": "Fantascátedra – Muestra Cortometrajes universitarios de Medellín",
@@ -5108,7 +5159,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_6aae9d94c1"
   },
   {
    "title": "De Cinema Zombie a Zinema Zombie",
@@ -5194,7 +5246,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_9009af258e"
   },
   {
    "title": "Charla: De las Trincheras del Somme a la caída de Gondolin por Camilo López",
@@ -5266,7 +5319,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_8cb0fb7587"
   },
   {
    "title": "Ana Rosa",
@@ -5350,7 +5404,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_10f401ac5d"
   },
   {
    "title": "Theatre of Horrors: The Sordid Story of Paris' Grand Guignol",
@@ -5440,7 +5495,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_bfe0101182"
   },
   {
    "title": "Presentaciones de productoras/colectivos y Made in Medellín",
@@ -5520,7 +5576,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_0dc1182aa6"
   },
   {
    "title": "Taller: Parche de collage – Construcción de fortalezas",
@@ -5592,7 +5649,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_a0c267d031"
   },
   {
    "title": "El Despertar",
@@ -5683,7 +5741,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_8c8ed2b650"
   },
   {
    "title": "La Mancha",
@@ -5768,7 +5827,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_ec7d1ac485"
   },
   {
    "title": "Cuckoo",
@@ -5858,7 +5918,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_b03192468d"
   },
   {
    "title": "Taller: Animación digital con Óscar Triana",
@@ -5936,7 +5997,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_da07738eaf"
   },
   {
    "title": "Fremde Welten: los extraños universos de Tilman Singer",
@@ -6016,7 +6078,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_fd4153474f"
   },
   {
    "title": "Blood on Méliès' Moon",
@@ -6100,7 +6163,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_3d8daa87c1"
   },
   {
    "title": "Kondor, El Mago + El Cigarro Mortal de Jairo Pinilla",
@@ -6211,7 +6275,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_425dcc5372"
   },
   {
    "title": "Selección Oficial de Cortometrajes Latinoamericanos",
@@ -6377,6 +6442,7 @@
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
    },
+   "id": "f_7673a612be",
    "titulos_anteriores": [
     "Selección oficial de cortometrajes latinoamericanos"
    ]
@@ -6595,7 +6661,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_a65ef109be"
   },
   {
    "title": "Jornada Juegos de Mesa Fantastable",
@@ -6669,7 +6736,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_2a874c5862"
   },
   {
    "title": "Carrie",
@@ -6753,7 +6821,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_090db4e52b"
   },
   {
    "title": "Club de la Medianoche: Club de lectura",
@@ -6833,7 +6902,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_cac4d446e2"
   },
   {
    "title": "You Are The Film",
@@ -6923,7 +6993,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_f45832ccfd"
   },
   {
    "title": "Dèmoni",
@@ -7008,7 +7079,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_09fdfe0458"
   },
   {
    "title": "Hablando con Extraños",
@@ -7099,7 +7171,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_ef120f621a"
   },
   {
    "title": "Cortometrajes en competencia: deliberación del Jurado Infantil",
@@ -7167,7 +7240,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_45f331d701"
   },
   {
    "title": "Motherwitch",
@@ -7257,7 +7331,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_16b980e401"
   },
   {
    "title": "Muestra Catalana: Cortometrajes C-Trencada",
@@ -7329,7 +7404,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_b181530f81"
   },
   {
    "title": "Asedios y otras tácticas militares en la saga \"Dune\" de Frank Herbert por Alejandro Vesga",
@@ -7401,7 +7477,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_3659784613"
   },
   {
    "title": "Vida",
@@ -7484,7 +7561,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_d08c399eed"
   },
   {
    "title": "Selección Oficial de Cortometrajes de Animación",
@@ -7705,7 +7783,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_13e6e00bbf"
   },
   {
    "title": "You Are The Film",
@@ -7795,7 +7874,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_b2651d23c1"
   },
   {
    "title": "Mag Mag",
@@ -7879,7 +7959,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_6a536b00ff"
   },
   {
    "title": "Manual Para Invocar Fantasmas",
@@ -7969,7 +8050,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_14505eab1b"
   },
   {
    "title": "Charla musicalizada en vivo – Sinners: el Asedio de los Condenados por Mario Fernando Castaño",
@@ -8041,7 +8123,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_ece5961594"
   },
   {
    "title": "Ghost in the Cell",
@@ -8131,7 +8214,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_57b40ca533"
   },
   {
    "title": "Fiesta Fantasmagoría: Brujas, Espectros y Otros Fantasmas",
@@ -8205,7 +8289,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_e18cb62b27"
   },
   {
    "title": "Presentación de Libros Ediciones Sociedad Fantasmagoría: Colombia es fantástica y Las Murallas del Miedo, con sus autores",
@@ -8277,7 +8362,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_8e2fe45c48"
   },
   {
    "title": "Il Deserto Rosso",
@@ -8362,7 +8448,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_a5c9a10cf2"
   },
   {
    "title": "Luz",
@@ -8452,7 +8539,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_399c12af29"
   },
   {
    "title": "Cortometrajes colombianos que miran al cielo",
@@ -8526,7 +8614,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_8bfe5f4cb1"
   },
   {
    "title": "Selección Oficial de Cortometrajes",
@@ -8742,7 +8831,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_32b2036c70"
   },
   {
    "title": "Dong Bei Jing Cha Gu Shi 3 – Fight Against Evil 3",
@@ -8827,7 +8917,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_558e1285ca"
   },
   {
    "title": "The Craft",
@@ -8911,7 +9002,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_5954a9f979"
   },
   {
    "title": "Huo zhe yan (The Furious)",
@@ -9008,7 +9100,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_1e4a28efb0"
   },
   {
    "title": "Evento de Clausura: Premiación y Presentación musical",
@@ -9080,7 +9173,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_c631be53a9"
   },
   {
    "title": "Ikatan Darah",
@@ -9164,7 +9258,8 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   }
+   },
+   "id": "f_9e8c770636"
   }
  ],
  "_avisos_duracion": [
@@ -9173,9 +9268,9 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-17T21:48:54",
+  "fecha": "2026-10-18T06:28:34",
   "plan_sha": "bcc190a548850b59",
-  "paso": 10,
-  "cmd": "python3 pipeline/fantasmagoria-2026-verificar.py"
+  "paso": 8,
+  "cmd": "python3 pipeline/ensamblar.py fantasmagoria-2026"
  }
 }
