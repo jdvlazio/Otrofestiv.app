@@ -26,7 +26,7 @@ jobs:
       - name: Festivales cambiados
         id: cambios
         run: |
-          f=$(git diff --name-only HEAD~1 HEAD -- 'festivals/*.json' | sed -n 's|^festivals/\(.*\)\.json$|\1|p' | tr '\n' ' ')
+          f=$(git diff --name-only HEAD~1 HEAD -- 'festivals/*.json' | sed -n 's|^festivals/\([^/]*\)\.json$|\1|p' | tr '\n' ' ')
           echo "lista=$f" >> "$GITHUB_OUTPUT"
           echo "Cambiados: $f"
       - name: Publicar al almacén
