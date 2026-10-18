@@ -387,7 +387,10 @@ def ya_publicada(obra, idx):
                 if not (dur_ok or anio_ok):
                     continue
             r = {'festival': fest, 'titulo': o['title']}
-            for campo in ('tmdb_id', 'poster', 'posterSource', 'lbSlug'):
+            # todo lo que ya mostramos de la obra (17 oct 2026): la cascada solo
+            # traía afiche y sinopsis, y país/año/duración/género se quedaban atrás
+            for campo in ('tmdb_id', 'poster', 'posterSource', 'lbSlug', 'country', 'year',
+                          'duration', 'genre', 'synopsis_en'):
                 if o.get(campo):
                     r[campo] = o[campo]
             if o.get('synopsis'):
@@ -552,6 +555,11 @@ def acceso_campos(texto, url=''):
         out['requires_registration'] = True
     if any(x in t for x in _INVITACION):
         out['by_invitation'] = True
+    # la BOLETA que la fuente afirma, aunque no traiga link (17 oct 2026). Lo
+    # libre y lo cerrado ganan; «reserva por boletería» no dice que se pague
+    if ('is_free' not in out and 'by_invitation' not in out
+            and (t.startswith('con boleta') or 'boleteria en' in t or t == 'boleteria')):
+        out['is_free'] = False
     return out
 
 
@@ -998,6 +1006,15 @@ def _selftest():
     t('acceso cerrada al público (web BIFF)', acceso_campos('Función cerrada al público. No hay boletería disponible'),
       {'by_invitation': True})
     t('reserva no es gratis', acceso_campos('Reserva por boletería online o presencial.'), {})
+    # BOLETA SIN LINK (17 oct 2026): la fuente lo AFIRMA y se perdía. En
+    # Fantasmagoría, ya en el modelo de la función, 12 funciones «Con boleta»
+    # salían como libres por el supuesto. Lo libre gana: «libre con boleta» es libre
+    t('con boleta (Fantasmagoría)', acceso_campos('Con boleta'), {'is_free': False})
+    t('con boleta y precio', acceso_campos('Con boleta: $7.000'), {'is_free': False})
+    t('boletería en TuBoleta', acceso_campos('Boletería en TuBoleta'), {'is_free': False})
+    t('boletería, a secas', acceso_campos('Boletería'), {'is_free': False})
+    t('libre con boleta es libre', acceso_campos('Entrada libre con boleta (en orden de llegada)'), {'is_free': True})
+    t('gratis reclamando boleta es libre', acceso_campos('Entrada gratis reclamando boleta en taquilla'), {'is_free': True})
     t('declarado: vacío no cuenta', acceso_declarado({'acceso': '  '}), False)
     t('declarado: desconocido SÍ cuenta', acceso_declarado({'acceso': DESCONOCIDO}), True)
     t('ficha ok', ficha_verifica(

@@ -203,8 +203,13 @@ def contradicciones(R, grupo):
 
 # ── fase 3: materializar ────────────────────────────────────────────────────
 def _iso(pais):
-    """«Colombia, Francia» → ['CO', 'FR'] (por la bandera: dos letras regionales)."""
-    return [''.join(chr(ord(c) - 0x1F1E6 + 65) for c in f) for f in banderas(pais or '')]
+    """«Colombia, Francia» → ['CO', 'FR'] (por la bandera: dos letras regionales).
+
+    `banderas()` devuelve UN texto («🇨🇴🇫🇷»), no una lista: recorrerlo daba una
+    letra por carácter y cada bandera son dos (17 oct 2026: 1.348 obras con el
+    país partido en letras). Se toman las letras regionales de a pares."""
+    L = [chr(ord(c) - 0x1F1E6 + 65) for c in banderas(pais or '') if 0x1F1E6 <= ord(c) <= 0x1F1FF]
+    return [L[i] + L[i + 1] for i in range(0, len(L) - 1, 2)]
 
 
 def _directores(s):

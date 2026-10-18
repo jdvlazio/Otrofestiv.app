@@ -20,7 +20,20 @@ REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # campo del enriquecido → campo publicado
 CAMPOS = {'genero': 'genre', 'title_en': 'title_en', 'lbSlug': 'lbSlug', 'anio': 'year',
-          'synopsis_es': 'synopsis', 'synopsis_en': 'synopsis_en', 'poster': 'poster'}
+          'synopsis_es': 'synopsis', 'synopsis_en': 'synopsis_en', 'poster': 'poster',
+          # DIRECTOR y DURACIÓN (18 oct 2026): FICICA publica cortos sin director
+          # que una decisión de identidad unió a la obra de Ficcali, que sí lo tiene
+          'director_heredado': 'director', 'duracion_tmdb': 'duration',
+          # el PAÍS, del ISO del catálogo al nombre en español (pipeline/paises.json)
+          'pais_heredado': 'country'}
+
+
+def _pais_es(codigos):
+    """['CO', 'AR'] → 'Colombia, Argentina'; un código que la tabla no tiene → None."""
+    import json
+    iso = json.load(open(os.path.join(REPO, 'pipeline', 'paises.json'), encoding='utf-8'))['iso']
+    nombres = [(iso.get(c) or {}).get('es') for c in codigos]
+    return ', '.join(nombres) if nombres and all(nombres) else None
 
 
 def _uno(xs):
@@ -37,6 +50,10 @@ _VALOR = {
     # QAFF publicada; es texto que ya pasó por un montaje
     'synopsis_es': lambda w: (w.get('sinopsis') or {}).get('es'),
     'synopsis_en': lambda w: (w.get('sinopsis') or {}).get('en'),
+    'pais_heredado': lambda w: _pais_es(w.get('paises') or []),
+    'director_heredado': lambda w: ', '.join(w['directores']) if w.get('directores') else None,
+    # una sola duración entre sus versiones; con dos (corte del director…) no se elige
+    'duracion_tmdb': lambda w: _uno(v.get('duracion_min') for v in w.get('versiones') or []),
     # EL AFICHE: nunca un fotograma (veredicto del catálogo)
     'poster': lambda w: (w.get('afiche') or {}).get('archivo')
               if (w.get('afiche') or {}).get('veredicto') != 'fotograma' else None,

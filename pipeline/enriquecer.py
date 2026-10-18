@@ -290,6 +290,11 @@ def afiche_tmdb(e, fid, base, key):
 from herencia import afiche_ajeno_vale  # noqa: E402  (dueño: herencia.py)
 
 
+def _min_de(v):
+    m = re.search(r'\d+', str(v or ''))
+    return int(m.group()) if m else None
+
+
 def reuso_publicada(pub, fid=None):
     """Sin ficha, pero ya la publicamos con afiche: se reusa el afiche y la
     sinopsis que mostramos entonces —ya pasaron por un montaje—. «Belleza letal»
@@ -313,16 +318,26 @@ def reuso_publicada(pub, fid=None):
     # la SINOPSIS se reusa de donde esté, aunque el afiche de ese festival fuera
     # un fotograma: son dos datos distintos (Girardota perdía 2 sinopsis)
     s = next((y for y in pub if y.get('sinopsis')), None)
-    if not x and not s:
+    # y lo demás que ya mostramos (17 oct 2026), de donde esté: cada dato del
+    # primer festival que lo tenga
+    _de = lambda c: next((y[c] for y in pub if y.get(c)), None)
+    resto = {k: v for k, v in (('pais', _de('country')), ('anio', _de('year')),
+                                ('duracion_tmdb', _min_de(_de('duration'))),
+                                ('genero', _de('genre')), ('synopsis_en', _de('synopsis_en')),
+                                ('lbSlug', _de('lbSlug'))) if v}
+    if not x and not s and not resto:
         return None
     e = {'_ya_publicada': pub}
     if x:
         e['poster'] = x['poster']
         e['_verificado'] = f'ya publicada en {x["festival"]}: se reusa su afiche'
-    else:
+    elif s:
         e['_verificado'] = f'ya publicada en {s["festival"]}: se reusa su sinopsis'
     if s:
         e['sinopsis'] = s['sinopsis']
+    if not x and not s:
+        e['_verificado'] = f'ya publicada en {pub[0]["festival"]}: se reusan sus datos'
+    e.update(resto)
     return e
 
 
@@ -434,6 +449,15 @@ def main():
     # Un título mal copiado en el sidecar no haría nada y nadie se enteraría —
     # el mismo fallo mudo de siempre, escribir un dato que nadie lee.
     _huerf = [t for t in declaradas if t not in obras]
+    # …salvo la obra que el festival SÍ tiene en su catálogo pero no proyecta en
+    # ninguna función pública (FICICA, «Ma-ma»: solo en colegios, 18 oct). Eso no
+    # es un título mal copiado: se avisa y se sigue
+    _cat_p = f'{ST}/{fid}-catalogo.json'
+    if _huerf and os.path.exists(_cat_p):
+        _en_cat = {norm(o.get('titulo') or '') for o in json.load(open(_cat_p, encoding='utf-8')).get('obras') or []}
+        for t in [t for t in _huerf if norm(t) in _en_cat]:
+            print(f'  · ficha declarada de «{t}»: está en el catálogo del festival y no en una función pública; no se usa')
+        _huerf = [t for t in _huerf if norm(t) not in _en_cat]
     if _huerf:
         sys.exit('ficha declarada para un título que no está en el programa: '
                  + ' · '.join(_huerf))
@@ -630,12 +654,18 @@ def main():
     # tampoco lo pisaría, pero así lo heredado no queda anotado de mentira)
     _DE_LA_FUENTE = {'synopsis_es': ('sinopsis', 'synopsis_es'), 'synopsis_en': ('sinopsis_en', 'synopsis_en'),
                      'poster': ('poster',), 'genero': ('genero',), 'title_en': ('title_en',),
-                     'lbSlug': ('lbSlug',), 'anio': ('anio',)}
+                     'lbSlug': ('lbSlug',), 'anio': ('anio',),
+                     'director_heredado': ('director',), 'duracion_tmdb': ('duracion_min',),
+                     'pais_heredado': ('pais',)}
     _hered = {}
     for t, f in obras.items():
         e = ok.get(t) or {}
-        wid = e.get('work_id') or catalogo.reconocer(
-            _obs, t, f.get('director') or '', f.get('anio'), f.get('duracion_min'))[0]
+        # primero LA PRESENTACIÓN (18 oct 2026): si el catálogo ya lista esta obra
+        # en este festival —una decisión de identidad la unió, FICICA: «Khazana»
+        # sin director, la misma que Ficcali con director—, esa es la obra. Solo
+        # si no, se reconoce por título + director, que sin director no puede
+        wid = (e.get('work_id') or catalogo.obra_de(_obs, fid, t, e.get('tmdb_id'))
+               or catalogo.reconocer(_obs, t, f.get('director') or '', f.get('anio'), f.get('duracion_min'))[0])
         w = _obs.get(wid) if wid else None
         if not w:
             continue

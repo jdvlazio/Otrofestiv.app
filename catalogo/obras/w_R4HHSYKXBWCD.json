@@ -3,14 +3,10 @@
  "titulo_original": "Más allá",
  "anio": 2025,
  "paises": [
-  "V",
-  "E",
-  "C",
-  "O",
-  "U",
-  "S",
-  "C",
-  "A"
+  "VE",
+  "CO",
+  "US",
+  "CA"
  ],
  "directores": [
   "Bettina López Mendoza"
@@ -39,12 +35,17 @@
  },
  "versiones": [
   {
+   "etiqueta": "15 min",
+   "duracion_min": 15
+  },
+  {
    "etiqueta": "16 min",
    "duracion_min": 16
   }
  ],
  "presentaciones": [
   "ficdeh-2026",
+  "ficica-2026",
   "popayan-2026"
  ]
 }

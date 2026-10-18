@@ -1400,6 +1400,7 @@ de obra —también las uniones «Obra + Obra»— van tal cual, en sentence cas
 Un dueño, `pipeline/caja.py`: lo aplica `ensamblar.py` en cada montaje,
 `pipeline/caja-titulo.py --escribir` sobre lo ya publicado (con
 `titulos_anteriores` para no perder lo guardado) y `validate.py` lo vigila.
+`[renombre-no-se-borra]` compara cada `-titulos-anteriores.json` contra `main`: un renombre que estaba no puede desaparecer (17 oct 2026, #1146 — reescribir el sidecar en vez de sumarle se llevaba el de «Voilà Varda»). Se agrega, nunca se reescribe.
 Festivales en otro idioma (Olhar, Tribeca, TIFF) quedan fuera.
 
 ### `[inicio-obra]` — la obra empieza dentro de su función
@@ -1449,3 +1450,5 @@ Sin reconocerlas, 28 obras se quedaban sin género **teniendo uno**.
 vocabulario → **warning**, porque puede ser una etiqueta colada… o un género
 legítimo que falte en `_GENRE_EN`, y esa decisión es de quien monta.
 
+
+`[preonboarding-completo]` (18 oct 2026): un festival que todavía no salió y ya tiene `<fid>-catalogo.json` no pasa si alguna obra no tiene afiche ni su porqué (`sin_afiche`). `python3 pipeline/preonboarding.py`; deuda en `pipeline/preonboarding-deuda.json`, solo baja. Lo publicado lo vigila `[afiche-cobertura]`.

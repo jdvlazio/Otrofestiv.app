@@ -140,7 +140,9 @@ def _enriquece(dst, it):
                           # genérico se caía entero. Itagüí publicó 15 películas
                           # colombianas sin bandera teniendo TMDB el país de cada
                           # una, y ninguna con año (23 sep).
-                          ('country', ('pais', 'country', 'pais_tmdb')),
+                          ('country', ('pais', 'country', 'pais_tmdb', 'pais_heredado')),
+                          # el director que la fuente no da y el catálogo sí (herencia.py)
+                          ('director', ('director_heredado',)),
                           ('year', ('anio', 'year', 'anio_tmdb'))):
         if dst.get(campo):
             continue
@@ -351,7 +353,12 @@ def ensamblar(fid, escribir=True):
         for it in _lista:
             k = lib.norm(it.get('titulo') or it.get('title') or '')
             if k:
-                enr[k] = it
+                # DOS ENTRADAS DE LA MISMA OBRA (17 oct 2026): «La Tinaja» con su
+                # ficha y «La tinaja» con solo el afiche declarado. La segunda
+                # PISABA a la primera y la obra perdía sinopsis, género, año y
+                # duración ([dato-que-no-viaja], Ficcali). Se combinan: la primera
+                # manda en lo que tiene, la otra completa lo que falta
+                enr[k] = {**it, **enr[k]} if k in enr else it
 
 
     geo = {}

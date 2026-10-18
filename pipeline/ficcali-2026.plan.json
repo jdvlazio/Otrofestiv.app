@@ -19,6 +19,10 @@
    "que": "las tarjetas de la Programación → sidecar"
   },
   {
+   "cmd": "python3 pipeline/ficcali-2026-ig.py",
+   "que": "el IG del festival → las obras de los programas que la web no lista (Vanguardias)"
+  },
+  {
    "cmd": "python3 pipeline/ficcali-2026-crudo.py",
    "que": "programación + catálogo → crudo (16–25 oct)"
   },
@@ -271,5 +275,8 @@
    "festivals/staging/ficcali-2026-radar.json": "el volcado del radar #1024, que escribe y relee pipeline/radar.py"
   },
   "_por_que_slot_compartido": "8 oct: la edición de la programación pone «Guapi: ritmo y balsada» (30 min) y «La fabulosa máquina del tiempo» (70 min) a las 6:00 p. m. del 21 en Comfandi — la misma franja; se publica como UNA función (anclaje). Es el único slot compartido de Ficcali. Preguntado al festival."
+ },
+ "_fuentes_versionadas": {
+  "festivals/staging/ficcali-2026-ig.json": "las 14 obras de Vanguardias del IG del festival (DenDhbtmnyO, 17 oct); lo lee el crudo"
  }
 }

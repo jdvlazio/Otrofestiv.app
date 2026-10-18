@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "ficcali.com — Programación 2026 (WP 14870) + fichas de la Selección 2026",
-  "capturado": "2026-10-15",
+  "capturado": "2026-10-18",
   "url": "https://ficcali.com/programacion-ficcali-2026/",
   "metodo": "tarjeta por función; obra por la ficha del catálogo"
  },
@@ -1292,10 +1292,41 @@
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
-    "tarjeta": 14033
+    "tarjeta": 14033,
+    "obras": "https://www.instagram.com/p/DenDhbtmnyO/"
    },
    "titulo": "Vanguardias Afro e Indígena – Prog 1",
    "seccion": "Proyecciones",
+   "obras": [
+    {
+     "titulo": "Jiru Luai Algo Malo",
+     "director": "Yon Arley Agreda Jamioy"
+    },
+    {
+     "titulo": "La Tinaja",
+     "director": "Ernestina Miranda, Mar Ajé"
+    },
+    {
+     "titulo": "Y el río lloró",
+     "director": "Zumaya Mayers"
+    },
+    {
+     "titulo": "Ahumadora",
+     "director": "Deicy Minotta Hurtado"
+    },
+    {
+     "titulo": "Desde la otra orilla",
+     "director": "Yulissa Sinisterra"
+    },
+    {
+     "titulo": "Bertha",
+     "director": "Laura Asprilla"
+    },
+    {
+     "titulo": "Héroes del silencio",
+     "director": "Atikeinis Durán Izquierdo"
+    }
+   ],
    "duracion_min": 90,
    "_duracion_de": "el hueco hasta la siguiente en la misma sede (tope 90, 60 si es la última)"
   },
@@ -1510,10 +1541,41 @@
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
-    "tarjeta": 14034
+    "tarjeta": 14034,
+    "obras": "https://www.instagram.com/p/DenDhbtmnyO/"
    },
    "titulo": "Vanguardias Afro e Indígena – Prog 2",
    "seccion": "Proyecciones",
+   "obras": [
+    {
+     "titulo": "Azotea",
+     "director": "Ana María Jessie Serna"
+    },
+    {
+     "titulo": "Pueblo viejo",
+     "director": "Pedro Jajoy"
+    },
+    {
+     "titulo": "Iyeba Pora - Los hijos del territorio",
+     "director": "Wilber Edinson Caballero"
+    },
+    {
+     "titulo": "Flamencoterapia",
+     "director": "Emmanuel Vidal Cogollo"
+    },
+    {
+     "titulo": "Namtrik - Fogones lingüísticos",
+     "director": "Cristian Conejo Sánchez"
+    },
+    {
+     "titulo": "Kuagro",
+     "director": "Diego Casseres"
+    },
+    {
+     "titulo": "Muiyukuna - Relatos de la Chagra viva",
+     "director": "Alex Rufino"
+    }
+   ],
    "duracion_min": 60,
    "_duracion_de": "el hueco hasta la siguiente en la misma sede (tope 90, 60 si es la última)"
   },

@@ -196,6 +196,8 @@ Correcciones en `festivals/staging/<id>-correcciones.json`:
 vs `alias` (el festival rebautizó → se busca por el nombre de distribución,
 se conserva el del festival).
 
+**El pre-onboarding se cierra completo** (`[preonboarding-completo]`, 18 oct 2026): un festival que todavía no salió y ya tiene `<fid>-catalogo.json` no pasa los validadores si alguna obra no tiene afiche ni su porqué en `sin_afiche`. Medir con `python3 pipeline/preonboarding.py`.
+
 ### Paso 3 · Sedes
 
 **Primero la tabla canónica, a mano.** La fuente nombra el mismo lugar de

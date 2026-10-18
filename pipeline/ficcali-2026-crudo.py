@@ -307,6 +307,10 @@ def _obra(o):
                                   'genero': genero_uno(o.get('genero')), 'sinopsis': o.get('sinopsis')}.items() if v}
 
 
+VANGUARDIAS = (json.load(io.open(f'{REPO}/festivals/staging/ficcali-2026-ig.json', encoding='utf-8'))['vanguardias']
+               if os.path.exists(f'{REPO}/festivals/staging/ficcali-2026-ig.json') else {})
+
+
 def main():
     T = json.load(io.open(PROG, encoding='utf-8'))['tarjetas']
     O = json.load(io.open(CAT, encoding='utf-8'))['obras']
@@ -336,10 +340,13 @@ def main():
             continue
         partes = [p.strip() for p in x['titulo'].split('|')]
         nombre, detalle = partes[0], ' | '.join(partes[1:]) or None
-        if x['sede'] not in SEDES:
+        # sin distinguir mayúsculas: la web pasó «SALA MADAME BLUE» a «Sala Madame
+        # Blue» (17 oct) y tres tarjetas se caían de la tabla por la caja
+        _sedes = {k.upper(): v for k, v in SEDES.items()}
+        if x['sede'].upper() not in _sedes:
             fallos.append(f'tarjeta {x["id"]}: sede sin entrada en la tabla: {x["sede"]!r}')
             continue
-        sede, sala = SEDES[x['sede']]
+        sede, sala = _sedes[x['sede'].upper()]
         r = {'dia': x['dia'], 'hora': x['hora'], 'sede': sede, 'sala': sala, 'sede_cruda': x['sede'],
              'acceso': acceso(x),
              '_src': {'url': URL, 'date': '2026-10-06', 'tarjeta': x['id']}}
@@ -414,6 +421,12 @@ def main():
         if x['id'] in SALA_TARJETA:
             r['sala'] = SALA_TARJETA[x['id']]
         r['titulo'] = recta(r['titulo'])
+        # LAS OBRAS DE VANGUARDIAS (17 oct): la web publica los dos programas sin
+        # sus cortos; el IG del festival los lista (ficcali-2026-ig.py → sidecar)
+        _mv = re.match(r'Vanguardias Afro e Indígena\s*[–-]\s*Prog\.?\s*(\d+)', r.get('titulo') or '')
+        if _mv and VANGUARDIAS.get(_mv.group(1)):
+            r['obras'] = [dict(o) for o in VANGUARDIAS[_mv.group(1)]]
+            r['_src']['obras'] = 'https://www.instagram.com/p/DenDhbtmnyO/'
         funciones.append({k_: v for k_, v in r.items() if v not in (None, '')})
 
     # LA MISMA ACTIVIDAD EN VARIAS FECHAS lleva UN texto ([programa-mismo-titulo]):

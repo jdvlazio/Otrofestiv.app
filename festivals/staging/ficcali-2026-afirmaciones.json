@@ -1,0 +1,25 @@
+{
+ "_provenance": {
+  "fuente": "decisión de Juan (hora más temprana, 17 oct)",
+  "capturado": "2026-10-17",
+  "metodo": "una afirmación por casilla, con su fuente (docs/FUNCION.md)"
+ },
+ "afirmaciones": [
+  {
+   "ancla": {
+    "sede": "Teatro Municipal Enrique Buenaventura - Cali",
+    "dia": "2026-10-23",
+    "hora": "19:00"
+   },
+   "casilla": "time",
+   "valor": "18:00",
+   "contra": "19:00",
+   "fuente": {
+    "tipo": "juan",
+    "frase": "Ellos nunca respondieron, así que pongamos la más temprano, para que la gente no llegue tarde en caso tal.",
+    "fecha": "2026-10-17"
+   },
+   "evidencia": "la web dice 19:00; el IG del festival (DenDhbtmnyO, 17 oct) dice «Programa 2 - 6:00 PM»; sin respuesta del festival, la más temprana"
+  }
+ ]
+}

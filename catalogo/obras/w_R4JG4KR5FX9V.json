@@ -23,7 +23,7 @@
   "Drama"
  ],
  "afiche": {
-  "archivo": "/assets/filcmar-2026/agachar-el-rostro.jpg",
+  "archivo": "/assets/ficica-2026/agachar-el-rostro.jpg",
   "veredicto": "oficial"
  },
  "xref": {
@@ -32,11 +32,16 @@
  },
  "versiones": [
   {
+   "etiqueta": "12 min",
+   "duracion_min": 12
+  },
+  {
    "etiqueta": "13 min",
    "duracion_min": 13
   }
  ],
  "presentaciones": [
+  "ficica-2026",
   "filcmar-2026"
  ]
 }
