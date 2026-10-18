@@ -1,0 +1,172 @@
+#!/usr/bin/env python3
+"""publicar-datos.py — publica el JSON de UN festival aparte de la app (18 oct 2026).
+
+Uso:
+  python3 pipeline/publicar-datos.py <festival>            # p. ej. bhff-2026
+  python3 pipeline/publicar-datos.py <festival> --probar   # valida y muestra; no sube nada
+
+Qué hace, en orden (si un paso falla, no sigue). Los GUARDIANES son los mismos
+que protegen hoy un PR de datos — publicar aparte no se salta ninguno (Juan, 18 oct):
+  1. guardianes:
+     a. scripts/validate-festivals.js <festival>   (forma del festival, segundos)
+     b. validate.py completo                        (172 chequeos, ~40 s)
+     c. si el festival tiene pipeline: el archivo tiene que ser EXACTAMENTE lo que
+        genera pipeline/publicar.py desde su build (re-generado en una copia
+        aparte). Una edición a mano frena: saltearía los guardianes del pipeline
+        y se perdería en el próximo armado;
+     d. tests de navegador de ESE festival (festivals.spec + recorrido): la app
+        lo abre, se arma un plan y Mi Plan lo muestra;
+  2. lo sube a la rama `datos` del repo SIN tocar el checkout (plumbing de git:
+     blob → árbol → commit sobre la punta de `datos` → push). Si el archivo es
+     igual al de la punta, no hay commit nuevo;
+  3. llama a la edge function `publicar-datos` con {festival, sha}: la función
+     solo acepta la PUNTA de `datos`, guarda la versión (inmutable) en el almacén
+     `datos` de Supabase y apunta indice.json a ella;
+  4. baja lo publicado por la URL pública y compara la huella byte a byte.
+
+Volver atrás: `git revert` del commit en la rama `datos` (o publicar la versión
+anterior del archivo) y correr esto de nuevo. Un solo camino, con historia.
+
+El código de la app NO pasa por acá: sigue PR + CI + deploy. Ver migración 0009.
+"""
+import hashlib, json, os, re, shutil, subprocess, sys, tempfile, time, urllib.error, urllib.request
+
+REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+RAMA = 'datos'
+FUNCION = 'https://eytxrvbnwzxuedbmnnqr.supabase.co/functions/v1/publicar-datos'
+PUBLICO = 'https://eytxrvbnwzxuedbmnnqr.supabase.co/storage/v1/object/public/datos/'
+TIEMPO = 120   # tope por comando de red: nada se queda colgado
+
+
+def git(*a, entrada=None):
+    r = subprocess.run(['git', '-C', REPO, *a], input=entrada, capture_output=True, timeout=TIEMPO)
+    if r.returncode != 0:
+        sys.exit(f'✗ git {" ".join(a[:2])}: {r.stderr.decode(errors="replace").strip()[:300]}')
+    return r.stdout.decode().strip()
+
+
+def _correr(nombre, cmd, tiempo=TIEMPO, cwd=None):
+    t = time.time()
+    try:
+        r = subprocess.run(cmd, cwd=cwd or REPO, capture_output=True, text=True, timeout=tiempo)
+    except subprocess.TimeoutExpired:
+        sys.exit(f'✗ {nombre}: pasó el tope de {tiempo} s — no se publica')
+    if r.returncode != 0:
+        print((r.stdout or '')[-2500:], (r.stderr or '')[-1500:])
+        sys.exit(f'✗ {nombre} falló — no se publica')
+    print(f'  ✓ {nombre} ({time.time() - t:.0f} s)')
+    return r
+
+
+def guardianes(fest, ruta, contenido):
+    # a. forma del festival
+    _correr('validate-festivals', ['node', 'scripts/validate-festivals.js', fest])
+    # b. validate.py completo: imprime «PUSH BLOQUEADO» y sale distinto de 0
+    r = _correr('validate.py', ['python3', 'validate.py'], tiempo=300)
+    if 'BLOQUEADO' in r.stdout:
+        print(r.stdout[-2500:]); sys.exit('✗ validate.py bloquea — no se publica')
+    # c. con pipeline: el archivo == lo que genera publicar.py (en una copia aparte)
+    if os.path.exists(os.path.join(REPO, 'pipeline', f'{fest}.plan.json')):
+        tmp = tempfile.mkdtemp(prefix='publicar-datos-')
+        copia = os.path.join(tmp, 'repo')
+        try:
+            git('worktree', 'add', '-q', '--detach', copia, 'HEAD')
+            # lo que todavía no está commiteado del festival (build, plan, staging) viaja a la copia
+            for rel in ['pipeline', 'festivals/staging', 'festivals']:
+                o = os.path.join(REPO, rel)
+                for n in os.listdir(o):
+                    if n.startswith(fest) and os.path.isfile(os.path.join(o, n)):
+                        shutil.copy2(os.path.join(o, n), os.path.join(copia, rel, n))
+            _correr('re-generar con publicar.py', ['python3', 'pipeline/publicar.py', fest], tiempo=300, cwd=copia)
+            if open(os.path.join(copia, ruta), 'rb').read() != contenido:
+                sys.exit(f'✗ {ruta} NO es lo que genera el pipeline (¿editado a mano?).\n'
+                         f'  Corregilo aguas arriba y re-armá: python3 pipeline/correr.py {fest}')
+            print('  ✓ igual a lo que genera el pipeline')
+        finally:
+            subprocess.run(['git', '-C', REPO, 'worktree', 'remove', '--force', copia], capture_output=True, timeout=TIEMPO)
+            shutil.rmtree(tmp, ignore_errors=True)
+    else:
+        print('  · sin pipeline: no hay build contra el cual comparar')
+    # d. la app con ESTE festival (id de la app: bhff-2026 → bhff2026)
+    cfg = re.sub(r'-(\d{4})$', r'\1', fest)
+    _correr(f'tests de navegador de {cfg}',
+            ['npx', 'playwright', 'test', 'tests/festivals.spec.js', 'tests/recorrido-festival.spec.js',
+             '-g', cfg, '--workers=1', '--reporter=line'], tiempo=600)
+
+
+def main():
+    args = [a for a in sys.argv[1:] if not a.startswith('--')]
+    if len(args) != 1:
+        sys.exit(__doc__)
+    fest = args[0]
+    ruta = f'festivals/{fest}.json'
+    p = os.path.join(REPO, ruta)
+    if not os.path.exists(p):
+        sys.exit(f'✗ no existe {ruta}')
+    contenido = open(p, 'rb').read()
+    try:
+        d = json.loads(contenido)
+    except ValueError as e:
+        sys.exit(f'✗ {ruta} no es JSON: {e}')
+    if not d.get('films'):
+        sys.exit(f'✗ {ruta} no tiene films: no se publica un festival vacío')
+
+    # 1. GUARDIANES — los mismos de un PR de datos; si uno falla, no se publica
+    guardianes(fest, ruta, contenido)
+    huella = hashlib.sha256(contenido).hexdigest()
+    print(f'✓ guardianes OK · {len(d["films"])} obras · {len(contenido):,} bytes · {huella[:12]}')
+    if '--probar' in sys.argv:
+        print('· --probar: no se sube nada'); return
+
+    # 2. a la rama `datos`, sin tocar el checkout
+    git('fetch', '-q', 'origin', 'main')
+    hay_rama = subprocess.run(['git', '-C', REPO, 'ls-remote', '--exit-code', '--heads', 'origin', RAMA],
+                              capture_output=True, timeout=TIEMPO).returncode == 0
+    if hay_rama:
+        git('fetch', '-q', 'origin', RAMA)
+    base = git('rev-parse', f'origin/{RAMA}' if hay_rama else 'origin/main')
+    blob = git('hash-object', '-w', '--stdin', entrada=contenido)
+    actual = subprocess.run(['git', '-C', REPO, 'rev-parse', f'{base}:{ruta}'], capture_output=True, timeout=TIEMPO)
+    if hay_rama and actual.returncode == 0 and actual.stdout.decode().strip() == blob:
+        sha = base
+        print(f'· {ruta} ya es igual en la punta de {RAMA} ({sha[:7]})')
+    else:
+        # índice propio, fuera del repo: el checkout y su índice no se tocan
+        idx = os.path.join(tempfile.gettempdir(), f'publicar-datos-{os.getpid()}.idx')
+        env = {**os.environ, 'GIT_INDEX_FILE': idx}
+        try:
+            for cmd in (['read-tree', base], ['update-index', '--add', '--cacheinfo', f'100644,{blob},{ruta}']):
+                r = subprocess.run(['git', '-C', REPO, *cmd], env=env, capture_output=True, timeout=TIEMPO)
+                if r.returncode != 0:
+                    sys.exit(f'✗ git {cmd[0]}: {r.stderr.decode()[:300]}')
+            arbol = subprocess.run(['git', '-C', REPO, 'write-tree'], env=env, capture_output=True,
+                                   timeout=TIEMPO).stdout.decode().strip()
+        finally:
+            if os.path.exists(idx):
+                os.remove(idx)
+        sha = git('commit-tree', arbol, '-p', base, '-m', f'datos({fest}): publicar {huella[:12]}')
+        git('push', '-q', 'origin', f'{sha}:refs/heads/{RAMA}')
+        print(f'✓ rama {RAMA} → {sha[:7]}')
+
+    # 3. publicar
+    req = urllib.request.Request(FUNCION, data=json.dumps({'festival': fest, 'sha': sha,
+                                 'por': os.environ.get('OTF_POR') or git('config', 'user.name') or 'comando'}).encode(),
+                                 headers={'Content-Type': 'application/json'}, method='POST')
+    try:
+        with urllib.request.urlopen(req, timeout=TIEMPO) as r:
+            res = json.loads(r.read())
+    except urllib.error.HTTPError as e:
+        sys.exit(f'✗ publicar-datos {e.code}: {e.read().decode()[:300]}')
+    if not res.get('ok'):
+        sys.exit(f'✗ publicar-datos: {res}')
+
+    # 4. verificar lo publicado byte a byte
+    with urllib.request.urlopen(PUBLICO + res['archivo'], timeout=TIEMPO) as r:
+        publicado = r.read()
+    if hashlib.sha256(publicado).hexdigest() != huella:
+        sys.exit('✗ lo publicado NO coincide con el archivo local')
+    print(f'✓ publicado {fest} → {res["archivo"]}' + (' (sin cambios)' if res.get('igual') else ''))
+
+
+if __name__ == '__main__':
+    main()
