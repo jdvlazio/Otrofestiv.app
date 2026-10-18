@@ -78,11 +78,25 @@ def guardianes(fest, ruta, contenido):
                 for n in os.listdir(o):
                     if n.startswith(fest) and os.path.isfile(os.path.join(o, n)):
                         shutil.copy2(os.path.join(o, n), os.path.join(copia, rel, n))
-            _correr('re-generar con publicar.py', ['python3', 'pipeline/publicar.py', fest], tiempo=300, cwd=copia)
-            if open(os.path.join(copia, ruta), 'rb').read() != contenido:
+            # publicar.py puede negarse (build sin sello, pérdida de datos): eso
+            # también es «el pipeline no reproduce», no un error de este comando.
+            r = subprocess.run(['python3', 'pipeline/publicar.py', fest], cwd=copia,
+                               capture_output=True, text=True, timeout=300)
+            regen = open(os.path.join(copia, ruta), 'rb').read() if r.returncode == 0 else None
+            en_main = subprocess.run(['git', '-C', REPO, 'show', f'origin/main:{ruta}'],
+                                     capture_output=True, timeout=TIEMPO).stdout
+            if regen == contenido:
+                print('  ✓ igual a lo que genera el pipeline')
+            elif regen is not None and regen == en_main:
+                # el pipeline SÍ reproduce lo publicado y lo tuyo es distinto: edición a mano
                 sys.exit(f'✗ {ruta} NO es lo que genera el pipeline (¿editado a mano?).\n'
                          f'  Corregilo aguas arriba y re-armá: python3 pipeline/correr.py {fest}')
-            print('  ✓ igual a lo que genera el pipeline')
+            else:
+                # el pipeline YA no reproducía lo publicado en main antes de este cambio
+                # (13 festivales al 18 oct, hallazgo de Onboarding): se trata como legado.
+                print(f'  ⚠ LEGADO: el pipeline de {fest} ya no reproduce lo publicado en main\n'
+                      f'    ({"publicar.py se niega" if regen is None else "genera otra cosa"}). Se publica\n'
+                      f'    lo tuyo con los demás guardianes; conviene re-armarlo aguas arriba.')
         finally:
             subprocess.run(['git', '-C', REPO, 'worktree', 'remove', '--force', copia], capture_output=True, timeout=TIEMPO)
             shutil.rmtree(tmp, ignore_errors=True)

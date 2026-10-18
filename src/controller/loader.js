@@ -13,7 +13,7 @@ import { closeFestivalSheet, openCitySheet, openReviewSheet, _reviewDesbloqueado
 import { showToast } from '../view/feedback.js';
 import { _renderProgramaContent, lugarClose, scrollDtabsToActive } from '../view/programa.js';
 import { _fixStickyOffset, renderAgenda } from '../view/agenda.js';
-import { loadState, _cloudLoad, _cloudSave, subscribePlanCloud, _flushCloudSave } from './persistence.js';
+import { loadState, _cloudLoad, _cloudSave, subscribePlanCloud, _flushCloudSave, sincronizarPlan } from './persistence.js';
 import { report } from '../telemetry.js';
 import { cargarDatosFestival } from './datos-fuente.js';
 import { subscribeDelaysCloud } from './delays-cloud.js';
@@ -23,7 +23,6 @@ import { seccionClose } from './overlays.js';
 import { setProgramaView } from './handlers.js';
 import { dayFullyPassed, simTodayStr } from '../domain/time.js';
 import { _djb2, explodeScreenings, normTitle, sealSharedSlots, validateFilm } from '../domain/film.js';
-import { syncScheduleWithCatalog } from '../domain/schedule.js';
 import { state } from '../state/state.js';
 import { deriveClear, migrarTitulosAnteriores } from '../state/festival-context.js';
 import { storage } from '../storage/storage.js';
@@ -345,7 +344,7 @@ export function publicarCatalogo(id, cfg){
   // Solo persiste en LOCAL: es una corrección derivada e idempotente — subirla
   // a la nube crearía ping-pong entre dispositivos que se normalizan solos.
   if(savedAgenda&&savedAgenda.schedule&&savedAgenda.schedule.length){
-    state.update('savedAgenda', a=>({...a, schedule: syncScheduleWithCatalog(a.schedule, _newFilms)}));
+    sincronizarPlan(_newFilms);   // + retraso y boleta viajan con la función movida
     storage.setSavedAgenda(state.get('savedAgenda'));
   }
 }
