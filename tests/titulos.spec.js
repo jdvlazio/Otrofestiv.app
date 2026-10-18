@@ -3,7 +3,7 @@
 // Spec propio porque necesita interceptar el JSON del festival, y el service
 // worker lo serviría por fuera de page.route: aquí se bloquea.
 const { test, expect } = require('@playwright/test');
-const { reentrar } = require('./helpers');
+const { reentrar, soloWeb } = require('./helpers');
 
 test.use({ serviceWorkers: 'block' });
 
@@ -14,6 +14,7 @@ test.use({ serviceWorkers: 'block' });
 // el Interés contra los títulos vigentes y lo BORRABA. Se simula el dato que
 // Onboarding pondrá en el JSON (`titulos_anteriores`) interceptando la respuesta.
 test('T-REN — Interés, prioridad y calificación pasan del título viejo al nuevo', async ({ page }) => {
+  await soloWeb(page);   // intercepta el JSON: el almacén va cortado
   await page.route('**/festivals/villadelcine-2026.json*', async route => {
     const res = await route.fetch();
     const d = await res.json();
