@@ -103,10 +103,19 @@ def guardianes(fest, ruta, contenido):
     else:
         print('  · sin pipeline: no hay build contra el cual comparar')
     # d. la app con ESTE festival (id de la app: bhff-2026 → bhff2026)
-    cfg = re.sub(r'-(\d{4})$', r'\1', fest)
+    # id de la app: el archivo con guion antes de los dígitos finales (bhff-2026 →
+    # bhff2026, ficci-65 → ficci65; festivalJsonUrl hace la inversa).
+    cfg = re.sub(r'-(\d+)$', r'\1', fest)
+    specs = ['tests/festivals.spec.js', 'tests/recorrido-festival.spec.js']
+    lista = subprocess.run(['npx', 'playwright', 'test', *specs, '-g', cfg, '--list'], cwd=REPO,
+                           capture_output=True, text=True, timeout=TIEMPO).stdout
+    if not re.search(r'^\s+\[', lista, re.M):
+        # Los tests recorren los festivales VISIBLES; uno oculto (group:'test') no tiene.
+        # Se dice en voz alta en vez de frenar: los demás guardianes sí corrieron.
+        print(f'  ⚠ {cfg} no tiene tests de navegador (¿festival oculto?): se omiten')
+        return
     _correr(f'tests de navegador de {cfg}',
-            ['npx', 'playwright', 'test', 'tests/festivals.spec.js', 'tests/recorrido-festival.spec.js',
-             '-g', cfg, '--workers=1', '--reporter=line'], tiempo=600)
+            ['npx', 'playwright', 'test', *specs, '-g', cfg, '--workers=1', '--reporter=line'], tiempo=600)
 
 
 def _commit_en_datos(ruta, contenido, mensaje):
