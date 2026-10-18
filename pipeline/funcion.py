@@ -454,6 +454,17 @@ def ids_para_publicado(films, registro):
     return out, reg
 
 
+def volcar_como(raw, d):
+    """`d` en el mismo formato que `raw` (compacto o con sangría 1/2, con o sin
+    salto final): la pasada de legado no puede cambiar nada más que lo que
+    agrega. Un formato que no se reconoce FRENA, no se adivina."""
+    for kw in ({'separators': (',', ':')}, {}, {'indent': 1}, {'indent': 2}):
+        for fin in ('', '\n'):
+            if json.dumps(json.loads(raw), ensure_ascii=False, **kw) + fin == raw:
+                return json.dumps(d, ensure_ascii=False, **kw) + fin
+    raise AfirmacionInvalida('formato de JSON que no se reconoce: no se reescribe')
+
+
 def ids_estables(viejo, nuevo, registro):
     """[id-funcion-estable] (docs/FUNCION.md §11.5): lo publicado en main contra
     lo de ahora → problemas. Un id publicado no desaparece salvo que el registro

@@ -90,3 +90,18 @@ class Montaje(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
+
+class Formato(unittest.TestCase):
+    """La pasada de legado reescribe el JSON publicado: el único cambio debe ser `id`."""
+
+    def test_todos_los_publicados_se_reescriben_byte_a_byte(self):
+        import glob
+        raiz = os.path.join(os.path.dirname(__file__), '..', '..', 'festivals')
+        for p in sorted(glob.glob(os.path.join(raiz, '*.json'))):
+            raw = open(p, encoding='utf-8').read()
+            self.assertEqual(funcion.volcar_como(raw, __import__('json').loads(raw)), raw, p)
+
+    def test_formato_desconocido_frena(self):
+        with self.assertRaises(funcion.AfirmacionInvalida):
+            funcion.volcar_como('{ "a" :1}', {'a': 1})
