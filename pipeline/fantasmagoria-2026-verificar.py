@@ -33,6 +33,11 @@ CONTRADICCIONES = {
     ('Hoodsteps', '2026-10-23', '16:00'): 'ídem',
     # LA BASE DE SU CARTELERA (v2, 6 oct) contra la página de largos (28 sep): la
     # base es la más reciente y la que el equipo edita, y manda (7 oct). Preguntado.
+    # BASE v26 (16 oct) contra la página de largos (28 sep, sin actualizar): el
+    # festival movió al Planetario a las 17:00. Se publica la base, la más reciente
+    ('Critters', '2026-10-17', '17:00'): 'base v26 (16 oct): sáb 17, 5:00 p. m., Planetario; la página de largos (28 sep) sigue con dom 18, 7:00 p. m. Se publica la base',
+    ('Vida', '2026-10-23', '19:00'): 'la página de largos (28 sep) dice 7:00 p. m.; la base v26 (16 oct), 5:00 p. m. Se publica la base',
+    ('Vida', '2026-10-23', '17:00'): 'base v26 (16 oct): vie 23, 5:00 p. m., Planetario; la página de largos (28 sep) dice 7:00 p. m. Se publica la base',
     ('Critters', '2026-10-18', '19:00'): 'la página de largos dice dom 18, 7:00 p. m.; la base v2, sáb 17 a las 19:00 (el 18 queda la de X-Files). Se publica la base',
     ('Critters', '2026-10-17', '19:00'): 'ver la del domingo 18',
     ('Pura Sangre', '2026-10-20', '18:30'): 'la página de largos dice 6:30 p. m.; la base v2, 18:00. Se publica la base',
