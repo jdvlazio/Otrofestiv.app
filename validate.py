@@ -6879,6 +6879,23 @@ try:
 except Exception as _e:
     _D9['error'] = str(_e)
 
+check = 'camino-datos'
+# .github/camino-datos.txt decide qué PR se saltea la regresión de la interfaz
+# (17 oct 2026). Si alguien suma ahí una ruta de CÓDIGO de la app, un cambio de
+# código pasaría sin sus tests: esta lista lo prohíbe.
+try:
+    _cd = [l.strip() for l in open('.github/camino-datos.txt', encoding='utf-8')
+           if l.strip() and not l.lstrip().startswith('#')]
+    _prohibido = ('src', 'index.html', 'sw.js', 'tests/', 'playwright', '.github', 'scripts', 'i18n', 'manifest', 'fonts')
+    _malas = [p for p in _cd if any(p == x or p.startswith(x) or x.startswith(p) for x in _prohibido)
+              and not p.startswith('tests/pipeline/')]
+    if _malas:
+        fail(check, 'el camino de datos incluye código de la app (se saltearía sus tests): ' + ', '.join(_malas))
+    else:
+        ok(check, f'camino de datos: {len(_cd)} rutas, ninguna de código de la app')
+except FileNotFoundError:
+    fail(check, 'falta .github/camino-datos.txt (lo lee el workflow de Playwright)')
+
 check = 'renombre-no-se-borra'
 # Un renombre de <fid>-titulos-anteriores.json es lo que deja a la app mover lo
 # que el usuario guardó bajo el título viejo. Si una edición lo saca, quien
