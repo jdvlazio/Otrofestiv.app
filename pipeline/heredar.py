@@ -64,7 +64,7 @@ def heredar(d, fid, obs, key=None, sin=()):
                 v = herencia.valor(w, campo, fid, o.get('title') or '', o.get('tmdb_id'), key)
                 if not v:
                     continue
-                o[pub] = v
+                o[pub] = f'{v} min' if pub == 'duration' else v
                 if campo == 'synopsis_es':
                     o['synopsis_lang'] = 'es'
                 if campo == 'poster':

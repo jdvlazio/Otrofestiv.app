@@ -12,6 +12,10 @@
   {
    "titulo": "El Mundo de Humberto",
    "tipo": "festival"
+  },
+  {
+   "titulo": "El mundo de humberto",
+   "tipo": "festival"
   }
  ],
  "sinopsis": {
@@ -33,6 +37,7 @@
  ],
  "presentaciones": [
   "ficcali-2026",
+  "ficica-2026",
   "ficpa-2026"
  ]
 }

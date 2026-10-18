@@ -20,10 +20,14 @@
   "veredicto": "oficial-festival"
  },
  "xref": {
-  "letterboxd": "pawa",
-  "tmdb": 1668893
+  "tmdb": 1668893,
+  "letterboxd": "pawa"
  },
  "versiones": [
+  {
+   "etiqueta": "20 min",
+   "duracion_min": 20
+  },
   {
    "etiqueta": "22 min",
    "duracion_min": 22
@@ -32,6 +36,7 @@
  "presentaciones": [
   "ficci-65",
   "ficdeh-2026",
+  "ficica-2026",
   "leviza-2026"
  ]
 }

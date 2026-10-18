@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, con el MISMO candado de enriquecer.py: director ✓ y (año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-10-15"
+  "capturado": "2026-10-18"
  },
  "_origen": "ficica-2026-catalogo.json",
  "obras": [
@@ -373,6 +373,41 @@
    "_verificado": "declarada a mano: Existe en TMDB con otro título o sin año ni duración, y el candado no la casaba sola: «Nora's ark» (2026), Endre Lund Eriksen; mismo director que publica FICICA. Verificada el 11 oct 2026."
   },
   {
+   "titulo": "El mundo de humberto",
+   "tmdb_id": 1791688,
+   "titulo_original": "El mundo de Humberto",
+   "poster_path": "/5LT4v4mj28KFFh3xAXH2y6DIQyo.jpg",
+   "synopsis_es": "En el corazón de Cali está Kiss Me, la caverna del amor, un edificio de arquitectura ecléctica diseñado por Humberto Villegas, creador de sus 190 habitaciones temáticas, en las que confluyen el sexo, el arte y la política. El mundo de Humberto es una inmersión en este espacio insólito, sensual y poético, que Humberto transforma continuamente con la complicidad de Neneco, artista autodidacta que esculpe, pinta y moldea, para darles forma tangible a sus visiones, mientras el motel continúa operando como escenario de deseo y fantasía.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 14,
+   "pais_tmdb": "",
+   "lbSlug": "el-mundo-de-humberto",
+   "_verificado": "el catálogo ya la tiene (w_R4GZE0GF3135, ficcali-2026, ficpa-2026)",
+   "work_id": "w_R4GZE0GF3135",
+   "_ya_publicada": [
+    {
+     "festival": "ficcali-2026",
+     "titulo": "El mundo de Humberto",
+     "tmdb_id": 1791688,
+     "poster": "/assets/ficcali-2026/el-mundo-de-humberto.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "el-mundo-de-humberto",
+     "sinopsis": "En el corazón de Cali está Kiss Me, la caverna del amor, un edificio de arquitectura ecléctica diseñado por Humberto Villegas, creador de sus 190 habitaciones temáticas, en las que confluyen el sexo, el arte y la política. El mundo de Humberto es una inmersión en este espacio insólito, sensual y poético, que Humberto transforma continuamente con la complicidad de Neneco, artista autodidacta que esculpe, pinta y moldea, para darles forma tangible a sus visiones, mientras el motel continúa operando como escenario de deseo y fantasía."
+    },
+    {
+     "festival": "ficpa-2026",
+     "titulo": "El Mundo de Humberto",
+     "tmdb_id": 1791688,
+     "poster": "/assets/ficpa-2026/el-mundo-de-humberto.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "el-mundo-de-humberto",
+     "sinopsis": "En el corazón de Cali (Colombia), un motel de 190 habitaciones temáticas se convierte en una obra de arte viva: un universo insólito, sensual y político concebido por Humberto Villegas, que Neneco, su cómplice escultor, materializa."
+    }
+   ]
+  },
+  {
    "titulo": "El segundo",
    "_fuente": "cinecorto",
    "_cinecorto": "https://cinecorto.co/el-segundo/",
@@ -664,7 +699,7 @@
    "titulo": "La mona",
    "tmdb_id": 1444298,
    "titulo_original": "La Mona",
-   "poster_path": null,
+   "poster_path": "/lJLol3jUunTLininhCPI65A32xN.jpg",
    "synopsis_es": "",
    "synopsis_en": "In the damp and dusty village of La Hondura, La Mona is ready to sacrifice everything to maintain her authority even if loneliness is the price she must pay. Her body, however, refuses to toe the line.",
    "genero": "Drama",
@@ -1878,6 +1913,40 @@
    "lbSlug": "noras-ark",
    "_verificado": "declarada a mano: Existe en TMDB con otro título o sin año ni duración, y el candado no la casaba sola: «Nora's ark» (2026), Endre Lund Eriksen; mismo director que publica FICICA. Verificada el 11 oct 2026."
   },
+  "El mundo de humberto": {
+   "tmdb_id": 1791688,
+   "titulo_original": "El mundo de Humberto",
+   "poster_path": "/5LT4v4mj28KFFh3xAXH2y6DIQyo.jpg",
+   "synopsis_es": "En el corazón de Cali está Kiss Me, la caverna del amor, un edificio de arquitectura ecléctica diseñado por Humberto Villegas, creador de sus 190 habitaciones temáticas, en las que confluyen el sexo, el arte y la política. El mundo de Humberto es una inmersión en este espacio insólito, sensual y poético, que Humberto transforma continuamente con la complicidad de Neneco, artista autodidacta que esculpe, pinta y moldea, para darles forma tangible a sus visiones, mientras el motel continúa operando como escenario de deseo y fantasía.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 14,
+   "pais_tmdb": "",
+   "lbSlug": "el-mundo-de-humberto",
+   "_verificado": "el catálogo ya la tiene (w_R4GZE0GF3135, ficcali-2026, ficpa-2026)",
+   "work_id": "w_R4GZE0GF3135",
+   "_ya_publicada": [
+    {
+     "festival": "ficcali-2026",
+     "titulo": "El mundo de Humberto",
+     "tmdb_id": 1791688,
+     "poster": "/assets/ficcali-2026/el-mundo-de-humberto.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "el-mundo-de-humberto",
+     "sinopsis": "En el corazón de Cali está Kiss Me, la caverna del amor, un edificio de arquitectura ecléctica diseñado por Humberto Villegas, creador de sus 190 habitaciones temáticas, en las que confluyen el sexo, el arte y la política. El mundo de Humberto es una inmersión en este espacio insólito, sensual y poético, que Humberto transforma continuamente con la complicidad de Neneco, artista autodidacta que esculpe, pinta y moldea, para darles forma tangible a sus visiones, mientras el motel continúa operando como escenario de deseo y fantasía."
+    },
+    {
+     "festival": "ficpa-2026",
+     "titulo": "El Mundo de Humberto",
+     "tmdb_id": 1791688,
+     "poster": "/assets/ficpa-2026/el-mundo-de-humberto.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "el-mundo-de-humberto",
+     "sinopsis": "En el corazón de Cali (Colombia), un motel de 190 habitaciones temáticas se convierte en una obra de arte viva: un universo insólito, sensual y político concebido por Humberto Villegas, que Neneco, su cómplice escultor, materializa."
+    }
+   ]
+  },
   "El segundo": {
    "_fuente": "cinecorto",
    "_cinecorto": "https://cinecorto.co/el-segundo/",
@@ -2158,7 +2227,7 @@
   "La mona": {
    "tmdb_id": 1444298,
    "titulo_original": "La Mona",
-   "poster_path": null,
+   "poster_path": "/lJLol3jUunTLininhCPI65A32xN.jpg",
    "synopsis_es": "",
    "synopsis_en": "In the damp and dusty village of La Hondura, La Mona is ready to sacrifice everything to maintain her authority even if loneliness is the price she must pay. Her body, however, refuses to toe the line.",
    "genero": "Drama",
@@ -2983,31 +3052,56 @@
  },
  "sin_ficha": [
   "10 meters above",
+  "Alivios",
   "Appol-o",
+  "Arlequín",
+  "Bartolo",
   "Belleza letal",
+  "Cabica",
+  "Capitán cartagena",
   "Carne de segunda",
   "Chro",
   "Citizenship test",
   "Compraventa",
+  "Concierto sentido",
   "Cómo limpiar un espejo",
-  "El mundo de humberto",
+  "Dientes de yuca",
+  "Dulce",
+  "El abrazo del sol",
+  "El bitcoin de oro",
+  "El kanto del kajambá",
+  "El maestro de la piquería",
+  "El silencio de las semillas",
   "En nombre del amor",
   "Enfermedad",
+  "Frágil o embalados",
+  "Gracias, antonio",
   "In turn",
   "Juego de damas",
+  "Khazana",
   "La culpa es del cine",
+  "La despedida",
   "La fiesta votada",
+  "La tormenta",
   "La tranquilidad de los pájaros",
+  "Memorias piedras de boca e’ caña",
   "New york",
+  "Plan de fuga",
   "Post-familia",
+  "Princesado mokaná: el legado del cerro de las hermosas",
+  "Proowa",
+  "Queener",
+  "Quinto primera",
   "Rastro",
   "Recordando mi jerga",
+  "Seguridad en el territorio del pueblo ette ennka chimila",
   "Snorri - catch me if you candy",
   "Sombra lejana",
   "Tejiendo un árbol",
   "The dreaming witness",
   "The remaining dregs",
   "The torch i carry",
-  "Zizuma, nuestra casa de agua y nubes"
+  "Zizuma, nuestra casa de agua y nubes",
+  "¿Quién heredará el sabor de mompox?"
  ]
 }

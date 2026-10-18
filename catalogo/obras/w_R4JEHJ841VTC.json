@@ -1,6 +1,6 @@
 {
  "id": "w_R4JEHJ841VTC",
- "titulo_original": "El pesebre",
+ "titulo_original": "Presépio (el pesebre)",
  "anio": 2025,
  "paises": [
   "BR"
@@ -9,6 +9,10 @@
   "Felipe Bibian"
  ],
  "aliases": [
+  {
+   "titulo": "El pesebre",
+   "tipo": "festival"
+  },
   {
    "titulo": "Nativity Scene",
    "idioma": "en",
@@ -23,7 +27,7 @@
   "Drama"
  ],
  "afiche": {
-  "archivo": "/assets/filcmar-2026/el-pesebre.jpg",
+  "archivo": "/assets/ficica-2026/presepio-el-pesebre.jpg",
   "veredicto": "oficial"
  },
  "xref": {
@@ -37,6 +41,7 @@
   }
  ],
  "presentaciones": [
+  "ficica-2026",
   "filcmar-2026"
  ]
 }

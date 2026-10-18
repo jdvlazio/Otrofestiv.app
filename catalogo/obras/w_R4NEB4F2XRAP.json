@@ -1,6 +1,6 @@
 {
  "id": "w_R4NEB4F2XRAP",
- "titulo_original": "Memorias de infancia",
+ "titulo_original": "Memoria de un pibe",
  "anio": 2025,
  "paises": [
   "BR"
@@ -9,6 +9,10 @@
   "Pedro Santi"
  ],
  "aliases": [
+  {
+   "titulo": "Memorias de infancia",
+   "tipo": "festival"
+  },
   {
    "titulo": "Memória de Pivete",
    "idioma": "en",
@@ -20,10 +24,11 @@
   "en": "A nostalgic look at childhood, the neighborhoods and the experiences that build the relationship between football, identity and memory."
  },
  "afiche": {
-  "archivo": "/assets/tercertiempo/memorias-de-infancia.jpg",
-  "veredicto": "oficial-festival"
+  "archivo": "/assets/ficica-2026/memoria-de-un-pibe.jpg",
+  "veredicto": "oficial"
  },
  "xref": {
+  "tmdb": 1533600,
   "letterboxd": "memoria-de-pivete"
  },
  "versiones": [
@@ -33,6 +38,7 @@
   }
  ],
  "presentaciones": [
+  "ficica-2026",
   "tercertiempo-2026"
  ]
 }

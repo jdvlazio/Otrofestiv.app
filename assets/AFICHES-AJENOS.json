@@ -26,11 +26,39 @@
     "ficpa-2026"
    ]
   },
+  "/assets/ficcali-2026/alivios.jpg": {
+   "sha1": "981065ccaed5f9b3fc4080b3d31b2b4a367dfd56",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficica-2026"
+   ]
+  },
   "/assets/ficcali-2026/despues-de-tanto-amor.jpg": {
    "sha1": "192fdd369e33723566d4d29539841510d62791ee",
    "veredicto": "afiche",
    "usado_en": [
     "villadelcine-2026"
+   ]
+  },
+  "/assets/ficcali-2026/el-bitcoin-de-oro.jpg": {
+   "sha1": "231e1405e164675a8f8c118ff3c6bcb3385ca488",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficica-2026"
+   ]
+  },
+  "/assets/ficcali-2026/el-maestro-de-la-piqueria.jpg": {
+   "sha1": "78f6a80811ed1ab3d4c40192cac250d0cfaf917a",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficica-2026"
+   ]
+  },
+  "/assets/ficcali-2026/khazana.jpg": {
+   "sha1": "b3145ac176b6dc4ea1ea0f3587280bf8ff656c05",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficica-2026"
    ]
   },
   "/assets/ficcali-2026/la-gran-hazana.jpg": {
@@ -40,10 +68,18 @@
     "ficmontanas-2026"
    ]
   },
+  "/assets/ficcali-2026/quinto-primera.jpg": {
+   "sha1": "1edea11f6a0647e452953a0132a0046d2dd186ae",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficica-2026"
+   ]
+  },
   "/assets/ficdeh/la-independencia.jpg": {
    "sha1": "6a8bbb76f2544323cf8d07ee27a2c9870386dfd5",
    "veredicto": "afiche",
    "usado_en": [
+    "ficica-2026",
     "siembrafest-2026"
    ]
   },
