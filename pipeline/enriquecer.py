@@ -655,7 +655,8 @@ def main():
     _DE_LA_FUENTE = {'synopsis_es': ('sinopsis', 'synopsis_es'), 'synopsis_en': ('sinopsis_en', 'synopsis_en'),
                      'poster': ('poster',), 'genero': ('genero',), 'title_en': ('title_en',),
                      'lbSlug': ('lbSlug',), 'anio': ('anio',),
-                     'director_heredado': ('director',), 'duracion_tmdb': ('duracion_min',)}
+                     'director_heredado': ('director',), 'duracion_tmdb': ('duracion_min',),
+                     'pais_heredado': ('pais',)}
     _hered = {}
     for t, f in obras.items():
         e = ok.get(t) or {}

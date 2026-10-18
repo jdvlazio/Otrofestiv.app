@@ -1,16 +1,25 @@
 {
  "id": "w_R4HEVVW6AQR2",
  "titulo_original": "Kuagro",
- "anio": null,
+ "anio": 2026,
  "paises": [
   "CO"
  ],
- "directores": [],
- "afiche": {
-  "archivo": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/poster%20KUAGRO%20FINAL_Mesa%20de%20trabajo%201%20-%20Diego%20Casseres.png?itok=qvukayHP",
-  "veredicto": "oficial-festival"
+ "directores": [
+  "Diego Casseres"
+ ],
+ "sinopsis": {
+  "es": "En palenque, un pueblo afrodescendiente en el departamento de Bolívar ubicado a una hora de Cartagena, se viven diariamente las tradiciones que gestaron nuestros ancestros. Los kuagros es una de ellas; siendo esta la forma organizacional que existe en el territorio. Se entiende el Kuagro como una segunda familia que nace gracias a los años de andanzas de un grupo de niños o jóvenes de una misma calle, barrio o sector.  La película KUAGRO cuenta como se da esta formación de grupo cuando no hay un rumbo seguro o fijo, solo la amistad y hermandad que nace del corazón y los amigos de infancia, esta película habla desde el relevo generacional, la lengua palenquera, el amor de mama y la libertad de ser niño en el palenque de Benko.",
+  "en": "Makakito tries to escape his mother’s punishment so he can play with his friends in a magical place in Palenque. His grandfather, a storyteller, captivates him with a traditional folk tale, which is interrupted by the adventures that ensnare Makakito."
  },
- "xref": {},
+ "afiche": {
+  "archivo": "/assets/ficcali-2026/kuagro.jpg",
+  "veredicto": "oficial"
+ },
+ "xref": {
+  "tmdb": 1668919,
+  "letterboxd": "kuagro"
+ },
  "versiones": [
   {
    "etiqueta": "12 min",
@@ -18,6 +27,7 @@
   }
  ],
  "presentaciones": [
+  "ficcali-2026",
   "ficci-65"
  ]
 }

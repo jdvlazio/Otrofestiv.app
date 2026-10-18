@@ -6,17 +6,19 @@
   "CO"
  ],
  "directores": [
+  "Santiago Alejandro Muñoz",
   "Atikeinis Durán Izquierdo"
  ],
  "sinopsis": {
-  "es": "Cortometraje rodado por los niños y niñas de la comunidad indígena de Morotrwa, en la Sierra Nevada de Gonawindua. A través de sus propias fotografías y vídeos, documentan sus vidas y su territorio, eligiendo libremente qué mostrar.",
+  "es": "En uno de los territorios más sagrados y vitales de Colombia, la Sierra Nevada de Gonawindua, los niños de la comunidad indígena Morotrwa alzan sus voces para narrar el territorio a través de un primer acercamiento a la creación audiovisual. Héroes del silencio es un viaje íntimo a la cotidianidad, un retrato auténtico, alejado de miradas externas, donde ellos deciden qué contar y cómo hacerlo.",
   "en": "Heroes of the silence is a short film shot by the children of the Morotrwa indigenous community in the Sierra Nevada de Gonawindua. Through their own photographs and videos, they document their lives and their territory, freely choosing what to show."
  },
  "afiche": {
-  "archivo": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_4_He%CC%81roes%20del%20Silencio_Po%CC%81ster%20-%20Santiago%20Alejandro%20Mu%C3%B1oz%20Marrugo.jpg?itok=NGH1UWzS",
-  "veredicto": "oficial-festival"
+  "archivo": "/assets/ficcali-2026/heroes-del-silencio.jpg",
+  "veredicto": "oficial"
  },
  "xref": {
+  "tmdb": 1668935,
   "letterboxd": "heroes-del-silencio"
  },
  "versiones": [
@@ -26,6 +28,7 @@
   }
  ],
  "presentaciones": [
+  "ficcali-2026",
   "ficci-65",
   "ficdeh-2026"
  ]
