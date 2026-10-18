@@ -1450,3 +1450,5 @@ Sin reconocerlas, 28 obras se quedaban sin género **teniendo uno**.
 vocabulario → **warning**, porque puede ser una etiqueta colada… o un género
 legítimo que falte en `_GENRE_EN`, y esa decisión es de quien monta.
 
+
+`[preonboarding-completo]` (18 oct 2026): un festival que todavía no salió y ya tiene `<fid>-catalogo.json` no pasa si alguna obra no tiene afiche ni su porqué (`sin_afiche`). `python3 pipeline/preonboarding.py`; deuda en `pipeline/preonboarding-deuda.json`, solo baja. Lo publicado lo vigila `[afiche-cobertura]`.
