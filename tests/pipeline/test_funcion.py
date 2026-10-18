@@ -275,5 +275,20 @@ class Autoprueba(unittest.TestCase):
         self.assertEqual(funcion.autoprueba(), [])
 
 
+class EnLinea(unittest.TestCase):
+    """«En línea» dice DÓNDE se ve, no cuánto cuesta (17 oct 2026): las charlas
+    por Twitch de Fantasmagoría, «Entrada libre», salían pagas al pasar el
+    festival al modelo — la traducción a campos se comía el is_free."""
+
+    def test_en_linea_libre_sigue_libre(self):
+        f = resolver([base(online=True, is_free=True)], []).funciones[0]
+        self.assertIs(f.get('online'), True)
+        self.assertIs(f.get('is_free'), True)
+
+    def test_en_linea_sin_dato_es_libre(self):
+        f = resolver([base(online=True)], []).funciones[0]
+        self.assertIs(f.get('is_free'), True)
+
+
 if __name__ == '__main__':
     unittest.main()
