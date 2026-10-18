@@ -1,0 +1,72 @@
+{
+ "_provenance": {
+  "fuente": "afirmaciones sobre la agenda oficial (p/Def6fhKDSQy, 14 oct)",
+  "capturado": "2026-10-18"
+ },
+ "afirmaciones": [
+  {
+   "ancla": {
+    "sede": "Centro de Eventos Guatapé Plaza - Guatapé",
+    "dia": "2026-10-21",
+    "hora": "20:00"
+   },
+   "casilla": "existe",
+   "valor": false,
+   "por_que": "cóctel de invitados, no abierto al público",
+   "fuente": {
+    "tipo": "juan",
+    "frase": "Dale (a la propuesta: «los dos cócteles afuera, porque son cerrados»)",
+    "fecha": "2026-10-18"
+   },
+   "evidencia": "lámina 01: «Coctel Inaugural · EL REFELJO DEL CINE · 8:00 - 09:30 Pm · Centro de Eventos Guatapé Plaza»"
+  },
+  {
+   "ancla": {
+    "sede": "Muelle Corona - Guatapé",
+    "dia": "2026-10-22",
+    "hora": "18:00"
+   },
+   "casilla": "existe",
+   "valor": false,
+   "por_que": "cóctel de invitados, no abierto al público",
+   "fuente": {
+    "tipo": "juan",
+    "frase": "Dale (a la propuesta: «los dos cócteles afuera, porque son cerrados»)",
+    "fecha": "2026-10-18"
+   },
+   "evidencia": "lámina 03: «COCTEL INVITADOS · 6:00 Pm · Muelle Corona - Malecón»",
+   "funcion": "f_a6d3e7afb3"
+  },
+  {
+   "ancla": {
+    "sede": "Parque Educativo El Zócalo - Guatapé",
+    "dia": "2026-10-24",
+    "hora": "10:00"
+   },
+   "casilla": "venue",
+   "valor": "Centro Día Gerontológico - Guatapé",
+   "fuente": {
+    "tipo": "festival-ig",
+    "url": "https://www.instagram.com/p/DehGQpgoAvX/",
+    "fecha": "2026-10-15"
+   },
+   "evidencia": "afiche de la masterclass «Cine y Nuevas Narrativas» (lámina 1): «Centro Gerontológico de Guatapé»; la agenda (14 oct) decía Parque Educativo El Zócalo"
+  },
+  {
+   "ancla": {
+    "sede": "Parque Educativo El Zócalo - Guatapé",
+    "dia": "2026-10-23",
+    "hora": "14:00"
+   },
+   "casilla": "duration",
+   "valor": "240 min",
+   "fuente": {
+    "tipo": "festival-ig",
+    "url": "https://www.instagram.com/p/DehGQpgoAvX/",
+    "fecha": "2026-10-15"
+   },
+   "evidencia": "afiche de la masterclass «Concept Art para Cine» (lámina 2): «2:00 – 6:00 p.m.»; la agenda (14 oct) decía 2:00 - 5:00",
+   "funcion": "f_9e3694faa0"
+  }
+ ]
+}

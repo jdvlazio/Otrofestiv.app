@@ -8,6 +8,12 @@
  "directores": [
   "Sebastián Rosas Santamaría"
  ],
+ "aliases": [
+  {
+   "titulo": "Hasta que amanezca",
+   "tipo": "festival"
+  }
+ ],
  "afiche": {
   "archivo": "/assets/bhff-2026/hasta-que-amanezca.jpg",
   "veredicto": "oficial"
@@ -20,6 +26,7 @@
   }
  ],
  "presentaciones": [
-  "bhff-2026"
+  "bhff-2026",
+  "guatape-2026"
  ]
 }

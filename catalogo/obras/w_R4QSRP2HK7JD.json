@@ -1,12 +1,18 @@
 {
  "id": "w_R4QSRP2HK7JD",
- "titulo_original": "VOLAR",
+ "titulo_original": "Volar",
  "anio": null,
  "paises": [
   "CO"
  ],
  "directores": [
   "Jeiver Pinto"
+ ],
+ "aliases": [
+  {
+   "titulo": "VOLAR",
+   "tipo": "festival"
+  }
  ],
  "sinopsis": {
   "es": "Tras la desaparición de Claudia, Alirio, un niño habitante de calle, se niega a quedar nuevamente solo. Por eso se lleva a Alicia, una anciana olvidada en un parque. Lo que comienza como un rapto transforma dos vidas invisibles: juntos construyen el afecto y el hogar que la ciudad les había negado."
@@ -15,7 +21,7 @@
   "Drama"
  ],
  "afiche": {
-  "archivo": "/assets/villadelcine-2026/volar.jpg",
+  "archivo": "/assets/guatape-2026/volar.jpg",
   "veredicto": "oficial"
  },
  "xref": {
@@ -29,6 +35,7 @@
   }
  ],
  "presentaciones": [
+  "guatape-2026",
   "villadelcine-2026"
  ]
 }

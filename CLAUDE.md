@@ -87,8 +87,8 @@ deliberada existe la etiqueta `frontera-ok`.
 | `olhar2026` | Olhar de Cinema | Curitiba | JUN 4–13 | Archivado |
 | `tercertiempo2026` | Tercer Tiempo Fest | Bogotá | 13–19 JUL | Archivado |
 | `fantasofest2026` | FantasoFest | Bogotá | 13–19 JUL | Archivado |
-| `ficpa2026` | FICPA | Pasto | 13–17 OCT | **Próximo / activo** |
-| `villadelcine2026` | Villa del Cine | Villa de Leyva | 14–17 OCT | **Próximo / activo** |
+| `ficpa2026` | FICPA | Pasto | 13–17 OCT | Recién terminado |
+| `villadelcine2026` | Villa del Cine | Villa de Leyva | 14–17 OCT | Recién terminado |
 | `ficma2026` | FICMA | Manizales | 19–26 SEP | Recién terminado |
 | `ficdeh2026` | FICDEH | Colombia | 12–19 AGO | Archivado |
 | `finca2026` | FINCA | Buenos Aires | 12–19 AGO | Archivado |
@@ -102,6 +102,7 @@ deliberada existe la etiqueta `frontera-ok`.
 | `jardin2026` | Festival de Cine de Jardín | Jardín | 24–27 SEP | Recién terminado |
 | `itagui2026` | Festicine Itagüí | Itagüí | 23–27 SEP | Recién terminado |
 | `girardota2026` | Festigirardota | Girardota | 30 SEP–4 OCT | Recién terminado |
+| `guatape2026` | Guatapé Film Fest | Guatapé | 21–25 OCT | **Próximo / activo** |
 | `biff2026` | BIFF | Bogotá | 8–14 OCT | Recién terminado |
 | `popayan2026` | Cine Corto Popayán | Popayán | 5–11 OCT | Recién terminado |
 | `mamut2026` | Mamut | Medellín | 5–11 OCT | Recién terminado |

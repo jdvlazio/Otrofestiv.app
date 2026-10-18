@@ -1,0 +1,233 @@
+{
+ "_nota": "Guatapé Film Fest 2026 — 4.ª edición, «El Reflejo del Cine» (Guatapé, Antioquia, 21–25 oct). Organiza Casa Activa. La programación entera está en el carrusel oficial de @guatapefilmfest (p/Def6fhKDSQy, 14 oct, 11 láminas): 54 ítems con día, hora y lugar. Las láminas no dan créditos de las obras, ni direcciones, ni cómo se entra.",
+ "radar": null,
+ "radar_nota": "Guatapé Film Fest no tenía issue de radar: entró por pedido de Juan (16 oct 2026). La vigilancia de cambios la hace el vigía diario.",
+ "pasos": [
+  {
+   "cmd": "python3 pipeline/guatape-2026-crudo.py",
+   "que": "las 9 láminas de agenda → crudo: transcripción a ojo confirmada hora por hora y título por título con el OCR de la lámina oficial; tablas explícitas de proyecciones, actividades, créditos y lo que no se publica"
+  },
+  {
+   "cmd": "python3 pipeline/enriquecer.py guatape-2026 --posters",
+   "que": "TMDB verificado + las 9 fichas declaradas en -correcciones + afiches a assets/; la cascada cruza contra nuestros festivales publicados"
+  },
+  {
+   "cmd": "python3 pipeline/proimagenes.py guatape-2026 --posters",
+   "que": "segunda fuente para el cine colombiano; mismo candado"
+  },
+  {
+   "cmd": "python3 pipeline/ensamblar.py guatape-2026",
+   "que": "crudo + plan → staging/guatape-2026-build.json"
+  },
+  {
+   "cmd": "python3 pipeline/encuadrar-posters.py guatape-2026 --aplicar --desde festivals/staging/guatape-2026-build.json",
+   "que": "los afiches al lienzo 780×1170 exacto (docs/POSTERS.md §3)"
+  },
+  {
+   "cmd": "python3 pipeline/guatape-2026-verificar.py",
+   "que": "el BUILD contra la transcripción de las láminas, en las dos direcciones, y toda sede con su pin verificado a mano"
+  }
+ ],
+ "festival": {
+  "crudo": "festivals/staging/guatape-2026-crudo.json",
+  "enriquecido": "festivals/staging/guatape-2026-enriquecido.json",
+  "geo": "festivals/staging/guatape-2026-venues-geo.json",
+  "_por_que_sedes": "El nombre de la lámina → la sede, en tabla explícita. El Domo y la Tarima Principal están dentro del Parque Principal y van como sala; la Pantalla CORNARE es la sala del Malecón.",
+  "sedes": {
+   "Auditorio Centro día Gerontológico": [
+    "Centro Día Gerontológico - Guatapé",
+    "Auditorio"
+   ],
+   "Centro Día Gerontológico": [
+    "Centro Día Gerontológico - Guatapé",
+    ""
+   ],
+   "Bahía Plus -Muelle": [
+    "Bahía Plus - Guatapé",
+    ""
+   ],
+   "Biblioteca Municipal": [
+    "Biblioteca Municipal - Guatapé",
+    ""
+   ],
+   "COMFAMA sede Parque primcipal": [
+    "Comfama - Guatapé",
+    ""
+   ],
+   "Casa 18 Gastro Bar": [
+    "Casa 18 Gastro Bar - Guatapé",
+    ""
+   ],
+   "Casa de la Juventud": [
+    "Casa de la Juventud - Guatapé",
+    ""
+   ],
+   "Centro de Eventos Guatapé Plaza": [
+    "Centro de Eventos Guatapé Plaza - Guatapé",
+    ""
+   ],
+   "Domo Parque Principal": [
+    "Parque Principal - Guatapé",
+    "Domo"
+   ],
+   "Domo Parque primcipal": [
+    "Parque Principal - Guatapé",
+    "Domo"
+   ],
+   "Domo parque principal": [
+    "Parque Principal - Guatapé",
+    "Domo"
+   ],
+   "Tarima Principal": [
+    "Parque Principal - Guatapé",
+    "Tarima Principal"
+   ],
+   "Parque Principal": [
+    "Parque Principal - Guatapé",
+    ""
+   ],
+   "Parque principal": [
+    "Parque Principal - Guatapé",
+    ""
+   ],
+   "El Majagual": [
+    "El Majagual - Guatapé",
+    ""
+   ],
+   "Pizzeria Majagual": [
+    "El Majagual - Guatapé",
+    ""
+   ],
+   "Finca La Manuela": [
+    "Finca La Manuela - Guatapé",
+    ""
+   ],
+   "IE Sede la Piedra": [
+    "I.E. Sede La Piedra - Guatapé",
+    ""
+   ],
+   "Muelle Corona - Malecón": [
+    "Muelle Corona - Guatapé",
+    ""
+   ],
+   "Museo Comunitario": [
+    "Museo Comunitario - Guatapé",
+    ""
+   ],
+   "Museo del Zócalo": [
+    "Museo del Zócalo - Guatapé",
+    ""
+   ],
+   "Pantalla CORNARE": [
+    "Malecón - Guatapé",
+    "Pantalla CORNARE"
+   ],
+   "Pantalla CORNARE - Malecón": [
+    "Malecón - Guatapé",
+    "Pantalla CORNARE"
+   ],
+   "Pantalla CORNARE Malecón": [
+    "Malecón - Guatapé",
+    "Pantalla CORNARE"
+   ],
+   "Parque Educativo El Zócalo": [
+    "Parque Educativo El Zócalo - Guatapé",
+    ""
+   ],
+   "Zona de camping La Espacial": [
+    "Camping La Espacial - Guatapé",
+    ""
+   ],
+   "Parque Educativo el zócalo": [
+    "Parque Educativo El Zócalo - Guatapé",
+    ""
+   ]
+  },
+  "_por_que_secciones": "Decisión de Juan (18 oct): la sección de la lámina sin el lema «El Reflejo del Cine» y en caja de Título. «Actividades» es palabra nuestra, para talleres, conversatorios, conciertos y la premiación.",
+  "secciones": {
+   "Película Inaugural": {
+    "emoji": "🎬",
+    "en": "Opening Film",
+    "archetype": "Apertura / Gala"
+   },
+   "Competencia Internacional de Largometraje": {
+    "emoji": "🏆",
+    "en": "International Feature Competition",
+    "archetype": "Competencia"
+   },
+   "Competencia Internacional de Cortometrajes": {
+    "emoji": "🏅",
+    "en": "International Short Film Competition",
+    "archetype": "Competencia"
+   },
+   "Competencia Nacional de Cine Universitario": {
+    "emoji": "🎓",
+    "en": "National University Film Competition",
+    "archetype": "Competencia"
+   },
+   "Muestra de Cine Colombiano": {
+    "emoji": "🎞️",
+    "en": "Colombian Film Showcase",
+    "archetype": "Muestra / País"
+   },
+   "Muestra de Cine Comunitario Colombiano": {
+    "emoji": "🤝",
+    "en": "Colombian Community Film Showcase",
+    "archetype": "Muestra / País"
+   },
+   "Rumbo a los Macondo": {
+    "emoji": "🦋",
+    "en": "Road to the Macondo Awards",
+    "archetype": "Perspectivas / Miradas"
+   },
+   "FIACINE": {
+    "emoji": "🌎",
+    "en": "FIACINE",
+    "archetype": "Muestra / País"
+   },
+   "Cinema Luna": {
+    "emoji": "🌙",
+    "en": "Cinema Luna",
+    "archetype": "Especiales / Eventos"
+   },
+   "Muestra Local": {
+    "emoji": "🏡",
+    "en": "Local Showcase",
+    "archetype": "Muestra / País"
+   },
+   "Terror": {
+    "emoji": "👻",
+    "en": "Horror",
+    "archetype": "Especiales / Eventos"
+   },
+   "El Reflejo del Cine": {
+    "emoji": "🪞",
+    "en": "El Reflejo del Cine",
+    "archetype": "Muestra / País"
+   },
+   "Actividades": {
+    "emoji": "🎪",
+    "en": "Activities",
+    "archetype": "Especiales / Eventos"
+   }
+  },
+  "name": "Guatapé Film Fest",
+  "displayName": "Guatapé Film Fest",
+  "fullName": "Guatapé Film Fest 2026 — 4.ª edición",
+  "shortName": "GUATAPÉ",
+  "tagline": "El Reflejo del Cine",
+  "city": "Guatapé",
+  "country": "CO",
+  "dates": "21–25 OCT",
+  "dates_en": "OCT 21–25",
+  "year": 2026,
+  "timezoneOffset": "-05:00",
+  "storageKey": "guatape2026_",
+  "festivalStartStr": "2026-10-21T00:00:00",
+  "festivalEndStr": "2026-10-25T23:59:00",
+  "sharedSlotIsOneScreening": false,
+  "mes_es": "octubre",
+  "dias_vacios": [],
+  "_por_que_acceso": "Sin `ticketing_model`: ninguna función dice que se pague. El acceso va declarado en `_acceso` del crudo."
+ }
+}

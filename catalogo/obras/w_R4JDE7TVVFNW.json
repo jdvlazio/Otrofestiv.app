@@ -6,7 +6,7 @@
   "CO"
  ],
  "directores": [
-  "Ingrid Paola Bonilla Rodriguez"
+  "Ingrid Paola Bonilla Rodríguez"
  ],
  "aliases": [
   {
@@ -33,10 +33,15 @@
   {
    "etiqueta": "11 min",
    "duracion_min": 11
+  },
+  {
+   "etiqueta": "12 min",
+   "duracion_min": 12
   }
  ],
  "presentaciones": [
   "ficpa-2026",
+  "guatape-2026",
   "siembrafest-2026"
  ]
 }
