@@ -1,0 +1,21 @@
+{
+ "name": "QAFF",
+ "fullName": "QAFF — Quibdó África Film Festival",
+ "shortName": "QAFF",
+ "city": "Bogotá",
+ "country": "CO",
+ "dates": "14–22 SEP",
+ "dates_en": "SEP 14–22",
+ "year": 2026,
+ "timezoneOffset": "-05:00",
+ "festivalStartStr": "2026-09-14T00:00:00",
+ "festivalEndStr": "2026-09-22T23:00:00",
+ "keyArt": "/assets/keyart/qaff2026-v2.jpg",
+ "status": {
+  "kind": "moved",
+  "since": "2026-08-20",
+  "note": "Por el terremoto del 10 de agosto, el festival trasladó «excepcionalmente la totalidad de las proyecciones» a Bogotá.",
+  "note_en": "Due to the August 10 earthquake, the festival \"exceptionally relocated all screenings\" to Bogotá.",
+  "url": "https://www.instagram.com/p/DcREogQER9d"
+ }
+}
