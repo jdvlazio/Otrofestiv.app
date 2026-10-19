@@ -307,6 +307,7 @@ def main():
             s['hora'] = min(s['hora'], f['hora'])
             s['gala'] = gala
             s['obras'].append({'titulo': titulo, 'url': o['link'], 'madre': madre['name'] if madre else None,
+                               '_hora': f['hora'], '_notas': list(f['notas']),
                                **{c: d[c] for c in ('director', 'pais', 'anio', 'duracion_min', 'sinopsis') if d.get(c)}})
             # en ORDEN y sin repetir: un set no tiene orden y el «primer» estreno
             # o la «primera» duración salían distintos en cada corrida (15 oct)
@@ -314,6 +315,40 @@ def main():
             s['por_obra'].append(f['notas'])
             if hija and not conjunta:
                 s['programa'] = html.unescape(hija['name'])
+    # UNA OBRA QUE EMPIEZA CUANDO SU PROGRAMA YA TERMINÓ no es de esa función
+    # (19 oct 2026, vigía): «L'Evangile de la Révolution» comparte programa, día
+    # y sala con el Programa 7 (4 nov, 14:00, «Duración total programa: 97'» =
+    # 20 + 77 de las otras dos) pero su ficha dice 16:00 y 115 min, con su
+    # director. El programa declara su duración total; lo que arranca después de
+    # inicio + total sale a su propia función. La regla de «el segundo corto al
+    # terminar el primero» (Tanto trabajo por hacer) sigue: arranca DENTRO.
+    def _min(h):
+        return int(h[:2]) * 60 + int(h[3:5])
+    for k in list(slots):
+        s = slots[k]
+        if not s.get('programa') or len(s['obras']) < 2:
+            continue
+        tot = {int(m.group(1)) for n in s['notas'] for m in [re.search(r"Duración total[^0-9]*(\d+)'", n)] if m}
+        if len(tot) != 1:
+            continue
+        fin = _min(s['hora']) + tot.pop()
+        fuera_ = [x for x in s['obras'] if _min(x['_hora']) >= fin]
+        if not fuera_ or len(fuera_) == len(s['obras']):
+            continue
+        for x in fuera_:
+            i = s['obras'].index(x)
+            s['obras'].pop(i)
+            s['por_obra'].pop(i)
+            n2 = slots.setdefault((k[0], x['_hora'], k[1]), {'obras': [], 'notas': [], 'por_obra': [], 'programa': None,
+                                                             'hora': x['_hora'], 'sede': s['sede'], 'sala': s['sala'],
+                                                             'ciudad': s['ciudad'], 'gala': s.get('gala')})
+            n2['obras'].append(x)
+            n2['por_obra'].append(x['_notas'])
+            n2['notas'] += [n for n in x['_notas'] if n not in n2['notas']]
+        # las notas del programa son las de las obras que quedan
+        s['notas'] = []
+        for ns in s['por_obra']:
+            s['notas'] += [n for n in ns if n not in s['notas']]
     funciones = []
     for k, s in sorted(slots.items(), key=lambda kv: (kv[0][0], kv[1]['hora'])):
         dia, hora = k[0], s['hora']
