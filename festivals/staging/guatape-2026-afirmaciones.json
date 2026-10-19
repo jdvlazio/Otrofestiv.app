@@ -67,6 +67,99 @@
    },
    "evidencia": "afiche de la masterclass «Concept Art para Cine» (lámina 2): «2:00 – 6:00 p.m.»; la agenda (14 oct) decía 2:00 - 5:00",
    "funcion": "f_9e3694faa0"
+  },
+  {
+   "funcion": "f_07579b3657",
+   "ancla": {
+    "sede": "Museo Comunitario - Guatapé",
+    "dia": "2026-10-22",
+    "hora": "14:00"
+   },
+   "casilla": "venue",
+   "valor": "Parque Principal - Guatapé",
+   "fuente": {
+    "tipo": "festival-ig",
+    "url": "https://www.instagram.com/p/DenbqwCDTjY/",
+    "fecha": "2026-10-17"
+   },
+   "evidencia": "lámina 00: «El Reflejo de un Actor · 22 de octubre · 2:00 P. M. – 4:00 P. M. · Parque Principal»; la agenda (14 oct) decía Museo Comunitario"
+  },
+  {
+   "funcion": "f_c0799142e3",
+   "ancla": {
+    "sede": "Parque Principal - Guatapé",
+    "dia": "2026-10-23",
+    "hora": "14:00"
+   },
+   "casilla": "time",
+   "valor": "15:00",
+   "fuente": {
+    "tipo": "festival-ig",
+    "url": "https://www.instagram.com/p/DenbqwCDTjY/",
+    "fecha": "2026-10-17"
+   },
+   "evidencia": "lámina 03: «Historias que se juegan · creando un videojuego con Arnold Ortiz · 23 de octubre · 3:00 P. M. – 4:00 P. M.»; la agenda decía 2:00–3:00"
+  },
+  {
+   "ancla": {
+    "sede": "Parque Principal - Guatapé",
+    "dia": "2026-10-25",
+    "hora": "14:00"
+   },
+   "casilla": "time",
+   "valor": "14:30",
+   "fuente": {
+    "tipo": "festival-ig",
+    "url": "https://www.instagram.com/p/DepGT_4oHSu/",
+    "fecha": "2026-10-18"
+   },
+   "evidencia": "lámina 03: «Sangre de Palermo y su reflejo · 25 de octubre · 2:30 P. M. – 3:30 P. M.»; la agenda decía 2:00"
+  },
+  {
+   "ancla": {
+    "sede": "Parque Principal - Guatapé",
+    "dia": "2026-10-25",
+    "hora": "14:00"
+   },
+   "casilla": "duration",
+   "valor": "60 min",
+   "fuente": {
+    "tipo": "festival-ig",
+    "url": "https://www.instagram.com/p/DepGT_4oHSu/",
+    "fecha": "2026-10-18"
+   },
+   "evidencia": "lámina 03: «2:30 P. M. – 3:30 P. M.»"
+  },
+  {
+   "ancla": {
+    "sede": "Parque Principal - Guatapé",
+    "dia": "2026-10-25",
+    "hora": "15:30"
+   },
+   "casilla": "existe",
+   "valor": {
+    "title": "El Reflejo de la Naturaleza: cine y medio ambiente",
+    "type": "event",
+    "event_kind": "conversatorio",
+    "section": "🎪 Actividades",
+    "day": "2026-10-25",
+    "time": "15:30",
+    "duration": "60 min",
+    "venue": "Parque Principal - Guatapé",
+    "is_free": true,
+    "description": "Una conversación sobre la relación entre el cine, la naturaleza y el cuidado del medio ambiente. Con Roberto Ramírez Espitia, del Festival Internacional de Cine de Tequila.",
+    "_src": {
+     "url": "https://www.instagram.com/p/DepGT_4oHSu/",
+     "date": "2026-10-18",
+     "lamina": 4
+    }
+   },
+   "fuente": {
+    "tipo": "festival-ig",
+    "url": "https://www.instagram.com/p/DepGT_4oHSu/",
+    "fecha": "2026-10-18"
+   },
+   "evidencia": "lámina 04: «Conversatorio · El reflejo de la naturaleza · cine y medio ambiente · Roberto Ramírez Espitia, Festival Internacional de Cine de Tequila · 25 de octubre · 3:30 P. M. – 4:30 P. M. · Parque Principal»; no estaba en la agenda del 14 oct"
   }
  ]
 }

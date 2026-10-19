@@ -304,5 +304,24 @@ class Auditoria(unittest.TestCase):
         self.assertNotIn(v, ids(out))
 
 
+class TodasConId(unittest.TestCase):
+    """Una función que entra por afirmación (existe:{…}) también publica su id:
+    Guatapé, 18 oct, «El Reflejo de la Naturaleza» salió con id None."""
+
+    def test_un_festival_con_ids_no_puede_tener_una_sin_id(self):
+        a = pub(('f_1', 'A', 'd1', '19:00'))
+        b = {'films': a['films'] + [dict(title='Nueva', day='d2', time='15:30', venue='V')]}
+        r = funcion.ids_estables(a, b, {'funciones': {}})
+        self.assertTrue(any('sin id' in x for x in r))
+
+    def test_festival_sin_ids_no_mide(self):
+        self.assertEqual(funcion.ids_estables({'films': []}, {'films': [dict(title='A', day='d', time='1', venue='V')]},
+                                              {'funciones': {}}), [])
+
+    def test_entrada_sin_horario_no_cuenta(self):
+        b = {'films': pub(('f_1', 'A', 'd1', '19:00'))['films'] + [{'title': 'Cortometraje Ficción'}]}
+        self.assertEqual(funcion.ids_estables({'films': []}, b, {'funciones': {}}), [])
+
+
 if __name__ == '__main__':
     unittest.main()

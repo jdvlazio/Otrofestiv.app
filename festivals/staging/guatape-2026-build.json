@@ -1046,7 +1046,7 @@
      "marca": "estimado"
     }
    },
-   "duration": "90 min"
+   "duration": "60 min"
   },
   {
    "title": "Territorios que Filman",
@@ -1208,7 +1208,7 @@
    "day": "2026-10-22",
    "time": "14:00",
    "day_order": 1,
-   "venue": "Museo Comunitario - Guatapé",
+   "venue": "Parque Principal - Guatapé",
    "event_kind": "conversatorio",
    "has_qa": false,
    "_src": {
@@ -1233,9 +1233,9 @@
      "url": "https://www.instagram.com/p/Def6fhKDSQy/"
     },
     "venue": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-14",
-     "url": "https://www.instagram.com/p/Def6fhKDSQy/"
+     "tipo": "festival-ig",
+     "fecha": "2026-10-17",
+     "url": "https://www.instagram.com/p/DenbqwCDTjY/"
     },
     "duration": {
      "tipo": "festival-web",
@@ -2223,7 +2223,7 @@
     "14:00"
    ],
    "day": "2026-10-23",
-   "time": "14:00",
+   "time": "15:00",
    "day_order": 2,
    "venue": "Parque Principal - Guatapé",
    "event_kind": "conversatorio",
@@ -2245,9 +2245,9 @@
      "url": "https://www.instagram.com/p/Def6fhKDSQy/"
     },
     "time": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-14",
-     "url": "https://www.instagram.com/p/Def6fhKDSQy/"
+     "tipo": "festival-ig",
+     "fecha": "2026-10-17",
+     "url": "https://www.instagram.com/p/DenbqwCDTjY/"
     },
     "venue": {
      "tipo": "festival-web",
@@ -3998,7 +3998,7 @@
     "14:00"
    ],
    "day": "2026-10-25",
-   "time": "14:00",
+   "time": "14:30",
    "day_order": 4,
    "venue": "Parque Principal - Guatapé",
    "event_kind": "conversatorio",
@@ -4012,6 +4012,7 @@
    "description_lang": "es",
    "_fid": "f_33c2f94452",
    "id": "f_33c2f94452",
+   "duration": "60 min",
    "is_free": true,
    "_procedencia": {
     "day": {
@@ -4020,14 +4021,19 @@
      "url": "https://www.instagram.com/p/Def6fhKDSQy/"
     },
     "time": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-14",
-     "url": "https://www.instagram.com/p/Def6fhKDSQy/"
+     "tipo": "festival-ig",
+     "fecha": "2026-10-18",
+     "url": "https://www.instagram.com/p/DepGT_4oHSu/"
     },
     "venue": {
      "tipo": "festival-web",
      "fecha": "2026-10-14",
      "url": "https://www.instagram.com/p/Def6fhKDSQy/"
+    },
+    "duration": {
+     "tipo": "festival-ig",
+     "fecha": "2026-10-18",
+     "url": "https://www.instagram.com/p/DepGT_4oHSu/"
     },
     "entrada": {
      "tipo": "festival-web",
@@ -4053,13 +4059,8 @@
      "tipo": "festival-web",
      "fecha": "2026-10-14",
      "url": "https://www.instagram.com/p/Def6fhKDSQy/"
-    },
-    "duration": {
-     "tipo": "regla",
-     "marca": "estimado"
     }
-   },
-   "duration": "90 min"
+   }
   },
   {
    "title": "Canelones",
@@ -4360,11 +4361,83 @@
     }
    },
    "duration": "60 min"
+  },
+  {
+   "title": "El Reflejo de la Naturaleza: cine y medio ambiente",
+   "type": "event",
+   "event_kind": "conversatorio",
+   "section": "🎪 Actividades",
+   "day": "2026-10-25",
+   "time": "15:30",
+   "duration": "60 min",
+   "venue": "Parque Principal - Guatapé",
+   "description": "Una conversación sobre la relación entre el cine, la naturaleza y el cuidado del medio ambiente. Con Roberto Ramírez Espitia, del Festival Internacional de Cine de Tequila.",
+   "_src": {
+    "url": "https://www.instagram.com/p/DepGT_4oHSu/",
+    "date": "2026-10-18",
+    "lamina": 4
+   },
+   "_ancla": [
+    "Parque Principal - Guatapé",
+    "2026-10-25",
+    "15:30"
+   ],
+   "_fid": "f_8afa361973",
+   "_procedencia": {
+    "existe": {
+     "tipo": "festival-ig",
+     "url": "https://www.instagram.com/p/DepGT_4oHSu/",
+     "fecha": "2026-10-18"
+    },
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-18",
+     "url": "https://www.instagram.com/p/Def6fhKDSQy/"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-18",
+     "url": "https://www.instagram.com/p/Def6fhKDSQy/"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-18",
+     "url": "https://www.instagram.com/p/Def6fhKDSQy/"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-18",
+     "url": "https://www.instagram.com/p/Def6fhKDSQy/"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-18",
+     "url": "https://www.instagram.com/p/Def6fhKDSQy/"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-18",
+     "url": "https://www.instagram.com/p/Def6fhKDSQy/"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-18",
+     "url": "https://www.instagram.com/p/Def6fhKDSQy/"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-18",
+     "url": "https://www.instagram.com/p/Def6fhKDSQy/"
+    }
+   },
+   "is_free": true,
+   "id": "f_8afa361973",
+   "day_order": 4
   }
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-18T17:24:15",
+  "fecha": "2026-10-18T21:42:03",
   "plan_sha": "133abae66c591011",
   "paso": 6,
   "cmd": "python3 pipeline/guatape-2026-verificar.py"

@@ -33,29 +33,31 @@ def main():
     build = json.load(io.open(f'{REPO}/festivals/staging/{FID}-build.json', encoding='utf-8'))
     geo = json.load(io.open(f'{REPO}/festivals/staging/{FID}-venues-geo.json', encoding='utf-8'))
     af = json.load(io.open(f'{REPO}/festivals/staging/{FID}-afirmaciones.json', encoding='utf-8'))['afirmaciones']
-    ancla = lambda a: (a['ancla']['dia'], a['ancla']['hora'], a['ancla']['sede'])
-    # una por afirmación: dos funciones pueden compartir ancla (el cóctel y
-    # «Horizonte», jue 22 18:00 en el Muelle Corona) y la afirmación saca una sola
-    fuera = collections.Counter(ancla(a) for a in af if a['casilla'] == 'existe' and a['valor'] is False)
-    contra = {ancla(a): a['valor'] for a in af if a['casilla'] == 'venue'}
 
     def sede(lugar):
         return plan['sedes'][re.sub(r'\s+', ' ', lugar).strip(' .')][0]
 
-    quedan = collections.Counter(fuera)
-
-    def _quitar(k):
-        if quedan[k] > 0:
-            quedan[k] -= 1
-            return True
-        return False
-
-    lam = collections.Counter()
-    for f in ojos:
-        k = (f['dia'], f['hora'], sede(f['lugar']))
-        if _quitar(k):
+    # LAS LÁMINAS, y encima las afirmaciones como operaciones sobre UNA función
+    # cada una (dos funciones pueden compartir ancla: el cóctel y «Horizonte»):
+    # existe:false saca una, existe:{…} agrega una, venue/time mueven una.
+    lam = collections.Counter((f['dia'], f['hora'], sede(f['lugar'])) for f in ojos)
+    n_ops = collections.Counter()
+    for a in af:
+        k = (a['ancla']['dia'], a['ancla']['hora'], a['ancla']['sede'])
+        if a['casilla'] == 'existe' and a['valor'] is False:
+            lam[k] -= 1
+        elif a['casilla'] == 'existe':
+            v = a['valor']
+            lam[(v['day'], v['time'], v['venue'])] += 1
+        elif a['casilla'] in ('venue', 'time'):
+            lam[k] -= 1
+            lam[(k[0], a['valor'], k[2]) if a['casilla'] == 'time' else (k[0], k[1], a['valor'])] += 1
+        else:
             continue
-        lam[(f['dia'], f['hora'], contra.get(k, k[2]))] += 1
+        n_ops[a['casilla'] if a['casilla'] != 'existe' else ('sale' if a['valor'] is False else 'entra')] += 1
+    if any(n < 0 for n in lam.values()):
+        sys.exit(f'✗ una afirmación apunta a un ancla que las láminas no tienen: {[k for k, n in lam.items() if n < 0]}')
+    lam = +lam
     pub = collections.Counter((f['day'], f['time'], f['venue']) for f in build['films'])
 
     fallos = [f'en la lámina y NO en el build: {k} ×{n - pub[k]}' for k, n in lam.items() if pub[k] < n]
@@ -68,8 +70,8 @@ def main():
             fallos.append(f'sede {v!r}: pin sin verificar a mano ({g.get("_prec")})')
     if fallos:
         sys.exit('✗ el build no coincide con las láminas:\n  · ' + '\n  · '.join(fallos))
-    print(f'✓ los {sum(lam.values())} ítems de las láminas están en el build con su día, hora y sede, '
-          f'y el build no publica ninguno más · {sum(fuera.values())} fuera y {len(contra)} sede(s) por afirmación · '
+    print(f'✓ los {sum(lam.values())} ítems de las láminas (con sus afirmaciones) están en el build con su día, '
+          f'hora y sede, y el build no publica ninguno más · afirmaciones: {dict(n_ops)} · '
           f'{len(build["venues"])} sedes con pin puesto a mano')
 
 
