@@ -14,7 +14,7 @@
 // el festival queda cacheado en sesión. Para ejercer el camino real hay que
 // limpiar `FESTIVAL_CONFIG[id].films` ANTES de volver a llamar loadFestival.
 const { test, expect } = require('@playwright/test');
-const { enterFestival } = require('./helpers');
+const { enterFestival, soloWeb } = require('./helpers');
 
 const FEST = 'finca2026';
 
@@ -137,4 +137,117 @@ test('AV04 — Mi Plan marca la función reprogramada y Actualizar la muda', asy
   const e = await page.evaluate(() => savedAgenda.schedule.find(s => s._title === 'Ziki') || {});
   expect(e.day).toBe('2026-08-16');
   expect(e.time).toBe('17:00');
+});
+
+// ── Etapa 2·A (19 oct 2026): avisos y palmarés viven en el JSON del festival ──
+// Regla de transición, en el loader y una sola vez: si el JSON trae el campo
+// —aunque vacío— manda el JSON; si no lo trae, las constantes de config.js.
+// Los AV01–AV04 cubren el lado «sin campo» (entran por NOTICES); estos, el otro.
+// El service worker responde festivals/ desde su caché y page.route no lo ve:
+// la intercepción no se entera (medido: 0 aciertos). Estos tests van sin SW.
+test.describe('avisos y palmarés en el JSON', () => {
+test.use({ serviceWorkers: 'block' });
+
+async function conCampos(page, campos) {
+  await soloWeb(page);   // intercepta el JSON: el almacén va cortado
+  await page.route('**/festivals/finca-2026.json*', async route => {
+    // Sin las cabeceras condicionales: al recargar, el navegador pide con
+    // If-None-Match, el servidor contesta 304 SIN cuerpo y no hay JSON que tocar.
+    const h = { ...route.request().headers() };
+    delete h['if-none-match']; delete h['if-modified-since'];
+    const res = await route.fetch({ headers: h });
+    const d = await res.json();
+    Object.assign(d, campos);
+    await route.fulfill({ response: res, json: d });
+  });
+}
+
+// AV05 — el aviso del JSON se sella, y uno de NOTICES para el mismo festival ya no
+test('AV05 — con `avisos` en el JSON manda el JSON, no NOTICES', async ({ page }) => {
+  // Sin `date`: el banner se apaga al día siguiente de la función según el reloj
+  // REAL (no el simulado), así que con fecha de agosto no se vería nunca.
+  await conCampos(page, { avisos: [{ title: 'Yurlu', type: 'cancelled' }] });
+  await enterFestival(page, FEST, '2026-08-12T10:00:00-05:00');
+  const r = await page.evaluate(async (id) => {
+    NOTICES.length = 0;
+    NOTICES.push({ festival: id, title: 'Ziki', type: 'cancelled', date: '2026-08-13' });
+    FESTIVAL_CONFIG[id].films = null;
+    await loadFestival(id);
+    const { getActiveNotices } = await import('/src/view/programa.js');
+    return {
+      yurlu: !!FILMS.find(f => f.title === 'Yurlu' && f._cancelled),
+      ziki: !!FILMS.find(f => f.title === 'Ziki' && f._cancelled),
+      banner: getActiveNotices().map(n => n.title),
+    };
+  }, FEST);
+  expect(r.yurlu).toBe(true);
+  expect(r.ziki).toBe(false);
+  expect(r.banner).toEqual(['Yurlu']);
+});
+
+// AV06 — palmarés: el del JSON reemplaza al de config.js, y `[]` también manda
+test('AV06 — con `palmares` en el JSON manda el JSON, incluso vacío', async ({ page }) => {
+  await conCampos(page, { palmares: [
+    { categoria: 'Competencia Prueba', nivel: 'ganadora', titulo: 'Yurlu', obra: 'Yurlu' },
+  ] });
+  await enterFestival(page, FEST, '2026-08-25T10:00:00-05:00');
+  const uno = await page.evaluate(async (id) => {
+    const { palmaresDe } = await import('/src/view/programa.js');
+    return (palmaresDe(id) || []).map(c => c.categoria + ':' + c.ganadoras.length);
+  }, FEST);
+  expect(uno).toEqual(['Competencia Prueba:1']);
+
+  await page.unrouteAll({ behavior: 'ignoreErrors' });
+  await conCampos(page, { palmares: [] });
+  const vacio = await page.evaluate(async (id) => {
+    FESTIVAL_CONFIG[id].films = null;
+    await loadFestival(id);
+    const { palmaresDe } = await import('/src/view/programa.js');
+    return palmaresDe(id);
+  }, FEST);
+  expect(vacio).toBeNull();
+});
+
+// AV07 — sin los campos en el JSON, la app sigue mostrando lo de config.js (transición)
+test('AV07 — sin `palmares` en el JSON se usa PALMARES de config.js', async ({ page }) => {
+  await enterFestival(page, FEST, '2026-08-25T10:00:00-05:00');
+  const r = await page.evaluate(async (id) => {
+    const { PALMARES } = await import('/src/config.js');
+    const { palmaresDe } = await import('/src/view/programa.js');
+    const n = (palmaresDe(id) || []).reduce((a, c) => a + c.ganadoras.length + c.menciones.length, 0);
+    return { n, esperado: PALMARES.filter(p => p.fest === id).length };
+  }, FEST);
+  expect(r.esperado).toBeGreaterThan(0);
+  expect(r.n).toBe(r.esperado);
+});
+
+// AV08 — con la app ABIERTA: un aviso que aparece en el JSON llega por el
+// refresco de datos (live-refresh), sin recargar ni subir versión. Es el motivo
+// de toda la Etapa 2·A: antes un aviso era código y exigía un deploy.
+test('AV08 — un aviso nuevo en el JSON llega con la app abierta', async ({ page }) => {
+  let campos = {};
+  await soloWeb(page);
+  await page.route('**/festivals/finca-2026.json*', async route => {
+    const h = { ...route.request().headers() };
+    delete h['if-none-match']; delete h['if-modified-since'];
+    const res = await route.fetch({ headers: h });
+    const d = await res.json();
+    Object.assign(d, campos);
+    await route.fulfill({ response: res, json: d });
+  });
+  await enterFestival(page, FEST, '2026-08-12T10:00:00-05:00');
+  const antes = await page.evaluate(() => !!FILMS.find(f => f.title === 'Yurlu' && f._cancelled));
+  campos = { avisos: [{ title: 'Yurlu', type: 'cancelled' }] };
+  const despues = await page.evaluate(async () => {
+    const { refrescarDatosFestival } = await import('/src/controller/live-refresh.js');
+    const { getActiveNotices } = await import('/src/view/programa.js');
+    const hubo = await refrescarDatosFestival();
+    return { hubo, sellada: !!FILMS.find(f => f.title === 'Yurlu' && f._cancelled),
+      banner: getActiveNotices().map(n => n.title) };
+  });
+  expect(antes).toBe(false);
+  expect(despues.hubo).toBe(true);
+  expect(despues.sellada).toBe(true);
+  expect(despues.banner).toEqual(['Yurlu']);
+});
 });

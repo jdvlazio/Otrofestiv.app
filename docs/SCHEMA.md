@@ -24,8 +24,30 @@ Documento normativo. Toda discrepancia entre este archivo y el código es un bug
   "ticketing_model": "string — 'paid' | 'mixed' (obligatorio si ticket_url existe)",
   "// registration_url": "va en la FUNCIÓN, no en la raíz — ver § Ticketing",
   "sharedSlotIsOneScreening": "bool — opt-in: dos obras en el mismo día+hora+sala son UNA función",
+  "avisos": "[ ... ] — opcional: cancelaciones / reprogramaciones (ver § Avisos y palmarés)",
+  "palmares": "[ ... ] — opcional: premiadas del festival (ver § Avisos y palmarés)",
   "films": [ ... ]
 }
+```
+
+### Avisos y palmarés (19 oct 2026)
+
+Viven en el JSON para corregirse con `publicar-datos.py` en minutos, no con un
+deploy. Misma forma que tenían en `src/config.js`, **sin** `festival` / `fest`
+(el loader lo pone). Si el JSON trae el campo —aunque sea `[]`— manda el JSON;
+si no lo trae, la app usa todavía `NOTICES` / `PALMARES` de `src/config.js`
+(transición). Guardián: `[avisos-palmares-forma]` en `validate-festivals.js`.
+
+```json
+"avisos": [
+  { "type": "cancelled", "title": "Obra", "date": "2026-10-20", "note": "…", "note_en": "…", "url": "…" },
+  { "type": "rescheduled", "title": "Obra", "date": "2026-10-20", "newDay": "MAR 21", "newTime": "18:00", "newVenue": "…" },
+  { "type": "cancelled", "cities": ["Cali"], "id": "fest-motivo", "note": "…" }
+],
+"palmares": [
+  { "categoria": "Verbatim del festival", "nivel": "ganadora", "premio": "opcional",
+    "titulo": "Como lo nombra el festival", "autoria": "…", "obra": "título EXACTO en films, o null" }
+]
 ```
 
 ### El reloj también lee este JSON (22 sep 2026)
