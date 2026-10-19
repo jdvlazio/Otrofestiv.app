@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "midbo.co — ficha de cada obra (bloque «Funciones») + API pelicula/seccion",
-  "capturado": "2026-10-15",
+  "capturado": "2026-10-19",
   "url": "https://midbo.co/",
   "metodo": "120 fichas; sección = categoría madre, programa = hija"
  },
@@ -2139,21 +2139,11 @@
    "ciudad": "Bogotá",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://midbo.co/peliculas/l-evangile-de-la-revolution/",
+    "url": "https://midbo.co/peliculas/a-film-to-remind-us-of-utopia/",
     "date": "2026-10-10"
    },
-   "has_qa": true,
-   "qa_type": "team",
    "seccion": "Espejos: Gestos de reparación",
    "obras": [
-    {
-     "titulo": "L'Evangile de la Révolution",
-     "director": "François-Xavier Drouet",
-     "pais": "Francia, Bélgica",
-     "anio": 2024,
-     "duracion_min": 115,
-     "sinopsis": "El auge revolucionario de América Latina en el siglo XX se debe mucho a la participación de millones de cristianos, comprometidos en luchas políticas en nombre de la fe. Inspirados por la teología de la liberación, desafiaron a los regímenes militares y a las oligarquías. Cuestionando la idea de la religión como opio del pueblo, la película va al encuentro de los que vieron en la revolución la llegada del Reino de Dios, en la tierra antes que en el cielo."
-    },
     {
      "titulo": "A Film to Remind Us of Utopia",
      "director": "Reinaldo Cardenuto",
@@ -2217,6 +2207,26 @@
      "sinopsis": "María Pascuala, lideresa sobreviviente de la masacre; Heidy, lideresa indígena de Mojaudó; y Ever, líder en condición de desplazamiento, recorren las comunidades afro e indígenas del municipio de Bojayá y los barrios donde habitan los bojayaseños desplazados en Quibdó. Llevan el baúl de la verdad, en donde recogen las preguntas que la comunidad envía a los responsables del conflicto armado en su territorio. Después de su recorrido, regresan al municipio para compartir las respuestas que han encontrado y junto con la comunidad construyen una verdad desde adentro."
     }
    ]
+  },
+  {
+   "dia": "2026-11-04",
+   "hora": "16:00",
+   "sede": "Alianza Francesa",
+   "ciudad": "Bogotá",
+   "acceso": "Entrada libre (no se anuncia pago)",
+   "_src": {
+    "url": "https://midbo.co/peliculas/l-evangile-de-la-revolution/",
+    "date": "2026-10-10"
+   },
+   "has_qa": true,
+   "qa_type": "team",
+   "seccion": "Espejos: Gestos de reparación",
+   "titulo": "L'Evangile de la Révolution",
+   "director": "François-Xavier Drouet",
+   "pais": "Francia, Bélgica",
+   "anio": 2024,
+   "duracion_min": 115,
+   "sinopsis": "El auge revolucionario de América Latina en el siglo XX se debe mucho a la participación de millones de cristianos, comprometidos en luchas políticas en nombre de la fe. Inspirados por la teología de la liberación, desafiaron a los regímenes militares y a las oligarquías. Cuestionando la idea de la religión como opio del pueblo, la película va al encuentro de los que vieron en la revolución la llegada del Reino de Dios, en la tierra antes que en el cielo."
   },
   {
    "dia": "2026-11-04",

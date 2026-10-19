@@ -1,14 +1,31 @@
 {
  "_provenance": {
   "fuente": "issue de radar #1031 — https://github.com/jdvlazio/Otrofestiv.app/issues/1031",
-  "capturado": "2026-10-13",
+  "capturado": "2026-10-19",
   "titulo": "RADAR: Muestra Internacional Documental de Bogotá (MIDBO) — Bogotá, 28 OCT–4 NOV (28ª)",
   "estado": "OPEN",
-  "comentarios": 0
+  "comentarios": 4
  },
  "issue": 1031,
  "titulo": "RADAR: Muestra Internacional Documental de Bogotá (MIDBO) — Bogotá, 28 OCT–4 NOV (28ª)",
  "estado": "OPEN",
  "cuerpo": "Fuente: lista ancla del radar (`pipeline/radar-ancla.json`) · detectado 7 oct 2026. No está en el calendario de Proimágenes.\n\n- **Estado:** anunciado 2026 (28 OCT–4 NOV)\n- **Web:** https://www.midbo.co/ · **IG:** @midbo_co\n- **Programación:** no publicada aún\n- **Notas:** Fechas de la convocatoria FilmFreeway. 2025 fue 29 OCT–7 NOV. La web enlaza @midbo_co (también existe @midbo_doc). Programación aún no publicada en texto.\n\nFuentes:\n- https://www.midbo.co/\n- https://filmfreeway.com/Midbo\n- https://www.proimagenescolombia.com/secciones/eventos/eventos.php?tipo=1&pagina=6",
- "comentarios": []
+ "comentarios": [
+  {
+   "fecha": "2026-10-16",
+   "cuerpo": "**Vigía 16 oct** — la ficha de *L'Evangile de la Révolution* (https://midbo.co/peliculas/l-evangile-de-la-revolution/) dice: **4 nov, 16:00 H, Alianza Francesa, \\*Con presencia del director François-Xavier Drouet**.\nLa app la tiene dentro de «Programa 7: Reactivar los Archivos para el Presente» (4 nov **14:00**, Alianza Francesa, 97 min). Esos 97 min son justo *A Film to Remind Us of Utopia* (20) + *Una sombra oscilante* (77), que son las que las fichas ponen a las 14:00: L'Evangile (115 min) parece ser una función aparte, a las 16:00.\nAcción sugerida: sacarla del Programa 7 y publicarla como función propia el 4 nov a las 16:00, con el conversatorio con el director.\nLo demás (146 funciones de 120 fichas) cuadra con la app. 3 fichas (Chanson pour le nouveau monde, Ciclón, Nacer de nuevo) tienen «6 de noviembre / por confirmar H» en UniNorte, Barranquilla: fuera de las fechas oficiales.\n"
+  },
+  {
+   "fecha": "2026-10-16",
+   "cuerpo": "**Salas vs. app — corrida del 16 oct 2026 (tarea salas-agenda-festivales)**\n\n**Cinemateca de Bogotá** (https://cinematecadebogota.gov.co/agenda/11 — la agenda llega hasta el 31 oct; del 1 al 4 nov todavía no publicó nada, así que eso no es un hallazgo):\n- Las 19 funciones del 28 al 31 oct coinciden en día, hora y sala (incluida *El hogar fue sepultado…*, entrada libre en Salas 2, 3 y Capital).\n1. *Un lugar más grande* (sáb 31 oct, 2:30 pm, Sala 3): la sala da link de compra `https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839517` (https://cinematecadebogota.gov.co/node/peliculas/3611?sede=11). La app **no tiene `ticket_url`**. Acción: cargarlo.\n2. Las otras 17 funciones pagas tienen en la app un link genérico `tuboleta.com/es/eventos/<slug>`; la sala da el link directo de checkout por función (`productId` 10230576236138 para Writing life y del 10230581839501 al …521 para el resto; ver cada `/node/peliculas/3598…3615`). Acción sugerida (baja prioridad): pasar al link de checkout de la Cinemateca, como ya se hizo en BHFF.\n- Nota: las master class, mesas redondas y diálogos de la mañana (28–30 oct, Sala Capital) no salen en la agenda de cine de la sala. Es normal porque esa agenda solo trae películas. No es un hallazgo.\n"
+  },
+  {
+   "fecha": "2026-10-19",
+   "cuerpo": "**Vigía 18 oct:** las 152 funciones de las fichas (27 oct–4 nov) coinciden con producción, salvo una contradicción de la propia fuente:\n\n- **«L’Evangile de la Révolution», 4 nov:** su ficha (https://midbo.co/peliculas/l-evangile-de-la-revolution/) dice **16:00 H, Alianza Francesa, «con presencia del director»**. Las fichas de las otras dos obras del Programa 7 («A Film to Remind Us of Utopia», «Una sombra oscilante») dicen **14:00 H, Alianza Francesa, «Duración total programa: 97'»**. La app publica el Programa 7 entero a las 14:00 con las tres obras. La hora de las 16:00 se perdió sin dejar nota en `_excluidas`. Acción sugerida: preguntar al festival si L’Evangile es una función aparte a las 16:00 o si el programa completo empieza a las 14:00.\n- Las que quedan fuera ya estaban decididas: La Picota, Santa Marta/Minca y la UdeA (Medellín). Hay 3 funciones «6 de noviembre / por confirmar» que caen fuera de la ventana.\n- IG @midbo_doc: solo carruseles de la selección (DenGsVFiWGV, Dem7c1Uia6s, DekJt2EiXU7), sin horarios nuevos.\n"
+  },
+  {
+   "fecha": "2026-10-19",
+   "cuerpo": "**Vigía 19 oct 2026 — MIDBO: una obra está metida en un programa que no es el suyo**\n\n- **Fuente:** https://midbo.co/peliculas/l-evangile-de-la-revolution/ (bloque «Funciones», leído hoy) dice **4 nov · 16:00 H · Alianza Francesa**, «*Con presencia del director», 115 min.\n- **Las otras dos obras del Programa 7** (*A Film to Remind Us of Utopia*, 20 min, y *Una sombra oscilante*, 77 min) dicen **4 nov · 14:00 H · Alianza Francesa**, «Duración total programa: 97'» = 20 + 77. *L'Evangile* no entra en esa suma.\n- **La app (almacén, `festivales/midbo-2026/80ba725c32f2.json`):** «Programa 7: Reactivar los Archivos para el Presente», 4 nov 14:00, Alianza Francesa, con las TRES obras en `film_list`. No hay función de *L'Evangile* a las 16:00.\n- **Acción sugerida:** sacar *L'Evangile de la Révolution* del Programa 7 y publicarla sola el 4 nov a las 16:00 en la Alianza Francesa (el acceso de esa función no dice «Entrada libre»: revisar). El resto de las 146 funciones de las fichas (27 oct–4 nov) cuadra con la app, en las dos direcciones.\n\nInstagram @midbo_doc (sin sesión): solo posts de selección (Curadurías Especiales 1 y 2, Espejos), sin cambios de horario.\n"
+  }
+ ]
 }

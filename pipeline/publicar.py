@@ -299,7 +299,13 @@ def publicar(fid, forzar=False):
                             for _x in lib.RETIRABLES.get(_c, (_c,)):
                                 _o.pop(_x, None)
         _movidos = {t for t, _a, _b in _mov}
-        _quietas = lambda fs: [f for f in fs if f.get('title') not in _movidos]
+        # …y también DENTRO de los programas (19 oct 2026, MIDBO): una obra que sale
+        # de un programa a su propia función se cuenta en la lista del programa de
+        # ayer y no en la función de hoy (que es «movida»): la cuenta pareja
+        # excluye la obra movida en los dos lados, esté arriba o en un film_list
+        _quietas = lambda fs: [{**f, 'film_list': [o for o in f['film_list'] if o.get('title') not in _movidos]}
+                               if f.get('film_list') else f
+                               for f in fs if f.get('title') not in _movidos]
         ca, cb = _cobertura(_quietas(viejo.get('films') or [])), _cobertura(_quietas(out['films']))
         perdidos = {k: (ca[k], cb[k]) for k in ca if cb[k] < ca[k]}
         menos_films = len(viejo.get('films') or []) - len(out['films'])
