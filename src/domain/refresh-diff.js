@@ -44,8 +44,9 @@ export function clasificarRefresco({ oldFns, newFns, oldDays, newDays, plan }){
   const calendario = JSON.stringify(oldDays||[]) !== JSON.stringify(newDays||[]);
 
   // Valores: misma identidad, atributo distinto. Solo los campos que se ven en
-  // la casilla — sede y duración. (Los avisos cancelada/reprogramada viajan por
-  // NOTICES = código = build bump, no por acá.)
+  // la casilla — sede y duración. (Los avisos cancelada/reprogramada no cambian
+  // `films`: desde el 19 oct viven en `avisos` del JSON, el hash los ve, no son
+  // estructura y se aplican en silencio — el loader los sella al re-ingerir.)
   const valores = [];
   for (const [k, f] of om) {
     const n = nm.get(k);
