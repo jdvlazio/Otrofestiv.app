@@ -317,7 +317,7 @@ está pasando de verdad — no lo que alguien recordaba al escribirlo.
 | `ticket_url` | string | `^https://` | 11 fest | URL de compra de ESTA función. En snake_case: `ticketUrl` no lo lee nadie. |
 | `is_free` | boolean | — | 27 fest | Entrada libre. Booleano de verdad — la app compara con === true. |
 | `requires_registration` | boolean | — | 13 fest |  |
-| `registration_url` | string | `^https://` | 7 fest |  |
+| `registration_url` | string | `^https://` | 8 fest |  |
 | `by_invitation` | boolean | — | 2 fest | Función CERRADA al público, solo con invitación. Anula el badge de precio y el plan no la propone (screeningPlannable); se agenda a mano. Por función: la gala sí, las demás funciones de la obra no. |
 | `online` | boolean | — | 1 fest | Función EN LÍNEA (una charla por Twitch): su sede no tiene pin a propósito y el planificador no le suma traslado (travelMins da 0 sin coordenadas); choca solo por horario. Por función. |
 | `stream_url` | string | — | 1 fest | El link del canal de una función en línea (https). Lo abre el aviso de la ficha. |
