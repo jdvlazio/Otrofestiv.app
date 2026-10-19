@@ -89,7 +89,7 @@ Patrón estándar de "sesión derivada": el teléfono, ya autenticado, le pide a
 ## 4. Dónde vive el código (restricción del repo nativo)
 
 El repo nativo (`~/Otrofestiv.app`) **no admite commits** (comparte remote con producción web — constitución). Por eso:
-- **Fuente canónica de TODO el Swift** (plugin + app watch): este repo web, bajo `native/` (`native/ios-plugin/`, `native/watch/`).
+- **Fuente canónica de TODO el Swift** (plugin + app watch): este repo, en el proyecto Xcode `native/ios/` (desde el 19 oct 2026; antes se copiaba a mano a iCloud).
 - Al proyecto Xcode se **copian** (mismo flujo que `www/` para el APK). El checklist de build documenta la copia.
 - Edge Function: `supabase/functions/watch-auth/` en este repo, deploy vía MCP.
 

@@ -30,7 +30,7 @@ Documento normativo. Toda discrepancia entre este archivo y el código es un bug
 
 ### El reloj también lee este JSON (22 sep 2026)
 
-La app de Apple Watch (`native/watch/CatalogStore.swift`) baja `festivals/<id>.json`
+La app de Apple Watch (`native/ios/OtrofestivWatch Watch App/CatalogStore.swift`) baja `festivals/<id>.json`
 de producción para el Programa (Hoy y Mañana) y para fijar la **zona horaria**
 del festival. Es el SEGUNDO consumidor del esquema: un cambio de nombre o forma
 en estos campos rompe el reloj en silencio (decodifica solo lo que usa, el resto
