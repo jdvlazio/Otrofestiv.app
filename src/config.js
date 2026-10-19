@@ -1390,7 +1390,7 @@ export const FESTIVAL_CONFIG={
     name:'FICICA',displayName:'FICICA',fullName:'FICICA 2026 — Festival Internacional de Cortometrajes Cine a la Calle',shortName:'FICICA',
     // LA IMAGEN DE LA EDICIÓN: el escudo «FICICA 26» de su web (pin-festival-main,
     // 823×1080), estirado a 2:3. Propuesta, a confirmar con Juan (15 oct).
-    keyArt:'/assets/keyart/ficica2026-v1.jpg',
+    keyArt:'/assets/keyart/ficica2026-v2.jpg',
     tagline:'Festival Internacional de Cortometrajes',
     city:'Barranquilla',country:'CO',
     dates:'20–24 OCT',dates_en:'OCT 20–24',year:2026,timezoneOffset:'-05:00',
