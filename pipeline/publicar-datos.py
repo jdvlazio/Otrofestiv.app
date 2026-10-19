@@ -27,6 +27,11 @@ que protegen hoy un PR de datos — publicar aparte no se salta ninguno (Juan, 1
      `datos` de Supabase y apunta indice.json a ella;
   4. baja lo publicado por la URL pública y compara la huella byte a byte.
 
+Etapa 2·B1 (19 oct 2026): en el mismo commit viaja la FICHA del festival
+(fichas/<id>.json, extraída de FESTIVAL_CONFIG con scripts/ficha-de.mjs) y su
+afiche de portada; la función los pone en el índice. Un afiche o una fecha nueva
+llegan a la portada en minutos, sin publicar la app.
+
 Volver atrás: `git revert` del commit en la rama `datos` (o publicar la versión
 anterior del archivo) y correr esto de nuevo. Un solo camino, con historia.
 
@@ -141,24 +146,28 @@ def guardianes(fest, ruta, contenido):
         print(f'  · planificador / Mi Plan / avisos: ninguno carga {cfg}')
 
 
-def _commit_en_datos(ruta, contenido, mensaje):
-    """Pone `contenido` en `ruta` sobre la punta de la rama `datos` (sin tocar el
-    checkout) y la empuja. Devuelve el sha de la punta (el mismo si no cambió)."""
+def _commit_en_datos(archivos, mensaje):
+    """Pone cada {ruta: bytes} sobre la punta de la rama `datos` (sin tocar el
+    checkout) y la empuja. Devuelve el sha de la punta (el mismo si nada cambió)."""
     git('fetch', '-q', 'origin', '+refs/heads/main:refs/remotes/origin/main')
     hay = subprocess.run(['git', '-C', REPO, 'ls-remote', '--exit-code', '--heads', 'origin', RAMA],
                          capture_output=True, timeout=TIEMPO).returncode == 0
     if hay:
         git('fetch', '-q', 'origin', f'+refs/heads/{RAMA}:refs/remotes/origin/{RAMA}')  # explícito: un clon que nunca bajó la rama no crea origin/datos
     base = git('rev-parse', f'origin/{RAMA}' if hay else 'origin/main')
-    blob = git('hash-object', '-w', '--stdin', entrada=contenido)
-    act = subprocess.run(['git', '-C', REPO, 'rev-parse', f'{base}:{ruta}'], capture_output=True, timeout=TIEMPO)
-    if hay and act.returncode == 0 and act.stdout.decode().strip() == blob:
-        print(f'· {ruta} ya es igual en la punta de {RAMA} ({base[:7]})')
+    blobs = {ruta: git('hash-object', '-w', '--stdin', entrada=c) for ruta, c in archivos.items()}
+    def _igual(ruta, blob):
+        act = subprocess.run(['git', '-C', REPO, 'rev-parse', f'{base}:{ruta}'], capture_output=True, timeout=TIEMPO)
+        return act.returncode == 0 and act.stdout.decode().strip() == blob
+    if hay and all(_igual(r, b) for r, b in blobs.items()):
+        print(f'· {", ".join(blobs)} ya {"es igual" if len(blobs) == 1 else "son iguales"} en la punta de {RAMA} ({base[:7]})')
         return base
+    # índice propio, fuera del repo: el checkout y su índice no se tocan
     idx = os.path.join(tempfile.gettempdir(), f'publicar-datos-{os.getpid()}.idx')
     env = {**os.environ, 'GIT_INDEX_FILE': idx}
     try:
-        for cmd in (['read-tree', base], ['update-index', '--add', '--cacheinfo', f'100644,{blob},{ruta}']):
+        cmds = [['read-tree', base]] + [['update-index', '--add', '--cacheinfo', f'100644,{b},{r}'] for r, b in blobs.items()]
+        for cmd in cmds:
             r = subprocess.run(['git', '-C', REPO, *cmd], env=env, capture_output=True, timeout=TIEMPO)
             if r.returncode != 0:
                 sys.exit(f'✗ git {cmd[0]}: {r.stderr.decode()[:300]}')
@@ -173,6 +182,37 @@ def _commit_en_datos(ruta, contenido, mensaje):
     return sha
 
 
+def _ficha(fest):
+    """La FICHA del festival (Etapa 2·B1): los campos de portada de FESTIVAL_CONFIG,
+    extraídos con el MISMO módulo que usa la app (scripts/ficha-de.mjs). Devuelve
+    {ruta: bytes} para sumar al commit: la ficha y, si el afiche de portada es del
+    repo, la imagen (la función la sube al almacén con su huella en el nombre)."""
+    cfg = re.sub(r'-(\d+)$', r'\1', fest)
+    r = subprocess.run(['node', 'scripts/ficha-de.mjs', cfg], cwd=REPO, capture_output=True, text=True, timeout=TIEMPO)
+    if r.returncode == 3:
+        print(f'  · {cfg} no está en FESTIVAL_CONFIG: sin ficha'); return {}
+    if r.returncode != 0:
+        sys.exit(f'✗ no se pudo leer la ficha de {cfg}: {r.stderr.strip()[:300]}')
+    ficha = json.loads(r.stdout)
+    out = {f'fichas/{fest}.json': r.stdout.encode()}
+    art = ficha.get('keyArt') or ''
+    if art.startswith('/assets/keyart/'):
+        ap = os.path.join(REPO, art.lstrip('/'))
+        if not os.path.exists(ap):
+            sys.exit(f'✗ el afiche de portada {art} no existe en el repo')
+        out[art.lstrip('/')] = open(ap, 'rb').read()
+    print(f'  · ficha: {ficha.get("name")} · {ficha.get("dates")} · afiche {os.path.basename(art) or "—"}')
+    return out
+
+
+def _tiene_ficha(fest):
+    try:
+        with urllib.request.urlopen(PUBLICO + 'indice.json?m=' + str(int(time.time() // 60)), timeout=TIEMPO) as r:
+            return bool(((json.loads(r.read()).get('festivales') or {}).get(fest) or {}).get('ficha'))
+    except Exception:
+        return False
+
+
 def _llamar(cuerpo):
     req = urllib.request.Request(FUNCION, data=json.dumps(cuerpo).encode(),
                                  headers={'Content-Type': 'application/json'}, method='POST')
@@ -184,7 +224,7 @@ def _llamar(cuerpo):
 
 
 def interruptor(apagado):
-    sha = _commit_en_datos('datos-control.json', json.dumps({'apagado': apagado}).encode(),
+    sha = _commit_en_datos({'datos-control.json': json.dumps({'apagado': apagado}).encode()},
                            f'datos: {"apagar" if apagado else "encender"} el almacén')
     res = _llamar({'festival': '_control', 'sha': sha})
     if not res.get('ok'):
@@ -225,35 +265,13 @@ def main():
     if '--probar' in sys.argv:
         print('· --probar: no se sube nada'); return
 
-    # 2. a la rama `datos`, sin tocar el checkout
-    git('fetch', '-q', 'origin', '+refs/heads/main:refs/remotes/origin/main')
-    hay_rama = subprocess.run(['git', '-C', REPO, 'ls-remote', '--exit-code', '--heads', 'origin', RAMA],
-                              capture_output=True, timeout=TIEMPO).returncode == 0
-    if hay_rama:
-        git('fetch', '-q', 'origin', f'+refs/heads/{RAMA}:refs/remotes/origin/{RAMA}')  # explícito: un clon que nunca bajó la rama no crea origin/datos
-    base = git('rev-parse', f'origin/{RAMA}' if hay_rama else 'origin/main')
-    blob = git('hash-object', '-w', '--stdin', entrada=contenido)
-    actual = subprocess.run(['git', '-C', REPO, 'rev-parse', f'{base}:{ruta}'], capture_output=True, timeout=TIEMPO)
-    if hay_rama and actual.returncode == 0 and actual.stdout.decode().strip() == blob:
-        sha = base
-        print(f'· {ruta} ya es igual en la punta de {RAMA} ({sha[:7]})')
-    else:
-        # índice propio, fuera del repo: el checkout y su índice no se tocan
-        idx = os.path.join(tempfile.gettempdir(), f'publicar-datos-{os.getpid()}.idx')
-        env = {**os.environ, 'GIT_INDEX_FILE': idx}
-        try:
-            for cmd in (['read-tree', base], ['update-index', '--add', '--cacheinfo', f'100644,{blob},{ruta}']):
-                r = subprocess.run(['git', '-C', REPO, *cmd], env=env, capture_output=True, timeout=TIEMPO)
-                if r.returncode != 0:
-                    sys.exit(f'✗ git {cmd[0]}: {r.stderr.decode()[:300]}')
-            arbol = subprocess.run(['git', '-C', REPO, 'write-tree'], env=env, capture_output=True,
-                                   timeout=TIEMPO).stdout.decode().strip()
-        finally:
-            if os.path.exists(idx):
-                os.remove(idx)
-        sha = git('commit-tree', arbol, '-p', base, '-m', f'datos({fest}): publicar {huella[:12]}')
-        git('push', '-q', 'origin', f'{sha}:refs/heads/{RAMA}')
-        print(f'✓ rama {RAMA} → {sha[:7]}')
+    # 2. a la rama `datos`, sin tocar el checkout: el JSON y la ficha (B1)
+    # Desde main (el job), la ficha solo viaja si ese festival YA tiene una en el
+    # almacén: una ficha entra de a una y a propósito, con este comando a mano.
+    ficha = _ficha(fest)
+    if '--desde-main' in sys.argv and ficha and not _tiene_ficha(fest):
+        print('  · sin ficha en el almacén: entra a propósito con publicar-datos.py, no desde main'); ficha = {}
+    sha = _commit_en_datos({ruta: contenido, **ficha}, f'datos({fest}): publicar {huella[:12]}')
 
     # 3. publicar
     req = urllib.request.Request(FUNCION, data=json.dumps({'festival': fest, 'sha': sha,
@@ -273,6 +291,19 @@ def main():
     if hashlib.sha256(publicado).hexdigest() != huella:
         sys.exit('✗ lo publicado NO coincide con el archivo local')
     print(f'✓ publicado {fest} → {res["archivo"]}' + (' (sin cambios)' if res.get('igual') else ''))
+    # 5. la ficha: el afiche de portada que quedó en el almacén es el del repo
+    f = res.get('ficha') or {}
+    art = f.get('keyArt') or ''
+    if art.startswith(PUBLICO + 'keyart/'):
+        local = json.loads(_ficha_local := subprocess.run(['node', 'scripts/ficha-de.mjs', re.sub(r'-(\d+)$', r'\1', fest)],
+                           cwd=REPO, capture_output=True, text=True, timeout=TIEMPO).stdout).get('keyArt', '')
+        with urllib.request.urlopen(art, timeout=TIEMPO) as r:
+            subido = r.read()
+        if hashlib.sha256(subido).hexdigest() != hashlib.sha256(open(os.path.join(REPO, local.lstrip('/')), 'rb').read()).hexdigest():
+            sys.exit('✗ el afiche de portada publicado NO coincide con el del repo')
+        print(f'✓ ficha publicada · afiche → {art.rsplit("/", 1)[-1]}')
+    elif f:
+        print('✓ ficha publicada')
 
 
 if __name__ == '__main__':

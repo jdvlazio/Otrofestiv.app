@@ -22,6 +22,8 @@
 //   #85B7EB ya ganaba, se eliminó la 1ª muerta sin cambio de render.)
 
 // ── TMDB (URLs estáticas) ────────────────────────────────────────────────────
+import { aplicarFichas, fichasGuardadas } from './fichas.js';
+
 export const TMDB_IMG = "https://image.tmdb.org/t/p/w185";
 export const TMDB_API_BASE = 'https://api.themoviedb.org/3';
 export const TMDB_POSTER_BASE = 'https://image.tmdb.org/t/p/w500';
@@ -1498,6 +1500,12 @@ export const VENUES={
   'Unibac':             {short:'Unibac'},
   'AECID':              {short:'AECID'},
 };
+
+// FICHAS DEL ALMACÉN (Etapa 2·B1, 19 oct 2026): la última copia vista se aplica
+// ACÁ, antes de derivar nada (_DEFAULT_FEST_ID, la portada), para que el arranque ya
+// vea el afiche, las fechas o el festival nuevo publicados sin pasar por la app.
+// La copia fresca la baja datos-fuente.js (refrescarFichas) y queda para la próxima.
+aplicarFichas(FESTIVAL_CONFIG, fichasGuardadas());
 
 // _DEFAULT_FEST_ID — festival más reciente por festivalEndStr (no por inserción).
 // Deriva puro de FESTIVAL_CONFIG. p8 Step 6g: movido aquí desde main.js para que

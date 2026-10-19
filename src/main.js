@@ -6,6 +6,7 @@
 // SW: regla network-first /src/ garantiza que el deploy propaga (D-INFRA-1=B).
 
 // ── Step 1: config.js (import directo, sin bridge — constantes estáticas) ─────
+import { refrescarFichas } from './controller/datos-fuente.js';
 import {
   TMDB_IMG, TMDB_API_BASE, TMDB_POSTER_BASE, _POSTER_CACHE_PFX,
   FESTIVAL_BUFFER, MAX_REMEMBERED_SLOTS, DEFAULT_DURATION_MIN,
@@ -1373,6 +1374,9 @@ state.subscribeRender(
   // contenido es visible por default y JS NO toca opacity → imposible que quede
   // atascado invisible en WKWebView (Bug 1 se resuelve en la capa CSS).
   _renderFestivalSelector(activeFest);
+  // FICHAS FRESCAS (B1): si el índice trae otra ficha y seguís en la portada, se re-dibuja.
+  refrescarFichas().then(ids=>{ const sp=document.getElementById('otrofestiv-splash'), sel=_splashSelectedFestId;
+    if(ids.length&&sp&&!sp.classList.contains('fade-out')){ _renderSplashRail(sel); if(sel) selectSplashFest(null,null,sel); } }).catch(()=>{});
   // El selector del splash NO se rellena — queda el placeholder del markup
   // (data-i18n="splash_elegi"). "Entrar" arranca disabled hasta que se elige.
   // Revelar el splash recién cuando el selector YA tiene el festival correcto:
