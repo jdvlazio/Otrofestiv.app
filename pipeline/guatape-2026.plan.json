@@ -229,5 +229,8 @@
   "mes_es": "octubre",
   "dias_vacios": [],
   "_por_que_acceso": "Sin `ticketing_model`: ninguna función dice que se pague. El acceso va declarado en `_acceso` del crudo."
+ },
+ "_fuentes_versionadas": {
+  "festivals/staging/guatape-2026-afiches.json": "afiches declarados (buscados y mirados fuera de TMDB): «La Sierra», recortado de la pieza del festival; los lee pipeline/enriquecer.py"
  }
 }

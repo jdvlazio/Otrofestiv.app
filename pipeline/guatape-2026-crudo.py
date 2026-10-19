@@ -203,6 +203,10 @@ CREDITOS = {
     'Volar': {'director': 'Jeiver Pinto Vargas',
               '_por_que': 'largo colombiano de Jeiver Pinto, el mismo que publicamos en Villa del Cine 2026; '
                           'va en Cinema Luna, aliado del festival'},
+    'La Sierra': {'director': 'Carlos Ortiz',
+                  '_fuente': 'https://www.instagram.com/p/DervW-Tifu0/',
+                  '_por_que': 'la pieza del festival para la función del 24 oct en La Manuela imprime el afiche '
+                              '(«Sierra – El álbum mortuorio») y «Dirrctor Carlos Ortiz»'},
 }
 OBRAS_CREDITOS = {
     'Planeta Fome': {'director': 'Édier William', '_fuente': 'https://www.themoviedb.org/movie/1470780'},
@@ -215,6 +219,28 @@ OBRAS_CREDITOS = {
                                        'publicamos en el BHFF 2026'},
 }
 
+
+
+# LA PIEZA PROPIA DE CADA ACTIVIDAD (19 oct 2026, Juan: «le da más identidad al
+# festival»). El festival publicó un arte por taller y por conversatorio en tres
+# carruseles de @guatapefilmfest: DemHnuhINOv (talleres), DenbqwCDTjY y
+# DepGT_4oHSu (conversatorios). Se miraron una por una; van al lienzo 2:3 con el
+# recorte de siempre (decisión de Juan: A, aunque se pierda texto a los lados).
+PIEZAS = {
+    'Cine para reflejar territorio': 'cine-para-reflejar-territorio.jpg',        # DemHnuhINOv/1
+    'El Reflejo de las Generaciones': 'el-reflejo-de-las-generaciones.jpg',      # DemHnuhINOv/2
+    'Taller Memoria y Patrimonio Visual': 'taller-memoria-y-patrimonio-visual.jpg',  # DemHnuhINOv/3
+    'Historias que se Juegan': 'historias-que-se-juegan.jpg',                    # DemHnuhINOv/4
+    'Reflejos de un Personaje': 'reflejos-de-un-personaje.jpg',                  # DemHnuhINOv/5
+    'El Reflejo de un Actor': 'el-reflejo-de-un-actor.jpg',                      # DenbqwCDTjY/2
+    'Detrás del Reflejo - El Productor': 'detras-del-reflejo-el-productor.jpg',  # DenbqwCDTjY/3
+    'Conversatorio Actores': 'conversatorio-actores.jpg',                        # DenbqwCDTjY/4
+    'Conversatorio Historias que se Juegan': 'conversatorio-historias-que-se-juegan.jpg',  # DenbqwCDTjY/5
+    'Cine con Legado Social': 'cine-con-legado-social.jpg',                      # DepGT_4oHSu/1
+    'Tres Miradas, un Reflejo': 'tres-miradas-un-reflejo.jpg',                   # DepGT_4oHSu/2
+    'El Reflejo de los Festivales': 'el-reflejo-de-los-festivales.jpg',          # DepGT_4oHSu/3
+    'Sangre de Palermo y su Reflejo': 'sangre-de-palermo-y-su-reflejo.jpg',      # DepGT_4oHSu/4
+}
 
 # El horario que imprime la lámina con un «Pm» que no corresponde («9:00 - 12:00
 # Pm» es de mañana: lo dice su propio afiche, «9:00 a.m. – 12:00 m.»; «11:00 Pm»
@@ -312,7 +338,8 @@ def main():
                 reg['acceso'] = 'Entrada libre con inscripción previa'
             if a.get('recurrente'):
                 reg['is_recurring'] = True
-            if a.get('afiche'):
+            if a.get('afiche') or PIEZAS.get(a['titulo']):
+                a = {**a, 'afiche': a.get('afiche') or PIEZAS[a['titulo']]}
                 # la pieza propia de la actividad, que el festival mandó por mensaje
                 # (19 oct 2026): el afiche OFICIAL, no una tarjeta nuestra
                 reg['poster'] = f'/assets/guatape-2026/{a["afiche"]}'
