@@ -201,6 +201,12 @@ def publicar(fid, forzar=False):
     out['sections'] = {k: limpio(v) for k, v in (b.get('sections') or {}).items()}
     out['venues'] = {k: limpio(v) for k, v in (b.get('venues') or {}).items()}
     out['films'] = [lib.normaliza(limpio(f), rep) for f in b['films']]
+    # palmarés y avisos viajan EN el dato (Etapa 2·A, #1174): su fuente es un
+    # sidecar del festival, así el próximo armado no los borra (19 oct 2026)
+    for campo in ('palmares', 'avisos'):
+        sp = f'{REPO}/festivals/staging/{fid}-{campo}.json'
+        if os.path.exists(sp):
+            out[campo] = json.load(open(sp, encoding='utf-8'))[campo]
     # sinopsis de obra / descripción de programa o actividad (lib.separar_descripcion)
     for f in out['films']:
         lib.separar_descripcion(f)
