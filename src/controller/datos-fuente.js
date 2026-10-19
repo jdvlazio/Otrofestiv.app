@@ -24,7 +24,19 @@ async function _indiceDatos(){
   }catch(e){ /* sin almacén: el camino de siempre */ }
   return _indice;
 }
+// SERVIDOR DE PRUEBAS (19 oct 2026, aprobado por Juan): en localhost CON puerto
+// —el servidor de Playwright y el de desarrollo— se leen los archivos locales.
+// Sin esto los tests bajaban lo YA publicado: publicar-datos.py y el CI de un PR
+// de datos probaban la versión vieja, no la que iban a publicar. Producción no
+// cambia: otrofestiv.app y el Android (https://localhost, sin puerto) siguen en el
+// almacén. `?almacen=1` lo vuelve a encender (los tests del propio almacén).
+const _servidorDePruebas=()=>{ try{
+  const L=globalThis.location; if(!L) return false;
+  return ['localhost','127.0.0.1'].includes(L.hostname) && !!L.port
+    && !new URLSearchParams(L.search).has('almacen');
+}catch(e){ return false; } };
 export async function cargarDatosFestival(id, tries=3, timeoutMs=6000){
+  if(_servidorDePruebas()){ origenDatos[id]='web'; return _fetchFestivalJson(festivalJsonUrl(id),tries,timeoutMs); }
   const archivo=festivalJsonUrl(id).replace(/^festivals\//,'').replace(/\.json$/,'');
   const ix=await _indiceDatos();
   const e=ix && !ix.apagado && ix.festivales[archivo];
