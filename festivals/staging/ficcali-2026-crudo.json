@@ -215,7 +215,7 @@
    "dia": "2026-10-18",
    "hora": "16:00",
    "sede": "Madame Blue",
-   "sede_cruda": "SALA MADAME BLUE",
+   "sede_cruda": "Sala Madame Blue",
    "acceso": "desconocido",
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
@@ -392,18 +392,17 @@
    "hora": "09:00",
    "sede": "Cinemateca La Tertulia",
    "sede_cruda": "CINEMATECA MUSEO LA TERTULIA",
-   "acceso": "desconocido",
+   "acceso": "Inscripción previa",
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
     "tarjeta": 14524
    },
-   "duracion_min": 180,
-   "titulo": "XV Encuentro de investigación en cine: Pantallas que piensan",
+   "duracion_min": 210,
+   "titulo": "XV Seminario de investigación en cine. Pantallas que piensan. Indagando en formas de investigación creación",
    "tipo": "evento",
    "event_kind": "encuentro",
-   "seccion": "Académico",
-   "invitados": "Seminario con charlas, ponencias y conferencias performáticas."
+   "seccion": "Académico"
   },
   {
    "dia": "2026-10-20",
@@ -520,14 +519,14 @@
    "hora": "09:00",
    "sede": "Cinemateca La Tertulia",
    "sede_cruda": "CINEMATECA MUSEO LA TERTULIA",
-   "acceso": "desconocido",
+   "acceso": "Inscripción previa",
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
     "tarjeta": 14575
    },
-   "duracion_min": 180,
-   "titulo": "XV Encuentro de investigación en cine. Pantallas que piensan. Indagar en formas de investigación creativa",
+   "duracion_min": 210,
+   "titulo": "XV Seminario de investigación en cine. Pantallas que piensan. Indagando en formas de investigación creación",
    "tipo": "evento",
    "event_kind": "encuentro",
    "seccion": "Académico"
@@ -644,7 +643,7 @@
    "dia": "2026-10-21",
    "hora": "19:00",
    "sede": "Madame Blue",
-   "sede_cruda": "SALA MADAME BLUE",
+   "sede_cruda": "Sala Madame Blue",
    "acceso": "desconocido",
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
@@ -804,7 +803,24 @@
    "tipo": "evento",
    "event_kind": "taller",
    "seccion": "Académico",
-   "invitados": "Con Roberto Garcés. En alianza con Takeshima. Auditorio Central didáctica (Inscripción previa). Link de inscripción aquí."
+   "invitados": "Con Roberto Garcés. En alianza con Takeshima. Auditorio Central didáctica (Inscripción previa)."
+  },
+  {
+   "dia": "2026-10-22",
+   "hora": "09:00",
+   "sede": "Cinemateca La Tertulia",
+   "sede_cruda": "CINEMATECA MUSEO LA TERTULIA",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 16325
+   },
+   "duracion_min": 210,
+   "titulo": "XV Seminario de investigación en cine. Pantallas que piensan. Indagando en formas de investigación creación",
+   "tipo": "evento",
+   "event_kind": "encuentro",
+   "seccion": "Académico"
   },
   {
    "dia": "2026-10-22",
@@ -941,7 +957,7 @@
    "tipo": "evento",
    "event_kind": "taller",
    "seccion": "Académico",
-   "invitados": "Con Beatriz Balanta. Cupo: 30 | Inscripción previa. Link de inscripción aquí"
+   "invitados": "Con Beatriz Balanta. Cupo: 30 | Inscripción previa."
   },
   {
    "dia": "2026-10-22",
@@ -1352,7 +1368,7 @@
    "dia": "2026-10-23",
    "hora": "16:00",
    "sede": "Madame Blue",
-   "sede_cruda": "SALA MADAME BLUE",
+   "sede_cruda": "Sala Madame Blue",
    "acceso": "desconocido",
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
@@ -1406,7 +1422,7 @@
    "dia": "2026-10-23",
    "hora": "17:00",
    "sede": "Madame Blue",
-   "sede_cruda": "SALA MADAME BLUE",
+   "sede_cruda": "Sala Madame Blue",
    "acceso": "desconocido",
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
@@ -1792,7 +1808,7 @@
    "dia": "2026-10-24",
    "hora": "10:00",
    "sede": "Madame Blue",
-   "sede_cruda": "SALA MADAME BLUE",
+   "sede_cruda": "Sala Madame Blue",
    "acceso": "desconocido",
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
@@ -1869,7 +1885,7 @@
    "dia": "2026-10-24",
    "hora": "14:30",
    "sede": "Madame Blue",
-   "sede_cruda": "SALA MADAME BLUE",
+   "sede_cruda": "Sala Madame Blue",
    "acceso": "desconocido",
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
