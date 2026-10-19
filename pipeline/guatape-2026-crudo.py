@@ -136,7 +136,8 @@ ACTIVIDAD = {
     ('2026-10-23', '09:00', 'Territorios que Filman'): {'titulo': 'Territorios que Filman', 'kind': 'encuentro'},
     ('2026-10-23', '13:00', 'Detrás del Reflejo -El Productor'): {'titulo': 'Detrás del Reflejo - El Productor', 'kind': 'conversatorio'},
     ('2026-10-23', '14:00', 'CONCEPT ART (2JORNADAS)'): {'titulo': 'Concept Art para Cine', 'kind': 'masterclass',
-                                                         'inscripcion': True, 'recurrente': True},
+                                                         'inscripcion': True, 'recurrente': True,
+                                                         'afiche': 'concept-art-para-cine.jpg'},
     ('2026-10-23', '14:00', 'Reflejos de un personaje'): {'titulo': 'Reflejos de un Personaje', 'kind': 'taller'},
     ('2026-10-23', '14:00', 'Taller Memoria y Patrimonio Visual'): {'titulo': 'Taller Memoria y Patrimonio Visual', 'kind': 'taller'},
     ('2026-10-23', '14:00', 'Conversatorio Actores'): {'titulo': 'Conversatorio Actores', 'kind': 'conversatorio'},
@@ -144,9 +145,11 @@ ACTIVIDAD = {
     ('2026-10-23', '18:30', 'Historias que se Juegan'): {'titulo': 'Historias que se Juegan', 'kind': 'taller'},
     ('2026-10-23', '20:00', 'Concierto El Reflejo del Cine'): {'titulo': 'Concierto El Reflejo del Cine', 'kind': 'concierto'},
     ('2026-10-24', '10:00', 'Cine y Nuevas Narrativas'): {'titulo': 'Cine y Nuevas Narrativas', 'kind': 'masterclass',
-                                                          'inscripcion': True},
+                                                          'inscripcion': True,
+                                                          'afiche': 'cine-y-nuevas-narrativas.jpg'},
     ('2026-10-24', '09:00', 'CONCEPT ART (2JORNADAS)'): {'titulo': 'Concept Art para Cine', 'kind': 'masterclass',
-                                                         'inscripcion': True, 'recurrente': True},
+                                                         'inscripcion': True, 'recurrente': True,
+                                                         'afiche': 'concept-art-para-cine.jpg'},
     ('2026-10-24', '13:30', 'Cine con legado Social'): {'titulo': 'Cine con Legado Social', 'kind': 'conversatorio'},
     ('2026-10-24', '14:00', 'Reflejos de un personaje'): {'titulo': 'Reflejos de un Personaje', 'kind': 'taller'},
     ('2026-10-24', '15:00', 'Reflejos Sonoros'): {'titulo': 'Reflejos Sonoros', 'kind': 'concierto'},
@@ -309,6 +312,11 @@ def main():
                 reg['acceso'] = 'Entrada libre con inscripción previa'
             if a.get('recurrente'):
                 reg['is_recurring'] = True
+            if a.get('afiche'):
+                # la pieza propia de la actividad, que el festival mandó por mensaje
+                # (19 oct 2026): el afiche OFICIAL, no una tarjeta nuestra
+                reg['poster'] = f'/assets/guatape-2026/{a["afiche"]}'
+                reg['posterSource'] = 'oficial'
             if f.get('linea'):
                 reg['sinopsis'] = limpia(f['linea'])
         funciones.append(reg)
