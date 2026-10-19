@@ -107,12 +107,19 @@ def guardianes(fest, ruta, contenido):
     # bhff2026, ficci-65 → ficci65; festivalJsonUrl hace la inversa).
     cfg = re.sub(r'-(\d+)$', r'\1', fest)
     specs = ['tests/festivals.spec.js', 'tests/recorrido-festival.spec.js']
-    lista = subprocess.run(['npx', 'playwright', 'test', *specs, '-g', cfg, '--list'], cwd=REPO,
-                           capture_output=True, text=True, timeout=TIEMPO).stdout
-    if not re.search(r'^\s+\[', lista, re.M):
-        # Los tests recorren los festivales VISIBLES; uno oculto (group:'test') no tiene.
-        # Se dice en voz alta en vez de frenar: los demás guardianes sí corrieron.
-        print(f'  ⚠ {cfg} no tiene tests de navegador (¿festival oculto?): se omiten')
+    # ¿Oculto? Se decide por la CONFIG (group:'test'), nunca por «la lista de tests
+    # vino vacía»: si Playwright falla al listar (no instalado, red, carga) eso se
+    # leía como «sin tests» y el guardián se salteaba en silencio — Ficcali y
+    # Guatapé publicaron así el 18 oct (hallazgo de Onboarding). Falla CERRADO.
+    cfg_src = open(os.path.join(REPO, 'src', 'config.js'), encoding='utf-8').read()
+    m = re.search(r"\n  '" + re.escape(cfg) + r"':\s*\{(.*?)\n  \}", cfg_src, re.S)
+    if not m:
+        # Festival NUEVO, todavía sin config: la app no lo muestra. Sus tests corren
+        # en el PR que suma su config (CI completo), con este mismo JSON.
+        print(f'  ⚠ {cfg} todavía no está en la app (sin FESTIVAL_CONFIG): sus tests corren en el PR de su config')
+        return
+    if re.search(r"group:\s*'test'", re.sub(r'//[^\n]*', '', m.group(1))):
+        print(f'  ⚠ {cfg} es un festival oculto (group:\'test\'): sin tests de navegador, se omiten')
         return
     _correr(f'tests de navegador de {cfg}',
             ['npx', 'playwright', 'test', *specs, '-g', cfg, '--workers=1', '--reporter=line'], tiempo=600)
