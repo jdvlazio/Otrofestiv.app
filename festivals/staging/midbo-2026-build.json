@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "midbo.co — ficha de cada obra (bloque «Funciones») + API pelicula/seccion",
-  "capturado": "2026-10-16",
+  "capturado": "2026-10-19",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_secciones": "Las categorías madre de la taxonomía `seccion` de midbo.co, tal cual; «Encuentro Pensar lo Real» es el nombre del menú del seminario; «Proyecciones» (nuestra) para la única obra sin sección.",
@@ -354,6 +354,7 @@
    "address": "Cra. 25 #63f-21"
   }
  },
+ "_avisos_id": [],
  "films": [
   {
    "title": "Notre corps",
@@ -389,6 +390,7 @@
    "tmdb_id": 1000495,
    "synopsis_en": "In a Parisian public hospital, Claire Simon questions what it means to live in women’s bodies, filming their diversity, singularity and their beauty in all stages throughout life. Unique stories of desires, fears and struggles unfold, including the one of the filmmaker herself.",
    "title_en": "Our Body",
+   "_fid": "f_4476aa7fd2",
    "id": "f_4476aa7fd2"
   },
   {
@@ -446,10 +448,11 @@
      "genre": "Documental"
     }
    ],
+   "_fid": "f_fc9e0356a0",
+   "id": "f_fc9e0356a0",
    "titulos_anteriores": [
     "Espejos: Gestos de reparación"
-   ],
-   "id": "f_fc9e0356a0"
+   ]
   },
   {
    "title": "Si La Escombrera hablara",
@@ -484,6 +487,7 @@
    "tmdb_id": 1738942,
    "synopsis_en": "Medellín’s Comuna 13 is home to the largest urban mass grave in Latin America. La Escombrera has been identified by families of victims of enforced disappearance as the site where many of the territory’s 503 disappeared persons are buried. Mujeres Caminando por la Verdad leads the forensic search that, after two decades of denialism, led to the discovery of human remains in 2024. This historic event sent a clear message across Colombia: the earth has begun to speak.",
    "_programa_original": "Programa 2: Comunidades que siguen en búsqueda",
+   "_fid": "f_9f903a6d40",
    "id": "f_9f903a6d40"
   },
   {
@@ -521,6 +525,7 @@
    "tmdb_id": 1663181,
    "synopsis_en": "Home is gone; the house was paradise, and also hell. Though the war tried to destroy everything in its path, the family tries to return. Between longing and nightmare they build a new territory, a refuge where they find their friends and their community again. There they make it back to the big house, the amusement park of childhood, now inhabited by fantastical beings and spectres, where they try to conjure an embrace.",
    "title_en": "Our Home Was Buried in a Land We Could Never Find",
+   "_fid": "f_c7a0f4f837",
    "id": "f_c7a0f4f837"
   },
   {
@@ -556,6 +561,7 @@
    "lbSlug": "lolita-en-honda",
    "tmdb_id": 1665546,
    "synopsis_en": "Lolita en Honda is an intimate journey into family memory, in which Daniel Torres explores his grandmother's childhood to unravel the marks of abandonment and internalized violence that shaped her character.",
+   "_fid": "f_369f8f5841",
    "id": "f_369f8f5841"
   },
   {
@@ -594,6 +600,7 @@
    "synopsis_en": "The revolutions that swept Latin America in the second half of the 20th century owe much to the participation of millions of Christians who engaged in political struggles in the name of their faith, paying a heavy toll for undermining the traditional relationship between the Church and power. Driven by Liberation theology, they challenged military regimes and oligarchies, risking their lives. Far from Marx's idea of religion as 'opium of the people', here the people fought for the advent of the Kingdom of God on Earth, rather than in Heaven.",
    "title_en": "The Gospel of Revolution",
    "_programa_original": "Programa 7: Reactivar los archivos para el presente — Universidad Nacional de Colombia",
+   "_fid": "f_10edd49aed",
    "id": "f_10edd49aed"
   },
   {
@@ -629,6 +636,7 @@
    "lbSlug": "el-valor-de-la-palabra",
    "tmdb_id": 1665557,
    "synopsis_en": "The long career of Colombian filmmaker Marta Rodríguez demonstrates a commitment to documenting the history of repression and struggle of indigenous and marginalized peoples.",
+   "_fid": "f_b6169579ee",
    "id": "f_b6169579ee"
   },
   {
@@ -666,6 +674,7 @@
    "synopsis_en": "In the year 2000 the United States returned the Panama Canal . To achieve this, the Torrijos-Carter Treaties were signed in 1977. There was a complex game of international diplomacy and intrigues . This is the story of the negotiations.",
    "title_en": "The Panama Canal Treaties: Son of Tiger and Mule",
    "_programa_original": "Programa 4: Hijo de tigre y mula: la historia de los tratados Torrijos-Carter",
+   "_fid": "f_c4adc7a865",
    "id": "f_c4adc7a865"
   },
   {
@@ -698,17 +707,11 @@
     "date": "2026-10-10"
    },
    "ticket_url": "https://tuboleta.com/es/eventos/writing-life-annie-ernaux-through-eyes-high-school",
+   "is_free": false,
    "lbSlug": "writing-life-annie-ernaux-through-the-eyes",
    "tmdb_id": 1518673,
    "synopsis_en": "A major figure in contemporary feminism and the first Frenchwoman to win the Nobel Prize for Literature, Annie Ernaux is seen by many as a source of individual and collective emancipation, blending the intimate with the universal. Filmmaker Claire Simon has devoted an original portrait to her, giving students and teachers a voice.",
-   "is_free": false,
-   "_procedencia": {
-    "entrada": {
-     "tipo": "regla",
-     "regla": "mixed: sin dato de entrada = boleta",
-     "marca": "supuesto"
-    }
-   },
+   "_fid": "f_517f246dba",
    "id": "f_517f246dba"
   },
   {
@@ -741,6 +744,7 @@
    "is_free": true,
    "year": 2022,
    "_programa_original": "Programa 3: Instrucciones para cuando no esté",
+   "_fid": "f_a1f59609d6",
    "id": "f_a1f59609d6"
   },
   {
@@ -774,17 +778,11 @@
    },
    "ticket_url": "https://tuboleta.com/es/eventos/fordlandia-panacea",
    "premiere": "Estreno en Colombia",
+   "is_free": false,
    "lbSlug": "fordlandia-panacea",
    "tmdb_id": 1559606,
    "synopsis_en": "In 1928, industrialist Henry Ford built a company town in the Brazilian jungle and established a rubber plantation. Within a few years his industrial utopia collapsed, coming to an end in 1945. Fordlândia was largely abandoned and became known as a ghost town.",
-   "is_free": false,
-   "_procedencia": {
-    "entrada": {
-     "tipo": "regla",
-     "regla": "mixed: sin dato de entrada = boleta",
-     "marca": "supuesto"
-    }
-   },
+   "_fid": "f_0b61a0404a",
    "id": "f_0b61a0404a"
   },
   {
@@ -821,6 +819,7 @@
    "tmdb_id": 584138,
    "synopsis_en": "The isolation of Adela and Marcelino is common among many inmates processed without an interpreter in their native language before the Mexican justice system. Through their subjective experience, the dreams and memories they preserve of their lands in prison, they express in two voices the disorientation and the need to resist against exclusion by telling their story.",
    "title_en": "When I Shut My Eyes",
+   "_fid": "f_54f2cababc",
    "id": "f_54f2cababc"
   },
   {
@@ -853,20 +852,14 @@
     "date": "2026-10-10"
    },
    "ticket_url": "https://tuboleta.com/es/eventos/buenos-dias-wiraqocha",
+   "is_free": false,
    "year": 2025,
    "lbSlug": "good-morning-wiraqocha",
    "tmdb_id": 1517473,
    "synopsis_en": "Fifty years ago, the struggle for the lands in rural communities of Cuzco was filmed. A group of filmmakers brought these images back to the province of Paucartambo (Cuzco) and proposed to the villagers of the area to build a community memory through the creation of a new film.",
    "title_en": "Good Morning, Wiraqocha",
    "_programa_original": "Programa 6: Restitución de archivos para una memoria política latinoamericana",
-   "is_free": false,
-   "_procedencia": {
-    "entrada": {
-     "tipo": "regla",
-     "regla": "mixed: sin dato de entrada = boleta",
-     "marca": "supuesto"
-    }
-   },
+   "_fid": "f_6f14998d96",
    "id": "f_6f14998d96"
   },
   {
@@ -901,6 +894,7 @@
    "lbSlug": "latidos-2026",
    "tmdb_id": 1794413,
    "_programa_original": "Programa 4: Narrar(se) desde la Diáspora y restituir la dignidad",
+   "_fid": "f_cfa08346bd",
    "id": "f_cfa08346bd"
   },
   {
@@ -934,18 +928,12 @@
    },
    "ticket_url": "https://tuboleta.com/es/eventos/nuestro-cuerpo-es-una-estrella-que-se-expande",
    "premiere": "Estreno en Colombia",
+   "is_free": false,
    "lbSlug": "our-body-is-an-expanding-star",
    "tmdb_id": 1567796,
    "synopsis_en": "Two siblings, their queer bodies and the deep bond they share. They read the brown skin they once wished they didn’t have as a landscape. Associatively, with extreme close-ups, animations, projections or razor-sharp nature photography, pores become desert landscapes, skin cells become salt flats.",
    "title_en": "Our Body Is an Expanding Star",
-   "is_free": false,
-   "_procedencia": {
-    "entrada": {
-     "tipo": "regla",
-     "regla": "mixed: sin dato de entrada = boleta",
-     "marca": "supuesto"
-    }
-   },
+   "_fid": "f_8dff9a987d",
    "id": "f_8dff9a987d"
   },
   {
@@ -1032,13 +1020,15 @@
      "lbSlug": "winter-flowers-garden",
      "tmdb_id": 1655475,
      "synopsis_en": "Two women exchange cinematic letters that connect the past and present. Heidrun, a Viennese woman, and Sara, a Colombian migrant, live in the city at different times—whether in fiction or reality is not always clear.",
-     "title_en": "Winter Flowers Garden"
+     "title_en": "Winter Flowers Garden",
+     "genre": "Documental"
     }
    ],
+   "_fid": "f_428ece0c6c",
+   "id": "f_428ece0c6c",
    "titulos_anteriores": [
     "Programa 3: Creadoras de vida — Bodega Insurgesta"
-   ],
-   "id": "f_428ece0c6c"
+   ]
   },
   {
    "title": "Programa 3: Acompañar y Restituir la Memoria Familiar y Colectiva",
@@ -1097,10 +1087,11 @@
      "genre": "Documental"
     }
    ],
+   "_fid": "f_d8f066c776",
+   "id": "f_d8f066c776",
    "titulos_anteriores": [
     "Programa 3: Acompañar y restituir la memoria familiar y colectiva"
-   ],
-   "id": "f_d8f066c776"
+   ]
   },
   {
    "title": "The Travelers",
@@ -1133,17 +1124,11 @@
    },
    "ticket_url": "https://tuboleta.com/es/eventos/travelers-les-voyageurs",
    "premiere": "Estreno en Bogotá",
+   "is_free": false,
    "lbSlug": "the-travelers-2025",
    "tmdb_id": 1463516,
    "synopsis_en": "On the border between Morocco and Spain, a group of travelers is eagerly waiting to cross over to Europe.",
-   "is_free": false,
-   "_procedencia": {
-    "entrada": {
-     "tipo": "regla",
-     "regla": "mixed: sin dato de entrada = boleta",
-     "marca": "supuesto"
-    }
-   },
+   "_fid": "f_989459899a",
    "id": "f_989459899a"
   },
   {
@@ -1171,6 +1156,7 @@
    },
    "ticket_url": "https://tuboleta.com/es/eventos/pasaje-entre-mundos-duelo-y-memoria",
    "premiere": "Estreno en Colombia",
+   "is_free": false,
    "is_cortos": true,
    "film_list": [
     {
@@ -1269,18 +1255,11 @@
      "tmdb_id": 1794415
     }
    ],
+   "_fid": "f_7cb01a044d",
+   "id": "f_7cb01a044d",
    "titulos_anteriores": [
     "Programa 1: Pasaje entre mundos: duelo y memoria"
-   ],
-   "is_free": false,
-   "_procedencia": {
-    "entrada": {
-     "tipo": "regla",
-     "regla": "mixed: sin dato de entrada = boleta",
-     "marca": "supuesto"
-    }
-   },
-   "id": "f_7cb01a044d"
+   ]
   },
   {
    "title": "Las almas ni los ojos",
@@ -1316,6 +1295,7 @@
    "lbSlug": "las-almas-ni-los-ojos",
    "tmdb_id": 1665538,
    "synopsis_en": "After fleeing violence at age 15, Pacho spends four decades away from Anserma. Now a photograph sparks a desire to return, and on his journey home —imagined as an interstellar voyage— he searches for what he left behind. The lingering traces of death intertwine with a landscape of rural expressionism, memory, and history",
+   "_fid": "f_36722e0156",
    "id": "f_36722e0156"
   },
   {
@@ -1350,18 +1330,12 @@
    },
    "ticket_url": "https://tuboleta.com/es/eventos/un-lugar-mas-grande",
    "premiere": "Estreno en Colombia",
+   "is_free": false,
    "lbSlug": "a-bigger-place",
    "tmdb_id": 1338573,
    "synopsis_en": "Chiapas, southeastern Mexico. When the inhabitants of several villages and towns expel the mayor and the police from their territory, they face the challenge of self-government.",
    "title_en": "A Bigger Place",
-   "is_free": false,
-   "_procedencia": {
-    "entrada": {
-     "tipo": "regla",
-     "regla": "mixed: sin dato de entrada = boleta",
-     "marca": "supuesto"
-    }
-   },
+   "_fid": "f_c7bb101b44",
    "id": "f_c7bb101b44"
   },
   {
@@ -1395,18 +1369,12 @@
    },
    "ticket_url": "https://tuboleta.com/es/eventos/bosque-arriba-en-la-montana",
    "premiere": "Estreno en Bogotá",
+   "is_free": false,
    "lbSlug": "forest-up-in-the-mountain",
    "tmdb_id": 1616844,
    "synopsis_en": "In 2017, young Mapuche Rafael Nahuel was killed by police in the Patagonian forest. Site visits, court proceedings – the film unites the elements involved in solving the crime. Meticulously observed: the struggle for civil rights and narrating history.",
    "title_en": "Forest up in the Mountain",
-   "is_free": false,
-   "_procedencia": {
-    "entrada": {
-     "tipo": "regla",
-     "regla": "mixed: sin dato de entrada = boleta",
-     "marca": "supuesto"
-    }
-   },
+   "_fid": "f_6899c1b3fb",
    "id": "f_6899c1b3fb"
   },
   {
@@ -1444,6 +1412,7 @@
    "tmdb_id": 1405578,
    "synopsis_en": "My grandfather, married for 57 years in Costa Rica, died in a fire in 2019. My father revealed to me that, like myself, my grandfather was gay. After this revelation, together we revisit my grandfather's life, seeking to give him one last act of liberation while discovering ourselves in the process.",
    "title_en": "Lost Men",
+   "_fid": "f_a2a6aba7ed",
    "id": "f_a2a6aba7ed"
   },
   {
@@ -1475,20 +1444,14 @@
     "date": "2026-10-10"
    },
    "ticket_url": "https://tuboleta.com/es/eventos/de-cierta-manera-0",
+   "is_free": false,
    "lbSlug": "one-way-or-another-1975",
    "tmdb_id": 162505,
    "synopsis_en": "In Miraflores, Cuba, the growing romance between Mario, a factory worker, and Yolanda, a schoolteacher, throws into relief the differences in their perspectives and values in Revolutionary Cuba.",
    "title_en": "One Way or Another",
    "year": 1977,
    "_programa_original": "De cierta manera",
-   "is_free": false,
-   "_procedencia": {
-    "entrada": {
-     "tipo": "regla",
-     "regla": "mixed: sin dato de entrada = boleta",
-     "marca": "supuesto"
-    }
-   },
+   "_fid": "f_70ae13582d",
    "id": "f_70ae13582d"
   },
   {
@@ -1523,18 +1486,12 @@
    },
    "ticket_url": "https://tuboleta.com/es/eventos/cartas-mis-padres-muertos",
    "premiere": "Estreno en Bogotá",
+   "is_free": false,
    "lbSlug": "letters-to-my-dead-parents",
    "tmdb_id": 1493026,
    "synopsis_en": "What do you tell your dead parents? Combining family archives and glimpses of today, the filmmaker weaves together fifty years of his life and the socio-political history of Chile. The montage wanders through the ages, between light and shadow, without ever leaving the joy.",
    "title_en": "Letters to My Dead Parents",
-   "is_free": false,
-   "_procedencia": {
-    "entrada": {
-     "tipo": "regla",
-     "regla": "mixed: sin dato de entrada = boleta",
-     "marca": "supuesto"
-    }
-   },
+   "_fid": "f_8e5f83a5b2",
    "id": "f_8e5f83a5b2"
   },
   {
@@ -1561,6 +1518,7 @@
    },
    "ticket_url": "https://tuboleta.com/es/eventos/materias-insumisas",
    "premiere": "Estreno internacional",
+   "is_free": false,
    "is_cortos": true,
    "film_list": [
     {
@@ -1621,18 +1579,11 @@
      "title_en": "Shards"
     }
    ],
+   "_fid": "f_57a944041b",
+   "id": "f_57a944041b",
    "titulos_anteriores": [
     "Programa 1: Materias insumisas"
-   ],
-   "is_free": false,
-   "_procedencia": {
-    "entrada": {
-     "tipo": "regla",
-     "regla": "mixed: sin dato de entrada = boleta",
-     "marca": "supuesto"
-    }
-   },
-   "id": "f_57a944041b"
+   ]
   },
   {
    "title": "Muchedumbre",
@@ -1665,18 +1616,12 @@
    },
    "ticket_url": "https://tuboleta.com/es/eventos/muchedumbre",
    "premiere": "Estreno en Colombia",
+   "is_free": false,
    "lbSlug": "the-crowd-2026",
    "tmdb_id": 1708574,
    "synopsis_en": "A filmmaker accidentally comes across a ruined village where silent souls refuse to revive the past. The remnants of a film shot years earlier constitute the only clue to understanding what once happened there.",
    "title_en": "The Crowd",
-   "is_free": false,
-   "_procedencia": {
-    "entrada": {
-     "tipo": "regla",
-     "regla": "mixed: sin dato de entrada = boleta",
-     "marca": "supuesto"
-    }
-   },
+   "_fid": "f_346a4da26f",
    "id": "f_346a4da26f"
   },
   {
@@ -1710,17 +1655,11 @@
    },
    "ticket_url": "https://tuboleta.com/es/eventos/colors-white-rock",
    "premiere": "Estreno en Latinoamérica",
+   "is_free": false,
    "lbSlug": "colors-of-white-rock",
    "tmdb_id": 874510,
    "synopsis_en": "Ever since its shift toward liberalism after the Cold War, Mongolia has opened up its mines in the Gobi desert for exploitation – resulting in an onslaught of truck convoys transporting Mongolian coal to China. Within this arduous, predominantly-male line of work, Maikhuu – a former taxi driver and hairdresser —– stands alone as one of the only female truck drivers working the mining boom.",
-   "is_free": false,
-   "_procedencia": {
-    "entrada": {
-     "tipo": "regla",
-     "regla": "mixed: sin dato de entrada = boleta",
-     "marca": "supuesto"
-    }
-   },
+   "_fid": "f_a3ad8fcf11",
    "id": "f_a3ad8fcf11"
   },
   {
@@ -1754,17 +1693,11 @@
    },
    "ticket_url": "https://tuboleta.com/es/eventos/revolutionaries-never-die",
    "premiere": "Estreno en Latinoamérica",
+   "is_free": false,
    "lbSlug": "revolutionaries-never-die",
    "tmdb_id": 1729657,
    "synopsis_en": "Seeking to decode a final, unanswered invitation, a filmmaker explores why the renowned Lebanese director Jocelyne Saab reached out for a collaboration just two months before her passing.",
-   "is_free": false,
-   "_procedencia": {
-    "entrada": {
-     "tipo": "regla",
-     "regla": "mixed: sin dato de entrada = boleta",
-     "marca": "supuesto"
-    }
-   },
+   "_fid": "f_9e7c1cc20b",
    "id": "f_9e7c1cc20b"
   },
   {
@@ -1802,6 +1735,8 @@
    "tmdb_id": 1338573,
    "synopsis_en": "Chiapas, southeastern Mexico. When the inhabitants of several villages and towns expel the mayor and the police from their territory, they face the challenge of self-government.",
    "title_en": "A Bigger Place",
+   "_fid": "f_e3bcdd7b6b",
+   "id": "f_e3bcdd7b6b",
    "is_free": false,
    "_procedencia": {
     "entrada": {
@@ -1809,8 +1744,7 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   },
-   "id": "f_e3bcdd7b6b"
+   }
   },
   {
    "title": "Cien niños esperando un tren",
@@ -1842,18 +1776,12 @@
     "date": "2026-10-10"
    },
    "ticket_url": "https://tuboleta.com/es/eventos/cien-ninos-esperando-un-tren",
+   "is_free": false,
    "lbSlug": "one-hundred-children-waiting-for-a-train",
    "tmdb_id": 130269,
    "synopsis_en": "Tells the story of a group of Chilean children who discover a larger reality and a different world through the cinema. Each Saturday, Alicia Vega transforms the chapel of Lo Hermida into a film screening room as she conducts a workshop for children under the auspices of the Catholic church. The hundred or so children involved had never seen a movie, and in the workshop they see and learn about the cinema: photograms and moving images, projection, camera angles and movement, film genres, and much more. And they watch movies: Chaplin, Disney, Lamorisse's 'The Red Balloon,' the Lumieres' 'The Arrival of the Train to the Station.' Finally, each child designs his own film with drawings. And then, for the first time in most of their lives, the children got to the movies in downtown Santiago.",
    "title_en": "One Hundred Children Waiting for a Train",
-   "is_free": false,
-   "_procedencia": {
-    "entrada": {
-     "tipo": "regla",
-     "regla": "mixed: sin dato de entrada = boleta",
-     "marca": "supuesto"
-    }
-   },
+   "_fid": "f_38cd77e22b",
    "id": "f_38cd77e22b"
   },
   {
@@ -1887,17 +1815,11 @@
    },
    "ticket_url": "https://tuboleta.com/es/eventos/alea-jacarandas",
    "premiere": "Estreno en Latinoamérica",
+   "is_free": false,
    "lbSlug": "alea-jacarandas",
    "tmdb_id": 1658120,
    "synopsis_en": "In the streets of Algiers, jacaranda trees bloom like shards of memory. Following in the footsteps of his father, Ameziane, a writer haunted by these purple trees, Hassen Ferhani explores the city, legacy and love. A rich and intimate quest in which writing, filming or choosing beauty become acts of resistance.",
-   "is_free": false,
-   "_procedencia": {
-    "entrada": {
-     "tipo": "regla",
-     "regla": "mixed: sin dato de entrada = boleta",
-     "marca": "supuesto"
-    }
-   },
+   "_fid": "f_86e0070981",
    "id": "f_86e0070981"
   },
   {
@@ -1924,6 +1846,7 @@
    },
    "ticket_url": "https://tuboleta.com/es/eventos/desatender-el-mandato",
    "premiere": "Estreno internacional",
+   "is_free": false,
    "is_cortos": true,
    "film_list": [
     {
@@ -1976,18 +1899,11 @@
      "genre": "Documental"
     }
    ],
+   "_fid": "f_88e4f6ceba",
+   "id": "f_88e4f6ceba",
    "titulos_anteriores": [
     "Programa 1: Desatender el mandato"
-   ],
-   "is_free": false,
-   "_procedencia": {
-    "entrada": {
-     "tipo": "regla",
-     "regla": "mixed: sin dato de entrada = boleta",
-     "marca": "supuesto"
-    }
-   },
-   "id": "f_88e4f6ceba"
+   ]
   },
   {
    "title": "The Red Moon Eclipse",
@@ -2020,17 +1936,11 @@
    },
    "ticket_url": "https://tuboleta.com/es/eventos/red-moon-eclipse",
    "premiere": "Estreno en Latinoamérica",
+   "is_free": false,
    "lbSlug": "leclipse-de-la-lune-rouge",
    "tmdb_id": 1559700,
    "synopsis_en": "Caroline's mother has cancer, she herself has just become pregnant. In the short time that remains she tries to understand the past in tender images.",
-   "is_free": false,
-   "_procedencia": {
-    "entrada": {
-     "tipo": "regla",
-     "regla": "mixed: sin dato de entrada = boleta",
-     "marca": "supuesto"
-    }
-   },
+   "_fid": "f_a5bf463d6d",
    "id": "f_a5bf463d6d"
   },
   {
@@ -2066,6 +1976,8 @@
    "tmdb_id": 387705,
    "synopsis_en": "Agüero interrupts the filming of 5 films that are being made in Chile in 1984, to ask each director the meaning in their work, at a time when making films in Chile was almost prohibited.",
    "title_en": "The Way I Like It",
+   "_fid": "f_370f3a026c",
+   "id": "f_370f3a026c",
    "is_free": false,
    "_procedencia": {
     "entrada": {
@@ -2073,8 +1985,7 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   },
-   "id": "f_370f3a026c"
+   }
   },
   {
    "title": "Programa 2: Geografías en Resistencia",
@@ -2176,6 +2087,8 @@
      "genre": "Documental"
     }
    ],
+   "_fid": "f_f856732572",
+   "id": "f_f856732572",
    "titulos_anteriores": [
     "Programa 2: Geografías en resistencia"
    ],
@@ -2186,8 +2099,7 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   },
-   "id": "f_f856732572"
+   }
   },
   {
    "title": "Programa 5: Gestos de Expresión sobre Violencias Basadas en Género",
@@ -2246,10 +2158,11 @@
      "genre": "Documental"
     }
    ],
+   "_fid": "f_784c65030b",
+   "id": "f_784c65030b",
    "titulos_anteriores": [
     "Programa 5: Gestos de expresión sobre violencias basadas en género"
-   ],
-   "id": "f_784c65030b"
+   ]
   },
   {
    "title": "Programa 3: Nacer de Nuevo, Escuchar la Vida",
@@ -2323,6 +2236,8 @@
      "genre": "Documental"
     }
    ],
+   "_fid": "f_1f7f1e5ecd",
+   "id": "f_1f7f1e5ecd",
    "titulos_anteriores": [
     "Programa 3: Nacer de nuevo, escuchar la vida"
    ],
@@ -2333,8 +2248,7 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   },
-   "id": "f_1f7f1e5ecd"
+   }
   },
   {
    "title": "Cortometrajes Restaurados",
@@ -2429,6 +2343,8 @@
      "genre": "Documental"
     }
    ],
+   "_fid": "f_75c0129c89",
+   "id": "f_75c0129c89",
    "titulos_anteriores": [
     "Cortometrajes restaurados"
    ],
@@ -2439,8 +2355,7 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   },
-   "id": "f_75c0129c89"
+   }
   },
   {
    "title": "Bojayá: la verdad desde adentro",
@@ -2474,6 +2389,7 @@
    "tmdb_id": 1738325,
    "synopsis_en": "Three leaders from Bojayá travel throughout the municipality carrying a \"truth chest\", gathering questions and demands from the community to confront those responsible for the armed conflict in their territory. After their journey, they share the answers they have found with the community, working together to construct a truth from within.",
    "_programa_original": "Programa 1: Reparación simbólica y búsquedas por justicia restaurativa",
+   "_fid": "f_63080f9547",
    "id": "f_63080f9547"
   },
   {
@@ -2510,6 +2426,8 @@
    "tmdb_id": 1405578,
    "synopsis_en": "My grandfather, married for 57 years in Costa Rica, died in a fire in 2019. My father revealed to me that, like myself, my grandfather was gay. After this revelation, together we revisit my grandfather's life, seeking to give him one last act of liberation while discovering ourselves in the process.",
    "title_en": "Lost Men",
+   "_fid": "f_3fe0efbac0",
+   "id": "f_3fe0efbac0",
    "is_free": false,
    "_procedencia": {
     "entrada": {
@@ -2517,8 +2435,7 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   },
-   "id": "f_3fe0efbac0"
+   }
   },
   {
    "title": "Programa 2: Algún Día escribire(mos) sobre Flores como si Fueran Nuestras",
@@ -2608,6 +2525,8 @@
      "tmdb_id": 1791609
     }
    ],
+   "_fid": "f_c7055cc97e",
+   "id": "f_c7055cc97e",
    "titulos_anteriores": [
     "Programa 2: Algún día escribire(mos) sobre flores como si fueran nuestras"
    ],
@@ -2618,8 +2537,7 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   },
-   "id": "f_c7055cc97e"
+   }
   },
   {
    "title": "Iniciación en la Octava Dimensión",
@@ -2655,6 +2573,7 @@
    "tmdb_id": 1742327,
    "synopsis_en": "Five Afro-Colombian characters in the middle of Bogotá, five disparate destinies in a city that is hostile to them. Rubi Quejada, a young model displaced from Chocó.",
    "_programa_original": "Programa 2: Iniciación en la octava dimensión",
+   "_fid": "f_d47dc456db",
    "id": "f_d47dc456db"
   },
   {
@@ -2690,6 +2609,8 @@
    "lbSlug": "retour-a-fukushima",
    "tmdb_id": 1592063,
    "synopsis_en": "For a few years now, the Japanese government has been building complexes called \"renewal housing estates\" in the very heart of Fukushima Prefecture. More than a decade after the accident, the region, still heavily contaminated, has seen the emergence of these concrete neighborhoods, enclosed in the midst of wild, radioactive nature. This film paints an intimate portrait of the people who live there and offers a poetic reflection on the region.",
+   "_fid": "f_a6f030914b",
+   "id": "f_a6f030914b",
    "is_free": false,
    "_procedencia": {
     "entrada": {
@@ -2697,8 +2618,7 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   },
-   "id": "f_a6f030914b"
+   }
   },
   {
    "title": "Relicto",
@@ -2733,6 +2653,8 @@
    "lbSlug": "relicto",
    "tmdb_id": 1633353,
    "synopsis_en": "\"At 105, Sixto Muñoz, known as 'the last Tinigua man', left his home for one final journey into the Amazon and disappeared. Following his trail along the Guayabero River, the film retraces his fading world and the extinction of an entire culture.\"",
+   "_fid": "f_7409ed4c92",
+   "id": "f_7409ed4c92",
    "is_free": false,
    "_procedencia": {
     "entrada": {
@@ -2740,8 +2662,7 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   },
-   "id": "f_7409ed4c92"
+   }
   },
   {
    "title": "CREAndo Documental en los Barrios",
@@ -2880,6 +2801,8 @@
      "tmdb_id": 1794414
     }
    ],
+   "_fid": "f_b65b88001d",
+   "id": "f_b65b88001d",
    "titulos_anteriores": [
     "CREAndo documental en los barrios"
    ],
@@ -2890,8 +2813,7 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   },
-   "id": "f_b65b88001d"
+   }
   },
   {
    "title": "¿Quién paga el pato? + Crónica de un baile de muñeco",
@@ -2939,6 +2861,8 @@
      "synopsis_lang": "es"
     }
    ],
+   "_fid": "f_e43a4bfa1e",
+   "id": "f_e43a4bfa1e",
    "is_free": false,
    "_procedencia": {
     "entrada": {
@@ -2946,8 +2870,7 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   },
-   "id": "f_e43a4bfa1e"
+   }
   },
   {
    "title": "Programa 3: Creadoras de Vida",
@@ -3049,9 +2972,12 @@
      "lbSlug": "winter-flowers-garden",
      "tmdb_id": 1655475,
      "synopsis_en": "Two women exchange cinematic letters that connect the past and present. Heidrun, a Viennese woman, and Sara, a Colombian migrant, live in the city at different times—whether in fiction or reality is not always clear.",
-     "title_en": "Winter Flowers Garden"
+     "title_en": "Winter Flowers Garden",
+     "genre": "Documental"
     }
    ],
+   "_fid": "f_99874d38e7",
+   "id": "f_99874d38e7",
    "titulos_anteriores": [
     "Programa 3: Creadoras de vida"
    ],
@@ -3062,8 +2988,7 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   },
-   "id": "f_99874d38e7"
+   }
   },
   {
    "title": "Programa 2: Imágenes para Otro Pasado",
@@ -3153,6 +3078,8 @@
      "genre": "Documental"
     }
    ],
+   "_fid": "f_d8d42ab064",
+   "id": "f_d8d42ab064",
    "titulos_anteriores": [
     "Programa 2: Imágenes para otro pasado"
    ],
@@ -3163,8 +3090,7 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   },
-   "id": "f_d8d42ab064"
+   }
   },
   {
    "title": "Foco Santiago Álvarez",
@@ -3258,6 +3184,8 @@
      "genre": "Documental"
     }
    ],
+   "_fid": "f_b24136dee4",
+   "id": "f_b24136dee4",
    "is_free": false,
    "_procedencia": {
     "entrada": {
@@ -3265,8 +3193,7 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   },
-   "id": "f_b24136dee4"
+   }
   },
   {
    "title": "Programa 2: Geografías en Resistencia — Canterbury Café",
@@ -3358,10 +3285,11 @@
      "genre": "Documental"
     }
    ],
+   "_fid": "f_49532613f0",
+   "id": "f_49532613f0",
    "titulos_anteriores": [
     "Programa 2: Geografías en resistencia — Canterbury Café"
-   ],
-   "id": "f_49532613f0"
+   ]
   },
   {
    "title": "Programa 1: Miradas Convulsas desde el Presente",
@@ -3452,6 +3380,8 @@
      "genre": "Documental"
     }
    ],
+   "_fid": "f_09f0901453",
+   "id": "f_09f0901453",
    "titulos_anteriores": [
     "Programa 1: Miradas convulsas desde el presente"
    ],
@@ -3462,8 +3392,7 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   },
-   "id": "f_09f0901453"
+   }
   },
   {
    "title": "Programa 1: Tanto Trabajo por Hacer",
@@ -3517,6 +3446,8 @@
      "genre": "Documental"
     }
    ],
+   "_fid": "f_578041b8e8",
+   "id": "f_578041b8e8",
    "titulos_anteriores": [
     "Programa 1: Tanto trabajo por hacer"
    ],
@@ -3527,8 +3458,7 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   },
-   "id": "f_578041b8e8"
+   }
   },
   {
    "title": "Hair, Paper, Water…",
@@ -3563,6 +3493,8 @@
    "lbSlug": "hair-paper-water",
    "tmdb_id": 1510333,
    "synopsis_en": "She was born in a cave, more than 60 years ago. Now she lives in a village, with many children and grandchildren to look after. Sometimes, she dreams of her dead mother calling her home – to the cave.",
+   "_fid": "f_4afc0326c3",
+   "id": "f_4afc0326c3",
    "is_free": false,
    "_procedencia": {
     "entrada": {
@@ -3570,8 +3502,7 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   },
-   "id": "f_4afc0326c3"
+   }
   },
   {
    "title": "Las almas ni los ojos",
@@ -3606,6 +3537,8 @@
    "lbSlug": "las-almas-ni-los-ojos",
    "tmdb_id": 1665538,
    "synopsis_en": "After fleeing violence at age 15, Pacho spends four decades away from Anserma. Now a photograph sparks a desire to return, and on his journey home —imagined as an interstellar voyage— he searches for what he left behind. The lingering traces of death intertwine with a landscape of rural expressionism, memory, and history",
+   "_fid": "f_3882e34157",
+   "id": "f_3882e34157",
    "is_free": false,
    "_procedencia": {
     "entrada": {
@@ -3613,8 +3546,7 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   },
-   "id": "f_3882e34157"
+   }
   },
   {
    "title": "Sey Arimaku, la otra oscuridad + Galu Dugbis – La memoria de las abuelas",
@@ -3657,6 +3589,7 @@
      "duration": "8 min"
     }
    ],
+   "_fid": "f_a4f8eede0f",
    "id": "f_a4f8eede0f"
   },
   {
@@ -3694,6 +3627,7 @@
    "synopsis_en": "Fifty years ago, the struggle for the lands in rural communities of Cuzco was filmed. A group of filmmakers brought these images back to the province of Paucartambo (Cuzco) and proposed to the villagers of the area to build a community memory through the creation of a new film.",
    "title_en": "Good Morning, Wiraqocha",
    "_programa_original": "Programa 6: Restitución de archivos para una memoria política latinoamericana",
+   "_fid": "f_0df06dedd6",
    "id": "f_0df06dedd6"
   },
   {
@@ -3748,10 +3682,11 @@
      "genre": "Documental"
     }
    ],
+   "_fid": "f_8c7386eddd",
+   "id": "f_8c7386eddd",
    "titulos_anteriores": [
     "Programa 1: Tanto trabajo por hacer"
-   ],
-   "id": "f_8c7386eddd"
+   ]
   },
   {
    "title": "Si La Escombrera hablara",
@@ -3787,6 +3722,7 @@
    "tmdb_id": 1738942,
    "synopsis_en": "Medellín’s Comuna 13 is home to the largest urban mass grave in Latin America. La Escombrera has been identified by families of victims of enforced disappearance as the site where many of the territory’s 503 disappeared persons are buried. Mujeres Caminando por la Verdad leads the forensic search that, after two decades of denialism, led to the discovery of human remains in 2024. This historic event sent a clear message across Colombia: the earth has begun to speak.",
    "_programa_original": "Programa 2: Comunidades que siguen en búsqueda",
+   "_fid": "f_d433716839",
    "id": "f_d433716839"
   },
   {
@@ -3824,6 +3760,7 @@
    "tmdb_id": 1663181,
    "synopsis_en": "Home is gone; the house was paradise, and also hell. Though the war tried to destroy everything in its path, the family tries to return. Between longing and nightmare they build a new territory, a refuge where they find their friends and their community again. There they make it back to the big house, the amusement park of childhood, now inhabited by fantastical beings and spectres, where they try to conjure an embrace.",
    "title_en": "Our Home Was Buried in a Land We Could Never Find",
+   "_fid": "f_932a0854f0",
    "id": "f_932a0854f0"
   },
   {
@@ -3852,6 +3789,7 @@
     "date": "2026-10-10"
    },
    "is_free": true,
+   "_fid": "f_db3d6ef0f1",
    "id": "f_db3d6ef0f1"
   },
   {
@@ -3977,10 +3915,11 @@
      "tmdb_id": 1794415
     }
    ],
+   "_fid": "f_e4d780380a",
+   "id": "f_e4d780380a",
    "titulos_anteriores": [
     "Programa 1: Pasaje entre mundos: duelo y memoria"
-   ],
-   "id": "f_e4d780380a"
+   ]
   },
   {
    "title": "Sey Arimaku, la otra oscuridad + Galu Dugbis – La memoria de las abuelas",
@@ -4023,6 +3962,7 @@
      "duration": "8 min"
     }
    ],
+   "_fid": "f_bdffbabdda",
    "id": "f_bdffbabdda"
   },
   {
@@ -4059,6 +3999,7 @@
    "tmdb_id": 1714180,
    "synopsis_en": "Captured entirely on phone footage, a group of Cuban artists risk everything to document their uprising against a government trying to silence them.",
    "title_en": "The Long Cuban Night",
+   "_fid": "f_45b502268f",
    "id": "f_45b502268f"
   },
   {
@@ -4095,6 +4036,7 @@
    "lbSlug": "relicto",
    "tmdb_id": 1633353,
    "synopsis_en": "\"At 105, Sixto Muñoz, known as 'the last Tinigua man', left his home for one final journey into the Amazon and disappeared. Following his trail along the Guayabero River, the film retraces his fading world and the extinction of an entire culture.\"",
+   "_fid": "f_37e27b916c",
    "id": "f_37e27b916c"
   },
   {
@@ -4236,6 +4178,8 @@
      "genre": "Documental"
     }
    ],
+   "_fid": "f_65c12af2cc",
+   "id": "f_65c12af2cc",
    "titulos_anteriores": [
     "Programa 3: Volvemos a nacer"
    ],
@@ -4246,15 +4190,14 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   },
-   "id": "f_65c12af2cc"
+   }
   },
   {
    "title": "Programa 7: Reactivar los Archivos para el Presente",
    "type": "film",
    "section": "🪞 Espejos: Gestos de Reparación",
-   "country": "Francia, Bélgica, Brasil, Chile, Argentina",
-   "flags": "🇫🇷🇧🇪🇧🇷🇨🇱🇦🇷",
+   "country": "Brasil, Chile, Argentina, Francia",
+   "flags": "🇧🇷🇨🇱🇦🇷🇫🇷",
    "duration": "97 min",
    "_ancla": [
     "Alianza Francesa - Bogotá",
@@ -4265,32 +4208,14 @@
    "time": "14:00",
    "day_order": 8,
    "venue": "Alianza Francesa - Bogotá",
-   "has_qa": true,
-   "qa_type": "team",
+   "has_qa": false,
    "_src": {
-    "url": "https://midbo.co/peliculas/l-evangile-de-la-revolution/",
+    "url": "https://midbo.co/peliculas/a-film-to-remind-us-of-utopia/",
     "date": "2026-10-10"
    },
    "is_free": true,
    "is_cortos": true,
    "film_list": [
-    {
-     "title": "L'Evangile de la Révolution",
-     "director": "François-Xavier Drouet",
-     "country": "Francia, Bélgica",
-     "flags": "🇫🇷🇧🇪",
-     "year": 2024,
-     "duration": "115 min",
-     "synopsis": "El auge revolucionario de América Latina en el siglo XX se debe mucho a la participación de millones de cristianos, comprometidos en luchas políticas en nombre de la fe. Inspirados por la teología de la liberación, desafiaron a los regímenes militares y a las oligarquías. Cuestionando la idea de la religión como opio del pueblo, la película va al encuentro de los que vieron en la revolución la llegada del Reino de Dios, en la tierra antes que en el cielo.",
-     "synopsis_lang": "es",
-     "poster": "/assets/midbo-2026/l-evangile-de-la-revolution.jpg",
-     "posterSource": "tmdb",
-     "lbSlug": "the-gospel-of-revolution",
-     "tmdb_id": 1303398,
-     "synopsis_en": "The revolutions that swept Latin America in the second half of the 20th century owe much to the participation of millions of Christians who engaged in political struggles in the name of their faith, paying a heavy toll for undermining the traditional relationship between the Church and power. Driven by Liberation theology, they challenged military regimes and oligarchies, risking their lives. Far from Marx's idea of religion as 'opium of the people', here the people fought for the advent of the Kingdom of God on Earth, rather than in Heaven.",
-     "title_en": "The Gospel of Revolution",
-     "genre": "Documental"
-    },
     {
      "title": "A Film to Remind Us of Utopia",
      "director": "Reinaldo Cardenuto",
@@ -4324,10 +4249,11 @@
      "genre": "Documental"
     }
    ],
+   "_fid": "f_1ac7f682bd",
+   "id": "f_1ac7f682bd",
    "titulos_anteriores": [
     "Programa 7: Reactivar los archivos para el presente"
-   ],
-   "id": "f_1ac7f682bd"
+   ]
   },
   {
    "title": "El valor de la palabra",
@@ -4362,6 +4288,8 @@
    "lbSlug": "el-valor-de-la-palabra",
    "tmdb_id": 1665557,
    "synopsis_en": "The long career of Colombian filmmaker Marta Rodríguez demonstrates a commitment to documenting the history of repression and struggle of indigenous and marginalized peoples.",
+   "_fid": "f_b0e1ddee1e",
+   "id": "f_b0e1ddee1e",
    "is_free": false,
    "_procedencia": {
     "entrada": {
@@ -4369,8 +4297,7 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   },
-   "id": "f_b0e1ddee1e"
+   }
   },
   {
    "title": "Bojayá: la verdad desde adentro",
@@ -4404,6 +4331,8 @@
    "tmdb_id": 1738325,
    "synopsis_en": "Three leaders from Bojayá travel throughout the municipality carrying a \"truth chest\", gathering questions and demands from the community to confront those responsible for the armed conflict in their territory. After their journey, they share the answers they have found with the community, working together to construct a truth from within.",
    "_programa_original": "Programa 1: Reparación simbólica y búsquedas por justicia restaurativa",
+   "_fid": "f_5561ed525d",
+   "id": "f_5561ed525d",
    "is_free": false,
    "_procedencia": {
     "entrada": {
@@ -4411,8 +4340,44 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
+   }
+  },
+  {
+   "title": "L'Evangile de la Révolution",
+   "type": "film",
+   "section": "🪞 Espejos: Gestos de Reparación",
+   "director": "François-Xavier Drouet",
+   "year": 2024,
+   "country": "Francia, Bélgica",
+   "flags": "🇫🇷🇧🇪",
+   "duration": "115 min",
+   "genre": "Documental",
+   "_ancla": [
+    "Alianza Francesa - Bogotá",
+    "2026-11-04",
+    "16:00"
+   ],
+   "day": "2026-11-04",
+   "time": "16:00",
+   "day_order": 8,
+   "venue": "Alianza Francesa - Bogotá",
+   "has_qa": true,
+   "qa_type": "team",
+   "synopsis": "El auge revolucionario de América Latina en el siglo XX se debe mucho a la participación de millones de cristianos, comprometidos en luchas políticas en nombre de la fe. Inspirados por la teología de la liberación, desafiaron a los regímenes militares y a las oligarquías. Cuestionando la idea de la religión como opio del pueblo, la película va al encuentro de los que vieron en la revolución la llegada del Reino de Dios, en la tierra antes que en el cielo.",
+   "synopsis_lang": "es",
+   "poster": "/assets/midbo-2026/l-evangile-de-la-revolution.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://midbo.co/peliculas/l-evangile-de-la-revolution/",
+    "date": "2026-10-10"
    },
-   "id": "f_5561ed525d"
+   "is_free": true,
+   "lbSlug": "the-gospel-of-revolution",
+   "tmdb_id": 1303398,
+   "synopsis_en": "The revolutions that swept Latin America in the second half of the 20th century owe much to the participation of millions of Christians who engaged in political struggles in the name of their faith, paying a heavy toll for undermining the traditional relationship between the Church and power. Driven by Liberation theology, they challenged military regimes and oligarchies, risking their lives. Far from Marx's idea of religion as 'opium of the people', here the people fought for the advent of the Kingdom of God on Earth, rather than in Heaven.",
+   "title_en": "The Gospel of Revolution",
+   "_fid": "f_3c54af994b",
+   "id": "f_3c54af994b"
   },
   {
    "title": "Cuba y la noche",
@@ -4447,6 +4412,8 @@
    "tmdb_id": 1714180,
    "synopsis_en": "Captured entirely on phone footage, a group of Cuban artists risk everything to document their uprising against a government trying to silence them.",
    "title_en": "The Long Cuban Night",
+   "_fid": "f_f195c56576",
+   "id": "f_f195c56576",
    "is_free": false,
    "_procedencia": {
     "entrada": {
@@ -4454,8 +4421,7 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   },
-   "id": "f_f195c56576"
+   }
   },
   {
    "title": "Lolita en Honda",
@@ -4489,6 +4455,8 @@
    "lbSlug": "lolita-en-honda",
    "tmdb_id": 1665546,
    "synopsis_en": "Lolita en Honda is an intimate journey into family memory, in which Daniel Torres explores his grandmother's childhood to unravel the marks of abandonment and internalized violence that shaped her character.",
+   "_fid": "f_a03a40de8b",
+   "id": "f_a03a40de8b",
    "is_free": false,
    "_procedencia": {
     "entrada": {
@@ -4496,8 +4464,7 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   },
-   "id": "f_a03a40de8b"
+   }
   },
   {
    "title": "Programa 2: Esta Tierra Canta Premoniciones",
@@ -4591,6 +4558,8 @@
      "genre": "Documental"
     }
    ],
+   "_fid": "f_4e2c1872e4",
+   "id": "f_4e2c1872e4",
    "titulos_anteriores": [
     "Programa 2: Esta tierra canta premoniciones"
    ],
@@ -4601,8 +4570,7 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   },
-   "id": "f_4e2c1872e4"
+   }
   },
   {
    "title": "El coloquio de los pájaros",
@@ -4638,6 +4606,8 @@
    "tmdb_id": 1657856,
    "synopsis_en": "There was once a group of Peruvian anarchist poets forced into hiding who, during their secret meetings, sought to assume a non-human identity. Drawing on the famous Persian fable of the same name, the filmmaker translates the power of poetry and friendship into images and sound, serving as def iant stances against the established order.",
    "title_en": "The Colloquium of the Birds",
+   "_fid": "f_3d3b4e839f",
+   "id": "f_3d3b4e839f",
    "is_free": false,
    "_procedencia": {
     "entrada": {
@@ -4645,8 +4615,7 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   },
-   "id": "f_3d3b4e839f"
+   }
   },
   {
    "title": "Les sœurs Pathan",
@@ -4681,6 +4650,8 @@
    "tmdb_id": 1148809,
    "synopsis_en": "Gujarat, West of India. Sofia and Suzain are two teenage sisters brought up in a humble household, taken care of by their father since their mother left. They were too young to remember, but 20 years ago, their family barely escaped the deadly 2002 Gujarat anti-Muslim riots. Refusing the grim day-to-day routine and the shadow of the past, Sofia and Suzain want to embrace life to the fullest. While they grow up, reality comes knocking.",
    "title_en": "The Pathan Sisters",
+   "_fid": "f_178b41417a",
+   "id": "f_178b41417a",
    "is_free": false,
    "_procedencia": {
     "entrada": {
@@ -4688,8 +4659,7 @@
      "regla": "mixed: sin dato de entrada = boleta",
      "marca": "supuesto"
     }
-   },
-   "id": "f_178b41417a"
+   }
   },
   {
    "title": "Master Class: La escucha en el cine directo",
@@ -4716,6 +4686,7 @@
    "requires_registration": true,
    "description": "Invitada: Claire Simon · Modera: Gustavo Vasco.",
    "description_lang": "es",
+   "_fid": "f_ef9ba8fc1f",
    "id": "f_ef9ba8fc1f"
   },
   {
@@ -4743,6 +4714,7 @@
    "requires_registration": true,
    "description": "Invitados: Eduardo Rencurrel, Jacobo del Castillo · Modera: Adriana H. Bocanegra.",
    "description_lang": "es",
+   "_fid": "f_4fbd4a2752",
    "id": "f_4fbd4a2752"
   },
   {
@@ -4770,6 +4742,7 @@
    "requires_registration": true,
    "description": "Invitades: Marta Rodríguez y Felipe Colmenares.",
    "description_lang": "es",
+   "_fid": "f_89ab9cba31",
    "id": "f_89ab9cba31"
   },
   {
@@ -4797,6 +4770,7 @@
    "requires_registration": true,
    "description": "Invitados: Luis Guillermo Torres (ATMedios) y Andrés Carmona, director Estancia (2024) · Modera: Julio Lamaña.",
    "description_lang": "es",
+   "_fid": "f_78956f102c",
    "id": "f_78956f102c"
   },
   {
@@ -4824,6 +4798,7 @@
    "requires_registration": true,
    "description": "Invitada: Mercedes Gaviría · Modera: María Fernanda Carrillo.",
    "description_lang": "es",
+   "_fid": "f_779269acf2",
    "id": "f_779269acf2"
   },
   {
@@ -4851,6 +4826,7 @@
    "requires_registration": true,
    "description": "Invitades: Archipiélago Sonoro y Guateque Cine · Modera: Laura Alhach.",
    "description_lang": "es",
+   "_fid": "f_165fb026bc",
    "id": "f_165fb026bc"
   },
   {
@@ -4878,6 +4854,7 @@
    "requires_registration": true,
    "description": "Invitadas: Azul Aizenberg y Juana Schlenker.",
    "description_lang": "es",
+   "_fid": "f_acc827aa48",
    "id": "f_acc827aa48"
   },
   {
@@ -4905,6 +4882,7 @@
    "requires_registration": true,
    "description": "Invitades: Ana María López y equipo de producción.",
    "description_lang": "es",
+   "_fid": "f_13eaaaab9f",
    "id": "f_13eaaaab9f"
   },
   {
@@ -4932,6 +4910,7 @@
    "requires_registration": true,
    "description": "Invitado: Samuel Larson · Modera: Andrew Tucker.",
    "description_lang": "es",
+   "_fid": "f_5a0b229f1e",
    "id": "f_5a0b229f1e"
   },
   {
@@ -4957,6 +4936,7 @@
    },
    "is_free": true,
    "requires_registration": true,
+   "_fid": "f_b46ecf46d9",
    "id": "f_b46ecf46d9"
   },
   {
@@ -4984,17 +4964,15 @@
    "requires_registration": true,
    "description": "Invitados: Nelson Vergara, Pablo Mora, Carlos Santa · Modera: Jorjan Betancurt.",
    "description_lang": "es",
+   "_fid": "f_4eb7765ac2",
    "id": "f_4eb7765ac2"
   }
  ],
- "_avisos_duracion": [
-  "programa «Programa 7: Reactivar los archivos para el presente» (2026-11-04 14:00): sus obras suman 212 min (3 de 3 con duración) y la función dura 97"
- ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-16T11:02:40",
+  "fecha": "2026-10-19T07:24:30",
   "plan_sha": "3bda549d3825e850",
-  "paso": 6,
-  "cmd": "python3 pipeline/ensamblar.py midbo-2026"
+  "paso": 8,
+  "cmd": "python3 pipeline/midbo-2026-verificar.py"
  }
 }

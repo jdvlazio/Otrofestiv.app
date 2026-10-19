@@ -1,7 +1,7 @@
 {
  "_provenance": {
-  "fuente": "ids-legado.py: ids estables congelados desde lo publicado (docs/FUNCION.md §11.2)",
-  "capturado": "2026-10-18"
+  "fuente": "ensamblar.py: ids estables de las funciones (docs/FUNCION.md C1)",
+  "capturado": "2026-10-19"
  },
  "funciones": {
   "f_4476aa7fd2": {
@@ -486,6 +486,13 @@
    "hora": "16:00",
    "sala": "Sala 2",
    "titulo": "bojaya la verdad desde adentro"
+  },
+  "f_3c54af994b": {
+   "sede": "Alianza Francesa - Bogotá",
+   "dia": "2026-11-04",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "l evangile de la revolution"
   },
   "f_f195c56576": {
    "sede": "Cinemateca de Bogotá - Bogotá",
