@@ -13,10 +13,15 @@
   {
    "cmd": "python3 pipeline/ig-lecturas.py DefnwMYDHVV DeiGFLoIKqz DeX03IEDKSe",
    "que": "verificador: cuatro lecturas independientes de las láminas (16 oct: 0 diferencias en títulos, directores, horas, duraciones; solo logos)"
+  },
+  {
+   "cmd": "python3 pipeline/miradas-2026-formacion.py",
+   "que": "las 5 actividades de mediación y formación (carrusel Dep67rsCZmE, 18 oct) → 18 sesiones con día, hora y lugar, transcritas a ojo"
   }
  ],
  "_fuentes_versionadas": {
   "festivals/staging/miradas-2026-catalogo.json": "la selección (42 obras) con las funciones de las iberoamericanas; la leerá el crudo",
-  "festivals/staging/miradas-2026-catalogo-enriquecido.json": "las fichas TMDB/cascada (23 de 42), que escribe el paso 2. Es el trabajo que el montaje reusa cuando salga la parrilla."
+  "festivals/staging/miradas-2026-catalogo-enriquecido.json": "las fichas TMDB/cascada (23 de 42), que escribe el paso 2. Es el trabajo que el montaje reusa cuando salga la parrilla.",
+  "festivals/staging/miradas-2026-formacion.json": "las 5 actividades de formación con sus sesiones; la leerá el crudo"
  }
 }
