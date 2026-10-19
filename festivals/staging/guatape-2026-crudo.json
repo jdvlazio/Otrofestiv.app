@@ -32,7 +32,9 @@
    "event_kind": "taller",
    "seccion": "Actividades",
    "duracion_min": 180,
-   "sinopsis": "Taller en Iniciación Audiovisual."
+   "sinopsis": "Taller en Iniciación Audiovisual.",
+   "poster": "/assets/guatape-2026/cine-para-reflejar-territorio.jpg",
+   "posterSource": "oficial"
   },
   {
    "dia": "2026-10-21",
@@ -217,7 +219,9 @@
    "tipo": "evento",
    "event_kind": "taller",
    "seccion": "Actividades",
-   "sinopsis": "Taller de Creación Audiovisual Intergeneracional."
+   "sinopsis": "Taller de Creación Audiovisual Intergeneracional.",
+   "poster": "/assets/guatape-2026/el-reflejo-de-las-generaciones.jpg",
+   "posterSource": "oficial"
   },
   {
    "dia": "2026-10-22",
@@ -234,7 +238,9 @@
    "event_kind": "conversatorio",
    "seccion": "Actividades",
    "duracion_min": 120,
-   "sinopsis": "Conversatorio Actores Invitados. Como un actor lleva algo de si mismo a los personajes."
+   "sinopsis": "Conversatorio Actores Invitados. Como un actor lleva algo de si mismo a los personajes.",
+   "poster": "/assets/guatape-2026/el-reflejo-de-un-actor.jpg",
+   "posterSource": "oficial"
   },
   {
    "dia": "2026-10-22",
@@ -250,7 +256,9 @@
    "tipo": "evento",
    "event_kind": "taller",
    "seccion": "Actividades",
-   "duracion_min": 120
+   "duracion_min": 120,
+   "poster": "/assets/guatape-2026/taller-memoria-y-patrimonio-visual.jpg",
+   "posterSource": "oficial"
   },
   {
    "dia": "2026-10-22",
@@ -385,7 +393,9 @@
    "event_kind": "conversatorio",
    "seccion": "Actividades",
    "duracion_min": 90,
-   "sinopsis": "Una conversación para descubrir el trabajo, las decisiones y los desafios que hacen posible una película. Proyección CortoMetraje Desde Adentro."
+   "sinopsis": "Una conversación para descubrir el trabajo, las decisiones y los desafios que hacen posible una película. Proyección CortoMetraje Desde Adentro.",
+   "poster": "/assets/guatape-2026/detras-del-reflejo-el-productor.jpg",
+   "posterSource": "oficial"
   },
   {
    "dia": "2026-10-23",
@@ -401,7 +411,9 @@
    "tipo": "evento",
    "event_kind": "taller",
    "seccion": "Actividades",
-   "duracion_min": 120
+   "duracion_min": 120,
+   "poster": "/assets/guatape-2026/taller-memoria-y-patrimonio-visual.jpg",
+   "posterSource": "oficial"
   },
   {
    "dia": "2026-10-23",
@@ -438,7 +450,9 @@
    "event_kind": "taller",
    "seccion": "Actividades",
    "duracion_min": 180,
-   "sinopsis": "Taller de Actuación y efectos físicos."
+   "sinopsis": "Taller de Actuación y efectos físicos.",
+   "poster": "/assets/guatape-2026/reflejos-de-un-personaje.jpg",
+   "posterSource": "oficial"
   },
   {
    "dia": "2026-10-23",
@@ -454,7 +468,9 @@
    "tipo": "evento",
    "event_kind": "conversatorio",
    "seccion": "Actividades",
-   "duracion_min": 60
+   "duracion_min": 60,
+   "poster": "/assets/guatape-2026/conversatorio-actores.jpg",
+   "posterSource": "oficial"
   },
   {
    "dia": "2026-10-23",
@@ -471,7 +487,9 @@
    "event_kind": "conversatorio",
    "seccion": "Actividades",
    "duracion_min": 60,
-   "sinopsis": "Creando un video juego."
+   "sinopsis": "Creando un video juego.",
+   "poster": "/assets/guatape-2026/conversatorio-historias-que-se-juegan.jpg",
+   "posterSource": "oficial"
   },
   {
    "dia": "2026-10-23",
@@ -557,7 +575,9 @@
    "event_kind": "taller",
    "seccion": "Actividades",
    "duracion_min": 90,
-   "sinopsis": "Taller."
+   "sinopsis": "Taller.",
+   "poster": "/assets/guatape-2026/historias-que-se-juegan.jpg",
+   "posterSource": "oficial"
   },
   {
    "dia": "2026-10-23",
@@ -662,7 +682,9 @@
    "event_kind": "conversatorio",
    "seccion": "Actividades",
    "duracion_min": 60,
-   "sinopsis": "Conversatorio."
+   "sinopsis": "Conversatorio.",
+   "poster": "/assets/guatape-2026/cine-con-legado-social.jpg",
+   "posterSource": "oficial"
   },
   {
    "dia": "2026-10-24",
@@ -679,7 +701,9 @@
    "event_kind": "taller",
    "seccion": "Actividades",
    "duracion_min": 180,
-   "sinopsis": "Taller de Actuación y efectos físicos."
+   "sinopsis": "Taller de Actuación y efectos físicos.",
+   "poster": "/assets/guatape-2026/reflejos-de-un-personaje.jpg",
+   "posterSource": "oficial"
   },
   {
    "dia": "2026-10-24",
@@ -733,7 +757,10 @@
     "lamina": 8
    },
    "titulo": "La Sierra",
-   "seccion": "Terror"
+   "seccion": "Terror",
+   "director": "Carlos Ortiz",
+   "_creditos_fuente": "https://www.instagram.com/p/DervW-Tifu0/",
+   "_creditos_por_que": "la pieza del festival para la función del 24 oct en La Manuela imprime el afiche («Sierra – El álbum mortuorio») y «Dirrctor Carlos Ortiz»"
   },
   {
    "dia": "2026-10-24",
@@ -823,7 +850,9 @@
    "tipo": "evento",
    "event_kind": "conversatorio",
    "seccion": "Actividades",
-   "sinopsis": "Donde el Cine enuentra su Reflejo. Coversatorio Festivales Invitados."
+   "sinopsis": "Donde el Cine enuentra su Reflejo. Coversatorio Festivales Invitados.",
+   "poster": "/assets/guatape-2026/el-reflejo-de-los-festivales.jpg",
+   "posterSource": "oficial"
   },
   {
    "dia": "2026-10-25",
@@ -840,7 +869,9 @@
    "event_kind": "conversatorio",
    "seccion": "Actividades",
    "duracion_min": 60,
-   "sinopsis": "Conversatorio Directores Invitados."
+   "sinopsis": "Conversatorio Directores Invitados.",
+   "poster": "/assets/guatape-2026/tres-miradas-un-reflejo.jpg",
+   "posterSource": "oficial"
   },
   {
    "dia": "2026-10-25",
@@ -856,7 +887,9 @@
    "tipo": "evento",
    "event_kind": "conversatorio",
    "seccion": "Actividades",
-   "sinopsis": "Conversatorio con los directores y actores de la Película Sangre de Palermo."
+   "sinopsis": "Conversatorio con los directores y actores de la Película Sangre de Palermo.",
+   "poster": "/assets/guatape-2026/sangre-de-palermo-y-su-reflejo.jpg",
+   "posterSource": "oficial"
   },
   {
    "dia": "2026-10-25",
