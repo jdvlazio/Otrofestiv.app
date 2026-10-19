@@ -1219,10 +1219,12 @@ export const FESTIVAL_CONFIG={
     fullName:'Guatapé Film Fest 2026 — 4.ª edición',shortName:'GUATAPÉ',
     city:'Guatapé',country:'CO',
     dates:'21–25 OCT',dates_en:'OCT 21–25',year:2026,timezoneOffset:'-05:00',
-    // PROVISORIO (18 oct 2026): el festival no publicó un afiche propio; es la
-    // portada de su carrusel de programación (@guatapefilmfest p/Def6fhKDSQy),
-    // estirada a 2:3 como todo keyArt. Se cambia cuando aparezca el afiche.
-    keyArt:'/assets/keyart/guatape2026-v1.jpg',
+    // EL AFICHE OFICIAL de la 4.ª edición, el de la portada de guatapefilmfest.com
+    // (assets.cdn.filesafe.space/…/6aaacfd8aabc65fd5d0bac70.jpeg, 1023×1537, 2:3):
+    // el original estirado a 400×600, sin bandas ni recorte. El QR es parte del
+    // afiche publicado. La v1 era la portada del carrusel de programación (Juan,
+    // 18 oct: «no es ese»).
+    keyArt:'/assets/keyart/guatape2026-v2.jpg',
     // EL LEMA DE LA 4.ª EDICIÓN
     tagline:'El Reflejo del Cine',
     instagram:'guatapefilmfest', storageKey:'guatape2026_',festivalStartStr:'2026-10-21T00:00:00',festivalEndStr:'2026-10-25T23:59:00',
