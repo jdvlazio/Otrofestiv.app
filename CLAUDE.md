@@ -164,7 +164,7 @@ _Sin features activas en `.specify/features/`._
 desde hace tiempo. No están en pruebas cerradas.
 
 - **iOS:** https://apps.apple.com/co/app/otrofestiv/id6769367002 — gratis.
-  `IPHONEOS_DEPLOYMENT_TARGET = 26.0` (proyecto nativo en iCloud `10_iOS`).
+  `IPHONEOS_DEPLOYMENT_TARGET = 26.0` (proyecto Xcode en el repo: `native/ios/`).
 - **Android:** https://play.google.com/store/apps/details?id=app.otrofestiv.mobile
 
 > ⚠️ Este bloque decía «Closed testing — Alpha» mucho después de que ambas apps

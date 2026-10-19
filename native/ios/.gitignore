@@ -1,0 +1,6 @@
+xcuserdata/
+*.bak-*
+-Xcc/
+DerivedData/
+build/
+.DS_Store
