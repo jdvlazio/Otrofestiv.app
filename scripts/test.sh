@@ -29,7 +29,12 @@ cd "$(dirname "$0")/.."
 # Primer puerto libre desde 3000. El rango da margen de sobra: cada corrida toma
 # uno y lo suelta al terminar.
 puerto=""
-for p in $(seq 3000 3099); do
+# Desde un punto AL AZAR (19 oct 2026): empezando siempre en 3000, dos corridas de
+# dos sesiones elegían el mismo puerto casi a la vez y la segunda usaba el servidor
+# de la primera — al terminar esa, se lo llevaba y caían TODOS los tests juntos.
+_ini=$((RANDOM % 100))
+for _k in $(seq 0 99); do
+  p=$((3000 + (_ini + _k) % 100))
   if ! (exec 3<>"/dev/tcp/127.0.0.1/$p") 2>/dev/null; then puerto=$p; break; fi
   exec 3>&- 2>/dev/null || true
 done
