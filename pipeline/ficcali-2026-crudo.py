@@ -413,9 +413,13 @@ def main():
             # la meta de la tarjeta, si es de ESTA actividad: una línea que se
             # repite en varias («Cali. Panel en alianza con la Academia…») es del
             # lugar o del ciclo, no de la actividad
-            if x.get('meta_impresa') and x['meta_impresa'] not in ('Cali, Colombia', 'Cali, Colombia.') \
-                    and sum(1 for y in T if y.get('meta_impresa') == x['meta_impresa']) == 1:
-                r['invitados'] = x['meta_impresa']
+            # «Link de inscripción aquí.» es el rótulo del enlace (18 oct: la web lo
+            # pegó a la línea de los seminarios), no texto de la actividad: sin él
+            # la línea del 20 dejaba de ser única y se perdía su descripción
+            _meta = lambda y: re.sub(r'\s*Link de inscripci[oó]n aqu[ií]\.?', '', y.get('meta_impresa') or '').strip()
+            if _meta(x) and _meta(x) not in ('Cali, Colombia', 'Cali, Colombia.') \
+                    and sum(1 for y in T if _meta(y) == _meta(x)) == 1:
+                r['invitados'] = _meta(x)
         if x['id'] in TITULO:
             r['titulo'] = TITULO[x['id']]
         if x['id'] in SALA_TARJETA:
