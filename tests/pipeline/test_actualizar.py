@@ -119,7 +119,10 @@ class Robustez(unittest.TestCase):
     def test_deshacer_borra_lo_nuevo(self):
         import tempfile, subprocess
         d = tempfile.mkdtemp()
-        subprocess.run(['git', 'init', '-q', d])
+        # Sin el GIT_* heredado: dentro de un hook, `git init` re-inicializaba el
+        # repo del hook (como bare) en vez de crear uno en `d`.
+        limpio = {k: v for k, v in os.environ.items() if not k.startswith('GIT_')}
+        subprocess.run(['git', 'init', '-q', d], env=limpio)
         os.makedirs(os.path.join(d, 'festivals', 'staging'))
         open(os.path.join(d, 'festivals', 'staging', 'nuevo.json'), 'w').write('{}')
         viejo = actualizar.REPO

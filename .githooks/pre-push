@@ -9,6 +9,12 @@
 # rompe el flujo por su propio entorno se desactiva y deja de proteger.
 set -uo pipefail
 cd "$(git rev-parse --show-toplevel)" || exit 0
+# Git exporta GIT_DIR a los hooks. Lo hereda todo lo que corre validate.py, y un
+# `git init` en una carpeta temporal (tests/pipeline/test_actualizar.py) re-inicializaba
+# el repo REAL como bare: desde un worktree, cada push dejaba la carpeta principal
+# en `core.bare = true` (19 oct 2026, dos veces). Los guardianes trabajan sobre la
+# carpeta en la que están, no sobre el repo que les llega por el entorno.
+unset GIT_DIR GIT_WORK_TREE GIT_INDEX_FILE GIT_COMMON_DIR GIT_PREFIX
 [ -f validate.py ] || exit 0
 command -v python3 >/dev/null 2>&1 || exit 0
 
