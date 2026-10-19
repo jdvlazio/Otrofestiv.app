@@ -9,6 +9,8 @@
 // `apagado:true` en el índice desactiva el almacén para todos (interruptor).
 import { report } from '../telemetry.js';
 import { _fetchFestivalJson, festivalJsonUrl } from './loader.js';
+import { FESTIVAL_CONFIG } from '../config.js';
+import { aplicarFichas, fichasDelIndice, guardarFichas } from '../fichas.js';
 
 export const DATOS_URL='https://eytxrvbnwzxuedbmnnqr.supabase.co/storage/v1/object/public/datos/';
 let _indice=null, _indiceAt=0;
@@ -49,4 +51,19 @@ export async function cargarDatosFestival(id, tries=3, timeoutMs=6000){
   }
   origenDatos[id]='web';
   return _fetchFestivalJson(festivalJsonUrl(id),tries,timeoutMs);
+}
+
+// refrescarFichas() — baja el índice y aplica las fichas que trae (Etapa 2·B1).
+// Las guarda para el PRÓXIMO arranque, que ya sale con ellas desde config.js.
+// Devuelve los ids que cambiaron en ESTA sesión (la portada se re-dibuja con eso).
+// En el servidor de pruebas no baja nada: los tests ven la copia local, como con
+// los datos. Si el almacén está apagado, se olvida lo guardado (vuelve a la copia
+// de la app): el interruptor apaga TODO lo que viene del almacén.
+export async function refrescarFichas(){
+  if(_servidorDePruebas()) return [];
+  const ix=await _indiceDatos();
+  if(!ix) return [];
+  const fichas=fichasDelIndice(ix);
+  guardarFichas(fichas);
+  return aplicarFichas(FESTIVAL_CONFIG, fichas);
 }
