@@ -43,7 +43,31 @@ festivals/<id>.json ─ publicar-datos.py ─▶ guardianes (≈2 min) ─▶ ra
 | corregir un festival ya | editar (o re-armar con el pipeline) y `python3 pipeline/publicar-datos.py <id>` |
 | ver si pasaría | `python3 pipeline/publicar-datos.py <id> --probar` |
 | volver atrás | dejar el archivo como estaba (`git checkout <commit> -- festivals/<id>.json`) y publicar |
+| cambiar el afiche de portada, las fechas, el nombre o el estado de un festival | editar su entrada en `FESTIVAL_CONFIG` (src/config.js; afiche nuevo = archivo NUEVO en assets/keyart/) y `python3 pipeline/publicar-datos.py <id>` |
+| sumar un festival nuevo a la portada | su entrada en `FESTIVAL_CONFIG` + su JSON, y `publicar-datos.py <id>` |
 | apagar el almacén para todos | `python3 pipeline/publicar-datos.py --apagar` (y `--encender`): la app vuelve a la web en ≤1 min |
+
+## La ficha del festival (Etapa 2·B1, 19 oct 2026)
+
+La **ficha** es lo que la portada necesita antes de bajar ningún festival:
+nombre, lema, ciudad, fechas, zona horaria, afiche de portada, estado. Los
+campos son `CAMPOS_FICHA` en `src/fichas.js` (nunca `storageKey`: es la llave de
+lo que cada usuario guardó).
+
+- **Se escribe** donde siempre, en `FESTIVAL_CONFIG` (src/config.js): ahí la
+  vigilan sus guardianes (nombre oficial, afiche 2:3, fechas del afiche, zona…).
+- **Se publica** con `publicar-datos.py`: viaja en el mismo commit que el JSON
+  (`fichas/<id>.json`, extraída con `scripts/ficha-de.mjs`, el mismo módulo que
+  usa la app) junto con la imagen del afiche. La función la pone en el índice y
+  guarda el afiche en `datos/keyart/<huella>.<ext>`: el nombre es su contenido,
+  así que un afiche nuevo nunca queda tapado por el viejo en los teléfonos.
+- **La app** la aplica encima de la copia que trae adentro: al arrancar con la
+  última copia guardada (la portada sale al instante y sin conexión) y, al bajar
+  el índice, re-dibuja la portada si algo cambió. Un festival que la app no
+  conoce aparece si su ficha trae lo mínimo.
+- **Guardián:** `[fichas-campos]` — la lista de campos es la misma en la app y
+  en la función.
+- El PR con el cambio de config.js va después, para la historia, como con los datos.
 
 ## Lo que NO pasa por acá
 

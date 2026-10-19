@@ -10,6 +10,10 @@
 //   3. lo guarda en datos/festivales/<id>/<sha12>.json (inmutable: si ya existe,
 //      no se toca) y apunta indice.json a esa versión, guardando la anterior;
 //   4. anota la publicación en publicaciones_datos.
+// Etapa 2·B1 (19 oct 2026): si el commit trae fichas/<id>.json (la FICHA del
+// festival, extraída de FESTIVAL_CONFIG por el comando), va al índice; y si su
+// keyArt es /assets/keyart/…, la imagen de ESE commit se guarda en
+// datos/keyart/<sha12>.<ext> (inmutable) y la ficha apunta ahí.
 // Volver atrás = revertir el commit en la rama `datos` y publicar de nuevo: un
 // solo camino, siempre con historia en git.
 
@@ -19,6 +23,13 @@ const REPO = "jdvlazio/Otrofestiv.app";
 const RAMA = "datos";
 const RE_FEST = /^([a-z0-9_-]{3,40}|_control)$/;
 const RE_SHA = /^[0-9a-f]{40}$/;
+// Mismos campos que src/fichas.js (CAMPOS_FICHA) — [fichas-campos] en validate.py
+// verifica que las dos listas sean iguales.
+const CAMPOS_FICHA = ["name","fullName","shortName","displayName","tagline","city","country",
+  "metroArea","dates","dates_en","year","timezoneOffset","festivalStartStr","festivalEndStr",
+  "keyArt","keyArtPos","group","status","priority","instagram"];
+const PUBLICO = "https://eytxrvbnwzxuedbmnnqr.supabase.co/storage/v1/object/public/datos/";
+const TIPOS: Record<string, string> = { jpg: "image/jpeg", jpeg: "image/jpeg", png: "image/png", webp: "image/webp" };
 
 const json = (status: number, body: unknown) =>
   new Response(JSON.stringify(body), { status, headers: { "Content-Type": "application/json" } });
@@ -87,10 +98,34 @@ Deno.serve(async (req) => {
   const prev = await st.download("indice.json");
   if (prev.data) { try { indice = JSON.parse(await prev.data.text()); } catch { /* índice ilegible: se rehace */ } }
   const antes = indice.festivales[fest];
+
+  // 3·b. La ficha (opcional: un commit sin fichas/<id>.json conserva la anterior).
+  let ficha: Record<string, unknown> | null = (antes?.ficha as Record<string, unknown>) ?? null;
+  const fr = await fetch(`https://raw.githubusercontent.com/${REPO}/${sha}/fichas/${fest}.json`);
+  if (fr.ok) {
+    let crudo: Record<string, unknown>;
+    try { crudo = await fr.json(); } catch { return json(422, { error: "la ficha no es JSON" }); }
+    ficha = {};
+    for (const k of CAMPOS_FICHA) if (k in crudo) ficha[k] = crudo[k];
+    const art = typeof ficha.keyArt === "string" ? ficha.keyArt : "";
+    const m = art.match(/^\/assets\/keyart\/[A-Za-z0-9._-]+\.(jpe?g|png|webp)$/i);
+    if (art && !m && !art.startsWith(PUBLICO + "keyart/")) return json(422, { error: `keyArt inválido: ${art}` });
+    if (m) {
+      const im = await fetch(`https://raw.githubusercontent.com/${REPO}/${sha}${art}`);
+      if (!im.ok) return json(422, { error: `el afiche ${art} no está en el commit` });
+      const ib = new Uint8Array(await im.arrayBuffer());
+      const ext = m[1].toLowerCase() === "jpeg" ? "jpg" : m[1].toLowerCase();
+      const ruta = `keyart/${(await sha256(ib)).slice(0, 12)}.${ext}`;
+      const ku = await st.upload(ruta, ib, { contentType: TIPOS[ext], cacheControl: "31536000", upsert: false });
+      if (ku.error && !/exists|Duplicate/i.test(ku.error.message)) { console.error("publicar-datos keyart:", ku.error.message); return json(500, { error: "no se pudo guardar el afiche" }); }
+      ficha.keyArt = PUBLICO + ruta;
+    }
+  }
   const ahora = new Date().toISOString();
   indice.festivales[fest] = {
     archivo, sha256: huella, bytes: bytes.length, commit: sha, publicado: ahora,
     anterior: antes && antes.archivo !== archivo ? antes.archivo : (antes?.anterior ?? null),
+    ...(ficha ? { ficha } : {}),
   };
   indice.version = (indice.version || 1);
   const idx = await st.upload("indice.json", new TextEncoder().encode(JSON.stringify(indice)), {
@@ -104,5 +139,5 @@ Deno.serve(async (req) => {
     accion: antes && b.revertir === true ? "revertir" : "publicar", por, nota: sha,
   });
   if (reg.error) console.error("publicar-datos registro:", reg.error.message);
-  return json(200, { ok: true, festival: fest, archivo, sha256: huella, bytes: bytes.length, igual: antes?.archivo === archivo });
+  return json(200, { ok: true, festival: fest, archivo, sha256: huella, bytes: bytes.length, igual: antes?.archivo === archivo, ficha });
 });

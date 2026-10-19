@@ -71,3 +71,46 @@ test('DF6 — en el servidor de pruebas manda el archivo local', async ({ page }
   expect(await titulos(page)).not.toContain('DESDE EL ALMACÉN');
   expect(await origen(page)).toBe('web');
 });
+
+// ── Etapa 2·B1 (19 oct 2026): la FICHA del festival viene en el índice ─────────
+// La portada sale con la última ficha guardada y se re-dibuja si el índice trae
+// otra. Es lo que permite cambiar un afiche o una fecha sin publicar la app.
+const KEYART = ALMACEN + 'keyart/aaaaaaaaaaaa.jpg';
+async function indiceConFicha(page, ficha) {
+  await page.route(ALMACEN + 'indice.json*', r => r.fulfill({ contentType: 'application/json',
+    body: JSON.stringify({ version: 1, festivales: { 'leviza-2026': { archivo: ARCH, ficha } } }) }));
+  await page.route(KEYART + '*', async r => r.fulfill({ contentType: 'image/jpeg',
+    body: (await page.request.get('/assets/keyart/leviza2026.jpg')).body() }));
+}
+const cardLeviza = page => page.locator('#splash-rail .splash-card[data-fest="leviza2026"]');
+
+test('DF7 — una ficha nueva en el índice cambia la portada sin publicar la app', async ({ page }) => {
+  await indiceConFicha(page, { city: 'Ciudad Prueba', keyArt: KEYART });
+  await page.goto('/?almacen=1&simTime=' + encodeURIComponent(SIM));
+  await page.waitForSelector('html[data-app-ready="1"]', { state: 'attached', timeout: 15000 });
+  await expect(cardLeviza(page)).toHaveAttribute('data-meta', /Ciudad Prueba/, { timeout: 10000 });
+  await expect(cardLeviza(page).locator('img')).toHaveAttribute('src', KEYART);
+  // y queda guardada para el próximo arranque
+  const guardada = await page.evaluate(() => JSON.parse(localStorage.getItem('otf_fichas_v1') || '{}'));
+  expect(guardada.leviza2026 && guardada.leviza2026.city).toBe('Ciudad Prueba');
+});
+
+test('DF8 — el próximo arranque sale YA con la ficha guardada, aunque no haya red', async ({ page }) => {
+  await page.addInitScript(([k]) => {
+    if (!localStorage.getItem(k)) localStorage.setItem(k, JSON.stringify({ leviza2026: { city: 'Guardada' } }));
+  }, ['otf_fichas_v1']);
+  await page.route(ALMACEN + '**', r => r.abort());   // sin almacén: solo lo guardado
+  await page.goto('/?almacen=1&simTime=' + encodeURIComponent(SIM));
+  await page.waitForSelector('html[data-app-ready="1"]', { state: 'attached', timeout: 15000 });
+  await expect(cardLeviza(page)).toHaveAttribute('data-meta', /Guardada/);
+});
+
+test('DF9 — almacén apagado: la portada vuelve a la copia de la app', async ({ page }) => {
+  await page.route(ALMACEN + 'indice.json*', r => r.fulfill({ contentType: 'application/json',
+    body: JSON.stringify({ version: 1, apagado: true, festivales: { 'leviza-2026': { archivo: ARCH, ficha: { city: 'NO' } } } }) }));
+  await page.goto('/?almacen=1&simTime=' + encodeURIComponent(SIM));
+  await page.waitForSelector('html[data-app-ready="1"]', { state: 'attached', timeout: 15000 });
+  await page.waitForTimeout(1500);
+  await expect(cardLeviza(page)).not.toHaveAttribute('data-meta', /NO ·/);
+  expect(await page.evaluate(() => localStorage.getItem('otf_fichas_v1'))).toBe('{}');
+});
