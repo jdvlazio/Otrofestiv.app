@@ -18,11 +18,34 @@ unset GIT_DIR GIT_WORK_TREE GIT_INDEX_FILE GIT_COMMON_DIR GIT_PREFIX
 [ -f validate.py ] || exit 0
 command -v python3 >/dev/null 2>&1 || exit 0
 
-salida=$(python3 validate.py 2>&1) || true
-if printf '%s' "$salida" | grep -q "PUSH BLOQUEADO"; then
-  printf '\033[31m✗ validate.py no pasa — el push se detuvo acá, no en CI\033[0m\n' >&2
-  printf '%s\n' "$salida" | grep "✗" | sed 's/^/    /' >&2
+_frenar(){  # $1 = qué falló; $2 = el detalle. Por ARGUMENTO, no por pipe: dentro de
+            # un pipe corre en un subshell y su `exit 1` no detiene el hook (pasó).
+  printf '\033[31m✗ %s — el push se detuvo acá, no en CI\033[0m\n' "$1" >&2
+  printf '%s\n' "$2" | sed 's/^/    /' >&2
   printf '  (si es a propósito: git push --no-verify)\n' >&2
   exit 1
+}
+
+# EL CANDADO (unificado el 19 oct 2026). Vivía aparte en .git/hooks/pre-push, que
+# git NO ejecuta desde que el repo usa core.hooksPath: corría solo validate.py y
+# los otros tres pasos estaban apagados sin que nadie lo viera. Ahora es este archivo,
+# versionado, para todos los clones. Los mismos chequeos que el CI, en ~1 min.
+
+# 1. Nada a medias: un bump o un arreglo sin commitear sale distinto de lo probado.
+_sucio=$(git status --porcelain --untracked-files=no)
+[ -z "$_sucio" ] || _frenar 'hay cambios sin commitear (¿bump a medias?)' "$_sucio"
+
+# 2. validate.py
+salida=$(python3 validate.py 2>&1) || true
+if printf '%s' "$salida" | grep -q "PUSH BLOQUEADO"; then
+  _frenar 'validate.py no pasa' "$(printf '%s\n' "$salida" | grep "✗")"
 fi
+
+if command -v node >/dev/null 2>&1; then
+  # 3. la forma de los 35 festivales
+  salida=$(node scripts/validate-festivals.js 2>&1) || _frenar 'validate-festivals no pasa' "$(printf '%s\n' "$salida" | grep "✗" | head -15)"
+  # 4. los tests unitarios de dominio
+  salida=$(node --test tests/unit/*.test.js 2>&1) || _frenar 'tests unitarios' "$(printf '%s\n' "$salida" | grep -E "^not ok|^# fail" | head -15)"
+fi
+printf '\033[32m✓ candado: validate.py, validate-festivals y unit en verde\033[0m\n' >&2
 exit 0
