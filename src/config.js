@@ -632,6 +632,34 @@ export const PALMARES=[
   {fest:'girardota2026', categoria:'Categoría experimental o videoclip', nivel:'mencion', premio:'Mención de Honor',
    titulo:'De lo Oculto', autoria:'Daniel Rúa', obra:'De lo Oculto'},
 
+  // ── FILCMAR 2026 (8.º, Marinilla) — dos carruseles de @filcmar ──────────
+  // https://www.instagram.com/p/DepLnq-FRb6/ (18 oct, 5 láminas: 1.ª Competencia
+  // Latinoamericana) y https://www.instagram.com/p/DenIkaaFa1F/ (17 oct, 7
+  // láminas: 6.ª Competencia Universitaria). Leídos sin sesión por el embed y
+  // con OCR; la lámina 4 de la latinoamericana (título pintado sobre un
+  // pizarrón) se miró a ojo: «HDLT». «Petra y el Sol» y «HDLT» los publicamos en
+  // «Espíritu del Trasnoche», pero el festival los premia en la Latinoamericana:
+  // la categoría va como la pinta la lámina. Fuera: los 6 estímulos del mercado
+  // MORA (p/DepGub0lS1z), que premian proyectos, no obras proyectadas.
+  {fest:'filcmar2026', categoria:'1.ª Competencia Latinoamericana', nivel:'ganadora', premio:'Mejor Película',
+   titulo:'Lo demás es ruido', autoria:'Nicolás Pereda', obra:'Lo demás es ruido'},
+  {fest:'filcmar2026', categoria:'1.ª Competencia Latinoamericana', nivel:'mencion', premio:'Mención de Honor',
+   titulo:'La corazonada', autoria:'Diego Soto', obra:'La corazonada'},
+  {fest:'filcmar2026', categoria:'1.ª Competencia Latinoamericana', nivel:'mencion', premio:'Mención de Honor',
+   titulo:'HDLT', autoria:'Colectivo Artefactum', obra:'HDLT'},
+  {fest:'filcmar2026', categoria:'1.ª Competencia Latinoamericana', nivel:'mencion', premio:'Reconocimiento Especial',
+   titulo:'Petra y el Sol', autoria:'Malu Furche y Stefania Malacchini', obra:'Petra y el sol'},
+  {fest:'filcmar2026', categoria:'6.ª Competencia Universitaria', nivel:'ganadora', premio:'Mejor Obra Audiovisual',
+   titulo:'Pudor ante el asalto de los ojos furtivos', autoria:'Laura María Rodríguez', obra:'Pudor ante el asalto de los ojos furtivos'},
+  {fest:'filcmar2026', categoria:'6.ª Competencia Universitaria', nivel:'ganadora', premio:'Premio del jurado a creadores emergentes',
+   titulo:'Para no volver', autoria:'Tania Galvis', obra:'Para no volver'},
+  {fest:'filcmar2026', categoria:'6.ª Competencia Universitaria', nivel:'ganadora', premio:'Premio del público',
+   titulo:'Chicha la Chicharra', autoria:'Sofía Alejandra Uzcátegui', obra:'Chicha la chicharra'},
+  {fest:'filcmar2026', categoria:'6.ª Competencia Universitaria', nivel:'mencion', premio:'Mención de Honor',
+   titulo:'La pecera', autoria:'Ángela Tatiana Fonseca', obra:'La pecera'},
+  {fest:'filcmar2026', categoria:'6.ª Competencia Universitaria', nivel:'mencion', premio:'Mención de Honor',
+   titulo:'Agachar el rostro', autoria:'Camilo Medina Noy', obra:'Agachar el rostro'},
+
   // ── TIFF 2026 (Toronto) — anunciado el 20 sep ──
   // tiff.net no abrió desde aquí: SOLO lo que dicen al menos dos fuentes
   // independientes (AP en local10/ny1/ajc, thewrap.com, app.com.pk,
