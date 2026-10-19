@@ -5,12 +5,12 @@
 //   los builders foundational. El programa RENDER pesado (renderProgramaList,
 //   renderPeliculaView, _renderProgramaContent) es controller-coupled → Wave 7.
 //
-// DEPS: state(state.js), i18n(t), config(NOTICES). festival/view-state via STATE
+// DEPS: state(state.js), i18n(t), config(FESTIVAL_CONFIG: cfg.avisos/cfg.palmares, resueltos por el loader). festival/view-state via STATE
 //   BRIDGE (bare-global): _activeFestId, _DEFAULT_FEST_ID, _dismissedNotices,
 //   programaChip, _programaChipMatchFn (bridgeados en main.js TEST BRIDGE, D-6C-1).
 //   Los handlers _dismissNotice/setProgramaChip (data-action) viven en main.js.
 
-import { NOTICES, PALMARES, SECTION_ORDER_LIST, _DEFAULT_FEST_ID } from '../config.js';
+import { FESTIVAL_CONFIG, SECTION_ORDER_LIST, _DEFAULT_FEST_ID } from '../config.js';
 import { ICONS, _buildPosterV16, _secLabel, _secLabelFull, _sectionColor, escXML, makeProgramPoster, parseProgramTitle } from './components.js';
 import { _dayChips, _getItemPoster, _metaBadges, _plistPosterHtml, _programaStack, dayLabel, durFmt, emptyState, getFilmPoster, isNowShowing, isQaOnlyNow, posterParts, sala, vcfg, venueMatches, secMatches, venueCity, programParts, isCitySel, venueSelLabel,
  abiertaLabel } from './helpers.js';
@@ -66,8 +66,7 @@ function _noticeAfecta(n,f){
 export function getActiveNotices(){
   const festId=(_activeFestId||_DEFAULT_FEST_ID);
   const today=new Date(); today.setHours(0,0,0,0);
-  return NOTICES.filter(n=>{
-    if(n.festival!==festId) return false;
+  return ((FESTIVAL_CONFIG[festId]||{}).avisos||[]).filter(n=>{
     if(_dismissedNotices.has(_noticeKey(noticeId(n)))) return false;
     // Banner desaparece al día siguiente de la función cancelada
     if(n.date){
@@ -608,7 +607,8 @@ return`<div class="poster-card js-open-pel${f._cancelled?' is-cancelled':''}${in
 // (Forma A, POSTERS.md §6.0), que es la respuesta que la app ya da a cualquier
 // obra sin póster. Así el palmarés no hereda los huecos del catálogo.
 export function palmaresDe(festId){
-  const rows=PALMARES.filter(p=>p.fest===festId);
+  // cfg.palmares lo resuelve el loader (JSON del festival, o config.js en transición).
+  const rows=(FESTIVAL_CONFIG[festId]||{}).palmares||[];
   if(!rows.length) return null;
   const cats=[];
   rows.forEach(r=>{
