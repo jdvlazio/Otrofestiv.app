@@ -472,6 +472,12 @@ def ids_estables(viejo, nuevo, registro):
     (título Y día-hora-sede a la vez); no hay ids repetidos."""
     mal = []
     nuevos = [f.get('id') for f in nuevo.get('films') or [] if f.get('id')]
+    # en un festival con ids, TODA función tiene el suyo: la que entró por una
+    # afirmación existe:{…} salía sin id (Guatapé, 18 oct) y la app no la podría seguir
+    if nuevos:
+        for f in nuevo.get('films') or []:
+            if not f.get('id') and f.get('day') and f.get('time') and f.get('venue'):
+                mal.append(f'«{f.get("title")}» {f.get("day")} {f.get("time")}: función sin id en un festival con ids')
     for i in sorted({x for x in nuevos if nuevos.count(x) > 1}):
         mal.append(f'{i}: id repetido en dos funciones')
     ahora = {f['id']: f for f in nuevo.get('films') or [] if f.get('id')}

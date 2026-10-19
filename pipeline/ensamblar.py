@@ -682,6 +682,14 @@ def ensamblar(fid, escribir=True):
         if escribir and os.path.exists(_conf_p):   # H2: --ver no escribe nada
             os.remove(_conf_p)
         films[:] = _r.funciones
+        # una función que agregó una afirmación (existe:{…}) trae su `_fid` del
+        # resolutor pero no pasó por ids_del_montaje: publica su id igual
+        for _f in films:
+            if _f.get('_fid') and not _f.get('id'):
+                _f['id'] = _f['_fid']
+            # …y su day_order, del mismo calendario que las demás
+            if _f.get('day_order') is None and _f.get('day') in orden:
+                _f['day_order'] = orden[_f['day']]
         print(f'  modelo de la función: {len(_afs)} afirmaciones · {len(films)} funciones')
     # L7: el registro se reescribe solo si cambió lo que guarda (sin ruido diario),
     # y solo después de que el modelo no frenó
