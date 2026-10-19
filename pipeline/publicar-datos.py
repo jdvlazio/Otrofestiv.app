@@ -8,7 +8,8 @@ Uso:
 
 Qué hace, en orden (si un paso falla, no sigue). Los GUARDIANES son los mismos
 que protegen hoy un PR de datos — publicar aparte no se salta ninguno (Juan, 18 oct):
-  1. guardianes:
+  1. guardianes (los tests de navegador leen el archivo LOCAL: en el servidor de
+     pruebas la app no usa el almacén — datos-fuente.js, 19 oct 2026):
      a. scripts/validate-festivals.js <festival>   (forma del festival, segundos)
      b. validate.py completo                        (172 chequeos, ~40 s)
      c. si el festival tiene pipeline: el archivo tiene que ser EXACTAMENTE lo que
@@ -17,6 +18,7 @@ que protegen hoy un PR de datos — publicar aparte no se salta ninguno (Juan, 1
         y se perdería en el próximo armado;
      d. tests de navegador de ESE festival (festivals.spec + recorrido): la app
         lo abre, se arma un plan y Mi Plan lo muestra;
+     e. planificador, Mi Plan y avisos: lo mismo que el CI de un PR de datos;
   2. lo sube a la rama `datos` del repo SIN tocar el checkout (plumbing de git:
      blob → árbol → commit sobre la punta de `datos` → push). Si el archivo es
      igual al de la punta, no hay commit nuevo;
@@ -123,6 +125,20 @@ def guardianes(fest, ruta, contenido):
         return
     _correr(f'tests de navegador de {cfg}',
             ['npx', 'playwright', 'test', *specs, '-g', cfg, '--workers=1', '--reporter=line'], tiempo=600)
+    # e. lo mismo que corre el CI para un PR de datos (playwright.yml, job «datos»):
+    # planificador y Mi Plan, más los avisos, que desde el 19 oct viajan EN el dato.
+    # Publicar aparte no puede probar MENOS que el PR que reemplaza (hallazgo del
+    # 19 oct: estos tres no corrían acá). Cada uno usa festivales FIJOS y ninguno
+    # recorre todos: un archivo que no nombra a este festival no carga su JSON y su
+    # dato no lo puede romper. Se corren los que lo nombran (los tres: 566 s → ~0–3 min).
+    extra = [sp for sp in ['tests/planner.spec.js', 'tests/miplan.spec.js', 'tests/avisos.spec.js']
+             if re.search(r"['\"/]" + '(' + re.escape(cfg) + '|' + re.escape(fest) + r')[\'\"./]',
+                          open(os.path.join(REPO, sp), encoding='utf-8').read())]
+    if extra:
+        _correr(f'planificador / Mi Plan / avisos con {cfg} ({len(extra)} archivo(s))',
+                ['npx', 'playwright', 'test', *extra, '--workers=1', '--reporter=line'], tiempo=900)
+    else:
+        print(f'  · planificador / Mi Plan / avisos: ninguno carga {cfg}')
 
 
 def _commit_en_datos(ruta, contenido, mensaje):
