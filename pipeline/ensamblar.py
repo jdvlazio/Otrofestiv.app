@@ -326,6 +326,13 @@ def _titulos_anteriores(fid, films):
     renombres = [dict(r, ahora=caja.titulo(r['ahora']))
                  if r['ahora'] not in vigentes and caja.titulo(r['ahora']) in vigentes else r
                  for r in renombres]
+    # UNA CADENA (20 oct 2026, MUBI): «A» → «B» y después «B» → «C». El renombre
+    # viejo no se borra ([renombre-no-se-borra]); se sigue la cadena hasta el
+    # título vigente, así lo guardado bajo «A» también llega a «C»
+    _sig = {r['antes']: r['ahora'] for r in renombres}
+    def _final(t, vistos=()):
+        return _final(_sig[t], vistos + (t,)) if t not in vigentes and t in _sig and t not in vistos else t
+    renombres = [dict(r, ahora=_final(r['ahora'])) for r in renombres]
     malos = [f"«{r['antes']}» → «{r['ahora']}»: " + ('el nuevo no está en el build' if r['ahora'] not in vigentes
                                                     else 'el viejo sigue vigente')
              for r in renombres if r['ahora'] not in vigentes or r['antes'] in vigentes]
