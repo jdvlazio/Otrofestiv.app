@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "Instagram @guatapefilmfest — el carrusel oficial de programación (11 láminas)",
-  "capturado": "2026-10-19",
+  "capturado": "2026-10-20",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_sedes": "El nombre de la lámina → la sede, en tabla explícita. El Domo y la Tarima Principal están dentro del Parque Principal y van como sala; la Pantalla CORNARE es la sala del Malecón.",
@@ -3443,11 +3443,14 @@
    "duration": "90 min"
   },
   {
-   "title": "La Sierra",
+   "title": "Sierra: El Álbum Mortuorio",
    "type": "film",
    "section": "👻 Terror",
    "director": "Carlos Ortiz",
-   "duration": "60 min",
+   "year": 2026,
+   "country": "Colombia",
+   "flags": "🇨🇴",
+   "genre": "Terror",
    "_ancla": [
     "Finca La Manuela - Guatapé",
     "2026-10-24",
@@ -3458,13 +3461,17 @@
    "day_order": 3,
    "venue": "Finca La Manuela - Guatapé",
    "has_qa": false,
-   "poster": "/assets/guatape-2026/la-sierra.jpg",
-   "posterSource": "oficial",
+   "synopsis": "La desaparición de Natalia, una joven de 19 años, sacude a Pueblo Blanco. Las autoridades, en su búsqueda, llegan a un bar clandestino donde dos hermanas sobreviven bajo el abuso de su tío y de una clientela perversa. Cuando deciden ayudar a un hombre extraño hallado en el bosque, desatan una cadena de violencia y rituales donde el comisario, su compañero y los propios habitantes se convierten en presas de la muerte y de una oscura secta. En medio del horror, queda una verdad latente: lo que habita en la oscuridad... alguna vez también pidió ayuda.",
+   "synopsis_lang": "es",
+   "poster": "/assets/guatape-2026/sierra-el-album-mortuorio.jpg",
+   "posterSource": "tmdb",
    "_src": {
     "url": "https://www.instagram.com/p/Def6fhKDSQy/",
     "date": "2026-10-14",
     "lamina": 8
    },
+   "lbSlug": "sierra-el-album-mortuorio",
+   "tmdb_id": 1789536,
    "_fid": "f_40663cdc40",
    "id": "f_40663cdc40",
    "is_free": true,
@@ -3480,11 +3487,6 @@
      "url": "https://www.instagram.com/p/Def6fhKDSQy/"
     },
     "venue": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-14",
-     "url": "https://www.instagram.com/p/Def6fhKDSQy/"
-    },
-    "duration": {
      "tipo": "festival-web",
      "fecha": "2026-10-14",
      "url": "https://www.instagram.com/p/Def6fhKDSQy/"
@@ -3508,8 +3510,16 @@
      "tipo": "festival-web",
      "fecha": "2026-10-14",
      "url": "https://www.instagram.com/p/Def6fhKDSQy/"
+    },
+    "duration": {
+     "tipo": "regla",
+     "marca": "estimado"
     }
-   }
+   },
+   "titulos_anteriores": [
+    "La Sierra"
+   ],
+   "duration": "60 min"
   },
   {
    "title": "Cicatrices",
@@ -4496,8 +4506,8 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-19T18:31:53",
-  "plan_sha": "cc613270274a1b45",
+  "fecha": "2026-10-20T06:17:14",
+  "plan_sha": "e638ece540777486",
   "paso": 6,
   "cmd": "python3 pipeline/guatape-2026-verificar.py"
  }

@@ -9,7 +9,7 @@
   },
   {
    "cmd": "python3 pipeline/enriquecer.py guatape-2026 --posters",
-   "que": "TMDB verificado + las 9 fichas declaradas en -correcciones + afiches a assets/; la cascada cruza contra nuestros festivales publicados"
+   "que": "TMDB verificado + las 10 fichas declaradas en -correcciones + afiches a assets/; la cascada cruza contra nuestros festivales publicados"
   },
   {
    "cmd": "python3 pipeline/proimagenes.py guatape-2026 --posters",
@@ -231,6 +231,5 @@
   "_por_que_acceso": "Sin `ticketing_model`: ninguna función dice que se pague. El acceso va declarado en `_acceso` del crudo."
  },
  "_fuentes_versionadas": {
-  "festivals/staging/guatape-2026-afiches.json": "afiches declarados (buscados y mirados fuera de TMDB): «La Sierra», recortado de la pieza del festival; los lee pipeline/enriquecer.py"
  }
 }
