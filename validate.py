@@ -6714,13 +6714,13 @@ try:
               'funciones-decisiones.json',  # §11.3.4, 18 oct 2026
               'palmares.json', 'avisos.json'}  # publicar.py los lleva al JSON (f-string), 19 oct 2026
     _viv = ['pipeline/lib.py','pipeline/ensamblar.py','pipeline/correr.py','pipeline/publicar.py'] + \
-           sorted(_f for _f in _g9.glob('pipeline/*.py') if _re9.search(r'^pipeline/[a-z]+-20\d\d-', _f))
+           sorted(_f for _f in _g9.glob('pipeline/*.py') if _re9.search(r'^pipeline/[a-z]+(?:-[a-z]+)*-20\d\d-', _f))
     _corp = '\n'.join(open(_f, encoding='utf-8', errors='ignore').read() for _f in _viv if _os9.path.exists(_f)) + \
             '\n' + '\n'.join(open(_p, encoding='utf-8').read() for _p in _g9.glob('pipeline/*.plan.json'))
     _huer = []
     for _f in sorted(_g9.glob('festivals/staging/**/*', recursive=True)):
         if not _os9.path.isfile(_f): continue
-        _b = _os9.path.basename(_f); _m = _re9.match(r'([a-z]+-\d{2,4})-(.+)$', _b)
+        _b = _os9.path.basename(_f); _m = _re9.match(r'([a-z]+(?:-[a-z]+)*-\d{2,4})-(.+)$', _b)  # id de 2+ palabras: festicine-antioquia-2026 (20 oct)
         _suf = _m.group(2) if _m else _b
         if '/_historico/' in _f or _suf in _CANON or _b == 'README.md' or _b in _corp: continue
         _huer.append(_f)
