@@ -32,6 +32,7 @@ URL = 'https://mubifest.com/es/bogota'
 FUENTE = f'{REPO}/fuentes/mubibogota-2026/bogota.html'
 OUT = f'{REPO}/festivals/staging/mubibogota-2026-crudo.json'
 SEDE = 'Gimnasio Moderno'
+DESDE, HASTA = '2026-10-24', '2026-10-25'   # días oficiales (regla de Juan, 8 oct)
 
 ACCESO = {'ENTRADA LIBRE': 'Entrada libre', 'ASISTE GRATIS': 'Entrada libre',
           'REGISTRO PRÓXIMAMENTE': 'Entrada libre con inscripción previa',
@@ -53,7 +54,7 @@ SECCION_ORDEN = ['FOCO', 'RESTAURADA', 'ESTRENO MUBI', 'FUNCIÓN AL AIRE LIBRE']
 ACTIVIDAD = {
     'MUBI PODCAST ENCUENTROS: FERNANDO EIMBCKE & FRANCO LOLLI': ('Charla en vivo', 'charla'),
     'CAMP EN EL CINE: ENTRE EL EXCESO Y EL ARTIFICIO': ('Charla en vivo', 'charla'),
-    'DESAFÍO CON LESLEY WOLF': ('Al aire libre', 'experiencia'),
+    'DESAFÍO SORPRESA': ('Al aire libre', 'experiencia'),
     'MUBI LIBRARY': ('MUBI Library', 'experiencia'),
 }
 # TÍTULOS: el sitio los escribe en MAYÚSCULA SOSTENIDA (caja-sostenida); el
@@ -73,7 +74,9 @@ TITULO = {
     'LA PAGA': 'La paga',
     'MUBI PODCAST ENCUENTROS: FERNANDO EIMBCKE & FRANCO LOLLI': 'MUBI Podcast Encuentros: Fernando Eimbcke & Franco Lolli',
     'CAMP EN EL CINE: ENTRE EL EXCESO Y EL ARTIFICIO': 'Camp en el cine: entre el exceso y el artificio',
-    'DESAFÍO CON LESLEY WOLF': 'Desafío con Lesley Wolf',   # antes «Desafío sorpresa…» (renombrado por el festival, 17 oct)
+    # el festival lo llamó «Desafío con Lesley Wolf» el 17 oct y el 20 oct volvió a
+    # «DESAFÍO SORPRESA» (ahora un bingo; Lesley Wolf queda solo en ogtitle)
+    'DESAFÍO SORPRESA': 'Desafío sorpresa',
     'MUBI LIBRARY': 'MUBI Library',
 }
 SECCION_PUBLICADA = {'FOCO': 'Foco', 'RESTAURADA': 'Restaurada', 'ESTRENO MUBI': 'Estreno MUBI',
@@ -149,8 +152,10 @@ def texto(bloques):
 
 def main():
     eventos = nuxt(io.open(FUENTE, encoding='utf-8').read())
-    if len(eventos) != 16:
-        sys.exit(f'✗ la página trae {len(eventos)} eventos, no 16: revisar antes de seguir')
+    # 17 desde el 20 oct: «SU PROPIO INFIERNO» (23 oct, visita al MAMBO) es antes de
+    # las fechas oficiales (24–25 oct) y queda fuera por la regla de solo días oficiales
+    if len(eventos) != 17:
+        sys.exit(f'✗ la página trae {len(eventos)} eventos, no 17: revisar antes de seguir')
     funciones = []
     for e in eventos:
         t = html.unescape(e['title']).strip()
@@ -158,6 +163,9 @@ def main():
         desc = texto(e.get('description'))
         for s in e['screenings']:
             loc = s['time']['local']               # «2026-10-24T14:30:00-05:00»
+            if not (DESDE <= loc[:10] <= HASTA):
+                print(f'  · fuera de los días oficiales: {loc[:16]} {t}')
+                continue
             if not loc.endswith('-05:00'):
                 sys.exit(f'✗ {t}: hora fuera de la zona de Bogotá ({loc})')
             reg = {'titulo': TITULO[t], 'titulo_fuente': t, 'dia': loc[:10], 'hora': loc[11:16],
@@ -204,7 +212,7 @@ def main():
             funciones.append(reg)
     funciones.sort(key=lambda f: (f['dia'], f['hora'], f['titulo']))
     io.open(OUT, 'w', encoding='utf-8').write(json.dumps({
-        '_provenance': provenance(URL, metodo='__NUXT_DATA__ de mubifest.com (devalue), 16 eventos'),
+        '_provenance': provenance(URL, metodo='__NUXT_DATA__ de mubifest.com (devalue), 17 eventos (1 fuera de los días oficiales)'),
         'funciones': funciones}, ensure_ascii=False, indent=1))
     print(f'✓ {len(funciones)} funciones · {sum(1 for f in funciones if f.get("tipo") == "evento")} actividades → {os.path.relpath(OUT, REPO)}')
 

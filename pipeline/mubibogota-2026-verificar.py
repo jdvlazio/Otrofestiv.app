@@ -53,6 +53,10 @@ por_hora = {}
 for d, h, tit in web:
     por_hora.setdefault((d, h), set()).add(tit)
 for (d, h), tits in sorted(por_hora.items()):
+    # fuera de los días oficiales (24–25 oct) no se publica: la del 23 en el MAMBO
+    if not ('2026-10-24' <= d <= '2026-10-25'):
+        print(f'  · fuera de los días oficiales, no se exige: {d} {h} {sorted(tits)}')
+        continue
     if not any((d, h, x) in pub for x in tits):
         fallos.append(f'en la página y NO en el build: {d} {h} {sorted(tits)}')
 geo = json.load(io.open(f'{REPO}/festivals/staging/{FID}-venues-geo.json', encoding='utf-8'))
