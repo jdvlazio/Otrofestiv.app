@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "ficcali.com — Programación 2026 (WP 14870) + fichas de la Selección 2026",
-  "capturado": "2026-10-18",
+  "capturado": "2026-10-20",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "radar": 1024,
@@ -1754,6 +1754,8 @@
     "tarjeta": 14524
    },
    "requires_registration": true,
+   "description": "Seminario con charlas, ponencias y conferencias performáticas.",
+   "description_lang": "es",
    "_fid": "f_ce012167f9",
    "id": "f_ce012167f9",
    "is_free": true,
@@ -2239,6 +2241,8 @@
     "tarjeta": 14575
    },
    "requires_registration": true,
+   "description": "Seminario con charlas, ponencias y conferencias performáticas.",
+   "description_lang": "es",
    "_fid": "f_4ecd4582e9",
    "id": "f_4ecd4582e9",
    "is_free": true,
@@ -3377,6 +3381,9 @@
     "date": "2026-10-06",
     "tarjeta": 16325
    },
+   "requires_registration": true,
+   "description": "Seminario con charlas, ponencias y conferencias performáticas.",
+   "description_lang": "es",
    "_fid": "f_70a2c200da",
    "id": "f_70a2c200da",
    "is_free": true,
@@ -3397,6 +3404,11 @@
      "url": "https://ficcali.com/programacion-ficcali-2026/"
     },
     "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-06",
+     "url": "https://ficcali.com/programacion-ficcali-2026/"
+    },
+    "requires_registration": {
      "tipo": "festival-web",
      "fecha": "2026-10-06",
      "url": "https://ficcali.com/programacion-ficcali-2026/"
@@ -9244,7 +9256,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-18T21:59:42",
+  "fecha": "2026-10-20T08:22:36",
   "plan_sha": "159aaf2851adf3ee",
   "paso": 11,
   "cmd": "python3 pipeline/ficcali-2026-verificar.py"
