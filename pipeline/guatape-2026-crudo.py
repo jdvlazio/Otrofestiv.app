@@ -114,7 +114,7 @@ PROYECCION = {
     ('2026-10-24', '18:00', 'MUESTRA CINE COMUNITARIO COLOMBIANO'): {'titulo': 'Cicatrices'},
     ('2026-10-24', '18:30', 'COMPETENCIA INTERNACIONAL DE LARGOMETRAJE'): {'titulo': 'El convento', 'pais': 'España'},
     ('2026-10-24', '18:30', 'El REFLEJO DEL CINE - CINEMA LUNA'): {'titulo': 'Volar'},
-    ('2026-10-24', '18:00', 'El REFLEJO DEL CINE TERROR'): {'titulo': 'La Sierra'},
+    ('2026-10-24', '18:00', 'El REFLEJO DEL CINE TERROR'): {'titulo': 'La Sierra', 'publicar': 'Sierra: El Álbum Mortuorio'},
     ('2026-10-25', '18:00', 'MUESTRA DE CINE COLOMBIANO'): {'titulo': 'La Gallina Saraviada'},
     ('2026-10-25', '18:20', 'MUESTRA DE CINE COLOMBIANO'): {'titulo': 'Sangre de Palermo'},
     ('2026-10-25', '18:00', 'COMPETENCIA INTERNACIONAL DE LARGOMETRAJE'): {'titulo': 'Canelones', 'pais': 'Argentina'},
@@ -203,7 +203,7 @@ CREDITOS = {
     'Volar': {'director': 'Jeiver Pinto Vargas',
               '_por_que': 'largo colombiano de Jeiver Pinto, el mismo que publicamos en Villa del Cine 2026; '
                           'va en Cinema Luna, aliado del festival'},
-    'La Sierra': {'director': 'Carlos Ortiz',
+    'Sierra: El Álbum Mortuorio': {'director': 'Carlos Ortiz',
                   '_fuente': 'https://www.instagram.com/p/DervW-Tifu0/',
                   '_por_que': 'la pieza del festival para la función del 24 oct en La Manuela imprime el afiche '
                               '(«Sierra – El álbum mortuorio») y «Dirrctor Carlos Ortiz»'},

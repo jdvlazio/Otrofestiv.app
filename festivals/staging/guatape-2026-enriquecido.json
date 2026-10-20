@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, emparejado con ficha_verifica() (director + año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-10-19"
+  "capturado": "2026-10-20"
  },
  "obras": [
   {
@@ -58,7 +58,7 @@
    "lbSlug": "basta-mama",
    "_verificado": "declarada a mano: Obra sin créditos en la lámina; la ficha se confirmó por título y dirección (Flora Martínez, 2026). Investigación del 18 oct 2026.",
    "_director": "Flora Martínez",
-   "_sondeado": "2026-10-19",
+   "_sondeado": "2026-10-20",
    "poster": "/assets/guatape-2026/basta-mama.jpg",
    "posterSource": "tmdb"
   },
@@ -77,7 +77,7 @@
    "lbSlug": "cannelloni",
    "_verificado": "declarada a mano: Obra sin créditos en la lámina; la ficha se confirmó por título y dirección (Christian Basilis y Ana Laura Gussoni, 2026; la lámina dice «Argentina»). Investigación del 18 oct 2026.",
    "_director": "Christian Basilis, Ana Laura Gussoni",
-   "_sondeado": "2026-10-19",
+   "_sondeado": "2026-10-20",
    "poster": "/assets/guatape-2026/canelones.jpg",
    "posterSource": "tmdb"
   },
@@ -136,7 +136,7 @@
    "lbSlug": "the-black-snake",
    "_verificado": "declarada a mano: Obra sin créditos en la lámina; la ficha se confirmó por título y dirección (Aurélien Vernhes-Lermusiaux, 2025). Investigación del 18 oct 2026. Afiche: el de título en español de TMDB; el principal de TMDB es una foto sin título (hoja de contacto, 18 oct).",
    "_director": "Aurélien Vernhes-Lermusiaux",
-   "_sondeado": "2026-10-19",
+   "_sondeado": "2026-10-20",
    "poster": "/assets/guatape-2026/culebra-negra.jpg",
    "posterSource": "tmdb",
    "pais_heredado": "Colombia, Brasil, Francia",
@@ -159,7 +159,7 @@
    "lbSlug": "the-convent-2026",
    "_verificado": "declarada a mano: Obra sin créditos en la lámina; la ficha se confirmó por título y dirección (Ángel M. Chivite y Luis Galindo, 2025; la lámina dice «ESPAÑA»). Investigación del 18 oct 2026.",
    "_director": "Ángel M. Chivite, Luis Galindo",
-   "_sondeado": "2026-10-19",
+   "_sondeado": "2026-10-20",
    "poster": "/assets/guatape-2026/el-convento.jpg",
    "posterSource": "tmdb"
   },
@@ -197,7 +197,7 @@
    "lbSlug": "horizon-2024-4",
    "_verificado": "declarada a mano: Obra sin créditos en la lámina; la ficha se confirmó por título y dirección (César Augusto Acevedo, 2024). Investigación del 18 oct 2026.",
    "_director": "César Augusto Acevedo",
-   "_sondeado": "2026-10-19",
+   "_sondeado": "2026-10-20",
    "poster": "/assets/guatape-2026/horizonte.jpg",
    "posterSource": "tmdb",
    "pais_heredado": "Chile, Colombia, Francia, Alemania, Luxemburgo",
@@ -411,7 +411,7 @@
    "lbSlug": "children-of-las-brisas",
    "_verificado": "declarada a mano: Obra sin créditos en la lámina; la ficha se confirmó por título y dirección (Marianela Maldonado, 2022; sección FIACINE). Investigación del 18 oct 2026. La lámina imprime «Niño de las Brisas», en singular: el crudo publica el título de la obra y verifica contra la lámina el que imprime.",
    "_director": "Marianela Maldonado",
-   "_sondeado": "2026-10-19",
+   "_sondeado": "2026-10-20",
    "poster": "/assets/guatape-2026/ninos-de-las-brisas.jpg",
    "posterSource": "tmdb",
    "pais_heredado": "Austria, Brasil, Estados Unidos, Venezuela",
@@ -433,9 +433,31 @@
    "lbSlug": "planeta-fome",
    "_verificado": "declarada a mano: Obra sin créditos en la lámina; la ficha se confirmó por título y dirección (Édier William, 2025, 15 min; la lámina dice «Brasil»). Investigación del 18 oct 2026.",
    "_director": "Édier William",
-   "_sondeado": "2026-10-19",
+   "_sondeado": "2026-10-20",
    "poster": "/assets/guatape-2026/planeta-fome.jpg",
    "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Sierra: El Álbum Mortuorio",
+   "tmdb_id": 1789536,
+   "titulo_original": "Sierra: El Álbum Mortuorio",
+   "poster_path": "/qmlvRr0FpcmQCbCjRGBYrK7tgUY.jpg",
+   "synopsis_es": "La desaparición de Natalia, una joven de 19 años, sacude a Pueblo Blanco. Las autoridades, en su búsqueda, llegan a un bar clandestino donde dos hermanas sobreviven bajo el abuso de su tío y de una clientela perversa. Cuando deciden ayudar a un hombre extraño hallado en el bosque, desatan una cadena de violencia y rituales donde el comisario, su compañero y los propios habitantes se convierten en presas de la muerte y de una oscura secta. En medio del horror, queda una verdad latente: lo que habita en la oscuridad... alguna vez también pidió ayuda.",
+   "synopsis_en": "",
+   "genero": "Terror",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "",
+   "lbSlug": "sierra-el-album-mortuorio",
+   "_verificado": "declarada a mano: La pieza del festival para la función del 24 oct en La Manuela (p/DervW-Tifu0) imprime el afiche «SIERRA – El álbum mortuorio» y «Dirrctor Carlos Ortiz»; la ficha se confirmó por título y dirección (Carlos Ortiz Alarcón, 2026, estreno 8 oct 2026). Antes se publicaba como «La Sierra». Investigación del 20 oct 2026.",
+   "_director": "Carlos Ortiz",
+   "_sondeado": "2026-10-20",
+   "poster": "/assets/guatape-2026/sierra-el-album-mortuorio.jpg",
+   "posterSource": "tmdb",
+   "pais_heredado": "Colombia",
+   "_heredado": {
+    "pais_heredado": "catálogo w_R4JC5FP969FG (bhff-2026, ficpa-2026, villadelcine-2026)"
+   }
   },
   {
    "titulo": "Sobre las olas",
@@ -451,7 +473,7 @@
    "lbSlug": "sobre-las-olas",
    "_verificado": "declarada a mano: Obra sin créditos en la lámina; la ficha se confirmó por título y dirección (Horacio Alcalá, 2025; la lámina dice «México»). Investigación del 18 oct 2026.",
    "_director": "Horacio Alcalá",
-   "_sondeado": "2026-10-19",
+   "_sondeado": "2026-10-20",
    "poster": "/assets/guatape-2026/sobre-las-olas.jpg",
    "posterSource": "tmdb"
   },
@@ -470,7 +492,7 @@
    "lbSlug": "a-poet",
    "_verificado": "declarada a mano: Obra sin créditos en la lámina; la ficha se confirmó por título y dirección (Simón Mesa Soto, 2025; su afiche en el post p/DejnAMOoKNQ dice «a film by Simón Mesa Soto»). Investigación del 18 oct 2026.",
    "_director": "Simón Mesa Soto",
-   "_sondeado": "2026-10-19",
+   "_sondeado": "2026-10-20",
    "poster": "/assets/guatape-2026/un-poeta.jpg",
    "posterSource": "tmdb",
    "pais_heredado": "Colombia, Alemania, Suecia",
@@ -514,16 +536,6 @@
     "pais_heredado": "catálogo w_R4QSRP2HK7JD (guatape-2026, villadelcine-2026)"
    },
    "pais_heredado": "Colombia"
-  },
-  {
-   "titulo": "La Sierra",
-   "poster": "/assets/guatape-2026/la-sierra.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: instagram.com/p/DervW-Tifu0: el afiche impreso dentro de la pieza de la función, recortado por dentro del marco amarillo (534×677, marco 4 px)",
-   "duracion_tmdb": 60,
-   "_heredado": {
-    "duracion_tmdb": "catálogo w_8GJ9QKEV5RQC (guatape-2026)"
-   }
   },
   {
    "titulo": "Ipatu",
@@ -607,7 +619,7 @@
    "lbSlug": "basta-mama",
    "_verificado": "declarada a mano: Obra sin créditos en la lámina; la ficha se confirmó por título y dirección (Flora Martínez, 2026). Investigación del 18 oct 2026.",
    "_director": "Flora Martínez",
-   "_sondeado": "2026-10-19",
+   "_sondeado": "2026-10-20",
    "poster": "/assets/guatape-2026/basta-mama.jpg",
    "posterSource": "tmdb"
   },
@@ -625,7 +637,7 @@
    "lbSlug": "cannelloni",
    "_verificado": "declarada a mano: Obra sin créditos en la lámina; la ficha se confirmó por título y dirección (Christian Basilis y Ana Laura Gussoni, 2026; la lámina dice «Argentina»). Investigación del 18 oct 2026.",
    "_director": "Christian Basilis, Ana Laura Gussoni",
-   "_sondeado": "2026-10-19",
+   "_sondeado": "2026-10-20",
    "poster": "/assets/guatape-2026/canelones.jpg",
    "posterSource": "tmdb"
   },
@@ -682,7 +694,7 @@
    "lbSlug": "the-black-snake",
    "_verificado": "declarada a mano: Obra sin créditos en la lámina; la ficha se confirmó por título y dirección (Aurélien Vernhes-Lermusiaux, 2025). Investigación del 18 oct 2026. Afiche: el de título en español de TMDB; el principal de TMDB es una foto sin título (hoja de contacto, 18 oct).",
    "_director": "Aurélien Vernhes-Lermusiaux",
-   "_sondeado": "2026-10-19",
+   "_sondeado": "2026-10-20",
    "poster": "/assets/guatape-2026/culebra-negra.jpg",
    "posterSource": "tmdb",
    "pais_heredado": "Colombia, Brasil, Francia",
@@ -704,7 +716,7 @@
    "lbSlug": "the-convent-2026",
    "_verificado": "declarada a mano: Obra sin créditos en la lámina; la ficha se confirmó por título y dirección (Ángel M. Chivite y Luis Galindo, 2025; la lámina dice «ESPAÑA»). Investigación del 18 oct 2026.",
    "_director": "Ángel M. Chivite, Luis Galindo",
-   "_sondeado": "2026-10-19",
+   "_sondeado": "2026-10-20",
    "poster": "/assets/guatape-2026/el-convento.jpg",
    "posterSource": "tmdb"
   },
@@ -722,7 +734,7 @@
    "lbSlug": "horizon-2024-4",
    "_verificado": "declarada a mano: Obra sin créditos en la lámina; la ficha se confirmó por título y dirección (César Augusto Acevedo, 2024). Investigación del 18 oct 2026.",
    "_director": "César Augusto Acevedo",
-   "_sondeado": "2026-10-19",
+   "_sondeado": "2026-10-20",
    "poster": "/assets/guatape-2026/horizonte.jpg",
    "posterSource": "tmdb",
    "pais_heredado": "Chile, Colombia, Francia, Alemania, Luxemburgo",
@@ -903,7 +915,7 @@
    "lbSlug": "children-of-las-brisas",
    "_verificado": "declarada a mano: Obra sin créditos en la lámina; la ficha se confirmó por título y dirección (Marianela Maldonado, 2022; sección FIACINE). Investigación del 18 oct 2026. La lámina imprime «Niño de las Brisas», en singular: el crudo publica el título de la obra y verifica contra la lámina el que imprime.",
    "_director": "Marianela Maldonado",
-   "_sondeado": "2026-10-19",
+   "_sondeado": "2026-10-20",
    "poster": "/assets/guatape-2026/ninos-de-las-brisas.jpg",
    "posterSource": "tmdb",
    "pais_heredado": "Austria, Brasil, Estados Unidos, Venezuela",
@@ -924,9 +936,30 @@
    "lbSlug": "planeta-fome",
    "_verificado": "declarada a mano: Obra sin créditos en la lámina; la ficha se confirmó por título y dirección (Édier William, 2025, 15 min; la lámina dice «Brasil»). Investigación del 18 oct 2026.",
    "_director": "Édier William",
-   "_sondeado": "2026-10-19",
+   "_sondeado": "2026-10-20",
    "poster": "/assets/guatape-2026/planeta-fome.jpg",
    "posterSource": "tmdb"
+  },
+  "Sierra: El Álbum Mortuorio": {
+   "tmdb_id": 1789536,
+   "titulo_original": "Sierra: El Álbum Mortuorio",
+   "poster_path": "/qmlvRr0FpcmQCbCjRGBYrK7tgUY.jpg",
+   "synopsis_es": "La desaparición de Natalia, una joven de 19 años, sacude a Pueblo Blanco. Las autoridades, en su búsqueda, llegan a un bar clandestino donde dos hermanas sobreviven bajo el abuso de su tío y de una clientela perversa. Cuando deciden ayudar a un hombre extraño hallado en el bosque, desatan una cadena de violencia y rituales donde el comisario, su compañero y los propios habitantes se convierten en presas de la muerte y de una oscura secta. En medio del horror, queda una verdad latente: lo que habita en la oscuridad... alguna vez también pidió ayuda.",
+   "synopsis_en": "",
+   "genero": "Terror",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "",
+   "lbSlug": "sierra-el-album-mortuorio",
+   "_verificado": "declarada a mano: La pieza del festival para la función del 24 oct en La Manuela (p/DervW-Tifu0) imprime el afiche «SIERRA – El álbum mortuorio» y «Dirrctor Carlos Ortiz»; la ficha se confirmó por título y dirección (Carlos Ortiz Alarcón, 2026, estreno 8 oct 2026). Antes se publicaba como «La Sierra». Investigación del 20 oct 2026.",
+   "_director": "Carlos Ortiz",
+   "_sondeado": "2026-10-20",
+   "poster": "/assets/guatape-2026/sierra-el-album-mortuorio.jpg",
+   "posterSource": "tmdb",
+   "pais_heredado": "Colombia",
+   "_heredado": {
+    "pais_heredado": "catálogo w_R4JC5FP969FG (bhff-2026, ficpa-2026, villadelcine-2026)"
+   }
   },
   "Sobre las olas": {
    "tmdb_id": 1478001,
@@ -941,7 +974,7 @@
    "lbSlug": "sobre-las-olas",
    "_verificado": "declarada a mano: Obra sin créditos en la lámina; la ficha se confirmó por título y dirección (Horacio Alcalá, 2025; la lámina dice «México»). Investigación del 18 oct 2026.",
    "_director": "Horacio Alcalá",
-   "_sondeado": "2026-10-19",
+   "_sondeado": "2026-10-20",
    "poster": "/assets/guatape-2026/sobre-las-olas.jpg",
    "posterSource": "tmdb"
   },
@@ -959,7 +992,7 @@
    "lbSlug": "a-poet",
    "_verificado": "declarada a mano: Obra sin créditos en la lámina; la ficha se confirmó por título y dirección (Simón Mesa Soto, 2025; su afiche en el post p/DejnAMOoKNQ dice «a film by Simón Mesa Soto»). Investigación del 18 oct 2026.",
    "_director": "Simón Mesa Soto",
-   "_sondeado": "2026-10-19",
+   "_sondeado": "2026-10-20",
    "poster": "/assets/guatape-2026/un-poeta.jpg",
    "posterSource": "tmdb",
    "pais_heredado": "Colombia, Alemania, Suecia",
@@ -1016,7 +1049,6 @@
   "Hasta que amanezca",
   "Ipatu",
   "La Parada del Colectivo",
-  "La Sierra",
   "La Ultima Palabra",
   "La fuente",
   "Leo tus Labios",
@@ -1071,10 +1103,6 @@
    "director": "",
    "fecha": "2026-10-18"
   },
-  "La Sierra": {
-   "director": "Carlos Ortiz",
-   "fecha": "2026-10-19"
-  },
   "La Ultima Palabra": {
    "director": "",
    "fecha": "2026-10-18"
@@ -1111,7 +1139,7 @@
  "_fuentes": [
   {
    "fuente": "proimagenescolombia.com — la base oficial del cine colombiano",
-   "capturado": "2026-10-19",
+   "capturado": "2026-10-20",
    "que_aporta": "país, año, duración, género, sinopsis y afiche de las obras que TMDB no registra",
    "metodo": "búsqueda por título en los catálogos de largos y cortos, y el MISMO candado del director que TMDB: el buscador es laxo y también mira dentro de la sinopsis"
   }
