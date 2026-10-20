@@ -69,6 +69,19 @@ lo que cada usuario guardó).
   en la función.
 - El PR con el cambio de config.js va después, para la historia, como con los datos.
 
+## Afiches de obras y actividades (19 oct 2026)
+
+Siguen en `assets/` y los sirve la web (B2, moverlos al almacén, se descartó por
+costo). Dos reglas que ahora frenan solas:
+
+- **El afiche va primero:** `publicar-datos.py` frena si el JSON nombra un
+  `/assets/…` que no está en el repo o que la web todavía no sirve (o sirve con
+  otro tamaño). Orden: PR de los afiches → merge → se publica la web → recién ahí
+  `publicar-datos.py`. Desde main, el job espera hasta 10 min al deploy.
+- **Afiche nuevo = archivo nuevo:** `[asset-write-once]` en validate.py frena
+  cualquier imagen de `assets/` que cambie de contenido con el mismo nombre (el
+  SW la guarda para siempre; quien vio la vieja no vería la nueva). Usar `-v2`.
+
 ## Lo que NO pasa por acá
 
 El código de la app (src/, index.html, sw.js…): PR + CI completo + deploy, como
