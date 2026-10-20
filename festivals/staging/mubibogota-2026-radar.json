@@ -1,14 +1,31 @@
 {
  "_provenance": {
   "fuente": "issue de radar #1090 — https://github.com/jdvlazio/Otrofestiv.app/issues/1090",
-  "capturado": "2026-10-14",
+  "capturado": "2026-10-20",
   "titulo": "RADAR: MUBI Fest Bogotá — Gimnasio Moderno, Bogotá, 24–25 OCT 2026",
   "estado": "OPEN",
-  "comentarios": 0
+  "comentarios": 4
  },
  "issue": 1090,
  "titulo": "RADAR: MUBI Fest Bogotá — Gimnasio Moderno, Bogotá, 24–25 OCT 2026",
  "estado": "OPEN",
  "cuerpo": "Fuente: barrido de huecos del radar (11 oct 2026), verificado en la web oficial.\n\n- **Fechas:** 24–25 oct 2026 según https://mubifest.com/es/bogota (leída 11 oct). El Tiempo (7 oct) dice 23–25 en el cuerpo: el 23 sería una apertura en el helipuerto de la Torre Colpatria que la web oficial NO lista → sin confirmar.\n- **Sede:** Gimnasio Moderno, Bogotá.\n- **Programación: PUBLICADA** en la web oficial, por función: 12 películas (6 el 24, 6 el 25), una función cada una, + 4 actividades.\n- **Acceso:** mixto — unas funciones «BOLETAS PRONTO» (venta desde el 13 oct según El Tiempo), otras entrada libre. Sin precios.\n- **IG:** sin cuenta propia; la web enlaza @mubilat (y @mubi).\n- **Nota:** lo organiza una marca (MUBI), no es festival de convocatoria.\n\nPlan: onboarding directo (programación ya publicada), antes del 23 oct.",
- "comentarios": []
+ "comentarios": [
+  {
+   "fecha": "2026-10-18",
+   "cuerpo": "**Vigía 17 oct 2026 — MUBI Fest: abrieron los registros y cambió un título**\n\nFuente: https://mubifest.com/es/bogota (el `__NUXT_DATA__` de hoy). Las 16 funciones siguen en el mismo día y a la misma hora. Lo que cambió:\n\n1. **Se abrió el registro en 3 actividades.** El botón pasó de «REGISTRO PRÓXIMAMENTE» a «REGÍSTRATE AQUÍ», con un enlace de Eventbrite por actividad:\n   - MUBI Podcast Encuentros: Fernando Eimbcke & Franco Lolli (sáb 24, 14:00) → https://www.eventbrite.co/e/mubi-podcast-encuentros-fernando-eimbcke-franco-lolli-tickets-2002227001861 (el IG @mubilat lo anuncia como mubi.io/podcast_mubifest)\n   - Desafío con Lesley Wolf (sáb 24, 18:30) → https://www.eventbrite.co/e/desafio-con-lesley-wolf-tickets-2003506581117\n   - Camp en el cine: entre el exceso y el artificio (dom 25, 14:30) → https://www.eventbrite.co/e/charla-camp-en-el-cine-entre-el-exceso-y-el-artificio-tickets-2003512126704\n\n   En la app las tres siguen con «registro próximamente» y sin enlace.\n2. **Título nuevo:** «Desafío sorpresa con Lesley Wolf» ahora se llama **«DESAFÍO CON LESLEY WOLF»**. La descripción ahora dice que es un bingo con merch de MUBI.\n\nEl crudo se cae con `KeyError: 'REGÍSTRATE AQUÍ'` y después con `KeyError: 'DESAFÍO CON LESLEY WOLF'`. Hay que agregar las dos claves en `ACCESO` y `TITULO` (ojo con la watchlist si se cambia el título publicado → `titulos_anteriores`).\n"
+  },
+  {
+   "fecha": "2026-10-19",
+   "cuerpo": "**Vigía 19 oct 2026 (13:00) — MUBI Fest: apareció una función el 23 oct**\n\nEn https://mubifest.com/es/bogota (`__NUXT_DATA__` de hoy) hay una tarjeta nueva: **SU PROPIO INFIERNO** (Nicolas Winding Refn, 110 min) · **vie 23 oct, 5:30 p. m.** · **Museo de Arte Moderno de Bogotá – MAMBO** · boletas en https://tienda.mambogota.com/products/inauguracion-mubi-fest-x-mambo (lo venden como «Inauguración MUBI Fest x MAMBO», con «+ visita al MAMBO»).\n\n- Cae **un día antes** de las fechas que tenemos (24–25 oct), así que con la regla de «solo días oficiales» queda fuera. Lo anoto para que decidas si la inauguración cuenta.\n- Las 16 funciones del 24 y 25 no cambiaron (mismo día, hora y sede que la app).\n"
+  },
+  {
+   "fecha": "2026-10-20",
+   "cuerpo": "Vigía 19 oct (19:00): mubifest.com/es/bogota trae ahora **17 eventos (antes 16)**. El nuevo: «SU PROPIO INFIERNO» (+ visita al MAMBO, DJ set de Little D, para mayores de 18), **vie 23 oct 17:30**, 110 min, con boletas en https://tienda.mambogota.com/products/inauguracion-mubi-fest-x-mambo (es la inauguración MUBI Fest x MAMBO). Cae **antes** de las fechas oficiales (24–25 oct); según la regla de «solo días oficiales» no se agrega, salvo que Juan decida otra cosa. Las 16 funciones del 24–25 coinciden con la app."
+  },
+  {
+   "fecha": "2026-10-20",
+   "cuerpo": "**Vigía 20 oct 2026 (07:00) — MUBI Fest Bogotá: 2 cambios en mubifest.com/es/bogota (17 eventos; antes eran 16)**\n\n1. **Evento nuevo en la página: «SU PROPIO INFIERNO» + visita al MAMBO.** Es el estreno MUBI de Nicolas Winding Refn, con DJ set de Little D. **Vie 23 oct, 5:30 p. m.** en el Museo de Arte Moderno de Bogotá (Calle 24 # 6-00), 110 min, «COMPRAR BOLETAS» → https://tienda.mambogota.com/products/inauguracion-mubi-fest-x-mambo (la URL lo llama inauguración). El 23 queda **fuera de las fechas oficiales (24–25)**: según la regla de solo días oficiales, no entra. Lo dejo anotado.\n2. **«Desafío con Lesley Wolf» (sáb 24, 18:30, al aire libre) ahora se llama «DESAFÍO SORPRESA»**, con el subtítulo «Gana merch exclusiva de MUBI» (`_updatedAt` 2026-10-20 01:47 UTC). La app todavía muestra «Desafío con Lesley Wolf». La hora, el lugar y el enlace de Eventbrite no cambiaron. **Acción sugerida:** cambiar el título (y revisar si la descripción nombra a Lesley Wolf).\n\nSin cambios: las demás funciones casan con la app (día, hora y botón).\n"
+  }
+ ]
 }

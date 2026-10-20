@@ -220,5 +220,31 @@
    "festivals/staging/midbo-2026-afiches.json": "afiches oficiales de las fichas de midbo.co, donde TMDB no tiene; lo lee enriquecer.py",
    "festivals/staging/midbo-2026-correcciones.json": "el porqué de cada obra sin afiche"
   }
- }
+ },
+ "fuentes_vivas": [
+  {
+   "archivo": "fuentes/midbo-2026/pelicula.json",
+   "url": "https://midbo.co/wp-json/wp/v2/pelicula",
+   "como": "wp-json",
+   "que": "la lista de obras (API REST), que lee el crudo"
+  },
+  {
+   "archivo": "fuentes/midbo-2026/seccion.json",
+   "url": "https://midbo.co/wp-json/wp/v2/seccion",
+   "como": "wp-json",
+   "que": "la taxonomía de secciones y programas"
+  },
+  {
+   "archivo": "fuentes/midbo-2026/paginas/seminario.html",
+   "url": "https://midbo.co/encuentro-pensar-lo-real/seminario/",
+   "como": "pagina",
+   "debe_contener": "Lugar:",
+   "que": "la página del seminario"
+  },
+  {
+   "archivo": "fuentes/midbo-2026/fichas/_indice.json",
+   "cmd": "python3 pipeline/midbo-2026-fichas.py --bajar",
+   "que": "la ficha de cada obra (sus funciones), después de pelicula.json"
+  }
+ ]
 }

@@ -273,8 +273,13 @@ def ficha(L, BLOQUES):
 
 
 def main():
-    obras = json.load(io.open(f'{DIR}/pelicula-1.json', encoding='utf-8')) + \
-        json.load(io.open(f'{DIR}/pelicula-2.json', encoding='utf-8'))
+    # pelicula.json es la fuente viva (todas las páginas de la API, ver el plan);
+    # pelicula-1/-2 son la bajada a mano del 10 oct
+    if os.path.exists(f'{DIR}/pelicula.json'):
+        obras = json.load(io.open(f'{DIR}/pelicula.json', encoding='utf-8'))
+    else:
+        obras = json.load(io.open(f'{DIR}/pelicula-1.json', encoding='utf-8')) + \
+            json.load(io.open(f'{DIR}/pelicula-2.json', encoding='utf-8'))
     S = {s['id']: s for s in json.load(io.open(f'{DIR}/seccion.json', encoding='utf-8'))}
     fuera, slots = [], {}
     for o in obras:

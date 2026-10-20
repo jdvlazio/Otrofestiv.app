@@ -114,5 +114,14 @@
    "festivals/staging/bhff-2026-radar.json": "el volcado del radar #1030, que escribe y relee pipeline/radar.py",
    "festivals/staging/bhff-2026-sinopsis.json": "sinopsis oficiales declaradas (literal, con URL, verificadas frase por frase); las lee pipeline/enriquecer.py donde no hay ninguna; `idioma: en` va a synopsis_en"
   }
- }
+ },
+ "fuentes_vivas": [
+  {
+   "archivo": "fuentes/bhff-2026/programacion.html",
+   "url": "https://bogotahorrorfilmfest.com/programacion/",
+   "como": "pagina",
+   "debe_contener": "PROGRAMACION",
+   "que": "la parrilla (arreglo PROGRAMACION del HTML) que leen el crudo y el verificador"
+  }
+ ]
 }

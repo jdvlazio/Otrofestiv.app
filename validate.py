@@ -6943,7 +6943,12 @@ try:
     _hoy = _dtv.date.today(); _sin = []
     for _pp in sorted(_glv.glob('pipeline/*.plan.json')):
         _fid = os.path.basename(_pp)[:-len('.plan.json')]
-        if _fid.startswith('festival') or json.load(open(_pp, encoding='utf-8')).get('fuentes_vivas'):
+        _pl = json.load(open(_pp, encoding='utf-8'))
+        # Declarada = la lista con fuentes, o la lista VACÍA con su porqué en
+        # `_nota_fuentes_vivas` (Guatapé: su programación sale de láminas de IG,
+        # sin web viva). Vacía y sin nota no cuenta: callaría el aviso sin decir nada.
+        if _fid.startswith('festival') or _pl.get('fuentes_vivas') or (
+                'fuentes_vivas' in _pl and str(_pl.get('_nota_fuentes_vivas') or '').strip()):
             continue
         _r = _spv.run(['node', 'scripts/ficha-de.mjs', re.sub(r'-(\d+)$', r'\1', _fid)], capture_output=True, text=True, timeout=30)
         if _r.returncode: continue

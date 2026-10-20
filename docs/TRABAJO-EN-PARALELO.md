@@ -27,6 +27,14 @@ de la documentación oficial de Claude Code (code.claude.com/docs/en/worktrees).
    apagado). La copia de trabajo de un PR ya mergeado la borra quien la creó
    (`git worktree remove`).
 
+## La publicación se cura sola (20 oct 2026)
+
+GitHub Pages se cuelga a veces («updating_pages») y el deploy se cancela. La
+publicación anota en `version.json` el `commit` que subió; cada 20 min el job
+`vigilar` de `pages.yml` lo compara con la punta de `main` y, si no coinciden,
+vuelve a publicar. Verificar a mano: `curl -s https://otrofestiv.app/version.json`
+→ `commit` == `git rev-parse origin/main`.
+
 ## Guardianes
 
 - `[git-config-sano]` en validate.py: la config de git es UNA para todas las
