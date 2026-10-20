@@ -283,14 +283,14 @@
    "n": 0,
    "address": "Cl. 40b #6-23"
   },
-  "Universidad Central - Bogotá": {
-   "short": "Universidad Central",
+  "Universidad Jorge Tadeo Lozano - Bogotá": {
+   "short": "Universidad Jorge Tadeo Lozano",
    "city": "Bogotá",
-   "lat": 4.6059549,
-   "lng": -74.068697,
+   "lat": 4.6065633,
+   "lng": -74.0666447,
    "_prec": "manual",
-   "_match": "Google Maps: Universidad Central (sede centro, Auditorio Caldas) (10 oct 2026)",
-   "n": 1
+   "_match": "Google Maps: Edificio de Postgrados Universidad de Bogotá Jorge Tadeo Lozano (Módulo 16, Cra. 4 # 22-61) (19 oct 2026)",
+   "n": 2
   },
   "Servicio Forjar Restaurativo Arborizadora Baja - Bogotá": {
    "short": "Servicio Forjar Restaurativo Arborizadora Baja",
@@ -649,15 +649,15 @@
    "duration": "103 min",
    "genre": "Documental",
    "_ancla": [
-    "Universidad Central - Bogotá",
+    "Universidad Jorge Tadeo Lozano - Bogotá",
     "2026-10-29",
     "14:00"
    ],
    "day": "2026-10-29",
    "time": "14:00",
    "day_order": 2,
-   "venue": "Universidad Central - Bogotá",
-   "sala": "Auditorio Caldas",
+   "venue": "Universidad Jorge Tadeo Lozano - Bogotá",
+   "sala": "Aula Magistral 705 - M16 (piso 7), Edificio de Posgrados",
    "has_qa": false,
    "synopsis": "El 31 de diciembre de 1999, Estados Unidos devolvió oficialmente control del Canal a Panamá, dando cumplimiento a los Acuerdos Torrijos-Carter. Por detrás de la histórica firma de los Acuerdos, existió un complejo juego de diplomacia internacional e intrigas liderado por el General Omar Torrijos. Esta es la historia de estas negociaciones, que restituyeron la integridad territorial y soberanía de Panamá.",
    "synopsis_lang": "es",
@@ -879,7 +879,7 @@
    "time": "16:00",
    "day_order": 2,
    "venue": "Centro de Memoria, Paz y Reconciliación - Bogotá",
-   "sala": "Aula 1",
+   "sala": "Auditorio",
    "has_qa": false,
    "synopsis": "«Latidos» aborda la migración, la discriminación y el racismo desde la perspectiva de las propias personas afectadas, sin intermediarios ni reinterpretaciones externas. La obra construye un relato coral donde el arte se convierte en herramienta de resistencia y expresión política. A través de diversas manifestaciones culturales practicadas por colectivos migrantes y racializados en España, el documental expone las múltiples capas de una realidad marcada por la exclusión estructural. Una obra que interpela directamente al espectador y lo invita a reflexionar sobre la convivencia, la desigualdad y la humanidad compartida.",
    "synopsis_lang": "es",
@@ -1046,6 +1046,7 @@
    "time": "17:30",
    "day_order": 2,
    "venue": "Centro de Memoria, Paz y Reconciliación - Bogotá",
+   "sala": "Auditorio",
    "has_qa": false,
    "_src": {
     "url": "https://midbo.co/peliculas/oscurana/",
@@ -1309,15 +1310,15 @@
    "duration": "115 min",
    "genre": "Documental",
    "_ancla": [
-    "Universidad Central - Bogotá",
+    "Universidad Jorge Tadeo Lozano - Bogotá",
     "2026-10-30",
     "14:00"
    ],
    "day": "2026-10-30",
    "time": "14:00",
    "day_order": 3,
-   "venue": "Universidad Central - Bogotá",
-   "sala": "Auditorio Santander",
+   "venue": "Universidad Jorge Tadeo Lozano - Bogotá",
+   "sala": "Aula Magistral 705 - M16 (piso 7), Edificio de Posgrados",
    "has_qa": true,
    "qa_type": "team",
    "synopsis": "Chiapas, sureste de México. Cuando los habitantes del pueblo de Tila y de varias aldeas expulsan al ayuntamiento y a la policía, se enfrentan al reto del autogobierno. «Un lugar más grande» explora la construcción de la autonomía en el día a día, revelando un amplio tejido de personas, generaciones, espíritus y paisajes, así como imágenes inéditas. Nos sumerge en el corazón de un proceso colectivo, cuando el autogobierno se convierte en una responsabilidad frente a uno mismo y a los demás. Una aventura de inspiración zapatista en territorio maya ch’ol.",
@@ -1328,9 +1329,8 @@
     "url": "https://midbo.co/peliculas/un-lugar-mas-grande/",
     "date": "2026-10-10"
    },
-   "ticket_url": "https://tuboleta.com/es/eventos/un-lugar-mas-grande",
    "premiere": "Estreno en Colombia",
-   "is_free": false,
+   "is_free": true,
    "lbSlug": "a-bigger-place",
    "tmdb_id": 1338573,
    "synopsis_en": "Chiapas, southeastern Mexico. When the inhabitants of several villages and towns expel the mayor and the police from their territory, they face the challenge of self-government.",
@@ -1730,21 +1730,15 @@
     "url": "https://midbo.co/peliculas/un-lugar-mas-grande/",
     "date": "2026-10-10"
    },
+   "ticket_url": "https://tuboleta.com/es/eventos/un-lugar-mas-grande",
    "premiere": "Estreno en Colombia",
+   "is_free": false,
    "lbSlug": "a-bigger-place",
    "tmdb_id": 1338573,
    "synopsis_en": "Chiapas, southeastern Mexico. When the inhabitants of several villages and towns expel the mayor and the police from their territory, they face the challenge of self-government.",
    "title_en": "A Bigger Place",
    "_fid": "f_e3bcdd7b6b",
-   "id": "f_e3bcdd7b6b",
-   "is_free": false,
-   "_procedencia": {
-    "entrada": {
-     "tipo": "regla",
-     "regla": "mixed: sin dato de entrada = boleta",
-     "marca": "supuesto"
-    }
-   }
+   "id": "f_e3bcdd7b6b"
   },
   {
    "title": "Cien niños esperando un tren",
@@ -3549,7 +3543,7 @@
    }
   },
   {
-   "title": "Sey Arimaku, la otra oscuridad + Galu Dugbis – La memoria de las abuelas",
+   "title": "Sey Arimaku, la otra oscuridad + Galu dugbis. La memoria de las abuelas",
    "type": "film",
    "section": "🏅 Homenaje a Pablo Mora Calderón. Premio ALADOS a Toda una Vida",
    "country": "Colombia",
@@ -3581,16 +3575,24 @@
      "duration": "59 min"
     },
     {
-     "title": "Galu Dugbis – La memoria de las abuelas",
-     "director": "Pablo Mora (asesor de dirección)",
+     "title": "Galu dugbis. La memoria de las abuelas",
+     "director": "Olowaili Green Santacruz",
      "country": "Colombia",
      "flags": "🇨🇴",
      "year": 2019,
-     "duration": "8 min"
+     "duration": "8 min",
+     "synopsis": "Las mujeres de tres generaciones del pueblo Guna Dule del Urabá antioqueño cantan y tejen molas para cuidar el planeta. La Dule ome – Mujer Dule es vital para el pueblo Guna Dule. A través del tejido de la Mola, ella plasma la sabiduría de los antepasados mediante la representación de las capas del universo y la transmite de generación en generación para que la cultura perviva. Los cantos sagrados plasman el recorrido y el proceso de la construcción de una Mola y cómo por medio de tres generaciones las mujeres Guna Dule deciden tejer para no olvidar quiénes y de dónde son.",
+     "synopsis_lang": "es",
+     "titulos_anteriores": [
+      "Galu Dugbis – La memoria de las abuelas"
+     ]
     }
    ],
    "_fid": "f_a4f8eede0f",
-   "id": "f_a4f8eede0f"
+   "id": "f_a4f8eede0f",
+   "titulos_anteriores": [
+    "Sey Arimaku, la otra oscuridad + Galu Dugbis – La memoria de las abuelas"
+   ]
   },
   {
    "title": "Buenos días, Wiracocha",
@@ -3706,7 +3708,7 @@
    "time": "16:30",
    "day_order": 7,
    "venue": "Centro de Memoria, Paz y Reconciliación - Bogotá",
-   "sala": "Aula 1",
+   "sala": "Auditorio",
    "has_qa": false,
    "synopsis": "En la comuna 13 de Medellín existe la fosa urbana a cielo abierto más grande de América Latina. Durante más de veinte años, La Escombrera ha sido señalada por familias de personas víctimas de desaparición forzada como el lugar donde posiblemente se encuentren muchos de los 503 desaparecidos de este territorio. Mujeres Caminando por la Verdad lidera la búsqueda forense que, en medio de incontables obstáculos y tras dos décadas de negacionismo, desencadenó en el hallazgo de cuerpos en diciembre del año 2024. Este acontecimiento histórico, una bocanada de aire fresco para las familias buscadoras, envió un mensaje muy claro a toda Colombia: la tierra ha comenzado a hablar.",
    "synopsis_lang": "es",
@@ -3754,7 +3756,6 @@
     "url": "https://midbo.co/peliculas/el-hogar-fue-sepultado-en-esa-tierra-que-nunca-pudimos-encontrar/",
     "date": "2026-10-10"
    },
-   "premiere": "Estreno en Bogotá",
    "is_free": true,
    "lbSlug": "our-home-was-buried-in-a-land-we-could-never",
    "tmdb_id": 1663181,
@@ -3920,50 +3921,6 @@
    "titulos_anteriores": [
     "Programa 1: Pasaje entre mundos: duelo y memoria"
    ]
-  },
-  {
-   "title": "Sey Arimaku, la otra oscuridad + Galu Dugbis – La memoria de las abuelas",
-   "type": "film",
-   "section": "🏅 Homenaje a Pablo Mora Calderón. Premio ALADOS a Toda una Vida",
-   "country": "Colombia",
-   "flags": "🇨🇴",
-   "duration": "67 min",
-   "_ancla": [
-    "Alianza Francesa - Bogotá",
-    "2026-11-04",
-    "10:00"
-   ],
-   "day": "2026-11-04",
-   "time": "10:00",
-   "day_order": 8,
-   "venue": "Alianza Francesa - Bogotá",
-   "has_qa": false,
-   "_src": {
-    "url": "https://midbo.co/peliculas/sey-arimaku-la-otra-oscuridad/",
-    "date": "2026-10-10"
-   },
-   "is_free": true,
-   "is_cortos": true,
-   "film_list": [
-    {
-     "title": "Sey Arimaku, la otra oscuridad",
-     "director": "Pablo Mora",
-     "country": "Colombia",
-     "flags": "🇨🇴",
-     "year": 2012,
-     "duration": "59 min"
-    },
-    {
-     "title": "Galu Dugbis – La memoria de las abuelas",
-     "director": "Pablo Mora (asesor de dirección)",
-     "country": "Colombia",
-     "flags": "🇨🇴",
-     "year": 2019,
-     "duration": "8 min"
-    }
-   ],
-   "_fid": "f_bdffbabdda",
-   "id": "f_bdffbabdda"
   },
   {
    "title": "Cuba y la noche",
@@ -4970,8 +4927,8 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-19T07:24:30",
-  "plan_sha": "3bda549d3825e850",
+  "fecha": "2026-10-19T19:59:27",
+  "plan_sha": "88ffd61e7fa0a21b",
   "paso": 8,
   "cmd": "python3 pipeline/midbo-2026-verificar.py"
  }
