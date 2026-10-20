@@ -2860,9 +2860,7 @@
      "year": 2003,
      "duration": "51 min",
      "synopsis": "En la selva amazónica colombiana el pueblo indígena Yucuna de Puerto Córdoba se dispone a celebrar un ritual ancestral sobre el origen sagrado de los animales. Con el fin de experimentar con nuevas formas de transmisión cultural, el chamán invita a una pareja de antropólogos documentalistas. Poco antes de su llegada el chamán muere. Sin saber los pormenores del proyecto, la comunidad espera con expectativa la llegada de los blancos. Esta es la historia contada por los indígenas.",
-     "synopsis_lang": "es",
-     "poster": "/assets/midbo-2026/cronica-de-un-baile-de-muneco.jpg",
-     "posterSource": "editorial"
+     "synopsis_lang": "es"
     }
    ],
    "_fid": "f_e43a4bfa1e",
@@ -4941,7 +4939,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-20T14:38:09",
+  "fecha": "2026-10-20T14:44:37",
   "plan_sha": "6012e1ded6067f84",
   "paso": 8,
   "cmd": "python3 pipeline/midbo-2026-verificar.py"
