@@ -49,11 +49,20 @@ jobs:
           c=$(node scripts/ci-camino.js "${{ github.base_ref }}")
           [ "$c" = "datos" ] && echo "datos=true" >> "$GITHUB_OUTPUT" || echo "datos=false" >> "$GITHUB_OUTPUT"
 
-  datos:
+  # Camino de datos, en 3 máquinas a la vez (20 oct 2026, aprobado por Juan).
+  # Corría en UNA: ~19 min por PR de datos, 15 solo en festivales + planificador
+  # + Mi Plan, de a un test. Mismos specs, repartidos con --shard (como la suite
+  # completa de abajo). El check requerido sigue llamándose «Regression tests
+  # (datos)»: lo da el job que junta las 3 partes.
+  datos-shard:
     needs: clasificar
-    if: needs.clasificar.outputs.datos == 'true'
+    if: needs.clasificar.outputs.datos == 'true' || github.head_ref == 'ci/datos-en-tres'  # PRUEBA-TEMPORAL
     runs-on: ubuntu-latest
-    name: Regression tests (datos)
+    name: Regression tests datos (${{ matrix.shard }}/3)
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [1, 2, 3]
     container:
       image: mcr.microsoft.com/playwright:v1.60.0-noble
       options: --user 1001
@@ -64,21 +73,29 @@ jobs:
           node-version: '20'
           cache: 'npm'
       - run: npm ci
-      - name: Smoke tests
-        run: ./scripts/test.sh tests/smoke.spec.js
-      - name: Festivales, planificador y Mi Plan (consumen el JSON)
-        run: ./scripts/test.sh tests/festivals.spec.js tests/planner.spec.js tests/miplan.spec.js
-      - name: Recorrido por festival
-        run: ./scripts/test.sh tests/recorrido-festival.spec.js
+      - name: Smoke, festivales, planificador, Mi Plan y recorrido (parte ${{ matrix.shard }} de 3)
+        run: ./scripts/test.sh tests/smoke.spec.js tests/festivals.spec.js tests/planner.spec.js tests/miplan.spec.js tests/recorrido-festival.spec.js --shard=${{ matrix.shard }}/3 --fully-parallel
       - name: Upload report on failure
         if: failure()
         uses: actions/upload-artifact@v6
         with:
-          name: playwright-report-datos
+          name: playwright-report-datos-${{ matrix.shard }}
           path: |
-            playwright-report/
-            test-results.json
+            playwright-report*/
+            test-results*.json
           retention-days: 7
+
+  datos:
+    needs: [clasificar, datos-shard]
+    if: always() && (needs.clasificar.outputs.datos == 'true' || github.head_ref == 'ci/datos-en-tres')  # PRUEBA-TEMPORAL
+    runs-on: ubuntu-latest
+    name: Regression tests (datos)
+    steps:
+      - name: Las 3 partes pasaron
+        run: |
+          r="${{ needs.datos-shard.result }}"
+          echo "partes: $r"
+          [ "$r" = "success" ] || { echo "::error::alguna parte del camino de datos falló ($r)"; exit 1; }
 
   # Suite completa, en 4 máquinas a la vez (18 oct 2026). Antes corría una lista
   # escrita a mano de 14 archivos, en UNA máquina y de a un test: 16 de 30 specs
