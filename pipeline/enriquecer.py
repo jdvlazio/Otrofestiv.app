@@ -589,11 +589,20 @@ def main():
             # anterior, o el de otro festival nuestro que a su vez apunta aquí
             # (La Rebelión de un Fantasma, en Girardota y en Popayán), no cuenta
             # si el archivo no está en disco
+            # `sobre_tmdb: true` — el afiche que mandó el festival reemplaza la
+            # imagen de TMDB que una persona ya rechazó (Trizas: fotograma según
+            # el catálogo; el formulario de MIDBO trajo el afiche, 20 oct 2026)
+            if d.get('sobre_tmdb'):
+                e = {k: v for k, v in e.items() if k not in ('poster_path', 'poster', 'posterSource')}
+                _p = ''
             if e.get('poster_path') or (_p and not (_p.startswith('/assets/')
                                                      and not os.path.exists(REPO + _p))):
                 continue
             os.makedirs(f'{REPO}/assets/{fid}', exist_ok=True)
-            dest = f'{REPO}/assets/{fid}/{slug(t)}.jpg'
+            # `asset`: nombre propio cuando el de siempre ya está tomado por otra
+            # imagen publicada (los assets son write-once)
+            _nom = d.get('asset') or f'{slug(t)}.jpg'
+            dest = f'{REPO}/assets/{fid}/{_nom}'
             origen = f'{REPO}/{d.get("lamina") or d["archivo"]}'
             # `editorial: true` — un still 16:9 OFICIAL (el que el festival manda
             # como «afiche» de una obra que no tiene uno vertical): va ENTERO, sin
@@ -608,7 +617,7 @@ def main():
                     os.remove(dest)
                     print(f'   afiche declarado RECHAZADO · {t}: {_m}')
                     continue
-            e = {**e, 'poster': f'/assets/{fid}/{slug(t)}.jpg',
+            e = {**e, 'poster': f'/assets/{fid}/{_nom}',
                  'posterSource': 'editorial' if d.get('editorial') else 'custom' if d.get('lamina') else 'oficial',
                  '_afiche': f'declarado: {d["fuente"]}'}
             ok[t] = e
