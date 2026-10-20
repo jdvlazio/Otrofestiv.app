@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "ensamblar.py: ids estables de las funciones (docs/FUNCION.md C1)",
-  "capturado": "2026-10-16"
+  "capturado": "2026-10-20"
  },
  "funciones": {
   "f_4def04d293": {
@@ -129,6 +129,13 @@
    "hora": "19:00",
    "sala": "Sala Capital",
    "titulo": "clausura proyeccion corto nacional ganador"
+  },
+  "f_226044113b": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-10-23",
+   "hora": "15:00",
+   "sala": "Lab 1",
+   "titulo": "de la idea al guion"
   }
  }
 }

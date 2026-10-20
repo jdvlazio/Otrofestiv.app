@@ -634,6 +634,23 @@
     "fecha": "2026-09-01"
    },
    "evidencia": "IG @bogotahorrorfest p/DcxA28kjgVo (1 sep, Selección oficial — largometraje nacional), lámina de Parapeto: 7:30 p. m.; la web del festival dice 7:00 p. m. Decisión de Juan (15 oct): la función a las 19:00 y el aviso de inicio a las 19:30"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-10-24",
+    "hora": "19:30"
+   },
+   "casilla": "time",
+   "valor": "18:30",
+   "contra": "19:30",
+   "fuente": {
+    "tipo": "juan",
+    "frase": "sin respuesta del festival se publica la hora más temprana; la lámina manda sobre el pie",
+    "fecha": "2026-10-20"
+   },
+   "evidencia": "IG https://www.instagram.com/p/DeslqRAFLMP/ lámina 02: «SALA CAPITAL / 24 OCTUBRE / CINEMATECA DE BOGOTÁ / 6:30 PM» · pie: «a las 7:00 p. m.» · web bogotahorrorfilmfest.com/programacion: 7:30 p. m.",
+   "nota": "Tres horas para la misma función: lámina 6:30 PM, pie 7:00 p. m., web 7:30 p. m. (la web, capturada hoy, era la más reciente del rango festival). Sin respuesta del festival se publica la más temprana y la lámina manda sobre el pie."
   }
  ]
 }

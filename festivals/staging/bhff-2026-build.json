@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "bogotahorrorfilmfest.com/programacion/ (arreglo PROGRAMACION del HTML) + IG p/DdcszK2Dn7g (franjas nacionales)",
-  "capturado": "2026-10-18",
+  "capturado": "2026-10-20",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "radar": 1030,
@@ -180,6 +180,11 @@
    "en": "Closing Night",
    "archetype": "Clausura",
    "order": 5
+  },
+  "🛠️ Talleres": {
+   "en": "Workshops",
+   "archetype": "Charlas / Industria",
+   "order": 6
   }
  },
  "venues": {
@@ -256,6 +261,7 @@
    "lbSlug": "parapeto",
    "tmdb_id": 1662539,
    "_fid": "f_4def04d293",
+   "id": "f_4def04d293",
    "is_free": false,
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839533",
    "film_start": "19:30",
@@ -325,8 +331,7 @@
      "fecha": "2026-09-26",
      "url": "https://bogotahorrorfilmfest.com/programacion/"
     }
-   },
-   "id": "f_4def04d293"
+   }
   },
   {
    "title": "Sigilo",
@@ -358,6 +363,7 @@
    "lbSlug": "sigilo-1",
    "tmdb_id": 1387484,
    "_fid": "f_48787e7295",
+   "id": "f_48787e7295",
    "is_free": true,
    "_procedencia": {
     "day": {
@@ -400,8 +406,7 @@
      "fecha": "2026-09-26",
      "url": "https://bogotahorrorfilmfest.com/programacion/"
     }
-   },
-   "id": "f_48787e7295"
+   }
   },
   {
    "title": "Hiperrealidad",
@@ -436,6 +441,7 @@
    "tmdb_id": 1568478,
    "synopsis_en": "Just before his concert, Santiago, a young conductor, receives tragic news that sends him on a journey of guilt, distortion, and terror. Reality shatters: time loops, a lurking monster, and the possible extinction of humanity engulf his world.",
    "_fid": "f_747a1b55a9",
+   "id": "f_747a1b55a9",
    "is_free": false,
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839534",
    "_procedencia": {
@@ -489,8 +495,7 @@
      "fecha": "2026-09-26",
      "url": "https://bogotahorrorfilmfest.com/programacion/"
     }
-   },
-   "id": "f_747a1b55a9"
+   }
   },
   {
    "title": "Sierra: El Álbum Mortuorio",
@@ -508,7 +513,7 @@
     "19:30"
    ],
    "day": "2026-10-24",
-   "time": "19:30",
+   "time": "18:30",
    "day_order": 2,
    "venue": "Cinemateca de Bogotá - Bogotá",
    "sala": "Sala Capital",
@@ -525,6 +530,7 @@
    "lbSlug": "sierra-el-album-mortuorio",
    "tmdb_id": 1789536,
    "_fid": "f_c89a65a296",
+   "id": "f_c89a65a296",
    "is_free": false,
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839535",
    "_procedencia": {
@@ -534,9 +540,9 @@
      "url": "https://bogotahorrorfilmfest.com/programacion/"
     },
     "time": {
-     "tipo": "festival-web",
-     "fecha": "2026-09-26",
-     "url": "https://bogotahorrorfilmfest.com/programacion/"
+     "tipo": "juan",
+     "fecha": "2026-10-20",
+     "frase": "sin respuesta del festival se publica la hora más temprana; la lámina manda sobre el pie"
     },
     "venue": {
      "tipo": "festival-web",
@@ -583,8 +589,7 @@
      "fecha": "2026-09-26",
      "url": "https://bogotahorrorfilmfest.com/programacion/"
     }
-   },
-   "id": "f_c89a65a296"
+   }
   },
   {
    "title": "Moviedreams + Chaika",
@@ -643,6 +648,7 @@
     }
    ],
    "_fid": "f_7c6fef807c",
+   "id": "f_7c6fef807c",
    "is_free": false,
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839536",
    "_procedencia": {
@@ -706,8 +712,7 @@
      "fecha": "2026-09-26",
      "url": "https://bogotahorrorfilmfest.com/programacion/"
     }
-   },
-   "id": "f_7c6fef807c"
+   }
   },
   {
    "title": "Cerdo que Sobrevivió a la Fiebre Aftosa + Yatsi y el Espíritu del Río",
@@ -770,6 +775,7 @@
     }
    ],
    "_fid": "f_c466b733d4",
+   "id": "f_c466b733d4",
    "is_free": false,
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839537",
    "_procedencia": {
@@ -833,8 +839,7 @@
      "fecha": "2026-09-26",
      "url": "https://bogotahorrorfilmfest.com/programacion/"
     }
-   },
-   "id": "f_c466b733d4"
+   }
   },
   {
    "title": "La Muerte No Llega Sola",
@@ -966,6 +971,7 @@
     }
    ],
    "_fid": "f_a2c9656691",
+   "id": "f_a2c9656691",
    "is_free": false,
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839538",
    "_procedencia": {
@@ -1024,8 +1030,7 @@
      "fecha": "2026-09-26",
      "url": "https://bogotahorrorfilmfest.com/programacion/"
     }
-   },
-   "id": "f_a2c9656691"
+   }
   },
   {
    "title": "Work in Progress",
@@ -1053,6 +1058,7 @@
     "date": "2026-09-26"
    },
    "_fid": "f_0e2be82d02",
+   "id": "f_0e2be82d02",
    "is_free": false,
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839539",
    "_procedencia": {
@@ -1111,8 +1117,7 @@
      "fecha": "2026-09-26",
      "url": "https://bogotahorrorfilmfest.com/programacion/"
     }
-   },
-   "id": "f_0e2be82d02"
+   }
   },
   {
    "title": "Dentro del Santiago Horror: Horror sin Fronteras",
@@ -1205,6 +1210,7 @@
     }
    ],
    "_fid": "f_77f76646a6",
+   "id": "f_77f76646a6",
    "is_free": false,
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839540",
    "_procedencia": {
@@ -1268,8 +1274,7 @@
      "fecha": "2026-09-26",
      "url": "https://bogotahorrorfilmfest.com/programacion/"
     }
-   },
-   "id": "f_77f76646a6"
+   }
   },
   {
    "title": "El Susurro + Esquirlas de Caracol",
@@ -1289,8 +1294,6 @@
    "venue": "Cinemateca de Bogotá - Bogotá",
    "sala": "Sala 3",
    "has_qa": false,
-   "poster": "/assets/fantasofest/el-susurro.jpg",
-   "posterSource": "oficial",
    "_src": {
     "url": "https://bogotahorrorfilmfest.com/programacion/",
     "date": "2026-09-26"
@@ -1327,9 +1330,8 @@
      "tmdb_id": 1718595
     }
    ],
-   "description": "Lucía y Adrián, dos hermanos que huyen de la oscura herencia de su padre vampiro, llegan a una casona aislada en el bosque, buscando refugio del pasado. Su intento de olvidar se interrumpe cuando un gato les trae un dedo humano, lo que revela un secreto aterrador: sus vecinos forman parte de una red criminal que secuestra adolescentes para producir películas snuff, y planean deshacerse de ellos. Mientras Lucía lucha por proteger a su hermano, deberá enfrentar una oscura maldición familiar que los persigue en su aparente refugio.",
-   "description_lang": "es",
    "_fid": "f_fed20a6a39",
+   "id": "f_fed20a6a39",
    "is_free": false,
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839542",
    "_procedencia": {
@@ -1388,8 +1390,7 @@
      "fecha": "2026-09-26",
      "url": "https://bogotahorrorfilmfest.com/programacion/"
     }
-   },
-   "id": "f_fed20a6a39"
+   }
   },
   {
    "title": "Donde Duermen los Sueños",
@@ -1425,6 +1426,7 @@
    "synopsis_en": "A man plunged into grief connects through his dreams with the love he lost in a car accident.",
    "title_en": "Where Dreams Sleep",
    "_fid": "f_f9eb6c114e",
+   "id": "f_f9eb6c114e",
    "is_free": true,
    "_procedencia": {
     "day": {
@@ -1472,8 +1474,7 @@
      "fecha": "2026-09-26",
      "url": "https://bogotahorrorfilmfest.com/programacion/"
     }
-   },
-   "id": "f_f9eb6c114e"
+   }
   },
   {
    "title": "La Demonatrix + Gabriel",
@@ -1526,6 +1527,7 @@
     }
    ],
    "_fid": "f_1e2d4a411e",
+   "id": "f_1e2d4a411e",
    "is_free": true,
    "_procedencia": {
     "day": {
@@ -1578,8 +1580,7 @@
      "fecha": "2026-09-26",
      "url": "https://bogotahorrorfilmfest.com/programacion/"
     }
-   },
-   "id": "f_1e2d4a411e"
+   }
   },
   {
    "title": "Algo No Está Bien",
@@ -1704,6 +1705,7 @@
     }
    ],
    "_fid": "f_2214cc37cb",
+   "id": "f_2214cc37cb",
    "is_free": false,
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839543",
    "_procedencia": {
@@ -1762,8 +1764,7 @@
      "fecha": "2026-09-26",
      "url": "https://bogotahorrorfilmfest.com/programacion/"
     }
-   },
-   "id": "f_2214cc37cb"
+   }
   },
   {
    "title": "Hay Algo Esperando",
@@ -1869,6 +1870,7 @@
     }
    ],
    "_fid": "f_e13938e01b",
+   "id": "f_e13938e01b",
    "is_free": false,
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839544",
    "_procedencia": {
@@ -1927,8 +1929,7 @@
      "fecha": "2026-09-26",
      "url": "https://bogotahorrorfilmfest.com/programacion/"
     }
-   },
-   "id": "f_e13938e01b"
+   }
   },
   {
    "title": "MEAT the Movie + El Teatro",
@@ -1972,6 +1973,7 @@
     }
    ],
    "_fid": "f_220193b425",
+   "id": "f_220193b425",
    "is_free": true,
    "_procedencia": {
     "day": {
@@ -2019,8 +2021,7 @@
      "fecha": "2026-09-26",
      "url": "https://bogotahorrorfilmfest.com/programacion/"
     }
-   },
-   "id": "f_220193b425"
+   }
   },
   {
    "title": "Tarde o Temprano + Siempre hay un monstruo",
@@ -2080,6 +2081,7 @@
     }
    ],
    "_fid": "f_2d97ac3aaf",
+   "id": "f_2d97ac3aaf",
    "is_free": false,
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839545",
    "_procedencia": {
@@ -2143,8 +2145,7 @@
      "fecha": "2026-09-26",
      "url": "https://bogotahorrorfilmfest.com/programacion/"
     }
-   },
-   "id": "f_2d97ac3aaf"
+   }
   },
   {
    "title": "Mamá, la Casa No Es Segura",
@@ -2271,6 +2272,7 @@
     }
    ],
    "_fid": "f_ae36afd246",
+   "id": "f_ae36afd246",
    "is_free": false,
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839546",
    "_procedencia": {
@@ -2334,8 +2336,7 @@
      "fecha": "2026-09-26",
      "url": "https://bogotahorrorfilmfest.com/programacion/"
     }
-   },
-   "id": "f_ae36afd246"
+   }
   },
   {
    "title": "Clausura + Proyección Corto Nacional Ganador",
@@ -2361,6 +2362,7 @@
    "description": "Cierre del festival · Entrega de premios.",
    "description_lang": "es",
    "_fid": "f_7de649346b",
+   "id": "f_7de649346b",
    "is_free": true,
    "_procedencia": {
     "day": {
@@ -2413,8 +2415,92 @@
      "fecha": "2026-09-26",
      "url": "https://bogotahorrorfilmfest.com/programacion/"
     }
+   }
+  },
+  {
+   "title": "De la idea al guion",
+   "type": "event",
+   "section": "🛠️ Talleres",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-23",
+    "15:00"
+   ],
+   "day": "2026-10-23",
+   "time": "15:00",
+   "day_order": 1,
+   "venue": "Cinemateca de Bogotá - Bogotá",
+   "sala": "Lab 1",
+   "event_kind": "taller",
+   "has_qa": false,
+   "_src": {
+    "url": "https://www.instagram.com/p/Des_xjFN9gL/",
+    "date": "2026-10-20",
+    "acceso": "https://bogotahorrorfilmfest.com/talleres/"
    },
-   "id": "f_7de649346b"
+   "requires_registration": true,
+   "description": "Jhonny Ortiz Alarcón",
+   "description_lang": "es",
+   "_fid": "f_226044113b",
+   "id": "f_226044113b",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-20",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-20",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-20",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-20",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-20",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "requires_registration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-20",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-20",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-20",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-20",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-20",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "duration": {
+     "tipo": "regla",
+     "marca": "estimado"
+    }
+   },
+   "duration": "90 min"
   }
  ],
  "_avisos_duracion": [
@@ -2422,9 +2508,9 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-18T06:28:34",
-  "plan_sha": "2ffdc359c921f8c4",
-  "paso": 7,
-  "cmd": "python3 pipeline/ensamblar.py bhff-2026"
+  "fecha": "2026-10-20T11:46:24",
+  "plan_sha": "104188497fe430c6",
+  "paso": 9,
+  "cmd": "python3 pipeline/bhff-2026-verificar.py"
  }
 }
