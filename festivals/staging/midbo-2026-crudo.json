@@ -17,8 +17,8 @@
   "2026-10-15 12:30 ¿Quién quemó el bus?: fuera del 27 oct–4 nov oficial (Colegio Alejandro Obregón)",
   "2026-10-16 09:00 ¿Quién quemó el bus?: fuera del 27 oct–4 nov oficial (Colegio Manuelita Sáenz)",
   "2026-10-16 15:00 ¿Quién quemó el bus?: fuera del 27 oct–4 nov oficial (Colegio Manuelita Sáenz)",
-  "Chanson pour le nouveau monde: función que la regla de fecha no lee (6 de noviembre / por confirmar H · UniNorte, Barranquilla)",
-  "Ciclón: función que la regla de fecha no lee (6 de noviembre / por confirmar H · UniNorte, Barranquilla)",
+  "Chanson pour le nouveau monde: función que la regla de fecha no lee (6 de noviembre / 10:00 a.m. · Salón GABO, Universidad del Norte, Barranquilla)",
+  "Ciclón: función que la regla de fecha no lee (6 de noviembre / 10:00 a.m. · Salón GABO, Universidad del Norte, Barranquilla)",
   "2026-11-07 16:30 Iré a Santiago: fuera del 27 oct–4 nov oficial (Cinemateca del Caribe, Barranquilla)",
   "2026-11-10 14:30 Iré a Santiago: fuera del 27 oct–4 nov oficial (Sala Langosta Azul, Universidad del Magdalena, Santa Marta)",
   "2026-11-14 16:30 Iré a Santiago: fuera del 27 oct–4 nov oficial (Cinemateca La Tertulia, Cali)",
@@ -44,7 +44,7 @@
   "2026-11-10 14:30 79 primaveras: fuera del 27 oct–4 nov oficial (Sala Langosta Azul, Universidad del Magdalena, Santa Marta)",
   "2026-11-14 16:30 79 primaveras: fuera del 27 oct–4 nov oficial (Cinemateca La Tertulia, Cali)",
   "2026-11-25 18:30 Instrucciones para cuando no esté: fuera del 27 oct–4 nov oficial (MAMM, El Poblado, Medellín)",
-  "Nacer de nuevo: función que la regla de fecha no lee (6 de noviembre / por confirmar H · UniNorte, Barranquilla)",
+  "Nacer de nuevo: función que la regla de fecha no lee (6 de noviembre / 10:00 a.m. · Salón GABO, Universidad del Norte, Barranquilla)",
   "2026-11-28 16:30 De cierta manera: fuera del 27 oct–4 nov oficial (MAMM, El Poblado, Medellín)",
   "2026-11-07 19:00 De cierta manera: fuera del 27 oct–4 nov oficial (Cinemateca del Caribe, Barranquilla)",
   "2026-10-27 14:00 L’Evangile de la Révolution: función fuera de Bogotá (Santa Marta)",
@@ -216,7 +216,7 @@
    "hora": "11:00",
    "sede": "Centro Ático, Universidad Javeriana",
    "ciudad": "Bogotá",
-   "acceso": "Entrada libre (no se anuncia pago)",
+   "acceso": "Entrada libre",
    "_src": {
     "url": "https://midbo.co/peliculas/el-valor-de-la-palabra/",
     "date": "2026-10-10"
@@ -235,8 +235,8 @@
    "titulo": "Programa 4: Hijo de tigre y mula: la historia de los tratados Torrijos-Carter",
    "dia": "2026-10-29",
    "hora": "14:00",
-   "sede": "Universidad Central",
-   "sala": "Auditorio Caldas",
+   "sede": "Universidad Jorge Tadeo Lozano",
+   "sala": "Aula Magistral 705 - M16 (piso 7), Edificio de Posgrados",
    "ciudad": "Bogotá",
    "acceso": "Entrada libre",
    "_src": {
@@ -370,7 +370,7 @@
    "dia": "2026-10-29",
    "hora": "16:00",
    "sede": "Centro de Memoria, Paz y Reconciliación",
-   "sala": "Aula 1",
+   "sala": "Auditorio",
    "ciudad": "Bogotá",
    "acceso": "Entrada libre",
    "_src": {
@@ -466,6 +466,7 @@
    "dia": "2026-10-29",
    "hora": "17:30",
    "sede": "Centro de Memoria, Paz y Reconciliación",
+   "sala": "Auditorio",
    "ciudad": "Bogotá",
    "acceso": "Entrada libre",
    "_src": {
@@ -607,11 +608,10 @@
   {
    "dia": "2026-10-30",
    "hora": "14:00",
-   "sede": "Universidad Central",
-   "sala": "Auditorio Santander",
+   "sede": "Universidad Jorge Tadeo Lozano",
+   "sala": "Aula Magistral 705 - M16 (piso 7), Edificio de Posgrados",
    "ciudad": "Bogotá",
-   "ticket_url": "https://tuboleta.com/es/eventos/un-lugar-mas-grande",
-   "acceso": "Boletería en TuBoleta",
+   "acceso": "Entrada libre (no se anuncia pago)",
    "_src": {
     "url": "https://midbo.co/peliculas/un-lugar-mas-grande/",
     "date": "2026-10-10"
@@ -838,7 +838,8 @@
    "sede": "Cinemateca de Bogotá",
    "sala": "Sala 3",
    "ciudad": "Bogotá",
-   "acceso": "desconocido",
+   "ticket_url": "https://tuboleta.com/es/eventos/un-lugar-mas-grande",
+   "acceso": "Boletería en TuBoleta",
    "_src": {
     "url": "https://midbo.co/peliculas/un-lugar-mas-grande/",
     "date": "2026-10-10"
@@ -1770,7 +1771,7 @@
    "sinopsis": "Pacho salió de su pueblo por hechos violentos hace más de 50 años y nunca pudo regresar. Al ver una vieja fotografía que se parece al último recuerdo que guarda de su tierra, siente el deseo de volver y encontrarse con los que allí dejó. Ante la imposibilidad de hacerlo, inventa un regreso imaginario para reencontrarse con su historia y sanar las huellas que la violencia dejó en su vida. En ese pueblo que parece solitario, lo reciben unos rostros que lo han estado esperando. Desde el pasado, con sus miradas, lo acompañan a recorrer las calles. Mediante el juego y la imaginación, Pacho le da vida una imagen de archivo de hace 70 años, la misma que se convirtió en símbolo inaugural de la violencia en Colombia. En su retorno imaginado, la fotografía se transforma en territorio vivo y la imaginación en un acto de resistencia y sanación, frente a un trauma colectivo de un país entero que ha plasmado su violencia una y otra vez en una misma imagen."
   },
   {
-   "titulo": "Sey Arimaku, la otra oscuridad + Galu Dugbis – La memoria de las abuelas",
+   "titulo": "Sey Arimaku, la otra oscuridad + Galu dugbis. La memoria de las abuelas",
    "dia": "2026-11-03",
    "hora": "10:00",
    "sede": "Alianza Francesa",
@@ -1790,11 +1791,12 @@
      "duracion_min": 59
     },
     {
-     "titulo": "Galu Dugbis – La memoria de las abuelas",
-     "director": "Pablo Mora (asesor de dirección)",
+     "titulo": "Galu dugbis. La memoria de las abuelas",
+     "director": "Olowaili Green Santacruz",
      "pais": "Colombia",
      "anio": 2019,
-     "duracion_min": 8
+     "duracion_min": 8,
+     "sinopsis": "Las mujeres de tres generaciones del pueblo Guna Dule del Urabá antioqueño cantan y tejen molas para cuidar el planeta. La Dule ome – Mujer Dule es vital para el pueblo Guna Dule. A través del tejido de la Mola, ella plasma la sabiduría de los antepasados mediante la representación de las capas del universo y la transmite de generación en generación para que la cultura perviva. Los cantos sagrados plasman el recorrido y el proceso de la construcción de una Mola y cómo por medio de tres generaciones las mujeres Guna Dule deciden tejer para no olvidar quiénes y de dónde son."
     }
    ],
    "duracion_min": 67
@@ -1861,7 +1863,7 @@
    "dia": "2026-11-03",
    "hora": "16:30",
    "sede": "Centro de Memoria, Paz y Reconciliación",
-   "sala": "Aula 1",
+   "sala": "Auditorio",
    "ciudad": "Bogotá",
    "acceso": "Entrada libre",
    "_src": {
@@ -1892,7 +1894,6 @@
     "url": "https://midbo.co/peliculas/el-hogar-fue-sepultado-en-esa-tierra-que-nunca-pudimos-encontrar/",
     "date": "2026-10-10"
    },
-   "premiere": "Estreno en Bogotá",
    "seccion": "Competencia Nacional de Largometraje Documental",
    "titulo": "El hogar fue sepultado en esa tierra que nunca pudimos encontrar",
    "director": "Deimer Quintero Vertel",
@@ -1926,7 +1927,7 @@
    "sede": "Universidad Nacional de Colombia",
    "sala": "Cinemateca Sala Alterna, Auditorio 105, edificio 301",
    "ciudad": "Bogotá",
-   "acceso": "Entrada libre (no se anuncia pago)",
+   "acceso": "Entrada libre",
    "_src": {
     "url": "https://midbo.co/peliculas/el-leon/",
     "date": "2026-10-10"
@@ -1986,36 +1987,6 @@
     }
    ],
    "duracion_min": 90
-  },
-  {
-   "titulo": "Sey Arimaku, la otra oscuridad + Galu Dugbis – La memoria de las abuelas",
-   "dia": "2026-11-04",
-   "hora": "10:00",
-   "sede": "Alianza Francesa",
-   "ciudad": "Bogotá",
-   "acceso": "Entrada libre (no se anuncia pago)",
-   "_src": {
-    "url": "https://midbo.co/peliculas/sey-arimaku-la-otra-oscuridad/",
-    "date": "2026-10-10"
-   },
-   "seccion": "Homenaje a Pablo Mora Calderón. Premio ALADOS a toda una vida",
-   "obras": [
-    {
-     "titulo": "Sey Arimaku, la otra oscuridad",
-     "director": "Pablo Mora",
-     "pais": "Colombia",
-     "anio": 2012,
-     "duracion_min": 59
-    },
-    {
-     "titulo": "Galu Dugbis – La memoria de las abuelas",
-     "director": "Pablo Mora (asesor de dirección)",
-     "pais": "Colombia",
-     "anio": 2019,
-     "duracion_min": 8
-    }
-   ],
-   "duracion_min": 67
   },
   {
    "dia": "2026-11-04",
@@ -2213,7 +2184,7 @@
    "hora": "16:00",
    "sede": "Alianza Francesa",
    "ciudad": "Bogotá",
-   "acceso": "Entrada libre (no se anuncia pago)",
+   "acceso": "Entrada libre",
    "_src": {
     "url": "https://midbo.co/peliculas/l-evangile-de-la-revolution/",
     "date": "2026-10-10"

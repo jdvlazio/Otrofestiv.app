@@ -4,7 +4,7 @@
   "capturado": "2026-10-19",
   "titulo": "RADAR: Muestra Internacional Documental de Bogotá (MIDBO) — Bogotá, 28 OCT–4 NOV (28ª)",
   "estado": "OPEN",
-  "comentarios": 4
+  "comentarios": 6
  },
  "issue": 1031,
  "titulo": "RADAR: Muestra Internacional Documental de Bogotá (MIDBO) — Bogotá, 28 OCT–4 NOV (28ª)",
@@ -26,6 +26,14 @@
   {
    "fecha": "2026-10-19",
    "cuerpo": "**Vigía 19 oct 2026 — MIDBO: una obra está metida en un programa que no es el suyo**\n\n- **Fuente:** https://midbo.co/peliculas/l-evangile-de-la-revolution/ (bloque «Funciones», leído hoy) dice **4 nov · 16:00 H · Alianza Francesa**, «*Con presencia del director», 115 min.\n- **Las otras dos obras del Programa 7** (*A Film to Remind Us of Utopia*, 20 min, y *Una sombra oscilante*, 77 min) dicen **4 nov · 14:00 H · Alianza Francesa**, «Duración total programa: 97'» = 20 + 77. *L'Evangile* no entra en esa suma.\n- **La app (almacén, `festivales/midbo-2026/80ba725c32f2.json`):** «Programa 7: Reactivar los Archivos para el Presente», 4 nov 14:00, Alianza Francesa, con las TRES obras en `film_list`. No hay función de *L'Evangile* a las 16:00.\n- **Acción sugerida:** sacar *L'Evangile de la Révolution* del Programa 7 y publicarla sola el 4 nov a las 16:00 en la Alianza Francesa (el acceso de esa función no dice «Entrada libre»: revisar). El resto de las 146 funciones de las fichas (27 oct–4 nov) cuadra con la app, en las dos direcciones.\n\nInstagram @midbo_doc (sin sesión): solo posts de selección (Curadurías Especiales 1 y 2, Espejos), sin cambios de horario.\n"
+  },
+  {
+   "fecha": "2026-10-19",
+   "cuerpo": "**Salas — Cinemateca de Bogotá (lectura automática, 19 oct)**\n\nLa agenda de la Cinemateca ya publica las funciones de MIDBO del 28 al 31 OCT: las 20 coinciden con la app en día, hora y sala, y El hogar fue sepultado… sale como «Entrada libre» en las salas Capital, 2 y 3, igual que en la app. Hay 1 diferencia:\n\n- **«Un lugar más grande» — sáb 31 OCT 2:30 PM, Sala 3.** La sala tiene link de compra: https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839517 (fuente: https://cinematecadebogota.gov.co/node/peliculas/3611?sede=11). En la app no hay `ticket_url`. **Acción sugerida:** cargar ese link.\n\nPara tener en cuenta (no es diferencia): en las demás funciones la app enlaza a `tuboleta.com/es/eventos/…` y la Cinemateca a su propia compra (`cinemateca.checkout.tuboleta.com/…productId=…`). La Cinemateca todavía no publicó MIDBO del 1 al 4 NOV, así que esos días no se pudieron comparar. Las 9 actividades de formación del 28 al 30 OCT (master class, mesas, diálogos) no salen en la agenda, que solo lista películas.\n"
+  },
+  {
+   "fecha": "2026-10-20",
+   "cuerpo": "Vigía 19 oct (19:00): **función quitada en la web.** Las fichas de Sey Arimaku, la otra oscuridad y Galu Dugbis – La memoria de las abuelas (modificadas 19 oct 17:23) solo dan ya **3 nov 10:00, Alianza Francesa**. La app sigue mostrando también **4 nov 10:00** en Alianza Francesa. En las fichas no aparece nada más en esa franja. Sugerido: quitar la del 4 nov (o confirmarla con el festival). El resto de las 150 funciones de las fichas coincide (las 6 de fuera de Bogotá/La Picota se dejan fuera a propósito)."
   }
  ]
 }
