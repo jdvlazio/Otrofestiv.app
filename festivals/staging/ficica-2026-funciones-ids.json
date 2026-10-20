@@ -1,7 +1,7 @@
 {
  "_provenance": {
-  "fuente": "ids-legado.py: ids estables congelados desde lo publicado (docs/FUNCION.md §11.2)",
-  "capturado": "2026-10-18"
+  "fuente": "ensamblar.py: ids estables de las funciones (docs/FUNCION.md C1)",
+  "capturado": "2026-10-20"
  },
  "funciones": {
   "f_7d4d7b73bd": {
@@ -158,19 +158,19 @@
    "sala": "Sede Combarranquilla Country",
    "titulo": "cine accesible"
   },
-  "f_380d3aa18b": {
-   "sede": "Alianza Francesa de Barranquilla - Barranquilla",
-   "dia": "2026-10-23",
-   "hora": "14:00",
-   "sala": "Salón Montreal, 3.er piso",
-   "titulo": "la paridad importa diagnostico de la participacion de las mujeres en festivales de cortometrajes de cine colombiano 2008 2020"
-  },
   "f_d206d70806": {
    "sede": "Universidad de la Costa – CUC - Barranquilla",
    "dia": "2026-10-23",
    "hora": "14:00",
    "sala": "Auditorio Sala de Conferencias 1, bloque 11, piso 3",
    "titulo": "territorios vivos"
+  },
+  "f_380d3aa18b": {
+   "sede": "Alianza Francesa de Barranquilla - Barranquilla",
+   "dia": "2026-10-23",
+   "hora": "16:30",
+   "sala": "Salón Montreal, 3.er piso",
+   "titulo": "la paridad importa diagnostico de la participacion de las mujeres en festivales de cortometrajes de cine colombiano 2008 2020"
   },
   "f_acd8b8309b": {
    "sede": "Alianza Francesa de Barranquilla - Barranquilla",

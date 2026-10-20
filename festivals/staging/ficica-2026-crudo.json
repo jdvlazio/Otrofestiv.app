@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "ficica.cinealacalle.org — Programación General 2026 (JSON embebido en la página)",
-  "capturado": "2026-10-18",
+  "capturado": "2026-10-20",
   "url": "https://ficica.cinealacalle.org/programacion-general.html",
   "metodo": "actividad por función; solo acceso libre; cineforo pegado a su programa"
  },
@@ -232,14 +232,17 @@
    "obras": [
     {
      "titulo": "El abrazo del sol",
+     "director": "Leonard Quiroz",
      "pais": "Colombia"
     },
     {
      "titulo": "Cabica",
+     "director": "Heidy Helena Mejia Sánchez",
      "pais": "Colombia"
     },
     {
      "titulo": "Arlequín",
+     "director": "Rubén Casalins",
      "pais": "Colombia"
     }
    ]
@@ -320,30 +323,37 @@
    "obras": [
     {
      "titulo": "Capitán cartagena",
+     "director": "Enuar Castillo Fernández",
      "pais": "Colombia"
     },
     {
      "titulo": "Concierto sentido",
+     "director": "Cristian Rivas",
      "pais": "Colombia"
     },
     {
      "titulo": "Frágil o embalados",
+     "director": "Colectivo Pedro Romero Vive Aquí",
      "pais": "Colombia"
     },
     {
      "titulo": "Dientes de yuca",
+     "director": "Yurieth Romero Velasquez",
      "pais": "Colombia"
     },
     {
      "titulo": "Dulce",
+     "director": "Yurieth Romero Velasquez, Edgar De Luque",
      "pais": "Colombia"
     },
     {
      "titulo": "Plan de fuga",
+     "director": "Gleydis Paola Salgado Reyes",
      "pais": "Colombia"
     },
     {
      "titulo": "El kanto del kajambá",
+     "director": "Rodolfo Palomino Cassiani",
      "pais": "Colombia"
     }
    ]
@@ -932,22 +942,27 @@
    "obras": [
     {
      "titulo": "Alivios",
+     "director": "Juan Manuel González",
      "pais": "México, Venezuela"
     },
     {
      "titulo": "El bitcoin de oro",
+     "director": "Bernardo Hernández",
      "pais": "España"
     },
     {
      "titulo": "El maestro de la piquería",
+     "director": "Yinet Molero",
      "pais": "Colombia"
     },
     {
      "titulo": "Khazana",
+     "director": "Basir Ahmed",
      "pais": "Pakistán"
     },
     {
      "titulo": "Quinto primera",
+     "director": "Fran Menchón",
      "pais": "España"
     }
    ]
@@ -992,44 +1007,30 @@
    "obras": [
     {
      "titulo": "Alivios",
+     "director": "Juan Manuel González",
      "pais": "México, Venezuela"
     },
     {
      "titulo": "El bitcoin de oro",
+     "director": "Bernardo Hernández",
      "pais": "España"
     },
     {
      "titulo": "El maestro de la piquería",
+     "director": "Yinet Molero",
      "pais": "Colombia"
     },
     {
      "titulo": "Khazana",
+     "director": "Basir Ahmed",
      "pais": "Pakistán"
     },
     {
      "titulo": "Quinto primera",
+     "director": "Fran Menchón",
      "pais": "España"
     }
    ]
-  },
-  {
-   "dia": "2026-10-23",
-   "hora": "14:00",
-   "sede": "Alianza Francesa de Barranquilla",
-   "sala": "Salón Montreal, 3.er piso",
-   "acceso": "Entrada libre",
-   "titulo": "\"La Paridad Importa\": diagnóstico de la participación de las mujeres en festivales de cortometrajes de cine colombiano (2008–2020)",
-   "seccion": "Industria",
-   "_src": {
-    "url": "https://ficica.cinealacalle.org/programacion-general.html",
-    "date": "2026-10-15",
-    "fila": 67
-   },
-   "tipo": "evento",
-   "event_kind": "masterclass",
-   "duracion_min": 90,
-   "sinopsis": "«La Paridad Importa» es un diagnóstico que abre la conversación sobre las brechas de género en los festivales de cortometrajes en Colombia (2008–2020). Esta investigación funciona como una herramienta de acción afirmativa orientada a visibilizar y combatir la exclusión histórica de las mujeres y diversidades de género en la industria audiovisual del país, aportando datos y reflexiones clave para impulsar la equidad en el cine nacional.",
-   "invitados": "Jimena Prieto Sarmiento (Realizadora Audiovisual y Gestora Cultural, fundadora y directora de Cine en Femenino)"
   },
   {
    "dia": "2026-10-23",
@@ -1052,25 +1053,49 @@
    "obras": [
     {
      "titulo": "El silencio de las semillas",
+     "director": "Elizabeth Pirela González",
      "pais": "Colombia"
     },
     {
      "titulo": "Memorias piedras de boca e’ caña",
+     "director": "Tribu Digital Mokaná",
      "pais": "Colombia"
     },
     {
      "titulo": "Princesado mokaná: el legado del cerro de las hermosas",
+     "director": "Liz Dany Macías",
      "pais": "Colombia"
     },
     {
      "titulo": "Proowa",
+     "director": "Cristobal R. Mendoza",
      "pais": "Colombia"
     },
     {
      "titulo": "Seguridad en el territorio del pueblo ette ennka chimila",
+     "director": "Cristobal R. Mendoza",
      "pais": "Colombia"
     }
    ]
+  },
+  {
+   "dia": "2026-10-23",
+   "hora": "16:30",
+   "sede": "Alianza Francesa de Barranquilla",
+   "sala": "Salón Montreal, 3.er piso",
+   "acceso": "Entrada libre",
+   "titulo": "\"La Paridad Importa\": diagnóstico de la participación de las mujeres en festivales de cortometrajes de cine colombiano (2008–2020)",
+   "seccion": "Industria",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/programacion-general.html",
+    "date": "2026-10-15",
+    "fila": 67
+   },
+   "tipo": "evento",
+   "event_kind": "masterclass",
+   "duracion_min": 120,
+   "sinopsis": "«La Paridad Importa» es un diagnóstico que abre la conversación sobre las brechas de género en los festivales de cortometrajes en Colombia (2008–2020). Esta investigación funciona como una herramienta de acción afirmativa orientada a visibilizar y combatir la exclusión histórica de las mujeres y diversidades de género en la industria audiovisual del país, aportando datos y reflexiones clave para impulsar la equidad en el cine nacional.",
+   "invitados": "Jimena Prieto Sarmiento (Realizadora Audiovisual y Gestora Cultural, fundadora y directora de Cine en Femenino)"
   },
   {
    "dia": "2026-10-23",

@@ -4506,8 +4506,8 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-20T06:17:14",
-  "plan_sha": "e638ece540777486",
+  "fecha": "2026-10-20T09:27:47",
+  "plan_sha": "74eaa046cae49b36",
   "paso": 6,
   "cmd": "python3 pipeline/guatape-2026-verificar.py"
  }

@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "https://ficica.cinealacalle.org/programas.html",
-  "capturado": "2026-10-18",
+  "capturado": "2026-10-20",
   "metodo": "JSON embebido de la página Programas"
  },
  "programas": [
@@ -674,7 +674,8 @@
     {
      "titulo": "COMPRAVENTA",
      "pais": "Argentina",
-     "genero": "Ficción"
+     "genero": "Ficción",
+     "director": "Thomas Murphy"
     },
     {
      "titulo": "MÁS ALLÁ",
@@ -955,28 +956,33 @@
     {
      "titulo": "ALIVIOS",
      "pais": "México, Venezuela",
-     "genero": "Ficción"
+     "genero": "Ficción",
+     "director": "Juan Manuel Gonzáles"
     },
     {
      "titulo": "EL BITCOIN DE ORO",
      "pais": "España",
-     "genero": "Ficción"
+     "genero": "Ficción",
+     "director": "Bernardo Hernandez"
     },
     {
      "titulo": "EL MAESTRO DE LA PIQUERÍA",
      "pais": "Colombia",
-     "genero": "Documental"
+     "genero": "Documental",
+     "director": "Yinet Molero"
     },
     {
      "titulo": "KHAZANA",
      "alterno": "Tesoro",
      "pais": "Pakistán",
-     "genero": "Ficción"
+     "genero": "Ficción",
+     "director": "Basir Ahmed"
     },
     {
      "titulo": "QUINTO PRIMERA",
      "pais": "España",
-     "genero": "Ficción"
+     "genero": "Ficción",
+     "director": "Fran Menchón"
     }
    ]
   },
@@ -994,28 +1000,33 @@
     {
      "titulo": "EL SILENCIO DE LAS SEMILLAS",
      "pais": "Colombia",
-     "genero": "Documental"
+     "genero": "Documental",
+     "director": "Elizabeth Pirela González"
     },
     {
      "titulo": "MEMORIAS PIEDRAS DE BOCA E’ CAÑA",
      "pais": "Colombia",
-     "genero": "Documental"
+     "genero": "Documental",
+     "director": "Tribu Digital Mokaná"
     },
     {
      "titulo": "PRINCESADO MOKANÁ: EL LEGADO DEL CERRO DE LAS HERMOSAS",
      "pais": "Colombia",
-     "genero": "Documental"
+     "genero": "Documental",
+     "director": "Liz Dany Macías"
     },
     {
      "titulo": "PROOWA",
      "alterno": "Yuca",
      "pais": "Colombia",
-     "genero": "Docuficción"
+     "genero": "Docuficción",
+     "director": "Cristobal R. Mendoza"
     },
     {
      "titulo": "SEGURIDAD EN EL TERRITORIO DEL PUEBLO ETTE ENNKA CHIMILA",
      "pais": "Colombia",
-     "genero": "Documental"
+     "genero": "Documental",
+     "director": "Cristobal R. Mendoza"
     }
    ]
   },
@@ -1033,37 +1044,44 @@
     {
      "titulo": "CAPITÁN CARTAGENA",
      "pais": "Colombia",
-     "genero": "No ficción"
+     "genero": "No ficción",
+     "director": "Enuar Castillo Fernández"
     },
     {
      "titulo": "CONCIERTO SENTIDO",
      "pais": "Colombia",
-     "genero": "No ficción"
+     "genero": "No ficción",
+     "director": "Cristian Rivas"
     },
     {
      "titulo": "FRÁGIL O EMBALADOS",
      "pais": "Colombia",
-     "genero": "No ficción"
+     "genero": "No ficción",
+     "director": "Colectivo Pedro Romero Vive Aquí"
     },
     {
      "titulo": "DIENTES DE YUCA",
      "pais": "Colombia",
-     "genero": "Ficción"
+     "genero": "Ficción",
+     "director": "Yurieth Romero Velasquez"
     },
     {
      "titulo": "DULCE",
      "pais": "Colombia",
-     "genero": "Ficción"
+     "genero": "Ficción",
+     "director": "Yurieth Romero Velasquez, Edgar De Luque"
     },
     {
      "titulo": "PLAN DE FUGA",
      "pais": "Colombia",
-     "genero": "Ficción"
+     "genero": "Ficción",
+     "director": "Gleydis Paola Salgado Reyes"
     },
     {
      "titulo": "EL KANTO DEL KAJAMBÁ",
      "pais": "Colombia",
-     "genero": "Ficción"
+     "genero": "Ficción",
+     "director": "Rodolfo Palomino Cassiani"
     }
    ]
   },
@@ -1081,17 +1099,20 @@
     {
      "titulo": "EL ABRAZO DEL SOL",
      "pais": "Colombia",
-     "genero": "Ficción"
+     "genero": "Ficción",
+     "director": "Leonard Quiroz"
     },
     {
      "titulo": "CABICA",
      "pais": "Colombia",
-     "genero": "Documental"
+     "genero": "Documental",
+     "director": "Heidy Helena Mejia Sánchez"
     },
     {
      "titulo": "ARLEQUÍN",
      "pais": "Colombia",
-     "genero": "Ficción"
+     "genero": "Ficción",
+     "director": "Rubén Casalins"
     }
    ]
   },

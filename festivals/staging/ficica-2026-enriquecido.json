@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, emparejado con ficha_verifica() (director + año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-10-18"
+  "capturado": "2026-10-20"
  },
  "obras": [
   {
@@ -54,6 +54,28 @@
    "_sinopsis_de": "ya publicada en filcmar-2026",
    "poster": "/assets/ficica-2026/agachar-el-rostro.jpg",
    "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Alivios",
+   "tmdb_id": 1469210,
+   "titulo_original": "Alivios",
+   "poster_path": null,
+   "synopsis_es": "Carlos se acerca a la mediana edad, atrapado en una crisis personal que se ha prolongado demasiado. Rosa, su madre, sufre un dolor incapacitante que solo se mitiga con las cálidas aguas de la hidroterapia. Una noche, ella se ofrece a hacer el sacrificio máximo para que ambos puedan transitar a un lugar mejor. Un cortometraje sobre el amor, la esperanza y el alivio que todos anhelamos.",
+   "synopsis_en": "Carlos is approaching midlife trapped in a personal crisis that has lingered too long. Rosa, his mother, suffers from disabling pain that is only mitigated by the warm waters of hydrotherapy. One night, she offers to make the ultimate sacrifice so that they can both transit to a better place. A short film about love, hope and relief we all long for.",
+   "genero": "Drama",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 19,
+   "pais_tmdb": "Mexico, Venezuela",
+   "title_en": "Reliefs",
+   "lbSlug": "reliefs-2025",
+   "poster": "/assets/ficcali-2026/alivios.jpg",
+   "posterSource": "oficial",
+   "_verificado": "declarada a mano: El afiche OFICIAL del festival manda sobre el de TMDB (jerarquía del póster): es el que ya publicamos en FICCALI 2026. Desde el 20 oct la web de FICICA da el director, la cascada casa la ficha de TMDB y su afiche pisaba el oficial. Declarado el 20 oct 2026.",
+   "_director": "Juan Manuel González",
+   "_sondeado": "2026-10-20",
+   "_heredado": {
+    "synopsis_es": "catálogo w_R4H50AY1TEJ8 (ficcali-2026, ficica-2026, villadelcine-2026)"
+   }
   },
   {
    "titulo": "Belleza letal",
@@ -359,6 +381,24 @@
    "posterSource": "tmdb"
   },
   {
+   "titulo": "Dientes de yuca",
+   "_ya_publicada": [
+    {
+     "festival": "popayan-2026",
+     "titulo": "Dientes de yuca",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "14 min",
+     "sinopsis": "David, un niño negro de seis años, sufre acoso escolar por el color de su piel y la falta de dientes. Cuando le piden que lleve una foto escolar, la esconde de sus padres para evitar más burlas. Pero su bisabuelo Leandro se entera y le fabrica una dentadura postiza de yuca. Juntos, se preparan para la foto."
+    }
+   ],
+   "_verificado": "ya publicada en popayan-2026: se reusa su sinopsis",
+   "sinopsis": "David, un niño negro de seis años, sufre acoso escolar por el color de su piel y la falta de dientes. Cuando le piden que lleve una foto escolar, la esconde de sus padres para evitar más burlas. Pero su bisabuelo Leandro se entera y le fabrica una dentadura postiza de yuca. Juntos, se preparan para la foto.",
+   "pais": "Colombia",
+   "anio": 2025,
+   "duracion_tmdb": 14
+  },
+  {
    "titulo": "Do rocks dream of flying?",
    "tmdb_id": 1452119,
    "titulo_original": "Do Rocks Dream of Flying ?",
@@ -428,9 +468,48 @@
    "lbSlug": "noras-ark",
    "_verificado": "declarada a mano: Existe en TMDB con otro título o sin año ni duración, y el candado no la casaba sola: «Nora's ark» (2026), Endre Lund Eriksen; mismo director que publica FICICA. Verificada el 11 oct 2026.",
    "_director": "Endre Lund Eriksen, Isak Gjertsen",
-   "_sondeado": "2026-10-18",
+   "_sondeado": "2026-10-20",
    "poster": "/assets/ficica-2026/el-arca-de-nora.jpg",
    "posterSource": "tmdb"
+  },
+  {
+   "titulo": "El bitcoin de oro",
+   "tmdb_id": 1793999,
+   "titulo_original": "El bitcoin de oro",
+   "poster_path": null,
+   "synopsis_es": "Cuando Asofem está a punto de cerrar por una grave crisis económica, un grupo de usuarios y su monitor deciden embarcarse en una disparatada misión para salvar el centro al que consideran su hogar.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 18,
+   "pais_tmdb": "",
+   "lbSlug": "el-bitcoin-de-oro",
+   "poster": "/assets/ficcali-2026/el-bitcoin-de-oro.jpg",
+   "posterSource": "oficial",
+   "_verificado": "declarada a mano: El afiche OFICIAL del festival manda sobre el de TMDB (jerarquía del póster): es el que ya publicamos en FICCALI 2026. Desde el 20 oct la web de FICICA da el director, la cascada casa la ficha de TMDB y su afiche pisaba el oficial. Declarado el 20 oct 2026.",
+   "_director": "Bernardo Hernández",
+   "_sondeado": "2026-10-20"
+  },
+  {
+   "titulo": "El maestro de la piquería",
+   "tmdb_id": 1794001,
+   "titulo_original": "El maestro de la piqueria",
+   "poster_path": null,
+   "synopsis_es": "La piqueria, género musical autóctono del Caribe, ha representado durante décadas las raíces culturales de diversas generaciones. En La Guajira, Alcides Manjarrez es uno de los últimos maestros de este arte. Invidente de nacimiento, desde su infancia ha cimentado esta tradición. En la actualidad, además de ser referente en el folclor, impulsa la recuperación de esta tradición entre las nuevas generaciones.",
+   "synopsis_en": "",
+   "genero": "Documental",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 8,
+   "pais_tmdb": "",
+   "lbSlug": "el-maestro-de-la-piqueria",
+   "poster": "/assets/ficcali-2026/el-maestro-de-la-piqueria.jpg",
+   "posterSource": "oficial",
+   "_verificado": "declarada a mano: El afiche OFICIAL del festival manda sobre el de TMDB (jerarquía del póster): es el que ya publicamos en FICCALI 2026. Desde el 20 oct la web de FICICA da el director, la cascada casa la ficha de TMDB y su afiche pisaba el oficial. Declarado el 20 oct 2026.",
+   "_director": "Yinet Molero",
+   "_sondeado": "2026-10-20",
+   "_heredado": {
+    "genero": "catálogo w_R4H5QGK8DBTH (ficcali-2026, ficica-2026)"
+   }
   },
   {
    "titulo": "El mundo de humberto",
@@ -619,6 +698,28 @@
    "_sondeado": "2026-10-18",
    "poster": "/assets/ficica-2026/hay-algo-detras-de-ti.jpg",
    "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Khazana",
+   "tmdb_id": 1431611,
+   "titulo_original": "Khazana",
+   "poster_path": null,
+   "synopsis_es": "Un recolector de basura sordo, en Karachi, se topa con un descubrimiento impactante en un vertedero. Esto lo lleva a un enfrentamiento peligroso con un despiadado gánster, solo para descubrir un tesoro que cambiará su vida para siempre.",
+   "synopsis_en": "A Deaf waste collector in Karachi stumbles upon a shocking discovery at a landfill, leading to a dangerous clash with a ruthless gangster - only to uncover a treasure that changes his life forever.",
+   "genero": "Drama",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 19,
+   "pais_tmdb": "Pakistan",
+   "title_en": "Treasure",
+   "lbSlug": "treasure-2025",
+   "poster": "/assets/ficcali-2026/khazana.jpg",
+   "posterSource": "oficial",
+   "_verificado": "declarada a mano: El afiche OFICIAL del festival manda sobre el de TMDB (jerarquía del póster): es el que ya publicamos en FICCALI 2026. Desde el 20 oct la web de FICICA da el director, la cascada casa la ficha de TMDB y su afiche pisaba el oficial. Declarado el 20 oct 2026.",
+   "_director": "Basir Ahmed",
+   "_sondeado": "2026-10-20",
+   "_heredado": {
+    "synopsis_es": "catálogo w_R4H634PN0T5B (ficcali-2026, ficica-2026)"
+   }
   },
   {
    "titulo": "La ceremonia",
@@ -917,7 +1018,7 @@
    "lbSlug": "buen-vivir-nutse-canseye",
    "_verificado": "declarada a mano: Existe en TMDB con otro título o sin año ni duración, y el candado no la casaba sola: «buen vivir – ñutse canseye» (2025), Zoé Nathalie Kugler; mismo director que publica FICICA. Verificada el 11 oct 2026.",
    "_director": "Zoé Nathalie Kugler",
-   "_sondeado": "2026-10-18",
+   "_sondeado": "2026-10-20",
    "poster": "/assets/ficica-2026/living-well.jpg",
    "posterSource": "tmdb"
   },
@@ -967,6 +1068,14 @@
    "titulo": "Luis antonio",
    "_ya_publicada": [
     {
+     "festival": "guatape-2026",
+     "titulo": "Luis Antonio",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "12 min",
+     "sinopsis": "La mañana de un sábado Luis Antonio, un niño de 8 años, quiere aprender a montar en bicicleta. Pero su madre tiene que trabajar y lo deja al cuidado de Ofelia, su estricta vecina."
+    },
+    {
      "festival": "popayan-2026",
      "titulo": "Luis Antonio",
      "country": "Colombia",
@@ -975,7 +1084,7 @@
      "sinopsis": "La mañana de un sábado Luis Antonio, un niño de 8 años, quiere aprender a montar en bicicleta. Pero su madre tiene que trabajar y lo deja al cuidado de Ofelia, su estricta vecina."
     }
    ],
-   "_verificado": "ya publicada en popayan-2026: se reusa su sinopsis",
+   "_verificado": "ya publicada en guatape-2026: se reusa su sinopsis",
    "sinopsis": "La mañana de un sábado Luis Antonio, un niño de 8 años, quiere aprender a montar en bicicleta. Pero su madre tiene que trabajar y lo deja al cuidado de Ofelia, su estricta vecina.",
    "pais": "Colombia",
    "anio": 2025,
@@ -1066,7 +1175,7 @@
    "lbSlug": "memoria-de-pivete",
    "_verificado": "declarada a mano: Existe en TMDB con otro título o sin año ni duración, y el candado no la casaba sola: «Memória de Pivete», Pedro Santi; mismo director que publica FICICA. Verificada el 11 oct 2026.",
    "_director": "Pedro Santi",
-   "_sondeado": "2026-10-18",
+   "_sondeado": "2026-10-20",
    "poster": "/assets/ficica-2026/memoria-de-un-pibe.jpg",
    "posterSource": "tmdb",
    "title_en": "Memória de Pivete",
@@ -1236,7 +1345,7 @@
    "lbSlug": "nativity-scene",
    "_verificado": "declarada a mano: Existe en TMDB con otro título o sin año ni duración, y el candado no la casaba sola: «Nativity Scene» (2025), Felipe Bibian; mismo director que publica FICICA. Verificada el 11 oct 2026.",
    "_director": "Felipe Bibian",
-   "_sondeado": "2026-10-18",
+   "_sondeado": "2026-10-20",
    "poster": "/assets/ficica-2026/presepio-el-pesebre.jpg",
    "posterSource": "tmdb",
    "_heredado": {
@@ -1345,6 +1454,24 @@
    }
   },
   {
+   "titulo": "Quinto primera",
+   "tmdb_id": 1794005,
+   "titulo_original": "Quinto primera",
+   "poster_path": null,
+   "synopsis_es": "Rafael vive encerrado en su mundo, su piso en L’Hospitalet de Llobregat. Cuando su mujer murió, hace varios años, él perdió las ganas de vivir y su espíritu guerrero. Llegó a L’Hospitalet en los años cincuenta, en la primera gran ola de inmigración. Fue un luchador por la democracia, la igualdad, la solidaridad y la justicia durante las décadas del setenta y ochenta, pero ahora, solitario, amargado y xenófobo, reniega del mundo y, en su soledad, les cobra su miseria a todos y, en especial, a los nuevos inmigrantes. Tampoco ayuda su alzhéimer, cada vez más presente.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 18,
+   "pais_tmdb": "",
+   "lbSlug": "quinto-primera",
+   "poster": "/assets/ficcali-2026/quinto-primera.jpg",
+   "posterSource": "oficial",
+   "_verificado": "declarada a mano: El afiche OFICIAL del festival manda sobre el de TMDB (jerarquía del póster): es el que ya publicamos en FICCALI 2026. Desde el 20 oct la web de FICICA da el director, la cascada casa la ficha de TMDB y su afiche pisaba el oficial. Declarado el 20 oct 2026.",
+   "_director": "Fran Menchón",
+   "_sondeado": "2026-10-20"
+  },
+  {
    "titulo": "Refraccion",
    "tmdb_id": 1584776,
    "titulo_original": "Refracción",
@@ -1430,7 +1557,7 @@
    "lbSlug": "replay-2026",
    "_verificado": "declarada a mano: Existe en TMDB con otro título o sin año ni duración, y el candado no la casaba sola: «Replay» (2026), Simón Matallana Nossa; mismo director que publica FICICA. Verificada el 11 oct 2026.",
    "_director": "Simón Matallana",
-   "_sondeado": "2026-10-18",
+   "_sondeado": "2026-10-20",
    "poster": "/assets/ficica-2026/replay.jpg",
    "posterSource": "tmdb"
   },
@@ -1467,7 +1594,7 @@
    "lbSlug": "saq-nikte-and-the-spirit-of-the-mask",
    "_verificado": "declarada a mano: Existe en TMDB con otro título o sin año ni duración, y el candado no la casaba sola: «Saq Nikté and the Spirit of the Mask» (2025), Ester Weiner; mismo director que publica FICICA. Verificada el 11 oct 2026.",
    "_director": "Ester Weiner",
-   "_sondeado": "2026-10-18",
+   "_sondeado": "2026-10-20",
    "poster": "/assets/ficica-2026/saq-nikte-y-el-espiritu-de-la-mascara.jpg",
    "posterSource": "tmdb"
   },
@@ -1736,126 +1863,6 @@
    "anio": 2026,
    "duracion_tmdb": 12,
    "genero": "Animación"
-  },
-  {
-   "titulo": "Dientes de yuca",
-   "anio": 2025,
-   "_heredado": {
-    "anio": "catálogo w_R4N0HGWXHYB2 (ficica-2026, popayan-2026)",
-    "synopsis_es": "catálogo w_R4N0HGWXHYB2 (ficica-2026, popayan-2026)",
-    "director_heredado": "catálogo w_R4N0HGWXHYB2 (ficica-2026, popayan-2026)",
-    "duracion_tmdb": "catálogo w_R4N0HGWXHYB2 (ficica-2026, popayan-2026)"
-   },
-   "synopsis_es": "David, un niño negro de seis años, sufre acoso escolar por el color de su piel y la falta de dientes. Cuando le piden que lleve una foto escolar, la esconde de sus padres para evitar más burlas. Pero su bisabuelo Leandro se entera y le fabrica una dentadura postiza de yuca. Juntos, se preparan para la foto.",
-   "director_heredado": "Yurieth Romero Velasquez",
-   "duracion_tmdb": 14
-  },
-  {
-   "titulo": "Alivios",
-   "genero": "Drama",
-   "_heredado": {
-    "genero": "catálogo w_R4H50AY1TEJ8 (ficcali-2026, ficica-2026, villadelcine-2026)",
-    "title_en": "catálogo w_R4H50AY1TEJ8 (ficcali-2026, ficica-2026, villadelcine-2026)",
-    "lbSlug": "catálogo w_R4H50AY1TEJ8 (ficcali-2026, ficica-2026, villadelcine-2026)",
-    "anio": "catálogo w_R4H50AY1TEJ8 (ficcali-2026, ficica-2026, villadelcine-2026)",
-    "synopsis_es": "catálogo w_R4H50AY1TEJ8 (ficcali-2026, ficica-2026, villadelcine-2026)",
-    "synopsis_en": "catálogo w_R4H50AY1TEJ8 (ficcali-2026, ficica-2026, villadelcine-2026)",
-    "posterSource": "catálogo w_R4H50AY1TEJ8 (ficcali-2026, ficica-2026, villadelcine-2026)",
-    "poster": "catálogo w_R4H50AY1TEJ8 (ficcali-2026, ficica-2026, villadelcine-2026)",
-    "director_heredado": "catálogo w_R4H50AY1TEJ8 (ficcali-2026, ficica-2026, villadelcine-2026)"
-   },
-   "title_en": "Reliefs",
-   "lbSlug": "reliefs-2025",
-   "anio": 2025,
-   "synopsis_es": "Carlos se acerca a la mediana edad, atrapado en una crisis personal que se ha prolongado demasiado. Rosa, su madre, sufre un dolor incapacitante que solo se mitiga con las cálidas aguas de la hidroterapia. Una noche, ella se ofrece a hacer el sacrificio máximo para que ambos puedan transitar a un lugar mejor. Un cortometraje sobre el amor, la esperanza y el alivio que todos anhelamos.",
-   "synopsis_en": "Carlos is approaching midlife trapped in a personal crisis that has lingered too long. Rosa, his mother, suffers from disabling pain that is only mitigated by the warm waters of hydrotherapy. One night, she offers to make the ultimate sacrifice so that they can both transit to a better place. A short film about love, hope and relief we all long for.",
-   "poster": "/assets/ficcali-2026/alivios.jpg",
-   "posterSource": "oficial",
-   "director_heredado": "Juan Manuel González"
-  },
-  {
-   "titulo": "El bitcoin de oro",
-   "lbSlug": "el-bitcoin-de-oro",
-   "_heredado": {
-    "lbSlug": "catálogo w_R4H5CBRA8FJZ (ficcali-2026, ficica-2026)",
-    "anio": "catálogo w_R4H5CBRA8FJZ (ficcali-2026, ficica-2026)",
-    "synopsis_es": "catálogo w_R4H5CBRA8FJZ (ficcali-2026, ficica-2026)",
-    "posterSource": "catálogo w_R4H5CBRA8FJZ (ficcali-2026, ficica-2026)",
-    "poster": "catálogo w_R4H5CBRA8FJZ (ficcali-2026, ficica-2026)",
-    "director_heredado": "catálogo w_R4H5CBRA8FJZ (ficcali-2026, ficica-2026)",
-    "duracion_tmdb": "catálogo w_R4H5CBRA8FJZ (ficcali-2026, ficica-2026)"
-   },
-   "anio": 2026,
-   "synopsis_es": "Cuando Asofem está a punto de cerrar por una grave crisis económica, un grupo de usuarios y su monitor deciden embarcarse en una disparatada misión para salvar el centro al que consideran su hogar.",
-   "poster": "/assets/ficcali-2026/el-bitcoin-de-oro.jpg",
-   "posterSource": "oficial",
-   "director_heredado": "Bernardo Hernández",
-   "duracion_tmdb": 18
-  },
-  {
-   "titulo": "El maestro de la piquería",
-   "genero": "Documental",
-   "_heredado": {
-    "genero": "catálogo w_R4H5QGK8DBTH (ficcali-2026, ficica-2026)",
-    "lbSlug": "catálogo w_R4H5QGK8DBTH (ficcali-2026, ficica-2026)",
-    "anio": "catálogo w_R4H5QGK8DBTH (ficcali-2026, ficica-2026)",
-    "synopsis_es": "catálogo w_R4H5QGK8DBTH (ficcali-2026, ficica-2026)",
-    "posterSource": "catálogo w_R4H5QGK8DBTH (ficcali-2026, ficica-2026)",
-    "poster": "catálogo w_R4H5QGK8DBTH (ficcali-2026, ficica-2026)",
-    "director_heredado": "catálogo w_R4H5QGK8DBTH (ficcali-2026, ficica-2026)",
-    "duracion_tmdb": "catálogo w_R4H5QGK8DBTH (ficcali-2026, ficica-2026)"
-   },
-   "lbSlug": "el-maestro-de-la-piqueria",
-   "anio": 2025,
-   "synopsis_es": "La piqueria, género musical autóctono del Caribe, ha representado durante décadas las raíces culturales de diversas generaciones. En La Guajira, Alcides Manjarrez es uno de los últimos maestros de este arte. Invidente de nacimiento, desde su infancia ha cimentado esta tradición. En la actualidad, además de ser referente en el folclor, impulsa la recuperación de esta tradición entre las nuevas generaciones.",
-   "poster": "/assets/ficcali-2026/el-maestro-de-la-piqueria.jpg",
-   "posterSource": "oficial",
-   "director_heredado": "Yinet Molero",
-   "duracion_tmdb": 8
-  },
-  {
-   "titulo": "Khazana",
-   "genero": "Drama",
-   "_heredado": {
-    "genero": "catálogo w_R4H634PN0T5B (ficcali-2026, ficica-2026)",
-    "title_en": "catálogo w_R4H634PN0T5B (ficcali-2026, ficica-2026)",
-    "lbSlug": "catálogo w_R4H634PN0T5B (ficcali-2026, ficica-2026)",
-    "anio": "catálogo w_R4H634PN0T5B (ficcali-2026, ficica-2026)",
-    "synopsis_es": "catálogo w_R4H634PN0T5B (ficcali-2026, ficica-2026)",
-    "synopsis_en": "catálogo w_R4H634PN0T5B (ficcali-2026, ficica-2026)",
-    "posterSource": "catálogo w_R4H634PN0T5B (ficcali-2026, ficica-2026)",
-    "poster": "catálogo w_R4H634PN0T5B (ficcali-2026, ficica-2026)",
-    "director_heredado": "catálogo w_R4H634PN0T5B (ficcali-2026, ficica-2026)",
-    "duracion_tmdb": "catálogo w_R4H634PN0T5B (ficcali-2026, ficica-2026)"
-   },
-   "title_en": "Treasure",
-   "lbSlug": "treasure-2025",
-   "anio": 2025,
-   "synopsis_es": "Un recolector de basura sordo, en Karachi, se topa con un descubrimiento impactante en un vertedero. Esto lo lleva a un enfrentamiento peligroso con un despiadado gánster, solo para descubrir un tesoro que cambiará su vida para siempre.",
-   "synopsis_en": "A Deaf waste collector in Karachi stumbles upon a shocking discovery at a landfill, leading to a dangerous clash with a ruthless gangster - only to uncover a treasure that changes his life forever.",
-   "poster": "/assets/ficcali-2026/khazana.jpg",
-   "posterSource": "oficial",
-   "director_heredado": "Basir Ahmed",
-   "duracion_tmdb": 19
-  },
-  {
-   "titulo": "Quinto primera",
-   "lbSlug": "quinto-primera",
-   "_heredado": {
-    "lbSlug": "catálogo w_R4H6S932XDSK (ficcali-2026, ficica-2026)",
-    "anio": "catálogo w_R4H6S932XDSK (ficcali-2026, ficica-2026)",
-    "synopsis_es": "catálogo w_R4H6S932XDSK (ficcali-2026, ficica-2026)",
-    "posterSource": "catálogo w_R4H6S932XDSK (ficcali-2026, ficica-2026)",
-    "poster": "catálogo w_R4H6S932XDSK (ficcali-2026, ficica-2026)",
-    "director_heredado": "catálogo w_R4H6S932XDSK (ficcali-2026, ficica-2026)",
-    "duracion_tmdb": "catálogo w_R4H6S932XDSK (ficcali-2026, ficica-2026)"
-   },
-   "anio": 2026,
-   "synopsis_es": "Rafael vive encerrado en su mundo, su piso en L’Hospitalet de Llobregat. Cuando su mujer murió, hace varios años, él perdió las ganas de vivir y su espíritu guerrero. Llegó a L’Hospitalet en los años cincuenta, en la primera gran ola de inmigración. Fue un luchador por la democracia, la igualdad, la solidaridad y la justicia durante las décadas del setenta y ochenta, pero ahora, solitario, amargado y xenófobo, reniega del mundo y, en su soledad, les cobra su miseria a todos y, en especial, a los nuevos inmigrantes. Tampoco ayuda su alzhéimer, cada vez más presente.",
-   "poster": "/assets/ficcali-2026/quinto-primera.jpg",
-   "posterSource": "oficial",
-   "director_heredado": "Fran Menchón",
-   "duracion_tmdb": 18
   }
  ],
  "verificadas": {
@@ -1907,6 +1914,27 @@
    "_sinopsis_de": "ya publicada en filcmar-2026",
    "poster": "/assets/ficica-2026/agachar-el-rostro.jpg",
    "posterSource": "tmdb"
+  },
+  "Alivios": {
+   "tmdb_id": 1469210,
+   "titulo_original": "Alivios",
+   "poster_path": null,
+   "synopsis_es": "Carlos se acerca a la mediana edad, atrapado en una crisis personal que se ha prolongado demasiado. Rosa, su madre, sufre un dolor incapacitante que solo se mitiga con las cálidas aguas de la hidroterapia. Una noche, ella se ofrece a hacer el sacrificio máximo para que ambos puedan transitar a un lugar mejor. Un cortometraje sobre el amor, la esperanza y el alivio que todos anhelamos.",
+   "synopsis_en": "Carlos is approaching midlife trapped in a personal crisis that has lingered too long. Rosa, his mother, suffers from disabling pain that is only mitigated by the warm waters of hydrotherapy. One night, she offers to make the ultimate sacrifice so that they can both transit to a better place. A short film about love, hope and relief we all long for.",
+   "genero": "Drama",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 19,
+   "pais_tmdb": "Mexico, Venezuela",
+   "title_en": "Reliefs",
+   "lbSlug": "reliefs-2025",
+   "poster": "/assets/ficcali-2026/alivios.jpg",
+   "posterSource": "oficial",
+   "_verificado": "declarada a mano: El afiche OFICIAL del festival manda sobre el de TMDB (jerarquía del póster): es el que ya publicamos en FICCALI 2026. Desde el 20 oct la web de FICICA da el director, la cascada casa la ficha de TMDB y su afiche pisaba el oficial. Declarado el 20 oct 2026.",
+   "_director": "Juan Manuel González",
+   "_sondeado": "2026-10-20",
+   "_heredado": {
+    "synopsis_es": "catálogo w_R4H50AY1TEJ8 (ficcali-2026, ficica-2026, villadelcine-2026)"
+   }
   },
   "Bestiaire": {
    "tmdb_id": 1479275,
@@ -2243,9 +2271,46 @@
    "lbSlug": "noras-ark",
    "_verificado": "declarada a mano: Existe en TMDB con otro título o sin año ni duración, y el candado no la casaba sola: «Nora's ark» (2026), Endre Lund Eriksen; mismo director que publica FICICA. Verificada el 11 oct 2026.",
    "_director": "Endre Lund Eriksen, Isak Gjertsen",
-   "_sondeado": "2026-10-18",
+   "_sondeado": "2026-10-20",
    "poster": "/assets/ficica-2026/el-arca-de-nora.jpg",
    "posterSource": "tmdb"
+  },
+  "El bitcoin de oro": {
+   "tmdb_id": 1793999,
+   "titulo_original": "El bitcoin de oro",
+   "poster_path": null,
+   "synopsis_es": "Cuando Asofem está a punto de cerrar por una grave crisis económica, un grupo de usuarios y su monitor deciden embarcarse en una disparatada misión para salvar el centro al que consideran su hogar.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 18,
+   "pais_tmdb": "",
+   "lbSlug": "el-bitcoin-de-oro",
+   "poster": "/assets/ficcali-2026/el-bitcoin-de-oro.jpg",
+   "posterSource": "oficial",
+   "_verificado": "declarada a mano: El afiche OFICIAL del festival manda sobre el de TMDB (jerarquía del póster): es el que ya publicamos en FICCALI 2026. Desde el 20 oct la web de FICICA da el director, la cascada casa la ficha de TMDB y su afiche pisaba el oficial. Declarado el 20 oct 2026.",
+   "_director": "Bernardo Hernández",
+   "_sondeado": "2026-10-20"
+  },
+  "El maestro de la piquería": {
+   "tmdb_id": 1794001,
+   "titulo_original": "El maestro de la piqueria",
+   "poster_path": null,
+   "synopsis_es": "La piqueria, género musical autóctono del Caribe, ha representado durante décadas las raíces culturales de diversas generaciones. En La Guajira, Alcides Manjarrez es uno de los últimos maestros de este arte. Invidente de nacimiento, desde su infancia ha cimentado esta tradición. En la actualidad, además de ser referente en el folclor, impulsa la recuperación de esta tradición entre las nuevas generaciones.",
+   "synopsis_en": "",
+   "genero": "Documental",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 8,
+   "pais_tmdb": "",
+   "lbSlug": "el-maestro-de-la-piqueria",
+   "poster": "/assets/ficcali-2026/el-maestro-de-la-piqueria.jpg",
+   "posterSource": "oficial",
+   "_verificado": "declarada a mano: El afiche OFICIAL del festival manda sobre el de TMDB (jerarquía del póster): es el que ya publicamos en FICCALI 2026. Desde el 20 oct la web de FICICA da el director, la cascada casa la ficha de TMDB y su afiche pisaba el oficial. Declarado el 20 oct 2026.",
+   "_director": "Yinet Molero",
+   "_sondeado": "2026-10-20",
+   "_heredado": {
+    "genero": "catálogo w_R4H5QGK8DBTH (ficcali-2026, ficica-2026)"
+   }
   },
   "El mundo de humberto": {
    "tmdb_id": 1791688,
@@ -2410,6 +2475,27 @@
    "_sondeado": "2026-10-18",
    "poster": "/assets/ficica-2026/hay-algo-detras-de-ti.jpg",
    "posterSource": "tmdb"
+  },
+  "Khazana": {
+   "tmdb_id": 1431611,
+   "titulo_original": "Khazana",
+   "poster_path": null,
+   "synopsis_es": "Un recolector de basura sordo, en Karachi, se topa con un descubrimiento impactante en un vertedero. Esto lo lleva a un enfrentamiento peligroso con un despiadado gánster, solo para descubrir un tesoro que cambiará su vida para siempre.",
+   "synopsis_en": "A Deaf waste collector in Karachi stumbles upon a shocking discovery at a landfill, leading to a dangerous clash with a ruthless gangster - only to uncover a treasure that changes his life forever.",
+   "genero": "Drama",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 19,
+   "pais_tmdb": "Pakistan",
+   "title_en": "Treasure",
+   "lbSlug": "treasure-2025",
+   "poster": "/assets/ficcali-2026/khazana.jpg",
+   "posterSource": "oficial",
+   "_verificado": "declarada a mano: El afiche OFICIAL del festival manda sobre el de TMDB (jerarquía del póster): es el que ya publicamos en FICCALI 2026. Desde el 20 oct la web de FICICA da el director, la cascada casa la ficha de TMDB y su afiche pisaba el oficial. Declarado el 20 oct 2026.",
+   "_director": "Basir Ahmed",
+   "_sondeado": "2026-10-20",
+   "_heredado": {
+    "synopsis_es": "catálogo w_R4H634PN0T5B (ficcali-2026, ficica-2026)"
+   }
   },
   "La gran hazaña": {
    "tmdb_id": 1494003,
@@ -2686,7 +2772,7 @@
    "lbSlug": "buen-vivir-nutse-canseye",
    "_verificado": "declarada a mano: Existe en TMDB con otro título o sin año ni duración, y el candado no la casaba sola: «buen vivir – ñutse canseye» (2025), Zoé Nathalie Kugler; mismo director que publica FICICA. Verificada el 11 oct 2026.",
    "_director": "Zoé Nathalie Kugler",
-   "_sondeado": "2026-10-18",
+   "_sondeado": "2026-10-20",
    "poster": "/assets/ficica-2026/living-well.jpg",
    "posterSource": "tmdb"
   },
@@ -2813,7 +2899,7 @@
    "lbSlug": "memoria-de-pivete",
    "_verificado": "declarada a mano: Existe en TMDB con otro título o sin año ni duración, y el candado no la casaba sola: «Memória de Pivete», Pedro Santi; mismo director que publica FICICA. Verificada el 11 oct 2026.",
    "_director": "Pedro Santi",
-   "_sondeado": "2026-10-18",
+   "_sondeado": "2026-10-20",
    "poster": "/assets/ficica-2026/memoria-de-un-pibe.jpg",
    "posterSource": "tmdb",
    "title_en": "Memória de Pivete",
@@ -2978,7 +3064,7 @@
    "lbSlug": "nativity-scene",
    "_verificado": "declarada a mano: Existe en TMDB con otro título o sin año ni duración, y el candado no la casaba sola: «Nativity Scene» (2025), Felipe Bibian; mismo director que publica FICICA. Verificada el 11 oct 2026.",
    "_director": "Felipe Bibian",
-   "_sondeado": "2026-10-18",
+   "_sondeado": "2026-10-20",
    "poster": "/assets/ficica-2026/presepio-el-pesebre.jpg",
    "posterSource": "tmdb",
    "_heredado": {
@@ -3084,6 +3170,23 @@
     "synopsis_en": "catálogo w_R4GP49AWA2ZH (bhff-2026, fantasmagoria-2026, ficica-2026, ficma-2026, siembrafest-2026, villadelcine-2026)"
    }
   },
+  "Quinto primera": {
+   "tmdb_id": 1794005,
+   "titulo_original": "Quinto primera",
+   "poster_path": null,
+   "synopsis_es": "Rafael vive encerrado en su mundo, su piso en L’Hospitalet de Llobregat. Cuando su mujer murió, hace varios años, él perdió las ganas de vivir y su espíritu guerrero. Llegó a L’Hospitalet en los años cincuenta, en la primera gran ola de inmigración. Fue un luchador por la democracia, la igualdad, la solidaridad y la justicia durante las décadas del setenta y ochenta, pero ahora, solitario, amargado y xenófobo, reniega del mundo y, en su soledad, les cobra su miseria a todos y, en especial, a los nuevos inmigrantes. Tampoco ayuda su alzhéimer, cada vez más presente.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 18,
+   "pais_tmdb": "",
+   "lbSlug": "quinto-primera",
+   "poster": "/assets/ficcali-2026/quinto-primera.jpg",
+   "posterSource": "oficial",
+   "_verificado": "declarada a mano: El afiche OFICIAL del festival manda sobre el de TMDB (jerarquía del póster): es el que ya publicamos en FICCALI 2026. Desde el 20 oct la web de FICICA da el director, la cascada casa la ficha de TMDB y su afiche pisaba el oficial. Declarado el 20 oct 2026.",
+   "_director": "Fran Menchón",
+   "_sondeado": "2026-10-20"
+  },
   "Refraccion": {
    "tmdb_id": 1584776,
    "titulo_original": "Refracción",
@@ -3168,7 +3271,7 @@
    "lbSlug": "replay-2026",
    "_verificado": "declarada a mano: Existe en TMDB con otro título o sin año ni duración, y el candado no la casaba sola: «Replay» (2026), Simón Matallana Nossa; mismo director que publica FICICA. Verificada el 11 oct 2026.",
    "_director": "Simón Matallana",
-   "_sondeado": "2026-10-18",
+   "_sondeado": "2026-10-20",
    "poster": "/assets/ficica-2026/replay.jpg",
    "posterSource": "tmdb"
   },
@@ -3203,7 +3306,7 @@
    "lbSlug": "saq-nikte-and-the-spirit-of-the-mask",
    "_verificado": "declarada a mano: Existe en TMDB con otro título o sin año ni duración, y el candado no la casaba sola: «Saq Nikté and the Spirit of the Mask» (2025), Ester Weiner; mismo director que publica FICICA. Verificada el 11 oct 2026.",
    "_director": "Ester Weiner",
-   "_sondeado": "2026-10-18",
+   "_sondeado": "2026-10-20",
    "poster": "/assets/ficica-2026/saq-nikte-y-el-espiritu-de-la-mascara.jpg",
    "posterSource": "tmdb"
   },
@@ -3421,7 +3524,6 @@
  },
  "sin_ficha": [
   "10 meters above",
-  "Alivios",
   "Appol-o",
   "Arlequín",
   "Bartolo",
@@ -3441,9 +3543,7 @@
   "Dientes de yuca",
   "Dulce",
   "El abrazo del sol",
-  "El bitcoin de oro",
   "El kanto del kajambá",
-  "El maestro de la piquería",
   "El segundo",
   "El silencio de las semillas",
   "En nombre del amor",
@@ -3453,7 +3553,6 @@
   "Gracias, antonio",
   "In turn",
   "Juego de damas",
-  "Khazana",
   "La ceremonia",
   "La culpa es del cine",
   "La despedida",
@@ -3471,7 +3570,6 @@
   "Princesado mokaná: el legado del cerro de las hermosas",
   "Proowa",
   "Queener",
-  "Quinto primera",
   "Rastro",
   "Recordando mi jerga",
   "Retrospectiva cine afro del Caribe colombiano",
@@ -3494,17 +3592,13 @@
    "director": "Irene Baqué",
    "fecha": "2026-10-18"
   },
-  "Alivios": {
-   "director": "",
-   "fecha": "2026-10-18"
-  },
   "Appol-o": {
    "director": "Juan José Calvo Lozano, Nicolás Castro Herrera, Cristian Felipe Ossa Castro",
    "fecha": "2026-10-18"
   },
   "Arlequín": {
-   "director": "",
-   "fecha": "2026-10-18"
+   "director": "Rubén Casalins",
+   "fecha": "2026-10-20"
   },
   "Bartolo": {
    "director": "Sergio Andrés Fernández Buitrago",
@@ -3515,12 +3609,12 @@
    "fecha": "2026-10-18"
   },
   "Cabica": {
-   "director": "",
-   "fecha": "2026-10-18"
+   "director": "Heidy Helena Mejia Sánchez",
+   "fecha": "2026-10-20"
   },
   "Capitán cartagena": {
-   "director": "",
-   "fecha": "2026-10-18"
+   "director": "Enuar Castillo Fernández",
+   "fecha": "2026-10-20"
   },
   "Carne de segunda": {
    "director": "Ruben Casalins",
@@ -3551,8 +3645,8 @@
    "fecha": "2026-10-18"
   },
   "Concierto sentido": {
-   "director": "",
-   "fecha": "2026-10-18"
+   "director": "Cristian Rivas",
+   "fecha": "2026-10-20"
   },
   "Concurso MINI": {
    "director": "",
@@ -3563,36 +3657,28 @@
    "fecha": "2026-10-18"
   },
   "Dientes de yuca": {
-   "director": "",
-   "fecha": "2026-10-18"
+   "director": "Yurieth Romero Velasquez",
+   "fecha": "2026-10-20"
   },
   "Dulce": {
-   "director": "",
-   "fecha": "2026-10-18"
+   "director": "Yurieth Romero Velasquez, Edgar De Luque",
+   "fecha": "2026-10-20"
   },
   "El abrazo del sol": {
-   "director": "",
-   "fecha": "2026-10-18"
-  },
-  "El bitcoin de oro": {
-   "director": "",
-   "fecha": "2026-10-18"
+   "director": "Leonard Quiroz",
+   "fecha": "2026-10-20"
   },
   "El kanto del kajambá": {
-   "director": "",
-   "fecha": "2026-10-18"
-  },
-  "El maestro de la piquería": {
-   "director": "",
-   "fecha": "2026-10-18"
+   "director": "Rodolfo Palomino Cassiani",
+   "fecha": "2026-10-20"
   },
   "El segundo": {
    "director": "Pedro Miguel Rozo Flores",
    "fecha": "2026-10-18"
   },
   "El silencio de las semillas": {
-   "director": "",
-   "fecha": "2026-10-18"
+   "director": "Elizabeth Pirela González",
+   "fecha": "2026-10-20"
   },
   "En nombre del amor": {
    "director": "Mariana Pallas, Alexander Dieppa, Luciana Martins, Socorro Lira",
@@ -3607,8 +3693,8 @@
    "fecha": "2026-10-18"
   },
   "Frágil o embalados": {
-   "director": "",
-   "fecha": "2026-10-18"
+   "director": "Colectivo Pedro Romero Vive Aquí",
+   "fecha": "2026-10-20"
   },
   "Gracias, antonio": {
    "director": "Keren Berrio",
@@ -3620,10 +3706,6 @@
   },
   "Juego de damas": {
    "director": "Enrique Vargas",
-   "fecha": "2026-10-18"
-  },
-  "Khazana": {
-   "director": "",
    "fecha": "2026-10-18"
   },
   "La ceremonia": {
@@ -3659,8 +3741,8 @@
    "fecha": "2026-10-18"
   },
   "Memorias piedras de boca e’ caña": {
-   "director": "",
-   "fecha": "2026-10-18"
+   "director": "Tribu Digital Mokaná",
+   "fecha": "2026-10-20"
   },
   "Miradas: más allá del género": {
    "director": "",
@@ -3675,27 +3757,23 @@
    "fecha": "2026-10-18"
   },
   "Plan de fuga": {
-   "director": "",
-   "fecha": "2026-10-18"
+   "director": "Gleydis Paola Salgado Reyes",
+   "fecha": "2026-10-20"
   },
   "Post-familia": {
    "director": "Alexis Tafour",
    "fecha": "2026-10-18"
   },
   "Princesado mokaná: el legado del cerro de las hermosas": {
-   "director": "",
-   "fecha": "2026-10-18"
+   "director": "Liz Dany Macías",
+   "fecha": "2026-10-20"
   },
   "Proowa": {
-   "director": "",
-   "fecha": "2026-10-18"
+   "director": "Cristobal R. Mendoza",
+   "fecha": "2026-10-20"
   },
   "Queener": {
    "director": "Sebastián López Murillo",
-   "fecha": "2026-10-18"
-  },
-  "Quinto primera": {
-   "director": "",
    "fecha": "2026-10-18"
   },
   "Rastro": {
@@ -3711,8 +3789,8 @@
    "fecha": "2026-10-18"
   },
   "Seguridad en el territorio del pueblo ette ennka chimila": {
-   "director": "",
-   "fecha": "2026-10-18"
+   "director": "Cristobal R. Mendoza",
+   "fecha": "2026-10-20"
   },
   "Sombra lejana": {
    "director": "Antonio J. Camargo",
