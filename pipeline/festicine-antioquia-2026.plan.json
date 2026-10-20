@@ -1,0 +1,19 @@
+{
+ "_nota": "Festicine Antioquia 2026 — 27.° Festival de Cine de Santa Fe de Antioquia (4–8 dic 2026). PRE-ONBOARDING: la selección de Caja de Pandora (21 cortos colombianos, post del 25 ago). Óperas Primas, otras secciones y la programación no están publicadas (20 oct). Cuando salga la parrilla se agregan crudo/enriquecer/ensamblar, en el modelo de la función (docs/FUNCION.md).",
+ "radar": 1034,
+ "pasos": [
+  {
+   "cmd": "python3 pipeline/festicine-antioquia-2026-catalogo.py",
+   "que": "la tabla del post «Caja de Pandora 2026 — Seleccionados» (wp-json) → catálogo (21 cortos)"
+  },
+  {
+   "cmd": "python3 pipeline/enriquecer_catalogo.py festivals/staging/festicine-antioquia-2026-catalogo.json",
+   "que": "la cascada de TMDB (título + director; candado de enriquecer.py) y lo ya publicado → catálogo enriquecido"
+  }
+ ],
+ "_fuentes_versionadas": {
+  "festivals/staging/festicine-antioquia-2026-catalogo.json": "la selección (21 obras); la leerá el crudo",
+  "festivals/staging/festicine-antioquia-2026-catalogo-enriquecido.json": "las fichas TMDB/cascada, que escribe el paso 2; el montaje las reusa cuando salga la parrilla",
+  "festivals/staging/festicine-antioquia-2026-correcciones.json": "sin_afiche: el porqué de las 9 obras sin afiche; lo leen pipeline/preonboarding.py y, con la parrilla, enriquecer.py/ensamblar.py"
+ }
+}
