@@ -1,4 +1,5 @@
 name: Require version bump
+# (Desde el 20 oct 2026 vela por lo contrario: ver el último paso.)
 
 # INTENTO FALLIDO Y REVERTIDO — leer antes de reintentar (23 ago 2026).
 #
@@ -45,28 +46,18 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - name: App-code change must include a version.json bump
+      # DESDE EL 20 OCT 2026 ES AL REVÉS: la versión la estampa la publicación
+      # (.github/workflows/pages.yml), así que un PR NO toca version.json. Si lo
+      # toca es costumbre vieja, y vuelve el choque garantizado entre PR. El
+      # nombre del job se queda: es un check requerido de la branch protection.
+      - name: El PR no trae el número de build (lo pone la publicación)
         env:
           BASE_SHA: ${{ github.event.pull_request.base.sha }}
           HEAD_SHA: ${{ github.event.pull_request.head.sha }}
         run: |
           CHANGED=$(git diff --name-only "$BASE_SHA...$HEAD_SHA")
-          echo "Archivos cambiados en el PR:"
-          echo "$CHANGED"
-          echo "---"
-          # festivals/** TAMBIÉN exige bump desde el canal #4 (24 ago 2026): el
-          # poll en primer plano solo ve version.json. Un cambio de programación
-          # sin bump sería invisible para quien tiene la app abierta — que es
-          # exactamente el usuario al que ese cambio le importa. La práctica ya
-          # bumpeaba en cada PR de datos (regla 5); el gate ahora lo garantiza.
-          APP=$(printf '%s\n' "$CHANGED" | grep -E '^(src/|index\.html$|sw\.js$|festivals/)' || true)
-          if [ -z "$APP" ]; then
-            echo "✓ Sin cambios de app-code — bump no requerido."
-            exit 0
-          fi
           if printf '%s\n' "$CHANGED" | grep -qx 'version.json'; then
-            echo "✓ App-code cambió y version.json fue actualizado — OK."
-            exit 0
+            echo "::error::El PR trae version.json. Desde el 20 oct el número de build lo pone la publicación (pages.yml): sacá el bump del PR (git checkout origin/main -- version.json index.html src/main.js sw.js, si solo cambió el número)."
+            exit 1
           fi
-          echo "::error::App-code cambió (src/, index.html o sw.js) sin actualizar version.json. Las clientes activas no recargarán el código nuevo. Corré 'node scripts/bump-version.js' y commiteá el resultado."
-          exit 1
+          echo "✓ Sin número de build en el PR — lo estampa la publicación."

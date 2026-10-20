@@ -1,0 +1,55 @@
+name: Publicar la web
+# LA VERSIÓN LA PONE LA PUBLICACIÓN, NO EL PR (20 oct 2026, aprobado por Juan).
+#
+# Antes cada PR corría scripts/bump-version.js y commiteaba el número de build en
+# index.html, src/main.js, sw.js y version.json. Dos PR vivos chocaban SIEMPRE
+# en esos cuatro archivos: GitHub no usa el driver de merge local
+# (scripts/merge-bump.sh), así que cada merge dejaba a los demás DIRTY → merge de
+# main, re-bump, otra vuelta de CI de ~17 min. El 19 oct: 7 PR de Onboarding,
+# hasta 3 vueltas cada uno.
+#
+# Ahora: GitHub Pages publica desde este workflow (build_type «workflow», no
+# «legacy»). El número se estampa en la COPIA que se sube, nunca en main → la
+# branch protection no interviene (lo que hizo fallar el intento #697, que
+# empujaba el bump a main). Los PR no tocan esos archivos y require-bump vela
+# por que siga así.
+#
+# Volver atrás: Settings › Pages › Source «Deploy from a branch» (main, /) y
+# volver a bumpear en la rama.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '22'
+      # Hora de Colombia: el número es AAAAMMDDhhmm y la app solo compara
+      # igualdad, pero así sigue la misma serie que los builds de antes.
+      - name: Estampar el número de build en la copia
+        env:
+          TZ: America/Bogota
+        run: |
+          node scripts/bump-version.js
+          echo "build: $(node -p "require('./version.json').android")"
+          grep -q "$(node -p "require('./version.json').android")" sw.js
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+      - id: deploy
+        uses: actions/deploy-pages@v4
