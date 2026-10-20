@@ -204,6 +204,14 @@ def main():
                  # misma obra en otro día (Critters, que pasó del 18 al 17)
                  if i not in usados and parecido(r['titulo'], g['titulo']) >= 0.5]
         best = max(cands, key=lambda c: c[0], default=None)
+        # un título EXACTO que es único en la noticia y en la base es la misma
+        # función aunque la base la haya movido de día: manda la base en día y
+        # hora (Critters, del 18 a las 19:00 al 17 a las 17:00)
+        unicos = [(9, i, g) for i, g in enumerate(viejas)
+                  if i not in usados and plano(g['titulo']) == plano(r['titulo'])]
+        if (len(unicos) == 1 and sum(plano(g['titulo']) == plano(r['titulo']) for g in viejas) == 1
+                and sum(plano(b['titulo']) == plano(r['titulo']) for b in base) == 1):
+            best = unicos[0]
         if best and best[0] >= 1.6:
             usados.add(best[1])
             f = dict(best[2])
