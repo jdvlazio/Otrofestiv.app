@@ -348,5 +348,16 @@
   "motivo": "la única imagen de la ficha de TMDB es un rostro desenfocado sin título ni créditos: un fotograma, no el afiche; no se encontró afiche oficial (IFFR 2026, búsqueda web)",
   "fecha": "2026-10-15",
   "quien": "Juan («Sí, la a»)"
+ },
+ {
+  "work_id": "w_BCSJ1Z4J99ED",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "https://image.tmdb.org/t/p/w500/3HM13mmdNbSiKIuyBpH1vZwz9H1.jpg",
+   "veredicto": "fotograma"
+  },
+  "motivo": "la única imagen de la ficha de TMDB (939823) es un primer plano de un actor de traje, sin título ni créditos: un fotograma, no el afiche; el corto no tiene afiche oficial a la vista (la lámina del festival usa otro fotograma)",
+  "fecha": "2026-10-19",
+  "quien": "Claude (misma regla que w_R4F1D2Q71DK4; a revisión de Juan en el PR)"
  }
 ]

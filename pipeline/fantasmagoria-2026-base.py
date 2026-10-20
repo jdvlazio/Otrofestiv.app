@@ -146,6 +146,14 @@ OBRAS_DOBLE = {
         # Distrital), «Cóndor, el mago», 1975, 35 mm; TMDB lo tiene en 0
         {'titulo': 'Kondor, El Mago', 'director': 'Jairo Pinilla', 'pais': 'Colombia', 'anio': 1975, 'duracion_min': 12},
         {'titulo': 'El Cigarro Mortal', 'director': 'Jairo Pinilla', 'pais': 'Colombia'}],
+    # «Proyección especial» del 20 oct en la Plazoleta de la Luz (lámina 3 del
+    # post de IG DerwqxjlMye, 19 oct): Robo Macabro de Jairo Pinilla y Pura
+    # Sangre de Luis Ospina, una sola función a las 6:00 p. m.
+    '2026-10-20-18-30-pura-sangre': [
+        # 10 min: TMDB 939823 (1982, Jairo Pinilla); 98: la corrección ya
+        # publicada de Pura Sangre (retrospectiva Luis Ospina, cali.gov.co)
+        {'titulo': 'Robo Macabro', 'director': 'Jairo Pinilla', 'pais': 'Colombia', 'anio': 1982, 'duracion_min': 10},
+        {'titulo': 'Pura Sangre', 'director': 'Luis Ospina', 'pais': 'Colombia', 'anio': 1982, 'duracion_min': 98}],
 }
 
 
@@ -219,6 +227,15 @@ def main():
         if r['id'] in OBRAS_DOBLE:
             f['obras'] = [dict(o) for o in OBRAS_DOBLE[r['id']]]
             f.pop('director', None)
+            # si la base titula la función con UNA de sus obras, el programa se
+            # llama con todas («A + B», como la doble de Kondor): con el nombre
+            # de una obra, la cascada le pegaría a la FUNCIÓN la ficha de esa
+            # obra (póster, director, año) y el programa saldría disfrazado de largo
+            if any(plano(f['titulo']) == plano(o['titulo'])
+                   for o in f['obras']):
+                f['titulo'] = ' + '.join(o['titulo'] for o in f['obras'])
+                for k in ('anio', 'genero', 'duracion_min', 'sinopsis'):
+                    f.pop(k, None)
         salida.append({k: v for k, v in f.items() if v not in (None, '')})
     fuera = [f'{g["dia"]} {g["hora"]} {g["titulo"][:60]}' for i, g in enumerate(viejas) if i not in usados]
 
@@ -227,6 +244,10 @@ def main():
         # (también una función de cine sin duración en la base: la doble de
         # Jairo Pinilla, «Kondor, El Mago + El Cigarro Mortal», no la trae)
         if f.get('duracion_min'):
+            continue
+        # un programa cuyas obras traen TODAS su duración dura su suma
+        if f.get('obras') and all(o.get('duracion_min') for o in f['obras']):
+            f['duracion_min'] = sum(o['duracion_min'] for o in f['obras'])
             continue
         ini = int(f['hora'][:2]) * 60 + int(f['hora'][3:])
         sig = sorted(int(g['hora'][:2]) * 60 + int(g['hora'][3:]) for g in salida

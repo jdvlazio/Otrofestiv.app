@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "festivalfantasmagoriamedellin.com, noticia de programación (wp-json post 6481)",
-  "capturado": "2026-10-18",
+  "capturado": "2026-10-19",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_sedes": "El nombre de la parrilla, normalizado (la escribe de varias formas); la sala aparte. Otraparte está en Envigado, pero se publica en la ciudad «Medellín» (decisión de Juan, 30 sep): con una sola sede fuera, la app abría con «¿A cuál ciudad vas?» para 2 de 85 funciones. La dirección y el pin son los reales de Envigado, y el traslado se calcula con ellos.",
@@ -579,6 +579,7 @@
     "id": "2026-10-14-13-00-taller-fantasmagoritos-con-la-corporacion-trama"
    },
    "_fid": "f_5ac7fb72c7",
+   "id": "f_5ac7fb72c7",
    "by_invitation": true,
    "_procedencia": {
     "day": {
@@ -626,8 +627,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_5ac7fb72c7"
+   }
   },
   {
    "title": "Charla virtual: María, Rosa y Sina. Las murallas de la desigualdad en Shingeki no Kyojin",
@@ -656,6 +656,7 @@
    "description": "Por Isabel Arboleyda Jiménez.",
    "description_lang": "es",
    "_fid": "f_7cefffa86e",
+   "id": "f_7cefffa86e",
    "online": true,
    "is_free": true,
    "_procedencia": {
@@ -704,8 +705,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_7cefffa86e"
+   }
   },
   {
    "title": "Decorado",
@@ -743,6 +743,7 @@
    "tmdb_id": 1061771,
    "synopsis_en": "Arnold, an unemployed middle-aged mouse, confides to his wife Maria that he suspects his entire world is nothing more than a set, and his life a scripted performance. When his best friend Ramiro dies under mysterious circumstances, he traces the conspiracy to a monolithic corporation whose influence reaches every corner of their daily lives.",
    "_fid": "f_616d8d3706",
+   "id": "f_616d8d3706",
    "is_free": true,
    "_procedencia": {
     "day": {
@@ -795,8 +796,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_616d8d3706"
+   }
   },
   {
    "title": "Taller Fantasmagoritos con la Corporación Trama",
@@ -823,6 +823,7 @@
     "id": "2026-10-16-13-00-taller-fantasmagoritos-con-la-corporacion-trama"
    },
    "_fid": "f_8a5b0dae24",
+   "id": "f_8a5b0dae24",
    "by_invitation": true,
    "_procedencia": {
     "day": {
@@ -870,8 +871,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_8a5b0dae24"
+   }
   },
   {
    "title": "Saluda al Diablo de Mi Parte",
@@ -909,6 +909,7 @@
    "synopsis_en": "A former guerrilla is reluctantly drawn into the vengeance scheme of one of his victims.",
    "title_en": "Greetings to the Devil",
    "_fid": "f_68fd341b3d",
+   "id": "f_68fd341b3d",
    "is_free": true,
    "_procedencia": {
     "day": {
@@ -956,8 +957,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_68fd341b3d"
+   }
   },
   {
    "title": "Coração das Trevas (Heart of Darkness)",
@@ -995,6 +995,7 @@
    "synopsis_en": "Rio de Janeiro, near future. Marlow is a police officer assigned to a mission to find Captain Kurtz, a famous policeman who went missing in mysterious circumstances. Marlow has to do his mission in a boat, undertaking a dangerous journey through the outskirts of Rio de Janeiro.",
    "title_en": "Heart of Darkness",
    "_fid": "f_6d398ce3d3",
+   "id": "f_6d398ce3d3",
    "is_free": false,
    "ticket_url": "https://www.elmamm.org/producto/corazon-de-las-tinieblas/",
    "_procedencia": {
@@ -1048,8 +1049,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_6d398ce3d3"
+   }
   },
   {
    "title": "Hammer: Heroes, Legends and Monsters",
@@ -1087,6 +1087,7 @@
    "tmdb_id": 1325909,
    "synopsis_en": "A look at Hammer’s progression from a back office in London’s Regent Street to its iconic status within the horror film genre. The company, started by comedian and businessman William Hinds in 1934, made films such as The Curse of Frankenstein, Dracula, and The Quatermass Xperiment during the period for which it is best known, making stars out of the likes of Christopher Lee and Peter Cushing.",
    "_fid": "f_3032ba11cd",
+   "id": "f_3032ba11cd",
    "is_free": true,
    "_procedencia": {
     "day": {
@@ -1139,8 +1140,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_3032ba11cd"
+   }
   },
   {
    "title": "Mu-Ki-Ra",
@@ -1176,6 +1176,7 @@
    "tmdb_id": 1446898,
    "synopsis_en": "When her brother is kidnapped by Mu-Ki-Ra, Cleo ventures into a monster-plagued jungle with unlikely allies.",
    "_fid": "f_9eaf0533ab",
+   "id": "f_9eaf0533ab",
    "is_free": true,
    "_procedencia": {
     "day": {
@@ -1218,8 +1219,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_9eaf0533ab"
+   }
   },
   {
    "title": "Grabación en vivo del podcast Gente que hace cine \"Colombia es Fantástica\"",
@@ -1247,6 +1247,7 @@
    "description": "Una mirada al cine y televisión de género hecho en Colombia. Conversan Mauricio Romero y Cristian Jaramillo.",
    "description_lang": "es",
    "_fid": "f_71622280dd",
+   "id": "f_71622280dd",
    "is_free": true,
    "_procedencia": {
     "day": {
@@ -1299,8 +1300,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_71622280dd"
+   }
   },
   {
    "title": "El Despertar",
@@ -1339,6 +1339,7 @@
    "synopsis_en": "An elite military unit ventures into the South American tropical jungle on a mission to eliminate an enemy target. What begins as a tactical operation quickly turns into a nightmare when they encounter supernatural forces emerging from the depths of the jungle. Five hundred years earlier, a Spanish conquistador expedition was consumed by the same relentless force. Separated by centuries but connected by the same hostile territory, both incursions discover something hidden in the jungle: an ancient presence that cannot be controlled.",
    "title_en": "The Awakening",
    "_fid": "f_ce8e1c3e3b",
+   "id": "f_ce8e1c3e3b",
    "is_free": false,
    "_procedencia": {
     "day": {
@@ -1391,8 +1392,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_ce8e1c3e3b"
+   }
   },
   {
    "title": "Schichinin No Samurai (Seven Samurai)",
@@ -1430,6 +1430,7 @@
    "synopsis_en": "A samurai answers a village's request for protection after he falls on hard times. The town needs protection from bandits, so the samurai gathers six others to help him teach the people how to defend themselves, and the villagers provide the soldiers with food.",
    "title_en": "Seven Samurai",
    "_fid": "f_791ef070ed",
+   "id": "f_791ef070ed",
    "is_free": true,
    "_procedencia": {
     "day": {
@@ -1477,8 +1478,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_791ef070ed"
+   }
   },
   {
    "title": "Motherwitch",
@@ -1516,6 +1516,7 @@
    "tmdb_id": 1461870,
    "synopsis_en": "Cyprus, 1882: Eleni, an outcast painter, tries to resurrect her dead children but instead unleashes mythical creatures upon her village. Only by becoming a good mother to a talented, but abused child can she reverse the curse.",
    "_fid": "f_e5c6bba8ff",
+   "id": "f_e5c6bba8ff",
    "is_free": false,
    "_procedencia": {
     "day": {
@@ -1568,8 +1569,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_e5c6bba8ff"
+   }
   },
   {
    "title": "Torneos TCG: One Piece y Pokemón TCG",
@@ -1594,6 +1594,7 @@
     "id": "2026-10-16-18-00-one-piece-y-pokemon-tcg"
    },
    "_fid": "f_3efcd0e556",
+   "id": "f_3efcd0e556",
    "is_free": true,
    "_procedencia": {
     "day": {
@@ -1641,8 +1642,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_3efcd0e556"
+   }
   },
   {
    "title": "Selección Oficial de Cortometrajes de Animación + Cortometrajes de Macondo",
@@ -1816,6 +1816,7 @@
     }
    ],
    "_fid": "f_3ad87ad624",
+   "id": "f_3ad87ad624",
    "is_free": true,
    "_procedencia": {
     "day": {
@@ -1863,8 +1864,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_3ad87ad624"
+   }
   },
   {
    "title": "Familia Teme Enfrentar Una Nueva Noche de Terror",
@@ -1904,6 +1904,7 @@
    "synopsis_en": "Every night, a family of four faces the terror of living in a haunted house. Except the house is not really a house, but a television set where darkness reigns instead of walls. If existence is merely a grotesque performance, who is hiding behind the camera?",
    "title_en": "Family Fears Another Night of Terror",
    "_fid": "f_3e85908256",
+   "id": "f_3e85908256",
    "is_free": false,
    "_procedencia": {
     "day": {
@@ -1961,8 +1962,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_3e85908256"
+   }
   },
   {
    "title": "Almas en plena: fiesta de disfraces, baile de ánimas y sustos que dan gusto",
@@ -1989,6 +1989,7 @@
    "description": "DJs: TIZ y Mr. Snoopy. Música: alterno oscuro, pop psicodélico, perreo hasta el inframundo, cumbia rebajada de vereda, salsa diabólica y guasca machetera.",
    "description_lang": "es",
    "_fid": "f_6671f848db",
+   "id": "f_6671f848db",
    "is_free": true,
    "_procedencia": {
     "day": {
@@ -2036,8 +2037,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_6671f848db"
+   }
   },
   {
    "title": "Muestra Fantasmagoritos: Cortometrajes infantiles",
@@ -2063,6 +2063,7 @@
     "id": "2026-10-17-15-00-cortometrajes-infantiles"
    },
    "_fid": "f_db5e635c32",
+   "id": "f_db5e635c32",
    "is_free": true,
    "_procedencia": {
     "day": {
@@ -2105,13 +2106,13 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_db5e635c32"
+   }
   },
   {
    "title": "Iris de Cristal",
    "type": "film",
    "section": "🦯 Muestra Especial",
+   "director": "Diego Gaviria",
    "year": 2024,
    "country": "Colombia",
    "flags": "🇨🇴",
@@ -2142,6 +2143,7 @@
    "tmdb_id": 1368500,
    "title_en": "Crystal Iris",
    "_fid": "f_ce8551648d",
+   "id": "f_ce8551648d",
    "is_free": true,
    "_procedencia": {
     "day": {
@@ -2189,8 +2191,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_ce8551648d"
+   }
   },
   {
    "title": "Black Moon",
@@ -2226,6 +2227,7 @@
    "tmdb_id": 27361,
    "synopsis_en": "There is a global gender war between men and women. A teenage girl tries to escape this reality and arrives at a hidden place where a strange unicorn lives with a family: sister, brother, many children and an old, bedridden woman who stays in contact with the world through her radio.",
    "_fid": "f_d8b6dbb8cb",
+   "id": "f_d8b6dbb8cb",
    "is_free": false,
    "ticket_url": "https://www.elmamm.org/producto/black-moon/",
    "_procedencia": {
@@ -2274,8 +2276,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_d8b6dbb8cb"
+   }
   },
   {
    "title": "Critters",
@@ -2313,6 +2314,7 @@
    "tmdb_id": 3980,
    "synopsis_en": "Carnivorous aliens arrive unannounced at a Kansas family farm; two intergalactic bounty hunters soon follow, determined to blow them off the planet.",
    "_fid": "f_1a50fcd1e3",
+   "id": "f_1a50fcd1e3",
    "is_free": true,
    "_procedencia": {
     "day": {
@@ -2365,8 +2367,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_1a50fcd1e3"
+   }
   },
   {
    "title": "Siu Lam Juk Kau -Shaolin Soccer",
@@ -2404,6 +2405,7 @@
    "synopsis_en": "A young Shaolin follower reunites with his discouraged brothers to form a soccer team using their martial art skills to their advantage.",
    "title_en": "Shaolin Soccer",
    "_fid": "f_aea41d767c",
+   "id": "f_aea41d767c",
    "is_free": true,
    "_procedencia": {
     "day": {
@@ -2451,8 +2453,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_aea41d767c"
+   }
   },
   {
    "title": "Al Final del Espectro",
@@ -2489,6 +2490,7 @@
    "synopsis_en": "After a traumatic situation that makes Vega become an agoraphobic person, she decides to live like a hermit in an apartment because of her father's recommendation. But some strange things start happening, she sees visions, and hears noises and voices. She starts to worry about the dark past of that apartment, and the bizarre obsession of her neighbor.",
    "title_en": "At the End of the Spectra",
    "_fid": "f_eb89eef871",
+   "id": "f_eb89eef871",
    "is_free": true,
    "_procedencia": {
     "day": {
@@ -2531,8 +2533,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_eb89eef871"
+   }
   },
   {
    "title": "Familia Teme Enfrentar Una Nueva Noche de Terror",
@@ -2572,6 +2573,7 @@
    "synopsis_en": "Every night, a family of four faces the terror of living in a haunted house. Except the house is not really a house, but a television set where darkness reigns instead of walls. If existence is merely a grotesque performance, who is hiding behind the camera?",
    "title_en": "Family Fears Another Night of Terror",
    "_fid": "f_648ae9e4fc",
+   "id": "f_648ae9e4fc",
    "is_free": false,
    "_procedencia": {
     "day": {
@@ -2629,8 +2631,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_648ae9e4fc"
+   }
   },
   {
    "title": "Huo zhe yan (The Furious)",
@@ -2669,6 +2670,7 @@
    "synopsis_en": "After a criminal network kidnaps Wang Wei's daughter and the corrupt police refuse to assist him, Wei sets out on his own to locate her. Navin, a tenacious journalist whose wife has mysteriously vanished, is his only ally. In this explosive martial arts showdown, the unlikely duo fights the kidnappers ruthlessly driven by a furious vengeance.",
    "title_en": "The Furious",
    "_fid": "f_5daad4fb01",
+   "id": "f_5daad4fb01",
    "is_free": false,
    "_procedencia": {
     "day": {
@@ -2721,8 +2723,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_5daad4fb01"
+   }
   },
   {
    "title": "Noche de Librerías: Lectura de Cuentos de Terror",
@@ -2747,6 +2748,7 @@
     "id": "2026-10-17-22-00-lectura-de-cuentos-de-terror"
    },
    "_fid": "f_63de6e541f",
+   "id": "f_63de6e541f",
    "is_free": true,
    "_procedencia": {
     "day": {
@@ -2794,8 +2796,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_63de6e541f"
+   }
   },
   {
    "title": "La Sinfonía de los Bichos Raros",
@@ -2830,6 +2831,7 @@
    "lbSlug": "la-sinfonia-de-los-bichos-raros",
    "tmdb_id": 1776754,
    "_fid": "f_51d5a70e6b",
+   "id": "f_51d5a70e6b",
    "is_free": true,
    "_procedencia": {
     "day": {
@@ -2872,8 +2874,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_51d5a70e6b"
+   }
   },
   {
    "title": "Historia de lo Oculto",
@@ -2911,6 +2912,7 @@
    "synopsis_en": "During the last broadcast of 60 Minutes Before Midnight, the most watched journalistic program on television, Adrián Marcato could expose a conspiracy and link the government to a obscure secret society.",
    "title_en": "History of the Occult",
    "_fid": "f_f922b58d57",
+   "id": "f_f922b58d57",
    "sala": "Sala 1",
    "is_free": true,
    "_procedencia": {
@@ -2964,8 +2966,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_f922b58d57"
+   }
   },
   {
    "title": "Rio Bravo",
@@ -3001,6 +3002,7 @@
    "tmdb_id": 301,
    "synopsis_en": "A small-town sheriff in the American West enlists the help of a disabled man, a drunk, and a young gunfighter in his efforts to hold in jail the brother of the local bad guy.",
    "_fid": "f_df256816d9",
+   "id": "f_df256816d9",
    "is_free": false,
    "ticket_url": "https://www.elmamm.org/producto/rio-bravo/",
    "_procedencia": {
@@ -3049,8 +3051,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_df256816d9"
+   }
   },
   {
    "title": "Coração das Trevas (Heart of Darkness)",
@@ -3089,6 +3090,7 @@
    "synopsis_en": "Rio de Janeiro, near future. Marlow is a police officer assigned to a mission to find Captain Kurtz, a famous policeman who went missing in mysterious circumstances. Marlow has to do his mission in a boat, undertaking a dangerous journey through the outskirts of Rio de Janeiro.",
    "title_en": "Heart of Darkness",
    "_fid": "f_ff12951d65",
+   "id": "f_ff12951d65",
    "is_free": false,
    "_procedencia": {
     "day": {
@@ -3141,8 +3143,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_ff12951d65"
+   }
   },
   {
    "title": "The X Files y Lectura de La Verdad Está Ahí Afuera: Antología de Cuentos",
@@ -3168,6 +3169,7 @@
     "id": "2026-10-18-19-00-the-x-files-y-lectura-de-la-verdad-esta-ahi-afuera-antologia-de-cuentos"
    },
    "_fid": "f_837b10967a",
+   "id": "f_837b10967a",
    "is_free": true,
    "_procedencia": {
     "day": {
@@ -3220,8 +3222,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_837b10967a"
+   }
   },
   {
    "title": "Hablando con Extraños",
@@ -3260,6 +3261,7 @@
    "synopsis_en": "A grieving mother is confronted by an uncanny presence that wears the face of her lost child.",
    "title_en": "Talking to a Stranger",
    "_fid": "f_fda125e919",
+   "id": "f_fda125e919",
    "is_free": false,
    "_procedencia": {
     "day": {
@@ -3312,8 +3314,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_fda125e919"
+   }
   },
   {
    "title": "Selección Oficial de Cortometrajes Colombianos",
@@ -3444,6 +3445,7 @@
    "description": "Conversatorio.",
    "description_lang": "es",
    "_fid": "f_d10f2c53da",
+   "id": "f_d10f2c53da",
    "is_free": true,
    "_procedencia": {
     "day": {
@@ -3501,8 +3503,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_d10f2c53da"
+   }
   },
   {
    "title": "Assault on Precinct 13",
@@ -3539,6 +3540,7 @@
    "tmdb_id": 17814,
    "synopsis_en": "A highway patrol officer, two criminals, and a station secretary form an unlikely alliance to defend a defunct Los Angeles precinct against a siege by a bloodthirsty street gang.",
    "_fid": "f_5f586fa176",
+   "id": "f_5f586fa176",
    "is_free": false,
    "_procedencia": {
     "day": {
@@ -3586,8 +3588,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_5f586fa176"
+   }
   },
   {
    "title": "Selección Oficial de Cortometrajes Latinoamericanos",
@@ -3699,6 +3700,7 @@
     }
    ],
    "_fid": "f_2c99f929c4",
+   "id": "f_2c99f929c4",
    "is_free": true,
    "_procedencia": {
     "day": {
@@ -3747,7 +3749,6 @@
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
    },
-   "id": "f_2c99f929c4",
    "titulos_anteriores": [
     "Selección oficial de cortometrajes latinoamericanos"
    ]
@@ -3787,6 +3788,7 @@
    "tmdb_id": 1629355,
    "synopsis_en": "From the flickering screens of Hollywood horror, to the haunted cane fields of colonial Haiti, Black Zombie unearths the buried origins of the zombie, reclaiming it as a symbol of survival and spiritual resistance.",
    "_fid": "f_369cd3e339",
+   "id": "f_369cd3e339",
    "is_free": true,
    "_procedencia": {
     "day": {
@@ -3834,8 +3836,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_369cd3e339"
+   }
   },
   {
    "title": "Entrevista a Luigi Cozzi con Jose Andrés Gómez",
@@ -3862,6 +3863,7 @@
    "stream_url": "https://www.twitch.tv/sociedadfantasmagoria",
    "stream_platform": "Twitch",
    "_fid": "f_86a77a34dd",
+   "id": "f_86a77a34dd",
    "online": true,
    "is_free": true,
    "_procedencia": {
@@ -3910,8 +3912,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_86a77a34dd"
+   }
   },
   {
    "title": "Una psicología de los asedios explicada con pelis de Zombies con Pedro Alejandro González",
@@ -3938,6 +3939,7 @@
    "stream_url": "https://www.twitch.tv/sociedadfantasmagoria",
    "stream_platform": "Twitch",
    "_fid": "f_6d1887da36",
+   "id": "f_6d1887da36",
    "online": true,
    "is_free": true,
    "_procedencia": {
@@ -3986,8 +3988,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_6d1887da36"
+   }
   },
   {
    "title": "La Frecuencia Kirlian",
@@ -4026,6 +4027,7 @@
    "synopsis_en": "A late-night radio station, a cadaverous host, and five guests with five unusual stories of horror and science fiction are the focus of the film adaptation of the cult animated series The Kirlian Frequency.  What really happened that night to the radio station, the city, and its inhabitants? And most importantly... Why?",
    "title_en": "The Kirlian Frequency",
    "_fid": "f_ce6e95c016",
+   "id": "f_ce6e95c016",
    "is_free": false,
    "_procedencia": {
     "day": {
@@ -4078,8 +4080,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_ce6e95c016"
+   }
   },
   {
    "title": "Conversatorio con Cristian Ponce",
@@ -4108,6 +4109,7 @@
    "description": "El terror análogico, entre la estética y el medio al VHS y a los programas de televisión con Cristian Jaramillo.",
    "description_lang": "es",
    "_fid": "f_046528f965",
+   "id": "f_046528f965",
    "is_free": true,
    "_procedencia": {
     "day": {
@@ -4165,8 +4167,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_046528f965"
+   }
   },
   {
    "title": "Horror and Love",
@@ -4203,6 +4204,7 @@
    "tmdb_id": 1548326,
    "synopsis_en": "A love letter to the world of freaks, this documentary retraces the birth of Horrorland, voted Europe's Best Scream Park, as well as the love story between Cristina Raya and David Moreno, the two main driving forces behind this Catalan theme park. From St. Louis to Vilassar de Dalt, by way of Newcastle, the camera accompanies them on their odyssey to build a dream called Horrorland.",
    "_fid": "f_b188191cf3",
+   "id": "f_b188191cf3",
    "is_free": true,
    "_procedencia": {
     "day": {
@@ -4250,8 +4252,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_b188191cf3"
+   }
   },
   {
    "title": "Al Final del Espectro",
@@ -4288,6 +4289,7 @@
    "synopsis_en": "After a traumatic situation that makes Vega become an agoraphobic person, she decides to live like a hermit in an apartment because of her father's recommendation. But some strange things start happening, she sees visions, and hears noises and voices. She starts to worry about the dark past of that apartment, and the bizarre obsession of her neighbor.",
    "title_en": "At the End of the Spectra",
    "_fid": "f_67cabf6ac5",
+   "id": "f_67cabf6ac5",
    "is_free": true,
    "_procedencia": {
     "day": {
@@ -4330,8 +4332,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_67cabf6ac5"
+   }
   },
   {
    "title": "Conversatorio con Alberto Romo y Andrés Buitrago",
@@ -4358,6 +4359,7 @@
     "id": "2026-10-20-17-30-conversatorio-con-alberto-romo-y-andres-buitrago"
    },
    "_fid": "f_580c051611",
+   "id": "f_580c051611",
    "is_free": true,
    "_procedencia": {
     "day": {
@@ -4415,19 +4417,15 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_580c051611"
+   }
   },
   {
-   "title": "Pura Sangre",
+   "title": "Robo Macabro + Pura Sangre",
    "type": "film",
    "section": "🦜 Colombia es Fantástica",
-   "director": "Luis Ospina",
-   "year": 1982,
    "country": "Colombia",
    "flags": "🇨🇴",
-   "duration": "98 min",
-   "genre": "Terror",
+   "duration": "108 min",
    "_ancla": [
     "Universidad Nacional - Medellín",
     "2026-10-20",
@@ -4439,21 +4437,49 @@
    "venue": "Universidad Nacional - Medellín",
    "sala": "Plazoleta de la Luz",
    "has_qa": false,
-   "synopsis": "Roberto Hurtado padece una rara enfermedad que exige transfusiones masivas de sangre de niños o adolescentes. Él chantajea a tres empleados para que le consigan sangre y éstos recurren a métodos inescrupulosos para conseguirla. En incursiones nocturnas atrapan a sus víctimas y los someten a sus perversiones sexuales antes de asesinarlos. La extraña desaparición de niños y la recurrente aparición de sus cadáveres desnudos en lugares despoblados aterrorizan la ciudad. Conversatorio con Alberto Romo y Andrés Buitrago.",
-   "synopsis_lang": "es",
-   "poster": "/assets/fantasmagoria-2026/pura-sangre.jpg",
-   "posterSource": "tmdb",
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
     "date": "2026-10-16",
     "base_version": 26,
     "id": "2026-10-20-18-30-pura-sangre"
    },
-   "lbSlug": "pure-blood-1982",
-   "tmdb_id": 134245,
-   "synopsis_en": "Roberto Hurtado suffers from a rare disease that requires massive transfusions of blood from children or adolescents. His son blackmails three employees to get blood for him and they resort to unscrupulous methods to obtain it.",
-   "title_en": "Pure Blood",
+   "is_cortos": true,
+   "film_list": [
+    {
+     "title": "Robo Macabro",
+     "director": "Jairo Pinilla",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "year": 1982,
+     "duration": "10 min",
+     "lbSlug": "robo-macabro",
+     "tmdb_id": 939823,
+     "synopsis_en": "Two grave robbers are ready to commit their misdeeds without expecting the little surprise that awaits them.",
+     "genre": "Terror"
+    },
+    {
+     "title": "Pura Sangre",
+     "director": "Luis Ospina",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "year": 1982,
+     "duration": "98 min",
+     "poster": "/assets/fantasmagoria-2026/pura-sangre.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "pure-blood-1982",
+     "tmdb_id": 134245,
+     "synopsis": "Roberto Hurtado, potentado azucarero del Valle del Cauca, padece una extraña enfermedad que lo obliga a permanentes transfusiones sanguíneas para sobrevivir. La sangre proviene de jóvenes cazados por el macabro grupo que integran Florencia, Perfecto y Ever, bajo la dirección de Adolfo, hijo del magnate enfermo. Las víctimas mueren desangradas, no sin antes verse sometidas a terribles vejaciones por parte de sus desalmados captores. El terror reina en la ciudad.  Está película está dedicada a la memoria de Andrés Caicedo.",
+     "synopsis_en": "Roberto Hurtado suffers from a rare disease that requires massive transfusions of blood from children or adolescents. His son blackmails three employees to get blood for him and they resort to unscrupulous methods to obtain it.",
+     "title_en": "Pure Blood",
+     "genre": "Crimen",
+     "synopsis_lang": "es",
+     "_duracion_corregida": "retrospectiva Luis Ospina, cali.gov.co (98 min); spectacletheater.com (98 min); TMDB 99"
+    }
+   ],
+   "description": "Conversatorio con Alberto Romo y Andrés Buitrago.",
+   "description_lang": "es",
    "_fid": "f_b7d599833b",
+   "id": "f_b7d599833b",
    "is_free": true,
    "_procedencia": {
     "day": {
@@ -4496,14 +4522,17 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-16",
+     "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
+    },
     "type": {
      "tipo": "festival-web",
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_b7d599833b",
-   "_duracion_corregida": "retrospectiva Luis Ospina, cali.gov.co (98 min); spectacletheater.com (98 min); TMDB 99"
+   }
   },
   {
    "title": "The Last Unicorn",
@@ -4539,6 +4568,7 @@
    "tmdb_id": 10150,
    "synopsis_en": "A unicorn learns from a riddle-speaking butterfly that she is supposedly the last of her kind, all the others having been herded away by the monstrous Red Bull. The unicorn sets out to discover the truth behind the butterfly's words. She is eventually joined on her quest by Schmendrick, a second-rate magician, and Molly Grue, a middle-aged woman who dreamed all her life of seeing a unicorn. Their journey leads them far from home, all the way to the castle of King Haggard.",
    "_fid": "f_af356e73fb",
+   "id": "f_af356e73fb",
    "is_free": true,
    "_procedencia": {
     "day": {
@@ -4581,8 +4611,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_af356e73fb"
+   }
   },
   {
    "title": "Ghost in the Cell",
@@ -4620,6 +4649,7 @@
    "tmdb_id": 1393326,
    "synopsis_en": "In a notorious prison, an invisible force begins killing inmates brutally, compelling enemy gangs and corrupt guards to work together as they try to survive the mounting bloodshed.",
    "_fid": "f_3d242c0931",
+   "id": "f_3d242c0931",
    "is_free": false,
    "_procedencia": {
     "day": {
@@ -4672,8 +4702,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_3d242c0931"
+   }
   },
   {
    "title": "Cuadecuc, Vampir",
@@ -4712,6 +4741,7 @@
    "synopsis_en": "An atmospheric essay, which is an alternative version of Count Dracula, a film directed by Jess Franco in 1970; a ghostly narration between fiction and reality.",
    "title_en": "Vampir Cuadecuc",
    "_fid": "f_1cf6122c0b",
+   "id": "f_1cf6122c0b",
    "is_free": true,
    "_procedencia": {
     "day": {
@@ -4764,8 +4794,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_1cf6122c0b"
+   }
   },
   {
    "title": "Green Room",
@@ -4802,6 +4831,7 @@
    "tmdb_id": 313922,
    "synopsis_en": "Members of a punk rock band and a tough young woman are forced to fight for survival after witnessing an act of violence at a skinhead bar.",
    "_fid": "f_e1bbf0fbf4",
+   "id": "f_e1bbf0fbf4",
    "is_free": false,
    "_procedencia": {
     "day": {
@@ -4849,8 +4879,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_e1bbf0fbf4"
+   }
   },
   {
    "title": "Taller animación análoga con Óscar Triana",
@@ -4876,6 +4905,7 @@
     "id": "2026-10-21-10-00-taller-de-animacion-con-oscar-triana"
    },
    "_fid": "f_f060938a2c",
+   "id": "f_f060938a2c",
    "is_free": true,
    "_procedencia": {
     "day": {
@@ -4928,8 +4958,7 @@
      "marca": "supuesto",
      "valor": "libre"
     }
-   },
-   "id": "f_f060938a2c"
+   }
   },
   {
    "title": "Cortometrajes y Taller Fantasmagoritos con la Corporación Trama",
@@ -4955,6 +4984,7 @@
     "id": "2026-10-21-13-00-cortometrajes-y-taller-fantasmagoritos-con-la-corporacion-trama"
    },
    "_fid": "f_0966cb32c1",
+   "id": "f_0966cb32c1",
    "by_invitation": true,
    "_procedencia": {
     "day": {
@@ -4997,8 +5027,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_0966cb32c1"
+   }
   },
   {
    "title": "Charla: El camino de la producción y la animación con Alejandra Morales",
@@ -5024,6 +5053,7 @@
     "id": "2026-10-21-13-00-charla-el-camino-de-la-produccion-y-la-animacion-con-alejandra-morales"
    },
    "_fid": "f_f2869c9b28",
+   "id": "f_f2869c9b28",
    "is_free": true,
    "_procedencia": {
     "day": {
@@ -5076,8 +5106,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_f2869c9b28"
+   }
   },
   {
    "title": "Fantascátedra – Muestra Cortometrajes universitarios de Medellín",
@@ -5107,6 +5136,7 @@
     "id": "2026-10-21-14-00-fantascatedra-muestra-cortometrajes-universitarios-de-medellin"
    },
    "_fid": "f_6aae9d94c1",
+   "id": "f_6aae9d94c1",
    "is_free": true,
    "_procedencia": {
     "day": {
@@ -5159,8 +5189,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_6aae9d94c1"
+   }
   },
   {
    "title": "De Cinema Zombie a Zinema Zombie",
@@ -5189,6 +5218,7 @@
    "description": "De Cinema Zombie a Zinema Zombie con Jose Andrés Gómez, Andrés Buitrago y Pablo Marín.",
    "description_lang": "es",
    "_fid": "f_9009af258e",
+   "id": "f_9009af258e",
    "is_free": true,
    "_procedencia": {
     "day": {
@@ -5246,8 +5276,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_9009af258e"
+   }
   },
   {
    "title": "Charla: De las Trincheras del Somme a la caída de Gondolin por Camilo López",
@@ -5272,6 +5301,7 @@
     "id": "2026-10-21-17-00-de-las-trincheras-del-somme-a-la-caida-de-gondolin-por-camilo-lopez"
    },
    "_fid": "f_8cb0fb7587",
+   "id": "f_8cb0fb7587",
    "is_free": true,
    "_procedencia": {
     "day": {
@@ -5319,8 +5349,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_8cb0fb7587"
+   }
   },
   {
    "title": "Ana Rosa",
@@ -5357,6 +5386,7 @@
    "tmdb_id": 1084670,
    "synopsis_en": "Ana Rosa was a pianist and the music was the only thing that went through the wall of silence. She was never talked about in the family, neither my father, nor my uncle psychiatrist, his children. But I was told many times that I looked like her.",
    "_fid": "f_10f401ac5d",
+   "id": "f_10f401ac5d",
    "is_free": true,
    "_procedencia": {
     "day": {
@@ -5404,8 +5434,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_10f401ac5d"
+   }
   },
   {
    "title": "Theatre of Horrors: The Sordid Story of Paris' Grand Guignol",
@@ -5443,6 +5472,7 @@
    "tmdb_id": 1541286,
    "synopsis_en": "In 1897, when Bram Stoker published Dracula, Oscar Méténier invented the Grand-Guignol. Live depictions of death, bloody melodramas, screams of the victims and the audience: here is the story of this Parisian theater of horrors that revolutionized the depiction of death in art.",
    "_fid": "f_bfe0101182",
+   "id": "f_bfe0101182",
    "is_free": true,
    "_procedencia": {
     "day": {
@@ -5495,8 +5525,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_bfe0101182"
+   }
   },
   {
    "title": "Presentaciones de productoras/colectivos y Made in Medellín",
@@ -5524,6 +5553,7 @@
    "description": "Presentaciones de productoras/colectivos y Made in Medellín (Cortometrajes hechos en Medellín).",
    "description_lang": "es",
    "_fid": "f_0dc1182aa6",
+   "id": "f_0dc1182aa6",
    "is_free": true,
    "_procedencia": {
     "day": {
@@ -5576,8 +5606,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_0dc1182aa6"
+   }
   },
   {
    "title": "Taller: Parche de collage – Construcción de fortalezas",
@@ -5602,6 +5631,7 @@
     "id": "2026-10-21-18-00-taller-parche-de-collage-construccion-de-fortalezas"
    },
    "_fid": "f_a0c267d031",
+   "id": "f_a0c267d031",
    "is_free": true,
    "_procedencia": {
     "day": {
@@ -5649,8 +5679,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_a0c267d031"
+   }
   },
   {
    "title": "El Despertar",
@@ -5689,6 +5718,7 @@
    "synopsis_en": "An elite military unit ventures into the South American tropical jungle on a mission to eliminate an enemy target. What begins as a tactical operation quickly turns into a nightmare when they encounter supernatural forces emerging from the depths of the jungle. Five hundred years earlier, a Spanish conquistador expedition was consumed by the same relentless force. Separated by centuries but connected by the same hostile territory, both incursions discover something hidden in the jungle: an ancient presence that cannot be controlled.",
    "title_en": "The Awakening",
    "_fid": "f_8c8ed2b650",
+   "id": "f_8c8ed2b650",
    "is_free": false,
    "_procedencia": {
     "day": {
@@ -5741,8 +5771,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_8c8ed2b650"
+   }
   },
   {
    "title": "La Mancha",
@@ -5780,6 +5809,7 @@
    "synopsis_en": "At an amusement park, a group of children and teenagers are trapped in a curse that connects them to a parallel world.",
    "title_en": "You're It",
    "_fid": "f_ec7d1ac485",
+   "id": "f_ec7d1ac485",
    "is_free": true,
    "_procedencia": {
     "day": {
@@ -5827,8 +5857,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_ec7d1ac485"
+   }
   },
   {
    "title": "Cuckoo",
@@ -5866,6 +5895,7 @@
    "tmdb_id": 869291,
    "synopsis_en": "After reluctantly moving to the German Alps with her father and his new family, Gretchen discovers that their new town hides sinister secrets, as she's plagued by strange noises and frightening visions of a woman pursuing her.",
    "_fid": "f_b03192468d",
+   "id": "f_b03192468d",
    "is_free": false,
    "_procedencia": {
     "day": {
@@ -5918,8 +5948,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_b03192468d"
+   }
   },
   {
    "title": "Taller: Animación digital con Óscar Triana",
@@ -5945,6 +5974,7 @@
     "id": "2026-10-22-10-00-taller-con-oscar-triana"
    },
    "_fid": "f_da07738eaf",
+   "id": "f_da07738eaf",
    "by_invitation": true,
    "_procedencia": {
     "day": {
@@ -5997,8 +6027,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_da07738eaf"
+   }
   },
   {
    "title": "Fremde Welten: los extraños universos de Tilman Singer",
@@ -6026,6 +6055,7 @@
    "description": "Conversatorio con Tilman Singer y Sebastián Tobón.",
    "description_lang": "es",
    "_fid": "f_fd4153474f",
+   "id": "f_fd4153474f",
    "is_free": true,
    "_procedencia": {
     "day": {
@@ -6078,8 +6108,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_fd4153474f"
+   }
   },
   {
    "title": "Blood on Méliès' Moon",
@@ -6116,6 +6145,7 @@
    "tmdb_id": 335346,
    "synopsis_en": "France, 1890. Inventor Louis Le Prince vanishes under mysterious circumstances right after he created a device that, five years later, the Lumière Brothers will call The Cinematographer. What if they had stolen Le Prince’s idea and wacked him afterwards? The mystery remains for more than a century, until Luigi Cozzi picks up a strange book called “The Roaming Universe” in the horror museum of his pal Dario Argento. The origin of this enigmatic book troubles him. This particular science-fiction novel would have materialized during a spiritual session in modern day Rome. At the session, an old woman revealed that the key to all these mysteries comes from 1895, a time during which the Lumière Brothers had denied lending their camera to Georges Méliès for an obscure movie called \"A Trip to the moon\". Not only does this film actually exist, but it raises a more intriguing question. Is our world the only one, or are there parallel universes ?",
    "_fid": "f_3d8daa87c1",
+   "id": "f_3d8daa87c1",
    "is_free": true,
    "_procedencia": {
     "day": {
@@ -6163,8 +6193,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_3d8daa87c1"
+   }
   },
   {
    "title": "Kondor, El Mago + El Cigarro Mortal de Jairo Pinilla",
@@ -6218,6 +6247,7 @@
    "description": "Charla: Recuperación y divulgación del archivo fílmico de Jairo Pinilla y su relación con Medellín, por Alberto Romo.",
    "description_lang": "es",
    "_fid": "f_425dcc5372",
+   "id": "f_425dcc5372",
    "is_free": true,
    "_procedencia": {
     "day": {
@@ -6275,8 +6305,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_425dcc5372"
+   }
   },
   {
    "title": "Selección Oficial de Cortometrajes Latinoamericanos",
@@ -6389,6 +6418,7 @@
     }
    ],
    "_fid": "f_7673a612be",
+   "id": "f_7673a612be",
    "is_free": true,
    "_procedencia": {
     "day": {
@@ -6442,7 +6472,6 @@
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
    },
-   "id": "f_7673a612be",
    "titulos_anteriores": [
     "Selección oficial de cortometrajes latinoamericanos"
    ]
@@ -6604,6 +6633,7 @@
    "description": "Selección Oficial de Cortometrajes + Q&A con Andrés Buitrago.",
    "description_lang": "es",
    "_fid": "f_a65ef109be",
+   "id": "f_a65ef109be",
    "is_free": true,
    "_procedencia": {
     "day": {
@@ -6661,8 +6691,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_a65ef109be"
+   }
   },
   {
    "title": "Jornada Juegos de Mesa Fantastable",
@@ -6689,6 +6718,7 @@
    "description": "Juegos de Mesa + Partida Blood on the Clock Tower.",
    "description_lang": "es",
    "_fid": "f_2a874c5862",
+   "id": "f_2a874c5862",
    "is_free": true,
    "_procedencia": {
     "day": {
@@ -6736,8 +6766,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_2a874c5862"
+   }
   },
   {
    "title": "Carrie",
@@ -6773,6 +6802,7 @@
    "tmdb_id": 7340,
    "synopsis_en": "Withdrawn and sensitive teenager Carrie White faces bullying from her classmates and abuse from her fanatically pious mother. When she begins to suspect that she has supernatural powers, things take a dark and violent turn.",
    "_fid": "f_090db4e52b",
+   "id": "f_090db4e52b",
    "is_free": false,
    "ticket_url": "https://www.elmamm.org/producto/carrie/",
    "_procedencia": {
@@ -6821,8 +6851,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_090db4e52b"
+   }
   },
   {
    "title": "Club de la Medianoche: Club de lectura",
@@ -6850,6 +6879,7 @@
    "description": "Club de lectura – Sesión presencial.",
    "description_lang": "es",
    "_fid": "f_cac4d446e2",
+   "id": "f_cac4d446e2",
    "is_free": true,
    "_procedencia": {
     "day": {
@@ -6902,8 +6932,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_cac4d446e2"
+   }
   },
   {
    "title": "You Are The Film",
@@ -6941,6 +6970,7 @@
    "tmdb_id": 1631314,
    "synopsis_en": "Madoka writes plays. Kazuma composes music. One day, they decide to go to the cinema. But once there, they realise they can interact through the screen itself, sending fiction into joyful freefall in an absurd and inventive adventure.",
    "_fid": "f_f45832ccfd",
+   "id": "f_f45832ccfd",
    "is_free": false,
    "_procedencia": {
     "day": {
@@ -6993,8 +7023,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_f45832ccfd"
+   }
   },
   {
    "title": "Dèmoni",
@@ -7032,6 +7061,7 @@
    "synopsis_en": "A group of people are trapped in a West Berlin movie theater infested with ravenous demons who proceed to kill and possess the humans one-by-one, thereby multiplying their numbers.",
    "title_en": "Demons",
    "_fid": "f_09fdfe0458",
+   "id": "f_09fdfe0458",
    "is_free": true,
    "_procedencia": {
     "day": {
@@ -7079,8 +7109,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_09fdfe0458"
+   }
   },
   {
    "title": "Hablando con Extraños",
@@ -7119,6 +7148,7 @@
    "synopsis_en": "A grieving mother is confronted by an uncanny presence that wears the face of her lost child.",
    "title_en": "Talking to a Stranger",
    "_fid": "f_ef120f621a",
+   "id": "f_ef120f621a",
    "is_free": false,
    "_procedencia": {
     "day": {
@@ -7171,8 +7201,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_ef120f621a"
+   }
   },
   {
    "title": "Cortometrajes en competencia: deliberación del Jurado Infantil",
@@ -7198,6 +7227,7 @@
     "id": "2026-10-23-13-00-cortometrajes-en-competencia-deliberacion-del-jurado-infantil"
    },
    "_fid": "f_45f331d701",
+   "id": "f_45f331d701",
    "is_free": true,
    "_procedencia": {
     "day": {
@@ -7240,8 +7270,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_45f331d701"
+   }
   },
   {
    "title": "Motherwitch",
@@ -7279,6 +7308,7 @@
    "tmdb_id": 1461870,
    "synopsis_en": "Cyprus, 1882: Eleni, an outcast painter, tries to resurrect her dead children but instead unleashes mythical creatures upon her village. Only by becoming a good mother to a talented, but abused child can she reverse the curse.",
    "_fid": "f_16b980e401",
+   "id": "f_16b980e401",
    "is_free": true,
    "_procedencia": {
     "day": {
@@ -7331,8 +7361,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_16b980e401"
+   }
   },
   {
    "title": "Muestra Catalana: Cortometrajes C-Trencada",
@@ -7357,6 +7386,7 @@
     "id": "2026-10-23-17-00-cortometrajes-c-trencada"
    },
    "_fid": "f_b181530f81",
+   "id": "f_b181530f81",
    "is_free": true,
    "_procedencia": {
     "day": {
@@ -7404,8 +7434,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_b181530f81"
+   }
   },
   {
    "title": "Asedios y otras tácticas militares en la saga \"Dune\" de Frank Herbert por Alejandro Vesga",
@@ -7430,6 +7459,7 @@
     "id": "2026-10-23-16-00-asedios-y-otras-tacticas-militares-en-la-saga-dune-de-frank-herbert-por-alejandro-vesga"
    },
    "_fid": "f_3659784613",
+   "id": "f_3659784613",
    "is_free": true,
    "_procedencia": {
     "day": {
@@ -7477,8 +7507,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_3659784613"
+   }
   },
   {
    "title": "Vida",
@@ -7514,6 +7543,7 @@
    "lbSlug": "vida-2016",
    "tmdb_id": 1783345,
    "_fid": "f_d08c399eed",
+   "id": "f_d08c399eed",
    "is_free": true,
    "_procedencia": {
     "day": {
@@ -7561,8 +7591,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_d08c399eed"
+   }
   },
   {
    "title": "Selección Oficial de Cortometrajes de Animación",
@@ -7736,6 +7765,7 @@
     }
    ],
    "_fid": "f_13e6e00bbf",
+   "id": "f_13e6e00bbf",
    "is_free": true,
    "_procedencia": {
     "day": {
@@ -7783,8 +7813,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_13e6e00bbf"
+   }
   },
   {
    "title": "You Are The Film",
@@ -7821,6 +7850,7 @@
    "tmdb_id": 1631314,
    "synopsis_en": "Madoka writes plays. Kazuma composes music. One day, they decide to go to the cinema. But once there, they realise they can interact through the screen itself, sending fiction into joyful freefall in an absurd and inventive adventure.",
    "_fid": "f_b2651d23c1",
+   "id": "f_b2651d23c1",
    "is_free": false,
    "ticket_url": "https://www.elmamm.org/producto/you-are-the-film/",
    "_procedencia": {
@@ -7874,8 +7904,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_b2651d23c1"
+   }
   },
   {
    "title": "Mag Mag",
@@ -7912,6 +7941,7 @@
    "tmdb_id": 1536720,
    "synopsis_en": "The revenge story of a woman whose partner is murdered by a ghost, and who will soon discover the true identity of the one she must avenge.",
    "_fid": "f_6a536b00ff",
+   "id": "f_6a536b00ff",
    "is_free": false,
    "_procedencia": {
     "day": {
@@ -7959,8 +7989,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_6a536b00ff"
+   }
   },
   {
    "title": "Manual Para Invocar Fantasmas",
@@ -7998,6 +8027,7 @@
    "tmdb_id": 1665528,
    "synopsis_en": "Between 1950 and 1960, members of Opus Dei arrived in Colombia to expand their influence in Latin America. In 2021, the complaint against this organization by 43 women for trafficking and exploitation reopened the historical wound. In an exercise of imaginative memory, a group of actresses enters an abandoned school to create a play inspired by those silenced lives.",
    "_fid": "f_14505eab1b",
+   "id": "f_14505eab1b",
    "is_free": true,
    "_procedencia": {
     "day": {
@@ -8050,8 +8080,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_14505eab1b"
+   }
   },
   {
    "title": "Charla musicalizada en vivo – Sinners: el Asedio de los Condenados por Mario Fernando Castaño",
@@ -8076,6 +8105,7 @@
     "id": "2026-10-23-19-30-charla-musicalizada-sinners-el-asedio-de-los-condenados-por-mario-fernando-castano"
    },
    "_fid": "f_ece5961594",
+   "id": "f_ece5961594",
    "is_free": true,
    "_procedencia": {
     "day": {
@@ -8123,8 +8153,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_ece5961594"
+   }
   },
   {
    "title": "Ghost in the Cell",
@@ -8162,6 +8191,7 @@
    "tmdb_id": 1393326,
    "synopsis_en": "In a notorious prison, an invisible force begins killing inmates brutally, compelling enemy gangs and corrupt guards to work together as they try to survive the mounting bloodshed.",
    "_fid": "f_57b40ca533",
+   "id": "f_57b40ca533",
    "is_free": false,
    "_procedencia": {
     "day": {
@@ -8214,8 +8244,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_57b40ca533"
+   }
   },
   {
    "title": "Fiesta Fantasmagoría: Brujas, Espectros y Otros Fantasmas",
@@ -8242,6 +8271,7 @@
    "description": "Música: Zensorias a.k.a: Helløise – Dynmk y Morfina Visuales: Aleja Rocas de Arrebato.",
    "description_lang": "es",
    "_fid": "f_e18cb62b27",
+   "id": "f_e18cb62b27",
    "is_free": true,
    "_procedencia": {
     "day": {
@@ -8289,8 +8319,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_e18cb62b27"
+   }
   },
   {
    "title": "Presentación de Libros Ediciones Sociedad Fantasmagoría: Colombia es fantástica y Las Murallas del Miedo, con sus autores",
@@ -8315,6 +8344,7 @@
     "id": "2026-10-25-15-00-presentacion-de-libros-ediciones-sociedad-fantasmagoria-colombia-es-fantastica-y-las-murallas-del-miedo"
    },
    "_fid": "f_8e2fe45c48",
+   "id": "f_8e2fe45c48",
    "is_free": true,
    "_procedencia": {
     "day": {
@@ -8362,8 +8392,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_8e2fe45c48"
+   }
   },
   {
    "title": "Il Deserto Rosso",
@@ -8400,6 +8429,7 @@
    "synopsis_en": "In an industrializing Italian town, a married woman, rendered mentally unstable after a traffic accident, drifts into an affair with a friend of her husband.",
    "title_en": "Red Desert",
    "_fid": "f_a5c9a10cf2",
+   "id": "f_a5c9a10cf2",
    "is_free": false,
    "ticket_url": "https://www.elmamm.org/producto/el-desierto-rojo/",
    "_procedencia": {
@@ -8448,8 +8478,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_a5c9a10cf2"
+   }
   },
   {
    "title": "Luz",
@@ -8487,6 +8516,7 @@
    "tmdb_id": 498062,
    "synopsis_en": "Luz, a young cabdriver, drags herself into the brightly lit entrance of a run-down police station. A demonic entity follows her, determined to finally be close to the woman it loves.",
    "_fid": "f_399c12af29",
+   "id": "f_399c12af29",
    "is_free": true,
    "_procedencia": {
     "day": {
@@ -8539,8 +8569,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_399c12af29"
+   }
   },
   {
    "title": "Cortometrajes colombianos que miran al cielo",
@@ -8567,6 +8596,7 @@
     "id": "2026-10-24-19-00-cortometrajes-colombianos-que-miran-al-cielo"
    },
    "_fid": "f_8bfe5f4cb1",
+   "id": "f_8bfe5f4cb1",
    "is_free": true,
    "_procedencia": {
     "day": {
@@ -8614,8 +8644,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_8bfe5f4cb1"
+   }
   },
   {
    "title": "Selección Oficial de Cortometrajes",
@@ -8774,6 +8803,7 @@
    "description": "Selección Oficial de Cortometrajes + Q&A con Andrés Buitrago .",
    "description_lang": "es",
    "_fid": "f_32b2036c70",
+   "id": "f_32b2036c70",
    "is_free": true,
    "_procedencia": {
     "day": {
@@ -8831,8 +8861,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_32b2036c70"
+   }
   },
   {
    "title": "Dong Bei Jing Cha Gu Shi 3 – Fight Against Evil 3",
@@ -8870,6 +8899,7 @@
    "synopsis_en": "Li Hongqi is forced to travel for his wedding but must team up with a local cop to rescue a girl from human traffickers, fighting criminals while racing against his wedding date.",
    "title_en": "Fight Against Evil 3",
    "_fid": "f_558e1285ca",
+   "id": "f_558e1285ca",
    "is_free": false,
    "_procedencia": {
     "day": {
@@ -8917,8 +8947,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_558e1285ca"
+   }
   },
   {
    "title": "The Craft",
@@ -8955,6 +8984,7 @@
    "tmdb_id": 9100,
    "synopsis_en": "A Catholic school newcomer falls in with a clique of teen witches who wield their powers against all who dare to cross them -- be they teachers, rivals or meddlesome parents.",
    "_fid": "f_5954a9f979",
+   "id": "f_5954a9f979",
    "is_free": true,
    "_procedencia": {
     "day": {
@@ -9002,8 +9032,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_5954a9f979"
+   }
   },
   {
    "title": "Huo zhe yan (The Furious)",
@@ -9043,6 +9072,7 @@
    "synopsis_en": "After a criminal network kidnaps Wang Wei's daughter and the corrupt police refuse to assist him, Wei sets out on his own to locate her. Navin, a tenacious journalist whose wife has mysteriously vanished, is his only ally. In this explosive martial arts showdown, the unlikely duo fights the kidnappers ruthlessly driven by a furious vengeance.",
    "title_en": "The Furious",
    "_fid": "f_1e4a28efb0",
+   "id": "f_1e4a28efb0",
    "is_free": false,
    "_procedencia": {
     "day": {
@@ -9100,8 +9130,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_1e4a28efb0"
+   }
   },
   {
    "title": "Evento de Clausura: Premiación y Presentación musical",
@@ -9126,6 +9155,7 @@
     "id": "2026-10-25-17-00-premiacion-y-presentacion-musical"
    },
    "_fid": "f_c631be53a9",
+   "id": "f_c631be53a9",
    "is_free": true,
    "_procedencia": {
     "day": {
@@ -9173,8 +9203,7 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_c631be53a9"
+   }
   },
   {
    "title": "Ikatan Darah",
@@ -9211,6 +9240,7 @@
    "tmdb_id": 1421155,
    "synopsis_en": "A former martial arts athlete must face a network of loan sharks to save her younger brother, who is trapped in online gambling debt and risking their family’s safety.",
    "_fid": "f_9e8c770636",
+   "id": "f_9e8c770636",
    "is_free": true,
    "_procedencia": {
     "day": {
@@ -9258,19 +9288,17 @@
      "fecha": "2026-10-16",
      "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/"
     }
-   },
-   "id": "f_9e8c770636"
+   }
   }
  ],
  "_avisos_duracion": [
-  "«Decorado»: 95 min en el festival, 85 en TMDB",
-  "«Pura Sangre»: 80 min en el festival, 105 en TMDB"
+  "«Decorado»: 95 min en el festival, 85 en TMDB"
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-18T06:28:34",
+  "fecha": "2026-10-19T20:00:37",
   "plan_sha": "bcc190a548850b59",
-  "paso": 8,
-  "cmd": "python3 pipeline/ensamblar.py fantasmagoria-2026"
+  "paso": 10,
+  "cmd": "python3 pipeline/fantasmagoria-2026-verificar.py"
  }
 }

@@ -1024,15 +1024,27 @@
     "base_version": 26,
     "id": "2026-10-20-18-30-pura-sangre"
    },
-   "titulo": "Pura Sangre",
-   "director": "Luis Ospina",
+   "titulo": "Robo Macabro + Pura Sangre",
    "pais": "Colombia",
-   "anio": 1982,
-   "duracion_min": 80,
-   "genero": "Terror",
    "seccion": "Colombia es Fantástica",
    "invitados": "Conversatorio con Alberto Romo y Andrés Buitrago.",
-   "sinopsis": "Roberto Hurtado padece una rara enfermedad que exige transfusiones masivas de sangre de niños o adolescentes. Él chantajea a tres empleados para que le consigan sangre y éstos recurren a métodos inescrupulosos para conseguirla. En incursiones nocturnas atrapan a sus víctimas y los someten a sus perversiones sexuales antes de asesinarlos. La extraña desaparición de niños y la recurrente aparición de sus cadáveres desnudos en lugares despoblados aterrorizan la ciudad.",
+   "obras": [
+    {
+     "titulo": "Robo Macabro",
+     "director": "Jairo Pinilla",
+     "pais": "Colombia",
+     "anio": 1982,
+     "duracion_min": 10
+    },
+    {
+     "titulo": "Pura Sangre",
+     "director": "Luis Ospina",
+     "pais": "Colombia",
+     "anio": 1982,
+     "duracion_min": 98
+    }
+   ],
+   "duracion_min": 108,
    "sala": "Plazoleta de la Luz"
   },
   {
@@ -2291,12 +2303,7 @@
   "version": 26,
   "creada": "2026-10-16T11:53:58.063749+00:00",
   "nuevas": [],
-  "movidas": [
-   "Critters: 2026-10-17 19:00 Planetario de Medellín Auditorio → 2026-10-17 17:00 Planetario de Medellín Auditorio",
-   "The X Files y Lectura de La Verdad Está Ahí Af: 2026-10-18 19:00 Planetario de Medellín Auditorio → 2026-10-18 18:00 Planetario de Medellín Auditorio",
-   "Vida: 2026-10-23 19:00 Planetario de Medellín Auditorio → 2026-10-23 17:00 Planetario de Medellín Auditorio",
-   "Cortometrajes colombianos que miran al cielo: 2026-10-24 19:00 Planetario de Medellín Auditorio → 2026-10-24 17:00 Planetario de Medellín Auditorio"
-  ],
+  "movidas": [],
   "fuera_de_la_base": []
  }
 }
