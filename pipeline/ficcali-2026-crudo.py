@@ -276,7 +276,9 @@ EXPERIENCIA = {14841, 13931, 14447, 14448, 14919, 14006}
 
 
 def acceso(x):
-    t = ' '.join(filter(None, [x['titulo'], x.get('meta_impresa') or '']))
+    # la categoría también: en la 3.ª sesión del Seminario (tarjeta 16325, 19 oct)
+    # la web corrió su línea, con «Link de inscripción aquí.», a ese campo
+    t = ' '.join(filter(None, [x['titulo'], x.get('meta_impresa') or '', x.get('categoria') or '']))
     if x['id'] == 13880:          # el lanzamiento (nota oficial del festival)
         return 'Entrada libre y gratuita hasta completar aforo'
     # la inauguración: «🎟️ Entrada libre hasta completar aforo» (@festivaldecinecali,
@@ -434,18 +436,25 @@ def main():
         funciones.append({k_: v for k_, v in r.items() if v not in (None, '')})
 
     # LA MISMA ACTIVIDAD EN VARIAS FECHAS lleva UN texto ([programa-mismo-titulo]):
-    # el de su primera tarjeta; la línea de aula y cupo de cada una ya está en
-    # su acceso
-    primero = {}
+    # el PRIMERO QUE EXISTA entre sus tarjetas, no el de la primera tarjeta: el
+    # XV Seminario «Pantallas que piensan» trae su línea en las sesiones 1 y 3 y
+    # la 2 viene vacía; tomar «la primera» las dejaba a las tres sin texto (20 oct
+    # 2026). La línea de aula y cupo de cada una ya está en su acceso.
+    texto, vistos = {}, {}
     for f in funciones:
-        if f.get('tipo') != 'evento':
+        if f.get('tipo') == 'evento':
+            vistos.setdefault(f['titulo'], []).append(f)
+            # su texto: la sinopsis, o si no la línea propia de la tarjeta
+            # (`invitados`, la meta única): la del Seminario es esa
+            if f.get('sinopsis') or f.get('invitados'):
+                texto.setdefault(f['titulo'], f.get('sinopsis') or f['invitados'])
+    for t_, grupo in vistos.items():
+        if len(grupo) < 2:
             continue
-        p0 = primero.setdefault(f['titulo'], f)
-        if p0 is not f:
+        for f in grupo:
             f.pop('invitados', None)
-            if p0.get('sinopsis'):
-                f['sinopsis'] = p0['sinopsis']
-            p0.pop('invitados', None)
+            if t_ in texto:
+                f['sinopsis'] = texto[t_]
 
     # DURACIÓN DEDUCIDA de lo que no la trae
     def mins(h):
