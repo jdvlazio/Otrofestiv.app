@@ -6934,6 +6934,42 @@ try:
 except FileNotFoundError:
     fail(check, 'falta .github/camino-datos.txt (lo lee el workflow de Playwright)')
 
+check = 'git-config-sano'
+# La config de git es UNA para todas las copias de trabajo (.git/config del repo
+# principal). Dos veces el 19 oct 2026 un `git init` de un test, con GIT_DIR /
+# GIT_WORK_TREE heredados dentro de un hook, la dejó rota: `core.bare = true`
+# (la carpeta principal dejó de ser un checkout) y `core.worktree` apuntando a
+# una copia ya borrada. El síntoma salía horas después y en OTRA sesión. Esto lo
+# ve en el push que lo causa y dice cómo arreglarlo.
+try:
+    import subprocess as _spg
+    # Dónde está la config SIN preguntarle a git: justo cuando está rota, git no
+    # puede contestarlo (con core.worktree a una carpeta borrada, `git rev-parse`
+    # sale con «fatal»), y un guardián que lee el archivo equivocado da «sano».
+    # (Primera versión de este check: no frenaba ninguno de los dos casos.)
+    _g = os.path.join(os.path.dirname(os.path.abspath(__file__)), '.git')
+    if os.path.isfile(_g):        # copia de trabajo: «gitdir: …/.git/worktrees/<x>»
+        _wd = open(_g, encoding='utf-8').read().split('gitdir:', 1)[1].strip()
+        _c = os.path.join(_wd, 'commondir')
+        _cd = os.path.normpath(os.path.join(_wd, open(_c).read().strip())) if os.path.exists(_c) else _wd
+    else:
+        _cd = _g
+    if not os.path.isfile(os.path.join(_cd, 'config')):
+        raise RuntimeError(f'no encontré la config de git en {_cd}')
+    _malo = []
+    for _k, _mal, _arreglo in [('core.bare', lambda v: v == 'true', 'git config --file {c} core.bare false'),
+                               ('core.worktree', lambda v: bool(v), 'git config --file {c} --unset core.worktree')]:
+        _v = _spg.run(['git', 'config', '--file', os.path.join(_cd, 'config'), '--get', _k],
+                      capture_output=True, text=True, timeout=30, cwd='/').stdout.strip()
+        if _mal(_v):
+            _malo.append(f'{_k} = {_v} → {_arreglo.format(c=os.path.join(_cd, "config"))}')
+    if _malo:
+        fail(check, 'la config COMPARTIDA de git está rota (afecta a todas las copias de trabajo): ' + ' · '.join(_malo))
+    else:
+        ok(check, 'la config compartida de git está sana (ni bare ni core.worktree)')
+except Exception as _e:
+    fail(check, f'no se pudo verificar git-config-sano (falla cerrado): {_e}')
+
 check = 'asset-write-once'
 # Un afiche PUBLICADO nunca cambia de contenido con el mismo nombre (19 oct 2026,
 # hallazgo de Onboarding). El SW guarda /assets/ caché-primero en un caché que

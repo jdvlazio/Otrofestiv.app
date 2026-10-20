@@ -62,6 +62,13 @@ Juan es Product Owner, diseñador y developer. Claude ejecuta; Juan audita y apr
 | **Main** | código de la app | `src/`, `validate.py`, `tests/`, `scripts/` | `feat/*`, `fix/*` |
 | **Onboarding** | datos de festival | `festivals/`, `assets/`, `src/config.js` | `feat/<festival>-catalogo` |
 
+8. **Una sesión, una copia de trabajo** (20 oct 2026). Toda sesión trabaja en su
+   propio worktree; la carpeta principal `~/Developer/Otrofestiv` no se edita nunca
+   y queda en `main`. `fuentes/` es un enlace a la carpeta compartida
+   `~/Developer/Otrofestiv-fuentes`. Una copia nueva se prepara con
+   `sh scripts/preparar-copia.sh` (lo corre solo el hook de inicio de sesión).
+   Ver `docs/TRABAJO-EN-PARALELO.md`.
+
 **Quien es dueño de la rama la lleva hasta el final: push _y_ merge.** El trabajo no
 se parte a la mitad entre dos chats — así nace la pregunta «¿y ahora quién mergea?».
 Juan autoriza en el chat dueño de la rama.
