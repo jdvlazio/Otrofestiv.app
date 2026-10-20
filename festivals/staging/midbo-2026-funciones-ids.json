@@ -54,10 +54,10 @@
    "titulo": "el valor de la palabra"
   },
   "f_c4adc7a865": {
-   "sede": "Universidad Central - Bogotá",
+   "sede": "Universidad Jorge Tadeo Lozano - Bogotá",
    "dia": "2026-10-29",
    "hora": "14:00",
-   "sala": "Auditorio Caldas",
+   "sala": "Aula Magistral 705 - M16 (piso 7), Edificio de Posgrados",
    "titulo": "hijo de tigre y mula"
   },
   "f_517f246dba": {
@@ -99,7 +99,7 @@
    "sede": "Centro de Memoria, Paz y Reconciliación - Bogotá",
    "dia": "2026-10-29",
    "hora": "16:00",
-   "sala": "Aula 1",
+   "sala": "Auditorio",
    "titulo": "latidos"
   },
   "f_8dff9a987d": {
@@ -120,7 +120,7 @@
    "sede": "Centro de Memoria, Paz y Reconciliación - Bogotá",
    "dia": "2026-10-29",
    "hora": "17:30",
-   "sala": "",
+   "sala": "Auditorio",
    "titulo": "programa 3 acompanar y restituir la memoria familiar y colectiva"
   },
   "f_989459899a": {
@@ -145,10 +145,10 @@
    "titulo": "las almas ni los ojos"
   },
   "f_c7bb101b44": {
-   "sede": "Universidad Central - Bogotá",
+   "sede": "Universidad Jorge Tadeo Lozano - Bogotá",
    "dia": "2026-10-30",
    "hora": "14:00",
-   "sala": "Auditorio Santander",
+   "sala": "Aula Magistral 705 - M16 (piso 7), Edificio de Posgrados",
    "titulo": "un lugar mas grande"
   },
   "f_6899c1b3fb": {
@@ -414,7 +414,7 @@
    "sede": "Centro de Memoria, Paz y Reconciliación - Bogotá",
    "dia": "2026-11-03",
    "hora": "16:30",
-   "sala": "Aula 1",
+   "sala": "Auditorio",
    "titulo": "si la escombrera hablara"
   },
   "f_932a0854f0": {
@@ -437,13 +437,6 @@
    "hora": "18:30",
    "sala": "Cinemateca Sala Alterna, Auditorio 105, edificio 301",
    "titulo": "programa 1 pasaje entre mundos duelo y memoria"
-  },
-  "f_bdffbabdda": {
-   "sede": "Alianza Francesa - Bogotá",
-   "dia": "2026-11-04",
-   "hora": "10:00",
-   "sala": "",
-   "titulo": "sey arimaku la otra oscuridad galu dugbis la memoria de las abuelas"
   },
   "f_45b502268f": {
    "sede": "Universidad Nacional de Colombia - Bogotá",
@@ -605,6 +598,14 @@
    "hora": "11:30",
    "sala": "Sala Capital",
    "titulo": "mesa redonda escucha continua homenaje a roberto garcia"
+  },
+  "f_bdffbabdda": {
+   "sede": "Alianza Francesa - Bogotá",
+   "dia": "2026-11-04",
+   "hora": "10:00",
+   "sala": "",
+   "titulo": "sey arimaku la otra oscuridad galu dugbis la memoria de las abuelas",
+   "ausente": true
   }
  }
 }

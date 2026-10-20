@@ -75,6 +75,10 @@ SEDES = {
     'Canterbury Café Kennedy': ('Canterbury Café', '', 'Bogotá'),
     'Auditorio, Centro de Memoria, Paz y Reconciliación': ('Centro de Memoria, Paz y Reconciliación', 'Auditorio', 'Bogotá'),
     'Auditorio Santander, Universidad Central': ('Universidad Central', 'Auditorio Santander', 'Bogotá'),
+    # nueva en la web del 19 oct (Hijo de tigre y mula, Un lugar más grande): el
+    # Edificio de Posgrados (Módulo 16) de la Tadeo; el aula va como sala
+    'Aula Magistral 705 - M16 (piso 7), Edificio de Posgrados, Universidad Jorge Tadeo Lozano':
+        ('Universidad Jorge Tadeo Lozano', 'Aula Magistral 705 - M16 (piso 7), Edificio de Posgrados', 'Bogotá'),
     'Bodega Insurgesta, Potosí, Ciudad Bolívar': ('Bodega Insurgesta', '', 'Bogotá'),
     'Servicio Forjar Restaurativo Arborizadora Baja, Ciudad Bolívar': ('Servicio Forjar Restaurativo Arborizadora Baja', '', 'Bogotá'),
     'Centro Ático, Universidad Javeriana': ('Centro Ático, Universidad Javeriana', '', 'Bogotá'),
