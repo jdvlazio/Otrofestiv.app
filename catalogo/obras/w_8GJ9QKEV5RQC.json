@@ -3,7 +3,13 @@
  "titulo_original": "La Sierra",
  "anio": null,
  "paises": [],
- "directores": [],
+ "directores": [
+  "Carlos Ortiz"
+ ],
+ "afiche": {
+  "archivo": "/assets/guatape-2026/la-sierra.jpg",
+  "veredicto": "oficial"
+ },
  "xref": {},
  "versiones": [
   {

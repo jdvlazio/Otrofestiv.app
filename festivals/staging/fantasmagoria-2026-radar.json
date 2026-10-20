@@ -1,10 +1,10 @@
 {
  "_provenance": {
   "fuente": "issue de radar #963 — https://github.com/jdvlazio/Otrofestiv.app/issues/963",
-  "capturado": "2026-10-15",
+  "capturado": "2026-10-19",
   "titulo": "RADAR: Fantasmagoría 8 — Medellín, 15–25 OCT 2026",
   "estado": "OPEN",
-  "comentarios": 5
+  "comentarios": 10
  },
  "issue": 963,
  "titulo": "RADAR: Fantasmagoría 8 — Medellín, 15–25 OCT 2026",
@@ -30,6 +30,26 @@
   {
    "fecha": "2026-10-15",
    "cuerpo": "Vigía 14 oct 2026 (noche) — Fantasmagoría\n\n- ⚠ **Ana Rosa — la hora cambió (o volvió atrás).** La lámina nueva del Colombo Americano ([DefDK-RlLH5](https://www.instagram.com/p/DefDK-RlLH5/), 14 oct 13:40, lámina 10 de 17) dice **miércoles 21 oct · 5:00 p. m. · Colombo Americano**. La base del festival **v21** (14 oct 16:54) también dice **17:00**. La app publica **18:00** por el override `HORA_IG` de `fantasmagoria-2026-base.py` (lámina del 11 oct). Las dos fuentes más nuevas coinciden en 17:00 → sugerido: quitar ese override y republicar.\n- Las otras 14 funciones de esa misma serie de láminas coinciden con la app (día, hora y sede).\n- Base v21 contra la app: 94 funciones, 0 nuevas, 0 salen; fuera de Ana Rosa, solo difieren las otras correcciones deliberadas de `HORA_IG` (You Are The Film ×2, Brujas…) y nombres de sede o sala normalizados.\n- Siete samuráis (vie 16, 7:00 p. m., Colombo, [DeftsiehQ-3](https://www.instagram.com/p/DeftsiehQ-3/)): ya está.\n"
+  },
+  {
+   "fecha": "2026-10-16",
+   "cuerpo": "**Vigía 16 oct** — la cartelera del festival (base `programacion_publicada`, **versión 26**) cambió la hora de 4 funciones del Planetario respecto de la v21 que tiene la app:\n\n| Día | Obra | Base v26 | App |\n|---|---|---|---|\n| sáb 17 | Critters (+ conversatorio vida extraterrestre) | **17:00**, Auditorio | 19:00 |\n| dom 18 | The X Files y Lectura de La Verdad Está Ahí Afuera | **18:00**, Auditorio | 19:00 |\n| vie 23 | Vida (+ charla Futuros Improbables) | **17:00**, Auditorio | 19:00 |\n| sáb 24 | Cortometrajes colombianos que miran al cielo | **17:00**, Auditorio | 19:00 |\n\nEl `id` de la base conserva la hora vieja (`2026-10-17-19-00-critters`), así que se ve igual por id: hay que comparar el campo `hora`.\nAparte (no es nuevo): «Brujas, Espectros y Otros Fantasmas» (vie 23, La Pascasia) está a las 21:30 en la base y a las 21:00 en la app.\nAcción sugerida: re-correr `fantasmagoria-2026-base.py` con la base nueva y publicar. Lo urgente es Critters (mañana).\n"
+  },
+  {
+   "fecha": "2026-10-16",
+   "cuerpo": "**Salas vs. app — corrida del 16 oct 2026 (tarea salas-agenda-festivales)**\n\n**Colombo Americano** (https://www.colombomedellin.edu.co/programacion-por-salas/ — la agenda llega hasta el 18 oct):\n1. **URGENTE (hoy 16 oct):** *Saluda al Diablo de Mi Parte* — la sala dice **Sala 2, viernes 16, 4:30 pm** (también en https://www.colombomedellin.edu.co/peliculas/saluda-el-diablo-de-mi-parte/); la app dice **16:00** (fuente: cartelerafantasmagoria.fan, 14 oct). Acción: verificar con el festival y pasar a 16:30.\n2. *Historia de lo Oculto* (dom 18 oct, 4:00 pm): la sala dice **Sala 1**; la app no tiene sala. Acción: `sala: \"Sala 1\"`.\n- El resto (Decorado, Los siete samuráis, Iris de Cristal, Selección Oficial de Cortometrajes Colombianos) coincide: día, hora, sala y entrada libre.\n\n**MAMM** (https://www.elmamm.org/cine/8o-festival-fantasmagoria/):\n3. Las 6 funciones coinciden en día y hora (Corazón de las tinieblas 16/10 4:30 pm, Black Moon 17/10 4:30 pm, Rio Bravo 18/10 4:00 pm, Carrie 22/10 6:30 pm, You Are the Film 23/10 6:30 pm, El desierto rojo 24/10 4:30 pm). Pero el MAMM **cobra $14.000** ($10.000 mayores de 60, menores de 12 y estudiantes, solo en taquilla) y vende por función en `https://www.elmamm.org/producto/<obra>/` (corazon-de-las-tinieblas, black-moon, rio-bravo, carrie, you-are-the-film, el-desierto-rojo). La app no tiene `ticket_url` en ninguna. Acción: cargar `ticket_url` por función. Tres de ellas son en los próximos 3 días.\n"
+  },
+  {
+   "fecha": "2026-10-18",
+   "cuerpo": "**Vigía 17 oct 2026 (21:30) — Fantasmagoría: 4 horas movidas en el Planetario**\n\nLa cartelera oficial (base `programacion_publicada` de cartelerafantasmagoria.fan) va en la **versión 26** (creada el 16 oct, 11:53 UTC). Producción está armada con la **v21**. De las 94 funciones, 90 coinciden en día, hora y sede. Las 4 que no coinciden son todas en el Auditorio del Planetario de Medellín y todas se adelantaron:\n\n| Obra | Día | Fuente (v26) | App |\n|---|---|---|---|\n| Critters | sáb 17 oct | 17:00 | 19:00 (ya pasó) |\n| The X Files y Lectura de «La Verdad Está Ahí Afuera» | **dom 18 oct (mañana)** | **18:00** | 19:00 |\n| Vida | vie 23 oct | 17:00 | 19:00 |\n| Cortometrajes colombianos que miran al cielo | sáb 24 oct | 17:00 | 19:00 |\n\nAcción sugerida: correr `fantasmagoria-2026-base.py --bajar` y volver a publicar. La de X Files es mañana.\n\nSin cambios en IG (@mfantasmagoria, 5 posts nuevos): The Furious (17 y 24 oct, 9:00 p. m.), Black Moon (17 oct, 4:30 p. m.), FantasMeet (21 oct, desde las 2:00 p. m.) y Cuckoo (21 oct, 9:00 p. m.) coinciden con la app.\n"
+  },
+  {
+   "fecha": "2026-10-19",
+   "cuerpo": "**Salas — Colombo y MAMM (lectura automática, 19 oct)**\n\n- **MAMM** (https://www.elmamm.org/cine/8o-festival-fantasmagoria/): las funciones que vienen coinciden con la app, con el mismo link de compra: Carrie (jue 22, 6:30 PM), You Are The Film (vie 23, 6:30 PM) y El desierto rojo (sáb 24, 4:30 PM). La boleta cuesta $14.000 general y $10.000 con descuento (solo en taquilla); la app no muestra el precio.\n- **Colombo** (https://www.colombomedellin.edu.co/programacion-por-salas/): solo publica la semana del 13 al 18 OCT, así que no se pudo comparar del 20 al 25. En esa semana ya pasada hay 1 diferencia: **«Saluda el diablo de mi parte», vie 16 OCT, Sala 2.** El Colombo dice 4:30 PM y la app 16:00. Ya pasó, así que solo afecta el registro y el Modo Recuerdo. Las otras 5 funciones (Decorado, Los siete samuráis, Iris de Cristal, Historia de lo oculto, Selección Oficial de Cortos) coinciden, con «Entrada libre».\n- Para revisar en la app: Al Final del Espectro, Ana Rosa y The Craft (Colombo, 20 al 24 OCT) no tienen `sala`.\n"
+  },
+  {
+   "fecha": "2026-10-19",
+   "cuerpo": "**Vigía 19 oct 2026 (13:00) — Fantasmagoría**\n\n- Base de la cartelera (`programacion_publicada`): sigue en la **v26** (16 oct), igual a la app (94 funciones). La única diferencia es la ya decidida de Brujas, Espectros… (21:00 por la lámina).\n- IG [DerwqxjlMye](https://www.instagram.com/p/DerwqxjlMye/) (19 oct, UNAL, 6 láminas): todo está en la app con día, hora y sala (conversatorio 20 oct 17:30, Pura Sangre 20 oct 18:00 en la Plazoleta de la Luz, Cortos Latinoamericanos 22 oct 17:00 en el Auditorio Gerardo Molina con sus 6 cortos, Club de la Medianoche 22 oct 18:30 en el Jardín, Bloque 41).\n- **Detalle menor:** la lámina 3 anuncia la función del 20 oct como **«Robo Macabro» de Jairo Pinilla + «Pura Sangre» de Luis Ospina** (la base también lo trae en `extra`: «Robo Macabro (cortometraje)»). En la app «Pura Sangre» va sola y Robo Macabro no aparece en ningún lado. **Acción sugerida:** sumarlo como obra de esa función.\n"
   }
  ]
 }
