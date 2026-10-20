@@ -51,7 +51,7 @@ Juan es Product Owner, diseñador y developer. Claude ejecuta; Juan audita y apr
 2. **Cambios quirúrgicos.** Solo se modifica lo pedido. Cero modificaciones no solicitadas.
 3. **Copy es un artefacto de diseño.** Toda nueva string o corrección requiere discusión semántica con Juan como Content Designer + UX Writer. Sin excepciones.
 4. **Validar antes de commitear.** Siempre correr `python3 validate.py` antes de proponer un commit.
-5. **bump-version antes de deploy.** `node scripts/bump-version.js` justo antes de cada push.
+5. **El número de build NO va en el PR.** Lo estampa la publicación (`.github/workflows/pages.yml`) desde el 20 oct 2026: bumpear en la rama hacía chocar a todo PR con el siguiente. `require-bump` frena un PR que traiga `version.json`.
 6. **Sin regresiones.** Verificar qué cambió y por qué después de cada entrega.
 7. **Código de la app acá, datos del festival allá.** El trabajo está partido en dos
    chats con worktrees separados. La pregunta que decide dónde va un cambio es una
@@ -98,7 +98,7 @@ deliberada existe la etiqueta `frontera-ok`.
 | `qaff2026` |  |  |  | desconocido |
 | `tiff2026` | TIFF | Toronto | 10–20 SEP | Recién terminado |
 | `ficmontanas2026` | Ficmontañas | Salento | JUL 1–5 | Archivado |
-| `siembrafest2026` | SiembraFest | Sasaima y Villeta | 9–18 SEP | Recién terminado |
+| `siembrafest2026` | SiembraFest | Sasaima y Villeta | 9–18 SEP | Archivado |
 | `jardin2026` | Festival de Cine de Jardín | Jardín | 24–27 SEP | Recién terminado |
 | `itagui2026` | Festicine Itagüí | Itagüí | 23–27 SEP | Recién terminado |
 | `girardota2026` | Festigirardota | Girardota | 30 SEP–4 OCT | Recién terminado |
@@ -208,9 +208,9 @@ congelados en código viejo pese a los deploys web. Antes de CADA build:
 
 ## CI — GitHub Actions
 
-- **bump-and-validate.yml:** corre `python3 validate.py` **y** los unit tests de dominio (`node --test tests/unit/*.test.js`) — ambos deben pasar para que el job quede verde. (Pese al nombre, NO hace bump: el bump de versión es responsabilidad local — correr `node scripts/bump-version.js` antes de cada push.) Ojo: cambiar la firma/deps de una fn de dominio (ej. un nuevo `import` interno) suele requerir actualizar `tests/lib/load-domain.js` (DEFAULT_FNS) además del test.
+- **bump-and-validate.yml:** corre `python3 validate.py` **y** los unit tests de dominio (`node --test tests/unit/*.test.js`) — ambos deben pasar para que el job quede verde. (Pese al nombre, NO hace bump: el número lo estampa `pages.yml` al publicar, desde el 20 oct 2026.) Ojo: cambiar la firma/deps de una fn de dominio (ej. un nuevo `import` interno) suele requerir actualizar `tests/lib/load-domain.js` (DEFAULT_FNS) además del test.
 - **playwright.yml:** tests de regresión T01–T10, viewport 390×844 (iPhone 14), simTime frozen para festivales activos.
-- **Update iOS/Android:** `bump-version.js` avanza `version.json.ios` junto con `.android` (mismo build, sin staged rollout). El cliente recarga vía poll de `version.json` en cada reapertura.
+- **Update iOS/Android:** `bump-version.js` (en pages.yml, al publicar) avanza `version.json.ios` junto con `.android` (mismo build, sin staged rollout). El cliente recarga vía poll de `version.json` en cada reapertura.
 
 ---
 
@@ -219,7 +219,7 @@ congelados en código viejo pese a los deploys web. Antes de CADA build:
 ```bash
 sh scripts/install-hooks.sh                # UNA VEZ por clon/worktree: hooks + driver de merge
 python3 validate.py                        # validar antes de commitear
-node scripts/bump-version.js               # actualizar index.html + main.js + sw.js + version.json antes de deploy
+# node scripts/bump-version.js — ya NO a mano: lo corre pages.yml al publicar (20 oct 2026)
 node scripts/generate-claude-md.js         # regenerar este archivo cuando cambie el estado del proyecto
 node scripts/generate-config.js --help     # generar entrada FESTIVAL_CONFIG
 python3 scripts/enrich-festival.py --help  # enriquecer JSON con TMDB

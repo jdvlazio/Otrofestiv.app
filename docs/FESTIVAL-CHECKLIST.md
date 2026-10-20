@@ -72,7 +72,7 @@
 - [ ] **Venues con `lat`/`lng`** (geocoding corrido y verificado contra el mapa)
 - [ ] **`tools/enricher.html`** actualizado con el festival (lista FESTIVALS)
 - [ ] **`tasks.md`** actualizado con estado y deuda downstream
-- [ ] `node scripts/bump-version.js` corrido
+- [ ] (ya no se bumpea: el número de build lo pone la publicación, `pages.yml`, desde el 20 oct 2026)
 - [ ] **CI verde** antes del merge (validate-festivals + validate.py + Playwright)
 
 ## Checks automáticos de corrupción (en validate-festivals.js)
