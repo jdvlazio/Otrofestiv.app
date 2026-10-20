@@ -35,6 +35,29 @@
    "que": "el build"
   }
  ],
+ "fuentes_vivas": [
+  {
+   "archivo": "fuentes/ficica-2026/programacion-general.html",
+   "url": "https://ficica.cinealacalle.org/programacion-general.html",
+   "como": "pagina",
+   "debe_contener": "ficica-prog-datos",
+   "que": "la Programación General: el JSON embebido (una «fila» por función) que lee el crudo"
+  },
+  {
+   "archivo": "fuentes/ficica-2026/programas.html",
+   "url": "https://ficica.cinealacalle.org/programas.html",
+   "como": "pagina",
+   "debe_contener": "type=\"application/json\"",
+   "que": "la página Programas: los cortos de cada programa, que lee ficica-2026-programas.py"
+  },
+  {
+   "archivo": "fuentes/ficica-2026/seleccion-oficial.html",
+   "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+   "como": "pagina",
+   "debe_contener": "<tbody>",
+   "que": "la tabla de la Selección Oficial, que leen el catálogo y su verificador"
+  }
+ ],
  "_fuentes_versionadas": {
   "festivals/staging/ficica-2026-catalogo-enriquecido.json": "las fichas TMDB de las 81 obras del catálogo (47 verificadas), que escribe el paso 2. Es el trabajo que el montaje reusa cuando salga la parrilla.",
   "festivals/staging/ficica-2026-catalogo.json": "la Selección Oficial (81 cortos); la leerá el crudo",

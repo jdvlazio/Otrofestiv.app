@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "ficica.cinealacalle.org — Programación General 2026 (JSON embebido en la página)",
-  "capturado": "2026-10-19",
+  "capturado": "2026-10-20",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "radar": 1029,
@@ -786,16 +786,19 @@
    "film_list": [
     {
      "title": "El abrazo del sol",
+     "director": "Leonard Quiroz",
      "country": "Colombia",
      "flags": "🇨🇴"
     },
     {
      "title": "Cabica",
+     "director": "Heidy Helena Mejia Sánchez",
      "country": "Colombia",
      "flags": "🇨🇴"
     },
     {
      "title": "Arlequín",
+     "director": "Rubén Casalins",
      "country": "Colombia",
      "flags": "🇨🇴"
     }
@@ -1033,41 +1036,47 @@
    "film_list": [
     {
      "title": "Capitán cartagena",
+     "director": "Enuar Castillo Fernández",
      "country": "Colombia",
      "flags": "🇨🇴"
     },
     {
      "title": "Concierto sentido",
+     "director": "Cristian Rivas",
      "country": "Colombia",
      "flags": "🇨🇴"
     },
     {
      "title": "Frágil o embalados",
+     "director": "Colectivo Pedro Romero Vive Aquí",
      "country": "Colombia",
      "flags": "🇨🇴"
     },
     {
      "title": "Dientes de yuca",
+     "director": "Yurieth Romero Velasquez",
      "country": "Colombia",
      "flags": "🇨🇴",
      "synopsis": "David, un niño negro de seis años, sufre acoso escolar por el color de su piel y la falta de dientes. Cuando le piden que lleve una foto escolar, la esconde de sus padres para evitar más burlas. Pero su bisabuelo Leandro se entera y le fabrica una dentadura postiza de yuca. Juntos, se preparan para la foto.",
-     "director": "Yurieth Romero Velasquez",
      "year": 2025,
      "synopsis_lang": "es",
      "duration": "14 min"
     },
     {
      "title": "Dulce",
+     "director": "Yurieth Romero Velasquez, Edgar De Luque",
      "country": "Colombia",
      "flags": "🇨🇴"
     },
     {
      "title": "Plan de fuga",
+     "director": "Gleydis Paola Salgado Reyes",
      "country": "Colombia",
      "flags": "🇨🇴"
     },
     {
      "title": "El kanto del kajambá",
+     "director": "Rodolfo Palomino Cassiani",
      "country": "Colombia",
      "flags": "🇨🇴"
     }
@@ -2996,16 +3005,17 @@
    "film_list": [
     {
      "title": "Alivios",
+     "director": "Juan Manuel González",
      "country": "México, Venezuela",
      "flags": "🇲🇽🇻🇪",
      "poster": "/assets/ficcali-2026/alivios.jpg",
      "posterSource": "oficial",
      "lbSlug": "reliefs-2025",
+     "tmdb_id": 1469210,
      "synopsis": "Carlos se acerca a la mediana edad, atrapado en una crisis personal que se ha prolongado demasiado. Rosa, su madre, sufre un dolor incapacitante que solo se mitiga con las cálidas aguas de la hidroterapia. Una noche, ella se ofrece a hacer el sacrificio máximo para que ambos puedan transitar a un lugar mejor. Un cortometraje sobre el amor, la esperanza y el alivio que todos anhelamos.",
      "synopsis_en": "Carlos is approaching midlife trapped in a personal crisis that has lingered too long. Rosa, his mother, suffers from disabling pain that is only mitigated by the warm waters of hydrotherapy. One night, she offers to make the ultimate sacrifice so that they can both transit to a better place. A short film about love, hope and relief we all long for.",
      "title_en": "Reliefs",
      "genre": "Drama",
-     "director": "Juan Manuel González",
      "year": 2025,
      "synopsis_lang": "es",
      "duration": "19 min",
@@ -3013,56 +3023,60 @@
     },
     {
      "title": "El bitcoin de oro",
+     "director": "Bernardo Hernández",
      "country": "España",
      "flags": "🇪🇸",
      "poster": "/assets/ficcali-2026/el-bitcoin-de-oro.jpg",
      "posterSource": "oficial",
      "lbSlug": "el-bitcoin-de-oro",
+     "tmdb_id": 1793999,
      "synopsis": "Cuando Asofem está a punto de cerrar por una grave crisis económica, un grupo de usuarios y su monitor deciden embarcarse en una disparatada misión para salvar el centro al que consideran su hogar.",
-     "director": "Bernardo Hernández",
      "year": 2026,
      "synopsis_lang": "es",
      "duration": "18 min"
     },
     {
      "title": "El maestro de la piquería",
+     "director": "Yinet Molero",
      "country": "Colombia",
      "flags": "🇨🇴",
      "poster": "/assets/ficcali-2026/el-maestro-de-la-piqueria.jpg",
      "posterSource": "oficial",
      "lbSlug": "el-maestro-de-la-piqueria",
+     "tmdb_id": 1794001,
      "synopsis": "La piqueria, género musical autóctono del Caribe, ha representado durante décadas las raíces culturales de diversas generaciones. En La Guajira, Alcides Manjarrez es uno de los últimos maestros de este arte. Invidente de nacimiento, desde su infancia ha cimentado esta tradición. En la actualidad, además de ser referente en el folclor, impulsa la recuperación de esta tradición entre las nuevas generaciones.",
      "genre": "Documental",
-     "director": "Yinet Molero",
      "year": 2025,
      "synopsis_lang": "es",
      "duration": "8 min"
     },
     {
      "title": "Khazana",
+     "director": "Basir Ahmed",
      "country": "Pakistán",
      "flags": "🇵🇰",
      "poster": "/assets/ficcali-2026/khazana.jpg",
      "posterSource": "oficial",
      "lbSlug": "treasure-2025",
+     "tmdb_id": 1431611,
      "synopsis": "Un recolector de basura sordo, en Karachi, se topa con un descubrimiento impactante en un vertedero. Esto lo lleva a un enfrentamiento peligroso con un despiadado gánster, solo para descubrir un tesoro que cambiará su vida para siempre.",
      "synopsis_en": "A Deaf waste collector in Karachi stumbles upon a shocking discovery at a landfill, leading to a dangerous clash with a ruthless gangster - only to uncover a treasure that changes his life forever.",
      "title_en": "Treasure",
      "genre": "Drama",
-     "director": "Basir Ahmed",
      "year": 2025,
      "synopsis_lang": "es",
      "duration": "19 min"
     },
     {
      "title": "Quinto primera",
+     "director": "Fran Menchón",
      "country": "España",
      "flags": "🇪🇸",
      "poster": "/assets/ficcali-2026/quinto-primera.jpg",
      "posterSource": "oficial",
      "lbSlug": "quinto-primera",
+     "tmdb_id": 1794005,
      "synopsis": "Rafael vive encerrado en su mundo, su piso en L’Hospitalet de Llobregat. Cuando su mujer murió, hace varios años, él perdió las ganas de vivir y su espíritu guerrero. Llegó a L’Hospitalet en los años cincuenta, en la primera gran ola de inmigración. Fue un luchador por la democracia, la igualdad, la solidaridad y la justicia durante las décadas del setenta y ochenta, pero ahora, solitario, amargado y xenófobo, reniega del mundo y, en su soledad, les cobra su miseria a todos y, en especial, a los nuevos inmigrantes. Tampoco ayuda su alzhéimer, cada vez más presente.",
-     "director": "Fran Menchón",
      "year": 2026,
      "synopsis_lang": "es",
      "duration": "18 min"
@@ -3235,16 +3249,17 @@
    "film_list": [
     {
      "title": "Alivios",
+     "director": "Juan Manuel González",
      "country": "México, Venezuela",
      "flags": "🇲🇽🇻🇪",
      "poster": "/assets/ficcali-2026/alivios.jpg",
      "posterSource": "oficial",
      "lbSlug": "reliefs-2025",
+     "tmdb_id": 1469210,
      "synopsis": "Carlos se acerca a la mediana edad, atrapado en una crisis personal que se ha prolongado demasiado. Rosa, su madre, sufre un dolor incapacitante que solo se mitiga con las cálidas aguas de la hidroterapia. Una noche, ella se ofrece a hacer el sacrificio máximo para que ambos puedan transitar a un lugar mejor. Un cortometraje sobre el amor, la esperanza y el alivio que todos anhelamos.",
      "synopsis_en": "Carlos is approaching midlife trapped in a personal crisis that has lingered too long. Rosa, his mother, suffers from disabling pain that is only mitigated by the warm waters of hydrotherapy. One night, she offers to make the ultimate sacrifice so that they can both transit to a better place. A short film about love, hope and relief we all long for.",
      "title_en": "Reliefs",
      "genre": "Drama",
-     "director": "Juan Manuel González",
      "year": 2025,
      "synopsis_lang": "es",
      "duration": "19 min",
@@ -3252,56 +3267,60 @@
     },
     {
      "title": "El bitcoin de oro",
+     "director": "Bernardo Hernández",
      "country": "España",
      "flags": "🇪🇸",
      "poster": "/assets/ficcali-2026/el-bitcoin-de-oro.jpg",
      "posterSource": "oficial",
      "lbSlug": "el-bitcoin-de-oro",
+     "tmdb_id": 1793999,
      "synopsis": "Cuando Asofem está a punto de cerrar por una grave crisis económica, un grupo de usuarios y su monitor deciden embarcarse en una disparatada misión para salvar el centro al que consideran su hogar.",
-     "director": "Bernardo Hernández",
      "year": 2026,
      "synopsis_lang": "es",
      "duration": "18 min"
     },
     {
      "title": "El maestro de la piquería",
+     "director": "Yinet Molero",
      "country": "Colombia",
      "flags": "🇨🇴",
      "poster": "/assets/ficcali-2026/el-maestro-de-la-piqueria.jpg",
      "posterSource": "oficial",
      "lbSlug": "el-maestro-de-la-piqueria",
+     "tmdb_id": 1794001,
      "synopsis": "La piqueria, género musical autóctono del Caribe, ha representado durante décadas las raíces culturales de diversas generaciones. En La Guajira, Alcides Manjarrez es uno de los últimos maestros de este arte. Invidente de nacimiento, desde su infancia ha cimentado esta tradición. En la actualidad, además de ser referente en el folclor, impulsa la recuperación de esta tradición entre las nuevas generaciones.",
      "genre": "Documental",
-     "director": "Yinet Molero",
      "year": 2025,
      "synopsis_lang": "es",
      "duration": "8 min"
     },
     {
      "title": "Khazana",
+     "director": "Basir Ahmed",
      "country": "Pakistán",
      "flags": "🇵🇰",
      "poster": "/assets/ficcali-2026/khazana.jpg",
      "posterSource": "oficial",
      "lbSlug": "treasure-2025",
+     "tmdb_id": 1431611,
      "synopsis": "Un recolector de basura sordo, en Karachi, se topa con un descubrimiento impactante en un vertedero. Esto lo lleva a un enfrentamiento peligroso con un despiadado gánster, solo para descubrir un tesoro que cambiará su vida para siempre.",
      "synopsis_en": "A Deaf waste collector in Karachi stumbles upon a shocking discovery at a landfill, leading to a dangerous clash with a ruthless gangster - only to uncover a treasure that changes his life forever.",
      "title_en": "Treasure",
      "genre": "Drama",
-     "director": "Basir Ahmed",
      "year": 2025,
      "synopsis_lang": "es",
      "duration": "19 min"
     },
     {
      "title": "Quinto primera",
+     "director": "Fran Menchón",
      "country": "España",
      "flags": "🇪🇸",
      "poster": "/assets/ficcali-2026/quinto-primera.jpg",
      "posterSource": "oficial",
      "lbSlug": "quinto-primera",
+     "tmdb_id": 1794005,
      "synopsis": "Rafael vive encerrado en su mundo, su piso en L’Hospitalet de Llobregat. Cuando su mujer murió, hace varios años, él perdió las ganas de vivir y su espíritu guerrero. Llegó a L’Hospitalet en los años cincuenta, en la primera gran ola de inmigración. Fue un luchador por la democracia, la igualdad, la solidaridad y la justicia durante las décadas del setenta y ochenta, pero ahora, solitario, amargado y xenófobo, reniega del mundo y, en su soledad, les cobra su miseria a todos y, en especial, a los nuevos inmigrantes. Tampoco ayuda su alzhéimer, cada vez más presente.",
-     "director": "Fran Menchón",
      "year": 2026,
      "synopsis_lang": "es",
      "duration": "18 min"
@@ -3366,6 +3385,122 @@
    }
   },
   {
+   "title": "Territorios Vivos",
+   "type": "film",
+   "section": "🎬 Exhibiciones",
+   "country": "Colombia",
+   "flags": "🇨🇴",
+   "duration": "120 min",
+   "_ancla": [
+    "Universidad de la Costa – CUC - Barranquilla",
+    "2026-10-23",
+    "14:00"
+   ],
+   "day": "2026-10-23",
+   "time": "14:00",
+   "day_order": 3,
+   "venue": "Universidad de la Costa – CUC - Barranquilla",
+   "sala": "Auditorio Sala de Conferencias 1, bloque 11, piso 3",
+   "has_qa": false,
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/programacion-general.html",
+    "date": "2026-10-15",
+    "fila": 57,
+    "cineforo": 63
+   },
+   "is_programa": true,
+   "is_cortos": true,
+   "film_list": [
+    {
+     "title": "El silencio de las semillas",
+     "director": "Elizabeth Pirela González",
+     "country": "Colombia",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Memorias piedras de boca e’ caña",
+     "director": "Tribu Digital Mokaná",
+     "country": "Colombia",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Princesado mokaná: el legado del cerro de las hermosas",
+     "director": "Liz Dany Macías",
+     "country": "Colombia",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Proowa",
+     "director": "Cristobal R. Mendoza",
+     "country": "Colombia",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Seguridad en el territorio del pueblo ette ennka chimila",
+     "director": "Cristobal R. Mendoza",
+     "country": "Colombia",
+     "flags": "🇨🇴"
+    }
+   ],
+   "description": "Diversas voces, culturas y formas de ver el mundo se encuentran en la pantalla. Este año Territorios Vivos reúne obras audiovisuales realizadas por comunidades indígenas del Caribe Colombiano. Con cineforo. Jair Vega (Moderador: Sociólogo, docente e investigador (Barranquilla)) · Liz Dany Macías (Realizadora Audiovisual Comunidad Mokaná (Puerto Colombia)) · Elizabeth Pirela González (Realizadora Audiovisual, directora y guionista Wayuu del clan Epieyü, Casa productora MAITUUI FILMS S.A.S. (Guajira)) · Cristóbal Mendoza Carmona (Realizador Audiovisual comunidad Ette Ennaka (Santa Marta, Sierra Nevada))",
+   "description_lang": "es",
+   "_fid": "f_d206d70806",
+   "id": "f_d206d70806",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-15",
+     "url": "https://ficica.cinealacalle.org/programacion-general.html"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-15",
+     "url": "https://ficica.cinealacalle.org/programacion-general.html"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-15",
+     "url": "https://ficica.cinealacalle.org/programacion-general.html"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-15",
+     "url": "https://ficica.cinealacalle.org/programacion-general.html"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-15",
+     "url": "https://ficica.cinealacalle.org/programacion-general.html"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-15",
+     "url": "https://ficica.cinealacalle.org/programacion-general.html"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-15",
+     "url": "https://ficica.cinealacalle.org/programacion-general.html"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-15",
+     "url": "https://ficica.cinealacalle.org/programacion-general.html"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-15",
+     "url": "https://ficica.cinealacalle.org/programacion-general.html"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-15",
+     "url": "https://ficica.cinealacalle.org/programacion-general.html"
+    }
+   }
+  },
+  {
    "title": "\"La Paridad Importa\": diagnóstico de la participación de las mujeres en festivales de cortometrajes de cine colombiano (2008–2020)",
    "type": "event",
    "section": "🤝 Industria",
@@ -3373,7 +3508,7 @@
    "_ancla": [
     "Alianza Francesa de Barranquilla - Barranquilla",
     "2026-10-23",
-    "14:00"
+    "16:30"
    ],
    "day": "2026-10-23",
    "time": "16:30",
@@ -3439,117 +3574,6 @@
      "url": "https://ficica.cinealacalle.org/programacion-general.html"
     },
     "event_kind": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-15",
-     "url": "https://ficica.cinealacalle.org/programacion-general.html"
-    }
-   }
-  },
-  {
-   "title": "Territorios Vivos",
-   "type": "film",
-   "section": "🎬 Exhibiciones",
-   "country": "Colombia",
-   "flags": "🇨🇴",
-   "duration": "120 min",
-   "_ancla": [
-    "Universidad de la Costa – CUC - Barranquilla",
-    "2026-10-23",
-    "14:00"
-   ],
-   "day": "2026-10-23",
-   "time": "14:00",
-   "day_order": 3,
-   "venue": "Universidad de la Costa – CUC - Barranquilla",
-   "sala": "Auditorio Sala de Conferencias 1, bloque 11, piso 3",
-   "has_qa": false,
-   "_src": {
-    "url": "https://ficica.cinealacalle.org/programacion-general.html",
-    "date": "2026-10-15",
-    "fila": 57,
-    "cineforo": 63
-   },
-   "is_programa": true,
-   "is_cortos": true,
-   "film_list": [
-    {
-     "title": "El silencio de las semillas",
-     "country": "Colombia",
-     "flags": "🇨🇴"
-    },
-    {
-     "title": "Memorias piedras de boca e’ caña",
-     "country": "Colombia",
-     "flags": "🇨🇴"
-    },
-    {
-     "title": "Princesado mokaná: el legado del cerro de las hermosas",
-     "country": "Colombia",
-     "flags": "🇨🇴"
-    },
-    {
-     "title": "Proowa",
-     "country": "Colombia",
-     "flags": "🇨🇴"
-    },
-    {
-     "title": "Seguridad en el territorio del pueblo ette ennka chimila",
-     "country": "Colombia",
-     "flags": "🇨🇴"
-    }
-   ],
-   "description": "Diversas voces, culturas y formas de ver el mundo se encuentran en la pantalla. Este año Territorios Vivos reúne obras audiovisuales realizadas por comunidades indígenas del Caribe Colombiano. Con cineforo. Jair Vega (Moderador: Sociólogo, docente e investigador (Barranquilla)) · Liz Dany Macías (Realizadora Audiovisual Comunidad Mokaná (Puerto Colombia)) · Elizabeth Pirela González (Realizadora Audiovisual, directora y guionista Wayuu del clan Epieyü, Casa productora MAITUUI FILMS S.A.S. (Guajira)) · Cristóbal Mendoza Carmona (Realizador Audiovisual comunidad Ette Ennaka (Santa Marta, Sierra Nevada))",
-   "description_lang": "es",
-   "_fid": "f_d206d70806",
-   "id": "f_d206d70806",
-   "is_free": true,
-   "_procedencia": {
-    "day": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-15",
-     "url": "https://ficica.cinealacalle.org/programacion-general.html"
-    },
-    "time": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-15",
-     "url": "https://ficica.cinealacalle.org/programacion-general.html"
-    },
-    "venue": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-15",
-     "url": "https://ficica.cinealacalle.org/programacion-general.html"
-    },
-    "sala": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-15",
-     "url": "https://ficica.cinealacalle.org/programacion-general.html"
-    },
-    "duration": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-15",
-     "url": "https://ficica.cinealacalle.org/programacion-general.html"
-    },
-    "entrada": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-15",
-     "url": "https://ficica.cinealacalle.org/programacion-general.html"
-    },
-    "has_qa": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-15",
-     "url": "https://ficica.cinealacalle.org/programacion-general.html"
-    },
-    "title": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-15",
-     "url": "https://ficica.cinealacalle.org/programacion-general.html"
-    },
-    "film_list": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-15",
-     "url": "https://ficica.cinealacalle.org/programacion-general.html"
-    },
-    "type": {
      "tipo": "festival-web",
      "fecha": "2026-10-15",
      "url": "https://ficica.cinealacalle.org/programacion-general.html"
@@ -4107,8 +4131,8 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-19T19:49:33",
-  "plan_sha": "06fc8fe6efd34f4b",
+  "fecha": "2026-10-20T09:57:13",
+  "plan_sha": "0894429f32f904b5",
   "paso": 8,
   "cmd": "python3 pipeline/ensamblar.py ficica-2026"
  }

@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, con el MISMO candado de enriquecer.py: director ✓ y (año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-10-18"
+  "capturado": "2026-10-20"
  },
  "_origen": "ficica-2026-catalogo.json",
  "obras": [
@@ -711,7 +711,7 @@
    "pais_tmdb": "Colombia",
    "title_en": "The Great Feat",
    "lbSlug": "the-great-feat",
-   "_verificado": "el catálogo ya la tiene (w_R4GWNQW119VA, ficcali-2026, ficdeh-2026, ficica-2026, ficmontanas-2026, popayan-2026, siembrafest-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4GWNQW119VA, ficcali-2026, ficdeh-2026, ficica-2026, ficmontanas-2026, guatape-2026, popayan-2026, siembrafest-2026)",
    "work_id": "w_R4GWNQW119VA",
    "_ya_publicada": [
     {
@@ -751,6 +751,20 @@
      "year": 2025,
      "duration": "14 min",
      "genre": "Ficción",
+     "synopsis_en": "A rescue with a spinning tops, feathers, eggs and friends.",
+     "sinopsis": "Pablo necesita rescatar a su amiga Pascualina, una gallina ponedora que termina secuestrada por el tendero del pueblo, después de que el niño quebrara la cubeta de huevos que llevaba para pagarle una deuda de su familia."
+    },
+    {
+     "festival": "guatape-2026",
+     "titulo": "La Gran Hazaña",
+     "tmdb_id": 1494003,
+     "poster": "/assets/guatape-2026/la-gran-hazana.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "the-great-feat",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "14 min",
+     "genre": "Aventura",
      "synopsis_en": "A rescue with a spinning tops, feathers, eggs and friends.",
      "sinopsis": "Pablo necesita rescatar a su amiga Pascualina, una gallina ponedora que termina secuestrada por el tendero del pueblo, después de que el niño quebrara la cubeta de huevos que llevaba para pagarle una deuda de su familia."
     },
@@ -1071,6 +1085,14 @@
    "duracion_min": 12,
    "sinopsis": "La mañana de un sábado Luis Antonio, un niño de 8 años, quiere aprender a montar en bicicleta. Pero su madre tiene que trabajar y lo deja al cuidado de Ofelia, su estricta vecina.",
    "_ya_publicada": [
+    {
+     "festival": "guatape-2026",
+     "titulo": "Luis Antonio",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "12 min",
+     "sinopsis": "La mañana de un sábado Luis Antonio, un niño de 8 años, quiere aprender a montar en bicicleta. Pero su madre tiene que trabajar y lo deja al cuidado de Ofelia, su estricta vecina."
+    },
     {
      "festival": "popayan-2026",
      "titulo": "Luis Antonio",
@@ -2006,6 +2028,196 @@
      "genre": "Animación"
     }
    ]
+  },
+  {
+   "titulo": "Alivios",
+   "tmdb_id": 1469210,
+   "titulo_original": "Alivios",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "Carlos is approaching midlife trapped in a personal crisis that has lingered too long. Rosa, his mother, suffers from disabling pain that is only mitigated by the warm waters of hydrotherapy. One night, she offers to make the ultimate sacrifice so that they can both transit to a better place. A short film about love, hope and relief we all long for.",
+   "genero": "Drama",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 19,
+   "pais_tmdb": "Mexico, Venezuela",
+   "title_en": "Reliefs",
+   "lbSlug": "reliefs-2025",
+   "poster": "/assets/ficcali-2026/alivios.jpg",
+   "posterSource": "oficial",
+   "_verificado": "declarada a mano: El afiche OFICIAL del festival manda sobre el de TMDB (jerarquía del póster): es el que ya publicamos en FICCALI 2026. Desde el 20 oct la web de FICICA da el director, la cascada casa la ficha de TMDB y su afiche pisaba el oficial. Declarado el 20 oct 2026.",
+   "_ya_publicada": [
+    {
+     "festival": "ficcali-2026",
+     "titulo": "Alivios",
+     "tmdb_id": 1469210,
+     "poster": "/assets/ficcali-2026/alivios.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "reliefs-2025",
+     "country": "México, Venezuela",
+     "year": 2025,
+     "duration": "18 min",
+     "genre": "Drama",
+     "synopsis_en": "Carlos is approaching midlife trapped in a personal crisis that has lingered too long. Rosa, his mother, suffers from disabling pain that is only mitigated by the warm waters of hydrotherapy. One night, she offers to make the ultimate sacrifice so that they can both transit to a better place. A short film about love, hope and relief we all long for.",
+     "sinopsis": "Carlos se acerca a la mediana edad, atrapado en una crisis personal que se ha prolongado demasiado. Rosa, su madre, sufre un dolor incapacitante que solo se mitiga con las cálidas aguas de la hidroterapia. Una noche, ella se ofrece a hacer el sacrificio máximo para que ambos puedan transitar a un lugar mejor. Un cortometraje sobre el amor, la esperanza y el alivio que todos anhelamos."
+    },
+    {
+     "festival": "villadelcine-2026",
+     "titulo": "Alivios",
+     "tmdb_id": 1469210,
+     "poster": "/assets/villadelcine-2026/alivios.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "reliefs-2025",
+     "country": "México",
+     "year": 2025,
+     "duration": "19 min",
+     "genre": "Drama",
+     "synopsis_en": "Carlos is approaching midlife trapped in a personal crisis that has lingered too long. Rosa, his mother, suffers from disabling pain that is only mitigated by the warm waters of hydrotherapy. One night, she offers to make the ultimate sacrifice so that they can both transit to a better place. A short film about love, hope and relief we all long for.",
+     "sinopsis": "Carlos atraviesa una crisis que parece no tener salida mientras cuida de Rosa, su madre, cuyo dolor solo disminuye en las aguas cálidas de la hidroterapia. Una noche, ella le propone un sacrificio extremo que los obliga a reconsiderar el amor, la dependencia y la posibilidad de encontrar juntos otra forma de alivio."
+    }
+   ]
+  },
+  {
+   "titulo": "El bitcoin de oro",
+   "tmdb_id": 1793999,
+   "titulo_original": "El bitcoin de oro",
+   "poster_path": null,
+   "synopsis_es": "Cuando Asofem está a punto de cerrar por una grave crisis económica, un grupo de usuarios y su monitor deciden embarcarse en una disparatada misión para salvar el centro al que consideran su hogar.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 18,
+   "pais_tmdb": "",
+   "lbSlug": "el-bitcoin-de-oro",
+   "poster": "/assets/ficcali-2026/el-bitcoin-de-oro.jpg",
+   "posterSource": "oficial",
+   "_verificado": "declarada a mano: El afiche OFICIAL del festival manda sobre el de TMDB (jerarquía del póster): es el que ya publicamos en FICCALI 2026. Desde el 20 oct la web de FICICA da el director, la cascada casa la ficha de TMDB y su afiche pisaba el oficial. Declarado el 20 oct 2026.",
+   "_ya_publicada": [
+    {
+     "festival": "ficcali-2026",
+     "titulo": "El bitcoin de oro",
+     "tmdb_id": 1793999,
+     "poster": "/assets/ficcali-2026/el-bitcoin-de-oro.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "el-bitcoin-de-oro",
+     "country": "España",
+     "year": 2026,
+     "duration": "18 min",
+     "sinopsis": "Cuando Asofem está a punto de cerrar por una grave crisis económica, un grupo de usuarios y su monitor deciden embarcarse en una disparatada misión para salvar el centro al que consideran su hogar."
+    }
+   ]
+  },
+  {
+   "titulo": "El maestro de la piquería",
+   "tmdb_id": 1794001,
+   "titulo_original": "El maestro de la piqueria",
+   "poster_path": null,
+   "synopsis_es": "La piqueria, género musical autóctono del Caribe, ha representado durante décadas las raíces culturales de diversas generaciones. En La Guajira, Alcides Manjarrez es uno de los últimos maestros de este arte. Invidente de nacimiento, desde su infancia ha cimentado esta tradición. En la actualidad, además de ser referente en el folclor, impulsa la recuperación de esta tradición entre las nuevas generaciones.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 8,
+   "pais_tmdb": "",
+   "lbSlug": "el-maestro-de-la-piqueria",
+   "poster": "/assets/ficcali-2026/el-maestro-de-la-piqueria.jpg",
+   "posterSource": "oficial",
+   "_verificado": "declarada a mano: El afiche OFICIAL del festival manda sobre el de TMDB (jerarquía del póster): es el que ya publicamos en FICCALI 2026. Desde el 20 oct la web de FICICA da el director, la cascada casa la ficha de TMDB y su afiche pisaba el oficial. Declarado el 20 oct 2026.",
+   "_ya_publicada": [
+    {
+     "festival": "ficcali-2026",
+     "titulo": "El maestro de la piqueria",
+     "tmdb_id": 1794001,
+     "poster": "/assets/ficcali-2026/el-maestro-de-la-piqueria.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "el-maestro-de-la-piqueria",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "8 min",
+     "genre": "Documental",
+     "sinopsis": "La piqueria, género musical autóctono del Caribe, ha representado durante décadas las raíces culturales de diversas generaciones. En La Guajira, Alcides Manjarrez es uno de los últimos maestros de este arte. Invidente de nacimiento, desde su infancia ha cimentado esta tradición. En la actualidad, además de ser referente en el folclor, impulsa la recuperación de esta tradición entre las nuevas generaciones."
+    }
+   ]
+  },
+  {
+   "titulo": "Khazana",
+   "tmdb_id": 1431611,
+   "titulo_original": "Khazana",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "A Deaf waste collector in Karachi stumbles upon a shocking discovery at a landfill, leading to a dangerous clash with a ruthless gangster - only to uncover a treasure that changes his life forever.",
+   "genero": "Drama",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 19,
+   "pais_tmdb": "Pakistan",
+   "title_en": "Treasure",
+   "lbSlug": "treasure-2025",
+   "poster": "/assets/ficcali-2026/khazana.jpg",
+   "posterSource": "oficial",
+   "_verificado": "declarada a mano: El afiche OFICIAL del festival manda sobre el de TMDB (jerarquía del póster): es el que ya publicamos en FICCALI 2026. Desde el 20 oct la web de FICICA da el director, la cascada casa la ficha de TMDB y su afiche pisaba el oficial. Declarado el 20 oct 2026.",
+   "_ya_publicada": [
+    {
+     "festival": "ficcali-2026",
+     "titulo": "Khazana",
+     "tmdb_id": 1431611,
+     "poster": "/assets/ficcali-2026/khazana.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "treasure-2025",
+     "country": "Pakistán",
+     "year": 2025,
+     "duration": "19 min",
+     "genre": "Drama",
+     "synopsis_en": "A Deaf waste collector in Karachi stumbles upon a shocking discovery at a landfill, leading to a dangerous clash with a ruthless gangster - only to uncover a treasure that changes his life forever.",
+     "sinopsis": "Un recolector de basura sordo, en Karachi, se topa con un descubrimiento impactante en un vertedero. Esto lo lleva a un enfrentamiento peligroso con un despiadado gánster, solo para descubrir un tesoro que cambiará su vida para siempre."
+    }
+   ]
+  },
+  {
+   "titulo": "Quinto primera",
+   "tmdb_id": 1794005,
+   "titulo_original": "Quinto primera",
+   "poster_path": null,
+   "synopsis_es": "Rafael vive encerrado en su mundo, su piso en L’Hospitalet de Llobregat. Cuando su mujer murió, hace varios años, él perdió las ganas de vivir y su espíritu guerrero. Llegó a L’Hospitalet en los años cincuenta, en la primera gran ola de inmigración. Fue un luchador por la democracia, la igualdad, la solidaridad y la justicia durante las décadas del setenta y ochenta, pero ahora, solitario, amargado y xenófobo, reniega del mundo y, en su soledad, les cobra su miseria a todos y, en especial, a los nuevos inmigrantes. Tampoco ayuda su alzhéimer, cada vez más presente.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 18,
+   "pais_tmdb": "",
+   "lbSlug": "quinto-primera",
+   "poster": "/assets/ficcali-2026/quinto-primera.jpg",
+   "posterSource": "oficial",
+   "_verificado": "declarada a mano: El afiche OFICIAL del festival manda sobre el de TMDB (jerarquía del póster): es el que ya publicamos en FICCALI 2026. Desde el 20 oct la web de FICICA da el director, la cascada casa la ficha de TMDB y su afiche pisaba el oficial. Declarado el 20 oct 2026.",
+   "_ya_publicada": [
+    {
+     "festival": "ficcali-2026",
+     "titulo": "Quinto primera",
+     "tmdb_id": 1794005,
+     "poster": "/assets/ficcali-2026/quinto-primera.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "quinto-primera",
+     "country": "España",
+     "year": 2026,
+     "duration": "18 min",
+     "sinopsis": "Rafael vive encerrado en su mundo, su piso en L’Hospitalet de Llobregat. Cuando su mujer murió, hace varios años, él perdió las ganas de vivir y su espíritu guerrero. Llegó a L’Hospitalet en los años cincuenta, en la primera gran ola de inmigración. Fue un luchador por la democracia, la igualdad, la solidaridad y la justicia durante las décadas del setenta y ochenta, pero ahora, solitario, amargado y xenófobo, reniega del mundo y, en su soledad, les cobra su miseria a todos y, en especial, a los nuevos inmigrantes. Tampoco ayuda su alzhéimer, cada vez más presente."
+    }
+   ]
+  },
+  {
+   "titulo": "Dientes de yuca",
+   "_fuente": "cinecorto",
+   "_cinecorto": "https://cinecorto.co/dientes-de-yuca/",
+   "_verificado": "cinecorto.co, dirección: YURIETH ROMERO VELASQUEZ",
+   "anio": 2025,
+   "duracion_min": 14,
+   "sinopsis": "David, un niño negro de seis años, sufre acoso escolar por el color de su piel y la falta de dientes. Cuando le piden que lleve una foto escolar, la esconde de sus padres para evitar más burlas. Pero su bisabuelo Leandro se entera y le fabrica una dentadura postiza de yuca. Juntos, se preparan para la foto.",
+   "_ya_publicada": [
+    {
+     "festival": "popayan-2026",
+     "titulo": "Dientes de yuca",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "14 min",
+     "sinopsis": "David, un niño negro de seis años, sufre acoso escolar por el color de su piel y la falta de dientes. Cuando le piden que lleve una foto escolar, la esconde de sus padres para evitar más burlas. Pero su bisabuelo Leandro se entera y le fabrica una dentadura postiza de yuca. Juntos, se preparan para la foto."
+    }
+   ]
   }
  ],
  "verificadas": {
@@ -2653,7 +2865,7 @@
    "pais_tmdb": "Colombia",
    "title_en": "The Great Feat",
    "lbSlug": "the-great-feat",
-   "_verificado": "el catálogo ya la tiene (w_R4GWNQW119VA, ficcali-2026, ficdeh-2026, ficica-2026, ficmontanas-2026, popayan-2026, siembrafest-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4GWNQW119VA, ficcali-2026, ficdeh-2026, ficica-2026, ficmontanas-2026, guatape-2026, popayan-2026, siembrafest-2026)",
    "work_id": "w_R4GWNQW119VA",
    "_ya_publicada": [
     {
@@ -2693,6 +2905,20 @@
      "year": 2025,
      "duration": "14 min",
      "genre": "Ficción",
+     "synopsis_en": "A rescue with a spinning tops, feathers, eggs and friends.",
+     "sinopsis": "Pablo necesita rescatar a su amiga Pascualina, una gallina ponedora que termina secuestrada por el tendero del pueblo, después de que el niño quebrara la cubeta de huevos que llevaba para pagarle una deuda de su familia."
+    },
+    {
+     "festival": "guatape-2026",
+     "titulo": "La Gran Hazaña",
+     "tmdb_id": 1494003,
+     "poster": "/assets/guatape-2026/la-gran-hazana.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "the-great-feat",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "14 min",
+     "genre": "Aventura",
      "synopsis_en": "A rescue with a spinning tops, feathers, eggs and friends.",
      "sinopsis": "Pablo necesita rescatar a su amiga Pascualina, una gallina ponedora que termina secuestrada por el tendero del pueblo, después de que el niño quebrara la cubeta de huevos que llevaba para pagarle una deuda de su familia."
     },
@@ -3004,6 +3230,14 @@
    "duracion_min": 12,
    "sinopsis": "La mañana de un sábado Luis Antonio, un niño de 8 años, quiere aprender a montar en bicicleta. Pero su madre tiene que trabajar y lo deja al cuidado de Ofelia, su estricta vecina.",
    "_ya_publicada": [
+    {
+     "festival": "guatape-2026",
+     "titulo": "Luis Antonio",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "12 min",
+     "sinopsis": "La mañana de un sábado Luis Antonio, un niño de 8 años, quiere aprender a montar en bicicleta. Pero su madre tiene que trabajar y lo deja al cuidado de Ofelia, su estricta vecina."
+    },
     {
      "festival": "popayan-2026",
      "titulo": "Luis Antonio",
@@ -3875,11 +4109,194 @@
    "lbSlug": "when-the-tiger-roars",
    "_verificado": "el catálogo ya la tiene (w_6XS3FP1HZPJ6, ficica-2026)",
    "work_id": "w_6XS3FP1HZPJ6"
+  },
+  "Alivios": {
+   "tmdb_id": 1469210,
+   "titulo_original": "Alivios",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "Carlos is approaching midlife trapped in a personal crisis that has lingered too long. Rosa, his mother, suffers from disabling pain that is only mitigated by the warm waters of hydrotherapy. One night, she offers to make the ultimate sacrifice so that they can both transit to a better place. A short film about love, hope and relief we all long for.",
+   "genero": "Drama",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 19,
+   "pais_tmdb": "Mexico, Venezuela",
+   "title_en": "Reliefs",
+   "lbSlug": "reliefs-2025",
+   "poster": "/assets/ficcali-2026/alivios.jpg",
+   "posterSource": "oficial",
+   "_verificado": "declarada a mano: El afiche OFICIAL del festival manda sobre el de TMDB (jerarquía del póster): es el que ya publicamos en FICCALI 2026. Desde el 20 oct la web de FICICA da el director, la cascada casa la ficha de TMDB y su afiche pisaba el oficial. Declarado el 20 oct 2026.",
+   "_ya_publicada": [
+    {
+     "festival": "ficcali-2026",
+     "titulo": "Alivios",
+     "tmdb_id": 1469210,
+     "poster": "/assets/ficcali-2026/alivios.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "reliefs-2025",
+     "country": "México, Venezuela",
+     "year": 2025,
+     "duration": "18 min",
+     "genre": "Drama",
+     "synopsis_en": "Carlos is approaching midlife trapped in a personal crisis that has lingered too long. Rosa, his mother, suffers from disabling pain that is only mitigated by the warm waters of hydrotherapy. One night, she offers to make the ultimate sacrifice so that they can both transit to a better place. A short film about love, hope and relief we all long for.",
+     "sinopsis": "Carlos se acerca a la mediana edad, atrapado en una crisis personal que se ha prolongado demasiado. Rosa, su madre, sufre un dolor incapacitante que solo se mitiga con las cálidas aguas de la hidroterapia. Una noche, ella se ofrece a hacer el sacrificio máximo para que ambos puedan transitar a un lugar mejor. Un cortometraje sobre el amor, la esperanza y el alivio que todos anhelamos."
+    },
+    {
+     "festival": "villadelcine-2026",
+     "titulo": "Alivios",
+     "tmdb_id": 1469210,
+     "poster": "/assets/villadelcine-2026/alivios.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "reliefs-2025",
+     "country": "México",
+     "year": 2025,
+     "duration": "19 min",
+     "genre": "Drama",
+     "synopsis_en": "Carlos is approaching midlife trapped in a personal crisis that has lingered too long. Rosa, his mother, suffers from disabling pain that is only mitigated by the warm waters of hydrotherapy. One night, she offers to make the ultimate sacrifice so that they can both transit to a better place. A short film about love, hope and relief we all long for.",
+     "sinopsis": "Carlos atraviesa una crisis que parece no tener salida mientras cuida de Rosa, su madre, cuyo dolor solo disminuye en las aguas cálidas de la hidroterapia. Una noche, ella le propone un sacrificio extremo que los obliga a reconsiderar el amor, la dependencia y la posibilidad de encontrar juntos otra forma de alivio."
+    }
+   ]
+  },
+  "El bitcoin de oro": {
+   "tmdb_id": 1793999,
+   "titulo_original": "El bitcoin de oro",
+   "poster_path": null,
+   "synopsis_es": "Cuando Asofem está a punto de cerrar por una grave crisis económica, un grupo de usuarios y su monitor deciden embarcarse en una disparatada misión para salvar el centro al que consideran su hogar.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 18,
+   "pais_tmdb": "",
+   "lbSlug": "el-bitcoin-de-oro",
+   "poster": "/assets/ficcali-2026/el-bitcoin-de-oro.jpg",
+   "posterSource": "oficial",
+   "_verificado": "declarada a mano: El afiche OFICIAL del festival manda sobre el de TMDB (jerarquía del póster): es el que ya publicamos en FICCALI 2026. Desde el 20 oct la web de FICICA da el director, la cascada casa la ficha de TMDB y su afiche pisaba el oficial. Declarado el 20 oct 2026.",
+   "_ya_publicada": [
+    {
+     "festival": "ficcali-2026",
+     "titulo": "El bitcoin de oro",
+     "tmdb_id": 1793999,
+     "poster": "/assets/ficcali-2026/el-bitcoin-de-oro.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "el-bitcoin-de-oro",
+     "country": "España",
+     "year": 2026,
+     "duration": "18 min",
+     "sinopsis": "Cuando Asofem está a punto de cerrar por una grave crisis económica, un grupo de usuarios y su monitor deciden embarcarse en una disparatada misión para salvar el centro al que consideran su hogar."
+    }
+   ]
+  },
+  "El maestro de la piquería": {
+   "tmdb_id": 1794001,
+   "titulo_original": "El maestro de la piqueria",
+   "poster_path": null,
+   "synopsis_es": "La piqueria, género musical autóctono del Caribe, ha representado durante décadas las raíces culturales de diversas generaciones. En La Guajira, Alcides Manjarrez es uno de los últimos maestros de este arte. Invidente de nacimiento, desde su infancia ha cimentado esta tradición. En la actualidad, además de ser referente en el folclor, impulsa la recuperación de esta tradición entre las nuevas generaciones.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 8,
+   "pais_tmdb": "",
+   "lbSlug": "el-maestro-de-la-piqueria",
+   "poster": "/assets/ficcali-2026/el-maestro-de-la-piqueria.jpg",
+   "posterSource": "oficial",
+   "_verificado": "declarada a mano: El afiche OFICIAL del festival manda sobre el de TMDB (jerarquía del póster): es el que ya publicamos en FICCALI 2026. Desde el 20 oct la web de FICICA da el director, la cascada casa la ficha de TMDB y su afiche pisaba el oficial. Declarado el 20 oct 2026.",
+   "_ya_publicada": [
+    {
+     "festival": "ficcali-2026",
+     "titulo": "El maestro de la piqueria",
+     "tmdb_id": 1794001,
+     "poster": "/assets/ficcali-2026/el-maestro-de-la-piqueria.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "el-maestro-de-la-piqueria",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "8 min",
+     "genre": "Documental",
+     "sinopsis": "La piqueria, género musical autóctono del Caribe, ha representado durante décadas las raíces culturales de diversas generaciones. En La Guajira, Alcides Manjarrez es uno de los últimos maestros de este arte. Invidente de nacimiento, desde su infancia ha cimentado esta tradición. En la actualidad, además de ser referente en el folclor, impulsa la recuperación de esta tradición entre las nuevas generaciones."
+    }
+   ]
+  },
+  "Khazana": {
+   "tmdb_id": 1431611,
+   "titulo_original": "Khazana",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "A Deaf waste collector in Karachi stumbles upon a shocking discovery at a landfill, leading to a dangerous clash with a ruthless gangster - only to uncover a treasure that changes his life forever.",
+   "genero": "Drama",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 19,
+   "pais_tmdb": "Pakistan",
+   "title_en": "Treasure",
+   "lbSlug": "treasure-2025",
+   "poster": "/assets/ficcali-2026/khazana.jpg",
+   "posterSource": "oficial",
+   "_verificado": "declarada a mano: El afiche OFICIAL del festival manda sobre el de TMDB (jerarquía del póster): es el que ya publicamos en FICCALI 2026. Desde el 20 oct la web de FICICA da el director, la cascada casa la ficha de TMDB y su afiche pisaba el oficial. Declarado el 20 oct 2026.",
+   "_ya_publicada": [
+    {
+     "festival": "ficcali-2026",
+     "titulo": "Khazana",
+     "tmdb_id": 1431611,
+     "poster": "/assets/ficcali-2026/khazana.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "treasure-2025",
+     "country": "Pakistán",
+     "year": 2025,
+     "duration": "19 min",
+     "genre": "Drama",
+     "synopsis_en": "A Deaf waste collector in Karachi stumbles upon a shocking discovery at a landfill, leading to a dangerous clash with a ruthless gangster - only to uncover a treasure that changes his life forever.",
+     "sinopsis": "Un recolector de basura sordo, en Karachi, se topa con un descubrimiento impactante en un vertedero. Esto lo lleva a un enfrentamiento peligroso con un despiadado gánster, solo para descubrir un tesoro que cambiará su vida para siempre."
+    }
+   ]
+  },
+  "Quinto primera": {
+   "tmdb_id": 1794005,
+   "titulo_original": "Quinto primera",
+   "poster_path": null,
+   "synopsis_es": "Rafael vive encerrado en su mundo, su piso en L’Hospitalet de Llobregat. Cuando su mujer murió, hace varios años, él perdió las ganas de vivir y su espíritu guerrero. Llegó a L’Hospitalet en los años cincuenta, en la primera gran ola de inmigración. Fue un luchador por la democracia, la igualdad, la solidaridad y la justicia durante las décadas del setenta y ochenta, pero ahora, solitario, amargado y xenófobo, reniega del mundo y, en su soledad, les cobra su miseria a todos y, en especial, a los nuevos inmigrantes. Tampoco ayuda su alzhéimer, cada vez más presente.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 18,
+   "pais_tmdb": "",
+   "lbSlug": "quinto-primera",
+   "poster": "/assets/ficcali-2026/quinto-primera.jpg",
+   "posterSource": "oficial",
+   "_verificado": "declarada a mano: El afiche OFICIAL del festival manda sobre el de TMDB (jerarquía del póster): es el que ya publicamos en FICCALI 2026. Desde el 20 oct la web de FICICA da el director, la cascada casa la ficha de TMDB y su afiche pisaba el oficial. Declarado el 20 oct 2026.",
+   "_ya_publicada": [
+    {
+     "festival": "ficcali-2026",
+     "titulo": "Quinto primera",
+     "tmdb_id": 1794005,
+     "poster": "/assets/ficcali-2026/quinto-primera.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "quinto-primera",
+     "country": "España",
+     "year": 2026,
+     "duration": "18 min",
+     "sinopsis": "Rafael vive encerrado en su mundo, su piso en L’Hospitalet de Llobregat. Cuando su mujer murió, hace varios años, él perdió las ganas de vivir y su espíritu guerrero. Llegó a L’Hospitalet en los años cincuenta, en la primera gran ola de inmigración. Fue un luchador por la democracia, la igualdad, la solidaridad y la justicia durante las décadas del setenta y ochenta, pero ahora, solitario, amargado y xenófobo, reniega del mundo y, en su soledad, les cobra su miseria a todos y, en especial, a los nuevos inmigrantes. Tampoco ayuda su alzhéimer, cada vez más presente."
+    }
+   ]
+  },
+  "Dientes de yuca": {
+   "_fuente": "cinecorto",
+   "_cinecorto": "https://cinecorto.co/dientes-de-yuca/",
+   "_verificado": "cinecorto.co, dirección: YURIETH ROMERO VELASQUEZ",
+   "anio": 2025,
+   "duracion_min": 14,
+   "sinopsis": "David, un niño negro de seis años, sufre acoso escolar por el color de su piel y la falta de dientes. Cuando le piden que lleve una foto escolar, la esconde de sus padres para evitar más burlas. Pero su bisabuelo Leandro se entera y le fabrica una dentadura postiza de yuca. Juntos, se preparan para la foto.",
+   "_ya_publicada": [
+    {
+     "festival": "popayan-2026",
+     "titulo": "Dientes de yuca",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "14 min",
+     "sinopsis": "David, un niño negro de seis años, sufre acoso escolar por el color de su piel y la falta de dientes. Cuando le piden que lleve una foto escolar, la esconde de sus padres para evitar más burlas. Pero su bisabuelo Leandro se entera y le fabrica una dentadura postiza de yuca. Juntos, se preparan para la foto."
+    }
+   ]
   }
  },
  "sin_ficha": [
   "10 meters above",
-  "Alivios",
   "Appol-o",
   "Arlequín",
   "Bartolo",
@@ -3892,12 +4309,9 @@
   "Compraventa",
   "Concierto sentido",
   "Cómo limpiar un espejo",
-  "Dientes de yuca",
   "Dulce",
   "El abrazo del sol",
-  "El bitcoin de oro",
   "El kanto del kajambá",
-  "El maestro de la piquería",
   "El silencio de las semillas",
   "En nombre del amor",
   "Enfermedad",
@@ -3905,7 +4319,6 @@
   "Gracias, antonio",
   "In turn",
   "Juego de damas",
-  "Khazana",
   "La culpa es del cine",
   "La despedida",
   "La fiesta votada",
@@ -3918,7 +4331,6 @@
   "Princesado mokaná: el legado del cerro de las hermosas",
   "Proowa",
   "Queener",
-  "Quinto primera",
   "Rastro",
   "Recordando mi jerga",
   "Seguridad en el territorio del pueblo ette ennka chimila",
