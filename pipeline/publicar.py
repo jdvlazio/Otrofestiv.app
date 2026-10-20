@@ -296,6 +296,22 @@ def publicar(fid, forzar=False):
         # LO RETIRADO A PROPÓSITO no es pérdida (14 oct 2026): se le quita a la
         # copia de producción exactamente lo declarado en <fid>-quitar.json
         # (lib.quitados), y se compara parejo. Cualquier otra baja sigue frenando
+        # UNA BAJA REGISTRADA NO ES PÉRDIDA (20 oct 2026, hallazgo de Onboarding):
+        # una función que el registro de ids (<fid>-funciones-ids.json, que escribe
+        # ensamblar.py) marcó `ausente`, `partida_en` o `fusionada_en` salió A
+        # PROPÓSITO y con su porqué. Contarla obligaba a --forzar (MIDBO, «86 → 85»),
+        # y un --forzar de rutina es el que un día tapa una pérdida de verdad. Se
+        # descuenta de los dos lados; toda baja SIN registro sigue frenando.
+        _rp = os.path.join(REPO, 'festivals', 'staging', f'{fid}-funciones-ids.json')
+        _regf = (json.load(open(_rp, encoding='utf-8')).get('funciones') or {}) if os.path.exists(_rp) else {}
+        _ids_nuevos = {f.get('id') for f in out['films'] if f.get('id')}
+        _bajas = [f for f in viejo.get('films') or []
+                  if f.get('id') and f['id'] not in _ids_nuevos
+                  and any((_regf.get(f['id']) or {}).get(k) for k in ('ausente', 'partida_en', 'fusionada_en'))]
+        for f in _bajas:
+            print(f'    · baja registrada, no pérdida: {f.get("title", "")[:50]} ({f["id"]})')
+        if _bajas:
+            viejo = {**viejo, 'films': [f for f in viejo['films'] if f not in _bajas]}
         _qt = lib.quitados(fid)
         if _qt:
             for _f in viejo.get('films') or []:
