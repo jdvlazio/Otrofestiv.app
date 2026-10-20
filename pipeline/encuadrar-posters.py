@@ -175,7 +175,8 @@ def main():
     if os.path.exists(_dec):
         import json as _json
         from lib import slug as _slug
-        mirados = {f'{_slug(t)}.jpg' for t in (_json.load(open(_dec, encoding='utf-8')).get('afiches') or {})}
+        mirados = {d.get('asset') or f'{_slug(t)}.jpg'
+                   for t, d in (_json.load(open(_dec, encoding='utf-8')).get('afiches') or {}).items()}
     for f in entradas:
         p = f.get('poster') or ''
         if not p.startswith('/assets/') or p in vistos:
