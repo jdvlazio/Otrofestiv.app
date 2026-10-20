@@ -342,5 +342,12 @@
   "radar_salas_ok": {
    "Sala X": "la noticia del 28 sep ponía en «Sala X» del Colombo varias funciones; la base del festival (v2, 6 oct) las pasó a «Sala por confirmar», y se publican sin sala"
   }
- }
+ },
+ "fuentes_vivas": [
+  {
+   "archivo": "fuentes/fantasmagoria-2026/cartelera/publicada.json",
+   "cmd": "python3 pipeline/fantasmagoria-2026-base.py --bajar",
+   "que": "la cartelera oficial (Supabase programacion_publicada), que manda sobre la noticia. La noticia (post 6481) y Largometrajes (página 6440) de festivalfantasmagoriamedellin.com no se declaran: el sitio contesta con una verificación anti-bots y no se esquiva"
+  }
+ ]
 }
