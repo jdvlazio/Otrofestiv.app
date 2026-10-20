@@ -76,5 +76,23 @@
   "dias_vacios": "días SIN programación dentro del festival, declarados: un día ausente rompe la aritmética de «Hoy». lib.cargar_plan() falla si el calendario tiene un hueco sin declarar.",
   "prioLimit": "NO se escribe: lo calcula cargar_plan() (round(días/2), tope [3,8]).",
   "contrato": "lib.cargar_plan() valida este archivo ANTES del primer paso —cabecera, pasos, secciones con arquetipo de los 9, forma de cada sidecar, calendario sin huecos— y falla a la cara con todo lo que falte, junto. Igual que cargar_crudo con el crudo."
- }
+ },
+ "fuentes_vivas": [
+  {
+   "archivo": "fuentes/<fid>/programacion.json",
+   "url": "https://<festival>/wp-json/wp/v2/<tipo>",
+   "como": "wp-json",
+   "que": "lo que cambia mientras corre el festival: TODA fuente que el crudo o el verificador lean y se re-publique"
+  },
+  {
+   "archivo": "fuentes/<fid>/programacion.html",
+   "url": "https://<festival>/programacion/",
+   "como": "pagina",
+   "debe_contener": "<texto que esa página siempre tiene>"
+  },
+  {
+   "archivo": "fuentes/<fid>/x.json",
+   "cmd": "python3 pipeline/<fid>-x.py --bajar"
+  }
+ ]
 }

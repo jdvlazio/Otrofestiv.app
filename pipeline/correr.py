@@ -22,6 +22,12 @@ Uso:
     python3 pipeline/correr.py <fest-id>            # todo el plan
     python3 pipeline/correr.py <fest-id> --lista    # ver pasos e inventario
     python3 pipeline/correr.py <fest-id> --paso 3   # solo el paso 3
+    python3 pipeline/correr.py <fest-id> --bajar    # baja las fuentes vivas y corre el plan
+
+Fuentes vivas (20 oct 2026, pipeline/fuentes_vivas.py): si el plan declara
+`fuentes_vivas` y el festival está vigente, una fuente sin bajar en 24 h FRENA
+antes del primer paso. `--bajar` las refresca; `--fuentes-viejas` sigue igual,
+dicho en voz alta.
 """
 import datetime, glob, json, os, subprocess, sys
 
@@ -72,6 +78,18 @@ def main():
         print(f'  {i}. {p["cmd"]:52} {p.get("que", "")}')
     if '--lista' in sys.argv:
         return
+    import fuentes_vivas
+    if '--bajar' in sys.argv:
+        print('\n─── fuentes vivas: bajando')
+        try:
+            fuentes_vivas.bajar(fid)
+        except fuentes_vivas.FuenteMala as e:
+            sys.exit(f'✗ {e}')
+    _v = fuentes_vivas.frenar_si_vencidas(fid, f'python3 pipeline/correr.py {fid} --bajar')
+    if _v and '--fuentes-viejas' not in sys.argv:
+        sys.exit(_v + f'\n  (o --fuentes-viejas, a mano, si de verdad querés armar con lo que hay)')
+    if _v:
+        print('⚠ --fuentes-viejas: se arma con fuentes vencidas\n' + _v)
 
     solo = int(sys.argv[sys.argv.index('--paso') + 1]) if '--paso' in sys.argv else None
     for i, p in enumerate(pasos, 1):

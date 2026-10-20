@@ -6934,6 +6934,35 @@ try:
 except FileNotFoundError:
     fail(check, 'falta .github/camino-datos.txt (lo lee el workflow de Playwright)')
 
+check = 'fuentes-vivas-declaradas'
+# Un festival VIGENTE con pipeline debería declarar sus fuentes vivas en el plan
+# (pipeline/fuentes_vivas.py, 20 oct 2026): sin la declaración, nada frena que se
+# arme contra la página de hace dos semanas. Aviso, no freno, mientras se declaran.
+try:
+    import subprocess as _spv, datetime as _dtv, glob as _glv
+    _hoy = _dtv.date.today(); _sin = []
+    for _pp in sorted(_glv.glob('pipeline/*.plan.json')):
+        _fid = os.path.basename(_pp)[:-len('.plan.json')]
+        if _fid.startswith('festival') or json.load(open(_pp, encoding='utf-8')).get('fuentes_vivas'):
+            continue
+        _r = _spv.run(['node', 'scripts/ficha-de.mjs', re.sub(r'-(\d+)$', r'\1', _fid)], capture_output=True, text=True, timeout=30)
+        if _r.returncode: continue
+        _fi = json.loads(_r.stdout)
+        try:
+            _ini = _dtv.date.fromisoformat(_fi['festivalStartStr'][:10]) - _dtv.timedelta(days=2)
+            _fin = _dtv.date.fromisoformat(_fi['festivalEndStr'][:10])
+        except (KeyError, ValueError):
+            continue
+        if _ini <= _hoy <= _fin:
+            _sin.append(_fid)
+    if _sin:
+        warn(check, f'{len(_sin)} festival(es) VIGENTE(s) sin fuentes_vivas en su plan: {", ".join(_sin)} — '
+                    'declarar las fuentes que cambian (pipeline/PROTOCOLO.md Paso 0)')
+    else:
+        ok(check, 'todo festival vigente con pipeline declara sus fuentes vivas')
+except Exception as _e:
+    warn(check, f'no se pudo verificar fuentes-vivas-declaradas: {_e}')
+
 check = 'git-config-sano'
 # La config de git es UNA para todas las copias de trabajo (.git/config del repo
 # principal). Dos veces el 19 oct 2026 un `git init` de un test, con GIT_DIR /
