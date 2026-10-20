@@ -106,6 +106,17 @@ def _min(v):
     return int(m.group(1)) if m else None
 
 
+
+def ficha_de_la_funcion(e, it):
+    """La entrada del enriquecido que le corresponde a la FUNCIÓN `e`, o None.
+    Un programa de 2+ obras no toma una ficha de TMDB (20 oct 2026, BHFF): una
+    ficha con tmdb_id/lbSlug describe UNA película, y pegada al programa le daba
+    el lbSlug, el año, el género y la descripción de una sola de sus obras. Lo
+    declarado a mano para el programa (su descripción, sin tmdb_id) sí pasa."""
+    if it and len(e.get('film_list') or []) >= 2 and (it.get('tmdb_id') or it.get('lbSlug')):
+        return None
+    return it
+
 def _enriquece(dst, it):
     """Copia del enriquecido SOLO lo que la fuente del festival no trae. La
     fuente manda: su duración es la que programó, su título es el que publicó."""
@@ -548,7 +559,7 @@ def ensamblar(fid, escribir=True):
                 e['country'] = ', '.join(_u)
                 e['flags'] = ''.join(dict.fromkeys(lib.banderas(p) for p in _u))
             e.pop('year', None)
-        it = enr.get(lib.norm(f['titulo']))
+        it = ficha_de_la_funcion(e, enr.get(lib.norm(f['titulo'])))
         if it:
             _enriquece(e, it)
         if not e.get('film_list'):
