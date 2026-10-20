@@ -72,6 +72,13 @@ def guardianes(fest, ruta, contenido):
     if not os.path.exists(os.path.join(REPO, 'node_modules', '@playwright', 'test')):
         sys.exit('✗ faltan los módulos de las pruebas (node_modules) en esta carpeta.\n'
                  '  Corré: npm ci   — y en un worktree nuevo también: sh scripts/install-hooks.sh')
+    # 0·b. fuentes vivas: un festival VIGENTE no se publica armado con fuentes
+    #      vencidas (FICCALI, 20 oct: verificaba contra la página del 6 oct)
+    sys.path.insert(0, os.path.join(REPO, 'pipeline'))
+    import fuentes_vivas
+    _v = fuentes_vivas.frenar_si_vencidas(fest, f'python3 pipeline/correr.py {fest} --bajar')
+    if _v:
+        sys.exit(_v)
     # a. forma del festival
     _correr('validate-festivals', ['node', 'scripts/validate-festivals.js', fest])
     # b. validate.py completo: imprime «PUSH BLOQUEADO» y sale distinto de 0

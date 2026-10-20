@@ -82,6 +82,15 @@ costo). Dos reglas que ahora frenan solas:
   cualquier imagen de `assets/` que cambie de contenido con el mismo nombre (el
   SW la guarda para siempre; quien vio la vieja no vería la nueva). Usar `-v2`.
 
+## Fuentes vivas (20 oct 2026)
+
+Lo que el festival re-publica mientras corre (página de programación, API, PDF)
+se declara en `fuentes_vivas` del plan y se baja con
+`python3 pipeline/correr.py <id> --bajar`. Con el festival vigente, una fuente de
+más de 24 h frena a `correr.py` y a `publicar-datos.py`. `[fuentes-vivas-declaradas]`
+avisa qué festival vigente todavía no las declara. Detalle: pipeline/PROTOCOLO.md
+Paso 0 y pipeline/fuentes_vivas.py.
+
 ## Lo que NO pasa por acá
 
 El código de la app (src/, index.html, sw.js…): PR + CI completo + deploy, como

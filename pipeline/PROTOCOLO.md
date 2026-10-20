@@ -137,6 +137,21 @@ ahí, y macOS le pega a los archivos un `com.apple.macl` que puede impedir
 abrirlos después (`xattr -c` lo limpia). Los scripts leen con ruta relativa al
 repo (`f'{REPO}/fuentes/…'`), nunca rutas absolutas de una máquina.
 
+`fuentes/` es UNA carpeta compartida por todas las copias de trabajo
+(`~/Developer/Otrofestiv-fuentes`, ver docs/TRABAJO-EN-PARALELO.md).
+
+**Fuentes vivas (20 oct 2026).** Toda fuente que CAMBIA mientras el festival
+corre (la página de programación, la API, el PDF que se re-publica) se declara
+en `fuentes_vivas` del plan, con su URL y cómo se baja (`wp-json` paginado,
+`pagina`, o el `cmd` de su script). `python3 pipeline/correr.py <id> --bajar`
+las baja todas, verifica el contenido (un 200 no prueba nada) y anota la hora
+en `fuentes/<id>/_bajadas.json`. Con el festival vigente (de 2 días antes a su
+fin), una fuente con más de 24 h FRENA a `correr.py` y a `publicar-datos.py`.
+Antes cada uno bajaba lo que tenía comando y lo demás quedaba viejo en silencio:
+FICCALI verificó contra la página del 6 oct; Fantasmagoría re-armó con la v2.
+`[fuentes-vivas-declaradas]` en validate.py avisa qué festival vigente con
+pipeline todavía no las declara.
+
 ### Paso 1 · Parser propio → formato intermedio
 
 Cada fuente es única; **el parser es desechable** y no se generaliza. Lo que
