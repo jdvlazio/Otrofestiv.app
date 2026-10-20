@@ -37,6 +37,42 @@ REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ST = f'{REPO}/festivals/staging'
 
 
+
+def es_programa(f):
+    """¿La función es un programa de 2+ obras? (`obras` o `film_list`, los dos
+    nombres que acepta el ensamblador). Con UNA obra la función ES esa obra."""
+    return len([o for o in (f.get('obras') or f.get('film_list') or []) if o.get('titulo') or o.get('title')]) >= 2
+
+def obras_a_buscar(funciones, tit_of, _para_verificar=lambda x: x):
+    """Las obras que se buscan en TMDB: cada función que ES una obra y cada obra
+    de dentro de un programa. Un programa de 2+ obras no se busca (es_programa)."""
+    obras = {}
+    for f in funciones:
+        if not f.get('en_app', True):
+            continue
+        # UN PROGRAMA DE 2+ OBRAS NO ES UNA OBRA (20 oct 2026, BHFF): su título
+        # («El Susurro + Esquirlas de Caracol») no es una película, y buscarlo en
+        # TMDB le encontraba la ficha de UNA de ellas, que el ensamblador pegaba
+        # al programa entero (lbSlug, año, género, descripción). Lo que se busca
+        # son sus obras, de a una, aquí abajo.
+        if f.get('tipo', 'film') in ('film', '') and not es_programa(f):
+            t = tit_of.get(f['titulo'], f['titulo'])
+            obras.setdefault(t, _para_verificar({**f, 'titulo': t}))
+        # `film_list` es el otro nombre de `obras`: el ensamblador acepta los
+        # dos desde siempre y este paso solo miraba uno. En Villa del Cine eso
+        # dejó 104 cortos sin enriquecer y el reporte decía «1 obra» tan
+        # tranquilo — el mismo fallo mudo de antes, por la otra puerta. Si dos
+        # pasos leen la misma lista, tienen que aceptar los mismos nombres.
+        for o in f.get('obras') or f.get('film_list') or []:
+            if not o.get('titulo'):
+                continue
+            t = tit_of.get(o['titulo'], o['titulo'])
+            # la obra hereda el día de su función solo para el reporte; lo que
+            # verifica es su propia ficha (director, año, duración)
+            obras.setdefault(t, _para_verificar({**o, 'titulo': t}))
+    return obras
+
+
 def variantes(titulo, alias):
     """Formas de buscar el mismo título: alias del festival, el entrecomillado
     interno («La Sirena (The Siren)» → ambos lados), y el título entero."""
@@ -394,25 +430,7 @@ def main():
     def _para_verificar(x):
         return {**x, 'duracion_min': x.get('duracion_obra') or x.get('duracion_min')}
 
-    obras = {}
-    for f in crudo['funciones']:
-        if not f.get('en_app', True):
-            continue
-        if f.get('tipo', 'film') in ('film', ''):
-            t = tit_of.get(f['titulo'], f['titulo'])
-            obras.setdefault(t, _para_verificar({**f, 'titulo': t}))
-        # `film_list` es el otro nombre de `obras`: el ensamblador acepta los
-        # dos desde siempre y este paso solo miraba uno. En Villa del Cine eso
-        # dejó 104 cortos sin enriquecer y el reporte decía «1 obra» tan
-        # tranquilo — el mismo fallo mudo de antes, por la otra puerta. Si dos
-        # pasos leen la misma lista, tienen que aceptar los mismos nombres.
-        for o in f.get('obras') or f.get('film_list') or []:
-            if not o.get('titulo'):
-                continue
-            t = tit_of.get(o['titulo'], o['titulo'])
-            # la obra hereda el día de su función solo para el reporte; lo que
-            # verifica es su propia ficha (director, año, duración)
-            obras.setdefault(t, _para_verificar({**o, 'titulo': t}))
+    obras = obras_a_buscar(crudo['funciones'], tit_of, _para_verificar)
 
     # ── LA CACHÉ ────────────────────────────────────────────────────────────
     # Sondear TMDB cuesta. Medido en Villa del Cine: 111 obras a ~6 s por

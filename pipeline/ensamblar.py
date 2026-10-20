@@ -106,6 +106,17 @@ def _min(v):
     return int(m.group(1)) if m else None
 
 
+
+def ficha_de_la_funcion(e, it):
+    """La entrada del enriquecido que le corresponde a la FUNCIÓN `e`, o None.
+    Un programa de 2+ obras no toma una ficha de TMDB (20 oct 2026, BHFF): una
+    ficha con tmdb_id/lbSlug describe UNA película, y pegada al programa le daba
+    el lbSlug, el año, el género y la descripción de una sola de sus obras. Lo
+    declarado a mano para el programa (su descripción, sin tmdb_id) sí pasa."""
+    if it and len(e.get('film_list') or []) >= 2 and (it.get('tmdb_id') or it.get('lbSlug')):
+        return None
+    return it
+
 def _enriquece(dst, it):
     """Copia del enriquecido SOLO lo que la fuente del festival no trae. La
     fuente manda: su duración es la que programó, su título es el que publicó."""
@@ -333,6 +344,14 @@ def _titulos_anteriores(fid, films):
     def _final(t, vistos=()):
         return _final(_sig[t], vistos + (t,)) if t not in vigentes and t in _sig and t not in vistos else t
     renombres = [dict(r, ahora=_final(r['ahora'])) for r in renombres]
+    # IDA Y VUELTA (20 oct 2026): «X» → «Y» y después «Y» → «X». La cadena de «X»
+    # vuelve a «X», que está vigente: ese renombre ya no mueve nada. Se descarta
+    # (y se dice) en vez de frenar con «el viejo sigue vigente» — si frenara, el
+    # festival quedaría trabado, porque [renombre-no-se-borra] no deja quitarlo.
+    _vuelta = [r for r in renombres if r['antes'] == r['ahora']]
+    for r in _vuelta:
+        print(f"  · renombre de ida y vuelta, sin efecto: «{r['antes']}»")
+    renombres = [r for r in renombres if r['antes'] != r['ahora']]
     malos = [f"«{r['antes']}» → «{r['ahora']}»: " + ('el nuevo no está en el build' if r['ahora'] not in vigentes
                                                     else 'el viejo sigue vigente')
              for r in renombres if r['ahora'] not in vigentes or r['antes'] in vigentes]
@@ -548,7 +567,7 @@ def ensamblar(fid, escribir=True):
                 e['country'] = ', '.join(_u)
                 e['flags'] = ''.join(dict.fromkeys(lib.banderas(p) for p in _u))
             e.pop('year', None)
-        it = enr.get(lib.norm(f['titulo']))
+        it = ficha_de_la_funcion(e, enr.get(lib.norm(f['titulo'])))
         if it:
             _enriquece(e, it)
         if not e.get('film_list'):
