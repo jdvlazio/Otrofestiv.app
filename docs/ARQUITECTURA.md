@@ -489,7 +489,7 @@ Ver protocolo completo en `pipeline/PROTOCOLO.md`.
 4. Pegar bloque generado en `FESTIVAL_CONFIG` en `index.html`
 5. Validar: `node scripts/validate-festivals.js [id]`
 6. QA visual P1–P7
-7. `node scripts/bump-version.js` → push
+7. push (el número de build lo estampa `pages.yml` al publicar — desde el 20 oct 2026 no va en el PR)
 
 ---
 
