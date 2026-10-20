@@ -114,3 +114,20 @@ test('DF9 — almacén apagado: la portada vuelve a la copia de la app', async (
   await expect(cardLeviza(page)).not.toHaveAttribute('data-meta', /NO ·/);
   expect(await page.evaluate(() => localStorage.getItem('otf_fichas_v1'))).toBe('{}');
 });
+
+// DF10 — al VOLVER a la app (sin cerrarla), una ficha nueva llega a la portada.
+// Casi nadie abre desde cero: deja la app en segundo plano y vuelve. Una ficha no
+// sube la versión de la app, así que ningún canal la veía (Juan, 19 oct 2026).
+test('DF10 — una ficha nueva llega al volver a la app, sin cerrarla', async ({ page }) => {
+  let ficha = null;
+  await page.route(ALMACEN + 'indice.json*', r => r.fulfill({ contentType: 'application/json',
+    body: JSON.stringify({ version: 1, festivales: { 'leviza-2026': ficha ? { archivo: ARCH, ficha } : { archivo: ARCH } } }) }));
+  await page.clock.install({ time: new Date(SIM) });
+  await page.goto('/?almacen=1&simTime=' + encodeURIComponent(SIM));
+  await page.waitForSelector('html[data-app-ready="1"]', { state: 'attached', timeout: 15000 });
+  await expect(cardLeviza(page)).not.toHaveAttribute('data-meta', /Al Volver/);
+  ficha = { city: 'Al Volver' };
+  await page.clock.fastForward('01:05');   // el índice se guarda un minuto
+  await page.evaluate(() => document.dispatchEvent(new Event('visibilitychange')));
+  await expect(cardLeviza(page)).toHaveAttribute('data-meta', /Al Volver/, { timeout: 10000 });
+});
