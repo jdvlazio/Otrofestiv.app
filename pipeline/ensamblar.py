@@ -344,6 +344,14 @@ def _titulos_anteriores(fid, films):
     def _final(t, vistos=()):
         return _final(_sig[t], vistos + (t,)) if t not in vigentes and t in _sig and t not in vistos else t
     renombres = [dict(r, ahora=_final(r['ahora'])) for r in renombres]
+    # IDA Y VUELTA (20 oct 2026): «X» → «Y» y después «Y» → «X». La cadena de «X»
+    # vuelve a «X», que está vigente: ese renombre ya no mueve nada. Se descarta
+    # (y se dice) en vez de frenar con «el viejo sigue vigente» — si frenara, el
+    # festival quedaría trabado, porque [renombre-no-se-borra] no deja quitarlo.
+    _vuelta = [r for r in renombres if r['antes'] == r['ahora']]
+    for r in _vuelta:
+        print(f"  · renombre de ida y vuelta, sin efecto: «{r['antes']}»")
+    renombres = [r for r in renombres if r['antes'] != r['ahora']]
     malos = [f"«{r['antes']}» → «{r['ahora']}»: " + ('el nuevo no está en el build' if r['ahora'] not in vigentes
                                                     else 'el viejo sigue vigente')
              for r in renombres if r['ahora'] not in vigentes or r['antes'] in vigentes]
