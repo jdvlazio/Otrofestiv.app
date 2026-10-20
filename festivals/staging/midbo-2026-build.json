@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "midbo.co — ficha de cada obra (bloque «Funciones») + API pelicula/seccion",
-  "capturado": "2026-10-19",
+  "capturado": "2026-10-20",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_secciones": "Las categorías madre de la taxonomía `seccion` de midbo.co, tal cual; «Encuentro Pensar lo Real» es el nombre del menú del seminario; «Proyecciones» (nuestra) para la única obra sin sección.",
@@ -1546,7 +1546,9 @@
      "year": 2026,
      "duration": "25 min",
      "synopsis": "En 1976, durante la última dictadura militar en Argentina, 17 trabajadores de Mercedes-Benz fueron desaparecidos. Unos pocos documentos de su historia sobreviven: algunas fotografías tomadas por sus compañeros, un fragmento de película muda y documentos escritos por policías espías infiltrados en la fábrica con la complicidad del directorio. Entre estos archivos, la imagen de tres mujeres de las que sólo se adivina su nombre de pila y su oficio: taquigrafistas. Mari, una de ellas, es la destinataria de una carta que fabula su pasado entre la niebla de un presente signado por el cierre de la fábrica, luego de setenta años en el conurbano bonaerense.",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "poster": "/assets/midbo-2026/la-taquigrafista.jpg",
+     "posterSource": "editorial"
     },
     {
      "title": "Filme Pin",
@@ -4927,8 +4929,8 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-19T19:59:27",
-  "plan_sha": "88ffd61e7fa0a21b",
+  "fecha": "2026-10-20T12:27:32",
+  "plan_sha": "6012e1ded6067f84",
   "paso": 8,
   "cmd": "python3 pipeline/midbo-2026-verificar.py"
  }
