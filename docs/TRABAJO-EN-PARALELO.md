@@ -22,8 +22,10 @@ de la documentación oficial de Claude Code (code.claude.com/docs/en/worktrees).
    `npm ci` si faltan los módulos. A mano: `sh scripts/preparar-copia.sh`.
 5. **El número de build no va en el PR** (lo estampa `pages.yml` al publicar):
    dos PR ya no chocan por la versión.
-6. **Se integra de a uno,** con auto-merge; la copia se archiva sola cuando su PR
-   entra (Settings › Claude Code › *Auto-archive after PR merge or close*).
+6. **Se integra de a uno,** con auto-merge. Los chats NO se archivan solos (Juan,
+   20 oct: sus chats son largos y llevan muchos PR; el auto-archivo de la app está
+   apagado). La copia de trabajo de un PR ya mergeado la borra quien la creó
+   (`git worktree remove`).
 
 ## Guardianes
 
