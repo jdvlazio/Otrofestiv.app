@@ -28,7 +28,7 @@ import datetime
 import json, os, re, subprocess, sys, time
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from lib import (cargar_crudo, ficha_verifica, norm, provenance, slug,
+from lib import (asset_declarado, sin_tmdb_si_se_pide, cargar_crudo, ficha_verifica, norm, provenance, slug,
                  tmdb_get, tmdb_ficha, UA, ficha_tmdb, director_coincide, ya_publicada,
                  obras_publicadas)
 import catalogo  # noqa: E402
@@ -593,15 +593,14 @@ def main():
             # imagen de TMDB que una persona ya rechazó (Trizas: fotograma según
             # el catálogo; el formulario de MIDBO trajo el afiche, 20 oct 2026)
             if d.get('sobre_tmdb'):
-                e = {k: v for k, v in e.items() if k not in ('poster_path', 'poster', 'posterSource')}
-                _p = ''
+                e, _p = sin_tmdb_si_se_pide(e, d), ''
             if e.get('poster_path') or (_p and not (_p.startswith('/assets/')
                                                      and not os.path.exists(REPO + _p))):
                 continue
             os.makedirs(f'{REPO}/assets/{fid}', exist_ok=True)
             # `asset`: nombre propio cuando el de siempre ya está tomado por otra
             # imagen publicada (los assets son write-once)
-            _nom = d.get('asset') or f'{slug(t)}.jpg'
+            _nom = asset_declarado(t, d)
             dest = f'{REPO}/assets/{fid}/{_nom}'
             origen = f'{REPO}/{d.get("lamina") or d["archivo"]}'
             # `editorial: true` — un still 16:9 OFICIAL (el que el festival manda
