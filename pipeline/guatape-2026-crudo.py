@@ -137,7 +137,7 @@ ACTIVIDAD = {
     ('2026-10-23', '13:00', 'Detrás del Reflejo -El Productor'): {'titulo': 'Detrás del Reflejo - El Productor', 'kind': 'conversatorio'},
     ('2026-10-23', '14:00', 'CONCEPT ART (2JORNADAS)'): {'titulo': 'Concept Art para Cine', 'kind': 'masterclass',
                                                          'inscripcion': True, 'recurrente': True,
-                                                         'afiche': 'concept-art-para-cine.jpg'},
+                                                         'afiche': 'concept-art-para-cine-v2.jpg'},
     ('2026-10-23', '14:00', 'Reflejos de un personaje'): {'titulo': 'Reflejos de un Personaje', 'kind': 'taller'},
     ('2026-10-23', '14:00', 'Taller Memoria y Patrimonio Visual'): {'titulo': 'Taller Memoria y Patrimonio Visual', 'kind': 'taller'},
     ('2026-10-23', '14:00', 'Conversatorio Actores'): {'titulo': 'Conversatorio Actores', 'kind': 'conversatorio'},
@@ -146,10 +146,10 @@ ACTIVIDAD = {
     ('2026-10-23', '20:00', 'Concierto El Reflejo del Cine'): {'titulo': 'Concierto El Reflejo del Cine', 'kind': 'concierto'},
     ('2026-10-24', '10:00', 'Cine y Nuevas Narrativas'): {'titulo': 'Cine y Nuevas Narrativas', 'kind': 'masterclass',
                                                           'inscripcion': True,
-                                                          'afiche': 'cine-y-nuevas-narrativas.jpg'},
+                                                          'afiche': 'cine-y-nuevas-narrativas-v2.jpg'},
     ('2026-10-24', '09:00', 'CONCEPT ART (2JORNADAS)'): {'titulo': 'Concept Art para Cine', 'kind': 'masterclass',
                                                          'inscripcion': True, 'recurrente': True,
-                                                         'afiche': 'concept-art-para-cine.jpg'},
+                                                         'afiche': 'concept-art-para-cine-v2.jpg'},
     ('2026-10-24', '13:30', 'Cine con legado Social'): {'titulo': 'Cine con Legado Social', 'kind': 'conversatorio'},
     ('2026-10-24', '14:00', 'Reflejos de un personaje'): {'titulo': 'Reflejos de un Personaje', 'kind': 'taller'},
     ('2026-10-24', '15:00', 'Reflejos Sonoros'): {'titulo': 'Reflejos Sonoros', 'kind': 'concierto'},
@@ -224,22 +224,26 @@ OBRAS_CREDITOS = {
 # LA PIEZA PROPIA DE CADA ACTIVIDAD (19 oct 2026, Juan: «le da más identidad al
 # festival»). El festival publicó un arte por taller y por conversatorio en tres
 # carruseles de @guatapefilmfest: DemHnuhINOv (talleres), DenbqwCDTjY y
-# DepGT_4oHSu (conversatorios). Se miraron una por una; van al lienzo 2:3 con el
-# recorte de siempre (decisión de Juan: A, aunque se pierda texto a los lados).
+# DepGT_4oHSu (conversatorios). Se miraron una por una.
+# El recorte centrado a 2:3 les cortó el título (Juan: «terrible, cortaste todos
+# los textos»). Las -v2 van sin la franja de patrocinadores, con el ancho que
+# pide el título más ancho y el alto completado ARRIBA con el cielo de la misma
+# pieza (receta de un revisor de diseño, aprobada por Juan el 19 oct). Nombre
+# nuevo: el SW guarda /assets/ para siempre.
 PIEZAS = {
-    'Cine para reflejar territorio': 'cine-para-reflejar-territorio.jpg',        # DemHnuhINOv/1
-    'El Reflejo de las Generaciones': 'el-reflejo-de-las-generaciones.jpg',      # DemHnuhINOv/2
-    'Taller Memoria y Patrimonio Visual': 'taller-memoria-y-patrimonio-visual.jpg',  # DemHnuhINOv/3
-    'Historias que se Juegan': 'historias-que-se-juegan.jpg',                    # DemHnuhINOv/4
-    'Reflejos de un Personaje': 'reflejos-de-un-personaje.jpg',                  # DemHnuhINOv/5
-    'El Reflejo de un Actor': 'el-reflejo-de-un-actor.jpg',                      # DenbqwCDTjY/2
-    'Detrás del Reflejo - El Productor': 'detras-del-reflejo-el-productor.jpg',  # DenbqwCDTjY/3
-    'Conversatorio Actores': 'conversatorio-actores.jpg',                        # DenbqwCDTjY/4
-    'Conversatorio Historias que se Juegan': 'conversatorio-historias-que-se-juegan.jpg',  # DenbqwCDTjY/5
-    'Cine con Legado Social': 'cine-con-legado-social.jpg',                      # DepGT_4oHSu/1
-    'Tres Miradas, un Reflejo': 'tres-miradas-un-reflejo.jpg',                   # DepGT_4oHSu/2
-    'El Reflejo de los Festivales': 'el-reflejo-de-los-festivales.jpg',          # DepGT_4oHSu/3
-    'Sangre de Palermo y su Reflejo': 'sangre-de-palermo-y-su-reflejo.jpg',      # DepGT_4oHSu/4
+    'Cine para reflejar territorio': 'cine-para-reflejar-territorio-v2.jpg',        # DemHnuhINOv/1
+    'El Reflejo de las Generaciones': 'el-reflejo-de-las-generaciones-v2.jpg',      # DemHnuhINOv/2
+    'Taller Memoria y Patrimonio Visual': 'taller-memoria-y-patrimonio-visual-v2.jpg',  # DemHnuhINOv/3
+    'Historias que se Juegan': 'historias-que-se-juegan-v2.jpg',                    # DemHnuhINOv/4
+    'Reflejos de un Personaje': 'reflejos-de-un-personaje-v2.jpg',                  # DemHnuhINOv/5
+    'El Reflejo de un Actor': 'el-reflejo-de-un-actor-v2.jpg',                      # DenbqwCDTjY/2
+    'Detrás del Reflejo - El Productor': 'detras-del-reflejo-el-productor-v2.jpg',  # DenbqwCDTjY/3
+    'Conversatorio Actores': 'conversatorio-actores-v2.jpg',                        # DenbqwCDTjY/4
+    'Conversatorio Historias que se Juegan': 'conversatorio-historias-que-se-juegan-v2.jpg',  # DenbqwCDTjY/5
+    'Cine con Legado Social': 'cine-con-legado-social-v2.jpg',                      # DepGT_4oHSu/1
+    'Tres Miradas, un Reflejo': 'tres-miradas-un-reflejo-v2.jpg',                   # DepGT_4oHSu/2
+    'El Reflejo de los Festivales': 'el-reflejo-de-los-festivales-v2.jpg',          # DepGT_4oHSu/3
+    'Sangre de Palermo y su Reflejo': 'sangre-de-palermo-y-su-reflejo-v2.jpg',      # DepGT_4oHSu/4
 }
 
 # El horario que imprime la lámina con un «Pm» que no corresponde («9:00 - 12:00
