@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "bogotahorrorfilmfest.com/programacion/ (arreglo PROGRAMACION del HTML) + IG p/DdcszK2Dn7g (franjas nacionales)",
-  "capturado": "2026-10-16",
+  "capturado": "2026-10-20",
   "url": "https://bogotahorrorfilmfest.com/programacion/",
   "metodo": "la parrilla del sitio; los cortos de cada franja, del carrusel"
  },
@@ -10,7 +10,7 @@
   "2026-10-24 Franja Nacional · El Miedo Llega a Todas Partes: son dos (El Tunal y Fontanar del Río, según Canal Trece) y el festival no dice cuál es cada función; preguntado",
   "2026-10-25 Nico: son dos (El Tunal y Fontanar del Río, según Canal Trece) y el festival no dice cuál es cada función; preguntado",
   "«Arte FX» (22 oct 17:00) y «Maquillaje con las Garras» (24 oct 15:00), Lab 1: sin duración publicada; preguntado",
-  "«VFX para no técnicos» y «De la idea al guion»: los dos 23 oct 17:00 en Lab 1 (choque; preguntado)",
+  "«VFX para no técnicos» (23 oct 17:00, Lab 1): sin duración publicada; «De la idea al guion» se movió a las 15:00 (IG Des_xjFN9gL) y entra",
   "Taller de Yei Cardozo y Encuentro de Realizadores de Género: sin fecha publicada"
  ],
  "funciones": [
@@ -656,6 +656,23 @@
    "seccion": "Clausura",
    "sinopsis": "Cierre del festival · Entrega de premios.",
    "duracion_min": 120
+  },
+  {
+   "dia": "2026-10-23",
+   "hora": "15:00",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Lab 1",
+   "acceso": "Entrada libre con inscripción previa · Cupos limitados",
+   "titulo": "De la idea al guion",
+   "tipo": "evento",
+   "event_kind": "taller",
+   "seccion": "Talleres",
+   "invitados": "Jhonny Ortiz Alarcón",
+   "_src": {
+    "url": "https://www.instagram.com/p/Des_xjFN9gL/",
+    "date": "2026-10-20",
+    "acceso": "https://bogotahorrorfilmfest.com/talleres/"
+   }
   }
  ]
 }

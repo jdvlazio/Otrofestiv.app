@@ -96,9 +96,16 @@ TALLERES_SIN_DURACION = [
     {'titulo': 'Maquillaje con las Garras', 'dia': '2026-10-24', 'hora': '15:00', 'invitados': 'Natt Martínez',
      'ig': 'DdxZtg2u0CE'},
 ]
-TALLERES = []
+# «De la idea al guion» se movió: el pie de Des_xjFN9gL (leído sin sesión el
+# 20 oct) dice «23 de octubre · 3:00 p. m. / Lab 1 · Cinemateca de Bogotá /
+# Taller gratuito con inscripción previa». Ya no choca con «VFX para no
+# técnicos» (17:00). Duración sin publicar: la estima el modelo (marca estimado).
+TALLERES = [
+    {'titulo': 'De la idea al guion', 'dia': '2026-10-23', 'hora': '15:00', 'invitados': 'Jhonny Ortiz Alarcón',
+     'ig': 'Des_xjFN9gL', 'fecha': '2026-10-20'},
+]
 TALLERES_FUERA = ['«Arte FX» (22 oct 17:00) y «Maquillaje con las Garras» (24 oct 15:00), Lab 1: sin duración publicada; preguntado',
-                  '«VFX para no técnicos» y «De la idea al guion»: los dos 23 oct 17:00 en Lab 1 (choque; preguntado)',
+                  '«VFX para no técnicos» (23 oct 17:00, Lab 1): sin duración publicada; «De la idea al guion» se movió a las 15:00 (IG Des_xjFN9gL) y entra',
                   'Taller de Yei Cardozo y Encuentro de Realizadores de Género: sin fecha publicada']
 # el tipo de función de la parrilla
 KIND = {'Inauguración': 'apertura', 'Clausura': 'clausura'}
@@ -258,7 +265,7 @@ def main():
                           'acceso': 'Entrada libre con inscripción previa · Cupos limitados',
                           'titulo': x['titulo'], 'tipo': 'evento', 'event_kind': 'taller', 'seccion': 'Talleres',
                           'invitados': x['invitados'],
-                          '_src': {'url': f'https://www.instagram.com/p/{x["ig"]}/', 'date': '2026-10-07',
+                          '_src': {'url': f'https://www.instagram.com/p/{x["ig"]}/', 'date': x.get('fecha', '2026-10-07'),
                                    'acceso': 'https://bogotahorrorfilmfest.com/talleres/'}})
     fuera += TALLERES_FUERA
     if len(funciones) - len(TALLERES) + len(fuera) - len(TALLERES_FUERA) + len(fallos) != n:
