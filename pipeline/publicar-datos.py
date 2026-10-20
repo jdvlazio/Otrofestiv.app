@@ -67,6 +67,11 @@ def _correr(nombre, cmd, tiempo=TIEMPO, cwd=None):
 
 
 def guardianes(fest, ruta, contenido):
+    # 0. con qué correr los tests de navegador: sin esto el guardián d fallaba con
+    #    un MODULE_NOT_FOUND enterrado en el stack (worktree nuevo, 19 oct 2026).
+    if not os.path.exists(os.path.join(REPO, 'node_modules', '@playwright', 'test')):
+        sys.exit('✗ faltan los módulos de las pruebas (node_modules) en esta carpeta.\n'
+                 '  Corré: npm ci   — y en un worktree nuevo también: sh scripts/install-hooks.sh')
     # a. forma del festival
     _correr('validate-festivals', ['node', 'scripts/validate-festivals.js', fest])
     # b. validate.py completo: imprime «PUSH BLOQUEADO» y sale distinto de 0
@@ -79,6 +84,12 @@ def guardianes(fest, ruta, contenido):
         copia = os.path.join(tmp, 'repo')
         try:
             git('worktree', 'add', '-q', '--detach', copia, 'HEAD')
+            # El código del pipeline que NO está commiteado no viaja a la copia (arma
+            # desde HEAD a propósito: se publica con código que quedó registrado).
+            # Pero hay que decirlo: si no, una diferencia se lee como «editado a mano».
+            sucio = subprocess.run(['git', '-C', REPO, 'status', '--porcelain', '--', 'pipeline/*.py', 'pipeline/**/*.py'],
+                                   capture_output=True, text=True, timeout=TIEMPO).stdout.split('\n')
+            sucio = [l[3:] for l in sucio if l.strip()]
             # lo que todavía no está commiteado del festival (build, plan, staging) viaja a la copia
             for rel in ['pipeline', 'festivals/staging', 'festivals']:
                 o = os.path.join(REPO, rel)
@@ -94,6 +105,9 @@ def guardianes(fest, ruta, contenido):
                                      capture_output=True, timeout=TIEMPO).stdout
             if regen == contenido:
                 print('  ✓ igual a lo que genera el pipeline')
+            elif sucio:
+                sys.exit(f'✗ el pipeline tiene código SIN COMMITEAR ({", ".join(sucio[:4])}): la copia arma\n'
+                         f'  desde el último commit y no lo ve. Commiteá ese cambio y volvé a correr.')
             elif regen is not None and regen == en_main:
                 # el pipeline SÍ reproduce lo publicado y lo tuyo es distinto: edición a mano
                 sys.exit(f'✗ {ruta} NO es lo que genera el pipeline (¿editado a mano?).\n'
@@ -104,6 +118,8 @@ def guardianes(fest, ruta, contenido):
                 print(f'  ⚠ LEGADO: el pipeline de {fest} ya no reproduce lo publicado en main\n'
                       f'    ({"publicar.py se niega" if regen is None else "genera otra cosa"}). Se publica\n'
                       f'    lo tuyo con los demás guardianes; conviene re-armarlo aguas arriba.')
+                if regen is None:   # el porqué, que antes se tragaba
+                    print('    publicar.py dijo: ' + ((r.stderr or r.stdout or '').strip().splitlines() or ['(nada)'])[-1][:200])
         finally:
             subprocess.run(['git', '-C', REPO, 'worktree', 'remove', '--force', copia], capture_output=True, timeout=TIEMPO)
             shutil.rmtree(tmp, ignore_errors=True)
@@ -144,6 +160,49 @@ def guardianes(fest, ruta, contenido):
                 ['npx', 'playwright', 'test', *extra, '--workers=1', '--reporter=line'], tiempo=900)
     else:
         print(f'  · planificador / Mi Plan / avisos: ninguno carga {cfg}')
+
+
+WEB = 'https://otrofestiv.app'
+
+
+def _afiches_en_la_web(fest, d, esperar=0):
+    """Todo /assets/… que nombra el JSON tiene que existir en el repo Y estar ya
+    servido por la web (19 oct 2026, hallazgo de Onboarding): los afiches de obras
+    siguen en GitHub Pages, así que publicar los datos ANTES de que el PR del
+    afiche se despliegue dejaba obras sin afiche. Compara el tamaño con el local:
+    el mismo nombre con otro contenido sería un afiche viejo en caché.
+    `esperar`: segundos que se espera al deploy (el job de main corre mientras
+    Pages publica el mismo merge)."""
+    rutas = sorted({x for x in re.findall(r'"(/assets/[^"?#]+)"', json.dumps(d, ensure_ascii=False))})
+    if not rutas:
+        return
+    faltan_repo = [x for x in rutas if not os.path.isfile(os.path.join(REPO, x.lstrip('/')))]
+    if faltan_repo:
+        sys.exit(f'✗ el JSON nombra {len(faltan_repo)} afiche(s) que no están en el repo: ' + ', '.join(faltan_repo[:5]))
+    from concurrent.futures import ThreadPoolExecutor
+    from urllib.parse import quote
+    def _mal(x):
+        try:
+            req = urllib.request.Request(WEB + quote(x), method='HEAD')
+            with urllib.request.urlopen(req, timeout=20) as res:
+                n = int(res.headers.get('Content-Length') or -1)
+            loc = os.path.getsize(os.path.join(REPO, x.lstrip('/')))
+            return None if n in (-1, loc) else f'{x} (en la web pesa {n}, local {loc})'
+        except urllib.error.HTTPError as e:
+            return f'{x} ({e.code})'
+        except Exception as e:
+            return f'{x} ({type(e).__name__})'
+    fin = time.time() + esperar
+    while True:
+        with ThreadPoolExecutor(16) as ex:
+            malos = [m for m in ex.map(_mal, rutas) if m]
+        if not malos or time.time() >= fin:
+            break
+        print(f'  · {len(malos)} afiche(s) todavía no están en la web; espero el deploy…'); time.sleep(30)
+    if malos:
+        sys.exit(f'✗ {len(malos)} de {len(rutas)} afiche(s) que nombra el JSON NO están en la web todavía:\n    '
+                 + '\n    '.join(malos[:6]) + '\n  Mergeá el PR de los afiches, esperá que la web se publique y volvé a correr.')
+    print(f'  ✓ afiches en la web ({len(rutas)})')
 
 
 def _commit_en_datos(archivos, mensaje):
@@ -260,6 +319,9 @@ def main():
         print('  · desde main: los guardianes ya corrieron en el PR')
     else:
         guardianes(fest, ruta, contenido)
+    # e. los afiches que nombra el JSON ya están en la web (en los dos modos: desde
+    #    main se espera hasta 10 min al deploy de Pages del mismo merge)
+    _afiches_en_la_web(fest, d, esperar=600 if '--desde-main' in sys.argv else 0)
     huella = hashlib.sha256(contenido).hexdigest()
     print(f'✓ guardianes OK · {len(d["films"])} obras · {len(contenido):,} bytes · {huella[:12]}')
     if '--probar' in sys.argv:
