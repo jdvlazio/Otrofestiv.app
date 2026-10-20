@@ -150,7 +150,9 @@ fin), una fuente con más de 24 h FRENA a `correr.py` y a `publicar-datos.py`.
 Antes cada uno bajaba lo que tenía comando y lo demás quedaba viejo en silencio:
 FICCALI verificó contra la página del 6 oct; Fantasmagoría re-armó con la v2.
 `[fuentes-vivas-declaradas]` en validate.py avisa qué festival vigente con
-pipeline todavía no las declara.
+pipeline todavía no las declara. Un festival SIN fuente web viva (Guatapé: todo
+sale de láminas de IG) declara `"fuentes_vivas": []` con su porqué en
+`_nota_fuentes_vivas`; vacía sin nota no cuenta como declarada.
 
 ### Paso 1 · Parser propio → formato intermedio
 
