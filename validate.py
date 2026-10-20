@@ -6934,6 +6934,31 @@ try:
 except FileNotFoundError:
     fail(check, 'falta .github/camino-datos.txt (lo lee el workflow de Playwright)')
 
+check = 'asset-write-once'
+# Un afiche PUBLICADO nunca cambia de contenido con el mismo nombre (19 oct 2026,
+# hallazgo de Onboarding). El SW guarda /assets/ caché-primero en un caché que
+# sobrevive a todos los deploys: quien ya vio el viejo se queda con él PARA
+# SIEMPRE, sin arreglo desde el servidor. [keyart-write-once] lo vigilaba solo para
+# los afiches de portada; los de obras y actividades no los frenaba nadie (Guatapé:
+# se evitó a mano con -v2). Afiche nuevo = archivo nuevo. Compara contra main,
+# incluido lo que todavía no se commiteó.
+try:
+    import subprocess as _spw
+    _rw = _spw.run(['git', 'diff', '--name-only', '--diff-filter=M', 'origin/main', '--', 'assets/'],
+                   capture_output=True, text=True, timeout=60)
+    if _rw.returncode:
+        warn(check, f'no se pudo comparar contra origin/main: {(_rw.stderr or "").strip()[:100]}')
+    else:
+        _pis = [f for f in _rw.stdout.split() if re.search(r'\.(jpe?g|png|webp|gif|svg|avif)$', f, re.I)]
+        if _pis:
+            fail(check, f'{len(_pis)} afiche(s) publicado(s) cambiaron de contenido con el MISMO nombre — '
+                        'quien ya los vio se queda con el viejo para siempre (caché del SW). Usá un nombre '
+                        'nuevo (p. ej. -v2) y apuntá el JSON ahí: ' + ', '.join(_pis[:6]))
+        else:
+            ok(check, 'ningún afiche publicado se pisó con el mismo nombre')
+except Exception as _e:
+    fail(check, f'no pudo medirse: {_e}')
+
 check = 'renombre-no-se-borra'
 # Un renombre de <fid>-titulos-anteriores.json es lo que deja a la app mover lo
 # que el usuario guardó bajo el título viejo. Si una edición lo saca, quien
