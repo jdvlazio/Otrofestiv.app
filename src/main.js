@@ -509,7 +509,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202610191850';
+const BUILD_VERSION='202610191930';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -1374,9 +1374,7 @@ state.subscribeRender(
   // contenido es visible por default y JS NO toca opacity → imposible que quede
   // atascado invisible en WKWebView (Bug 1 se resuelve en la capa CSS).
   _renderFestivalSelector(activeFest);
-  // FICHAS FRESCAS (B1): si el índice trae otra ficha y seguís en la portada, se re-dibuja.
-  refrescarFichas().then(ids=>{ const sp=document.getElementById('otrofestiv-splash'), sel=_splashSelectedFestId;
-    if(ids.length&&sp&&!sp.classList.contains('fade-out')){ _renderSplashRail(sel); if(sel) selectSplashFest(null,null,sel); } }).catch(()=>{});
+  _fichasYPortada();   // FICHAS FRESCAS (B1) — ver la función, junto a los canales
   // El selector del splash NO se rellena — queda el placeholder del markup
   // (data-i18n="splash_elegi"). "Entrar" arranca disabled hasta que se elige.
   // Revelar el splash recién cuando el selector YA tiene el festival correcto:
@@ -1814,6 +1812,13 @@ function _offerUpdate(serverBuild){
 // Permite staged rollout: android e ios con builds independientes en version.json.
 _checkVersionJson();
 
+// FICHAS FRESCAS (B1): corre en el arranque Y en los tres canales vivos. Una ficha
+// no sube la versión de la app, así que ningún canal la veía, y casi nadie abre
+// desde cero: se deja en segundo plano y se vuelve (Juan, 19 oct). Si seguís en la
+// portada, se re-dibuja; si no, el riel de «cambiar festival» la lee al abrirse.
+function _fichasYPortada(){ refrescarFichas().then(ids=>{ const sp=document.getElementById('otrofestiv-splash'), sel=_splashSelectedFestId;
+  if(ids.length&&sp&&!sp.classList.contains('fade-out')){ _renderSplashRail(sel); if(sel) selectSplashFest(null,null,sel); } }).catch(()=>{}); }
+
 // ── Canal version.json #2 + SW re-check: visibilitychange ────────────
 // Corre cuando el usuario vuelve la app desde background.
 // En mobile, el JS no recarga al volver del background — sin este listener,
@@ -1823,7 +1828,7 @@ document.addEventListener('visibilitychange', function(){
   if(document.visibilityState === 'visible' && !_reloading){
     _checkVersionJson();
     _swRecheck();
-    refrescarDatosFestival();   // capa 2: los DATOS también, sin recargar
+    refrescarDatosFestival(); _fichasYPortada();   // capa 2: los DATOS y las fichas, sin recargar
   }
 });
 
@@ -1842,7 +1847,7 @@ window.addEventListener('online', function(){
   if(!_reloading){
     _checkVersionJson();
     _swRecheck();
-    refrescarDatosFestival();
+    refrescarDatosFestival(); _fichasYPortada();
   }
 });
 
@@ -1862,7 +1867,7 @@ var _POLL_MS = (function(){
 setInterval(function(){
   if(document.visibilityState === 'visible' && !_reloading){
     _checkVersionJson({offer:true});
-    refrescarDatosFestival();   // capa 2 — mismo pulso, otra carga: el catálogo
+    refrescarDatosFestival(); _fichasYPortada();   // capa 2 — mismo pulso, otra carga: el catálogo
   }
 }, _POLL_MS);
 
