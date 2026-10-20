@@ -2,9 +2,9 @@
 /**
  * bump-version.js — Actualiza BUILD_VERSION en index.html, sw.js y version.json.
  *
- * Uso: node scripts/bump-version.js
- * Correr ANTES de cada git push a producción.
- * En CI (validate.yml) corre automáticamente en cada push que toca index.html o sw.js.
+ * Uso: lo corre .github/workflows/pages.yml al PUBLICAR, sobre la copia que se
+ * sube (20 oct 2026). NO se corre a mano ni se commitea: un PR con el número de
+ * build choca con cualquier otro PR vivo, y require-bump lo frena.
  *
  * Qué actualiza:
  *   - index.html → BUILD_VERSION='YYYYMMDDHHMMM' (reload inmediato al cambiar HTML)
