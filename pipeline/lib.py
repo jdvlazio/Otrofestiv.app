@@ -64,6 +64,24 @@ def slug(t):
     return re.sub(r'[^a-z0-9]+', '-', t).strip('-')[:60]
 
 
+def asset_declarado(titulo, d):
+    """El nombre del archivo de un afiche declarado en <fid>-afiches.json: su
+    `asset` si lo trae (nombre propio cuando el de siempre ya está tomado: los
+    assets son write-once), si no el slug del título. Dueño ÚNICO: lo usan
+    enriquecer.py (dónde lo escribe) y encuadrar-posters.py (qué no recorta);
+    con dos copias, el encuadre recortaba el que no reconocía (MIDBO, 20 oct)."""
+    return d.get('asset') or f'{slug(titulo)}.jpg'
+
+
+def sin_tmdb_si_se_pide(e, d):
+    """`sobre_tmdb: true` en un afiche declarado: la imagen de TMDB que una
+    persona ya rechazó (Trizas: un fotograma) sale, para que entre el afiche
+    del festival. Sin la marca, lo de TMDB manda y el declarado no entra."""
+    if d.get('sobre_tmdb'):
+        return {k: v for k, v in e.items() if k not in ('poster_path', 'poster', 'posterSource')}
+    return e
+
+
 # ── horas ────────────────────────────────────────────────────────────────────
 def hora24(h):
     """«5:30 p.m.» → «17:30». Devuelve el texto intacto si no parece hora."""

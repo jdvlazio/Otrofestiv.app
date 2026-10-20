@@ -174,8 +174,8 @@ def main():
     mirados = set()
     if os.path.exists(_dec):
         import json as _json
-        from lib import slug as _slug
-        mirados = {d.get('asset') or f'{_slug(t)}.jpg'
+        from lib import asset_declarado as _asset
+        mirados = {_asset(t, d)
                    for t, d in (_json.load(open(_dec, encoding='utf-8')).get('afiches') or {}).items()}
     for f in entradas:
         p = f.get('poster') or ''
