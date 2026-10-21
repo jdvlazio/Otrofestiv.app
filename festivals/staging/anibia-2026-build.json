@@ -754,7 +754,9 @@
      "year": 2026,
      "duration": "9 min",
      "synopsis": "Cansada de la rutina diaria, Ella se queda dormida en el metro de regreso a casa, despertando en una estación desconocida, habitada por seres fantasmales que le ofrecen un respiro de su vida. Ella se ve encantada por este mundo , y con la llegada de un tren a la estación, tendrá que decidir entre volver a su realidad o permanecer en el sueño.",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "poster": "/assets/anibia-2026/vagon-de-medianoche.jpg",
+     "posterSource": "oficial"
     },
     {
      "title": "Memoria Colectiva",
@@ -4880,7 +4882,9 @@
      "year": 2026,
      "duration": "9 min",
      "synopsis": "Cansada de la rutina diaria, Ella se queda dormida en el metro de regreso a casa, despertando en una estación desconocida, habitada por seres fantasmales que le ofrecen un respiro de su vida. Ella se ve encantada por este mundo , y con la llegada de un tren a la estación, tendrá que decidir entre volver a su realidad o permanecer en el sueño.",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "poster": "/assets/anibia-2026/vagon-de-medianoche.jpg",
+     "posterSource": "oficial"
     },
     {
      "title": "Memoria Colectiva",
@@ -5051,7 +5055,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-21T15:46:55",
+  "fecha": "2026-10-21T16:23:38",
   "plan_sha": "494130f520ea5eb9",
   "paso": 7,
   "cmd": "python3 pipeline/anibia-2026-verificar.py"
