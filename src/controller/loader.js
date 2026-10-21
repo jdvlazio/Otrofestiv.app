@@ -22,7 +22,7 @@ import { _updateProgramaActiveFilter, initProgramaModeBar, showAgView, showDayVi
 import { seccionClose } from './overlays.js';
 import { setProgramaView } from './handlers.js';
 import { dayFullyPassed, simTodayStr } from '../domain/time.js';
-import { _djb2, explodeScreenings, normTitle, sealSharedSlots, validateFilm } from '../domain/film.js';
+import { _djb2, explodeScreenings, expandVentanas, normTitle, sealSharedSlots, validateFilm } from '../domain/film.js';
 import { state } from '../state/state.js';
 import { deriveClear, migrarTitulosAnteriores } from '../state/festival-context.js';
 import { storage } from '../storage/storage.js';
@@ -114,7 +114,7 @@ export function _ingerirDatosFestival(id, cfg, data){
   // ── Explosión de screenings[] → objetos planos por función ──
   // Dueño: explodeScreenings (domain/film.js) — compartido con el oráculo
   // del planeador, que necesita ejercer el MISMO catálogo que producción.
-  const exploded=explodeScreenings(data.films);
+  const exploded=expandVentanas(explodeScreenings(data.films), data.dayKeys, data.dias_vacios); // dueño: domain/film.js
   // Duración automática para is_programa
   exploded.forEach(f=>{
     if(f.is_programa&&f.film_list&&f.film_list.length&&!f.duration){

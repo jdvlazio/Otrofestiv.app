@@ -1031,6 +1031,17 @@ export function abiertaRango(f){
   return t('abierta_rango',{a:_h(f.time),b:_h(minToStr(screeningBlockEndMin(f)))});
 }
 
+// ventanaDias — «22 oct – 13 nov»: los días de una actividad abierta de varios días
+// (f._ventana, domain/film.js expandVentanas). El último puede caer después del
+// festival, así que no sale de dayLabel (que solo conoce los días del festival).
+export function ventanaDias(f){
+  const v=f&&f._ventana; if(!v) return '';
+  const fmt=k=>{ const d=new Date(k+'T12:00:00'); return isNaN(d.getTime())?k
+    :new Intl.DateTimeFormat(_lang==='en'?'en-US':_lang==='pt'?'pt-BR':'es-CO',{day:'numeric',month:'short'})
+      .formatToParts(d).filter(p=>p.type!=='literal').map(p=>p.value.replace('.','')).join(' '); };   // «22 oct», sin «de»
+  return v.desde===v.hasta?fmt(v.desde):`${fmt(v.desde)} – ${fmt(v.hasta)}`;
+}
+
 // _minFmt(m) — minutos (número) → "1 h 45" / "45 min". Para los detalles del conflicto
 // por desplazamiento ("~1 h 45 de viaje · 1 h 05 de hueco"). durFmt formatea la duración
 // de una actividad (string del JSON); esto formatea un cómputo nuestro.

@@ -422,6 +422,33 @@ export function explodeScreenings(films){
   return exploded;
 }
 
+// expandVentanas — ACTIVIDAD ABIERTA DE VARIOS DÍAS (21 oct 2026, aprobado por Juan).
+// Una exposición abierta del 22 oct al 13 nov es UNA actividad: el dato la trae
+// como una sola función `info` con `day` (el primero) y `hasta` (el último, que
+// puede caer después del festival). Antes se cargaba como N funciones con
+// `is_recurring`, y la ficha la mostraba como un taller de 9 sesiones («Habitar
+// la imagen», Anibia). Acá se abre en una copia por día del festival dentro de
+// la ventana —así el carril «sin hora fija» de cada día, Mi Plan y las fases
+// siguen leyendo funciones de un día— y cada copia lleva `_ventana` para que la
+// ficha y el listado las cuenten como UNA fila. Los `dias_vacios` del festival
+// (Anibia: 26 y 29 oct) no reciben copia, como no la recibían las 9 funciones.
+export function expandVentanas(films, dayKeys, vacios){
+  const out=[];
+  (films||[]).forEach(f=>{
+    if(!(f&&f.info&&f.hasta&&f.day)){ out.push(f); return; }
+    const v={desde:f.day,hasta:f.hasta};
+    const dias=(dayKeys||[]).filter(k=>k>=f.day&&k<=f.hasta&&!(vacios||[]).includes(k));
+    if(!dias.length){ out.push(Object.assign({},f,{_ventana:v})); return; }
+    dias.forEach((k,j)=>{
+      const c=Object.assign({},f,{day:k,date:k,day_order:(dayKeys||[]).indexOf(k),_ventana:v});
+      delete c.is_recurring;
+      if(j>0){ delete c.id; delete c.ids_anteriores; }   // el código es de la actividad, una vez
+      out.push(c);
+    });
+  });
+  return out;
+}
+
 // sealSharedSlots — ANCLAJE DE FUNCIÓN (opt-in: root `sharedSlotIsOneScreening`).
 // Muta los films del grupo (mismo día|hora|sede|sala) con _slotKey/_slotDur/_slotMin.
 // La sala queda ocupada por la SUMA de las obras; el Q&A se cuenta UNA vez.
