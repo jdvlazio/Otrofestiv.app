@@ -35,8 +35,8 @@ SEDE_B = {
     'CEFE Chapinero': 'CEFE Chapinero - Bogotá',
     'Cinemateca Sala Alterna UNAL': 'Universidad Nacional, Edificio 303 (NEA) - Bogotá',
     'Universidad Nacional de Colombia': 'Universidad Nacional, Edificio 303 (NEA) - Bogotá',
-    'Hall entrada admin. Facultad de Artes, Edf. Gerardo Arango S.J': 'Pontificia Universidad Javeriana, Ed. Gerardo Arango - Bogotá',
-    'Edificio Gerardo Arango S. J': 'Pontificia Universidad Javeriana, Ed. Gerardo Arango - Bogotá',
+    'Hall entrada admin. Facultad de Artes, Edf. Gerardo Arango S.J': 'Pontificia Universidad Javeriana - Bogotá',
+    'Edificio Gerardo Arango S. J': 'Pontificia Universidad Javeriana - Bogotá',
 }
 
 
@@ -45,7 +45,7 @@ def sede_b(x):
         return ('Universidad Jorge Tadeo Lozano, Módulo 4 - Bogotá' if 'Módulo 4' in (x['sala'] or '')
                 else 'Universidad Jorge Tadeo Lozano, Ed. Biblioteca - Bogotá')
     if x['sede'] == 'Pontificia Universidad Javeriana' and 'Ático' in (x['sala'] or ''):
-        return 'Pontificia Universidad Javeriana, Edificio Ático - Bogotá'
+        return 'Pontificia Universidad Javeriana - Bogotá'
     return SEDE_B[x['sede']]
 
 
@@ -98,6 +98,15 @@ def main():
         fallos.append(f'una afirmación apunta a un ancla que las láminas no tienen: {[k for k, n in lam.items() if n < 0]}')
     lam = +lam
     pub = collections.Counter((f['day'], f['time'], f['venue']) for f in films)
+    # la exposición es UNA función con ventana (`hasta`); las láminas la listan
+    # en cada día de programación → se lee como esa ventana, día por día
+    for f in films:
+        if f.get('hasta'):
+            assert f['title'] == cr.EXPO[0], f['title']
+            for d in cr.EXPO[3][1:]:
+                if not (f['day'] < d <= f['hasta']):
+                    fallos.append(f'{f["title"]}: el día {d} de las láminas cae fuera de su ventana')
+                pub[(d, f['time'], f['venue'])] += 1
     fallos += [f'en la lámina y NO en el build: {k} ×{n - pub[k]}' for k, n in lam.items() if pub[k] < n]
     fallos += [f'en el build y en NINGUNA lámina: {k} ×{n - lam[k]}' for k, n in pub.items() if lam[k] < n]
 

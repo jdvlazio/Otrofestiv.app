@@ -353,9 +353,10 @@ está pasando de verdad — no lo que alguien recordaba al escribirlo.
 | `is_cortos` | boolean | — | 34 fest | exige `film_list` Programa curado: exige film_list no vacío. |
 | `film_list` | array | — | 33 fest |  |
 | `is_programa` | boolean | — | 4 fest |  |
-| `is_recurring` | boolean | — | 7 fest |  |
+| `is_recurring` | boolean | — | 6 fest |  |
 | `is_awards_screening` | boolean | — | 1 fest |  |
 | `info` | boolean | — | 10 fest | Drop-in sin hora fija: NO entra al plan ni a conflictos. |
+| `hasta` | string | — | 1 fest | Último día (YYYY-MM-DD) de una `info` abierta varios días: UNA función, la app la abre día por día (#1229). |
 | `unscheduled` | boolean | — | 1 fest | En catálogo sin jornada. Única exención de day/time/venue. |
 | `sessions` | array | — | 1 fest |  |
 | `has_qa` | boolean | — | 30 fest | Afecta conflictos vía durationForTravel. |
