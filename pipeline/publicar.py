@@ -262,7 +262,7 @@ def publicar(fid, forzar=False):
             print(f'  ⚠ {len(_nuevas)} obras que el catálogo no tiene todavía (el push queda frenado hasta sumarlas):')
             for t in _nuevas[:10]:
                 print(f'    · {t}')
-            print('  → TMDB_API_KEY=… python3 pipeline/catalogo_construir.py --escribir')
+            print('  → TMDB_API_KEY=… python3 pipeline/catalogo_construir.py --escribir  (re-arma TODO el catálogo: se commitea todo lo que cambie)')
     # ── ¿esta publicación PIERDE datos? ─────────────────────────────────────
     if os.path.exists(out_p):
         viejo = json.load(open(out_p, encoding='utf-8'))
