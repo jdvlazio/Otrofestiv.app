@@ -93,8 +93,6 @@ def directores(s):
 TALLERES_SIN_DURACION = [
     {'titulo': 'Arte FX', 'dia': '2026-10-22', 'hora': '17:00', 'invitados': 'Camilo Vélez FX',
      'ig': 'Dd-KmzEOkzm'},
-    {'titulo': 'Maquillaje con las Garras', 'dia': '2026-10-24', 'hora': '15:00', 'invitados': 'Natt Martínez',
-     'ig': 'DdxZtg2u0CE'},
 ]
 # «De la idea al guion» se movió: el pie de Des_xjFN9gL (leído sin sesión el
 # 20 oct) dice «23 de octubre · 3:00 p. m. / Lab 1 · Cinemateca de Bogotá /
@@ -103,8 +101,18 @@ TALLERES_SIN_DURACION = [
 TALLERES = [
     {'titulo': 'De la idea al guion', 'dia': '2026-10-23', 'hora': '15:00', 'invitados': 'Jhonny Ortiz Alarcón',
      'ig': 'Des_xjFN9gL', 'fecha': '2026-10-20'},
+    # «Maquillaje con las Garras» se movió: el pie de Deu5XIPuFHo (leído sin
+    # sesión el 20 oct) dice «TALLER–LABORATORIO DE CREACIÓN / MAQUILLAJE CON
+    # LAS GARRAS / Con Nat Martínez, actriz, maquilladora artística y cosplayer.
+    # … 22 de octubre · 5:00 p. m. / Lab 1 · Cinemateca de Bogotá / Carrera 3 #
+    # 19-10, Bogotá / Entrada libre con inscripción previa: /
+    # bogotahorrorfilmfest.com/talleres/». Choca con «Arte FX» (Dd-KmzEOkzm,
+    # mismo 22 oct 17:00 Lab 1). Juan, 20 oct: vale el post más reciente; a
+    # BHFF se le pregunta por Arte FX. Duración sin publicar: la estima el modelo.
+    {'titulo': 'Maquillaje con las Garras', 'dia': '2026-10-22', 'hora': '17:00', 'invitados': 'Nat Martínez',
+     'ig': 'Deu5XIPuFHo', 'fecha': '2026-10-20'},
 ]
-TALLERES_FUERA = ['«Arte FX» (22 oct 17:00) y «Maquillaje con las Garras» (24 oct 15:00), Lab 1: sin duración publicada; preguntado',
+TALLERES_FUERA = ['«Arte FX» (22 oct 17:00, Lab 1): sin duración publicada y choca con «Maquillaje con las Garras» (IG Deu5XIPuFHo), que entra; preguntado',
                   '«VFX para no técnicos» (23 oct 17:00, Lab 1): sin duración publicada; «De la idea al guion» se movió a las 15:00 (IG Des_xjFN9gL) y entra',
                   'Taller de Yei Cardozo y Encuentro de Realizadores de Género: sin fecha publicada']
 # el tipo de función de la parrilla
