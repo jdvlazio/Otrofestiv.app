@@ -19,7 +19,7 @@ import html, io, json, os, re, sys
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(REPO, 'pipeline'))
-from lib import provenance, DESCONOCIDO  # noqa: E402
+from lib import provenance, DESCONOCIDO, acceso_campos  # noqa: E402
 
 SRC = f'{REPO}/fuentes/anibia-2026'
 OUT = f'{REPO}/festivals/staging/anibia-2026-grilla.json'
@@ -106,8 +106,9 @@ F = [
      'Pez Dorado. Conversación sobre el inicio de la producción de un largometraje'),
     ('2026-10-30', '18:00', '', 'Desechable', 'Conexión de largo aliento', ATI, 'Auditorio piso 5', LIBRE, None, None,
      'Nocroma. Conversación sobre el inicio de la producción de un largometraje'),
-    ('2026-10-31', '16:00', '', 'Surgentes - Animage', 'Proyección', FON, '', LIBRE, 12, 3579,
-     'DUDA DE HORA: el PDF dice 4:00 p.m.; la agenda de la Cinemateca (Fontanar, ficha 3579) dice 2:00 pm'),
+    ('2026-10-31', '14:00', '', 'Surgentes - Animage', 'Proyección', FON, '', LIBRE, 12, 3579,
+     'HORA CONTRADICTORIA: la agenda de la sala (Fontanar, ficha 3579) dice 2:00 pm y el PDF/IG 4:00 p.m.; '
+     'regla de Juan: la sala manda en hora y, ante contradicción, la más temprana'),
     ('2026-11-01', '14:00', '', 'Surgentes - Con extremos', 'Proyección', FON, '', LIBRE, 12, None,
      'todavía no está en la agenda de Fontanar (21 oct)'),
 ]
@@ -115,6 +116,34 @@ F = [
 EXPO = {'titulo': 'Una vez en un cuerpo: Habitar la imagen', 'tipo': 'Exposición', 'desde': '2026-10-22',
         'hasta': '2026-11-13', 'hora': '08:00', 'hora_fin': '17:00', 'sede': JAV,
         'sala': 'Hall entrada admin. Facultad de Artes', 'acceso': 'Entrada libre'}
+
+
+# TuBoleta: UN link de compra por ficha (producto), en la ficha con ?sede=11
+# (fichas/s11-<n>.html). Toda función del Centro salvo la inaugural se vende.
+TB = 'https://cinemateca.checkout.tuboleta.com/selection/event/date?productId='
+# La ficha 3596 (Miyu) publica ...183952: un dígito menos, y TuBoleta responde
+# «Error Page». La serie de las demás fichas (…523 a …532) deja libre …528, que
+# TuBoleta titula «Cinemateca de Bogotá - Centro Sala 3 | 23.10.2026 - 19:30 |
+# Surgentes - Miyu» (comprobado el 21 oct 2026).
+TB_CORREGIDO = {3596: (TB + '10230581839528', 'la ficha 3596 trae ' + TB + '1023058183952 (roto, «Error Page»)')}
+AFIRMACIONES = {
+    ('2026-10-31', 3579): [{'casilla': 'time', 'valor': '14:00', 'contra': '16:00',
+                            'fuente': {'tipo': 'juan', 'fecha': '2026-10-21',
+                                       'frase': 'la sala manda en sala, hora y boletería; ante una hora contradictoria va la más temprana'}}],
+}
+
+
+def tuboleta(n):
+    """→ (url, nota) del link de compra de la ficha n, o (None, None)."""
+    if n in TB_CORREGIDO:
+        return TB_CORREGIDO[n]
+    p = f'{SRC}/fichas/s11-{n}.html'
+    if not os.path.exists(p):
+        return None, None
+    L = sorted(set(re.findall(re.escape(TB) + r'(\d{14})', open(p, encoding='utf-8').read())))
+    if len(L) != 1:
+        sys.exit(f'✗ ficha {n}: {len(L)} links de TuBoleta')
+    return TB + L[0], None
 
 
 def agenda():
@@ -151,6 +180,16 @@ def main():
             f['_nota'] = nota
         if nodo:
             f['_cinemateca'] = nodo
+            if sede == CIN and nodo != 3590:
+                url, nt = tuboleta(nodo)
+                if not url:
+                    sys.exit(f'✗ ficha {nodo} sin link de TuBoleta')
+                f['acceso'] = 'TuBoleta'
+                f.update(acceso_campos('con boleta', url))
+                if nt:
+                    f['_nota_ticket'] = nt
+            if (dia, nodo) in AFIRMACIONES:
+                f['afirmaciones'] = AFIRMACIONES[(dia, nodo)]
             k = (nodo, dia, hora)
             if sala is None:                       # la sala la da la agenda
                 if k not in ag:

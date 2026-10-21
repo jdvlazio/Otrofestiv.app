@@ -5,9 +5,7 @@
   "metodo": "PDF transcrito a mano; sala y verificación de hora desde la agenda (HTML)"
  },
  "_nota": "BORRADOR del crudo: pre-onboarding, no lo lee ningún paso todavía",
- "_agenda_sin_pdf": [
-  "3579 2026-10-31 14:00 (Fontanar del Río)"
- ],
+ "_agenda_sin_pdf": [],
  "sedes": {
   "Cinemateca de Bogotá - Bogotá": {
    "lat": 4.6031614,
@@ -148,9 +146,11 @@
    "sede": "Cinemateca de Bogotá - Bogotá",
    "sala": "Sala 2",
    "ciudad": "Bogotá",
-   "acceso": "desconocido",
+   "acceso": "TuBoleta",
    "edad": "Mayores de 12 años",
-   "_cinemateca": 3591
+   "_cinemateca": 3591,
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839523",
+   "is_free": false
   },
   {
    "titulo": "Surgentes - Con extremos",
@@ -160,9 +160,11 @@
    "sede": "Cinemateca de Bogotá - Bogotá",
    "sala": "Sala 3",
    "ciudad": "Bogotá",
-   "acceso": "desconocido",
+   "acceso": "TuBoleta",
    "edad": "Mayores de 12 años",
-   "_cinemateca": 3592
+   "_cinemateca": 3592,
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839524",
+   "is_free": false
   },
   {
    "titulo": "Mukira",
@@ -185,10 +187,12 @@
    "sede": "Cinemateca de Bogotá - Bogotá",
    "sala": "Sala 3",
    "ciudad": "Bogotá",
-   "acceso": "desconocido",
+   "acceso": "TuBoleta",
    "edad": "Mayores de 12 años",
    "_nota": "Proyección con presencia del equipo",
-   "_cinemateca": 3593
+   "_cinemateca": 3593,
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839525",
+   "is_free": false
   },
   {
    "titulo": "Con acento nacional - Procesos de formación - Programa 1",
@@ -198,9 +202,11 @@
    "sede": "Cinemateca de Bogotá - Bogotá",
    "sala": "Sala 2",
    "ciudad": "Bogotá",
-   "acceso": "desconocido",
+   "acceso": "TuBoleta",
    "edad": "Mayores de 12 años",
-   "_cinemateca": 3594
+   "_cinemateca": 3594,
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839526",
+   "is_free": false
   },
   {
    "titulo": "Con acento nacional - Profesional - Programa 1",
@@ -210,9 +216,11 @@
    "sede": "Cinemateca de Bogotá - Bogotá",
    "sala": "Sala 3",
    "ciudad": "Bogotá",
-   "acceso": "desconocido",
+   "acceso": "TuBoleta",
    "edad": "Mayores de 12 años",
-   "_cinemateca": 3595
+   "_cinemateca": 3595,
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839527",
+   "is_free": false
   },
   {
    "titulo": "Surgentes - Miyu",
@@ -222,9 +230,12 @@
    "sede": "Cinemateca de Bogotá - Bogotá",
    "sala": "Sala 3",
    "ciudad": "Bogotá",
-   "acceso": "desconocido",
+   "acceso": "TuBoleta",
    "edad": "Mayores de 12 años",
-   "_cinemateca": 3596
+   "_cinemateca": 3596,
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839528",
+   "is_free": false,
+   "_nota_ticket": "la ficha 3596 trae https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=1023058183952 (roto, «Error Page»)"
   },
   {
    "titulo": "Surgentes - Animage",
@@ -234,9 +245,11 @@
    "sede": "Cinemateca de Bogotá - Bogotá",
    "sala": "Sala 3",
    "ciudad": "Bogotá",
-   "acceso": "desconocido",
+   "acceso": "TuBoleta",
    "edad": "Mayores de 12 años",
-   "_cinemateca": 3591
+   "_cinemateca": 3591,
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839523",
+   "is_free": false
   },
   {
    "titulo": "Costa a costa - Lo mejor de Annecy 2026",
@@ -246,9 +259,11 @@
    "sede": "Cinemateca de Bogotá - Bogotá",
    "sala": "Sala 3",
    "ciudad": "Bogotá",
-   "acceso": "desconocido",
+   "acceso": "TuBoleta",
    "edad": "Mayores de 12 años",
-   "_cinemateca": 3692
+   "_cinemateca": 3692,
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839529",
+   "is_free": false
   },
   {
    "titulo": "Costa a costa",
@@ -258,9 +273,11 @@
    "sede": "Cinemateca de Bogotá - Bogotá",
    "sala": "Sala 2",
    "ciudad": "Bogotá",
-   "acceso": "desconocido",
+   "acceso": "TuBoleta",
    "edad": "Mayores de 12 años",
-   "_cinemateca": 3616
+   "_cinemateca": 3616,
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839530",
+   "is_free": false
   },
   {
    "titulo": "Con acento nacional - Procesos de formación - Programa 2",
@@ -270,9 +287,11 @@
    "sede": "Cinemateca de Bogotá - Bogotá",
    "sala": "Sala 3",
    "ciudad": "Bogotá",
-   "acceso": "desconocido",
+   "acceso": "TuBoleta",
    "edad": "Mayores de 12 años",
-   "_cinemateca": 3617
+   "_cinemateca": 3617,
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839531",
+   "is_free": false
   },
   {
    "titulo": "Con acento nacional - Profesional - Programa 2",
@@ -282,9 +301,11 @@
    "sede": "Cinemateca de Bogotá - Bogotá",
    "sala": "Sala 3",
    "ciudad": "Bogotá",
-   "acceso": "desconocido",
+   "acceso": "TuBoleta",
    "edad": "Mayores de 12 años",
-   "_cinemateca": 3618
+   "_cinemateca": 3618,
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839532",
+   "is_free": false
   },
   {
    "titulo": "Costa a costa",
@@ -294,9 +315,11 @@
    "sede": "Cinemateca de Bogotá - Bogotá",
    "sala": "Sala 3",
    "ciudad": "Bogotá",
-   "acceso": "desconocido",
+   "acceso": "TuBoleta",
    "edad": "Mayores de 12 años",
-   "_cinemateca": 3616
+   "_cinemateca": 3616,
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839530",
+   "is_free": false
   },
   {
    "titulo": "Con acento nacional - Profesional - Programa 1",
@@ -306,9 +329,11 @@
    "sede": "Cinemateca de Bogotá - Bogotá",
    "sala": "Sala 2",
    "ciudad": "Bogotá",
-   "acceso": "desconocido",
+   "acceso": "TuBoleta",
    "edad": "Mayores de 12 años",
-   "_cinemateca": 3595
+   "_cinemateca": 3595,
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839527",
+   "is_free": false
   },
   {
    "titulo": "Con acento nacional - Profesional - Programa 2",
@@ -318,9 +343,11 @@
    "sede": "Cinemateca de Bogotá - Bogotá",
    "sala": "Sala 3",
    "ciudad": "Bogotá",
-   "acceso": "desconocido",
+   "acceso": "TuBoleta",
    "edad": "Mayores de 12 años",
-   "_cinemateca": 3618
+   "_cinemateca": 3618,
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839532",
+   "is_free": false
   },
   {
    "titulo": "Costa a costa - Lo mejor de Annecy 2026",
@@ -330,9 +357,11 @@
    "sede": "Cinemateca de Bogotá - Bogotá",
    "sala": "Sala 3",
    "ciudad": "Bogotá",
-   "acceso": "desconocido",
+   "acceso": "TuBoleta",
    "edad": "Mayores de 12 años",
-   "_cinemateca": 3692
+   "_cinemateca": 3692,
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839529",
+   "is_free": false
   },
   {
    "titulo": "Con acento nacional - Procesos de formación - Programa 1",
@@ -426,14 +455,26 @@
    "titulo": "Surgentes - Animage",
    "tipo": "Proyección",
    "dia": "2026-10-31",
-   "hora": "16:00",
+   "hora": "14:00",
    "sede": "Cinemateca Fontanar del Río - Bogotá",
    "sala": "",
    "ciudad": "Bogotá",
    "acceso": "Entrada libre / hasta completa aforo",
    "edad": "Mayores de 12 años",
-   "_nota": "DUDA DE HORA: el PDF dice 4:00 p.m.; la agenda de la Cinemateca (Fontanar, ficha 3579) dice 2:00 pm",
-   "_cinemateca": 3579
+   "_nota": "HORA CONTRADICTORIA: la agenda de la sala (Fontanar, ficha 3579) dice 2:00 pm y el PDF/IG 4:00 p.m.; regla de Juan: la sala manda en hora y, ante contradicción, la más temprana",
+   "_cinemateca": 3579,
+   "afirmaciones": [
+    {
+     "casilla": "time",
+     "valor": "14:00",
+     "contra": "16:00",
+     "fuente": {
+      "tipo": "juan",
+      "fecha": "2026-10-21",
+      "frase": "la sala manda en sala, hora y boletería; ante una hora contradictoria va la más temprana"
+     }
+    }
+   ]
   },
   {
    "titulo": "Surgentes - Con extremos",
