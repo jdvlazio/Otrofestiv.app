@@ -107,6 +107,9 @@ SEDES = {
     'Casa Yurtas': ('Casa Yurtas', ''),
     'Online': ('En línea', ''),
     'MADAME BLUE': ('Madame Blue', ''),
+    # 21 oct 2026: la charla de Pablo Solarz (tarjeta 14576) pasó de Madame Blue al
+    # Teatro La Concha (web, editada el 20 oct 20:43; lo confirma @algoencomun.co)
+    'TEATRO LA CONCHA': ('Teatro La Concha', ''),
     'Ciudad Pacífica': ('Ciudad Pacífica', ''),
     'Sendero Comuna 8': ('Sendero del Bosque', ''),
     'Altos de Melendez': ('Alto Meléndez', ''),

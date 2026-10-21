@@ -215,5 +215,12 @@
  "_provenance": {
   "fuente": "Nominatim con verificación: caja de ciudad + token distintivo + clase de lugar (una sede fija nunca es un barrio). _prec:manual intocable.",
   "capturado": "2026-10-15"
+ },
+ "Teatro La Concha": {
+  "_prec": "manual",
+  "lat": 3.4457545,
+  "lng": -76.537896,
+  "address": "Calle 4 #10-48, San Antonio",
+  "_nota": "Google Maps «TEATRO LA CONCHA» 3.4457545,-76.537896, Cl. 4 #10-48, Comuna 3, Cali (21 oct 2026). Sede de la charla de Pablo Solarz (tarjeta 14576), que la web pasó desde Madame Blue el 20 oct."
  }
 }
