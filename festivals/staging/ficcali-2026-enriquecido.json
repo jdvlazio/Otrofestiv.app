@@ -17,7 +17,7 @@
    "pais_tmdb": "",
    "lbSlug": "afilando-memoria",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Eugenio Gómez, 2026, 7 min, CO; sinopsis del festival y afiche original de ficcali.com (biblioteca de medios).",
-   "_director": "Eugenio Gómez",
+   "_director": "Eugenio Gómez Borrero",
    "_sondeado": "2026-10-21",
    "poster": "/assets/ficcali-2026/afilando-memoria.jpg",
    "posterSource": "tmdb"
@@ -286,6 +286,24 @@
    "posterSource": "tmdb"
   },
   {
+   "titulo": "Cineconcierto: Metrópolis",
+   "tmdb_id": 19,
+   "titulo_original": "Metropolis",
+   "poster_path": "/fCWd45ybxghuvaeSMcBsLFKY6PG.jpg",
+   "synopsis_es": "En una megalópolis del año 2000, los obreros están condenados a vivir recluidos en un gueto subterráneo, donde se encuentra el corazón industrial de la ciudad. Sin embargo, incitados por un robot, se rebelan contra la clase dominante y amenazan con destruir la ciudad exterior. Freder (Gustav Frölich), el hijo del soberano de Metrópolis, y María, una muchacha de origen humilde, intentarán evitar la destrucción apelando a los sentimientos y al amor.",
+   "synopsis_en": "In a futuristic city sharply divided between the rich and the poor, the son of the city's mastermind meets a prophet who predicts the coming of a savior to mediate their differences.",
+   "genero": "Drama",
+   "anio_tmdb": 1927,
+   "duracion_tmdb": 153,
+   "pais_tmdb": "Germany",
+   "lbSlug": "metropolis",
+   "_verificado": "declarada a mano: 21 oct 2026: la ficha de ficcali.com (sección Clásicos, «Cine Concierto Metrópolis») la da como Fritz Lang, Alemania, 1927, 120 min; TMDB 19 es Metropolis de Fritz Lang, 1927 (153 min la versión restaurada; el cineconcierto usa otro corte). Única obra con ese título y director.",
+   "_director": "Fritz Lang",
+   "_sondeado": "2026-10-21",
+   "poster": "/assets/ficcali-2026/cineconcierto-metropolis.jpg",
+   "posterSource": "tmdb"
+  },
+  {
    "titulo": "Coffee Break",
    "tmdb_id": 784163,
    "titulo_original": "Coffee Break",
@@ -302,7 +320,9 @@
    "_director": "María Cristina Pérez, Mauricio Cuervo",
    "_sondeado": "2026-10-21",
    "poster": "/assets/ficcali-2026/coffee-break.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "sinopsis": "Cada día hábil, durante décadas, exactamente a las cuatro de la tarde, Pepe, un ciervo que trabaja como oficinista, se toma un café. A partir de ese momento, la implacable rutina devora su existencia.",
+   "_sinopsis": "ficha oficial ficcali.com, verbatim (21 oct 2026): https://ficcali.com/pelicula/coffee-break/"
   },
   {
    "titulo": "Después de las seis",
@@ -496,11 +516,7 @@
    "_director": "José Luis Guerín",
    "_sondeado": "2026-10-21",
    "poster": "/assets/ficcali-2026/en-construccion.jpg",
-   "posterSource": "tmdb",
-   "pais_heredado": "España, Francia",
-   "_heredado": {
-    "pais_heredado": "catálogo w_R4H4KMMBKC66 (ficcali-2026)"
-   }
+   "posterSource": "tmdb"
   },
   {
    "titulo": "Estirpe",
@@ -541,11 +557,7 @@
    "_director": "José Luis Guerín",
    "_sondeado": "2026-10-21",
    "poster": "/assets/ficcali-2026/historias-del-buen-valle.jpg",
-   "posterSource": "tmdb",
-   "pais_heredado": "Francia, España",
-   "_heredado": {
-    "pais_heredado": "catálogo w_R4H8812VN6A2 (ficcali-2026, ficci-65, olhar-2026)"
-   }
+   "posterSource": "tmdb"
   },
   {
    "titulo": "Héroes del silencio",
@@ -755,7 +767,7 @@
    "pais_tmdb": "Spain, France",
    "lbSlug": "la-bola-negra",
    "_verificado": "declarada a mano: BIFF 12 y TIFF 2026 la publican con esta ficha; director, año (2026) y duración (155 min) coinciden (10 oct 2026). La tarjeta de Ficcali no da director ni año: sin ellos el candado no podía corroborar.",
-   "_director": "Javier Calvo, Javier Ambrossi",
+   "_director": "Javier Ambrossi, Javier Calvo",
    "_sondeado": "2026-10-21",
    "poster": "/assets/ficcali-2026/la-bola-negra.jpg",
    "posterSource": "tmdb"
@@ -837,8 +849,8 @@
    "titulo": "La libertad doble",
    "tmdb_id": 1387981,
    "titulo_original": "La libertad doble",
-   "poster_path": "/sBX05RMcO8eFcpV9hI7o2qA7mbH.jpg",
-   "synopsis_es": "Misael trabaja solo con su hacha, talando árboles en el bosque. Una responsabilidad inesperada trastoca su vida, y la lógica de sus días se desvanece en una naturaleza donde la razón humana carece de sentido.",
+   "poster_path": "/eJwrCjeHCu3hLYveVHM9Do5HLBF.jpg",
+   "synopsis_es": "",
    "synopsis_en": "Misael works alone with his axe, cutting down trees in the woods. An unexpected responsibility upends his life, and the logic of his days fades away in a nature where human reason holds no meaning.",
    "genero": "Drama",
    "anio_tmdb": 2026,
@@ -850,10 +862,7 @@
    "_director": "Lisandro Alonso",
    "_sondeado": "2026-10-21",
    "poster": "/assets/ficcali-2026/la-libertad-doble-v2.jpg",
-   "posterSource": "tmdb",
-   "_heredado": {
-    "synopsis_es": "catálogo w_R4DPMJ507WN8 (biff-2026, ficcali-2026, tiff-2026)"
-   }
+   "posterSource": "tmdb"
   },
   {
    "titulo": "La mansión de Araucaima",
@@ -921,6 +930,9 @@
    "_busqueda": "Liebres",
    "_director": "Laura Carvajal",
    "_sondeado": "2026-10-08",
+   "poster": "/assets/ficcali-2026/liebres.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/10/poster-liebres-scaled.webp (1664×2560)",
    "sinopsis": "Valentina y Pilar, dos adolescentes de mundos sociales distintos, viven un hecho violento que las cambia para siempre: rompe las barreras que las separaban y las hace habitar un mismo cuerpo herido.",
    "_sinopsis": "traducción nuestra con contexto (Content Design, 10 oct 2026) de la sinopsis en inglés de TMDB: https://www.themoviedb.org/movie/1392101"
   },
@@ -1794,6 +1806,12 @@
    "_afiche": "declarado: ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/10/poster-la-tinaja-scaled.webp (1924×2560)"
   },
   {
+   "titulo": "Mi demonio",
+   "poster": "/assets/ficcali-2026/mi-demonio.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/10/poster-mi-demonio.webp (1344×1920)"
+  },
+  {
    "titulo": "Monsters, Inc.",
    "poster": "/assets/ficcali-2026/monsters-inc.jpg",
    "posterSource": "oficial",
@@ -1908,7 +1926,7 @@
    "pais_tmdb": "",
    "lbSlug": "afilando-memoria",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Eugenio Gómez, 2026, 7 min, CO; sinopsis del festival y afiche original de ficcali.com (biblioteca de medios).",
-   "_director": "Eugenio Gómez",
+   "_director": "Eugenio Gómez Borrero",
    "_sondeado": "2026-10-21",
    "poster": "/assets/ficcali-2026/afilando-memoria.jpg",
    "posterSource": "tmdb"
@@ -2145,6 +2163,23 @@
    "poster": "/assets/ficcali-2026/boca-vieja.jpg",
    "posterSource": "tmdb"
   },
+  "Cineconcierto: Metrópolis": {
+   "tmdb_id": 19,
+   "titulo_original": "Metropolis",
+   "poster_path": "/fCWd45ybxghuvaeSMcBsLFKY6PG.jpg",
+   "synopsis_es": "En una megalópolis del año 2000, los obreros están condenados a vivir recluidos en un gueto subterráneo, donde se encuentra el corazón industrial de la ciudad. Sin embargo, incitados por un robot, se rebelan contra la clase dominante y amenazan con destruir la ciudad exterior. Freder (Gustav Frölich), el hijo del soberano de Metrópolis, y María, una muchacha de origen humilde, intentarán evitar la destrucción apelando a los sentimientos y al amor.",
+   "synopsis_en": "In a futuristic city sharply divided between the rich and the poor, the son of the city's mastermind meets a prophet who predicts the coming of a savior to mediate their differences.",
+   "genero": "Drama",
+   "anio_tmdb": 1927,
+   "duracion_tmdb": 153,
+   "pais_tmdb": "Germany",
+   "lbSlug": "metropolis",
+   "_verificado": "declarada a mano: 21 oct 2026: la ficha de ficcali.com (sección Clásicos, «Cine Concierto Metrópolis») la da como Fritz Lang, Alemania, 1927, 120 min; TMDB 19 es Metropolis de Fritz Lang, 1927 (153 min la versión restaurada; el cineconcierto usa otro corte). Única obra con ese título y director.",
+   "_director": "Fritz Lang",
+   "_sondeado": "2026-10-21",
+   "poster": "/assets/ficcali-2026/cineconcierto-metropolis.jpg",
+   "posterSource": "tmdb"
+  },
   "Coffee Break": {
    "tmdb_id": 784163,
    "titulo_original": "Coffee Break",
@@ -2161,7 +2196,9 @@
    "_director": "María Cristina Pérez, Mauricio Cuervo",
    "_sondeado": "2026-10-21",
    "poster": "/assets/ficcali-2026/coffee-break.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "sinopsis": "Cada día hábil, durante décadas, exactamente a las cuatro de la tarde, Pepe, un ciervo que trabaja como oficinista, se toma un café. A partir de ese momento, la implacable rutina devora su existencia.",
+   "_sinopsis": "ficha oficial ficcali.com, verbatim (21 oct 2026): https://ficcali.com/pelicula/coffee-break/"
   },
   "Después de las seis": {
    "tmdb_id": 1791686,
@@ -2321,11 +2358,7 @@
    "_director": "José Luis Guerín",
    "_sondeado": "2026-10-21",
    "poster": "/assets/ficcali-2026/en-construccion.jpg",
-   "posterSource": "tmdb",
-   "pais_heredado": "España, Francia",
-   "_heredado": {
-    "pais_heredado": "catálogo w_R4H4KMMBKC66 (ficcali-2026)"
-   }
+   "posterSource": "tmdb"
   },
   "Estirpe": {
    "tmdb_id": 1327925,
@@ -2364,11 +2397,7 @@
    "_director": "José Luis Guerín",
    "_sondeado": "2026-10-21",
    "poster": "/assets/ficcali-2026/historias-del-buen-valle.jpg",
-   "posterSource": "tmdb",
-   "pais_heredado": "Francia, España",
-   "_heredado": {
-    "pais_heredado": "catálogo w_R4H8812VN6A2 (ficcali-2026, ficci-65, olhar-2026)"
-   }
+   "posterSource": "tmdb"
   },
   "Héroes del silencio": {
    "tmdb_id": 1668935,
@@ -2571,7 +2600,7 @@
    "pais_tmdb": "Spain, France",
    "lbSlug": "la-bola-negra",
    "_verificado": "declarada a mano: BIFF 12 y TIFF 2026 la publican con esta ficha; director, año (2026) y duración (155 min) coinciden (10 oct 2026). La tarjeta de Ficcali no da director ni año: sin ellos el candado no podía corroborar.",
-   "_director": "Javier Calvo, Javier Ambrossi",
+   "_director": "Javier Ambrossi, Javier Calvo",
    "_sondeado": "2026-10-21",
    "poster": "/assets/ficcali-2026/la-bola-negra.jpg",
    "posterSource": "tmdb"
@@ -2650,8 +2679,8 @@
   "La libertad doble": {
    "tmdb_id": 1387981,
    "titulo_original": "La libertad doble",
-   "poster_path": "/sBX05RMcO8eFcpV9hI7o2qA7mbH.jpg",
-   "synopsis_es": "Misael trabaja solo con su hacha, talando árboles en el bosque. Una responsabilidad inesperada trastoca su vida, y la lógica de sus días se desvanece en una naturaleza donde la razón humana carece de sentido.",
+   "poster_path": "/eJwrCjeHCu3hLYveVHM9Do5HLBF.jpg",
+   "synopsis_es": "",
    "synopsis_en": "Misael works alone with his axe, cutting down trees in the woods. An unexpected responsibility upends his life, and the logic of his days fades away in a nature where human reason holds no meaning.",
    "genero": "Drama",
    "anio_tmdb": 2026,
@@ -2663,10 +2692,7 @@
    "_director": "Lisandro Alonso",
    "_sondeado": "2026-10-21",
    "poster": "/assets/ficcali-2026/la-libertad-doble-v2.jpg",
-   "posterSource": "tmdb",
-   "_heredado": {
-    "synopsis_es": "catálogo w_R4DPMJ507WN8 (biff-2026, ficcali-2026, tiff-2026)"
-   }
+   "posterSource": "tmdb"
   },
   "La mansión de Araucaima": {
    "tmdb_id": 327176,
@@ -2731,6 +2757,9 @@
    "_busqueda": "Liebres",
    "_director": "Laura Carvajal",
    "_sondeado": "2026-10-08",
+   "poster": "/assets/ficcali-2026/liebres.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/10/poster-liebres-scaled.webp (1664×2560)",
    "sinopsis": "Valentina y Pilar, dos adolescentes de mundos sociales distintos, viven un hecho violento que las cambia para siempre: rompe las barreras que las separaban y las hace habitar un mismo cuerpo herido.",
    "_sinopsis": "traducción nuestra con contexto (Content Design, 10 oct 2026) de la sinopsis en inglés de TMDB: https://www.themoviedb.org/movie/1392101"
   },
@@ -3514,6 +3543,11 @@
    "posterSource": "oficial",
    "_afiche": "declarado: ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/10/poster-la-tinaja-scaled.webp (1924×2560)"
   },
+  "Mi demonio": {
+   "poster": "/assets/ficcali-2026/mi-demonio.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/10/poster-mi-demonio.webp (1344×1920)"
+  },
   "Monsters, Inc.": {
    "poster": "/assets/ficcali-2026/monsters-inc.jpg",
    "posterSource": "oficial",
@@ -3667,8 +3701,8 @@
    "fecha": "2026-10-18"
   },
   "Guapi: ritmo y balsada": {
-   "director": "",
-   "fecha": "2026-10-15"
+   "director": "Juan B. Ocampo",
+   "fecha": "2026-10-21"
   },
   "Infinita canción: el secreto": {
    "director": "Juanita Zapata, Camila Caballero",
