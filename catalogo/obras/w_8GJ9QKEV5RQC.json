@@ -1,23 +1,60 @@
 {
  "id": "w_8GJ9QKEV5RQC",
- "titulo_original": "La Sierra",
- "anio": null,
- "paises": [],
+ "titulo_original": "Sierra: El Álbum Mortuorio",
+ "anio": 2026,
+ "paises": [
+  "CO"
+ ],
  "directores": [
-  "Carlos Ortiz"
+  "Carlos Ortiz Alarcón"
+ ],
+ "aliases": [
+  {
+   "titulo": "La Sierra",
+   "tipo": "festival"
+  },
+  {
+   "titulo": "Sierra: El álbum mortuorio",
+   "tipo": "festival"
+  },
+  {
+   "titulo": "Sierra: el álbum mortuorio",
+   "tipo": "festival"
+  }
+ ],
+ "sinopsis": {
+  "es": "La desaparición de Natalia, una joven de 19 años, sacude a Pueblo Blanco. Las autoridades, en su búsqueda, llegan a un bar clandestino donde dos hermanas sobreviven bajo el abuso de su tío y de una clientela perversa. Cuando deciden ayudar a un hombre extraño hallado en el bosque, desatan una cadena de violencia y rituales donde el comisario, su compañero y los propios habitantes se convierten en presas de la muerte y de una oscura secta. En medio del horror, queda una verdad latente: lo que habita en la oscuridad... alguna vez también pidió ayuda."
+ },
+ "generos": [
+  "Terror",
+  "Thriller Psicológico"
  ],
  "afiche": {
-  "archivo": "/assets/guatape-2026/la-sierra.jpg",
+  "archivo": "/assets/bhff-2026/sierra-el-album-mortuorio.jpg",
   "veredicto": "oficial"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 1789536,
+  "letterboxd": "sierra-el-album-mortuorio"
+ },
  "versiones": [
   {
    "etiqueta": "60 min",
    "duracion_min": 60
+  },
+  {
+   "etiqueta": "88 min",
+   "duracion_min": 88
+  },
+  {
+   "etiqueta": "89 min",
+   "duracion_min": 89
   }
  ],
  "presentaciones": [
-  "guatape-2026"
+  "bhff-2026",
+  "ficpa-2026",
+  "guatape-2026",
+  "villadelcine-2026"
  ]
 }
