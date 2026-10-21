@@ -2522,7 +2522,7 @@
     "ig": "https://www.instagram.com/p/Deu5XIPuFHo/"
    },
    "requires_registration": true,
-   "description": "Natt Martinez",
+   "description": "Natt Martínez",
    "description_lang": "es",
    "_fid": "f_d5b931d897",
    "id": "f_d5b931d897",
@@ -2614,7 +2614,7 @@
     "ig": "https://www.instagram.com/p/Des_xjFN9gL/"
    },
    "requires_registration": true,
-   "description": "Jhonny Ortiz Alarcon",
+   "description": "Jhonny Ortiz Alarcón",
    "description_lang": "es",
    "_fid": "f_226044113b",
    "id": "f_226044113b",
@@ -2870,7 +2870,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-21T06:22:48",
+  "fecha": "2026-10-21T06:40:55",
   "plan_sha": "104188497fe430c6",
   "paso": 9,
   "cmd": "python3 pipeline/bhff-2026-verificar.py"

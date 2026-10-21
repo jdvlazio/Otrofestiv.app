@@ -91,6 +91,8 @@ def directores(s):
 # 20261021.jpg). La tabla, verbatim:
 #   22 DE OCTUBRE. 3 PM — La Oscuridad y sus Ecos. Un siglo de monstruos — Yeimy Cardozo
 #   22 DE OCTUBRE. 5 PM — Creando con las garras — Natt Martinez
+#   (la tabla escribe sin tildes; los nombres van con la suya: «Martínez» como en el post
+#   Deu5XIPuFHo, «Alarcón» como en Des_xjFN9gL — 21 oct 2026)
 #   23 DE OCTUBRE. 3 PM — De la idea al guion — Jhonny Ortiz Alarcon
 #   23 DE OCTUBRE. 5 PM — VFX para no técnicos: ¿Cómo hacer cine con VFX y no morir en el intento? — Guillermo Restrepo
 #   24 DE OCTUBRE. 3 PM — Arte FX — Camilo Vélez
@@ -108,9 +110,9 @@ MENSAJE = 'https://docs.google.com/forms/d/e/1FAIpQLSfYpIeJpeGTK1Co7ki-TKppGVm5d
 TALLERES = [
     {'titulo': 'La Oscuridad y sus Ecos. Un siglo de monstruos', 'dia': '2026-10-22', 'hora': '15:00',
      'invitados': 'Yeimy Cardozo', 'sala': None},
-    {'titulo': 'Creando con las garras', 'dia': '2026-10-22', 'hora': '17:00', 'invitados': 'Natt Martinez',
+    {'titulo': 'Creando con las garras', 'dia': '2026-10-22', 'hora': '17:00', 'invitados': 'Natt Martínez',
      'ig': 'Deu5XIPuFHo'},
-    {'titulo': 'De la idea al guion', 'dia': '2026-10-23', 'hora': '15:00', 'invitados': 'Jhonny Ortiz Alarcon',
+    {'titulo': 'De la idea al guion', 'dia': '2026-10-23', 'hora': '15:00', 'invitados': 'Jhonny Ortiz Alarcón',
      'ig': 'Des_xjFN9gL'},
     {'titulo': 'VFX para no técnicos: ¿Cómo hacer cine con VFX y no morir en el intento?', 'dia': '2026-10-23',
      'hora': '17:00', 'invitados': 'Guillermo Restrepo', 'ig': 'Dd-WRmzutXX'},
