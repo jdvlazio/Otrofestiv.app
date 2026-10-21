@@ -87,11 +87,10 @@ SECCION = {
     'Foco: Claire Simon': 'Foco Claire Simon',
     '¡Que viva la música!': '¡Que viva la música!',
     '¡Que Viva la Música!': '¡Que viva la música!',   # la subpágina del 10 oct, otra caja
-    # 21 oct 2026: dos subpáginas nuevas de la Selección. Son secciones reales, pero
-    # una sección nueva necesita su arquetipo en src/config.js (código de la app,
-    # PR aparte). Hasta entonces siguen como las publicaba la tarjeta.
-    'Clásicos': 'Proyecciones',
-    'Plano General': 'Proyecciones',
+    # 21 oct 2026: dos subpáginas nuevas de la Selección, con su nombre verbatim
+    # (decisión de Juan); arquetipo en src/config.js, emoji e inglés en el plan.
+    'Clásicos': 'Clásicos',
+    'Plano General': 'Plano General',
 }
 # LA SEDE: el nombre de la tarjeta → (sede, sala). Investigada sede por sede
 # (7 oct) con dos fuentes por pin; la página de sedes 2025 del festival (Wayback)
@@ -453,6 +452,12 @@ def main():
         # publica sin obras; la página de Animá Ve las lista (sidecar ficcali-2026-anima.json)
         if re.search(r'Retrospectiva de Mar[ií]a Cristina P[ée]rez', r.get('titulo') or '') and ANIMA.get('retrospectiva_mcp'):
             r['obras'] = [dict(o) for o in ANIMA['retrospectiva_mcp']]
+            r['_src']['obras'] = 'https://ficcali.com/anima-ve-2026/'
+        # MUJERES EN LA ANIMACIÓN (25 oct): la programación la publica sin obras.
+        # Le damos el bloque «Expansión de un territorio» de Animá Ve — decisión
+        # NUESTRA (Juan, 21 oct), con su porqué en el sidecar (_provenance_mujeres).
+        if re.search(r'Mujeres en la animaci[oó]n', r.get('titulo') or '') and ANIMA.get('mujeres_en_la_animacion'):
+            r['obras'] = [dict(o) for o in ANIMA['mujeres_en_la_animacion']]
             r['_src']['obras'] = 'https://ficcali.com/anima-ve-2026/'
         funciones.append({k_: v for k_, v in r.items() if v not in (None, '')})
 
