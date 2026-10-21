@@ -209,18 +209,18 @@
    "archetype": "Retrospectiva / Tributo",
    "order": 9
   },
-  "🎞️ Muestras de Muestras": {
-   "en": "Showcase of Showcases",
-   "archetype": "Cortos / Programas",
-   "order": 10
-  },
   "🔍 Zoom": {
    "en": "Zoom",
    "archetype": "Perspectivas / Miradas",
-   "order": 11
+   "order": 10
   },
   "🎵 Plano Sonoro": {
    "en": "Sound Frame",
+   "archetype": "Cortos / Programas",
+   "order": 11
+  },
+  "🎞️ Muestras de Muestras": {
+   "en": "Showcase of Showcases",
    "archetype": "Cortos / Programas",
    "order": 12
   },
@@ -2532,10 +2532,11 @@
    "title": "Guapi: ritmo y balsada",
    "type": "film",
    "section": "📽️ Proyecciones",
+   "director": "Juan B. Ocampo",
    "year": 1963,
    "country": "Colombia",
    "flags": "🇨🇴",
-   "duration": "30 min",
+   "duration": "33 min",
    "_ancla": [
     "Centro Cultural Comfandi - Cali",
     "2026-10-21",
@@ -2546,6 +2547,8 @@
    "day_order": 5,
    "venue": "Centro Cultural Comfandi - Cali",
    "has_qa": false,
+   "synopsis": "Documenta las expresiones culturales y espirituales de Guapi, al capturar la danza ancestral de los hojarasquines del monte, la vida al pie del río y la procesión fluvial nocturna; allí, la marimba de chonta y los arrullos le rinden culto a la Inmaculada Concepción. Es un trabajo de campo del Departamento de Investigaciones Folklóricas del IPC (diciembre de 1963 a enero de 1964). Recoge las interacciones entre los guapireños y los investigadores que indagaban sobre las celebraciones de la época, repertorios musicales y dancísticos, y fabricación de instrumentos. Forma parte de un archivo de cintas de 16 mm, cintas magnetofónicas de carrete abierto, fotografías y textos sobre fuerza creativa, fiesta y ritual en Guapi. Está disponible en el IPC.",
+   "synopsis_lang": "es",
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
@@ -2682,8 +2685,8 @@
    "section": "📽️ Proyecciones",
    "director": "Lisandro Alonso",
    "year": 2026,
-   "country": "Argentina",
-   "flags": "🇦🇷",
+   "country": "Chile, Argentina, Luxemburgo, Alemania, Reino Unido",
+   "flags": "🇨🇱🇦🇷🇱🇺🇩🇪🇬🇧",
    "duration": "100 min",
    "genre": "Drama",
    "_ancla": [
@@ -2697,7 +2700,7 @@
    "venue": "Teatro Municipal Enrique Buenaventura - Cali",
    "sala": "Teatrino",
    "has_qa": false,
-   "synopsis": "Misael trabaja solo con su hacha, talando árboles en el bosque. Una responsabilidad inesperada trastoca su vida, y la lógica de sus días se desvanece en una naturaleza donde la razón humana carece de sentido.",
+   "synopsis": "Misael trabaja solo con su hacha, cortando árboles en el monte. Una responsabilidad inesperada altera su vida y la lógica de sus días se desvanece en una naturaleza donde la razón humana carece de sentido. Lisandro Alonso retoma el personaje, las acciones y la forma minuciosa y delicada de observarlos de su película La libertad (2001), con la que se estableció como parte de una nueva generación de cine argentino. Esta novedosa mirada plantea un giro reflexivo sobre el personaje, su tiempo, nuestro tiempo y la forma de asumir el cine de director.",
    "synopsis_lang": "es",
    "poster": "/assets/ficcali-2026/la-libertad-doble-v2.jpg",
    "posterSource": "tmdb",
@@ -2993,9 +2996,14 @@
   },
   {
    "title": "Cineconcierto: Metrópolis",
-   "type": "event",
+   "type": "film",
    "section": "📽️ Proyecciones",
-   "duration": "60 min",
+   "director": "Fritz Lang",
+   "year": 1927,
+   "country": "Alemania",
+   "flags": "🇩🇪",
+   "duration": "120 min",
+   "genre": "Ciencia ficción",
    "_ancla": [
     "Casa Ethel - Cali",
     "2026-10-21",
@@ -3005,15 +3013,19 @@
    "time": "20:00",
    "day_order": 5,
    "venue": "Casa Ethel - Cali",
-   "event_kind": "evento",
    "has_qa": false,
+   "synopsis": "Metrópolis es una película de ciencia ficción ambientada en una ciudad futurista profundamente dividida entre clases sociales. En la superficie viven los poderosos y privilegiados, mientras que, bajo tierra, miles de trabajadores realizan duras labores para mantener la ciudad en funcionamiento. Freder, hijo de Joh Fredersen, el gobernante de Metrópolis, lleva una vida cómoda hasta que conoce a María, una joven que defiende la unión y el entendimiento entre ricos y pobres. Con una poderosa crítica a la desigualdad social y a la deshumanización industrial, Metrópolis transmite su famoso mensaje: el corazón debe ser el mediador entre la cabeza y las manos.",
+   "synopsis_lang": "es",
+   "poster": "/assets/ficcali-2026/cineconcierto-metropolis.jpg",
+   "posterSource": "tmdb",
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
     "tarjeta": 14006
    },
-   "description": "Alemania | 120 min",
-   "description_lang": "es",
+   "lbSlug": "metropolis",
+   "tmdb_id": 19,
+   "synopsis_en": "In a futuristic city sharply divided between the rich and the poor, the son of the city's mastermind meets a prophet who predicts the coming of a savior to mediate their differences.",
    "_fid": "f_ccede7bd0f",
    "id": "f_ccede7bd0f",
    "is_free": true,
@@ -3053,11 +3065,6 @@
      "fecha": "2026-10-06",
      "url": "https://ficcali.com/programacion-ficcali-2026/"
     },
-    "event_kind": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-06",
-     "url": "https://ficcali.com/programacion-ficcali-2026/"
-    },
     "entrada": {
      "tipo": "regla",
      "marca": "supuesto",
@@ -3092,7 +3099,7 @@
    "film_list": [
     {
      "title": "Afilando memoria",
-     "director": "Eugenio Gómez",
+     "director": "Eugenio Gómez Borrero",
      "country": "Colombia",
      "flags": "🇨🇴",
      "year": 2026,
@@ -3839,7 +3846,7 @@
   {
    "title": "Runa simi",
    "type": "film",
-   "section": "🎞️ Muestras de Muestras",
+   "section": "🔍 Zoom",
    "director": "Augusto Zegarra",
    "year": 2025,
    "country": "Perú",
@@ -4553,6 +4560,8 @@
      "flags": "🇨🇴",
      "year": 2024,
      "duration": "13 min",
+     "poster": "/assets/ficcali-2026/liebres.jpg",
+     "posterSource": "oficial",
      "lbSlug": "hare",
      "tmdb_id": 1392101,
      "synopsis": "Valentina y Pilar, dos adolescentes de mundos sociales distintos, viven un hecho violento que las cambia para siempre: rompe las barreras que las separaban y las hace habitar un mismo cuerpo herido.",
@@ -6000,7 +6009,9 @@
      "posterSource": "tmdb",
      "lbSlug": "coffee-break-2018",
      "tmdb_id": 784163,
-     "synopsis_en": "Every working day for decades, at four in the afternoon, Pepe drinks coffee. The life of a deer clerk happens in the coffee room of his office. The routine fixed in his life. Fridays of expectations followed by disenchanted Mondays, while Pepe wins gray hair and loses enthusiasm."
+     "synopsis": "Cada día hábil, durante décadas, exactamente a las cuatro de la tarde, Pepe, un ciervo que trabaja como oficinista, se toma un café. A partir de ese momento, la implacable rutina devora su existencia.",
+     "synopsis_en": "Every working day for decades, at four in the afternoon, Pepe drinks coffee. The life of a deer clerk happens in the coffee room of his office. The routine fixed in his life. Fridays of expectations followed by disenchanted Mondays, while Pepe wins gray hair and loses enthusiasm.",
+     "synopsis_lang": "es"
     },
     {
      "title": "Añejo",
@@ -6075,11 +6086,11 @@
   {
    "title": "En construcción",
    "type": "film",
-   "section": "🎞️ Muestras de Muestras",
+   "section": "📽️ Proyecciones",
    "director": "José Luis Guerín",
    "year": 2001,
-   "country": "Spain, France",
-   "flags": "🇪🇸🇫🇷",
+   "country": "España",
+   "flags": "🇪🇸",
    "duration": "124 min",
    "genre": "Documental",
    "_ancla": [
@@ -7383,7 +7394,7 @@
    "section": "🎞️ Muestras de Muestras",
    "country": "México, Venezuela, España, Colombia, Pakistán",
    "flags": "🇲🇽🇻🇪🇪🇸🇨🇴🇵🇰",
-   "duration": "115 min",
+   "duration": "133 min",
    "_ancla": [
     "Teatro Municipal Enrique Buenaventura - Cali",
     "2026-10-24",
@@ -7418,6 +7429,20 @@
      "synopsis_en": "Carlos is approaching midlife trapped in a personal crisis that has lingered too long. Rosa, his mother, suffers from disabling pain that is only mitigated by the warm waters of hydrotherapy. One night, she offers to make the ultimate sacrifice so that they can both transit to a better place. A short film about love, hope and relief we all long for.",
      "title_en": "Reliefs",
      "genre": "Drama"
+    },
+    {
+     "title": "El bitcoin de oro",
+     "director": "Bernardo Hernández",
+     "country": "España",
+     "flags": "🇪🇸",
+     "year": 2026,
+     "duration": "18 min",
+     "synopsis": "Cuando Asofem está a punto de cerrar por una grave crisis económica, un grupo de usuarios y su monitor deciden embarcarse en una disparatada misión para salvar el centro al que consideran su hogar.",
+     "synopsis_lang": "es",
+     "poster": "/assets/ficcali-2026/el-bitcoin-de-oro.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "el-bitcoin-de-oro",
+     "tmdb_id": 1793999
     },
     {
      "title": "El bitcoin de oro",
@@ -7891,8 +7916,8 @@
    "section": "📽️ Proyecciones",
    "director": "Andrey Zvyagintsev",
    "year": 2026,
-   "country": "Rusia",
-   "flags": "🇷🇺",
+   "country": "Francia, Letonia, Alemania",
+   "flags": "🇫🇷🇱🇻🇩🇪",
    "duration": "140 min",
    "genre": "Drama",
    "_ancla": [
@@ -7905,7 +7930,7 @@
    "day_order": 8,
    "venue": "Cine Colombia Unicentro - Cali",
    "has_qa": false,
-   "synopsis": "Es la contemplación del director sobre la naturaleza de las relaciones humanas, el estado del hombre moderno y la fragilidad de la vida humana.",
+   "synopsis": "Rusia, 2022. Cuando Gleb, un exitoso director de empresa, se ve asediado por las crecientes presiones corporativas y un mundo cada vez más inestable, el colapso de su vida, cuidadosamente ordenada, se precipita hacia la violencia. Cine negro que adapta La mujer infiel, de Chabrol, al contexto de los inicios de la guerra de Rusia contra Ucrania.",
    "synopsis_lang": "es",
    "poster": "/assets/ficcali-2026/minotauro.jpg",
    "posterSource": "tmdb",
@@ -8046,11 +8071,11 @@
   {
    "title": "Historias del buen valle",
    "type": "film",
-   "section": "🎞️ Muestras de Muestras",
+   "section": "📽️ Proyecciones",
    "director": "José Luis Guerín",
    "year": 2025,
-   "country": "France, Spain",
-   "flags": "🇫🇷🇪🇸",
+   "country": "España",
+   "flags": "🇪🇸",
    "duration": "120 min",
    "genre": "Documental",
    "_ancla": [
@@ -8129,10 +8154,10 @@
    "title": "La bola negra",
    "type": "film",
    "section": "📽️ Proyecciones",
-   "director": "Javier Calvo, Javier Ambrossi",
+   "director": "Javier Ambrossi, Javier Calvo",
    "year": 2026,
-   "country": "España",
-   "flags": "🇪🇸",
+   "country": "España, Francia",
+   "flags": "🇪🇸🇫🇷",
    "duration": "155 min",
    "genre": "Drama",
    "_ancla": [
@@ -8145,7 +8170,7 @@
    "day_order": 8,
    "venue": "Cine Colombia Unicentro - Cali",
    "has_qa": false,
-   "synopsis": "Las vidas interconectadas de tres hombres en tres épocas distintas, tres existencias íntimamente ligadas por la sexualidad y el deseo, el dolor y la herencia.",
+   "synopsis": "La bola negra cuenta la historia de tres hombres cuyas vidas están íntimamente conectadas por el deseo, el dolor y la herencia, a lo largo de tres épocas: 1932, 1937 y 2017. El título es el mismo de una obra de Federico García Lorca que quedó inacabada por su muerte, en 1936, y que se refiere a la bola negra que funciona como signo de rechazo a un joven en un prestigioso club por las sospechas sobre su sexualidad",
    "synopsis_lang": "es",
    "poster": "/assets/ficcali-2026/la-bola-negra.jpg",
    "posterSource": "tmdb",
@@ -8433,7 +8458,7 @@
   {
    "title": "Once Upon a Time in Harlem",
    "type": "film",
-   "section": "🎞️ Muestras de Muestras",
+   "section": "🪶 Vanguardias Afro e Indígenas",
    "director": "David Greaves, William Greaves",
    "year": 2026,
    "country": "Estados Unidos",
@@ -8590,11 +8615,11 @@
   {
    "title": "Historias del buen valle",
    "type": "film",
-   "section": "🎞️ Muestras de Muestras",
+   "section": "📽️ Proyecciones",
    "director": "José Luis Guerín",
    "year": 2025,
-   "country": "France, Spain",
-   "flags": "🇫🇷🇪🇸",
+   "country": "España",
+   "flags": "🇪🇸",
    "duration": "120 min",
    "genre": "Documental",
    "_ancla": [
@@ -8673,10 +8698,10 @@
    "title": "La bola negra",
    "type": "film",
    "section": "📽️ Proyecciones",
-   "director": "Javier Calvo, Javier Ambrossi",
+   "director": "Javier Ambrossi, Javier Calvo",
    "year": 2026,
-   "country": "España",
-   "flags": "🇪🇸",
+   "country": "España, Francia",
+   "flags": "🇪🇸🇫🇷",
    "duration": "155 min",
    "genre": "Drama",
    "_ancla": [
@@ -8689,7 +8714,7 @@
    "day_order": 9,
    "venue": "Cinemateca La Tertulia - Cali",
    "has_qa": false,
-   "synopsis": "Las vidas interconectadas de tres hombres en tres épocas distintas, tres existencias íntimamente ligadas por la sexualidad y el deseo, el dolor y la herencia.",
+   "synopsis": "La bola negra cuenta la historia de tres hombres cuyas vidas están íntimamente conectadas por el deseo, el dolor y la herencia, a lo largo de tres épocas: 1932, 1937 y 2017. El título es el mismo de una obra de Federico García Lorca que quedó inacabada por su muerte, en 1936, y que se refiere a la bola negra que funciona como signo de rechazo a un joven en un prestigioso club por las sospechas sobre su sexualidad",
    "synopsis_lang": "es",
    "poster": "/assets/ficcali-2026/la-bola-negra.jpg",
    "posterSource": "tmdb",
@@ -9260,9 +9285,14 @@
   },
   {
    "title": "Cineconcierto: Metrópolis",
-   "type": "event",
+   "type": "film",
    "section": "📽️ Proyecciones",
-   "duration": "60 min",
+   "director": "Fritz Lang",
+   "year": 1927,
+   "country": "Alemania",
+   "flags": "🇩🇪",
+   "duration": "120 min",
+   "genre": "Ciencia ficción",
    "_ancla": [
     "Casa Ethel - Cali",
     "2026-10-24",
@@ -9272,14 +9302,18 @@
    "time": "20:00",
    "day_order": 8,
    "venue": "Casa Ethel - Cali",
-   "event_kind": "evento",
    "has_qa": false,
+   "synopsis": "Metrópolis es una película de ciencia ficción ambientada en una ciudad futurista profundamente dividida entre clases sociales. En la superficie viven los poderosos y privilegiados, mientras que, bajo tierra, miles de trabajadores realizan duras labores para mantener la ciudad en funcionamiento. Freder, hijo de Joh Fredersen, el gobernante de Metrópolis, lleva una vida cómoda hasta que conoce a María, una joven que defiende la unión y el entendimiento entre ricos y pobres. Con una poderosa crítica a la desigualdad social y a la deshumanización industrial, Metrópolis transmite su famoso mensaje: el corazón debe ser el mediador entre la cabeza y las manos.",
+   "synopsis_lang": "es",
+   "poster": "/assets/ficcali-2026/cineconcierto-metropolis.jpg",
+   "posterSource": "tmdb",
    "_src": {
     "url": "https://www.instagram.com/p/Deg4GpNHCB_/",
     "date": "2026-10-15"
    },
-   "description": "Alemania | 120 min",
-   "description_lang": "es",
+   "lbSlug": "metropolis",
+   "tmdb_id": 19,
+   "synopsis_en": "In a futuristic city sharply divided between the rich and the poor, the son of the city's mastermind meets a prophet who predicts the coming of a savior to mediate their differences.",
    "_fid": "f_359c6326a2",
    "id": "f_359c6326a2",
    "is_free": true,
@@ -9319,11 +9353,6 @@
      "fecha": "2026-10-15",
      "url": "https://ficcali.com/programacion-ficcali-2026/"
     },
-    "event_kind": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-15",
-     "url": "https://ficcali.com/programacion-ficcali-2026/"
-    },
     "entrada": {
      "tipo": "regla",
      "marca": "supuesto",
@@ -9333,13 +9362,15 @@
   }
  ],
  "_avisos_duracion": [
+  "«Cineconcierto: Metrópolis»: 120 min en el festival, 153 en TMDB",
   "programa «Rodilla Negra + El Coloso» (2026-10-22 20:00): sus obras suman 84 min (2 de 2 con duración) y la función dura 60",
   "programa «Trópico interior: Todos los colores de la oscuridad» (2026-10-22 20:00): sus obras suman 96 min (7 de 7 con duración) y la función dura 60",
-  "«An Incomplete Calendar»: 90 min en el festival, 77 en TMDB"
+  "«An Incomplete Calendar»: 90 min en el festival, 77 en TMDB",
+  "«Cineconcierto: Metrópolis»: 120 min en el festival, 153 en TMDB"
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-21T08:56:00",
+  "fecha": "2026-10-21T09:44:58",
   "plan_sha": "3fba29a2cfab0dc2",
   "paso": 11,
   "cmd": "python3 pipeline/ficcali-2026-verificar.py"

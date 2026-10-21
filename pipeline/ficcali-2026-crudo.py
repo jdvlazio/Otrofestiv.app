@@ -87,6 +87,11 @@ SECCION = {
     'Foco: Claire Simon': 'Foco Claire Simon',
     '¡Que viva la música!': '¡Que viva la música!',
     '¡Que Viva la Música!': '¡Que viva la música!',   # la subpágina del 10 oct, otra caja
+    # 21 oct 2026: dos subpáginas nuevas de la Selección. Son secciones reales, pero
+    # una sección nueva necesita su arquetipo en src/config.js (código de la app,
+    # PR aparte). Hasta entonces siguen como las publicaba la tarjeta.
+    'Clásicos': 'Proyecciones',
+    'Plano General': 'Proyecciones',
 }
 # LA SEDE: el nombre de la tarjeta → (sede, sala). Investigada sede por sede
 # (7 oct) con dos fuentes por pin; la página de sedes 2025 del festival (Wayback)
@@ -243,6 +248,12 @@ SIN_LISTA = {13995: 'Competencia Cortometraje Nacional', 13999: 'Competencia Cor
 # CaliLee»: cada una lleva el título de su libro; el distintivo de la tarjeta ya
 # dice «lanzamiento de libro»). Propuesta para Juan (7 oct). Por id de tarjeta.
 TITULO = {
+    # 21 oct 2026: la ficha de «Historias del buen valle» salió de la Selección
+    # (sigue en ficcali.com/pelicula/ con ese título, y la obra sigue en la
+    # programación); sin ficha mandaba la tarjeta, «buen Valle». Se queda el de
+    # la ficha, el publicado.
+    14037: 'Historias del buen valle',
+    14049: 'Historias del buen valle',
     14518: 'Encuentro local estudiantes de cine 2026: Bailar con el caos',
     14519: 'Encuentro local estudiantes de cine 2026: Bailar con el caos',
     14521: 'Desarmar la mirada. Taller de crítica para pensar el cine',
