@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "ensamblar.py: ids estables de las funciones (docs/FUNCION.md C1)",
-  "capturado": "2026-10-20"
+  "capturado": "2026-10-21"
  },
  "funciones": {
   "f_4def04d293": {
@@ -130,6 +130,20 @@
    "sala": "Sala Capital",
    "titulo": "clausura proyeccion corto nacional ganador"
   },
+  "f_28f5a4e35d": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-10-22",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "la oscuridad y sus ecos un siglo de monstruos"
+  },
+  "f_d5b931d897": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-10-22",
+   "hora": "17:00",
+   "sala": "Lab 1",
+   "titulo": "creando con las garras"
+  },
   "f_226044113b": {
    "sede": "Cinemateca de Bogotá - Bogotá",
    "dia": "2026-10-23",
@@ -137,12 +151,19 @@
    "sala": "Lab 1",
    "titulo": "de la idea al guion"
   },
-  "f_d5b931d897": {
+  "f_131c17880e": {
    "sede": "Cinemateca de Bogotá - Bogotá",
-   "dia": "2026-10-22",
+   "dia": "2026-10-23",
    "hora": "17:00",
    "sala": "Lab 1",
-   "titulo": "maquillaje con las garras"
+   "titulo": "vfx para no tecnicos como hacer cine con vfx y no morir en el intento"
+  },
+  "f_98d05b86cd": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-10-24",
+   "hora": "15:00",
+   "sala": "Lab 1",
+   "titulo": "arte fx"
   }
  }
 }

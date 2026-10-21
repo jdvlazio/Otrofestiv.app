@@ -1,6 +1,6 @@
 {
  "_provenance": {
-  "fuente": "agenda de la Cinemateca de Bogotá (15 oct) e IG de Parapeto",
+  "fuente": "agenda de la Cinemateca de Bogotá (15 oct) e IG de Parapeto + mensaje del festival a Juan (21 oct): tabla de talleres",
   "capturado": "2026-10-16",
   "metodo": "una afirmación por casilla, con su fuente (docs/FUNCION.md)"
  },
@@ -651,6 +651,249 @@
    },
    "evidencia": "IG https://www.instagram.com/p/DeslqRAFLMP/ lámina 02: «SALA CAPITAL / 24 OCTUBRE / CINEMATECA DE BOGOTÁ / 6:30 PM» · pie: «a las 7:00 p. m.» · web bogotahorrorfilmfest.com/programacion: 7:30 p. m.",
    "nota": "Tres horas para la misma función: lámina 6:30 PM, pie 7:00 p. m., web 7:30 p. m. (la web, capturada hoy, era la más reciente del rango festival). Sin respuesta del festival se publica la más temprana y la lámina manda sobre el pie."
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-10-22",
+    "hora": "15:00"
+   },
+   "casilla": "day",
+   "valor": "2026-10-22",
+   "fuente": {
+    "tipo": "festival-mensaje",
+    "url": "https://docs.google.com/forms/d/e/1FAIpQLSfYpIeJpeGTK1Co7ki-TKppGVm5ddRRy9pFZker683OKRTJtQ/viewform",
+    "fecha": "2026-10-21",
+    "frase": "Sigue como está en el formulario"
+   },
+   "evidencia": "mensaje del festival a Juan (21 oct): «Sigue como está en el formulario» + imagen del formulario; fila de la tabla: «22 DE OCTUBRE. 3 PM · La Oscuridad y sus Ecos. Un siglo de monstruos · Yeimy Cardozo» (imagen: fuentes/bhff-2026/festival-mensaje-talleres-20261021.jpg)"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-10-22",
+    "hora": "15:00"
+   },
+   "casilla": "time",
+   "valor": "15:00",
+   "fuente": {
+    "tipo": "festival-mensaje",
+    "url": "https://docs.google.com/forms/d/e/1FAIpQLSfYpIeJpeGTK1Co7ki-TKppGVm5ddRRy9pFZker683OKRTJtQ/viewform",
+    "fecha": "2026-10-21",
+    "frase": "Sigue como está en el formulario"
+   },
+   "evidencia": "mensaje del festival a Juan (21 oct): «Sigue como está en el formulario» + imagen del formulario; fila de la tabla: «22 DE OCTUBRE. 3 PM · La Oscuridad y sus Ecos. Un siglo de monstruos · Yeimy Cardozo» (imagen: fuentes/bhff-2026/festival-mensaje-talleres-20261021.jpg)"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-10-22",
+    "hora": "15:00"
+   },
+   "casilla": "title",
+   "valor": "La Oscuridad y sus Ecos. Un siglo de monstruos",
+   "fuente": {
+    "tipo": "festival-mensaje",
+    "url": "https://docs.google.com/forms/d/e/1FAIpQLSfYpIeJpeGTK1Co7ki-TKppGVm5ddRRy9pFZker683OKRTJtQ/viewform",
+    "fecha": "2026-10-21",
+    "frase": "Sigue como está en el formulario"
+   },
+   "evidencia": "mensaje del festival a Juan (21 oct): «Sigue como está en el formulario» + imagen del formulario; fila de la tabla: «22 DE OCTUBRE. 3 PM · La Oscuridad y sus Ecos. Un siglo de monstruos · Yeimy Cardozo» (imagen: fuentes/bhff-2026/festival-mensaje-talleres-20261021.jpg)"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-10-22",
+    "hora": "17:00"
+   },
+   "casilla": "day",
+   "valor": "2026-10-22",
+   "fuente": {
+    "tipo": "festival-mensaje",
+    "url": "https://docs.google.com/forms/d/e/1FAIpQLSfYpIeJpeGTK1Co7ki-TKppGVm5ddRRy9pFZker683OKRTJtQ/viewform",
+    "fecha": "2026-10-21",
+    "frase": "Sigue como está en el formulario"
+   },
+   "evidencia": "mensaje del festival a Juan (21 oct): «Sigue como está en el formulario» + imagen del formulario; fila de la tabla: «22 DE OCTUBRE. 5 PM · Creando con las garras · Natt Martinez» (imagen: fuentes/bhff-2026/festival-mensaje-talleres-20261021.jpg)",
+   "funcion": "f_d5b931d897"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-10-22",
+    "hora": "17:00"
+   },
+   "casilla": "time",
+   "valor": "17:00",
+   "fuente": {
+    "tipo": "festival-mensaje",
+    "url": "https://docs.google.com/forms/d/e/1FAIpQLSfYpIeJpeGTK1Co7ki-TKppGVm5ddRRy9pFZker683OKRTJtQ/viewform",
+    "fecha": "2026-10-21",
+    "frase": "Sigue como está en el formulario"
+   },
+   "evidencia": "mensaje del festival a Juan (21 oct): «Sigue como está en el formulario» + imagen del formulario; fila de la tabla: «22 DE OCTUBRE. 5 PM · Creando con las garras · Natt Martinez» (imagen: fuentes/bhff-2026/festival-mensaje-talleres-20261021.jpg)",
+   "funcion": "f_d5b931d897"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-10-22",
+    "hora": "17:00"
+   },
+   "casilla": "title",
+   "valor": "Creando con las garras",
+   "fuente": {
+    "tipo": "festival-mensaje",
+    "url": "https://docs.google.com/forms/d/e/1FAIpQLSfYpIeJpeGTK1Co7ki-TKppGVm5ddRRy9pFZker683OKRTJtQ/viewform",
+    "fecha": "2026-10-21",
+    "frase": "Sigue como está en el formulario"
+   },
+   "evidencia": "mensaje del festival a Juan (21 oct): «Sigue como está en el formulario» + imagen del formulario; fila de la tabla: «22 DE OCTUBRE. 5 PM · Creando con las garras · Natt Martinez» (imagen: fuentes/bhff-2026/festival-mensaje-talleres-20261021.jpg)",
+   "funcion": "f_d5b931d897"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-10-23",
+    "hora": "15:00"
+   },
+   "casilla": "day",
+   "valor": "2026-10-23",
+   "fuente": {
+    "tipo": "festival-mensaje",
+    "url": "https://docs.google.com/forms/d/e/1FAIpQLSfYpIeJpeGTK1Co7ki-TKppGVm5ddRRy9pFZker683OKRTJtQ/viewform",
+    "fecha": "2026-10-21",
+    "frase": "Sigue como está en el formulario"
+   },
+   "evidencia": "mensaje del festival a Juan (21 oct): «Sigue como está en el formulario» + imagen del formulario; fila de la tabla: «23 DE OCTUBRE. 3 PM · De la idea al guion · Jhonny Ortiz Alarcon» (imagen: fuentes/bhff-2026/festival-mensaje-talleres-20261021.jpg)"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-10-23",
+    "hora": "15:00"
+   },
+   "casilla": "time",
+   "valor": "15:00",
+   "fuente": {
+    "tipo": "festival-mensaje",
+    "url": "https://docs.google.com/forms/d/e/1FAIpQLSfYpIeJpeGTK1Co7ki-TKppGVm5ddRRy9pFZker683OKRTJtQ/viewform",
+    "fecha": "2026-10-21",
+    "frase": "Sigue como está en el formulario"
+   },
+   "evidencia": "mensaje del festival a Juan (21 oct): «Sigue como está en el formulario» + imagen del formulario; fila de la tabla: «23 DE OCTUBRE. 3 PM · De la idea al guion · Jhonny Ortiz Alarcon» (imagen: fuentes/bhff-2026/festival-mensaje-talleres-20261021.jpg)"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-10-23",
+    "hora": "15:00"
+   },
+   "casilla": "title",
+   "valor": "De la idea al guion",
+   "fuente": {
+    "tipo": "festival-mensaje",
+    "url": "https://docs.google.com/forms/d/e/1FAIpQLSfYpIeJpeGTK1Co7ki-TKppGVm5ddRRy9pFZker683OKRTJtQ/viewform",
+    "fecha": "2026-10-21",
+    "frase": "Sigue como está en el formulario"
+   },
+   "evidencia": "mensaje del festival a Juan (21 oct): «Sigue como está en el formulario» + imagen del formulario; fila de la tabla: «23 DE OCTUBRE. 3 PM · De la idea al guion · Jhonny Ortiz Alarcon» (imagen: fuentes/bhff-2026/festival-mensaje-talleres-20261021.jpg)"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-10-23",
+    "hora": "17:00"
+   },
+   "casilla": "day",
+   "valor": "2026-10-23",
+   "fuente": {
+    "tipo": "festival-mensaje",
+    "url": "https://docs.google.com/forms/d/e/1FAIpQLSfYpIeJpeGTK1Co7ki-TKppGVm5ddRRy9pFZker683OKRTJtQ/viewform",
+    "fecha": "2026-10-21",
+    "frase": "Sigue como está en el formulario"
+   },
+   "evidencia": "mensaje del festival a Juan (21 oct): «Sigue como está en el formulario» + imagen del formulario; fila de la tabla: «23 DE OCTUBRE. 5 PM · VFX para no técnicos: ¿Cómo hacer cine con VFX y no morir en el intento? · Guillermo Restrepo» (imagen: fuentes/bhff-2026/festival-mensaje-talleres-20261021.jpg)"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-10-23",
+    "hora": "17:00"
+   },
+   "casilla": "time",
+   "valor": "17:00",
+   "fuente": {
+    "tipo": "festival-mensaje",
+    "url": "https://docs.google.com/forms/d/e/1FAIpQLSfYpIeJpeGTK1Co7ki-TKppGVm5ddRRy9pFZker683OKRTJtQ/viewform",
+    "fecha": "2026-10-21",
+    "frase": "Sigue como está en el formulario"
+   },
+   "evidencia": "mensaje del festival a Juan (21 oct): «Sigue como está en el formulario» + imagen del formulario; fila de la tabla: «23 DE OCTUBRE. 5 PM · VFX para no técnicos: ¿Cómo hacer cine con VFX y no morir en el intento? · Guillermo Restrepo» (imagen: fuentes/bhff-2026/festival-mensaje-talleres-20261021.jpg)"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-10-23",
+    "hora": "17:00"
+   },
+   "casilla": "title",
+   "valor": "VFX para no técnicos: ¿Cómo hacer cine con VFX y no morir en el intento?",
+   "fuente": {
+    "tipo": "festival-mensaje",
+    "url": "https://docs.google.com/forms/d/e/1FAIpQLSfYpIeJpeGTK1Co7ki-TKppGVm5ddRRy9pFZker683OKRTJtQ/viewform",
+    "fecha": "2026-10-21",
+    "frase": "Sigue como está en el formulario"
+   },
+   "evidencia": "mensaje del festival a Juan (21 oct): «Sigue como está en el formulario» + imagen del formulario; fila de la tabla: «23 DE OCTUBRE. 5 PM · VFX para no técnicos: ¿Cómo hacer cine con VFX y no morir en el intento? · Guillermo Restrepo» (imagen: fuentes/bhff-2026/festival-mensaje-talleres-20261021.jpg)"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-10-24",
+    "hora": "15:00"
+   },
+   "casilla": "day",
+   "valor": "2026-10-24",
+   "fuente": {
+    "tipo": "festival-mensaje",
+    "url": "https://docs.google.com/forms/d/e/1FAIpQLSfYpIeJpeGTK1Co7ki-TKppGVm5ddRRy9pFZker683OKRTJtQ/viewform",
+    "fecha": "2026-10-21",
+    "frase": "Sigue como está en el formulario"
+   },
+   "evidencia": "mensaje del festival a Juan (21 oct): «Sigue como está en el formulario» + imagen del formulario; fila de la tabla: «24 DE OCTUBRE. 3 PM · Arte FX · Camilo Vélez» (imagen: fuentes/bhff-2026/festival-mensaje-talleres-20261021.jpg)"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-10-24",
+    "hora": "15:00"
+   },
+   "casilla": "time",
+   "valor": "15:00",
+   "fuente": {
+    "tipo": "festival-mensaje",
+    "url": "https://docs.google.com/forms/d/e/1FAIpQLSfYpIeJpeGTK1Co7ki-TKppGVm5ddRRy9pFZker683OKRTJtQ/viewform",
+    "fecha": "2026-10-21",
+    "frase": "Sigue como está en el formulario"
+   },
+   "evidencia": "mensaje del festival a Juan (21 oct): «Sigue como está en el formulario» + imagen del formulario; fila de la tabla: «24 DE OCTUBRE. 3 PM · Arte FX · Camilo Vélez» (imagen: fuentes/bhff-2026/festival-mensaje-talleres-20261021.jpg)"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-10-24",
+    "hora": "15:00"
+   },
+   "casilla": "title",
+   "valor": "Arte FX",
+   "fuente": {
+    "tipo": "festival-mensaje",
+    "url": "https://docs.google.com/forms/d/e/1FAIpQLSfYpIeJpeGTK1Co7ki-TKppGVm5ddRRy9pFZker683OKRTJtQ/viewform",
+    "fecha": "2026-10-21",
+    "frase": "Sigue como está en el formulario"
+   },
+   "evidencia": "mensaje del festival a Juan (21 oct): «Sigue como está en el formulario» + imagen del formulario; fila de la tabla: «24 DE OCTUBRE. 3 PM · Arte FX · Camilo Vélez» (imagen: fuentes/bhff-2026/festival-mensaje-talleres-20261021.jpg)"
   }
  ]
 }
