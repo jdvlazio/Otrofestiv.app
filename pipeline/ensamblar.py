@@ -445,6 +445,10 @@ def ensamblar(fid, escribir=True):
             'event_kind': f.get('event_kind') or None,
             # `info`: drop-in sin hora de fin — se muestra y NO se planifica.
             'info': True if f.get('info') else None,
+            # ABIERTA DE VARIOS DÍAS (21 oct 2026): UNA función `info` con `hasta`
+            # (el último día) en vez de N funciones; la app la abre por día
+            # (domain/film.js expandVentanas). Sin copiarla acá, no llega al JSON.
+            'hasta': (f.get('hasta') or None) if f.get('info') else None,
             # UN TALLER DE VARIAS SESIONES es un bloque: `is_recurring` en cada
             # sesión, y la app ofrece «Añadir las N sesiones» (PROTOCOLO §4).
             # El crudo lo escribía y acá no se copiaba: el campo del protocolo
