@@ -56,7 +56,7 @@ jobs:
   # (datos)»: lo da el job que junta las 3 partes.
   datos-shard:
     needs: clasificar
-    if: needs.clasificar.outputs.datos == 'true' || github.head_ref == 'ci/datos-en-tres'  # PRUEBA-TEMPORAL
+    if: needs.clasificar.outputs.datos == 'true'
     runs-on: ubuntu-latest
     name: Regression tests datos (${{ matrix.shard }}/3)
     strategy:
@@ -87,7 +87,7 @@ jobs:
 
   datos:
     needs: [clasificar, datos-shard]
-    if: always() && (needs.clasificar.outputs.datos == 'true' || github.head_ref == 'ci/datos-en-tres')  # PRUEBA-TEMPORAL
+    if: always() && (needs.clasificar.outputs.datos == 'true')
     runs-on: ubuntu-latest
     name: Regression tests (datos)
     steps:
