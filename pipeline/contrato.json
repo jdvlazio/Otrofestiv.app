@@ -209,6 +209,10 @@
    "tipo": "boolean",
    "nota": "Drop-in sin hora fija: NO entra al plan ni a conflictos."
   },
+  "hasta": {
+   "tipo": "string",
+   "nota": "Último día (YYYY-MM-DD) de una `info` abierta varios días: UNA función, la app la abre día por día (#1229)."
+  },
   "unscheduled": {
    "tipo": "boolean",
    "nota": "En catálogo sin jornada. Única exención de day/time/venue."
