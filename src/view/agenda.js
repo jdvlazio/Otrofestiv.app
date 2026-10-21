@@ -1422,7 +1422,7 @@ function _renderSavedAgendaHTML(state, consensus){
   if(!savedAgenda||!savedAgenda.schedule.length) return watchlist.size
     ? emptyStateHero(ICONS.calendar,t('plan_tu_plan_empty'),t('empty_intereses'),t('cta_ir_planear'),'mnav-planner')
     : emptyStateHero(ICONS.calendar,t('plan_tu_plan_empty'),t('empty_intereses'),t('plan_ir_programa'),'mnav-cartelera');
-  const all=savedAgenda.schedule;
+  const all=savedAgenda.schedule;   // la abierta de varios días (_ventana en FILMS: el plan guardado no la trae) cuenta UNA vez
   // Películas marcadas vistas FUERA del plan — en watched pero no en savedAgenda
   const upcoming=all.filter(s=>!screeningPassed(s)&&!watched.has(s._title));
   const futureItems=upcoming.filter(s=>!isToday(s.day));
@@ -1458,7 +1458,7 @@ function _renderSavedAgendaHTML(state, consensus){
   // «N sin boleta» (#1077): a la derecha de «Mi Plan · 18», en ámbar; tocar filtra.
   const _nSin=funcionesSinBoleta(all).length;
   const _sinBoleta=(_nSin||_soloSinBoleta)?`<button class="boleta-falta${_soloSinBoleta?' on':''}" data-action="toggleSoloSinBoleta">${ICONS.ticket} ${t('boleta_sin',{n:_nSin})}</button>`:'';
-  const progressBar=`<div class="sec-hdr">${ICONS.calendar} <span>${t('label_mi_plan_hdr')}</span> <span class="count-badge cb-neutral">${all.length}</span>${_sinBoleta}<span class="hdr-end">${currentDayNum?`<span class="sec-hdr-opt">${t('label_dia_prog')} <b>${currentDayNum}</b> ${t('label_de_dias')} ${totalDays}</span>`:''}</span></div>`;
+  const progressBar=`<div class="sec-hdr">${ICONS.calendar} <span>${t('label_mi_plan_hdr')}</span> <span class="count-badge cb-neutral">${new Set(all.map(s=>FILMS.some(f=>f._ventana&&f.title===s._title)?'v|'+s._title:s)).size}</span>${_sinBoleta}<span class="hdr-end">${currentDayNum?`<span class="sec-hdr-opt">${t('label_dia_prog')} <b>${currentDayNum}</b> ${t('label_de_dias')} ${totalDays}</span>`:''}</span></div>`;
 
   const _ctxHeader=renderContextualHeader(state, consensus);
   let html=`<div class="saved-agenda">

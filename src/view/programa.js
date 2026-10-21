@@ -12,7 +12,7 @@
 
 import { FESTIVAL_CONFIG, SECTION_ORDER_LIST, _DEFAULT_FEST_ID } from '../config.js';
 import { ICONS, _buildPosterV16, _secLabel, _secLabelFull, _sectionColor, escXML, makeProgramPoster, parseProgramTitle } from './components.js';
-import { _dayChips, _getItemPoster, _metaBadges, _plistPosterHtml, _programaStack, dayLabel, durFmt, emptyState, getFilmPoster, isNowShowing, isQaOnlyNow, posterParts, sala, vcfg, venueMatches, secMatches, venueCity, programParts, isCitySel, venueSelLabel,
+import { _dayChips, _getItemPoster, _metaBadges, _plistPosterHtml, _programaStack, dayLabel, ventanaDias, durFmt, emptyState, getFilmPoster, isNowShowing, isQaOnlyNow, posterParts, sala, vcfg, venueMatches, secMatches, venueCity, programParts, isCitySel, venueSelLabel,
  abiertaLabel } from './helpers.js';
 import { festivalEnded, toMin } from '../domain/time.js';
 import { screeningPassed } from '../domain/film.js';
@@ -375,7 +375,7 @@ function _renderExploreListaHTML(state){
     const src=getFilmPoster(f)||'';
     const allPast=screenings.every(s=>screeningPassed(s));
     const days=[...new Set(screenings.map(s=>dayLabel(s.day)||s.day))].join(' · ');
-    const daysHtml=_dayChips(screenings);
+    const daysHtml=screenings[0]&&screenings[0]._ventana?ventanaDias(screenings[0]):_dayChips(screenings); // abierta de varios días: el rango (21 oct 2026)
     if(isEvent) return`<div class="plist-item plist-event js-open-pel" style="${allPast?'opacity:.35':''}" data-title="${escXML(f.title)}">
       <img class="plist-poster" src="${src}" alt="${dt}" loading="lazy">
       <div class="plist-info">

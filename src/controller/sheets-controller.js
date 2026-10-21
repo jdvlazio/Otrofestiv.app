@@ -8,7 +8,7 @@
 
 import {FESTIVAL_CONFIG, MAX_REMEMBERED_SLOTS, TMDB_IMG} from '../config.js';
 import { DAY_ABBR, DAY_NUM, ICONS, _secLabel, _sectionColor, escXML, festivalTagline, isFullDayBlocked, makeProgramPoster, makeSharedSlotSVG, parseProgramTitle, renderRatingStarsHTML } from '../view/components.js';
-import { _getItemPoster, _mkCortoItemHtml, _posterStyle, _posterThumb, dayLabel, emptyState, durFmt, flagFmt, getCortoItemPoster, getFilmPoster, getFilmPosterUntitled, getPosterSrc, itemPosterParts, posterAmbient, posterParts, sala, starsText, vcfg, venueCity, venueMatches, isCitySel, ticketBadgeTarget, conflictAccount, programParts, abiertaLabel, abiertaRango } from '../view/helpers.js';
+import { _getItemPoster, _mkCortoItemHtml, _posterStyle, _posterThumb, dayLabel, ventanaDias, emptyState, durFmt, flagFmt, getCortoItemPoster, getFilmPoster, getFilmPosterUntitled, getPosterSrc, itemPosterParts, posterAmbient, posterParts, sala, starsText, vcfg, venueCity, venueMatches, isCitySel, ticketBadgeTarget, conflictAccount, programParts, abiertaLabel, abiertaRango } from '../view/helpers.js';
 // countryToFlags vive en dominio (src/domain/banderas.js), junto a la tabla de
 // países GENERADA (scripts/generate-paises.js, ICU es+en). Aquí había un
 // literal escrito a mano y en pipeline/lib.py otro: divergieron en contenido y
@@ -79,8 +79,16 @@ let _cortoParentHtml=null;
 const _PRESS_ICO=`<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V4a1 1 0 011-1h11a1 1 0 011 1v18"/><path d="M17 8h2a1 1 0 011 1v10a2 2 0 01-2 2H4"/><line x1="7" y1="7" x2="14" y2="7"/><line x1="7" y1="11" x2="14" y2="11"/><line x1="7" y1="15" x2="11" y2="15"/></svg>`;
 
 function _screeningRows(pairs, opts){
+  // Una abierta de VARIOS días es UNA fila: «22 oct – 13 nov · 8:00 a 17:00»
+  // (Juan, 21 oct 2026). Sus copias por día (expandVentanas) se cuentan una vez.
+  const _vVista=new Set();
+  pairs=pairs.filter(({s,owner})=>{
+    if(!s._ventana) return true;
+    const k=owner.title+'|'+s._ventana.desde+'|'+s.venue;
+    if(_vVista.has(k)) return false; _vVista.add(k); return true;
+  });
   return pairs.map(({s,owner})=>{
-    const dayAbb=dayLabel(s.day)||s.day;
+    const dayAbb=s._ventana?ventanaDias(s):(dayLabel(s.day)||s.day);
     const vc=vcfg(s.venue),sl=sala(s);
     const _festCity=(FESTIVAL_CONFIG[_activeFestId]||{}).city||'';
     // sinCiudad: la ficha ya filtró por ciudad y la nombra arriba — acá sobra.
@@ -116,8 +124,9 @@ function _screeningRows(pairs, opts){
     }
     return`<div class="pel-sheet-screening${_planned?' in-plan':''}${s._cancelled?' scr-void':''}"${isPast?' style="opacity:.4"':''}>
       ${_planned?`<span class="sr-only">${t('plan_en_tu_plan')}</span>`:''}
-      <span class="pelicula-day" data-day="${s.day}">${dayAbb}</span>
-      <span class="pelicula-time">${owner&&owner.info?abiertaRango(owner):s.time}</span>
+      ${s._ventana?`<span class="pelicula-ventana"><span class="pelicula-day">${dayAbb}</span><span class="pelicula-time">${abiertaRango(owner)}</span></span>`
+      :`<span class="pelicula-day" data-day="${s.day}">${dayAbb}</span>
+      <span class="pelicula-time">${owner&&owner.info?abiertaRango(owner):s.time}</span>`}
       <span class="pelicula-venue" data-venue="${s.venue.replace(/"/g,'&quot;')}" data-action="openVenueSheet">${ICONS.pin} <span class="venue-text">${vc.short}${sl?' · '+sl:''}${_city?`<span class="venue-municipio">${_city}</span>`:''}</span>${s.audience==='press'?`<span class="scr-press" aria-hidden="true">${_PRESS_ICO}</span><span class="sr-only">${t('press_badge')}</span>`:''}</span>
       ${_addCtrl}
     </div>`;
