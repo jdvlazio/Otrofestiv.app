@@ -6020,9 +6020,6 @@ try:
     import json as _jav, re as _reav
     from collections import defaultdict as _ddav
     _VARIOS_NO = {   # (festival, título): porqué
-        # TRANSITORIO: el modelo `hasta` entra con este PR de app; el PR de datos de
-        # Onboarding la pasa a una función con `hasta` y BORRA esta línea.
-        ('anibia-2026', 'Una vez en un cuerpo: Habitar la imagen'): 'se pasa a `hasta` en el PR de datos que sigue',
     }
     _malas = []
     for _fav in _festivalesVivos():

@@ -98,6 +98,15 @@ def main():
         fallos.append(f'una afirmación apunta a un ancla que las láminas no tienen: {[k for k, n in lam.items() if n < 0]}')
     lam = +lam
     pub = collections.Counter((f['day'], f['time'], f['venue']) for f in films)
+    # la exposición es UNA función con ventana (`hasta`); las láminas la listan
+    # en cada día de programación → se lee como esa ventana, día por día
+    for f in films:
+        if f.get('hasta'):
+            assert f['title'] == cr.EXPO[0], f['title']
+            for d in cr.EXPO[3][1:]:
+                if not (f['day'] < d <= f['hasta']):
+                    fallos.append(f'{f["title"]}: el día {d} de las láminas cae fuera de su ventana')
+                pub[(d, f['time'], f['venue'])] += 1
     fallos += [f'en la lámina y NO en el build: {k} ×{n - pub[k]}' for k, n in lam.items() if pub[k] < n]
     fallos += [f'en el build y en NINGUNA lámina: {k} ×{n - lam[k]}' for k, n in pub.items() if lam[k] < n]
 

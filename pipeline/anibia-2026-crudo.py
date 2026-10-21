@@ -237,10 +237,11 @@ def main():
                 afs.append(afirmacion(sede, dia, hora, 'entrada', 'boleta', fu, ev))
                 afs.append(afirmacion(sede, dia, hora, 'ticket_url', tuboleta(nodo), fu, ev))
     tit, sede, sala, dias = EXPO
-    for d in dias:
-        funciones.append({'titulo': tit, 'dia': d, 'hora': '08:00', 'sede': sede, 'sala': sala,
+    # UNA entrada con su ventana (`hasta`), no una por día: la app la abre día
+    # por día y saltea los días sin programación (forma definida por Main, 21 oct)
+    funciones.append({'titulo': tit, 'dia': dias[0], 'hora': '08:00', 'sede': sede, 'sala': sala,
                           'acceso': 'Entrada libre', 'seccion': 'Exposición', 'tipo': E, 'event_kind': 'evento',
-                          'is_recurring': True, 'info': True, 'duracion_min': 540,
+                          'info': True, 'duracion_min': 540, 'hasta': '2026-11-13',
                           '_duracion_de': '8:00 a. m. a 5:00 p. m., del PDF',
                           'sinopsis': 'Exposición del 22 de octubre al 13 de noviembre, de 8:00 a. m. a 5:00 p. m.',
                           '_src': {'url': PDF, 'date': HOY}})
