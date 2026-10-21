@@ -57,7 +57,7 @@
     ""
    ],
    "Casa 18 Gastro Bar": [
-    "Casa 18 Gastro Bar - Guatapé",
+    "1811 Gelatería - Guatapé",
     ""
    ],
    "Casa de la Juventud": [
@@ -230,8 +230,10 @@
   "sharedSlotIsOneScreening": false,
   "mes_es": "octubre",
   "dias_vacios": [],
-  "_por_que_acceso": "Sin `ticketing_model`: ninguna función dice que se pague. El acceso va declarado en `_acceso` del crudo."
+  "_por_que_acceso": "Sin `ticketing_model`: ninguna función dice que se pague. El acceso va declarado en `_acceso` del crudo.",
+  "_por_que_sedes_cambios": {
+   "Casa 18 Gastro Bar": "21 oct 2026: el post del festival del mismo día (p/DewSs35OzcM) da «1811 Gelatería, Guatapé» para la Competencia Internacional de Cortometrajes del 21 a las 18:00; el carrusel del 14 oct decía «Casa 18 Gastro Bar», que ni Google ni la web conocían. Vale el más reciente."
+  }
  },
- "_fuentes_versionadas": {
- }
+ "_fuentes_versionadas": {}
 }
