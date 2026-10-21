@@ -104,6 +104,9 @@ SEDE_FUERA = {
     'Cine club Cine 40 de Minca, Santa Marta': 'función fuera de Bogotá (Minca)',
     'MAMM, El Poblado, Medellín': 'función fuera de Bogotá (Medellín)',
     'Universidad de Antioquia, Paraninfo, sala de cine': 'función fuera de Bogotá (Medellín)',
+    # 21 oct 2026: la web reescribió el Paraninfo con otro orden; misma sala, misma regla
+    'Sala de cine Paraninfo, Universidad de Antioquia, Medellín': 'función fuera de Bogotá (Medellín)',
+    'Auditorio Victoria Regia, Universidad Nacional de Colombia, sede Amazonía, Leticia': 'función fuera de Bogotá (Leticia)',
 }
 
 

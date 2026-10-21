@@ -1,10 +1,10 @@
 {
  "_provenance": {
   "fuente": "issue de radar #1031 — https://github.com/jdvlazio/Otrofestiv.app/issues/1031",
-  "capturado": "2026-10-20",
+  "capturado": "2026-10-21",
   "titulo": "RADAR: Muestra Internacional Documental de Bogotá (MIDBO) — Bogotá, 28 OCT–4 NOV (28ª)",
   "estado": "OPEN",
-  "comentarios": 6
+  "comentarios": 7
  },
  "issue": 1031,
  "titulo": "RADAR: Muestra Internacional Documental de Bogotá (MIDBO) — Bogotá, 28 OCT–4 NOV (28ª)",
@@ -34,6 +34,10 @@
   {
    "fecha": "2026-10-20",
    "cuerpo": "Vigía 19 oct (19:00): **función quitada en la web.** Las fichas de Sey Arimaku, la otra oscuridad y Galu Dugbis – La memoria de las abuelas (modificadas 19 oct 17:23) solo dan ya **3 nov 10:00, Alianza Francesa**. La app sigue mostrando también **4 nov 10:00** en Alianza Francesa. En las fichas no aparece nada más en esa franja. Sugerido: quitar la del 4 nov (o confirmarla con el festival). El resto de las 150 funciones de las fichas coincide (las 6 de fuera de Bogotá/La Picota se dejan fuera a propósito)."
+  },
+  {
+   "fecha": "2026-10-21",
+   "cuerpo": "**Vigía 21 oct 13:00 — MIDBO.** En Bogotá no cambió nada de programación (121 fichas comparadas contra la copia del 20 oct y contra producción). Lo nuevo:\n- La API ahora trae la **sinopsis de «Sey Arimaku, la otra oscuridad»** (id 1051); en la app (programa del 3 nov 10:00, Alianza Francesa, con «Galu dugbis») va sin sinopsis → cargarla.\n- Funciones nuevas FUERA de Bogotá o de las fechas (no van a la app): «¡Viva México!» (antes «Viva México») 27 oct 16:00 en el Paraninfo UdeA de Medellín (master class); «Fordlandia Panacea» 30 oct 17:00 en Leticia; las fechas de noviembre en Medellín, Santa Marta y Cartagena.\n"
   }
  ]
 }
