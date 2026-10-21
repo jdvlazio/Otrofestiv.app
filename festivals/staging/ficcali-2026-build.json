@@ -8477,6 +8477,7 @@
     }
    },
    "titulos_anteriores": [
+    "Animá Ve – Mujeres en la animación",
     "Animá Vé – Retrospectiva"
    ]
   },
@@ -9474,7 +9475,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-21T10:27:36",
+  "fecha": "2026-10-21T11:46:54",
   "plan_sha": "95ecb158e6dc8f86",
   "paso": 11,
   "cmd": "python3 pipeline/ficcali-2026-verificar.py"
