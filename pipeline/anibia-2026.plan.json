@@ -1,0 +1,58 @@
+{
+ "_nota": "ANIBIA Festival de Animación 2026 (Bogotá, 20 oct–1 nov 2026; organizan Tulpa Films, A Ocho y Medio y La Cimbra). PRE-ONBOARDING pedido por Juan el 21 oct, con triple lectura (3 lectores transcriben aparte): catálogo de los 14 programas desde las fichas de la Cinemateca + el PDF oficial, enriquecido, afiches y el BORRADOR de la grilla (festivals/staging/anibia-2026-grilla.json). No publicado: falta cruzar la grilla con los lectores, las decisiones de contenido con Juan y montar crudo/ensamblar en el modelo de la función (docs/FUNCION.md).",
+ "radar": null,
+ "radar_nota": "no hay issue de radar de Anibia (gh issue list --label radar --search Anibia, 21 oct 2026: vacío). El festival no estaba vigilado.",
+ "fuentes_vivas": [
+  {
+   "archivo": "fuentes/anibia-2026/agenda-11.html",
+   "url": "https://cinematecadebogota.gov.co/agenda/11",
+   "como": "pagina",
+   "debe_contener": "Anibia",
+   "_que": "sala, día y hora de cada programa en la Cinemateca Centro"
+  },
+  {
+   "archivo": "fuentes/anibia-2026/agenda-80.html",
+   "url": "https://cinematecadebogota.gov.co/agenda/80",
+   "como": "pagina",
+   "debe_contener": "Animage",
+   "_que": "Fontanar del Río (31 oct y 1 nov)"
+  },
+  {
+   "archivo": "fuentes/anibia-2026/agenda-112.html",
+   "url": "https://cinematecadebogota.gov.co/agenda/112",
+   "como": "pagina",
+   "debe_contener": "MU-KI-RA",
+   "_que": "Mukira en CEFE Chapinero"
+  },
+  {
+   "archivo": "fuentes/anibia-2026/fichas/3592.html",
+   "cmd": "for n in 3513 3579 3590 3591 3592 3593 3594 3595 3596 3616 3617 3618 3692; do curl -sL --max-time 60 https://cinematecadebogota.gov.co/node/peliculas/$n -o fuentes/anibia-2026/fichas/$n.html || exit 1; done",
+   "_que": "las fichas de programa: obras, sinopsis y el afiche de cada programa"
+  },
+  {
+   "archivo": "fuentes/anibia-2026/programacion.pdf",
+   "cmd": "curl -sL --max-time 300 'https://drive.google.com/uc?export=download&id=1oWVSdLh8OtO65UAX8pybuF2hhdnflkOK' -o fuentes/anibia-2026/programacion.pdf && pdftotext fuentes/anibia-2026/programacion.pdf /dev/null",
+   "_que": "la programación oficial (Linktree); mismo diseño que el carrusel IG DeQG0NPGy2f"
+  }
+ ],
+ "pasos": [
+  {
+   "cmd": "python3 pipeline/anibia-2026-catalogo.py",
+   "que": "las fichas de programa de la Cinemateca + el PDF → catálogo (88 obras en 14 programas)"
+  },
+  {
+   "cmd": "python3 pipeline/enriquecer_catalogo.py festivals/staging/anibia-2026-catalogo.json",
+   "que": "la cascada de TMDB (candado de enriquecer.py) y lo ya publicado → catálogo enriquecido"
+  },
+  {
+   "cmd": "python3 pipeline/anibia-2026-grilla.py",
+   "que": "la parrilla del PDF transcrita, con sala y hora verificadas contra la agenda de la Cinemateca → borrador del crudo"
+  }
+ ],
+ "_fuentes_versionadas": {
+  "festivals/staging/anibia-2026-catalogo.json": "las obras (88); la leerá el crudo",
+  "festivals/staging/anibia-2026-catalogo-enriquecido.json": "las fichas TMDB/cascada, que escribe el paso 2",
+  "festivals/staging/anibia-2026-correcciones.json": "sin_afiche: el porqué de cada obra sin afiche; lo leen pipeline/preonboarding.py y, con la parrilla, enriquecer.py/ensamblar.py",
+  "festivals/staging/anibia-2026-grilla.json": "BORRADOR del crudo (31 funciones + la exposición, sedes con pin); lo escribe el paso 3"
+ }
+}
