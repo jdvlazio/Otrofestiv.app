@@ -5933,6 +5933,8 @@
    "title": "Animá Ve – Retrospectiva de Maria Cristina Pérez",
    "type": "film",
    "section": "📽️ Proyecciones",
+   "country": "Colombia, Estados Unidos",
+   "flags": "🇨🇴🇺🇸",
    "duration": "90 min",
    "_ancla": [
     "Centro Cultural Comfandi - Cali",
@@ -5947,8 +5949,75 @@
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
-    "tarjeta": 14604
+    "tarjeta": 14604,
+    "obras": "https://ficcali.com/anima-ve-2026/"
    },
+   "is_cortos": true,
+   "film_list": [
+    {
+     "title": "Una vez en un cuerpo",
+     "director": "María Cristina Pérez",
+     "country": "Colombia, Estados Unidos",
+     "flags": "🇨🇴🇺🇸",
+     "year": 2025,
+     "duration": "10 min",
+     "genre": "Animación",
+     "poster": "/assets/ficcali-2026/una-vez-en-un-cuerpo.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "once-in-a-body",
+     "tmdb_id": 1522316,
+     "synopsis": "Mientras lidia con un extraño ser que vive en su interior, una mujer intenta reconciliarse con su hermana tras un incidente que las separó durante la adolescencia. Un viaje inquietante en el que tendrá que enfrentarse tanto a lo que lleva dentro como a las heridas del pasado.",
+     "synopsis_en": "While dealing with a strange being that lives inside her, a woman seeks to reconcile with her sister over an incident from their adolescence.",
+     "title_en": "Once in a Body",
+     "synopsis_lang": "es"
+    },
+    {
+     "title": "Todo es culpa de la sal",
+     "director": "María Cristina Pérez",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "year": 2020,
+     "duration": "10 min",
+     "genre": "Animación",
+     "poster": "/assets/ficcali-2026/todo-es-culpa-de-la-sal.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "its-all-the-salts-fault",
+     "tmdb_id": 711868,
+     "synopsis": "El más joven de una familia perezosa reconstruye su historia. Detrás de la normalidad de la vida cotidiana, la extravagancia se oculta en los pequeños detalles de la vida y crea recuerdos duraderos.",
+     "synopsis_en": "The youngest daughter of a family of sloths reconstructs their story. A metaphor about the sometimes wild nature that inhabits family environments.",
+     "title_en": "It's all the Salt's Fault",
+     "synopsis_lang": "es"
+    },
+    {
+     "title": "Coffee Break",
+     "director": "María Cristina Pérez, Mauricio Cuervo",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "year": 2018,
+     "duration": "9 min",
+     "genre": "Animación",
+     "poster": "/assets/ficcali-2026/coffee-break.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "coffee-break-2018",
+     "tmdb_id": 784163,
+     "synopsis_en": "Every working day for decades, at four in the afternoon, Pepe drinks coffee. The life of a deer clerk happens in the coffee room of his office. The routine fixed in his life. Fridays of expectations followed by disenchanted Mondays, while Pepe wins gray hair and loses enthusiasm."
+    },
+    {
+     "title": "Añejo",
+     "director": "María Cristina Pérez",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "year": 2014,
+     "duration": "9 min",
+     "genre": "Animación",
+     "poster": "/assets/ficcali-2026/anejo.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 535612,
+     "synopsis": "La llegada a un bar en el que nada funciona. La dueña dormida, el perro a su lado atiende el lugar. Un viejo roba los últimos sorbos de trago de las mesas. Al final todo se pierde, hasta la razón… un último trago los volverá humanos.",
+     "synopsis_en": "Añejo is a story of old men and the links that gather us in a selfish world.",
+     "synopsis_lang": "es"
+    }
+   ],
    "_fid": "f_ec05af8d70",
    "id": "f_ec05af8d70",
    "is_free": true,
@@ -5979,6 +6048,11 @@
      "url": "https://ficcali.com/programacion-ficcali-2026/"
     },
     "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-06",
+     "url": "https://ficcali.com/programacion-ficcali-2026/"
+    },
+    "film_list": {
      "tipo": "festival-web",
      "fecha": "2026-10-06",
      "url": "https://ficcali.com/programacion-ficcali-2026/"
@@ -9265,8 +9339,8 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-21T08:34:19",
-  "plan_sha": "9fffa5b761a3ad92",
+  "fecha": "2026-10-21T08:56:00",
+  "plan_sha": "3fba29a2cfab0dc2",
   "paso": 11,
   "cmd": "python3 pipeline/ficcali-2026-verificar.py"
  }

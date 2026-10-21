@@ -314,6 +314,8 @@ def _obra(o):
 
 VANGUARDIAS = (json.load(io.open(f'{REPO}/festivals/staging/ficcali-2026-ig.json', encoding='utf-8'))['vanguardias']
                if os.path.exists(f'{REPO}/festivals/staging/ficcali-2026-ig.json') else {})
+ANIMA = (json.load(io.open(f'{REPO}/festivals/staging/ficcali-2026-anima.json', encoding='utf-8'))
+         if os.path.exists(f'{REPO}/festivals/staging/ficcali-2026-anima.json') else {})
 
 
 def main():
@@ -436,6 +438,11 @@ def main():
         if _mv and VANGUARDIAS.get(_mv.group(1)):
             r['obras'] = [dict(o) for o in VANGUARDIAS[_mv.group(1)]]
             r['_src']['obras'] = 'https://www.instagram.com/p/DenDhbtmnyO/'
+        # LA RETROSPECTIVA DE MARÍA CRISTINA PÉREZ (21 oct): la programación la
+        # publica sin obras; la página de Animá Ve las lista (sidecar ficcali-2026-anima.json)
+        if re.search(r'Retrospectiva de Mar[ií]a Cristina P[ée]rez', r.get('titulo') or '') and ANIMA.get('retrospectiva_mcp'):
+            r['obras'] = [dict(o) for o in ANIMA['retrospectiva_mcp']]
+            r['_src']['obras'] = 'https://ficcali.com/anima-ve-2026/'
         funciones.append({k_: v for k_, v in r.items() if v not in (None, '')})
 
     # LA MISMA ACTIVIDAD EN VARIAS FECHAS lleva UN texto ([programa-mismo-titulo]):

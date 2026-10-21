@@ -1483,10 +1483,45 @@
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
-    "tarjeta": 14604
+    "tarjeta": 14604,
+    "obras": "https://ficcali.com/anima-ve-2026/"
    },
    "titulo": "Animá Ve – Retrospectiva de Maria Cristina Pérez",
    "seccion": "Proyecciones",
+   "obras": [
+    {
+     "titulo": "Una vez en un cuerpo",
+     "director": "María Cristina Pérez",
+     "pais": "Colombia, Estados Unidos",
+     "anio": 2025,
+     "duracion_min": 10,
+     "genero": "Animación"
+    },
+    {
+     "titulo": "Todo es culpa de la sal",
+     "director": "María Cristina Pérez",
+     "pais": "Colombia",
+     "anio": 2020,
+     "duracion_min": 10,
+     "genero": "Animación"
+    },
+    {
+     "titulo": "Coffee Break",
+     "director": "María Cristina Pérez, Mauricio Cuervo",
+     "pais": "Colombia",
+     "anio": 2018,
+     "duracion_min": 9,
+     "genero": "Animación"
+    },
+    {
+     "titulo": "Añejo",
+     "director": "María Cristina Pérez",
+     "pais": "Colombia",
+     "anio": 2014,
+     "duracion_min": 9,
+     "genero": "Animación"
+    }
+   ],
    "duracion_min": 90,
    "_duracion_de": "el hueco hasta la siguiente en la misma sede (tope 90, 60 si es la última)"
   },
