@@ -48,7 +48,9 @@ HOY = '2026-10-21'
 CIN, FON, CEFE = 'Cinemateca de Bogotá', 'Cinemateca Fontanar del Río', 'CEFE Chapinero'
 NAL = 'Universidad Nacional, Edificio 303 (NEA)'
 TADB, TAD4 = 'Universidad Jorge Tadeo Lozano, Ed. Biblioteca', 'Universidad Jorge Tadeo Lozano, Módulo 4'
-JAV, ATI = 'Pontificia Universidad Javeriana, Ed. Gerardo Arango', 'Pontificia Universidad Javeriana, Edificio Ático'
+# Una sede, la Javeriana; el edificio es la sala (como la UNAL 303). El detalle
+# (Hall entrada admin. Facultad de Artes / Auditorio piso 5) va en la _nota de venues-geo.
+JAV = ATI = 'Pontificia Universidad Javeriana'
 LIBRE = 'Entrada libre / hasta completa aforo'
 AGENDA_DE = {CIN: 11, FON: 80, CEFE: 112}     # la sede → su agenda en cinematecadebogota.gov.co
 E = 'evento'
@@ -108,11 +110,11 @@ FUNCIONES = [
       'sinopsis': 'Profesionales y estudios observan los reels y proyectos en progreso (wips) de artistas noveles.'}),
     ('2026-10-28', '17:00', 'Caballo Loco Studio: Crear antes de animar', 'Charla', NAL, 'Bloque C, Auditorio 422', LIBRE, None, None,
      {'tipo': E, 'event_kind': 'charla', 'duracion_min': 90, '_duracion_de': '90 min declarados: el PDF no la da'}),
-    ('2026-10-30', '16:00', 'Mi papá el camión', 'Conexión de Largo Aliento', ATI, 'Auditorio piso 5', LIBRE, None, None,
+    ('2026-10-30', '16:00', 'Mi papá el camión', 'Conexión de Largo Aliento', ATI, 'Ed. Ático', LIBRE, None, None,
      {'tipo': E, 'event_kind': 'conversatorio', 'duracion_min': 120, '_duracion_de': '120 min: hasta el siguiente, a las 18:00',
       'sinopsis': 'Pez Dorado. Un espacio para conversar sobre el proceso creativo, las historias y los detalles detrás '
                   'del inicio de la producción de un largometraje.'}),
-    ('2026-10-30', '18:00', 'Desechable', 'Conexión de Largo Aliento', ATI, 'Auditorio piso 5', LIBRE, None, None,
+    ('2026-10-30', '18:00', 'Desechable', 'Conexión de Largo Aliento', ATI, 'Ed. Ático', LIBRE, None, None,
      {'tipo': E, 'event_kind': 'conversatorio', 'duracion_min': 90, '_duracion_de': '90 min declarados: el PDF no la da',
       'sinopsis': 'Nocroma. Un espacio para conversar sobre el proceso creativo, las historias y los detalles detrás '
                   'del inicio de la producción de un largometraje.'}),
@@ -121,7 +123,7 @@ FUNCIONES = [
 ]
 # La exposición: 22 oct–13 nov, 8:00–17:00; el PDF la lista en cada día de
 # programación desde el 22 (no el 26 ni el 29). Se recorre, no se reserva → info.
-EXPO = ('Una vez en un cuerpo: Habitar la imagen', JAV, 'Hall entrada admin. Facultad de Artes',
+EXPO = ('Una vez en un cuerpo: Habitar la imagen', JAV, 'Ed. Gerardo Arango',
         ['2026-10-22', '2026-10-23', '2026-10-24', '2026-10-25', '2026-10-27', '2026-10-28',
          '2026-10-30', '2026-10-31', '2026-11-01'])
 

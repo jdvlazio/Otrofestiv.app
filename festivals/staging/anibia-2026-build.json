@@ -285,14 +285,14 @@
    "lng": -74.0816443,
    "address": "Av. Cra. 30 # 45-03"
   },
-  "Pontificia Universidad Javeriana, Edificio Ático - Bogotá": {
-   "short": "Pontificia Universidad Javeriana, Edificio Ático",
+  "Pontificia Universidad Javeriana - Bogotá": {
+   "short": "Pontificia Universidad Javeriana",
    "city": "Bogotá",
    "_prec": "manual",
-   "_nota": "Google Maps «Edificio Atico» (Javeriana), a ~60 m del Gerardo Arango: otro edificio del campus",
-   "lat": 4.6268009,
-   "lng": -74.0650103,
-   "address": "Calle 40B # 6-23"
+   "_nota": "Pin del Ed. Gerardo Arango (Google Maps «Edificio Gerardo Arango S,J. - Facultad de Artes», Calle 40B # 5-37): la exposición, sala «Ed. Gerardo Arango» = Hall entrada admin. Facultad de Artes. Las charlas, sala «Ed. Ático» = Auditorio piso 5 del Edificio Ático (Calle 40B # 6-23), a ~60 m",
+   "lat": 4.626481,
+   "lng": -74.0644571,
+   "address": "Calle 40B # 5-37"
   },
   "Cinemateca Fontanar del Río - Bogotá": {
    "short": "Cinemateca Fontanar del Río",
@@ -302,15 +302,6 @@
    "lat": 4.7561244,
    "lng": -74.1110572,
    "address": "Calle 146 # 138A-99"
-  },
-  "Pontificia Universidad Javeriana, Ed. Gerardo Arango - Bogotá": {
-   "short": "Pontificia Universidad Javeriana, Ed. Gerardo Arango",
-   "city": "Bogotá",
-   "_prec": "manual",
-   "_nota": "Google Maps «Edificio Gerardo Arango S,J. - Facultad de Artes»",
-   "lat": 4.626481,
-   "lng": -74.0644571,
-   "address": "Calle 40B # 5-37"
   }
  },
  "_avisos_id": [],
@@ -4471,15 +4462,15 @@
    "section": "🎙️ Conexión de Largo Aliento",
    "duration": "120 min",
    "_ancla": [
-    "Pontificia Universidad Javeriana, Edificio Ático - Bogotá",
+    "Pontificia Universidad Javeriana - Bogotá",
     "2026-10-30",
     "16:00"
    ],
    "day": "2026-10-30",
    "time": "16:00",
    "day_order": 10,
-   "venue": "Pontificia Universidad Javeriana, Edificio Ático - Bogotá",
-   "sala": "Auditorio piso 5",
+   "venue": "Pontificia Universidad Javeriana - Bogotá",
+   "sala": "Ed. Ático",
    "event_kind": "conversatorio",
    "has_qa": false,
    "_src": {
@@ -4550,15 +4541,15 @@
    "section": "🎙️ Conexión de Largo Aliento",
    "duration": "90 min",
    "_ancla": [
-    "Pontificia Universidad Javeriana, Edificio Ático - Bogotá",
+    "Pontificia Universidad Javeriana - Bogotá",
     "2026-10-30",
     "18:00"
    ],
    "day": "2026-10-30",
    "time": "18:00",
    "day_order": 10,
-   "venue": "Pontificia Universidad Javeriana, Edificio Ático - Bogotá",
-   "sala": "Auditorio piso 5",
+   "venue": "Pontificia Universidad Javeriana - Bogotá",
+   "sala": "Ed. Ático",
    "event_kind": "conversatorio",
    "has_qa": false,
    "_src": {
@@ -4982,15 +4973,15 @@
    "section": "🖼️ Exposición",
    "duration": "540 min",
    "_ancla": [
-    "Pontificia Universidad Javeriana, Ed. Gerardo Arango - Bogotá",
+    "Pontificia Universidad Javeriana - Bogotá",
     "2026-10-22",
     "08:00"
    ],
    "day": "2026-10-22",
    "time": "08:00",
    "day_order": 2,
-   "venue": "Pontificia Universidad Javeriana, Ed. Gerardo Arango - Bogotá",
-   "sala": "Hall entrada admin. Facultad de Artes",
+   "venue": "Pontificia Universidad Javeriana - Bogotá",
+   "sala": "Ed. Gerardo Arango",
    "event_kind": "evento",
    "info": true,
    "is_recurring": true,
@@ -5063,15 +5054,15 @@
    "section": "🖼️ Exposición",
    "duration": "540 min",
    "_ancla": [
-    "Pontificia Universidad Javeriana, Ed. Gerardo Arango - Bogotá",
+    "Pontificia Universidad Javeriana - Bogotá",
     "2026-10-23",
     "08:00"
    ],
    "day": "2026-10-23",
    "time": "08:00",
    "day_order": 3,
-   "venue": "Pontificia Universidad Javeriana, Ed. Gerardo Arango - Bogotá",
-   "sala": "Hall entrada admin. Facultad de Artes",
+   "venue": "Pontificia Universidad Javeriana - Bogotá",
+   "sala": "Ed. Gerardo Arango",
    "event_kind": "evento",
    "info": true,
    "is_recurring": true,
@@ -5144,15 +5135,15 @@
    "section": "🖼️ Exposición",
    "duration": "540 min",
    "_ancla": [
-    "Pontificia Universidad Javeriana, Ed. Gerardo Arango - Bogotá",
+    "Pontificia Universidad Javeriana - Bogotá",
     "2026-10-24",
     "08:00"
    ],
    "day": "2026-10-24",
    "time": "08:00",
    "day_order": 4,
-   "venue": "Pontificia Universidad Javeriana, Ed. Gerardo Arango - Bogotá",
-   "sala": "Hall entrada admin. Facultad de Artes",
+   "venue": "Pontificia Universidad Javeriana - Bogotá",
+   "sala": "Ed. Gerardo Arango",
    "event_kind": "evento",
    "info": true,
    "is_recurring": true,
@@ -5225,15 +5216,15 @@
    "section": "🖼️ Exposición",
    "duration": "540 min",
    "_ancla": [
-    "Pontificia Universidad Javeriana, Ed. Gerardo Arango - Bogotá",
+    "Pontificia Universidad Javeriana - Bogotá",
     "2026-10-25",
     "08:00"
    ],
    "day": "2026-10-25",
    "time": "08:00",
    "day_order": 5,
-   "venue": "Pontificia Universidad Javeriana, Ed. Gerardo Arango - Bogotá",
-   "sala": "Hall entrada admin. Facultad de Artes",
+   "venue": "Pontificia Universidad Javeriana - Bogotá",
+   "sala": "Ed. Gerardo Arango",
    "event_kind": "evento",
    "info": true,
    "is_recurring": true,
@@ -5306,15 +5297,15 @@
    "section": "🖼️ Exposición",
    "duration": "540 min",
    "_ancla": [
-    "Pontificia Universidad Javeriana, Ed. Gerardo Arango - Bogotá",
+    "Pontificia Universidad Javeriana - Bogotá",
     "2026-10-27",
     "08:00"
    ],
    "day": "2026-10-27",
    "time": "08:00",
    "day_order": 7,
-   "venue": "Pontificia Universidad Javeriana, Ed. Gerardo Arango - Bogotá",
-   "sala": "Hall entrada admin. Facultad de Artes",
+   "venue": "Pontificia Universidad Javeriana - Bogotá",
+   "sala": "Ed. Gerardo Arango",
    "event_kind": "evento",
    "info": true,
    "is_recurring": true,
@@ -5387,15 +5378,15 @@
    "section": "🖼️ Exposición",
    "duration": "540 min",
    "_ancla": [
-    "Pontificia Universidad Javeriana, Ed. Gerardo Arango - Bogotá",
+    "Pontificia Universidad Javeriana - Bogotá",
     "2026-10-28",
     "08:00"
    ],
    "day": "2026-10-28",
    "time": "08:00",
    "day_order": 8,
-   "venue": "Pontificia Universidad Javeriana, Ed. Gerardo Arango - Bogotá",
-   "sala": "Hall entrada admin. Facultad de Artes",
+   "venue": "Pontificia Universidad Javeriana - Bogotá",
+   "sala": "Ed. Gerardo Arango",
    "event_kind": "evento",
    "info": true,
    "is_recurring": true,
@@ -5468,15 +5459,15 @@
    "section": "🖼️ Exposición",
    "duration": "540 min",
    "_ancla": [
-    "Pontificia Universidad Javeriana, Ed. Gerardo Arango - Bogotá",
+    "Pontificia Universidad Javeriana - Bogotá",
     "2026-10-30",
     "08:00"
    ],
    "day": "2026-10-30",
    "time": "08:00",
    "day_order": 10,
-   "venue": "Pontificia Universidad Javeriana, Ed. Gerardo Arango - Bogotá",
-   "sala": "Hall entrada admin. Facultad de Artes",
+   "venue": "Pontificia Universidad Javeriana - Bogotá",
+   "sala": "Ed. Gerardo Arango",
    "event_kind": "evento",
    "info": true,
    "is_recurring": true,
@@ -5549,15 +5540,15 @@
    "section": "🖼️ Exposición",
    "duration": "540 min",
    "_ancla": [
-    "Pontificia Universidad Javeriana, Ed. Gerardo Arango - Bogotá",
+    "Pontificia Universidad Javeriana - Bogotá",
     "2026-10-31",
     "08:00"
    ],
    "day": "2026-10-31",
    "time": "08:00",
    "day_order": 11,
-   "venue": "Pontificia Universidad Javeriana, Ed. Gerardo Arango - Bogotá",
-   "sala": "Hall entrada admin. Facultad de Artes",
+   "venue": "Pontificia Universidad Javeriana - Bogotá",
+   "sala": "Ed. Gerardo Arango",
    "event_kind": "evento",
    "info": true,
    "is_recurring": true,
@@ -5630,15 +5621,15 @@
    "section": "🖼️ Exposición",
    "duration": "540 min",
    "_ancla": [
-    "Pontificia Universidad Javeriana, Ed. Gerardo Arango - Bogotá",
+    "Pontificia Universidad Javeriana - Bogotá",
     "2026-11-01",
     "08:00"
    ],
    "day": "2026-11-01",
    "time": "08:00",
    "day_order": 12,
-   "venue": "Pontificia Universidad Javeriana, Ed. Gerardo Arango - Bogotá",
-   "sala": "Hall entrada admin. Facultad de Artes",
+   "venue": "Pontificia Universidad Javeriana - Bogotá",
+   "sala": "Ed. Gerardo Arango",
    "event_kind": "evento",
    "info": true,
    "is_recurring": true,
@@ -5708,8 +5699,8 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-21T14:44:44",
-  "plan_sha": "23e589c00c9ecac5",
+  "fecha": "2026-10-21T15:22:20",
+  "plan_sha": "494130f520ea5eb9",
   "paso": 7,
   "cmd": "python3 pipeline/anibia-2026-verificar.py"
  }

@@ -35,8 +35,8 @@ SEDE_B = {
     'CEFE Chapinero': 'CEFE Chapinero - Bogotá',
     'Cinemateca Sala Alterna UNAL': 'Universidad Nacional, Edificio 303 (NEA) - Bogotá',
     'Universidad Nacional de Colombia': 'Universidad Nacional, Edificio 303 (NEA) - Bogotá',
-    'Hall entrada admin. Facultad de Artes, Edf. Gerardo Arango S.J': 'Pontificia Universidad Javeriana, Ed. Gerardo Arango - Bogotá',
-    'Edificio Gerardo Arango S. J': 'Pontificia Universidad Javeriana, Ed. Gerardo Arango - Bogotá',
+    'Hall entrada admin. Facultad de Artes, Edf. Gerardo Arango S.J': 'Pontificia Universidad Javeriana - Bogotá',
+    'Edificio Gerardo Arango S. J': 'Pontificia Universidad Javeriana - Bogotá',
 }
 
 
@@ -45,7 +45,7 @@ def sede_b(x):
         return ('Universidad Jorge Tadeo Lozano, Módulo 4 - Bogotá' if 'Módulo 4' in (x['sala'] or '')
                 else 'Universidad Jorge Tadeo Lozano, Ed. Biblioteca - Bogotá')
     if x['sede'] == 'Pontificia Universidad Javeriana' and 'Ático' in (x['sala'] or ''):
-        return 'Pontificia Universidad Javeriana, Edificio Ático - Bogotá'
+        return 'Pontificia Universidad Javeriana - Bogotá'
     return SEDE_B[x['sede']]
 
 
