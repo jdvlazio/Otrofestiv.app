@@ -8,6 +8,7 @@ Uso:
 
 Qué hace, en orden (si un paso falla, no sigue). Los GUARDIANES son los mismos
 que protegen hoy un PR de datos — publicar aparte no se salta ninguno (Juan, 18 oct):
+  0. el catálogo de obras al día con los festivales (catalogo_construir.py --comprobar)
   1. guardianes (los tests de navegador leen el archivo LOCAL: en el servidor de
      pruebas la app no usa el almacén — datos-fuente.js, 19 oct 2026):
      a. scripts/validate-festivals.js <festival>   (forma del festival, segundos)
@@ -79,6 +80,10 @@ def guardianes(fest, ruta, contenido):
     _v = fuentes_vivas.frenar_si_vencidas(fest, f'python3 pipeline/correr.py {fest} --bajar')
     if _v:
         sys.exit(_v)
+    # 0·c. el catálogo al día: es DERIVADO de todos los festivales. Si un cambio no
+    #      lo re-arma, el próximo --escribir arrastra 30 archivos ajenos (FICCALI
+    #      #1218/#1219, 21 oct 2026). Con la caché de TMDB no usa la red (~60 s)
+    r = _correr('catálogo al día', ['python3', 'pipeline/catalogo_construir.py', '--comprobar'], tiempo=300)
     # a. forma del festival
     _correr('validate-festivals', ['node', 'scripts/validate-festivals.js', fest])
     # b. validate.py completo: imprime «PUSH BLOQUEADO» y sale distinto de 0
