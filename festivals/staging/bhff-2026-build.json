@@ -2501,6 +2501,91 @@
     }
    },
    "duration": "90 min"
+  },
+  {
+   "title": "Maquillaje con las Garras",
+   "type": "event",
+   "section": "🛠️ Talleres",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-22",
+    "17:00"
+   ],
+   "day": "2026-10-22",
+   "time": "17:00",
+   "day_order": 0,
+   "venue": "Cinemateca de Bogotá - Bogotá",
+   "sala": "Lab 1",
+   "event_kind": "taller",
+   "has_qa": false,
+   "_src": {
+    "url": "https://www.instagram.com/p/Deu5XIPuFHo/",
+    "date": "2026-10-20",
+    "acceso": "https://bogotahorrorfilmfest.com/talleres/"
+   },
+   "requires_registration": true,
+   "description": "Nat Martínez",
+   "description_lang": "es",
+   "_fid": "f_d5b931d897",
+   "id": "f_d5b931d897",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-20",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-20",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-20",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-20",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-20",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "requires_registration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-20",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-20",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-20",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-20",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-20",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "duration": {
+     "tipo": "regla",
+     "marca": "estimado"
+    }
+   },
+   "duration": "90 min"
   }
  ],
  "_avisos_duracion": [
@@ -2508,7 +2593,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-20T11:46:24",
+  "fecha": "2026-10-20T20:17:24",
   "plan_sha": "104188497fe430c6",
   "paso": 9,
   "cmd": "python3 pipeline/bhff-2026-verificar.py"
