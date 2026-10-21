@@ -14,10 +14,6 @@
  "generos": [
   "Terror"
  ],
- "afiche": {
-  "archivo": "https://image.tmdb.org/t/p/w500/3HM13mmdNbSiKIuyBpH1vZwz9H1.jpg",
-  "veredicto": "fotograma"
- },
  "xref": {
   "tmdb": 939823,
   "letterboxd": "robo-macabro"
@@ -30,5 +26,9 @@
  ],
  "presentaciones": [
   "fantasmagoria-2026"
- ]
+ ],
+ "afiche": {
+  "archivo": "https://image.tmdb.org/t/p/w500/3HM13mmdNbSiKIuyBpH1vZwz9H1.jpg",
+  "veredicto": "fotograma"
+ }
 }
