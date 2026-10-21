@@ -124,14 +124,6 @@
   "_match": "Google Maps «Parque Principal de Guatapé»",
   "_nota": "Aproximado al parque principal: Google solo conoce el de La Ceja y ninguna fuente da la dirección del de Guatapé."
  },
- "Casa 18 Gastro Bar - Guatapé": {
-  "n": 0,
-  "lat": 6.2342773,
-  "lng": -75.1617247,
-  "_prec": "manual",
-  "_match": "Google Maps «Parque Principal de Guatapé»",
-  "_nota": "Aproximado al parque principal: ni Google ni la web lo conocen."
- },
  "Finca La Manuela - Guatapé": {
   "n": 0,
   "lat": 6.2351704,
@@ -139,5 +131,13 @@
   "_prec": "manual",
   "_match": "Google Maps «La Manuela Park»",
   "_nota": "Confirmado por prensa (El Colombiano, El Tiempo, Infobae): la antigua finca en una isla del embalse; el festival ya hizo ahí su función de 2025 (p/DQdFGtVjcgo)."
+ },
+ "1811 Gelatería - Guatapé": {
+  "n": 0,
+  "lat": 6.2327157,
+  "lng": -75.1610147,
+  "_prec": "manual",
+  "_match": "Google Maps «Pizzería 1811», Calle 28 (Calle Jiménez) #28-57, Guatapé",
+  "_nota": "Pin exacto (21 oct 2026). El festival la llama «1811 Gelatería» (p/DewSs35OzcM); en Google figura como Pizzería 1811, misma marca. Reemplaza a «Casa 18 Gastro Bar», que tenía pin aproximado al parque."
  }
 }

@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "Instagram @guatapefilmfest — el carrusel oficial de programación (11 láminas)",
-  "capturado": "2026-10-20",
+  "capturado": "2026-10-21",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_sedes": "El nombre de la lámina → la sede, en tabla explícita. El Domo y la Tarima Principal están dentro del Parque Principal y van como sala; la Pantalla CORNARE es la sala del Malecón.",
@@ -24,6 +24,9 @@
  "sharedSlotIsOneScreening": false,
  "dias_vacios": [],
  "_por_que_acceso": "Sin `ticketing_model`: ninguna función dice que se pague. El acceso va declarado en `_acceso` del crudo.",
+ "_por_que_sedes_cambios": {
+  "Casa 18 Gastro Bar": "21 oct 2026: el post del festival del mismo día (p/DewSs35OzcM) da «1811 Gelatería, Guatapé» para la Competencia Internacional de Cortometrajes del 21 a las 18:00; el carrusel del 14 oct decía «Casa 18 Gastro Bar», que ni Google ni la web conocían. Vale el más reciente."
+ },
  "prioLimit": 3,
  "dias": [
   "2026-10-21",
@@ -192,15 +195,15 @@
    "_match": "Google Maps «Parque Principal de Guatapé»",
    "_nota": "Aproximado al parque principal: Google solo conoce el de La Ceja y ninguna fuente da la dirección del de Guatapé."
   },
-  "Casa 18 Gastro Bar - Guatapé": {
-   "short": "Casa 18 Gastro Bar",
+  "1811 Gelatería - Guatapé": {
+   "short": "1811 Gelatería",
    "city": "Guatapé",
    "n": 0,
-   "lat": 6.2342773,
-   "lng": -75.1617247,
+   "lat": 6.2327157,
+   "lng": -75.1610147,
    "_prec": "manual",
-   "_match": "Google Maps «Parque Principal de Guatapé»",
-   "_nota": "Aproximado al parque principal: ni Google ni la web lo conocen."
+   "_match": "Google Maps «Pizzería 1811», Calle 28 (Calle Jiménez) #28-57, Guatapé",
+   "_nota": "Pin exacto (21 oct 2026). El festival la llama «1811 Gelatería» (p/DewSs35OzcM); en Google figura como Pizzería 1811, misma marca. Reemplaza a «Casa 18 Gastro Bar», que tenía pin aproximado al parque."
   },
   "Centro de Eventos Guatapé Plaza - Guatapé": {
    "short": "Centro de Eventos Guatapé Plaza",
@@ -508,14 +511,14 @@
    "flags": "🇧🇷🇦🇷🇪🇸",
    "duration": "15 min",
    "_ancla": [
-    "Casa 18 Gastro Bar - Guatapé",
+    "1811 Gelatería - Guatapé",
     "2026-10-21",
     "18:00"
    ],
    "day": "2026-10-21",
    "time": "18:00",
    "day_order": 0,
-   "venue": "Casa 18 Gastro Bar - Guatapé",
+   "venue": "1811 Gelatería - Guatapé",
    "has_qa": false,
    "_src": {
     "url": "https://www.instagram.com/p/Def6fhKDSQy/",
@@ -4506,8 +4509,8 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-20T09:27:47",
-  "plan_sha": "74eaa046cae49b36",
+  "fecha": "2026-10-21T08:40:14",
+  "plan_sha": "e4564939112b8067",
   "paso": 6,
   "cmd": "python3 pipeline/guatape-2026-verificar.py"
  }
