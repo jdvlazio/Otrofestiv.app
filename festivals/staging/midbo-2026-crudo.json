@@ -1,11 +1,12 @@
 {
  "_provenance": {
   "fuente": "midbo.co — ficha de cada obra (bloque «Funciones») + API pelicula/seccion",
-  "capturado": "2026-10-20",
+  "capturado": "2026-10-21",
   "url": "https://midbo.co/",
   "metodo": "120 fichas; sección = categoría madre, programa = hija"
  },
  "_excluidas": [
+  "2026-10-27 16:00 ¡Viva México!: función fuera de Bogotá (Medellín)",
   "2026-11-07 16:30 Hanoi, martes 13: fuera del 27 oct–4 nov oficial (Cinemateca del Caribe, Barranquilla)",
   "2026-11-10 14:30 Hanoi, martes 13: fuera del 27 oct–4 nov oficial (Sala Langosta Azul, Universidad del Magdalena, Santa Marta)",
   "2026-11-14 16:30 Hanoi, martes 13: fuera del 27 oct–4 nov oficial (Cinemateca La Tertulia, Cali)",
@@ -22,15 +23,19 @@
   "2026-11-07 16:30 Iré a Santiago: fuera del 27 oct–4 nov oficial (Cinemateca del Caribe, Barranquilla)",
   "2026-11-10 14:30 Iré a Santiago: fuera del 27 oct–4 nov oficial (Sala Langosta Azul, Universidad del Magdalena, Santa Marta)",
   "2026-11-14 16:30 Iré a Santiago: fuera del 27 oct–4 nov oficial (Cinemateca La Tertulia, Cali)",
+  "2026-11-24 18:00 Iré a Santiago: fuera del 27 oct–4 nov oficial (Cinema El Volador, Universidad Nacional de Colombia, sede Medellín)",
   "2026-11-07 16:30 En la otra isla: fuera del 27 oct–4 nov oficial (Cinemateca del Caribe, Barranquilla)",
   "2026-11-10 14:30 En la otra isla: fuera del 27 oct–4 nov oficial (Sala Langosta Azul, Universidad del Magdalena, Santa Marta)",
   "2026-11-14 16:30 En la otra isla: fuera del 27 oct–4 nov oficial (Cinemateca La Tertulia, Cali)",
+  "2026-11-24 18:00 En la otra isla: fuera del 27 oct–4 nov oficial (Cinema El Volador, Universidad Nacional de Colombia, sede Medellín)",
   "2026-11-07 16:30 Una isla para Miguel: fuera del 27 oct–4 nov oficial (Cinemateca del Caribe, Barranquilla)",
   "2026-11-10 14:30 Una isla para Miguel: fuera del 27 oct–4 nov oficial (Sala Langosta Azul, Universidad del Magdalena, Santa Marta)",
   "2026-11-14 16:30 Una isla para Miguel: fuera del 27 oct–4 nov oficial (Cinemateca La Tertulia, Cali)",
+  "2026-11-24 18:00 Una isla para Miguel: fuera del 27 oct–4 nov oficial (Cinema El Volador, Universidad Nacional de Colombia, sede Medellín)",
   "2026-11-07 16:30 Isla del tesoro: fuera del 27 oct–4 nov oficial (Cinemateca del Caribe, Barranquilla)",
   "2026-11-10 14:30 Isla del tesoro: fuera del 27 oct–4 nov oficial (Sala Langosta Azul, Universidad del Magdalena, Santa Marta)",
   "2026-11-14 16:30 Isla del tesoro: fuera del 27 oct–4 nov oficial (Cinemateca La Tertulia, Cali)",
+  "2026-11-24 18:00 Isla del tesoro: fuera del 27 oct–4 nov oficial (Cinema El Volador, Universidad Nacional de Colombia, sede Medellín)",
   "2026-11-07 16:30 L.B.J.: fuera del 27 oct–4 nov oficial (Cinemateca del Caribe, Barranquilla)",
   "2026-11-10 14:30 L.B.J.: fuera del 27 oct–4 nov oficial (Sala Langosta Azul, Universidad del Magdalena, Santa Marta)",
   "2026-11-14 16:30 L.B.J.: fuera del 27 oct–4 nov oficial (Cinemateca La Tertulia, Cali)",
@@ -43,10 +48,14 @@
   "2026-11-07 16:30 79 primaveras: fuera del 27 oct–4 nov oficial (Cinemateca del Caribe, Barranquilla)",
   "2026-11-10 14:30 79 primaveras: fuera del 27 oct–4 nov oficial (Sala Langosta Azul, Universidad del Magdalena, Santa Marta)",
   "2026-11-14 16:30 79 primaveras: fuera del 27 oct–4 nov oficial (Cinemateca La Tertulia, Cali)",
+  "2026-11-19 10:00 Escrito sobre un cuerpo: fuera del 27 oct–4 nov oficial (Casa de Bolívar, Cartagena)",
+  "2026-11-19 10:00 Gestos para romper una imagen: fuera del 27 oct–4 nov oficial (Casa de Bolívar, Cartagena)",
+  "2026-11-19 10:00 Lengua muerta: fuera del 27 oct–4 nov oficial (Casa de Bolívar, Cartagena)",
   "2026-11-25 18:30 Instrucciones para cuando no esté: fuera del 27 oct–4 nov oficial (MAMM, El Poblado, Medellín)",
   "Nacer de nuevo: función que la regla de fecha no lee (6 de noviembre / 10:00 a.m. · Salón GABO, Universidad del Norte, Barranquilla)",
   "2026-11-28 16:30 De cierta manera: fuera del 27 oct–4 nov oficial (MAMM, El Poblado, Medellín)",
   "2026-11-07 19:00 De cierta manera: fuera del 27 oct–4 nov oficial (Cinemateca del Caribe, Barranquilla)",
+  "2026-11-10 14:30 Mi aporte: fuera del 27 oct–4 nov oficial (Sala Langosta Azul, Universidad del Magdalena)",
   "2026-10-27 14:00 L’Evangile de la Révolution: función fuera de Bogotá (Santa Marta)",
   "2026-11-06 11:30 Retratos de Churcampa: fuera del 27 oct–4 nov oficial (Sala 3, Cinemateca de Bogotá)",
   "2026-11-13 11:30 Retratos de Churcampa: fuera del 27 oct–4 nov oficial (Sala 3, Cinemateca de Bogotá)",
@@ -54,7 +63,9 @@
   "2026-12-11 11:30 Retratos de Churcampa: fuera del 27 oct–4 nov oficial (Sala 3, Cinemateca de Bogotá)",
   "2026-11-22 17:00 Bojayá: la verdad desde adentro: fuera del 27 oct–4 nov oficial (Cinemateca La Tertulia, Cali)",
   "2026-10-28 09:00 Boyuna: función dentro de un centro penitenciario («MIDBO va a las cárceles»)",
+  "2026-11-19 10:00 Dreams for a Better Past: fuera del 27 oct–4 nov oficial (Casa de Bolívar, Cartagena)",
   "2026-10-28 18:00 Un lugar más grande: función fuera de Bogotá (Medellín)",
+  "2026-10-30 17:00 Fordlândia Panacea: función fuera de Bogotá (Leticia)",
   "2026-10-30 18:30 Montaña luminosa: función fuera de Bogotá (Minca)",
   "2026-10-30 18:30 Un río de aguas profundas y luminosas: función fuera de Bogotá (Minca)",
   "2026-10-30 18:30 La forma y la raíz: función fuera de Bogotá (Minca)",
@@ -141,8 +152,7 @@
      "duracion_min": 33,
      "sinopsis": "En la comuna 13 de Medellín existe la fosa urbana a cielo abierto más grande de América Latina. Durante más de veinte años, La Escombrera ha sido señalada por familias de personas víctimas de desaparición forzada como el lugar donde posiblemente se encuentren muchos de los 503 desaparecidos de este territorio. Mujeres Caminando por la Verdad lidera la búsqueda forense que, en medio de incontables obstáculos y tras dos décadas de negacionismo, desencadenó en el hallazgo de cuerpos en diciembre del año 2024. Este acontecimiento histórico, una bocanada de aire fresco para las familias buscadoras, envió un mensaje muy claro a toda Colombia: la tierra ha comenzado a hablar."
     }
-   ],
-   "duracion_min": 88
+   ]
   },
   {
    "dia": "2026-10-28",
@@ -459,7 +469,7 @@
      "sinopsis": "Dos mujeres intercambian cartas fílmicas que cruzan el pasado y el presente, entrelazando material de archivo de películas amateur con material ficticio actual filmado en 16 mm. Nunca se conocen en persona, sólo en sus películas. Heidrun, una vienesa retratada mediante material de archivo, y Sara, una inmigrante colombiana que trabaja en el archivo fílmico del Museo Austriaco del Cine. Ambas viven en Viena en diferentes épocas y observan la ciudad desde sus respectivas y sus situaciones de vida. La película aborda temas como la migración, el desarraigo y el racismo, y adopta una dimensión ensayística al cuestionar qué merece ser archivado y qué no."
     }
    ],
-   "duracion_min": 76
+   "duracion_min": 99
   },
   {
    "titulo": "Programa 3: Acompañar y restituir la memoria familiar y colectiva",
@@ -1644,7 +1654,7 @@
      "sinopsis": "En lo alto del páramo de Chiscas, en Boyacá, viven las ovejas que Edualdo y Ana cuidan desde hace décadas. En medio de la niebla, Wilmer, su hijo menor, crece entre el juego y las rutinas del campo. En esta película, la geografía no es sólo escenario. El páramo se impone como una presencia viva, bella y a la vez agreste, que configura la experiencia de la familia, determinando sus afectos, sus tiempos y su relación con la vida y la muerte."
     }
    ],
-   "duracion_min": 64
+   "duracion_min": 91
   },
   {
    "titulo": "Programa 1: Miradas convulsas desde el presente",
@@ -1788,7 +1798,8 @@
      "director": "Pablo Mora",
      "pais": "Colombia",
      "anio": 2012,
-     "duracion_min": 59
+     "duracion_min": 59,
+     "sinopsis": "A la manera de un revistado diario de viajes, este ensayo documental trata sobre el encuentro de dos mundos ligados por sus mutuas obsesiones acerca de la representación visual de lo real. La colección de evocaciones de distintos momentos vividos por Amado Villafaña (director arhuaco de «Resistencia en la Línea Negra») y Pablo Mora (director de «Sey Arimaku, la otra oscuridad»), se convierte en disculpa para que el diálogo interétnico discurra por temas occidentales e indígenas sobre la imagen, el poder y la muerte."
     },
     {
      "titulo": "Galu dugbis. La memoria de las abuelas",
@@ -1880,8 +1891,7 @@
      "duracion_min": 33,
      "sinopsis": "En la comuna 13 de Medellín existe la fosa urbana a cielo abierto más grande de América Latina. Durante más de veinte años, La Escombrera ha sido señalada por familias de personas víctimas de desaparición forzada como el lugar donde posiblemente se encuentren muchos de los 503 desaparecidos de este territorio. Mujeres Caminando por la Verdad lidera la búsqueda forense que, en medio de incontables obstáculos y tras dos décadas de negacionismo, desencadenó en el hallazgo de cuerpos en diciembre del año 2024. Este acontecimiento histórico, una bocanada de aire fresco para las familias buscadoras, envió un mensaje muy claro a toda Colombia: la tierra ha comenzado a hablar."
     }
-   ],
-   "duracion_min": 88
+   ]
   },
   {
    "dia": "2026-11-03",
