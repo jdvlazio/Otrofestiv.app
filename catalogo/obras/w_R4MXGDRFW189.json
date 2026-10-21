@@ -11,6 +11,10 @@
  ],
  "aliases": [
   {
+   "titulo": "Emechiche, El Renacer de los Cabeciblancos",
+   "tipo": "festival"
+  },
+  {
    "titulo": "Emechiche, El renacer de los cabeciblancos",
    "tipo": "festival"
   },
@@ -29,7 +33,7 @@
   "Drama"
  ],
  "afiche": {
-  "archivo": "/assets/ficica-2026/emechiche-el-renacer-de-los-cabeciblancos.jpg",
+  "archivo": "/assets/anibia-2026/emechiche-el-renacer-de-los-cabeciblancos.jpg",
   "veredicto": "oficial"
  },
  "xref": {
@@ -43,6 +47,7 @@
   }
  ],
  "presentaciones": [
+  "anibia-2026",
   "ficica-2026",
   "popayan-2026",
   "siembrafest-2026"

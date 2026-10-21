@@ -786,6 +786,30 @@ export const FESTIVAL_CONFIG={
     prioLimit:3,
     films:null,posters:null,lbSlugs:{}
   },
+  'anibia2026': {
+    // EL NOMBRE es el del festival (@anibiafestival: «Anibia»); la edición va en fullName.
+    name:'Anibia',displayName:'Anibia',fullName:'Anibia — Festival de Animación 2026',shortName:'ANIBIA',
+    city:'Bogotá',country:'CO',
+    dates:'20 OCT–1 NOV',dates_en:'OCT 20–NOV 1',year:2026,timezoneOffset:'-05:00',
+    storageKey:'anibia2026_',festivalStartStr:'2026-10-20T00:00:00',festivalEndStr:'2026-11-01T23:59:00',
+    festivalDates:{'2026-10-20':'2026-10-20','2026-10-21':'2026-10-21','2026-10-22':'2026-10-22','2026-10-23':'2026-10-23','2026-10-24':'2026-10-24','2026-10-25':'2026-10-25','2026-10-26':'2026-10-26','2026-10-27':'2026-10-27','2026-10-28':'2026-10-28','2026-10-29':'2026-10-29','2026-10-30':'2026-10-30','2026-10-31':'2026-10-31','2026-11-01':'2026-11-01'},
+    days:[{k:'2026-10-20',d:20,lbl:'MAR'},{k:'2026-10-21',d:21,lbl:'MIÉ'},{k:'2026-10-22',d:22,lbl:'JUE'},{k:'2026-10-23',d:23,lbl:'VIE'},{k:'2026-10-24',d:24,lbl:'SÁB'},{k:'2026-10-25',d:25,lbl:'DOM'},{k:'2026-10-26',d:26,lbl:'LUN'},{k:'2026-10-27',d:27,lbl:'MAR'},{k:'2026-10-28',d:28,lbl:'MIÉ'},{k:'2026-10-29',d:29,lbl:'JUE'},{k:'2026-10-30',d:30,lbl:'VIE'},{k:'2026-10-31',d:31,lbl:'SÁB'},{k:'2026-11-01',d:1,lbl:'DOM'}],
+    dayKeys:['2026-10-20','2026-10-21','2026-10-22','2026-10-23','2026-10-24','2026-10-25','2026-10-26','2026-10-27','2026-10-28','2026-10-29','2026-10-30','2026-10-31','2026-11-01'],
+    dayShort:{'2026-10-20':'MAR 20','2026-10-21':'MIÉ 21','2026-10-22':'JUE 22','2026-10-23':'VIE 23','2026-10-24':'SÁB 24','2026-10-25':'DOM 25','2026-10-26':'LUN 26','2026-10-27':'MAR 27','2026-10-28':'MIÉ 28','2026-10-29':'JUE 29','2026-10-30':'VIE 30','2026-10-31':'SÁB 31','2026-11-01':'DOM 1'},
+    dayShort_en:{'2026-10-20':'TUE 20','2026-10-21':'WED 21','2026-10-22':'THU 22','2026-10-23':'FRI 23','2026-10-24':'SAT 24','2026-10-25':'SUN 25','2026-10-26':'MON 26','2026-10-27':'TUE 27','2026-10-28':'WED 28','2026-10-29':'THU 29','2026-10-30':'FRI 30','2026-10-31':'SAT 31','2026-11-01':'SUN 1'},
+    dayLong:{'2026-10-20':'Martes 20 de octubre','2026-10-21':'Miércoles 21 de octubre','2026-10-22':'Jueves 22 de octubre','2026-10-23':'Viernes 23 de octubre','2026-10-24':'Sábado 24 de octubre','2026-10-25':'Domingo 25 de octubre','2026-10-26':'Lunes 26 de octubre','2026-10-27':'Martes 27 de octubre','2026-10-28':'Miércoles 28 de octubre','2026-10-29':'Jueves 29 de octubre','2026-10-30':'Viernes 30 de octubre','2026-10-31':'Sábado 31 de octubre','2026-11-01':'Domingo 1 de noviembre'},
+    // EL AFICHE OFICIAL de la edición 2026, ilustrado por Caballo Loco Studio
+    // (@anibiafestival p/DdmOKm1m9nq, lámina 1, 1808×2256): estirado a 400×600.
+    keyArt:'/assets/keyart/anibia2026-v2.jpg',
+    // la palabra del festival («Festival de Animación», en el afiche): dice qué es
+    tagline:'Festival de Animación',
+    instagram:'anibiafestival',
+    // boleta en la Cinemateca Centro (TuBoleta, por función) salvo la inaugural;
+    // entrada libre en el resto de sedes
+    ticketing_model:'mixed',
+    prioLimit:5,eventPosterLabel:['EVENTO',''],
+    films:null,posters:null,lbSlugs:{}
+  },
   'guatape2026': {
     // EL NOMBRE es el del festival (@guatapefilmfest); la edición va en fullName.
     name:'Guatapé Film Fest',displayName:'Guatapé Film Fest',
@@ -1076,6 +1100,17 @@ export const ARCHETYPE_COLORS = {
 // Cada sección de cada festival → su arquetipo. Generado por scripts/classify-posters
 // (arquetipos) + decisiones de diseño. Sección nueva sin entrada → gate lo caza.
 export const SECTION_ARCHETYPES = {
+  // ── Anibia 2026 · Bogotá ───────────────────────────────────────────────
+  '🌋 Surgentes': 'Perspectivas / Miradas',
+  '🎨 Con Acento Nacional': 'Competencia',
+  '🎞️ Día Internacional de la Animación': 'Charlas / Industria',
+  '🌊 Costa a Costa': 'Muestra / País',
+  '🔗 Conexión': 'Retrospectiva / Tributo',
+  '🚂 Todxs a Bordo': 'Especiales / Eventos',
+  '🎙️ Conexión de Largo Aliento': 'Charlas / Industria',
+  '💬 Charla': 'Charlas / Industria',
+  '🎻 Cine Concierto & Panel': 'Especiales / Eventos',
+  '🖼️ Exposición': 'Especiales / Eventos',
   // ── Guatapé Film Fest 2026 · Guatapé ──────────────────────────────────
   '🎬 Película Inaugural': 'Apertura / Gala',
   '🏆 Competencia Internacional de Largometraje': 'Competencia',

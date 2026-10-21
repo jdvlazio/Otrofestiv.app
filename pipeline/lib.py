@@ -534,7 +534,9 @@ _LIBRE = ('entrada libre', 'entrada gratuita', 'gratuita', 'gratuito', 'gratis',
 # dato moría en el ensamblador (BIFF 12: la inauguración salía como una función
 # más, 29 sep 2026).
 _INVITACION = ('con invitacion', 'solo con invitacion', 'unicamente con invitacion',
-               'cerrada al publico', 'by invitation', 'invitation only')
+               'cerrada al publico', 'by invitation', 'invitation only',
+               # Anibia 2026: «Evento para aliados» (Reel / WIP Day, taller ASIFA)
+               'evento para aliados')
 _INSCRIPCION = ('inscripcion', 'inscribir', 'registro previo', 'cupo limitado',
                 'previa inscripcion', 'formulario')
 

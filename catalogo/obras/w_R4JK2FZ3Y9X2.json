@@ -3,13 +3,20 @@
  "titulo_original": "La pecera",
  "anio": 2025,
  "paises": [
-  "CO"
+  "CO",
+  "CN"
  ],
  "directores": [
   "Ángela Tatiana Fonseca Gálvez"
  ],
+ "aliases": [
+  {
+   "titulo": "La Pecera",
+   "tipo": "festival"
+  }
+ ],
  "sinopsis": {
-  "es": "En una ciudad bulliciosa, un robot mecánico lleva una vida rutinaria, hasta que el casco de cristal que protege su cabeza se rompe. Obligado a encontrar un reemplazo, el robot emprende un viaje, solo para darse cuenta poco a poco de que lo que ocultaba el cristal tal vez no sea tan temible después de todo."
+  "es": "En una ciudad abarrotada, un robot mecánico vive su vida rutinaria, hasta que el casco de cristal que protege su cabeza se rompe. Obligado a encontrar un reemplazo, el robot se embarca en un viaje, solo para darse cuenta poco a poco de que lo que el cristal ocultaba podría no ser algo a lo que temer después de todo."
  },
  "generos": [
   "Animación"
@@ -26,6 +33,7 @@
   }
  ],
  "presentaciones": [
+  "anibia-2026",
   "filcmar-2026",
   "siembrafest-2026"
  ]

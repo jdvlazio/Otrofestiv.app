@@ -1,0 +1,62 @@
+{
+ "_provenance": {
+  "fuente": "Google Maps en el navegador integrado (21 oct 2026), un pin por sede; _prec:manual intocable",
+  "capturado": "2026-10-21"
+ },
+ "Cinemateca de Bogotá": {
+  "_prec": "manual",
+  "_nota": "Google Maps «Cinemateca de Bogotá»; coincide al decimal con BHFF, BIFF y QAFF. Salas de la agenda.",
+  "lat": 4.6031614,
+  "lng": -74.0676717,
+  "address": "Cra. 3 # 19-10"
+ },
+ "Cinemateca Fontanar del Río": {
+  "_prec": "manual",
+  "_nota": "Google Maps «CEFE Fontanar del río»; el mismo pin con que la publicamos en FICDEH y Narrar el Futuro",
+  "lat": 4.7561244,
+  "lng": -74.1110572,
+  "address": "Calle 146 # 138A-99"
+ },
+ "CEFE Chapinero": {
+  "_prec": "manual",
+  "_nota": "Google Maps «Cefe Chapinero»; el PDF da Calle 82 #10-69",
+  "lat": 4.6654518,
+  "lng": -74.0527949,
+  "address": "Calle 82 # 10-69"
+ },
+ "Universidad Nacional, Edificio 303 (NEA)": {
+  "_prec": "manual",
+  "_nota": "Google Maps «303C - Espacios para las Artes». La Cinemateca Sala Alterna UNAL ES el Auditorio 422 del 303C (Facultad de Artes, UNAL); el Bloque C Auditorio 422 del PDF es la misma sala",
+  "lat": 4.6370447,
+  "lng": -74.0816443,
+  "address": "Av. Cra. 30 # 45-03"
+ },
+ "Universidad Jorge Tadeo Lozano, Ed. Biblioteca": {
+  "_prec": "manual",
+  "_nota": "Google Maps «Auditorio Fabio Lozano - Universidad Jorge Tadeo Lozano»",
+  "lat": 4.6063616,
+  "lng": -74.0673857,
+  "address": "Cra. 4 # 22-40"
+ },
+ "Universidad Jorge Tadeo Lozano, Módulo 4": {
+  "_prec": "manual",
+  "_nota": "APROXIMADO: el Módulo 4 (Aula Máxima Luís Córdoba Mariño, entrada calle 23) no tiene pin propio en Google Maps; va el del campus, «Universidad de Bogotá Jorge Tadeo Lozano», a ~25 m del Ed. Biblioteca: dos edificios del mismo campus",
+  "lat": 4.606567,
+  "lng": -74.067801,
+  "address": "Cra. 4 # 22-40 (entrada calle 23)"
+ },
+ "Pontificia Universidad Javeriana, Ed. Gerardo Arango": {
+  "_prec": "manual",
+  "_nota": "Google Maps «Edificio Gerardo Arango S,J. - Facultad de Artes»",
+  "lat": 4.626481,
+  "lng": -74.0644571,
+  "address": "Calle 40B # 5-37"
+ },
+ "Pontificia Universidad Javeriana, Edificio Ático": {
+  "_prec": "manual",
+  "_nota": "Google Maps «Edificio Atico» (Javeriana), a ~60 m del Gerardo Arango: otro edificio del campus",
+  "lat": 4.6268009,
+  "lng": -74.0650103,
+  "address": "Calle 40B # 6-23"
+ }
+}

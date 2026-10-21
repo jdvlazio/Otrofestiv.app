@@ -9,13 +9,14 @@
   "Simón Matallana Nossa"
  ],
  "sinopsis": {
+  "es": "En medio del espacio, una misteriosa criatura asalta una nave y se enfrenta a una banda de lagartos robot, para así obtener un extraño artefacto con forma de disco.",
   "en": "Set in a distant galaxy, a strange humanoid creature called Hunter X must fight against a dozen robot lizards to retrieve a peculiar disk-shaped device."
  },
  "generos": [
   "Animación"
  ],
  "afiche": {
-  "archivo": "/assets/bhff-2026/replay.jpg",
+  "archivo": "/assets/anibia-2026/replay.jpg",
   "veredicto": "oficial"
  },
  "xref": {
@@ -29,6 +30,7 @@
   }
  ],
  "presentaciones": [
+  "anibia-2026",
   "bhff-2026",
   "ficica-2026"
  ]

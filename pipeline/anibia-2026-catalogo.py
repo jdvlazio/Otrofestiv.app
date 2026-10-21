@@ -56,6 +56,18 @@ AFICHES = {
     'Aguacero': ('assets/anibia-2026/aguacero.jpg', 'afiche de la ficha 3594 de la Cinemateca, encuadrado 780×1170'),
     'La Pecera': ('assets/filcmar-2026/la-pecera.jpg', 'el afiche oficial con que la publicamos en FILCMAR 2026 (= el de la ficha 3617)'),
 }
+# EL PAÍS va en español y separado por comas (lo que segmenta la app para las
+# banderas); la ficha lo escribe en tres idiomas y con «/», «-» o «and». El
+# texto de la ficha queda en `_pais_ficha`.
+NOMBRE_PAIS = {'The Netherlands': 'Países Bajos', 'Germany': 'Alemania', 'Columbia': 'Colombia',
+               'USA': 'Estados Unidos', 'Suède': 'Suecia', 'Ukraine': 'Ucrania', 'Finland': 'Finlandia'}
+
+
+def pais_es(p):
+    partes = [x.strip() for x in re.split(r'\s*(?:/|,| - |-| and )\s*', p) if x.strip()]
+    return ', '.join(NOMBRE_PAIS.get(x, x) for x in partes)
+
+
 DIR = re.compile(r'^(?P<pre>.*?)\(\s*Dir\.?\s*(?P<dir>.+?)(?:,\s*(?P<anio>\d{4}|sin estrenar))?\)\s*'
                  r'(?P<pais>.*?)\.?\s+(?P<dur>[\d:,]+)\s*min\.?\s*$')
 
@@ -116,6 +128,8 @@ def main():
         if len(L) != contadas:
             sys.exit(f'✗ ficha {n} dio {len(L)} obras y se contaron {contadas}')
         for o in L:
+            if pais_es(o['pais']) != o['pais']:
+                o['_pais_ficha'], o['pais'] = o['pais'], pais_es(o['pais'])
             o.update({'tipo': 'corto', 'seccion': seccion, 'programa': programa,
                       '_src': {'url': FICHA.format(n, sede), 'date': FECHA}})
             obras.append(o)

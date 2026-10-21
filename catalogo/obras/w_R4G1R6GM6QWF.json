@@ -17,17 +17,21 @@
   {
    "titulo": "Mu-ki-ra",
    "tipo": "festival"
+  },
+  {
+   "titulo": "Mukira",
+   "tipo": "festival"
   }
  ],
  "sinopsis": {
-  "es": "Tras los muros que protegen la aldea se extiende una selva mágica y misteriosa, habitada por criaturas consideradas peligrosas. Durante años, los habitantes se han formado como guerreros desde jóvenes.",
+  "es": "En una tierra acechada por monstruos hechos de vegetación, Cleo se adentra en la selva para rescatar a su hermano Martín. Acompañada por Iolo, una anciana mágica, y una divertida osa hormiguera, deberá atrapar al monstruo que se lo llevó, pero pronto descubrirá que estas criaturas esconden un sorprendente secreto.",
   "en": "When her brother is kidnapped by Mu-Ki-Ra, Cleo ventures into a monster-plagued jungle with unlikely allies."
  },
  "generos": [
   "Animación"
  ],
  "afiche": {
-  "archivo": "/assets/fantasmagoria-2026/mu-ki-ra.jpg",
+  "archivo": "/assets/anibia-2026/mukira.jpg",
   "veredicto": "oficial"
  },
  "xref": {
@@ -49,6 +53,7 @@
   }
  ],
  "presentaciones": [
+  "anibia-2026",
   "fantasmagoria-2026",
   "ficcali-2026",
   "ficci-65",

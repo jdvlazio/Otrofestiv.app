@@ -3,24 +3,27 @@
  "titulo_original": "Please",
  "anio": 2026,
  "paises": [
-  "SE",
   "FR",
-  "CZ",
-  "NO",
-  "FI"
+  "SE",
+  "FI",
+  "NO"
  ],
  "directores": [
   "Anna Mantzaris"
  ],
  "sinopsis": {
-  "es": "Anna Mantzaris da vida entrañable a personajes peculiares y adorables en su afilado retrato animado de la fricción entre el peso de ser necesario y nuestra hambre profunda de intimidad, en esta observación excéntrica y divertidísima sobre el romance, la necesidad y el vínculo humano.",
-  "en": "Anna Mantzaris brings endearing, peculiar characters to lovable life in her sharp animated portrayal of the friction between the weight of being needed and our deep craving for intimacy, in this quirky, hilarious observation on romance, neediness, and human connection."
+  "es": "En una gran ciudad, varios personajes faltos de afecto buscan una relación y se ven envueltos en situaciones tan cómicas como absurdas, divertidas y emotivas.",
+  "en": "A dark comedy about humankind’s desire to love and to be loved. Centred around neediness, intimacy and romance.  Told through a series of loosely connected, tender and absurd scenes, the film follows people who are searching for closeness and acceptance. In a world that preaches self-control, the film explores the sides we try to hide, such as feeling needy and pathetic.  The stories overlap and reappear, gradually forming a portrait of collective longing."
  },
+ "generos": [
+  "Animación"
+ ],
  "afiche": {
-  "archivo": "https://images.ctfassets.net/22n7d68fswlw/v3USXZjJj0ihRmn9eW06V/77d5a5383126dc193287ee220cd2aff5/Please_Still_03.jpg",
-  "veredicto": "fotograma"
+  "archivo": "/assets/anibia-2026/please.jpg",
+  "veredicto": "oficial"
  },
  "xref": {
+  "tmdb": 1660526,
   "letterboxd": "please-2026"
  },
  "versiones": [
@@ -30,6 +33,7 @@
   }
  ],
  "presentaciones": [
+  "anibia-2026",
   "tiff-2026"
  ]
 }

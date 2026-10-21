@@ -1,0 +1,41 @@
+{
+ "id": "w_FYYVCBCZ21AG",
+ "titulo_original": "Plazer Bat",
+ "anio": 2024,
+ "paises": [
+  "ES"
+ ],
+ "directores": [
+  "Sonia Estévez"
+ ],
+ "aliases": [
+  {
+   "titulo": "A Pleasure",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "Plazer bat pone en valor esos placeres simples que son peculiares de cada persona, pero que en gran medida coinciden. Situaciones y actos que pasan desapercibidos pero que parecen esconder alguna sabiduría, algo profundo que solo se revela en su mera ejecución."
+ },
+ "generos": [
+  "Animación"
+ ],
+ "afiche": {
+  "archivo": "/assets/anibia-2026/plazer-bat.jpg",
+  "veredicto": "oficial"
+ },
+ "xref": {
+  "tmdb": 1368503,
+  "letterboxd": "a-pleasure"
+ },
+ "versiones": [
+  {
+   "etiqueta": "4 min",
+   "duracion_min": 4
+  }
+ ],
+ "presentaciones": [
+  "anibia-2026"
+ ]
+}
