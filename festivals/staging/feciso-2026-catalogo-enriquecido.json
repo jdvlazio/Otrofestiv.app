@@ -1,0 +1,496 @@
+{
+ "_provenance": {
+  "fuente": "TMDB + letterboxd.com/tmdb/<id>, con el MISMO candado de enriquecer.py: director ✓ y (año ±1 o duración ±3 min). Lo que no verifica no entra.",
+  "capturado": "2026-10-21"
+ },
+ "_origen": "feciso-2026-catalogo.json",
+ "obras": [
+  {
+   "titulo": "Fragmentos de otra historia",
+   "tmdb_id": 1579844,
+   "titulo_original": "Fragmentos de otra historia",
+   "poster_path": "/sVhYdYLFeYf8QlXDIR9xoQdZ2TX.jpg",
+   "synopsis_es": "Cuarenta años después, este documental sigue la búsqueda de Helena Urán Bidegain por la verdad sobre su padre, cuya salida con vida del Palacio de Justicia fue registrada en video pero silenciada. La memoria, como las imágenes que la sostienen, es un territorio en disputa. Lo que alguna vez fue emitido ante millones de personas en Colombia, hoy revela verdades que el relato oficial negó.",
+   "synopsis_en": "",
+   "genero": "Documental",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 72,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "fragmentos-de-otra-historia",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+  },
+  {
+   "titulo": "¿Quién quemó el bus?",
+   "tmdb_id": 1712971,
+   "titulo_original": "¿Quién Quemó el Bus?",
+   "poster_path": "/jjz069xKrE883b9Z6sih7SbjU3O.jpg",
+   "synopsis_es": "El 28 de octubre de 2021, mientras la efervescencia en las calles por el Paro Nacional caía en el olvido, Karo y Jonathan son señalados líderes de la Primera Línea BRC Suba y acusados de once delitos. La historia de un proceso judicial donde demostrar la inocencia parece un imposible.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 56,
+   "pais_tmdb": "",
+   "lbSlug": "quien-quemo-el-bus",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_ya_publicada": [
+    {
+     "festival": "narrarelfuturo-2026",
+     "titulo": "¿Quién quemó el bus?",
+     "tmdb_id": 1712971,
+     "poster": "/assets/narrarelfuturo-2026/quien-quemo-el-bus.jpg",
+     "posterSource": "oficial",
+     "lbSlug": "quien-quemo-el-bus",
+     "country": "Colombia",
+     "year": 2026,
+     "duration": "63 min",
+     "sinopsis": "En medio del Paro Nacional de 2021 en Colombia, Karo y Jonathan, dos jóvenes de barrios obreros, se enamoran mientras registran las protestas desde su celular. Su voz se vuelve un símbolo de resistencia en Suba, pero también una amenaza para el poder. Arrestados y acusados de terrorismo, enfrentan un proceso judicial absurdo que los obliga a esconderse, huir y reencontrarse con la esperanza. Entre el amor, el miedo y la injusticia, la cámara se convierte en su única defensa frente a un sistema dispuesto a silenciar la verdad."
+    }
+   ]
+  },
+  {
+   "titulo": "La luz por primera vez",
+   "tmdb_id": 1705404,
+   "titulo_original": "La Luz por Primera Vez",
+   "poster_path": "/i0KzpmRikBADIoh8Ytsj9mxINH7.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Natalia Pinilla, photographer and activist, embarks on a journey across Santander, Norte de Santander, and Madrid, Spain, to uncover the work of Amalia Ramírez, a forgotten woman who, at the beginning of the 20th century, captured one of the most impactful images in Colombian history: the pyramid of skulls at Palonegro, a brutal symbol of the Thousand Days' War. More than a century later, this photograph resurfaces, establishing Amalia as the country's first female photographer. Along the way, she discovers previously unseen archives, connects with descendants unaware of her legacy, and finds a contemporary echo of her struggle in other women photographers. Through historical revelations and intimate encounters, the documentary reconstructs not only Amalia's work but also the memory of a country scarred by violence. The rediscovery of her photographs—portraits, everyday scenes, and forgotten visual testimonies—transforms her into a symbol of resistance, art, and memory.",
+   "genero": "Documental",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 79,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "la-luz-por-primera-vez",
+   "_verificado": "el catálogo ya la tiene (w_R4HJV3PTGZH0, ficdeh-2026, ficma-2026)",
+   "work_id": "w_R4HJV3PTGZH0",
+   "_ya_publicada": [
+    {
+     "festival": "ficdeh-2026",
+     "titulo": "La luz por primera vez",
+     "poster": "/assets/ficdeh/la-luz-por-primera-vez.jpg",
+     "posterSource": "custom",
+     "lbSlug": "la-luz-por-primera-vez",
+     "country": "Colombia, España",
+     "year": 2026,
+     "duration": "78 min",
+     "genre": "Documental",
+     "synopsis_en": "Natalia Pinilla, photographer and activist, embarks on a journey that crosses Santander, Norte de Santander, and Spain to discover the work of Amalia Ramírez, a forgotten woman who, at the beginning of the 20th century, captured one of the most impactful images in Colombian history: the pyramid of skulls at Palonegro, a brutal symbol of the Thousand Days' War. More than a century later, this photograph resurfaces, positioning Amalia as perhaps Colombia's first female photographer.",
+     "sinopsis": "Natalia Pinilla, fotógrafa y activista, emprende un viaje que cruza Santander, Norte de Santander y España para descubrir la obra de Amalia Ramírez, una mujer olvidada que, a comienzos del siglo XX, capturó una de las imágenes más impactantes de la historia colombiana: la pirámide de calaveras de Palonegro, símbolo brutal de la Guerra de los Mil Días. Más de un siglo después, esa fotografía resurge y posiciona a Amalia como, quizás, la primera mujer fotógrafa de Colombia."
+    },
+    {
+     "festival": "ficma-2026",
+     "titulo": "La Luz por Primera Vez",
+     "tmdb_id": 1705404,
+     "poster": "/assets/ficma/la-luz-por-primera-vez.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "la-luz-por-primera-vez",
+     "country": "Colombia",
+     "year": 2026,
+     "duration": "78 min",
+     "genre": "Documental",
+     "synopsis_en": "Natalia Pinilla, photographer and activist, embarks on a journey across Santander, Norte de Santander, and Madrid, Spain, to uncover the work of Amalia Ramírez, a forgotten woman who, at the beginning of the 20th century, captured one of the most impactful images in Colombian history: the pyramid of skulls at Palonegro, a brutal symbol of the Thousand Days' War. More than a century later, this photograph resurfaces, establishing Amalia as the country's first female photographer. Along the way, she discovers previously unseen archives, connects with descendants unaware of her legacy, and finds a contemporary echo of her struggle in other women photographers. Through historical revelations and intimate encounters, the documentary reconstructs not only Amalia's work but also the memory of a country scarred by violence. The rediscovery of her photographs—portraits, everyday scenes, and forgotten visual testimonies—transforms her into a symbol of resistance, art, and memory.",
+     "sinopsis": "Natalia Pinilla, photographer and activist, embarks on a journey across Santander, Norte de Santander, and Madrid, Spain, to uncover the work of Amalia Ramírez, a forgotten woman who, at the beginning of the 20th century, captured one of the most impactful images in Colombian history: the pyramid of skulls at Palonegro, a brutal symbol of the Thousand Days' War. More than a century later, this photograph resurfaces, establishing Amalia as the country's first female photographer. Along the way, she discovers previously unseen archives, connects with descendants unaware of her legacy, and finds a contemporary echo of her struggle in other women photographers. Through historical revelations and intimate encounters, the documentary reconstructs not only Amalia's work but also the memory of a country scarred by violence. The rediscovery of her photographs—portraits, everyday scenes, and forgotten visual testimonies—transforms her into a symbol of resistance, art, and memory."
+    }
+   ]
+  },
+  {
+   "titulo": "Por una gota de leche",
+   "tmdb_id": 1738896,
+   "titulo_original": "Por una gota de leche",
+   "poster_path": "/i8xbtaZeFkaVvWcAvBVcJ0f7KwC.jpg",
+   "synopsis_es": "En 1985, varios jóvenes militantes del M-19 robaron un camión de leche para repartirla entre la población más vulnerable del sur de Bogotá. Fueron asesinados por las fuerzas del Estado colombiano tras haberse rendido. Cuarenta años después, sus familias y la comunidad cuentan su historia.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 59,
+   "pais_tmdb": "",
+   "lbSlug": "por-una-gota-de-leche",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_ya_publicada": [
+    {
+     "festival": "ficdeh-2026",
+     "titulo": "Por una gota de leche",
+     "poster": "/assets/ficdeh/por-una-gota-de-leche.jpg",
+     "posterSource": "custom",
+     "lbSlug": "por-una-gota-de-leche",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "59 min",
+     "synopsis_en": "In 1985, several young militants of the M-19 hijacked a milk truck to hand out its cargo among the poorest people of southern Bogotá. They were killed by Colombian state forces after surrendering. Forty years on, their families and their community tell the story.",
+     "sinopsis": "En 1985, varios jóvenes militantes del M-19 robaron un camión de leche para repartirla entre la población más vulnerable del sur de Bogotá. Fueron asesinados por las fuerzas del Estado colombiano tras haberse rendido. Cuarenta años después, sus familias y la comunidad cuentan su historia."
+    }
+   ]
+  },
+  {
+   "titulo": "Kaugsankamalla: mientras vivamos",
+   "tmdb_id": 1738591,
+   "titulo_original": "Kaugsankamalla: mientras vivamos",
+   "poster_path": "/bpRJTm9LGbVgKefXuqmdow2pYCt.jpg",
+   "synopsis_es": "«Si yo ya no puedo luchar, ¿lo harás tú?» Seguimos de cerca la vida y la lucha de Soraida Chindoy, una mujer Inga que defiende las montañas sagradas de su comunidad en Putumayo frente a una empresa minera canadiense. A través de la voz y las imágenes de Soraida, enraizadas en su profunda conexión con la Alpa Mama, la película nos muestra una lucha urgente: no solo por la supervivencia de una comunidad, sino por el futuro mismo del planeta que todos y todas compartimos.",
+   "synopsis_en": "“If I can no longer fight, will you?” Filmed and co-directed by Soraida, this intimate portrait spans the everyday life and activism of Soraida Chindoy, following her journey as an Inga leader defending her community’s sacred mountains from a Canadian mining company in Colombia. Balancing motherhood with community organizing, Soraida's daily life as an Inga woman and land defender is shaped by resilience, responsibility, and an unwavering commitment to her people and territory. As environmental threats intensify, her demands become more urgent — and her disappointment with the international community more profound.  ‘Kaugsankamalla: As long as we live’ offers a deeply personal and politically resonant portrait of Indigenous resistance in the face of ecological and cultural loss. Through Soraida’s voice, her images, and her embodied wisdom, we are offered a window into the lived experience of fighting for a future — not just for one community, but for the planet we all share.",
+   "genero": "Documental",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 61,
+   "pais_tmdb": "Colombia, Peru",
+   "lbSlug": "kaugsankamalla-mientras-vivamos",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_ya_publicada": [
+    {
+     "festival": "ficdeh-2026",
+     "titulo": "Kaugsankamalla: mientras vivamos",
+     "poster": "/assets/ficdeh/kaugsankamalla-mientras-vivamos.jpg",
+     "posterSource": "custom",
+     "lbSlug": "kaugsankamalla-mientras-vivamos",
+     "country": "Colombia, Perú",
+     "year": 2026,
+     "duration": "61 min",
+     "genre": "Documental",
+     "synopsis_en": "“If I can no longer fight, will you?” This intimate portrait follows the life and struggle of Soraida Chindoy, an Inga woman defending the sacred mountains of her community in Putumayo against a Canadian mining company. Through Soraida’s voice and images, rooted in her deep connection to her her territory and ancestral knowledge, the film reveals an urgent struggle — not just for one community, but for the planet we all share.",
+     "sinopsis": "«Si yo ya no puedo luchar, ¿lo harás tú?» Seguimos de cerca la vida y la lucha de Soraida Chindoy, una mujer Inga que defiende las montañas sagradas de su comunidad en Putumayo frente a una empresa minera canadiense. A través de la voz y las imágenes de Soraida, enraizadas en su profunda conexión con la Alpa Mama, la película nos muestra una lucha urgente: no solo por la supervivencia de una comunidad, sino por el futuro mismo del planeta que todos y todas compartimos."
+    }
+   ]
+  },
+  {
+   "titulo": "El huaquero",
+   "tmdb_id": 1796534,
+   "titulo_original": "El Huaquero",
+   "poster_path": "/iF16E5Tf4viPjLlnIB8DtFMbRhC.jpg",
+   "synopsis_es": "Manuel no se resigna a quedarse en la vereda con Silvio y Etelvina, sus padres septuagenarios. Todos sus hermanos han salido de la región, como la mayoría de los jóvenes, seducidos por las luces del mundo. Sin embargo, al conocer a Ezequiel, un viejo buscador de tesoros, que, al parecer, ha encontrado algo grande, le hacen confrontar su ambición, el amor, sus valores y los anhelos profundos de la vida.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 94,
+   "pais_tmdb": "",
+   "lbSlug": "el-huaquero",
+   "_verificado": "declarada a mano: «El Huaquero» (2025), dir. Harold de Vasten en TMDB; la lámina escribe «Harold Devastén» y el candado no casa la grafía. Es la misma obra publicada en FICPA 2026 con este tmdb_id y el afiche oficial firma «Harold DeVasten» (mirado en la hoja de contacto)",
+   "_ya_publicada": [
+    {
+     "festival": "ficpa-2026",
+     "titulo": "El Huaquero",
+     "tmdb_id": 1796534,
+     "poster": "/assets/ficpa-2026/el-huaquero.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "el-huaquero",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "94 min",
+     "sinopsis": "Manuel no se resigna a quedarse en la vereda con Silvio y Etelvina, sus padres septuagenarios. Todos sus hermanos han salido de la región, como la mayoría de los jóvenes, seducidos por las luces del mundo. Sin embargo, al conocer a Ezequiel, un viejo buscador de tesoros, que, al parecer, ha encontrado algo grande, le hacen confrontar su ambición, el amor, sus valores y los anhelos profundos de la vida."
+    }
+   ]
+  },
+  {
+   "titulo": "Árbol en pie",
+   "_ya_publicada": [
+    {
+     "festival": "ficcali-2026",
+     "titulo": "Árbol en pie",
+     "poster": "/assets/ficcali-2026/arbol-en-pie.jpg",
+     "posterSource": "oficial",
+     "country": "Colombia",
+     "year": 2026,
+     "duration": "6 min",
+     "sinopsis": "La Ceroxylon quindiuense, palma de cera del Quindío, es el árbol nacional de Colombia. Encarna una paradoja perfecta para un país marcado por el machismo, la misoginia y la transfobia, pues es una planta capaz de cambiar de sexo. Es una «palma trans» y la inspiración para que Magdalena Morales, líder trans afrocolombiana, se una a la Red Comunitaria Trans y siembre una semilla de luz rebelde en el horizonte de la música tradicional del Caribe colombiano."
+    }
+   ]
+  },
+  {
+   "titulo": "Iridescence",
+   "tmdb_id": 1800079,
+   "titulo_original": "Iridescence",
+   "poster_path": "/AqwZrH1LJv02EmiIc4uzrpH8Zu5.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "",
+   "genero": "Animación",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "",
+   "lbSlug": "iridescence-2025",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+  },
+  {
+   "titulo": "Bajo el polvo, nuestra tierra",
+   "tmdb_id": 1553071,
+   "titulo_original": "Saudades do Rio Doce",
+   "poster_path": "/5Ta6HvtCoA6WuG5b04D6cEyfm59.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Sister María Inés de Oliveira drives her old car through the degraded fields of a land that has become barren, in the heart of Brazil. The only flowers that remain are those that adorn her straw hat. On the horizon rises a mountain of toxic waste, the result of the exploitation of niobium – a strategic mineral on which the European Union depends to maintain, under the banner of the energy transition, the economic and political project.",
+   "genero": "Documental",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 24,
+   "pais_tmdb": "",
+   "lbSlug": "saudades-do-rio-doce",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+  },
+  {
+   "titulo": "Despojo",
+   "tmdb_id": 1319078,
+   "titulo_original": "Despojo",
+   "poster_path": "/sjzl9YJ0fM4vLjrwvU8W4fmbIQx.jpg",
+   "synopsis_es": "Chica es parte de una mafia que explota niños y los hace delinquir con la promesa de dejarlos libres a los dieciocho años, son liderados por el Gran Padre. Tras elegir su libertad, Chica y su hermano Joven son torturados y ella es obligada a presenciar el asesinato de su hermano. Tras rogar por su vida, es obligada por el Gran Padre a pasar una prueba de lealtad, que es vender a la única persona que ama en el campamento de los niños, su hermana Nena.",
+   "synopsis_en": "",
+   "genero": "Drama",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 15,
+   "pais_tmdb": "Peru",
+   "lbSlug": "despojo",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+  },
+  {
+   "titulo": "La piel de nuestra memoria",
+   "tmdb_id": 1502459,
+   "titulo_original": "La Piel de Nuestra Memoria",
+   "poster_path": "/lffhlkqfzaUTSEY6wF8gd9GJirs.jpg",
+   "synopsis_es": "Una mirada a las tradiciones y cosmovisión de los pueblos Chinantecos.",
+   "synopsis_en": "",
+   "genero": "Drama",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "Mexico",
+   "lbSlug": "la-piel-de-nuestra-memoria",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+  }
+ ],
+ "verificadas": {
+  "Fragmentos de otra historia": {
+   "tmdb_id": 1579844,
+   "titulo_original": "Fragmentos de otra historia",
+   "poster_path": "/sVhYdYLFeYf8QlXDIR9xoQdZ2TX.jpg",
+   "synopsis_es": "Cuarenta años después, este documental sigue la búsqueda de Helena Urán Bidegain por la verdad sobre su padre, cuya salida con vida del Palacio de Justicia fue registrada en video pero silenciada. La memoria, como las imágenes que la sostienen, es un territorio en disputa. Lo que alguna vez fue emitido ante millones de personas en Colombia, hoy revela verdades que el relato oficial negó.",
+   "synopsis_en": "",
+   "genero": "Documental",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 72,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "fragmentos-de-otra-historia",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+  },
+  "¿Quién quemó el bus?": {
+   "tmdb_id": 1712971,
+   "titulo_original": "¿Quién Quemó el Bus?",
+   "poster_path": "/jjz069xKrE883b9Z6sih7SbjU3O.jpg",
+   "synopsis_es": "El 28 de octubre de 2021, mientras la efervescencia en las calles por el Paro Nacional caía en el olvido, Karo y Jonathan son señalados líderes de la Primera Línea BRC Suba y acusados de once delitos. La historia de un proceso judicial donde demostrar la inocencia parece un imposible.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 56,
+   "pais_tmdb": "",
+   "lbSlug": "quien-quemo-el-bus",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_ya_publicada": [
+    {
+     "festival": "narrarelfuturo-2026",
+     "titulo": "¿Quién quemó el bus?",
+     "tmdb_id": 1712971,
+     "poster": "/assets/narrarelfuturo-2026/quien-quemo-el-bus.jpg",
+     "posterSource": "oficial",
+     "lbSlug": "quien-quemo-el-bus",
+     "country": "Colombia",
+     "year": 2026,
+     "duration": "63 min",
+     "sinopsis": "En medio del Paro Nacional de 2021 en Colombia, Karo y Jonathan, dos jóvenes de barrios obreros, se enamoran mientras registran las protestas desde su celular. Su voz se vuelve un símbolo de resistencia en Suba, pero también una amenaza para el poder. Arrestados y acusados de terrorismo, enfrentan un proceso judicial absurdo que los obliga a esconderse, huir y reencontrarse con la esperanza. Entre el amor, el miedo y la injusticia, la cámara se convierte en su única defensa frente a un sistema dispuesto a silenciar la verdad."
+    }
+   ]
+  },
+  "La luz por primera vez": {
+   "tmdb_id": 1705404,
+   "titulo_original": "La Luz por Primera Vez",
+   "poster_path": "/i0KzpmRikBADIoh8Ytsj9mxINH7.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Natalia Pinilla, photographer and activist, embarks on a journey across Santander, Norte de Santander, and Madrid, Spain, to uncover the work of Amalia Ramírez, a forgotten woman who, at the beginning of the 20th century, captured one of the most impactful images in Colombian history: the pyramid of skulls at Palonegro, a brutal symbol of the Thousand Days' War. More than a century later, this photograph resurfaces, establishing Amalia as the country's first female photographer. Along the way, she discovers previously unseen archives, connects with descendants unaware of her legacy, and finds a contemporary echo of her struggle in other women photographers. Through historical revelations and intimate encounters, the documentary reconstructs not only Amalia's work but also the memory of a country scarred by violence. The rediscovery of her photographs—portraits, everyday scenes, and forgotten visual testimonies—transforms her into a symbol of resistance, art, and memory.",
+   "genero": "Documental",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 79,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "la-luz-por-primera-vez",
+   "_verificado": "el catálogo ya la tiene (w_R4HJV3PTGZH0, ficdeh-2026, ficma-2026)",
+   "work_id": "w_R4HJV3PTGZH0",
+   "_ya_publicada": [
+    {
+     "festival": "ficdeh-2026",
+     "titulo": "La luz por primera vez",
+     "poster": "/assets/ficdeh/la-luz-por-primera-vez.jpg",
+     "posterSource": "custom",
+     "lbSlug": "la-luz-por-primera-vez",
+     "country": "Colombia, España",
+     "year": 2026,
+     "duration": "78 min",
+     "genre": "Documental",
+     "synopsis_en": "Natalia Pinilla, photographer and activist, embarks on a journey that crosses Santander, Norte de Santander, and Spain to discover the work of Amalia Ramírez, a forgotten woman who, at the beginning of the 20th century, captured one of the most impactful images in Colombian history: the pyramid of skulls at Palonegro, a brutal symbol of the Thousand Days' War. More than a century later, this photograph resurfaces, positioning Amalia as perhaps Colombia's first female photographer.",
+     "sinopsis": "Natalia Pinilla, fotógrafa y activista, emprende un viaje que cruza Santander, Norte de Santander y España para descubrir la obra de Amalia Ramírez, una mujer olvidada que, a comienzos del siglo XX, capturó una de las imágenes más impactantes de la historia colombiana: la pirámide de calaveras de Palonegro, símbolo brutal de la Guerra de los Mil Días. Más de un siglo después, esa fotografía resurge y posiciona a Amalia como, quizás, la primera mujer fotógrafa de Colombia."
+    },
+    {
+     "festival": "ficma-2026",
+     "titulo": "La Luz por Primera Vez",
+     "tmdb_id": 1705404,
+     "poster": "/assets/ficma/la-luz-por-primera-vez.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "la-luz-por-primera-vez",
+     "country": "Colombia",
+     "year": 2026,
+     "duration": "78 min",
+     "genre": "Documental",
+     "synopsis_en": "Natalia Pinilla, photographer and activist, embarks on a journey across Santander, Norte de Santander, and Madrid, Spain, to uncover the work of Amalia Ramírez, a forgotten woman who, at the beginning of the 20th century, captured one of the most impactful images in Colombian history: the pyramid of skulls at Palonegro, a brutal symbol of the Thousand Days' War. More than a century later, this photograph resurfaces, establishing Amalia as the country's first female photographer. Along the way, she discovers previously unseen archives, connects with descendants unaware of her legacy, and finds a contemporary echo of her struggle in other women photographers. Through historical revelations and intimate encounters, the documentary reconstructs not only Amalia's work but also the memory of a country scarred by violence. The rediscovery of her photographs—portraits, everyday scenes, and forgotten visual testimonies—transforms her into a symbol of resistance, art, and memory.",
+     "sinopsis": "Natalia Pinilla, photographer and activist, embarks on a journey across Santander, Norte de Santander, and Madrid, Spain, to uncover the work of Amalia Ramírez, a forgotten woman who, at the beginning of the 20th century, captured one of the most impactful images in Colombian history: the pyramid of skulls at Palonegro, a brutal symbol of the Thousand Days' War. More than a century later, this photograph resurfaces, establishing Amalia as the country's first female photographer. Along the way, she discovers previously unseen archives, connects with descendants unaware of her legacy, and finds a contemporary echo of her struggle in other women photographers. Through historical revelations and intimate encounters, the documentary reconstructs not only Amalia's work but also the memory of a country scarred by violence. The rediscovery of her photographs—portraits, everyday scenes, and forgotten visual testimonies—transforms her into a symbol of resistance, art, and memory."
+    }
+   ]
+  },
+  "Por una gota de leche": {
+   "tmdb_id": 1738896,
+   "titulo_original": "Por una gota de leche",
+   "poster_path": "/i8xbtaZeFkaVvWcAvBVcJ0f7KwC.jpg",
+   "synopsis_es": "En 1985, varios jóvenes militantes del M-19 robaron un camión de leche para repartirla entre la población más vulnerable del sur de Bogotá. Fueron asesinados por las fuerzas del Estado colombiano tras haberse rendido. Cuarenta años después, sus familias y la comunidad cuentan su historia.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 59,
+   "pais_tmdb": "",
+   "lbSlug": "por-una-gota-de-leche",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_ya_publicada": [
+    {
+     "festival": "ficdeh-2026",
+     "titulo": "Por una gota de leche",
+     "poster": "/assets/ficdeh/por-una-gota-de-leche.jpg",
+     "posterSource": "custom",
+     "lbSlug": "por-una-gota-de-leche",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "59 min",
+     "synopsis_en": "In 1985, several young militants of the M-19 hijacked a milk truck to hand out its cargo among the poorest people of southern Bogotá. They were killed by Colombian state forces after surrendering. Forty years on, their families and their community tell the story.",
+     "sinopsis": "En 1985, varios jóvenes militantes del M-19 robaron un camión de leche para repartirla entre la población más vulnerable del sur de Bogotá. Fueron asesinados por las fuerzas del Estado colombiano tras haberse rendido. Cuarenta años después, sus familias y la comunidad cuentan su historia."
+    }
+   ]
+  },
+  "Kaugsankamalla: mientras vivamos": {
+   "tmdb_id": 1738591,
+   "titulo_original": "Kaugsankamalla: mientras vivamos",
+   "poster_path": "/bpRJTm9LGbVgKefXuqmdow2pYCt.jpg",
+   "synopsis_es": "«Si yo ya no puedo luchar, ¿lo harás tú?» Seguimos de cerca la vida y la lucha de Soraida Chindoy, una mujer Inga que defiende las montañas sagradas de su comunidad en Putumayo frente a una empresa minera canadiense. A través de la voz y las imágenes de Soraida, enraizadas en su profunda conexión con la Alpa Mama, la película nos muestra una lucha urgente: no solo por la supervivencia de una comunidad, sino por el futuro mismo del planeta que todos y todas compartimos.",
+   "synopsis_en": "“If I can no longer fight, will you?” Filmed and co-directed by Soraida, this intimate portrait spans the everyday life and activism of Soraida Chindoy, following her journey as an Inga leader defending her community’s sacred mountains from a Canadian mining company in Colombia. Balancing motherhood with community organizing, Soraida's daily life as an Inga woman and land defender is shaped by resilience, responsibility, and an unwavering commitment to her people and territory. As environmental threats intensify, her demands become more urgent — and her disappointment with the international community more profound.  ‘Kaugsankamalla: As long as we live’ offers a deeply personal and politically resonant portrait of Indigenous resistance in the face of ecological and cultural loss. Through Soraida’s voice, her images, and her embodied wisdom, we are offered a window into the lived experience of fighting for a future — not just for one community, but for the planet we all share.",
+   "genero": "Documental",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 61,
+   "pais_tmdb": "Colombia, Peru",
+   "lbSlug": "kaugsankamalla-mientras-vivamos",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_ya_publicada": [
+    {
+     "festival": "ficdeh-2026",
+     "titulo": "Kaugsankamalla: mientras vivamos",
+     "poster": "/assets/ficdeh/kaugsankamalla-mientras-vivamos.jpg",
+     "posterSource": "custom",
+     "lbSlug": "kaugsankamalla-mientras-vivamos",
+     "country": "Colombia, Perú",
+     "year": 2026,
+     "duration": "61 min",
+     "genre": "Documental",
+     "synopsis_en": "“If I can no longer fight, will you?” This intimate portrait follows the life and struggle of Soraida Chindoy, an Inga woman defending the sacred mountains of her community in Putumayo against a Canadian mining company. Through Soraida’s voice and images, rooted in her deep connection to her her territory and ancestral knowledge, the film reveals an urgent struggle — not just for one community, but for the planet we all share.",
+     "sinopsis": "«Si yo ya no puedo luchar, ¿lo harás tú?» Seguimos de cerca la vida y la lucha de Soraida Chindoy, una mujer Inga que defiende las montañas sagradas de su comunidad en Putumayo frente a una empresa minera canadiense. A través de la voz y las imágenes de Soraida, enraizadas en su profunda conexión con la Alpa Mama, la película nos muestra una lucha urgente: no solo por la supervivencia de una comunidad, sino por el futuro mismo del planeta que todos y todas compartimos."
+    }
+   ]
+  },
+  "El huaquero": {
+   "tmdb_id": 1796534,
+   "titulo_original": "El Huaquero",
+   "poster_path": "/iF16E5Tf4viPjLlnIB8DtFMbRhC.jpg",
+   "synopsis_es": "Manuel no se resigna a quedarse en la vereda con Silvio y Etelvina, sus padres septuagenarios. Todos sus hermanos han salido de la región, como la mayoría de los jóvenes, seducidos por las luces del mundo. Sin embargo, al conocer a Ezequiel, un viejo buscador de tesoros, que, al parecer, ha encontrado algo grande, le hacen confrontar su ambición, el amor, sus valores y los anhelos profundos de la vida.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 94,
+   "pais_tmdb": "",
+   "lbSlug": "el-huaquero",
+   "_verificado": "declarada a mano: «El Huaquero» (2025), dir. Harold de Vasten en TMDB; la lámina escribe «Harold Devastén» y el candado no casa la grafía. Es la misma obra publicada en FICPA 2026 con este tmdb_id y el afiche oficial firma «Harold DeVasten» (mirado en la hoja de contacto)",
+   "_ya_publicada": [
+    {
+     "festival": "ficpa-2026",
+     "titulo": "El Huaquero",
+     "tmdb_id": 1796534,
+     "poster": "/assets/ficpa-2026/el-huaquero.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "el-huaquero",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "94 min",
+     "sinopsis": "Manuel no se resigna a quedarse en la vereda con Silvio y Etelvina, sus padres septuagenarios. Todos sus hermanos han salido de la región, como la mayoría de los jóvenes, seducidos por las luces del mundo. Sin embargo, al conocer a Ezequiel, un viejo buscador de tesoros, que, al parecer, ha encontrado algo grande, le hacen confrontar su ambición, el amor, sus valores y los anhelos profundos de la vida."
+    }
+   ]
+  },
+  "Iridescence": {
+   "tmdb_id": 1800079,
+   "titulo_original": "Iridescence",
+   "poster_path": "/AqwZrH1LJv02EmiIc4uzrpH8Zu5.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "",
+   "genero": "Animación",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "",
+   "lbSlug": "iridescence-2025",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+  },
+  "Bajo el polvo, nuestra tierra": {
+   "tmdb_id": 1553071,
+   "titulo_original": "Saudades do Rio Doce",
+   "poster_path": "/5Ta6HvtCoA6WuG5b04D6cEyfm59.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Sister María Inés de Oliveira drives her old car through the degraded fields of a land that has become barren, in the heart of Brazil. The only flowers that remain are those that adorn her straw hat. On the horizon rises a mountain of toxic waste, the result of the exploitation of niobium – a strategic mineral on which the European Union depends to maintain, under the banner of the energy transition, the economic and political project.",
+   "genero": "Documental",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 24,
+   "pais_tmdb": "",
+   "lbSlug": "saudades-do-rio-doce",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+  },
+  "Despojo": {
+   "tmdb_id": 1319078,
+   "titulo_original": "Despojo",
+   "poster_path": "/sjzl9YJ0fM4vLjrwvU8W4fmbIQx.jpg",
+   "synopsis_es": "Chica es parte de una mafia que explota niños y los hace delinquir con la promesa de dejarlos libres a los dieciocho años, son liderados por el Gran Padre. Tras elegir su libertad, Chica y su hermano Joven son torturados y ella es obligada a presenciar el asesinato de su hermano. Tras rogar por su vida, es obligada por el Gran Padre a pasar una prueba de lealtad, que es vender a la única persona que ama en el campamento de los niños, su hermana Nena.",
+   "synopsis_en": "",
+   "genero": "Drama",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 15,
+   "pais_tmdb": "Peru",
+   "lbSlug": "despojo",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+  },
+  "La piel de nuestra memoria": {
+   "tmdb_id": 1502459,
+   "titulo_original": "La Piel de Nuestra Memoria",
+   "poster_path": "/lffhlkqfzaUTSEY6wF8gd9GJirs.jpg",
+   "synopsis_es": "Una mirada a las tradiciones y cosmovisión de los pueblos Chinantecos.",
+   "synopsis_en": "",
+   "genero": "Drama",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "Mexico",
+   "lbSlug": "la-piel-de-nuestra-memoria",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+  }
+ },
+ "sin_ficha": [
+  "After the Meteor Shower",
+  "Aguarruz - Memorias de maíz",
+  "Blanco roto",
+  "Ciudad de cristal",
+  "El Edén",
+  "El día de mi suerte",
+  "El legado de Bochica",
+  "Figurante",
+  "Huellas: volviendo a la tierra campesina",
+  "Hytcha",
+  "Kraken – Hombre Mito, Hombre Leyenda",
+  "La bondad de la feijoa",
+  "La tempestad",
+  "Laurel: orígen de una lucha",
+  "Mysk’fihizha´ - Nueva gente",
+  "Nuevo sendero",
+  "Raíces de amor",
+  "Sin fraktura",
+  "Tentado de difunto",
+  "The Folllwers",
+  "The Rusty Fish",
+  "Vuelo de una golondrina",
+  "¿Por qué así?",
+  "Árbol en pie"
+ ]
+}
