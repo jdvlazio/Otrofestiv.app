@@ -138,6 +138,8 @@
    "_id_nota": "Id estable de la función (docs/FUNCION.md §11). NO se escribe a mano: lo asigna el ensamblador desde festivals/staging/<fid>-funciones-ids.json y sobrevive a cambios de hora, sala, sede y título.",
    "title": "Título con el que se exhibe",
    "title_en": "English title (si difiere)",
+   "titulos_anteriores": [],
+   "_titulos_anteriores_nota": "NO se escribe a mano: lo pone el ensamblador desde festivals/staging/<fid>-titulos-anteriores.json cuando una obra o actividad cambia de título, para que la app migre lo guardado (domain/titulos.js).",
    "type": "film",
    "director": "Nombre Director",
    "year": 2026,

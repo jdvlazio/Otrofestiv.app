@@ -317,7 +317,7 @@ está pasando de verdad — no lo que alguien recordaba al escribirlo.
 | `ticket_url` | string | `^https://` | 11 fest | URL de compra de ESTA función. En snake_case: `ticketUrl` no lo lee nadie. |
 | `is_free` | boolean | — | 27 fest | Entrada libre. Booleano de verdad — la app compara con === true. |
 | `requires_registration` | boolean | — | 14 fest |  |
-| `registration_url` | string | `^https://` | 8 fest |  |
+| `registration_url` | string | `^https://` | 9 fest |  |
 | `by_invitation` | boolean | — | 2 fest | Función CERRADA al público, solo con invitación. Anula el badge de precio y el plan no la propone (screeningPlannable); se agenda a mano. Por función: la gala sí, las demás funciones de la obra no. |
 | `online` | boolean | — | 1 fest | Función EN LÍNEA (una charla por Twitch): su sede no tiene pin a propósito y el planificador no le suma traslado (travelMins da 0 sin coordenadas); choca solo por horario. Por función. |
 | `stream_url` | string | — | 1 fest | El link del canal de una función en línea (https). Lo abre el aviso de la ficha. |
@@ -359,7 +359,7 @@ está pasando de verdad — no lo que alguien recordaba al escribirlo.
 | `unscheduled` | boolean | — | 1 fest | En catálogo sin jornada. Única exención de day/time/venue. |
 | `sessions` | array | — | 1 fest |  |
 | `has_qa` | boolean | — | 29 fest | Afecta conflictos vía durationForTravel. |
-| `titulos_anteriores` | array | — | 19 fest | Títulos con que el festival publicó ANTES esta obra. Lo llena Onboarding cuando un festival renombra (p. ej. «Tránsito» → «Tránsitos»). La app mueve en silencio lo que el usuario guardó bajo el viejo (Interés, Plan, vista, prioridad, calificación, retrasos) — domain/titulos.js. Obra partida en dos: el viejo va en las dos y gana la primera del catálogo. Nunca un título que siga vigente. |
+| `titulos_anteriores` | array | — | 20 fest | Títulos con que el festival publicó ANTES esta obra. Lo llena Onboarding cuando un festival renombra (p. ej. «Tránsito» → «Tránsitos»). La app mueve en silencio lo que el usuario guardó bajo el viejo (Interés, Plan, vista, prioridad, calificación, retrasos) — domain/titulos.js. Obra partida en dos: el viejo va en las dos y gana la primera del catálogo. Nunca un título que siga vigente. |
 | `qa_type` | string | `team` · `guests` | 15 fest | La variante del Q&A. Se pinta traducida; NO se escribe la frase en el dato. |
 | `competencia` | string | — | 1 fest |  |
 | `premium` | boolean | — | 1 fest |  |

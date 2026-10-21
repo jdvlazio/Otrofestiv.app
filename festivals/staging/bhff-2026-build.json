@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "bogotahorrorfilmfest.com/programacion/ (arreglo PROGRAMACION del HTML) + IG p/DdcszK2Dn7g (franjas nacionales)",
-  "capturado": "2026-10-20",
+  "capturado": "2026-10-21",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "radar": 1030,
@@ -2418,6 +2418,180 @@
    }
   },
   {
+   "title": "La Oscuridad y sus Ecos. Un siglo de monstruos",
+   "type": "event",
+   "section": "🛠️ Talleres",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-22",
+    "15:00"
+   ],
+   "day": "2026-10-22",
+   "time": "15:00",
+   "day_order": 0,
+   "venue": "Cinemateca de Bogotá - Bogotá",
+   "event_kind": "taller",
+   "has_qa": false,
+   "_src": {
+    "url": "https://docs.google.com/forms/d/e/1FAIpQLSfYpIeJpeGTK1Co7ki-TKppGVm5ddRRy9pFZker683OKRTJtQ/viewform",
+    "date": "2026-10-21",
+    "acceso": "https://bogotahorrorfilmfest.com/talleres/"
+   },
+   "requires_registration": true,
+   "description": "Yeimy Cardozo",
+   "description_lang": "es",
+   "_fid": "f_28f5a4e35d",
+   "id": "f_28f5a4e35d",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-mensaje",
+     "fecha": "2026-10-21",
+     "url": "https://docs.google.com/forms/d/e/1FAIpQLSfYpIeJpeGTK1Co7ki-TKppGVm5ddRRy9pFZker683OKRTJtQ/viewform",
+     "frase": "Sigue como está en el formulario"
+    },
+    "time": {
+     "tipo": "festival-mensaje",
+     "fecha": "2026-10-21",
+     "url": "https://docs.google.com/forms/d/e/1FAIpQLSfYpIeJpeGTK1Co7ki-TKppGVm5ddRRy9pFZker683OKRTJtQ/viewform",
+     "frase": "Sigue como está en el formulario"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-21",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-21",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "requires_registration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-21",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-21",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "title": {
+     "tipo": "festival-mensaje",
+     "fecha": "2026-10-21",
+     "url": "https://docs.google.com/forms/d/e/1FAIpQLSfYpIeJpeGTK1Co7ki-TKppGVm5ddRRy9pFZker683OKRTJtQ/viewform",
+     "frase": "Sigue como está en el formulario"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-21",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-21",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "duration": {
+     "tipo": "regla",
+     "marca": "estimado"
+    }
+   },
+   "duration": "90 min"
+  },
+  {
+   "title": "Creando con las garras",
+   "type": "event",
+   "section": "🛠️ Talleres",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-22",
+    "17:00"
+   ],
+   "day": "2026-10-22",
+   "time": "17:00",
+   "day_order": 0,
+   "venue": "Cinemateca de Bogotá - Bogotá",
+   "sala": "Lab 1",
+   "event_kind": "taller",
+   "has_qa": false,
+   "_src": {
+    "url": "https://docs.google.com/forms/d/e/1FAIpQLSfYpIeJpeGTK1Co7ki-TKppGVm5ddRRy9pFZker683OKRTJtQ/viewform",
+    "date": "2026-10-21",
+    "acceso": "https://bogotahorrorfilmfest.com/talleres/",
+    "ig": "https://www.instagram.com/p/Deu5XIPuFHo/"
+   },
+   "requires_registration": true,
+   "description": "Natt Martinez",
+   "description_lang": "es",
+   "_fid": "f_d5b931d897",
+   "id": "f_d5b931d897",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-mensaje",
+     "fecha": "2026-10-21",
+     "url": "https://docs.google.com/forms/d/e/1FAIpQLSfYpIeJpeGTK1Co7ki-TKppGVm5ddRRy9pFZker683OKRTJtQ/viewform",
+     "frase": "Sigue como está en el formulario"
+    },
+    "time": {
+     "tipo": "festival-mensaje",
+     "fecha": "2026-10-21",
+     "url": "https://docs.google.com/forms/d/e/1FAIpQLSfYpIeJpeGTK1Co7ki-TKppGVm5ddRRy9pFZker683OKRTJtQ/viewform",
+     "frase": "Sigue como está en el formulario"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-21",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-21",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-21",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "requires_registration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-21",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-21",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "title": {
+     "tipo": "festival-mensaje",
+     "fecha": "2026-10-21",
+     "url": "https://docs.google.com/forms/d/e/1FAIpQLSfYpIeJpeGTK1Co7ki-TKppGVm5ddRRy9pFZker683OKRTJtQ/viewform",
+     "frase": "Sigue como está en el formulario"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-21",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-21",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "duration": {
+     "tipo": "regla",
+     "marca": "estimado"
+    }
+   },
+   "titulos_anteriores": [
+    "Maquillaje con las Garras"
+   ],
+   "duration": "90 min"
+  },
+  {
    "title": "De la idea al guion",
    "type": "event",
    "section": "🛠️ Talleres",
@@ -2434,65 +2608,69 @@
    "event_kind": "taller",
    "has_qa": false,
    "_src": {
-    "url": "https://www.instagram.com/p/Des_xjFN9gL/",
-    "date": "2026-10-20",
-    "acceso": "https://bogotahorrorfilmfest.com/talleres/"
+    "url": "https://docs.google.com/forms/d/e/1FAIpQLSfYpIeJpeGTK1Co7ki-TKppGVm5ddRRy9pFZker683OKRTJtQ/viewform",
+    "date": "2026-10-21",
+    "acceso": "https://bogotahorrorfilmfest.com/talleres/",
+    "ig": "https://www.instagram.com/p/Des_xjFN9gL/"
    },
    "requires_registration": true,
-   "description": "Jhonny Ortiz Alarcón",
+   "description": "Jhonny Ortiz Alarcon",
    "description_lang": "es",
    "_fid": "f_226044113b",
    "id": "f_226044113b",
    "is_free": true,
    "_procedencia": {
     "day": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-20",
-     "url": "https://bogotahorrorfilmfest.com/programacion/"
+     "tipo": "festival-mensaje",
+     "fecha": "2026-10-21",
+     "url": "https://docs.google.com/forms/d/e/1FAIpQLSfYpIeJpeGTK1Co7ki-TKppGVm5ddRRy9pFZker683OKRTJtQ/viewform",
+     "frase": "Sigue como está en el formulario"
     },
     "time": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-20",
-     "url": "https://bogotahorrorfilmfest.com/programacion/"
+     "tipo": "festival-mensaje",
+     "fecha": "2026-10-21",
+     "url": "https://docs.google.com/forms/d/e/1FAIpQLSfYpIeJpeGTK1Co7ki-TKppGVm5ddRRy9pFZker683OKRTJtQ/viewform",
+     "frase": "Sigue como está en el formulario"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-10-20",
+     "fecha": "2026-10-21",
      "url": "https://bogotahorrorfilmfest.com/programacion/"
     },
     "sala": {
      "tipo": "festival-web",
-     "fecha": "2026-10-20",
+     "fecha": "2026-10-21",
      "url": "https://bogotahorrorfilmfest.com/programacion/"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-10-20",
+     "fecha": "2026-10-21",
      "url": "https://bogotahorrorfilmfest.com/programacion/"
     },
     "requires_registration": {
      "tipo": "festival-web",
-     "fecha": "2026-10-20",
+     "fecha": "2026-10-21",
      "url": "https://bogotahorrorfilmfest.com/programacion/"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-10-20",
+     "fecha": "2026-10-21",
      "url": "https://bogotahorrorfilmfest.com/programacion/"
     },
     "title": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-20",
-     "url": "https://bogotahorrorfilmfest.com/programacion/"
+     "tipo": "festival-mensaje",
+     "fecha": "2026-10-21",
+     "url": "https://docs.google.com/forms/d/e/1FAIpQLSfYpIeJpeGTK1Co7ki-TKppGVm5ddRRy9pFZker683OKRTJtQ/viewform",
+     "frase": "Sigue como está en el formulario"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-10-20",
+     "fecha": "2026-10-21",
      "url": "https://bogotahorrorfilmfest.com/programacion/"
     },
     "event_kind": {
      "tipo": "festival-web",
-     "fecha": "2026-10-20",
+     "fecha": "2026-10-21",
      "url": "https://bogotahorrorfilmfest.com/programacion/"
     },
     "duration": {
@@ -2503,81 +2681,180 @@
    "duration": "90 min"
   },
   {
-   "title": "Maquillaje con las Garras",
+   "title": "VFX para no técnicos: ¿Cómo hacer cine con VFX y no morir en el intento?",
    "type": "event",
    "section": "🛠️ Talleres",
    "_ancla": [
     "Cinemateca de Bogotá - Bogotá",
-    "2026-10-22",
+    "2026-10-23",
     "17:00"
    ],
-   "day": "2026-10-22",
+   "day": "2026-10-23",
    "time": "17:00",
-   "day_order": 0,
+   "day_order": 1,
    "venue": "Cinemateca de Bogotá - Bogotá",
    "sala": "Lab 1",
    "event_kind": "taller",
    "has_qa": false,
    "_src": {
-    "url": "https://www.instagram.com/p/Deu5XIPuFHo/",
-    "date": "2026-10-20",
-    "acceso": "https://bogotahorrorfilmfest.com/talleres/"
+    "url": "https://docs.google.com/forms/d/e/1FAIpQLSfYpIeJpeGTK1Co7ki-TKppGVm5ddRRy9pFZker683OKRTJtQ/viewform",
+    "date": "2026-10-21",
+    "acceso": "https://bogotahorrorfilmfest.com/talleres/",
+    "ig": "https://www.instagram.com/p/Dd-WRmzutXX/"
    },
    "requires_registration": true,
-   "description": "Nat Martínez",
+   "description": "Guillermo Restrepo",
    "description_lang": "es",
-   "_fid": "f_d5b931d897",
-   "id": "f_d5b931d897",
+   "_fid": "f_131c17880e",
+   "id": "f_131c17880e",
    "is_free": true,
    "_procedencia": {
     "day": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-20",
-     "url": "https://bogotahorrorfilmfest.com/programacion/"
+     "tipo": "festival-mensaje",
+     "fecha": "2026-10-21",
+     "url": "https://docs.google.com/forms/d/e/1FAIpQLSfYpIeJpeGTK1Co7ki-TKppGVm5ddRRy9pFZker683OKRTJtQ/viewform",
+     "frase": "Sigue como está en el formulario"
     },
     "time": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-20",
-     "url": "https://bogotahorrorfilmfest.com/programacion/"
+     "tipo": "festival-mensaje",
+     "fecha": "2026-10-21",
+     "url": "https://docs.google.com/forms/d/e/1FAIpQLSfYpIeJpeGTK1Co7ki-TKppGVm5ddRRy9pFZker683OKRTJtQ/viewform",
+     "frase": "Sigue como está en el formulario"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-10-20",
+     "fecha": "2026-10-21",
      "url": "https://bogotahorrorfilmfest.com/programacion/"
     },
     "sala": {
      "tipo": "festival-web",
-     "fecha": "2026-10-20",
+     "fecha": "2026-10-21",
      "url": "https://bogotahorrorfilmfest.com/programacion/"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-10-20",
+     "fecha": "2026-10-21",
      "url": "https://bogotahorrorfilmfest.com/programacion/"
     },
     "requires_registration": {
      "tipo": "festival-web",
-     "fecha": "2026-10-20",
+     "fecha": "2026-10-21",
      "url": "https://bogotahorrorfilmfest.com/programacion/"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-10-20",
+     "fecha": "2026-10-21",
      "url": "https://bogotahorrorfilmfest.com/programacion/"
     },
     "title": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-20",
-     "url": "https://bogotahorrorfilmfest.com/programacion/"
+     "tipo": "festival-mensaje",
+     "fecha": "2026-10-21",
+     "url": "https://docs.google.com/forms/d/e/1FAIpQLSfYpIeJpeGTK1Co7ki-TKppGVm5ddRRy9pFZker683OKRTJtQ/viewform",
+     "frase": "Sigue como está en el formulario"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-10-20",
+     "fecha": "2026-10-21",
      "url": "https://bogotahorrorfilmfest.com/programacion/"
     },
     "event_kind": {
      "tipo": "festival-web",
-     "fecha": "2026-10-20",
+     "fecha": "2026-10-21",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "duration": {
+     "tipo": "regla",
+     "marca": "estimado"
+    }
+   },
+   "duration": "90 min"
+  },
+  {
+   "title": "Arte FX",
+   "type": "event",
+   "section": "🛠️ Talleres",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-24",
+    "15:00"
+   ],
+   "day": "2026-10-24",
+   "time": "15:00",
+   "day_order": 2,
+   "venue": "Cinemateca de Bogotá - Bogotá",
+   "sala": "Lab 1",
+   "event_kind": "taller",
+   "has_qa": false,
+   "_src": {
+    "url": "https://docs.google.com/forms/d/e/1FAIpQLSfYpIeJpeGTK1Co7ki-TKppGVm5ddRRy9pFZker683OKRTJtQ/viewform",
+    "date": "2026-10-21",
+    "acceso": "https://bogotahorrorfilmfest.com/talleres/",
+    "ig": "https://www.instagram.com/p/Dd-KmzEOkzm/"
+   },
+   "registration_url": "https://docs.google.com/forms/d/e/1FAIpQLSfYpIeJpeGTK1Co7ki-TKppGVm5ddRRy9pFZker683OKRTJtQ/viewform",
+   "requires_registration": true,
+   "description": "Camilo Vélez",
+   "description_lang": "es",
+   "_fid": "f_98d05b86cd",
+   "id": "f_98d05b86cd",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-mensaje",
+     "fecha": "2026-10-21",
+     "url": "https://docs.google.com/forms/d/e/1FAIpQLSfYpIeJpeGTK1Co7ki-TKppGVm5ddRRy9pFZker683OKRTJtQ/viewform",
+     "frase": "Sigue como está en el formulario"
+    },
+    "time": {
+     "tipo": "festival-mensaje",
+     "fecha": "2026-10-21",
+     "url": "https://docs.google.com/forms/d/e/1FAIpQLSfYpIeJpeGTK1Co7ki-TKppGVm5ddRRy9pFZker683OKRTJtQ/viewform",
+     "frase": "Sigue como está en el formulario"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-21",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-21",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-21",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "requires_registration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-21",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "registration_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-21",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-21",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "title": {
+     "tipo": "festival-mensaje",
+     "fecha": "2026-10-21",
+     "url": "https://docs.google.com/forms/d/e/1FAIpQLSfYpIeJpeGTK1Co7ki-TKppGVm5ddRRy9pFZker683OKRTJtQ/viewform",
+     "frase": "Sigue como está en el formulario"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-21",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-21",
      "url": "https://bogotahorrorfilmfest.com/programacion/"
     },
     "duration": {
@@ -2593,7 +2870,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-20T20:17:24",
+  "fecha": "2026-10-21T06:22:48",
   "plan_sha": "104188497fe430c6",
   "paso": 9,
   "cmd": "python3 pipeline/bhff-2026-verificar.py"

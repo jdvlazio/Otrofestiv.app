@@ -85,36 +85,39 @@ def directores(s):
 # (bogotahorrorfilmfest.com/talleres/): la fecha, la hora y la sala vienen del
 # post de cada uno en Instagram (embed público, sin sesión). Inscripción
 # gratuita con cupos limitados, dice la página. Sin duración publicada: va sin.
-# FUERA TODOS por ahora: ninguna fuente publica su DURACIÓN, y una actividad
-# sin duración no entra (la exige [activity-duration]: alimenta el plan).
-# Además, preguntado: «VFX para no técnicos» (Dd-WRmzutXX) y «De la idea al
-# guion» (DdzPc7iJz7i) dicen los dos 23 oct · 5:00 p. m. · Lab 1; Yei Cardozo y
-# el Encuentro de Realizadores no tienen fecha en ninguna fuente.
-TALLERES_SIN_DURACION = [
-    {'titulo': 'Arte FX', 'dia': '2026-10-22', 'hora': '17:00', 'invitados': 'Camilo Vélez FX',
-     'ig': 'Dd-KmzEOkzm'},
-]
-# «De la idea al guion» se movió: el pie de Des_xjFN9gL (leído sin sesión el
-# 20 oct) dice «23 de octubre · 3:00 p. m. / Lab 1 · Cinemateca de Bogotá /
-# Taller gratuito con inscripción previa». Ya no choca con «VFX para no
-# técnicos» (17:00). Duración sin publicar: la estima el modelo (marca estimado).
+# LA TABLA DEL FESTIVAL (21 oct 2026), LA QUE MANDA: BHFF le respondió a Juan
+# por mensaje con una imagen de su formulario de inscripción y la frase «Sigue
+# como está en el formulario» (fuentes/bhff-2026/festival-mensaje-talleres-
+# 20261021.jpg). La tabla, verbatim:
+#   22 DE OCTUBRE. 3 PM — La Oscuridad y sus Ecos. Un siglo de monstruos — Yeimy Cardozo
+#   22 DE OCTUBRE. 5 PM — Creando con las garras — Natt Martinez
+#   23 DE OCTUBRE. 3 PM — De la idea al guion — Jhonny Ortiz Alarcon
+#   23 DE OCTUBRE. 5 PM — VFX para no técnicos: ¿Cómo hacer cine con VFX y no morir en el intento? — Guillermo Restrepo
+#   24 DE OCTUBRE. 3 PM — Arte FX — Camilo Vélez
+# Título e invitado van con la grafía de la tabla. Las afirmaciones
+# «festival-mensaje» (bhff-2026-afirmaciones.json) llevan la frase literal.
+# Sala: Lab 1 donde un post lo dice (Des_xjFN9gL, Deu5XIPuFHo, Dd-WRmzutXX,
+# Dd-KmzEOkzm); «La Oscuridad y sus Ecos» no tiene post ni sala en ninguna
+# fuente → la sede sin sala. Duración: ninguna fuente la publica → la estima
+# el modelo (marca estimado).
+# «Creando con las garras» es la que se publicó como «Maquillaje con las
+# Garras» (f_d5b931d897): mismo id, título anterior declarado.
+# url: el formulario del festival (la imagen es de él); la imagen vive en fuentes/,
+# que no se versiona
+MENSAJE = 'https://docs.google.com/forms/d/e/1FAIpQLSfYpIeJpeGTK1Co7ki-TKppGVm5ddRRy9pFZker683OKRTJtQ/viewform'
 TALLERES = [
-    {'titulo': 'De la idea al guion', 'dia': '2026-10-23', 'hora': '15:00', 'invitados': 'Jhonny Ortiz Alarcón',
-     'ig': 'Des_xjFN9gL', 'fecha': '2026-10-20'},
-    # «Maquillaje con las Garras» se movió: el pie de Deu5XIPuFHo (leído sin
-    # sesión el 20 oct) dice «TALLER–LABORATORIO DE CREACIÓN / MAQUILLAJE CON
-    # LAS GARRAS / Con Nat Martínez, actriz, maquilladora artística y cosplayer.
-    # … 22 de octubre · 5:00 p. m. / Lab 1 · Cinemateca de Bogotá / Carrera 3 #
-    # 19-10, Bogotá / Entrada libre con inscripción previa: /
-    # bogotahorrorfilmfest.com/talleres/». Choca con «Arte FX» (Dd-KmzEOkzm,
-    # mismo 22 oct 17:00 Lab 1). Juan, 20 oct: vale el post más reciente; a
-    # BHFF se le pregunta por Arte FX. Duración sin publicar: la estima el modelo.
-    {'titulo': 'Maquillaje con las Garras', 'dia': '2026-10-22', 'hora': '17:00', 'invitados': 'Nat Martínez',
-     'ig': 'Deu5XIPuFHo', 'fecha': '2026-10-20'},
+    {'titulo': 'La Oscuridad y sus Ecos. Un siglo de monstruos', 'dia': '2026-10-22', 'hora': '15:00',
+     'invitados': 'Yeimy Cardozo', 'sala': None},
+    {'titulo': 'Creando con las garras', 'dia': '2026-10-22', 'hora': '17:00', 'invitados': 'Natt Martinez',
+     'ig': 'Deu5XIPuFHo'},
+    {'titulo': 'De la idea al guion', 'dia': '2026-10-23', 'hora': '15:00', 'invitados': 'Jhonny Ortiz Alarcon',
+     'ig': 'Des_xjFN9gL'},
+    {'titulo': 'VFX para no técnicos: ¿Cómo hacer cine con VFX y no morir en el intento?', 'dia': '2026-10-23',
+     'hora': '17:00', 'invitados': 'Guillermo Restrepo', 'ig': 'Dd-WRmzutXX'},
+    {'titulo': 'Arte FX', 'dia': '2026-10-24', 'hora': '15:00', 'invitados': 'Camilo Vélez', 'ig': 'Dd-KmzEOkzm',
+     'registration_url': 'https://docs.google.com/forms/d/e/1FAIpQLSfYpIeJpeGTK1Co7ki-TKppGVm5ddRRy9pFZker683OKRTJtQ/viewform'},
 ]
-TALLERES_FUERA = ['«Arte FX» (22 oct 17:00, Lab 1): sin duración publicada y choca con «Maquillaje con las Garras» (IG Deu5XIPuFHo), que entra; preguntado',
-                  '«VFX para no técnicos» (23 oct 17:00, Lab 1): sin duración publicada; «De la idea al guion» se movió a las 15:00 (IG Des_xjFN9gL) y entra',
-                  'Taller de Yei Cardozo y Encuentro de Realizadores de Género: sin fecha publicada']
+TALLERES_FUERA = ['Encuentro de Realizadores de Género: no está en la tabla del festival (mensaje, 21 oct) ni tiene fecha publicada']
 # el tipo de función de la parrilla
 KIND = {'Inauguración': 'apertura', 'Clausura': 'clausura'}
 
@@ -269,12 +272,13 @@ def main():
                     r['duracion_min'] = sum(o.get('duracion_min') or 0 for o in obras) or None
             funciones.append({k: v for k, v in r.items() if v not in (None, '')})
     for x in TALLERES:
-        funciones.append({'dia': x['dia'], 'hora': x['hora'], 'sede': 'Cinemateca de Bogotá', 'sala': 'Lab 1',
-                          'acceso': 'Entrada libre con inscripción previa · Cupos limitados',
-                          'titulo': x['titulo'], 'tipo': 'evento', 'event_kind': 'taller', 'seccion': 'Talleres',
-                          'invitados': x['invitados'],
-                          '_src': {'url': f'https://www.instagram.com/p/{x["ig"]}/', 'date': x.get('fecha', '2026-10-07'),
-                                   'acceso': 'https://bogotahorrorfilmfest.com/talleres/'}})
+        t = {'dia': x['dia'], 'hora': x['hora'], 'sede': 'Cinemateca de Bogotá', 'sala': x.get('sala', 'Lab 1'),
+             'acceso': 'Entrada libre con inscripción previa · Cupos limitados',
+             'titulo': x['titulo'], 'tipo': 'evento', 'event_kind': 'taller', 'seccion': 'Talleres',
+             'invitados': x['invitados'], 'registration_url': x.get('registration_url'),
+             '_src': {'url': MENSAJE, 'date': '2026-10-21', 'acceso': 'https://bogotahorrorfilmfest.com/talleres/',
+                      **({'ig': f'https://www.instagram.com/p/{x["ig"]}/'} if x.get('ig') else {})}}
+        funciones.append({k: v for k, v in t.items() if v not in (None, '')})
     fuera += TALLERES_FUERA
     if len(funciones) - len(TALLERES) + len(fuera) - len(TALLERES_FUERA) + len(fallos) != n:
         fallos.append(f'{n} eventos y {len(funciones)} funciones + {len(fuera)} fuera')

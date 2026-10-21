@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "bogotahorrorfilmfest.com/programacion/ (arreglo PROGRAMACION del HTML) + IG p/DdcszK2Dn7g (franjas nacionales)",
-  "capturado": "2026-10-20",
+  "capturado": "2026-10-21",
   "url": "https://bogotahorrorfilmfest.com/programacion/",
   "metodo": "la parrilla del sitio; los cortos de cada franja, del carrusel"
  },
@@ -9,9 +9,7 @@
   "2026-10-23 El Ritual de Huasao: son dos (El Tunal y Fontanar del Río, según Canal Trece) y el festival no dice cuál es cada función; preguntado",
   "2026-10-24 Franja Nacional · El Miedo Llega a Todas Partes: son dos (El Tunal y Fontanar del Río, según Canal Trece) y el festival no dice cuál es cada función; preguntado",
   "2026-10-25 Nico: son dos (El Tunal y Fontanar del Río, según Canal Trece) y el festival no dice cuál es cada función; preguntado",
-  "«Arte FX» (22 oct 17:00, Lab 1): sin duración publicada y choca con «Maquillaje con las Garras» (IG Deu5XIPuFHo), que entra; preguntado",
-  "«VFX para no técnicos» (23 oct 17:00, Lab 1): sin duración publicada; «De la idea al guion» se movió a las 15:00 (IG Des_xjFN9gL) y entra",
-  "Taller de Yei Cardozo y Encuentro de Realizadores de Género: sin fecha publicada"
+  "Encuentro de Realizadores de Género: no está en la tabla del festival (mensaje, 21 oct) ni tiene fecha publicada"
  ],
  "funciones": [
   {
@@ -658,19 +656,18 @@
    "duracion_min": 120
   },
   {
-   "dia": "2026-10-23",
+   "dia": "2026-10-22",
    "hora": "15:00",
    "sede": "Cinemateca de Bogotá",
-   "sala": "Lab 1",
    "acceso": "Entrada libre con inscripción previa · Cupos limitados",
-   "titulo": "De la idea al guion",
+   "titulo": "La Oscuridad y sus Ecos. Un siglo de monstruos",
    "tipo": "evento",
    "event_kind": "taller",
    "seccion": "Talleres",
-   "invitados": "Jhonny Ortiz Alarcón",
+   "invitados": "Yeimy Cardozo",
    "_src": {
-    "url": "https://www.instagram.com/p/Des_xjFN9gL/",
-    "date": "2026-10-20",
+    "url": "https://docs.google.com/forms/d/e/1FAIpQLSfYpIeJpeGTK1Co7ki-TKppGVm5ddRRy9pFZker683OKRTJtQ/viewform",
+    "date": "2026-10-21",
     "acceso": "https://bogotahorrorfilmfest.com/talleres/"
    }
   },
@@ -680,15 +677,71 @@
    "sede": "Cinemateca de Bogotá",
    "sala": "Lab 1",
    "acceso": "Entrada libre con inscripción previa · Cupos limitados",
-   "titulo": "Maquillaje con las Garras",
+   "titulo": "Creando con las garras",
    "tipo": "evento",
    "event_kind": "taller",
    "seccion": "Talleres",
-   "invitados": "Nat Martínez",
+   "invitados": "Natt Martinez",
    "_src": {
-    "url": "https://www.instagram.com/p/Deu5XIPuFHo/",
-    "date": "2026-10-20",
-    "acceso": "https://bogotahorrorfilmfest.com/talleres/"
+    "url": "https://docs.google.com/forms/d/e/1FAIpQLSfYpIeJpeGTK1Co7ki-TKppGVm5ddRRy9pFZker683OKRTJtQ/viewform",
+    "date": "2026-10-21",
+    "acceso": "https://bogotahorrorfilmfest.com/talleres/",
+    "ig": "https://www.instagram.com/p/Deu5XIPuFHo/"
+   }
+  },
+  {
+   "dia": "2026-10-23",
+   "hora": "15:00",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Lab 1",
+   "acceso": "Entrada libre con inscripción previa · Cupos limitados",
+   "titulo": "De la idea al guion",
+   "tipo": "evento",
+   "event_kind": "taller",
+   "seccion": "Talleres",
+   "invitados": "Jhonny Ortiz Alarcon",
+   "_src": {
+    "url": "https://docs.google.com/forms/d/e/1FAIpQLSfYpIeJpeGTK1Co7ki-TKppGVm5ddRRy9pFZker683OKRTJtQ/viewform",
+    "date": "2026-10-21",
+    "acceso": "https://bogotahorrorfilmfest.com/talleres/",
+    "ig": "https://www.instagram.com/p/Des_xjFN9gL/"
+   }
+  },
+  {
+   "dia": "2026-10-23",
+   "hora": "17:00",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Lab 1",
+   "acceso": "Entrada libre con inscripción previa · Cupos limitados",
+   "titulo": "VFX para no técnicos: ¿Cómo hacer cine con VFX y no morir en el intento?",
+   "tipo": "evento",
+   "event_kind": "taller",
+   "seccion": "Talleres",
+   "invitados": "Guillermo Restrepo",
+   "_src": {
+    "url": "https://docs.google.com/forms/d/e/1FAIpQLSfYpIeJpeGTK1Co7ki-TKppGVm5ddRRy9pFZker683OKRTJtQ/viewform",
+    "date": "2026-10-21",
+    "acceso": "https://bogotahorrorfilmfest.com/talleres/",
+    "ig": "https://www.instagram.com/p/Dd-WRmzutXX/"
+   }
+  },
+  {
+   "dia": "2026-10-24",
+   "hora": "15:00",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Lab 1",
+   "acceso": "Entrada libre con inscripción previa · Cupos limitados",
+   "titulo": "Arte FX",
+   "tipo": "evento",
+   "event_kind": "taller",
+   "seccion": "Talleres",
+   "invitados": "Camilo Vélez",
+   "registration_url": "https://docs.google.com/forms/d/e/1FAIpQLSfYpIeJpeGTK1Co7ki-TKppGVm5ddRRy9pFZker683OKRTJtQ/viewform",
+   "_src": {
+    "url": "https://docs.google.com/forms/d/e/1FAIpQLSfYpIeJpeGTK1Co7ki-TKppGVm5ddRRy9pFZker683OKRTJtQ/viewform",
+    "date": "2026-10-21",
+    "acceso": "https://bogotahorrorfilmfest.com/talleres/",
+    "ig": "https://www.instagram.com/p/Dd-KmzEOkzm/"
    }
   }
  ]
