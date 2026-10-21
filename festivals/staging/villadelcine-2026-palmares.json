@@ -1,15 +1,78 @@
 {
  "_provenance": {
-  "fuente": "Instagram @la_propiacasaproductora (sin sesión), placa del trofeo y pantalla de la gala: https://www.instagram.com/p/DercaKejs21/",
-  "capturado": "2026-10-19"
+  "fuente": "Instagram @festivalvilladelcine (sin sesión), carruseles «ganadores de la Selección Oficial», leídos lámina por lámina con ig-lecturas.py: https://www.instagram.com/p/DewzIRKkVLp/ (Escolar), https://www.instagram.com/p/DexDMqhFWPR/ (Celular), https://www.instagram.com/p/DexQDbhD7dN/ (Vertical), https://www.instagram.com/p/DexbiInD2sM/ (IA), https://www.instagram.com/p/DevBEdkFzfd/ (Youngfilm); antes @la_propiacasaproductora https://www.instagram.com/p/DercaKejs21/",
+  "capturado": "2026-10-21"
  },
  "palmares": [
   {
-   "categoria": "Mejor Cortometraje con Celular",
+   "categoria": "Mejor Cortometraje Escolar",
+   "nivel": "ganadora",
+   "titulo": "In Between",
+   "autoria": "Carlos Andrés Paniagua",
+   "obra": "En medio"
+  },
+  {
+   "categoria": "Mejor Cortometraje Escolar",
+   "nivel": "mencion",
+   "titulo": "Presencia de blanco",
+   "autoria": "Néstor Javier Serpa Pérez",
+   "obra": "La presencia del blanco"
+  },
+  {
+   "categoria": "Mejor Corto Celular",
    "nivel": "ganadora",
    "titulo": "La última historia",
    "autoria": "Eberto Manotas y Mauro Andrade",
    "obra": "La última historia"
+  },
+  {
+   "categoria": "Mejor Corto Celular",
+   "nivel": "mencion",
+   "titulo": "No se fía, ni aunque lloren",
+   "autoria": "Natalia Hernández Sánchez",
+   "obra": "No se fía, ni aunque lloren"
+  },
+  {
+   "categoria": "Mejor Corto Vertical",
+   "nivel": "ganadora",
+   "titulo": "4 Minutes",
+   "autoria": "Rogerio Troiani",
+   "obra": "4 minutes"
+  },
+  {
+   "categoria": "Mejor Corto Vertical",
+   "nivel": "mencion",
+   "titulo": "Chores",
+   "autoria": "Daniel Baena Pacheco",
+   "obra": null
+  },
+  {
+   "categoria": "Mejor Corto IA",
+   "nivel": "ganadora",
+   "titulo": "Catatumbo: House of Thunder, Memory, and Dignity",
+   "autoria": "Jhonattan Sarmiento",
+   "obra": "Catatumbo: casa del trueno, memoria y dignidad"
+  },
+  {
+   "categoria": "Mejor Corto IA",
+   "nivel": "mencion",
+   "titulo": "Prompt Zero",
+   "autoria": "Tomás Etter Gómez",
+   "obra": "Prompt Zero"
+  },
+  {
+   "categoria": "Youngfilm",
+   "nivel": "ganadora",
+   "titulo": "Witch and Frog",
+   "autoria": "Anastasia Provotorova",
+   "obra": "Witch and frog"
+  },
+  {
+   "categoria": "Youngfilm",
+   "nivel": "mencion",
+   "titulo": "La silla",
+   "autoria": "Clara García",
+   "obra": "La silla"
   }
  ]
 }
