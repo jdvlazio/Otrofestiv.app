@@ -7,9 +7,95 @@
   "capturado": "2026-10-21"
  },
  "retrospectiva_mcp": [
-  {"titulo": "Una vez en un cuerpo", "director": "María Cristina Pérez", "pais": "Colombia, Estados Unidos", "anio": 2025, "duracion_min": 10, "genero": "Animación"},
-  {"titulo": "Todo es culpa de la sal", "director": "María Cristina Pérez", "pais": "Colombia", "anio": 2020, "duracion_min": 10, "genero": "Animación"},
-  {"titulo": "Coffee Break", "director": "María Cristina Pérez, Mauricio Cuervo", "pais": "Colombia", "anio": 2018, "duracion_min": 9, "genero": "Animación"},
-  {"titulo": "Añejo", "director": "María Cristina Pérez", "pais": "Colombia", "anio": 2014, "duracion_min": 9, "genero": "Animación"}
+  {
+   "titulo": "Una vez en un cuerpo",
+   "director": "María Cristina Pérez",
+   "pais": "Colombia, Estados Unidos",
+   "anio": 2025,
+   "duracion_min": 10,
+   "genero": "Animación"
+  },
+  {
+   "titulo": "Todo es culpa de la sal",
+   "director": "María Cristina Pérez",
+   "pais": "Colombia",
+   "anio": 2020,
+   "duracion_min": 10,
+   "genero": "Animación"
+  },
+  {
+   "titulo": "Coffee Break",
+   "director": "María Cristina Pérez, Mauricio Cuervo",
+   "pais": "Colombia",
+   "anio": 2018,
+   "duracion_min": 9,
+   "genero": "Animación"
+  },
+  {
+   "titulo": "Añejo",
+   "director": "María Cristina Pérez",
+   "pais": "Colombia",
+   "anio": 2014,
+   "duracion_min": 9,
+   "genero": "Animación"
+  }
+ ],
+ "_provenance_mujeres": {
+  "fuente": "https://ficcali.com/anima-ve-2026/",
+  "bloque": "Expansión de un territorio (6 obras)",
+  "funcion": "«Animá Ve – Mujeres en la animación», dom 25 oct 15:00, Cinemateca La Tertulia (tarjeta WP 14452, slug anima-ve-retrospectiva-2)",
+  "fichas": "cada obra verificada en su ficha ficcali.com/pelicula/<slug>/ (año, duración, país, dirección), 21 oct 2026",
+  "decision": "DECISIÓN NUESTRA, firmada por Juan el 21 oct 2026 («necesitamos evaluar nosotros los cambios y ajustar»): Ficcali no respondió y la programación publica la función sin obras. A favor: «Expansión de un territorio» es el único bloque de Animá Ve sin programa asignado, y sus 6 obras son todas de directoras — lo que dice el título de la función. En contra: el slug de la tarjeta es «anima-ve-retrospectiva-2» y su título anterior fue «Animá Vé – Retrospectiva». Se publica con esta asignación; si el festival dice otra cosa, se corrige.",
+  "nota": "Bailar con la línea: la ficha dice 2023; la bio de Antonia Bello en la misma ficha la fecha en 2021. Se publica el año del encabezado de la ficha (2023)."
+ },
+ "mujeres_en_la_animacion": [
+  {
+   "titulo": "El fin de la sequía",
+   "director": "Raquel Páez, Mariana Rey",
+   "pais": "Colombia",
+   "anio": 2020,
+   "duracion_min": 3,
+   "genero": "Animación"
+  },
+  {
+   "titulo": "Un rastro de baba anuncia la lluvia",
+   "director": "Mariana Moyano",
+   "pais": "Colombia",
+   "anio": 2025,
+   "duracion_min": 11,
+   "genero": "Animación"
+  },
+  {
+   "titulo": "No puedo volver a casa",
+   "director": "Cecilia Traslaviña",
+   "pais": "Colombia",
+   "anio": 2015,
+   "duracion_min": 3,
+   "genero": "Animación"
+  },
+  {
+   "titulo": "Bailar con la línea",
+   "director": "Antonia Bello",
+   "pais": "Colombia",
+   "anio": 2023,
+   "duracion_min": 7,
+   "genero": "Animación"
+  },
+  {
+   "titulo": "Detrás de la puerta está el jardín",
+   "director": "Ana Sofía Navia",
+   "pais": "Colombia, Estados Unidos",
+   "anio": 2025,
+   "duracion_min": 5,
+   "genero": "Animación"
+  },
+  {
+   "titulo": "Por ahora un cuento",
+   "director": "Carla Melo",
+   "pais": "Colombia",
+   "anio": 2018,
+   "duracion_min": 11,
+   "genero": "Animación"
+  }
  ]
 }

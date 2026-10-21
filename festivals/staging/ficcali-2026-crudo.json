@@ -604,7 +604,7 @@
    "anio": 1963,
    "duracion_min": 33,
    "sinopsis": "Documenta las expresiones culturales y espirituales de Guapi, al capturar la danza ancestral de los hojarasquines del monte, la vida al pie del río y la procesión fluvial nocturna; allí, la marimba de chonta y los arrullos le rinden culto a la Inmaculada Concepción. Es un trabajo de campo del Departamento de Investigaciones Folklóricas del IPC (diciembre de 1963 a enero de 1964). Recoge las interacciones entre los guapireños y los investigadores que indagaban sobre las celebraciones de la época, repertorios musicales y dancísticos, y fabricación de instrumentos. Forma parte de un archivo de cintas de 16 mm, cintas magnetofónicas de carrete abierto, fotografías y textos sobre fuerza creativa, fiesta y ritual en Guapi. Está disponible en el IPC.",
-   "seccion": "Proyecciones",
+   "seccion": "Clásicos",
    "duracion_obra": 33
   },
   {
@@ -644,7 +644,7 @@
    "duracion_min": 100,
    "genero": "Drama",
    "sinopsis": "Misael trabaja solo con su hacha, cortando árboles en el monte. Una responsabilidad inesperada altera su vida y la lógica de sus días se desvanece en una naturaleza donde la razón humana carece de sentido. Lisandro Alonso retoma el personaje, las acciones y la forma minuciosa y delicada de observarlos de su película La libertad (2001), con la que se estableció como parte de una nueva generación de cine argentino. Esta novedosa mirada plantea un giro reflexivo sobre el personaje, su tiempo, nuestro tiempo y la forma de asumir el cine de director.",
-   "seccion": "Proyecciones",
+   "seccion": "Plano General",
    "duracion_obra": 100
   },
   {
@@ -722,7 +722,7 @@
    "duracion_min": 120,
    "genero": "Ciencia ficción",
    "sinopsis": "Metrópolis es una película de ciencia ficción ambientada en una ciudad futurista profundamente dividida entre clases sociales. En la superficie viven los poderosos y privilegiados, mientras que, bajo tierra, miles de trabajadores realizan duras labores para mantener la ciudad en funcionamiento. Freder, hijo de Joh Fredersen, el gobernante de Metrópolis, lleva una vida cómoda hasta que conoce a María, una joven que defiende la unión y el entendimiento entre ricos y pobres. Con una poderosa crítica a la desigualdad social y a la deshumanización industrial, Metrópolis transmite su famoso mensaje: el corazón debe ser el mediador entre la cabeza y las manos.",
-   "seccion": "Proyecciones",
+   "seccion": "Clásicos",
    "duracion_obra": 120
   },
   {
@@ -2153,7 +2153,7 @@
    "duracion_min": 141,
    "genero": "Drama",
    "sinopsis": "Rusia, 2022. Cuando Gleb, un exitoso director de empresa, se ve asediado por las crecientes presiones corporativas y un mundo cada vez más inestable, el colapso de su vida, cuidadosamente ordenada, se precipita hacia la violencia. Cine negro que adapta La mujer infiel, de Chabrol, al contexto de los inicios de la guerra de Rusia contra Ucrania.",
-   "seccion": "Proyecciones",
+   "seccion": "Plano General",
    "duracion_obra": 141
   },
   {
@@ -2210,7 +2210,7 @@
    "duracion_min": 155,
    "genero": "Drama",
    "sinopsis": "La bola negra cuenta la historia de tres hombres cuyas vidas están íntimamente conectadas por el deseo, el dolor y la herencia, a lo largo de tres épocas: 1932, 1937 y 2017. El título es el mismo de una obra de Federico García Lorca que quedó inacabada por su muerte, en 1936, y que se refiere a la bola negra que funciona como signo de rechazo a un joven en un prestigioso club por las sospechas sobre su sexualidad",
-   "seccion": "Proyecciones",
+   "seccion": "Plano General",
    "duracion_obra": 155
   },
   {
@@ -2244,10 +2244,61 @@
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
-    "tarjeta": 14452
+    "tarjeta": 14452,
+    "obras": "https://ficcali.com/anima-ve-2026/"
    },
    "titulo": "Animá Ve – Mujeres en la animación",
    "seccion": "Proyecciones",
+   "obras": [
+    {
+     "titulo": "El fin de la sequía",
+     "director": "Raquel Páez, Mariana Rey",
+     "pais": "Colombia",
+     "anio": 2020,
+     "duracion_min": 3,
+     "genero": "Animación"
+    },
+    {
+     "titulo": "Un rastro de baba anuncia la lluvia",
+     "director": "Mariana Moyano",
+     "pais": "Colombia",
+     "anio": 2025,
+     "duracion_min": 11,
+     "genero": "Animación"
+    },
+    {
+     "titulo": "No puedo volver a casa",
+     "director": "Cecilia Traslaviña",
+     "pais": "Colombia",
+     "anio": 2015,
+     "duracion_min": 3,
+     "genero": "Animación"
+    },
+    {
+     "titulo": "Bailar con la línea",
+     "director": "Antonia Bello",
+     "pais": "Colombia",
+     "anio": 2023,
+     "duracion_min": 7,
+     "genero": "Animación"
+    },
+    {
+     "titulo": "Detrás de la puerta está el jardín",
+     "director": "Ana Sofía Navia",
+     "pais": "Colombia, Estados Unidos",
+     "anio": 2025,
+     "duracion_min": 5,
+     "genero": "Animación"
+    },
+    {
+     "titulo": "Por ahora un cuento",
+     "director": "Carla Melo",
+     "pais": "Colombia",
+     "anio": 2018,
+     "duracion_min": 11,
+     "genero": "Animación"
+    }
+   ],
    "duracion_min": 90,
    "_duracion_de": "el hueco hasta la siguiente en la misma sede (tope 90, 60 si es la última)"
   },
@@ -2351,7 +2402,7 @@
    "duracion_min": 155,
    "genero": "Drama",
    "sinopsis": "La bola negra cuenta la historia de tres hombres cuyas vidas están íntimamente conectadas por el deseo, el dolor y la herencia, a lo largo de tres épocas: 1932, 1937 y 2017. El título es el mismo de una obra de Federico García Lorca que quedó inacabada por su muerte, en 1936, y que se refiere a la bola negra que funciona como signo de rechazo a un joven en un prestigioso club por las sospechas sobre su sexualidad",
-   "seccion": "Proyecciones",
+   "seccion": "Plano General",
    "duracion_obra": 155
   },
   {
@@ -2494,7 +2545,7 @@
    "duracion_min": 120,
    "genero": "Ciencia ficción",
    "sinopsis": "Metrópolis es una película de ciencia ficción ambientada en una ciudad futurista profundamente dividida entre clases sociales. En la superficie viven los poderosos y privilegiados, mientras que, bajo tierra, miles de trabajadores realizan duras labores para mantener la ciudad en funcionamiento. Freder, hijo de Joh Fredersen, el gobernante de Metrópolis, lleva una vida cómoda hasta que conoce a María, una joven que defiende la unión y el entendimiento entre ricos y pobres. Con una poderosa crítica a la desigualdad social y a la deshumanización industrial, Metrópolis transmite su famoso mensaje: el corazón debe ser el mediador entre la cabeza y las manos.",
-   "seccion": "Proyecciones",
+   "seccion": "Clásicos",
    "duracion_obra": 120
   }
  ]

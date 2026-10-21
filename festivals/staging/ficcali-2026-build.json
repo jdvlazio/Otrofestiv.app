@@ -29,6 +29,7 @@
   "festivals/staging/ficcali-2026-radar.json": "el volcado del radar #1024, que escribe y relee pipeline/radar.py"
  },
  "_por_que_slot_compartido": "8 oct: la edición de la programación pone «Guapi: ritmo y balsada» (30 min) y «La fabulosa máquina del tiempo» (70 min) a las 6:00 p. m. del 21 en Comfandi — la misma franja; se publica como UNA función (anclaje). Es el único slot compartido de Ficcali. Preguntado al festival.",
+ "_por_que_secciones_21oct": "«Clásicos» y «Plano General» (subpáginas nuevas de la Selección, 21 oct): nombre verbatim, decisión de Juan. Clásicos = 🏛️ «Classics», Retrospectiva / Tributo: Olhar de Cinema usa 🎞️ para Clásicos, pero en Ficcali 🎞️ ya es Muestras de Muestras (un emoji por sección); 🏛️ es el de Retrospectiva en Olhar, y sus obras son Metrópolis (1927) y Guapi (1963), patrimonio. Plano General = 🌀 «Wide Shot», Muestra / País: estrenos de autor internacionales fuera de competencia (Zvyagintsev, Alonso, Ambrossi/Calvo), como los «Panorama» de otros festivales (🌀 Panorama).",
  "prioLimit": 5,
  "dias": [
   "2026-10-16",
@@ -199,35 +200,45 @@
    "archetype": "Perspectivas / Miradas",
    "order": 7
   },
+  "🏛️ Clásicos": {
+   "en": "Classics",
+   "archetype": "Retrospectiva / Tributo",
+   "order": 8
+  },
+  "🌀 Plano General": {
+   "en": "Wide Shot",
+   "archetype": "Muestra / País",
+   "order": 9
+  },
   "🏙️ Cali Ciudad Abierta": {
    "en": "Cali, Open City",
    "archetype": "Muestra / País",
-   "order": 8
+   "order": 10
   },
   "🔦 Foco Claire Simon": {
    "en": "Claire Simon Focus",
    "archetype": "Retrospectiva / Tributo",
-   "order": 9
+   "order": 11
   },
   "🔍 Zoom": {
    "en": "Zoom",
    "archetype": "Perspectivas / Miradas",
-   "order": 10
+   "order": 12
   },
   "🎵 Plano Sonoro": {
    "en": "Sound Frame",
    "archetype": "Cortos / Programas",
-   "order": 11
+   "order": 13
   },
   "🎞️ Muestras de Muestras": {
    "en": "Showcase of Showcases",
    "archetype": "Cortos / Programas",
-   "order": 12
+   "order": 14
   },
   "🎶 ¡Que Viva la Música!": {
    "en": "Long Live Music!",
    "archetype": "Especiales / Eventos",
-   "order": 13
+   "order": 15
   }
  },
  "venues": {
@@ -2531,7 +2542,7 @@
   {
    "title": "Guapi: ritmo y balsada",
    "type": "film",
-   "section": "📽️ Proyecciones",
+   "section": "🏛️ Clásicos",
    "director": "Juan B. Ocampo",
    "year": 1963,
    "country": "Colombia",
@@ -2682,7 +2693,7 @@
   {
    "title": "La libertad doble",
    "type": "film",
-   "section": "📽️ Proyecciones",
+   "section": "🌀 Plano General",
    "director": "Lisandro Alonso",
    "year": 2026,
    "country": "Chile, Argentina, Luxemburgo, Alemania, Reino Unido",
@@ -2997,7 +3008,7 @@
   {
    "title": "Cineconcierto: Metrópolis",
    "type": "film",
-   "section": "📽️ Proyecciones",
+   "section": "🏛️ Clásicos",
    "director": "Fritz Lang",
    "year": 1927,
    "country": "Alemania",
@@ -7913,7 +7924,7 @@
   {
    "title": "Minotauro",
    "type": "film",
-   "section": "📽️ Proyecciones",
+   "section": "🌀 Plano General",
    "director": "Andrey Zvyagintsev",
    "year": 2026,
    "country": "Francia, Letonia, Alemania",
@@ -8153,7 +8164,7 @@
   {
    "title": "La bola negra",
    "type": "film",
-   "section": "📽️ Proyecciones",
+   "section": "🌀 Plano General",
    "director": "Javier Ambrossi, Javier Calvo",
    "year": 2026,
    "country": "España, Francia",
@@ -8308,9 +8319,11 @@
    }
   },
   {
-   "title": "Animá Ve – Mujeres en la animación",
+   "title": "Animá Ve – Mujeres en la Animación",
    "type": "film",
    "section": "📽️ Proyecciones",
+   "country": "Colombia, Estados Unidos",
+   "flags": "🇨🇴🇺🇸",
    "duration": "90 min",
    "_ancla": [
     "Cinemateca La Tertulia - Cali",
@@ -8325,8 +8338,94 @@
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
-    "tarjeta": 14452
+    "tarjeta": 14452,
+    "obras": "https://ficcali.com/anima-ve-2026/"
    },
+   "is_cortos": true,
+   "film_list": [
+    {
+     "title": "El fin de la sequía",
+     "director": "Raquel Páez, Mariana Rey",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "year": 2020,
+     "duration": "3 min",
+     "genre": "Animación",
+     "poster": "/assets/ficcali-2026/el-fin-de-la-sequia.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "el-fin-de-la-sequia",
+     "tmdb_id": 844182,
+     "synopsis": "El fin de la sequía explora texturas visuales y sonoras, recorriendo sus materialidades y transformándolas. El camino es guiado por la voz que atraviesa la materia, consolidándose poéticamente en el trayecto mientras juega con la noción de tensión que lentamente se desborona para dar paso al fluir del agua.",
+     "synopsis_lang": "es"
+    },
+    {
+     "title": "Un rastro de baba anuncia la lluvia",
+     "director": "Mariana Moyano",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "year": 2025,
+     "duration": "11 min",
+     "genre": "Animación",
+     "synopsis": "Este poema visual animado presenta a un caracol en una selva que lidia con el deseo de no ser lo que es. Inocente ante su propia vulnerabilidad, interactúa simbólicamente con las sombras de animales peligrosos mientras busca su lugar en el mundo.",
+     "synopsis_lang": "es"
+    },
+    {
+     "title": "No puedo volver a casa",
+     "director": "Cecilia Traslaviña",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "year": 2015,
+     "duration": "3 min",
+     "genre": "Animación",
+     "synopsis": "Mediante fragmentos visuales erráticos, manchas y texturas en constante transformación, se teje una reflexión íntima sobre el desarraigo, la pérdida del espacio propio y la imposibilidad de retornar al hogar de la infancia. La obra utiliza la animación analógica sobre soportes físicos para representar la memoria fragmentada y el peso emocional de los recuerdos que se difuminan con el tiempo.",
+     "synopsis_lang": "es"
+    },
+    {
+     "title": "Bailar con la línea",
+     "director": "Antonia Bello",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "year": 2023,
+     "duration": "7 min",
+     "genre": "Animación",
+     "synopsis": "El silencio de una habitación vacía es interrumpido por una invasión de formas, líneas, círculos incompletos, garabatos y rayas danzantes. Un baile de formas retorcidas y un concierto de ruidos. Es el fruto de una mirada diferente. Coordinación ojo-mano: ojo torcido, mano torcida, bailan juntos sobre el papel. Era necesaria una corrección, un enderezamiento de la mirada.",
+     "synopsis_lang": "es"
+    },
+    {
+     "title": "Detrás de la puerta está el jardín",
+     "director": "Ana Sofía Navia",
+     "country": "Colombia, Estados Unidos",
+     "flags": "🇨🇴🇺🇸",
+     "year": 2025,
+     "duration": "5 min",
+     "genre": "Animación",
+     "poster": "/assets/ficcali-2026/detras-de-la-puerta-esta-el-jardin.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "behind-the-door-lies-the-garden",
+     "tmdb_id": 1750222,
+     "synopsis": "Narrada en forma de carta, es una historia de autoficción sobre la muerte, la reencarnación y la pérdida de la infancia. Inspirada en las secuelas emocionales tras el fallecimiento del padre de la directora, la obra funciona como un silencioso recuerdo del duelo y plasma la inocente creencia infantil de que él podría haber regresado transformado en el gato de la familia.",
+     "synopsis_en": "In the aftermath of her father’s death and in the middle of Colombia's political turmoil, a young girl finds solace in the belief that he has returned to her in the form of her cat.",
+     "title_en": "Behind the Door Lies the Garden",
+     "synopsis_lang": "es"
+    },
+    {
+     "title": "Por ahora un cuento",
+     "director": "Carla Melo",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "year": 2018,
+     "duration": "11 min",
+     "genre": "Animación",
+     "poster": "/assets/ficcali-2026/por-ahora-un-cuento.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "sometimes-two-herons",
+     "tmdb_id": 644419,
+     "synopsis": "Representados por garzas, una hija viaja a un pequeño y lejano pueblo de Colombia para visitar a su padre. Durante este viaje a la montaña, ambos deberán enfrentarse cara a cara con la naturaleza. Por momentos se sentirán fuertes, pero en otros se llenarán de temor. A causa del miedo y de la falta de voz, uno de los dos terminará transformándose en un monstruo condenado a vivir en la más profunda soledad.",
+     "synopsis_en": "In Bogota's noisy and violent big city machine people carry their nature only limply in their hands, surrendering without resistance to disconcerting rituals.",
+     "title_en": "Sometimes Two Herons",
+     "synopsis_lang": "es"
+    }
+   ],
    "_fid": "f_391c89d0d0",
    "id": "f_391c89d0d0",
    "is_free": true,
@@ -8361,6 +8460,11 @@
      "fecha": "2026-10-06",
      "url": "https://ficcali.com/programacion-ficcali-2026/"
     },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-06",
+     "url": "https://ficcali.com/programacion-ficcali-2026/"
+    },
     "type": {
      "tipo": "festival-web",
      "fecha": "2026-10-06",
@@ -8373,6 +8477,7 @@
     }
    },
    "titulos_anteriores": [
+    "Animá Ve – Mujeres en la animación",
     "Animá Vé – Retrospectiva"
    ]
   },
@@ -8697,7 +8802,7 @@
   {
    "title": "La bola negra",
    "type": "film",
-   "section": "📽️ Proyecciones",
+   "section": "🌀 Plano General",
    "director": "Javier Ambrossi, Javier Calvo",
    "year": 2026,
    "country": "España, Francia",
@@ -9286,7 +9391,7 @@
   {
    "title": "Cineconcierto: Metrópolis",
    "type": "film",
-   "section": "📽️ Proyecciones",
+   "section": "🏛️ Clásicos",
    "director": "Fritz Lang",
    "year": 1927,
    "country": "Alemania",
@@ -9370,8 +9475,8 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-21T09:44:58",
-  "plan_sha": "3fba29a2cfab0dc2",
+  "fecha": "2026-10-21T12:07:01",
+  "plan_sha": "24bc04ac59ca2585",
   "paso": 11,
   "cmd": "python3 pipeline/ficcali-2026-verificar.py"
  }

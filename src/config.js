@@ -1112,6 +1112,8 @@ export const SECTION_ARCHETYPES = {
   '🧒 Muestra Infantil': 'Especiales / Eventos',   // FICCALI 18
   '🔍 Zoom': 'Perspectivas / Miradas',   // FICCALI 18
   '🔦 Foco Claire Simon': 'Retrospectiva / Tributo',   // FICCALI 18
+  '🏛️ Clásicos': 'Retrospectiva / Tributo',   // FICCALI 18 (🎞️ ya es Muestras de Muestras)
+  '🌀 Plano General': 'Muestra / País',   // FICCALI 18
   '🎶 ¡Que Viva la Música!': 'Especiales / Eventos',   // FICCALI 18
   '📽️ Proyecciones': 'Especiales / Eventos',   // FICCALI 18
   '🎓 Académico': 'Charlas / Industria',   // FICCALI 18
