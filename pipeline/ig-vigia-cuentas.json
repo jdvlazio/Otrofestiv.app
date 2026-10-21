@@ -1,0 +1,14 @@
+{
+  "_nota": "Cuentas de IG que vigila pipeline/ig_vigia.py. 'festivales': id de FESTIVAL_CONFIG → cuenta, solo para los que no traen `instagram:` en src/config.js (ese campo manda). 'preonboarding': festivales aún sin config, con sus fechas oficiales.",
+  "festivales": {
+    "ficpa2026": "ficpapasto",
+    "ficcali2026": "festivaldecinecali",
+    "bhff2026": "bogotahorrorfest",
+    "ficica2026": "cinealacalle",
+    "fantasmagoria2026": "mfantasmagoria"
+  },
+  "preonboarding": [
+    {"id": "feciso2026", "cuenta": "fecisofest", "inicio": "2026-11-01", "fin": "2026-11-07"},
+    {"id": "ficidi2026", "cuenta": "festivaldecinediverso", "inicio": "2026-11-04", "fin": "2026-11-07"}
+  ]
+}
