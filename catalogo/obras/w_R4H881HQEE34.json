@@ -1,6 +1,6 @@
 {
  "id": "w_R4H881HQEE34",
- "titulo_original": "Caída Libre",
+ "titulo_original": "Caída libre",
  "anio": 2024,
  "paises": [
   "CO"
@@ -10,7 +10,7 @@
  ],
  "aliases": [
   {
-   "titulo": "Caída libre",
+   "titulo": "Caída Libre",
    "tipo": "festival"
   },
   {
@@ -20,16 +20,18 @@
   }
  ],
  "sinopsis": {
-  "es": "En un intento desesperado por escapar del aislamiento, un personaje sin rostro se lanza desde una cornisa esperando encontrar su final, sin saber que en el fondo de la caída las leyes de la gravedad no aplican para él: rebota. Frustrado por este hecho, sigue intentándolo en diferentes escenarios, en un ciclo constante. Todo esto, enmarcado en un paisaje desolado, contaminado y sin recursos. Nació en Bogotá, Colombia, en 1980. Después de graduarse como diseñador gráfico en 2003, ha estado creando imágenes para revistas y libros durante más de diez años. En animación, ha colaborado como artista conceptual y diseñador de personajes para proyectos de televisión y cine. Se graduó de la Maestría en Bellas Artes en el programa de Studio Art de la Universidad de Arkansas después de obtener una beca Fulbright en 2011. Actualmente, enseña cursos de ilustración y animación en el programa de diseño gráfico de la Universidad Nacional de Colombia. Su cortometraje más reciente, Reparations, fue galardonado con el premio Ciudad de Annecy en la sección Perspectives del Festival Internacional de Cine de Animación de Annecy 2022. 15"
+  "es": "En el desesperado intento de escapar del aislamiento, un personaje sin rostro salta del borde esperando cambiar su realidad, sin saber que en el fondo de esa caída la ley de la gravedad no aplica para él, este personaje simplemente rebota.",
+  "en": "In a desperate attempt to escape isolation, a faceless character jumps from a ledge hoping to meet his end, unaware that at the bottom of the fall, the laws of gravity do not apply: he bounces back. Frustrated by this fact, he keeps trying in different scenarios, in a constant cycle. All this takes place in a desolate, polluted landscape devoid of resources."
  },
  "generos": [
   "Animación"
  ],
  "afiche": {
-  "archivo": "/assets/qaff/free-fall.jpg",
-  "veredicto": "oficial-festival"
+  "archivo": "/assets/anibia-2026/caida-libre.jpg",
+  "veredicto": "oficial"
  },
  "xref": {
+  "tmdb": 1487969,
   "letterboxd": "caida-libre"
  },
  "versiones": [
@@ -39,6 +41,7 @@
   }
  ],
  "presentaciones": [
+  "anibia-2026",
   "ficcali-2026",
   "qaff-2026"
  ]

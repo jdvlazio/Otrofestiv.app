@@ -103,12 +103,13 @@ deliberada existe la etiqueta `frontera-ok`.
 | `cineautopsia2026` | CineAutopsia | Bogotá | 21–29 AGO | Archivado |
 | `vartex2026` | Vartex | Medellín | 19–22 AGO | Archivado |
 | `qaff2026` |  |  |  | desconocido |
-| `tiff2026` | TIFF | Toronto | 10–20 SEP | Recién terminado |
+| `tiff2026` | TIFF | Toronto | 10–20 SEP | Archivado |
 | `ficmontanas2026` | Ficmontañas | Salento | JUL 1–5 | Archivado |
 | `siembrafest2026` | SiembraFest | Sasaima y Villeta | 9–18 SEP | Archivado |
 | `jardin2026` | Festival de Cine de Jardín | Jardín | 24–27 SEP | Recién terminado |
 | `itagui2026` | Festicine Itagüí | Itagüí | 23–27 SEP | Recién terminado |
 | `girardota2026` | Festigirardota | Girardota | 30 SEP–4 OCT | Recién terminado |
+| `anibia2026` | Anibia | Bogotá | 20 OCT–1 NOV | **Próximo / activo** |
 | `guatape2026` | Guatapé Film Fest | Guatapé | 21–25 OCT | **Próximo / activo** |
 | `biff2026` | BIFF | Bogotá | 8–14 OCT | Recién terminado |
 | `popayan2026` | Cine Corto Popayán | Popayán | 5–11 OCT | Recién terminado |
@@ -120,7 +121,7 @@ deliberada existe la etiqueta `frontera-ok`.
 | `fantasmagoria2026` | Fantasmagoría | Medellín | 14–25 OCT | **Próximo / activo** |
 | `midbo2026` | MIDBO | Bogotá | 27 OCT–4 NOV | **Próximo / activo** |
 | `mubibogota2026` | MUBI Fest | Bogotá | 24–25 OCT | **Próximo / activo** |
-| `narrarelfuturo2026` | #NarrarElFuturo | Bogotá | 15–20 SEP | Recién terminado |
+| `narrarelfuturo2026` | #NarrarElFuturo | Bogotá | 15–20 SEP | Archivado |
 
 ### Features activas (desde `.specify/features/`)
 

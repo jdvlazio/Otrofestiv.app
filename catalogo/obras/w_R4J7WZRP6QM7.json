@@ -1,6 +1,6 @@
 {
  "id": "w_R4J7WZRP6QM7",
- "titulo_original": "Memoria colectiva",
+ "titulo_original": "Memoria Colectiva",
  "anio": 2025,
  "paises": [
   "PE",
@@ -15,12 +15,12 @@
    "tipo": "festival"
   },
   {
-   "titulo": "Memoria Colectiva",
+   "titulo": "Memoria colectiva",
    "tipo": "festival"
   }
  ],
  "sinopsis": {
-  "es": "En 1983, durante los días más oscuros del Conflicto Armado en el Perú, soldados enmascarados entraron a la casa de Adelina y se llevaron a su marido por la fuerza. Ella nunca lo volvería a ver. Después de toparse con el silencio y el desprecio de la policía y el ejército, Adelina une fuerzas con las muchas otras mujeres que perdieron a sus maridos e hijos a manos de soldados que se suponía debían protegerlas. Juntos, se unirán para encontrarlos y exigir justicia.",
+  "es": "En 1983, soldados enmascarados entraron a la casa de Adelina y se llevaron a su marido por la fuerza. Después de toparse con el silencio y el desprecio de la policía y el ejército, Adelina une fuerzas con las muchas otras mujeres que perdieron a sus maridos e hijos a manos de soldados.",
   "en": "In 1983, during the darkest days of Peru’s Armed Conflict with the Shining Path, masked soldiers entered Adelina’s home and took her husband away. She would never see him again. After facing silence and contempt from the Police and Army, Adelina joins forces with the many other women who have lost their husbands and children to soldiers who were supposed to protect them. Together, they will unite to demand justice."
  },
  "generos": [
@@ -28,7 +28,7 @@
   "Animación / Drama"
  ],
  "afiche": {
-  "archivo": "/assets/ficica-2026/memoria-colectiva.jpg",
+  "archivo": "/assets/anibia-2026/memoria-colectiva.jpg",
   "veredicto": "oficial"
  },
  "xref": {
@@ -46,6 +46,7 @@
   }
  ],
  "presentaciones": [
+  "anibia-2026",
   "ficica-2026",
   "ficmontanas-2026",
   "villadelcine-2026"
