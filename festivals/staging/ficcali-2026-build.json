@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "ficcali.com — Programación 2026 (WP 14870) + fichas de la Selección 2026",
-  "capturado": "2026-10-20",
+  "capturado": "2026-10-21",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "radar": 1024,
@@ -357,6 +357,15 @@
    "lat": 3.4494433,
    "lng": -76.5359075,
    "address": "Carrera 5 #6-64, centro"
+  },
+  "Teatro La Concha - Cali": {
+   "short": "Teatro La Concha",
+   "city": "Cali",
+   "_prec": "manual",
+   "lat": 3.4457545,
+   "lng": -76.537896,
+   "address": "Calle 4 #10-48, San Antonio",
+   "_nota": "Google Maps «TEATRO LA CONCHA» 3.4457545,-76.537896, Cl. 4 #10-48, Comuna 3, Cali (21 oct 2026). Sede de la charla de Pablo Solarz (tarjeta 14576), que la web pasó desde Madame Blue el 20 oct."
   },
   "CineQuanon - Cali": {
    "short": "CineQuanon",
@@ -2758,14 +2767,14 @@
    "section": "🎓 Académico",
    "duration": "60 min",
    "_ancla": [
-    "Madame Blue - Cali",
+    "Teatro La Concha - Cali",
     "2026-10-21",
     "19:00"
    ],
    "day": "2026-10-21",
    "time": "19:00",
    "day_order": 5,
-   "venue": "Madame Blue - Cali",
+   "venue": "Teatro La Concha - Cali",
    "event_kind": "charla",
    "has_qa": false,
    "_src": {
@@ -9256,8 +9265,8 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-20T08:22:36",
-  "plan_sha": "159aaf2851adf3ee",
+  "fecha": "2026-10-21T08:34:19",
+  "plan_sha": "9fffa5b761a3ad92",
   "paso": 11,
   "cmd": "python3 pipeline/ficcali-2026-verificar.py"
  }
