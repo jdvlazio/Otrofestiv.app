@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "ensamblar.py: ids estables de las funciones (docs/FUNCION.md C1)",
-  "capturado": "2026-10-19"
+  "capturado": "2026-10-21"
  },
  "funciones": {
   "f_4476aa7fd2": {
@@ -598,6 +598,20 @@
    "hora": "11:30",
    "sala": "Sala Capital",
    "titulo": "mesa redonda escucha continua homenaje a roberto garcia"
+  },
+  "f_6200a429bc": {
+   "sede": "Alianza Francesa - Bogotá",
+   "dia": "2026-10-29",
+   "hora": "19:30",
+   "sala": "Sede Centro",
+   "titulo": "diario de una oreja"
+  },
+  "f_915018da51": {
+   "sede": "Universidad Jorge Tadeo Lozano - Bogotá",
+   "dia": "2026-10-31",
+   "hora": "19:00",
+   "sala": "Auditorio Fabio Lozano",
+   "titulo": "homenaje roberto garcia piedrahita qedp"
   },
   "f_bdffbabdda": {
    "sede": "Alianza Francesa - Bogotá",

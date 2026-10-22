@@ -4,7 +4,7 @@
   "capturado": "2026-10-21",
   "titulo": "RADAR: Muestra Internacional Documental de Bogotá (MIDBO) — Bogotá, 28 OCT–4 NOV (28ª)",
   "estado": "OPEN",
-  "comentarios": 7
+  "comentarios": 8
  },
  "issue": 1031,
  "titulo": "RADAR: Muestra Internacional Documental de Bogotá (MIDBO) — Bogotá, 28 OCT–4 NOV (28ª)",
@@ -38,6 +38,10 @@
   {
    "fecha": "2026-10-21",
    "cuerpo": "**Vigía 21 oct 13:00 — MIDBO.** En Bogotá no cambió nada de programación (121 fichas comparadas contra la copia del 20 oct y contra producción). Lo nuevo:\n- La API ahora trae la **sinopsis de «Sey Arimaku, la otra oscuridad»** (id 1051); en la app (programa del 3 nov 10:00, Alianza Francesa, con «Galu dugbis») va sin sinopsis → cargarla.\n- Funciones nuevas FUERA de Bogotá o de las fechas (no van a la app): «¡Viva México!» (antes «Viva México») 27 oct 16:00 en el Paraninfo UdeA de Medellín (master class); «Fordlandia Panacea» 30 oct 17:00 en Leticia; las fechas de noviembre en Medellín, Santa Marta y Cartagena.\n"
+  },
+  {
+   "fecha": "2026-10-22",
+   "cuerpo": "**Vigía 21 oct 19:00 — MIDBO: 2 actividades nuevas que la app no tiene**\n\nFuente: [DexoaAzCV-0](https://www.instagram.com/p/DexoaAzCV-0/) (@midbo_doc, 21 oct), «Activaciones · Cine documental expandido · Conciertos y performances». Leí las 5 láminas sin sesión.\n\n1. **Jue 29 oct · 7:30 p. m. · Alianza Francesa – Sede Centro**: «Diario de una oreja», de Diana Martínez y José Delgadillo (Performance documental sonoro, en el marco del Seminario Pensar lo Real: Lenguajes Sonoros). Lámina 2.\n2. **Sáb 31 oct · 7:00 p. m. · Universidad Jorge Tadeo Lozano, Auditorio Fabio Lozano**: «Homenaje Roberto García Piedrahita QEDP», Concierto con improvisación sonora en vivo de Roberto García Piedrahita, Alberto Vargas, Sergio Román y Jorjan Betancourt. También proyecta fragmentos de *Batallas sagradas* (Pablo Mora, 2002), *Quién paga el pato* (Pablo Mora, 2001) y *Fragmentos* (Carlos Santa, 1999). Lámina 3.\n\nEn producción (almacén, midbo-2026 41d11f8bc912) no hay ninguna de las dos: el 29 oct a las 19:xx solo están The Travelers y el Programa 1 de Pasaje entre Mundos, y el 31 oct, Desatender el Mandato. Las dos sedes ya están en `venues`.\n\nFuera de ventana (10 nov, después del cierre del 4 nov, regla «solo días oficiales»): «Periferias de escucha – Archivo de memoria» y «La guerra invisible», en la UJTL, Aula Máxima, a las 7:00 p. m. Láminas 4 y 5. No se publican.\n\nLa API de obras (121) y el bloque «Funciones» de las 121 fichas siguen iguales que en la copia de las 13:20.\n"
   }
  ]
 }

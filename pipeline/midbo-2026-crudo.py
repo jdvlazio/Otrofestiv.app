@@ -182,6 +182,33 @@ def seminario():
     return out, fuera
 
 
+# ── LAS ACTIVACIONES SONORAS «Documental Expandido» (post de @midbo_doc del 21
+# oct, instagram.com/p/DexoaAzCV-0, 5 láminas): no están en midbo.co. Títulos
+# verbatim de las láminas 2 y 3 (en caja de oración: la lámina va en
+# mayúscula sostenida). Las de la lámina 4–5 (10 nov) quedan fuera: solo días
+# oficiales. Ninguna lámina da hora de fin → duración ESTIMADA (60 / 90 min).
+# «Diario de una oreja» es «en el marco del Seminario Pensar lo Real» → su
+# sección y su acceso; el homenaje no anuncia pago → entrada libre.
+_SRC_ACT = {'url': 'https://www.instagram.com/p/DexoaAzCV-0/', 'date': '2026-10-21'}
+ACTIVACIONES = [
+    {'titulo': 'Diario de una oreja', 'dia': '2026-10-29', 'hora': '19:30',
+     'sede': 'Alianza Francesa', 'sala': 'Sede Centro', 'ciudad': 'Bogotá',
+     'tipo': 'evento', 'event_kind': 'evento', 'seccion': SECCION_SEMINARIO,
+     'duracion_min': 60, 'acceso': ACCESO_SEMINARIO,
+     'invitados': 'Diana Martínez y José Delgadillo.',
+     'sinopsis': 'Performance documental sonoro. En el marco del Seminario Pensar lo Real: Lenguajes Sonoros.',
+     '_src': _SRC_ACT},
+    {'titulo': 'Homenaje Roberto García Piedrahita QEDP', 'dia': '2026-10-31', 'hora': '19:00',
+     'sede': 'Universidad Jorge Tadeo Lozano', 'sala': 'Auditorio Fabio Lozano', 'ciudad': 'Bogotá',
+     'tipo': 'evento', 'event_kind': 'concierto', 'seccion': 'Documental Expandido',
+     'duracion_min': 90, 'acceso': 'Entrada libre (no se anuncia pago)',
+     'invitados': 'Improvisación sonora en vivo por Roberto García Piedrahita, Alberto Vargas, Sergio Román, Jorjan Betancourt.',
+     'sinopsis': 'Concierto. Proyección de fragmentos de tres películas: Batallas Sagradas (Pablo Mora, 2002), '
+                 'Quién paga el pato (Pablo Mora, 2001) y Fragmentos (Carlos Santa, 1999).',
+     '_src': _SRC_ACT},
+]
+
+
 def plano(s):
     s = unicodedata.normalize('NFD', (s or '').lower())
     s = ''.join(c for c in s if unicodedata.category(c) != 'Mn')
@@ -471,6 +498,7 @@ def main():
             o['titulo'] = o['titulo'].replace('’', "'").replace('‘', "'")
     sem, sem_fuera = seminario()
     funciones += sem
+    funciones += ACTIVACIONES
     fuera += sem_fuera
     io.open(OUT, 'w', encoding='utf-8').write(json.dumps({
         '_provenance': provenance('midbo.co — ficha de cada obra (bloque «Funciones») + API pelicula/seccion',
