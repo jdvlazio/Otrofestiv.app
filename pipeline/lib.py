@@ -624,6 +624,9 @@ SIGLAS = {
     'CORNARE', 'FIACINE',
     # «Programación MORA» de FILCMAR: Mercado Oriente Audiovisual (su lámina 1)
     'MORA',
+    # FICCALI (22 oct 2026): «Carpa GEUP (Grupo Editoriales Universitarias del Pacífico)»,
+    # lámina 2 del IG DezOJbQkf6x
+    'GEUP',
     # MARCAS DE PROGRAMA que el festival escribe así —no son siglas y no
     # gritan una sección: son el nombre de un proceso—. FINQUITA es el
     # diminutivo de FINCA; LABRA, «el proceso de formación LABRA» de SiembraFest,

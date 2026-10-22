@@ -279,7 +279,10 @@ TITULO = {
 SALA_TARJETA = {14624: 'Auditorio Celsia', 14625: 'Carpa de la Red de Bibliotecas Públicas de Cali',
                 # vigía 22 oct 2026: la lámina de cada lanzamiento (IG DezOJbQkf6x, 3 y 6)
                 # dice «LUGAR Auditorio Celsia, Bulevar del Río»; la meta de la web ya lo decía
-                14607: 'Auditorio Celsia', 14608: 'Auditorio Celsia'}
+                14607: 'Auditorio Celsia', 14608: 'Auditorio Celsia',
+                # vigía 22 oct 2026: lámina 2 del mismo IG (DezOJbQkf6x) dice «LUGAR Carpa GEUP
+                # (Grupo Editoriales Universitarias del Pacífico), Bulevar del Río · 4:00 p.m. a 5:00 p.m.»
+                14606: 'Carpa GEUP'}
 # LA ABIERTA DE VARIOS DÍAS (vigía 22 oct 2026): la web publica la Muestra VR solo el
 # sáb 17, 3–7 p. m.; el IG del festival (DezVbZHRunB, 22 oct) dice «Muestra VR
 # Realidades en 360° · 3:00 p.m. a 7:00 p.m. Hasta el 25 de octubre» e «Inscripciones
