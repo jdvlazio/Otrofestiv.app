@@ -1,0 +1,300 @@
+{
+ "_provenance": {
+  "fuente": "TMDB + letterboxd.com/tmdb/<id>, con el MISMO candado de enriquecer.py: director ✓ y (año ±1 o duración ±3 min). Lo que no verifica no entra.",
+  "capturado": "2026-10-22"
+ },
+ "_origen": "ficfusa-2026-catalogo.json",
+ "obras": [
+  {
+   "titulo": "Akababuru: expresión de asombro",
+   "tmdb_id": 1418533,
+   "titulo_original": "Akababuru: Expresión de asombro",
+   "poster_path": "/bA8KrWe46yXs1J5VwL9ucSJrQHZ.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Kari, an Indigenous girl, is afraid to laugh. But a new interpretation of the old legend of Kiraparamia helps her to set herself free.",
+   "genero": "Fantasía",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 13,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "akababuru-expresion-de-asombro",
+   "_verificado": "el catálogo ya la tiene (w_R4DJX92V1WS5, aff-2026, ficcali-2026, ficdeh-2026, ficpa-2026, popayan-2026)",
+   "work_id": "w_R4DJX92V1WS5",
+   "_ya_publicada": [
+    {
+     "festival": "aff-2026",
+     "titulo": "Akababuru: Expresión de asombro",
+     "poster": "https://admin.alternativa.film/uploads/AKABABURU_POSTER_laura_giraldo_9666ac856d.jpg",
+     "posterSource": "custom",
+     "lbSlug": "akababuru-expresion-de-asombro",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "13 min",
+     "genre": "Fantasía",
+     "synopsis_en": "Kari, an Indigenous girl, is afraid to laugh. But a new interpretation of the old legend of Kiraparamia helps her to set herself free.",
+     "sinopsis": "Kari es una niña emberá que teme reír. Un día conoce a Kera, una joven mestiza, quien decide contarle el mito de Kiraparamia, una mujer que, según los ancianos, fue castigada por los dioses por reírse de su esposo. Kera reinterpreta el mito y le dice que, en realidad, la risa de Kiraparamia la liberó. Esta historia inspira profundamente a la pequeña Kari, quien decide confrontar a los niños que la oprimen a ella y a sus amigas mediante la risa. Akababuru busca darle un giro a la interpretación patriarcal de un personaje mitológico emberá a través de la infancia y la hermandad. Enlace para comprar entrada para la función en el Teatro San Fernando Enlace para comprar entrada para la función en la Cinemateca La Tertulia"
+    },
+    {
+     "festival": "ficcali-2026",
+     "titulo": "Akababuru: Expresión de Asombro",
+     "tmdb_id": 1418533,
+     "poster": "/assets/ficcali-2026/akababuru-expresion-de-asombro.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "akababuru-expresion-de-asombro",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "13 min",
+     "genre": "Fantasía",
+     "synopsis_en": "Kari, an Indigenous girl, is afraid to laugh. But a new interpretation of the old legend of Kiraparamia helps her to set herself free.",
+     "sinopsis": "Kari es una niña emberá que teme reír. Un día conoce a Kera, una joven mestiza, quien decide contarle el mito de Kiraparamia, una mujer que, según los ancianos, fue castigada por los dioses por reírse de su esposo. Kera reinterpreta el mito y le dice que, en realidad, la risa de Kiraparamia la liberó. Esta historia inspira profundamente a la pequeña Kari, quien decide confrontar a los niños que la oprimen a ella y a sus amigas mediante la risa. Akababuru busca darle un giro a la interpretación patriarcal de un personaje mitológico emberá a través de la infancia y la hermandad. Enlace para comprar entrada para la función en el Teatro San Fernando Enlace para comprar entrada para la función en la Cinemateca La Tertulia"
+    },
+    {
+     "festival": "ficdeh-2026",
+     "titulo": "Akababuru: Expresión de asombro",
+     "poster": "/assets/ficdeh/herminda.jpg",
+     "posterSource": "custom",
+     "lbSlug": "akababuru-expresion-de-asombro",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "13 min",
+     "genre": "Fantasía",
+     "synopsis_en": "Kari is an Embera girl afraid to laugh. One day she meets Kera, a young mestizo girl, who decides to tell her the myth of Kiraparamia, a woman who according to the elders was punished by the gods for laughing at her husband, but Kera reinterprets the myth and tells her that in reality Kiraparamia's laughter set her free. This story greatly inspires little Kari who decides to confront the children who oppress her and her friends by using laughter.",
+     "sinopsis": "Kari es una niña indígena emberá que teme reír. Un día conoce a Kera, una joven mestiza, quien decide contarle el mito de Kiraparamia, una mujer que, según los ancianos, fue castigada por los dioses por reírse de su esposo. Kera reinterpreta el mito y le dice que, en realidad, la risa de Kiraparamia la liberó. Esta historia inspira profundamente a la pequeña Kari, quien decide confrontar a los niños que la oprimen a ella y a sus amigas mediante la risa."
+    },
+    {
+     "festival": "popayan-2026",
+     "titulo": "Akababuru: Expresión de asombro",
+     "tmdb_id": 1418533,
+     "poster": "/assets/popayan-2026/akababuru-expresion-de-asombro.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "akababuru-expresion-de-asombro",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "13 min",
+     "genre": "Fantasía",
+     "synopsis_en": "Kari, an Indigenous girl, is afraid to laugh. But a new interpretation of the old legend of Kiraparamia helps her to set herself free.",
+     "sinopsis": "Alejandra Castaño Arias, Wildier Tascón Tascón, Roxana Panchí Gutierrez, Alexa Yagarí Panchí, Isabella Palacio Mesa, Laura Rave Escalante, Juan Pablo Herrera González, Andrés Felipe Tascón Baquiaza, Irati Dojura, Laura Giraldo Mira, Cristian Navarro Araujo y Cristian Navarro Araujo"
+    },
+    {
+     "festival": "ficpa-2026",
+     "titulo": "Akababuru",
+     "tmdb_id": 1418533,
+     "poster": "/assets/ficpa-2026/akababuru.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "akababuru-expresion-de-asombro",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "14 min",
+     "genre": "Fantasía",
+     "synopsis_en": "Kari, an Indigenous girl, is afraid to laugh. But a new interpretation of the old legend of Kiraparamia helps her to set herself free.",
+     "sinopsis": "Kari es una niña indígena Emberá que vive con miedo a reír. Su perspectiva cambia por completo cuando conoce a Kera, una joven que le relata el mito de Kiraparamia, una mujer que —según cuentan los mayores— fue castigada por los dioses por reírse de su esposo. Gracias a esta historia, Kari comprende que la risa no es una ofensa que deba ocultarse, sino un acto de liberación."
+    }
+   ]
+  },
+  {
+   "titulo": "Niña chilapa",
+   "tmdb_id": 1456186,
+   "titulo_original": "Niña chilapa",
+   "poster_path": "/AjNWPyDDpMsn1Q5nH111jtRGKZN.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Sometimes one, orphaned of one's own lungs, feels that one is drowning.  One suddenly remembers the body, breathes again, and begins to laugh. To laugh very hard. To run around the corners of the world breathing and laughing. Yulieth talks to her mother. She dances. She floats on the water. She laughs.",
+   "genero": "Documental",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 17,
+   "pais_tmdb": "Colombia",
+   "title_en": "Chilapa Girl",
+   "lbSlug": "chilapa-girl",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Niña chilapa",
+   "_ya_publicada": [
+    {
+     "festival": "cinemancia-2025",
+     "titulo": "Niña Chilapa",
+     "poster": "https://cinemanciafestival.com/wp-content/uploads/2025/08/Nina-Chilapa-Still-3-scaled.jpg",
+     "posterSource": "editorial",
+     "lbSlug": "chilapa-girl",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "17 min",
+     "genre": "Documental",
+     "synopsis_en": "Sometimes one, orphaned of one's own lungs, feels that one is drowning.  One suddenly remembers the body, breathes again, and begins to laugh. To laugh very hard. To run around the corners of the world breathing and laughing. Yulieth talks to her mother. She dances. She floats on the water. She laughs.",
+     "sinopsis": "Yulieth es una niña en un momento que mide su relación con el mundo: no es todavía una adolescente pero sus experiencias la hacen sentirse una mujer grande. Ese difícil equilibrio se amplía con el espacio que la rodea: una naturaleza demasiado generosa, tupida y vasta."
+    },
+    {
+     "festival": "ficica-2026",
+     "titulo": "Niña chilapa",
+     "tmdb_id": 1456186,
+     "poster": "/assets/ficica-2026/nina-chilapa.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "chilapa-girl",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "17 min",
+     "genre": "Documental",
+     "synopsis_en": "Sometimes one, orphaned of one's own lungs, feels that one is drowning.  One suddenly remembers the body, breathes again, and begins to laugh. To laugh very hard. To run around the corners of the world breathing and laughing. Yulieth talks to her mother. She dances. She floats on the water. She laughs.",
+     "sinopsis": "Yulieth es una niña en un momento que mide su relación con el mundo: no es todavía una adolescente pero sus experiencias la hacen sentirse una mujer grande. Ese difícil equilibrio se amplía con el espacio que la rodea: una naturaleza demasiado generosa, tupida y vasta."
+    },
+    {
+     "festival": "popayan-2026",
+     "titulo": "Niña Chilapa",
+     "tmdb_id": 1456186,
+     "poster": "/assets/popayan-2026/nina-chilapa.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "chilapa-girl",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "17 min",
+     "genre": "Documental",
+     "synopsis_en": "Sometimes one, orphaned of one's own lungs, feels that one is drowning.  One suddenly remembers the body, breathes again, and begins to laugh. To laugh very hard. To run around the corners of the world breathing and laughing. Yulieth talks to her mother. She dances. She floats on the water. She laughs.",
+     "sinopsis": "Yulieth (11-13), se enfrenta a la dificultad de crecer en un territorio salvaje, donde coexiste la belleza natural y la hostilidad del machismo. Su identidad en construcción se disputa entre las pulsiones de sus sueños y su realidad."
+    }
+   ]
+  }
+ ],
+ "verificadas": {
+  "Akababuru: expresión de asombro": {
+   "tmdb_id": 1418533,
+   "titulo_original": "Akababuru: Expresión de asombro",
+   "poster_path": "/bA8KrWe46yXs1J5VwL9ucSJrQHZ.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Kari, an Indigenous girl, is afraid to laugh. But a new interpretation of the old legend of Kiraparamia helps her to set herself free.",
+   "genero": "Fantasía",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 13,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "akababuru-expresion-de-asombro",
+   "_verificado": "el catálogo ya la tiene (w_R4DJX92V1WS5, aff-2026, ficcali-2026, ficdeh-2026, ficpa-2026, popayan-2026)",
+   "work_id": "w_R4DJX92V1WS5",
+   "_ya_publicada": [
+    {
+     "festival": "aff-2026",
+     "titulo": "Akababuru: Expresión de asombro",
+     "poster": "https://admin.alternativa.film/uploads/AKABABURU_POSTER_laura_giraldo_9666ac856d.jpg",
+     "posterSource": "custom",
+     "lbSlug": "akababuru-expresion-de-asombro",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "13 min",
+     "genre": "Fantasía",
+     "synopsis_en": "Kari, an Indigenous girl, is afraid to laugh. But a new interpretation of the old legend of Kiraparamia helps her to set herself free.",
+     "sinopsis": "Kari es una niña emberá que teme reír. Un día conoce a Kera, una joven mestiza, quien decide contarle el mito de Kiraparamia, una mujer que, según los ancianos, fue castigada por los dioses por reírse de su esposo. Kera reinterpreta el mito y le dice que, en realidad, la risa de Kiraparamia la liberó. Esta historia inspira profundamente a la pequeña Kari, quien decide confrontar a los niños que la oprimen a ella y a sus amigas mediante la risa. Akababuru busca darle un giro a la interpretación patriarcal de un personaje mitológico emberá a través de la infancia y la hermandad. Enlace para comprar entrada para la función en el Teatro San Fernando Enlace para comprar entrada para la función en la Cinemateca La Tertulia"
+    },
+    {
+     "festival": "ficcali-2026",
+     "titulo": "Akababuru: Expresión de Asombro",
+     "tmdb_id": 1418533,
+     "poster": "/assets/ficcali-2026/akababuru-expresion-de-asombro.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "akababuru-expresion-de-asombro",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "13 min",
+     "genre": "Fantasía",
+     "synopsis_en": "Kari, an Indigenous girl, is afraid to laugh. But a new interpretation of the old legend of Kiraparamia helps her to set herself free.",
+     "sinopsis": "Kari es una niña emberá que teme reír. Un día conoce a Kera, una joven mestiza, quien decide contarle el mito de Kiraparamia, una mujer que, según los ancianos, fue castigada por los dioses por reírse de su esposo. Kera reinterpreta el mito y le dice que, en realidad, la risa de Kiraparamia la liberó. Esta historia inspira profundamente a la pequeña Kari, quien decide confrontar a los niños que la oprimen a ella y a sus amigas mediante la risa. Akababuru busca darle un giro a la interpretación patriarcal de un personaje mitológico emberá a través de la infancia y la hermandad. Enlace para comprar entrada para la función en el Teatro San Fernando Enlace para comprar entrada para la función en la Cinemateca La Tertulia"
+    },
+    {
+     "festival": "ficdeh-2026",
+     "titulo": "Akababuru: Expresión de asombro",
+     "poster": "/assets/ficdeh/herminda.jpg",
+     "posterSource": "custom",
+     "lbSlug": "akababuru-expresion-de-asombro",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "13 min",
+     "genre": "Fantasía",
+     "synopsis_en": "Kari is an Embera girl afraid to laugh. One day she meets Kera, a young mestizo girl, who decides to tell her the myth of Kiraparamia, a woman who according to the elders was punished by the gods for laughing at her husband, but Kera reinterprets the myth and tells her that in reality Kiraparamia's laughter set her free. This story greatly inspires little Kari who decides to confront the children who oppress her and her friends by using laughter.",
+     "sinopsis": "Kari es una niña indígena emberá que teme reír. Un día conoce a Kera, una joven mestiza, quien decide contarle el mito de Kiraparamia, una mujer que, según los ancianos, fue castigada por los dioses por reírse de su esposo. Kera reinterpreta el mito y le dice que, en realidad, la risa de Kiraparamia la liberó. Esta historia inspira profundamente a la pequeña Kari, quien decide confrontar a los niños que la oprimen a ella y a sus amigas mediante la risa."
+    },
+    {
+     "festival": "popayan-2026",
+     "titulo": "Akababuru: Expresión de asombro",
+     "tmdb_id": 1418533,
+     "poster": "/assets/popayan-2026/akababuru-expresion-de-asombro.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "akababuru-expresion-de-asombro",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "13 min",
+     "genre": "Fantasía",
+     "synopsis_en": "Kari, an Indigenous girl, is afraid to laugh. But a new interpretation of the old legend of Kiraparamia helps her to set herself free.",
+     "sinopsis": "Alejandra Castaño Arias, Wildier Tascón Tascón, Roxana Panchí Gutierrez, Alexa Yagarí Panchí, Isabella Palacio Mesa, Laura Rave Escalante, Juan Pablo Herrera González, Andrés Felipe Tascón Baquiaza, Irati Dojura, Laura Giraldo Mira, Cristian Navarro Araujo y Cristian Navarro Araujo"
+    },
+    {
+     "festival": "ficpa-2026",
+     "titulo": "Akababuru",
+     "tmdb_id": 1418533,
+     "poster": "/assets/ficpa-2026/akababuru.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "akababuru-expresion-de-asombro",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "14 min",
+     "genre": "Fantasía",
+     "synopsis_en": "Kari, an Indigenous girl, is afraid to laugh. But a new interpretation of the old legend of Kiraparamia helps her to set herself free.",
+     "sinopsis": "Kari es una niña indígena Emberá que vive con miedo a reír. Su perspectiva cambia por completo cuando conoce a Kera, una joven que le relata el mito de Kiraparamia, una mujer que —según cuentan los mayores— fue castigada por los dioses por reírse de su esposo. Gracias a esta historia, Kari comprende que la risa no es una ofensa que deba ocultarse, sino un acto de liberación."
+    }
+   ]
+  },
+  "Niña chilapa": {
+   "tmdb_id": 1456186,
+   "titulo_original": "Niña chilapa",
+   "poster_path": "/AjNWPyDDpMsn1Q5nH111jtRGKZN.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Sometimes one, orphaned of one's own lungs, feels that one is drowning.  One suddenly remembers the body, breathes again, and begins to laugh. To laugh very hard. To run around the corners of the world breathing and laughing. Yulieth talks to her mother. She dances. She floats on the water. She laughs.",
+   "genero": "Documental",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 17,
+   "pais_tmdb": "Colombia",
+   "title_en": "Chilapa Girl",
+   "lbSlug": "chilapa-girl",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Niña chilapa",
+   "_ya_publicada": [
+    {
+     "festival": "cinemancia-2025",
+     "titulo": "Niña Chilapa",
+     "poster": "https://cinemanciafestival.com/wp-content/uploads/2025/08/Nina-Chilapa-Still-3-scaled.jpg",
+     "posterSource": "editorial",
+     "lbSlug": "chilapa-girl",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "17 min",
+     "genre": "Documental",
+     "synopsis_en": "Sometimes one, orphaned of one's own lungs, feels that one is drowning.  One suddenly remembers the body, breathes again, and begins to laugh. To laugh very hard. To run around the corners of the world breathing and laughing. Yulieth talks to her mother. She dances. She floats on the water. She laughs.",
+     "sinopsis": "Yulieth es una niña en un momento que mide su relación con el mundo: no es todavía una adolescente pero sus experiencias la hacen sentirse una mujer grande. Ese difícil equilibrio se amplía con el espacio que la rodea: una naturaleza demasiado generosa, tupida y vasta."
+    },
+    {
+     "festival": "ficica-2026",
+     "titulo": "Niña chilapa",
+     "tmdb_id": 1456186,
+     "poster": "/assets/ficica-2026/nina-chilapa.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "chilapa-girl",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "17 min",
+     "genre": "Documental",
+     "synopsis_en": "Sometimes one, orphaned of one's own lungs, feels that one is drowning.  One suddenly remembers the body, breathes again, and begins to laugh. To laugh very hard. To run around the corners of the world breathing and laughing. Yulieth talks to her mother. She dances. She floats on the water. She laughs.",
+     "sinopsis": "Yulieth es una niña en un momento que mide su relación con el mundo: no es todavía una adolescente pero sus experiencias la hacen sentirse una mujer grande. Ese difícil equilibrio se amplía con el espacio que la rodea: una naturaleza demasiado generosa, tupida y vasta."
+    },
+    {
+     "festival": "popayan-2026",
+     "titulo": "Niña Chilapa",
+     "tmdb_id": 1456186,
+     "poster": "/assets/popayan-2026/nina-chilapa.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "chilapa-girl",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "17 min",
+     "genre": "Documental",
+     "synopsis_en": "Sometimes one, orphaned of one's own lungs, feels that one is drowning.  One suddenly remembers the body, breathes again, and begins to laugh. To laugh very hard. To run around the corners of the world breathing and laughing. Yulieth talks to her mother. She dances. She floats on the water. She laughs.",
+     "sinopsis": "Yulieth (11-13), se enfrenta a la dificultad de crecer en un territorio salvaje, donde coexiste la belleza natural y la hostilidad del machismo. Su identidad en construcción se disputa entre las pulsiones de sus sueños y su realidad."
+    }
+   ]
+  }
+ },
+ "sin_ficha": [
+  "Desaprender la maternidad"
+ ]
+}

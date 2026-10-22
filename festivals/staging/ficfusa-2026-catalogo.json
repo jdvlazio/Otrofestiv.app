@@ -1,0 +1,56 @@
+{
+ "_provenance": {
+  "fuente": "https://ficfusa.com/seleccion-oficial-ficfusa-2026/",
+  "capturado": "2026-10-22",
+  "metodo": "wp-json posts/9882 + tarjetas leídas con ocr.py y a ojo",
+  "publicado": "2026-10-21"
+ },
+ "_nota": "el post declara 62 obras (42 en competencia, 20 en muestras); al 22 oct solo publica estas 3",
+ "obras": [
+  {
+   "titulo": "Desaprender la maternidad",
+   "director": "Juliana Erazo Gómez",
+   "anio": 2025,
+   "pais": "Colombia, Países bajos",
+   "duracion_min": 11,
+   "genero": "Animación",
+   "tipo": "corto",
+   "seccion": "Hecho por Colombianas",
+   "_src": {
+    "url": "https://ficfusa.com/seleccion-oficial-ficfusa-2026/",
+    "tarjeta": "https://ficfusa.com/wp-content/uploads/2026/10/seleccion-oficial-hecho-por-colombianas-ficfusa-desaprender-la-maternidad.webp",
+    "date": "2026-10-21"
+   }
+  },
+  {
+   "titulo": "Akababuru: expresión de asombro",
+   "director": "Irati Dojura Landa Yagarí",
+   "anio": 2025,
+   "pais": "Colombia",
+   "duracion_min": 14,
+   "genero": "Fantasía",
+   "tipo": "corto",
+   "seccion": "Hecho por Colombianas",
+   "_src": {
+    "url": "https://ficfusa.com/seleccion-oficial-ficfusa-2026/",
+    "tarjeta": "https://ficfusa.com/wp-content/uploads/2026/10/akababuru-expresion-de-asombro-ficfusa.webp",
+    "date": "2026-10-21"
+   }
+  },
+  {
+   "titulo": "Niña chilapa",
+   "director": "Juana Lotero López",
+   "anio": 2025,
+   "pais": "Colombia",
+   "duracion_min": 17,
+   "genero": "Documental",
+   "tipo": "corto",
+   "seccion": "Hecho por Colombianas",
+   "_src": {
+    "url": "https://ficfusa.com/seleccion-oficial-ficfusa-2026/",
+    "tarjeta": "https://ficfusa.com/wp-content/uploads/2026/10/nina-chilapa-ficfusa-seleccion-oficial-hecho-por-colombianas.webp",
+    "date": "2026-10-21"
+   }
+  }
+ ]
+}
