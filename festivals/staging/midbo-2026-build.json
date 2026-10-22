@@ -357,6 +357,17 @@
    "_match": "Google Maps: La Mecánica Original (centro cultural), Cra. 25 #63f-21 (13 oct 2026)",
    "n": 0,
    "address": "Cra. 25 #63f-21"
+  },
+  "Universidad Jorge Tadeo Lozano, Edificio Fabio Lozano - Bogotá": {
+   "short": "Universidad Jorge Tadeo Lozano, Edificio Fabio Lozano",
+   "city": "Bogotá",
+   "lat": 4.6063616,
+   "lng": -74.0673857,
+   "_prec": "manual",
+   "_match": "Google Maps: Auditorio Fabio Lozano - Universidad Jorge Tadeo Lozano (Cra. 4 #22-40) (21 oct 2026); coincide al decimal con anibia-2026; Nominatim sin resultado",
+   "_nota": "edificio distinto del de Posgrados (M16), ~85 m, mismo campus",
+   "n": 1,
+   "address": "Cra. 4 #22-40"
   }
  },
  "_avisos_id": [],
@@ -4977,14 +4988,14 @@
    "section": "🔊 Documental Expandido",
    "duration": "90 min",
    "_ancla": [
-    "Universidad Jorge Tadeo Lozano - Bogotá",
+    "Universidad Jorge Tadeo Lozano, Edificio Fabio Lozano - Bogotá",
     "2026-10-31",
     "19:00"
    ],
    "day": "2026-10-31",
    "time": "19:00",
    "day_order": 4,
-   "venue": "Universidad Jorge Tadeo Lozano - Bogotá",
+   "venue": "Universidad Jorge Tadeo Lozano, Edificio Fabio Lozano - Bogotá",
    "sala": "Auditorio Fabio Lozano",
    "event_kind": "concierto",
    "has_qa": false,
@@ -5001,8 +5012,8 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-21T19:16:02",
-  "plan_sha": "ef724f40e2430ff8",
+  "fecha": "2026-10-21T19:57:02",
+  "plan_sha": "a59415cd50b61e59",
   "paso": 8,
   "cmd": "python3 pipeline/midbo-2026-verificar.py"
  }

@@ -199,7 +199,7 @@ ACTIVACIONES = [
      'sinopsis': 'Performance documental sonoro. En el marco del Seminario Pensar lo Real: Lenguajes Sonoros.',
      '_src': _SRC_ACT},
     {'titulo': 'Homenaje Roberto García Piedrahita QEDP', 'dia': '2026-10-31', 'hora': '19:00',
-     'sede': 'Universidad Jorge Tadeo Lozano', 'sala': 'Auditorio Fabio Lozano', 'ciudad': 'Bogotá',
+     'sede': 'Universidad Jorge Tadeo Lozano, Edificio Fabio Lozano', 'sala': 'Auditorio Fabio Lozano', 'ciudad': 'Bogotá',
      'tipo': 'evento', 'event_kind': 'concierto', 'seccion': 'Documental Expandido',
      'duracion_min': 90, 'acceso': 'Entrada libre (no se anuncia pago)',
      'invitados': 'Improvisación sonora en vivo por Roberto García Piedrahita, Alberto Vargas, Sergio Román, Jorjan Betancourt.',
