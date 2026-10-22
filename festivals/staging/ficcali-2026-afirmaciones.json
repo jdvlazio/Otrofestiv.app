@@ -20,6 +20,66 @@
     "fecha": "2026-10-17"
    },
    "evidencia": "la web dice 19:00; el IG del festival (DenDhbtmnyO, 17 oct) dice «Programa 2 - 6:00 PM»; sin respuesta del festival, la más temprana"
+  },
+  {
+   "ancla": {
+    "sede": "Bulevar del Río - Cali",
+    "dia": "2026-10-23",
+    "hora": "15:00"
+   },
+   "casilla": "day",
+   "valor": "2026-10-25",
+   "fuente": {
+    "tipo": "festival-ig",
+    "url": "https://www.instagram.com/p/DezOJbQkf6x/",
+    "fecha": "2026-10-22"
+   },
+   "evidencia": "lámina 7: «AGUJERO · LUGAR [POR CONFIRMAR] · DOMINGO 25 DE OCTUBRE 11:00 a.m. a 12:00 m.»; lámina 1: «Bulevar del Río … Domingo 11:00 a.m. a 12:00 m.»"
+  },
+  {
+   "ancla": {
+    "sede": "Bulevar del Río - Cali",
+    "dia": "2026-10-23",
+    "hora": "15:00"
+   },
+   "casilla": "time",
+   "valor": "11:00",
+   "fuente": {
+    "tipo": "festival-ig",
+    "url": "https://www.instagram.com/p/DezOJbQkf6x/",
+    "fecha": "2026-10-22"
+   },
+   "evidencia": "lámina 7: «AGUJERO · LUGAR [POR CONFIRMAR] · DOMINGO 25 DE OCTUBRE 11:00 a.m. a 12:00 m.»; lámina 1: «Bulevar del Río … Domingo 11:00 a.m. a 12:00 m.»"
+  },
+  {
+   "ancla": {
+    "sede": "Bulevar del Río - Cali",
+    "dia": "2026-10-23",
+    "hora": "15:00"
+   },
+   "casilla": "duration",
+   "valor": "60 min",
+   "fuente": {
+    "tipo": "festival-ig",
+    "url": "https://www.instagram.com/p/DezOJbQkf6x/",
+    "fecha": "2026-10-22"
+   },
+   "evidencia": "lámina 7: «AGUJERO · LUGAR [POR CONFIRMAR] · DOMINGO 25 DE OCTUBRE 11:00 a.m. a 12:00 m.»; lámina 1: «Bulevar del Río … Domingo 11:00 a.m. a 12:00 m.»"
+  },
+  {
+   "ancla": {
+    "sede": "Bulevar del Río - Cali",
+    "dia": "2026-10-23",
+    "hora": "17:30"
+   },
+   "casilla": "day",
+   "valor": "2026-10-24",
+   "fuente": {
+    "tipo": "festival-ig",
+    "url": "https://www.instagram.com/p/DezOJbQkf6x/",
+    "fecha": "2026-10-22"
+   },
+   "evidencia": "lámina 6: «CREATIVIDAD Y ESCRITURA · LUGAR Auditorio Celsia, Bulevar del Río · SÁBADO 24 DE OCTUBRE 5:30 p.m. a 6:15 p.m.»"
   }
  ]
 }
