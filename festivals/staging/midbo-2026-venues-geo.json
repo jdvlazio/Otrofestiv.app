@@ -129,5 +129,14 @@
   "_prec": "manual",
   "_match": "Google Maps: Edificio de Postgrados Universidad de Bogotá Jorge Tadeo Lozano (Módulo 16, Cra. 4 # 22-61) (19 oct 2026)",
   "n": 2
+ },
+ "Universidad Jorge Tadeo Lozano, Edificio Fabio Lozano": {
+  "lat": 4.6063616,
+  "lng": -74.0673857,
+  "_prec": "manual",
+  "_match": "Google Maps: Auditorio Fabio Lozano - Universidad Jorge Tadeo Lozano (Cra. 4 #22-40) (21 oct 2026); coincide al decimal con anibia-2026; Nominatim sin resultado",
+  "_nota": "edificio distinto del de Posgrados (M16), ~85 m, mismo campus",
+  "n": 1,
+  "address": "Cra. 4 #22-40"
  }
 }
