@@ -1,10 +1,10 @@
 {
  "_provenance": {
   "fuente": "issue de radar #1031 — https://github.com/jdvlazio/Otrofestiv.app/issues/1031",
-  "capturado": "2026-10-21",
+  "capturado": "2026-10-22",
   "titulo": "RADAR: Muestra Internacional Documental de Bogotá (MIDBO) — Bogotá, 28 OCT–4 NOV (28ª)",
   "estado": "OPEN",
-  "comentarios": 8
+  "comentarios": 10
  },
  "issue": 1031,
  "titulo": "RADAR: Muestra Internacional Documental de Bogotá (MIDBO) — Bogotá, 28 OCT–4 NOV (28ª)",
@@ -42,6 +42,14 @@
   {
    "fecha": "2026-10-22",
    "cuerpo": "**Vigía 21 oct 19:00 — MIDBO: 2 actividades nuevas que la app no tiene**\n\nFuente: [DexoaAzCV-0](https://www.instagram.com/p/DexoaAzCV-0/) (@midbo_doc, 21 oct), «Activaciones · Cine documental expandido · Conciertos y performances». Leí las 5 láminas sin sesión.\n\n1. **Jue 29 oct · 7:30 p. m. · Alianza Francesa – Sede Centro**: «Diario de una oreja», de Diana Martínez y José Delgadillo (Performance documental sonoro, en el marco del Seminario Pensar lo Real: Lenguajes Sonoros). Lámina 2.\n2. **Sáb 31 oct · 7:00 p. m. · Universidad Jorge Tadeo Lozano, Auditorio Fabio Lozano**: «Homenaje Roberto García Piedrahita QEDP», Concierto con improvisación sonora en vivo de Roberto García Piedrahita, Alberto Vargas, Sergio Román y Jorjan Betancourt. También proyecta fragmentos de *Batallas sagradas* (Pablo Mora, 2002), *Quién paga el pato* (Pablo Mora, 2001) y *Fragmentos* (Carlos Santa, 1999). Lámina 3.\n\nEn producción (almacén, midbo-2026 41d11f8bc912) no hay ninguna de las dos: el 29 oct a las 19:xx solo están The Travelers y el Programa 1 de Pasaje entre Mundos, y el 31 oct, Desatender el Mandato. Las dos sedes ya están en `venues`.\n\nFuera de ventana (10 nov, después del cierre del 4 nov, regla «solo días oficiales»): «Periferias de escucha – Archivo de memoria» y «La guerra invisible», en la UJTL, Aula Máxima, a las 7:00 p. m. Láminas 4 y 5. No se publican.\n\nLa API de obras (121) y el bloque «Funciones» de las 121 fichas siguen iguales que en la copia de las 13:20.\n"
+  },
+  {
+   "fecha": "2026-10-22",
+   "cuerpo": "**Salas (22 oct) — Cinemateca de Bogotá vs app**\n\n- Las 18 funciones de cine publicadas por la Cinemateca (28–31 oct) coinciden en día, hora y sala; la inaugural del 28 (Salas 2, 3 y Capital) es «Entrada libre» en ambos. La agenda todavía no llega al 1–4 nov.\n- **Posible actividad que falta:** exposición «Temperatura de color II — Muestra de documental expandido | 28 MIDBO», Sala E, 28 oct–16 nov (https://cinematecadebogota.gov.co/exposiciones?id=3663). No está en la app. Sugerido: que Juan decida si entra como actividad.\n- Boletería: la sala da links de checkout por función (`cinemateca.checkout.tuboleta.com/...productId=…`); la app tiene las páginas de evento de tuboleta.com. Funcionan las dos; no es urgente.\n- Programación regular (no es hallazgo): «Retratos de Churcampa» (subtítulo MIDBO) en Matiné Persona Mayor, 6, 13 y 27 nov y 11 dic, fuera de las fechas del festival.\n"
+  },
+  {
+   "fecha": "2026-10-22",
+   "cuerpo": "**Vigía 22 oct 13:00 — MIDBO**: la API (121 obras) y el bloque «Funciones» de las 121 páginas no cambiaron. Hay algo nuevo en la agenda de la Cinemateca de Bogotá (/agenda/11): «Escuchar lo que permanece — Muestra de documental Expandido | 28 MIDBO», Sala E, del 28 oct al 16 nov. No está en la app: es una exposición, no tiene hora.\n"
   }
  ]
 }
