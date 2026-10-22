@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "ensamblar.py: ids estables de las funciones (docs/FUNCION.md C1)",
-  "capturado": "2026-10-21"
+  "capturado": "2026-10-22"
  },
  "funciones": {
   "f_7660ad6422": {
@@ -442,7 +442,7 @@
    "sede": "Bulevar del Río - Cali",
    "dia": "2026-10-23",
    "hora": "16:30",
-   "sala": "",
+   "sala": "Auditorio Celsia",
    "titulo": "vinetaira historia universal de las autoras del comic"
   },
   "f_f34772d3f6": {
@@ -463,7 +463,7 @@
    "sede": "Bulevar del Río - Cali",
    "dia": "2026-10-23",
    "hora": "17:30",
-   "sala": "",
+   "sala": "Auditorio Celsia",
    "titulo": "creatividad y escritura"
   },
   "f_ec05af8d70": {
@@ -486,13 +486,6 @@
    "hora": "18:00",
    "sala": "",
    "titulo": "luis tercero"
-  },
-  "f_7c5c854376": {
-   "sede": "Cine Colombia Unicentro - Cali",
-   "dia": "2026-10-23",
-   "hora": "18:30",
-   "sala": "",
-   "titulo": "an incomplete calendar"
   },
   "f_995dfd11a8": {
    "sede": "Teatro Municipal Enrique Buenaventura - Cali",
@@ -634,6 +627,13 @@
    "sala": "",
    "titulo": "para vivir el implacable tiempo de pablo milanes"
   },
+  "f_7c5c854376": {
+   "sede": "Cine Colombia Unicentro - Cali",
+   "dia": "2026-10-25",
+   "hora": "14:30",
+   "sala": "",
+   "titulo": "an incomplete calendar"
+  },
   "f_391c89d0d0": {
    "sede": "Cinemateca La Tertulia - Cali",
    "dia": "2026-10-25",
@@ -724,6 +724,13 @@
    "hora": "14:00",
    "sala": "",
    "titulo": "taller cine atmosferico"
+  },
+  "f_a58b033c64": {
+   "sede": "Hotel Obelisco - Cali",
+   "dia": "2026-10-24",
+   "hora": "10:00",
+   "sala": "",
+   "titulo": "city tour"
   },
   "f_359c6326a2": {
    "sede": "Casa Ethel - Cali",

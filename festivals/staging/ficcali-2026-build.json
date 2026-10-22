@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "ficcali.com — Programación 2026 (WP 14870) + fichas de la Selección 2026",
-  "capturado": "2026-10-21",
+  "capturado": "2026-10-22",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "radar": 1024,
@@ -433,6 +433,15 @@
    "lng": -76.5347844,
    "address": "Bulevar de la Avenida Colombia, centro",
    "_pregunta": "Para los lanzamientos de libros en el Bulevar del Río: ¿en qué carpa/auditorio de CaliLee es cada uno (las tarjetas solo lo dicen en dos)?"
+  },
+  "Hotel Obelisco - Cali": {
+   "short": "Hotel Obelisco",
+   "city": "Cali",
+   "_prec": "manual",
+   "_nota": "Google Maps 3.4506674,-76.5442123 · OSM/Nominatim 3.4506906,-76.5441629 · distancia 6 m. Google: «Hotel Obelisco Cali», Av. Colombia #4 Oeste-49. OSM: tourism=hotel «Obelisco», El Peñón, Comuna 3. Punto de partida del City Tour.",
+   "lat": 3.4506674,
+   "lng": -76.5442123,
+   "address": "Avenida Colombia #4 Oeste-49"
   }
  },
  "_avisos_id": [],
@@ -694,12 +703,16 @@
    "venue": "Yawa - Cali",
    "sala": "Domo",
    "event_kind": "experiencia",
+   "info": true,
+   "hasta": "2026-10-25",
    "has_qa": false,
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
-    "tarjeta": 14841
+    "tarjeta": 14841,
+    "ventana": "https://www.instagram.com/p/DezVbZHRunB/"
    },
+   "requires_registration": true,
    "_fid": "f_930ac1e01c",
    "id": "f_930ac1e01c",
    "is_free": true,
@@ -725,6 +738,11 @@
      "url": "https://ficcali.com/programacion-ficcali-2026/"
     },
     "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-06",
+     "url": "https://ficcali.com/programacion-ficcali-2026/"
+    },
+    "requires_registration": {
      "tipo": "festival-web",
      "fecha": "2026-10-06",
      "url": "https://ficcali.com/programacion-ficcali-2026/"
@@ -5195,15 +5213,15 @@
    "title": "Agujero",
    "type": "event",
    "section": "🎓 Académico",
-   "duration": "45 min",
+   "duration": "60 min",
    "_ancla": [
     "Bulevar del Río - Cali",
     "2026-10-23",
     "15:00"
    ],
-   "day": "2026-10-23",
-   "time": "15:00",
-   "day_order": 7,
+   "day": "2026-10-25",
+   "time": "11:00",
+   "day_order": 9,
    "venue": "Bulevar del Río - Cali",
    "event_kind": "lanzamiento de libro",
    "has_qa": false,
@@ -5219,14 +5237,14 @@
    "is_free": true,
    "_procedencia": {
     "day": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-06",
-     "url": "https://ficcali.com/programacion-ficcali-2026/"
+     "tipo": "festival-ig",
+     "fecha": "2026-10-22",
+     "url": "https://www.instagram.com/p/DezOJbQkf6x/"
     },
     "time": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-06",
-     "url": "https://ficcali.com/programacion-ficcali-2026/"
+     "tipo": "festival-ig",
+     "fecha": "2026-10-22",
+     "url": "https://www.instagram.com/p/DezOJbQkf6x/"
     },
     "venue": {
      "tipo": "festival-web",
@@ -5234,9 +5252,9 @@
      "url": "https://ficcali.com/programacion-ficcali-2026/"
     },
     "duration": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-06",
-     "url": "https://ficcali.com/programacion-ficcali-2026/"
+     "tipo": "festival-ig",
+     "fecha": "2026-10-22",
+     "url": "https://www.instagram.com/p/DezOJbQkf6x/"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -5665,6 +5683,7 @@
    "time": "16:30",
    "day_order": 7,
    "venue": "Bulevar del Río - Cali",
+   "sala": "Auditorio Celsia",
    "event_kind": "lanzamiento de libro",
    "has_qa": false,
    "_src": {
@@ -5689,6 +5708,11 @@
      "url": "https://ficcali.com/programacion-ficcali-2026/"
     },
     "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-06",
+     "url": "https://ficcali.com/programacion-ficcali-2026/"
+    },
+    "sala": {
      "tipo": "festival-web",
      "fecha": "2026-10-06",
      "url": "https://ficcali.com/programacion-ficcali-2026/"
@@ -5885,10 +5909,11 @@
     "2026-10-23",
     "17:30"
    ],
-   "day": "2026-10-23",
+   "day": "2026-10-24",
    "time": "17:30",
-   "day_order": 7,
+   "day_order": 8,
    "venue": "Bulevar del Río - Cali",
+   "sala": "Auditorio Celsia",
    "event_kind": "lanzamiento de libro",
    "has_qa": false,
    "_src": {
@@ -5903,9 +5928,9 @@
    "is_free": true,
    "_procedencia": {
     "day": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-06",
-     "url": "https://ficcali.com/programacion-ficcali-2026/"
+     "tipo": "festival-ig",
+     "fecha": "2026-10-22",
+     "url": "https://www.instagram.com/p/DezOJbQkf6x/"
     },
     "time": {
      "tipo": "festival-web",
@@ -5913,6 +5938,11 @@
      "url": "https://ficcali.com/programacion-ficcali-2026/"
     },
     "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-06",
+     "url": "https://ficcali.com/programacion-ficcali-2026/"
+    },
+    "sala": {
      "tipo": "festival-web",
      "fecha": "2026-10-06",
      "url": "https://ficcali.com/programacion-ficcali-2026/"
@@ -6206,84 +6236,6 @@
    "tmdb_id": 1774071,
    "_fid": "f_ba5422e306",
    "id": "f_ba5422e306",
-   "is_free": true,
-   "_procedencia": {
-    "day": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-06",
-     "url": "https://ficcali.com/programacion-ficcali-2026/"
-    },
-    "time": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-06",
-     "url": "https://ficcali.com/programacion-ficcali-2026/"
-    },
-    "venue": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-06",
-     "url": "https://ficcali.com/programacion-ficcali-2026/"
-    },
-    "duration": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-06",
-     "url": "https://ficcali.com/programacion-ficcali-2026/"
-    },
-    "has_qa": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-06",
-     "url": "https://ficcali.com/programacion-ficcali-2026/"
-    },
-    "title": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-06",
-     "url": "https://ficcali.com/programacion-ficcali-2026/"
-    },
-    "type": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-06",
-     "url": "https://ficcali.com/programacion-ficcali-2026/"
-    },
-    "entrada": {
-     "tipo": "regla",
-     "marca": "supuesto",
-     "valor": "libre"
-    }
-   }
-  },
-  {
-   "title": "An Incomplete Calendar",
-   "type": "film",
-   "section": "🌍 Competencia Largometrajes Internacionales",
-   "director": "Sanaz Sohrabi",
-   "year": 2026,
-   "country": "Canadá, Irán, Turquía, Venezuela",
-   "flags": "🇨🇦🇮🇷🇹🇷🇻🇪",
-   "duration": "90 min",
-   "genre": "Documental",
-   "_ancla": [
-    "Cine Colombia Unicentro - Cali",
-    "2026-10-23",
-    "18:30"
-   ],
-   "day": "2026-10-23",
-   "time": "18:30",
-   "day_order": 7,
-   "venue": "Cine Colombia Unicentro - Cali",
-   "has_qa": false,
-   "synopsis": "Un disco de vinilo de 1980 es el punto de partida. Rhymes and Songs for OPEC es una grabación especial del coro de la Universidad Central de Venezuela, para conmemorar el vigésimo aniversario de la Organización de Países Exportadores de Petróleo. Mediante una superposición de canciones y material inédito o poco visto, se replantea el petróleo como una herramienta política al servicio de las luchas de liberación en Palestina y del fortalecimiento de la solidaridad panárabe entre 1960 y 1970. Se propone una revisión aguda de la geopolítica de los últimos cincuenta años, desde representaciones como la música, las estampillas y el arte; señala cómo las alianzas de los países petroleros buscan formas de contrarrestar el poder.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficcali-2026/an-incomplete-calendar.jpg",
-   "posterSource": "tmdb",
-   "_src": {
-    "url": "https://ficcali.com/programacion-ficcali-2026/",
-    "date": "2026-10-06",
-    "tarjeta": 14027
-   },
-   "lbSlug": "an-incomplete-calendar",
-   "tmdb_id": 1633334,
-   "synopsis_en": "A forgotten musical record connects Caracas to Tehran, revealing untold stories of oil, not as a commodity, but as a political leverage for the liberation struggles in Palestine and building Pan-Arab solidarity between 1960-1970.",
-   "_fid": "f_7c5c854376",
-   "id": "f_7c5c854376",
    "is_free": true,
    "_procedencia": {
     "day": {
@@ -7760,10 +7712,11 @@
      "title": "Caída libre",
      "country": "Colombia",
      "flags": "🇨🇴",
-     "poster": "/assets/qaff/free-fall.jpg",
-     "posterSource": "custom",
+     "poster": "/assets/anibia-2026/caida-libre.jpg",
+     "posterSource": "oficial",
      "lbSlug": "caida-libre",
-     "synopsis": "En un intento desesperado por escapar del aislamiento, un personaje sin rostro se lanza desde una cornisa esperando encontrar su final, sin saber que en el fondo de la caída las leyes de la gravedad no aplican para él: rebota. Frustrado por este hecho, sigue intentándolo en diferentes escenarios, en un ciclo constante. Todo esto, enmarcado en un paisaje desolado, contaminado y sin recursos. Nació en Bogotá, Colombia, en 1980. Después de graduarse como diseñador gráfico en 2003, ha estado creando imágenes para revistas y libros durante más de diez años. En animación, ha colaborado como artista conceptual y diseñador de personajes para proyectos de televisión y cine. Se graduó de la Maestría en Bellas Artes en el programa de Studio Art de la Universidad de Arkansas después de obtener una beca Fulbright en 2011. Actualmente, enseña cursos de ilustración y animación en el programa de diseño gráfico de la Universidad Nacional de Colombia. Su cortometraje más reciente, Reparations, fue galardonado con el premio Ciudad de Annecy en la sección Perspectives del Festival Internacional de Cine de Animación de Annecy 2022. 15",
+     "synopsis": "En el desesperado intento de escapar del aislamiento, un personaje sin rostro salta del borde esperando cambiar su realidad, sin saber que en el fondo de esa caída la ley de la gravedad no aplica para él, este personaje simplemente rebota.",
+     "synopsis_en": "In a desperate attempt to escape isolation, a faceless character jumps from a ledge hoping to meet his end, unaware that at the bottom of the fall, the laws of gravity do not apply: he bounces back. Frustrated by this fact, he keeps trying in different scenarios, in a constant cycle. All this takes place in a desolate, polluted landscape devoid of resources.",
      "title_en": "Free Fall",
      "genre": "Animación",
      "director": "Wilson Borja",
@@ -8274,6 +8227,84 @@
    "title_en": "PARA VIVIR: The Implacable Times of Pablo Milanés",
    "_fid": "f_2a7886586a",
    "id": "f_2a7886586a",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-06",
+     "url": "https://ficcali.com/programacion-ficcali-2026/"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-06",
+     "url": "https://ficcali.com/programacion-ficcali-2026/"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-06",
+     "url": "https://ficcali.com/programacion-ficcali-2026/"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-06",
+     "url": "https://ficcali.com/programacion-ficcali-2026/"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-06",
+     "url": "https://ficcali.com/programacion-ficcali-2026/"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-06",
+     "url": "https://ficcali.com/programacion-ficcali-2026/"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-06",
+     "url": "https://ficcali.com/programacion-ficcali-2026/"
+    },
+    "entrada": {
+     "tipo": "regla",
+     "marca": "supuesto",
+     "valor": "libre"
+    }
+   }
+  },
+  {
+   "title": "An Incomplete Calendar",
+   "type": "film",
+   "section": "🌍 Competencia Largometrajes Internacionales",
+   "director": "Sanaz Sohrabi",
+   "year": 2026,
+   "country": "Canadá, Irán, Turquía, Venezuela",
+   "flags": "🇨🇦🇮🇷🇹🇷🇻🇪",
+   "duration": "90 min",
+   "genre": "Documental",
+   "_ancla": [
+    "Cine Colombia Unicentro - Cali",
+    "2026-10-25",
+    "14:30"
+   ],
+   "day": "2026-10-25",
+   "time": "14:30",
+   "day_order": 9,
+   "venue": "Cine Colombia Unicentro - Cali",
+   "has_qa": false,
+   "synopsis": "Un disco de vinilo de 1980 es el punto de partida. Rhymes and Songs for OPEC es una grabación especial del coro de la Universidad Central de Venezuela, para conmemorar el vigésimo aniversario de la Organización de Países Exportadores de Petróleo. Mediante una superposición de canciones y material inédito o poco visto, se replantea el petróleo como una herramienta política al servicio de las luchas de liberación en Palestina y del fortalecimiento de la solidaridad panárabe entre 1960 y 1970. Se propone una revisión aguda de la geopolítica de los últimos cincuenta años, desde representaciones como la música, las estampillas y el arte; señala cómo las alianzas de los países petroleros buscan formas de contrarrestar el poder.",
+   "synopsis_lang": "es",
+   "poster": "/assets/ficcali-2026/an-incomplete-calendar.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14027
+   },
+   "lbSlug": "an-incomplete-calendar",
+   "tmdb_id": 1633334,
+   "synopsis_en": "A forgotten musical record connects Caracas to Tehran, revealing untold stories of oil, not as a commodity, but as a political leverage for the liberation struggles in Palestine and building Pan-Arab solidarity between 1960-1970.",
+   "_fid": "f_7c5c854376",
+   "id": "f_7c5c854376",
    "is_free": true,
    "_procedencia": {
     "day": {
@@ -9389,6 +9420,85 @@
    }
   },
   {
+   "title": "City Tour",
+   "type": "event",
+   "section": "🤝 Conexiones",
+   "duration": "150 min",
+   "_ancla": [
+    "Hotel Obelisco - Cali",
+    "2026-10-24",
+    "10:00"
+   ],
+   "day": "2026-10-24",
+   "time": "10:00",
+   "day_order": 8,
+   "venue": "Hotel Obelisco - Cali",
+   "event_kind": "evento",
+   "has_qa": false,
+   "_src": {
+    "url": "https://www.instagram.com/p/DezWCmQEdHT/",
+    "date": "2026-10-22"
+   },
+   "requires_registration": true,
+   "description": "Conoce Cali en un recorrido único.",
+   "description_lang": "es",
+   "_fid": "f_a58b033c64",
+   "id": "f_a58b033c64",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-22",
+     "url": "https://ficcali.com/programacion-ficcali-2026/"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-22",
+     "url": "https://ficcali.com/programacion-ficcali-2026/"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-22",
+     "url": "https://ficcali.com/programacion-ficcali-2026/"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-22",
+     "url": "https://ficcali.com/programacion-ficcali-2026/"
+    },
+    "requires_registration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-22",
+     "url": "https://ficcali.com/programacion-ficcali-2026/"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-22",
+     "url": "https://ficcali.com/programacion-ficcali-2026/"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-22",
+     "url": "https://ficcali.com/programacion-ficcali-2026/"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-22",
+     "url": "https://ficcali.com/programacion-ficcali-2026/"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-22",
+     "url": "https://ficcali.com/programacion-ficcali-2026/"
+    },
+    "entrada": {
+     "tipo": "regla",
+     "marca": "supuesto",
+     "valor": "libre"
+    }
+   }
+  },
+  {
    "title": "Cineconcierto: Metrópolis",
    "type": "film",
    "section": "🏛️ Clásicos",
@@ -9475,7 +9585,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-21T12:07:01",
+  "fecha": "2026-10-22T13:30:21",
   "plan_sha": "24bc04ac59ca2585",
   "paso": 11,
   "cmd": "python3 pipeline/ficcali-2026-verificar.py"

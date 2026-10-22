@@ -276,7 +276,22 @@ TITULO = {
     14019: 'Trópico interior: Todos los colores de la oscuridad',   # la tarjeta no deja espacio tras «:»
 }
 # EL LUGAR EXACTO que dos tarjetas dan en su última línea («Lugar: …»)
-SALA_TARJETA = {14624: 'Auditorio Celsia', 14625: 'Carpa de la Red de Bibliotecas Públicas de Cali'}
+SALA_TARJETA = {14624: 'Auditorio Celsia', 14625: 'Carpa de la Red de Bibliotecas Públicas de Cali',
+                # vigía 22 oct 2026: la lámina de cada lanzamiento (IG DezOJbQkf6x, 3 y 6)
+                # dice «LUGAR Auditorio Celsia, Bulevar del Río»; la meta de la web ya lo decía
+                14607: 'Auditorio Celsia', 14608: 'Auditorio Celsia'}
+# LA ABIERTA DE VARIOS DÍAS (vigía 22 oct 2026): la web publica la Muestra VR solo el
+# sáb 17, 3–7 p. m.; el IG del festival (DezVbZHRunB, 22 oct) dice «Muestra VR
+# Realidades en 360° · 3:00 p.m. a 7:00 p.m. Hasta el 25 de octubre» e «Inscripciones
+# en la Bio». Es UNA función `info` con `hasta` (modelo #1229/#1230).
+ABIERTA = {14841: {'hasta': '2026-10-25', 'acceso': 'Inscripción previa',
+                   'fuente': 'https://www.instagram.com/p/DezVbZHRunB/'}}
+# CITY TOUR (Conexiones): lámina 6 del IG DezWCmQEdHT (22 oct 2026), la web no lo
+# tiene: «CITY TOUR · Cupos: 53 · Con inscripción previa · Sábado 24 de octubre ·
+# Salida: Hotel Obelisco, Av. Colombia # 4 Oeste-49 · 10:00 a.m. a 12:30 p.m.»
+CITY_TOUR = {'dia': '2026-10-24', 'hora': '10:00', 'duracion_min': 150, 'titulo': 'City Tour',
+             'acceso': 'Inscripción previa · Cupos: 53', 'sinopsis': 'Conoce Cali en un recorrido único.',
+             'fuente': 'https://www.instagram.com/p/DezWCmQEdHT/'}
 
 # EL TIPO DE ACTIVIDAD por la palabra del título (vocabulario que la app conoce)
 KIND = [('master class', 'masterclass'), ('máster class', 'masterclass'), ('taller', 'taller'),
@@ -441,6 +456,10 @@ def main():
             r['titulo'] = TITULO[x['id']]
         if x['id'] in SALA_TARJETA:
             r['sala'] = SALA_TARJETA[x['id']]
+        if x['id'] in ABIERTA:
+            _ab = ABIERTA[x['id']]
+            r.update({'info': True, 'hasta': _ab['hasta'], 'acceso': _ab['acceso']})
+            r['_src']['ventana'] = _ab['fuente']
         r['titulo'] = recta(r['titulo'])
         # LAS OBRAS DE VANGUARDIAS (17 oct): la web publica los dos programas sin
         # sus cortos; el IG del festival los lista (ficcali-2026-ig.py → sidecar)
@@ -504,6 +523,11 @@ def main():
                           'tipo': 'evento', 'event_kind': 'taller', 'seccion': 'Académico',
                           'is_recurring': True, 'duracion_min': x['duracion_min'],
                           '_src': {'url': x['fuente'], 'date': '2026-10-14'}})
+    funciones.append({'dia': CITY_TOUR['dia'], 'hora': CITY_TOUR['hora'], 'sede': 'Hotel Obelisco',
+                      'sede_cruda': 'Hotel Obelisco', 'acceso': CITY_TOUR['acceso'], 'titulo': CITY_TOUR['titulo'],
+                      'tipo': 'evento', 'event_kind': 'evento', 'seccion': 'Conexiones',
+                      'duracion_min': CITY_TOUR['duracion_min'], 'sinopsis': CITY_TOUR['sinopsis'],
+                      '_src': {'url': CITY_TOUR['fuente'], 'date': '2026-10-22'}})
     _m21 = next(f for f in funciones if f.get('titulo') == 'Cineconcierto: Metrópolis')
     funciones.append({**_m21, 'dia': METROPOLIS_24['dia'],
                       '_src': {'url': METROPOLIS_24['fuente'], 'date': '2026-10-15'}})
