@@ -231,6 +231,11 @@
    "en": "Pensar lo Real Meeting",
    "archetype": "Charlas / Industria",
    "order": 18
+  },
+  "🔊 Documental Expandido": {
+   "en": "Expanded Documentary",
+   "archetype": "Especiales / Eventos",
+   "order": 19
   }
  },
  "venues": {
@@ -4937,12 +4942,67 @@
    "description_lang": "es",
    "_fid": "f_4eb7765ac2",
    "id": "f_4eb7765ac2"
+  },
+  {
+   "title": "Diario de una oreja",
+   "type": "event",
+   "section": "🎙️ Encuentro Pensar lo Real",
+   "duration": "60 min",
+   "_ancla": [
+    "Alianza Francesa - Bogotá",
+    "2026-10-29",
+    "19:30"
+   ],
+   "day": "2026-10-29",
+   "time": "19:30",
+   "day_order": 2,
+   "venue": "Alianza Francesa - Bogotá",
+   "sala": "Sede Centro",
+   "event_kind": "evento",
+   "has_qa": false,
+   "_src": {
+    "url": "https://www.instagram.com/p/DexoaAzCV-0/",
+    "date": "2026-10-21"
+   },
+   "is_free": true,
+   "requires_registration": true,
+   "description": "Performance documental sonoro. En el marco del Seminario Pensar lo Real: Lenguajes Sonoros. Diana Martínez y José Delgadillo.",
+   "description_lang": "es",
+   "_fid": "f_6200a429bc",
+   "id": "f_6200a429bc"
+  },
+  {
+   "title": "Homenaje Roberto García Piedrahita QEDP",
+   "type": "event",
+   "section": "🔊 Documental Expandido",
+   "duration": "90 min",
+   "_ancla": [
+    "Universidad Jorge Tadeo Lozano - Bogotá",
+    "2026-10-31",
+    "19:00"
+   ],
+   "day": "2026-10-31",
+   "time": "19:00",
+   "day_order": 4,
+   "venue": "Universidad Jorge Tadeo Lozano - Bogotá",
+   "sala": "Auditorio Fabio Lozano",
+   "event_kind": "concierto",
+   "has_qa": false,
+   "_src": {
+    "url": "https://www.instagram.com/p/DexoaAzCV-0/",
+    "date": "2026-10-21"
+   },
+   "is_free": true,
+   "description": "Concierto. Proyección de fragmentos de tres películas: Batallas Sagradas (Pablo Mora, 2002), Quién paga el pato (Pablo Mora, 2001) y Fragmentos (Carlos Santa, 1999). Improvisación sonora en vivo por Roberto García Piedrahita, Alberto Vargas, Sergio Román, Jorjan Betancourt.",
+   "description_lang": "es",
+   "_fid": "f_915018da51",
+   "id": "f_915018da51"
   }
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-21T13:22:18",
-  "plan_sha": "6012e1ded6067f84",
+  "fecha": "2026-10-21T19:16:02",
+  "plan_sha": "ef724f40e2430ff8",
   "paso": 8,
   "cmd": "python3 pipeline/midbo-2026-verificar.py"
  }
