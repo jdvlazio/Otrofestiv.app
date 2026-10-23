@@ -1,11 +1,11 @@
 {
  "_provenance": {
   "fuente": "https://ficfusa.com/seleccion-oficial-ficfusa-2026/",
-  "capturado": "2026-10-22",
+  "capturado": "2026-10-23",
   "metodo": "wp-json posts/9882 + tarjetas leídas con ocr.py y a ojo",
   "publicado": "2026-10-21"
  },
- "_nota": "el post declara 62 obras (42 en competencia, 20 en muestras); al 22 oct solo publica estas 3",
+ "_nota": "el post declara 62 obras (42 en competencia, 20 en muestras); al 22 oct 23:02 solo publica estas 6",
  "obras": [
   {
    "titulo": "Desaprender la maternidad",
@@ -50,6 +50,51 @@
     "url": "https://ficfusa.com/seleccion-oficial-ficfusa-2026/",
     "tarjeta": "https://ficfusa.com/wp-content/uploads/2026/10/nina-chilapa-ficfusa-seleccion-oficial-hecho-por-colombianas.webp",
     "date": "2026-10-21"
+   }
+  },
+  {
+   "titulo": "Una vez en un cuerpo",
+   "director": "María Cristina Pérez",
+   "anio": 2025,
+   "pais": "Colombia, Estados Unidos",
+   "duracion_min": 11,
+   "genero": "Animación",
+   "tipo": "corto",
+   "seccion": "Hecho por Colombianas",
+   "_src": {
+    "url": "https://ficfusa.com/seleccion-oficial-ficfusa-2026/",
+    "tarjeta": "https://ficfusa.com/wp-content/uploads/2026/10/seleccion-oficial-ficfusa-una-vez-en-un-cuerpo.webp",
+    "date": "2026-10-22"
+   }
+  },
+  {
+   "titulo": "Chaika",
+   "director": "Ingrid Paola Bonilla Rodríguez",
+   "anio": 2025,
+   "pais": "Colombia",
+   "duracion_min": 15,
+   "genero": "Ciencia ficción",
+   "tipo": "corto",
+   "seccion": "Hecho por Colombianas",
+   "_src": {
+    "url": "https://ficfusa.com/seleccion-oficial-ficfusa-2026/",
+    "tarjeta": "https://ficfusa.com/wp-content/uploads/2026/10/chaika-seleccion-oficial-ficfusa.webp",
+    "date": "2026-10-22"
+   }
+  },
+  {
+   "titulo": "Salsa",
+   "director": "Antonina Kerguelén Román",
+   "anio": 2024,
+   "pais": "Colombia",
+   "duracion_min": 14,
+   "genero": "Ficción",
+   "tipo": "corto",
+   "seccion": "Hecho por Colombianas",
+   "_src": {
+    "url": "https://ficfusa.com/seleccion-oficial-ficfusa-2026/",
+    "tarjeta": "https://ficfusa.com/wp-content/uploads/2026/10/salsa-ficfusa-seleccion-oficial.webp",
+    "date": "2026-10-22"
    }
   }
  ]

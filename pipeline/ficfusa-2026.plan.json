@@ -4,7 +4,7 @@
  "pasos": [
   {
    "cmd": "python3 pipeline/ficfusa-2026-catalogo.py",
-   "que": "las tarjetas del post «Selección oficial FICFUSA 2026» (wp-json + ocr.py, cruzado con la lectura a ojo) → catálogo (3 cortos)"
+   "que": "las tarjetas del post «Selección oficial FICFUSA 2026» (wp-json + ocr.py, cruzado con la lectura a ojo) → catálogo (6 cortos)"
   },
   {
    "cmd": "python3 pipeline/enriquecer_catalogo.py festivals/staging/ficfusa-2026-catalogo.json",
@@ -12,7 +12,7 @@
   }
  ],
  "_fuentes_versionadas": {
-  "festivals/staging/ficfusa-2026-catalogo.json": "la selección publicada (3 obras de 62); la leerá el crudo",
+  "festivals/staging/ficfusa-2026-catalogo.json": "la selección publicada (6 obras de 62); la leerá el crudo",
   "festivals/staging/ficfusa-2026-catalogo-enriquecido.json": "las fichas TMDB/cascada, que escribe el paso 2",
   "festivals/staging/ficfusa-2026-correcciones.json": "sin_afiche: el porqué de la obra sin afiche; lo leen pipeline/preonboarding.py y, con la parrilla, enriquecer.py/ensamblar.py"
  }

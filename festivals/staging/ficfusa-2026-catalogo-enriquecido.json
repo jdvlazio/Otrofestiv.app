@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, con el MISMO candado de enriquecer.py: director ✓ y (año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-10-22"
+  "capturado": "2026-10-23"
  },
  "_origen": "ficfusa-2026-catalogo.json",
  "obras": [
@@ -10,7 +10,7 @@
    "tmdb_id": 1418533,
    "titulo_original": "Akababuru: Expresión de asombro",
    "poster_path": "/bA8KrWe46yXs1J5VwL9ucSJrQHZ.jpg",
-   "synopsis_es": "",
+   "synopsis_es": "Kari es una niña emberá que teme reír. Un día conoce a Kera, una joven mestiza, quien decide contarle el mito de Kiraparamia, una mujer que, según los ancianos, fue castigada por los dioses por reírse de su esposo. Kera reinterpreta el mito y le dice que, en realidad, la risa de Kiraparamia la liberó. Esta historia inspira profundamente a la pequeña Kari, quien decide confrontar a los niños que la oprimen a ella y a sus amigas mediante la risa. Akababuru busca darle un giro a la interpretación patriarcal de un personaje mitológico emberá a través de la infancia y la hermandad. Enlace para comprar entrada para la función en el Teatro San Fernando Enlace para comprar entrada para la función en la Cinemateca La Tertulia",
    "synopsis_en": "Kari, an Indigenous girl, is afraid to laugh. But a new interpretation of the old legend of Kiraparamia helps her to set herself free.",
    "genero": "Fantasía",
    "anio_tmdb": 2025,
@@ -88,14 +88,15 @@
      "synopsis_en": "Kari, an Indigenous girl, is afraid to laugh. But a new interpretation of the old legend of Kiraparamia helps her to set herself free.",
      "sinopsis": "Kari es una niña indígena Emberá que vive con miedo a reír. Su perspectiva cambia por completo cuando conoce a Kera, una joven que le relata el mito de Kiraparamia, una mujer que —según cuentan los mayores— fue castigada por los dioses por reírse de su esposo. Gracias a esta historia, Kari comprende que la risa no es una ofensa que deba ocultarse, sino un acto de liberación."
     }
-   ]
+   ],
+   "_sinopsis_de": "ya publicada en aff-2026"
   },
   {
    "titulo": "Niña chilapa",
    "tmdb_id": 1456186,
    "titulo_original": "Niña chilapa",
    "poster_path": "/AjNWPyDDpMsn1Q5nH111jtRGKZN.jpg",
-   "synopsis_es": "",
+   "synopsis_es": "Yulieth es una niña en un momento que mide su relación con el mundo: no es todavía una adolescente pero sus experiencias la hacen sentirse una mujer grande. Ese difícil equilibrio se amplía con el espacio que la rodea: una naturaleza demasiado generosa, tupida y vasta.",
    "synopsis_en": "Sometimes one, orphaned of one's own lungs, feels that one is drowning.  One suddenly remembers the body, breathes again, and begins to laugh. To laugh very hard. To run around the corners of the world breathing and laughing. Yulieth talks to her mother. She dances. She floats on the water. She laughs.",
    "genero": "Documental",
    "anio_tmdb": 2025,
@@ -146,6 +147,224 @@
      "genre": "Documental",
      "synopsis_en": "Sometimes one, orphaned of one's own lungs, feels that one is drowning.  One suddenly remembers the body, breathes again, and begins to laugh. To laugh very hard. To run around the corners of the world breathing and laughing. Yulieth talks to her mother. She dances. She floats on the water. She laughs.",
      "sinopsis": "Yulieth (11-13), se enfrenta a la dificultad de crecer en un territorio salvaje, donde coexiste la belleza natural y la hostilidad del machismo. Su identidad en construcción se disputa entre las pulsiones de sus sueños y su realidad."
+    }
+   ],
+   "_sinopsis_de": "ya publicada en cinemancia-2025"
+  },
+  {
+   "titulo": "Una vez en un cuerpo",
+   "tmdb_id": 1522316,
+   "titulo_original": "Una vez en un cuerpo",
+   "poster_path": "/jSAfjuWwP9BLIJgofw1vVa6xWaG.jpg",
+   "synopsis_es": "Mientras lidia con un extraño ser que vive en su interior, una mujer intenta reconciliarse con su hermana tras un incidente que las separó durante la adolescencia. Un viaje inquietante en el que tendrá que enfrentarse tanto a lo que lleva dentro como a las heridas del pasado.",
+   "synopsis_en": "While dealing with a strange being that lives inside her, a woman seeks to reconcile with her sister over an incident from their adolescence.",
+   "genero": "Animación",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 10,
+   "pais_tmdb": "Colombia, United States of America",
+   "title_en": "Once in a Body",
+   "lbSlug": "once-in-a-body",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Una vez en un cuerpo",
+   "_ya_publicada": [
+    {
+     "festival": "aff-2026",
+     "titulo": "Una vez en un cuerpo",
+     "poster": "https://admin.alternativa.film/uploads/Oficial_Poster_Una_Michel_d4a64a67e9.jpg",
+     "posterSource": "custom",
+     "lbSlug": "once-in-a-body",
+     "country": "Colombia/EEUU",
+     "year": 2025,
+     "duration": "10 min",
+     "genre": "Animación",
+     "synopsis_en": "While dealing with a strange being that lives inside her, a woman seeks to reconcile with her sister over an incident from their adolescence.",
+     "sinopsis": "Mientras lidia con un ser extraño que vive en su interior, una mujer busca reconciliarse con su hermana por un incidente de su adolescencia."
+    },
+    {
+     "festival": "anibia-2026",
+     "titulo": "Una vez en un cuerpo",
+     "tmdb_id": 1522316,
+     "poster": "/assets/anibia-2026/una-vez-en-un-cuerpo.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "once-in-a-body",
+     "country": "Colombia, Estados Unidos",
+     "year": 2025,
+     "duration": "10 min",
+     "genre": "Animación",
+     "synopsis_en": "While dealing with a strange being that lives inside her, a woman seeks to reconcile with her sister over an incident from their adolescence.",
+     "sinopsis": "Mientras lidia con un extraño ser que vive en su interior, una mujer busca reconciliarse con su hermana por un incidente de su adolescencia. Al explorar las experiencias que comparten a través de sus cuerpos, logra confrontar la naturaleza de aquello que la habita."
+    },
+    {
+     "festival": "ficcali-2026",
+     "titulo": "Una vez en un cuerpo",
+     "tmdb_id": 1522316,
+     "poster": "/assets/ficcali-2026/una-vez-en-un-cuerpo.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "once-in-a-body",
+     "country": "Colombia, Estados Unidos",
+     "year": 2025,
+     "duration": "10 min",
+     "genre": "Animación",
+     "synopsis_en": "While dealing with a strange being that lives inside her, a woman seeks to reconcile with her sister over an incident from their adolescence.",
+     "sinopsis": "Mientras lidia con un extraño ser que vive en su interior, una mujer intenta reconciliarse con su hermana tras un incidente que las separó durante la adolescencia. Un viaje inquietante en el que tendrá que enfrentarse tanto a lo que lleva dentro como a las heridas del pasado."
+    },
+    {
+     "festival": "filcmar-2026",
+     "titulo": "Una vez en un cuerpo",
+     "tmdb_id": 1522316,
+     "poster": "/assets/filcmar-2026/una-vez-en-un-cuerpo.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "once-in-a-body",
+     "country": "Colombia, Estados Unidos",
+     "year": 2025,
+     "duration": "10 min",
+     "genre": "Animación",
+     "synopsis_en": "While dealing with a strange being that lives inside her, a woman seeks to reconcile with her sister over an incident from their adolescence.",
+     "sinopsis": "Mientras lidia con un ser extraño que habita en su interior, una mujer busca reconciliarse con su hermana tras un incidente de su adolescencia. Al explorar las experiencias que comparten a través de sus cuerpos, logra confrontar la naturaleza de lo que la habita."
+    },
+    {
+     "festival": "jardin-2026",
+     "titulo": "Una vez en un cuerpo",
+     "tmdb_id": 1522316,
+     "poster": "/assets/jardin-2026/una-vez-en-un-cuerpo.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "once-in-a-body",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "10 min",
+     "genre": "Experimental",
+     "synopsis_en": "While dealing with a strange being that lives inside her, a woman seeks to reconcile with her sister over an incident from their adolescence.",
+     "sinopsis": "Mientras lidia con un ser extraño que habita en su interior, una mujer busca reconciliarse con su hermana tras un incidente de su adolescencia. Al explorar las experiencias que comparten a través de sus cuerpos, logra confrontar la naturaleza de lo que la habita."
+    },
+    {
+     "festival": "popayan-2026",
+     "titulo": "Una vez en un cuerpo",
+     "tmdb_id": 1522316,
+     "poster": "/assets/popayan-2026/una-vez-en-un-cuerpo.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "once-in-a-body",
+     "country": "Colombia, United States of America",
+     "year": 2025,
+     "duration": "10 min",
+     "genre": "Animación",
+     "synopsis_en": "While dealing with a strange being that lives inside her, a woman seeks to reconcile with her sister over an incident from their adolescence.",
+     "sinopsis": "Mientras lidia con un ser extraño que habita en su interior, una mujer busca reconciliarse con su hermana tras un incidente de su adolescencia. Al explorar las experiencias que comparten a través de sus cuerpos, logra confrontar la naturaleza de lo que la habita."
+    }
+   ]
+  },
+  {
+   "titulo": "Chaika",
+   "tmdb_id": 1689999,
+   "titulo_original": "Chaika",
+   "poster_path": "/fhvA2plccJRbTQgL6HRAAUPhPic.jpg",
+   "synopsis_es": "Valentina, una cosmonauta rusa de 76 años, llega a una Cuba ucrónica y nebulosa tras recibir, con treinta años de retraso, una invitación para una expedición agrícola a Marte. Entre paisajes difusos y promesas del pasado, busca las ruinas de un futuro que nunca llegó.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 15,
+   "pais_tmdb": "",
+   "lbSlug": "chaika-2025",
+   "_verificado": "el catálogo ya la tiene (w_R4EP71550W43, bhff-2026, cineautopsia-2026, fantasmagoria-2026, fantasofest-2026, ficica-2026, ficpa-2026, narrarelfuturo-2026, popayan-2026)",
+   "work_id": "w_R4EP71550W43",
+   "_ya_publicada": [
+    {
+     "festival": "bhff-2026",
+     "titulo": "Chaika",
+     "tmdb_id": 1689999,
+     "poster": "/assets/bhff-2026/chaika.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "chaika-2025",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "15 min",
+     "genre": "Ciencia Ficción",
+     "sinopsis": "Valentina, una cosmonauta rusa de 76 años, llega a una Cuba ucrónica y nebulosa tras recibir, con treinta años de retraso, una invitación para una expedición agrícola a Marte. Entre paisajes difusos y promesas del pasado, busca las ruinas de un futuro que nunca llegó."
+    },
+    {
+     "festival": "cineautopsia-2026",
+     "titulo": "CHAIKA",
+     "tmdb_id": 1689999,
+     "poster": "/assets/cineautopsia/chaika.jpg",
+     "posterSource": "oficial",
+     "lbSlug": "chaika-2025",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "14 min",
+     "sinopsis": "Valentina, una cosmonauta rusa de 76 años, recibe una carta enviada desde Cuba con treinta años de retraso, en la que se le invita a unirse a una expedición agrícola a Marte. Viaja a la isla esperando encontrar una utopía científica y social, pero descubre un territorio asolado por una silenciosa crisis agrícola y ambiental; una Cuba ucrónica y nebulosa donde las promesas del pasado perduran como sombras. Los paisajes tiemblan, las formas se desdibujan y la política apenas se alcanza a discernir: un sistema exhausto que intenta sostener un ideal ya difuso. Los paisajes, trémulos y borrosos, se resisten a ser enfocados, como si la propia isla dudara de su existencia. En este territorio nebuloso, donde lo real y lo onírico se confunden, Valentina busca descubrir si aún es posible alzar el vuelo, mientras la nostalgia por el Caribe se mezcla con el eco de un futuro que nunca llegó."
+    },
+    {
+     "festival": "fantasmagoria-2026",
+     "titulo": "Chaika",
+     "tmdb_id": 1689999,
+     "poster": "/assets/fantasmagoria-2026/chaika.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "chaika-2025",
+     "country": "Colombia y Cuba",
+     "year": 2025,
+     "duration": "15 min",
+     "genre": "Ciencia Ficción",
+     "sinopsis": "Valentina, una cosmonauta rusa de 76 años, llega a una Cuba ucrónica y nebulosa tras recibir, con treinta años de retraso, una invitación para una expedición agrícola a Marte. Entre paisajes difusos y promesas del pasado, busca las ruinas de un futuro que nunca llegó."
+    },
+    {
+     "festival": "fantasofest-2026",
+     "titulo": "Chaika",
+     "poster": "/assets/fantasofest/corto-chaika.jpg",
+     "posterSource": "editorial",
+     "lbSlug": "chaika-2026",
+     "year": 2025,
+     "genre": "Ciencia Ficción",
+     "sinopsis": "Valentina, una cosmonauta rusa de 76 años, llega a una Cuba ucrónica y nebulosa tras recibir, con treinta años de retraso, una invitación para una expedición agrícola a Marte. Entre paisajes difusos y promesas del pasado, busca las ruinas de un futuro que nunca llegó."
+    },
+    {
+     "festival": "ficica-2026",
+     "titulo": "Chaika",
+     "tmdb_id": 1689999,
+     "poster": "/assets/ficica-2026/chaika.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "chaika-2025",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "15 min",
+     "genre": "Ciencia Ficción",
+     "sinopsis": "Valentina, una cosmonauta rusa de 76 años, llega a una Cuba ucrónica y nebulosa tras recibir, con treinta años de retraso, una invitación para una expedición agrícola a Marte. Entre paisajes difusos y promesas del pasado, busca las ruinas de un futuro que nunca llegó."
+    },
+    {
+     "festival": "ficpa-2026",
+     "titulo": "Chaika",
+     "tmdb_id": 1689999,
+     "poster": "/assets/ficpa-2026/chaika.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "chaika-2025",
+     "country": "Colombia/Cuba",
+     "year": 2025,
+     "duration": "15 min",
+     "genre": "Ciencia Ficción",
+     "sinopsis": "Valentina, una cosmonauta rusa de 76 años, recibe una carta desde Cuba con treinta años de retraso, invitándola a una expedición agrícola a Marte. Viaja a una isla onírica y difusa, donde la utopía soñada se desvanece entre paisajes borrosos y nostalgia suspendida, Valentina busca si aún es posible levantar vuelo mientras la nostalgia del Caribe se mezcla con el eco de un futuro que nunca llegó."
+    },
+    {
+     "festival": "narrarelfuturo-2026",
+     "titulo": "Chaika",
+     "tmdb_id": 1689999,
+     "poster": "/assets/narrarelfuturo-2026/chaika.jpg",
+     "posterSource": "oficial",
+     "lbSlug": "chaika-2025",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "15 min",
+     "genre": "Ciencia Ficción",
+     "sinopsis": "Valentina, una cosmonauta rusa de 76 años, recibe una carta enviada desde Cuba con treinta años de retraso que la invita a unirse a una expedición agrícola a Marte. Viaja a la isla esperando encontrar una utopía científica y social, pero se topa con un territorio devastado por una silenciosa crisis agrícola y medioambiental: una Cuba ucrónica y nebulosa donde las promesas del pasado perduran como sombras. Los paisajes tiemblan, las formas se difuminan y la política apenas se percibe: es un sistema agotado que intenta sostener un ideal ya desdibujado. Los paisajes, trémulos y borrosos, se resisten a ser enfocados, como si la propia isla dudara de su existencia. En este territorio nebuloso, donde lo real y lo onírico se funden, Valentina busca averiguar si aún es posible emprender el vuelo, mientras la nostalgia por el Caribe se mezcla con el eco de un futuro que nunca llegó."
+    },
+    {
+     "festival": "popayan-2026",
+     "titulo": "Chaika",
+     "tmdb_id": 1689999,
+     "poster": "/assets/popayan-2026/chaika.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "chaika-2025",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "15 min",
+     "sinopsis": "Valentina, una cosmonauta rusa de 76 años, recibe una carta enviada desde Cuba con treinta años de retraso, invitándola a una expedición agrícola a Marte. Viaja a la isla esperando una utopía científico–social, pero encuentra un territorio golpeado por una silenciosa crisis agrícola y ambiental, una Cuba ucrónica y nebulosa donde las promesas del pasado persisten como sombras. Los paisajes tiemblan, las formas se desdibujan y la política apenas se intuye: un sistema agotado que intenta sostener un ideal ya difuso."
     }
    ]
   }
@@ -155,7 +374,7 @@
    "tmdb_id": 1418533,
    "titulo_original": "Akababuru: Expresión de asombro",
    "poster_path": "/bA8KrWe46yXs1J5VwL9ucSJrQHZ.jpg",
-   "synopsis_es": "",
+   "synopsis_es": "Kari es una niña emberá que teme reír. Un día conoce a Kera, una joven mestiza, quien decide contarle el mito de Kiraparamia, una mujer que, según los ancianos, fue castigada por los dioses por reírse de su esposo. Kera reinterpreta el mito y le dice que, en realidad, la risa de Kiraparamia la liberó. Esta historia inspira profundamente a la pequeña Kari, quien decide confrontar a los niños que la oprimen a ella y a sus amigas mediante la risa. Akababuru busca darle un giro a la interpretación patriarcal de un personaje mitológico emberá a través de la infancia y la hermandad. Enlace para comprar entrada para la función en el Teatro San Fernando Enlace para comprar entrada para la función en la Cinemateca La Tertulia",
    "synopsis_en": "Kari, an Indigenous girl, is afraid to laugh. But a new interpretation of the old legend of Kiraparamia helps her to set herself free.",
    "genero": "Fantasía",
    "anio_tmdb": 2025,
@@ -233,13 +452,14 @@
      "synopsis_en": "Kari, an Indigenous girl, is afraid to laugh. But a new interpretation of the old legend of Kiraparamia helps her to set herself free.",
      "sinopsis": "Kari es una niña indígena Emberá que vive con miedo a reír. Su perspectiva cambia por completo cuando conoce a Kera, una joven que le relata el mito de Kiraparamia, una mujer que —según cuentan los mayores— fue castigada por los dioses por reírse de su esposo. Gracias a esta historia, Kari comprende que la risa no es una ofensa que deba ocultarse, sino un acto de liberación."
     }
-   ]
+   ],
+   "_sinopsis_de": "ya publicada en aff-2026"
   },
   "Niña chilapa": {
    "tmdb_id": 1456186,
    "titulo_original": "Niña chilapa",
    "poster_path": "/AjNWPyDDpMsn1Q5nH111jtRGKZN.jpg",
-   "synopsis_es": "",
+   "synopsis_es": "Yulieth es una niña en un momento que mide su relación con el mundo: no es todavía una adolescente pero sus experiencias la hacen sentirse una mujer grande. Ese difícil equilibrio se amplía con el espacio que la rodea: una naturaleza demasiado generosa, tupida y vasta.",
    "synopsis_en": "Sometimes one, orphaned of one's own lungs, feels that one is drowning.  One suddenly remembers the body, breathes again, and begins to laugh. To laugh very hard. To run around the corners of the world breathing and laughing. Yulieth talks to her mother. She dances. She floats on the water. She laughs.",
    "genero": "Documental",
    "anio_tmdb": 2025,
@@ -291,10 +511,227 @@
      "synopsis_en": "Sometimes one, orphaned of one's own lungs, feels that one is drowning.  One suddenly remembers the body, breathes again, and begins to laugh. To laugh very hard. To run around the corners of the world breathing and laughing. Yulieth talks to her mother. She dances. She floats on the water. She laughs.",
      "sinopsis": "Yulieth (11-13), se enfrenta a la dificultad de crecer en un territorio salvaje, donde coexiste la belleza natural y la hostilidad del machismo. Su identidad en construcción se disputa entre las pulsiones de sus sueños y su realidad."
     }
+   ],
+   "_sinopsis_de": "ya publicada en cinemancia-2025"
+  },
+  "Una vez en un cuerpo": {
+   "tmdb_id": 1522316,
+   "titulo_original": "Una vez en un cuerpo",
+   "poster_path": "/jSAfjuWwP9BLIJgofw1vVa6xWaG.jpg",
+   "synopsis_es": "Mientras lidia con un extraño ser que vive en su interior, una mujer intenta reconciliarse con su hermana tras un incidente que las separó durante la adolescencia. Un viaje inquietante en el que tendrá que enfrentarse tanto a lo que lleva dentro como a las heridas del pasado.",
+   "synopsis_en": "While dealing with a strange being that lives inside her, a woman seeks to reconcile with her sister over an incident from their adolescence.",
+   "genero": "Animación",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 10,
+   "pais_tmdb": "Colombia, United States of America",
+   "title_en": "Once in a Body",
+   "lbSlug": "once-in-a-body",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Una vez en un cuerpo",
+   "_ya_publicada": [
+    {
+     "festival": "aff-2026",
+     "titulo": "Una vez en un cuerpo",
+     "poster": "https://admin.alternativa.film/uploads/Oficial_Poster_Una_Michel_d4a64a67e9.jpg",
+     "posterSource": "custom",
+     "lbSlug": "once-in-a-body",
+     "country": "Colombia/EEUU",
+     "year": 2025,
+     "duration": "10 min",
+     "genre": "Animación",
+     "synopsis_en": "While dealing with a strange being that lives inside her, a woman seeks to reconcile with her sister over an incident from their adolescence.",
+     "sinopsis": "Mientras lidia con un ser extraño que vive en su interior, una mujer busca reconciliarse con su hermana por un incidente de su adolescencia."
+    },
+    {
+     "festival": "anibia-2026",
+     "titulo": "Una vez en un cuerpo",
+     "tmdb_id": 1522316,
+     "poster": "/assets/anibia-2026/una-vez-en-un-cuerpo.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "once-in-a-body",
+     "country": "Colombia, Estados Unidos",
+     "year": 2025,
+     "duration": "10 min",
+     "genre": "Animación",
+     "synopsis_en": "While dealing with a strange being that lives inside her, a woman seeks to reconcile with her sister over an incident from their adolescence.",
+     "sinopsis": "Mientras lidia con un extraño ser que vive en su interior, una mujer busca reconciliarse con su hermana por un incidente de su adolescencia. Al explorar las experiencias que comparten a través de sus cuerpos, logra confrontar la naturaleza de aquello que la habita."
+    },
+    {
+     "festival": "ficcali-2026",
+     "titulo": "Una vez en un cuerpo",
+     "tmdb_id": 1522316,
+     "poster": "/assets/ficcali-2026/una-vez-en-un-cuerpo.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "once-in-a-body",
+     "country": "Colombia, Estados Unidos",
+     "year": 2025,
+     "duration": "10 min",
+     "genre": "Animación",
+     "synopsis_en": "While dealing with a strange being that lives inside her, a woman seeks to reconcile with her sister over an incident from their adolescence.",
+     "sinopsis": "Mientras lidia con un extraño ser que vive en su interior, una mujer intenta reconciliarse con su hermana tras un incidente que las separó durante la adolescencia. Un viaje inquietante en el que tendrá que enfrentarse tanto a lo que lleva dentro como a las heridas del pasado."
+    },
+    {
+     "festival": "filcmar-2026",
+     "titulo": "Una vez en un cuerpo",
+     "tmdb_id": 1522316,
+     "poster": "/assets/filcmar-2026/una-vez-en-un-cuerpo.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "once-in-a-body",
+     "country": "Colombia, Estados Unidos",
+     "year": 2025,
+     "duration": "10 min",
+     "genre": "Animación",
+     "synopsis_en": "While dealing with a strange being that lives inside her, a woman seeks to reconcile with her sister over an incident from their adolescence.",
+     "sinopsis": "Mientras lidia con un ser extraño que habita en su interior, una mujer busca reconciliarse con su hermana tras un incidente de su adolescencia. Al explorar las experiencias que comparten a través de sus cuerpos, logra confrontar la naturaleza de lo que la habita."
+    },
+    {
+     "festival": "jardin-2026",
+     "titulo": "Una vez en un cuerpo",
+     "tmdb_id": 1522316,
+     "poster": "/assets/jardin-2026/una-vez-en-un-cuerpo.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "once-in-a-body",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "10 min",
+     "genre": "Experimental",
+     "synopsis_en": "While dealing with a strange being that lives inside her, a woman seeks to reconcile with her sister over an incident from their adolescence.",
+     "sinopsis": "Mientras lidia con un ser extraño que habita en su interior, una mujer busca reconciliarse con su hermana tras un incidente de su adolescencia. Al explorar las experiencias que comparten a través de sus cuerpos, logra confrontar la naturaleza de lo que la habita."
+    },
+    {
+     "festival": "popayan-2026",
+     "titulo": "Una vez en un cuerpo",
+     "tmdb_id": 1522316,
+     "poster": "/assets/popayan-2026/una-vez-en-un-cuerpo.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "once-in-a-body",
+     "country": "Colombia, United States of America",
+     "year": 2025,
+     "duration": "10 min",
+     "genre": "Animación",
+     "synopsis_en": "While dealing with a strange being that lives inside her, a woman seeks to reconcile with her sister over an incident from their adolescence.",
+     "sinopsis": "Mientras lidia con un ser extraño que habita en su interior, una mujer busca reconciliarse con su hermana tras un incidente de su adolescencia. Al explorar las experiencias que comparten a través de sus cuerpos, logra confrontar la naturaleza de lo que la habita."
+    }
+   ]
+  },
+  "Chaika": {
+   "tmdb_id": 1689999,
+   "titulo_original": "Chaika",
+   "poster_path": "/fhvA2plccJRbTQgL6HRAAUPhPic.jpg",
+   "synopsis_es": "Valentina, una cosmonauta rusa de 76 años, llega a una Cuba ucrónica y nebulosa tras recibir, con treinta años de retraso, una invitación para una expedición agrícola a Marte. Entre paisajes difusos y promesas del pasado, busca las ruinas de un futuro que nunca llegó.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 15,
+   "pais_tmdb": "",
+   "lbSlug": "chaika-2025",
+   "_verificado": "el catálogo ya la tiene (w_R4EP71550W43, bhff-2026, cineautopsia-2026, fantasmagoria-2026, fantasofest-2026, ficica-2026, ficpa-2026, narrarelfuturo-2026, popayan-2026)",
+   "work_id": "w_R4EP71550W43",
+   "_ya_publicada": [
+    {
+     "festival": "bhff-2026",
+     "titulo": "Chaika",
+     "tmdb_id": 1689999,
+     "poster": "/assets/bhff-2026/chaika.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "chaika-2025",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "15 min",
+     "genre": "Ciencia Ficción",
+     "sinopsis": "Valentina, una cosmonauta rusa de 76 años, llega a una Cuba ucrónica y nebulosa tras recibir, con treinta años de retraso, una invitación para una expedición agrícola a Marte. Entre paisajes difusos y promesas del pasado, busca las ruinas de un futuro que nunca llegó."
+    },
+    {
+     "festival": "cineautopsia-2026",
+     "titulo": "CHAIKA",
+     "tmdb_id": 1689999,
+     "poster": "/assets/cineautopsia/chaika.jpg",
+     "posterSource": "oficial",
+     "lbSlug": "chaika-2025",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "14 min",
+     "sinopsis": "Valentina, una cosmonauta rusa de 76 años, recibe una carta enviada desde Cuba con treinta años de retraso, en la que se le invita a unirse a una expedición agrícola a Marte. Viaja a la isla esperando encontrar una utopía científica y social, pero descubre un territorio asolado por una silenciosa crisis agrícola y ambiental; una Cuba ucrónica y nebulosa donde las promesas del pasado perduran como sombras. Los paisajes tiemblan, las formas se desdibujan y la política apenas se alcanza a discernir: un sistema exhausto que intenta sostener un ideal ya difuso. Los paisajes, trémulos y borrosos, se resisten a ser enfocados, como si la propia isla dudara de su existencia. En este territorio nebuloso, donde lo real y lo onírico se confunden, Valentina busca descubrir si aún es posible alzar el vuelo, mientras la nostalgia por el Caribe se mezcla con el eco de un futuro que nunca llegó."
+    },
+    {
+     "festival": "fantasmagoria-2026",
+     "titulo": "Chaika",
+     "tmdb_id": 1689999,
+     "poster": "/assets/fantasmagoria-2026/chaika.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "chaika-2025",
+     "country": "Colombia y Cuba",
+     "year": 2025,
+     "duration": "15 min",
+     "genre": "Ciencia Ficción",
+     "sinopsis": "Valentina, una cosmonauta rusa de 76 años, llega a una Cuba ucrónica y nebulosa tras recibir, con treinta años de retraso, una invitación para una expedición agrícola a Marte. Entre paisajes difusos y promesas del pasado, busca las ruinas de un futuro que nunca llegó."
+    },
+    {
+     "festival": "fantasofest-2026",
+     "titulo": "Chaika",
+     "poster": "/assets/fantasofest/corto-chaika.jpg",
+     "posterSource": "editorial",
+     "lbSlug": "chaika-2026",
+     "year": 2025,
+     "genre": "Ciencia Ficción",
+     "sinopsis": "Valentina, una cosmonauta rusa de 76 años, llega a una Cuba ucrónica y nebulosa tras recibir, con treinta años de retraso, una invitación para una expedición agrícola a Marte. Entre paisajes difusos y promesas del pasado, busca las ruinas de un futuro que nunca llegó."
+    },
+    {
+     "festival": "ficica-2026",
+     "titulo": "Chaika",
+     "tmdb_id": 1689999,
+     "poster": "/assets/ficica-2026/chaika.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "chaika-2025",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "15 min",
+     "genre": "Ciencia Ficción",
+     "sinopsis": "Valentina, una cosmonauta rusa de 76 años, llega a una Cuba ucrónica y nebulosa tras recibir, con treinta años de retraso, una invitación para una expedición agrícola a Marte. Entre paisajes difusos y promesas del pasado, busca las ruinas de un futuro que nunca llegó."
+    },
+    {
+     "festival": "ficpa-2026",
+     "titulo": "Chaika",
+     "tmdb_id": 1689999,
+     "poster": "/assets/ficpa-2026/chaika.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "chaika-2025",
+     "country": "Colombia/Cuba",
+     "year": 2025,
+     "duration": "15 min",
+     "genre": "Ciencia Ficción",
+     "sinopsis": "Valentina, una cosmonauta rusa de 76 años, recibe una carta desde Cuba con treinta años de retraso, invitándola a una expedición agrícola a Marte. Viaja a una isla onírica y difusa, donde la utopía soñada se desvanece entre paisajes borrosos y nostalgia suspendida, Valentina busca si aún es posible levantar vuelo mientras la nostalgia del Caribe se mezcla con el eco de un futuro que nunca llegó."
+    },
+    {
+     "festival": "narrarelfuturo-2026",
+     "titulo": "Chaika",
+     "tmdb_id": 1689999,
+     "poster": "/assets/narrarelfuturo-2026/chaika.jpg",
+     "posterSource": "oficial",
+     "lbSlug": "chaika-2025",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "15 min",
+     "genre": "Ciencia Ficción",
+     "sinopsis": "Valentina, una cosmonauta rusa de 76 años, recibe una carta enviada desde Cuba con treinta años de retraso que la invita a unirse a una expedición agrícola a Marte. Viaja a la isla esperando encontrar una utopía científica y social, pero se topa con un territorio devastado por una silenciosa crisis agrícola y medioambiental: una Cuba ucrónica y nebulosa donde las promesas del pasado perduran como sombras. Los paisajes tiemblan, las formas se difuminan y la política apenas se percibe: es un sistema agotado que intenta sostener un ideal ya desdibujado. Los paisajes, trémulos y borrosos, se resisten a ser enfocados, como si la propia isla dudara de su existencia. En este territorio nebuloso, donde lo real y lo onírico se funden, Valentina busca averiguar si aún es posible emprender el vuelo, mientras la nostalgia por el Caribe se mezcla con el eco de un futuro que nunca llegó."
+    },
+    {
+     "festival": "popayan-2026",
+     "titulo": "Chaika",
+     "tmdb_id": 1689999,
+     "poster": "/assets/popayan-2026/chaika.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "chaika-2025",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "15 min",
+     "sinopsis": "Valentina, una cosmonauta rusa de 76 años, recibe una carta enviada desde Cuba con treinta años de retraso, invitándola a una expedición agrícola a Marte. Viaja a la isla esperando una utopía científico–social, pero encuentra un territorio golpeado por una silenciosa crisis agrícola y ambiental, una Cuba ucrónica y nebulosa donde las promesas del pasado persisten como sombras. Los paisajes tiemblan, las formas se desdibujan y la política apenas se intuye: un sistema agotado que intenta sostener un ideal ya difuso."
+    }
    ]
   }
  },
  "sin_ficha": [
-  "Desaprender la maternidad"
+  "Desaprender la maternidad",
+  "Salsa"
  ]
 }

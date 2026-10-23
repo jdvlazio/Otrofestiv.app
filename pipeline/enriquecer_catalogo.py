@@ -125,6 +125,14 @@ def main():
         if pub:
             e = dict(e or {})
             e['_ya_publicada'] = pub
+            # la misma regla que enriquecer.py (Mamut, 28 sep): TMDB sin
+            # sinopsis en español y ya la publicamos con una → se reusa la
+            # nuestra. Aquí faltaba: «Niña chilapa» (FICFUSA, 23 oct 2026).
+            if fuente and not (e.get('synopsis_es') or e.get('sinopsis') or '').strip():
+                x = next((x for x in pub if x.get('sinopsis')), None)
+                if x:
+                    e['synopsis_es'] = x['sinopsis']
+                    e['_sinopsis_de'] = f'ya publicada en {x["festival"]}'
         if e and fuente:
             ok[t] = e
             por_fuente[fuente] = por_fuente.get(fuente, 0) + 1

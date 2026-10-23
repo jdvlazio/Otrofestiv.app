@@ -39,6 +39,16 @@ OJOS = [
     ('nina-chilapa-ficfusa-seleccion-oficial-hecho-por-colombianas.webp',
      dict(titulo='Niña chilapa', director='Juana Lotero López', anio=2025,
           pais='Colombia', duracion_min=17, genero='Documental', _dur='17')),
+    # 22 oct 22:54–23:02: la página suma tres (media 9908–9910).
+    ('seleccion-oficial-ficfusa-una-vez-en-un-cuerpo.webp',
+     dict(titulo='Una vez en un cuerpo', director='María Cristina Pérez', anio=2025,
+          pais='Colombia, Estados Unidos', duracion_min=11, genero='Animación', _dur='10:20', _fecha='2026-10-22')),
+    ('chaika-seleccion-oficial-ficfusa.webp',
+     dict(titulo='Chaika', director='Ingrid Paola Bonilla Rodríguez', anio=2025,
+          pais='Colombia', duracion_min=15, genero='Ciencia ficción', _dur='14:40', _fecha='2026-10-22')),
+    ('salsa-ficfusa-seleccion-oficial.webp',
+     dict(titulo='Salsa', director='Antonina Kerguelén Román', anio=2024,
+          pais='Colombia', duracion_min=14, genero='Ficción', _dur='14', _fecha='2026-10-22')),
 ]
 SECCION = 'Hecho por Colombianas'   # verbatim: «CORTOMETRAJES DIRIGIDOS POR MUJERES · HECHO POR COLOMBIANAS»
 
@@ -55,12 +65,12 @@ def main():
         for tok in (o['director'], str(o['anio']), o['_dur'] + ' min'):
             if tok not in txt:
                 sys.exit(f'✗ {arch}: el OCR no corrobora «{tok}»')
-        o = dict(o); o.pop('_dur')
+        o = dict(o); o.pop('_dur'); fecha = o.pop('_fecha', '2026-10-21')
         obras.append({**o, 'tipo': 'corto', 'seccion': SECCION,
-                      '_src': {'url': URL, 'tarjeta': UP + arch, 'date': '2026-10-21'}})
+                      '_src': {'url': URL, 'tarjeta': UP + arch, 'date': fecha}})
     json.dump({'_provenance': provenance(URL, metodo='wp-json posts/9882 + tarjetas leídas con ocr.py y a ojo',
                                          publicado='2026-10-21'),
-               '_nota': 'el post declara 62 obras (42 en competencia, 20 en muestras); al 22 oct solo publica estas 3',
+               '_nota': 'el post declara 62 obras (42 en competencia, 20 en muestras); al 22 oct 23:02 solo publica estas 6',
                'obras': obras}, io.open(OUT, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     print(f'✓ {len(obras)} obras → {os.path.relpath(OUT, REPO)}')
 
