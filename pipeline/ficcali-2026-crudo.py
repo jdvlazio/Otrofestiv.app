@@ -193,7 +193,11 @@ PROGRAMA = {
 # UNA ACTIVIDAD EN LA CATEGORÍA «PROYECCIONES»: la tarjeta 14017 es un conversatorio
 # (Concip y Telepacífico) y salía como película sin afiche; [proyeccion-que-es-actividad]
 # lo cazó el 9 oct. Por id, porque la categoría de la tarjeta miente.
-EVENTO_EN_PROYECCIONES = {14017: 'conversatorio'}
+EVENTO_EN_PROYECCIONES = {14017: 'conversatorio',
+                          # la tarjeta 14037 es la CEREMONIA DE PREMIACIÓN, que proyecta
+                          # «Historias del buen valle» (IG De0V1lFDU4D, lámina 1, 23 oct
+                          # 2026); la obra va en su film_list por afirmación
+                          14037: 'premiación'}
 # LO QUE LA TARJETA CALLA y otra fuente dice (8 oct): «Guapi: ritmo y balsada» es
 # el documental de la Expedición Guapi 1963 del Instituto Popular de Cultura
 # (nexus.univalle.edu.co/index.php/nexus/article/view/13321; trasmishuellas.univalle.edu.co),
@@ -251,7 +255,7 @@ TITULO = {
     # (sigue en ficcali.com/pelicula/ con ese título, y la obra sigue en la
     # programación); sin ficha mandaba la tarjeta, «buen Valle». Se queda el de
     # la ficha, el publicado.
-    14037: 'Historias del buen valle',
+    14037: 'Ceremonia de premiación',   # lámina 1 de IG De0V1lFDU4D (23 oct 2026)
     14049: 'Historias del buen valle',
     14518: 'Encuentro local estudiantes de cine 2026: Bailar con el caos',
     14519: 'Encuentro local estudiantes de cine 2026: Bailar con el caos',
