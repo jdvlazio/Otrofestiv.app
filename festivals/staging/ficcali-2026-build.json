@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "ficcali.com — Programación 2026 (WP 14870) + fichas de la Selección 2026",
-  "capturado": "2026-10-22",
+  "capturado": "2026-10-23",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "radar": 1024,
@@ -8039,15 +8039,10 @@
    }
   },
   {
-   "title": "Historias del buen valle",
-   "type": "film",
+   "title": "Ceremonia de premiación",
+   "type": "event",
    "section": "📽️ Proyecciones",
-   "director": "José Luis Guerín",
-   "year": 2025,
-   "country": "España",
-   "flags": "🇪🇸",
-   "duration": "120 min",
-   "genre": "Documental",
+   "duration": "122 min",
    "_ancla": [
     "Cinemateca La Tertulia - Cali",
     "2026-10-24",
@@ -8057,23 +8052,38 @@
    "time": "19:30",
    "day_order": 8,
    "venue": "Cinemateca La Tertulia - Cali",
+   "event_kind": "premiación",
    "has_qa": false,
-   "synopsis": "En un barrio periférico donde se encuentran el mundo rural y el urbano, las casas de los primeros migrantes de la posguerra conviven con los nuevos bloques de una ciudad dormitorio donde se concentra la última oleada migratoria. Este rincón humilde se ha convertido en una auténtica aldea global, un retrato sereno y humanista de los conflictos sociales, generacionales e identitarios del mundo actual.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficcali-2026/historias-del-buen-valle.jpg",
-   "posterSource": "tmdb",
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
     "tarjeta": 14037
    },
-   "lbSlug": "good-valley-stories",
-   "tmdb_id": 1457842,
-   "synopsis_en": "In a peripheral neighbourhood, where the rural and urban worlds meet, the houses of the first migrants who arrived after the post-war period coexist with the new blocks of the dormitory city, where the latest wave of migration is concentrated. This humble corner is now an authentic global village. Good Valley Stories is a sum of constructs, of social, generational and identity, urban and ecological conflicts, but it is also a calm and humanistic look at today’s world.",
-   "title_en": "Good Valley Stories",
    "_fid": "f_2450b741b4",
    "id": "f_2450b741b4",
    "is_free": true,
+   "film_list": [
+    {
+     "title": "Historias del buen valle",
+     "director": "José Luis Guerín",
+     "country": "España",
+     "flags": "🇪🇸",
+     "year": 2025,
+     "genre": "Documental",
+     "synopsis": "En un barrio periférico donde se encuentran el mundo rural y el urbano, las casas de los primeros migrantes de la posguerra conviven con los nuevos bloques de una ciudad dormitorio donde se concentra la última oleada migratoria. Este rincón humilde se ha convertido en una auténtica aldea global, un retrato sereno y humanista de los conflictos sociales, generacionales e identitarios del mundo actual.",
+     "synopsis_lang": "es",
+     "synopsis_en": "In a peripheral neighbourhood, where the rural and urban worlds meet, the houses of the first migrants who arrived after the post-war period coexist with the new blocks of the dormitory city, where the latest wave of migration is concentrated. This humble corner is now an authentic global village. Good Valley Stories is a sum of constructs, of social, generational and identity, urban and ecological conflicts, but it is also a calm and humanistic look at today’s world.",
+     "title_en": "Good Valley Stories",
+     "poster": "/assets/ficcali-2026/historias-del-buen-valle.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1457842,
+     "lbSlug": "good-valley-stories",
+     "duration": "122 min",
+     "titulos_anteriores": [
+      "Historias del buen Valle"
+     ]
+    }
+   ],
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -8091,9 +8101,14 @@
      "url": "https://ficcali.com/programacion-ficcali-2026/"
     },
     "duration": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-06",
-     "url": "https://ficcali.com/programacion-ficcali-2026/"
+     "tipo": "festival-ig",
+     "fecha": "2026-10-23",
+     "url": "https://www.instagram.com/p/De0V1lFDU4D/"
+    },
+    "entrada": {
+     "tipo": "festival-ig",
+     "fecha": "2026-10-23",
+     "url": "https://www.instagram.com/p/De0V1lFDU4D/"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -8105,20 +8120,22 @@
      "fecha": "2026-10-06",
      "url": "https://ficcali.com/programacion-ficcali-2026/"
     },
+    "film_list": {
+     "tipo": "festival-ig",
+     "fecha": "2026-10-23",
+     "url": "https://www.instagram.com/p/De0V1lFDU4D/"
+    },
     "type": {
      "tipo": "festival-web",
      "fecha": "2026-10-06",
      "url": "https://ficcali.com/programacion-ficcali-2026/"
     },
-    "entrada": {
-     "tipo": "regla",
-     "marca": "supuesto",
-     "valor": "libre"
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-06",
+     "url": "https://ficcali.com/programacion-ficcali-2026/"
     }
-   },
-   "titulos_anteriores": [
-    "Historias del buen Valle"
-   ]
+   }
   },
   {
    "title": "La bola negra",
@@ -9591,9 +9608,9 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-22T13:52:22",
+  "fecha": "2026-10-23T07:20:24",
   "plan_sha": "24bc04ac59ca2585",
-  "paso": 9,
-  "cmd": "python3 pipeline/ensamblar.py ficcali-2026"
+  "paso": 11,
+  "cmd": "python3 pipeline/ficcali-2026-verificar.py"
  }
 }

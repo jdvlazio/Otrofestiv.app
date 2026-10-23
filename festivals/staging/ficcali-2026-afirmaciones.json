@@ -80,6 +80,69 @@
     "fecha": "2026-10-22"
    },
    "evidencia": "lámina 6: «CREATIVIDAD Y ESCRITURA · LUGAR Auditorio Celsia, Bulevar del Río · SÁBADO 24 DE OCTUBRE 5:30 p.m. a 6:15 p.m.»"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca La Tertulia - Cali",
+    "dia": "2026-10-24",
+    "hora": "19:30"
+   },
+   "casilla": "duration",
+   "valor": "122 min",
+   "fuente": {
+    "tipo": "festival-ig",
+    "url": "https://www.instagram.com/p/De0V1lFDU4D/",
+    "fecha": "2026-10-23"
+   },
+   "evidencia": "lámina 1: «CEREMONIA DE PREMIACIÓN · XVIII Festival Internacional de Cine de Cali · Película HISTORIAS DEL BUEN VALLE · Sábado 24 de octubre · Cinemateca La Tertulia · 7:30 p.m. · Entrada libre hasta completar aforo»; lámina 3: «HISTORIAS DEL BUEN VALLE · Dirección, guion y montaje: José Luis Guerín · Duración: 122 min · País: España · Género: Documental». Duración: lámina 122, web 120, TMDB 125 → manda la lámina del festival, la más reciente y explícita; la ceremonia no declara duración propia"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca La Tertulia - Cali",
+    "dia": "2026-10-24",
+    "hora": "19:30"
+   },
+   "casilla": "entrada",
+   "valor": "libre",
+   "fuente": {
+    "tipo": "festival-ig",
+    "url": "https://www.instagram.com/p/De0V1lFDU4D/",
+    "fecha": "2026-10-23"
+   },
+   "evidencia": "lámina 1: «CEREMONIA DE PREMIACIÓN · XVIII Festival Internacional de Cine de Cali · Película HISTORIAS DEL BUEN VALLE · Sábado 24 de octubre · Cinemateca La Tertulia · 7:30 p.m. · Entrada libre hasta completar aforo»; lámina 3: «HISTORIAS DEL BUEN VALLE · Dirección, guion y montaje: José Luis Guerín · Duración: 122 min · País: España · Género: Documental». Duración: lámina 122, web 120, TMDB 125 → manda la lámina del festival, la más reciente y explícita; la ceremonia no declara duración propia"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca La Tertulia - Cali",
+    "dia": "2026-10-24",
+    "hora": "19:30"
+   },
+   "casilla": "film_list",
+   "valor": [
+    {
+     "title": "Historias del buen valle",
+     "director": "José Luis Guerín",
+     "country": "España",
+     "flags": "🇪🇸",
+     "year": 2025,
+     "genre": "Documental",
+     "synopsis": "En un barrio periférico donde se encuentran el mundo rural y el urbano, las casas de los primeros migrantes de la posguerra conviven con los nuevos bloques de una ciudad dormitorio donde se concentra la última oleada migratoria. Este rincón humilde se ha convertido en una auténtica aldea global, un retrato sereno y humanista de los conflictos sociales, generacionales e identitarios del mundo actual.",
+     "synopsis_lang": "es",
+     "synopsis_en": "In a peripheral neighbourhood, where the rural and urban worlds meet, the houses of the first migrants who arrived after the post-war period coexist with the new blocks of the dormitory city, where the latest wave of migration is concentrated. This humble corner is now an authentic global village. Good Valley Stories is a sum of constructs, of social, generational and identity, urban and ecological conflicts, but it is also a calm and humanistic look at today’s world.",
+     "title_en": "Good Valley Stories",
+     "poster": "/assets/ficcali-2026/historias-del-buen-valle.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1457842,
+     "lbSlug": "good-valley-stories",
+     "duration": "122 min"
+    }
+   ],
+   "fuente": {
+    "tipo": "festival-ig",
+    "url": "https://www.instagram.com/p/De0V1lFDU4D/",
+    "fecha": "2026-10-23"
+   },
+   "evidencia": "lámina 1: «CEREMONIA DE PREMIACIÓN · XVIII Festival Internacional de Cine de Cali · Película HISTORIAS DEL BUEN VALLE · Sábado 24 de octubre · Cinemateca La Tertulia · 7:30 p.m. · Entrada libre hasta completar aforo»; lámina 3: «HISTORIAS DEL BUEN VALLE · Dirección, guion y montaje: José Luis Guerín · Duración: 122 min · País: España · Género: Documental». Duración: lámina 122, web 120, TMDB 125 → manda la lámina del festival, la más reciente y explícita; la ceremonia no declara duración propia"
   }
  ]
 }
