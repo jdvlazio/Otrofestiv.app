@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "midbo.co — ficha de cada obra (bloque «Funciones») + API pelicula/seccion",
-  "capturado": "2026-10-21",
+  "capturado": "2026-10-22",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_secciones": "Las categorías madre de la taxonomía `seccion` de midbo.co, tal cual; «Encuentro Pensar lo Real» es el nombre del menú del seminario; «Proyecciones» (nuestra) para la única obra sin sección.",
@@ -5008,11 +5008,40 @@
    "description_lang": "es",
    "_fid": "f_915018da51",
    "id": "f_915018da51"
+  },
+  {
+   "title": "Escuchar lo que permanece",
+   "type": "event",
+   "section": "🔊 Documental Expandido",
+   "duration": "240 min",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-10-28",
+    "14:00"
+   ],
+   "day": "2026-10-28",
+   "time": "14:00",
+   "day_order": 1,
+   "venue": "Cinemateca de Bogotá - Bogotá",
+   "sala": "Sala E",
+   "event_kind": "evento",
+   "info": true,
+   "hasta": "2026-11-04",
+   "has_qa": false,
+   "_src": {
+    "url": "https://cinematecadebogota.gov.co/exposiciones?id=3663",
+    "date": "2026-10-22"
+   },
+   "is_free": true,
+   "description": "Exposición. Muestra de documental Expandido | 28 MIDBO. Martes a viernes de 2:00 p. m. a 6:00 p. m.; sábados, domingos y festivos de 11:00 a. m. a 6:00 p. m. Obras de María Isabella Arenas, Sergio Díaz, Daniel Torres y Yareni Velázquez Mendoza; curaduría de Jorjan Betancourt.",
+   "description_lang": "es",
+   "_fid": "f_092f382469",
+   "id": "f_092f382469"
   }
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-21T19:57:02",
+  "fecha": "2026-10-22T13:22:36",
   "plan_sha": "a59415cd50b61e59",
   "paso": 8,
   "cmd": "python3 pipeline/midbo-2026-verificar.py"

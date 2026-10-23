@@ -315,7 +315,9 @@
    "is_cortos": false,
    "film_list": null,
    "event_kind": "",
-   "_event_kind_nota": "Opcional: 'ponencia' | 'masterclass' | 'encuentro' | 'cineconcierto'. Controla el poster generativo."
+   "_event_kind_nota": "Opcional: 'ponencia' | 'masterclass' | 'encuentro' | 'cineconcierto'. Controla el poster generativo.",
+   "hasta": "",
+   "_hasta_nota": "Solo con info:true (actividad abierta: exposición, instalación). Último día YYYY-MM-DD, recortado a las fechas oficiales: UNA función, la app la abre día por día (#1229)."
   }
  ],
  "displayName": "",

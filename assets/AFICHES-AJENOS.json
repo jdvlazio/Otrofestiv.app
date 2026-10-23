@@ -5,6 +5,13 @@
   "regla": "un afiche ajeno se publica solo con veredicto «afiche» y huella vigente"
  },
  "afiches": {
+  "/assets/anibia-2026/caida-libre.jpg": {
+   "sha1": "073e52339ae8c3f248605c7a2892ed35e4d8b398",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficcali-2026"
+   ]
+  },
   "/assets/bhff-2026/gabriel.jpg": {
    "sha1": "849e543c4b7ba2a261651966bfcc85a03b05c49c",
    "veredicto": "afiche",
@@ -174,13 +181,6 @@
    "veredicto": "afiche",
    "usado_en": [
     "girardota-2026"
-   ]
-  },
-  "/assets/qaff/free-fall.jpg": {
-   "sha1": "6f7922d67646ff6bb458346446bd4a0cc43a1eaf",
-   "veredicto": "afiche",
-   "usado_en": [
-    "ficcali-2026"
    ]
   },
   "/assets/qaff/kanekalon.jpg": {

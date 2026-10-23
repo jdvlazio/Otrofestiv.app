@@ -206,6 +206,21 @@ ACTIVACIONES = [
      'sinopsis': 'Concierto. Proyección de fragmentos de tres películas: Batallas Sagradas (Pablo Mora, 2002), '
                  'Quién paga el pato (Pablo Mora, 2001) y Fragmentos (Carlos Santa, 1999).',
      '_src': _SRC_ACT},
+    # La exposición de la Cinemateca (agenda de la sala = fuente de sala, hora y
+    # acceso; cinematecadebogota.gov.co/exposiciones?id=3663, leída el 22 oct):
+    # va del 28 oct al 16 nov → abierta (info) recortada al 4 nov, último día
+    # oficial. Horario de la sala: mar–vie 14:00–18:00, sáb/dom/fest 11:00–18:00;
+    # el 28 oct es miércoles → 14:00, 240 min.
+    {'titulo': 'Escuchar lo que permanece', 'dia': '2026-10-28', 'hora': '14:00',
+     'sede': 'Cinemateca de Bogotá', 'sala': 'Sala E', 'ciudad': 'Bogotá',
+     'tipo': 'evento', 'event_kind': 'evento', 'seccion': 'Documental Expandido',
+     'info': True, 'hasta': '2026-11-04', 'duracion_min': 240,
+     '_duracion_de': 'martes a viernes 2:00 p. m. a 6:00 p. m., agenda de la Cinemateca',
+     'acceso': 'Entrada libre reclamando boleta en taquilla',
+     'sinopsis': 'Exposición. Muestra de documental Expandido | 28 MIDBO. Martes a viernes de 2:00 p. m. a 6:00 p. m.; '
+                 'sábados, domingos y festivos de 11:00 a. m. a 6:00 p. m. Obras de María Isabella Arenas, Sergio Díaz, '
+                 'Daniel Torres y Yareni Velázquez Mendoza; curaduría de Jorjan Betancourt.',
+     '_src': {'url': 'https://cinematecadebogota.gov.co/exposiciones?id=3663', 'date': '2026-10-22'}},
 ]
 
 
