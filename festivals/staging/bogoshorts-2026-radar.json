@@ -1,0 +1,43 @@
+{
+ "_provenance": {
+  "fuente": "issue de radar #575 — https://github.com/jdvlazio/Otrofestiv.app/issues/575",
+  "capturado": "2026-10-23",
+  "titulo": "RADAR: BOGOSHORTS 24 — Bogotá, 1–8 DIC 2026",
+  "estado": "OPEN",
+  "comentarios": 7
+ },
+ "issue": 575,
+ "titulo": "RADAR: BOGOSHORTS 24 — Bogotá, 1–8 DIC 2026",
+ "estado": "OPEN",
+ "cuerpo": "Fuente: Proimágenes ntd=1290 · detectado 11 ago 2026\nFestival de Cortos de Bogotá — el grande de fin de año.\nWeb: http://www.bogoshorts.com · IG: https://www.instagram.com/bogoshorts/",
+ "comentarios": [
+  {
+   "fecha": "2026-08-23",
+   "cuerpo": "TRIAGE: 23 ago 2026 · `radar:nuevo` → `radar:vigilando`\n\nEste issue se creó el **11 ago** y llevaba **12 días sin una sola revisión**, con cero comentarios. No fue un descuido de una corrida: el semáforo (§2) solo recorre `radar:vigilando` y `radar:en-onboarding`, así que **un issue en `radar:nuevo` es invisible para el radar** por más que se acerque su fecha. Éramos siete así (#569–#575), y cinco ya estaban dentro de la ventana AMARILLA de pre-onboarding.\n\nLo paso a `radar:vigilando`, que es la opción que **no decide nada**: entra al semáforo y se revisa según su color. `radar:descartado` sigue siendo decisión de Juan y no la tomo yo.\n\nPrimera revisión real: **lunes 24 ago** (mañana), que es cuando se revisan VERDE y AMARILLO.\n"
+  },
+  {
+   "fecha": "2026-09-14",
+   "cuerpo": "ESTADO: 14 sep 2026 · fuente: **web oficial (`bogoshorts.com` → redirige 302 a `festival.bogoshorts.com`)** — **primer ESTADO de este issue.** Fechas confirmadas por fuente propia y **acreditaciones ya abiertas**, a 78 días del arranque.\n\nVERDE (78 días). Este issue se creó el 11 ago y **nunca había sido revisado**: es el primer registro de su estado.\n\n## 1. Lo que dice su propia web\n\n- **24ª edición: «DEL 1 AL 8 DE DICIEMBRE DE 2026»**. Coincide con Proimágenes (`ntd=1290`), ahora desde fuente propia.\n- **Acreditaciones ABIERTAS** — para **público, industria y prensa**. Es el dato accionable de hoy: el festival ya abrió la puerta por la que entra su audiencia.\n- **Convocatoria de voluntarios** abierta, **cierra el 15 de septiembre** (mañana).\n- **Sin selección oficial, sin programación, sin boletería.** Lo que el sitio muestra como «programación» es de la edición 23 (2025), junto con el videorresumen y las crónicas del WorkSHORT de esa edición. No confundirlo con la parrilla de esta.\n\n## 2. Nota de fuente para las próximas corridas\n\n`bogoshorts.com` **no es la web del festival**: redirige (302) a **`festival.bogoshorts.com`**, que es donde vive todo. El cuerpo de este issue apunta a la primera. Las próximas revisiones deben ir directo a `festival.bogoshorts.com` para no gastar una lectura en el salto.\n\n**Instagram (@bogoshorts) no se abrió hoy** — el tope de perfiles de la corrida se fue en los seis festivales en ROJO y en zona de emergencia. Queda pendiente para la revisión del lunes siguiente. No se concluye nada sobre lo que el IG pueda estar anunciando.\n\n## 3. Por qué este importa más que su color\n\nEs el festival más grande del radar y el único de diciembre, así que su ventana de pre-onboarding (AMARILLO, 45 días) **empieza el 17 de octubre** — con un mes largo por delante. A diferencia de casi todos los demás vigilados, aquí **sí va a haber tiempo**, y la lección de FICMA, Cinemancia y NarrarelFuturo es que el cuello de botella nunca fue nuestro trabajo sino la espera del dato. Con BOGOSHORTS se puede pedir temprano.\n\n## 4. Nuestro lado (medido hoy sobre `origin/*`)\n\n**Sin rama, sin JSON, sin entrada en `FESTIVAL_CONFIG`** — 0 coincidencias de `bogoshorts` en `origin/main:src/config.js`, ningún archivo en `festivals/`, ninguna rama remota.\n"
+  },
+  {
+   "fecha": "2026-09-28",
+   "cuerpo": "ESTADO: 28 sep 2026 · fuente: **IG @bogoshorts** (navegador, primera vez que se abre este perfil) **+ web** `festival.bogoshorts.com` (`curl`) — **la acreditación va en tres etapas con fechas. Sin selección ni programación.**\n\nVERDE a **64 días**. El ESTADO del 14 sep dejaba el IG pendiente; este es su primer registro.\n\n- **Bio**: «#24BOGOSHORTS 1-8 Dic de 2026» + `bit.ly/Acreditaciones24BSFF`. Coincide con la web y con Proimágenes.\n- **Tres posts fijados, «Umbral BOGOSHORTS — Temporada de Acreditaciones»**:\n  - **Vigilia** · Etapa 1 · 1 sep → **10 oct**\n  - **Presagio** · Etapa 2 · 11 oct → 20 nov\n  - **Epifanía** · Etapa 3 · 21 nov → 4 dic\n- Post reciente: «Faltan 8 días · Convocatoria Taller de Crítica» (WorkSHORTS). Es formación, sin fecha legible en el thumbnail.\n- **Web**: el PDF de acreditaciones 2026 está enlazado (`info.bogoshorts.com/.../24BSFF_acreditaciones2026.pdf`). La «Programación» del menú sigue siendo de 2024/2025. Sin selección 2026.\n\nEl pre-onboarding (AMARILLO) empieza el **17 oct**. Nuestro lado: sin rama, sin JSON, sin mención en `src/config.js`.\n"
+  },
+  {
+   "fecha": "2026-10-18",
+   "cuerpo": "**Vigía 17 oct 2026 — BOGOSHORTS 24: un avance de la selección, no la selección completa**\n\nEn https://festival.bogoshorts.com/ ya salieron dos programas: **Selección Oficial – Fuera de Competencia** (4 películas: Radu Jude y Adrian Cioflâncă, Laura Poitras y Rachel Lauren Mueller, Avi Mograbi, Ali Cherri) y el **Especial Metrópolis** (4 películas). La selección completa y los proyectos del BFM se anuncian el **viernes 23 de octubre** en la «Noche de la Revelación», que se transmite por YouTube. El pre-onboarding conviene después del 23.\n"
+  },
+  {
+   "fecha": "2026-10-20",
+   "cuerpo": "Vigía 19 oct (19:00): https://festival.bogoshorts.com/ ya publicó **parte de la selección del 24 BOGOSHORTS** (1–8 dic): *Selección Oficial – Fuera de Competencia* (4 películas: Radu Jude y Adrian Cioflâncă, Laura Poitras y Rachel Lauren Mueller, Avi Mograbi, Ali Cherri) y el *Especial Metrópolis* (4 películas). Los cortos seleccionados se anuncian el **vie 23 oct** en la Noche de la Revelación (por YouTube). → Toca pre-onboarding cuando salga la lista completa."
+  },
+  {
+   "fecha": "2026-10-23",
+   "cuerpo": "**Vigía 23 oct (13:00): BOGOSHORTS.** Según https://festival.bogoshorts.com/, **esta noche (vie 23 oct)** es la «Noche de la Revelación», donde se anuncian los cortos seleccionados del 24 BOGOSHORTS y los proyectos del 10 BFM. A esta hora todavía no está publicada la selección. La próxima corrida tiene que mirarla."
+  },
+  {
+   "fecha": "2026-10-24",
+   "cuerpo": "**Vigía 23 oct (19:15): BOGOSHORTS publicó la grilla de programación** (PDF, last-modified 23 oct 17:43 hora Colombia): https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf. Trae programas por código con día, hora, sala y duración. La lista de cortos todavía no está en la web: el menú «Secciones y cortos 2026» apunta a localhost. → toca pre-onboarding con la grilla."
+  }
+ ]
+}

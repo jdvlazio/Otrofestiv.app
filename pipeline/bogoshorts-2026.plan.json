@@ -1,0 +1,192 @@
+{
+ "_nota": "BOGOSHORTS 2026 — 24.º Bogotá Short Film Festival / Festival de Cortos de Bogotá (1–8 dic 2026). PRE-ONBOARDING (23 oct 2026): la GRILLA en PDF (programas por código con día, hora, sala y duración) + los cortos ya publicados de 10 programas (boletines de prensa 005/007/009 y pies de IG). La lista de cortos por programa no está publicada (el menú «Secciones y cortos 2026» apunta a localhost). Sin FESTIVAL_CONFIG. Radar #575.",
+ "radar": 575,
+ "pasos": [
+  {
+   "cmd": "python3 pipeline/bogoshorts-2026-programas.py",
+   "que": "boletines 005/007/009 + pies de IG → los cortos de 10 programas (sidecar que lee el crudo)"
+  },
+  {
+   "cmd": "python3 pipeline/bogoshorts-2026-crudo.py",
+   "que": "la grilla PDF (pdftotext -bbox) → crudo: 119 funciones"
+  },
+  {
+   "cmd": "python3 pipeline/bogoshorts-2026-verificar.py",
+   "que": "triple lectura: el crudo contra dos lecturas a ojo de la grilla (B por celdas, C por días) + contraste con IG"
+  },
+  {
+   "cmd": "python3 pipeline/enriquecer.py bogoshorts-2026 --posters",
+   "que": "TMDB + cascada + afiches de las obras ya publicadas"
+  },
+  {
+   "cmd": "python3 pipeline/geocodificar.py bogoshorts-2026 --centro 4.6031,-74.0677 --ciudad \"Bogotá\"",
+   "que": "pines: los 11 a mano desde Google Maps (3 a confirmar)"
+  }
+ ],
+ "fuentes_vivas": [
+  {
+   "archivo": "fuentes/bogoshorts-2026/programacion2026.pdf",
+   "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+   "como": "pagina",
+   "debe_contener": "%PDF",
+   "que": "la grilla de programación que lee el crudo"
+  }
+ ],
+ "_fuentes_versionadas": {
+  "festivals/staging/bogoshorts-2026-programas.json": "los cortos ya publicados de 10 programas; lo lee el crudo",
+  "festivals/staging/bogoshorts-2026-crudo.json": "la grilla → 119 funciones (formato intermedio)",
+  "festivals/staging/bogoshorts-2026-lectura-b.json": "lectura B a ojo de la grilla (por celdas), la lee el verificador",
+  "festivals/staging/bogoshorts-2026-lectura-c.json": "lectura C a ojo de la grilla (por días), la lee el verificador",
+  "festivals/staging/bogoshorts-2026-venues-geo.json": "pines de Google Maps a mano",
+  "festivals/staging/bogoshorts-2026-enriquecido.json": "fichas TMDB/cascada de las obras publicadas; lo escribe enriquecer.py",
+  "festivals/staging/bogoshorts-2026-radar.json": "el volcado del radar #575, que escribe y relee pipeline/radar.py"
+ },
+ "festival": {
+  "radar": 575,
+  "crudo": "festivals/staging/bogoshorts-2026-crudo.json",
+  "geo": "festivals/staging/bogoshorts-2026-venues-geo.json",
+  "enriquecido": "festivals/staging/bogoshorts-2026-enriquecido.json",
+  "_por_que_secciones": "Los grupos de la leyenda de la grilla, tal cual (el código lleva al grupo). «Franja Encuentros Cercanos» es el rótulo de la fila del Lounge. Emoji, inglés y arquetipo: propuesta, a confirmar con Juan.",
+  "_por_que_sedes": "La sede como la nombra la grilla; la sala (Sala Capital, Sala 2, Sala 3, Salón de la imagen, Lounge) viaja por función. Retina Latina (en línea) no es sede. Pines a mano; Alianza Francesa, CEFE y Sala Gaitán a confirmar.",
+  "secciones": {
+   "Competencia Nacional": {
+    "emoji": "🇨🇴",
+    "en": "National Competition",
+    "archetype": "Competencia"
+   },
+   "Competencia Internacional": {
+    "emoji": "🌎",
+    "en": "International Competition",
+    "archetype": "Competencia"
+   },
+   "Competencia VR (Realidad virtual)": {
+    "emoji": "🥽",
+    "en": "VR Competition (Virtual Reality)",
+    "archetype": "Competencia"
+   },
+   "Fanático Freak Fantástico F3": {
+    "emoji": "👽",
+    "en": "Fanático Freak Fantástico F3",
+    "archetype": "Competencia"
+   },
+   "Conexión": {
+    "emoji": "🔗",
+    "en": "Connection",
+    "archetype": "Competencia"
+   },
+   "Fuera de Competencia": {
+    "emoji": "⭐",
+    "en": "Out of Competition",
+    "archetype": "Especiales / Eventos"
+   },
+   "Panorama": {
+    "emoji": "🌀",
+    "en": "Panorama",
+    "archetype": "Muestra / País"
+   },
+   "Especiales": {
+    "emoji": "✨",
+    "en": "Specials",
+    "archetype": "Retrospectiva / Tributo"
+   },
+   "Viva la ciudad": {
+    "emoji": "🏙️",
+    "en": "Long Live the City",
+    "archetype": "Muestra / País"
+   },
+   "Cortofilia": {
+    "emoji": "🎞️",
+    "en": "Cortofilia",
+    "archetype": "Cortos / Programas"
+   },
+   "Festivaleando": {
+    "emoji": "🤝",
+    "en": "Festivaleando",
+    "archetype": "Muestra / País"
+   },
+   "World Tour": {
+    "emoji": "🗺️",
+    "en": "World Tour",
+    "archetype": "Muestra / País"
+   },
+   "chiquiSHORTS": {
+    "emoji": "🧒",
+    "en": "chiquiSHORTS",
+    "archetype": "Cortos / Programas"
+   },
+   "Colecciones": {
+    "emoji": "📚",
+    "en": "Collections",
+    "archetype": "Cortos / Programas"
+   },
+   "Franja Encuentros Cercanos": {
+    "emoji": "🎙️",
+    "en": "Close Encounters",
+    "archetype": "Charlas / Industria"
+   }
+  },
+  "sedes": {
+   "Cinemateca de Bogotá": [
+    "Cinemateca de Bogotá - Bogotá",
+    ""
+   ],
+   "City U": [
+    "City U - Bogotá",
+    ""
+   ],
+   "Teatro Jorge Eliécer Gaitán": [
+    "Teatro Jorge Eliécer Gaitán - Bogotá",
+    ""
+   ],
+   "Cinemateca de Bogotá Sede Fontanar del Río": [
+    "Cinemateca de Bogotá Sede Fontanar del Río - Bogotá",
+    ""
+   ],
+   "Teatro El Parque": [
+    "Teatro El Parque - Bogotá",
+    ""
+   ],
+   "Alianza Francesa": [
+    "Alianza Francesa - Bogotá",
+    ""
+   ],
+   "Centro Ático": [
+    "Centro Ático - Bogotá",
+    ""
+   ],
+   "CEFE": [
+    "CEFE - Bogotá",
+    ""
+   ],
+   "Teatro Delia Zapata Olivella": [
+    "Teatro Delia Zapata Olivella - Bogotá",
+    ""
+   ],
+   "Teatro al aire libre La Media Torta": [
+    "Teatro al aire libre La Media Torta - Bogotá",
+    ""
+   ],
+   "Sala Gaitán Antigua Cinemateca": [
+    "Sala Gaitán Antigua Cinemateca - Bogotá",
+    ""
+   ]
+  },
+  "name": "BOGOSHORTS",
+  "displayName": "BOGOSHORTS",
+  "shortName": "BOGOSHORTS",
+  "fullName": "24.º BOGOSHORTS — Festival de Cortos de Bogotá / Bogotá Short Film Festival",
+  "tagline": "Festival de Cortos de Bogotá",
+  "city": "Bogotá",
+  "country": "CO",
+  "dates": "1–8 DIC",
+  "dates_en": "DEC 1–8",
+  "year": 2026,
+  "timezoneOffset": "-05:00",
+  "storageKey": "bogoshorts2026_",
+  "festivalStartStr": "2026-12-01T00:00:00",
+  "festivalEndStr": "2026-12-08T23:59:00",
+  "sharedSlotIsOneScreening": false,
+  "mes_es": "diciembre",
+  "dias_vacios": []
+ }
+}

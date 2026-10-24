@@ -1,0 +1,74 @@
+{
+ "_provenance": {
+  "fuente": "Nominatim con verificación: caja de ciudad + token distintivo + clase de lugar (una sede fija nunca es un barrio). _prec:manual intocable.",
+  "capturado": "2026-10-23"
+ },
+ "Cinemateca de Bogotá": {
+  "_prec": "manual",
+  "_nota": "Google Maps (búsqueda en el navegador, 23 oct 2026): «Cinemateca de Bogotá», Cra. 3 #19-10 (la dirección de /escenarios). Salas Capital, 2, 3 y Salón de la imagen van en la función.",
+  "lat": 4.6031614,
+  "lng": -74.0676717,
+  "address": "Cra. 3 #19-10"
+ },
+ "City U": {
+  "_prec": "manual",
+  "_nota": "Google Maps (búsqueda en el navegador, 23 oct 2026): «City U, Viviendas Universitarias», Calle 19 No. 2A-10 (/escenarios). El Lounge BOGOSHORTS / Plazoleta UHeart va como sala. Está a ~50 m de la Cinemateca: dos sedes reales del mismo cruce (el festival las llama «Circuito CityU - Cinemateca»).",
+  "lat": 4.6032278,
+  "lng": -74.0672082,
+  "address": "Calle 19 No. 2A-10"
+ },
+ "Teatro Jorge Eliécer Gaitán": {
+  "_prec": "manual",
+  "_nota": "Google Maps (búsqueda en el navegador, 23 oct 2026): «Teatro Municipal Jorge Eliécer Gaitán».",
+  "lat": 4.6086901,
+  "lng": -74.0707267
+ },
+ "Cinemateca de Bogotá Sede Fontanar del Río": {
+  "_prec": "manual",
+  "_nota": "Google Maps (búsqueda en el navegador, 23 oct 2026): no hay ficha propia de la sede de la Cinemateca; se toma «CEFE Fontanar del río» (Suba), donde funciona. A confirmar.",
+  "lat": 4.7561244,
+  "lng": -74.1110572
+ },
+ "Teatro El Parque": {
+  "_prec": "manual",
+  "_nota": "Google Maps (búsqueda en el navegador, 23 oct 2026): «Teatro El Parque» (Parque Nacional).",
+  "lat": 4.6230409,
+  "lng": -74.0636956
+ },
+ "Alianza Francesa": {
+  "_prec": "manual",
+  "_nota": "Google Maps (búsqueda en el navegador, 23 oct 2026): «Alianza Francesa de Bogotá - Sede Centro». La grilla no dice cuál sede; la del Centro es la del circuito (a 3 cuadras de la Cinemateca). A CONFIRMAR con el festival.",
+  "lat": 4.6026422,
+  "lng": -74.0686512
+ },
+ "Centro Ático": {
+  "_prec": "manual",
+  "_nota": "Google Maps (búsqueda en el navegador, 23 oct 2026): «Centro Ático» (Pontificia Universidad Javeriana).",
+  "lat": 4.6269751,
+  "lng": -74.0650621
+ },
+ "CEFE": {
+  "_prec": "manual",
+  "_nota": "Google Maps (búsqueda en el navegador, 23 oct 2026): la grilla dice solo «CEFE» y en Bogotá hay varios Centros Felicidad (Chapinero, San Cristóbal, Las Cometas, Fontanar…). PROVISIONAL: «Centro Felicidad Chapinero». A CONFIRMAR con el festival.",
+  "lat": 4.6653416,
+  "lng": -74.0528448
+ },
+ "Teatro Delia Zapata Olivella": {
+  "_prec": "manual",
+  "_nota": "Google Maps (búsqueda en el navegador, 23 oct 2026): «Teatro Delia Zapata Olivella» (Centro Nacional de las Artes).",
+  "lat": 4.5974429,
+  "lng": -74.0745009
+ },
+ "Teatro al aire libre La Media Torta": {
+  "_prec": "manual",
+  "_nota": "Google Maps (búsqueda en el navegador, 23 oct 2026): «Teatro al Aire Libre La Media Torta».",
+  "lat": 4.6003444,
+  "lng": -74.0659169
+ },
+ "Sala Gaitán Antigua Cinemateca": {
+  "_prec": "manual",
+  "_nota": "Google Maps (búsqueda en el navegador, 23 oct 2026): sin ficha propia; APROXIMADO a «Cra. 7 #22-79», la antigua sede de la Cinemateca junto al Teatro Jorge Eliécer Gaitán (dirección de memoria, no de una fuente del festival). A CONFIRMAR.",
+  "lat": 4.608881,
+  "lng": -74.0706722
+ }
+}

@@ -1,0 +1,2954 @@
+{
+ "_provenance": {
+  "fuente": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+  "capturado": "2026-10-23",
+  "metodo": "pdftotext -bbox: columna por x del encabezado, fila por la hora más cercana dentro del espacio"
+ },
+ "funciones": [
+  {
+   "dia": "2026-12-01",
+   "hora": "18:30",
+   "sede": "Teatro Jorge Eliécer Gaitán",
+   "sala": "",
+   "ciudad": "Bogotá",
+   "texto_grilla": "Inauguración*",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "titulo": "Inauguración",
+   "seccion": "",
+   "tipo": "evento",
+   "acceso": "Entrada con invitación"
+  },
+  {
+   "dia": "2026-12-02",
+   "hora": "16:30",
+   "sede": "City U",
+   "sala": "Lounge Bogoshorts Plazoleta UHeart",
+   "ciudad": "Bogotá",
+   "texto_grilla": "Competencia Nacional Experimental",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "titulo": "Competencia Nacional Experimental",
+   "seccion": "Franja Encuentros Cercanos",
+   "tipo": "evento",
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-02",
+   "hora": "18:00",
+   "sede": "City U",
+   "sala": "Lounge Bogoshorts Plazoleta UHeart",
+   "ciudad": "Bogotá",
+   "texto_grilla": "Apertura BFM Revelación seleccionados REFRESH Vol. 8",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "titulo": "Apertura BFM Revelación seleccionados REFRESH Vol. 8",
+   "seccion": "",
+   "tipo": "evento",
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-02",
+   "hora": "15:00",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala Capital",
+   "ciudad": "Bogotá",
+   "texto_grilla": "CN-EXP*** (97')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 97,
+   "codigo": "CN-EXP",
+   "seccion": "Competencia Nacional",
+   "titulo": "Experimental",
+   "has_qa": false,
+   "_nota": "*** Solo Encuentros Cercanos, tras la proyección del programa en Sala Capital",
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-02",
+   "hora": "17:00",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala Capital",
+   "ciudad": "Bogotá",
+   "texto_grilla": "CI-CP** (93')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 93,
+   "codigo": "CI-CP",
+   "seccion": "Competencia Internacional",
+   "titulo": "Corto periodístico",
+   "has_qa": true,
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-02",
+   "hora": "19:30",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala Capital",
+   "ciudad": "Bogotá",
+   "texto_grilla": "PAC-FIC** (80')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 80,
+   "codigo": "PAC-FIC",
+   "seccion": "Panorama",
+   "titulo": "Colombia Ficción",
+   "has_qa": true,
+   "acceso": "desconocido",
+   "obras": [
+    {
+     "titulo": "Mi amigo, el arquitecto",
+     "director": "Óscar Garzón",
+     "pais": "Colombia",
+     "_src": {
+      "url": "https://www.instagram.com/p/Det96D6EXZh/",
+      "date": "2026-10-20"
+     }
+    },
+    {
+     "titulo": "El Cazador",
+     "director": "Luciana Riso Soto, Manuel Villa",
+     "pais": "Colombia",
+     "_src": {
+      "url": "https://www.instagram.com/p/Det96D6EXZh/",
+      "date": "2026-10-20"
+     }
+    },
+    {
+     "titulo": "La línea del mar",
+     "director": "Melissa Saavedra Gil",
+     "pais": "Colombia",
+     "_src": {
+      "url": "https://www.instagram.com/p/Det96D6EXZh/",
+      "date": "2026-10-20"
+     }
+    },
+    {
+     "titulo": "Suite Intercontinental",
+     "director": "Lola Tartane",
+     "pais": "Colombia, Francia",
+     "_src": {
+      "url": "https://www.instagram.com/p/Det96D6EXZh/",
+      "date": "2026-10-20"
+     }
+    }
+   ]
+  },
+  {
+   "dia": "2026-12-02",
+   "hora": "13:00",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala 2",
+   "ciudad": "Bogotá",
+   "texto_grilla": "CLC-FUT** (86')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 86,
+   "codigo": "CLC-FUT",
+   "seccion": "Colecciones",
+   "titulo": "El mundo es un balón",
+   "has_qa": true,
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-02",
+   "hora": "15:30",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala 2",
+   "ciudad": "Bogotá",
+   "texto_grilla": "CI-ANI1** (91')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 91,
+   "codigo": "CI-ANI1",
+   "seccion": "Competencia Internacional",
+   "titulo": "Animación 1",
+   "has_qa": true,
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-02",
+   "hora": "18:30",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala 2",
+   "ciudad": "Bogotá",
+   "texto_grilla": "F3-02** (83')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 83,
+   "codigo": "F3-02",
+   "seccion": "Fanático Freak Fantástico F3",
+   "titulo": "Programa 02",
+   "has_qa": true,
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-02",
+   "hora": "14:00",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala 3",
+   "ciudad": "Bogotá",
+   "texto_grilla": "WT-CRO1** (92')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 92,
+   "codigo": "WT-CRO1",
+   "seccion": "World Tour",
+   "titulo": "Croacia 1",
+   "has_qa": true,
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-02",
+   "hora": "16:00",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala 3",
+   "ciudad": "Bogotá",
+   "texto_grilla": "CI-DOC1** (102')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 102,
+   "codigo": "CI-DOC1",
+   "seccion": "Competencia Internacional",
+   "titulo": "Documental 1",
+   "has_qa": true,
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-02",
+   "hora": "19:00",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala 3",
+   "ciudad": "Bogotá",
+   "texto_grilla": "CI-DOC2** (87')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 87,
+   "codigo": "CI-DOC2",
+   "seccion": "Competencia Internacional",
+   "titulo": "Documental 2",
+   "has_qa": true,
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-02",
+   "hora": "14:00",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Salón de la imagen",
+   "ciudad": "Bogotá",
+   "texto_grilla": "CVR",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "codigo": "CVR",
+   "seccion": "Competencia VR (Realidad virtual)",
+   "titulo": "Competencia realidad virtual",
+   "has_qa": false,
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-02",
+   "hora": "13:30",
+   "sede": "Alianza Francesa",
+   "sala": "",
+   "ciudad": "Bogotá",
+   "texto_grilla": "CITY-BCN1 (104')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 104,
+   "codigo": "CITY-BCN1",
+   "seccion": "Viva la ciudad",
+   "titulo": "Sinfonías femeninas desde Barcelona",
+   "has_qa": false,
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-02",
+   "hora": "16:00",
+   "sede": "Alianza Francesa",
+   "sala": "",
+   "ciudad": "Bogotá",
+   "texto_grilla": "CN-FIC1** (89')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 89,
+   "codigo": "CN-FIC1",
+   "seccion": "Competencia Nacional",
+   "titulo": "Ficción 1",
+   "has_qa": true,
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-02",
+   "hora": "18:30",
+   "sede": "Alianza Francesa",
+   "sala": "",
+   "ciudad": "Bogotá",
+   "texto_grilla": "CI-EXP2** (84')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 84,
+   "codigo": "CI-EXP2",
+   "seccion": "Competencia Internacional",
+   "titulo": "Experimental 2",
+   "has_qa": true,
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-02",
+   "hora": "15:00",
+   "sede": "Centro Ático",
+   "sala": "",
+   "ciudad": "Bogotá",
+   "texto_grilla": "CLC-AMO** (95')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 95,
+   "codigo": "CLC-AMO",
+   "seccion": "Colecciones",
+   "titulo": "El amor es corto",
+   "has_qa": true,
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-02",
+   "hora": "18:00",
+   "sede": "Centro Ático",
+   "sala": "",
+   "ciudad": "Bogotá",
+   "texto_grilla": "FI-LARGO (117')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 117,
+   "codigo": "FI-LARGO",
+   "seccion": "Cortofilia",
+   "titulo": "Largo de cortos",
+   "has_qa": false,
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-03",
+   "hora": "16:30",
+   "sede": "City U",
+   "sala": "Lounge Bogoshorts Plazoleta UHeart",
+   "ciudad": "Bogotá",
+   "texto_grilla": "Competencia Nacional Animación",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "titulo": "Competencia Nacional Animación",
+   "seccion": "Franja Encuentros Cercanos",
+   "tipo": "evento",
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-03",
+   "hora": "15:00",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala Capital",
+   "ciudad": "Bogotá",
+   "texto_grilla": "CN-ANI*** (64')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 64,
+   "codigo": "CN-ANI",
+   "seccion": "Competencia Nacional",
+   "titulo": "Animación",
+   "has_qa": false,
+   "_nota": "*** Solo Encuentros Cercanos, tras la proyección del programa en Sala Capital",
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-03",
+   "hora": "17:00",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala Capital",
+   "ciudad": "Bogotá",
+   "texto_grilla": "CI-FIC1** (94')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 94,
+   "codigo": "CI-FIC1",
+   "seccion": "Competencia Internacional",
+   "titulo": "Ficción 1",
+   "has_qa": true,
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-03",
+   "hora": "19:30",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala Capital",
+   "ciudad": "Bogotá",
+   "texto_grilla": "F3-PINI** (79')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 79,
+   "codigo": "F3-PINI",
+   "seccion": "Fanático Freak Fantástico F3",
+   "titulo": "Jairo Pinilla, el origen de una obsesión",
+   "has_qa": true,
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-03",
+   "hora": "13:00",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala 2",
+   "ciudad": "Bogotá",
+   "texto_grilla": "CLC-DIVX** (80')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 80,
+   "codigo": "CLC-DIVX",
+   "seccion": "Colecciones",
+   "titulo": "Diversidades",
+   "has_qa": true,
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-03",
+   "hora": "15:30",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala 2",
+   "ciudad": "Bogotá",
+   "texto_grilla": "WT-CRO2** (77')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 77,
+   "codigo": "WT-CRO2",
+   "seccion": "World Tour",
+   "titulo": "Croacia 2",
+   "has_qa": true,
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-03",
+   "hora": "18:30",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala 2",
+   "ciudad": "Bogotá",
+   "texto_grilla": "F3-03** (86')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 86,
+   "codigo": "F3-03",
+   "seccion": "Fanático Freak Fantástico F3",
+   "titulo": "Programa 03",
+   "has_qa": true,
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-03",
+   "hora": "14:00",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala 3",
+   "ciudad": "Bogotá",
+   "texto_grilla": "CITY-BCN2 (60')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 60,
+   "codigo": "CITY-BCN2",
+   "seccion": "Viva la ciudad",
+   "titulo": "Año Gaudí, la ciudad animada",
+   "has_qa": false,
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-03",
+   "hora": "16:00",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala 3",
+   "ciudad": "Bogotá",
+   "texto_grilla": "CON-BRA (85')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 85,
+   "codigo": "CON-BRA",
+   "seccion": "Conexión",
+   "titulo": "Brasil",
+   "has_qa": false,
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-03",
+   "hora": "19:00",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala 3",
+   "ciudad": "Bogotá",
+   "texto_grilla": "CI-ANI2** (89')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 89,
+   "codigo": "CI-ANI2",
+   "seccion": "Competencia Internacional",
+   "titulo": "Animación 2",
+   "has_qa": true,
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-03",
+   "hora": "14:00",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Salón de la imagen",
+   "ciudad": "Bogotá",
+   "texto_grilla": "CVR",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "codigo": "CVR",
+   "seccion": "Competencia VR (Realidad virtual)",
+   "titulo": "Competencia realidad virtual",
+   "has_qa": false,
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-03",
+   "hora": "13:30",
+   "sede": "Alianza Francesa",
+   "sala": "",
+   "ciudad": "Bogotá",
+   "texto_grilla": "CON-LATAM** (82')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 82,
+   "codigo": "CON-LATAM",
+   "seccion": "Conexión",
+   "titulo": "Latinoamérica",
+   "has_qa": true,
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-03",
+   "hora": "16:00",
+   "sede": "Alianza Francesa",
+   "sala": "",
+   "ciudad": "Bogotá",
+   "texto_grilla": "CN-FIC2** (81')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 81,
+   "codigo": "CN-FIC2",
+   "seccion": "Competencia Nacional",
+   "titulo": "Ficción 2",
+   "has_qa": true,
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-03",
+   "hora": "18:30",
+   "sede": "Alianza Francesa",
+   "sala": "",
+   "ciudad": "Bogotá",
+   "texto_grilla": "Exposición Andrósfera lectura en vivo",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "titulo": "Exposición Andrósfera lectura en vivo",
+   "seccion": "",
+   "tipo": "evento",
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-03",
+   "hora": "15:00",
+   "sede": "Centro Ático",
+   "sala": "",
+   "ciudad": "Bogotá",
+   "texto_grilla": "CLC-CINE** (85')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 85,
+   "codigo": "CLC-CINE",
+   "seccion": "Colecciones",
+   "titulo": "Cine dentro del cine",
+   "has_qa": true,
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-03",
+   "hora": "18:00",
+   "sede": "Centro Ático",
+   "sala": "",
+   "ciudad": "Bogotá",
+   "texto_grilla": "CI-FIC2** (103')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 103,
+   "codigo": "CI-FIC2",
+   "seccion": "Competencia Internacional",
+   "titulo": "Ficción 2",
+   "has_qa": true,
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-03",
+   "hora": "17:30",
+   "sede": "CEFE",
+   "sala": "",
+   "ciudad": "Bogotá",
+   "texto_grilla": "ES-PER (75')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 75,
+   "codigo": "ES-PER",
+   "seccion": "Especiales",
+   "titulo": "Volviendo a Persépolis sin Marjane Satrapi",
+   "has_qa": false,
+   "acceso": "desconocido",
+   "obras": [
+    {
+     "titulo": "Red dress. No straps",
+     "director": "Maryam Mohajer",
+     "pais": "Reino Unido",
+     "_src": {
+      "url": "https://www.instagram.com/p/DecGoIkDrVs/",
+      "date": "2026-10-13"
+     }
+    },
+    {
+     "titulo": "À cœur perdu",
+     "director": "Sarah Saidan",
+     "pais": "Francia",
+     "_src": {
+      "url": "https://www.instagram.com/p/DecGoIkDrVs/",
+      "date": "2026-10-13"
+     }
+    },
+    {
+     "titulo": "Beach Flags",
+     "director": "Sarah Saidan",
+     "pais": "Francia",
+     "_src": {
+      "url": "https://www.instagram.com/p/DecGoIkDrVs/",
+      "date": "2026-10-13"
+     }
+    },
+    {
+     "titulo": "Noon, the Bread from Tehran",
+     "director": "Roshanak Roshan",
+     "pais": "Francia",
+     "_src": {
+      "url": "https://www.instagram.com/p/DecGoIkDrVs/",
+      "date": "2026-10-13"
+     }
+    },
+    {
+     "titulo": "The Soloists",
+     "director": "Mehrnaz Abdollahinia, Feben Elias Woldehawariat, Razakh Issaka, Celeste Jamneck, Yi Liu",
+     "pais": "Francia",
+     "_src": {
+      "url": "https://www.instagram.com/p/DecGoIkDrVs/",
+      "date": "2026-10-13"
+     }
+    },
+    {
+     "titulo": "Our Uniform",
+     "director": "Yegane Moghaddam",
+     "pais": "Irán",
+     "_src": {
+      "url": "https://www.instagram.com/p/DecGoIkDrVs/",
+      "date": "2026-10-13"
+     }
+    },
+    {
+     "titulo": "End of summer",
+     "director": "Tara Attarzadeh",
+     "pais": "Irán",
+     "_src": {
+      "url": "https://www.instagram.com/p/DecGoIkDrVs/",
+      "date": "2026-10-13"
+     }
+    }
+   ]
+  },
+  {
+   "dia": "2026-12-03",
+   "hora": "18:00",
+   "sede": "Sala Gaitán Antigua Cinemateca",
+   "sala": "",
+   "ciudad": "Bogotá",
+   "texto_grilla": "HOM-CESAR (79')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 79,
+   "codigo": "HOM-CESAR",
+   "titulo": "HOM-CESAR",
+   "seccion": "",
+   "has_qa": false,
+   "_nota": "el código no está en la leyenda de la grilla",
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-04",
+   "hora": "16:30",
+   "sede": "City U",
+   "sala": "Lounge Bogoshorts Plazoleta UHeart",
+   "ciudad": "Bogotá",
+   "texto_grilla": "Competencia Nacional Documental",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "titulo": "Competencia Nacional Documental",
+   "seccion": "Franja Encuentros Cercanos",
+   "tipo": "evento",
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-04",
+   "hora": "15:00",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala Capital",
+   "ciudad": "Bogotá",
+   "texto_grilla": "CN-DOC*** (83')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 83,
+   "codigo": "CN-DOC",
+   "seccion": "Competencia Nacional",
+   "titulo": "Documental",
+   "has_qa": false,
+   "_nota": "*** Solo Encuentros Cercanos, tras la proyección del programa en Sala Capital",
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-04",
+   "hora": "17:00",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala Capital",
+   "ciudad": "Bogotá",
+   "texto_grilla": "SO-FCO (100')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 100,
+   "codigo": "SO-FCO",
+   "seccion": "Fuera de Competencia",
+   "titulo": "Selección Oficial",
+   "has_qa": false,
+   "acceso": "desconocido",
+   "obras": [
+    {
+     "titulo": "Plan contraplan / Shot Reverse Shot",
+     "director": "Radu Jude, Adrian Cioflâncă",
+     "pais": "Rumania",
+     "anio": 2026,
+     "_src": {
+      "url": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/007_fuera_de_competencia.html"
+     }
+    },
+    {
+     "titulo": "They’re Here",
+     "director": "Laura Poitras, Rachel Lauren Mueller",
+     "pais": "Estados Unidos",
+     "anio": 2026,
+     "_src": {
+      "url": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/007_fuera_de_competencia.html"
+     }
+    },
+    {
+     "titulo": "Halayon (Wild Asparagus)",
+     "director": "Avi Mograbi",
+     "pais": "Portugal, Francia",
+     "anio": 2026,
+     "_src": {
+      "url": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/007_fuera_de_competencia.html"
+     }
+    },
+    {
+     "titulo": "La Sentinelle",
+     "director": "Ali Cherri",
+     "pais": "Francia",
+     "anio": 2026,
+     "_src": {
+      "url": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/007_fuera_de_competencia.html"
+     }
+    }
+   ]
+  },
+  {
+   "dia": "2026-12-04",
+   "hora": "19:30",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala Capital",
+   "ciudad": "Bogotá",
+   "texto_grilla": "F3-01** (94')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 94,
+   "codigo": "F3-01",
+   "seccion": "Fanático Freak Fantástico F3",
+   "titulo": "Programa 01",
+   "has_qa": true,
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-04",
+   "hora": "13:00",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala 2",
+   "ciudad": "Bogotá",
+   "texto_grilla": "CLC-AMO** (95')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 95,
+   "codigo": "CLC-AMO",
+   "seccion": "Colecciones",
+   "titulo": "El amor es corto",
+   "has_qa": true,
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-04",
+   "hora": "15:30",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala 2",
+   "ciudad": "Bogotá",
+   "texto_grilla": "CI-EXP1** (97')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 97,
+   "codigo": "CI-EXP1",
+   "seccion": "Competencia Internacional",
+   "titulo": "Experimental 1",
+   "has_qa": true,
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-04",
+   "hora": "18:30",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala 2",
+   "ciudad": "Bogotá",
+   "texto_grilla": "CON-ESP** (82')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 82,
+   "codigo": "CON-ESP",
+   "seccion": "Conexión",
+   "titulo": "España",
+   "has_qa": true,
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-04",
+   "hora": "14:00",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala 3",
+   "ciudad": "Bogotá",
+   "texto_grilla": "ES-MILES (68')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 68,
+   "codigo": "ES-MILES",
+   "seccion": "Especiales",
+   "titulo": "Miles Davis, 100 años de jazz",
+   "has_qa": false,
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-04",
+   "hora": "16:00",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala 3",
+   "ciudad": "Bogotá",
+   "texto_grilla": "FES-LADRA (97')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 97,
+   "codigo": "FES-LADRA",
+   "seccion": "Festivaleando",
+   "titulo": "El perro que ladra",
+   "has_qa": false,
+   "acceso": "desconocido",
+   "obras": [
+    {
+     "titulo": "Cassandra",
+     "director": "Martín Arbeláez",
+     "pais": "Colombia, Francia",
+     "anio": 2025,
+     "_src": {
+      "url": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/009_festivales.html"
+     }
+    },
+    {
+     "titulo": "About Happy Hippos and Sad Peacocks",
+     "director": "Elkin Calderón Guevara, Johannes Förster",
+     "pais": "Col, Ale",
+     "anio": 2024,
+     "_src": {
+      "url": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/009_festivales.html"
+     }
+    },
+    {
+     "titulo": "Abrir Monte",
+     "director": "María Rojas",
+     "pais": "Colombia, Portugal",
+     "anio": 2021,
+     "_src": {
+      "url": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/009_festivales.html"
+     }
+    },
+    {
+     "titulo": "EKOBIO",
+     "director": "Elkin Calderón Guevara, Diego Piñeros García",
+     "pais": "Colombi, Alemania",
+     "anio": 2021,
+     "_src": {
+      "url": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/009_festivales.html"
+     }
+    },
+    {
+     "titulo": "Yugo",
+     "director": "Carlos Gómez Salamanca",
+     "pais": "",
+     "anio": 2021,
+     "_src": {
+      "url": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/009_festivales.html"
+     }
+    }
+   ]
+  },
+  {
+   "dia": "2026-12-04",
+   "hora": "19:00",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala 3",
+   "ciudad": "Bogotá",
+   "texto_grilla": "CI-FIC3** (99')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 99,
+   "codigo": "CI-FIC3",
+   "seccion": "Competencia Internacional",
+   "titulo": "Ficción 3",
+   "has_qa": true,
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-04",
+   "hora": "14:00",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Salón de la imagen",
+   "ciudad": "Bogotá",
+   "texto_grilla": "CVR",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "codigo": "CVR",
+   "seccion": "Competencia VR (Realidad virtual)",
+   "titulo": "Competencia realidad virtual",
+   "has_qa": false,
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-04",
+   "hora": "16:00",
+   "sede": "Cinemateca de Bogotá Sede Fontanar del Río",
+   "sala": "",
+   "ciudad": "Bogotá",
+   "texto_grilla": "CN-FIC1** (89')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 89,
+   "codigo": "CN-FIC1",
+   "seccion": "Competencia Nacional",
+   "titulo": "Ficción 1",
+   "has_qa": true,
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-04",
+   "hora": "11:00",
+   "sede": "Teatro El Parque",
+   "sala": "",
+   "ciudad": "Bogotá",
+   "texto_grilla": "IMAGINATÓN",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "titulo": "IMAGINATÓN",
+   "seccion": "",
+   "tipo": "evento",
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-04",
+   "hora": "13:30",
+   "sede": "Alianza Francesa",
+   "sala": "",
+   "ciudad": "Bogotá",
+   "texto_grilla": "CON-LTX** (89')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 89,
+   "codigo": "CON-LTX",
+   "seccion": "Conexión",
+   "titulo": "Latinxs en Norteamérica",
+   "has_qa": true,
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-04",
+   "hora": "16:00",
+   "sede": "Alianza Francesa",
+   "sala": "",
+   "ciudad": "Bogotá",
+   "texto_grilla": "CITY-BCN2 (60')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 60,
+   "codigo": "CITY-BCN2",
+   "seccion": "Viva la ciudad",
+   "titulo": "Año Gaudí, la ciudad animada",
+   "has_qa": false,
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-04",
+   "hora": "18:30",
+   "sede": "Alianza Francesa",
+   "sala": "",
+   "ciudad": "Bogotá",
+   "texto_grilla": "ES-ASTRO (66')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 66,
+   "codigo": "ES-ASTRO",
+   "seccion": "Especiales",
+   "titulo": "Especial astrológico: presagios del cielo",
+   "has_qa": false,
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-04",
+   "hora": "15:00",
+   "sede": "Centro Ático",
+   "sala": "",
+   "ciudad": "Bogotá",
+   "texto_grilla": "CLC-ADO** (91')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 91,
+   "codigo": "CLC-ADO",
+   "seccion": "Colecciones",
+   "titulo": "Crecer",
+   "has_qa": true,
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-04",
+   "hora": "18:00",
+   "sede": "Centro Ático",
+   "sala": "",
+   "ciudad": "Bogotá",
+   "texto_grilla": "PAC-EXP** (60')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 60,
+   "codigo": "PAC-EXP",
+   "seccion": "Panorama",
+   "titulo": "Colombia Experimental",
+   "has_qa": true,
+   "acceso": "desconocido",
+   "obras": [
+    {
+     "titulo": "Prueba de cámara",
+     "director": "David Correa F.",
+     "pais": "Colombia",
+     "_src": {
+      "url": "https://www.instagram.com/p/De0HT9sDnpy/",
+      "date": "2026-10-22"
+     }
+    },
+    {
+     "titulo": "Espaciar",
+     "director": "Daniela Giraldo Suárez",
+     "pais": "Colombia",
+     "_src": {
+      "url": "https://www.instagram.com/p/De0HT9sDnpy/",
+      "date": "2026-10-22"
+     }
+    },
+    {
+     "titulo": "Susurros",
+     "director": "Marta Hincapié",
+     "pais": "Colombia",
+     "_src": {
+      "url": "https://www.instagram.com/p/De0HT9sDnpy/",
+      "date": "2026-10-22"
+     }
+    },
+    {
+     "titulo": "Lejanía",
+     "director": "Daniel Velásquez Patarroyo",
+     "pais": "Colombia",
+     "_src": {
+      "url": "https://www.instagram.com/p/De0HT9sDnpy/",
+      "date": "2026-10-22"
+     }
+    },
+    {
+     "titulo": "El Salto",
+     "director": "Jerónimo Rincón",
+     "pais": "Colombia",
+     "_src": {
+      "url": "https://www.instagram.com/p/De0HT9sDnpy/",
+      "date": "2026-10-22"
+     }
+    },
+    {
+     "titulo": "Lamentos de un balcón",
+     "director": "Juan Chispas",
+     "pais": "Colombia",
+     "_src": {
+      "url": "https://www.instagram.com/p/De0HT9sDnpy/",
+      "date": "2026-10-22"
+     }
+    }
+   ]
+  },
+  {
+   "dia": "2026-12-05",
+   "hora": "16:30",
+   "sede": "City U",
+   "sala": "Lounge Bogoshorts Plazoleta UHeart",
+   "ciudad": "Bogotá",
+   "texto_grilla": "Competencia Nacional Ficción 1",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "titulo": "Competencia Nacional Ficción 1",
+   "seccion": "Franja Encuentros Cercanos",
+   "tipo": "evento",
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-05",
+   "hora": "15:00",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala Capital",
+   "ciudad": "Bogotá",
+   "texto_grilla": "CN-FIC1*** (89')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 89,
+   "codigo": "CN-FIC1",
+   "seccion": "Competencia Nacional",
+   "titulo": "Ficción 1",
+   "has_qa": false,
+   "_nota": "*** Solo Encuentros Cercanos, tras la proyección del programa en Sala Capital",
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-05",
+   "hora": "17:00",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala Capital",
+   "ciudad": "Bogotá",
+   "texto_grilla": "CI-ANI1** (91')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 91,
+   "codigo": "CI-ANI1",
+   "seccion": "Competencia Internacional",
+   "titulo": "Animación 1",
+   "has_qa": true,
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-05",
+   "hora": "19:30",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala Capital",
+   "ciudad": "Bogotá",
+   "texto_grilla": "F3-02** (83')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 83,
+   "codigo": "F3-02",
+   "seccion": "Fanático Freak Fantástico F3",
+   "titulo": "Programa 02",
+   "has_qa": true,
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-05",
+   "hora": "13:00",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala 2",
+   "ciudad": "Bogotá",
+   "texto_grilla": "CLC-CINE** (85')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 85,
+   "codigo": "CLC-CINE",
+   "seccion": "Colecciones",
+   "titulo": "Cine dentro del cine",
+   "has_qa": true,
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-05",
+   "hora": "15:30",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala 2",
+   "ciudad": "Bogotá",
+   "texto_grilla": "CI-EXP2** (84')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 84,
+   "codigo": "CI-EXP2",
+   "seccion": "Competencia Internacional",
+   "titulo": "Experimental 2",
+   "has_qa": true,
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-05",
+   "hora": "18:30",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala 2",
+   "ciudad": "Bogotá",
+   "texto_grilla": "ES-PER (75')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 75,
+   "codigo": "ES-PER",
+   "seccion": "Especiales",
+   "titulo": "Volviendo a Persépolis sin Marjane Satrapi",
+   "has_qa": false,
+   "acceso": "desconocido",
+   "obras": [
+    {
+     "titulo": "Red dress. No straps",
+     "director": "Maryam Mohajer",
+     "pais": "Reino Unido",
+     "_src": {
+      "url": "https://www.instagram.com/p/DecGoIkDrVs/",
+      "date": "2026-10-13"
+     }
+    },
+    {
+     "titulo": "À cœur perdu",
+     "director": "Sarah Saidan",
+     "pais": "Francia",
+     "_src": {
+      "url": "https://www.instagram.com/p/DecGoIkDrVs/",
+      "date": "2026-10-13"
+     }
+    },
+    {
+     "titulo": "Beach Flags",
+     "director": "Sarah Saidan",
+     "pais": "Francia",
+     "_src": {
+      "url": "https://www.instagram.com/p/DecGoIkDrVs/",
+      "date": "2026-10-13"
+     }
+    },
+    {
+     "titulo": "Noon, the Bread from Tehran",
+     "director": "Roshanak Roshan",
+     "pais": "Francia",
+     "_src": {
+      "url": "https://www.instagram.com/p/DecGoIkDrVs/",
+      "date": "2026-10-13"
+     }
+    },
+    {
+     "titulo": "The Soloists",
+     "director": "Mehrnaz Abdollahinia, Feben Elias Woldehawariat, Razakh Issaka, Celeste Jamneck, Yi Liu",
+     "pais": "Francia",
+     "_src": {
+      "url": "https://www.instagram.com/p/DecGoIkDrVs/",
+      "date": "2026-10-13"
+     }
+    },
+    {
+     "titulo": "Our Uniform",
+     "director": "Yegane Moghaddam",
+     "pais": "Irán",
+     "_src": {
+      "url": "https://www.instagram.com/p/DecGoIkDrVs/",
+      "date": "2026-10-13"
+     }
+    },
+    {
+     "titulo": "End of summer",
+     "director": "Tara Attarzadeh",
+     "pais": "Irán",
+     "_src": {
+      "url": "https://www.instagram.com/p/DecGoIkDrVs/",
+      "date": "2026-10-13"
+     }
+    }
+   ]
+  },
+  {
+   "dia": "2026-12-05",
+   "hora": "14:00",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala 3",
+   "ciudad": "Bogotá",
+   "texto_grilla": "CHI-ANCY (64')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 64,
+   "codigo": "CHI-ANCY",
+   "seccion": "chiquiSHORTS",
+   "titulo": "Annecy Kids",
+   "has_qa": false,
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-05",
+   "hora": "16:00",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala 3",
+   "ciudad": "Bogotá",
+   "texto_grilla": "ES-METRO (90')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 90,
+   "codigo": "ES-METRO",
+   "seccion": "Especiales",
+   "titulo": "Metrópolis: cuerpos del futuro",
+   "has_qa": false,
+   "acceso": "desconocido",
+   "obras": [
+    {
+     "titulo": "L´uomo meccanico",
+     "director": "André Deed",
+     "pais": "Italia",
+     "anio": 1921,
+     "_src": {
+      "url": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/005_especial_metropolis.html"
+     }
+    },
+    {
+     "titulo": "Ginoide",
+     "director": "Celia Galán",
+     "pais": "España",
+     "anio": 2023,
+     "_src": {
+      "url": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/005_especial_metropolis.html"
+     }
+    },
+    {
+     "titulo": "Metae",
+     "director": "Elisabeth Caravell",
+     "pais": "Francia",
+     "anio": 2025,
+     "_src": {
+      "url": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/005_especial_metropolis.html"
+     }
+    },
+    {
+     "titulo": "Gofrodita",
+     "director": "Víctor Orozc",
+     "pais": "Alemania, México",
+     "anio": 2026,
+     "_src": {
+      "url": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/005_especial_metropolis.html"
+     }
+    }
+   ]
+  },
+  {
+   "dia": "2026-12-05",
+   "hora": "19:00",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala 3",
+   "ciudad": "Bogotá",
+   "texto_grilla": "CI-FIC2** (103')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 103,
+   "codigo": "CI-FIC2",
+   "seccion": "Competencia Internacional",
+   "titulo": "Ficción 2",
+   "has_qa": true,
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-05",
+   "hora": "11:00",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Salón de la imagen",
+   "ciudad": "Bogotá",
+   "texto_grilla": "CVR",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "codigo": "CVR",
+   "seccion": "Competencia VR (Realidad virtual)",
+   "titulo": "Competencia realidad virtual",
+   "has_qa": false,
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-05",
+   "hora": "14:00",
+   "sede": "Cinemateca de Bogotá Sede Fontanar del Río",
+   "sala": "",
+   "ciudad": "Bogotá",
+   "texto_grilla": "CN-ANI** (64')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 64,
+   "codigo": "CN-ANI",
+   "seccion": "Competencia Nacional",
+   "titulo": "Animación",
+   "has_qa": true,
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-05",
+   "hora": "16:00",
+   "sede": "Cinemateca de Bogotá Sede Fontanar del Río",
+   "sala": "",
+   "ciudad": "Bogotá",
+   "texto_grilla": "CN-FIC2** (81')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 81,
+   "codigo": "CN-FIC2",
+   "seccion": "Competencia Nacional",
+   "titulo": "Ficción 2",
+   "has_qa": true,
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-05",
+   "hora": "11:00",
+   "sede": "Teatro El Parque",
+   "sala": "",
+   "ciudad": "Bogotá",
+   "texto_grilla": "CHI-KIDS** (74')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 74,
+   "codigo": "CHI-KIDS",
+   "seccion": "chiquiSHORTS",
+   "titulo": "BOGOSHORTS Kids",
+   "has_qa": true,
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-05",
+   "hora": "15:00",
+   "sede": "Teatro El Parque",
+   "sala": "",
+   "ciudad": "Bogotá",
+   "texto_grilla": "ES-ZOD (65')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 65,
+   "codigo": "ES-ZOD",
+   "seccion": "Especiales",
+   "titulo": "Especial 40 años Caballeros del Zodiaco",
+   "has_qa": false,
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-05",
+   "hora": "13:30",
+   "sede": "Alianza Francesa",
+   "sala": "",
+   "ciudad": "Bogotá",
+   "texto_grilla": "CON-BRA (85')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 85,
+   "codigo": "CON-BRA",
+   "seccion": "Conexión",
+   "titulo": "Brasil",
+   "has_qa": false,
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-05",
+   "hora": "16:00",
+   "sede": "Alianza Francesa",
+   "sala": "",
+   "ciudad": "Bogotá",
+   "texto_grilla": "F3-PINI** (79')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 79,
+   "codigo": "F3-PINI",
+   "seccion": "Fanático Freak Fantástico F3",
+   "titulo": "Jairo Pinilla, el origen de una obsesión",
+   "has_qa": true,
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-05",
+   "hora": "18:30",
+   "sede": "Alianza Francesa",
+   "sala": "",
+   "ciudad": "Bogotá",
+   "texto_grilla": "CI-CP** (93')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 93,
+   "codigo": "CI-CP",
+   "seccion": "Competencia Internacional",
+   "titulo": "Corto periodístico",
+   "has_qa": true,
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-05",
+   "hora": "15:00",
+   "sede": "Centro Ático",
+   "sala": "",
+   "ciudad": "Bogotá",
+   "texto_grilla": "CLC-DIVX** (80')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 80,
+   "codigo": "CLC-DIVX",
+   "seccion": "Colecciones",
+   "titulo": "Diversidades",
+   "has_qa": true,
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-05",
+   "hora": "18:00",
+   "sede": "Centro Ático",
+   "sala": "",
+   "ciudad": "Bogotá",
+   "texto_grilla": "PAC-FIC** (80')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 80,
+   "codigo": "PAC-FIC",
+   "seccion": "Panorama",
+   "titulo": "Colombia Ficción",
+   "has_qa": true,
+   "acceso": "desconocido",
+   "obras": [
+    {
+     "titulo": "Mi amigo, el arquitecto",
+     "director": "Óscar Garzón",
+     "pais": "Colombia",
+     "_src": {
+      "url": "https://www.instagram.com/p/Det96D6EXZh/",
+      "date": "2026-10-20"
+     }
+    },
+    {
+     "titulo": "El Cazador",
+     "director": "Luciana Riso Soto, Manuel Villa",
+     "pais": "Colombia",
+     "_src": {
+      "url": "https://www.instagram.com/p/Det96D6EXZh/",
+      "date": "2026-10-20"
+     }
+    },
+    {
+     "titulo": "La línea del mar",
+     "director": "Melissa Saavedra Gil",
+     "pais": "Colombia",
+     "_src": {
+      "url": "https://www.instagram.com/p/Det96D6EXZh/",
+      "date": "2026-10-20"
+     }
+    },
+    {
+     "titulo": "Suite Intercontinental",
+     "director": "Lola Tartane",
+     "pais": "Colombia, Francia",
+     "_src": {
+      "url": "https://www.instagram.com/p/Det96D6EXZh/",
+      "date": "2026-10-20"
+     }
+    }
+   ]
+  },
+  {
+   "dia": "2026-12-05",
+   "hora": "17:00",
+   "sede": "Teatro al aire libre La Media Torta",
+   "sala": "",
+   "ciudad": "Bogotá",
+   "texto_grilla": "Noche Frankenstein Vol 10* Aliens (52')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 52,
+   "codigo": "F3-ALIENS",
+   "seccion": "Fanático Freak Fantástico F3",
+   "titulo": "Noche Frankenstein Vol 10",
+   "has_qa": false,
+   "_nota": "la celda trae «Aliens (52')»: el programa F3-ALIENS (IG DehCoz4kZkM)",
+   "acceso": "Entrada con invitación",
+   "obras": [
+    {
+     "titulo": "Asteria",
+     "director": "Lola Grand, Alexandre Arpentinier, Mathieu Blanchys, Tristan Lamarca, Thomas Lemaille y Jean-Charles Lusseau",
+     "pais": "Francia",
+     "_src": {
+      "url": "https://www.instagram.com/p/DehCoz4kZkM/",
+      "date": "2026-10-15"
+     }
+    },
+    {
+     "titulo": "Dédalo",
+     "director": "Jerónimo Rocha",
+     "pais": "Portugal",
+     "_src": {
+      "url": "https://www.instagram.com/p/DehCoz4kZkM/",
+      "date": "2026-10-15"
+     }
+    },
+    {
+     "titulo": "Mis-Drop",
+     "director": "Ferand Peek",
+     "pais": "Nueva Zelanda",
+     "_src": {
+      "url": "https://www.instagram.com/p/DehCoz4kZkM/",
+      "date": "2026-10-15"
+     }
+    },
+    {
+     "titulo": "HDLT",
+     "director": "ARTEFACTUM SUBA",
+     "pais": "Colombia",
+     "_src": {
+      "url": "https://www.instagram.com/p/DehCoz4kZkM/",
+      "date": "2026-10-15"
+     }
+    },
+    {
+     "titulo": "R’ha",
+     "director": "Kaleb Lechowski",
+     "pais": "Alemania",
+     "_src": {
+      "url": "https://www.instagram.com/p/DehCoz4kZkM/",
+      "date": "2026-10-15"
+     }
+    }
+   ]
+  },
+  {
+   "dia": "2026-12-06",
+   "hora": "16:30",
+   "sede": "City U",
+   "sala": "Lounge Bogoshorts Plazoleta UHeart",
+   "ciudad": "Bogotá",
+   "texto_grilla": "Competencia Nacional Ficción 2",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "titulo": "Competencia Nacional Ficción 2",
+   "seccion": "Franja Encuentros Cercanos",
+   "tipo": "evento",
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-06",
+   "hora": "11:30",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala Capital",
+   "ciudad": "Bogotá",
+   "texto_grilla": "CHI-KIDS** (74')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 74,
+   "codigo": "CHI-KIDS",
+   "seccion": "chiquiSHORTS",
+   "titulo": "BOGOSHORTS Kids",
+   "has_qa": true,
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-06",
+   "hora": "15:00",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala Capital",
+   "ciudad": "Bogotá",
+   "texto_grilla": "CN-FIC2*** (81')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 81,
+   "codigo": "CN-FIC2",
+   "seccion": "Competencia Nacional",
+   "titulo": "Ficción 2",
+   "has_qa": false,
+   "_nota": "*** Solo Encuentros Cercanos, tras la proyección del programa en Sala Capital",
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-06",
+   "hora": "17:00",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala Capital",
+   "ciudad": "Bogotá",
+   "texto_grilla": "PAC-EXP** (60')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 60,
+   "codigo": "PAC-EXP",
+   "seccion": "Panorama",
+   "titulo": "Colombia Experimental",
+   "has_qa": true,
+   "acceso": "desconocido",
+   "obras": [
+    {
+     "titulo": "Prueba de cámara",
+     "director": "David Correa F.",
+     "pais": "Colombia",
+     "_src": {
+      "url": "https://www.instagram.com/p/De0HT9sDnpy/",
+      "date": "2026-10-22"
+     }
+    },
+    {
+     "titulo": "Espaciar",
+     "director": "Daniela Giraldo Suárez",
+     "pais": "Colombia",
+     "_src": {
+      "url": "https://www.instagram.com/p/De0HT9sDnpy/",
+      "date": "2026-10-22"
+     }
+    },
+    {
+     "titulo": "Susurros",
+     "director": "Marta Hincapié",
+     "pais": "Colombia",
+     "_src": {
+      "url": "https://www.instagram.com/p/De0HT9sDnpy/",
+      "date": "2026-10-22"
+     }
+    },
+    {
+     "titulo": "Lejanía",
+     "director": "Daniel Velásquez Patarroyo",
+     "pais": "Colombia",
+     "_src": {
+      "url": "https://www.instagram.com/p/De0HT9sDnpy/",
+      "date": "2026-10-22"
+     }
+    },
+    {
+     "titulo": "El Salto",
+     "director": "Jerónimo Rincón",
+     "pais": "Colombia",
+     "_src": {
+      "url": "https://www.instagram.com/p/De0HT9sDnpy/",
+      "date": "2026-10-22"
+     }
+    },
+    {
+     "titulo": "Lamentos de un balcón",
+     "director": "Juan Chispas",
+     "pais": "Colombia",
+     "_src": {
+      "url": "https://www.instagram.com/p/De0HT9sDnpy/",
+      "date": "2026-10-22"
+     }
+    }
+   ]
+  },
+  {
+   "dia": "2026-12-06",
+   "hora": "19:30",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala Capital",
+   "ciudad": "Bogotá",
+   "texto_grilla": "F3-03** (86')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 86,
+   "codigo": "F3-03",
+   "seccion": "Fanático Freak Fantástico F3",
+   "titulo": "Programa 03",
+   "has_qa": true,
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-06",
+   "hora": "13:00",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala 2",
+   "ciudad": "Bogotá",
+   "texto_grilla": "CLC-ADO** (91')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 91,
+   "codigo": "CLC-ADO",
+   "seccion": "Colecciones",
+   "titulo": "Crecer",
+   "has_qa": true,
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-06",
+   "hora": "15:30",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala 2",
+   "ciudad": "Bogotá",
+   "texto_grilla": "CI-DOC1** (102')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 102,
+   "codigo": "CI-DOC1",
+   "seccion": "Competencia Internacional",
+   "titulo": "Documental 1",
+   "has_qa": true,
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-06",
+   "hora": "18:30",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala 2",
+   "ciudad": "Bogotá",
+   "texto_grilla": "CITY-BCN1 (104')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 104,
+   "codigo": "CITY-BCN1",
+   "seccion": "Viva la ciudad",
+   "titulo": "Sinfonías femeninas desde Barcelona",
+   "has_qa": false,
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-06",
+   "hora": "14:00",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala 3",
+   "ciudad": "Bogotá",
+   "texto_grilla": "CON-LATAM (82')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 82,
+   "codigo": "CON-LATAM",
+   "seccion": "Conexión",
+   "titulo": "Latinoamérica",
+   "has_qa": false,
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-06",
+   "hora": "16:00",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala 3",
+   "ciudad": "Bogotá",
+   "texto_grilla": "Estreno BFM-IV**",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "titulo": "Estreno BFM-IV",
+   "seccion": "",
+   "tipo": "evento",
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-06",
+   "hora": "19:00",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala 3",
+   "ciudad": "Bogotá",
+   "texto_grilla": "CI-ANI2 (89')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 89,
+   "codigo": "CI-ANI2",
+   "seccion": "Competencia Internacional",
+   "titulo": "Animación 2",
+   "has_qa": false,
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-06",
+   "hora": "11:00",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Salón de la imagen",
+   "ciudad": "Bogotá",
+   "texto_grilla": "CVR",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "codigo": "CVR",
+   "seccion": "Competencia VR (Realidad virtual)",
+   "titulo": "Competencia realidad virtual",
+   "has_qa": false,
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-06",
+   "hora": "14:00",
+   "sede": "Cinemateca de Bogotá Sede Fontanar del Río",
+   "sala": "",
+   "ciudad": "Bogotá",
+   "texto_grilla": "CHI-ANCY (64')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 64,
+   "codigo": "CHI-ANCY",
+   "seccion": "chiquiSHORTS",
+   "titulo": "Annecy Kids",
+   "has_qa": false,
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-06",
+   "hora": "11:00",
+   "sede": "Teatro El Parque",
+   "sala": "",
+   "ciudad": "Bogotá",
+   "texto_grilla": "CN-ANI** (64')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 64,
+   "codigo": "CN-ANI",
+   "seccion": "Competencia Nacional",
+   "titulo": "Animación",
+   "has_qa": true,
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-06",
+   "hora": "15:00",
+   "sede": "Teatro El Parque",
+   "sala": "",
+   "ciudad": "Bogotá",
+   "texto_grilla": "CHI-KIDS** (74')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 74,
+   "codigo": "CHI-KIDS",
+   "seccion": "chiquiSHORTS",
+   "titulo": "BOGOSHORTS Kids",
+   "has_qa": true,
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-06",
+   "hora": "13:30",
+   "sede": "Alianza Francesa",
+   "sala": "",
+   "ciudad": "Bogotá",
+   "texto_grilla": "CON-ESP** (82')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 82,
+   "codigo": "CON-ESP",
+   "seccion": "Conexión",
+   "titulo": "España",
+   "has_qa": true,
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-06",
+   "hora": "16:00",
+   "sede": "Alianza Francesa",
+   "sala": "",
+   "ciudad": "Bogotá",
+   "texto_grilla": "CN-DOC** (83')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 83,
+   "codigo": "CN-DOC",
+   "seccion": "Competencia Nacional",
+   "titulo": "Documental",
+   "has_qa": true,
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-06",
+   "hora": "18:30",
+   "sede": "Alianza Francesa",
+   "sala": "",
+   "ciudad": "Bogotá",
+   "texto_grilla": "WT-CRO1 (92')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 92,
+   "codigo": "WT-CRO1",
+   "seccion": "World Tour",
+   "titulo": "Croacia 1",
+   "has_qa": false,
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-06",
+   "hora": "15:00",
+   "sede": "Centro Ático",
+   "sala": "",
+   "ciudad": "Bogotá",
+   "texto_grilla": "CLC-FUT** (86')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 86,
+   "codigo": "CLC-FUT",
+   "seccion": "Colecciones",
+   "titulo": "El mundo es un balón",
+   "has_qa": true,
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-06",
+   "hora": "18:00",
+   "sede": "Centro Ático",
+   "sala": "",
+   "ciudad": "Bogotá",
+   "texto_grilla": "PAC-DOC** (84')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 84,
+   "codigo": "PAC-DOC",
+   "seccion": "Panorama",
+   "titulo": "Colombia Documental",
+   "has_qa": true,
+   "acceso": "desconocido",
+   "obras": [
+    {
+     "titulo": "Todas las manos que solté",
+     "director": "Laura Chará",
+     "pais": "Colombia",
+     "_src": {
+      "url": "https://www.instagram.com/p/Dewkg_ukX-2/",
+      "date": "2026-10-21"
+     }
+    },
+    {
+     "titulo": "La garganta del diablo",
+     "director": "Mateo Ramírez",
+     "pais": "Colombia",
+     "_src": {
+      "url": "https://www.instagram.com/p/Dewkg_ukX-2/",
+      "date": "2026-10-21"
+     }
+    },
+    {
+     "titulo": "Borrachos mientras escuchamos las gotas caer",
+     "director": "Santiago Gómez Ramírez",
+     "pais": "Colombia",
+     "_src": {
+      "url": "https://www.instagram.com/p/Dewkg_ukX-2/",
+      "date": "2026-10-21"
+     }
+    },
+    {
+     "titulo": "Geografía espectral",
+     "director": "Manuel Mateo",
+     "pais": "Colombia",
+     "_src": {
+      "url": "https://www.instagram.com/p/Dewkg_ukX-2/",
+      "date": "2026-10-21"
+     }
+    }
+   ]
+  },
+  {
+   "dia": "2026-12-06",
+   "hora": "18:00",
+   "sede": "Sala Gaitán Antigua Cinemateca",
+   "sala": "",
+   "ciudad": "Bogotá",
+   "texto_grilla": "HUMOR (65') + StandUp",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 65,
+   "codigo": "HUMOR",
+   "titulo": "HUMOR + StandUp",
+   "seccion": "",
+   "has_qa": false,
+   "_nota": "el código no está en la leyenda de la grilla",
+   "acceso": "desconocido",
+   "obras": [
+    {
+     "titulo": "Bus",
+     "director": "André Balbuena",
+     "pais": "Perú",
+     "anio": 2025,
+     "_src": {
+      "url": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/009_festivales.html"
+     }
+    },
+    {
+     "titulo": "Le dérapage",
+     "director": "Aurélien Laplace",
+     "pais": "Francia",
+     "anio": 2025,
+     "_src": {
+      "url": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/009_festivales.html"
+     }
+    },
+    {
+     "titulo": "El Cortejo",
+     "director": "Gerardo García León",
+     "pais": "México",
+     "anio": 2025,
+     "_src": {
+      "url": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/009_festivales.html"
+     }
+    },
+    {
+     "titulo": "Shit Happened",
+     "director": "Simon Schares",
+     "pais": "Alemania",
+     "anio": 2026,
+     "_src": {
+      "url": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/009_festivales.html"
+     }
+    },
+    {
+     "titulo": "Tenéis que verlo",
+     "director": "Nacho Solana",
+     "pais": "España",
+     "anio": 2025,
+     "_src": {
+      "url": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/009_festivales.html"
+     }
+    },
+    {
+     "titulo": "TRIO",
+     "director": "Fridtjof Josefsen, Morten Borgestad",
+     "pais": "Noruega",
+     "anio": 2025,
+     "_src": {
+      "url": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/009_festivales.html"
+     }
+    }
+   ]
+  },
+  {
+   "dia": "2026-12-07",
+   "hora": "18:00",
+   "sede": "City U",
+   "sala": "Lounge Bogoshorts Plazoleta UHeart",
+   "ciudad": "Bogotá",
+   "texto_grilla": "BS degusta Picnic nocturno*",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "titulo": "BS degusta Picnic nocturno",
+   "seccion": "",
+   "tipo": "evento",
+   "acceso": "Entrada con invitación"
+  },
+  {
+   "dia": "2026-12-07",
+   "hora": "13:30",
+   "sede": "Alianza Francesa",
+   "sala": "",
+   "ciudad": "Bogotá",
+   "texto_grilla": "FES-LADRA (97')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 97,
+   "codigo": "FES-LADRA",
+   "seccion": "Festivaleando",
+   "titulo": "El perro que ladra",
+   "has_qa": false,
+   "acceso": "desconocido",
+   "obras": [
+    {
+     "titulo": "Cassandra",
+     "director": "Martín Arbeláez",
+     "pais": "Colombia, Francia",
+     "anio": 2025,
+     "_src": {
+      "url": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/009_festivales.html"
+     }
+    },
+    {
+     "titulo": "About Happy Hippos and Sad Peacocks",
+     "director": "Elkin Calderón Guevara, Johannes Förster",
+     "pais": "Col, Ale",
+     "anio": 2024,
+     "_src": {
+      "url": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/009_festivales.html"
+     }
+    },
+    {
+     "titulo": "Abrir Monte",
+     "director": "María Rojas",
+     "pais": "Colombia, Portugal",
+     "anio": 2021,
+     "_src": {
+      "url": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/009_festivales.html"
+     }
+    },
+    {
+     "titulo": "EKOBIO",
+     "director": "Elkin Calderón Guevara, Diego Piñeros García",
+     "pais": "Colombi, Alemania",
+     "anio": 2021,
+     "_src": {
+      "url": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/009_festivales.html"
+     }
+    },
+    {
+     "titulo": "Yugo",
+     "director": "Carlos Gómez Salamanca",
+     "pais": "",
+     "anio": 2021,
+     "_src": {
+      "url": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/009_festivales.html"
+     }
+    }
+   ]
+  },
+  {
+   "dia": "2026-12-07",
+   "hora": "16:00",
+   "sede": "Alianza Francesa",
+   "sala": "",
+   "ciudad": "Bogotá",
+   "texto_grilla": "CI-EXP1** (97')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 97,
+   "codigo": "CI-EXP1",
+   "seccion": "Competencia Internacional",
+   "titulo": "Experimental 1",
+   "has_qa": true,
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-07",
+   "hora": "18:30",
+   "sede": "Alianza Francesa",
+   "sala": "",
+   "ciudad": "Bogotá",
+   "texto_grilla": "CN-EXP** (97')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 97,
+   "codigo": "CN-EXP",
+   "seccion": "Competencia Nacional",
+   "titulo": "Experimental",
+   "has_qa": true,
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-07",
+   "hora": "15:00",
+   "sede": "Centro Ático",
+   "sala": "",
+   "ciudad": "Bogotá",
+   "texto_grilla": "CI-DOC2 (87')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 87,
+   "codigo": "CI-DOC2",
+   "seccion": "Competencia Internacional",
+   "titulo": "Documental 2",
+   "has_qa": false,
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-07",
+   "hora": "18:00",
+   "sede": "Centro Ático",
+   "sala": "",
+   "ciudad": "Bogotá",
+   "texto_grilla": "CI-FIC3** (99')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 99,
+   "codigo": "CI-FIC3",
+   "seccion": "Competencia Internacional",
+   "titulo": "Ficción 3",
+   "has_qa": true,
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-08",
+   "hora": "16:30",
+   "sede": "City U",
+   "sala": "Lounge Bogoshorts Plazoleta UHeart",
+   "ciudad": "Bogotá",
+   "texto_grilla": "Competencia Nacional Videoclips",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "titulo": "Competencia Nacional Videoclips",
+   "seccion": "Franja Encuentros Cercanos",
+   "tipo": "evento",
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-08",
+   "hora": "14:00",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala Capital",
+   "ciudad": "Bogotá",
+   "texto_grilla": "CI-VC/CN-VC** (83')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 83,
+   "codigo": "CI-VC/CN-VC",
+   "titulo": "CI-VC/CN-VC",
+   "seccion": "",
+   "has_qa": true,
+   "_nota": "el código no está en la leyenda de la grilla",
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-08",
+   "hora": "17:00",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala Capital",
+   "ciudad": "Bogotá",
+   "texto_grilla": "PAC-DOC** (84')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 84,
+   "codigo": "PAC-DOC",
+   "seccion": "Panorama",
+   "titulo": "Colombia Documental",
+   "has_qa": true,
+   "acceso": "desconocido",
+   "obras": [
+    {
+     "titulo": "Todas las manos que solté",
+     "director": "Laura Chará",
+     "pais": "Colombia",
+     "_src": {
+      "url": "https://www.instagram.com/p/Dewkg_ukX-2/",
+      "date": "2026-10-21"
+     }
+    },
+    {
+     "titulo": "La garganta del diablo",
+     "director": "Mateo Ramírez",
+     "pais": "Colombia",
+     "_src": {
+      "url": "https://www.instagram.com/p/Dewkg_ukX-2/",
+      "date": "2026-10-21"
+     }
+    },
+    {
+     "titulo": "Borrachos mientras escuchamos las gotas caer",
+     "director": "Santiago Gómez Ramírez",
+     "pais": "Colombia",
+     "_src": {
+      "url": "https://www.instagram.com/p/Dewkg_ukX-2/",
+      "date": "2026-10-21"
+     }
+    },
+    {
+     "titulo": "Geografía espectral",
+     "director": "Manuel Mateo",
+     "pais": "Colombia",
+     "_src": {
+      "url": "https://www.instagram.com/p/Dewkg_ukX-2/",
+      "date": "2026-10-21"
+     }
+    }
+   ]
+  },
+  {
+   "dia": "2026-12-08",
+   "hora": "19:30",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala Capital",
+   "ciudad": "Bogotá",
+   "texto_grilla": "Ganadores 24BOGOSHORTS",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "titulo": "Ganadores 24BOGOSHORTS",
+   "seccion": "",
+   "tipo": "evento",
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-08",
+   "hora": "13:00",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala 2",
+   "ciudad": "Bogotá",
+   "texto_grilla": "F3-01** (94')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 94,
+   "codigo": "F3-01",
+   "seccion": "Fanático Freak Fantástico F3",
+   "titulo": "Programa 01",
+   "has_qa": true,
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-08",
+   "hora": "15:30",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala 2",
+   "ciudad": "Bogotá",
+   "texto_grilla": "CON-LTX** (89')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 89,
+   "codigo": "CON-LTX",
+   "seccion": "Conexión",
+   "titulo": "Latinxs en Norteamérica",
+   "has_qa": true,
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-08",
+   "hora": "18:30",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala 2",
+   "ciudad": "Bogotá",
+   "texto_grilla": "ES-NEXOS (91')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 91,
+   "codigo": "ES-NEXOS",
+   "seccion": "Especiales",
+   "titulo": "Nexos femeninos",
+   "has_qa": false,
+   "acceso": "desconocido",
+   "obras": [
+    {
+     "titulo": "Lo que te falta",
+     "director": "Sara Bermejo",
+     "pais": "España",
+     "anio": 2025,
+     "_src": {
+      "url": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/009_festivales.html"
+     }
+    },
+    {
+     "titulo": "La maleza",
+     "director": "Martina Rodríguez",
+     "pais": "España",
+     "anio": 2026,
+     "_src": {
+      "url": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/009_festivales.html"
+     }
+    },
+    {
+     "titulo": "Fantasy Land",
+     "director": "Aitana Ahrens",
+     "pais": "España",
+     "anio": 2025,
+     "_src": {
+      "url": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/009_festivales.html"
+     }
+    },
+    {
+     "titulo": "Principio de incendio sobre paisaje desierto",
+     "director": "Avelina Prat",
+     "pais": "España",
+     "anio": 2026,
+     "_src": {
+      "url": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/009_festivales.html"
+     }
+    },
+    {
+     "titulo": "Saltar",
+     "director": "Lía Lugilde",
+     "pais": "España",
+     "anio": 2025,
+     "_src": {
+      "url": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/009_festivales.html"
+     }
+    }
+   ]
+  },
+  {
+   "dia": "2026-12-08",
+   "hora": "14:00",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala 3",
+   "ciudad": "Bogotá",
+   "texto_grilla": "ES-ASTRO (66')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 66,
+   "codigo": "ES-ASTRO",
+   "seccion": "Especiales",
+   "titulo": "Especial astrológico: presagios del cielo",
+   "has_qa": false,
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-08",
+   "hora": "16:00",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala 3",
+   "ciudad": "Bogotá",
+   "texto_grilla": "ES-METRO (90')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 90,
+   "codigo": "ES-METRO",
+   "seccion": "Especiales",
+   "titulo": "Metrópolis: cuerpos del futuro",
+   "has_qa": false,
+   "acceso": "desconocido",
+   "obras": [
+    {
+     "titulo": "L´uomo meccanico",
+     "director": "André Deed",
+     "pais": "Italia",
+     "anio": 1921,
+     "_src": {
+      "url": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/005_especial_metropolis.html"
+     }
+    },
+    {
+     "titulo": "Ginoide",
+     "director": "Celia Galán",
+     "pais": "España",
+     "anio": 2023,
+     "_src": {
+      "url": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/005_especial_metropolis.html"
+     }
+    },
+    {
+     "titulo": "Metae",
+     "director": "Elisabeth Caravell",
+     "pais": "Francia",
+     "anio": 2025,
+     "_src": {
+      "url": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/005_especial_metropolis.html"
+     }
+    },
+    {
+     "titulo": "Gofrodita",
+     "director": "Víctor Orozc",
+     "pais": "Alemania, México",
+     "anio": 2026,
+     "_src": {
+      "url": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/005_especial_metropolis.html"
+     }
+    }
+   ]
+  },
+  {
+   "dia": "2026-12-08",
+   "hora": "19:00",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala 3",
+   "ciudad": "Bogotá",
+   "texto_grilla": "FI-LARGO (117')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 117,
+   "codigo": "FI-LARGO",
+   "seccion": "Cortofilia",
+   "titulo": "Largo de cortos",
+   "has_qa": false,
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-08",
+   "hora": "11:00",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Salón de la imagen",
+   "ciudad": "Bogotá",
+   "texto_grilla": "CVR",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "codigo": "CVR",
+   "seccion": "Competencia VR (Realidad virtual)",
+   "titulo": "Competencia realidad virtual",
+   "has_qa": false,
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-08",
+   "hora": "13:30",
+   "sede": "Alianza Francesa",
+   "sala": "",
+   "ciudad": "Bogotá",
+   "texto_grilla": "ES-MILES (71')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 71,
+   "codigo": "ES-MILES",
+   "seccion": "Especiales",
+   "titulo": "Miles Davis, 100 años de jazz",
+   "has_qa": false,
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-08",
+   "hora": "16:00",
+   "sede": "Alianza Francesa",
+   "sala": "",
+   "ciudad": "Bogotá",
+   "texto_grilla": "WT-CRO2 (77')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 77,
+   "codigo": "WT-CRO2",
+   "seccion": "World Tour",
+   "titulo": "Croacia 2",
+   "has_qa": false,
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-08",
+   "hora": "18:30",
+   "sede": "Alianza Francesa",
+   "sala": "",
+   "ciudad": "Bogotá",
+   "texto_grilla": "SO-FCO (100')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 100,
+   "codigo": "SO-FCO",
+   "seccion": "Fuera de Competencia",
+   "titulo": "Selección Oficial",
+   "has_qa": false,
+   "acceso": "desconocido",
+   "obras": [
+    {
+     "titulo": "Plan contraplan / Shot Reverse Shot",
+     "director": "Radu Jude, Adrian Cioflâncă",
+     "pais": "Rumania",
+     "anio": 2026,
+     "_src": {
+      "url": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/007_fuera_de_competencia.html"
+     }
+    },
+    {
+     "titulo": "They’re Here",
+     "director": "Laura Poitras, Rachel Lauren Mueller",
+     "pais": "Estados Unidos",
+     "anio": 2026,
+     "_src": {
+      "url": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/007_fuera_de_competencia.html"
+     }
+    },
+    {
+     "titulo": "Halayon (Wild Asparagus)",
+     "director": "Avi Mograbi",
+     "pais": "Portugal, Francia",
+     "anio": 2026,
+     "_src": {
+      "url": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/007_fuera_de_competencia.html"
+     }
+    },
+    {
+     "titulo": "La Sentinelle",
+     "director": "Ali Cherri",
+     "pais": "Francia",
+     "anio": 2026,
+     "_src": {
+      "url": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/007_fuera_de_competencia.html"
+     }
+    }
+   ]
+  },
+  {
+   "dia": "2026-12-08",
+   "hora": "15:00",
+   "sede": "Centro Ático",
+   "sala": "",
+   "ciudad": "Bogotá",
+   "texto_grilla": "CI-FIC1 (94')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 94,
+   "codigo": "CI-FIC1",
+   "seccion": "Competencia Internacional",
+   "titulo": "Ficción 1",
+   "has_qa": false,
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-08",
+   "hora": "18:00",
+   "sede": "Centro Ático",
+   "sala": "",
+   "ciudad": "Bogotá",
+   "texto_grilla": "ES-ZOD (65')",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "duracion_min": 65,
+   "codigo": "ES-ZOD",
+   "seccion": "Especiales",
+   "titulo": "Especial 40 años Caballeros del Zodiaco",
+   "has_qa": false,
+   "acceso": "desconocido"
+  },
+  {
+   "dia": "2026-12-08",
+   "hora": "18:30",
+   "sede": "Teatro Delia Zapata Olivella",
+   "sala": "",
+   "ciudad": "Bogotá",
+   "texto_grilla": "Ceremonia de Clausura y Premiación",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+    "date": "2026-10-23"
+   },
+   "titulo": "Ceremonia de Clausura y Premiación",
+   "seccion": "",
+   "tipo": "evento",
+   "acceso": "desconocido"
+  }
+ ],
+ "_descartadas": [
+  {
+   "texto": "Franja Encuentros Cercanos Competencia Nacional***",
+   "dia": "2026-12-01",
+   "sede": "City U Lounge Bogoshorts Plazoleta UHeart",
+   "por_que": "rótulo de la fila (flecha al mié 2), no una celda"
+  },
+  {
+   "texto": "Acreditaciones",
+   "dia": "2026-12-02",
+   "sede": "Alianza Francesa Sótano 1",
+   "por_que": "punto de acreditación, no una función"
+  },
+  {
+   "texto": "BFM",
+   "dia": "2026-12-04",
+   "sede": "City U",
+   "por_que": "la fila de City U es la franja del BFM - BOGOSHORTS Film Market (industria, varios días)"
+  },
+  {
+   "texto": "FI-ENA1 /",
+   "dia": "2026-12-04",
+   "sede": "Retina Latina",
+   "por_que": "FI-ENA1 / FI-ENA2 en línea, «Disponibles entre el 1 y el 15 de diciembre»: sin sala ni hora"
+  },
+  {
+   "texto": "- BOGOSHORTS Film Market",
+   "dia": "2026-12-05",
+   "sede": "City U",
+   "por_que": "la fila de City U es la franja del BFM - BOGOSHORTS Film Market (industria, varios días)"
+  },
+  {
+   "texto": "FI-ENA2",
+   "dia": "2026-12-05",
+   "sede": "Retina Latina",
+   "por_que": "FI-ENA1 / FI-ENA2 en línea, «Disponibles entre el 1 y el 15 de diciembre»: sin sala ni hora"
+  }
+ ]
+}

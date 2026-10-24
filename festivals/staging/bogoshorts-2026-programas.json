@@ -1,0 +1,479 @@
+{
+ "_provenance": {
+  "fuente": "boletines de prensa 005/007/009 + pies de IG @bogoshorts (Apify, 23 oct 2026)",
+  "capturado": "2026-10-23",
+  "metodo": "lista «Título - DIR.» del boletín; «🎥 Título — Dir.» del pie"
+ },
+ "programas": {
+  "ES-METRO": [
+   {
+    "titulo": "L´uomo meccanico",
+    "director": "André Deed",
+    "pais": "Italia",
+    "anio": 1921,
+    "_src": {
+     "url": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/005_especial_metropolis.html"
+    }
+   },
+   {
+    "titulo": "Ginoide",
+    "director": "Celia Galán",
+    "pais": "España",
+    "anio": 2023,
+    "_src": {
+     "url": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/005_especial_metropolis.html"
+    }
+   },
+   {
+    "titulo": "Metae",
+    "director": "Elisabeth Caravell",
+    "pais": "Francia",
+    "anio": 2025,
+    "_src": {
+     "url": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/005_especial_metropolis.html"
+    }
+   },
+   {
+    "titulo": "Gofrodita",
+    "director": "Víctor Orozc",
+    "pais": "Alemania, México",
+    "anio": 2026,
+    "_src": {
+     "url": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/005_especial_metropolis.html"
+    }
+   }
+  ],
+  "SO-FCO": [
+   {
+    "titulo": "Plan contraplan / Shot Reverse Shot",
+    "director": "Radu Jude, Adrian Cioflâncă",
+    "pais": "Rumania",
+    "anio": 2026,
+    "_src": {
+     "url": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/007_fuera_de_competencia.html"
+    }
+   },
+   {
+    "titulo": "They’re Here",
+    "director": "Laura Poitras, Rachel Lauren Mueller",
+    "pais": "Estados Unidos",
+    "anio": 2026,
+    "_src": {
+     "url": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/007_fuera_de_competencia.html"
+    }
+   },
+   {
+    "titulo": "Halayon (Wild Asparagus)",
+    "director": "Avi Mograbi",
+    "pais": "Portugal, Francia",
+    "anio": 2026,
+    "_src": {
+     "url": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/007_fuera_de_competencia.html"
+    }
+   },
+   {
+    "titulo": "La Sentinelle",
+    "director": "Ali Cherri",
+    "pais": "Francia",
+    "anio": 2026,
+    "_src": {
+     "url": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/007_fuera_de_competencia.html"
+    }
+   }
+  ],
+  "ES-NEXOS": [
+   {
+    "titulo": "Lo que te falta",
+    "director": "Sara Bermejo",
+    "pais": "España",
+    "anio": 2025,
+    "_src": {
+     "url": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/009_festivales.html"
+    }
+   },
+   {
+    "titulo": "La maleza",
+    "director": "Martina Rodríguez",
+    "pais": "España",
+    "anio": 2026,
+    "_src": {
+     "url": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/009_festivales.html"
+    }
+   },
+   {
+    "titulo": "Fantasy Land",
+    "director": "Aitana Ahrens",
+    "pais": "España",
+    "anio": 2025,
+    "_src": {
+     "url": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/009_festivales.html"
+    }
+   },
+   {
+    "titulo": "Principio de incendio sobre paisaje desierto",
+    "director": "Avelina Prat",
+    "pais": "España",
+    "anio": 2026,
+    "_src": {
+     "url": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/009_festivales.html"
+    }
+   },
+   {
+    "titulo": "Saltar",
+    "director": "Lía Lugilde",
+    "pais": "España",
+    "anio": 2025,
+    "_src": {
+     "url": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/009_festivales.html"
+    }
+   }
+  ],
+  "HUMOR": [
+   {
+    "titulo": "Bus",
+    "director": "André Balbuena",
+    "pais": "Perú",
+    "anio": 2025,
+    "_src": {
+     "url": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/009_festivales.html"
+    }
+   },
+   {
+    "titulo": "Le dérapage",
+    "director": "Aurélien Laplace",
+    "pais": "Francia",
+    "anio": 2025,
+    "_src": {
+     "url": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/009_festivales.html"
+    }
+   },
+   {
+    "titulo": "El Cortejo",
+    "director": "Gerardo García León",
+    "pais": "México",
+    "anio": 2025,
+    "_src": {
+     "url": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/009_festivales.html"
+    }
+   },
+   {
+    "titulo": "Shit Happened",
+    "director": "Simon Schares",
+    "pais": "Alemania",
+    "anio": 2026,
+    "_src": {
+     "url": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/009_festivales.html"
+    }
+   },
+   {
+    "titulo": "Tenéis que verlo",
+    "director": "Nacho Solana",
+    "pais": "España",
+    "anio": 2025,
+    "_src": {
+     "url": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/009_festivales.html"
+    }
+   },
+   {
+    "titulo": "TRIO",
+    "director": "Fridtjof Josefsen, Morten Borgestad",
+    "pais": "Noruega",
+    "anio": 2025,
+    "_src": {
+     "url": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/009_festivales.html"
+    }
+   }
+  ],
+  "FES-LADRA": [
+   {
+    "titulo": "Cassandra",
+    "director": "Martín Arbeláez",
+    "pais": "Colombia, Francia",
+    "anio": 2025,
+    "_src": {
+     "url": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/009_festivales.html"
+    }
+   },
+   {
+    "titulo": "About Happy Hippos and Sad Peacocks",
+    "director": "Elkin Calderón Guevara, Johannes Förster",
+    "pais": "Col, Ale",
+    "anio": 2024,
+    "_src": {
+     "url": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/009_festivales.html"
+    }
+   },
+   {
+    "titulo": "Abrir Monte",
+    "director": "María Rojas",
+    "pais": "Colombia, Portugal",
+    "anio": 2021,
+    "_src": {
+     "url": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/009_festivales.html"
+    }
+   },
+   {
+    "titulo": "EKOBIO",
+    "director": "Elkin Calderón Guevara, Diego Piñeros García",
+    "pais": "Colombi, Alemania",
+    "anio": 2021,
+    "_src": {
+     "url": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/009_festivales.html"
+    }
+   },
+   {
+    "titulo": "Yugo",
+    "director": "Carlos Gómez Salamanca",
+    "pais": "",
+    "anio": 2021,
+    "_src": {
+     "url": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/009_festivales.html"
+    }
+   }
+  ],
+  "PAC-DOC": [
+   {
+    "titulo": "Todas las manos que solté",
+    "director": "Laura Chará",
+    "pais": "Colombia",
+    "_src": {
+     "url": "https://www.instagram.com/p/Dewkg_ukX-2/",
+     "date": "2026-10-21"
+    }
+   },
+   {
+    "titulo": "La garganta del diablo",
+    "director": "Mateo Ramírez",
+    "pais": "Colombia",
+    "_src": {
+     "url": "https://www.instagram.com/p/Dewkg_ukX-2/",
+     "date": "2026-10-21"
+    }
+   },
+   {
+    "titulo": "Borrachos mientras escuchamos las gotas caer",
+    "director": "Santiago Gómez Ramírez",
+    "pais": "Colombia",
+    "_src": {
+     "url": "https://www.instagram.com/p/Dewkg_ukX-2/",
+     "date": "2026-10-21"
+    }
+   },
+   {
+    "titulo": "Geografía espectral",
+    "director": "Manuel Mateo",
+    "pais": "Colombia",
+    "_src": {
+     "url": "https://www.instagram.com/p/Dewkg_ukX-2/",
+     "date": "2026-10-21"
+    }
+   }
+  ],
+  "PAC-FIC": [
+   {
+    "titulo": "Mi amigo, el arquitecto",
+    "director": "Óscar Garzón",
+    "pais": "Colombia",
+    "_src": {
+     "url": "https://www.instagram.com/p/Det96D6EXZh/",
+     "date": "2026-10-20"
+    }
+   },
+   {
+    "titulo": "El Cazador",
+    "director": "Luciana Riso Soto, Manuel Villa",
+    "pais": "Colombia",
+    "_src": {
+     "url": "https://www.instagram.com/p/Det96D6EXZh/",
+     "date": "2026-10-20"
+    }
+   },
+   {
+    "titulo": "La línea del mar",
+    "director": "Melissa Saavedra Gil",
+    "pais": "Colombia",
+    "_src": {
+     "url": "https://www.instagram.com/p/Det96D6EXZh/",
+     "date": "2026-10-20"
+    }
+   },
+   {
+    "titulo": "Suite Intercontinental",
+    "director": "Lola Tartane",
+    "pais": "Colombia, Francia",
+    "_src": {
+     "url": "https://www.instagram.com/p/Det96D6EXZh/",
+     "date": "2026-10-20"
+    }
+   }
+  ],
+  "PAC-EXP": [
+   {
+    "titulo": "Prueba de cámara",
+    "director": "David Correa F.",
+    "pais": "Colombia",
+    "_src": {
+     "url": "https://www.instagram.com/p/De0HT9sDnpy/",
+     "date": "2026-10-22"
+    }
+   },
+   {
+    "titulo": "Espaciar",
+    "director": "Daniela Giraldo Suárez",
+    "pais": "Colombia",
+    "_src": {
+     "url": "https://www.instagram.com/p/De0HT9sDnpy/",
+     "date": "2026-10-22"
+    }
+   },
+   {
+    "titulo": "Susurros",
+    "director": "Marta Hincapié",
+    "pais": "Colombia",
+    "_src": {
+     "url": "https://www.instagram.com/p/De0HT9sDnpy/",
+     "date": "2026-10-22"
+    }
+   },
+   {
+    "titulo": "Lejanía",
+    "director": "Daniel Velásquez Patarroyo",
+    "pais": "Colombia",
+    "_src": {
+     "url": "https://www.instagram.com/p/De0HT9sDnpy/",
+     "date": "2026-10-22"
+    }
+   },
+   {
+    "titulo": "El Salto",
+    "director": "Jerónimo Rincón",
+    "pais": "Colombia",
+    "_src": {
+     "url": "https://www.instagram.com/p/De0HT9sDnpy/",
+     "date": "2026-10-22"
+    }
+   },
+   {
+    "titulo": "Lamentos de un balcón",
+    "director": "Juan Chispas",
+    "pais": "Colombia",
+    "_src": {
+     "url": "https://www.instagram.com/p/De0HT9sDnpy/",
+     "date": "2026-10-22"
+    }
+   }
+  ],
+  "ES-PER": [
+   {
+    "titulo": "Red dress. No straps",
+    "director": "Maryam Mohajer",
+    "pais": "Reino Unido",
+    "_src": {
+     "url": "https://www.instagram.com/p/DecGoIkDrVs/",
+     "date": "2026-10-13"
+    }
+   },
+   {
+    "titulo": "À cœur perdu",
+    "director": "Sarah Saidan",
+    "pais": "Francia",
+    "_src": {
+     "url": "https://www.instagram.com/p/DecGoIkDrVs/",
+     "date": "2026-10-13"
+    }
+   },
+   {
+    "titulo": "Beach Flags",
+    "director": "Sarah Saidan",
+    "pais": "Francia",
+    "_src": {
+     "url": "https://www.instagram.com/p/DecGoIkDrVs/",
+     "date": "2026-10-13"
+    }
+   },
+   {
+    "titulo": "Noon, the Bread from Tehran",
+    "director": "Roshanak Roshan",
+    "pais": "Francia",
+    "_src": {
+     "url": "https://www.instagram.com/p/DecGoIkDrVs/",
+     "date": "2026-10-13"
+    }
+   },
+   {
+    "titulo": "The Soloists",
+    "director": "Mehrnaz Abdollahinia, Feben Elias Woldehawariat, Razakh Issaka, Celeste Jamneck, Yi Liu",
+    "pais": "Francia",
+    "_src": {
+     "url": "https://www.instagram.com/p/DecGoIkDrVs/",
+     "date": "2026-10-13"
+    }
+   },
+   {
+    "titulo": "Our Uniform",
+    "director": "Yegane Moghaddam",
+    "pais": "Irán",
+    "_src": {
+     "url": "https://www.instagram.com/p/DecGoIkDrVs/",
+     "date": "2026-10-13"
+    }
+   },
+   {
+    "titulo": "End of summer",
+    "director": "Tara Attarzadeh",
+    "pais": "Irán",
+    "_src": {
+     "url": "https://www.instagram.com/p/DecGoIkDrVs/",
+     "date": "2026-10-13"
+    }
+   }
+  ],
+  "F3-ALIENS": [
+   {
+    "titulo": "Asteria",
+    "director": "Lola Grand, Alexandre Arpentinier, Mathieu Blanchys, Tristan Lamarca, Thomas Lemaille y Jean-Charles Lusseau",
+    "pais": "Francia",
+    "_src": {
+     "url": "https://www.instagram.com/p/DehCoz4kZkM/",
+     "date": "2026-10-15"
+    }
+   },
+   {
+    "titulo": "Dédalo",
+    "director": "Jerónimo Rocha",
+    "pais": "Portugal",
+    "_src": {
+     "url": "https://www.instagram.com/p/DehCoz4kZkM/",
+     "date": "2026-10-15"
+    }
+   },
+   {
+    "titulo": "Mis-Drop",
+    "director": "Ferand Peek",
+    "pais": "Nueva Zelanda",
+    "_src": {
+     "url": "https://www.instagram.com/p/DehCoz4kZkM/",
+     "date": "2026-10-15"
+    }
+   },
+   {
+    "titulo": "HDLT",
+    "director": "ARTEFACTUM SUBA",
+    "pais": "Colombia",
+    "_src": {
+     "url": "https://www.instagram.com/p/DehCoz4kZkM/",
+     "date": "2026-10-15"
+    }
+   },
+   {
+    "titulo": "R’ha",
+    "director": "Kaleb Lechowski",
+    "pais": "Alemania",
+    "_src": {
+     "url": "https://www.instagram.com/p/DehCoz4kZkM/",
+     "date": "2026-10-15"
+    }
+   }
+  ]
+ }
+}
