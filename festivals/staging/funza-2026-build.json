@@ -10,7 +10,7 @@
  "displayName": "Festival de Cine Funza",
  "fullName": "4.º Festival de Cine Funza 2026",
  "shortName": "FUNZA",
- "tagline": "Festival de Cine del Centro Cultural Bacatá",
+ "tagline": "",
  "city": "Funza",
  "country": "CO",
  "dates": "18–21 NOV",
@@ -1407,8 +1407,8 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-25T08:32:38",
-  "plan_sha": "aa3af3e491cc6bde",
+  "fecha": "2026-10-25T09:08:13",
+  "plan_sha": "dd4f864cb7dd9404",
   "paso": 6,
   "cmd": "python3 pipeline/funza-2026-verificar.py"
  }

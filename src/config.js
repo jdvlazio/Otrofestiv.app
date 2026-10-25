@@ -1072,7 +1072,7 @@ export const FESTIVAL_CONFIG={
     // llevado a 400×600 (keyart-estirado). Lo mandó el festival a Juan el 25 oct
     keyArt:'/assets/keyart/funza2026.jpg',
     // PROPUESTA a Juan (25 oct): dice qué es sin repetir el nombre; el lema vive en el afiche
-    tagline:'Festival de Cine del Centro Cultural Bacatá',
+    tagline:'',
     storageKey:'funza2026_',festivalStartStr:'2026-11-18T00:00:00',festivalEndStr:'2026-11-21T23:59:00',
     festivalDates:{'2026-11-18':'2026-11-18','2026-11-19':'2026-11-19','2026-11-20':'2026-11-20','2026-11-21':'2026-11-21'},
     days:[{k:'2026-11-18',d:18,lbl:'MIÉ'},{k:'2026-11-19',d:19,lbl:'JUE'},{k:'2026-11-20',d:20,lbl:'VIE'},{k:'2026-11-21',d:21,lbl:'SÁB'}],
