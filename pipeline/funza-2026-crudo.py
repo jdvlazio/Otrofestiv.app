@@ -23,7 +23,10 @@ DECISIONES (pedido de Juan, 25 oct 2026):
     (aperturas, paneles, conferencia, charla, rueda, cierre);
   · la LOGÍSTICA no se publica (registro, pausa de café, almuerzo);
   · los dos «Taller audiovisual escolar» (Formación descentralizada) parecen
-    para colegios: no se publican salvo evidencia (DUDA abierta con Juan);
+    son abiertos (festival, 25 oct) pero sin sede en ninguna fuente: no se
+    publican hasta saber dónde son (DUDA abierta con Juan);
+  · «Taller efectos especiales o stop motion»: abierto, entrada libre
+    (confirmado por el festival, 25 oct);
   · títulos de actividad VERBATIM; sección = el «Componente» en caja de Título;
   · las proyecciones llevan el título de la obra («Proyección Reflejos» →
     Reflejos). «HORIZONTES» es «Horizonte» (César Augusto Acevedo, 2024,
@@ -58,7 +61,7 @@ NO_SE_PUBLICA = {
     'Registro y bienvenida': 'logística del Encuentro (registro y estación de café)',
     'Pausa de café': 'logística',
     'Almuerzo Encuentro': 'logística: «Almuerzo de participantes inscritos e invitados»',
-    'Taller audiovisual escolar': 'Formación descentralizada para colegios; no consta que sea abierto (duda con Juan)',
+    'Taller audiovisual escolar': 'el festival confirma (25 oct) que es ABIERTO, pero es Formación descentralizada y la agenda no da sede: no se publica hasta saber dónde es (duda con Juan)',
 }
 # proyección → la obra
 OBRAS = {
