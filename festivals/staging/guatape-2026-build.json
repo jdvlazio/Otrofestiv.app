@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "Instagram @guatapefilmfest — el carrusel oficial de programación (11 láminas)",
-  "capturado": "2026-10-23",
+  "capturado": "2026-10-25",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_sedes": "El nombre de la lámina → la sede, en tabla explícita. El Domo y la Tarima Principal están dentro del Parque Principal y van como sala; la Pantalla CORNARE es la sala del Malecón.",
@@ -1469,6 +1469,8 @@
    "day_order": 1,
    "venue": "Muelle Corona - Guatapé",
    "has_qa": false,
+   "synopsis": "Dos fantasmas, una madre y su hijo, buscan al padre desaparecido del muchacho en un viaje físico y espiritual por un mundo arrasado por la guerra. Basilio, que en vida fue un criminal, debe revivir sus actos con su madre como testigo. Solo a través de un gran sacrificio encontrarán la redención que buscan.",
+   "synopsis_lang": "es",
    "poster": "/assets/guatape-2026/horizonte.jpg",
    "posterSource": "tmdb",
    "_src": {
@@ -4509,7 +4511,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-23T13:16:46",
+  "fecha": "2026-10-25T10:04:38",
   "plan_sha": "e4564939112b8067",
   "paso": 6,
   "cmd": "python3 pipeline/guatape-2026-verificar.py"

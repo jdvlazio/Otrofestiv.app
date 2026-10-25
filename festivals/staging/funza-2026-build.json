@@ -1350,6 +1350,8 @@
    "day_order": 3,
    "venue": "Centro Cultural Bacatá - Funza",
    "has_qa": false,
+   "synopsis": "Dos fantasmas, una madre y su hijo, buscan al padre desaparecido del muchacho en un viaje físico y espiritual por un mundo arrasado por la guerra. Basilio, que en vida fue un criminal, debe revivir sus actos con su madre como testigo. Solo a través de un gran sacrificio encontrarán la redención que buscan.",
+   "synopsis_lang": "es",
    "poster": "/assets/funza-2026/horizonte.jpg",
    "posterSource": "tmdb",
    "_src": {
@@ -1407,9 +1409,9 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-25T09:34:58",
-  "plan_sha": "dd4f864cb7dd9404",
-  "paso": 4,
-  "cmd": "python3 pipeline/ensamblar.py funza-2026"
+  "fecha": "2026-10-25T10:04:03",
+  "plan_sha": "f88fc562837e7b4f",
+  "paso": 6,
+  "cmd": "python3 pipeline/funza-2026-verificar.py"
  }
 }
