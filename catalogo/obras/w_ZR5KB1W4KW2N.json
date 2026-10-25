@@ -8,6 +8,12 @@
  "directores": [
   "Katerine Franco Garzón"
  ],
+ "aliases": [
+  {
+   "titulo": "El festín de las moscas",
+   "tipo": "festival"
+  }
+ ],
  "afiche": {
   "archivo": "/assets/bhff-2026/el-festin-de-las-moscas.jpg",
   "veredicto": "oficial"
@@ -20,6 +26,7 @@
   }
  ],
  "presentaciones": [
-  "bhff-2026"
+  "bhff-2026",
+  "cortoscali-2026"
  ]
 }
