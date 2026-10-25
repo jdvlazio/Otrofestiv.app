@@ -93,9 +93,13 @@
    "Co.Laboratorio": [
     "Co.Laboratorio - Bogotá",
     ""
+   ],
+   "Cinemateca Fontanar del Río": [
+    "Cinemateca Fontanar del Río - Bogotá",
+    ""
    ]
   },
-  "_por_que_sedes": "Tabla canónica en el crudo (SEDES): la sala de la parrilla → (sede, sala). «CEFE Chapinero» = Centro Felicidad Chapinero. «Cinematecas locales» (3 funciones) queda fuera: son dos (El Tunal y Fontanar del Río) y el festival no dice cuál; preguntado. Pines: los 4 a mano, con dos fuentes.",
+  "_por_que_sedes": "Tabla canónica en el crudo (SEDES): la sala de la parrilla → (sede, sala). «CEFE Chapinero» = Centro Felicidad Chapinero. «Cinematecas locales»: queda fuera salvo la función cuya sede publicó la agenda de la Cinemateca (SEDE_LOCAL en el crudo: Nico → Fontanar del Río, 25 oct); las otras dos, sin sede publicada. Pines: los 4 a mano, con dos fuentes.",
   "name": "Bogotá Horror",
   "displayName": "Bogotá Horror",
   "fullName": "Bogotá Horror Film Festival 8",
