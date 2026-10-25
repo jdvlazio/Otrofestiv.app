@@ -67,6 +67,11 @@ class Historial(unittest.TestCase):
         self.assertEqual([i['shortCode'] for i in nuevos['a']], ['nuevo'])
         self.assertEqual(sin_leer, {})
 
+    def test_colaborativo_cuenta_como_del_festival(self):
+        items = [{'ownerUsername': 'productora', 'timestamp': '2026-10-24T18:22:00.000Z', 'shortCode': 'colab',
+                  'coauthorProducers': [{'username': 'otra'}, {'username': 'a'}]}]
+        self.assertEqual([i['shortCode'] for i in v.clasificar(items, ['a'], {})[0]['a']], ['colab'])
+
     def test_bloqueo_no_es_sin_novedades(self):
         items = [{'error': 'blocked', 'username': 'a'}]
         self.assertIn('a', v.clasificar(items, ['a', 'b'], {})[1])
