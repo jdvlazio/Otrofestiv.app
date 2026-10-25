@@ -121,8 +121,15 @@ def clasificar(items, cuentas, estado):
             errores[c] = it.get('errorDescription') or it.get('error')
             continue
         c = it.get('ownerUsername')
-        if c not in nuevos:          # posts donde la cuenta solo sale etiquetada
-            continue
+        if c not in nuevos:
+            # Post colaborativo: lo publica otra cuenta CON el festival como
+            # coautor (25 oct: la cancelación de «Las pesadillas del siervo»
+            # en Ficcali salió así y el vigía la descartó). Cuenta como del
+            # festival. Solo etiquetado (sin coautoría) sigue descartado.
+            coautores = {x.get('username') for x in it.get('coauthorProducers') or []}
+            c = next((x for x in cuentas if x in coautores), None)
+            if not c:
+                continue
         ult = estado.get(c, {}).get('ultimo_post')
         ts = (it.get('timestamp') or '').replace('Z', '').split('.')[0]
         if ult and ts <= ult:
