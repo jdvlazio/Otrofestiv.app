@@ -1,5 +1,5 @@
 {
- "_nota": "FECISO 2026 — 10.º Festival de Cine Independiente de Sogamoso (Sogamoso / Sugamuxi, Boyacá, 1–7 nov 2026). PRE-ONBOARDING: 34 obras de cuatro selecciones oficiales publicadas en IG (Cortometraje Boyacense, Largometraje Nacional, Videoclip, Cortometraje Internacional). Sin web oficial; las láminas son stills, no afiches. La programación no está publicada (21 oct). Cuando salga se agregan crudo/enriquecer/ensamblar, en el modelo de la función (docs/FUNCION.md).",
+ "_nota": "FECISO 2026 — 10.º Festival de Cine Independiente de Sogamoso (Sogamoso / Sugamuxi, Boyacá, 1–7 nov 2026). PRE-ONBOARDING: 61 obras de siete selecciones oficiales publicadas en IG (Cortometraje Boyacense, Largometraje Nacional, Videoclip, Cortometraje Internacional, Nuevos Realizadores, Cortometraje Animación Nacional, Cortometraje Documental Nacional). Sin web oficial; las láminas son stills, no afiches. La programación no está publicada (21 oct). Cuando salga se agregan crudo/enriquecer/ensamblar, en el modelo de la función (docs/FUNCION.md).",
  "radar": 1233,
  "fuentes_vivas": [],
  "_fuentes_vivas": "todo sale de láminas de IG (sin web oficial): no hay fuente que el actualizador pueda releer",
@@ -8,12 +8,25 @@
   "DeseCXgEU_t": "Selección Oficial Cortometraje Boyacense 2026 (19 oct, 12 láminas)",
   "Decuil8klP4": "Selección Oficial Largometraje Nacional 2026 (13 oct, 7 láminas)",
   "DedeCs2keOk": "Selección Oficial Videoclip 2026 (13 oct, 9 láminas)",
-  "DehVQ63Ee7e": "Selección Oficial Cortometraje Internacional (15 oct, 10 láminas)"
+  "DehVQ63Ee7e": "Selección Oficial Cortometraje Internacional (15 oct, 10 láminas)",
+  "DezbvdKEdBP": "Selección Oficial Nuevos Realizadores 2026 (22 oct, 12 láminas)",
+  "De0MXC6ESng": "Selección Oficial Cortometraje Animación Nacional 2026 (22 oct, 5 láminas)",
+  "De4bPYXkf4D": "Selección Oficial Cortometraje Documental Nacional 2026 (24 oct, 13 láminas; el pie da la sede: Cinemateca del Sol, Sogamoso, 1–7 nov)"
  },
+ "sedes": [
+  {
+   "nombre": "Cinemateca del Sol",
+   "direccion": "Cl. 9 #9-66, Sogamoso, Boyacá",
+   "lat": 5.7124301,
+   "lng": -72.92811,
+   "_prec": "manual",
+   "_fuente": "Google Maps (lugar: Cinemateca del Sol, /g/11v_8nr3hb), 25 oct 2026; la nombra el pie de De4bPYXkf4D"
+  }
+ ],
  "pasos": [
   {
    "cmd": "python3 pipeline/feciso-2026-catalogo.py",
-   "que": "las láminas de los 4 carruseles (fuentes/ig/<sc>/) transcritas a ojo y cruzadas con ig-lecturas → catálogo (34 obras)"
+   "que": "las láminas de los 7 carruseles (fuentes/ig/<sc>/) transcritas a ojo y cruzadas con ig-lecturas → catálogo (61 obras)"
   },
   {
    "cmd": "python3 pipeline/enriquecer_catalogo.py festivals/staging/feciso-2026-catalogo.json",
@@ -21,7 +34,7 @@
   }
  ],
  "_fuentes_versionadas": {
-  "festivals/staging/feciso-2026-catalogo.json": "la selección (34 obras); la leerá el crudo",
+  "festivals/staging/feciso-2026-catalogo.json": "la selección (61 obras); la leerá el crudo",
   "festivals/staging/feciso-2026-catalogo-enriquecido.json": "las fichas de la cascada, que escribe el paso 2",
   "festivals/staging/feciso-2026-correcciones.json": "sin_afiche: el porqué de cada obra sin afiche"
  }
