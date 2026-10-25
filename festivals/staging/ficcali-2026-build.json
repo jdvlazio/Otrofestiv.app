@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "ficcali.com — Programación 2026 (WP 14870) + fichas de la Selección 2026",
-  "capturado": "2026-10-23",
+  "capturado": "2026-10-25",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "radar": 1024,
@@ -442,6 +442,15 @@
    "lat": 3.4506674,
    "lng": -76.5442123,
    "address": "Avenida Colombia #4 Oeste-49"
+  },
+  "Cine Club El Ventanal - Cali": {
+   "short": "Cine Club El Ventanal",
+   "city": "Cali",
+   "_prec": "manual",
+   "_nota": "Google Maps 3.4018453,-76.5511452 («Cra. 63a #2A-89, Cuarto de Legua, Cali») · OSM/Nominatim solo da el tramo de Carrera 63A (Pampalinda) 3.4013836,-76.5468378. Dirección del post de briosafilms + @festivaldecinecali (De4w_O_mYax, 24 oct 2026): «Cine Club El Ventanal (Cra 63A #2A -89)».",
+   "lat": 3.4018453,
+   "lng": -76.5511452,
+   "address": "Cra. 63A #2A-89, Cuarto de Legua"
   }
  },
  "_avisos_id": [],
@@ -6672,10 +6681,10 @@
     "2026-10-23",
     "20:30"
    ],
-   "day": "2026-10-23",
-   "time": "20:30",
-   "day_order": 7,
-   "venue": "Cine Colombia Unicentro - Cali",
+   "day": "2026-10-25",
+   "time": "15:00",
+   "day_order": 9,
+   "venue": "Cine Club El Ventanal - Cali",
    "has_qa": false,
    "synopsis": "En Colombia, el obispo Miguel Ángel Builes impuso sus doctrinas ultraconservadoras, basadas en represión y miedo. Su ideología permeó el pensamiento de un país y creó el caldo de cultivo para el nacimiento de uno de los primeros grupos paramilitares de Colombia, Los doce apóstoles, en esa región, durante los años noventa del siglo XX. Su jefe supremo era un cura admirador de las ideas del obispo. «Por medio de archivos familiares, represento algunos de sus desvelos. El hilo de la película son las pesadillas de Builes, que él registraba en su “Diario espiritual”. Propongo un viaje, un acto de provocación a un obispo muerto, una pequeña victoria ante el pensamiento conservador y los miles de puritanos en el mundo que aún son soldados de esa ideología».",
    "synopsis_lang": "es",
@@ -6693,19 +6702,19 @@
    "is_free": true,
    "_procedencia": {
     "day": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-06",
-     "url": "https://ficcali.com/programacion-ficcali-2026/"
+     "tipo": "festival-ig",
+     "fecha": "2026-10-24",
+     "url": "https://www.instagram.com/p/De5nhiFMzEy/"
     },
     "time": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-06",
-     "url": "https://ficcali.com/programacion-ficcali-2026/"
+     "tipo": "festival-ig",
+     "fecha": "2026-10-24",
+     "url": "https://www.instagram.com/p/De4w_O_mYax/"
     },
     "venue": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-06",
-     "url": "https://ficcali.com/programacion-ficcali-2026/"
+     "tipo": "festival-ig",
+     "fecha": "2026-10-24",
+     "url": "https://www.instagram.com/p/De4w_O_mYax/"
     },
     "duration": {
      "tipo": "festival-web",
@@ -9608,7 +9617,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-23T07:20:24",
+  "fecha": "2026-10-25T06:24:57",
   "plan_sha": "24bc04ac59ca2585",
   "paso": 11,
   "cmd": "python3 pipeline/ficcali-2026-verificar.py"
