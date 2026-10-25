@@ -10,11 +10,17 @@
     {
      "festival": "ficica-2026",
      "titulo": "Appol-o",
-     "country": "Colombia"
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "7 min",
+     "sinopsis": "Tras la conquista de la Luna por Estados Unidos, el primer astronauta presencia la llegada de una cápsula soviética. Decidido a defender el nuevo territorio, la persigue hasta el lado oscuro, donde descubre los restos de una carrera espacial fallida y a un tercer contendiente que amenaza no solo la Luna, sino el orden universal."
     }
    ],
-   "_verificado": "ya publicada en ficica-2026: se reusan sus datos",
-   "pais": "Colombia"
+   "_verificado": "ya publicada en ficica-2026: se reusa su sinopsis",
+   "sinopsis": "Tras la conquista de la Luna por Estados Unidos, el primer astronauta presencia la llegada de una cápsula soviética. Decidido a defender el nuevo territorio, la persigue hasta el lado oscuro, donde descubre los restos de una carrera espacial fallida y a un tercer contendiente que amenaza no solo la Luna, sino el orden universal.",
+   "pais": "Colombia",
+   "anio": 2025,
+   "duracion_tmdb": 7
   },
   {
    "titulo": "Aferrado",
