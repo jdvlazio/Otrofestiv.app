@@ -77,6 +77,13 @@ def frase(t):
     return re.sub(r'^(\W*)(\w)', lambda m: m.group(1) + m.group(2).upper(), t)
 
 
+# Filas cuya sala de la web ya no vale y la fuente nueva no nombra otra. El
+# modelo de la función no sabe VACIAR la casilla `sala` (FORMATO exige texto),
+# así que se quita acá; la sede nueva entra por afirmación.
+#   70 · Clausura sáb 24 18:30: se trasladó a la Alianza Francesa (IG
+#        https://www.instagram.com/p/De5FgPIxV0o/, 24 oct 2026); la «Concha
+#        Acústica» era del Parque Sagrado Corazón y la lámina no da sala.
+SIN_SALA = {70}
 SINOPSIS = f'{REPO}/festivals/staging/ficica-2026-sinopsis.json'
 
 
@@ -140,7 +147,7 @@ def main():
         if id(a) in pegados:
             continue
         r = {'dia': a['dia'], 'hora': a['inicio'], 'sede': a['sede'],
-             **({'sala': a['sala']} if a.get('sala') else {}),
+             **({'sala': a['sala']} if a.get('sala') and a.get('fila') not in SIN_SALA else {}),
              'acceso': 'Entrada libre', 'titulo': tit, 'seccion': SECCION[a['categoria']],
              '_src': {'url': URL, 'date': CAPTURA, 'fila': a.get('fila')}}
         nota = (a.get('nota') or '').strip()
