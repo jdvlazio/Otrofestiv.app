@@ -1527,7 +1527,9 @@
      "posterSource": "tmdb",
      "lbSlug": "pactum",
      "tmdb_id": 1647552,
-     "synopsis_en": "Six high-society women gather in a mansion bound by a secret pact, a pact one of them has broken and whose consequences will be disastrous. Who is the traitor?"
+     "synopsis": "Seis mujeres de la alta sociedad se reúnen en una mansión, unidas por un pacto secreto. Una de ellas lo ha roto, y las consecuencias serán desastrosas. ¿Quién es la traidora?",
+     "synopsis_en": "Six high-society women gather in a mansion bound by a secret pact, a pact one of them has broken and whose consequences will be disastrous. Who is the traitor?",
+     "synopsis_lang": "es"
     }
    ],
    "_fid": "f_77f76646a6",
@@ -1838,8 +1840,10 @@
      "posterSource": "tmdb",
      "lbSlug": "the-demonatrix",
      "tmdb_id": 1567192,
+     "synopsis": "Durante una sesión espiritista, una dominatrix invoca por accidente a un íncubo y tiene que unir fuerzas con el cura del barrio para exorcizar al demonio.",
      "synopsis_en": "A dominatrix accidentally summons an incubus during a séance, requiring her to team up with the neighborhood priest to exorcise the demon.",
-     "genre": "Terror"
+     "genre": "Terror",
+     "synopsis_lang": "es"
     },
     {
      "title": "Gabriel",
@@ -2168,7 +2172,9 @@
      "duration": "14 min",
      "poster": "/assets/bhff-2026/anax.jpg",
      "posterSource": "oficial",
-     "synopsis_en": "Iván arrives at an underground party in a forest on Midsummer's Eve, seeking to lose himself in the music, the fire, and Clara, the girl he's obsessed with. But after trying a strange substance, the celebration turns into a nightmare."
+     "synopsis": "En la víspera de San Juan, Iván llega a una fiesta clandestina en un bosque, dispuesto a perderse en la música, en el fuego y en Clara, la chica que lo obsesiona. Pero después de probar una sustancia extraña, la celebración se convierte en una pesadilla.",
+     "synopsis_en": "Iván arrives at an underground party in a forest on Midsummer's Eve, seeking to lose himself in the music, the fire, and Clara, the girl he's obsessed with. But after trying a strange substance, the celebration turns into a nightmare.",
+     "synopsis_lang": "es"
     },
     {
      "title": "El Diente Negro",
@@ -2191,9 +2197,11 @@
      "posterSource": "tmdb",
      "lbSlug": "unit-8",
      "tmdb_id": 1713410,
+     "synopsis": "Fernanda se ve obligada a volver al apartamento donde ocurrió una tragedia familiar. Al llegar al Interior 8, empiezan a desatarse sucesos sobrenaturales.",
      "synopsis_en": "Fernanda is forced to return to the apartment where a family tragedy occurred. Upon arriving at Unit 8, supernatural events begin to unfold.",
      "title_en": "Unit 8",
-     "genre": "Fantasía"
+     "genre": "Fantasía",
+     "synopsis_lang": "es"
     }
    ],
    "_fid": "f_e13938e01b",
@@ -2290,7 +2298,9 @@
      "duration": "134 min",
      "poster": "/assets/bhff-2026/meat-the-movie.jpg",
      "posterSource": "oficial",
-     "synopsis_en": "After a night of drugs and debauchery results in the fatal overdose of an underage gay man, an innocent bystander is left to take the blame. Upon his release from prison, the guilty party becomes the focus of an eccentric killer’s revenge."
+     "synopsis": "Después de una noche de drogas y desenfreno que termina con la sobredosis fatal de un joven gay menor de edad, a un testigo inocente le toca cargar con la culpa. Cuando él sale de la cárcel, el verdadero culpable se convierte en el blanco de la venganza de un asesino excéntrico.",
+     "synopsis_en": "After a night of drugs and debauchery results in the fatal overdose of an underage gay man, an innocent bystander is left to take the blame. Upon his release from prison, the guilty party becomes the focus of an eccentric killer’s revenge.",
+     "synopsis_lang": "es"
     },
     {
      "title": "El Teatro",
@@ -3197,9 +3207,9 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-25T07:30:17",
+  "fecha": "2026-10-25T10:30:47",
   "plan_sha": "0ebf7883fee9f2cd",
-  "paso": 7,
-  "cmd": "python3 pipeline/ensamblar.py bhff-2026"
+  "paso": 9,
+  "cmd": "python3 pipeline/bhff-2026-verificar.py"
  }
 }
