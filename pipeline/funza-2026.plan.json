@@ -1,0 +1,134 @@
+{
+ "_nota": "4.º Festival de Cine Funza 2026 — «Ojos siempre abiertos» (Funza, Cundinamarca, 18–21 nov, Centro Cultural Bacatá). Invitaron a Juan a participar con Otrofestiv (la «Charla app de festivales de cine» del 20 nov es la suya). Fuente: la agenda general actualizada en PDF que el festival mandó a Juan (25 oct 2026) y el afiche oficial. No tiene Instagram: se comunica por la página de Facebook del Centro Cultural Bacatá (dato de Juan, 25 oct).",
+ "radar": 1261,
+ "radar_nota": "Entró por pedido de Juan (25 oct 2026); issue de radar #1261 creado en el onboarding.",
+ "pasos": [
+  {
+   "cmd": "python3 pipeline/radar.py funza-2026",
+   "que": "el volcado del radar #1261"
+  },
+  {
+   "cmd": "python3 pipeline/funza-2026-crudo.py",
+   "que": "la agenda (transcripción a ojo, 23 filas) → crudo; logística y talleres escolares fuera, con su porqué"
+  },
+  {
+   "cmd": "python3 pipeline/enriquecer.py funza-2026 --posters",
+   "que": "TMDB verificado + las 3 fichas declaradas en -correcciones; la cascada cruza contra lo publicado (guatape2026)"
+  },
+  {
+   "cmd": "python3 pipeline/ensamblar.py funza-2026",
+   "que": "crudo + plan + afirmaciones → staging/funza-2026-build.json"
+  },
+  {
+   "cmd": "python3 pipeline/encuadrar-posters.py funza-2026 --aplicar --desde festivals/staging/funza-2026-build.json",
+   "que": "los afiches al lienzo 780×1170"
+  },
+  {
+   "cmd": "python3 pipeline/funza-2026-verificar.py",
+   "que": "el build contra la capa de texto del PDF y contra el OCR de sus páginas, en las dos direcciones; sede con pin a mano"
+  }
+ ],
+ "festival": {
+  "crudo": "festivals/staging/funza-2026-crudo.json",
+  "enriquecido": "festivals/staging/funza-2026-enriquecido.json",
+  "geo": "festivals/staging/funza-2026-venues-geo.json",
+  "sedes": {
+   "Centro Cultural Bacatá": [
+    "Centro Cultural Bacatá - Funza",
+    ""
+   ]
+  },
+  "_por_que_secciones": "Sección = el «Componente» de la agenda, verbatim y en caja de Título (pedido de Juan, 25 oct).",
+  "secciones": {
+   "Inauguración": {
+    "emoji": "🎬",
+    "en": "Opening",
+    "archetype": "Apertura / Gala"
+   },
+   "Literatura / Artes Escénicas / Cine": {
+    "emoji": "📚",
+    "en": "Literature / Performing Arts / Film",
+    "archetype": "Especiales / Eventos"
+   },
+   "Conversatorio": {
+    "emoji": "💬",
+    "en": "Talk",
+    "archetype": "Charlas / Industria"
+   },
+   "Exhibición Cinematográfica": {
+    "emoji": "🎞️",
+    "en": "Film Screening",
+    "archetype": "Muestra / País"
+   },
+   "Formación Especializada": {
+    "emoji": "🛠️",
+    "en": "Specialized Training",
+    "archetype": "Charlas / Industria"
+   },
+   "Encuentro Departamental": {
+    "emoji": "🤝",
+    "en": "Departmental Meeting",
+    "archetype": "Charlas / Industria"
+   },
+   "Comunicaciones": {
+    "emoji": "📡",
+    "en": "Communications",
+    "archetype": "Charlas / Industria"
+   },
+   "Audiovisuales / Cine": {
+    "emoji": "🎥",
+    "en": "Audiovisual / Film",
+    "archetype": "Charlas / Industria"
+   },
+   "Fotografía / Narrativas": {
+    "emoji": "📷",
+    "en": "Photography / Narratives",
+    "archetype": "Charlas / Industria"
+   },
+   "Circulación / Industria": {
+    "emoji": "📱",
+    "en": "Distribution / Industry",
+    "archetype": "Charlas / Industria"
+   },
+   "Conversatorio / Clausura": {
+    "emoji": "🎤",
+    "en": "Talk / Closing",
+    "archetype": "Clausura"
+   },
+   "Premiación": {
+    "emoji": "🏆",
+    "en": "Awards",
+    "archetype": "Especiales / Eventos"
+   }
+  },
+  "name": "Festival de Cine Funza",
+  "displayName": "Festival de Cine Funza",
+  "fullName": "4.º Festival de Cine Funza 2026",
+  "shortName": "FUNZA",
+  "tagline": "",
+  "city": "Funza",
+  "country": "CO",
+  "dates": "18–21 NOV",
+  "dates_en": "NOV 18–21",
+  "year": 2026,
+  "timezoneOffset": "-05:00",
+  "storageKey": "funza2026_",
+  "festivalStartStr": "2026-11-18T00:00:00",
+  "festivalEndStr": "2026-11-21T23:59:00",
+  "sharedSlotIsOneScreening": false,
+  "mes_es": "noviembre",
+  "dias_vacios": [],
+  "_por_que_acceso": "Sin `ticketing_model`: ninguna función dice que se pague. El acceso va declarado en `_acceso` del crudo.",
+  "_fuentes_versionadas": {
+   "festivals/staging/funza-2026-radar.json": "el volcado del radar #1261"
+  }
+ },
+ "fuentes_vivas": [
+  {
+   "archivo": "fuentes/funza-2026/facebook-posts.json",
+   "url": "https://www.facebook.com/centroculturalbacatadefunza/",
+   "como": "apify~facebook-posts-scraper",
+   "que": "canal del festival (Centro Cultural Bacatá de Funza); el 25 oct no traía aún la programación"
+  }
+ ]
+}
