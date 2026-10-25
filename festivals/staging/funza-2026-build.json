@@ -1373,7 +1373,7 @@
     "time": {
      "tipo": "juan",
      "fecha": "2026-10-25",
-     "frase": "«pongamos la más temprano, para que la gente no llegue tarde en caso tal» (regla hora-contradictoria; y el 25 oct: «NO decidas solo: déjalo como duda»)"
+     "frase": "el festival le confirmó a Juan por mensaje (25 oct 2026, sin URL pública): Horizonte, sáb 21 nov, 10:30 a. m."
     },
     "venue": {
      "tipo": "festival-web",
@@ -1407,9 +1407,9 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-25T09:08:13",
+  "fecha": "2026-10-25T09:34:58",
   "plan_sha": "dd4f864cb7dd9404",
-  "paso": 6,
-  "cmd": "python3 pipeline/funza-2026-verificar.py"
+  "paso": 4,
+  "cmd": "python3 pipeline/ensamblar.py funza-2026"
  }
 }
