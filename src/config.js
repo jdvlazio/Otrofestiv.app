@@ -1064,6 +1064,25 @@ export const FESTIVAL_CONFIG={
     eventPosterLabel:['EVENTO',''],
     films:null,posters:null,lbSlugs:{}
   },
+  'funza2026': {
+    name:'Festival de Cine Funza',displayName:'Festival de Cine Funza',fullName:'4.º Festival de Cine Funza 2026',shortName:'FUNZA',
+    city:'Funza',country:'CO',
+    dates:'18–21 NOV',dates_en:'NOV 18–21',year:2026,timezoneOffset:'-05:00',
+    // EL AFICHE OFICIAL de la 4.ª edición («Ojos siempre abiertos»), 2:3 de origen,
+    // llevado a 400×600 (keyart-estirado). Lo mandó el festival a Juan el 25 oct
+    keyArt:'/assets/keyart/funza2026.jpg',
+    // PROPUESTA a Juan (25 oct): dice qué es sin repetir el nombre; el lema vive en el afiche
+    tagline:'Festival de Cine del Centro Cultural Bacatá',
+    storageKey:'funza2026_',festivalStartStr:'2026-11-18T00:00:00',festivalEndStr:'2026-11-21T23:59:00',
+    festivalDates:{'2026-11-18':'2026-11-18','2026-11-19':'2026-11-19','2026-11-20':'2026-11-20','2026-11-21':'2026-11-21'},
+    days:[{k:'2026-11-18',d:18,lbl:'MIÉ'},{k:'2026-11-19',d:19,lbl:'JUE'},{k:'2026-11-20',d:20,lbl:'VIE'},{k:'2026-11-21',d:21,lbl:'SÁB'}],
+    dayKeys:['2026-11-18','2026-11-19','2026-11-20','2026-11-21'],
+    dayShort:{'2026-11-18':'MIÉ 18','2026-11-19':'JUE 19','2026-11-20':'VIE 20','2026-11-21':'SÁB 21'},
+    dayShort_en:{'2026-11-18':'WED 18','2026-11-19':'THU 19','2026-11-20':'FRI 20','2026-11-21':'SAT 21'},
+    dayLong:{'2026-11-18':'Miércoles 18 de noviembre','2026-11-19':'Jueves 19 de noviembre','2026-11-20':'Viernes 20 de noviembre','2026-11-21':'Sábado 21 de noviembre'},
+    prioLimit:3,eventPosterLabel:['EVENTO',''],
+    films:null,posters:null,lbSlugs:{}
+  },
   'narrarelfuturo2026': {
     name:'#NarrarElFuturo',fullName:'#NarrarElFuturo — Festival de Cine & Nuevos Medios',shortName:'NEF',
     city:'Bogotá',country:'CO',
@@ -1127,6 +1146,18 @@ export const ARCHETYPE_COLORS = {
 // Cada sección de cada festival → su arquetipo. Generado por scripts/classify-posters
 // (arquetipos) + decisiones de diseño. Sección nueva sin entrada → gate lo caza.
 export const SECTION_ARCHETYPES = {
+  // ── Festival de Cine Funza 2026 · Funza (el «Componente» de la agenda) ─
+  '📚 Literatura / Artes Escénicas / Cine': 'Especiales / Eventos',
+  '💬 Conversatorio': 'Charlas / Industria',
+  '🎞️ Exhibición Cinematográfica': 'Muestra / País',
+  '🛠️ Formación Especializada': 'Charlas / Industria',
+  '🤝 Encuentro Departamental': 'Charlas / Industria',
+  '📡 Comunicaciones': 'Charlas / Industria',
+  '🎥 Audiovisuales / Cine': 'Charlas / Industria',
+  '📷 Fotografía / Narrativas': 'Charlas / Industria',
+  '📱 Circulación / Industria': 'Charlas / Industria',
+  '🎤 Conversatorio / Clausura': 'Clausura',
+  '🏆 Premiación': 'Especiales / Eventos',
   // ── Cortos Cali 2026 · Cali ───────────────────────────────────────────
   '🌎 Selección Oficial Internacional': 'Competencia',
   '🎬 Selección Oficial Nacional': 'Competencia',

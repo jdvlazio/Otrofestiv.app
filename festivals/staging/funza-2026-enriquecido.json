@@ -1,0 +1,129 @@
+{
+ "_provenance": {
+  "fuente": "TMDB + letterboxd.com/tmdb/<id>, emparejado con ficha_verifica() (director + año ±1 o duración ±3 min). Lo que no verifica no entra.",
+  "capturado": "2026-10-25"
+ },
+ "obras": [
+  {
+   "titulo": "Basta Mamá",
+   "tmdb_id": 1627217,
+   "titulo_original": "Basta Mamá",
+   "poster_path": "/t8EarPqNvaAttgzEmaOWlyawsJF.jpg",
+   "synopsis_es": "Fernando, un hombre de 45 años que aún vive con su sobreprotectora madre, intenta ocultarle ese secreto a su moderna novia, quien además es su jefa. Lo que comienza como una pequeña mentira durante una cena de cumpleaños se convierte en un enredo de secretos, choques generacionales y divertidas situaciones que lo obligarán a elegir entre la comodidad de mamá y el amor de su vida.",
+   "synopsis_en": "Fernando's 45th birthday dinner turns into a territorial war when his alpha-mom meets his empowered girlfriend. To survive the night, he must finally cut the umbilical cord or remain her \"little boy\" forever.",
+   "genero": "Comedia",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 77,
+   "pais_tmdb": "",
+   "lbSlug": "basta-mama",
+   "_verificado": "declarada a mano: La misma ficha publicada en guatape2026 (Flora Martínez, 2026). La agenda le da 125 min; TMDB 77 (duda con Juan).",
+   "_director": "Flora Martínez",
+   "_sondeado": "2026-10-25",
+   "poster": "/assets/funza-2026/basta-mama.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Horizonte",
+   "tmdb_id": 1265716,
+   "titulo_original": "Horizonte",
+   "poster_path": "/99eXFsGBtH0MH2YEOLihmEuyt0z.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "It is about two ghosts, a mother and son, search for the boy’s missing father on a journey, both physical and spiritual, through a world ravaged by war. Only through great sacrifice will they mend the fragile bonds that bind them and perhaps find redemption.",
+   "genero": "Drama",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 125,
+   "pais_tmdb": "Chile, Colombia, France, Germany, Luxembourg",
+   "title_en": "Horizon",
+   "lbSlug": "horizon-2024-4",
+   "_verificado": "declarada a mano: La agenda escribe «HORIZONTES»; es Horizonte (César Augusto Acevedo, 2024), la misma ficha de guatape2026, y su duración (125 min) es la que da la agenda.",
+   "_director": "César Augusto Acevedo",
+   "_sondeado": "2026-10-25",
+   "poster": "/assets/funza-2026/horizonte.jpg",
+   "posterSource": "tmdb",
+   "pais_heredado": "Chile, Colombia, Francia, Alemania, Luxemburgo",
+   "_heredado": {
+    "pais_heredado": "catálogo w_8GJ7B5KCEQ78 (funza-2026, guatape-2026)"
+   }
+  },
+  {
+   "titulo": "Reflejos",
+   "tmdb_id": 1599200,
+   "titulo_original": "Reflejos",
+   "poster_path": "/fWIuvyETyhbHP6p1qLoYnaSOxoO.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Javier, a man haunted by traumatic childhood visions, is hired by Raquel to restore an old haunted mansion, where every night at 3:33 am, the specter of a mysterious woman appears. Obsessed, Javier embarks on the impossible mission of saving someone who is already dead, and seeks answers from Father Alirio.",
+   "genero": "Terror",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 88,
+   "pais_tmdb": "",
+   "title_en": "Reflections",
+   "lbSlug": "reflections-2025-4",
+   "_verificado": "declarada a mano: La agenda dice «Conversatorio con Miguel Urrutia … proceso de Reflejos» y 88 min; TMDB 1599200: Reflections/Reflejos, dirección Miguel Urrutia, 2025, 88 min. Hay 7 homónimos en TMDB; ninguno de él. 25 oct 2026.",
+   "_director": "Miguel Urrutia",
+   "_sondeado": "2026-10-25",
+   "poster": "/assets/funza-2026/reflejos.jpg",
+   "posterSource": "tmdb"
+  }
+ ],
+ "verificadas": {
+  "Basta Mamá": {
+   "tmdb_id": 1627217,
+   "titulo_original": "Basta Mamá",
+   "poster_path": "/t8EarPqNvaAttgzEmaOWlyawsJF.jpg",
+   "synopsis_es": "Fernando, un hombre de 45 años que aún vive con su sobreprotectora madre, intenta ocultarle ese secreto a su moderna novia, quien además es su jefa. Lo que comienza como una pequeña mentira durante una cena de cumpleaños se convierte en un enredo de secretos, choques generacionales y divertidas situaciones que lo obligarán a elegir entre la comodidad de mamá y el amor de su vida.",
+   "synopsis_en": "Fernando's 45th birthday dinner turns into a territorial war when his alpha-mom meets his empowered girlfriend. To survive the night, he must finally cut the umbilical cord or remain her \"little boy\" forever.",
+   "genero": "Comedia",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 77,
+   "pais_tmdb": "",
+   "lbSlug": "basta-mama",
+   "_verificado": "declarada a mano: La misma ficha publicada en guatape2026 (Flora Martínez, 2026). La agenda le da 125 min; TMDB 77 (duda con Juan).",
+   "_director": "Flora Martínez",
+   "_sondeado": "2026-10-25",
+   "poster": "/assets/funza-2026/basta-mama.jpg",
+   "posterSource": "tmdb"
+  },
+  "Horizonte": {
+   "tmdb_id": 1265716,
+   "titulo_original": "Horizonte",
+   "poster_path": "/99eXFsGBtH0MH2YEOLihmEuyt0z.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "It is about two ghosts, a mother and son, search for the boy’s missing father on a journey, both physical and spiritual, through a world ravaged by war. Only through great sacrifice will they mend the fragile bonds that bind them and perhaps find redemption.",
+   "genero": "Drama",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 125,
+   "pais_tmdb": "Chile, Colombia, France, Germany, Luxembourg",
+   "title_en": "Horizon",
+   "lbSlug": "horizon-2024-4",
+   "_verificado": "declarada a mano: La agenda escribe «HORIZONTES»; es Horizonte (César Augusto Acevedo, 2024), la misma ficha de guatape2026, y su duración (125 min) es la que da la agenda.",
+   "_director": "César Augusto Acevedo",
+   "_sondeado": "2026-10-25",
+   "poster": "/assets/funza-2026/horizonte.jpg",
+   "posterSource": "tmdb",
+   "pais_heredado": "Chile, Colombia, Francia, Alemania, Luxemburgo",
+   "_heredado": {
+    "pais_heredado": "catálogo w_8GJ7B5KCEQ78 (funza-2026, guatape-2026)"
+   }
+  },
+  "Reflejos": {
+   "tmdb_id": 1599200,
+   "titulo_original": "Reflejos",
+   "poster_path": "/fWIuvyETyhbHP6p1qLoYnaSOxoO.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Javier, a man haunted by traumatic childhood visions, is hired by Raquel to restore an old haunted mansion, where every night at 3:33 am, the specter of a mysterious woman appears. Obsessed, Javier embarks on the impossible mission of saving someone who is already dead, and seeks answers from Father Alirio.",
+   "genero": "Terror",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 88,
+   "pais_tmdb": "",
+   "title_en": "Reflections",
+   "lbSlug": "reflections-2025-4",
+   "_verificado": "declarada a mano: La agenda dice «Conversatorio con Miguel Urrutia … proceso de Reflejos» y 88 min; TMDB 1599200: Reflections/Reflejos, dirección Miguel Urrutia, 2025, 88 min. Hay 7 homónimos en TMDB; ninguno de él. 25 oct 2026.",
+   "_director": "Miguel Urrutia",
+   "_sondeado": "2026-10-25",
+   "poster": "/assets/funza-2026/reflejos.jpg",
+   "posterSource": "tmdb"
+  }
+ },
+ "sin_ficha": [],
+ "_sin_ficha_sondeo": {}
+}

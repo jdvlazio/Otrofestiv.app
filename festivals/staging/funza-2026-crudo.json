@@ -1,0 +1,374 @@
+{
+ "_provenance": {
+  "fuente": "Agenda general actualizada del IV Festival de Cine (PDF del festival a Juan, 25 oct 2026)",
+  "capturado": "2026-10-25",
+  "metodo": "transcripción a ojo fila por fila; cruzada con la capa de texto y el OCR en funza-2026-verificar.py",
+  "que_aporta": "la programación entera: día, hora, componente, actividad, duración"
+ },
+ "_acceso": {
+  "estado": "Entrada libre",
+  "revisado": "2026-10-25",
+  "fuentes": [
+   "agenda PDF del festival (25 oct 2026)",
+   "afiche oficial"
+  ],
+  "_por_que": "Ninguna fuente anuncia boletería; regla de Juan: sin aviso de pago es gratis. El Encuentro Departamental es de «participantes inscritos»: inscripción previa, sin formulario publicado."
+ },
+ "_no_se_publica": [
+  {
+   "dia": "2026-11-19",
+   "hora": "9:00 a. m. – 11:00 a. m.",
+   "actividad": "Taller audiovisual escolar",
+   "por_que": "Formación descentralizada para colegios; no consta que sea abierto (duda con Juan)"
+  },
+  {
+   "dia": "2026-11-19",
+   "hora": "10:00 a. m. – 12:00 m.",
+   "actividad": "Taller audiovisual escolar",
+   "por_que": "Formación descentralizada para colegios; no consta que sea abierto (duda con Juan)"
+  },
+  {
+   "dia": "2026-11-20",
+   "hora": "8:00 a. m. – 8:30 a. m.",
+   "actividad": "Registro y bienvenida",
+   "por_que": "logística del Encuentro (registro y estación de café)"
+  },
+  {
+   "dia": "2026-11-20",
+   "hora": "10:30 a. m. – 10:45 a. m.",
+   "actividad": "Pausa de café",
+   "por_que": "logística"
+  },
+  {
+   "dia": "2026-11-20",
+   "hora": "12:15 p. m. – 1:30 p. m.",
+   "actividad": "Almuerzo Encuentro",
+   "por_que": "logística: «Almuerzo de participantes inscritos e invitados»"
+  }
+ ],
+ "funciones": [
+  {
+   "dia": "2026-11-18",
+   "hora": "16:00",
+   "sede": "Centro Cultural Bacatá",
+   "acceso": "Entrada libre (no se anuncia pago)",
+   "duracion_min": 30,
+   "seccion": "Inauguración",
+   "_src": {
+    "url": "fuentes/funza-2026/agenda-2026.pdf",
+    "date": "2026-10-25",
+    "tipo": "festival-mensaje",
+    "fila": "4:00 p. m. – 4:30 p. m. · Apertura IV Festival de Cine"
+   },
+   "titulo": "Apertura IV Festival de Cine",
+   "tipo": "evento",
+   "event_kind": "apertura",
+   "sinopsis": "Bienvenida institucional y presentación general de la cuarta versión."
+  },
+  {
+   "dia": "2026-11-18",
+   "hora": "16:30",
+   "sede": "Centro Cultural Bacatá",
+   "acceso": "Entrada libre (no se anuncia pago)",
+   "duracion_min": 120,
+   "seccion": "Literatura / Artes Escénicas / Cine",
+   "_src": {
+    "url": "fuentes/funza-2026/agenda-2026.pdf",
+    "date": "2026-10-25",
+    "tipo": "festival-mensaje",
+    "fila": "4:30 p. m. – 6:30 p. m. · Performance en inglés: literatura que llegó al cine"
+   },
+   "titulo": "Performance en inglés: literatura que llegó al cine",
+   "tipo": "evento",
+   "event_kind": "evento",
+   "sinopsis": "Presentaciones y performance alrededor de libros y obras literarias adaptadas posteriormente al cine."
+  },
+  {
+   "dia": "2026-11-18",
+   "hora": "18:30",
+   "sede": "Centro Cultural Bacatá",
+   "acceso": "Entrada libre (no se anuncia pago)",
+   "duracion_min": 60,
+   "seccion": "Inauguración",
+   "_src": {
+    "url": "fuentes/funza-2026/agenda-2026.pdf",
+    "date": "2026-10-25",
+    "tipo": "festival-mensaje",
+    "fila": "6:30 p. m. – 7:30 p. m. · Espacio de circulación e integración"
+   },
+   "titulo": "Espacio de circulación e integración",
+   "tipo": "evento",
+   "event_kind": "evento",
+   "sinopsis": "Interacción con participantes, recorrido y espacio cultural complementario."
+  },
+  {
+   "dia": "2026-11-18",
+   "hora": "19:30",
+   "sede": "Centro Cultural Bacatá",
+   "acceso": "Entrada libre (no se anuncia pago)",
+   "duracion_min": 30,
+   "seccion": "Inauguración",
+   "_src": {
+    "url": "fuentes/funza-2026/agenda-2026.pdf",
+    "date": "2026-10-25",
+    "tipo": "festival-mensaje",
+    "fila": "7:30 p. m. – 8:00 p. m. · Cierre jornada inaugural"
+   },
+   "titulo": "Cierre jornada inaugural",
+   "tipo": "evento",
+   "event_kind": "evento",
+   "sinopsis": "Cierre de la primera jornada y presentación de la programación siguiente."
+  },
+  {
+   "dia": "2026-11-19",
+   "hora": "18:30",
+   "sede": "Centro Cultural Bacatá",
+   "acceso": "Entrada libre (no se anuncia pago)",
+   "duracion_min": 45,
+   "seccion": "Conversatorio",
+   "_src": {
+    "url": "fuentes/funza-2026/agenda-2026.pdf",
+    "date": "2026-10-25",
+    "tipo": "festival-mensaje",
+    "fila": "6:30 p. m. – 7:15 p. m. · Conversatorio con Miguel Urrutia"
+   },
+   "titulo": "Conversatorio con Miguel Urrutia",
+   "tipo": "evento",
+   "event_kind": "conversatorio",
+   "sinopsis": "Diálogo sobre cine de terror, creación y proceso de Reflejos."
+  },
+  {
+   "dia": "2026-11-19",
+   "hora": "19:15",
+   "sede": "Centro Cultural Bacatá",
+   "acceso": "Entrada libre (no se anuncia pago)",
+   "duracion_min": 88,
+   "seccion": "Exhibición Cinematográfica",
+   "_src": {
+    "url": "fuentes/funza-2026/agenda-2026.pdf",
+    "date": "2026-10-25",
+    "tipo": "festival-mensaje",
+    "fila": "7:15 p. m. – 8:43 p. m. · Proyección Reflejos"
+   },
+   "titulo": "Reflejos",
+   "director": "Miguel Urrutia",
+   "titulo_fuente": "Proyección Reflejos",
+   "_nota": "Proyección sujeta a autorización de exhibición."
+  },
+  {
+   "dia": "2026-11-20",
+   "hora": "08:30",
+   "sede": "Centro Cultural Bacatá",
+   "acceso": "Entrada libre con inscripción previa (participantes inscritos)",
+   "duracion_min": 30,
+   "seccion": "Encuentro Departamental",
+   "_src": {
+    "url": "fuentes/funza-2026/agenda-2026.pdf",
+    "date": "2026-10-25",
+    "tipo": "festival-mensaje",
+    "fila": "8:30 a. m. – 9:00 a. m. · Apertura institucional"
+   },
+   "titulo": "Apertura institucional",
+   "tipo": "evento",
+   "event_kind": "apertura"
+  },
+  {
+   "dia": "2026-11-20",
+   "hora": "09:00",
+   "sede": "Centro Cultural Bacatá",
+   "acceso": "Entrada libre con inscripción previa (participantes inscritos)",
+   "duracion_min": 90,
+   "seccion": "Comunicaciones",
+   "_src": {
+    "url": "fuentes/funza-2026/agenda-2026.pdf",
+    "date": "2026-10-25",
+    "tipo": "festival-mensaje",
+    "fila": "9:00 a. m. – 10:30 a. m. · Panel comunicación nuevas narrativas"
+   },
+   "titulo": "Panel comunicación nuevas narrativas",
+   "tipo": "evento",
+   "event_kind": "evento",
+   "sinopsis": "Nuevas narrativas, comunicación cultural, ecosistemas digitales e identidad territorial."
+  },
+  {
+   "dia": "2026-11-20",
+   "hora": "10:00",
+   "sede": "Centro Cultural Bacatá",
+   "acceso": "Entrada libre (no se anuncia pago)",
+   "duracion_min": 120,
+   "seccion": "Formación Especializada",
+   "_src": {
+    "url": "fuentes/funza-2026/agenda-2026.pdf",
+    "date": "2026-10-25",
+    "tipo": "festival-mensaje",
+    "fila": "10:00 a. m. – 12:00 m. · Taller efectos especiales o stop motion"
+   },
+   "titulo": "Taller efectos especiales o stop motion",
+   "tipo": "evento",
+   "event_kind": "taller",
+   "sinopsis": "Taller práctico con artista independiente."
+  },
+  {
+   "dia": "2026-11-20",
+   "hora": "10:45",
+   "sede": "Centro Cultural Bacatá",
+   "acceso": "Entrada libre con inscripción previa (participantes inscritos)",
+   "duracion_min": 90,
+   "seccion": "Audiovisuales / Cine",
+   "_src": {
+    "url": "fuentes/funza-2026/agenda-2026.pdf",
+    "date": "2026-10-25",
+    "tipo": "festival-mensaje",
+    "fila": "10:45 a. m. – 12:15 p. m. · Panel cine desde región"
+   },
+   "titulo": "Panel cine desde región",
+   "tipo": "evento",
+   "event_kind": "evento",
+   "sinopsis": "Producción independiente, financiación, convocatorias, circulación y territorio."
+  },
+  {
+   "dia": "2026-11-20",
+   "hora": "13:30",
+   "sede": "Centro Cultural Bacatá",
+   "acceso": "Entrada libre con inscripción previa (participantes inscritos)",
+   "duracion_min": 75,
+   "seccion": "Fotografía / Narrativas",
+   "_src": {
+    "url": "fuentes/funza-2026/agenda-2026.pdf",
+    "date": "2026-10-25",
+    "tipo": "festival-mensaje",
+    "fila": "1:30 p. m. – 2:45 p. m. · Conferencia fotografía y territorio"
+   },
+   "titulo": "Conferencia fotografía y territorio",
+   "tipo": "evento",
+   "event_kind": "evento",
+   "sinopsis": "Conferencia sobre imagen, memoria, paisaje, identidad y territorio."
+  },
+  {
+   "dia": "2026-11-20",
+   "hora": "14:45",
+   "sede": "Centro Cultural Bacatá",
+   "acceso": "Entrada libre con inscripción previa (participantes inscritos)",
+   "duracion_min": 45,
+   "seccion": "Circulación / Industria",
+   "_src": {
+    "url": "fuentes/funza-2026/agenda-2026.pdf",
+    "date": "2026-10-25",
+    "tipo": "festival-mensaje",
+    "fila": "2:45 p. m. – 3:30 p. m. · Charla app de festivales de cine"
+   },
+   "titulo": "Charla app de festivales de cine",
+   "tipo": "evento",
+   "event_kind": "charla",
+   "sinopsis": "Herramientas y plataformas para circulación, convocatorias e inscripción de obras en festivales."
+  },
+  {
+   "dia": "2026-11-20",
+   "hora": "15:30",
+   "sede": "Centro Cultural Bacatá",
+   "acceso": "Entrada libre con inscripción previa (participantes inscritos)",
+   "duracion_min": 60,
+   "seccion": "Circulación / Industria",
+   "_src": {
+    "url": "fuentes/funza-2026/agenda-2026.pdf",
+    "date": "2026-10-25",
+    "tipo": "festival-mensaje",
+    "fila": "3:30 p. m. – 4:30 p. m. · Rueda de negocios audiovisual"
+   },
+   "titulo": "Rueda de negocios audiovisual",
+   "tipo": "evento",
+   "event_kind": "evento",
+   "sinopsis": "Presentación de proyectos, intercambio de contactos y generación de alianzas."
+  },
+  {
+   "dia": "2026-11-20",
+   "hora": "17:00",
+   "sede": "Centro Cultural Bacatá",
+   "acceso": "Entrada libre con inscripción previa (participantes inscritos)",
+   "duracion_min": 30,
+   "seccion": "Encuentro Departamental",
+   "_src": {
+    "url": "fuentes/funza-2026/agenda-2026.pdf",
+    "date": "2026-10-25",
+    "tipo": "festival-mensaje",
+    "fila": "5:00 p. m. – 5:30 p. m. · Cierre del Encuentro"
+   },
+   "titulo": "Cierre del Encuentro",
+   "tipo": "evento",
+   "event_kind": "evento",
+   "sinopsis": "Conclusiones y cierre de la jornada académica."
+  },
+  {
+   "dia": "2026-11-20",
+   "hora": "18:30",
+   "sede": "Centro Cultural Bacatá",
+   "acceso": "Entrada libre (no se anuncia pago)",
+   "duracion_min": 125,
+   "seccion": "Exhibición Cinematográfica",
+   "_src": {
+    "url": "fuentes/funza-2026/agenda-2026.pdf",
+    "date": "2026-10-25",
+    "tipo": "festival-mensaje",
+    "fila": "6:30 p. m. – 8:35 p. m. · Proyección Basta Mamá"
+   },
+   "titulo": "Basta Mamá",
+   "director": "Flora Martínez",
+   "titulo_fuente": "Proyección Basta Mamá",
+   "_nota": "Horario sujeto a duración oficial de la película."
+  },
+  {
+   "dia": "2026-11-20",
+   "hora": "20:35",
+   "sede": "Centro Cultural Bacatá",
+   "acceso": "Entrada libre (no se anuncia pago)",
+   "duracion_min": 60,
+   "seccion": "Conversatorio / Clausura",
+   "_src": {
+    "url": "fuentes/funza-2026/agenda-2026.pdf",
+    "date": "2026-10-25",
+    "tipo": "festival-mensaje",
+    "fila": "8:35 p. m. – 9:35 p. m. · Conversatorio Basta Mamá y cierre"
+   },
+   "titulo": "Conversatorio Basta Mamá y cierre",
+   "tipo": "evento",
+   "event_kind": "conversatorio",
+   "sinopsis": "Conversatorio posterior y cierre oficial de la cuarta versión."
+  },
+  {
+   "dia": "2026-11-21",
+   "hora": "09:00",
+   "sede": "Centro Cultural Bacatá",
+   "acceso": "Entrada libre (no se anuncia pago)",
+   "duracion_min": 60,
+   "seccion": "Premiación",
+   "_src": {
+    "url": "fuentes/funza-2026/agenda-2026.pdf",
+    "date": "2026-10-25",
+    "tipo": "festival-mensaje",
+    "fila": "9:00 a. m. – 10:00 a. m. · Premiación IV Festival de Cine"
+   },
+   "titulo": "Premiación IV Festival de Cine",
+   "tipo": "evento",
+   "event_kind": "premiación",
+   "sinopsis": "Entrega de reconocimientos a las categorías definidas por el Festival."
+  },
+  {
+   "dia": "2026-11-21",
+   "hora": "22:30",
+   "sede": "Centro Cultural Bacatá",
+   "acceso": "Entrada libre (no se anuncia pago)",
+   "duracion_min": 125,
+   "seccion": "Exhibición Cinematográfica",
+   "_src": {
+    "url": "fuentes/funza-2026/agenda-2026.pdf",
+    "date": "2026-10-25",
+    "tipo": "festival-mensaje",
+    "fila": "10:30 p. m. – 11:30 p. m. · Proyección HORIZONTES"
+   },
+   "titulo": "Horizonte",
+   "director": "César Augusto Acevedo",
+   "titulo_fuente": "Proyección HORIZONTES",
+   "_nota": "Exhibición sujeta a gestión y autorización de derechos."
+  }
+ ]
+}

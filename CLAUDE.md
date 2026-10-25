@@ -122,6 +122,7 @@ deliberada existe la etiqueta `frontera-ok`.
 | `fantasmagoria2026` | Fantasmagoría | Medellín | 14–25 OCT | **Próximo / activo** |
 | `midbo2026` | MIDBO | Bogotá | 27 OCT–4 NOV | **Próximo / activo** |
 | `mubibogota2026` | MUBI Fest | Bogotá | 24–25 OCT | **Próximo / activo** |
+| `funza2026` | Festival de Cine Funza | Funza | 18–21 NOV | **Próximo / activo** |
 | `narrarelfuturo2026` | #NarrarElFuturo | Bogotá | 15–20 SEP | Archivado |
 
 ### Features activas (desde `.specify/features/`)
