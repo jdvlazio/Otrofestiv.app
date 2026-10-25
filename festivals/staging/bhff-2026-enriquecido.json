@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, emparejado con ficha_verifica() (director + año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-10-21"
+  "capturado": "2026-10-25"
  },
  "obras": [
   {
@@ -62,7 +62,7 @@
    "lbSlug": "pig-that-survived-foot-and-mouth-disease",
    "_verificado": "declarada a mano: «The Pig That Survived Foot-and-Mouth Disease», Hur Bum-wook, 105 min: director y obra coinciden con la parrilla; el título en español no casa solo con TMDB",
    "_director": "Hur Bum-Wook",
-   "_sondeado": "2026-10-21",
+   "_sondeado": "2026-10-25",
    "poster": "/assets/bhff-2026/cerdo-que-sobrevivio-a-la-fiebre-aftosa.jpg",
    "posterSource": "tmdb"
   },
@@ -379,7 +379,7 @@
    "lbSlug": "the-demonatrix",
    "_verificado": "declarada a mano: «The Demonatrix», Aurelio Voltaire y Jeff Ferrell, 90 min: los dos directores coinciden con la parrilla; el título en español no casa solo con TMDB",
    "_director": "Jeff Ferrell, Aurelio Voltair",
-   "_sondeado": "2026-10-21",
+   "_sondeado": "2026-10-25",
    "poster": "/assets/bhff-2026/la-demonatrix.jpg",
    "posterSource": "tmdb"
   },
@@ -741,7 +741,6 @@
    "tmdb_id": 1677190,
    "titulo_original": "Replay",
    "poster_path": "/W9xvtCLFRZtbklQGnhpNJCwuL.jpg",
-   "synopsis_es": "",
    "synopsis_en": "Set in a distant galaxy, a strange humanoid creature called Hunter X must fight against a dozen robot lizards to retrieve a peculiar disk-shaped device.",
    "genero": "Animación",
    "anio_tmdb": 2026,
@@ -753,7 +752,11 @@
    "_director": "Simón Matallana Nossa",
    "_sondeado": "2026-10-07",
    "poster": "/assets/bhff-2026/replay.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "synopsis_es": "En medio del espacio, una misteriosa criatura asalta una nave y se enfrenta a una banda de lagartos robot, para así obtener un extraño artefacto con forma de disco.",
+   "_heredado": {
+    "synopsis_es": "catálogo w_ZR5FE4J5AM6C (anibia-2026, bhff-2026, ficica-2026)"
+   }
   },
   {
    "titulo": "Siempre hay un monstruo",
@@ -1056,7 +1059,7 @@
    "lbSlug": "pig-that-survived-foot-and-mouth-disease",
    "_verificado": "declarada a mano: «The Pig That Survived Foot-and-Mouth Disease», Hur Bum-wook, 105 min: director y obra coinciden con la parrilla; el título en español no casa solo con TMDB",
    "_director": "Hur Bum-Wook",
-   "_sondeado": "2026-10-21",
+   "_sondeado": "2026-10-25",
    "poster": "/assets/bhff-2026/cerdo-que-sobrevivio-a-la-fiebre-aftosa.jpg",
    "posterSource": "tmdb"
   },
@@ -1303,7 +1306,7 @@
    "lbSlug": "the-demonatrix",
    "_verificado": "declarada a mano: «The Demonatrix», Aurelio Voltaire y Jeff Ferrell, 90 min: los dos directores coinciden con la parrilla; el título en español no casa solo con TMDB",
    "_director": "Jeff Ferrell, Aurelio Voltair",
-   "_sondeado": "2026-10-21",
+   "_sondeado": "2026-10-25",
    "poster": "/assets/bhff-2026/la-demonatrix.jpg",
    "posterSource": "tmdb"
   },
@@ -1652,7 +1655,6 @@
    "tmdb_id": 1677190,
    "titulo_original": "Replay",
    "poster_path": "/W9xvtCLFRZtbklQGnhpNJCwuL.jpg",
-   "synopsis_es": "",
    "synopsis_en": "Set in a distant galaxy, a strange humanoid creature called Hunter X must fight against a dozen robot lizards to retrieve a peculiar disk-shaped device.",
    "genero": "Animación",
    "anio_tmdb": 2026,
@@ -1664,7 +1666,11 @@
    "_director": "Simón Matallana Nossa",
    "_sondeado": "2026-10-07",
    "poster": "/assets/bhff-2026/replay.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "synopsis_es": "En medio del espacio, una misteriosa criatura asalta una nave y se enfrenta a una banda de lagartos robot, para así obtener un extraño artefacto con forma de disco.",
+   "_heredado": {
+    "synopsis_es": "catálogo w_ZR5FE4J5AM6C (anibia-2026, bhff-2026, ficica-2026)"
+   }
   },
   "Siempre hay un monstruo": {
    "tmdb_id": 1794456,
@@ -1835,95 +1841,95 @@
  "_sin_ficha_sondeo": {
   "Anax": {
    "director": "LSDavid, Miguel Solís",
-   "fecha": "2026-10-15"
+   "fecha": "2026-10-25"
   },
   "Bajo El Mismo Techo": {
    "director": "Sophia Cadavid",
-   "fecha": "2026-10-15"
+   "fecha": "2026-10-25"
   },
   "Búhos": {
    "director": "Luis Enrique Vanegas",
-   "fecha": "2026-10-15"
+   "fecha": "2026-10-25"
   },
   "Eco": {
    "director": "Valeria Lopera Salas",
-   "fecha": "2026-10-15"
+   "fecha": "2026-10-25"
   },
   "El Diente Negro": {
    "director": "Anita Serrano",
-   "fecha": "2026-10-15"
+   "fecha": "2026-10-25"
   },
   "El Festín de las Moscas": {
    "director": "Katerine Franco Garzón",
-   "fecha": "2026-10-15"
+   "fecha": "2026-10-25"
   },
   "El Laberinto del Cuerpo": {
    "director": "Esteban J. Corzo",
-   "fecha": "2026-10-15"
+   "fecha": "2026-10-25"
   },
   "El Teatro": {
    "director": "Nicolás Bernal",
-   "fecha": "2026-10-15"
+   "fecha": "2026-10-25"
   },
   "Enigma": {
    "director": "Andrés Pulido",
-   "fecha": "2026-10-15"
+   "fecha": "2026-10-25"
   },
   "Gabriel": {
    "director": "Edwin Daniel Díaz",
-   "fecha": "2026-10-15"
+   "fecha": "2026-10-25"
   },
   "Happy": {
    "director": "Víctor Basallote",
-   "fecha": "2026-10-15"
+   "fecha": "2026-10-25"
   },
   "Hasta que Amanezca": {
    "director": "Sebastián Rosas Santamaría",
-   "fecha": "2026-10-15"
+   "fecha": "2026-10-25"
   },
   "Hush": {
    "director": "Santiago Franco",
-   "fecha": "2026-10-15"
+   "fecha": "2026-10-25"
   },
   "La Noche De Las Bestias": {
    "director": "Eduart Zapata",
-   "fecha": "2026-10-15"
+   "fecha": "2026-10-25"
   },
   "Los Lobo": {
    "director": "Saeed García Pérez",
-   "fecha": "2026-10-15"
+   "fecha": "2026-10-25"
   },
   "MEAT the Movie": {
    "director": "Roger Conners",
-   "fecha": "2026-10-15"
+   "fecha": "2026-10-25"
   },
   "Niños Bien - Amanecer": {
    "director": "Daniel Vargas",
-   "fecha": "2026-10-15"
+   "fecha": "2026-10-25"
   },
   "Parásitos": {
    "director": "Samuel Andrés Ruiz Pico",
-   "fecha": "2026-10-15"
+   "fecha": "2026-10-25"
   },
   "Prototipo": {
    "director": "Jeff Ruiz Rave",
-   "fecha": "2026-10-15"
+   "fecha": "2026-10-25"
   },
   "Ruth": {
    "director": "Santiago Correa, Raquel Zapata, Marvin Cardona",
-   "fecha": "2026-10-15"
+   "fecha": "2026-10-25"
   },
   "The Callback": {
    "director": "Alvaro Pruneda",
-   "fecha": "2026-10-15"
+   "fecha": "2026-10-25"
   },
   "Vientre": {
    "director": "Pablo Sánchez Mejía, Moisés Cataño Rivillas",
-   "fecha": "2026-10-15"
+   "fecha": "2026-10-25"
   },
   "Work in Progress": {
    "director": "Diego Mezarina",
-   "fecha": "2026-10-15"
+   "fecha": "2026-10-25"
   }
  }
 }

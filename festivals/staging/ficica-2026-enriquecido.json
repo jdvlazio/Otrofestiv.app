@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, emparejado con ficha_verifica() (director + año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-10-20"
+  "capturado": "2026-10-25"
  },
  "obras": [
   {
@@ -72,10 +72,28 @@
    "posterSource": "oficial",
    "_verificado": "declarada a mano: El afiche OFICIAL del festival manda sobre el de TMDB (jerarquía del póster): es el que ya publicamos en FICCALI 2026. Desde el 20 oct la web de FICICA da el director, la cascada casa la ficha de TMDB y su afiche pisaba el oficial. Declarado el 20 oct 2026.",
    "_director": "Juan Manuel González",
-   "_sondeado": "2026-10-20",
+   "_sondeado": "2026-10-25",
    "_heredado": {
     "synopsis_es": "catálogo w_R4H50AY1TEJ8 (ficcali-2026, ficica-2026, villadelcine-2026)"
    }
+  },
+  {
+   "titulo": "Appol-o",
+   "_ya_publicada": [
+    {
+     "festival": "anibia-2026",
+     "titulo": "APPOL-O",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "7 min",
+     "sinopsis": "Tras la conquista de la Luna por Estados Unidos, el primer astronauta presencia la llegada de una cápsula soviética. Decidido a defender el nuevo territorio, la persigue hasta el lado oscuro, donde descubre los restos de una carrera espacial fallida y a un tercer contendiente que amenaza no solo la Luna, sino el orden universal."
+    }
+   ],
+   "_verificado": "ya publicada en anibia-2026: se reusa su sinopsis",
+   "sinopsis": "Tras la conquista de la Luna por Estados Unidos, el primer astronauta presencia la llegada de una cápsula soviética. Decidido a defender el nuevo territorio, la persigue hasta el lado oscuro, donde descubre los restos de una carrera espacial fallida y a un tercer contendiente que amenaza no solo la Luna, sino el orden universal.",
+   "pais": "Colombia",
+   "anio": 2025,
+   "duracion_tmdb": 7
   },
   {
    "titulo": "Belleza letal",
@@ -468,7 +486,7 @@
    "lbSlug": "noras-ark",
    "_verificado": "declarada a mano: Existe en TMDB con otro título o sin año ni duración, y el candado no la casaba sola: «Nora's ark» (2026), Endre Lund Eriksen; mismo director que publica FICICA. Verificada el 11 oct 2026.",
    "_director": "Endre Lund Eriksen, Isak Gjertsen",
-   "_sondeado": "2026-10-20",
+   "_sondeado": "2026-10-25",
    "poster": "/assets/ficica-2026/el-arca-de-nora.jpg",
    "posterSource": "tmdb"
   },
@@ -488,7 +506,7 @@
    "posterSource": "oficial",
    "_verificado": "declarada a mano: El afiche OFICIAL del festival manda sobre el de TMDB (jerarquía del póster): es el que ya publicamos en FICCALI 2026. Desde el 20 oct la web de FICICA da el director, la cascada casa la ficha de TMDB y su afiche pisaba el oficial. Declarado el 20 oct 2026.",
    "_director": "Bernardo Hernández",
-   "_sondeado": "2026-10-20"
+   "_sondeado": "2026-10-25"
   },
   {
    "titulo": "El maestro de la piquería",
@@ -506,7 +524,7 @@
    "posterSource": "oficial",
    "_verificado": "declarada a mano: El afiche OFICIAL del festival manda sobre el de TMDB (jerarquía del póster): es el que ya publicamos en FICCALI 2026. Desde el 20 oct la web de FICICA da el director, la cascada casa la ficha de TMDB y su afiche pisaba el oficial. Declarado el 20 oct 2026.",
    "_director": "Yinet Molero",
-   "_sondeado": "2026-10-20",
+   "_sondeado": "2026-10-25",
    "_heredado": {
     "genero": "catálogo w_R4H5QGK8DBTH (ficcali-2026, ficica-2026)"
    }
@@ -716,7 +734,7 @@
    "posterSource": "oficial",
    "_verificado": "declarada a mano: El afiche OFICIAL del festival manda sobre el de TMDB (jerarquía del póster): es el que ya publicamos en FICCALI 2026. Desde el 20 oct la web de FICICA da el director, la cascada casa la ficha de TMDB y su afiche pisaba el oficial. Declarado el 20 oct 2026.",
    "_director": "Basir Ahmed",
-   "_sondeado": "2026-10-20",
+   "_sondeado": "2026-10-25",
    "_heredado": {
     "synopsis_es": "catálogo w_R4H634PN0T5B (ficcali-2026, ficica-2026)"
    }
@@ -1018,7 +1036,7 @@
    "lbSlug": "buen-vivir-nutse-canseye",
    "_verificado": "declarada a mano: Existe en TMDB con otro título o sin año ni duración, y el candado no la casaba sola: «buen vivir – ñutse canseye» (2025), Zoé Nathalie Kugler; mismo director que publica FICICA. Verificada el 11 oct 2026.",
    "_director": "Zoé Nathalie Kugler",
-   "_sondeado": "2026-10-20",
+   "_sondeado": "2026-10-25",
    "poster": "/assets/ficica-2026/living-well.jpg",
    "posterSource": "tmdb"
   },
@@ -1175,7 +1193,7 @@
    "lbSlug": "memoria-de-pivete",
    "_verificado": "declarada a mano: Existe en TMDB con otro título o sin año ni duración, y el candado no la casaba sola: «Memória de Pivete», Pedro Santi; mismo director que publica FICICA. Verificada el 11 oct 2026.",
    "_director": "Pedro Santi",
-   "_sondeado": "2026-10-20",
+   "_sondeado": "2026-10-25",
    "poster": "/assets/ficica-2026/memoria-de-un-pibe.jpg",
    "posterSource": "tmdb",
    "title_en": "Memória de Pivete",
@@ -1345,7 +1363,7 @@
    "lbSlug": "nativity-scene",
    "_verificado": "declarada a mano: Existe en TMDB con otro título o sin año ni duración, y el candado no la casaba sola: «Nativity Scene» (2025), Felipe Bibian; mismo director que publica FICICA. Verificada el 11 oct 2026.",
    "_director": "Felipe Bibian",
-   "_sondeado": "2026-10-20",
+   "_sondeado": "2026-10-25",
    "poster": "/assets/ficica-2026/presepio-el-pesebre.jpg",
    "posterSource": "tmdb",
    "_heredado": {
@@ -1469,7 +1487,7 @@
    "posterSource": "oficial",
    "_verificado": "declarada a mano: El afiche OFICIAL del festival manda sobre el de TMDB (jerarquía del póster): es el que ya publicamos en FICCALI 2026. Desde el 20 oct la web de FICICA da el director, la cascada casa la ficha de TMDB y su afiche pisaba el oficial. Declarado el 20 oct 2026.",
    "_director": "Fran Menchón",
-   "_sondeado": "2026-10-20"
+   "_sondeado": "2026-10-25"
   },
   {
    "titulo": "Refraccion",
@@ -1548,7 +1566,7 @@
    "tmdb_id": 1677190,
    "titulo_original": "Replay",
    "poster_path": "/W9xvtCLFRZtbklQGnhpNJCwuL.jpg",
-   "synopsis_es": "",
+   "synopsis_es": "En medio del espacio, una misteriosa criatura asalta una nave y se enfrenta a una banda de lagartos robot, para así obtener un extraño artefacto con forma de disco.",
    "synopsis_en": "Set in a distant galaxy, a strange humanoid creature called Hunter X must fight against a dozen robot lizards to retrieve a peculiar disk-shaped device.",
    "genero": "Animación",
    "anio_tmdb": 2026,
@@ -1557,9 +1575,12 @@
    "lbSlug": "replay-2026",
    "_verificado": "declarada a mano: Existe en TMDB con otro título o sin año ni duración, y el candado no la casaba sola: «Replay» (2026), Simón Matallana Nossa; mismo director que publica FICICA. Verificada el 11 oct 2026.",
    "_director": "Simón Matallana",
-   "_sondeado": "2026-10-20",
+   "_sondeado": "2026-10-25",
    "poster": "/assets/ficica-2026/replay.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "_heredado": {
+    "synopsis_es": "catálogo w_ZR5FE4J5AM6C (anibia-2026, bhff-2026, ficica-2026)"
+   }
   },
   {
    "titulo": "Safo",
@@ -1594,7 +1615,7 @@
    "lbSlug": "saq-nikte-and-the-spirit-of-the-mask",
    "_verificado": "declarada a mano: Existe en TMDB con otro título o sin año ni duración, y el candado no la casaba sola: «Saq Nikté and the Spirit of the Mask» (2025), Ester Weiner; mismo director que publica FICICA. Verificada el 11 oct 2026.",
    "_director": "Ester Weiner",
-   "_sondeado": "2026-10-20",
+   "_sondeado": "2026-10-25",
    "poster": "/assets/ficica-2026/saq-nikte-y-el-espiritu-de-la-mascara.jpg",
    "posterSource": "tmdb"
   },
@@ -1931,7 +1952,7 @@
    "posterSource": "oficial",
    "_verificado": "declarada a mano: El afiche OFICIAL del festival manda sobre el de TMDB (jerarquía del póster): es el que ya publicamos en FICCALI 2026. Desde el 20 oct la web de FICICA da el director, la cascada casa la ficha de TMDB y su afiche pisaba el oficial. Declarado el 20 oct 2026.",
    "_director": "Juan Manuel González",
-   "_sondeado": "2026-10-20",
+   "_sondeado": "2026-10-25",
    "_heredado": {
     "synopsis_es": "catálogo w_R4H50AY1TEJ8 (ficcali-2026, ficica-2026, villadelcine-2026)"
    }
@@ -2271,7 +2292,7 @@
    "lbSlug": "noras-ark",
    "_verificado": "declarada a mano: Existe en TMDB con otro título o sin año ni duración, y el candado no la casaba sola: «Nora's ark» (2026), Endre Lund Eriksen; mismo director que publica FICICA. Verificada el 11 oct 2026.",
    "_director": "Endre Lund Eriksen, Isak Gjertsen",
-   "_sondeado": "2026-10-20",
+   "_sondeado": "2026-10-25",
    "poster": "/assets/ficica-2026/el-arca-de-nora.jpg",
    "posterSource": "tmdb"
   },
@@ -2290,7 +2311,7 @@
    "posterSource": "oficial",
    "_verificado": "declarada a mano: El afiche OFICIAL del festival manda sobre el de TMDB (jerarquía del póster): es el que ya publicamos en FICCALI 2026. Desde el 20 oct la web de FICICA da el director, la cascada casa la ficha de TMDB y su afiche pisaba el oficial. Declarado el 20 oct 2026.",
    "_director": "Bernardo Hernández",
-   "_sondeado": "2026-10-20"
+   "_sondeado": "2026-10-25"
   },
   "El maestro de la piquería": {
    "tmdb_id": 1794001,
@@ -2307,7 +2328,7 @@
    "posterSource": "oficial",
    "_verificado": "declarada a mano: El afiche OFICIAL del festival manda sobre el de TMDB (jerarquía del póster): es el que ya publicamos en FICCALI 2026. Desde el 20 oct la web de FICICA da el director, la cascada casa la ficha de TMDB y su afiche pisaba el oficial. Declarado el 20 oct 2026.",
    "_director": "Yinet Molero",
-   "_sondeado": "2026-10-20",
+   "_sondeado": "2026-10-25",
    "_heredado": {
     "genero": "catálogo w_R4H5QGK8DBTH (ficcali-2026, ficica-2026)"
    }
@@ -2492,7 +2513,7 @@
    "posterSource": "oficial",
    "_verificado": "declarada a mano: El afiche OFICIAL del festival manda sobre el de TMDB (jerarquía del póster): es el que ya publicamos en FICCALI 2026. Desde el 20 oct la web de FICICA da el director, la cascada casa la ficha de TMDB y su afiche pisaba el oficial. Declarado el 20 oct 2026.",
    "_director": "Basir Ahmed",
-   "_sondeado": "2026-10-20",
+   "_sondeado": "2026-10-25",
    "_heredado": {
     "synopsis_es": "catálogo w_R4H634PN0T5B (ficcali-2026, ficica-2026)"
    }
@@ -2772,7 +2793,7 @@
    "lbSlug": "buen-vivir-nutse-canseye",
    "_verificado": "declarada a mano: Existe en TMDB con otro título o sin año ni duración, y el candado no la casaba sola: «buen vivir – ñutse canseye» (2025), Zoé Nathalie Kugler; mismo director que publica FICICA. Verificada el 11 oct 2026.",
    "_director": "Zoé Nathalie Kugler",
-   "_sondeado": "2026-10-20",
+   "_sondeado": "2026-10-25",
    "poster": "/assets/ficica-2026/living-well.jpg",
    "posterSource": "tmdb"
   },
@@ -2899,7 +2920,7 @@
    "lbSlug": "memoria-de-pivete",
    "_verificado": "declarada a mano: Existe en TMDB con otro título o sin año ni duración, y el candado no la casaba sola: «Memória de Pivete», Pedro Santi; mismo director que publica FICICA. Verificada el 11 oct 2026.",
    "_director": "Pedro Santi",
-   "_sondeado": "2026-10-20",
+   "_sondeado": "2026-10-25",
    "poster": "/assets/ficica-2026/memoria-de-un-pibe.jpg",
    "posterSource": "tmdb",
    "title_en": "Memória de Pivete",
@@ -3064,7 +3085,7 @@
    "lbSlug": "nativity-scene",
    "_verificado": "declarada a mano: Existe en TMDB con otro título o sin año ni duración, y el candado no la casaba sola: «Nativity Scene» (2025), Felipe Bibian; mismo director que publica FICICA. Verificada el 11 oct 2026.",
    "_director": "Felipe Bibian",
-   "_sondeado": "2026-10-20",
+   "_sondeado": "2026-10-25",
    "poster": "/assets/ficica-2026/presepio-el-pesebre.jpg",
    "posterSource": "tmdb",
    "_heredado": {
@@ -3185,7 +3206,7 @@
    "posterSource": "oficial",
    "_verificado": "declarada a mano: El afiche OFICIAL del festival manda sobre el de TMDB (jerarquía del póster): es el que ya publicamos en FICCALI 2026. Desde el 20 oct la web de FICICA da el director, la cascada casa la ficha de TMDB y su afiche pisaba el oficial. Declarado el 20 oct 2026.",
    "_director": "Fran Menchón",
-   "_sondeado": "2026-10-20"
+   "_sondeado": "2026-10-25"
   },
   "Refraccion": {
    "tmdb_id": 1584776,
@@ -3262,7 +3283,7 @@
    "tmdb_id": 1677190,
    "titulo_original": "Replay",
    "poster_path": "/W9xvtCLFRZtbklQGnhpNJCwuL.jpg",
-   "synopsis_es": "",
+   "synopsis_es": "En medio del espacio, una misteriosa criatura asalta una nave y se enfrenta a una banda de lagartos robot, para así obtener un extraño artefacto con forma de disco.",
    "synopsis_en": "Set in a distant galaxy, a strange humanoid creature called Hunter X must fight against a dozen robot lizards to retrieve a peculiar disk-shaped device.",
    "genero": "Animación",
    "anio_tmdb": 2026,
@@ -3271,9 +3292,12 @@
    "lbSlug": "replay-2026",
    "_verificado": "declarada a mano: Existe en TMDB con otro título o sin año ni duración, y el candado no la casaba sola: «Replay» (2026), Simón Matallana Nossa; mismo director que publica FICICA. Verificada el 11 oct 2026.",
    "_director": "Simón Matallana",
-   "_sondeado": "2026-10-20",
+   "_sondeado": "2026-10-25",
    "poster": "/assets/ficica-2026/replay.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "_heredado": {
+    "synopsis_es": "catálogo w_ZR5FE4J5AM6C (anibia-2026, bhff-2026, ficica-2026)"
+   }
   },
   "Safo": {
    "tmdb_id": 1450073,
@@ -3306,7 +3330,7 @@
    "lbSlug": "saq-nikte-and-the-spirit-of-the-mask",
    "_verificado": "declarada a mano: Existe en TMDB con otro título o sin año ni duración, y el candado no la casaba sola: «Saq Nikté and the Spirit of the Mask» (2025), Ester Weiner; mismo director que publica FICICA. Verificada el 11 oct 2026.",
    "_director": "Ester Weiner",
-   "_sondeado": "2026-10-20",
+   "_sondeado": "2026-10-25",
    "poster": "/assets/ficica-2026/saq-nikte-y-el-espiritu-de-la-mascara.jpg",
    "posterSource": "tmdb"
   },
@@ -3532,14 +3556,9 @@
   "Capitán cartagena",
   "Carne de segunda",
   "Chro",
-  "Cine accesible",
-  "Cine comunitario (REDACO)",
   "Citizenship test",
-  "Colombia y sus cicatrices",
   "Compraventa",
   "Concierto sentido",
-  "Concurso MINI",
-  "Construir familia",
   "Dientes de yuca",
   "Dulce",
   "El abrazo del sol",
@@ -3547,8 +3566,6 @@
   "El segundo",
   "El silencio de las semillas",
   "En nombre del amor",
-  "Encuentros",
-  "Foco Irán",
   "Frágil o embalados",
   "Gracias, antonio",
   "In turn",
@@ -3560,10 +3577,7 @@
   "La tormenta",
   "La tranquilidad de los pájaros",
   "Luis antonio",
-  "Líneas y rayas",
   "Memorias piedras de boca e’ caña",
-  "Miradas: más allá del género",
-  "Mujeres tenían que ser",
   "New york",
   "Plan de fuga",
   "Post-familia",
@@ -3572,29 +3586,23 @@
   "Queener",
   "Rastro",
   "Recordando mi jerga",
-  "Retrospectiva cine afro del Caribe colombiano",
   "Seguridad en el territorio del pueblo ette ennka chimila",
   "Sombra lejana",
   "Tejiendo un árbol",
-  "Territorios en disputa",
-  "Territorios vivos",
   "The dreaming witness",
   "The remaining dregs",
   "The torch i carry",
-  "Una mirada latina",
-  "Y así pasan los días",
   "Zizuma, nuestra casa de agua y nubes",
-  "¿Eso es real?",
   "¿Quién heredará el sabor de mompox?"
  ],
  "_sin_ficha_sondeo": {
   "10 meters above": {
    "director": "Irene Baqué",
-   "fecha": "2026-10-18"
+   "fecha": "2026-10-25"
   },
   "Appol-o": {
    "director": "Juan José Calvo Lozano, Nicolás Castro Herrera, Cristian Felipe Ossa Castro",
-   "fecha": "2026-10-18"
+   "fecha": "2026-10-25"
   },
   "Arlequín": {
    "director": "Rubén Casalins",
@@ -3602,11 +3610,11 @@
   },
   "Bartolo": {
    "director": "Sergio Andrés Fernández Buitrago",
-   "fecha": "2026-10-18"
+   "fecha": "2026-10-25"
   },
   "Belleza letal": {
    "director": "Juan Abello, Felipe Moreno, Valeria Rúa, Andrés Benavides, German París, Santiago Rodriguez, Fiama Castor, Juan Olmos, Cindy Caffroni, Ronald Marquez",
-   "fecha": "2026-10-18"
+   "fecha": "2026-10-25"
   },
   "Cabica": {
    "director": "Heidy Helena Mejia Sánchez",
@@ -3618,43 +3626,23 @@
   },
   "Carne de segunda": {
    "director": "Ruben Casalins",
-   "fecha": "2026-10-18"
+   "fecha": "2026-10-25"
   },
   "Chro": {
    "director": "Hamed Bahrami",
-   "fecha": "2026-10-18"
-  },
-  "Cine accesible": {
-   "director": "",
-   "fecha": "2026-10-18"
-  },
-  "Cine comunitario (REDACO)": {
-   "director": "",
-   "fecha": "2026-10-18"
+   "fecha": "2026-10-25"
   },
   "Citizenship test": {
    "director": "Alejandro de los Ríos",
-   "fecha": "2026-10-18"
-  },
-  "Colombia y sus cicatrices": {
-   "director": "",
-   "fecha": "2026-10-18"
+   "fecha": "2026-10-25"
   },
   "Compraventa": {
    "director": "",
-   "fecha": "2026-10-18"
+   "fecha": "2026-10-25"
   },
   "Concierto sentido": {
    "director": "Cristian Rivas",
    "fecha": "2026-10-20"
-  },
-  "Concurso MINI": {
-   "director": "",
-   "fecha": "2026-10-18"
-  },
-  "Construir familia": {
-   "director": "",
-   "fecha": "2026-10-18"
   },
   "Dientes de yuca": {
    "director": "Yurieth Romero Velasquez",
@@ -3674,7 +3662,7 @@
   },
   "El segundo": {
    "director": "Pedro Miguel Rozo Flores",
-   "fecha": "2026-10-18"
+   "fecha": "2026-10-25"
   },
   "El silencio de las semillas": {
    "director": "Elizabeth Pirela González",
@@ -3682,15 +3670,7 @@
   },
   "En nombre del amor": {
    "director": "Mariana Pallas, Alexander Dieppa, Luciana Martins, Socorro Lira",
-   "fecha": "2026-10-18"
-  },
-  "Encuentros": {
-   "director": "",
-   "fecha": "2026-10-18"
-  },
-  "Foco Irán": {
-   "director": "",
-   "fecha": "2026-10-18"
+   "fecha": "2026-10-25"
   },
   "Frágil o embalados": {
    "director": "Colectivo Pedro Romero Vive Aquí",
@@ -3698,63 +3678,51 @@
   },
   "Gracias, antonio": {
    "director": "Keren Berrio",
-   "fecha": "2026-10-18"
+   "fecha": "2026-10-25"
   },
   "In turn": {
    "director": "Sahra Asadollahi / Atefeh Salehi",
-   "fecha": "2026-10-18"
+   "fecha": "2026-10-25"
   },
   "Juego de damas": {
    "director": "Enrique Vargas",
-   "fecha": "2026-10-18"
+   "fecha": "2026-10-25"
   },
   "La ceremonia": {
    "director": "Julián García Valero / Deimer Vergara Torres",
-   "fecha": "2026-10-18"
+   "fecha": "2026-10-25"
   },
   "La culpa es del cine": {
    "director": "Eduardo Rivera Aburto",
-   "fecha": "2026-10-18"
+   "fecha": "2026-10-25"
   },
   "La despedida": {
    "director": "Ana Marcela Meza Vargas",
-   "fecha": "2026-10-18"
+   "fecha": "2026-10-25"
   },
   "La fiesta votada": {
    "director": "Lady Vasquez Casupa",
-   "fecha": "2026-10-18"
+   "fecha": "2026-10-25"
   },
   "La tormenta": {
    "director": "Pierre Jiménez",
-   "fecha": "2026-10-18"
+   "fecha": "2026-10-25"
   },
   "La tranquilidad de los pájaros": {
    "director": "Edgar De Luque Jácome",
-   "fecha": "2026-10-18"
+   "fecha": "2026-10-25"
   },
   "Luis antonio": {
    "director": "Juan José Arias Gil",
-   "fecha": "2026-10-18"
-  },
-  "Líneas y rayas": {
-   "director": "",
-   "fecha": "2026-10-18"
+   "fecha": "2026-10-25"
   },
   "Memorias piedras de boca e’ caña": {
    "director": "Tribu Digital Mokaná",
    "fecha": "2026-10-20"
   },
-  "Miradas: más allá del género": {
-   "director": "",
-   "fecha": "2026-10-18"
-  },
-  "Mujeres tenían que ser": {
-   "director": "",
-   "fecha": "2026-10-18"
-  },
   "New york": {
    "director": "Amir Karami",
-   "fecha": "2026-10-18"
+   "fecha": "2026-10-25"
   },
   "Plan de fuga": {
    "director": "Gleydis Paola Salgado Reyes",
@@ -3762,7 +3730,7 @@
   },
   "Post-familia": {
    "director": "Alexis Tafour",
-   "fecha": "2026-10-18"
+   "fecha": "2026-10-25"
   },
   "Princesado mokaná: el legado del cerro de las hermosas": {
    "director": "Liz Dany Macías",
@@ -3774,19 +3742,15 @@
   },
   "Queener": {
    "director": "Sebastián López Murillo",
-   "fecha": "2026-10-18"
+   "fecha": "2026-10-25"
   },
   "Rastro": {
    "director": "Dominique Jeanneret",
-   "fecha": "2026-10-18"
+   "fecha": "2026-10-25"
   },
   "Recordando mi jerga": {
    "director": "Xilenys Rojas Ortega",
-   "fecha": "2026-10-18"
-  },
-  "Retrospectiva cine afro del Caribe colombiano": {
-   "director": "",
-   "fecha": "2026-10-18"
+   "fecha": "2026-10-25"
   },
   "Seguridad en el territorio del pueblo ette ennka chimila": {
    "director": "Cristobal R. Mendoza",
@@ -3794,51 +3758,31 @@
   },
   "Sombra lejana": {
    "director": "Antonio J. Camargo",
-   "fecha": "2026-10-18"
+   "fecha": "2026-10-25"
   },
   "Tejiendo un árbol": {
    "director": "Alvaro Cardona",
-   "fecha": "2026-10-18"
-  },
-  "Territorios en disputa": {
-   "director": "",
-   "fecha": "2026-10-18"
-  },
-  "Territorios vivos": {
-   "director": "",
-   "fecha": "2026-10-18"
+   "fecha": "2026-10-25"
   },
   "The dreaming witness": {
    "director": "Shayan Naghibi",
-   "fecha": "2026-10-18"
+   "fecha": "2026-10-25"
   },
   "The remaining dregs": {
    "director": "Paria Alaei",
-   "fecha": "2026-10-18"
+   "fecha": "2026-10-25"
   },
   "The torch i carry": {
    "director": "Namuungoo Enkhbat",
-   "fecha": "2026-10-18"
-  },
-  "Una mirada latina": {
-   "director": "",
-   "fecha": "2026-10-18"
-  },
-  "Y así pasan los días": {
-   "director": "",
-   "fecha": "2026-10-18"
+   "fecha": "2026-10-25"
   },
   "Zizuma, nuestra casa de agua y nubes": {
    "director": "Fátima Correa",
-   "fecha": "2026-10-18"
-  },
-  "¿Eso es real?": {
-   "director": "",
-   "fecha": "2026-10-18"
+   "fecha": "2026-10-25"
   },
   "¿Quién heredará el sabor de mompox?": {
    "director": "Jonatan José Hernández González",
-   "fecha": "2026-10-18"
+   "fecha": "2026-10-25"
   }
  }
 }

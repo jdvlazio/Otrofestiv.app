@@ -105,6 +105,17 @@ def main():
             cortos = [plano(re.match(r'<b>(.*?)</b>', x).group(1)) for x in e.get('cortos') or []]
             if cortos and [plano(x['title']) for x in f.get('film_list') or []] != cortos:
                 fallos.append(f'{dia} «{t}»: los cortos del build no son los de la parrilla')
+    # las funciones que agrega una afirmación `existe: {…}` (una sede que solo
+    # publicó la sala, p. ej. Nico en Fontanar del Río): se esperan en el build,
+    # una por afirmación, en su ancla y con su título (mismo patrón que Guatapé)
+    for a in AFS:
+        if a['casilla'] == 'existe' and isinstance(a['valor'], dict):
+            v = a['valor']
+            c = [i for i, f in enumerate(films) if (f['venue'], f['day'], f['time']) == (v['venue'], v['day'], v['time'])
+                 and plano(f['title']) == plano(v['title'])]
+            if len(c) != 1:
+                fallos.append(f'{v["day"]} {v["time"]} «{v["title"]}» (afirmación existe): {len(c)} funciones en el build')
+            usadas.update(c)
     talleres = [i for i, f in enumerate(films) if f.get('event_kind') == 'taller']
     for i, f in enumerate(films):
         if i not in usadas and i not in talleres:

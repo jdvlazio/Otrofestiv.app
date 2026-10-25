@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "ensamblar.py: ids estables de las funciones (docs/FUNCION.md C1)",
-  "capturado": "2026-10-21"
+  "capturado": "2026-10-25"
  },
  "funciones": {
   "f_85b92f5580": {
@@ -152,11 +152,21 @@
    "titulo": "entrega de reconocimientos"
   },
   "f_408cc202e1": {
-   "sede": "Universidad Nacional, Edificio 303 (NEA) - Bogotá",
+   "sede": "Universidad Nacional, Edificio 301 - Bogotá",
    "dia": "2026-10-27",
    "hora": "18:30",
-   "sala": "Cinemateca Sala Alterna UNAL",
-   "titulo": "surgentes animage"
+   "sala": "Cinemateca Sala Alterna UNAL - Auditorio 105",
+   "titulo": "surgentes animage",
+   "decidida": {
+    "fecha": "2026-10-25",
+    "clave": [
+     "Universidad Nacional, Edificio 301 - Bogotá",
+     "2026-10-27",
+     "18:30",
+     "Cinemateca Sala Alterna UNAL - Auditorio 105",
+     "surgentes animage"
+    ]
+   }
   },
   "f_e826b23370": {
    "sede": "Universidad Nacional, Edificio 303 (NEA) - Bogotá",

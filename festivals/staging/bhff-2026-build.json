@@ -2,12 +2,12 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "bogotahorrorfilmfest.com/programacion/ (arreglo PROGRAMACION del HTML) + IG p/DdcszK2Dn7g (franjas nacionales)",
-  "capturado": "2026-10-21",
+  "capturado": "2026-10-25",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "radar": 1030,
  "_por_que_secciones": "«Franja Nacional» y «Franja Internacional» son el rótulo de la parrilla, tal cual. «Inauguración» y «Clausura», el tipo de función del festival. «Proyecciones» es la etiqueta «Proyección» del festival para el resto (la parrilla no les da sección). Franja Nacional = Competencia (la clausura proyecta el «Corto Nacional Ganador»). Emoji, inglés y arquetipo: propuesta, a confirmar con Juan.",
- "_por_que_sedes": "Tabla canónica en el crudo (SEDES): la sala de la parrilla → (sede, sala). «CEFE Chapinero» = Centro Felicidad Chapinero. «Cinematecas locales» (3 funciones) queda fuera: son dos (El Tunal y Fontanar del Río) y el festival no dice cuál; preguntado. Pines: los 4 a mano, con dos fuentes.",
+ "_por_que_sedes": "Tabla canónica en el crudo (SEDES): la sala de la parrilla → (sede, sala). «CEFE Chapinero» = Centro Felicidad Chapinero. «Cinematecas locales»: queda fuera salvo la función cuya sede publicó la agenda de la Cinemateca (SEDE_LOCAL en el crudo: Nico → Fontanar del Río, 25 oct); las otras dos, sin sede publicada. Pines: los 4 a mano, con dos fuentes.",
  "name": "Bogotá Horror",
  "displayName": "Bogotá Horror",
  "fullName": "Bogotá Horror Film Festival 8",
@@ -223,6 +223,15 @@
    "lat": 4.6215012,
    "lng": -74.0724229,
    "address": "Cra. 17 #32A-34, Teusaquillo"
+  },
+  "Cinemateca Fontanar del Río - Bogotá": {
+   "short": "Cinemateca Fontanar del Río",
+   "city": "Bogotá",
+   "_prec": "manual",
+   "_nota": "La sede que la agenda de la Cinemateca da para Nico (node/3577: «Fontanar del Río»). Google Maps «CEFE Fontanar del río»; el mismo pin con que la publicamos en FICDEH, Narrar el Futuro y Anibia.",
+   "lat": 4.7561244,
+   "lng": -74.1110572,
+   "address": "Calle 146 # 138A-99"
   }
  },
  "_avisos_id": [],
@@ -910,8 +919,10 @@
      "posterSource": "tmdb",
      "lbSlug": "replay-2026",
      "tmdb_id": 1677190,
+     "synopsis": "En medio del espacio, una misteriosa criatura asalta una nave y se enfrenta a una banda de lagartos robot, para así obtener un extraño artefacto con forma de disco.",
      "synopsis_en": "Set in a distant galaxy, a strange humanoid creature called Hunter X must fight against a dozen robot lizards to retrieve a peculiar disk-shaped device.",
-     "genre": "Animación"
+     "genre": "Animación",
+     "synopsis_lang": "es"
     },
     {
      "title": "Muertos que no son muertos",
@@ -1427,6 +1438,7 @@
    "title_en": "Where Dreams Sleep",
    "_fid": "f_f9eb6c114e",
    "id": "f_f9eb6c114e",
+   "sala": "Teatro Urbano, Piso -1",
    "is_free": true,
    "_procedencia": {
     "day": {
@@ -1443,6 +1455,11 @@
      "tipo": "festival-web",
      "fecha": "2026-09-26",
      "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "sala": {
+     "tipo": "sala",
+     "fecha": "2026-10-23",
+     "url": "https://www.instagram.com/p/De1vyxwxjBZ/"
     },
     "duration": {
      "tipo": "festival-web",
@@ -2863,6 +2880,77 @@
     }
    },
    "duration": "90 min"
+  },
+  {
+   "title": "Nico",
+   "type": "film",
+   "section": "📽️ Proyecciones",
+   "day": "2026-10-25",
+   "time": "16:00",
+   "venue": "Cinemateca Fontanar del Río - Bogotá",
+   "director": "Salomón Reyes",
+   "year": 2025,
+   "country": "Uruguay, Argentina",
+   "duration": "70 min",
+   "flags": "🇺🇾🇦🇷",
+   "genre": "Terror",
+   "synopsis": "Una madre desesperada reúne a su familia en el mismo bosque donde falleció su hijo tres años atrás, sin revelar que los ha reunido para llevar a cabo un ritual de invocación que le devuelva la vida al niño.",
+   "synopsis_lang": "es",
+   "poster": "/assets/bhff-2026/nico.jpg",
+   "posterSource": "tmdb",
+   "lbSlug": "nico-2025",
+   "tmdb_id": 1182204,
+   "_ancla": [
+    "Cinemateca Fontanar del Río - Bogotá",
+    "2026-10-25",
+    "16:00"
+   ],
+   "_fid": "f_9c7ba7eefe",
+   "_procedencia": {
+    "existe": {
+     "tipo": "sala",
+     "url": "https://cinematecadebogota.gov.co/node/3577",
+     "fecha": "2026-10-25"
+    },
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-25",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-25",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-25",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-25",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-25",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-25",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-25",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    }
+   },
+   "is_free": true,
+   "id": "f_9c7ba7eefe",
+   "day_order": 3
   }
  ],
  "_avisos_duracion": [
@@ -2870,8 +2958,8 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-21T06:40:55",
-  "plan_sha": "104188497fe430c6",
+  "fecha": "2026-10-25T07:11:23",
+  "plan_sha": "1490e98ec470eaea",
   "paso": 9,
   "cmd": "python3 pipeline/bhff-2026-verificar.py"
  }

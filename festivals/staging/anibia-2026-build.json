@@ -2,10 +2,10 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "programación oficial de Anibia 2026 (PDF del Linktree = carrusel IG DeQG0NPGy2f)",
-  "capturado": "2026-10-21",
+  "capturado": "2026-10-25",
   "ensamblador": "pipeline/ensamblar.py"
  },
- "_por_que_sedes": "Tabla canónica en el crudo: una sede por edificio, la sala aparte. La Cinemateca Sala Alterna UNAL es el Auditorio 422 del 303C (UNAL): misma sede que la charla del Bloque C. Pines de Google Maps, a mano (venues-geo).",
+ "_por_que_sedes": "Tabla canónica en el crudo: una sede por edificio, la sala aparte. La Cinemateca Sala Alterna UNAL es el Auditorio 422 del 303C (UNAL): misma sede que la charla del Bloque C. Pines de Google Maps, a mano (venues-geo). Corrección 25 oct: la Sala Alterna proyecta en el Auditorio 105 del Edificio 301 (la sala misma, IG De2wLBxDY-Q), sede propia; el 303 queda para el Reel/WIP Day y la charla del Bloque C.",
  "_por_que_secciones": "Las palabras son del festival (PDF/láminas), en caja de Título: Surgentes, Con Acento Nacional, Costa a Costa, Conexión, Todxs a Bordo, Conexión de Largo Aliento; Charla, Cine Concierto & Panel y Exposición son el rótulo de la lámina. Emoji, inglés y arquetipo decididos por delegación de Juan (21 oct). Con Acento Nacional = Competencia (tiene entrega de reconocimientos).",
  "name": "Anibia",
  "displayName": "Anibia",
@@ -275,6 +275,15 @@
    "lat": 4.606567,
    "lng": -74.067801,
    "address": "Cra. 4 # 22-40 (entrada calle 23)"
+  },
+  "Universidad Nacional, Edificio 301 - Bogotá": {
+   "short": "Universidad Nacional, Edificio 301",
+   "city": "Bogotá",
+   "_prec": "manual",
+   "_nota": "Google Maps «301 - Artes Plásticas» (UNAL Bogotá). La Cinemateca Sala Alterna proyecta en su Auditorio 105 (@cinematecasalalterna, 23 oct 2026)",
+   "lat": 4.6363087,
+   "lng": -74.0822067,
+   "address": "Av. Cra. 30 # 45-03"
   },
   "Universidad Nacional, Edificio 303 (NEA) - Bogotá": {
    "short": "Universidad Nacional, Edificio 303 (NEA)",
@@ -4148,15 +4157,15 @@
    "flags": "🇧🇷",
    "duration": "55 min",
    "_ancla": [
-    "Universidad Nacional, Edificio 303 (NEA) - Bogotá",
+    "Universidad Nacional, Edificio 301 - Bogotá",
     "2026-10-27",
     "18:30"
    ],
    "day": "2026-10-27",
    "time": "18:30",
    "day_order": 7,
-   "venue": "Universidad Nacional, Edificio 303 (NEA) - Bogotá",
-   "sala": "Cinemateca Sala Alterna UNAL",
+   "venue": "Universidad Nacional, Edificio 301 - Bogotá",
+   "sala": "Cinemateca Sala Alterna UNAL - Auditorio 105",
    "has_qa": false,
    "_src": {
     "url": "https://drive.google.com/uc?export=download&id=1oWVSdLh8OtO65UAX8pybuF2hhdnflkOK",
@@ -5055,8 +5064,8 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-21T16:23:38",
-  "plan_sha": "494130f520ea5eb9",
+  "fecha": "2026-10-25T07:01:55",
+  "plan_sha": "a5ed87eef584bc56",
   "paso": 7,
   "cmd": "python3 pipeline/anibia-2026-verificar.py"
  }
