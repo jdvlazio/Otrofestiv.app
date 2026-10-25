@@ -33,7 +33,7 @@ SEDE_B = {
     'Cinemateca de Bogotá / Centro': CINE,
     'Cinemateca de Bogotá / Fontanar del Río': 'Cinemateca Fontanar del Río - Bogotá',
     'CEFE Chapinero': 'CEFE Chapinero - Bogotá',
-    'Cinemateca Sala Alterna UNAL': 'Universidad Nacional, Edificio 303 (NEA) - Bogotá',
+    'Cinemateca Sala Alterna UNAL': 'Universidad Nacional, Edificio 301 - Bogotá',  # la sala: Edif. 301, Aud. 105 (IG De2wLBxDY-Q)
     'Universidad Nacional de Colombia': 'Universidad Nacional, Edificio 303 (NEA) - Bogotá',
     'Hall entrada admin. Facultad de Artes, Edf. Gerardo Arango S.J': 'Pontificia Universidad Javeriana - Bogotá',
     'Edificio Gerardo Arango S. J': 'Pontificia Universidad Javeriana - Bogotá',

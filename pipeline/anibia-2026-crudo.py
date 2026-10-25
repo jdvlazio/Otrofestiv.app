@@ -47,6 +47,11 @@ HOY = '2026-10-21'
 
 CIN, FON, CEFE = 'Cinemateca de Bogotá', 'Cinemateca Fontanar del Río', 'CEFE Chapinero'
 NAL = 'Universidad Nacional, Edificio 303 (NEA)'
+# La Cinemateca Sala Alterna proyecta en el Auditorio 105 del Edificio 301
+# (Artes Plásticas), no en el 303: lo dice la sala misma (@cinematecasalalterna,
+# IG De2wLBxDY-Q del 23 oct, y todo su ciclo de septiembre: «Edif. 301 ·
+# Auditorio 105»). El PDF solo da «Cinemateca Sala Alterna UNAL, Av Cra 30 # 45-3».
+NAL301, ALTERNA = 'Universidad Nacional, Edificio 301', 'Cinemateca Sala Alterna UNAL - Auditorio 105'
 TADB, TAD4 = 'Universidad Jorge Tadeo Lozano, Ed. Biblioteca', 'Universidad Jorge Tadeo Lozano, Módulo 4'
 # Una sede, la Javeriana; el edificio es la sala (como la UNAL 303). El detalle
 # (Hall entrada admin. Facultad de Artes / Auditorio piso 5) va en la _nota de venues-geo.
@@ -102,7 +107,7 @@ FUNCIONES = [
     ('2026-10-27', '17:30', 'Entrega de reconocimientos', 'Con Acento Nacional', TAD4, 'Aula Máxima Luís Cordoba Mariño', LIBRE, None, None,
      {'tipo': E, 'event_kind': 'awards', 'duracion_min': 60, '_duracion_de': '60 min declarados: el PDF no la da',
       'sinopsis': 'Con acento nacional · Procesos de formación. Módulo 4, planta baja, entrada calle 23.'}),
-    ('2026-10-27', '18:30', 'Surgentes - Animage', 'Surgentes', NAL, 'Cinemateca Sala Alterna UNAL', LIBRE, None, None,
+    ('2026-10-27', '18:30', 'Surgentes - Animage', 'Surgentes', NAL301, ALTERNA, LIBRE, None, None,
      {'programa': 'Surgentes - Animage'}),
     ('2026-10-28', '13:00', 'Reel / WIP Day', 'Día Internacional de la Animación', NAL, 'Bloque A, Aula Múltiple 105',
      'Evento para aliados', None, None,
@@ -222,7 +227,9 @@ def main():
             # anterior que ya salió conserva lo que la agenda afirmó antes
             viejas = [a for a in previas if a['fuente']['tipo'] == 'sala'
                       and (a['ancla']['sede'], a['ancla']['dia'], a['ancla']['hora']) == anc]
-            if dia <= hoy and viejas:
+            # (las de CEFE y Fontanar nunca dejaron afirmación de sala: si ya
+            # pasaron, no hay nada que conservar — Mukira, 22 oct)
+            if dia <= hoy and (viejas or sede != CIN):
                 afs += viejas
                 continue
             fallos.append(f'{dia} {hora} {tit}: no está en la agenda de la Cinemateca')
