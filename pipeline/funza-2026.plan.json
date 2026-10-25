@@ -13,7 +13,7 @@
   },
   {
    "cmd": "python3 pipeline/enriquecer.py funza-2026 --posters",
-   "que": "TMDB verificado + las 3 fichas declaradas en -correcciones; la cascada cruza contra lo publicado (guatape2026)"
+   "que": "TMDB verificado + las 3 fichas declaradas en -correcciones; la cascada cruza contra lo publicado (guatape2026); la sinopsis declarada de «Horizonte» (traducción propia) en festivals/staging/funza-2026-sinopsis.json"
   },
   {
    "cmd": "python3 pipeline/ensamblar.py funza-2026",
