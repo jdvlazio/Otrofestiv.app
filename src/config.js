@@ -1217,6 +1217,7 @@ export const SECTION_ARCHETYPES = {
   '🇫🇷 Comptoir du Doc': 'Muestra / País',
   '🏘️ CREAndo Documental en los Barrios': 'Cortos / Programas',
   '🎙️ Encuentro Pensar lo Real': 'Charlas / Industria',
+  '🔊 Documental Expandido': 'Especiales / Eventos',
   '🧒 Cine Corto Familiar': 'Cortos / Programas',
   '🎤 Actividades': 'Charlas / Industria',
   // Fantasmagoría 8 (29 sep 2026)

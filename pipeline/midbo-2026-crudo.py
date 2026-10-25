@@ -182,6 +182,68 @@ def seminario():
     return out, fuera
 
 
+# ── LAS ACTIVACIONES SONORAS «Documental Expandido» (post de @midbo_doc del 21
+# oct, instagram.com/p/DexoaAzCV-0, 5 láminas): no están en midbo.co. Títulos
+# verbatim de las láminas 2 y 3 (en caja de oración: la lámina va en
+# mayúscula sostenida). Las de la lámina 4–5 (10 nov) quedan fuera: solo días
+# oficiales. Ninguna lámina da hora de fin → duración ESTIMADA (60 / 90 min).
+# «Diario de una oreja» es «en el marco del Seminario Pensar lo Real» → su
+# sección y su acceso; el homenaje no anuncia pago → entrada libre.
+_SRC_ACT = {'url': 'https://www.instagram.com/p/DexoaAzCV-0/', 'date': '2026-10-21'}
+ACTIVACIONES = [
+    {'titulo': 'Diario de una oreja', 'dia': '2026-10-29', 'hora': '19:30',
+     'sede': 'Alianza Francesa', 'sala': 'Sede Centro', 'ciudad': 'Bogotá',
+     'tipo': 'evento', 'event_kind': 'evento', 'seccion': SECCION_SEMINARIO,
+     'duracion_min': 60, 'acceso': ACCESO_SEMINARIO,
+     'invitados': 'Diana Martínez y José Delgadillo.',
+     'sinopsis': 'Performance documental sonoro. En el marco del Seminario Pensar lo Real: Lenguajes Sonoros.',
+     '_src': _SRC_ACT},
+    {'titulo': 'Homenaje Roberto García Piedrahita QEDP', 'dia': '2026-10-31', 'hora': '19:00',
+     'sede': 'Universidad Jorge Tadeo Lozano, Edificio Fabio Lozano', 'sala': 'Auditorio Fabio Lozano', 'ciudad': 'Bogotá',
+     'tipo': 'evento', 'event_kind': 'concierto', 'seccion': 'Documental Expandido',
+     'duracion_min': 90, 'acceso': 'Entrada libre (no se anuncia pago)',
+     'invitados': 'Improvisación sonora en vivo por Roberto García Piedrahita, Alberto Vargas, Sergio Román, Jorjan Betancourt.',
+     'sinopsis': 'Concierto. Proyección de fragmentos de tres películas: Batallas Sagradas (Pablo Mora, 2002), '
+                 'Quién paga el pato (Pablo Mora, 2001) y Fragmentos (Carlos Santa, 1999).',
+     '_src': _SRC_ACT},
+    # LA INAUGURACIÓN (post de @midbo_doc del 23 oct, instagram.com/p/De3AsKjiTRT,
+    # 4 láminas, leídas sin sesión con ig-lecturas.py + a ojo): lámina 1 = título,
+    # sede, sala, día, hora, «PROYECCIÓN EN 16MM Y SONIDO EN VIVO», «Entrada
+    # Libre»; láminas 2 y 3 = las dos obras («ACTIVACIÓN INAUGURAL», artista y
+    # formato). Título en caja de oración (la lámina va en mayúscula sostenida).
+    # Ninguna lámina ni el pie da hora de fin → duración ESTIMADA en 60 min: dos
+    # activaciones en vivo de obra corta, como «Diario de una oreja».
+    {'titulo': 'Inauguración Documental Expandido', 'dia': '2026-10-28', 'hora': '16:30',
+     'sede': 'Cinemateca de Bogotá', 'sala': 'Sala E', 'ciudad': 'Bogotá',
+     'tipo': 'evento', 'event_kind': 'evento', 'seccion': 'Documental Expandido',
+     'duracion_min': 60, '_duracion_de': 'estimada: ninguna lámina da hora de fin',
+     'acceso': 'Entrada libre',
+     'sinopsis': 'Proyección en 16 mm y sonido en vivo. Primera activación de Documental Expandido.',
+     'obras': [
+         {'titulo': 'Circo', 'director': 'Daniel Torres',
+          'sinopsis': 'Cine expandido, 16 mm, video HD y carpa textil.'},
+         {'titulo': 'Patrimonio Líquido II', 'director': 'Sergio Díaz',
+          'sinopsis': 'Video instalación, 16 mm y sonido en vivo.'},
+     ],
+     '_src': {'url': 'https://www.instagram.com/p/De3AsKjiTRT/', 'date': '2026-10-23'}},
+    # La exposición de la Cinemateca (agenda de la sala = fuente de sala, hora y
+    # acceso; cinematecadebogota.gov.co/exposiciones?id=3663, leída el 22 oct):
+    # va del 28 oct al 16 nov → abierta (info) recortada al 4 nov, último día
+    # oficial. Horario de la sala: mar–vie 14:00–18:00, sáb/dom/fest 11:00–18:00;
+    # el 28 oct es miércoles → 14:00, 240 min.
+    {'titulo': 'Escuchar lo que permanece', 'dia': '2026-10-28', 'hora': '14:00',
+     'sede': 'Cinemateca de Bogotá', 'sala': 'Sala E', 'ciudad': 'Bogotá',
+     'tipo': 'evento', 'event_kind': 'evento', 'seccion': 'Documental Expandido',
+     'info': True, 'hasta': '2026-11-04', 'duracion_min': 240,
+     '_duracion_de': 'martes a viernes 2:00 p. m. a 6:00 p. m., agenda de la Cinemateca',
+     'acceso': 'Entrada libre reclamando boleta en taquilla',
+     'sinopsis': 'Exposición. Muestra de documental Expandido | 28 MIDBO. Martes a viernes de 2:00 p. m. a 6:00 p. m.; '
+                 'sábados, domingos y festivos de 11:00 a. m. a 6:00 p. m. Obras de María Isabella Arenas, Sergio Díaz, '
+                 'Daniel Torres y Yareni Velázquez Mendoza; curaduría de Jorjan Betancourt.',
+     '_src': {'url': 'https://cinematecadebogota.gov.co/exposiciones?id=3663', 'date': '2026-10-22'}},
+]
+
+
 def plano(s):
     s = unicodedata.normalize('NFD', (s or '').lower())
     s = ''.join(c for c in s if unicodedata.category(c) != 'Mn')
@@ -471,6 +533,7 @@ def main():
             o['titulo'] = o['titulo'].replace('’', "'").replace('‘', "'")
     sem, sem_fuera = seminario()
     funciones += sem
+    funciones += ACTIVACIONES
     fuera += sem_fuera
     io.open(OUT, 'w', encoding='utf-8').write(json.dumps({
         '_provenance': provenance('midbo.co — ficha de cada obra (bloque «Funciones») + API pelicula/seccion',

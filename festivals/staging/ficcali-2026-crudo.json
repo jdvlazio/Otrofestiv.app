@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "ficcali.com — Programación 2026 (WP 14870) + fichas de la Selección 2026",
-  "capturado": "2026-10-21",
+  "capturado": "2026-10-25",
   "url": "https://ficcali.com/programacion-ficcali-2026/",
   "metodo": "tarjeta por función; obra por la ficha del catálogo"
  },
@@ -100,17 +100,20 @@
    "sede": "Yawa",
    "sala": "Domo",
    "sede_cruda": "YAWA",
-   "acceso": "desconocido",
+   "acceso": "Inscripción previa",
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
-    "tarjeta": 14841
+    "tarjeta": 14841,
+    "ventana": "https://www.instagram.com/p/DezVbZHRunB/"
    },
    "duracion_min": 240,
    "titulo": "Muestra VR",
    "tipo": "evento",
    "event_kind": "experiencia",
-   "seccion": "Proyecciones"
+   "seccion": "Proyecciones",
+   "info": true,
+   "hasta": "2026-10-25"
   },
   {
    "dia": "2026-10-17",
@@ -1396,6 +1399,7 @@
    "dia": "2026-10-23",
    "hora": "16:00",
    "sede": "Bulevar del Río",
+   "sala": "Carpa GEUP",
    "sede_cruda": "Bulevar del Río",
    "acceso": "desconocido",
    "_src": {
@@ -1414,6 +1418,7 @@
    "dia": "2026-10-23",
    "hora": "16:30",
    "sede": "Bulevar del Río",
+   "sala": "Auditorio Celsia",
    "sede_cruda": "Bulevar del Río",
    "acceso": "desconocido",
    "_src": {
@@ -1467,6 +1472,7 @@
    "dia": "2026-10-23",
    "hora": "17:30",
    "sede": "Bulevar del Río",
+   "sala": "Auditorio Celsia",
    "sede_cruda": "Bulevar del Río",
    "acceso": "desconocido",
    "_src": {
@@ -1571,27 +1577,6 @@
    "sinopsis": "Luis se jubila después de cuarenta años de trabajo como profesor de historia. Presionado por su familia, busca qué hacer mientras su esposa, Amelia, se entrega a la pintura y al ejercicio grupal con nuevos amigos. Desde Bogotá llega su hijo Alejandro, quien desarrolla un proyecto musical al que invita a su padre, que toca muy bien el acordeón. Sin embargo, Luis da con un grupo de músicos de su edad con quienes concuerda mucho más y con los que disfruta el hallazgo de un muy buen público en casas geriátricas. Padre e hijo chocan, sin imaginar que la música los une al igual que el vacío sin rumbo de sus generaciones.",
    "seccion": "Competencia Largometrajes Nacionales",
    "duracion_obra": 115
-  },
-  {
-   "dia": "2026-10-23",
-   "hora": "18:30",
-   "sede": "Cine Colombia Unicentro",
-   "sede_cruda": "CINE COLOMBIA UNICENTRO",
-   "acceso": "desconocido",
-   "_src": {
-    "url": "https://ficcali.com/programacion-ficcali-2026/",
-    "date": "2026-10-06",
-    "tarjeta": 14027
-   },
-   "titulo": "An Incomplete Calendar",
-   "director": "Sanaz Sohrabi",
-   "pais": "Canadá, Irán, Turquía, Venezuela",
-   "anio": 2026,
-   "duracion_min": 90,
-   "sinopsis": "Un disco de vinilo de 1980 es el punto de partida. Rhymes and Songs for OPEC es una grabación especial del coro de la Universidad Central de Venezuela, para conmemorar el vigésimo aniversario de la Organización de Países Exportadores de Petróleo. Mediante una superposición de canciones y material inédito o poco visto, se replantea el petróleo como una herramienta política al servicio de las luchas de liberación en Palestina y del fortalecimiento de la solidaridad panárabe entre 1960 y 1970. Se propone una revisión aguda de la geopolítica de los últimos cincuenta años, desde representaciones como la música, las estampillas y el arte; señala cómo las alianzas de los países petroleros buscan formas de contrarrestar el poder.",
-   "seccion": "Competencia Largometrajes Internacionales",
-   "titulo_es": "Un calendario incompleto",
-   "duracion_obra": 77
   },
   {
    "dia": "2026-10-23",
@@ -2185,12 +2170,12 @@
     "date": "2026-10-06",
     "tarjeta": 14037
    },
-   "titulo": "Historias del buen valle",
+   "titulo": "Ceremonia de premiación",
+   "tipo": "evento",
+   "event_kind": "premiación",
    "seccion": "Proyecciones",
-   "director": "José Luis Guerín",
-   "anio": 2025,
-   "pais": "España",
-   "duracion_min": 120
+   "duracion_min": 60,
+   "_duracion_de": "el hueco hasta la siguiente en la misma sede (tope 90, 60 si es la última)"
   },
   {
    "dia": "2026-10-24",
@@ -2234,6 +2219,27 @@
    "seccion": "¡Que viva la música!",
    "titulo_es": "Para vivir",
    "duracion_obra": 106
+  },
+  {
+   "dia": "2026-10-25",
+   "hora": "14:30",
+   "sede": "Cine Colombia Unicentro",
+   "sede_cruda": "CINE COLOMBIA UNICENTRO",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14027
+   },
+   "titulo": "An Incomplete Calendar",
+   "director": "Sanaz Sohrabi",
+   "pais": "Canadá, Irán, Turquía, Venezuela",
+   "anio": 2026,
+   "duracion_min": 90,
+   "sinopsis": "Un disco de vinilo de 1980 es el punto de partida. Rhymes and Songs for OPEC es una grabación especial del coro de la Universidad Central de Venezuela, para conmemorar el vigésimo aniversario de la Organización de Países Exportadores de Petróleo. Mediante una superposición de canciones y material inédito o poco visto, se replantea el petróleo como una herramienta política al servicio de las luchas de liberación en Palestina y del fortalecimiento de la solidaridad panárabe entre 1960 y 1970. Se propone una revisión aguda de la geopolítica de los últimos cincuenta años, desde representaciones como la música, las estampillas y el arte; señala cómo las alianzas de los países petroleros buscan formas de contrarrestar el poder.",
+   "seccion": "Competencia Largometrajes Internacionales",
+   "titulo_es": "Un calendario incompleto",
+   "duracion_obra": 77
   },
   {
    "dia": "2026-10-25",
@@ -2526,6 +2532,23 @@
    "_src": {
     "url": "https://www.instagram.com/p/DefUB_ksTlh/",
     "date": "2026-10-14"
+   }
+  },
+  {
+   "dia": "2026-10-24",
+   "hora": "10:00",
+   "sede": "Hotel Obelisco",
+   "sede_cruda": "Hotel Obelisco",
+   "acceso": "Inscripción previa · Cupos: 53",
+   "titulo": "City Tour",
+   "tipo": "evento",
+   "event_kind": "evento",
+   "seccion": "Conexiones",
+   "duracion_min": 150,
+   "sinopsis": "Conoce Cali en un recorrido único.",
+   "_src": {
+    "url": "https://www.instagram.com/p/DezWCmQEdHT/",
+    "date": "2026-10-22"
    }
   },
   {

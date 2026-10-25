@@ -1,15 +1,204 @@
 {
  "_provenance": {
-  "fuente": "Instagram @la_propiacasaproductora (sin sesión), placa del trofeo y pantalla de la gala: https://www.instagram.com/p/DercaKejs21/",
-  "capturado": "2026-10-19"
+  "fuente": "Instagram @festivalvilladelcine (sin sesión), carruseles «ganadores de la Selección Oficial», leídos lámina por lámina con ig-lecturas.py: https://www.instagram.com/p/DewzIRKkVLp/ (Escolar), https://www.instagram.com/p/DexDMqhFWPR/ (Celular), https://www.instagram.com/p/DexQDbhD7dN/ (Vertical), https://www.instagram.com/p/DexbiInD2sM/ (IA), https://www.instagram.com/p/DevBEdkFzfd/ (Youngfilm), https://www.instagram.com/p/Dexix0wja0O/ (Videoclip), https://www.instagram.com/p/DezYmVTETbA/ (Realidad Virtual), https://www.instagram.com/p/Dezk8-CFSyI/ (Apasionado Internacional), https://www.instagram.com/p/Dezyk_Rjyr_/ (Apasionado Nacional), https://www.instagram.com/p/De0G3IuDh69/ (Nacional), https://www.instagram.com/p/De177TUEbMw/ (Cortometraje Internacional), https://www.instagram.com/p/De2JXcsFQFK/ (Work in Progress), https://www.instagram.com/p/De2XRXYD4bp/ (Ópera Prima Internacional), https://www.instagram.com/p/De2lEBXj_lV/ (Ópera Prima Nacional); antes @la_propiacasaproductora https://www.instagram.com/p/DercaKejs21/",
+  "capturado": "2026-10-23"
  },
  "palmares": [
   {
-   "categoria": "Mejor Cortometraje con Celular",
+   "categoria": "Mejor Cortometraje Escolar",
+   "nivel": "ganadora",
+   "titulo": "In Between",
+   "autoria": "Carlos Andrés Paniagua",
+   "obra": "En medio"
+  },
+  {
+   "categoria": "Mejor Cortometraje Escolar",
+   "nivel": "mencion",
+   "titulo": "Presencia de blanco",
+   "autoria": "Néstor Javier Serpa Pérez",
+   "obra": "La presencia del blanco"
+  },
+  {
+   "categoria": "Mejor Corto Celular",
    "nivel": "ganadora",
    "titulo": "La última historia",
    "autoria": "Eberto Manotas y Mauro Andrade",
    "obra": "La última historia"
+  },
+  {
+   "categoria": "Mejor Corto Celular",
+   "nivel": "mencion",
+   "titulo": "No se fía, ni aunque lloren",
+   "autoria": "Natalia Hernández Sánchez",
+   "obra": "No se fía, ni aunque lloren"
+  },
+  {
+   "categoria": "Mejor Corto Vertical",
+   "nivel": "ganadora",
+   "titulo": "4 Minutes",
+   "autoria": "Rogerio Troiani",
+   "obra": "4 minutes"
+  },
+  {
+   "categoria": "Mejor Corto Vertical",
+   "nivel": "mencion",
+   "titulo": "Chores",
+   "autoria": "Daniel Baena Pacheco",
+   "obra": null
+  },
+  {
+   "categoria": "Mejor Corto IA",
+   "nivel": "ganadora",
+   "titulo": "Catatumbo: House of Thunder, Memory, and Dignity",
+   "autoria": "Jhonattan Sarmiento",
+   "obra": "Catatumbo: casa del trueno, memoria y dignidad"
+  },
+  {
+   "categoria": "Mejor Corto IA",
+   "nivel": "mencion",
+   "titulo": "Prompt Zero",
+   "autoria": "Tomás Etter Gómez",
+   "obra": "Prompt Zero"
+  },
+  {
+   "categoria": "Youngfilm",
+   "nivel": "ganadora",
+   "titulo": "Witch and Frog",
+   "autoria": "Anastasia Provotorova",
+   "obra": "Witch and frog"
+  },
+  {
+   "categoria": "Youngfilm",
+   "nivel": "mencion",
+   "titulo": "La silla",
+   "autoria": "Clara García",
+   "obra": "La silla"
+  },
+  {
+   "categoria": "Mejor Videoclip",
+   "nivel": "ganadora",
+   "titulo": "A pesar de mí",
+   "autoria": "Thomas Mejía Lozano",
+   "obra": "A pesar de mí"
+  },
+  {
+   "categoria": "Mejor Videoclip",
+   "nivel": "mencion",
+   "titulo": "Después de tanto amor",
+   "autoria": "Mercedes Oviedo",
+   "obra": "Después de tanto amor"
+  },
+  {
+   "categoria": "Mejor Obra de Realidad Virtual",
+   "nivel": "ganadora",
+   "titulo": "HUMAN",
+   "autoria": "Débora Bergamini",
+   "obra": "HUMAN"
+  },
+  {
+   "categoria": "Mejor Obra de Realidad Virtual",
+   "nivel": "mencion",
+   "titulo": "Protecting Our Territory",
+   "autoria": "Cristopher Boulton",
+   "obra": "Protecting Our Territory 360"
+  },
+  {
+   "categoria": "Mejor Cortometraje Apasionado Internacional",
+   "nivel": "ganadora",
+   "titulo": "Memorias del Alba",
+   "autoria": "Aldair Acosta Moctezuma",
+   "obra": "Memorias del Alba"
+  },
+  {
+   "categoria": "Mejor Cortometraje Apasionado Internacional",
+   "nivel": "mencion",
+   "titulo": "I Dont Know What to Do",
+   "autoria": "Akshita Tyagi, Leyla Belarbi y Lía Macruz",
+   "obra": "I don't know what to do"
+  },
+  {
+   "categoria": "Mejor Cortometraje Apasionado Nacional",
+   "nivel": "ganadora",
+   "titulo": "Grief",
+   "autoria": "Nicolás Patiño y Andrés Cely",
+   "obra": "Duelo"
+  },
+  {
+   "categoria": "Mejor Cortometraje Apasionado Nacional",
+   "nivel": "mencion",
+   "titulo": "Lost Fragments of a Seizure",
+   "autoria": "Michael Martínez",
+   "obra": "Fragmentos perdidos de una convulsión"
+  },
+  {
+   "categoria": "Mejor Cortometraje Nacional",
+   "nivel": "ganadora",
+   "titulo": "Sukua",
+   "autoria": "Omar Ospina Giraldo",
+   "obra": "Sukua"
+  },
+  {
+   "categoria": "Mejor Cortometraje Nacional",
+   "nivel": "mencion",
+   "titulo": "Independence",
+   "autoria": "John Agudelo Ospina",
+   "obra": "La independencia"
+  },
+  {
+   "categoria": "Mejor Cortometraje Internacional",
+   "nivel": "ganadora",
+   "titulo": "Alivios",
+   "autoria": "Juan Manuel González Fernández",
+   "obra": "Alivios"
+  },
+  {
+   "categoria": "Mejor Cortometraje Internacional",
+   "nivel": "mencion",
+   "titulo": "Una torreta en llamas",
+   "autoria": "Humberto Flores",
+   "obra": "Una torreta en llamas"
+  },
+  {
+   "categoria": "Work in Progress",
+   "nivel": "ganadora",
+   "titulo": "El cine dentro del cine, dentro del cine",
+   "autoria": "Diana Kuellar",
+   "obra": "El cine dentro del cine"
+  },
+  {
+   "categoria": "Work in Progress",
+   "nivel": "mencion",
+   "titulo": "Extinction",
+   "autoria": "Frank Benitez",
+   "obra": "Extinción"
+  },
+  {
+   "categoria": "Mejor Ópera Prima Internacional",
+   "nivel": "ganadora",
+   "titulo": "Language of the Wind",
+   "autoria": "Shimataver Igbawua",
+   "obra": "Language Of The Wind"
+  },
+  {
+   "categoria": "Mejor Ópera Prima Internacional",
+   "nivel": "mencion",
+   "titulo": "Steppe - Stepa",
+   "autoria": "Mariano Benito",
+   "obra": "Estepa"
+  },
+  {
+   "categoria": "Mejor Ópera Prima Nacional",
+   "nivel": "ganadora",
+   "titulo": "Enemigo en el espejo",
+   "autoria": "Julián Camilo Sánchez",
+   "obra": "Enemigo en el espejo"
+  },
+  {
+   "categoria": "Mejor Ópera Prima Nacional",
+   "nivel": "mencion",
+   "titulo": "Volar",
+   "autoria": "Jeiver Pinto Vargas",
+   "obra": "VOLAR"
   }
  ]
 }

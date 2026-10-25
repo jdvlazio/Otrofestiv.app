@@ -717,9 +717,19 @@ def ensamblar(fid, escribir=True):
         for _f in films:
             if _f.get('_fid') and not _f.get('id'):
                 _f['id'] = _f['_fid']
-            # …y su day_order, del mismo calendario que las demás
-            if _f.get('day_order') is None and _f.get('day') in orden:
+            # …y su day_order, del mismo calendario que las demás. También la
+            # que una afirmación de `day` MOVIÓ: el day_order venía del día base
+            # (FICCALI 22 oct 2026: «Agujero» al 25 quedaba con el orden del 23)
+            if _f.get('day') in orden:
                 _f['day_order'] = orden[_f['day']]
+            # …y su sede, si una afirmación de `venue` la llevó a una que el
+            # crudo no tiene: `venues` se arma del crudo, antes del resolver, y
+            # la sede nueva quedaba sin entrada ni pin (FICCALI 25 oct 2026:
+            # «Las pesadillas del siervo» al Cine Club El Ventanal)
+            _s = _f.get('venue')
+            if _s and _s not in venues:
+                venues[_s] = {'short': _s.split(' - ')[0], 'city': _s.split(' - ')[-1],
+                              **(geo.get(_s) or geo.get(_s.split(' - ')[0]) or {})}
         print(f'  modelo de la función: {len(_afs)} afirmaciones · {len(films)} funciones')
     # L7: el registro se reescribe solo si cambió lo que guarda (sin ruido diario),
     # y solo después de que el modelo no frenó

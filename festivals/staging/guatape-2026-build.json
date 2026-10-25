@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "Instagram @guatapefilmfest — el carrusel oficial de programación (11 láminas)",
-  "capturado": "2026-10-21",
+  "capturado": "2026-10-23",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_sedes": "El nombre de la lámina → la sede, en tabla explícita. El Domo y la Tarima Principal están dentro del Parque Principal y van como sala; la Pantalla CORNARE es la sala del Malecón.",
@@ -3838,7 +3838,7 @@
     "21:00"
    ],
    "day": "2026-10-24",
-   "time": "21:00",
+   "time": "20:00",
    "day_order": 3,
    "venue": "El Majagual - Guatapé",
    "event_kind": "fiesta",
@@ -3858,9 +3858,9 @@
      "url": "https://www.instagram.com/p/Def6fhKDSQy/"
     },
     "time": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-14",
-     "url": "https://www.instagram.com/p/Def6fhKDSQy/"
+     "tipo": "festival-ig",
+     "fecha": "2026-10-23",
+     "url": "https://www.instagram.com/p/De12_5euMuu/"
     },
     "venue": {
      "tipo": "festival-web",
@@ -4509,7 +4509,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-21T08:40:14",
+  "fecha": "2026-10-23T13:16:46",
   "plan_sha": "e4564939112b8067",
   "paso": 6,
   "cmd": "python3 pipeline/guatape-2026-verificar.py"
