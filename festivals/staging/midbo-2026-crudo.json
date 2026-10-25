@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "midbo.co — ficha de cada obra (bloque «Funciones») + API pelicula/seccion",
-  "capturado": "2026-10-22",
+  "capturado": "2026-10-25",
   "url": "https://midbo.co/",
   "metodo": "120 fichas; sección = categoría madre, programa = hija"
  },
@@ -2571,6 +2571,37 @@
    "_src": {
     "url": "https://www.instagram.com/p/DexoaAzCV-0/",
     "date": "2026-10-21"
+   }
+  },
+  {
+   "titulo": "Inauguración Documental Expandido",
+   "dia": "2026-10-28",
+   "hora": "16:30",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala E",
+   "ciudad": "Bogotá",
+   "tipo": "evento",
+   "event_kind": "evento",
+   "seccion": "Documental Expandido",
+   "duracion_min": 60,
+   "_duracion_de": "estimada: ninguna lámina da hora de fin",
+   "acceso": "Entrada libre",
+   "sinopsis": "Proyección en 16 mm y sonido en vivo. Primera activación de Documental Expandido.",
+   "obras": [
+    {
+     "titulo": "Circo",
+     "director": "Daniel Torres",
+     "sinopsis": "Cine expandido, 16 mm, video HD y carpa textil."
+    },
+    {
+     "titulo": "Patrimonio Líquido II",
+     "director": "Sergio Díaz",
+     "sinopsis": "Video instalación, 16 mm y sonido en vivo."
+    }
+   ],
+   "_src": {
+    "url": "https://www.instagram.com/p/De3AsKjiTRT/",
+    "date": "2026-10-23"
    }
   },
   {
