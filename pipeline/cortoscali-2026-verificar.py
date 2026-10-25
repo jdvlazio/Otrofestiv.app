@@ -59,6 +59,7 @@ def main():
     prog, acad = lecturas(PROG), lecturas(ACAD)
     sel = ''.join(t for sc in SELECCION for ts in lecturas(sc).values() for t in ts)
     fallos, avisos, vistas = [], [], set()
+    corr = json.load(open(f'{REPO}/festivals/staging/{FID}-correcciones.json', encoding='utf-8')).get('direccion', {})
 
     def esta(textos, frag):
         return any(frag in t for t in textos)
@@ -77,7 +78,10 @@ def main():
             for o in f['film_list']:
                 if not esta(textos, n(o['title'])):
                     fallos.append(f'{o["title"]}: el título no está en la lámina {lam}')
-                for d in re.split(r',\s*', o.get('director', '')):
+                # una dirección corregida con su porqué (-correcciones.json «direccion»)
+                # se verifica por lo que DICE la lámina, no por la corrección
+                _c = corr.get(o['title'])
+                for d in re.split(r',\s*', _c['lamina'] if _c else o.get('director', '')):
                     if d and not esta(textos, n(d)):
                         fallos.append(f'{o["title"]}: la dirección {d!r} no está en la lámina {lam}')
                 if n(o['title']) not in sel:

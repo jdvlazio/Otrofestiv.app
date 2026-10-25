@@ -919,7 +919,7 @@
     },
     {
      "title": "Akababuru: expresión de asombro",
-     "director": "Laura Giraldo",
+     "director": "Irati Dojura Landa Yagarí",
      "poster": "/assets/cortoscali-2026/akababuru-expresion-de-asombro.jpg",
      "posterSource": "tmdb",
      "lbSlug": "akababuru-expresion-de-asombro",
@@ -1052,7 +1052,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-25T06:27:47",
+  "fecha": "2026-10-25T07:44:36",
   "plan_sha": "c266d7090b645757",
   "paso": 6,
   "cmd": "python3 pipeline/cortoscali-2026-verificar.py"

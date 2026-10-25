@@ -31,6 +31,10 @@ from lib import provenance  # noqa: E402
 
 FID = 'cortoscali-2026'
 OJOS = f'{REPO}/festivals/staging/cortoscali-2026-ojos.json'
+# LA DIRECCIÓN DECLARADA (25 oct 2026): la lámina manda, salvo una corrección
+# escrita con su fuente y su porqué en -correcciones.json («direccion»). Los
+# ojos se quedan verbatim; la lámina original viaja en `_director_lamina`.
+CORR = f'{REPO}/festivals/staging/cortoscali-2026-correcciones.json'
 DESTINO = f'{REPO}/festivals/staging/cortoscali-2026-crudo.json'
 URL = 'https://www.instagram.com/p/De4VP9xkaMd/'
 URL_ACAD = 'https://www.instagram.com/p/DerpBbZkeSs/'
@@ -61,6 +65,16 @@ def duraciones(funcs, tope):
 
 def main():
     ojos = json.load(open(OJOS, encoding='utf-8'))
+    dirs = json.load(open(CORR, encoding='utf-8')).get('direccion', {})
+
+    def obra(t, d, p):
+        o = {'titulo': t, 'director': d, 'pais_respaldo': p}
+        c = dirs.get(t)
+        if c:
+            if c['lamina'] != d:
+                sys.exit(f'✗ corrección de dirección de {t!r}: la lámina ya no dice {c["lamina"]!r} sino {d!r}')
+            o['director'], o['_director_lamina'] = c['director'], d
+        return o
     bloques = []
     for b in ojos['bloques']:
         bloques.append({
@@ -68,7 +82,7 @@ def main():
             'dia': b['dia'], 'hora': b['hora'], 'sede': SEDE, 'acceso': ACCESO,
             'seccion': b['seccion'],
             '_src': {'url': URL, 'lamina': b['lamina']},
-            'obras': [{'titulo': t, 'director': d, 'pais_respaldo': p} for t, d, p in b['obras']],
+            'obras': [obra(t, d, p) for t, d, p in b['obras']],
         })
     duraciones(bloques, 60)
     charlas = []
