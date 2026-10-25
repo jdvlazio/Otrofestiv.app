@@ -12,8 +12,13 @@ y del resultado exige, en los dos sentidos:
   · cada corto de una franja, en el orden de la parrilla, está en la lista de
     obras de esa función;
   · cada función del build sale de la parrilla (o de un taller declarado);
-  · toda sede del build tiene pin verificado a mano.
+  · toda sede del build tiene pin verificado a mano;
+  · una función de «Cinematecas locales» (la parrilla no dice cuál) se espera
+    en la sede que dice SU NODO de la agenda de la Cinemateca, leído aquí de
+    fuentes/bhff-2026/cinemateca-node-*.html (no de la tabla del crudo).
 """
+import glob
+import html as htmlmod
 import io
 import json
 import os
@@ -57,6 +62,20 @@ def parrilla():
     return json.loads(r.stdout)
 
 
+def nodos_cinemateca():
+    """[(título, día, hora, sede)] de las páginas de nodo guardadas de la Cinemateca."""
+    out = []
+    for fn in sorted(glob.glob(f'{REPO}/fuentes/bhff-2026/cinemateca-node-*.html')):
+        t = io.open(fn, encoding='utf-8').read()
+        t = re.sub(r'<script.*?</script>|<style.*?</style>', '', t, flags=re.S)
+        t = re.sub(r'\s+', ' ', htmlmod.unescape(re.sub(r'<[^>]+>', ' ', t)))
+        m = re.search(r'<?(?:Inicio) (.+?) Función \w+, (\d+)/(\d+)/(\d{4}) - (\d\d:\d\d) .*?Sede Cinemateca de Bogotá (.+?) Cinemateca de Bogotá Carrera', t)
+        if not m:
+            sys.exit(f'✗ no leo la función en {os.path.basename(fn)}')
+        out.append((m[1], f'{m[4]}-{m[3]}-{m[2]}', m[5], f'Cinemateca {m[6].strip()} - Bogotá'))
+    return out
+
+
 def hora_de_la_parrilla(h, p):
     hh, mm = h.split(':')
     hh = int(hh) % 12 + (12 if p.strip().lower() in ('pm', 'p.m.', 'p. m.') else 0)
@@ -76,6 +95,7 @@ def main():
     _plan = json.load(io.open(f'{REPO}/pipeline/bhff-2026.plan.json', encoding='utf-8'))['festival']
     CTX = funcion.contexto(_crudo, _plan, funcion.ticketing_model_de('bhff-2026'))
     films = B['films']
+    NODOS = nodos_cinemateca()
     usadas, fallos, n = set(), [], 0
     for d in P:
         dia = f'2026-10-{int(d["dia"]):02d}'
@@ -84,10 +104,18 @@ def main():
             t = e['titulo'].split('·', 1)[-1].strip() if e['titulo'].startswith('Franja') else e['titulo']
             if any(x.startswith(dia) and e['titulo'] in x for x in fuera):
                 continue
-            if e['sala'] not in SALA:
+            if e['sala'] == 'Cinematecas locales':
+                h0 = hora_de_la_parrilla(e['hora'], e['periodo'])
+                nd = [x for x in NODOS if x[1] == dia and x[2] == h0 and plano(t) in plano(x[0])]
+                if len(nd) != 1:
+                    fallos.append(f'{dia} «{t}»: Cinematecas locales con {len(nd)} nodos de la Cinemateca que la ubiquen')
+                    continue
+                sede, sala = nd[0][3], None
+            elif e['sala'] not in SALA:
                 fallos.append(f'{dia} «{t}»: sala {e["sala"]!r} sin equivalencia y no declarada fuera')
                 continue
-            sede, sala = SALA[e['sala']]
+            else:
+                sede, sala = SALA[e['sala']]
             h = hora_de_la_parrilla(e['hora'], e['periodo'])
             _ancla = (sede, dia, h)
             _esp = funcion.resolver([{'title': t, 'type': 'film', 'day': dia, 'time': h, 'venue': sede,
