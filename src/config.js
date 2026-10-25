@@ -141,6 +141,11 @@ export const SECTION_COLORS = {
 //  · Tribeca se omite entero: sus secciones ya están en inglés.
 //  · "Impact Hits"/"Industry Days" (AFF) ya están en inglés → se omiten.
 export const SECTION_EN = {
+  // Cortos Cali 2026
+  '🌎 Selección Oficial Internacional': 'Official Selection: International',
+  '🎬 Selección Oficial Nacional': 'Official Selection: National',
+  '🎓 Selección Oficial Internacional Universitaria': 'Official Selection: International Student',
+  '📚 Selección Oficial Nacional Universitaria': 'Official Selection: National Student',
   '🌍 Muestra Internacional': 'International Showcase',
   '🇨🇴 Muestra Nacional':     'National Showcase',
   '🏆 Muestra Local':         'Official Selection · Local',
@@ -834,6 +839,28 @@ export const FESTIVAL_CONFIG={
     prioLimit:3,
     films:null,posters:null,lbSlugs:{}
   },
+  'cortoscali2026': {
+    // EL NOMBRE es el del festival (@cortoscali); la edición va en fullName.
+    name:'Cortos Cali',displayName:'Cortos Cali',
+    fullName:'XVIII Festival Internacional de Cine Corto de Cali',shortName:'CORTOS CALI',
+    city:'Cali',country:'CO',
+    dates:'27–30 OCT',dates_en:'OCT 27–30',year:2026,timezoneOffset:'-05:00',
+    // EL AFICHE OFICIAL de la edición 18 («Narrativas verticales», diseño de
+    // @bengala_zul), del post de @cortoscali p/DdXQi8jgcMY (16 sep, 2160×2704):
+    // el original estirado a 400×600, sin bandas ni recorte.
+    keyArt:'/assets/keyart/cortoscali2026.jpg',
+    // el subtítulo expande el nombre; el lema del año vive en el afiche
+    tagline:'Festival Internacional de Cine Corto de Cali',
+    instagram:'cortoscali', storageKey:'cortoscali2026_',festivalStartStr:'2026-10-27T00:00:00',festivalEndStr:'2026-10-30T23:59:00',
+    festivalDates:{'2026-10-27':'2026-10-27','2026-10-28':'2026-10-28','2026-10-29':'2026-10-29','2026-10-30':'2026-10-30'},
+    days:[{k:'2026-10-27',d:27,lbl:'MAR'},{k:'2026-10-28',d:28,lbl:'MIÉ'},{k:'2026-10-29',d:29,lbl:'JUE'},{k:'2026-10-30',d:30,lbl:'VIE'}],
+    dayKeys:['2026-10-27','2026-10-28','2026-10-29','2026-10-30'],
+    dayShort:{'2026-10-27':'MAR 27','2026-10-28':'MIÉ 28','2026-10-29':'JUE 29','2026-10-30':'VIE 30'},
+    dayShort_en:{'2026-10-27':'TUE 27','2026-10-28':'WED 28','2026-10-29':'THU 29','2026-10-30':'FRI 30'},
+    dayLong:{'2026-10-27':'Martes 27 de octubre','2026-10-28':'Miércoles 28 de octubre','2026-10-29':'Jueves 29 de octubre','2026-10-30':'Viernes 30 de octubre'},
+    prioLimit:3,
+    films:null,posters:null,lbSlugs:{}
+  },
   'biff2026': {
     name:'BIFF',displayName:'BIFF',fullName:'BIFF 12 — Bogota International Film Festival',shortName:'BIFF',
     city:'Bogotá',country:'CO',
@@ -1100,6 +1127,12 @@ export const ARCHETYPE_COLORS = {
 // Cada sección de cada festival → su arquetipo. Generado por scripts/classify-posters
 // (arquetipos) + decisiones de diseño. Sección nueva sin entrada → gate lo caza.
 export const SECTION_ARCHETYPES = {
+  // ── Cortos Cali 2026 · Cali ───────────────────────────────────────────
+  '🌎 Selección Oficial Internacional': 'Competencia',
+  '🎬 Selección Oficial Nacional': 'Competencia',
+  '🎓 Selección Oficial Internacional Universitaria': 'Competencia',
+  '📚 Selección Oficial Nacional Universitaria': 'Competencia',
+  '🎤 Masterclass': 'Charlas / Industria',
   // ── Anibia 2026 · Bogotá ───────────────────────────────────────────────
   '🌋 Surgentes': 'Perspectivas / Miradas',
   '🎨 Con Acento Nacional': 'Competencia',

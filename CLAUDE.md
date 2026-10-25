@@ -111,13 +111,14 @@ deliberada existe la etiqueta `frontera-ok`.
 | `girardota2026` | Festigirardota | Girardota | 30 SEP–4 OCT | Recién terminado |
 | `anibia2026` | Anibia | Bogotá | 20 OCT–1 NOV | **Próximo / activo** |
 | `guatape2026` | Guatapé Film Fest | Guatapé | 21–25 OCT | **Próximo / activo** |
+| `cortoscali2026` | Cortos Cali | Cali | 27–30 OCT | **Próximo / activo** |
 | `biff2026` | BIFF | Bogotá | 8–14 OCT | Recién terminado |
 | `popayan2026` | Cine Corto Popayán | Popayán | 5–11 OCT | Recién terminado |
 | `mamut2026` | Mamut | Medellín | 5–11 OCT | Recién terminado |
 | `filcmar2026` | FILCMAR | Marinilla | 9–13 OCT | Recién terminado |
 | `ficcali2026` | FICCALI | Cali | 16–25 OCT | **Próximo / activo** |
 | `bhff2026` | Bogotá Horror | Bogotá | 22–31 OCT | **Próximo / activo** |
-| `ficica2026` | FICICA | Barranquilla | 20–24 OCT | **Próximo / activo** |
+| `ficica2026` | FICICA | Barranquilla | 20–24 OCT | Recién terminado |
 | `fantasmagoria2026` | Fantasmagoría | Medellín | 14–25 OCT | **Próximo / activo** |
 | `midbo2026` | MIDBO | Bogotá | 27 OCT–4 NOV | **Próximo / activo** |
 | `mubibogota2026` | MUBI Fest | Bogotá | 24–25 OCT | **Próximo / activo** |
