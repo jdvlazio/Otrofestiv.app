@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "Nominatim con verificación: caja de ciudad + token distintivo + clase de lugar (una sede fija nunca es un barrio). _prec:manual intocable.",
-  "capturado": "2026-10-21"
+  "capturado": "2026-10-25"
  },
  "Cinemateca de Bogotá": {
   "_prec": "manual",
@@ -30,5 +30,12 @@
   "lat": 4.6215012,
   "lng": -74.0724229,
   "address": "Cra. 17 #32A-34, Teusaquillo"
+ },
+ "Cinemateca Fontanar del Río": {
+  "_prec": "manual",
+  "_nota": "La sede que la agenda de la Cinemateca da para Nico (node/3577: «Fontanar del Río»). Google Maps «CEFE Fontanar del río»; el mismo pin con que la publicamos en FICDEH, Narrar el Futuro y Anibia.",
+  "lat": 4.7561244,
+  "lng": -74.1110572,
+  "address": "Calle 146 # 138A-99"
  }
 }

@@ -22,7 +22,11 @@ publicado desde la consulta anterior, y descarta lo ya visto: nada se lee
 
 Fallo mudo: Apify a veces marca como exitosa una corrida bloqueada. Un ítem
 con `error`, o una corrida de 3+ cuentas que vuelve sin ningún ítem, se
-reporta como NO_PUDE_LEER — nunca como «sin novedades».
+reporta como NO_PUDE_LEER — nunca como «sin novedades». La cuenta que falla
+se reintenta sola una vez; si sigue fallando NO se marca consultada (la
+próxima corrida pide de nuevo desde la última lectura buena) y a los 3 fallos
+seguidos sale en ALERTA_FALLOS_SEGUIDOS. SIN_CUENTA_IG lista los festivales
+del config, vivos o a ≤45 días, que no tienen cuenta: no se están mirando.
 
 Uso:
   python3 pipeline/ig_vigia.py            # corre y reporta JSON
@@ -91,6 +95,23 @@ def vigilados(config, cuentas, ahora):
     return out
 
 
+def sin_cuenta(config, cuentas, ahora, dias=45):
+    """Festivales del config vivos, terminados hace ≤TERMINADO días o que
+    empiezan en ≤`dias` días SIN cuenta de IG: el vigía no los puede mirar y
+    nadie se entera (25 oct: Villa de Leyva y Miradas quedaron afuera)."""
+    extra = cuentas.get('festivales', {})
+    hoy = ahora.date()
+    out = []
+    for fid, f in sorted(config.items()):
+        if f['cuenta'] or extra.get(fid):
+            continue
+        ini = datetime.strptime(f['inicio'], '%Y-%m-%d').date()
+        fin = datetime.strptime(f['fin'], '%Y-%m-%d').date()
+        if ini - timedelta(days=dias) <= hoy <= fin + timedelta(days=TERMINADO):
+            out.append(fid)
+    return out
+
+
 def toca(v, estado, ahora):
     """¿Se consulta esta cuenta en esta corrida? (terminados: una vez al día)."""
     if v['tier'] == 'vivo':
@@ -121,8 +142,15 @@ def clasificar(items, cuentas, estado):
             errores[c] = it.get('errorDescription') or it.get('error')
             continue
         c = it.get('ownerUsername')
-        if c not in nuevos:          # posts donde la cuenta solo sale etiquetada
-            continue
+        if c not in nuevos:
+            # Post colaborativo: lo publica otra cuenta CON el festival como
+            # coautor (25 oct: la cancelación de «Las pesadillas del siervo»
+            # en Ficcali salió así y el vigía la descartó). Cuenta como del
+            # festival. Solo etiquetado (sin coautoría) sigue descartado.
+            coautores = {x.get('username') for x in it.get('coauthorProducers') or []}
+            c = next((x for x in cuentas if x in coautores), None)
+            if not c:
+                continue
         ult = estado.get(c, {}).get('ultimo_post')
         ts = (it.get('timestamp') or '').replace('Z', '').split('.')[0]
         if ult and ts <= ult:
@@ -154,10 +182,12 @@ def main():
     estado = json.load(open(ESTADO)) if os.path.exists(ESTADO) else {}
     vig = vigilados(festivales_config(open(CONFIG).read()), json.load(open(CUENTAS)), ahora)
     ahora_toca = [v for v in vig if toca(v, estado, ahora)]
+    faltan = sin_cuenta(festivales_config(open(CONFIG).read()), json.load(open(CUENTAS)), ahora)
     cuentas = sorted({v['cuenta'] for v in ahora_toca})
     informe = {'hora': ahora.isoformat(timespec='minutes'),
                'consultadas': [f"{v['id']} @{v['cuenta']} ({v['tier']})" for v in ahora_toca],
-               'saltadas_hoy_ya_vistas': [v['id'] for v in vig if v not in ahora_toca]}
+               'saltadas_hoy_ya_vistas': [v['id'] for v in vig if v not in ahora_toca],
+               'SIN_CUENTA_IG': faltan}
     if not cuentas:
         print(json.dumps(informe, ensure_ascii=False, indent=1))
         return
@@ -171,10 +201,28 @@ def main():
         sys.exit('Falta APIFY_TOKEN (hacer `source ~/.zshrc`).')
     items = apify(cuentas, d, token)
     nuevos, sin_leer = clasificar(items, cuentas, estado)
+    # Reintento: Apify devuelve «Empty or private data» por rachas; una cuenta
+    # sola, en una segunda llamada, suele pasar.
+    reintentar = [c for c in sin_leer if c != '*']
+    if reintentar:
+        n2, s2 = clasificar(apify(reintentar, d, token), reintentar, estado)
+        for c in reintentar:
+            if c not in s2:
+                nuevos[c] = n2[c]
+                del sin_leer[c]
     os.makedirs(SALIDA, exist_ok=True)
     informe['nuevos'] = []
+    informe['ALERTA_FALLOS_SEGUIDOS'] = {}
     for c in cuentas:
         e = estado.setdefault(c, {})
+        if c in sin_leer or '*' in sin_leer:
+            # NO se marca consultada: la próxima corrida vuelve a pedir desde
+            # la última lectura buena y no se pierde lo publicado en el hueco.
+            e['fallos'] = e.get('fallos', 0) + 1
+            if e['fallos'] >= 3:
+                informe['ALERTA_FALLOS_SEGUIDOS'][c] = e['fallos']
+            continue
+        e['fallos'] = 0
         e['consultado'] = ahora.isoformat(timespec='seconds')
         for it in sorted(nuevos[c], key=lambda x: x.get('timestamp', '')):
             ts = it['timestamp'].replace('Z', '').split('.')[0]

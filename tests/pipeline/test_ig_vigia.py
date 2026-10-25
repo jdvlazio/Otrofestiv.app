@@ -52,6 +52,13 @@ class Vigilados(unittest.TestCase):
         self.assertTrue(v.toca(self.vig['vivo1'], {'cuentaviva': {'consultado': '2026-10-21T12:59:00'}}, AHORA))
 
 
+class SinCuenta(unittest.TestCase):
+    def test_lista_los_vivos_y_proximos_sin_cuenta(self):
+        cfg = v.festivales_config(CONFIG)
+        self.assertEqual(v.sin_cuenta(cfg, {'festivales': {}}, AHORA), ['sinig'])
+        self.assertEqual(v.sin_cuenta(cfg, CUENTAS, AHORA), [])
+
+
 class Historial(unittest.TestCase):
     def test_desde_es_la_consulta_mas_vieja(self):
         est = {'a': {'consultado': '2026-10-21T07:00:00'}, 'b': {'consultado': '2026-10-20T19:00:00'}}
@@ -66,6 +73,11 @@ class Historial(unittest.TestCase):
         nuevos, sin_leer = v.clasificar(items, ['a'], est)
         self.assertEqual([i['shortCode'] for i in nuevos['a']], ['nuevo'])
         self.assertEqual(sin_leer, {})
+
+    def test_colaborativo_cuenta_como_del_festival(self):
+        items = [{'ownerUsername': 'productora', 'timestamp': '2026-10-24T18:22:00.000Z', 'shortCode': 'colab',
+                  'coauthorProducers': [{'username': 'otra'}, {'username': 'a'}]}]
+        self.assertEqual([i['shortCode'] for i in v.clasificar(items, ['a'], {})[0]['a']], ['colab'])
 
     def test_bloqueo_no_es_sin_novedades(self):
         items = [{'error': 'blocked', 'username': 'a'}]
