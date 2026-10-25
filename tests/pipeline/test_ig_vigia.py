@@ -52,6 +52,13 @@ class Vigilados(unittest.TestCase):
         self.assertTrue(v.toca(self.vig['vivo1'], {'cuentaviva': {'consultado': '2026-10-21T12:59:00'}}, AHORA))
 
 
+class SinCuenta(unittest.TestCase):
+    def test_lista_los_vivos_y_proximos_sin_cuenta(self):
+        cfg = v.festivales_config(CONFIG)
+        self.assertEqual(v.sin_cuenta(cfg, {'festivales': {}}, AHORA), ['sinig'])
+        self.assertEqual(v.sin_cuenta(cfg, CUENTAS, AHORA), [])
+
+
 class Historial(unittest.TestCase):
     def test_desde_es_la_consulta_mas_vieja(self):
         est = {'a': {'consultado': '2026-10-21T07:00:00'}, 'b': {'consultado': '2026-10-20T19:00:00'}}
