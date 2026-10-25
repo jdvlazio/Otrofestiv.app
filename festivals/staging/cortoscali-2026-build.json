@@ -569,7 +569,7 @@
      "posterSource": "tmdb",
      "lbSlug": "los-ciclos",
      "tmdb_id": 1560652,
-     "synopsis": "MARÍA nació en Montevideo en 1973, el mismo año que la dictadura cívico militar, en la cárcel de prisioneras políticas donde su madre estaba presa. Vivió muchos años de su infancia con su abuela hasta que, primero su madre y después su padre, salieron de la cárcel. Los ciclos relata esa historia desde la intimidad del cuerpo de MARÍA y de las mujeres de su familia. Su abuela, su madre, su tía y su hija, todas atravesadas por una historia común, que es de ellas y es de todos.",
+     "synopsis": "María nació en Montevideo en 1973, el mismo año que la dictadura cívico militar, en la cárcel de prisioneras políticas donde su madre estaba presa. Vivió muchos años de su infancia con su abuela hasta que, primero su madre y después su padre, salieron de la cárcel. Los ciclos relata esa historia desde la intimidad del cuerpo de María y de las mujeres de su familia. Su abuela, su madre, su tía y su hija, todas atravesadas por una historia común, que es de ellas y es de todos.",
      "synopsis_en": "\"Los Ciclos\" follows the life of Maria, from her first menstruation to her last, revealing her life experience and that of the women in her family who preceded and succeeded her, through the emotions that course through their bodies.",
      "country": "Uruguay, Argentina",
      "year": 2025,
@@ -1072,7 +1072,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-25T10:31:01",
+  "fecha": "2026-10-25T11:48:35",
   "plan_sha": "c266d7090b645757",
   "paso": 6,
   "cmd": "python3 pipeline/cortoscali-2026-verificar.py"
