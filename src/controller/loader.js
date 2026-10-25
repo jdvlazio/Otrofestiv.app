@@ -167,7 +167,7 @@ export function _ingerirDatosFestival(id, cfg, data){
       // ese helper OCULTA la ciudad cuando coincide con la del festival — es
       // para mostrar, no para identificar.
       const _city=((data.venues||{})[f.venue]||{}).city||'';
-      const n=cfg.avisos.find(x=>
+      const n=cfg.avisos.find(x=>x.type==='info'?false: // informativo: no sella funciones (ni la Ficha)
         Array.isArray(x.cities)
           ? (!!_city && x.cities.includes(_city))
           : (x.title===f.title&&(!x.date||x.date===f.day)));

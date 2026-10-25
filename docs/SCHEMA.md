@@ -38,11 +38,20 @@ deploy. Misma forma que tenían en `src/config.js`, **sin** `festival` / `fest`
 si no lo trae, la app usa todavía `NOTICES` / `PALMARES` de `src/config.js`
 (transición). Guardián: `[avisos-palmares-forma]` en `validate-festivals.js`.
 
+**`type: "info"`** (25 oct 2026) — aviso informativo del festival entero: `id`
+(clave de descarte) + `note` (+ `note_en`), **sin** `title` / `date` / `cities`.
+El banner de Programa lo muestra con «AVISO DEL FESTIVAL» y el texto según idioma,
+siempre (con cualquier filtro de lugar) hasta que se descarte. No sella funciones:
+ni la card ni la Ficha lo heredan. Primer uso: Festival de Cine Funza (ejemplo abajo).
+
 ```json
 "avisos": [
   { "type": "cancelled", "title": "Obra", "date": "2026-10-20", "note": "…", "note_en": "…", "url": "…" },
   { "type": "rescheduled", "title": "Obra", "date": "2026-10-20", "newDay": "MAR 21", "newTime": "18:00", "newVenue": "…" },
-  { "type": "cancelled", "cities": ["Cali"], "id": "fest-motivo", "note": "…" }
+  { "type": "cancelled", "cities": ["Cali"], "id": "fest-motivo", "note": "…" },
+  { "type": "info", "id": "funza-competencia",
+    "note": "Las obras en competencia se suman cuando el festival las anuncie.",
+    "note_en": "Competition titles will be added once the festival announces them." }
 ],
 "palmares": [
   { "categoria": "Verbatim del festival", "nivel": "ganadora", "premio": "opcional",

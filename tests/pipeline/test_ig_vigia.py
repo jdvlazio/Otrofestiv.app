@@ -59,6 +59,29 @@ class SinCuenta(unittest.TestCase):
         self.assertEqual(v.sin_cuenta(cfg, CUENTAS, AHORA), [])
 
 
+class Facebook(unittest.TestCase):
+    PAG = [{'id': 'fz', 'url': 'https://www.facebook.com/pagina/', 'inicio': '2026-10-25', 'fin': '2026-10-27'}]
+
+    def test_ventana(self):
+        self.assertEqual(len(v.paginas_fb({'facebook': self.PAG}, AHORA)), 1)
+        lejos = [dict(self.PAG[0], inicio='2026-12-01', fin='2026-12-03')]
+        self.assertEqual(v.paginas_fb({'facebook': lejos}, AHORA), [])
+
+    def test_clasifica_por_pagina_y_no_relee(self):
+        est = {'fb:fz': {'ultimo_post': '2026-10-21T10:00:00'}}
+        items = [{'inputUrl': 'https://www.facebook.com/pagina', 'time': '2026-10-21T10:00:00.000Z', 'postId': 'viejo'},
+                 {'inputUrl': 'https://www.facebook.com/pagina/', 'time': '2026-10-21T12:00:00.000Z', 'postId': 'nuevo'},
+                 {'error': 'blocked', 'inputUrl': 'https://www.facebook.com/otra'}]
+        nuevos, sin_leer = v.clasificar_fb(items, self.PAG, est)
+        self.assertEqual([i['postId'] for i in nuevos['fz']], ['nuevo'])
+        self.assertIn('*', sin_leer)
+
+    def test_facebook_cuenta_como_cuenta(self):
+        cfg = v.festivales_config(CONFIG)
+        cu = {'festivales': {}, 'facebook': [{'id': 'sinig', 'url': 'x', 'inicio': '2026-10-20', 'fin': '2026-10-25'}]}
+        self.assertEqual(v.sin_cuenta(cfg, cu, AHORA), [])
+
+
 class Historial(unittest.TestCase):
     def test_desde_es_la_consulta_mas_vieja(self):
         est = {'a': {'consultado': '2026-10-21T07:00:00'}, 'b': {'consultado': '2026-10-20T19:00:00'}}
@@ -78,6 +101,10 @@ class Historial(unittest.TestCase):
         items = [{'ownerUsername': 'productora', 'timestamp': '2026-10-24T18:22:00.000Z', 'shortCode': 'colab',
                   'coauthorProducers': [{'username': 'otra'}, {'username': 'a'}]}]
         self.assertEqual([i['shortCode'] for i in v.clasificar(items, ['a'], {})[0]['a']], ['colab'])
+
+    def test_no_items_es_sin_novedades_no_bloqueo(self):
+        items = [{'error': 'no_items', 'errorDescription': 'Empty or private data for provided input', 'username': 'a'}]
+        self.assertEqual(v.clasificar(items, ['a'], {})[1], {})
 
     def test_bloqueo_no_es_sin_novedades(self):
         items = [{'error': 'blocked', 'username': 'a'}]
