@@ -641,6 +641,11 @@ def main():
                 ok[t] = {**e, 'synopsis_en': d['texto'], '_sinopsis': d['fuente']}
                 n_s += 1
                 continue
+            # `texto_en`: la oficial en inglés junto a la española (traducción
+            # nuestra); el inglés no se pierde al declarar el español
+            if d.get('texto_en') and not e.get('synopsis_en'):
+                e = {**e, 'synopsis_en': d['texto_en']}
+                ok[t] = e
             if e.get('sinopsis') or e.get('synopsis_es'):
                 continue
             ok[t] = {**e, 'sinopsis': d['texto'], '_sinopsis': d['fuente']}

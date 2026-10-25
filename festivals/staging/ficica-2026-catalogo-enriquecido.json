@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, con el MISMO candado de enriquecer.py: director ✓ y (año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-10-20"
+  "capturado": "2026-10-25"
  },
  "_origen": "ficica-2026-catalogo.json",
  "obras": [
@@ -50,6 +50,19 @@
      "genre": "Drama",
      "synopsis_en": "Shrouded in fog and crumbling stone, a teacher moves through his final day at a rural school, soon to be shut down for lack of students. In quiet solitude, he parts ways with a place that has been his craft and his shelter for years.",
      "sinopsis": "Entre la niebla y las paredes agrietadas, un maestro transcurre su último día en una escuela rural que pronto cerrará sus puertas por falta de alumnos. En silenciosa soledad, se despide de un lugar que ha sido su oficio y su refugio durante años."
+    }
+   ]
+  },
+  {
+   "titulo": "Appol-o",
+   "_ya_publicada": [
+    {
+     "festival": "anibia-2026",
+     "titulo": "APPOL-O",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "7 min",
+     "sinopsis": "Tras la conquista de la Luna por Estados Unidos, el primer astronauta presencia la llegada de una cápsula soviética. Decidido a defender el nuevo territorio, la persigue hasta el lado oscuro, donde descubre los restos de una carrera espacial fallida y a un tercer contendiente que amenaza no solo la Luna, sino el orden universal."
     }
    ]
   },
@@ -296,6 +309,20 @@
    "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
    "_ya_publicada": [
     {
+     "festival": "anibia-2026",
+     "titulo": "Decaer",
+     "tmdb_id": 1668881,
+     "poster": "/assets/anibia-2026/decaer.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "decay-2026",
+     "country": "Colombia",
+     "year": 2026,
+     "duration": "7 min",
+     "genre": "Animación",
+     "synopsis_en": "I am grateful to the Chinese for the invention of gunpowder — it feels as if they made it for me. Its discovery happened by accident, originally conceived as a way to ward off evil spirits. This film begins in China, then moves to an event in Cartagena, and ends centuries later in Bogotá.",
+     "sinopsis": "Gracias a los chinos por la pólvora, parece que la hubieran hecho para mí. Su invención sucede como un accidente, pensada inicialmente para espantar los espíritus malos. Esta película inicia en China, luego un evento en Cartagena y se acaba siglos después en Bogotá."
+    },
+    {
      "festival": "cineautopsia-2026",
      "titulo": "Decaer",
      "tmdb_id": 1668881,
@@ -491,9 +518,21 @@
    "duracion_tmdb": 14,
    "pais_tmdb": "",
    "lbSlug": "el-mundo-de-humberto",
-   "_verificado": "el catálogo ya la tiene (w_R4GZE0GF3135, ficcali-2026, ficica-2026, ficpa-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4GZE0GF3135, cortoscali-2026, ficcali-2026, ficica-2026, ficpa-2026)",
    "work_id": "w_R4GZE0GF3135",
    "_ya_publicada": [
+    {
+     "festival": "cortoscali-2026",
+     "titulo": "El mundo de Humberto",
+     "tmdb_id": 1791688,
+     "poster": "/assets/cortoscali-2026/el-mundo-de-humberto.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "el-mundo-de-humberto",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "14 min",
+     "sinopsis": "En el corazón de Cali está Kiss Me, la caverna del amor, un edificio de arquitectura ecléctica diseñado por Humberto Villegas, creador de sus 190 habitaciones temáticas, en las que confluyen el sexo, el arte y la política. El mundo de Humberto es una inmersión en este espacio insólito, sensual y poético, que Humberto transforma continuamente con la complicidad de Neneco, artista autodidacta que esculpe, pinta y moldea, para darles forma tangible a sus visiones, mientras el motel continúa operando como escenario de deseo y fantasía."
+    },
     {
      "festival": "ficcali-2026",
      "titulo": "El mundo de Humberto",
@@ -555,11 +594,18 @@
    "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
    "_ya_publicada": [
     {
-     "festival": "ficmontanas-2026",
-     "titulo": "Emechiche",
-     "country": "Argentina/Colombia",
+     "festival": "anibia-2026",
+     "titulo": "Emechiche, El Renacer de los Cabeciblancos",
+     "tmdb_id": 1592964,
+     "poster": "/assets/anibia-2026/emechiche-el-renacer-de-los-cabeciblancos.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "emechiche-the-rebirth-of-white-headed",
+     "country": "Colombia, Argentina",
+     "year": 2025,
      "duration": "11 min",
-     "genre": "Animación"
+     "genre": "Animación",
+     "synopsis_en": "The Colombian Montes de María are home to the emechiche  (Saguinus oedipus). An endangered species, we will observe their complex relationship with their young and their environment. We will analyse their survival, allowing us to witness their feelings and wild instincts.",
+     "sinopsis": "En los Montes de María Colombianos, habita el Emechiche (Saguinus oedipus). Una especie en peligro de extinción, observamos las complejas relaciones con sus crías y su entorno. Analizaremos su supervivencia, dejándonos ser testigos de sus sentimientos e instintos salvajes."
     },
     {
      "festival": "popayan-2026",
@@ -586,6 +632,13 @@
      "duration": "11 min",
      "genre": "Drama",
      "synopsis_en": "The Colombian Montes de María are home to the emechiche  (Saguinus oedipus). An endangered species, we will observe their complex relationship with their young and their environment. We will analyse their survival, allowing us to witness their feelings and wild instincts."
+    },
+    {
+     "festival": "ficmontanas-2026",
+     "titulo": "Emechiche",
+     "country": "Argentina/Colombia",
+     "duration": "11 min",
+     "genre": "Animación"
     }
    ]
   },
@@ -841,6 +894,20 @@
    "lbSlug": "independence-2025",
    "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
    "_ya_publicada": [
+    {
+     "festival": "cortoscali-2026",
+     "titulo": "La Independencia",
+     "tmdb_id": 1595081,
+     "poster": "/assets/ficdeh/la-independencia.jpg",
+     "posterSource": "oficial",
+     "lbSlug": "independence-2025",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "19 min",
+     "genre": "Drama",
+     "synopsis_en": "Cecilia, a selfless 52-year-old woman, decides to break with her life of sacrifices after years of enduring her son s irresponsibility and her family s ingratitude, finally seeking her independence.",
+     "sinopsis": "Cecilia, una mujer abnegada de 52 años, decide romper con su vida de sacrificios tras años de soportar la irresponsabilidad de su hijo y la ingratitud de su familia, buscando finalmente su independencia."
+    },
     {
      "festival": "ficdeh-2026",
      "titulo": "La independencia",
@@ -1157,7 +1224,7 @@
    "synopsis_es": "",
    "synopsis_en": "Marina receives a skirt as a gift but dislikes it because she believes it prevents her from playing soccer. She hides it away in a drawer, but the skirt magically comes to life, giving Marina the chance to discover that they can have fun together and that she does not have to give up what she loves in order to wear it.",
    "genero": "",
-   "anio_tmdb": 0,
+   "anio_tmdb": 2026,
    "duracion_tmdb": 0,
    "pais_tmdb": "",
    "lbSlug": "marina-y-la-falda",
@@ -1219,9 +1286,23 @@
    "duracion_tmdb": 12,
    "pais_tmdb": "Peru, France",
    "lbSlug": "memoria-colectiva",
-   "_verificado": "el catálogo ya la tiene (w_R4J7WZRP6QM7, ficica-2026, ficmontanas-2026, villadelcine-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4J7WZRP6QM7, anibia-2026, ficica-2026, ficmontanas-2026, villadelcine-2026)",
    "work_id": "w_R4J7WZRP6QM7",
    "_ya_publicada": [
+    {
+     "festival": "anibia-2026",
+     "titulo": "Memoria Colectiva",
+     "tmdb_id": 1520364,
+     "poster": "/assets/anibia-2026/memoria-colectiva.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "memoria-colectiva",
+     "country": "Perú, Francia",
+     "year": 2025,
+     "duration": "15 min",
+     "genre": "Animación",
+     "synopsis_en": "In 1983, during the darkest days of Peru’s Armed Conflict with the Shining Path, masked soldiers entered Adelina’s home and took her husband away. She would never see him again. After facing silence and contempt from the Police and Army, Adelina joins forces with the many other women who have lost their husbands and children to soldiers who were supposed to protect them. Together, they will unite to demand justice.",
+     "sinopsis": "En 1983, soldados enmascarados entraron a la casa de Adelina y se llevaron a su marido por la fuerza. Después de toparse con el silencio y el desprecio de la policía y el ejército, Adelina une fuerzas con las muchas otras mujeres que perdieron a sus maridos e hijos a manos de soldados."
+    },
     {
      "festival": "ficmontanas-2026",
      "titulo": "Memoria Colectiva",
@@ -1322,7 +1403,7 @@
    "duracion_tmdb": 11,
    "pais_tmdb": "",
    "lbSlug": "para-no-volver",
-   "_verificado": "el catálogo ya la tiene (w_R4DRKZWFVT9V, biff-2026, cinemancia-2026, filcmar-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4DRKZWFVT9V, biff-2026, cinemancia-2026, cortoscali-2026, filcmar-2026)",
    "work_id": "w_R4DRKZWFVT9V",
    "_ya_publicada": [
     {
@@ -1348,6 +1429,19 @@
      "country": "Colombia",
      "year": 2026,
      "duration": "9 min",
+     "sinopsis": "Cuando Karina se entera de que está embarazada del bebé de Charlie, ella y su mejor amiga Eli se disponen a encontrarlo por las calles nocturnas de Santa Marta. En el camino, se enfrentan al deseo, la maternidad y su vínculo cambiante. Al amanecer, el mar las abraza, y vuelven a jugar como niñas."
+    },
+    {
+     "festival": "cortoscali-2026",
+     "titulo": "Para no volver",
+     "tmdb_id": 1743118,
+     "poster": "/assets/cortoscali-2026/para-no-volver.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "para-no-volver",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "11 min",
+     "genre": "Drama",
      "sinopsis": "Cuando Karina se entera de que está embarazada del bebé de Charlie, ella y su mejor amiga Eli se disponen a encontrarlo por las calles nocturnas de Santa Marta. En el camino, se enfrentan al deseo, la maternidad y su vínculo cambiante. Al amanecer, el mar las abraza, y vuelven a jugar como niñas."
     },
     {
@@ -1670,6 +1764,20 @@
    "_verificado": "declarada a mano: Existe en TMDB con otro título o sin año ni duración, y el candado no la casaba sola: «Replay» (2026), Simón Matallana Nossa; mismo director que publica FICICA. Verificada el 11 oct 2026.",
    "_ya_publicada": [
     {
+     "festival": "anibia-2026",
+     "titulo": "Replay",
+     "tmdb_id": 1677190,
+     "poster": "/assets/anibia-2026/replay.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "replay-2026",
+     "country": "Colombia",
+     "year": 2026,
+     "duration": "6 min",
+     "genre": "Animación",
+     "synopsis_en": "Set in a distant galaxy, a strange humanoid creature called Hunter X must fight against a dozen robot lizards to retrieve a peculiar disk-shaped device.",
+     "sinopsis": "En medio del espacio, una misteriosa criatura asalta una nave y se enfrenta a una banda de lagartos robot, para así obtener un extraño artefacto con forma de disco."
+    },
+    {
      "festival": "bhff-2026",
      "titulo": "Replay",
      "tmdb_id": 1677190,
@@ -1680,7 +1788,8 @@
      "year": 2026,
      "duration": "6 min",
      "genre": "Animación",
-     "synopsis_en": "Set in a distant galaxy, a strange humanoid creature called Hunter X must fight against a dozen robot lizards to retrieve a peculiar disk-shaped device."
+     "synopsis_en": "Set in a distant galaxy, a strange humanoid creature called Hunter X must fight against a dozen robot lizards to retrieve a peculiar disk-shaped device.",
+     "sinopsis": "En medio del espacio, una misteriosa criatura asalta una nave y se enfrenta a una banda de lagartos robot, para así obtener un extraño artefacto con forma de disco."
     }
    ]
   },
@@ -1869,9 +1978,23 @@
    "pais_tmdb": "Colombia",
    "title_en": "Tuktu, Father Maize",
    "lbSlug": "tuktu-father-maize",
-   "_verificado": "el catálogo ya la tiene (w_R4HJFE6HF274, ficdeh-2026, ficica-2026, ficmontanas-2026, ficpa-2026, popayan-2026, villadelcine-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4HJFE6HF274, cortoscali-2026, ficdeh-2026, ficica-2026, ficmontanas-2026, ficpa-2026, popayan-2026, villadelcine-2026)",
    "work_id": "w_R4HJFE6HF274",
    "_ya_publicada": [
+    {
+     "festival": "cortoscali-2026",
+     "titulo": "Tuktu, padre maíz",
+     "tmdb_id": 1592955,
+     "poster": "/assets/cortoscali-2026/tuktu-padre-maiz.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "tuktu-father-maize",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "13 min",
+     "genre": "Animación",
+     "synopsis_en": "In the mountains of Colombia, Juan, a 13-year-old indigenous peasant boy, is forced to flee from the monster of war. In his escape, between the whistling of bullets and the guidance of his ancestors, he awakens an ancestral power that transforms him into Tuktu: a Taita of extraordinary strength destined to return to sow the peace of the earth.",
+     "sinopsis": "En las montañas de Colombia, Juan, un niño mestizo de 13 años, se ve obligado a huir del monstruo de la guerra. En su travesía, la tierra misma lo protege y, guiado por las voces de sus ancestros, despierta un poder ancestral llamado Tucuna, que le permite transformarse y renacer. Convertido en Tuktu, un Taita de fuerza extraordinaria, comprende que su destino no es solo sobrevivir, sino regresar para sanar la herida de la guerra y sembrar la paz en la tierra que lo vio nacer."
+    },
     {
      "festival": "ficdeh-2026",
      "titulo": "Tuktu, Padre Maíz",
@@ -1998,8 +2121,24 @@
    "duracion_tmdb": 15,
    "pais_tmdb": "China, Malaysia, Switzerland",
    "lbSlug": "when-the-tiger-roars",
-   "_verificado": "el catálogo ya la tiene (w_6XS3FP1HZPJ6, ficica-2026)",
-   "work_id": "w_6XS3FP1HZPJ6"
+   "_verificado": "el catálogo ya la tiene (w_6XS3FP1HZPJ6, cortoscali-2026, ficica-2026)",
+   "work_id": "w_6XS3FP1HZPJ6",
+   "_ya_publicada": [
+    {
+     "festival": "cortoscali-2026",
+     "titulo": "When the tiger roars",
+     "tmdb_id": 1555607,
+     "poster": "/assets/cortoscali-2026/when-the-tiger-roars.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "when-the-tiger-roars",
+     "country": "China, Malaysia, Switzerland",
+     "year": 2025,
+     "duration": "15 min",
+     "genre": "Drama",
+     "synopsis_en": "A tiger's escape shatters the long silence between a father and his son, with suppressed love shining through the crack.",
+     "sinopsis": "La fuga de un tigre rompe el largo silencio entre un padre y su hijo, y por la grieta asoma un amor contenido."
+    }
+   ]
   },
   {
    "titulo": "Zizuma, nuestra casa de agua y nubes",
@@ -2465,6 +2604,20 @@
    "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
    "_ya_publicada": [
     {
+     "festival": "anibia-2026",
+     "titulo": "Decaer",
+     "tmdb_id": 1668881,
+     "poster": "/assets/anibia-2026/decaer.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "decay-2026",
+     "country": "Colombia",
+     "year": 2026,
+     "duration": "7 min",
+     "genre": "Animación",
+     "synopsis_en": "I am grateful to the Chinese for the invention of gunpowder — it feels as if they made it for me. Its discovery happened by accident, originally conceived as a way to ward off evil spirits. This film begins in China, then moves to an event in Cartagena, and ends centuries later in Bogotá.",
+     "sinopsis": "Gracias a los chinos por la pólvora, parece que la hubieran hecho para mí. Su invención sucede como un accidente, pensada inicialmente para espantar los espíritus malos. Esta película inicia en China, luego un evento en Cartagena y se acaba siglos después en Bogotá."
+    },
+    {
      "festival": "cineautopsia-2026",
      "titulo": "Decaer",
      "tmdb_id": 1668881,
@@ -2654,9 +2807,21 @@
    "duracion_tmdb": 14,
    "pais_tmdb": "",
    "lbSlug": "el-mundo-de-humberto",
-   "_verificado": "el catálogo ya la tiene (w_R4GZE0GF3135, ficcali-2026, ficica-2026, ficpa-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4GZE0GF3135, cortoscali-2026, ficcali-2026, ficica-2026, ficpa-2026)",
    "work_id": "w_R4GZE0GF3135",
    "_ya_publicada": [
+    {
+     "festival": "cortoscali-2026",
+     "titulo": "El mundo de Humberto",
+     "tmdb_id": 1791688,
+     "poster": "/assets/cortoscali-2026/el-mundo-de-humberto.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "el-mundo-de-humberto",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "14 min",
+     "sinopsis": "En el corazón de Cali está Kiss Me, la caverna del amor, un edificio de arquitectura ecléctica diseñado por Humberto Villegas, creador de sus 190 habitaciones temáticas, en las que confluyen el sexo, el arte y la política. El mundo de Humberto es una inmersión en este espacio insólito, sensual y poético, que Humberto transforma continuamente con la complicidad de Neneco, artista autodidacta que esculpe, pinta y moldea, para darles forma tangible a sus visiones, mientras el motel continúa operando como escenario de deseo y fantasía."
+    },
     {
      "festival": "ficcali-2026",
      "titulo": "El mundo de Humberto",
@@ -2716,11 +2881,18 @@
    "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
    "_ya_publicada": [
     {
-     "festival": "ficmontanas-2026",
-     "titulo": "Emechiche",
-     "country": "Argentina/Colombia",
+     "festival": "anibia-2026",
+     "titulo": "Emechiche, El Renacer de los Cabeciblancos",
+     "tmdb_id": 1592964,
+     "poster": "/assets/anibia-2026/emechiche-el-renacer-de-los-cabeciblancos.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "emechiche-the-rebirth-of-white-headed",
+     "country": "Colombia, Argentina",
+     "year": 2025,
      "duration": "11 min",
-     "genre": "Animación"
+     "genre": "Animación",
+     "synopsis_en": "The Colombian Montes de María are home to the emechiche  (Saguinus oedipus). An endangered species, we will observe their complex relationship with their young and their environment. We will analyse their survival, allowing us to witness their feelings and wild instincts.",
+     "sinopsis": "En los Montes de María Colombianos, habita el Emechiche (Saguinus oedipus). Una especie en peligro de extinción, observamos las complejas relaciones con sus crías y su entorno. Analizaremos su supervivencia, dejándonos ser testigos de sus sentimientos e instintos salvajes."
     },
     {
      "festival": "popayan-2026",
@@ -2747,6 +2919,13 @@
      "duration": "11 min",
      "genre": "Drama",
      "synopsis_en": "The Colombian Montes de María are home to the emechiche  (Saguinus oedipus). An endangered species, we will observe their complex relationship with their young and their environment. We will analyse their survival, allowing us to witness their feelings and wild instincts."
+    },
+    {
+     "festival": "ficmontanas-2026",
+     "titulo": "Emechiche",
+     "country": "Argentina/Colombia",
+     "duration": "11 min",
+     "genre": "Animación"
     }
    ]
   },
@@ -2993,6 +3172,20 @@
    "lbSlug": "independence-2025",
    "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
    "_ya_publicada": [
+    {
+     "festival": "cortoscali-2026",
+     "titulo": "La Independencia",
+     "tmdb_id": 1595081,
+     "poster": "/assets/ficdeh/la-independencia.jpg",
+     "posterSource": "oficial",
+     "lbSlug": "independence-2025",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "19 min",
+     "genre": "Drama",
+     "synopsis_en": "Cecilia, a selfless 52-year-old woman, decides to break with her life of sacrifices after years of enduring her son s irresponsibility and her family s ingratitude, finally seeking her independence.",
+     "sinopsis": "Cecilia, una mujer abnegada de 52 años, decide romper con su vida de sacrificios tras años de soportar la irresponsabilidad de su hijo y la ingratitud de su familia, buscando finalmente su independencia."
+    },
     {
      "festival": "ficdeh-2026",
      "titulo": "La independencia",
@@ -3299,7 +3492,7 @@
    "synopsis_es": "",
    "synopsis_en": "Marina receives a skirt as a gift but dislikes it because she believes it prevents her from playing soccer. She hides it away in a drawer, but the skirt magically comes to life, giving Marina the chance to discover that they can have fun together and that she does not have to give up what she loves in order to wear it.",
    "genero": "",
-   "anio_tmdb": 0,
+   "anio_tmdb": 2026,
    "duracion_tmdb": 0,
    "pais_tmdb": "",
    "lbSlug": "marina-y-la-falda",
@@ -3359,9 +3552,23 @@
    "duracion_tmdb": 12,
    "pais_tmdb": "Peru, France",
    "lbSlug": "memoria-colectiva",
-   "_verificado": "el catálogo ya la tiene (w_R4J7WZRP6QM7, ficica-2026, ficmontanas-2026, villadelcine-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4J7WZRP6QM7, anibia-2026, ficica-2026, ficmontanas-2026, villadelcine-2026)",
    "work_id": "w_R4J7WZRP6QM7",
    "_ya_publicada": [
+    {
+     "festival": "anibia-2026",
+     "titulo": "Memoria Colectiva",
+     "tmdb_id": 1520364,
+     "poster": "/assets/anibia-2026/memoria-colectiva.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "memoria-colectiva",
+     "country": "Perú, Francia",
+     "year": 2025,
+     "duration": "15 min",
+     "genre": "Animación",
+     "synopsis_en": "In 1983, during the darkest days of Peru’s Armed Conflict with the Shining Path, masked soldiers entered Adelina’s home and took her husband away. She would never see him again. After facing silence and contempt from the Police and Army, Adelina joins forces with the many other women who have lost their husbands and children to soldiers who were supposed to protect them. Together, they will unite to demand justice.",
+     "sinopsis": "En 1983, soldados enmascarados entraron a la casa de Adelina y se llevaron a su marido por la fuerza. Después de toparse con el silencio y el desprecio de la policía y el ejército, Adelina une fuerzas con las muchas otras mujeres que perdieron a sus maridos e hijos a manos de soldados."
+    },
     {
      "festival": "ficmontanas-2026",
      "titulo": "Memoria Colectiva",
@@ -3459,7 +3666,7 @@
    "duracion_tmdb": 11,
    "pais_tmdb": "",
    "lbSlug": "para-no-volver",
-   "_verificado": "el catálogo ya la tiene (w_R4DRKZWFVT9V, biff-2026, cinemancia-2026, filcmar-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4DRKZWFVT9V, biff-2026, cinemancia-2026, cortoscali-2026, filcmar-2026)",
    "work_id": "w_R4DRKZWFVT9V",
    "_ya_publicada": [
     {
@@ -3485,6 +3692,19 @@
      "country": "Colombia",
      "year": 2026,
      "duration": "9 min",
+     "sinopsis": "Cuando Karina se entera de que está embarazada del bebé de Charlie, ella y su mejor amiga Eli se disponen a encontrarlo por las calles nocturnas de Santa Marta. En el camino, se enfrentan al deseo, la maternidad y su vínculo cambiante. Al amanecer, el mar las abraza, y vuelven a jugar como niñas."
+    },
+    {
+     "festival": "cortoscali-2026",
+     "titulo": "Para no volver",
+     "tmdb_id": 1743118,
+     "poster": "/assets/cortoscali-2026/para-no-volver.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "para-no-volver",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "11 min",
+     "genre": "Drama",
      "sinopsis": "Cuando Karina se entera de que está embarazada del bebé de Charlie, ella y su mejor amiga Eli se disponen a encontrarlo por las calles nocturnas de Santa Marta. En el camino, se enfrentan al deseo, la maternidad y su vínculo cambiante. Al amanecer, el mar las abraza, y vuelven a jugar como niñas."
     },
     {
@@ -3800,6 +4020,20 @@
    "_verificado": "declarada a mano: Existe en TMDB con otro título o sin año ni duración, y el candado no la casaba sola: «Replay» (2026), Simón Matallana Nossa; mismo director que publica FICICA. Verificada el 11 oct 2026.",
    "_ya_publicada": [
     {
+     "festival": "anibia-2026",
+     "titulo": "Replay",
+     "tmdb_id": 1677190,
+     "poster": "/assets/anibia-2026/replay.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "replay-2026",
+     "country": "Colombia",
+     "year": 2026,
+     "duration": "6 min",
+     "genre": "Animación",
+     "synopsis_en": "Set in a distant galaxy, a strange humanoid creature called Hunter X must fight against a dozen robot lizards to retrieve a peculiar disk-shaped device.",
+     "sinopsis": "En medio del espacio, una misteriosa criatura asalta una nave y se enfrenta a una banda de lagartos robot, para así obtener un extraño artefacto con forma de disco."
+    },
+    {
      "festival": "bhff-2026",
      "titulo": "Replay",
      "tmdb_id": 1677190,
@@ -3810,7 +4044,8 @@
      "year": 2026,
      "duration": "6 min",
      "genre": "Animación",
-     "synopsis_en": "Set in a distant galaxy, a strange humanoid creature called Hunter X must fight against a dozen robot lizards to retrieve a peculiar disk-shaped device."
+     "synopsis_en": "Set in a distant galaxy, a strange humanoid creature called Hunter X must fight against a dozen robot lizards to retrieve a peculiar disk-shaped device.",
+     "sinopsis": "En medio del espacio, una misteriosa criatura asalta una nave y se enfrenta a una banda de lagartos robot, para así obtener un extraño artefacto con forma de disco."
     }
    ]
   },
@@ -3980,9 +4215,23 @@
    "pais_tmdb": "Colombia",
    "title_en": "Tuktu, Father Maize",
    "lbSlug": "tuktu-father-maize",
-   "_verificado": "el catálogo ya la tiene (w_R4HJFE6HF274, ficdeh-2026, ficica-2026, ficmontanas-2026, ficpa-2026, popayan-2026, villadelcine-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4HJFE6HF274, cortoscali-2026, ficdeh-2026, ficica-2026, ficmontanas-2026, ficpa-2026, popayan-2026, villadelcine-2026)",
    "work_id": "w_R4HJFE6HF274",
    "_ya_publicada": [
+    {
+     "festival": "cortoscali-2026",
+     "titulo": "Tuktu, padre maíz",
+     "tmdb_id": 1592955,
+     "poster": "/assets/cortoscali-2026/tuktu-padre-maiz.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "tuktu-father-maize",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "13 min",
+     "genre": "Animación",
+     "synopsis_en": "In the mountains of Colombia, Juan, a 13-year-old indigenous peasant boy, is forced to flee from the monster of war. In his escape, between the whistling of bullets and the guidance of his ancestors, he awakens an ancestral power that transforms him into Tuktu: a Taita of extraordinary strength destined to return to sow the peace of the earth.",
+     "sinopsis": "En las montañas de Colombia, Juan, un niño mestizo de 13 años, se ve obligado a huir del monstruo de la guerra. En su travesía, la tierra misma lo protege y, guiado por las voces de sus ancestros, despierta un poder ancestral llamado Tucuna, que le permite transformarse y renacer. Convertido en Tuktu, un Taita de fuerza extraordinaria, comprende que su destino no es solo sobrevivir, sino regresar para sanar la herida de la guerra y sembrar la paz en la tierra que lo vio nacer."
+    },
     {
      "festival": "ficdeh-2026",
      "titulo": "Tuktu, Padre Maíz",
@@ -4107,8 +4356,24 @@
    "duracion_tmdb": 15,
    "pais_tmdb": "China, Malaysia, Switzerland",
    "lbSlug": "when-the-tiger-roars",
-   "_verificado": "el catálogo ya la tiene (w_6XS3FP1HZPJ6, ficica-2026)",
-   "work_id": "w_6XS3FP1HZPJ6"
+   "_verificado": "el catálogo ya la tiene (w_6XS3FP1HZPJ6, cortoscali-2026, ficica-2026)",
+   "work_id": "w_6XS3FP1HZPJ6",
+   "_ya_publicada": [
+    {
+     "festival": "cortoscali-2026",
+     "titulo": "When the tiger roars",
+     "tmdb_id": 1555607,
+     "poster": "/assets/cortoscali-2026/when-the-tiger-roars.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "when-the-tiger-roars",
+     "country": "China, Malaysia, Switzerland",
+     "year": 2025,
+     "duration": "15 min",
+     "genre": "Drama",
+     "synopsis_en": "A tiger's escape shatters the long silence between a father and his son, with suppressed love shining through the crack.",
+     "sinopsis": "La fuga de un tigre rompe el largo silencio entre un padre y su hijo, y por la grieta asoma un amor contenido."
+    }
+   ]
   },
   "Alivios": {
    "tmdb_id": 1469210,

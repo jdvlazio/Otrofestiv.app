@@ -518,6 +518,8 @@
    "day_order": 1,
    "venue": "Centro Cultural Bacatá - Funza",
    "has_qa": false,
+   "synopsis": "Javier, un hombre atormentado por visiones traumáticas de su infancia, es contratado por Raquel para restaurar una vieja mansión embrujada donde todas las noches, a las 3:33 a. m., aparece el espectro de una mujer misteriosa. Obsesionado, Javier emprende la misión imposible de salvar a alguien que ya está muerto, y busca respuestas en el padre Alirio.",
+   "synopsis_lang": "es",
    "poster": "/assets/funza-2026/reflejos.jpg",
    "posterSource": "tmdb",
    "_src": {
@@ -1409,7 +1411,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-25T10:04:03",
+  "fecha": "2026-10-25T10:31:07",
   "plan_sha": "f88fc562837e7b4f",
   "paso": 6,
   "cmd": "python3 pipeline/funza-2026-verificar.py"
