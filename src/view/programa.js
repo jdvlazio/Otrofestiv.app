@@ -82,7 +82,7 @@ export function getActiveNotices(){
     // así que vale igual para 'all', para `city:` y para una SEDE concreta — y
     // generaliza al aviso de una función suelta: si filtrás una sede donde esa
     // función no va, el aviso no aparece.
-    if(activeVenue!=='all'){
+    if(activeVenue!=='all'&&n.type!=='info'){ // info: del festival entero, se ve con cualquier lugar
       const {FILMS}=state.snapshot();
       if(!FILMS.some(f=>_noticeAfecta(n,f)&&venueMatches(f.venue,activeVenue))) return false;
     }
@@ -95,7 +95,7 @@ export function renderNoticesBannerHTML(state){
   if(!active.length) return '';
   const {_lang}=state.snapshot();
   return active.map(n=>{
-    const label=n.type==='cancelled'?t('notice_cancelada'):t('notice_reprogramada');
+    const label=n.type==='info'?t('notice_banner_label'):n.type==='cancelled'?t('notice_cancelada'):t('notice_reprogramada');
     // Aviso CON causa (note): habla el festival, con sus palabras y su enlace. Es
     // el único sitio donde se explica el porqué — las cards solo marcan CANCELADA.
     // `note` va en ES en todos los idiomas salvo que traiga note_en (mismo criterio
@@ -112,7 +112,7 @@ export function renderNoticesBannerHTML(state){
       <button class="notice-banner-close" data-action="dismissNotice" aria-label="${t('misc_cerrar')}" data-title="${noticeId(n).replace(/"/g,'&quot;')}">✕</button>
     </div>`;
     }
-    const msgCancelled=`<span>${t('plan_fecha_pendiente')}</span>`;
+    if(n.type!=='cancelled'&&n.type!=='rescheduled') return ''; const msgCancelled=`<span>${t('plan_fecha_pendiente')}</span>`;
     const msgRescheduled=n.newDay&&n.newTime?`${t('notice_nueva_funcion')} <span class="txt-white60">${n.newDay} · ${n.newTime}${n.newVenue?' · '+n.newVenue:''}</span>`:'';
     const msg=n.type==='cancelled'?msgCancelled:msgRescheduled;
     const safeTitle=n.title.length>32?n.title.slice(0,30)+'…':n.title;
