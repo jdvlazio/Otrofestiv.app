@@ -4,15 +4,15 @@
  "pasos": [
   {
    "cmd": "python3 pipeline/miradas-2026-catalogo.py",
-   "que": "las láminas de los 3 carruseles → catálogo (42 obras: 11 largos y 7 cortos iberoamericanos con ficha y funciones, 24 de Cine hecho en Medellín)"
+   "que": "las láminas de 6 carruseles → catálogo (49 obras). Del 23–25 oct (De2vCbSjAvy, De5YY1EjVYl, De71yR-jinh) llegan 7 cortos colombianos nuevos y la ficha + FUNCIONES de Cine Comunitario y de los cortos Hecho en Medellín"
   },
   {
    "cmd": "python3 pipeline/enriquecer_catalogo.py festivals/staging/miradas-2026-catalogo.json",
    "que": "la cascada de TMDB y lo ya publicado → catálogo enriquecido"
   },
   {
-   "cmd": "python3 pipeline/ig-lecturas.py DefnwMYDHVV DeiGFLoIKqz DeX03IEDKSe",
-   "que": "verificador: cuatro lecturas independientes de las láminas (16 oct: 0 diferencias en títulos, directores, horas, duraciones; solo logos)"
+   "cmd": "python3 pipeline/ig-lecturas.py DefnwMYDHVV DeiGFLoIKqz DeX03IEDKSe De2vCbSjAvy De5YY1EjVYl De71yR-jinh",
+   "que": "verificador: cuatro lecturas independientes de las láminas (16 oct: 0 diferencias en títulos, directores, horas, duraciones; solo logos) · 26 oct: los 3 nuevos, B+C+ojos sin diferencias en títulos, horas ni duraciones (A vacío en De2vCbSjAvy, ALT no servido); solo logos"
   },
   {
    "cmd": "python3 pipeline/miradas-2026-formacion.py",
