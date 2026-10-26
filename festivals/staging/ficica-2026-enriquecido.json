@@ -899,7 +899,7 @@
    ],
    "_sinopsis_de": "ya publicada en ficdeh-2026",
    "poster": "/assets/ficdeh/la-independencia.jpg",
-   "_afiche": "ya publicada en ficdeh-2026: se reusa su afiche"
+   "_afiche": "ya publicada en cortoscali-2026: se reusa su afiche"
   },
   {
    "titulo": "La mona",
@@ -1839,7 +1839,7 @@
    "tmdb_id": 1555607,
    "titulo_original": "肉食动物",
    "poster_path": "/dbW65DccBhZJJ20iDFHP7VUfebz.jpg",
-   "synopsis_es": "",
+   "synopsis_es": "La fuga de un tigre rompe el largo silencio entre un padre y su hijo, y por la grieta asoma un amor contenido.",
    "synopsis_en": "A tiger's escape shatters the long silence between a father and his son, with suppressed love shining through the crack.",
    "genero": "Drama",
    "anio_tmdb": 2025,
@@ -1850,7 +1850,10 @@
    "_director": "Lam Can-Zhao",
    "_sondeado": "2026-10-18",
    "poster": "/assets/ficica-2026/when-the-tiger-roars.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "_heredado": {
+    "synopsis_es": "catálogo w_6XS3FP1HZPJ6 (cortoscali-2026, ficica-2026)"
+   }
   },
   {
    "titulo": "Zizuma, nuestra casa de agua y nubes",
@@ -2661,7 +2664,7 @@
    ],
    "_sinopsis_de": "ya publicada en ficdeh-2026",
    "poster": "/assets/ficdeh/la-independencia.jpg",
-   "_afiche": "ya publicada en ficdeh-2026: se reusa su afiche"
+   "_afiche": "ya publicada en cortoscali-2026: se reusa su afiche"
   },
   "La mona": {
    "tmdb_id": 1444298,
@@ -3532,7 +3535,7 @@
    "tmdb_id": 1555607,
    "titulo_original": "肉食动物",
    "poster_path": "/dbW65DccBhZJJ20iDFHP7VUfebz.jpg",
-   "synopsis_es": "",
+   "synopsis_es": "La fuga de un tigre rompe el largo silencio entre un padre y su hijo, y por la grieta asoma un amor contenido.",
    "synopsis_en": "A tiger's escape shatters the long silence between a father and his son, with suppressed love shining through the crack.",
    "genero": "Drama",
    "anio_tmdb": 2025,
@@ -3543,7 +3546,10 @@
    "_director": "Lam Can-Zhao",
    "_sondeado": "2026-10-18",
    "poster": "/assets/ficica-2026/when-the-tiger-roars.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "_heredado": {
+    "synopsis_es": "catálogo w_6XS3FP1HZPJ6 (cortoscali-2026, ficica-2026)"
+   }
   }
  },
  "sin_ficha": [

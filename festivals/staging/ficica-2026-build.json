@@ -2729,9 +2729,11 @@
      "posterSource": "tmdb",
      "lbSlug": "when-the-tiger-roars",
      "tmdb_id": 1555607,
+     "synopsis": "La fuga de un tigre rompe el largo silencio entre un padre y su hijo, y por la grieta asoma un amor contenido.",
      "synopsis_en": "A tiger's escape shatters the long silence between a father and his son, with suppressed love shining through the crack.",
      "genre": "Drama",
      "year": 2025,
+     "synopsis_lang": "es",
      "duration": "15 min"
     }
    ],
@@ -4147,7 +4149,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-25T06:51:01",
+  "fecha": "2026-10-25T10:46:41",
   "plan_sha": "0894429f32f904b5",
   "paso": 8,
   "cmd": "python3 pipeline/ensamblar.py ficica-2026"

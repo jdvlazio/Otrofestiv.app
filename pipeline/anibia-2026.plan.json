@@ -6,8 +6,9 @@
   {
    "archivo": "fuentes/anibia-2026/agenda-11.html",
    "_que": "sala, día y hora de cada programa en la Cinemateca Centro",
-   "cmd": "curl -sL --max-time 120 https://cinematecadebogota.gov.co/agenda/11 -o fuentes/anibia-2026/agenda-11.html && grep -q 'Surgentes' fuentes/anibia-2026/agenda-11.html",
-   "_por_que_cmd": "urllib no valida la cadena de certificados de cinematecadebogota.gov.co; curl sí"
+   "cmd": "curl -sL --max-time 120 https://cinematecadebogota.gov.co/agenda/11 -o fuentes/anibia-2026/agenda-11.html && grep -q 'agenda' fuentes/anibia-2026/agenda-11.html",
+   "_por_que_cmd": "urllib no valida la cadena de certificados de cinematecadebogota.gov.co; curl sí",
+   "_por_que_grep": "25 oct: sus funciones de Anibia ya pasaron y la agenda solo lista lo que viene; el crudo conserva lo afirmado antes. El grep solo comprueba que bajó una agenda"
   },
   {
    "archivo": "fuentes/anibia-2026/agenda-80.html",
@@ -18,8 +19,9 @@
   {
    "archivo": "fuentes/anibia-2026/agenda-112.html",
    "_que": "Mukira en CEFE Chapinero",
-   "cmd": "curl -sL --max-time 120 https://cinematecadebogota.gov.co/agenda/112 -o fuentes/anibia-2026/agenda-112.html && grep -q 'MU-KI-RA' fuentes/anibia-2026/agenda-112.html",
-   "_por_que_cmd": "urllib no valida la cadena de certificados de cinematecadebogota.gov.co; curl sí"
+   "cmd": "curl -sL --max-time 120 https://cinematecadebogota.gov.co/agenda/112 -o fuentes/anibia-2026/agenda-112.html && grep -q 'agenda' fuentes/anibia-2026/agenda-112.html",
+   "_por_que_cmd": "urllib no valida la cadena de certificados de cinematecadebogota.gov.co; curl sí",
+   "_por_que_grep": "25 oct: sus funciones de Anibia ya pasaron y la agenda solo lista lo que viene; el crudo conserva lo afirmado antes. El grep solo comprueba que bajó una agenda"
   },
   {
    "archivo": "fuentes/anibia-2026/fichas/3592.html",

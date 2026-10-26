@@ -1,0 +1,67 @@
+{
+ "_provenance": {"fuente": "IG @cortoscali, carrusel «Programación» (p/De4VP9xkaMd, 24 oct 2026, 17 láminas) + «Programación académica» (p/DerpBbZkeSs, 19 oct)", "capturado": "2026-10-25", "metodo": "transcripción a ojo, lámina por lámina; la cruzan las 4 lecturas de ig-lecturas.py y cortoscali-2026-verificar.py"},
+ "bloques": [
+  {"lamina": "02", "seccion": "Selección Oficial Internacional", "dia": "2026-10-27", "hora": "14:00", "obras": [
+    ["Pasta negra", "Jorge Thielen Armand", "Canadá, Colombia, Italia, Venezuela"],
+    ["The third dream", "Mohammadhossein Nikzad", "Irán"],
+    ["When the tiger roars", "Can-Zhao Lam", "China"]]},
+  {"lamina": "03", "seccion": "Selección Oficial Nacional", "dia": "2026-10-27", "hora": "15:00", "obras": [
+    ["El mundo de Humberto", "Paula Ortiz Gónima", "Colombia"],
+    ["La Independencia", "John Edicson Agudelo Suarez", "Colombia"],
+    ["Sukua", "Omar E. Ospina", "Colombia"],
+    ["Puestos fijos", "Juan Esteban Quintero", "Colombia"]]},
+  {"lamina": "04", "seccion": "Selección Oficial Internacional Universitaria", "dia": "2026-10-27", "hora": "16:00", "obras": [
+    ["Partes de mí", "Wendy Saldaña Conejo", "España"],
+    ["Amor & Cine", "Julián Camilo Lloves", "Argentina"],
+    ["Noise 307", "Hossein Bahari", "Irán"]]},
+  {"lamina": "05", "seccion": "Selección Oficial Nacional Universitaria", "dia": "2026-10-27", "hora": "17:00", "obras": [
+    ["Vestigio", "Leslye Acosta Avendaño", "Colombia"],
+    ["Noche con el demonio", "Santiago Montes Pardo", "Colombia"],
+    ["Para no volver", "Tania Galvis", "Colombia"]]},
+  {"lamina": "06", "seccion": "Selección Oficial Internacional", "dia": "2026-10-29", "hora": "14:00", "obras": [
+    ["Diario (Dis)funcional", "Lorena González Ibáñez", "Chile"],
+    ["Qué será, será", "Honorato Ruiz, Paula Llorens", "España"],
+    ["Los ciclos", "Micaela Solé", "Uruguay"],
+    ["Dos veces muerto", "Colectivo Pix & Hertz", "Colombia, Perú, Paraguay"]]},
+  {"lamina": "07", "seccion": "Selección Oficial Nacional", "dia": "2026-10-29", "hora": "15:00", "obras": [
+    ["Tuktu, padre maíz", "Mauricio Prieto Muriel", "Colombia"],
+    ["No menguará el fuego de esta luna", "Sebastián Pérez Arbeláez", "Colombia"],
+    ["Retazos", "Daniela Morales Morcillo", "Colombia"],
+    ["Las piedras del río", "Edna Sierra", "Colombia"]]},
+  {"lamina": "08", "seccion": "Selección Oficial Internacional Universitaria", "dia": "2026-10-29", "hora": "16:00", "obras": [
+    ["Agua fría", "Meme Cabello", "Chile"],
+    ["Azúl", "Emmanuel Gonzales Morveli", "Perú"],
+    ["Lo que fue en nuestro hogar", "Angelo Lobos", "Chile"]]},
+  {"lamina": "09", "seccion": "Selección Oficial Nacional Universitaria", "dia": "2026-10-29", "hora": "17:00", "obras": [
+    ["Una voz infinita", "Juana Pombo Ramirez, Juan Pablo Marin Londoño", "Colombia"],
+    ["Sol de niebla", "Maria Jose Ibarra, Florentino Vargas", "Colombia"],
+    ["El festín de las moscas", "Katerine Franco Garzón", "Colombia"]]},
+  {"lamina": "10", "seccion": "Selección Oficial Internacional", "dia": "2026-10-30", "hora": "14:00", "obras": [
+    ["La tempestad", "Diego Müller", "Brasil"],
+    ["Luz de sombra", "Rubén J. Méndez", "México"],
+    ["An apartment like mine but with other people", "Juan Nasra", "Argentina"],
+    ["Los días cada vez son más cortos", "David Fernando Poot Fuentes", "México"]]},
+  {"lamina": "11", "seccion": "Selección Oficial Nacional", "dia": "2026-10-30", "hora": "15:00", "obras": [
+    ["The place where everything begins and ends", "Juan Pablo Caballero", "Colombia"],
+    ["Consentimiento Informado", "Juan David Mesa", "Colombia"],
+    ["Relatos del camino", "Daniel Prieto Muriel", "Colombia"],
+    ["Akababuru: expresión de asombro", "Laura Giraldo", "Colombia"]]},
+  {"lamina": "12", "seccion": "Selección Oficial Internacional Universitaria", "dia": "2026-10-30", "hora": "16:00", "obras": [
+    ["Memorias de nitrato", "Guilherme Guedes", "Brasil"],
+    ["Atarantada", "María Cristina Rubio Salcedo", "España"],
+    ["Entre tormentas", "Fran Zayas", "Italia, Puerto Rico"]]},
+  {"lamina": "13", "seccion": "Selección Oficial Nacional Universitaria", "dia": "2026-10-30", "hora": "17:00", "obras": [
+    ["Aitana", "Isabella Cárdenas", "Colombia"],
+    ["Teoría de cuerdas", "Diego Hernán Gómez Gutiérrez", "Colombia"],
+    ["Para siempre", "Sigifredo Garcia Fuentes", "Colombia"]]}
+ ],
+ "masterclass": [
+  {"lamina": "15 + DerpBbZkeSs/01", "titulo": "¿Cómo conectar en la industria de las series verticales?", "invitado": "Connie Acosta – Punta Fina", "dia": "2026-10-28", "hora": "11:00"},
+  {"lamina": "15 + DerpBbZkeSs/02", "titulo": "La industria de los microdramas", "invitado": "Moran Shi – Moran Producciones / Asociación Iberoamérica-China de Industrias Audiovisuales", "dia": "2026-10-28", "hora": "15:00"},
+  {"lamina": "15 + DerpBbZkeSs/03", "titulo": "La construcción de la imagen en formatos verticales", "invitado": "Luis Ordóñez – Innova", "dia": "2026-10-28", "hora": "16:30"}
+ ],
+ "fuera": [
+  {"lamina": "01", "que": "Apertura Lab de Guion, lun 26 oct", "por_que": "«Solo seleccionados por convocatoria»: actividad cerrada, no se publica; además el lunes queda fuera de las fechas del festival (27–30 oct en todos los pies)"},
+  {"lamina": "14", "que": "Muestra Películas Ganadoras, sáb 31 oct 18:00, Cinemateca La Tertulia", "por_que": "fuera de los días oficiales (27–30 oct): regla «solo días oficiales»; DUDA para Juan"}
+ ]
+}

@@ -141,6 +141,11 @@ export const SECTION_COLORS = {
 //  · Tribeca se omite entero: sus secciones ya están en inglés.
 //  · "Impact Hits"/"Industry Days" (AFF) ya están en inglés → se omiten.
 export const SECTION_EN = {
+  // Cortos Cali 2026
+  '🌎 Selección Oficial Internacional': 'Official Selection: International',
+  '🎬 Selección Oficial Nacional': 'Official Selection: National',
+  '🎓 Selección Oficial Internacional Universitaria': 'Official Selection: International Student',
+  '📚 Selección Oficial Nacional Universitaria': 'Official Selection: National Student',
   '🌍 Muestra Internacional': 'International Showcase',
   '🇨🇴 Muestra Nacional':     'National Showcase',
   '🏆 Muestra Local':         'Official Selection · Local',
@@ -834,6 +839,28 @@ export const FESTIVAL_CONFIG={
     prioLimit:3,
     films:null,posters:null,lbSlugs:{}
   },
+  'cortoscali2026': {
+    // EL NOMBRE es el del festival (@cortoscali); la edición va en fullName.
+    name:'Cortos Cali',displayName:'Cortos Cali',
+    fullName:'XVIII Festival Internacional de Cine Corto de Cali',shortName:'CORTOS CALI',
+    city:'Cali',country:'CO',
+    dates:'27–30 OCT',dates_en:'OCT 27–30',year:2026,timezoneOffset:'-05:00',
+    // EL AFICHE OFICIAL de la edición 18 («Narrativas verticales», diseño de
+    // @bengala_zul), del post de @cortoscali p/DdXQi8jgcMY (16 sep, 2160×2704):
+    // el original estirado a 400×600, sin bandas ni recorte.
+    keyArt:'/assets/keyart/cortoscali2026.jpg',
+    // el subtítulo expande el nombre; el lema del año vive en el afiche
+    tagline:'Festival Internacional de Cine Corto de Cali',
+    instagram:'cortoscali', storageKey:'cortoscali2026_',festivalStartStr:'2026-10-27T00:00:00',festivalEndStr:'2026-10-30T23:59:00',
+    festivalDates:{'2026-10-27':'2026-10-27','2026-10-28':'2026-10-28','2026-10-29':'2026-10-29','2026-10-30':'2026-10-30'},
+    days:[{k:'2026-10-27',d:27,lbl:'MAR'},{k:'2026-10-28',d:28,lbl:'MIÉ'},{k:'2026-10-29',d:29,lbl:'JUE'},{k:'2026-10-30',d:30,lbl:'VIE'}],
+    dayKeys:['2026-10-27','2026-10-28','2026-10-29','2026-10-30'],
+    dayShort:{'2026-10-27':'MAR 27','2026-10-28':'MIÉ 28','2026-10-29':'JUE 29','2026-10-30':'VIE 30'},
+    dayShort_en:{'2026-10-27':'TUE 27','2026-10-28':'WED 28','2026-10-29':'THU 29','2026-10-30':'FRI 30'},
+    dayLong:{'2026-10-27':'Martes 27 de octubre','2026-10-28':'Miércoles 28 de octubre','2026-10-29':'Jueves 29 de octubre','2026-10-30':'Viernes 30 de octubre'},
+    prioLimit:3,
+    films:null,posters:null,lbSlugs:{}
+  },
   'biff2026': {
     name:'BIFF',displayName:'BIFF',fullName:'BIFF 12 — Bogota International Film Festival',shortName:'BIFF',
     city:'Bogotá',country:'CO',
@@ -1037,6 +1064,25 @@ export const FESTIVAL_CONFIG={
     eventPosterLabel:['EVENTO',''],
     films:null,posters:null,lbSlugs:{}
   },
+  'funza2026': {
+    name:'Festival de Cine Funza',displayName:'Festival de Cine Funza',fullName:'4.º Festival de Cine Funza 2026',shortName:'FUNZA',
+    city:'Funza',country:'CO',
+    dates:'18–21 NOV',dates_en:'NOV 18–21',year:2026,timezoneOffset:'-05:00',
+    // EL AFICHE OFICIAL de la 4.ª edición («Ojos siempre abiertos»), 2:3 de origen,
+    // llevado a 400×600 (keyart-estirado). Lo mandó el festival a Juan el 25 oct
+    keyArt:'/assets/keyart/funza2026.jpg',
+    // PROPUESTA a Juan (25 oct): dice qué es sin repetir el nombre; el lema vive en el afiche
+    tagline:'',
+    storageKey:'funza2026_',festivalStartStr:'2026-11-18T00:00:00',festivalEndStr:'2026-11-21T23:59:00',
+    festivalDates:{'2026-11-18':'2026-11-18','2026-11-19':'2026-11-19','2026-11-20':'2026-11-20','2026-11-21':'2026-11-21'},
+    days:[{k:'2026-11-18',d:18,lbl:'MIÉ'},{k:'2026-11-19',d:19,lbl:'JUE'},{k:'2026-11-20',d:20,lbl:'VIE'},{k:'2026-11-21',d:21,lbl:'SÁB'}],
+    dayKeys:['2026-11-18','2026-11-19','2026-11-20','2026-11-21'],
+    dayShort:{'2026-11-18':'MIÉ 18','2026-11-19':'JUE 19','2026-11-20':'VIE 20','2026-11-21':'SÁB 21'},
+    dayShort_en:{'2026-11-18':'WED 18','2026-11-19':'THU 19','2026-11-20':'FRI 20','2026-11-21':'SAT 21'},
+    dayLong:{'2026-11-18':'Miércoles 18 de noviembre','2026-11-19':'Jueves 19 de noviembre','2026-11-20':'Viernes 20 de noviembre','2026-11-21':'Sábado 21 de noviembre'},
+    prioLimit:3,eventPosterLabel:['EVENTO',''],
+    films:null,posters:null,lbSlugs:{}
+  },
   'narrarelfuturo2026': {
     name:'#NarrarElFuturo',fullName:'#NarrarElFuturo — Festival de Cine & Nuevos Medios',shortName:'NEF',
     city:'Bogotá',country:'CO',
@@ -1100,6 +1146,24 @@ export const ARCHETYPE_COLORS = {
 // Cada sección de cada festival → su arquetipo. Generado por scripts/classify-posters
 // (arquetipos) + decisiones de diseño. Sección nueva sin entrada → gate lo caza.
 export const SECTION_ARCHETYPES = {
+  // ── Festival de Cine Funza 2026 · Funza (el «Componente» de la agenda) ─
+  '📚 Literatura / Artes Escénicas / Cine': 'Especiales / Eventos',
+  '💬 Conversatorio': 'Charlas / Industria',
+  '🎞️ Exhibición Cinematográfica': 'Muestra / País',
+  '🛠️ Formación Especializada': 'Charlas / Industria',
+  '🤝 Encuentro Departamental': 'Charlas / Industria',
+  '📡 Comunicaciones': 'Charlas / Industria',
+  '🎥 Audiovisuales / Cine': 'Charlas / Industria',
+  '📷 Fotografía / Narrativas': 'Charlas / Industria',
+  '📱 Circulación / Industria': 'Charlas / Industria',
+  '🎤 Conversatorio / Clausura': 'Clausura',
+  '🏆 Premiación': 'Especiales / Eventos',
+  // ── Cortos Cali 2026 · Cali ───────────────────────────────────────────
+  '🌎 Selección Oficial Internacional': 'Competencia',
+  '🎬 Selección Oficial Nacional': 'Competencia',
+  '🎓 Selección Oficial Internacional Universitaria': 'Competencia',
+  '📚 Selección Oficial Nacional Universitaria': 'Competencia',
+  '🎤 Masterclass': 'Charlas / Industria',
   // ── Anibia 2026 · Bogotá ───────────────────────────────────────────────
   '🌋 Surgentes': 'Perspectivas / Miradas',
   '🎨 Con Acento Nacional': 'Competencia',

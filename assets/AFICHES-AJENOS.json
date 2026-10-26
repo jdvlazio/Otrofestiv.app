@@ -12,6 +12,13 @@
     "ficcali-2026"
    ]
   },
+  "/assets/bhff-2026/el-festin-de-las-moscas.jpg": {
+   "sha1": "37115d960fd038fadc57266965b984ec5781ed7b",
+   "veredicto": "afiche",
+   "usado_en": [
+    "cortoscali-2026"
+   ]
+  },
   "/assets/bhff-2026/gabriel.jpg": {
    "sha1": "849e543c4b7ba2a261651966bfcc85a03b05c49c",
    "veredicto": "afiche",
@@ -93,6 +100,7 @@
    "sha1": "6a8bbb76f2544323cf8d07ee27a2c9870386dfd5",
    "veredicto": "afiche",
    "usado_en": [
+    "cortoscali-2026",
     "ficica-2026",
     "siembrafest-2026"
    ]
@@ -166,6 +174,7 @@
    "sha1": "aa40d660205b7c41d527d003730bd572d0605a71",
    "veredicto": "afiche",
    "usado_en": [
+    "cortoscali-2026",
     "midbo-2026"
    ]
   },

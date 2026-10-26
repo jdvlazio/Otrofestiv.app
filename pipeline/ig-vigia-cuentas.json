@@ -1,5 +1,5 @@
 {
-  "_nota": "Cuentas de IG que vigila pipeline/ig_vigia.py. 'festivales': id de FESTIVAL_CONFIG → cuenta, solo para los que no traen `instagram:` en src/config.js (ese campo manda). 'preonboarding': festivales aún sin config, con sus fechas oficiales.",
+  "_nota": "Cuentas de IG que vigila pipeline/ig_vigia.py. 'festivales': id de FESTIVAL_CONFIG → cuenta, solo para los que no traen `instagram:` en src/config.js (ese campo manda). 'preonboarding': festivales aún sin config, con sus fechas oficiales. 'facebook': festivales que se comunican por Facebook y no por IG ({id,url,inicio,fin}); los lee el actor apify~facebook-posts-scraper.",
   "festivales": {
     "ficpa2026": "ficpapasto",
     "ficcali2026": "festivaldecinecali",
@@ -25,6 +25,38 @@
       "cuenta": "cinematecademedellin",
       "inicio": "2026-11-03",
       "fin": "2026-11-08"
+    },
+    {
+      "id": "villadeleyvaiff2026",
+      "cuenta": "festcinevilla",
+      "inicio": "2026-11-13",
+      "fin": "2026-11-16"
+    },
+    {
+      "id": "ficfusa2026",
+      "cuenta": "ficfusa_festival",
+      "inicio": "2026-11-11",
+      "fin": "2026-11-16"
+    },
+    {
+      "id": "festicineantioquia2026",
+      "cuenta": "festicineantioquia",
+      "inicio": "2026-12-04",
+      "fin": "2026-12-08"
+    },
+    {
+      "id": "bogoshorts2026",
+      "cuenta": "bogoshorts",
+      "inicio": "2026-12-01",
+      "fin": "2026-12-08"
+    }
+  ],
+  "facebook": [
+    {
+      "id": "funza2026",
+      "url": "https://www.facebook.com/centroculturalbacatadefunza/",
+      "inicio": "2026-11-18",
+      "fin": "2026-11-21"
     }
   ]
 }

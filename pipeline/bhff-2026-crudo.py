@@ -16,7 +16,9 @@ LAS FUENTES, todas del festival:
 
 LO QUE NO SE INVENTA:
   · «Cinematecas locales» son DOS (El Tunal y Fontanar del Río, Canal Trece) y
-    el festival no dice cuál es cada función: quedan FUERA hasta que responda.
+    la parrilla no dice cuál es cada función: la sede la da la agenda de la
+    Cinemateca, nodo por nodo (CINEMATECA_LOCAL). Una función de la franja sin
+    nodo FRENA el script, no se cae en silencio (antes quedaban todas fuera).
 """
 import io
 import json
@@ -46,8 +48,15 @@ SEDES = {
     'CEFE Chapinero': ('Centro Felicidad Chapinero', ''),
     'Co - Laboratorio': ('Co.Laboratorio', ''),
 }
-NO_SE_SABE = {'Cinematecas locales': 'son dos (El Tunal y Fontanar del Río, según Canal Trece) y el festival '
-                                     'no dice cuál es cada función; preguntado'}
+# «Cinematecas locales» → la sede de cada función, de su nodo en la agenda de la
+# Cinemateca de Bogotá (leídos el 25 oct 2026): (día, título de la parrilla) → (sede, nodo)
+FONTANAR = 'Cinemateca Fontanar del Río'
+CINEMATECA_LOCAL = {
+    ('2026-10-23', 'El Ritual de Huasao'): (FONTANAR, 3571),  # «Vie, 23/10/2026 - 16:00 · Entrada libre · Fontanar del Río»
+    ('2026-10-24', 'Franja Nacional · El Miedo Llega a Todas Partes'): (FONTANAR, 3573),  # «Sáb, 24/10/2026 - 16:00 · Entrada libre · Fontanar del Río»
+    ('2026-10-25', 'Nico'): (FONTANAR, 3577),  # «Dom, 25/10/2026 - 16:00 · Entrada libre · Fontanar del Río»
+}
+NODO = 'https://cinematecadebogota.gov.co/node/{}'
 # EL ACCESO, por sede (prensa: Canal Trece)
 ACCESO = {'Cinemateca de Bogotá': 'Con boleta: $7.000'}
 ACCESO_COMUNITARIO = 'Entrada libre hasta completar aforo'
@@ -209,16 +218,21 @@ def main():
         dia = f'2026-{MES[d["mes"]]:02d}-{int(d["dia"]):02d}'
         for e in d['eventos']:
             n += 1
-            if e['sala'] in NO_SE_SABE:
-                fuera.append(f'{dia} {e["titulo"]}: {NO_SE_SABE[e["sala"]]}')
-                continue
-            if e['sala'] not in SEDES:
+            local = None
+            if e['sala'] == 'Cinematecas locales':
+                local = CINEMATECA_LOCAL.get((dia, e['titulo']))
+                if not local:
+                    fallos.append(f'{dia} {e["titulo"]}: «Cinematecas locales» sin nodo de la Cinemateca que diga cuál')
+                    continue
+            elif e['sala'] not in SEDES:
                 fallos.append(f'{dia} {e["titulo"]}: sala sin entrada en la tabla: {e["sala"]!r}')
                 continue
-            sede, sala = SEDES[e['sala']]
+            sede, sala = (local[0], '') if local else SEDES[e['sala']]
             r = {'dia': dia, 'hora': hora(e['hora'], e['periodo']), 'sede': sede,
                  'acceso': ACCESO.get(sede, ACCESO_COMUNITARIO),
                  '_src': {'url': URL, 'date': '2026-09-26'}}
+            if local:
+                r['_src']['sede'] = NODO.format(local[1])
             if sala:
                 r['sala'] = sala
             act = e.get('act') or ''
