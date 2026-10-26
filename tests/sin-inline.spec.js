@@ -98,3 +98,13 @@ test('SI07 — data-err="poster": el afiche roto cae al generativo UNA vez', asy
   await expect.poll(() => page.evaluate(() => document.getElementById('si-img').getAttribute('src')), { timeout: 5000 }).toMatch(/^data:/);
   expect(await page.evaluate(() => document.getElementById('si-img').dataset.err)).toBeUndefined();
 });
+
+test('SI08 — afiche roto con opacity:0 + data-load: el generativo de reemplazo SE VE', async ({ page }) => {
+  // programa.js: la tarjeta arranca invisible y el load la muestra. El fallback
+  // pone otro src: su load tiene que seguir mostrándola (auditoría senior, 26 oct)
+  await enterFestival(page, 'leviza2026', LEVIZA_SIMTIME);
+  const titulo = await page.evaluate(() => FILMS.find(f => f.title).title);
+  await _img(page, `style="opacity:0" data-load="mostrar" data-err="poster" data-title="${titulo.replace(/"/g, '&quot;')}" ${ROTA()}`, false);
+  await expect.poll(() => page.evaluate(() => document.getElementById('si-img').style.opacity), { timeout: 5000 }).toBe('1');
+});
+

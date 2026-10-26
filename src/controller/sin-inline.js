@@ -30,7 +30,10 @@ const AL_CARGAR = { mostrar: img => { img.style.opacity = '1'; } };
 function _fallo(img) {
   const f = AL_FALLAR[img.dataset.err];
   if (!f) return;
-  delete img.dataset.err; delete img.dataset.load;
+  // solo data-err: el fallback pone otro src y su `load` tiene que seguir
+  // mostrándolo (programa.js: opacity:0 + data-load + data-err="poster" — borrar
+  // data-load dejaba el generativo invisible; auditoría senior, 26 oct)
+  delete img.dataset.err;
   f(img);
 }
 function _carga(img) {
@@ -41,8 +44,12 @@ function _carga(img) {
 }
 // La que ya terminó antes de estar en el documento: decidir por su estado.
 function _revisar(img) {
-  if (!img.complete || !img.getAttribute('src')) return;
-  if (img.naturalWidth === 0) { if (img.dataset.err) _fallo(img); }
+  const src = img.getAttribute('src');
+  if (!img.complete || !src) return;
+  // un SVG generativo sin width/height (solo viewBox) puede dar naturalWidth 0
+  // aunque cargó: un data:image/svg nunca se toma por fallido. Medido el 26 oct:
+  // WebKit 26.4 da 2 y Chromium 100 (no ocurre hoy); defensa para WebKit viejos
+  if (img.naturalWidth === 0 && !src.startsWith('data:image/svg')) { if (img.dataset.err) _fallo(img); }
   else if (img.dataset.load) _carga(img);
 }
 

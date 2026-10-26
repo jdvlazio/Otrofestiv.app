@@ -1188,7 +1188,7 @@ export function festivalTagline(cfg, lang='es'){
 // `action` es lo ÚNICO que difiere por superficie: en el splash SELECCIONA (el
 // usuario confirma con "Entrar"); en el sheet CARGA directo (no hay confirmación).
 // keyArtPos → custom property --kap (no inline style raw: ARQUITECTURA §10.3);
-// onerror=this.remove() degrada al template negro si el afiche 404ea (§10.2).
+// data-err="quitar" (sin-inline.js, CSP) degrada al template negro si el afiche 404ea (§10.2).
 function _festivalCardHTML([id,cfg], {isPast, isActive, action, lang, review}){
   const meta=`${cfg.city} · ${_langDates(cfg,lang)}`;
   const label=festivalLabel(cfg);

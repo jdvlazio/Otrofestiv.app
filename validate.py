@@ -5978,9 +5978,12 @@ check = 'sin-handler-inline'
 try:
     import re as _rhi, glob as _ghi
     # cualquier on<evento>, con o sin espacios en el `=` (auditoría senior, 26 oct)
-    _RE_HI = _rhi.compile(r'\bon[a-z]{3,}\s*=\s*\\?["\'`]')
+    # también sin comillas (onerror=fn(this)); no las asignaciones `.onX=` de JS
+    # ni comentarios (auditoría senior, 26 oct)
+    _RE_HI = _rhi.compile(r'(?<![.\w])on[a-z]{3,}\s*=\s*(?:\\?["\'`]|[A-Za-z_$])')
     _n_idx = len(_RE_HI.findall(open('index.html', encoding='utf-8').read()))
-    _n_src = sum(len(_RE_HI.findall(open(_f, encoding='utf-8').read())) for _f in _ghi.glob('src/**/*.js', recursive=True))
+    _sin_coment = lambda t: _rhi.sub(r'^\s*//.*$|/\*.*?\*/', '', t, flags=_rhi.M | _rhi.S)
+    _n_src = sum(len(_RE_HI.findall(_sin_coment(open(_f, encoding='utf-8').read()))) for _f in _ghi.glob('src/**/*.js', recursive=True))
     _TECHO_HI = 0   # 31 → 0 en el paso 2/4 (26 oct)
     if _n_idx:
         fail(check, f'index.html tiene {_n_idx} handler(s) on*= — van como data-* en controller/sin-inline.js')
