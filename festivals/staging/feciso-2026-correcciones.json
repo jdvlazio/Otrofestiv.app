@@ -8,6 +8,24 @@
    "tmdb": 1796534,
    "_fuente": "https://www.themoviedb.org/movie/1796534",
    "_por_que": "«El Huaquero» (2025), dir. Harold de Vasten en TMDB; la lámina escribe «Harold Devastén» y el candado no casa la grafía. Es la misma obra publicada en FICPA 2026 con este tmdb_id y el afiche oficial firma «Harold DeVasten» (mirado en la hoja de contacto)"
+  },
+  "Teresa": {
+   "poster": "/assets/siembrafest/teresa.jpg",
+   "posterSource": "oficial",
+   "anio": 2025,
+   "duracion_min": 18,
+   "pais": "Colombia",
+   "_fuente": "festivals/siembrafest-2026.json",
+   "_por_que": "sin ficha TMDB; es la misma obra publicada en SiembraFest 2026 (misma dirección, Edgar Medina Fetecua, Colombia) con su afiche oficial, año 2025 y 18 min"
+  },
+  "Animero / Son de la muerte": {
+   "poster": "/assets/siembrafest/animero-son-de-la-muerte.jpg",
+   "posterSource": "oficial",
+   "anio": 2025,
+   "duracion_min": 11,
+   "pais": "Colombia",
+   "_fuente": "festivals/siembrafest-2026.json",
+   "_por_que": "sin ficha TMDB; es la misma obra publicada en SiembraFest 2026 (misma dirección, Nadine Holguín, Colombia) con su afiche oficial, año 2025 y 11 min; allá se titula «Animero: son de la muerte»"
   }
  },
  "sin_afiche": {
@@ -133,6 +151,12 @@
   },
   "Memoria del agua": {
    "_por_que": "sin ficha TMDB verificable (las láminas no traen año ni duración; la búsqueda por título no da ninguna obra de esa dirección) y las láminas de FECISO son stills, no afiches; el festival no tiene web ni publica afiches por obra (25 oct)"
+  },
+  "La fuente": {
+   "_por_que": "sin ficha TMDB verificable (las láminas no traen año ni duración; la búsqueda por título no da ninguna obra de esa dirección), no está en ningún festival nuestro publicado y las láminas de FECISO son stills, no afiches; el festival no tiene web ni publica afiches por obra (25 oct)"
+  },
+  "Amor a primera vista": {
+   "_por_que": "sin ficha TMDB verificable (las láminas no traen año ni duración; la búsqueda por título no da ninguna obra de esa dirección), no está en ningún festival nuestro publicado y las láminas de FECISO son stills, no afiches; el festival no tiene web ni publica afiches por obra (25 oct)"
   }
  }
 }

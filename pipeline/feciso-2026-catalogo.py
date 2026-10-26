@@ -3,7 +3,7 @@
 Independiente de Sogamoso (FECISO, Sogamoso / Sugamuxi, 1–7 nov 2026).
 PRE-ONBOARDING. Radar #1233.
 
-LA FUENTE: siete carruseles de @fecisofest, leídos SIN SESIÓN por el embed
+LA FUENTE: ocho carruseles de @fecisofest, leídos SIN SESIÓN por el embed
 (pipeline/ig_sin_sesion.py) y bajados con ig.bajar_laminas a fuentes/ig/<sc>/.
 El dato está PINTADO en las láminas (título, «Dir.», y país en las
 internacionales); el pie no lo repite. Transcripción a ojo, lámina por lámina,
@@ -16,6 +16,7 @@ cruzada con pipeline/ig-lecturas.py <sc> --ojos (3 lecturas OCR, sin ALT).
   DezbvdKEdBP           Selección Oficial Nuevos Realizadores 2026      11
   De0MXC6ESng           Selección Oficial Cortometraje Animación Nacional 2026   4
   De4bPYXkf4D           Selección Oficial Cortometraje Documental Nacional 2026 12
+  De7bL1hn8vU           Selección Oficial Cortometraje Ficción Nacional 2026  12
     (pie: Cinemateca del Sol, Sogamoso, 1–7 nov)
 
 La lámina 00 de cada post es la portada. Las láminas son STILLS con el laurel
@@ -122,6 +123,20 @@ POSTS = [
         ('Selva nublada: un viaje al corazón del bosque de niebla', 'Viviana Sánchez Prada', 'Colombia'),
         ('Tejiendo un árbol', 'Álvaro Cardona', 'Colombia'),
     ]),
+    ('De7bL1hn8vU', '2026-10-25', 'Cortometraje Ficción Nacional', 'corto', 13, [
+        ('Agachar el rostro', 'Camilo Medina Noy', 'Colombia'),
+        ('Teresa', 'Edgar Medina Fetecua', 'Colombia'),
+        ('Que el cielo nos perdone', 'Andrés Buitrago', 'Colombia'),
+        ('Palo Alto', 'Andrés Mosquera', 'Colombia'),
+        ('La gran hazaña', 'Yesid Zúñiga Ordóñez', 'Colombia'),
+        ('Para no volver', 'Tania Galvis', 'Colombia'),   # también en Nuevos Realizadores
+        ('La fuente', 'Frank Agudelo', 'Colombia'),
+        ('Muertos que no son muertos', 'Nicolás O. Segura', 'Colombia'),
+        ('Animero / Son de la muerte', 'Nadine Holguín', 'Colombia'),
+        ('Amor a primera vista', 'Andrés Quintero', 'Colombia'),
+        ('El mejor chocolate del mundo', 'John Agudelo', 'Colombia'),
+        ('La mona', 'Laura Gutiérrez Ardila', 'Colombia'),
+    ]),
 ]
 
 
@@ -139,7 +154,7 @@ def main():
                           '_src': {'url': IG.format(sc), 'date': fecha,
                                    'lamina': f'fuentes/ig/{sc}/{i:02d}.jpg'}})
     json.dump({'_provenance': provenance('https://www.instagram.com/fecisofest/',
-                                         metodo='láminas de 7 carruseles IG (embed, sin sesión), a ojo + ig-lecturas',
+                                         metodo='láminas de 8 carruseles IG (embed, sin sesión), a ojo + ig-lecturas',
                                          publicado='2026-10-13/19'),
                'obras': obras}, io.open(OUT, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     print(f'✓ {len(obras)} obras → {os.path.relpath(OUT, REPO)}')
