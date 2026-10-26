@@ -161,8 +161,11 @@ DESCRIPCION_SEM = {
         '«Dirigir desde la Nagra», con Marta Rodríguez y Felipe Colmenares, recupera la experiencia de una de las grandes '
         'pioneras del documental colombiano y la relación entre dirección sonora, trabajo de campo y construcción de una '
         'mirada documental.',
+    # errata del festival: su texto escribe «Aizengber»; su propia programación
+    # (línea de invitados de la misma página) la escribe «Aizenberg». Se corrige
+    # a la grafía del festival (Juan, 26 oct 2026)
     'Diálogo: Silencio y fabulación de archivo':
-        '«Silencio y fabulación de archivo», con Azul Aizengber y Juana Schlenker, abrirá una reflexión sobre aquello que '
+        '«Silencio y fabulación de archivo», con Azul Aizenberg y Juana Schlenker, abrirá una reflexión sobre aquello que '
         'ocurre cuando el archivo deja de ser únicamente evidencia para convertirse en materia de imaginación, '
         'interpretación y creación.',
     'Diálogo: Música original para documentales, el proceso práctico':
