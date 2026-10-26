@@ -151,10 +151,7 @@ import {
 } from './controller/share.js';
 import { abrirCompartirFestival, abrirCompartirPlan } from './controller/story.js';
 
-// ── Step 7e: controller/poster-err.js ────────────────────────────────────────────
-import {
-  _posterErr, _cortoSheetPosterErr, _edPosterErr,
-} from './controller/poster-err.js';
+// controller/poster-err.js: lo importa controller/sin-inline.js (data-err), no main.
 
 // storage (adapter de localStorage) → src/storage/storage.js (Step 3).
 // Importado al top del módulo. Usa FESTIVAL_STORAGE_KEY vía el STATE BRIDGE.
@@ -1457,20 +1454,13 @@ document.addEventListener('click', function(e){
   // p8 Step 8b: el bloque `_lets` (29 viewstate/festival-data/auth) se reubicó a
   // state/viewstate.js (side-effect import, instala en import-phase). Aquí queda
   // solo la exposición de {state, FESTIVAL_CONFIG, ACTION_REGISTRY} + las fns
-  // (inline on* de producción + page.evaluate de tests) → 8c.
+  // (page.evaluate de tests) → 8c.
   for (const [k, val] of Object.entries({ state, FESTIVAL_CONFIG, ACTION_REGISTRY })) {
     Object.defineProperty(globalThis, k, { get: () => val, configurable: true });
   }
-  // Funciones invocadas desde:
-  //  (a) handlers inline on* en HTML generado (onerror=_posterErr/_cortoSheetPosterErr)
-  //      — corren en GLOBAL scope, no module scope → DEBEN estar en globalThis
-  //      (correctness de producción, no solo tests; onerror no se migró en 7c).
-  //  (b) page.evaluate de la suite Playwright.
+  // Funciones que usa page.evaluate de la suite Playwright. Ya NO hay handlers
+  // on*= que las necesiten en global (CSP, 26 oct: controller/sin-inline.js).
   Object.assign(globalThis, { venueLabel, sala,
-    // (a) inline on* handlers — producción
-    //     en HTML generado (main.js innerHTML): onerror=_posterErr/_cortoSheetPosterErr
-    //     (el markup estático ya no tiene: controller/sin-inline.js, 26 oct)
-    _posterErr, _cortoSheetPosterErr, _edPosterErr,
     // (b) page.evaluate — tests
     // NOTICES: CONFIG, no estado — no va al roster de state (rompería la frontera
     // que vigila [state-mirror], igual que FESTIVAL_CONFIG/VENUES). Se expone acá

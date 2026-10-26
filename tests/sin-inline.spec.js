@@ -61,3 +61,50 @@ test('SI04 — data-buscar: escribir en el buscador busca', async ({ page }) => 
   await page.locator('#search-input').pressSequentially('a');
   await expect.poll(() => page.locator('#search-results').innerHTML(), { timeout: 5000 }).not.toBe(antes);
 });
+
+// ── Paso 2/4: los on*= de las strings HTML de src/ ───────────────────────────
+async function _img(page, attrs, suelta) {
+  return page.evaluate(({ attrs, suelta }) => new Promise(res => {
+    const box = document.createElement('div');
+    box.innerHTML = `<img id="si-img" ${attrs}>`;
+    const im = box.firstChild;
+    // suelta: la imagen termina (falla/carga) ANTES de entrar al documento
+    if (suelta) { const fin = () => { document.body.appendChild(box); res(); };
+      im.addEventListener('error', fin); im.addEventListener('load', fin); }
+    else { document.body.appendChild(box); res(); }
+  }), { attrs, suelta });
+}
+const ROTA = () => `src="/assets/no-existe-${Date.now()}.jpg"`;
+const SANA = 'src="/icon-192.png"';
+
+for (const suelta of [false, true]) {
+  const tag = suelta ? ' (falla antes de entrar al documento)' : '';
+  test(`SI05 — data-err="quitar" saca la imagen rota${tag}`, async ({ page }) => {
+    await enterFestival(page, 'leviza2026', LEVIZA_SIMTIME);
+    await _img(page, `data-err="quitar" ${ROTA()}`, suelta);
+    await expect(page.locator('#si-img')).toHaveCount(0, { timeout: 5000 });
+  });
+  test(`SI06 — data-load="mostrar" la muestra al cargar${tag}`, async ({ page }) => {
+    await enterFestival(page, 'leviza2026', LEVIZA_SIMTIME);
+    await _img(page, `data-load="mostrar" style="opacity:0" ${SANA}`, suelta);
+    await expect.poll(() => page.evaluate(() => document.getElementById('si-img').style.opacity), { timeout: 5000 }).toBe('1');
+  });
+}
+
+test('SI07 — data-err="poster": el afiche roto cae al generativo UNA vez', async ({ page }) => {
+  await enterFestival(page, 'leviza2026', LEVIZA_SIMTIME);
+  const titulo = await page.evaluate(() => FILMS.find(f => f.title).title);
+  await _img(page, `data-err="poster" data-title="${titulo.replace(/"/g, '&quot;')}" ${ROTA()}`, false);
+  await expect.poll(() => page.evaluate(() => document.getElementById('si-img').getAttribute('src')), { timeout: 5000 }).toMatch(/^data:/);
+  expect(await page.evaluate(() => document.getElementById('si-img').dataset.err)).toBeUndefined();
+});
+
+test('SI08 — afiche roto con opacity:0 + data-load: el generativo de reemplazo SE VE', async ({ page }) => {
+  // programa.js: la tarjeta arranca invisible y el load la muestra. El fallback
+  // pone otro src: su load tiene que seguir mostrándola (auditoría senior, 26 oct)
+  await enterFestival(page, 'leviza2026', LEVIZA_SIMTIME);
+  const titulo = await page.evaluate(() => FILMS.find(f => f.title).title);
+  await _img(page, `style="opacity:0" data-load="mostrar" data-err="poster" data-title="${titulo.replace(/"/g, '&quot;')}" ${ROTA()}`, false);
+  await expect.poll(() => page.evaluate(() => document.getElementById('si-img').style.opacity), { timeout: 5000 }).toBe('1');
+});
+
