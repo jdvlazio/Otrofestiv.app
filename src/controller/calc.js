@@ -75,8 +75,10 @@ function travelMins(venueA,venueB){ return venueTravelMins(venueA,venueB); }
     // Extraer funciones puras del main thread via .toString()
     // Garantía: el Worker usa EXACTAMENTE el mismo código que el main thread.
     // Las REFERENCIAS, no sus nombres: antes era eval(name), que obligaba a la CSP
-    // a aceptar 'unsafe-eval' (26 oct). Un import que falte lo frena ESLint
-    // no-undef (CI) en vez de morir en el build del worker.
+    // a aceptar 'unsafe-eval' (26 oct). OJO: un import que falte ya no mata solo el
+    // worker, rompe la CARGA del módulo (la lista se evalúa al importar calc.js) —
+    // lo frenan ESLint no-undef (CI) y [sched-pure-fns]. Sin comentarios DENTRO
+    // del array: los parsers de validate.py y workerParity.test.js lo leen.
     const _pureFns=_SCHED_PURE_FNS.map(fn=>
       (typeof fn==='function')?fn.toString():'/* MISSING */'
     ).join('\n');

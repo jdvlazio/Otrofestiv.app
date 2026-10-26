@@ -38,7 +38,8 @@ function schedPureFns() {
   const m = CALC.match(/_SCHED_PURE_FNS\s*=\s*\[([\s\S]*?)\]/);
   assert.ok(m, '_SCHED_PURE_FNS no encontrada en calc.js');
   // referencias desde el 26 oct (sin eval, CSP); antes, nombres entre comillas
-  const names = [...m[1].matchAll(/[A-Za-z_$][\w$]*/g)].map(x => x[0]);
+  const sinComent = m[1].replace(/\/\*[\s\S]*?\*\/|\/\/[^\n]*/g, '');
+  const names = [...sinComent.matchAll(/[A-Za-z_$][\w$]*/g)].map(x => x[0]);
   assert.ok(names.length >= 10, `_SCHED_PURE_FNS leída con ${names.length} nombres: el test no la entiende`);
   return names;
 }
