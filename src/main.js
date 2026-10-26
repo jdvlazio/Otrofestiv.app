@@ -27,6 +27,7 @@ import './state/viewstate.js';
 //   FESTIVAL_STORAGE_KEY). saveX/loadState orquestadoras se quedan en main.js. ──
 import { storage } from './storage/storage.js';
 import { onDomReady } from './util/ready.js';
+import { instalarSinInline } from './controller/sin-inline.js';
 import { report } from './telemetry.js';
 
 // ── Step 4: i18n.js (import — _I18N + t + _applyI18nDOM). _lang vive en state
@@ -379,6 +380,7 @@ document.addEventListener('click', function(e) {
     if (closeFn) closeFn();
   }
 });
+instalarSinInline(ACTION_REGISTRY, searchQuery);   // 3b. sin on*= en el HTML (CSP) — controller/sin-inline.js
 // ── CONTROLLER LAYER END (p7c-1) ──────────────────────────────────────
 
 // ── i18n — sistema de traducción ─────────────────────────────────────────
@@ -1467,17 +1469,15 @@ document.addEventListener('click', function(e){
   Object.assign(globalThis, { venueLabel, sala,
     // (a) inline on* handlers — producción
     //     en HTML generado (main.js innerHTML): onerror=_posterErr/_cortoSheetPosterErr
-    //     en markup estático (index.html): oninput/onkeyup/onkeydown=searchQuery,
-    //     onkeydown=submitAuthEmail/submitOTP (#search-input, #auth-email-inp, #auth-otp-inp)
+    //     (el markup estático ya no tiene: controller/sin-inline.js, 26 oct)
     _posterErr, _cortoSheetPosterErr, _edPosterErr,
-    searchQuery, submitAuthEmail, submitOTP,
     // (b) page.evaluate — tests
     // NOTICES: CONFIG, no estado — no va al roster de state (rompería la frontera
     // que vigila [state-mirror], igual que FESTIVAL_CONFIG/VENUES). Se expone acá
     // para que la suite pueda INYECTAR un aviso y ejercer el camino REAL:
     // NOTICES.push(...) → limpiar cfg.films → loadFestival() → el sellado del
     // loader. Era la única ruta crítica sin test: se verificaba a mano.
-    NOTICES,
+    NOTICES, searchQuery, submitAuthEmail, submitOTP,   // los tres últimos: page.evaluate de auth/search.spec
     // _applyCloudRow: la puerta por donde entra el plan desde la nube — expuesta
     // para que la suite pueda ejercer su normalización contra el catálogo
     // (syncScheduleWithCatalog) sin montar Supabase. Solo tests.

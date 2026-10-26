@@ -3506,7 +3506,7 @@ setTimeout(function(){
     </div>
   </div>
   <div class="palm-cv">
-    <img class="palm-ka" id="palm-keyart" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+    <img class="palm-ka" id="palm-keyart" alt="" loading="lazy" data-err="ocultar">
     <div class="palm-cvtx">
       <div class="palm-eb" data-i18n="palm_eyebrow">Palmarés</div>
       <div class="palm-ti" id="palm-title"></div>
@@ -3526,7 +3526,7 @@ setTimeout(function(){
     </div>
   </div>
   <div class="diary-cover">
-    <img class="diary-keyart" id="diary-keyart" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+    <img class="diary-keyart" id="diary-keyart" alt="" loading="lazy" data-err="ocultar">
     <div class="diary-cover-txt">
       <div class="diary-eyebrow" data-i18n="diary_eyebrow">Diario</div>
       <div class="diary-title" id="diary-title"></div>
@@ -3907,7 +3907,7 @@ setTimeout(function(){
   <div class="auth-sheet-inner">
     <div class="auth-sheet-title" data-i18n="review_titulo">Festival en revisión</div>
     <div class="auth-sheet-sub"><span data-i18n="review_sub">Este montaje todavía no se publica. Ingresá la clave que te compartimos para verlo.</span></div>
-    <input class="pin-display auth-email-inp" id="review-key-inp" type="text" placeholder="••••••" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" maxlength="24" onkeydown="if(event.key==='Enter')submitReviewKey()">
+    <input class="pin-display auth-email-inp" id="review-key-inp" type="text" placeholder="••••••" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" maxlength="24" data-enter="submitReviewKey">
     <button class="auth-send-btn" id="review-key-btn" data-action="submitReviewKey" data-i18n="av_confirmar">Confirmar</button>
     <div class="auth-msg" id="review-msg"></div>
     <button type="button" class="auth-cancel" data-action="closeReviewSheet" data-i18n="misc_cancelar">Cancelar</button>
@@ -3919,7 +3919,7 @@ setTimeout(function(){
     <div id="auth-sheet-step1">
       <div class="auth-sheet-title" data-i18n="auth_titulo">Guardá tu Plan</div>
       <div class="auth-sheet-sub" data-i18n="auth_desc">Ingresa tu email y te enviamos un código de 6 dígitos. Sin contraseña. Tu Plan se sincroniza entre todos tus dispositivos.</div>
-      <input class="auth-email-inp" id="auth-email-inp" type="email" placeholder="tu@email.com" data-i18n-ph="auth_email" autocomplete="email" onkeydown="if(event.key==='Enter')submitAuthEmail()">
+      <input class="auth-email-inp" id="auth-email-inp" type="email" placeholder="tu@email.com" data-i18n-ph="auth_email" autocomplete="email" data-enter="submitAuthEmail">
       <button class="auth-send-btn" id="auth-send-btn" data-action="submitAuthEmail" data-i18n="auth_enviar">Enviar código</button>
       <div class="auth-msg" id="auth-msg"></div>
       <button type="button" class="auth-cancel" data-action="closeAuthSheet" data-i18n="misc_cancelar">Cancelar</button>
@@ -3927,7 +3927,7 @@ setTimeout(function(){
     <div id="auth-sheet-step2" style="display:none">
       <div class="auth-sheet-title" data-i18n="auth_revisa">Revisá tu email</div>
       <div class="auth-sheet-sub"><span data-i18n="auth_otp_sub">Enviamos un código de 6 dígitos a</span> <span id="auth-otp-email" style="color:var(--white)"></span></div>
-      <input class="pin-display auth-email-inp" id="auth-otp-inp" type="text" placeholder="12345678" inputmode="numeric" autocomplete="one-time-code" maxlength="8" onkeydown="if(event.key==='Enter')submitOTP()"><!-- maxlength=8: el Email OTP de Supabase de este proyecto es de 8 dígitos (no 6). maxlength=6 impedía tipear el código a mano (solo entraba por autofill/link). one-time-code: iOS autofill; type=text no bloquea el autofill y respeta maxlength. 16px: prevents iOS auto-zoom -->
+      <input class="pin-display auth-email-inp" id="auth-otp-inp" type="text" placeholder="12345678" inputmode="numeric" autocomplete="one-time-code" maxlength="8" data-enter="submitOTP"><!-- maxlength=8: el Email OTP de Supabase de este proyecto es de 8 dígitos (no 6). maxlength=6 impedía tipear el código a mano (solo entraba por autofill/link). one-time-code: iOS autofill; type=text no bloquea el autofill y respeta maxlength. 16px: prevents iOS auto-zoom -->
       <button class="auth-send-btn" data-i18n="av_confirmar" id="auth-otp-btn" data-action="submitOTP">Confirmar</button>
       <div class="auth-msg" id="auth-otp-msg"></div>
       <button type="button" class="auth-cancel" data-action="closeAuthAndReset" data-i18n="misc_cancelar">Cancelar</button>
@@ -3976,7 +3976,7 @@ setTimeout(function(){
   <div class="search-bar">
     <div class="search-input-wrap">
       <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"/></svg>
-      <input type="text" id="search-input" placeholder="Buscar…" data-i18n-ph="search_placeholder" oninput="searchQuery()" onkeyup="searchQuery()" onkeydown="setTimeout(searchQuery,0)" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+      <input type="text" id="search-input" placeholder="Buscar…" data-i18n-ph="search_placeholder" data-buscar="1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
     </div>
     <button class="search-cancel" data-action="searchClose" data-i18n="misc_cancelar">Cancelar</button><span id="dbg-ver" style="position:absolute;bottom:2px;right:4px;font-size:9px;color:var(--gray2)/* exception:build-ver */;opacity:.5;pointer-events:none"></span>
   </div>
