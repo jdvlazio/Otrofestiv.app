@@ -1,0 +1,45 @@
+{
+ "_nota": "CINETORO Experimental Film Festival 2026 (Toro, Valle del Cauca; 10–15 nov 2026). PRE-ONBOARDING (26 oct): la selección oficial está en la web (4 competencias, 39 obras); todavía no hay programación (día, hora, sede). Faltan el crudo, las sedes y el bloque festival completo cuando salga la parrilla. Sin bloque `festival` (como Festicine Antioquia): se escribe al montar. Secciones verbatim en Título: Competencia Oficial Nacional, Competencia Oficial Internacional, Competencia Oficial Emergente, Competencia Oficial de Mediometrajes; el nombre poético de cada competencia va como `programa` en el catálogo. Propuesta de emoji/inglés/arquetipo, para Juan: {\"Competencia Oficial Nacional\": {\"emoji\": \"🇨🇴\", \"en\": \"National Official Competition\", \"archetype\": \"Competencia\"}, \"Competencia Oficial Internacional\": {\"emoji\": \"🌍\", \"en\": \"International Official Competition\", \"archetype\": \"Competencia\"}, \"Competencia Oficial Emergente\": {\"emoji\": \"🌱\", \"en\": \"Emerging Official Competition\", \"archetype\": \"Competencia\"}, \"Competencia Oficial de Mediometrajes\": {\"emoji\": \"⏳\", \"en\": \"Official Medium-Length Competition\", \"archetype\": \"Competencia\"}}",
+ "radar": 1268,
+ "fuentes_vivas": [
+  {
+   "archivo": "fuentes/cinetoro-2026/vector-imaginado-competencia-oficial-nacional.html",
+   "pagina": "https://cinetoro.org/edicion-2026/vector-imaginado-competencia-oficial-nacional/",
+   "_que": "Competencia Oficial Nacional (11)"
+  },
+  {
+   "archivo": "fuentes/cinetoro-2026/geometria-de-la-diferencia-competencia-oficial-internacional.html",
+   "pagina": "https://cinetoro.org/edicion-2026/geometria-de-la-diferencia-competencia-oficial-internacional/",
+   "_que": "Competencia Oficial Internacional (14)"
+  },
+  {
+   "archivo": "fuentes/cinetoro-2026/curvas-interlineadas-competencia-oficial-emergente.html",
+   "pagina": "https://cinetoro.org/edicion-2026/curvas-interlineadas-competencia-oficial-emergente/",
+   "_que": "Competencia Oficial Emergente (9)"
+  },
+  {
+   "archivo": "fuentes/cinetoro-2026/puntos-de-fuga-competencia-oficial-de-mediometrajes.html",
+   "pagina": "https://cinetoro.org/edicion-2026/puntos-de-fuga-competencia-oficial-de-mediometrajes/",
+   "_que": "Competencia Oficial de Mediometrajes (5)"
+  }
+ ],
+ "pasos": [
+  {
+   "cmd": "python3 pipeline/cinetoro-2026-catalogo.py",
+   "que": "las 4 páginas de la selección → catálogo (39 obras)"
+  },
+  {
+   "cmd": "python3 pipeline/cinetoro-2026-verificar.py",
+   "que": "2.ª lectura independiente (nombres de las imágenes) contra el catálogo, en las dos direcciones"
+  },
+  {
+   "cmd": "python3 pipeline/enriquecer_catalogo.py festivals/staging/cinetoro-2026-catalogo.json",
+   "que": "TMDB verificado + cascada contra lo publicado"
+  }
+ ],
+ "_fuentes_versionadas": {
+  "festivals/staging/cinetoro-2026-catalogo.json": "las obras (39)",
+  "festivals/staging/cinetoro-2026-catalogo-enriquecido.json": "las fichas del pre-onboarding; las mide pipeline/preonboarding.py",
+  "festivals/staging/cinetoro-2026-correcciones.json": "sin_afiche con su porqué"
+ }
+}

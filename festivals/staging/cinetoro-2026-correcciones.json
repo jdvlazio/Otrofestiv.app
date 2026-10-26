@@ -1,0 +1,73 @@
+{
+ "_provenance": {
+  "fuente": "pre-onboarding: enriquecer_catalogo + revisión de las imágenes de cinetoro.org",
+  "capturado": "2026-10-26"
+ },
+ "fichas": {},
+ "sin_afiche": {
+  "Yerba": {
+   "_por_que": "sin ficha TMDB verificable (candado director + año/duración) y no está en nuestros festivales publicados; la web del festival solo publica un fotograma cuadrado por obra (mirado: no es afiche). Pendiente: buscar el afiche original en web abierta (FilmFreeway/Festhome/redes de la obra) o pedirlo al festival (26 oct)."
+  },
+  "Jonah": {
+   "_por_que": "sin ficha TMDB verificable (candado director + año/duración) y no está en nuestros festivales publicados; la web del festival solo publica un fotograma cuadrado por obra (mirado: no es afiche). Pendiente: buscar el afiche original en web abierta (FilmFreeway/Festhome/redes de la obra) o pedirlo al festival (26 oct)."
+  },
+  "Rastro": {
+   "_por_que": "ficha TMDB None sin póster; la web del festival solo publica un fotograma cuadrado por obra (mirado: no es afiche). Pendiente: buscar el afiche original en web abierta (FilmFreeway/Festhome/redes de la obra) o pedirlo al festival (26 oct)."
+  },
+  "Un aparato para detectar fantasmas": {
+   "_por_que": "ficha TMDB 1593571 sin póster; la web del festival solo publica un fotograma cuadrado por obra (mirado: no es afiche). Pendiente: buscar el afiche original en web abierta (FilmFreeway/Festhome/redes de la obra) o pedirlo al festival (26 oct)."
+  },
+  "Atarashi Ouchi ni Chu!": {
+   "_por_que": "sin ficha TMDB verificable (candado director + año/duración) y no está en nuestros festivales publicados; la web del festival solo publica un fotograma cuadrado por obra (mirado: no es afiche). Pendiente: buscar el afiche original en web abierta (FilmFreeway/Festhome/redes de la obra) o pedirlo al festival (26 oct)."
+  },
+  "Blue": {
+   "_por_que": "sin ficha TMDB verificable (candado director + año/duración) y no está en nuestros festivales publicados; la web del festival solo publica un fotograma cuadrado por obra (mirado: no es afiche). Pendiente: buscar el afiche original en web abierta (FilmFreeway/Festhome/redes de la obra) o pedirlo al festival (26 oct)."
+  },
+  "Dynamo": {
+   "_por_que": "ficha TMDB 1763799 sin póster; la web del festival solo publica un fotograma cuadrado por obra (mirado: no es afiche). Pendiente: buscar el afiche original en web abierta (FilmFreeway/Festhome/redes de la obra) o pedirlo al festival (26 oct)."
+  },
+  "ḤAŚWƐ: Clouds Seen from a Distance Before the Sea Wind Comes": {
+   "_por_que": "sin ficha TMDB verificable (candado director + año/duración) y no está en nuestros festivales publicados; la web del festival solo publica un fotograma cuadrado por obra (mirado: no es afiche). Pendiente: buscar el afiche original en web abierta (FilmFreeway/Festhome/redes de la obra) o pedirlo al festival (26 oct)."
+  },
+  "Muchas, muchas gracias": {
+   "_por_que": "sin ficha TMDB verificable (candado director + año/duración) y no está en nuestros festivales publicados; la web del festival solo publica un fotograma cuadrado por obra (mirado: no es afiche). Pendiente: buscar el afiche original en web abierta (FilmFreeway/Festhome/redes de la obra) o pedirlo al festival (26 oct)."
+  },
+  "Anthropos": {
+   "_por_que": "sin ficha TMDB verificable (candado director + año/duración) y no está en nuestros festivales publicados; la web del festival solo publica un fotograma cuadrado por obra (mirado: no es afiche). Pendiente: buscar el afiche original en web abierta (FilmFreeway/Festhome/redes de la obra) o pedirlo al festival (26 oct)."
+  },
+  "Boyuna": {
+   "_por_que": "ficha TMDB 1711419 sin póster; la web del festival solo publica un fotograma cuadrado por obra (mirado: no es afiche). Pendiente: buscar el afiche original en web abierta (FilmFreeway/Festhome/redes de la obra) o pedirlo al festival (26 oct)."
+  },
+  "Wild Yeast": {
+   "_por_que": "sin ficha TMDB verificable (candado director + año/duración) y no está en nuestros festivales publicados; la web del festival solo publica un fotograma cuadrado por obra (mirado: no es afiche). Pendiente: buscar el afiche original en web abierta (FilmFreeway/Festhome/redes de la obra) o pedirlo al festival (26 oct)."
+  }
+ },
+ "catalogo_titulo": {
+  "Um copro sem cavalo?": {
+   "a": "Um corpo sem cavalo?",
+   "_por_que": "errata de la web; su imagen se llama «Um-corpo-sem-cavalo» y TMDB 1659047 lo confirma"
+  },
+  "Futuros Luminosos": {
+   "a": "Futuros luminosos",
+   "_por_que": "caja de oración; su imagen lo escribe así"
+  },
+  "Preguntas Frecuentes": {
+   "a": "Preguntas frecuentes",
+   "_por_que": "caja de oración; su imagen lo escribe así"
+  },
+  "El Salto": {
+   "a": "El salto",
+   "_por_que": "caja de oración (regla de títulos de Juan)"
+  }
+ },
+ "catalogo_director": {
+  "Dominnique Jeanneret": {
+   "a": "Dominique Jeanneret",
+   "_por_que": "errata; su imagen y la sinopsis dicen «Dominique»"
+  },
+  "María José Ibarra y Florentino Vargas": {
+   "a": "María José Ibarra, Florentino Vargas",
+   "_por_que": "separador de directores de la app"
+  }
+ }
+}
