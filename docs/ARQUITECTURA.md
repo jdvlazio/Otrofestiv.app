@@ -531,6 +531,8 @@ Formato de nombre: `"[Nombre sala] - [Ciudad]"` — siempre igual.
 
 **Sin handlers en el HTML (26 oct 2026).** Nada de `onclick=`/`onerror=`/`onkeydown=` en el markup: impiden quitar `'unsafe-inline'` de la CSP. El comportamiento va como atributo de datos —`data-action` (clic), `data-enter` (Enter), `data-err="ocultar"`, `data-buscar`— que leen listeners delegados (`main.js` y `controller/sin-inline.js`). `[sin-handler-inline]`: index.html en 0 y src/ con un techo que solo baja.
 
+**Sin eval (26 oct 2026).** Nada de `eval(`, `new Function(` ni `setTimeout('código')` en src/: la CSP no lleva `'unsafe-eval'`. El worker del planeador recibe las funciones puras por referencia (`_SCHED_PURE_FNS` en calc.js, `fn.toString()`). Lo vigila `[sin-eval]`.
+
 ### Columnas tiempo/día en listas
 Todo label de día/hora que ancle una columna flex debe tener `width` o `min-width` fijo. Validar con `MIÉ` (el día más ancho en Plus Jakarta Sans).
 

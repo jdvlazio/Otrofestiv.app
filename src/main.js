@@ -36,7 +36,7 @@ import { LANGS, t, _applyI18nDOM } from './i18n/i18n.js';
 
 // ── Step 5: domain/ (funciones puras). Importan config (DEFAULT_DURATION_MIN,
 //   FESTIVAL_BUFFER, FESTIVAL_CONFIG) y leen festival-state vía bridge. El worker
-//   las consume vía eval(name).toString(); sus copias worker-local se quedan. ──
+//   las consume vía fn.toString() (calc.js, sin eval desde el 26 oct); sus copias worker-local se quedan. ──
 import { toMin, parseDur, minToStr, _festDate, simNow, simTodayStr, dayFullyPassed, festivalEnded } from './domain/time.js';
 import { _djb2, _titleSeed, _mulberry32, shuffle, scoreFilm, effectiveDuration, screeningPassed, _classifyTodayScreenings, _endedStats, normTitle } from './domain/film.js';
 import { sameEntry, screensConflict, isScreeningBlocked, plannableScreens, sortScreensByStrategy, computeScenarios, verifyPlan } from './domain/schedule.js';

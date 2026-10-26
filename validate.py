@@ -216,7 +216,10 @@ if sched_start == -1:
 else:
     sched_end = _sched_hay.find('];', sched_start)
     sched_block = _sched_hay[sched_start:sched_end]
-    fn_names = re.findall(r"'(\w+)'", sched_block)
+    # REFERENCIAS desde el 26 oct (sin eval, CSP); nombres entre comillas antes
+    fn_names = re.findall(r"\b([A-Za-z_$][\w$]*)\b", sched_block[sched_block.find('[') + 1:])
+    if len(fn_names) < 10:
+        fail(check, f'_SCHED_PURE_FNS leída con {len(fn_names)} funciones: el parser no la entiende (guardián ciego)')
     # p8 Step 5: las pure fns se movieron a src/domain/*.js (import en main.js). El
     # worker las consume vía eval(name).toString() — el binding importado debe ser
     # resoluble en main. Se buscan en content + módulos domain. `export function
@@ -5997,6 +6000,25 @@ try:
               + (' — BAJÁ el techo' if _n_src < _TECHO_HI else ''))
 except Exception as _e:
     warn(check, f'no se pudo verificar sin-handler-inline: {_e}')
+
+# ── [sin-eval] ni eval( ni new Function en src/ (CSP, 26 oct 2026) ─────────
+# Era el único motivo de 'unsafe-eval' en la CSP: calc.js armaba el worker con
+# eval(name). Ahora la lista guarda referencias. Sin esto, un eval nuevo
+# rompería la app en cuanto la CSP lo prohíba.
+check = 'sin-eval'
+try:
+    import re as _rev, glob as _gev
+    _RE_EV = _rev.compile(r'(?<![\w.$])eval\s*\(|\bnew\s+Function\s*\(|\bset(?:Timeout|Interval)\s*\(\s*["\'`]')
+    _ev = []
+    for _f in _gev.glob('src/**/*.js', recursive=True):
+        _t = _rev.sub(r'^\s*//[^\n]*', '', _rev.sub(r'/\*.*?\*/', '', open(_f, encoding='utf-8').read(), flags=_rev.S), flags=_rev.M)
+        _ev += [f'{_f}:{_t[:_m.start()].count(chr(10)) + 1}' for _m in _RE_EV.finditer(_t)]
+    if _ev:
+        fail(check, 'eval/new Function/timer con string en src/ (la CSP no tiene unsafe-eval): ' + ', '.join(_ev[:5]))
+    else:
+        ok(check, 'sin eval, new Function ni timers con string en src/')
+except Exception as _e:
+    warn(check, f'no se pudo verificar sin-eval: {_e}')
 
 # ── [script-externo-fijo] todo script de un CDN con versión exacta + integrity ──
 # Supabase se cargaba como «supabase-js@2»: el CDN servía la última 2.x que saliera,
