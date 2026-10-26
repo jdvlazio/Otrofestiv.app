@@ -46,6 +46,13 @@ las decisiones viven en el plan y no en la memoria de quien monta.
 
 ## 0·bis · Instagram se LEE, y la mitad del dato está dentro de la imagen
 
+**Qué publicó una cuenta: `python3 pipeline/ig_posts.py <cuenta>`. Nunca Apify
+directo.** El vigía ya guarda cada post en `fuentes/ig-vigia/` y ese comando lo
+lee gratis (colaborativos incluidos). `--traer` pide a Apify SOLO lo posterior a
+la última consulta y lo suma a la misma memoria. Llamar a Apify a mano vuelve a
+bajar lo ya guardado: del 21 al 25 oct 2026 eso se comió más de la mitad del plan
+gratis (US$5/mes). Las láminas se siguen leyendo con `ig-lecturas.py`.
+
 Es la fuente donde más festivales publican antes que en su web, y la que peor se
 extrae si uno solo mira el pie. Tres hechos medidos en #NarrarElFuturo (16 sep
 2026), que valen para cualquier festival:
