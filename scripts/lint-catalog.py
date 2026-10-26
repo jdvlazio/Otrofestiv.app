@@ -77,7 +77,7 @@ PAISES = {
 }
 _MARCAS_METADATA = re.compile(
     r'Director(?:a|es|as)?\s*:|Duraci[oó]n\s*:|Ubicaci[oó]n\s*:|Hora\s*:|'
-    r'A[nñ]o\s*:|Pa[ií]s(?:es)?\s*:|Sala\s+\d|Sinopsis\s*:', re.I)
+    r'\bA[nñ]o\s*:|Pa[ií]s(?:es)?\s*:|Sala\s+\d|Sinopsis\s*:', re.I)
 
 def _rows(data):
     films = data.get('films', data if isinstance(data, list) else [])

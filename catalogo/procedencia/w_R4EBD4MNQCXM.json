@@ -1,6 +1,6 @@
 {
  "titulo_original": {
-  "fuente": "festival:cineautopsia-2026",
+  "fuente": "festival:anibia-2026,anibia-2026,cineautopsia-2026",
   "regla": "el título que más festivales imprimen"
  },
  "directores": {
@@ -14,5 +14,9 @@
  "paises": {
   "fuente": "tmdb:1417902",
   "regla": "tmdb-manda"
+ },
+ "generos": {
+  "fuente": "festival",
+  "regla": "todos los publicados, del más al menos frecuente"
  }
 }

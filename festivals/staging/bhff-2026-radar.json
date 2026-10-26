@@ -1,10 +1,10 @@
 {
  "_provenance": {
   "fuente": "issue de radar #1030 — https://github.com/jdvlazio/Otrofestiv.app/issues/1030",
-  "capturado": "2026-10-15",
+  "capturado": "2026-10-25",
   "titulo": "RADAR: Bogotá Horror Film Festival (BHFF) — Bogotá, 22–31 OCT (8ª)",
   "estado": "OPEN",
-  "comentarios": 1
+  "comentarios": 5
  },
  "issue": 1030,
  "titulo": "RADAR: Bogotá Horror Film Festival (BHFF) — Bogotá, 22–31 OCT (8ª)",
@@ -14,6 +14,22 @@
   {
    "fecha": "2026-10-14",
    "cuerpo": "Vigía 14 oct 2026 — BHFF (rama `data/bhff-2026-v2`, PR #1041 sin publicar)\n\n- Web /programacion/: sin cambios desde el 7 oct (los datos embebidos son idénticos).\n- IG [Decnn1xiY2_](https://www.instagram.com/p/Decnn1xiY2_/) (Moscahouse, 29 oct 6:00 p. m.: La Demonatrix + Gabriel) y [DecSAQRkevW](https://www.instagram.com/p/DecSAQRkevW/) (Casa 32: Sigilo jue 23 · 6:00 p. m.; MEAT the Movie + El Teatro vie 30 · 6:00 p. m.): **ya están en la rama** con ese día, hora y sede.\n- ⚠ Discrepancia menor: la cuenta de la película [@parapetomovie (DeJZxuwBOTI, 6 oct)](https://www.instagram.com/p/DeJZxuwBOTI/) dice «22 de octubre a las 7:30pm» en la Cinemateca; la programación oficial de la web y la rama dicen **7:00 p. m.** (Sala Capital). Manda la del festival; solo para tenerlo presente si el festival la corrige."
+  },
+  {
+   "fecha": "2026-10-20",
+   "cuerpo": "**Vigía 20 oct 2026 (07:00) — BHFF: 2 hallazgos (IG sin sesión)**\n\n1. **«De la idea al guion» (Jhonny Ortiz Alarcón) ya tiene hora.** https://www.instagram.com/p/Des_xjFN9gL/ (pie): **vie 23 oct · 3:00 p. m. · Lab 1, Cinemateca de Bogotá**, taller gratis con inscripción previa (formulario de Google en el pie). En la app no está: sigue en `TALLERES_FUERA` como «23 oct 17:00, choca con VFX para no técnicos». Con las 3:00 p. m. el choque desaparece. El post no tiene láminas que se puedan bajar por el embed; el dato sale del pie. **Acción sugerida:** pasarlo a `TALLERES` (15:00, Lab 1). Duración: el post no la da.\n2. **«Sierra: El Álbum Mortuorio» (sáb 24, Sala Capital): las fuentes dan tres horas distintas.** La lámina 2 de https://www.instagram.com/p/DeslqRAFLMP/ dice **6:30 PM**; el pie del mismo post dice 7:00 p. m.; la web (`PROGRAMACION`) sigue en 7:30 p. m. La app tiene **19:30**. La lámina manda y, con la regla de la hora más temprana, quedaría **18:30**. **Acción sugerida:** pasar a 18:30, o preguntarle al festival.\n\nSin cambios: la web (`PROGRAMACION`, 9 días) es igual a la copia guardada. Las tres funciones de «Cinematecas locales» siguen fuera porque no se sabe la sede.\n"
+  },
+  {
+   "fecha": "2026-10-21",
+   "cuerpo": "**Vigía 20 oct 2026 (19:00) — BHFF: un taller con fecha que la app no tiene**\n\nhttps://www.instagram.com/p/Deu5XIPuFHo/ (leído sin sesión):\n\n- **Taller–laboratorio de creación «Maquillaje con las Garras»**, con Nat Martínez (Natt)\n- **Jueves 22 oct, 5:00 p. m.** · **Lab 1 · Cinemateca de Bogotá** (Cra. 3 # 19-10)\n- Entrada libre con inscripción previa: bogotahorrorfilmfest.com/talleres/\n\nLa página /talleres/ es «Taller 01 · Maquillaje artístico, caracterización y cosplay» pero no da día ni hora (y no cambió desde la copia de hoy). En producción solo está «De la idea al guion» (23 oct, 3 p. m.) como taller. **Acción sugerida:** agregarlo como taller del 22 oct (y estar atentos al día y la hora de los talleres 03 y 04 y del Encuentro de Realizadores, que salen en IG).\n\nWeb /programacion/ y /seleccion-2026/: sin cambios.\n"
+  },
+  {
+   "fecha": "2026-10-22",
+   "cuerpo": "**Salas (22 oct) — Cinemateca de Bogotá vs app**\n\n- ⚠️ **Sierra: El álbum mortuorio — sáb 24 oct**: la Cinemateca la da a las **7:30 PM**, Sala Capital (agenda y ficha https://cinematecadebogota.gov.co/node/peliculas/3621?sede=11). La app dice **18:30** (fuente: web del festival, 26 sep). Sugerido: confirmar con el festival y pasar a 19:30.\n- Las otras 15 funciones de cine en la Cinemateca (22–31 oct) coinciden en día, hora, sala y link de TuBoleta; la clausura (31 oct 7 PM, Sala Capital) es «Entrada libre» en ambos.\n- No revisado: talleres en Lab 1 (la agenda de cine no los trae).\n"
+  },
+  {
+   "fecha": "2026-10-25",
+   "cuerpo": "**Vigía 25 oct 07:00 — BHFF: «NICO» no está en la app (dato sin confirmar).** Post colaborativo [De2fBD_BtaD](https://www.instagram.com/p/De2fBD_BtaD/) (23 oct). La lámina dice «NICO llega a Colombia · Selección Oficial Bogotá Horror Film Fest», sin fecha ni hora. Solo el pie da el horario: «el próximo domingo a las 16hrs estará participando en @bogotahorrorfest» (dom 25 oct, 16:00, sin sede). La app no tiene nada ese día a las 16:00. La web `/programacion/` no cambió. Demonatrix + Gabriel (29 oct, Co.Laboratorio) coincide con la lámina de [De2b7XwpEgp](https://www.instagram.com/p/De2b7XwpEgp/).\n"
   }
  ]
 }

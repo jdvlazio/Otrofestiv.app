@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Corre los tests de PlanCompute con swiftc (Foundation-only, sin Xcode).
+set -euo pipefail
+cd "$(dirname "$0")/../../OtrofestivWatch Watch App"
+out="$(mktemp -d)/otf-plancompute-tests"
+swiftc PlanModels.swift WatchStrings.swift PlanCompute.swift SharedPlan.swift ../tests/watch/PlanComputeTests.swift -o "$out"
+# Idioma forzado por proceso: cubre la cadena Lang.current → dayLabel (B2).
+echo "── AppleLanguages (es) ──"
+"$out" -AppleLanguages "(es)"
+echo "── AppleLanguages (en) ──"
+"$out" -AppleLanguages "(en)"

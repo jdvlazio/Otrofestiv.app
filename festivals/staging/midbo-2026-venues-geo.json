@@ -81,7 +81,7 @@
  },
  "_provenance": {
   "fuente": "Nominatim con verificación: caja de ciudad + token distintivo + clase de lugar (una sede fija nunca es un barrio). _prec:manual intocable.",
-  "capturado": "2026-10-13"
+  "capturado": "2026-10-26"
  },
  "Universidad del Magdalena": {
   "n": 1,
@@ -122,5 +122,21 @@
   "_match": "Google Maps: La Mecánica Original (centro cultural), Cra. 25 #63f-21 (13 oct 2026)",
   "n": 0,
   "address": "Cra. 25 #63f-21"
+ },
+ "Universidad Jorge Tadeo Lozano": {
+  "lat": 4.6065633,
+  "lng": -74.0666447,
+  "_prec": "manual",
+  "_match": "Google Maps: Edificio de Postgrados Universidad de Bogotá Jorge Tadeo Lozano (Módulo 16, Cra. 4 # 22-61) (19 oct 2026)",
+  "n": 2
+ },
+ "Universidad Jorge Tadeo Lozano, Edificio Fabio Lozano": {
+  "lat": 4.6063616,
+  "lng": -74.0673857,
+  "_prec": "manual",
+  "_match": "Google Maps: Auditorio Fabio Lozano - Universidad Jorge Tadeo Lozano (Cra. 4 #22-40) (21 oct 2026); coincide al decimal con anibia-2026; Nominatim sin resultado",
+  "_nota": "edificio distinto del de Posgrados (M16), ~85 m, mismo campus",
+  "n": 1,
+  "address": "Cra. 4 #22-40"
  }
 }

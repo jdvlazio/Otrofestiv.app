@@ -1,0 +1,14 @@
+# CAMINO DE DATOS (17 oct 2026, senior dev + tech lead): un PR que toca SOLO
+# estas rutas no corre la regresión de la interfaz (21 min) ni el visual audit;
+# corre smoke, el spec de festivales y el recorrido por festival (~5 min). La
+# suite completa corre igual en main después del merge (push: festivals/**.json).
+# Una ruta por línea, prefijo. validate.py [camino-datos] prohíbe código de la app acá.
+festivals/
+pipeline/
+docs/
+tests/pipeline/
+fuentes/
+catalogo/
+assets/
+version.json
+CLAUDE.md

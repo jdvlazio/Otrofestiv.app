@@ -201,6 +201,12 @@ def publicar(fid, forzar=False):
     out['sections'] = {k: limpio(v) for k, v in (b.get('sections') or {}).items()}
     out['venues'] = {k: limpio(v) for k, v in (b.get('venues') or {}).items()}
     out['films'] = [lib.normaliza(limpio(f), rep) for f in b['films']]
+    # palmarés y avisos viajan EN el dato (Etapa 2·A, #1174): su fuente es un
+    # sidecar del festival, así el próximo armado no los borra (19 oct 2026)
+    for campo in ('palmares', 'avisos'):
+        sp = f'{REPO}/festivals/staging/{fid}-{campo}.json'
+        if os.path.exists(sp):
+            out[campo] = json.load(open(sp, encoding='utf-8'))[campo]
     # sinopsis de obra / descripción de programa o actividad (lib.separar_descripcion)
     for f in out['films']:
         lib.separar_descripcion(f)
@@ -256,7 +262,7 @@ def publicar(fid, forzar=False):
             print(f'  ⚠ {len(_nuevas)} obras que el catálogo no tiene todavía (el push queda frenado hasta sumarlas):')
             for t in _nuevas[:10]:
                 print(f'    · {t}')
-            print('  → TMDB_API_KEY=… python3 pipeline/catalogo_construir.py --escribir')
+            print('  → TMDB_API_KEY=… python3 pipeline/catalogo_construir.py --escribir  (re-arma TODO el catálogo: se commitea todo lo que cambie)')
     # ── ¿esta publicación PIERDE datos? ─────────────────────────────────────
     if os.path.exists(out_p):
         viejo = json.load(open(out_p, encoding='utf-8'))
@@ -290,6 +296,22 @@ def publicar(fid, forzar=False):
         # LO RETIRADO A PROPÓSITO no es pérdida (14 oct 2026): se le quita a la
         # copia de producción exactamente lo declarado en <fid>-quitar.json
         # (lib.quitados), y se compara parejo. Cualquier otra baja sigue frenando
+        # UNA BAJA REGISTRADA NO ES PÉRDIDA (20 oct 2026, hallazgo de Onboarding):
+        # una función que el registro de ids (<fid>-funciones-ids.json, que escribe
+        # ensamblar.py) marcó `ausente`, `partida_en` o `fusionada_en` salió A
+        # PROPÓSITO y con su porqué. Contarla obligaba a --forzar (MIDBO, «86 → 85»),
+        # y un --forzar de rutina es el que un día tapa una pérdida de verdad. Se
+        # descuenta de los dos lados; toda baja SIN registro sigue frenando.
+        _rp = os.path.join(REPO, 'festivals', 'staging', f'{fid}-funciones-ids.json')
+        _regf = (json.load(open(_rp, encoding='utf-8')).get('funciones') or {}) if os.path.exists(_rp) else {}
+        _ids_nuevos = {f.get('id') for f in out['films'] if f.get('id')}
+        _bajas = [f for f in viejo.get('films') or []
+                  if f.get('id') and f['id'] not in _ids_nuevos
+                  and any((_regf.get(f['id']) or {}).get(k) for k in ('ausente', 'partida_en', 'fusionada_en'))]
+        for f in _bajas:
+            print(f'    · baja registrada, no pérdida: {f.get("title", "")[:50]} ({f["id"]})')
+        if _bajas:
+            viejo = {**viejo, 'films': [f for f in viejo['films'] if f not in _bajas]}
         _qt = lib.quitados(fid)
         if _qt:
             for _f in viejo.get('films') or []:
@@ -299,7 +321,13 @@ def publicar(fid, forzar=False):
                             for _x in lib.RETIRABLES.get(_c, (_c,)):
                                 _o.pop(_x, None)
         _movidos = {t for t, _a, _b in _mov}
-        _quietas = lambda fs: [f for f in fs if f.get('title') not in _movidos]
+        # …y también DENTRO de los programas (19 oct 2026, MIDBO): una obra que sale
+        # de un programa a su propia función se cuenta en la lista del programa de
+        # ayer y no en la función de hoy (que es «movida»): la cuenta pareja
+        # excluye la obra movida en los dos lados, esté arriba o en un film_list
+        _quietas = lambda fs: [{**f, 'film_list': [o for o in f['film_list'] if o.get('title') not in _movidos]}
+                               if f.get('film_list') else f
+                               for f in fs if f.get('title') not in _movidos]
         ca, cb = _cobertura(_quietas(viejo.get('films') or [])), _cobertura(_quietas(out['films']))
         perdidos = {k: (ca[k], cb[k]) for k in ca if cb[k] < ca[k]}
         menos_films = len(viejo.get('films') or []) - len(out['films'])
@@ -341,6 +369,10 @@ def publicar(fid, forzar=False):
         print('  contrato aplicado:', dict(rep))
     sin_src = sum(1 for f in out['films'] if not f.get('_src'))
     print(f'  films sin _src: {sin_src}')
+    # LOS IDS QUE NACIERON POR UN CAMBIO DOBLE (Juan, 18 oct 2026): visibles al
+    # publicar, con la función vieja y la nueva — no solo en un registro
+    for _x in b.get('_avisos_id') or []:
+        print(f'  {_x}')
     return out
 
 

@@ -3,8 +3,10 @@
  "titulo_original": "Pasta negra",
  "anio": 2025,
  "paises": [
-  "C",
-  "O"
+  "CA",
+  "CO",
+  "IT",
+  "VE"
  ],
  "directores": [
   "Jorge Thielen Armand"
@@ -17,10 +19,11 @@
   "Drama"
  ],
  "afiche": {
-  "archivo": "https://image.tmdb.org/t/p/w500/eETZnvE46E29uCsxpK3anseNfmy.jpg",
+  "archivo": "/assets/cortoscali-2026/pasta-negra.jpg",
   "veredicto": "oficial"
  },
  "xref": {
+  "tmdb": 1403488,
   "letterboxd": "pasta-negra"
  },
  "versiones": [
@@ -30,6 +33,7 @@
   }
  ],
  "presentaciones": [
+  "cortoscali-2026",
   "siembrafest-2026"
  ]
 }

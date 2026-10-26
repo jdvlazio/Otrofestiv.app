@@ -3,8 +3,7 @@
  "titulo_original": "Las piedras del río",
  "anio": 2026,
  "paises": [
-  "C",
-  "O"
+  "CO"
  ],
  "directores": [
   "Edna Sierra"
@@ -16,7 +15,7 @@
   "Drama"
  ],
  "afiche": {
-  "archivo": "/assets/siembrafest/las-piedras-del-rio.jpg",
+  "archivo": "/assets/cortoscali-2026/las-piedras-del-rio.jpg",
   "veredicto": "oficial"
  },
  "xref": {},
@@ -27,6 +26,7 @@
   }
  ],
  "presentaciones": [
+  "cortoscali-2026",
   "popayan-2026",
   "siembrafest-2026"
  ]

@@ -1,0 +1,77 @@
+{
+ "_provenance": {
+  "fuente": "src/config.js (PALMARES / NOTICES), movido al dato",
+  "capturado": "2026-10-19"
+ },
+ "palmares": [
+  {
+   "categoria": "Competencia Central",
+   "nivel": "ganadora",
+   "premio": "Premio Iris a Mejor Película",
+   "titulo": "Así llegó la noche",
+   "autoria": "Ángel Santos",
+   "obra": "Así llegó la noche"
+  },
+  {
+   "categoria": "Competencia Central",
+   "nivel": "ganadora",
+   "premio": "Premio Iris a Mejor Dirección",
+   "titulo": "Las almas ni los ojos",
+   "autoria": "Canela Reyes y César Jaimes",
+   "obra": "Las almas ni los ojos"
+  },
+  {
+   "categoria": "Competencia Central",
+   "nivel": "mencion",
+   "titulo": "Oublie pas le gruau",
+   "autoria": "Olivier Godin",
+   "obra": "Oublie pas le gruau"
+  },
+  {
+   "categoria": "Competencia de Cortometrajes",
+   "nivel": "ganadora",
+   "premio": "Premio Iris a Mejor Película",
+   "titulo": "Bright Summer Days",
+   "autoria": "Nevena Desivojevic",
+   "obra": "Bright Summer Days"
+  },
+  {
+   "categoria": "Competencia de Cortometrajes",
+   "nivel": "ganadora",
+   "premio": "Premio Iris a Mejor Dirección",
+   "titulo": "Henry Is a Girl Who Likes to Sleep",
+   "autoria": "Marthe Peters",
+   "obra": "Henry Is a Girl Who Likes to Sleep"
+  },
+  {
+   "categoria": "Competencia de Cortometrajes",
+   "nivel": "mencion",
+   "titulo": "Mirando al sur",
+   "autoria": "Felipe López Gómez",
+   "obra": "Mirando al sur"
+  },
+  {
+   "categoria": "Competencia Nuevas Voces",
+   "nivel": "ganadora",
+   "premio": "Premio Iris a Mejor Película",
+   "titulo": "Preguntas Frecuentes",
+   "autoria": "Sofía Salinas Barrera",
+   "obra": "Preguntas Frecuentes"
+  },
+  {
+   "categoria": "Competencia Nuevas Voces",
+   "nivel": "ganadora",
+   "premio": "Premio Iris a Mejor Dirección",
+   "titulo": "El Salto",
+   "autoria": "Jerónimo Rincón",
+   "obra": "El Salto"
+  },
+  {
+   "categoria": "Competencia Nuevas Voces",
+   "nivel": "mencion",
+   "titulo": "Borrachos mientras escuchamos las gotas caer",
+   "autoria": "Santiago Gómez Ramírez",
+   "obra": "Borrachos mientras escuchamos las gotas caer"
+  }
+ ]
+}

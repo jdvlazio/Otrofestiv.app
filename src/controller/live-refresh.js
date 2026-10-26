@@ -17,7 +17,8 @@
 // el dominio puro (clasificarRefresco). El fetch va con 1 intento: esto corre
 // en un poll — si la red falla, la próxima vuelta reintenta sola.
 import { FESTIVAL_CONFIG, mergeFestivalSections } from '../config.js';
-import { _fetchFestivalJson, _ingerirDatosFestival, festivalJsonUrl, loadFestival, publicarCatalogo } from './loader.js';
+import { _ingerirDatosFestival, loadFestival, publicarCatalogo } from './loader.js';
+import { cargarDatosFestival } from './datos-fuente.js';
 import { clasificarRefresco } from '../domain/refresh-diff.js';
 import { _djb2, explodeScreenings, normTitle } from '../domain/film.js';
 import { renderActiveView } from './pipeline.js';
@@ -43,7 +44,7 @@ export async function refrescarDatosFestival(){
   if (!cfg || !cfg.films || !cfg._rawHash) return false;  // aún sin carga completa
   _refrescando = true;
   try {
-    const data = await _fetchFestivalJson(festivalJsonUrl(id), 1, 6000);
+    const data = await cargarDatosFestival(id, 1, 6000);
     const hash = _djb2(JSON.stringify(data));
     if (hash === cfg._rawHash) return false;
 

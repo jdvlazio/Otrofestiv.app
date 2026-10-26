@@ -5,11 +5,32 @@
   "regla": "un afiche ajeno se publica solo con veredicto «afiche» y huella vigente"
  },
  "afiches": {
+  "/assets/anibia-2026/caida-libre.jpg": {
+   "sha1": "073e52339ae8c3f248605c7a2892ed35e4d8b398",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficcali-2026"
+   ]
+  },
+  "/assets/bhff-2026/el-festin-de-las-moscas.jpg": {
+   "sha1": "37115d960fd038fadc57266965b984ec5781ed7b",
+   "veredicto": "afiche",
+   "usado_en": [
+    "cortoscali-2026"
+   ]
+  },
   "/assets/bhff-2026/gabriel.jpg": {
    "sha1": "849e543c4b7ba2a261651966bfcc85a03b05c49c",
    "veredicto": "afiche",
    "usado_en": [
     "ficmontanas-2026"
+   ]
+  },
+  "/assets/bhff-2026/hasta-que-amanezca.jpg": {
+   "sha1": "535e13dadc26b5d2c63221feea5d4c1061847877",
+   "veredicto": "afiche",
+   "usado_en": [
+    "guatape-2026"
    ]
   },
   "/assets/bhff-2026/vientre.jpg": {
@@ -26,11 +47,39 @@
     "ficpa-2026"
    ]
   },
+  "/assets/ficcali-2026/alivios.jpg": {
+   "sha1": "981065ccaed5f9b3fc4080b3d31b2b4a367dfd56",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficica-2026"
+   ]
+  },
   "/assets/ficcali-2026/despues-de-tanto-amor.jpg": {
    "sha1": "192fdd369e33723566d4d29539841510d62791ee",
    "veredicto": "afiche",
    "usado_en": [
     "villadelcine-2026"
+   ]
+  },
+  "/assets/ficcali-2026/el-bitcoin-de-oro.jpg": {
+   "sha1": "231e1405e164675a8f8c118ff3c6bcb3385ca488",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficica-2026"
+   ]
+  },
+  "/assets/ficcali-2026/el-maestro-de-la-piqueria.jpg": {
+   "sha1": "78f6a80811ed1ab3d4c40192cac250d0cfaf917a",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficica-2026"
+   ]
+  },
+  "/assets/ficcali-2026/khazana.jpg": {
+   "sha1": "b3145ac176b6dc4ea1ea0f3587280bf8ff656c05",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficica-2026"
    ]
   },
   "/assets/ficcali-2026/la-gran-hazana.jpg": {
@@ -40,10 +89,19 @@
     "ficmontanas-2026"
    ]
   },
+  "/assets/ficcali-2026/quinto-primera.jpg": {
+   "sha1": "1edea11f6a0647e452953a0132a0046d2dd186ae",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficica-2026"
+   ]
+  },
   "/assets/ficdeh/la-independencia.jpg": {
    "sha1": "6a8bbb76f2544323cf8d07ee27a2c9870386dfd5",
    "veredicto": "afiche",
    "usado_en": [
+    "cortoscali-2026",
+    "ficica-2026",
     "siembrafest-2026"
    ]
   },
@@ -98,6 +156,13 @@
     "bhff-2026"
    ]
   },
+  "/assets/filcmar-2026/la-pecera.jpg": {
+   "sha1": "367902f2cd8b877e8c3ff816dc07289a741c47f4",
+   "veredicto": "afiche",
+   "usado_en": [
+    "anibia-2026"
+   ]
+  },
   "/assets/finca/mi-casa-es-su-casa.jpg": {
    "sha1": "e1e1d8e2dc26e4d861cc9a7e0cd30f451939c17f",
    "veredicto": "afiche",
@@ -109,6 +174,7 @@
    "sha1": "aa40d660205b7c41d527d003730bd572d0605a71",
    "veredicto": "afiche",
    "usado_en": [
+    "cortoscali-2026",
     "midbo-2026"
    ]
   },

@@ -3,8 +3,7 @@
  "titulo_original": "Para No Volver",
  "anio": 2025,
  "paises": [
-  "C",
-  "O"
+  "CO"
  ],
  "directores": [
   "Tania Galvis"
@@ -42,11 +41,16 @@
   {
    "etiqueta": "10 min",
    "duracion_min": 10
+  },
+  {
+   "etiqueta": "11 min",
+   "duracion_min": 11
   }
  ],
  "presentaciones": [
   "biff-2026",
   "cinemancia-2026",
+  "cortoscali-2026",
   "filcmar-2026"
  ]
 }

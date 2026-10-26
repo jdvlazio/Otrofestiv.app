@@ -46,6 +46,13 @@ las decisiones viven en el plan y no en la memoria de quien monta.
 
 ## 0·bis · Instagram se LEE, y la mitad del dato está dentro de la imagen
 
+**Qué publicó una cuenta: `python3 pipeline/ig_posts.py <cuenta>`. Nunca Apify
+directo.** El vigía ya guarda cada post en `fuentes/ig-vigia/` y ese comando lo
+lee gratis (colaborativos incluidos). `--traer` pide a Apify SOLO lo posterior a
+la última consulta y lo suma a la misma memoria. Llamar a Apify a mano vuelve a
+bajar lo ya guardado: del 21 al 25 oct 2026 eso se comió más de la mitad del plan
+gratis (US$5/mes). Las láminas se siguen leyendo con `ig-lecturas.py`.
+
 Es la fuente donde más festivales publican antes que en su web, y la que peor se
 extrae si uno solo mira el pie. Tres hechos medidos en #NarrarElFuturo (16 sep
 2026), que valen para cualquier festival:
@@ -137,6 +144,23 @@ ahí, y macOS le pega a los archivos un `com.apple.macl` que puede impedir
 abrirlos después (`xattr -c` lo limpia). Los scripts leen con ruta relativa al
 repo (`f'{REPO}/fuentes/…'`), nunca rutas absolutas de una máquina.
 
+`fuentes/` es UNA carpeta compartida por todas las copias de trabajo
+(`~/Developer/Otrofestiv-fuentes`, ver docs/TRABAJO-EN-PARALELO.md).
+
+**Fuentes vivas (20 oct 2026).** Toda fuente que CAMBIA mientras el festival
+corre (la página de programación, la API, el PDF que se re-publica) se declara
+en `fuentes_vivas` del plan, con su URL y cómo se baja (`wp-json` paginado,
+`pagina`, o el `cmd` de su script). `python3 pipeline/correr.py <id> --bajar`
+las baja todas, verifica el contenido (un 200 no prueba nada) y anota la hora
+en `fuentes/<id>/_bajadas.json`. Con el festival vigente (de 2 días antes a su
+fin), una fuente con más de 24 h FRENA a `correr.py` y a `publicar-datos.py`.
+Antes cada uno bajaba lo que tenía comando y lo demás quedaba viejo en silencio:
+FICCALI verificó contra la página del 6 oct; Fantasmagoría re-armó con la v2.
+`[fuentes-vivas-declaradas]` en validate.py avisa qué festival vigente con
+pipeline todavía no las declara. Un festival SIN fuente web viva (Guatapé: todo
+sale de láminas de IG) declara `"fuentes_vivas": []` con su porqué en
+`_nota_fuentes_vivas`; vacía sin nota no cuenta como declarada.
+
 ### Paso 1 · Parser propio → formato intermedio
 
 Cada fuente es única; **el parser es desechable** y no se generaliza. Lo que
@@ -195,6 +219,8 @@ Correcciones en `festivals/staging/<id>-correcciones.json`:
 `titulo_oficial` (el OCR/programa escriben mal → se corrige contra el afiche)
 vs `alias` (el festival rebautizó → se busca por el nombre de distribución,
 se conserva el del festival).
+
+**El pre-onboarding se cierra completo** (`[preonboarding-completo]`, 18 oct 2026): un festival que todavía no salió y ya tiene `<fid>-catalogo.json` no pasa los validadores si alguna obra no tiene afiche ni su porqué en `sin_afiche`. Medir con `python3 pipeline/preonboarding.py`.
 
 ### Paso 3 · Sedes
 
@@ -363,7 +389,23 @@ worker genera escenarios), Mi Plan, cambio de festival limpia estado. Mirar la
 app encuentra lo que ninguna validación ve: el póster roto, el filtro
 desbordado y el badge invertido salieron los tres en pantalla.
 
-Publicar: `node scripts/bump-version.js` → commit (los 5 archivos del bump
+**Publicar los datos (desde el 18 oct 2026): un comando, sin esperar el CI de
+la app.** Los datos se publican APARTE del código (migración 0009, `docs/DATOS.md`):
+
+```bash
+python3 pipeline/publicar-datos.py <id>          # p. ej. bhff-2026 — ~2 min
+python3 pipeline/publicar-datos.py <id> --probar # solo guardianes, no sube nada
+```
+
+Corre los mismos guardianes de un PR de datos (validate-festivals, validate.py,
+«igual a lo que genera publicar.py» si hay pipeline, tests de navegador de ese
+festival) y publica al almacén: la app lo ve en minutos. **Una corrección de
+datos se publica así PRIMERO**; el PR de abajo va después, sin apuro, para dejar
+la historia en main (al entrar, el job «Datos al almacén» lo republica: el
+almacén nunca queda atrás de main). Volver atrás: revertir el archivo y correr
+el comando otra vez.
+
+PR de historia: `node scripts/bump-version.js` → commit (los 5 archivos del bump
 JUNTOS) → push → PR **de datos** (la frontera código/datos es un guardián de
 CI; mezcla deliberada = etiqueta `frontera-ok`) → CI verde → merge (el dueño
 de la rama la lleva hasta el final) → **verificar el deploy de Pages y el JSON

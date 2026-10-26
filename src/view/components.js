@@ -745,6 +745,13 @@ export function makeEventPoster(state,title,duration,eventKind,section,opts){
     'acto':         {accent:'#BA7517', headerLabel:'ACTO'},
     'fiesta':       {accent:'#22C55E', headerLabel:'FIESTA'},
     'social al parque':{accent:'#22C55E', headerLabel:'SOCIAL AL PARQUE'},
+    // Guatapé Film Fest 2026 (18 oct): las palabras de su lámina. Concierto y
+    // títeres son del parque (verde); la premiación va con apertura/clausura;
+    // la entrega de la maleta audiovisual a la biblioteca, también.
+    'concierto':    {accent:'#22C55E', headerLabel:'CONCIERTO'},
+    'obra de títeres':{accent:'#22C55E', headerLabel:'OBRA DE TÍTERES'},
+    'premiación':   {accent:'#BA7517', headerLabel:'PREMIACIÓN'},
+    'entrega':      {accent:'#BA7517', headerLabel:'ENTREGA'},
   };
   const _kindMapEN={
     'conversatorio':{accent:'#F59E0B', headerLabel:'TALK'},
@@ -773,6 +780,10 @@ export function makeEventPoster(state,title,duration,eventKind,section,opts){
     'acto':         {accent:'#BA7517', headerLabel:'CEREMONY'},
     'fiesta':       {accent:'#22C55E', headerLabel:'PARTY'},
     'social al parque':{accent:'#22C55E', headerLabel:'SOCIAL IN THE PARK'},
+    'concierto':    {accent:'#22C55E', headerLabel:'CONCERT'},
+    'obra de títeres':{accent:'#22C55E', headerLabel:'PUPPET SHOW'},
+    'premiación':   {accent:'#BA7517', headerLabel:'AWARDS CEREMONY'},
+    'entrega':      {accent:'#BA7517', headerLabel:'HANDOVER'},
   };
   const _kindMap=_lang==='es'?_kindMapES:_kindMapEN; // PT reutiliza EN (términos internacionales)
   // opts.untitled (regla anti-repetición del sheet): cuerpo vacío — el título ya
@@ -1177,12 +1188,12 @@ export function festivalTagline(cfg, lang='es'){
 // `action` es lo ÚNICO que difiere por superficie: en el splash SELECCIONA (el
 // usuario confirma con "Entrar"); en el sheet CARGA directo (no hay confirmación).
 // keyArtPos → custom property --kap (no inline style raw: ARQUITECTURA §10.3);
-// onerror=this.remove() degrada al template negro si el afiche 404ea (§10.2).
+// data-err="quitar" (sin-inline.js, CSP) degrada al template negro si el afiche 404ea (§10.2).
 function _festivalCardHTML([id,cfg], {isPast, isActive, action, lang, review}){
   const meta=`${cfg.city} · ${_langDates(cfg,lang)}`;
   const label=festivalLabel(cfg);
   const art=cfg.keyArt
-    ? `<img class="splash-card-art" src="${cfg.keyArt}" alt="" loading="lazy" onerror="this.remove()"${cfg.keyArtPos?` style="--kap:${cfg.keyArtPos}"`:''}>`
+    ? `<img class="splash-card-art" src="${cfg.keyArt}" alt="" loading="lazy" data-err="quitar"${cfg.keyArtPos?` style="--kap:${cfg.keyArtPos}"`:''}>`
     : `<span class="splash-card-fb">${festivalShortName(cfg)}</span>`;
   // Distintivo APLAZADO sobre el afiche — fuente única: sale en el riel del splash
   // Y en el sheet «cambiar festival» sin tocar cada superficie.

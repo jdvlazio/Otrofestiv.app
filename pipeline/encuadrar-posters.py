@@ -174,8 +174,9 @@ def main():
     mirados = set()
     if os.path.exists(_dec):
         import json as _json
-        from lib import slug as _slug
-        mirados = {f'{_slug(t)}.jpg' for t in (_json.load(open(_dec, encoding='utf-8')).get('afiches') or {})}
+        from lib import asset_declarado as _asset
+        mirados = {_asset(t, d)
+                   for t, d in (_json.load(open(_dec, encoding='utf-8')).get('afiches') or {}).items()}
     for f in entradas:
         p = f.get('poster') or ''
         if not p.startswith('/assets/') or p in vistos:
@@ -231,7 +232,13 @@ def main():
         # Un afiche que YA mide el lienzo exacto y no tiene marco detectable no
         # tiene nada que ganar con otra pasada: solo puede perder píxeles. Se
         # salta y se cuenta, para que el número diga cuántos venían hechos.
-        if (W, H) == (LIENZO_W, LIENZO_H) and not (min(t, b) or min(l, r)):
+        # Con el MISMO suelo de marco que el recorte de abajo (21 oct 2026): con
+        # el mínimo crudo, 1 px de antialias a los costados («coffee-break»,
+        # FICCALI, medida ←1 →4) contaba como marco, no se saltaba, y cada
+        # corrida le volvía a aplicar el overscan y le comía la línea de arriba.
+        rv = min(t, b) if min(t, b) >= MIN_MARCO else 0
+        rh = min(l, r) if min(l, r) >= MIN_MARCO else 0
+        if (W, H) == (LIENZO_W, LIENZO_H) and not (rv or rh):
             ya += 1
             continue
         # Un MARCO rodea: solo es marco lo que aparece en los DOS lados
@@ -250,8 +257,6 @@ def main():
         # Un marco impreso de verdad es simétrico y grueso; 3 px sobre 1170 son
         # el antialias del reescalado. Por eso el marco tiene que superar el
         # suelo EN LOS DOS lados opuestos para contar.
-        rv = min(t, b) if min(t, b) >= MIN_MARCO else 0
-        rh = min(l, r) if min(l, r) >= MIN_MARCO else 0
         if rv or rh:
             # 1 · recortar la caja de contenido, EXACTA en los cuatro lados.
             #     sips recorta desde el centro y solo admite offset positivo,

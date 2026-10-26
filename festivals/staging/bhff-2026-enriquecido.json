@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, emparejado con ficha_verifica() (director + año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-10-16"
+  "capturado": "2026-10-25"
  },
  "obras": [
   {
@@ -25,6 +25,29 @@
    "posterSource": "tmdb"
   },
   {
+   "titulo": "Bajo El Mismo Techo",
+   "_ya_publicada": [
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "Bajo el mismo techo",
+     "poster": "/assets/siembrafest/bajo-el-mismo-techo.jpg",
+     "posterSource": "oficial",
+     "country": "Colombia",
+     "year": 2026,
+     "duration": "13 min",
+     "genre": "Thriller"
+    }
+   ],
+   "_verificado": "ya publicada en siembrafest-2026: se reusan sus datos",
+   "pais": "Colombia",
+   "anio": 2026,
+   "duracion_tmdb": 13,
+   "genero": "Thriller",
+   "poster": "/assets/bhff-2026/bajo-el-mismo-techo.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-31.webp, recortado por dentro del marco (700×1105, marco 15 px)"
+  },
+  {
    "titulo": "Cerdo que Sobrevivió a la Fiebre Aftosa",
    "tmdb_id": 1298085,
    "titulo_original": "구제역에서 살아 돌아온 돼지",
@@ -39,7 +62,7 @@
    "lbSlug": "pig-that-survived-foot-and-mouth-disease",
    "_verificado": "declarada a mano: «The Pig That Survived Foot-and-Mouth Disease», Hur Bum-wook, 105 min: director y obra coinciden con la parrilla; el título en español no casa solo con TMDB",
    "_director": "Hur Bum-Wook",
-   "_sondeado": "2026-10-16",
+   "_sondeado": "2026-10-25",
    "poster": "/assets/bhff-2026/cerdo-que-sobrevivio-a-la-fiebre-aftosa.jpg",
    "posterSource": "tmdb"
   },
@@ -107,7 +130,7 @@
    "posterSource": "tmdb",
    "genero": "Ciencia Ficción",
    "_heredado": {
-    "genero": "catálogo w_R4EP71550W43 (bhff-2026, cineautopsia-2026, fantasmagoria-2026, fantasofest-2026, ficpa-2026, narrarelfuturo-2026, popayan-2026)"
+    "genero": "catálogo w_R4EP71550W43 (bhff-2026, cineautopsia-2026, fantasmagoria-2026, fantasofest-2026, ficica-2026, ficpa-2026, narrarelfuturo-2026, popayan-2026)"
    }
   },
   {
@@ -131,6 +154,27 @@
    "posterSource": "tmdb",
    "sinopsis": "Luego de un accidente de tránsito, un hombre cae en un coma, quedando inmerso en un mundo onírico en donde la mujer que ama, y que perdió en el accidente, sigue con vida. A partir de entonces, empieza un viaje entre los sueños y la realidad, en el que el hombre debe decidir si quedarse con la mujer que ama, o dejarla ir y seguir con su vida.",
    "_sinopsis": "https://festivaldelima.com/2026/pelicula/donde-duermen-los-suenos/"
+  },
+  {
+   "titulo": "El Festín de las Moscas",
+   "_ya_publicada": [
+    {
+     "festival": "cortoscali-2026",
+     "titulo": "El festín de las moscas",
+     "poster": "/assets/bhff-2026/el-festin-de-las-moscas.jpg",
+     "posterSource": "oficial",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "4 min"
+    }
+   ],
+   "_verificado": "ya publicada en cortoscali-2026: se reusan sus datos",
+   "pais": "Colombia",
+   "anio": 2025,
+   "duracion_tmdb": 4,
+   "poster": "/assets/bhff-2026/el-festin-de-las-moscas.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-27.webp, recortado por dentro del marco (674×1048, marco 10 px)"
   },
   {
    "titulo": "El Ocaso De Los Dioses",
@@ -164,6 +208,25 @@
    "posterSource": "tmdb"
   },
   {
+   "titulo": "El Ritual de Huasao",
+   "tmdb_id": 1576982,
+   "titulo_original": "El Ritual de Huasao",
+   "poster_path": "/4x0GT7JlYlg70EUFRr62DCVfGtW.jpg",
+   "synopsis_es": "Esther y Mario regresan de unas vacaciones por Perú. En el pueblo de Huasao, Esther recibe una limpia espiritual. A su regreso ella sufre un accidente doméstico que la dejará inmóvil en el suelo tras una discusión con Mario. Pero Mario oculta un secreto que le llevará a tomar una decisión terrible al descubrirla, siendo entonces cuando se desate el mal en las vidas que le rodean.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "Spain",
+   "lbSlug": "el-ritual-de-huasao",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "El Ritual de Huasao",
+   "_director": "Isaac Berrocal Bravo",
+   "_sondeado": "2026-10-25",
+   "poster": "/assets/bhff-2026/el-ritual-de-huasao.jpg",
+   "posterSource": "tmdb"
+  },
+  {
    "titulo": "El Susurro",
    "tmdb_id": 1534530,
    "titulo_original": "El susurro",
@@ -194,22 +257,6 @@
    "posterSource": "tmdb"
   },
   {
-   "titulo": "El Susurro + Esquirlas de Caracol",
-   "_ya_publicada": [
-    {
-     "festival": "fantasofest-2026",
-     "titulo": "El Susurro",
-     "poster": "/assets/fantasofest/el-susurro.jpg",
-     "posterSource": "custom",
-     "lbSlug": "the-whisper-2025",
-     "sinopsis": "Lucía y Adrián, dos hermanos que huyen de la oscura herencia de su padre vampiro, llegan a una casona aislada en el bosque, buscando refugio del pasado. Su intento de olvidar se interrumpe cuando un gato les trae un dedo humano, lo que revela un secreto aterrador: sus vecinos forman parte de una red criminal que secuestra adolescentes para producir películas snuff, y planean deshacerse de ellos. Mientras Lucía lucha por proteger a su hermano, deberá enfrentar una oscura maldición familiar que los persigue en su aparente refugio."
-    }
-   ],
-   "poster": "/assets/fantasofest/el-susurro.jpg",
-   "_verificado": "ya publicada en fantasofest-2026: se reusa su afiche",
-   "sinopsis": "Lucía y Adrián, dos hermanos que huyen de la oscura herencia de su padre vampiro, llegan a una casona aislada en el bosque, buscando refugio del pasado. Su intento de olvidar se interrumpe cuando un gato les trae un dedo humano, lo que revela un secreto aterrador: sus vecinos forman parte de una red criminal que secuestra adolescentes para producir películas snuff, y planean deshacerse de ellos. Mientras Lucía lucha por proteger a su hermano, deberá enfrentar una oscura maldición familiar que los persigue en su aparente refugio."
-  },
-  {
    "titulo": "Esquirlas de Caracol",
    "tmdb_id": 1718595,
    "titulo_original": "Esquirlas de Caracol",
@@ -235,18 +282,39 @@
      "titulo": "Gabriel",
      "poster": "/assets/bhff-2026/gabriel.jpg",
      "posterSource": "oficial",
+     "country": "Colombia",
+     "genre": "Ficción",
      "sinopsis": "Helena, una joven atormentada por inquietantes visiones, se encuentra en una antigua habitación infantil donde es inundada por recuerdos aterradores. A través de las visiones, es testigo del sufrimiento de un niño llamado Gabriel, quien fue maltratado y asesinado por su padre violento y borracho. Elena descubre un diario que parece contar la trágica historia de Gabriel."
     }
    ],
    "_verificado": "ya publicada en ficmontanas-2026: se reusa su sinopsis",
    "sinopsis": "Helena, una joven atormentada por inquietantes visiones, se encuentra en una antigua habitación infantil donde es inundada por recuerdos aterradores. A través de las visiones, es testigo del sufrimiento de un niño llamado Gabriel, quien fue maltratado y asesinado por su padre violento y borracho. Elena descubre un diario que parece contar la trágica historia de Gabriel.",
+   "pais": "Colombia",
+   "genero": "Ficción",
    "poster": "/assets/bhff-2026/gabriel.jpg",
    "posterSource": "oficial",
-   "_afiche": "declarado: bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-51.webp, recortado por dentro del marco (714×1076, marco 15 px)",
-   "genero": "Ficción",
-   "_heredado": {
-    "genero": "catálogo w_R4J76XTP6BB4 (bhff-2026, ficmontanas-2026)"
-   }
+   "_afiche": "declarado: bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-51.webp, recortado por dentro del marco (714×1076, marco 15 px)"
+  },
+  {
+   "titulo": "Hasta que Amanezca",
+   "_ya_publicada": [
+    {
+     "festival": "guatape-2026",
+     "titulo": "Hasta que amanezca",
+     "poster": "/assets/bhff-2026/hasta-que-amanezca.jpg",
+     "posterSource": "oficial",
+     "country": "Colombia",
+     "year": 2026,
+     "duration": "5 min"
+    }
+   ],
+   "_verificado": "ya publicada en guatape-2026: se reusan sus datos",
+   "pais": "Colombia",
+   "anio": 2026,
+   "duracion_tmdb": 5,
+   "poster": "/assets/bhff-2026/hasta-que-amanezca.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-30.webp, recortado por dentro del marco (700×1105, marco 15 px)"
   },
   {
    "titulo": "Hiperrealidad",
@@ -274,11 +342,17 @@
      "festival": "filcmar-2026",
      "titulo": "HUSH",
      "poster": "/assets/filcmar-2026/hush.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "14 min"
     }
    ],
    "poster": "/assets/filcmar-2026/hush.jpg",
-   "_verificado": "ya publicada en filcmar-2026: se reusa su afiche"
+   "_verificado": "ya publicada en filcmar-2026: se reusa su afiche",
+   "pais": "Colombia",
+   "anio": 2025,
+   "duracion_tmdb": 14
   },
   {
    "titulo": "Interior 8",
@@ -298,7 +372,9 @@
    "_director": "Lorena Toscano",
    "_sondeado": "2026-10-07",
    "poster": "/assets/bhff-2026/interior-8.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "sinopsis": "Fernanda se ve obligada a volver al apartamento donde ocurrió una tragedia familiar. Al llegar al Interior 8, empiezan a desatarse sucesos sobrenaturales.",
+   "_sinopsis": "traducción propia con contexto (Content Design, 25 oct 2026) de la sinopsis oficial en inglés: https://mubi.com/en/it/films/interior-8"
   },
   {
    "titulo": "Iris de Cristal",
@@ -345,7 +421,9 @@
    "lbSlug": "the-demonatrix",
    "_verificado": "declarada a mano: «The Demonatrix», Aurelio Voltaire y Jeff Ferrell, 90 min: los dos directores coinciden con la parrilla; el título en español no casa solo con TMDB",
    "_director": "Jeff Ferrell, Aurelio Voltair",
-   "_sondeado": "2026-10-16",
+   "_sondeado": "2026-10-25",
+   "sinopsis": "Durante una sesión espiritista, una dominatrix invoca por accidente a un íncubo y tiene que unir fuerzas con el cura del barrio para exorcizar al demonio.",
+   "_sinopsis": "traducción propia con contexto (Content Design, 25 oct 2026) de la sinopsis oficial en inglés: https://www.cine-excess.co.uk/the-demonatrix-aurelio-voltaire-jeff-ferrell-usa-2025.html",
    "poster": "/assets/bhff-2026/la-demonatrix.jpg",
    "posterSource": "tmdb"
   },
@@ -489,6 +567,25 @@
    "posterSource": "tmdb"
   },
   {
+   "titulo": "Nico",
+   "tmdb_id": 1182204,
+   "titulo_original": "Nico",
+   "poster_path": "/a3rlln8lCOQ1pTSI2u5hqNYKEal.jpg",
+   "synopsis_es": "Una madre desesperada reúne a su familia en el mismo bosque donde falleció su hijo tres años atrás, sin revelar que los ha reunido para llevar a cabo un ritual de invocación que le devuelva la vida al niño.",
+   "synopsis_en": "On the third anniversary of Nico's death, Florencia organizes a family reunion in the same forest where lightning struck the boy's head. Under the pretext of holding a ceremony to remember Nico, she invites her two daughters, with whom she has a complicated relationship, and her ex-husband, from whom she separated after the family tragedy.  When Lita, the youngest daughter, discovers some esoteric elements in one of the boxes that Florencia has brought, she realizes that her mother has not told the truth about the ceremony and suspects, upon seeing a strange healer appear, that what her mother really intends is to carry out an invocation ritual to bring the child back to life.  Florencia's macabre decision will cause the supernatural situation to spiral out of control and endanger her entire family.",
+   "genero": "Terror",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 65,
+   "pais_tmdb": "Argentina, Uruguay",
+   "lbSlug": "nico-2025",
+   "_verificado": "el catálogo ya la tiene (w_SFBKHBGGSSRC, bhff-2026)",
+   "work_id": "w_SFBKHBGGSSRC",
+   "_director": "Salomón Reyes",
+   "_sondeado": "2026-10-25",
+   "poster": "/assets/bhff-2026/nico.jpg",
+   "posterSource": "tmdb"
+  },
+  {
    "titulo": "No Es El Fin Del Mundo",
    "tmdb_id": 1786249,
    "titulo_original": "No es el fin del mundo",
@@ -562,7 +659,9 @@
    "_director": "Pablo Otero",
    "_sondeado": "2026-10-07",
    "poster": "/assets/bhff-2026/pactum.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "sinopsis": "Seis mujeres de la alta sociedad se reúnen en una mansión, unidas por un pacto secreto. Una de ellas lo ha roto, y las consecuencias serán desastrosas. ¿Quién es la traidora?",
+   "_sinopsis": "traducción propia con contexto (Content Design, 25 oct 2026) de la sinopsis oficial en inglés: synopsis_en de la ficha de TMDB (sin sinopsis oficial en español hallada)"
   },
   {
    "titulo": "Parapeto",
@@ -699,7 +798,7 @@
    "posterSource": "tmdb",
    "synopsis_en": "Colombia, 1951. In the thick of La Violencia, the period of brutal political war between Liberals and Conservatives, two chulavitas —hired killers on the government’s payroll— stalk a priest through the dark, waiting for him to lead them to the cabin in the woods where their next victims are hiding. But the horror they find there is a thousand times worse than the pain they meant to inflict.",
    "_heredado": {
-    "synopsis_en": "catálogo w_R4GP49AWA2ZH (bhff-2026, fantasmagoria-2026, ficma-2026, siembrafest-2026, villadelcine-2026)"
+    "synopsis_en": "catálogo w_R4GP49AWA2ZH (bhff-2026, fantasmagoria-2026, ficica-2026, ficma-2026, siembrafest-2026, villadelcine-2026)"
    }
   },
   {
@@ -707,7 +806,6 @@
    "tmdb_id": 1677190,
    "titulo_original": "Replay",
    "poster_path": "/W9xvtCLFRZtbklQGnhpNJCwuL.jpg",
-   "synopsis_es": "",
    "synopsis_en": "Set in a distant galaxy, a strange humanoid creature called Hunter X must fight against a dozen robot lizards to retrieve a peculiar disk-shaped device.",
    "genero": "Animación",
    "anio_tmdb": 2026,
@@ -719,7 +817,11 @@
    "_director": "Simón Matallana Nossa",
    "_sondeado": "2026-10-07",
    "poster": "/assets/bhff-2026/replay.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "synopsis_es": "En medio del espacio, una misteriosa criatura asalta una nave y se enfrenta a una banda de lagartos robot, para así obtener un extraño artefacto con forma de disco.",
+   "_heredado": {
+    "synopsis_es": "catálogo w_ZR5FE4J5AM6C (anibia-2026, bhff-2026, ficica-2026)"
+   }
   },
   {
    "titulo": "Siempre hay un monstruo",
@@ -846,6 +948,27 @@
    "posterSource": "tmdb"
   },
   {
+   "titulo": "Vientre",
+   "_ya_publicada": [
+    {
+     "festival": "fantasmagoria-2026",
+     "titulo": "Vientre",
+     "poster": "/assets/bhff-2026/vientre.jpg",
+     "posterSource": "oficial",
+     "country": "Colombia",
+     "year": 2026,
+     "duration": "14 min"
+    }
+   ],
+   "_verificado": "ya publicada en fantasmagoria-2026: se reusan sus datos",
+   "pais": "Colombia",
+   "anio": 2026,
+   "duracion_tmdb": 14,
+   "poster": "/assets/bhff-2026/vientre.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-48.webp, recortado por dentro del marco (780×1106, marco 15 px)"
+  },
+  {
    "titulo": "Yatsi y el Espíritu del Río",
    "tmdb_id": 1321232,
    "titulo_original": "Yatsi y el Espíritu del Río",
@@ -873,17 +996,8 @@
    "posterSource": "oficial",
    "_afiche": "declarado: bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-15.webp, recortado por dentro del marco (764×1078, marco 11 px)",
    "synopsis_en": "Iván arrives at an underground party in a forest on Midsummer's Eve, seeking to lose himself in the music, the fire, and Clara, the girl he's obsessed with. But after trying a strange substance, the celebration turns into a nightmare.",
-   "_sinopsis": "https://screamfestla.com/2026/film/anax"
-  },
-  {
-   "titulo": "Bajo El Mismo Techo",
-   "poster": "/assets/bhff-2026/bajo-el-mismo-techo.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-31.webp, recortado por dentro del marco (700×1105, marco 15 px)",
-   "genero": "Thriller",
-   "_heredado": {
-    "genero": "catálogo w_R4NEB2NAGK3C (bhff-2026, siembrafest-2026)"
-   }
+   "sinopsis": "En la víspera de San Juan, Iván llega a una fiesta clandestina en un bosque, dispuesto a perderse en la música, en el fuego y en Clara, la chica que lo obsesiona. Pero después de probar una sustancia extraña, la celebración se convierte en una pesadilla.",
+   "_sinopsis": "traducción propia con contexto (Content Design, 25 oct 2026) de la sinopsis oficial en inglés: https://screamfestla.com/2026/film/anax"
   },
   {
    "titulo": "Búhos",
@@ -902,12 +1016,6 @@
    "poster": "/assets/bhff-2026/el-diente-negro.jpg",
    "posterSource": "oficial",
    "_afiche": "declarado: bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-14.webp, recortado por dentro del marco (764×1078, marco 11 px)"
-  },
-  {
-   "titulo": "El Festín de las Moscas",
-   "poster": "/assets/bhff-2026/el-festin-de-las-moscas.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-27.webp, recortado por dentro del marco (674×1048, marco 10 px)"
   },
   {
    "titulo": "El Laberinto del Cuerpo",
@@ -934,12 +1042,6 @@
    "_afiche": "declarado: bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-18.webp, recortado por dentro del marco (764×1078, marco 11 px)"
   },
   {
-   "titulo": "Hasta que Amanezca",
-   "poster": "/assets/bhff-2026/hasta-que-amanezca.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-30.webp, recortado por dentro del marco (700×1105, marco 15 px)"
-  },
-  {
    "titulo": "La Noche De Las Bestias",
    "poster": "/assets/bhff-2026/la-noche-de-las-bestias.jpg",
    "posterSource": "oficial",
@@ -957,7 +1059,8 @@
    "posterSource": "oficial",
    "_afiche": "declarado: IG @bogotahorrorfest p/DecSAQRkevW, lámina 3: el afiche («a Roger Conners film»), 421×684",
    "synopsis_en": "After a night of drugs and debauchery results in the fatal overdose of an underage gay man, an innocent bystander is left to take the blame. Upon his release from prison, the guilty party becomes the focus of an eccentric killer’s revenge.",
-   "_sinopsis": "https://pqff.au/wp-content/uploads/2026/02/PQFF-Program-2026_Master_Perth_LR_Spreads.pdf"
+   "sinopsis": "Después de una noche de drogas y desenfreno que termina con la sobredosis fatal de un joven gay menor de edad, a un testigo inocente le toca cargar con la culpa. Cuando él sale de la cárcel, el verdadero culpable se convierte en el blanco de la venganza de un asesino excéntrico.",
+   "_sinopsis": "traducción propia con contexto (Content Design, 25 oct 2026) de la sinopsis oficial en inglés: https://pqff.au/wp-content/uploads/2026/02/PQFF-Program-2026_Master_Perth_LR_Spreads.pdf"
   },
   {
    "titulo": "Parásitos",
@@ -976,12 +1079,6 @@
    "poster": "/assets/bhff-2026/ruth.jpg",
    "posterSource": "oficial",
    "_afiche": "declarado: bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-39.webp, recortado por dentro del marco (714×1076, marco 15 px)"
-  },
-  {
-   "titulo": "Vientre",
-   "poster": "/assets/bhff-2026/vientre.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-48.webp, recortado por dentro del marco (780×1106, marco 15 px)"
   },
   {
    "titulo": "The Callback",
@@ -1023,7 +1120,7 @@
    "lbSlug": "pig-that-survived-foot-and-mouth-disease",
    "_verificado": "declarada a mano: «The Pig That Survived Foot-and-Mouth Disease», Hur Bum-wook, 105 min: director y obra coinciden con la parrilla; el título en español no casa solo con TMDB",
    "_director": "Hur Bum-Wook",
-   "_sondeado": "2026-10-16",
+   "_sondeado": "2026-10-25",
    "poster": "/assets/bhff-2026/cerdo-que-sobrevivio-a-la-fiebre-aftosa.jpg",
    "posterSource": "tmdb"
   },
@@ -1090,7 +1187,7 @@
    "posterSource": "tmdb",
    "genero": "Ciencia Ficción",
    "_heredado": {
-    "genero": "catálogo w_R4EP71550W43 (bhff-2026, cineautopsia-2026, fantasmagoria-2026, fantasofest-2026, ficpa-2026, narrarelfuturo-2026, popayan-2026)"
+    "genero": "catálogo w_R4EP71550W43 (bhff-2026, cineautopsia-2026, fantasmagoria-2026, fantasofest-2026, ficica-2026, ficpa-2026, narrarelfuturo-2026, popayan-2026)"
    }
   },
   "Donde Duermen los Sueños": {
@@ -1142,6 +1239,24 @@
     }
    ],
    "poster": "/assets/bhff-2026/el-ocaso-de-los-dioses.jpg",
+   "posterSource": "tmdb"
+  },
+  "El Ritual de Huasao": {
+   "tmdb_id": 1576982,
+   "titulo_original": "El Ritual de Huasao",
+   "poster_path": "/4x0GT7JlYlg70EUFRr62DCVfGtW.jpg",
+   "synopsis_es": "Esther y Mario regresan de unas vacaciones por Perú. En el pueblo de Huasao, Esther recibe una limpia espiritual. A su regreso ella sufre un accidente doméstico que la dejará inmóvil en el suelo tras una discusión con Mario. Pero Mario oculta un secreto que le llevará a tomar una decisión terrible al descubrirla, siendo entonces cuando se desate el mal en las vidas que le rodean.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "Spain",
+   "lbSlug": "el-ritual-de-huasao",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "El Ritual de Huasao",
+   "_director": "Isaac Berrocal Bravo",
+   "_sondeado": "2026-10-25",
+   "poster": "/assets/bhff-2026/el-ritual-de-huasao.jpg",
    "posterSource": "tmdb"
   },
   "El Susurro": {
@@ -1225,7 +1340,9 @@
    "_director": "Lorena Toscano",
    "_sondeado": "2026-10-07",
    "poster": "/assets/bhff-2026/interior-8.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "sinopsis": "Fernanda se ve obligada a volver al apartamento donde ocurrió una tragedia familiar. Al llegar al Interior 8, empiezan a desatarse sucesos sobrenaturales.",
+   "_sinopsis": "traducción propia con contexto (Content Design, 25 oct 2026) de la sinopsis oficial en inglés: https://mubi.com/en/it/films/interior-8"
   },
   "Iris de Cristal": {
    "tmdb_id": 1368500,
@@ -1270,7 +1387,9 @@
    "lbSlug": "the-demonatrix",
    "_verificado": "declarada a mano: «The Demonatrix», Aurelio Voltaire y Jeff Ferrell, 90 min: los dos directores coinciden con la parrilla; el título en español no casa solo con TMDB",
    "_director": "Jeff Ferrell, Aurelio Voltair",
-   "_sondeado": "2026-10-16",
+   "_sondeado": "2026-10-25",
+   "sinopsis": "Durante una sesión espiritista, una dominatrix invoca por accidente a un íncubo y tiene que unir fuerzas con el cura del barrio para exorcizar al demonio.",
+   "_sinopsis": "traducción propia con contexto (Content Design, 25 oct 2026) de la sinopsis oficial en inglés: https://www.cine-excess.co.uk/the-demonatrix-aurelio-voltaire-jeff-ferrell-usa-2025.html",
    "poster": "/assets/bhff-2026/la-demonatrix.jpg",
    "posterSource": "tmdb"
   },
@@ -1408,6 +1527,24 @@
    "poster": "/assets/bhff-2026/necrosectos.jpg",
    "posterSource": "tmdb"
   },
+  "Nico": {
+   "tmdb_id": 1182204,
+   "titulo_original": "Nico",
+   "poster_path": "/a3rlln8lCOQ1pTSI2u5hqNYKEal.jpg",
+   "synopsis_es": "Una madre desesperada reúne a su familia en el mismo bosque donde falleció su hijo tres años atrás, sin revelar que los ha reunido para llevar a cabo un ritual de invocación que le devuelva la vida al niño.",
+   "synopsis_en": "On the third anniversary of Nico's death, Florencia organizes a family reunion in the same forest where lightning struck the boy's head. Under the pretext of holding a ceremony to remember Nico, she invites her two daughters, with whom she has a complicated relationship, and her ex-husband, from whom she separated after the family tragedy.  When Lita, the youngest daughter, discovers some esoteric elements in one of the boxes that Florencia has brought, she realizes that her mother has not told the truth about the ceremony and suspects, upon seeing a strange healer appear, that what her mother really intends is to carry out an invocation ritual to bring the child back to life.  Florencia's macabre decision will cause the supernatural situation to spiral out of control and endanger her entire family.",
+   "genero": "Terror",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 65,
+   "pais_tmdb": "Argentina, Uruguay",
+   "lbSlug": "nico-2025",
+   "_verificado": "el catálogo ya la tiene (w_SFBKHBGGSSRC, bhff-2026)",
+   "work_id": "w_SFBKHBGGSSRC",
+   "_director": "Salomón Reyes",
+   "_sondeado": "2026-10-25",
+   "poster": "/assets/bhff-2026/nico.jpg",
+   "posterSource": "tmdb"
+  },
   "No Es El Fin Del Mundo": {
    "tmdb_id": 1786249,
    "titulo_original": "No es el fin del mundo",
@@ -1479,7 +1616,9 @@
    "_director": "Pablo Otero",
    "_sondeado": "2026-10-07",
    "poster": "/assets/bhff-2026/pactum.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "sinopsis": "Seis mujeres de la alta sociedad se reúnen en una mansión, unidas por un pacto secreto. Una de ellas lo ha roto, y las consecuencias serán desastrosas. ¿Quién es la traidora?",
+   "_sinopsis": "traducción propia con contexto (Content Design, 25 oct 2026) de la sinopsis oficial en inglés: synopsis_en de la ficha de TMDB (sin sinopsis oficial en español hallada)"
   },
   "Parapeto": {
    "tmdb_id": 1662539,
@@ -1612,14 +1751,13 @@
    "posterSource": "tmdb",
    "synopsis_en": "Colombia, 1951. In the thick of La Violencia, the period of brutal political war between Liberals and Conservatives, two chulavitas —hired killers on the government’s payroll— stalk a priest through the dark, waiting for him to lead them to the cabin in the woods where their next victims are hiding. But the horror they find there is a thousand times worse than the pain they meant to inflict.",
    "_heredado": {
-    "synopsis_en": "catálogo w_R4GP49AWA2ZH (bhff-2026, fantasmagoria-2026, ficma-2026, siembrafest-2026, villadelcine-2026)"
+    "synopsis_en": "catálogo w_R4GP49AWA2ZH (bhff-2026, fantasmagoria-2026, ficica-2026, ficma-2026, siembrafest-2026, villadelcine-2026)"
    }
   },
   "Replay": {
    "tmdb_id": 1677190,
    "titulo_original": "Replay",
    "poster_path": "/W9xvtCLFRZtbklQGnhpNJCwuL.jpg",
-   "synopsis_es": "",
    "synopsis_en": "Set in a distant galaxy, a strange humanoid creature called Hunter X must fight against a dozen robot lizards to retrieve a peculiar disk-shaped device.",
    "genero": "Animación",
    "anio_tmdb": 2026,
@@ -1631,7 +1769,11 @@
    "_director": "Simón Matallana Nossa",
    "_sondeado": "2026-10-07",
    "poster": "/assets/bhff-2026/replay.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "synopsis_es": "En medio del espacio, una misteriosa criatura asalta una nave y se enfrenta a una banda de lagartos robot, para así obtener un extraño artefacto con forma de disco.",
+   "_heredado": {
+    "synopsis_es": "catálogo w_ZR5FE4J5AM6C (anibia-2026, bhff-2026, ficica-2026)"
+   }
   },
   "Siempre hay un monstruo": {
    "tmdb_id": 1794456,
@@ -1775,177 +1917,122 @@
   }
  },
  "sin_ficha": [
-  "Algo No Está Bien",
   "Anax",
   "Bajo El Mismo Techo",
   "Búhos",
-  "Cerdo que Sobrevivió a la Fiebre Aftosa + Yatsi y el Espíritu del Río",
-  "Dentro del Santiago Horror: Horror sin Fronteras",
   "Eco",
   "El Diente Negro",
   "El Festín de las Moscas",
   "El Laberinto del Cuerpo",
-  "El Susurro + Esquirlas de Caracol",
   "El Teatro",
   "Enigma",
   "Gabriel",
   "Happy",
   "Hasta que Amanezca",
-  "Hay Algo Esperando",
   "Hush",
-  "La Demonatrix + Gabriel",
-  "La Muerte No Llega Sola",
   "La Noche De Las Bestias",
   "Los Lobo",
   "MEAT the Movie",
-  "MEAT the Movie + El Teatro",
-  "Mamá, la Casa No Es Segura",
-  "Moviedreams + Chaika",
   "Niños Bien - Amanecer",
   "Parásitos",
   "Prototipo",
   "Ruth",
-  "Tarde o Temprano + Siempre hay un monstruo",
   "The Callback",
   "Vientre",
   "Work in Progress"
  ],
  "_sin_ficha_sondeo": {
-  "Algo No Está Bien": {
-   "director": "",
-   "fecha": "2026-10-15"
-  },
   "Anax": {
    "director": "LSDavid, Miguel Solís",
-   "fecha": "2026-10-15"
+   "fecha": "2026-10-25"
   },
   "Bajo El Mismo Techo": {
    "director": "Sophia Cadavid",
-   "fecha": "2026-10-15"
+   "fecha": "2026-10-25"
   },
   "Búhos": {
    "director": "Luis Enrique Vanegas",
-   "fecha": "2026-10-15"
-  },
-  "Cerdo que Sobrevivió a la Fiebre Aftosa + Yatsi y el Espíritu del Río": {
-   "director": "",
-   "fecha": "2026-10-15"
-  },
-  "Dentro del Santiago Horror: Horror sin Fronteras": {
-   "director": "",
-   "fecha": "2026-10-15"
+   "fecha": "2026-10-25"
   },
   "Eco": {
    "director": "Valeria Lopera Salas",
-   "fecha": "2026-10-15"
+   "fecha": "2026-10-25"
   },
   "El Diente Negro": {
    "director": "Anita Serrano",
-   "fecha": "2026-10-15"
+   "fecha": "2026-10-25"
   },
   "El Festín de las Moscas": {
    "director": "Katerine Franco Garzón",
-   "fecha": "2026-10-15"
+   "fecha": "2026-10-25"
   },
   "El Laberinto del Cuerpo": {
    "director": "Esteban J. Corzo",
-   "fecha": "2026-10-15"
-  },
-  "El Susurro + Esquirlas de Caracol": {
-   "director": "",
-   "fecha": "2026-10-15"
+   "fecha": "2026-10-25"
   },
   "El Teatro": {
    "director": "Nicolás Bernal",
-   "fecha": "2026-10-15"
+   "fecha": "2026-10-25"
   },
   "Enigma": {
    "director": "Andrés Pulido",
-   "fecha": "2026-10-15"
+   "fecha": "2026-10-25"
   },
   "Gabriel": {
    "director": "Edwin Daniel Díaz",
-   "fecha": "2026-10-15"
+   "fecha": "2026-10-25"
   },
   "Happy": {
    "director": "Víctor Basallote",
-   "fecha": "2026-10-15"
+   "fecha": "2026-10-25"
   },
   "Hasta que Amanezca": {
    "director": "Sebastián Rosas Santamaría",
-   "fecha": "2026-10-15"
-  },
-  "Hay Algo Esperando": {
-   "director": "",
-   "fecha": "2026-10-15"
+   "fecha": "2026-10-25"
   },
   "Hush": {
    "director": "Santiago Franco",
-   "fecha": "2026-10-15"
-  },
-  "La Demonatrix + Gabriel": {
-   "director": "",
-   "fecha": "2026-10-15"
-  },
-  "La Muerte No Llega Sola": {
-   "director": "",
-   "fecha": "2026-10-15"
+   "fecha": "2026-10-25"
   },
   "La Noche De Las Bestias": {
    "director": "Eduart Zapata",
-   "fecha": "2026-10-15"
+   "fecha": "2026-10-25"
   },
   "Los Lobo": {
    "director": "Saeed García Pérez",
-   "fecha": "2026-10-15"
+   "fecha": "2026-10-25"
   },
   "MEAT the Movie": {
    "director": "Roger Conners",
-   "fecha": "2026-10-15"
-  },
-  "MEAT the Movie + El Teatro": {
-   "director": "",
-   "fecha": "2026-10-15"
-  },
-  "Mamá, la Casa No Es Segura": {
-   "director": "",
-   "fecha": "2026-10-15"
-  },
-  "Moviedreams + Chaika": {
-   "director": "",
-   "fecha": "2026-10-15"
+   "fecha": "2026-10-25"
   },
   "Niños Bien - Amanecer": {
    "director": "Daniel Vargas",
-   "fecha": "2026-10-15"
+   "fecha": "2026-10-25"
   },
   "Parásitos": {
    "director": "Samuel Andrés Ruiz Pico",
-   "fecha": "2026-10-15"
+   "fecha": "2026-10-25"
   },
   "Prototipo": {
    "director": "Jeff Ruiz Rave",
-   "fecha": "2026-10-15"
+   "fecha": "2026-10-25"
   },
   "Ruth": {
    "director": "Santiago Correa, Raquel Zapata, Marvin Cardona",
-   "fecha": "2026-10-15"
-  },
-  "Tarde o Temprano + Siempre hay un monstruo": {
-   "director": "",
-   "fecha": "2026-10-15"
+   "fecha": "2026-10-25"
   },
   "The Callback": {
    "director": "Alvaro Pruneda",
-   "fecha": "2026-10-15"
+   "fecha": "2026-10-25"
   },
   "Vientre": {
    "director": "Pablo Sánchez Mejía, Moisés Cataño Rivillas",
-   "fecha": "2026-10-15"
+   "fecha": "2026-10-25"
   },
   "Work in Progress": {
    "director": "Diego Mezarina",
-   "fecha": "2026-10-15"
+   "fecha": "2026-10-25"
   }
  }
 }

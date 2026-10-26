@@ -3,11 +3,16 @@
  "titulo_original": "Hasta que Amanezca",
  "anio": 2026,
  "paises": [
-  "C",
-  "O"
+  "CO"
  ],
  "directores": [
   "Sebastián Rosas Santamaría"
+ ],
+ "aliases": [
+  {
+   "titulo": "Hasta que amanezca",
+   "tipo": "festival"
+  }
  ],
  "afiche": {
   "archivo": "/assets/bhff-2026/hasta-que-amanezca.jpg",
@@ -21,6 +26,7 @@
   }
  ],
  "presentaciones": [
-  "bhff-2026"
+  "bhff-2026",
+  "guatape-2026"
  ]
 }

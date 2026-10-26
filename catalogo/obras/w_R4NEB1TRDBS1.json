@@ -3,12 +3,14 @@
  "titulo_original": "Tres gatos parias",
  "anio": 2025,
  "paises": [
-  "C",
-  "O"
+  "CO"
  ],
  "directores": [
   "Iván Sierra"
  ],
+ "sinopsis": {
+  "es": "Dos gatos persas y un dibujante tratan de hacer películas en medio de una guerra, desafortunadamente nadie las entiende."
+ },
  "generos": [
   "Animación"
  ],
@@ -24,6 +26,7 @@
   }
  ],
  "presentaciones": [
+  "anibia-2026",
   "siembrafest-2026"
  ]
 }

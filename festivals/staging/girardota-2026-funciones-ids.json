@@ -1,0 +1,204 @@
+{
+ "_provenance": {
+  "fuente": "ids-legado.py: ids estables congelados desde lo publicado (docs/FUNCION.md §11.2)",
+  "capturado": "2026-10-18"
+ },
+ "funciones": {
+  "f_6880d8159c": {
+   "sede": "Comfama - Girardota",
+   "dia": "2026-09-30",
+   "hora": "10:00",
+   "sala": "",
+   "titulo": "la otra forma"
+  },
+  "f_7f42f40371": {
+   "sede": "Punto de Turismo - Girardota",
+   "dia": "2026-09-30",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "muestra de cortos girardotanos"
+  },
+  "f_25a1f46f9c": {
+   "sede": "Punto de Turismo - Girardota",
+   "dia": "2026-09-30",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "muestra de cortometrajes fantasia tropical"
+  },
+  "f_4806b72c96": {
+   "sede": "Palmas del Llano - Girardota",
+   "dia": "2026-09-30",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "llueve sobre babel"
+  },
+  "f_7134383f30": {
+   "sede": "Comfama - Girardota",
+   "dia": "2026-10-01",
+   "hora": "10:00",
+   "sala": "",
+   "titulo": "la otra forma"
+  },
+  "f_efc055f517": {
+   "sede": "I.E. San Andrés - Girardota",
+   "dia": "2026-10-01",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "cianotipia las impresiones del sol"
+  },
+  "f_7669b744e9": {
+   "sede": "Biblioteca Municipal Alberto Aguirre Ceballos - Girardota",
+   "dia": "2026-10-01",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "del vampiro del bosque al psicopata de al lado como el monstruo dejo de tener colmillos"
+  },
+  "f_5a34f115ff": {
+   "sede": "Punto de Turismo - Girardota",
+   "dia": "2026-10-01",
+   "hora": "17:30",
+   "sala": "",
+   "titulo": "colombia es fantastica"
+  },
+  "f_0a0b3f54f7": {
+   "sede": "Punto de Turismo - Girardota",
+   "dia": "2026-10-01",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "funeral siniestro"
+  },
+  "f_e68f79f9af": {
+   "sede": "Morning - Girardota",
+   "dia": "2026-10-01",
+   "hora": "20:30",
+   "sala": "",
+   "titulo": "el paramo"
+  },
+  "f_cea100f33b": {
+   "sede": "Escuela de Encenillos - Girardota",
+   "dia": "2026-10-02",
+   "hora": "09:00",
+   "sala": "",
+   "titulo": "al final del espectro"
+  },
+  "f_08a2bec2e0": {
+   "sede": "Punto de Turismo - Girardota",
+   "dia": "2026-10-02",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "muestra de cortometrajes fantasia tropical"
+  },
+  "f_07d06b108c": {
+   "sede": "Biblioteca Municipal Alberto Aguirre Ceballos - Girardota",
+   "dia": "2026-10-02",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "el gotico popular terror en las plazas y haciendas de colombia"
+  },
+  "f_4f73603489": {
+   "sede": "Comfama - Girardota",
+   "dia": "2026-10-02",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "el origen de las especies"
+  },
+  "f_3cac1b2f05": {
+   "sede": "Comfama - Girardota",
+   "dia": "2026-10-02",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "fantasia disidente ficciones transgeneristas y antihegemonicas"
+  },
+  "f_b3dad84b85": {
+   "sede": "Parque de la Poesía - Girardota",
+   "dia": "2026-10-02",
+   "hora": "20:00",
+   "sala": "",
+   "titulo": "pura sangre"
+  },
+  "f_199674f728": {
+   "sede": "Biblioteca Municipal Alberto Aguirre Ceballos - Girardota",
+   "dia": "2026-10-03",
+   "hora": "09:00",
+   "sala": "",
+   "titulo": "hacer peliculas desarrollo y produccion de cortometrajes de genero fantastico"
+  },
+  "f_b8e01db8f6": {
+   "sede": "Comfama - Girardota",
+   "dia": "2026-10-03",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "la mansion de araucaima"
+  },
+  "f_2b73882226": {
+   "sede": "Parque Principal - Girardota",
+   "dia": "2026-10-03",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "seleccion de cortometrajes fantasticos para toda la familia"
+  },
+  "f_1d3bc52168": {
+   "sede": "Comfama - Girardota",
+   "dia": "2026-10-03",
+   "hora": "17:30",
+   "sala": "",
+   "titulo": "vampiros acalorados"
+  },
+  "f_22a03b3125": {
+   "sede": "Parque Principal - Girardota",
+   "dia": "2026-10-03",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "competencia oficial de cortometrajes"
+  },
+  "f_ff74b6d263": {
+   "sede": "Parque Principal - Girardota",
+   "dia": "2026-10-03",
+   "hora": "19:30",
+   "sala": "",
+   "titulo": "el baile de la muerte"
+  },
+  "f_a079b65eaf": {
+   "sede": "Parque Principal - Girardota",
+   "dia": "2026-10-03",
+   "hora": "21:00",
+   "sala": "",
+   "titulo": "ceremonia de premiacion de cortometrajes"
+  },
+  "f_f393c40b2c": {
+   "sede": "Morning - Girardota",
+   "dia": "2026-10-03",
+   "hora": "22:00",
+   "sala": "",
+   "titulo": "rumba tropical"
+  },
+  "f_0d4c90f808": {
+   "sede": "Parque Principal - Girardota",
+   "dia": "2026-10-04",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "muestra de cortos girardotanos"
+  },
+  "f_57fabf3cf8": {
+   "sede": "Parque Principal - Girardota",
+   "dia": "2026-10-04",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "el libro de lila"
+  },
+  "f_f5394cc754": {
+   "sede": "Parque Principal - Girardota",
+   "dia": "2026-10-04",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "un baile de pelicula"
+  },
+  "f_91f813c071": {
+   "sede": "Parque Principal - Girardota",
+   "dia": "2026-10-04",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "la salsa vive"
+  }
+ }
+}

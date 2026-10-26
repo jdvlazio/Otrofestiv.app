@@ -6,6 +6,7 @@
 // SW: regla network-first /src/ garantiza que el deploy propaga (D-INFRA-1=B).
 
 // ── Step 1: config.js (import directo, sin bridge — constantes estáticas) ─────
+import { refrescarFichas } from './controller/datos-fuente.js';
 import {
   TMDB_IMG, TMDB_API_BASE, TMDB_POSTER_BASE, _POSTER_CACHE_PFX,
   FESTIVAL_BUFFER, MAX_REMEMBERED_SLOTS, DEFAULT_DURATION_MIN,
@@ -26,6 +27,7 @@ import './state/viewstate.js';
 //   FESTIVAL_STORAGE_KEY). saveX/loadState orquestadoras se quedan en main.js. ──
 import { storage } from './storage/storage.js';
 import { onDomReady } from './util/ready.js';
+import { instalarSinInline } from './controller/sin-inline.js';
 import { report } from './telemetry.js';
 
 // ── Step 4: i18n.js (import — _I18N + t + _applyI18nDOM). _lang vive en state
@@ -34,7 +36,7 @@ import { LANGS, t, _applyI18nDOM } from './i18n/i18n.js';
 
 // ── Step 5: domain/ (funciones puras). Importan config (DEFAULT_DURATION_MIN,
 //   FESTIVAL_BUFFER, FESTIVAL_CONFIG) y leen festival-state vía bridge. El worker
-//   las consume vía eval(name).toString(); sus copias worker-local se quedan. ──
+//   las consume vía fn.toString() (calc.js, sin eval desde el 26 oct); sus copias worker-local se quedan. ──
 import { toMin, parseDur, minToStr, _festDate, simNow, simTodayStr, dayFullyPassed, festivalEnded } from './domain/time.js';
 import { _djb2, _titleSeed, _mulberry32, shuffle, scoreFilm, effectiveDuration, screeningPassed, _classifyTodayScreenings, _endedStats, normTitle } from './domain/film.js';
 import { sameEntry, screensConflict, isScreeningBlocked, plannableScreens, sortScreensByStrategy, computeScenarios, verifyPlan } from './domain/schedule.js';
@@ -149,10 +151,7 @@ import {
 } from './controller/share.js';
 import { abrirCompartirFestival, abrirCompartirPlan } from './controller/story.js';
 
-// ── Step 7e: controller/poster-err.js ────────────────────────────────────────────
-import {
-  _posterErr, _cortoSheetPosterErr, _edPosterErr,
-} from './controller/poster-err.js';
+// controller/poster-err.js: lo importa controller/sin-inline.js (data-err), no main.
 
 // storage (adapter de localStorage) → src/storage/storage.js (Step 3).
 // Importado al top del módulo. Usa FESTIVAL_STORAGE_KEY vía el STATE BRIDGE.
@@ -378,6 +377,7 @@ document.addEventListener('click', function(e) {
     if (closeFn) closeFn();
   }
 });
+instalarSinInline(ACTION_REGISTRY, searchQuery);   // 3b. sin on*= en el HTML (CSP) — controller/sin-inline.js
 // ── CONTROLLER LAYER END (p7c-1) ──────────────────────────────────────
 
 // ── i18n — sistema de traducción ─────────────────────────────────────────
@@ -508,7 +508,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202610190821';
+const BUILD_VERSION='202610192124';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -1373,6 +1373,7 @@ state.subscribeRender(
   // contenido es visible por default y JS NO toca opacity → imposible que quede
   // atascado invisible en WKWebView (Bug 1 se resuelve en la capa CSS).
   _renderFestivalSelector(activeFest);
+  _fichasYPortada();   // FICHAS FRESCAS (B1) — ver la función, junto a los canales
   // El selector del splash NO se rellena — queda el placeholder del markup
   // (data-i18n="splash_elegi"). "Entrar" arranca disabled hasta que se elige.
   // Revelar el splash recién cuando el selector YA tiene el festival correcto:
@@ -1453,29 +1454,20 @@ document.addEventListener('click', function(e){
   // p8 Step 8b: el bloque `_lets` (29 viewstate/festival-data/auth) se reubicó a
   // state/viewstate.js (side-effect import, instala en import-phase). Aquí queda
   // solo la exposición de {state, FESTIVAL_CONFIG, ACTION_REGISTRY} + las fns
-  // (inline on* de producción + page.evaluate de tests) → 8c.
+  // (page.evaluate de tests) → 8c.
   for (const [k, val] of Object.entries({ state, FESTIVAL_CONFIG, ACTION_REGISTRY })) {
     Object.defineProperty(globalThis, k, { get: () => val, configurable: true });
   }
-  // Funciones invocadas desde:
-  //  (a) handlers inline on* en HTML generado (onerror=_posterErr/_cortoSheetPosterErr)
-  //      — corren en GLOBAL scope, no module scope → DEBEN estar en globalThis
-  //      (correctness de producción, no solo tests; onerror no se migró en 7c).
-  //  (b) page.evaluate de la suite Playwright.
+  // Funciones que usa page.evaluate de la suite Playwright. Ya NO hay handlers
+  // on*= que las necesiten en global (CSP, 26 oct: controller/sin-inline.js).
   Object.assign(globalThis, { venueLabel, sala,
-    // (a) inline on* handlers — producción
-    //     en HTML generado (main.js innerHTML): onerror=_posterErr/_cortoSheetPosterErr
-    //     en markup estático (index.html): oninput/onkeyup/onkeydown=searchQuery,
-    //     onkeydown=submitAuthEmail/submitOTP (#search-input, #auth-email-inp, #auth-otp-inp)
-    _posterErr, _cortoSheetPosterErr, _edPosterErr,
-    searchQuery, submitAuthEmail, submitOTP,
     // (b) page.evaluate — tests
     // NOTICES: CONFIG, no estado — no va al roster de state (rompería la frontera
     // que vigila [state-mirror], igual que FESTIVAL_CONFIG/VENUES). Se expone acá
     // para que la suite pueda INYECTAR un aviso y ejercer el camino REAL:
     // NOTICES.push(...) → limpiar cfg.films → loadFestival() → el sellado del
     // loader. Era la única ruta crítica sin test: se verificaba a mano.
-    NOTICES,
+    NOTICES, searchQuery, submitAuthEmail, submitOTP,   // los tres últimos: page.evaluate de auth/search.spec
     // _applyCloudRow: la puerta por donde entra el plan desde la nube — expuesta
     // para que la suite pueda ejercer su normalización contra el catálogo
     // (syncScheduleWithCatalog) sin montar Supabase. Solo tests.
@@ -1810,6 +1802,13 @@ function _offerUpdate(serverBuild){
 // Permite staged rollout: android e ios con builds independientes en version.json.
 _checkVersionJson();
 
+// FICHAS FRESCAS (B1): corre en el arranque Y en los tres canales vivos. Una ficha
+// no sube la versión de la app, así que ningún canal la veía, y casi nadie abre
+// desde cero: se deja en segundo plano y se vuelve (Juan, 19 oct). Si seguís en la
+// portada, se re-dibuja; si no, el riel de «cambiar festival» la lee al abrirse.
+function _fichasYPortada(){ refrescarFichas().then(ids=>{ const sp=document.getElementById('otrofestiv-splash'), sel=_splashSelectedFestId;
+  if(ids.length&&sp&&!sp.classList.contains('fade-out')){ _renderSplashRail(sel); if(sel) selectSplashFest(null,null,sel); } }).catch(()=>{}); }
+
 // ── Canal version.json #2 + SW re-check: visibilitychange ────────────
 // Corre cuando el usuario vuelve la app desde background.
 // En mobile, el JS no recarga al volver del background — sin este listener,
@@ -1819,7 +1818,7 @@ document.addEventListener('visibilitychange', function(){
   if(document.visibilityState === 'visible' && !_reloading){
     _checkVersionJson();
     _swRecheck();
-    refrescarDatosFestival();   // capa 2: los DATOS también, sin recargar
+    refrescarDatosFestival(); _fichasYPortada();   // capa 2: los DATOS y las fichas, sin recargar
   }
 });
 
@@ -1838,7 +1837,7 @@ window.addEventListener('online', function(){
   if(!_reloading){
     _checkVersionJson();
     _swRecheck();
-    refrescarDatosFestival();
+    refrescarDatosFestival(); _fichasYPortada();
   }
 });
 
@@ -1858,7 +1857,7 @@ var _POLL_MS = (function(){
 setInterval(function(){
   if(document.visibilityState === 'visible' && !_reloading){
     _checkVersionJson({offer:true});
-    refrescarDatosFestival();   // capa 2 — mismo pulso, otra carga: el catálogo
+    refrescarDatosFestival(); _fichasYPortada();   // capa 2 — mismo pulso, otra carga: el catálogo
   }
 }, _POLL_MS);
 

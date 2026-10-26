@@ -1,0 +1,70 @@
+# datos-desde-main — el almacén `datos` nunca queda atrás de main (18 oct 2026).
+# La app lee los festivales del almacén (migración 0009). Si un festival cambia
+# por el camino de siempre (PR → main), este job lo republica al almacén. Los
+# guardianes ya corrieron en el PR (CI requerido), así que acá se publica tal cual.
+# Solo republica los festivales que YA están en el índice del almacén (Juan, 18
+# oct 2026): un festival entra al almacén A PROPÓSITO, de a uno, con
+# publicar-datos.py — nunca de golpe porque un PR tocó muchos JSON.
+name: Datos al almacén
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'festivals/*.json'
+      - 'src/config.js'      # la FICHA de cada festival (Etapa 2·B1)
+      - 'assets/keyart/**'
+permissions:
+  contents: write   # empujar la rama `datos`
+concurrency:
+  group: datos-almacen
+  cancel-in-progress: false
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      # La ficha se lee importando src/config.js: Node fijado (la detección de
+      # módulos ES de un .js sin "type" llegó en Node 22).
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '22'
+      - name: Festivales cambiados
+        id: cambios
+        run: |
+          f=$(git diff --name-only HEAD~1 HEAD -- 'festivals/*.json' | sed -n 's|^festivals/\([^/]*\)\.json$|\1|p' | tr '\n' ' ')
+          # + los festivales cuya FICHA cambió (B1), comparando la ficha antes y
+          # después del merge con el mismo script que publica. Solo los que YA tienen
+          # ficha en el almacén: una ficha entra de a una y a propósito, con
+          # publicar-datos.py, igual que un festival (Juan, 18 oct).
+          indice=$(curl -fsS "https://eytxrvbnwzxuedbmnnqr.supabase.co/storage/v1/object/public/datos/indice.json" || echo '{"festivales":{}}')
+          git worktree add -q --detach /tmp/antes HEAD~1
+          mkdir -p /tmp/antes/scripts /tmp/antes/src/storage
+          cp scripts/ficha-de.mjs /tmp/antes/scripts/ && cp src/fichas.js /tmp/antes/src/ && cp src/storage/storage.js /tmp/antes/src/storage/
+          for arch in $(echo "$indice" | python3 -c "import json,sys; print(' '.join(k for k,v in json.load(sys.stdin).get('festivales',{}).items() if v.get('ficha')))"); do
+            id=$(echo "$arch" | sed -E 's/-([0-9]+)$/\1/')
+            a=$(node /tmp/antes/scripts/ficha-de.mjs "$id" 2>/dev/null | sha1sum)
+            b=$(node scripts/ficha-de.mjs "$id" 2>/dev/null | sha1sum)
+            art=$(node scripts/ficha-de.mjs "$id" 2>/dev/null | python3 -c "import json,sys; print(json.load(sys.stdin).get('keyArt',''))" 2>/dev/null)
+            if [ "$a" != "$b" ] || { [ -n "$art" ] && ! git diff --quiet HEAD~1 HEAD -- ".${art}"; }; then
+              case " $f " in *" $arch "*) ;; *) f="$f $arch";; esac
+            fi
+          done
+          echo "lista=$f" >> "$GITHUB_OUTPUT"
+          echo "Cambiados: $f"
+      - name: Publicar al almacén
+        if: steps.cambios.outputs.lista != ''
+        env:
+          OTF_POR: github-actions
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
+          indice=$(curl -fsS "https://eytxrvbnwzxuedbmnnqr.supabase.co/storage/v1/object/public/datos/indice.json" || echo '{"festivales":{}}')
+          for f in ${{ steps.cambios.outputs.lista }}; do
+            if echo "$indice" | python3 -c "import json,sys; sys.exit(0 if sys.argv[1] in json.load(sys.stdin).get('festivales',{}) else 1)" "$f"; then
+              python3 pipeline/publicar-datos.py "$f" --desde-main
+            else
+              echo "· $f no está en el almacén: se queda en la web (entra con publicar-datos.py a propósito)"
+            fi
+          done

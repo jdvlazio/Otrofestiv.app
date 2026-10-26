@@ -3,8 +3,7 @@
  "titulo_original": "El patio de la infancia",
  "anio": 2025,
  "paises": [
-  "C",
-  "O"
+  "CO"
  ],
  "directores": [
   "Cecilia Traslaviña"
@@ -13,7 +12,7 @@
   "es": "Una mujer reflexiona sobre el significado de la infancia a partir de los archivos de una película incompleta que recibe. Los personajes son unas muñecas de cerámica únicas que cobran vida a su paso. ¿Es la infancia una ficción colectiva?"
  },
  "afiche": {
-  "archivo": "/assets/popayan-2026/el-patio-de-la-infancia.jpg",
+  "archivo": "/assets/anibia-2026/el-patio-de-la-infancia.jpg",
   "veredicto": "oficial"
  },
  "xref": {
@@ -24,9 +23,14 @@
   {
    "etiqueta": "14 min",
    "duracion_min": 14
+  },
+  {
+   "etiqueta": "15 min",
+   "duracion_min": 15
   }
  ],
  "presentaciones": [
+  "anibia-2026",
   "popayan-2026"
  ]
 }

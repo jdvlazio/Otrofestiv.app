@@ -122,6 +122,10 @@ def obra_de(obs, fid, titulo, tmdb=None, ix=None):
     que lleva su tmdb. Ninguna o más de una → None (no se adivina)."""
     por_h, por_t = ix or indice(obs)
     hits = por_h.get((fid, huella(titulo))) or (por_t.get(tmdb) if tmdb else None) or set()
+    # dos obras del MISMO festival con la misma huella («La Bestia» y «Bestia»,
+    # Anibia 2026: el artículo inicial no cuenta): desempata su tmdb, si lo hay
+    if len(hits) > 1 and tmdb:
+        hits = hits & (por_t.get(tmdb) or set())
     return next(iter(hits)) if len(hits) == 1 else None
 
 

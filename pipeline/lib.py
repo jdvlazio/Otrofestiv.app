@@ -64,6 +64,24 @@ def slug(t):
     return re.sub(r'[^a-z0-9]+', '-', t).strip('-')[:60]
 
 
+def asset_declarado(titulo, d):
+    """El nombre del archivo de un afiche declarado en <fid>-afiches.json: su
+    `asset` si lo trae (nombre propio cuando el de siempre ya está tomado: los
+    assets son write-once), si no el slug del título. Dueño ÚNICO: lo usan
+    enriquecer.py (dónde lo escribe) y encuadrar-posters.py (qué no recorta);
+    con dos copias, el encuadre recortaba el que no reconocía (MIDBO, 20 oct)."""
+    return d.get('asset') or f'{slug(titulo)}.jpg'
+
+
+def sin_tmdb_si_se_pide(e, d):
+    """`sobre_tmdb: true` en un afiche declarado: la imagen de TMDB que una
+    persona ya rechazó (Trizas: un fotograma) sale, para que entre el afiche
+    del festival. Sin la marca, lo de TMDB manda y el declarado no entra."""
+    if d.get('sobre_tmdb'):
+        return {k: v for k, v in e.items() if k not in ('poster_path', 'poster', 'posterSource')}
+    return e
+
+
 # ── horas ────────────────────────────────────────────────────────────────────
 def hora24(h):
     """«5:30 p.m.» → «17:30». Devuelve el texto intacto si no parece hora."""
@@ -387,7 +405,10 @@ def ya_publicada(obra, idx):
                 if not (dur_ok or anio_ok):
                     continue
             r = {'festival': fest, 'titulo': o['title']}
-            for campo in ('tmdb_id', 'poster', 'posterSource', 'lbSlug'):
+            # todo lo que ya mostramos de la obra (17 oct 2026): la cascada solo
+            # traía afiche y sinopsis, y país/año/duración/género se quedaban atrás
+            for campo in ('tmdb_id', 'poster', 'posterSource', 'lbSlug', 'country', 'year',
+                          'duration', 'genre', 'synopsis_en'):
                 if o.get(campo):
                     r[campo] = o[campo]
             if o.get('synopsis'):
@@ -513,7 +534,9 @@ _LIBRE = ('entrada libre', 'entrada gratuita', 'gratuita', 'gratuito', 'gratis',
 # dato moría en el ensamblador (BIFF 12: la inauguración salía como una función
 # más, 29 sep 2026).
 _INVITACION = ('con invitacion', 'solo con invitacion', 'unicamente con invitacion',
-               'cerrada al publico', 'by invitation', 'invitation only')
+               'cerrada al publico', 'by invitation', 'invitation only',
+               # Anibia 2026: «Evento para aliados» (Reel / WIP Day, taller ASIFA)
+               'evento para aliados')
 _INSCRIPCION = ('inscripcion', 'inscribir', 'registro previo', 'cupo limitado',
                 'previa inscripcion', 'formulario')
 
@@ -552,6 +575,11 @@ def acceso_campos(texto, url=''):
         out['requires_registration'] = True
     if any(x in t for x in _INVITACION):
         out['by_invitation'] = True
+    # la BOLETA que la fuente afirma, aunque no traiga link (17 oct 2026). Lo
+    # libre y lo cerrado ganan; «reserva por boletería» no dice que se pague
+    if ('is_free' not in out and 'by_invitation' not in out
+            and (t.startswith('con boleta') or 'boleteria en' in t or t == 'boleteria')):
+        out['is_free'] = False
     return out
 
 
@@ -591,8 +619,14 @@ SIGLAS = {
     'LGBTIQ', 'MAMB', 'MAMM', 'MUBI', 'SENA', 'TPAC', 'UNAL', 'UNIAGRARIA', 'UNIBAC', 'VISA',
     # festivales nombrados dentro de una sección o una sede
     'BIFF', 'FICCI', 'FICDH', 'TIFF',
+    # Guatapé Film Fest (18 oct 2026): la Pantalla CORNARE (Corporación Autónoma Regional
+    # Rionegro-Nare) y la sección FIACINE (Federación Iberoamericana de Asociaciones de Cine)
+    'CORNARE', 'FIACINE',
     # «Programación MORA» de FILCMAR: Mercado Oriente Audiovisual (su lámina 1)
     'MORA',
+    # FICCALI (22 oct 2026): «Carpa GEUP (Grupo Editoriales Universitarias del Pacífico)»,
+    # lámina 2 del IG DezOJbQkf6x
+    'GEUP',
     # MARCAS DE PROGRAMA que el festival escribe así —no son siglas y no
     # gritan una sección: son el nombre de un proceso—. FINQUITA es el
     # diminutivo de FINCA; LABRA, «el proceso de formación LABRA» de SiembraFest,
@@ -998,6 +1032,15 @@ def _selftest():
     t('acceso cerrada al público (web BIFF)', acceso_campos('Función cerrada al público. No hay boletería disponible'),
       {'by_invitation': True})
     t('reserva no es gratis', acceso_campos('Reserva por boletería online o presencial.'), {})
+    # BOLETA SIN LINK (17 oct 2026): la fuente lo AFIRMA y se perdía. En
+    # Fantasmagoría, ya en el modelo de la función, 12 funciones «Con boleta»
+    # salían como libres por el supuesto. Lo libre gana: «libre con boleta» es libre
+    t('con boleta (Fantasmagoría)', acceso_campos('Con boleta'), {'is_free': False})
+    t('con boleta y precio', acceso_campos('Con boleta: $7.000'), {'is_free': False})
+    t('boletería en TuBoleta', acceso_campos('Boletería en TuBoleta'), {'is_free': False})
+    t('boletería, a secas', acceso_campos('Boletería'), {'is_free': False})
+    t('libre con boleta es libre', acceso_campos('Entrada libre con boleta (en orden de llegada)'), {'is_free': True})
+    t('gratis reclamando boleta es libre', acceso_campos('Entrada gratis reclamando boleta en taquilla'), {'is_free': True})
     t('declarado: vacío no cuenta', acceso_declarado({'acceso': '  '}), False)
     t('declarado: desconocido SÍ cuenta', acceso_declarado({'acceso': DESCONOCIDO}), True)
     t('ficha ok', ficha_verifica(

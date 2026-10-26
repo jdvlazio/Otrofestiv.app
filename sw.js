@@ -9,12 +9,13 @@
 //      el reload forzado por deploy, se sirve ese HTML en vez de OFFLINE_HTML (una
 //      sesión viva ya no se destruye por un deploy con señal mala). Audit P3 #10.
 
-const CACHE_NAME = 'otrofestiv-v202610190821';
-const BUILD = '202610190821';
+const CACHE_NAME = 'otrofestiv-v202610192124';
+const BUILD = '202610192124';
 // Caché PERSISTENTE de assets inmutables (pósters, iconos, fonts): NO se borra
 // en activate. Durante un festival deployamos a diario; sin esto, cada deploy
 // obligaba a re-descargar ~8MB de pósters ya vistos (señal rural en sede).
 const ASSETS_CACHE = 'otrofestiv-assets-v1';
+const ALMACEN_KEYART = 'https://eytxrvbnwzxuedbmnnqr.supabase.co/storage/v1/object/public/datos/keyart/';
 
 const STATIC_ASSETS = [
   '/manifest.json',
@@ -54,6 +55,20 @@ const OFFLINE_HTML = `<!DOCTYPE html>
 self.addEventListener('fetch', event => {
   const { request } = event;
   const url = new URL(request.url);
+  // Afiches de PORTADA del almacén (Etapa 2·B1, 19 oct 2026): llevan su huella en
+  // el nombre (datos/keyart/<sha12>.jpg), así que son inmutables como /assets/ →
+  // caché primero y en ASSETS_CACHE, para que la portada se vea sin conexión. Se
+  // piden en modo cors (Supabase responde ACAO *): una respuesta opaca pesaría
+  // ~7 MB de cuota por imagen.
+  if (url.href.startsWith(ALMACEN_KEYART)) {
+    event.respondWith(
+      caches.match(url.href).then(c => c || fetch(url.href, { mode: 'cors' }).then(res => {
+        if (res.ok) { const clone = res.clone(); caches.open(ASSETS_CACHE).then(k => k.put(url.href, clone)); }
+        return res;
+      }))
+    );
+    return;
+  }
   if (url.origin !== location.origin) return;
 
   // HTML → siempre desde red. no-cache (no no-store): revalida con ETag contra

@@ -121,6 +121,9 @@ export const storage = {
 
   // ── Global keys (NO prefix) ──
   getActiveFestId() { return localStorage.getItem('otrofestiv_festival'); },
+  // Fichas del almacén (Etapa 2·B1): la última copia vista, para el próximo arranque.
+  getFichas() { try { return JSON.parse(localStorage.getItem('otf_fichas_v1')||'{}')||{}; } catch(e) { return {}; } },
+  setFichas(o) { try { localStorage.setItem('otf_fichas_v1', JSON.stringify(o||{})); } catch(e) {} },
   setActiveFestId(id) { try { localStorage.setItem('otrofestiv_festival', id); } catch(e) {} },
 
   // Idioma: clave v2 (12 jul 2026). La clave vieja 'otrofestiv_lang' se IGNORA

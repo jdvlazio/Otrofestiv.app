@@ -115,7 +115,9 @@ _CAMPOS_ENTRADA = ('is_free', 'by_invitation', 'online')
 
 def _entrada_a_campos(v):
     return {'libre': {'is_free': True}, 'boleta': {'is_free': False},
-            'invitacion': {'by_invitation': True}, 'en_linea': {'online': True}}[v]
+            # «en línea» dice DÓNDE, no cuánto cuesta: sin aviso de pago es libre
+            # (las charlas por Twitch de Fantasmagoría, 17 oct 2026)
+            'invitacion': {'by_invitation': True}, 'en_linea': {'online': True, 'is_free': True}}[v]
 
 
 def _entrada_de(f):
@@ -242,7 +244,45 @@ def _nuevo_id(c):
     return 'f_' + hashlib.sha1('|'.join(c[k] for k in ('sede', 'dia', 'hora', 'sala', 'titulo')).encode()).hexdigest()[:10]
 
 
-def asignar_ids(funciones, registro):
+def _tupla(c):
+    c = c if isinstance(c, dict) else {}
+    return tuple(_plano(c.get(k)) if k == 'titulo' else (c.get(k) or '') for k in ('sede', 'dia', 'hora', 'sala', 'titulo'))
+
+
+def _validar_decisiones(decisiones, viejas):
+    """<fid>-funciones-decisiones.json (§11.3.4, §11.4): cada decisión nombra un
+    id que existe y dice por qué, quién y cuándo. Una de cuatro formas:
+    misma (`nuevo`: clave), es_otra (`nuevo`: "es_otra"), partida (`partida`:
+    [claves]) o fusión (`nuevo`: clave + `absorbe`: [ids])."""
+    for d in decisiones:
+        falta = [k for k in ('viejo', 'por_que', 'quien', 'fecha') if not d.get(k)]
+        if falta:
+            raise AfirmacionInvalida(f'decisión de id sin {", ".join(falta)}: {d}')
+        for i in [d['viejo']] + list(d.get('absorbe') or []):
+            if i not in viejas:
+                raise AfirmacionInvalida(f'decisión de id: {i} no está en el registro')
+        if bool(d.get('partida')) == bool(d.get('nuevo')):
+            raise AfirmacionInvalida(f'decisión de id {d["viejo"]}: lleva `nuevo` o `partida`, una de las dos')
+    # un id y una clave destino, en UNA sola decisión: dos que se contradicen,
+    # que apuntan a la misma función o que se absorben a sí mismas darían un id
+    # repetido (auditoría 18 oct)
+    tocados = [i for d in decisiones for i in [d['viejo']] + list(d.get('absorbe') or [])]
+    destinos = [_tupla(c) for d in decisiones for c in
+                ([d['nuevo']] if isinstance(d.get('nuevo'), dict) else []) + list(d.get('partida') or [])]
+    for nombre, xs in (('el id', tocados), ('la clave', destinos)):
+        rep = [x for x in xs if xs.count(x) > 1]
+        if rep:
+            raise AfirmacionInvalida(f'decisiones de id: {nombre} {rep[0]} aparece en más de una decisión')
+
+
+def _sigue_decidida(v, c):
+    """`decidida` vale solo mientras la función siga en la clave que se decidió:
+    si después cambia otra vez, el guardián vuelve a medirla (auditoría 18 oct)."""
+    d = (v or {}).get('decidida')
+    return isinstance(d, dict) and tuple(d.get('clave') or ()) == _tupla(c)
+
+
+def asignar_ids(funciones, registro, decisiones=None):
     """Da a cada función base su `_fid` estable → (funciones, registro, avisos).
 
     El registro (<fest>-funciones-ids.json) guarda, por id, la clave con que se
@@ -252,14 +292,59 @@ def asignar_ids(funciones, registro):
     renombró—. Con más de una candidata es AMBIGUA: id nuevo y aviso, nunca se
     elige en silencio. Dos funciones base con la misma clave son un error."""
     viejas = dict((registro or {}).get('funciones') or {})
-    por_clave = {tuple(v[k] for k in ('sede', 'dia', 'hora', 'sala', 'titulo')): i for i, v in viejas.items()}
+    # una partida o fusionada ya no es dueña de su clave: su id migró, no se reusa
+    por_clave = {tuple(v[k] for k in ('sede', 'dia', 'hora', 'sala', 'titulo')): i for i, v in viejas.items()
+                 if not (v.get('partida_en') or v.get('fusionada_en'))}
     claves = [_clave(f) for f in funciones]
     if len({tuple(c.values()) for c in claves}) != len(claves):
         dup = [c for c in claves if claves.count(c) > 1][0]
         raise AfirmacionInvalida(f'dos funciones base con la misma clave {dup}')
     usados, ids, avisos = set(), [None] * len(funciones), []
+    decisiones = list(decisiones or [])
+    _validar_decisiones(decisiones, viejas)
+    # LAS DECISIONES PRIMERO (§11.3.4): lo que un humano registró le gana a la
+    # heurística. es_otra / partida / absorbida: ese id viejo no presta su id
+    vetados, anteriores, marcas, decidido = set(), {}, {}, set()
+    pos = {_tupla(c): n for n, c in enumerate(claves)}
+    presentes = {por_clave.get(tuple(c.values())) for c in claves} - {None}
+    for d in decisiones:
+        # la decisión dice que salió (es otra, se partió, se fusionó) y sigue en la fuente
+        salio = ([d['viejo']] if d.get('partida') or d.get('nuevo') == 'es_otra' else []) + list(d.get('absorbe') or [])
+        for i in salio:
+            if i in presentes:
+                raise AfirmacionInvalida(f'decisión de id {d["viejo"]}: {i} sigue en la fuente con su clave exacta')
+    for d in decisiones:
+        v = d['viejo']
+        if d.get('partida'):
+            hijas = [pos.get(_tupla(c)) for c in d['partida']]
+            if None in hijas:
+                avisos.append(f'⚠ decisión {v}: alguna hija de la partida no está en este montaje — revisar la decisión')
+                continue
+            vetados.add(v)
+            marcas[v] = {'partida_en': hijas}
+            anteriores.setdefault(hijas[0], []).append(v)
+            continue
+        if d['nuevo'] == 'es_otra':
+            vetados.add(v)
+            decidido.add(v)
+            continue
+        n = pos.get(_tupla(d['nuevo']))
+        if n is None:
+            avisos.append(f'⚠ decisión {v}: su función no está en este montaje — revisar la decisión')
+            continue
+        ids[n] = v
+        usados.add(v)
+        marcas[v] = {'decidida': {'fecha': d['fecha'], 'clave': list(_tupla(d['nuevo']))}}
+        for b in d.get('absorbe') or []:
+            vetados.add(b)
+            marcas[b] = {'fusionada_en': v}
+            anteriores.setdefault(n, []).append(b)
     for n, (f, c) in enumerate(zip(funciones, claves)):
+        if ids[n]:
+            continue
         i = por_clave.get(tuple(c.values()))
+        if i in usados:
+            i = None
         if i:
             usados.add(i)
             ids[n] = i
@@ -271,16 +356,21 @@ def asignar_ids(funciones, registro):
             continue
         # una función AUSENTE no presta su id: si otra aparece con su título en otra
         # hora, es otra función (revisión del 16 oct); solo vuelve con su clave exacta
-        libres = {i: v for i, v in viejas.items() if i not in usados and not v.get('ausente')}
+        libres = {i: v for i, v in viejas.items() if i not in usados and i not in vetados and not v.get('ausente')
+                  and not (v.get('partida_en') or v.get('fusionada_en'))}
         movida = [i for i, v in libres.items() if (v['sede'], v['titulo']) == (c['sede'], c['titulo'])]
         renombrada = [i for i, v in libres.items()
                       if (v['sede'], v['dia'], v['hora'], v['sala']) == (c['sede'], c['dia'], c['hora'], c['sala'])]
-        cand = movida or renombrada
+        # §11.3.3: un solo cambio de sede (el sismo de FICMA, la sala de BHFF)
+        trasladada = [i for i, v in libres.items()
+                      if (v['titulo'], v['dia'], v['hora']) == (c['titulo'], c['dia'], c['hora'])]
+        cand = movida or renombrada or trasladada
         if len(cand) == 1:
             i, v = cand[0], viejas[cand[0]]
             avisos.append(f'{i} «{f.get("title")}»: ' + (
                 f'movida de {v["dia"]} {v["hora"]} {v["sala"]} a {c["dia"]} {c["hora"]} {c["sala"]}'.strip()
-                if movida else f'renombrada (antes «{v["titulo"]}»)'))
+                if movida else f'renombrada (antes «{v["titulo"]}»)' if renombrada
+                else f'trasladada de {v["sede"]} a {c["sede"]}'))
             usados.add(i)
             ids[n] = i
             continue
@@ -291,15 +381,127 @@ def asignar_ids(funciones, registro):
             i = 'f_' + hashlib.sha1(i.encode()).hexdigest()[:10]
         ids[n] = i
     out = []
-    for f, c, i in zip(funciones, claves, ids):
-        out.append({**f, '_fid': i})
-        nuevo[i] = c
+    nacidos = []
+    for v, m in marcas.items():
+        if 'partida_en' in m:
+            m['partida_en'] = [ids[h] for h in m['partida_en']]
+    for n, (f, c, i) in enumerate(zip(funciones, claves, ids)):
+        # ids_anteriores (§11.4): los de esta decisión + los que ya traía el registro
+        ant = list(dict.fromkeys((viejas.get(i) or {}).get('ids_anteriores', []) + anteriores.get(n, [])))
+        out.append({**f, '_fid': i, **({'_ids_anteriores': ant} if ant else {})})
+        nuevo[i] = {**c, **({'ids_anteriores': ant} if ant else {}), **marcas.get(i, {}),
+                    **({'decidida': viejas[i]['decidida']} if i not in marcas and _sigue_decidida(viejas.get(i), c) else {})}
+        if i not in viejas:
+            nacidos.append((i, f, c))
+    # EL CAMBIO DOBLE, VISIBLE (Juan, 18 oct 2026): en el mismo montaje sale una
+    # función y nace otra que no se pudo casar con ella (cambió título Y hora, o
+    # sede Y hora). Puede ser la misma: quien la tenía en su plan la pierde. Se
+    # avisa con las dos, para registrar la decisión si lo es (§11.3)
+    salen = [(i, v) for i, v in viejas.items()
+             if i not in set(ids) and not v.get('ausente') and i not in vetados and i not in decidido]
+    hijas = {h for m in marcas.values() for h in m.get("partida_en", [])}
+    nacidos = [x for x in nacidos if x[0] not in hijas]
+    for i, f, c in nacidos if salen else []:
+        cerca = [(j, v) for j, v in salen if v['sede'] == c['sede'] or v['titulo'] == c['titulo'] or v['dia'] == c['dia']]
+        for j, v in cerca or salen:
+            avisos.append(f'⚠ id nuevo {i} «{f.get("title")}» {c["dia"]} {c["hora"]} — ¿es la que salió, {j} '
+                          f'«{v["titulo"]}» {v["dia"]} {v["hora"]}? Si lo es, registrá la decisión: quien la '
+                          f'tenía en su plan la pierde')
     for i, v in viejas.items():
         if i not in nuevo:
-            if not v.get('ausente'):
+            if i in marcas:                       # partida o fusionada: sale, con su destino
+                nuevo[i] = {**v, **marcas[i]}
+                continue
+            if not v.get('ausente') and not (v.get('partida_en') or v.get('fusionada_en')):
                 avisos.append(f'{i} «{v["titulo"]}» {v["dia"]} {v["hora"]}: ya no está en la fuente principal')
-            nuevo[i] = {**v, 'ausente': True}
+            nuevo[i] = {**v, 'ausente': True} if not (v.get('partida_en') or v.get('fusionada_en')) else v
     return out, {'funciones': nuevo}, avisos
+
+
+def ids_del_montaje(funciones, registro, decisiones):
+    """El paso del ensamblador para TODO festival, tenga o no afirmaciones
+    (§11.6 paso 4) → (funciones con `id` e `ids_anteriores`, registro, avisos).
+    Un montaje sin _ancla (build viejo) no recibe id: sin ancla no hay con qué
+    casar, y uno inventado se rompería en el siguiente montaje."""
+    registro = registro or {'funciones': {}}
+    sin = sum(1 for f in funciones if not f.get('_ancla'))
+    if not funciones or sin:
+        return funciones, registro, ([f'{sin} función(es) sin _ancla: este montaje no recibe id'] if sin else [])
+    out, registro, avisos = asignar_ids(funciones, registro, decisiones)
+    for f in out:
+        f['id'] = f['_fid']
+        if f.get('_ids_anteriores'):          # §11.4: partida / fusión, para que la app migre
+            f['ids_anteriores'] = f['_ids_anteriores']
+    return out, registro, avisos
+
+
+def ids_para_publicado(films, registro):
+    """La pasada de legado (§11.2): da `id` a las funciones de un festival YA
+    publicado sin rearmarlo → (films, registro). Solo agrega `id`; una entrada
+    sin sede, día y hora no es una función y queda igual. La clave es la misma
+    que usa el ensamblador (_ancla = sede, día, hora), así que rearmar después
+    conserva cada id. Un id ya publicado se respeta."""
+    reg = {'funciones': dict((registro or {}).get('funciones') or {})}
+    hay = [n for n, f in enumerate(films) if f.get('venue') and f.get('day') and f.get('time')]
+    base = [{**films[n], '_ancla': (films[n]['venue'], films[n]['day'], films[n]['time'])} for n in hay]
+    for f in base:
+        if f.get('id') and f['id'] not in reg['funciones']:
+            reg['funciones'][f['id']] = _clave(f)
+    asig, reg, _ = asignar_ids(base, reg)
+    out = [dict(f) for f in films]
+    for n, f in zip(hay, asig):
+        out[n]['id'] = f['_fid']
+    return out, reg
+
+
+def volcar_como(raw, d):
+    """`d` en el mismo formato que `raw` (compacto o con sangría 1/2, con o sin
+    salto final): la pasada de legado no puede cambiar nada más que lo que
+    agrega. Un formato que no se reconoce FRENA, no se adivina."""
+    for kw in ({'separators': (',', ':')}, {}, {'indent': 1}, {'indent': 2}):
+        for fin in ('', '\n'):
+            if json.dumps(json.loads(raw), ensure_ascii=False, **kw) + fin == raw:
+                return json.dumps(d, ensure_ascii=False, **kw) + fin
+    raise AfirmacionInvalida('formato de JSON que no se reconoce: no se reescribe')
+
+
+def ids_estables(viejo, nuevo, registro):
+    """[id-funcion-estable] (docs/FUNCION.md §11.5): lo publicado en main contra
+    lo de ahora → problemas. Un id publicado no desaparece salvo que el registro
+    lo marque ausente / partida_en / fusionada_en; un id no cambia de función
+    (título Y día-hora-sede a la vez); no hay ids repetidos."""
+    mal = []
+    nuevos = [f.get('id') for f in nuevo.get('films') or [] if f.get('id')]
+    # en un festival con ids, TODA función tiene el suyo: la que entró por una
+    # afirmación existe:{…} salía sin id (Guatapé, 18 oct) y la app no la podría seguir
+    if nuevos:
+        for f in nuevo.get('films') or []:
+            if not f.get('id') and f.get('day') and f.get('time') and f.get('venue'):
+                mal.append(f'«{f.get("title")}» {f.get("day")} {f.get("time")}: función sin id en un festival con ids')
+    for i in sorted({x for x in nuevos if nuevos.count(x) > 1}):
+        mal.append(f'{i}: id repetido en dos funciones')
+    ahora = {f['id']: f for f in nuevo.get('films') or [] if f.get('id')}
+    reg = (registro or {}).get('funciones') or {}
+    for f in viejo.get('films') or []:
+        i = f.get('id')
+        if not i:
+            continue
+        g = ahora.get(i)
+        if g is None:
+            r = reg.get(i) or {}
+            if not (r.get('ausente') or r.get('partida_en') or r.get('fusionada_en')):
+                mal.append(f'{i} «{f.get("title")}» {f.get("day")} {f.get("time")}: desapareció sin registro')
+            # a donde se fue tiene que estar publicado: si no, la app no tiene a qué migrar
+            destino = [r['fusionada_en']] if r.get('fusionada_en') else list(r.get('partida_en') or [])
+            for j in destino:
+                if j not in ahora:
+                    mal.append(f'{i} «{f.get("title")}»: su destino {j} no está publicado')
+            continue
+        slot = lambda x: (x.get('day'), x.get('time'), x.get('venue'))
+        if f.get('title') != g.get('title') and slot(f) != slot(g) and not (reg.get(i) or {}).get('decidida'):
+            mal.append(f'{i}: cambió de función — «{f.get("title")}» {f.get("day")} {f.get("time")} → '
+                       f'«{g.get("title")}» {g.get("day")} {g.get("time")}')
+    return mal
 
 
 # ── la resolución ────────────────────────────────────────────────────────────

@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "ficcali.com — Programación 2026 (WP 14870) + fichas de la Selección 2026",
-  "capturado": "2026-10-15",
+  "capturado": "2026-10-25",
   "url": "https://ficcali.com/programacion-ficcali-2026/",
   "metodo": "tarjeta por función; obra por la ficha del catálogo"
  },
@@ -100,17 +100,20 @@
    "sede": "Yawa",
    "sala": "Domo",
    "sede_cruda": "YAWA",
-   "acceso": "desconocido",
+   "acceso": "Inscripción previa",
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
-    "tarjeta": 14841
+    "tarjeta": 14841,
+    "ventana": "https://www.instagram.com/p/DezVbZHRunB/"
    },
    "duracion_min": 240,
    "titulo": "Muestra VR",
    "tipo": "evento",
    "event_kind": "experiencia",
-   "seccion": "Proyecciones"
+   "seccion": "Proyecciones",
+   "info": true,
+   "hasta": "2026-10-25"
   },
   {
    "dia": "2026-10-17",
@@ -215,7 +218,7 @@
    "dia": "2026-10-18",
    "hora": "16:00",
    "sede": "Madame Blue",
-   "sede_cruda": "SALA MADAME BLUE",
+   "sede_cruda": "Sala Madame Blue",
    "acceso": "desconocido",
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
@@ -392,18 +395,18 @@
    "hora": "09:00",
    "sede": "Cinemateca La Tertulia",
    "sede_cruda": "CINEMATECA MUSEO LA TERTULIA",
-   "acceso": "desconocido",
+   "acceso": "Inscripción previa",
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
     "tarjeta": 14524
    },
-   "duracion_min": 180,
-   "titulo": "XV Encuentro de investigación en cine: Pantallas que piensan",
+   "duracion_min": 210,
+   "titulo": "XV Seminario de investigación en cine. Pantallas que piensan. Indagando en formas de investigación creación",
    "tipo": "evento",
    "event_kind": "encuentro",
    "seccion": "Académico",
-   "invitados": "Seminario con charlas, ponencias y conferencias performáticas."
+   "sinopsis": "Seminario con charlas, ponencias y conferencias performáticas."
   },
   {
    "dia": "2026-10-20",
@@ -520,17 +523,18 @@
    "hora": "09:00",
    "sede": "Cinemateca La Tertulia",
    "sede_cruda": "CINEMATECA MUSEO LA TERTULIA",
-   "acceso": "desconocido",
+   "acceso": "Inscripción previa",
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
     "tarjeta": 14575
    },
-   "duracion_min": 180,
-   "titulo": "XV Encuentro de investigación en cine. Pantallas que piensan. Indagar en formas de investigación creativa",
+   "duracion_min": 210,
+   "titulo": "XV Seminario de investigación en cine. Pantallas que piensan. Indagando en formas de investigación creación",
    "tipo": "evento",
    "event_kind": "encuentro",
-   "seccion": "Académico"
+   "seccion": "Académico",
+   "sinopsis": "Seminario con charlas, ponencias y conferencias performáticas."
   },
   {
    "dia": "2026-10-21",
@@ -598,10 +602,13 @@
     "tarjeta": 14002
    },
    "titulo": "Guapi: ritmo y balsada",
-   "seccion": "Proyecciones",
-   "anio": 1963,
+   "director": "Juan B. Ocampo",
    "pais": "Colombia",
-   "duracion_min": 30
+   "anio": 1963,
+   "duracion_min": 33,
+   "sinopsis": "Documenta las expresiones culturales y espirituales de Guapi, al capturar la danza ancestral de los hojarasquines del monte, la vida al pie del río y la procesión fluvial nocturna; allí, la marimba de chonta y los arrullos le rinden culto a la Inmaculada Concepción. Es un trabajo de campo del Departamento de Investigaciones Folklóricas del IPC (diciembre de 1963 a enero de 1964). Recoge las interacciones entre los guapireños y los investigadores que indagaban sobre las celebraciones de la época, repertorios musicales y dancísticos, y fabricación de instrumentos. Forma parte de un archivo de cintas de 16 mm, cintas magnetofónicas de carrete abierto, fotografías y textos sobre fuerza creativa, fiesta y ritual en Guapi. Está disponible en el IPC.",
+   "seccion": "Clásicos",
+   "duracion_obra": 33
   },
   {
    "dia": "2026-10-21",
@@ -634,17 +641,20 @@
     "tarjeta": 14003
    },
    "titulo": "La libertad doble",
-   "seccion": "Proyecciones",
    "director": "Lisandro Alonso",
+   "pais": "Chile, Argentina, Luxemburgo, Alemania, Reino Unido",
    "anio": 2026,
-   "pais": "Argentina",
-   "duracion_min": 100
+   "duracion_min": 100,
+   "genero": "Drama",
+   "sinopsis": "Misael trabaja solo con su hacha, cortando árboles en el monte. Una responsabilidad inesperada altera su vida y la lógica de sus días se desvanece en una naturaleza donde la razón humana carece de sentido. Lisandro Alonso retoma el personaje, las acciones y la forma minuciosa y delicada de observarlos de su película La libertad (2001), con la que se estableció como parte de una nueva generación de cine argentino. Esta novedosa mirada plantea un giro reflexivo sobre el personaje, su tiempo, nuestro tiempo y la forma de asumir el cine de director.",
+   "seccion": "Plano General",
+   "duracion_obra": 100
   },
   {
    "dia": "2026-10-21",
    "hora": "19:00",
-   "sede": "Madame Blue",
-   "sede_cruda": "SALA MADAME BLUE",
+   "sede": "Teatro La Concha",
+   "sede_cruda": "Teatro la Concha",
    "acceso": "desconocido",
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
@@ -709,12 +719,14 @@
     "tarjeta": 14006
    },
    "titulo": "Cineconcierto: Metrópolis",
-   "tipo": "evento",
-   "event_kind": "evento",
-   "seccion": "Proyecciones",
-   "invitados": "Alemania | 120 min",
-   "duracion_min": 60,
-   "_duracion_de": "el hueco hasta la siguiente en la misma sede (tope 90, 60 si es la última)"
+   "director": "Fritz Lang",
+   "pais": "Alemania",
+   "anio": 1927,
+   "duracion_min": 120,
+   "genero": "Ciencia ficción",
+   "sinopsis": "Metrópolis es una película de ciencia ficción ambientada en una ciudad futurista profundamente dividida entre clases sociales. En la superficie viven los poderosos y privilegiados, mientras que, bajo tierra, miles de trabajadores realizan duras labores para mantener la ciudad en funcionamiento. Freder, hijo de Joh Fredersen, el gobernante de Metrópolis, lleva una vida cómoda hasta que conoce a María, una joven que defiende la unión y el entendimiento entre ricos y pobres. Con una poderosa crítica a la desigualdad social y a la deshumanización industrial, Metrópolis transmite su famoso mensaje: el corazón debe ser el mediador entre la cabeza y las manos.",
+   "seccion": "Clásicos",
+   "duracion_obra": 120
   },
   {
    "dia": "2026-10-21",
@@ -733,7 +745,7 @@
    "obras": [
     {
      "titulo": "Afilando memoria",
-     "director": "Eugenio Gómez",
+     "director": "Eugenio Gómez Borrero",
      "pais": "Colombia",
      "anio": 2026,
      "duracion_min": 7,
@@ -804,7 +816,25 @@
    "tipo": "evento",
    "event_kind": "taller",
    "seccion": "Académico",
-   "invitados": "Con Roberto Garcés. En alianza con Takeshima. Auditorio Central didáctica (Inscripción previa). Link de inscripción aquí."
+   "invitados": "Con Roberto Garcés. En alianza con Takeshima. Auditorio Central didáctica (Inscripción previa)."
+  },
+  {
+   "dia": "2026-10-22",
+   "hora": "09:00",
+   "sede": "Cinemateca La Tertulia",
+   "sede_cruda": "CINEMATECA MUSEO LA TERTULIA",
+   "acceso": "Inscripción previa",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 16325
+   },
+   "duracion_min": 210,
+   "titulo": "XV Seminario de investigación en cine. Pantallas que piensan. Indagando en formas de investigación creación",
+   "tipo": "evento",
+   "event_kind": "encuentro",
+   "seccion": "Académico",
+   "sinopsis": "Seminario con charlas, ponencias y conferencias performáticas."
   },
   {
    "dia": "2026-10-22",
@@ -922,7 +952,7 @@
    "anio": 2025,
    "duracion_min": 85,
    "sinopsis": "Un indígena está tratando de salvar a su lengua de la extinción. Fernando, actor de doblaje cusqueño, sueña con doblar El rey león al quechua. Este viaje, junto a su hijo Dylan, se convierte en una odisea profundamente personal, de paternidad y activismo, que pondrá a prueba su compromiso con su lengua y su cultura.",
-   "seccion": "Muestras de Muestras",
+   "seccion": "Zoom",
    "duracion_obra": 85
   },
   {
@@ -941,7 +971,7 @@
    "tipo": "evento",
    "event_kind": "taller",
    "seccion": "Académico",
-   "invitados": "Con Beatriz Balanta. Cupo: 30 | Inscripción previa. Link de inscripción aquí"
+   "invitados": "Con Beatriz Balanta. Cupo: 30 | Inscripción previa."
   },
   {
    "dia": "2026-10-22",
@@ -1292,10 +1322,41 @@
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
-    "tarjeta": 14033
+    "tarjeta": 14033,
+    "obras": "https://www.instagram.com/p/DenDhbtmnyO/"
    },
    "titulo": "Vanguardias Afro e Indígena – Prog 1",
    "seccion": "Proyecciones",
+   "obras": [
+    {
+     "titulo": "Jiru Luai Algo Malo",
+     "director": "Yon Arley Agreda Jamioy"
+    },
+    {
+     "titulo": "La Tinaja",
+     "director": "Ernestina Miranda, Mar Ajé"
+    },
+    {
+     "titulo": "Y el río lloró",
+     "director": "Zumaya Mayers"
+    },
+    {
+     "titulo": "Ahumadora",
+     "director": "Deicy Minotta Hurtado"
+    },
+    {
+     "titulo": "Desde la otra orilla",
+     "director": "Yulissa Sinisterra"
+    },
+    {
+     "titulo": "Bertha",
+     "director": "Laura Asprilla"
+    },
+    {
+     "titulo": "Héroes del silencio",
+     "director": "Atikeinis Durán Izquierdo"
+    }
+   ],
    "duracion_min": 90,
    "_duracion_de": "el hueco hasta la siguiente en la misma sede (tope 90, 60 si es la última)"
   },
@@ -1321,7 +1382,7 @@
    "dia": "2026-10-23",
    "hora": "16:00",
    "sede": "Madame Blue",
-   "sede_cruda": "SALA MADAME BLUE",
+   "sede_cruda": "Sala Madame Blue",
    "acceso": "desconocido",
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
@@ -1338,6 +1399,7 @@
    "dia": "2026-10-23",
    "hora": "16:00",
    "sede": "Bulevar del Río",
+   "sala": "Carpa GEUP",
    "sede_cruda": "Bulevar del Río",
    "acceso": "desconocido",
    "_src": {
@@ -1356,6 +1418,7 @@
    "dia": "2026-10-23",
    "hora": "16:30",
    "sede": "Bulevar del Río",
+   "sala": "Auditorio Celsia",
    "sede_cruda": "Bulevar del Río",
    "acceso": "desconocido",
    "_src": {
@@ -1375,7 +1438,7 @@
    "dia": "2026-10-23",
    "hora": "17:00",
    "sede": "Madame Blue",
-   "sede_cruda": "SALA MADAME BLUE",
+   "sede_cruda": "Sala Madame Blue",
    "acceso": "desconocido",
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
@@ -1409,6 +1472,7 @@
    "dia": "2026-10-23",
    "hora": "17:30",
    "sede": "Bulevar del Río",
+   "sala": "Auditorio Celsia",
    "sede_cruda": "Bulevar del Río",
    "acceso": "desconocido",
    "_src": {
@@ -1433,10 +1497,45 @@
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
-    "tarjeta": 14604
+    "tarjeta": 14604,
+    "obras": "https://ficcali.com/anima-ve-2026/"
    },
    "titulo": "Animá Ve – Retrospectiva de Maria Cristina Pérez",
    "seccion": "Proyecciones",
+   "obras": [
+    {
+     "titulo": "Una vez en un cuerpo",
+     "director": "María Cristina Pérez",
+     "pais": "Colombia, Estados Unidos",
+     "anio": 2025,
+     "duracion_min": 10,
+     "genero": "Animación"
+    },
+    {
+     "titulo": "Todo es culpa de la sal",
+     "director": "María Cristina Pérez",
+     "pais": "Colombia",
+     "anio": 2020,
+     "duracion_min": 10,
+     "genero": "Animación"
+    },
+    {
+     "titulo": "Coffee Break",
+     "director": "María Cristina Pérez, Mauricio Cuervo",
+     "pais": "Colombia",
+     "anio": 2018,
+     "duracion_min": 9,
+     "genero": "Animación"
+    },
+    {
+     "titulo": "Añejo",
+     "director": "María Cristina Pérez",
+     "pais": "Colombia",
+     "anio": 2014,
+     "duracion_min": 9,
+     "genero": "Animación"
+    }
+   ],
    "duracion_min": 90,
    "_duracion_de": "el hueco hasta la siguiente en la misma sede (tope 90, 60 si es la última)"
   },
@@ -1452,10 +1551,10 @@
     "tarjeta": 14025
    },
    "titulo": "En construcción",
+   "seccion": "Proyecciones",
    "director": "José Luis Guerín",
    "anio": 2001,
-   "seccion": "Muestras de Muestras",
-   "duracion_obra": 124,
+   "pais": "España",
    "duracion_min": 124
   },
   {
@@ -1481,27 +1580,6 @@
   },
   {
    "dia": "2026-10-23",
-   "hora": "18:30",
-   "sede": "Cine Colombia Unicentro",
-   "sede_cruda": "CINE COLOMBIA UNICENTRO",
-   "acceso": "desconocido",
-   "_src": {
-    "url": "https://ficcali.com/programacion-ficcali-2026/",
-    "date": "2026-10-06",
-    "tarjeta": 14027
-   },
-   "titulo": "An Incomplete Calendar",
-   "director": "Sanaz Sohrabi",
-   "pais": "Canadá, Irán, Turquía, Venezuela",
-   "anio": 2026,
-   "duracion_min": 90,
-   "sinopsis": "Un disco de vinilo de 1980 es el punto de partida. Rhymes and Songs for OPEC es una grabación especial del coro de la Universidad Central de Venezuela, para conmemorar el vigésimo aniversario de la Organización de Países Exportadores de Petróleo. Mediante una superposición de canciones y material inédito o poco visto, se replantea el petróleo como una herramienta política al servicio de las luchas de liberación en Palestina y del fortalecimiento de la solidaridad panárabe entre 1960 y 1970. Se propone una revisión aguda de la geopolítica de los últimos cincuenta años, desde representaciones como la música, las estampillas y el arte; señala cómo las alianzas de los países petroleros buscan formas de contrarrestar el poder.",
-   "seccion": "Competencia Largometrajes Internacionales",
-   "titulo_es": "Un calendario incompleto",
-   "duracion_obra": 77
-  },
-  {
-   "dia": "2026-10-23",
    "hora": "19:00",
    "sede": "Teatro Municipal Enrique Buenaventura",
    "sala": "Teatrino",
@@ -1510,10 +1588,41 @@
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
-    "tarjeta": 14034
+    "tarjeta": 14034,
+    "obras": "https://www.instagram.com/p/DenDhbtmnyO/"
    },
    "titulo": "Vanguardias Afro e Indígena – Prog 2",
    "seccion": "Proyecciones",
+   "obras": [
+    {
+     "titulo": "Azotea",
+     "director": "Ana María Jessie Serna"
+    },
+    {
+     "titulo": "Pueblo viejo",
+     "director": "Pedro Jajoy"
+    },
+    {
+     "titulo": "Iyeba Pora - Los hijos del territorio",
+     "director": "Wilber Edinson Caballero"
+    },
+    {
+     "titulo": "Flamencoterapia",
+     "director": "Emmanuel Vidal Cogollo"
+    },
+    {
+     "titulo": "Namtrik - Fogones lingüísticos",
+     "director": "Cristian Conejo Sánchez"
+    },
+    {
+     "titulo": "Kuagro",
+     "director": "Diego Casseres"
+    },
+    {
+     "titulo": "Muiyukuna - Relatos de la Chagra viva",
+     "director": "Alex Rufino"
+    }
+   ],
    "duracion_min": 60,
    "_duracion_de": "el hueco hasta la siguiente en la misma sede (tope 90, 60 si es la última)"
   },
@@ -1730,7 +1839,7 @@
    "dia": "2026-10-24",
    "hora": "10:00",
    "sede": "Madame Blue",
-   "sede_cruda": "SALA MADAME BLUE",
+   "sede_cruda": "Sala Madame Blue",
    "acceso": "desconocido",
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
@@ -1807,7 +1916,7 @@
    "dia": "2026-10-24",
    "hora": "14:30",
    "sede": "Madame Blue",
-   "sede_cruda": "SALA MADAME BLUE",
+   "sede_cruda": "Sala Madame Blue",
    "acceso": "desconocido",
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
@@ -1843,6 +1952,14 @@
      "anio": 2025,
      "duracion_min": 18,
      "sinopsis": "Carlos se acerca a la mediana edad, atrapado en una crisis personal que se ha prolongado demasiado. Rosa, su madre, sufre un dolor incapacitante que solo se mitiga con las cálidas aguas de la hidroterapia. Una noche, ella se ofrece a hacer el sacrificio máximo para que ambos puedan transitar a un lugar mejor. Un cortometraje sobre el amor, la esperanza y el alivio que todos anhelamos."
+    },
+    {
+     "titulo": "El bitcoin de oro",
+     "director": "Bernardo Hernández",
+     "pais": "España",
+     "anio": 2026,
+     "duracion_min": 18,
+     "sinopsis": "Cuando Asofem está a punto de cerrar por una grave crisis económica, un grupo de usuarios y su monitor deciden embarcarse en una disparatada misión para salvar el centro al que consideran su hogar."
     },
     {
      "titulo": "El bitcoin de oro",
@@ -1910,7 +2027,7 @@
      "sinopsis": "Catherine es una periodista sorda que está perdida en el barrio madrileño de Carabanchel. No va a llegar a tiempo a entrevistar a un importante actor estadounidense. Desesperada, le pide ayuda a la Lore, una vecina del barrio que pasaba por allí. Juntas trazan un plan para poder encontrarse con este conocido personaje."
     }
    ],
-   "duracion_min": 115
+   "duracion_min": 133
   },
   {
    "dia": "2026-10-24",
@@ -2015,11 +2132,14 @@
     "tarjeta": 14040
    },
    "titulo": "Minotauro",
-   "seccion": "Proyecciones",
    "director": "Andrey Zvyagintsev",
+   "pais": "Francia, Letonia, Alemania",
    "anio": 2026,
-   "pais": "Rusia",
-   "duracion_min": 135
+   "duracion_min": 141,
+   "genero": "Drama",
+   "sinopsis": "Rusia, 2022. Cuando Gleb, un exitoso director de empresa, se ve asediado por las crecientes presiones corporativas y un mundo cada vez más inestable, el colapso de su vida, cuidadosamente ordenada, se precipita hacia la violencia. Cine negro que adapta La mujer infiel, de Chabrol, al contexto de los inicios de la guerra de Rusia contra Ucrania.",
+   "seccion": "Plano General",
+   "duracion_obra": 141
   },
   {
    "dia": "2026-10-24",
@@ -2050,12 +2170,12 @@
     "date": "2026-10-06",
     "tarjeta": 14037
    },
-   "titulo": "Historias del buen valle",
-   "director": "José Luis Guerín",
-   "anio": 2025,
-   "seccion": "Muestras de Muestras",
-   "duracion_obra": 120,
-   "duracion_min": 120
+   "titulo": "Ceremonia de premiación",
+   "tipo": "evento",
+   "event_kind": "premiación",
+   "seccion": "Proyecciones",
+   "duracion_min": 60,
+   "_duracion_de": "el hueco hasta la siguiente en la misma sede (tope 90, 60 si es la última)"
   },
   {
    "dia": "2026-10-24",
@@ -2069,11 +2189,14 @@
     "tarjeta": 14041
    },
    "titulo": "La bola negra",
-   "seccion": "Proyecciones",
-   "director": "Javier Calvo, Javier Ambrossi",
+   "director": "Javier Ambrossi, Javier Calvo",
+   "pais": "España, Francia",
    "anio": 2026,
-   "pais": "España",
-   "duracion_min": 155
+   "duracion_min": 155,
+   "genero": "Drama",
+   "sinopsis": "La bola negra cuenta la historia de tres hombres cuyas vidas están íntimamente conectadas por el deseo, el dolor y la herencia, a lo largo de tres épocas: 1932, 1937 y 2017. El título es el mismo de una obra de Federico García Lorca que quedó inacabada por su muerte, en 1936, y que se refiere a la bola negra que funciona como signo de rechazo a un joven en un prestigioso club por las sospechas sobre su sexualidad",
+   "seccion": "Plano General",
+   "duracion_obra": 155
   },
   {
    "dia": "2026-10-24",
@@ -2099,6 +2222,27 @@
   },
   {
    "dia": "2026-10-25",
+   "hora": "14:30",
+   "sede": "Cine Colombia Unicentro",
+   "sede_cruda": "CINE COLOMBIA UNICENTRO",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14027
+   },
+   "titulo": "An Incomplete Calendar",
+   "director": "Sanaz Sohrabi",
+   "pais": "Canadá, Irán, Turquía, Venezuela",
+   "anio": 2026,
+   "duracion_min": 90,
+   "sinopsis": "Un disco de vinilo de 1980 es el punto de partida. Rhymes and Songs for OPEC es una grabación especial del coro de la Universidad Central de Venezuela, para conmemorar el vigésimo aniversario de la Organización de Países Exportadores de Petróleo. Mediante una superposición de canciones y material inédito o poco visto, se replantea el petróleo como una herramienta política al servicio de las luchas de liberación en Palestina y del fortalecimiento de la solidaridad panárabe entre 1960 y 1970. Se propone una revisión aguda de la geopolítica de los últimos cincuenta años, desde representaciones como la música, las estampillas y el arte; señala cómo las alianzas de los países petroleros buscan formas de contrarrestar el poder.",
+   "seccion": "Competencia Largometrajes Internacionales",
+   "titulo_es": "Un calendario incompleto",
+   "duracion_obra": 77
+  },
+  {
+   "dia": "2026-10-25",
    "hora": "15:00",
    "sede": "Cinemateca La Tertulia",
    "sede_cruda": "CINEMATECA MUSEO LA TERTULIA",
@@ -2106,10 +2250,61 @@
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
-    "tarjeta": 14452
+    "tarjeta": 14452,
+    "obras": "https://ficcali.com/anima-ve-2026/"
    },
    "titulo": "Animá Ve – Mujeres en la animación",
    "seccion": "Proyecciones",
+   "obras": [
+    {
+     "titulo": "El fin de la sequía",
+     "director": "Raquel Páez, Mariana Rey",
+     "pais": "Colombia",
+     "anio": 2020,
+     "duracion_min": 3,
+     "genero": "Animación"
+    },
+    {
+     "titulo": "Un rastro de baba anuncia la lluvia",
+     "director": "Mariana Moyano",
+     "pais": "Colombia",
+     "anio": 2025,
+     "duracion_min": 11,
+     "genero": "Animación"
+    },
+    {
+     "titulo": "No puedo volver a casa",
+     "director": "Cecilia Traslaviña",
+     "pais": "Colombia",
+     "anio": 2015,
+     "duracion_min": 3,
+     "genero": "Animación"
+    },
+    {
+     "titulo": "Bailar con la línea",
+     "director": "Antonia Bello",
+     "pais": "Colombia",
+     "anio": 2023,
+     "duracion_min": 7,
+     "genero": "Animación"
+    },
+    {
+     "titulo": "Detrás de la puerta está el jardín",
+     "director": "Ana Sofía Navia",
+     "pais": "Colombia, Estados Unidos",
+     "anio": 2025,
+     "duracion_min": 5,
+     "genero": "Animación"
+    },
+    {
+     "titulo": "Por ahora un cuento",
+     "director": "Carla Melo",
+     "pais": "Colombia",
+     "anio": 2018,
+     "duracion_min": 11,
+     "genero": "Animación"
+    }
+   ],
    "duracion_min": 90,
    "_duracion_de": "el hueco hasta la siguiente en la misma sede (tope 90, 60 si es la última)"
   },
@@ -2152,7 +2347,7 @@
    "duracion_min": 100,
    "genero": "Documental",
    "sinopsis": "Una década después de su muerte, el cineasta William Greaves tiene un último truco bajo la manga con lo que consideró el evento más importante que capturó en cine: una fiesta de 1972, ideada por él, junto a las luminarias vivas del Renacimiento de Harlem. Durante cuatro horas, este extraordinario grupo —muchos de sus miembros no se habían visto en cincuenta años— recordó, criticó, argumentó, rio y bebió mientras luchaba con su lugar en un panorama cultural que cambiaba rápidamente. Filmada en 16 mm y recientemente restaurada bajo la dirección de su hijo David, esta película histórica es, a la vez, una autoexploración y una indagación en el corazón de esa masa crítica de energía creativa.",
-   "seccion": "Muestras de Muestras",
+   "seccion": "Vanguardias Afro e Indígenas",
    "titulo_es": "Érase una vez en Harlem",
    "duracion_obra": 100
   },
@@ -2189,10 +2384,10 @@
     "tarjeta": 14049
    },
    "titulo": "Historias del buen valle",
+   "seccion": "Proyecciones",
    "director": "José Luis Guerín",
    "anio": 2025,
-   "seccion": "Muestras de Muestras",
-   "duracion_obra": 120,
+   "pais": "España",
    "duracion_min": 120
   },
   {
@@ -2207,11 +2402,14 @@
     "tarjeta": 14046
    },
    "titulo": "La bola negra",
-   "seccion": "Proyecciones",
-   "director": "Javier Calvo, Javier Ambrossi",
+   "director": "Javier Ambrossi, Javier Calvo",
+   "pais": "España, Francia",
    "anio": 2026,
-   "pais": "España",
-   "duracion_min": 155
+   "duracion_min": 155,
+   "genero": "Drama",
+   "sinopsis": "La bola negra cuenta la historia de tres hombres cuyas vidas están íntimamente conectadas por el deseo, el dolor y la herencia, a lo largo de tres épocas: 1932, 1937 y 2017. El título es el mismo de una obra de Federico García Lorca que quedó inacabada por su muerte, en 1936, y que se refiere a la bola negra que funciona como signo de rechazo a un joven en un prestigioso club por las sospechas sobre su sexualidad",
+   "seccion": "Plano General",
+   "duracion_obra": 155
   },
   {
    "dia": "2026-10-25",
@@ -2338,6 +2536,23 @@
   },
   {
    "dia": "2026-10-24",
+   "hora": "10:00",
+   "sede": "Hotel Obelisco",
+   "sede_cruda": "Hotel Obelisco",
+   "acceso": "Inscripción previa · Cupos: 53",
+   "titulo": "City Tour",
+   "tipo": "evento",
+   "event_kind": "evento",
+   "seccion": "Conexiones",
+   "duracion_min": 150,
+   "sinopsis": "Conoce Cali en un recorrido único.",
+   "_src": {
+    "url": "https://www.instagram.com/p/DezWCmQEdHT/",
+    "date": "2026-10-22"
+   }
+  },
+  {
+   "dia": "2026-10-24",
    "hora": "20:00",
    "sede": "Casa Ethel",
    "sede_cruda": "CCMI",
@@ -2347,12 +2562,14 @@
     "date": "2026-10-15"
    },
    "titulo": "Cineconcierto: Metrópolis",
-   "tipo": "evento",
-   "event_kind": "evento",
-   "seccion": "Proyecciones",
-   "invitados": "Alemania | 120 min",
-   "duracion_min": 60,
-   "_duracion_de": "el hueco hasta la siguiente en la misma sede (tope 90, 60 si es la última)"
+   "director": "Fritz Lang",
+   "pais": "Alemania",
+   "anio": 1927,
+   "duracion_min": 120,
+   "genero": "Ciencia ficción",
+   "sinopsis": "Metrópolis es una película de ciencia ficción ambientada en una ciudad futurista profundamente dividida entre clases sociales. En la superficie viven los poderosos y privilegiados, mientras que, bajo tierra, miles de trabajadores realizan duras labores para mantener la ciudad en funcionamiento. Freder, hijo de Joh Fredersen, el gobernante de Metrópolis, lleva una vida cómoda hasta que conoce a María, una joven que defiende la unión y el entendimiento entre ricos y pobres. Con una poderosa crítica a la desigualdad social y a la deshumanización industrial, Metrópolis transmite su famoso mensaje: el corazón debe ser el mediador entre la cabeza y las manos.",
+   "seccion": "Clásicos",
+   "duracion_obra": 120
   }
  ]
 }

@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, emparejado con ficha_verifica() (director + año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-10-14"
+  "capturado": "2026-10-20"
  },
  "obras": [
   {
@@ -18,9 +18,13 @@
    "lbSlug": "teenage-sex-and-death-at-camp-miasma",
    "_verificado": "declarada a mano: «Teenage Sex and Death at Camp Miasma» (2026), Jane Schoenbrun: misma directora; el título español no casa solo.",
    "_director": "Jane Schoenbrun",
-   "_sondeado": "2026-10-14",
+   "_sondeado": "2026-10-20",
    "poster": "/assets/mubibogota-2026/adolescencia-sexo-y-muerte-en-campamento-miasma.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "pais_heredado": "Reino Unido, Estados Unidos",
+   "_heredado": {
+    "pais_heredado": "catálogo w_X5FQ59F8VRWZ (mubibogota-2026)"
+   }
   },
   {
    "titulo": "Black Panthers",
@@ -69,7 +73,11 @@
     }
    ],
    "poster": "/assets/mubibogota-2026/cobarde.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "pais_heredado": "Bélgica, Francia, Países Bajos",
+   "_heredado": {
+    "pais_heredado": "catálogo w_R4E4R74EAVJZ (biff-2026, mubibogota-2026, tiff-2026)"
+   }
   },
   {
    "titulo": "La cosa",
@@ -88,7 +96,11 @@
    "_director": "John Carpenter",
    "_sondeado": "2026-10-11",
    "poster": "/assets/mubibogota-2026/la-cosa.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "pais_heredado": "Estados Unidos",
+   "_heredado": {
+    "pais_heredado": "catálogo w_X5FR3FQ3YATN (mubibogota-2026)"
+   }
   },
   {
    "titulo": "La niña santa",
@@ -105,9 +117,13 @@
    "lbSlug": "the-holy-girl",
    "_verificado": "declarada a mano: «The Holy Girl» / «La niña santa» (2004), Lucrecia Martel: misma directora; sin año ni duración en la fuente, el candado no la ligaba.",
    "_director": "Lucrecia Martel",
-   "_sondeado": "2026-10-14",
+   "_sondeado": "2026-10-20",
    "poster": "/assets/mubibogota-2026/la-nina-santa.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "pais_heredado": "Argentina, Italia, Países Bajos, España",
+   "_heredado": {
+    "pais_heredado": "catálogo w_X5FQM0BY9JQ3 (mubibogota-2026)"
+   }
   },
   {
    "titulo": "La paga",
@@ -116,7 +132,6 @@
    "poster_path": "/5nM3a0jcl9UlcCwFyELvvCvDNGq.jpg",
    "synopsis_es": "En los Andes colombo-venezolanos, un campesino trabaja la tierra en condiciones de explotación para asegurar la supervivencia de su familia. Sin dinero para tratamiento médico, una noche se emborracha y es arrestado.",
    "synopsis_en": "In the Colombian-Venezuelan Andes, a peasant works the land under exploitative conditions to ensure the survival of his family. His son is ill, his wife is pregnant, and he himself reproduces the violence that surrounds him. With no money for medical treatment, one night he gets drunk and is arrested. In jail, in a burst of fury, he rebels against the town's political boss in the only way he can.  La Paga was a pioneering work of social and political cinema in Latin America, released the same year as Barravento, Glauber Rocha’s debut feature, and anticipating movements such as Third Cinema. Influenced by Italian Neorealism and Soviet cinema in its aesthetics, forms, and ideological approach, the film uses the archetypal representation of characters and the social and economic forces they embody. Based on the director’s childhood observations in his hometown, La Paga denounces the exploitation of the rural peasantry.",
-   "genero": "Drama",
    "anio_tmdb": 1962,
    "duracion_tmdb": 62,
    "pais_tmdb": "Venezuela, Colombia",
@@ -147,7 +162,12 @@
    "_sinopsis_de": "ya publicada en cinemancia-2025",
    "poster": "/assets/mubibogota-2026/la-paga.jpg",
    "posterSource": "tmdb",
-   "_genero_de": "catálogo w_R4ERSF68AGVJ (cinemancia-2025, filcmar-2026, mubibogota-2026)"
+   "genero": "Drama",
+   "_heredado": {
+    "genero": "catálogo w_R4ERSF68AGVJ (cinemancia-2025, filcmar-2026, mubibogota-2026)",
+    "pais_heredado": "catálogo w_R4ERSF68AGVJ (cinemancia-2025, filcmar-2026, mubibogota-2026)"
+   },
+   "pais_heredado": "Venezuela, Colombia"
   },
   {
    "titulo": "Las aventuras de Priscilla, reina del desierto",
@@ -166,7 +186,11 @@
    "_director": "Stephan Elliott",
    "_sondeado": "2026-10-11",
    "poster": "/assets/mubibogota-2026/las-aventuras-de-priscilla-reina-del-desierto.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "pais_heredado": "Australia, Estados Unidos",
+   "_heredado": {
+    "pais_heredado": "catálogo w_X5FPMCP658NS (mubibogota-2026)"
+   }
   },
   {
    "titulo": "Moscas",
@@ -186,7 +210,11 @@
    "_director": "Fernando Eimbcke",
    "_sondeado": "2026-10-11",
    "poster": "/assets/mubibogota-2026/moscas.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "pais_heredado": "México",
+   "_heredado": {
+    "pais_heredado": "catálogo w_R4P0Y63Z4GYV (mubibogota-2026, tiff-2026)"
+   }
   },
   {
    "titulo": "Pulp: ¿Qué harías por una canción más?",
@@ -202,9 +230,13 @@
    "lbSlug": "pulp-what-do-you-do-for-an-encore",
    "_verificado": "declarada a mano: «Pulp: What Do You Do for an Encore?» (2026), Garth Jennings: mismo director; título traducido.",
    "_director": "Garth Jennings",
-   "_sondeado": "2026-10-14",
+   "_sondeado": "2026-10-20",
    "poster": "/assets/mubibogota-2026/pulp-que-harias-por-una-cancion-mas.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "pais_heredado": "Reino Unido, Estados Unidos",
+   "_heredado": {
+    "pais_heredado": "catálogo w_X5FNNG4NDDVQ (mubibogota-2026)"
+   }
   },
   {
    "titulo": "Rose",
@@ -223,7 +255,11 @@
    "_director": "Markus Schleinzer",
    "_sondeado": "2026-10-11",
    "poster": "/assets/mubibogota-2026/rose.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "pais_heredado": "Austria, Alemania",
+   "_heredado": {
+    "pais_heredado": "catálogo w_X5FP3E8SCKY2 (mubibogota-2026)"
+   }
   },
   {
    "titulo": "Salut les Cubains",
@@ -262,7 +298,11 @@
    "_director": "Ridley Scott",
    "_sondeado": "2026-10-11",
    "poster": "/assets/mubibogota-2026/thelma-louise.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "pais_heredado": "Reino Unido, Estados Unidos, Francia",
+   "_heredado": {
+    "pais_heredado": "catálogo w_X5FRF5TC7K4Q (mubibogota-2026)"
+   }
   },
   {
    "titulo": "Tierra de mi padre",
@@ -293,7 +333,11 @@
     }
    ],
    "poster": "/assets/mubibogota-2026/tierra-de-mi-padre.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "pais_heredado": "Polonia, Alemania, Francia, Italia, Reino Unido",
+   "_heredado": {
+    "pais_heredado": "catálogo w_R4DYRQFSTNJ7 (biff-2026, mubibogota-2026)"
+   }
   },
   {
    "titulo": "Uncle Yanco",
@@ -348,9 +392,13 @@
    "lbSlug": "teenage-sex-and-death-at-camp-miasma",
    "_verificado": "declarada a mano: «Teenage Sex and Death at Camp Miasma» (2026), Jane Schoenbrun: misma directora; el título español no casa solo.",
    "_director": "Jane Schoenbrun",
-   "_sondeado": "2026-10-14",
+   "_sondeado": "2026-10-20",
    "poster": "/assets/mubibogota-2026/adolescencia-sexo-y-muerte-en-campamento-miasma.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "pais_heredado": "Reino Unido, Estados Unidos",
+   "_heredado": {
+    "pais_heredado": "catálogo w_X5FQ59F8VRWZ (mubibogota-2026)"
+   }
   },
   "Black Panthers": {
    "tmdb_id": 144597,
@@ -397,7 +445,11 @@
     }
    ],
    "poster": "/assets/mubibogota-2026/cobarde.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "pais_heredado": "Bélgica, Francia, Países Bajos",
+   "_heredado": {
+    "pais_heredado": "catálogo w_R4E4R74EAVJZ (biff-2026, mubibogota-2026, tiff-2026)"
+   }
   },
   "La cosa": {
    "tmdb_id": 1091,
@@ -415,7 +467,11 @@
    "_director": "John Carpenter",
    "_sondeado": "2026-10-11",
    "poster": "/assets/mubibogota-2026/la-cosa.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "pais_heredado": "Estados Unidos",
+   "_heredado": {
+    "pais_heredado": "catálogo w_X5FR3FQ3YATN (mubibogota-2026)"
+   }
   },
   "La niña santa": {
    "tmdb_id": 44413,
@@ -431,9 +487,13 @@
    "lbSlug": "the-holy-girl",
    "_verificado": "declarada a mano: «The Holy Girl» / «La niña santa» (2004), Lucrecia Martel: misma directora; sin año ni duración en la fuente, el candado no la ligaba.",
    "_director": "Lucrecia Martel",
-   "_sondeado": "2026-10-14",
+   "_sondeado": "2026-10-20",
    "poster": "/assets/mubibogota-2026/la-nina-santa.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "pais_heredado": "Argentina, Italia, Países Bajos, España",
+   "_heredado": {
+    "pais_heredado": "catálogo w_X5FQM0BY9JQ3 (mubibogota-2026)"
+   }
   },
   "La paga": {
    "tmdb_id": 1363770,
@@ -441,7 +501,6 @@
    "poster_path": "/5nM3a0jcl9UlcCwFyELvvCvDNGq.jpg",
    "synopsis_es": "En los Andes colombo-venezolanos, un campesino trabaja la tierra en condiciones de explotación para asegurar la supervivencia de su familia. Sin dinero para tratamiento médico, una noche se emborracha y es arrestado.",
    "synopsis_en": "In the Colombian-Venezuelan Andes, a peasant works the land under exploitative conditions to ensure the survival of his family. His son is ill, his wife is pregnant, and he himself reproduces the violence that surrounds him. With no money for medical treatment, one night he gets drunk and is arrested. In jail, in a burst of fury, he rebels against the town's political boss in the only way he can.  La Paga was a pioneering work of social and political cinema in Latin America, released the same year as Barravento, Glauber Rocha’s debut feature, and anticipating movements such as Third Cinema. Influenced by Italian Neorealism and Soviet cinema in its aesthetics, forms, and ideological approach, the film uses the archetypal representation of characters and the social and economic forces they embody. Based on the director’s childhood observations in his hometown, La Paga denounces the exploitation of the rural peasantry.",
-   "genero": "Drama",
    "anio_tmdb": 1962,
    "duracion_tmdb": 62,
    "pais_tmdb": "Venezuela, Colombia",
@@ -472,7 +531,12 @@
    "_sinopsis_de": "ya publicada en cinemancia-2025",
    "poster": "/assets/mubibogota-2026/la-paga.jpg",
    "posterSource": "tmdb",
-   "_genero_de": "catálogo w_R4ERSF68AGVJ (cinemancia-2025, filcmar-2026, mubibogota-2026)"
+   "genero": "Drama",
+   "_heredado": {
+    "genero": "catálogo w_R4ERSF68AGVJ (cinemancia-2025, filcmar-2026, mubibogota-2026)",
+    "pais_heredado": "catálogo w_R4ERSF68AGVJ (cinemancia-2025, filcmar-2026, mubibogota-2026)"
+   },
+   "pais_heredado": "Venezuela, Colombia"
   },
   "Las aventuras de Priscilla, reina del desierto": {
    "tmdb_id": 2759,
@@ -490,7 +554,11 @@
    "_director": "Stephan Elliott",
    "_sondeado": "2026-10-11",
    "poster": "/assets/mubibogota-2026/las-aventuras-de-priscilla-reina-del-desierto.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "pais_heredado": "Australia, Estados Unidos",
+   "_heredado": {
+    "pais_heredado": "catálogo w_X5FPMCP658NS (mubibogota-2026)"
+   }
   },
   "Moscas": {
    "tmdb_id": 1437703,
@@ -509,7 +577,11 @@
    "_director": "Fernando Eimbcke",
    "_sondeado": "2026-10-11",
    "poster": "/assets/mubibogota-2026/moscas.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "pais_heredado": "México",
+   "_heredado": {
+    "pais_heredado": "catálogo w_R4P0Y63Z4GYV (mubibogota-2026, tiff-2026)"
+   }
   },
   "Pulp: ¿Qué harías por una canción más?": {
    "tmdb_id": 1715598,
@@ -524,9 +596,13 @@
    "lbSlug": "pulp-what-do-you-do-for-an-encore",
    "_verificado": "declarada a mano: «Pulp: What Do You Do for an Encore?» (2026), Garth Jennings: mismo director; título traducido.",
    "_director": "Garth Jennings",
-   "_sondeado": "2026-10-14",
+   "_sondeado": "2026-10-20",
    "poster": "/assets/mubibogota-2026/pulp-que-harias-por-una-cancion-mas.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "pais_heredado": "Reino Unido, Estados Unidos",
+   "_heredado": {
+    "pais_heredado": "catálogo w_X5FNNG4NDDVQ (mubibogota-2026)"
+   }
   },
   "Rose": {
    "tmdb_id": 1176962,
@@ -544,7 +620,11 @@
    "_director": "Markus Schleinzer",
    "_sondeado": "2026-10-11",
    "poster": "/assets/mubibogota-2026/rose.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "pais_heredado": "Austria, Alemania",
+   "_heredado": {
+    "pais_heredado": "catálogo w_X5FP3E8SCKY2 (mubibogota-2026)"
+   }
   },
   "Salut les Cubains": {
    "tmdb_id": 144599,
@@ -581,7 +661,11 @@
    "_director": "Ridley Scott",
    "_sondeado": "2026-10-11",
    "poster": "/assets/mubibogota-2026/thelma-louise.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "pais_heredado": "Reino Unido, Estados Unidos, Francia",
+   "_heredado": {
+    "pais_heredado": "catálogo w_X5FRF5TC7K4Q (mubibogota-2026)"
+   }
   },
   "Tierra de mi padre": {
    "tmdb_id": 1437696,
@@ -611,7 +695,11 @@
     }
    ],
    "poster": "/assets/mubibogota-2026/tierra-de-mi-padre.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "pais_heredado": "Polonia, Alemania, Francia, Italia, Reino Unido",
+   "_heredado": {
+    "pais_heredado": "catálogo w_R4DYRQFSTNJ7 (biff-2026, mubibogota-2026)"
+   }
   },
   "Uncle Yanco": {
    "tmdb_id": 277677,
@@ -656,7 +744,7 @@
  "_sin_ficha_sondeo": {
   "Voilà Varda: cortometrajes de Agnès Varda": {
    "director": "Agnès Varda",
-   "fecha": "2026-10-11"
+   "fecha": "2026-10-20"
   }
  }
 }

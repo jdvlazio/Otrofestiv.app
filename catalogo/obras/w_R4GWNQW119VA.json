@@ -6,9 +6,13 @@
   "CO"
  ],
  "directores": [
-  "Luber Yesid Zúñiga Ordóñez"
+  "Luber Yesid Zúñiga Ordóñez."
  ],
  "aliases": [
+  {
+   "titulo": "La Gran Hazaña",
+   "tipo": "festival"
+  },
   {
    "titulo": "The Great Feat",
    "idioma": "en",
@@ -44,7 +48,9 @@
  "presentaciones": [
   "ficcali-2026",
   "ficdeh-2026",
+  "ficica-2026",
   "ficmontanas-2026",
+  "guatape-2026",
   "popayan-2026",
   "siembrafest-2026"
  ]

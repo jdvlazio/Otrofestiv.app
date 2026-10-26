@@ -1,0 +1,191 @@
+{
+ "_nota": "ANIBIA Festival de Animación 2026 (Bogotá, 20 oct–1 nov; organizan Tulpa Films, A Ocho y Medio y La Cimbra). Fuente principal: la programación oficial en PDF (Linktree) = carrusel IG DeQG0NPGy2f (13 láminas). Las obras de cada programa: las fichas de la Cinemateca de Bogotá. Sala, boletería (TuBoleta) y la hora de Fontanar entran como afirmaciones (docs/FUNCION.md). Triple lectura (21 oct): lecturas A, B (a ojo, en -ojos.json) y C cruzadas contra el build por el verificador.",
+ "radar": null,
+ "radar_nota": "no hay issue de radar de Anibia (gh issue list --label radar --search Anibia, 21 oct 2026: vacío). El festival no estaba vigilado.",
+ "fuentes_vivas": [
+  {
+   "archivo": "fuentes/anibia-2026/agenda-11.html",
+   "_que": "sala, día y hora de cada programa en la Cinemateca Centro",
+   "cmd": "curl -sL --max-time 120 https://cinematecadebogota.gov.co/agenda/11 -o fuentes/anibia-2026/agenda-11.html && grep -q 'agenda' fuentes/anibia-2026/agenda-11.html",
+   "_por_que_cmd": "urllib no valida la cadena de certificados de cinematecadebogota.gov.co; curl sí",
+   "_por_que_grep": "25 oct: sus funciones de Anibia ya pasaron y la agenda solo lista lo que viene; el crudo conserva lo afirmado antes. El grep solo comprueba que bajó una agenda"
+  },
+  {
+   "archivo": "fuentes/anibia-2026/agenda-80.html",
+   "_que": "Fontanar del Río (31 oct y 1 nov)",
+   "cmd": "curl -sL --max-time 120 https://cinematecadebogota.gov.co/agenda/80 -o fuentes/anibia-2026/agenda-80.html && grep -q 'Animage' fuentes/anibia-2026/agenda-80.html",
+   "_por_que_cmd": "urllib no valida la cadena de certificados de cinematecadebogota.gov.co; curl sí"
+  },
+  {
+   "archivo": "fuentes/anibia-2026/agenda-112.html",
+   "_que": "Mukira en CEFE Chapinero",
+   "cmd": "curl -sL --max-time 120 https://cinematecadebogota.gov.co/agenda/112 -o fuentes/anibia-2026/agenda-112.html && grep -q 'agenda' fuentes/anibia-2026/agenda-112.html",
+   "_por_que_cmd": "urllib no valida la cadena de certificados de cinematecadebogota.gov.co; curl sí",
+   "_por_que_grep": "25 oct: sus funciones de Anibia ya pasaron y la agenda solo lista lo que viene; el crudo conserva lo afirmado antes. El grep solo comprueba que bajó una agenda"
+  },
+  {
+   "archivo": "fuentes/anibia-2026/fichas/3592.html",
+   "cmd": "for n in 3513 3579 3590 3591 3592 3593 3594 3595 3596 3616 3617 3618 3692; do curl -sL --max-time 60 https://cinematecadebogota.gov.co/node/peliculas/$n -o fuentes/anibia-2026/fichas/$n.html || exit 1; done; for n in 3590 3591 3592 3593 3594 3595 3596 3616 3617 3618 3692; do curl -sL --max-time 60 'https://cinematecadebogota.gov.co/node/peliculas/'$n'?sede=11' -o fuentes/anibia-2026/fichas/s11-$n.html || exit 1; done",
+   "_que": "las fichas de programa (obras, sinopsis, afiche) y su versión ?sede=11 (link de TuBoleta)"
+  },
+  {
+   "archivo": "fuentes/anibia-2026/programacion.pdf",
+   "cmd": "curl -sL --max-time 300 'https://drive.google.com/uc?export=download&id=1oWVSdLh8OtO65UAX8pybuF2hhdnflkOK' -o fuentes/anibia-2026/programacion.pdf && pdftotext fuentes/anibia-2026/programacion.pdf /dev/null",
+   "_que": "la programación oficial (Linktree); mismo diseño que el carrusel IG DeQG0NPGy2f"
+  }
+ ],
+ "pasos": [
+  {
+   "cmd": "python3 pipeline/anibia-2026-catalogo.py",
+   "que": "las fichas de programa de la Cinemateca + el PDF → catálogo (88 obras en 14 programas)"
+  },
+  {
+   "cmd": "python3 pipeline/ig-lecturas.py DeQG0NPGy2f --ojos festivals/staging/anibia-2026-ojos.json --salida fuentes/anibia-2026/ig-lecturas.json",
+   "que": "4 lecturas del carrusel (Vision con y sin corrector, al doble, ALT) + la lectura a ojo; cada discrepancia se mira en la lámina"
+  },
+  {
+   "cmd": "python3 pipeline/anibia-2026-crudo.py",
+   "que": "el PDF transcrito (función base) + afirmaciones de la Cinemateca (sala, TuBoleta) y la decisión de Juan (hora de Fontanar)"
+  },
+  {
+   "cmd": "python3 pipeline/enriquecer.py anibia-2026 --posters",
+   "que": "TMDB verificado + 4 fichas declaradas + lo ya publicado + el afiche declarado; afiches a assets/"
+  },
+  {
+   "cmd": "python3 pipeline/ensamblar.py anibia-2026",
+   "que": "crudo + afirmaciones + plan → staging/anibia-2026-build.json"
+  },
+  {
+   "cmd": "python3 pipeline/encuadrar-posters.py anibia-2026 --aplicar --desde festivals/staging/anibia-2026-build.json",
+   "que": "los afiches a 780×1170"
+  },
+  {
+   "cmd": "python3 pipeline/anibia-2026-verificar.py",
+   "que": "el BUILD contra el PDF, la agenda y las fichas de la Cinemateca (obras y orden), en las dos direcciones, y cada sede con su pin"
+  }
+ ],
+ "_fuentes_versionadas": {
+  "festivals/staging/anibia-2026-catalogo.json": "las obras (88), que lee el crudo",
+  "festivals/staging/anibia-2026-catalogo-enriquecido.json": "las fichas del pre-onboarding (enriquecer_catalogo); las mide pipeline/preonboarding.py",
+  "festivals/staging/anibia-2026-correcciones.json": "4 fichas declaradas y sin_afiche; las leen enriquecer.py y los guardianes",
+  "festivals/staging/anibia-2026-afiches.json": "el afiche de Aguacero (ficha 3594 de la Cinemateca); lo lee enriquecer.py",
+  "festivals/staging/anibia-2026-ojos.json": "la lectura B a ojo de las láminas; la lee ig-lecturas.py --ojos",
+  "festivals/staging/anibia-2026-afirmaciones.json": "sala, TuBoleta y la hora de Fontanar; lo escribe el crudo y lo leen ensamblar y el verificador"
+ },
+ "festival": {
+  "crudo": "festivals/staging/anibia-2026-crudo.json",
+  "enriquecido": "festivals/staging/anibia-2026-enriquecido.json",
+  "geo": "festivals/staging/anibia-2026-venues-geo.json",
+  "_por_que_sedes": "Tabla canónica en el crudo: una sede por edificio, la sala aparte. La Cinemateca Sala Alterna UNAL es el Auditorio 422 del 303C (UNAL): misma sede que la charla del Bloque C. Pines de Google Maps, a mano (venues-geo). Corrección 25 oct: la Sala Alterna proyecta en el Auditorio 105 del Edificio 301 (la sala misma, IG De2wLBxDY-Q), sede propia; el 303 queda para el Reel/WIP Day y la charla del Bloque C.",
+  "sedes": {
+   "Cinemateca de Bogotá": [
+    "Cinemateca de Bogotá - Bogotá",
+    ""
+   ],
+   "Cinemateca Fontanar del Río": [
+    "Cinemateca Fontanar del Río - Bogotá",
+    ""
+   ],
+   "CEFE Chapinero": [
+    "CEFE Chapinero - Bogotá",
+    ""
+   ],
+   "Universidad Nacional, Edificio 303 (NEA)": [
+    "Universidad Nacional, Edificio 303 (NEA) - Bogotá",
+    ""
+   ],
+   "Universidad Nacional, Edificio 301": [
+    "Universidad Nacional, Edificio 301 - Bogotá",
+    ""
+   ],
+   "Universidad Jorge Tadeo Lozano, Ed. Biblioteca": [
+    "Universidad Jorge Tadeo Lozano, Ed. Biblioteca - Bogotá",
+    ""
+   ],
+   "Universidad Jorge Tadeo Lozano, Módulo 4": [
+    "Universidad Jorge Tadeo Lozano, Módulo 4 - Bogotá",
+    ""
+   ],
+   "Pontificia Universidad Javeriana": [
+    "Pontificia Universidad Javeriana - Bogotá",
+    ""
+   ]
+  },
+  "_por_que_secciones": "Las palabras son del festival (PDF/láminas), en caja de Título: Surgentes, Con Acento Nacional, Costa a Costa, Conexión, Todxs a Bordo, Conexión de Largo Aliento; Charla, Cine Concierto & Panel y Exposición son el rótulo de la lámina. Emoji, inglés y arquetipo decididos por delegación de Juan (21 oct). Con Acento Nacional = Competencia (tiene entrega de reconocimientos).",
+  "secciones": {
+   "Surgentes": {
+    "emoji": "🌋",
+    "en": "Surgentes",
+    "archetype": "Perspectivas / Miradas"
+   },
+   "Con Acento Nacional": {
+    "emoji": "🎨",
+    "en": "Con Acento Nacional — National Competition",
+    "archetype": "Competencia"
+   },
+   "Costa a Costa": {
+    "emoji": "🌊",
+    "en": "Coast to Coast",
+    "archetype": "Muestra / País"
+   },
+   "Conexión": {
+    "emoji": "🔗",
+    "en": "Connection",
+    "archetype": "Retrospectiva / Tributo"
+   },
+   "Todxs a Bordo": {
+    "emoji": "🚂",
+    "en": "All Aboard",
+    "archetype": "Especiales / Eventos"
+   },
+   "Conexión de Largo Aliento": {
+    "emoji": "🎙️",
+    "en": "Long-Haul Connection",
+    "archetype": "Charlas / Industria"
+   },
+   "Charla": {
+    "emoji": "💬",
+    "en": "Talk",
+    "archetype": "Charlas / Industria"
+   },
+   "Cine Concierto & Panel": {
+    "emoji": "🎻",
+    "en": "Film Concert & Panel",
+    "archetype": "Especiales / Eventos"
+   },
+   "Exposición": {
+    "emoji": "🖼️",
+    "en": "Exhibition",
+    "archetype": "Especiales / Eventos"
+   },
+   "Día Internacional de la Animación": {
+    "emoji": "🎞️",
+    "en": "International Animation Day",
+    "archetype": "Charlas / Industria"
+   }
+  },
+  "name": "Anibia",
+  "displayName": "Anibia",
+  "fullName": "Anibia — Festival de Animación 2026",
+  "shortName": "ANIBIA",
+  "tagline": "Festival de Animación",
+  "city": "Bogotá",
+  "country": "CO",
+  "dates": "20 OCT–1 NOV",
+  "dates_en": "OCT 20–NOV 1",
+  "year": 2026,
+  "timezoneOffset": "-05:00",
+  "storageKey": "anibia2026_",
+  "festivalStartStr": "2026-10-20T00:00:00",
+  "festivalEndStr": "2026-11-01T23:59:00",
+  "sharedSlotIsOneScreening": false,
+  "mes_es": "octubre",
+  "dias_vacios": [
+   "2026-10-26",
+   "2026-10-29"
+  ],
+  "_por_que_dias_vacios": "el PDF no programa nada el lunes 26 ni el jueves 29 (la exposición tampoco aparece esos días)",
+  "_por_que_acceso": "Mixto: la Cinemateca Centro vende con TuBoleta (afirmación de sala) salvo la inaugural; el resto, entrada libre según el PDF.",
+  "ticketing_model": "mixed"
+ }
+}

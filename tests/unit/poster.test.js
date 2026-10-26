@@ -215,7 +215,7 @@ test('editorialFrame (forma B §6.0): filete + sección + campo 16:9 + pie', () 
   assert.ok(!html.includes('ed-scrim'), 'el scrim murió: el título ya no va encima de la imagen');
   assert.ok(html.includes('class="ed-foot"') && html.includes('class="ed-title"'), 'título anclado al pie');
   assert.ok(html.includes('class="ed-dato"') && html.includes('96 min'), 'el dato vive en el pie');
-  assert.ok(html.includes('_edPosterErr(this)'), 'usa el onerror unificado editorial (en el still)');
+  assert.ok(html.includes('data-err="ed"'), 'usa el fallback unificado editorial (en el still; data-err, sin onerror inline — CSP)');
   assert.ok(!html.includes('poster-ed'), 'NO incluye el wrapper — eso lo pone el contenedor');
 });
 

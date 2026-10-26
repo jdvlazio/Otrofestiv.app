@@ -75,6 +75,10 @@ SEDES = {
     'Canterbury Café Kennedy': ('Canterbury Café', '', 'Bogotá'),
     'Auditorio, Centro de Memoria, Paz y Reconciliación': ('Centro de Memoria, Paz y Reconciliación', 'Auditorio', 'Bogotá'),
     'Auditorio Santander, Universidad Central': ('Universidad Central', 'Auditorio Santander', 'Bogotá'),
+    # nueva en la web del 19 oct (Hijo de tigre y mula, Un lugar más grande): el
+    # Edificio de Posgrados (Módulo 16) de la Tadeo; el aula va como sala
+    'Aula Magistral 705 - M16 (piso 7), Edificio de Posgrados, Universidad Jorge Tadeo Lozano':
+        ('Universidad Jorge Tadeo Lozano', 'Aula Magistral 705 - M16 (piso 7), Edificio de Posgrados', 'Bogotá'),
     'Bodega Insurgesta, Potosí, Ciudad Bolívar': ('Bodega Insurgesta', '', 'Bogotá'),
     'Servicio Forjar Restaurativo Arborizadora Baja, Ciudad Bolívar': ('Servicio Forjar Restaurativo Arborizadora Baja', '', 'Bogotá'),
     'Centro Ático, Universidad Javeriana': ('Centro Ático, Universidad Javeriana', '', 'Bogotá'),
@@ -100,6 +104,9 @@ SEDE_FUERA = {
     'Cine club Cine 40 de Minca, Santa Marta': 'función fuera de Bogotá (Minca)',
     'MAMM, El Poblado, Medellín': 'función fuera de Bogotá (Medellín)',
     'Universidad de Antioquia, Paraninfo, sala de cine': 'función fuera de Bogotá (Medellín)',
+    # 21 oct 2026: la web reescribió el Paraninfo con otro orden; misma sala, misma regla
+    'Sala de cine Paraninfo, Universidad de Antioquia, Medellín': 'función fuera de Bogotá (Medellín)',
+    'Auditorio Victoria Regia, Universidad Nacional de Colombia, sede Amazonía, Leticia': 'función fuera de Bogotá (Leticia)',
 }
 
 
@@ -124,6 +131,47 @@ SEDE_SEM = {'Sala Capital, Cinemateca de Bogotá': ('Cinemateca de Bogotá', 'Sa
 DIA_SEM = re.compile(r'^(Lunes|Martes|Miércoles|Jueves|Viernes|Sábado|Domingo) (\d{1,2}) de (octubre|noviembre)$')
 RENGLON = re.compile(r'^(\d{1,2})(?::(\d{2}))?\s*(a\.?\s*m\.?|p\.?\s*m\.?|m\.?)?\s*a\s+(\d{1,2})(?::(\d{2}))?\s*'
                      r'(a\.?\s*m\.?|p\.?\s*m\.?|m\.?)?\s*[–-]\s*(.+)$', re.I)
+
+
+# LA DESCRIPCIÓN DE CADA SESIÓN (Juan, 26 oct 2026: 14 actividades salían sin
+# texto). La página del seminario no la da por renglón sino en su texto de
+# presentación, una frase por sesión: va VERBATIM, recortada a la frase (sin el
+# «Y»/«Finalmente,» que la enlaza con la anterior). midbo.co/encuentro-pensar-
+# lo-real/seminario/, leída el 26 oct. La charla de audio descripción y el
+# lanzamiento del podcast no tienen frase: quedan solo con sus invitados.
+DESCRIPCION_SEM = {
+    'Master Class: La escucha en el cine directo':
+        'Claire Simon abordará «La escucha en el cine directo».',
+    'Master Class: Puntos de escucha':
+        'Mercedes Gaviria propondrá pensar el «Punto de escucha».',
+    'Master Class: Pensar el sonido':
+        'Samuel Larson explorará las posibilidades expresivas, narrativas y conceptuales del sonido en «Pensar el sonido».',
+    'Mesa redonda: Urgencia y experimentación: sonidos del tercer cine':
+        'La mesa «Urgencia y experimentación: sonidos del tercer cine», con Eduardo Rencurrel, Jacobo del Castillo y la '
+        'moderación de Adriana H. Bocanegra, recupera la dimensión política de las prácticas audiovisuales '
+        'latinoamericanas a partir del sonido.',
+    'Mesa redonda: Escuchar el archivo':
+        '«Escuchar el archivo», con Archipiélago Sonoro y Guateque Cine, y la moderación de Laura Alhach, propone nuevas '
+        'formas de aproximarse a los materiales documentales y de archivos desde la escucha.',
+    'Mesa redonda: Escucha contínua. Homenaje a Roberto García.':
+        '«Escucha continua. Homenaje a Roberto García», con Nelson Vergara, Carlos Santa y Pablo Mora, moderado por '
+        'Jorjan Betancourt, revisita el legado de este compositor y artista sonoro a partir de su obra y sus materiales '
+        'de archivo.',
+    'Diálogo: Dirigir desde la Nagra':
+        '«Dirigir desde la Nagra», con Marta Rodríguez y Felipe Colmenares, recupera la experiencia de una de las grandes '
+        'pioneras del documental colombiano y la relación entre dirección sonora, trabajo de campo y construcción de una '
+        'mirada documental.',
+    # errata del festival: su texto escribe «Aizengber»; su propia programación
+    # (línea de invitados de la misma página) la escribe «Aizenberg». Se corrige
+    # a la grafía del festival (Juan, 26 oct 2026)
+    'Diálogo: Silencio y fabulación de archivo':
+        '«Silencio y fabulación de archivo», con Azul Aizenberg y Juana Schlenker, abrirá una reflexión sobre aquello que '
+        'ocurre cuando el archivo deja de ser únicamente evidencia para convertirse en materia de imaginación, '
+        'interpretación y creación.',
+    'Diálogo: Música original para documentales, el proceso práctico':
+        '«Música en el cine documental», con Santiago Lozano y Jorge Andrés Botero, permitirá explorar las tensiones y '
+        'posibilidades que surgen cuando la música entra en relación con las imágenes de lo real.',
+}
 
 
 def _h24(h, m, ap):
@@ -153,6 +201,13 @@ def seminario():
                 act = r.group(7).strip()
                 inv = []
                 j = i + 1
+                # «Diálogo: Música original para documentales, el proceso práctico»
+                # sigue en el renglón de abajo («y creativo en tres casos de
+                # estudio») y sus invitados quedaban fuera. El título publicado no
+                # se toca (renombrar borra lo guardado): solo se salta el renglón.
+                if (j + 1 < len(L) and L[j][:1].islower()
+                        and re.match(r'^(Invitad[oaex]s?|Modera)\s*:', L[j + 1])):
+                    j += 1
                 while j < len(L) and re.match(r'^(Invitad[oaex]s?|Modera)\s*:', L[j]):
                     inv.append(re.sub(r'\[[a-z]\]', '', L[j]).strip())
                     j += 1
@@ -167,12 +222,118 @@ def seminario():
                                 'ciudad': 'Bogotá', 'tipo': 'evento', 'event_kind': kind, 'seccion': SECCION_SEMINARIO,
                                 'duracion_min': (int(fin[:2]) * 60 + int(fin[3:])) - (int(ini[:2]) * 60 + int(ini[3:])),
                                 'acceso': ACCESO_SEMINARIO,
-                                **({'invitados': ' · '.join(inv) + '.'} if inv else {}),
+                                **({'sinopsis': DESCRIPCION_SEM[act]} if act in DESCRIPCION_SEM else {}),
+                                **({'invitados': ' · '.join(re.sub(r'\s+', ' ', x) for x in inv) + '.'} if inv else {}),
                                 '_src': {'url': 'https://midbo.co/encuentro-pensar-lo-real/seminario/', 'date': '2026-10-10'}})
                 i = j
                 continue
         i += 1
     return out, fuera
+
+
+# ── LAS ACTIVACIONES SONORAS «Documental Expandido» (post de @midbo_doc del 21
+# oct, instagram.com/p/DexoaAzCV-0, 5 láminas): no están en midbo.co. Títulos
+# verbatim de las láminas 2 y 3 (en caja de oración: la lámina va en
+# mayúscula sostenida). Las de la lámina 4–5 (10 nov) quedan fuera: solo días
+# oficiales. Ninguna lámina da hora de fin → duración ESTIMADA (60 / 90 min).
+# «Diario de una oreja» es «en el marco del Seminario Pensar lo Real» → su
+# sección y su acceso; el homenaje no anuncia pago → entrada libre.
+_SRC_ACT = {'url': 'https://www.instagram.com/p/DexoaAzCV-0/', 'date': '2026-10-21'}
+ACTIVACIONES = [
+    {'titulo': 'Diario de una oreja', 'dia': '2026-10-29', 'hora': '19:30',
+     'sede': 'Alianza Francesa', 'sala': 'Sede Centro', 'ciudad': 'Bogotá',
+     'tipo': 'evento', 'event_kind': 'evento', 'seccion': SECCION_SEMINARIO,
+     'duracion_min': 60, 'acceso': ACCESO_SEMINARIO,
+     # sinopsis e invitados: su ficha en midbo.co/obras/diario-de-una-oreja/ (26 oct), verbatim
+     'invitados': 'Diana Martínez Muñoz / José Delgadillo Gaviria.',
+     'sinopsis': 'Diario de una oreja es un performance documental sonoro que piensa la escucha desde una perspectiva '
+                 'cyborg. Diana Martínez Muñoz, junto a José Delgadillo Gaviria, compone un álbum de piezas sonoras y '
+                 'textos leídos en vivo a partir de la pérdida auditiva, el implante coclear, el diseño sonoro y la '
+                 'docencia en cine. Entre oscuridad, voz, sintetizadores e imágenes, la obra convierte el sonido en '
+                 'territorio político, íntimo y especulativo.',
+     '_src': _SRC_ACT},
+    {'titulo': 'Homenaje Roberto García Piedrahita QEDP', 'dia': '2026-10-31', 'hora': '19:00',
+     'sede': 'Universidad Jorge Tadeo Lozano, Edificio Fabio Lozano', 'sala': 'Auditorio Fabio Lozano', 'ciudad': 'Bogotá',
+     'tipo': 'evento', 'event_kind': 'concierto', 'seccion': 'Documental Expandido',
+     'duracion_min': 90, 'acceso': 'Entrada libre (no se anuncia pago)',
+     # sinopsis e invitados: su ficha «Obras inéditas de Roberto García Piedrahita»
+     # (midbo.co/obras/homenaje-a-roberto-garcia-piedrahita/, 26 oct), verbatim
+     'invitados': 'Roberto García Piedrahita / Sergio Andrés Román.',
+     'sinopsis': 'Obras inéditas de Roberto García Piedrahita propone una activación en vivo a partir de materiales '
+                 'sonoros poco conocidos del compositor, artista sonoro y docente Roberto García. Alberto Vargas, Sergio '
+                 'Román y Jorjan Betancourt abordan ese archivo como campo de resonancia, memoria y transmisión. La '
+                 'improvisación no busca fijar una obra, sino prolongar sus posibilidades: hacer que el legado de García '
+                 'vuelva a sonar como acontecimiento abierto dentro del pensamiento experimental colombiano. Se '
+                 'proyectaran fragmentos de las peliculas Fragmentos (1999), Batallas Sagradas (2002), Quién paga el pato '
+                 '(2001) para las que Roberto García hizo la música.',
+     '_src': _SRC_ACT},
+    # LA INAUGURACIÓN (post de @midbo_doc del 23 oct, instagram.com/p/De3AsKjiTRT,
+    # 4 láminas, leídas sin sesión con ig-lecturas.py + a ojo): lámina 1 = título,
+    # sede, sala, día, hora, «PROYECCIÓN EN 16MM Y SONIDO EN VIVO», «Entrada
+    # Libre»; láminas 2 y 3 = las dos obras («ACTIVACIÓN INAUGURAL», artista y
+    # formato). Título en caja de oración (la lámina va en mayúscula sostenida).
+    # Ninguna lámina ni el pie da hora de fin → duración ESTIMADA en 60 min: dos
+    # activaciones en vivo de obra corta, como «Diario de una oreja».
+    {'titulo': 'Inauguración Documental Expandido', 'dia': '2026-10-28', 'hora': '16:30',
+     'sede': 'Cinemateca de Bogotá', 'sala': 'Sala E', 'ciudad': 'Bogotá',
+     'tipo': 'evento', 'event_kind': 'evento', 'seccion': 'Documental Expandido',
+     # 26 oct: la ficha de «Patrimonio líquido II» en midbo.co da la hora de fin:
+     # «28 de octubre / 4:30 - 6:00pm · Sala E · Inauguración Expandido» → 90 min
+     'duracion_min': 90, '_duracion_de': 'midbo.co/obras/patrimonio-liquido-ii/: 4:30 - 6:00pm',
+     'acceso': 'Entrada libre',
+     'sinopsis': 'Proyección en 16 mm y sonido en vivo. Primera activación de Documental Expandido.',
+     'obras': [
+         # sinopsis: sus fichas en midbo.co/obras/circo/ y /patrimonio-liquido-ii/
+         # (26 oct), verbatim. Ninguna da duración propia: es una activación en vivo
+         {'titulo': 'Circo', 'director': 'Daniel Torres',
+          'sinopsis': 'Circo convierte una carpa construida con retazos de tela en un dispositivo de memoria. En su '
+                      'interior, los recuerdos de infancia de “Lolita” reaparecen de manera fragmentaria a través de '
+                      'imágenes en 16 mm, video, voces y variaciones de luz. Daniel Torres articula estos elementos '
+                      'mediante una operación performativa en la que las proyecciones se desplazan sobre las superficies '
+                      'textiles, transformándolas en pantallas inestables y cuerpos en movimiento.'},
+         {'titulo': 'Patrimonio Líquido II', 'director': 'Sergio Díaz',
+          'sinopsis': 'Patrimonio líquido II toma como punto de partida la cascada artificial formada por el desagüe '
+                      'del embalse de Chisacá para interrogar la construcción del paisaje y las lógicas de extracción '
+                      'que atraviesan el territorio. Sergio Díaz articula video, fotografía, sonido y una superficie '
+                      'textil sobre la que la imagen del agua adquiere una presencia casi material.'},
+     ],
+     '_src': {'url': 'https://www.instagram.com/p/De3AsKjiTRT/', 'date': '2026-10-23'}},
+    # LAS VISITAS GUIADAS AL CMPR (post de @midbo_doc del 25 oct,
+    # instagram.com/p/De7_QLjCTdz, láminas 2 y 3, leídas con ig-lecturas.py + a
+    # ojo el 26 oct): «3:00 p.m. Visita guiada por el CMPR. Inscripción previa,
+    # enlace en la bio.», jue 29 oct y mar 3 nov. No están en midbo.co. Título
+    # verbatim (sin el punto final). Ninguna lámina da hora de fin, y la
+    # siguiente función del CMPR empieza a las 4:00 / 4:30 → duración ESTIMADA
+    # en 60 min. Sin sección propia en la web: «Programas especiales», la de
+    # eventos del plan
+    *[{'titulo': 'Visita guiada por el CMPR', 'dia': _d, 'hora': '15:00',
+       'sede': 'Centro de Memoria, Paz y Reconciliación', 'ciudad': 'Bogotá',
+       'tipo': 'evento', 'event_kind': 'evento', 'seccion': 'Programas especiales',
+       'duracion_min': 60, '_duracion_de': 'estimada: la lámina no da hora de fin',
+       'acceso': 'Entrada gratuita con inscripción previa',
+       '_src': {'url': 'https://www.instagram.com/p/De7_QLjCTdz/', 'date': '2026-10-26'}}
+      for _d in ('2026-10-29', '2026-11-03')],
+    # La exposición de la Cinemateca (agenda de la sala = fuente de sala, hora y
+    # acceso; cinematecadebogota.gov.co/exposiciones?id=3663, leída el 22 oct):
+    # va del 28 oct al 16 nov → abierta (info) recortada al 4 nov, último día
+    # oficial. Horario de la sala: mar–vie 14:00–18:00, sáb/dom/fest 11:00–18:00;
+    # el 28 oct es miércoles → 14:00, 240 min.
+    {'titulo': 'Escuchar lo que permanece', 'dia': '2026-10-28', 'hora': '14:00',
+     'sede': 'Cinemateca de Bogotá', 'sala': 'Sala E', 'ciudad': 'Bogotá',
+     'tipo': 'evento', 'event_kind': 'evento', 'seccion': 'Documental Expandido',
+     'info': True, 'hasta': '2026-11-04', 'duracion_min': 240,
+     '_duracion_de': 'martes a viernes 2:00 p. m. a 6:00 p. m., agenda de la Cinemateca',
+     'acceso': 'Entrada libre reclamando boleta en taquilla',
+     # texto de sala: la misma ficha de la Cinemateca (26 oct), verbatim, recortado
+     # a la pregunta y el primer párrafo; artistas y curaduría tal cual sus rótulos
+     'sinopsis': '¿Qué escuchamos cuando una imagen guarda silencio? En las cuatro obras de la exposición, el sonido '
+                 'aparece como una materia inestable. Puede habitar una voz, adherirse a un paisaje, surgir de una '
+                 'textura o permanecer latente en una imagen. A veces se oye. A veces debe ser imaginado. '
+                 'Martes a viernes: 2:00 p.m. a 6:00 p.m. Sábados, domingos y festivos: 11:00 a.m. a 6:00 p.m.',
+     'invitados': 'Artista: María Isabella Arenas, Sergio Díaz, Daniel Torres, Yareni Velázquez Mendoza · '
+                  'Curaduría: Jorjan Betancourt.',
+     '_src': {'url': 'https://cinematecadebogota.gov.co/exposiciones?id=3663', 'date': '2026-10-22'}},
+]
 
 
 def plano(s):
@@ -269,8 +430,13 @@ def ficha(L, BLOQUES):
 
 
 def main():
-    obras = json.load(io.open(f'{DIR}/pelicula-1.json', encoding='utf-8')) + \
-        json.load(io.open(f'{DIR}/pelicula-2.json', encoding='utf-8'))
+    # pelicula.json es la fuente viva (todas las páginas de la API, ver el plan);
+    # pelicula-1/-2 son la bajada a mano del 10 oct
+    if os.path.exists(f'{DIR}/pelicula.json'):
+        obras = json.load(io.open(f'{DIR}/pelicula.json', encoding='utf-8'))
+    else:
+        obras = json.load(io.open(f'{DIR}/pelicula-1.json', encoding='utf-8')) + \
+            json.load(io.open(f'{DIR}/pelicula-2.json', encoding='utf-8'))
     S = {s['id']: s for s in json.load(io.open(f'{DIR}/seccion.json', encoding='utf-8'))}
     fuera, slots = [], {}
     for o in obras:
@@ -307,6 +473,7 @@ def main():
             s['hora'] = min(s['hora'], f['hora'])
             s['gala'] = gala
             s['obras'].append({'titulo': titulo, 'url': o['link'], 'madre': madre['name'] if madre else None,
+                               '_hora': f['hora'], '_notas': list(f['notas']),
                                **{c: d[c] for c in ('director', 'pais', 'anio', 'duracion_min', 'sinopsis') if d.get(c)}})
             # en ORDEN y sin repetir: un set no tiene orden y el «primer» estreno
             # o la «primera» duración salían distintos en cada corrida (15 oct)
@@ -314,6 +481,40 @@ def main():
             s['por_obra'].append(f['notas'])
             if hija and not conjunta:
                 s['programa'] = html.unescape(hija['name'])
+    # UNA OBRA QUE EMPIEZA CUANDO SU PROGRAMA YA TERMINÓ no es de esa función
+    # (19 oct 2026, vigía): «L'Evangile de la Révolution» comparte programa, día
+    # y sala con el Programa 7 (4 nov, 14:00, «Duración total programa: 97'» =
+    # 20 + 77 de las otras dos) pero su ficha dice 16:00 y 115 min, con su
+    # director. El programa declara su duración total; lo que arranca después de
+    # inicio + total sale a su propia función. La regla de «el segundo corto al
+    # terminar el primero» (Tanto trabajo por hacer) sigue: arranca DENTRO.
+    def _min(h):
+        return int(h[:2]) * 60 + int(h[3:5])
+    for k in list(slots):
+        s = slots[k]
+        if not s.get('programa') or len(s['obras']) < 2:
+            continue
+        tot = {int(m.group(1)) for n in s['notas'] for m in [re.search(r"Duración total[^0-9]*(\d+)'", n)] if m}
+        if len(tot) != 1:
+            continue
+        fin = _min(s['hora']) + tot.pop()
+        fuera_ = [x for x in s['obras'] if _min(x['_hora']) >= fin]
+        if not fuera_ or len(fuera_) == len(s['obras']):
+            continue
+        for x in fuera_:
+            i = s['obras'].index(x)
+            s['obras'].pop(i)
+            s['por_obra'].pop(i)
+            n2 = slots.setdefault((k[0], x['_hora'], k[1]), {'obras': [], 'notas': [], 'por_obra': [], 'programa': None,
+                                                             'hora': x['_hora'], 'sede': s['sede'], 'sala': s['sala'],
+                                                             'ciudad': s['ciudad'], 'gala': s.get('gala')})
+            n2['obras'].append(x)
+            n2['por_obra'].append(x['_notas'])
+            n2['notas'] += [n for n in x['_notas'] if n not in n2['notas']]
+        # las notas del programa son las de las obras que quedan
+        s['notas'] = []
+        for ns in s['por_obra']:
+            s['notas'] += [n for n in ns if n not in s['notas']]
     funciones = []
     for k, s in sorted(slots.items(), key=lambda kv: (kv[0][0], kv[1]['hora'])):
         dia, hora = k[0], s['hora']
@@ -398,6 +599,20 @@ def main():
             reg = {**base, 'seccion': madre,
                    **{k: v for k, v in x.items() if k in ('titulo', 'director', 'pais', 'anio', 'duracion_min', 'sinopsis')}}
         funciones.append({k: v for k, v in reg.items() if v not in (None, '')})
+    # «CREADORAS DE VIDA» EN LA BODEGA LLEVA LAS CINCO (post de @midbo_doc del 25
+    # oct, instagram.com/p/De7_QLjCTdz, lámina 7, leída con ig-lecturas.py + a
+    # ojo el 26 oct): «Programa 3.» en la Bodega Insurgesta, jue 29 oct 5:00 p.m.,
+    # lista Invierno Flores Jardín, Madres de nacimiento, No es una herida,
+    # Montaña luminosa y Geografía Espectral (Manuel Mateo Gomez, 2026, 22 min).
+    # La ficha web de Geografía espectral solo nombra la función del 2 nov, pero
+    # la propia web declara 99′ para el programa, y 99 solo cuadra con las cinco
+    # (28+8+15+26+22). La lámina es más reciente: se suma, con los datos de su
+    # ficha (la misma obra de la Cinemateca, 2 nov)
+    _geo = next((o for f in funciones for o in (f.get('obras') or []) if o['titulo'] == 'Geografía espectral'), None)
+    for f in funciones:
+        if (f.get('sede'), f.get('dia'), f.get('hora')) == ('Bodega Insurgesta', '2026-10-29', '17:00') and _geo \
+                and f.get('obras') and not any(o['titulo'] == _geo['titulo'] for o in f['obras']):
+            f['obras'].append(dict(_geo))
     # DOS BLOQUES CON EL NOMBRE DE SU SECCIÓN y obras distintas (las dos funciones
     # del Homenaje a Pablo Mora): cada uno se nombra por sus obras, o la app
     # mostraría la lista de uno en el otro ([programa-mismo-titulo])
@@ -424,6 +639,7 @@ def main():
             o['titulo'] = o['titulo'].replace('’', "'").replace('‘', "'")
     sem, sem_fuera = seminario()
     funciones += sem
+    funciones += ACTIVACIONES
     fuera += sem_fuera
     io.open(OUT, 'w', encoding='utf-8').write(json.dumps({
         '_provenance': provenance('midbo.co — ficha de cada obra (bloque «Funciones») + API pelicula/seccion',

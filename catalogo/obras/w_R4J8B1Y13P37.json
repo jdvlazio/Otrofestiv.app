@@ -1,17 +1,16 @@
 {
  "id": "w_R4J8B1Y13P37",
- "titulo_original": "Relatos del camino",
+ "titulo_original": "Relatos del Camino",
  "anio": 2025,
  "paises": [
-  "C",
-  "O"
+  "CO"
  ],
  "directores": [
   "Daniel Prieto Muriel"
  ],
  "aliases": [
   {
-   "titulo": "Relatos del Camino",
+   "titulo": "Relatos del camino",
    "tipo": "festival"
   }
  ],
@@ -23,7 +22,7 @@
   "Documental"
  ],
  "afiche": {
-  "archivo": "/assets/ficpa-2026/relatos-del-camino.jpg",
+  "archivo": "/assets/anibia-2026/relatos-del-camino.jpg",
   "veredicto": "oficial"
  },
  "xref": {
@@ -37,6 +36,8 @@
   }
  ],
  "presentaciones": [
+  "anibia-2026",
+  "cortoscali-2026",
   "ficmontanas-2026",
   "ficpa-2026",
   "jardin-2026",

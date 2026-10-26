@@ -303,7 +303,8 @@
    },
    "is_free": true,
    "description": "A cargo de Harold Trompetero (Colombia).",
-   "description_lang": "es"
+   "description_lang": "es",
+   "id": "f_b503fb0586"
   },
   {
    "title": "Conversatorio sobre la experiencia en Cine y Televisión",
@@ -323,7 +324,8 @@
    },
    "is_free": true,
    "description": "A cargo de María Helena Doëring (Colombia).",
-   "description_lang": "es"
+   "description_lang": "es",
+   "id": "f_564146057b"
   },
   {
    "title": "Master Class \"Desarrollar el Carisma\"",
@@ -343,7 +345,8 @@
    },
    "is_free": true,
    "description": "A cargo de Diego Trujillo (Colombia).",
-   "description_lang": "es"
+   "description_lang": "es",
+   "id": "f_00b8c274b3"
   },
   {
    "title": "Apertura de la exposición \"Nariño como locación cinematográfica\" y \"Vitrina de servicios audiovisuales\"",
@@ -361,7 +364,8 @@
     "url": "https://www.ficpa.co/programacion2026/",
     "date": "2026-10-09"
    },
-   "is_free": true
+   "is_free": true,
+   "id": "f_d28ff8d333"
   },
   {
    "title": "Lactar",
@@ -391,7 +395,8 @@
    "is_free": true,
    "lbSlug": "lactar",
    "tmdb_id": 1694304,
-   "synopsis_en": "A 62-year-old woman, trapped in a life of empty privilege, becomes pregnant by her driver. Facing rejection from her family and society, she decides to fight to bring to life a baby that seems impossible at her late age, regardless of the consequences."
+   "synopsis_en": "A 62-year-old woman, trapped in a life of empty privilege, becomes pregnant by her driver. Facing rejection from her family and society, she decides to fight to bring to life a baby that seems impossible at her late age, regardless of the consequences.",
+   "id": "f_0337f6219a"
   },
   {
    "title": "Taller Central \"Videoclip Branding\"",
@@ -411,7 +416,8 @@
    },
    "is_free": true,
    "description": "A cargo de Juan David Betancur (Bogotá).",
-   "description_lang": "es"
+   "description_lang": "es",
+   "id": "f_5248f0837e"
   },
   {
    "title": "Taller Nuestro Talento \"Cine para no cineastas\"",
@@ -431,7 +437,8 @@
    },
    "is_free": true,
    "description": "A cargo de Gabriela Pazmiño (Colombia).",
-   "description_lang": "es"
+   "description_lang": "es",
+   "id": "f_3adf236942"
   },
   {
    "title": "Conversatorio con María Jimena Duzán y proyección de \"Después del frío\"",
@@ -451,7 +458,8 @@
    },
    "is_free": true,
    "description": "Proyección de «Después del frío» (María Jimena Duzán, largometraje colombiano documental) y conversatorio con su directora. A cargo de María Jimena Duzán (Colombia).",
-   "description_lang": "es"
+   "description_lang": "es",
+   "id": "f_5c0ed6333d"
   },
   {
    "title": "Cine comunitario en el encuentro de su propio relato",
@@ -471,7 +479,8 @@
    },
    "is_free": true,
    "description": "A cargo de Colectivo Estrella de Chambú (Pasto).",
-   "description_lang": "es"
+   "description_lang": "es",
+   "id": "f_d07ab53e5d"
   },
   {
    "title": "Cortos Universitarios",
@@ -555,7 +564,8 @@
    ],
    "titulos_anteriores": [
     "Cortos universitarios"
-   ]
+   ],
+   "id": "f_3b034e1d91"
   },
   {
    "title": "Selección Churo Cósmico: Identidades",
@@ -614,7 +624,8 @@
      "year": 2025,
      "flags": "🇨🇴"
     }
-   ]
+   ],
+   "id": "f_5122aa6350"
   },
   {
    "title": "La imaginación sintética: Estéticas y posibilidades del cine con I.A",
@@ -634,7 +645,8 @@
    },
    "is_free": true,
    "description": "A cargo de William Lucero (Pasto).",
-   "description_lang": "es"
+   "description_lang": "es",
+   "id": "f_6f426082bc"
   },
   {
    "title": "El río como víctima del conflicto",
@@ -654,7 +666,8 @@
    },
    "is_free": true,
    "description": "A cargo de Juan Camilo Ocaña (Pasto).",
-   "description_lang": "es"
+   "description_lang": "es",
+   "id": "f_46870a8257"
   },
   {
    "title": "Churo Cósmico: animación y videoclip nariñense",
@@ -673,7 +686,8 @@
     "date": "2026-10-09",
     "programacion": "alterna"
    },
-   "is_free": true
+   "is_free": true,
+   "id": "f_a92a71a7b4"
   },
   {
    "title": "Aquello que sostiene una película: La producción",
@@ -693,7 +707,8 @@
    },
    "is_free": true,
    "description": "A cargo de Carolina Beltrán (Pasto).",
-   "description_lang": "es"
+   "description_lang": "es",
+   "id": "f_2c0b9c821d"
   },
   {
    "title": "Cortos Internacionales",
@@ -748,7 +763,8 @@
    ],
    "titulos_anteriores": [
     "Cortos internacionales"
-   ]
+   ],
+   "id": "f_2490a0ac31"
   },
   {
    "title": "Corrientes del Amazonas",
@@ -775,7 +791,8 @@
    },
    "is_free": true,
    "lbSlug": "corrientes-del-amazonas",
-   "tmdb_id": 1796532
+   "tmdb_id": 1796532,
+   "id": "f_3ddbe3a821"
   },
   {
    "title": "Animación",
@@ -860,7 +877,8 @@
      "tmdb_id": 1796541,
      "year": 2025
     }
-   ]
+   ],
+   "id": "f_fe19896d17"
   },
   {
    "title": "Allá, cartas al corazón",
@@ -889,7 +907,8 @@
    "is_free": true,
    "lbSlug": "alla",
    "tmdb_id": 1130565,
-   "synopsis_en": "Faced with the imminent death of his father, the town postman, Oscar returns to Mexico for the first time and finds that he is now the only man among the handful of women who inhabit this small place where telephones and internet never reached.  While trying to return to the United States, he takes charge of the mail and thus learns the stories and wishes of the inhabitants, including a child who asks about his father's letters. Oscar writes him the long-awaited letters and begins to bond with him and with Martha, his mother. When he can finally leave, he no longer wants to and will have to decide between going back or staying and rebuilding his life."
+   "synopsis_en": "Faced with the imminent death of his father, the town postman, Oscar returns to Mexico for the first time and finds that he is now the only man among the handful of women who inhabit this small place where telephones and internet never reached.  While trying to return to the United States, he takes charge of the mail and thus learns the stories and wishes of the inhabitants, including a child who asks about his father's letters. Oscar writes him the long-awaited letters and begins to bond with him and with Martha, his mother. When he can finally leave, he no longer wants to and will have to decide between going back or staying and rebuilding his life.",
+   "id": "f_1792f863dd"
   },
   {
    "title": "Taller Nuestro Talento \"VFX (IA): Efectos visuales de bajo costo para el cine de lo real\"",
@@ -909,7 +928,8 @@
    },
    "is_free": true,
    "description": "A cargo de Kevin Bradley Delgado (Colombia).",
-   "description_lang": "es"
+   "description_lang": "es",
+   "id": "f_45ce7a7e93"
   },
   {
    "title": "Cine foro: Medio ambiente / Homo Plastic",
@@ -929,7 +949,8 @@
    },
    "is_free": true,
    "description": "Proyección de «Homo Plastic» (Julio Pérez del Campo, 71 min) y foro con Roberto Ramírez Espitia (México).",
-   "description_lang": "es"
+   "description_lang": "es",
+   "id": "f_6ef757ee36"
   },
   {
    "title": "El Cielo al Revés",
@@ -957,7 +978,8 @@
    },
    "is_free": true,
    "lbSlug": "el-cielo-al-reves",
-   "tmdb_id": 1796545
+   "tmdb_id": 1796545,
+   "id": "f_7aeb428c92"
   },
   {
    "title": "Taller Central \"Dirección de actores para el cine de Terror\"",
@@ -977,7 +999,8 @@
    },
    "is_free": true,
    "description": "A cargo de Carlos Ortiz (Bogotá).",
-   "description_lang": "es"
+   "description_lang": "es",
+   "id": "f_a2f8975aa6"
   },
   {
    "title": "La imagen como documento histórico",
@@ -997,7 +1020,8 @@
    },
    "is_free": true,
    "description": "A cargo de María Rosalía Gómez (Ecuador).",
-   "description_lang": "es"
+   "description_lang": "es",
+   "id": "f_5f1708cf4c"
   },
   {
    "title": "Kueka, Memoria Ancestral",
@@ -1028,7 +1052,8 @@
    "lbSlug": "kueka-ancestral-memory",
    "tmdb_id": 1514102,
    "synopsis_en": "Three generations of the Pemón people fight to reclaim their ancestral grandmother. The spirit of Kowai Kueka, embodied in a sacred red jasper stone, was taken from Venezuela to Germany as art without their consent.",
-   "title_en": "Kueka, Ancestral Memory"
+   "title_en": "Kueka, Ancestral Memory",
+   "id": "f_6a97cf7579"
   },
   {
    "title": "Del cine al click",
@@ -1048,7 +1073,8 @@
    },
    "is_free": true,
    "description": "A cargo de Danilo Carrillo (Bogotá).",
-   "description_lang": "es"
+   "description_lang": "es",
+   "id": "f_62ab75243b"
   },
   {
    "title": "Más allá de los tres actos",
@@ -1068,7 +1094,8 @@
    },
    "is_free": true,
    "description": "A cargo de Paúl López (Ecuador).",
-   "description_lang": "es"
+   "description_lang": "es",
+   "id": "f_f093f66193"
   },
   {
    "title": "El Perdón",
@@ -1096,7 +1123,8 @@
    },
    "is_free": true,
    "lbSlug": "el-perdon",
-   "tmdb_id": 1796542
+   "tmdb_id": 1796542,
+   "id": "f_1cc79b8075"
   },
   {
    "title": "Cortos Experimentales Internacionales y Colombianos",
@@ -1166,7 +1194,8 @@
    ],
    "titulos_anteriores": [
     "Cortos experimentales internacionales y colombianos"
-   ]
+   ],
+   "id": "f_c18a4be07e"
   },
   {
    "title": "Cortos Universitarios",
@@ -1250,7 +1279,8 @@
    ],
    "titulos_anteriores": [
     "Cortos universitarios"
-   ]
+   ],
+   "id": "f_cbee3780c8"
   },
   {
    "title": "Carnaval, 100 años legado vivo: Memoria y exploración audiovisual",
@@ -1270,7 +1300,8 @@
    },
    "is_free": true,
    "description": "A cargo de Lorena Burbano (Pasto).",
-   "description_lang": "es"
+   "description_lang": "es",
+   "id": "f_73368dc093"
   },
   {
    "title": "Donde el Sol Brilla con Fuerza",
@@ -1300,7 +1331,8 @@
    "lbSlug": "where-the-sun-shines-bright",
    "tmdb_id": 1668458,
    "synopsis_en": "In \"Where the Sun Shines Bright\", an 18-year-old boy facing the uncertainty of adulthood finds his own story reflected in the lives of four children in the same village – parallel journeys of left-behind childhood shaped by resilience and the fragile brightness of growing up.",
-   "title_en": "Where the Sun Shines Bright"
+   "title_en": "Where the Sun Shines Bright",
+   "id": "f_595f122409"
   },
   {
    "title": "El Huaquero",
@@ -1326,7 +1358,8 @@
    },
    "is_free": true,
    "lbSlug": "el-huaquero",
-   "tmdb_id": 1796534
+   "tmdb_id": 1796534,
+   "id": "f_de0b2509c9"
   },
   {
    "title": "Cortos Invitados de México",
@@ -1398,7 +1431,8 @@
    ],
    "titulos_anteriores": [
     "Cortos invitados de México"
-   ]
+   ],
+   "id": "f_21afb4bba6"
   },
   {
    "title": "Sierra: el álbum mortuorio",
@@ -1427,7 +1461,8 @@
    "is_free": true,
    "lbSlug": "sierra-el-album-mortuorio",
    "tmdb_id": 1789536,
-   "_duracion_corregida": "datos oficiales del propio FICPA (ficpa-2026-datos-oficiales.json: 89); Villa del Cine 88"
+   "_duracion_corregida": "datos oficiales del propio FICPA (ficpa-2026-datos-oficiales.json: 89); Villa del Cine 88",
+   "id": "f_5226aaa188"
   },
   {
    "title": "Taller Nuestro Talento \"Galeras 2037. Del plano al mundo jugable (AAA aplicados al cine)\"",
@@ -1447,7 +1482,8 @@
    },
    "is_free": true,
    "description": "A cargo de Andrés XR 369 – Tallerista.",
-   "description_lang": "es"
+   "description_lang": "es",
+   "id": "f_fe0c6dc4b8"
   },
   {
    "title": "Taller de música para cine",
@@ -1466,7 +1502,8 @@
    },
    "is_free": true,
    "description": "A cargo de Nicolas Rojas.",
-   "description_lang": "es"
+   "description_lang": "es",
+   "id": "f_64badbf5c9"
   },
   {
    "title": "Films in Progress: pitch de proyectos participantes",
@@ -1484,7 +1521,8 @@
     "url": "https://www.ficpa.co/programacion2026/",
     "date": "2026-10-09"
    },
-   "is_free": true
+   "is_free": true,
+   "id": "f_3360e93131"
   },
   {
    "title": "El Viento y Todos los Tiempos",
@@ -1515,7 +1553,8 @@
    "lbSlug": "the-wind-and-all-times",
    "tmdb_id": 1568218,
    "synopsis_en": "Years afterwards, director Carla Valencia Dávila rediscovers videos of a cycling trip she made through Uruguay in her youth. The shots of rolling highways, deserted hotels, and unexpected encounters set her thinking. It feels as if someone else had filmed them.",
-   "title_en": "The Wind and All Times"
+   "title_en": "The Wind and All Times",
+   "id": "f_bbdebc6a03"
   },
   {
    "title": "Foro de Cine y Pedagogía",
@@ -1535,7 +1574,8 @@
    },
    "is_free": true,
    "description": "A cargo de Universidad Central de Bogotá, Universidad de Nariño, Universidad CESMAG, Universidad Mariana.",
-   "description_lang": "es"
+   "description_lang": "es",
+   "id": "f_723a95d005"
   },
   {
    "title": "Selección Churo Cósmico: Sociedad y Libertades",
@@ -1575,7 +1615,8 @@
      "synopsis": "Dos mujeres de bandos contrarios durante la guerra civil en Colombia se unen para lograr el derecho al voto femenino. Escondidas en un cine de la capital, citan a Ismenia, secretaria de la corte que puede conseguir el apoyo para el plebiscito. A pesar de los obstáculos de aquel tiempo, juntas podrán lograr sus objetivos.",
      "synopsis_lang": "es"
     }
-   ]
+   ],
+   "id": "f_5236744407"
   },
   {
    "title": "Trabajo, Economías y Futuro",
@@ -1645,7 +1686,8 @@
    ],
    "titulos_anteriores": [
     "Trabajo, economías y futuro"
-   ]
+   ],
+   "id": "f_8109d89b85"
   },
   {
    "title": "Tierra Palestina",
@@ -1670,7 +1712,8 @@
     "date": "2026-10-09",
     "programacion": "alterna"
    },
-   "is_free": true
+   "is_free": true,
+   "id": "f_3806e1131e"
   },
   {
    "title": "Encuentro Internacional de Producción \"La circulación en festivales de cine\"",
@@ -1690,7 +1733,8 @@
    },
    "is_free": true,
    "description": "A cargo de Festival de Cine de Tequila (México), Turicine (Ecuador) y FICPA (Colombia).",
-   "description_lang": "es"
+   "description_lang": "es",
+   "id": "f_36416aff70"
   },
   {
    "title": "Cortos Colombianos de Ficción y Documental",
@@ -1833,7 +1877,8 @@
    ],
    "titulos_anteriores": [
     "Cortos colombianos de ficción y documental"
-   ]
+   ],
+   "id": "f_a169610698"
   },
   {
    "title": "Churo Cósmico: Animación",
@@ -1921,7 +1966,8 @@
    ],
    "titulos_anteriores": [
     "Churo Cósmico: animación"
-   ]
+   ],
+   "id": "f_6b4cd27e8f"
   },
   {
    "title": "Pacto de libertad",
@@ -1945,7 +1991,8 @@
     "url": "https://www.ficpa.co/programacion2026/",
     "date": "2026-10-09"
    },
-   "is_free": true
+   "is_free": true,
+   "id": "f_f4173936e5"
   },
   {
    "title": "Videoclips Nariñenses",
@@ -2024,7 +2071,8 @@
    ],
    "titulos_anteriores": [
     "Videoclips nariñenses"
-   ]
+   ],
+   "id": "f_ee8d5b9d21"
   },
   {
    "title": "Cortometraje Nariñense",
@@ -2131,7 +2179,8 @@
    ],
    "titulos_anteriores": [
     "Cortometraje nariñense"
-   ]
+   ],
+   "id": "f_afa43f5ed6"
   },
   {
    "title": "Buscando a papá",
@@ -2151,7 +2200,8 @@
     "date": "2026-10-09"
    },
    "premiere": "Clausura",
-   "is_free": true
+   "is_free": true,
+   "id": "f_090cef8f24"
   },
   {
    "title": "Ceremonia de premiación y clausura",
@@ -2168,7 +2218,8 @@
     "url": "https://www.ficpa.co/programacion2026/",
     "date": "2026-10-09"
    },
-   "is_free": true
+   "is_free": true,
+   "id": "f_09c7936691"
   }
  ],
  "_corrido": {

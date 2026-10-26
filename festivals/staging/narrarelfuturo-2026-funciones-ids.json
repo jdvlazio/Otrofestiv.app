@@ -1,0 +1,267 @@
+{
+ "_provenance": {
+  "fuente": "ids-legado.py: ids estables congelados desde lo publicado (docs/FUNCION.md §11.2)",
+  "capturado": "2026-10-18"
+ },
+ "funciones": {
+  "f_53daed71ed": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-09-15",
+   "hora": "18:00",
+   "sala": "Sala Capital",
+   "titulo": "sone su nombre"
+  },
+  "f_9ffaaa0a08": {
+   "sede": "Universidad Jorge Tadeo Lozano - Bogotá",
+   "dia": "2026-09-16",
+   "hora": "10:00",
+   "sala": "Sala Oval",
+   "titulo": "cosmographies"
+  },
+  "f_4d6284f04c": {
+   "sede": "Universidad Jorge Tadeo Lozano - Bogotá",
+   "dia": "2026-09-16",
+   "hora": "15:00",
+   "sala": "Aula Magistral 704-M16",
+   "titulo": "colombia embrujo verde esmeralda"
+  },
+  "f_6d47cb52fe": {
+   "sede": "Universidad Jorge Tadeo Lozano - Bogotá",
+   "dia": "2026-09-16",
+   "hora": "15:00",
+   "sala": "Aula Magistral 704-M16",
+   "titulo": "colombia raices arrancadas"
+  },
+  "f_a222e84930": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-09-16",
+   "hora": "16:00",
+   "sala": "Sala 2",
+   "titulo": "aqua ensayo diversidad"
+  },
+  "f_e7cfca3e33": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-09-16",
+   "hora": "19:00",
+   "sala": "Sala 2",
+   "titulo": "quien quemo el bus"
+  },
+  "f_b1fdf895e0": {
+   "sede": "Universidad Jorge Tadeo Lozano - Bogotá",
+   "dia": "2026-09-17",
+   "hora": "15:00",
+   "sala": "Hemiciclo",
+   "titulo": "venezuela latidos entre escombros"
+  },
+  "f_6dbb038d3d": {
+   "sede": "Universidad Jorge Tadeo Lozano - Bogotá",
+   "dia": "2026-09-17",
+   "hora": "15:00",
+   "sala": "Hemiciclo",
+   "titulo": "manos que reciben vida"
+  },
+  "f_f2f3bb6392": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-09-17",
+   "hora": "17:00",
+   "sala": "Sala 2",
+   "titulo": "alucinacion artificial y extincion"
+  },
+  "f_5483d11d58": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-09-17",
+   "hora": "19:30",
+   "sala": "Sala 2",
+   "titulo": "despues del frio"
+  },
+  "f_b61fe28670": {
+   "sede": "Universidad Jorge Tadeo Lozano - Bogotá",
+   "dia": "2026-09-18",
+   "hora": "15:00",
+   "sala": "Hemiciclo",
+   "titulo": "vivir de la piedra"
+  },
+  "f_a9c6a2ccc2": {
+   "sede": "Universidad Jorge Tadeo Lozano - Bogotá",
+   "dia": "2026-09-18",
+   "hora": "15:00",
+   "sala": "Hemiciclo",
+   "titulo": "ninos de donbass historias de superacion"
+  },
+  "f_68c1cffd67": {
+   "sede": "Cinemateca Fontanar del Río - Bogotá",
+   "dia": "2026-09-18",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "narrar creer crecer"
+  },
+  "f_a9fb133bcd": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-09-18",
+   "hora": "16:00",
+   "sala": "Sala 2",
+   "titulo": "el futuro del futuro"
+  },
+  "f_a4770fa8e0": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-09-18",
+   "hora": "19:00",
+   "sala": "Sala 2",
+   "titulo": "habitante"
+  },
+  "f_476d390462": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-09-19",
+   "hora": "18:00",
+   "sala": "Sala Capital",
+   "titulo": "llueve sobre babel"
+  },
+  "f_b9cc7a3436": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-09-17",
+   "hora": "09:00",
+   "sala": "Taller de Creación Audiovisual",
+   "titulo": "desde el terreno como contar la historia mientras esta ocurriendo"
+  },
+  "f_bf40f1fa0b": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-09-18",
+   "hora": "09:00",
+   "sala": "Taller de la Imagen",
+   "titulo": "despues del frio un collage para la paz"
+  },
+  "f_2b572ada1b": {
+   "sede": "Universidad Jorge Tadeo Lozano - Bogotá",
+   "dia": "2026-09-17",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "el gesto mentiroso collage y stop motion para desconocer como nos vemos"
+  },
+  "f_fed971139d": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-09-16",
+   "hora": "09:00",
+   "sala": "Taller de Creación Audiovisual",
+   "titulo": "historias que trascienden el titular del reportaje a la narrativa documental"
+  },
+  "f_eeedb1a886": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-09-18",
+   "hora": "14:00",
+   "sala": "Taller de Creación Audiovisual",
+   "titulo": "ia generativa de la idea al video"
+  },
+  "f_70b2e77159": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-09-16",
+   "hora": "14:00",
+   "sala": "Taller de la Imagen",
+   "titulo": "narrativas verticales aprendizajes y experiencias en la direccion y realizacion de dramas verticales y series web hechos con ia"
+  },
+  "f_199ecba49d": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-09-18",
+   "hora": "09:00",
+   "sala": "Taller de Creación Audiovisual",
+   "titulo": "narrativas virales como contar historias para las audiencias digitales"
+  },
+  "f_afcc5f7ed9": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-09-17",
+   "hora": "14:00",
+   "sala": "Taller de Creación Audiovisual",
+   "titulo": "redacciones aumentadas ia periodismo y nuevos flujos de trabajo"
+  },
+  "f_e08caf3161": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-09-18",
+   "hora": "14:00",
+   "sala": "Taller de la Imagen",
+   "titulo": "senales liquidas creacion colectiva audiovisual en tiempo real"
+  },
+  "f_03fcc15d2f": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-09-16",
+   "hora": "09:00",
+   "sala": "Taller de la Imagen",
+   "titulo": "storytelling sin miedo el arte de contar historias imposibles de ignorar"
+  },
+  "f_fa6dbecaf4": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-09-17",
+   "hora": "10:00",
+   "sala": "Taller de la Imagen",
+   "titulo": "taller introductorio practico a las narrativas sonoras podcast"
+  },
+  "f_522863ba28": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-09-17",
+   "hora": "14:00",
+   "sala": "Taller de la Imagen",
+   "titulo": "taller introductorio practico a las narrativas sonoras podcast"
+  },
+  "f_4087bc6429": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-09-16",
+   "hora": "14:00",
+   "sala": "Taller de Creación Audiovisual",
+   "titulo": "ultima hora narrar el presente cuando el tiempo corre en contra"
+  },
+  "f_91e2f22183": {
+   "sede": "Universidad Jorge Tadeo Lozano - Bogotá",
+   "dia": "2026-09-15",
+   "hora": "09:00",
+   "sala": "Aula Máxima",
+   "titulo": "el futuro de lo real la no ficcion y los medios tradicionales"
+  },
+  "f_3c99946362": {
+   "sede": "Universidad Jorge Tadeo Lozano - Bogotá",
+   "dia": "2026-09-15",
+   "hora": "11:00",
+   "sala": "Aula Máxima",
+   "titulo": "pronto llegara el dia de tu suerte estamos al fin ante una industria del cine y los nuevos medios"
+  },
+  "f_bd3f6a2c07": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-09-15",
+   "hora": "14:00",
+   "sala": "Laboratorios 1 y 2",
+   "titulo": "vr otrosmundosposibles"
+  },
+  "f_d17e3ffcfa": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-09-16",
+   "hora": "14:00",
+   "sala": "Laboratorios 1 y 2",
+   "titulo": "vr otrosmundosposibles"
+  },
+  "f_3bde21cd5d": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-09-17",
+   "hora": "14:00",
+   "sala": "Laboratorios 1 y 2",
+   "titulo": "vr otrosmundosposibles"
+  },
+  "f_f9493eb00c": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-09-18",
+   "hora": "14:00",
+   "sala": "Laboratorios 1 y 2",
+   "titulo": "vr otrosmundosposibles"
+  },
+  "f_f179c7ed5a": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-09-19",
+   "hora": "11:00",
+   "sala": "Laboratorios 1 y 2",
+   "titulo": "vr otrosmundosposibles"
+  },
+  "f_c1a46a06ef": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-09-20",
+   "hora": "11:00",
+   "sala": "Laboratorios 1 y 2",
+   "titulo": "vr otrosmundosposibles"
+  }
+ }
+}

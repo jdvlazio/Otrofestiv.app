@@ -16,6 +16,7 @@ Un candidato NUNCA se une solo: queda en candidatos.json hasta que Juan decida.
 
     python3 pipeline/catalogo_construir.py --salida <carpeta>
     TMDB_API_KEY=… python3 pipeline/catalogo_construir.py --escribir
+    python3 pipeline/catalogo_construir.py --comprobar   # ¿está al día? no escribe
 
 --escribir (fase 3) materializa catalogo/obras/, procedencia/ y decisiones.json.
 Re-correrlo es idempotente: cada grupo conserva el id de la obra que ya lo
@@ -203,8 +204,13 @@ def contradicciones(R, grupo):
 
 # ── fase 3: materializar ────────────────────────────────────────────────────
 def _iso(pais):
-    """«Colombia, Francia» → ['CO', 'FR'] (por la bandera: dos letras regionales)."""
-    return [''.join(chr(ord(c) - 0x1F1E6 + 65) for c in f) for f in banderas(pais or '')]
+    """«Colombia, Francia» → ['CO', 'FR'] (por la bandera: dos letras regionales).
+
+    `banderas()` devuelve UN texto («🇨🇴🇫🇷»), no una lista: recorrerlo daba una
+    letra por carácter y cada bandera son dos (17 oct 2026: 1.348 obras con el
+    país partido en letras). Se toman las letras regionales de a pares."""
+    L = [chr(ord(c) - 0x1F1E6 + 65) for c in banderas(pais or '') if 0x1F1E6 <= ord(c) <= 0x1F1FF]
+    return [L[i] + L[i + 1] for i in range(0, len(L) - 1, 2)]
 
 
 def _directores(s):
@@ -361,27 +367,33 @@ def materializar(R, grupos, key, cache):
     return nuevas, proc, decs, fus
 
 
-def escribir(R, grupos):
+def salidas(R, grupos):
+    """Lo que --escribir deja en disco, SIN escribirlo: {ruta: texto | None}
+    (None = se borra) y las presentaciones sin obra única. --escribir lo vuelca
+    y --comprobar lo compara (21 oct 2026)."""
     key = os.environ.get('TMDB_API_KEY')
-    if not key:
-        sys.exit('falta TMDB_API_KEY (source ~/.zshrc)')
     cp = os.path.expanduser('~/.cache/otrofestiv/catalogo-tmdb.json')   # fuera del repo
     cache = {int(k): v for k, v in json.load(io.open(cp, encoding='utf-8')).items()} if os.path.exists(cp) else {}
+    antes = set(cache)
     try:
         obs, proc, decs, fus = materializar(R, grupos, key, cache)
     finally:
-        os.makedirs(os.path.dirname(cp), exist_ok=True)
-        json.dump(cache, io.open(cp, 'w', encoding='utf-8'), ensure_ascii=False)
+        if key:
+            os.makedirs(os.path.dirname(cp), exist_ok=True)
+            json.dump(cache, io.open(cp, 'w', encoding='utf-8'), ensure_ascii=False)
+    if not key and set(cache) - antes:
+        sys.exit(f'falta TMDB_API_KEY: {len(set(cache) - antes)} obra(s) sin caché de TMDB (source ~/.zshrc)')
+    out = {}
+    dump = lambda x: json.dumps(x, ensure_ascii=False, indent=1)
     for sub in ('obras', 'procedencia'):
-        d = os.path.join(REPO, 'catalogo', sub)
-        for p in glob.glob(f'{d}/w_*.json'):
+        for p in glob.glob(f'{REPO}/catalogo/{sub}/w_*.json'):
             if os.path.basename(p)[:-5] not in obs:
-                os.remove(p)             # una obra que ya no existe se redirige por fusión, no queda colgando
+                out[p] = None            # una obra que ya no existe se redirige por fusión, no queda colgando
     for wid, o in obs.items():
-        json.dump(o, io.open(f'{REPO}/catalogo/obras/{wid}.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
-        json.dump(proc[wid], io.open(f'{REPO}/catalogo/procedencia/{wid}.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
-    json.dump(fus, io.open(f'{REPO}/catalogo/fusiones.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
-    json.dump(decs, io.open(f'{REPO}/catalogo/decisiones.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+        out[f'{REPO}/catalogo/obras/{wid}.json'] = dump(o)
+        out[f'{REPO}/catalogo/procedencia/{wid}.json'] = dump(proc[wid])
+    out[f'{REPO}/catalogo/fusiones.json'] = dump(fus)
+    out[f'{REPO}/catalogo/decisiones.json'] = dump(decs)
     # la presentación apunta a su obra (fase 3b): solo se agrega `work_id`
     ix, sin_resolver = catalogo.indice(obs), []
     for p in sorted(glob.glob(f'{REPO}/festivals/*.json')):
@@ -392,15 +404,53 @@ def escribir(R, grupos):
         # el mismo formato que ya tiene el archivo: el diff es solo `work_id`
         compacto = json.dumps(json.loads(crudo), ensure_ascii=False, separators=(',', ':')) == crudo.rstrip('\n')
         nuevo = json.dumps(d, ensure_ascii=False, **({'separators': (',', ':')} if compacto else {'indent': 1}))
-        nuevo += '\n' if crudo.endswith('\n') else ''
-        if nuevo != crudo:
-            io.open(p, 'w', encoding='utf-8').write(nuevo)
+        out[p] = nuevo + ('\n' if crudo.endswith('\n') else '')
+    return out, obs, decs, sin_resolver
+
+
+def _actual(p):
+    return io.open(p, encoding='utf-8').read() if os.path.exists(p) else None
+
+
+def distintas(out):
+    """Las rutas donde el disco no es lo que el constructor dejaría."""
+    return sorted(os.path.relpath(p, REPO) for p, t in out.items() if _actual(p) != t)
+
+
+def escribir(R, grupos):
+    if not os.environ.get('TMDB_API_KEY'):
+        sys.exit('falta TMDB_API_KEY (source ~/.zshrc)')
+    out, obs, decs, sin_resolver = salidas(R, grupos)
+    for p, t in out.items():
+        if t is None:
+            os.remove(p)
+        elif _actual(p) != t:
+            io.open(p, 'w', encoding='utf-8').write(t)
     print(f'✓ {len(obs)} obras, {len(decs)} decisiones; {len(sin_resolver)} presentaciones sin obra única')
     for x in sin_resolver[:20]:
         print('  ·', x)
 
 
+def comprobar():
+    """¿El catálogo y los work_id están al día con los festivales? No escribe nada.
+    El catálogo es DERIVADO: si un cambio de datos no lo re-arma, queda a la deriva y
+    el próximo que corre --escribir para SU festival se lleva el arrastre ajeno
+    (FICCALI #1218/#1219, 21 oct 2026: 32 archivos de otros festivales)."""
+    R = registros()
+    grupos, cand = construir(R)
+    if cand:
+        return [f'{len(cand)} candidatos sin resolver (catalogo_construir.py --salida <carpeta>)']
+    out = salidas(R, grupos)[0]
+    return distintas(out)
+
+
 def main():
+    if '--comprobar' in sys.argv:
+        d = comprobar()
+        if d:
+            sys.exit(f'✗ el catálogo NO está al día con los festivales ({len(d)} archivo(s)):\n    '
+                     + '\n    '.join(d[:12]) + '\n  Corré: python3 pipeline/catalogo_construir.py --escribir  y commiteá TODO lo que cambie')
+        return print('✓ el catálogo está al día con los festivales')
     if '--escribir' in sys.argv:
         R = registros()
         grupos, cand = construir(R)

@@ -137,6 +137,17 @@ publicar → igual que hoy
 - **Aceptar** corre el armado real (`ensamblar.py <fid> --ver`) antes y después: si aparece un fallo nuevo, se deshace todo. La afirmación aceptada lleva `propuesta: <id>` (clave declarada; `validar` la ignora).
 - Comandos: `python3 pipeline/propuestas.py` (pendientes) · `proponer <fid> <a.json> --por <quién>` · `aceptar|rechazar <fid> <ids…|todas> --frase "…"`.
 
+### 5.2 El actualizador (`pipeline/actualizar.py`, 17 oct 2026)
+
+El vigía AVISA; el actualizador ACTÚA, dentro de una frontera estrecha (senior dev + tech lead, 17 oct):
+- **Qué fuente:** solo la estructurada del propio festival (la base de Fantasmagoría, el JSON de FICICA), lo que declara `pipeline/actualizador.json` por festival (`antes`: el comando que la baja; `pasos`: los del plan que re-corre). Lo de una sala o de Instagram va a la cola de propuestas.
+- **Qué cambio:** solo día, hora o sala de funciones que ya existen. Una función nueva o que sale, cualquier otro campo, o la raíz del festival → frena y avisa.
+- **Tope:** más de 5 funciones cambiadas en una corrida → frena (suele ser una fuente rota).
+- **Interruptor:** `activo: false` lo apaga sin tocar código.
+- **Sin cambios no publica:** cada deploy hace recargar a los teléfonos.
+- **Corre cada hora** desde una tarea programada, en su propia copia: si hay cambios publicables, validadores → **abre el PR y avisa a Juan; NO fusiona solo** (decisión de Juan, 18 oct). Lo fusiona Juan, o Claude cuando él lo pida. Si en un par de festivales no propone nada equivocado, gana el merge automático con el tope de 5. Empieza solo con Fantasmagoría.
+- **Tope de tiempo** por comando (300 s: una fuente colgada no cuelga la tarea) y, al fallar o frenar, **deshace también lo nuevo** (`git clean` además del `checkout`), para que la corrida siguiente no aborte por copia sucia.
+
 ## 6. Guardianes (validate.py) — a implementar en la fase 1
 
 Todavía no existen; se escriben sin corchetes para no confundirlos con los activos. Al implementarse, cada uno toma su nombre entre corchetes.
@@ -218,3 +229,53 @@ Antes de abrir el PR de C1–C10, una revisión independiente encontró 10 halla
 **Otros dos límites, aceptados:**
 - Si una función desaparece de la fuente y vuelve **movida** (otra sede, día u hora), no recupera su id: recibe uno nuevo y sus afirmaciones fallan con `AnclaPerdida`, en voz alta. Arreglo: re-apuntar el `ancla` de la afirmación a la función nueva.
 - El registro de ids no se poda: las ausentes se quedan, marcadas. Son inofensivas (no prestan su id) y el archivo crece unas decenas de líneas por festival.
+
+## 11. El identificador estable de la función (18 oct 2026 — pasos 2 y 3 implementados)
+
+Pedido de Juan vía la sesión Main: hoy la app reconoce una función por título + día + hora (+ sede). Si el festival cambia la hora o el título, la trata como otra: se rompen planes, retrasos, boleta y avisos, y `titulos_anteriores` es un parche. **El modelo ya tiene la mitad**: `asignar_ids` (C1) da un `_fid` y lo guarda en `<fid>-funciones-ids.json` (BHFF, Fantasmagoría, Ficcali). Esto lo completa.
+
+### 11.1 La forma
+- **`id`** en cada función publicada (schema.org: `ScreeningEvent.identifier`), opaco: `f_` + 10 hex. Se calcula UNA vez, al nacer la función, y **nunca se recalcula**: el registro es la fuente, no la fórmula. Sobrevive a cambios de hora, sala, sede y título.
+- Único **dentro del festival**; global = `<festival>/<id>`.
+- Alineación schema.org: función = `ScreeningEvent` (`identifier`, `startDate`, `location`), obra = `Movie` (`work_id` del catálogo, `workPresented`), sede = `Place` (`venue`), festival = `superEvent`. Solo nombres; el JSON no cambia de forma.
+
+### 11.2 Quién lo asigna
+- El **pipeline**, en `ensamblar` (`funcion.asignar_ids`), para TODO festival con plan, no solo los del modelo. El registro `<fid>-funciones-ids.json` se versiona y es la fuente.
+- Festivales sin pipeline (legado): `pipeline/ids-legado.py` les asigna ids desde lo publicado y congela su registro.
+- `publicar.py` deja pasar `id` (hoy descarta todo lo que empieza con `_`).
+
+### 11.3 Cómo se casa una función nueva con una vieja al re-armar
+En orden, como hoy, más lo que falta:
+1. **clave exacta** (sede, día, hora, sala, título) → mismo id;
+2. **una sola candidata** libre que coincida en (sede, título) → *movida*; o en (sede, día, hora, sala) → *renombrada*;
+3. **NUEVO — un solo cambio de sede**: (título, día, hora) iguales en otra sede → *trasladada* (el sismo de FICMA, la sala de BHFF);
+4. **NUEVO — cambio doble** (título Y hora, o sede Y hora): no se adivina. Va a una **decisión registrada** en `<fid>-funciones-decisiones.json` — `{"viejo": id, "nuevo": clave | "es_otra", "por_que", "quien", "fecha"}` —, como las decisiones de identidad del catálogo. Sin decisión: id nuevo y el armado AVISA (no frena: una función que de verdad es otra no debe bloquear).
+5. Más de una candidata → ambigua → decisión, nunca en silencio (como hoy).
+
+### 11.4 Partir y fusionar
+- **Se parte** (un programa pasa a ser dos funciones): el id viejo queda en el registro con `partida_en: [id1, id2]`; las hijas nacen con id nuevo. La app migra lo guardado a la primera hija y avisa.
+- **Se fusionan** (dos funciones pasan a ser una): la nueva conserva el id de la más antigua; la otra queda `fusionada_en: id`.
+- **Se cancela / sale**: el id queda `ausente` (como hoy) y nunca se reusa.
+- Todo eso viaja publicado en `ids_anteriores` de la función destino (el hermano de `titulos_anteriores`), para que la app migre sin leer el registro.
+
+### 11.4.1 El archivo de decisiones (implementado)
+`festivals/staging/<fid>-funciones-decisiones.json` → `{"decisiones": [...]}`. Toda decisión lleva `viejo` (un id del registro), `por_que`, `quien` y `fecha`; sin alguno, o con un id que no existe, el armado FRENA. Una de cuatro formas:
+
+| forma | campos | efecto |
+|---|---|---|
+| misma | `nuevo`: clave `{sede, dia, hora, sala, titulo}` | la función de esa clave hereda `viejo`; el registro la marca `decidida` y el guardián acepta el cambio doble |
+| es otra | `nuevo`: `"es_otra"` | `viejo` no presta su id ni aparece en el aviso ⚠ |
+| partida | `partida`: [claves] | las hijas nacen con id nuevo; `viejo` queda `partida_en`; la primera hija publica `ids_anteriores: [viejo]` |
+| fusión | `nuevo`: clave + `absorbe`: [ids] | la de `nuevo` conserva `viejo`; cada absorbida queda `fusionada_en` y viaja en `ids_anteriores` |
+
+Las decisiones se aplican ANTES que la heurística. FRENA el armado: un id o una clave destino en más de una decisión, una fusión que se absorbe a sí misma, y una función que la decisión da por salida (es otra, madre partida, absorbida) pero sigue en la fuente con su clave exacta. Una decisión cuya función destino no está en el montaje no frena: avisa con ⚠. `decidida` guarda la clave decidida y se cae si la función vuelve a cambiar; una madre partida o una absorbida no prestan su id nunca más. El guardián exige además que el destino de una fusión o las hijas de una partida estén publicados. `ids_anteriores` se guarda en el registro y se sigue publicando en los montajes siguientes sin volver a decidir. Tests: `tests/pipeline/test_id_funcion.py` (38, mutación 23/23 tras la auditoría independiente).
+
+### 11.5 Guardián `[id-funcion-estable]`
+Contra `main`: (a) todo `id` publicado antes sigue publicado, o figura `ausente` / `partida_en` / `fusionada_en` en el registro; (b) ningún `id` cambia de función salvo por una regla de §11.3 registrada; (c) un `id` nuevo solo para una función nueva. Con autoprueba (un cebo por regla) y mutación.
+
+### 11.6 Plan (PRs chicas)
+1. Esta propuesta → Juan.
+2. ✓ `id` publicado + `ids_anteriores` + guardián, en los 3 festivales que ya tienen registro (BHFF, Fantasmagoría, Ficcali). La app no lo lee todavía.
+3. ✓ Reglas nuevas (trasladada, decisión registrada, partir/fusionar), con tests primero.
+4. ✓ Todo festival: el ensamblador da id a todos (`funcion.ids_del_montaje`) y `pipeline/ids-legado.py` lo dio a los 31 publicados sin rearmarlos, por el invariante de `publicar-datos.py` (si `publicar.py` reproduce lo publicado, va al build; si no, al JSON publicado). Rearmar conserva cada id por clave exacta: 21/21 verificados.
+5. (Main) la app: plan, retrasos, boleta y avisos apuntan al `id`.

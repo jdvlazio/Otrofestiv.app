@@ -1,0 +1,1184 @@
+{
+ "_provenance": {
+  "fuente": "ids-legado.py: ids estables congelados desde lo publicado (docs/FUNCION.md §11.2)",
+  "capturado": "2026-10-18"
+ },
+ "funciones": {
+  "f_83148bdb03": {
+   "sede": "C. de Convenciones · Patio de Banderas",
+   "dia": "Martes",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "feito pipa"
+  },
+  "f_3cd210c76c": {
+   "sede": "Teatro Adolfo Mejía",
+   "dia": "Miércoles",
+   "hora": "10:00",
+   "sala": "",
+   "titulo": "queimada"
+  },
+  "f_ee5d990280": {
+   "sede": "Plaza Bocagrande ‒ Sala 5",
+   "dia": "Miércoles",
+   "hora": "11:00",
+   "sala": "",
+   "titulo": "o riso e a faca"
+  },
+  "f_d306b04af7": {
+   "sede": "Plaza Bocagrande ‒ Sala 1",
+   "dia": "Miércoles",
+   "hora": "11:20",
+   "sala": "",
+   "titulo": "vetre pricaj sa mnom"
+  },
+  "f_47c991cfcd": {
+   "sede": "Plaza Bocagrande ‒ Sala 3",
+   "dia": "Miércoles",
+   "hora": "11:40",
+   "sala": "",
+   "titulo": "geu jayeoni nege mworago hani"
+  },
+  "f_4ca0e73952": {
+   "sede": "Plaza Bocagrande ‒ Sala 4",
+   "dia": "Miércoles",
+   "hora": "12:00",
+   "sala": "",
+   "titulo": "costas prog 4"
+  },
+  "f_2c47fe1a52": {
+   "sede": "Teatro Adolfo Mejía",
+   "dia": "Miércoles",
+   "hora": "13:00",
+   "sala": "",
+   "titulo": "las almas ni los ojos"
+  },
+  "f_e173ae642e": {
+   "sede": "Plaza Bocagrande ‒ Sala 1",
+   "dia": "Miércoles",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "lolita en honda"
+  },
+  "f_1c396bcdf9": {
+   "sede": "Plaza Bocagrande ‒ Sala 1",
+   "dia": "Miércoles",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "prog cortometrajes jorge cadena"
+  },
+  "f_547a45c462": {
+   "sede": "CC Caribe Plaza ‒ Sala 5",
+   "dia": "Miércoles",
+   "hora": "14:20",
+   "sala": "",
+   "titulo": "a fabulosa maquina do tempo"
+  },
+  "f_ca4eed41ce": {
+   "sede": "Plaza Bocagrande ‒ Sala 2",
+   "dia": "Miércoles",
+   "hora": "14:20",
+   "sala": "",
+   "titulo": "die papierene brucke"
+  },
+  "f_abdfc20c65": {
+   "sede": "CC Caribe Plaza ‒ Sala 6",
+   "dia": "Miércoles",
+   "hora": "14:40",
+   "sala": "",
+   "titulo": "si no ardemos como iluminar la noche"
+  },
+  "f_e32864d04a": {
+   "sede": "Plaza Bocagrande ‒ Sala 3",
+   "dia": "Miércoles",
+   "hora": "14:40",
+   "sala": "",
+   "titulo": "ivan hadoum"
+  },
+  "f_836746a481": {
+   "sede": "Plaza Bocagrande ‒ Sala 4",
+   "dia": "Miércoles",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "cine indigena prog 2"
+  },
+  "f_26275629ca": {
+   "sede": "Plaza Bocagrande ‒ Sala 5",
+   "dia": "Miércoles",
+   "hora": "15:20",
+   "sala": "",
+   "titulo": "manual para invocar fantasmas"
+  },
+  "f_76f36f4353": {
+   "sede": "Teatro Adolfo Mejía",
+   "dia": "Miércoles",
+   "hora": "15:30",
+   "sala": "",
+   "titulo": "las corrientes"
+  },
+  "f_2b0f2e9332": {
+   "sede": "Salón 1 ‒ Miguel Sebastián Guerrero, unibac",
+   "dia": "Miércoles",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "ojoboca prog 1 16mm"
+  },
+  "f_7e0352b794": {
+   "sede": "Plaza Bocagrande ‒ Sala 1",
+   "dia": "Miércoles",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "una escritura en apariencias"
+  },
+  "f_cb3908d2d6": {
+   "sede": "CC Caribe Plaza ‒ Sala 2",
+   "dia": "Miércoles",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "s paces cortos prog 1"
+  },
+  "f_3f1d04d963": {
+   "sede": "CC Caribe Plaza ‒ Sala 5",
+   "dia": "Miércoles",
+   "hora": "17:20",
+   "sala": "",
+   "titulo": "kaye"
+  },
+  "f_342e1e8021": {
+   "sede": "Plaza Bocagrande ‒ Sala 2",
+   "dia": "Miércoles",
+   "hora": "17:20",
+   "sala": "",
+   "titulo": "esa otra selva blanca"
+  },
+  "f_a1c3cb2082": {
+   "sede": "Plaza Bocagrande ‒ Sala 3",
+   "dia": "Miércoles",
+   "hora": "17:40",
+   "sala": "",
+   "titulo": "chicas tristes"
+  },
+  "f_562150782e": {
+   "sede": "CC Caribe Plaza ‒ Sala 6",
+   "dia": "Miércoles",
+   "hora": "17:40",
+   "sala": "",
+   "titulo": "frio metal"
+  },
+  "f_ba2622b01b": {
+   "sede": "Plaza Bocagrande ‒ Sala 4",
+   "dia": "Miércoles",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "aro berria"
+  },
+  "f_6da434c7d7": {
+   "sede": "Plaza Bocagrande ‒ Sala 5",
+   "dia": "Miércoles",
+   "hora": "18:20",
+   "sala": "",
+   "titulo": "bosque arriba en la montana"
+  },
+  "f_84531c0941": {
+   "sede": "Teatro Adolfo Mejía",
+   "dia": "Miércoles",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "puntos de fuga"
+  },
+  "f_dc24910db2": {
+   "sede": "Auditorio nido",
+   "dia": "Miércoles",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "feito pipa"
+  },
+  "f_c1b2f4e42f": {
+   "sede": "Plaza de la Proclamación",
+   "dia": "Miércoles",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "animacion porosa prog de cortos"
+  },
+  "f_ea6f177935": {
+   "sede": "aecid",
+   "dia": "Miércoles",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "costas prog 5"
+  },
+  "f_1a23e64892": {
+   "sede": "Plaza Bocagrande ‒ Sala 1",
+   "dia": "Miércoles",
+   "hora": "20:00",
+   "sala": "",
+   "titulo": "isabel"
+  },
+  "f_1800cd5029": {
+   "sede": "Plaza Bocagrande ‒ Sala 2",
+   "dia": "Miércoles",
+   "hora": "20:20",
+   "sala": "",
+   "titulo": "toc giay va nuoc"
+  },
+  "f_efb9e2d95b": {
+   "sede": "Plaza Bocagrande ‒ Sala 3",
+   "dia": "Miércoles",
+   "hora": "20:40",
+   "sala": "",
+   "titulo": "queen at sea"
+  },
+  "f_5ab9cf8817": {
+   "sede": "Teatro Adolfo Mejía",
+   "dia": "Miércoles",
+   "hora": "21:00",
+   "sala": "",
+   "titulo": "piedras preciosas"
+  },
+  "f_d757f3ed57": {
+   "sede": "Plaza Bocagrande ‒ Sala 4",
+   "dia": "Miércoles",
+   "hora": "21:00",
+   "sala": "",
+   "titulo": "blue heron"
+  },
+  "f_e30d02cf21": {
+   "sede": "Plaza de la Proclamación",
+   "dia": "Miércoles",
+   "hora": "21:00",
+   "sala": "",
+   "titulo": "johanna af ork"
+  },
+  "f_7640de27e7": {
+   "sede": "Auditorio nido",
+   "dia": "Miércoles",
+   "hora": "21:30",
+   "sala": "",
+   "titulo": "internacional prog de cortos"
+  },
+  "f_de0cb6f1da": {
+   "sede": "Teatro Adolfo Mejía",
+   "dia": "Jueves",
+   "hora": "10:30",
+   "sala": "",
+   "titulo": "rodrigo d no futuro"
+  },
+  "f_2c70e6cf97": {
+   "sede": "CC Caribe Plaza ‒ Sala 6",
+   "dia": "Jueves",
+   "hora": "11:00",
+   "sala": "",
+   "titulo": "khmeli potoli"
+  },
+  "f_35ad4908f1": {
+   "sede": "Plaza Bocagrande ‒ Sala 1",
+   "dia": "Jueves",
+   "hora": "11:20",
+   "sala": "",
+   "titulo": "a fabulosa maquina do tempo"
+  },
+  "f_c4e0a8d0e9": {
+   "sede": "CC Caribe Plaza ‒ Sala 5",
+   "dia": "Jueves",
+   "hora": "11:20",
+   "sala": "",
+   "titulo": "cine afro prog de cortos"
+  },
+  "f_28762490cd": {
+   "sede": "Plaza Bocagrande ‒ Sala 3",
+   "dia": "Jueves",
+   "hora": "11:40",
+   "sala": "",
+   "titulo": "aro berria"
+  },
+  "f_63d35f78be": {
+   "sede": "Plaza Bocagrande ‒ Sala 4",
+   "dia": "Jueves",
+   "hora": "12:00",
+   "sala": "",
+   "titulo": "se eu fosse vivo vivia"
+  },
+  "f_edf5fcedf7": {
+   "sede": "Teatro Adolfo Mejía",
+   "dia": "Jueves",
+   "hora": "13:30",
+   "sala": "",
+   "titulo": "anoche conquiste tebas"
+  },
+  "f_14e932be80": {
+   "sede": "Plaza Bocagrande ‒ Sala 5",
+   "dia": "Jueves",
+   "hora": "13:40",
+   "sala": "",
+   "titulo": "el principe de nanawa"
+  },
+  "f_0e11d74fd7": {
+   "sede": "CC Caribe Plaza ‒ Sala 2",
+   "dia": "Jueves",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "risa y la cabina del viento"
+  },
+  "f_bf35c98021": {
+   "sede": "Plaza Bocagrande ‒ Sala 1",
+   "dia": "Jueves",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "cortos colombia prog 1"
+  },
+  "f_cf3c682e5d": {
+   "sede": "Plaza Bocagrande ‒ Sala 2",
+   "dia": "Jueves",
+   "hora": "14:20",
+   "sala": "",
+   "titulo": "el valor de la palabra"
+  },
+  "f_82a11b77b2": {
+   "sede": "CC Caribe Plaza ‒ Sala 5",
+   "dia": "Jueves",
+   "hora": "14:20",
+   "sala": "",
+   "titulo": "dao"
+  },
+  "f_e5c03fbb2b": {
+   "sede": "Plaza Bocagrande ‒ Sala 3",
+   "dia": "Jueves",
+   "hora": "14:40",
+   "sala": "",
+   "titulo": "historias del buen valle"
+  },
+  "f_441a973e07": {
+   "sede": "Plaza Bocagrande ‒ Sala 4",
+   "dia": "Jueves",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "two years at sea"
+  },
+  "f_38f017d1a5": {
+   "sede": "Salón 1 ‒ Miguel Sebastián Guerrero, unibac",
+   "dia": "Jueves",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "ojoboca prog 2 16mm"
+  },
+  "f_e864dbac94": {
+   "sede": "Teatro Adolfo Mejía",
+   "dia": "Jueves",
+   "hora": "16:30",
+   "sala": "",
+   "titulo": "el tren fluvial"
+  },
+  "f_5e4bb31908": {
+   "sede": "CC Caribe Plaza ‒ Sala 2",
+   "dia": "Jueves",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "ivan hadoum"
+  },
+  "f_4cbb26c590": {
+   "sede": "Plaza Bocagrande ‒ Sala 1",
+   "dia": "Jueves",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "cortos colombia prog 2"
+  },
+  "f_2c85e33e12": {
+   "sede": "Plaza Bocagrande ‒ Sala 2",
+   "dia": "Jueves",
+   "hora": "17:20",
+   "sala": "",
+   "titulo": "duhuldeki deney"
+  },
+  "f_67b99479e8": {
+   "sede": "Plaza Bocagrande ‒ Sala 3",
+   "dia": "Jueves",
+   "hora": "17:40",
+   "sala": "",
+   "titulo": "staatsschutz"
+  },
+  "f_00db369919": {
+   "sede": "CC Caribe Plaza ‒ Sala 6",
+   "dia": "Jueves",
+   "hora": "17:40",
+   "sala": "",
+   "titulo": "crocodile"
+  },
+  "f_9fd178edf9": {
+   "sede": "Plaza Bocagrande ‒ Sala 4",
+   "dia": "Jueves",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "senoritas"
+  },
+  "f_bd6b1c590f": {
+   "sede": "Plaza Bocagrande ‒ Sala 5",
+   "dia": "Jueves",
+   "hora": "18:20",
+   "sala": "",
+   "titulo": "piedras preciosas"
+  },
+  "f_79b83a7d2a": {
+   "sede": "CC Caribe Plaza ‒ Sala 5",
+   "dia": "Jueves",
+   "hora": "18:20",
+   "sala": "",
+   "titulo": "los cruces"
+  },
+  "f_fb8144719b": {
+   "sede": "Teatro Adolfo Mejía",
+   "dia": "Jueves",
+   "hora": "18:45",
+   "sala": "",
+   "titulo": "mare s nest"
+  },
+  "f_7165561656": {
+   "sede": "Plaza de la Proclamación",
+   "dia": "Jueves",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "cine indigena prog 2"
+  },
+  "f_7178fe2b9f": {
+   "sede": "Plaza Bocagrande ‒ Sala 1",
+   "dia": "Jueves",
+   "hora": "20:00",
+   "sala": "",
+   "titulo": "doggerland"
+  },
+  "f_eda9c05047": {
+   "sede": "Plaza Bocagrande ‒ Sala 2",
+   "dia": "Jueves",
+   "hora": "20:20",
+   "sala": "",
+   "titulo": "costas prog 2"
+  },
+  "f_f95ae2f101": {
+   "sede": "Plaza Bocagrande ‒ Sala 3",
+   "dia": "Jueves",
+   "hora": "20:40",
+   "sala": "",
+   "titulo": "the loneliest man in town"
+  },
+  "f_0899b1ae57": {
+   "sede": "Plaza Bocagrande ‒ Sala 4",
+   "dia": "Jueves",
+   "hora": "21:00",
+   "sala": "",
+   "titulo": "sehnsucht in sangerhausen"
+  },
+  "f_30bfcc8511": {
+   "sede": "Plaza de la Proclamación",
+   "dia": "Jueves",
+   "hora": "21:20",
+   "sala": "",
+   "titulo": "tehran bedoune mojavez"
+  },
+  "f_f2ca6cbbb9": {
+   "sede": "Teatro Adolfo Mejía",
+   "dia": "Jueves",
+   "hora": "22:00",
+   "sala": "",
+   "titulo": "dracula"
+  },
+  "f_8e0b734391": {
+   "sede": "Teatro Adolfo Mejía",
+   "dia": "Viernes",
+   "hora": "10:00",
+   "sala": "",
+   "titulo": "planas testimonio de un etnocidio"
+  },
+  "f_22764b42d1": {
+   "sede": "Teatro Adolfo Mejía",
+   "dia": "Viernes",
+   "hora": "10:00",
+   "sala": "",
+   "titulo": "campesinos"
+  },
+  "f_120e0b5399": {
+   "sede": "CC Caribe Plaza ‒ Sala 2",
+   "dia": "Viernes",
+   "hora": "11:00",
+   "sala": "",
+   "titulo": "ben rivers prog 1"
+  },
+  "f_35d4051e4d": {
+   "sede": "Plaza Bocagrande ‒ Sala 1",
+   "dia": "Viernes",
+   "hora": "11:00",
+   "sala": "",
+   "titulo": "animacion porosa prog de cortos"
+  },
+  "f_44dff57a1b": {
+   "sede": "CC Caribe Plaza ‒ Sala 5",
+   "dia": "Viernes",
+   "hora": "11:20",
+   "sala": "",
+   "titulo": "esa otra selva blanca"
+  },
+  "f_33f3791166": {
+   "sede": "Plaza Bocagrande ‒ Sala 3",
+   "dia": "Viernes",
+   "hora": "11:40",
+   "sala": "",
+   "titulo": "el pagador de promesas"
+  },
+  "f_acd2cb17c8": {
+   "sede": "Plaza Bocagrande ‒ Sala 4",
+   "dia": "Viernes",
+   "hora": "12:00",
+   "sala": "",
+   "titulo": "prog cortometrajes jorge cadena"
+  },
+  "f_a00f49e548": {
+   "sede": "Plaza Bocagrande ‒ Sala 5",
+   "dia": "Viernes",
+   "hora": "12:20",
+   "sala": "",
+   "titulo": "las almas ni los ojos"
+  },
+  "f_1a98bf38bc": {
+   "sede": "Teatro Adolfo Mejía",
+   "dia": "Viernes",
+   "hora": "13:00",
+   "sala": "",
+   "titulo": "chicas tristes"
+  },
+  "f_9128651e58": {
+   "sede": "CC Caribe Plaza ‒ Sala 2",
+   "dia": "Viernes",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "queen at sea"
+  },
+  "f_75f2a70bca": {
+   "sede": "Plaza Bocagrande ‒ Sala 1",
+   "dia": "Viernes",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "cortos colombia prog 3"
+  },
+  "f_700c5c1ff7": {
+   "sede": "Plaza Bocagrande ‒ Sala 2",
+   "dia": "Viernes",
+   "hora": "14:20",
+   "sala": "",
+   "titulo": "les voyageurs"
+  },
+  "f_5295b00598": {
+   "sede": "CC Caribe Plaza ‒ Sala 5",
+   "dia": "Viernes",
+   "hora": "14:20",
+   "sala": "",
+   "titulo": "nuit obscure ain t i a child"
+  },
+  "f_8b2cff8217": {
+   "sede": "CC Caribe Plaza ‒ Sala 6",
+   "dia": "Viernes",
+   "hora": "14:40",
+   "sala": "",
+   "titulo": "tehran bedoune mojavez"
+  },
+  "f_b522060e8d": {
+   "sede": "Plaza Bocagrande ‒ Sala 3",
+   "dia": "Viernes",
+   "hora": "14:40",
+   "sala": "",
+   "titulo": "el mundo al reves"
+  },
+  "f_f30552798c": {
+   "sede": "CC Caribe Plaza ‒ Sala 6",
+   "dia": "Viernes",
+   "hora": "14:40",
+   "sala": "",
+   "titulo": "nuestra tierra"
+  },
+  "f_31cf2cad06": {
+   "sede": "Plaza Bocagrande ‒ Sala 4",
+   "dia": "Viernes",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "anoche conquiste tebas"
+  },
+  "f_a59a8884c5": {
+   "sede": "Salón 1 ‒ Miguel Sebastián Guerrero, unibac",
+   "dia": "Viernes",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "ojoboca prog 2 16mm"
+  },
+  "f_bd8157b4fe": {
+   "sede": "Plaza Bocagrande ‒ Sala 5",
+   "dia": "Viernes",
+   "hora": "15:40",
+   "sala": "",
+   "titulo": "o riso e a faca"
+  },
+  "f_0e3a54e5f3": {
+   "sede": "Teatro Adolfo Mejía",
+   "dia": "Viernes",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "una escritura en apariencias"
+  },
+  "f_8277fe808d": {
+   "sede": "Plaza Bocagrande ‒ Sala 1",
+   "dia": "Viernes",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "cortos colombia prog 4"
+  },
+  "f_b18036d059": {
+   "sede": "CC Caribe Plaza ‒ Sala 2",
+   "dia": "Viernes",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "cine indigena prog 1"
+  },
+  "f_b6ddb8681b": {
+   "sede": "Plaza Bocagrande ‒ Sala 2",
+   "dia": "Viernes",
+   "hora": "17:20",
+   "sala": "",
+   "titulo": "waldheims walzer"
+  },
+  "f_1275b5a034": {
+   "sede": "CC Caribe Plaza ‒ Sala 6",
+   "dia": "Viernes",
+   "hora": "17:40",
+   "sala": "",
+   "titulo": "historias del buen valle"
+  },
+  "f_1d4a3625d0": {
+   "sede": "Plaza Bocagrande ‒ Sala 3",
+   "dia": "Viernes",
+   "hora": "17:40",
+   "sala": "",
+   "titulo": "la noche esta marchandose ya"
+  },
+  "f_4497da23c3": {
+   "sede": "CC Caribe Plaza ‒ Sala 5",
+   "dia": "Viernes",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "toc giay va nuoc"
+  },
+  "f_cfd2aca233": {
+   "sede": "Plaza Bocagrande ‒ Sala 4",
+   "dia": "Viernes",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "cortos iberoamerica prog 1"
+  },
+  "f_e569ead850": {
+   "sede": "Teatro Adolfo Mejía",
+   "dia": "Viernes",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "el hogar fue sepultado en esa tierra"
+  },
+  "f_10219870fb": {
+   "sede": "Plaza de la Proclamación",
+   "dia": "Viernes",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "se eu fosse vivo vivia"
+  },
+  "f_a6423a5c30": {
+   "sede": "Plaza Bocagrande ‒ Sala 1",
+   "dia": "Viernes",
+   "hora": "20:00",
+   "sala": "",
+   "titulo": "pequenas criaturas"
+  },
+  "f_31d784872b": {
+   "sede": "Plaza Bocagrande ‒ Sala 2",
+   "dia": "Viernes",
+   "hora": "20:20",
+   "sala": "",
+   "titulo": "cine afro prog de cortos"
+  },
+  "f_afb62c5824": {
+   "sede": "Plaza Bocagrande ‒ Sala 3",
+   "dia": "Viernes",
+   "hora": "20:40",
+   "sala": "",
+   "titulo": "maspalomas"
+  },
+  "f_28ab1e29a3": {
+   "sede": "Plaza Bocagrande ‒ Sala 4",
+   "dia": "Viernes",
+   "hora": "21:00",
+   "sala": "",
+   "titulo": "johanna af ork"
+  },
+  "f_8de8e725c1": {
+   "sede": "Plaza de la Proclamación",
+   "dia": "Viernes",
+   "hora": "21:00",
+   "sala": "",
+   "titulo": "internacional prog de cortos"
+  },
+  "f_f835dd6373": {
+   "sede": "Plaza Bocagrande ‒ Sala 5",
+   "dia": "Viernes",
+   "hora": "21:20",
+   "sala": "",
+   "titulo": "lust"
+  },
+  "f_b117de11b5": {
+   "sede": "Teatro Adolfo Mejía",
+   "dia": "Viernes",
+   "hora": "22:00",
+   "sala": "",
+   "titulo": "anymart"
+  },
+  "f_1e000bf23e": {
+   "sede": "Teatro Adolfo Mejía",
+   "dia": "Sábado",
+   "hora": "09:00",
+   "sala": "",
+   "titulo": "alborada en cartagena"
+  },
+  "f_5b9af9b244": {
+   "sede": "Teatro Adolfo Mejía",
+   "dia": "Sábado",
+   "hora": "11:00",
+   "sala": "",
+   "titulo": "lolita en honda"
+  },
+  "f_4adbe34007": {
+   "sede": "CC Caribe Plaza ‒ Sala 2",
+   "dia": "Sábado",
+   "hora": "11:00",
+   "sala": "",
+   "titulo": "cortos colombia prog 2"
+  },
+  "f_fa825cf9a4": {
+   "sede": "CC Caribe Plaza ‒ Sala 5",
+   "dia": "Sábado",
+   "hora": "11:20",
+   "sala": "",
+   "titulo": "el valor de la palabra"
+  },
+  "f_928f0d9240": {
+   "sede": "Plaza Bocagrande ‒ Sala 1",
+   "dia": "Sábado",
+   "hora": "11:20",
+   "sala": "",
+   "titulo": "costas prog 1"
+  },
+  "f_4ddda6393a": {
+   "sede": "Plaza Bocagrande ‒ Sala 3",
+   "dia": "Sábado",
+   "hora": "11:40",
+   "sala": "",
+   "titulo": "los nadadores"
+  },
+  "f_d31b6cbbfc": {
+   "sede": "CC Caribe Plaza ‒ Sala 6",
+   "dia": "Sábado",
+   "hora": "11:40",
+   "sala": "",
+   "titulo": "crocodile"
+  },
+  "f_8ba43b4904": {
+   "sede": "Teatro Adolfo Mejía",
+   "dia": "Sábado",
+   "hora": "13:30",
+   "sala": "",
+   "titulo": "bosque arriba en la montana"
+  },
+  "f_602b145a47": {
+   "sede": "CC Caribe Plaza ‒ Sala 2",
+   "dia": "Sábado",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "cortos colombia prog 1"
+  },
+  "f_da75b4e2f2": {
+   "sede": "Plaza Bocagrande ‒ Sala 1",
+   "dia": "Sábado",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "cortos iberoamerica prog 2"
+  },
+  "f_147b782b74": {
+   "sede": "Plaza Bocagrande ‒ Sala 2",
+   "dia": "Sábado",
+   "hora": "14:20",
+   "sala": "",
+   "titulo": "wax gold"
+  },
+  "f_e3dddff621": {
+   "sede": "CC Caribe Plaza ‒ Sala 5",
+   "dia": "Sábado",
+   "hora": "14:20",
+   "sala": "",
+   "titulo": "de indias angeles somos"
+  },
+  "f_73f68795e2": {
+   "sede": "Plaza Bocagrande ‒ Sala 3",
+   "dia": "Sábado",
+   "hora": "14:40",
+   "sala": "",
+   "titulo": "las corrientes"
+  },
+  "f_0a5f6a3e30": {
+   "sede": "CC Caribe Plaza ‒ Sala 6",
+   "dia": "Sábado",
+   "hora": "14:40",
+   "sala": "",
+   "titulo": "vetre pricaj sa mnom"
+  },
+  "f_c51fa55be7": {
+   "sede": "Plaza Bocagrande ‒ Sala 4",
+   "dia": "Sábado",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "staatsschutz"
+  },
+  "f_1bb5a4eb34": {
+   "sede": "Plaza Bocagrande ‒ Sala 5",
+   "dia": "Sábado",
+   "hora": "15:20",
+   "sala": "",
+   "titulo": "puntos de fuga"
+  },
+  "f_557916a918": {
+   "sede": "Teatro Adolfo Mejía",
+   "dia": "Sábado",
+   "hora": "16:30",
+   "sala": "",
+   "titulo": "lo demas es ruido"
+  },
+  "f_67e9182ddb": {
+   "sede": "Plaza Bocagrande ‒ Sala 1",
+   "dia": "Sábado",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "la noche esta marchandose ya"
+  },
+  "f_ac689966ff": {
+   "sede": "CC Caribe Plaza ‒ Sala 5",
+   "dia": "Sábado",
+   "hora": "17:20",
+   "sala": "",
+   "titulo": "el principe de nanawa"
+  },
+  "f_147156da22": {
+   "sede": "Plaza Bocagrande ‒ Sala 2",
+   "dia": "Sábado",
+   "hora": "17:20",
+   "sala": "",
+   "titulo": "los cruces"
+  },
+  "f_5a925bcaf4": {
+   "sede": "Plaza Bocagrande ‒ Sala 3",
+   "dia": "Sábado",
+   "hora": "17:40",
+   "sala": "",
+   "titulo": "el tren fluvial"
+  },
+  "f_4120f55f56": {
+   "sede": "CC Caribe Plaza ‒ Sala 6",
+   "dia": "Sábado",
+   "hora": "17:40",
+   "sala": "",
+   "titulo": "cortos iberoamerica prog 1"
+  },
+  "f_fef808af5d": {
+   "sede": "Plaza Bocagrande ‒ Sala 4",
+   "dia": "Sábado",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "duhuldeki deney"
+  },
+  "f_618634266b": {
+   "sede": "Plaza Bocagrande ‒ Sala 5",
+   "dia": "Sábado",
+   "hora": "18:20",
+   "sala": "",
+   "titulo": "khmeli potoli"
+  },
+  "f_dc2fa1ddb1": {
+   "sede": "Auditorio nido",
+   "dia": "Sábado",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "ojoboca prog 3 35mm"
+  },
+  "f_3e59cf7729": {
+   "sede": "Teatro Adolfo Mejía",
+   "dia": "Sábado",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "manual para invocar fantasmas"
+  },
+  "f_a4d3f76289": {
+   "sede": "Plaza de la Proclamación",
+   "dia": "Sábado",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "isabel"
+  },
+  "f_3945c5c7b3": {
+   "sede": "CC Caribe Plaza ‒ Sala 2",
+   "dia": "Sábado",
+   "hora": "20:00",
+   "sala": "",
+   "titulo": "risa y la cabina del viento"
+  },
+  "f_369bb1912a": {
+   "sede": "Plaza Bocagrande ‒ Sala 1",
+   "dia": "Sábado",
+   "hora": "20:00",
+   "sala": "",
+   "titulo": "el mundo al reves"
+  },
+  "f_85fce29fdf": {
+   "sede": "Plaza Bocagrande ‒ Sala 2",
+   "dia": "Sábado",
+   "hora": "20:20",
+   "sala": "",
+   "titulo": "s paces cortos prog 1"
+  },
+  "f_a67af4b9b7": {
+   "sede": "Auditorio nido",
+   "dia": "Sábado",
+   "hora": "20:30",
+   "sala": "",
+   "titulo": "the sky trembles and the earth is afraid"
+  },
+  "f_d80bea1fb1": {
+   "sede": "Plaza Bocagrande ‒ Sala 3",
+   "dia": "Sábado",
+   "hora": "20:40",
+   "sala": "",
+   "titulo": "the chronology of water"
+  },
+  "f_2548b65651": {
+   "sede": "Plaza de la Proclamación",
+   "dia": "Sábado",
+   "hora": "21:00",
+   "sala": "",
+   "titulo": "blue heron"
+  },
+  "f_cb9a69a276": {
+   "sede": "Plaza Bocagrande ‒ Sala 4",
+   "dia": "Sábado",
+   "hora": "21:00",
+   "sala": "",
+   "titulo": "los caifanes"
+  },
+  "f_8fe6b1b659": {
+   "sede": "Teatro Adolfo Mejía",
+   "dia": "Sábado",
+   "hora": "22:00",
+   "sala": "",
+   "titulo": "matapanki"
+  },
+  "f_0934299d49": {
+   "sede": "Teatro Adolfo Mejía",
+   "dia": "Domingo",
+   "hora": "11:00",
+   "sala": "",
+   "titulo": "a la salida nos vemos"
+  },
+  "f_00581c4c2f": {
+   "sede": "CC Caribe Plaza ‒ Sala 2",
+   "dia": "Domingo",
+   "hora": "11:00",
+   "sala": "",
+   "titulo": "cortos colombia prog 3"
+  },
+  "f_43999b3fc9": {
+   "sede": "Plaza Bocagrande ‒ Sala 1",
+   "dia": "Domingo",
+   "hora": "11:00",
+   "sala": "",
+   "titulo": "cine indigena prog 1"
+  },
+  "f_7daa8a4e09": {
+   "sede": "CC Caribe Plaza ‒ Sala 5",
+   "dia": "Domingo",
+   "hora": "11:20",
+   "sala": "",
+   "titulo": "maspalomas"
+  },
+  "f_fa2d537c6f": {
+   "sede": "Plaza Bocagrande ‒ Sala 2",
+   "dia": "Domingo",
+   "hora": "11:20",
+   "sala": "",
+   "titulo": "costas prog 3"
+  },
+  "f_31062a5ace": {
+   "sede": "Plaza Bocagrande ‒ Sala 3",
+   "dia": "Domingo",
+   "hora": "11:40",
+   "sala": "",
+   "titulo": "mare s nest"
+  },
+  "f_f804ceea8d": {
+   "sede": "CC Caribe Plaza ‒ Sala 6",
+   "dia": "Domingo",
+   "hora": "11:40",
+   "sala": "",
+   "titulo": "de indias angeles somos"
+  },
+  "f_e2873012e6": {
+   "sede": "Plaza Bocagrande ‒ Sala 4",
+   "dia": "Domingo",
+   "hora": "12:00",
+   "sala": "",
+   "titulo": "lo demas es ruido"
+  },
+  "f_4b3581663b": {
+   "sede": "Plaza Bocagrande ‒ Sala 5",
+   "dia": "Domingo",
+   "hora": "12:20",
+   "sala": "",
+   "titulo": "el lugar mas pequeno"
+  },
+  "f_d22115cbf9": {
+   "sede": "Teatro Adolfo Mejía",
+   "dia": "Domingo",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "mu ki ra"
+  },
+  "f_4307660dc2": {
+   "sede": "Plaza Bocagrande ‒ Sala 1",
+   "dia": "Domingo",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "frio metal"
+  },
+  "f_5b5d2f3c22": {
+   "sede": "Auditorio nido",
+   "dia": "Domingo",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "ben rivers prog 3 16mm"
+  },
+  "f_34c3015bf3": {
+   "sede": "CC Caribe Plaza ‒ Sala 2",
+   "dia": "Domingo",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "cortos colombia prog 4"
+  },
+  "f_9d7d249ead": {
+   "sede": "Plaza Bocagrande ‒ Sala 2",
+   "dia": "Domingo",
+   "hora": "14:20",
+   "sala": "",
+   "titulo": "lust"
+  },
+  "f_dc5384c337": {
+   "sede": "CC Caribe Plaza ‒ Sala 5",
+   "dia": "Domingo",
+   "hora": "14:20",
+   "sala": "",
+   "titulo": "cortos iberoamerica prog 2"
+  },
+  "f_868d31b033": {
+   "sede": "CC Caribe Plaza ‒ Sala 6",
+   "dia": "Domingo",
+   "hora": "14:40",
+   "sala": "",
+   "titulo": "los nadadores"
+  },
+  "f_305ce54e62": {
+   "sede": "Plaza Bocagrande ‒ Sala 3",
+   "dia": "Domingo",
+   "hora": "14:40",
+   "sala": "",
+   "titulo": "el dependiente"
+  },
+  "f_98127d5c0b": {
+   "sede": "Plaza Bocagrande ‒ Sala 4",
+   "dia": "Domingo",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "geu jayeoni nege mworago hani"
+  },
+  "f_09b62f24b2": {
+   "sede": "Plaza Bocagrande ‒ Sala 5",
+   "dia": "Domingo",
+   "hora": "15:20",
+   "sala": "",
+   "titulo": "sehnsucht in sangerhausen"
+  },
+  "f_b58df3dd67": {
+   "sede": "Auditorio nido",
+   "dia": "Domingo",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "el hogar fue sepultado en esa tierra"
+  },
+  "f_d2d337c94a": {
+   "sede": "CC Caribe Plaza ‒ Sala 2",
+   "dia": "Domingo",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "les voyageurs"
+  },
+  "f_08dd3ef544": {
+   "sede": "Plaza Bocagrande ‒ Sala 1",
+   "dia": "Domingo",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "ben rivers prog 2"
+  },
+  "f_d00e1e6d78": {
+   "sede": "CC Caribe Plaza ‒ Sala 5",
+   "dia": "Domingo",
+   "hora": "17:20",
+   "sala": "",
+   "titulo": "feito pipa"
+  },
+  "f_d0fe7d9e57": {
+   "sede": "Plaza Bocagrande ‒ Sala 2",
+   "dia": "Domingo",
+   "hora": "17:20",
+   "sala": "",
+   "titulo": "dao"
+  },
+  "f_dc484fc5a0": {
+   "sede": "Plaza Bocagrande ‒ Sala 3",
+   "dia": "Domingo",
+   "hora": "17:40",
+   "sala": "",
+   "titulo": "the loneliest man in town"
+  },
+  "f_4541b802a1": {
+   "sede": "CC Caribe Plaza ‒ Sala 6",
+   "dia": "Domingo",
+   "hora": "17:40",
+   "sala": "",
+   "titulo": "pequenas criaturas"
+  },
+  "f_88d3cbb19e": {
+   "sede": "Plaza Bocagrande ‒ Sala 4",
+   "dia": "Domingo",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "nuit obscure ain t i a child"
+  },
+  "f_f9438af376": {
+   "sede": "Plaza Bocagrande ‒ Sala 5",
+   "dia": "Domingo",
+   "hora": "18:20",
+   "sala": "",
+   "titulo": "doggerland"
+  },
+  "f_4351e10c81": {
+   "sede": "Plaza de la Proclamación",
+   "dia": "Domingo",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "de indias angeles somos"
+  }
+ }
+}

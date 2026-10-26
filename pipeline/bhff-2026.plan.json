@@ -66,6 +66,11 @@
     "en": "International Shorts",
     "archetype": "Cortos / Programas"
    },
+   "Talleres": {
+    "emoji": "🛠️",
+    "en": "Workshops",
+    "archetype": "Charlas / Industria"
+   },
    "Clausura": {
     "emoji": "🌙",
     "en": "Closing Night",
@@ -88,9 +93,13 @@
    "Co.Laboratorio": [
     "Co.Laboratorio - Bogotá",
     ""
+   ],
+   "Cinemateca Fontanar del Río": [
+    "Cinemateca Fontanar del Río - Bogotá",
+    ""
    ]
   },
-  "_por_que_sedes": "Tabla canónica en el crudo (SEDES): la sala de la parrilla → (sede, sala). «CEFE Chapinero» = Centro Felicidad Chapinero. «Cinematecas locales» (3 funciones) queda fuera: son dos (El Tunal y Fontanar del Río) y el festival no dice cuál; preguntado. Pines: los 4 a mano, con dos fuentes.",
+  "_por_que_sedes": "Tabla canónica en el crudo (SEDES): la sala de la parrilla → (sede, sala). «CEFE Chapinero» = Centro Felicidad Chapinero. «Cinematecas locales»: la sede de cada función la da su nodo en la agenda de la Cinemateca (CINEMATECA_LOCAL en el crudo: las 3 —Huasao 23, El Miedo Llega a Todas Partes 24, Nico 25— en Fontanar del Río, 16:00, entrada libre); una sin nodo frena el crudo. Pines: los 4 a mano, con dos fuentes.",
   "name": "Bogotá Horror",
   "displayName": "Bogotá Horror",
   "fullName": "Bogotá Horror Film Festival 8",
@@ -114,5 +123,14 @@
    "festivals/staging/bhff-2026-radar.json": "el volcado del radar #1030, que escribe y relee pipeline/radar.py",
    "festivals/staging/bhff-2026-sinopsis.json": "sinopsis oficiales declaradas (literal, con URL, verificadas frase por frase); las lee pipeline/enriquecer.py donde no hay ninguna; `idioma: en` va a synopsis_en"
   }
- }
+ },
+ "fuentes_vivas": [
+  {
+   "archivo": "fuentes/bhff-2026/programacion.html",
+   "url": "https://bogotahorrorfilmfest.com/programacion/",
+   "como": "pagina",
+   "debe_contener": "PROGRAMACION",
+   "que": "la parrilla (arreglo PROGRAMACION del HTML) que leen el crudo y el verificador"
+  }
+ ]
 }

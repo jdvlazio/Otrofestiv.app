@@ -32,12 +32,21 @@ URL = 'https://mubifest.com/es/bogota'
 FUENTE = f'{REPO}/fuentes/mubibogota-2026/bogota.html'
 OUT = f'{REPO}/festivals/staging/mubibogota-2026-crudo.json'
 SEDE = 'Gimnasio Moderno'
+DESDE, HASTA = '2026-10-24', '2026-10-25'   # días oficiales (regla de Juan, 8 oct)
 
 ACCESO = {'ENTRADA LIBRE': 'Entrada libre', 'ASISTE GRATIS': 'Entrada libre',
           'REGISTRO PRÓXIMAMENTE': 'Entrada libre con inscripción previa',
           'BOLETAS PRONTO': DESCONOCIDO,
           # desde el 13 oct: la venta abrió en Entradas Inteligentes, enlace por función
-          'COMPRAR BOLETAS': 'Con boleta'}
+          'COMPRAR BOLETAS': 'Con boleta',
+          # desde el 17 oct: abrió la inscripción de las 3 charlas, en Eventbrite;
+          # el enlace es el FORMULARIO (registration_url), no una boleta
+          'REGÍSTRATE AQUÍ': 'Entrada libre con inscripción previa'}
+
+
+def es_formulario(boton):
+    """El enlace de un botón de INSCRIPCIÓN es el formulario, no una boleta."""
+    return 'inscripción' in ACCESO.get(boton, '')
 # la sección es la ETIQUETA del festival (no hay otra taxonomía en el sitio); si
 # una obra lleva varias, manda la más específica, en este orden
 SECCION_ORDEN = ['FOCO', 'RESTAURADA', 'ESTRENO MUBI', 'FUNCIÓN AL AIRE LIBRE']
@@ -45,7 +54,7 @@ SECCION_ORDEN = ['FOCO', 'RESTAURADA', 'ESTRENO MUBI', 'FUNCIÓN AL AIRE LIBRE']
 ACTIVIDAD = {
     'MUBI PODCAST ENCUENTROS: FERNANDO EIMBCKE & FRANCO LOLLI': ('Charla en vivo', 'charla'),
     'CAMP EN EL CINE: ENTRE EL EXCESO Y EL ARTIFICIO': ('Charla en vivo', 'charla'),
-    'DESAFÍO SORPRESA CON LESLEY WOLF': ('Al aire libre', 'experiencia'),
+    'DESAFÍO SORPRESA': ('Al aire libre', 'experiencia'),
     'MUBI LIBRARY': ('MUBI Library', 'experiencia'),
 }
 # TÍTULOS: el sitio los escribe en MAYÚSCULA SOSTENIDA (caja-sostenida); el
@@ -65,7 +74,9 @@ TITULO = {
     'LA PAGA': 'La paga',
     'MUBI PODCAST ENCUENTROS: FERNANDO EIMBCKE & FRANCO LOLLI': 'MUBI Podcast Encuentros: Fernando Eimbcke & Franco Lolli',
     'CAMP EN EL CINE: ENTRE EL EXCESO Y EL ARTIFICIO': 'Camp en el cine: entre el exceso y el artificio',
-    'DESAFÍO SORPRESA CON LESLEY WOLF': 'Desafío sorpresa con Lesley Wolf',
+    # el festival lo llamó «Desafío con Lesley Wolf» el 17 oct y el 20 oct volvió a
+    # «DESAFÍO SORPRESA» (ahora un bingo; Lesley Wolf queda solo en ogtitle)
+    'DESAFÍO SORPRESA': 'Desafío sorpresa',
     'MUBI LIBRARY': 'MUBI Library',
 }
 SECCION_PUBLICADA = {'FOCO': 'Foco', 'RESTAURADA': 'Restaurada', 'ESTRENO MUBI': 'Estreno MUBI',
@@ -141,8 +152,10 @@ def texto(bloques):
 
 def main():
     eventos = nuxt(io.open(FUENTE, encoding='utf-8').read())
-    if len(eventos) != 16:
-        sys.exit(f'✗ la página trae {len(eventos)} eventos, no 16: revisar antes de seguir')
+    # 17 desde el 20 oct: «SU PROPIO INFIERNO» (23 oct, visita al MAMBO) es antes de
+    # las fechas oficiales (24–25 oct) y queda fuera por la regla de solo días oficiales
+    if len(eventos) != 17:
+        sys.exit(f'✗ la página trae {len(eventos)} eventos, no 17: revisar antes de seguir')
     funciones = []
     for e in eventos:
         t = html.unescape(e['title']).strip()
@@ -150,11 +163,15 @@ def main():
         desc = texto(e.get('description'))
         for s in e['screenings']:
             loc = s['time']['local']               # «2026-10-24T14:30:00-05:00»
+            if not (DESDE <= loc[:10] <= HASTA):
+                print(f'  · fuera de los días oficiales: {loc[:16]} {t}')
+                continue
             if not loc.endswith('-05:00'):
                 sys.exit(f'✗ {t}: hora fuera de la zona de Bogotá ({loc})')
             reg = {'titulo': TITULO[t], 'titulo_fuente': t, 'dia': loc[:10], 'hora': loc[11:16],
                    'sede': SEDE, 'acceso': ACCESO[s['button'].strip()],
-                   **({'ticket_url': s['url']} if s.get('url') else {}),
+                   **({('registration_url' if es_formulario(s['button'].strip()) else 'ticket_url'): s['url']}
+                      if s.get('url') else {}),
                    '_src': {'url': URL, 'date': '2026-10-14', 'boton': s['button'].strip()}}
             dur = re.match(r'\s*(\d+)', e.get('duration') or '')
             if dur:
@@ -182,7 +199,7 @@ def main():
             # LA SALA (lectura C, 14 oct): la boletería de Entradas Inteligentes pone
             # las seis funciones pagas en el «Auditorio Gimnasio Moderno»; las que la
             # tarjeta marca «al aire libre», afuera. Las demás no lo dicen
-            if s.get('url'):
+            if s.get('url') and not es_formulario(s['button'].strip()):
                 reg['sala'] = 'Auditorio'
             elif any('AIRE LIBRE' in x for x in etiquetas) or 'AIRE LIBRE' in (e.get('eyebrow') or '').upper():
                 reg['sala'] = 'Al aire libre'
@@ -195,7 +212,7 @@ def main():
             funciones.append(reg)
     funciones.sort(key=lambda f: (f['dia'], f['hora'], f['titulo']))
     io.open(OUT, 'w', encoding='utf-8').write(json.dumps({
-        '_provenance': provenance(URL, metodo='__NUXT_DATA__ de mubifest.com (devalue), 16 eventos'),
+        '_provenance': provenance(URL, metodo='__NUXT_DATA__ de mubifest.com (devalue), 17 eventos (1 fuera de los días oficiales)'),
         'funciones': funciones}, ensure_ascii=False, indent=1))
     print(f'✓ {len(funciones)} funciones · {sum(1 for f in funciones if f.get("tipo") == "evento")} actividades → {os.path.relpath(OUT, REPO)}')
 

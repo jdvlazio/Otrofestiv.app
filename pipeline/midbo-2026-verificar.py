@@ -47,6 +47,8 @@ def main():
                 fallos.append(f'en la ficha y NO en el build: {f["dia"]} {f["hora"]} «{t[:60]}»')
     sem, _ = crudo.seminario()
     horas |= {(s['dia'], s['hora']) for s in sem}
+    # las activaciones del post de IG del 21 oct (tabla ACTIVACIONES del crudo)
+    horas |= {(s['dia'], s['hora']) for s in crudo.ACTIVACIONES}
     for d, lst in pub.items():
         for h, nom in lst:
             if (d, h) not in horas:

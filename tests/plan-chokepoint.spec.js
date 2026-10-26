@@ -73,8 +73,10 @@ test('CH03 — strict: los flujos REALES de la app commitean limpio de punta a p
   // hit-test de Playwright en este layout — el evento y el handler son los mismos)
   await page.waitForSelector('.ag-fi-btn.del', { state: 'attached', timeout: 8000 });
   await page.evaluate(() => { document.querySelector('.ag-fi-btn.del').click(); });
-  await page.waitForSelector('#cm-ok', { timeout: 5000 });
-  await page.evaluate(() => { document.getElementById('cm-ok').click(); });
+  // Desde «quitar con Deshacer», una función suelta sale DIRECTO (sin modal);
+  // solo un taller de varias sesiones pregunta. Si aparece el modal, se confirma.
+  await page.waitForTimeout(300);
+  await page.evaluate(() => { const b = document.getElementById('cm-ok'); if (b) b.click(); });
   await page.waitForTimeout(400);
   const r = await page.evaluate(() => ({ n: (savedAgenda && savedAgenda.schedule.length) || 0, strict: !!globalThis.__PLAN_STRICT__ }));
   expect(r.strict).toBe(true);          // strict estuvo activo durante TODO el flujo

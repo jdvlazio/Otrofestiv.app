@@ -29,81 +29,146 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  test:
+  # CAMINO DE DATOS (17–18 oct 2026, decisión de Juan): un PR que solo toca las
+  # rutas de .github/camino-datos.txt corre el job «Regression tests (datos)»
+  # —smoke, festivales, planificador, Mi Plan y recorrido, los specs que consumen
+  # el JSON— y el de la suite completa queda SALTADO (no verde: el check no
+  # promete lo que no corrió). En main (push) corre siempre la suite completa.
+  clasificar:
     runs-on: ubuntu-latest
-    name: Regression tests
-    # Imagen oficial de Playwright: trae chromium y webkit YA INSTALADOS. El paso
-    # de descarga se colgó CUATRO veces seguidas (19, 31, 11 y 18 min contra los
-    # 2-4 normales) bloqueando un merge con el resto del CI en verde. Cachear no
-    # alcanzaba: la primera corrida igual tiene que bajar los ~350 MB. Acá no se
-    # baja nada — los binarios vienen en la imagen, y la versión del tag es la
-    # MISMA que la del package-lock, así que no hay deriva silenciosa.
+    outputs:
+      datos: ${{ steps.camino.outputs.datos }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - name: Clasificar el PR
+        id: camino
+        run: |
+          if [ "${{ github.event_name }}" != "pull_request" ]; then echo "datos=false" >> "$GITHUB_OUTPUT"; exit 0; fi
+          c=$(node scripts/ci-camino.js "${{ github.base_ref }}")
+          [ "$c" = "datos" ] && echo "datos=true" >> "$GITHUB_OUTPUT" || echo "datos=false" >> "$GITHUB_OUTPUT"
+
+  # Camino de datos, en 3 máquinas a la vez (20 oct 2026, aprobado por Juan).
+  # Corría en UNA: ~19 min por PR de datos, 15 solo en festivales + planificador
+  # + Mi Plan, de a un test. Mismos specs, repartidos con --shard (como la suite
+  # completa de abajo). El check requerido sigue llamándose «Regression tests
+  # (datos)»: lo da el job que junta las 3 partes.
+  datos-shard:
+    needs: clasificar
+    if: needs.clasificar.outputs.datos == 'true'
+    runs-on: ubuntu-latest
+    name: Regression tests datos (${{ matrix.shard }}/3)
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [1, 2, 3]
     container:
       image: mcr.microsoft.com/playwright:v1.60.0-noble
       options: --user 1001
-
     steps:
-      - name: Checkout
-        uses: actions/checkout@v5
-
-      - name: Setup Node
-        uses: actions/setup-node@v5
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
         with:
           node-version: '20'
           cache: 'npm'
+      - run: npm ci
+      - name: Smoke, festivales, planificador, Mi Plan y recorrido (parte ${{ matrix.shard }} de 3)
+        run: ./scripts/test.sh tests/smoke.spec.js tests/festivals.spec.js tests/planner.spec.js tests/miplan.spec.js tests/recorrido-festival.spec.js --shard=${{ matrix.shard }}/3 --fully-parallel
+      - name: Upload report on failure
+        if: failure()
+        uses: actions/upload-artifact@v6
+        with:
+          name: playwright-report-datos-${{ matrix.shard }}
+          path: |
+            playwright-report*/
+            test-results*.json
+          retention-days: 7
 
-      - name: Install dependencies
-        run: npm ci
+  datos:
+    needs: [clasificar, datos-shard]
+    if: always() && (needs.clasificar.outputs.datos == 'true')
+    runs-on: ubuntu-latest
+    name: Regression tests (datos)
+    steps:
+      - name: Las 3 partes pasaron
+        run: |
+          r="${{ needs.datos-shard.result }}"
+          echo "partes: $r"
+          [ "$r" = "success" ] || { echo "::error::alguna parte del camino de datos falló ($r)"; exit 1; }
 
-      # Los navegadores vienen en la imagen. Este paso NO descarga: verifica que
-      # estén y falla ruidosamente si algún día el tag deja de traerlos —mejor
-      # eso que una suite que corre contra un navegador que no es el que creemos.
+  # Suite completa, en 4 máquinas a la vez (18 oct 2026). Antes corría una lista
+  # escrita a mano de 14 archivos, en UNA máquina y de a un test: 16 de 30 specs
+  # (boleta, cuentas, reportes, títulos, avisos, offline…) NUNCA corrían en CI.
+  # Ahora corre TODO tests/*.spec.js (salvo la auditoría visual, que va aparte en
+  # main), repartido con --shard. El check requerido sigue llamándose
+  # «Regression tests»: lo da el job de abajo, que junta los 4.
+  test-shard:
+    needs: clasificar
+    if: needs.clasificar.outputs.datos != 'true'
+    runs-on: ubuntu-latest
+    name: Regression tests (${{ matrix.shard }}/4)
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [1, 2, 3, 4]
+    container:
+      image: mcr.microsoft.com/playwright:v1.60.0-noble
+      options: --user 1001
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '20'
+          cache: 'npm'
+      - run: npm ci
       - name: Verificar navegadores de la imagen
         run: |
           npx playwright --version
           test -d "${PLAYWRIGHT_BROWSERS_PATH:-/ms-playwright}" || { echo "::error::la imagen no trae los navegadores"; exit 1; }
-          ls "${PLAYWRIGHT_BROWSERS_PATH:-/ms-playwright}" | head
+      - name: Tests (parte ${{ matrix.shard }} de 4)
+        run: ./scripts/test.sh $(ls tests/*.spec.js | grep -v visual-audit) --shard=${{ matrix.shard }}/4
+      - name: Upload report on failure
+        if: failure()
+        uses: actions/upload-artifact@v6
+        with:
+          name: playwright-report-${{ matrix.shard }}
+          path: |
+            playwright-report*/
+            test-results*.json
+          retention-days: 7
 
-      # scripts/test.sh en vez de `npx playwright test` directo: cada paso toma un
-      # puerto LIBRE para su servidor. Antes los cinco pasos usaban el 3000 y cada
-      # uno levantaba y mataba el suyo; si el anterior no había soltado el puerto,
-      # el siguiente veía responder a un servidor agonizante y arrancaba sobre él.
-      # Misma clase de bug que reventaba dos corridas locales solapadas.
-      - name: Smoke tests
-        run: ./scripts/test.sh tests/smoke.spec.js
+  test:
+    needs: [clasificar, test-shard]
+    if: always() && needs.clasificar.outputs.datos != 'true'
+    runs-on: ubuntu-latest
+    name: Regression tests
+    steps:
+      - name: Las 4 partes pasaron
+        run: |
+          r="${{ needs.test-shard.result }}"
+          echo "partes: $r"
+          [ "$r" = "success" ] || { echo "::error::alguna parte de la suite falló ($r)"; exit 1; }
 
-      - name: Regression tests
-        run: ./scripts/test.sh tests/programa.spec.js tests/sheet.spec.js tests/planner.spec.js tests/miplan.spec.js tests/festivals.spec.js
-
-      - name: Feature tests
-        run: ./scripts/test.sh tests/auth.spec.js tests/search.spec.js tests/i18n.spec.js tests/i18n-boot.spec.js
-
-      # Paso PROPIO, y no sumado a "Regression tests", por lo que mide: un test por
-      # FESTIVAL (festivalTestIds) que recorre intereses → prioridades →
-      # disponibilidad → Planear → Mi Plan → sugerencias. Cuando cae, lo que falló
-      # es un festival concreto, y el nombre del paso lo dice sin abrir el log.
-      # Es el gate de docs/FESTIVAL-CHECKLIST.md: un festival nuevo entra solo a la
-      # cobertura al agregar su config + su JSON.
-      - name: Recorrido por festival
-        run: ./scripts/test.sh tests/recorrido-festival.spec.js
-
-      - name: Cross-engine responsive tests
-        # Invariantes de layout deterministas bajo WebKit@390 (ios-mobile) +
-        # Blink@360 (android-small). El filtro de archivo sólo matchea esos dos
-        # proyectos (chromium tiene testIgnore sobre responsive.spec.js); la suite
-        # de comportamiento de arriba sigue corriendo SÓLO en chromium@390.
-        run: ./scripts/test.sh tests/responsive.spec.js
-
+  visual:
+    needs: clasificar
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    name: Auditoría visual
+    container:
+      image: mcr.microsoft.com/playwright:v1.60.0-noble
+      options: --user 1001
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '20'
+          cache: 'npm'
+      - run: npm ci
       - name: Run visual audit
-        # Sin `|| true`: el archivo promete fallar «si un selector crítico no
-        # existe (la pantalla no cargó)», y con el fallo tragado esa promesa no
-        # llegaba a ninguna parte — tres capturas se tomaron de la pantalla
-        # equivocada sin que CI dijera nada. Las capturas se suben igual: el
-        # paso de abajo corre con `if: always()`.
         run: |
           mkdir -p test-results/visual
           ./scripts/test.sh tests/visual-audit.spec.js --reporter=list
-
       - name: Upload screenshots (visual audit)
         uses: actions/upload-artifact@v6
         if: always()
@@ -111,13 +176,3 @@ jobs:
           name: visual-audit-screenshots
           path: test-results/visual/
           retention-days: 14
-
-      - name: Upload report on failure
-        if: failure()
-        uses: actions/upload-artifact@v6
-        with:
-          name: playwright-report
-          path: |
-            playwright-report/
-            test-results.json
-          retention-days: 7

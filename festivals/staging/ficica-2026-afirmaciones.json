@@ -1,0 +1,60 @@
+{
+ "_provenance": {
+  "fuente": "ficica.cinealacalle.org — Programación General (19 oct 2026)",
+  "capturado": "2026-10-19",
+  "metodo": "una afirmación por casilla, con su fuente (docs/FUNCION.md)"
+ },
+ "afirmaciones": [
+  {
+   "ancla": {
+    "sede": "Alianza Francesa de Barranquilla - Barranquilla",
+    "dia": "2026-10-23",
+    "hora": "14:00"
+   },
+   "funcion": "f_380d3aa18b",
+   "casilla": "time",
+   "valor": "16:30",
+   "contra": "14:00",
+   "fuente": {
+    "tipo": "festival-web",
+    "url": "https://ficica.cinealacalle.org/programacion-general.html",
+    "fecha": "2026-10-19"
+   },
+   "evidencia": "fila 67 (JSON embebido): \"dia\": \"2026-10-23\", \"inicio\": \"16:30\", \"fin\": \"18:30\", «La Paridad Importa», Alianza Francesa de Barranquilla, Salón Montreal, 3.er piso; el 15 oct decía 14:00 y 90 min. La página da solo la fecha (2026-10-23 = viernes en su propia lista de días); el «jueves 23» del aviso no aparece en la fuente: se usa la fecha"
+  },
+  {
+   "ancla": {
+    "sede": "Alianza Francesa de Barranquilla - Barranquilla",
+    "dia": "2026-10-23",
+    "hora": "14:00"
+   },
+   "funcion": "f_380d3aa18b",
+   "casilla": "duration",
+   "valor": "120 min",
+   "contra": "90 min",
+   "fuente": {
+    "tipo": "festival-web",
+    "url": "https://ficica.cinealacalle.org/programacion-general.html",
+    "fecha": "2026-10-19"
+   },
+   "evidencia": "fila 67 (JSON embebido): \"dia\": \"2026-10-23\", \"inicio\": \"16:30\", \"fin\": \"18:30\", «La Paridad Importa», Alianza Francesa de Barranquilla, Salón Montreal, 3.er piso; el 15 oct decía 14:00 y 90 min. La página da solo la fecha (2026-10-23 = viernes en su propia lista de días); el «jueves 23» del aviso no aparece en la fuente: se usa la fecha"
+  },
+  {
+   "ancla": {
+    "sede": "Parque Sagrado Corazón - Barranquilla",
+    "dia": "2026-10-24",
+    "hora": "18:30"
+   },
+   "funcion": "f_2297b54435",
+   "casilla": "venue",
+   "valor": "Alianza Francesa de Barranquilla - Barranquilla",
+   "contra": "Parque Sagrado Corazón - Barranquilla",
+   "fuente": {
+    "tipo": "festival-ig",
+    "url": "https://www.instagram.com/p/De5FgPIxV0o/",
+    "fecha": "2026-10-24"
+   },
+   "evidencia": "lámina «¡ATENCIÓN! FICICA 26» y pie (también https://www.instagram.com/p/De5KwE5Rqkq/): «La clausura FICICA 26 sigue en pie pero nos trasladamos a la Alianza Francesa de Barranquilla… Calle 52 #54-75 · Hoy, 24 de octubre | 6:30 p. m. · Entrada libre»; antes: Parque Sagrado Corazón, Concha Acústica"
+  }
+ ]
+}

@@ -1,11 +1,12 @@
 {
  "_provenance": {
   "fuente": "midbo.co — ficha de cada obra (bloque «Funciones») + API pelicula/seccion",
-  "capturado": "2026-10-15",
+  "capturado": "2026-10-26",
   "url": "https://midbo.co/",
   "metodo": "120 fichas; sección = categoría madre, programa = hija"
  },
  "_excluidas": [
+  "2026-10-27 16:00 ¡Viva México!: función fuera de Bogotá (Medellín)",
   "2026-11-07 16:30 Hanoi, martes 13: fuera del 27 oct–4 nov oficial (Cinemateca del Caribe, Barranquilla)",
   "2026-11-10 14:30 Hanoi, martes 13: fuera del 27 oct–4 nov oficial (Sala Langosta Azul, Universidad del Magdalena, Santa Marta)",
   "2026-11-14 16:30 Hanoi, martes 13: fuera del 27 oct–4 nov oficial (Cinemateca La Tertulia, Cali)",
@@ -17,20 +18,24 @@
   "2026-10-15 12:30 ¿Quién quemó el bus?: fuera del 27 oct–4 nov oficial (Colegio Alejandro Obregón)",
   "2026-10-16 09:00 ¿Quién quemó el bus?: fuera del 27 oct–4 nov oficial (Colegio Manuelita Sáenz)",
   "2026-10-16 15:00 ¿Quién quemó el bus?: fuera del 27 oct–4 nov oficial (Colegio Manuelita Sáenz)",
-  "Chanson pour le nouveau monde: función que la regla de fecha no lee (6 de noviembre / por confirmar H · UniNorte, Barranquilla)",
-  "Ciclón: función que la regla de fecha no lee (6 de noviembre / por confirmar H · UniNorte, Barranquilla)",
+  "Chanson pour le nouveau monde: función que la regla de fecha no lee (6 de noviembre / 10:00 a.m. · Salón GABO, Universidad del Norte, Barranquilla)",
+  "Ciclón: función que la regla de fecha no lee (6 de noviembre / 10:00 a.m. · Salón GABO, Universidad del Norte, Barranquilla)",
   "2026-11-07 16:30 Iré a Santiago: fuera del 27 oct–4 nov oficial (Cinemateca del Caribe, Barranquilla)",
   "2026-11-10 14:30 Iré a Santiago: fuera del 27 oct–4 nov oficial (Sala Langosta Azul, Universidad del Magdalena, Santa Marta)",
   "2026-11-14 16:30 Iré a Santiago: fuera del 27 oct–4 nov oficial (Cinemateca La Tertulia, Cali)",
+  "2026-11-24 18:00 Iré a Santiago: fuera del 27 oct–4 nov oficial (Cinema El Volador, Universidad Nacional de Colombia, sede Medellín)",
   "2026-11-07 16:30 En la otra isla: fuera del 27 oct–4 nov oficial (Cinemateca del Caribe, Barranquilla)",
   "2026-11-10 14:30 En la otra isla: fuera del 27 oct–4 nov oficial (Sala Langosta Azul, Universidad del Magdalena, Santa Marta)",
   "2026-11-14 16:30 En la otra isla: fuera del 27 oct–4 nov oficial (Cinemateca La Tertulia, Cali)",
+  "2026-11-24 18:00 En la otra isla: fuera del 27 oct–4 nov oficial (Cinema El Volador, Universidad Nacional de Colombia, sede Medellín)",
   "2026-11-07 16:30 Una isla para Miguel: fuera del 27 oct–4 nov oficial (Cinemateca del Caribe, Barranquilla)",
   "2026-11-10 14:30 Una isla para Miguel: fuera del 27 oct–4 nov oficial (Sala Langosta Azul, Universidad del Magdalena, Santa Marta)",
   "2026-11-14 16:30 Una isla para Miguel: fuera del 27 oct–4 nov oficial (Cinemateca La Tertulia, Cali)",
+  "2026-11-24 18:00 Una isla para Miguel: fuera del 27 oct–4 nov oficial (Cinema El Volador, Universidad Nacional de Colombia, sede Medellín)",
   "2026-11-07 16:30 Isla del tesoro: fuera del 27 oct–4 nov oficial (Cinemateca del Caribe, Barranquilla)",
   "2026-11-10 14:30 Isla del tesoro: fuera del 27 oct–4 nov oficial (Sala Langosta Azul, Universidad del Magdalena, Santa Marta)",
   "2026-11-14 16:30 Isla del tesoro: fuera del 27 oct–4 nov oficial (Cinemateca La Tertulia, Cali)",
+  "2026-11-24 18:00 Isla del tesoro: fuera del 27 oct–4 nov oficial (Cinema El Volador, Universidad Nacional de Colombia, sede Medellín)",
   "2026-11-07 16:30 L.B.J.: fuera del 27 oct–4 nov oficial (Cinemateca del Caribe, Barranquilla)",
   "2026-11-10 14:30 L.B.J.: fuera del 27 oct–4 nov oficial (Sala Langosta Azul, Universidad del Magdalena, Santa Marta)",
   "2026-11-14 16:30 L.B.J.: fuera del 27 oct–4 nov oficial (Cinemateca La Tertulia, Cali)",
@@ -43,10 +48,14 @@
   "2026-11-07 16:30 79 primaveras: fuera del 27 oct–4 nov oficial (Cinemateca del Caribe, Barranquilla)",
   "2026-11-10 14:30 79 primaveras: fuera del 27 oct–4 nov oficial (Sala Langosta Azul, Universidad del Magdalena, Santa Marta)",
   "2026-11-14 16:30 79 primaveras: fuera del 27 oct–4 nov oficial (Cinemateca La Tertulia, Cali)",
+  "2026-11-19 10:00 Escrito sobre un cuerpo: fuera del 27 oct–4 nov oficial (Casa de Bolívar, Cartagena)",
+  "2026-11-19 10:00 Gestos para romper una imagen: fuera del 27 oct–4 nov oficial (Casa de Bolívar, Cartagena)",
+  "2026-11-19 10:00 Lengua muerta: fuera del 27 oct–4 nov oficial (Casa de Bolívar, Cartagena)",
   "2026-11-25 18:30 Instrucciones para cuando no esté: fuera del 27 oct–4 nov oficial (MAMM, El Poblado, Medellín)",
-  "Nacer de nuevo: función que la regla de fecha no lee (6 de noviembre / por confirmar H · UniNorte, Barranquilla)",
+  "Nacer de nuevo: función que la regla de fecha no lee (6 de noviembre / 10:00 a.m. · Salón GABO, Universidad del Norte, Barranquilla)",
   "2026-11-28 16:30 De cierta manera: fuera del 27 oct–4 nov oficial (MAMM, El Poblado, Medellín)",
   "2026-11-07 19:00 De cierta manera: fuera del 27 oct–4 nov oficial (Cinemateca del Caribe, Barranquilla)",
+  "2026-11-10 14:30 Mi aporte: fuera del 27 oct–4 nov oficial (Sala Langosta Azul, Universidad del Magdalena)",
   "2026-10-27 14:00 L’Evangile de la Révolution: función fuera de Bogotá (Santa Marta)",
   "2026-11-06 11:30 Retratos de Churcampa: fuera del 27 oct–4 nov oficial (Sala 3, Cinemateca de Bogotá)",
   "2026-11-13 11:30 Retratos de Churcampa: fuera del 27 oct–4 nov oficial (Sala 3, Cinemateca de Bogotá)",
@@ -54,7 +63,9 @@
   "2026-12-11 11:30 Retratos de Churcampa: fuera del 27 oct–4 nov oficial (Sala 3, Cinemateca de Bogotá)",
   "2026-11-22 17:00 Bojayá: la verdad desde adentro: fuera del 27 oct–4 nov oficial (Cinemateca La Tertulia, Cali)",
   "2026-10-28 09:00 Boyuna: función dentro de un centro penitenciario («MIDBO va a las cárceles»)",
+  "2026-11-19 10:00 Dreams for a Better Past: fuera del 27 oct–4 nov oficial (Casa de Bolívar, Cartagena)",
   "2026-10-28 18:00 Un lugar más grande: función fuera de Bogotá (Medellín)",
+  "2026-10-30 17:00 Fordlândia Panacea: función fuera de Bogotá (Leticia)",
   "2026-10-30 18:30 Montaña luminosa: función fuera de Bogotá (Minca)",
   "2026-10-30 18:30 Un río de aguas profundas y luminosas: función fuera de Bogotá (Minca)",
   "2026-10-30 18:30 La forma y la raíz: función fuera de Bogotá (Minca)",
@@ -141,8 +152,7 @@
      "duracion_min": 33,
      "sinopsis": "En la comuna 13 de Medellín existe la fosa urbana a cielo abierto más grande de América Latina. Durante más de veinte años, La Escombrera ha sido señalada por familias de personas víctimas de desaparición forzada como el lugar donde posiblemente se encuentren muchos de los 503 desaparecidos de este territorio. Mujeres Caminando por la Verdad lidera la búsqueda forense que, en medio de incontables obstáculos y tras dos décadas de negacionismo, desencadenó en el hallazgo de cuerpos en diciembre del año 2024. Este acontecimiento histórico, una bocanada de aire fresco para las familias buscadoras, envió un mensaje muy claro a toda Colombia: la tierra ha comenzado a hablar."
     }
-   ],
-   "duracion_min": 88
+   ]
   },
   {
    "dia": "2026-10-28",
@@ -216,7 +226,7 @@
    "hora": "11:00",
    "sede": "Centro Ático, Universidad Javeriana",
    "ciudad": "Bogotá",
-   "acceso": "Entrada libre (no se anuncia pago)",
+   "acceso": "Entrada libre",
    "_src": {
     "url": "https://midbo.co/peliculas/el-valor-de-la-palabra/",
     "date": "2026-10-10"
@@ -235,8 +245,8 @@
    "titulo": "Programa 4: Hijo de tigre y mula: la historia de los tratados Torrijos-Carter",
    "dia": "2026-10-29",
    "hora": "14:00",
-   "sede": "Universidad Central",
-   "sala": "Auditorio Caldas",
+   "sede": "Universidad Jorge Tadeo Lozano",
+   "sala": "Aula Magistral 705 - M16 (piso 7), Edificio de Posgrados",
    "ciudad": "Bogotá",
    "acceso": "Entrada libre",
    "_src": {
@@ -370,7 +380,7 @@
    "dia": "2026-10-29",
    "hora": "16:00",
    "sede": "Centro de Memoria, Paz y Reconciliación",
-   "sala": "Aula 1",
+   "sala": "Auditorio",
    "ciudad": "Bogotá",
    "acceso": "Entrada libre",
    "_src": {
@@ -411,7 +421,7 @@
    "sinopsis": "Dos hermanos se adentran en los paisajes de sus cuerpos morenos y queer, donde los encuentros con familiares y ancestros iluminan nuevas posibilidades de su identidad. Semilites y Tania, dos hermanos queer unidos por una poderosa amistad, recorren el terreno moreno de sus propios cuerpos, tierras que alguna vez rechazaron. Atraviesan paisajes de piel, sueños y vísceras, llegando a lugares que palpitan con la memoria familiar. En el camino, se encuentran con una constelación de familiares y ancestros —su madre, padre, abuela, pero también flores, saltamontes y fósiles— que los guían en la reinvención de su identidad más allá de las narrativas coloniales de México. A través del collage, la animación, el manifiesto, la danza y momentos íntimos de documental, la película transita por las escalas del cuerpo y el territorio, trazando la silenciosa fuerza de la transformación y la ternura de la hermandad."
   },
   {
-   "titulo": "Programa 3: Creadoras de vida — Bodega Insurgesta",
+   "titulo": "Programa 3: Creadoras de vida",
    "dia": "2026-10-29",
    "hora": "17:00",
    "sede": "Bodega Insurgesta",
@@ -457,15 +467,24 @@
      "anio": 2026,
      "duracion_min": 27,
      "sinopsis": "Dos mujeres intercambian cartas fílmicas que cruzan el pasado y el presente, entrelazando material de archivo de películas amateur con material ficticio actual filmado en 16 mm. Nunca se conocen en persona, sólo en sus películas. Heidrun, una vienesa retratada mediante material de archivo, y Sara, una inmigrante colombiana que trabaja en el archivo fílmico del Museo Austriaco del Cine. Ambas viven en Viena en diferentes épocas y observan la ciudad desde sus respectivas y sus situaciones de vida. La película aborda temas como la migración, el desarraigo y el racismo, y adopta una dimensión ensayística al cuestionar qué merece ser archivado y qué no."
+    },
+    {
+     "titulo": "Geografía espectral",
+     "director": "Manuel Mateo Gómez",
+     "pais": "Colombia",
+     "anio": 2026,
+     "duracion_min": 22,
+     "sinopsis": "A orillas de una represa hidroeléctrica, cuya construcción sepultó el antiguo cauce del río Cauca, un grupo de mujeres se reúne para bordar. Cubren el río de flores para invocar a sus muertos, en una geografía tejida por hilos de memoria y resistencia. El espíritu de los cuerpos arrojados al río y cubiertos por la represa inconclusa navega junto a los peces en el agua. Las almas emergen vestidas de fuego para escuchar el canto que les envían sus madres y hermanas desde la vida."
     }
    ],
-   "duracion_min": 76
+   "duracion_min": 99
   },
   {
    "titulo": "Programa 3: Acompañar y restituir la memoria familiar y colectiva",
    "dia": "2026-10-29",
    "hora": "17:30",
    "sede": "Centro de Memoria, Paz y Reconciliación",
+   "sala": "Auditorio",
    "ciudad": "Bogotá",
    "acceso": "Entrada libre",
    "_src": {
@@ -607,11 +626,10 @@
   {
    "dia": "2026-10-30",
    "hora": "14:00",
-   "sede": "Universidad Central",
-   "sala": "Auditorio Santander",
+   "sede": "Universidad Jorge Tadeo Lozano",
+   "sala": "Aula Magistral 705 - M16 (piso 7), Edificio de Posgrados",
    "ciudad": "Bogotá",
-   "ticket_url": "https://tuboleta.com/es/eventos/un-lugar-mas-grande",
-   "acceso": "Boletería en TuBoleta",
+   "acceso": "Entrada libre (no se anuncia pago)",
    "_src": {
     "url": "https://midbo.co/peliculas/un-lugar-mas-grande/",
     "date": "2026-10-10"
@@ -838,7 +856,8 @@
    "sede": "Cinemateca de Bogotá",
    "sala": "Sala 3",
    "ciudad": "Bogotá",
-   "acceso": "desconocido",
+   "ticket_url": "https://tuboleta.com/es/eventos/un-lugar-mas-grande",
+   "acceso": "Boletería en TuBoleta",
    "_src": {
     "url": "https://midbo.co/peliculas/un-lugar-mas-grande/",
     "date": "2026-10-10"
@@ -1643,7 +1662,7 @@
      "sinopsis": "En lo alto del páramo de Chiscas, en Boyacá, viven las ovejas que Edualdo y Ana cuidan desde hace décadas. En medio de la niebla, Wilmer, su hijo menor, crece entre el juego y las rutinas del campo. En esta película, la geografía no es sólo escenario. El páramo se impone como una presencia viva, bella y a la vez agreste, que configura la experiencia de la familia, determinando sus afectos, sus tiempos y su relación con la vida y la muerte."
     }
    ],
-   "duracion_min": 64
+   "duracion_min": 91
   },
   {
    "titulo": "Programa 1: Miradas convulsas desde el presente",
@@ -1770,7 +1789,7 @@
    "sinopsis": "Pacho salió de su pueblo por hechos violentos hace más de 50 años y nunca pudo regresar. Al ver una vieja fotografía que se parece al último recuerdo que guarda de su tierra, siente el deseo de volver y encontrarse con los que allí dejó. Ante la imposibilidad de hacerlo, inventa un regreso imaginario para reencontrarse con su historia y sanar las huellas que la violencia dejó en su vida. En ese pueblo que parece solitario, lo reciben unos rostros que lo han estado esperando. Desde el pasado, con sus miradas, lo acompañan a recorrer las calles. Mediante el juego y la imaginación, Pacho le da vida una imagen de archivo de hace 70 años, la misma que se convirtió en símbolo inaugural de la violencia en Colombia. En su retorno imaginado, la fotografía se transforma en territorio vivo y la imaginación en un acto de resistencia y sanación, frente a un trauma colectivo de un país entero que ha plasmado su violencia una y otra vez en una misma imagen."
   },
   {
-   "titulo": "Sey Arimaku, la otra oscuridad + Galu Dugbis – La memoria de las abuelas",
+   "titulo": "Sey Arimaku, la otra oscuridad + Galu dugbis. La memoria de las abuelas",
    "dia": "2026-11-03",
    "hora": "10:00",
    "sede": "Alianza Francesa",
@@ -1787,14 +1806,16 @@
      "director": "Pablo Mora",
      "pais": "Colombia",
      "anio": 2012,
-     "duracion_min": 59
+     "duracion_min": 59,
+     "sinopsis": "A la manera de un revistado diario de viajes, este ensayo documental trata sobre el encuentro de dos mundos ligados por sus mutuas obsesiones acerca de la representación visual de lo real. La colección de evocaciones de distintos momentos vividos por Amado Villafaña (director arhuaco de «Resistencia en la Línea Negra») y Pablo Mora (director de «Sey Arimaku, la otra oscuridad»), se convierte en disculpa para que el diálogo interétnico discurra por temas occidentales e indígenas sobre la imagen, el poder y la muerte."
     },
     {
-     "titulo": "Galu Dugbis – La memoria de las abuelas",
-     "director": "Pablo Mora (asesor de dirección)",
+     "titulo": "Galu dugbis. La memoria de las abuelas",
+     "director": "Olowaili Green Santacruz",
      "pais": "Colombia",
      "anio": 2019,
-     "duracion_min": 8
+     "duracion_min": 8,
+     "sinopsis": "Las mujeres de tres generaciones del pueblo Guna Dule del Urabá antioqueño cantan y tejen molas para cuidar el planeta. La Dule ome – Mujer Dule es vital para el pueblo Guna Dule. A través del tejido de la Mola, ella plasma la sabiduría de los antepasados mediante la representación de las capas del universo y la transmite de generación en generación para que la cultura perviva. Los cantos sagrados plasman el recorrido y el proceso de la construcción de una Mola y cómo por medio de tres generaciones las mujeres Guna Dule deciden tejer para no olvidar quiénes y de dónde son."
     }
    ],
    "duracion_min": 67
@@ -1861,7 +1882,7 @@
    "dia": "2026-11-03",
    "hora": "16:30",
    "sede": "Centro de Memoria, Paz y Reconciliación",
-   "sala": "Aula 1",
+   "sala": "Auditorio",
    "ciudad": "Bogotá",
    "acceso": "Entrada libre",
    "_src": {
@@ -1878,8 +1899,7 @@
      "duracion_min": 33,
      "sinopsis": "En la comuna 13 de Medellín existe la fosa urbana a cielo abierto más grande de América Latina. Durante más de veinte años, La Escombrera ha sido señalada por familias de personas víctimas de desaparición forzada como el lugar donde posiblemente se encuentren muchos de los 503 desaparecidos de este territorio. Mujeres Caminando por la Verdad lidera la búsqueda forense que, en medio de incontables obstáculos y tras dos décadas de negacionismo, desencadenó en el hallazgo de cuerpos en diciembre del año 2024. Este acontecimiento histórico, una bocanada de aire fresco para las familias buscadoras, envió un mensaje muy claro a toda Colombia: la tierra ha comenzado a hablar."
     }
-   ],
-   "duracion_min": 88
+   ]
   },
   {
    "dia": "2026-11-03",
@@ -1892,7 +1912,6 @@
     "url": "https://midbo.co/peliculas/el-hogar-fue-sepultado-en-esa-tierra-que-nunca-pudimos-encontrar/",
     "date": "2026-10-10"
    },
-   "premiere": "Estreno en Bogotá",
    "seccion": "Competencia Nacional de Largometraje Documental",
    "titulo": "El hogar fue sepultado en esa tierra que nunca pudimos encontrar",
    "director": "Deimer Quintero Vertel",
@@ -1926,7 +1945,7 @@
    "sede": "Universidad Nacional de Colombia",
    "sala": "Cinemateca Sala Alterna, Auditorio 105, edificio 301",
    "ciudad": "Bogotá",
-   "acceso": "Entrada libre (no se anuncia pago)",
+   "acceso": "Entrada libre",
    "_src": {
     "url": "https://midbo.co/peliculas/el-leon/",
     "date": "2026-10-10"
@@ -1986,36 +2005,6 @@
     }
    ],
    "duracion_min": 90
-  },
-  {
-   "titulo": "Sey Arimaku, la otra oscuridad + Galu Dugbis – La memoria de las abuelas",
-   "dia": "2026-11-04",
-   "hora": "10:00",
-   "sede": "Alianza Francesa",
-   "ciudad": "Bogotá",
-   "acceso": "Entrada libre (no se anuncia pago)",
-   "_src": {
-    "url": "https://midbo.co/peliculas/sey-arimaku-la-otra-oscuridad/",
-    "date": "2026-10-10"
-   },
-   "seccion": "Homenaje a Pablo Mora Calderón. Premio ALADOS a toda una vida",
-   "obras": [
-    {
-     "titulo": "Sey Arimaku, la otra oscuridad",
-     "director": "Pablo Mora",
-     "pais": "Colombia",
-     "anio": 2012,
-     "duracion_min": 59
-    },
-    {
-     "titulo": "Galu Dugbis – La memoria de las abuelas",
-     "director": "Pablo Mora (asesor de dirección)",
-     "pais": "Colombia",
-     "anio": 2019,
-     "duracion_min": 8
-    }
-   ],
-   "duracion_min": 67
   },
   {
    "dia": "2026-11-04",
@@ -2139,21 +2128,11 @@
    "ciudad": "Bogotá",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://midbo.co/peliculas/l-evangile-de-la-revolution/",
+    "url": "https://midbo.co/peliculas/a-film-to-remind-us-of-utopia/",
     "date": "2026-10-10"
    },
-   "has_qa": true,
-   "qa_type": "team",
    "seccion": "Espejos: Gestos de reparación",
    "obras": [
-    {
-     "titulo": "L'Evangile de la Révolution",
-     "director": "François-Xavier Drouet",
-     "pais": "Francia, Bélgica",
-     "anio": 2024,
-     "duracion_min": 115,
-     "sinopsis": "El auge revolucionario de América Latina en el siglo XX se debe mucho a la participación de millones de cristianos, comprometidos en luchas políticas en nombre de la fe. Inspirados por la teología de la liberación, desafiaron a los regímenes militares y a las oligarquías. Cuestionando la idea de la religión como opio del pueblo, la película va al encuentro de los que vieron en la revolución la llegada del Reino de Dios, en la tierra antes que en el cielo."
-    },
     {
      "titulo": "A Film to Remind Us of Utopia",
      "director": "Reinaldo Cardenuto",
@@ -2217,6 +2196,26 @@
      "sinopsis": "María Pascuala, lideresa sobreviviente de la masacre; Heidy, lideresa indígena de Mojaudó; y Ever, líder en condición de desplazamiento, recorren las comunidades afro e indígenas del municipio de Bojayá y los barrios donde habitan los bojayaseños desplazados en Quibdó. Llevan el baúl de la verdad, en donde recogen las preguntas que la comunidad envía a los responsables del conflicto armado en su territorio. Después de su recorrido, regresan al municipio para compartir las respuestas que han encontrado y junto con la comunidad construyen una verdad desde adentro."
     }
    ]
+  },
+  {
+   "dia": "2026-11-04",
+   "hora": "16:00",
+   "sede": "Alianza Francesa",
+   "ciudad": "Bogotá",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://midbo.co/peliculas/l-evangile-de-la-revolution/",
+    "date": "2026-10-10"
+   },
+   "has_qa": true,
+   "qa_type": "team",
+   "seccion": "Espejos: Gestos de reparación",
+   "titulo": "L'Evangile de la Révolution",
+   "director": "François-Xavier Drouet",
+   "pais": "Francia, Bélgica",
+   "anio": 2024,
+   "duracion_min": 115,
+   "sinopsis": "El auge revolucionario de América Latina en el siglo XX se debe mucho a la participación de millones de cristianos, comprometidos en luchas políticas en nombre de la fe. Inspirados por la teología de la liberación, desafiaron a los regímenes militares y a las oligarquías. Cuestionando la idea de la religión como opio del pueblo, la película va al encuentro de los que vieron en la revolución la llegada del Reino de Dios, en la tierra antes que en el cielo."
   },
   {
    "dia": "2026-11-04",
@@ -2359,6 +2358,7 @@
    "seccion": "Encuentro Pensar lo Real",
    "duracion_min": 90,
    "acceso": "Entrada gratuita con inscripción (cupos limitados)",
+   "sinopsis": "Claire Simon abordará «La escucha en el cine directo».",
    "invitados": "Invitada: Claire Simon · Modera: Gustavo Vasco.",
    "_src": {
     "url": "https://midbo.co/encuentro-pensar-lo-real/seminario/",
@@ -2377,6 +2377,7 @@
    "seccion": "Encuentro Pensar lo Real",
    "duracion_min": 90,
    "acceso": "Entrada gratuita con inscripción (cupos limitados)",
+   "sinopsis": "La mesa «Urgencia y experimentación: sonidos del tercer cine», con Eduardo Rencurrel, Jacobo del Castillo y la moderación de Adriana H. Bocanegra, recupera la dimensión política de las prácticas audiovisuales latinoamericanas a partir del sonido.",
    "invitados": "Invitados: Eduardo Rencurrel, Jacobo del Castillo · Modera: Adriana H. Bocanegra.",
    "_src": {
     "url": "https://midbo.co/encuentro-pensar-lo-real/seminario/",
@@ -2395,6 +2396,7 @@
    "seccion": "Encuentro Pensar lo Real",
    "duracion_min": 60,
    "acceso": "Entrada gratuita con inscripción (cupos limitados)",
+   "sinopsis": "«Dirigir desde la Nagra», con Marta Rodríguez y Felipe Colmenares, recupera la experiencia de una de las grandes pioneras del documental colombiano y la relación entre dirección sonora, trabajo de campo y construcción de una mirada documental.",
    "invitados": "Invitades: Marta Rodríguez y Felipe Colmenares.",
    "_src": {
     "url": "https://midbo.co/encuentro-pensar-lo-real/seminario/",
@@ -2431,6 +2433,7 @@
    "seccion": "Encuentro Pensar lo Real",
    "duracion_min": 90,
    "acceso": "Entrada gratuita con inscripción (cupos limitados)",
+   "sinopsis": "Mercedes Gaviria propondrá pensar el «Punto de escucha».",
    "invitados": "Invitada: Mercedes Gaviría · Modera: María Fernanda Carrillo.",
    "_src": {
     "url": "https://midbo.co/encuentro-pensar-lo-real/seminario/",
@@ -2449,6 +2452,7 @@
    "seccion": "Encuentro Pensar lo Real",
    "duracion_min": 90,
    "acceso": "Entrada gratuita con inscripción (cupos limitados)",
+   "sinopsis": "«Escuchar el archivo», con Archipiélago Sonoro y Guateque Cine, y la moderación de Laura Alhach, propone nuevas formas de aproximarse a los materiales documentales y de archivos desde la escucha.",
    "invitados": "Invitades: Archipiélago Sonoro y Guateque Cine · Modera: Laura Alhach.",
    "_src": {
     "url": "https://midbo.co/encuentro-pensar-lo-real/seminario/",
@@ -2467,6 +2471,7 @@
    "seccion": "Encuentro Pensar lo Real",
    "duracion_min": 60,
    "acceso": "Entrada gratuita con inscripción (cupos limitados)",
+   "sinopsis": "«Silencio y fabulación de archivo», con Azul Aizenberg y Juana Schlenker, abrirá una reflexión sobre aquello que ocurre cuando el archivo deja de ser únicamente evidencia para convertirse en materia de imaginación, interpretación y creación.",
    "invitados": "Invitadas: Azul Aizenberg y Juana Schlenker.",
    "_src": {
     "url": "https://midbo.co/encuentro-pensar-lo-real/seminario/",
@@ -2503,6 +2508,7 @@
    "seccion": "Encuentro Pensar lo Real",
    "duracion_min": 90,
    "acceso": "Entrada gratuita con inscripción (cupos limitados)",
+   "sinopsis": "Samuel Larson explorará las posibilidades expresivas, narrativas y conceptuales del sonido en «Pensar el sonido».",
    "invitados": "Invitado: Samuel Larson · Modera: Andrew Tucker.",
    "_src": {
     "url": "https://midbo.co/encuentro-pensar-lo-real/seminario/",
@@ -2521,6 +2527,8 @@
    "seccion": "Encuentro Pensar lo Real",
    "duracion_min": 60,
    "acceso": "Entrada gratuita con inscripción (cupos limitados)",
+   "sinopsis": "«Música en el cine documental», con Santiago Lozano y Jorge Andrés Botero, permitirá explorar las tensiones y posibilidades que surgen cuando la música entra en relación con las imágenes de lo real.",
+   "invitados": "Invitados: Santiago Lozano y Jorge Andrés Botero.",
    "_src": {
     "url": "https://midbo.co/encuentro-pensar-lo-real/seminario/",
     "date": "2026-10-10"
@@ -2538,10 +2546,136 @@
    "seccion": "Encuentro Pensar lo Real",
    "duracion_min": 90,
    "acceso": "Entrada gratuita con inscripción (cupos limitados)",
+   "sinopsis": "«Escucha continua. Homenaje a Roberto García», con Nelson Vergara, Carlos Santa y Pablo Mora, moderado por Jorjan Betancourt, revisita el legado de este compositor y artista sonoro a partir de su obra y sus materiales de archivo.",
    "invitados": "Invitados: Nelson Vergara, Pablo Mora, Carlos Santa · Modera: Jorjan Betancurt.",
    "_src": {
     "url": "https://midbo.co/encuentro-pensar-lo-real/seminario/",
     "date": "2026-10-10"
+   }
+  },
+  {
+   "titulo": "Diario de una oreja",
+   "dia": "2026-10-29",
+   "hora": "19:30",
+   "sede": "Alianza Francesa",
+   "sala": "Sede Centro",
+   "ciudad": "Bogotá",
+   "tipo": "evento",
+   "event_kind": "evento",
+   "seccion": "Encuentro Pensar lo Real",
+   "duracion_min": 60,
+   "acceso": "Entrada gratuita con inscripción (cupos limitados)",
+   "invitados": "Diana Martínez Muñoz / José Delgadillo Gaviria.",
+   "sinopsis": "Diario de una oreja es un performance documental sonoro que piensa la escucha desde una perspectiva cyborg. Diana Martínez Muñoz, junto a José Delgadillo Gaviria, compone un álbum de piezas sonoras y textos leídos en vivo a partir de la pérdida auditiva, el implante coclear, el diseño sonoro y la docencia en cine. Entre oscuridad, voz, sintetizadores e imágenes, la obra convierte el sonido en territorio político, íntimo y especulativo.",
+   "_src": {
+    "url": "https://www.instagram.com/p/DexoaAzCV-0/",
+    "date": "2026-10-21"
+   }
+  },
+  {
+   "titulo": "Homenaje Roberto García Piedrahita QEDP",
+   "dia": "2026-10-31",
+   "hora": "19:00",
+   "sede": "Universidad Jorge Tadeo Lozano, Edificio Fabio Lozano",
+   "sala": "Auditorio Fabio Lozano",
+   "ciudad": "Bogotá",
+   "tipo": "evento",
+   "event_kind": "concierto",
+   "seccion": "Documental Expandido",
+   "duracion_min": 90,
+   "acceso": "Entrada libre (no se anuncia pago)",
+   "invitados": "Roberto García Piedrahita / Sergio Andrés Román.",
+   "sinopsis": "Obras inéditas de Roberto García Piedrahita propone una activación en vivo a partir de materiales sonoros poco conocidos del compositor, artista sonoro y docente Roberto García. Alberto Vargas, Sergio Román y Jorjan Betancourt abordan ese archivo como campo de resonancia, memoria y transmisión. La improvisación no busca fijar una obra, sino prolongar sus posibilidades: hacer que el legado de García vuelva a sonar como acontecimiento abierto dentro del pensamiento experimental colombiano. Se proyectaran fragmentos de las peliculas Fragmentos (1999), Batallas Sagradas (2002), Quién paga el pato (2001) para las que Roberto García hizo la música.",
+   "_src": {
+    "url": "https://www.instagram.com/p/DexoaAzCV-0/",
+    "date": "2026-10-21"
+   }
+  },
+  {
+   "titulo": "Inauguración Documental Expandido",
+   "dia": "2026-10-28",
+   "hora": "16:30",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala E",
+   "ciudad": "Bogotá",
+   "tipo": "evento",
+   "event_kind": "evento",
+   "seccion": "Documental Expandido",
+   "duracion_min": 90,
+   "_duracion_de": "midbo.co/obras/patrimonio-liquido-ii/: 4:30 - 6:00pm",
+   "acceso": "Entrada libre",
+   "sinopsis": "Proyección en 16 mm y sonido en vivo. Primera activación de Documental Expandido.",
+   "obras": [
+    {
+     "titulo": "Circo",
+     "director": "Daniel Torres",
+     "sinopsis": "Circo convierte una carpa construida con retazos de tela en un dispositivo de memoria. En su interior, los recuerdos de infancia de “Lolita” reaparecen de manera fragmentaria a través de imágenes en 16 mm, video, voces y variaciones de luz. Daniel Torres articula estos elementos mediante una operación performativa en la que las proyecciones se desplazan sobre las superficies textiles, transformándolas en pantallas inestables y cuerpos en movimiento."
+    },
+    {
+     "titulo": "Patrimonio Líquido II",
+     "director": "Sergio Díaz",
+     "sinopsis": "Patrimonio líquido II toma como punto de partida la cascada artificial formada por el desagüe del embalse de Chisacá para interrogar la construcción del paisaje y las lógicas de extracción que atraviesan el territorio. Sergio Díaz articula video, fotografía, sonido y una superficie textil sobre la que la imagen del agua adquiere una presencia casi material."
+    }
+   ],
+   "_src": {
+    "url": "https://www.instagram.com/p/De3AsKjiTRT/",
+    "date": "2026-10-23"
+   }
+  },
+  {
+   "titulo": "Visita guiada por el CMPR",
+   "dia": "2026-10-29",
+   "hora": "15:00",
+   "sede": "Centro de Memoria, Paz y Reconciliación",
+   "ciudad": "Bogotá",
+   "tipo": "evento",
+   "event_kind": "evento",
+   "seccion": "Programas especiales",
+   "duracion_min": 60,
+   "_duracion_de": "estimada: la lámina no da hora de fin",
+   "acceso": "Entrada gratuita con inscripción previa",
+   "_src": {
+    "url": "https://www.instagram.com/p/De7_QLjCTdz/",
+    "date": "2026-10-26"
+   }
+  },
+  {
+   "titulo": "Visita guiada por el CMPR",
+   "dia": "2026-11-03",
+   "hora": "15:00",
+   "sede": "Centro de Memoria, Paz y Reconciliación",
+   "ciudad": "Bogotá",
+   "tipo": "evento",
+   "event_kind": "evento",
+   "seccion": "Programas especiales",
+   "duracion_min": 60,
+   "_duracion_de": "estimada: la lámina no da hora de fin",
+   "acceso": "Entrada gratuita con inscripción previa",
+   "_src": {
+    "url": "https://www.instagram.com/p/De7_QLjCTdz/",
+    "date": "2026-10-26"
+   }
+  },
+  {
+   "titulo": "Escuchar lo que permanece",
+   "dia": "2026-10-28",
+   "hora": "14:00",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Sala E",
+   "ciudad": "Bogotá",
+   "tipo": "evento",
+   "event_kind": "evento",
+   "seccion": "Documental Expandido",
+   "info": true,
+   "hasta": "2026-11-04",
+   "duracion_min": 240,
+   "_duracion_de": "martes a viernes 2:00 p. m. a 6:00 p. m., agenda de la Cinemateca",
+   "acceso": "Entrada libre reclamando boleta en taquilla",
+   "sinopsis": "¿Qué escuchamos cuando una imagen guarda silencio? En las cuatro obras de la exposición, el sonido aparece como una materia inestable. Puede habitar una voz, adherirse a un paisaje, surgir de una textura o permanecer latente en una imagen. A veces se oye. A veces debe ser imaginado. Martes a viernes: 2:00 p.m. a 6:00 p.m. Sábados, domingos y festivos: 11:00 a.m. a 6:00 p.m.",
+   "invitados": "Artista: María Isabella Arenas, Sergio Díaz, Daniel Torres, Yareni Velázquez Mendoza · Curaduría: Jorjan Betancourt.",
+   "_src": {
+    "url": "https://cinematecadebogota.gov.co/exposiciones?id=3663",
+    "date": "2026-10-22"
    }
   }
  ]

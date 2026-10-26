@@ -1,0 +1,42 @@
+{
+ "_provenance": {
+  "fuente": "afirmaciones sobre la fuente principal de MIDBO 2026 (midbo.co)",
+  "capturado": "2026-10-23"
+ },
+ "afirmaciones": [
+  {
+   "funcion": "f_c7a0f4f837",
+   "casilla": "has_qa",
+   "valor": true,
+   "contra": false,
+   "fuente": {
+    "tipo": "juan",
+    "frase": "si la lámina 1 de p/De2tvC3iXox confirma «Función con Q&A», márcala con Q&A (la web no lo dice; el afiche oficial sí)",
+    "fecha": "2026-10-23"
+   },
+   "evidencia": "https://www.instagram.com/p/De2tvC3iXox/ lámina 1: «PROYECCIÓN INAUGURAL · Miércoles 28 de octubre · 7:00 PM · Función con Q&A · CINEMATECA DE BOGOTÁ · Sala Capital, 2 y 3»"
+  },
+  {
+   "funcion": "f_c4adc7a865",
+   "casilla": "sala",
+   "valor": "Aula Magistral 703 - M16 (piso 7), Edificio de Posgrados",
+   "fuente": {
+    "tipo": "festival-ig",
+    "url": "https://www.instagram.com/p/De7_QLjCTdz/",
+    "fecha": "2026-10-26"
+   },
+   "evidencia": "lámina 8 de p/De7_QLjCTdz (25 oct): «jue 29 oct · 2:00 p.m. · Edificio de Postgrados · Módulo 16 · Aula magistral 703 · Hijo de tigre y mula». CONTRADICCIÓN: midbo.co (ficha de la obra) dice «Aula Magistral 705 - M16 (piso 7)»; se aplica la fuente más reciente (la lámina). PENDIENTE: Juan lo confirma con el festival"
+  },
+  {
+   "funcion": "f_c7bb101b44",
+   "casilla": "sala",
+   "valor": "Aula Magistral 703 - M16 (piso 7), Edificio de Posgrados",
+   "fuente": {
+    "tipo": "festival-ig",
+    "url": "https://www.instagram.com/p/De7_QLjCTdz/",
+    "fecha": "2026-10-26"
+   },
+   "evidencia": "lámina 8 de p/De7_QLjCTdz (25 oct): «vie 30 oct · 2:00 p.m. · Edificio de Postgrados · Módulo 16 · Aula magistral 703 · Un lugar más grande». CONTRADICCIÓN: midbo.co (ficha de la obra) dice «Aula Magistral 705 - M16 (piso 7)»; se aplica la fuente más reciente (la lámina). PENDIENTE: Juan lo confirma con el festival"
+  }
+ ]
+}

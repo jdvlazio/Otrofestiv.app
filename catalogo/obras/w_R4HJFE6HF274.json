@@ -10,6 +10,10 @@
  ],
  "aliases": [
   {
+   "titulo": "Tuktu, padre maíz",
+   "tipo": "festival"
+  },
+  {
    "titulo": "Tuktu, Father Maize",
    "idioma": "en",
    "tipo": "traduccion"
@@ -24,8 +28,8 @@
   "Fantasía / Aventura"
  ],
  "afiche": {
-  "archivo": "/assets/ficdeh/tuktu-padre-maiz.jpg",
-  "veredicto": "oficial-festival"
+  "archivo": "/assets/cortoscali-2026/tuktu-padre-maiz.jpg",
+  "veredicto": "oficial"
  },
  "xref": {
   "tmdb": 1592955,
@@ -42,7 +46,9 @@
   }
  ],
  "presentaciones": [
+  "cortoscali-2026",
   "ficdeh-2026",
+  "ficica-2026",
   "ficmontanas-2026",
   "ficpa-2026",
   "popayan-2026",

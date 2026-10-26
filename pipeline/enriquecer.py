@@ -28,13 +28,49 @@ import datetime
 import json, os, re, subprocess, sys, time
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from lib import (cargar_crudo, ficha_verifica, norm, provenance, slug,
+from lib import (asset_declarado, sin_tmdb_si_se_pide, cargar_crudo, ficha_verifica, norm, provenance, slug,
                  tmdb_get, tmdb_ficha, UA, ficha_tmdb, director_coincide, ya_publicada,
                  obras_publicadas)
 import catalogo  # noqa: E402
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ST = f'{REPO}/festivals/staging'
+
+
+
+def es_programa(f):
+    """¿La función es un programa de 2+ obras? (`obras` o `film_list`, los dos
+    nombres que acepta el ensamblador). Con UNA obra la función ES esa obra."""
+    return len([o for o in (f.get('obras') or f.get('film_list') or []) if o.get('titulo') or o.get('title')]) >= 2
+
+def obras_a_buscar(funciones, tit_of, _para_verificar=lambda x: x):
+    """Las obras que se buscan en TMDB: cada función que ES una obra y cada obra
+    de dentro de un programa. Un programa de 2+ obras no se busca (es_programa)."""
+    obras = {}
+    for f in funciones:
+        if not f.get('en_app', True):
+            continue
+        # UN PROGRAMA DE 2+ OBRAS NO ES UNA OBRA (20 oct 2026, BHFF): su título
+        # («El Susurro + Esquirlas de Caracol») no es una película, y buscarlo en
+        # TMDB le encontraba la ficha de UNA de ellas, que el ensamblador pegaba
+        # al programa entero (lbSlug, año, género, descripción). Lo que se busca
+        # son sus obras, de a una, aquí abajo.
+        if f.get('tipo', 'film') in ('film', '') and not es_programa(f):
+            t = tit_of.get(f['titulo'], f['titulo'])
+            obras.setdefault(t, _para_verificar({**f, 'titulo': t}))
+        # `film_list` es el otro nombre de `obras`: el ensamblador acepta los
+        # dos desde siempre y este paso solo miraba uno. En Villa del Cine eso
+        # dejó 104 cortos sin enriquecer y el reporte decía «1 obra» tan
+        # tranquilo — el mismo fallo mudo de antes, por la otra puerta. Si dos
+        # pasos leen la misma lista, tienen que aceptar los mismos nombres.
+        for o in f.get('obras') or f.get('film_list') or []:
+            if not o.get('titulo'):
+                continue
+            t = tit_of.get(o['titulo'], o['titulo'])
+            # la obra hereda el día de su función solo para el reporte; lo que
+            # verifica es su propia ficha (director, año, duración)
+            obras.setdefault(t, _para_verificar({**o, 'titulo': t}))
+    return obras
 
 
 def variantes(titulo, alias):
@@ -290,6 +326,11 @@ def afiche_tmdb(e, fid, base, key):
 from herencia import afiche_ajeno_vale  # noqa: E402  (dueño: herencia.py)
 
 
+def _min_de(v):
+    m = re.search(r'\d+', str(v or ''))
+    return int(m.group()) if m else None
+
+
 def reuso_publicada(pub, fid=None):
     """Sin ficha, pero ya la publicamos con afiche: se reusa el afiche y la
     sinopsis que mostramos entonces —ya pasaron por un montaje—. «Belleza letal»
@@ -313,16 +354,26 @@ def reuso_publicada(pub, fid=None):
     # la SINOPSIS se reusa de donde esté, aunque el afiche de ese festival fuera
     # un fotograma: son dos datos distintos (Girardota perdía 2 sinopsis)
     s = next((y for y in pub if y.get('sinopsis')), None)
-    if not x and not s:
+    # y lo demás que ya mostramos (17 oct 2026), de donde esté: cada dato del
+    # primer festival que lo tenga
+    _de = lambda c: next((y[c] for y in pub if y.get(c)), None)
+    resto = {k: v for k, v in (('pais', _de('country')), ('anio', _de('year')),
+                                ('duracion_tmdb', _min_de(_de('duration'))),
+                                ('genero', _de('genre')), ('synopsis_en', _de('synopsis_en')),
+                                ('lbSlug', _de('lbSlug'))) if v}
+    if not x and not s and not resto:
         return None
     e = {'_ya_publicada': pub}
     if x:
         e['poster'] = x['poster']
         e['_verificado'] = f'ya publicada en {x["festival"]}: se reusa su afiche'
-    else:
+    elif s:
         e['_verificado'] = f'ya publicada en {s["festival"]}: se reusa su sinopsis'
     if s:
         e['sinopsis'] = s['sinopsis']
+    if not x and not s:
+        e['_verificado'] = f'ya publicada en {pub[0]["festival"]}: se reusan sus datos'
+    e.update(resto)
     return e
 
 
@@ -379,25 +430,7 @@ def main():
     def _para_verificar(x):
         return {**x, 'duracion_min': x.get('duracion_obra') or x.get('duracion_min')}
 
-    obras = {}
-    for f in crudo['funciones']:
-        if not f.get('en_app', True):
-            continue
-        if f.get('tipo', 'film') in ('film', ''):
-            t = tit_of.get(f['titulo'], f['titulo'])
-            obras.setdefault(t, _para_verificar({**f, 'titulo': t}))
-        # `film_list` es el otro nombre de `obras`: el ensamblador acepta los
-        # dos desde siempre y este paso solo miraba uno. En Villa del Cine eso
-        # dejó 104 cortos sin enriquecer y el reporte decía «1 obra» tan
-        # tranquilo — el mismo fallo mudo de antes, por la otra puerta. Si dos
-        # pasos leen la misma lista, tienen que aceptar los mismos nombres.
-        for o in f.get('obras') or f.get('film_list') or []:
-            if not o.get('titulo'):
-                continue
-            t = tit_of.get(o['titulo'], o['titulo'])
-            # la obra hereda el día de su función solo para el reporte; lo que
-            # verifica es su propia ficha (director, año, duración)
-            obras.setdefault(t, _para_verificar({**o, 'titulo': t}))
+    obras = obras_a_buscar(crudo['funciones'], tit_of, _para_verificar)
 
     # ── LA CACHÉ ────────────────────────────────────────────────────────────
     # Sondear TMDB cuesta. Medido en Villa del Cine: 111 obras a ~6 s por
@@ -434,6 +467,15 @@ def main():
     # Un título mal copiado en el sidecar no haría nada y nadie se enteraría —
     # el mismo fallo mudo de siempre, escribir un dato que nadie lee.
     _huerf = [t for t in declaradas if t not in obras]
+    # …salvo la obra que el festival SÍ tiene en su catálogo pero no proyecta en
+    # ninguna función pública (FICICA, «Ma-ma»: solo en colegios, 18 oct). Eso no
+    # es un título mal copiado: se avisa y se sigue
+    _cat_p = f'{ST}/{fid}-catalogo.json'
+    if _huerf and os.path.exists(_cat_p):
+        _en_cat = {norm(o.get('titulo') or '') for o in json.load(open(_cat_p, encoding='utf-8')).get('obras') or []}
+        for t in [t for t in _huerf if norm(t) in _en_cat]:
+            print(f'  · ficha declarada de «{t}»: está en el catálogo del festival y no en una función pública; no se usa')
+        _huerf = [t for t in _huerf if norm(t) not in _en_cat]
     if _huerf:
         sys.exit('ficha declarada para un título que no está en el programa: '
                  + ' · '.join(_huerf))
@@ -547,11 +589,19 @@ def main():
             # anterior, o el de otro festival nuestro que a su vez apunta aquí
             # (La Rebelión de un Fantasma, en Girardota y en Popayán), no cuenta
             # si el archivo no está en disco
+            # `sobre_tmdb: true` — el afiche que mandó el festival reemplaza la
+            # imagen de TMDB que una persona ya rechazó (Trizas: fotograma según
+            # el catálogo; el formulario de MIDBO trajo el afiche, 20 oct 2026)
+            if d.get('sobre_tmdb'):
+                e, _p = sin_tmdb_si_se_pide(e, d), ''
             if e.get('poster_path') or (_p and not (_p.startswith('/assets/')
                                                      and not os.path.exists(REPO + _p))):
                 continue
             os.makedirs(f'{REPO}/assets/{fid}', exist_ok=True)
-            dest = f'{REPO}/assets/{fid}/{slug(t)}.jpg'
+            # `asset`: nombre propio cuando el de siempre ya está tomado por otra
+            # imagen publicada (los assets son write-once)
+            _nom = asset_declarado(t, d)
+            dest = f'{REPO}/assets/{fid}/{_nom}'
             origen = f'{REPO}/{d.get("lamina") or d["archivo"]}'
             # `editorial: true` — un still 16:9 OFICIAL (el que el festival manda
             # como «afiche» de una obra que no tiene uno vertical): va ENTERO, sin
@@ -566,7 +616,7 @@ def main():
                     os.remove(dest)
                     print(f'   afiche declarado RECHAZADO · {t}: {_m}')
                     continue
-            e = {**e, 'poster': f'/assets/{fid}/{slug(t)}.jpg',
+            e = {**e, 'poster': f'/assets/{fid}/{_nom}',
                  'posterSource': 'editorial' if d.get('editorial') else 'custom' if d.get('lamina') else 'oficial',
                  '_afiche': f'declarado: {d["fuente"]}'}
             ok[t] = e
@@ -591,6 +641,11 @@ def main():
                 ok[t] = {**e, 'synopsis_en': d['texto'], '_sinopsis': d['fuente']}
                 n_s += 1
                 continue
+            # `texto_en`: la oficial en inglés junto a la española (traducción
+            # nuestra); el inglés no se pierde al declarar el español
+            if d.get('texto_en') and not e.get('synopsis_en'):
+                e = {**e, 'synopsis_en': d['texto_en']}
+                ok[t] = e
             if e.get('sinopsis') or e.get('synopsis_es'):
                 continue
             ok[t] = {**e, 'sinopsis': d['texto'], '_sinopsis': d['fuente']}
@@ -630,12 +685,18 @@ def main():
     # tampoco lo pisaría, pero así lo heredado no queda anotado de mentira)
     _DE_LA_FUENTE = {'synopsis_es': ('sinopsis', 'synopsis_es'), 'synopsis_en': ('sinopsis_en', 'synopsis_en'),
                      'poster': ('poster',), 'genero': ('genero',), 'title_en': ('title_en',),
-                     'lbSlug': ('lbSlug',), 'anio': ('anio',)}
+                     'lbSlug': ('lbSlug',), 'anio': ('anio',),
+                     'director_heredado': ('director',), 'duracion_tmdb': ('duracion_min',),
+                     'pais_heredado': ('pais',)}
     _hered = {}
     for t, f in obras.items():
         e = ok.get(t) or {}
-        wid = e.get('work_id') or catalogo.reconocer(
-            _obs, t, f.get('director') or '', f.get('anio'), f.get('duracion_min'))[0]
+        # primero LA PRESENTACIÓN (18 oct 2026): si el catálogo ya lista esta obra
+        # en este festival —una decisión de identidad la unió, FICICA: «Khazana»
+        # sin director, la misma que Ficcali con director—, esa es la obra. Solo
+        # si no, se reconoce por título + director, que sin director no puede
+        wid = (e.get('work_id') or catalogo.obra_de(_obs, fid, t, e.get('tmdb_id'))
+               or catalogo.reconocer(_obs, t, f.get('director') or '', f.get('anio'), f.get('duracion_min'))[0])
         w = _obs.get(wid) if wid else None
         if not w:
             continue

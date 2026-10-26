@@ -1,0 +1,414 @@
+{
+ "_provenance": {
+  "fuente": "ids-legado.py: ids estables congelados desde lo publicado (docs/FUNCION.md §11.2)",
+  "capturado": "2026-10-18"
+ },
+ "funciones": {
+  "f_e436cab009": {
+   "sede": "Cine Passeio Luz",
+   "dia": "2026-06-06",
+   "hora": "15:40",
+   "sala": "",
+   "titulo": "a holandesinha"
+  },
+  "f_79602b82af": {
+   "sede": "MON - Poty Lazzarotto",
+   "dia": "2026-06-08",
+   "hora": "20:45",
+   "sala": "",
+   "titulo": "a noite e os dias de miguel burnier"
+  },
+  "f_561a6783e3": {
+   "sede": "Cinemateca",
+   "dia": "2026-06-11",
+   "hora": "17:30",
+   "sala": "",
+   "titulo": "a paixao segundo ghb"
+  },
+  "f_6a83214375": {
+   "sede": "MON - Poty Lazzarotto",
+   "dia": "2026-06-10",
+   "hora": "21:00",
+   "sala": "",
+   "titulo": "adulto homem"
+  },
+  "f_d42ba361b9": {
+   "sede": "MON - Poty Lazzarotto",
+   "dia": "2026-06-08",
+   "hora": "18:15",
+   "sala": "",
+   "titulo": "an incomplete calendar"
+  },
+  "f_09becc0a04": {
+   "sede": "Cine Passeio Ritz",
+   "dia": "2026-06-09",
+   "hora": "17:20",
+   "sala": "",
+   "titulo": "anistia 79"
+  },
+  "f_11f7285dea": {
+   "sede": "Cine Passeio Ritz",
+   "dia": "2026-06-05",
+   "hora": "16:20",
+   "sala": "",
+   "titulo": "ashbah beyrouth"
+  },
+  "f_7b51b9b089": {
+   "sede": "Cine Passeio Luz",
+   "dia": "2026-06-05",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "barbara forever"
+  },
+  "f_69a1e14c3a": {
+   "sede": "Cine Passeio Luz",
+   "dia": "2026-06-06",
+   "hora": "10:30",
+   "sala": "",
+   "titulo": "blue velvet"
+  },
+  "f_fb549f7920": {
+   "sede": "MON - Poty Lazzarotto",
+   "dia": "2026-06-07",
+   "hora": "18:15",
+   "sala": "",
+   "titulo": "bouchra"
+  },
+  "f_f56d9938c6": {
+   "sede": "MON - Poty Lazzarotto",
+   "dia": "2026-06-06",
+   "hora": "18:15",
+   "sala": "",
+   "titulo": "cartas a mis padres muertos"
+  },
+  "f_1904f1fe37": {
+   "sede": "Cinemateca",
+   "dia": "2026-06-08",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "como todo mortal"
+  },
+  "f_45239e73e5": {
+   "sede": "Cine Passeio Luz",
+   "dia": "2026-06-06",
+   "hora": "19:45",
+   "sala": "",
+   "titulo": "desert hearts"
+  },
+  "f_91e0e93a12": {
+   "sede": "Cine Passeio Luz",
+   "dia": "2026-06-07",
+   "hora": "20:45",
+   "sala": "",
+   "titulo": "die abenteuer des prinzen achmed"
+  },
+  "f_5f6733599d": {
+   "sede": "Cine Passeio Luz",
+   "dia": "2026-06-07",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "dyrygent"
+  },
+  "f_55d163b6ff": {
+   "sede": "Cinemateca",
+   "dia": "2026-06-05",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "es domaju par kaki"
+  },
+  "f_22f0e177e2": {
+   "sede": "MON - Poty Lazzarotto",
+   "dia": "2026-06-12",
+   "hora": "21:00",
+   "sala": "",
+   "titulo": "fiz um foguete imaginando que voce vinha"
+  },
+  "f_4aba795214": {
+   "sede": "MON - Poty Lazzarotto",
+   "dia": "2026-06-12",
+   "hora": "18:15",
+   "sala": "",
+   "titulo": "flora airto o som revolucionario"
+  },
+  "f_417dc0f1a8": {
+   "sede": "Cinemateca",
+   "dia": "2026-06-05",
+   "hora": "13:45",
+   "sala": "",
+   "titulo": "futuro futuro"
+  },
+  "f_4142bc422e": {
+   "sede": "Cine Passeio Luz",
+   "dia": "2026-06-05",
+   "hora": "17:30",
+   "sala": "",
+   "titulo": "high school"
+  },
+  "f_020c11af40": {
+   "sede": "Cine Passeio Ritz",
+   "dia": "2026-06-05",
+   "hora": "13:45",
+   "sala": "",
+   "titulo": "histoires de la bonne vallee"
+  },
+  "f_db7161ba4f": {
+   "sede": "Cinemateca",
+   "dia": "2026-06-05",
+   "hora": "20:15",
+   "sala": "",
+   "titulo": "hollywood studios"
+  },
+  "f_c3f5b51135": {
+   "sede": "MON - Poty Lazzarotto",
+   "dia": "2026-06-10",
+   "hora": "18:15",
+   "sala": "",
+   "titulo": "if pigeons turned to gold"
+  },
+  "f_6a37994b9b": {
+   "sede": "Cinemateca",
+   "dia": "2026-06-06",
+   "hora": "16:15",
+   "sala": "",
+   "titulo": "joy boy a tribute to julius eastman"
+  },
+  "f_8acb2dcc05": {
+   "sede": "MON - Poty Lazzarotto",
+   "dia": "2026-06-13",
+   "hora": "16:45",
+   "sala": "",
+   "titulo": "kurtulus"
+  },
+  "f_964f2fd4c6": {
+   "sede": "MON - Poty Lazzarotto",
+   "dia": "2026-06-11",
+   "hora": "18:15",
+   "sala": "",
+   "titulo": "la noche esta marchandose ya"
+  },
+  "f_070396a423": {
+   "sede": "MON - Poty Lazzarotto",
+   "dia": "2026-06-07",
+   "hora": "20:45",
+   "sala": "",
+   "titulo": "maxita"
+  },
+  "f_715ea5f699": {
+   "sede": "Cine Passeio Ritz",
+   "dia": "2026-06-08",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "niewinni czarodzieje"
+  },
+  "f_d3eee4c814": {
+   "sede": "MON - Poty Lazzarotto",
+   "dia": "2026-06-09",
+   "hora": "18:15",
+   "sala": "",
+   "titulo": "nu ma lasa sa mor"
+  },
+  "f_42efa22492": {
+   "sede": "Cinemateca",
+   "dia": "2026-06-07",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "o mez da grippe"
+  },
+  "f_75bdcb4086": {
+   "sede": "MON - Poty Lazzarotto",
+   "dia": "2026-06-05",
+   "hora": "18:15",
+   "sala": "",
+   "titulo": "o profeta"
+  },
+  "f_da0e3c3e64": {
+   "sede": "MON - Poty Lazzarotto",
+   "dia": "2026-06-06",
+   "hora": "21:15",
+   "sala": "",
+   "titulo": "olhe para mim"
+  },
+  "f_1e613bf0d3": {
+   "sede": "Cine Passeio Ritz",
+   "dia": "2026-06-09",
+   "hora": "19:40",
+   "sala": "",
+   "titulo": "panny z wilka"
+  },
+  "f_c524594a51": {
+   "sede": "Cinemateca",
+   "dia": "2026-06-05",
+   "hora": "15:45",
+   "sala": "",
+   "titulo": "papaya"
+  },
+  "f_175107040f": {
+   "sede": "Cinemateca",
+   "dia": "2026-06-10",
+   "hora": "17:30",
+   "sala": "",
+   "titulo": "past future continuous"
+  },
+  "f_dac65c8882": {
+   "sede": "Cine Passeio Ritz",
+   "dia": "2026-06-06",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "polowanie na muchy"
+  },
+  "f_be3a83a6db": {
+   "sede": "MON - Poty Lazzarotto",
+   "dia": "2026-06-11",
+   "hora": "20:45",
+   "sala": "",
+   "titulo": "quase inverno"
+  },
+  "f_063e3a29bc": {
+   "sede": "MON - Poty Lazzarotto",
+   "dia": "2026-06-09",
+   "hora": "20:45",
+   "sala": "",
+   "titulo": "reparacao"
+  },
+  "f_d5705c7d63": {
+   "sede": "Cine Passeio Luz",
+   "dia": "2026-06-05",
+   "hora": "19:15",
+   "sala": "",
+   "titulo": "rita moreira cronicas memorias e videotape"
+  },
+  "f_5b7950a12c": {
+   "sede": "Cinemateca",
+   "dia": "2026-06-09",
+   "hora": "18:15",
+   "sala": "",
+   "titulo": "segunda pele"
+  },
+  "f_0806855da5": {
+   "sede": "MON - Poty Lazzarotto",
+   "dia": "2026-06-05",
+   "hora": "20:45",
+   "sala": "",
+   "titulo": "telurica a intima utopia"
+  },
+  "f_8a9721cab5": {
+   "sede": "Cine Passeio Luz",
+   "dia": "2026-06-08",
+   "hora": "20:30",
+   "sala": "",
+   "titulo": "vento norte"
+  },
+  "f_dd81cf7493": {
+   "sede": "Cine Passeio Luz",
+   "dia": "2026-06-08",
+   "hora": "17:15",
+   "sala": "",
+   "titulo": "werckmeister harmoniak"
+  },
+  "f_91a2aea12b": {
+   "sede": "Cine Passeio Ritz",
+   "dia": "2026-06-06",
+   "hora": "20:15",
+   "sala": "",
+   "titulo": "wszystko na sprzedaz"
+  },
+  "f_f5a6f16320": {
+   "sede": "Ópera de Arame",
+   "dia": "2026-06-04",
+   "hora": "19:30",
+   "sala": "",
+   "titulo": "yellow cake"
+  },
+  "f_26e3e11e2e": {
+   "sede": "Cine Passeio Ritz",
+   "dia": "2026-06-05",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "ziemia obiecana"
+  },
+  "f_ec6c854a6c": {
+   "sede": "MON - Poty Lazzarotto",
+   "dia": "2026-06-06",
+   "hora": "14:30",
+   "sala": "",
+   "titulo": "pgm 07 pequenos olhares"
+  },
+  "f_99d5e01911": {
+   "sede": "Teatro da Vila",
+   "dia": "2026-06-06",
+   "hora": "15:30",
+   "sala": "",
+   "titulo": "pgm 08 pequenos olhares"
+  },
+  "f_0b6ca717d8": {
+   "sede": "Cinemateca",
+   "dia": "2026-06-09",
+   "hora": "20:00",
+   "sala": "",
+   "titulo": "pgm 01 competitiva br int"
+  },
+  "f_caf74ef612": {
+   "sede": "Cinemateca",
+   "dia": "2026-06-10",
+   "hora": "19:45",
+   "sala": "",
+   "titulo": "pgm 02 competitiva br int"
+  },
+  "f_0ea74d25d1": {
+   "sede": "Cinemateca",
+   "dia": "2026-06-11",
+   "hora": "19:45",
+   "sala": "",
+   "titulo": "pgm 03 competitiva br int"
+  },
+  "f_cb18863941": {
+   "sede": "Cinemateca",
+   "dia": "2026-06-12",
+   "hora": "19:45",
+   "sala": "",
+   "titulo": "pgm 04 competitiva br int"
+  },
+  "f_f1f7814f7d": {
+   "sede": "Cinemateca",
+   "dia": "2026-06-06",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "pgm 05 mirada paranaense"
+  },
+  "f_327ccb7416": {
+   "sede": "Cinemateca",
+   "dia": "2026-06-07",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "pgm 06 mirada paranaense"
+  },
+  "f_e92f2e5145": {
+   "sede": "MON - Poty Lazzarotto",
+   "dia": "2026-06-06",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "sessao com acessibilidade na tela pequenos olhares"
+  },
+  "f_30ca17e726": {
+   "sede": "Cinemateca",
+   "dia": "2026-06-10",
+   "hora": "13:45",
+   "sala": "",
+   "titulo": "sessao com acessibilidade na tela competitiva br int"
+  },
+  "f_9389d33839": {
+   "sede": "Cinemateca",
+   "dia": "2026-06-07",
+   "hora": "14:30",
+   "sala": "",
+   "titulo": "sessao com acessibilidade na tela mirada paranaense"
+  },
+  "f_f445fa4d92": {
+   "sede": "Cine Passeio Luz",
+   "dia": "2026-06-09",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "ici et ailleurs lays lahum wujud"
+  }
+ }
+}

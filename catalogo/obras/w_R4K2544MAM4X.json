@@ -1,13 +1,22 @@
 {
  "id": "w_R4K2544MAM4X",
  "titulo_original": "Carola",
- "anio": null,
- "paises": [],
+ "anio": 2025,
+ "paises": [
+  "CO"
+ ],
  "directores": [
   "Violeta Barrios"
  ],
  "sinopsis": {
   "es": "Octavio, un anciano solitario y azotado por su pasado, recibe un extraño mensaje de su única compañía: su mula Carola. Para morir en paz, debe reconciliarse con Julián, su hijo a quien no ve desde hace años. Juntos emprenden un viaje marcado por el rencor, el silencio y la posibilidad de sanar lo que parecía roto para siempre."
+ },
+ "generos": [
+  "Ficción"
+ ],
+ "afiche": {
+  "archivo": "/assets/siembrafest/carola.jpg",
+  "veredicto": "oficial"
  },
  "xref": {
   "tmdb": 1497688
@@ -19,6 +28,8 @@
   }
  ],
  "presentaciones": [
-  "girardota-2026"
+  "girardota-2026",
+  "guatape-2026",
+  "siembrafest-2026"
  ]
 }

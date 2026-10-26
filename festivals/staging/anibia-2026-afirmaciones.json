@@ -1,0 +1,715 @@
+{
+ "_provenance": {
+  "fuente": "agenda y fichas de la Cinemateca de Bogotá (sala, TuBoleta) + decisión de Juan (hora de Fontanar)",
+  "capturado": "2026-10-25",
+  "metodo": "una afirmación por casilla, con su fuente (docs/FUNCION.md)"
+ },
+ "afirmaciones": [
+  {
+   "ancla": {
+    "sede": "Cinemateca Fontanar del Río - Bogotá",
+    "dia": "2026-10-31",
+    "hora": "16:00"
+   },
+   "fuente": {
+    "tipo": "juan",
+    "fecha": "2026-10-21",
+    "frase": "la sala manda en sala, hora y boletería; ante una hora contradictoria va la más temprana"
+   },
+   "casilla": "time",
+   "valor": "14:00",
+   "evidencia": "Surgentes - Animage · agenda de la Cinemateca (https://cinematecadebogota.gov.co/node/peliculas/3579?sede=80): 14:00; PDF/IG: 16:00",
+   "contra": "16:00"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-10-21",
+    "hora": "19:00"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3590?sede=11",
+    "fecha": "2026-10-21"
+   },
+   "casilla": "sala",
+   "valor": "Sala Capital",
+   "evidencia": "El hijo de puta (O filho da puta) · Cinemateca de Bogotá Centro · 2026-10-21 19:00 · Sala Capital"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-10-22",
+    "hora": "16:00"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3591?sede=11",
+    "fecha": "2026-10-21"
+   },
+   "casilla": "sala",
+   "valor": "Sala 2",
+   "evidencia": "Surgentes - Animage · Cinemateca de Bogotá Centro · 2026-10-22 16:00 · Sala 2"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-10-22",
+    "hora": "16:00"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3591?sede=11",
+    "fecha": "2026-10-21"
+   },
+   "casilla": "entrada",
+   "valor": "boleta",
+   "evidencia": "Surgentes - Animage · 2026-10-22 16:00 · link de TuBoleta de la ficha"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-10-22",
+    "hora": "16:00"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3591?sede=11",
+    "fecha": "2026-10-21"
+   },
+   "casilla": "ticket_url",
+   "valor": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839523",
+   "evidencia": "Surgentes - Animage · 2026-10-22 16:00 · link de TuBoleta de la ficha"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-10-22",
+    "hora": "17:00"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3592?sede=11",
+    "fecha": "2026-10-21"
+   },
+   "casilla": "sala",
+   "valor": "Sala 3",
+   "evidencia": "Surgentes - Con extremos · Cinemateca de Bogotá Centro · 2026-10-22 17:00 · Sala 3"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-10-22",
+    "hora": "17:00"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3592?sede=11",
+    "fecha": "2026-10-21"
+   },
+   "casilla": "entrada",
+   "valor": "boleta",
+   "evidencia": "Surgentes - Con extremos · 2026-10-22 17:00 · link de TuBoleta de la ficha"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-10-22",
+    "hora": "17:00"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3592?sede=11",
+    "fecha": "2026-10-21"
+   },
+   "casilla": "ticket_url",
+   "valor": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839524",
+   "evidencia": "Surgentes - Con extremos · 2026-10-22 17:00 · link de TuBoleta de la ficha"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-10-22",
+    "hora": "19:30"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3593?sede=11",
+    "fecha": "2026-10-21"
+   },
+   "casilla": "sala",
+   "valor": "Sala 3",
+   "evidencia": "Conexión - Foco Pez Dorado · Cinemateca de Bogotá Centro · 2026-10-22 19:30 · Sala 3"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-10-22",
+    "hora": "19:30"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3593?sede=11",
+    "fecha": "2026-10-21"
+   },
+   "casilla": "entrada",
+   "valor": "boleta",
+   "evidencia": "Conexión - Foco Pez Dorado · 2026-10-22 19:30 · link de TuBoleta de la ficha"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-10-22",
+    "hora": "19:30"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3593?sede=11",
+    "fecha": "2026-10-21"
+   },
+   "casilla": "ticket_url",
+   "valor": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839525",
+   "evidencia": "Conexión - Foco Pez Dorado · 2026-10-22 19:30 · link de TuBoleta de la ficha"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-10-23",
+    "hora": "16:00"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3594?sede=11",
+    "fecha": "2026-10-21"
+   },
+   "casilla": "sala",
+   "valor": "Sala 2",
+   "evidencia": "Con acento nacional - Procesos de formación - Programa 1 · Cinemateca de Bogotá Centro · 2026-10-23 16:00 · Sala 2"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-10-23",
+    "hora": "16:00"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3594?sede=11",
+    "fecha": "2026-10-21"
+   },
+   "casilla": "entrada",
+   "valor": "boleta",
+   "evidencia": "Con acento nacional - Procesos de formación - Programa 1 · 2026-10-23 16:00 · link de TuBoleta de la ficha"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-10-23",
+    "hora": "16:00"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3594?sede=11",
+    "fecha": "2026-10-21"
+   },
+   "casilla": "ticket_url",
+   "valor": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839526",
+   "evidencia": "Con acento nacional - Procesos de formación - Programa 1 · 2026-10-23 16:00 · link de TuBoleta de la ficha"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-10-23",
+    "hora": "17:00"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3595?sede=11",
+    "fecha": "2026-10-21"
+   },
+   "casilla": "sala",
+   "valor": "Sala 3",
+   "evidencia": "Con acento nacional - Profesional - Programa 1 · Cinemateca de Bogotá Centro · 2026-10-23 17:00 · Sala 3"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-10-23",
+    "hora": "17:00"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3595?sede=11",
+    "fecha": "2026-10-21"
+   },
+   "casilla": "entrada",
+   "valor": "boleta",
+   "evidencia": "Con acento nacional - Profesional - Programa 1 · 2026-10-23 17:00 · link de TuBoleta de la ficha"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-10-23",
+    "hora": "17:00"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3595?sede=11",
+    "fecha": "2026-10-21"
+   },
+   "casilla": "ticket_url",
+   "valor": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839527",
+   "evidencia": "Con acento nacional - Profesional - Programa 1 · 2026-10-23 17:00 · link de TuBoleta de la ficha"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-10-23",
+    "hora": "19:30"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3596?sede=11",
+    "fecha": "2026-10-21"
+   },
+   "casilla": "sala",
+   "valor": "Sala 3",
+   "evidencia": "Surgentes - Miyu · Cinemateca de Bogotá Centro · 2026-10-23 19:30 · Sala 3"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-10-23",
+    "hora": "19:30"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3596?sede=11",
+    "fecha": "2026-10-21"
+   },
+   "casilla": "entrada",
+   "valor": "boleta",
+   "evidencia": "Surgentes - Miyu · 2026-10-23 19:30 · link de TuBoleta de la ficha (la ficha trae …183952, un dígito menos, y TuBoleta da «Error Page»; …528 es el que TuBoleta titula «Surgentes - Miyu», 23.10.2026 19:30)"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-10-23",
+    "hora": "19:30"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3596?sede=11",
+    "fecha": "2026-10-21"
+   },
+   "casilla": "ticket_url",
+   "valor": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839528",
+   "evidencia": "Surgentes - Miyu · 2026-10-23 19:30 · link de TuBoleta de la ficha (la ficha trae …183952, un dígito menos, y TuBoleta da «Error Page»; …528 es el que TuBoleta titula «Surgentes - Miyu», 23.10.2026 19:30)"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-10-24",
+    "hora": "14:00"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3591?sede=11",
+    "fecha": "2026-10-21"
+   },
+   "casilla": "sala",
+   "valor": "Sala 3",
+   "evidencia": "Surgentes - Animage · Cinemateca de Bogotá Centro · 2026-10-24 14:00 · Sala 3"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-10-24",
+    "hora": "14:00"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3591?sede=11",
+    "fecha": "2026-10-21"
+   },
+   "casilla": "entrada",
+   "valor": "boleta",
+   "evidencia": "Surgentes - Animage · 2026-10-24 14:00 · link de TuBoleta de la ficha"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-10-24",
+    "hora": "14:00"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3591?sede=11",
+    "fecha": "2026-10-21"
+   },
+   "casilla": "ticket_url",
+   "valor": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839523",
+   "evidencia": "Surgentes - Animage · 2026-10-24 14:00 · link de TuBoleta de la ficha"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-10-24",
+    "hora": "15:30"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3692?sede=11",
+    "fecha": "2026-10-21"
+   },
+   "casilla": "sala",
+   "valor": "Sala 3",
+   "evidencia": "Costa a costa - Lo mejor de Annecy 2026 · Cinemateca de Bogotá Centro · 2026-10-24 15:30 · Sala 3"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-10-24",
+    "hora": "15:30"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3692?sede=11",
+    "fecha": "2026-10-21"
+   },
+   "casilla": "entrada",
+   "valor": "boleta",
+   "evidencia": "Costa a costa - Lo mejor de Annecy 2026 · 2026-10-24 15:30 · link de TuBoleta de la ficha"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-10-24",
+    "hora": "15:30"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3692?sede=11",
+    "fecha": "2026-10-21"
+   },
+   "casilla": "ticket_url",
+   "valor": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839529",
+   "evidencia": "Costa a costa - Lo mejor de Annecy 2026 · 2026-10-24 15:30 · link de TuBoleta de la ficha"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-10-24",
+    "hora": "16:00"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3616?sede=11",
+    "fecha": "2026-10-21"
+   },
+   "casilla": "sala",
+   "valor": "Sala 2",
+   "evidencia": "Costa a costa · Cinemateca de Bogotá Centro · 2026-10-24 16:00 · Sala 2"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-10-24",
+    "hora": "16:00"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3616?sede=11",
+    "fecha": "2026-10-21"
+   },
+   "casilla": "entrada",
+   "valor": "boleta",
+   "evidencia": "Costa a costa · 2026-10-24 16:00 · link de TuBoleta de la ficha"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-10-24",
+    "hora": "16:00"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3616?sede=11",
+    "fecha": "2026-10-21"
+   },
+   "casilla": "ticket_url",
+   "valor": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839530",
+   "evidencia": "Costa a costa · 2026-10-24 16:00 · link de TuBoleta de la ficha"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-10-24",
+    "hora": "17:30"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3617?sede=11",
+    "fecha": "2026-10-21"
+   },
+   "casilla": "sala",
+   "valor": "Sala 3",
+   "evidencia": "Con acento nacional - Procesos de formación - Programa 2 · Cinemateca de Bogotá Centro · 2026-10-24 17:30 · Sala 3"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-10-24",
+    "hora": "17:30"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3617?sede=11",
+    "fecha": "2026-10-21"
+   },
+   "casilla": "entrada",
+   "valor": "boleta",
+   "evidencia": "Con acento nacional - Procesos de formación - Programa 2 · 2026-10-24 17:30 · link de TuBoleta de la ficha"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-10-24",
+    "hora": "17:30"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3617?sede=11",
+    "fecha": "2026-10-21"
+   },
+   "casilla": "ticket_url",
+   "valor": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839531",
+   "evidencia": "Con acento nacional - Procesos de formación - Programa 2 · 2026-10-24 17:30 · link de TuBoleta de la ficha"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-10-24",
+    "hora": "20:00"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3618?sede=11",
+    "fecha": "2026-10-21"
+   },
+   "casilla": "sala",
+   "valor": "Sala 3",
+   "evidencia": "Con acento nacional - Profesional - Programa 2 · Cinemateca de Bogotá Centro · 2026-10-24 20:00 · Sala 3"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-10-24",
+    "hora": "20:00"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3618?sede=11",
+    "fecha": "2026-10-21"
+   },
+   "casilla": "entrada",
+   "valor": "boleta",
+   "evidencia": "Con acento nacional - Profesional - Programa 2 · 2026-10-24 20:00 · link de TuBoleta de la ficha"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-10-24",
+    "hora": "20:00"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3618?sede=11",
+    "fecha": "2026-10-21"
+   },
+   "casilla": "ticket_url",
+   "valor": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839532",
+   "evidencia": "Con acento nacional - Profesional - Programa 2 · 2026-10-24 20:00 · link de TuBoleta de la ficha"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-10-25",
+    "hora": "14:00"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3616?sede=11",
+    "fecha": "2026-10-21"
+   },
+   "casilla": "sala",
+   "valor": "Sala 3",
+   "evidencia": "Costa a costa · Cinemateca de Bogotá Centro · 2026-10-25 14:00 · Sala 3"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-10-25",
+    "hora": "14:00"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3616?sede=11",
+    "fecha": "2026-10-21"
+   },
+   "casilla": "entrada",
+   "valor": "boleta",
+   "evidencia": "Costa a costa · 2026-10-25 14:00 · link de TuBoleta de la ficha"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-10-25",
+    "hora": "14:00"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3616?sede=11",
+    "fecha": "2026-10-21"
+   },
+   "casilla": "ticket_url",
+   "valor": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839530",
+   "evidencia": "Costa a costa · 2026-10-25 14:00 · link de TuBoleta de la ficha"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-10-25",
+    "hora": "16:00"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3595?sede=11",
+    "fecha": "2026-10-21"
+   },
+   "casilla": "sala",
+   "valor": "Sala 2",
+   "evidencia": "Con acento nacional - Profesional - Programa 1 · Cinemateca de Bogotá Centro · 2026-10-25 16:00 · Sala 2"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-10-25",
+    "hora": "16:00"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3595?sede=11",
+    "fecha": "2026-10-21"
+   },
+   "casilla": "entrada",
+   "valor": "boleta",
+   "evidencia": "Con acento nacional - Profesional - Programa 1 · 2026-10-25 16:00 · link de TuBoleta de la ficha"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-10-25",
+    "hora": "16:00"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3595?sede=11",
+    "fecha": "2026-10-21"
+   },
+   "casilla": "ticket_url",
+   "valor": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839527",
+   "evidencia": "Con acento nacional - Profesional - Programa 1 · 2026-10-25 16:00 · link de TuBoleta de la ficha"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-10-25",
+    "hora": "17:30"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3618?sede=11",
+    "fecha": "2026-10-21"
+   },
+   "casilla": "sala",
+   "valor": "Sala 3",
+   "evidencia": "Con acento nacional - Profesional - Programa 2 · Cinemateca de Bogotá Centro · 2026-10-25 17:30 · Sala 3"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-10-25",
+    "hora": "17:30"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3618?sede=11",
+    "fecha": "2026-10-21"
+   },
+   "casilla": "entrada",
+   "valor": "boleta",
+   "evidencia": "Con acento nacional - Profesional - Programa 2 · 2026-10-25 17:30 · link de TuBoleta de la ficha"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-10-25",
+    "hora": "17:30"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3618?sede=11",
+    "fecha": "2026-10-21"
+   },
+   "casilla": "ticket_url",
+   "valor": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839532",
+   "evidencia": "Con acento nacional - Profesional - Programa 2 · 2026-10-25 17:30 · link de TuBoleta de la ficha"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-10-25",
+    "hora": "19:30"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3692?sede=11",
+    "fecha": "2026-10-21"
+   },
+   "casilla": "sala",
+   "valor": "Sala 3",
+   "evidencia": "Costa a costa - Lo mejor de Annecy 2026 · Cinemateca de Bogotá Centro · 2026-10-25 19:30 · Sala 3"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-10-25",
+    "hora": "19:30"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3692?sede=11",
+    "fecha": "2026-10-21"
+   },
+   "casilla": "entrada",
+   "valor": "boleta",
+   "evidencia": "Costa a costa - Lo mejor de Annecy 2026 · 2026-10-25 19:30 · link de TuBoleta de la ficha"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-10-25",
+    "hora": "19:30"
+   },
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3692?sede=11",
+    "fecha": "2026-10-21"
+   },
+   "casilla": "ticket_url",
+   "valor": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230581839529",
+   "evidencia": "Costa a costa - Lo mejor de Annecy 2026 · 2026-10-25 19:30 · link de TuBoleta de la ficha"
+  }
+ ]
+}

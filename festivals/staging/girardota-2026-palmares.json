@@ -1,0 +1,53 @@
+{
+ "_provenance": {
+  "fuente": "src/config.js (PALMARES / NOTICES), movido al dato",
+  "capturado": "2026-10-19"
+ },
+ "palmares": [
+  {
+   "categoria": "Categoría documental",
+   "nivel": "ganadora",
+   "titulo": "Los Años del Conejo",
+   "autoria": "Raquel Tamayo Gutiérrez",
+   "obra": "Los Años del Conejo"
+  },
+  {
+   "categoria": "Categoría documental",
+   "nivel": "mencion",
+   "premio": "Mención de Honor",
+   "titulo": "Elementales",
+   "autoria": "Camilo Botero Jaramillo",
+   "obra": "Elementales"
+  },
+  {
+   "categoria": "Categoría ficción",
+   "nivel": "ganadora",
+   "titulo": "Bajo el Último Aliento",
+   "autoria": "Pedro Valencia",
+   "obra": "Bajo el Último Aliento"
+  },
+  {
+   "categoria": "Categoría ficción",
+   "nivel": "mencion",
+   "premio": "Mención de Honor",
+   "titulo": "Refracción",
+   "autoria": "Isabella Palacio Mesa",
+   "obra": "Refracción"
+  },
+  {
+   "categoria": "Categoría experimental o videoclip",
+   "nivel": "ganadora",
+   "titulo": "La Rebelión de un Fantasma",
+   "autoria": "Flora Rodríguez",
+   "obra": "La Rebelión de un Fantasma"
+  },
+  {
+   "categoria": "Categoría experimental o videoclip",
+   "nivel": "mencion",
+   "premio": "Mención de Honor",
+   "titulo": "De lo Oculto",
+   "autoria": "Daniel Rúa",
+   "obra": "De lo Oculto"
+  }
+ ]
+}

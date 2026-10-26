@@ -1,7 +1,11 @@
 {
- "_nota": "FICICA 2026 — Festival Internacional de Cortometrajes Cine a la Calle (Barranquilla, 20–24 oct 2026). Fuentes: la Programación General (ficica.cinealacalle.org/programacion-general.html, JSON embebido, 15 oct) y la Selección Oficial (81 cortos, 10 oct). Los programas todavía no listan sus cortos («muy pronto»): se publican con nombre, horario, sede y descripción. Radar #1029.",
+ "_nota": "FICICA 2026 — Festival Internacional de Cortometrajes Cine a la Calle (Barranquilla, 20–24 oct 2026). Fuentes: la Programación General (ficica.cinealacalle.org/programacion-general.html, JSON embebido, 15 oct) y la Selección Oficial (81 cortos, 10 oct). Los programas listan sus cortos desde el 16 oct (programas.html, JSON embebido). Radar #1029.",
  "radar": 1029,
  "pasos": [
+  {
+   "cmd": "python3 pipeline/ficica-2026-programas.py",
+   "que": "la página Programas → los cortos de cada programa (sidecar que lee el crudo)"
+  },
   {
    "cmd": "python3 pipeline/ficica-2026-catalogo.py",
    "que": "la tabla de la Selección Oficial → catálogo (81 cortos)"
@@ -19,6 +23,10 @@
    "que": "la Programación General → crudo (solo acceso libre; cineforo pegado a su programa)"
   },
   {
+   "cmd": "python3 pipeline/enriquecer.py ficica-2026 --posters",
+   "que": "TMDB + cascada + afiches de las obras de cada programa (16 oct: los programas ya listan sus cortos)"
+  },
+  {
    "cmd": "python3 pipeline/geocodificar.py ficica-2026 --centro 10.9685,-74.7813 --ciudad \"Barranquilla\"",
    "que": "pines: los 10 a mano desde Google Maps"
   },
@@ -27,9 +35,36 @@
    "que": "el build"
   }
  ],
+ "fuentes_vivas": [
+  {
+   "archivo": "fuentes/ficica-2026/programacion-general.html",
+   "url": "https://ficica.cinealacalle.org/programacion-general.html",
+   "como": "pagina",
+   "debe_contener": "ficica-prog-datos",
+   "que": "la Programación General: el JSON embebido (una «fila» por función) que lee el crudo"
+  },
+  {
+   "archivo": "fuentes/ficica-2026/programas.html",
+   "url": "https://ficica.cinealacalle.org/programas.html",
+   "como": "pagina",
+   "debe_contener": "type=\"application/json\"",
+   "que": "la página Programas: los cortos de cada programa, que lee ficica-2026-programas.py"
+  },
+  {
+   "archivo": "fuentes/ficica-2026/seleccion-oficial.html",
+   "url": "https://ficica.cinealacalle.org/seleccion-oficial.html",
+   "como": "pagina",
+   "debe_contener": "<tbody>",
+   "que": "la tabla de la Selección Oficial, que leen el catálogo y su verificador"
+  }
+ ],
  "_fuentes_versionadas": {
   "festivals/staging/ficica-2026-catalogo-enriquecido.json": "las fichas TMDB de las 81 obras del catálogo (47 verificadas), que escribe el paso 2. Es el trabajo que el montaje reusa cuando salga la parrilla.",
-  "festivals/staging/ficica-2026-catalogo.json": "la Selección Oficial (81 cortos); la leerá el crudo"
+  "festivals/staging/ficica-2026-catalogo.json": "la Selección Oficial (81 cortos); la leerá el crudo",
+  "festivals/staging/ficica-2026-programas.json": "los 20 programas con sus cortos (página Programas, 16 oct); lo escribe el paso de programas y lo lee el crudo",
+  "festivals/staging/ficica-2026-enriquecido.json": "fichas y afiches de los cortos de los programas; lo escribe enriquecer.py",
+  "festivals/staging/ficica-2026-sinopsis.json": "sinopsis traducida con contexto donde la obra no trae ninguna en español; la lee el crudo",
+  "festivals/staging/ficica-2026-duraciones.json": "duraciones comparadas entre fuentes (Alivios, Que el cielo nos perdone); la lee ensamblar"
  },
  "festival": {
   "radar": 1029,
@@ -118,6 +153,7 @@
   "sharedSlotIsOneScreening": false,
   "mes_es": "octubre",
   "dias_vacios": [],
-  "prioLimit": 3
+  "prioLimit": 3,
+  "enriquecido": "festivals/staging/ficica-2026-enriquecido.json"
  }
 }

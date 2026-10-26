@@ -18,9 +18,13 @@ LAS REGLAS:
   · UN CINEFORO QUE EMPIEZA CON SU PROGRAMA (mismo día, hora y sede) es la
     conversación de esa función, no otra actividad: se pega a la exhibición como
     conversatorio y su hora de fin da la duración. Son 6.
-  · los programas todavía no listan sus cortos (la página de cada uno dice «muy
-    pronto», 15 oct): se publican con nombre, horario, sede y descripción del
-    festival (`is_programa`), y las obras se suman cuando salgan.
+  · LOS CORTOS DE CADA PROGRAMA (16 oct): la página Programas ya los lista; los
+    lee ficica-2026-programas.py → festivals/staging/ficica-2026-programas.json.
+    El programa se reconoce por su FUNCIÓN (día, hora, sede), no por el nombre.
+    Cada corto toma su título del catálogo (la Selección Oficial, ya en frase y
+    con ficha) por título, título alterno o —si la web lo da traducido— por su
+    director; el que no está en la Selección (Retrospectiva, comunitarios, MINI)
+    va con lo que da la web, el título en frase como propuesta (caja-sostenida).
 """
 import io
 import json
@@ -58,6 +62,60 @@ def datos():
     return D
 
 
+PROGRAMAS = f'{REPO}/festivals/staging/ficica-2026-programas.json'
+CATALOGO = f'{REPO}/festivals/staging/ficica-2026-catalogo.json'
+
+
+def plano(t):
+    import unicodedata
+    t = ''.join(c for c in unicodedata.normalize('NFD', (t or '').lower()) if unicodedata.category(c) != 'Mn')
+    return re.sub(r'\W+', ' ', t).strip()
+
+
+def frase(t):
+    t = t.lower()
+    return re.sub(r'^(\W*)(\w)', lambda m: m.group(1) + m.group(2).upper(), t)
+
+
+# Filas cuya sala de la web ya no vale y la fuente nueva no nombra otra. El
+# modelo de la función no sabe VACIAR la casilla `sala` (FORMATO exige texto),
+# así que se quita acá; la sede nueva entra por afirmación.
+#   70 · Clausura sáb 24 18:30: se trasladó a la Alianza Francesa (IG
+#        https://www.instagram.com/p/De5FgPIxV0o/, 24 oct 2026); la «Concha
+#        Acústica» era del Parque Sagrado Corazón y la lámina no da sala.
+SIN_SALA = {70}
+SINOPSIS = f'{REPO}/festivals/staging/ficica-2026-sinopsis.json'
+
+
+def cortos_por_funcion():
+    """{(dia, hora, sede): [obra…]} desde el sidecar de la página Programas."""
+    cat = json.load(io.open(CATALOGO, encoding='utf-8'))['obras']
+    por_tit = {plano(o['titulo_tabla']): o for o in cat}
+    por_dir = {}
+    for o in cat:
+        por_dir.setdefault(plano(o.get('director')), []).append(o)
+    # la sinopsis donde la obra no trae ninguna en español (sidecar, con su fuente)
+    SIN = json.load(io.open(SINOPSIS, encoding='utf-8'))['sinopsis'] if os.path.exists(SINOPSIS) else {}
+    out = {}
+    for p in json.load(io.open(PROGRAMAS, encoding='utf-8'))['programas']:
+        obras = []
+        for c in p['cortos']:
+            o = por_tit.get(plano(c['titulo'])) or por_tit.get(plano(c.get('alterno')))
+            if not o and c.get('director') and len(por_dir.get(plano(c['director']), [])) == 1:
+                o = por_dir[plano(c['director'])][0]          # el título vino traducido
+            if o:
+                obras.append({k: v for k, v in {'titulo': o['titulo'], 'director': o.get('director'),
+                                                  'pais': o.get('pais'),
+                                                  'sinopsis': (SIN.get(o['titulo']) or {}).get('texto')}.items() if v})
+            else:
+                obras.append({k: v for k, v in {'titulo': frase(c['titulo']), 'titulo_tabla': c['titulo'],
+                                                  'director': c.get('director'), 'pais': c.get('pais'),
+                                                  'fuera_de_seleccion': True}.items() if v})
+        for f in p['funciones']:
+            out[tuple(f)] = obras
+    return out
+
+
 def mins(h):
     return int(h[:2]) * 60 + int(h[3:5])
 
@@ -72,6 +130,7 @@ def invitados(a):
 def main():
     D = datos()
     A = D['actividades']
+    CORTOS = cortos_por_funcion()
     funciones, fuera = [], []
     # los cineforos que abren con su programa
     exhib = {(a['dia'], a['inicio'], a['sede']): a for a in A
@@ -88,7 +147,7 @@ def main():
         if id(a) in pegados:
             continue
         r = {'dia': a['dia'], 'hora': a['inicio'], 'sede': a['sede'],
-             **({'sala': a['sala']} if a.get('sala') else {}),
+             **({'sala': a['sala']} if a.get('sala') and a.get('fila') not in SIN_SALA else {}),
              'acceso': 'Entrada libre', 'titulo': tit, 'seccion': SECCION[a['categoria']],
              '_src': {'url': URL, 'date': CAPTURA, 'fila': a.get('fila')}}
         nota = (a.get('nota') or '').strip()
@@ -117,6 +176,8 @@ def main():
                 r['invitados'] = invitados(a)
             if a['tipo'] == 'Programa inaugural':
                 r['premiere'] = 'Inauguración'
+        if CORTOS.get((a['dia'], a['inicio'], a['sede'])):
+            r['obras'] = CORTOS[(a['dia'], a['inicio'], a['sede'])]
         funciones.append({k: v for k, v in r.items() if v not in (None, '')})
     n_libres = sum(1 for a in A if a.get('acceso') == 'libre')
     if len(funciones) + len(pegados) != n_libres or len(funciones) + len(pegados) + len(fuera) != len(A):

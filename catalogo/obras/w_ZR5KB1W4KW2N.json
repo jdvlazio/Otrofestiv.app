@@ -3,11 +3,16 @@
  "titulo_original": "El Festín de las Moscas",
  "anio": 2025,
  "paises": [
-  "C",
-  "O"
+  "CO"
  ],
  "directores": [
   "Katerine Franco Garzón"
+ ],
+ "aliases": [
+  {
+   "titulo": "El festín de las moscas",
+   "tipo": "festival"
+  }
  ],
  "afiche": {
   "archivo": "/assets/bhff-2026/el-festin-de-las-moscas.jpg",
@@ -21,6 +26,7 @@
   }
  ],
  "presentaciones": [
-  "bhff-2026"
+  "bhff-2026",
+  "cortoscali-2026"
  ]
 }

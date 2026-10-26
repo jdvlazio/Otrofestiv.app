@@ -102,5 +102,14 @@
  },
  "_fuentes_versionadas": {
   "festivals/staging/mubibogota-2026-afiches.json": "afiches declarados (mirados a mano); los leen pipeline/enriquecer.py y pipeline/encuadrar-posters.py, que no recorta los declarados"
- }
+ },
+ "fuentes_vivas": [
+  {
+   "archivo": "fuentes/mubibogota-2026/bogota.html",
+   "url": "https://mubifest.com/es/bogota",
+   "como": "pagina",
+   "debe_contener": "__NUXT_DATA__",
+   "que": "la página Nuxt con los 16 eventos, que lee el crudo"
+  }
+ ]
 }

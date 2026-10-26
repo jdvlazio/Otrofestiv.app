@@ -42,8 +42,10 @@ for i, x in enumerate(L):
             web.add((f'2026-10-{m.group(1)}', hora_tarjeta(L[k]), L[i - 2]))
 build = json.load(io.open(f'{REPO}/festivals/staging/{FID}-build.json', encoding='utf-8'))
 crudo = json.load(io.open(f'{REPO}/festivals/staging/{FID}-crudo.json', encoding='utf-8'))
-fuente = {f['titulo']: f['titulo_fuente'] for f in crudo['funciones']}
-pub = {(f['day'], f['time'], fuente.get(f['title'], f['title'])) for f in build['films']}
+# sin distinguir mayúsculas: ensamblar pone en Título los programas
+# (caja.titulo, 15 oct) y el título del build deja de ser idéntico al del crudo
+fuente = {f['titulo'].lower(): f['titulo_fuente'] for f in crudo['funciones']}
+pub = {(f['day'], f['time'], fuente.get(f['title'].lower(), f['title'])) for f in build['films']}
 fallos = [f'en el build y NO en la página: {x}' for x in sorted(pub - web)]
 # cobertura inversa: toda tarjeta con hora está publicada (una lectura puede
 # dar dos candidatos de título para la misma tarjeta; basta con uno)
@@ -51,6 +53,10 @@ por_hora = {}
 for d, h, tit in web:
     por_hora.setdefault((d, h), set()).add(tit)
 for (d, h), tits in sorted(por_hora.items()):
+    # fuera de los días oficiales (24–25 oct) no se publica: la del 23 en el MAMBO
+    if not ('2026-10-24' <= d <= '2026-10-25'):
+        print(f'  · fuera de los días oficiales, no se exige: {d} {h} {sorted(tits)}')
+        continue
     if not any((d, h, x) in pub for x in tits):
         fallos.append(f'en la página y NO en el build: {d} {h} {sorted(tits)}')
 geo = json.load(io.open(f'{REPO}/festivals/staging/{FID}-venues-geo.json', encoding='utf-8'))
