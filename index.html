@@ -1,16 +1,37 @@
 <!DOCTYPE html>
 <html lang="es" style="background:#0B0A08">
 <head>
+<meta charset="UTF-8"><!-- PRIMERO (en los 1024 bytes iniciales): los hashes de la CSP se calculan sobre UTF-8; otra codificación = otro hash = app en blanco -->
 <!-- Content-Security-Policy — debe ir ANTES de cualquier <script> para aplicar.
      Hosting estático (GitHub Pages) → solo vía <meta> (sin headers, sin nonces).
-     script-src incluye 'unsafe-inline' (35+ inline on*= handlers + scripts inline)
-     y 'unsafe-eval' (calc blob worker). Endurece supply-chain (allowlist de CDNs)
-     + limita exfiltración (connect-src), NO bloquea XSS de inline-handler.
+     script-src SIN 'unsafe-inline' ni 'unsafe-eval' (26 oct 2026): los <script>
+     inline van autorizados por HASH y ese hash lo escribe scripts/csp.js (lo
+     corre bump-version.js en cada deploy; [csp-hashes] lo verifica). NO editar
+     script-src a mano. Sin on*= en el markup (controller/sin-inline.js) ni eval
+     ([sin-eval]). style-src conserva 'unsafe-inline' (atributos style=).
      worker-src blob: para el worker del Planner. frame-ancestors/report-* se
      ignoran en <meta> (requieren header). -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net https://js.sentry-cdn.com https://browser.sentry-cdn.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https:; font-src 'self'; connect-src 'self' https://eytxrvbnwzxuedbmnnqr.supabase.co wss://eytxrvbnwzxuedbmnnqr.supabase.co https://*.ingest.sentry.io https://api.themoviedb.org; worker-src 'self' blob:; manifest-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-E9KLqj/d+lR4SmCA/13sQPiJWXxFRx63fuEFO4TYyLg=' 'sha256-93yZSNsoeIZSeI8S7Xk0ZG25l0zzMkGo4QUxQK3zix4=' 'sha256-ip/SWKhYrDHjDplX7eMAeo75Sfr3m2kR875XPpLtSDU=' https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.118.0/ https://js.sentry-cdn.com/f9a3edecb09ba965c5426d617e1cf7de.min.js https://browser.sentry-cdn.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https:; font-src 'self'; connect-src 'self' https://eytxrvbnwzxuedbmnnqr.supabase.co wss://eytxrvbnwzxuedbmnnqr.supabase.co https://*.ingest.sentry.io https://api.themoviedb.org; worker-src 'self' blob:; manifest-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
 <!-- Sentry error monitoring — captura errores JS en producción en tiempo real -->
 <script>
+// CSP estricta (26 oct 2026): todo lo que el navegador bloquee en un teléfono
+// real (WKWebView, Capacitor, Safari) llega a Sentry. Se registra ACÁ, antes que
+// cualquier otro script, para no perder las violaciones del arranque.
+// Solo lo NUESTRO (las extensiones del usuario inyectan scripts y no son nuestras),
+// sin repetir y con tope por carga, para no quemar la cuota de Sentry.
+(function(){
+  var vistas = {}, n = 0;
+  document.addEventListener('securitypolicyviolation', function(e) {
+    try {
+      var f = e.sourceFile || '', u = e.blockedURI || 'inline';
+      if (/-extension:/.test(f + ' ' + u)) return;
+      if (f && f.indexOf(location.origin) !== 0 && !/sentry-cdn\.com|cdn\.jsdelivr\.net/.test(f)) return;
+      var k = e.violatedDirective + '|' + u + '|' + f + ':' + e.lineNumber;
+      if (vistas[k] || n >= 5) return; vistas[k] = 1; n++;
+      if (window.Sentry && Sentry.captureMessage) Sentry.captureMessage('CSP bloqueó: ' + e.violatedDirective + ' ← ' + u + ' @' + f + ':' + e.lineNumber + (e.sample ? ' «' + e.sample + '»' : ''), 'warning');
+    } catch (_) {}
+  });
+})();
 window.sentryOnLoad = function() {
   Sentry.init({
     dsn: "https://f9a3edecb09ba965c5426d617e1cf7de@o4511390879514624.ingest.us.sentry.io/4511390886264832",
@@ -34,7 +55,6 @@ window.sentryOnLoad = function() {
   src="https://js.sentry-cdn.com/f9a3edecb09ba965c5426d617e1cf7de.min.js"
   crossorigin="anonymous"
 ></script>
-<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <!-- Preload de los 2 pesos más usados (400 texto, 700 títulos): se descubren
      junto al HTML en vez de tras parsear el CSS → sin flash de fuente fallback. -->
