@@ -8908,7 +8908,7 @@
     "date": "2026-10-10"
    },
    "requires_registration": true,
-   "description": "«Silencio y fabulación de archivo», con Azul Aizengber y Juana Schlenker, abrirá una reflexión sobre aquello que ocurre cuando el archivo deja de ser únicamente evidencia para convertirse en materia de imaginación, interpretación y creación. Invitadas: Azul Aizenberg y Juana Schlenker.",
+   "description": "«Silencio y fabulación de archivo», con Azul Aizenberg y Juana Schlenker, abrirá una reflexión sobre aquello que ocurre cuando el archivo deja de ser únicamente evidencia para convertirse en materia de imaginación, interpretación y creación. Invitadas: Azul Aizenberg y Juana Schlenker.",
    "description_lang": "es",
    "_fid": "f_acc827aa48",
    "id": "f_acc827aa48",
@@ -9658,7 +9658,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-26T06:16:10",
+  "fecha": "2026-10-26T06:32:57",
   "plan_sha": "a59415cd50b61e59",
   "paso": 8,
   "cmd": "python3 pipeline/midbo-2026-verificar.py"
