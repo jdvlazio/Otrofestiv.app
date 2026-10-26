@@ -111,8 +111,7 @@
     "url": "https://cinetoro.org/edicion-2026/vector-imaginado-competencia-oficial-nacional/",
     "date": "2026-10-26"
    },
-   "ciudad": "Bogotá",
-   "_duda": "dirección: la web escribe «Rodrígez» (¿Rodríguez?); se deja verbatim"
+   "ciudad": "Bogotá"
   },
   {
    "titulo": "Rastro",
@@ -253,7 +252,9 @@
    "_src": {
     "url": "https://cinetoro.org/edicion-2026/geometria-de-la-diferencia-competencia-oficial-internacional/",
     "date": "2026-10-26"
-   }
+   },
+   "afiche": "assets/cinetoro-2026/blue.jpg",
+   "_afiche_fuente": "https://splitfilmfestival.hr/wp-content/uploads/2026/08/BLU-locandina-abab514a4d4e189754e0bf2000bb7fad.webp"
   },
   {
    "titulo": "Dynamo",
@@ -261,7 +262,7 @@
    "pais": "España, Portugal",
    "anio": 2026,
    "duracion_txt": null,
-   "duracion_min": null,
+   "duracion_min": 11,
    "sinopsis": "«En lo alto de una colina brumosa y apartada, una mañana extraordinaria otorga poder al pueblo».",
    "tipo": "corto",
    "seccion": "Competencia Oficial Internacional",
@@ -271,7 +272,8 @@
     "url": "https://cinetoro.org/edicion-2026/geometria-de-la-diferencia-competencia-oficial-internacional/",
     "date": "2026-10-26"
    },
-   "_duda": "la web no da duración"
+   "afiche": "assets/cinetoro-2026/dynamo.jpg",
+   "_afiche_fuente": "https://tiranafilmfest.org/wp-content/uploads/2026/08/Dynamo_Poster.jpg"
   },
   {
    "titulo": "Esperando a los bárbaros",
@@ -509,8 +511,7 @@
    "_src": {
     "url": "https://cinetoro.org/edicion-2026/curvas-interlineadas-competencia-oficial-emergente/",
     "date": "2026-10-26"
-   },
-   "_duda": "país: la web dice «Alemania, Suiza» y el nombre de su imagen «Paises-Bajos» (Tanja Nuijten)"
+   }
   },
   {
    "titulo": "Sol de niebla",
@@ -552,7 +553,7 @@
    "pais": "Colombia",
    "anio": 2026,
    "duracion_txt": null,
-   "duracion_min": null,
+   "duracion_min": 15,
    "sinopsis": "Un hombre recorre el camino que llevó a su padre a caer en la Garganta del Diablo a través de las imágenes que este dejó. Entre el eco del agua y el silencio hueco del archivo, surge un vacío que solo se revela cuando el reflejo en el agua ya no es el de ellos, sino el nuestro. Un viaje a través del tiempo, entre el duelo y la redención.",
    "tipo": "corto",
    "seccion": "Competencia Oficial Emergente",
@@ -561,8 +562,7 @@
    "_src": {
     "url": "https://cinetoro.org/edicion-2026/curvas-interlineadas-competencia-oficial-emergente/",
     "date": "2026-10-26"
-   },
-   "_duda": "la web no da duración ni país; país de la imagen"
+   }
   },
   {
    "titulo": "Muchas, muchas gracias",
@@ -647,8 +647,7 @@
    "_src": {
     "url": "https://cinetoro.org/edicion-2026/puntos-de-fuga-competencia-oficial-de-mediometrajes/",
     "date": "2026-10-26"
-   },
-   "_duda": "duración: 60 min en una competencia de 25 a 40 min"
+   }
   },
   {
    "titulo": "Wild Yeast",

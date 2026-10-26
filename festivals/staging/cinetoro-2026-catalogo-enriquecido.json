@@ -880,7 +880,32 @@
    "title_en": "The Devil’s Throat",
    "lbSlug": "the-devils-throat",
    "_verificado": "director✓ + año/duración",
-   "_busqueda": "La garganta del diablo"
+   "_busqueda": "La garganta del diablo",
+   "_ya_publicada": [
+    {
+     "festival": "ficci-65",
+     "titulo": "La garganta del diablo",
+     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_LaGargantadeDiablo%20-%20Juanita%20Urue%C3%B1a%20Barreto.png?itok=WsH78OYf",
+     "posterSource": "custom",
+     "country": "Colombia",
+     "duration": "15 min"
+    }
+   ]
+  },
+  {
+   "titulo": "Muchas, muchas gracias",
+   "tmdb_id": 1592612,
+   "titulo_original": "Muchas, muchas gracias",
+   "poster_path": "/yai4Qe1jio01zFtZjyK40GG5RgL.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Across the Pacific drift five continents; there lie two lands that start with C: China and Colombia. In one I was born, in the other my grandmother. Her people, that run away of her lands to live without smiles; mine, once enslaved, sang to die smiling. Both of us learned to accept what belongs to neither here nor there—she, for crossing coasts for a husband who died; I, for being her grandson, bearing my grandfather’s name.",
+   "genero": "Documental",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 20,
+   "pais_tmdb": "Colombia",
+   "title_en": "Thanks so, so much",
+   "lbSlug": "thanks-so-so-much",
+   "_verificado": "declarada a mano: TMDB «Muchas, muchas gracias»: mismo título, Colombia, 20 min (la web: 19 min 45 s), con Manuel Orozco en los créditos (producción); la dirección figura como Oiyi Kan, el nombre chino del director (la sinopsis habla de su abuela china). El candado no casaba porque el nombre de dirección difiere. Trae el afiche oficial. 26 oct 2026."
   },
   {
    "titulo": "Para mí ya no es cualquier baño",
@@ -1816,7 +1841,31 @@
    "title_en": "The Devil’s Throat",
    "lbSlug": "the-devils-throat",
    "_verificado": "director✓ + año/duración",
-   "_busqueda": "La garganta del diablo"
+   "_busqueda": "La garganta del diablo",
+   "_ya_publicada": [
+    {
+     "festival": "ficci-65",
+     "titulo": "La garganta del diablo",
+     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_LaGargantadeDiablo%20-%20Juanita%20Urue%C3%B1a%20Barreto.png?itok=WsH78OYf",
+     "posterSource": "custom",
+     "country": "Colombia",
+     "duration": "15 min"
+    }
+   ]
+  },
+  "Muchas, muchas gracias": {
+   "tmdb_id": 1592612,
+   "titulo_original": "Muchas, muchas gracias",
+   "poster_path": "/yai4Qe1jio01zFtZjyK40GG5RgL.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Across the Pacific drift five continents; there lie two lands that start with C: China and Colombia. In one I was born, in the other my grandmother. Her people, that run away of her lands to live without smiles; mine, once enslaved, sang to die smiling. Both of us learned to accept what belongs to neither here nor there—she, for crossing coasts for a husband who died; I, for being her grandson, bearing my grandfather’s name.",
+   "genero": "Documental",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 20,
+   "pais_tmdb": "Colombia",
+   "title_en": "Thanks so, so much",
+   "lbSlug": "thanks-so-so-much",
+   "_verificado": "declarada a mano: TMDB «Muchas, muchas gracias»: mismo título, Colombia, 20 min (la web: 19 min 45 s), con Manuel Orozco en los créditos (producción); la dirección figura como Oiyi Kan, el nombre chino del director (la sinopsis habla de su abuela china). El candado no casaba porque el nombre de dirección difiere. Trae el afiche oficial. 26 oct 2026."
   },
   "Para mí ya no es cualquier baño": {
    "tmdb_id": 1689497,
@@ -1913,7 +1962,6 @@
   "Atarashi Ouchi ni Chu!",
   "Blue",
   "Jonah",
-  "Muchas, muchas gracias",
   "Rastro",
   "Wild Yeast",
   "Yerba",

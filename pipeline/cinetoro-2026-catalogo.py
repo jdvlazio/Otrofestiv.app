@@ -43,14 +43,13 @@ CIUDADES_CO = {'Bogotá', 'Tunja', 'Medellín', 'Pasto'}
 _CORR = json.load(io.open(f'{REPO}/festivals/staging/cinetoro-2026-correcciones.json', encoding='utf-8'))
 TIT = {k: v['a'] for k, v in _CORR.get('catalogo_titulo', {}).items()}
 DIR = {k: v['a'] for k, v in _CORR.get('catalogo_director', {}).items()}
+# Afiches y duraciones halladas fuera de la web (otros festivales), con su fuente
+AFI = _CORR.get('catalogo_afiche', {})
+DURX = {k: v['a'] for k, v in _CORR.get('catalogo_duracion', {}).items()}
 PAIS_FALTANTE = {'La garganta del diablo': 'Colombia'}       # imagen «…-Mateo-Ramirez-Colombia-2026»
-DUDAS = {
-    'Sensual': 'país: la web dice «Alemania, Suiza» y el nombre de su imagen «Paises-Bajos» (Tanja Nuijten)',
-    'Pudor ante el asalto de los ojos furtivos': 'dirección: la web escribe «Rodrígez» (¿Rodríguez?); se deja verbatim',
-    'Dynamo': 'la web no da duración',
-    'La garganta del diablo': 'la web no da duración ni país; país de la imagen',
-    'Traducir lo propio (o el síntoma de recordar)': 'duración: 60 min en una competencia de 25 a 40 min',
-}
+# Las dudas de la primera lectura se resolvieron con fuentes: ver «dudas_resueltas»
+# y «catalogo_duracion» en cinetoro-2026-correcciones.json (26 oct).
+DUDAS = {}
 DUR = re.compile(r'^(\d+)\s*min\.?(?:\s*(?:y\s*)?(\d+)\s*sec\.?)?$', re.I)
 ANIO = re.compile(r'^(19|20)\d\d$')
 
@@ -92,6 +91,11 @@ def obras(slug, seccion, programa, tipo):
              'duracion_txt': dur_txt, 'duracion_min': dur,
              'sinopsis': '\n'.join(resto), 'tipo': tipo, 'seccion': seccion, 'programa': programa,
              'imagen_web': img, '_src': {'url': f'https://cinetoro.org/edicion-2026/{slug}/', 'date': FECHA}}
+        if dur is None and titulo in DURX:
+            o['duracion_min'] = DURX[titulo]
+        if titulo in AFI:
+            o['afiche'], o['_afiche_fuente'] = AFI[titulo]['a'], AFI[titulo]['_fuente']
+            assert os.path.exists(f"{REPO}/{o['afiche']}"), o['afiche']
         if lugar in CIUDADES_CO:
             o['ciudad'] = lugar
         if titulo in DUDAS:
