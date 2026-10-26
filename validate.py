@@ -5975,7 +5975,8 @@ except Exception as _e:
 check = 'sin-handler-inline'
 try:
     import re as _rhi, glob as _ghi
-    _RE_HI = _rhi.compile(r'\bon(?:error|load|click|input|keydown|keyup|change|submit|focus|blur)=\\?["\']')
+    # cualquier on<evento>, con o sin espacios en el `=` (auditoría senior, 26 oct)
+    _RE_HI = _rhi.compile(r'\bon[a-z]{3,}\s*=\s*\\?["\'`]')
     _n_idx = len(_RE_HI.findall(open('index.html', encoding='utf-8').read()))
     _n_src = sum(len(_RE_HI.findall(open(_f, encoding='utf-8').read())) for _f in _ghi.glob('src/**/*.js', recursive=True))
     _TECHO_HI = 31
