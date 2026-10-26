@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "a mano, revisión del enriquecido del catálogo",
-  "capturado": "2026-10-22"
+  "capturado": "2026-10-25"
  },
  "sin_afiche": {
   "Desaprender la maternidad": {
@@ -9,6 +9,22 @@
   },
   "Salsa": {
    "_por_que": "sin ficha verificable en la cascada (TMDB, Proimágenes, cinecorto.co: título + directora Antonina Kerguelén Román + 2024 no casan) y no está en ningún festival nuestro; lo único publicado es la tarjeta de selección de FICFUSA (fotograma con su marca), que no es el afiche oficial (23 oct)"
+  },
+  "Sinfonía del viaje a la luna": {
+   "_por_que": "sin ficha verificable (el TMDB 549260 es de 2015 y no se puede afirmar que sea esta obra de 2026) y no está en ningún festival nuestro; lo único publicado es la tarjeta de selección de FICFUSA (fotograma con su marca), que no es el afiche oficial (25 oct)"
+  },
+  "Bajo el último aliento": {
+   "_por_que": "sin ficha verificable (TMDB, Proimágenes, cinecorto.co: título + Pedro Valencia + 2024 no casan). Está en Girardota 2026, pero su imagen allá es la lámina de selección del festival (marca «Selección Oficial · Festival Audiovisual de Girardota 2026»), no el afiche oficial de la obra: no se hereda tarjeta ajena. Aquí solo hay la tarjeta de FICFUSA (25 oct)"
+  }
+ },
+ "fichas": {
+  "Tuktu padre maíz": {
+   "tmdb": 1592955,
+   "_fuente": "https://www.themoviedb.org/movie/1592955",
+   "_por_que": "misma ficha con que ya la publicamos en Popayán, FICPA, Ficica, Villa del Cine y Cortos Cali (declarada en popayan-2026-correcciones): TMDB escribe «Tuktu, padre maíz» con coma y al director «Mauricio Pietro Muriel» (sic); la tarjeta de FICFUSA dice Mauricio Prieto, 2025, 13:45 — TMDB 13 min (25 oct)"
+  },
+  "Sinfonía del viaje a la luna": {
+   "_por_que": "se RECHAZA el TMDB 549260 que propuso la cascada: es de 2015 a nombre de «Sandra Reyes», sin sinopsis ni país, y la tarjeta dice 2026 y Sandra Reyes Sotomayor (TMDB tiene a esa persona aparte, 6249186, sin esta obra). Solo casaba por duración (12 vs 9:24); con 11 años de diferencia no se cuelga (25 oct)"
   }
  }
 }
