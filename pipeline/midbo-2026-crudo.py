@@ -298,6 +298,21 @@ ACTIVACIONES = [
                       'textil sobre la que la imagen del agua adquiere una presencia casi material.'},
      ],
      '_src': {'url': 'https://www.instagram.com/p/De3AsKjiTRT/', 'date': '2026-10-23'}},
+    # LAS VISITAS GUIADAS AL CMPR (post de @midbo_doc del 25 oct,
+    # instagram.com/p/De7_QLjCTdz, láminas 2 y 3, leídas con ig-lecturas.py + a
+    # ojo el 26 oct): «3:00 p.m. Visita guiada por el CMPR. Inscripción previa,
+    # enlace en la bio.», jue 29 oct y mar 3 nov. No están en midbo.co. Título
+    # verbatim (sin el punto final). Ninguna lámina da hora de fin, y la
+    # siguiente función del CMPR empieza a las 4:00 / 4:30 → duración ESTIMADA
+    # en 60 min. Sin sección propia en la web: «Programas especiales», la de
+    # eventos del plan
+    *[{'titulo': 'Visita guiada por el CMPR', 'dia': _d, 'hora': '15:00',
+       'sede': 'Centro de Memoria, Paz y Reconciliación', 'ciudad': 'Bogotá',
+       'tipo': 'evento', 'event_kind': 'evento', 'seccion': 'Programas especiales',
+       'duracion_min': 60, '_duracion_de': 'estimada: la lámina no da hora de fin',
+       'acceso': 'Entrada gratuita con inscripción previa',
+       '_src': {'url': 'https://www.instagram.com/p/De7_QLjCTdz/', 'date': '2026-10-26'}}
+      for _d in ('2026-10-29', '2026-11-03')],
     # La exposición de la Cinemateca (agenda de la sala = fuente de sala, hora y
     # acceso; cinematecadebogota.gov.co/exposiciones?id=3663, leída el 22 oct):
     # va del 28 oct al 16 nov → abierta (info) recortada al 4 nov, último día
@@ -584,6 +599,20 @@ def main():
             reg = {**base, 'seccion': madre,
                    **{k: v for k, v in x.items() if k in ('titulo', 'director', 'pais', 'anio', 'duracion_min', 'sinopsis')}}
         funciones.append({k: v for k, v in reg.items() if v not in (None, '')})
+    # «CREADORAS DE VIDA» EN LA BODEGA LLEVA LAS CINCO (post de @midbo_doc del 25
+    # oct, instagram.com/p/De7_QLjCTdz, lámina 7, leída con ig-lecturas.py + a
+    # ojo el 26 oct): «Programa 3.» en la Bodega Insurgesta, jue 29 oct 5:00 p.m.,
+    # lista Invierno Flores Jardín, Madres de nacimiento, No es una herida,
+    # Montaña luminosa y Geografía Espectral (Manuel Mateo Gomez, 2026, 22 min).
+    # La ficha web de Geografía espectral solo nombra la función del 2 nov, pero
+    # la propia web declara 99′ para el programa, y 99 solo cuadra con las cinco
+    # (28+8+15+26+22). La lámina es más reciente: se suma, con los datos de su
+    # ficha (la misma obra de la Cinemateca, 2 nov)
+    _geo = next((o for f in funciones for o in (f.get('obras') or []) if o['titulo'] == 'Geografía espectral'), None)
+    for f in funciones:
+        if (f.get('sede'), f.get('dia'), f.get('hora')) == ('Bodega Insurgesta', '2026-10-29', '17:00') and _geo \
+                and f.get('obras') and not any(o['titulo'] == _geo['titulo'] for o in f['obras']):
+            f['obras'].append(dict(_geo))
     # DOS BLOQUES CON EL NOMBRE DE SU SECCIÓN y obras distintas (las dos funciones
     # del Homenaje a Pablo Mora): cada uno se nombra por sus obras, o la app
     # mostraría la lista de uno en el otro ([programa-mismo-titulo])

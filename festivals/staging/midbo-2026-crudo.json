@@ -421,7 +421,7 @@
    "sinopsis": "Dos hermanos se adentran en los paisajes de sus cuerpos morenos y queer, donde los encuentros con familiares y ancestros iluminan nuevas posibilidades de su identidad. Semilites y Tania, dos hermanos queer unidos por una poderosa amistad, recorren el terreno moreno de sus propios cuerpos, tierras que alguna vez rechazaron. Atraviesan paisajes de piel, sueños y vísceras, llegando a lugares que palpitan con la memoria familiar. En el camino, se encuentran con una constelación de familiares y ancestros —su madre, padre, abuela, pero también flores, saltamontes y fósiles— que los guían en la reinvención de su identidad más allá de las narrativas coloniales de México. A través del collage, la animación, el manifiesto, la danza y momentos íntimos de documental, la película transita por las escalas del cuerpo y el territorio, trazando la silenciosa fuerza de la transformación y la ternura de la hermandad."
   },
   {
-   "titulo": "Programa 3: Creadoras de vida — Bodega Insurgesta",
+   "titulo": "Programa 3: Creadoras de vida",
    "dia": "2026-10-29",
    "hora": "17:00",
    "sede": "Bodega Insurgesta",
@@ -467,6 +467,14 @@
      "anio": 2026,
      "duracion_min": 27,
      "sinopsis": "Dos mujeres intercambian cartas fílmicas que cruzan el pasado y el presente, entrelazando material de archivo de películas amateur con material ficticio actual filmado en 16 mm. Nunca se conocen en persona, sólo en sus películas. Heidrun, una vienesa retratada mediante material de archivo, y Sara, una inmigrante colombiana que trabaja en el archivo fílmico del Museo Austriaco del Cine. Ambas viven en Viena en diferentes épocas y observan la ciudad desde sus respectivas y sus situaciones de vida. La película aborda temas como la migración, el desarraigo y el racismo, y adopta una dimensión ensayística al cuestionar qué merece ser archivado y qué no."
+    },
+    {
+     "titulo": "Geografía espectral",
+     "director": "Manuel Mateo Gómez",
+     "pais": "Colombia",
+     "anio": 2026,
+     "duracion_min": 22,
+     "sinopsis": "A orillas de una represa hidroeléctrica, cuya construcción sepultó el antiguo cauce del río Cauca, un grupo de mujeres se reúne para bordar. Cubren el río de flores para invocar a sus muertos, en una geografía tejida por hilos de memoria y resistencia. El espíritu de los cuerpos arrojados al río y cubiertos por la represa inconclusa navega junto a los peces en el agua. Las almas emergen vestidas de fuego para escuchar el canto que les envían sus madres y hermanas desde la vida."
     }
    ],
    "duracion_min": 99
@@ -2612,6 +2620,40 @@
    "_src": {
     "url": "https://www.instagram.com/p/De3AsKjiTRT/",
     "date": "2026-10-23"
+   }
+  },
+  {
+   "titulo": "Visita guiada por el CMPR",
+   "dia": "2026-10-29",
+   "hora": "15:00",
+   "sede": "Centro de Memoria, Paz y Reconciliación",
+   "ciudad": "Bogotá",
+   "tipo": "evento",
+   "event_kind": "evento",
+   "seccion": "Programas especiales",
+   "duracion_min": 60,
+   "_duracion_de": "estimada: la lámina no da hora de fin",
+   "acceso": "Entrada gratuita con inscripción previa",
+   "_src": {
+    "url": "https://www.instagram.com/p/De7_QLjCTdz/",
+    "date": "2026-10-26"
+   }
+  },
+  {
+   "titulo": "Visita guiada por el CMPR",
+   "dia": "2026-11-03",
+   "hora": "15:00",
+   "sede": "Centro de Memoria, Paz y Reconciliación",
+   "ciudad": "Bogotá",
+   "tipo": "evento",
+   "event_kind": "evento",
+   "seccion": "Programas especiales",
+   "duracion_min": 60,
+   "_duracion_de": "estimada: la lámina no da hora de fin",
+   "acceso": "Entrada gratuita con inscripción previa",
+   "_src": {
+    "url": "https://www.instagram.com/p/De7_QLjCTdz/",
+    "date": "2026-10-26"
    }
   },
   {

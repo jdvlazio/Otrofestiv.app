@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "ensamblar.py: ids estables de las funciones (docs/FUNCION.md C1)",
-  "capturado": "2026-10-25"
+  "capturado": "2026-10-26"
  },
  "funciones": {
   "f_4476aa7fd2": {
@@ -114,7 +114,7 @@
    "dia": "2026-10-29",
    "hora": "17:00",
    "sala": "",
-   "titulo": "programa 3 creadoras de vida bodega insurgesta"
+   "titulo": "programa 3 creadoras de vida"
   },
   "f_d8f066c776": {
    "sede": "Centro de Memoria, Paz y Reconciliación - Bogotá",
@@ -619,6 +619,20 @@
    "hora": "16:30",
    "sala": "Sala E",
    "titulo": "inauguracion documental expandido"
+  },
+  "f_40033979ce": {
+   "sede": "Centro de Memoria, Paz y Reconciliación - Bogotá",
+   "dia": "2026-10-29",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "visita guiada por el cmpr"
+  },
+  "f_04654a67ea": {
+   "sede": "Centro de Memoria, Paz y Reconciliación - Bogotá",
+   "dia": "2026-11-03",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "visita guiada por el cmpr"
   },
   "f_092f382469": {
    "sede": "Cinemateca de Bogotá - Bogotá",

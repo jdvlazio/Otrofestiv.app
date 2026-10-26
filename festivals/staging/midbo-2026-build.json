@@ -1017,7 +1017,7 @@
    "time": "14:00",
    "day_order": 2,
    "venue": "Universidad Jorge Tadeo Lozano - Bogotá",
-   "sala": "Aula Magistral 705 - M16 (piso 7), Edificio de Posgrados",
+   "sala": "Aula Magistral 703 - M16 (piso 7), Edificio de Posgrados",
    "has_qa": false,
    "synopsis": "El 31 de diciembre de 1999, Estados Unidos devolvió oficialmente control del Canal a Panamá, dando cumplimiento a los Acuerdos Torrijos-Carter. Por detrás de la histórica firma de los Acuerdos, existió un complejo juego de diplomacia internacional e intrigas liderado por el General Omar Torrijos. Esta es la historia de estas negociaciones, que restituyeron la integridad territorial y soberanía de Panamá.",
    "synopsis_lang": "es",
@@ -1053,9 +1053,9 @@
      "url": "https://midbo.co/"
     },
     "sala": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-10",
-     "url": "https://midbo.co/"
+     "tipo": "festival-ig",
+     "fecha": "2026-10-26",
+     "url": "https://www.instagram.com/p/De7_QLjCTdz/"
     },
     "duration": {
      "tipo": "festival-web",
@@ -1708,7 +1708,7 @@
    }
   },
   {
-   "title": "Programa 3: Creadoras de Vida — Bodega Insurgesta",
+   "title": "Programa 3: Creadoras de Vida",
    "type": "film",
    "section": "🎞️ Competencia Nacional de Cortometraje Documental",
    "country": "Colombia, Francia, Austria",
@@ -1792,6 +1792,22 @@
      "synopsis_en": "Two women exchange cinematic letters that connect the past and present. Heidrun, a Viennese woman, and Sara, a Colombian migrant, live in the city at different times—whether in fiction or reality is not always clear.",
      "title_en": "Winter Flowers Garden",
      "genre": "Documental"
+    },
+    {
+     "title": "Geografía espectral",
+     "director": "Manuel Mateo Gómez",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "year": 2026,
+     "duration": "22 min",
+     "synopsis": "A orillas de una represa hidroeléctrica, cuya construcción sepultó el antiguo cauce del río Cauca, un grupo de mujeres se reúne para bordar. Cubren el río de flores para invocar a sus muertos, en una geografía tejida por hilos de memoria y resistencia. El espíritu de los cuerpos arrojados al río y cubiertos por la represa inconclusa navega junto a los peces en el agua. Las almas emergen vestidas de fuego para escuchar el canto que les envían sus madres y hermanas desde la vida.",
+     "synopsis_lang": "es",
+     "poster": "/assets/midbo-2026/geografia-espectral.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "spectral-geography",
+     "tmdb_id": 1657838,
+     "synopsis_en": "The natural landscape of Colombia’s Río Cauca Valley, with its mountains, forests, and rivers, has been reshaped and transformed for colonial hydroelectric production. Uprooted by the pursuit of profit, a community celebrates a fascinating ritual to remember and mourn its territory, contributing its own images and sounds to the film’s visual and audio stream.",
+     "title_en": "Spectral Geography"
     }
    ],
    "_fid": "f_428ece0c6c",
@@ -1855,6 +1871,8 @@
     }
    },
    "titulos_anteriores": [
+    "Programa 3: Creadoras de Vida — Bodega Insurgesta",
+    "Programa 3: Creadoras de vida",
     "Programa 3: Creadoras de vida — Bodega Insurgesta"
    ]
   },
@@ -2374,7 +2392,7 @@
    "time": "14:00",
    "day_order": 3,
    "venue": "Universidad Jorge Tadeo Lozano - Bogotá",
-   "sala": "Aula Magistral 705 - M16 (piso 7), Edificio de Posgrados",
+   "sala": "Aula Magistral 703 - M16 (piso 7), Edificio de Posgrados",
    "has_qa": true,
    "qa_type": "team",
    "synopsis": "Chiapas, sureste de México. Cuando los habitantes del pueblo de Tila y de varias aldeas expulsan al ayuntamiento y a la policía, se enfrentan al reto del autogobierno. «Un lugar más grande» explora la construcción de la autonomía en el día a día, revelando un amplio tejido de personas, generaciones, espíritus y paisajes, así como imágenes inéditas. Nos sumerge en el corazón de un proceso colectivo, cuando el autogobierno se convierte en una responsabilidad frente a uno mismo y a los demás. Una aventura de inspiración zapatista en territorio maya ch’ol.",
@@ -2410,9 +2428,9 @@
      "url": "https://midbo.co/"
     },
     "sala": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-10",
-     "url": "https://midbo.co/"
+     "tipo": "festival-ig",
+     "fecha": "2026-10-26",
+     "url": "https://www.instagram.com/p/De7_QLjCTdz/"
     },
     "duration": {
      "tipo": "festival-web",
@@ -5509,7 +5527,9 @@
     }
    },
    "titulos_anteriores": [
-    "Programa 3: Creadoras de vida"
+    "Programa 3: Creadoras de Vida — Bodega Insurgesta",
+    "Programa 3: Creadoras de vida",
+    "Programa 3: Creadoras de vida — Bodega Insurgesta"
    ]
   },
   {
@@ -9575,6 +9595,160 @@
    }
   },
   {
+   "title": "Visita guiada por el CMPR",
+   "type": "event",
+   "section": "✨ Programas Especiales",
+   "duration": "60 min",
+   "_ancla": [
+    "Centro de Memoria, Paz y Reconciliación - Bogotá",
+    "2026-10-29",
+    "15:00"
+   ],
+   "day": "2026-10-29",
+   "time": "15:00",
+   "day_order": 2,
+   "venue": "Centro de Memoria, Paz y Reconciliación - Bogotá",
+   "event_kind": "evento",
+   "has_qa": false,
+   "_src": {
+    "url": "https://www.instagram.com/p/De7_QLjCTdz/",
+    "date": "2026-10-26"
+   },
+   "requires_registration": true,
+   "_fid": "f_40033979ce",
+   "id": "f_40033979ce",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-26",
+     "url": "https://midbo.co/"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-26",
+     "url": "https://midbo.co/"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-26",
+     "url": "https://midbo.co/"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-26",
+     "url": "https://midbo.co/"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-26",
+     "url": "https://midbo.co/"
+    },
+    "requires_registration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-26",
+     "url": "https://midbo.co/"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-26",
+     "url": "https://midbo.co/"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-26",
+     "url": "https://midbo.co/"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-26",
+     "url": "https://midbo.co/"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-26",
+     "url": "https://midbo.co/"
+    }
+   }
+  },
+  {
+   "title": "Visita guiada por el CMPR",
+   "type": "event",
+   "section": "✨ Programas Especiales",
+   "duration": "60 min",
+   "_ancla": [
+    "Centro de Memoria, Paz y Reconciliación - Bogotá",
+    "2026-11-03",
+    "15:00"
+   ],
+   "day": "2026-11-03",
+   "time": "15:00",
+   "day_order": 7,
+   "venue": "Centro de Memoria, Paz y Reconciliación - Bogotá",
+   "event_kind": "evento",
+   "has_qa": false,
+   "_src": {
+    "url": "https://www.instagram.com/p/De7_QLjCTdz/",
+    "date": "2026-10-26"
+   },
+   "requires_registration": true,
+   "_fid": "f_04654a67ea",
+   "id": "f_04654a67ea",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-26",
+     "url": "https://midbo.co/"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-26",
+     "url": "https://midbo.co/"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-26",
+     "url": "https://midbo.co/"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-26",
+     "url": "https://midbo.co/"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-26",
+     "url": "https://midbo.co/"
+    },
+    "requires_registration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-26",
+     "url": "https://midbo.co/"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-26",
+     "url": "https://midbo.co/"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-26",
+     "url": "https://midbo.co/"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-26",
+     "url": "https://midbo.co/"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-26",
+     "url": "https://midbo.co/"
+    }
+   }
+  },
+  {
    "title": "Escuchar lo que permanece",
    "type": "event",
    "section": "🔊 Documental Expandido",
@@ -9658,9 +9832,9 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-26T06:32:57",
+  "fecha": "2026-10-26T07:22:21",
   "plan_sha": "a59415cd50b61e59",
-  "paso": 8,
-  "cmd": "python3 pipeline/midbo-2026-verificar.py"
+  "paso": 6,
+  "cmd": "python3 pipeline/ensamblar.py midbo-2026"
  }
 }
