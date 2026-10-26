@@ -5980,9 +5980,12 @@ try:
     # cualquier on<evento>, con o sin espacios en el `=` (auditoría senior, 26 oct)
     # también sin comillas (onerror=fn(this)); no las asignaciones `.onX=` de JS
     # ni comentarios (auditoría senior, 26 oct)
-    _RE_HI = _rhi.compile(r'(?<![.\w])on[a-z]{3,}\s*=\s*(?:\\?["\'`]|[A-Za-z_$])')
+    # con comillas en cualquier lado; SIN comillas solo dentro de una etiqueta
+    # (`<img … onerror=fn(this)>`), o `const ongoing =x` contaba (26 oct)
+    _RE_HI = _rhi.compile(r'(?<![.\w])on[a-z]{3,}\s*=\s*\\?["\'`]|<[a-zA-Z][^<>]*?\son[a-z]{3,}\s*=\s*[A-Za-z_$]')
     _n_idx = len(_RE_HI.findall(open('index.html', encoding='utf-8').read()))
-    _sin_coment = lambda t: _rhi.sub(r'^\s*//.*$|/\*.*?\*/', '', t, flags=_rhi.M | _rhi.S)
+    # dos pasadas: con DOTALL, `//.*$` se comía el archivo entero desde el primer //
+    _sin_coment = lambda t: _rhi.sub(r'^\s*//[^\n]*', '', _rhi.sub(r'/\*.*?\*/', '', t, flags=_rhi.S), flags=_rhi.M)
     _n_src = sum(len(_RE_HI.findall(_sin_coment(open(_f, encoding='utf-8').read()))) for _f in _ghi.glob('src/**/*.js', recursive=True))
     _TECHO_HI = 0   # 31 → 0 en el paso 2/4 (26 oct)
     if _n_idx:
