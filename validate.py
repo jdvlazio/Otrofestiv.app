@@ -5968,6 +5968,27 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar afiche-es-afiche: {_e}')
 
+# ── [sin-handler-inline] ningún on*="…" nuevo en el HTML (CSP, 26 oct 2026) ──
+# La CSP no puede dejar 'unsafe-inline' mientras haya handlers escritos en el
+# markup. index.html ya tiene 0 (controller/sin-inline.js); src/ tiene un TECHO
+# que solo baja, hasta 0, y entonces sale 'unsafe-inline' de script-src.
+check = 'sin-handler-inline'
+try:
+    import re as _rhi, glob as _ghi
+    _RE_HI = _rhi.compile(r'\bon(?:error|load|click|input|keydown|keyup|change|submit|focus|blur)=\\?["\']')
+    _n_idx = len(_RE_HI.findall(open('index.html', encoding='utf-8').read()))
+    _n_src = sum(len(_RE_HI.findall(open(_f, encoding='utf-8').read())) for _f in _ghi.glob('src/**/*.js', recursive=True))
+    _TECHO_HI = 31
+    if _n_idx:
+        fail(check, f'index.html tiene {_n_idx} handler(s) on*= — van como data-* en controller/sin-inline.js')
+    elif _n_src > _TECHO_HI:
+        fail(check, f'src/ tiene {_n_src} handlers on*= en strings HTML > techo {_TECHO_HI}: usá data-* + delegación')
+    else:
+        ok(check, f'index.html sin handlers inline; src/ {_n_src} ≤ techo {_TECHO_HI}'
+              + (' — BAJÁ el techo' if _n_src < _TECHO_HI else ''))
+except Exception as _e:
+    warn(check, f'no se pudo verificar sin-handler-inline: {_e}')
+
 # ── [script-externo-fijo] todo script de un CDN con versión exacta + integrity ──
 # Supabase se cargaba como «supabase-js@2»: el CDN servía la última 2.x que saliera,
 # sin revisión — una versión comprometida entraba sola a la app (25 oct 2026).
