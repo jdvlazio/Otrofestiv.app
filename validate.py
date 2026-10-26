@@ -6003,6 +6003,25 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar sin-handler-inline: {_e}')
 
+# ── [csp-hashes] script-src estricto y con los hashes al día (26 oct 2026) ──
+# Los <script> inline van autorizados por hash (scripts/csp.js, dueño único). Un
+# hash viejo = el navegador NO ejecuta ese script: el gate no carga la app y la
+# pantalla queda en blanco. Y 'unsafe-inline'/'unsafe-eval' no vuelven.
+check = 'csp-hashes'
+try:
+    import subprocess as _spc, re as _rcs
+    _r = _spc.run(['node', 'scripts/csp.js', '--comprobar'], capture_output=True, text=True)
+    # del <meta>, no del comentario que lo explica (que también dice «script-src»)
+    _ss = (_rcs.search(r'http-equiv="Content-Security-Policy" content="[^"]*?script-src ([^;"]*)', open('index.html', encoding='utf-8').read()) or [None, ''])[1]
+    if _r.returncode != 0:
+        fail(check, 'los hashes de la CSP no coinciden con los <script> inline — correr: node scripts/csp.js')
+    elif "'unsafe-inline'" in _ss or "'unsafe-eval'" in _ss:
+        fail(check, "script-src volvió a tener 'unsafe-inline' o 'unsafe-eval'")
+    else:
+        ok(check, f"script-src estricto: {_ss.count('sha256-')} hash(es) al día, sin unsafe-*")
+except Exception as _e:
+    warn(check, f'no se pudo verificar csp-hashes: {_e}')
+
 # ── [sin-eval] ni eval( ni new Function en src/ (CSP, 26 oct 2026) ─────────
 # Era el único motivo de 'unsafe-eval' en la CSP: calc.js armaba el worker con
 # la lista de calc.js. Ahora la lista guarda referencias. Sin esto, un eval nuevo
@@ -6016,7 +6035,7 @@ try:
     _RE_EV = _rev.compile(r'(?<![\w$])eval\s*\(|(?<![\w$.])(?:new\s+)?Function\s*\(|\bset(?:Timeout|Interval)\s*\(\s*["\'`]')
     _sinc = lambda t: _rev.sub(r'(^|[^:\\])//[^\n]*', r'\1', _rev.sub(r'/\*.*?\*/', '', t, flags=_rev.S))
     _fuentes = [(_f, open(_f, encoding='utf-8').read()) for _f in _gev.glob('src/**/*.js', recursive=True) + ['sw.js']]
-    _fuentes += [(f'index.html<script #{_i}>', _b) for _i, _b in enumerate(_rev.findall(r'<script(?![^>]*\bsrc=)[^>]*>(.*?)</script>', open('index.html', encoding='utf-8').read(), flags=_rev.S))]
+    _fuentes += [(f'index.html<script #{_i}>', _b) for _i, _b in enumerate(_rev.findall(r'<script(?![^>]*\bsrc=)[^>]*>(.*?)</script>', _rev.sub(r'<!--.*?-->', '', open('index.html', encoding='utf-8').read(), flags=_rev.S), flags=_rev.S))]
     _ev = []
     for _f, _raw in _fuentes:
         _t = _sinc(_raw)

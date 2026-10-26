@@ -68,6 +68,9 @@ if (idx === idxBefore) {
 // local que sobrevive al reload — no cede sin cambio de URL). href sin ?v= o con
 // ?v= viejo → se estampa el build actual.
 idx = idx.replace(/(href="\/favicon(?:-192)?\.png)(?:\?v=\d{12})?(")/g, `$1?v=${build}$2`);
+// La CSP autoriza los <script> inline por HASH: estampar el ?v= del gate cambia
+// su hash, así que se recalcula DESPUÉS de estampar (scripts/csp.js, 26 oct).
+idx = require('./csp.js').aplicar(idx);
 fs.writeFileSync(idxPath, idx);
 
 // ── version.json — android e ios al MISMO build ──────────────────────────

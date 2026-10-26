@@ -533,6 +533,8 @@ Formato de nombre: `"[Nombre sala] - [Ciudad]"` — siempre igual.
 
 **Sin eval (26 oct 2026).** Nada de `eval(`, `new Function(` ni `setTimeout('código')` en src/: la CSP no lleva `'unsafe-eval'`. El worker del planeador recibe las funciones puras por referencia (`_SCHED_PURE_FNS` en calc.js, `fn.toString()`). Lo vigila `[sin-eval]`.
 
+**CSP estricta (26 oct 2026).** `script-src` no lleva `'unsafe-inline'` ni `'unsafe-eval'`: los `<script>` inline de index.html van autorizados por hash sha256, que escribe `scripts/csp.js` (dueño único; lo corre bump-version.js en cada deploy, porque estampar el `?v=` del gate cambia su hash). Cambiar un script inline = correr `node scripts/csp.js`. `[csp-hashes]` frena un hash viejo (dejaría la app en blanco) y la vuelta de unsafe-*.
+
 ### Columnas tiempo/día en listas
 Todo label de día/hora que ancle una columna flex debe tener `width` o `min-width` fijo. Validar con `MIÉ` (el día más ancho en Plus Jakarta Sans).
 
