@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "midbo.co — ficha de cada obra (bloque «Funciones») + API pelicula/seccion",
-  "capturado": "2026-10-25",
+  "capturado": "2026-10-26",
   "url": "https://midbo.co/",
   "metodo": "120 fichas; sección = categoría madre, programa = hija"
  },
@@ -2350,6 +2350,7 @@
    "seccion": "Encuentro Pensar lo Real",
    "duracion_min": 90,
    "acceso": "Entrada gratuita con inscripción (cupos limitados)",
+   "sinopsis": "Claire Simon abordará «La escucha en el cine directo».",
    "invitados": "Invitada: Claire Simon · Modera: Gustavo Vasco.",
    "_src": {
     "url": "https://midbo.co/encuentro-pensar-lo-real/seminario/",
@@ -2368,6 +2369,7 @@
    "seccion": "Encuentro Pensar lo Real",
    "duracion_min": 90,
    "acceso": "Entrada gratuita con inscripción (cupos limitados)",
+   "sinopsis": "La mesa «Urgencia y experimentación: sonidos del tercer cine», con Eduardo Rencurrel, Jacobo del Castillo y la moderación de Adriana H. Bocanegra, recupera la dimensión política de las prácticas audiovisuales latinoamericanas a partir del sonido.",
    "invitados": "Invitados: Eduardo Rencurrel, Jacobo del Castillo · Modera: Adriana H. Bocanegra.",
    "_src": {
     "url": "https://midbo.co/encuentro-pensar-lo-real/seminario/",
@@ -2386,6 +2388,7 @@
    "seccion": "Encuentro Pensar lo Real",
    "duracion_min": 60,
    "acceso": "Entrada gratuita con inscripción (cupos limitados)",
+   "sinopsis": "«Dirigir desde la Nagra», con Marta Rodríguez y Felipe Colmenares, recupera la experiencia de una de las grandes pioneras del documental colombiano y la relación entre dirección sonora, trabajo de campo y construcción de una mirada documental.",
    "invitados": "Invitades: Marta Rodríguez y Felipe Colmenares.",
    "_src": {
     "url": "https://midbo.co/encuentro-pensar-lo-real/seminario/",
@@ -2422,6 +2425,7 @@
    "seccion": "Encuentro Pensar lo Real",
    "duracion_min": 90,
    "acceso": "Entrada gratuita con inscripción (cupos limitados)",
+   "sinopsis": "Mercedes Gaviria propondrá pensar el «Punto de escucha».",
    "invitados": "Invitada: Mercedes Gaviría · Modera: María Fernanda Carrillo.",
    "_src": {
     "url": "https://midbo.co/encuentro-pensar-lo-real/seminario/",
@@ -2440,6 +2444,7 @@
    "seccion": "Encuentro Pensar lo Real",
    "duracion_min": 90,
    "acceso": "Entrada gratuita con inscripción (cupos limitados)",
+   "sinopsis": "«Escuchar el archivo», con Archipiélago Sonoro y Guateque Cine, y la moderación de Laura Alhach, propone nuevas formas de aproximarse a los materiales documentales y de archivos desde la escucha.",
    "invitados": "Invitades: Archipiélago Sonoro y Guateque Cine · Modera: Laura Alhach.",
    "_src": {
     "url": "https://midbo.co/encuentro-pensar-lo-real/seminario/",
@@ -2458,6 +2463,7 @@
    "seccion": "Encuentro Pensar lo Real",
    "duracion_min": 60,
    "acceso": "Entrada gratuita con inscripción (cupos limitados)",
+   "sinopsis": "«Silencio y fabulación de archivo», con Azul Aizengber y Juana Schlenker, abrirá una reflexión sobre aquello que ocurre cuando el archivo deja de ser únicamente evidencia para convertirse en materia de imaginación, interpretación y creación.",
    "invitados": "Invitadas: Azul Aizenberg y Juana Schlenker.",
    "_src": {
     "url": "https://midbo.co/encuentro-pensar-lo-real/seminario/",
@@ -2494,6 +2500,7 @@
    "seccion": "Encuentro Pensar lo Real",
    "duracion_min": 90,
    "acceso": "Entrada gratuita con inscripción (cupos limitados)",
+   "sinopsis": "Samuel Larson explorará las posibilidades expresivas, narrativas y conceptuales del sonido en «Pensar el sonido».",
    "invitados": "Invitado: Samuel Larson · Modera: Andrew Tucker.",
    "_src": {
     "url": "https://midbo.co/encuentro-pensar-lo-real/seminario/",
@@ -2512,6 +2519,8 @@
    "seccion": "Encuentro Pensar lo Real",
    "duracion_min": 60,
    "acceso": "Entrada gratuita con inscripción (cupos limitados)",
+   "sinopsis": "«Música en el cine documental», con Santiago Lozano y Jorge Andrés Botero, permitirá explorar las tensiones y posibilidades que surgen cuando la música entra en relación con las imágenes de lo real.",
+   "invitados": "Invitados: Santiago Lozano y Jorge Andrés Botero.",
    "_src": {
     "url": "https://midbo.co/encuentro-pensar-lo-real/seminario/",
     "date": "2026-10-10"
@@ -2529,6 +2538,7 @@
    "seccion": "Encuentro Pensar lo Real",
    "duracion_min": 90,
    "acceso": "Entrada gratuita con inscripción (cupos limitados)",
+   "sinopsis": "«Escucha continua. Homenaje a Roberto García», con Nelson Vergara, Carlos Santa y Pablo Mora, moderado por Jorjan Betancourt, revisita el legado de este compositor y artista sonoro a partir de su obra y sus materiales de archivo.",
    "invitados": "Invitados: Nelson Vergara, Pablo Mora, Carlos Santa · Modera: Jorjan Betancurt.",
    "_src": {
     "url": "https://midbo.co/encuentro-pensar-lo-real/seminario/",
@@ -2547,8 +2557,8 @@
    "seccion": "Encuentro Pensar lo Real",
    "duracion_min": 60,
    "acceso": "Entrada gratuita con inscripción (cupos limitados)",
-   "invitados": "Diana Martínez y José Delgadillo.",
-   "sinopsis": "Performance documental sonoro. En el marco del Seminario Pensar lo Real: Lenguajes Sonoros.",
+   "invitados": "Diana Martínez Muñoz / José Delgadillo Gaviria.",
+   "sinopsis": "Diario de una oreja es un performance documental sonoro que piensa la escucha desde una perspectiva cyborg. Diana Martínez Muñoz, junto a José Delgadillo Gaviria, compone un álbum de piezas sonoras y textos leídos en vivo a partir de la pérdida auditiva, el implante coclear, el diseño sonoro y la docencia en cine. Entre oscuridad, voz, sintetizadores e imágenes, la obra convierte el sonido en territorio político, íntimo y especulativo.",
    "_src": {
     "url": "https://www.instagram.com/p/DexoaAzCV-0/",
     "date": "2026-10-21"
@@ -2566,8 +2576,8 @@
    "seccion": "Documental Expandido",
    "duracion_min": 90,
    "acceso": "Entrada libre (no se anuncia pago)",
-   "invitados": "Improvisación sonora en vivo por Roberto García Piedrahita, Alberto Vargas, Sergio Román, Jorjan Betancourt.",
-   "sinopsis": "Concierto. Proyección de fragmentos de tres películas: Batallas Sagradas (Pablo Mora, 2002), Quién paga el pato (Pablo Mora, 2001) y Fragmentos (Carlos Santa, 1999).",
+   "invitados": "Roberto García Piedrahita / Sergio Andrés Román.",
+   "sinopsis": "Obras inéditas de Roberto García Piedrahita propone una activación en vivo a partir de materiales sonoros poco conocidos del compositor, artista sonoro y docente Roberto García. Alberto Vargas, Sergio Román y Jorjan Betancourt abordan ese archivo como campo de resonancia, memoria y transmisión. La improvisación no busca fijar una obra, sino prolongar sus posibilidades: hacer que el legado de García vuelva a sonar como acontecimiento abierto dentro del pensamiento experimental colombiano. Se proyectaran fragmentos de las peliculas Fragmentos (1999), Batallas Sagradas (2002), Quién paga el pato (2001) para las que Roberto García hizo la música.",
    "_src": {
     "url": "https://www.instagram.com/p/DexoaAzCV-0/",
     "date": "2026-10-21"
@@ -2583,20 +2593,20 @@
    "tipo": "evento",
    "event_kind": "evento",
    "seccion": "Documental Expandido",
-   "duracion_min": 60,
-   "_duracion_de": "estimada: ninguna lámina da hora de fin",
+   "duracion_min": 90,
+   "_duracion_de": "midbo.co/obras/patrimonio-liquido-ii/: 4:30 - 6:00pm",
    "acceso": "Entrada libre",
    "sinopsis": "Proyección en 16 mm y sonido en vivo. Primera activación de Documental Expandido.",
    "obras": [
     {
      "titulo": "Circo",
      "director": "Daniel Torres",
-     "sinopsis": "Cine expandido, 16 mm, video HD y carpa textil."
+     "sinopsis": "Circo convierte una carpa construida con retazos de tela en un dispositivo de memoria. En su interior, los recuerdos de infancia de “Lolita” reaparecen de manera fragmentaria a través de imágenes en 16 mm, video, voces y variaciones de luz. Daniel Torres articula estos elementos mediante una operación performativa en la que las proyecciones se desplazan sobre las superficies textiles, transformándolas en pantallas inestables y cuerpos en movimiento."
     },
     {
      "titulo": "Patrimonio Líquido II",
      "director": "Sergio Díaz",
-     "sinopsis": "Video instalación, 16 mm y sonido en vivo."
+     "sinopsis": "Patrimonio líquido II toma como punto de partida la cascada artificial formada por el desagüe del embalse de Chisacá para interrogar la construcción del paisaje y las lógicas de extracción que atraviesan el territorio. Sergio Díaz articula video, fotografía, sonido y una superficie textil sobre la que la imagen del agua adquiere una presencia casi material."
     }
    ],
    "_src": {
@@ -2619,7 +2629,8 @@
    "duracion_min": 240,
    "_duracion_de": "martes a viernes 2:00 p. m. a 6:00 p. m., agenda de la Cinemateca",
    "acceso": "Entrada libre reclamando boleta en taquilla",
-   "sinopsis": "Exposición. Muestra de documental Expandido | 28 MIDBO. Martes a viernes de 2:00 p. m. a 6:00 p. m.; sábados, domingos y festivos de 11:00 a. m. a 6:00 p. m. Obras de María Isabella Arenas, Sergio Díaz, Daniel Torres y Yareni Velázquez Mendoza; curaduría de Jorjan Betancourt.",
+   "sinopsis": "¿Qué escuchamos cuando una imagen guarda silencio? En las cuatro obras de la exposición, el sonido aparece como una materia inestable. Puede habitar una voz, adherirse a un paisaje, surgir de una textura o permanecer latente en una imagen. A veces se oye. A veces debe ser imaginado. Martes a viernes: 2:00 p.m. a 6:00 p.m. Sábados, domingos y festivos: 11:00 a.m. a 6:00 p.m.",
+   "invitados": "Artista: María Isabella Arenas, Sergio Díaz, Daniel Torres, Yareni Velázquez Mendoza · Curaduría: Jorjan Betancourt.",
    "_src": {
     "url": "https://cinematecadebogota.gov.co/exposiciones?id=3663",
     "date": "2026-10-22"
