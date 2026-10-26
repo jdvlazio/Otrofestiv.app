@@ -4,8 +4,8 @@
   "regla": "el título que más festivales imprimen"
  },
  "directores": {
-  "fuente": "festival",
-  "regla": "la grafía más completa que acreditan los festivales"
+  "fuente": "tmdb:1693579",
+  "regla": "tmdb-manda"
  },
  "anio": {
   "fuente": "festival",
@@ -14,5 +14,11 @@
  "paises": {
   "fuente": "festival",
   "regla": "pais-union"
+ },
+ "afiche": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "la única imagen de la ficha de TMDB (1693579) es una hoja de contactos de las fotos de archivo de Edmundo Camana, sin título ni créditos: no es el afiche; no se encontró afiche oficial (TMDB, web, IG de @cortoscali, 26 oct 2026)",
+  "fecha": "2026-10-26"
  }
 }

@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "IG @cortoscali: «Programación» p/De4VP9xkaMd (24 oct) + «Programación académica» p/DerpBbZkeSs",
-  "capturado": "2026-10-25",
+  "capturado": "2026-10-26",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_sedes": "Toda la programación de la UAO es en el «Auditorio Xepia UAO» (así en cada lámina): la sede es la universidad y el auditorio va como sala.",
@@ -580,7 +580,12 @@
     {
      "title": "Dos veces muerto",
      "director": "Colectivo Pix & Hertz",
+     "lbSlug": "dos-veces-muerto",
+     "tmdb_id": 1693579,
+     "synopsis": "Tras sobrevivir a la masacre de Lucanamarca en 1983, Edmundo Camana fue fotografiado en un hospital bajo una identidad falsa. Aquella imagen se convirtió en un símbolo del conflicto armado peruano, mientras su vida quedó atravesada por la memoria, la supervivencia y el peso público de su propio retrato.",
      "country": "Colombia, Perú, Paraguay",
+     "synopsis_lang": "es",
+     "duration": "5 min",
      "flags": "🇨🇴🇵🇪🇵🇾"
     }
    ],
@@ -867,7 +872,18 @@
     {
      "title": "Los días cada vez son más cortos",
      "director": "David Fernando Poot Fuentes",
+     "poster": "/assets/cortoscali-2026/los-dias-cada-vez-son-mas-cortos.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "the-days-are-getting-shorter",
+     "tmdb_id": 1369344,
+     "synopsis": "En una casa antigua de Mérida, un gato naranja enfrenta la soledad cuando su cuidadora, una Abuelita, no regresa a casa tras salir por el mandado. A medida que los días pasan, la rutina cambia y su hogar comienza a cambiar.",
+     "synopsis_en": "In a single visual plane, this animation follows the daily routine of a cat who relies on the company and care of a grandmother. But when the grandmother disappears, Cat is faced with loneliness and uncertainty. A reflection on human connection and the inevitability of change, this is an animation with a minimalist but profound narrative.",
+     "title_en": "The Days are Getting Shorter",
+     "genre": "Animación",
      "country": "México",
+     "year": 2024,
+     "synopsis_lang": "es",
+     "duration": "7 min",
      "flags": "🇲🇽"
     }
    ],
@@ -1050,7 +1066,9 @@
     {
      "title": "Aitana",
      "director": "Isabella Cárdenas",
+     "synopsis": "Cortometraje documental que explora el arte, el contraste y la reconciliación a través del mundo drag.",
      "country": "Colombia",
+     "synopsis_lang": "es",
      "flags": "🇨🇴"
     },
     {
@@ -1072,7 +1090,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-25T11:48:35",
+  "fecha": "2026-10-26T06:22:05",
   "plan_sha": "c266d7090b645757",
   "paso": 6,
   "cmd": "python3 pipeline/cortoscali-2026-verificar.py"
