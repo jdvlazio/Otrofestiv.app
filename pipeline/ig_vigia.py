@@ -75,7 +75,8 @@ def festivales_config(texto):
 
 
 def vigilados(config, cuentas, ahora):
-    """Lista de {id, cuenta, tier} que tocan hoy. tier: 'vivo' | 'terminado'."""
+    """Lista de {id, cuenta, tier} que tocan hoy. tier: 'vivo' (en curso o
+    empieza mañana: cada corrida) | 'camino' | 'terminado' (una vez al día)."""
     fests = dict(config)
     for fid, cta in cuentas.get('festivales', {}).items():
         if fid in fests and not fests[fid]['cuenta']:
@@ -89,8 +90,13 @@ def vigilados(config, cuentas, ahora):
             continue
         ini = datetime.strptime(f['inicio'], '%Y-%m-%d').date()
         fin = datetime.strptime(f['fin'], '%Y-%m-%d').date()
-        if ini - timedelta(days=CAMINO) <= hoy <= fin:
+        if ini - timedelta(days=1) <= hoy <= fin:
             out.append({'id': fid, 'cuenta': f['cuenta'], 'tier': 'vivo'})
+        elif ini - timedelta(days=CAMINO) <= hoy < ini - timedelta(days=1):
+            # En camino: una vez al día. Apify cobra cada consulta aunque no haya
+            # posts nuevos (~US$0,003 por cuenta): mirar 3 veces al día una cuenta
+            # que publica una selección por semana era casi todo el gasto (26 oct).
+            out.append({'id': fid, 'cuenta': f['cuenta'], 'tier': 'camino'})
         elif fin < hoy <= fin + timedelta(days=TERMINADO):
             out.append({'id': fid, 'cuenta': f['cuenta'], 'tier': 'terminado'})
     return out
@@ -162,7 +168,7 @@ def clasificar_fb(items, paginas, estado):
 
 
 def toca(v, estado, ahora):
-    """¿Se consulta esta cuenta en esta corrida? (terminados: una vez al día)."""
+    """¿Se consulta esta cuenta en esta corrida? (camino y terminados: una vez al día)."""
     if v['tier'] == 'vivo':
         return True
     ult = estado.get(v['cuenta'], {}).get('consultado')

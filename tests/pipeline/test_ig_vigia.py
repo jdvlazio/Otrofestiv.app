@@ -36,13 +36,18 @@ class Vigilados(unittest.TestCase):
     def test_tiers(self):
         self.assertEqual(self.vig['vivo1']['tier'], 'vivo')
         self.assertEqual(self.vig['termino']['tier'], 'terminado')
-        self.assertEqual(self.vig['pre']['tier'], 'vivo')        # empieza en 5 días
+        self.assertEqual(self.vig['pre']['tier'], 'camino')      # empieza en 5 días: una vez al día
         self.assertNotIn('viejo', self.vig)                      # terminó hace > 8 días
         self.assertNotIn('lejos', self.vig)
 
     def test_config_manda_sobre_el_json(self):
         self.assertEqual(self.vig['vivo1']['cuenta'], 'cuentaviva')
         self.assertEqual(self.vig['sinig']['cuenta'], 'cuentaextra')
+
+    def test_camino_una_vez_al_dia(self):
+        c = self.vig['pre']
+        self.assertTrue(v.toca(c, {}, AHORA))
+        self.assertFalse(v.toca(c, {'cuentapre': {'consultado': '2026-10-21T07:00:00'}}, AHORA))
 
     def test_terminado_una_vez_al_dia(self):
         t = self.vig['termino']
