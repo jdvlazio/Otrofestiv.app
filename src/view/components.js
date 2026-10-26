@@ -1193,7 +1193,7 @@ function _festivalCardHTML([id,cfg], {isPast, isActive, action, lang, review}){
   const meta=`${cfg.city} · ${_langDates(cfg,lang)}`;
   const label=festivalLabel(cfg);
   const art=cfg.keyArt
-    ? `<img class="splash-card-art" src="${cfg.keyArt}" alt="" loading="lazy" onerror="this.remove()"${cfg.keyArtPos?` style="--kap:${cfg.keyArtPos}"`:''}>`
+    ? `<img class="splash-card-art" src="${cfg.keyArt}" alt="" loading="lazy" data-err="quitar"${cfg.keyArtPos?` style="--kap:${cfg.keyArtPos}"`:''}>`
     : `<span class="splash-card-fb">${festivalShortName(cfg)}</span>`;
   // Distintivo APLAZADO sobre el afiche — fuente única: sale en el riel del splash
   // Y en el sheet «cambiar festival» sin tocar cada superficie.

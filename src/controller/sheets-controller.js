@@ -213,10 +213,10 @@ export function openPelSheet(title){
     const _fd1=JSON.stringify(f.film_list[0]).replace(/"/g,'&quot;');
     const _fd2=JSON.stringify(f.film_list[1]).replace(/"/g,'&quot;');
     const _c1=_sp1
-      ?`<img class="psp-card psp-front" src="${_sp1}" loading="lazy" onerror="this.remove()" alt="" data-action="openCombinedFilmSheet" data-film="${_fd1}">`
+      ?`<img class="psp-card psp-front" src="${_sp1}" loading="lazy" data-err="quitar" alt="" data-action="openCombinedFilmSheet" data-film="${_fd1}">`
       :`<img class="psp-card psp-front" src="${makeProgramPoster(state,f.film_list[0].title,f.film_list[0].duration||'',f.section||'')}" loading="lazy" alt="" data-action="openCombinedFilmSheet" data-film="${_fd1}">`;
     const _c2=_sp2
-      ?`<img class="psp-card psp-back" src="${_sp2}" loading="lazy" onerror="this.remove()" alt="" data-action="openCombinedFilmSheet" data-film="${_fd2}">`
+      ?`<img class="psp-card psp-back" src="${_sp2}" loading="lazy" data-err="quitar" alt="" data-action="openCombinedFilmSheet" data-film="${_fd2}">`
       :`<img class="psp-card psp-back" src="${makeProgramPoster(state,f.film_list[1].title,f.film_list[1].duration||'',f.section||'')}" loading="lazy" alt="" data-action="openCombinedFilmSheet" data-film="${_fd2}">`;
     posterHtml=`<div class="pel-sheet-poster-stage">${_c1}${_c2}</div>`;
   } else {
@@ -229,7 +229,7 @@ export function openPelSheet(title){
       // pasan tal cual (getFilmPosterUntitled solo toca data-URIs generativos).
       const _sheetSrc=posterSrc?getFilmPosterUntitled(f):null;
       posterHtml=_sheetSrc
-        ?`<img class="pel-sheet-poster"${_posterStyle(f)} src="${_sheetSrc}" data-title="${f.title.replace(/"/g,'&quot;')}" loading="lazy" onerror="_posterErr(this)" alt="">`
+        ?`<img class="pel-sheet-poster"${_posterStyle(f)} src="${_sheetSrc}" data-title="${f.title.replace(/"/g,'&quot;')}" loading="lazy" data-err="poster" alt="">`
         :`<div class="pel-sheet-poster-ph" aria-hidden="true">🎬</div>`;
     }
   }
@@ -690,7 +690,7 @@ export function openCortoSheet(title, country, duration, section, flags, directo
   const posterHtml=_pp3.ed
     ?`<div class="psp-editorial poster-ed" style="--ed-accent:${_pp3.accent}">${_pp3.inner}</div>`
     :posterUrl
-      ?`<img class="pel-sheet-poster" src="${posterUrl}" data-title="${(title||"").replace(/"/g,'&quot;')}" loading="lazy" onerror="_cortoSheetPosterErr(this)" alt="">`
+      ?`<img class="pel-sheet-poster" src="${posterUrl}" data-title="${(title||"").replace(/"/g,'&quot;')}" loading="lazy" data-err="corto" alt="">`
       :`<img class="pel-sheet-poster" src="${makeProgramPoster(state,title,dur,section||'')||''}" alt="" loading="lazy">`;
   const ps=document.getElementById('pel-sheet');
   if(ps) ps.scrollTop=0;
@@ -793,7 +793,7 @@ export function _openCombinedFilmSheet(filmData){
   const posterHtml=_pp4.ed
     ?`<div class="psp-editorial poster-ed" style="--ed-accent:${_pp4.accent}">${_pp4.inner}</div>`
     :posterUrl
-      ?`<img class="pel-sheet-poster" src="${posterUrl}" data-title="${(title||"").replace(/"/g,'&quot;')}" loading="lazy" onerror="_cortoSheetPosterErr(this)" alt="">`
+      ?`<img class="pel-sheet-poster" src="${posterUrl}" data-title="${(title||"").replace(/"/g,'&quot;')}" loading="lazy" data-err="corto" alt="">`
       :`<div class="pel-sheet-poster-ph" aria-hidden="true">🎬</div>`;
   const metaLine=[director,year].filter(Boolean).join(' · ');
   const lbHref=lbUrlForFilm({title,lbSlug}); // guard de slugs incluido (marcador ⚠ jamás llega al href)
@@ -1038,7 +1038,7 @@ export function openPrioLimit(newTitle){
       const safeSwap=_ttl.replace(/"/g,'&quot;').replace(/'/g,"&#39;");
       const safeNew=newTitle.replace(/"/g,'&quot;').replace(/'/g,"&#39;");
       return`<div class="prio-limit-item">
-        ${poster?`<img class="prio-limit-thumb" src="${poster}" onerror="this.remove()" alt="" loading="lazy">`:'<div class="prio-limit-thumb"></div>'}
+        ${poster?`<img class="prio-limit-thumb" src="${poster}" data-err="quitar" alt="" loading="lazy">`:'<div class="prio-limit-thumb"></div>'}
         <div class="prio-limit-info">
           <div class="prio-limit-name">${dt}</div>
           <div class="prio-limit-when">${when}</div>

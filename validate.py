@@ -1757,6 +1757,9 @@ try:
             if not _fn.endswith('.js'): continue
             _fp = os.path.join(_root, _fn)
             if _fp.replace('\\', '/') == 'src/util/ready.js': continue  # la casa de los helpers
+            # sin-inline.js escucha 'load' EN CAPTURA para las <img data-load> (no la
+            # carga de la página): un evento de imagen, que ocurre siempre después (26 oct)
+            if _fp.replace('\\', '/') == 'src/controller/sin-inline.js': continue
             _txt = open(_fp, encoding='utf-8').read()
             for _m in _READY_RE.finditer(_txt):
                 _lstart = _txt.rfind('\n', 0, _m.start()) + 1
@@ -5970,8 +5973,7 @@ except Exception as _e:
 
 # ── [sin-handler-inline] ningún on*="…" nuevo en el HTML (CSP, 26 oct 2026) ──
 # La CSP no puede dejar 'unsafe-inline' mientras haya handlers escritos en el
-# markup. index.html ya tiene 0 (controller/sin-inline.js); src/ tiene un TECHO
-# que solo baja, hasta 0, y entonces sale 'unsafe-inline' de script-src.
+# markup. index.html y src/ en 0 (controller/sin-inline.js): ninguno vuelve.
 check = 'sin-handler-inline'
 try:
     import re as _rhi, glob as _ghi
@@ -5979,7 +5981,7 @@ try:
     _RE_HI = _rhi.compile(r'\bon[a-z]{3,}\s*=\s*\\?["\'`]')
     _n_idx = len(_RE_HI.findall(open('index.html', encoding='utf-8').read()))
     _n_src = sum(len(_RE_HI.findall(open(_f, encoding='utf-8').read())) for _f in _ghi.glob('src/**/*.js', recursive=True))
-    _TECHO_HI = 31
+    _TECHO_HI = 0   # 31 → 0 en el paso 2/4 (26 oct)
     if _n_idx:
         fail(check, f'index.html tiene {_n_idx} handler(s) on*= — van como data-* en controller/sin-inline.js')
     elif _n_src > _TECHO_HI:

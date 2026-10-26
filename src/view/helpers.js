@@ -169,7 +169,7 @@ export function itemPosterParts(item, section, imgClass, {header=false}={}){
       inner:editorialFrame(header?{header:_secLabel(section||''), src, title:item.title}:{src, title:item.title})};
   }
   return {ed:false, accent:'', src,
-    inner:src?`<img class="${imgClass}" src="${src}" loading="lazy" onerror="this.remove()" alt="">`:''};
+    inner:src?`<img class="${imgClass}" src="${src}" loading="lazy" data-err="quitar" alt="">`:''};
 }
 
 // ── posterAmbient — color ambiental del póster (decisión Juan 18 jul 2026) ────
@@ -407,7 +407,7 @@ export function _posterThumb(f, cssClass, loading){
   }
 
   const _posStyle = _posterStyle(f);
-  return `<img class="${cssClass}" src="${p}" loading="${_load}"${_posStyle} onerror="this.remove()" alt="">`;
+  return `<img class="${cssClass}" src="${p}" loading="${_load}"${_posStyle} data-err="quitar" alt="">`;
 }
 
 // ── Modelo único de póster (unión discriminada) ───────────────────────────────
@@ -455,7 +455,7 @@ export function editorialFrame({header, body, src, title, loading, accent, dato,
   const _ttl=(body!=null && String(body).trim()) ? String(body) : '';
   const _dato=(dato!=null && String(dato).trim()) ? String(dato) : '';
   const img=src
-    ? `<img class="ed-still" src="${src}"${_dt} loading="${_l}" onload="this.style.opacity='1'" onerror="_edPosterErr(this)" alt="">`
+    ? `<img class="ed-still" src="${src}"${_dt} loading="${_l}" data-load="mostrar" data-err="ed" alt="">`
     : '';
   // MINIATURA = sin sección ni título (el corto dentro de un programa). Ahí el
   // campo se centra y el pie se llena con la propia obra desenfocada (Juan, 19
@@ -471,7 +471,7 @@ export function editorialFrame({header, body, src, title, loading, accent, dato,
   // el vacío no existe, lo llenan el título y el dato») era falsa en pantalla.
   // Mismo mecanismo que la miniatura —contenido, con máscara— pero anclado al
   // borde del campo grande (66,67%, clase ed-halo-full) para no dejar costura.
-  const halo=(src)?`<div class="ed-halo${_mini?'':' ed-halo-full'}"><img src="${src}" loading="${_l}" aria-hidden="true" onerror="this.remove()" alt=""></div>`:'';
+  const halo=(src)?`<div class="ed-halo${_mini?'':' ed-halo-full'}"><img src="${src}" loading="${_l}" aria-hidden="true" data-err="quitar" alt=""></div>`:'';
   return `<div class="ed-fil"></div>`
     + `<div class="ed-hdr">${header?_edHdrSVG(header, accent):''}</div>`
     + halo
@@ -1060,7 +1060,7 @@ export function _mkCortoItemHtml(item, n, {cls='mplan-prog-item', section='', ra
   const thumb=_pp.src;
   const thumbHtml=_pp.ed
     ? `<div class="c-film-thumb poster-ed" style="--ed-accent:${_pp.accent}">${_pp.inner}</div>`
-    : `<img src="${thumb}" class="c-film-thumb" loading="lazy" onerror="this.remove()" alt="">`;
+    : `<img src="${thumb}" class="c-film-thumb" loading="lazy" data-err="quitar" alt="">`;
   // data-* attrs — nunca interpolar strings con contenido variable en onclick
   const _dt=encodeURIComponent(item.title||'');
   const _dc=encodeURIComponent(item.country||'');
@@ -1223,8 +1223,8 @@ export function _programaStack(f){
   // programa (mejora 1 — el stack vive en el chip de 56px de la lista), nunca
   // un hueco vacío ni el póster entero ilegible.
   const _gen=()=>getFilmPosterMini(f);
-  const imgB=`<img class="ps-back" src="${p2||_gen()}" loading="lazy" onerror="this.remove()" alt="">`;
-  const imgF=`<img class="ps-front" src="${p1||_gen()}" loading="lazy" onerror="this.remove()" alt="">`;
+  const imgB=`<img class="ps-back" src="${p2||_gen()}" loading="lazy" data-err="quitar" alt="">`;
+  const imgF=`<img class="ps-front" src="${p1||_gen()}" loading="lazy" data-err="quitar" alt="">`;
   return`<div class="plist-poster-stack">${imgB}${imgF}</div>`;
 }
 
@@ -1237,7 +1237,7 @@ export function _plistPosterHtml(f, src){
     // Marco editorial único (lista = banda + img, sin label) vía posterParts.
     return '<div class="plist-poster poster-ed" style="--ed-accent:'+_pp.accent+'">'+_pp.inner+'</div>';
   }
-  return src?'<div class="plist-poster"><img src="'+src+'" loading="lazy" onerror="this.remove()" alt="" style="width:100%;height:100%;object-fit:cover;border-radius:var(--r-sm)"></div>':'<div class="plist-poster"></div>';
+  return src?'<div class="plist-poster"><img src="'+src+'" loading="lazy" data-err="quitar" alt="" style="width:100%;height:100%;object-fit:cover;border-radius:var(--r-sm)"></div>':'<div class="plist-poster"></div>';
 }
 
 // ── Step 6f addendum: shared leaves (emptyState/emptyStateHero/DAYS) ───────────
