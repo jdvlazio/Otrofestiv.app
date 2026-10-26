@@ -5968,6 +5968,32 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar afiche-es-afiche: {_e}')
 
+# ── [script-externo-fijo] todo script de un CDN con versión exacta + integrity ──
+# Supabase se cargaba como «supabase-js@2»: el CDN servía la última 2.x que saliera,
+# sin revisión — una versión comprometida entraba sola a la app (25 oct 2026).
+# Ahora va fija y con hash (si el archivo cambia, el navegador no lo ejecuta).
+# El loader de Sentry es la única excepción: su contenido lo genera Sentry por
+# clave y cambia sin versión, así que no admite hash.
+check = 'script-externo-fijo'
+try:
+    import re as _rsx
+    _html = open('index.html', encoding='utf-8').read()
+    _sx = []
+    for _m in _rsx.finditer(r'<script\b([^>]*)>', _html):
+        _a = _m.group(1)
+        _src = _rsx.search(r'\bsrc="(https?://[^"]+)"', _a)
+        if not _src or 'sentry-cdn.com' in _src.group(1):
+            continue
+        _u = _src.group(1)
+        if not _rsx.search(r'@\d+\.\d+\.\d+/', _u) or 'integrity="sha384-' not in _a:
+            _sx.append(_u[:90])
+    if _sx:
+        fail(check, 'script externo sin versión exacta o sin integrity: ' + ' · '.join(_sx[:4]))
+    else:
+        ok(check, 'todo script de CDN con versión exacta e integrity (salvo el loader de Sentry)')
+except Exception as _e:
+    warn(check, f'no se pudo verificar script-externo-fijo: {_e}')
+
 # ── [abierta-sin-info] una exposición no se reserva: va con info:true ─────────
 # MAPISTAS (FILCMAR, 9 oct 2026) salió como cuatro funciones con hora y la app la
 # anclaba en el plan los cuatro días. El modelo de la actividad abierta existe
