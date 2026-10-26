@@ -40,6 +40,11 @@ class Vigilados(unittest.TestCase):
         self.assertNotIn('viejo', self.vig)                      # terminó hace > 8 días
         self.assertNotIn('lejos', self.vig)
 
+    def test_palmares_cerrado_deja_de_mirarse(self):
+        vig = {x['id'] for x in v.vigilados(v.festivales_config(CONFIG), CUENTAS, AHORA, {'termino': {}})}
+        self.assertNotIn('termino', vig)
+        self.assertIn('vivo1', vig)
+
     def test_config_manda_sobre_el_json(self):
         self.assertEqual(self.vig['vivo1']['cuenta'], 'cuentaviva')
         self.assertEqual(self.vig['sinig']['cuenta'], 'cuentaextra')

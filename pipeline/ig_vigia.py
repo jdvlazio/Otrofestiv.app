@@ -45,6 +45,7 @@ RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CONFIG = os.path.join(RAIZ, 'src', 'config.js')
 CUENTAS = os.path.join(RAIZ, 'pipeline', 'ig-vigia-cuentas.json')
 ESTADO = os.path.expanduser('~/.otrofestiv/ig-vigia-estado.json')
+CERRADOS = os.path.expanduser('~/.otrofestiv/palmares-cerrados.json')
 SALIDA = os.path.join(RAIZ, 'fuentes', 'ig-vigia')
 
 CAMINO = 7        # días antes del inicio en que se empieza a mirar
@@ -74,7 +75,7 @@ def festivales_config(texto):
     return out
 
 
-def vigilados(config, cuentas, ahora):
+def vigilados(config, cuentas, ahora, cerrados=()):
     """Lista de {id, cuenta, tier} que tocan hoy. tier: 'vivo' (en curso o
     empieza mañana: cada corrida) | 'camino' | 'terminado' (una vez al día)."""
     fests = dict(config)
@@ -97,7 +98,10 @@ def vigilados(config, cuentas, ahora):
             # posts nuevos (~US$0,003 por cuenta): mirar 3 veces al día una cuenta
             # que publica una selección por semana era casi todo el gasto (26 oct).
             out.append({'id': fid, 'cuenta': f['cuenta'], 'tier': 'camino'})
-        elif fin < hoy <= fin + timedelta(days=TERMINADO):
+        elif fin < hoy <= fin + timedelta(days=TERMINADO) and fid not in cerrados:
+            # Terminado: solo se mira por el palmarés. Si el vigía lo declaró
+            # COMPLETO (todas las categorías anunciadas tienen ganadora publicada,
+            # con evidencia en palmares-cerrados.json) deja de mirarse.
             out.append({'id': fid, 'cuenta': f['cuenta'], 'tier': 'terminado'})
     return out
 
@@ -187,6 +191,17 @@ def desde(cuentas, estado, ahora):
     return min(fechas).strftime('%Y-%m-%dT%H:%M:%S')
 
 
+def apify_por_cuenta(cuentas, estado, ahora, token):
+    """Una llamada por cuenta, cada una desde SU última consulta (26 oct). Con
+    una sola llamada desde la fecha más vieja del grupo, Apify devolvía —y
+    cobraba— posts de las cuentas recientes que ya teníamos. Apify cobra por
+    ítem devuelto, no por llamada: partirlas no cuesta más. En paralelo."""
+    from concurrent.futures import ThreadPoolExecutor
+    with ThreadPoolExecutor(max_workers=5) as ex:
+        lotes = ex.map(lambda c: apify([c], desde([c], estado, ahora), token), cuentas)
+    return [it for lote in lotes for it in lote]
+
+
 def clasificar(items, cuentas, estado):
     """Separa por cuenta los posts nuevos y detecta las cuentas que no se leyeron."""
     nuevos = {c: [] for c in cuentas}
@@ -270,7 +285,8 @@ def main():
     a = ap.parse_args()
     ahora = datetime.fromisoformat(a.hoy) if a.hoy else datetime.now()
     estado = json.load(open(ESTADO)) if os.path.exists(ESTADO) else {}
-    vig = vigilados(festivales_config(open(CONFIG).read()), json.load(open(CUENTAS)), ahora)
+    cerrados = json.load(open(CERRADOS)) if os.path.exists(CERRADOS) else {}
+    vig = vigilados(festivales_config(open(CONFIG).read()), json.load(open(CUENTAS)), ahora, cerrados)
     ahora_toca = [v for v in vig if toca(v, estado, ahora)]
     faltan = sin_cuenta(festivales_config(open(CONFIG).read()), json.load(open(CUENTAS)), ahora)
     cuentas = sorted({v['cuenta'] for v in ahora_toca})
@@ -289,13 +305,13 @@ def main():
     token = os.environ.get('APIFY_TOKEN')
     if not token:
         sys.exit('Falta APIFY_TOKEN (hacer `source ~/.zshrc`).')
-    items = apify(cuentas, d, token)
+    items = apify_por_cuenta(cuentas, estado, ahora, token)
     nuevos, sin_leer = clasificar(items, cuentas, estado)
     # Reintento: Apify devuelve «Empty or private data» por rachas; una cuenta
     # sola, en una segunda llamada, suele pasar.
     reintentar = [c for c in sin_leer if c != '*']
     if reintentar:
-        n2, s2 = clasificar(apify(reintentar, d, token), reintentar, estado)
+        n2, s2 = clasificar(apify_por_cuenta(reintentar, estado, ahora, token), reintentar, estado)
         for c in reintentar:
             if c not in s2:
                 nuevos[c] = n2[c]
