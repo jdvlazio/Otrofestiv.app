@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "ficica.cinealacalle.org — Programación General 2026 (JSON embebido en la página)",
-  "capturado": "2026-10-20",
+  "capturado": "2026-10-25",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "radar": 1029,
@@ -1507,7 +1507,11 @@
      "title": "Appol-o",
      "director": "Juan José Calvo Lozano, Nicolás Castro Herrera, Cristian Felipe Ossa Castro",
      "country": "Colombia",
-     "flags": "🇨🇴"
+     "flags": "🇨🇴",
+     "synopsis": "Tras la conquista de la Luna por Estados Unidos, el primer astronauta presencia la llegada de una cápsula soviética. Decidido a defender el nuevo territorio, la persigue hasta el lado oscuro, donde descubre los restos de una carrera espacial fallida y a un tercer contendiente que amenaza no solo la Luna, sino el orden universal.",
+     "year": 2025,
+     "synopsis_lang": "es",
+     "duration": "7 min"
     },
     {
      "title": "Emechiche, el renacer de los cabeciblancos",
@@ -1928,9 +1932,11 @@
      "posterSource": "tmdb",
      "lbSlug": "replay-2026",
      "tmdb_id": 1677190,
+     "synopsis": "En medio del espacio, una misteriosa criatura asalta una nave y se enfrenta a una banda de lagartos robot, para así obtener un extraño artefacto con forma de disco.",
      "synopsis_en": "Set in a distant galaxy, a strange humanoid creature called Hunter X must fight against a dozen robot lizards to retrieve a peculiar disk-shaped device.",
      "genre": "Animación",
      "year": 2026,
+     "synopsis_lang": "es",
      "duration": "6 min"
     },
     {
@@ -1952,7 +1958,11 @@
      "title": "Appol-o",
      "director": "Juan José Calvo Lozano, Nicolás Castro Herrera, Cristian Felipe Ossa Castro",
      "country": "Colombia",
-     "flags": "🇨🇴"
+     "flags": "🇨🇴",
+     "synopsis": "Tras la conquista de la Luna por Estados Unidos, el primer astronauta presencia la llegada de una cápsula soviética. Decidido a defender el nuevo territorio, la persigue hasta el lado oscuro, donde descubre los restos de una carrera espacial fallida y a un tercer contendiente que amenaza no solo la Luna, sino el orden universal.",
+     "year": 2025,
+     "synopsis_lang": "es",
+     "duration": "7 min"
     }
    ],
    "description": "Un programa para disfrutar en familia en las calles y plazas. Miradas infantiles y juveniles que cautivan a pequeños y grandes.",
@@ -2719,9 +2729,11 @@
      "posterSource": "tmdb",
      "lbSlug": "when-the-tiger-roars",
      "tmdb_id": 1555607,
+     "synopsis": "La fuga de un tigre rompe el largo silencio entre un padre y su hijo, y por la grieta asoma un amor contenido.",
      "synopsis_en": "A tiger's escape shatters the long silence between a father and his son, with suppressed love shining through the crack.",
      "genre": "Drama",
      "year": 2025,
+     "synopsis_lang": "es",
      "duration": "15 min"
     }
    ],
@@ -2891,9 +2903,11 @@
      "posterSource": "tmdb",
      "lbSlug": "replay-2026",
      "tmdb_id": 1677190,
+     "synopsis": "En medio del espacio, una misteriosa criatura asalta una nave y se enfrenta a una banda de lagartos robot, para así obtener un extraño artefacto con forma de disco.",
      "synopsis_en": "Set in a distant galaxy, a strange humanoid creature called Hunter X must fight against a dozen robot lizards to retrieve a peculiar disk-shaped device.",
      "genre": "Animación",
      "year": 2026,
+     "synopsis_lang": "es",
      "duration": "6 min"
     },
     {
@@ -2915,7 +2929,11 @@
      "title": "Appol-o",
      "director": "Juan José Calvo Lozano, Nicolás Castro Herrera, Cristian Felipe Ossa Castro",
      "country": "Colombia",
-     "flags": "🇨🇴"
+     "flags": "🇨🇴",
+     "synopsis": "Tras la conquista de la Luna por Estados Unidos, el primer astronauta presencia la llegada de una cápsula soviética. Decidido a defender el nuevo territorio, la persigue hasta el lado oscuro, donde descubre los restos de una carrera espacial fallida y a un tercer contendiente que amenaza no solo la Luna, sino el orden universal.",
+     "year": 2025,
+     "synopsis_lang": "es",
+     "duration": "7 min"
     }
    ],
    "description": "Un programa para disfrutar en familia en las calles y plazas. Miradas infantiles y juveniles que cautivan a pequeños y grandes.",
@@ -3857,9 +3875,11 @@
      "posterSource": "tmdb",
      "lbSlug": "replay-2026",
      "tmdb_id": 1677190,
+     "synopsis": "En medio del espacio, una misteriosa criatura asalta una nave y se enfrenta a una banda de lagartos robot, para así obtener un extraño artefacto con forma de disco.",
      "synopsis_en": "Set in a distant galaxy, a strange humanoid creature called Hunter X must fight against a dozen robot lizards to retrieve a peculiar disk-shaped device.",
      "genre": "Animación",
      "year": 2026,
+     "synopsis_lang": "es",
      "duration": "6 min"
     },
     {
@@ -3881,7 +3901,11 @@
      "title": "Appol-o",
      "director": "Juan José Calvo Lozano, Nicolás Castro Herrera, Cristian Felipe Ossa Castro",
      "country": "Colombia",
-     "flags": "🇨🇴"
+     "flags": "🇨🇴",
+     "synopsis": "Tras la conquista de la Luna por Estados Unidos, el primer astronauta presencia la llegada de una cápsula soviética. Decidido a defender el nuevo territorio, la persigue hasta el lado oscuro, donde descubre los restos de una carrera espacial fallida y a un tercer contendiente que amenaza no solo la Luna, sino el orden universal.",
+     "year": 2025,
+     "synopsis_lang": "es",
+     "duration": "7 min"
     }
    ],
    "description": "Un programa para disfrutar en familia en las calles y plazas. Miradas infantiles y juveniles que cautivan a pequeños y grandes.",
@@ -3957,8 +3981,7 @@
    "day": "2026-10-24",
    "time": "18:30",
    "day_order": 4,
-   "venue": "Parque Sagrado Corazón - Barranquilla",
-   "sala": "Concha Acústica",
+   "venue": "Alianza Francesa de Barranquilla - Barranquilla",
    "event_kind": "clausura",
    "has_qa": false,
    "_src": {
@@ -4071,14 +4094,9 @@
      "url": "https://ficica.cinealacalle.org/programacion-general.html"
     },
     "venue": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-15",
-     "url": "https://ficica.cinealacalle.org/programacion-general.html"
-    },
-    "sala": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-15",
-     "url": "https://ficica.cinealacalle.org/programacion-general.html"
+     "tipo": "festival-ig",
+     "fecha": "2026-10-24",
+     "url": "https://www.instagram.com/p/De5FgPIxV0o/"
     },
     "duration": {
      "tipo": "festival-web",
@@ -4120,18 +4138,18 @@
  ],
  "_avisos_duracion": [
   "programa «Inauguración» (2026-10-20 18:30): sus obras suman 86 min (6 de 13 con duración) y la función dura 60",
-  "programa «Líneas y rayas» (2026-10-21 17:00): sus obras suman 93 min (8 de 10 con duración) y la función dura 60",
-  "programa «Encuentros» (2026-10-21 18:00): sus obras suman 84 min (7 de 8 con duración) y la función dura 60",
+  "programa «Líneas y rayas» (2026-10-21 17:00): sus obras suman 100 min (9 de 10 con duración) y la función dura 60",
+  "programa «Encuentros» (2026-10-21 18:00): sus obras suman 91 min (8 de 8 con duración) y la función dura 60",
   "programa «Una mirada latina» (2026-10-22 14:00): sus obras suman 75 min (4 de 6 con duración) y la función dura 60",
   "programa «Y así pasan los días» (2026-10-22 18:00): sus obras suman 101 min (6 de 6 con duración) y la función dura 60",
-  "programa «Encuentros» (2026-10-22 18:00): sus obras suman 84 min (7 de 8 con duración) y la función dura 60",
+  "programa «Encuentros» (2026-10-22 18:00): sus obras suman 91 min (8 de 8 con duración) y la función dura 60",
   "programa «¿Eso es real?» (2026-10-23 18:00): sus obras suman 70 min (5 de 8 con duración) y la función dura 60",
-  "programa «Encuentros» (2026-10-23 18:00): sus obras suman 84 min (7 de 8 con duración) y la función dura 60",
+  "programa «Encuentros» (2026-10-23 18:00): sus obras suman 91 min (8 de 8 con duración) y la función dura 60",
   "programa «Clausura» (2026-10-24 18:30): sus obras suman 77 min (5 de 7 con duración) y la función dura 60"
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-20T09:57:13",
+  "fecha": "2026-10-25T10:46:41",
   "plan_sha": "0894429f32f904b5",
   "paso": 8,
   "cmd": "python3 pipeline/ensamblar.py ficica-2026"

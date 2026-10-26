@@ -206,6 +206,26 @@ ACTIVACIONES = [
      'sinopsis': 'Concierto. Proyección de fragmentos de tres películas: Batallas Sagradas (Pablo Mora, 2002), '
                  'Quién paga el pato (Pablo Mora, 2001) y Fragmentos (Carlos Santa, 1999).',
      '_src': _SRC_ACT},
+    # LA INAUGURACIÓN (post de @midbo_doc del 23 oct, instagram.com/p/De3AsKjiTRT,
+    # 4 láminas, leídas sin sesión con ig-lecturas.py + a ojo): lámina 1 = título,
+    # sede, sala, día, hora, «PROYECCIÓN EN 16MM Y SONIDO EN VIVO», «Entrada
+    # Libre»; láminas 2 y 3 = las dos obras («ACTIVACIÓN INAUGURAL», artista y
+    # formato). Título en caja de oración (la lámina va en mayúscula sostenida).
+    # Ninguna lámina ni el pie da hora de fin → duración ESTIMADA en 60 min: dos
+    # activaciones en vivo de obra corta, como «Diario de una oreja».
+    {'titulo': 'Inauguración Documental Expandido', 'dia': '2026-10-28', 'hora': '16:30',
+     'sede': 'Cinemateca de Bogotá', 'sala': 'Sala E', 'ciudad': 'Bogotá',
+     'tipo': 'evento', 'event_kind': 'evento', 'seccion': 'Documental Expandido',
+     'duracion_min': 60, '_duracion_de': 'estimada: ninguna lámina da hora de fin',
+     'acceso': 'Entrada libre',
+     'sinopsis': 'Proyección en 16 mm y sonido en vivo. Primera activación de Documental Expandido.',
+     'obras': [
+         {'titulo': 'Circo', 'director': 'Daniel Torres',
+          'sinopsis': 'Cine expandido, 16 mm, video HD y carpa textil.'},
+         {'titulo': 'Patrimonio Líquido II', 'director': 'Sergio Díaz',
+          'sinopsis': 'Video instalación, 16 mm y sonido en vivo.'},
+     ],
+     '_src': {'url': 'https://www.instagram.com/p/De3AsKjiTRT/', 'date': '2026-10-23'}},
     # La exposición de la Cinemateca (agenda de la sala = fuente de sala, hora y
     # acceso; cinematecadebogota.gov.co/exposiciones?id=3663, leída el 22 oct):
     # va del 28 oct al 16 nov → abierta (info) recortada al 4 nov, último día

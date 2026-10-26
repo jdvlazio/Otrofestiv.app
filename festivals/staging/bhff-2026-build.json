@@ -2,12 +2,12 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "bogotahorrorfilmfest.com/programacion/ (arreglo PROGRAMACION del HTML) + IG p/DdcszK2Dn7g (franjas nacionales)",
-  "capturado": "2026-10-21",
+  "capturado": "2026-10-25",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "radar": 1030,
  "_por_que_secciones": "«Franja Nacional» y «Franja Internacional» son el rótulo de la parrilla, tal cual. «Inauguración» y «Clausura», el tipo de función del festival. «Proyecciones» es la etiqueta «Proyección» del festival para el resto (la parrilla no les da sección). Franja Nacional = Competencia (la clausura proyecta el «Corto Nacional Ganador»). Emoji, inglés y arquetipo: propuesta, a confirmar con Juan.",
- "_por_que_sedes": "Tabla canónica en el crudo (SEDES): la sala de la parrilla → (sede, sala). «CEFE Chapinero» = Centro Felicidad Chapinero. «Cinematecas locales» (3 funciones) queda fuera: son dos (El Tunal y Fontanar del Río) y el festival no dice cuál; preguntado. Pines: los 4 a mano, con dos fuentes.",
+ "_por_que_sedes": "Tabla canónica en el crudo (SEDES): la sala de la parrilla → (sede, sala). «CEFE Chapinero» = Centro Felicidad Chapinero. «Cinematecas locales»: la sede de cada función la da su nodo en la agenda de la Cinemateca (CINEMATECA_LOCAL en el crudo: las 3 —Huasao 23, El Miedo Llega a Todas Partes 24, Nico 25— en Fontanar del Río, 16:00, entrada libre); una sin nodo frena el crudo. Pines: los 4 a mano, con dos fuentes.",
  "name": "Bogotá Horror",
  "displayName": "Bogotá Horror",
  "fullName": "Bogotá Horror Film Festival 8",
@@ -197,6 +197,15 @@
    "lng": -74.0676717,
    "address": "Cra. 3 #19-10"
   },
+  "Cinemateca Fontanar del Río - Bogotá": {
+   "short": "Cinemateca Fontanar del Río",
+   "city": "Bogotá",
+   "_prec": "manual",
+   "_nota": "La sede que la agenda de la Cinemateca da para Nico (node/3577: «Fontanar del Río»). Google Maps «CEFE Fontanar del río»; el mismo pin con que la publicamos en FICDEH, Narrar el Futuro y Anibia.",
+   "lat": 4.7561244,
+   "lng": -74.1110572,
+   "address": "Calle 146 # 138A-99"
+  },
   "Casa 32 - Bogotá": {
    "short": "Casa 32",
    "city": "Bogotá",
@@ -317,6 +326,82 @@
      "url": "https://www.instagram.com/p/DcxA28kjgVo/"
     },
     "premiere": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    }
+   }
+  },
+  {
+   "title": "El Ritual de Huasao",
+   "type": "film",
+   "section": "📽️ Proyecciones",
+   "director": "Isaac Berrocal Bravo",
+   "year": 2026,
+   "country": "España",
+   "flags": "🇪🇸",
+   "duration": "82 min",
+   "_ancla": [
+    "Cinemateca Fontanar del Río - Bogotá",
+    "2026-10-23",
+    "16:00"
+   ],
+   "day": "2026-10-23",
+   "time": "16:00",
+   "day_order": 1,
+   "venue": "Cinemateca Fontanar del Río - Bogotá",
+   "has_qa": false,
+   "synopsis": "Esther y Mario regresan de unas vacaciones por Perú. En el pueblo de Huasao, Esther recibe una limpia espiritual. A su regreso ella sufre un accidente doméstico que la dejará inmóvil en el suelo tras una discusión con Mario. Pero Mario oculta un secreto que le llevará a tomar una decisión terrible al descubrirla, siendo entonces cuando se desate el mal en las vidas que le rodean.",
+   "synopsis_lang": "es",
+   "poster": "/assets/bhff-2026/el-ritual-de-huasao.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://bogotahorrorfilmfest.com/programacion/",
+    "date": "2026-09-26",
+    "sede": "https://cinematecadebogota.gov.co/node/3571"
+   },
+   "lbSlug": "el-ritual-de-huasao",
+   "tmdb_id": 1576982,
+   "_fid": "f_38bb7e39f2",
+   "id": "f_38bb7e39f2",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "has_qa": {
      "tipo": "festival-web",
      "fecha": "2026-09-26",
      "url": "https://bogotahorrorfilmfest.com/programacion/"
@@ -498,6 +583,162 @@
    }
   },
   {
+   "title": "El Miedo Llega a Todas Partes",
+   "type": "film",
+   "section": "🇨🇴 Franja Nacional",
+   "country": "Colombia",
+   "flags": "🇨🇴",
+   "duration": "75 min",
+   "_ancla": [
+    "Cinemateca Fontanar del Río - Bogotá",
+    "2026-10-24",
+    "16:00"
+   ],
+   "day": "2026-10-24",
+   "time": "16:00",
+   "day_order": 2,
+   "venue": "Cinemateca Fontanar del Río - Bogotá",
+   "has_qa": true,
+   "qa_type": "team",
+   "_src": {
+    "url": "https://bogotahorrorfilmfest.com/programacion/",
+    "date": "2026-09-26",
+    "sede": "https://cinematecadebogota.gov.co/node/3573",
+    "franja": "https://www.instagram.com/p/DdcszK2Dn7g/"
+   },
+   "is_cortos": true,
+   "film_list": [
+    {
+     "title": "Iris de Cristal",
+     "director": "Diego Gaviria Nieto",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "year": 2025,
+     "duration": "12 min",
+     "poster": "/assets/bhff-2026/iris-de-cristal.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "crystal-iris",
+     "tmdb_id": 1368500,
+     "synopsis": "Iris es una niña de 11 años que vive con su abuela y su gata Cris- tal. Una noche, mientras la abuela y la niña duermen, la Muerte llega inesperadamente para llevarse el alma de la abuela, pero por error extrae el alma de Iris. La gata Cristal, al presenciar lo ocurrido, intenta detener a la Muerte, quien escapa al más allá a través de un espejo, sin lograr atraparla.",
+     "title_en": "Crystal Iris",
+     "genre": "Animación",
+     "synopsis_lang": "es"
+    },
+    {
+     "title": "Esquirlas de Caracol",
+     "director": "Manuel Alejandro Sánchez",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "year": 2026,
+     "duration": "11 min",
+     "poster": "/assets/bhff-2026/esquirlas-de-caracol.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "esquirlas-de-caracol",
+     "tmdb_id": 1718595
+    },
+    {
+     "title": "Chaika",
+     "director": "Ingrid Bonilla Rodríguez",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "year": 2025,
+     "duration": "15 min",
+     "poster": "/assets/bhff-2026/chaika.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "chaika-2025",
+     "tmdb_id": 1689999,
+     "synopsis": "Valentina, una cosmonauta rusa de 76 años, llega a una Cuba ucrónica y nebulosa tras recibir, con treinta años de retraso, una invitación para una expedición agrícola a Marte. Entre paisajes difusos y promesas del pasado, busca las ruinas de un futuro que nunca llegó.",
+     "genre": "Ciencia Ficción",
+     "synopsis_lang": "es"
+    },
+    {
+     "title": "Vientre",
+     "director": "Pablo Sánchez Mejía, Moisés Cataño Rivillas",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "year": 2025,
+     "duration": "14 min",
+     "poster": "/assets/bhff-2026/vientre.jpg",
+     "posterSource": "oficial"
+    },
+    {
+     "title": "El Laberinto del Cuerpo",
+     "director": "Esteban J. Corzo",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "year": 2025,
+     "duration": "10 min",
+     "poster": "/assets/bhff-2026/el-laberinto-del-cuerpo.jpg",
+     "posterSource": "oficial"
+    },
+    {
+     "title": "Eco",
+     "director": "Valeria Lopera Salas",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "year": 2025,
+     "duration": "7 min",
+     "poster": "/assets/bhff-2026/eco.jpg",
+     "posterSource": "oficial"
+    }
+   ],
+   "_fid": "f_e649668e6e",
+   "id": "f_e649668e6e",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "qa_type": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    }
+   }
+  },
+  {
    "title": "Sierra: El Álbum Mortuorio",
    "type": "film",
    "section": "📽️ Proyecciones",
@@ -575,6 +816,84 @@
      "url": "https://bogotahorrorfilmfest.com/programacion/"
     },
     "qa_type": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    }
+   }
+  },
+  {
+   "title": "Nico",
+   "type": "film",
+   "section": "📽️ Proyecciones",
+   "director": "Salomón Reyes",
+   "year": 2025,
+   "country": "Uruguay, Argentina",
+   "flags": "🇺🇾🇦🇷",
+   "duration": "70 min",
+   "genre": "Terror",
+   "_ancla": [
+    "Cinemateca Fontanar del Río - Bogotá",
+    "2026-10-25",
+    "16:00"
+   ],
+   "day": "2026-10-25",
+   "time": "16:00",
+   "day_order": 3,
+   "venue": "Cinemateca Fontanar del Río - Bogotá",
+   "has_qa": false,
+   "synopsis": "Una madre desesperada reúne a su familia en el mismo bosque donde falleció su hijo tres años atrás, sin revelar que los ha reunido para llevar a cabo un ritual de invocación que le devuelva la vida al niño.",
+   "synopsis_lang": "es",
+   "poster": "/assets/bhff-2026/nico.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://bogotahorrorfilmfest.com/programacion/",
+    "date": "2026-09-26",
+    "sede": "https://cinematecadebogota.gov.co/node/3577"
+   },
+   "lbSlug": "nico-2025",
+   "tmdb_id": 1182204,
+   "synopsis_en": "On the third anniversary of Nico's death, Florencia organizes a family reunion in the same forest where lightning struck the boy's head. Under the pretext of holding a ceremony to remember Nico, she invites her two daughters, with whom she has a complicated relationship, and her ex-husband, from whom she separated after the family tragedy.  When Lita, the youngest daughter, discovers some esoteric elements in one of the boxes that Florencia has brought, she realizes that her mother has not told the truth about the ceremony and suspects, upon seeing a strange healer appear, that what her mother really intends is to carry out an invocation ritual to bring the child back to life.  Florencia's macabre decision will cause the supernatural situation to spiral out of control and endanger her entire family.",
+   "_fid": "f_9c7ba7eefe",
+   "id": "f_9c7ba7eefe",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-09-26",
+     "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "has_qa": {
      "tipo": "festival-web",
      "fecha": "2026-09-26",
      "url": "https://bogotahorrorfilmfest.com/programacion/"
@@ -910,8 +1229,10 @@
      "posterSource": "tmdb",
      "lbSlug": "replay-2026",
      "tmdb_id": 1677190,
+     "synopsis": "En medio del espacio, una misteriosa criatura asalta una nave y se enfrenta a una banda de lagartos robot, para así obtener un extraño artefacto con forma de disco.",
      "synopsis_en": "Set in a distant galaxy, a strange humanoid creature called Hunter X must fight against a dozen robot lizards to retrieve a peculiar disk-shaped device.",
-     "genre": "Animación"
+     "genre": "Animación",
+     "synopsis_lang": "es"
     },
     {
      "title": "Muertos que no son muertos",
@@ -1206,7 +1527,9 @@
      "posterSource": "tmdb",
      "lbSlug": "pactum",
      "tmdb_id": 1647552,
-     "synopsis_en": "Six high-society women gather in a mansion bound by a secret pact, a pact one of them has broken and whose consequences will be disastrous. Who is the traitor?"
+     "synopsis": "Seis mujeres de la alta sociedad se reúnen en una mansión, unidas por un pacto secreto. Una de ellas lo ha roto, y las consecuencias serán desastrosas. ¿Quién es la traidora?",
+     "synopsis_en": "Six high-society women gather in a mansion bound by a secret pact, a pact one of them has broken and whose consequences will be disastrous. Who is the traitor?",
+     "synopsis_lang": "es"
     }
    ],
    "_fid": "f_77f76646a6",
@@ -1427,6 +1750,7 @@
    "title_en": "Where Dreams Sleep",
    "_fid": "f_f9eb6c114e",
    "id": "f_f9eb6c114e",
+   "sala": "Teatro Urbano, Piso -1",
    "is_free": true,
    "_procedencia": {
     "day": {
@@ -1443,6 +1767,11 @@
      "tipo": "festival-web",
      "fecha": "2026-09-26",
      "url": "https://bogotahorrorfilmfest.com/programacion/"
+    },
+    "sala": {
+     "tipo": "sala",
+     "fecha": "2026-10-23",
+     "url": "https://www.instagram.com/p/De1vyxwxjBZ/"
     },
     "duration": {
      "tipo": "festival-web",
@@ -1511,8 +1840,10 @@
      "posterSource": "tmdb",
      "lbSlug": "the-demonatrix",
      "tmdb_id": 1567192,
+     "synopsis": "Durante una sesión espiritista, una dominatrix invoca por accidente a un íncubo y tiene que unir fuerzas con el cura del barrio para exorcizar al demonio.",
      "synopsis_en": "A dominatrix accidentally summons an incubus during a séance, requiring her to team up with the neighborhood priest to exorcise the demon.",
-     "genre": "Terror"
+     "genre": "Terror",
+     "synopsis_lang": "es"
     },
     {
      "title": "Gabriel",
@@ -1841,7 +2172,9 @@
      "duration": "14 min",
      "poster": "/assets/bhff-2026/anax.jpg",
      "posterSource": "oficial",
-     "synopsis_en": "Iván arrives at an underground party in a forest on Midsummer's Eve, seeking to lose himself in the music, the fire, and Clara, the girl he's obsessed with. But after trying a strange substance, the celebration turns into a nightmare."
+     "synopsis": "En la víspera de San Juan, Iván llega a una fiesta clandestina en un bosque, dispuesto a perderse en la música, en el fuego y en Clara, la chica que lo obsesiona. Pero después de probar una sustancia extraña, la celebración se convierte en una pesadilla.",
+     "synopsis_en": "Iván arrives at an underground party in a forest on Midsummer's Eve, seeking to lose himself in the music, the fire, and Clara, the girl he's obsessed with. But after trying a strange substance, the celebration turns into a nightmare.",
+     "synopsis_lang": "es"
     },
     {
      "title": "El Diente Negro",
@@ -1864,9 +2197,11 @@
      "posterSource": "tmdb",
      "lbSlug": "unit-8",
      "tmdb_id": 1713410,
+     "synopsis": "Fernanda se ve obligada a volver al apartamento donde ocurrió una tragedia familiar. Al llegar al Interior 8, empiezan a desatarse sucesos sobrenaturales.",
      "synopsis_en": "Fernanda is forced to return to the apartment where a family tragedy occurred. Upon arriving at Unit 8, supernatural events begin to unfold.",
      "title_en": "Unit 8",
-     "genre": "Fantasía"
+     "genre": "Fantasía",
+     "synopsis_lang": "es"
     }
    ],
    "_fid": "f_e13938e01b",
@@ -1963,7 +2298,9 @@
      "duration": "134 min",
      "poster": "/assets/bhff-2026/meat-the-movie.jpg",
      "posterSource": "oficial",
-     "synopsis_en": "After a night of drugs and debauchery results in the fatal overdose of an underage gay man, an innocent bystander is left to take the blame. Upon his release from prison, the guilty party becomes the focus of an eccentric killer’s revenge."
+     "synopsis": "Después de una noche de drogas y desenfreno que termina con la sobredosis fatal de un joven gay menor de edad, a un testigo inocente le toca cargar con la culpa. Cuando él sale de la cárcel, el verdadero culpable se convierte en el blanco de la venganza de un asesino excéntrico.",
+     "synopsis_en": "After a night of drugs and debauchery results in the fatal overdose of an underage gay man, an innocent bystander is left to take the blame. Upon his release from prison, the guilty party becomes the focus of an eccentric killer’s revenge.",
+     "synopsis_lang": "es"
     },
     {
      "title": "El Teatro",
@@ -2870,8 +3207,8 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-21T06:40:55",
-  "plan_sha": "104188497fe430c6",
+  "fecha": "2026-10-25T10:30:47",
+  "plan_sha": "0ebf7883fee9f2cd",
   "paso": 9,
   "cmd": "python3 pipeline/bhff-2026-verificar.py"
  }

@@ -22,7 +22,11 @@ publicado desde la consulta anterior, y descarta lo ya visto: nada se lee
 
 Fallo mudo: Apify a veces marca como exitosa una corrida bloqueada. Un ítem
 con `error`, o una corrida de 3+ cuentas que vuelve sin ningún ítem, se
-reporta como NO_PUDE_LEER — nunca como «sin novedades».
+reporta como NO_PUDE_LEER — nunca como «sin novedades». La cuenta que falla
+se reintenta sola una vez; si sigue fallando NO se marca consultada (la
+próxima corrida pide de nuevo desde la última lectura buena) y a los 3 fallos
+seguidos sale en ALERTA_FALLOS_SEGUIDOS. SIN_CUENTA_IG lista los festivales
+del config, vivos o a ≤45 días, que no tienen cuenta: no se están mirando.
 
 Uso:
   python3 pipeline/ig_vigia.py            # corre y reporta JSON
@@ -49,6 +53,7 @@ DIARIO_H = 20     # horas mínimas entre consultas de un festival terminado
 LIMITE = 10       # posts máximos por cuenta y corrida
 PRIMERA_VEZ_D = 3  # sin historial: mirar solo los últimos N días
 ACTOR = 'apify~instagram-post-scraper'
+ACTOR_FB = 'apify~facebook-posts-scraper'
 
 _ENTRADA = re.compile(r"\n\s{2}'?([a-z0-9]+)'?\s*:\s*\{")
 
@@ -91,6 +96,71 @@ def vigilados(config, cuentas, ahora):
     return out
 
 
+def sin_cuenta(config, cuentas, ahora, dias=45):
+    """Festivales del config vivos, terminados hace ≤TERMINADO días o que
+    empiezan en ≤`dias` días SIN cuenta de IG: el vigía no los puede mirar y
+    nadie se entera (25 oct: Villa de Leyva y Miradas quedaron afuera)."""
+    extra = dict(cuentas.get('festivales', {}))
+    extra.update({p['id']: p['url'] for p in cuentas.get('facebook', [])})
+    hoy = ahora.date()
+    out = []
+    for fid, f in sorted(config.items()):
+        if f['cuenta'] or extra.get(fid):
+            continue
+        ini = datetime.strptime(f['inicio'], '%Y-%m-%d').date()
+        fin = datetime.strptime(f['fin'], '%Y-%m-%d').date()
+        if ini - timedelta(days=dias) <= hoy <= fin + timedelta(days=TERMINADO):
+            out.append(fid)
+    return out
+
+
+def paginas_fb(cuentas, ahora):
+    """Páginas de Facebook a mirar hoy (festivales que no usan IG: Funza, 25 oct).
+    En ig-vigia-cuentas.json: "facebook": [{"id","url","inicio","fin"}]. Mismos
+    tiers que IG (en camino / en curso / terminado ≤8 días)."""
+    hoy = ahora.date()
+    out = []
+    for p in cuentas.get('facebook', []):
+        ini = datetime.strptime(p['inicio'], '%Y-%m-%d').date()
+        fin = datetime.strptime(p['fin'], '%Y-%m-%d').date()
+        if ini - timedelta(days=CAMINO) <= hoy <= fin + timedelta(days=TERMINADO):
+            out.append(p)
+    return out
+
+
+def apify_fb(urls, desde_iso, token):
+    cuerpo = json.dumps({'startUrls': [{'url': u} for u in urls], 'resultsLimit': LIMITE,
+                         'onlyPostsNewerThan': desde_iso}).encode()
+    url = (f'https://api.apify.com/v2/acts/{ACTOR_FB}/run-sync-get-dataset-items'
+           f'?token={token}&timeout=280')
+    req = urllib.request.Request(url, cuerpo, {'Content-Type': 'application/json'})
+    with urllib.request.urlopen(req, timeout=300) as r:
+        return json.load(r)
+
+
+def clasificar_fb(items, paginas, estado):
+    """Agrupa por página los posts nuevos (por inputUrl/facebookUrl) y marca las que fallaron."""
+    norm = lambda u: (u or '').rstrip('/').lower()
+    por_url = {norm(p['url']): p['id'] for p in paginas}
+    nuevos = {p['id']: [] for p in paginas}
+    sin_leer = {}
+    for it in items:
+        pid = por_url.get(norm(it.get('inputUrl'))) or por_url.get(norm(it.get('facebookUrl')))
+        if it.get('error') == 'no_items':
+            continue  # sin posts nuevos desde la fecha: no es un fallo
+        if it.get('error'):
+            sin_leer[pid or '*'] = str(it.get('errorDescription') or it.get('error'))
+            continue
+        if not pid:
+            continue
+        ult = estado.get('fb:' + pid, {}).get('ultimo_post')
+        ts = (it.get('time') or '').replace('Z', '').split('.')[0][:19]
+        if ult and ts <= ult:
+            continue
+        nuevos[pid].append(it)
+    return nuevos, sin_leer
+
+
 def toca(v, estado, ahora):
     """¿Se consulta esta cuenta en esta corrida? (terminados: una vez al día)."""
     if v['tier'] == 'vivo':
@@ -116,13 +186,22 @@ def clasificar(items, cuentas, estado):
     nuevos = {c: [] for c in cuentas}
     errores = {}
     for it in items:
+        if it.get('error') == 'no_items':
+            continue  # «Empty or private data»: no hay posts nuevos desde la fecha pedida, NO es un bloqueo (25 oct: FICPA «fallaba» a diario por no publicar)
         if it.get('error'):
             c = (it.get('username') or it.get('inputUrl') or '').rstrip('/').split('/')[-1]
             errores[c] = it.get('errorDescription') or it.get('error')
             continue
         c = it.get('ownerUsername')
-        if c not in nuevos:          # posts donde la cuenta solo sale etiquetada
-            continue
+        if c not in nuevos:
+            # Post colaborativo: lo publica otra cuenta CON el festival como
+            # coautor (25 oct: la cancelación de «Las pesadillas del siervo»
+            # en Ficcali salió así y el vigía la descartó). Cuenta como del
+            # festival. Solo etiquetado (sin coautoría) sigue descartado.
+            coautores = {x.get('username') for x in it.get('coauthorProducers') or []}
+            c = next((x for x in cuentas if x in coautores), None)
+            if not c:
+                continue
         ult = estado.get(c, {}).get('ultimo_post')
         ts = (it.get('timestamp') or '').replace('Z', '').split('.')[0]
         if ult and ts <= ult:
@@ -145,6 +224,39 @@ def apify(cuentas, desde_iso, token):
         return json.load(r)
 
 
+def vigilar_fb(cuentas_json, estado, ahora, token, informe):
+    paginas = paginas_fb(cuentas_json, ahora)
+    informe['facebook_consultadas'] = [f"{p['id']} {p['url']}" for p in paginas]
+    informe['nuevos_facebook'] = []
+    if not paginas:
+        return
+    claves = ['fb:' + p['id'] for p in paginas]
+    d = desde(claves, estado, ahora)
+    try:
+        items = apify_fb([p['url'] for p in paginas], d, token)
+    except Exception as e:  # una falla de FB no tumba la corrida de IG
+        for p in paginas:
+            informe['NO_PUDE_LEER']['fb:' + p['id']] = f'Apify FB: {e}'
+        return
+    nuevos, sin_leer = clasificar_fb(items, paginas, estado)
+    for p in paginas:
+        k = 'fb:' + p['id']
+        e = estado.setdefault(k, {})
+        if p['id'] in sin_leer or '*' in sin_leer:
+            informe['NO_PUDE_LEER'][k] = sin_leer.get(p['id']) or sin_leer.get('*')
+            e['fallos'] = e.get('fallos', 0) + 1
+            continue
+        e['fallos'] = 0
+        e['consultado'] = ahora.isoformat(timespec='seconds')
+        for it in sorted(nuevos[p['id']], key=lambda x: x.get('time', '')):
+            ts = (it.get('time') or '').replace('Z', '').split('.')[0][:19]
+            json.dump(it, open(os.path.join(SALIDA, f"fb-{it.get('postId')}.json"), 'w'), ensure_ascii=False)
+            e['ultimo_post'] = max(e.get('ultimo_post', ''), ts)
+            informe['nuevos_facebook'].append({'festival': p['id'], 'fecha': ts, 'post': it.get('url'),
+                                               'imagenes': len(it.get('media') or []),
+                                               'texto': (it.get('text') or '')[:300]})
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--simular', action='store_true')
@@ -154,10 +266,12 @@ def main():
     estado = json.load(open(ESTADO)) if os.path.exists(ESTADO) else {}
     vig = vigilados(festivales_config(open(CONFIG).read()), json.load(open(CUENTAS)), ahora)
     ahora_toca = [v for v in vig if toca(v, estado, ahora)]
+    faltan = sin_cuenta(festivales_config(open(CONFIG).read()), json.load(open(CUENTAS)), ahora)
     cuentas = sorted({v['cuenta'] for v in ahora_toca})
     informe = {'hora': ahora.isoformat(timespec='minutes'),
                'consultadas': [f"{v['id']} @{v['cuenta']} ({v['tier']})" for v in ahora_toca],
-               'saltadas_hoy_ya_vistas': [v['id'] for v in vig if v not in ahora_toca]}
+               'saltadas_hoy_ya_vistas': [v['id'] for v in vig if v not in ahora_toca],
+               'SIN_CUENTA_IG': faltan}
     if not cuentas:
         print(json.dumps(informe, ensure_ascii=False, indent=1))
         return
@@ -171,10 +285,28 @@ def main():
         sys.exit('Falta APIFY_TOKEN (hacer `source ~/.zshrc`).')
     items = apify(cuentas, d, token)
     nuevos, sin_leer = clasificar(items, cuentas, estado)
+    # Reintento: Apify devuelve «Empty or private data» por rachas; una cuenta
+    # sola, en una segunda llamada, suele pasar.
+    reintentar = [c for c in sin_leer if c != '*']
+    if reintentar:
+        n2, s2 = clasificar(apify(reintentar, d, token), reintentar, estado)
+        for c in reintentar:
+            if c not in s2:
+                nuevos[c] = n2[c]
+                del sin_leer[c]
     os.makedirs(SALIDA, exist_ok=True)
     informe['nuevos'] = []
+    informe['ALERTA_FALLOS_SEGUIDOS'] = {}
     for c in cuentas:
         e = estado.setdefault(c, {})
+        if c in sin_leer or '*' in sin_leer:
+            # NO se marca consultada: la próxima corrida vuelve a pedir desde
+            # la última lectura buena y no se pierde lo publicado en el hueco.
+            e['fallos'] = e.get('fallos', 0) + 1
+            if e['fallos'] >= 3:
+                informe['ALERTA_FALLOS_SEGUIDOS'][c] = e['fallos']
+            continue
+        e['fallos'] = 0
         e['consultado'] = ahora.isoformat(timespec='seconds')
         for it in sorted(nuevos[c], key=lambda x: x.get('timestamp', '')):
             ts = it['timestamp'].replace('Z', '').split('.')[0]
@@ -184,6 +316,7 @@ def main():
                                       'laminas': len(it.get('childPosts') or it.get('images') or []) or 1,
                                       'texto': (it.get('caption') or '')[:300]})
     informe['NO_PUDE_LEER'] = sin_leer
+    vigilar_fb(json.load(open(CUENTAS)), estado, ahora, token, informe)
     os.makedirs(os.path.dirname(ESTADO), exist_ok=True)
     json.dump(estado, open(ESTADO, 'w'), ensure_ascii=False, indent=1)
     print(json.dumps(informe, ensure_ascii=False, indent=1))

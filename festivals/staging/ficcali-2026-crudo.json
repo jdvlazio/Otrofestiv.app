@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "ficcali.com — Programación 2026 (WP 14870) + fichas de la Selección 2026",
-  "capturado": "2026-10-22",
+  "capturado": "2026-10-25",
   "url": "https://ficcali.com/programacion-ficcali-2026/",
   "metodo": "tarjeta por función; obra por la ficha del catálogo"
  },
@@ -2170,12 +2170,12 @@
     "date": "2026-10-06",
     "tarjeta": 14037
    },
-   "titulo": "Historias del buen valle",
+   "titulo": "Ceremonia de premiación",
+   "tipo": "evento",
+   "event_kind": "premiación",
    "seccion": "Proyecciones",
-   "director": "José Luis Guerín",
-   "anio": 2025,
-   "pais": "España",
-   "duracion_min": 120
+   "duracion_min": 60,
+   "_duracion_de": "el hueco hasta la siguiente en la misma sede (tope 90, 60 si es la última)"
   },
   {
    "dia": "2026-10-24",

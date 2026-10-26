@@ -1,14 +1,11 @@
 {
  "_provenance": {
   "fuente": "bogotahorrorfilmfest.com/programacion/ (arreglo PROGRAMACION del HTML) + IG p/DdcszK2Dn7g (franjas nacionales)",
-  "capturado": "2026-10-21",
+  "capturado": "2026-10-25",
   "url": "https://bogotahorrorfilmfest.com/programacion/",
   "metodo": "la parrilla del sitio; los cortos de cada franja, del carrusel"
  },
  "_fuera": [
-  "2026-10-23 El Ritual de Huasao: son dos (El Tunal y Fontanar del Río, según Canal Trece) y el festival no dice cuál es cada función; preguntado",
-  "2026-10-24 Franja Nacional · El Miedo Llega a Todas Partes: son dos (El Tunal y Fontanar del Río, según Canal Trece) y el festival no dice cuál es cada función; preguntado",
-  "2026-10-25 Nico: son dos (El Tunal y Fontanar del Río, según Canal Trece) y el festival no dice cuál es cada función; preguntado",
   "Encuentro de Realizadores de Género: no está en la tabla del festival (mensaje, 21 oct) ni tiene fecha publicada"
  ],
  "funciones": [
@@ -31,6 +28,23 @@
    "duracion_min": 124,
    "seccion": "Inauguración",
    "premiere": "Inauguración"
+  },
+  {
+   "dia": "2026-10-23",
+   "hora": "16:00",
+   "sede": "Cinemateca Fontanar del Río",
+   "acceso": "Entrada libre hasta completar aforo",
+   "_src": {
+    "url": "https://bogotahorrorfilmfest.com/programacion/",
+    "date": "2026-09-26",
+    "sede": "https://cinematecadebogota.gov.co/node/3571"
+   },
+   "titulo": "El Ritual de Huasao",
+   "director": "Isaac Berrocal Bravo",
+   "anio": 2026,
+   "pais": "España",
+   "duracion_min": 82,
+   "seccion": "Proyecciones"
   },
   {
    "dia": "2026-10-23",
@@ -67,6 +81,67 @@
   },
   {
    "dia": "2026-10-24",
+   "hora": "16:00",
+   "sede": "Cinemateca Fontanar del Río",
+   "acceso": "Entrada libre hasta completar aforo",
+   "_src": {
+    "url": "https://bogotahorrorfilmfest.com/programacion/",
+    "date": "2026-09-26",
+    "sede": "https://cinematecadebogota.gov.co/node/3573",
+    "franja": "https://www.instagram.com/p/DdcszK2Dn7g/"
+   },
+   "has_qa": true,
+   "qa_type": "team",
+   "titulo": "El Miedo Llega a Todas Partes",
+   "seccion": "Franja Nacional",
+   "obras": [
+    {
+     "titulo": "Iris de Cristal",
+     "director": "Diego Gaviria Nieto",
+     "anio": 2025,
+     "pais": "Colombia",
+     "duracion_min": 12
+    },
+    {
+     "titulo": "Esquirlas de Caracol",
+     "director": "Manuel Alejandro Sánchez",
+     "anio": 2026,
+     "pais": "Colombia",
+     "duracion_min": 11
+    },
+    {
+     "titulo": "Chaika",
+     "director": "Ingrid Bonilla Rodríguez",
+     "anio": 2025,
+     "pais": "Colombia",
+     "duracion_min": 15
+    },
+    {
+     "titulo": "Vientre",
+     "director": "Pablo Sánchez Mejía, Moisés Cataño Rivillas",
+     "anio": 2025,
+     "pais": "Colombia",
+     "duracion_min": 14
+    },
+    {
+     "titulo": "El Laberinto del Cuerpo",
+     "director": "Esteban J. Corzo",
+     "anio": 2025,
+     "pais": "Colombia",
+     "duracion_min": 10
+    },
+    {
+     "titulo": "Eco",
+     "director": "Valeria Lopera Salas",
+     "anio": 2025,
+     "pais": "Colombia",
+     "duracion_min": 7
+    }
+   ],
+   "duracion_min": 75
+  },
+  {
+   "dia": "2026-10-24",
    "hora": "19:30",
    "sede": "Cinemateca de Bogotá",
    "acceso": "Con boleta: $7.000",
@@ -82,6 +157,23 @@
    "anio": 2026,
    "pais": "Colombia",
    "duracion_min": 88,
+   "seccion": "Proyecciones"
+  },
+  {
+   "dia": "2026-10-25",
+   "hora": "16:00",
+   "sede": "Cinemateca Fontanar del Río",
+   "acceso": "Entrada libre hasta completar aforo",
+   "_src": {
+    "url": "https://bogotahorrorfilmfest.com/programacion/",
+    "date": "2026-09-26",
+    "sede": "https://cinematecadebogota.gov.co/node/3577"
+   },
+   "titulo": "Nico",
+   "director": "Salomón Reyes",
+   "anio": 2025,
+   "pais": "Uruguay, Argentina",
+   "duracion_min": 70,
    "seccion": "Proyecciones"
   },
   {
