@@ -762,7 +762,7 @@
      "duration": "15 min",
      "genre": "Documental",
      "poster": "/assets/miradas-2026/el-leon.jpg",
-     "posterSource": "tmdb",
+     "posterSource": "oficial",
      "lbSlug": "el-leon",
      "tmdb_id": 1616865,
      "synopsis": "Un cuerpo cubierto con una sábana manchada de sangre yace sobre una mesa de ping-pong, ubicada en lo que parece ser un escenario. A partir de esta imagen encontrada en el archivo noticioso colombiano, esta pieza documental da cuenta de cómo la muerte, paradójica e inefable, ha habitado un lugar no pensado para ella: el Auditorio León de Greiff de la Universidad Nacional de Colombia.",
@@ -1514,10 +1514,12 @@
      "year": 2026,
      "duration": "10 min",
      "genre": "Experimental",
+     "poster": "/assets/cineautopsia/mal-de-tierra.jpg",
      "lbSlug": "mal-de-tierra-2025",
      "tmdb_id": 1758059,
      "synopsis": "«Stories that shape the paths along which the water flows Voices that travel between the sky and the mountains The wind and its whistling frighten the water The earth chokes A storm of tears trickles down the skin It is the salt that cultivates the streams to wander Voices that travel between the sky and the mountains»",
      "synopsis_en": "«Stories that shape the paths along which the water flows  Voices that travel between the sky and the mountains  The wind and its whistling frighten the water  The earth chokes  A storm of tears trickles down the skin  It is the salt that cultivates the streams to wander  Voices that travel between the sky and the mountains»",
+     "posterSource": "oficial",
      "synopsis_lang": "es"
     },
     {
@@ -2742,6 +2744,8 @@
      "year": 2025,
      "duration": "12 min",
      "genre": "Ficción",
+     "poster": "/assets/miradas-2026/luis-antonio.jpg",
+     "posterSource": "oficial",
      "synopsis": "La mañana de un sábado Luis Antonio, un niño de 8 años, quiere aprender a montar en bicicleta. Pero su madre tiene que trabajar y lo deja al cuidado de Ofelia, su estricta vecina.",
      "synopsis_lang": "es"
     },
@@ -2842,7 +2846,7 @@
      "duration": "15 min",
      "genre": "Documental",
      "poster": "/assets/miradas-2026/el-leon.jpg",
-     "posterSource": "tmdb",
+     "posterSource": "oficial",
      "lbSlug": "el-leon",
      "tmdb_id": 1616865,
      "synopsis": "Un cuerpo cubierto con una sábana manchada de sangre yace sobre una mesa de ping-pong, ubicada en lo que parece ser un escenario. A partir de esta imagen encontrada en el archivo noticioso colombiano, esta pieza documental da cuenta de cómo la muerte, paradójica e inefable, ha habitado un lugar no pensado para ella: el Auditorio León de Greiff de la Universidad Nacional de Colombia.",
@@ -3569,8 +3573,6 @@
      "year": 2022,
      "duration": "5 min",
      "genre": "Animación",
-     "poster": "/assets/miradas-2026/nangulvi.jpg",
-     "posterSource": "tmdb",
      "lbSlug": "nangulvi",
      "tmdb_id": 1390333,
      "synopsis_en": "An andean bear and an Afro-Ecuadorian musician named Cotobito venture on a journey, finding magical characters to help them fight against mining in Ecuador’s Intag Valley."
@@ -4830,8 +4832,6 @@
      "year": 2022,
      "duration": "5 min",
      "genre": "Animación",
-     "poster": "/assets/miradas-2026/nangulvi.jpg",
-     "posterSource": "tmdb",
      "lbSlug": "nangulvi",
      "tmdb_id": 1390333,
      "synopsis_en": "An andean bear and an Afro-Ecuadorian musician named Cotobito venture on a journey, finding magical characters to help them fight against mining in Ecuador’s Intag Valley."
@@ -4898,6 +4898,8 @@
      "year": 2025,
      "duration": "12 min",
      "genre": "Ficción",
+     "poster": "/assets/miradas-2026/luis-antonio.jpg",
+     "posterSource": "oficial",
      "synopsis": "La mañana de un sábado Luis Antonio, un niño de 8 años, quiere aprender a montar en bicicleta. Pero su madre tiene que trabajar y lo deja al cuidado de Ofelia, su estricta vecina.",
      "synopsis_lang": "es"
     }
@@ -5078,10 +5080,12 @@
      "year": 2026,
      "duration": "10 min",
      "genre": "Experimental",
+     "poster": "/assets/cineautopsia/mal-de-tierra.jpg",
      "lbSlug": "mal-de-tierra-2025",
      "tmdb_id": 1758059,
      "synopsis": "«Stories that shape the paths along which the water flows Voices that travel between the sky and the mountains The wind and its whistling frighten the water The earth chokes A storm of tears trickles down the skin It is the salt that cultivates the streams to wander Voices that travel between the sky and the mountains»",
      "synopsis_en": "«Stories that shape the paths along which the water flows  Voices that travel between the sky and the mountains  The wind and its whistling frighten the water  The earth chokes  A storm of tears trickles down the skin  It is the salt that cultivates the streams to wander  Voices that travel between the sky and the mountains»",
+     "posterSource": "oficial",
      "synopsis_lang": "es"
     },
     {
@@ -5342,8 +5346,8 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-27T16:11:17",
-  "plan_sha": "f7b7abd88b00e5f2",
+  "fecha": "2026-10-27T16:59:00",
+  "plan_sha": "1476fecbd41f2797",
   "paso": 10,
   "cmd": "python3 pipeline/miradas-2026-verificar.py"
  }

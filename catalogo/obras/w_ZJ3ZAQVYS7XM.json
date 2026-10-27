@@ -15,10 +15,6 @@
  "generos": [
   "Animación"
  ],
- "afiche": {
-  "archivo": "/assets/miradas-2026/nangulvi.jpg",
-  "veredicto": "oficial"
- },
  "xref": {
   "tmdb": 1390333,
   "letterboxd": "nangulvi"
@@ -31,5 +27,9 @@
  ],
  "presentaciones": [
   "miradas-2026"
- ]
+ ],
+ "afiche": {
+  "archivo": "https://image.tmdb.org/t/p/w500/wrIcIVw8SUcccNQ0QEF9MAsQde8.jpg",
+  "veredicto": "fotograma"
+ }
 }

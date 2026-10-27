@@ -370,5 +370,16 @@
   "motivo": "la única imagen de la ficha de TMDB (1693579) es una hoja de contactos de las fotos de archivo de Edmundo Camana, sin título ni créditos: no es el afiche; no se encontró afiche oficial (TMDB, web, IG de @cortoscali, 26 oct 2026)",
   "fecha": "2026-10-26",
   "quien": "Claude (misma regla que w_R4F1D2Q71DK4; a revisión de Juan en el PR)"
+ },
+ {
+  "work_id": "w_ZJ3ZAQVYS7XM",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "https://image.tmdb.org/t/p/w500/wrIcIVw8SUcccNQ0QEF9MAsQde8.jpg",
+   "veredicto": "fotograma"
+  },
+  "motivo": "la única imagen de la ficha de TMDB (1390333) son muñecos de fieltro con carteles «KAYPIMI KANCHI», sin título ni créditos: un fotograma, no el afiche; no se encontró afiche oficial (TMDB, búsqueda web, 27 oct 2026)",
+  "fecha": "2026-10-27",
+  "quien": "Claude (misma regla que w_R4F1D2Q71DK4; a revisión de Juan en el PR)"
  }
 ]

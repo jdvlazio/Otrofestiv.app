@@ -370,7 +370,6 @@
    "titulo": "El león",
    "tmdb_id": 1616865,
    "titulo_original": "El León",
-   "poster_path": "/5an6XZNE07yS7ahXEMZ78htlORg.jpg",
    "synopsis_es": "Un cuerpo cubierto con una sábana manchada de sangre yace sobre una mesa de ping-pong, ubicada en lo que parece ser un escenario. A partir de esta imagen encontrada en el archivo noticioso colombiano, esta pieza documental da cuenta de cómo la muerte, paradójica e inefable, ha habitado un lugar no pensado para ella: el Auditorio León de Greiff de la Universidad Nacional de Colombia.",
    "synopsis_en": "Strange images overlap like floating ghosts: a dead body, a singer, an audience. The film shows, paradoxically and theatrically, how death inhabits the León de Greiff Auditorium in Colombia.",
    "genero": "Documental",
@@ -399,8 +398,9 @@
     }
    ],
    "_sinopsis_de": "ya publicada en midbo-2026",
+   "_afiche": "declarado: TMDB 1616865, póster es /5aYMbnZEGwKp2QnypVZBFtspgam.jpg — «EL LEÓN · una película de Diana Bustamante» (Cinéma du Réel 2026)",
    "poster": "/assets/miradas-2026/el-leon.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "oficial"
   },
   {
    "titulo": "El río de los espíritus",
@@ -898,7 +898,10 @@
    "sinopsis": "La mañana de un sábado Luis Antonio, un niño de 8 años, quiere aprender a montar en bicicleta. Pero su madre tiene que trabajar y lo deja al cuidado de Ofelia, su estricta vecina.",
    "pais": "Colombia",
    "anio": 2025,
-   "duracion_tmdb": 12
+   "duracion_tmdb": 12,
+   "poster": "/assets/miradas-2026/luis-antonio.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: https://cinecorto.co/luis-antonio/ (og:image Poster_LuisAntonio.jpg) — afiche con título y «un corto de Juan José Arias Gil»"
   },
   {
    "titulo": "Madres de nacimiento",
@@ -1275,7 +1278,7 @@
    "titulo": "Nangulví",
    "tmdb_id": 1390333,
    "titulo_original": "Nangulví",
-   "poster_path": "/wrIcIVw8SUcccNQ0QEF9MAsQde8.jpg",
+   "poster_path": null,
    "synopsis_es": "",
    "synopsis_en": "An andean bear and an Afro-Ecuadorian musician named Cotobito venture on a journey, finding magical characters to help them fight against mining in Ecuador’s Intag Valley.",
    "genero": "",
@@ -1287,8 +1290,7 @@
    "_busqueda": "Nangulví",
    "_director": "Segundo Fuérez",
    "_sondeado": "2026-10-27",
-   "poster": "/assets/miradas-2026/nangulvi.jpg",
-   "posterSource": "tmdb"
+   "_afiche_rechazado": "TMDB /wrIcIVw8SUcccNQ0QEF9MAsQde8.jpg: fotograma según el catálogo (w_ZJ3ZAQVYS7XM)"
   },
   {
    "titulo": "Narciso",
@@ -2230,7 +2232,6 @@
   "El león": {
    "tmdb_id": 1616865,
    "titulo_original": "El León",
-   "poster_path": "/5an6XZNE07yS7ahXEMZ78htlORg.jpg",
    "synopsis_es": "Un cuerpo cubierto con una sábana manchada de sangre yace sobre una mesa de ping-pong, ubicada en lo que parece ser un escenario. A partir de esta imagen encontrada en el archivo noticioso colombiano, esta pieza documental da cuenta de cómo la muerte, paradójica e inefable, ha habitado un lugar no pensado para ella: el Auditorio León de Greiff de la Universidad Nacional de Colombia.",
    "synopsis_en": "Strange images overlap like floating ghosts: a dead body, a singer, an audience. The film shows, paradoxically and theatrically, how death inhabits the León de Greiff Auditorium in Colombia.",
    "genero": "Documental",
@@ -2259,8 +2260,9 @@
     }
    ],
    "_sinopsis_de": "ya publicada en midbo-2026",
+   "_afiche": "declarado: TMDB 1616865, póster es /5aYMbnZEGwKp2QnypVZBFtspgam.jpg — «EL LEÓN · una película de Diana Bustamante» (Cinéma du Réel 2026)",
    "poster": "/assets/miradas-2026/el-leon.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "oficial"
   },
   "El río de los espíritus": {
    "tmdb_id": 1599556,
@@ -3081,7 +3083,7 @@
   "Nangulví": {
    "tmdb_id": 1390333,
    "titulo_original": "Nangulví",
-   "poster_path": "/wrIcIVw8SUcccNQ0QEF9MAsQde8.jpg",
+   "poster_path": null,
    "synopsis_es": "",
    "synopsis_en": "An andean bear and an Afro-Ecuadorian musician named Cotobito venture on a journey, finding magical characters to help them fight against mining in Ecuador’s Intag Valley.",
    "genero": "",
@@ -3093,8 +3095,7 @@
    "_busqueda": "Nangulví",
    "_director": "Segundo Fuérez",
    "_sondeado": "2026-10-27",
-   "poster": "/assets/miradas-2026/nangulvi.jpg",
-   "posterSource": "tmdb"
+   "_afiche_rechazado": "TMDB /wrIcIVw8SUcccNQ0QEF9MAsQde8.jpg: fotograma según el catálogo (w_ZJ3ZAQVYS7XM)"
   },
   "Narciso": {
    "tmdb_id": 1056494,

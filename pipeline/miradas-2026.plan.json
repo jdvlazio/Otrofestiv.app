@@ -49,7 +49,7 @@
   "festivals/staging/miradas-2026-formacion.json": "las 5 actividades de formación con sus sesiones; la leerá el crudo",
   "festivals/staging/miradas-2026-venues-geo.json": "los pines: Google Maps (27 oct) y los ya verificados en Fantasmagoría y Mamut",
   "festivals/staging/miradas-2026-radar.json": "el volcado del radar #1088",
-  "festivals/staging/miradas-2026-quitar.json": "datos heredados que se retiran a propósito (el afiche de «Mal de tierra» de CineAutopsia)"
+  "festivals/staging/miradas-2026-afiches.json": "afiches declarados, buscados fuera de TMDB y mirados uno por uno"
  },
  "festival": {
   "crudo": "festivals/staging/miradas-2026-crudo.json",
