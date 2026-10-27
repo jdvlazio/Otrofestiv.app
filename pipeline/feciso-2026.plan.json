@@ -1,42 +1,62 @@
 {
- "_nota": "FECISO 2026 — 10.º Festival de Cine Independiente de Sogamoso (Sogamoso / Sugamuxi, Boyacá, 1–7 nov 2026). PRE-ONBOARDING: 73 obras de ocho selecciones oficiales publicadas en IG (Cortometraje Boyacense, Largometraje Nacional, Videoclip, Cortometraje Internacional, Nuevos Realizadores, Cortometraje Animación Nacional, Cortometraje Documental Nacional, Cortometraje Ficción Nacional). Sin web oficial; las láminas son stills, no afiches. La programación no está publicada (21 oct). Cuando salga se agregan crudo/enriquecer/ensamblar, en el modelo de la función (docs/FUNCION.md).",
- "radar": 1233,
- "fuentes_vivas": [],
- "_fuentes_vivas": "todo sale de láminas de IG (sin web oficial): no hay fuente que el actualizador pueda releer",
- "fuentes": {
-  "instagram": "https://www.instagram.com/fecisofest/",
-  "DeseCXgEU_t": "Selección Oficial Cortometraje Boyacense 2026 (19 oct, 12 láminas)",
-  "Decuil8klP4": "Selección Oficial Largometraje Nacional 2026 (13 oct, 7 láminas)",
-  "DedeCs2keOk": "Selección Oficial Videoclip 2026 (13 oct, 9 láminas)",
-  "DehVQ63Ee7e": "Selección Oficial Cortometraje Internacional (15 oct, 10 láminas)",
-  "DezbvdKEdBP": "Selección Oficial Nuevos Realizadores 2026 (22 oct, 12 láminas)",
-  "De0MXC6ESng": "Selección Oficial Cortometraje Animación Nacional 2026 (22 oct, 5 láminas)",
-  "De4bPYXkf4D": "Selección Oficial Cortometraje Documental Nacional 2026 (24 oct, 13 láminas; el pie da la sede: Cinemateca del Sol, Sogamoso, 1–7 nov)",
-  "De7bL1hn8vU": "Selección Oficial Cortometraje Ficción Nacional 2026 (25 oct, 13 láminas)"
- },
- "sedes": [
-  {
-   "nombre": "Cinemateca del Sol",
-   "direccion": "Cl. 9 #9-66, Sogamoso, Boyacá",
-   "lat": 5.7124301,
-   "lng": -72.92811,
-   "_prec": "manual",
-   "_fuente": "Google Maps (lugar: Cinemateca del Sol, /g/11v_8nr3hb), 25 oct 2026; la nombra el pie de De4bPYXkf4D"
-  }
- ],
- "pasos": [
-  {
-   "cmd": "python3 pipeline/feciso-2026-catalogo.py",
-   "que": "las láminas de los 8 carruseles (fuentes/ig/<sc>/) transcritas a ojo y cruzadas con ig-lecturas → catálogo (73 obras)"
+  "_nota": "FECISO 2026 — 10.º Festival de Cine Independiente de Sogamoso (Sogamoso / Sugamuxi, Boyacá, 1–7 nov 2026). PRE-ONBOARDING: 73 obras de ocho selecciones oficiales publicadas en IG (Cortometraje Boyacense, Largometraje Nacional, Videoclip, Cortometraje Internacional, Nuevos Realizadores, Cortometraje Animación Nacional, Cortometraje Documental Nacional, Cortometraje Ficción Nacional). Sin web oficial; las láminas son stills, no afiches. La programación no está publicada (21 oct). Cuando salga se agregan crudo/enriquecer/ensamblar, en el modelo de la función (docs/FUNCION.md).",
+  "radar": 1233,
+  "fuentes_vivas": [],
+  "_fuentes_vivas": "todo sale de láminas de IG (sin web oficial): no hay fuente que el actualizador pueda releer",
+  "fuentes": {
+    "instagram": "https://www.instagram.com/fecisofest/",
+    "DeseCXgEU_t": "Selección Oficial Cortometraje Boyacense 2026 (19 oct, 12 láminas)",
+    "Decuil8klP4": "Selección Oficial Largometraje Nacional 2026 (13 oct, 7 láminas)",
+    "DedeCs2keOk": "Selección Oficial Videoclip 2026 (13 oct, 9 láminas)",
+    "DehVQ63Ee7e": "Selección Oficial Cortometraje Internacional (15 oct, 10 láminas)",
+    "DezbvdKEdBP": "Selección Oficial Nuevos Realizadores 2026 (22 oct, 12 láminas)",
+    "De0MXC6ESng": "Selección Oficial Cortometraje Animación Nacional 2026 (22 oct, 5 láminas)",
+    "De4bPYXkf4D": "Selección Oficial Cortometraje Documental Nacional 2026 (24 oct, 13 láminas; el pie da la sede: Cinemateca del Sol, Sogamoso, 1–7 nov)",
+    "De7bL1hn8vU": "Selección Oficial Cortometraje Ficción Nacional 2026 (25 oct, 13 láminas)",
+    "De-YoeFnxa-": "Exhibición Kaugsankamalla en Tibasosa (vie 6 nov 6:30 p.m., Parque Principal, entrada libre; 2 láminas)",
+    "De-Se7PxX6z": "Taller «Cine colombiano como lenguaje patrimonial» (vie 6 nov 3–6 p.m., Biblioteca Francisco Mariño Soler, Tibasosa, entrada libre; 1 lámina)"
   },
-  {
-   "cmd": "python3 pipeline/enriquecer_catalogo.py festivals/staging/feciso-2026-catalogo.json",
-   "que": "la cascada (TMDB con candado, lo ya publicado, Proimágenes, cinecorto) → catálogo enriquecido"
+  "sedes": [
+    {
+      "nombre": "Cinemateca del Sol",
+      "direccion": "Cl. 9 #9-66, Sogamoso, Boyacá",
+      "lat": 5.7124301,
+      "lng": -72.92811,
+      "_prec": "manual",
+      "_fuente": "Google Maps (lugar: Cinemateca del Sol, /g/11v_8nr3hb), 25 oct 2026; la nombra el pie de De4bPYXkf4D"
+    },
+    {
+      "nombre": "Parque Principal de Tibasosa",
+      "ciudad": "Tibasosa",
+      "direccion": "Parque Principal, Tibasosa, Boyacá",
+      "lat": 5.7456423,
+      "lng": -73.0035149,
+      "_prec": "manual",
+      "_fuente": "Google Maps (lugar: Parque Principal de Tibasosa), 27 oct 2026; al aire libre; lo nombra De-YoeFnxa-"
+    },
+    {
+      "nombre": "Biblioteca Francisco Mariño Soler",
+      "ciudad": "Tibasosa",
+      "direccion": "Cra. 12 #5-08, Tibasosa, Boyacá",
+      "lat": 5.7458629,
+      "lng": -73.0065225,
+      "_prec": "manual",
+      "_fuente": "Google Maps (lugar: Biblioteca Publica Tibasosa FMS, /g/11g1nn55r2), 27 oct 2026; la nombra De-Se7PxX6z"
+    }
+  ],
+  "pasos": [
+    {
+      "cmd": "python3 pipeline/feciso-2026-catalogo.py",
+      "que": "las láminas de los 8 carruseles (fuentes/ig/<sc>/) transcritas a ojo y cruzadas con ig-lecturas → catálogo (73 obras)"
+    },
+    {
+      "cmd": "python3 pipeline/enriquecer_catalogo.py festivals/staging/feciso-2026-catalogo.json",
+      "que": "la cascada (TMDB con candado, lo ya publicado, Proimágenes, cinecorto) → catálogo enriquecido"
+    }
+  ],
+  "_fuentes_versionadas": {
+    "festivals/staging/feciso-2026-catalogo.json": "la selección (73 obras); la leerá el crudo",
+    "festivals/staging/feciso-2026-catalogo-enriquecido.json": "las fichas de la cascada, que escribe el paso 2",
+    "festivals/staging/feciso-2026-correcciones.json": "sin_afiche: el porqué de cada obra sin afiche"
   }
- ],
- "_fuentes_versionadas": {
-  "festivals/staging/feciso-2026-catalogo.json": "la selección (73 obras); la leerá el crudo",
-  "festivals/staging/feciso-2026-catalogo-enriquecido.json": "las fichas de la cascada, que escribe el paso 2",
-  "festivals/staging/feciso-2026-correcciones.json": "sin_afiche: el porqué de cada obra sin afiche"
- }
 }
