@@ -738,9 +738,13 @@ def main():
                 continue
             if campo == 'poster' and e.get('poster_path'):
                 continue
-            v = herencia.valor(w, campo, fid, t, e.get('tmdb_id'), key)
+            v = herencia.valor(w, campo, fid, t, e.get('tmdb_id'), key,
+                               obra={'director': f.get('director') or e.get('_director'),
+                                     'anio': f.get('anio') or e.get('anio_tmdb')})
             if v:
                 e[campo] = v
+                if campo == 'tmdb_id':
+                    e['_ficha_de'] = de
                 if campo == 'poster':
                     e['posterSource'] = herencia.poster_source(w, v)
                     e['_heredado']= {**e.get('_heredado', {}), 'posterSource': de}
