@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, con el MISMO candado de enriquecer.py: director ✓ y (año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-10-26"
+  "capturado": "2026-10-27"
  },
  "_origen": "miradas-2026-catalogo.json",
  "obras": [
@@ -18,7 +18,7 @@
    "pais_tmdb": "Mexico, Brazil, Denmark",
    "title_en": "Six Months in a Pink and Blue Building",
    "lbSlug": "six-months-in-a-pink-and-blue-building",
-   "_verificado": "el catálogo ya la tiene (w_R4DV090A4V3B, biff-2026, ficcali-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4DV090A4V3B, biff-2026, ficcali-2026, miradas-2026)",
    "work_id": "w_R4DV090A4V3B",
    "_ya_publicada": [
     {
@@ -50,7 +50,7 @@
    "pais_tmdb": "Chile, Mexico, Spain, United States of America",
    "title_en": "The Meltdown",
    "lbSlug": "the-meltdown",
-   "_verificado": "el catálogo ya la tiene (w_R4E3K2BWV53V, biff-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4E3K2BWV53V, biff-2026, miradas-2026)",
    "work_id": "w_R4E3K2BWV53V",
    "_ya_publicada": [
     {
@@ -98,8 +98,8 @@
    "pais_tmdb": "Argentina",
    "title_en": "The River Train",
    "lbSlug": "the-river-train",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "El tren fluvial",
+   "_verificado": "el catálogo ya la tiene (w_R4HC1FG5Y5N5, ficci-65, miradas-2026)",
+   "work_id": "w_R4HC1FG5Y5N5",
    "_ya_publicada": [
     {
      "festival": "ficci-65",
@@ -127,8 +127,8 @@
    "duracion_tmdb": 100,
    "pais_tmdb": "Spain, Germany, Belgium",
    "lbSlug": "ivan-hadoum",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Iván & hadoum",
+   "_verificado": "el catálogo ya la tiene (w_R4HAT4P4YQ74, ficci-65, miradas-2026)",
+   "work_id": "w_R4HAT4P4YQ74",
    "_ya_publicada": [
     {
      "festival": "ficci-65",
@@ -171,8 +171,8 @@
    "duracion_tmdb": 100,
    "pais_tmdb": "Paraguay, Germany, Brazil, Spain, France, Portugal, Uruguay",
    "lbSlug": "narciso-2026",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Narciso"
+   "_verificado": "el catálogo ya la tiene (w_ZJ3K7NJV43E6, miradas-2026)",
+   "work_id": "w_ZJ3K7NJV43E6"
   },
   {
    "titulo": "Nuestro secreto",
@@ -187,8 +187,8 @@
    "pais_tmdb": "Brazil, Portugal",
    "title_en": "Our Secret",
    "lbSlug": "our-secret-2026",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Nuestro secreto"
+   "_verificado": "el catálogo ya la tiene (w_ZJ3PHBTVGJ66, miradas-2026)",
+   "work_id": "w_ZJ3PHBTVGJ66"
   },
   {
    "titulo": "Un cabo suelto",
@@ -203,8 +203,8 @@
    "pais_tmdb": "Argentina, Uruguay",
    "title_en": "A Loose End",
    "lbSlug": "a-loose-end",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Un cabo suelto"
+   "_verificado": "el catálogo ya la tiene (w_ZJ3J8ZD799FE, miradas-2026)",
+   "work_id": "w_ZJ3J8ZD799FE"
   },
   {
    "titulo": "Los nuevos",
@@ -219,7 +219,7 @@
    "pais_tmdb": "Mexico, Spain",
    "title_en": "The Newcomers",
    "lbSlug": "the-newcomers-2026",
-   "_verificado": "el catálogo ya la tiene (w_R4E92MG91JQ2, biff-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4E92MG91JQ2, biff-2026, miradas-2026)",
    "work_id": "w_R4E92MG91JQ2",
    "_ya_publicada": [
     {
@@ -250,7 +250,7 @@
    "duracion_tmdb": 75,
    "pais_tmdb": "Brazil, Portugal",
    "lbSlug": "papaya-2025",
-   "_verificado": "el catálogo ya la tiene (w_R4E4AYD6S32S, biff-2026, olhar-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4E4AYD6S32S, biff-2026, miradas-2026, olhar-2026)",
    "work_id": "w_R4E4AYD6S32S",
    "_ya_publicada": [
     {
@@ -309,8 +309,8 @@
    "duracion_tmdb": 10,
    "pais_tmdb": "",
    "lbSlug": "compraventa",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Compraventa"
+   "_verificado": "el catálogo ya la tiene (w_6XS3BRDR0PG5, ficica-2026, miradas-2026)",
+   "work_id": "w_6XS3BRDR0PG5"
   },
   {
    "titulo": "La sangre",
@@ -325,8 +325,8 @@
    "pais_tmdb": "Spain",
    "title_en": "The Blood",
    "lbSlug": "the-blood-2025",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "La sangre"
+   "_verificado": "el catálogo ya la tiene (w_ZJ3QHNZ1YPP3, miradas-2026)",
+   "work_id": "w_ZJ3QHNZ1YPP3"
   },
   {
    "titulo": "Norheimsund",
@@ -340,8 +340,8 @@
    "duracion_tmdb": 12,
    "pais_tmdb": "United States of America",
    "lbSlug": "norheimsund",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Norheimsund"
+   "_verificado": "el catálogo ya la tiene (w_ZJ3M6D9B44YR, miradas-2026)",
+   "work_id": "w_ZJ3M6D9B44YR"
   },
   {
    "titulo": "Planetario",
@@ -355,8 +355,8 @@
    "duracion_tmdb": 9,
    "pais_tmdb": "Argentina",
    "lbSlug": "planetario-2025",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Planetario"
+   "_verificado": "el catálogo ya la tiene (w_ZJ3HC3JH2XKF, miradas-2026)",
+   "work_id": "w_ZJ3HC3JH2XKF"
   },
   {
    "titulo": "Última vez hace mucho tiempo",
@@ -400,7 +400,8 @@
    "duracion_tmdb": 95,
    "pais_tmdb": "",
    "lbSlug": "uno-vuelve-siempre",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "_verificado": "el catálogo ya la tiene (w_ZJ3T5XF2Q69A, miradas-2026)",
+   "work_id": "w_ZJ3T5XF2Q69A"
   },
   {
    "titulo": "Madres de nacimiento",
@@ -414,7 +415,7 @@
    "duracion_tmdb": 8,
    "pais_tmdb": "",
    "lbSlug": "madres-de-nacimiento",
-   "_verificado": "el catálogo ya la tiene (w_R4FH541S52JK, cinemancia-2026, ficci-65, ficdeh-2026, ficmontanas-2026, jardin-2026, midbo-2026, popayan-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4FH541S52JK, cinemancia-2026, ficci-65, ficdeh-2026, ficmontanas-2026, jardin-2026, midbo-2026, miradas-2026, popayan-2026)",
    "work_id": "w_R4FH541S52JK",
    "_ya_publicada": [
     {
@@ -520,7 +521,7 @@
    "duracion_tmdb": 11,
    "pais_tmdb": "Colombia",
    "lbSlug": "refraccion",
-   "_verificado": "el catálogo ya la tiene (w_R4F8T5DKXC9W, cinemancia-2026, ficica-2026, ficmontanas-2026, girardota-2026, jardin-2026, narrarelfuturo-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4F8T5DKXC9W, cinemancia-2026, ficica-2026, ficmontanas-2026, girardota-2026, jardin-2026, miradas-2026, narrarelfuturo-2026)",
    "work_id": "w_R4F8T5DKXC9W",
    "_ya_publicada": [
     {
@@ -842,7 +843,7 @@
    "pais_tmdb": "Colombia, United States of America",
    "title_en": "Once in a Body",
    "lbSlug": "once-in-a-body",
-   "_verificado": "el catálogo ya la tiene (w_R4DJH9SYECN9, aff-2026, anibia-2026, ficcali-2026, filcmar-2026, jardin-2026, popayan-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4DJH9SYECN9, aff-2026, anibia-2026, ficcali-2026, filcmar-2026, jardin-2026, miradas-2026, popayan-2026)",
    "work_id": "w_R4DJH9SYECN9",
    "_ya_publicada": [
     {
@@ -1007,7 +1008,7 @@
    "pais_tmdb": "Colombia",
    "title_en": "decay",
    "lbSlug": "decay-2026",
-   "_verificado": "el catálogo ya la tiene (w_R4EPHC0WCQM5, anibia-2026, cineautopsia-2026, cinemancia-2026, ficci-65, ficica-2026, mamut-2026, midbo-2026, popayan-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4EPHC0WCQM5, anibia-2026, cineautopsia-2026, cinemancia-2026, ficci-65, ficica-2026, mamut-2026, midbo-2026, miradas-2026, popayan-2026)",
    "work_id": "w_R4EPHC0WCQM5",
    "_ya_publicada": [
     {
@@ -1133,7 +1134,7 @@
    "pais_tmdb": "Colombia",
    "title_en": "My Daily Viche",
    "lbSlug": "my-daily-viche",
-   "_verificado": "el catálogo ya la tiene (w_R4MY7A5DRW76, popayan-2026, qaff-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4MY7A5DRW76, miradas-2026, popayan-2026, qaff-2026)",
    "work_id": "w_R4MY7A5DRW76",
    "_ya_publicada": [
     {
@@ -1178,7 +1179,7 @@
    "pais_tmdb": "Colombia",
    "title_en": "Lowering the Gaze",
    "lbSlug": "lowering-the-gaze",
-   "_verificado": "el catálogo ya la tiene (w_R4JG4KR5FX9V, ficica-2026, filcmar-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4JG4KR5FX9V, ficica-2026, filcmar-2026, miradas-2026)",
    "work_id": "w_R4JG4KR5FX9V",
    "_ya_publicada": [
     {
@@ -1225,7 +1226,7 @@
    "pais_tmdb": "Mexico, Brazil, Denmark",
    "title_en": "Six Months in a Pink and Blue Building",
    "lbSlug": "six-months-in-a-pink-and-blue-building",
-   "_verificado": "el catálogo ya la tiene (w_R4DV090A4V3B, biff-2026, ficcali-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4DV090A4V3B, biff-2026, ficcali-2026, miradas-2026)",
    "work_id": "w_R4DV090A4V3B",
    "_ya_publicada": [
     {
@@ -1256,7 +1257,7 @@
    "pais_tmdb": "Chile, Mexico, Spain, United States of America",
    "title_en": "The Meltdown",
    "lbSlug": "the-meltdown",
-   "_verificado": "el catálogo ya la tiene (w_R4E3K2BWV53V, biff-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4E3K2BWV53V, biff-2026, miradas-2026)",
    "work_id": "w_R4E3K2BWV53V",
    "_ya_publicada": [
     {
@@ -1302,8 +1303,8 @@
    "pais_tmdb": "Argentina",
    "title_en": "The River Train",
    "lbSlug": "the-river-train",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "El tren fluvial",
+   "_verificado": "el catálogo ya la tiene (w_R4HC1FG5Y5N5, ficci-65, miradas-2026)",
+   "work_id": "w_R4HC1FG5Y5N5",
    "_ya_publicada": [
     {
      "festival": "ficci-65",
@@ -1330,8 +1331,8 @@
    "duracion_tmdb": 100,
    "pais_tmdb": "Spain, Germany, Belgium",
    "lbSlug": "ivan-hadoum",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Iván & hadoum",
+   "_verificado": "el catálogo ya la tiene (w_R4HAT4P4YQ74, ficci-65, miradas-2026)",
+   "work_id": "w_R4HAT4P4YQ74",
    "_ya_publicada": [
     {
      "festival": "ficci-65",
@@ -1372,8 +1373,8 @@
    "duracion_tmdb": 100,
    "pais_tmdb": "Paraguay, Germany, Brazil, Spain, France, Portugal, Uruguay",
    "lbSlug": "narciso-2026",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Narciso"
+   "_verificado": "el catálogo ya la tiene (w_ZJ3K7NJV43E6, miradas-2026)",
+   "work_id": "w_ZJ3K7NJV43E6"
   },
   "Nuestro secreto": {
    "tmdb_id": 1399253,
@@ -1387,8 +1388,8 @@
    "pais_tmdb": "Brazil, Portugal",
    "title_en": "Our Secret",
    "lbSlug": "our-secret-2026",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Nuestro secreto"
+   "_verificado": "el catálogo ya la tiene (w_ZJ3PHBTVGJ66, miradas-2026)",
+   "work_id": "w_ZJ3PHBTVGJ66"
   },
   "Un cabo suelto": {
    "tmdb_id": 1339367,
@@ -1402,8 +1403,8 @@
    "pais_tmdb": "Argentina, Uruguay",
    "title_en": "A Loose End",
    "lbSlug": "a-loose-end",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Un cabo suelto"
+   "_verificado": "el catálogo ya la tiene (w_ZJ3J8ZD799FE, miradas-2026)",
+   "work_id": "w_ZJ3J8ZD799FE"
   },
   "Los nuevos": {
    "tmdb_id": 1735053,
@@ -1417,7 +1418,7 @@
    "pais_tmdb": "Mexico, Spain",
    "title_en": "The Newcomers",
    "lbSlug": "the-newcomers-2026",
-   "_verificado": "el catálogo ya la tiene (w_R4E92MG91JQ2, biff-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4E92MG91JQ2, biff-2026, miradas-2026)",
    "work_id": "w_R4E92MG91JQ2",
    "_ya_publicada": [
     {
@@ -1447,7 +1448,7 @@
    "duracion_tmdb": 75,
    "pais_tmdb": "Brazil, Portugal",
    "lbSlug": "papaya-2025",
-   "_verificado": "el catálogo ya la tiene (w_R4E4AYD6S32S, biff-2026, olhar-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4E4AYD6S32S, biff-2026, miradas-2026, olhar-2026)",
    "work_id": "w_R4E4AYD6S32S",
    "_ya_publicada": [
     {
@@ -1504,8 +1505,8 @@
    "duracion_tmdb": 10,
    "pais_tmdb": "",
    "lbSlug": "compraventa",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Compraventa"
+   "_verificado": "el catálogo ya la tiene (w_6XS3BRDR0PG5, ficica-2026, miradas-2026)",
+   "work_id": "w_6XS3BRDR0PG5"
   },
   "La sangre": {
    "tmdb_id": 1364538,
@@ -1519,8 +1520,8 @@
    "pais_tmdb": "Spain",
    "title_en": "The Blood",
    "lbSlug": "the-blood-2025",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "La sangre"
+   "_verificado": "el catálogo ya la tiene (w_ZJ3QHNZ1YPP3, miradas-2026)",
+   "work_id": "w_ZJ3QHNZ1YPP3"
   },
   "Norheimsund": {
    "tmdb_id": 1515175,
@@ -1533,8 +1534,8 @@
    "duracion_tmdb": 12,
    "pais_tmdb": "United States of America",
    "lbSlug": "norheimsund",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Norheimsund"
+   "_verificado": "el catálogo ya la tiene (w_ZJ3M6D9B44YR, miradas-2026)",
+   "work_id": "w_ZJ3M6D9B44YR"
   },
   "Planetario": {
    "tmdb_id": 1450762,
@@ -1547,8 +1548,8 @@
    "duracion_tmdb": 9,
    "pais_tmdb": "Argentina",
    "lbSlug": "planetario-2025",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Planetario"
+   "_verificado": "el catálogo ya la tiene (w_ZJ3HC3JH2XKF, miradas-2026)",
+   "work_id": "w_ZJ3HC3JH2XKF"
   },
   "Última vez hace mucho tiempo": {
    "tmdb_id": 1604092,
@@ -1589,7 +1590,8 @@
    "duracion_tmdb": 95,
    "pais_tmdb": "",
    "lbSlug": "uno-vuelve-siempre",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "_verificado": "el catálogo ya la tiene (w_ZJ3T5XF2Q69A, miradas-2026)",
+   "work_id": "w_ZJ3T5XF2Q69A"
   },
   "Madres de nacimiento": {
    "tmdb_id": 1668902,
@@ -1602,7 +1604,7 @@
    "duracion_tmdb": 8,
    "pais_tmdb": "",
    "lbSlug": "madres-de-nacimiento",
-   "_verificado": "el catálogo ya la tiene (w_R4FH541S52JK, cinemancia-2026, ficci-65, ficdeh-2026, ficmontanas-2026, jardin-2026, midbo-2026, popayan-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4FH541S52JK, cinemancia-2026, ficci-65, ficdeh-2026, ficmontanas-2026, jardin-2026, midbo-2026, miradas-2026, popayan-2026)",
    "work_id": "w_R4FH541S52JK",
    "_ya_publicada": [
     {
@@ -1707,7 +1709,7 @@
    "duracion_tmdb": 11,
    "pais_tmdb": "Colombia",
    "lbSlug": "refraccion",
-   "_verificado": "el catálogo ya la tiene (w_R4F8T5DKXC9W, cinemancia-2026, ficica-2026, ficmontanas-2026, girardota-2026, jardin-2026, narrarelfuturo-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4F8T5DKXC9W, cinemancia-2026, ficica-2026, ficmontanas-2026, girardota-2026, jardin-2026, miradas-2026, narrarelfuturo-2026)",
    "work_id": "w_R4F8T5DKXC9W",
    "_ya_publicada": [
     {
@@ -2000,7 +2002,7 @@
    "pais_tmdb": "Colombia, United States of America",
    "title_en": "Once in a Body",
    "lbSlug": "once-in-a-body",
-   "_verificado": "el catálogo ya la tiene (w_R4DJH9SYECN9, aff-2026, anibia-2026, ficcali-2026, filcmar-2026, jardin-2026, popayan-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4DJH9SYECN9, aff-2026, anibia-2026, ficcali-2026, filcmar-2026, jardin-2026, miradas-2026, popayan-2026)",
    "work_id": "w_R4DJH9SYECN9",
    "_ya_publicada": [
     {
@@ -2151,7 +2153,7 @@
    "pais_tmdb": "Colombia",
    "title_en": "decay",
    "lbSlug": "decay-2026",
-   "_verificado": "el catálogo ya la tiene (w_R4EPHC0WCQM5, anibia-2026, cineautopsia-2026, cinemancia-2026, ficci-65, ficica-2026, mamut-2026, midbo-2026, popayan-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4EPHC0WCQM5, anibia-2026, cineautopsia-2026, cinemancia-2026, ficci-65, ficica-2026, mamut-2026, midbo-2026, miradas-2026, popayan-2026)",
    "work_id": "w_R4EPHC0WCQM5",
    "_ya_publicada": [
     {
@@ -2276,7 +2278,7 @@
    "pais_tmdb": "Colombia",
    "title_en": "My Daily Viche",
    "lbSlug": "my-daily-viche",
-   "_verificado": "el catálogo ya la tiene (w_R4MY7A5DRW76, popayan-2026, qaff-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4MY7A5DRW76, miradas-2026, popayan-2026, qaff-2026)",
    "work_id": "w_R4MY7A5DRW76",
    "_ya_publicada": [
     {
@@ -2320,7 +2322,7 @@
    "pais_tmdb": "Colombia",
    "title_en": "Lowering the Gaze",
    "lbSlug": "lowering-the-gaze",
-   "_verificado": "el catálogo ya la tiene (w_R4JG4KR5FX9V, ficica-2026, filcmar-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4JG4KR5FX9V, ficica-2026, filcmar-2026, miradas-2026)",
    "work_id": "w_R4JG4KR5FX9V",
    "_ya_publicada": [
     {

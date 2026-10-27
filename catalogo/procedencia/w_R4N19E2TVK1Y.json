@@ -1,6 +1,6 @@
 {
  "titulo_original": {
-  "fuente": "festival:guatape-2026,popayan-2026,popayan-2026",
+  "fuente": "festival:guatape-2026,miradas-2026,miradas-2026,popayan-2026,popayan-2026",
   "regla": "el título que más festivales imprimen"
  },
  "directores": {
@@ -14,5 +14,9 @@
  "paises": {
   "fuente": "festival",
   "regla": "pais-union"
+ },
+ "generos": {
+  "fuente": "festival",
+  "regla": "todos los publicados, del más al menos frecuente"
  }
 }

@@ -1,0 +1,806 @@
+{
+ "_provenance": {
+  "fuente": "ensamblar.py: ids estables de las funciones (docs/FUNCION.md C1)",
+  "capturado": "2026-10-27"
+ },
+ "funciones": {
+  "f_2881acf478": {
+   "sede": "Librería Antimateria - Medellín",
+   "dia": "2026-11-03",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "la otra orilla revolver la mirada autorizada para manchar la camara de barro"
+  },
+  "f_f4afb0dc8f": {
+   "sede": "Teatro Pablo Tobón Uribe - Medellín",
+   "dia": "2026-11-03",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "seis meses en el edificio rosa con azul"
+  },
+  "f_05f88d2b39": {
+   "sede": "Casa TEA - Medellín",
+   "dia": "2026-11-03",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "rodando formacion mediaciones en comunidad"
+  },
+  "f_55fa1f5236": {
+   "sede": "Museo de Arte Moderno de Medellín - MAMM - Medellín",
+   "dia": "2026-11-04",
+   "hora": "09:00",
+   "sala": "Quinto piso",
+   "titulo": "clase maestra inaugural manual para observar moscas descubrir lo extraordinario en lo simple"
+  },
+  "f_d1cf82fe9a": {
+   "sede": "Institución Educativa La Independencia - Medellín",
+   "dia": "2026-11-04",
+   "hora": "10:00",
+   "sala": "",
+   "titulo": "cine corto detras de camaras"
+  },
+  "f_63027920b6": {
+   "sede": "Coocine - Medellín",
+   "dia": "2026-11-04",
+   "hora": "10:00",
+   "sala": "Sala 0",
+   "titulo": "papaya"
+  },
+  "f_8647b09c92": {
+   "sede": "Museo de Arte Moderno de Medellín - MAMM - Medellín",
+   "dia": "2026-11-04",
+   "hora": "11:30",
+   "sala": "Quinto piso",
+   "titulo": "encuentro con festivales de cine agente de ventas y distribuidores invitados a miradas 2026"
+  },
+  "f_17be748dd8": {
+   "sede": "Museo de Arte Moderno de Medellín - MAMM - Medellín",
+   "dia": "2026-11-04",
+   "hora": "14:00",
+   "sala": "Teatro MAMM",
+   "titulo": "programa de cortos 1"
+  },
+  "f_3dd3b192af": {
+   "sede": "Museo de Arte Moderno de Medellín - MAMM - Medellín",
+   "dia": "2026-11-04",
+   "hora": "15:00",
+   "sala": "Quinto piso",
+   "titulo": "caso de estudio la coproduccion de seis meses en el edificio rosa con azul"
+  },
+  "f_4b4be4c81b": {
+   "sede": "Museo de Arte Moderno de Medellín - MAMM - Medellín",
+   "dia": "2026-11-04",
+   "hora": "16:30",
+   "sala": "Teatro MAMM",
+   "titulo": "ivan hadoum"
+  },
+  "f_e1b048e2eb": {
+   "sede": "Museo de Arte Moderno de Medellín - MAMM - Medellín",
+   "dia": "2026-11-04",
+   "hora": "17:00",
+   "sala": "Quinto piso",
+   "titulo": "miradas a la distribucion luces y sombras exponiendo las realidades de la distribucion"
+  },
+  "f_4da6ccbbd9": {
+   "sede": "Centro Colombo Americano - Medellín",
+   "dia": "2026-11-04",
+   "hora": "17:00",
+   "sala": "Sala 2",
+   "titulo": "programa de cortos 4"
+  },
+  "f_59c6afaacb": {
+   "sede": "Centro de Desarrollo Cultural de Moravia - Medellín",
+   "dia": "2026-11-04",
+   "hora": "17:00",
+   "sala": "Auditorio",
+   "titulo": "un cabo suelto"
+  },
+  "f_b60da6ff1b": {
+   "sede": "Teatro UVA Tricentenario - Medellín",
+   "dia": "2026-11-04",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "chico de barrio"
+  },
+  "f_9e53be745a": {
+   "sede": "Café Pletórico - Medellín",
+   "dia": "2026-11-04",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "el paradero"
+  },
+  "f_742eb63835": {
+   "sede": "Cineprox Las Américas - Medellín",
+   "dia": "2026-11-04",
+   "hora": "19:00",
+   "sala": "Sala 3",
+   "titulo": "las pesadillas del siervo"
+  },
+  "f_e886fbc421": {
+   "sede": "Parque de los Deseos - Medellín",
+   "dia": "2026-11-04",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "tierra en la lengua"
+  },
+  "f_05587b240a": {
+   "sede": "Museo de Arte Moderno de Medellín - MAMM - Medellín",
+   "dia": "2026-11-04",
+   "hora": "19:30",
+   "sala": "Teatro MAMM",
+   "titulo": "narciso"
+  },
+  "f_90a1dde597": {
+   "sede": "Centro Colombo Americano - Medellín",
+   "dia": "2026-11-04",
+   "hora": "19:30",
+   "sala": "Sala 1",
+   "titulo": "temporada de patos"
+  },
+  "f_7bb37e6ff4": {
+   "sede": "Museo de Arte Moderno de Medellín - MAMM - Medellín",
+   "dia": "2026-11-05",
+   "hora": "09:00",
+   "sala": "Quinto piso",
+   "titulo": "clase maestra transformando el dolor en belleza memoria ficcion y realidad como herramientas que desdibujan etiquetas y fronteras"
+  },
+  "f_615243f7e4": {
+   "sede": "Institución Educativa La Independencia - Medellín",
+   "dia": "2026-11-05",
+   "hora": "10:00",
+   "sala": "",
+   "titulo": "cine corto detras de camaras"
+  },
+  "f_264cd583d4": {
+   "sede": "Parque Explora - Medellín",
+   "dia": "2026-11-05",
+   "hora": "10:00",
+   "sala": "Exploratorio",
+   "titulo": "laboratorio materia expandida representacion e imagen en contextos digitales sesion 1 materia y representacion"
+  },
+  "f_948fd3a7af": {
+   "sede": "Escuela Vereda El Placer - Medellín",
+   "dia": "2026-11-05",
+   "hora": "10:00",
+   "sala": "",
+   "titulo": "oro molido 2"
+  },
+  "f_36cb744a93": {
+   "sede": "Museo de Arte Moderno de Medellín - MAMM - Medellín",
+   "dia": "2026-11-05",
+   "hora": "11:30",
+   "sala": "Quinto piso",
+   "titulo": "encuentro con productoras directoras y guionistas invitadas de miradas 2026"
+  },
+  "f_12a2d04a34": {
+   "sede": "Parque Explora - Medellín",
+   "dia": "2026-11-05",
+   "hora": "14:00",
+   "sala": "Exploratorio",
+   "titulo": "muestra de cine expandido"
+  },
+  "f_201631db2d": {
+   "sede": "Museo de Arte Moderno de Medellín - MAMM - Medellín",
+   "dia": "2026-11-05",
+   "hora": "14:00",
+   "sala": "Teatro MAMM",
+   "titulo": "programa de cortos 2"
+  },
+  "f_52330432a1": {
+   "sede": "Parque Explora - Medellín",
+   "dia": "2026-11-05",
+   "hora": "14:00",
+   "sala": "Exploratorio",
+   "titulo": "recorrido guiado muestra de cine expandido"
+  },
+  "f_b4b0ccfd7d": {
+   "sede": "Museo de Arte Moderno de Medellín - MAMM - Medellín",
+   "dia": "2026-11-05",
+   "hora": "15:00",
+   "sala": "Quinto piso",
+   "titulo": "caso de estudio la coproduccion desde colombia"
+  },
+  "f_6ac3e669e5": {
+   "sede": "Comfama Otraparte - Medellín",
+   "dia": "2026-11-05",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "iluminada"
+  },
+  "f_4f1e7ba95c": {
+   "sede": "Centro de Desarrollo Cultural de Moravia - Medellín",
+   "dia": "2026-11-05",
+   "hora": "16:00",
+   "sala": "Auditorio",
+   "titulo": "nuestro secreto"
+  },
+  "f_35a814087e": {
+   "sede": "Parque Explora - Medellín",
+   "dia": "2026-11-05",
+   "hora": "16:30",
+   "sala": "Exploratorio",
+   "titulo": "cine performativo y la puesta en escena mas alla de la pantalla"
+  },
+  "f_b4815bb539": {
+   "sede": "Museo de Arte Moderno de Medellín - MAMM - Medellín",
+   "dia": "2026-11-05",
+   "hora": "16:30",
+   "sala": "Teatro MAMM",
+   "titulo": "programa de cortos 3"
+  },
+  "f_8c8a9a4da0": {
+   "sede": "Centro Colombo Americano - Medellín",
+   "dia": "2026-11-05",
+   "hora": "17:00",
+   "sala": "Sala 1",
+   "titulo": "el segundo entierro de alejandrino"
+  },
+  "f_ea4116344e": {
+   "sede": "Museo de Arte Moderno de Medellín - MAMM - Medellín",
+   "dia": "2026-11-05",
+   "hora": "17:00",
+   "sala": "Quinto piso",
+   "titulo": "miradas al oficio la disidencia autoral en los formatos comerciales"
+  },
+  "f_ad33a4694c": {
+   "sede": "Comfama La Capilla - Medellín",
+   "dia": "2026-11-05",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "el rio de los espiritus"
+  },
+  "f_ccdd8e4a83": {
+   "sede": "Librería Antimateria - Medellín",
+   "dia": "2026-11-05",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "la otra orilla revolver la mirada autorizada para manchar la camara de barro"
+  },
+  "f_b8a6036ba5": {
+   "sede": "Junta de Acción Comunal El Faro - Medellín",
+   "dia": "2026-11-05",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "los nuevos"
+  },
+  "f_cda957b21a": {
+   "sede": "Planetario de Medellín - Medellín",
+   "dia": "2026-11-05",
+   "hora": "18:00",
+   "sala": "Domo",
+   "titulo": "perder la escala experiencias cine domo para otros mundos"
+  },
+  "f_d449edd7a3": {
+   "sede": "Cineprox Las Américas - Medellín",
+   "dia": "2026-11-05",
+   "hora": "19:00",
+   "sala": "Sala 3",
+   "titulo": "chapeco el ultimo sobreviviente nace una hermandad"
+  },
+  "f_894b89cfde": {
+   "sede": "Planetario de Medellín - Medellín",
+   "dia": "2026-11-05",
+   "hora": "19:00",
+   "sala": "Auditorio",
+   "titulo": "letania performance audiovisual"
+  },
+  "f_5c0484c5ac": {
+   "sede": "Casa TEA - Medellín",
+   "dia": "2026-11-05",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "rodando formacion mediaciones en comunidad"
+  },
+  "f_e0c97a1a0a": {
+   "sede": "Centro Colombo Americano - Medellín",
+   "dia": "2026-11-05",
+   "hora": "19:00",
+   "sala": "Sala 1",
+   "titulo": "seis meses en el edificio rosa con azul"
+  },
+  "f_82a2221dce": {
+   "sede": "Parque de los Deseos - Medellín",
+   "dia": "2026-11-05",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "uno vuelve siempre"
+  },
+  "f_dc439560d5": {
+   "sede": "Museo de Arte Moderno de Medellín - MAMM - Medellín",
+   "dia": "2026-11-05",
+   "hora": "19:30",
+   "sala": "Teatro MAMM",
+   "titulo": "ninas escarlata"
+  },
+  "f_fa32799fd7": {
+   "sede": "Museo de Arte Moderno de Medellín - MAMM - Medellín",
+   "dia": "2026-11-06",
+   "hora": "09:00",
+   "sala": "Quinto piso",
+   "titulo": "clase maestra el cine como testimonio colectivo"
+  },
+  "f_b0bdd510a7": {
+   "sede": "Institución Educativa La Independencia - Medellín",
+   "dia": "2026-11-06",
+   "hora": "10:00",
+   "sala": "",
+   "titulo": "cine corto detras de camaras"
+  },
+  "f_687c9dd14e": {
+   "sede": "Parque Explora - Medellín",
+   "dia": "2026-11-06",
+   "hora": "10:00",
+   "sala": "Exploratorio",
+   "titulo": "laboratorio materia expandida representacion e imagen en contextos digitales sesion 2 imagen y expansion"
+  },
+  "f_3fcc8f26fc": {
+   "sede": "Museo de Arte Moderno de Medellín - MAMM - Medellín",
+   "dia": "2026-11-06",
+   "hora": "11:30",
+   "sala": "Quinto piso",
+   "titulo": "encuentro con directores y directoras invitadas de miradas 2026"
+  },
+  "f_ee49163fb4": {
+   "sede": "Centro Colombo Americano - Medellín",
+   "dia": "2026-11-06",
+   "hora": "14:00",
+   "sala": "Aula Múltiple",
+   "titulo": "colombia es fantastica laboratorio de cine fantastico y terror colombiano"
+  },
+  "f_a94be4dd9f": {
+   "sede": "Museo de Arte Moderno de Medellín - MAMM - Medellín",
+   "dia": "2026-11-06",
+   "hora": "14:00",
+   "sala": "Teatro MAMM",
+   "titulo": "el tren fluvial"
+  },
+  "f_b95df22291": {
+   "sede": "Paraninfo Universidad de Antioquia - Medellín",
+   "dia": "2026-11-06",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "luces camara y estampa"
+  },
+  "f_5442f9e8a8": {
+   "sede": "Parque Explora - Medellín",
+   "dia": "2026-11-06",
+   "hora": "14:00",
+   "sala": "Exploratorio",
+   "titulo": "recorrido guiado muestra de cine expandido"
+  },
+  "f_9f0e5c00c2": {
+   "sede": "Parque de Cristo Rey - Medellín",
+   "dia": "2026-11-06",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "un cabo suelto"
+  },
+  "f_47f7696174": {
+   "sede": "Centro Colombo Americano - Medellín",
+   "dia": "2026-11-06",
+   "hora": "16:00",
+   "sala": "Aula Múltiple",
+   "titulo": "colombia es fantastica laboratorio de cine fantastico y terror colombiano"
+  },
+  "f_130069c5a1": {
+   "sede": "Museo de Arte Moderno de Medellín - MAMM - Medellín",
+   "dia": "2026-11-06",
+   "hora": "16:00",
+   "sala": "Teatro MAMM",
+   "titulo": "como limpiar una casa en 10 pasos faciles"
+  },
+  "f_a613f777ab": {
+   "sede": "Biblioteca Comfama Bello - Medellín",
+   "dia": "2026-11-06",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "narciso"
+  },
+  "f_1d00949d68": {
+   "sede": "Centro de Desarrollo Cultural de Moravia - Medellín",
+   "dia": "2026-11-06",
+   "hora": "16:00",
+   "sala": "Auditorio",
+   "titulo": "uno vuelve siempre"
+  },
+  "f_adf4dcb1ea": {
+   "sede": "Parque Explora - Medellín",
+   "dia": "2026-11-06",
+   "hora": "16:30",
+   "sala": "Exploratorio",
+   "titulo": "la imagen como territorio"
+  },
+  "f_eb87d1dc7e": {
+   "sede": "Estación Trece de Noviembre - Medellín",
+   "dia": "2026-11-06",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "luis antonio y los nuevos"
+  },
+  "f_0de6f521d9": {
+   "sede": "Centro Colombo Americano - Medellín",
+   "dia": "2026-11-06",
+   "hora": "17:00",
+   "sala": "Sala 2",
+   "titulo": "programa de cortos 1"
+  },
+  "f_ef43b4302a": {
+   "sede": "Comfama La Capilla - Medellín",
+   "dia": "2026-11-06",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "las pesadillas del siervo"
+  },
+  "f_a893560ed3": {
+   "sede": "Parque de los Deseos - Medellín",
+   "dia": "2026-11-06",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "chapeco el ultimo sobreviviente nace una hermandad"
+  },
+  "f_4d48e3f24c": {
+   "sede": "Cineprox Las Américas - Medellín",
+   "dia": "2026-11-06",
+   "hora": "19:00",
+   "sala": "Sala 3",
+   "titulo": "el deshielo"
+  },
+  "f_3ecafafd4b": {
+   "sede": "Museo de Arte Moderno de Medellín - MAMM - Medellín",
+   "dia": "2026-11-06",
+   "hora": "19:00",
+   "sala": "Plazoleta",
+   "titulo": "moscas"
+  },
+  "f_959224c7c6": {
+   "sede": "JAC Santa Cruz parte alta - Medellín",
+   "dia": "2026-11-06",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "paralelo"
+  },
+  "f_f99f9c77d3": {
+   "sede": "Planetario de Medellín - Medellín",
+   "dia": "2026-11-06",
+   "hora": "19:00",
+   "sala": "Domo",
+   "titulo": "perder la escala experiencias cine domo para otros mundos"
+  },
+  "f_6a3d670d3b": {
+   "sede": "Casa TEA - Medellín",
+   "dia": "2026-11-06",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "rodando formacion mediaciones en comunidad"
+  },
+  "f_66f35078e0": {
+   "sede": "Institución Educativa Pío XII - Medellín",
+   "dia": "2026-11-06",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "ether somos todo"
+  },
+  "f_8d47dec410": {
+   "sede": "Centro Colombo Americano - Medellín",
+   "dia": "2026-11-06",
+   "hora": "19:30",
+   "sala": "Sala 1",
+   "titulo": "iluminada"
+  },
+  "f_398d47d954": {
+   "sede": "Museo de Arte Moderno de Medellín - MAMM - Medellín",
+   "dia": "2026-11-07",
+   "hora": "08:00",
+   "sala": "Teatro MAMM",
+   "titulo": "red de creacion audiovisual de medellin"
+  },
+  "f_ef769d7a14": {
+   "sede": "Centro Colombo Americano - Medellín",
+   "dia": "2026-11-07",
+   "hora": "10:00",
+   "sala": "Aula Múltiple",
+   "titulo": "colombia es fantastica laboratorio de cine fantastico y terror colombiano"
+  },
+  "f_5e3b73b056": {
+   "sede": "Parque de los Deseos - Medellín",
+   "dia": "2026-11-07",
+   "hora": "10:00",
+   "sala": "Cinemateca móvil",
+   "titulo": "domo movil animales celestes"
+  },
+  "f_b7f61de175": {
+   "sede": "Parque de los Deseos - Medellín",
+   "dia": "2026-11-07",
+   "hora": "10:00",
+   "sala": "Cinemateca móvil, galería",
+   "titulo": "domo movil arrecifes"
+  },
+  "f_512074a9b0": {
+   "sede": "Parque de los Deseos - Medellín",
+   "dia": "2026-11-07",
+   "hora": "10:00",
+   "sala": "Cinemateca móvil",
+   "titulo": "domo movil viaje por el sistema solar"
+  },
+  "f_cbd21692f3": {
+   "sede": "Parque de los Deseos - Medellín",
+   "dia": "2026-11-07",
+   "hora": "10:00",
+   "sala": "Cinemateca móvil, galería",
+   "titulo": "exposicion el cine analogico maquinas formatos y memoria"
+  },
+  "f_65170c7a82": {
+   "sede": "Parque de los Deseos - Medellín",
+   "dia": "2026-11-07",
+   "hora": "10:00",
+   "sala": "Cinemateca móvil, laboratorio",
+   "titulo": "laboratorio creacion audiovisual con inteligencia artificial generativa"
+  },
+  "f_142db05fd4": {
+   "sede": "Paraninfo Universidad de Antioquia - Medellín",
+   "dia": "2026-11-07",
+   "hora": "10:00",
+   "sala": "",
+   "titulo": "luces camara y estampa"
+  },
+  "f_a930ae6950": {
+   "sede": "Comfama Aranjuez - Medellín",
+   "dia": "2026-11-07",
+   "hora": "11:00",
+   "sala": "Auditorio",
+   "titulo": "mu ki ra"
+  },
+  "f_cf3cfaf852": {
+   "sede": "Biblioteca Comfama Caldas - Medellín",
+   "dia": "2026-11-07",
+   "hora": "11:00",
+   "sala": "",
+   "titulo": "programa de cortos chiquishorts"
+  },
+  "f_a63afb0f57": {
+   "sede": "Parque de los Deseos - Medellín",
+   "dia": "2026-11-07",
+   "hora": "13:00",
+   "sala": "Cinemateca móvil",
+   "titulo": "cine comunitario funcion con presencia de directores y conversatorio"
+  },
+  "f_22857928a5": {
+   "sede": "Paraninfo Universidad de Antioquia - Medellín",
+   "dia": "2026-11-07",
+   "hora": "13:00",
+   "sala": "",
+   "titulo": "luces camara y estampa"
+  },
+  "f_5c5d4d9927": {
+   "sede": "Centro Colombo Americano - Medellín",
+   "dia": "2026-11-07",
+   "hora": "14:00",
+   "sala": "Aula Múltiple",
+   "titulo": "colombia es fantastica laboratorio de cine fantastico y terror colombiano"
+  },
+  "f_44bbe027e4": {
+   "sede": "Parque de los Deseos - Medellín",
+   "dia": "2026-11-07",
+   "hora": "14:00",
+   "sala": "Cinemateca móvil, laboratorio",
+   "titulo": "laboratorio postproduccion de video para dispositivos moviles"
+  },
+  "f_98c683f570": {
+   "sede": "Parque Explora - Medellín",
+   "dia": "2026-11-07",
+   "hora": "14:00",
+   "sala": "Exploratorio",
+   "titulo": "recorrido guiado muestra de cine expandido"
+  },
+  "f_b5649974c3": {
+   "sede": "Coocine - Medellín",
+   "dia": "2026-11-07",
+   "hora": "14:00",
+   "sala": "Sala 0",
+   "titulo": "relicto"
+  },
+  "f_6c0ca31337": {
+   "sede": "Centro Colombo Americano - Medellín",
+   "dia": "2026-11-07",
+   "hora": "16:00",
+   "sala": "Aula Múltiple",
+   "titulo": "colombia es fantastica laboratorio de cine fantastico y terror colombiano"
+  },
+  "f_d8725de69d": {
+   "sede": "Comfama La Capilla - Medellín",
+   "dia": "2026-11-07",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "como limpiar una casa en 10 pasos faciles"
+  },
+  "f_5d07110abb": {
+   "sede": "Centro Colombo Americano - Medellín",
+   "dia": "2026-11-07",
+   "hora": "16:00",
+   "sala": "Sala 1",
+   "titulo": "nuestro secreto"
+  },
+  "f_01a50d44b3": {
+   "sede": "Parque de los Deseos - Medellín",
+   "dia": "2026-11-07",
+   "hora": "16:00",
+   "sala": "Cinemateca móvil",
+   "titulo": "papaya"
+  },
+  "f_fc6b76a630": {
+   "sede": "Parque de los Deseos - Medellín",
+   "dia": "2026-11-07",
+   "hora": "16:00",
+   "sala": "Cinemateca móvil, laboratorio",
+   "titulo": "taller de collage cine en retazos"
+  },
+  "f_c4cdf7c9dc": {
+   "sede": "Parque Explora - Medellín",
+   "dia": "2026-11-07",
+   "hora": "16:30",
+   "sala": "Exploratorio",
+   "titulo": "ecologias emergentes del cine expandido"
+  },
+  "f_f42832b07e": {
+   "sede": "Parque de los Deseos - Medellín",
+   "dia": "2026-11-07",
+   "hora": "18:00",
+   "sala": "Cinemateca móvil, sala de cine",
+   "titulo": "especiales cinemateca con natalia reyes"
+  },
+  "f_c9bb3594f8": {
+   "sede": "Comfama La Capilla - Medellín",
+   "dia": "2026-11-07",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "ivan hadoum"
+  },
+  "f_92206ec51c": {
+   "sede": "Librería Antimateria - Medellín",
+   "dia": "2026-11-07",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "la otra orilla revolver la mirada autorizada para manchar la camara de barro"
+  },
+  "f_9ab0081eae": {
+   "sede": "Planetario de Medellín - Medellín",
+   "dia": "2026-11-07",
+   "hora": "18:00",
+   "sala": "Domo",
+   "titulo": "perder la escala experiencias cine domo para otros mundos"
+  },
+  "f_3ccb46ae9b": {
+   "sede": "Casa TEA - Medellín",
+   "dia": "2026-11-07",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "rodando formacion mediaciones en comunidad"
+  },
+  "f_8f09b8d134": {
+   "sede": "Centro Colombo Americano - Medellín",
+   "dia": "2026-11-07",
+   "hora": "18:30",
+   "sala": "Sala 2",
+   "titulo": "programa de cortos 3"
+  },
+  "f_5fd270192f": {
+   "sede": "Parque de los Deseos - Medellín",
+   "dia": "2026-11-07",
+   "hora": "19:00",
+   "sala": "Cinemateca móvil",
+   "titulo": "aun es de noche en caracas"
+  },
+  "f_3093e1c9e4": {
+   "sede": "Cineprox Las Américas - Medellín",
+   "dia": "2026-11-07",
+   "hora": "19:00",
+   "sala": "Sala 3",
+   "titulo": "club sandwich"
+  },
+  "f_822db3367a": {
+   "sede": "Finca Agroturística El Encanto de Mis Abuelos - Medellín",
+   "dia": "2026-11-07",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "el telefono morado"
+  },
+  "f_f328317a57": {
+   "sede": "Museo de Arte Moderno de Medellín - MAMM - Medellín",
+   "dia": "2026-11-07",
+   "hora": "19:00",
+   "sala": "Teatro MAMM",
+   "titulo": "programa de cortos 4"
+  },
+  "f_397b2ea7cb": {
+   "sede": "Parque de los Deseos - Medellín",
+   "dia": "2026-11-08",
+   "hora": "10:00",
+   "sala": "Cinemateca móvil, laboratorio",
+   "titulo": "taller de cianotipia fotografia en papel sin recurrir a la camara"
+  },
+  "f_fb4fb26381": {
+   "sede": "Casa de la Música - Medellín",
+   "dia": "2026-11-08",
+   "hora": "10:00",
+   "sala": "",
+   "titulo": "taller pintar el cine intervencion y proyeccion de material filmico"
+  },
+  "f_ff53d84213": {
+   "sede": "Parque de los Deseos - Medellín",
+   "dia": "2026-11-08",
+   "hora": "11:00",
+   "sala": "Cinemateca móvil",
+   "titulo": "mu ki ra"
+  },
+  "f_c00661685d": {
+   "sede": "Parque de los Deseos - Medellín",
+   "dia": "2026-11-08",
+   "hora": "14:00",
+   "sala": "Cinemateca móvil, laboratorio",
+   "titulo": "laboratorio vivo hilos de memoria"
+  },
+  "f_9f95bcb4e9": {
+   "sede": "Centro Colombo Americano - Medellín",
+   "dia": "2026-11-08",
+   "hora": "14:00",
+   "sala": "Sala 1",
+   "titulo": "ninas escarlata"
+  },
+  "f_44d17220da": {
+   "sede": "Parque de los Deseos - Medellín",
+   "dia": "2026-11-08",
+   "hora": "14:00",
+   "sala": "Cinemateca móvil",
+   "titulo": "programa de cortos"
+  },
+  "f_e22f48016b": {
+   "sede": "Museo de Arte Moderno de Medellín - MAMM - Medellín",
+   "dia": "2026-11-08",
+   "hora": "14:00",
+   "sala": "Teatro MAMM",
+   "titulo": "relicto"
+  },
+  "f_f2d735bb0a": {
+   "sede": "Comfama La Capilla - Medellín",
+   "dia": "2026-11-08",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "el deshielo"
+  },
+  "f_9f466da4e6": {
+   "sede": "Cineprox Las Américas - Medellín",
+   "dia": "2026-11-08",
+   "hora": "16:00",
+   "sala": "Sala 3",
+   "titulo": "programa de cortos 2"
+  },
+  "f_0074174ea3": {
+   "sede": "Parque de los Deseos - Medellín",
+   "dia": "2026-11-08",
+   "hora": "16:00",
+   "sala": "Cinemateca móvil, laboratorio",
+   "titulo": "taller de mascaras conviertete en un bicho raro"
+  },
+  "f_39f608dc63": {
+   "sede": "Centro Colombo Americano - Medellín",
+   "dia": "2026-11-08",
+   "hora": "16:00",
+   "sala": "Sala 1",
+   "titulo": "un dia en la vida de"
+  },
+  "f_86d1922551": {
+   "sede": "Parque de los Deseos - Medellín",
+   "dia": "2026-11-08",
+   "hora": "17:30",
+   "sala": "Cinemateca móvil, sala de cine",
+   "titulo": "juancho valencia y su relacion con el cine"
+  },
+  "f_7ecb1024c6": {
+   "sede": "Parque de los Deseos - Medellín",
+   "dia": "2026-11-08",
+   "hora": "18:30",
+   "sala": "Plazoleta",
+   "titulo": "proyeccion y concierto de clausura"
+  }
+ }
+}

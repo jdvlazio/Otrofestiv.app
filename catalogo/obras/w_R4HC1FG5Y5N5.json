@@ -6,7 +6,8 @@
   "AR"
  ],
  "directores": [
-  "Lorenzo Ferro"
+  "Lorenzo Ferro",
+  "Lucas A. Vignale"
  ],
  "aliases": [
   {
@@ -20,13 +21,17 @@
   "en": "Milo, a charismatic boy who dances malambo, runs away from home and travels to Buenos Aires in search of a new life, in this fascinating film where the documentary and the absurd coexist in perfect harmony."
  },
  "generos": [
-  "Drama"
+  "Drama",
+  "Ficción"
  ],
  "afiche": {
   "archivo": "https://image.tmdb.org/t/p/w500/wElH8qOEoF1Fl09DI0CA82AW4oe.jpg",
   "veredicto": "oficial"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 1574074,
+  "letterboxd": "the-river-train"
+ },
  "versiones": [
   {
    "etiqueta": "75 min",
@@ -34,6 +39,7 @@
   }
  ],
  "presentaciones": [
-  "ficci-65"
+  "ficci-65",
+  "miradas-2026"
  ]
 }

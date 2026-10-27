@@ -1083,6 +1083,25 @@ export const FESTIVAL_CONFIG={
     prioLimit:3,eventPosterLabel:['EVENTO',''],
     films:null,posters:null,lbSlugs:{}
   },
+  'miradas2026': {
+    name:'Miradas Medellín',displayName:'Miradas Medellín',fullName:'Miradas Medellín 2026 — Festival de cine y artes audiovisuales',shortName:'MIRADAS',
+    city:'Medellín',country:'CO',
+    dates:'3–8 NOV',dates_en:'NOV 3–8',year:2026,timezoneOffset:'-05:00',
+    // LA PORTADA de la programación oficial (PDF de la Alcaldía, 20 oct 2026, pág. 1):
+    // el arte de la edición con «MIRADAS MDE 2026». Estirada a 400×600 (keyart-estirado)
+    keyArt:'/assets/keyart/miradas2026-v1.jpg',
+    // el descriptor que el festival imprime junto a su nombre (portada del PDF)
+    tagline:'Festival de Cine y Artes Audiovisuales',
+    storageKey:'miradas2026_',festivalStartStr:'2026-11-03T00:00:00',festivalEndStr:'2026-11-08T23:59:00',
+    festivalDates:{'2026-11-03':'2026-11-03','2026-11-04':'2026-11-04','2026-11-05':'2026-11-05','2026-11-06':'2026-11-06','2026-11-07':'2026-11-07','2026-11-08':'2026-11-08'},
+    days:[{k:'2026-11-03',d:3,lbl:'MAR'},{k:'2026-11-04',d:4,lbl:'MIÉ'},{k:'2026-11-05',d:5,lbl:'JUE'},{k:'2026-11-06',d:6,lbl:'VIE'},{k:'2026-11-07',d:7,lbl:'SÁB'},{k:'2026-11-08',d:8,lbl:'DOM'}],
+    dayKeys:['2026-11-03','2026-11-04','2026-11-05','2026-11-06','2026-11-07','2026-11-08'],
+    dayShort:{'2026-11-03':'MAR 3','2026-11-04':'MIÉ 4','2026-11-05':'JUE 5','2026-11-06':'VIE 6','2026-11-07':'SÁB 7','2026-11-08':'DOM 8'},
+    dayShort_en:{'2026-11-03':'TUE 3','2026-11-04':'WED 4','2026-11-05':'THU 5','2026-11-06':'FRI 6','2026-11-07':'SAT 7','2026-11-08':'SUN 8'},
+    dayLong:{'2026-11-03':'Martes 3 de noviembre','2026-11-04':'Miércoles 4 de noviembre','2026-11-05':'Jueves 5 de noviembre','2026-11-06':'Viernes 6 de noviembre','2026-11-07':'Sábado 7 de noviembre','2026-11-08':'Domingo 8 de noviembre'},
+    prioLimit:5,eventPosterLabel:['EVENTO',''],
+    films:null,posters:null,lbSlugs:{}
+  },
   'narrarelfuturo2026': {
     name:'#NarrarElFuturo',fullName:'#NarrarElFuturo — Festival de Cine & Nuevos Medios',shortName:'NEF',
     city:'Bogotá',country:'CO',
@@ -1146,6 +1165,22 @@ export const ARCHETYPE_COLORS = {
 // Cada sección de cada festival → su arquetipo. Generado por scripts/classify-posters
 // (arquetipos) + decisiones de diseño. Sección nueva sin entrada → gate lo caza.
 export const SECTION_ARCHETYPES = {
+  // ── Miradas Medellín 2026 · Medellín (índice del PDF oficial) ─────────
+  '🏙️ Cine Hecho en Medellín': 'Muestra / País',
+  '🇨🇴 Cine Colombiano': 'Muestra / País',
+  '🌎 Cine Iberoamericano': 'Perspectivas / Miradas',
+  '🎞️ Programas de Cortos': 'Cortos / Programas',
+  '🎥 Retrospectiva Fernando Eimbcke': 'Retrospectiva / Tributo',
+  '👨‍👩‍👧 Cine Familiar': 'Especiales / Eventos',
+  '🤟 Cine Accesible': 'Especiales / Eventos',
+  '🏘️ Cine Comunitario - Hecho en Medellín': 'Muestra / País',
+  '🗂️ Cine Memoria': 'Retrospectiva / Tributo',
+  '🌀 Cine Expandido - Hecho en Medellín': 'Especiales / Eventos',
+  '🪐 Cine en el Domo': 'Especiales / Eventos',
+  '🚚 Cinemateca Móvil': 'Especiales / Eventos',
+  '🛠️ Talleres de Desarrollo y Mediación de Audiencias': 'Charlas / Industria',
+  '🤝 Días de Industria': 'Charlas / Industria',
+  '🎆 Evento de Clausura': 'Clausura',
   // ── Festival de Cine Funza 2026 · Funza (el «Componente» de la agenda) ─
   '📚 Literatura / Artes Escénicas / Cine': 'Especiales / Eventos',
   '💬 Conversatorio': 'Charlas / Industria',

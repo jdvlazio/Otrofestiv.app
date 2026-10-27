@@ -1,7 +1,11 @@
 {
- "_nota": "Miradas Medellín 2026 — Festival de cine y artes audiovisuales (Medellín, 3–8 nov 2026; Secretaría de Cultura, entrada libre). PRE-ONBOARDING: la selección de @cinematecademedellin (3 carruseles, 11–15 oct). Las iberoamericanas ya traen sus funciones (guardadas en funciones_lamina); falta la parrilla completa (Hecho en Medellín, cine expandido, comunitario, LAB). Cuando salga se agregan crudo/enriquecer/ensamblar, ya en el modelo de la función (docs/FUNCION.md).",
+ "_nota": "MONTAJE (27 oct 2026). Miradas Medellín 2026 — Festival de cine y artes audiovisuales (Medellín, 3–8 nov; Secretaría de Cultura, entrada libre). La programación es el PDF oficial de la Alcaldía (112 págs., 20 oct), transcrito en miradas-2026-crudo.py; el catálogo de las láminas de @cinematecademedellin (pre-onboarding) aporta las fichas TMDB. Lo que el PDF cambia respecto a las láminas está en _diferencias_ig del crudo; lo que no se publica, en _no_se_publica.",
  "radar": 1088,
  "pasos": [
+  {
+   "cmd": "python3 pipeline/radar.py miradas-2026",
+   "que": "el volcado del radar #1088"
+  },
   {
    "cmd": "python3 pipeline/miradas-2026-catalogo.py",
    "que": "las láminas de 6 carruseles → catálogo (49 obras). Del 23–25 oct (De2vCbSjAvy, De5YY1EjVYl, De71yR-jinh) llegan 7 cortos colombianos nuevos y la ficha + FUNCIONES de Cine Comunitario y de los cortos Hecho en Medellín"
@@ -17,11 +21,282 @@
   {
    "cmd": "python3 pipeline/miradas-2026-formacion.py",
    "que": "las 5 actividades de mediación y formación (carrusel Dep67rsCZmE, 18 oct) → 18 sesiones con día, hora y lugar, transcritas a ojo"
+  },
+  {
+   "cmd": "python3 pipeline/miradas-2026-crudo.py",
+   "que": "el PDF oficial (20 oct) → crudo: grilla diaria, Cinemateca móvil, Cine expandido y Domo, funciones en barrio de Cine Comunitario, talleres y Días de Industria abiertos"
+  },
+  {
+   "cmd": "python3 pipeline/enriquecer.py miradas-2026 --posters",
+   "que": "la cascada de TMDB y lo ya publicado"
+  },
+  {
+   "cmd": "python3 pipeline/ensamblar.py miradas-2026",
+   "que": "el build"
+  },
+  {
+   "cmd": "python3 pipeline/encuadrar-posters.py miradas-2026 --aplicar --desde festivals/staging/miradas-2026-build.json",
+   "que": "los afiches a 2:3"
+  },
+  {
+   "cmd": "python3 pipeline/miradas-2026-verificar.py",
+   "que": "el build contra las tres lecturas independientes del PDF (A prosa, B grillas como imagen, C web), en los dos sentidos; programas que suman; sedes con pin a mano"
   }
  ],
  "_fuentes_versionadas": {
   "festivals/staging/miradas-2026-catalogo.json": "la selección (42 obras) con las funciones de las iberoamericanas; la leerá el crudo",
   "festivals/staging/miradas-2026-catalogo-enriquecido.json": "las fichas TMDB/cascada (23 de 42), que escribe el paso 2. Es el trabajo que el montaje reusa cuando salga la parrilla.",
-  "festivals/staging/miradas-2026-formacion.json": "las 5 actividades de formación con sus sesiones; la leerá el crudo"
- }
+  "festivals/staging/miradas-2026-formacion.json": "las 5 actividades de formación con sus sesiones; la leerá el crudo",
+  "festivals/staging/miradas-2026-venues-geo.json": "los pines: Google Maps (27 oct) y los ya verificados en Fantasmagoría y Mamut",
+  "festivals/staging/miradas-2026-radar.json": "el volcado del radar #1088",
+  "festivals/staging/miradas-2026-quitar.json": "datos heredados que se retiran a propósito (el afiche de «Mal de tierra» de CineAutopsia)"
+ },
+ "festival": {
+  "crudo": "festivals/staging/miradas-2026-crudo.json",
+  "enriquecido": "festivals/staging/miradas-2026-enriquecido.json",
+  "geo": "festivals/staging/miradas-2026-venues-geo.json",
+  "_por_que_sedes": "El nombre del lugar que imprime el PDF, normalizado; la sala aparte (Teatro MAMM, Plazoleta y Quinto piso son del Museo de Arte Moderno; la Cinemateca móvil es la sala itinerante del Parque de los Deseos). Otraparte (Envigado), Comfama Bello (Bello) y Comfama Caldas (Caldas) se publican en la ciudad «Medellín» con su pin real, como Otraparte en Fantasmagoría (Juan, 30 sep): evita «¿A cuál ciudad vas?» por 3 funciones.",
+  "sedes": {
+   "Museo de Arte Moderno de Medellín - MAMM": [
+    "Museo de Arte Moderno de Medellín - MAMM - Medellín",
+    ""
+   ],
+   "Centro Colombo Americano": [
+    "Centro Colombo Americano - Medellín",
+    ""
+   ],
+   "Cineprox Las Américas": [
+    "Cineprox Las Américas - Medellín",
+    ""
+   ],
+   "Centro de Desarrollo Cultural de Moravia": [
+    "Centro de Desarrollo Cultural de Moravia - Medellín",
+    ""
+   ],
+   "Comfama Otraparte": [
+    "Comfama Otraparte - Medellín",
+    ""
+   ],
+   "Comfama La Capilla": [
+    "Comfama La Capilla - Medellín",
+    ""
+   ],
+   "Librería Antimateria": [
+    "Librería Antimateria - Medellín",
+    ""
+   ],
+   "Paraninfo Universidad de Antioquia": [
+    "Paraninfo Universidad de Antioquia - Medellín",
+    ""
+   ],
+   "Parque de los Deseos": [
+    "Parque de los Deseos - Medellín",
+    ""
+   ],
+   "Planetario de Medellín": [
+    "Planetario de Medellín - Medellín",
+    ""
+   ],
+   "Teatro Pablo Tobón Uribe": [
+    "Teatro Pablo Tobón Uribe - Medellín",
+    ""
+   ],
+   "Parque Explora": [
+    "Parque Explora - Medellín",
+    ""
+   ],
+   "Parque de Cristo Rey": [
+    "Parque de Cristo Rey - Medellín",
+    ""
+   ],
+   "Biblioteca Comfama Bello": [
+    "Biblioteca Comfama Bello - Medellín",
+    ""
+   ],
+   "Comfama Aranjuez": [
+    "Comfama Aranjuez - Medellín",
+    ""
+   ],
+   "Biblioteca Comfama Caldas": [
+    "Biblioteca Comfama Caldas - Medellín",
+    ""
+   ],
+   "Estación Trece de Noviembre": [
+    "Estación Trece de Noviembre - Medellín",
+    ""
+   ],
+   "Junta de Acción Comunal El Faro": [
+    "Junta de Acción Comunal El Faro - Medellín",
+    ""
+   ],
+   "Café Pletórico": [
+    "Café Pletórico - Medellín",
+    ""
+   ],
+   "Teatro UVA Tricentenario": [
+    "Teatro UVA Tricentenario - Medellín",
+    ""
+   ],
+   "Institución Educativa Pío XII": [
+    "Institución Educativa Pío XII - Medellín",
+    ""
+   ],
+   "JAC Santa Cruz parte alta": [
+    "JAC Santa Cruz parte alta - Medellín",
+    ""
+   ],
+   "Finca Agroturística El Encanto de Mis Abuelos": [
+    "Finca Agroturística El Encanto de Mis Abuelos - Medellín",
+    ""
+   ],
+   "Escuela Vereda El Placer": [
+    "Escuela Vereda El Placer - Medellín",
+    ""
+   ],
+   "Institución Educativa La Independencia": [
+    "Institución Educativa La Independencia - Medellín",
+    ""
+   ],
+   "Casa TEA": [
+    "Casa TEA - Medellín",
+    ""
+   ],
+   "Casa de la Música": [
+    "Casa de la Música - Medellín",
+    ""
+   ],
+   "Coocine": [
+    "Coocine - Medellín",
+    ""
+   ],
+   "Institución Educativa La Independencia (calle 39D # 112-81, San Javier)": [
+    "Institución Educativa La Independencia - Medellín",
+    ""
+   ],
+   "Centro Colombo Americano, Aula Múltiple.": [
+    "Centro Colombo Americano - Medellín",
+    "Aula Múltiple"
+   ],
+   "Librería y Espacio Cultural Antimateria (calle 45E # 72-09, Laureles)": [
+    "Librería Antimateria - Medellín",
+    ""
+   ],
+   "Edificio Paraninfo Universidad de Antioquia (carrera 44 # 48-72, La Candelaria)": [
+    "Paraninfo Universidad de Antioquia - Medellín",
+    ""
+   ],
+   "Sede cultural Casa TEA (calle 53 # 47-44, La Candelaria)": [
+    "Casa TEA - Medellín",
+    ""
+   ]
+  },
+  "_por_que_secciones": "Las secciones del índice del PDF (pág. 11) tal cual, en caja de Título. «Programas de Cortos» agrupa los «Programa de cortos 1–4» de la grilla, que mezclan Hecho en Medellín, Colombiano e Iberoamericano. «Cinemateca Móvil» es la programación diaria del Parque de los Deseos (págs. 56–63). «Talleres de Desarrollo y Mediación de Audiencias» acorta el título largo de la pág. 9.",
+  "secciones": {
+   "Película Inaugural": {
+    "emoji": "🎬",
+    "en": "Opening Film",
+    "archetype": "Apertura / Gala"
+   },
+   "Cine Hecho en Medellín": {
+    "emoji": "🏙️",
+    "en": "Made in Medellín",
+    "archetype": "Muestra / País"
+   },
+   "Cine Colombiano": {
+    "emoji": "🇨🇴",
+    "en": "Colombian Cinema",
+    "archetype": "Muestra / País"
+   },
+   "Cine Iberoamericano": {
+    "emoji": "🌎",
+    "en": "Ibero-American Cinema",
+    "archetype": "Perspectivas / Miradas"
+   },
+   "Programas de Cortos": {
+    "emoji": "🎞️",
+    "en": "Short Film Programs",
+    "archetype": "Cortos / Programas"
+   },
+   "Retrospectiva Fernando Eimbcke": {
+    "emoji": "🎥",
+    "en": "Fernando Eimbcke Retrospective",
+    "archetype": "Retrospectiva / Tributo"
+   },
+   "Cine Familiar": {
+    "emoji": "👨‍👩‍👧",
+    "en": "Family Cinema",
+    "archetype": "Especiales / Eventos"
+   },
+   "Cine Accesible": {
+    "emoji": "🤟",
+    "en": "Accessible Cinema",
+    "archetype": "Especiales / Eventos"
+   },
+   "Cine Comunitario - Hecho en Medellín": {
+    "emoji": "🏘️",
+    "en": "Community Cinema - Made in Medellín",
+    "archetype": "Muestra / País"
+   },
+   "Cine Memoria": {
+    "emoji": "🗂️",
+    "en": "Cinema Memory",
+    "archetype": "Retrospectiva / Tributo"
+   },
+   "Cine Expandido - Hecho en Medellín": {
+    "emoji": "🌀",
+    "en": "Expanded Cinema - Made in Medellín",
+    "archetype": "Especiales / Eventos"
+   },
+   "Cine en el Domo": {
+    "emoji": "🪐",
+    "en": "Dome Cinema",
+    "archetype": "Especiales / Eventos"
+   },
+   "Cinemateca Móvil": {
+    "emoji": "🚚",
+    "en": "Mobile Cinematheque",
+    "archetype": "Especiales / Eventos"
+   },
+   "Talleres de Desarrollo y Mediación de Audiencias": {
+    "emoji": "🛠️",
+    "en": "Audience Development Workshops",
+    "archetype": "Charlas / Industria"
+   },
+   "Días de Industria": {
+    "emoji": "🤝",
+    "en": "Industry Days",
+    "archetype": "Charlas / Industria"
+   },
+   "Evento de Clausura": {
+    "emoji": "🎆",
+    "en": "Closing Event",
+    "archetype": "Clausura"
+   }
+  },
+  "name": "Miradas Medellín",
+  "displayName": "Miradas Medellín",
+  "fullName": "Miradas Medellín 2026 — Festival de cine y artes audiovisuales",
+  "shortName": "MIRADAS",
+  "tagline": "Festival de Cine y Artes Audiovisuales",
+  "city": "Medellín",
+  "country": "CO",
+  "dates": "3–8 NOV",
+  "dates_en": "NOV 3–8",
+  "year": 2026,
+  "timezoneOffset": "-05:00",
+  "storageKey": "miradas2026_",
+  "festivalStartStr": "2026-11-03T00:00:00",
+  "festivalEndStr": "2026-11-08T23:59:00",
+  "sharedSlotIsOneScreening": false,
+  "mes_es": "noviembre",
+  "dias_vacios": []
+ },
+ "fuentes_vivas": [
+  {
+   "archivo": "fuentes/miradas-2026/pdf-programacion/programacion-miradas-2026-liviano.pdf",
+   "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+   "que": "el PDF oficial, enlazado por la Alcaldía; «puede estar sujeta a cambios» (pág. 2)",
+   "cmd": "curl -sfL -o fuentes/miradas-2026/pdf-programacion/programacion-miradas-2026-liviano.pdf 'https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b'"
+  }
+ ]
 }
