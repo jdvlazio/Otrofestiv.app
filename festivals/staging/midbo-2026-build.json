@@ -391,7 +391,7 @@
    "time": "16:00",
    "day_order": 0,
    "venue": "Alianza Francesa - Bogotá",
-   "has_qa": false,
+   "has_qa": true,
    "synopsis": "En un hospital público de París, Claire Simon explora lo que significa habitar cuerpos de mujer, filmando su diversidad, singularidad y belleza en todas las etapas de la vida. Se despliegan historias únicas de deseos, miedos y luchas, incluida la de la propia cineasta.",
    "synopsis_lang": "es",
    "poster": "/assets/midbo-2026/notre-corps.jpg",
@@ -440,9 +440,9 @@
      "url": "https://midbo.co/"
     },
     "has_qa": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-10",
-     "url": "https://midbo.co/"
+     "tipo": "juan",
+     "fecha": "2026-10-27",
+     "frase": "«Notre corps», hoy 27 oct 16:00, Alianza Francesa sede Centro → has_qa true (IG DfAWypbCTFa lámina 2: Función con Q&A)"
     },
     "title": {
      "tipo": "festival-web",
@@ -10073,9 +10073,9 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-27T05:09:17",
+  "fecha": "2026-10-27T13:23:20",
   "plan_sha": "a59415cd50b61e59",
-  "paso": 6,
-  "cmd": "python3 pipeline/ensamblar.py midbo-2026"
+  "paso": 8,
+  "cmd": "python3 pipeline/midbo-2026-verificar.py"
  }
 }
