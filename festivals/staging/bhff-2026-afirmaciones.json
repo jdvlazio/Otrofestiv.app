@@ -909,6 +909,22 @@
    "casilla": "sala",
    "valor": "Teatro Urbano, Piso -1",
    "evidencia": "@cinematecabta lámina 1: Donde duermen los sueños · JUEVES 29 OCT 2026 · 5:30 P.M. · ENTRADA LIBRE · AFORO 250 PERSONAS · CENTRO FELICIDAD CHAPINERO Calle 82 No. 10 - 69 · TEATRO URBANO Piso -1"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-10-27",
+    "hora": "19:30"
+   },
+   "fuente": {
+    "tipo": "juan",
+    "frase": "«La Muerte No Llega Sola», hoy 27 oct 19:30, Cinemateca de Bogotá → has_qa true (IG DfAYrImlYJX lámina 2: Proyecciones con conversatorio · Modera: Willy Jimenez)",
+    "fecha": "2026-10-27"
+   },
+   "casilla": "has_qa",
+   "valor": true,
+   "evidencia": "lámina 2 de p/DfAYrImlYJX: «PROYECCIONES CON CONVERSATORIO · FRANJA NACIONAL- LA MUERTE NO LLEGA SOLA · 27 oct. 7:30 P.M · CINEMATECA DE BOGOTÁ · MODERA: Willy Jimenez»",
+   "contra": false
   }
  ]
 }

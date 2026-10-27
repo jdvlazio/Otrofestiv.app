@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "midbo.co — ficha de cada obra (bloque «Funciones») + API pelicula/seccion",
-  "capturado": "2026-10-26",
+  "capturado": "2026-10-27",
   "url": "https://midbo.co/",
   "metodo": "120 fichas; sección = categoría madre, programa = hija"
  },
@@ -426,9 +426,9 @@
    "hora": "17:00",
    "sede": "Bodega Insurgesta",
    "ciudad": "Bogotá",
-   "acceso": "Entrada libre (no se anuncia pago)",
+   "acceso": "Entrada libre",
    "_src": {
-    "url": "https://midbo.co/peliculas/montana-luminosa/",
+    "url": "https://midbo.co/peliculas/geografia-espectral/",
     "date": "2026-10-10"
    },
    "has_qa": true,
@@ -436,6 +436,14 @@
    "premiere": "Estreno mundial",
    "seccion": "Competencia Nacional de Cortometraje Documental",
    "obras": [
+    {
+     "titulo": "Geografía espectral",
+     "director": "Manuel Mateo Gómez",
+     "pais": "Colombia",
+     "anio": 2026,
+     "duracion_min": 22,
+     "sinopsis": "A orillas de una represa hidroeléctrica, cuya construcción sepultó el antiguo cauce del río Cauca, un grupo de mujeres se reúne para bordar. Cubren el río de flores para invocar a sus muertos, en una geografía tejida por hilos de memoria y resistencia. El espíritu de los cuerpos arrojados al río y cubiertos por la represa inconclusa navega junto a los peces en el agua. Las almas emergen vestidas de fuego para escuchar el canto que les envían sus madres y hermanas desde la vida."
+    },
     {
      "titulo": "Montaña luminosa",
      "director": "Lony Welter",
@@ -467,14 +475,6 @@
      "anio": 2026,
      "duracion_min": 27,
      "sinopsis": "Dos mujeres intercambian cartas fílmicas que cruzan el pasado y el presente, entrelazando material de archivo de películas amateur con material ficticio actual filmado en 16 mm. Nunca se conocen en persona, sólo en sus películas. Heidrun, una vienesa retratada mediante material de archivo, y Sara, una inmigrante colombiana que trabaja en el archivo fílmico del Museo Austriaco del Cine. Ambas viven en Viena en diferentes épocas y observan la ciudad desde sus respectivas y sus situaciones de vida. La película aborda temas como la migración, el desarraigo y el racismo, y adopta una dimensión ensayística al cuestionar qué merece ser archivado y qué no."
-    },
-    {
-     "titulo": "Geografía espectral",
-     "director": "Manuel Mateo Gómez",
-     "pais": "Colombia",
-     "anio": 2026,
-     "duracion_min": 22,
-     "sinopsis": "A orillas de una represa hidroeléctrica, cuya construcción sepultó el antiguo cauce del río Cauca, un grupo de mujeres se reúne para bordar. Cubren el río de flores para invocar a sus muertos, en una geografía tejida por hilos de memoria y resistencia. El espíritu de los cuerpos arrojados al río y cubiertos por la represa inconclusa navega junto a los peces en el agua. Las almas emergen vestidas de fuego para escuchar el canto que les envían sus madres y hermanas desde la vida."
     }
    ],
    "duracion_min": 99
@@ -629,7 +629,7 @@
    "sede": "Universidad Jorge Tadeo Lozano",
    "sala": "Aula Magistral 705 - M16 (piso 7), Edificio de Posgrados",
    "ciudad": "Bogotá",
-   "acceso": "Entrada libre (no se anuncia pago)",
+   "acceso": "Entrada libre",
    "_src": {
     "url": "https://midbo.co/peliculas/un-lugar-mas-grande/",
     "date": "2026-10-10"
@@ -984,7 +984,8 @@
    "sede": "Cinemateca de Bogotá",
    "sala": "Sala 3",
    "ciudad": "Bogotá",
-   "acceso": "desconocido",
+   "ticket_url": "https://tuboleta.com/es/eventos/como-me-da-la-gana",
+   "acceso": "Boletería en TuBoleta",
    "_src": {
     "url": "https://midbo.co/peliculas/como-me-da-la-gana/",
     "date": "2026-10-10"
@@ -1004,7 +1005,8 @@
    "sede": "Cinemateca de Bogotá",
    "sala": "Sala Capital",
    "ciudad": "Bogotá",
-   "acceso": "desconocido",
+   "ticket_url": "https://tuboleta.com/es/eventos/geografias-en-resistencia",
+   "acceso": "Boletería en TuBoleta",
    "_src": {
     "url": "https://midbo.co/peliculas/apotnojushi-la-casa-del-viento/",
     "date": "2026-10-10"
@@ -1028,7 +1030,7 @@
      "pais": "Colombia",
      "anio": 2026,
      "duracion_min": 30,
-     "sinopsis": "En los años setenta, siendo niña, Susana acompañó a su padre, Pedro Juajibioy, en distintos viajes por el Putumayo, donde él recolectaba plantas mientras soñaba con crear un jardín botánico en Sibundoy, su lugar de origen. Hoy, junto a Susana y Brayan, un joven botánico de Sibundoy, recorremos esos mismos caminos en la Amazonía colombiana, siguiendo las huellas de Pedro, reconocido por haber acompañado al etnobotánico Richard Evans Schultes en sus exploraciones por la región entre 1941 y 1953. Ese legado continúa en la labor de Brayan, quien, inspirado en el jardín de Pedro, destruido por una avalancha en la década de 1990, creó en Sibundoy un nuevo espacio de conservación y reanudó su trabajo de recolección y cuidado de las plantas. «Un río de aguas profundas y luminosas» acompaña estos recorridos, en los que se puede observar cómo el conocimiento se transmite entre generaciones y permanece vivo en quienes continúan practicándolo en su territorio."
+     "sinopsis": "A mediados de los años setenta, siendo niña, Susana acompañó a su padre, Pedro Juajibioy, en distintos viajes por el Putumayo, donde él recolectaba plantas mientras soñaba con crear un jardín botánico en Sibundoy, su lugar de origen. Hoy, junto a Susana y Brayan, un joven botánico de Sibundoy, recorremos esos mismos caminos en la Amazonía colombiana, siguiendo las huellas de Pedro, reconocido por haber acompañado al etnobotánico Richard Evans Schultes en sus exploraciones por la región entre 1941 y 1953. Ese legado continúa en la labor de Brayan, quien, inspirado en el jardín de Pedro, destruido por una avalancha en el año 2000, creó en Sibundoy un nuevo espacio de conservación y reanudó su trabajo de recolección y cuidado de las plantas. «Un río de aguas profundas y luminosas» acompaña estos recorridos, en los que se puede observar cómo el conocimiento se transmite entre generaciones y permanece vivo en quienes continúan practicándolo en su territorio."
     },
     {
      "titulo": "El salto",
@@ -1096,7 +1098,8 @@
    "sede": "Cinemateca de Bogotá",
    "sala": "Sala 2",
    "ciudad": "Bogotá",
-   "acceso": "desconocido",
+   "ticket_url": "https://tuboleta.com/es/eventos/nacer-de-nuevo-escuchando-la-vida",
+   "acceso": "Boletería en TuBoleta",
    "_src": {
     "url": "https://midbo.co/peliculas/chanson-pour-le-nouveau-monde/",
     "date": "2026-10-10"
@@ -1137,7 +1140,8 @@
    "sede": "Cinemateca de Bogotá",
    "sala": "Sala Capital",
    "ciudad": "Bogotá",
-   "acceso": "desconocido",
+   "ticket_url": "https://tuboleta.com/es/eventos/retrospectiva-sara-gomez",
+   "acceso": "Boletería en TuBoleta",
    "_src": {
     "url": "https://midbo.co/peliculas/ire-a-santiago/",
     "date": "2026-10-10"
@@ -1208,7 +1212,8 @@
    "sede": "Cinemateca de Bogotá",
    "sala": "Sala 3",
    "ciudad": "Bogotá",
-   "acceso": "desconocido",
+   "ticket_url": "https://tuboleta.com/es/eventos/hombres-perdidos",
+   "acceso": "Boletería en TuBoleta",
    "_src": {
     "url": "https://midbo.co/peliculas/hombres-perdidos/",
     "date": "2026-10-10"
@@ -1229,7 +1234,8 @@
    "sede": "Cinemateca de Bogotá",
    "sala": "Sala 2",
    "ciudad": "Bogotá",
-   "acceso": "desconocido",
+   "ticket_url": "https://tuboleta.com/es/eventos/algun-dia-escribiremos-sobre-flores",
+   "acceso": "Boletería en TuBoleta",
    "_src": {
     "url": "https://midbo.co/peliculas/the-flowers-stand-silently-witnessing/",
     "date": "2026-10-10"
@@ -1303,7 +1309,8 @@
    "sede": "Cinemateca de Bogotá",
    "sala": "Sala 3",
    "ciudad": "Bogotá",
-   "acceso": "desconocido",
+   "ticket_url": "https://tuboleta.com/es/eventos/back-fukushima",
+   "acceso": "Boletería en TuBoleta",
    "_src": {
     "url": "https://midbo.co/peliculas/back-to-fukushima/",
     "date": "2026-10-10"
@@ -1323,7 +1330,8 @@
    "sede": "Cinemateca de Bogotá",
    "sala": "Sala Capital",
    "ciudad": "Bogotá",
-   "acceso": "desconocido",
+   "ticket_url": "https://tuboleta.com/es/eventos/relicto",
+   "acceso": "Boletería en TuBoleta",
    "_src": {
     "url": "https://midbo.co/peliculas/relicto/",
     "date": "2026-10-10"
@@ -1345,7 +1353,8 @@
    "sede": "Cinemateca de Bogotá",
    "sala": "Sala Capital",
    "ciudad": "Bogotá",
-   "acceso": "desconocido",
+   "ticket_url": "https://tuboleta.com/es/eventos/crea-idartes",
+   "acceso": "Boletería en TuBoleta",
    "_src": {
     "url": "https://midbo.co/peliculas/los-guardianes-del-agua/",
     "date": "2026-10-10"
@@ -1426,7 +1435,8 @@
    "sede": "Cinemateca de Bogotá",
    "sala": "Sala 3",
    "ciudad": "Bogotá",
-   "acceso": "desconocido",
+   "ticket_url": "https://tuboleta.com/es/eventos/homenaje-alado-pablo-mora",
+   "acceso": "Boletería en TuBoleta",
    "_src": {
     "url": "https://midbo.co/peliculas/quien-paga-el-pato/",
     "date": "2026-10-10"
@@ -1461,7 +1471,8 @@
    "sede": "Cinemateca de Bogotá",
    "sala": "Sala Capital",
    "ciudad": "Bogotá",
-   "acceso": "desconocido",
+   "ticket_url": "https://tuboleta.com/es/eventos/creadoras-de-vida",
+   "acceso": "Boletería en TuBoleta",
    "_src": {
     "url": "https://midbo.co/peliculas/geografia-espectral/",
     "date": "2026-10-10"
@@ -1521,7 +1532,8 @@
    "sede": "Cinemateca de Bogotá",
    "sala": "Sala 2",
    "ciudad": "Bogotá",
-   "acceso": "desconocido",
+   "ticket_url": "https://tuboleta.com/es/eventos/imagenes-para-otro-pasado",
+   "acceso": "Boletería en TuBoleta",
    "_src": {
     "url": "https://midbo.co/peliculas/escrito-sobre-un-cuerpo/",
     "date": "2026-10-10"
@@ -1571,7 +1583,8 @@
    "sede": "Cinemateca de Bogotá",
    "sala": "Sala 3",
    "ciudad": "Bogotá",
-   "acceso": "desconocido",
+   "ticket_url": "https://tuboleta.com/es/eventos/foco-santiago-alvarez",
+   "acceso": "Boletería en TuBoleta",
    "_src": {
     "url": "https://midbo.co/peliculas/hanoi-martes-13/",
     "date": "2026-10-10"
@@ -1671,7 +1684,8 @@
    "sede": "Cinemateca de Bogotá",
    "sala": "Sala Capital",
    "ciudad": "Bogotá",
-   "acceso": "desconocido",
+   "ticket_url": "https://tuboleta.com/es/eventos/miradas-convulsas-desde-el-presente",
+   "acceso": "Boletería en TuBoleta",
    "_src": {
     "url": "https://midbo.co/peliculas/boyuna/",
     "date": "2026-10-10"
@@ -1721,7 +1735,8 @@
    "sede": "Cinemateca de Bogotá",
    "sala": "Sala 2",
    "ciudad": "Bogotá",
-   "acceso": "desconocido",
+   "ticket_url": "https://tuboleta.com/es/eventos/tanto-trabajo-por-hacer",
+   "acceso": "Boletería en TuBoleta",
    "_src": {
     "url": "https://midbo.co/peliculas/a-women-s-college-in-the-village/",
     "date": "2026-10-10"
@@ -1753,7 +1768,8 @@
    "sede": "Cinemateca de Bogotá",
    "sala": "Sala 3",
    "ciudad": "Bogotá",
-   "acceso": "desconocido",
+   "ticket_url": "https://tuboleta.com/es/eventos/hair-paper-water-toc-giay-va-nuoc",
+   "acceso": "Boletería en TuBoleta",
    "_src": {
     "url": "https://midbo.co/peliculas/hair-paper-water/",
     "date": "2026-10-10"
@@ -1773,7 +1789,8 @@
    "sede": "Cinemateca de Bogotá",
    "sala": "Sala Capital",
    "ciudad": "Bogotá",
-   "acceso": "desconocido",
+   "ticket_url": "https://tuboleta.com/es/eventos/las-almas-ni-los-ojos",
+   "acceso": "Boletería en TuBoleta",
    "_src": {
     "url": "https://midbo.co/peliculas/las-almas-ni-los-ojos/",
     "date": "2026-10-10"
@@ -1823,7 +1840,7 @@
   {
    "titulo": "Programa 6: Restitución de archivos para una memoria política latinoamericana",
    "dia": "2026-11-03",
-   "hora": "14:30",
+   "hora": "14:00",
    "sede": "Alianza Francesa",
    "ciudad": "Bogotá",
    "acceso": "Entrada libre",
@@ -1846,36 +1863,29 @@
    ]
   },
   {
-   "titulo": "Programa 1: Tanto trabajo por hacer",
+   "titulo": "Programa 7: Reactivar los archivos para el presente — Alianza Francesa",
    "dia": "2026-11-03",
-   "hora": "16:30",
+   "hora": "16:00",
    "sede": "Alianza Francesa",
    "ciudad": "Bogotá",
-   "acceso": "Entrada libre (no se anuncia pago)",
+   "acceso": "Entrada libre",
    "_src": {
-    "url": "https://midbo.co/peliculas/a-women-s-college-in-the-village/",
+    "url": "https://midbo.co/peliculas/l-evangile-de-la-revolution/",
     "date": "2026-10-10"
    },
-   "seccion": "Programas especiales",
+   "has_qa": true,
+   "qa_type": "team",
+   "seccion": "Espejos: Gestos de reparación",
    "obras": [
     {
-     "titulo": "A Women 's College in the Village",
-     "director": "Sumiko Haneda",
-     "pais": "Japón",
-     "anio": 1957,
-     "duracion_min": 25,
-     "sinopsis": "Un documental que retrata la vida de las llamadas «clases para mujeres del pueblo», centradas principalmente en el diálogo y basadas en la idea de «pensar juntas y crecer como buenas madres». La película fue rodada en Iwane, Kōsei-chō (actualmente ciudad de Konan), en la prefectura de Shiga. Las mujeres que se han casado en familias campesinas trabajan sin descanso y, frente a sus suegras y esposos, ni siquiera pueden expresar sus propias opiniones. Al mismo tiempo, se enfrentan a la diferencia entre su propia forma de pensar y la de sus hijos, quienes crecen en la escuela recibiendo una educación en la que no se hace distinción entre niños y niñas. A partir de las redacciones escritas por los niños bajo el tema «¿Qué piensas de tu madre?», las mujeres comienzan a compartir con sus compañeras sus preocupaciones sobre la crianza de los hijos y las dificultades de la vida cotidiana. A través del intercambio de opiniones y del apoyo mutuo, van encontrando la manera de afrontar sus problemas. Las «clases para mujeres» impulsadas por el Ministerio de Educación comenzaron en el año fiscal de 1956 (año 31 de la era Shōwa), como parte de la educación social de la posguerra. Se organizaron y desarrollaron sobre la base de las asociaciones locales de mujeres, dirigidas principalmente a mujeres de las zonas rurales. Esta película fue filmada durante el primer año de funcionamiento del programa. Además, permite observar la vestimenta y las formas de vida de las zonas rurales aproximadamente diez años después del final de la guerra, así como las labores agrícolas de una época en la que la mecanización todavía no había llegado al campo."
-    },
-    {
-     "titulo": "Mi aporte",
-     "director": "Sara Gómez",
-     "pais": "Cuba",
-     "anio": 1972,
-     "duracion_min": 33,
-     "sinopsis": "A través de entrevistas y debates, se presentan y analizan las dificultades que aún enfrentan las mujeres para ser aceptadas en el ámbito laboral, mientras deben conciliar estas responsabilidades con las tareas domésticas que continúan desempeñando. Una ilustración de las dificultades que encuentran las mujeres cuando buscan lograr la integración económica y la igualdad con los hombres en un país en plena revolución."
+     "titulo": "L'Evangile de la Révolution",
+     "director": "François-Xavier Drouet",
+     "pais": "Francia, Bélgica",
+     "anio": 2024,
+     "duracion_min": 115,
+     "sinopsis": "El auge revolucionario de América Latina en el siglo XX se debe mucho a la participación de millones de cristianos, comprometidos en luchas políticas en nombre de la fe. Inspirados por la teología de la liberación, desafiaron a los regímenes militares y a las oligarquías. Cuestionando la idea de la religión como opio del pueblo, la película va al encuentro de los que vieron en la revolución la llegada del Reino de Dios, en la tierra antes que en el cielo."
     }
-   ],
-   "duracion_min": 58
+   ]
   },
   {
    "titulo": "Programa 2: Comunidades que siguen en búsqueda",
@@ -2053,7 +2063,8 @@
    "sede": "Cinemateca de Bogotá",
    "sala": "Sala Capital",
    "ciudad": "Bogotá",
-   "acceso": "desconocido",
+   "ticket_url": "https://tuboleta.com/es/eventos/volvemos-nacer",
+   "acceso": "Boletería en TuBoleta",
    "_src": {
     "url": "https://midbo.co/peliculas/para-mi-ya-no-es-cualquier-bano/",
     "date": "2026-10-10"
@@ -2158,7 +2169,8 @@
    "sede": "Cinemateca de Bogotá",
    "sala": "Sala 3",
    "ciudad": "Bogotá",
-   "acceso": "desconocido",
+   "ticket_url": "https://tuboleta.com/es/eventos/el-valor-de-la-palabra",
+   "acceso": "Boletería en TuBoleta",
    "_src": {
     "url": "https://midbo.co/peliculas/el-valor-de-la-palabra/",
     "date": "2026-10-10"
@@ -2174,13 +2186,46 @@
    "sinopsis": "«El valor de la palabra» es la historia de Ángel María y Napoleón Torres, dos líderes indígenas arhuacos de la Sierra Nevada de Santa Marta, en Colombia, que fueron secuestrados y asesinados por el ejército en 1990. A través de material de archivo y testimonios íntimos, el documental explora el impacto de su ausencia en sus familias y en la comunidad, al mismo tiempo que introduce al espectador en la cosmovisión arhuaca, donde el territorio es un ser vivo y la palabra hablada es un hilo vital que sostiene la vida. Más allá de relatar un episodio trágico de la historia reciente de Colombia, la película se erige como un acto de resistencia frente a la violencia colonial y militar que persiste. Ofrece una reflexión sobre el liderazgo, la supervivencia cultural y el legado perdurable que estos líderes dejaron a las generaciones futuras."
   },
   {
+   "titulo": "Programa 1: Tanto trabajo por hacer",
+   "dia": "2026-11-04",
+   "hora": "16:00",
+   "sede": "Alianza Francesa",
+   "ciudad": "Bogotá",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://midbo.co/peliculas/a-women-s-college-in-the-village/",
+    "date": "2026-10-10"
+   },
+   "seccion": "Programas especiales",
+   "obras": [
+    {
+     "titulo": "A Women 's College in the Village",
+     "director": "Sumiko Haneda",
+     "pais": "Japón",
+     "anio": 1957,
+     "duracion_min": 25,
+     "sinopsis": "Un documental que retrata la vida de las llamadas «clases para mujeres del pueblo», centradas principalmente en el diálogo y basadas en la idea de «pensar juntas y crecer como buenas madres». La película fue rodada en Iwane, Kōsei-chō (actualmente ciudad de Konan), en la prefectura de Shiga. Las mujeres que se han casado en familias campesinas trabajan sin descanso y, frente a sus suegras y esposos, ni siquiera pueden expresar sus propias opiniones. Al mismo tiempo, se enfrentan a la diferencia entre su propia forma de pensar y la de sus hijos, quienes crecen en la escuela recibiendo una educación en la que no se hace distinción entre niños y niñas. A partir de las redacciones escritas por los niños bajo el tema «¿Qué piensas de tu madre?», las mujeres comienzan a compartir con sus compañeras sus preocupaciones sobre la crianza de los hijos y las dificultades de la vida cotidiana. A través del intercambio de opiniones y del apoyo mutuo, van encontrando la manera de afrontar sus problemas. Las «clases para mujeres» impulsadas por el Ministerio de Educación comenzaron en el año fiscal de 1956 (año 31 de la era Shōwa), como parte de la educación social de la posguerra. Se organizaron y desarrollaron sobre la base de las asociaciones locales de mujeres, dirigidas principalmente a mujeres de las zonas rurales. Esta película fue filmada durante el primer año de funcionamiento del programa. Además, permite observar la vestimenta y las formas de vida de las zonas rurales aproximadamente diez años después del final de la guerra, así como las labores agrícolas de una época en la que la mecanización todavía no había llegado al campo."
+    },
+    {
+     "titulo": "Mi aporte",
+     "director": "Sara Gómez",
+     "pais": "Cuba",
+     "anio": 1972,
+     "duracion_min": 33,
+     "sinopsis": "A través de entrevistas y debates, se presentan y analizan las dificultades que aún enfrentan las mujeres para ser aceptadas en el ámbito laboral, mientras deben conciliar estas responsabilidades con las tareas domésticas que continúan desempeñando. Una ilustración de las dificultades que encuentran las mujeres cuando buscan lograr la integración económica y la igualdad con los hombres en un país en plena revolución."
+    }
+   ],
+   "duracion_min": 58
+  },
+  {
    "titulo": "Programa 1: Reparación simbólica y búsquedas por justicia restaurativa",
    "dia": "2026-11-04",
    "hora": "16:00",
    "sede": "Cinemateca de Bogotá",
    "sala": "Sala 2",
    "ciudad": "Bogotá",
-   "acceso": "desconocido",
+   "ticket_url": "https://tuboleta.com/es/eventos/bojaya-la-verdad-desde-adentro",
+   "acceso": "Boletería en TuBoleta",
    "_src": {
     "url": "https://midbo.co/peliculas/bojaya-la-verdad-desde-adentro/",
     "date": "2026-10-10"
@@ -2199,31 +2244,12 @@
   },
   {
    "dia": "2026-11-04",
-   "hora": "16:00",
-   "sede": "Alianza Francesa",
-   "ciudad": "Bogotá",
-   "acceso": "Entrada libre",
-   "_src": {
-    "url": "https://midbo.co/peliculas/l-evangile-de-la-revolution/",
-    "date": "2026-10-10"
-   },
-   "has_qa": true,
-   "qa_type": "team",
-   "seccion": "Espejos: Gestos de reparación",
-   "titulo": "L'Evangile de la Révolution",
-   "director": "François-Xavier Drouet",
-   "pais": "Francia, Bélgica",
-   "anio": 2024,
-   "duracion_min": 115,
-   "sinopsis": "El auge revolucionario de América Latina en el siglo XX se debe mucho a la participación de millones de cristianos, comprometidos en luchas políticas en nombre de la fe. Inspirados por la teología de la liberación, desafiaron a los regímenes militares y a las oligarquías. Cuestionando la idea de la religión como opio del pueblo, la película va al encuentro de los que vieron en la revolución la llegada del Reino de Dios, en la tierra antes que en el cielo."
-  },
-  {
-   "dia": "2026-11-04",
    "hora": "17:00",
    "sede": "Cinemateca de Bogotá",
    "sala": "Sala 3",
    "ciudad": "Bogotá",
-   "acceso": "desconocido",
+   "ticket_url": "https://tuboleta.com/es/eventos/cuba-y-la-noche",
+   "acceso": "Boletería en TuBoleta",
    "_src": {
     "url": "https://midbo.co/peliculas/cuba-y-la-noche/",
     "date": "2026-10-10"
@@ -2242,7 +2268,8 @@
    "sede": "Cinemateca de Bogotá",
    "sala": "Sala Capital",
    "ciudad": "Bogotá",
-   "acceso": "desconocido",
+   "ticket_url": "https://tuboleta.com/es/eventos/lolita-en-honda",
+   "acceso": "Boletería en TuBoleta",
    "_src": {
     "url": "https://midbo.co/peliculas/lolita-en-honda/",
     "date": "2026-10-10"
@@ -2264,7 +2291,8 @@
    "sede": "Cinemateca de Bogotá",
    "sala": "Sala 3",
    "ciudad": "Bogotá",
-   "acceso": "desconocido",
+   "ticket_url": "https://tuboleta.com/es/eventos/esta-tierra-canta-premoniciones",
+   "acceso": "Boletería en TuBoleta",
    "_src": {
     "url": "https://midbo.co/peliculas/statues-also-die/",
     "date": "2026-10-10"
@@ -2313,7 +2341,8 @@
    "sede": "Cinemateca de Bogotá",
    "sala": "Sala Capital",
    "ciudad": "Bogotá",
-   "acceso": "desconocido",
+   "ticket_url": "https://tuboleta.com/es/eventos/el-coloquio-de-los-pajaros",
+   "acceso": "Boletería en TuBoleta",
    "_src": {
     "url": "https://midbo.co/peliculas/el-coloquio-de-los-pajaros/",
     "date": "2026-10-10"
@@ -2333,7 +2362,8 @@
    "sede": "Cinemateca de Bogotá",
    "sala": "Sala 2",
    "ciudad": "Bogotá",
-   "acceso": "desconocido",
+   "ticket_url": "https://tuboleta.com/es/eventos/las-hermanas-pathan",
+   "acceso": "Boletería en TuBoleta",
    "_src": {
     "url": "https://midbo.co/peliculas/les-surs-pathan/",
     "date": "2026-10-10"
