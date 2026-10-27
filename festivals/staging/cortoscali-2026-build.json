@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "IG @cortoscali: «Programación» p/De4VP9xkaMd (24 oct) + «Programación académica» p/DerpBbZkeSs",
-  "capturado": "2026-10-26",
+  "capturado": "2026-10-27",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_sedes": "Toda la programación de la UAO es en el «Auditorio Xepia UAO» (así en cada lámina): la sede es la universidad y el auditorio va como sala.",
@@ -1090,7 +1090,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-26T06:22:05",
+  "fecha": "2026-10-27T17:38:47",
   "plan_sha": "c266d7090b645757",
   "paso": 6,
   "cmd": "python3 pipeline/cortoscali-2026-verificar.py"

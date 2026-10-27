@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "ensamblar.py: ids estables de las funciones (docs/FUNCION.md C1)",
-  "capturado": "2026-10-23"
+  "capturado": "2026-10-27"
  },
  "funciones": {
   "f_7660ad6422": {
@@ -501,13 +501,6 @@
    "sala": "",
    "titulo": "plano sonoro muestra de videoclips"
   },
-  "f_80f9a567f8": {
-   "sede": "Cine Colombia Unicentro - Cali",
-   "dia": "2026-10-23",
-   "hora": "20:30",
-   "sala": "",
-   "titulo": "las pesadillas del siervo"
-  },
   "f_8b71b2da22": {
    "sede": "Cinemateca La Tertulia - Cali",
    "dia": "2026-10-23",
@@ -640,6 +633,23 @@
    "hora": "15:00",
    "sala": "",
    "titulo": "anima ve mujeres en la animacion"
+  },
+  "f_80f9a567f8": {
+   "sede": "Cine Club El Ventanal - Cali",
+   "dia": "2026-10-25",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "las pesadillas del siervo",
+   "decidida": {
+    "fecha": "2026-10-27",
+    "clave": [
+     "Cine Club El Ventanal - Cali",
+     "2026-10-25",
+     "15:00",
+     "",
+     "las pesadillas del siervo"
+    ]
+   }
   },
   "f_8972958ff2": {
    "sede": "Cine Colombia Unicentro - Cali",

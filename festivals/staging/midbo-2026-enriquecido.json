@@ -683,7 +683,6 @@
    "titulo": "El León",
    "tmdb_id": 1616865,
    "titulo_original": "El León",
-   "poster_path": "/5an6XZNE07yS7ahXEMZ78htlORg.jpg",
    "synopsis_es": "",
    "synopsis_en": "Strange images overlap like floating ghosts: a dead body, a singer, an audience. The film shows, paradoxically and theatrically, how death inhabits the León de Greiff Auditorium in Colombia.",
    "genero": "Documental",
@@ -695,8 +694,9 @@
    "_busqueda": "El León",
    "_director": "Diana Bustamante",
    "_sondeado": "2026-10-10",
-   "poster": "/assets/midbo-2026/el-leon.jpg",
-   "posterSource": "tmdb"
+   "poster": "/assets/midbo-2026/el-leon-afiche.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: TMDB 1616865, póster es /5aYMbnZEGwKp2QnypVZBFtspgam.jpg — «EL LEÓN · una película de Diana Bustamante» (Cinéma du Réel 2026)"
   },
   {
    "titulo": "El coloquio de los pájaros",
@@ -3334,7 +3334,6 @@
   "El León": {
    "tmdb_id": 1616865,
    "titulo_original": "El León",
-   "poster_path": "/5an6XZNE07yS7ahXEMZ78htlORg.jpg",
    "synopsis_es": "",
    "synopsis_en": "Strange images overlap like floating ghosts: a dead body, a singer, an audience. The film shows, paradoxically and theatrically, how death inhabits the León de Greiff Auditorium in Colombia.",
    "genero": "Documental",
@@ -3346,8 +3345,9 @@
    "_busqueda": "El León",
    "_director": "Diana Bustamante",
    "_sondeado": "2026-10-10",
-   "poster": "/assets/midbo-2026/el-leon.jpg",
-   "posterSource": "tmdb"
+   "poster": "/assets/midbo-2026/el-leon-afiche.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: TMDB 1616865, póster es /5aYMbnZEGwKp2QnypVZBFtspgam.jpg — «EL LEÓN · una película de Diana Bustamante» (Cinéma du Réel 2026)"
   },
   "El coloquio de los pájaros": {
    "tmdb_id": 1657856,
