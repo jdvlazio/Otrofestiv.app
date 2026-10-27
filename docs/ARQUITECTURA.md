@@ -527,6 +527,14 @@ Formato de nombre: `"[Nombre sala] - [Ciudad]"` — siempre igual.
 
 ## 15. REGLAS TÉCNICAS
 
+**Scripts de terceros (25 oct 2026).** Todo `<script>` de un CDN va con versión exacta (`@2.118.0`, nunca `@2`) y `integrity="sha384-…"` + `crossorigin="anonymous"`: si el archivo del CDN cambia, el navegador no lo ejecuta. Para subir de versión se cambian la URL y el hash juntos (`curl -s <url> | openssl dgst -sha384 -binary | openssl base64 -A`). Lo vigila `[script-externo-fijo]` en validate.py; la única excepción es el loader de Sentry, que su proveedor genera por clave y no admite hash.
+
+**Sin handlers en el HTML (26 oct 2026).** Nada de `onclick=`/`onerror=`/`onkeydown=` en el markup: impiden quitar `'unsafe-inline'` de la CSP. El comportamiento va como atributo de datos —`data-action` (clic), `data-enter` (Enter), `data-err="ocultar"`, `data-buscar`— que leen listeners delegados (`main.js` y `controller/sin-inline.js`). `[sin-handler-inline]`: index.html en 0 y src/ con un techo que solo baja.
+
+**Sin eval (26 oct 2026).** Nada de `eval(`, `new Function(` ni `setTimeout('código')` en src/: la CSP no lleva `'unsafe-eval'`. El worker del planeador recibe las funciones puras por referencia (`_SCHED_PURE_FNS` en calc.js, `fn.toString()`). Lo vigila `[sin-eval]`.
+
+**CSP estricta (26 oct 2026).** `script-src` no lleva `'unsafe-inline'` ni `'unsafe-eval'`: los `<script>` inline de index.html van autorizados por hash sha256, que escribe `scripts/csp.js` (dueño único; lo corre bump-version.js en cada deploy, porque estampar el `?v=` del gate cambia su hash). Cambiar un script inline = correr `node scripts/csp.js`. `[csp-hashes]` frena un hash viejo (dejaría la app en blanco) y la vuelta de unsafe-*.
+
 ### Columnas tiempo/día en listas
 Todo label de día/hora que ancle una columna flex debe tener `width` o `min-width` fijo. Validar con `MIÉ` (el día más ancho en Plus Jakarta Sans).
 

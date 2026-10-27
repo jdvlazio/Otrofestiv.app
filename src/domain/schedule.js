@@ -11,7 +11,7 @@
 //     FILMS + watched + prioritized (computeScenarios).
 //
 // WORKER: las sched pure fns tienen COPIAS en el template del calc worker; el
-//   worker las consume vía eval(name).toString(). [worker-overlap] valida.
+//   worker las consume vía fn.toString() (calc.js, sin eval desde el 26 oct). [worker-overlap] valida.
 
 import { FESTIVAL_BUFFER, FESTIVAL_CONFIG } from "../config.js";
 import { toMin } from "./time.js";

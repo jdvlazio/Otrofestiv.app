@@ -385,7 +385,7 @@ export function searchQuery(){
         ?`data-action="searchOpenCorto" data-title="${_q(f.title)}" data-country="${_q(f.country||'')}" data-dur="${_q(_dur)}" data-section="${_q(f.section||'')}" data-flags="${_q(f.flags||'🌍')}"`
         :`data-action="searchOpenFilm" data-title="${_q(f.title)}"`;
       return '<div class="search-item" '+_siAttrs+'>'
-        +(poster?'<img class="search-item-poster" src="'+poster+'" onerror="this.remove()" alt="" loading="lazy">'
+        +(poster?'<img class="search-item-poster" src="'+poster+'" data-err="quitar" alt="" loading="lazy">'
                 :'<div class="search-item-poster"></div>')
         +'<div class="search-item-info">'
         +'<div class="search-item-title">'+displayTitle

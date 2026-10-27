@@ -216,9 +216,13 @@ if sched_start == -1:
 else:
     sched_end = _sched_hay.find('];', sched_start)
     sched_block = _sched_hay[sched_start:sched_end]
-    fn_names = re.findall(r"'(\w+)'", sched_block)
+    # REFERENCIAS desde el 26 oct (sin eval, CSP); nombres entre comillas antes
+    _blk = re.sub(r'/\*.*?\*/|//[^\n]*', '', sched_block[sched_block.find('[') + 1:], flags=re.S)
+    fn_names = re.findall(r"\b([A-Za-z_$][\w$]*)\b", _blk)
+    if len(fn_names) < 10:
+        fail(check, f'_SCHED_PURE_FNS leída con {len(fn_names)} funciones: el parser no la entiende (guardián ciego)')
     # p8 Step 5: las pure fns se movieron a src/domain/*.js (import en main.js). El
-    # worker las consume vía eval(name).toString() — el binding importado debe ser
+    # worker las consume vía fn.toString() — el binding importado debe ser
     # resoluble en main. Se buscan en content + módulos domain. `export function
     # NAME(` contiene `function NAME(`.
     _domain_src = ''
@@ -232,13 +236,14 @@ else:
         for f in missing_fns:
             fail(check, f"'{f}' en _SCHED_PURE_FNS pero no definida en main thread ni domain")
     # El hueco que este check NO veía (17 ago 2026): la fn existía en el dominio
-    # pero calc.js no la IMPORTABA. eval(name) del build del worker resuelve en el
+    # pero calc.js no la IMPORTABA. la lista del build del worker resuelve en el
     # scope del módulo → ReferenceError → el worker moría y TODO cálculo caía al
     # fallback síncrono, en silencio, con este guardián en verde. screeningPlannable
     # vivió así desde su extracción (16 ago) hasta el traspaso de Onboarding (17).
     # Cada nombre de la lista debe aparecer en un import de calc.js — salvo los
     # definidos worker-local (_venueFns) o dentro del propio calc.js.
-    _calc_imports = ' '.join(re.findall(r'import\s*\{([^}]*)\}', _calc_src))
+    # por NOMBRE, no por substring (un nombre contenido en otro pasaba; auditoría 26 oct)
+    _calc_imports = {x.strip().split(' as ')[-1] for _g in re.findall(r'import\s*\{([^}]*)\}', _calc_src) for x in _g.split(',') if x.strip()}
     _calc_local = set(re.findall(r'function (\w+)\(', _calc_src))
     _sin_import = [f for f in fn_names
                    if f not in _calc_imports and f not in _calc_local]
@@ -1757,6 +1762,9 @@ try:
             if not _fn.endswith('.js'): continue
             _fp = os.path.join(_root, _fn)
             if _fp.replace('\\', '/') == 'src/util/ready.js': continue  # la casa de los helpers
+            # sin-inline.js escucha 'load' EN CAPTURA para las <img data-load> (no la
+            # carga de la página): un evento de imagen, que ocurre siempre después (26 oct)
+            if _fp.replace('\\', '/') == 'src/controller/sin-inline.js': continue
             _txt = open(_fp, encoding='utf-8').read()
             for _m in _READY_RE.finditer(_txt):
                 _lstart = _txt.rfind('\n', 0, _m.start()) + 1
@@ -5967,6 +5975,103 @@ try:
                   f'{len(_reg)} ajenos con veredicto vigente')
 except Exception as _e:
     warn(check, f'no se pudo verificar afiche-es-afiche: {_e}')
+
+# ── [sin-handler-inline] ningún on*="…" nuevo en el HTML (CSP, 26 oct 2026) ──
+# La CSP no puede dejar 'unsafe-inline' mientras haya handlers escritos en el
+# markup. index.html y src/ en 0 (controller/sin-inline.js): ninguno vuelve.
+check = 'sin-handler-inline'
+try:
+    import re as _rhi, glob as _ghi
+    # cualquier on<evento>, con o sin espacios en el `=` (auditoría senior, 26 oct)
+    # también sin comillas (onerror=fn(this)); no las asignaciones `.onX=` de JS
+    # ni comentarios (auditoría senior, 26 oct)
+    # con comillas en cualquier lado; SIN comillas solo dentro de una etiqueta
+    # (`<img … onerror=fn(this)>`), o `const ongoing =x` contaba (26 oct)
+    _RE_HI = _rhi.compile(r'(?<![.\w])on[a-z]{3,}\s*=\s*\\?["\'`]|<[a-zA-Z][^<>]*?\son[a-z]{3,}\s*=\s*[A-Za-z_$]')
+    _n_idx = len(_RE_HI.findall(open('index.html', encoding='utf-8').read()))
+    # dos pasadas: con DOTALL, `//.*$` se comía el archivo entero desde el primer //
+    _sin_coment = lambda t: _rhi.sub(r'^\s*//[^\n]*', '', _rhi.sub(r'/\*.*?\*/', '', t, flags=_rhi.S), flags=_rhi.M)
+    _n_src = sum(len(_RE_HI.findall(_sin_coment(open(_f, encoding='utf-8').read()))) for _f in _ghi.glob('src/**/*.js', recursive=True))
+    _TECHO_HI = 0   # 31 → 0 en el paso 2/4 (26 oct)
+    if _n_idx:
+        fail(check, f'index.html tiene {_n_idx} handler(s) on*= — van como data-* en controller/sin-inline.js')
+    elif _n_src > _TECHO_HI:
+        fail(check, f'src/ tiene {_n_src} handlers on*= en strings HTML > techo {_TECHO_HI}: usá data-* + delegación')
+    else:
+        ok(check, f'index.html sin handlers inline; src/ {_n_src} ≤ techo {_TECHO_HI}'
+              + (' — BAJÁ el techo' if _n_src < _TECHO_HI else ''))
+except Exception as _e:
+    warn(check, f'no se pudo verificar sin-handler-inline: {_e}')
+
+# ── [csp-hashes] script-src estricto y con los hashes al día (26 oct 2026) ──
+# Los <script> inline van autorizados por hash (scripts/csp.js, dueño único). Un
+# hash viejo = el navegador NO ejecuta ese script: el gate no carga la app y la
+# pantalla queda en blanco. Y 'unsafe-inline'/'unsafe-eval' no vuelven.
+check = 'csp-hashes'
+try:
+    import subprocess as _spc, re as _rcs
+    _r = _spc.run(['node', 'scripts/csp.js', '--comprobar'], capture_output=True, text=True)
+    # del <meta>, no del comentario que lo explica (que también dice «script-src»)
+    _ss = (_rcs.search(r'http-equiv="Content-Security-Policy" content="[^"]*?script-src ([^;"]*)', open('index.html', encoding='utf-8').read()) or [None, ''])[1]
+    if _r.returncode != 0:
+        fail(check, 'los hashes de la CSP no coinciden con los <script> inline — correr: node scripts/csp.js')
+    elif "'unsafe-inline'" in _ss or "'unsafe-eval'" in _ss:
+        fail(check, "script-src volvió a tener 'unsafe-inline' o 'unsafe-eval'")
+    else:
+        ok(check, f"script-src estricto: {_ss.count('sha256-')} hash(es) al día, sin unsafe-*")
+except Exception as _e:
+    warn(check, f'no se pudo verificar csp-hashes: {_e}')
+
+# ── [sin-eval] ni eval( ni new Function en src/ (CSP, 26 oct 2026) ─────────
+# Era el único motivo de 'unsafe-eval' en la CSP: calc.js armaba el worker con
+# la lista de calc.js. Ahora la lista guarda referencias. Sin esto, un eval nuevo
+# rompería la app en cuanto la CSP lo prohíba.
+check = 'sin-eval'
+try:
+    import re as _rev, glob as _gev
+    # eval( también como window./globalThis./self.eval; Function( con o sin new
+    # (auditoría senior, 26 oct). Alcance: src/, sw.js y los <script> inline de
+    # index.html. Comentarios fuera: de bloque, de línea y al final de línea.
+    _RE_EV = _rev.compile(r'(?<![\w$])eval\s*\(|(?<![\w$.])(?:new\s+)?Function\s*\(|\bset(?:Timeout|Interval)\s*\(\s*["\'`]')
+    _sinc = lambda t: _rev.sub(r'(^|[^:\\])//[^\n]*', r'\1', _rev.sub(r'/\*.*?\*/', '', t, flags=_rev.S))
+    _fuentes = [(_f, open(_f, encoding='utf-8').read()) for _f in _gev.glob('src/**/*.js', recursive=True) + ['sw.js']]
+    _fuentes += [(f'index.html<script #{_i}>', _b) for _i, _b in enumerate(_rev.findall(r'<script(?![^>]*\bsrc=)[^>]*>(.*?)</script>', _rev.sub(r'<!--.*?-->', '', open('index.html', encoding='utf-8').read(), flags=_rev.S), flags=_rev.S))]
+    _ev = []
+    for _f, _raw in _fuentes:
+        _t = _sinc(_raw)
+        _ev += [f'{_f}:{_t[:_m.start()].count(chr(10)) + 1}' for _m in _RE_EV.finditer(_t)]
+    if _ev:
+        fail(check, 'eval/new Function/timer con string en src/ (la CSP no tiene unsafe-eval): ' + ', '.join(_ev[:5]))
+    else:
+        ok(check, 'sin eval, new Function ni timers con string en src/')
+except Exception as _e:
+    warn(check, f'no se pudo verificar sin-eval: {_e}')
+
+# ── [script-externo-fijo] todo script de un CDN con versión exacta + integrity ──
+# Supabase se cargaba como «supabase-js@2»: el CDN servía la última 2.x que saliera,
+# sin revisión — una versión comprometida entraba sola a la app (25 oct 2026).
+# Ahora va fija y con hash (si el archivo cambia, el navegador no lo ejecuta).
+# El loader de Sentry es la única excepción: su contenido lo genera Sentry por
+# clave y cambia sin versión, así que no admite hash.
+check = 'script-externo-fijo'
+try:
+    import re as _rsx
+    _html = open('index.html', encoding='utf-8').read()
+    _sx = []
+    for _m in _rsx.finditer(r'<script\b([^>]*)>', _html):
+        _a = _m.group(1)
+        _src = _rsx.search(r'\bsrc="(https?://[^"]+)"', _a)
+        if not _src or 'sentry-cdn.com' in _src.group(1):
+            continue
+        _u = _src.group(1)
+        if not _rsx.search(r'@\d+\.\d+\.\d+/', _u) or 'integrity="sha384-' not in _a:
+            _sx.append(_u[:90])
+    if _sx:
+        fail(check, 'script externo sin versión exacta o sin integrity: ' + ' · '.join(_sx[:4]))
+    else:
+        ok(check, 'todo script de CDN con versión exacta e integrity (salvo el loader de Sentry)')
+except Exception as _e:
+    warn(check, f'no se pudo verificar script-externo-fijo: {_e}')
 
 # ── [abierta-sin-info] una exposición no se reserva: va con info:true ─────────
 # MAPISTAS (FILCMAR, 9 oct 2026) salió como cuatro funciones con hora y la app la

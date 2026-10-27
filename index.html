@@ -1,16 +1,37 @@
 <!DOCTYPE html>
 <html lang="es" style="background:#0B0A08">
 <head>
+<meta charset="UTF-8"><!-- PRIMERO (en los 1024 bytes iniciales): los hashes de la CSP se calculan sobre UTF-8; otra codificación = otro hash = app en blanco -->
 <!-- Content-Security-Policy — debe ir ANTES de cualquier <script> para aplicar.
      Hosting estático (GitHub Pages) → solo vía <meta> (sin headers, sin nonces).
-     script-src incluye 'unsafe-inline' (35+ inline on*= handlers + scripts inline)
-     y 'unsafe-eval' (calc blob worker). Endurece supply-chain (allowlist de CDNs)
-     + limita exfiltración (connect-src), NO bloquea XSS de inline-handler.
+     script-src SIN 'unsafe-inline' ni 'unsafe-eval' (26 oct 2026): los <script>
+     inline van autorizados por HASH y ese hash lo escribe scripts/csp.js (lo
+     corre bump-version.js en cada deploy; [csp-hashes] lo verifica). NO editar
+     script-src a mano. Sin on*= en el markup (controller/sin-inline.js) ni eval
+     ([sin-eval]). style-src conserva 'unsafe-inline' (atributos style=).
      worker-src blob: para el worker del Planner. frame-ancestors/report-* se
      ignoran en <meta> (requieren header). -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net https://js.sentry-cdn.com https://browser.sentry-cdn.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https:; font-src 'self'; connect-src 'self' https://eytxrvbnwzxuedbmnnqr.supabase.co wss://eytxrvbnwzxuedbmnnqr.supabase.co https://*.ingest.sentry.io https://api.themoviedb.org; worker-src 'self' blob:; manifest-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-E9KLqj/d+lR4SmCA/13sQPiJWXxFRx63fuEFO4TYyLg=' 'sha256-93yZSNsoeIZSeI8S7Xk0ZG25l0zzMkGo4QUxQK3zix4=' 'sha256-ip/SWKhYrDHjDplX7eMAeo75Sfr3m2kR875XPpLtSDU=' https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.118.0/ https://js.sentry-cdn.com/f9a3edecb09ba965c5426d617e1cf7de.min.js https://browser.sentry-cdn.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https:; font-src 'self'; connect-src 'self' https://eytxrvbnwzxuedbmnnqr.supabase.co wss://eytxrvbnwzxuedbmnnqr.supabase.co https://*.ingest.sentry.io https://api.themoviedb.org; worker-src 'self' blob:; manifest-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
 <!-- Sentry error monitoring — captura errores JS en producción en tiempo real -->
 <script>
+// CSP estricta (26 oct 2026): todo lo que el navegador bloquee en un teléfono
+// real (WKWebView, Capacitor, Safari) llega a Sentry. Se registra ACÁ, antes que
+// cualquier otro script, para no perder las violaciones del arranque.
+// Solo lo NUESTRO (las extensiones del usuario inyectan scripts y no son nuestras),
+// sin repetir y con tope por carga, para no quemar la cuota de Sentry.
+(function(){
+  var vistas = {}, n = 0;
+  document.addEventListener('securitypolicyviolation', function(e) {
+    try {
+      var f = e.sourceFile || '', u = e.blockedURI || 'inline';
+      if (/-extension:/.test(f + ' ' + u)) return;
+      if (f && f.indexOf(location.origin) !== 0 && !/sentry-cdn\.com|cdn\.jsdelivr\.net/.test(f)) return;
+      var k = e.violatedDirective + '|' + u + '|' + f + ':' + e.lineNumber;
+      if (vistas[k] || n >= 5) return; vistas[k] = 1; n++;
+      if (window.Sentry && Sentry.captureMessage) Sentry.captureMessage('CSP bloqueó: ' + e.violatedDirective + ' ← ' + u + ' @' + f + ':' + e.lineNumber + (e.sample ? ' «' + e.sample + '»' : ''), 'warning');
+    } catch (_) {}
+  });
+})();
 window.sentryOnLoad = function() {
   Sentry.init({
     dsn: "https://f9a3edecb09ba965c5426d617e1cf7de@o4511390879514624.ingest.us.sentry.io/4511390886264832",
@@ -34,7 +55,6 @@ window.sentryOnLoad = function() {
   src="https://js.sentry-cdn.com/f9a3edecb09ba965c5426d617e1cf7de.min.js"
   crossorigin="anonymous"
 ></script>
-<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <!-- Preload de los 2 pesos más usados (400 texto, 700 títulos): se descubren
      junto al HTML en vez de tras parsear el CSS → sin flash de fuente fallback. -->
@@ -3281,7 +3301,8 @@ mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebApplication","name":"Otrofestiv","description":"Tu agenda personal para festivales de cine. Planea, prioriza y saca el máximo de cada festival.","url":"https://otrofestiv.app","applicationCategory":"EntertainmentApplication","operatingSystem":"iOS, Android, Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
 </script>
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js" defer></script>
+<!-- versión FIJA + integridad (25 oct 2026): con «@2» el CDN servía la última 2.x que saliera, sin revisión. Para subirla: cambiar versión y hash juntos -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.118.0/dist/umd/supabase.min.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp" crossorigin="anonymous" defer></script>
 </head>
 <body>
 <!-- Splash siempre visible — se pre-selecciona el festival en curso por fecha. -->
@@ -3505,7 +3526,7 @@ setTimeout(function(){
     </div>
   </div>
   <div class="palm-cv">
-    <img class="palm-ka" id="palm-keyart" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+    <img class="palm-ka" id="palm-keyart" alt="" loading="lazy" data-err="ocultar">
     <div class="palm-cvtx">
       <div class="palm-eb" data-i18n="palm_eyebrow">Palmarés</div>
       <div class="palm-ti" id="palm-title"></div>
@@ -3525,7 +3546,7 @@ setTimeout(function(){
     </div>
   </div>
   <div class="diary-cover">
-    <img class="diary-keyart" id="diary-keyart" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+    <img class="diary-keyart" id="diary-keyart" alt="" loading="lazy" data-err="ocultar">
     <div class="diary-cover-txt">
       <div class="diary-eyebrow" data-i18n="diary_eyebrow">Diario</div>
       <div class="diary-title" id="diary-title"></div>
@@ -3906,7 +3927,7 @@ setTimeout(function(){
   <div class="auth-sheet-inner">
     <div class="auth-sheet-title" data-i18n="review_titulo">Festival en revisión</div>
     <div class="auth-sheet-sub"><span data-i18n="review_sub">Este montaje todavía no se publica. Ingresá la clave que te compartimos para verlo.</span></div>
-    <input class="pin-display auth-email-inp" id="review-key-inp" type="text" placeholder="••••••" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" maxlength="24" onkeydown="if(event.key==='Enter')submitReviewKey()">
+    <input class="pin-display auth-email-inp" id="review-key-inp" type="text" placeholder="••••••" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" maxlength="24" data-enter="submitReviewKey">
     <button class="auth-send-btn" id="review-key-btn" data-action="submitReviewKey" data-i18n="av_confirmar">Confirmar</button>
     <div class="auth-msg" id="review-msg"></div>
     <button type="button" class="auth-cancel" data-action="closeReviewSheet" data-i18n="misc_cancelar">Cancelar</button>
@@ -3918,7 +3939,7 @@ setTimeout(function(){
     <div id="auth-sheet-step1">
       <div class="auth-sheet-title" data-i18n="auth_titulo">Guardá tu Plan</div>
       <div class="auth-sheet-sub" data-i18n="auth_desc">Ingresa tu email y te enviamos un código de 6 dígitos. Sin contraseña. Tu Plan se sincroniza entre todos tus dispositivos.</div>
-      <input class="auth-email-inp" id="auth-email-inp" type="email" placeholder="tu@email.com" data-i18n-ph="auth_email" autocomplete="email" onkeydown="if(event.key==='Enter')submitAuthEmail()">
+      <input class="auth-email-inp" id="auth-email-inp" type="email" placeholder="tu@email.com" data-i18n-ph="auth_email" autocomplete="email" data-enter="submitAuthEmail">
       <button class="auth-send-btn" id="auth-send-btn" data-action="submitAuthEmail" data-i18n="auth_enviar">Enviar código</button>
       <div class="auth-msg" id="auth-msg"></div>
       <button type="button" class="auth-cancel" data-action="closeAuthSheet" data-i18n="misc_cancelar">Cancelar</button>
@@ -3926,7 +3947,7 @@ setTimeout(function(){
     <div id="auth-sheet-step2" style="display:none">
       <div class="auth-sheet-title" data-i18n="auth_revisa">Revisá tu email</div>
       <div class="auth-sheet-sub"><span data-i18n="auth_otp_sub">Enviamos un código de 6 dígitos a</span> <span id="auth-otp-email" style="color:var(--white)"></span></div>
-      <input class="pin-display auth-email-inp" id="auth-otp-inp" type="text" placeholder="12345678" inputmode="numeric" autocomplete="one-time-code" maxlength="8" onkeydown="if(event.key==='Enter')submitOTP()"><!-- maxlength=8: el Email OTP de Supabase de este proyecto es de 8 dígitos (no 6). maxlength=6 impedía tipear el código a mano (solo entraba por autofill/link). one-time-code: iOS autofill; type=text no bloquea el autofill y respeta maxlength. 16px: prevents iOS auto-zoom -->
+      <input class="pin-display auth-email-inp" id="auth-otp-inp" type="text" placeholder="12345678" inputmode="numeric" autocomplete="one-time-code" maxlength="8" data-enter="submitOTP"><!-- maxlength=8: el Email OTP de Supabase de este proyecto es de 8 dígitos (no 6). maxlength=6 impedía tipear el código a mano (solo entraba por autofill/link). one-time-code: iOS autofill; type=text no bloquea el autofill y respeta maxlength. 16px: prevents iOS auto-zoom -->
       <button class="auth-send-btn" data-i18n="av_confirmar" id="auth-otp-btn" data-action="submitOTP">Confirmar</button>
       <div class="auth-msg" id="auth-otp-msg"></div>
       <button type="button" class="auth-cancel" data-action="closeAuthAndReset" data-i18n="misc_cancelar">Cancelar</button>
@@ -3975,7 +3996,7 @@ setTimeout(function(){
   <div class="search-bar">
     <div class="search-input-wrap">
       <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"/></svg>
-      <input type="text" id="search-input" placeholder="Buscar…" data-i18n-ph="search_placeholder" oninput="searchQuery()" onkeyup="searchQuery()" onkeydown="setTimeout(searchQuery,0)" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+      <input type="text" id="search-input" placeholder="Buscar…" data-i18n-ph="search_placeholder" data-buscar="1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
     </div>
     <button class="search-cancel" data-action="searchClose" data-i18n="misc_cancelar">Cancelar</button><span id="dbg-ver" style="position:absolute;bottom:2px;right:4px;font-size:9px;color:var(--gray2)/* exception:build-ver */;opacity:.5;pointer-events:none"></span>
   </div>

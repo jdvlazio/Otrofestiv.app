@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "ensamblar.py: ids estables de las funciones (docs/FUNCION.md C1)",
-  "capturado": "2026-10-25"
+  "capturado": "2026-10-26"
  },
  "funciones": {
   "f_4476aa7fd2": {
@@ -114,7 +114,7 @@
    "dia": "2026-10-29",
    "hora": "17:00",
    "sala": "",
-   "titulo": "programa 3 creadoras de vida bodega insurgesta"
+   "titulo": "programa 3 creadoras de vida"
   },
   "f_d8f066c776": {
    "sede": "Centro de Memoria, Paz y Reconciliación - Bogotá",
@@ -399,16 +399,16 @@
   "f_0df06dedd6": {
    "sede": "Alianza Francesa - Bogotá",
    "dia": "2026-11-03",
-   "hora": "14:30",
+   "hora": "14:00",
    "sala": "",
    "titulo": "buenos dias wiracocha"
   },
-  "f_8c7386eddd": {
+  "f_3c54af994b": {
    "sede": "Alianza Francesa - Bogotá",
    "dia": "2026-11-03",
-   "hora": "16:30",
+   "hora": "16:00",
    "sala": "",
-   "titulo": "programa 1 tanto trabajo por hacer"
+   "titulo": "l evangile de la revolution"
   },
   "f_d433716839": {
    "sede": "Centro de Memoria, Paz y Reconciliación - Bogotá",
@@ -473,19 +473,19 @@
    "sala": "Sala 3",
    "titulo": "el valor de la palabra"
   },
+  "f_8c7386eddd": {
+   "sede": "Alianza Francesa - Bogotá",
+   "dia": "2026-11-04",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "programa 1 tanto trabajo por hacer"
+  },
   "f_5561ed525d": {
    "sede": "Cinemateca de Bogotá - Bogotá",
    "dia": "2026-11-04",
    "hora": "16:00",
    "sala": "Sala 2",
    "titulo": "bojaya la verdad desde adentro"
-  },
-  "f_3c54af994b": {
-   "sede": "Alianza Francesa - Bogotá",
-   "dia": "2026-11-04",
-   "hora": "16:00",
-   "sala": "",
-   "titulo": "l evangile de la revolution"
   },
   "f_f195c56576": {
    "sede": "Cinemateca de Bogotá - Bogotá",
@@ -619,6 +619,20 @@
    "hora": "16:30",
    "sala": "Sala E",
    "titulo": "inauguracion documental expandido"
+  },
+  "f_40033979ce": {
+   "sede": "Centro de Memoria, Paz y Reconciliación - Bogotá",
+   "dia": "2026-10-29",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "visita guiada por el cmpr"
+  },
+  "f_04654a67ea": {
+   "sede": "Centro de Memoria, Paz y Reconciliación - Bogotá",
+   "dia": "2026-11-03",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "visita guiada por el cmpr"
   },
   "f_092f382469": {
    "sede": "Cinemateca de Bogotá - Bogotá",
