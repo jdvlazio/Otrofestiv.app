@@ -1,10 +1,10 @@
 {
  "_provenance": {
   "fuente": "issue de radar #1031 — https://github.com/jdvlazio/Otrofestiv.app/issues/1031",
-  "capturado": "2026-10-26",
+  "capturado": "2026-10-27",
   "titulo": "RADAR: Muestra Internacional Documental de Bogotá (MIDBO) — Bogotá, 28 OCT–4 NOV (28ª)",
   "estado": "OPEN",
-  "comentarios": 15
+  "comentarios": 17
  },
  "issue": 1031,
  "titulo": "RADAR: Muestra Internacional Documental de Bogotá (MIDBO) — Bogotá, 28 OCT–4 NOV (28ª)",
@@ -70,6 +70,14 @@
   {
    "fecha": "2026-10-27",
    "cuerpo": "**Vigía 26 oct 21:30** — MIDBO, cambios que la app NO refleja (web midbo.co, fichas bajadas hoy + IG [De-N6I0iQtb](https://www.instagram.com/p/De-N6I0iQtb/), láminas leídas):\n1. Alianza Francesa: *L'Evangile de la Révolution* 4 nov 16:00 → **3 nov 16:00** (app: 4 nov).\n2. Alianza Francesa: programa «Tanto trabajo por hacer» 3 nov 16:30 → **4 nov 16:00** (app: 3 nov 16:30).\n3. Alianza Francesa: *Buenos días, Wiracocha* 3 nov 14:30 → **14:00** (app: 14:30).\n4. Canterbury Café, 2 nov 17:00, Comp. Nacional Corto Programa 2: la lámina 10 suma *Un río de aguas profundas y luminosas*; la app tiene 4 cortos. La ficha web del corto no lista Canterbury → contradicción.\n5. Falta Master Class «Profanaciones, resistencias, fabulaciones: (contra)usos de archivo en cine» (Azul Aizenberg y Juana Shlenker), mar 3 nov 2:00 p.m., UNAL Aud. 313 Ed. 303C (NEA), entrada libre (lámina 2).\nInformativo: Boyuna en La Picota 28 oct 9:00 (función cerrada) y Fiesta MIDBO en La Mecánica 1 nov 9 p.m. (con cover). Reporte entregado a la sesión Onboarding.\n"
+  },
+  {
+   "fecha": "2026-10-27",
+   "cuerpo": "**Vigía 27 oct 09:00 — MIDBO: sin cambios de funciones** (bloque «Funciones» de las 121 fichas idéntico a la copia del 26 oct 21:30).\n\nCambios de contenido en la API: «Viva México» pasó a llamarse **«¡Viva México!»** y ganó sinopsis; no está publicada (su única función es la master class del 27 oct en el Paraninfo UdeA, Medellín, fuera de Bogotá por regla del crudo). «Sey Arimaku, la otra oscuridad» y «Un río de aguas profundas y luminosas» también cambiaron de sinopsis, pero producción ya tiene la versión nueva. No hay nada que publicar.\n"
+  },
+  {
+   "fecha": "2026-10-27",
+   "cuerpo": "**Vigía 27 oct 13:00:** «Notre corps» (hoy 16:00, Alianza Francesa) es función con Q&A★ (https://www.instagram.com/p/DfAWypbCTFa/, leído en lámina 2). La app tiene has_qa=false → poner true. La API y las 121 fichas de midbo.co no cambiaron respecto de la bajada del 26 oct."
   }
  ]
 }

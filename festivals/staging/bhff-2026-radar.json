@@ -1,10 +1,10 @@
 {
  "_provenance": {
   "fuente": "issue de radar #1030 — https://github.com/jdvlazio/Otrofestiv.app/issues/1030",
-  "capturado": "2026-10-25",
+  "capturado": "2026-10-27",
   "titulo": "RADAR: Bogotá Horror Film Festival (BHFF) — Bogotá, 22–31 OCT (8ª)",
   "estado": "OPEN",
-  "comentarios": 5
+  "comentarios": 6
  },
  "issue": 1030,
  "titulo": "RADAR: Bogotá Horror Film Festival (BHFF) — Bogotá, 22–31 OCT (8ª)",
@@ -30,6 +30,10 @@
   {
    "fecha": "2026-10-25",
    "cuerpo": "**Vigía 25 oct 07:00 — BHFF: «NICO» no está en la app (dato sin confirmar).** Post colaborativo [De2fBD_BtaD](https://www.instagram.com/p/De2fBD_BtaD/) (23 oct). La lámina dice «NICO llega a Colombia · Selección Oficial Bogotá Horror Film Fest», sin fecha ni hora. Solo el pie da el horario: «el próximo domingo a las 16hrs estará participando en @bogotahorrorfest» (dom 25 oct, 16:00, sin sede). La app no tiene nada ese día a las 16:00. La web `/programacion/` no cambió. Demonatrix + Gabriel (29 oct, Co.Laboratorio) coincide con la lámina de [De2b7XwpEgp](https://www.instagram.com/p/De2b7XwpEgp/).\n"
+  },
+  {
+   "fecha": "2026-10-27",
+   "cuerpo": "**Vigía 27 oct 13:00:** «La Muerte No Llega Sola» (hoy 19:30, Cinemateca) tiene conversatorio moderado por Willy Jiménez (https://www.instagram.com/p/DfAYrImlYJX/, leído en lámina 2). La app tiene has_qa=false → poner true. La web (PROGRAMACION) no cambió."
   }
  ]
 }
