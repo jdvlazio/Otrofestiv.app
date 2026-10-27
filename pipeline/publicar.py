@@ -141,6 +141,34 @@ def _n_cob(s):
     return ''.join(c for c in s if c.isalnum())
 
 
+def _cruce_con_lo_publicado(fid, films):
+    """Trabajo 5 (27 oct 2026): lo que otro festival nuestro YA publicó de una
+    obra no se publica vacío, y un porqué que dice «no está en otro festival
+    nuestro» se contrasta con el cruce. «Lolita en Honda» (Mamut, 28 sep) y
+    cuatro cortos de Miradas (27 oct) pasaron porque el cruce existía y nadie
+    lo miraba al publicar. FALLA CERRADO: si no puede leer los otros
+    festivales, no se publica (eso no lo salta --forzar).
+
+    Escape por obra: `no_heredar` de -correcciones.json {título: {"_por_que"}}
+    (un homónimo, un afiche ajeno que la hoja de contacto rechazó)."""
+    try:
+        idx = lib.obras_publicadas_estricto(REPO, excluir=(fid,))
+    except lib.CruceIlegible as e:
+        sys.exit(f'✗ NO se publica {fid}: no se pudo cruzar con los otros festivales — {e}')
+    corr = {}
+    cp = f'{REPO}/festivals/staging/{fid}-correcciones.json'
+    if os.path.exists(cp):
+        corr = json.load(open(cp, encoding='utf-8'))
+    no_her = {lib.norm(k) for k, v in (corr.get('no_heredar') or {}).items()
+              if str((v.get('_por_que') if isinstance(v, dict) else v) or '').strip()}
+    out = [f'«{t[:50]}» sin {k}: {", ".join(de)} lo tiene(n)'
+           for t, k, de in lib.cruce_faltantes(fid, films, idx, no_her)]
+    out += [f'«{t[:50]}»: su `sin_afiche` dice que no está en otro festival nuestro, '
+            f'y está en {", ".join(de)}'
+            for t, de in lib.razones_que_mienten(fid, films, corr.get('sin_afiche'), idx)]
+    return out
+
+
 def _sin_afiche_mudas(fid, films):
     """Las obras publicadas sin `poster` que ninguna declaración cubre.
 
@@ -250,6 +278,20 @@ def publicar(fid, forzar=False):
         sys.exit(1)
     if mudas:
         print(f'⚠ --forzar: se publican {len(mudas)} obra(s) sin afiche y sin porqué')
+
+    # ── ni sin lo que OTRO festival nuestro ya publicó (trabajo 5) ──────────
+    cruce = _cruce_con_lo_publicado(fid, out['films'])
+    if cruce and not forzar:
+        print(f'✗ NO se publica {fid}: el cruce con nuestros festivales publicados lo contradice:')
+        for x in cruce[:15]:
+            print('   ·', x)
+        if len(cruce) > 15:
+            print(f'   … y {len(cruce) - 15} más')
+        print(f'  → re-correr el enriquecido (hereda afiche, ficha y sinopsis con su procedencia), '
+              f'o declarar el porqué en `no_heredar` de festivals/staging/{fid}-correcciones.json')
+        sys.exit(1)
+    if cruce:
+        print(f'⚠ --forzar: se publican {len(cruce)} contradicción(es) con el cruce')
 
     # cada obra apunta a la suya del catálogo (docs/CATALOGO-OBRAS.md, fase 3b);
     # ANTES de la compuerta de pérdida, que cuenta campos: puestos después, la

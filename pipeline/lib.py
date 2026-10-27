@@ -418,6 +418,124 @@ def ya_publicada(obra, idx):
     return out
 
 
+# ── el cruce con lo publicado, como GUARDIÁN (27 oct 2026) ──────────────────
+# Miradas declaró «La mona», «Madres de nacimiento», «Refracción» y «Luis
+# Antonio» «sin afiche: no está en TMDB ni en otro festival nuestro» —un mismo
+# texto pegado a 24 obras el 18 oct— y las cuatro estaban en 3 a 7 festivales
+# nuestros. `ya_publicada` SÍ las encontraba (el enriquecido guardaba el cruce):
+# nadie contrastaba el cruce con lo que se publicaba ni con el porqué escrito.
+
+class CruceIlegible(Exception):
+    """No se pudieron leer los otros festivales: el cruce no se puede afirmar."""
+
+
+# títulos que no nombran una obra: por título se unirían sin serlo
+_GENERICO = re.compile(r'^(programa|muestra|bloque|seleccion|competencia|cortos|'
+                       r'cortometrajes|funcion|sesion|franja)\b|\bcortos?( \d+)?$|^\d+$')
+
+# qué se mira → el campo publicado que lo lleva
+CRUCE_CAMPOS = {'afiche': 'poster', 'ficha': 'tmdb_id', 'sinopsis': 'synopsis'}
+
+
+def obras_publicadas_estricto(repo, excluir=()):
+    """`obras_publicadas`, pero FALLA CERRADO: sin carpeta, sin otro festival
+    o con un JSON que no se lee, el cruce no se puede afirmar y se dice."""
+    carpeta = os.path.join(repo, 'festivals')
+    try:
+        archivos = [f for f in sorted(os.listdir(carpeta)) if f.endswith('.json')]
+    except OSError as e:
+        raise CruceIlegible(f'no se pudo listar {carpeta}: {e}')
+    otros = [f for f in archivos if f[:-5] not in excluir]
+    if not otros:
+        raise CruceIlegible(f'no hay otros festivales en {carpeta}')
+    for f in otros:
+        try:
+            json.load(io.open(os.path.join(carpeta, f), encoding='utf-8'))
+        except (OSError, ValueError) as e:
+            raise CruceIlegible(f'{f} no se lee: {e}')
+    idx = obras_publicadas(repo, excluir)
+    if not idx:
+        raise CruceIlegible('los otros festivales no tienen ninguna obra')
+    return idx
+
+
+def coincidencias(o, idx):
+    """Las presentaciones publicadas que son esta obra `o` (forma publicada):
+    el mismo tmdb_id, o `ya_publicada` —título + dirección/año/duración—. Un
+    título genérico («Programa de Cortos 2») solo cruza por tmdb_id."""
+    out = []
+    tid = o.get('tmdb_id')
+    if tid:
+        for filas in idx.values():
+            out += [(f, p) for f, p in filas if p.get('tmdb_id') == tid]
+    t = norm(o.get('title') or '')
+    if t and not _GENERICO.search(t):
+        obra = {'titulo': o['title'], 'director': o.get('director'),
+                'anio': o.get('year') if isinstance(o.get('year'), int) else None,
+                'duracion_min': _minutos(o.get('duration'))}
+        for k, filas in idx.items():
+            for fp in filas:
+                if fp not in out and ya_publicada(obra, {k: [fp]}):
+                    out.append(fp)
+    return out
+
+
+def _tiene(p, campo):
+    if campo == 'poster':
+        # un fotograma (editorial) no es el afiche de la obra
+        return bool(p.get('poster')) and p.get('posterSource') != 'editorial'
+    return bool(str(p.get(campo) or '').strip())
+
+
+def _obras_de(films):
+    for f in films:
+        if f.get('event_kind') or f.get('type') == 'event':
+            continue
+        for o in (f.get('film_list') or [f]):
+            if isinstance(o, dict) and o.get('title') and o.get('type') != 'event':
+                yield f, o
+
+
+def cruce_faltantes(fid, films, idx, no_heredar=()):
+    """[(título, qué falta, [festivales que lo tienen])]: obras de `fid` sin
+    afiche, ficha o sinopsis que otro festival nuestro SÍ publicó.
+    `no_heredar`: títulos normalizados declarados con su porqué."""
+    malas, vistas = [], set()
+    for _, o in _obras_de(films):
+        n = norm(o['title'])
+        falta = [k for k, c in CRUCE_CAMPOS.items() if not _tiene(o, c)]
+        if not falta or n in vistas or n in no_heredar:
+            continue
+        vistas.add(n)
+        cs = [(fe, p) for fe, p in coincidencias(o, idx) if fe != fid]
+        for k in falta:
+            de = sorted({fe for fe, p in cs if _tiene(p, CRUCE_CAMPOS[k])})
+            if de:
+                malas.append((o['title'], k, de))
+    return malas
+
+
+_NIEGA_CRUCE = re.compile(r'otros? festival(es)? nuestros?', re.I)
+
+
+def razones_que_mienten(fid, films, sin_afiche, idx):
+    """Los porqués de `sin_afiche` que dicen que la obra no está en otro
+    festival nuestro cuando el cruce dice que sí: [(título, [festivales])]."""
+    porque = {norm(k): str((v.get('_por_que') if isinstance(v, dict) else v) or '')
+              for k, v in (sin_afiche or {}).items()}
+    out, vistas = [], set()
+    for f, o in _obras_de(films):
+        n = norm(o['title'])
+        texto = porque.get(n) or (porque.get(norm(f.get('title'))) if f.get('film_list') else '')
+        if n in vistas or not texto or not _NIEGA_CRUCE.search(texto):
+            continue
+        vistas.add(n)
+        de = sorted({fe for fe, _ in coincidencias(o, idx) if fe != fid})
+        if de:
+            out.append((o['title'], de))
+    return out
+
+
 # ── sedes ────────────────────────────────────────────────────────────────────
 def sede_sala(nombre, tabla):
     """Aplica la tabla canónica sede→(sede, sala) de cada festival. La tabla es
