@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "ficcali.com — Programación 2026 (WP 14870) + fichas de la Selección 2026",
-  "capturado": "2026-10-25",
+  "capturado": "2026-10-27",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "radar": 1024,
@@ -434,15 +434,6 @@
    "address": "Bulevar de la Avenida Colombia, centro",
    "_pregunta": "Para los lanzamientos de libros en el Bulevar del Río: ¿en qué carpa/auditorio de CaliLee es cada uno (las tarjetas solo lo dicen en dos)?"
   },
-  "Hotel Obelisco - Cali": {
-   "short": "Hotel Obelisco",
-   "city": "Cali",
-   "_prec": "manual",
-   "_nota": "Google Maps 3.4506674,-76.5442123 · OSM/Nominatim 3.4506906,-76.5441629 · distancia 6 m. Google: «Hotel Obelisco Cali», Av. Colombia #4 Oeste-49. OSM: tourism=hotel «Obelisco», El Peñón, Comuna 3. Punto de partida del City Tour.",
-   "lat": 3.4506674,
-   "lng": -76.5442123,
-   "address": "Avenida Colombia #4 Oeste-49"
-  },
   "Cine Club El Ventanal - Cali": {
    "short": "Cine Club El Ventanal",
    "city": "Cali",
@@ -451,6 +442,15 @@
    "lat": 3.4018453,
    "lng": -76.5511452,
    "address": "Cra. 63A #2A-89, Cuarto de Legua"
+  },
+  "Hotel Obelisco - Cali": {
+   "short": "Hotel Obelisco",
+   "city": "Cali",
+   "_prec": "manual",
+   "_nota": "Google Maps 3.4506674,-76.5442123 · OSM/Nominatim 3.4506906,-76.5441629 · distancia 6 m. Google: «Hotel Obelisco Cali», Av. Colombia #4 Oeste-49. OSM: tourism=hotel «Obelisco», El Peñón, Comuna 3. Punto de partida del City Tour.",
+   "lat": 3.4506674,
+   "lng": -76.5442123,
+   "address": "Avenida Colombia #4 Oeste-49"
   }
  },
  "_avisos_id": [],
@@ -6668,82 +6668,6 @@
    ]
   },
   {
-   "title": "Las pesadillas del siervo",
-   "type": "film",
-   "section": "🇨🇴 Competencia Largometrajes Nacionales",
-   "director": "Manuel Villa",
-   "year": 2025,
-   "country": "Colombia",
-   "flags": "🇨🇴",
-   "duration": "90 min",
-   "_ancla": [
-    "Cine Colombia Unicentro - Cali",
-    "2026-10-23",
-    "20:30"
-   ],
-   "day": "2026-10-25",
-   "time": "15:00",
-   "day_order": 9,
-   "venue": "Cine Club El Ventanal - Cali",
-   "has_qa": false,
-   "synopsis": "En Colombia, el obispo Miguel Ángel Builes impuso sus doctrinas ultraconservadoras, basadas en represión y miedo. Su ideología permeó el pensamiento de un país y creó el caldo de cultivo para el nacimiento de uno de los primeros grupos paramilitares de Colombia, Los doce apóstoles, en esa región, durante los años noventa del siglo XX. Su jefe supremo era un cura admirador de las ideas del obispo. «Por medio de archivos familiares, represento algunos de sus desvelos. El hilo de la película son las pesadillas de Builes, que él registraba en su “Diario espiritual”. Propongo un viaje, un acto de provocación a un obispo muerto, una pequeña victoria ante el pensamiento conservador y los miles de puritanos en el mundo que aún son soldados de esa ideología».",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficcali-2026/las-pesadillas-del-siervo.jpg",
-   "posterSource": "tmdb",
-   "_src": {
-    "url": "https://ficcali.com/programacion-ficcali-2026/",
-    "date": "2026-10-06",
-    "tarjeta": 14030
-   },
-   "lbSlug": "las-pesadillas-del-siervo",
-   "tmdb_id": 1791689,
-   "_fid": "f_80f9a567f8",
-   "id": "f_80f9a567f8",
-   "is_free": true,
-   "_procedencia": {
-    "day": {
-     "tipo": "festival-ig",
-     "fecha": "2026-10-24",
-     "url": "https://www.instagram.com/p/De5nhiFMzEy/"
-    },
-    "time": {
-     "tipo": "festival-ig",
-     "fecha": "2026-10-24",
-     "url": "https://www.instagram.com/p/De4w_O_mYax/"
-    },
-    "venue": {
-     "tipo": "festival-ig",
-     "fecha": "2026-10-24",
-     "url": "https://www.instagram.com/p/De4w_O_mYax/"
-    },
-    "duration": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-06",
-     "url": "https://ficcali.com/programacion-ficcali-2026/"
-    },
-    "has_qa": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-06",
-     "url": "https://ficcali.com/programacion-ficcali-2026/"
-    },
-    "title": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-06",
-     "url": "https://ficcali.com/programacion-ficcali-2026/"
-    },
-    "type": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-06",
-     "url": "https://ficcali.com/programacion-ficcali-2026/"
-    },
-    "entrada": {
-     "tipo": "regla",
-     "marca": "supuesto",
-     "valor": "libre"
-    }
-   }
-  },
-  {
    "title": "Iluminada",
    "type": "film",
    "section": "🇨🇴 Competencia Largometrajes Nacionales",
@@ -7727,17 +7651,21 @@
      "title": "Caída libre",
      "country": "Colombia",
      "flags": "🇨🇴",
-     "poster": "/assets/anibia-2026/caida-libre.jpg",
-     "posterSource": "oficial",
+     "poster": "/assets/ficcali-2026/caida-libre.jpg",
+     "posterSource": "tmdb",
      "lbSlug": "caida-libre",
+     "tmdb_id": 1487969,
      "synopsis": "En el desesperado intento de escapar del aislamiento, un personaje sin rostro salta del borde esperando cambiar su realidad, sin saber que en el fondo de esa caída la ley de la gravedad no aplica para él, este personaje simplemente rebota.",
      "synopsis_en": "In a desperate attempt to escape isolation, a faceless character jumps from a ledge hoping to meet his end, unaware that at the bottom of the fall, the laws of gravity do not apply: he bounces back. Frustrated by this fact, he keeps trying in different scenarios, in a constant cycle. All this takes place in a desolate, polluted landscape devoid of resources.",
-     "title_en": "Free Fall",
      "genre": "Animación",
      "director": "Wilson Borja",
      "year": 2024,
      "synopsis_lang": "es",
-     "duration": "9 min"
+     "duration": "9 min",
+     "title_en": "Free Fall",
+     "_conservado": [
+      "title_en"
+     ]
     },
     {
      "title": "Pájaro Cubo",
@@ -8543,6 +8471,82 @@
     "Animá Ve – Mujeres en la animación",
     "Animá Vé – Retrospectiva"
    ]
+  },
+  {
+   "title": "Las pesadillas del siervo",
+   "type": "film",
+   "section": "🇨🇴 Competencia Largometrajes Nacionales",
+   "director": "Manuel Villa",
+   "year": 2025,
+   "country": "Colombia",
+   "flags": "🇨🇴",
+   "duration": "90 min",
+   "_ancla": [
+    "Cine Club El Ventanal - Cali",
+    "2026-10-25",
+    "15:00"
+   ],
+   "day": "2026-10-25",
+   "time": "15:00",
+   "day_order": 9,
+   "venue": "Cine Club El Ventanal - Cali",
+   "has_qa": false,
+   "synopsis": "En Colombia, el obispo Miguel Ángel Builes impuso sus doctrinas ultraconservadoras, basadas en represión y miedo. Su ideología permeó el pensamiento de un país y creó el caldo de cultivo para el nacimiento de uno de los primeros grupos paramilitares de Colombia, Los doce apóstoles, en esa región, durante los años noventa del siglo XX. Su jefe supremo era un cura admirador de las ideas del obispo. «Por medio de archivos familiares, represento algunos de sus desvelos. El hilo de la película son las pesadillas de Builes, que él registraba en su “Diario espiritual”. Propongo un viaje, un acto de provocación a un obispo muerto, una pequeña victoria ante el pensamiento conservador y los miles de puritanos en el mundo que aún son soldados de esa ideología».",
+   "synopsis_lang": "es",
+   "poster": "/assets/ficcali-2026/las-pesadillas-del-siervo.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14030
+   },
+   "lbSlug": "las-pesadillas-del-siervo",
+   "tmdb_id": 1791689,
+   "_fid": "f_80f9a567f8",
+   "id": "f_80f9a567f8",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-06",
+     "url": "https://ficcali.com/programacion-ficcali-2026/"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-06",
+     "url": "https://ficcali.com/programacion-ficcali-2026/"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-06",
+     "url": "https://ficcali.com/programacion-ficcali-2026/"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-06",
+     "url": "https://ficcali.com/programacion-ficcali-2026/"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-06",
+     "url": "https://ficcali.com/programacion-ficcali-2026/"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-06",
+     "url": "https://ficcali.com/programacion-ficcali-2026/"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-06",
+     "url": "https://ficcali.com/programacion-ficcali-2026/"
+    },
+    "entrada": {
+     "tipo": "regla",
+     "marca": "supuesto",
+     "valor": "libre"
+    }
+   }
   },
   {
    "title": "Todo comenzó por el fin",
@@ -9617,8 +9621,8 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-25T06:24:57",
-  "plan_sha": "24bc04ac59ca2585",
+  "fecha": "2026-10-27T17:48:47",
+  "plan_sha": "2a49eb7c19b8a830",
   "paso": 11,
   "cmd": "python3 pipeline/ficcali-2026-verificar.py"
  }

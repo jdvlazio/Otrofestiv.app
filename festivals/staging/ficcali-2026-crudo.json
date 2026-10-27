@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "ficcali.com — Programación 2026 (WP 14870) + fichas de la Selección 2026",
-  "capturado": "2026-10-25",
+  "capturado": "2026-10-27",
   "url": "https://ficcali.com/programacion-ficcali-2026/",
   "metodo": "tarjeta por función; obra por la ficha del catálogo"
  },
@@ -1757,26 +1757,6 @@
   },
   {
    "dia": "2026-10-23",
-   "hora": "20:30",
-   "sede": "Cine Colombia Unicentro",
-   "sede_cruda": "CINE COLOMBIA UNICENTRO",
-   "acceso": "desconocido",
-   "_src": {
-    "url": "https://ficcali.com/programacion-ficcali-2026/",
-    "date": "2026-10-06",
-    "tarjeta": 14030
-   },
-   "titulo": "Las pesadillas del siervo",
-   "director": "Manuel Villa",
-   "pais": "Colombia",
-   "anio": 2025,
-   "duracion_min": 90,
-   "sinopsis": "En Colombia, el obispo Miguel Ángel Builes impuso sus doctrinas ultraconservadoras, basadas en represión y miedo. Su ideología permeó el pensamiento de un país y creó el caldo de cultivo para el nacimiento de uno de los primeros grupos paramilitares de Colombia, Los doce apóstoles, en esa región, durante los años noventa del siglo XX. Su jefe supremo era un cura admirador de las ideas del obispo. «Por medio de archivos familiares, represento algunos de sus desvelos. El hilo de la película son las pesadillas de Builes, que él registraba en su “Diario espiritual”. Propongo un viaje, un acto de provocación a un obispo muerto, una pequeña victoria ante el pensamiento conservador y los miles de puritanos en el mundo que aún son soldados de esa ideología».",
-   "seccion": "Competencia Largometrajes Nacionales",
-   "duracion_obra": 76
-  },
-  {
-   "dia": "2026-10-23",
    "hora": "21:00",
    "sede": "Cinemateca La Tertulia",
    "sede_cruda": "CINEMATECA MUSEO LA TERTULIA",
@@ -2307,6 +2287,26 @@
    ],
    "duracion_min": 90,
    "_duracion_de": "el hueco hasta la siguiente en la misma sede (tope 90, 60 si es la última)"
+  },
+  {
+   "dia": "2026-10-25",
+   "hora": "15:00",
+   "sede": "Cine Club El Ventanal",
+   "sede_cruda": "Cine Club El ventanal",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14030
+   },
+   "titulo": "Las pesadillas del siervo",
+   "director": "Manuel Villa",
+   "pais": "Colombia",
+   "anio": 2025,
+   "duracion_min": 90,
+   "sinopsis": "En Colombia, el obispo Miguel Ángel Builes impuso sus doctrinas ultraconservadoras, basadas en represión y miedo. Su ideología permeó el pensamiento de un país y creó el caldo de cultivo para el nacimiento de uno de los primeros grupos paramilitares de Colombia, Los doce apóstoles, en esa región, durante los años noventa del siglo XX. Su jefe supremo era un cura admirador de las ideas del obispo. «Por medio de archivos familiares, represento algunos de sus desvelos. El hilo de la película son las pesadillas de Builes, que él registraba en su “Diario espiritual”. Propongo un viaje, un acto de provocación a un obispo muerto, una pequeña victoria ante el pensamiento conservador y los miles de puritanos en el mundo que aún son soldados de esa ideología».",
+   "seccion": "Competencia Largometrajes Nacionales",
+   "duracion_obra": 76
   },
   {
    "dia": "2026-10-25",
