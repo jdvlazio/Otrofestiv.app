@@ -1726,12 +1726,28 @@
    "has_qa": true,
    "qa_type": "team",
    "_src": {
-    "url": "https://midbo.co/peliculas/montana-luminosa/",
+    "url": "https://midbo.co/peliculas/geografia-espectral/",
     "date": "2026-10-10"
    },
    "premiere": "Estreno mundial",
    "is_cortos": true,
    "film_list": [
+    {
+     "title": "Geografía espectral",
+     "director": "Manuel Mateo Gómez",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "year": 2026,
+     "duration": "22 min",
+     "synopsis": "A orillas de una represa hidroeléctrica, cuya construcción sepultó el antiguo cauce del río Cauca, un grupo de mujeres se reúne para bordar. Cubren el río de flores para invocar a sus muertos, en una geografía tejida por hilos de memoria y resistencia. El espíritu de los cuerpos arrojados al río y cubiertos por la represa inconclusa navega junto a los peces en el agua. Las almas emergen vestidas de fuego para escuchar el canto que les envían sus madres y hermanas desde la vida.",
+     "synopsis_lang": "es",
+     "poster": "/assets/midbo-2026/geografia-espectral.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "spectral-geography",
+     "tmdb_id": 1657838,
+     "synopsis_en": "The natural landscape of Colombia’s Río Cauca Valley, with its mountains, forests, and rivers, has been reshaped and transformed for colonial hydroelectric production. Uprooted by the pursuit of profit, a community celebrates a fascinating ritual to remember and mourn its territory, contributing its own images and sounds to the film’s visual and audio stream.",
+     "title_en": "Spectral Geography"
+    },
     {
      "title": "Montaña luminosa",
      "director": "Lony Welter",
@@ -1792,22 +1808,6 @@
      "synopsis_en": "Two women exchange cinematic letters that connect the past and present. Heidrun, a Viennese woman, and Sara, a Colombian migrant, live in the city at different times—whether in fiction or reality is not always clear.",
      "title_en": "Winter Flowers Garden",
      "genre": "Documental"
-    },
-    {
-     "title": "Geografía espectral",
-     "director": "Manuel Mateo Gómez",
-     "country": "Colombia",
-     "flags": "🇨🇴",
-     "year": 2026,
-     "duration": "22 min",
-     "synopsis": "A orillas de una represa hidroeléctrica, cuya construcción sepultó el antiguo cauce del río Cauca, un grupo de mujeres se reúne para bordar. Cubren el río de flores para invocar a sus muertos, en una geografía tejida por hilos de memoria y resistencia. El espíritu de los cuerpos arrojados al río y cubiertos por la represa inconclusa navega junto a los peces en el agua. Las almas emergen vestidas de fuego para escuchar el canto que les envían sus madres y hermanas desde la vida.",
-     "synopsis_lang": "es",
-     "poster": "/assets/midbo-2026/geografia-espectral.jpg",
-     "posterSource": "tmdb",
-     "lbSlug": "spectral-geography",
-     "tmdb_id": 1657838,
-     "synopsis_en": "The natural landscape of Colombia’s Río Cauca Valley, with its mountains, forests, and rivers, has been reshaped and transformed for colonial hydroelectric production. Uprooted by the pursuit of profit, a community celebrates a fascinating ritual to remember and mourn its territory, contributing its own images and sounds to the film’s visual and audio stream.",
-     "title_en": "Spectral Geography"
     }
    ],
    "_fid": "f_428ece0c6c",
@@ -3852,6 +3852,7 @@
     "url": "https://midbo.co/peliculas/como-me-da-la-gana/",
     "date": "2026-10-10"
    },
+   "ticket_url": "https://tuboleta.com/es/eventos/como-me-da-la-gana",
    "lbSlug": "the-way-i-like-it",
    "tmdb_id": 387705,
    "synopsis_en": "Agüero interrupts the filming of 5 films that are being made in Chile in 1984, to ask each director the meaning in their work, at a time when making films in Chile was almost prohibited.",
@@ -3885,6 +3886,16 @@
      "fecha": "2026-10-10",
      "url": "https://midbo.co/"
     },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-10",
+     "url": "https://midbo.co/"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-10",
+     "url": "https://midbo.co/"
+    },
     "has_qa": {
      "tipo": "festival-web",
      "fecha": "2026-10-10",
@@ -3899,11 +3910,6 @@
      "tipo": "festival-web",
      "fecha": "2026-10-10",
      "url": "https://midbo.co/"
-    },
-    "entrada": {
-     "tipo": "regla",
-     "marca": "supuesto",
-     "valor": "boleta"
     }
    }
   },
@@ -3930,6 +3936,7 @@
     "url": "https://midbo.co/peliculas/apotnojushi-la-casa-del-viento/",
     "date": "2026-10-10"
    },
+   "ticket_url": "https://tuboleta.com/es/eventos/geografias-en-resistencia",
    "premiere": "Estreno mundial",
    "is_cortos": true,
    "film_list": [
@@ -3957,7 +3964,7 @@
      "flags": "🇨🇴",
      "year": 2026,
      "duration": "30 min",
-     "synopsis": "En los años setenta, siendo niña, Susana acompañó a su padre, Pedro Juajibioy, en distintos viajes por el Putumayo, donde él recolectaba plantas mientras soñaba con crear un jardín botánico en Sibundoy, su lugar de origen. Hoy, junto a Susana y Brayan, un joven botánico de Sibundoy, recorremos esos mismos caminos en la Amazonía colombiana, siguiendo las huellas de Pedro, reconocido por haber acompañado al etnobotánico Richard Evans Schultes en sus exploraciones por la región entre 1941 y 1953. Ese legado continúa en la labor de Brayan, quien, inspirado en el jardín de Pedro, destruido por una avalancha en la década de 1990, creó en Sibundoy un nuevo espacio de conservación y reanudó su trabajo de recolección y cuidado de las plantas. «Un río de aguas profundas y luminosas» acompaña estos recorridos, en los que se puede observar cómo el conocimiento se transmite entre generaciones y permanece vivo en quienes continúan practicándolo en su territorio.",
+     "synopsis": "A mediados de los años setenta, siendo niña, Susana acompañó a su padre, Pedro Juajibioy, en distintos viajes por el Putumayo, donde él recolectaba plantas mientras soñaba con crear un jardín botánico en Sibundoy, su lugar de origen. Hoy, junto a Susana y Brayan, un joven botánico de Sibundoy, recorremos esos mismos caminos en la Amazonía colombiana, siguiendo las huellas de Pedro, reconocido por haber acompañado al etnobotánico Richard Evans Schultes en sus exploraciones por la región entre 1941 y 1953. Ese legado continúa en la labor de Brayan, quien, inspirado en el jardín de Pedro, destruido por una avalancha en el año 2000, creó en Sibundoy un nuevo espacio de conservación y reanudó su trabajo de recolección y cuidado de las plantas. «Un río de aguas profundas y luminosas» acompaña estos recorridos, en los que se puede observar cómo el conocimiento se transmite entre generaciones y permanece vivo en quienes continúan practicándolo en su territorio.",
      "synopsis_lang": "es",
      "poster": "/assets/midbo-2026/un-rio-de-aguas-profundas-y-luminosas.jpg",
      "posterSource": "editorial"
@@ -4038,6 +4045,16 @@
      "fecha": "2026-10-10",
      "url": "https://midbo.co/"
     },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-10",
+     "url": "https://midbo.co/"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-10",
+     "url": "https://midbo.co/"
+    },
     "has_qa": {
      "tipo": "festival-web",
      "fecha": "2026-10-10",
@@ -4067,11 +4084,6 @@
      "tipo": "festival-web",
      "fecha": "2026-10-10",
      "url": "https://midbo.co/"
-    },
-    "entrada": {
-     "tipo": "regla",
-     "marca": "supuesto",
-     "valor": "boleta"
     }
    },
    "titulos_anteriores": [
@@ -4210,6 +4222,7 @@
     "url": "https://midbo.co/peliculas/chanson-pour-le-nouveau-monde/",
     "date": "2026-10-10"
    },
+   "ticket_url": "https://tuboleta.com/es/eventos/nacer-de-nuevo-escuchando-la-vida",
    "is_cortos": true,
    "film_list": [
     {
@@ -4291,6 +4304,16 @@
      "fecha": "2026-10-10",
      "url": "https://midbo.co/"
     },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-10",
+     "url": "https://midbo.co/"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-10",
+     "url": "https://midbo.co/"
+    },
     "has_qa": {
      "tipo": "festival-web",
      "fecha": "2026-10-10",
@@ -4310,11 +4333,6 @@
      "tipo": "festival-web",
      "fecha": "2026-10-10",
      "url": "https://midbo.co/"
-    },
-    "entrada": {
-     "tipo": "regla",
-     "marca": "supuesto",
-     "valor": "boleta"
     }
    },
    "titulos_anteriores": [
@@ -4343,6 +4361,7 @@
     "url": "https://midbo.co/peliculas/ire-a-santiago/",
     "date": "2026-10-10"
    },
+   "ticket_url": "https://tuboleta.com/es/eventos/retrospectiva-sara-gomez",
    "is_cortos": true,
    "film_list": [
     {
@@ -4443,6 +4462,16 @@
      "fecha": "2026-10-10",
      "url": "https://midbo.co/"
     },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-10",
+     "url": "https://midbo.co/"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-10",
+     "url": "https://midbo.co/"
+    },
     "has_qa": {
      "tipo": "festival-web",
      "fecha": "2026-10-10",
@@ -4462,11 +4491,6 @@
      "tipo": "festival-web",
      "fecha": "2026-10-10",
      "url": "https://midbo.co/"
-    },
-    "entrada": {
-     "tipo": "regla",
-     "marca": "supuesto",
-     "valor": "boleta"
     }
    },
    "titulos_anteriores": [
@@ -4579,6 +4603,7 @@
     "url": "https://midbo.co/peliculas/hombres-perdidos/",
     "date": "2026-10-10"
    },
+   "ticket_url": "https://tuboleta.com/es/eventos/hombres-perdidos",
    "premiere": "Estreno en Colombia",
    "lbSlug": "lost-men",
    "tmdb_id": 1405578,
@@ -4613,6 +4638,16 @@
      "fecha": "2026-10-10",
      "url": "https://midbo.co/"
     },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-10",
+     "url": "https://midbo.co/"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-10",
+     "url": "https://midbo.co/"
+    },
     "has_qa": {
      "tipo": "festival-web",
      "fecha": "2026-10-10",
@@ -4632,11 +4667,6 @@
      "tipo": "festival-web",
      "fecha": "2026-10-10",
      "url": "https://midbo.co/"
-    },
-    "entrada": {
-     "tipo": "regla",
-     "marca": "supuesto",
-     "valor": "boleta"
     }
    }
   },
@@ -4662,6 +4692,7 @@
     "url": "https://midbo.co/peliculas/the-flowers-stand-silently-witnessing/",
     "date": "2026-10-10"
    },
+   "ticket_url": "https://tuboleta.com/es/eventos/algun-dia-escribiremos-sobre-flores",
    "premiere": "Estreno en Colombia",
    "is_cortos": true,
    "film_list": [
@@ -4757,6 +4788,16 @@
      "fecha": "2026-10-10",
      "url": "https://midbo.co/"
     },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-10",
+     "url": "https://midbo.co/"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-10",
+     "url": "https://midbo.co/"
+    },
     "has_qa": {
      "tipo": "festival-web",
      "fecha": "2026-10-10",
@@ -4781,11 +4822,6 @@
      "tipo": "festival-web",
      "fecha": "2026-10-10",
      "url": "https://midbo.co/"
-    },
-    "entrada": {
-     "tipo": "regla",
-     "marca": "supuesto",
-     "valor": "boleta"
     }
    },
    "titulos_anteriores": [
@@ -4905,6 +4941,7 @@
     "url": "https://midbo.co/peliculas/back-to-fukushima/",
     "date": "2026-10-10"
    },
+   "ticket_url": "https://tuboleta.com/es/eventos/back-fukushima",
    "premiere": "Estreno en Latinoamérica",
    "lbSlug": "retour-a-fukushima",
    "tmdb_id": 1592063,
@@ -4938,6 +4975,16 @@
      "fecha": "2026-10-10",
      "url": "https://midbo.co/"
     },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-10",
+     "url": "https://midbo.co/"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-10",
+     "url": "https://midbo.co/"
+    },
     "has_qa": {
      "tipo": "festival-web",
      "fecha": "2026-10-10",
@@ -4957,11 +5004,6 @@
      "tipo": "festival-web",
      "fecha": "2026-10-10",
      "url": "https://midbo.co/"
-    },
-    "entrada": {
-     "tipo": "regla",
-     "marca": "supuesto",
-     "valor": "boleta"
     }
    }
   },
@@ -4995,6 +5037,7 @@
     "url": "https://midbo.co/peliculas/relicto/",
     "date": "2026-10-10"
    },
+   "ticket_url": "https://tuboleta.com/es/eventos/relicto",
    "lbSlug": "relicto",
    "tmdb_id": 1633353,
    "synopsis_en": "\"At 105, Sixto Muñoz, known as 'the last Tinigua man', left his home for one final journey into the Amazon and disappeared. Following his trail along the Guayabero River, the film retraces his fading world and the extinction of an entire culture.\"",
@@ -5027,6 +5070,16 @@
      "fecha": "2026-10-10",
      "url": "https://midbo.co/"
     },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-10",
+     "url": "https://midbo.co/"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-10",
+     "url": "https://midbo.co/"
+    },
     "has_qa": {
      "tipo": "festival-web",
      "fecha": "2026-10-10",
@@ -5046,11 +5099,6 @@
      "tipo": "festival-web",
      "fecha": "2026-10-10",
      "url": "https://midbo.co/"
-    },
-    "entrada": {
-     "tipo": "regla",
-     "marca": "supuesto",
-     "valor": "boleta"
     }
    }
   },
@@ -5076,6 +5124,7 @@
     "url": "https://midbo.co/peliculas/los-guardianes-del-agua/",
     "date": "2026-10-10"
    },
+   "ticket_url": "https://tuboleta.com/es/eventos/crea-idartes",
    "is_cortos": true,
    "film_list": [
     {
@@ -5220,6 +5269,16 @@
      "fecha": "2026-10-10",
      "url": "https://midbo.co/"
     },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-10",
+     "url": "https://midbo.co/"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-10",
+     "url": "https://midbo.co/"
+    },
     "has_qa": {
      "tipo": "festival-web",
      "fecha": "2026-10-10",
@@ -5239,11 +5298,6 @@
      "tipo": "festival-web",
      "fecha": "2026-10-10",
      "url": "https://midbo.co/"
-    },
-    "entrada": {
-     "tipo": "regla",
-     "marca": "supuesto",
-     "valor": "boleta"
     }
    },
    "titulos_anteriores": [
@@ -5273,6 +5327,7 @@
     "url": "https://midbo.co/peliculas/quien-paga-el-pato/",
     "date": "2026-10-10"
    },
+   "ticket_url": "https://tuboleta.com/es/eventos/homenaje-alado-pablo-mora",
    "is_cortos": true,
    "film_list": [
     {
@@ -5325,6 +5380,16 @@
      "fecha": "2026-10-10",
      "url": "https://midbo.co/"
     },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-10",
+     "url": "https://midbo.co/"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-10",
+     "url": "https://midbo.co/"
+    },
     "has_qa": {
      "tipo": "festival-web",
      "fecha": "2026-10-10",
@@ -5349,11 +5414,6 @@
      "tipo": "festival-web",
      "fecha": "2026-10-10",
      "url": "https://midbo.co/"
-    },
-    "entrada": {
-     "tipo": "regla",
-     "marca": "supuesto",
-     "valor": "boleta"
     }
    }
   },
@@ -5380,6 +5440,7 @@
     "url": "https://midbo.co/peliculas/geografia-espectral/",
     "date": "2026-10-10"
    },
+   "ticket_url": "https://tuboleta.com/es/eventos/creadoras-de-vida",
    "premiere": "Estreno mundial",
    "is_cortos": true,
    "film_list": [
@@ -5490,6 +5551,16 @@
      "fecha": "2026-10-10",
      "url": "https://midbo.co/"
     },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-10",
+     "url": "https://midbo.co/"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-10",
+     "url": "https://midbo.co/"
+    },
     "has_qa": {
      "tipo": "festival-web",
      "fecha": "2026-10-10",
@@ -5519,11 +5590,6 @@
      "tipo": "festival-web",
      "fecha": "2026-10-10",
      "url": "https://midbo.co/"
-    },
-    "entrada": {
-     "tipo": "regla",
-     "marca": "supuesto",
-     "valor": "boleta"
     }
    },
    "titulos_anteriores": [
@@ -5554,6 +5620,7 @@
     "url": "https://midbo.co/peliculas/escrito-sobre-un-cuerpo/",
     "date": "2026-10-10"
    },
+   "ticket_url": "https://tuboleta.com/es/eventos/imagenes-para-otro-pasado",
    "premiere": "Estreno en Colombia",
    "is_cortos": true,
    "film_list": [
@@ -5649,6 +5716,16 @@
      "fecha": "2026-10-10",
      "url": "https://midbo.co/"
     },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-10",
+     "url": "https://midbo.co/"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-10",
+     "url": "https://midbo.co/"
+    },
     "has_qa": {
      "tipo": "festival-web",
      "fecha": "2026-10-10",
@@ -5673,11 +5750,6 @@
      "tipo": "festival-web",
      "fecha": "2026-10-10",
      "url": "https://midbo.co/"
-    },
-    "entrada": {
-     "tipo": "regla",
-     "marca": "supuesto",
-     "valor": "boleta"
     }
    },
    "titulos_anteriores": [
@@ -5706,6 +5778,7 @@
     "url": "https://midbo.co/peliculas/hanoi-martes-13/",
     "date": "2026-10-10"
    },
+   "ticket_url": "https://tuboleta.com/es/eventos/foco-santiago-alvarez",
    "is_cortos": true,
    "film_list": [
     {
@@ -5805,6 +5878,16 @@
      "fecha": "2026-10-10",
      "url": "https://midbo.co/"
     },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-10",
+     "url": "https://midbo.co/"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-10",
+     "url": "https://midbo.co/"
+    },
     "has_qa": {
      "tipo": "festival-web",
      "fecha": "2026-10-10",
@@ -5824,11 +5907,6 @@
      "tipo": "festival-web",
      "fecha": "2026-10-10",
      "url": "https://midbo.co/"
-    },
-    "entrada": {
-     "tipo": "regla",
-     "marca": "supuesto",
-     "valor": "boleta"
     }
    }
   },
@@ -6007,6 +6085,7 @@
     "url": "https://midbo.co/peliculas/boyuna/",
     "date": "2026-10-10"
    },
+   "ticket_url": "https://tuboleta.com/es/eventos/miradas-convulsas-desde-el-presente",
    "premiere": "Estreno internacional",
    "is_cortos": true,
    "film_list": [
@@ -6103,6 +6182,16 @@
      "fecha": "2026-10-10",
      "url": "https://midbo.co/"
     },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-10",
+     "url": "https://midbo.co/"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-10",
+     "url": "https://midbo.co/"
+    },
     "has_qa": {
      "tipo": "festival-web",
      "fecha": "2026-10-10",
@@ -6127,11 +6216,6 @@
      "tipo": "festival-web",
      "fecha": "2026-10-10",
      "url": "https://midbo.co/"
-    },
-    "entrada": {
-     "tipo": "regla",
-     "marca": "supuesto",
-     "valor": "boleta"
     }
    },
    "titulos_anteriores": [
@@ -6160,6 +6244,7 @@
     "url": "https://midbo.co/peliculas/a-women-s-college-in-the-village/",
     "date": "2026-10-10"
    },
+   "ticket_url": "https://tuboleta.com/es/eventos/tanto-trabajo-por-hacer",
    "is_cortos": true,
    "film_list": [
     {
@@ -6221,6 +6306,16 @@
      "fecha": "2026-10-10",
      "url": "https://midbo.co/"
     },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-10",
+     "url": "https://midbo.co/"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-10",
+     "url": "https://midbo.co/"
+    },
     "has_qa": {
      "tipo": "festival-web",
      "fecha": "2026-10-10",
@@ -6240,11 +6335,6 @@
      "tipo": "festival-web",
      "fecha": "2026-10-10",
      "url": "https://midbo.co/"
-    },
-    "entrada": {
-     "tipo": "regla",
-     "marca": "supuesto",
-     "valor": "boleta"
     }
    },
    "titulos_anteriores": [
@@ -6280,6 +6370,7 @@
     "url": "https://midbo.co/peliculas/hair-paper-water/",
     "date": "2026-10-10"
    },
+   "ticket_url": "https://tuboleta.com/es/eventos/hair-paper-water-toc-giay-va-nuoc",
    "premiere": "Estreno en Bogotá",
    "lbSlug": "hair-paper-water",
    "tmdb_id": 1510333,
@@ -6313,6 +6404,16 @@
      "fecha": "2026-10-10",
      "url": "https://midbo.co/"
     },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-10",
+     "url": "https://midbo.co/"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-10",
+     "url": "https://midbo.co/"
+    },
     "has_qa": {
      "tipo": "festival-web",
      "fecha": "2026-10-10",
@@ -6332,11 +6433,6 @@
      "tipo": "festival-web",
      "fecha": "2026-10-10",
      "url": "https://midbo.co/"
-    },
-    "entrada": {
-     "tipo": "regla",
-     "marca": "supuesto",
-     "valor": "boleta"
     }
    }
   },
@@ -6370,6 +6466,7 @@
     "url": "https://midbo.co/peliculas/las-almas-ni-los-ojos/",
     "date": "2026-10-10"
    },
+   "ticket_url": "https://tuboleta.com/es/eventos/las-almas-ni-los-ojos",
    "lbSlug": "las-almas-ni-los-ojos",
    "tmdb_id": 1665538,
    "synopsis_en": "After fleeing violence at age 15, Pacho spends four decades away from Anserma. Now a photograph sparks a desire to return, and on his journey home —imagined as an interstellar voyage— he searches for what he left behind. The lingering traces of death intertwine with a landscape of rural expressionism, memory, and history",
@@ -6402,6 +6499,16 @@
      "fecha": "2026-10-10",
      "url": "https://midbo.co/"
     },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-10",
+     "url": "https://midbo.co/"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-10",
+     "url": "https://midbo.co/"
+    },
     "has_qa": {
      "tipo": "festival-web",
      "fecha": "2026-10-10",
@@ -6421,11 +6528,6 @@
      "tipo": "festival-web",
      "fecha": "2026-10-10",
      "url": "https://midbo.co/"
-    },
-    "entrada": {
-     "tipo": "regla",
-     "marca": "supuesto",
-     "valor": "boleta"
     }
    }
   },
@@ -6542,10 +6644,10 @@
    "_ancla": [
     "Alianza Francesa - Bogotá",
     "2026-11-03",
-    "14:30"
+    "14:00"
    ],
    "day": "2026-11-03",
-   "time": "14:30",
+   "time": "14:00",
    "day_order": 7,
    "venue": "Alianza Francesa - Bogotá",
    "has_qa": true,
@@ -6572,6 +6674,91 @@
      "tipo": "festival-web",
      "fecha": "2026-10-10",
      "url": "https://midbo.co/"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-26",
+     "url": "https://midbo.co/peliculas/buenos-dias-wiracocha/"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-10",
+     "url": "https://midbo.co/"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-10",
+     "url": "https://midbo.co/"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-10",
+     "url": "https://midbo.co/"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-10",
+     "url": "https://midbo.co/"
+    },
+    "qa_type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-10",
+     "url": "https://midbo.co/"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-10",
+     "url": "https://midbo.co/"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-10",
+     "url": "https://midbo.co/"
+    }
+   }
+  },
+  {
+   "title": "L'Evangile de la Révolution",
+   "type": "film",
+   "section": "🪞 Espejos: Gestos de Reparación",
+   "director": "François-Xavier Drouet",
+   "country": "Francia, Bélgica",
+   "flags": "🇫🇷🇧🇪",
+   "duration": "115 min",
+   "genre": "Documental",
+   "_ancla": [
+    "Alianza Francesa - Bogotá",
+    "2026-11-03",
+    "16:00"
+   ],
+   "day": "2026-11-03",
+   "time": "16:00",
+   "day_order": 7,
+   "venue": "Alianza Francesa - Bogotá",
+   "has_qa": true,
+   "qa_type": "team",
+   "synopsis": "El auge revolucionario de América Latina en el siglo XX se debe mucho a la participación de millones de cristianos, comprometidos en luchas políticas en nombre de la fe. Inspirados por la teología de la liberación, desafiaron a los regímenes militares y a las oligarquías. Cuestionando la idea de la religión como opio del pueblo, la película va al encuentro de los que vieron en la revolución la llegada del Reino de Dios, en la tierra antes que en el cielo.",
+   "synopsis_lang": "es",
+   "poster": "/assets/midbo-2026/l-evangile-de-la-revolution.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://midbo.co/peliculas/l-evangile-de-la-revolution/",
+    "date": "2026-10-10"
+   },
+   "year": 2024,
+   "lbSlug": "the-gospel-of-revolution",
+   "tmdb_id": 1303398,
+   "synopsis_en": "The revolutions that swept Latin America in the second half of the 20th century owe much to the participation of millions of Christians who engaged in political struggles in the name of their faith, paying a heavy toll for undermining the traditional relationship between the Church and power. Driven by Liberation theology, they challenged military regimes and oligarchies, risking their lives. Far from Marx's idea of religion as 'opium of the people', here the people fought for the advent of the Kingdom of God on Earth, rather than in Heaven.",
+   "title_en": "The Gospel of Revolution",
+   "_programa_original": "Programa 7: Reactivar los archivos para el presente — Alianza Francesa",
+   "_fid": "f_3c54af994b",
+   "id": "f_3c54af994b",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-26",
+     "url": "https://midbo.co/peliculas/l-evangile-de-la-revolution/"
     },
     "time": {
      "tipo": "festival-web",
@@ -6614,113 +6801,6 @@
      "url": "https://midbo.co/"
     }
    }
-  },
-  {
-   "title": "Programa 1: Tanto Trabajo por Hacer",
-   "type": "film",
-   "section": "✨ Programas Especiales",
-   "country": "Japón, Cuba",
-   "flags": "🇯🇵🇨🇺",
-   "duration": "58 min",
-   "_ancla": [
-    "Alianza Francesa - Bogotá",
-    "2026-11-03",
-    "16:30"
-   ],
-   "day": "2026-11-03",
-   "time": "16:30",
-   "day_order": 7,
-   "venue": "Alianza Francesa - Bogotá",
-   "has_qa": false,
-   "_src": {
-    "url": "https://midbo.co/peliculas/a-women-s-college-in-the-village/",
-    "date": "2026-10-10"
-   },
-   "is_cortos": true,
-   "film_list": [
-    {
-     "title": "A Women 's College in the Village",
-     "director": "Sumiko Haneda",
-     "country": "Japón",
-     "flags": "🇯🇵",
-     "year": 1957,
-     "duration": "25 min",
-     "synopsis": "Un documental que retrata la vida de las llamadas «clases para mujeres del pueblo», centradas principalmente en el diálogo y basadas en la idea de «pensar juntas y crecer como buenas madres». La película fue rodada en Iwane, Kōsei-chō (actualmente ciudad de Konan), en la prefectura de Shiga. Las mujeres que se han casado en familias campesinas trabajan sin descanso y, frente a sus suegras y esposos, ni siquiera pueden expresar sus propias opiniones. Al mismo tiempo, se enfrentan a la diferencia entre su propia forma de pensar y la de sus hijos, quienes crecen en la escuela recibiendo una educación en la que no se hace distinción entre niños y niñas. A partir de las redacciones escritas por los niños bajo el tema «¿Qué piensas de tu madre?», las mujeres comienzan a compartir con sus compañeras sus preocupaciones sobre la crianza de los hijos y las dificultades de la vida cotidiana. A través del intercambio de opiniones y del apoyo mutuo, van encontrando la manera de afrontar sus problemas. Las «clases para mujeres» impulsadas por el Ministerio de Educación comenzaron en el año fiscal de 1956 (año 31 de la era Shōwa), como parte de la educación social de la posguerra. Se organizaron y desarrollaron sobre la base de las asociaciones locales de mujeres, dirigidas principalmente a mujeres de las zonas rurales. Esta película fue filmada durante el primer año de funcionamiento del programa. Además, permite observar la vestimenta y las formas de vida de las zonas rurales aproximadamente diez años después del final de la guerra, así como las labores agrícolas de una época en la que la mecanización todavía no había llegado al campo.",
-     "synopsis_lang": "es",
-     "poster": "/assets/midbo-2026/a-women-s-college-in-the-village.jpg",
-     "posterSource": "editorial"
-    },
-    {
-     "title": "Mi aporte",
-     "director": "Sara Gómez",
-     "country": "Cuba",
-     "flags": "🇨🇺",
-     "year": 1972,
-     "duration": "33 min",
-     "synopsis": "A través de entrevistas y debates, se presentan y analizan las dificultades que aún enfrentan las mujeres para ser aceptadas en el ámbito laboral, mientras deben conciliar estas responsabilidades con las tareas domésticas que continúan desempeñando. Una ilustración de las dificultades que encuentran las mujeres cuando buscan lograr la integración económica y la igualdad con los hombres en un país en plena revolución.",
-     "synopsis_lang": "es",
-     "poster": "/assets/midbo-2026/mi-aporte.jpg",
-     "posterSource": "tmdb",
-     "lbSlug": "my-contribution",
-     "tmdb_id": 593516,
-     "synopsis_en": "An illustration of the difficulties women encounter when they seek to achieve economic integration and equality with men in a country at the height of revolution.",
-     "title_en": "My Contribution",
-     "genre": "Documental"
-    }
-   ],
-   "_fid": "f_8c7386eddd",
-   "id": "f_8c7386eddd",
-   "is_free": true,
-   "_procedencia": {
-    "day": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-10",
-     "url": "https://midbo.co/"
-    },
-    "time": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-10",
-     "url": "https://midbo.co/"
-    },
-    "venue": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-10",
-     "url": "https://midbo.co/"
-    },
-    "duration": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-10",
-     "url": "https://midbo.co/"
-    },
-    "entrada": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-10",
-     "url": "https://midbo.co/"
-    },
-    "has_qa": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-10",
-     "url": "https://midbo.co/"
-    },
-    "title": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-10",
-     "url": "https://midbo.co/"
-    },
-    "film_list": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-10",
-     "url": "https://midbo.co/"
-    },
-    "type": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-10",
-     "url": "https://midbo.co/"
-    }
-   },
-   "titulos_anteriores": [
-    "Programa 1: Tanto trabajo por hacer"
-   ]
   },
   {
    "title": "Si La Escombrera hablara",
@@ -7347,6 +7427,7 @@
     "url": "https://midbo.co/peliculas/para-mi-ya-no-es-cualquier-bano/",
     "date": "2026-10-10"
    },
+   "ticket_url": "https://tuboleta.com/es/eventos/volvemos-nacer",
    "premiere": "Estreno en Colombia",
    "is_cortos": true,
    "film_list": [
@@ -7493,6 +7574,16 @@
      "fecha": "2026-10-10",
      "url": "https://midbo.co/"
     },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-10",
+     "url": "https://midbo.co/"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-10",
+     "url": "https://midbo.co/"
+    },
     "has_qa": {
      "tipo": "festival-web",
      "fecha": "2026-10-10",
@@ -7517,11 +7608,6 @@
      "tipo": "festival-web",
      "fecha": "2026-10-10",
      "url": "https://midbo.co/"
-    },
-    "entrada": {
-     "tipo": "regla",
-     "marca": "supuesto",
-     "valor": "boleta"
     }
    },
    "titulos_anteriores": [
@@ -7668,6 +7754,7 @@
     "url": "https://midbo.co/peliculas/el-valor-de-la-palabra/",
     "date": "2026-10-10"
    },
+   "ticket_url": "https://tuboleta.com/es/eventos/el-valor-de-la-palabra",
    "lbSlug": "el-valor-de-la-palabra",
    "tmdb_id": 1665557,
    "synopsis_en": "The long career of Colombian filmmaker Marta Rodríguez demonstrates a commitment to documenting the history of repression and struggle of indigenous and marginalized peoples.",
@@ -7700,6 +7787,16 @@
      "fecha": "2026-10-10",
      "url": "https://midbo.co/"
     },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-10",
+     "url": "https://midbo.co/"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-10",
+     "url": "https://midbo.co/"
+    },
     "has_qa": {
      "tipo": "festival-web",
      "fecha": "2026-10-10",
@@ -7719,13 +7816,115 @@
      "tipo": "festival-web",
      "fecha": "2026-10-10",
      "url": "https://midbo.co/"
-    },
-    "entrada": {
-     "tipo": "regla",
-     "marca": "supuesto",
-     "valor": "boleta"
     }
    }
+  },
+  {
+   "title": "Programa 1: Tanto Trabajo por Hacer",
+   "type": "film",
+   "section": "✨ Programas Especiales",
+   "country": "Japón, Cuba",
+   "flags": "🇯🇵🇨🇺",
+   "duration": "58 min",
+   "_ancla": [
+    "Alianza Francesa - Bogotá",
+    "2026-11-04",
+    "16:00"
+   ],
+   "day": "2026-11-04",
+   "time": "16:00",
+   "day_order": 8,
+   "venue": "Alianza Francesa - Bogotá",
+   "has_qa": false,
+   "_src": {
+    "url": "https://midbo.co/peliculas/a-women-s-college-in-the-village/",
+    "date": "2026-10-10"
+   },
+   "is_cortos": true,
+   "film_list": [
+    {
+     "title": "A Women 's College in the Village",
+     "director": "Sumiko Haneda",
+     "country": "Japón",
+     "flags": "🇯🇵",
+     "year": 1957,
+     "duration": "25 min",
+     "synopsis": "Un documental que retrata la vida de las llamadas «clases para mujeres del pueblo», centradas principalmente en el diálogo y basadas en la idea de «pensar juntas y crecer como buenas madres». La película fue rodada en Iwane, Kōsei-chō (actualmente ciudad de Konan), en la prefectura de Shiga. Las mujeres que se han casado en familias campesinas trabajan sin descanso y, frente a sus suegras y esposos, ni siquiera pueden expresar sus propias opiniones. Al mismo tiempo, se enfrentan a la diferencia entre su propia forma de pensar y la de sus hijos, quienes crecen en la escuela recibiendo una educación en la que no se hace distinción entre niños y niñas. A partir de las redacciones escritas por los niños bajo el tema «¿Qué piensas de tu madre?», las mujeres comienzan a compartir con sus compañeras sus preocupaciones sobre la crianza de los hijos y las dificultades de la vida cotidiana. A través del intercambio de opiniones y del apoyo mutuo, van encontrando la manera de afrontar sus problemas. Las «clases para mujeres» impulsadas por el Ministerio de Educación comenzaron en el año fiscal de 1956 (año 31 de la era Shōwa), como parte de la educación social de la posguerra. Se organizaron y desarrollaron sobre la base de las asociaciones locales de mujeres, dirigidas principalmente a mujeres de las zonas rurales. Esta película fue filmada durante el primer año de funcionamiento del programa. Además, permite observar la vestimenta y las formas de vida de las zonas rurales aproximadamente diez años después del final de la guerra, así como las labores agrícolas de una época en la que la mecanización todavía no había llegado al campo.",
+     "synopsis_lang": "es",
+     "poster": "/assets/midbo-2026/a-women-s-college-in-the-village.jpg",
+     "posterSource": "editorial"
+    },
+    {
+     "title": "Mi aporte",
+     "director": "Sara Gómez",
+     "country": "Cuba",
+     "flags": "🇨🇺",
+     "year": 1972,
+     "duration": "33 min",
+     "synopsis": "A través de entrevistas y debates, se presentan y analizan las dificultades que aún enfrentan las mujeres para ser aceptadas en el ámbito laboral, mientras deben conciliar estas responsabilidades con las tareas domésticas que continúan desempeñando. Una ilustración de las dificultades que encuentran las mujeres cuando buscan lograr la integración económica y la igualdad con los hombres en un país en plena revolución.",
+     "synopsis_lang": "es",
+     "poster": "/assets/midbo-2026/mi-aporte.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "my-contribution",
+     "tmdb_id": 593516,
+     "synopsis_en": "An illustration of the difficulties women encounter when they seek to achieve economic integration and equality with men in a country at the height of revolution.",
+     "title_en": "My Contribution",
+     "genre": "Documental"
+    }
+   ],
+   "_fid": "f_8c7386eddd",
+   "id": "f_8c7386eddd",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-26",
+     "url": "https://midbo.co/peliculas/a-women-s-college-in-the-village/"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-26",
+     "url": "https://midbo.co/peliculas/a-women-s-college-in-the-village/"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-10",
+     "url": "https://midbo.co/"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-10",
+     "url": "https://midbo.co/"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-10",
+     "url": "https://midbo.co/"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-10",
+     "url": "https://midbo.co/"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-10",
+     "url": "https://midbo.co/"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-10",
+     "url": "https://midbo.co/"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-10",
+     "url": "https://midbo.co/"
+    }
+   },
+   "titulos_anteriores": [
+    "Programa 1: Tanto trabajo por hacer"
+   ]
   },
   {
    "title": "Bojayá: la verdad desde adentro",
@@ -7754,6 +7953,7 @@
     "url": "https://midbo.co/peliculas/bojaya-la-verdad-desde-adentro/",
     "date": "2026-10-10"
    },
+   "ticket_url": "https://tuboleta.com/es/eventos/bojaya-la-verdad-desde-adentro",
    "year": 2026,
    "lbSlug": "bojaya-la-verdad-desde-adentro",
    "tmdb_id": 1738325,
@@ -7788,96 +7988,17 @@
      "fecha": "2026-10-10",
      "url": "https://midbo.co/"
     },
-    "has_qa": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-10",
-     "url": "https://midbo.co/"
-    },
-    "title": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-10",
-     "url": "https://midbo.co/"
-    },
-    "type": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-10",
-     "url": "https://midbo.co/"
-    },
-    "entrada": {
-     "tipo": "regla",
-     "marca": "supuesto",
-     "valor": "boleta"
-    }
-   }
-  },
-  {
-   "title": "L'Evangile de la Révolution",
-   "type": "film",
-   "section": "🪞 Espejos: Gestos de Reparación",
-   "director": "François-Xavier Drouet",
-   "year": 2024,
-   "country": "Francia, Bélgica",
-   "flags": "🇫🇷🇧🇪",
-   "duration": "115 min",
-   "genre": "Documental",
-   "_ancla": [
-    "Alianza Francesa - Bogotá",
-    "2026-11-04",
-    "16:00"
-   ],
-   "day": "2026-11-04",
-   "time": "16:00",
-   "day_order": 8,
-   "venue": "Alianza Francesa - Bogotá",
-   "has_qa": true,
-   "qa_type": "team",
-   "synopsis": "El auge revolucionario de América Latina en el siglo XX se debe mucho a la participación de millones de cristianos, comprometidos en luchas políticas en nombre de la fe. Inspirados por la teología de la liberación, desafiaron a los regímenes militares y a las oligarquías. Cuestionando la idea de la religión como opio del pueblo, la película va al encuentro de los que vieron en la revolución la llegada del Reino de Dios, en la tierra antes que en el cielo.",
-   "synopsis_lang": "es",
-   "poster": "/assets/midbo-2026/l-evangile-de-la-revolution.jpg",
-   "posterSource": "tmdb",
-   "_src": {
-    "url": "https://midbo.co/peliculas/l-evangile-de-la-revolution/",
-    "date": "2026-10-10"
-   },
-   "lbSlug": "the-gospel-of-revolution",
-   "tmdb_id": 1303398,
-   "synopsis_en": "The revolutions that swept Latin America in the second half of the 20th century owe much to the participation of millions of Christians who engaged in political struggles in the name of their faith, paying a heavy toll for undermining the traditional relationship between the Church and power. Driven by Liberation theology, they challenged military regimes and oligarchies, risking their lives. Far from Marx's idea of religion as 'opium of the people', here the people fought for the advent of the Kingdom of God on Earth, rather than in Heaven.",
-   "title_en": "The Gospel of Revolution",
-   "_fid": "f_3c54af994b",
-   "id": "f_3c54af994b",
-   "is_free": true,
-   "_procedencia": {
-    "day": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-10",
-     "url": "https://midbo.co/"
-    },
-    "time": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-10",
-     "url": "https://midbo.co/"
-    },
-    "venue": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-10",
-     "url": "https://midbo.co/"
-    },
-    "duration": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-10",
-     "url": "https://midbo.co/"
-    },
     "entrada": {
      "tipo": "festival-web",
      "fecha": "2026-10-10",
      "url": "https://midbo.co/"
     },
-    "has_qa": {
+    "ticket_url": {
      "tipo": "festival-web",
      "fecha": "2026-10-10",
      "url": "https://midbo.co/"
     },
-    "qa_type": {
+    "has_qa": {
      "tipo": "festival-web",
      "fecha": "2026-10-10",
      "url": "https://midbo.co/"
@@ -7923,6 +8044,7 @@
     "url": "https://midbo.co/peliculas/cuba-y-la-noche/",
     "date": "2026-10-10"
    },
+   "ticket_url": "https://tuboleta.com/es/eventos/cuba-y-la-noche",
    "lbSlug": "the-long-cuban-night",
    "tmdb_id": 1714180,
    "synopsis_en": "Captured entirely on phone footage, a group of Cuban artists risk everything to document their uprising against a government trying to silence them.",
@@ -7956,6 +8078,16 @@
      "fecha": "2026-10-10",
      "url": "https://midbo.co/"
     },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-10",
+     "url": "https://midbo.co/"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-10",
+     "url": "https://midbo.co/"
+    },
     "has_qa": {
      "tipo": "festival-web",
      "fecha": "2026-10-10",
@@ -7970,11 +8102,6 @@
      "tipo": "festival-web",
      "fecha": "2026-10-10",
      "url": "https://midbo.co/"
-    },
-    "entrada": {
-     "tipo": "regla",
-     "marca": "supuesto",
-     "valor": "boleta"
     }
    }
   },
@@ -8007,6 +8134,7 @@
     "url": "https://midbo.co/peliculas/lolita-en-honda/",
     "date": "2026-10-10"
    },
+   "ticket_url": "https://tuboleta.com/es/eventos/lolita-en-honda",
    "lbSlug": "lolita-en-honda",
    "tmdb_id": 1665546,
    "synopsis_en": "Lolita en Honda is an intimate journey into family memory, in which Daniel Torres explores his grandmother's childhood to unravel the marks of abandonment and internalized violence that shaped her character.",
@@ -8039,6 +8167,16 @@
      "fecha": "2026-10-10",
      "url": "https://midbo.co/"
     },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-10",
+     "url": "https://midbo.co/"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-10",
+     "url": "https://midbo.co/"
+    },
     "has_qa": {
      "tipo": "festival-web",
      "fecha": "2026-10-10",
@@ -8058,11 +8196,6 @@
      "tipo": "festival-web",
      "fecha": "2026-10-10",
      "url": "https://midbo.co/"
-    },
-    "entrada": {
-     "tipo": "regla",
-     "marca": "supuesto",
-     "valor": "boleta"
     }
    }
   },
@@ -8088,6 +8221,7 @@
     "url": "https://midbo.co/peliculas/statues-also-die/",
     "date": "2026-10-10"
    },
+   "ticket_url": "https://tuboleta.com/es/eventos/esta-tierra-canta-premoniciones",
    "premiere": "Estreno en Colombia",
    "is_cortos": true,
    "film_list": [
@@ -8187,6 +8321,16 @@
      "fecha": "2026-10-10",
      "url": "https://midbo.co/"
     },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-10",
+     "url": "https://midbo.co/"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-10",
+     "url": "https://midbo.co/"
+    },
     "has_qa": {
      "tipo": "festival-web",
      "fecha": "2026-10-10",
@@ -8211,11 +8355,6 @@
      "tipo": "festival-web",
      "fecha": "2026-10-10",
      "url": "https://midbo.co/"
-    },
-    "entrada": {
-     "tipo": "regla",
-     "marca": "supuesto",
-     "valor": "boleta"
     }
    },
    "titulos_anteriores": [
@@ -8251,6 +8390,7 @@
     "url": "https://midbo.co/peliculas/el-coloquio-de-los-pajaros/",
     "date": "2026-10-10"
    },
+   "ticket_url": "https://tuboleta.com/es/eventos/el-coloquio-de-los-pajaros",
    "premiere": "Clausura",
    "lbSlug": "the-colloquium-of-the-birds",
    "tmdb_id": 1657856,
@@ -8285,6 +8425,16 @@
      "fecha": "2026-10-10",
      "url": "https://midbo.co/"
     },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-10",
+     "url": "https://midbo.co/"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-10",
+     "url": "https://midbo.co/"
+    },
     "has_qa": {
      "tipo": "festival-web",
      "fecha": "2026-10-10",
@@ -8304,11 +8454,6 @@
      "tipo": "festival-web",
      "fecha": "2026-10-10",
      "url": "https://midbo.co/"
-    },
-    "entrada": {
-     "tipo": "regla",
-     "marca": "supuesto",
-     "valor": "boleta"
     }
    }
   },
@@ -8341,6 +8486,7 @@
     "url": "https://midbo.co/peliculas/les-surs-pathan/",
     "date": "2026-10-10"
    },
+   "ticket_url": "https://tuboleta.com/es/eventos/las-hermanas-pathan",
    "lbSlug": "the-pathan-sisters",
    "tmdb_id": 1148809,
    "synopsis_en": "Gujarat, West of India. Sofia and Suzain are two teenage sisters brought up in a humble household, taken care of by their father since their mother left. They were too young to remember, but 20 years ago, their family barely escaped the deadly 2002 Gujarat anti-Muslim riots. Refusing the grim day-to-day routine and the shadow of the past, Sofia and Suzain want to embrace life to the fullest. While they grow up, reality comes knocking.",
@@ -8374,6 +8520,16 @@
      "fecha": "2026-10-10",
      "url": "https://midbo.co/"
     },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-10",
+     "url": "https://midbo.co/"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-10",
+     "url": "https://midbo.co/"
+    },
     "has_qa": {
      "tipo": "festival-web",
      "fecha": "2026-10-10",
@@ -8388,11 +8544,6 @@
      "tipo": "festival-web",
      "fecha": "2026-10-10",
      "url": "https://midbo.co/"
-    },
-    "entrada": {
-     "tipo": "regla",
-     "marca": "supuesto",
-     "valor": "boleta"
     }
    }
   },
@@ -9828,11 +9979,89 @@
      "url": "https://midbo.co/"
     }
    }
+  },
+  {
+   "title": "Profanaciones, resistencias, fabulaciones: (contra)usos de archivo en cine",
+   "type": "event",
+   "event_kind": "masterclass",
+   "section": "🎙️ Encuentro Pensar lo Real",
+   "day": "2026-11-03",
+   "time": "14:00",
+   "venue": "Universidad Nacional de Colombia - Bogotá",
+   "sala": "Auditorio 313, edificio 303C (NEA)",
+   "description": "Con Azul Aizenberg y Juana Shlenker.",
+   "description_lang": "es",
+   "_src": {
+    "url": "https://www.instagram.com/p/De-N6I0iQtb/",
+    "date": "2026-10-26",
+    "lamina": 3
+   },
+   "_ancla": [
+    "Universidad Nacional de Colombia - Bogotá",
+    "2026-11-03",
+    "14:00"
+   ],
+   "_fid": "f_e005df2319",
+   "_procedencia": {
+    "existe": {
+     "tipo": "festival-ig",
+     "url": "https://www.instagram.com/p/De-N6I0iQtb/",
+     "fecha": "2026-10-26"
+    },
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-26",
+     "url": "https://midbo.co/"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-26",
+     "url": "https://midbo.co/"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-26",
+     "url": "https://midbo.co/"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-26",
+     "url": "https://midbo.co/"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-26",
+     "url": "https://midbo.co/"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-26",
+     "url": "https://midbo.co/"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-26",
+     "url": "https://midbo.co/"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-26",
+     "url": "https://midbo.co/"
+    },
+    "duration": {
+     "tipo": "regla",
+     "marca": "estimado"
+    }
+   },
+   "is_free": true,
+   "id": "f_e005df2319",
+   "day_order": 7,
+   "duration": "90 min"
   }
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-26T07:22:21",
+  "fecha": "2026-10-26T21:35:50",
   "plan_sha": "a59415cd50b61e59",
   "paso": 6,
   "cmd": "python3 pipeline/ensamblar.py midbo-2026"
