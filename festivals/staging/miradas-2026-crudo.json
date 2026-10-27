@@ -1,0 +1,2990 @@
+{
+ "_provenance": {
+  "fuente": "Programación Miradas 2026-Liviano.pdf (Alcaldía de Medellín, 20 oct 2026)",
+  "capturado": "2026-10-27",
+  "metodo": "transcripción a mano página por página (71–96, 56–70, 40–48, 108–110); cruzada con tres lecturas independientes",
+  "que_aporta": "la programación completa: día, hora, sede, sala, obras y acceso"
+ },
+ "_acceso": {
+  "estado": "Entrada libre",
+  "revisado": "2026-10-27",
+  "fuentes": [
+   "@cinematecademedellin De4MmOSj8gv («con entrada libre»)",
+   "De-hVjhCTMG («sin costo»)",
+   "PDF págs. 58–62 («Entrada libre hasta completar cupos»)",
+   "PDF págs. 107–110 (Encuentros con: inscripción previa por QR)"
+  ]
+ },
+ "_no_se_publica": [
+  {
+   "pag": 42,
+   "que": "Mamá chila: raíz y corazón de la comunidad — mié 28 oct, 7:00 p. m., Cr 58 con Calle 83e",
+   "por_que": "fuera de las fechas oficiales (3–8 nov); regla de Juan, solo días oficiales"
+  },
+  {
+   "pag": 63,
+   "que": "Clausura: «Especial: Estreno del cortometraje más destacado de la Red de Audiovisuales 2026»",
+   "por_que": "sin título ni duración; va dicho en la descripción de la clausura"
+  },
+  {
+   "pag": 104,
+   "que": "Encuentro de Coproducción, Encuentros uno a uno, Espacios de relacionamiento, Talleres especializados, Rueda de Negocios",
+   "por_que": "«Solo para seleccionados» (pág. 107) o con participantes «previamente seleccionados» (pág. 106): industria cerrada"
+  },
+  {
+   "pag": 107,
+   "que": "Encuentro con los proyectos",
+   "por_que": "el PDF no le da día, hora ni sede (y lo describe «ante las personas acreditadas» y «Abierto al público» a la vez)"
+  }
+ ],
+ "_diferencias_ig": [
+  {
+   "obra": "Seis meses en el edificio rosa con azul",
+   "cuando": "mar 3",
+   "antes": "IG 7:00 p. m.",
+   "ahora": "PDF 6:30 p. m. (y el post Dekwxvdsblt)"
+  },
+  {
+   "obra": "Narciso",
+   "cuando": "mié 4",
+   "antes": "IG 4:00 p. m. Teatro MAMM",
+   "ahora": "PDF 7:30 p. m. Teatro MAMM"
+  },
+  {
+   "obra": "Un cabo suelto",
+   "cuando": "mié 4",
+   "antes": "IG 7:30 p. m. Moravia",
+   "ahora": "PDF 5:00 p. m. Moravia"
+  },
+  {
+   "obra": "Papaya",
+   "cuando": "mié 4",
+   "antes": "IG 4:00 p. m. COOCINE",
+   "ahora": "PDF 10:00 a. m. COOCINE"
+  },
+  {
+   "obra": "Programa de Cortos 2",
+   "cuando": "dom 8",
+   "antes": "IG Cineprox «Sala 2» en 2 de sus láminas, «Sala 3» en otras",
+   "ahora": "PDF: Sala 3 en las fichas"
+  },
+  {
+   "obra": "Seis meses en el edificio rosa con azul",
+   "cuando": "título",
+   "antes": "IG «6 meses…»",
+   "ahora": "PDF «Seis meses…»"
+  }
+ ],
+ "funciones": [
+  {
+   "titulo": "La otra orilla: Revolver la mirada autorizada para manchar la cámara de barro",
+   "tipo": "evento",
+   "event_kind": "taller",
+   "dia": "2026-11-03",
+   "hora": "18:00",
+   "sede": "Librería y Espacio Cultural Antimateria (calle 45E # 72-09, Laureles)",
+   "sala": "",
+   "seccion": "Talleres de Desarrollo y Mediación de Audiencias",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 45,
+    "tipo": "festival-pdf"
+   },
+   "duracion_min": 120,
+   "sinopsis": "Realizado por Cine-Foro \"En Construcción\". Un taller sobre obras de cineastas mujeres latinoamericanas para explorar sus herramientas expresivas y la potencia de sus propuestas, poniendo en diálogo sus formas de hacer cine con las de sus contemporáneos.",
+   "is_recurring": true
+  },
+  {
+   "titulo": "Seis meses en el edificio rosa con azul",
+   "director": "Bruno Santamaría Razo",
+   "pais": "México, Brasil, Dinamarca",
+   "anio": 2026,
+   "duracion_min": 105,
+   "genero": "Ficción",
+   "dia": "2026-11-03",
+   "hora": "18:30",
+   "sede": "Teatro Pablo Tobón Uribe",
+   "sala": "",
+   "seccion": "Película Inaugural",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 71,
+    "tipo": "festival-pdf"
+   },
+   "has_qa": true,
+   "qa_type": "team"
+  },
+  {
+   "titulo": "Rodando formación: mediaciones en comunidad",
+   "tipo": "evento",
+   "event_kind": "taller",
+   "dia": "2026-11-03",
+   "hora": "19:00",
+   "sede": "Sede cultural Casa TEA (calle 53 # 47-44, La Candelaria)",
+   "sala": "",
+   "seccion": "Talleres de Desarrollo y Mediación de Audiencias",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 45,
+    "tipo": "festival-pdf"
+   },
+   "duracion_min": 120,
+   "sinopsis": "Realizado por CorpoTEA. Un espacio de encuentro con el audiovisual desde las experiencias territoriales. Comunicación, expresión y apreciación se combinan para explorar, experimentar y crear junto a las comunidades y sus distintas formas de relacionarse con el entorno.",
+   "is_recurring": true
+  },
+  {
+   "titulo": "Clase maestra inaugural - Manual para observar moscas: descubrir lo extraordinario en lo simple",
+   "tipo": "evento",
+   "event_kind": "evento",
+   "dia": "2026-11-04",
+   "hora": "09:00",
+   "sede": "Museo de Arte Moderno de Medellín - MAMM",
+   "sala": "Quinto piso",
+   "seccion": "Días de Industria",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 108,
+    "tipo": "festival-pdf"
+   },
+   "duracion_min": 120,
+   "invitados": "con Fernando Eimbcke"
+  },
+  {
+   "titulo": "Cine corto detrás de cámaras",
+   "tipo": "evento",
+   "event_kind": "taller",
+   "dia": "2026-11-04",
+   "hora": "10:00",
+   "sede": "Institución Educativa La Independencia (calle 39D # 112-81, San Javier)",
+   "sala": "",
+   "seccion": "Talleres de Desarrollo y Mediación de Audiencias",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 45,
+    "tipo": "festival-pdf"
+   },
+   "duracion_min": 120,
+   "sinopsis": "Realizado por Festival Cine Corto. Un cineclub formativo para jóvenes que combina cortometrajes, cineforos y ejercicios prácticos para acercarse al lenguaje audiovisual y descubrir los procesos creativos detrás de la realización cinematográfica.",
+   "is_recurring": true
+  },
+  {
+   "titulo": "Papaya",
+   "director": "Priscilla Kellen",
+   "pais": "Brasil",
+   "anio": 2026,
+   "duracion_min": 75,
+   "genero": "Animación",
+   "dia": "2026-11-04",
+   "hora": "10:00",
+   "sede": "Coocine",
+   "sala": "Sala 0",
+   "seccion": "Cine Familiar",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 71,
+    "tipo": "festival-pdf"
+   }
+  },
+  {
+   "titulo": "Encuentro con festivales de cine, agente de ventas y distribuidores invitados a Miradas 2026",
+   "tipo": "evento",
+   "event_kind": "encuentro",
+   "dia": "2026-11-04",
+   "hora": "11:30",
+   "sede": "Museo de Arte Moderno de Medellín - MAMM",
+   "sala": "Quinto piso",
+   "seccion": "Días de Industria",
+   "acceso": "Entrada libre con inscripción previa",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 108,
+    "tipo": "festival-pdf"
+   },
+   "duracion_min": 60,
+   "invitados": "Alfredo Calvino (Habanero Films), Elba McAllister (Cineplex), Jim Kolmar (SXSW), Carlos Ramos (IndieLisboa), Guillermo Olivares (FicValdivia)",
+   "registration_url": "https://docs.google.com/forms/d/e/1FAIpQLSfKw4WDoDIq9qhpB1ND0AYB8HrHZvRm4XyKhgjfun1il9Qajg/viewform"
+  },
+  {
+   "titulo": "Programa de Cortos 1",
+   "dia": "2026-11-04",
+   "hora": "14:00",
+   "sede": "Museo de Arte Moderno de Medellín - MAMM",
+   "sala": "Teatro MAMM",
+   "seccion": "Programas de Cortos",
+   "obras": [
+    {
+     "titulo": "Las formas de la magia",
+     "director": "María Paula Lorgia Garnica",
+     "pais": "Colombia",
+     "anio": 2026,
+     "duracion_min": 17,
+     "genero": "Documental"
+    },
+    {
+     "titulo": "La danza de los ángeles",
+     "director": "Juan Restrepo Molina",
+     "pais": "Colombia",
+     "anio": 2026,
+     "duracion_min": 15,
+     "genero": "Ficción"
+    },
+    {
+     "titulo": "Decaer",
+     "director": "Juan Camilo González",
+     "pais": "Colombia",
+     "anio": 2026,
+     "duracion_min": 7,
+     "genero": "Animación"
+    },
+    {
+     "titulo": "El león",
+     "director": "Diana Bustamante Escobar",
+     "pais": "Colombia",
+     "anio": 2026,
+     "duracion_min": 15,
+     "genero": "Documental"
+    },
+    {
+     "titulo": "La muerte nos declaró adultos",
+     "director": "Luisa María Charry Valencia",
+     "pais": "Colombia",
+     "anio": 2026,
+     "duracion_min": 2,
+     "genero": "Documental"
+    },
+    {
+     "titulo": "Última vez hace mucho tiempo",
+     "director": "Santiago Martín",
+     "pais": "Venezuela",
+     "anio": 2026,
+     "duracion_min": 24,
+     "genero": "Ficción"
+    }
+   ],
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 71,
+    "tipo": "festival-pdf"
+   },
+   "has_qa": true,
+   "invitados": "Función con presencia de los equipos"
+  },
+  {
+   "titulo": "Caso de estudio - La coproducción de Seis meses en el edificio rosa con azul",
+   "tipo": "evento",
+   "event_kind": "evento",
+   "dia": "2026-11-04",
+   "hora": "15:00",
+   "sede": "Museo de Arte Moderno de Medellín - MAMM",
+   "sala": "Quinto piso",
+   "seccion": "Días de Industria",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 108,
+    "tipo": "festival-pdf"
+   },
+   "duracion_min": 90,
+   "invitados": "con Bruna Haddad"
+  },
+  {
+   "titulo": "Iván & Hadoum",
+   "director": "Ian de la Rosa",
+   "pais": "España, Alemania, Bélgica",
+   "anio": 2026,
+   "duracion_min": 103,
+   "genero": "Ficción",
+   "dia": "2026-11-04",
+   "hora": "16:30",
+   "sede": "Museo de Arte Moderno de Medellín - MAMM",
+   "sala": "Teatro MAMM",
+   "seccion": "Cine Iberoamericano",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 72,
+    "tipo": "festival-pdf"
+   }
+  },
+  {
+   "titulo": "Miradas a la distribución - Luces y sombras: exponiendo las realidades de la distribución",
+   "tipo": "evento",
+   "event_kind": "evento",
+   "dia": "2026-11-04",
+   "hora": "17:00",
+   "sede": "Museo de Arte Moderno de Medellín - MAMM",
+   "sala": "Quinto piso",
+   "seccion": "Días de Industria",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 108,
+    "tipo": "festival-pdf"
+   },
+   "duracion_min": 60,
+   "invitados": "Con Alfredo Calvino, Elba McAllister y Linda Díaz Pernía, con la moderación de Yira Plaza O’Byrne"
+  },
+  {
+   "titulo": "Programa de Cortos 4",
+   "dia": "2026-11-04",
+   "hora": "17:00",
+   "sede": "Centro Colombo Americano",
+   "sala": "Sala 2",
+   "seccion": "Programas de Cortos",
+   "obras": [
+    {
+     "titulo": "Planetario",
+     "director": "Sofía Poncini",
+     "pais": "Argentina",
+     "anio": 2025,
+     "duracion_min": 9,
+     "genero": "Ficción"
+    },
+    {
+     "titulo": "Emechiche, el renacer de los cabeciblancos",
+     "director": "Juan Camilo González",
+     "pais": "Colombia, Argentina",
+     "anio": 2025,
+     "duracion_min": 11,
+     "genero": "Animación"
+    },
+    {
+     "titulo": "La escucha, la razón. Memoria acústica de un mural",
+     "director": "Juan David Bolívar Araque",
+     "pais": "Colombia",
+     "anio": 2026,
+     "duracion_min": 15,
+     "genero": "Documental"
+    },
+    {
+     "titulo": "Mi viche todo el día",
+     "director": "Juan Camilo Moreno",
+     "pais": "Colombia",
+     "anio": 2025,
+     "duracion_min": 26,
+     "genero": "Documental"
+    },
+    {
+     "titulo": "Corazón azul",
+     "director": "Samuel Suffren",
+     "pais": "Haití, Francia",
+     "anio": 2025,
+     "duracion_min": 15,
+     "genero": "Ficción"
+    }
+   ],
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 72,
+    "tipo": "festival-pdf"
+   },
+   "has_qa": true,
+   "invitados": "Función con presencia de los equipos"
+  },
+  {
+   "titulo": "Un cabo suelto",
+   "director": "Daniel Hendler",
+   "pais": "Uruguay, Argentina, España",
+   "anio": 2025,
+   "duracion_min": 95,
+   "genero": "Ficción",
+   "dia": "2026-11-04",
+   "hora": "17:00",
+   "sede": "Centro de Desarrollo Cultural de Moravia",
+   "sala": "Auditorio",
+   "seccion": "Cine Iberoamericano",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 73,
+    "tipo": "festival-pdf"
+   }
+  },
+  {
+   "titulo": "Chico de barrio",
+   "director": "Juan David Echavarría Urrego",
+   "pais": "Colombia",
+   "anio": 2026,
+   "duracion_min": 4,
+   "genero": "Animación",
+   "dia": "2026-11-04",
+   "hora": "18:00",
+   "sede": "Teatro UVA Tricentenario",
+   "sala": "",
+   "seccion": "Cine Comunitario - Hecho en Medellín",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 44,
+    "tipo": "festival-pdf"
+   }
+  },
+  {
+   "titulo": "El paradero",
+   "director": "Semillero Colectivo Cinestrato",
+   "pais": "Colombia",
+   "anio": 2024,
+   "duracion_min": 9,
+   "genero": "Ficción",
+   "dia": "2026-11-04",
+   "hora": "18:00",
+   "sede": "Café Pletórico",
+   "sala": "",
+   "seccion": "Cine Comunitario - Hecho en Medellín",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 41,
+    "tipo": "festival-pdf"
+   }
+  },
+  {
+   "titulo": "Las pesadillas del siervo",
+   "director": "Manuel Villa Machado",
+   "pais": "Colombia",
+   "anio": 2026,
+   "duracion_min": 76,
+   "genero": "Documental",
+   "dia": "2026-11-04",
+   "hora": "19:00",
+   "sede": "Cineprox Las Américas",
+   "sala": "Sala 3",
+   "seccion": "Cine Hecho en Medellín",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 73,
+    "tipo": "festival-pdf"
+   },
+   "has_qa": true,
+   "qa_type": "team"
+  },
+  {
+   "titulo": "Tierra en la lengua",
+   "director": "Rubén Mendoza",
+   "pais": "Colombia, Francia",
+   "anio": 2014,
+   "duracion_min": 89,
+   "genero": "Ficción",
+   "dia": "2026-11-04",
+   "hora": "19:00",
+   "sede": "Parque de los Deseos",
+   "sala": "",
+   "seccion": "Cine Accesible",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 73,
+    "tipo": "festival-pdf"
+   },
+   "_nota": "Proyección accesible con Lengua de Señas Colombiana, audiodescripción y subtitulación enriquecida."
+  },
+  {
+   "titulo": "Narciso",
+   "director": "Marcelo Martinessi",
+   "pais": "Paraguay, Brasil, Portugal, Alemania, España, Francia, Uruguay",
+   "anio": 2026,
+   "duracion_min": 101,
+   "genero": "Ficción",
+   "dia": "2026-11-04",
+   "hora": "19:30",
+   "sede": "Museo de Arte Moderno de Medellín - MAMM",
+   "sala": "Teatro MAMM",
+   "seccion": "Cine Iberoamericano",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 73,
+    "tipo": "festival-pdf"
+   }
+  },
+  {
+   "titulo": "Temporada de patos",
+   "director": "Fernando Eimbcke",
+   "pais": "México",
+   "anio": 2004,
+   "duracion_min": 90,
+   "genero": "Ficción",
+   "dia": "2026-11-04",
+   "hora": "19:30",
+   "sede": "Centro Colombo Americano",
+   "sala": "Sala 1",
+   "seccion": "Retrospectiva Fernando Eimbcke",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 73,
+    "tipo": "festival-pdf"
+   },
+   "has_qa": true,
+   "qa_type": "team"
+  },
+  {
+   "titulo": "Clase maestra - Transformando el dolor en belleza: memoria, ficción y realidad, como herramientas que desdibujan etiquetas y fronteras",
+   "tipo": "evento",
+   "event_kind": "evento",
+   "dia": "2026-11-05",
+   "hora": "09:00",
+   "sede": "Museo de Arte Moderno de Medellín - MAMM",
+   "sala": "Quinto piso",
+   "seccion": "Días de Industria",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 108,
+    "tipo": "festival-pdf"
+   },
+   "duracion_min": 120,
+   "invitados": "con Bruno Santamaría"
+  },
+  {
+   "titulo": "Cine corto detrás de cámaras",
+   "tipo": "evento",
+   "event_kind": "taller",
+   "dia": "2026-11-05",
+   "hora": "10:00",
+   "sede": "Institución Educativa La Independencia (calle 39D # 112-81, San Javier)",
+   "sala": "",
+   "seccion": "Talleres de Desarrollo y Mediación de Audiencias",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 45,
+    "tipo": "festival-pdf"
+   },
+   "duracion_min": 120,
+   "sinopsis": "Realizado por Festival Cine Corto. Un cineclub formativo para jóvenes que combina cortometrajes, cineforos y ejercicios prácticos para acercarse al lenguaje audiovisual y descubrir los procesos creativos detrás de la realización cinematográfica.",
+   "is_recurring": true
+  },
+  {
+   "titulo": "Laboratorio Materia expandida: representación e imagen en contextos digitales. Sesión 1 – Materia y representación",
+   "tipo": "evento",
+   "event_kind": "evento",
+   "dia": "2026-11-05",
+   "hora": "10:00",
+   "sede": "Parque Explora",
+   "sala": "Exploratorio",
+   "seccion": "Cine Expandido - Hecho en Medellín",
+   "acceso": "Entrada libre hasta completar cupos",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 64,
+    "tipo": "festival-pdf"
+   },
+   "duracion_min": 180,
+   "sinopsis": "Realizado por Almendra Díaz y Cristóbal Parra (Chile). Un laboratorio práctico para explorar la relación entre materia física e imagen digital, transformando objetos del entorno en modelos 3D y experiencias audiovisuales mediante fotogrametría, programación visual y videomapping."
+  },
+  {
+   "titulo": "Oro molido # 2",
+   "director": "Juan David Medrano",
+   "pais": "Colombia",
+   "anio": 2024,
+   "duracion_min": 35,
+   "genero": "Documental",
+   "dia": "2026-11-05",
+   "hora": "10:00",
+   "sede": "Escuela Vereda El Placer",
+   "sala": "",
+   "seccion": "Cine Comunitario - Hecho en Medellín",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 43,
+    "tipo": "festival-pdf"
+   }
+  },
+  {
+   "titulo": "Encuentro con productoras, directoras y guionistas invitadas de Miradas 2026",
+   "tipo": "evento",
+   "event_kind": "encuentro",
+   "dia": "2026-11-05",
+   "hora": "11:30",
+   "sede": "Museo de Arte Moderno de Medellín - MAMM",
+   "sala": "Quinto piso",
+   "seccion": "Días de Industria",
+   "acceso": "Entrada libre con inscripción previa",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 108,
+    "tipo": "festival-pdf"
+   },
+   "duracion_min": 60,
+   "invitados": "Bruna Haddad, Verónica Triana, Federico Durán, Iván Gaona, Paula Cury Melo",
+   "registration_url": "https://docs.google.com/forms/d/e/1FAIpQLSfKw4WDoDIq9qhpB1ND0AYB8HrHZvRm4XyKhgjfun1il9Qajg/viewform"
+  },
+  {
+   "titulo": "Muestra de Cine Expandido",
+   "tipo": "evento",
+   "event_kind": "evento",
+   "dia": "2026-11-05",
+   "hora": "14:00",
+   "sede": "Parque Explora",
+   "sala": "Exploratorio",
+   "seccion": "Cine Expandido - Hecho en Medellín",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 65,
+    "tipo": "festival-pdf"
+   },
+   "duracion_min": 240,
+   "sinopsis": "Jueves 5, viernes 6 y sábado 7 de noviembre, de 2:00 p. m. a 6:00 p. m. Obras: El sueño de Sedna, Sosiego al atardecer, Todas las cosas que algún día se desvanecieron y Vórtice Nebular.",
+   "info": true,
+   "hasta": "2026-11-07"
+  },
+  {
+   "titulo": "Programa de Cortos 2",
+   "dia": "2026-11-05",
+   "hora": "14:00",
+   "sede": "Museo de Arte Moderno de Medellín - MAMM",
+   "sala": "Teatro MAMM",
+   "seccion": "Programas de Cortos",
+   "obras": [
+    {
+     "titulo": "Una vez en un cuerpo",
+     "director": "María Cristina Pérez González",
+     "pais": "Colombia",
+     "anio": 2025,
+     "duracion_min": 10,
+     "genero": "Animación"
+    },
+    {
+     "titulo": "Madres de nacimiento",
+     "director": "Gloria Isabel Gómez Ceballos",
+     "pais": "Francia",
+     "anio": 2026,
+     "duracion_min": 8,
+     "genero": "Documental"
+    },
+    {
+     "titulo": "Norheimsund",
+     "director": "Ana A. Alpizar",
+     "pais": "Cuba, Estados Unidos",
+     "anio": 2025,
+     "duracion_min": 12,
+     "genero": "Ficción"
+    },
+    {
+     "titulo": "Refracción",
+     "director": "Isabella Palacio Mesa",
+     "pais": "Colombia",
+     "anio": 2025,
+     "duracion_min": 11,
+     "genero": "Ficción"
+    },
+    {
+     "titulo": "Mal de tierra",
+     "director": "Camila Caballero Guzmán",
+     "pais": "Colombia",
+     "anio": 2026,
+     "duracion_min": 10,
+     "genero": "Experimental"
+    },
+    {
+     "titulo": "Quem se move (Quien se mueve)",
+     "director": "Stephanie Ricci",
+     "pais": "Brasil",
+     "anio": 2025,
+     "duracion_min": 20,
+     "genero": "Ficción"
+    }
+   ],
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 74,
+    "tipo": "festival-pdf"
+   },
+   "has_qa": true,
+   "invitados": "Función con presencia de los equipos"
+  },
+  {
+   "titulo": "Recorrido guiado: Muestra de Cine Expandido",
+   "tipo": "evento",
+   "event_kind": "evento",
+   "dia": "2026-11-05",
+   "hora": "14:00",
+   "sede": "Parque Explora",
+   "sala": "Exploratorio",
+   "seccion": "Cine Expandido - Hecho en Medellín",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 65,
+    "tipo": "festival-pdf"
+   },
+   "duracion_min": 60,
+   "sinopsis": "Un recorrido por cuatro obras que exploran nuevas formas de experimentar el cine mediante realidad virtual, instalaciones interactivas y entornos inmersivos. Obras: El sueño de Sedna, Sosiego al atardecer, Todas las cosas que algún día se desvanecieron y Vórtice Nebular."
+  },
+  {
+   "titulo": "Caso de estudio - La coproducción desde Colombia",
+   "tipo": "evento",
+   "event_kind": "evento",
+   "dia": "2026-11-05",
+   "hora": "15:00",
+   "sede": "Museo de Arte Moderno de Medellín - MAMM",
+   "sala": "Quinto piso",
+   "seccion": "Días de Industria",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 108,
+    "tipo": "festival-pdf"
+   },
+   "duracion_min": 90,
+   "invitados": "con Federico Durán"
+  },
+  {
+   "titulo": "Iluminada",
+   "director": "Nicolás Rincón Gille",
+   "pais": "Colombia, Bélgica",
+   "anio": 2026,
+   "duracion_min": 120,
+   "genero": "Ficción",
+   "dia": "2026-11-05",
+   "hora": "15:00",
+   "sede": "Comfama Otraparte",
+   "sala": "",
+   "seccion": "Cine Colombiano",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 75,
+    "tipo": "festival-pdf"
+   },
+   "has_qa": true,
+   "qa_type": "team"
+  },
+  {
+   "titulo": "Nuestro secreto",
+   "director": "Grace Passô",
+   "pais": "Brasil, Portugal",
+   "anio": 2026,
+   "duracion_min": 104,
+   "genero": "Ficción",
+   "dia": "2026-11-05",
+   "hora": "16:00",
+   "sede": "Centro de Desarrollo Cultural de Moravia",
+   "sala": "Auditorio",
+   "seccion": "Cine Iberoamericano",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 75,
+    "tipo": "festival-pdf"
+   }
+  },
+  {
+   "titulo": "Cine performativo y la puesta en escena más allá de la pantalla",
+   "tipo": "evento",
+   "event_kind": "conversatorio",
+   "dia": "2026-11-05",
+   "hora": "16:30",
+   "sede": "Parque Explora",
+   "sala": "Exploratorio",
+   "seccion": "Cine Expandido - Hecho en Medellín",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 65,
+    "tipo": "festival-pdf"
+   },
+   "duracion_min": 60,
+   "invitados": "Con Carlos Eduardo Castaño Correa (Todas las cosas que algún día se desvanecieron) y José Luis Ruiz Peláez (Sosiego al atardecer), con la moderación de Alannath Naslyllalyla (artista y curadora)"
+  },
+  {
+   "titulo": "Programa de Cortos 3",
+   "dia": "2026-11-05",
+   "hora": "16:30",
+   "sede": "Museo de Arte Moderno de Medellín - MAMM",
+   "sala": "Teatro MAMM",
+   "seccion": "Programas de Cortos",
+   "obras": [
+    {
+     "titulo": "La mona",
+     "director": "Laura Gutiérrez",
+     "pais": "Colombia",
+     "anio": 2025,
+     "duracion_min": 18,
+     "genero": "Ficción"
+    },
+    {
+     "titulo": "Compraventa",
+     "director": "Tomás Murphy",
+     "pais": "Argentina",
+     "anio": 2025,
+     "duracion_min": 11,
+     "genero": "Ficción"
+    },
+    {
+     "titulo": "De: Saúl",
+     "director": "Santiago Gomxz",
+     "pais": "Colombia",
+     "anio": 2026,
+     "duracion_min": 4,
+     "genero": "Ficción"
+    },
+    {
+     "titulo": "Agachar el rostro",
+     "director": "Camilo Medina Noy",
+     "pais": "Colombia",
+     "anio": 2025,
+     "duracion_min": 12,
+     "genero": "Ficción"
+    },
+    {
+     "titulo": "Kof-kof",
+     "director": "Juan David Cardona Arboleda",
+     "pais": "Colombia",
+     "anio": 2026,
+     "duracion_min": 7,
+     "genero": "Experimental"
+    },
+    {
+     "titulo": "La sangre",
+     "director": "Joaquín León",
+     "pais": "España",
+     "anio": 2025,
+     "duracion_min": 15,
+     "genero": "Ficción"
+    }
+   ],
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 76,
+    "tipo": "festival-pdf"
+   },
+   "has_qa": true,
+   "invitados": "Función con presencia de los equipos"
+  },
+  {
+   "titulo": "El segundo entierro de Alejandrino",
+   "director": "Raúl Soto Rodríguez",
+   "pais": "Colombia",
+   "anio": 2021,
+   "duracion_min": 75,
+   "genero": "Documental",
+   "dia": "2026-11-05",
+   "hora": "17:00",
+   "sede": "Centro Colombo Americano",
+   "sala": "Sala 1",
+   "seccion": "Cine Accesible",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 76,
+    "tipo": "festival-pdf"
+   },
+   "_nota": "Proyección con Lengua de Señas Colombiana y audiodescripción."
+  },
+  {
+   "titulo": "Miradas al oficio - La disidencia autoral en los formatos comerciales",
+   "tipo": "evento",
+   "event_kind": "evento",
+   "dia": "2026-11-05",
+   "hora": "17:00",
+   "sede": "Museo de Arte Moderno de Medellín - MAMM",
+   "sala": "Quinto piso",
+   "seccion": "Días de Industria",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 108,
+    "tipo": "festival-pdf"
+   },
+   "duracion_min": 60,
+   "invitados": "Con Sol Clemente (Fox), Laura Mora y Verónica Triana, con la moderación de Diógenes Cuevas"
+  },
+  {
+   "titulo": "El río de los espíritus",
+   "director": "Colectivo Tawna, Nase Lino Sumpinanch",
+   "pais": "Ecuador, Estados Unidos",
+   "anio": 2026,
+   "duracion_min": 61,
+   "genero": "Documental",
+   "dia": "2026-11-05",
+   "hora": "18:00",
+   "sede": "Comfama La Capilla",
+   "sala": "",
+   "seccion": "Cine Iberoamericano",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 77,
+    "tipo": "festival-pdf"
+   }
+  },
+  {
+   "titulo": "La otra orilla: Revolver la mirada autorizada para manchar la cámara de barro",
+   "tipo": "evento",
+   "event_kind": "taller",
+   "dia": "2026-11-05",
+   "hora": "18:00",
+   "sede": "Librería y Espacio Cultural Antimateria (calle 45E # 72-09, Laureles)",
+   "sala": "",
+   "seccion": "Talleres de Desarrollo y Mediación de Audiencias",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 45,
+    "tipo": "festival-pdf"
+   },
+   "duracion_min": 120,
+   "sinopsis": "Realizado por Cine-Foro \"En Construcción\". Un taller sobre obras de cineastas mujeres latinoamericanas para explorar sus herramientas expresivas y la potencia de sus propuestas, poniendo en diálogo sus formas de hacer cine con las de sus contemporáneos.",
+   "is_recurring": true
+  },
+  {
+   "titulo": "Los nuevos",
+   "director": "Rodrigo Plá",
+   "pais": "México",
+   "anio": 2026,
+   "duracion_min": 79,
+   "genero": "Ficción",
+   "dia": "2026-11-05",
+   "hora": "18:00",
+   "sede": "Junta de Acción Comunal El Faro",
+   "sala": "",
+   "seccion": "Cine Familiar",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 77,
+    "tipo": "festival-pdf"
+   }
+  },
+  {
+   "titulo": "Perder la Escala: Experiencias Cine Domo para Otros Mundos",
+   "dia": "2026-11-05",
+   "hora": "18:00",
+   "sede": "Planetario de Medellín",
+   "sala": "Domo",
+   "seccion": "Cine en el Domo",
+   "obras": [
+    {
+     "titulo": "Alga-Rio",
+     "director": "Cristóbal Parra, Almendra Díaz",
+     "pais": "Chile",
+     "duracion_min": 6
+    },
+    {
+     "titulo": "ACDM",
+     "director": "Ilgin İçözü, Bruno Tripodi, Jana Tox",
+     "pais": "España",
+     "duracion_min": 9
+    },
+    {
+     "titulo": "ASCII Sound Experience",
+     "director": "Julián Angarita",
+     "pais": "Colombia",
+     "duracion_min": 11
+    },
+    {
+     "titulo": "El vuelo 2.0",
+     "director": "Jhon Melo",
+     "pais": "Colombia",
+     "duracion_min": 6
+    },
+    {
+     "titulo": "Entreluz",
+     "director": "Jorge Bandera",
+     "pais": "Colombia",
+     "duracion_min": 9
+    },
+    {
+     "titulo": "Sentidos en disputa",
+     "director": "Carlos Serrano, José Miguel Mejía",
+     "pais": "Colombia",
+     "duracion_min": 7
+    },
+    {
+     "titulo": "Materia ondulatoria",
+     "director": "Daniel Shambo, Pierre Puentes",
+     "pais": "Colombia",
+     "duracion_min": 12
+    }
+   ],
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 77,
+    "tipo": "festival-pdf"
+   }
+  },
+  {
+   "titulo": "Chapecó, el último sobreviviente: nace una hermandad",
+   "director": "Edison Vanegas Álvarez",
+   "pais": "Colombia",
+   "anio": 2026,
+   "duracion_min": 72,
+   "genero": "Documental",
+   "dia": "2026-11-05",
+   "hora": "19:00",
+   "sede": "Cineprox Las Américas",
+   "sala": "Sala 3",
+   "seccion": "Cine Hecho en Medellín",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 78,
+    "tipo": "festival-pdf"
+   },
+   "has_qa": true,
+   "qa_type": "team"
+  },
+  {
+   "titulo": "Letanía, performance audiovisual",
+   "tipo": "evento",
+   "event_kind": "concierto",
+   "dia": "2026-11-05",
+   "hora": "19:00",
+   "sede": "Planetario de Medellín",
+   "sala": "Auditorio",
+   "seccion": "Cine Expandido - Hecho en Medellín",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 77,
+    "tipo": "festival-pdf"
+   },
+   "duracion_min": 60,
+   "sinopsis": "Concierto inaugural de Cine expandido. Realizado por Cristóbal Parra (Chile). Una performance audiovisual que explora los rituales latinoamericanos y la relación entre industria, territorio y memoria, con video, sonido, láser y archivos históricos.",
+   "_duracion_de": "estimada: el PDF no da hora de fin"
+  },
+  {
+   "titulo": "Rodando formación: mediaciones en comunidad",
+   "tipo": "evento",
+   "event_kind": "taller",
+   "dia": "2026-11-05",
+   "hora": "19:00",
+   "sede": "Sede cultural Casa TEA (calle 53 # 47-44, La Candelaria)",
+   "sala": "",
+   "seccion": "Talleres de Desarrollo y Mediación de Audiencias",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 45,
+    "tipo": "festival-pdf"
+   },
+   "duracion_min": 120,
+   "sinopsis": "Realizado por CorpoTEA. Un espacio de encuentro con el audiovisual desde las experiencias territoriales. Comunicación, expresión y apreciación se combinan para explorar, experimentar y crear junto a las comunidades y sus distintas formas de relacionarse con el entorno.",
+   "is_recurring": true
+  },
+  {
+   "titulo": "Seis meses en el edificio rosa con azul",
+   "director": "Bruno Santamaría Razo",
+   "pais": "México, Brasil, Dinamarca",
+   "anio": 2026,
+   "duracion_min": 105,
+   "genero": "Ficción",
+   "dia": "2026-11-05",
+   "hora": "19:00",
+   "sede": "Centro Colombo Americano",
+   "sala": "Sala 1",
+   "seccion": "Cine Iberoamericano",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 78,
+    "tipo": "festival-pdf"
+   },
+   "has_qa": true,
+   "qa_type": "team"
+  },
+  {
+   "titulo": "Uno vuelve siempre",
+   "director": "Camilo Ríos",
+   "pais": "Colombia",
+   "anio": 2025,
+   "duracion_min": 95,
+   "genero": "Documental",
+   "dia": "2026-11-05",
+   "hora": "19:00",
+   "sede": "Parque de los Deseos",
+   "sala": "",
+   "seccion": "Cine Hecho en Medellín",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 78,
+    "tipo": "festival-pdf"
+   }
+  },
+  {
+   "titulo": "Niñas escarlata",
+   "director": "Paula Cury Melo",
+   "pais": "República Dominicana, México, Alemania",
+   "anio": 2026,
+   "duracion_min": 70,
+   "genero": "Documental",
+   "dia": "2026-11-05",
+   "hora": "19:30",
+   "sede": "Museo de Arte Moderno de Medellín - MAMM",
+   "sala": "Teatro MAMM",
+   "seccion": "Cine Iberoamericano",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 78,
+    "tipo": "festival-pdf"
+   },
+   "has_qa": true,
+   "qa_type": "team"
+  },
+  {
+   "titulo": "Clase maestra - El cine como testimonio colectivo",
+   "tipo": "evento",
+   "event_kind": "evento",
+   "dia": "2026-11-06",
+   "hora": "09:00",
+   "sede": "Museo de Arte Moderno de Medellín - MAMM",
+   "sala": "Quinto piso",
+   "seccion": "Días de Industria",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 108,
+    "tipo": "festival-pdf"
+   },
+   "duracion_min": 120,
+   "invitados": "con Paula Cury Melo"
+  },
+  {
+   "titulo": "Cine corto detrás de cámaras",
+   "tipo": "evento",
+   "event_kind": "taller",
+   "dia": "2026-11-06",
+   "hora": "10:00",
+   "sede": "Institución Educativa La Independencia (calle 39D # 112-81, San Javier)",
+   "sala": "",
+   "seccion": "Talleres de Desarrollo y Mediación de Audiencias",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 45,
+    "tipo": "festival-pdf"
+   },
+   "duracion_min": 120,
+   "sinopsis": "Realizado por Festival Cine Corto. Un cineclub formativo para jóvenes que combina cortometrajes, cineforos y ejercicios prácticos para acercarse al lenguaje audiovisual y descubrir los procesos creativos detrás de la realización cinematográfica.",
+   "is_recurring": true
+  },
+  {
+   "titulo": "Laboratorio Materia expandida: representación e imagen en contextos digitales. Sesión 2 – Imagen y expansión",
+   "tipo": "evento",
+   "event_kind": "evento",
+   "dia": "2026-11-06",
+   "hora": "10:00",
+   "sede": "Parque Explora",
+   "sala": "Exploratorio",
+   "seccion": "Cine Expandido - Hecho en Medellín",
+   "acceso": "Entrada libre hasta completar cupos",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 67,
+    "tipo": "festival-pdf"
+   },
+   "duracion_min": 180,
+   "sinopsis": "Realizado por Almendra Díaz y Cristóbal Parra (Chile). Segunda sesión del laboratorio de fotogrametría, programación visual y videomapping."
+  },
+  {
+   "titulo": "Encuentro con directores y directoras invitadas de Miradas 2026",
+   "tipo": "evento",
+   "event_kind": "encuentro",
+   "dia": "2026-11-06",
+   "hora": "11:30",
+   "sede": "Museo de Arte Moderno de Medellín - MAMM",
+   "sala": "Quinto piso",
+   "seccion": "Días de Industria",
+   "acceso": "Entrada libre con inscripción previa",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 108,
+    "tipo": "festival-pdf"
+   },
+   "duracion_min": 60,
+   "invitados": "Carolina González, Guillermo Quintero, Manuel Villa, Bruno Santamaría, Fernando Eimbcke",
+   "registration_url": "https://docs.google.com/forms/d/e/1FAIpQLSfKw4WDoDIq9qhpB1ND0AYB8HrHZvRm4XyKhgjfun1il9Qajg/viewform"
+  },
+  {
+   "titulo": "Colombia es fantástica: laboratorio de cine fantástico y terror colombiano",
+   "tipo": "evento",
+   "event_kind": "taller",
+   "dia": "2026-11-06",
+   "hora": "14:00",
+   "sede": "Centro Colombo Americano, Aula Múltiple.",
+   "sala": "",
+   "seccion": "Talleres de Desarrollo y Mediación de Audiencias",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 45,
+    "tipo": "festival-pdf"
+   },
+   "duracion_min": 90,
+   "sinopsis": "Realizado por Festival Fantasmagoria. Un laboratorio de cinco sesiones para explorar leyendas, imaginarios y nuevas miradas del terror y el fantástico colombiano, y descubrir cómo contamos nuestros propios miedos desde el cine.",
+   "is_recurring": true
+  },
+  {
+   "titulo": "El tren fluvial",
+   "director": "Lorenzo Ferro, Lucas A. Vignale",
+   "pais": "Argentina",
+   "anio": 2026,
+   "duracion_min": 75,
+   "genero": "Ficción",
+   "dia": "2026-11-06",
+   "hora": "14:00",
+   "sede": "Museo de Arte Moderno de Medellín - MAMM",
+   "sala": "Teatro MAMM",
+   "seccion": "Cine Iberoamericano",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 79,
+    "tipo": "festival-pdf"
+   }
+  },
+  {
+   "titulo": "Luces, cámara y estampa",
+   "tipo": "evento",
+   "event_kind": "taller",
+   "dia": "2026-11-06",
+   "hora": "14:00",
+   "sede": "Edificio Paraninfo Universidad de Antioquia (carrera 44 # 48-72, La Candelaria)",
+   "sala": "",
+   "seccion": "Talleres de Desarrollo y Mediación de Audiencias",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 45,
+    "tipo": "festival-pdf"
+   },
+   "duracion_min": 120,
+   "sinopsis": "Realizado por KXVRX Cineclub. Tres sesiones de mediación y formación alrededor del cortometraje colombiano, con proyecciones, conversaciones y microtalleres de serigrafía para reflexionar sobre memoria, identidad, territorio y los lugares que habitamos.",
+   "is_recurring": true
+  },
+  {
+   "titulo": "Recorrido guiado: Muestra de Cine Expandido",
+   "tipo": "evento",
+   "event_kind": "evento",
+   "dia": "2026-11-06",
+   "hora": "14:00",
+   "sede": "Parque Explora",
+   "sala": "Exploratorio",
+   "seccion": "Cine Expandido - Hecho en Medellín",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 67,
+    "tipo": "festival-pdf"
+   },
+   "duracion_min": 60,
+   "sinopsis": "Un recorrido por cuatro obras que exploran nuevas formas de experimentar el cine mediante realidad virtual, instalaciones interactivas y entornos inmersivos. Obras: El sueño de Sedna, Sosiego al atardecer, Todas las cosas que algún día se desvanecieron y Vórtice Nebular."
+  },
+  {
+   "titulo": "Un cabo suelto",
+   "director": "Daniel Hendler",
+   "pais": "Uruguay, Argentina, España",
+   "anio": 2025,
+   "duracion_min": 95,
+   "genero": "Ficción",
+   "dia": "2026-11-06",
+   "hora": "15:00",
+   "sede": "Parque de Cristo Rey",
+   "sala": "",
+   "seccion": "Cine Iberoamericano",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 79,
+    "tipo": "festival-pdf"
+   },
+   "_nota": "«En alianza con Cultura Parque»"
+  },
+  {
+   "titulo": "Colombia es fantástica: laboratorio de cine fantástico y terror colombiano",
+   "tipo": "evento",
+   "event_kind": "taller",
+   "dia": "2026-11-06",
+   "hora": "16:00",
+   "sede": "Centro Colombo Americano, Aula Múltiple.",
+   "sala": "",
+   "seccion": "Talleres de Desarrollo y Mediación de Audiencias",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 45,
+    "tipo": "festival-pdf"
+   },
+   "duracion_min": 90,
+   "sinopsis": "Realizado por Festival Fantasmagoria. Un laboratorio de cinco sesiones para explorar leyendas, imaginarios y nuevas miradas del terror y el fantástico colombiano, y descubrir cómo contamos nuestros propios miedos desde el cine.",
+   "is_recurring": true
+  },
+  {
+   "titulo": "Cómo limpiar una casa en 10 pasos fáciles",
+   "director": "Carolina González Valencia",
+   "pais": "Colombia",
+   "anio": 2026,
+   "duracion_min": 80,
+   "genero": "Documental",
+   "dia": "2026-11-06",
+   "hora": "16:00",
+   "sede": "Museo de Arte Moderno de Medellín - MAMM",
+   "sala": "Teatro MAMM",
+   "seccion": "Cine Colombiano",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 80,
+    "tipo": "festival-pdf"
+   }
+  },
+  {
+   "titulo": "Narciso",
+   "director": "Marcelo Martinessi",
+   "pais": "Paraguay, Brasil, Portugal, Alemania, España, Francia, Uruguay",
+   "anio": 2026,
+   "duracion_min": 101,
+   "genero": "Ficción",
+   "dia": "2026-11-06",
+   "hora": "16:00",
+   "sede": "Biblioteca Comfama Bello",
+   "sala": "",
+   "seccion": "Cine Iberoamericano",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 80,
+    "tipo": "festival-pdf"
+   }
+  },
+  {
+   "titulo": "Uno vuelve siempre",
+   "director": "Camilo Ríos",
+   "pais": "Colombia",
+   "anio": 2025,
+   "duracion_min": 95,
+   "genero": "Documental",
+   "dia": "2026-11-06",
+   "hora": "16:00",
+   "sede": "Centro de Desarrollo Cultural de Moravia",
+   "sala": "Auditorio",
+   "seccion": "Cine Hecho en Medellín",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 80,
+    "tipo": "festival-pdf"
+   },
+   "has_qa": true,
+   "qa_type": "team"
+  },
+  {
+   "titulo": "La imagen como territorio",
+   "tipo": "evento",
+   "event_kind": "conversatorio",
+   "dia": "2026-11-06",
+   "hora": "16:30",
+   "sede": "Parque Explora",
+   "sala": "Exploratorio",
+   "seccion": "Cine Expandido - Hecho en Medellín",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 80,
+    "tipo": "festival-pdf"
+   },
+   "duracion_min": 60,
+   "invitados": "Con Cristóbal Parra y Almendra Díaz, modera Alannath Naslyllalyla (artista y curadora)"
+  },
+  {
+   "titulo": "Luis Antonio y Los Nuevos",
+   "dia": "2026-11-06",
+   "hora": "17:00",
+   "sede": "Estación Trece de Noviembre",
+   "sala": "",
+   "seccion": "Cine Familiar",
+   "obras": [
+    {
+     "titulo": "Luis Antonio",
+     "director": "Juan José Arias Gil",
+     "pais": "Colombia",
+     "anio": 2025,
+     "duracion_min": 12,
+     "genero": "Ficción"
+    },
+    {
+     "titulo": "Los nuevos",
+     "director": "Rodrigo Plá",
+     "pais": "México",
+     "anio": 2026,
+     "duracion_min": 79,
+     "genero": "Ficción"
+    }
+   ],
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 81,
+    "tipo": "festival-pdf"
+   }
+  },
+  {
+   "titulo": "Programa de Cortos 1",
+   "dia": "2026-11-06",
+   "hora": "17:00",
+   "sede": "Centro Colombo Americano",
+   "sala": "Sala 2",
+   "seccion": "Programas de Cortos",
+   "obras": [
+    {
+     "titulo": "Las formas de la magia",
+     "director": "María Paula Lorgia Garnica",
+     "pais": "Colombia",
+     "anio": 2026,
+     "duracion_min": 17,
+     "genero": "Documental"
+    },
+    {
+     "titulo": "La danza de los ángeles",
+     "director": "Juan Restrepo Molina",
+     "pais": "Colombia",
+     "anio": 2026,
+     "duracion_min": 15,
+     "genero": "Ficción"
+    },
+    {
+     "titulo": "Decaer",
+     "director": "Juan Camilo González",
+     "pais": "Colombia",
+     "anio": 2026,
+     "duracion_min": 7,
+     "genero": "Animación"
+    },
+    {
+     "titulo": "El león",
+     "director": "Diana Bustamante Escobar",
+     "pais": "Colombia",
+     "anio": 2026,
+     "duracion_min": 15,
+     "genero": "Documental"
+    },
+    {
+     "titulo": "La muerte nos declaró adultos",
+     "director": "Luisa María Charry Valencia",
+     "pais": "Colombia",
+     "anio": 2026,
+     "duracion_min": 2,
+     "genero": "Documental"
+    },
+    {
+     "titulo": "Última vez hace mucho tiempo",
+     "director": "Santiago Martín",
+     "pais": "Venezuela",
+     "anio": 2026,
+     "duracion_min": 24,
+     "genero": "Ficción"
+    }
+   ],
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 81,
+    "tipo": "festival-pdf"
+   },
+   "has_qa": true,
+   "invitados": "Función con presencia de los equipos"
+  },
+  {
+   "titulo": "Las pesadillas del siervo",
+   "director": "Manuel Villa Machado",
+   "pais": "Colombia",
+   "anio": 2026,
+   "duracion_min": 76,
+   "genero": "Documental",
+   "dia": "2026-11-06",
+   "hora": "18:00",
+   "sede": "Comfama La Capilla",
+   "sala": "",
+   "seccion": "Cine Hecho en Medellín",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 81,
+    "tipo": "festival-pdf"
+   },
+   "has_qa": true,
+   "qa_type": "team"
+  },
+  {
+   "titulo": "Chapecó, el último sobreviviente: nace una hermandad",
+   "director": "Edison Vanegas Álvarez",
+   "pais": "Colombia",
+   "anio": 2026,
+   "duracion_min": 72,
+   "genero": "Documental",
+   "dia": "2026-11-06",
+   "hora": "19:00",
+   "sede": "Parque de los Deseos",
+   "sala": "",
+   "seccion": "Cine Hecho en Medellín",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 82,
+    "tipo": "festival-pdf"
+   }
+  },
+  {
+   "titulo": "El deshielo",
+   "director": "Manuela Martelli",
+   "pais": "Chile, Estados Unidos, España, México",
+   "anio": 2026,
+   "duracion_min": 108,
+   "genero": "Ficción",
+   "dia": "2026-11-06",
+   "hora": "19:00",
+   "sede": "Cineprox Las Américas",
+   "sala": "Sala 3",
+   "seccion": "Cine Iberoamericano",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 82,
+    "tipo": "festival-pdf"
+   }
+  },
+  {
+   "titulo": "Moscas",
+   "director": "Fernando Eimbcke",
+   "pais": "México, España, Argentina",
+   "anio": 2026,
+   "duracion_min": 102,
+   "genero": "Ficción",
+   "dia": "2026-11-06",
+   "hora": "19:00",
+   "sede": "Museo de Arte Moderno de Medellín - MAMM",
+   "sala": "Plazoleta",
+   "seccion": "Retrospectiva Fernando Eimbcke",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 82,
+    "tipo": "festival-pdf"
+   },
+   "has_qa": true,
+   "qa_type": "team"
+  },
+  {
+   "titulo": "Paralelo",
+   "director": "Escuela de Comunicación Comunitaria",
+   "pais": "Colombia",
+   "anio": 2025,
+   "duracion_min": 5,
+   "genero": "Ficción",
+   "dia": "2026-11-06",
+   "hora": "19:00",
+   "sede": "JAC Santa Cruz parte alta",
+   "sala": "",
+   "seccion": "Cine Comunitario - Hecho en Medellín",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 43,
+    "tipo": "festival-pdf"
+   }
+  },
+  {
+   "titulo": "Perder la Escala: Experiencias Cine Domo para Otros Mundos",
+   "dia": "2026-11-06",
+   "hora": "19:00",
+   "sede": "Planetario de Medellín",
+   "sala": "Domo",
+   "seccion": "Cine en el Domo",
+   "obras": [
+    {
+     "titulo": "Alga-Rio",
+     "director": "Cristóbal Parra, Almendra Díaz",
+     "pais": "Chile",
+     "duracion_min": 6
+    },
+    {
+     "titulo": "ACDM",
+     "director": "Ilgin İçözü, Bruno Tripodi, Jana Tox",
+     "pais": "España",
+     "duracion_min": 9
+    },
+    {
+     "titulo": "ASCII Sound Experience",
+     "director": "Julián Angarita",
+     "pais": "Colombia",
+     "duracion_min": 11
+    },
+    {
+     "titulo": "El vuelo 2.0",
+     "director": "Jhon Melo",
+     "pais": "Colombia",
+     "duracion_min": 6
+    },
+    {
+     "titulo": "Entreluz",
+     "director": "Jorge Bandera",
+     "pais": "Colombia",
+     "duracion_min": 9
+    },
+    {
+     "titulo": "Sentidos en disputa",
+     "director": "Carlos Serrano, José Miguel Mejía",
+     "pais": "Colombia",
+     "duracion_min": 7
+    },
+    {
+     "titulo": "Materia ondulatoria",
+     "director": "Daniel Shambo, Pierre Puentes",
+     "pais": "Colombia",
+     "duracion_min": 12
+    }
+   ],
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 82,
+    "tipo": "festival-pdf"
+   }
+  },
+  {
+   "titulo": "Rodando formación: mediaciones en comunidad",
+   "tipo": "evento",
+   "event_kind": "taller",
+   "dia": "2026-11-06",
+   "hora": "19:00",
+   "sede": "Sede cultural Casa TEA (calle 53 # 47-44, La Candelaria)",
+   "sala": "",
+   "seccion": "Talleres de Desarrollo y Mediación de Audiencias",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 45,
+    "tipo": "festival-pdf"
+   },
+   "duracion_min": 120,
+   "sinopsis": "Realizado por CorpoTEA. Un espacio de encuentro con el audiovisual desde las experiencias territoriales. Comunicación, expresión y apreciación se combinan para explorar, experimentar y crear junto a las comunidades y sus distintas formas de relacionarse con el entorno.",
+   "is_recurring": true
+  },
+  {
+   "titulo": "Éther, somos todo",
+   "director": "Fabián Cataño Torres",
+   "pais": "Colombia",
+   "anio": 2024,
+   "duracion_min": 39,
+   "genero": "Documental",
+   "dia": "2026-11-06",
+   "hora": "19:00",
+   "sede": "Institución Educativa Pío XII",
+   "sala": "",
+   "seccion": "Cine Comunitario - Hecho en Medellín",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 42,
+    "tipo": "festival-pdf"
+   }
+  },
+  {
+   "titulo": "Iluminada",
+   "director": "Nicolás Rincón Gille",
+   "pais": "Colombia, Bélgica",
+   "anio": 2026,
+   "duracion_min": 120,
+   "genero": "Ficción",
+   "dia": "2026-11-06",
+   "hora": "19:30",
+   "sede": "Centro Colombo Americano",
+   "sala": "Sala 1",
+   "seccion": "Cine Colombiano",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 82,
+    "tipo": "festival-pdf"
+   },
+   "has_qa": true,
+   "qa_type": "team"
+  },
+  {
+   "titulo": "Red de Creación Audiovisual de Medellín",
+   "tipo": "evento",
+   "event_kind": "evento",
+   "dia": "2026-11-07",
+   "hora": "08:00",
+   "sede": "Museo de Arte Moderno de Medellín - MAMM",
+   "sala": "Teatro MAMM",
+   "seccion": "Cine Hecho en Medellín",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 83,
+    "tipo": "festival-pdf"
+   },
+   "duracion_min": 540,
+   "sinopsis": "La Red de Creación Audiovisual de Medellín presenta los frutos de sus laboratorios de creación y formación artística comunitaria: niños y adolescentes de la ciudad estrenan sus primeras películas.",
+   "info": true
+  },
+  {
+   "titulo": "Colombia es fantástica: laboratorio de cine fantástico y terror colombiano",
+   "tipo": "evento",
+   "event_kind": "taller",
+   "dia": "2026-11-07",
+   "hora": "10:00",
+   "sede": "Centro Colombo Americano, Aula Múltiple.",
+   "sala": "",
+   "seccion": "Talleres de Desarrollo y Mediación de Audiencias",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 45,
+    "tipo": "festival-pdf"
+   },
+   "duracion_min": 90,
+   "sinopsis": "Realizado por Festival Fantasmagoria. Un laboratorio de cinco sesiones para explorar leyendas, imaginarios y nuevas miradas del terror y el fantástico colombiano, y descubrir cómo contamos nuestros propios miedos desde el cine.",
+   "is_recurring": true
+  },
+  {
+   "titulo": "Domo móvil: Animales celestes",
+   "tipo": "evento",
+   "event_kind": "evento",
+   "dia": "2026-11-07",
+   "hora": "10:00",
+   "sede": "Parque de los Deseos",
+   "sala": "Cinemateca móvil",
+   "seccion": "Cinemateca Móvil",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 56,
+    "tipo": "festival-pdf"
+   },
+   "duracion_min": 480,
+   "sinopsis": "Autor: Parque Explora. Los paisajes de Colombia junto a la cangreja azul, la bagra rayada y el puma, cuyos recorridos se vuelven constelaciones.",
+   "info": true
+  },
+  {
+   "titulo": "Domo móvil: Arrecifes",
+   "tipo": "evento",
+   "event_kind": "evento",
+   "dia": "2026-11-07",
+   "hora": "10:00",
+   "sede": "Parque de los Deseos",
+   "sala": "Cinemateca móvil, galería",
+   "seccion": "Cinemateca Móvil",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 57,
+    "tipo": "festival-pdf"
+   },
+   "duracion_min": 480,
+   "sinopsis": "Autor: California Academy of Sciences. El océano junto a Sofía Gómez, campeona mundial de apnea, para descubrir los arrecifes de coral.",
+   "info": true
+  },
+  {
+   "titulo": "Domo móvil: Viaje por el sistema solar",
+   "tipo": "evento",
+   "event_kind": "evento",
+   "dia": "2026-11-07",
+   "hora": "10:00",
+   "sede": "Parque de los Deseos",
+   "sala": "Cinemateca móvil",
+   "seccion": "Cinemateca Móvil",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 57,
+    "tipo": "festival-pdf"
+   },
+   "duracion_min": 480,
+   "sinopsis": "Autor: Parque Explora. Recorrido en vivo por el sistema solar con el software Uniview.",
+   "info": true
+  },
+  {
+   "titulo": "Exposición: El cine analógico: máquinas, formatos y memoria",
+   "tipo": "evento",
+   "event_kind": "evento",
+   "dia": "2026-11-07",
+   "hora": "10:00",
+   "sede": "Parque de los Deseos",
+   "sala": "Cinemateca móvil, galería",
+   "seccion": "Cinemateca Móvil",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 57,
+    "tipo": "festival-pdf"
+   },
+   "duracion_min": 600,
+   "sinopsis": "Dedicada al Archivo Fílmico de la Cinemateca Distrital de Medellín: tres proyectores de 8, 16 y 35 mm con películas de cada formato, y sesiones de socialización con proyecciones en 35 mm. Sábado 7 y domingo 8, de 10:00 a. m. a 8:00 p. m.",
+   "info": true,
+   "hasta": "2026-11-08"
+  },
+  {
+   "titulo": "Laboratorio: Creación audiovisual con inteligencia artificial generativa",
+   "tipo": "evento",
+   "event_kind": "evento",
+   "dia": "2026-11-07",
+   "hora": "10:00",
+   "sede": "Parque de los Deseos",
+   "sala": "Cinemateca móvil, laboratorio",
+   "seccion": "Cinemateca Móvil",
+   "acceso": "Entrada libre hasta completar cupos",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 58,
+    "tipo": "festival-pdf"
+   },
+   "duracion_min": 240,
+   "sinopsis": "Impartido por Centro Ático de la Pontificia Universidad Javeriana. Exploración de posibilidades creativas con herramientas de generación de imágenes y video con inteligencia artificial.",
+   "_duracion_de": "hasta el laboratorio de las 2:00 p. m. en el mismo espacio"
+  },
+  {
+   "titulo": "Luces, cámara y estampa",
+   "tipo": "evento",
+   "event_kind": "taller",
+   "dia": "2026-11-07",
+   "hora": "10:00",
+   "sede": "Edificio Paraninfo Universidad de Antioquia (carrera 44 # 48-72, La Candelaria)",
+   "sala": "",
+   "seccion": "Talleres de Desarrollo y Mediación de Audiencias",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 45,
+    "tipo": "festival-pdf"
+   },
+   "duracion_min": 120,
+   "sinopsis": "Realizado por KXVRX Cineclub. Tres sesiones de mediación y formación alrededor del cortometraje colombiano, con proyecciones, conversaciones y microtalleres de serigrafía para reflexionar sobre memoria, identidad, territorio y los lugares que habitamos.",
+   "is_recurring": true
+  },
+  {
+   "titulo": "Mu-ki-ra",
+   "director": "Estefanía Piñeres Duque",
+   "pais": "Colombia, España",
+   "anio": 2026,
+   "duracion_min": 82,
+   "genero": "Ficción",
+   "dia": "2026-11-07",
+   "hora": "11:00",
+   "sede": "Comfama Aranjuez",
+   "sala": "Auditorio",
+   "seccion": "Cine Familiar",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 83,
+    "tipo": "festival-pdf"
+   }
+  },
+  {
+   "titulo": "Programa de Cortos ChiquiShorts",
+   "dia": "2026-11-07",
+   "hora": "11:00",
+   "sede": "Biblioteca Comfama Caldas",
+   "sala": "",
+   "seccion": "Cine Familiar",
+   "obras": [
+    {
+     "titulo": "Planeta fome",
+     "director": "Édier William Medeiros da Silva",
+     "pais": "Brasil",
+     "anio": 2025,
+     "duracion_min": 15,
+     "genero": "Animación"
+    },
+    {
+     "titulo": "Falcon 98",
+     "director": "Yosman Serrano Lindarte",
+     "pais": "Colombia",
+     "anio": 2024,
+     "duracion_min": 8,
+     "genero": "Ficción"
+    },
+    {
+     "titulo": "Ficus",
+     "director": "Isabella Bobadilla Monsalve",
+     "pais": "Colombia",
+     "anio": 2023,
+     "duracion_min": 4,
+     "genero": "Animación"
+    },
+    {
+     "titulo": "Nangulví",
+     "director": "Segundo Fuérez",
+     "pais": "Ecuador",
+     "anio": 2022,
+     "duracion_min": 5,
+     "genero": "Animación"
+    },
+    {
+     "titulo": "Sputnik",
+     "director": "Juan Pablo Sánchez",
+     "pais": "Colombia",
+     "anio": 2023,
+     "duracion_min": 9,
+     "genero": "Ficción"
+    },
+    {
+     "titulo": "Mi casa es su casa",
+     "director": "Joan Mayorga",
+     "pais": "Colombia",
+     "anio": 2025,
+     "duracion_min": 5,
+     "genero": "Animación"
+    },
+    {
+     "titulo": "Cuentos de hadas",
+     "director": "Daniela Soria",
+     "pais": "México",
+     "anio": 2023,
+     "duracion_min": 15,
+     "genero": "Ficción"
+    },
+    {
+     "titulo": "La sixtina",
+     "director": "Juan Camilo Fonnegra",
+     "pais": "Colombia",
+     "anio": 2022,
+     "duracion_min": 8,
+     "genero": "Animación"
+    }
+   ],
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 84,
+    "tipo": "festival-pdf"
+   },
+   "_nota": "Curaduría por Bogoshorts (págs. 36–39)"
+  },
+  {
+   "titulo": "Cine Comunitario: Función con Presencia de Directores y Conversatorio",
+   "dia": "2026-11-07",
+   "hora": "13:00",
+   "sede": "Parque de los Deseos",
+   "sala": "Cinemateca móvil",
+   "seccion": "Cine Comunitario - Hecho en Medellín",
+   "obras": [
+    {
+     "titulo": "El paradero",
+     "director": "Semillero Colectivo Cinestrato",
+     "pais": "Colombia",
+     "anio": 2024,
+     "duracion_min": 9,
+     "genero": "Ficción"
+    },
+    {
+     "titulo": "El teléfono morado",
+     "director": "Taller de Cine Corporación Mi Comuna",
+     "pais": "Colombia",
+     "anio": 2024,
+     "duracion_min": 10,
+     "genero": "Documental"
+    },
+    {
+     "titulo": "Éther, somos todo",
+     "director": "Fabián Cataño Torres",
+     "pais": "Colombia",
+     "anio": 2024,
+     "duracion_min": 39,
+     "genero": "Documental"
+    },
+    {
+     "titulo": "Mamá chila: raíz y corazón de la comunidad",
+     "director": "Arbey Antonio Gómez Muñoz",
+     "pais": "Colombia",
+     "anio": 2025,
+     "duracion_min": 18,
+     "genero": "Documental"
+    },
+    {
+     "titulo": "Oro molido # 2",
+     "director": "Juan David Medrano",
+     "pais": "Colombia",
+     "anio": 2024,
+     "duracion_min": 35,
+     "genero": "Documental"
+    },
+    {
+     "titulo": "Paralelo",
+     "director": "Escuela de Comunicación Comunitaria",
+     "pais": "Colombia",
+     "anio": 2025,
+     "duracion_min": 5,
+     "genero": "Ficción"
+    },
+    {
+     "titulo": "Chico de barrio",
+     "director": "Juan David Echavarría Urrego",
+     "pais": "Colombia",
+     "anio": 2026,
+     "duracion_min": 4,
+     "genero": "Animación"
+    }
+   ],
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 58,
+    "tipo": "festival-pdf"
+   },
+   "has_qa": true,
+   "invitados": "Con la presencia de los directores y conversatorio"
+  },
+  {
+   "titulo": "Luces, cámara y estampa",
+   "tipo": "evento",
+   "event_kind": "taller",
+   "dia": "2026-11-07",
+   "hora": "13:00",
+   "sede": "Edificio Paraninfo Universidad de Antioquia (carrera 44 # 48-72, La Candelaria)",
+   "sala": "",
+   "seccion": "Talleres de Desarrollo y Mediación de Audiencias",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 45,
+    "tipo": "festival-pdf"
+   },
+   "duracion_min": 120,
+   "sinopsis": "Realizado por KXVRX Cineclub. Tres sesiones de mediación y formación alrededor del cortometraje colombiano, con proyecciones, conversaciones y microtalleres de serigrafía para reflexionar sobre memoria, identidad, territorio y los lugares que habitamos.",
+   "is_recurring": true
+  },
+  {
+   "titulo": "Colombia es fantástica: laboratorio de cine fantástico y terror colombiano",
+   "tipo": "evento",
+   "event_kind": "taller",
+   "dia": "2026-11-07",
+   "hora": "14:00",
+   "sede": "Centro Colombo Americano, Aula Múltiple.",
+   "sala": "",
+   "seccion": "Talleres de Desarrollo y Mediación de Audiencias",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 45,
+    "tipo": "festival-pdf"
+   },
+   "duracion_min": 90,
+   "sinopsis": "Realizado por Festival Fantasmagoria. Un laboratorio de cinco sesiones para explorar leyendas, imaginarios y nuevas miradas del terror y el fantástico colombiano, y descubrir cómo contamos nuestros propios miedos desde el cine.",
+   "is_recurring": true
+  },
+  {
+   "titulo": "Laboratorio: Postproducción de video para dispositivos móviles",
+   "tipo": "evento",
+   "event_kind": "evento",
+   "dia": "2026-11-07",
+   "hora": "14:00",
+   "sede": "Parque de los Deseos",
+   "sala": "Cinemateca móvil, laboratorio",
+   "seccion": "Cinemateca Móvil",
+   "acceso": "Entrada libre hasta completar cupos",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 58,
+    "tipo": "festival-pdf"
+   },
+   "duracion_min": 120,
+   "sinopsis": "Impartido por el Centro Ático de la Pontificia Universidad Javeriana. Edición de video desde el celular: audio, luz, color, filtros, efectos y montaje.",
+   "_duracion_de": "hasta el taller de collage de las 4:00 p. m. en el mismo laboratorio"
+  },
+  {
+   "titulo": "Recorrido guiado: Muestra de Cine Expandido",
+   "tipo": "evento",
+   "event_kind": "evento",
+   "dia": "2026-11-07",
+   "hora": "14:00",
+   "sede": "Parque Explora",
+   "sala": "Exploratorio",
+   "seccion": "Cine Expandido - Hecho en Medellín",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 69,
+    "tipo": "festival-pdf"
+   },
+   "duracion_min": 60,
+   "sinopsis": "Un recorrido por cuatro obras que exploran nuevas formas de experimentar el cine mediante realidad virtual, instalaciones interactivas y entornos inmersivos. Obras: El sueño de Sedna, Sosiego al atardecer, Todas las cosas que algún día se desvanecieron y Vórtice Nebular."
+  },
+  {
+   "titulo": "Relicto",
+   "director": "Guillermo Quintero",
+   "pais": "Colombia, Francia",
+   "anio": 2026,
+   "duracion_min": 97,
+   "genero": "Documental",
+   "dia": "2026-11-07",
+   "hora": "14:00",
+   "sede": "Coocine",
+   "sala": "Sala 0",
+   "seccion": "Cine Colombiano",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 86,
+    "tipo": "festival-pdf"
+   },
+   "has_qa": true,
+   "qa_type": "team"
+  },
+  {
+   "titulo": "Colombia es fantástica: laboratorio de cine fantástico y terror colombiano",
+   "tipo": "evento",
+   "event_kind": "taller",
+   "dia": "2026-11-07",
+   "hora": "16:00",
+   "sede": "Centro Colombo Americano, Aula Múltiple.",
+   "sala": "",
+   "seccion": "Talleres de Desarrollo y Mediación de Audiencias",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 45,
+    "tipo": "festival-pdf"
+   },
+   "duracion_min": 90,
+   "sinopsis": "Realizado por Festival Fantasmagoria. Un laboratorio de cinco sesiones para explorar leyendas, imaginarios y nuevas miradas del terror y el fantástico colombiano, y descubrir cómo contamos nuestros propios miedos desde el cine.",
+   "is_recurring": true
+  },
+  {
+   "titulo": "Cómo limpiar una casa en 10 pasos fáciles",
+   "director": "Carolina González Valencia",
+   "pais": "Colombia",
+   "anio": 2026,
+   "duracion_min": 80,
+   "genero": "Documental",
+   "dia": "2026-11-07",
+   "hora": "16:00",
+   "sede": "Comfama La Capilla",
+   "sala": "",
+   "seccion": "Cine Colombiano",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 86,
+    "tipo": "festival-pdf"
+   }
+  },
+  {
+   "titulo": "Nuestro secreto",
+   "director": "Grace Passô",
+   "pais": "Brasil, Portugal",
+   "anio": 2026,
+   "duracion_min": 104,
+   "genero": "Ficción",
+   "dia": "2026-11-07",
+   "hora": "16:00",
+   "sede": "Centro Colombo Americano",
+   "sala": "Sala 1",
+   "seccion": "Cine Iberoamericano",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 87,
+    "tipo": "festival-pdf"
+   }
+  },
+  {
+   "titulo": "Papaya",
+   "director": "Priscilla Kellen",
+   "pais": "Brasil",
+   "anio": 2026,
+   "duracion_min": 75,
+   "genero": "Animación",
+   "dia": "2026-11-07",
+   "hora": "16:00",
+   "sede": "Parque de los Deseos",
+   "sala": "Cinemateca móvil",
+   "seccion": "Cine Familiar",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 59,
+    "tipo": "festival-pdf"
+   }
+  },
+  {
+   "titulo": "Taller de collage: Cine en retazos",
+   "tipo": "evento",
+   "event_kind": "taller",
+   "dia": "2026-11-07",
+   "hora": "16:00",
+   "sede": "Parque de los Deseos",
+   "sala": "Cinemateca móvil, laboratorio",
+   "seccion": "Cinemateca Móvil",
+   "acceso": "Entrada libre hasta completar cupos",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 59,
+    "tipo": "festival-pdf"
+   },
+   "duracion_min": 120,
+   "sinopsis": "A partir de la proyección de un cortometraje, los participantes crean un collage como reinterpretación libre e intuitiva. Materiales incluidos.",
+   "_duracion_de": "estimada: el PDF no da hora de fin"
+  },
+  {
+   "titulo": "Ecologías emergentes del cine expandido",
+   "tipo": "evento",
+   "event_kind": "conversatorio",
+   "dia": "2026-11-07",
+   "hora": "16:30",
+   "sede": "Parque Explora",
+   "sala": "Exploratorio",
+   "seccion": "Cine Expandido - Hecho en Medellín",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 69,
+    "tipo": "festival-pdf"
+   },
+   "duracion_min": 60,
+   "invitados": "Con Diego Alberto Pérez Osorno (Vórtice Nebular) y el Colectivo Axiz (Felipe López y Yoana Casanova, El sueño de Sedna), con la moderación de Alannath Naslyllalyla (artista y curadora)"
+  },
+  {
+   "titulo": "Especiales Cinemateca con Natalia Reyes",
+   "tipo": "evento",
+   "event_kind": "conversatorio",
+   "dia": "2026-11-07",
+   "hora": "18:00",
+   "sede": "Parque de los Deseos",
+   "sala": "Cinemateca móvil, sala de cine",
+   "seccion": "Cinemateca Móvil",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 59,
+    "tipo": "festival-pdf"
+   },
+   "duracion_min": 60,
+   "sinopsis": "Víctor Gaviria conversa con Natalia Reyes, actriz y productora colombiana, sobre su experiencia en la película Aún es de noche en Caracas y los procesos creativos detrás de esta producción."
+  },
+  {
+   "titulo": "Iván & Hadoum",
+   "director": "Ian de la Rosa",
+   "pais": "España, Alemania, Bélgica",
+   "anio": 2026,
+   "duracion_min": 103,
+   "genero": "Ficción",
+   "dia": "2026-11-07",
+   "hora": "18:00",
+   "sede": "Comfama La Capilla",
+   "sala": "",
+   "seccion": "Cine Iberoamericano",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 88,
+    "tipo": "festival-pdf"
+   }
+  },
+  {
+   "titulo": "La otra orilla: Revolver la mirada autorizada para manchar la cámara de barro",
+   "tipo": "evento",
+   "event_kind": "taller",
+   "dia": "2026-11-07",
+   "hora": "18:00",
+   "sede": "Librería y Espacio Cultural Antimateria (calle 45E # 72-09, Laureles)",
+   "sala": "",
+   "seccion": "Talleres de Desarrollo y Mediación de Audiencias",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 45,
+    "tipo": "festival-pdf"
+   },
+   "duracion_min": 120,
+   "sinopsis": "Realizado por Cine-Foro \"En Construcción\". Un taller sobre obras de cineastas mujeres latinoamericanas para explorar sus herramientas expresivas y la potencia de sus propuestas, poniendo en diálogo sus formas de hacer cine con las de sus contemporáneos.",
+   "is_recurring": true
+  },
+  {
+   "titulo": "Perder la Escala: Experiencias Cine Domo para Otros Mundos",
+   "dia": "2026-11-07",
+   "hora": "18:00",
+   "sede": "Planetario de Medellín",
+   "sala": "Domo",
+   "seccion": "Cine en el Domo",
+   "obras": [
+    {
+     "titulo": "Alga-Rio",
+     "director": "Cristóbal Parra, Almendra Díaz",
+     "pais": "Chile",
+     "duracion_min": 6
+    },
+    {
+     "titulo": "ACDM",
+     "director": "Ilgin İçözü, Bruno Tripodi, Jana Tox",
+     "pais": "España",
+     "duracion_min": 9
+    },
+    {
+     "titulo": "ASCII Sound Experience",
+     "director": "Julián Angarita",
+     "pais": "Colombia",
+     "duracion_min": 11
+    },
+    {
+     "titulo": "El vuelo 2.0",
+     "director": "Jhon Melo",
+     "pais": "Colombia",
+     "duracion_min": 6
+    },
+    {
+     "titulo": "Entreluz",
+     "director": "Jorge Bandera",
+     "pais": "Colombia",
+     "duracion_min": 9
+    },
+    {
+     "titulo": "Sentidos en disputa",
+     "director": "Carlos Serrano, José Miguel Mejía",
+     "pais": "Colombia",
+     "duracion_min": 7
+    },
+    {
+     "titulo": "Materia ondulatoria",
+     "director": "Daniel Shambo, Pierre Puentes",
+     "pais": "Colombia",
+     "duracion_min": 12
+    }
+   ],
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 87,
+    "tipo": "festival-pdf"
+   }
+  },
+  {
+   "titulo": "Rodando formación: mediaciones en comunidad",
+   "tipo": "evento",
+   "event_kind": "taller",
+   "dia": "2026-11-07",
+   "hora": "18:00",
+   "sede": "Sede cultural Casa TEA (calle 53 # 47-44, La Candelaria)",
+   "sala": "",
+   "seccion": "Talleres de Desarrollo y Mediación de Audiencias",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 45,
+    "tipo": "festival-pdf"
+   },
+   "duracion_min": 120,
+   "sinopsis": "Realizado por CorpoTEA. Un espacio de encuentro con el audiovisual desde las experiencias territoriales. Comunicación, expresión y apreciación se combinan para explorar, experimentar y crear junto a las comunidades y sus distintas formas de relacionarse con el entorno.",
+   "is_recurring": true
+  },
+  {
+   "titulo": "Programa de Cortos 3",
+   "dia": "2026-11-07",
+   "hora": "18:30",
+   "sede": "Centro Colombo Americano",
+   "sala": "Sala 2",
+   "seccion": "Programas de Cortos",
+   "obras": [
+    {
+     "titulo": "La mona",
+     "director": "Laura Gutiérrez",
+     "pais": "Colombia",
+     "anio": 2025,
+     "duracion_min": 18,
+     "genero": "Ficción"
+    },
+    {
+     "titulo": "Compraventa",
+     "director": "Tomás Murphy",
+     "pais": "Argentina",
+     "anio": 2025,
+     "duracion_min": 11,
+     "genero": "Ficción"
+    },
+    {
+     "titulo": "De: Saúl",
+     "director": "Santiago Gomxz",
+     "pais": "Colombia",
+     "anio": 2026,
+     "duracion_min": 4,
+     "genero": "Ficción"
+    },
+    {
+     "titulo": "Agachar el rostro",
+     "director": "Camilo Medina Noy",
+     "pais": "Colombia",
+     "anio": 2025,
+     "duracion_min": 12,
+     "genero": "Ficción"
+    },
+    {
+     "titulo": "Kof-kof",
+     "director": "Juan David Cardona Arboleda",
+     "pais": "Colombia",
+     "anio": 2026,
+     "duracion_min": 7,
+     "genero": "Experimental"
+    },
+    {
+     "titulo": "La sangre",
+     "director": "Joaquín León",
+     "pais": "España",
+     "anio": 2025,
+     "duracion_min": 15,
+     "genero": "Ficción"
+    }
+   ],
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 88,
+    "tipo": "festival-pdf"
+   },
+   "has_qa": true,
+   "invitados": "Función con presencia de los equipos"
+  },
+  {
+   "titulo": "Aún es de noche en Caracas",
+   "director": "Mariana Rondón, Marité Ugás",
+   "pais": "Venezuela",
+   "anio": 2025,
+   "duracion_min": 97,
+   "genero": "Ficción",
+   "dia": "2026-11-07",
+   "hora": "19:00",
+   "sede": "Parque de los Deseos",
+   "sala": "Cinemateca móvil",
+   "seccion": "Cinemateca Móvil",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 59,
+    "tipo": "festival-pdf"
+   }
+  },
+  {
+   "titulo": "Club sándwich",
+   "director": "Fernando Eimbcke",
+   "pais": "México",
+   "anio": 2013,
+   "duracion_min": 82,
+   "genero": "Ficción",
+   "dia": "2026-11-07",
+   "hora": "19:00",
+   "sede": "Cineprox Las Américas",
+   "sala": "Sala 3",
+   "seccion": "Retrospectiva Fernando Eimbcke",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 89,
+    "tipo": "festival-pdf"
+   },
+   "has_qa": true,
+   "qa_type": "team"
+  },
+  {
+   "titulo": "El teléfono morado",
+   "director": "Taller de Cine Corporación Mi Comuna",
+   "pais": "Colombia",
+   "anio": 2024,
+   "duracion_min": 10,
+   "genero": "Documental",
+   "dia": "2026-11-07",
+   "hora": "19:00",
+   "sede": "Finca Agroturística El Encanto de Mis Abuelos",
+   "sala": "",
+   "seccion": "Cine Comunitario - Hecho en Medellín",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 41,
+    "tipo": "festival-pdf"
+   }
+  },
+  {
+   "titulo": "Programa de Cortos 4",
+   "dia": "2026-11-07",
+   "hora": "19:00",
+   "sede": "Museo de Arte Moderno de Medellín - MAMM",
+   "sala": "Teatro MAMM",
+   "seccion": "Programas de Cortos",
+   "obras": [
+    {
+     "titulo": "Planetario",
+     "director": "Sofía Poncini",
+     "pais": "Argentina",
+     "anio": 2025,
+     "duracion_min": 9,
+     "genero": "Ficción"
+    },
+    {
+     "titulo": "Emechiche, el renacer de los cabeciblancos",
+     "director": "Juan Camilo González",
+     "pais": "Colombia, Argentina",
+     "anio": 2025,
+     "duracion_min": 11,
+     "genero": "Animación"
+    },
+    {
+     "titulo": "La escucha, la razón. Memoria acústica de un mural",
+     "director": "Juan David Bolívar Araque",
+     "pais": "Colombia",
+     "anio": 2026,
+     "duracion_min": 15,
+     "genero": "Documental"
+    },
+    {
+     "titulo": "Mi viche todo el día",
+     "director": "Juan Camilo Moreno",
+     "pais": "Colombia",
+     "anio": 2025,
+     "duracion_min": 26,
+     "genero": "Documental"
+    },
+    {
+     "titulo": "Corazón azul",
+     "director": "Samuel Suffren",
+     "pais": "Haití, Francia",
+     "anio": 2025,
+     "duracion_min": 15,
+     "genero": "Ficción"
+    }
+   ],
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 90,
+    "tipo": "festival-pdf"
+   },
+   "has_qa": true,
+   "invitados": "Función con presencia de los equipos"
+  },
+  {
+   "titulo": "Taller de cianotipia: fotografía en papel sin recurrir a la cámara",
+   "tipo": "evento",
+   "event_kind": "taller",
+   "dia": "2026-11-08",
+   "hora": "10:00",
+   "sede": "Parque de los Deseos",
+   "sala": "Cinemateca móvil, laboratorio",
+   "seccion": "Cinemateca Móvil",
+   "acceso": "Entrada libre hasta completar cupos",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 60,
+    "tipo": "festival-pdf"
+   },
+   "duracion_min": 240,
+   "sinopsis": "La cianotipia, un proceso fotográfico analógico sin cámara: con luz solar y agua se imprimen fotogramas de obras cinematográficas en azul de Prusia. Materiales incluidos.",
+   "_duracion_de": "hasta el laboratorio de las 2:00 p. m. en el mismo espacio"
+  },
+  {
+   "titulo": "Taller: Pintar el cine: intervención y proyección de material fílmico",
+   "tipo": "evento",
+   "event_kind": "taller",
+   "dia": "2026-11-08",
+   "hora": "10:00",
+   "sede": "Casa de la Música",
+   "sala": "",
+   "seccion": "Cinemateca Móvil",
+   "acceso": "Entrada libre hasta completar cupos",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 60,
+    "tipo": "festival-pdf"
+   },
+   "duracion_min": 120,
+   "sinopsis": "La Corporación Otraparte invita a jóvenes a intervenir fragmentos de película de 35 mm con dibujos, tintas y pigmentos. Materiales incluidos.",
+   "_duracion_de": "estimada: el PDF no da hora de fin"
+  },
+  {
+   "titulo": "Mu-ki-ra",
+   "director": "Estefanía Piñeres Duque",
+   "pais": "Colombia, España",
+   "anio": 2026,
+   "duracion_min": 82,
+   "genero": "Ficción",
+   "dia": "2026-11-08",
+   "hora": "11:00",
+   "sede": "Parque de los Deseos",
+   "sala": "Cinemateca móvil",
+   "seccion": "Cine Familiar",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 60,
+    "tipo": "festival-pdf"
+   }
+  },
+  {
+   "titulo": "Laboratorio Vivo: Hilos de memoria",
+   "tipo": "evento",
+   "event_kind": "evento",
+   "dia": "2026-11-08",
+   "hora": "14:00",
+   "sede": "Parque de los Deseos",
+   "sala": "Cinemateca móvil, laboratorio",
+   "seccion": "Cinemateca Móvil",
+   "acceso": "Entrada libre hasta completar cupos",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 61,
+    "tipo": "festival-pdf"
+   },
+   "duracion_min": 120,
+   "sinopsis": "Impartido por la Red Audiovisual. Intervención analógica de fotogramas (foto-bordado) y animación stop motion a partir del archivo de la Red de Audiovisuales. Materiales incluidos.",
+   "_duracion_de": "hasta el taller de máscaras de las 4:00 p. m. en el mismo laboratorio"
+  },
+  {
+   "titulo": "Niñas escarlata",
+   "director": "Paula Cury Melo",
+   "pais": "República Dominicana, México, Alemania",
+   "anio": 2026,
+   "duracion_min": 70,
+   "genero": "Documental",
+   "dia": "2026-11-08",
+   "hora": "14:00",
+   "sede": "Centro Colombo Americano",
+   "sala": "Sala 1",
+   "seccion": "Cine Iberoamericano",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 92,
+    "tipo": "festival-pdf"
+   }
+  },
+  {
+   "titulo": "Programa de Cortos",
+   "dia": "2026-11-08",
+   "hora": "14:00",
+   "sede": "Parque de los Deseos",
+   "sala": "Cinemateca móvil",
+   "seccion": "Cine Familiar",
+   "obras": [
+    {
+     "titulo": "Planeta fome",
+     "director": "Édier William Medeiros da Silva",
+     "pais": "Brasil",
+     "anio": 2025,
+     "duracion_min": 15,
+     "genero": "Animación"
+    },
+    {
+     "titulo": "Falcon 98",
+     "director": "Yosman Serrano Lindarte",
+     "pais": "Colombia",
+     "anio": 2024,
+     "duracion_min": 8,
+     "genero": "Ficción"
+    },
+    {
+     "titulo": "Ficus",
+     "director": "Isabella Bobadilla Monsalve",
+     "pais": "Colombia",
+     "anio": 2023,
+     "duracion_min": 4,
+     "genero": "Animación"
+    },
+    {
+     "titulo": "Nangulví",
+     "director": "Segundo Fuérez",
+     "pais": "Ecuador",
+     "anio": 2022,
+     "duracion_min": 5,
+     "genero": "Animación"
+    },
+    {
+     "titulo": "Sputnik",
+     "director": "Juan Pablo Sánchez",
+     "pais": "Colombia",
+     "anio": 2023,
+     "duracion_min": 9,
+     "genero": "Ficción"
+    },
+    {
+     "titulo": "Mi casa es su casa",
+     "director": "Joan Mayorga",
+     "pais": "Colombia",
+     "anio": 2025,
+     "duracion_min": 5,
+     "genero": "Animación"
+    },
+    {
+     "titulo": "Cuentos de hadas",
+     "director": "Daniela Soria",
+     "pais": "México",
+     "anio": 2023,
+     "duracion_min": 15,
+     "genero": "Ficción"
+    },
+    {
+     "titulo": "La sixtina",
+     "director": "Juan Camilo Fonnegra",
+     "pais": "Colombia",
+     "anio": 2022,
+     "duracion_min": 8,
+     "genero": "Animación"
+    },
+    {
+     "titulo": "Luis Antonio",
+     "director": "Juan José Arias Gil",
+     "pais": "Colombia",
+     "anio": 2025,
+     "duracion_min": 12,
+     "genero": "Ficción"
+    }
+   ],
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 61,
+    "tipo": "festival-pdf"
+   }
+  },
+  {
+   "titulo": "Relicto",
+   "director": "Guillermo Quintero",
+   "pais": "Colombia, Francia",
+   "anio": 2026,
+   "duracion_min": 97,
+   "genero": "Documental",
+   "dia": "2026-11-08",
+   "hora": "14:00",
+   "sede": "Museo de Arte Moderno de Medellín - MAMM",
+   "sala": "Teatro MAMM",
+   "seccion": "Cine Colombiano",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 91,
+    "tipo": "festival-pdf"
+   }
+  },
+  {
+   "titulo": "El deshielo",
+   "director": "Manuela Martelli",
+   "pais": "Chile, Estados Unidos, España, México",
+   "anio": 2026,
+   "duracion_min": 108,
+   "genero": "Ficción",
+   "dia": "2026-11-08",
+   "hora": "16:00",
+   "sede": "Comfama La Capilla",
+   "sala": "",
+   "seccion": "Cine Iberoamericano",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 94,
+    "tipo": "festival-pdf"
+   }
+  },
+  {
+   "titulo": "Programa de Cortos 2",
+   "dia": "2026-11-08",
+   "hora": "16:00",
+   "sede": "Cineprox Las Américas",
+   "sala": "Sala 3",
+   "seccion": "Programas de Cortos",
+   "obras": [
+    {
+     "titulo": "Una vez en un cuerpo",
+     "director": "María Cristina Pérez González",
+     "pais": "Colombia",
+     "anio": 2025,
+     "duracion_min": 10,
+     "genero": "Animación"
+    },
+    {
+     "titulo": "Madres de nacimiento",
+     "director": "Gloria Isabel Gómez Ceballos",
+     "pais": "Francia",
+     "anio": 2026,
+     "duracion_min": 8,
+     "genero": "Documental"
+    },
+    {
+     "titulo": "Norheimsund",
+     "director": "Ana A. Alpizar",
+     "pais": "Cuba, Estados Unidos",
+     "anio": 2025,
+     "duracion_min": 12,
+     "genero": "Ficción"
+    },
+    {
+     "titulo": "Refracción",
+     "director": "Isabella Palacio Mesa",
+     "pais": "Colombia",
+     "anio": 2025,
+     "duracion_min": 11,
+     "genero": "Ficción"
+    },
+    {
+     "titulo": "Mal de tierra",
+     "director": "Camila Caballero Guzmán",
+     "pais": "Colombia",
+     "anio": 2026,
+     "duracion_min": 10,
+     "genero": "Experimental"
+    },
+    {
+     "titulo": "Quem se move (Quien se mueve)",
+     "director": "Stephanie Ricci",
+     "pais": "Brasil",
+     "anio": 2025,
+     "duracion_min": 20,
+     "genero": "Ficción"
+    }
+   ],
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 94,
+    "tipo": "festival-pdf"
+   },
+   "has_qa": true,
+   "invitados": "Función con presencia de los equipos"
+  },
+  {
+   "titulo": "Taller de máscaras: Conviértete en un Bicho Raro",
+   "tipo": "evento",
+   "event_kind": "taller",
+   "dia": "2026-11-08",
+   "hora": "16:00",
+   "sede": "Parque de los Deseos",
+   "sala": "Cinemateca móvil, laboratorio",
+   "seccion": "Cinemateca Móvil",
+   "acceso": "Entrada libre hasta completar cupos",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 62,
+    "tipo": "festival-pdf"
+   },
+   "duracion_min": 120,
+   "sinopsis": "Construye tu máscara de Macha, la cucaracha, o Yeisy, la araña, personajes de La Sinfonía de los Bichos Raros. Materiales incluidos.",
+   "_duracion_de": "estimada: el PDF no da hora de fin"
+  },
+  {
+   "titulo": "Un día en la vida de...",
+   "director": "Carlos Álvarez",
+   "pais": "Colombia",
+   "duracion_min": 80,
+   "genero": "Documental",
+   "dia": "2026-11-08",
+   "hora": "16:00",
+   "sede": "Centro Colombo Americano",
+   "sala": "Sala 1",
+   "seccion": "Cine Memoria",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 93,
+    "tipo": "festival-pdf"
+   }
+  },
+  {
+   "titulo": "Juancho Valencia y su relación con el cine",
+   "tipo": "evento",
+   "event_kind": "conversatorio",
+   "dia": "2026-11-08",
+   "hora": "17:30",
+   "sede": "Parque de los Deseos",
+   "sala": "Cinemateca móvil, sala de cine",
+   "seccion": "Cinemateca Móvil",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 95,
+    "tipo": "festival-pdf"
+   },
+   "duracion_min": 60,
+   "sinopsis": "Juancho Valencia, ganador del Grammy Latino, dialoga con Diego Londoño (El Fan Fatal) sobre cómo ha tejido una relación entre su música y el cine."
+  },
+  {
+   "titulo": "Proyección y Concierto de Clausura",
+   "dia": "2026-11-08",
+   "hora": "18:30",
+   "sede": "Parque de los Deseos",
+   "sala": "Plazoleta",
+   "seccion": "Evento de Clausura",
+   "obras": [
+    {
+     "titulo": "Norheimsund",
+     "director": "Ana A. Alpizar",
+     "pais": "Cuba, Estados Unidos",
+     "anio": 2025,
+     "duracion_min": 12,
+     "genero": "Ficción"
+    },
+    {
+     "titulo": "Una vez en un cuerpo",
+     "director": "María Cristina Pérez González",
+     "pais": "Colombia",
+     "anio": 2025,
+     "duracion_min": 10,
+     "genero": "Animación"
+    },
+    {
+     "titulo": "Planetario",
+     "director": "Sofía Poncini",
+     "pais": "Argentina",
+     "anio": 2025,
+     "duracion_min": 9,
+     "genero": "Ficción"
+    },
+    {
+     "titulo": "Emechiche, el renacer de los cabeciblancos",
+     "director": "Juan Camilo González",
+     "pais": "Colombia, Argentina",
+     "anio": 2025,
+     "duracion_min": 11,
+     "genero": "Animación"
+    },
+    {
+     "titulo": "La sangre",
+     "director": "Joaquín León",
+     "pais": "España",
+     "anio": 2025,
+     "duracion_min": 15,
+     "genero": "Ficción"
+    },
+    {
+     "titulo": "Corazón azul",
+     "director": "Samuel Suffren",
+     "pais": "Haití, Francia",
+     "anio": 2025,
+     "duracion_min": 15,
+     "genero": "Ficción"
+    },
+    {
+     "titulo": "Refracción",
+     "director": "Isabella Palacio Mesa",
+     "pais": "Colombia",
+     "anio": 2025,
+     "duracion_min": 11,
+     "genero": "Ficción"
+    }
+   ],
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 95,
+    "tipo": "festival-pdf"
+   },
+   "event_kind": "clausura",
+   "sinopsis": "Selección de cortometrajes; especial: estreno del cortometraje más destacado de la Red de Audiovisuales 2026; y concierto de clausura de la Orquesta Sinfónica Juvenil de la Red de Músicas de Medellín con Los Cumbia Stars."
+  }
+ ]
+}

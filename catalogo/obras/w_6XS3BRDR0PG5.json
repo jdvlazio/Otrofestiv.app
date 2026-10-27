@@ -1,13 +1,35 @@
 {
  "id": "w_6XS3BRDR0PG5",
  "titulo_original": "Compraventa",
- "anio": null,
+ "anio": 2025,
  "paises": [
   "AR"
  ],
- "directores": [],
- "xref": {},
+ "directores": [
+  "Tomás Murphy"
+ ],
+ "sinopsis": {
+  "en": "In a merchant neighborhood of Buenos Aires, Yoni survives through smuggling and a few fleeting alliances. Under the shadow of his partner and mentor, Leon, he strives to advance in a world that judges him by his appearance. A promising business deal seems poised to change his fate, but an unexpected setback forces him to confront his limitation"
+ },
+ "generos": [
+  "Ficción"
+ ],
+ "afiche": {
+  "archivo": "/assets/miradas-2026/compraventa.jpg",
+  "veredicto": "oficial"
+ },
+ "xref": {
+  "tmdb": 1469673,
+  "letterboxd": "compraventa"
+ },
+ "versiones": [
+  {
+   "etiqueta": "11 min",
+   "duracion_min": 11
+  }
+ ],
  "presentaciones": [
-  "ficica-2026"
+  "ficica-2026",
+  "miradas-2026"
  ]
 }

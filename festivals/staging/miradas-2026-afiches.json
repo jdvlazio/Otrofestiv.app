@@ -1,0 +1,19 @@
+{
+ "_provenance": {
+  "fuente": "afiches buscados fuera de TMDB y MIRADOS uno por uno",
+  "capturado": "2026-10-27",
+  "regla": "solo donde TMDB y lo ya publicado no tienen afiche; el título va en la imagen y la dirección en el afiche o en su página oficial"
+ },
+ "afiches": {
+  "Luis Antonio": {
+   "archivo": "fuentes/miradas-2026/afiches/luis-antonio-cinecorto.jpg",
+   "fuente": "https://cinecorto.co/luis-antonio/ (og:image Poster_LuisAntonio.jpg) — afiche con título y «un corto de Juan José Arias Gil»"
+  },
+  "El león": {
+   "archivo": "fuentes/miradas-2026/afiches/el-leon-tmdb-es.jpg",
+   "fuente": "TMDB 1616865, póster es /5aYMbnZEGwKp2QnypVZBFtspgam.jpg — «EL LEÓN · una película de Diana Bustamante» (Cinéma du Réel 2026)",
+   "sobre_tmdb": true,
+   "_por_que": "la imagen principal de TMDB (/5an6XZNE07yS7ahXEMZ78htlORg.jpg) es un fotograma (auditoría 27 oct 2026)"
+  }
+ }
+}

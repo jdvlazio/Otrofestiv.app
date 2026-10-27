@@ -11,6 +11,10 @@
  ],
  "aliases": [
   {
+   "titulo": "Los nuevos",
+   "tipo": "festival"
+  },
+  {
    "titulo": "The Newcomers",
    "idioma": "en",
    "tipo": "traduccion"
@@ -21,7 +25,8 @@
   "en": "Three tweens investigate what is poisoning their village's rivers. Mateo narrates as he, his brother Tomas, refugee Tiana, and her dog Nube embark on an adventure to uncover the source of pollution."
  },
  "generos": [
-  "Familiar"
+  "Familiar",
+  "Ficción"
  ],
  "afiche": {
   "archivo": "/assets/biff-2026/los-nuevos.jpg",
@@ -38,6 +43,7 @@
   }
  ],
  "presentaciones": [
-  "biff-2026"
+  "biff-2026",
+  "miradas-2026"
  ]
 }
