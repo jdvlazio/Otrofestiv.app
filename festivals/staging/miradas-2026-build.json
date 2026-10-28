@@ -1299,7 +1299,7 @@
    "id": "f_615243f7e4"
   },
   {
-   "title": "Laboratorio Materia expandida: representación e imagen en contextos digitales. Sesión 1 – Materia y representación",
+   "title": "Laboratorio Materia expandida: representación e imagen en contextos digitales",
    "type": "event",
    "section": "🌀 Cine Expandido - Hecho en Medellín",
    "duration": "180 min",
@@ -1314,6 +1314,7 @@
    "venue": "Parque Explora - Medellín",
    "sala": "Exploratorio",
    "event_kind": "evento",
+   "is_recurring": true,
    "has_qa": false,
    "_src": {
     "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
@@ -1321,7 +1322,7 @@
     "tipo": "festival-pdf"
    },
    "is_free": true,
-   "description": "Realizado por Almendra Díaz y Cristóbal Parra (Chile). Un laboratorio práctico para explorar la relación entre materia física e imagen digital, transformando objetos del entorno en modelos 3D y experiencias audiovisuales mediante fotogrametría, programación visual y videomapping.",
+   "description": "Sesión 1 – Materia y representación. Realizado por Almendra Díaz y Cristóbal Parra (Chile). Un laboratorio práctico para explorar la relación entre materia física e imagen digital, transformando objetos del entorno en modelos 3D y experiencias audiovisuales mediante fotogrametría, programación visual y videomapping.",
    "description_lang": "es",
    "_fid": "f_264cd583d4",
    "id": "f_264cd583d4"
@@ -2082,6 +2083,8 @@
    "sala": "Sala 3",
    "has_qa": true,
    "qa_type": "team",
+   "poster": "/assets/miradas-2026/chapeco-el-ultimo-sobreviviente-nace-una-hermandad.jpg",
+   "posterSource": "oficial",
    "_src": {
     "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
     "pag": 78,
@@ -2328,7 +2331,7 @@
    "id": "f_b0bdd510a7"
   },
   {
-   "title": "Laboratorio Materia expandida: representación e imagen en contextos digitales. Sesión 2 – Imagen y expansión",
+   "title": "Laboratorio Materia expandida: representación e imagen en contextos digitales",
    "type": "event",
    "section": "🌀 Cine Expandido - Hecho en Medellín",
    "duration": "180 min",
@@ -2343,6 +2346,7 @@
    "venue": "Parque Explora - Medellín",
    "sala": "Exploratorio",
    "event_kind": "evento",
+   "is_recurring": true,
    "has_qa": false,
    "_src": {
     "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
@@ -2350,7 +2354,7 @@
     "tipo": "festival-pdf"
    },
    "is_free": true,
-   "description": "Realizado por Almendra Díaz y Cristóbal Parra (Chile). Segunda sesión del laboratorio de fotogrametría, programación visual y videomapping.",
+   "description": "Sesión 2 – Imagen y expansión. Realizado por Almendra Díaz y Cristóbal Parra (Chile). Segunda sesión del laboratorio de fotogrametría, programación visual y videomapping.",
    "description_lang": "es",
    "_fid": "f_687c9dd14e",
    "id": "f_687c9dd14e"
@@ -2939,6 +2943,8 @@
    "day_order": 3,
    "venue": "Parque de los Deseos - Medellín",
    "has_qa": false,
+   "poster": "/assets/miradas-2026/chapeco-el-ultimo-sobreviviente-nace-una-hermandad.jpg",
+   "posterSource": "oficial",
    "_src": {
     "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
     "pag": 82,
@@ -5346,7 +5352,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-27T16:59:00",
+  "fecha": "2026-10-27T19:13:33",
   "plan_sha": "1476fecbd41f2797",
   "paso": 10,
   "cmd": "python3 pipeline/miradas-2026-verificar.py"
