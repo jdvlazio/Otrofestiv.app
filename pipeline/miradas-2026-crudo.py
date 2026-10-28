@@ -381,8 +381,10 @@ for a in form:
         if s.get('fin'):
             h1, m1 = map(int, s['inicio'].split(':')); h2, m2 = map(int, s['fin'].split(':'))
             dur = (h2 * 60 + m2) - (h1 * 60 + m1)
-        if not dur:   # Colombia es fantástica: sesiones cada 2 h (2:00 y 4:00 p. m.)
-            dur, s['_duracion_de'] = 90, 'estimada: el PDF solo da la hora de inicio de cada sesión, cada 2 h'
+        if not dur:   # Colombia es fantástica: sesiones seguidas cada 2 h (2:00 y 4:00 p. m.)
+            # Cinemateca a Juan (28 oct): las sesiones son seguidas — cada una termina cuando
+            # empieza la siguiente del mismo día (2 h); la última del día, las mismas 2 h
+            dur, s['_duracion_de'] = 120, 'sesiones seguidas: termina cuando empieza la siguiente (Cinemateca, 28 oct); la última del día, 2 h'
         F.append(ev(s['fecha'], s['inicio'], TIT_PDF[a['titulo_lamina']], 'taller', S_TAL, a['lugar_lamina'], '', 45, dur,
                     sinopsis=f"Realizado por {a['realizado_por']}. {a['descripcion_es']}", is_recurring=len(a['sesiones']) > 1))
 

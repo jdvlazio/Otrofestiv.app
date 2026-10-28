@@ -1,0 +1,25 @@
+{
+ "_provenance": {
+  "fuente": "respuesta de la Cinemateca de Medellín (organiza Miradas) a Juan por mensaje, 28 oct 2026",
+  "capturado": "2026-10-28"
+ },
+ "afirmaciones": [
+  {
+   "ancla": {
+    "sede": "Parque de los Deseos - Medellín",
+    "dia": "2026-11-07",
+    "hora": "14:00"
+   },
+   "funcion": "f_44bbe027e4",
+   "casilla": "time",
+   "valor": "10:00",
+   "contra": "14:00",
+   "fuente": {
+    "tipo": "juan",
+    "frase": "SÁBADO 7 NOV — 10:00 a. m. · «Cinemateca móvil - Laboratorio: Postproducción de video para dispositivos móviles»",
+    "fecha": "2026-10-28"
+   },
+   "evidencia": "mensaje de la Cinemateca de Medellín a Juan (28 oct), sin URL pública: lo lista bajo «10:00 a. m.» junto al laboratorio de IA generativa. El PDF (pág. 58) lo daba a las 2:00 p. m.; la respuesta del festival es la fuente más reciente."
+  }
+ ]
+}

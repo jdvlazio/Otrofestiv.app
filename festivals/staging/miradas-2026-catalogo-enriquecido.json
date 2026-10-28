@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, con el MISMO candado de enriquecer.py: director ✓ y (año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-10-27"
+  "capturado": "2026-10-28"
  },
  "_origen": "miradas-2026-catalogo.json",
  "obras": [
@@ -106,8 +106,10 @@
     {
      "festival": "ficci-65",
      "titulo": "El tren fluvial",
+     "tmdb_id": 1574074,
      "poster": "https://image.tmdb.org/t/p/w500/wElH8qOEoF1Fl09DI0CA82AW4oe.jpg",
      "posterSource": "tmdb",
+     "lbSlug": "the-river-train",
      "country": "Argentina",
      "year": 2026,
      "duration": "75 min",
@@ -137,11 +139,14 @@
     {
      "festival": "ficci-65",
      "titulo": "Iván & Hadoum",
+     "tmdb_id": 1514847,
      "poster": "https://image.tmdb.org/t/p/w185/gqtBos9yGlMPFulwcGjdX53CZx8.jpg",
      "posterSource": "tmdb",
+     "lbSlug": "ivan-hadoum",
      "country": "España/Alemania/Bélgica",
      "year": 2026,
      "duration": "103 min",
+     "genre": "Ficción",
      "synopsis_en": "Iván works at an agricultural company and aspires to a promotion that would improve his family's financial situation.",
      "sinopsis": "Iván trabaja en una empresa agrícola y aspira a un ascenso que le permita mejorar la situación económica de su familia."
     }
@@ -276,6 +281,7 @@
     {
      "festival": "olhar-2026",
      "titulo": "Papaya",
+     "tmdb_id": 1534205,
      "poster": "/6cEj0lPl4iksYCl8gZgNwsTDrSN.jpg",
      "posterSource": "tmdb",
      "lbSlug": "papaya-2025",
@@ -318,7 +324,22 @@
    "pais_tmdb": "",
    "lbSlug": "compraventa",
    "_verificado": "el catálogo ya la tiene (w_6XS3BRDR0PG5, ficica-2026, miradas-2026)",
-   "work_id": "w_6XS3BRDR0PG5"
+   "work_id": "w_6XS3BRDR0PG5",
+   "_ya_publicada": [
+    {
+     "festival": "ficica-2026",
+     "titulo": "Compraventa",
+     "tmdb_id": 1469673,
+     "poster": "/assets/ficica-2026/compraventa.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "compraventa",
+     "country": "Argentina",
+     "year": 2025,
+     "duration": "10 min",
+     "genre": "Suspense",
+     "synopsis_en": "In a merchant neighborhood of Buenos Aires, Yoni survives through smuggling and a few fleeting alliances. Under the shadow of his partner and mentor, Leon, he strives to advance in a world that judges him by his appearance. A promising business deal seems poised to change his fate, but an unexpected setback forces him to confront his limitation"
+    }
+   ]
   },
   {
    "titulo": "La sangre",
@@ -441,6 +462,7 @@
     {
      "festival": "ficci-65",
      "titulo": "Madres de nacimiento",
+     "tmdb_id": 1668902,
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_MDN_Poster_Blanco_WEB.jpg?itok=OR2_OCi0",
      "posterSource": "custom",
      "lbSlug": "madres-de-nacimiento",
@@ -454,6 +476,7 @@
     {
      "festival": "ficdeh-2026",
      "titulo": "Madres de nacimiento",
+     "tmdb_id": 1668902,
      "poster": "/assets/ficdeh/madres-de-nacimiento.jpg",
      "posterSource": "custom",
      "lbSlug": "madres-de-nacimiento",
@@ -467,11 +490,13 @@
     {
      "festival": "ficmontanas-2026",
      "titulo": "Madres de nacimiento",
+     "tmdb_id": 1668902,
      "poster": "https://image.tmdb.org/t/p/w500/kJreh6iEXQZ3NHaROQb7WJNle7l.jpg",
      "posterSource": "tmdb",
      "lbSlug": "madres-de-nacimiento",
      "country": "Colombia/Francia",
      "year": 2026,
+     "duration": "8 min",
      "genre": "Documental",
      "synopsis_en": "Out of oblivion and darkness, images and sounds resurface to control the bodies of Latin American women, regarded since childhood as mothers by birth. But within these archives an interference emerges from the past, carrying a message of struggle, memory and freedom.",
      "sinopsis": "Del olvido y la oscuridad hay imágenes y sonidos que resurgen para controlar los cuerpos de las mujeres latinoamericanas, quienes desde niñas han sido consideradas madres de nacimiento. Pero en estos archivos emerge una interferencia que proviene del pasado para evocar un mensaje de lucha, memoria y libertad."
@@ -562,6 +587,7 @@
     {
      "festival": "ficmontanas-2026",
      "titulo": "Refracción",
+     "tmdb_id": 1584776,
      "poster": "https://image.tmdb.org/t/p/w500/bzKNobO0N8Oqj6YU6eA2R28UgPI.jpg",
      "posterSource": "tmdb",
      "lbSlug": "refraccion",
@@ -657,11 +683,13 @@
     {
      "festival": "ficmontanas-2026",
      "titulo": "La Mona",
+     "tmdb_id": 1444298,
      "poster": "/assets/villadelcine-2026/la-mona.jpg",
      "posterSource": "oficial",
      "lbSlug": "heat-wave-2025",
      "country": "Colombia",
      "year": 2025,
+     "duration": "18 min",
      "genre": "Ficción",
      "synopsis_en": "In the damp and dusty village of La Hondura, La Mona is ready to sacrifice everything to maintain her authority even if loneliness is the price she must pay. Her body, however, refuses to toe the line.",
      "sinopsis": "La Mona está dispuesta a cualquier sacrificio para garantizar su autoridad en La Hondura, aunque el precio que pague sea la soledad."
@@ -750,6 +778,22 @@
    "_sinopsis_de": "ya publicada en jardin-2026"
   },
   {
+   "titulo": "La danza de los ángeles",
+   "tmdb_id": 1809915,
+   "titulo_original": "La danza de los ángeles",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "A group of young people conquer the heavens and return to earth as angels. But they are invisible to mortals. Only an old camcorder, forgotten in a family drawer, is capable of capturing a faint trace of their presence.",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 15,
+   "pais_tmdb": "Colombia",
+   "title_en": "The Dance of the Angels",
+   "lbSlug": "the-dance-of-the-angels",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "La danza de los ángeles"
+  },
+  {
    "titulo": "Luis Antonio",
    "_fuente": "cinecorto",
    "_cinecorto": "https://cinecorto.co/luis-antonio/",
@@ -761,17 +805,23 @@
     {
      "festival": "ficica-2026",
      "titulo": "Luis antonio",
+     "poster": "/assets/miradas-2026/luis-antonio.jpg",
+     "posterSource": "oficial",
      "country": "Colombia",
      "year": 2025,
      "duration": "12 min",
+     "genre": "Ficción",
      "sinopsis": "La mañana de un sábado Luis Antonio, un niño de 8 años, quiere aprender a montar en bicicleta. Pero su madre tiene que trabajar y lo deja al cuidado de Ofelia, su estricta vecina."
     },
     {
      "festival": "guatape-2026",
      "titulo": "Luis Antonio",
+     "poster": "/assets/miradas-2026/luis-antonio.jpg",
+     "posterSource": "oficial",
      "country": "Colombia",
      "year": 2025,
      "duration": "12 min",
+     "genre": "Ficción",
      "sinopsis": "La mañana de un sábado Luis Antonio, un niño de 8 años, quiere aprender a montar en bicicleta. Pero su madre tiene que trabajar y lo deja al cuidado de Ofelia, su estricta vecina."
     },
     {
@@ -867,6 +917,7 @@
     {
      "festival": "aff-2026",
      "titulo": "Una vez en un cuerpo",
+     "tmdb_id": 1522316,
      "poster": "https://admin.alternativa.film/uploads/Oficial_Poster_Una_Michel_d4a64a67e9.jpg",
      "posterSource": "custom",
      "lbSlug": "once-in-a-body",
@@ -979,12 +1030,14 @@
     {
      "festival": "ficci-65",
      "titulo": "Las formas de la magia",
+     "tmdb_id": 1668889,
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_LFM_poster_Ficci_595x842%20-%20Maria%20Paula%20Lorgia.jpg?itok=5XCaIr83",
      "posterSource": "custom",
      "lbSlug": "las-formas-de-la-magia",
      "country": "Colombia",
      "year": 2026,
      "duration": "16 min",
+     "genre": "Documental",
      "sinopsis": "Un año después de la muerte de su padre, el reconocido mago colombiano Gustavo Lorgia, la directora realiza una exploración por sus archivos de video que revelan su trayectoria como artista, su rol como padre y la estética televisiva de una época. Una película que acude al archivo como medio para atravesar el duelo y a la memoria como forma de resistir a la desaparición."
     },
     {
@@ -997,6 +1050,7 @@
      "country": "Colombia",
      "year": 2026,
      "duration": "17 min",
+     "genre": "Documental",
      "sinopsis": "Un año después de la muerte de su padre, el mago colombiano Gustavo Lorgia, la directora realiza una exploración por sus archivos de video que revelan su trayectoria como artista, su rol como padre y la estética televisiva de una época. Una película que acude al archivo como medio para atravesar el duelo y a la memoria como forma de resistir a la desaparición."
     }
    ]
@@ -1071,6 +1125,7 @@
     {
      "festival": "ficci-65",
      "titulo": "Decaer",
+     "tmdb_id": 1668881,
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Captura%20de%20pantalla%202026-04-04%20a%20la%28s%29%203.43.18%20p.m..jpg?itok=SfE8u2Hj",
      "posterSource": "custom",
      "lbSlug": "decay-2026",
@@ -1333,8 +1388,10 @@
     {
      "festival": "ficci-65",
      "titulo": "El tren fluvial",
+     "tmdb_id": 1574074,
      "poster": "https://image.tmdb.org/t/p/w500/wElH8qOEoF1Fl09DI0CA82AW4oe.jpg",
      "posterSource": "tmdb",
+     "lbSlug": "the-river-train",
      "country": "Argentina",
      "year": 2026,
      "duration": "75 min",
@@ -1363,11 +1420,14 @@
     {
      "festival": "ficci-65",
      "titulo": "Iván & Hadoum",
+     "tmdb_id": 1514847,
      "poster": "https://image.tmdb.org/t/p/w185/gqtBos9yGlMPFulwcGjdX53CZx8.jpg",
      "posterSource": "tmdb",
+     "lbSlug": "ivan-hadoum",
      "country": "España/Alemania/Bélgica",
      "year": 2026,
      "duration": "103 min",
+     "genre": "Ficción",
      "synopsis_en": "Iván works at an agricultural company and aspires to a promotion that would improve his family's financial situation.",
      "sinopsis": "Iván trabaja en una empresa agrícola y aspira a un ascenso que le permita mejorar la situación económica de su familia."
     }
@@ -1496,6 +1556,7 @@
     {
      "festival": "olhar-2026",
      "titulo": "Papaya",
+     "tmdb_id": 1534205,
      "poster": "/6cEj0lPl4iksYCl8gZgNwsTDrSN.jpg",
      "posterSource": "tmdb",
      "lbSlug": "papaya-2025",
@@ -1536,7 +1597,22 @@
    "pais_tmdb": "",
    "lbSlug": "compraventa",
    "_verificado": "el catálogo ya la tiene (w_6XS3BRDR0PG5, ficica-2026, miradas-2026)",
-   "work_id": "w_6XS3BRDR0PG5"
+   "work_id": "w_6XS3BRDR0PG5",
+   "_ya_publicada": [
+    {
+     "festival": "ficica-2026",
+     "titulo": "Compraventa",
+     "tmdb_id": 1469673,
+     "poster": "/assets/ficica-2026/compraventa.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "compraventa",
+     "country": "Argentina",
+     "year": 2025,
+     "duration": "10 min",
+     "genre": "Suspense",
+     "synopsis_en": "In a merchant neighborhood of Buenos Aires, Yoni survives through smuggling and a few fleeting alliances. Under the shadow of his partner and mentor, Leon, he strives to advance in a world that judges him by his appearance. A promising business deal seems poised to change his fate, but an unexpected setback forces him to confront his limitation"
+    }
+   ]
   },
   "La sangre": {
    "tmdb_id": 1364538,
@@ -1652,6 +1728,7 @@
     {
      "festival": "ficci-65",
      "titulo": "Madres de nacimiento",
+     "tmdb_id": 1668902,
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_MDN_Poster_Blanco_WEB.jpg?itok=OR2_OCi0",
      "posterSource": "custom",
      "lbSlug": "madres-de-nacimiento",
@@ -1665,6 +1742,7 @@
     {
      "festival": "ficdeh-2026",
      "titulo": "Madres de nacimiento",
+     "tmdb_id": 1668902,
      "poster": "/assets/ficdeh/madres-de-nacimiento.jpg",
      "posterSource": "custom",
      "lbSlug": "madres-de-nacimiento",
@@ -1678,11 +1756,13 @@
     {
      "festival": "ficmontanas-2026",
      "titulo": "Madres de nacimiento",
+     "tmdb_id": 1668902,
      "poster": "https://image.tmdb.org/t/p/w500/kJreh6iEXQZ3NHaROQb7WJNle7l.jpg",
      "posterSource": "tmdb",
      "lbSlug": "madres-de-nacimiento",
      "country": "Colombia/Francia",
      "year": 2026,
+     "duration": "8 min",
      "genre": "Documental",
      "synopsis_en": "Out of oblivion and darkness, images and sounds resurface to control the bodies of Latin American women, regarded since childhood as mothers by birth. But within these archives an interference emerges from the past, carrying a message of struggle, memory and freedom.",
      "sinopsis": "Del olvido y la oscuridad hay imágenes y sonidos que resurgen para controlar los cuerpos de las mujeres latinoamericanas, quienes desde niñas han sido consideradas madres de nacimiento. Pero en estos archivos emerge una interferencia que proviene del pasado para evocar un mensaje de lucha, memoria y libertad."
@@ -1772,6 +1852,7 @@
     {
      "festival": "ficmontanas-2026",
      "titulo": "Refracción",
+     "tmdb_id": 1584776,
      "poster": "https://image.tmdb.org/t/p/w500/bzKNobO0N8Oqj6YU6eA2R28UgPI.jpg",
      "posterSource": "tmdb",
      "lbSlug": "refraccion",
@@ -1866,11 +1947,13 @@
     {
      "festival": "ficmontanas-2026",
      "titulo": "La Mona",
+     "tmdb_id": 1444298,
      "poster": "/assets/villadelcine-2026/la-mona.jpg",
      "posterSource": "oficial",
      "lbSlug": "heat-wave-2025",
      "country": "Colombia",
      "year": 2025,
+     "duration": "18 min",
      "genre": "Ficción",
      "synopsis_en": "In the damp and dusty village of La Hondura, La Mona is ready to sacrifice everything to maintain her authority even if loneliness is the price she must pay. Her body, however, refuses to toe the line.",
      "sinopsis": "La Mona está dispuesta a cualquier sacrificio para garantizar su autoridad en La Hondura, aunque el precio que pague sea la soledad."
@@ -1932,6 +2015,21 @@
    "sinopsis": "La Mona está dispuesta a cualquier sacrificio para garantizar su autoridad en La Hondura, aunque el precio que pague sea la soledad.",
    "_sinopsis_de": "ya publicada en ficica-2026"
   },
+  "La danza de los ángeles": {
+   "tmdb_id": 1809915,
+   "titulo_original": "La danza de los ángeles",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "A group of young people conquer the heavens and return to earth as angels. But they are invisible to mortals. Only an old camcorder, forgotten in a family drawer, is capable of capturing a faint trace of their presence.",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 15,
+   "pais_tmdb": "Colombia",
+   "title_en": "The Dance of the Angels",
+   "lbSlug": "the-dance-of-the-angels",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "La danza de los ángeles"
+  },
   "Luis Antonio": {
    "_fuente": "cinecorto",
    "_cinecorto": "https://cinecorto.co/luis-antonio/",
@@ -1943,17 +2041,23 @@
     {
      "festival": "ficica-2026",
      "titulo": "Luis antonio",
+     "poster": "/assets/miradas-2026/luis-antonio.jpg",
+     "posterSource": "oficial",
      "country": "Colombia",
      "year": 2025,
      "duration": "12 min",
+     "genre": "Ficción",
      "sinopsis": "La mañana de un sábado Luis Antonio, un niño de 8 años, quiere aprender a montar en bicicleta. Pero su madre tiene que trabajar y lo deja al cuidado de Ofelia, su estricta vecina."
     },
     {
      "festival": "guatape-2026",
      "titulo": "Luis Antonio",
+     "poster": "/assets/miradas-2026/luis-antonio.jpg",
+     "posterSource": "oficial",
      "country": "Colombia",
      "year": 2025,
      "duration": "12 min",
+     "genre": "Ficción",
      "sinopsis": "La mañana de un sábado Luis Antonio, un niño de 8 años, quiere aprender a montar en bicicleta. Pero su madre tiene que trabajar y lo deja al cuidado de Ofelia, su estricta vecina."
     },
     {
@@ -2046,6 +2150,7 @@
     {
      "festival": "aff-2026",
      "titulo": "Una vez en un cuerpo",
+     "tmdb_id": 1522316,
      "poster": "https://admin.alternativa.film/uploads/Oficial_Poster_Una_Michel_d4a64a67e9.jpg",
      "posterSource": "custom",
      "lbSlug": "once-in-a-body",
@@ -2157,12 +2262,14 @@
     {
      "festival": "ficci-65",
      "titulo": "Las formas de la magia",
+     "tmdb_id": 1668889,
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_LFM_poster_Ficci_595x842%20-%20Maria%20Paula%20Lorgia.jpg?itok=5XCaIr83",
      "posterSource": "custom",
      "lbSlug": "las-formas-de-la-magia",
      "country": "Colombia",
      "year": 2026,
      "duration": "16 min",
+     "genre": "Documental",
      "sinopsis": "Un año después de la muerte de su padre, el reconocido mago colombiano Gustavo Lorgia, la directora realiza una exploración por sus archivos de video que revelan su trayectoria como artista, su rol como padre y la estética televisiva de una época. Una película que acude al archivo como medio para atravesar el duelo y a la memoria como forma de resistir a la desaparición."
     },
     {
@@ -2175,6 +2282,7 @@
      "country": "Colombia",
      "year": 2026,
      "duration": "17 min",
+     "genre": "Documental",
      "sinopsis": "Un año después de la muerte de su padre, el mago colombiano Gustavo Lorgia, la directora realiza una exploración por sus archivos de video que revelan su trayectoria como artista, su rol como padre y la estética televisiva de una época. Una película que acude al archivo como medio para atravesar el duelo y a la memoria como forma de resistir a la desaparición."
     }
    ]
@@ -2236,6 +2344,7 @@
     {
      "festival": "ficci-65",
      "titulo": "Decaer",
+     "tmdb_id": 1668881,
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Captura%20de%20pantalla%202026-04-04%20a%20la%28s%29%203.43.18%20p.m..jpg?itok=SfE8u2Hj",
      "posterSource": "custom",
      "lbSlug": "decay-2026",
@@ -2407,7 +2516,6 @@
   "El teléfono morado",
   "Emechiche, el renacimiento de los cabeciblancos",
   "Kof - kof",
-  "La danza de los ángeles",
   "La escucha, la razón. Memoria de un mural",
   "La muerte nos declaró adultos",
   "Mamá Chila: raíz y corazón de la comunidad",
