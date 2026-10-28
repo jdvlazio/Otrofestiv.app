@@ -4128,7 +4128,11 @@ try:
             continue  # modelo declarado: el loader ancla estos grupos
         _slots = {}
         for _f in _fd.get('films', []):
-            if _f.get('info') or _f.get('is_cortos') or not (_f.get('day') and _f.get('time') and _f.get('venue')):
+            # Los Programas (is_cortos) CUENTAN: dos programas en la misma sala y
+            # hora son el mismo limbo (MIDBO 2026, 28 oct: «Espejos» partido en dos
+            # is_cortos porque la web rotuló un corto como Programa 2 y los otros
+            # como Programa 4; el guardián no lo vio porque los saltaba).
+            if _f.get('info') or not (_f.get('day') and _f.get('time') and _f.get('venue')):
                 continue
             _k = f"{_f['day']}|{_f['time']}|{_f['venue']}|{_f.get('sala','')}"
             _slots.setdefault(_k, []).append(_f.get('title', '?'))
