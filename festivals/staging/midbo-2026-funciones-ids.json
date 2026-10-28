@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "ensamblar.py: ids estables de las funciones (docs/FUNCION.md C1)",
-  "capturado": "2026-10-26"
+  "capturado": "2026-10-28"
  },
  "funciones": {
   "f_4476aa7fd2": {
@@ -16,14 +16,20 @@
    "dia": "2026-10-28",
    "hora": "16:00",
    "sala": "",
-   "titulo": "espejos gestos de reparacion"
-  },
-  "f_9f903a6d40": {
-   "sede": "Alianza Francesa - Bogotá",
-   "dia": "2026-10-28",
-   "hora": "16:00",
-   "sala": "",
-   "titulo": "si la escombrera hablara"
+   "titulo": "espejos gestos de reparacion",
+   "ids_anteriores": [
+    "f_9f903a6d40"
+   ],
+   "decidida": {
+    "fecha": "2026-10-28",
+    "clave": [
+     "Alianza Francesa - Bogotá",
+     "2026-10-28",
+     "16:00",
+     "",
+     "espejos gestos de reparacion"
+    ]
+   }
   },
   "f_c7a0f4f837": {
    "sede": "Cinemateca de Bogotá - Bogotá",
@@ -640,6 +646,14 @@
    "hora": "14:00",
    "sala": "Sala E",
    "titulo": "escuchar lo que permanece"
+  },
+  "f_9f903a6d40": {
+   "sede": "Alianza Francesa - Bogotá",
+   "dia": "2026-10-28",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "si la escombrera hablara",
+   "fusionada_en": "f_fc9e0356a0"
   },
   "f_bdffbabdda": {
    "sede": "Alianza Francesa - Bogotá",

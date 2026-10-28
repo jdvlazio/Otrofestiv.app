@@ -462,7 +462,7 @@
    "section": "🪞 Espejos: Gestos de Reparación",
    "country": "Colombia",
    "flags": "🇨🇴",
-   "duration": "57 min",
+   "duration": "90 min",
    "_ancla": [
     "Alianza Francesa - Bogotá",
     "2026-10-28",
@@ -508,10 +508,32 @@
      "lbSlug": "ubuntu-la-metrica-de-los-afectos",
      "tmdb_id": 1794426,
      "genre": "Documental"
+    },
+    {
+     "title": "Si La Escombrera hablara",
+     "director": "Juan Prado",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "year": 2025,
+     "duration": "33 min",
+     "synopsis": "En la comuna 13 de Medellín existe la fosa urbana a cielo abierto más grande de América Latina. Durante más de veinte años, La Escombrera ha sido señalada por familias de personas víctimas de desaparición forzada como el lugar donde posiblemente se encuentren muchos de los 503 desaparecidos de este territorio. Mujeres Caminando por la Verdad lidera la búsqueda forense que, en medio de incontables obstáculos y tras dos décadas de negacionismo, desencadenó en el hallazgo de cuerpos en diciembre del año 2024. Este acontecimiento histórico, una bocanada de aire fresco para las familias buscadoras, envió un mensaje muy claro a toda Colombia: la tierra ha comenzado a hablar.",
+     "synopsis_lang": "es",
+     "poster": "/assets/midbo-2026/si-la-escombrera-hablara.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "si-la-escombrera-hablara",
+     "tmdb_id": 1738942,
+     "synopsis_en": "Medellín’s Comuna 13 is home to the largest urban mass grave in Latin America. La Escombrera has been identified by families of victims of enforced disappearance as the site where many of the territory’s 503 disappeared persons are buried. Mujeres Caminando por la Verdad leads the forensic search that, after two decades of denialism, led to the discovery of human remains in 2024. This historic event sent a clear message across Colombia: the earth has begun to speak.",
+     "genre": "Documental"
     }
    ],
    "_fid": "f_fc9e0356a0",
+   "_ids_anteriores": [
+    "f_9f903a6d40"
+   ],
    "id": "f_fc9e0356a0",
+   "ids_anteriores": [
+    "f_9f903a6d40"
+   ],
    "is_free": true,
    "_procedencia": {
     "day": {
@@ -568,84 +590,6 @@
    "titulos_anteriores": [
     "Espejos: Gestos de reparación"
    ]
-  },
-  {
-   "title": "Si La Escombrera hablara",
-   "type": "film",
-   "section": "🪞 Espejos: Gestos de Reparación",
-   "director": "Juan Prado",
-   "country": "Colombia",
-   "flags": "🇨🇴",
-   "duration": "33 min",
-   "genre": "Documental",
-   "_ancla": [
-    "Alianza Francesa - Bogotá",
-    "2026-10-28",
-    "16:00"
-   ],
-   "day": "2026-10-28",
-   "time": "16:00",
-   "day_order": 1,
-   "venue": "Alianza Francesa - Bogotá",
-   "has_qa": false,
-   "synopsis": "En la comuna 13 de Medellín existe la fosa urbana a cielo abierto más grande de América Latina. Durante más de veinte años, La Escombrera ha sido señalada por familias de personas víctimas de desaparición forzada como el lugar donde posiblemente se encuentren muchos de los 503 desaparecidos de este territorio. Mujeres Caminando por la Verdad lidera la búsqueda forense que, en medio de incontables obstáculos y tras dos décadas de negacionismo, desencadenó en el hallazgo de cuerpos en diciembre del año 2024. Este acontecimiento histórico, una bocanada de aire fresco para las familias buscadoras, envió un mensaje muy claro a toda Colombia: la tierra ha comenzado a hablar.",
-   "synopsis_lang": "es",
-   "poster": "/assets/midbo-2026/si-la-escombrera-hablara.jpg",
-   "posterSource": "tmdb",
-   "_src": {
-    "url": "https://midbo.co/peliculas/si-la-escombrera-hablara/",
-    "date": "2026-10-10"
-   },
-   "year": 2025,
-   "lbSlug": "si-la-escombrera-hablara",
-   "tmdb_id": 1738942,
-   "synopsis_en": "Medellín’s Comuna 13 is home to the largest urban mass grave in Latin America. La Escombrera has been identified by families of victims of enforced disappearance as the site where many of the territory’s 503 disappeared persons are buried. Mujeres Caminando por la Verdad leads the forensic search that, after two decades of denialism, led to the discovery of human remains in 2024. This historic event sent a clear message across Colombia: the earth has begun to speak.",
-   "_programa_original": "Programa 2: Comunidades que siguen en búsqueda",
-   "_fid": "f_9f903a6d40",
-   "id": "f_9f903a6d40",
-   "is_free": true,
-   "_procedencia": {
-    "day": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-10",
-     "url": "https://midbo.co/"
-    },
-    "time": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-10",
-     "url": "https://midbo.co/"
-    },
-    "venue": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-10",
-     "url": "https://midbo.co/"
-    },
-    "duration": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-10",
-     "url": "https://midbo.co/"
-    },
-    "entrada": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-10",
-     "url": "https://midbo.co/"
-    },
-    "has_qa": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-10",
-     "url": "https://midbo.co/"
-    },
-    "title": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-10",
-     "url": "https://midbo.co/"
-    },
-    "type": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-10",
-     "url": "https://midbo.co/"
-    }
-   }
   },
   {
    "title": "El hogar fue sepultado en esa tierra que nunca pudimos encontrar",
@@ -10078,7 +10022,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-28T09:22:23",
+  "fecha": "2026-10-28T09:43:11",
   "plan_sha": "a59415cd50b61e59",
   "paso": 6,
   "cmd": "python3 pipeline/ensamblar.py midbo-2026"
