@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "Programación Miradas 2026-Liviano.pdf (Alcaldía de Medellín, 20 oct 2026)",
-  "capturado": "2026-10-27",
+  "capturado": "2026-10-28",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_sedes": "El nombre del lugar que imprime el PDF, normalizado; la sala aparte (Teatro MAMM, Plazoleta y Quinto piso son del Museo de Arte Moderno; la Cinemateca móvil es la sala itinerante del Parque de los Deseos). Otraparte (Envigado), Comfama Bello (Bello) y Comfama Caldas (Caldas) se publican en la ciudad «Medellín» con su pin real, como Otraparte en Fantasmagoría (Juan, 30 sep): evita «¿A cuál ciudad vas?» por 3 funciones.",
@@ -491,11 +491,49 @@
     "pag": 45,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "description": "Realizado por Cine-Foro \"En Construcción\". Un taller sobre obras de cineastas mujeres latinoamericanas para explorar sus herramientas expresivas y la potencia de sus propuestas, poniendo en diálogo sus formas de hacer cine con las de sus contemporáneos.",
    "description_lang": "es",
    "_fid": "f_2881acf478",
-   "id": "f_2881acf478"
+   "id": "f_2881acf478",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Seis meses en el edificio rosa con azul",
@@ -527,13 +565,51 @@
     "pag": 71,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "lbSlug": "six-months-in-a-pink-and-blue-building",
    "tmdb_id": 1025407,
    "synopsis_en": "Mexico City, early 90s. The day Bruno turns 11, his growing feelings for his best friend Vladimir clash with the sudden announcement that his father has HIV. Like in salsa songs, his family tries to sing and dance their pain away. Thirty years later, Bruno films and reimagine the memory of what he could not quite perceive as a child.",
    "title_en": "Six Months in a Pink and Blue Building",
    "_fid": "f_f4afb0dc8f",
-   "id": "f_f4afb0dc8f"
+   "id": "f_f4afb0dc8f",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "qa_type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Rodando formación: mediaciones en comunidad",
@@ -557,11 +633,49 @@
     "pag": 45,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "description": "Realizado por CorpoTEA. Un espacio de encuentro con el audiovisual desde las experiencias territoriales. Comunicación, expresión y apreciación se combinan para explorar, experimentar y crear junto a las comunidades y sus distintas formas de relacionarse con el entorno.",
    "description_lang": "es",
    "_fid": "f_05f88d2b39",
-   "id": "f_05f88d2b39"
+   "id": "f_05f88d2b39",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Clase maestra inaugural - Manual para observar moscas: descubrir lo extraordinario en lo simple",
@@ -585,11 +699,53 @@
     "pag": 108,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "description": "Con Fernando Eimbcke",
    "description_lang": "es",
    "_fid": "f_55fa1f5236",
-   "id": "f_55fa1f5236"
+   "id": "f_55fa1f5236",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Cine corto detrás de cámaras",
@@ -613,11 +769,49 @@
     "pag": 45,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "description": "Realizado por Festival Cine Corto. Un cineclub formativo para jóvenes que combina cortometrajes, cineforos y ejercicios prácticos para acercarse al lenguaje audiovisual y descubrir los procesos creativos detrás de la realización cinematográfica.",
    "description_lang": "es",
    "_fid": "f_d1cf82fe9a",
-   "id": "f_d1cf82fe9a"
+   "id": "f_d1cf82fe9a",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Papaya",
@@ -649,12 +843,50 @@
     "pag": 71,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "lbSlug": "papaya-2025",
    "tmdb_id": 1534205,
    "synopsis_en": "Passionate about flying, a tiny papaya seed in the Amazonian forest must keep moving to avoid rooting. Through perseverance, she discovers the power of her roots, triggering a revolution that transforms her world and fulfills her dreams in an unexpected way.",
    "_fid": "f_63027920b6",
-   "id": "f_63027920b6"
+   "id": "f_63027920b6",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Encuentro con festivales de cine, agente de ventas y distribuidores invitados a Miradas 2026",
@@ -679,12 +911,62 @@
     "tipo": "festival-pdf"
    },
    "registration_url": "https://docs.google.com/forms/d/e/1FAIpQLSfKw4WDoDIq9qhpB1ND0AYB8HrHZvRm4XyKhgjfun1il9Qajg/viewform",
-   "is_free": true,
    "requires_registration": true,
    "description": "Alfredo Calvino (Habanero Films), Elba McAllister (Cineplex), Jim Kolmar (SXSW), Carlos Ramos (IndieLisboa), Guillermo Olivares (FicValdivia)",
    "description_lang": "es",
    "_fid": "f_8647b09c92",
-   "id": "f_8647b09c92"
+   "id": "f_8647b09c92",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "requires_registration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "registration_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Programa de Cortos 1",
@@ -709,7 +991,6 @@
     "pag": 71,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -797,7 +1078,50 @@
    "description": "Función con presencia de los equipos",
    "description_lang": "es",
    "_fid": "f_17be748dd8",
-   "id": "f_17be748dd8"
+   "id": "f_17be748dd8",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Caso de estudio - La coproducción de Seis meses en el edificio rosa con azul",
@@ -821,11 +1145,53 @@
     "pag": 108,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "description": "Con Bruna Haddad",
    "description_lang": "es",
    "_fid": "f_3dd3b192af",
-   "id": "f_3dd3b192af"
+   "id": "f_3dd3b192af",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Iván & Hadoum",
@@ -857,12 +1223,50 @@
     "pag": 72,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "lbSlug": "ivan-hadoum",
    "tmdb_id": 1514847,
    "synopsis_en": "Iván (33), a trans man, and Hadoum (30), a Spanish-Moroccan woman, fall in love at the industrial greenhouse they work in. While facing the opposition from their families and co-workers, Iván realizes he doesn’t need to be the man he is expected to be.",
    "_fid": "f_4b4be4c81b",
-   "id": "f_4b4be4c81b"
+   "id": "f_4b4be4c81b",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Miradas a la distribución - Luces y sombras: exponiendo las realidades de la distribución",
@@ -886,11 +1290,53 @@
     "pag": 108,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "description": "Con Alfredo Calvino, Elba McAllister y Linda Díaz Pernía, con la moderación de Yira Plaza O’Byrne",
    "description_lang": "es",
    "_fid": "f_e1b048e2eb",
-   "id": "f_e1b048e2eb"
+   "id": "f_e1b048e2eb",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Programa de Cortos 4",
@@ -915,7 +1361,6 @@
     "pag": 72,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -994,7 +1439,50 @@
    "description": "Función con presencia de los equipos",
    "description_lang": "es",
    "_fid": "f_4da6ccbbd9",
-   "id": "f_4da6ccbbd9"
+   "id": "f_4da6ccbbd9",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Un cabo suelto",
@@ -1026,13 +1514,51 @@
     "pag": 73,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "lbSlug": "a-loose-end",
    "tmdb_id": 1339367,
    "synopsis_en": "Santiago, an Argentine police corporal, crosses the border into Uruguay fleeing from other police officers who are looking for him. Using his uniform, he inspects regional food stalls, sampling dairy products and cold cuts to survive, while trying to go unnoticed among the locals. Without money or lodging, but with empathy and cunning, he begins to plot a new life, receiving help from local characters he meets along the way and even finding what he believes to be the love of his life.",
    "title_en": "A Loose End",
    "_fid": "f_59c6afaacb",
-   "id": "f_59c6afaacb"
+   "id": "f_59c6afaacb",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Chico de barrio",
@@ -1059,9 +1585,43 @@
     "pag": 44,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "_fid": "f_b60da6ff1b",
-   "id": "f_b60da6ff1b"
+   "id": "f_b60da6ff1b",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "El paradero",
@@ -1088,9 +1648,43 @@
     "pag": 41,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "_fid": "f_9e53be745a",
-   "id": "f_9e53be745a"
+   "id": "f_9e53be745a",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Las pesadillas del siervo",
@@ -1123,11 +1717,53 @@
     "pag": 73,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "lbSlug": "las-pesadillas-del-siervo",
    "tmdb_id": 1791689,
    "_fid": "f_742eb63835",
-   "id": "f_742eb63835"
+   "id": "f_742eb63835",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "qa_type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Tierra en la lengua",
@@ -1158,13 +1794,47 @@
     "pag": 73,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "lbSlug": "dust-on-the-tongue",
    "tmdb_id": 260680,
    "synopsis_en": "A grandfather, in the final stage of his existence, asks two of his grandchildren to kill him because he wants to die by the hand of someone who bears his own blood. However, the young children discover a truth that will make them take the opposite decision.",
    "title_en": "Dust on the Tongue",
    "_fid": "f_e886fbc421",
-   "id": "f_e886fbc421"
+   "id": "f_e886fbc421",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Narciso",
@@ -1196,12 +1866,50 @@
     "pag": 73,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "lbSlug": "narciso-2026",
    "tmdb_id": 1056494,
    "synopsis_en": "Paraguay, 1958. The charismatic Narciso returns from Buenos Aires with rock ’n’ roll in his veins. Under the suffocating military regime, his radio show becomes a music sensation and a symbol of freedom.",
    "_fid": "f_05587b240a",
-   "id": "f_05587b240a"
+   "id": "f_05587b240a",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Temporada de patos",
@@ -1234,13 +1942,55 @@
     "pag": 73,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "lbSlug": "duck-season",
    "tmdb_id": 34207,
    "synopsis_en": "Flama and Moko are fourteen years old; they have been best friends since they were kids. They have everything they need to survive yet another boring Sunday: an apartment without parents, videogames, porn magazines, soft drinks and pizza delivery.",
    "title_en": "Duck Season",
    "_fid": "f_90a1dde597",
-   "id": "f_90a1dde597"
+   "id": "f_90a1dde597",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "qa_type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Clase maestra - Transformando el dolor en belleza: memoria, ficción y realidad, como herramientas que desdibujan etiquetas y fronteras",
@@ -1264,11 +2014,53 @@
     "pag": 108,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "description": "Con Bruno Santamaría",
    "description_lang": "es",
    "_fid": "f_7bb37e6ff4",
-   "id": "f_7bb37e6ff4"
+   "id": "f_7bb37e6ff4",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Cine corto detrás de cámaras",
@@ -1292,11 +2084,49 @@
     "pag": 45,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "description": "Realizado por Festival Cine Corto. Un cineclub formativo para jóvenes que combina cortometrajes, cineforos y ejercicios prácticos para acercarse al lenguaje audiovisual y descubrir los procesos creativos detrás de la realización cinematográfica.",
    "description_lang": "es",
    "_fid": "f_615243f7e4",
-   "id": "f_615243f7e4"
+   "id": "f_615243f7e4",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Laboratorio Materia expandida: representación e imagen en contextos digitales",
@@ -1321,11 +2151,53 @@
     "pag": 64,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "description": "Sesión 1 – Materia y representación. Realizado por Almendra Díaz y Cristóbal Parra (Chile). Un laboratorio práctico para explorar la relación entre materia física e imagen digital, transformando objetos del entorno en modelos 3D y experiencias audiovisuales mediante fotogrametría, programación visual y videomapping.",
    "description_lang": "es",
    "_fid": "f_264cd583d4",
-   "id": "f_264cd583d4"
+   "id": "f_264cd583d4",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Oro molido # 2",
@@ -1352,9 +2224,43 @@
     "pag": 43,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "_fid": "f_948fd3a7af",
-   "id": "f_948fd3a7af"
+   "id": "f_948fd3a7af",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Encuentro con productoras, directoras y guionistas invitadas de Miradas 2026",
@@ -1379,12 +2285,62 @@
     "tipo": "festival-pdf"
    },
    "registration_url": "https://docs.google.com/forms/d/e/1FAIpQLSfKw4WDoDIq9qhpB1ND0AYB8HrHZvRm4XyKhgjfun1il9Qajg/viewform",
-   "is_free": true,
    "requires_registration": true,
    "description": "Bruna Haddad, Verónica Triana, Federico Durán, Iván Gaona, Paula Cury Melo",
    "description_lang": "es",
    "_fid": "f_36cb744a93",
-   "id": "f_36cb744a93"
+   "id": "f_36cb744a93",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "requires_registration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "registration_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Muestra de Cine Expandido",
@@ -1410,11 +2366,53 @@
     "pag": 65,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "description": "Jueves 5, viernes 6 y sábado 7 de noviembre, de 2:00 p. m. a 6:00 p. m. Obras: El sueño de Sedna, Sosiego al atardecer, Todas las cosas que algún día se desvanecieron y Vórtice Nebular.",
    "description_lang": "es",
    "_fid": "f_12a2d04a34",
-   "id": "f_12a2d04a34"
+   "id": "f_12a2d04a34",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Programa de Cortos 2",
@@ -1439,7 +2437,6 @@
     "pag": 74,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -1542,7 +2539,50 @@
    "description": "Función con presencia de los equipos",
    "description_lang": "es",
    "_fid": "f_201631db2d",
-   "id": "f_201631db2d"
+   "id": "f_201631db2d",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Recorrido guiado: Muestra de Cine Expandido",
@@ -1566,11 +2606,53 @@
     "pag": 65,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "description": "Un recorrido por cuatro obras que exploran nuevas formas de experimentar el cine mediante realidad virtual, instalaciones interactivas y entornos inmersivos. Obras: El sueño de Sedna, Sosiego al atardecer, Todas las cosas que algún día se desvanecieron y Vórtice Nebular.",
    "description_lang": "es",
    "_fid": "f_52330432a1",
-   "id": "f_52330432a1"
+   "id": "f_52330432a1",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Caso de estudio - La coproducción desde Colombia",
@@ -1594,11 +2676,53 @@
     "pag": 108,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "description": "Con Federico Durán",
    "description_lang": "es",
    "_fid": "f_b4b0ccfd7d",
-   "id": "f_b4b0ccfd7d"
+   "id": "f_b4b0ccfd7d",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Iluminada",
@@ -1630,12 +2754,50 @@
     "pag": 75,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "lbSlug": "iluminada",
    "tmdb_id": 1000097,
    "synopsis_en": "Iluminada has visions. She tries to understand them by writing in private journals. Her writings are poetry that no one else hears. Her life in the peripheral neighbourhoods of Bogotá, riddled with hardships, leaves her with no time or space. Until she meets Juan, a young man who seems to open up another world for her. But her relationship with a stranger is not welcomed by those who control the neighborhood.",
    "_fid": "f_6ac3e669e5",
-   "id": "f_6ac3e669e5"
+   "id": "f_6ac3e669e5",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "qa_type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Nuestro secreto",
@@ -1665,13 +2827,51 @@
     "pag": 75,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "lbSlug": "our-secret-2026",
    "tmdb_id": 1399253,
    "synopsis_en": "A Black Brazilian family in the city of Belo Horizonte, tries to rebuild their home after a recent loss. Caught between memories and nightmares, and unable to express what they feel to each other, a mother and her children shield themselves from the pain of grief through their individual routines. Only the youngest child understands the secret that the house holds within its four walls and tries to reveal it to the others, only to fall on deaf ears. Finally, confronted with the truth, they face the deep roots of their grief and come together to traverse this moment with love and courage.",
    "title_en": "Our Secret",
    "_fid": "f_4f1e7ba95c",
-   "id": "f_4f1e7ba95c"
+   "id": "f_4f1e7ba95c",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Cine performativo y la puesta en escena más allá de la pantalla",
@@ -1695,11 +2895,53 @@
     "pag": 65,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "description": "Con Carlos Eduardo Castaño Correa (Todas las cosas que algún día se desvanecieron) y José Luis Ruiz Peláez (Sosiego al atardecer), con la moderación de Alannath Naslyllalyla (artista y curadora)",
    "description_lang": "es",
    "_fid": "f_35a814087e",
-   "id": "f_35a814087e"
+   "id": "f_35a814087e",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Programa de Cortos 3",
@@ -1724,7 +2966,6 @@
     "pag": 76,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -1818,7 +3059,50 @@
    "description": "Función con presencia de los equipos",
    "description_lang": "es",
    "_fid": "f_b4815bb539",
-   "id": "f_b4815bb539"
+   "id": "f_b4815bb539",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "El segundo entierro de Alejandrino",
@@ -1850,11 +3134,49 @@
     "pag": 76,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "lbSlug": "el-segundo-entierro-de-alejandrino",
    "tmdb_id": 760722,
    "_fid": "f_8c8a9a4da0",
-   "id": "f_8c8a9a4da0"
+   "id": "f_8c8a9a4da0",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Miradas al oficio - La disidencia autoral en los formatos comerciales",
@@ -1878,11 +3200,53 @@
     "pag": 108,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "description": "Con Sol Clemente (Fox), Laura Mora y Verónica Triana, con la moderación de Diógenes Cuevas",
    "description_lang": "es",
    "_fid": "f_ea4116344e",
-   "id": "f_ea4116344e"
+   "id": "f_ea4116344e",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "El río de los espíritus",
@@ -1911,13 +3275,47 @@
     "pag": 77,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "lbSlug": "river-of-spirits",
    "tmdb_id": 1599556,
    "synopsis_en": "To stem the pollution flowing into the Kapawi River, the indigenous people would need to take the progressive step of switching to solar-powered canoes. The legend of the fish that inhabits the deep waters guides Luciano in his drive to convince them that this ecological transition is necessary, and to maintain peace between the villages that line the banks.",
    "title_en": "River of Spirits",
    "_fid": "f_ad33a4694c",
-   "id": "f_ad33a4694c"
+   "id": "f_ad33a4694c",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "La otra orilla: Revolver la mirada autorizada para manchar la cámara de barro",
@@ -1941,11 +3339,49 @@
     "pag": 45,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "description": "Realizado por Cine-Foro \"En Construcción\". Un taller sobre obras de cineastas mujeres latinoamericanas para explorar sus herramientas expresivas y la potencia de sus propuestas, poniendo en diálogo sus formas de hacer cine con las de sus contemporáneos.",
    "description_lang": "es",
    "_fid": "f_ccdd8e4a83",
-   "id": "f_ccdd8e4a83"
+   "id": "f_ccdd8e4a83",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Los nuevos",
@@ -1976,13 +3412,47 @@
     "pag": 77,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "lbSlug": "the-newcomers-2026",
    "tmdb_id": 1735053,
    "synopsis_en": "Three tweens investigate what is poisoning their village's rivers. Mateo narrates as he, his brother Tomas, refugee Tiana, and her dog Nube embark on an adventure to uncover the source of pollution.",
    "title_en": "The Newcomers",
    "_fid": "f_b8a6036ba5",
-   "id": "f_b8a6036ba5"
+   "id": "f_b8a6036ba5",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Perder la Escala: Experiencias Cine Domo para Otros Mundos",
@@ -2007,7 +3477,6 @@
     "pag": 77,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -2061,7 +3530,50 @@
     }
    ],
    "_fid": "f_cda957b21a",
-   "id": "f_cda957b21a"
+   "id": "f_cda957b21a",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Chapecó, el último sobreviviente: nace una hermandad",
@@ -2092,9 +3604,51 @@
     "pag": 78,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "_fid": "f_d449edd7a3",
    "id": "f_d449edd7a3",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "qa_type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   },
    "synopsis": "Con la presencia del director",
    "synopsis_lang": "es",
    "_conservado": [
@@ -2124,11 +3678,53 @@
     "pag": 77,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "description": "Concierto inaugural de Cine expandido. Realizado por Cristóbal Parra (Chile). Una performance audiovisual que explora los rituales latinoamericanos y la relación entre industria, territorio y memoria, con video, sonido, láser y archivos históricos.",
    "description_lang": "es",
    "_fid": "f_894b89cfde",
-   "id": "f_894b89cfde"
+   "id": "f_894b89cfde",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Rodando formación: mediaciones en comunidad",
@@ -2152,11 +3748,49 @@
     "pag": 45,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "description": "Realizado por CorpoTEA. Un espacio de encuentro con el audiovisual desde las experiencias territoriales. Comunicación, expresión y apreciación se combinan para explorar, experimentar y crear junto a las comunidades y sus distintas formas de relacionarse con el entorno.",
    "description_lang": "es",
    "_fid": "f_5c0484c5ac",
-   "id": "f_5c0484c5ac"
+   "id": "f_5c0484c5ac",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Seis meses en el edificio rosa con azul",
@@ -2189,13 +3823,55 @@
     "pag": 78,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "lbSlug": "six-months-in-a-pink-and-blue-building",
    "tmdb_id": 1025407,
    "synopsis_en": "Mexico City, early 90s. The day Bruno turns 11, his growing feelings for his best friend Vladimir clash with the sudden announcement that his father has HIV. Like in salsa songs, his family tries to sing and dance their pain away. Thirty years later, Bruno films and reimagine the memory of what he could not quite perceive as a child.",
    "title_en": "Six Months in a Pink and Blue Building",
    "_fid": "f_e0c97a1a0a",
-   "id": "f_e0c97a1a0a"
+   "id": "f_e0c97a1a0a",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "qa_type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Uno vuelve siempre",
@@ -2226,12 +3902,46 @@
     "pag": 78,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "lbSlug": "uno-vuelve-siempre",
    "tmdb_id": 1521051,
    "synopsis_en": "Five fans rediscover their love for Atlético Nacional during a glorious season. Blending fiction and documentary, the film shows how football can heal, unite, and transform both people and a club that goes on to win everything.",
    "_fid": "f_82a2221dce",
-   "id": "f_82a2221dce"
+   "id": "f_82a2221dce",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Niñas escarlata",
@@ -2262,13 +3972,55 @@
     "pag": 78,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "lbSlug": "scarlet-girls-2026",
    "tmdb_id": 1305858,
    "synopsis_en": "Through intimate narrations and evocative imagery, women across the Dominican Republic reflect on their experiences with forced motherhood and clandestine abortion. What does it mean to exist as a woman in a country where abortion remains criminalized without exception?",
    "title_en": "Scarlet Girls",
    "_fid": "f_dc439560d5",
    "id": "f_dc439560d5",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "qa_type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   },
    "synopsis": "Con la presencia de la directora",
    "synopsis_lang": "es",
    "_conservado": [
@@ -2298,11 +4050,53 @@
     "pag": 108,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "description": "Con Paula Cury Melo",
    "description_lang": "es",
    "_fid": "f_fa32799fd7",
-   "id": "f_fa32799fd7"
+   "id": "f_fa32799fd7",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Cine corto detrás de cámaras",
@@ -2326,11 +4120,49 @@
     "pag": 45,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "description": "Realizado por Festival Cine Corto. Un cineclub formativo para jóvenes que combina cortometrajes, cineforos y ejercicios prácticos para acercarse al lenguaje audiovisual y descubrir los procesos creativos detrás de la realización cinematográfica.",
    "description_lang": "es",
    "_fid": "f_b0bdd510a7",
-   "id": "f_b0bdd510a7"
+   "id": "f_b0bdd510a7",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Laboratorio Materia expandida: representación e imagen en contextos digitales",
@@ -2355,11 +4187,53 @@
     "pag": 67,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "description": "Sesión 2 – Imagen y expansión. Realizado por Almendra Díaz y Cristóbal Parra (Chile). Segunda sesión del laboratorio de fotogrametría, programación visual y videomapping.",
    "description_lang": "es",
    "_fid": "f_687c9dd14e",
-   "id": "f_687c9dd14e"
+   "id": "f_687c9dd14e",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Encuentro con directores y directoras invitadas de Miradas 2026",
@@ -2384,18 +4258,68 @@
     "tipo": "festival-pdf"
    },
    "registration_url": "https://docs.google.com/forms/d/e/1FAIpQLSfKw4WDoDIq9qhpB1ND0AYB8HrHZvRm4XyKhgjfun1il9Qajg/viewform",
-   "is_free": true,
    "requires_registration": true,
    "description": "Carolina González, Guillermo Quintero, Manuel Villa, Bruno Santamaría, Fernando Eimbcke",
    "description_lang": "es",
    "_fid": "f_3fcc8f26fc",
-   "id": "f_3fcc8f26fc"
+   "id": "f_3fcc8f26fc",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "requires_registration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "registration_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Colombia es fantástica: laboratorio de cine fantástico y terror colombiano",
    "type": "event",
    "section": "🛠️ Talleres de Desarrollo y Mediación de Audiencias",
-   "duration": "90 min",
+   "duration": "120 min",
    "_ancla": [
     "Centro Colombo Americano - Medellín",
     "2026-11-06",
@@ -2414,11 +4338,53 @@
     "pag": 45,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "description": "Realizado por Festival Fantasmagoria. Un laboratorio de cinco sesiones para explorar leyendas, imaginarios y nuevas miradas del terror y el fantástico colombiano, y descubrir cómo contamos nuestros propios miedos desde el cine.",
    "description_lang": "es",
    "_fid": "f_ee49163fb4",
-   "id": "f_ee49163fb4"
+   "id": "f_ee49163fb4",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "El tren fluvial",
@@ -2450,13 +4416,51 @@
     "pag": 79,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "lbSlug": "the-river-train",
    "tmdb_id": 1574074,
    "synopsis_en": "Nine-year-old Milo lives in a remote Argentinian village where he studies the Malambo, a folk dance full of bravura. He is an excellent dancer, but Milo’s only desire is to escape the countryside on a train for the Buenos Aires of his dreams.",
    "title_en": "The River Train",
    "_fid": "f_a94be4dd9f",
-   "id": "f_a94be4dd9f"
+   "id": "f_a94be4dd9f",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Luces, cámara y estampa",
@@ -2480,11 +4484,49 @@
     "pag": 45,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "description": "Realizado por KXVRX Cineclub. Tres sesiones de mediación y formación alrededor del cortometraje colombiano, con proyecciones, conversaciones y microtalleres de serigrafía para reflexionar sobre memoria, identidad, territorio y los lugares que habitamos.",
    "description_lang": "es",
    "_fid": "f_b95df22291",
-   "id": "f_b95df22291"
+   "id": "f_b95df22291",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Recorrido guiado: Muestra de Cine Expandido",
@@ -2508,11 +4550,53 @@
     "pag": 67,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "description": "Un recorrido por cuatro obras que exploran nuevas formas de experimentar el cine mediante realidad virtual, instalaciones interactivas y entornos inmersivos. Obras: El sueño de Sedna, Sosiego al atardecer, Todas las cosas que algún día se desvanecieron y Vórtice Nebular.",
    "description_lang": "es",
    "_fid": "f_5442f9e8a8",
-   "id": "f_5442f9e8a8"
+   "id": "f_5442f9e8a8",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Un cabo suelto",
@@ -2543,19 +4627,53 @@
     "pag": 79,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "lbSlug": "a-loose-end",
    "tmdb_id": 1339367,
    "synopsis_en": "Santiago, an Argentine police corporal, crosses the border into Uruguay fleeing from other police officers who are looking for him. Using his uniform, he inspects regional food stalls, sampling dairy products and cold cuts to survive, while trying to go unnoticed among the locals. Without money or lodging, but with empathy and cunning, he begins to plot a new life, receiving help from local characters he meets along the way and even finding what he believes to be the love of his life.",
    "title_en": "A Loose End",
    "_fid": "f_9f0e5c00c2",
-   "id": "f_9f0e5c00c2"
+   "id": "f_9f0e5c00c2",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Colombia es fantástica: laboratorio de cine fantástico y terror colombiano",
    "type": "event",
    "section": "🛠️ Talleres de Desarrollo y Mediación de Audiencias",
-   "duration": "90 min",
+   "duration": "120 min",
    "_ancla": [
     "Centro Colombo Americano - Medellín",
     "2026-11-06",
@@ -2574,11 +4692,53 @@
     "pag": 45,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "description": "Realizado por Festival Fantasmagoria. Un laboratorio de cinco sesiones para explorar leyendas, imaginarios y nuevas miradas del terror y el fantástico colombiano, y descubrir cómo contamos nuestros propios miedos desde el cine.",
    "description_lang": "es",
    "_fid": "f_47f7696174",
-   "id": "f_47f7696174"
+   "id": "f_47f7696174",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Cómo limpiar una casa en 10 pasos fáciles",
@@ -2608,12 +4768,50 @@
     "pag": 80,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "lbSlug": "how-to-clean-a-house-in-ten-easy-steps",
    "tmdb_id": 1631825,
    "synopsis_en": "A mother and daughter create a shared fantasy to explore their intertwined experiences of immigration, labor, and womanhood.",
    "_fid": "f_130069c5a1",
-   "id": "f_130069c5a1"
+   "id": "f_130069c5a1",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Narciso",
@@ -2644,12 +4842,46 @@
     "pag": 80,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "lbSlug": "narciso-2026",
    "tmdb_id": 1056494,
    "synopsis_en": "Paraguay, 1958. The charismatic Narciso returns from Buenos Aires with rock ’n’ roll in his veins. Under the suffocating military regime, his radio show becomes a music sensation and a symbol of freedom.",
    "_fid": "f_a613f777ab",
-   "id": "f_a613f777ab"
+   "id": "f_a613f777ab",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Uno vuelve siempre",
@@ -2682,12 +4914,54 @@
     "pag": 80,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "lbSlug": "uno-vuelve-siempre",
    "tmdb_id": 1521051,
    "synopsis_en": "Five fans rediscover their love for Atlético Nacional during a glorious season. Blending fiction and documentary, the film shows how football can heal, unite, and transform both people and a club that goes on to win everything.",
    "_fid": "f_1d00949d68",
-   "id": "f_1d00949d68"
+   "id": "f_1d00949d68",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "qa_type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "La imagen como territorio",
@@ -2711,11 +4985,53 @@
     "pag": 80,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "description": "Con Cristóbal Parra y Almendra Díaz, modera Alannath Naslyllalyla (artista y curadora)",
    "description_lang": "es",
    "_fid": "f_adf4dcb1ea",
-   "id": "f_adf4dcb1ea"
+   "id": "f_adf4dcb1ea",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Luis Antonio y Los Nuevos",
@@ -2739,7 +5055,6 @@
     "pag": 81,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -2774,7 +5089,46 @@
     }
    ],
    "_fid": "f_eb87d1dc7e",
-   "id": "f_eb87d1dc7e"
+   "id": "f_eb87d1dc7e",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Programa de Cortos 1",
@@ -2799,7 +5153,6 @@
     "pag": 81,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -2887,7 +5240,50 @@
    "description": "Función con presencia de los equipos",
    "description_lang": "es",
    "_fid": "f_0de6f521d9",
-   "id": "f_0de6f521d9"
+   "id": "f_0de6f521d9",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Las pesadillas del siervo",
@@ -2919,11 +5315,49 @@
     "pag": 81,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "lbSlug": "las-pesadillas-del-siervo",
    "tmdb_id": 1791689,
    "_fid": "f_ef43b4302a",
-   "id": "f_ef43b4302a"
+   "id": "f_ef43b4302a",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "qa_type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Chapecó, el último sobreviviente: nace una hermandad",
@@ -2952,9 +5386,43 @@
     "pag": 82,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "_fid": "f_a893560ed3",
    "id": "f_a893560ed3",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   },
    "synopsis": "Con la presencia del director",
    "synopsis_lang": "es",
    "_conservado": [
@@ -2992,13 +5460,51 @@
     "pag": 82,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "lbSlug": "the-meltdown",
    "tmdb_id": 1210268,
    "synopsis_en": "1992, Chile. Nine-year-old Inés' parents are away on business, leaving her in the care of her grandparents, who own a hotel at the foot of a ski resort. Inés befriends Hanna, a teenage European skier who has come to train in Chile. One night, Hanna disappears. The process of her search will unveil a series of hidden situations.",
    "title_en": "The Meltdown",
    "_fid": "f_4d48e3f24c",
-   "id": "f_4d48e3f24c"
+   "id": "f_4d48e3f24c",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Moscas",
@@ -3031,13 +5537,55 @@
     "pag": 82,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "lbSlug": "flies-2026",
    "tmdb_id": 1437703,
    "synopsis_en": "Olga lives a strictly regulated life without attachments in a vast apartment block. When out of financial necessity she rents a room in her apartment to a man who also sneaks-in his nine-year-old son, an unlikely bond forms. Her carefully controlled world begins to shift, and their lives become intertwined against her will.",
    "title_en": "Flies",
    "_fid": "f_3ecafafd4b",
-   "id": "f_3ecafafd4b"
+   "id": "f_3ecafafd4b",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "qa_type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Paralelo",
@@ -3064,9 +5612,43 @@
     "pag": 43,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "_fid": "f_959224c7c6",
-   "id": "f_959224c7c6"
+   "id": "f_959224c7c6",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Perder la Escala: Experiencias Cine Domo para Otros Mundos",
@@ -3091,7 +5673,6 @@
     "pag": 82,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -3145,7 +5726,50 @@
     }
    ],
    "_fid": "f_f99f9c77d3",
-   "id": "f_f99f9c77d3"
+   "id": "f_f99f9c77d3",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Rodando formación: mediaciones en comunidad",
@@ -3169,11 +5793,49 @@
     "pag": 45,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "description": "Realizado por CorpoTEA. Un espacio de encuentro con el audiovisual desde las experiencias territoriales. Comunicación, expresión y apreciación se combinan para explorar, experimentar y crear junto a las comunidades y sus distintas formas de relacionarse con el entorno.",
    "description_lang": "es",
    "_fid": "f_6a3d670d3b",
-   "id": "f_6a3d670d3b"
+   "id": "f_6a3d670d3b",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Éther, somos todo",
@@ -3200,9 +5862,43 @@
     "pag": 42,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "_fid": "f_66f35078e0",
-   "id": "f_66f35078e0"
+   "id": "f_66f35078e0",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Iluminada",
@@ -3235,12 +5931,54 @@
     "pag": 82,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "lbSlug": "iluminada",
    "tmdb_id": 1000097,
    "synopsis_en": "Iluminada has visions. She tries to understand them by writing in private journals. Her writings are poetry that no one else hears. Her life in the peripheral neighbourhoods of Bogotá, riddled with hardships, leaves her with no time or space. Until she meets Juan, a young man who seems to open up another world for her. But her relationship with a stranger is not welcomed by those who control the neighborhood.",
    "_fid": "f_8d47dec410",
-   "id": "f_8d47dec410"
+   "id": "f_8d47dec410",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "qa_type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Red de Creación Audiovisual de Medellín",
@@ -3265,17 +6003,59 @@
     "pag": 83,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "description": "La Red de Creación Audiovisual de Medellín presenta los frutos de sus laboratorios de creación y formación artística comunitaria: niños y adolescentes de la ciudad estrenan sus primeras películas.",
    "description_lang": "es",
    "_fid": "f_398d47d954",
-   "id": "f_398d47d954"
+   "id": "f_398d47d954",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Colombia es fantástica: laboratorio de cine fantástico y terror colombiano",
    "type": "event",
    "section": "🛠️ Talleres de Desarrollo y Mediación de Audiencias",
-   "duration": "90 min",
+   "duration": "120 min",
    "_ancla": [
     "Centro Colombo Americano - Medellín",
     "2026-11-07",
@@ -3294,11 +6074,53 @@
     "pag": 45,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "description": "Realizado por Festival Fantasmagoria. Un laboratorio de cinco sesiones para explorar leyendas, imaginarios y nuevas miradas del terror y el fantástico colombiano, y descubrir cómo contamos nuestros propios miedos desde el cine.",
    "description_lang": "es",
    "_fid": "f_ef769d7a14",
-   "id": "f_ef769d7a14"
+   "id": "f_ef769d7a14",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Domo móvil: Animales celestes",
@@ -3323,11 +6145,53 @@
     "pag": 56,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "description": "Autor: Parque Explora. Los paisajes de Colombia junto a la cangreja azul, la bagra rayada y el puma, cuyos recorridos se vuelven constelaciones.",
    "description_lang": "es",
    "_fid": "f_5e3b73b056",
-   "id": "f_5e3b73b056"
+   "id": "f_5e3b73b056",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Domo móvil: Arrecifes",
@@ -3352,11 +6216,53 @@
     "pag": 57,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "description": "Autor: California Academy of Sciences. El océano junto a Sofía Gómez, campeona mundial de apnea, para descubrir los arrecifes de coral.",
    "description_lang": "es",
    "_fid": "f_b7f61de175",
-   "id": "f_b7f61de175"
+   "id": "f_b7f61de175",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Domo móvil: Viaje por el sistema solar",
@@ -3381,11 +6287,53 @@
     "pag": 57,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "description": "Autor: Parque Explora. Recorrido en vivo por el sistema solar con el software Uniview.",
    "description_lang": "es",
    "_fid": "f_512074a9b0",
-   "id": "f_512074a9b0"
+   "id": "f_512074a9b0",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Exposición: El cine analógico: máquinas, formatos y memoria",
@@ -3411,11 +6359,53 @@
     "pag": 57,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "description": "Dedicada al Archivo Fílmico de la Cinemateca Distrital de Medellín: tres proyectores de 8, 16 y 35 mm con películas de cada formato, y sesiones de socialización con proyecciones en 35 mm. Sábado 7 y domingo 8, de 10:00 a. m. a 8:00 p. m.",
    "description_lang": "es",
    "_fid": "f_cbd21692f3",
-   "id": "f_cbd21692f3"
+   "id": "f_cbd21692f3",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Laboratorio: Creación audiovisual con inteligencia artificial generativa",
@@ -3439,11 +6429,53 @@
     "pag": 58,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "description": "Impartido por Centro Ático de la Pontificia Universidad Javeriana. Exploración de posibilidades creativas con herramientas de generación de imágenes y video con inteligencia artificial.",
    "description_lang": "es",
    "_fid": "f_65170c7a82",
-   "id": "f_65170c7a82"
+   "id": "f_65170c7a82",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Luces, cámara y estampa",
@@ -3467,11 +6499,49 @@
     "pag": 45,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "description": "Realizado por KXVRX Cineclub. Tres sesiones de mediación y formación alrededor del cortometraje colombiano, con proyecciones, conversaciones y microtalleres de serigrafía para reflexionar sobre memoria, identidad, territorio y los lugares que habitamos.",
    "description_lang": "es",
    "_fid": "f_142db05fd4",
-   "id": "f_142db05fd4"
+   "id": "f_142db05fd4",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Mu-ki-ra",
@@ -3503,12 +6573,50 @@
     "pag": 83,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "lbSlug": "mu-ki-ra",
    "tmdb_id": 1446898,
    "synopsis_en": "When her brother is kidnapped by Mu-Ki-Ra, Cleo ventures into a monster-plagued jungle with unlikely allies.",
    "_fid": "f_a930ae6950",
-   "id": "f_a930ae6950"
+   "id": "f_a930ae6950",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Programa de Cortos ChiquiShorts",
@@ -3532,7 +6640,6 @@
     "pag": 84,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -3641,7 +6748,46 @@
     }
    ],
    "_fid": "f_cf3cfaf852",
-   "id": "f_cf3cfaf852"
+   "id": "f_cf3cfaf852",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Cine Comunitario: Función con Presencia de Directores y Conversatorio",
@@ -3666,7 +6812,6 @@
     "pag": 58,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -3736,7 +6881,50 @@
    "description": "Con la presencia de los directores y conversatorio",
    "description_lang": "es",
    "_fid": "f_a63afb0f57",
-   "id": "f_a63afb0f57"
+   "id": "f_a63afb0f57",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Luces, cámara y estampa",
@@ -3760,17 +6948,55 @@
     "pag": 45,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "description": "Realizado por KXVRX Cineclub. Tres sesiones de mediación y formación alrededor del cortometraje colombiano, con proyecciones, conversaciones y microtalleres de serigrafía para reflexionar sobre memoria, identidad, territorio y los lugares que habitamos.",
    "description_lang": "es",
    "_fid": "f_22857928a5",
-   "id": "f_22857928a5"
+   "id": "f_22857928a5",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Colombia es fantástica: laboratorio de cine fantástico y terror colombiano",
    "type": "event",
    "section": "🛠️ Talleres de Desarrollo y Mediación de Audiencias",
-   "duration": "90 min",
+   "duration": "120 min",
    "_ancla": [
     "Centro Colombo Americano - Medellín",
     "2026-11-07",
@@ -3789,11 +7015,53 @@
     "pag": 45,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "description": "Realizado por Festival Fantasmagoria. Un laboratorio de cinco sesiones para explorar leyendas, imaginarios y nuevas miradas del terror y el fantástico colombiano, y descubrir cómo contamos nuestros propios miedos desde el cine.",
    "description_lang": "es",
    "_fid": "f_5c5d4d9927",
-   "id": "f_5c5d4d9927"
+   "id": "f_5c5d4d9927",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Laboratorio: Postproducción de video para dispositivos móviles",
@@ -3806,7 +7074,7 @@
     "14:00"
    ],
    "day": "2026-11-07",
-   "time": "14:00",
+   "time": "10:00",
    "day_order": 4,
    "venue": "Parque de los Deseos - Medellín",
    "sala": "Cinemateca móvil, laboratorio",
@@ -3817,11 +7085,54 @@
     "pag": 58,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "description": "Impartido por el Centro Ático de la Pontificia Universidad Javeriana. Edición de video desde el celular: audio, luz, color, filtros, efectos y montaje.",
    "description_lang": "es",
    "_fid": "f_44bbe027e4",
-   "id": "f_44bbe027e4"
+   "id": "f_44bbe027e4",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "juan",
+     "fecha": "2026-10-28",
+     "frase": "SÁBADO 7 NOV — 10:00 a. m. · «Cinemateca móvil - Laboratorio: Postproducción de video para dispositivos móviles»"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Recorrido guiado: Muestra de Cine Expandido",
@@ -3845,11 +7156,53 @@
     "pag": 69,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "description": "Un recorrido por cuatro obras que exploran nuevas formas de experimentar el cine mediante realidad virtual, instalaciones interactivas y entornos inmersivos. Obras: El sueño de Sedna, Sosiego al atardecer, Todas las cosas que algún día se desvanecieron y Vórtice Nebular.",
    "description_lang": "es",
    "_fid": "f_98c683f570",
-   "id": "f_98c683f570"
+   "id": "f_98c683f570",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Relicto",
@@ -3882,18 +7235,60 @@
     "pag": 86,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "lbSlug": "relicto",
    "tmdb_id": 1633353,
    "synopsis_en": "\"At 105, Sixto Muñoz, known as 'the last Tinigua man', left his home for one final journey into the Amazon and disappeared. Following his trail along the Guayabero River, the film retraces his fading world and the extinction of an entire culture.\"",
    "_fid": "f_b5649974c3",
-   "id": "f_b5649974c3"
+   "id": "f_b5649974c3",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "qa_type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Colombia es fantástica: laboratorio de cine fantástico y terror colombiano",
    "type": "event",
    "section": "🛠️ Talleres de Desarrollo y Mediación de Audiencias",
-   "duration": "90 min",
+   "duration": "120 min",
    "_ancla": [
     "Centro Colombo Americano - Medellín",
     "2026-11-07",
@@ -3912,11 +7307,53 @@
     "pag": 45,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "description": "Realizado por Festival Fantasmagoria. Un laboratorio de cinco sesiones para explorar leyendas, imaginarios y nuevas miradas del terror y el fantástico colombiano, y descubrir cómo contamos nuestros propios miedos desde el cine.",
    "description_lang": "es",
    "_fid": "f_6c0ca31337",
-   "id": "f_6c0ca31337"
+   "id": "f_6c0ca31337",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Cómo limpiar una casa en 10 pasos fáciles",
@@ -3945,12 +7382,46 @@
     "pag": 86,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "lbSlug": "how-to-clean-a-house-in-ten-easy-steps",
    "tmdb_id": 1631825,
    "synopsis_en": "A mother and daughter create a shared fantasy to explore their intertwined experiences of immigration, labor, and womanhood.",
    "_fid": "f_d8725de69d",
-   "id": "f_d8725de69d"
+   "id": "f_d8725de69d",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Nuestro secreto",
@@ -3980,13 +7451,51 @@
     "pag": 87,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "lbSlug": "our-secret-2026",
    "tmdb_id": 1399253,
    "synopsis_en": "A Black Brazilian family in the city of Belo Horizonte, tries to rebuild their home after a recent loss. Caught between memories and nightmares, and unable to express what they feel to each other, a mother and her children shield themselves from the pain of grief through their individual routines. Only the youngest child understands the secret that the house holds within its four walls and tries to reveal it to the others, only to fall on deaf ears. Finally, confronted with the truth, they face the deep roots of their grief and come together to traverse this moment with love and courage.",
    "title_en": "Our Secret",
    "_fid": "f_5d07110abb",
-   "id": "f_5d07110abb"
+   "id": "f_5d07110abb",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Papaya",
@@ -4018,12 +7527,50 @@
     "pag": 59,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "lbSlug": "papaya-2025",
    "tmdb_id": 1534205,
    "synopsis_en": "Passionate about flying, a tiny papaya seed in the Amazonian forest must keep moving to avoid rooting. Through perseverance, she discovers the power of her roots, triggering a revolution that transforms her world and fulfills her dreams in an unexpected way.",
    "_fid": "f_01a50d44b3",
-   "id": "f_01a50d44b3"
+   "id": "f_01a50d44b3",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Taller de collage: Cine en retazos",
@@ -4047,11 +7594,53 @@
     "pag": 59,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "description": "A partir de la proyección de un cortometraje, los participantes crean un collage como reinterpretación libre e intuitiva. Materiales incluidos.",
    "description_lang": "es",
    "_fid": "f_fc6b76a630",
-   "id": "f_fc6b76a630"
+   "id": "f_fc6b76a630",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Ecologías emergentes del cine expandido",
@@ -4075,11 +7664,53 @@
     "pag": 69,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "description": "Con Diego Alberto Pérez Osorno (Vórtice Nebular) y el Colectivo Axiz (Felipe López y Yoana Casanova, El sueño de Sedna), con la moderación de Alannath Naslyllalyla (artista y curadora)",
    "description_lang": "es",
    "_fid": "f_c4cdf7c9dc",
-   "id": "f_c4cdf7c9dc"
+   "id": "f_c4cdf7c9dc",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Especiales Cinemateca con Natalia Reyes",
@@ -4103,11 +7734,53 @@
     "pag": 59,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "description": "Víctor Gaviria conversa con Natalia Reyes, actriz y productora colombiana, sobre su experiencia en la película Aún es de noche en Caracas y los procesos creativos detrás de esta producción.",
    "description_lang": "es",
    "_fid": "f_f42832b07e",
-   "id": "f_f42832b07e"
+   "id": "f_f42832b07e",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Iván & Hadoum",
@@ -4138,12 +7811,46 @@
     "pag": 88,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "lbSlug": "ivan-hadoum",
    "tmdb_id": 1514847,
    "synopsis_en": "Iván (33), a trans man, and Hadoum (30), a Spanish-Moroccan woman, fall in love at the industrial greenhouse they work in. While facing the opposition from their families and co-workers, Iván realizes he doesn’t need to be the man he is expected to be.",
    "_fid": "f_c9bb3594f8",
-   "id": "f_c9bb3594f8"
+   "id": "f_c9bb3594f8",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "La otra orilla: Revolver la mirada autorizada para manchar la cámara de barro",
@@ -4167,11 +7874,49 @@
     "pag": 45,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "description": "Realizado por Cine-Foro \"En Construcción\". Un taller sobre obras de cineastas mujeres latinoamericanas para explorar sus herramientas expresivas y la potencia de sus propuestas, poniendo en diálogo sus formas de hacer cine con las de sus contemporáneos.",
    "description_lang": "es",
    "_fid": "f_92206ec51c",
-   "id": "f_92206ec51c"
+   "id": "f_92206ec51c",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Perder la Escala: Experiencias Cine Domo para Otros Mundos",
@@ -4196,7 +7941,6 @@
     "pag": 87,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -4250,7 +7994,50 @@
     }
    ],
    "_fid": "f_9ab0081eae",
-   "id": "f_9ab0081eae"
+   "id": "f_9ab0081eae",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Rodando formación: mediaciones en comunidad",
@@ -4274,11 +8061,49 @@
     "pag": 45,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "description": "Realizado por CorpoTEA. Un espacio de encuentro con el audiovisual desde las experiencias territoriales. Comunicación, expresión y apreciación se combinan para explorar, experimentar y crear junto a las comunidades y sus distintas formas de relacionarse con el entorno.",
    "description_lang": "es",
    "_fid": "f_3ccb46ae9b",
-   "id": "f_3ccb46ae9b"
+   "id": "f_3ccb46ae9b",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Programa de Cortos 3",
@@ -4303,7 +8128,6 @@
     "pag": 88,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -4397,7 +8221,50 @@
    "description": "Función con presencia de los equipos",
    "description_lang": "es",
    "_fid": "f_8f09b8d134",
-   "id": "f_8f09b8d134"
+   "id": "f_8f09b8d134",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Aún es de noche en Caracas",
@@ -4429,13 +8296,51 @@
     "pag": 59,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "lbSlug": "it-would-be-night-in-caracas",
    "tmdb_id": 1516445,
    "synopsis_en": "While struggling to withstand the chaos of modern Venezuela, Adelaida sees a chance to survive—and takes it: leaving everything behind, even her own name. In a land with no future, her only way out is to become someone else.",
    "title_en": "It Would Be Night in Caracas",
    "_fid": "f_5fd270192f",
-   "id": "f_5fd270192f"
+   "id": "f_5fd270192f",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Club sándwich",
@@ -4468,12 +8373,54 @@
     "pag": 89,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "lbSlug": "club-sandwich",
    "tmdb_id": 213983,
    "synopsis_en": "While vacationing at a beachside resort, a single mother faces inevitable separation anxiety when her 15-year-old son — who is also her best friend — discovers magical chemistry with a girl his own age.",
    "_fid": "f_3093e1c9e4",
-   "id": "f_3093e1c9e4"
+   "id": "f_3093e1c9e4",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "qa_type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "El teléfono morado",
@@ -4500,9 +8447,43 @@
     "pag": 41,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "_fid": "f_822db3367a",
-   "id": "f_822db3367a"
+   "id": "f_822db3367a",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Programa de Cortos 4",
@@ -4527,7 +8508,6 @@
     "pag": 90,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -4606,7 +8586,50 @@
    "description": "Función con presencia de los equipos",
    "description_lang": "es",
    "_fid": "f_f328317a57",
-   "id": "f_f328317a57"
+   "id": "f_f328317a57",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Taller de cianotipia: fotografía en papel sin recurrir a la cámara",
@@ -4630,11 +8653,53 @@
     "pag": 60,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "description": "La cianotipia, un proceso fotográfico analógico sin cámara: con luz solar y agua se imprimen fotogramas de obras cinematográficas en azul de Prusia. Materiales incluidos.",
    "description_lang": "es",
    "_fid": "f_397b2ea7cb",
-   "id": "f_397b2ea7cb"
+   "id": "f_397b2ea7cb",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Taller: Pintar el cine: intervención y proyección de material fílmico",
@@ -4657,11 +8722,49 @@
     "pag": 60,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "description": "La Corporación Otraparte invita a jóvenes a intervenir fragmentos de película de 35 mm con dibujos, tintas y pigmentos. Materiales incluidos.",
    "description_lang": "es",
    "_fid": "f_fb4fb26381",
-   "id": "f_fb4fb26381"
+   "id": "f_fb4fb26381",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Mu-ki-ra",
@@ -4693,12 +8796,50 @@
     "pag": 60,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "lbSlug": "mu-ki-ra",
    "tmdb_id": 1446898,
    "synopsis_en": "When her brother is kidnapped by Mu-Ki-Ra, Cleo ventures into a monster-plagued jungle with unlikely allies.",
    "_fid": "f_ff53d84213",
-   "id": "f_ff53d84213"
+   "id": "f_ff53d84213",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Laboratorio Vivo: Hilos de memoria",
@@ -4722,11 +8863,53 @@
     "pag": 61,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "description": "Impartido por la Red Audiovisual. Intervención analógica de fotogramas (foto-bordado) y animación stop motion a partir del archivo de la Red de Audiovisuales. Materiales incluidos.",
    "description_lang": "es",
    "_fid": "f_c00661685d",
-   "id": "f_c00661685d"
+   "id": "f_c00661685d",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Niñas escarlata",
@@ -4756,13 +8939,51 @@
     "pag": 92,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "lbSlug": "scarlet-girls-2026",
    "tmdb_id": 1305858,
    "synopsis_en": "Through intimate narrations and evocative imagery, women across the Dominican Republic reflect on their experiences with forced motherhood and clandestine abortion. What does it mean to exist as a woman in a country where abortion remains criminalized without exception?",
    "title_en": "Scarlet Girls",
    "_fid": "f_9f95bcb4e9",
    "id": "f_9f95bcb4e9",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   },
    "synopsis": "Con la presencia de la directora",
    "synopsis_lang": "es",
    "_conservado": [
@@ -4793,7 +9014,6 @@
     "pag": 61,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -4915,7 +9135,50 @@
     }
    ],
    "_fid": "f_44d17220da",
-   "id": "f_44d17220da"
+   "id": "f_44d17220da",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Relicto",
@@ -4947,12 +9210,50 @@
     "pag": 91,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "lbSlug": "relicto",
    "tmdb_id": 1633353,
    "synopsis_en": "\"At 105, Sixto Muñoz, known as 'the last Tinigua man', left his home for one final journey into the Amazon and disappeared. Following his trail along the Guayabero River, the film retraces his fading world and the extinction of an entire culture.\"",
    "_fid": "f_e22f48016b",
-   "id": "f_e22f48016b"
+   "id": "f_e22f48016b",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "El deshielo",
@@ -4983,13 +9284,47 @@
     "pag": 94,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "lbSlug": "the-meltdown",
    "tmdb_id": 1210268,
    "synopsis_en": "1992, Chile. Nine-year-old Inés' parents are away on business, leaving her in the care of her grandparents, who own a hotel at the foot of a ski resort. Inés befriends Hanna, a teenage European skier who has come to train in Chile. One night, Hanna disappears. The process of her search will unveil a series of hidden situations.",
    "title_en": "The Meltdown",
    "_fid": "f_f2d735bb0a",
-   "id": "f_f2d735bb0a"
+   "id": "f_f2d735bb0a",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Programa de Cortos 2",
@@ -5014,7 +9349,6 @@
     "pag": 94,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -5117,7 +9451,50 @@
    "description": "Función con presencia de los equipos",
    "description_lang": "es",
    "_fid": "f_9f466da4e6",
-   "id": "f_9f466da4e6"
+   "id": "f_9f466da4e6",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Taller de máscaras: Conviértete en un Bicho Raro",
@@ -5141,11 +9518,53 @@
     "pag": 62,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "description": "Construye tu máscara de Macha, la cucaracha, o Yeisy, la araña, personajes de La Sinfonía de los Bichos Raros. Materiales incluidos.",
    "description_lang": "es",
    "_fid": "f_0074174ea3",
-   "id": "f_0074174ea3"
+   "id": "f_0074174ea3",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Un día en la vida de...",
@@ -5172,9 +9591,47 @@
     "pag": 93,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "_fid": "f_39f608dc63",
-   "id": "f_39f608dc63"
+   "id": "f_39f608dc63",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Juancho Valencia y su relación con el cine",
@@ -5198,11 +9655,53 @@
     "pag": 95,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "description": "Juancho Valencia, ganador del Grammy Latino, dialoga con Diego Londoño (El Fan Fatal) sobre cómo ha tejido una relación entre su música y el cine.",
    "description_lang": "es",
    "_fid": "f_86d1922551",
-   "id": "f_86d1922551"
+   "id": "f_86d1922551",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   },
   {
    "title": "Proyección y Concierto de Clausura",
@@ -5228,7 +9727,6 @@
     "pag": 95,
     "tipo": "festival-pdf"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -5347,7 +9845,54 @@
    "description": "Selección de cortometrajes; especial: estreno del cortometraje más destacado de la Red de Audiovisuales 2026; y concierto de clausura de la Orquesta Sinfónica Juvenil de la Red de Músicas de Medellín con Los Cumbia Stars.",
    "description_lang": "es",
    "_fid": "f_7ecb1024c6",
-   "id": "f_7ecb1024c6"
+   "id": "f_7ecb1024c6",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-28"
+    }
+   }
   }
  ],
  "_avisos_duracion": [
@@ -5356,7 +9901,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-27T20:01:22",
+  "fecha": "2026-10-28T17:20:19",
   "plan_sha": "1476fecbd41f2797",
   "paso": 10,
   "cmd": "python3 pipeline/miradas-2026-verificar.py"

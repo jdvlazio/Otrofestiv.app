@@ -1,10 +1,10 @@
 {
  "_provenance": {
   "fuente": "issue de radar #1088 — https://github.com/jdvlazio/Otrofestiv.app/issues/1088",
-  "capturado": "2026-10-27",
+  "capturado": "2026-10-28",
   "titulo": "RADAR: Miradas Medellín — Festival de Cine y Artes Audiovisuales, Medellín, 3–8 NOV 2026",
   "estado": "OPEN",
-  "comentarios": 8
+  "comentarios": 10
  },
  "issue": 1088,
  "titulo": "RADAR: Miradas Medellín — Festival de Cine y Artes Audiovisuales, Medellín, 3–8 NOV 2026",
@@ -42,6 +42,14 @@
   {
    "fecha": "2026-10-27",
    "cuerpo": "**Vigía 27 oct 13:00:** el reel https://www.instagram.com/p/De-hVjhCTMG/ de @cinematecademedellin («Los nuevos», Rodrigo Plá) dice «Conoce la programación completa en el enlace de la biografía». Revisar ese enlace. miradasmedellin.com no resuelve DNS."
+  },
+  {
+   "fecha": "2026-10-28",
+   "cuerpo": "**Vigía 28 oct 09:15 — Miradas sin vigilar por Apify:** ig_vigia.py lo reporta en SIN_CUENTA_IG (está en config sin `instagram:`). Hay que agregar `cinematecademedellin`. Hoy lo leí por el navegador sin sesión: la inaugural «Seis meses en el edificio rosa con azul», 3 nov a las 6:30 p. m. en el Teatro Pablo Tobón (DfAzifIj8zZ), ya está en la app. El PDF no cambió.\n"
+  },
+  {
+   "fecha": "2026-10-28",
+   "cuerpo": "**Vigía 28 oct 13:00 — Miradas: inaugural confirmada, con una contradicción en el propio post.** Post de @cinematecademedellin https://www.instagram.com/p/DfAzifIj8zZ/ (vía Apify): «Seis meses en el edificio rosa con azul», martes 3 nov, Teatro Pablo Tobón Uribe, entrada libre, conversatorio con Bruno Santamaría y Bruna Haddad. **Lámina 1 dice 7:00 p. m.; lámina 3 y el pie dicen 6:30 p. m.** La app ya tiene 18:30 en el Pablo Tobón (= la hora más temprana, regla del 17 oct). Sin acción salvo que el festival aclare.\n"
   }
  ]
 }
