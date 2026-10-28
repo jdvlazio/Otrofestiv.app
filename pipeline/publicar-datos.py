@@ -217,6 +217,30 @@ def _afiches_en_la_web(fest, d, esperar=0):
     print(f'  ✓ afiches en la web ({len(rutas)})')
 
 
+class Choque(Exception):
+    """Otra publicación movió la punta de `datos` entre nuestro commit y la
+    función (409) o durante el push. Se rehace el commit sobre la punta nueva."""
+
+
+REINTENTOS = 4
+
+
+def _publicar(archivos, mensaje, cuerpo):
+    """Commit a `datos` + llamada a la función, rehecho sobre la punta nueva si
+    otra corrida (el job de main o un publicar a mano) se cruzó. Cada intento
+    vuelve a bajar la punta, así que nunca pisa lo que publicó la otra."""
+    for intento in range(1, REINTENTOS + 1):
+        try:
+            sha = _commit_en_datos(archivos, mensaje)
+            return sha, _llamar({**cuerpo, 'sha': sha})
+        except Choque as e:
+            if intento == REINTENTOS:
+                sys.exit(f'✗ {e}: {REINTENTOS} intentos, todos cruzados con otra publicación')
+            espera = 5 * intento
+            print(f'· {e}; reintento {intento + 1}/{REINTENTOS} en {espera} s')
+            time.sleep(espera)
+
+
 def _commit_en_datos(archivos, mensaje):
     """Pone cada {ruta: bytes} sobre la punta de la rama `datos` (sin tocar el
     checkout) y la empuja. Devuelve el sha de la punta (el mismo si nada cambió)."""
@@ -248,7 +272,13 @@ def _commit_en_datos(archivos, mensaje):
         if os.path.exists(idx):
             os.remove(idx)
     sha = git('commit-tree', arbol, '-p', base, '-m', mensaje)
-    git('push', '-q', 'origin', f'{sha}:refs/heads/{RAMA}')
+    r = subprocess.run(['git', '-C', REPO, 'push', '-q', 'origin', f'{sha}:refs/heads/{RAMA}'],
+                       capture_output=True, timeout=TIEMPO)
+    if r.returncode != 0:
+        err = r.stderr.decode(errors='replace')
+        if re.search(r'non-fast-forward|fetch first|rejected', err):
+            raise Choque(f'la punta de {RAMA} se movió mientras empujaba')
+        sys.exit(f'✗ git push: {err.strip()[:300]}')
     print(f'✓ rama {RAMA} → {sha[:7]}')
     return sha
 
@@ -291,13 +321,15 @@ def _llamar(cuerpo):
         with urllib.request.urlopen(req, timeout=TIEMPO) as r:
             return json.loads(r.read())
     except urllib.error.HTTPError as e:
-        sys.exit(f'✗ publicar-datos {e.code}: {e.read().decode()[:300]}')
+        cuerpo_err = e.read().decode(errors='replace')[:300]
+        if e.code == 409:
+            raise Choque(f'la función respondió 409 ({cuerpo_err})')
+        sys.exit(f'✗ publicar-datos {e.code}: {cuerpo_err}')
 
 
 def interruptor(apagado):
-    sha = _commit_en_datos({'datos-control.json': json.dumps({'apagado': apagado}).encode()},
-                           f'datos: {"apagar" if apagado else "encender"} el almacén')
-    res = _llamar({'festival': '_control', 'sha': sha})
+    sha, res = _publicar({'datos-control.json': json.dumps({'apagado': apagado}).encode()},
+                         f'datos: {"apagar" if apagado else "encender"} el almacén', {'festival': '_control'})
     if not res.get('ok'):
         sys.exit(f'✗ {res}')
     print(f'✓ almacén {"APAGADO: la app lee la web" if res["apagado"] else "encendido"}')
@@ -345,17 +377,9 @@ def main():
     ficha = _ficha(fest)
     if '--desde-main' in sys.argv and ficha and not _tiene_ficha(fest):
         print('  · sin ficha en el almacén: entra a propósito con publicar-datos.py, no desde main'); ficha = {}
-    sha = _commit_en_datos({ruta: contenido, **ficha}, f'datos({fest}): publicar {huella[:12]}')
-
-    # 3. publicar
-    req = urllib.request.Request(FUNCION, data=json.dumps({'festival': fest, 'sha': sha,
-                                 'por': os.environ.get('OTF_POR') or git('config', 'user.name') or 'comando'}).encode(),
-                                 headers={'Content-Type': 'application/json'}, method='POST')
-    try:
-        with urllib.request.urlopen(req, timeout=TIEMPO) as r:
-            res = json.loads(r.read())
-    except urllib.error.HTTPError as e:
-        sys.exit(f'✗ publicar-datos {e.code}: {e.read().decode()[:300]}')
+    # 3. publicar (commit + función; si otra corrida se cruza, se rehace sobre la punta nueva)
+    sha, res = _publicar({ruta: contenido, **ficha}, f'datos({fest}): publicar {huella[:12]}',
+                         {'festival': fest, 'por': os.environ.get('OTF_POR') or git('config', 'user.name') or 'comando'})
     if not res.get('ok'):
         sys.exit(f'✗ publicar-datos: {res}')
 
