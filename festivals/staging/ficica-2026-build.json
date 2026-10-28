@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "ficica.cinealacalle.org — Programación General 2026 (JSON embebido en la página)",
-  "capturado": "2026-10-25",
+  "capturado": "2026-10-27",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "radar": 1029,
@@ -2243,7 +2243,16 @@
     {
      "title": "Compraventa",
      "country": "Argentina",
-     "flags": "🇦🇷"
+     "flags": "🇦🇷",
+     "poster": "/assets/ficica-2026/compraventa.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "compraventa",
+     "tmdb_id": 1469673,
+     "synopsis_en": "In a merchant neighborhood of Buenos Aires, Yoni survives through smuggling and a few fleeting alliances. Under the shadow of his partner and mentor, Leon, he strives to advance in a world that judges him by his appearance. A promising business deal seems poised to change his fate, but an unexpected setback forces him to confront his limitation",
+     "genre": "Suspense",
+     "director": "Tomás Murphy",
+     "year": 2025,
+     "duration": "10 min"
     },
     {
      "title": "Más allá",
@@ -4050,8 +4059,11 @@
      "director": "Juan José Arias Gil",
      "country": "Colombia",
      "flags": "🇨🇴",
+     "poster": "/assets/miradas-2026/luis-antonio.jpg",
      "synopsis": "La mañana de un sábado Luis Antonio, un niño de 8 años, quiere aprender a montar en bicicleta. Pero su madre tiene que trabajar y lo deja al cuidado de Ofelia, su estricta vecina.",
+     "genre": "Ficción",
      "year": 2025,
+     "posterSource": "oficial",
      "synopsis_lang": "es",
      "duration": "12 min"
     },
@@ -4140,7 +4152,7 @@
   "programa «Inauguración» (2026-10-20 18:30): sus obras suman 86 min (6 de 13 con duración) y la función dura 60",
   "programa «Líneas y rayas» (2026-10-21 17:00): sus obras suman 100 min (9 de 10 con duración) y la función dura 60",
   "programa «Encuentros» (2026-10-21 18:00): sus obras suman 91 min (8 de 8 con duración) y la función dura 60",
-  "programa «Una mirada latina» (2026-10-22 14:00): sus obras suman 75 min (4 de 6 con duración) y la función dura 60",
+  "programa «Una mirada latina» (2026-10-22 14:00): sus obras suman 85 min (5 de 6 con duración) y la función dura 60",
   "programa «Y así pasan los días» (2026-10-22 18:00): sus obras suman 101 min (6 de 6 con duración) y la función dura 60",
   "programa «Encuentros» (2026-10-22 18:00): sus obras suman 91 min (8 de 8 con duración) y la función dura 60",
   "programa «¿Eso es real?» (2026-10-23 18:00): sus obras suman 70 min (5 de 8 con duración) y la función dura 60",
@@ -4149,7 +4161,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-25T10:46:41",
+  "fecha": "2026-10-27T19:07:52",
   "plan_sha": "0894429f32f904b5",
   "paso": 8,
   "cmd": "python3 pipeline/ensamblar.py ficica-2026"

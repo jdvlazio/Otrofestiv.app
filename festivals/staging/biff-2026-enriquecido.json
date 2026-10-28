@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, emparejado con ficha_verifica() (director + año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-10-07"
+  "capturado": "2026-10-27"
  },
  "obras": [
   {
@@ -87,7 +87,7 @@
    "tmdb_id": 1742324,
    "titulo_original": "Bertha",
    "poster_path": "/6I4LOmyGtkv8KP9YFm72VlNHhv7.jpg",
-   "synopsis_es": "",
+   "synopsis_es": "ULDA (65) se niega a hacerse cargo del funeral de su esposo machista porque él murió en la cama de otra mujer. En casa, solo queda Bertha, una cabra revoltosa, que será su compañía mientras ella vuelve a ser la mujer que era antes.",
    "synopsis_en": "ULDA (65) refuses to take charge of her macho husband's funeral because he died in another woman's bed. At home, only Bertha, a mischievous goat, remains as her companion while she returns to the woman she once was.",
    "genero": "",
    "anio_tmdb": 2025,
@@ -109,7 +109,10 @@
     }
    ],
    "poster": "/assets/biff-2026/bertha.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "_heredado": {
+    "synopsis_es": "catálogo w_R4DRYZAJJNS8 (biff-2026, ficcali-2026, qaff-2026)"
+   }
   },
   {
    "titulo": "Borrachos Mientras Escuchamos las Gotas Caer",
@@ -157,7 +160,11 @@
    "_director": "Lukas Dhont",
    "_sondeado": "2026-09-29",
    "poster": "/assets/biff-2026/cobarde.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "title_en": "Coward",
+   "_heredado": {
+    "title_en": "catálogo w_R4E4R74EAVJZ (biff-2026, mubibogota-2026, tiff-2026)"
+   }
   },
   {
    "titulo": "Como Todo Mortal",
@@ -398,7 +405,7 @@
    "lbSlug": "espacio-para-pensar",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 1 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas): La Baldosa, 2025, 8 min, Colombia, Animación, con las 7 personas que el afiche acredita como directoras y su afiche oficial. Letterboxd: espacio-para-pensar.",
    "_director": "La Baldosa Colectivo",
-   "_sondeado": "2026-10-07",
+   "_sondeado": "2026-10-27",
    "poster": "/assets/biff-2026/espacio-para-pensar.jpg",
    "posterSource": "tmdb"
   },
@@ -1405,7 +1412,7 @@
    "tmdb_id": 1742324,
    "titulo_original": "Bertha",
    "poster_path": "/6I4LOmyGtkv8KP9YFm72VlNHhv7.jpg",
-   "synopsis_es": "",
+   "synopsis_es": "ULDA (65) se niega a hacerse cargo del funeral de su esposo machista porque él murió en la cama de otra mujer. En casa, solo queda Bertha, una cabra revoltosa, que será su compañía mientras ella vuelve a ser la mujer que era antes.",
    "synopsis_en": "ULDA (65) refuses to take charge of her macho husband's funeral because he died in another woman's bed. At home, only Bertha, a mischievous goat, remains as her companion while she returns to the woman she once was.",
    "genero": "",
    "anio_tmdb": 2025,
@@ -1427,7 +1434,10 @@
     }
    ],
    "poster": "/assets/biff-2026/bertha.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "_heredado": {
+    "synopsis_es": "catálogo w_R4DRYZAJJNS8 (biff-2026, ficcali-2026, qaff-2026)"
+   }
   },
   "Borrachos Mientras Escuchamos las Gotas Caer": {
    "tmdb_id": 1743109,
@@ -1473,7 +1483,11 @@
    "_director": "Lukas Dhont",
    "_sondeado": "2026-09-29",
    "poster": "/assets/biff-2026/cobarde.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "title_en": "Coward",
+   "_heredado": {
+    "title_en": "catálogo w_R4E4R74EAVJZ (biff-2026, mubibogota-2026, tiff-2026)"
+   }
   },
   "Como Todo Mortal": {
    "tmdb_id": 1651710,
@@ -1703,7 +1717,7 @@
    "lbSlug": "espacio-para-pensar",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 1 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas): La Baldosa, 2025, 8 min, Colombia, Animación, con las 7 personas que el afiche acredita como directoras y su afiche oficial. Letterboxd: espacio-para-pensar.",
    "_director": "La Baldosa Colectivo",
-   "_sondeado": "2026-10-07",
+   "_sondeado": "2026-10-27",
    "poster": "/assets/biff-2026/espacio-para-pensar.jpg",
    "posterSource": "tmdb"
   },
@@ -2588,13 +2602,6 @@
    "posterSource": "tmdb"
   }
  },
- "sin_ficha": [
-  "Muestra de cortometrajes BIFF Bang"
- ],
- "_sin_ficha_sondeo": {
-  "Muestra de cortometrajes BIFF Bang": {
-   "director": "",
-   "fecha": "2026-10-06"
-  }
- }
+ "sin_ficha": [],
+ "_sin_ficha_sondeo": {}
 }

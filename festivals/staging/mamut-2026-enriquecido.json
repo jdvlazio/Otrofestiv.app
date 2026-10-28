@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, emparejado con ficha_verifica() (director + año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-10-11"
+  "capturado": "2026-10-27"
  },
  "obras": [
   {
@@ -77,11 +77,27 @@
      "festival": "ficci-65",
      "titulo": "Belleza letal",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_afiche%20belleza%20letal%20-%20Samuel%20Moreno.jpg?itok=ZrOw0nvZ",
-     "posterSource": "custom"
+     "posterSource": "custom",
+     "country": "Colombia",
+     "year": 2026,
+     "duration": "27 min"
+    },
+    {
+     "festival": "ficica-2026",
+     "titulo": "Belleza letal",
+     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_afiche%20belleza%20letal%20-%20Samuel%20Moreno.jpg?itok=ZrOw0nvZ",
+     "posterSource": "oficial",
+     "country": "Colombia / Barranquilla",
+     "year": 2026,
+     "duration": "27 min"
     }
    ],
+   "_afiche_de": "ya publicada en ficci-65",
    "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_afiche%20belleza%20letal%20-%20Samuel%20Moreno.jpg?itok=ZrOw0nvZ",
-   "_verificado": "ya publicada en ficci-65: se reusa su afiche"
+   "_verificado": "ya publicada en ficci-65: se reusa su afiche",
+   "pais": "Colombia",
+   "anio": 2026,
+   "duracion_tmdb": 27
   },
   {
    "titulo": "Bombardeo a Washington",
@@ -98,7 +114,7 @@
    "lbSlug": "the-bombing-of-washington",
    "_verificado": "declarada a mano: TMDB la registra como «El bombardeo de Washington»: Luis Ospina, 1972, 1 min, los tres datos que imprime la lámina. La búsqueda por el título del festival («Bombardeo a Washington») no la devuelve, y por eso no casa sola. Se publica con el título del festival.",
    "_director": "Luis Ospina",
-   "_sondeado": "2026-10-11",
+   "_sondeado": "2026-10-27",
    "poster": "/assets/mamut-2026/bombardeo-a-washington.jpg",
    "posterSource": "tmdb"
   },
@@ -117,7 +133,7 @@
    "lbSlug": "bloody-flesh",
    "_verificado": "declarada a mano: Carlos Mayolo, título idéntico, 1983, Colombia. La lámina no trae año y dice 94 min contra 86 en TMDB (Proimágenes, que también la tiene, da otra cifra): con la duración como única prueba, el candado a ±3 la rechaza. Es la única obra de Mayolo con ese título.",
    "_director": "Carlos Mayolo",
-   "_sondeado": "2026-10-11",
+   "_sondeado": "2026-10-27",
    "poster": "/assets/mamut-2026/carne-de-tu-carne.jpg",
    "posterSource": "tmdb"
   },
@@ -198,7 +214,7 @@
    "synopsis_en": "Each window a look, a sojourn, where dreams rest. Dreams which project themselves towards outside the window. A new window, an obtained goal. A new sojourn which one dwells in with mixed feelings:  an unbelievable happiness, an emptiness. Starting from there, one tries to make up a dream. In that way, everyone of us rebuilds this paradise, which we will have to leave one day. Several times during this life in order to move into the newly imagined paradise. Thus, life could be considered a long row of windows, with us standing behind each of them.",
    "_verificado": "declarada a mano: Es «Vor dem Fenster», el trabajo de diploma de Santiago Herrera Gómez en la KHM Köln (1996, 25 min, 16 mm, ensayo documental): mismo autor, misma escuela, misma duración y formato que la lámina del festival («Desde la Ventana · 16 mm · 25 Min. · Un documental de Santiago Herrera G.»). Confirmado por Juan (30 sep). La sinopsis en inglés es la del catálogo de Oberhausen 1996 que cita la ficha de la escuela, literal; no hay versión en español.",
    "_director": "Santiago Herrera",
-   "_sondeado": "2026-10-11"
+   "_sondeado": "2026-10-27"
   },
   {
    "titulo": "El Perú es un lugar para morir",
@@ -227,8 +243,8 @@
    "titulo_original": "Our Home Was Buried in a Land We Could Never Find",
    "poster_path": "/sek5YZDIguocEvkRAaCcPb5wKW2.jpg",
    "synopsis_es": "“Esos diablos me quitaron todo, esos diablos me quitaron todo, esos diablos me quitaron todo”: este mantra de despojo se transfigura cada tanto en la familia, como una sentencia. Ellos anhelan reencontrarse con sus seres queridos desaparecidos, jugar de nuevo entre plataneras y seres fantásticos y… la casa… la casa quiere volver a ser hogar. Entre filmaciones caseras, archivos colectivos, imágenes familiares y una presencia espectral y mística, esta película habita los sueños y las pesadillas creadas por las huellas de la desaparición de lo amado. El ruido de las balas parece haber cesado; ahora la guerra parece distante, pero a su paso dejó un profundo dolor y la promesa de volver. Los amigos, la familia, el hogar y el territorio vuelven, invocados por este relato coral. El pasado es un fantasma y este filme especula sobre un paraíso y un infierno que ya no se pueden tocar, con la ilusión de habitar este nuevo lugar para conjurar en él un abrazo.",
-   "synopsis_en": "",
-   "genero": "",
+   "synopsis_en": "Home is gone; the house was paradise, and also hell. Though the war tried to destroy everything in its path, the family tries to return. Between longing and nightmare they build a new territory, a refuge where they find their friends and their community again. There they make it back to the big house, the amusement park of childhood, now inhabited by fantastical beings and spectres, where they try to conjure an embrace.",
+   "genero": "Documental",
    "anio_tmdb": 2026,
    "duracion_tmdb": 92,
    "pais_tmdb": "Colombia",
@@ -269,7 +285,13 @@
     }
    ],
    "poster": "/assets/mamut-2026/el-hogar-fue-sepultado-en-esa-tierra-que-nunca-pudimos-encon.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "_heredado": {
+    "genero": "catálogo w_R4FA9W7P4RY6 (cinemancia-2026, ficdeh-2026, ficma-2026, mamut-2026, midbo-2026)",
+    "title_en": "catálogo w_R4FA9W7P4RY6 (cinemancia-2026, ficdeh-2026, ficma-2026, mamut-2026, midbo-2026)",
+    "synopsis_en": "catálogo w_R4FA9W7P4RY6 (cinemancia-2026, ficdeh-2026, ficma-2026, mamut-2026, midbo-2026)"
+   },
+   "title_en": "Our Home Was Buried in a Land We Could Never Find"
   },
   {
    "titulo": "El silencio de las granadas",
@@ -285,7 +307,7 @@
    "lbSlug": "the-silence-of-pomegranates",
    "_verificado": "declarada a mano: TMDB la registra con su título inglés («The silence of pomegranates»; original «Il silenzio dei melograni»): Clara Baj, 9 min, igual que el festival. La búsqueda por el título en español no la devuelve. Su póster dice «Il silenzio dei melograni — un film di Clara Baj».",
    "_director": "Clara Baj",
-   "_sondeado": "2026-10-11",
+   "_sondeado": "2026-10-27",
    "poster": "/assets/mamut-2026/el-silencio-de-las-granadas.jpg",
    "posterSource": "tmdb"
   },
@@ -386,7 +408,7 @@
    "anio": 1996,
    "_verificado": "declarada a mano: Ficha de la KHM Köln «Der Geigenbauer (Eduardo Valdivia Rivera, labrador de violines)» de Santiago Herrera Gómez: 1996, 12:30, igual a los 12 min de la lámina del festival. Solo se toma el año: su sinopsis está en alemán y el país de producción no es claro.",
    "_director": "Santiago Herrera",
-   "_sondeado": "2026-10-11"
+   "_sondeado": "2026-10-27"
   },
   {
    "titulo": "Lolita en Honda",
@@ -394,7 +416,7 @@
    "titulo_original": "Lolita en Honda",
    "poster_path": "/sKIm7ZwfuBnKuGeHJAUOYhg8DlV.jpg",
    "synopsis_es": "Detrás de los ojos de Lolita hay un velo que ciega sus palabras. Es el recuerdo de una infancia que, aún en la vejez, le oscurece la vista y no le permite escapar. Cuando habla me parece intuir, por el eco de las historias que repite, un mundo espectral de hambre, abandono, el estigma social de una madre soltera, la magia del Río Magdalena y todas las ilusiones y demonios de esa niñez.",
-   "synopsis_en": "",
+   "synopsis_en": "Lolita en Honda is an intimate journey into family memory, in which Daniel Torres explores his grandmother's childhood to unravel the marks of abandonment and internalized violence that shaped her character.",
    "genero": "",
    "anio_tmdb": 0,
    "duracion_tmdb": 0,
@@ -420,7 +442,12 @@
     }
    ],
    "poster": "/assets/mamut-2026/lolita-en-honda.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "anio": 2026,
+   "_heredado": {
+    "anio": "catálogo w_R4FPSFY03SBY (cinemancia-2026, ficci-65, mamut-2026, midbo-2026)",
+    "synopsis_en": "catálogo w_R4FPSFY03SBY (cinemancia-2026, ficci-65, mamut-2026, midbo-2026)"
+   }
   },
   {
    "titulo": "Los no humanos",
@@ -525,7 +552,7 @@
    "lbSlug": "sol-de-niebla",
    "_verificado": "declarada a mano: ficha creada por nosotros el 8 oct para FILCMAR (María José Ibarra y Florentino Vargas, 2026, Colombia), con el afiche de la matriz de FILCMAR: misma obra, mismos directores y año que la lámina de Mamut.",
    "_director": "María José Ibarra y Florentino Vargas",
-   "_sondeado": "2026-10-11",
+   "_sondeado": "2026-10-27",
    "poster": "/assets/mamut-2026/sol-de-niebla.jpg",
    "posterSource": "tmdb"
   },
@@ -556,7 +583,7 @@
    "genero": "Documental",
    "_verificado": "declarada a mano: Proimágenes la registra como «Sueño sobre un mantel vacío» (1240, en singular): Victor Gaviria, 1981, 10 minutos, documental; su buscador es literal y el título corregido del festival («Sueños…», en plural) no la devuelve. No está en TMDB. Proimágenes no publica su afiche, y lo que pone como sinopsis es la resolución de clasificación de 1981, que no se usa.",
    "_director": "Víctor Gaviria",
-   "_sondeado": "2026-10-11"
+   "_sondeado": "2026-10-27"
   },
   {
    "titulo": "Una habitación en Bangkok",
@@ -664,7 +691,7 @@
    "lbSlug": "the-bombing-of-washington",
    "_verificado": "declarada a mano: TMDB la registra como «El bombardeo de Washington»: Luis Ospina, 1972, 1 min, los tres datos que imprime la lámina. La búsqueda por el título del festival («Bombardeo a Washington») no la devuelve, y por eso no casa sola. Se publica con el título del festival.",
    "_director": "Luis Ospina",
-   "_sondeado": "2026-10-11",
+   "_sondeado": "2026-10-27",
    "poster": "/assets/mamut-2026/bombardeo-a-washington.jpg",
    "posterSource": "tmdb"
   },
@@ -682,7 +709,7 @@
    "lbSlug": "bloody-flesh",
    "_verificado": "declarada a mano: Carlos Mayolo, título idéntico, 1983, Colombia. La lámina no trae año y dice 94 min contra 86 en TMDB (Proimágenes, que también la tiene, da otra cifra): con la duración como única prueba, el candado a ±3 la rechaza. Es la única obra de Mayolo con ese título.",
    "_director": "Carlos Mayolo",
-   "_sondeado": "2026-10-11",
+   "_sondeado": "2026-10-27",
    "poster": "/assets/mamut-2026/carne-de-tu-carne.jpg",
    "posterSource": "tmdb"
   },
@@ -760,7 +787,7 @@
    "synopsis_en": "Each window a look, a sojourn, where dreams rest. Dreams which project themselves towards outside the window. A new window, an obtained goal. A new sojourn which one dwells in with mixed feelings:  an unbelievable happiness, an emptiness. Starting from there, one tries to make up a dream. In that way, everyone of us rebuilds this paradise, which we will have to leave one day. Several times during this life in order to move into the newly imagined paradise. Thus, life could be considered a long row of windows, with us standing behind each of them.",
    "_verificado": "declarada a mano: Es «Vor dem Fenster», el trabajo de diploma de Santiago Herrera Gómez en la KHM Köln (1996, 25 min, 16 mm, ensayo documental): mismo autor, misma escuela, misma duración y formato que la lámina del festival («Desde la Ventana · 16 mm · 25 Min. · Un documental de Santiago Herrera G.»). Confirmado por Juan (30 sep). La sinopsis en inglés es la del catálogo de Oberhausen 1996 que cita la ficha de la escuela, literal; no hay versión en español.",
    "_director": "Santiago Herrera",
-   "_sondeado": "2026-10-11"
+   "_sondeado": "2026-10-27"
   },
   "El Perú es un lugar para morir": {
    "tmdb_id": 1608544,
@@ -787,8 +814,8 @@
    "titulo_original": "Our Home Was Buried in a Land We Could Never Find",
    "poster_path": "/sek5YZDIguocEvkRAaCcPb5wKW2.jpg",
    "synopsis_es": "“Esos diablos me quitaron todo, esos diablos me quitaron todo, esos diablos me quitaron todo”: este mantra de despojo se transfigura cada tanto en la familia, como una sentencia. Ellos anhelan reencontrarse con sus seres queridos desaparecidos, jugar de nuevo entre plataneras y seres fantásticos y… la casa… la casa quiere volver a ser hogar. Entre filmaciones caseras, archivos colectivos, imágenes familiares y una presencia espectral y mística, esta película habita los sueños y las pesadillas creadas por las huellas de la desaparición de lo amado. El ruido de las balas parece haber cesado; ahora la guerra parece distante, pero a su paso dejó un profundo dolor y la promesa de volver. Los amigos, la familia, el hogar y el territorio vuelven, invocados por este relato coral. El pasado es un fantasma y este filme especula sobre un paraíso y un infierno que ya no se pueden tocar, con la ilusión de habitar este nuevo lugar para conjurar en él un abrazo.",
-   "synopsis_en": "",
-   "genero": "",
+   "synopsis_en": "Home is gone; the house was paradise, and also hell. Though the war tried to destroy everything in its path, the family tries to return. Between longing and nightmare they build a new territory, a refuge where they find their friends and their community again. There they make it back to the big house, the amusement park of childhood, now inhabited by fantastical beings and spectres, where they try to conjure an embrace.",
+   "genero": "Documental",
    "anio_tmdb": 2026,
    "duracion_tmdb": 92,
    "pais_tmdb": "Colombia",
@@ -829,7 +856,13 @@
     }
    ],
    "poster": "/assets/mamut-2026/el-hogar-fue-sepultado-en-esa-tierra-que-nunca-pudimos-encon.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "_heredado": {
+    "genero": "catálogo w_R4FA9W7P4RY6 (cinemancia-2026, ficdeh-2026, ficma-2026, mamut-2026, midbo-2026)",
+    "title_en": "catálogo w_R4FA9W7P4RY6 (cinemancia-2026, ficdeh-2026, ficma-2026, mamut-2026, midbo-2026)",
+    "synopsis_en": "catálogo w_R4FA9W7P4RY6 (cinemancia-2026, ficdeh-2026, ficma-2026, mamut-2026, midbo-2026)"
+   },
+   "title_en": "Our Home Was Buried in a Land We Could Never Find"
   },
   "El silencio de las granadas": {
    "tmdb_id": 1595296,
@@ -844,7 +877,7 @@
    "lbSlug": "the-silence-of-pomegranates",
    "_verificado": "declarada a mano: TMDB la registra con su título inglés («The silence of pomegranates»; original «Il silenzio dei melograni»): Clara Baj, 9 min, igual que el festival. La búsqueda por el título en español no la devuelve. Su póster dice «Il silenzio dei melograni — un film di Clara Baj».",
    "_director": "Clara Baj",
-   "_sondeado": "2026-10-11",
+   "_sondeado": "2026-10-27",
    "poster": "/assets/mamut-2026/el-silencio-de-las-granadas.jpg",
    "posterSource": "tmdb"
   },
@@ -940,14 +973,14 @@
    "anio": 1996,
    "_verificado": "declarada a mano: Ficha de la KHM Köln «Der Geigenbauer (Eduardo Valdivia Rivera, labrador de violines)» de Santiago Herrera Gómez: 1996, 12:30, igual a los 12 min de la lámina del festival. Solo se toma el año: su sinopsis está en alemán y el país de producción no es claro.",
    "_director": "Santiago Herrera",
-   "_sondeado": "2026-10-11"
+   "_sondeado": "2026-10-27"
   },
   "Lolita en Honda": {
    "tmdb_id": 1665546,
    "titulo_original": "Lolita en Honda",
    "poster_path": "/sKIm7ZwfuBnKuGeHJAUOYhg8DlV.jpg",
    "synopsis_es": "Detrás de los ojos de Lolita hay un velo que ciega sus palabras. Es el recuerdo de una infancia que, aún en la vejez, le oscurece la vista y no le permite escapar. Cuando habla me parece intuir, por el eco de las historias que repite, un mundo espectral de hambre, abandono, el estigma social de una madre soltera, la magia del Río Magdalena y todas las ilusiones y demonios de esa niñez.",
-   "synopsis_en": "",
+   "synopsis_en": "Lolita en Honda is an intimate journey into family memory, in which Daniel Torres explores his grandmother's childhood to unravel the marks of abandonment and internalized violence that shaped her character.",
    "genero": "",
    "anio_tmdb": 0,
    "duracion_tmdb": 0,
@@ -973,7 +1006,12 @@
     }
    ],
    "poster": "/assets/mamut-2026/lolita-en-honda.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "anio": 2026,
+   "_heredado": {
+    "anio": "catálogo w_R4FPSFY03SBY (cinemancia-2026, ficci-65, mamut-2026, midbo-2026)",
+    "synopsis_en": "catálogo w_R4FPSFY03SBY (cinemancia-2026, ficci-65, mamut-2026, midbo-2026)"
+   }
   },
   "Los no humanos": {
    "tmdb_id": 1584750,
@@ -1073,7 +1111,7 @@
    "lbSlug": "sol-de-niebla",
    "_verificado": "declarada a mano: ficha creada por nosotros el 8 oct para FILCMAR (María José Ibarra y Florentino Vargas, 2026, Colombia), con el afiche de la matriz de FILCMAR: misma obra, mismos directores y año que la lámina de Mamut.",
    "_director": "María José Ibarra y Florentino Vargas",
-   "_sondeado": "2026-10-11",
+   "_sondeado": "2026-10-27",
    "poster": "/assets/mamut-2026/sol-de-niebla.jpg",
    "posterSource": "tmdb"
   },
@@ -1102,7 +1140,7 @@
    "genero": "Documental",
    "_verificado": "declarada a mano: Proimágenes la registra como «Sueño sobre un mantel vacío» (1240, en singular): Victor Gaviria, 1981, 10 minutos, documental; su buscador es literal y el título corregido del festival («Sueños…», en plural) no la devuelve. No está en TMDB. Proimágenes no publica su afiche, y lo que pone como sinopsis es la resolución de clasificación de 1981, que no se usa.",
    "_director": "Víctor Gaviria",
-   "_sondeado": "2026-10-11"
+   "_sondeado": "2026-10-27"
   },
   "Una habitación en Bangkok": {
    "tmdb_id": 1659048,
@@ -1128,12 +1166,7 @@
  "sin_ficha": [
   "Belleza letal",
   "Lo que tengo",
-  "Muestra de cortos 1",
-  "Muestra de cortos 2",
   "Muestra: Archivistas salvajes",
-  "Programa de cortos 1",
-  "Programa de cortos 2",
-  "Programa inédito: Santiago Herrera",
   "Programa: Alberto Giraldo",
   "Sólo algunos recuerdos quedan",
   "These are not our memories",
@@ -1143,61 +1176,41 @@
  "_sin_ficha_sondeo": {
   "Belleza letal": {
    "director": "Ron Márquez, Andrés Felipe Benavides, Fiama Castro, Cindy Caffroni, Juan Camilo Olmos, Valeria Rua, Felipe Moreno, Dante Hernández, Santiago Rodríguez, Laura Gabay García, Moises Busigo, Samuel Moreno Alvarez",
-   "fecha": "2026-10-09"
+   "fecha": "2026-10-27"
   },
   "Lo que tengo": {
    "director": "Sophia De Los Rios y David Rodriguez",
-   "fecha": "2026-10-09"
-  },
-  "Muestra de cortos 1": {
-   "director": "",
-   "fecha": "2026-10-09"
-  },
-  "Muestra de cortos 2": {
-   "director": "",
-   "fecha": "2026-10-09"
+   "fecha": "2026-10-27"
   },
   "Muestra: Archivistas salvajes": {
    "director": "",
-   "fecha": "2026-10-09"
-  },
-  "Programa de cortos 1": {
-   "director": "",
-   "fecha": "2026-10-09"
-  },
-  "Programa de cortos 2": {
-   "director": "",
-   "fecha": "2026-10-09"
-  },
-  "Programa inédito: Santiago Herrera": {
-   "director": "",
-   "fecha": "2026-10-09"
+   "fecha": "2026-10-27"
   },
   "Programa: Alberto Giraldo": {
    "director": "",
-   "fecha": "2026-10-09"
+   "fecha": "2026-10-27"
   },
   "Sólo algunos recuerdos quedan": {
    "director": "Mauricio Ortega",
-   "fecha": "2026-10-09"
+   "fecha": "2026-10-27"
   },
   "These are not our memories": {
    "director": "Aseneth Suárez Ruiz, Patrick Alexander",
-   "fecha": "2026-10-09"
+   "fecha": "2026-10-27"
   },
   "Un cuerpo cansado de esperar": {
    "director": "Melissa Jurado",
-   "fecha": "2026-10-09"
+   "fecha": "2026-10-27"
   },
   "Yo soy la muerte": {
    "director": "Daniel Cortés",
-   "fecha": "2026-10-09"
+   "fecha": "2026-10-27"
   }
  },
  "_fuentes": [
   {
    "fuente": "proimagenescolombia.com — la base oficial del cine colombiano",
-   "capturado": "2026-10-11",
+   "capturado": "2026-10-27",
    "que_aporta": "país, año, duración, género, sinopsis y afiche de las obras que TMDB no registra",
    "metodo": "búsqueda por título en los catálogos de largos y cortos, y el MISMO candado del director que TMDB: el buscador es laxo y también mira dentro de la sinopsis"
   }

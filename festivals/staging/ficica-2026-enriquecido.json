@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, emparejado con ficha_verifica() (director + año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-10-25"
+  "capturado": "2026-10-27"
  },
  "obras": [
   {
@@ -72,7 +72,7 @@
    "posterSource": "oficial",
    "_verificado": "declarada a mano: El afiche OFICIAL del festival manda sobre el de TMDB (jerarquía del póster): es el que ya publicamos en FICCALI 2026. Desde el 20 oct la web de FICICA da el director, la cascada casa la ficha de TMDB y su afiche pisaba el oficial. Declarado el 20 oct 2026.",
    "_director": "Juan Manuel González",
-   "_sondeado": "2026-10-25",
+   "_sondeado": "2026-10-27",
    "_heredado": {
     "synopsis_es": "catálogo w_R4H50AY1TEJ8 (ficcali-2026, ficica-2026, villadelcine-2026)"
    }
@@ -89,6 +89,7 @@
      "sinopsis": "Tras la conquista de la Luna por Estados Unidos, el primer astronauta presencia la llegada de una cápsula soviética. Decidido a defender el nuevo territorio, la persigue hasta el lado oscuro, donde descubre los restos de una carrera espacial fallida y a un tercer contendiente que amenaza no solo la Luna, sino el orden universal."
     }
    ],
+   "_sinopsis_de": "ya publicada en anibia-2026",
    "_verificado": "ya publicada en anibia-2026: se reusa su sinopsis",
    "sinopsis": "Tras la conquista de la Luna por Estados Unidos, el primer astronauta presencia la llegada de una cápsula soviética. Decidido a defender el nuevo territorio, la persigue hasta el lado oscuro, donde descubre los restos de una carrera espacial fallida y a un tercer contendiente que amenaza no solo la Luna, sino el orden universal.",
    "pais": "Colombia",
@@ -117,6 +118,7 @@
      "duration": "26 min"
     }
    ],
+   "_afiche_de": "ya publicada en ficci-65",
    "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_afiche%20belleza%20letal%20-%20Samuel%20Moreno.jpg?itok=ZrOw0nvZ",
    "_verificado": "ya publicada en ficci-65: se reusa su afiche",
    "pais": "Colombia",
@@ -296,6 +298,28 @@
    }
   },
   {
+   "titulo": "Compraventa",
+   "tmdb_id": 1469673,
+   "titulo_original": "Compraventa",
+   "poster_path": "/uhFXfRlSAkH69agUXHeagOJ5BVT.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "In a merchant neighborhood of Buenos Aires, Yoni survives through smuggling and a few fleeting alliances. Under the shadow of his partner and mentor, Leon, he strives to advance in a world that judges him by his appearance. A promising business deal seems poised to change his fate, but an unexpected setback forces him to confront his limitation",
+   "genero": "Suspense",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 10,
+   "pais_tmdb": "",
+   "lbSlug": "compraventa",
+   "_verificado": "declarada a mano: 27 oct 2026: la misma ficha que publica Miradas (catálogo w_6XS3BRDR0PG5). Misma obra por dirección: la tabla de programas de FICICA (fuentes/ficica-2026/programas.html, fila 117) da «COMPRAVENTA · Argentina · Ficción · Thomas Murphy», y TMDB 1469673 es «Compraventa» (AR, 2025) de Tomás Murphy.",
+   "_director": "",
+   "_sondeado": "2026-10-27",
+   "poster": "/assets/ficica-2026/compraventa.jpg",
+   "posterSource": "tmdb",
+   "director_heredado": "Tomás Murphy",
+   "_heredado": {
+    "director_heredado": "catálogo w_6XS3BRDR0PG5 (ficica-2026, miradas-2026)"
+   }
+  },
+  {
    "titulo": "Decaer",
    "tmdb_id": 1668881,
    "titulo_original": "decaer",
@@ -410,6 +434,7 @@
      "sinopsis": "David, un niño negro de seis años, sufre acoso escolar por el color de su piel y la falta de dientes. Cuando le piden que lleve una foto escolar, la esconde de sus padres para evitar más burlas. Pero su bisabuelo Leandro se entera y le fabrica una dentadura postiza de yuca. Juntos, se preparan para la foto."
     }
    ],
+   "_sinopsis_de": "ya publicada en popayan-2026",
    "_verificado": "ya publicada en popayan-2026: se reusa su sinopsis",
    "sinopsis": "David, un niño negro de seis años, sufre acoso escolar por el color de su piel y la falta de dientes. Cuando le piden que lleve una foto escolar, la esconde de sus padres para evitar más burlas. Pero su bisabuelo Leandro se entera y le fabrica una dentadura postiza de yuca. Juntos, se preparan para la foto.",
    "pais": "Colombia",
@@ -486,7 +511,7 @@
    "lbSlug": "noras-ark",
    "_verificado": "declarada a mano: Existe en TMDB con otro título o sin año ni duración, y el candado no la casaba sola: «Nora's ark» (2026), Endre Lund Eriksen; mismo director que publica FICICA. Verificada el 11 oct 2026.",
    "_director": "Endre Lund Eriksen, Isak Gjertsen",
-   "_sondeado": "2026-10-25",
+   "_sondeado": "2026-10-27",
    "poster": "/assets/ficica-2026/el-arca-de-nora.jpg",
    "posterSource": "tmdb"
   },
@@ -506,7 +531,7 @@
    "posterSource": "oficial",
    "_verificado": "declarada a mano: El afiche OFICIAL del festival manda sobre el de TMDB (jerarquía del póster): es el que ya publicamos en FICCALI 2026. Desde el 20 oct la web de FICICA da el director, la cascada casa la ficha de TMDB y su afiche pisaba el oficial. Declarado el 20 oct 2026.",
    "_director": "Bernardo Hernández",
-   "_sondeado": "2026-10-25"
+   "_sondeado": "2026-10-27"
   },
   {
    "titulo": "El maestro de la piquería",
@@ -524,7 +549,7 @@
    "posterSource": "oficial",
    "_verificado": "declarada a mano: El afiche OFICIAL del festival manda sobre el de TMDB (jerarquía del póster): es el que ya publicamos en FICCALI 2026. Desde el 20 oct la web de FICICA da el director, la cascada casa la ficha de TMDB y su afiche pisaba el oficial. Declarado el 20 oct 2026.",
    "_director": "Yinet Molero",
-   "_sondeado": "2026-10-25",
+   "_sondeado": "2026-10-27",
    "_heredado": {
     "genero": "catálogo w_R4H5QGK8DBTH (ficcali-2026, ficica-2026)"
    }
@@ -580,6 +605,7 @@
      "sinopsis": "Patricia Maldonado, Ariel Merchán ,Cecilia Ramírez, Mateo Galvis, Leodan Rojas, Randy Zambrano, Álvaro Quemba, Bernardo Sánchez, Wilson Cárdenas, Martha Cárdenas, Aura Rodríguez, Luis Blanco, Hirma Lunar, Diana Latorre, Producción: Merchán Producciones"
     }
    ],
+   "_sinopsis_de": "ya publicada en popayan-2026",
    "_verificado": "ya publicada en popayan-2026: se reusa su sinopsis",
    "sinopsis": "Patricia Maldonado, Ariel Merchán ,Cecilia Ramírez, Mateo Galvis, Leodan Rojas, Randy Zambrano, Álvaro Quemba, Bernardo Sánchez, Wilson Cárdenas, Martha Cárdenas, Aura Rodríguez, Luis Blanco, Hirma Lunar, Diana Latorre, Producción: Merchán Producciones",
    "pais": "Colombia",
@@ -734,7 +760,7 @@
    "posterSource": "oficial",
    "_verificado": "declarada a mano: El afiche OFICIAL del festival manda sobre el de TMDB (jerarquía del póster): es el que ya publicamos en FICCALI 2026. Desde el 20 oct la web de FICICA da el director, la cascada casa la ficha de TMDB y su afiche pisaba el oficial. Declarado el 20 oct 2026.",
    "_director": "Basir Ahmed",
-   "_sondeado": "2026-10-25",
+   "_sondeado": "2026-10-27",
    "_heredado": {
     "synopsis_es": "catálogo w_R4H634PN0T5B (ficcali-2026, ficica-2026)"
    }
@@ -965,7 +991,7 @@
    "posterSource": "tmdb",
    "anio": 2025,
    "_heredado": {
-    "anio": "catálogo w_R4J7H92GTG6Q (ficmontanas-2026, jardin-2026, popayan-2026, siembrafest-2026, villadelcine-2026)"
+    "anio": "catálogo w_R4J7H92GTG6Q (ficmontanas-2026, jardin-2026, miradas-2026, popayan-2026, siembrafest-2026, villadelcine-2026)"
    }
   },
   {
@@ -1036,7 +1062,7 @@
    "lbSlug": "buen-vivir-nutse-canseye",
    "_verificado": "declarada a mano: Existe en TMDB con otro título o sin año ni duración, y el candado no la casaba sola: «buen vivir – ñutse canseye» (2025), Zoé Nathalie Kugler; mismo director que publica FICICA. Verificada el 11 oct 2026.",
    "_director": "Zoé Nathalie Kugler",
-   "_sondeado": "2026-10-25",
+   "_sondeado": "2026-10-27",
    "poster": "/assets/ficica-2026/living-well.jpg",
    "posterSource": "tmdb"
   },
@@ -1088,9 +1114,23 @@
     {
      "festival": "guatape-2026",
      "titulo": "Luis Antonio",
+     "poster": "/assets/miradas-2026/luis-antonio.jpg",
+     "posterSource": "oficial",
      "country": "Colombia",
      "year": 2025,
      "duration": "12 min",
+     "genre": "Ficción",
+     "sinopsis": "La mañana de un sábado Luis Antonio, un niño de 8 años, quiere aprender a montar en bicicleta. Pero su madre tiene que trabajar y lo deja al cuidado de Ofelia, su estricta vecina."
+    },
+    {
+     "festival": "miradas-2026",
+     "titulo": "Luis Antonio",
+     "poster": "/assets/miradas-2026/luis-antonio.jpg",
+     "posterSource": "oficial",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "12 min",
+     "genre": "Ficción",
      "sinopsis": "La mañana de un sábado Luis Antonio, un niño de 8 años, quiere aprender a montar en bicicleta. Pero su madre tiene que trabajar y lo deja al cuidado de Ofelia, su estricta vecina."
     },
     {
@@ -1102,11 +1142,15 @@
      "sinopsis": "La mañana de un sábado Luis Antonio, un niño de 8 años, quiere aprender a montar en bicicleta. Pero su madre tiene que trabajar y lo deja al cuidado de Ofelia, su estricta vecina."
     }
    ],
-   "_verificado": "ya publicada en guatape-2026: se reusa su sinopsis",
+   "_afiche_de": "ya publicada en guatape-2026",
+   "_sinopsis_de": "ya publicada en guatape-2026",
+   "poster": "/assets/miradas-2026/luis-antonio.jpg",
+   "_verificado": "ya publicada en guatape-2026: se reusa su afiche",
    "sinopsis": "La mañana de un sábado Luis Antonio, un niño de 8 años, quiere aprender a montar en bicicleta. Pero su madre tiene que trabajar y lo deja al cuidado de Ofelia, su estricta vecina.",
    "pais": "Colombia",
    "anio": 2025,
-   "duracion_tmdb": 12
+   "duracion_tmdb": 12,
+   "genero": "Ficción"
   },
   {
    "titulo": "Malas posturas",
@@ -1193,7 +1237,7 @@
    "lbSlug": "memoria-de-pivete",
    "_verificado": "declarada a mano: Existe en TMDB con otro título o sin año ni duración, y el candado no la casaba sola: «Memória de Pivete», Pedro Santi; mismo director que publica FICICA. Verificada el 11 oct 2026.",
    "_director": "Pedro Santi",
-   "_sondeado": "2026-10-25",
+   "_sondeado": "2026-10-27",
    "poster": "/assets/ficica-2026/memoria-de-un-pibe.jpg",
    "posterSource": "tmdb",
    "title_en": "Memória de Pivete",
@@ -1363,7 +1407,7 @@
    "lbSlug": "nativity-scene",
    "_verificado": "declarada a mano: Existe en TMDB con otro título o sin año ni duración, y el candado no la casaba sola: «Nativity Scene» (2025), Felipe Bibian; mismo director que publica FICICA. Verificada el 11 oct 2026.",
    "_director": "Felipe Bibian",
-   "_sondeado": "2026-10-25",
+   "_sondeado": "2026-10-27",
    "poster": "/assets/ficica-2026/presepio-el-pesebre.jpg",
    "posterSource": "tmdb",
    "_heredado": {
@@ -1487,7 +1531,7 @@
    "posterSource": "oficial",
    "_verificado": "declarada a mano: El afiche OFICIAL del festival manda sobre el de TMDB (jerarquía del póster): es el que ya publicamos en FICCALI 2026. Desde el 20 oct la web de FICICA da el director, la cascada casa la ficha de TMDB y su afiche pisaba el oficial. Declarado el 20 oct 2026.",
    "_director": "Fran Menchón",
-   "_sondeado": "2026-10-25"
+   "_sondeado": "2026-10-27"
   },
   {
    "titulo": "Refraccion",
@@ -1575,7 +1619,7 @@
    "lbSlug": "replay-2026",
    "_verificado": "declarada a mano: Existe en TMDB con otro título o sin año ni duración, y el candado no la casaba sola: «Replay» (2026), Simón Matallana Nossa; mismo director que publica FICICA. Verificada el 11 oct 2026.",
    "_director": "Simón Matallana",
-   "_sondeado": "2026-10-25",
+   "_sondeado": "2026-10-27",
    "poster": "/assets/ficica-2026/replay.jpg",
    "posterSource": "tmdb",
    "_heredado": {
@@ -1615,7 +1659,7 @@
    "lbSlug": "saq-nikte-and-the-spirit-of-the-mask",
    "_verificado": "declarada a mano: Existe en TMDB con otro título o sin año ni duración, y el candado no la casaba sola: «Saq Nikté and the Spirit of the Mask» (2025), Ester Weiner; mismo director que publica FICICA. Verificada el 11 oct 2026.",
    "_director": "Ester Weiner",
-   "_sondeado": "2026-10-25",
+   "_sondeado": "2026-10-27",
    "poster": "/assets/ficica-2026/saq-nikte-y-el-espiritu-de-la-mascara.jpg",
    "posterSource": "tmdb"
   },
@@ -1839,7 +1883,6 @@
    "tmdb_id": 1555607,
    "titulo_original": "肉食动物",
    "poster_path": "/dbW65DccBhZJJ20iDFHP7VUfebz.jpg",
-   "synopsis_es": "La fuga de un tigre rompe el largo silencio entre un padre y su hijo, y por la grieta asoma un amor contenido.",
    "synopsis_en": "A tiger's escape shatters the long silence between a father and his son, with suppressed love shining through the crack.",
    "genero": "Drama",
    "anio_tmdb": 2025,
@@ -1851,6 +1894,7 @@
    "_sondeado": "2026-10-18",
    "poster": "/assets/ficica-2026/when-the-tiger-roars.jpg",
    "posterSource": "tmdb",
+   "synopsis_es": "La fuga de un tigre rompe el largo silencio entre un padre y su hijo, y por la grieta asoma un amor contenido.",
    "_heredado": {
     "synopsis_es": "catálogo w_6XS3FP1HZPJ6 (cortoscali-2026, ficica-2026)"
    }
@@ -1955,7 +1999,7 @@
    "posterSource": "oficial",
    "_verificado": "declarada a mano: El afiche OFICIAL del festival manda sobre el de TMDB (jerarquía del póster): es el que ya publicamos en FICCALI 2026. Desde el 20 oct la web de FICICA da el director, la cascada casa la ficha de TMDB y su afiche pisaba el oficial. Declarado el 20 oct 2026.",
    "_director": "Juan Manuel González",
-   "_sondeado": "2026-10-25",
+   "_sondeado": "2026-10-27",
    "_heredado": {
     "synopsis_es": "catálogo w_R4H50AY1TEJ8 (ficcali-2026, ficica-2026, villadelcine-2026)"
    }
@@ -2128,6 +2172,27 @@
     "genero": "catálogo w_R4EP71550W43 (bhff-2026, cineautopsia-2026, fantasmagoria-2026, fantasofest-2026, ficica-2026, ficpa-2026, narrarelfuturo-2026, popayan-2026)"
    }
   },
+  "Compraventa": {
+   "tmdb_id": 1469673,
+   "titulo_original": "Compraventa",
+   "poster_path": "/uhFXfRlSAkH69agUXHeagOJ5BVT.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "In a merchant neighborhood of Buenos Aires, Yoni survives through smuggling and a few fleeting alliances. Under the shadow of his partner and mentor, Leon, he strives to advance in a world that judges him by his appearance. A promising business deal seems poised to change his fate, but an unexpected setback forces him to confront his limitation",
+   "genero": "Suspense",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 10,
+   "pais_tmdb": "",
+   "lbSlug": "compraventa",
+   "_verificado": "declarada a mano: 27 oct 2026: la misma ficha que publica Miradas (catálogo w_6XS3BRDR0PG5). Misma obra por dirección: la tabla de programas de FICICA (fuentes/ficica-2026/programas.html, fila 117) da «COMPRAVENTA · Argentina · Ficción · Thomas Murphy», y TMDB 1469673 es «Compraventa» (AR, 2025) de Tomás Murphy.",
+   "_director": "",
+   "_sondeado": "2026-10-27",
+   "poster": "/assets/ficica-2026/compraventa.jpg",
+   "posterSource": "tmdb",
+   "director_heredado": "Tomás Murphy",
+   "_heredado": {
+    "director_heredado": "catálogo w_6XS3BRDR0PG5 (ficica-2026, miradas-2026)"
+   }
+  },
   "Decaer": {
    "tmdb_id": 1668881,
    "titulo_original": "decaer",
@@ -2295,7 +2360,7 @@
    "lbSlug": "noras-ark",
    "_verificado": "declarada a mano: Existe en TMDB con otro título o sin año ni duración, y el candado no la casaba sola: «Nora's ark» (2026), Endre Lund Eriksen; mismo director que publica FICICA. Verificada el 11 oct 2026.",
    "_director": "Endre Lund Eriksen, Isak Gjertsen",
-   "_sondeado": "2026-10-25",
+   "_sondeado": "2026-10-27",
    "poster": "/assets/ficica-2026/el-arca-de-nora.jpg",
    "posterSource": "tmdb"
   },
@@ -2314,7 +2379,7 @@
    "posterSource": "oficial",
    "_verificado": "declarada a mano: El afiche OFICIAL del festival manda sobre el de TMDB (jerarquía del póster): es el que ya publicamos en FICCALI 2026. Desde el 20 oct la web de FICICA da el director, la cascada casa la ficha de TMDB y su afiche pisaba el oficial. Declarado el 20 oct 2026.",
    "_director": "Bernardo Hernández",
-   "_sondeado": "2026-10-25"
+   "_sondeado": "2026-10-27"
   },
   "El maestro de la piquería": {
    "tmdb_id": 1794001,
@@ -2331,7 +2396,7 @@
    "posterSource": "oficial",
    "_verificado": "declarada a mano: El afiche OFICIAL del festival manda sobre el de TMDB (jerarquía del póster): es el que ya publicamos en FICCALI 2026. Desde el 20 oct la web de FICICA da el director, la cascada casa la ficha de TMDB y su afiche pisaba el oficial. Declarado el 20 oct 2026.",
    "_director": "Yinet Molero",
-   "_sondeado": "2026-10-25",
+   "_sondeado": "2026-10-27",
    "_heredado": {
     "genero": "catálogo w_R4H5QGK8DBTH (ficcali-2026, ficica-2026)"
    }
@@ -2516,7 +2581,7 @@
    "posterSource": "oficial",
    "_verificado": "declarada a mano: El afiche OFICIAL del festival manda sobre el de TMDB (jerarquía del póster): es el que ya publicamos en FICCALI 2026. Desde el 20 oct la web de FICICA da el director, la cascada casa la ficha de TMDB y su afiche pisaba el oficial. Declarado el 20 oct 2026.",
    "_director": "Basir Ahmed",
-   "_sondeado": "2026-10-25",
+   "_sondeado": "2026-10-27",
    "_heredado": {
     "synopsis_es": "catálogo w_R4H634PN0T5B (ficcali-2026, ficica-2026)"
    }
@@ -2729,7 +2794,7 @@
    "posterSource": "tmdb",
    "anio": 2025,
    "_heredado": {
-    "anio": "catálogo w_R4J7H92GTG6Q (ficmontanas-2026, jardin-2026, popayan-2026, siembrafest-2026, villadelcine-2026)"
+    "anio": "catálogo w_R4J7H92GTG6Q (ficmontanas-2026, jardin-2026, miradas-2026, popayan-2026, siembrafest-2026, villadelcine-2026)"
    }
   },
   "Las zapatillas mágicas": {
@@ -2796,7 +2861,7 @@
    "lbSlug": "buen-vivir-nutse-canseye",
    "_verificado": "declarada a mano: Existe en TMDB con otro título o sin año ni duración, y el candado no la casaba sola: «buen vivir – ñutse canseye» (2025), Zoé Nathalie Kugler; mismo director que publica FICICA. Verificada el 11 oct 2026.",
    "_director": "Zoé Nathalie Kugler",
-   "_sondeado": "2026-10-25",
+   "_sondeado": "2026-10-27",
    "poster": "/assets/ficica-2026/living-well.jpg",
    "posterSource": "tmdb"
   },
@@ -2923,7 +2988,7 @@
    "lbSlug": "memoria-de-pivete",
    "_verificado": "declarada a mano: Existe en TMDB con otro título o sin año ni duración, y el candado no la casaba sola: «Memória de Pivete», Pedro Santi; mismo director que publica FICICA. Verificada el 11 oct 2026.",
    "_director": "Pedro Santi",
-   "_sondeado": "2026-10-25",
+   "_sondeado": "2026-10-27",
    "poster": "/assets/ficica-2026/memoria-de-un-pibe.jpg",
    "posterSource": "tmdb",
    "title_en": "Memória de Pivete",
@@ -3088,7 +3153,7 @@
    "lbSlug": "nativity-scene",
    "_verificado": "declarada a mano: Existe en TMDB con otro título o sin año ni duración, y el candado no la casaba sola: «Nativity Scene» (2025), Felipe Bibian; mismo director que publica FICICA. Verificada el 11 oct 2026.",
    "_director": "Felipe Bibian",
-   "_sondeado": "2026-10-25",
+   "_sondeado": "2026-10-27",
    "poster": "/assets/ficica-2026/presepio-el-pesebre.jpg",
    "posterSource": "tmdb",
    "_heredado": {
@@ -3209,7 +3274,7 @@
    "posterSource": "oficial",
    "_verificado": "declarada a mano: El afiche OFICIAL del festival manda sobre el de TMDB (jerarquía del póster): es el que ya publicamos en FICCALI 2026. Desde el 20 oct la web de FICICA da el director, la cascada casa la ficha de TMDB y su afiche pisaba el oficial. Declarado el 20 oct 2026.",
    "_director": "Fran Menchón",
-   "_sondeado": "2026-10-25"
+   "_sondeado": "2026-10-27"
   },
   "Refraccion": {
    "tmdb_id": 1584776,
@@ -3295,7 +3360,7 @@
    "lbSlug": "replay-2026",
    "_verificado": "declarada a mano: Existe en TMDB con otro título o sin año ni duración, y el candado no la casaba sola: «Replay» (2026), Simón Matallana Nossa; mismo director que publica FICICA. Verificada el 11 oct 2026.",
    "_director": "Simón Matallana",
-   "_sondeado": "2026-10-25",
+   "_sondeado": "2026-10-27",
    "poster": "/assets/ficica-2026/replay.jpg",
    "posterSource": "tmdb",
    "_heredado": {
@@ -3333,7 +3398,7 @@
    "lbSlug": "saq-nikte-and-the-spirit-of-the-mask",
    "_verificado": "declarada a mano: Existe en TMDB con otro título o sin año ni duración, y el candado no la casaba sola: «Saq Nikté and the Spirit of the Mask» (2025), Ester Weiner; mismo director que publica FICICA. Verificada el 11 oct 2026.",
    "_director": "Ester Weiner",
-   "_sondeado": "2026-10-25",
+   "_sondeado": "2026-10-27",
    "poster": "/assets/ficica-2026/saq-nikte-y-el-espiritu-de-la-mascara.jpg",
    "posterSource": "tmdb"
   },
@@ -3535,7 +3600,6 @@
    "tmdb_id": 1555607,
    "titulo_original": "肉食动物",
    "poster_path": "/dbW65DccBhZJJ20iDFHP7VUfebz.jpg",
-   "synopsis_es": "La fuga de un tigre rompe el largo silencio entre un padre y su hijo, y por la grieta asoma un amor contenido.",
    "synopsis_en": "A tiger's escape shatters the long silence between a father and his son, with suppressed love shining through the crack.",
    "genero": "Drama",
    "anio_tmdb": 2025,
@@ -3547,6 +3611,7 @@
    "_sondeado": "2026-10-18",
    "poster": "/assets/ficica-2026/when-the-tiger-roars.jpg",
    "posterSource": "tmdb",
+   "synopsis_es": "La fuga de un tigre rompe el largo silencio entre un padre y su hijo, y por la grieta asoma un amor contenido.",
    "_heredado": {
     "synopsis_es": "catálogo w_6XS3FP1HZPJ6 (cortoscali-2026, ficica-2026)"
    }
@@ -3563,7 +3628,6 @@
   "Carne de segunda",
   "Chro",
   "Citizenship test",
-  "Compraventa",
   "Concierto sentido",
   "Dientes de yuca",
   "Dulce",
@@ -3612,7 +3676,7 @@
   },
   "Arlequín": {
    "director": "Rubén Casalins",
-   "fecha": "2026-10-20"
+   "fecha": "2026-10-27"
   },
   "Bartolo": {
    "director": "Sergio Andrés Fernández Buitrago",
@@ -3624,11 +3688,11 @@
   },
   "Cabica": {
    "director": "Heidy Helena Mejia Sánchez",
-   "fecha": "2026-10-20"
+   "fecha": "2026-10-27"
   },
   "Capitán cartagena": {
    "director": "Enuar Castillo Fernández",
-   "fecha": "2026-10-20"
+   "fecha": "2026-10-27"
   },
   "Carne de segunda": {
    "director": "Ruben Casalins",
@@ -3642,29 +3706,25 @@
    "director": "Alejandro de los Ríos",
    "fecha": "2026-10-25"
   },
-  "Compraventa": {
-   "director": "",
-   "fecha": "2026-10-25"
-  },
   "Concierto sentido": {
    "director": "Cristian Rivas",
-   "fecha": "2026-10-20"
+   "fecha": "2026-10-27"
   },
   "Dientes de yuca": {
    "director": "Yurieth Romero Velasquez",
-   "fecha": "2026-10-20"
+   "fecha": "2026-10-27"
   },
   "Dulce": {
    "director": "Yurieth Romero Velasquez, Edgar De Luque",
-   "fecha": "2026-10-20"
+   "fecha": "2026-10-27"
   },
   "El abrazo del sol": {
    "director": "Leonard Quiroz",
-   "fecha": "2026-10-20"
+   "fecha": "2026-10-27"
   },
   "El kanto del kajambá": {
    "director": "Rodolfo Palomino Cassiani",
-   "fecha": "2026-10-20"
+   "fecha": "2026-10-27"
   },
   "El segundo": {
    "director": "Pedro Miguel Rozo Flores",
@@ -3672,7 +3732,7 @@
   },
   "El silencio de las semillas": {
    "director": "Elizabeth Pirela González",
-   "fecha": "2026-10-20"
+   "fecha": "2026-10-27"
   },
   "En nombre del amor": {
    "director": "Mariana Pallas, Alexander Dieppa, Luciana Martins, Socorro Lira",
@@ -3680,7 +3740,7 @@
   },
   "Frágil o embalados": {
    "director": "Colectivo Pedro Romero Vive Aquí",
-   "fecha": "2026-10-20"
+   "fecha": "2026-10-27"
   },
   "Gracias, antonio": {
    "director": "Keren Berrio",
@@ -3724,7 +3784,7 @@
   },
   "Memorias piedras de boca e’ caña": {
    "director": "Tribu Digital Mokaná",
-   "fecha": "2026-10-20"
+   "fecha": "2026-10-27"
   },
   "New york": {
    "director": "Amir Karami",
@@ -3732,7 +3792,7 @@
   },
   "Plan de fuga": {
    "director": "Gleydis Paola Salgado Reyes",
-   "fecha": "2026-10-20"
+   "fecha": "2026-10-27"
   },
   "Post-familia": {
    "director": "Alexis Tafour",
@@ -3740,11 +3800,11 @@
   },
   "Princesado mokaná: el legado del cerro de las hermosas": {
    "director": "Liz Dany Macías",
-   "fecha": "2026-10-20"
+   "fecha": "2026-10-27"
   },
   "Proowa": {
    "director": "Cristobal R. Mendoza",
-   "fecha": "2026-10-20"
+   "fecha": "2026-10-27"
   },
   "Queener": {
    "director": "Sebastián López Murillo",
@@ -3760,7 +3820,7 @@
   },
   "Seguridad en el territorio del pueblo ette ennka chimila": {
    "director": "Cristobal R. Mendoza",
-   "fecha": "2026-10-20"
+   "fecha": "2026-10-27"
   },
   "Sombra lejana": {
    "director": "Antonio J. Camargo",

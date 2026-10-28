@@ -5,13 +5,6 @@
   "regla": "un afiche ajeno se publica solo con veredicto «afiche» y huella vigente"
  },
  "afiches": {
-  "/assets/anibia-2026/caida-libre.jpg": {
-   "sha1": "073e52339ae8c3f248605c7a2892ed35e4d8b398",
-   "veredicto": "afiche",
-   "usado_en": [
-    "ficcali-2026"
-   ]
-  },
   "/assets/bhff-2026/el-festin-de-las-moscas.jpg": {
    "sha1": "37115d960fd038fadc57266965b984ec5781ed7b",
    "veredicto": "afiche",
@@ -185,6 +178,14 @@
     "midbo-2026"
    ]
   },
+  "/assets/miradas-2026/luis-antonio.jpg": {
+   "sha1": "13990d299d605cd72f54a2915d6d58068beeecc4",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficica-2026",
+    "guatape-2026"
+   ]
+  },
   "/assets/popayan-2026/la-asociacion.jpg": {
    "sha1": "733a83cfe94ba8d5bb5312f5d5c8278908534f3a",
    "veredicto": "afiche",
@@ -226,13 +227,6 @@
    "usado_en": [
     "ficmontanas-2026",
     "popayan-2026"
-   ]
-  },
-  "/assets/villadelcine-2026/maleza.jpg": {
-   "sha1": "d49a7c3d8fd800d00e5449cc0db744cbff6816e6",
-   "veredicto": "afiche",
-   "usado_en": [
-    "girardota-2026"
    ]
   }
  }
