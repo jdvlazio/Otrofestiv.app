@@ -2,7 +2,9 @@
 festivales (28 oct 2026). Falla si se desincroniza: un festival de
 FESTIVAL_CONFIG que no está en el ancla, un issue label:radar ABIERTO que no
 está en el ancla, o un festival repetido (clave, id_config o issue en dos
-entradas). La parte de issues necesita `gh` autenticado; sin él, se salta."""
+entradas). La parte de issues es SOLO LOCAL (necesita `gh` con sesión): en CI
+se salta a propósito, porque un issue abierto desde afuera no debe poner en
+rojo un PR que no tiene nada que ver. La corre quien edita el ancla."""
 import json, os, re, shutil, subprocess, unittest
 
 RAIZ = os.path.join(os.path.dirname(__file__), '..', '..')
@@ -36,6 +38,8 @@ class Ancla(unittest.TestCase):
             self.assertEqual(e['estado'] == 'en_app', bool(e.get('id_config')), f"{e['clave']}: en_app ⇔ id_config")
 
     def test_issue_radar_abierto_esta_en_el_ancla(self):
+        if os.environ.get('GITHUB_ACTIONS') == 'true':
+            self.skipTest('solo local: los issues cambian fuera de los PR')
         if not shutil.which('gh'):
             self.skipTest('sin gh')
         r = subprocess.run(['gh', 'issue', 'list', '-l', 'radar', '-s', 'open', '-L', '500', '--json', 'number,title'],
