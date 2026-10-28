@@ -1766,6 +1766,8 @@
      "year": 2026,
      "duration": "4 min",
      "genre": "Ficción",
+     "poster": "/assets/miradas-2026/de-saul.jpg",
+     "posterSource": "editorial",
      "synopsis": "Saúl duerme en la casa de su abuela y sueña con una pitonisa que le dice que la única forma de acabar con el pecado que siente en la intimidad es matando al pecador. Saúl recuerda a un ser amado mientras la voz de la pitonisa crece cada vez más dentro de su cabeza, hasta entender que la única forma de liberarse es perdonándose a sí mismo.",
      "synopsis_lang": "es"
     },
@@ -4343,6 +4345,8 @@
      "year": 2026,
      "duration": "4 min",
      "genre": "Ficción",
+     "poster": "/assets/miradas-2026/de-saul.jpg",
+     "posterSource": "editorial",
      "synopsis": "Saúl duerme en la casa de su abuela y sueña con una pitonisa que le dice que la única forma de acabar con el pecado que siente en la intimidad es matando al pecador. Saúl recuerda a un ser amado mientras la voz de la pitonisa crece cada vez más dentro de su cabeza, hasta entender que la única forma de liberarse es perdonándose a sí mismo.",
      "synopsis_lang": "es"
     },
@@ -5352,7 +5356,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-27T19:13:33",
+  "fecha": "2026-10-27T20:01:22",
   "plan_sha": "1476fecbd41f2797",
   "paso": 10,
   "cmd": "python3 pipeline/miradas-2026-verificar.py"

@@ -199,7 +199,10 @@
    "pais": "Colombia",
    "anio": 2026,
    "duracion_tmdb": 4,
-   "genero": "Experimental"
+   "genero": "Experimental",
+   "poster": "/assets/miradas-2026/de-saul.jpg",
+   "posterSource": "editorial",
+   "_afiche": "declarado: still oficial ya publicado en Jardín 2026 (https://festicinejardin.com/wp-content/uploads/2026/09/De-saul-scaled.jpg, 896×504, 16:9); el PDF de Miradas (pág. 14) trae otro fotograma a 250×136"
   },
   {
    "titulo": "Decaer",
@@ -873,17 +876,23 @@
     {
      "festival": "ficica-2026",
      "titulo": "Luis antonio",
+     "poster": "/assets/miradas-2026/luis-antonio.jpg",
+     "posterSource": "oficial",
      "country": "Colombia",
      "year": 2025,
      "duration": "12 min",
+     "genre": "Ficción",
      "sinopsis": "La mañana de un sábado Luis Antonio, un niño de 8 años, quiere aprender a montar en bicicleta. Pero su madre tiene que trabajar y lo deja al cuidado de Ofelia, su estricta vecina."
     },
     {
      "festival": "guatape-2026",
      "titulo": "Luis Antonio",
+     "poster": "/assets/miradas-2026/luis-antonio.jpg",
+     "posterSource": "oficial",
      "country": "Colombia",
      "year": 2025,
      "duration": "12 min",
+     "genre": "Ficción",
      "sinopsis": "La mañana de un sábado Luis Antonio, un niño de 8 años, quiere aprender a montar en bicicleta. Pero su madre tiene que trabajar y lo deja al cuidado de Ofelia, su estricta vecina."
     },
     {
@@ -901,6 +910,7 @@
    "pais": "Colombia",
    "anio": 2025,
    "duracion_tmdb": 12,
+   "genero": "Ficción",
    "poster": "/assets/miradas-2026/luis-antonio.jpg",
    "posterSource": "oficial",
    "_afiche": "declarado: https://cinecorto.co/luis-antonio/ (og:image Poster_LuisAntonio.jpg) — afiche con título y «un corto de Juan José Arias Gil»"
