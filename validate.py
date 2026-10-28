@@ -4117,6 +4117,9 @@ try:
         ('guatape-2026', '2026-10-23|14:00|Parque Educativo El Zócalo - Guatapé'),  # master class SENA + taller de actuación
         ('guatape-2026', '2026-10-23|14:00|Parque Principal - Guatapé'),            # dos conversatorios
         ('guatape-2026', '2026-10-24|14:00|Parque Educativo El Zócalo - Guatapé'),  # taller de actuación (2.ª jornada)
+        # Miradas 2026 (28 oct): la Cinemateca pone los dos laboratorios del Centro Ático
+        # a las 10:00 del sáb 7 en el laboratorio de la Cinemateca móvil; son dos talleres
+        ('miradas-2026', '2026-11-07|10:00|Parque de los Deseos - Medellín'),       # IA generativa + postproducción móvil
     }
     _viol = []
     for _fname in _ACTIVE:
