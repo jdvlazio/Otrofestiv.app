@@ -92,6 +92,8 @@ SEDES = {
     'Universidad de Antioquia, Paraninfo, sala de cine': ('Universidad de Antioquia', 'Paraninfo', 'Medellín'),
 }
 # LO QUE NO ES PARA EL PÚBLICO: dentro de cárceles y colegios (como en FICPA y Popayán)
+BLOQUES_IG = {('2026-10-28', '16:00', 'Alianza Francesa')}
+
 SEDE_FUERA = {
     'Centro Penitenciario La Picota': 'función dentro de un centro penitenciario («MIDBO va a las cárceles»)',
     'Colegio Alejandro Obregón': 'función dentro de un colegio («MIDBO va a los colegios»)',
@@ -467,6 +469,12 @@ def main():
             # el segundo al terminar el primero). Se agrupa por programa, día y sala,
             # y la función arranca con el primero.
             conjunta = any('proyección conjunta' in n.lower() for n in f['notas'])
+            # UN BLOQUE QUE LA WEB PARTE (28 oct 2026, IG p/DfCiPvXoGqF lámina 4):
+            # «Espejos» del 28 oct 16:00 en la Alianza es UN bloque de 3 cortos,
+            # pero midbo.co etiqueta «Si la Escombrera hablara» con el Programa 2
+            # y los otros dos con el Programa 4; agrupado por programa, salía en
+            # dos funciones a la misma hora y sede. Se agrupa por día, hora y sede.
+            conjunta = conjunta or (f['dia'], f['hora'], SEDES[f['lugar']][0]) in BLOQUES_IG
             k = (f['dia'], f['lugar'], html.unescape(hija['name'])) if hija and not conjunta else (f['dia'], f['hora'], f['lugar'])
             s = slots.setdefault(k, {'obras': [], 'notas': [], 'por_obra': [], 'programa': None, 'hora': f['hora'],
                                      'sede': sede, 'sala': sala, 'ciudad': ciudad})
