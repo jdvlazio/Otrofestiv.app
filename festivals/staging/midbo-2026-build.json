@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "midbo.co — ficha de cada obra (bloque «Funciones») + API pelicula/seccion",
-  "capturado": "2026-10-27",
+  "capturado": "2026-10-28",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_secciones": "Las categorías madre de la taxonomía `seccion` de midbo.co, tal cual; «Encuentro Pensar lo Real» es el nombre del menú del seminario; «Proyecciones» (nuestra) para la única obra sin sección.",
@@ -2193,7 +2193,8 @@
      "poster": "/assets/midbo-2026/las-formas-de-la-magia.jpg",
      "posterSource": "tmdb",
      "lbSlug": "las-formas-de-la-magia",
-     "tmdb_id": 1668889
+     "tmdb_id": 1668889,
+     "genre": "Documental"
     },
     {
      "title": "Lo que no está",
@@ -7158,7 +7159,8 @@
      "poster": "/assets/midbo-2026/las-formas-de-la-magia.jpg",
      "posterSource": "tmdb",
      "lbSlug": "las-formas-de-la-magia",
-     "tmdb_id": 1668889
+     "tmdb_id": 1668889,
+     "genre": "Documental"
     },
     {
      "title": "Lo que no está",
@@ -8815,7 +8817,7 @@
    }
   },
   {
-   "title": "Charla: Audio descripción para documental",
+   "title": "Charla \"Herramientas inclusivas para personas sordas y ciegas. El caso de Estancia: accesible con audiodescripción\"",
    "type": "event",
    "section": "🎙️ Encuentro Pensar lo Real",
    "duration": "90 min",
@@ -8835,7 +8837,7 @@
     "url": "https://midbo.co/encuentro-pensar-lo-real/seminario/",
     "date": "2026-10-10"
    },
-   "requires_registration": true,
+   "requires_registration": false,
    "description": "Invitados: Luis Guillermo Torres (ATMedios) y Andrés Carmona, director Estancia (2024) · Modera: Julio Lamaña.",
    "description_lang": "es",
    "_fid": "f_78956f102c",
@@ -8868,14 +8870,14 @@
      "url": "https://midbo.co/"
     },
     "entrada": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-10",
-     "url": "https://midbo.co/"
+     "tipo": "festival-ig",
+     "fecha": "2026-10-28",
+     "url": "https://www.instagram.com/p/DfCiPvXoGqF/"
     },
     "requires_registration": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-10",
-     "url": "https://midbo.co/"
+     "tipo": "festival-ig",
+     "fecha": "2026-10-28",
+     "url": "https://www.instagram.com/p/DfCiPvXoGqF/"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -8883,9 +8885,9 @@
      "url": "https://midbo.co/"
     },
     "title": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-10",
-     "url": "https://midbo.co/"
+     "tipo": "festival-ig",
+     "fecha": "2026-10-28",
+     "url": "https://www.instagram.com/p/DfCiPvXoGqF/"
     },
     "type": {
      "tipo": "festival-web",
@@ -8897,7 +8899,10 @@
      "fecha": "2026-10-10",
      "url": "https://midbo.co/"
     }
-   }
+   },
+   "titulos_anteriores": [
+    "Charla: Audio descripción para documental"
+   ]
   },
   {
    "title": "Master Class: Puntos de escucha",
@@ -10073,9 +10078,9 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-27T17:51:09",
+  "fecha": "2026-10-28T09:22:23",
   "plan_sha": "a59415cd50b61e59",
-  "paso": 8,
-  "cmd": "python3 pipeline/midbo-2026-verificar.py"
+  "paso": 6,
+  "cmd": "python3 pipeline/ensamblar.py midbo-2026"
  }
 }
