@@ -277,6 +277,39 @@
    },
    "evidencia": "lámina 2 de p/DfAWypbCTFa: «MAR 27 OCT · 4:00 p.m. · ALIANZA FRANCESA | SEDE CENTRO, BOGOTÁ · FOCO: CLAIRE SIMON · Notre corps · Función con Q&A★ · En el marco del Seminario Pensar lo Real: Lenguajes Sonoros · Entrada libre»",
    "contra": false
+  },
+  {
+   "funcion": "f_78956f102c",
+   "casilla": "title",
+   "valor": "Charla \"Herramientas inclusivas para personas sordas y ciegas. El caso de Estancia: accesible con audiodescripción\"",
+   "fuente": {
+    "tipo": "festival-ig",
+    "url": "https://www.instagram.com/p/DfCiPvXoGqF/",
+    "fecha": "2026-10-28"
+   },
+   "evidencia": "lámina 3 de p/DfCiPvXoGqF (28 oct): «Charla \"Herramientas inclusivas para personas sordas y ciegas. El caso de Estancia: accesible con audiodescripción\"» · 28 oct 2:30 p.m. · Alianza Francesa Sede Centro · entrada libre · con intérprete de lengua de señas en vivo. Regla vigente: IG más reciente manda sobre la web (midbo.co decía «Charla: Audio descripción para documental», con inscripción)."
+  },
+  {
+   "funcion": "f_78956f102c",
+   "casilla": "requires_registration",
+   "valor": false,
+   "fuente": {
+    "tipo": "festival-ig",
+    "url": "https://www.instagram.com/p/DfCiPvXoGqF/",
+    "fecha": "2026-10-28"
+   },
+   "evidencia": "lámina 3 de p/DfCiPvXoGqF (28 oct): «Charla \"Herramientas inclusivas para personas sordas y ciegas. El caso de Estancia: accesible con audiodescripción\"» · 28 oct 2:30 p.m. · Alianza Francesa Sede Centro · entrada libre · con intérprete de lengua de señas en vivo. Regla vigente: IG más reciente manda sobre la web (midbo.co decía «Charla: Audio descripción para documental», con inscripción)."
+  },
+  {
+   "funcion": "f_78956f102c",
+   "casilla": "entrada",
+   "valor": "libre",
+   "fuente": {
+    "tipo": "festival-ig",
+    "url": "https://www.instagram.com/p/DfCiPvXoGqF/",
+    "fecha": "2026-10-28"
+   },
+   "evidencia": "lámina 3 de p/DfCiPvXoGqF (28 oct): «Charla \"Herramientas inclusivas para personas sordas y ciegas. El caso de Estancia: accesible con audiodescripción\"» · 28 oct 2:30 p.m. · Alianza Francesa Sede Centro · entrada libre · con intérprete de lengua de señas en vivo. Regla vigente: IG más reciente manda sobre la web (midbo.co decía «Charla: Audio descripción para documental», con inscripción)."
   }
  ]
 }
