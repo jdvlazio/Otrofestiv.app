@@ -12,10 +12,11 @@
   "en": "In a merchant neighborhood of Buenos Aires, Yoni survives through smuggling and a few fleeting alliances. Under the shadow of his partner and mentor, Leon, he strives to advance in a world that judges him by his appearance. A promising business deal seems poised to change his fate, but an unexpected setback forces him to confront his limitation"
  },
  "generos": [
-  "Ficción"
+  "Ficción",
+  "Suspense"
  ],
  "afiche": {
-  "archivo": "/assets/miradas-2026/compraventa.jpg",
+  "archivo": "/assets/ficica-2026/compraventa.jpg",
   "veredicto": "oficial"
  },
  "xref": {
@@ -23,6 +24,10 @@
   "letterboxd": "compraventa"
  },
  "versiones": [
+  {
+   "etiqueta": "10 min",
+   "duracion_min": 10
+  },
   {
    "etiqueta": "11 min",
    "duracion_min": 11
