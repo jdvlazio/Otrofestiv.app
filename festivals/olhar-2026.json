@@ -428,7 +428,13 @@
    "day_order": 4,
    "posterSource": "tmdb",
    "work_id": "w_R4GTPYZRA4KK",
-   "id": "f_d42ba361b9"
+   "id": "f_d42ba361b9",
+   "tmdb_id": 1633334,
+   "_src": {
+    "heredado": {
+     "tmdb_id": "catálogo w_R4GTPYZRA4KK (ficcali-2026, ficci-65, olhar-2026)"
+    }
+   }
   },
   {
    "title": "Anistia 79",
@@ -713,7 +719,13 @@
    "day_order": 2,
    "posterSource": "tmdb",
    "work_id": "w_R4ET8GEV16R0",
-   "id": "f_f56d9938c6"
+   "id": "f_f56d9938c6",
+   "tmdb_id": 1493026,
+   "_src": {
+    "heredado": {
+     "tmdb_id": "catálogo w_R4ET8GEV16R0 (cinemancia-2025, midbo-2026, olhar-2026)"
+    }
+   }
   },
   {
    "title": "Como Todo Mortal",
@@ -761,7 +773,13 @@
    "day_order": 4,
    "posterSource": "tmdb",
    "work_id": "w_R4DN2AHQDB30",
-   "id": "f_1904f1fe37"
+   "id": "f_1904f1fe37",
+   "tmdb_id": 1651710,
+   "_src": {
+    "heredado": {
+     "tmdb_id": "catálogo w_R4DN2AHQDB30 (biff-2026, olhar-2026)"
+    }
+   }
   },
   {
    "title": "Desert Hearts",
@@ -1000,7 +1018,13 @@
    "day_order": 8,
    "posterSource": "tmdb",
    "work_id": "w_R4GXDBYW7KW7",
-   "id": "f_22f0e177e2"
+   "id": "f_22f0e177e2",
+   "tmdb_id": 1616523,
+   "_src": {
+    "heredado": {
+     "tmdb_id": "catálogo w_R4GXDBYW7KW7 (ficcali-2026, olhar-2026)"
+    }
+   }
   },
   {
    "title": "Flora & Airto: o Som Revolucionário",
@@ -1205,7 +1229,13 @@
    "day_order": 1,
    "posterSource": "tmdb",
    "work_id": "w_R4H8812VN6A2",
-   "id": "f_020c11af40"
+   "id": "f_020c11af40",
+   "tmdb_id": 1457842,
+   "_src": {
+    "heredado": {
+     "tmdb_id": "catálogo w_R4H8812VN6A2 (ficcali-2026, ficci-65, olhar-2026)"
+    }
+   }
   },
   {
    "title": "Hollywood Studios",
@@ -1449,7 +1479,13 @@
    "day_order": 7,
    "posterSource": "tmdb",
    "work_id": "w_R4HE768025KE",
-   "id": "f_964f2fd4c6"
+   "id": "f_964f2fd4c6",
+   "tmdb_id": 1554544,
+   "_src": {
+    "heredado": {
+     "tmdb_id": "catálogo w_R4HE768025KE (ficci-65, olhar-2026)"
+    }
+   }
   },
   {
    "title": "Maxita",
@@ -1847,7 +1883,13 @@
    "day_order": 1,
    "posterSource": "tmdb",
    "work_id": "w_R4E4AYD6S32S",
-   "id": "f_c524594a51"
+   "id": "f_c524594a51",
+   "tmdb_id": 1534205,
+   "_src": {
+    "heredado": {
+     "tmdb_id": "catálogo w_R4E4AYD6S32S (biff-2026, miradas-2026, olhar-2026)"
+    }
+   }
   },
   {
    "title": "Past Future Continuous",
@@ -2483,10 +2525,12 @@
      "_src": {
       "heredado": {
        "genre": "catálogo w_R4DKB1K2S5M9 (aff-2026, fantasmagoria-2026, olhar-2026)",
-       "title_en": "catálogo w_R4DKB1K2S5M9 (aff-2026, fantasmagoria-2026, olhar-2026)"
+       "title_en": "catálogo w_R4DKB1K2S5M9 (aff-2026, fantasmagoria-2026, olhar-2026)",
+       "tmdb_id": "catálogo w_R4DKB1K2S5M9 (aff-2026, anibia-2026, fantasmagoria-2026, olhar-2026)"
       }
      },
-     "title_en": "Ballad of Fishes and Birds"
+     "title_en": "Ballad of Fishes and Birds",
+     "tmdb_id": 1592956
     },
     {
      "title": "O Jardim Mágico",
@@ -2698,7 +2742,13 @@
      "lbSlug": "disciplina-1",
      "synopsis_es": "Kelly, joven profesora de Portugués, empieza a dar clases en una escuela pública. En una clase discute con Nicolas, un joven alumno de segundo año, y ambos deben resolver el conflicto ante el director. La discusión deja enseñanzas: Kelly aprende que en la periferia de Brasil la excepción es la regla; y Nicolas aprende que hay que reconstruir el presente para ver el futuro.",
      "posterSource": "tmdb",
-     "work_id": "w_R4FPCCFFNW4V"
+     "work_id": "w_R4FPCCFFNW4V",
+     "tmdb_id": 1639721,
+     "_src": {
+      "heredado": {
+       "tmdb_id": "catálogo w_R4FPCCFFNW4V (cinemancia-2026, olhar-2026)"
+      }
+     }
     },
     {
      "title": "Il nemico",
@@ -2837,7 +2887,13 @@
      "lbSlug": "a-film-to-remind-us-of-utopia",
      "synopsis_es": "En los registros cinematográficos de Esdras Baptista, guardados durante décadas en su casa, es posible sentir el fervor de quienes creyeron en un nuevo mañana. Filmadas en el Brasil de principios de los años 1960, al calor de una política libertaria en movimiento, las imágenes del cineasta materializan la incandescencia de los deseos colectivos en el instante de su eclosión. La utopía, aun inalcanzable, nunca es mera abstracción. Fuerza que moviliza acciones y sentimientos, constituye el ímpetu necesario para la existencia.",
      "posterSource": "tmdb",
-     "work_id": "w_R4MHXTCP637M"
+     "work_id": "w_R4MHXTCP637M",
+     "tmdb_id": 1636745,
+     "_src": {
+      "heredado": {
+       "tmdb_id": "catálogo w_R4MHXTCP637M (midbo-2026, olhar-2026)"
+      }
+     }
     }
    ],
    "poster": "",
@@ -3417,7 +3473,13 @@
      "lbSlug": "disciplina-1",
      "synopsis_es": "Kelly, joven profesora de Portugués, empieza a dar clases en una escuela pública. En una clase discute con Nicolas, un joven alumno de segundo año, y ambos deben resolver el conflicto ante el director. La discusión deja enseñanzas: Kelly aprende que en la periferia de Brasil la excepción es la regla; y Nicolas aprende que hay que reconstruir el presente para ver el futuro.",
      "posterSource": "tmdb",
-     "work_id": "w_R4FPCCFFNW4V"
+     "work_id": "w_R4FPCCFFNW4V",
+     "tmdb_id": 1639721,
+     "_src": {
+      "heredado": {
+       "tmdb_id": "catálogo w_R4FPCCFFNW4V (cinemancia-2026, olhar-2026)"
+      }
+     }
     },
     {
      "title": "Marimbã Está Acontecendo",
