@@ -226,9 +226,9 @@ F = [
     peli(D4, '18:00', 'El paradero', S_COM, 'Café Pletórico', '', 41),
     peli(D4, '18:00', 'Chico de barrio', S_COM, 'Teatro UVA Tricentenario', '', 44),
     # ── jueves 5 (págs. 74–78) ──
-    ev(D5, '10:00', 'Laboratorio Materia expandida: representación e imagen en contextos digitales. Sesión 1 – Materia y representación',
-       'evento', S_EXP, EXPLORA, 'Exploratorio', 64, 180, acceso=CUPOS,
-       sinopsis='Realizado por Almendra Díaz y Cristóbal Parra (Chile). Un laboratorio práctico para explorar la relación entre materia física e imagen digital, transformando objetos del entorno en modelos 3D y experiencias audiovisuales mediante fotogrametría, programación visual y videomapping.'),
+    ev(D5, '10:00', 'Laboratorio Materia expandida: representación e imagen en contextos digitales',  # UN laboratorio en 2 sesiones (págs. 63–66): encadenado, el nombre de la sesión va en la sinopsis
+       'evento', S_EXP, EXPLORA, 'Exploratorio', 64, 180, acceso=CUPOS, is_recurring=True,
+       sinopsis='Sesión 1 – Materia y representación. Realizado por Almendra Díaz y Cristóbal Parra (Chile). Un laboratorio práctico para explorar la relación entre materia física e imagen digital, transformando objetos del entorno en modelos 3D y experiencias audiovisuales mediante fotogrametría, programación visual y videomapping.'),
     prog(D5, '14:00', 'Programa de Cortos 2', P2, S_PROG, MAMM, 'Teatro MAMM', 74, qa=QA_EQ),
     peli(D5, '15:00', 'Iluminada', S_COL, 'Comfama Otraparte', '', 75, qa='Con la presencia del actor Pedro Suárez'),
     peli(D5, '16:00', 'Nuestro secreto', S_IB, MORAVIA, 'Auditorio', 75),
@@ -251,9 +251,9 @@ F = [
     peli(D5, '19:30', 'Niñas escarlata', S_IB, MAMM, 'Teatro MAMM', 78, qa='Con la presencia de la directora'),
     peli(D5, '10:00', 'Oro molido # 2', S_COM, 'Escuela Vereda El Placer', '', 43),
     # ── viernes 6 (págs. 79–82) ──
-    ev(D6, '10:00', 'Laboratorio Materia expandida: representación e imagen en contextos digitales. Sesión 2 – Imagen y expansión',
-       'evento', S_EXP, EXPLORA, 'Exploratorio', 67, 180, acceso=CUPOS,
-       sinopsis='Realizado por Almendra Díaz y Cristóbal Parra (Chile). Segunda sesión del laboratorio de fotogrametría, programación visual y videomapping.'),
+    ev(D6, '10:00', 'Laboratorio Materia expandida: representación e imagen en contextos digitales',
+       'evento', S_EXP, EXPLORA, 'Exploratorio', 67, 180, acceso=CUPOS, is_recurring=True,
+       sinopsis='Sesión 2 – Imagen y expansión. Realizado por Almendra Díaz y Cristóbal Parra (Chile). Segunda sesión del laboratorio de fotogrametría, programación visual y videomapping.'),
     peli(D6, '14:00', 'El tren fluvial', S_IB, MAMM, 'Teatro MAMM', 79),
     peli(D6, '15:00', 'Un cabo suelto', S_IB, 'Parque de Cristo Rey', '', 79, _nota='«En alianza con Cultura Parque»'),
     peli(D6, '16:00', 'Narciso', S_IB, 'Biblioteca Comfama Bello', '', 80),
