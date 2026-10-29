@@ -733,7 +733,7 @@ def arquetipos():
 # en el censo de los trece festivales todas eran siglas (OKX, ELO, IAP).
 SIGLAS = {
     # sedes y las instituciones que las nombran
-    'AECID', 'ALADOS', 'ALITIC', 'ASAB', 'BMCC', 'CCEBA', 'CDAE', 'CEFE', 'CESMAG', 'COMFAMA', 'FUGA',
+    'AECID', 'ALADOS', 'ALITIC', 'ASAB', 'BMCC', 'CCEBA', 'CDAE', 'CEFE', 'CESMAG', 'CIMU', 'COMFAMA', 'FUGA',
     'LGBTIQ', 'MAMB', 'MAMM', 'MUBI', 'SENA', 'TPAC', 'UNAL', 'UNIAGRARIA', 'UNIBAC', 'VISA',
     # festivales nombrados dentro de una sección o una sede
     'BIFF', 'FICCI', 'FICDH', 'TIFF',

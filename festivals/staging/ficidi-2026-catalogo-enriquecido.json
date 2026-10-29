@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, con el MISMO candado de enriquecer.py: director ✓ y (año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-10-07"
+  "capturado": "2026-10-29"
  },
  "_origen": "ficidi-2026-catalogo.json",
  "obras": [
@@ -23,7 +23,7 @@
    "titulo": "El bañador",
    "tmdb_id": 1656528,
    "titulo_original": "El bañador",
-   "poster_path": "/A0YxoUIoj8DEQoWih4JUKFf9uul.jpg",
+   "poster_path": "/b7cjqGjJV8n0MS4XXwCw8nuIZdW.jpg",
    "synopsis_es": "",
    "synopsis_en": "Summer 2003. Miguel and Javi, two fourteen-year-old friends, spend their days between swims, video games, and a bet that follows them all summer long: to see who can hold their breath underwater the longest. Javi always wins; he says his swimsuit is magical. Intrigued by the mystery, Miguel begins to see his friend in a different way. In the pool, where the world seems to stand still, their friendship transforms into something neither of them can explain. In a time of change and first desires, that summer will mark the end of innocence and the beginning of everything yet to come.",
    "genero": "",
@@ -32,7 +32,8 @@
    "pais_tmdb": "",
    "title_en": "Holding Your Breath",
    "lbSlug": "holding-your-breath-2026",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "_verificado": "el catálogo ya la tiene (w_4RPPBBS8436A, ficidi-2026)",
+   "work_id": "w_4RPPBBS8436A"
   },
   {
    "titulo": "Los pájaros",
@@ -46,7 +47,8 @@
    "duracion_tmdb": 10,
    "pais_tmdb": "",
    "lbSlug": "los-pajaros-2026",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "_verificado": "el catálogo ya la tiene (w_4RPVGQ25BYWC, ficidi-2026)",
+   "work_id": "w_4RPVGQ25BYWC"
   },
   {
    "titulo": "A mi edad",
@@ -61,7 +63,8 @@
    "pais_tmdb": "Spain",
    "title_en": "At My Age",
    "lbSlug": "at-my-age",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "_verificado": "el catálogo ya la tiene (w_4RPPP69XXC4G, ficidi-2026)",
+   "work_id": "w_4RPPP69XXC4G"
   },
   {
    "titulo": "Blue Berri",
@@ -75,7 +78,8 @@
    "duracion_tmdb": 16,
    "pais_tmdb": "",
    "lbSlug": "blue-berri",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "_verificado": "el catálogo ya la tiene (w_4RPQ2DDCS0MV, ficidi-2026)",
+   "work_id": "w_4RPQ2DDCS0MV"
   },
   {
    "titulo": "Tía Morgana",
@@ -89,7 +93,8 @@
    "duracion_tmdb": 0,
    "pais_tmdb": "Brazil",
    "lbSlug": "tia-morgana",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "_verificado": "el catálogo ya la tiene (w_4RPQCDY6J5QD, ficidi-2026)",
+   "work_id": "w_4RPQCDY6J5QD"
   },
   {
    "titulo": "Couraça",
@@ -103,7 +108,8 @@
    "duracion_tmdb": 20,
    "pais_tmdb": "Brazil",
    "lbSlug": "couraca",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "_verificado": "el catálogo ya la tiene (w_4RPS56TA2N9S, ficidi-2026)",
+   "work_id": "w_4RPS56TA2N9S"
   },
   {
    "titulo": "Ar-dor",
@@ -116,8 +122,10 @@
    "anio_tmdb": 2026,
    "duracion_tmdb": 19,
    "pais_tmdb": "Brazil",
-   "lbSlug": "ar-dor",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "title_en": "Tell me a Lie",
+   "lbSlug": "tell-me-a-lie",
+   "_verificado": "el catálogo ya la tiene (w_4RPSDXA435BS, ficidi-2026)",
+   "work_id": "w_4RPSDXA435BS"
   },
   {
    "titulo": "Aquí donde soy",
@@ -145,7 +153,8 @@
    "duracion_tmdb": 6,
    "pais_tmdb": "",
    "lbSlug": "verdades",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "_verificado": "el catálogo ya la tiene (w_4RPQRKFERVTB, ficidi-2026)",
+   "work_id": "w_4RPQRKFERVTB"
   },
   {
    "titulo": "Ius del tiempo",
@@ -160,7 +169,8 @@
    "pais_tmdb": "Spain",
    "title_en": "IUS of Time",
    "lbSlug": "ius-of-time",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "_verificado": "el catálogo ya la tiene (w_4RPMH1J8WZFE, ficidi-2026)",
+   "work_id": "w_4RPMH1J8WZFE"
   },
   {
    "titulo": "Jugo en polvo",
@@ -175,7 +185,8 @@
    "pais_tmdb": "Chile",
    "title_en": "Juice Powder",
    "lbSlug": "juice-powder",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "_verificado": "el catálogo ya la tiene (w_4RPR3JSZDKDA, ficidi-2026)",
+   "work_id": "w_4RPR3JSZDKDA"
   },
   {
    "titulo": "Inés",
@@ -189,21 +200,23 @@
    "duracion_tmdb": 12,
    "pais_tmdb": "",
    "lbSlug": "ines-1",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "_verificado": "el catálogo ya la tiene (w_4RPMW2J2BCJ4, ficidi-2026)",
+   "work_id": "w_4RPMW2J2BCJ4"
   },
   {
    "titulo": "Há sinais",
    "tmdb_id": 1733521,
    "titulo_original": "Há Sinais",
    "poster_path": "/my10D8HtL2EBCJxKv0B006K77ZW.jpg",
-   "synopsis_es": "",
+   "synopsis_es": "Marcelo, un joven sordo y LGBT, busca en el teatro un espacio donde ser plenamente él mismo. Aún de luto por la pérdida de su padre, encuentra en un grupo de jóvenes artistas sordos una posible forma de expresar lo que las palabras no pueden. Entre ensayos, conflictos internos y el cariño de su madre y su novio, Marcelo aprende a transformar su dolor y sus deseos en movimiento y presencia. Completamente comunicada en Lengua de Señas Brasileña (LIBRAS) y concebida desde la perspectiva de la comunidad sorda, \"Há Sinais\" (Hay Señas) es un drama sobre la identidad, la pertenencia y las múltiples formas de expresar lo que sentimos.",
    "synopsis_en": "Marcelo, a deaf and LGBTQIAPN+ youth grieving the loss of his father, finds in a theater group with young deaf artists a possible path to transform his pain. Communicated entirely in Brazilian Sign Language (LIBRAS) and conceived from an aesthetic that prioritizes accessibility.",
    "genero": "Drama",
    "anio_tmdb": 2026,
-   "duracion_tmdb": 0,
-   "pais_tmdb": "",
+   "duracion_tmdb": 15,
+   "pais_tmdb": "Spain",
    "lbSlug": "ha-sinais",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "_verificado": "el catálogo ya la tiene (w_4RPT5PE9WR95, ficidi-2026)",
+   "work_id": "w_4RPT5PE9WR95"
   },
   {
    "titulo": "Onades",
@@ -232,7 +245,8 @@
    "pais_tmdb": "Argentina, Uruguay",
    "title_en": "All Names Begin with M",
    "lbSlug": "all-names-begin-with-m",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "_verificado": "el catálogo ya la tiene (w_4RPN7Z27GQ8Y, ficidi-2026)",
+   "work_id": "w_4RPN7Z27GQ8Y"
   },
   {
    "titulo": "Perros",
@@ -246,7 +260,8 @@
    "duracion_tmdb": 10,
    "pais_tmdb": "Argentina",
    "lbSlug": "perros-2026",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "_verificado": "el catálogo ya la tiene (w_4RPVXBR5XHJY, ficidi-2026)",
+   "work_id": "w_4RPVXBR5XHJY"
   },
   {
    "titulo": "Lo que fuimos",
@@ -260,7 +275,8 @@
    "duracion_tmdb": 19,
    "pais_tmdb": "Spain",
    "lbSlug": "lo-que-fuimos",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "_verificado": "el catálogo ya la tiene (w_4RPTV2HJ5W4W, ficidi-2026)",
+   "work_id": "w_4RPTV2HJ5W4W"
   },
   {
    "titulo": "Dafne y Pol",
@@ -274,7 +290,23 @@
    "duracion_tmdb": 17,
    "pais_tmdb": "Spain",
    "lbSlug": "dafne-y-pol",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "_verificado": "el catálogo ya la tiene (w_4RPKRTSZJ34W, ficidi-2026)",
+   "work_id": "w_4RPKRTSZJ34W"
+  },
+  {
+   "titulo": "La otra mitad del dolor",
+   "tmdb_id": 1807031,
+   "titulo_original": "La otra mitad del dolor",
+   "poster_path": "/oy2HwQUG6RpOaaYBIOgMHmR9cMT.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Rafael just lost Mariano. What is left are objects, recordings, words trapped in a voice recorder and a box full of memories. In an attempt to sustain himself, he embarks on a journey with Larisa and Joel—two friends with their own ghosts—where little by little the words of other broken hearts begin to weave a new way of understanding mourning. A story about what we have left after love: the echo, the voice, and the other half of the pain.",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "",
+   "lbSlug": "la-otra-mitad-del-dolor",
+   "_verificado": "el catálogo ya la tiene (w_4RPWJ0AFWQXA, ficidi-2026)",
+   "work_id": "w_4RPWJ0AFWQXA"
   },
   {
    "titulo": "Travas sobrevivientes",
@@ -288,7 +320,8 @@
    "duracion_tmdb": 11,
    "pais_tmdb": "Argentina",
    "lbSlug": "travas-sobrevivientes",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "_verificado": "el catálogo ya la tiene (w_4RPNJBK3GYF6, ficidi-2026)",
+   "work_id": "w_4RPNJBK3GYF6"
   },
   {
    "titulo": "A Sin de Fella Story",
@@ -302,7 +335,8 @@
    "duracion_tmdb": 15,
    "pais_tmdb": "United Kingdom",
    "lbSlug": "a-sin-de-fella-story",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "_verificado": "el catálogo ya la tiene (w_4RPSRSMJG6GC, ficidi-2026)",
+   "work_id": "w_4RPSRSMJG6GC"
   },
   {
    "titulo": "Alwasiyya",
@@ -316,7 +350,8 @@
    "duracion_tmdb": 29,
    "pais_tmdb": "",
    "lbSlug": "alwasiyya",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "_verificado": "el catálogo ya la tiene (w_4RPV5TB0AG0Q, ficidi-2026)",
+   "work_id": "w_4RPV5TB0AG0Q"
   },
   {
    "titulo": "O diário imaginado",
@@ -331,7 +366,8 @@
    "pais_tmdb": "",
    "title_en": "A Diary Imagined",
    "lbSlug": "a-diary-imagined",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "_verificado": "el catálogo ya la tiene (w_4RPKBH6HE0FC, ficidi-2026)",
+   "work_id": "w_4RPKBH6HE0FC"
   },
   {
    "titulo": "Refracción",
@@ -345,7 +381,8 @@
    "duracion_tmdb": 11,
    "pais_tmdb": "Colombia",
    "lbSlug": "refraccion",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_verificado": "el catálogo ya la tiene (w_R4F8T5DKXC9W, cinemancia-2026, ficica-2026, ficidi-2026, ficmontanas-2026, girardota-2026, jardin-2026, miradas-2026, narrarelfuturo-2026)",
+   "work_id": "w_R4F8T5DKXC9W",
    "_ya_publicada": [
     {
      "festival": "cinemancia-2026",
@@ -354,11 +391,39 @@
      "poster": "https://image.tmdb.org/t/p/w500/bzKNobO0N8Oqj6YU6eA2R28UgPI.jpg",
      "posterSource": "tmdb",
      "lbSlug": "refraccion",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "11 min",
+     "synopsis_en": "Eloísa, a 20-year-old girl, is in two relationships at the same time. One night, after having been with both girls, she feels overwhelmed by living in this situation of deceit, and in the middle of her confusion she goes out to ride her bike through the streets of Medellín, where she will realize that she does not want to acknowledge who she is — but will ultimately have to come face-to-face with herself.",
+     "sinopsis": "Eloísa, una chica de 20 años, está en dos relaciones al mismo tiempo. Una noche, después de haber estado con ambas chicas, se siente agobiada por estar en esa situación de engaño y en medio de su confusión sale a recorrer las calles de Medellín en bicicleta, donde se dará cuenta de que no quiere reconocerse pero deberá encontrarse consigo misma."
+    },
+    {
+     "festival": "ficica-2026",
+     "titulo": "Refraccion",
+     "tmdb_id": 1584776,
+     "poster": "/assets/ficica-2026/refraccion.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "refraccion",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "11 min",
+     "genre": "Drama",
+     "synopsis_en": "Eloísa, a 20-year-old girl, is in two relationships at the same time. One night, after having been with both girls, she feels overwhelmed by living in this situation of deceit, and in the middle of her confusion she goes out to ride her bike through the streets of Medellín, where she will realize that she does not want to acknowledge who she is — but will ultimately have to come face-to-face with herself.",
      "sinopsis": "Eloísa, una chica de 20 años, está en dos relaciones al mismo tiempo. Una noche, después de haber estado con ambas chicas, se siente agobiada por estar en esa situación de engaño y en medio de su confusión sale a recorrer las calles de Medellín en bicicleta, donde se dará cuenta de que no quiere reconocerse pero deberá encontrarse consigo misma."
     },
     {
      "festival": "ficmontanas-2026",
-     "titulo": "Refracción"
+     "titulo": "Refracción",
+     "tmdb_id": 1584776,
+     "poster": "https://image.tmdb.org/t/p/w500/bzKNobO0N8Oqj6YU6eA2R28UgPI.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "refraccion",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "11 min",
+     "genre": "Ficción",
+     "synopsis_en": "Eloísa, a 20-year-old girl, is in two relationships at the same time. One night, after having been with both girls, she feels overwhelmed by living in this situation of deceit, and in the middle of her confusion she goes out to ride her bike through the streets of Medellín, where she will realize that she does not want to acknowledge who she is — but will ultimately have to come face-to-face with herself.",
+     "sinopsis": "Eloísa, una chica de 20 años, está en dos relaciones al mismo tiempo. Una noche, después de haber estado con ambas chicas, se siente agobiada por estar en esa situación de engaño y en medio de su confusión sale a recorrer las calles de Medellín en bicicleta, donde se dará cuenta de que no quiere reconocerse pero deberá encontrarse consigo misma."
     },
     {
      "festival": "girardota-2026",
@@ -367,6 +432,11 @@
      "poster": "/assets/girardota-2026/refraccion.jpg",
      "posterSource": "tmdb",
      "lbSlug": "refraccion",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "11 min",
+     "genre": "Drama",
+     "synopsis_en": "Eloísa, a 20-year-old girl, is in two relationships at the same time. One night, after having been with both girls, she feels overwhelmed by living in this situation of deceit, and in the middle of her confusion she goes out to ride her bike through the streets of Medellín, where she will realize that she does not want to acknowledge who she is — but will ultimately have to come face-to-face with herself.",
      "sinopsis": "Eloísa, una chica de 20 años, está en dos relaciones al mismo tiempo. Una noche, después de haber estado con ambas chicas, se siente agobiada por estar en esa situación de engaño y en medio de su confusión sale a recorrer las calles de Medellín en bicicleta, donde se dará cuenta de que no quiere reconocerse pero deberá encontrarse consigo misma."
     },
     {
@@ -376,6 +446,11 @@
      "poster": "/assets/jardin-2026/refraccion.jpg",
      "posterSource": "tmdb",
      "lbSlug": "refraccion",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "11 min",
+     "genre": "Ficción",
+     "synopsis_en": "Eloísa, a 20-year-old girl, is in two relationships at the same time. One night, after having been with both girls, she feels overwhelmed by living in this situation of deceit, and in the middle of her confusion she goes out to ride her bike through the streets of Medellín, where she will realize that she does not want to acknowledge who she is — but will ultimately have to come face-to-face with herself.",
      "sinopsis": "Eloísa, una chica de 20 años, está en dos relaciones al mismo tiempo. Una noche, después de haber estado con ambas chicas, se siente agobiada por estar en esa situación de engaño y en medio de su confusión sale a recorrer las calles de Medellín en bicicleta, donde se dará cuenta de que no quiere reconocerse pero deberá encontrarse consigo misma."
     },
     {
@@ -383,7 +458,22 @@
      "titulo": "Refracción",
      "poster": "/assets/leviza/Refraccio_n.jpeg",
      "posterSource": "custom",
-     "lbSlug": "⚠️ LB PENDIENTE"
+     "lbSlug": "⚠️ LB PENDIENTE",
+     "country": "Colombia"
+    },
+    {
+     "festival": "miradas-2026",
+     "titulo": "Refracción",
+     "tmdb_id": 1584776,
+     "poster": "/assets/miradas-2026/refraccion.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "refraccion",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "11 min",
+     "genre": "Ficción",
+     "synopsis_en": "Eloísa, a 20-year-old girl, is in two relationships at the same time. One night, after having been with both girls, she feels overwhelmed by living in this situation of deceit, and in the middle of her confusion she goes out to ride her bike through the streets of Medellín, where she will realize that she does not want to acknowledge who she is — but will ultimately have to come face-to-face with herself.",
+     "sinopsis": "Eloísa, una chica de 20 años, está en dos relaciones al mismo tiempo. Una noche, después de haber estado con ambas chicas, se siente agobiada por estar en esa situación de engaño y en medio de su confusión sale a recorrer las calles de Medellín en bicicleta, donde se dará cuenta de que no quiere reconocerse pero deberá encontrarse consigo misma."
     },
     {
      "festival": "narrarelfuturo-2026",
@@ -392,6 +482,11 @@
      "poster": "/assets/narrarelfuturo-2026/refraccion.jpg",
      "posterSource": "oficial",
      "lbSlug": "refraccion",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "11 min",
+     "genre": "Ficción",
+     "synopsis_en": "Eloísa, a 20-year-old girl, is in two relationships at the same time. One night, after having been with both girls, she feels overwhelmed by living in this situation of deceit, and in the middle of her confusion she goes out to ride her bike through the streets of Medellín, where she will realize that she does not want to acknowledge who she is — but will ultimately have to come face-to-face with herself.",
      "sinopsis": "Eloísa, una chica de 20 años, está en dos relaciones al mismo tiempo. Una noche, después de haber estado con ambas chicas, se siente agobiada por estar en esa situación de engaño y en medio de su confusión sale a recorrer las calles de Medellín en bicicleta, donde se dará cuenta de que no quiere reconocerse pero deberá encontrarse consigo misma."
     }
    ]
@@ -408,7 +503,8 @@
    "duracion_tmdb": 7,
    "pais_tmdb": "Colombia",
    "lbSlug": "faithfully",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "_verificado": "el catálogo ya la tiene (w_4RPTGPCCNN40, ficidi-2026)",
+   "work_id": "w_4RPTGPCCNN40"
   },
   {
    "titulo": "Danzan las luciérnagas",
@@ -437,7 +533,8 @@
    "duracion_tmdb": 15,
    "pais_tmdb": "",
    "lbSlug": "maricones",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_verificado": "el catálogo ya la tiene (w_R4K1F412E5VW, ficidi-2026, girardota-2026)",
+   "work_id": "w_R4K1F412E5VW",
    "_ya_publicada": [
     {
      "festival": "girardota-2026",
@@ -446,6 +543,10 @@
      "poster": "/assets/girardota-2026/maricones.jpg",
      "posterSource": "tmdb",
      "lbSlug": "maricones",
+     "year": 2026,
+     "duration": "15 min",
+     "genre": "Documental",
+     "synopsis_en": "Since they were little, Ginger and Louie knew they were different. Two young Queers who, living in different spaces, face social prejudices that try to limit their way of being. This tension confronts them with their identity process and leads them to question the need for external validation. Thus, they decide to use fashion and their bodies as a tool to express and build their identity as a process of constant fluidity, free and without labels.",
      "sinopsis": "Desde pequeños, Ginger y Louie sabían que eran distintos. Dos jóvenes Queer que, al habitar distintos espacios, enfrentan prejuicios sociales que intentan limitar su forma de ser. Esta tensión los confronta con su proceso identitario y los lleva a cuestionar la necesidad de validación externa. Así, deciden usar la moda y sus cuerpos como herramienta para expresar y construir su identidad como un proceso de constante fluidez, libre y sin etiquetas."
     }
    ]
@@ -470,6 +571,11 @@
      "poster": "/assets/ficdeh/sed-el-flagelo-guajiro.jpg",
      "posterSource": "custom",
      "lbSlug": "mas-alla-de-la-corona",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "14 min",
+     "genre": "Documental",
+     "synopsis_en": "Ángel must answer three questions and clear a series of obstacles before reaching her dream: to be crowned Trans Queen of Palmira, Colombia.",
      "sinopsis": "Ángel debe responder tres preguntas y superar una serie de obstáculos antes de lograr su sueño: ser coronada Reina Trans de Palmira, Colombia."
     }
    ]
@@ -492,7 +598,7 @@
   "El bañador": {
    "tmdb_id": 1656528,
    "titulo_original": "El bañador",
-   "poster_path": "/A0YxoUIoj8DEQoWih4JUKFf9uul.jpg",
+   "poster_path": "/b7cjqGjJV8n0MS4XXwCw8nuIZdW.jpg",
    "synopsis_es": "",
    "synopsis_en": "Summer 2003. Miguel and Javi, two fourteen-year-old friends, spend their days between swims, video games, and a bet that follows them all summer long: to see who can hold their breath underwater the longest. Javi always wins; he says his swimsuit is magical. Intrigued by the mystery, Miguel begins to see his friend in a different way. In the pool, where the world seems to stand still, their friendship transforms into something neither of them can explain. In a time of change and first desires, that summer will mark the end of innocence and the beginning of everything yet to come.",
    "genero": "",
@@ -501,7 +607,8 @@
    "pais_tmdb": "",
    "title_en": "Holding Your Breath",
    "lbSlug": "holding-your-breath-2026",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "_verificado": "el catálogo ya la tiene (w_4RPPBBS8436A, ficidi-2026)",
+   "work_id": "w_4RPPBBS8436A"
   },
   "Los pájaros": {
    "tmdb_id": 1707240,
@@ -514,7 +621,8 @@
    "duracion_tmdb": 10,
    "pais_tmdb": "",
    "lbSlug": "los-pajaros-2026",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "_verificado": "el catálogo ya la tiene (w_4RPVGQ25BYWC, ficidi-2026)",
+   "work_id": "w_4RPVGQ25BYWC"
   },
   "A mi edad": {
    "tmdb_id": 1572696,
@@ -528,7 +636,8 @@
    "pais_tmdb": "Spain",
    "title_en": "At My Age",
    "lbSlug": "at-my-age",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "_verificado": "el catálogo ya la tiene (w_4RPPP69XXC4G, ficidi-2026)",
+   "work_id": "w_4RPPP69XXC4G"
   },
   "Blue Berri": {
    "tmdb_id": 1548621,
@@ -541,7 +650,8 @@
    "duracion_tmdb": 16,
    "pais_tmdb": "",
    "lbSlug": "blue-berri",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "_verificado": "el catálogo ya la tiene (w_4RPQ2DDCS0MV, ficidi-2026)",
+   "work_id": "w_4RPQ2DDCS0MV"
   },
   "Tía Morgana": {
    "tmdb_id": 1542668,
@@ -554,7 +664,8 @@
    "duracion_tmdb": 0,
    "pais_tmdb": "Brazil",
    "lbSlug": "tia-morgana",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "_verificado": "el catálogo ya la tiene (w_4RPQCDY6J5QD, ficidi-2026)",
+   "work_id": "w_4RPQCDY6J5QD"
   },
   "Couraça": {
    "tmdb_id": 1540239,
@@ -567,7 +678,8 @@
    "duracion_tmdb": 20,
    "pais_tmdb": "Brazil",
    "lbSlug": "couraca",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "_verificado": "el catálogo ya la tiene (w_4RPS56TA2N9S, ficidi-2026)",
+   "work_id": "w_4RPS56TA2N9S"
   },
   "Ar-dor": {
    "tmdb_id": 1722336,
@@ -579,8 +691,10 @@
    "anio_tmdb": 2026,
    "duracion_tmdb": 19,
    "pais_tmdb": "Brazil",
-   "lbSlug": "ar-dor",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "title_en": "Tell me a Lie",
+   "lbSlug": "tell-me-a-lie",
+   "_verificado": "el catálogo ya la tiene (w_4RPSDXA435BS, ficidi-2026)",
+   "work_id": "w_4RPSDXA435BS"
   },
   "Aquí donde soy": {
    "tmdb_id": 1574595,
@@ -606,7 +720,8 @@
    "duracion_tmdb": 6,
    "pais_tmdb": "",
    "lbSlug": "verdades",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "_verificado": "el catálogo ya la tiene (w_4RPQRKFERVTB, ficidi-2026)",
+   "work_id": "w_4RPQRKFERVTB"
   },
   "Ius del tiempo": {
    "tmdb_id": 1438237,
@@ -620,7 +735,8 @@
    "pais_tmdb": "Spain",
    "title_en": "IUS of Time",
    "lbSlug": "ius-of-time",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "_verificado": "el catálogo ya la tiene (w_4RPMH1J8WZFE, ficidi-2026)",
+   "work_id": "w_4RPMH1J8WZFE"
   },
   "Jugo en polvo": {
    "tmdb_id": 1491904,
@@ -634,7 +750,8 @@
    "pais_tmdb": "Chile",
    "title_en": "Juice Powder",
    "lbSlug": "juice-powder",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "_verificado": "el catálogo ya la tiene (w_4RPR3JSZDKDA, ficidi-2026)",
+   "work_id": "w_4RPR3JSZDKDA"
   },
   "Inés": {
    "tmdb_id": 1641476,
@@ -647,20 +764,22 @@
    "duracion_tmdb": 12,
    "pais_tmdb": "",
    "lbSlug": "ines-1",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "_verificado": "el catálogo ya la tiene (w_4RPMW2J2BCJ4, ficidi-2026)",
+   "work_id": "w_4RPMW2J2BCJ4"
   },
   "Há sinais": {
    "tmdb_id": 1733521,
    "titulo_original": "Há Sinais",
    "poster_path": "/my10D8HtL2EBCJxKv0B006K77ZW.jpg",
-   "synopsis_es": "",
+   "synopsis_es": "Marcelo, un joven sordo y LGBT, busca en el teatro un espacio donde ser plenamente él mismo. Aún de luto por la pérdida de su padre, encuentra en un grupo de jóvenes artistas sordos una posible forma de expresar lo que las palabras no pueden. Entre ensayos, conflictos internos y el cariño de su madre y su novio, Marcelo aprende a transformar su dolor y sus deseos en movimiento y presencia. Completamente comunicada en Lengua de Señas Brasileña (LIBRAS) y concebida desde la perspectiva de la comunidad sorda, \"Há Sinais\" (Hay Señas) es un drama sobre la identidad, la pertenencia y las múltiples formas de expresar lo que sentimos.",
    "synopsis_en": "Marcelo, a deaf and LGBTQIAPN+ youth grieving the loss of his father, finds in a theater group with young deaf artists a possible path to transform his pain. Communicated entirely in Brazilian Sign Language (LIBRAS) and conceived from an aesthetic that prioritizes accessibility.",
    "genero": "Drama",
    "anio_tmdb": 2026,
-   "duracion_tmdb": 0,
-   "pais_tmdb": "",
+   "duracion_tmdb": 15,
+   "pais_tmdb": "Spain",
    "lbSlug": "ha-sinais",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "_verificado": "el catálogo ya la tiene (w_4RPT5PE9WR95, ficidi-2026)",
+   "work_id": "w_4RPT5PE9WR95"
   },
   "Onades": {
    "tmdb_id": 1554852,
@@ -687,7 +806,8 @@
    "pais_tmdb": "Argentina, Uruguay",
    "title_en": "All Names Begin with M",
    "lbSlug": "all-names-begin-with-m",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "_verificado": "el catálogo ya la tiene (w_4RPN7Z27GQ8Y, ficidi-2026)",
+   "work_id": "w_4RPN7Z27GQ8Y"
   },
   "Perros": {
    "tmdb_id": 1613681,
@@ -700,7 +820,8 @@
    "duracion_tmdb": 10,
    "pais_tmdb": "Argentina",
    "lbSlug": "perros-2026",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "_verificado": "el catálogo ya la tiene (w_4RPVXBR5XHJY, ficidi-2026)",
+   "work_id": "w_4RPVXBR5XHJY"
   },
   "Lo que fuimos": {
    "tmdb_id": 1777436,
@@ -713,7 +834,8 @@
    "duracion_tmdb": 19,
    "pais_tmdb": "Spain",
    "lbSlug": "lo-que-fuimos",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "_verificado": "el catálogo ya la tiene (w_4RPTV2HJ5W4W, ficidi-2026)",
+   "work_id": "w_4RPTV2HJ5W4W"
   },
   "Dafne y Pol": {
    "tmdb_id": 1706164,
@@ -726,7 +848,22 @@
    "duracion_tmdb": 17,
    "pais_tmdb": "Spain",
    "lbSlug": "dafne-y-pol",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "_verificado": "el catálogo ya la tiene (w_4RPKRTSZJ34W, ficidi-2026)",
+   "work_id": "w_4RPKRTSZJ34W"
+  },
+  "La otra mitad del dolor": {
+   "tmdb_id": 1807031,
+   "titulo_original": "La otra mitad del dolor",
+   "poster_path": "/oy2HwQUG6RpOaaYBIOgMHmR9cMT.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Rafael just lost Mariano. What is left are objects, recordings, words trapped in a voice recorder and a box full of memories. In an attempt to sustain himself, he embarks on a journey with Larisa and Joel—two friends with their own ghosts—where little by little the words of other broken hearts begin to weave a new way of understanding mourning. A story about what we have left after love: the echo, the voice, and the other half of the pain.",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "",
+   "lbSlug": "la-otra-mitad-del-dolor",
+   "_verificado": "el catálogo ya la tiene (w_4RPWJ0AFWQXA, ficidi-2026)",
+   "work_id": "w_4RPWJ0AFWQXA"
   },
   "Travas sobrevivientes": {
    "tmdb_id": 1783014,
@@ -739,7 +876,8 @@
    "duracion_tmdb": 11,
    "pais_tmdb": "Argentina",
    "lbSlug": "travas-sobrevivientes",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "_verificado": "el catálogo ya la tiene (w_4RPNJBK3GYF6, ficidi-2026)",
+   "work_id": "w_4RPNJBK3GYF6"
   },
   "A Sin de Fella Story": {
    "tmdb_id": 1500524,
@@ -752,7 +890,8 @@
    "duracion_tmdb": 15,
    "pais_tmdb": "United Kingdom",
    "lbSlug": "a-sin-de-fella-story",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "_verificado": "el catálogo ya la tiene (w_4RPSRSMJG6GC, ficidi-2026)",
+   "work_id": "w_4RPSRSMJG6GC"
   },
   "Alwasiyya": {
    "tmdb_id": 1705471,
@@ -765,7 +904,8 @@
    "duracion_tmdb": 29,
    "pais_tmdb": "",
    "lbSlug": "alwasiyya",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "_verificado": "el catálogo ya la tiene (w_4RPV5TB0AG0Q, ficidi-2026)",
+   "work_id": "w_4RPV5TB0AG0Q"
   },
   "O diário imaginado": {
    "tmdb_id": 1687430,
@@ -779,7 +919,8 @@
    "pais_tmdb": "",
    "title_en": "A Diary Imagined",
    "lbSlug": "a-diary-imagined",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "_verificado": "el catálogo ya la tiene (w_4RPKBH6HE0FC, ficidi-2026)",
+   "work_id": "w_4RPKBH6HE0FC"
   },
   "Refracción": {
    "tmdb_id": 1584776,
@@ -792,7 +933,8 @@
    "duracion_tmdb": 11,
    "pais_tmdb": "Colombia",
    "lbSlug": "refraccion",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_verificado": "el catálogo ya la tiene (w_R4F8T5DKXC9W, cinemancia-2026, ficica-2026, ficidi-2026, ficmontanas-2026, girardota-2026, jardin-2026, miradas-2026, narrarelfuturo-2026)",
+   "work_id": "w_R4F8T5DKXC9W",
    "_ya_publicada": [
     {
      "festival": "cinemancia-2026",
@@ -801,11 +943,39 @@
      "poster": "https://image.tmdb.org/t/p/w500/bzKNobO0N8Oqj6YU6eA2R28UgPI.jpg",
      "posterSource": "tmdb",
      "lbSlug": "refraccion",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "11 min",
+     "synopsis_en": "Eloísa, a 20-year-old girl, is in two relationships at the same time. One night, after having been with both girls, she feels overwhelmed by living in this situation of deceit, and in the middle of her confusion she goes out to ride her bike through the streets of Medellín, where she will realize that she does not want to acknowledge who she is — but will ultimately have to come face-to-face with herself.",
+     "sinopsis": "Eloísa, una chica de 20 años, está en dos relaciones al mismo tiempo. Una noche, después de haber estado con ambas chicas, se siente agobiada por estar en esa situación de engaño y en medio de su confusión sale a recorrer las calles de Medellín en bicicleta, donde se dará cuenta de que no quiere reconocerse pero deberá encontrarse consigo misma."
+    },
+    {
+     "festival": "ficica-2026",
+     "titulo": "Refraccion",
+     "tmdb_id": 1584776,
+     "poster": "/assets/ficica-2026/refraccion.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "refraccion",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "11 min",
+     "genre": "Drama",
+     "synopsis_en": "Eloísa, a 20-year-old girl, is in two relationships at the same time. One night, after having been with both girls, she feels overwhelmed by living in this situation of deceit, and in the middle of her confusion she goes out to ride her bike through the streets of Medellín, where she will realize that she does not want to acknowledge who she is — but will ultimately have to come face-to-face with herself.",
      "sinopsis": "Eloísa, una chica de 20 años, está en dos relaciones al mismo tiempo. Una noche, después de haber estado con ambas chicas, se siente agobiada por estar en esa situación de engaño y en medio de su confusión sale a recorrer las calles de Medellín en bicicleta, donde se dará cuenta de que no quiere reconocerse pero deberá encontrarse consigo misma."
     },
     {
      "festival": "ficmontanas-2026",
-     "titulo": "Refracción"
+     "titulo": "Refracción",
+     "tmdb_id": 1584776,
+     "poster": "https://image.tmdb.org/t/p/w500/bzKNobO0N8Oqj6YU6eA2R28UgPI.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "refraccion",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "11 min",
+     "genre": "Ficción",
+     "synopsis_en": "Eloísa, a 20-year-old girl, is in two relationships at the same time. One night, after having been with both girls, she feels overwhelmed by living in this situation of deceit, and in the middle of her confusion she goes out to ride her bike through the streets of Medellín, where she will realize that she does not want to acknowledge who she is — but will ultimately have to come face-to-face with herself.",
+     "sinopsis": "Eloísa, una chica de 20 años, está en dos relaciones al mismo tiempo. Una noche, después de haber estado con ambas chicas, se siente agobiada por estar en esa situación de engaño y en medio de su confusión sale a recorrer las calles de Medellín en bicicleta, donde se dará cuenta de que no quiere reconocerse pero deberá encontrarse consigo misma."
     },
     {
      "festival": "girardota-2026",
@@ -814,6 +984,11 @@
      "poster": "/assets/girardota-2026/refraccion.jpg",
      "posterSource": "tmdb",
      "lbSlug": "refraccion",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "11 min",
+     "genre": "Drama",
+     "synopsis_en": "Eloísa, a 20-year-old girl, is in two relationships at the same time. One night, after having been with both girls, she feels overwhelmed by living in this situation of deceit, and in the middle of her confusion she goes out to ride her bike through the streets of Medellín, where she will realize that she does not want to acknowledge who she is — but will ultimately have to come face-to-face with herself.",
      "sinopsis": "Eloísa, una chica de 20 años, está en dos relaciones al mismo tiempo. Una noche, después de haber estado con ambas chicas, se siente agobiada por estar en esa situación de engaño y en medio de su confusión sale a recorrer las calles de Medellín en bicicleta, donde se dará cuenta de que no quiere reconocerse pero deberá encontrarse consigo misma."
     },
     {
@@ -823,6 +998,11 @@
      "poster": "/assets/jardin-2026/refraccion.jpg",
      "posterSource": "tmdb",
      "lbSlug": "refraccion",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "11 min",
+     "genre": "Ficción",
+     "synopsis_en": "Eloísa, a 20-year-old girl, is in two relationships at the same time. One night, after having been with both girls, she feels overwhelmed by living in this situation of deceit, and in the middle of her confusion she goes out to ride her bike through the streets of Medellín, where she will realize that she does not want to acknowledge who she is — but will ultimately have to come face-to-face with herself.",
      "sinopsis": "Eloísa, una chica de 20 años, está en dos relaciones al mismo tiempo. Una noche, después de haber estado con ambas chicas, se siente agobiada por estar en esa situación de engaño y en medio de su confusión sale a recorrer las calles de Medellín en bicicleta, donde se dará cuenta de que no quiere reconocerse pero deberá encontrarse consigo misma."
     },
     {
@@ -830,7 +1010,22 @@
      "titulo": "Refracción",
      "poster": "/assets/leviza/Refraccio_n.jpeg",
      "posterSource": "custom",
-     "lbSlug": "⚠️ LB PENDIENTE"
+     "lbSlug": "⚠️ LB PENDIENTE",
+     "country": "Colombia"
+    },
+    {
+     "festival": "miradas-2026",
+     "titulo": "Refracción",
+     "tmdb_id": 1584776,
+     "poster": "/assets/miradas-2026/refraccion.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "refraccion",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "11 min",
+     "genre": "Ficción",
+     "synopsis_en": "Eloísa, a 20-year-old girl, is in two relationships at the same time. One night, after having been with both girls, she feels overwhelmed by living in this situation of deceit, and in the middle of her confusion she goes out to ride her bike through the streets of Medellín, where she will realize that she does not want to acknowledge who she is — but will ultimately have to come face-to-face with herself.",
+     "sinopsis": "Eloísa, una chica de 20 años, está en dos relaciones al mismo tiempo. Una noche, después de haber estado con ambas chicas, se siente agobiada por estar en esa situación de engaño y en medio de su confusión sale a recorrer las calles de Medellín en bicicleta, donde se dará cuenta de que no quiere reconocerse pero deberá encontrarse consigo misma."
     },
     {
      "festival": "narrarelfuturo-2026",
@@ -839,6 +1034,11 @@
      "poster": "/assets/narrarelfuturo-2026/refraccion.jpg",
      "posterSource": "oficial",
      "lbSlug": "refraccion",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "11 min",
+     "genre": "Ficción",
+     "synopsis_en": "Eloísa, a 20-year-old girl, is in two relationships at the same time. One night, after having been with both girls, she feels overwhelmed by living in this situation of deceit, and in the middle of her confusion she goes out to ride her bike through the streets of Medellín, where she will realize that she does not want to acknowledge who she is — but will ultimately have to come face-to-face with herself.",
      "sinopsis": "Eloísa, una chica de 20 años, está en dos relaciones al mismo tiempo. Una noche, después de haber estado con ambas chicas, se siente agobiada por estar en esa situación de engaño y en medio de su confusión sale a recorrer las calles de Medellín en bicicleta, donde se dará cuenta de que no quiere reconocerse pero deberá encontrarse consigo misma."
     }
    ]
@@ -854,7 +1054,8 @@
    "duracion_tmdb": 7,
    "pais_tmdb": "Colombia",
    "lbSlug": "faithfully",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "_verificado": "el catálogo ya la tiene (w_4RPTGPCCNN40, ficidi-2026)",
+   "work_id": "w_4RPTGPCCNN40"
   },
   "Danzan las luciérnagas": {
    "tmdb_id": 1456289,
@@ -881,7 +1082,8 @@
    "duracion_tmdb": 15,
    "pais_tmdb": "",
    "lbSlug": "maricones",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_verificado": "el catálogo ya la tiene (w_R4K1F412E5VW, ficidi-2026, girardota-2026)",
+   "work_id": "w_R4K1F412E5VW",
    "_ya_publicada": [
     {
      "festival": "girardota-2026",
@@ -890,6 +1092,10 @@
      "poster": "/assets/girardota-2026/maricones.jpg",
      "posterSource": "tmdb",
      "lbSlug": "maricones",
+     "year": 2026,
+     "duration": "15 min",
+     "genre": "Documental",
+     "synopsis_en": "Since they were little, Ginger and Louie knew they were different. Two young Queers who, living in different spaces, face social prejudices that try to limit their way of being. This tension confronts them with their identity process and leads them to question the need for external validation. Thus, they decide to use fashion and their bodies as a tool to express and build their identity as a process of constant fluidity, free and without labels.",
      "sinopsis": "Desde pequeños, Ginger y Louie sabían que eran distintos. Dos jóvenes Queer que, al habitar distintos espacios, enfrentan prejuicios sociales que intentan limitar su forma de ser. Esta tensión los confronta con su proceso identitario y los lleva a cuestionar la necesidad de validación externa. Así, deciden usar la moda y sus cuerpos como herramienta para expresar y construir su identidad como un proceso de constante fluidez, libre y sin etiquetas."
     }
    ]
@@ -913,6 +1119,11 @@
      "poster": "/assets/ficdeh/sed-el-flagelo-guajiro.jpg",
      "posterSource": "custom",
      "lbSlug": "mas-alla-de-la-corona",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "14 min",
+     "genre": "Documental",
+     "synopsis_en": "Ángel must answer three questions and clear a series of obstacles before reaching her dream: to be crowned Trans Queen of Palmira, Colombia.",
      "sinopsis": "Ángel debe responder tres preguntas y superar una serie de obstáculos antes de lograr su sueño: ser coronada Reina Trans de Palmira, Colombia."
     }
    ]
@@ -935,7 +1146,6 @@
   "Jamás volveremos",
   "Kiboko",
   "La masculinidad es una pregunta",
-  "La otra mitad del dolor",
   "Las cosas que no te dije",
   "Made to Shine",
   "Mil mortes de um sobrevivente",

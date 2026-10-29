@@ -1000,6 +1000,24 @@ export const FESTIVAL_CONFIG={
     prioLimit:3,eventPosterLabel:['EVENTO',''],
     films:null,posters:null,lbSlugs:{}
   },
+  'ficidi2026': {
+    name:'FICIDI',displayName:'FICIDI',fullName:'IV FICIDI — Festival Internacional de Cine Diverso',shortName:'FICIDI',
+    // EL AFICHE OFICIAL de la IV edición («POST POSTER FICIDI IV», Drive de
+    // recursos visuales del festival, 29 oct 2026), 4:5 estirado a 2:3.
+    keyArt:'/assets/keyart/ficidi2026-v2.jpg',
+    tagline:'Festival Internacional de Cine Diverso',
+    city:'Barranquilla',country:'CO',
+    dates:'3–7 NOV',dates_en:'NOV 3–7',year:2026,timezoneOffset:'-05:00',
+    storageKey:'ficidi2026_',festivalStartStr:'2026-11-03T00:00:00',festivalEndStr:'2026-11-07T23:59:00',
+    festivalDates:{'2026-11-03':'2026-11-03','2026-11-04':'2026-11-04','2026-11-05':'2026-11-05','2026-11-06':'2026-11-06','2026-11-07':'2026-11-07'},
+    days:[{k:'2026-11-03',d:3,lbl:'MAR'},{k:'2026-11-04',d:4,lbl:'MIÉ'},{k:'2026-11-05',d:5,lbl:'JUE'},{k:'2026-11-06',d:6,lbl:'VIE'},{k:'2026-11-07',d:7,lbl:'SÁB'}],
+    dayKeys:['2026-11-03','2026-11-04','2026-11-05','2026-11-06','2026-11-07'],
+    dayShort:{'2026-11-03':'MAR 3','2026-11-04':'MIÉ 4','2026-11-05':'JUE 5','2026-11-06':'VIE 6','2026-11-07':'SÁB 7'},
+    dayShort_en:{'2026-11-03':'TUE 3','2026-11-04':'WED 4','2026-11-05':'THU 5','2026-11-06':'FRI 6','2026-11-07':'SAT 7'},
+    dayLong:{'2026-11-03':'Martes 3 de noviembre','2026-11-04':'Miércoles 4 de noviembre','2026-11-05':'Jueves 5 de noviembre','2026-11-06':'Viernes 6 de noviembre','2026-11-07':'Sábado 7 de noviembre'},
+    prioLimit:3,eventPosterLabel:['EVENTO',''],
+    films:null,posters:null,lbSlugs:{}
+  },
   'fantasmagoria2026': {
     name:'Fantasmagoría',displayName:'Fantasmagoría',fullName:'Fantasmagoría 8 — Festival Internacional de Cine Fantástico y de Terror de Medellín',shortName:'FANTASMAGORÍA',
     city:'Medellín',country:'CO',
@@ -1388,6 +1406,9 @@ export const SECTION_ARCHETYPES = {
   '🏛️ TIFF Classics': 'Retrospectiva / Tributo',
   '🎪 Special Events': 'Especiales / Eventos',
   '✂️ Short Cuts': 'Cortos / Programas',
+  // ── FICIDI 2026 · Barranquilla ──
+  '🏳️‍🌈 Selección Oficial': 'Cortos / Programas',
+  '✨ Proyección Especial': 'Especiales / Eventos',
   // ── FICICA 2026 · Barranquilla (las cuatro categorías de su programación) ──
   '🎬 Exhibiciones': 'Cortos / Programas',
   '🤝 Industria': 'Charlas / Industria',

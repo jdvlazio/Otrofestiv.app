@@ -110,43 +110,11 @@ def ajustar(im, caja):
 # mayúscula sostenida, y eso no se publica. Minúscula salvo nombres propios, con
 # los acentos que trae el AFICHE cuando el pie los omite (Ansío, Gaitán, mí), y
 # los títulos en inglés con mayúscula de título. Llave = el pie de la lámina.
-TITULO = {
-    'EXILIO': 'Exilio', 'VERDULERA': 'Verdulera', 'LA MUJER SENTADA': 'La mujer sentada',
-    'EL BAÑADOR': 'El bañador', 'LOS PÁJAROS': 'Los pájaros', 'MUÑECAS DE PORCELANA': 'Muñecas de porcelana',
-    'A MI EDAD': 'A mi edad', 'BLUE BERRI': 'Blue Berri', 'TÍA MORGANA': 'Tía Morgana', 'COURAÇA': 'Couraça',
-    'AR-DOR': 'Ar-dor', 'VERANO': 'Verano', 'PENDIENTE DE ESTRELLA': 'Pendiente de estrella', 'CAST ME': 'Cast Me',
-    'AQUÍ DONDE SOY': 'Aquí donde soy', 'VERDADES': 'Verdades', 'IUS DEL TIEMPO': 'Ius del tiempo',
-    'CIELO DE ENERO': 'Cielo de enero', 'JUGO EN POLVO': 'Jugo en polvo',
-    '¿ME VAS A ESTAR ESPERANDO?': '¿Me vas a estar esperando?', 'INÉS': 'Inés',
-    'DE AQUELLOS POLVOS': 'De aquellos polvos', 'HÁ SINAIS': 'Há sinais', 'ONADES': 'Onades', '621 KM': '621 km',
-    'YOUNG WILD THINGS': 'Young Wild Things', 'SOLO NATALIE': 'Solo Natalie',
-    'TODOS LOS NOMBRES EMPIEZAN CON M': 'Todos los nombres empiezan con M', 'PERROS': 'Perros',
-    'REINA DE POLVO Y LUZ': 'Reina de polvo y luz',
-    'TRAVESTIS, BOMBAS Y UN CORTEJO FÚNEBRE': 'Travestis, bombas y un cortejo fúnebre',
-    'LO QUE FUIMOS': 'Lo que fuimos', '90 SEGUNDOS': '90 segundos', 'DAFNE Y POL': 'Dafne y Pol',
-    'LA OTRA MITAD DEL DOLOR': 'La otra mitad del dolor', 'TUESDAY SESSION': 'Tuesday Session',
-    'TRAVAS SOBREVIVIENTES': 'Travas sobrevivientes', 'A SIN DE FELLA STORY': 'A Sin de Fella Story',
-    'LA MASCULINIDAD ES UNA PREGUNTA': 'La masculinidad es una pregunta',
-    'MIL MORTES DE UM SOBREVIVENTE': 'Mil mortes de um sobrevivente', 'ALWASIYYA': 'Alwasiyya', 'KIBOKO': 'Kiboko',
-    'O DIÁRIO IMAGINADO': 'O diário imaginado', 'JAMÁS VOLVEREMOS': 'Jamás volveremos',
-    'LAS COSAS QUE NO TE DIJE': 'Las cosas que no te dije',
-    'PEPA GAITAN PRESENTE, AHORA Y SIEMPRE.': 'Pepa Gaitán presente, ahora y siempre',
-    'CORPO E IDENTIDADE': 'Corpo e identidade', 'ANSIO DESPERTAR': 'Ansío despertar',
-    '¿QUIÉN SE LLEVA LAS ESTRELLAS?': '¿Quién se lleva las estrellas?',
-    'TODO LO QUE PASARÁ MAÑANA': 'Todo lo que pasará mañana', 'AMOR EN POSITIVO': 'Amor en positivo',
-    'REFRACCIÓN': 'Refracción', 'AGUIJÓN ROJO': 'Aguijón rojo', 'FIELMENTE': 'Fielmente', 'NO': 'No',
-    'DANZAN LAS LUCIÉRNAGAS': 'Danzan las luciérnagas', 'TRANSITAR LO MARICA NEGRO': 'Transitar lo marica negro',
-    'YO SOY YO': 'Yo soy yo', 'MARICONES': 'Maricones',
-    '¿A MI QUIÉN ME CUIDA? EXPERIENCIAS NEGRAS DIVERSAS EN EL PARO NACIONAL DEL 2021':
-        '¿A mí quién me cuida? Experiencias negras diversas en el paro nacional del 2021',
-    'ESPACIOS HÚMEDOS': 'Espacios húmedos', 'MÁS ALLÁ DE LA CORONA': 'Más allá de la corona',
-    'MIRADAS TRANS-PARENTES': 'Miradas trans-parentes',
-    '1AÑO Y UN MEZ EN COLOMBIAMARICX': '1 año y un mez en Colombiamaricx',
-    'MADE TO SHINE': 'Made to Shine', 'FRAGMENTOS': 'Fragmentos',
-}
+TITULOS_SIDECAR = f'{REPO}/festivals/staging/ficidi-2026-titulos.json'
 
 
 def main():
+    CAJA = json.load(io.open(TITULOS_SIDECAR, encoding="utf-8"))["titulos"]
     ojos = json.load(io.open(OJOS, encoding='utf-8'))['laminas']
     rutas = sorted({f'{IG}/{sc}/{f}' for sc, f, *_ in ojos})
     O = ocr_cajas(rutas)
@@ -166,9 +134,9 @@ def main():
         for x in plano(f'{titulo} {director} {pais}').split():
             if len(x) >= 4 and x not in w:
                 fallos.append(f'{sc}/{f}: la OCR no encuentra «{x}» de «{titulo}» / «{director}» / «{pais}»')
-        if titulo not in TITULO:
-            fallos.append(f'{sc}/{f}: «{titulo}» no tiene su título publicado en TITULO')
-        o = {'titulo': TITULO.get(titulo, titulo), 'titulo_lamina': titulo, 'director': director, 'pais': pais, 'categoria': CATEGORIA[sc],
+        if titulo not in CAJA:
+            fallos.append(f'{sc}/{f}: «{titulo}» no tiene su título publicado en ficidi-2026-titulos.json')
+        o = {'titulo': CAJA.get(titulo, titulo), 'titulo_lamina': titulo, 'director': director, 'pais': pais, 'categoria': CATEGORIA[sc],
              '_src': {'url': f'https://www.instagram.com/p/{sc}/', 'post': sc, 'lamina': f, 'date': '2026-10-07'}}
         if caja:
             im = Image.open(r).convert('RGB')

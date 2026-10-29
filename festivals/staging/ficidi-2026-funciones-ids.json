@@ -1,0 +1,57 @@
+{
+ "_provenance": {
+  "fuente": "ensamblar.py: ids estables de las funciones (docs/FUNCION.md C1)",
+  "capturado": "2026-10-29"
+ },
+ "funciones": {
+  "f_1fc0e62b6b": {
+   "sede": "Aduana de Barranquilla - Barranquilla",
+   "dia": "2026-11-03",
+   "hora": "14:00",
+   "sala": "Sala CIMU",
+   "titulo": "proyeccion especial"
+  },
+  "f_a1fea83cb5": {
+   "sede": "Universidad Simón Bolívar, sede 1 - Barranquilla",
+   "dia": "2026-11-04",
+   "hora": "14:00",
+   "sala": "Salón del Mirador de la Bandera (azotea)",
+   "titulo": "dia 1 primera funcion"
+  },
+  "f_d8705865e7": {
+   "sede": "Alianza Francesa de Barranquilla - Barranquilla",
+   "dia": "2026-11-04",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "la memoria revelada"
+  },
+  "f_e81e7f21e9": {
+   "sede": "La Maloca Cultural - Barranquilla",
+   "dia": "2026-11-05",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "dia 2"
+  },
+  "f_7fcfdb61fb": {
+   "sede": "Universidad de la Costa – CUC - Barranquilla",
+   "dia": "2026-11-06",
+   "hora": "13:00",
+   "sala": "Bloque 11, piso 3 · Sala de Conferencias",
+   "titulo": "dia 3 primera funcion"
+  },
+  "f_a6c79ab1b8": {
+   "sede": "Universidad de la Costa – CUC - Barranquilla",
+   "dia": "2026-11-06",
+   "hora": "18:00",
+   "sala": "Bloque 11, piso 3 · Sala de Conferencias",
+   "titulo": "dia 3 segunda funcion"
+  },
+  "f_148464561f": {
+   "sede": "La Fábrica de Cultura - Barranquilla",
+   "dia": "2026-11-07",
+   "hora": "09:00",
+   "sala": "Auditorio EDA",
+   "titulo": "revelar se"
+  }
+ }
+}

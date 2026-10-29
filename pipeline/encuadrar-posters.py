@@ -63,6 +63,9 @@ FONDO_ES_ARTE = {'funeral-siniestro.jpg',
                  # negro, créditos abajo sobre negro; la segunda pasada iba a quitar
                  # ↑7 ↓5 (Mamut, 28 sep 2026)
                  'manual-para-invocar-fantasmas.jpg',
+                 # «Más allá de la corona» (FICIDI, 29 oct 2026): fondo rosa liso de
+                 # borde a borde y franja blanca de logos abajo; es diseño, no marco
+                 'mas-alla-de-la-corona.jpg',
                  # Fantasmagoría 8 (29 sep): el negro de los dos afiches es diseño
                  'familia-teme-enfrentar-una-nueva-noche-de-terror.jpg', 'horror-and-love.jpg',
                  # Bogotá Horror 8 (7 oct): el negro de «Sigilo» y «El susurro» y el
