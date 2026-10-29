@@ -1,0 +1,267 @@
+{
+ "_provenance": {
+  "fuente": "ids-legado.py: ids estables congelados desde lo publicado (docs/FUNCION.md §11.2)",
+  "capturado": "2026-10-18"
+ },
+ "funciones": {
+  "f_c3689bcca5": {
+   "sede": "Galería San José - CBA Marinilla - Marinilla",
+   "dia": "2026-10-09",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "mapistas expo filcmar 8"
+  },
+  "f_eaf0f82a99": {
+   "sede": "Teatro Regional Valerio Antonio Jiménez - Marinilla",
+   "dia": "2026-10-09",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "cortoconcierto inaugural antioquia super ochera"
+  },
+  "f_0ec1e7974c": {
+   "sede": "Teatro Regional Valerio Antonio Jiménez - Marinilla",
+   "dia": "2026-10-09",
+   "hora": "21:00",
+   "sala": "",
+   "titulo": "aquileo venganza"
+  },
+  "f_6b49ab2c46": {
+   "sede": "Teatro Regional Valerio Antonio Jiménez - Marinilla",
+   "dia": "2026-10-09",
+   "hora": "21:00",
+   "sala": "",
+   "titulo": "el pesebre"
+  },
+  "f_da168edd23": {
+   "sede": "Casa Cultural Valerio Antonio Jiménez - Marinilla",
+   "dia": "2026-10-10",
+   "hora": "09:00",
+   "sala": "Hall",
+   "titulo": "taller escritura y reescritura"
+  },
+  "f_5c6bd7c270": {
+   "sede": "Teatro Regional Valerio Antonio Jiménez - Marinilla",
+   "dia": "2026-10-10",
+   "hora": "11:00",
+   "sala": "",
+   "titulo": "lo que queda del mar"
+  },
+  "f_e0793c46a3": {
+   "sede": "Teatro Regional Valerio Antonio Jiménez - Marinilla",
+   "dia": "2026-10-10",
+   "hora": "11:00",
+   "sala": "",
+   "titulo": "si no ardemos como iluminar la noche"
+  },
+  "f_3075e9c47d": {
+   "sede": "Galería San José - CBA Marinilla - Marinilla",
+   "dia": "2026-10-10",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "mapistas expo filcmar 8"
+  },
+  "f_9aa3443a7c": {
+   "sede": "Teatro Municipal Simona Duque - Marinilla",
+   "dia": "2026-10-10",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "tintico charlado mercado mora secretos de chifonier"
+  },
+  "f_4eb3544a1d": {
+   "sede": "Teatro Regional Valerio Antonio Jiménez - Marinilla",
+   "dia": "2026-10-10",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "6 competencia universitaria programa 1"
+  },
+  "f_0ef708d7ab": {
+   "sede": "Teatro Municipal Simona Duque - Marinilla",
+   "dia": "2026-10-10",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "la misteriosa mirada del flamenco"
+  },
+  "f_779cce8f17": {
+   "sede": "Teatro Municipal Simona Duque - Marinilla",
+   "dia": "2026-10-10",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "pude ver un fantasma desde mi ventana"
+  },
+  "f_95fee2a163": {
+   "sede": "Teatro Regional Valerio Antonio Jiménez - Marinilla",
+   "dia": "2026-10-10",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "la corazonada"
+  },
+  "f_48d0ad2cf0": {
+   "sede": "Teatro Regional Valerio Antonio Jiménez - Marinilla",
+   "dia": "2026-10-10",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "testimonio"
+  },
+  "f_ae93d0d2c7": {
+   "sede": "Teatro Regional Valerio Antonio Jiménez - Marinilla",
+   "dia": "2026-10-10",
+   "hora": "21:00",
+   "sala": "Foso",
+   "titulo": "competencia espiritu del trasnoche"
+  },
+  "f_f425893afe": {
+   "sede": "Casa Cultural Valerio Antonio Jiménez - Marinilla",
+   "dia": "2026-10-11",
+   "hora": "09:00",
+   "sala": "Hall",
+   "titulo": "taller escritura y reescritura"
+  },
+  "f_982a2d5eb4": {
+   "sede": "Parque Principal de Marinilla - Marinilla",
+   "dia": "2026-10-11",
+   "hora": "11:00",
+   "sala": "",
+   "titulo": "mu ki ra"
+  },
+  "f_f0cc5d55b5": {
+   "sede": "Galería San José - CBA Marinilla - Marinilla",
+   "dia": "2026-10-11",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "mapistas expo filcmar 8"
+  },
+  "f_d12ba94db9": {
+   "sede": "Parque Principal de Marinilla - Marinilla",
+   "dia": "2026-10-11",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "taller jugueteria audiovisual"
+  },
+  "f_033a4ec0a1": {
+   "sede": "Teatro Municipal Simona Duque - Marinilla",
+   "dia": "2026-10-11",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "tintico charlado mercado mora el cine es medio o es fin"
+  },
+  "f_7665b79a2e": {
+   "sede": "Parque Principal de Marinilla - Marinilla",
+   "dia": "2026-10-11",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "6 competencia universitaria programa 2"
+  },
+  "f_d1813a5f47": {
+   "sede": "Parque Principal de Marinilla - Marinilla",
+   "dia": "2026-10-11",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "andariega"
+  },
+  "f_0eb38e4c83": {
+   "sede": "Parque Principal de Marinilla - Marinilla",
+   "dia": "2026-10-11",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "el dia interrumpido"
+  },
+  "f_0fb53b2a42": {
+   "sede": "Parque Principal de Marinilla - Marinilla",
+   "dia": "2026-10-11",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "adios al amigo"
+  },
+  "f_ccc88a3b95": {
+   "sede": "Parque Principal de Marinilla - Marinilla",
+   "dia": "2026-10-11",
+   "hora": "21:30",
+   "sala": "",
+   "titulo": "concierto central edson velandia"
+  },
+  "f_7d219378f7": {
+   "sede": "Parque Principal de Marinilla - Marinilla",
+   "dia": "2026-10-12",
+   "hora": "08:00",
+   "sala": "",
+   "titulo": "caminata fotografica"
+  },
+  "f_a49efd8c1f": {
+   "sede": "Casa Cultural Valerio Antonio Jiménez - Marinilla",
+   "dia": "2026-10-12",
+   "hora": "09:00",
+   "sala": "Hall",
+   "titulo": "taller escritura y reescritura"
+  },
+  "f_2f81b1e31a": {
+   "sede": "Teatro Municipal Simona Duque - Marinilla",
+   "dia": "2026-10-12",
+   "hora": "10:00",
+   "sala": "",
+   "titulo": "mercado mora pitch publico peliculas en camino mora"
+  },
+  "f_ba2d889abe": {
+   "sede": "Galería San José - CBA Marinilla - Marinilla",
+   "dia": "2026-10-12",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "mapistas expo filcmar 8"
+  },
+  "f_aa482f89c9": {
+   "sede": "Teatro Municipal Simona Duque - Marinilla",
+   "dia": "2026-10-12",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "proyeccion mercado mora peliculas universitarias universidad itm y tecnologico de artes debora arango"
+  },
+  "f_1069b0b9ca": {
+   "sede": "Teatro Regional Valerio Antonio Jiménez - Marinilla",
+   "dia": "2026-10-12",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "6 competencia universitaria programa 3"
+  },
+  "f_a9833c854c": {
+   "sede": "Teatro Municipal Simona Duque - Marinilla",
+   "dia": "2026-10-12",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "casi 30"
+  },
+  "f_5355666ed0": {
+   "sede": "Teatro Municipal Simona Duque - Marinilla",
+   "dia": "2026-10-12",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "el vuelo del moscardon"
+  },
+  "f_0d11286908": {
+   "sede": "Teatro Regional Valerio Antonio Jiménez - Marinilla",
+   "dia": "2026-10-12",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "ceremonia de premiacion"
+  },
+  "f_9ab061b75a": {
+   "sede": "Teatro Regional Valerio Antonio Jiménez - Marinilla",
+   "dia": "2026-10-12",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "lo demas es ruido"
+  },
+  "f_cfad901fcb": {
+   "sede": "Teatro Regional Valerio Antonio Jiménez - Marinilla",
+   "dia": "2026-10-12",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "una vez en un cuerpo"
+  },
+  "f_ba8c0e2096": {
+   "sede": "Teatro Regional Valerio Antonio Jiménez - Marinilla",
+   "dia": "2026-10-13",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "la paga"
+  }
+ }
+}

@@ -1,0 +1,232 @@
+{
+ "_provenance": {
+  "fuente": "afirmaciones sobre la agenda oficial (p/Def6fhKDSQy, 14 oct)",
+  "capturado": "2026-10-18"
+ },
+ "afirmaciones": [
+  {
+   "ancla": {
+    "sede": "Centro de Eventos Guatapé Plaza - Guatapé",
+    "dia": "2026-10-21",
+    "hora": "20:00"
+   },
+   "casilla": "existe",
+   "valor": false,
+   "por_que": "cóctel de invitados, no abierto al público",
+   "fuente": {
+    "tipo": "juan",
+    "frase": "Dale (a la propuesta: «los dos cócteles afuera, porque son cerrados»)",
+    "fecha": "2026-10-18"
+   },
+   "evidencia": "lámina 01: «Coctel Inaugural · EL REFELJO DEL CINE · 8:00 - 09:30 Pm · Centro de Eventos Guatapé Plaza»"
+  },
+  {
+   "ancla": {
+    "sede": "Muelle Corona - Guatapé",
+    "dia": "2026-10-22",
+    "hora": "18:00"
+   },
+   "casilla": "existe",
+   "valor": false,
+   "por_que": "cóctel de invitados, no abierto al público",
+   "fuente": {
+    "tipo": "juan",
+    "frase": "Dale (a la propuesta: «los dos cócteles afuera, porque son cerrados»)",
+    "fecha": "2026-10-18"
+   },
+   "evidencia": "lámina 03: «COCTEL INVITADOS · 6:00 Pm · Muelle Corona - Malecón»",
+   "funcion": "f_a6d3e7afb3"
+  },
+  {
+   "ancla": {
+    "sede": "Parque Educativo El Zócalo - Guatapé",
+    "dia": "2026-10-24",
+    "hora": "10:00"
+   },
+   "casilla": "venue",
+   "valor": "Centro Día Gerontológico - Guatapé",
+   "fuente": {
+    "tipo": "festival-ig",
+    "url": "https://www.instagram.com/p/DehGQpgoAvX/",
+    "fecha": "2026-10-15"
+   },
+   "evidencia": "afiche de la masterclass «Cine y Nuevas Narrativas» (lámina 1): «Centro Gerontológico de Guatapé»; la agenda (14 oct) decía Parque Educativo El Zócalo"
+  },
+  {
+   "ancla": {
+    "sede": "Parque Educativo El Zócalo - Guatapé",
+    "dia": "2026-10-23",
+    "hora": "14:00"
+   },
+   "casilla": "duration",
+   "valor": "240 min",
+   "fuente": {
+    "tipo": "festival-ig",
+    "url": "https://www.instagram.com/p/DehGQpgoAvX/",
+    "fecha": "2026-10-15"
+   },
+   "evidencia": "afiche de la masterclass «Concept Art para Cine» (lámina 2): «2:00 – 6:00 p.m.»; la agenda (14 oct) decía 2:00 - 5:00",
+   "funcion": "f_9e3694faa0"
+  },
+  {
+   "funcion": "f_07579b3657",
+   "ancla": {
+    "sede": "Museo Comunitario - Guatapé",
+    "dia": "2026-10-22",
+    "hora": "14:00"
+   },
+   "casilla": "venue",
+   "valor": "Parque Principal - Guatapé",
+   "fuente": {
+    "tipo": "festival-ig",
+    "url": "https://www.instagram.com/p/DenbqwCDTjY/",
+    "fecha": "2026-10-17"
+   },
+   "evidencia": "lámina 00: «El Reflejo de un Actor · 22 de octubre · 2:00 P. M. – 4:00 P. M. · Parque Principal»; la agenda (14 oct) decía Museo Comunitario"
+  },
+  {
+   "funcion": "f_c0799142e3",
+   "ancla": {
+    "sede": "Parque Principal - Guatapé",
+    "dia": "2026-10-23",
+    "hora": "14:00"
+   },
+   "casilla": "time",
+   "valor": "15:00",
+   "fuente": {
+    "tipo": "festival-ig",
+    "url": "https://www.instagram.com/p/DenbqwCDTjY/",
+    "fecha": "2026-10-17"
+   },
+   "evidencia": "lámina 03: «Historias que se juegan · creando un videojuego con Arnold Ortiz · 23 de octubre · 3:00 P. M. – 4:00 P. M.»; la agenda decía 2:00–3:00"
+  },
+  {
+   "ancla": {
+    "sede": "Parque Principal - Guatapé",
+    "dia": "2026-10-25",
+    "hora": "14:00"
+   },
+   "casilla": "time",
+   "valor": "14:30",
+   "fuente": {
+    "tipo": "festival-ig",
+    "url": "https://www.instagram.com/p/DepGT_4oHSu/",
+    "fecha": "2026-10-18"
+   },
+   "evidencia": "lámina 03: «Sangre de Palermo y su reflejo · 25 de octubre · 2:30 P. M. – 3:30 P. M.»; la agenda decía 2:00"
+  },
+  {
+   "ancla": {
+    "sede": "Parque Principal - Guatapé",
+    "dia": "2026-10-25",
+    "hora": "14:00"
+   },
+   "casilla": "duration",
+   "valor": "60 min",
+   "fuente": {
+    "tipo": "festival-ig",
+    "url": "https://www.instagram.com/p/DepGT_4oHSu/",
+    "fecha": "2026-10-18"
+   },
+   "evidencia": "lámina 03: «2:30 P. M. – 3:30 P. M.»"
+  },
+  {
+   "ancla": {
+    "sede": "Parque Principal - Guatapé",
+    "dia": "2026-10-25",
+    "hora": "15:30"
+   },
+   "casilla": "existe",
+   "valor": {
+    "title": "El Reflejo de la Naturaleza: cine y medio ambiente",
+    "type": "event",
+    "event_kind": "conversatorio",
+    "section": "🎪 Actividades",
+    "day": "2026-10-25",
+    "time": "15:30",
+    "duration": "60 min",
+    "venue": "Parque Principal - Guatapé",
+    "is_free": true,
+    "description": "Una conversación sobre la relación entre el cine, la naturaleza y el cuidado del medio ambiente. Con Roberto Ramírez Espitia, del Festival Internacional de Cine de Tequila.",
+    "_src": {
+     "url": "https://www.instagram.com/p/DepGT_4oHSu/",
+     "date": "2026-10-18",
+     "lamina": 4
+    },
+    "poster": "/assets/guatape-2026/el-reflejo-de-la-naturaleza-v2.jpg",
+    "posterSource": "oficial"
+   },
+   "fuente": {
+    "tipo": "festival-ig",
+    "url": "https://www.instagram.com/p/DepGT_4oHSu/",
+    "fecha": "2026-10-18"
+   },
+   "evidencia": "lámina 04: «Conversatorio · El reflejo de la naturaleza · cine y medio ambiente · Roberto Ramírez Espitia, Festival Internacional de Cine de Tequila · 25 de octubre · 3:30 P. M. – 4:30 P. M. · Parque Principal»; no estaba en la agenda del 14 oct"
+  },
+  {
+   "ancla": {
+    "sede": "Parque Educativo El Zócalo - Guatapé",
+    "dia": "2026-10-23",
+    "hora": "14:00"
+   },
+   "casilla": "registration_url",
+   "valor": "https://forms.gle/E7h49dUuxkr3Ej3S9",
+   "fuente": {
+    "tipo": "festival-mensaje",
+    "url": "https://forms.gle/E7h49dUuxkr3Ej3S9",
+    "fecha": "2026-10-19"
+   },
+   "evidencia": "pieza «concept art para cine» que el festival mandó a Juan por mensaje (19 oct): QR «Inscríbete aquí» → https://forms.gle/E7h49dUuxkr3Ej3S9",
+   "funcion": "f_9e3694faa0"
+  },
+  {
+   "ancla": {
+    "sede": "Parque Educativo El Zócalo - Guatapé",
+    "dia": "2026-10-24",
+    "hora": "09:00"
+   },
+   "casilla": "registration_url",
+   "valor": "https://forms.gle/E7h49dUuxkr3Ej3S9",
+   "fuente": {
+    "tipo": "festival-mensaje",
+    "url": "https://forms.gle/E7h49dUuxkr3Ej3S9",
+    "fecha": "2026-10-19"
+   },
+   "evidencia": "pieza «concept art para cine» que el festival mandó a Juan por mensaje (19 oct): QR «Inscríbete aquí» → https://forms.gle/E7h49dUuxkr3Ej3S9",
+   "funcion": "f_d1a1ca9b74"
+  },
+  {
+   "ancla": {
+    "sede": "Parque Educativo El Zócalo - Guatapé",
+    "dia": "2026-10-24",
+    "hora": "10:00"
+   },
+   "casilla": "registration_url",
+   "valor": "https://forms.cloud.microsoft/e/ndJtF9xmpM",
+   "fuente": {
+    "tipo": "festival-mensaje",
+    "url": "https://forms.cloud.microsoft/e/ndJtF9xmpM",
+    "fecha": "2026-10-19"
+   },
+   "evidencia": "pieza «Cine y Nuevas Narrativas» que el festival mandó a Juan por mensaje (19 oct): QR «Inscríbete aquí» → https://forms.cloud.microsoft/e/ndJtF9xmpM",
+   "funcion": "f_b855134381"
+  },
+  {
+   "funcion": "f_0c865d99a3",
+   "ancla": {
+    "sede": "El Majagual - Guatapé",
+    "dia": "2026-10-24",
+    "hora": "21:00"
+   },
+   "casilla": "time",
+   "valor": "20:00",
+   "contra": "21:00",
+   "fuente": {
+    "tipo": "festival-ig",
+    "url": "https://www.instagram.com/p/De12_5euMuu/",
+    "fecha": "2026-10-23"
+   },
+   "evidencia": "lámina 1: «FIESTA ELECTRÓNICA · MAÑANA EN MAJAGUAL · 24 DE OCTUBRE · 8:00 P. M. · MAJAGUAL»; la agenda (Def6fhKDSQy lámina 8, 14 oct) decía 9:00 p. m."
+  }
+ ]
+}

@@ -1,0 +1,51 @@
+{
+ "id": "w_R4HF7EKJN5JE",
+ "titulo_original": "El juego de la vida",
+ "anio": 2025,
+ "paises": [
+  "CO"
+ ],
+ "directores": [
+  "Mario Andrés Ruiz Zuluaga"
+ ],
+ "aliases": [
+  {
+   "titulo": "El Juego de la Vida",
+   "tipo": "festival"
+  },
+  {
+   "titulo": "The Game of Life",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "Un documentalista sigue durante 14 años a cinco familias colombianas que enfrentan las desigualdades de un país donde el origen influye en las oportunidades. A través de sus decisiones, frustraciones, resiliencia y logros, revela que, aunque las reglas no son iguales para todos, la voluntad de transformar el propio destino persiste. El juego de la vida es un retrato íntimo sobre la movilidad social, la dignidad y la esperanza en Colombia.",
+  "en": "A documentary follows five Colombian families for 14 years as they confront the inequalities of a country where one's origins influence opportunities. Through their decisions, frustrations, resilience, and achievements, it reveals that, although the rules are not the same for everyone, the will to transform one's own destiny persists. THE GAME OF LIFE is an intimate portrait of social mobility, dignity, and hope in Colombia."
+ },
+ "generos": [
+  "Documental"
+ ],
+ "afiche": {
+  "archivo": "/assets/ficdeh/el-juego-de-la-vida.jpg",
+  "veredicto": "oficial-festival"
+ },
+ "xref": {
+  "tmdb": 1562450,
+  "letterboxd": "the-game-of-life-2025"
+ },
+ "versiones": [
+  {
+   "etiqueta": "95 min",
+   "duracion_min": 95
+  },
+  {
+   "etiqueta": "96 min",
+   "duracion_min": 96
+  }
+ ],
+ "presentaciones": [
+  "ficdeh-2026",
+  "ficma-2026"
+ ]
+}

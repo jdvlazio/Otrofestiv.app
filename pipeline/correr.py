@@ -22,6 +22,13 @@ Uso:
     python3 pipeline/correr.py <fest-id>            # todo el plan
     python3 pipeline/correr.py <fest-id> --lista    # ver pasos e inventario
     python3 pipeline/correr.py <fest-id> --paso 3   # solo el paso 3
+    python3 pipeline/correr.py <fest-id> --bajar    # baja las fuentes vivas y corre el plan
+    python3 pipeline/correr.py <fest-id> --desde 6  # del paso 6 al final (lo usa corto.py)
+
+Fuentes vivas (20 oct 2026, pipeline/fuentes_vivas.py): si el plan declara
+`fuentes_vivas` y el festival está vigente, una fuente sin bajar en 24 h FRENA
+antes del primer paso. `--bajar` las refresca; `--fuentes-viejas` sigue igual,
+dicho en voz alta.
 """
 import datetime, glob, json, os, subprocess, sys
 
@@ -72,18 +79,34 @@ def main():
         print(f'  {i}. {p["cmd"]:52} {p.get("que", "")}')
     if '--lista' in sys.argv:
         return
+    import fuentes_vivas
+    if '--bajar' in sys.argv:
+        print('\n─── fuentes vivas: bajando')
+        try:
+            fuentes_vivas.bajar(fid)
+        except fuentes_vivas.FuenteMala as e:
+            sys.exit(f'✗ {e}')
+    desde = int(sys.argv[sys.argv.index('--desde') + 1]) if '--desde' in sys.argv else None
+    # --desde no vuelve a leer las fuentes (eso es el camino largo): no las exige frescas
+    _v = None if desde else fuentes_vivas.frenar_si_vencidas(fid, f'python3 pipeline/correr.py {fid} --bajar')
+    if _v and '--fuentes-viejas' not in sys.argv:
+        sys.exit(_v + f'\n  (o --fuentes-viejas, a mano, si de verdad querés armar con lo que hay)')
+    if _v:
+        print('⚠ --fuentes-viejas: se arma con fuentes vencidas\n' + _v)
 
     solo = int(sys.argv[sys.argv.index('--paso') + 1]) if '--paso' in sys.argv else None
     for i, p in enumerate(pasos, 1):
-        if solo and i != solo:
+        if (solo and i != solo) or (desde and i < desde):
             continue
         print(f'\n─── paso {i}/{len(pasos)}: {p["cmd"]}')
         _b = f'{REPO}/festivals/staging/{fid}-build.json'
         _antes = os.path.getmtime(_b) if os.path.exists(_b) else 0
         r = subprocess.run(p['cmd'], shell=True, cwd=REPO)
         if r.returncode != 0:
+            lib.marcar_fallo(fid, i, p['cmd'])
             sys.exit(f'\n✗ el paso {i} falló (exit {r.returncode}) — se aborta aquí; '
-                     f'reanudar con --paso {i} tras corregir')
+                     f'reanudar con --paso {i} tras corregir (el build queda marcado: publicar.py no lo acepta)')
+        lib.limpiar_fallo(fid, i, cmd=p['cmd'])
         # si este paso reescribió el build, lleva el sello del runner y del plan
         if os.path.exists(_b) and os.path.getmtime(_b) > _antes:
             _c = lib.sellar_build(fid, i, p['cmd'])

@@ -14,7 +14,7 @@ import {
 // components — el ciclo decide dónde vive; ver el comentario del dueño).
 export { _langDates };
 import { toMin, minToStr, durEstimada, simNow, simTodayStr, _festDate, _festNowMin } from '../domain/time.js';
-import { blockDuration, effectiveDuration, screeningBlockEndMin, screeningQaOnly , abiertaFase, _djb2, premiereBadgeKey} from '../domain/film.js';
+import { blockDuration, effectiveDuration, screeningBlockEndMin, screeningQaOnly , abiertaFase, _djb2, premiereBadgeKey, screeningPassed} from '../domain/film.js';
 import { _resolveVenue, travelMins } from '../domain/festival.js';
 import { state } from '../state/state.js';
 import { t } from '../i18n/i18n.js';
@@ -169,7 +169,7 @@ export function itemPosterParts(item, section, imgClass, {header=false}={}){
       inner:editorialFrame(header?{header:_secLabel(section||''), src, title:item.title}:{src, title:item.title})};
   }
   return {ed:false, accent:'', src,
-    inner:src?`<img class="${imgClass}" src="${src}" loading="lazy" onerror="this.remove()" alt="">`:''};
+    inner:src?`<img class="${imgClass}" src="${src}" loading="lazy" data-err="quitar" alt="">`:''};
 }
 
 // ── posterAmbient — color ambiental del póster (decisión Juan 18 jul 2026) ────
@@ -407,7 +407,7 @@ export function _posterThumb(f, cssClass, loading){
   }
 
   const _posStyle = _posterStyle(f);
-  return `<img class="${cssClass}" src="${p}" loading="${_load}"${_posStyle} onerror="this.remove()" alt="">`;
+  return `<img class="${cssClass}" src="${p}" loading="${_load}"${_posStyle} data-err="quitar" alt="">`;
 }
 
 // ── Modelo único de póster (unión discriminada) ───────────────────────────────
@@ -455,7 +455,7 @@ export function editorialFrame({header, body, src, title, loading, accent, dato,
   const _ttl=(body!=null && String(body).trim()) ? String(body) : '';
   const _dato=(dato!=null && String(dato).trim()) ? String(dato) : '';
   const img=src
-    ? `<img class="ed-still" src="${src}"${_dt} loading="${_l}" onload="this.style.opacity='1'" onerror="_edPosterErr(this)" alt="">`
+    ? `<img class="ed-still" src="${src}"${_dt} loading="${_l}" data-load="mostrar" data-err="ed" alt="">`
     : '';
   // MINIATURA = sin sección ni título (el corto dentro de un programa). Ahí el
   // campo se centra y el pie se llena con la propia obra desenfocada (Juan, 19
@@ -471,7 +471,7 @@ export function editorialFrame({header, body, src, title, loading, accent, dato,
   // el vacío no existe, lo llenan el título y el dato») era falsa en pantalla.
   // Mismo mecanismo que la miniatura —contenido, con máscara— pero anclado al
   // borde del campo grande (66,67%, clase ed-halo-full) para no dejar costura.
-  const halo=(src)?`<div class="ed-halo${_mini?'':' ed-halo-full'}"><img src="${src}" loading="${_l}" aria-hidden="true" onerror="this.remove()" alt=""></div>`:'';
+  const halo=(src)?`<div class="ed-halo${_mini?'':' ed-halo-full'}"><img src="${src}" loading="${_l}" aria-hidden="true" data-err="quitar" alt=""></div>`:'';
   return `<div class="ed-fil"></div>`
     + `<div class="ed-hdr">${header?_edHdrSVG(header, accent):''}</div>`
     + halo
@@ -515,6 +515,51 @@ export function isToday(day){
 export function vcfg(v){
   const festVenues=(FESTIVAL_CONFIG[_activeFestId]||{}).venues||{};
   return _resolveVenue(v,festVenues);
+}
+
+// filterCity(v) — la ciudad de una sede PARA FILTRAR Y AGRUPAR (dueño único,
+// 13 oct 2026). Igual a vcfg(v).city salvo los MUNICIPIOS SATÉLITE: una ciudad
+// con UNA sola función y a < 50 km de la principal (la de más funciones; distancia
+// desde el centroide de sus sedes) se integra a la principal. Caso: FICPA —
+// Chachagüí, Yacuanquer y La Florida, 1 función cada uno a 16–17 km de Pasto—
+// salía como festival de 4 ciudades: «¿A cuál ciudad vas?» y una semana vacía
+// al elegir un municipio. El dato NO cambia (city sigue diciendo el municipio,
+// venueCity/badge y pin intactos); solo deja de contar como ciudad aparte.
+// FICDEH (ciudades lejanas) y las de ≥ 2 funciones no se tocan (Juan: «con
+// una sola, no justifica» — Cinemancia, con 2 por municipio, sigue aparte).
+function _satelites(){
+  const MAX_FUNCIONES=2, MAX_KM=50;   // umbrales de Juan: UNA sola función (13 oct)
+  const _c=_satelites._c||{};
+  const films=(typeof FILMS!=='undefined'&&FILMS)||[];
+  if(_c.key===_activeFestId&&_c.films===films) return _c.map;
+  const cnt={}, pts={};
+  films.forEach(f=>{
+    if(f.info||!f.venue||!f.day) return;
+    const c=vcfg(f.venue); if(!c.city) return;
+    cnt[c.city]=(cnt[c.city]||0)+1;
+  });
+  Object.values((FESTIVAL_CONFIG[_activeFestId]||{}).venues||{}).forEach(v=>{
+    const lng=v&&(v.lng??v.lon);
+    if(v&&v.city&&v.lat&&lng) (pts[v.city] ||= []).push([v.lat,lng]);
+  });
+  const map={};
+  const orden=Object.keys(cnt).sort((a,b)=>cnt[b]-cnt[a]);
+  const main=orden[0];
+  const _cen=c=>{const p=pts[c];if(!p||!p.length) return null;return [p.reduce((a,x)=>a+x[0],0)/p.length,p.reduce((a,x)=>a+x[1],0)/p.length];};
+  const m=main&&_cen(main);
+  if(m) orden.slice(1).forEach(c=>{
+    if(cnt[c]>=MAX_FUNCIONES) return;
+    const q=_cen(c); if(!q) return;
+    const R=6371, r=Math.PI/180, dLa=(q[0]-m[0])*r, dLo=(q[1]-m[1])*r;
+    const h=Math.sin(dLa/2)**2+Math.cos(m[0]*r)*Math.cos(q[0]*r)*Math.sin(dLo/2)**2;
+    if(2*R*Math.asin(Math.sqrt(h))<MAX_KM) map[c]=main;
+  });
+  _satelites._c={key:_activeFestId,films,map};
+  return map;
+}
+export function filterCity(v){
+  const c=vcfg(v).city||'';
+  return (c&&_satelites()[c])||c;
 }
 
 // venueMatches — EL predicado del filtro de lugar (dueño único, 5 ago 2026).
@@ -561,13 +606,13 @@ export function secMatches(f, sel){
 
 export function venueMatches(v, sel){
   if(sel==='all') return true;
-  if(sel&&sel.startsWith('city:')) return (vcfg(v).city||'')===sel.slice(5);
+  if(sel&&sel.startsWith('city:')) return filterCity(v)===sel.slice(5);
   if(sel&&sel.startsWith('sede:')){
     const i=sel.indexOf(SEDE_SEP);
     if(i<0) return vcfg(v).short===sel.slice(5);
     const ciudad=sel.slice(5,i), short=sel.slice(i+1);
     const c=vcfg(v);
-    return c.short===short && (c.city||'')===ciudad;
+    return c.short===short && filterCity(v)===ciudad;
   }
   return vcfg(v).short===sel;
 }
@@ -610,7 +655,7 @@ export function festivalCities(films){
   const map={};
   (films||[]).forEach(f=>{
     if(f.info||!f.venue||!f.day) return;
-    const c=vcfg(f.venue).city;
+    const c=filterCity(f.venue);
     if(!c) return;
     (map[c] ||= {name:c,count:0,vivas:0,days:new Set()});
     map[c].count++;
@@ -652,7 +697,9 @@ export function keepCityOnly(sel){ return isCitySel(sel)?sel:'all'; }
 // El regex se conserva como respaldo, no por nostalgia: los festivales ya
 // montados (FICCI 65 con 9 sedes-sala, Cinemancia, Tercer Tiempo) traen la sala
 // dentro del nombre y seguirían funcionando sin re-onboardearlos.
+// Con LA FUNCIÓN (objeto) su `sala` manda: el modelo la publica por función (BHFF).
 export function sala(v){
+  if(v&&typeof v==='object'){ if(String(v.sala||'').trim()) return String(v.sala).trim(); v=v.venue; }
   const _room=(vcfg(v)||{}).room;
   if(_room) return String(_room).trim();
   const s=String(v||'');
@@ -670,7 +717,8 @@ export function sala(v){
 // Frente a la clave cruda tiene además la ventaja de ser legible: «UNIBAC · Sala 1»
 // en vez de «Salón 1 ‒ Miguel Sebastián Guerrero, unibac».
 export function venueLabel(v){
-  const nombre=(vcfg(v)||{}).short||String(v||'');
+  const _sede=v&&typeof v==='object'?v.venue:v;
+  const nombre=(vcfg(_sede)||{}).short||String(_sede||'');
   const _sala=sala(v);
   return _sala?`${nombre} · ${_sala}`:nombre;
 }
@@ -783,7 +831,7 @@ export function icsCampos(s){
   return {
     uid:icsUid(s), start, end,
     summary:_p(s._title),
-    location:_p(venueLabel(s.venue)),          // edificio · sala (dueño único)
+    location:_p(venueLabel(s)),          // edificio · sala (dueño único)
     description:`${_p(cfg.name||'Festival')} - ${_p(s.section)} - ${_dur}`,
     seccion:_p(s.section),                      // el puente nativo la usa aparte
   };
@@ -983,6 +1031,17 @@ export function abiertaRango(f){
   return t('abierta_rango',{a:_h(f.time),b:_h(minToStr(screeningBlockEndMin(f)))});
 }
 
+// ventanaDias — «22 oct – 13 nov»: los días de una actividad abierta de varios días
+// (f._ventana, domain/film.js expandVentanas). El último puede caer después del
+// festival, así que no sale de dayLabel (que solo conoce los días del festival).
+export function ventanaDias(f){
+  const v=f&&f._ventana; if(!v) return '';
+  const fmt=k=>{ const d=new Date(k+'T12:00:00'); return isNaN(d.getTime())?k
+    :new Intl.DateTimeFormat(_lang==='en'?'en-US':_lang==='pt'?'pt-BR':'es-CO',{day:'numeric',month:'short'})
+      .formatToParts(d).filter(p=>p.type!=='literal').map(p=>p.value.replace('.','')).join(' '); };   // «22 oct», sin «de»
+  return v.desde===v.hasta?fmt(v.desde):`${fmt(v.desde)} – ${fmt(v.hasta)}`;
+}
+
 // _minFmt(m) — minutos (número) → "1 h 45" / "45 min". Para los detalles del conflicto
 // por desplazamiento ("~1 h 45 de viaje · 1 h 05 de hueco"). durFmt formatea la duración
 // de una actividad (string del JSON); esto formatea un cómputo nuestro.
@@ -1001,7 +1060,7 @@ export function _mkCortoItemHtml(item, n, {cls='mplan-prog-item', section='', ra
   const thumb=_pp.src;
   const thumbHtml=_pp.ed
     ? `<div class="c-film-thumb poster-ed" style="--ed-accent:${_pp.accent}">${_pp.inner}</div>`
-    : `<img src="${thumb}" class="c-film-thumb" loading="lazy" onerror="this.remove()" alt="">`;
+    : `<img src="${thumb}" class="c-film-thumb" loading="lazy" data-err="quitar" alt="">`;
   // data-* attrs — nunca interpolar strings con contenido variable en onclick
   const _dt=encodeURIComponent(item.title||'');
   const _dc=encodeURIComponent(item.country||'');
@@ -1075,6 +1134,32 @@ export function ticketBadgeTarget(){
   return val;
 }
 
+// ── Boleta, nivel 1 (#1077) ─────────────────────────────────────────────────
+// funcionPaga — DUEÑA ÚNICA de «esta función se paga» para Boleta. Mismo
+// criterio que el distintivo CON BOLETA y el enlace de compra de la ficha:
+// festival 'paid', o 'mixed' sin is_free:true. Cancelada o con invitación: no
+// hay nada que comprar. Sin ticketing_model en la config, nada es paga — no se
+// inventa (los datos los marca Onboarding).
+export function funcionPaga(f){
+  if(!f||f._cancelled||f.by_invitation||f.is_free===true) return false;
+  const m=(FESTIVAL_CONFIG[_activeFestId]||{}).ticketing_model;
+  return m==='paid'||m==='mixed';
+}
+// urlCompra — el ticket_url de la función pisa al del festival (como la ficha);
+// solo https. '' si no hay dónde comprar.
+export function urlCompra(f){
+  const ok=u=>typeof u==='string'&&/^https:\/\//.test(u);
+  if(f&&ok(f.ticket_url)) return f.ticket_url;
+  const g=(FESTIVAL_CONFIG[_activeFestId]||{}).ticket_url;
+  return ok(g)?g:'';
+}
+// claveBoleta — una FUNCIÓN, no una obra: la entrada se compra para esa hora.
+export const claveBoleta=s=>`${s._title||s.title||''}|${s.day||''}|${s.time||''}`;
+// faltaBoleta(s, f) — entrada del Plan paga, sin marcar y que todavía no pasó.
+export function faltaBoleta(s, f){
+  return !!f&&funcionPaga(f)&&!screeningPassed(s)&&!(typeof ticketed!=='undefined'&&ticketed.has(claveBoleta(s)));
+}
+
 export function _metaBadges(f){
   // Una función CANCELADA no tiene Q&A, ni inscripción, ni boleta. Sin esto la
   // card de Quibdó decía «CANCELADA» y al lado «CON BOLETA» el día que FICDEH
@@ -1138,8 +1223,8 @@ export function _programaStack(f){
   // programa (mejora 1 — el stack vive en el chip de 56px de la lista), nunca
   // un hueco vacío ni el póster entero ilegible.
   const _gen=()=>getFilmPosterMini(f);
-  const imgB=`<img class="ps-back" src="${p2||_gen()}" loading="lazy" onerror="this.remove()" alt="">`;
-  const imgF=`<img class="ps-front" src="${p1||_gen()}" loading="lazy" onerror="this.remove()" alt="">`;
+  const imgB=`<img class="ps-back" src="${p2||_gen()}" loading="lazy" data-err="quitar" alt="">`;
+  const imgF=`<img class="ps-front" src="${p1||_gen()}" loading="lazy" data-err="quitar" alt="">`;
   return`<div class="plist-poster-stack">${imgB}${imgF}</div>`;
 }
 
@@ -1152,7 +1237,7 @@ export function _plistPosterHtml(f, src){
     // Marco editorial único (lista = banda + img, sin label) vía posterParts.
     return '<div class="plist-poster poster-ed" style="--ed-accent:'+_pp.accent+'">'+_pp.inner+'</div>';
   }
-  return src?'<div class="plist-poster"><img src="'+src+'" loading="lazy" onerror="this.remove()" alt="" style="width:100%;height:100%;object-fit:cover;border-radius:var(--r-sm)"></div>':'<div class="plist-poster"></div>';
+  return src?'<div class="plist-poster"><img src="'+src+'" loading="lazy" data-err="quitar" alt="" style="width:100%;height:100%;object-fit:cover;border-radius:var(--r-sm)"></div>':'<div class="plist-poster"></div>';
 }
 
 // ── Step 6f addendum: shared leaves (emptyState/emptyStateHero/DAYS) ───────────

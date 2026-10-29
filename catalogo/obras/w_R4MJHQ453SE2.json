@@ -1,0 +1,44 @@
+{
+ "id": "w_R4MJHQ453SE2",
+ "titulo_original": "Cuba y la noche",
+ "anio": 2026,
+ "paises": [
+  "CU",
+  "ES",
+  "CO"
+ ],
+ "directores": [
+  "Sergio Fernández Borrás"
+ ],
+ "aliases": [
+  {
+   "titulo": "The Long Cuban Night",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "«Cuba y la noche» es un testimonio del poder del arte y de la memoria frente al silenciamiento. De cómo la internet abrió una grieta en el control monolítico del régimen, permitiendo que voces marginadas narraran en primera persona la violencia, el miedo y la esperanza de un país. Es la historia de un grupo de artistas que convirtió sus teléfonos móviles en armas de resistencia.",
+  "en": "Captured entirely on phone footage, a group of Cuban artists risk everything to document their uprising against a government trying to silence them."
+ },
+ "generos": [
+  "Documental"
+ ],
+ "afiche": {
+  "archivo": "/assets/midbo-2026/cuba-y-la-noche.jpg",
+  "veredicto": "oficial"
+ },
+ "xref": {
+  "tmdb": 1714180,
+  "letterboxd": "the-long-cuban-night"
+ },
+ "versiones": [
+  {
+   "etiqueta": "100 min",
+   "duracion_min": 100
+  }
+ ],
+ "presentaciones": [
+  "midbo-2026"
+ ]
+}

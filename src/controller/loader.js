@@ -5,26 +5,26 @@
 // app. Sink puro (solo main.js lo importa: ACTION_REGISTRY + Object.assign + IIFE
 // detección-festival). Escribe bridge globals en runtime (no eval-time).
 
-import { FESTIVAL_CONFIG, NOTICES, mergeFestivalSections } from '../config.js';
+import { FESTIVAL_CONFIG, NOTICES, PALMARES, mergeFestivalSections } from '../config.js';
 import { lruTouch } from '../lru.js';
 import {DAY_ABBR, DAY_NUM, _classifyFestival} from '../view/components.js';
-import {DAYS, DAY_SHORT_EN, setCustomPosters, setDayShort, setDayShortEn, setPosters, keepCityOnly} from '../view/helpers.js';
+import {DAYS, DAY_SHORT_EN, setCustomPosters, setDayShort, setDayShortEn, setPosters, keepCityOnly, filterCity} from '../view/helpers.js';
 import { closeFestivalSheet, openCitySheet, openReviewSheet, _reviewDesbloqueado, _pintarBannerRevision } from '../view/sheets.js';
 import { showToast } from '../view/feedback.js';
 import { _renderProgramaContent, lugarClose, scrollDtabsToActive } from '../view/programa.js';
 import { _fixStickyOffset, renderAgenda } from '../view/agenda.js';
-import { loadState, _cloudLoad, _cloudSave, subscribePlanCloud, _flushCloudSave } from './persistence.js';
+import { loadState, _cloudLoad, _cloudSave, subscribePlanCloud, _flushCloudSave, sincronizarPlan } from './persistence.js';
 import { report } from '../telemetry.js';
+import { cargarDatosFestival } from './datos-fuente.js';
 import { subscribeDelaysCloud } from './delays-cloud.js';
 import { renderFestBar } from './festival.js';
 import { _updateProgramaActiveFilter, initProgramaModeBar, showAgView, showDayView, switchMainNav, _syncPmodeTabs } from './pipeline.js';
 import { seccionClose } from './overlays.js';
 import { setProgramaView } from './handlers.js';
 import { dayFullyPassed, simTodayStr } from '../domain/time.js';
-import { _djb2, explodeScreenings, normTitle, sealSharedSlots, validateFilm } from '../domain/film.js';
-import { syncScheduleWithCatalog } from '../domain/schedule.js';
+import { _djb2, explodeScreenings, expandVentanas, normTitle, sealSharedSlots, validateFilm } from '../domain/film.js';
 import { state } from '../state/state.js';
-import { deriveClear } from '../state/festival-context.js';
+import { deriveClear, migrarTitulosAnteriores } from '../state/festival-context.js';
 import { storage } from '../storage/storage.js';
 import { t } from '../i18n/i18n.js';
 import { _autoResolveFestivalPosters, _renderFestivalSelector, renderEndedBanner, renderPostponedBanner } from './festival.js';
@@ -92,7 +92,7 @@ function _touchFestivalCache(id){
 // ── INGESTA: JSON crudo → cfg sellado. DUEÑO ÚNICO (24 ago 2026) ─────────────
 // Compartida por loadFestival (carga/cambio de festival) y por el refresco de
 // datos en caliente (live-refresh.js). Extraerla evita el segundo camino de
-// ingesta que la auditoría de caminos duplicados prohibió: los avisos (NOTICES),
+// ingesta que la auditoría de caminos duplicados prohibió: los avisos,
 // los slots compartidos y la explosión se sellan ACÁ o no se sellan.
 export function _ingerirDatosFestival(id, cfg, data){
   // HUELLA CRUDA — SE TOMA ACÁ, ANTES DE TOCAR NADA (24 ago 2026). La ingesta
@@ -114,7 +114,7 @@ export function _ingerirDatosFestival(id, cfg, data){
   // ── Explosión de screenings[] → objetos planos por función ──
   // Dueño: explodeScreenings (domain/film.js) — compartido con el oráculo
   // del planeador, que necesita ejercer el MISMO catálogo que producción.
-  const exploded=explodeScreenings(data.films);
+  const exploded=expandVentanas(explodeScreenings(data.films), data.dayKeys, data.dias_vacios); // dueño: domain/film.js
   // Duración automática para is_programa
   exploded.forEach(f=>{
     if(f.is_programa&&f.film_list&&f.film_list.length&&!f.duration){
@@ -147,8 +147,11 @@ export function _ingerirDatosFestival(id, cfg, data){
   // Se aplica al dato y queda `_movedFrom` con la vieja para poder decir de
   // dónde viene. Mantener la hora vieja en pantalla y pedirle al
   // planificador que la ignore es la doble verdad que ya nos costó bugs.
-  const _avisos=NOTICES.filter(n=>n.festival===id);
-  if(_avisos.length){
+  // AVISOS Y PALMARÉS (Etapa 2·A, 19 oct): el JSON manda si trae el campo —aunque []—; si no,
+  // config.js (transición). Se resuelve acá, una vez: el sellado, el banner y el palmarés leen cfg.
+  cfg.avisos=Array.isArray(data.avisos)?data.avisos.map(n=>({...n,festival:id})):NOTICES.filter(n=>n.festival===id);
+  cfg.palmares=Array.isArray(data.palmares)?data.palmares.map(p=>({...p,fest:id})):PALMARES.filter(p=>p.fest===id);
+  if(cfg.avisos.length){
     const _dk=data.dayKeys||[];
     exploded.forEach(f=>{
       if(f.info) return;
@@ -164,7 +167,7 @@ export function _ingerirDatosFestival(id, cfg, data){
       // ese helper OCULTA la ciudad cuando coincide con la del festival — es
       // para mostrar, no para identificar.
       const _city=((data.venues||{})[f.venue]||{}).city||'';
-      const n=_avisos.find(x=>
+      const n=cfg.avisos.find(x=>x.type==='info'?false: // informativo: no sella funciones (ni la Ficha)
         Array.isArray(x.cities)
           ? (!!_city && x.cities.includes(_city))
           : (x.title===f.title&&(!x.date||x.date===f.day)));
@@ -307,6 +310,9 @@ export function publicarCatalogo(id, cfg){
   _restaurarPrensa(cfg);   // la preferencia de ESTE festival, antes de publicar
   const _visibles = _filtrarPorAudiencia(_newFilms);
   const _validTitles = new Set(_visibles.map(f=>f.title));
+  // Títulos anteriores ANTES del filtro de abajo: sin esto, lo guardado bajo el
+  // título viejo de una obra renombrada se borra acá mismo (domain/titulos.js).
+  migrarTitulosAnteriores(_newFilms);
   state.batchUpdate({
     _activeFestId: id,
     FILMS: _visibles,
@@ -341,7 +347,7 @@ export function publicarCatalogo(id, cfg){
   // Solo persiste en LOCAL: es una corrección derivada e idempotente — subirla
   // a la nube crearía ping-pong entre dispositivos que se normalizan solos.
   if(savedAgenda&&savedAgenda.schedule&&savedAgenda.schedule.length){
-    state.update('savedAgenda', a=>({...a, schedule: syncScheduleWithCatalog(a.schedule, _newFilms)}));
+    sincronizarPlan(_newFilms);   // + retraso y boleta viajan con la función movida
     storage.setSavedAgenda(state.get('savedAgenda'));
   }
 }
@@ -375,7 +381,7 @@ export async function loadFestival(id){
       // Sin banner de error: el catch externo muestra el toast y reporta a Sentry.
       // (El banner rojo fixed nunca se removía → quedaba tapando el topbar tras un
       // retry exitoso.)
-      const data=await _fetchFestivalJson(festivalJsonUrl(id));
+      const data=await cargarDatosFestival(id);
       _ingerirDatosFestival(id, cfg, data);
 
     }catch(e){
@@ -560,7 +566,8 @@ export async function loadFestival(id){
   const _savedCity=storage.getCityFilter();
   if(_savedCity&&_savedCity!=='all'){
     const _c=_savedCity.slice(5);
-    const _existe=Object.values(cfg.venues||{}).some(v=>v&&v.city===_c);
+    // filterCity: un municipio satélite guardado (FICPA) ya no es ciudad aparte.
+    const _existe=Object.keys(cfg.venues||{}).some(k=>filterCity(k)===_c);
     if(_existe) activeVenue=_savedCity; else storage.setCityFilter('');
   }
   // El sheet se abre DESPUÉS del primer render del programa (rAF doble): si se

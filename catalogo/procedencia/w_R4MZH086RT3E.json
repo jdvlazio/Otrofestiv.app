@@ -1,0 +1,22 @@
+{
+ "titulo_original": {
+  "fuente": "festival:popayan-2026,siembrafest-2026",
+  "regla": "el título que más festivales imprimen"
+ },
+ "directores": {
+  "fuente": "tmdb:898817",
+  "regla": "tmdb-manda"
+ },
+ "anio": {
+  "fuente": "festival",
+  "regla": "anio-mas-temprano"
+ },
+ "paises": {
+  "fuente": "tmdb:898817",
+  "regla": "tmdb-manda"
+ },
+ "generos": {
+  "fuente": "festival",
+  "regla": "todos los publicados, del más al menos frecuente"
+ }
+}

@@ -1,0 +1,52 @@
+{
+ "id": "w_R4DW5H3N6W5G",
+ "titulo_original": "Princesa Burro",
+ "anio": 2026,
+ "paises": [
+  "CL",
+  "UY",
+  "FR",
+  "NL",
+  "DE"
+ ],
+ "directores": [
+  "Cristóbal León",
+  "Joaquín Cociña"
+ ],
+ "aliases": [
+  {
+   "titulo": "Princesa burro",
+   "tipo": "festival"
+  },
+  {
+   "titulo": "Donkey Princess",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "En un reino de cuento de hadas donde el amor está prohibido, la princesa Diana desafía el decreto del rey al enamorarse de Lalo. Cuando él es desterrado, un brazalete mágico la transporta a través de mundos y espacios-tiempos paralelos en un viaje para recuperar sus sueños y su amor perdido.",
+  "en": "Diana is the princess of an ancient kingdom. Her father, King Arthur, forbids love. When Diana falls in love with Lalo, he banishes him. Using a magical bracelet, Diana travels to other worlds in search of her love."
+ },
+ "generos": [
+  "Fantasía"
+ ],
+ "afiche": {
+  "archivo": "/assets/biff-2026/princesa-burro.jpg",
+  "veredicto": "oficial"
+ },
+ "xref": {
+  "tmdb": 1536431,
+  "letterboxd": "donkey-princess"
+ },
+ "versiones": [
+  {
+   "etiqueta": "90 min",
+   "duracion_min": 90
+  }
+ ],
+ "presentaciones": [
+  "biff-2026",
+  "ficcali-2026"
+ ]
+}

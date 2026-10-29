@@ -92,6 +92,12 @@
    "grupo": "acceso",
    "nota": "Dónde se transmite una función en línea («Twitch»): completa el aviso «Se transmite en línea por …»."
   },
+  "film_start": {
+   "tipo": "string",
+   "formato": "^\\d{2}:\\d{2}$",
+   "grupo": "horario",
+   "nota": "Hora en que EMPIEZA LA OBRA cuando la función abre antes (BHFF: Parapeto abre 19:00, la obra 19:30). Solo informa: el aviso «Inicio» de la ficha; la card y el plan siguen con `time`. Por función."
+  },
   "title_en": {
    "tipo": "string"
   },
@@ -203,6 +209,10 @@
    "tipo": "boolean",
    "nota": "Drop-in sin hora fija: NO entra al plan ni a conflictos."
   },
+  "hasta": {
+   "tipo": "string",
+   "nota": "Último día (YYYY-MM-DD) de una `info` abierta varios días: UNA función, la app la abre día por día (#1229)."
+  },
   "unscheduled": {
    "tipo": "boolean",
    "nota": "En catálogo sin jornada. Única exención de day/time/venue."
@@ -213,6 +223,10 @@
   "has_qa": {
    "tipo": "boolean",
    "nota": "Afecta conflictos vía durationForTravel."
+  },
+  "titulos_anteriores": {
+   "tipo": "array",
+   "nota": "Títulos con que el festival publicó ANTES esta obra. Lo llena Onboarding cuando un festival renombra (p. ej. «Tránsito» → «Tránsitos»). La app mueve en silencio lo que el usuario guardó bajo el viejo (Interés, Plan, vista, prioridad, calificación, retrasos) — domain/titulos.js. Obra partida en dos: el viejo va en las dos y gana la primera del catálogo. Nunca un título que siga vigente."
   },
   "qa_type": {
    "tipo": "string",
@@ -302,6 +316,19 @@
    "tipo": "array",
    "lector": "ninguno todavía",
    "nota": "Accesibilidad de la función (p. ej. «oc» = subtítulos descriptivos). Sin superficie que la muestre."
+  },
+  "work_id": {
+   "tipo": "string",
+   "nota": "La obra del catálogo único (catalogo/obras/<work_id>.json, docs/CATALOGO-OBRAS.md). Lo ponen publicar.py y catalogo_construir.py --escribir, nunca a mano. Va en cada obra, también dentro de film_list; las actividades no llevan. [presentacion-con-obra] frena el push si falta o apunta a una obra que no existe."
+  },
+  "id": {
+   "tipo": "string",
+   "formato": "^f_[0-9a-f]{10}$",
+   "nota": "Identificador ESTABLE de esta función (schema.org ScreeningEvent.identifier; docs/FUNCION.md §11). Lo asigna ensamblar UNA vez (funcion.asignar_ids, registro <fid>-funciones-ids.json) y nunca se recalcula: sobrevive a cambios de hora, sala, sede y título. Único dentro del festival. [id-funcion-estable] frena si un id publicado desaparece o cambia de función. La app no lo lee todavía (18 oct 2026)."
+  },
+  "ids_anteriores": {
+   "tipo": "array",
+   "nota": "Ids de funciones que esta REEMPLAZA (partida, fusionada o casada por decisión registrada; docs/FUNCION.md §11.4). Hermano de titulos_anteriores: la app mueve lo guardado bajo el id viejo."
   }
  },
  "raiz": {

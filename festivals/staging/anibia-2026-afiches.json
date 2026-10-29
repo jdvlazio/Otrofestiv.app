@@ -1,0 +1,17 @@
+{
+ "_provenance": {
+  "fuente": "fichas de programa de la Cinemateca de Bogotá: el afiche oficial que trae cada una (miradas a mano)",
+  "capturado": "2026-10-21",
+  "regla": "solo donde TMDB y lo ya publicado no tienen afiche"
+ },
+ "afiches": {
+  "Aguacero": {
+   "archivo": "assets/anibia-2026/aguacero.jpg",
+   "fuente": "https://cinematecadebogota.gov.co/node/peliculas/3594?sede=11 — afiche de la ficha «Con acento nacional - Programa 1 - Formación», con el título «AGUACERO» impreso; encuadrado 780×1170"
+  },
+  "Vagón de Medianoche": {
+   "archivo": "fuentes/anibia-2026/afiches/vagon-de-medianoche.jpg",
+   "fuente": "https://letterboxd.com/film/vagon-de-media-noche/ — póster de la ficha de Letterboxd, con «VAGÓN DE MEDIANOCHE» impreso y «Fátima Montserrat Castillo y Eduardo Arandia»; la sinopsis de la ficha (Ella se duerme en el metro) coincide con la del festival (21 oct)"
+  }
+ }
+}

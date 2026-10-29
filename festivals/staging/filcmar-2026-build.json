@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "Instagram @filcmar — el carrusel de programación (16 láminas)",
-  "capturado": "2026-10-07",
+  "capturado": "2026-10-15",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_sedes": "El nombre que imprime cada lámina, tal cual; la sala va aparte (Foso, Hall, Capilla).",
@@ -24,6 +24,9 @@
  "sharedSlotIsOneScreening": true,
  "_por_que_slot": "Los bloques sin nombre juntan un corto y un largo (o dos obras de la Competencia Latinoamericana) bajo una sola hora y sede; la ceremonia de premiación del lunes lleva dentro dos obras de la competencia.",
  "dias_vacios": [],
+ "_fuentes_versionadas": {
+  "festivals/staging/filcmar-2026-correcciones.json": "fichas de TMDB declaradas a mano (creadas por nosotros o verificadas), cada una con su porqué; las lee pipeline/enriquecer.py"
+ },
  "prioLimit": 3,
  "dias": [
   "2026-10-09",
@@ -169,10 +172,10 @@
    "short": "Teatro Municipal Simona Duque",
    "city": "Marinilla",
    "n": 0,
-   "lat": 6.1729564,
-   "lng": -75.3341178,
+   "lat": 6.173035,
+   "lng": -75.3347087,
    "_prec": "manual",
-   "_match": "Google Maps: Teatro Municipal Simona Duque, Marinilla"
+   "_match": "Google Maps: Teatro Municipal Simona Duque, Marinilla (place 0x3a48097ef241b462, 12 oct 2026; el pin anterior caía ~65 m al oriente)"
   },
   "Parque Principal de Marinilla - Marinilla": {
    "short": "Parque Principal de Marinilla",
@@ -195,6 +198,7 @@
    "day_order": 0,
    "venue": "Galería San José - CBA Marinilla - Marinilla",
    "event_kind": "evento",
+   "info": true,
    "is_recurring": true,
    "has_qa": false,
    "_src": {
@@ -240,7 +244,9 @@
      "country": "Colombia",
      "flags": "🇨🇴",
      "year": 1981,
-     "duration": "20 min"
+     "duration": "20 min",
+     "synopsis": "Basada en el personaje Cierraojos de Hans Christian Andersen, es el sueño, pero también la muerte quien cierra los ojos en nuestras vidas, narración con ecos de cuento infantil y dimensión surrealista.",
+     "synopsis_lang": "es"
     },
     {
      "title": "El tajamar y la astromelia",
@@ -293,6 +299,7 @@
    "country": "Brasil",
    "flags": "🇧🇷",
    "duration": "18 min",
+   "genre": "Drama",
    "rating": "+14 años",
    "day": "2026-10-09",
    "time": "21:00",
@@ -302,13 +309,17 @@
    "synopsis": "En la víspera de Navidad, Dejair, un ex luchador de la resistencia contra la dictadura militar, se reúne con su familia en el patio trasero. Un regalo de pistola de agua lleva a Dejair a denunciar lo absurdo de darle un arma a un niño.",
    "synopsis_lang": "es",
    "poster": "/assets/filcmar-2026/el-pesebre.jpg",
-   "posterSource": "oficial",
+   "posterSource": "tmdb",
    "_src": {
     "url": "https://www.instagram.com/p/Dd-Wc29Dhkd/",
     "date": "2026-10-01",
     "lamina": 2
    },
-   "is_free": true
+   "is_free": true,
+   "lbSlug": "nativity-scene",
+   "tmdb_id": 1543600,
+   "synopsis_en": "On Christmas Eve, Dejair, a former resistance fighter against the military dictatorship, gathers with his family in the backyard. During a Secret Santa game, the contrast between appearances and private truths emerges. A water gun gift leads Dejair to denounce the absurdity of giving a child a weapon.",
+   "title_en": "Nativity Scene"
   },
   {
    "title": "Taller Escritura y Reescritura",
@@ -397,12 +408,13 @@
    "title": "MAPISTAS Expo FILCMAR 8",
    "type": "event",
    "section": "🐓 Programación Cultural",
-   "duration": "60 min",
+   "duration": "90 min",
    "day": "2026-10-10",
    "time": "14:00",
    "day_order": 1,
    "venue": "Galería San José - CBA Marinilla - Marinilla",
    "event_kind": "evento",
+   "info": true,
    "is_recurring": true,
    "has_qa": false,
    "_src": {
@@ -413,7 +425,7 @@
    "is_free": true
   },
   {
-   "title": "Tintico Charlado: Mercado MORA — Oriente como destino audiovisual",
+   "title": "Tintico Charlado: Mercado MORA — Secretos de chifonier",
    "type": "event",
    "section": "🐎 Programación MORA",
    "duration": "90 min",
@@ -424,32 +436,13 @@
    "event_kind": "charla",
    "has_qa": false,
    "_src": {
-    "url": "https://www.instagram.com/p/Dd-Wc29Dhkd/",
-    "date": "2026-10-01",
-    "lamina": 4
+    "url": "https://www.instagram.com/p/DeTF7nfDS9t/",
+    "date": "2026-10-09",
+    "lamina": 1,
+    "reemplaza": "Tintico Charlado: Mercado MORA — Oriente como destino audiovisual"
    },
    "is_free": true,
-   "description": "Oriente como destino audiovisual. Comisión Fílmica de Antioquia.",
-   "description_lang": "es"
-  },
-  {
-   "title": "Conversatorio: Secretos de chifonier",
-   "type": "event",
-   "section": "🐓 Programación Cultural",
-   "duration": "90 min",
-   "day": "2026-10-10",
-   "time": "15:00",
-   "day_order": 1,
-   "venue": "Galería San José - CBA Marinilla - Marinilla",
-   "event_kind": "conversatorio",
-   "has_qa": false,
-   "_src": {
-    "url": "https://www.instagram.com/p/Dd-Wc29Dhkd/",
-    "date": "2026-10-01",
-    "lamina": 5
-   },
-   "is_free": true,
-   "description": "Invitados: Louie Cuervo - Anamaria Jaramillo Ceballos.",
+   "description": "¿Cómo el ajuar del arriero lo protege y proyecta ante el mundo? Invitados: Louie Cuervo y Anamaria Jaramillo Ceballos.",
    "description_lang": "es"
   },
   {
@@ -482,7 +475,9 @@
      "synopsis": "Convencido de que a Flor solo le interesan los rockeros tatuados, Raúl intenta reinventarse para conquistarla. Con la ayuda de su vecina, quien le hace un tatuaje de henna, y de su abuelo (también llamado Raúl), que le enseña a tocar la guitarra, emprende un dulce y torpe intento por llamar su atención.",
      "synopsis_lang": "es",
      "poster": "/assets/filcmar-2026/the-raules.jpg",
-     "posterSource": "oficial"
+     "posterSource": "tmdb",
+     "lbSlug": "the-raules",
+     "tmdb_id": 1794424
     },
     {
      "title": "Desarraigo",
@@ -511,7 +506,8 @@
      "poster": "/assets/filcmar-2026/para-no-volver.jpg",
      "posterSource": "tmdb",
      "lbSlug": "para-no-volver",
-     "tmdb_id": 1743118
+     "tmdb_id": 1743118,
+     "genre": "Drama"
     },
     {
      "title": "Miguel Ángel, Federico, y el carro que pasó encima de las gafas",
@@ -642,6 +638,7 @@
    "country": "Brasil",
    "flags": "🇧🇷",
    "duration": "14 min",
+   "genre": "Documental",
    "day": "2026-10-10",
    "time": "19:00",
    "day_order": 1,
@@ -651,13 +648,15 @@
    "synopsis": "Murilo es un testigo. A donde quiera que vaya, suceden cosas extrañas. Sus experiencias de vida sacuden los misterios entre el cielo y la tierra. Después de todo, el cine lo permite todo.",
    "synopsis_lang": "es",
    "poster": "/assets/filcmar-2026/testimonio.jpg",
-   "posterSource": "oficial",
+   "posterSource": "tmdb",
    "_src": {
     "url": "https://www.instagram.com/p/Dd-Wc29Dhkd/",
     "date": "2026-10-01",
     "lamina": 6
    },
-   "is_free": true
+   "is_free": true,
+   "lbSlug": "testemunho",
+   "tmdb_id": 1519246
   },
   {
    "title": "Competencia Espíritu del Trasnoche",
@@ -708,7 +707,8 @@
      "synopsis": "Después del ataque que sufrió, Luz trata de entender lo que le sucedió: el Hijo de la Tierra vino a destruir a la humanidad robando sus recuerdos más tristes y felices. Pero desembarcó en Suba, el distrito más lejano de Bogotá, donde una extraña adicción cambiará el curso de la historia.",
      "synopsis_lang": "es",
      "poster": "/assets/filcmar-2026/hdlt.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "genre": "Drama"
     },
     {
      "title": "Show de Ziggy: La maldición del mariachi bondage",
@@ -825,6 +825,7 @@
    "day_order": 2,
    "venue": "Galería San José - CBA Marinilla - Marinilla",
    "event_kind": "evento",
+   "info": true,
    "is_recurring": true,
    "has_qa": false,
    "_src": {
@@ -904,7 +905,9 @@
      "synopsis": "En una noche oscura, un niño sigue una señal que lo lleva a una misteriosa máquina expendedora de dulces escondida en un bar prohibido. Para alcanzarla, deberá armarse de valor y afrontar desafíos que pondrán a prueba su ingenio, valentía y determinación.",
      "synopsis_lang": "es",
      "poster": "/assets/filcmar-2026/el-espejo-de-la-vida.jpg",
-     "posterSource": "oficial"
+     "posterSource": "tmdb",
+     "lbSlug": "el-espejo-de-la-vida",
+     "tmdb_id": 1791654
     },
     {
      "title": "La danza del caos",
@@ -916,7 +919,9 @@
      "synopsis": "La Danza del Caos es un cortometraje de animación experimental que traduce la teoría de los Cinco Ritmos de Gabrielle Roth en una experiencia audiovisual abstracta. Mediante el movimiento y el diseño sonoro, la animación sustituye al cuerpo físico para llevar al espectador en un viaje sensorial que recorre diferentes ritmos hasta alcanzar un estado de caos contenido. El cortometraje sumerge al espectador en una experiencia sensorial que lo invita a sentir y dejarse llevar por el ritmo como guía para la interpretación.",
      "synopsis_lang": "es",
      "poster": "/assets/filcmar-2026/la-danza-del-caos.jpg",
-     "posterSource": "oficial"
+     "posterSource": "tmdb",
+     "lbSlug": "la-danza-del-caos",
+     "tmdb_id": 1791655
     },
     {
      "title": "La pecera",
@@ -926,7 +931,8 @@
      "synopsis": "En una ciudad bulliciosa, un robot mecánico lleva una vida rutinaria, hasta que el casco de cristal que protege su cabeza se rompe. Obligado a encontrar un reemplazo, el robot emprende un viaje, solo para darse cuenta poco a poco de que lo que ocultaba el cristal tal vez no sea tan temible después de todo.",
      "synopsis_lang": "es",
      "poster": "/assets/filcmar-2026/la-pecera.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "genre": "Animación"
     },
     {
      "title": "Reverb",
@@ -938,7 +944,9 @@
      "synopsis": "Este cortometraje surgió como un intento de plasmar los sonidos que escuchaba por la noche. Mediante animación manual, escaneo y stop motion, el film pretende evocar la anticipación de algo que podría ocurrir durante la noche.",
      "synopsis_lang": "es",
      "poster": "/assets/filcmar-2026/reverb.jpg",
-     "posterSource": "oficial"
+     "posterSource": "tmdb",
+     "lbSlug": "reverb-2025-2",
+     "tmdb_id": 1791605
     },
     {
      "title": "Chicha la chicharra",
@@ -1139,6 +1147,7 @@
    "day_order": 3,
    "venue": "Galería San José - CBA Marinilla - Marinilla",
    "event_kind": "evento",
+   "info": true,
    "is_recurring": true,
    "has_qa": false,
    "_src": {
@@ -1149,7 +1158,7 @@
    "is_free": true
   },
   {
-   "title": "Tintico Charlado: Mercado MORA — Antioquia Film Friendly",
+   "title": "Proyección: Mercado MORA — Películas universitarias Universidad ITM y Tecnológico de Artes Débora Arango",
    "type": "event",
    "section": "🐎 Programación MORA",
    "duration": "90 min",
@@ -1157,15 +1166,16 @@
    "time": "14:00",
    "day_order": 3,
    "venue": "Teatro Municipal Simona Duque - Marinilla",
-   "event_kind": "charla",
+   "event_kind": "evento",
    "has_qa": false,
    "_src": {
-    "url": "https://www.instagram.com/p/Dd-Wc29Dhkd/",
-    "date": "2026-10-01",
-    "lamina": 11
+    "url": "https://www.instagram.com/p/DeTF7nfDS9t/",
+    "date": "2026-10-09",
+    "lamina": 3,
+    "reemplaza": "Tintico Charlado: Mercado MORA — Antioquia Film Friendly"
    },
    "is_free": true,
-   "description": "Antioquia Film Friendly. Comisión Fílmica de Antioquia.",
+   "description": "Acompáñanos a descubrir las nuevas inquietudes y secretos que rodean el cine que se está haciendo al día de hoy en las montañas antioqueñas.",
    "description_lang": "es"
   },
   {
@@ -1208,7 +1218,9 @@
      "synopsis": "Misty Sun presenta una visión fragmentada y multiángulosa de la Espeletia frailejones a través de la yuxtaposición de tomas detalladas (macro), funcionando como una especie de estudio morfológico de la planta. Contrasta las ilustraciones científicas, las representaciones institucionales y los discursos en torno a la Espeletia frailejones. Las imágenes, filmadas en película, transmiten una sensación de registro tangible de las frailejones y sus inflorescencias, creando una metáfora de la planta como un territorio habitado por diversas manifestaciones de la vida.",
      "synopsis_lang": "es",
      "poster": "/assets/filcmar-2026/sol-de-niebla.jpg",
-     "posterSource": "oficial"
+     "posterSource": "tmdb",
+     "lbSlug": "sol-de-niebla",
+     "tmdb_id": 1791609
     },
     {
      "title": "Pudor ante el asalto de los ojos furtivos",
@@ -1237,7 +1249,12 @@
      "synopsis": "Aurora, una joven que forma parte de una secta religiosa junto a su madre, duda de la veracidad de las palabras de Bernabé, el líder, y busca la manera de hacerles comprender a ella y al resto de la comunidad que la verdad no está ahí. Todo se vuelve caótico cuando Aurora comienza a tener vínculos con el ídolo sagrado y su objetivo cambia drásticamente, alterando la normalidad de la comunidad.",
      "synopsis_lang": "es",
      "poster": "/assets/filcmar-2026/el-ocaso-de-los-dioses.jpg",
-     "posterSource": "oficial"
+     "posterSource": "tmdb",
+     "lbSlug": "el-ocaso-de-los-dioses-nightfall-of-gods",
+     "tmdb_id": 1526356,
+     "synopsis_en": "Aurora, a young woman who is part of a religious sect with her mother, doubts the veracity of the words of Bernabé, the leader, and seeks a way to make her mother and the rest of the community understand that the truth is not there. Everything becomes chaotic when Aurora begins to have connections with the sacred idol and her objective changes drastically, changing the normality of the community.",
+     "title_en": "El Ocaso de los Dioses (Nightfall of Gods)",
+     "genre": "Drama"
     },
     {
      "title": "Somnolítico",
@@ -1253,7 +1270,8 @@
      "lbSlug": "somnolytic",
      "tmdb_id": 1590709,
      "synopsis_en": "A strange being loses its way in the chaos of the transportation system without finding an exit. The pathways are overwhelmed by accelerated flows that come and go like human waterfalls. The passersby, faceless, move automatically, creating a maze in which the routes seem endless. Sleepy and exhausted people merge with the surroundings, and as the bus continues on its way, the being finally manages to discover itself.",
-     "title_en": "Somnolytic"
+     "title_en": "Somnolytic",
+     "genre": "Experimental"
     }
    ]
   },
@@ -1405,6 +1423,7 @@
    "country": "Colombia",
    "flags": "🇨🇴",
    "duration": "62 min",
+   "genre": "Drama",
    "day": "2026-10-13",
    "time": "18:00",
    "day_order": 4,
@@ -1429,8 +1448,8 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-07T15:14:40",
-  "plan_sha": "8ac3aea2bc687b38",
+  "fecha": "2026-10-15T09:01:13",
+  "plan_sha": "23096bf87098b953",
   "paso": 8,
   "cmd": "python3 pipeline/ensamblar.py filcmar-2026"
  }

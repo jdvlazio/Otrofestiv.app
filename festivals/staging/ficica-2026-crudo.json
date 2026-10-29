@@ -1,0 +1,1274 @@
+{
+ "_provenance": {
+  "fuente": "ficica.cinealacalle.org — Programación General 2026 (JSON embebido en la página)",
+  "capturado": "2026-10-27",
+  "url": "https://ficica.cinealacalle.org/programacion-general.html",
+  "metodo": "actividad por función; solo acceso libre; cineforo pegado a su programa"
+ },
+ "_fuera": [
+  "2026-10-20 08:00 Taller de cine comunitario en el barrio Villas de la Cordial (Casa comunal del barrio Villas de la Cor): Convocatoria cerrada a la comunidad de Villas de la Cordialidad",
+  "2026-10-20 09:00 Un Corto Laboratorio: pitch inicial y asesoría de guion (Alianza Francesa de Barranquilla): Ingreso restringido, sólo para proyectos seleccionados",
+  "2026-10-21 08:00 Expresión de asombro (IED Normal Superior La Hacienda): Ingreso restringido, sólo para miembros de la institución",
+  "2026-10-21 08:00 Expresión de asombro (IED Fundación Pies Descalzos): Ingreso restringido, sólo para miembros de la institución",
+  "2026-10-21 10:00 Crecer en el mundo (IED Fundación Pies Descalzos): Ingreso restringido, sólo para miembros de la institución",
+  "2026-10-21 13:00 Crecer en el mundo (IED Normal Superior La Hacienda): Ingreso restringido, sólo para miembros de la institución",
+  "2026-10-21 08:00 Taller de cine comunitario en el barrio Villas de la Cordial (Casa comunal del barrio Villas de la Cor): Convocatoria cerrada a la comunidad de Villas de la Cordialidad",
+  "2026-10-21 08:00 Un Corto Laboratorio: asesoría de dirección (Alianza Francesa de Barranquilla): Ingreso restringido, sólo para proyectos seleccionados",
+  "2026-10-21 09:00 Taller básico de producción ejecutiva audiovisual (Alianza Francesa de Barranquilla): Convocatoria dirigida con cupos a universidades e instituciones educativas",
+  "2026-10-22 08:00 Expresión de asombro (IED Jorge Nicolás Abello): Ingreso restringido, sólo para miembros de la institución",
+  "2026-10-22 10:00 Crecer en el mundo (IED Jorge Nicolás Abello): Ingreso restringido, sólo para miembros de la institución",
+  "2026-10-22 08:00 Un Corto Laboratorio: asesoría de producción (Alianza Francesa de Barranquilla): Ingreso restringido, sólo para proyectos seleccionados",
+  "2026-10-22 09:00 Taller básico de producción ejecutiva audiovisual (Alianza Francesa de Barranquilla): Convocatoria dirigida con cupos a universidades e instituciones educativas",
+  "2026-10-23 08:00 Expresión de asombro (IED Centro Social Don Bosco): Ingreso restringido, sólo para miembros de la institución",
+  "2026-10-23 08:00 Expresión de asombro (IED Germán Vargas Cantillo Fe y Alegría): Ingreso restringido, sólo para miembros de la institución",
+  "2026-10-23 10:00 Crecer en el mundo (IED Centro Social Don Bosco): Ingreso restringido, sólo para miembros de la institución",
+  "2026-10-23 09:00 Un Corto Laboratorio: pitch final (Alianza Francesa de Barranquilla): Ingreso restringido, sólo para proyectos seleccionados"
+ ],
+ "funciones": [
+  {
+   "dia": "2026-10-20",
+   "hora": "18:30",
+   "sede": "La Fábrica de Cultura",
+   "sala": "Auditorio Luis Guillermo Henao",
+   "acceso": "Entrada libre",
+   "titulo": "Inauguración",
+   "seccion": "Eventos especiales",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/programacion-general.html",
+    "date": "2026-10-15",
+    "fila": 9
+   },
+   "tipo": "evento",
+   "event_kind": "apertura",
+   "premiere": "Inauguración",
+   "obras": [
+    {
+     "titulo": "La mona",
+     "director": "Laura Gutierrez",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Bestiaire",
+     "director": "Anne Zinn-justin",
+     "pais": "Francia"
+    },
+    {
+     "titulo": "Le mur du son",
+     "director": "Antonio La Camera",
+     "pais": "Suiza"
+    },
+    {
+     "titulo": "Saq nikté y el espíritu de la máscara",
+     "director": "Ester Weiner",
+     "pais": "Guatemala, Uruguay"
+    },
+    {
+     "titulo": "Eject: el último rebobinado",
+     "director": "Martin Desoto / Senin Porto",
+     "pais": "España"
+    },
+    {
+     "titulo": "Memoria de un pibe",
+     "director": "Pedro Santi",
+     "pais": "Brasil"
+    },
+    {
+     "titulo": "La tranquilidad de los pájaros",
+     "director": "Edgar De Luque Jácome",
+     "pais": "Colombia / Barranquilla"
+    },
+    {
+     "titulo": "La tormenta",
+     "director": "Pierre Jiménez",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Queener",
+     "director": "Sebastián López Murillo",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Gracias, antonio",
+     "director": "Keren Berrio",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "¿Quién heredará el sabor de mompox?",
+     "director": "Jonatan José Hernández González",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "La despedida",
+     "director": "Ana Marcela Meza Vargas",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Bartolo",
+     "director": "Sergio Andrés Fernández Buitrago",
+     "pais": "Colombia"
+    }
+   ],
+   "duracion_min": 60,
+   "_duracion_de": "estimada: el hueco hasta la siguiente en la misma sede (tope 90, 60 si es la última)"
+  },
+  {
+   "dia": "2026-10-21",
+   "hora": "09:00",
+   "sede": "Cinemateca del Caribe",
+   "sala": "Sede Combarranquilla Country",
+   "acceso": "Entrada libre",
+   "titulo": "Colombia y sus cicatrices",
+   "seccion": "Exhibiciones",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/programacion-general.html",
+    "date": "2026-10-15",
+    "fila": 14
+   },
+   "is_programa": true,
+   "sinopsis": "Programa de cortometrajes que exploran cómo el dolor, la introspección y las crisis revelan las huellas que nos definen y transforman.",
+   "obras": [
+    {
+     "titulo": "Tejiendo un árbol",
+     "director": "Alvaro Cardona",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Agachar el rostro",
+     "director": "Camilo Medina Noy",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "El segundo",
+     "director": "Pedro Miguel Rozo Flores",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Sombra lejana",
+     "director": "Antonio J. Camargo",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Pawa",
+     "director": "Marbel Ina Vanegas Jusayu",
+     "pais": "Colombia"
+    }
+   ],
+   "duracion_min": 90,
+   "_duracion_de": "estimada: el hueco hasta la siguiente en la misma sede (tope 90, 60 si es la última)"
+  },
+  {
+   "dia": "2026-10-21",
+   "hora": "10:30",
+   "sede": "Cinemateca del Caribe",
+   "sala": "Sede Combarranquilla Country",
+   "acceso": "Entrada libre",
+   "titulo": "Territorios en disputa",
+   "seccion": "Exhibiciones",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/programacion-general.html",
+    "date": "2026-10-15",
+    "fila": 16
+   },
+   "is_programa": true,
+   "sinopsis": "Películas que reflexionan sobre la naturaleza y la relación que construimos con ella, cómo la habitamos, la entendemos y la escuchamos.",
+   "obras": [
+    {
+     "titulo": "Sombras en la niebla",
+     "director": "Pedro Pablo Vega",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "10 meters above",
+     "director": "Irene Baqué",
+     "pais": "España"
+    },
+    {
+     "titulo": "Do rocks dream of flying?",
+     "director": "Mathieu Ciulla & Simon Zorraquin",
+     "pais": "España, Francia y Argentina"
+    },
+    {
+     "titulo": "Zizuma, nuestra casa de agua y nubes",
+     "director": "Fátima Correa",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Emechiche, el renacer de los cabeciblancos",
+     "director": "Juan Camilo Gonzales",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Living well",
+     "director": "Zoé Nathalie Kugler",
+     "pais": "Suiza / Ecuador"
+    },
+    {
+     "titulo": "Cayenas libertarias",
+     "director": "Javier Camilo Aranguren",
+     "pais": "Colombia"
+    }
+   ],
+   "duracion_min": 90,
+   "_duracion_de": "estimada: el hueco hasta la siguiente en la misma sede (tope 90, 60 si es la última)"
+  },
+  {
+   "dia": "2026-10-21",
+   "hora": "13:00",
+   "sede": "Universidad de la Costa – CUC",
+   "sala": "Salón Fundadores, bloque 11, piso 8",
+   "acceso": "Entrada libre",
+   "titulo": "Cine comunitario (REDACO)",
+   "seccion": "Exhibiciones",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/programacion-general.html",
+    "date": "2026-10-15",
+    "fila": 17,
+    "cineforo": 28
+   },
+   "is_programa": true,
+   "duracion_min": 90,
+   "invitados": "Juan Pinto Siabatto (Moderador: Docente e Investigador de la Universidad del Atlántico (Barranquilla)) · Alejandro Valencia Beltrán (Colectivo de Cine Comunitario Cinexclusión (Barranquilla)) · Heidy Mejía Sánchez (Fundación Cultural Territorios, Arte y Paz, fundadora, directora y formadora de la Escuela Itinerante de Cine Comunitario y comunicación popular Narrando en Positivo (Soledad)) · Rubén Casalins (Director, Tengo Fe Academy (Barranquilla))",
+   "sinopsis": "Una muestra de historias creadas por las comunidades, que encuentran en el cine una herramienta para narrar sus realidades, preservar sus memorias y compartir sus miradas del mundo. Con cineforo.",
+   "obras": [
+    {
+     "titulo": "El abrazo del sol",
+     "director": "Leonard Quiroz",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Cabica",
+     "director": "Heidy Helena Mejia Sánchez",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Arlequín",
+     "director": "Rubén Casalins",
+     "pais": "Colombia"
+    }
+   ]
+  },
+  {
+   "dia": "2026-10-21",
+   "hora": "14:30",
+   "sede": "Cinemateca del Caribe",
+   "sala": "Sede Combarranquilla Country",
+   "acceso": "Entrada libre",
+   "titulo": "Foco Irán",
+   "seccion": "Exhibiciones",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/programacion-general.html",
+    "date": "2026-10-15",
+    "fila": 19
+   },
+   "is_programa": true,
+   "sinopsis": "Un panorama del cortometraje contemporáneo realizado en Irán. Sus limitaciones y deseos.",
+   "obras": [
+    {
+     "titulo": "The remaining dregs",
+     "director": "Paria Alaei",
+     "pais": "Irán"
+    },
+    {
+     "titulo": "New york",
+     "director": "Amir Karami",
+     "pais": "Iran"
+    },
+    {
+     "titulo": "The mould",
+     "director": "Moahammad Reza Nourmandipour",
+     "pais": "Iran"
+    },
+    {
+     "titulo": "Chro",
+     "director": "Hamed Bahrami",
+     "pais": "Iran"
+    },
+    {
+     "titulo": "The dreaming witness",
+     "director": "Shayan Naghibi",
+     "pais": "Irán"
+    },
+    {
+     "titulo": "In turn",
+     "director": "Sahra Asadollahi / Atefeh Salehi",
+     "pais": "Irán"
+    },
+    {
+     "titulo": "Like friend, like deer",
+     "director": "Malek Eghbali",
+     "pais": "Iran"
+    }
+   ],
+   "duracion_min": 90,
+   "_duracion_de": "estimada: el hueco hasta la siguiente en la misma sede (tope 90, 60 si es la última)"
+  },
+  {
+   "dia": "2026-10-21",
+   "hora": "15:00",
+   "sede": "Universidad de la Costa – CUC",
+   "sala": "Salón Fundadores, bloque 11, piso 8",
+   "acceso": "Entrada libre",
+   "titulo": "Retrospectiva cine afro del Caribe colombiano",
+   "seccion": "Exhibiciones",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/programacion-general.html",
+    "date": "2026-10-15",
+    "fila": 20,
+    "cineforo": 29
+   },
+   "is_programa": true,
+   "duracion_min": 120,
+   "invitados": "Harold Ballesteros Valencia (Moderador: Investigador y magíster en Ciencias de la Comunicación (Barranquilla)) · Rodolfo Palomino Casianni (Director del Colectivo de Comunicaciones Narradoras y Narradores de la Memoria «Kuchá Suto» de San Basilio de Palenque (San Basilio de Palenque)) · Jhon Narváez Escudero (Realizador audiovisual y productor independiente (Cartagena)) · Yurieth Romero Velásquez (Realizadora y Directora Audiovisual, Productora de La Caracola Films (Santa Marta))",
+   "sinopsis": "Una selección de cortometrajes realizados por cineastas y comunidades afrodescendientes del Caribe colombiano que celebra la diversidad de sus miradas, voces y formas de creación audiovisual. Con cineforo.",
+   "obras": [
+    {
+     "titulo": "Capitán cartagena",
+     "director": "Enuar Castillo Fernández",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Concierto sentido",
+     "director": "Cristian Rivas",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Frágil o embalados",
+     "director": "Colectivo Pedro Romero Vive Aquí",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Dientes de yuca",
+     "director": "Yurieth Romero Velasquez",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Dulce",
+     "director": "Yurieth Romero Velasquez, Edgar De Luque",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Plan de fuga",
+     "director": "Gleydis Paola Salgado Reyes",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "El kanto del kajambá",
+     "director": "Rodolfo Palomino Cassiani",
+     "pais": "Colombia"
+    }
+   ]
+  },
+  {
+   "dia": "2026-10-21",
+   "hora": "16:00",
+   "sede": "Cinemateca del Caribe",
+   "sala": "Sede Combarranquilla Country",
+   "acceso": "Entrada libre",
+   "titulo": "Miradas: más allá del género",
+   "seccion": "Exhibiciones",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/programacion-general.html",
+    "date": "2026-10-15",
+    "fila": 21
+   },
+   "is_programa": true,
+   "sinopsis": "Narrativas y géneros cinematográficos en un mismo espacio, del terror a la comedia.",
+   "obras": [
+    {
+     "titulo": "Carne de segunda",
+     "director": "Ruben Casalins",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Que el cielo nos perdone",
+     "director": "Andrés Buitrago",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Esta noite minha alma partirá",
+     "director": "Igor Vasco",
+     "pais": "Brasil",
+     "sinopsis": "En su último día de trabajo como empleada doméstica, la joven Kumani presencia cosas extrañas en la casa de sus patrones. No sabe que su propio destino podría estar en peligro."
+    },
+    {
+     "titulo": "La culpa es del cine",
+     "director": "Eduardo Rivera Aburto",
+     "pais": "Chile"
+    },
+    {
+     "titulo": "A la vejez, viruelas",
+     "director": "Pol Aguilera",
+     "pais": "España"
+    },
+    {
+     "titulo": "Citizenship test",
+     "director": "Alejandro de los Ríos",
+     "pais": "Estados Unidos"
+    }
+   ],
+   "duracion_min": 60,
+   "_duracion_de": "estimada: el hueco hasta la siguiente en la misma sede (tope 90, 60 si es la última)"
+  },
+  {
+   "dia": "2026-10-21",
+   "hora": "16:00",
+   "sede": "Universidad del Atlántico, sede Norte",
+   "sala": "Teatrino 2",
+   "acceso": "Entrada libre",
+   "titulo": "Construir familia",
+   "seccion": "Exhibiciones",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/programacion-general.html",
+    "date": "2026-10-15",
+    "fila": 22
+   },
+   "is_programa": true,
+   "sinopsis": "Cortometrajes que abordan las diversas formas de familias y sus complejidades.",
+   "obras": [
+    {
+     "titulo": "La ceremonia",
+     "director": "Julián García Valero / Deimer Vergara Torres",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Juego de damas",
+     "director": "Enrique Vargas",
+     "pais": "Colombia / Barranquilla"
+    },
+    {
+     "titulo": "La independencia",
+     "director": "John Agudelo",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Desarraigo",
+     "director": "Cristian Nicolas Patiño Hortua Andres Santiago Cely Orjuela",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Post-familia",
+     "director": "Alexis Tafour",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "La tranquilidad de los pájaros",
+     "director": "Edgar De Luque Jácome",
+     "pais": "Colombia / Barranquilla"
+    },
+    {
+     "titulo": "Presépio (el pesebre)",
+     "director": "Felipe Bibian",
+     "pais": "Brasil"
+    }
+   ],
+   "duracion_min": 60,
+   "_duracion_de": "estimada: el hueco hasta la siguiente en la misma sede (tope 90, 60 si es la última)"
+  },
+  {
+   "dia": "2026-10-21",
+   "hora": "17:00",
+   "sede": "Universidad del Norte",
+   "acceso": "Entrada libre",
+   "titulo": "Líneas y rayas",
+   "seccion": "Exhibiciones",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/programacion-general.html",
+    "date": "2026-10-15",
+    "fila": 23
+   },
+   "is_programa": true,
+   "sinopsis": "Películas animadas con temáticas que exploran diversas formas y gestos creativos que producen imágenes singulares.",
+   "obras": [
+    {
+     "titulo": "El arca de nora",
+     "director": "Endre Lund Eriksen, Isak Gjertsen",
+     "pais": "Croatia, Norway"
+    },
+    {
+     "titulo": "Saq nikté y el espíritu de la máscara",
+     "director": "Ester Weiner",
+     "pais": "Guatemala, Uruguay"
+    },
+    {
+     "titulo": "Appol-o",
+     "director": "Juan José Calvo Lozano, Nicolás Castro Herrera, Cristian Felipe Ossa Castro",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Emechiche, el renacer de los cabeciblancos",
+     "director": "Juan Camilo Gonzales",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Decaer",
+     "director": "Juan Camilo Gonzales",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Tuktu, padre maíz",
+     "director": "Mauricio Prieto Muriel",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Safo",
+     "director": "Rosana Urbes",
+     "pais": "Brasil"
+    },
+    {
+     "titulo": "Memoria colectiva",
+     "director": "Cristina Colmenares",
+     "pais": "Perú"
+    },
+    {
+     "titulo": "Like friend, like deer",
+     "director": "Malek Eghbali",
+     "pais": "Iran"
+    },
+    {
+     "titulo": "The torch i carry",
+     "director": "Namuungoo Enkhbat",
+     "pais": "Estados Unidos"
+    }
+   ],
+   "duracion_min": 60,
+   "_duracion_de": "estimada: el hueco hasta la siguiente en la misma sede (tope 90, 60 si es la última)"
+  },
+  {
+   "dia": "2026-10-21",
+   "hora": "18:00",
+   "sede": "Alianza Francesa de Barranquilla",
+   "acceso": "Entrada libre",
+   "titulo": "Mujeres tenían que ser",
+   "seccion": "Exhibiciones",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/programacion-general.html",
+    "date": "2026-10-15",
+    "fila": 25
+   },
+   "is_programa": true,
+   "sinopsis": "Un viaje a través de la mirada de mujeres que habitan y cuestionan su lugar en el mundo, que se buscan y se encuentran a través del cine.",
+   "obras": [
+    {
+     "titulo": "Rastro",
+     "director": "Dominique Jeanneret",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Niña chilapa",
+     "director": "Juana Lotero",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Pawa",
+     "director": "Marbel Ina Vanegas Jusayu",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Refraccion",
+     "director": "Isabella Palacio Mesa",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Chaika",
+     "director": "Ingrid Bonilla",
+     "pais": "Colombia"
+    }
+   ],
+   "duracion_min": 60,
+   "_duracion_de": "estimada: el hueco hasta la siguiente en la misma sede (tope 90, 60 si es la última)"
+  },
+  {
+   "dia": "2026-10-21",
+   "hora": "18:00",
+   "sede": "Fábrica de la Cultura 2",
+   "acceso": "Entrada libre",
+   "titulo": "Encuentros",
+   "seccion": "Exhibiciones",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/programacion-general.html",
+    "date": "2026-10-15",
+    "fila": 24
+   },
+   "is_programa": true,
+   "sinopsis": "Un programa para disfrutar en familia en las calles y plazas. Miradas infantiles y juveniles que cautivan a pequeños y grandes.",
+   "obras": [
+    {
+     "titulo": "Memoria de un pibe",
+     "director": "Pedro Santi",
+     "pais": "Brasil"
+    },
+    {
+     "titulo": "La guerra de los tomates",
+     "director": "Juan Carlos Gutierrez",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "La gran hazaña",
+     "director": "Luber Yesid Zúñiga Ordóñez.",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Los pliegues de la falda",
+     "director": "Blanca Muñoz Avila",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Las zapatillas mágicas",
+     "director": "Luber Yesid Zúñiga Ordóñez.",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Replay",
+     "director": "Simón Matallana",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Hay algo detrás de ti",
+     "director": "Julián Andrés Gómez Reyes",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Appol-o",
+     "director": "Juan José Calvo Lozano, Nicolás Castro Herrera, Cristian Felipe Ossa Castro",
+     "pais": "Colombia"
+    }
+   ],
+   "duracion_min": 60,
+   "_duracion_de": "estimada: el hueco hasta la siguiente en la misma sede (tope 90, 60 si es la última)"
+  },
+  {
+   "dia": "2026-10-22",
+   "hora": "10:30",
+   "sede": "Cinemateca del Caribe",
+   "sala": "Sede Combarranquilla Country, primer piso",
+   "acceso": "Entrada libre",
+   "titulo": "Hablemos de educación audiovisual: la inteligencia artificial (IA) en lo audiovisual",
+   "seccion": "Academia",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/programacion-general.html",
+    "date": "2026-10-15",
+    "fila": 42
+   },
+   "tipo": "evento",
+   "event_kind": "foro",
+   "duracion_min": 120,
+   "sinopsis": "Un espacio de encuentro y reflexión sobre los desafíos y las oportunidades que plantea la inteligencia artificial en los procesos de creación, producción y circulación audiovisual. A través de una conversación abierta, exploraremos sus posibilidades creativas, sus implicaciones éticas y sus efectos en la formación, los oficios y el futuro del sector audiovisual.",
+   "invitados": "Daniela Arregoces Campo (Moderadora: Coordinadora de comunicaciones, Cuarenta y Tres B (Guajira)) · Dougglas Hurtado Carmona (Director de Programa Ingeniería Multimedia - Universidad Simón Bolívar (Barranquilla)) · Julio Caballero Truyol (Docente, Programa de Comunicación Audiovisual - Universidad Autónoma (Barranquilla)) · María Cecilia Reyes (Docente, Departamento de Comunicación Social - Universidad del Norte (Barranquilla)) · Andrew Simon Tucker (Docente, Programa de Cine y Audiovisuales - Universidad del Magdalena (Santa Marta))"
+  },
+  {
+   "dia": "2026-10-22",
+   "hora": "14:00",
+   "sede": "Alianza Francesa de Barranquilla",
+   "sala": "Café Terraza",
+   "acceso": "Entrada libre",
+   "titulo": "\"Un tinto con Cine Atlántico\": encuentro con el sector audiovisual del Distrito y el Departamento",
+   "seccion": "Industria",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/programacion-general.html",
+    "date": "2026-10-15",
+    "fila": 48
+   },
+   "tipo": "evento",
+   "event_kind": "encuentro",
+   "duracion_min": 135,
+   "sinopsis": "Un encuentro para conectar a realizadores, productores, gestores, organizaciones y demás agentes del sector audiovisual del Distrito de Barranquilla y del departamento del Atlántico. Este espacio busca propiciar el intercambio de experiencias, el reconocimiento de capacidades y la construcción de alianzas para fortalecer el ecosistema audiovisual de la Región. Como parte de la jornada, se realizará la charla «Políticas públicas del audiovisual: un proceso de construcción en el Distrito de Barranquilla», una conversación sobre la participación del sector y las oportunidades para construir políticas públicas que respondan a sus necesidades y contribuyan a su desarrollo.",
+   "invitados": "Iván Movilla Díaz (Ponente de la charla introductoria: Asesor de Despacho de la Secretaría de Cultura y Patrimonio, Alcaldía Distrital de Barranquilla) · Consejo de Cine Departamental (Secretaría de Cultura y Patrimonio – Gobernación del Atlántico) · Asamblea de Cine y Audiovisuales de Barranquilla (Invitación abierta a todos sus miembros y agentes del sector audiovisual Distrital y Departamental)"
+  },
+  {
+   "dia": "2026-10-22",
+   "hora": "14:00",
+   "sede": "Cinemateca del Caribe",
+   "sala": "Sede Combarranquilla Country",
+   "acceso": "Entrada libre",
+   "titulo": "Una mirada latina",
+   "seccion": "Exhibiciones",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/programacion-general.html",
+    "date": "2026-10-15",
+    "fila": 37
+   },
+   "is_programa": true,
+   "sinopsis": "Una selección de cortometrajes realizados en Latinoamérica que reúne diversas voces, sensibilidades y formas de narrar nuestras realidades.",
+   "obras": [
+    {
+     "titulo": "En nombre del amor",
+     "director": "Mariana Pallas, Alexander Dieppa, Luciana Martins, Socorro Lira",
+     "pais": "Cuba"
+    },
+    {
+     "titulo": "Capitão lima",
+     "director": "Filipe Carvalho",
+     "pais": "Brasil"
+    },
+    {
+     "titulo": "Una torreta en llamas",
+     "director": "Humberto Flores Jaruégui",
+     "pais": "México"
+    },
+    {
+     "titulo": "Compraventa",
+     "pais": "Argentina"
+    },
+    {
+     "titulo": "Más allá",
+     "director": "Bettina Lopez Mendoza",
+     "pais": "Venezuela/US/Canada/Colombia"
+    },
+    {
+     "titulo": "Presépio (el pesebre)",
+     "director": "Felipe Bibian",
+     "pais": "Brasil"
+    }
+   ],
+   "duracion_min": 60,
+   "_duracion_de": "estimada: el hueco hasta la siguiente en la misma sede (tope 90, 60 si es la última)"
+  },
+  {
+   "dia": "2026-10-22",
+   "hora": "15:00",
+   "sede": "Universidad de la Costa – CUC",
+   "sala": "Auditorio Sala de Conferencias 2, bloque 11, piso 5",
+   "acceso": "Entrada libre",
+   "titulo": "Concurso MINI",
+   "seccion": "Exhibiciones",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/programacion-general.html",
+    "date": "2026-10-15",
+    "fila": 38,
+    "cineforo": 43
+   },
+   "is_programa": true,
+   "duracion_min": 75,
+   "invitados": "Harold Ospina Hincapié (Moderador: Director general y creativo del Festival Internacional de Cortometrajes Cine a la Calle FICICA (Pereira)) · Con la participación de los seleccionados del Concurso de Filminutos MINI y sus obras",
+   "sinopsis": "Selección de filminutos del Caribe Colombiano en competencia. Con cineforo.",
+   "obras": [
+    {
+     "titulo": "La tormenta",
+     "director": "Pierre Jiménez",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Queener",
+     "director": "Sebastián López Murillo",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Gracias, antonio",
+     "director": "Keren Berrio",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "¿Quién heredará el sabor de mompox?",
+     "director": "Jonatan José Hernández González",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "La despedida",
+     "director": "Ana Marcela Meza Vargas",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Bartolo",
+     "director": "Sergio Andrés Fernández Buitrago",
+     "pais": "Colombia"
+    }
+   ]
+  },
+  {
+   "dia": "2026-10-22",
+   "hora": "16:30",
+   "sede": "Alianza Francesa de Barranquilla",
+   "sala": "Salón Montreal",
+   "acceso": "Entrada libre",
+   "titulo": "\"Herramientas accesibles y cine para todas y todos\"",
+   "seccion": "Industria",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/programacion-general.html",
+    "date": "2026-10-15",
+    "fila": 49
+   },
+   "tipo": "evento",
+   "event_kind": "charla",
+   "duracion_min": 120,
+   "sinopsis": "Un espacio para conocer herramientas y estrategias de accesibilidad audiovisual que facilitan el disfrute del cine por parte de personas con discapacidad visual y auditiva. Una invitación a reflexionar sobre la inclusión y el derecho de todas las personas a participar de la experiencia cinematográfica. Convocatoria dirigida a público con discapacidad visual y auditiva, así como público general interesado. Entrada libre hasta completar aforo.",
+   "invitados": "Luis Guillermo Torres (Moderador: presidente de AT Medios, accesibilidad y tecnología (Bogotá))"
+  },
+  {
+   "dia": "2026-10-22",
+   "hora": "16:30",
+   "sede": "Universidad de la Costa – CUC",
+   "sala": "Auditorio Sala de Conferencias 2, bloque 11, piso 5",
+   "acceso": "Entrada libre",
+   "titulo": "\"Cómo construir personajes para un guion cinematográfico\"",
+   "seccion": "Academia",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/programacion-general.html",
+    "date": "2026-10-15",
+    "fila": 44
+   },
+   "tipo": "evento",
+   "event_kind": "charla",
+   "duracion_min": 90,
+   "sinopsis": "Un acercamiento a los principios y herramientas narrativas para crear personajes sólidos, creíbles y memorables. Una conversación sobre cómo desarrollar sus motivaciones, conflictos, características y transformaciones para dar fuerza a las historias cinematográficas.",
+   "invitados": "Juan Manuel Cáceres (Creador y guionista de series y comedias de televisión, Red Colombiana de Escritores Audiovisuales - REDES SGC (Bogotá))"
+  },
+  {
+   "dia": "2026-10-22",
+   "hora": "18:00",
+   "sede": "Alianza Francesa de Barranquilla",
+   "acceso": "Entrada libre",
+   "titulo": "Y así pasan los días",
+   "seccion": "Exhibiciones",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/programacion-general.html",
+    "date": "2026-10-15",
+    "fila": 40
+   },
+   "is_programa": true,
+   "sinopsis": "Cortos que abordan la cotidianidad y el paso del tiempo como forma de narración y construcción de historias sencillas que se vuelven extraordinarias.",
+   "obras": [
+    {
+     "titulo": "Gramática práctica italiana",
+     "director": "Daniel Cortés",
+     "pais": "Colombia / Cuba"
+    },
+    {
+     "titulo": "Goteras",
+     "director": "Vicente Gonzalez Monroy",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Malas posturas",
+     "director": "Juan Pablo Castro",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Plástico",
+     "director": "Daniel Jimenez V",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Dong shen shi",
+     "director": "Guoju Wang",
+     "pais": "China"
+    },
+    {
+     "titulo": "When the tiger roars",
+     "director": "Lam Can-Zhao",
+     "pais": "China"
+    }
+   ],
+   "duracion_min": 60,
+   "_duracion_de": "estimada: el hueco hasta la siguiente en la misma sede (tope 90, 60 si es la última)"
+  },
+  {
+   "dia": "2026-10-22",
+   "hora": "18:00",
+   "sede": "Parque Las Flores",
+   "sala": "Cancha de básquet",
+   "acceso": "Entrada libre",
+   "titulo": "Encuentros",
+   "seccion": "Exhibiciones",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/programacion-general.html",
+    "date": "2026-10-15",
+    "fila": 39
+   },
+   "is_programa": true,
+   "sinopsis": "Un programa para disfrutar en familia en las calles y plazas. Miradas infantiles y juveniles que cautivan a pequeños y grandes.",
+   "obras": [
+    {
+     "titulo": "Memoria de un pibe",
+     "director": "Pedro Santi",
+     "pais": "Brasil"
+    },
+    {
+     "titulo": "La guerra de los tomates",
+     "director": "Juan Carlos Gutierrez",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "La gran hazaña",
+     "director": "Luber Yesid Zúñiga Ordóñez.",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Los pliegues de la falda",
+     "director": "Blanca Muñoz Avila",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Las zapatillas mágicas",
+     "director": "Luber Yesid Zúñiga Ordóñez.",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Replay",
+     "director": "Simón Matallana",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Hay algo detrás de ti",
+     "director": "Julián Andrés Gómez Reyes",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Appol-o",
+     "director": "Juan José Calvo Lozano, Nicolás Castro Herrera, Cristian Felipe Ossa Castro",
+     "pais": "Colombia"
+    }
+   ],
+   "duracion_min": 60,
+   "_duracion_de": "estimada: el hueco hasta la siguiente en la misma sede (tope 90, 60 si es la última)"
+  },
+  {
+   "dia": "2026-10-23",
+   "hora": "08:00",
+   "sede": "Cinemateca del Caribe",
+   "sala": "Sede Combarranquilla Country",
+   "acceso": "Entrada libre",
+   "titulo": "Cine accesible",
+   "seccion": "Exhibiciones",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/programacion-general.html",
+    "date": "2026-10-15",
+    "fila": 53,
+    "cineforo": 61
+   },
+   "is_programa": true,
+   "duracion_min": 120,
+   "invitados": "Luis Guillermo Torres (Moderador: presidente de AT Medios, accesibilidad y tecnología (Bogotá))",
+   "sinopsis": "El cine es para todas las personas. Este programa reúne obras audiovisuales que incorporan herramientas de accesibilidad para personas sordas y ciegas, ofreciendo una experiencia cinematográfica más inclusiva y significativa. Convocatoria dirigida a público con discapacidad visual y auditiva, así como público general interesado. Entrada libre hasta completar aforo. Con cineforo.",
+   "obras": [
+    {
+     "titulo": "Alivios",
+     "director": "Juan Manuel González",
+     "pais": "México, Venezuela"
+    },
+    {
+     "titulo": "El bitcoin de oro",
+     "director": "Bernardo Hernández",
+     "pais": "España"
+    },
+    {
+     "titulo": "El maestro de la piquería",
+     "director": "Yinet Molero",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Khazana",
+     "director": "Basir Ahmed",
+     "pais": "Pakistán"
+    },
+    {
+     "titulo": "Quinto primera",
+     "director": "Fran Menchón",
+     "pais": "España"
+    }
+   ]
+  },
+  {
+   "dia": "2026-10-23",
+   "hora": "10:30",
+   "sede": "Alianza Francesa de Barranquilla",
+   "sala": "Salón Montreal, 3.er piso",
+   "acceso": "Entrada libre",
+   "titulo": "Derechos de autor: \"Escribir con derechos: el poder de la gestión colectiva\"",
+   "seccion": "Industria",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/programacion-general.html",
+    "date": "2026-10-15",
+    "fila": 66
+   },
+   "tipo": "evento",
+   "event_kind": "masterclass",
+   "duracion_min": 120,
+   "sinopsis": "Una charla dirigida a autores, compositores y creadores interesados en conocer cómo proteger sus obras y aprovechar las oportunidades que brinda la gestión colectiva. Esta masterclass abordará los beneficios del derecho de autor, de la afiliación a sociedades de gestión colectiva y las herramientas para garantizar el reconocimiento y la remuneración a los creadores por el uso y explotación de sus obras.",
+   "invitados": "Mónica Guzmán Sánchez (Coordinadora de Bienestar Social, Red Colombiana de Escritores Audiovisuales - REDES SGC (Bogotá)) · Héctor Rodríguez Cuellar (Libretista y guionista colombiano, Red Colombiana de Escritores Audiovisuales – REDES SGC (Bogotá))"
+  },
+  {
+   "dia": "2026-10-23",
+   "hora": "10:30",
+   "sede": "Cinemateca del Caribe",
+   "sala": "Sede Combarranquilla Country",
+   "acceso": "Entrada libre",
+   "titulo": "Cine accesible",
+   "seccion": "Exhibiciones",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/programacion-general.html",
+    "date": "2026-10-15",
+    "fila": 56,
+    "cineforo": 62
+   },
+   "is_programa": true,
+   "duracion_min": 120,
+   "invitados": "Luis Guillermo Torres (Moderador: presidente de AT Medios, accesibilidad y tecnología (Bogotá))",
+   "sinopsis": "El cine es para todas las personas. Este programa reúne obras audiovisuales que incorporan herramientas de accesibilidad para personas sordas y ciegas, ofreciendo una experiencia cinematográfica más inclusiva y significativa. Convocatoria dirigida a público con discapacidad visual y auditiva, así como público general interesado. Entrada libre hasta completar aforo. Con cineforo.",
+   "obras": [
+    {
+     "titulo": "Alivios",
+     "director": "Juan Manuel González",
+     "pais": "México, Venezuela"
+    },
+    {
+     "titulo": "El bitcoin de oro",
+     "director": "Bernardo Hernández",
+     "pais": "España"
+    },
+    {
+     "titulo": "El maestro de la piquería",
+     "director": "Yinet Molero",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Khazana",
+     "director": "Basir Ahmed",
+     "pais": "Pakistán"
+    },
+    {
+     "titulo": "Quinto primera",
+     "director": "Fran Menchón",
+     "pais": "España"
+    }
+   ]
+  },
+  {
+   "dia": "2026-10-23",
+   "hora": "14:00",
+   "sede": "Universidad de la Costa – CUC",
+   "sala": "Auditorio Sala de Conferencias 1, bloque 11, piso 3",
+   "acceso": "Entrada libre",
+   "titulo": "Territorios vivos",
+   "seccion": "Exhibiciones",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/programacion-general.html",
+    "date": "2026-10-15",
+    "fila": 57,
+    "cineforo": 63
+   },
+   "is_programa": true,
+   "duracion_min": 120,
+   "invitados": "Jair Vega (Moderador: Sociólogo, docente e investigador (Barranquilla)) · Liz Dany Macías (Realizadora Audiovisual Comunidad Mokaná (Puerto Colombia)) · Elizabeth Pirela González (Realizadora Audiovisual, directora y guionista Wayuu del clan Epieyü, Casa productora MAITUUI FILMS S.A.S. (Guajira)) · Cristóbal Mendoza Carmona (Realizador Audiovisual comunidad Ette Ennaka (Santa Marta, Sierra Nevada))",
+   "sinopsis": "Diversas voces, culturas y formas de ver el mundo se encuentran en la pantalla. Este año Territorios Vivos reúne obras audiovisuales realizadas por comunidades indígenas del Caribe Colombiano. Con cineforo.",
+   "obras": [
+    {
+     "titulo": "El silencio de las semillas",
+     "director": "Elizabeth Pirela González",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Memorias piedras de boca e’ caña",
+     "director": "Tribu Digital Mokaná",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Princesado mokaná: el legado del cerro de las hermosas",
+     "director": "Liz Dany Macías",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Proowa",
+     "director": "Cristobal R. Mendoza",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Seguridad en el territorio del pueblo ette ennka chimila",
+     "director": "Cristobal R. Mendoza",
+     "pais": "Colombia"
+    }
+   ]
+  },
+  {
+   "dia": "2026-10-23",
+   "hora": "16:30",
+   "sede": "Alianza Francesa de Barranquilla",
+   "sala": "Salón Montreal, 3.er piso",
+   "acceso": "Entrada libre",
+   "titulo": "\"La Paridad Importa\": diagnóstico de la participación de las mujeres en festivales de cortometrajes de cine colombiano (2008–2020)",
+   "seccion": "Industria",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/programacion-general.html",
+    "date": "2026-10-15",
+    "fila": 67
+   },
+   "tipo": "evento",
+   "event_kind": "masterclass",
+   "duracion_min": 120,
+   "sinopsis": "«La Paridad Importa» es un diagnóstico que abre la conversación sobre las brechas de género en los festivales de cortometrajes en Colombia (2008–2020). Esta investigación funciona como una herramienta de acción afirmativa orientada a visibilizar y combatir la exclusión histórica de las mujeres y diversidades de género en la industria audiovisual del país, aportando datos y reflexiones clave para impulsar la equidad en el cine nacional.",
+   "invitados": "Jimena Prieto Sarmiento (Realizadora Audiovisual y Gestora Cultural, fundadora y directora de Cine en Femenino)"
+  },
+  {
+   "dia": "2026-10-23",
+   "hora": "18:00",
+   "sede": "Alianza Francesa de Barranquilla",
+   "acceso": "Entrada libre",
+   "titulo": "¿Eso es real?",
+   "seccion": "Exhibiciones",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/programacion-general.html",
+    "date": "2026-10-15",
+    "fila": 59
+   },
+   "is_programa": true,
+   "sinopsis": "Películas documentales que exploran diversos dispositivos narrativos e historias que conectan con sus territorios.",
+   "obras": [
+    {
+     "titulo": "Eject: el último rebobinado",
+     "director": "Martin Desoto / Senin Porto",
+     "pais": "España"
+    },
+    {
+     "titulo": "La fiesta votada",
+     "director": "Lady Vasquez Casupa",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "In turn",
+     "director": "Sahra Asadollahi / Atefeh Salehi",
+     "pais": "Irán"
+    },
+    {
+     "titulo": "Belleza letal",
+     "director": "Juan Abello, Felipe Moreno, Valeria Rúa, Andrés Benavides, German París, Santiago Rodriguez, Fiama Castor, Juan Olmos, Cindy Caffroni, Ronald Marquez",
+     "pais": "Colombia / Barranquilla"
+    },
+    {
+     "titulo": "Recordando mi jerga",
+     "director": "Xilenys Rojas Ortega",
+     "pais": "Colombia / Barranquilla"
+    },
+    {
+     "titulo": "El mundo de humberto",
+     "director": "Paula Ortiz",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Do rocks dream of flying?",
+     "director": "Mathieu Ciulla & Simon Zorraquin",
+     "pais": "España, Francia y Argentina"
+    },
+    {
+     "titulo": "Prueba de cámara",
+     "director": "David Correa Franco",
+     "pais": "Colombia"
+    }
+   ],
+   "duracion_min": 60,
+   "_duracion_de": "estimada: el hueco hasta la siguiente en la misma sede (tope 90, 60 si es la última)"
+  },
+  {
+   "dia": "2026-10-23",
+   "hora": "18:00",
+   "sede": "Barrio Villas de la Cordialidad",
+   "sala": "Cancha de baloncesto",
+   "acceso": "Entrada libre",
+   "titulo": "Encuentros",
+   "seccion": "Exhibiciones",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/programacion-general.html",
+    "date": "2026-10-15",
+    "fila": 58
+   },
+   "is_programa": true,
+   "sinopsis": "Un programa para disfrutar en familia en las calles y plazas. Miradas infantiles y juveniles que cautivan a pequeños y grandes.",
+   "obras": [
+    {
+     "titulo": "Memoria de un pibe",
+     "director": "Pedro Santi",
+     "pais": "Brasil"
+    },
+    {
+     "titulo": "La guerra de los tomates",
+     "director": "Juan Carlos Gutierrez",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "La gran hazaña",
+     "director": "Luber Yesid Zúñiga Ordóñez.",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Los pliegues de la falda",
+     "director": "Blanca Muñoz Avila",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Las zapatillas mágicas",
+     "director": "Luber Yesid Zúñiga Ordóñez.",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Replay",
+     "director": "Simón Matallana",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Hay algo detrás de ti",
+     "director": "Julián Andrés Gómez Reyes",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Appol-o",
+     "director": "Juan José Calvo Lozano, Nicolás Castro Herrera, Cristian Felipe Ossa Castro",
+     "pais": "Colombia"
+    }
+   ],
+   "duracion_min": 60,
+   "_duracion_de": "estimada: el hueco hasta la siguiente en la misma sede (tope 90, 60 si es la última)"
+  },
+  {
+   "dia": "2026-10-24",
+   "hora": "18:30",
+   "sede": "Parque Sagrado Corazón",
+   "acceso": "Entrada libre",
+   "titulo": "Clausura",
+   "seccion": "Eventos especiales",
+   "_src": {
+    "url": "https://ficica.cinealacalle.org/programacion-general.html",
+    "date": "2026-10-15",
+    "fila": 70
+   },
+   "tipo": "evento",
+   "event_kind": "clausura",
+   "obras": [
+    {
+     "titulo": "Cayenas libertarias",
+     "director": "Javier Camilo Aranguren",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Recordando mi jerga",
+     "director": "Xilenys Rojas Ortega",
+     "pais": "Colombia / Barranquilla"
+    },
+    {
+     "titulo": "Emechiche, el renacer de los cabeciblancos",
+     "director": "Juan Camilo Gonzales",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Stakkars meg",
+     "director": "Liv Joelle Barbosa Blad",
+     "pais": "Noruega"
+    },
+    {
+     "titulo": "Luis antonio",
+     "director": "Juan José Arias Gil",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Chro",
+     "director": "Hamed Bahrami",
+     "pais": "Iran"
+    },
+    {
+     "titulo": "La gran hazaña",
+     "director": "Luber Yesid Zúñiga Ordóñez.",
+     "pais": "Colombia"
+    }
+   ],
+   "duracion_min": 60,
+   "_duracion_de": "estimada: el hueco hasta la siguiente en la misma sede (tope 90, 60 si es la última)"
+  }
+ ]
+}

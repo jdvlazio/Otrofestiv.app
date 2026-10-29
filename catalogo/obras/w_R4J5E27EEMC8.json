@@ -1,0 +1,42 @@
+{
+ "id": "w_R4J5E27EEMC8",
+ "titulo_original": "En busca del arca perdida",
+ "anio": 1981,
+ "paises": [
+  "US"
+ ],
+ "directores": [
+  "Steven Spielberg"
+ ],
+ "aliases": [
+  {
+   "titulo": "Raiders of the Lost Ark",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "Año 1936, Indiana Jones es un profesor de arqueología, dispuesto a correr peligrosas aventuras con tal de conseguir valiosas reliquias históricas. Después de una infructuosa misión en Sudamérica, el gobierno estadounidense le encarga la búsqueda del Arca de la Alianza, donde se conservan las Tablas de la Ley que Dios entregó a Moisés. Según la leyenda, quien las posea tendrá un poder absoluto, razón por la cual también la buscan los nazis.",
+  "en": "When Dr. Indiana Jones – the tweed-suited professor who just happens to be a celebrated archaeologist – is hired by the government to locate the legendary Ark of the Covenant, he finds himself up against the entire Nazi regime."
+ },
+ "generos": [
+  "Aventura"
+ ],
+ "afiche": {
+  "archivo": "/assets/ficma/en-busca-del-arca-perdida.jpg",
+  "veredicto": "oficial"
+ },
+ "xref": {
+  "tmdb": 85,
+  "letterboxd": "raiders-of-the-lost-ark"
+ },
+ "versiones": [
+  {
+   "etiqueta": "115 min",
+   "duracion_min": 115
+  }
+ ],
+ "presentaciones": [
+  "ficma-2026"
+ ]
+}

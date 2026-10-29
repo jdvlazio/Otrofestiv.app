@@ -1,0 +1,82 @@
+name: Publicar la web
+# LA VERSIÓN LA PONE LA PUBLICACIÓN, NO EL PR (20 oct 2026, aprobado por Juan).
+#
+# Antes cada PR corría scripts/bump-version.js y commiteaba el número de build en
+# index.html, src/main.js, sw.js y version.json. Dos PR vivos chocaban SIEMPRE
+# en esos cuatro archivos: GitHub no usa el driver de merge local
+# (scripts/merge-bump.sh), así que cada merge dejaba a los demás DIRTY → merge de
+# main, re-bump, otra vuelta de CI de ~17 min. El 19 oct: 7 PR de Onboarding,
+# hasta 3 vueltas cada uno.
+#
+# Ahora: GitHub Pages publica desde este workflow (build_type «workflow», no
+# «legacy»). El número se estampa en la COPIA que se sube, nunca en main → la
+# branch protection no interviene (lo que hizo fallar el intento #697, que
+# empujaba el bump a main). Los PR no tocan esos archivos y require-bump vela
+# por que siga así.
+#
+# Volver atrás: Settings › Pages › Source «Deploy from a branch» (main, /) y
+# volver a bumpear en la rama.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+  # RED DE SEGURIDAD (20 oct 2026): GitHub Pages se cuelga a veces en
+  # «updating_pages» y el deploy se cancela solo (pasó a las 14:14 del 20 oct).
+  # Cada 20 min el job `vigilar` compara el commit que dice version.json en
+  # producción con la punta de main y, si no coinciden, vuelve a publicar.
+  schedule:
+    - cron: '*/20 * * * *'
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+  actions: write
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  vigilar:
+    if: github.event_name == 'schedule'
+    runs-on: ubuntu-latest
+    steps:
+      - name: ¿Producción tiene la punta de main?
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          prod=$(curl -fsS "https://otrofestiv.app/version.json?x=$(date +%s)" | python3 -c "import json,sys;print(json.load(sys.stdin).get('commit',''))")
+          main=$(gh api repos/${{ github.repository }}/commits/main -q .sha)
+          enCurso=$(gh run list -R ${{ github.repository }} --workflow pages.yml --json status -q '[.[]|select(.status!="completed")]|length')
+          echo "producción: ${prod:-?} · main: $main · publicaciones en curso: $enCurso"
+          if [ "$prod" = "$main" ] || [ "$enCurso" != "0" ]; then echo "✓ nada que hacer"; exit 0; fi
+          echo "::warning::Producción no tiene la punta de main — se vuelve a publicar"
+          gh workflow run pages.yml -R ${{ github.repository }} --ref main
+  publicar:
+    if: github.event_name != 'schedule'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '22'
+      # Hora de Colombia: el número es AAAAMMDDhhmm y la app solo compara
+      # igualdad, pero así sigue la misma serie que los builds de antes.
+      - name: Estampar el número de build en la copia
+        env:
+          TZ: America/Bogota
+        run: |
+          node scripts/bump-version.js
+          # qué commit se publica: lo lee el job `vigilar`
+          node -e "const f='version.json',v=require('./'+f);v.commit=process.env.GITHUB_SHA;require('fs').writeFileSync(f,JSON.stringify(v,null,2)+'\\n')"
+          echo "build: $(node -p "require('./version.json').android") · commit: $GITHUB_SHA"
+          grep -q "$(node -p "require('./version.json').android")" sw.js
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+      - id: deploy
+        uses: actions/deploy-pages@v4
+        with:
+          timeout: 1200000   # 20 min (10 por defecto): Pages a veces tarda

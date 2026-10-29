@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, emparejado con ficha_verifica() (director + año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-10-07"
+  "capturado": "2026-10-27"
  },
  "obras": [
   {
@@ -19,7 +19,11 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "/IMAGINA",
    "_director": "Pablo Tobón-Gallo",
-   "_sondeado": "2026-09-30"
+   "_sondeado": "2026-09-30",
+   "pais_heredado": "Colombia",
+   "_heredado": {
+    "pais_heredado": "catálogo w_R4JZED0C1DSQ (girardota-2026)"
+   }
   },
   {
    "titulo": "Al final del espectro",
@@ -39,7 +43,11 @@
    "_director": "Juan Felipe Orozco",
    "_sondeado": "2026-09-27",
    "poster": "/assets/girardota-2026/al-final-del-espectro.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "pais_heredado": "Colombia",
+   "_heredado": {
+    "pais_heredado": "catálogo w_R4G7B5FD31JG (fantasmagoria-2026, girardota-2026)"
+   }
   },
   {
    "titulo": "Alguien Mató Algo",
@@ -58,7 +66,11 @@
    "_director": "Jorge Navas",
    "_sondeado": "2026-09-30",
    "poster": "/assets/girardota-2026/alguien-mato-algo.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "pais_heredado": "Colombia",
+   "_heredado": {
+    "pais_heredado": "catálogo w_R4JZW4RZE214 (girardota-2026)"
+   }
   },
   {
    "titulo": "Archivo no Encontrado",
@@ -77,7 +89,11 @@
    "_director": "Mariangel de la Rosa Contreras",
    "_sondeado": "2026-09-29",
    "poster": "/assets/girardota-2026/archivo-no-encontrado.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "pais_heredado": "Colombia",
+   "_heredado": {
+    "pais_heredado": "catálogo w_R4K1T2Y407Q9 (girardota-2026)"
+   }
   },
   {
    "titulo": "Carola",
@@ -86,7 +102,6 @@
    "poster_path": null,
    "synopsis_es": "Octavio, un anciano solitario y azotado por su pasado, recibe un extraño mensaje de su única compañía: su mula Carola. Para morir en paz, debe reconciliarse con Julián, su hijo a quien no ve desde hace años. Juntos emprenden un viaje marcado por el rencor, el silencio y la posibilidad de sanar lo que parecía roto para siempre.",
    "synopsis_en": "",
-   "genero": "",
    "anio_tmdb": 0,
    "duracion_tmdb": 11,
    "pais_tmdb": "",
@@ -100,7 +115,15 @@
      "poster": "/assets/siembrafest/carola.jpg",
      "sinopsis": "Octavio, un anciano solitario y azotado por su pasado, recibe un extraño mensaje de su única compañía: su mula Carola. Para morir en paz, debe reconciliarse con Julián, su hijo a quien no ve desde hace años. Juntos emprenden un viaje marcado por el rencor, el silencio y la posibilidad de sanar lo que parecía roto para siempre."
     }
-   ]
+   ],
+   "genero": "Ficción",
+   "_heredado": {
+    "genero": "catálogo w_R4K2544MAM4X (girardota-2026, guatape-2026, siembrafest-2026)",
+    "anio": "catálogo w_R4K2544MAM4X (girardota-2026, guatape-2026, siembrafest-2026)",
+    "pais_heredado": "catálogo w_R4K2544MAM4X (girardota-2026, guatape-2026, siembrafest-2026)"
+   },
+   "anio": 2025,
+   "pais_heredado": "Colombia"
   },
   {
    "titulo": "Deus Ex Necro Machina",
@@ -110,14 +133,27 @@
      "titulo": "Deus ex necro machina",
      "poster": "/assets/jardin-2026/deus-ex-necro-machina.jpg",
      "posterSource": "editorial",
+     "country": "Colombia",
+     "year": 2026,
+     "duration": "6 min",
+     "genre": "Experimental",
      "sinopsis": "¿Qué relación existe entre los trucos de inmortalidad de un videojuego y las mecánicas de poder en un país atravesado por el conflicto? DEUS EX NECRO MACHINA es un ensayo fílmico que tensiona la memoria afectiva de la infancia con la violencia estructural en Colombia. A través del despiece de archivos fotográficos, prensa y gameplay de GTA: San Andreas, el cortometraje confronta la estetización del consumo con la ausencia irremplazable de quienes fueron borrados del mapa."
     }
    ],
+   "_sinopsis_de": "ya publicada en jardin-2026",
    "_verificado": "ya publicada en jardin-2026: se reusa su sinopsis",
    "sinopsis": "¿Qué relación existe entre los trucos de inmortalidad de un videojuego y las mecánicas de poder en un país atravesado por el conflicto? DEUS EX NECRO MACHINA es un ensayo fílmico que tensiona la memoria afectiva de la infancia con la violencia estructural en Colombia. A través del despiece de archivos fotográficos, prensa y gameplay de GTA: San Andreas, el cortometraje confronta la estetización del consumo con la ausencia irremplazable de quienes fueron borrados del mapa.",
+   "pais": "Colombia",
+   "anio": 2026,
+   "duracion_tmdb": 6,
+   "genero": "Experimental",
    "poster": "/assets/girardota-2026/deus-ex-necro-machina.jpg",
    "posterSource": "custom",
-   "_afiche": "declarado: https://www.instagram.com/p/Dd2iI6unNOM/ (lámina 4, Experimental o videoclip)"
+   "_afiche": "declarado: https://www.instagram.com/p/Dd2iI6unNOM/ (lámina 4, Experimental o videoclip)",
+   "pais_heredado": "Colombia",
+   "_heredado": {
+    "pais_heredado": "catálogo w_R4K2J1GTCCD1 (girardota-2026, jardin-2026)"
+   }
   },
   {
    "titulo": "El Páramo",
@@ -137,7 +173,11 @@
    "_director": "Jaime Osorio Márquez",
    "_sondeado": "2026-09-27",
    "poster": "/assets/girardota-2026/el-paramo.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "pais_heredado": "Colombia, Argentina, España",
+   "_heredado": {
+    "pais_heredado": "catálogo w_R4K0MKWYW82K (girardota-2026)"
+   }
   },
   {
    "titulo": "El libro de Lila",
@@ -157,7 +197,11 @@
    "_director": "Marcela Rincón",
    "_sondeado": "2026-09-27",
    "poster": "/assets/girardota-2026/el-libro-de-lila.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "pais_heredado": "Colombia, Uruguay",
+   "_heredado": {
+    "pais_heredado": "catálogo w_R4K2J22HT4ZZ (girardota-2026)"
+   }
   },
   {
    "titulo": "El origen de las especies",
@@ -176,7 +220,11 @@
    "_director": "Tiagx Vélez, Juliana Zuluaga, Analú Laferal",
    "_sondeado": "2026-09-27",
    "poster": "/assets/girardota-2026/el-origen-de-las-especies.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "pais_heredado": "Colombia",
+   "_heredado": {
+    "pais_heredado": "catálogo w_R4K0ZQZ8HE2X (girardota-2026)"
+   }
   },
   {
    "titulo": "Elementales",
@@ -186,17 +234,34 @@
      "titulo": "Elementales",
      "poster": "/assets/jardin-2026/elementales.jpg",
      "posterSource": "editorial",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "8 min",
+     "genre": "Documental",
      "sinopsis": "ELEMENTALES, rodado en 16mm entre 1954 y 1961, despierta en el espectador aquellas memorias primitivas y emotivas de la infancia, en las que acciones o momentos que podrían ser vistos como cotidianos, se revelan como marcas poderosas de aquello que constituye la primera vez que vimos, sentimos o aprendimos algo. Momentos, acciones, descubrimientos ELEMENTALES."
     },
     {
      "festival": "siembrafest-2026",
      "titulo": "Elementales",
      "poster": "/assets/siembrafest/elementales.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "8 min",
+     "genre": "Familia"
     }
    ],
+   "_sinopsis_de": "ya publicada en jardin-2026",
    "_verificado": "ya publicada en jardin-2026: se reusa su sinopsis",
-   "sinopsis": "ELEMENTALES, rodado en 16mm entre 1954 y 1961, despierta en el espectador aquellas memorias primitivas y emotivas de la infancia, en las que acciones o momentos que podrían ser vistos como cotidianos, se revelan como marcas poderosas de aquello que constituye la primera vez que vimos, sentimos o aprendimos algo. Momentos, acciones, descubrimientos ELEMENTALES."
+   "sinopsis": "ELEMENTALES, rodado en 16mm entre 1954 y 1961, despierta en el espectador aquellas memorias primitivas y emotivas de la infancia, en las que acciones o momentos que podrían ser vistos como cotidianos, se revelan como marcas poderosas de aquello que constituye la primera vez que vimos, sentimos o aprendimos algo. Momentos, acciones, descubrimientos ELEMENTALES.",
+   "pais": "Colombia",
+   "anio": 2025,
+   "duracion_tmdb": 8,
+   "genero": "Documental",
+   "pais_heredado": "Colombia",
+   "_heredado": {
+    "pais_heredado": "catálogo w_R4K1F3E1D0Z4 (girardota-2026, jardin-2026, siembrafest-2026)"
+   }
   },
   {
    "titulo": "En Todo y en Nada",
@@ -206,19 +271,35 @@
      "titulo": "En todo y en nada",
      "poster": "/assets/jardin-2026/en-todo-y-en-nada.jpg",
      "posterSource": "editorial",
+     "country": "Colombia",
+     "year": 2026,
+     "duration": "11 min",
+     "genre": "Experimental",
      "sinopsis": "“En todo y en nada” es un Documental-Experimental poético donde nosotras –Ximena y Raquel– dos jóvenes foráneas antioqueñas que nos sentimos perdidas en una ciudad tan caótica como lo es Medellín, materializamos todas esas dudas y cuestionamientos sobre el no pertenecer, ese sentimiento de no encajar ya en ningún lugar, a causa de dejar lo que llamábamos hogar por seguir nuestros sueños. Este documental es un viaje introspectivo que materializa y abraza los duelos, preguntas y el limbo en el que habitamos, al intentar dejar ir lo que fuimos y afrontar lo que ahora somos, todo a través de una mirada nostálgica al material de archivo de una infancia perdida, el uso de la carretera como espacio de limbo que genera sensaciones de pérdida, y el constante movimiento, imágenes que son fusionadas entre sí e intervenidas, creando una atmósfera de confusión por ser todo y nada al mismo tiempo, sonidos desafinados, incómodos, caóticos y desenfrenados refuerzan dicha sensación. La vida es un constante devenir, todos hemos estado en todo y en nada, todos hemos cargado en algún momento con el sentimiento de no pertenecer."
     },
     {
      "festival": "vartex-2026",
      "titulo": "En todo y en nada",
+     "country": "Colombia",
+     "year": 2026,
+     "duration": "11 min",
      "sinopsis": "“En todo y en nada” es un Documental-Experimental poético donde nosotras –Ximena y Raquel– dos jóvenes foráneas antioqueñas que nos sentimos perdidas en una ciudad tan caótica como lo es Medellín, materializamos todas esas dudas y cuestionamientos sobre el no pertenecer, ese sentimiento de no encajar ya en ningún lugar, a causa de dejar lo que llamábamos hogar por seguir nuestros sueños. Este documental es un viaje introspectivo que materializa y abraza los duelos, preguntas y el limbo en el que habitamos, al intentar dejar ir lo que fuimos y afrontar lo que ahora somos, todo a través de una mirada nostálgica al material de archivo de una infancia perdida, el uso de la carretera como espacio de limbo que genera sensaciones de pérdida, y el constante movimiento, imágenes que son fusionadas entre sí e intervenidas, creando una atmósfera de confusión por ser todo y nada al mismo tiempo, sonidos desafinados, incómodos, caóticos y desenfrenados refuerzan dicha sensación. La vida es un constante devenir, todos hemos estado en todo y en nada, todos hemos cargado en algún momento con el sentimiento de no pertenecer."
     }
    ],
+   "_sinopsis_de": "ya publicada en jardin-2026",
    "_verificado": "ya publicada en jardin-2026: se reusa su sinopsis",
    "sinopsis": "“En todo y en nada” es un Documental-Experimental poético donde nosotras –Ximena y Raquel– dos jóvenes foráneas antioqueñas que nos sentimos perdidas en una ciudad tan caótica como lo es Medellín, materializamos todas esas dudas y cuestionamientos sobre el no pertenecer, ese sentimiento de no encajar ya en ningún lugar, a causa de dejar lo que llamábamos hogar por seguir nuestros sueños. Este documental es un viaje introspectivo que materializa y abraza los duelos, preguntas y el limbo en el que habitamos, al intentar dejar ir lo que fuimos y afrontar lo que ahora somos, todo a través de una mirada nostálgica al material de archivo de una infancia perdida, el uso de la carretera como espacio de limbo que genera sensaciones de pérdida, y el constante movimiento, imágenes que son fusionadas entre sí e intervenidas, creando una atmósfera de confusión por ser todo y nada al mismo tiempo, sonidos desafinados, incómodos, caóticos y desenfrenados refuerzan dicha sensación. La vida es un constante devenir, todos hemos estado en todo y en nada, todos hemos cargado en algún momento con el sentimiento de no pertenecer.",
+   "pais": "Colombia",
+   "anio": 2026,
+   "duracion_tmdb": 11,
+   "genero": "Experimental",
    "poster": "/assets/girardota-2026/en-todo-y-en-nada.jpg",
    "posterSource": "custom",
-   "_afiche": "declarado: https://www.instagram.com/p/Dd2hcuiHGOC/ (lámina 8, Documental)"
+   "_afiche": "declarado: https://www.instagram.com/p/Dd2hcuiHGOC/ (lámina 8, Documental)",
+   "pais_heredado": "Colombia",
+   "_heredado": {
+    "pais_heredado": "catálogo w_R4K253R78VC8 (girardota-2026)"
+   }
   },
   {
    "titulo": "Funeral siniestro",
@@ -235,9 +316,13 @@
    "lbSlug": "sinister-funeral",
    "_verificado": "declarada a mano: TMDB (127593) casa por dirección y año, pero solo tiene sinopsis en inglés: en español la obra salía sin una línea. La sinopsis es la del catálogo oficial de cine colombiano de Proimágenes (ficha 102, Jairo Pinilla, 1977), tal cual. Las láminas del festival no traen sinopsis.",
    "_director": "Jairo Pinilla",
-   "_sondeado": "2026-10-07",
+   "_sondeado": "2026-10-27",
    "poster": "/assets/girardota-2026/funeral-siniestro.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "pais_heredado": "Colombia",
+   "_heredado": {
+    "pais_heredado": "catálogo w_R4K05K01ZE2M (girardota-2026)"
+   }
   },
   {
    "titulo": "La Rebelión de un Fantasma",
@@ -247,12 +332,24 @@
      "titulo": "La rebelión de un fantasma",
      "poster": "/assets/popayan-2026/la-rebelion-de-un-fantasma.jpg",
      "posterSource": "custom",
+     "country": "Colombia",
+     "year": 2026,
+     "duration": "15 min",
      "sinopsis": "En Medellín, el río Aburrá fluye encajonado entre autopistas y concreto, ignorado por la ciudad que creció sobre su cuerpo. Ofelia lo busca. Camina sus orillas, intenta tocarlo, es expulsada. En ese trayecto -entre el deseo de acercarse y la imposibilidad de hacerlo- emergen los fantasmas del agua: los gallinazos que alguna vez sobrevolaron sus riberas, los cuerpos que el río ha guardado en silencio, las memorias de quienes lavaban ropa y navegaban en balsas donde hoy pasa el tráfico."
     }
    ],
+   "_afiche_de": "ya publicada en popayan-2026",
+   "_sinopsis_de": "ya publicada en popayan-2026",
    "poster": "/assets/popayan-2026/la-rebelion-de-un-fantasma.jpg",
    "_verificado": "ya publicada en popayan-2026: se reusa su afiche",
-   "sinopsis": "En Medellín, el río Aburrá fluye encajonado entre autopistas y concreto, ignorado por la ciudad que creció sobre su cuerpo. Ofelia lo busca. Camina sus orillas, intenta tocarlo, es expulsada. En ese trayecto -entre el deseo de acercarse y la imposibilidad de hacerlo- emergen los fantasmas del agua: los gallinazos que alguna vez sobrevolaron sus riberas, los cuerpos que el río ha guardado en silencio, las memorias de quienes lavaban ropa y navegaban en balsas donde hoy pasa el tráfico."
+   "sinopsis": "En Medellín, el río Aburrá fluye encajonado entre autopistas y concreto, ignorado por la ciudad que creció sobre su cuerpo. Ofelia lo busca. Camina sus orillas, intenta tocarlo, es expulsada. En ese trayecto -entre el deseo de acercarse y la imposibilidad de hacerlo- emergen los fantasmas del agua: los gallinazos que alguna vez sobrevolaron sus riberas, los cuerpos que el río ha guardado en silencio, las memorias de quienes lavaban ropa y navegaban en balsas donde hoy pasa el tráfico.",
+   "pais": "Colombia",
+   "anio": 2026,
+   "duracion_tmdb": 15,
+   "pais_heredado": "Colombia",
+   "_heredado": {
+    "pais_heredado": "catálogo w_R4K2J11F78M6 (girardota-2026, popayan-2026)"
+   }
   },
   {
    "titulo": "La mansión de Araucaima",
@@ -272,7 +369,11 @@
    "_director": "Carlos Mayolo",
    "_sondeado": "2026-09-27",
    "poster": "/assets/girardota-2026/la-mansion-de-araucaima.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "pais_heredado": "Colombia",
+   "_heredado": {
+    "pais_heredado": "catálogo w_R4HA3VAZEWQ3 (ficcali-2026, girardota-2026)"
+   }
   },
   {
    "titulo": "La otra forma",
@@ -292,7 +393,11 @@
    "_director": "Diego Felipe Guzmán",
    "_sondeado": "2026-09-27",
    "poster": "/assets/girardota-2026/la-otra-forma.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "pais_heredado": "Brasil, Colombia",
+   "_heredado": {
+    "pais_heredado": "catálogo w_R4JYR7GAW6CP (girardota-2026)"
+   }
   },
   {
    "titulo": "La salsa vive",
@@ -312,7 +417,11 @@
    "_director": "Juan Carvajal",
    "_sondeado": "2026-09-27",
    "poster": "/assets/girardota-2026/la-salsa-vive.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "pais_heredado": "Colombia, Estados Unidos",
+   "_heredado": {
+    "pais_heredado": "catálogo w_R4K2YRTDF1KJ (girardota-2026)"
+   }
   },
   {
    "titulo": "Llueve sobre Babel",
@@ -332,7 +441,11 @@
    "_director": "Gala del Sol",
    "_sondeado": "2026-09-27",
    "poster": "/assets/girardota-2026/llueve-sobre-babel.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "pais_heredado": "Colombia, Estados Unidos, España",
+   "_heredado": {
+    "pais_heredado": "catálogo w_R4J1NQYSTW0Z (ficma-2026, girardota-2026, narrarelfuturo-2026, villadelcine-2026)"
+   }
   },
   {
    "titulo": "Los Años del Conejo",
@@ -369,22 +482,49 @@
     }
    ],
    "poster": "/assets/girardota-2026/los-anos-del-conejo.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "pais_heredado": "Colombia",
+   "_heredado": {
+    "pais_heredado": "catálogo w_R4EN6JNPV8ZS (cineautopsia-2026, girardota-2026, jardin-2026)"
+   }
   },
   {
    "titulo": "Maleza",
+   "tmdb_id": 1791678,
+   "titulo_original": "Maleza",
+   "poster_path": "/ew96qwtwTRIqw8uePNlkueztbB3.jpg",
+   "synopsis_es": "Alba, una sanadora y partera solitaria, ha dedicado su existencia a preservar la vida. Guiada por el espíritu de su gato, recibe una noche a una joven desesperada cuya petición sacude sus convicciones. Entre dolor y silencios, deberá comprender que acompañar también significa permitir que cada quien elija su propio camino.",
+   "synopsis_en": "",
+   "genero": "Drama y Fantasía",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 11,
+   "pais_tmdb": "",
+   "lbSlug": "maleza-2026",
+   "_verificado": "el tmdb_id con que ya la publicamos en villadelcine-2026, y TMDB confirma la dirección",
+   "_director": "Nicolle Estrada Díaz",
+   "_sondeado": "2026-10-27",
    "_ya_publicada": [
     {
      "festival": "villadelcine-2026",
      "titulo": "Maleza",
+     "tmdb_id": 1791678,
      "poster": "/assets/villadelcine-2026/maleza.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
+     "lbSlug": "maleza-2026",
+     "country": "Colombia",
+     "year": 2026,
+     "duration": "11 min",
+     "genre": "Drama y Fantasía",
      "sinopsis": "Alba, una sanadora y partera solitaria, ha dedicado su existencia a preservar la vida. Guiada por el espíritu de su gato, recibe una noche a una joven desesperada cuya petición sacude sus convicciones. Entre dolor y silencios, deberá comprender que acompañar también significa permitir que cada quien elija su propio camino."
     }
    ],
-   "poster": "/assets/villadelcine-2026/maleza.jpg",
-   "_verificado": "ya publicada en villadelcine-2026: se reusa su afiche",
-   "sinopsis": "Alba, una sanadora y partera solitaria, ha dedicado su existencia a preservar la vida. Guiada por el espíritu de su gato, recibe una noche a una joven desesperada cuya petición sacude sus convicciones. Entre dolor y silencios, deberá comprender que acompañar también significa permitir que cada quien elija su propio camino."
+   "poster": "/assets/girardota-2026/maleza.jpg",
+   "posterSource": "tmdb",
+   "_heredado": {
+    "genero": "catálogo w_R4K253HAQJA6 (girardota-2026, villadelcine-2026)",
+    "pais_heredado": "catálogo w_R4K253HAQJA6 (girardota-2026, villadelcine-2026)"
+   },
+   "pais_heredado": "Colombia"
   },
   {
    "titulo": "Maricones",
@@ -422,7 +562,11 @@
    "_director": "Jefferson Cardoza",
    "_sondeado": "2026-09-30",
    "poster": "/assets/girardota-2026/paloquemao.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "pais_heredado": "Colombia",
+   "_heredado": {
+    "pais_heredado": "catálogo w_R4JZ1M1N92BF (girardota-2026)"
+   }
   },
   {
    "titulo": "Pura Sangre",
@@ -442,7 +586,11 @@
    "_director": "Luis Ospina",
    "_sondeado": "2026-09-27",
    "poster": "/assets/girardota-2026/pura-sangre.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "pais_heredado": "Colombia",
+   "_heredado": {
+    "pais_heredado": "catálogo w_R4GFC0AMPBK7 (fantasmagoria-2026, girardota-2026)"
+   }
   },
   {
    "titulo": "Refracción",
@@ -496,14 +644,17 @@
     }
    ],
    "poster": "/assets/girardota-2026/refraccion.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "pais_heredado": "Colombia",
+   "_heredado": {
+    "pais_heredado": "catálogo w_R4F8T5DKXC9W (cinemancia-2026, ficica-2026, ficmontanas-2026, girardota-2026, jardin-2026, miradas-2026, narrarelfuturo-2026)"
+   }
   },
   {
    "titulo": "Sirenas en la Niebla",
    "tmdb_id": 1117116,
    "titulo_original": "Sirenas en la Niebla",
    "poster_path": "/6f1RhvLNmsxvmwOM7qhxAJMebMv.jpg",
-   "synopsis_es": "",
    "synopsis_en": "Mariela will fight against the belief of the people that a mermaid is leading to young people, discovering the true monster on her journey.",
    "genero": "Drama",
    "anio_tmdb": 0,
@@ -516,7 +667,13 @@
    "_director": "Daniela Narváez",
    "_sondeado": "2026-09-30",
    "poster": "/assets/girardota-2026/sirenas-en-la-niebla.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "synopsis_es": "Mariela se enfrenta a la creencia del pueblo de que una sirena se está llevando a los jóvenes y, en el camino, descubre al verdadero monstruo.",
+   "_heredado": {
+    "synopsis_es": "catálogo w_R4H2427MQ120 (ficcali-2026, girardota-2026)",
+    "pais_heredado": "catálogo w_R4H2427MQ120 (ficcali-2026, girardota-2026)"
+   },
+   "pais_heredado": "Colombia"
   },
   {
    "titulo": "Mantener la Democracia Maestro",
@@ -594,7 +751,11 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "/IMAGINA",
    "_director": "Pablo Tobón-Gallo",
-   "_sondeado": "2026-09-30"
+   "_sondeado": "2026-09-30",
+   "pais_heredado": "Colombia",
+   "_heredado": {
+    "pais_heredado": "catálogo w_R4JZED0C1DSQ (girardota-2026)"
+   }
   },
   "Al final del espectro": {
    "tmdb_id": 40511,
@@ -613,7 +774,11 @@
    "_director": "Juan Felipe Orozco",
    "_sondeado": "2026-09-27",
    "poster": "/assets/girardota-2026/al-final-del-espectro.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "pais_heredado": "Colombia",
+   "_heredado": {
+    "pais_heredado": "catálogo w_R4G7B5FD31JG (fantasmagoria-2026, girardota-2026)"
+   }
   },
   "Alguien Mató Algo": {
    "tmdb_id": 453336,
@@ -631,7 +796,11 @@
    "_director": "Jorge Navas",
    "_sondeado": "2026-09-30",
    "poster": "/assets/girardota-2026/alguien-mato-algo.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "pais_heredado": "Colombia",
+   "_heredado": {
+    "pais_heredado": "catálogo w_R4JZW4RZE214 (girardota-2026)"
+   }
   },
   "Archivo no Encontrado": {
    "tmdb_id": 1754668,
@@ -649,7 +818,11 @@
    "_director": "Mariangel de la Rosa Contreras",
    "_sondeado": "2026-09-29",
    "poster": "/assets/girardota-2026/archivo-no-encontrado.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "pais_heredado": "Colombia",
+   "_heredado": {
+    "pais_heredado": "catálogo w_R4K1T2Y407Q9 (girardota-2026)"
+   }
   },
   "Carola": {
    "tmdb_id": 1497688,
@@ -657,7 +830,6 @@
    "poster_path": null,
    "synopsis_es": "Octavio, un anciano solitario y azotado por su pasado, recibe un extraño mensaje de su única compañía: su mula Carola. Para morir en paz, debe reconciliarse con Julián, su hijo a quien no ve desde hace años. Juntos emprenden un viaje marcado por el rencor, el silencio y la posibilidad de sanar lo que parecía roto para siempre.",
    "synopsis_en": "",
-   "genero": "",
    "anio_tmdb": 0,
    "duracion_tmdb": 11,
    "pais_tmdb": "",
@@ -671,7 +843,15 @@
      "poster": "/assets/siembrafest/carola.jpg",
      "sinopsis": "Octavio, un anciano solitario y azotado por su pasado, recibe un extraño mensaje de su única compañía: su mula Carola. Para morir en paz, debe reconciliarse con Julián, su hijo a quien no ve desde hace años. Juntos emprenden un viaje marcado por el rencor, el silencio y la posibilidad de sanar lo que parecía roto para siempre."
     }
-   ]
+   ],
+   "genero": "Ficción",
+   "_heredado": {
+    "genero": "catálogo w_R4K2544MAM4X (girardota-2026, guatape-2026, siembrafest-2026)",
+    "anio": "catálogo w_R4K2544MAM4X (girardota-2026, guatape-2026, siembrafest-2026)",
+    "pais_heredado": "catálogo w_R4K2544MAM4X (girardota-2026, guatape-2026, siembrafest-2026)"
+   },
+   "anio": 2025,
+   "pais_heredado": "Colombia"
   },
   "El Páramo": {
    "tmdb_id": 83705,
@@ -690,7 +870,11 @@
    "_director": "Jaime Osorio Márquez",
    "_sondeado": "2026-09-27",
    "poster": "/assets/girardota-2026/el-paramo.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "pais_heredado": "Colombia, Argentina, España",
+   "_heredado": {
+    "pais_heredado": "catálogo w_R4K0MKWYW82K (girardota-2026)"
+   }
   },
   "El libro de Lila": {
    "tmdb_id": 478795,
@@ -709,7 +893,11 @@
    "_director": "Marcela Rincón",
    "_sondeado": "2026-09-27",
    "poster": "/assets/girardota-2026/el-libro-de-lila.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "pais_heredado": "Colombia, Uruguay",
+   "_heredado": {
+    "pais_heredado": "catálogo w_R4K2J22HT4ZZ (girardota-2026)"
+   }
   },
   "El origen de las especies": {
    "tmdb_id": 1275337,
@@ -727,7 +915,11 @@
    "_director": "Tiagx Vélez, Juliana Zuluaga, Analú Laferal",
    "_sondeado": "2026-09-27",
    "poster": "/assets/girardota-2026/el-origen-de-las-especies.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "pais_heredado": "Colombia",
+   "_heredado": {
+    "pais_heredado": "catálogo w_R4K0ZQZ8HE2X (girardota-2026)"
+   }
   },
   "Funeral siniestro": {
    "tmdb_id": 127593,
@@ -743,9 +935,13 @@
    "lbSlug": "sinister-funeral",
    "_verificado": "declarada a mano: TMDB (127593) casa por dirección y año, pero solo tiene sinopsis en inglés: en español la obra salía sin una línea. La sinopsis es la del catálogo oficial de cine colombiano de Proimágenes (ficha 102, Jairo Pinilla, 1977), tal cual. Las láminas del festival no traen sinopsis.",
    "_director": "Jairo Pinilla",
-   "_sondeado": "2026-10-07",
+   "_sondeado": "2026-10-27",
    "poster": "/assets/girardota-2026/funeral-siniestro.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "pais_heredado": "Colombia",
+   "_heredado": {
+    "pais_heredado": "catálogo w_R4K05K01ZE2M (girardota-2026)"
+   }
   },
   "La mansión de Araucaima": {
    "tmdb_id": 327176,
@@ -764,7 +960,11 @@
    "_director": "Carlos Mayolo",
    "_sondeado": "2026-09-27",
    "poster": "/assets/girardota-2026/la-mansion-de-araucaima.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "pais_heredado": "Colombia",
+   "_heredado": {
+    "pais_heredado": "catálogo w_R4HA3VAZEWQ3 (ficcali-2026, girardota-2026)"
+   }
   },
   "La otra forma": {
    "tmdb_id": 970589,
@@ -783,7 +983,11 @@
    "_director": "Diego Felipe Guzmán",
    "_sondeado": "2026-09-27",
    "poster": "/assets/girardota-2026/la-otra-forma.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "pais_heredado": "Brasil, Colombia",
+   "_heredado": {
+    "pais_heredado": "catálogo w_R4JYR7GAW6CP (girardota-2026)"
+   }
   },
   "La salsa vive": {
    "tmdb_id": 1422107,
@@ -802,7 +1006,11 @@
    "_director": "Juan Carvajal",
    "_sondeado": "2026-09-27",
    "poster": "/assets/girardota-2026/la-salsa-vive.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "pais_heredado": "Colombia, Estados Unidos",
+   "_heredado": {
+    "pais_heredado": "catálogo w_R4K2YRTDF1KJ (girardota-2026)"
+   }
   },
   "Llueve sobre Babel": {
    "tmdb_id": 1388977,
@@ -821,7 +1029,11 @@
    "_director": "Gala del Sol",
    "_sondeado": "2026-09-27",
    "poster": "/assets/girardota-2026/llueve-sobre-babel.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "pais_heredado": "Colombia, Estados Unidos, España",
+   "_heredado": {
+    "pais_heredado": "catálogo w_R4J1NQYSTW0Z (ficma-2026, girardota-2026, narrarelfuturo-2026, villadelcine-2026)"
+   }
   },
   "Los Años del Conejo": {
    "tmdb_id": 1617929,
@@ -857,7 +1069,48 @@
     }
    ],
    "poster": "/assets/girardota-2026/los-anos-del-conejo.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "pais_heredado": "Colombia",
+   "_heredado": {
+    "pais_heredado": "catálogo w_R4EN6JNPV8ZS (cineautopsia-2026, girardota-2026, jardin-2026)"
+   }
+  },
+  "Maleza": {
+   "tmdb_id": 1791678,
+   "titulo_original": "Maleza",
+   "poster_path": "/ew96qwtwTRIqw8uePNlkueztbB3.jpg",
+   "synopsis_es": "Alba, una sanadora y partera solitaria, ha dedicado su existencia a preservar la vida. Guiada por el espíritu de su gato, recibe una noche a una joven desesperada cuya petición sacude sus convicciones. Entre dolor y silencios, deberá comprender que acompañar también significa permitir que cada quien elija su propio camino.",
+   "synopsis_en": "",
+   "genero": "Drama y Fantasía",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 11,
+   "pais_tmdb": "",
+   "lbSlug": "maleza-2026",
+   "_verificado": "el tmdb_id con que ya la publicamos en villadelcine-2026, y TMDB confirma la dirección",
+   "_director": "Nicolle Estrada Díaz",
+   "_sondeado": "2026-10-27",
+   "_ya_publicada": [
+    {
+     "festival": "villadelcine-2026",
+     "titulo": "Maleza",
+     "tmdb_id": 1791678,
+     "poster": "/assets/villadelcine-2026/maleza.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "maleza-2026",
+     "country": "Colombia",
+     "year": 2026,
+     "duration": "11 min",
+     "genre": "Drama y Fantasía",
+     "sinopsis": "Alba, una sanadora y partera solitaria, ha dedicado su existencia a preservar la vida. Guiada por el espíritu de su gato, recibe una noche a una joven desesperada cuya petición sacude sus convicciones. Entre dolor y silencios, deberá comprender que acompañar también significa permitir que cada quien elija su propio camino."
+    }
+   ],
+   "poster": "/assets/girardota-2026/maleza.jpg",
+   "posterSource": "tmdb",
+   "_heredado": {
+    "genero": "catálogo w_R4K253HAQJA6 (girardota-2026, villadelcine-2026)",
+    "pais_heredado": "catálogo w_R4K253HAQJA6 (girardota-2026, villadelcine-2026)"
+   },
+   "pais_heredado": "Colombia"
   },
   "Maricones": {
    "tmdb_id": 1756766,
@@ -893,7 +1146,11 @@
    "_director": "Jefferson Cardoza",
    "_sondeado": "2026-09-30",
    "poster": "/assets/girardota-2026/paloquemao.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "pais_heredado": "Colombia",
+   "_heredado": {
+    "pais_heredado": "catálogo w_R4JZ1M1N92BF (girardota-2026)"
+   }
   },
   "Pura Sangre": {
    "tmdb_id": 134245,
@@ -912,7 +1169,11 @@
    "_director": "Luis Ospina",
    "_sondeado": "2026-09-27",
    "poster": "/assets/girardota-2026/pura-sangre.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "pais_heredado": "Colombia",
+   "_heredado": {
+    "pais_heredado": "catálogo w_R4GFC0AMPBK7 (fantasmagoria-2026, girardota-2026)"
+   }
   },
   "Refracción": {
    "tmdb_id": 1584776,
@@ -965,13 +1226,16 @@
     }
    ],
    "poster": "/assets/girardota-2026/refraccion.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "pais_heredado": "Colombia",
+   "_heredado": {
+    "pais_heredado": "catálogo w_R4F8T5DKXC9W (cinemancia-2026, ficica-2026, ficmontanas-2026, girardota-2026, jardin-2026, miradas-2026, narrarelfuturo-2026)"
+   }
   },
   "Sirenas en la Niebla": {
    "tmdb_id": 1117116,
    "titulo_original": "Sirenas en la Niebla",
    "poster_path": "/6f1RhvLNmsxvmwOM7qhxAJMebMv.jpg",
-   "synopsis_es": "",
    "synopsis_en": "Mariela will fight against the belief of the people that a mermaid is leading to young people, discovering the true monster on her journey.",
    "genero": "Drama",
    "anio_tmdb": 0,
@@ -984,13 +1248,18 @@
    "_director": "Daniela Narváez",
    "_sondeado": "2026-09-30",
    "poster": "/assets/girardota-2026/sirenas-en-la-niebla.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "synopsis_es": "Mariela se enfrenta a la creencia del pueblo de que una sirena se está llevando a los jóvenes y, en el camino, descubre al verdadero monstruo.",
+   "_heredado": {
+    "synopsis_es": "catálogo w_R4H2427MQ120 (ficcali-2026, girardota-2026)",
+    "pais_heredado": "catálogo w_R4H2427MQ120 (ficcali-2026, girardota-2026)"
+   },
+   "pais_heredado": "Colombia"
   }
  },
  "sin_ficha": [
   "Armonía de la Entropía",
   "Bajo el Último Aliento",
-  "Competencia oficial de cortometrajes",
   "De lo Oculto",
   "Deus Ex Necro Machina",
   "Elementales",
@@ -1001,9 +1270,7 @@
   "La Rata",
   "La Rebelión de un Fantasma",
   "Maldito Sentimiento",
-  "Maleza",
   "Mantener la Democracia Maestro",
-  "Muestra de cortometrajes: Fantasía tropical",
   "Muestra de cortos Girardotanos",
   "PARE",
   "Selección de Cortometrajes fantásticos para toda la familia",
@@ -1012,89 +1279,77 @@
  "_sin_ficha_sondeo": {
   "Armonía de la Entropía": {
    "director": "Alexander Ladino Giraldo",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-27"
   },
   "Bajo el Último Aliento": {
    "director": "Pedro Valencia",
-   "fecha": "2026-10-07"
-  },
-  "Competencia oficial de cortometrajes": {
-   "director": "",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-27"
   },
   "De lo Oculto": {
    "director": "Daniel Rúa",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-27"
   },
   "Deus Ex Necro Machina": {
    "director": "Mateo Montoya Correa",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-27"
   },
   "Elementales": {
    "director": "Camilo Botero Jaramillo",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-27"
   },
   "En Todo y en Nada": {
    "director": "Raquel Zapata Ospina",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-27"
   },
   "Hambre": {
    "director": "Manuela Bedoya Carvajal",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-27"
   },
   "Hábitat Venus": {
    "director": "Sofía Rueda Férez",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-27"
   },
   "Idilio": {
    "director": "Andrés Felipe Giraldo Guisao",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-27"
   },
   "La Rata": {
    "director": "Santiago Londoño Vélez",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-27"
   },
   "La Rebelión de un Fantasma": {
    "director": "Flora Rodríguez",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-27"
   },
   "Maldito Sentimiento": {
    "director": "Leidy Vanegas Bolemos",
-   "fecha": "2026-10-07"
-  },
-  "Maleza": {
-   "director": "Nicolle Estrada Díaz",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-27"
   },
   "Mantener la Democracia Maestro": {
    "director": "Jhon Fredy Machado Tuberquia",
-   "fecha": "2026-10-07"
-  },
-  "Muestra de cortometrajes: Fantasía tropical": {
-   "director": "",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-27"
   },
   "Muestra de cortos Girardotanos": {
    "director": "",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-27"
   },
   "PARE": {
    "director": "Santiago Salazar Quintana",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-27"
   },
   "Selección de Cortometrajes fantásticos para toda la familia": {
    "director": "",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-27"
   },
   "Silencio en la Laguna": {
    "director": "Álvaro Jiménez Garzón, Julián Montenegro",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-27"
   }
  },
  "_fuentes": [
   {
    "fuente": "proimagenescolombia.com — la base oficial del cine colombiano",
-   "capturado": "2026-10-07",
+   "capturado": "2026-10-27",
    "que_aporta": "país, año, duración, género, sinopsis y afiche de las obras que TMDB no registra",
    "metodo": "búsqueda por título en los catálogos de largos y cortos, y el MISMO candado del director que TMDB: el buscador es laxo y también mira dentro de la sinopsis"
   }

@@ -1,0 +1,365 @@
+{
+ "_provenance": {
+  "fuente": "ids-legado.py: ids estables congelados desde lo publicado (docs/FUNCION.md §11.2)",
+  "capturado": "2026-10-18"
+ },
+ "funciones": {
+  "f_b503fb0586": {
+   "sede": "Casa de la Cultura - Pasto",
+   "dia": "2026-10-13",
+   "hora": "10:00",
+   "sala": "",
+   "titulo": "master class sobre direccion de cine"
+  },
+  "f_564146057b": {
+   "sede": "Universidad CESMAG - Pasto",
+   "dia": "2026-10-13",
+   "hora": "10:00",
+   "sala": "Auditorio Santa Clara",
+   "titulo": "conversatorio sobre la experiencia en cine y television"
+  },
+  "f_00b8c274b3": {
+   "sede": "Universidad Mariana - Pasto",
+   "dia": "2026-10-13",
+   "hora": "10:00",
+   "sala": "Auditorio Jesús de Nazareth",
+   "titulo": "master class desarrollar el carisma"
+  },
+  "f_d28ff8d333": {
+   "sede": "Casa de la Cultura - Pasto",
+   "dia": "2026-10-13",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "apertura de la exposicion narino como locacion cinematografica y vitrina de servicios audiovisuales"
+  },
+  "f_0337f6219a": {
+   "sede": "Cinemas Valle de Atriz - Pasto",
+   "dia": "2026-10-13",
+   "hora": "18:30",
+   "sala": "Sala 2",
+   "titulo": "lactar"
+  },
+  "f_5248f0837e": {
+   "sede": "Banco de la República - Pasto",
+   "dia": "2026-10-14",
+   "hora": "08:30",
+   "sala": "Sala Múltiple",
+   "titulo": "taller central videoclip branding"
+  },
+  "f_3adf236942": {
+   "sede": "Banco de la República - Pasto",
+   "dia": "2026-10-14",
+   "hora": "08:30",
+   "sala": "Sala Emi",
+   "titulo": "taller nuestro talento cine para no cineastas"
+  },
+  "f_5c0ed6333d": {
+   "sede": "Universidad Mariana - Pasto",
+   "dia": "2026-10-14",
+   "hora": "09:00",
+   "sala": "Auditorio San José",
+   "titulo": "conversatorio con maria jimena duzan y proyeccion de despues del frio"
+  },
+  "f_d07ab53e5d": {
+   "sede": "Banco de la República - Pasto",
+   "dia": "2026-10-14",
+   "hora": "15:00",
+   "sala": "Sala Múltiple",
+   "titulo": "cine comunitario en el encuentro de su propio relato"
+  },
+  "f_3b034e1d91": {
+   "sede": "Universidad CESMAG - Pasto",
+   "dia": "2026-10-14",
+   "hora": "15:00",
+   "sala": "Salón de Teatro",
+   "titulo": "cortos universitarios"
+  },
+  "f_5122aa6350": {
+   "sede": "Universidad CESMAG - Pasto",
+   "dia": "2026-10-14",
+   "hora": "15:00",
+   "sala": "Salón de Teatro",
+   "titulo": "seleccion churo cosmico identidades"
+  },
+  "f_6f426082bc": {
+   "sede": "Banco de la República - Pasto",
+   "dia": "2026-10-14",
+   "hora": "15:30",
+   "sala": "Sala Múltiple",
+   "titulo": "la imaginacion sintetica esteticas y posibilidades del cine con i a"
+  },
+  "f_46870a8257": {
+   "sede": "Banco de la República - Pasto",
+   "dia": "2026-10-14",
+   "hora": "16:00",
+   "sala": "Sala Múltiple",
+   "titulo": "el rio como victima del conflicto"
+  },
+  "f_a92a71a7b4": {
+   "sede": "Salón Comunal El Rosario, Jamondino - Pasto",
+   "dia": "2026-10-14",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "churo cosmico animacion y videoclip narinense"
+  },
+  "f_2c0b9c821d": {
+   "sede": "Banco de la República - Pasto",
+   "dia": "2026-10-14",
+   "hora": "16:30",
+   "sala": "Sala Múltiple",
+   "titulo": "aquello que sostiene una pelicula la produccion"
+  },
+  "f_2490a0ac31": {
+   "sede": "Teatro Colombia - Pasto",
+   "dia": "2026-10-14",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "cortos internacionales"
+  },
+  "f_3ddbe3a821": {
+   "sede": "Teatro Colombia - Pasto",
+   "dia": "2026-10-14",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "corrientes del amazonas"
+  },
+  "f_fe19896d17": {
+   "sede": "Parque Central de Chachagüí - Chachagüí",
+   "dia": "2026-10-14",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "animacion"
+  },
+  "f_1792f863dd": {
+   "sede": "Teatro Colombia - Pasto",
+   "dia": "2026-10-14",
+   "hora": "19:30",
+   "sala": "",
+   "titulo": "alla cartas al corazon"
+  },
+  "f_45ce7a7e93": {
+   "sede": "Banco de la República - Pasto",
+   "dia": "2026-10-15",
+   "hora": "08:30",
+   "sala": "Sala Múltiple",
+   "titulo": "taller nuestro talento vfx ia efectos visuales de bajo costo para el cine de lo real"
+  },
+  "f_6ef757ee36": {
+   "sede": "Fundación Universitaria San Martín, Sede Mijitayo - Pasto",
+   "dia": "2026-10-15",
+   "hora": "10:00",
+   "sala": "",
+   "titulo": "cine foro medio ambiente homo plastic"
+  },
+  "f_7aeb428c92": {
+   "sede": "Universidad Cooperativa de Colombia, Torobajo - Pasto",
+   "dia": "2026-10-15",
+   "hora": "10:00",
+   "sala": "Sala de Audiencias",
+   "titulo": "el cielo al reves"
+  },
+  "f_a2f8975aa6": {
+   "sede": "Casa de la Cultura - Pasto",
+   "dia": "2026-10-15",
+   "hora": "14:30",
+   "sala": "",
+   "titulo": "taller central direccion de actores para el cine de terror"
+  },
+  "f_5f1708cf4c": {
+   "sede": "Banco de la República - Pasto",
+   "dia": "2026-10-15",
+   "hora": "15:00",
+   "sala": "Sala Múltiple",
+   "titulo": "la imagen como documento historico"
+  },
+  "f_6a97cf7579": {
+   "sede": "Universidad CESMAG - Pasto",
+   "dia": "2026-10-15",
+   "hora": "15:00",
+   "sala": "Salón de Teatro",
+   "titulo": "kueka memoria ancestral"
+  },
+  "f_62ab75243b": {
+   "sede": "Banco de la República - Pasto",
+   "dia": "2026-10-15",
+   "hora": "15:30",
+   "sala": "Sala Múltiple",
+   "titulo": "del cine al click"
+  },
+  "f_f093f66193": {
+   "sede": "Banco de la República - Pasto",
+   "dia": "2026-10-15",
+   "hora": "16:00",
+   "sala": "Sala Múltiple",
+   "titulo": "mas alla de los tres actos"
+  },
+  "f_1cc79b8075": {
+   "sede": "Universidad Mariana - Pasto",
+   "dia": "2026-10-15",
+   "hora": "16:00",
+   "sala": "Sala Audiovisual Pedro Schumacher",
+   "titulo": "el perdon"
+  },
+  "f_c18a4be07e": {
+   "sede": "Universidad de Nariño, Sede Torobajo - Pasto",
+   "dia": "2026-10-15",
+   "hora": "16:00",
+   "sala": "Sala de Proyecciones Biblioteca",
+   "titulo": "cortos experimentales internacionales y colombianos"
+  },
+  "f_cbee3780c8": {
+   "sede": "Universidad de Nariño, Sede Torobajo - Pasto",
+   "dia": "2026-10-15",
+   "hora": "16:00",
+   "sala": "Sala de Proyecciones Biblioteca",
+   "titulo": "cortos universitarios"
+  },
+  "f_73368dc093": {
+   "sede": "Banco de la República - Pasto",
+   "dia": "2026-10-15",
+   "hora": "16:30",
+   "sala": "Sala Múltiple",
+   "titulo": "carnaval 100 anos legado vivo memoria y exploracion audiovisual"
+  },
+  "f_595f122409": {
+   "sede": "Casa Páramo - Pasto",
+   "dia": "2026-10-15",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "donde el sol brilla con fuerza"
+  },
+  "f_de0b2509c9": {
+   "sede": "Teatro Colombia - Pasto",
+   "dia": "2026-10-15",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "el huaquero"
+  },
+  "f_21afb4bba6": {
+   "sede": "Parque Principal de Yacuanquer - Yacuanquer",
+   "dia": "2026-10-15",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "cortos invitados de mexico"
+  },
+  "f_5226aaa188": {
+   "sede": "Teatro Colombia - Pasto",
+   "dia": "2026-10-15",
+   "hora": "19:30",
+   "sala": "",
+   "titulo": "sierra el album mortuorio"
+  },
+  "f_fe0c6dc4b8": {
+   "sede": "Banco de la República - Pasto",
+   "dia": "2026-10-16",
+   "hora": "08:30",
+   "sala": "Sala Múltiple",
+   "titulo": "taller nuestro talento galeras 2037 del plano al mundo jugable aaa aplicados al cine"
+  },
+  "f_64badbf5c9": {
+   "sede": "Casa de la Cultura - Pasto",
+   "dia": "2026-10-16",
+   "hora": "09:00",
+   "sala": "",
+   "titulo": "taller de musica para cine"
+  },
+  "f_3360e93131": {
+   "sede": "Banco de la República - Pasto",
+   "dia": "2026-10-16",
+   "hora": "10:00",
+   "sala": "Sala de Apoyo",
+   "titulo": "films in progress pitch de proyectos participantes"
+  },
+  "f_bbdebc6a03": {
+   "sede": "Universidad Mariana - Pasto",
+   "dia": "2026-10-16",
+   "hora": "10:00",
+   "sala": "Sala Audiovisual Pedro Schumacher",
+   "titulo": "el viento y todos los tiempos"
+  },
+  "f_723a95d005": {
+   "sede": "Banco de la República - Pasto",
+   "dia": "2026-10-16",
+   "hora": "15:00",
+   "sala": "Sala Múltiple",
+   "titulo": "foro de cine y pedagogia"
+  },
+  "f_5236744407": {
+   "sede": "Universidad Cooperativa de Colombia, Torobajo - Pasto",
+   "dia": "2026-10-16",
+   "hora": "15:00",
+   "sala": "Sala de Audiencias",
+   "titulo": "seleccion churo cosmico sociedad y libertades"
+  },
+  "f_8109d89b85": {
+   "sede": "Universidad Cooperativa de Colombia, Torobajo - Pasto",
+   "dia": "2026-10-16",
+   "hora": "15:00",
+   "sala": "Sala de Audiencias",
+   "titulo": "trabajo economias y futuro"
+  },
+  "f_3806e1131e": {
+   "sede": "Universidad de Nariño, Sede Torobajo - Pasto",
+   "dia": "2026-10-16",
+   "hora": "16:00",
+   "sala": "Sala de Proyecciones Biblioteca",
+   "titulo": "tierra palestina"
+  },
+  "f_36416aff70": {
+   "sede": "Banco de la República - Pasto",
+   "dia": "2026-10-16",
+   "hora": "16:30",
+   "sala": "Sala Múltiple",
+   "titulo": "encuentro internacional de produccion la circulacion en festivales de cine"
+  },
+  "f_a169610698": {
+   "sede": "Teatro Colombia - Pasto",
+   "dia": "2026-10-16",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "cortos colombianos de ficcion y documental"
+  },
+  "f_6b4cd27e8f": {
+   "sede": "Parque Principal de La Florida - La Florida",
+   "dia": "2026-10-16",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "churo cosmico animacion"
+  },
+  "f_f4173936e5": {
+   "sede": "Teatro Colombia - Pasto",
+   "dia": "2026-10-17",
+   "hora": "16:30",
+   "sala": "",
+   "titulo": "pacto de libertad"
+  },
+  "f_ee8d5b9d21": {
+   "sede": "Teatro Colombia - Pasto",
+   "dia": "2026-10-17",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "videoclips narinenses"
+  },
+  "f_afa43f5ed6": {
+   "sede": "Teatro Colombia - Pasto",
+   "dia": "2026-10-17",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "cortometraje narinense"
+  },
+  "f_090cef8f24": {
+   "sede": "Teatro Colombia - Pasto",
+   "dia": "2026-10-17",
+   "hora": "19:30",
+   "sala": "",
+   "titulo": "buscando a papa"
+  },
+  "f_09c7936691": {
+   "sede": "Teatro Colombia - Pasto",
+   "dia": "2026-10-17",
+   "hora": "20:00",
+   "sala": "",
+   "titulo": "ceremonia de premiacion y clausura"
+  }
+ }
+}

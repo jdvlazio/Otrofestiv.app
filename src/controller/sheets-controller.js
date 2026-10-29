@@ -8,7 +8,7 @@
 
 import {FESTIVAL_CONFIG, MAX_REMEMBERED_SLOTS, TMDB_IMG} from '../config.js';
 import { DAY_ABBR, DAY_NUM, ICONS, _secLabel, _sectionColor, escXML, festivalTagline, isFullDayBlocked, makeProgramPoster, makeSharedSlotSVG, parseProgramTitle, renderRatingStarsHTML } from '../view/components.js';
-import { _getItemPoster, _mkCortoItemHtml, _posterStyle, _posterThumb, dayLabel, emptyState, durFmt, flagFmt, getCortoItemPoster, getFilmPoster, getFilmPosterUntitled, getPosterSrc, itemPosterParts, posterAmbient, posterParts, sala, starsText, vcfg, venueCity, venueMatches, isCitySel, ticketBadgeTarget, conflictAccount, programParts, abiertaLabel, abiertaRango } from '../view/helpers.js';
+import { _getItemPoster, _mkCortoItemHtml, _posterStyle, _posterThumb, dayLabel, ventanaDias, emptyState, durFmt, flagFmt, getCortoItemPoster, getFilmPoster, getFilmPosterUntitled, getPosterSrc, itemPosterParts, posterAmbient, posterParts, sala, starsText, vcfg, venueCity, venueMatches, isCitySel, ticketBadgeTarget, conflictAccount, programParts, abiertaLabel, abiertaRango } from '../view/helpers.js';
 // countryToFlags vive en dominio (src/domain/banderas.js), junto a la tabla de
 // países GENERADA (scripts/generate-paises.js, ICU es+en). Aquí había un
 // literal escrito a mano y en pipeline/lib.py otro: divergieron en contenido y
@@ -16,7 +16,7 @@ import { _getItemPoster, _mkCortoItemHtml, _posterStyle, _posterThumb, dayLabel,
 // el dato. Se re-exporta para no mover a sus llamadores.
 import { countryToFlags } from '../domain/banderas.js';
 export { countryToFlags };
-import { closeAvSheet, closePVRating, closePrioLimit } from '../view/sheets.js';
+import { closeAvSheet, closePVRating, closePrioLimit, openAuthSheet } from '../view/sheets.js';
 import { showActionModal, showConflictModal, showToast, _toastArriba } from '../view/feedback.js';
 import { renderAgenda, renderAvBlocks, renderDiaryHTML } from '../view/agenda.js';
 import { runCalc } from './calc.js';
@@ -79,9 +79,17 @@ let _cortoParentHtml=null;
 const _PRESS_ICO=`<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V4a1 1 0 011-1h11a1 1 0 011 1v18"/><path d="M17 8h2a1 1 0 011 1v10a2 2 0 01-2 2H4"/><line x1="7" y1="7" x2="14" y2="7"/><line x1="7" y1="11" x2="14" y2="11"/><line x1="7" y1="15" x2="11" y2="15"/></svg>`;
 
 function _screeningRows(pairs, opts){
+  // Una abierta de VARIOS días es UNA fila: «22 oct – 13 nov · 8:00 a 17:00»
+  // (Juan, 21 oct 2026). Sus copias por día (expandVentanas) se cuentan una vez.
+  const _vVista=new Set();
+  pairs=pairs.filter(({s,owner})=>{
+    if(!s._ventana) return true;
+    const k=owner.title+'|'+s._ventana.desde+'|'+s.venue;
+    if(_vVista.has(k)) return false; _vVista.add(k); return true;
+  });
   return pairs.map(({s,owner})=>{
-    const dayAbb=dayLabel(s.day)||s.day;
-    const vc=vcfg(s.venue),sl=sala(s.venue);
+    const dayAbb=s._ventana?ventanaDias(s):(dayLabel(s.day)||s.day);
+    const vc=vcfg(s.venue),sl=sala(s);
     const _festCity=(FESTIVAL_CONFIG[_activeFestId]||{}).city||'';
     // sinCiudad: la ficha ya filtró por ciudad y la nombra arriba — acá sobra.
     const _city=(opts&&opts.sinCiudad)?'':(_festCity&&vc.city&&vc.city!==_festCity?vc.city:'');
@@ -116,8 +124,9 @@ function _screeningRows(pairs, opts){
     }
     return`<div class="pel-sheet-screening${_planned?' in-plan':''}${s._cancelled?' scr-void':''}"${isPast?' style="opacity:.4"':''}>
       ${_planned?`<span class="sr-only">${t('plan_en_tu_plan')}</span>`:''}
-      <span class="pelicula-day" data-day="${s.day}">${dayAbb}</span>
-      <span class="pelicula-time">${owner&&owner.info?abiertaRango(owner):s.time}</span>
+      ${s._ventana?`<span class="pelicula-ventana"><span class="pelicula-day">${dayAbb}</span><span class="pelicula-time">${abiertaRango(owner)}</span></span>`
+      :`<span class="pelicula-day" data-day="${s.day}">${dayAbb}</span>
+      <span class="pelicula-time">${owner&&owner.info?abiertaRango(owner):s.time}</span>`}
       <span class="pelicula-venue" data-venue="${s.venue.replace(/"/g,'&quot;')}" data-action="openVenueSheet">${ICONS.pin} <span class="venue-text">${vc.short}${sl?' · '+sl:''}${_city?`<span class="venue-municipio">${_city}</span>`:''}</span>${s.audience==='press'?`<span class="scr-press" aria-hidden="true">${_PRESS_ICO}</span><span class="sr-only">${t('press_badge')}</span>`:''}</span>
       ${_addCtrl}
     </div>`;
@@ -204,10 +213,10 @@ export function openPelSheet(title){
     const _fd1=JSON.stringify(f.film_list[0]).replace(/"/g,'&quot;');
     const _fd2=JSON.stringify(f.film_list[1]).replace(/"/g,'&quot;');
     const _c1=_sp1
-      ?`<img class="psp-card psp-front" src="${_sp1}" loading="lazy" onerror="this.remove()" alt="" data-action="openCombinedFilmSheet" data-film="${_fd1}">`
+      ?`<img class="psp-card psp-front" src="${_sp1}" loading="lazy" data-err="quitar" alt="" data-action="openCombinedFilmSheet" data-film="${_fd1}">`
       :`<img class="psp-card psp-front" src="${makeProgramPoster(state,f.film_list[0].title,f.film_list[0].duration||'',f.section||'')}" loading="lazy" alt="" data-action="openCombinedFilmSheet" data-film="${_fd1}">`;
     const _c2=_sp2
-      ?`<img class="psp-card psp-back" src="${_sp2}" loading="lazy" onerror="this.remove()" alt="" data-action="openCombinedFilmSheet" data-film="${_fd2}">`
+      ?`<img class="psp-card psp-back" src="${_sp2}" loading="lazy" data-err="quitar" alt="" data-action="openCombinedFilmSheet" data-film="${_fd2}">`
       :`<img class="psp-card psp-back" src="${makeProgramPoster(state,f.film_list[1].title,f.film_list[1].duration||'',f.section||'')}" loading="lazy" alt="" data-action="openCombinedFilmSheet" data-film="${_fd2}">`;
     posterHtml=`<div class="pel-sheet-poster-stage">${_c1}${_c2}</div>`;
   } else {
@@ -220,7 +229,7 @@ export function openPelSheet(title){
       // pasan tal cual (getFilmPosterUntitled solo toca data-URIs generativos).
       const _sheetSrc=posterSrc?getFilmPosterUntitled(f):null;
       posterHtml=_sheetSrc
-        ?`<img class="pel-sheet-poster"${_posterStyle(f)} src="${_sheetSrc}" data-title="${f.title.replace(/"/g,'&quot;')}" loading="lazy" onerror="_posterErr(this)" alt="">`
+        ?`<img class="pel-sheet-poster"${_posterStyle(f)} src="${_sheetSrc}" data-title="${f.title.replace(/"/g,'&quot;')}" loading="lazy" data-err="poster" alt="">`
         :`<div class="pel-sheet-poster-ph" aria-hidden="true">🎬</div>`;
     }
   }
@@ -392,7 +401,7 @@ export function openPelSheet(title){
     })()}
     ${(()=>{
       // Programa o actividad → DESCRIPCIÓN; obra → SINOPSIS (lib.separar_descripcion).
-      const _esDesc=f.type==='event'||!!f.event_kind||!!(f.film_list&&f.film_list.length);
+      const _esDesc=f.type==='event'||!!f.event_kind||!!(f.film_list&&f.film_list.length)||!!f.is_programa;  // …o un programa que aún no lista sus obras (FICICA)
       const _txt=_esDesc?locDescription(f):locSynopsis(f);
       if(!_txt) return '';
       return `    <div class="sec-hdr sm">${ICONS.text} <span>${_esDesc?t('label_descripcion'):t('label_sinopsis')}</span></div>
@@ -681,7 +690,7 @@ export function openCortoSheet(title, country, duration, section, flags, directo
   const posterHtml=_pp3.ed
     ?`<div class="psp-editorial poster-ed" style="--ed-accent:${_pp3.accent}">${_pp3.inner}</div>`
     :posterUrl
-      ?`<img class="pel-sheet-poster" src="${posterUrl}" data-title="${(title||"").replace(/"/g,'&quot;')}" loading="lazy" onerror="_cortoSheetPosterErr(this)" alt="">`
+      ?`<img class="pel-sheet-poster" src="${posterUrl}" data-title="${(title||"").replace(/"/g,'&quot;')}" loading="lazy" data-err="corto" alt="">`
       :`<img class="pel-sheet-poster" src="${makeProgramPoster(state,title,dur,section||'')||''}" alt="" loading="lazy">`;
   const ps=document.getElementById('pel-sheet');
   if(ps) ps.scrollTop=0;
@@ -784,7 +793,7 @@ export function _openCombinedFilmSheet(filmData){
   const posterHtml=_pp4.ed
     ?`<div class="psp-editorial poster-ed" style="--ed-accent:${_pp4.accent}">${_pp4.inner}</div>`
     :posterUrl
-      ?`<img class="pel-sheet-poster" src="${posterUrl}" data-title="${(title||"").replace(/"/g,'&quot;')}" loading="lazy" onerror="_cortoSheetPosterErr(this)" alt="">`
+      ?`<img class="pel-sheet-poster" src="${posterUrl}" data-title="${(title||"").replace(/"/g,'&quot;')}" loading="lazy" data-err="corto" alt="">`
       :`<div class="pel-sheet-poster-ph" aria-hidden="true">🎬</div>`;
   const metaLine=[director,year].filter(Boolean).join(' · ');
   const lbHref=lbUrlForFilm({title,lbSlug}); // guard de slugs incluido (marcador ⚠ jamás llega al href)
@@ -1029,7 +1038,7 @@ export function openPrioLimit(newTitle){
       const safeSwap=_ttl.replace(/"/g,'&quot;').replace(/'/g,"&#39;");
       const safeNew=newTitle.replace(/"/g,'&quot;').replace(/'/g,"&#39;");
       return`<div class="prio-limit-item">
-        ${poster?`<img class="prio-limit-thumb" src="${poster}" onerror="this.remove()" alt="" loading="lazy">`:'<div class="prio-limit-thumb"></div>'}
+        ${poster?`<img class="prio-limit-thumb" src="${poster}" data-err="quitar" alt="" loading="lazy">`:'<div class="prio-limit-thumb"></div>'}
         <div class="prio-limit-info">
           <div class="prio-limit-name">${dt}</div>
           <div class="prio-limit-when">${when}</div>
@@ -1096,10 +1105,18 @@ export function openPlanConfirm(schedule){
     masEl.style.display=rest>0?'':'none';
   }
 
+  // La invitación a la cuenta: solo sin sesión, una línea, en la hoja que ya se
+  // abre al guardar el Plan — el momento en que perderlo más importa.
+  const _cta=document.getElementById('plan-confirm-cuenta');
+  if(_cta){ _cta.style.display=_sbUser?'none':''; if(!_sbUser) _cta.textContent=t('invita_plan'); }
   const _pcSheet=document.getElementById('plan-confirm-sheet');
   if(_pcSheet){ _pcSheet.style.display=''; requestAnimationFrame(()=>_pcSheet.classList.add('open')); }
   document.getElementById('plan-confirm-overlay').classList.add('open');
 }
+
+// invitarCuenta — desde la hoja «¡Tu Plan está listo!»: se cierra yendo al Plan
+// y se abre la hoja de cuenta de siempre (sin flujo nuevo).
+export function invitarCuenta(){ closePlanConfirm(true); setTimeout(()=>openAuthSheet(),360); }
 
 export function closePlanConfirm(goToPlan){
   document.getElementById('plan-confirm-overlay').classList.remove('open');
@@ -1709,6 +1726,10 @@ function _avisosBand(f, opts){
   const _onl=_con('online');
   if(_onl.length){const _o=_onl[0], _tx=t('aviso_online',{plataforma:_o.stream_platform||''});
     rows.push([t('badge_online'), (/^https:\/\//.test(_o.stream_url||'')?`<a href="${_o.stream_url}" target="_blank" rel="noopener">${_tx}</a>`:_tx)+_cual(_onl)]);}
+  // INICIO: la función abre antes y la obra empieza después (Parapeto, BHFF).
+  // Solo informa: la card y el plan siguen con la hora de la función.
+  const _ini=_con('film_start');
+  if(_ini.length) rows.push([t('badge_inicio'), t('aviso_inicio',{hora:_ini[0].film_start})+_cual(_ini)]);
   // Precio: la ficha dice lo MISMO que la card — ticketBadgeTarget es el dueño
   // único de qué se marca (la minoría). Si la card de una función dice CON
   // BOLETA y su ficha dijera GRATIS, se contradirían.

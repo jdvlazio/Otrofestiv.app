@@ -8,16 +8,16 @@
 
 import { FESTIVAL_CONFIG } from '../config.js';
 import { _festDate, simNow } from '../domain/time.js';
-import { syncScheduleWithCatalog, verifyPlan } from '../domain/schedule.js';
+import { syncScheduleWithCatalog, verifyPlan, clavesMovidas } from '../domain/schedule.js';
 import { report } from '../telemetry.js';
-import { FESTIVAL_STATE, deriveHydrate, deriveCloudSave, deriveCloudApply, deriveCloudMerge } from '../state/festival-context.js';
+import { FESTIVAL_STATE, deriveHydrate, deriveCloudSave, deriveCloudApply, deriveCloudMerge, migrarTitulosAnteriores } from '../state/festival-context.js';
 import { closeAuthSheet, _esRevisionActiva } from '../view/sheets.js';
 import { showToast } from '../view/feedback.js';
 import { state } from '../state/state.js';
 import { storage } from '../storage/storage.js';
 import { t } from '../i18n/i18n.js';
 import { blockDuration, delayMinOf } from '../domain/film.js';
-import { posterModel } from '../view/helpers.js';
+import { posterModel, faltaBoleta, claveBoleta } from '../view/helpers.js';
 
 // Debounce timer de _cloudSave — module-local (solo _cloudSave lo usa).
 let _cloudSaveTimer=null;
@@ -34,6 +34,29 @@ let _planChannel=null, _planChannelKey=null, _planRerenderCb=null, _planLive=fal
 export function saveWL(){ storage.setWatchlist(watchlist); _cloudSave('watchlist'); }
 
 export function saveWatched(){ storage.setWatched(watched); _cloudSave('watched'); }
+export function saveWatchedMeta(){ storage.setWatchedMeta(watchedMeta); _cloudSave('watchedMeta'); }
+// sincronizarPlan — DUEÑO ÚNICO del «plan contra el catálogo vivo» (loader y
+// nube). Además del sync, si una función del plan cambió de título, día u hora
+// (el festival la movió y el plan la siguió por su código estable, 18 oct 2026)
+// lleva con ella su retraso y su boleta, que están atados a «título|día|hora».
+// Sin código no hay movidas: el sync deja la entrada intacta, como siempre.
+export function sincronizarPlan(films){
+  const antes=((state.get('savedAgenda')||{}).schedule)||[];
+  if(!antes.length) return;
+  const despues=syncScheduleWithCatalog(antes, films);
+  state.update('savedAgenda', a=>({...a, schedule: despues}));
+  const mov=clavesMovidas(antes, despues);
+  if(!mov.length) return;
+  const {filmDelays, ticketed}=state.snapshot();
+  let fd=null, tk=null;
+  mov.forEach(([v,n])=>{
+    if(filmDelays&&filmDelays[v]!=null&&filmDelays[n]==null){ fd=fd||{...filmDelays}; fd[n]=fd[v]; delete fd[v]; }
+    if(ticketed&&ticketed.has(v)&&!ticketed.has(n)){ tk=tk||new Set(ticketed); tk.delete(v); tk.add(n); }
+  });
+  if(fd){ state.set('filmDelays', fd); saveDelays(); }
+  if(tk){ state.set('ticketed', tk); saveTicketed(); }
+}
+export function saveTicketed(){ storage.setTicketed(ticketed); _cloudSave('ticketed'); _scheduleNotifications(); }
 export function saveNotWatched(){ storage.setNotWatched(notWatched); _cloudSave('notWatched'); }
 
 export function saveRating(title,rating){
@@ -83,6 +106,7 @@ export function saveState(...keys){
   if(all||keys.includes('wl'))      saveWL();
   if(all||keys.includes('watched')) saveWatched();
   if(all||keys.includes('notWatched')) saveNotWatched();
+  if(all||keys.includes('ticketed')) saveTicketed();
   if(all||keys.includes('prio'))    savePrio();
   if(all||keys.includes('agenda'))  saveSavedAgenda();
   if(all||keys.includes('av'))      saveAV();
@@ -254,15 +278,15 @@ export function _applyCloudRow(data, opts){
   // no-vacíos, con merge para ratings/availability). Mismo comportamiento previo.
   const _u=deriveCloudApply(data, whole);
   if(Object.keys(_u).length) state.batchUpdate(_u);
+  // La nube puede traer lo guardado bajo un título que el festival ya cambió.
+  if(FILMS&&FILMS.length) migrarTitulosAnteriores(FILMS);
   // El plan que llega de la nube es una copia congelada de OTRO momento (u otro
   // dispositivo con catálogo viejo). Se re-deriva contra el catálogo vivo — la
   // misma normalización del loader; ver syncScheduleWithCatalog. Solo si FILMS
   // ya existe (en boot temprano no hay catálogo todavía; el loader la corre después).
-  if(_u.savedAgenda&&_u.savedAgenda.schedule&&FILMS&&FILMS.length){
-    state.update('savedAgenda', a=>({...a, schedule: syncScheduleWithCatalog(a.schedule, FILMS)}));
-  }
+  if(_u.savedAgenda&&_u.savedAgenda.schedule&&FILMS&&FILMS.length) sincronizarPlan(FILMS);
   // Persistir en local (identidad de arrays/Sets vía globals bridgeados).
-  storage.setWatchlist(watchlist);storage.setWatched(watched);
+  storage.setWatchlist(watchlist);storage.setWatched(watched);storage.setWatchedMeta(watchedMeta);storage.setTicketed(ticketed);
   storage.setPrioritized(prioritized);storage.setSavedAgenda(savedAgenda);
   storage.setAvailability(availability);storage.setFilmRatings(filmRatings);
   storage.setCloudSyncedAt(data.updated_at||new Date().toISOString());
@@ -530,16 +554,73 @@ function _planAvisos(){
       // la siguiente = la primera del mismo día que empieza después de la salida
       const sig=sch.filter(x=>x!==s&&x.day===s.day).map(x=>({x,st:at(x.day,x.time)}))
         .filter(o=>o.st&&o.st>=sal).sort((a,b)=>a.st-b.st)[0];
-      if(sig) out.push({slot:_NOTIF_SLOT/2+i, title:t('aviso_salir'),
+      if(sig&&_NOTIF_SLOT/2+i<_SLOT_BOLETA0) out.push({slot:_NOTIF_SLOT/2+i, title:t('aviso_salir'),
         body:t('aviso_salir_body',{title:sig.x._title||'',h:sig.x.time,venue:sig.x.venue||''}), at:sal});
     }
   });
+  // «Tu festival» (#1055, F3): UN aviso al día siguiente del cierre, 10:00 hora
+  // del festival, que abre Mi Plan. Solo si habrá algo que contar: lo visto
+  // previsto (marcado ∪ Plan − «no la vi») > 0. Se recalcula con cada cambio,
+  // así que negar todo lo del Plan lo retira. Copy aprobado por Juan (9 oct).
+  const rec=_avisoRecap(now);
+  if(rec) out.push(rec);
+  out.push(..._avisosBoleta(now));
   return out;
+}
+
+const _SLOT_RECAP=_NOTIF_SLOT-1;   // último del bloque del festival; las salidas no lo pisan
+// Boleta (#1077): un aviso por día del festival, en los 12 slots antes del recap
+// (las salidas se cortan en _SLOT_BOLETA0; un festival de más de 12 días deja
+// sin víspera a los últimos, y se cuenta en el comentario y no en silencio).
+const _DIAS_BOLETA=12, _SLOT_BOLETA0=_SLOT_RECAP-_DIAS_BOLETA;
+
+// _avisosBoleta — la víspera de cada día, 20:00 hora del festival: «2 funciones
+// de mañana sin boleta» y los títulos. Solo pagas, sin marcar y vivas
+// (faltaBoleta, el mismo dueño que la banda de Mi Plan). Se recalcula con cada
+// cambio: marcar la última retira el aviso. Copy aprobado por Juan (#1077).
+function _avisosBoleta(now){
+  const out=[], sch=(savedAgenda&&savedAgenda.schedule)||[];
+  const dias=Object.keys(FESTIVAL_DATES||{}).filter(k=>FESTIVAL_DATES[k]).sort((a,b)=>FESTIVAL_DATES[a].localeCompare(FESTIVAL_DATES[b]));
+  const films=(typeof FILMS!=='undefined'?FILMS:[]);
+  dias.slice(0,_DIAS_BOLETA).forEach((k,idx)=>{
+    const vistos=new Set();
+    const faltan=sch.filter(s=>{ if(s.day!==k) return false; const c=claveBoleta(s); if(vistos.has(c)) return false; vistos.add(c);
+      return faltaBoleta(s, films.find(f=>f.title===s._title&&f.day===s.day&&f.time===s.time)||films.find(f=>f.title===s._title)); });
+    if(!faltan.length) return;
+    // la víspera, sin pasar por zonas: aritmética sobre la fecha del festival
+    const [y,m,dd]=FESTIVAL_DATES[k].split('-').map(Number), ant=new Date(Date.UTC(y,m-1,dd-1));
+    const p2=n=>String(n).padStart(2,'0');
+    const at=_festDate(`${ant.getUTCFullYear()}-${p2(ant.getUTCMonth()+1)}-${p2(ant.getUTCDate())}`,'20:00');
+    if(isNaN(at.getTime())||at.getTime()<=now) return;
+    const tit=faltan.map(s=>s._title||'');
+    const cuerpo=tit.length<=3
+      ? (tit.length===1?tit[0]:`${tit.slice(0,-1).join(', ')} ${t('misc_y')} ${tit[tit.length-1]}`)
+      : `${tit.slice(0,2).join(', ')} ${t('misc_y')} ${t('aviso_boleta_mas',{k:tit.length-2})}`;
+    out.push({slot:_SLOT_BOLETA0+idx, title:faltan.length===1?t('aviso_boleta_1'):t('aviso_boleta_n',{n:faltan.length}),
+      body:cuerpo+'.', at, abrir:'miplan', filtro:'sinboleta', dia:k});
+  });
+  return out;
+}
+function _avisoRecap(now){
+  const dias=Object.values(FESTIVAL_DATES||{}).filter(Boolean).sort();
+  const ultimo=dias[dias.length-1]; if(!ultimo) return null;
+  const sch=(savedAgenda&&savedAgenda.schedule)||[];
+  const previstas=new Set([...watched, ...sch.map(s=>s._title).filter(Boolean)]);
+  notWatched.forEach(x=>previstas.delete(x));
+  if(!previstas.size) return null;
+  // El día siguiente sin pasar por zonas: aritmética sobre la fecha del festival.
+  const [y,m,dd]=ultimo.split('-').map(Number), sig=new Date(Date.UTC(y,m-1,dd+1));
+  const p2=n=>String(n).padStart(2,'0');
+  const at=_festDate(`${sig.getUTCFullYear()}-${p2(sig.getUTCMonth()+1)}-${p2(sig.getUTCDate())}`,'10:00');
+  if(isNaN(at.getTime())||at.getTime()<=now) return null;
+  const nombre=(FESTIVAL_CONFIG[_activeFestId]||{}).name||'';
+  return {slot:_SLOT_RECAP, title:t('aviso_recap'), body:t('aviso_recap_body',{festival:nombre}), at, abrir:'miplan'};
 }
 
 // ── Live Activity del iPhone (fase 1, aprobada por Juan el 28 sep 2026) ──────
 // DUEÑO ÚNICO de «qué función va en la tarjeta»: la que está EN CURSO o, si no hay,
-// la próxima del festival activo que empiece dentro de 2 h. Horas REALES (con el
+// la próxima del festival activo que empiece dentro de 1 h (Juan, 14 oct 2026:
+// 2 h ocupaba la pantalla mientras veías otra cosa; Apple pide que aparezca cuando se espera). Horas REALES (con el
 // retraso marcado): las mismas cuentas que Mi Plan y el reloj, así que nunca se
 // contradicen. Sin función → item null y el iPhone cierra la tarjeta.
 // Solo existe en el wrapper de iOS (messageHandler «liveActivity»); en el resto no hace nada.
@@ -553,7 +634,7 @@ export function _planLiveActivity(){
     const dl=delayMinOf(s);
     const start=st0.getTime()+dl*60000;
     const end=start+(blockDuration(s)||90)*60000;
-    if(end<=now||start-now>2*3600*1000) continue;
+    if(end<=now||start-now>3600*1000) continue;
     cands.push({s,start,end,dl,st0:st0.getTime()});
   }
   cands.sort((a,b)=>a.start-b.start);
@@ -583,7 +664,7 @@ async function _scheduleNotifications(){
   const _wk=window.webkit?.messageHandlers?.notifications;
   if(_wk){
     try{
-      _wk.postMessage({festival:_activeFestId||'', avisos:_planAvisos().map(a=>({id:String(a.slot),title:a.title,body:a.body,at:a.at.getTime()}))});
+      _wk.postMessage({festival:_activeFestId||'', avisos:_planAvisos().map(a=>({id:String(a.slot),title:a.title,body:a.body,at:a.at.getTime(),...(a.abrir?{abrir:a.abrir}:{}),...(a.filtro?{filtro:a.filtro,dia:a.dia}:{})}))});
     }catch(e){console.warn('Notifications (iOS) error:',e);}
     return;
   }
@@ -595,11 +676,11 @@ async function _scheduleNotifications(){
     if(perm.display!=='granted') return;
     // Cancelar solo los recordatorios de ESTE festival (no los del otro simultáneo)
     await _cancelNotifications();
-    if(!savedAgenda?.schedule?.length) return;
+    if(!savedAgenda?.schedule?.length&&!watched.size) return;
     const _base=_notifBase(_activeFestId);
     const notifications=_planAvisos().map(a=>({
       id:_base+a.slot, title:a.title, body:a.body,
-      schedule:{at:a.at,allowWhileIdle:true}, sound:null, extra:null
+      schedule:{at:a.at,allowWhileIdle:true}, sound:null, extra:a.abrir?{abrir:a.abrir,...(a.filtro?{filtro:a.filtro,dia:a.dia}:{})}:null
     }));
     if(notifications.length){
       await LocalNotifications.schedule({notifications});

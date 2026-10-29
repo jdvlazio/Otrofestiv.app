@@ -1,0 +1,39 @@
+{
+ "id": "w_R4F9ZXPCPDDS",
+ "titulo_original": "Obreras saliendo de la fábrica",
+ "anio": 2005,
+ "paises": [
+  "CL"
+ ],
+ "directores": [
+  "José Luis Torres Leiva"
+ ],
+ "aliases": [
+  {
+   "titulo": "Women Workers Leaving the Factory",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "Es un día arduo en el trabajo. Un grupo de mujeres termina la jornada, sin embargo, la salida no es solo el fin de la jornada, es el inicio a un viaje, un día de vacaciones.",
+  "en": "An atmospheric portrait of four women who leave the factory where they work to go to the beach."
+ },
+ "afiche": {
+  "archivo": "/assets/cinemancia/obreras-saliendo-de-la-fabrica.jpg",
+  "veredicto": "fotograma"
+ },
+ "xref": {
+  "tmdb": 182746,
+  "letterboxd": "women-workers-leaving-the-factory"
+ },
+ "versiones": [
+  {
+   "etiqueta": "21 min",
+   "duracion_min": 21
+  }
+ ],
+ "presentaciones": [
+  "cinemancia-2026"
+ ]
+}

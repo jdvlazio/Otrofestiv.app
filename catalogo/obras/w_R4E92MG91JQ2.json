@@ -1,0 +1,49 @@
+{
+ "id": "w_R4E92MG91JQ2",
+ "titulo_original": "Los Nuevos",
+ "anio": 2026,
+ "paises": [
+  "MX",
+  "ES"
+ ],
+ "directores": [
+  "Rodrigo Plá"
+ ],
+ "aliases": [
+  {
+   "titulo": "Los nuevos",
+   "tipo": "festival"
+  },
+  {
+   "titulo": "The Newcomers",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "Al pueblo de Mateo y Tomás llegan Tiana y su familia buscando refugio. Sin embargo, la contaminación de la que huían alcanzará también este sitio. Los tres niños y la perra Nube, correrán aventuras y peligros en busca de aquello que envenena los ríos.",
+  "en": "Three tweens investigate what is poisoning their village's rivers. Mateo narrates as he, his brother Tomas, refugee Tiana, and her dog Nube embark on an adventure to uncover the source of pollution."
+ },
+ "generos": [
+  "Familiar",
+  "Ficción"
+ ],
+ "afiche": {
+  "archivo": "/assets/biff-2026/los-nuevos.jpg",
+  "veredicto": "oficial"
+ },
+ "xref": {
+  "tmdb": 1735053,
+  "letterboxd": "the-newcomers-2026"
+ },
+ "versiones": [
+  {
+   "etiqueta": "79 min",
+   "duracion_min": 79
+  }
+ ],
+ "presentaciones": [
+  "biff-2026",
+  "miradas-2026"
+ ]
+}

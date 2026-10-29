@@ -1,0 +1,42 @@
+{
+ "id": "w_R4KSBB102NB2",
+ "titulo_original": "Buenos días, Wiracocha",
+ "anio": 2025,
+ "paises": [
+  "PE"
+ ],
+ "directores": [
+  "Mauricio Godoy"
+ ],
+ "aliases": [
+  {
+   "titulo": "Good Morning, Wiraqocha",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "Hace 50 años se filmó la lucha por las tierras en diversas comunidades campesinas del Cusco. Un grupo de cineastas trae estas imágenes de vuelta a la provincia de Paucartambo (Cusco), y les propone a los pobladores de la zona representar su memoria comunitaria a través de la creación de una nueva película.",
+  "en": "Fifty years ago, the struggle for the lands in rural communities of Cuzco was filmed. A group of filmmakers brought these images back to the province of Paucartambo (Cuzco) and proposed to the villagers of the area to build a community memory through the creation of a new film."
+ },
+ "generos": [
+  "Documental"
+ ],
+ "afiche": {
+  "archivo": "/assets/midbo-2026/buenos-dias-wiracocha.jpg",
+  "veredicto": "oficial"
+ },
+ "xref": {
+  "tmdb": 1517473,
+  "letterboxd": "good-morning-wiraqocha"
+ },
+ "versiones": [
+  {
+   "etiqueta": "83 min",
+   "duracion_min": 83
+  }
+ ],
+ "presentaciones": [
+  "midbo-2026"
+ ]
+}

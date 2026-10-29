@@ -16,7 +16,7 @@ const VENUES = {
 };
 function load() {
   return loadDomain({
-    functions: ['_resolveVenue', 'vcfg', 'venueMatches', 'venueSelLabel'],
+    functions: ['_resolveVenue', 'vcfg', '_satelites', 'filterCity', 'venueMatches', 'venueSelLabel'],
     globals: { FESTIVAL_CONFIG: { f: { venues: VENUES } }, _activeFestId: 'f',
                SEDE_SEP: String.fromCharCode(31) },
   });
@@ -71,7 +71,7 @@ const CHOQUE = {
 };
 function loadChoque() {
   return loadDomain({
-    functions: ['_resolveVenue', 'vcfg', 'venueMatches', 'venueSelLabel'],
+    functions: ['_resolveVenue', 'vcfg', '_satelites', 'filterCity', 'venueMatches', 'venueSelLabel'],
     globals: { FESTIVAL_CONFIG: { f: { venues: CHOQUE } }, _activeFestId: 'f',
                SEDE_SEP: String.fromCharCode(31) },
   });
@@ -115,4 +115,42 @@ test('venueSelLabel muestra la sede, no el centinela', () => {
   assert.strictEqual(venueSelLabel(sede('Bogota', 'Cinema Local')), 'Cinema Local');
   assert.strictEqual(venueSelLabel('city:Bogota'), 'Bogota');
   assert.strictEqual(venueSelLabel('Cine Tonala'), 'Cine Tonala');
+});
+
+// ── Municipios satélite (13 oct 2026, FICPA) ──────────────────────────────────
+// 1 sola función y < 50 km de la ciudad principal → se integra a ella para
+// filtrar y agrupar. Datos con la forma real de FICPA (Pasto + 3 municipios a
+// 16–18 km con 1 función cada uno) y un control lejano tipo FICDEH.
+function loadSat(films, venues) {
+  return loadDomain({
+    functions: ['_resolveVenue', 'vcfg', '_satelites', 'filterCity', 'venueMatches', 'festivalCities'],
+    globals: { FESTIVAL_CONFIG: { p: { venues } }, _activeFestId: 'p', FILMS: films,
+               SEDE_SEP: String.fromCharCode(31) },
+  });
+}
+const PV = {
+  'Teatro Pasto':  { short: 'Teatro Pasto', city: 'Pasto',     lat: 1.2136, lng: -77.2811 },
+  'Parque Chacha': { short: 'Parque Chacha', city: 'Chachagüí', lat: 1.3570, lng: -77.2830 },
+  'Teatro Lejos':  { short: 'Teatro Lejos', city: 'Cali',      lat: 3.4516, lng: -76.5320 },
+};
+const fn = (venue, n) => Array.from({ length: n }, (_, i) => ({ title: venue + i, venue, day: '2026-10-14' }));
+
+test('satélite: municipio con 1 función a 16 km se integra a la principal', () => {
+  const { festivalCities, filterCity, venueMatches } = loadSat([...fn('Teatro Pasto', 48), ...fn('Parque Chacha', 1)], PV);
+  assert.deepStrictEqual(festivalCities([...fn('Teatro Pasto', 48), ...fn('Parque Chacha', 1)]).map(c => c.name), ['Pasto']);
+  assert.strictEqual(filterCity('Parque Chacha'), 'Pasto');
+  assert.strictEqual(venueMatches('Parque Chacha', 'city:Pasto'), true);
+});
+
+test('satélite: con 2 funciones sigue siendo ciudad aparte (Cinemancia)', () => {
+  const films = [...fn('Teatro Pasto', 48), ...fn('Parque Chacha', 2)];
+  const { festivalCities } = loadSat(films, PV);
+  assert.deepStrictEqual(festivalCities(films).map(c => c.name), ['Pasto', 'Chachagüí']);
+});
+
+test('satélite: lejos (≥ 50 km) sigue siendo ciudad aparte aunque tenga 1 función', () => {
+  const films = [...fn('Teatro Pasto', 48), ...fn('Teatro Lejos', 1)];
+  const { festivalCities, filterCity } = loadSat(films, PV);
+  assert.deepStrictEqual(festivalCities(films).map(c => c.name), ['Pasto', 'Cali']);
+  assert.strictEqual(filterCity('Teatro Lejos'), 'Cali');
 });

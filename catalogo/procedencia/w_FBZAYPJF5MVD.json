@@ -1,0 +1,22 @@
+{
+ "titulo_original": {
+  "fuente": "festival:anibia-2026,ficcali-2026",
+  "regla": "el título que más festivales imprimen"
+ },
+ "directores": {
+  "fuente": "tmdb:784163",
+  "regla": "tmdb-manda"
+ },
+ "anio": {
+  "fuente": "tmdb:784163",
+  "regla": "tmdb-manda"
+ },
+ "paises": {
+  "fuente": "festival",
+  "regla": "pais-union"
+ },
+ "generos": {
+  "fuente": "festival",
+  "regla": "todos los publicados, del más al menos frecuente"
+ }
+}

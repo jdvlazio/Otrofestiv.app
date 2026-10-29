@@ -216,9 +216,13 @@ if sched_start == -1:
 else:
     sched_end = _sched_hay.find('];', sched_start)
     sched_block = _sched_hay[sched_start:sched_end]
-    fn_names = re.findall(r"'(\w+)'", sched_block)
+    # REFERENCIAS desde el 26 oct (sin eval, CSP); nombres entre comillas antes
+    _blk = re.sub(r'/\*.*?\*/|//[^\n]*', '', sched_block[sched_block.find('[') + 1:], flags=re.S)
+    fn_names = re.findall(r"\b([A-Za-z_$][\w$]*)\b", _blk)
+    if len(fn_names) < 10:
+        fail(check, f'_SCHED_PURE_FNS leída con {len(fn_names)} funciones: el parser no la entiende (guardián ciego)')
     # p8 Step 5: las pure fns se movieron a src/domain/*.js (import en main.js). El
-    # worker las consume vía eval(name).toString() — el binding importado debe ser
+    # worker las consume vía fn.toString() — el binding importado debe ser
     # resoluble en main. Se buscan en content + módulos domain. `export function
     # NAME(` contiene `function NAME(`.
     _domain_src = ''
@@ -232,13 +236,14 @@ else:
         for f in missing_fns:
             fail(check, f"'{f}' en _SCHED_PURE_FNS pero no definida en main thread ni domain")
     # El hueco que este check NO veía (17 ago 2026): la fn existía en el dominio
-    # pero calc.js no la IMPORTABA. eval(name) del build del worker resuelve en el
+    # pero calc.js no la IMPORTABA. la lista del build del worker resuelve en el
     # scope del módulo → ReferenceError → el worker moría y TODO cálculo caía al
     # fallback síncrono, en silencio, con este guardián en verde. screeningPlannable
     # vivió así desde su extracción (16 ago) hasta el traspaso de Onboarding (17).
     # Cada nombre de la lista debe aparecer en un import de calc.js — salvo los
     # definidos worker-local (_venueFns) o dentro del propio calc.js.
-    _calc_imports = ' '.join(re.findall(r'import\s*\{([^}]*)\}', _calc_src))
+    # por NOMBRE, no por substring (un nombre contenido en otro pasaba; auditoría 26 oct)
+    _calc_imports = {x.strip().split(' as ')[-1] for _g in re.findall(r'import\s*\{([^}]*)\}', _calc_src) for x in _g.split(',') if x.strip()}
     _calc_local = set(re.findall(r'function (\w+)\(', _calc_src))
     _sin_import = [f for f in fn_names
                    if f not in _calc_imports and f not in _calc_local]
@@ -1757,6 +1762,9 @@ try:
             if not _fn.endswith('.js'): continue
             _fp = os.path.join(_root, _fn)
             if _fp.replace('\\', '/') == 'src/util/ready.js': continue  # la casa de los helpers
+            # sin-inline.js escucha 'load' EN CAPTURA para las <img data-load> (no la
+            # carga de la página): un evento de imagen, que ocurre siempre después (26 oct)
+            if _fp.replace('\\', '/') == 'src/controller/sin-inline.js': continue
             _txt = open(_fp, encoding='utf-8').read()
             for _m in _READY_RE.finditer(_txt):
                 _lstart = _txt.rfind('\n', 0, _m.start()) + 1
@@ -2499,29 +2507,33 @@ except Exception as _e:
     warn(check, f'no se pudo verificar festival-chooser-canon: {_e}')
 
 # ── [diary-poster-grid] el Diario compartible es un muro de afiches, no una lista ─
-# Decisión Juan 19 jul: shareDiary dibuja un GRID de pósters (cover-fit) con chip
-# de estrellas, no la lista tipográfica vieja. Requisitos que NO pueden desaparecer:
-# (1) resolver el afiche por obra (getCortoItemPoster) y film (getFilmPoster);
-# (2) dibujarlo (drawImage); (3) el tile generativo de fallback para pósters no
-# dibujables (CORS/CDN) vía _sectionColor — sin él, un afiche caído deja hueco negro.
+# Decisión Juan 19 jul: GRID de pósters con chip de estrellas. Desde #1066 (10 oct)
+# lo dibuja shareGrilla (story.js), carrusel 4:5 con el lenguaje de la historia;
+# shareDiary solo lo delega. Requisitos que NO pueden desaparecer:
+# (1) el afiche sale de sus dueños (_modeloAfiche → posterModel/itemPosterParts);
+# (2) se dibuja (_afiche); (3) respaldo generativo para lo no dibujable
+# (_cargarConRespaldo) — sin él, un afiche caído deja hueco; (4) mejor nota primero.
 check = 'diary-poster-grid'
 try:
     _sh = open('src/controller/share.js', encoding='utf-8').read()
-    _dia = _sh[_sh.find('function shareDiary'):_sh.find('function sharePlan')] if 'function shareDiary' in _sh else ''
+    _st = open('src/controller/story.js', encoding='utf-8').read()
+    _del = _sh[_sh.find('function shareDiary'):_sh.find('function sharePlan')] if 'function shareDiary' in _sh else ''
+    _dia = _st[_st.find('async function shareGrilla'):] if 'async function shareGrilla' in _st else ''
     _errs = []
-    if 'getCortoItemPoster' not in _dia or 'getFilmPoster' not in _dia:
-        _errs.append('no resuelve el afiche por obra/film (getCortoItemPoster/getFilmPoster)')
-    if 'drawImage' not in _dia:
-        _errs.append('no dibuja el póster (drawImage) — ¿regresó a la lista tipográfica?')
-    if '_sectionColor' not in _dia:
-        _errs.append('falta el tile generativo de fallback (_sectionColor) para afiches no dibujables')
-    # Orden por calificación desc (decisión de Juan): el muro va de la mejor nota a la peor.
-    if 'rows.sort' not in _dia:
-        _errs.append('el muro no ordena por calificación (rows.sort — mejor nota primero)')
+    if 'shareGrilla' not in _del:
+        _errs.append('shareDiary ya no delega en shareGrilla')
+    if '_modeloAfiche' not in _dia:
+        _errs.append('no resuelve el afiche por su dueño (_modeloAfiche)')
+    if '_afiche(' not in _dia:
+        _errs.append('no dibuja el póster (_afiche) — ¿regresó a la lista tipográfica?')
+    if '_cargarConRespaldo' not in _dia:
+        _errs.append('falta el respaldo generativo (_cargarConRespaldo) para afiches no dibujables')
+    if 'b.rating-a.rating' not in _dia:
+        _errs.append('el muro no ordena por calificación (mejor nota primero)')
     if _errs:
         fail(check, 'diario-grid roto: ' + '; '.join(_errs[:3]))
     else:
-        ok(check, 'Diario compartible = grid de afiches con fallback generativo')
+        ok(check, 'Diario compartible = carrusel de afiches con respaldo generativo')
 except Exception as _e:
     warn(check, f'no se pudo verificar diary-poster-grid: {_e}')
 
@@ -3461,7 +3473,9 @@ try:
     _sin = []
     for _pf, _marca in _puertas.items():
         _c = open(_pf, encoding='utf-8').read()
-        if _marca in _c and 'syncScheduleWithCatalog(' not in _c:
+        # 18 oct 2026: las dos puertas pasan por sincronizarPlan (persistence.js),
+        # dueño único del sync que además lleva retraso y boleta con la función movida.
+        if _marca in _c and 'syncScheduleWithCatalog(' not in _c and 'sincronizarPlan(' not in _c:
             _sin.append(_pf)
     if _sin:
         fail(check, 'puerta de hidratación del plan sin sync contra el catálogo: ' + '; '.join(_sin))
@@ -3481,8 +3495,10 @@ check = 'plan-write-chokepoint'
 try:
     import glob as _glob, re as _re
     # sitio permitido → nº exacto de escrituras directas esperadas
-    _allowed = {'src/controller/persistence.js': 2,  # commitPlan + puerta nube
-                'src/controller/loader.js': 1}       # puerta hydrate local
+    # 18 oct 2026: las dos puertas de hidratación (loader + nube) escriben por
+    # sincronizarPlan, en persistence.js → loader ya no escribe directo.
+    _allowed = {'src/controller/persistence.js': 2,  # commitPlan + sincronizarPlan
+                'src/controller/loader.js': 0}       # vía sincronizarPlan
     _off = []
     for _sf in _glob.glob('src/**/*.js', recursive=True):
         _n = _sf.replace('\\', '/')
@@ -4022,8 +4038,9 @@ try:
     #   flags        — derivado por countryToFlags; solo se llena si el derivado falla
     #   screenings   — forma intermedia del ensamblador (el loader lo explota)
     #   info, is_recurring, is_programa — legacy / casos que la doctrina cubre aparte
+    #   work_id      — lo pone publicar.py desde el catálogo, nunca el onboarding a mano
     _OMIT = {'tematica', 'qa_detail', 'flags', 'screenings', 'info', 'is_recurring',
-             'is_programa', 'date'}
+             'is_programa', 'date', 'work_id'}
     _tpl = _json.load(open('pipeline/festival-template.json', encoding='utf-8'))
     _tf = set(_tpl.keys())
     for _f in _tpl.get('films', []):
@@ -4093,7 +4110,17 @@ try:
     _ACTIVE = _festivalesVivos()   # derivado de las fechas, no escrito a mano
     # (festival, 'dia|hora|sede') REVISADOS contra el programa oficial y confirmados
     # como funciones SEPARADAS (p.ej. actividades paralelas en espacios distintos).
-    _SEPARATE = set()
+    _SEPARATE = {
+        # Guatapé Film Fest 2026 (18 oct): la lámina pone dos actividades distintas
+        # a la misma hora en el mismo lugar; son paralelas, no una función
+        ('guatape-2026', '2026-10-22|14:00|Museo Comunitario - Guatapé'),          # taller + conversatorio de actores
+        ('guatape-2026', '2026-10-23|14:00|Parque Educativo El Zócalo - Guatapé'),  # master class SENA + taller de actuación
+        ('guatape-2026', '2026-10-23|14:00|Parque Principal - Guatapé'),            # dos conversatorios
+        ('guatape-2026', '2026-10-24|14:00|Parque Educativo El Zócalo - Guatapé'),  # taller de actuación (2.ª jornada)
+        # Miradas 2026 (28 oct): la Cinemateca pone los dos laboratorios del Centro Ático
+        # a las 10:00 del sáb 7 en el laboratorio de la Cinemateca móvil; son dos talleres
+        ('miradas-2026', '2026-11-07|10:00|Parque de los Deseos - Medellín'),       # IA generativa + postproducción móvil
+    }
     _viol = []
     for _fname in _ACTIVE:
         try:
@@ -4104,7 +4131,11 @@ try:
             continue  # modelo declarado: el loader ancla estos grupos
         _slots = {}
         for _f in _fd.get('films', []):
-            if _f.get('info') or _f.get('is_cortos') or not (_f.get('day') and _f.get('time') and _f.get('venue')):
+            # Los Programas (is_cortos) CUENTAN: dos programas en la misma sala y
+            # hora son el mismo limbo (MIDBO 2026, 28 oct: «Espejos» partido en dos
+            # is_cortos porque la web rotuló un corto como Programa 2 y los otros
+            # como Programa 4; el guardián no lo vio porque los saltaba).
+            if _f.get('info') or not (_f.get('day') and _f.get('time') and _f.get('venue')):
                 continue
             _k = f"{_f['day']}|{_f['time']}|{_f['venue']}|{_f.get('sala','')}"
             _slots.setdefault(_k, []).append(_f.get('title', '?'))
@@ -4536,20 +4567,20 @@ try:
         # _buildPosterV16) y el dueño del color de sección. Entra a la lista con la
         # razón escrita, que es lo que este guardián pide, en vez de seguir
         # recortando comentarios que explican POR QUÉ el código es así.
-        'src/view/components.js': 1310,  # +7: claves y rótulos de los filtros Gratis y Con Q&A del desplegable de Sección (7 oct, Juan)  # antes 1303,  # +1: ícono `user` (Lucide) para el grupo Personas del buscador (7 oct)  # antes 1302,  # +14: «lanzamiento de libro», «show de danza», «acto», «fiesta» y «social al parque» entran al vocabulario de actividad en los DOS mapas (es/en) — son los rótulos que imprime la lámina del 9° Festival Audiovisual de Girardota, y sin entrada sus cards decían el genérico EVENTO (27 sep)  # antes 1288,  # +14: «conversatorio», «torneo», «visita guiada» y «evento» entran al vocabulario de actividad en los DOS mapas (es/en) — son las palabras que imprime la lámina de Itagüí 9, y sin entrada sus cards decían el genérico EVENTO, que es lo que [event-kind-conocido] existe para impedir (23 sep)  # antes 1274,  # +7: «clausura» entra al vocabulario de actividad — la ceremonia de cierre de Villa del Cine estaba marcada 'awards', que es el rótulo de los Award Screenings de TIFF (reproyecciones de premiadas) y sale en INGLÉS también en el mapa ES; las 5 líneas de comentario son ese porqué, que sin escribir se vuelve a escribir solo (19 sep)  # antes 1267,  # +42: hayBloqueos (dueño único de «¿hay restricción puesta?») y renderAvFilaHTML — la fila de entrada se pinta acá, junto a la lista, porque las dos son la MISMA superficie y con dos renders separados se desincronizaban (10 sep)  # antes 1225,  # +13: hayBloqueos — dueño único de «¿hay alguna restricción de tiempo puesta?»; la fila de entrada y el mensaje de «sin combinaciones» tienen que estar de acuerdo siempre (10 sep)  # antes 1225,  # +11: «apertura», «convite» y «experiencia» entran al vocabulario de actividad — SiembraFest 11 los nombra y sin entrada aquí sus cards decían EVENTO genérico (7 sep)  # antes 1226,  # +8: la banda de festival TRASLADADO (QAFF a Bogotá), hermana de la de aplazado y la de terminó (4 sep)  # antes 1204,  # +18: endedBannerHTML — la banda TERMINÓ, hermana de la de aplazado (4 sep)  # antes 1186,  # +18: el título de un evento no repite su TIPO (prefijo con separador + eco en medio) — 1 sep  # antes 1168,  # +2: «obras» sale de misc_peliculas, no de un literal — 1 sep  # antes 1166,  # +15: la Escalera escala a cualquier N (paso = fracción de la LÁMINA, no de la envolvente) + UID por póster (los clipPath fijos se pisaban entre sí en la grilla) — 26 ago  # antes 1151,  # +48: _buildPosterMini — la mini de 56px con marca determinista por obra (mejora 1 Apple Music) — 25 ago  # +20: el título tampoco repite el programa cuando el eco va al final (Cinemancia) — 24 ago  # +11: la pila reparte el presupuesto por uso real (el lazo del techo ahora SÍ vive) — 24 ago  # +2: el « + » de la pila sube a 0,6u (a 0,5u leía como suciedad, no como signo) — 24 ago  # +60: la pila de obras — un compuesto se apila, no se escribe como frase (mejora 1 de la auditoría de pósters) — 24 ago  # +10: makeProgramPoster con rótulo corto + suelo de sección 7 con su porqué — 24 ago  # +33: _seccionPartes + firma en el motor + sección a 2 líneas (regla de carga) — 24 ago  # +34: auditoría Forma A — luz por sección, título sin repetir la sección, _datoCompuesto — 24 ago  # +3: muere el badge EN REVISIÓN de la card (redundante con el divisor) — 23 ago  # +4: icono `award` de Lucide — la estrella ya significa calificación — 23 ago  # +5: el grupo de revisión NO se filtra al sheet «cambiar festival» — 23 ago  # +24: grupo «en revisión» en el riel — 23 ago  # +58: makeSharedSlotSVG — el póster de función compartida (Escalera mayor §6.0) — 21 ago  # +7: «foro» y «debate» entran al vocabulario (Cinemancia 2026) — 21 ago  # +24: _postponedElapsed — un aplazado baja a pasados cuando sus fechas anunciadas pasan — 23 ago
+        'src/view/components.js': 1321,  # +11: «concierto», «obra de títeres», «premiación» y «entrega» entran al vocabulario de actividad en los DOS mapas (es/en) — son los rótulos de la lámina del Guatapé Film Fest, y sin entrada sus cards decían el genérico EVENTO (18 oct)  # antes 1310,  # +7: claves y rótulos de los filtros Gratis y Con Q&A del desplegable de Sección (7 oct, Juan)  # antes 1303,  # +1: ícono `user` (Lucide) para el grupo Personas del buscador (7 oct)  # antes 1302,  # +14: «lanzamiento de libro», «show de danza», «acto», «fiesta» y «social al parque» entran al vocabulario de actividad en los DOS mapas (es/en) — son los rótulos que imprime la lámina del 9° Festival Audiovisual de Girardota, y sin entrada sus cards decían el genérico EVENTO (27 sep)  # antes 1288,  # +14: «conversatorio», «torneo», «visita guiada» y «evento» entran al vocabulario de actividad en los DOS mapas (es/en) — son las palabras que imprime la lámina de Itagüí 9, y sin entrada sus cards decían el genérico EVENTO, que es lo que [event-kind-conocido] existe para impedir (23 sep)  # antes 1274,  # +7: «clausura» entra al vocabulario de actividad — la ceremonia de cierre de Villa del Cine estaba marcada 'awards', que es el rótulo de los Award Screenings de TIFF (reproyecciones de premiadas) y sale en INGLÉS también en el mapa ES; las 5 líneas de comentario son ese porqué, que sin escribir se vuelve a escribir solo (19 sep)  # antes 1267,  # +42: hayBloqueos (dueño único de «¿hay restricción puesta?») y renderAvFilaHTML — la fila de entrada se pinta acá, junto a la lista, porque las dos son la MISMA superficie y con dos renders separados se desincronizaban (10 sep)  # antes 1225,  # +13: hayBloqueos — dueño único de «¿hay alguna restricción de tiempo puesta?»; la fila de entrada y el mensaje de «sin combinaciones» tienen que estar de acuerdo siempre (10 sep)  # antes 1225,  # +11: «apertura», «convite» y «experiencia» entran al vocabulario de actividad — SiembraFest 11 los nombra y sin entrada aquí sus cards decían EVENTO genérico (7 sep)  # antes 1226,  # +8: la banda de festival TRASLADADO (QAFF a Bogotá), hermana de la de aplazado y la de terminó (4 sep)  # antes 1204,  # +18: endedBannerHTML — la banda TERMINÓ, hermana de la de aplazado (4 sep)  # antes 1186,  # +18: el título de un evento no repite su TIPO (prefijo con separador + eco en medio) — 1 sep  # antes 1168,  # +2: «obras» sale de misc_peliculas, no de un literal — 1 sep  # antes 1166,  # +15: la Escalera escala a cualquier N (paso = fracción de la LÁMINA, no de la envolvente) + UID por póster (los clipPath fijos se pisaban entre sí en la grilla) — 26 ago  # antes 1151,  # +48: _buildPosterMini — la mini de 56px con marca determinista por obra (mejora 1 Apple Music) — 25 ago  # +20: el título tampoco repite el programa cuando el eco va al final (Cinemancia) — 24 ago  # +11: la pila reparte el presupuesto por uso real (el lazo del techo ahora SÍ vive) — 24 ago  # +2: el « + » de la pila sube a 0,6u (a 0,5u leía como suciedad, no como signo) — 24 ago  # +60: la pila de obras — un compuesto se apila, no se escribe como frase (mejora 1 de la auditoría de pósters) — 24 ago  # +10: makeProgramPoster con rótulo corto + suelo de sección 7 con su porqué — 24 ago  # +33: _seccionPartes + firma en el motor + sección a 2 líneas (regla de carga) — 24 ago  # +34: auditoría Forma A — luz por sección, título sin repetir la sección, _datoCompuesto — 24 ago  # +3: muere el badge EN REVISIÓN de la card (redundante con el divisor) — 23 ago  # +4: icono `award` de Lucide — la estrella ya significa calificación — 23 ago  # +5: el grupo de revisión NO se filtra al sheet «cambiar festival» — 23 ago  # +24: grupo «en revisión» en el riel — 23 ago  # +58: makeSharedSlotSVG — el póster de función compartida (Escalera mayor §6.0) — 21 ago  # +7: «foro» y «debate» entran al vocabulario (Cinemancia 2026) — 21 ago  # +24: _postponedElapsed — un aplazado baja a pasados cuando sus fechas anunciadas pasan — 23 ago
         # helpers.js estaba EXACTAMENTE en 800 antes del rediseño de pósters
         # (§6.0): el marco de la forma B y el header con ajuste tipográfico no
         # entran sin pasarse. Se sube 15 con la razón escrita, que es lo que este
         # guardián pide. Baja cuando se migre algo fuera de helpers.
-        'src/view/helpers.js': 1180,  # +10: secMatches — dueño único del predicado de Sección, que ahora acepta Gratis y Con Q&A (7 oct)  # antes 1170,  # +2: el badge EN LÍNEA en _metaBadges (Fantasmagoría 8, 30 sep)  # antes 1168,  # +2: el badge CON INVITACIÓN en _metaBadges, que anula el de precio (BIFF 12, 29 sep)  # antes 1166,  # +2: la píldora del distintivo (APERTURA/CLAUSURA/ESTRENO) en _metaBadges — el campo `premiere` lo llevaban 170 funciones de cuatro festivales sin que ninguna vista lo pintara (23 sep)  # antes 1164,  # +9: la Escalera pasa a dibujarse con las obras que TIENEN afiche —decisión de Juan, 16 sep, medida antes de tocarla: 112 → 143 programas con pila— y las nueve líneas son el porqué de revertir su propia regla anterior («solo completa»), que sin el porqué vuelve a escribirse sola  # antes 1155,  # +26: icsHuella + icsSeq — la versión de un evento (SEQUENCE) se decide comparando la firma de lo que puede cambiar SIN cambiar el UID (11 sep)  # antes 1129,  # +38: icsCampos — dueño único de «qué va en este evento»; el puente nativo recalculaba inicio y fin por su cuenta con un comentario que prometía que coincidían, y versionar el evento exige firmar lo MISMO que se manda (11 sep)  # antes 1091,  # +17: icsFantasmas + _icsEntrega — la memoria de entregas pasa a guardar título/día/hora para poder NOMBRAR lo colgado, no solo contarlo (11 sep)  # antes 1074,  # +50: icsUid/icsNuevas/_ics24h/_icsUtc — dueño único de «cómo se llama esta función en un calendario»; lo consultan el .ics, la resta de lo ya entregado y el puente nativo de iOS (10 sep)  # antes 1024,  # +4: el comentario del dueño del póster decía «siempre generativo, ignora f.poster» y su propia línea decía lo contrario — 4 líneas de porqué valen menos que 57 eventos sin su afiche (8 sep)  # antes 1020,  # +20: abiertaLabel/abiertaRango — la actividad ABIERTA dice su fase donde las demás dicen su duración; viven junto a durFmt, que es su par (7 sep)  # antes 1000,  # +6: la fusión de la rama de QAFF con main — las dos tocaron el archivo y el techo cuenta el resultado (4 sep)  # antes 994,  # +7: la cuenta del cruce marca el fin como estimado si la duración no está publicada (4 sep)  # antes 987,  # +18: hayEvento pasa a ser dueño único del sustantivo (obras vs actividades), con su porqué (2 sep)  # antes 969,  # +8: festivalCities marca la ciudad cuya programación cayó entera — dueño único de la hoja de apertura y del filtro de Lugar (Juan, 2 sep)  # antes 961,  # +7: el interruptor de Prensa entra a planInputSignature — apagarlo dejaba el Plan en un pase que ya no existía — 30 ago  # antes 954,  # +17: la LISTA pregunta al mismo dueño que el grid — 207 de 215 compuestos son is_cortos y el gate viejo los dejaba fuera — 26 ago  # antes 926,  # +28: getFilmPosterMini + cableado de lista/thumb/stack a la mini — 25 ago  # antes 898,  # +14: rótulo/firma en los llamadores + halo en el póster grande — 24 ago  # +1: el camino #8 pasa el dato compuesto — 24 ago  # +6: badge PRENSA en _metaBadges — 23 ago  # +17: legacyProgramParts — el programa «A + B» usa la forma C — 21 ago  # +5: la sección nunca se pinta con fill undefined — 19 ago
-        'src/view/agenda.js': 2320,  # +2: la tarjeta del Diario de un evento lleva solo el ojo (27 sep)  # antes 2318,  # +12: ojo «no la vi» y nota en el Diario (24 sep)  # antes 2306,  # +18: retraso v2 — barra con la espera, horas reales y control − / + en la tarjeta; bloque corrido en el calendario (25 sep)  # antes 2288,  # +13: «Salís HH:MM» en la fila y el contorno de lo que te perdés en el calendario (25 sep)  # antes 2275,  # +5: el Plan vivo de Sugerencias es lo que no TERMINÓ, no lo que «ya no llegás» — la función en curso no deja hueco (20 sep)  # antes 2270,  # +8: el aviso de lo que quedó colgado en el calendario — se nombra porque no se puede retractar (11 sep)  # antes 2262,  # +14: el botón de exportar con dos estados — con memoria de lo entregado y plan crecido ofrece la resta (10 sep)  # antes 2248,  # -1: la fila de Disponibilidad se delega a su dueño (renderAvFilaHTML) y renderAvBlocks pinta la superficie entera (10 sep)  # antes 2249,  # +18: la fila de Disponibilidad con DOS estados — vacía ofrece (la pregunta sale del sheet) y con bloques encabeza; el porqué medido va en el comentario porque es la razón por la que la usuaria de TIFF guardó un plan sin verla (10 sep)  # antes 2249,  # +18: la actividad ABIERTA en Planear (aparte del contador, vacío honesto) y en Mi Plan (carril bajo la cabecera + fila «Sin hora fija») (7 sep)  # antes 2231,  # +15: el titular del Plan nombra la ciudad cuando el filtro la restringe (4 sep)  # antes 2216,  # +8: la fila de Intereses deja de decir «Vista» dos veces — el dato muestra la sección (4 sep)  # antes 2208,  # +13: «qué viste» se pregunta al dueño único en las 4 puertas del modo Recuerdo (auditoría 4 sep)  # antes 2195,  # +4: la hora de salida se marca estimada cuando la duración no está publicada (4 sep)  # antes 2191,
-        'src/main.js': 1871,  # +3: acciones del buscador ampliado — persona, lugar y día (7 oct)  # antes 1868,  # +1: la Live Activity se corrige al volver a la app (28 sep)  # antes 1867,  # +13: botón atrás de Android (APK v9, @capacitor/app) — cierra la hoja o minimiza (28 sep)  # antes 1854,  # +5: «Cómo llegar» abre Google Maps en Android (28 sep)  # antes 1849,  # +2: acciones del ojo y la nota del Diario (24 sep)  # antes 1847,  # +1: acción quedarmeHastaFinal — «Ir a las dos» (25 sep)  # antes 1846,  # +16: ResizeObserver sobre .topbar — la variable sticky SIGUE al chrome en vez de fijarse en sitios a mano; la franja bajo TRASLADADO en QAFF (captura de Juan, 15 sep) era la variable vieja tras encoger el chrome  # antes 1830,  # +1: olvidarFantasmas en el despachador (11 sep)  # antes 1829,  # +14: `?simTime=` fija el reloj ANTES del arranque — sin eso lo que el boot decide mirando la hora quedaba fuera de toda prueba (4 sep)  # antes 1815,  # +6: el que abre la ficha no se veta a sí mismo con data-stop — el póster de Mi Plan no abría (4 sep)  # antes 1809,  # +10: #dbg-ver sale del BUILD_VERSION que corre, no de un literal de mayo — 31 ago  # antes 1799,  # +12: el listener de captura honra data-stop — «Agendar» en NO INCLUIDAS abría además la ficha y te dejaba ahí — 30 ago  # antes 1787,  # +7: closeCitySheet al ACTION_REGISTRY — la hoja de ciudad prometía cerrarse tocando el fondo y el registro no la tenía (fallo mudo) — 30 ago  # antes 1780,  # +4: el botón de DESHACER declara su intención (data-restaurar) — usa la misma acción que agendar y sin la marca preguntaría lo que no toca — 26 ago  # antes 1776,  # +4: sameEntry al TEST BRIDGE — el test pregunta al dueño, no reimplementa la identidad — 25 ago  # antes 1772,  # +4: los tres canales vivos también refrescan DATOS (capa 2, live-refresh) — 24 ago  # +15: canales de update fuera del guard de SW + guardián de que no vuelvan (bug iOS sin updates) — 24 ago  # +5: el clic de corto en el palmarés abre su ficha — 24 ago  # +41: canal #4 — poll en primer plano que OFRECE la actualización (doctrina T97) — 24 ago  # +1: accion togglePressScreenings — 23 ago  # +2: acciones openPalmares/closePalmares — 23 ago  # +5: acciones de la hoja de clave de revisión — 23 ago  # +29: vista previa por ?fest= — que el equipo de un festival revise su montaje sin publicarlo — 21 ago
+        'src/view/helpers.js': 1265,  # +10: ventanaDias — «22 oct – 13 nov», la abierta de varios días (21 oct)  # antes 1254,  # +3: sala() lee la sala de LA FUNCIÓN (modelo de la función; BHFF Sala Capital / Sala 2) (16 oct)  # antes 1251,  # +45: filterCity + _satelites — municipios satélite (1 función y <50 km) se integran a la ciudad principal para filtrar y agrupar; FICPA dejaba de ser «4 ciudades» (13 oct)  # antes 1206,  # +26: funcionPaga/urlCompra/claveBoleta/faltaBoleta — dueños de Boleta (#1077) (12 oct)  # antes 1180,  # +10: secMatches — dueño único del predicado de Sección, que ahora acepta Gratis y Con Q&A (7 oct)  # antes 1170,  # +2: el badge EN LÍNEA en _metaBadges (Fantasmagoría 8, 30 sep)  # antes 1168,  # +2: el badge CON INVITACIÓN en _metaBadges, que anula el de precio (BIFF 12, 29 sep)  # antes 1166,  # +2: la píldora del distintivo (APERTURA/CLAUSURA/ESTRENO) en _metaBadges — el campo `premiere` lo llevaban 170 funciones de cuatro festivales sin que ninguna vista lo pintara (23 sep)  # antes 1164,  # +9: la Escalera pasa a dibujarse con las obras que TIENEN afiche —decisión de Juan, 16 sep, medida antes de tocarla: 112 → 143 programas con pila— y las nueve líneas son el porqué de revertir su propia regla anterior («solo completa»), que sin el porqué vuelve a escribirse sola  # antes 1155,  # +26: icsHuella + icsSeq — la versión de un evento (SEQUENCE) se decide comparando la firma de lo que puede cambiar SIN cambiar el UID (11 sep)  # antes 1129,  # +38: icsCampos — dueño único de «qué va en este evento»; el puente nativo recalculaba inicio y fin por su cuenta con un comentario que prometía que coincidían, y versionar el evento exige firmar lo MISMO que se manda (11 sep)  # antes 1091,  # +17: icsFantasmas + _icsEntrega — la memoria de entregas pasa a guardar título/día/hora para poder NOMBRAR lo colgado, no solo contarlo (11 sep)  # antes 1074,  # +50: icsUid/icsNuevas/_ics24h/_icsUtc — dueño único de «cómo se llama esta función en un calendario»; lo consultan el .ics, la resta de lo ya entregado y el puente nativo de iOS (10 sep)  # antes 1024,  # +4: el comentario del dueño del póster decía «siempre generativo, ignora f.poster» y su propia línea decía lo contrario — 4 líneas de porqué valen menos que 57 eventos sin su afiche (8 sep)  # antes 1020,  # +20: abiertaLabel/abiertaRango — la actividad ABIERTA dice su fase donde las demás dicen su duración; viven junto a durFmt, que es su par (7 sep)  # antes 1000,  # +6: la fusión de la rama de QAFF con main — las dos tocaron el archivo y el techo cuenta el resultado (4 sep)  # antes 994,  # +7: la cuenta del cruce marca el fin como estimado si la duración no está publicada (4 sep)  # antes 987,  # +18: hayEvento pasa a ser dueño único del sustantivo (obras vs actividades), con su porqué (2 sep)  # antes 969,  # +8: festivalCities marca la ciudad cuya programación cayó entera — dueño único de la hoja de apertura y del filtro de Lugar (Juan, 2 sep)  # antes 961,  # +7: el interruptor de Prensa entra a planInputSignature — apagarlo dejaba el Plan en un pase que ya no existía — 30 ago  # antes 954,  # +17: la LISTA pregunta al mismo dueño que el grid — 207 de 215 compuestos son is_cortos y el gate viejo los dejaba fuera — 26 ago  # antes 926,  # +28: getFilmPosterMini + cableado de lista/thumb/stack a la mini — 25 ago  # antes 898,  # +14: rótulo/firma en los llamadores + halo en el póster grande — 24 ago  # +1: el camino #8 pasa el dato compuesto — 24 ago  # +6: badge PRENSA en _metaBadges — 23 ago  # +17: legacyProgramParts — el programa «A + B» usa la forma C — 21 ago  # +5: la sección nunca se pinta con fill undefined — 19 ago
+        'src/view/agenda.js': 2380,  # +3: el ojo de una vista en ámbar (12 oct)  # antes 2377,  # +28: fila de boleta, banda «N sin boleta» y su filtro (#1077) (12 oct)  # antes 2349,  # +3: la línea de invitación a la cuenta bajo «Compartir mi festival» (10 oct)  # antes 2346,  # +25: prioridades visibles en Planear, «Choca con tu disponibilidad» y prioridades primero en No incluidas (#1060, 10 oct)  # antes 2321,  # +1: import de recap.js — el recorrido de «Tu festival» vive en su módulo (#1055, 9 oct)  # antes 2320,  # +2: la tarjeta del Diario de un evento lleva solo el ojo (27 sep)  # antes 2318,  # +12: ojo «no la vi» y nota en el Diario (24 sep)  # antes 2306,  # +18: retraso v2 — barra con la espera, horas reales y control − / + en la tarjeta; bloque corrido en el calendario (25 sep)  # antes 2288,  # +13: «Salís HH:MM» en la fila y el contorno de lo que te perdés en el calendario (25 sep)  # antes 2275,  # +5: el Plan vivo de Sugerencias es lo que no TERMINÓ, no lo que «ya no llegás» — la función en curso no deja hueco (20 sep)  # antes 2270,  # +8: el aviso de lo que quedó colgado en el calendario — se nombra porque no se puede retractar (11 sep)  # antes 2262,  # +14: el botón de exportar con dos estados — con memoria de lo entregado y plan crecido ofrece la resta (10 sep)  # antes 2248,  # -1: la fila de Disponibilidad se delega a su dueño (renderAvFilaHTML) y renderAvBlocks pinta la superficie entera (10 sep)  # antes 2249,  # +18: la fila de Disponibilidad con DOS estados — vacía ofrece (la pregunta sale del sheet) y con bloques encabeza; el porqué medido va en el comentario porque es la razón por la que la usuaria de TIFF guardó un plan sin verla (10 sep)  # antes 2249,  # +18: la actividad ABIERTA en Planear (aparte del contador, vacío honesto) y en Mi Plan (carril bajo la cabecera + fila «Sin hora fija») (7 sep)  # antes 2231,  # +15: el titular del Plan nombra la ciudad cuando el filtro la restringe (4 sep)  # antes 2216,  # +8: la fila de Intereses deja de decir «Vista» dos veces — el dato muestra la sección (4 sep)  # antes 2208,  # +13: «qué viste» se pregunta al dueño único en las 4 puertas del modo Recuerdo (auditoría 4 sep)  # antes 2195,  # +4: la hora de salida se marca estimada cuando la duración no está publicada (4 sep)  # antes 2191,
+        'src/main.js': 1903,  # +5: _fichasYPortada en los tres canales vivos — la ficha no sube la versión, así que volver de segundo plano no la veía (19 oct)  # antes 1898,  # +4: refrescarFichas en el arranque — la portada se re-dibuja si el índice trae otra ficha (afiche, fechas, festival nuevo) sin publicar la app (Etapa 2·B1, 19 oct)  # antes 1894,  # +3: __otfAbrirAviso — destino del aviso tocado en iOS (15 oct)  # antes 1891,  # +11: __otfWatchDelay + setOwnDelayCb — retraso marcado en el reloj llega a Mi Plan (14 oct)  # antes 1880,  # +2: acciones toggleBoleta y toggleSoloSinBoleta (12 oct)  # antes 1878,  # +1: la acción invitarCuenta (10 oct)  # antes 1877,  # +1: la acción abrirCompartirPlan (#1064)  # antes 1876,  # +3: Android — tocar el aviso «Tu festival» abre Mi Plan (#1055 F3, 9 oct)  # antes 1873,  # +2: acción abrirCompartirFestival + import de story.js — «Tu festival» #1055 (9 oct)  # antes 1871,  # +3: acciones del buscador ampliado — persona, lugar y día (7 oct)  # antes 1868,  # +1: la Live Activity se corrige al volver a la app (28 sep)  # antes 1867,  # +13: botón atrás de Android (APK v9, @capacitor/app) — cierra la hoja o minimiza (28 sep)  # antes 1854,  # +5: «Cómo llegar» abre Google Maps en Android (28 sep)  # antes 1849,  # +2: acciones del ojo y la nota del Diario (24 sep)  # antes 1847,  # +1: acción quedarmeHastaFinal — «Ir a las dos» (25 sep)  # antes 1846,  # +16: ResizeObserver sobre .topbar — la variable sticky SIGUE al chrome en vez de fijarse en sitios a mano; la franja bajo TRASLADADO en QAFF (captura de Juan, 15 sep) era la variable vieja tras encoger el chrome  # antes 1830,  # +1: olvidarFantasmas en el despachador (11 sep)  # antes 1829,  # +14: `?simTime=` fija el reloj ANTES del arranque — sin eso lo que el boot decide mirando la hora quedaba fuera de toda prueba (4 sep)  # antes 1815,  # +6: el que abre la ficha no se veta a sí mismo con data-stop — el póster de Mi Plan no abría (4 sep)  # antes 1809,  # +10: #dbg-ver sale del BUILD_VERSION que corre, no de un literal de mayo — 31 ago  # antes 1799,  # +12: el listener de captura honra data-stop — «Agendar» en NO INCLUIDAS abría además la ficha y te dejaba ahí — 30 ago  # antes 1787,  # +7: closeCitySheet al ACTION_REGISTRY — la hoja de ciudad prometía cerrarse tocando el fondo y el registro no la tenía (fallo mudo) — 30 ago  # antes 1780,  # +4: el botón de DESHACER declara su intención (data-restaurar) — usa la misma acción que agendar y sin la marca preguntaría lo que no toca — 26 ago  # antes 1776,  # +4: sameEntry al TEST BRIDGE — el test pregunta al dueño, no reimplementa la identidad — 25 ago  # antes 1772,  # +4: los tres canales vivos también refrescan DATOS (capa 2, live-refresh) — 24 ago  # +15: canales de update fuera del guard de SW + guardián de que no vuelvan (bug iOS sin updates) — 24 ago  # +5: el clic de corto en el palmarés abre su ficha — 24 ago  # +41: canal #4 — poll en primer plano que OFRECE la actualización (doctrina T97) — 24 ago  # +1: accion togglePressScreenings — 23 ago  # +2: acciones openPalmares/closePalmares — 23 ago  # +5: acciones de la hoja de clave de revisión — 23 ago  # +29: vista previa por ?fest= — que el equipo de un festival revise su montaje sin publicarlo — 21 ago
         'src/i18n/i18n.js': 1721,  # +3: fest_moved_label en es/en/pt (4 sep)  # antes 1718,  # +3: fest_ended_label en es/en/pt (4 sep)  # antes 1715,  # +3: res_en_ciudad en es/en/pt (4 sep)  # antes 1712,  # +6: badge_duracion + aviso_dur_estimada en es/en/pt (4 sep)  # antes 1709,  # +3: ics_dur_estimada en es/en/pt — el calendario dice de dónde salen los 90 min (4 sep)  # antes 1706,  # +3: cta_deshacer en es/en/pt — la vuelta atrás al quitar de Intereses, auditoría A-2 (3 sep)  # antes 1703,  # +6: pre_actividades_planear y pre_actividad_planear en es/en/pt — aprobado por Juan (2 sep)  # antes 1697,  # +3: export_compartir_sin_nombre en es/en/pt — compartir el Plan deja de exigir nombre (aprobado por Juan, 2 sep)  # antes 1694,  # +6: pre_obras_planear/pre_obra_planear — 1 sep  # antes 1688,  # +3: plan_falta_intereses — PLANEAR y MI PLAN dejan de tener el mismo titular — 31 ago  # antes 1685,  # +6: dia_sin_funciones_ciudad(+_sub) — el vacío del día con SOLO ciudad puesta no culpa a sección/sede — 30 ago  # antes 1679,  # +3: conflict_choca_intro_bloque — «función» no se le dice a un taller — 30 ago  # antes 1676,  # +3: bar_prensa_corto en es-en-pt — el filtro de Prensa gana etiqueta (una usuaria no lo encontraba) — 26 ago  # antes 1673,  # +12: vov_titulo/cuerpo/repetir/mudar en es-en-pt (los TRES: el revert anterior dejó la lección de que el PT se queda atrás) — 26 ago  # antes 1661,  # revert #746/#747 (25 ago): las claves del diálogo salieron con la función  # +6: update_disponible/update_cta es-en-pt — 24 ago  # +6: el día vacío dice que el festival no programa, no que ajustes filtros — 24 ago  # +9: Prensa e Industria en es/en/pt — 23 ago  # +36: las strings del palmarés en es/en/pt — 23 ago  # +12: cadenas de festival en revisión (es/en/pt) — 23 ago  # +3: av_recalcular en es/en/pt — 18 ago
-        'src/controller/sheets-controller.js': 1847,  # +6: programa y actividad muestran DESCRIPCIÓN y la leen de su campo, la obra SINOPSIS (7 oct)  # antes 1841,  # +4: la fila EN LÍNEA en la banda de avisos, con el link al canal (Fantasmagoría 8, 30 sep)  # antes 1837,  # +2: la fila «con invitación» en la banda de avisos, fuera de la de precio (BIFF 12, 29 sep)  # antes 1835,  # +3: la hoja de calificar no abre para un evento [califica-dueno] (27 sep)  # antes 1832,  # +5: la cuenta del Diario se repinta con el muro (24 sep)  # antes 1827,  # +76: «Ir a las dos» en la hoja de conflicto: oferta, segunda advertencia y deshacer (25 sep)  # antes 1751,  # +3: la fila del distintivo en la banda de avisos — misma píldora que la tarjeta + el texto entero del festival, que es la forma de esa banda (23 sep)  # antes 1748,  # +17: el pie de la ficha tiene dueño (pelFootHTML) y se repinta cuando Vista cambia con la ficha abierta (21 sep)  # antes 1731,  # −66: la tabla de países sale a la fuente única generada (esta rama); el techo BAJA con ella, que es lo que pide este guardián  # antes 1797,  # +14: el precio se dice de las funciones VIVAS — la banda listaba como CON BOLETA funciones que ella misma marca CANCELADA (4 sep)  # antes 1783,  # +6: el aviso se deriva de las FUNCIONES (la ficha de corto no tiene film propio)  # antes 1777,  # +6: Avisos dice cuando la duración no está publicada — es un rasgo de la función, como el Q&A (4 sep)  # antes 1771,  # +8: el día se muestra con su número en las 4 superficies — 9 de 15 festivales repiten nombre de día (2 sep)  # antes 1763,  # +22: la hoja «¡Tu Plan está listo!» adopta la fila canónica — era la única de las 6 listas de obras sin póster y la única encajada; entran el thumb por el dueño único, la línea «día · hora» y el rango del pie, y sale la fórmula de rango duplicada — 2 sep  # antes 1741,  # +7: el .map(t=>) que pisaba la t() de i18n y tumbaba la hoja del tope + el chip del día usa .on — 30 ago  # antes 1733,  # +15: la FICHA pregunta al mismo dueño que grilla y lista (era el 4º sitio con el gate is_programa) + la lista de obras deja de exigir is_cortos — 26 ago  # antes 1718,  # revert #746 (25 ago)  # +7: icono de prensa en la fila de función — 24 ago  # +29: openPalmares/closePalmares — el palmarés usa el patrón sheet del Diario — 23 ago  # +4: el nombre completo del festival en la tapa, vía festivalTagline (18 ago)
+        'src/controller/sheets-controller.js': 1869,  # +8: la abierta de varios días es UNA fila en la ficha (21 oct)  # antes 1859,  # +4: la fila INICIO en la banda de avisos — la obra empieza después de que abre la función (Parapeto, BHFF, 15 oct)  # antes 1855,  # +8: la línea de invitación a la cuenta en «¡Tu Plan está listo!» e invitarCuenta (10 oct)  # antes 1847,  # +6: programa y actividad muestran DESCRIPCIÓN y la leen de su campo, la obra SINOPSIS (7 oct)  # antes 1841,  # +4: la fila EN LÍNEA en la banda de avisos, con el link al canal (Fantasmagoría 8, 30 sep)  # antes 1837,  # +2: la fila «con invitación» en la banda de avisos, fuera de la de precio (BIFF 12, 29 sep)  # antes 1835,  # +3: la hoja de calificar no abre para un evento [califica-dueno] (27 sep)  # antes 1832,  # +5: la cuenta del Diario se repinta con el muro (24 sep)  # antes 1827,  # +76: «Ir a las dos» en la hoja de conflicto: oferta, segunda advertencia y deshacer (25 sep)  # antes 1751,  # +3: la fila del distintivo en la banda de avisos — misma píldora que la tarjeta + el texto entero del festival, que es la forma de esa banda (23 sep)  # antes 1748,  # +17: el pie de la ficha tiene dueño (pelFootHTML) y se repinta cuando Vista cambia con la ficha abierta (21 sep)  # antes 1731,  # −66: la tabla de países sale a la fuente única generada (esta rama); el techo BAJA con ella, que es lo que pide este guardián  # antes 1797,  # +14: el precio se dice de las funciones VIVAS — la banda listaba como CON BOLETA funciones que ella misma marca CANCELADA (4 sep)  # antes 1783,  # +6: el aviso se deriva de las FUNCIONES (la ficha de corto no tiene film propio)  # antes 1777,  # +6: Avisos dice cuando la duración no está publicada — es un rasgo de la función, como el Q&A (4 sep)  # antes 1771,  # +8: el día se muestra con su número en las 4 superficies — 9 de 15 festivales repiten nombre de día (2 sep)  # antes 1763,  # +22: la hoja «¡Tu Plan está listo!» adopta la fila canónica — era la única de las 6 listas de obras sin póster y la única encajada; entran el thumb por el dueño único, la línea «día · hora» y el rango del pie, y sale la fórmula de rango duplicada — 2 sep  # antes 1741,  # +7: el .map(t=>) que pisaba la t() de i18n y tumbaba la hoja del tope + el chip del día usa .on — 30 ago  # antes 1733,  # +15: la FICHA pregunta al mismo dueño que grilla y lista (era el 4º sitio con el gate is_programa) + la lista de obras deja de exigir is_cortos — 26 ago  # antes 1718,  # revert #746 (25 ago)  # +7: icono de prensa en la fila de función — 24 ago  # +29: openPalmares/closePalmares — el palmarés usa el patrón sheet del Diario — 23 ago  # +4: el nombre completo del festival en la tapa, vía festivalTagline (18 ago)
         # config.js es DATA de festival (FESTIVAL_CONFIG, VENUES, NOTICES y ahora
         # PALMARES). El palmarés de FICDEH son 19 entradas + el porqué de tres
         # correcciones sobre la fuente, que valen más escritas que ahorradas.
-        'src/controller/handlers.js': 1217,  # +12: quitar de Mi Plan es un toque con «Deshacer» en el aviso; el modal queda solo para el taller que se lleva todas sus sesiones (7 oct, Juan)  # antes 1205,  # +22: diaryToggleVista/diaryNotaCerrar — el ojo del Diario saca lo deducido por el Plan (24 sep)  # antes 1183,  # +3: toggleWatched avisa a la ficha abierta en sus dos ramas (21 sep)  # antes 1180,  # +13: confirmReplace en Mi Plan REVALIDA y pregunta con la hoja de conflicto — dos funciones encimadas se escribían en silencio (20 sep)  # antes 1167,  # +6: Interés en una actividad ABIERTA va directo a Mi Plan y sale sin preguntar — para ella Interés y Plan son lo mismo (7 sep)  # antes 1161,  # +13: quitar de Intereses ofrece «Deshacer» y repone los 3 conjuntos, auditoría A-2 (3 sep)  # antes 1148,  # +11: las compañeras de función son la INTERSECCIÓN, no la unión — un toque metía 15 obras ajenas (recorrido de usuario) — 30 ago  # antes 1137,  # +4: el aviso de reprogramada declara {mudar:true} — T52/AV04 lo cazaron — 26 ago  # antes 1133,  # +28: «verla otra vez» rehecha — no-op por sameEntry, conflicto sin excluirse a sí misma, modal de 3 acciones y el taller ruteado entero (H6+H7 del informe) — 26 ago  # antes 1105,  # revert #746/#748 (25 ago): «verla otra vez» salió — ver el informe adversarial  # +4: {mudar:true} — «Actualizar» una reprogramada no pregunta (T52) — 25 ago  # antes 1145,  # +40: «verla otra vez» — el diálogo de obra repetida y el borrado por función — 25 ago  # antes 1105,  # +2: el límite de prioridades mide las vivas (prioLiveCount) (17 ago)  # +26: includeAnyway — agendar la que solo choca por el Q&A, marcada como decisión deliberada (17 ago)  # +12: _vueltaA — el toast nombra la sección REAL donde reaparece (la prioridad sobrevive al desmarcar) (16 ago)  # +6: los dos toasts dicen «también en Intereses», solo cuando de verdad sumaron (16 ago)  # +18: el squeeze y «+ Incluir» usan el dueño del predicado (el plan volvía a cruzar ciudades al GUARDAR) (16 ago)  # +8: el toast del programa dice cuántas obras y por qué (15 ago)  # +45: taller multi-día — addRecurringBlock/removeRecurringBlock (bloque entero en un solo commitPlan) (8 ago)  # +15: acciones del sheet de ciudad (7 ago)  # +20: anclaje de función en toggleWL, simétrico al quitar (29 jul)
+        'src/controller/handlers.js': 1304,  # +19: abrirAviso — el aviso de Boleta abre Mi Plan en su día con «sin boleta» (15 oct)  # antes 1285,  # +18: applyOwnCloudDelay — retraso tuyo que llega del reloj, sin re-escribir la nube (14 oct)  # antes 1267,  # +12: sacar una vista del Diario se puede deshacer (12 oct)  # antes 1255,  # +25: toggleBoleta y toggleSoloSinBoleta (#1077) (12 oct)  # antes 1230,  # +13: watchedMeta — en qué función se vio cada obra (botón del Plan la traía y la descartaba; desde la ficha se infiere solo con UNA función) — «Tu festival» #1055 (9 oct)  # antes 1217,  # +12: quitar de Mi Plan es un toque con «Deshacer» en el aviso; el modal queda solo para el taller que se lleva todas sus sesiones (7 oct, Juan)  # antes 1205,  # +22: diaryToggleVista/diaryNotaCerrar — el ojo del Diario saca lo deducido por el Plan (24 sep)  # antes 1183,  # +3: toggleWatched avisa a la ficha abierta en sus dos ramas (21 sep)  # antes 1180,  # +13: confirmReplace en Mi Plan REVALIDA y pregunta con la hoja de conflicto — dos funciones encimadas se escribían en silencio (20 sep)  # antes 1167,  # +6: Interés en una actividad ABIERTA va directo a Mi Plan y sale sin preguntar — para ella Interés y Plan son lo mismo (7 sep)  # antes 1161,  # +13: quitar de Intereses ofrece «Deshacer» y repone los 3 conjuntos, auditoría A-2 (3 sep)  # antes 1148,  # +11: las compañeras de función son la INTERSECCIÓN, no la unión — un toque metía 15 obras ajenas (recorrido de usuario) — 30 ago  # antes 1137,  # +4: el aviso de reprogramada declara {mudar:true} — T52/AV04 lo cazaron — 26 ago  # antes 1133,  # +28: «verla otra vez» rehecha — no-op por sameEntry, conflicto sin excluirse a sí misma, modal de 3 acciones y el taller ruteado entero (H6+H7 del informe) — 26 ago  # antes 1105,  # revert #746/#748 (25 ago): «verla otra vez» salió — ver el informe adversarial  # +4: {mudar:true} — «Actualizar» una reprogramada no pregunta (T52) — 25 ago  # antes 1145,  # +40: «verla otra vez» — el diálogo de obra repetida y el borrado por función — 25 ago  # antes 1105,  # +2: el límite de prioridades mide las vivas (prioLiveCount) (17 ago)  # +26: includeAnyway — agendar la que solo choca por el Q&A, marcada como decisión deliberada (17 ago)  # +12: _vueltaA — el toast nombra la sección REAL donde reaparece (la prioridad sobrevive al desmarcar) (16 ago)  # +6: los dos toasts dicen «también en Intereses», solo cuando de verdad sumaron (16 ago)  # +18: el squeeze y «+ Incluir» usan el dueño del predicado (el plan volvía a cruzar ciudades al GUARDAR) (16 ago)  # +8: el toast del programa dice cuántas obras y por qué (15 ago)  # +45: taller multi-día — addRecurringBlock/removeRecurringBlock (bloque entero en un solo commitPlan) (8 ago)  # +15: acciones del sheet de ciudad (7 ago)  # +20: anclaje de función en toggleWL, simétrico al quitar (29 jul)
     }
     # src/config.js NO tiene techo (Juan, 23 ago 2026). Es DATA de festival
     # —FESTIVAL_CONFIG, VENUES, NOTICES, PALMARES— y crece con cada onboarding,
@@ -4869,6 +4900,9 @@ try:
         '_corrido':              'el sello del runner',
         '_sede_cruda':           'el nombre crudo antes de la tabla de sedes',
         '_errata_impresa':       'decisión declarada: el impreso se equivoca y se dice dónde',
+        '_creditos_fuente':      'de dónde sale el crédito que la lámina no trae (Guatapé); lo lee el revisor',
+        '_creditos_por_que':     'por qué ese crédito es de esta obra (Guatapé); lo lee el revisor',
+        '_titulo_lamina':        'el título como lo imprime la lámina cuando se publica el de la obra; lo verifica el OCR',
         '_ficha_duplicada':      'decisión declarada: dos obras comparten línea técnica',
         '_qa_fuente':            'de dónde salió el conversatorio',
         '_nota':                 'decisión declarada del montador',
@@ -5721,7 +5755,7 @@ try:
     # 2025 son CUATRO cosas con el mismo nombre —una ponencia y tres
     # proyecciones de 4, 5 y 6 obras— en un festival archivado. Hallazgo real
     # del día que nació, no falso positivo: se nombra para que no crezca.
-    _DEUDA = {('cinemancia-2025', '¿Qué es la ficción?')}
+    _DEUDA = {('cinemancia-2025', '¿Qué es la Ficción?')}  # en Título desde el 15 oct ([caja-titulo])
     _IDENT = ('director', 'country', 'year', 'genre', 'poster', 'synopsis')
     _malos, _vistos = [], 0
     for _f in sorted(_gp.glob('festivals/*.json')):
@@ -5949,6 +5983,254 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar afiche-es-afiche: {_e}')
 
+# ── [sin-handler-inline] ningún on*="…" nuevo en el HTML (CSP, 26 oct 2026) ──
+# La CSP no puede dejar 'unsafe-inline' mientras haya handlers escritos en el
+# markup. index.html y src/ en 0 (controller/sin-inline.js): ninguno vuelve.
+check = 'sin-handler-inline'
+try:
+    import re as _rhi, glob as _ghi
+    # cualquier on<evento>, con o sin espacios en el `=` (auditoría senior, 26 oct)
+    # también sin comillas (onerror=fn(this)); no las asignaciones `.onX=` de JS
+    # ni comentarios (auditoría senior, 26 oct)
+    # con comillas en cualquier lado; SIN comillas solo dentro de una etiqueta
+    # (`<img … onerror=fn(this)>`), o `const ongoing =x` contaba (26 oct)
+    _RE_HI = _rhi.compile(r'(?<![.\w])on[a-z]{3,}\s*=\s*\\?["\'`]|<[a-zA-Z][^<>]*?\son[a-z]{3,}\s*=\s*[A-Za-z_$]')
+    _n_idx = len(_RE_HI.findall(open('index.html', encoding='utf-8').read()))
+    # dos pasadas: con DOTALL, `//.*$` se comía el archivo entero desde el primer //
+    _sin_coment = lambda t: _rhi.sub(r'^\s*//[^\n]*', '', _rhi.sub(r'/\*.*?\*/', '', t, flags=_rhi.S), flags=_rhi.M)
+    _n_src = sum(len(_RE_HI.findall(_sin_coment(open(_f, encoding='utf-8').read()))) for _f in _ghi.glob('src/**/*.js', recursive=True))
+    _TECHO_HI = 0   # 31 → 0 en el paso 2/4 (26 oct)
+    if _n_idx:
+        fail(check, f'index.html tiene {_n_idx} handler(s) on*= — van como data-* en controller/sin-inline.js')
+    elif _n_src > _TECHO_HI:
+        fail(check, f'src/ tiene {_n_src} handlers on*= en strings HTML > techo {_TECHO_HI}: usá data-* + delegación')
+    else:
+        ok(check, f'index.html sin handlers inline; src/ {_n_src} ≤ techo {_TECHO_HI}'
+              + (' — BAJÁ el techo' if _n_src < _TECHO_HI else ''))
+except Exception as _e:
+    warn(check, f'no se pudo verificar sin-handler-inline: {_e}')
+
+# ── [csp-hashes] script-src estricto y con los hashes al día (26 oct 2026) ──
+# Los <script> inline van autorizados por hash (scripts/csp.js, dueño único). Un
+# hash viejo = el navegador NO ejecuta ese script: el gate no carga la app y la
+# pantalla queda en blanco. Y 'unsafe-inline'/'unsafe-eval' no vuelven.
+check = 'csp-hashes'
+try:
+    import subprocess as _spc, re as _rcs
+    _r = _spc.run(['node', 'scripts/csp.js', '--comprobar'], capture_output=True, text=True)
+    # del <meta>, no del comentario que lo explica (que también dice «script-src»)
+    _ss = (_rcs.search(r'http-equiv="Content-Security-Policy" content="[^"]*?script-src ([^;"]*)', open('index.html', encoding='utf-8').read()) or [None, ''])[1]
+    if _r.returncode != 0:
+        fail(check, 'los hashes de la CSP no coinciden con los <script> inline — correr: node scripts/csp.js')
+    elif "'unsafe-inline'" in _ss or "'unsafe-eval'" in _ss:
+        fail(check, "script-src volvió a tener 'unsafe-inline' o 'unsafe-eval'")
+    else:
+        ok(check, f"script-src estricto: {_ss.count('sha256-')} hash(es) al día, sin unsafe-*")
+except Exception as _e:
+    warn(check, f'no se pudo verificar csp-hashes: {_e}')
+
+# ── [sin-eval] ni eval( ni new Function en src/ (CSP, 26 oct 2026) ─────────
+# Era el único motivo de 'unsafe-eval' en la CSP: calc.js armaba el worker con
+# la lista de calc.js. Ahora la lista guarda referencias. Sin esto, un eval nuevo
+# rompería la app en cuanto la CSP lo prohíba.
+check = 'sin-eval'
+try:
+    import re as _rev, glob as _gev
+    # eval( también como window./globalThis./self.eval; Function( con o sin new
+    # (auditoría senior, 26 oct). Alcance: src/, sw.js y los <script> inline de
+    # index.html. Comentarios fuera: de bloque, de línea y al final de línea.
+    _RE_EV = _rev.compile(r'(?<![\w$])eval\s*\(|(?<![\w$.])(?:new\s+)?Function\s*\(|\bset(?:Timeout|Interval)\s*\(\s*["\'`]')
+    _sinc = lambda t: _rev.sub(r'(^|[^:\\])//[^\n]*', r'\1', _rev.sub(r'/\*.*?\*/', '', t, flags=_rev.S))
+    _fuentes = [(_f, open(_f, encoding='utf-8').read()) for _f in _gev.glob('src/**/*.js', recursive=True) + ['sw.js']]
+    _fuentes += [(f'index.html<script #{_i}>', _b) for _i, _b in enumerate(_rev.findall(r'<script(?![^>]*\bsrc=)[^>]*>(.*?)</script>', _rev.sub(r'<!--.*?-->', '', open('index.html', encoding='utf-8').read(), flags=_rev.S), flags=_rev.S))]
+    _ev = []
+    for _f, _raw in _fuentes:
+        _t = _sinc(_raw)
+        _ev += [f'{_f}:{_t[:_m.start()].count(chr(10)) + 1}' for _m in _RE_EV.finditer(_t)]
+    if _ev:
+        fail(check, 'eval/new Function/timer con string en src/ (la CSP no tiene unsafe-eval): ' + ', '.join(_ev[:5]))
+    else:
+        ok(check, 'sin eval, new Function ni timers con string en src/')
+except Exception as _e:
+    warn(check, f'no se pudo verificar sin-eval: {_e}')
+
+# ── [script-externo-fijo] todo script de un CDN con versión exacta + integrity ──
+# Supabase se cargaba como «supabase-js@2»: el CDN servía la última 2.x que saliera,
+# sin revisión — una versión comprometida entraba sola a la app (25 oct 2026).
+# Ahora va fija y con hash (si el archivo cambia, el navegador no lo ejecuta).
+# El loader de Sentry es la única excepción: su contenido lo genera Sentry por
+# clave y cambia sin versión, así que no admite hash.
+check = 'script-externo-fijo'
+try:
+    import re as _rsx
+    _html = open('index.html', encoding='utf-8').read()
+    _sx = []
+    for _m in _rsx.finditer(r'<script\b([^>]*)>', _html):
+        _a = _m.group(1)
+        _src = _rsx.search(r'\bsrc="(https?://[^"]+)"', _a)
+        if not _src or 'sentry-cdn.com' in _src.group(1):
+            continue
+        _u = _src.group(1)
+        if not _rsx.search(r'@\d+\.\d+\.\d+/', _u) or 'integrity="sha384-' not in _a:
+            _sx.append(_u[:90])
+    if _sx:
+        fail(check, 'script externo sin versión exacta o sin integrity: ' + ' · '.join(_sx[:4]))
+    else:
+        ok(check, 'todo script de CDN con versión exacta e integrity (salvo el loader de Sentry)')
+except Exception as _e:
+    warn(check, f'no se pudo verificar script-externo-fijo: {_e}')
+
+# ── [abierta-sin-info] una exposición no se reserva: va con info:true ─────────
+# MAPISTAS (FILCMAR, 9 oct 2026) salió como cuatro funciones con hora y la app la
+# anclaba en el plan los cuatro días. El modelo de la actividad abierta existe
+# desde agosto (`info: true`, docs/SCHEMA.md «Campo info»), pero nada obligaba a
+# usarlo: se elegía a mano en cada crudo, y en FILCMAR no se eligió. Este guardián
+# mira lo que el nombre ya dice —exposición, expo, instalación, exhibición,
+# muestra fotográfica, galería abierta— en los festivales vivos y exige `info`.
+# Un falso positivo (una «expo» que sí es una charla con hora) se declara en
+# _ABIERTA_NO con su porqué; no se afloja la palabra.
+check = 'abierta-sin-info'
+try:
+    import json as _jab, re as _reab
+    _PAL = _reab.compile(r'(?i)\b(expo|exposici[oó]n|exposiciones|instalaci[oó]n|exhibici[oó]n|muestra fotogr[aá]fica|galer[ií]a abierta)\b')
+    _ABIERTA_NO = {}   # (festival, título): porqué
+    _malas = []
+    for _fab in _festivalesVivos():
+        try:
+            _dab = _jab.load(open(f'festivals/{_fab}.json', encoding='utf-8'))
+        except FileNotFoundError:
+            continue
+        for _x in _dab.get('films') or []:
+            if _x.get('type') != 'event' or _x.get('info'):
+                continue
+            _tt = _x.get('title') or ''
+            # TAMBIÉN la descripción (21 oct 2026): «Una vez en un cuerpo: Habitar
+            # la imagen» (Anibia) no dice exposición en el título; lo dice su texto
+            _txt = ' '.join(str(_x.get(k) or '') for k in ('title', 'synopsis', 'synopsis_en', 'description'))
+            if _PAL.search(_txt) and (_fab, _tt) not in _ABIERTA_NO:
+                _malas.append(f'{_fab}: «{_tt[:40]}» {_x.get("day","")} {_x.get("time","")}')
+    if _malas:
+        fail(check, 'actividad abierta publicada como función con hora (va con info:true, o se declara en _ABIERTA_NO): '
+             + ' · '.join(sorted(set(_malas))[:5]))
+    else:
+        ok(check, 'ninguna exposición/instalación de un festival vivo se publica como función reservable')
+except Exception as _e:
+    warn(check, f'no se pudo verificar abierta-sin-info: {_e}')
+
+# ── [abierta-varios-dias] una abierta de varios días es UNA actividad ──────────
+# «Una vez en un cuerpo: Habitar la imagen» (Anibia, 21 oct 2026) se publicó como
+# 9 funciones de 8:00 a 17:00 con is_recurring: la ficha decía «Añadir las 9
+# sesiones», como un taller. El modelo es una sola función `info` con `day` y
+# `hasta` (domain/film.js expandVentanas). Frena: (1) una actividad `info` con el
+# mismo título en 2+ días sin `hasta`; (2) un evento SIN `info`, mismo título y
+# misma hora en 3+ días, de 6 h o más (el Taller Cine Atmosférico de FICCALI, 4 h ×3,
+# sí es un taller) — nadie programa un taller de 9 h diarias:
+# es una ventana abierta (Juan: «cuál actividad va de 8 a 5 todos los días?»).
+# Un taller largo de verdad se declara en _VARIOS_NO con su porqué.
+check = 'abierta-varios-dias'
+try:
+    import json as _jav, re as _reav
+    from collections import defaultdict as _ddav
+    _VARIOS_NO = {   # (festival, título): porqué
+    }
+    _malas = []
+    for _fav in _festivalesVivos():
+        try:
+            _dav = _jav.load(open(f'festivals/{_fav}.json', encoding='utf-8'))
+        except FileNotFoundError:
+            continue
+        _info, _larga = _ddav(set), _ddav(set)
+        for _x in _dav.get('films') or []:
+            if _x.get('type') != 'event':
+                continue
+            _tt = _x.get('title') or ''
+            if (_fav, _tt) in _VARIOS_NO:
+                continue
+            _ses = _x.get('screenings') or [_x]
+            _mins = int((_reav.match(r'\d+', str(_x.get('duration') or '')) or [0])[0] or 0)
+            for _s in _ses:
+                _d = _s.get('day') or _s.get('date')
+                if not _d:
+                    continue
+                if _x.get('info') and not _x.get('hasta'):
+                    _info[_tt].add(_d)
+                elif not _x.get("info") and _mins >= 360:
+                    _larga[(_tt, _s.get('time'))].add(_d)
+        _malas += [f'{_fav}: «{t[:40]}» info en {len(d)} días sin `hasta`' for t, d in _info.items() if len(d) >= 2]
+        _malas += [f'{_fav}: «{t[:40]}» {h} en {len(d)} días, sin info' for (t, h), d in _larga.items() if len(d) >= 3]
+    if _malas:
+        fail(check, 'abierta de varios días publicada como funciones sueltas (va UNA función info con day + hasta, '
+             'o se declara en _VARIOS_NO): ' + ' · '.join(sorted(_malas)[:5]))
+    else:
+        ok(check, 'ninguna abierta de varios días publicada como funciones sueltas')
+except Exception as _e:
+    warn(check, f'no se pudo verificar abierta-varios-dias: {_e}')
+
+# ── [programa-sin-desglosar] «A + B» en un título es dos obras, no una ──────────
+# Ficcali publicó «Rodilla Negra + El Coloso» y Fantasmagoría «Kondor, El Mago +
+# El Cigarro Mortal» como UNA obra: ninguna de las dos se buscaba en TMDB y las
+# dos salían sin afiche (8–9 oct 2026). La tarjeta del festival junta dos obras en
+# una función; en la app eso es un programa con `film_list`, cada obra con su
+# ficha. Un título de proyección con « + » sin `film_list` es el error, en los
+# festivales vivos. El falso positivo (un « + » que es parte del nombre de UNA
+# obra) se declara en _DESGLOSE_NO con su porqué.
+check = 'programa-sin-desglosar'
+try:
+    import json as _jpd
+    _DESGLOSE_NO = {}   # (festival, título): porqué
+    _malos_pd = []
+    for _fpd in _festivalesVivos():
+        try:
+            _dpd = _jpd.load(open(f'festivals/{_fpd}.json', encoding='utf-8'))
+        except FileNotFoundError:
+            continue
+        for _x in _dpd.get('films') or []:
+            if _x.get('type') == 'event' or _x.get('event_kind') or _x.get('film_list'):
+                continue
+            _tt = _x.get('title') or ''
+            if ' + ' in _tt and (_fpd, _tt) not in _DESGLOSE_NO:
+                _malos_pd.append(f'{_fpd}: «{_tt[:45]}»')
+    if _malos_pd:
+        fail(check, 'función «A + B» publicada como UNA obra (va como programa con film_list, o se declara en _DESGLOSE_NO): '
+             + ' · '.join(sorted(set(_malos_pd))[:5]))
+    else:
+        ok(check, 'ninguna función «A + B» de un festival vivo se publica como una sola obra')
+except Exception as _e:
+    warn(check, f'no se pudo verificar programa-sin-desglosar: {_e}')
+
+# ── [proyeccion-que-es-actividad] el título dice que no es una película ────────
+# Mamut publicó «Programa SHUB: Hocico de cerdo» como proyección: la lámina decía
+# «Presentación Cuadernos de Cine Colombiano #35 · Conversación con…». Era una
+# actividad (encuentro) y salía como obra sin afiche (9 oct 2026). Una obra cuyo
+# título empieza por presentación, lanzamiento, conversatorio, charla, taller,
+# panel, clase magistral o masterclass se clasifica a mano: o es evento, o se
+# declara en _ACTIVIDAD_NO que sí es una obra («Charla» puede ser un título).
+check = 'proyeccion-que-es-actividad'
+try:
+    import json as _jpa, re as _repa
+    _PAL_ACT = _repa.compile(r'(?i)^(presentaci[oó]n|lanzamiento|conversatorio|charla|taller|panel|clase magistral|masterclass|m[aá]ster class)\b')
+    _ACTIVIDAD_NO = {}   # (festival, título): porqué
+    _malos_pa = []
+    for _fpa in _festivalesVivos():
+        try:
+            _dpa = _jpa.load(open(f'festivals/{_fpa}.json', encoding='utf-8'))
+        except FileNotFoundError:
+            continue
+        for _x in _dpa.get('films') or []:
+            if _x.get('type') == 'event' or _x.get('event_kind'):
+                continue
+            for _o in [_x] + list(_x.get('film_list') or []):
+                _tt = _o.get('title') or ''
+                if _PAL_ACT.search(_tt) and (_fpa, _tt) not in _ACTIVIDAD_NO:
+                    _malos_pa.append(f'{_fpa}: «{_tt[:45]}»')
+    if _malos_pa:
+        fail(check, 'obra cuyo título dice que es una actividad (va como evento con event_kind, o se declara en _ACTIVIDAD_NO): '
+             + ' · '.join(sorted(set(_malos_pa))[:5]))
+    else:
+        ok(check, 'ninguna obra de un festival vivo se titula como una actividad')
+except Exception as _e:
+    warn(check, f'no se pudo verificar proyeccion-que-es-actividad: {_e}')
+
 # ── [afiche-cobertura] una obra sin afiche lleva el porqué ESCRITO ───────────
 # COBERTURA INVERSA, la doctrina que ya teníamos escrita y no habíamos aplicado
 # a los afiches: verificar lo transcrito no verifica lo DESCARTADO. El 21 sep
@@ -5969,19 +6251,34 @@ except Exception as _e:
 # festival por festival, no se inventa deuda retroactiva.
 check = 'afiche-cobertura'
 try:
-    import json as _ja, glob as _ga, unicodedata as _ua
+    import json as _ja, glob as _ga, unicodedata as _ua, re as _re_m
+    _re_cob = _re_m.compile(r'-(posters|afiches)\.json$')
     def _n_afi(_s):
         _s = _ua.normalize('NFD', str(_s or '')).lower()
         return ''.join(_c for _c in _s if _c.isalnum())
     _huerfanas, _cubiertos = [], 0
-    for _sp in sorted(_ga.glob('festivals/staging/*-posters.json')):
-        _fest = _sp.split('/')[-1].replace('-posters.json', '')
+    # DOS fuentes de cobertura (8 oct 2026): `_cobertura.destino` de un sidecar
+    # de afiches, y `sin_afiche` de -correcciones.json (título de obra o de su
+    # programa → {_por_que}), que es lo que exige publicar.py desde ese día.
+    _fuentes = {}
+    for _sp in sorted(_ga.glob('festivals/staging/*-posters.json') + _ga.glob('festivals/staging/*-afiches.json')):
+        _fest = _re_cob.sub('', _sp.split('/')[-1])
         try:
             _cob = (_ja.load(open(_sp, encoding='utf-8')) or {}).get('_cobertura')
         except Exception:
             continue
-        if not _cob:
+        if _cob:
+            _fuentes.setdefault(_fest, {}).update(_cob.get('destino') or {})
+    for _sp in sorted(_ga.glob('festivals/staging/*-correcciones.json')):
+        _fest = _sp.split('/')[-1].replace('-correcciones.json', '')
+        try:
+            _sa = (_ja.load(open(_sp, encoding='utf-8')) or {}).get('sin_afiche')
+        except Exception:
             continue
+        if _sa:
+            _fuentes.setdefault(_fest, {}).update({_k: (_v if isinstance(_v, dict) else {'_por_que': _v}) for _k, _v in _sa.items()})
+    for _fest, _destino in sorted(_fuentes.items()):
+        _cob = {'destino': _destino}
         _fp = f'festivals/{_fest}.json'
         if not _os8.path.exists(_fp):
             continue
@@ -5996,7 +6293,7 @@ try:
                 if not _t or _n_afi(_t) in _ya or _o.get('poster'):
                     continue
                 _ya.add(_n_afi(_t))
-                _e = _dst.get(_n_afi(_t))
+                _e = _dst.get(_n_afi(_t)) or (_dst.get(_n_afi(_x.get('title'))) if _x.get('film_list') else None)
                 if not _e:
                     _huerfanas.append(f'{_fest}/«{_t[:34]}»: sin afiche y sin rastro '
                                       f'en _cobertura — nadie la miró')
@@ -6027,6 +6324,28 @@ except Exception as _e:
 #
 # Este lo IMPORTA de verdad y cuenta los festivales. Es la única forma de saber
 # que el archivo que carga el navegador es el que creemos.
+# ── [fichas-campos] la app y la función publican la MISMA ficha ──────────────────
+# Etapa 2·B1 (19 oct 2026): CAMPOS_FICHA vive en src/fichas.js (lo que la app
+# aplica) y en la función publicar-datos (lo que entra al índice). Dos listas a
+# mano divergen; si la función deja pasar un campo que la app no aplica, o al
+# revés, un ajuste publicado no se ve y nadie se entera.
+check = 'fichas-campos'
+try:
+    _fa = re.search(r"CAMPOS_FICHA=\[(.*?)\];", open('src/fichas.js', encoding='utf-8').read(), re.S)
+    _fb = re.search(r"CAMPOS_FICHA = \[(.*?)\];", open('supabase/functions/publicar-datos/index.ts', encoding='utf-8').read(), re.S)
+    _la = re.findall(r"['\"]([A-Za-z_]+)['\"]", _fa.group(1)) if _fa else []
+    _lb = re.findall(r"['\"]([A-Za-z_]+)['\"]", _fb.group(1)) if _fb else []
+    if not _la or not _lb:
+        fail(check, 'no se encontró CAMPOS_FICHA en src/fichas.js o en la función publicar-datos')
+    elif _la != _lb:
+        fail(check, f'CAMPOS_FICHA difiere entre la app y la función: solo app {sorted(set(_la)-set(_lb))} · solo función {sorted(set(_lb)-set(_la))}')
+    elif 'storageKey' in _la:
+        fail(check, 'storageKey NO puede ser campo de ficha: es la llave de lo guardado por cada usuario')
+    else:
+        ok(check, f'la ficha tiene los mismos {len(_la)} campos en la app y en la función')
+except Exception as _e:
+    fail(check, f'no se pudo verificar fichas-campos: {_e}')
+
 check = 'config-esm'
 try:
     import subprocess as _sp9
@@ -6148,7 +6467,14 @@ try:
     # si TMDB la llena, la obra vuelve a exigirse sola al re-enriquecer.
     _TMDB_VACIA = {('fantasmagoria-2026', 'La Flor del Miedo'):
                    'TMDB 1546267 «The Flower of Fear»: overview vacío en es-ES y en-US (30 sep); '
-                   'la página de la edición tampoco la trae'}
+                   'la página de la edición tampoco la trae',
+                   ('ficpa-2026', 'Carlitos'):
+                   'TMDB 1193058 (Karol Tamayo): sin overview en es-ES ni en-US; la única traducción '
+                   '(«es») dice «Cortometraje seleccionado en MIDBO 2023», que no es sinopsis (10 oct 2026)',
+                   ('bhff-2026', 'Moviedreams'):
+                   'TMDB 1776749: overview vacío en es-ES, es-MX y en-US (7 oct); la parrilla no trae sinopsis',
+                   ('bhff-2026', 'Esquirlas de Caracol'):
+                   'TMDB 1718595: overview vacío en es-ES, es-MX y en-US (7 oct); la parrilla no trae sinopsis'}
     _malos = []
     for _f in sorted(_g.glob('festivals/*.json')):
         _fid = _os.path.basename(_f)[:-5]
@@ -6543,15 +6869,22 @@ except Exception as _e:
 check = 'staging-huerfano'
 try:
     import glob as _g9, os as _os9, re as _re9
-    _CANON = {'crudo.json', 'correcciones.json', 'build.json'}
+    # `-titulos-anteriores.json` lo lee ensamblar.py para CUALQUIER festival (con
+    # f-string, por eso su nombre no está literal en el corpus) — 8 oct 2026
+    _CANON = {'crudo.json', 'correcciones.json', 'build.json', 'titulos-anteriores.json',
+              'quitar.json', 'duraciones.json',  # `-quitar.json` lo lee ensamblar.py (f-string), 14 oct 2026
+              # el modelo de la función (docs/FUNCION.md): funcion.cargar y ensamblar, 16 oct 2026
+              'afirmaciones.json', 'funciones-ids.json', 'conflictos.json',
+              'funciones-decisiones.json',  # §11.3.4, 18 oct 2026
+              'palmares.json', 'avisos.json'}  # publicar.py los lleva al JSON (f-string), 19 oct 2026
     _viv = ['pipeline/lib.py','pipeline/ensamblar.py','pipeline/correr.py','pipeline/publicar.py'] + \
-           sorted(_f for _f in _g9.glob('pipeline/*.py') if _re9.search(r'^pipeline/[a-z]+-20\d\d-', _f))
+           sorted(_f for _f in _g9.glob('pipeline/*.py') if _re9.search(r'^pipeline/[a-z]+(?:-[a-z]+)*-20\d\d-', _f))
     _corp = '\n'.join(open(_f, encoding='utf-8', errors='ignore').read() for _f in _viv if _os9.path.exists(_f)) + \
             '\n' + '\n'.join(open(_p, encoding='utf-8').read() for _p in _g9.glob('pipeline/*.plan.json'))
     _huer = []
     for _f in sorted(_g9.glob('festivals/staging/**/*', recursive=True)):
         if not _os9.path.isfile(_f): continue
-        _b = _os9.path.basename(_f); _m = _re9.match(r'([a-z]+-\d{2,4})-(.+)$', _b)
+        _b = _os9.path.basename(_f); _m = _re9.match(r'([a-z]+(?:-[a-z]+)*-\d{2,4})-(.+)$', _b)  # id de 2+ palabras: festicine-antioquia-2026 (20 oct)
         _suf = _m.group(2) if _m else _b
         if '/_historico/' in _f or _suf in _CANON or _b == 'README.md' or _b in _corp: continue
         _huer.append(_f)
@@ -6562,6 +6895,427 @@ try:
         ok(check, 'todo sidecar de staging/ es canónico o lo lee un paso vivo')
 except Exception as _e:
     fail(check, f'el guardián no pudo correr: {_e}')
+
+# ── [tmdb-ficha-ruidosa] una ficha pedida por id no vuelve vacía en silencio ──
+# 14 oct 2026: con la red cortando, tres fichas declaradas a mano de Ficcali
+# volvieron sin afiche, país ni sinopsis EN, sin aviso. lib.tmdb_ficha separa
+# «llegó» / «no existe» (34) / «no respondió» (para). Su autoprueba corre aquí.
+check = 'tmdb-ficha-ruidosa'
+try:
+    import sys as _syst
+    _syst.path.insert(0, 'pipeline')
+    import lib as _libt
+    _mt = _libt.tmdb_ficha_autoprueba()
+    if _mt:
+        fail(check, 'lib.tmdb_ficha ciega en: ' + ', '.join(_mt))
+    else:
+        ok(check, 'una ficha por id llega, no existe, o para la corrida')
+except Exception as _e:
+    fail(check, f'el guardián no pudo correr: {_e}')
+
+# ── [catalogo-*] el catálogo único de obras (docs/CATALOGO-OBRAS.md) ─────────
+# Fase 0 (12 oct 2026): el catálogo todavía está vacío, así que estos guardianes
+# pasan sin más; lo que SÍ corre siempre es la autoprueba —cada invariante tiene
+# que atrapar su cebo en memoria—, para que no nazcan ciegos («un guardián que
+# nunca falló no es de fiar»). La lógica vive en pipeline/catalogo.py: aquí solo
+# se llama, una función, un dueño.
+_CAT = {}
+try:
+    import sys as _sysc, glob as _gc, json as _jc, os as _osc
+    _sysc.path.insert(0, 'pipeline')
+    import catalogo as _cat
+    _obs, _decs, _fus = _cat.obras(), _cat.decisiones(), _cat.fusiones()
+    _fests = {}
+    for _p in _gc.glob('festivals/*.json'):
+        try:
+            _fests[_osc.path.basename(_p)[:-5]] = _jc.load(open(_p, encoding='utf-8'))
+        except Exception:
+            pass
+    _CAT = {'catalogo-autoprueba': _cat.autoprueba(),
+            'xref-unico': _cat.xref_repetido(_obs),
+            'obra-sin-duracion': _cat.duracion_en_obra(_obs),
+            'decision-pisada': _cat.decision_pisada(_obs, _decs),
+            'presentacion-con-obra': _cat.presentacion_sin_obra(_fests, _obs, _fus, exigir=bool(_obs)),
+            'candidato-sin-resolver': _cat.candidatos_abiertos(),
+            'catalogo-ids': _cat.ids_validos(_obs),
+            'dato-que-no-viaja': _cat.techo_superado(_fests)}
+except Exception as _e:
+    _CAT = {'catalogo-autoprueba': [f'el guardián no pudo correr: {_e}']}
+
+
+def _cat_rep(_chk, _bien):
+    _p = _CAT.get(_chk)
+    if _p is None:
+        fail(_chk, 'el guardián no corrió (ver catalogo-autoprueba)')
+    elif _p:
+        fail(_chk, f'{len(_p)} problema(s): ' + ' · '.join(_p[:6]))
+    else:
+        ok(_chk, _bien)
+
+
+check = 'catalogo-autoprueba'
+_cat_rep(check, 'los invariantes del catálogo atrapan sus cebos')
+check = 'xref-unico'
+_cat_rep(check, 'cada tmdb/imdb/wikidata en una sola obra')
+check = 'obra-sin-duracion'
+_cat_rep(check, 'ninguna obra lleva duración suelta (va en la versión)')
+check = 'decision-pisada'
+_cat_rep(check, 'ninguna obra contradice una decisión vigente')
+check = 'presentacion-con-obra'
+_cat_rep(check, 'todo work_id de un festival apunta a una obra vigente')
+check = 'candidato-sin-resolver'
+_cat_rep(check, 'sin pares de obras pendientes de decisión')
+check = 'catalogo-ids'
+_cat_rep(check, 'toda obra con id válido y archivo con su nombre')
+# [dato-que-no-viaja] lo que un festival nuestro ya publicó de una obra y otro
+# festival nuestro publica vacío (14 oct 2026: La paga, «Drama» en Cinemancia
+# 2025 y sin género en FILCMAR y MUBI). Trinquete: falla si sube del techo
+# medido POR FESTIVAL (catalogo/techo.json, 15 oct) y avisa si baja, para bajarlo.
+check = 'dato-que-no-viaja'
+_cat_rep(check, 'ningún campo de obra pierde más presentaciones que su techo')
+try:
+    _baja = _cat.techo_holgado(_fests)
+    if _baja:
+        warn(check, 'bajó el hueco — correr python3 pipeline/catalogo.py --medir: ' + ', '.join(_baja[:8]))
+except Exception:
+    pass
+
+# ── [caja-titulo] programas y secciones en Título (regla de Juan, 15 oct 2026) ──
+# «Muestra de Cortos», «Colombia Viva»: las palabras son del festival y la caja
+# de la app (pipeline/caja.py, el único dueño). Los títulos de obra no se miran.
+# Se coló «Selección oficial de cortometrajes latinoamericanos» porque
+# [caja-sostenida] solo veía mayúsculas sostenidas y solo en secciones.
+check = 'caja-titulo'
+try:
+    import caja as _caja
+    _ct = []
+    for _p in sorted(_gc.glob('festivals/*.json')):
+        _fid = _osc.path.basename(_p)[:-5]
+        try:
+            _d = _jc.load(open(_p, encoding='utf-8'))
+        except Exception:
+            continue
+        _ct += [f'{_fid}: {_k} «{_a}» → «{_b}»' for _k, _a, _b in _caja.fuera_de_caja(_d, _fid)]
+    # autoprueba: el cebo en minúscula se ve, el bueno no, y una obra no se toca
+    _cebo = {'films': [{'title': 'Muestra de cortos', 'is_cortos': True, 'section': '🎬 Colombia viva',
+                        'film_list': [{'title': 'Otra'}]},
+                       {'title': 'Esperando abril + La otra', 'is_cortos': True,
+                        'film_list': [{'title': 'Esperando abril'}, {'title': 'La otra'}]}]}
+    _sano = {'films': [{'title': 'Muestra de Cortos', 'is_cortos': True, 'section': '🎬 Colombia Viva',
+                        'film_list': [{'title': 'Otra'}]}]}
+    if len(_caja.fuera_de_caja(_cebo, 'zzz')) != 2 or _caja.fuera_de_caja(_sano, 'zzz'):
+        fail(check, 'el guardián no distingue el cebo (pipeline/caja.py)')
+    elif _ct:
+        fail(check, f'{len(_ct)} nombre(s) fuera de Título — python3 pipeline/caja-titulo.py --escribir: ' + ' · '.join(_ct[:5]))
+    else:
+        ok(check, 'programas y secciones en Título (obras intactas)')
+except Exception as _e:
+    fail(check, f'no pudo correr: {_e}')
+
+# ── [funcion-tests] y [funcion-autoprueba] el modelo de la función (docs/FUNCION.md) ──
+# Las reglas de cada casilla viven en pipeline/funcion.py (único dueño). Sus tests
+# se escribieron antes que el código y se probaron por mutación (11 de 11
+# atrapadas, 15 oct 2026). La autoprueba repite lo esencial en memoria.
+check = 'funcion-tests'
+try:
+    import subprocess as _spf
+    _rf = _spf.run([_sysc.executable, '-m', 'unittest', 'discover', '-s', 'tests/pipeline'],
+                   capture_output=True, text=True, timeout=120)
+    if _rf.returncode:
+        fail(check, 'tests del modelo de la función en rojo: ' + (_rf.stderr.strip().splitlines() or ['?'])[-1])
+    else:
+        ok(check, 'tests del modelo de la función en verde')
+except Exception as _e:
+    fail(check, f'no pudo correr: {_e}')
+check = 'funcion-autoprueba'
+try:
+    import funcion as _fn
+    _cf = _fn.autoprueba()
+    if _cf:
+        fail(check, 'reglas ciegas: ' + ', '.join(_cf))
+    else:
+        ok(check, 'cada regla de la función atrapa su cebo')
+except Exception as _e:
+    fail(check, f'no pudo correr: {_e}')
+
+# ── la deuda del modelo de la función (docs/FUNCION.md §6, C9) — solo puede bajar ──
+_D9 = {}
+try:
+    import funcion as _fn9
+    _d9 = _jc.load(open(_fn9.DEUDA, encoding='utf-8'))
+    _D9['nuevas'], _D9['saldadas'] = _fn9.comparar_deuda(_fn9.excepciones_en_scripts(), _d9['excepciones'])
+    _D9['n_tablas'] = len(_d9['excepciones'])
+    _D9['sobre'], _D9['bajo'] = [], []
+    for _p in sorted(_gc.glob('festivals/*.json')):
+        _fid = _osc.path.basename(_p)[:-5]
+        try:
+            _n = len(_fn9.sin_entrada(_jc.load(open(_p, encoding='utf-8'))))
+        except Exception:
+            continue
+        _tope = 0 if _osc.path.exists(f'festivals/staging/{_fid}-afirmaciones.json') else _d9['sin_entrada'].get(_fid, 0)
+        (_D9['sobre'] if _n > _tope else _D9['bajo'] if _n < _tope else []).append(f'{_fid} {_n}/{_tope}')
+    _D9['n_entrada'] = sum(_d9['sin_entrada'].values())
+    # festival mixed: la falta de is_free YA NO es la señal de «paga» — tiene que
+    # decirlo (funcion.paga_supuesta, misma regla que ensamblar; 16 oct 2026)
+    _D9['mixta'] = []
+    for _p in sorted(_gc.glob('festivals/*.json')):
+        _fid = _osc.path.basename(_p)[:-5]
+        try:
+            _fs = _jc.load(open(_p, encoding='utf-8')).get('films') or []
+        except Exception:
+            continue
+        if not any(_x.get('is_free') is None and not _x.get('by_invitation') for _x in _fs):
+            continue
+        _m9 = _fn9.ticketing_model_de(_fid.replace('-', ''))
+        _k9 = sum(_fn9.paga_supuesta(_x, _m9) for _x in _fs)
+        if _k9:
+            _D9['mixta'].append(f'{_fid} ({_k9})')
+    _D9['afs'] = []
+    for _p in sorted(_gc.glob('festivals/staging/*-afirmaciones.json')):
+        _fid = _osc.path.basename(_p)[:-len('-afirmaciones.json')]
+        try:
+            _fn9.cargar(_fid)
+        except Exception as _e:
+            _D9['afs'].append(f'{_fid}: {_e}')
+    _D9['conflictos'] = _fn9.conflictos_abiertos()
+except Exception as _e:
+    _D9['error'] = str(_e)
+
+check = 'camino-datos'
+# .github/camino-datos.txt decide qué PR se saltea la regresión de la interfaz
+# (17 oct 2026). Si alguien suma ahí una ruta de CÓDIGO de la app, un cambio de
+# código pasaría sin sus tests: esta lista lo prohíbe.
+try:
+    _cd = [l.strip() for l in open('.github/camino-datos.txt', encoding='utf-8')
+           if l.strip() and not l.lstrip().startswith('#')]
+    _prohibido = ('src', 'index.html', 'sw.js', 'tests/', 'playwright', '.github', 'scripts', 'i18n', 'manifest', 'fonts')
+    _malas = [p for p in _cd if any(p == x or p.startswith(x) or x.startswith(p) for x in _prohibido)
+              and not p.startswith('tests/pipeline/')]
+    if _malas:
+        fail(check, 'el camino de datos incluye código de la app (se saltearía sus tests): ' + ', '.join(_malas))
+    else:
+        ok(check, f'camino de datos: {len(_cd)} rutas, ninguna de código de la app')
+except FileNotFoundError:
+    fail(check, 'falta .github/camino-datos.txt (lo lee el workflow de Playwright)')
+
+check = 'fuentes-vivas-declaradas'
+# Un festival VIGENTE con pipeline debería declarar sus fuentes vivas en el plan
+# (pipeline/fuentes_vivas.py, 20 oct 2026): sin la declaración, nada frena que se
+# arme contra la página de hace dos semanas. Aviso, no freno, mientras se declaran.
+try:
+    import subprocess as _spv, datetime as _dtv, glob as _glv
+    _hoy = _dtv.date.today(); _sin = []
+    for _pp in sorted(_glv.glob('pipeline/*.plan.json')):
+        _fid = os.path.basename(_pp)[:-len('.plan.json')]
+        _pl = json.load(open(_pp, encoding='utf-8'))
+        # Declarada = la lista con fuentes, o la lista VACÍA con su porqué en
+        # `_nota_fuentes_vivas` (Guatapé: su programación sale de láminas de IG,
+        # sin web viva). Vacía y sin nota no cuenta: callaría el aviso sin decir nada.
+        if _fid.startswith('festival') or _pl.get('fuentes_vivas') or (
+                'fuentes_vivas' in _pl and str(_pl.get('_nota_fuentes_vivas') or '').strip()):
+            continue
+        _r = _spv.run(['node', 'scripts/ficha-de.mjs', re.sub(r'-(\d+)$', r'\1', _fid)], capture_output=True, text=True, timeout=30)
+        if _r.returncode: continue
+        _fi = json.loads(_r.stdout)
+        try:
+            _ini = _dtv.date.fromisoformat(_fi['festivalStartStr'][:10]) - _dtv.timedelta(days=2)
+            _fin = _dtv.date.fromisoformat(_fi['festivalEndStr'][:10])
+        except (KeyError, ValueError):
+            continue
+        if _ini <= _hoy <= _fin:
+            _sin.append(_fid)
+    if _sin:
+        warn(check, f'{len(_sin)} festival(es) VIGENTE(s) sin fuentes_vivas en su plan: {", ".join(_sin)} — '
+                    'declarar las fuentes que cambian (pipeline/PROTOCOLO.md Paso 0)')
+    else:
+        ok(check, 'todo festival vigente con pipeline declara sus fuentes vivas')
+except Exception as _e:
+    warn(check, f'no se pudo verificar fuentes-vivas-declaradas: {_e}')
+
+check = 'git-config-sano'
+# La config de git es UNA para todas las copias de trabajo (.git/config del repo
+# principal). Dos veces el 19 oct 2026 un `git init` de un test, con GIT_DIR /
+# GIT_WORK_TREE heredados dentro de un hook, la dejó rota: `core.bare = true`
+# (la carpeta principal dejó de ser un checkout) y `core.worktree` apuntando a
+# una copia ya borrada. El síntoma salía horas después y en OTRA sesión. Esto lo
+# ve en el push que lo causa y dice cómo arreglarlo.
+try:
+    import subprocess as _spg
+    # Dónde está la config SIN preguntarle a git: justo cuando está rota, git no
+    # puede contestarlo (con core.worktree a una carpeta borrada, `git rev-parse`
+    # sale con «fatal»), y un guardián que lee el archivo equivocado da «sano».
+    # (Primera versión de este check: no frenaba ninguno de los dos casos.)
+    _g = os.path.join(os.path.dirname(os.path.abspath(__file__)), '.git')
+    if os.path.isfile(_g):        # copia de trabajo: «gitdir: …/.git/worktrees/<x>»
+        _wd = open(_g, encoding='utf-8').read().split('gitdir:', 1)[1].strip()
+        _c = os.path.join(_wd, 'commondir')
+        _cd = os.path.normpath(os.path.join(_wd, open(_c).read().strip())) if os.path.exists(_c) else _wd
+    else:
+        _cd = _g
+    if not os.path.isfile(os.path.join(_cd, 'config')):
+        raise RuntimeError(f'no encontré la config de git en {_cd}')
+    _malo = []
+    for _k, _mal, _arreglo in [('core.bare', lambda v: v == 'true', 'git config --file {c} core.bare false'),
+                               ('core.worktree', lambda v: bool(v), 'git config --file {c} --unset core.worktree')]:
+        _v = _spg.run(['git', 'config', '--file', os.path.join(_cd, 'config'), '--get', _k],
+                      capture_output=True, text=True, timeout=30, cwd='/').stdout.strip()
+        if _mal(_v):
+            _malo.append(f'{_k} = {_v} → {_arreglo.format(c=os.path.join(_cd, "config"))}')
+    if _malo:
+        fail(check, 'la config COMPARTIDA de git está rota (afecta a todas las copias de trabajo): ' + ' · '.join(_malo))
+    else:
+        ok(check, 'la config compartida de git está sana (ni bare ni core.worktree)')
+except Exception as _e:
+    fail(check, f'no se pudo verificar git-config-sano (falla cerrado): {_e}')
+
+check = 'asset-write-once'
+# Un afiche PUBLICADO nunca cambia de contenido con el mismo nombre (19 oct 2026,
+# hallazgo de Onboarding). El SW guarda /assets/ caché-primero en un caché que
+# sobrevive a todos los deploys: quien ya vio el viejo se queda con él PARA
+# SIEMPRE, sin arreglo desde el servidor. [keyart-write-once] lo vigilaba solo para
+# los afiches de portada; los de obras y actividades no los frenaba nadie (Guatapé:
+# se evitó a mano con -v2). Afiche nuevo = archivo nuevo. Compara contra main,
+# incluido lo que todavía no se commiteó.
+try:
+    import subprocess as _spw
+    _rw = _spw.run(['git', 'diff', '--name-only', '--diff-filter=M', 'origin/main', '--', 'assets/'],
+                   capture_output=True, text=True, timeout=60)
+    if _rw.returncode:
+        warn(check, f'no se pudo comparar contra origin/main: {(_rw.stderr or "").strip()[:100]}')
+    else:
+        _pis = [f for f in _rw.stdout.split() if re.search(r'\.(jpe?g|png|webp|gif|svg|avif)$', f, re.I)]
+        if _pis:
+            fail(check, f'{len(_pis)} afiche(s) publicado(s) cambiaron de contenido con el MISMO nombre — '
+                        'quien ya los vio se queda con el viejo para siempre (caché del SW). Usá un nombre '
+                        'nuevo (p. ej. -v2) y apuntá el JSON ahí: ' + ', '.join(_pis[:6]))
+        else:
+            ok(check, 'ningún afiche publicado se pisó con el mismo nombre')
+except Exception as _e:
+    fail(check, f'no pudo medirse: {_e}')
+
+check = 'renombre-no-se-borra'
+# Un renombre de <fid>-titulos-anteriores.json es lo que deja a la app mover lo
+# que el usuario guardó bajo el título viejo. Si una edición lo saca, quien
+# guardó la obra antes y no abrió la app desde entonces la pierde, sin síntoma
+# (#1146, 17 oct 2026: reescribí el de MUBI y se perdía «Voilà Varda»).
+# Se compara contra main: todo renombre que estaba sigue estando.
+try:
+    import subprocess as _sp9
+    _perdidos = []
+    for _p in sorted(_gc.glob('festivals/staging/*-titulos-anteriores.json')):
+        _r = _sp9.run(['git', 'show', f'origin/main:{_p}'], capture_output=True, text=True)
+        if _r.returncode:
+            continue
+        _antes = {(x['antes'], x['ahora']) for x in _jc.loads(_r.stdout).get('renombres') or []}
+        _ahora = {(x['antes'], x['ahora']) for x in _jc.load(open(_p, encoding='utf-8')).get('renombres') or []}
+        _perdidos += [f'{_osc.path.basename(_p)}: «{a}» → «{b}»' for a, b in sorted(_antes - _ahora)]
+    if _perdidos:
+        fail(check, 'renombre(s) que estaban en main y ya no: ' + ' · '.join(_perdidos[:6]))
+    else:
+        ok(check, 'ningún renombre salió de los -titulos-anteriores.json')
+except Exception as _e:
+    fail(check, f'no pudo medirse: {_e}')
+
+check = 'preonboarding-completo'
+# Un festival que TODAVÍA NO SALIÓ y ya tiene catálogo: cada obra con afiche o su
+# porqué (18 oct 2026: FICICA llegó a dos días de abrir con el catálogo sin
+# afiches, y el arreglo salió en cascada). pipeline/preonboarding.py; la deuda
+# (pipeline/preonboarding-deuda.json) solo baja y un festival nuevo tiene cero.
+try:
+    import os as _ospo, sys as _syspo, json as _jpo
+    _syspo.path.insert(0, _ospo.path.join(_ospo.path.dirname(_ospo.path.abspath(__file__)), 'pipeline'))
+    import preonboarding as _po
+    _sobre_po, _ = _po.comparar(_po.medir(), _jpo.load(open(_po.DEUDA, encoding='utf-8'))['deuda'])
+    if _sobre_po:
+        _m_po = _po.medir()
+        fail(check, 'pre-onboarding incompleto (obras sin afiche ni porqué): ' + ' · '.join(
+            f'{f}: {n} (p. ej. {", ".join(_m_po[f][:3])})' for f, n in _sobre_po.items())
+            + ' — enriquecer con afiches o declarar `sin_afiche` en <fid>-correcciones.json')
+    else:
+        ok(check, 'todo catálogo de festival por salir tiene sus afiches o su porqué')
+except Exception as _e:
+    fail(check, f'no pudo medirse: {_e}')
+
+check = 'id-funcion-estable'
+# El id estable de la función (docs/FUNCION.md §11): contra main, ningún id
+# publicado desaparece sin registro ni cambia de función; ninguno se repite.
+try:
+    import subprocess as _spid, json as _jid, glob as _gid, os as _osid
+    _mal_id = []
+    for _p in sorted(_gid.glob('festivals/*.json')):
+        _r = _spid.run(['git', 'show', f'origin/main:{_p}'], capture_output=True, text=True)
+        if _r.returncode:
+            continue
+        _fid = _osid.path.basename(_p)[:-5]
+        _rp = f'festivals/staging/{_fid}-funciones-ids.json'
+        _reg = _jid.load(open(_rp, encoding='utf-8')) if _osid.path.exists(_rp) else {}
+        _mal_id += [f'{_fid}: {x}' for x in _fn9.ids_estables(_jid.loads(_r.stdout), _jid.load(open(_p, encoding='utf-8')), _reg)]
+    if _mal_id:
+        fail(check, ' · '.join(_mal_id[:6]))
+    else:
+        ok(check, 'ningún id de función desapareció, cambió de función ni se repite')
+except Exception as _e:
+    fail(check, f'no pudo medirse: {_e}')
+
+check = 'excepcion-en-crudo'
+if 'error' in _D9:
+    fail(check, f'la deuda del modelo no pudo medirse: {_D9["error"]}')
+elif _D9['nuevas']:
+    fail(check, 'tabla(s) de excepciones NUEVA(S) en un script de festival — una corrección de función es '
+                'una afirmación (docs/FUNCION.md): ' + ', '.join(f'{a}:{b}' for a, b in _D9['nuevas']))
+else:
+    ok(check, f'ninguna tabla nueva con nombre de corrección en un script de festival ({_D9["n_tablas"]} de deuda; el detector mira nombres, no mutaciones)')
+    if _D9['saldadas']:
+        warn(check, f'bajó la deuda ({len(_D9["saldadas"])} saldada/s) — python3 pipeline/funcion.py --bajar-deuda')
+
+check = 'entrada-explicita'
+if 'error' in _D9:
+    fail(check, f'no pudo medirse: {_D9["error"]}')
+elif _D9['sobre']:
+    fail(check, 'funciones que no dicen cómo se entra, por encima de su deuda (en el modelo: 0): ' + ', '.join(_D9['sobre']))
+else:
+    ok(check, f'ninguna función nueva sin entrada ({_D9["n_entrada"]} de deuda)')
+    if _D9['bajo']:
+        warn(check, 'bajó la deuda en ' + ', '.join(_D9['bajo']) + ' — python3 pipeline/funcion.py --bajar-deuda')
+
+check = 'entrada-mixta'
+if 'error' in _D9:
+    fail(check, f'no pudo medirse: {_D9["error"]}')
+elif _D9['mixta']:
+    fail(check, 'festival mixed con funciones que no dicen si se pagan (la falta del dato no puede ser la señal de «paga») — '
+                're-armar o python3 pipeline/entrada-paga-supuesta.py <fid>: ' + ', '.join(_D9['mixta']))
+else:
+    ok(check, 'en todo festival mixed, cada función dice si se paga')
+
+check = 'propuestas-validas'
+try:
+    import os as _ospr9, sys as _syspr9
+    _syspr9.path.insert(0, _ospr9.path.join(_ospr9.path.dirname(_ospr9.path.abspath(__file__)), 'pipeline'))
+    import propuestas as _pr9
+    _PR9 = _pr9.verificar()
+    if _PR9:
+        fail(check, 'la cola de propuestas no cuadra: ' + ' · '.join(_PR9[:8]))
+    else:
+        _np9 = sum(len(v) for v in _pr9.pendientes().values())
+        ok(check, f'cola de propuestas sana ({_np9} pendiente/s)')
+except Exception as _e:
+    fail(check, f'no pudo medirse: {_e}')
+
+check = 'afirmaciones-validas'
+if 'error' in _D9:
+    fail(check, f'no pudo medirse: {_D9["error"]}')
+elif _D9['afs']:
+    fail(check, ' · '.join(_D9['afs']))
+else:
+    ok(check, 'toda afirmación con fuente, formato y rango')
+
+check = 'conflicto-abierto'
+if 'error' in _D9:
+    fail(check, f'no pudo medirse: {_D9["error"]}')
+elif _D9['conflictos']:
+    fail(check, 'conflictos sin decisión: ' + ', '.join(_D9['conflictos']))
+else:
+    ok(check, 'sin conflictos abiertos')
 
 # ── [css-huerfana] toda clase del <style> la emite alguien ───────────────────────
 # Medido el 5 sep 2026: 825 clases en index.html, 45 que nada emitía — 14 nunca
@@ -6805,6 +7559,7 @@ try:
         'synopsis_lang': 'lo consumen los guardianes ([paridad-derivados])',
         'description_lang': 'el idioma de la descripción de un programa o actividad; mismo dueño que synopsis_lang (lib.separar_descripcion)',
         'tmdb_id': 'lo usa el pipeline para reenriquecer sin volver a buscar',
+        'work_id': 'enlaza la presentación con su obra del catálogo (pipeline/catalogo.py, [presentacion-con-obra])',
     }
     # DEUDA DECLARADA (17 ago 2026). No crece: cada uno se cablea o se borra.
     # Los dos primeros pares son EL MISMO DATO CON DOS NOMBRES — ahí no sobra el

@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "PROGRAMACIÓN «Caminos del tiempo» 2026 (PDF) + las fichas de obra de villadelcine.com",
-  "capturado": "2026-10-07",
+  "capturado": "2026-10-14",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "acceso_por_defecto": {
@@ -206,7 +206,10 @@
    },
    "is_free": true,
    "description": "Todo camino nace en un instante que pone el tiempo en movimiento. Esta ceremonia señala ese origen: un ritual de apertura donde el territorio, la memoria ancestral y el cine se encuentran para dar comienzo a la duodécima edición del festival.",
-   "description_lang": "es"
+   "description_lang": "es",
+   "titulos_anteriores": [
+    "Ceremonia UNQUY de apertura y Cine Concierto Caminos Sonoros"
+   ]
   },
   {
    "title": "Cine Concierto Caminos Sonoros — León Quintero",
@@ -223,10 +226,13 @@
     "url": "https://villadelcine.com/ (PROGRAMACIÓN 2026.pdf) p3",
     "date": "2026-09-19"
    },
-   "is_free": true
+   "is_free": true,
+   "titulos_anteriores": [
+    "Ceremonia UNQUY de apertura y Cine Concierto Caminos Sonoros"
+   ]
   },
   {
-   "title": "Amor a primera vista",
+   "title": "Un amor a primera vista",
    "type": "film",
    "section": "🗺️ Territorios",
    "director": "Andrés Quintero",
@@ -247,7 +253,12 @@
     "url": "https://villadelcine.com/ (PROGRAMACIÓN 2026.pdf) p3",
     "date": "2026-09-19"
    },
-   "is_free": true
+   "is_free": true,
+   "lbSlug": "un-amor-a-primera-vista",
+   "tmdb_id": 1791658,
+   "titulos_anteriores": [
+    "Amor a primera vista"
+   ]
   },
   {
    "title": "Mucho Gusto",
@@ -339,7 +350,10 @@
      "posterSource": "oficial",
      "synopsis": "Francis, un niño optimista del campo, sueña con devolver la alegría a su hogar. Cuando aparece un inesperado milagro dulce, cree haber encontrado la respuesta a los problemas de su familia. Sin embargo, pronto descubrirá que incluso los deseos más hermosos pueden traer sorpresas difíciles de imaginar.",
      "genre": "Fantasía y Animación",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "titulos_anteriores": [
+      "A Sweet Miracle"
+     ]
     },
     {
      "title": "Solo un ave más",
@@ -351,7 +365,10 @@
      "posterSource": "oficial",
      "synopsis": "Tras sufrir un accidente en la ciudad, Raquelita, una paloma colombiana, encuentra refugio en la ventana de Tomás. Mientras se recupera junto al niño, emprende un viaje por calles y tejados que le revela personajes, detalles invisibles y nuevas formas de vida, hasta descubrir su propio lugar en el mundo.",
      "genre": "Aventura y Animación",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "titulos_anteriores": [
+      "Just Another Bird"
+     ]
     }
    ]
   },
@@ -477,7 +494,9 @@
      "year": 2025,
      "duration": "4 min",
      "poster": "/assets/villadelcine-2026/sua-y-sie-guardianes-de-la-vida.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
+     "lbSlug": "sua-y-sie-guardianes-de-la-vida",
+     "tmdb_id": 1791659,
      "synopsis": "En el páramo de Mata de Mora, dos niños encarnan a Sua, el Sol, y Sie, el Agua. Hablando en muisca y español, estas fuerzas sagradas dialogan sobre el equilibrio de la vida e invitan a proteger el territorio, la memoria ancestral y las fuentes que sostienen a su comunidad.",
      "genre": "Fábula",
      "synopsis_lang": "es"
@@ -516,7 +535,9 @@
      "year": 2026,
      "duration": "5 min",
      "poster": "/assets/villadelcine-2026/manos-rojas.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
+     "lbSlug": "manos-rojas",
+     "tmdb_id": 1791661,
      "synopsis": "En medio del conflicto armado colombiano, una comunidad ve cómo el miedo y los secuestros alteran su vida cotidiana. Mientras las familias atraviesan ausencias, separaciones y decisiones dolorosas, surge una pregunta urgente: ¿cómo conservar la esperanza? Una historia sobre las huellas de la guerra y la posibilidad de construir paz desde la memoria.",
      "genre": "Drama",
      "synopsis_lang": "es"
@@ -532,7 +553,10 @@
      "posterSource": "oficial",
      "synopsis": "Tras la muerte de su esposa, Ángel enfrenta el duelo en la soledad de su casa rural. Una gotera invade progresivamente el espacio hasta convertirse en la forma tangible de su ausencia, empujándolo a decisiones irracionales mientras intenta aprender a habitar una vida que ya no reconoce.",
      "genre": "Drama",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "titulos_anteriores": [
+      "Grief"
+     ]
     },
     {
      "title": "I don't know what to do",
@@ -561,7 +585,10 @@
      "posterSource": "oficial",
      "synopsis": "Reem intenta reconstruir el recuerdo perdido durante su primera convulsión. Entre archivos, imágenes fragmentadas y preguntas sin respuesta, la memoria de la infancia acompaña un recorrido íntimo por la experiencia de vivir con epilepsia, donde recordar se convierte en una forma de resistir aquello que el cuerpo borra.",
      "genre": "Documental / Experimental",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "titulos_anteriores": [
+      "Lost Fragments of a Seizure"
+     ]
     },
     {
      "title": "Memorias del Alba",
@@ -570,7 +597,9 @@
      "flags": "🇲🇽",
      "duration": "8 min",
      "poster": "/assets/villadelcine-2026/memorias-del-alba.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
+     "lbSlug": "memorias-del-alba",
+     "tmdb_id": 1791663,
      "synopsis": "Tatao crece junto a su abuela Alba, unidos por una rutina que da forma a su vida cotidiana. Cuando la memoria empieza a desvanecerse, su relación se transforma, revelando cómo el amor perdura incluso a medida que los recuerdos desaparecen lentamente.",
      "genre": "Drama / Animación",
      "synopsis_lang": "es"
@@ -648,7 +677,10 @@
      "posterSource": "oficial",
      "synopsis": "Francis, un niño optimista del campo, sueña con devolver la alegría a su hogar. Cuando aparece un inesperado milagro dulce, cree haber encontrado la respuesta a los problemas de su familia. Sin embargo, pronto descubrirá que incluso los deseos más hermosos pueden traer sorpresas difíciles de imaginar.",
      "genre": "Fantasía y Animación",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "titulos_anteriores": [
+      "A Sweet Miracle"
+     ]
     },
     {
      "title": "Solo un ave más",
@@ -660,7 +692,10 @@
      "posterSource": "oficial",
      "synopsis": "Tras sufrir un accidente en la ciudad, Raquelita, una paloma colombiana, encuentra refugio en la ventana de Tomás. Mientras se recupera junto al niño, emprende un viaje por calles y tejados que le revela personajes, detalles invisibles y nuevas formas de vida, hasta descubrir su propio lugar en el mundo.",
      "genre": "Aventura y Animación",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "titulos_anteriores": [
+      "Just Another Bird"
+     ]
     }
    ]
   },
@@ -695,7 +730,10 @@
      "tmdb_id": 1743109,
      "synopsis": "En la vejez, una pareja contempla cómo la tierra destinada a sostener su retiro se convierte en una condena. Marcado por el abuso estatal y distintas formas de violencia, el territorio los desangra económica y emocionalmente. Un retrato íntimo sobre el desarraigo, la resistencia y la obstinación de permanecer donde todo parece expulsarlos.",
      "genre": "Documental Híbrido / Drama",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "titulos_anteriores": [
+      "Drunk hearing the rain drops fall"
+     ]
     },
     {
      "title": "Memoria colectiva",
@@ -711,7 +749,10 @@
      "synopsis": "En 1983, soldados encapuchados irrumpen en la casa de Adelina y se llevan a su esposo, quien jamás regresa. Ante el silencio de las autoridades, ella se une a otras mujeres marcadas por la misma ausencia. Juntas convierten el dolor en memoria y la memoria en una exigencia de justicia.",
      "synopsis_en": "In 1983, during the darkest days of Peru’s Armed Conflict with the Shining Path, masked soldiers entered Adelina’s home and took her husband away. She would never see him again. After facing silence and contempt from the Police and Army, Adelina joins forces with the many other women who have lost their husbands and children to soldiers who were supposed to protect them. Together, they will unite to demand justice.",
      "genre": "Animación / Drama",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "titulos_anteriores": [
+      "Collective Memory"
+     ]
     },
     {
      "title": "Con la mano arriba",
@@ -764,7 +805,8 @@
      "tmdb_id": 1565878,
      "synopsis": "Colombia, 1951. En plena Violencia, dos chulavitas, sicarios al servicio del Gobierno, siguen a un sacerdote durante la noche, convencidos de que los conducirá hasta una cabaña donde se esconden sus víctimas. Al internarse en el bosque, descubrirán un horror mucho más oscuro que cualquiera de sus propios actos.",
      "genre": "Drama / Terror",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "synopsis_en": "Colombia, 1951. In the thick of La Violencia, the period of brutal political war between Liberals and Conservatives, two chulavitas —hired killers on the government’s payroll— stalk a priest through the dark, waiting for him to lead them to the cabin in the woods where their next victims are hiding. But the horror they find there is a thousand times worse than the pain they meant to inflict."
     },
     {
      "title": "Sierra: El álbum mortuorio",
@@ -811,7 +853,10 @@
      "synopsis_en": "After a violent confrontation, a wounded soldier is rescued by Yolanda, an elderly farmer, and her granddaughter Alejandra. The two live on a ranch in the middle of the mountains, where they hide the young man. While Yolanda decides whether they should help him, putting their own lives at risk, Alejandra will try to confirm her own suspicions.",
      "genre": "Drama / Thriller",
      "synopsis_lang": "es",
-     "title_en": "A Burning Turret"
+     "title_en": "A Burning Turret",
+     "titulos_anteriores": [
+      "Tormenta en Llamas"
+     ]
     }
    ]
   },
@@ -943,7 +988,10 @@
      "posterSource": "oficial",
      "synopsis": "En una comunidad selvática amenazada por un proyecto minero, Jenawen, una joven indígena alejada de sus raíces, atraviesa un portal hacia un futuro convertido en desierto. Allí deberá salvar a los últimos sobrevivientes de una catástrofe ambiental y reencontrarse con el territorio que dejó atrás.",
      "genre": "Ciencia Ficción",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "titulos_anteriores": [
+      "Extinction"
+     ]
     },
     {
      "title": "El último campeón",
@@ -955,7 +1003,13 @@
      "posterSource": "oficial",
      "synopsis": "Tras 75 años de espera, Atlético Bucaramanga conquista su primera estrella. A través de hinchas de distintas generaciones, barristas y líderes comunitarios, el documental retrata cómo el fútbol transformó heridas, recuperó esperanzas y unió a toda una ciudad alrededor de una celebración largamente soñada.",
      "genre": "Documental",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "lbSlug": "el-ultimo-campeon",
+     "tmdb_id": 1797487,
+     "synopsis_en": "Atlético Bucaramanga waited 75 years for its first Colombian league title, won on penalties in June 2024. The film follows that season through the club's supporters: a 60-year-old man who promises to have the crest tattooed on his chest, a 90-year-old grandmother, a teacher working to keep children away from crime, former barra members who left violence behind, and the city that adopted the Cumbia de los trapos as its anthem.",
+     "titulos_anteriores": [
+      "The Last Champion"
+     ]
     },
     {
      "title": "El cine dentro del cine",
@@ -967,7 +1021,10 @@
      "posterSource": "oficial",
      "synopsis": "Tres películas que estuvieron a punto de desaparecer conducen a Diana Kuéllar y Manuel Silva por Barcelona, Milán, Santiago de Chile y Cali. Entre archivos, videocartas y protagonistas de su recuperación, el viaje indaga qué pierde una sociedad cuando una película desaparece y cómo el cine transforma la memoria al volver a la luz.",
      "genre": "Documental",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "titulos_anteriores": [
+      "El cine dentro del cine dentro del cine"
+     ]
     },
     {
      "title": "Cuba 2001: imágenes del futuro",
@@ -979,7 +1036,10 @@
      "posterSource": "editorial",
      "synopsis": "Manifiesto de archivos audiovisuales que acomoda con zapeo historias de cámaras y sus viajes mientras graban fiestas familiares y de cine. El viaje más largo es en Cuba. Salen muchas personas, van dos",
      "genre": "Documental",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "titulos_anteriores": [
+      "Cuba 2001. Imágenes del futuro I"
+     ]
     },
     {
      "title": "Mi tesoro",
@@ -1003,7 +1063,7 @@
    "year": 2026,
    "country": "Colombia",
    "flags": "🇨🇴",
-   "duration": "120 min",
+   "duration": "113 min",
    "genre": "Fantasía / Drama / Comedia",
    "day": "2026-10-15",
    "time": "17:15",
@@ -1023,7 +1083,8 @@
    "lbSlug": "rains-over-babel",
    "tmdb_id": 1388977,
    "synopsis_en": "In a retro-futuristic, tropical-punk twist on Dante’s Inferno, a group of misfits converges at Babel, a legendary dive bar that doubles as purgatory, where La Flaca—the city’s Grim Reaper—presides. Here, souls gamble years of their lives with her, daring to outwit Death Herself.",
-   "title_en": "Rains Over Babel"
+   "title_en": "Rains Over Babel",
+   "_duracion_corregida": "TMDB 1388977 (113, Sundance 2025); FICMA y Girardota 111, Narrar el futuro 113"
   },
   {
    "title": "Umbrales",
@@ -1129,7 +1190,9 @@
      "flags": "🇨🇴",
      "duration": "139 min",
      "poster": "/assets/villadelcine-2026/volar.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
+     "lbSlug": "volar-1",
+     "tmdb_id": 1791664,
      "synopsis": "Tras la desaparición de Claudia, Alirio, un niño habitante de calle, se niega a quedar nuevamente solo. Por eso se lleva a Alicia, una anciana olvidada en un parque. Lo que comienza como un rapto transforma dos vidas invisibles: juntos construyen el afecto y el hogar que la ciudad les había negado.",
      "genre": "Drama",
      "synopsis_lang": "es"
@@ -1151,6 +1214,9 @@
      "synopsis_lang": "es",
      "title_en": "Tuktu, Father Maize"
     }
+   ],
+   "titulos_anteriores": [
+    "Tránsito"
    ]
   },
   {
@@ -1194,7 +1260,10 @@
      "posterSource": "oficial",
      "synopsis": "Francis, un niño optimista del campo, sueña con devolver la alegría a su hogar. Cuando aparece un inesperado milagro dulce, cree haber encontrado la respuesta a los problemas de su familia. Sin embargo, pronto descubrirá que incluso los deseos más hermosos pueden traer sorpresas difíciles de imaginar.",
      "genre": "Fantasía y Animación",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "titulos_anteriores": [
+      "A Sweet Miracle"
+     ]
     },
     {
      "title": "Solo un ave más",
@@ -1206,7 +1275,10 @@
      "posterSource": "oficial",
      "synopsis": "Tras sufrir un accidente en la ciudad, Raquelita, una paloma colombiana, encuentra refugio en la ventana de Tomás. Mientras se recupera junto al niño, emprende un viaje por calles y tejados que le revela personajes, detalles invisibles y nuevas formas de vida, hasta descubrir su propio lugar en el mundo.",
      "genre": "Aventura y Animación",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "titulos_anteriores": [
+      "Just Another Bird"
+     ]
     }
    ]
   },
@@ -1296,7 +1368,10 @@
      "posterSource": "oficial",
      "synopsis": "Un niño capaz de convertir cualquier momento en una aventura vive perdido entre fantasías, aunque sus notas paguen el precio. Decididos a disciplinarlo, sus padres vacían su habitación de juguetes y música. El plan funciona, pero también apaga algo esencial en él, hasta que un inesperado cachorro vuelve a encender su imaginación.",
      "genre": "Animación y Fantasía",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "titulos_anteriores": [
+      "Pros and Cons of Daydreaming"
+     ]
     },
     {
      "title": "They Call It Sausage",
@@ -1332,7 +1407,9 @@
      "year": 2025,
      "duration": "7 min",
      "poster": "/assets/villadelcine-2026/la-ultima-historia.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
+     "lbSlug": "la-ultima-historia",
+     "tmdb_id": 1791665,
      "synopsis": "Pipe, un escritor anciano que enfrenta el Alzheimer, intenta terminar la que podría ser su última obra. Mientras escribe, sus recuerdos se confunden con historias ajenas hasta llevarlo de regreso a su infancia, cuando, sin zapatos y con un balón de trapo, soñaba con vestir la camiseta de la Selección Colombia.",
      "genre": "Drama y Ciencia Ficción",
      "synopsis_lang": "es"
@@ -1345,7 +1422,9 @@
      "year": 2026,
      "duration": "4 min",
      "poster": "/assets/villadelcine-2026/behind-the-door.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
+     "lbSlug": "derriere-la-porte-2026",
+     "tmdb_id": 1696442,
      "synopsis": "Leo despierta atrapado en una habitación de hotel a punto de perder su tren. Cuando una voz asegura estar dentro del baño, busca ayuda de su esposa, pero un extraño malentendido convierte el miedo en celos y abre la puerta a una pesadilla.",
      "genre": "Suspenso y Terror",
      "synopsis_lang": "es"
@@ -1468,7 +1547,9 @@
      "flags": "🇨🇴",
      "duration": "9 min",
      "poster": "/assets/villadelcine-2026/monte-curandero.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
+     "lbSlug": "monte-curandero",
+     "tmdb_id": 1791666,
      "synopsis": "En las montañas del Putumayo, las abuelas guardan el conocimiento medicinal de las plantas y lo transmiten de generación en generación. Sus tejidos convierten la relación con el agua, la chagra y el monte en símbolos vivos. Un acercamiento sensible a una naturaleza que conserva una memoria más antigua y extensa que la nuestra.",
      "genre": "Documental",
      "synopsis_lang": "es"
@@ -1528,7 +1609,10 @@
      "posterSource": "oficial",
      "synopsis": "Francis, un niño optimista del campo, sueña con devolver la alegría a su hogar. Cuando aparece un inesperado milagro dulce, cree haber encontrado la respuesta a los problemas de su familia. Sin embargo, pronto descubrirá que incluso los deseos más hermosos pueden traer sorpresas difíciles de imaginar.",
      "genre": "Fantasía y Animación",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "titulos_anteriores": [
+      "A Sweet Miracle"
+     ]
     },
     {
      "title": "Solo un ave más",
@@ -1540,7 +1624,10 @@
      "posterSource": "oficial",
      "synopsis": "Tras sufrir un accidente en la ciudad, Raquelita, una paloma colombiana, encuentra refugio en la ventana de Tomás. Mientras se recupera junto al niño, emprende un viaje por calles y tejados que le revela personajes, detalles invisibles y nuevas formas de vida, hasta descubrir su propio lugar en el mundo.",
      "genre": "Aventura y Animación",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "titulos_anteriores": [
+      "Just Another Bird"
+     ]
     }
    ]
   },
@@ -1570,7 +1657,9 @@
      "flags": "🇨🇴",
      "duration": "10 min",
      "poster": "/assets/villadelcine-2026/quimera.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
+     "lbSlug": "quimera-4",
+     "tmdb_id": 1791667,
      "synopsis": "James, de doce años, vive con Francisco en una granja hasta que la policía irrumpe y revela que el hombre que llama padre lo secuestró años atrás. Trasladado a un centro terapéutico, el niño deberá reconstruir su identidad y aprender a reconocerse detrás de los comportamientos que imita para sobrevivir.",
      "genre": "Thriller Psicológico / Drama",
      "synopsis_lang": "es"
@@ -1582,7 +1671,9 @@
      "flags": "🇨🇴",
      "duration": "15 min",
      "poster": "/assets/villadelcine-2026/diablo-ballena.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
+     "lbSlug": "diablo-ballena",
+     "tmdb_id": 1791668,
      "synopsis": "Carmen, una campesina de sesenta años, rescata de la laguna de Tota a un desconocido que flota junto a un requinto. Él se niega a revelar su identidad, pero el canto de la mítica Diablo Ballena rompe el silencio y conduce a ambos hacia un pasado que aún busca redención.",
      "genre": "Realismo Mágico / Drama",
      "synopsis_lang": "es"
@@ -1636,7 +1727,10 @@
      "synopsis_en": "Cecilia, a selfless 52-year-old woman, decides to break with her life of sacrifices after years of enduring her son s irresponsibility and her family s ingratitude, finally seeking her independence.",
      "genre": "Drama",
      "synopsis_lang": "es",
-     "title_en": "Independence"
+     "title_en": "Independence",
+     "titulos_anteriores": [
+      "Independence"
+     ]
     },
     {
      "title": "Cos de vidre",
@@ -1838,7 +1932,10 @@
      "synopsis": "En su cumpleaños, el joven policía Francisco Revenga es enviado a cubrir una guardia en la estepa patagónica. Durante el trayecto, se detiene en un parador donde unas imágenes comprometedoras quedan grabadas en su celular. Al descubrir que revelan una red de trata, deberá decidir hasta dónde llega su deber.",
      "synopsis_en": "On his birthday, young police officer Francisco Revenga is sent on duty in the middle of the Patagonian steppe. During the journey, he stops for supplies at the Mustang, a combination general store and brothel. There, compromising images related to human trafficking are recorded on his cell phone. Over the next few hours, Francisco will discover the video, which will force him to make a life-altering decision.",
      "genre": "Drama / Suspenso",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "titulos_anteriores": [
+      "Steppe"
+     ]
     },
     {
      "title": "KMKZ: salvaje, libre y valiente",
@@ -1854,7 +1951,10 @@
      "synopsis": "Kamila recorre Bogotá en bicicleta y registra con su celular aquello que la ciudad prefiere ignorar. Junto a Ruco, Alexa y Leonor encuentra refugio entre vidas atravesadas por la violencia y el abandono. Cuando Leonor desaparece, sus imágenes se convierten en archivo, memoria y una forma urgente de resistencia.",
      "synopsis_en": "Camila, a lonely communications student, is rescued from a street robbery by Ruco and Alexa, two young anarchists and street vendors who use violence to punish thieves in the neighborhood. Through her growing friendship with Ruco and Alexa, Camila meets Leonor, with whom she forms a deep mother-daughter bond. When Leonor mysteriously disappears, Camila embarks on a quest to discover the truth.",
      "genre": "Docu-ficción",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "titulos_anteriores": [
+      "KMKZ: Wild, free and brave."
+     ]
     }
    ]
   },
@@ -1901,7 +2001,9 @@
      "year": 2024,
      "duration": "6 min",
      "poster": "/assets/villadelcine-2026/la-silla.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
+     "lbSlug": "la-silla-2024",
+     "tmdb_id": 1791669,
      "synopsis": "En un instituto, dos jóvenes sufren discriminación de formas distintas: uno por desplazarse en silla de ruedas y otro por no encajar en las expectativas de quienes lo rodean. Un encuentro inesperado les permite ponerse en el lugar del otro y descubrir que la empatía puede transformar la forma de mirar y actuar.",
      "genre": "Comedia / Drama",
      "synopsis_lang": "es"
@@ -1917,7 +2019,10 @@
      "posterSource": "oficial",
      "synopsis": "Un estudiante nuevo llega a una escuela dividida por gustos musicales y termina atrapado entre dos grupos rivales. Mientras intenta encontrar su lugar, descubre que las etiquetas suenan más fuerte que las diferencias y que, a veces, basta escuchar al otro para cambiar el ritmo de toda una comunidad.",
      "genre": "Drama / Comedia",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "titulos_anteriores": [
+      "In Between"
+     ]
     },
     {
      "title": "La Sombrilla de Mamá",
@@ -1927,7 +2032,9 @@
      "year": 2025,
      "duration": "20 min",
      "poster": "/assets/villadelcine-2026/la-sombrilla-de-mama.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
+     "lbSlug": "la-sombrilla-de-mama",
+     "tmdb_id": 1791672,
      "synopsis": "En la Colombia de los años cincuenta, Luz pierde la sombrilla que tomó prestada de su madre. La furia de Waldina convierte el hogar en un lugar de miedo, pero, al descubrir el dolor oculto tras su rabia, la niña encuentra un gesto silencioso capaz de acercarlas y comenzar a sanar.",
      "genre": "Drama",
      "synopsis_lang": "es"
@@ -1962,7 +2069,10 @@
      "synopsis": "El deseo nace en el cuerpo, pero también carga con las prohibiciones que lo vigilan. A través de una animación simbólica, el cortometraje recorre los placeres carnales que aprendemos a condenar y convierte la culpa en un vía crucis interior, donde impulso, represión y juicio se enfrentan dentro de una misma conciencia.",
      "synopsis_en": "Veal desires that are condemned deep within us.",
      "genre": "Animación / Fantasía",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "titulos_anteriores": [
+      "Via Crusis"
+     ]
     },
     {
      "title": "Final Act",
@@ -1990,7 +2100,10 @@
      "synopsis": "Después del anochecer, cuatro niños deciden comprobar la leyenda de una niña vestida de blanco que ronda su escuela rural. Lo que empieza como un juego cambia cuando un ruido surge del salón oscuro y la presencia parece señalarlos. Permanecer allí podría revelarles la verdad, pero también convertirlos en parte de ella.",
      "synopsis_en": "In a forgotten town, legend comes to life after dark. Four children face the mystery of “The White Presence,” a ghost that haunts the rural school.",
      "genre": "Terror / Misterio",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "titulos_anteriores": [
+      "La Presencia de Blanco"
+     ]
     },
     {
      "title": "Tiro Libre",
@@ -2013,7 +2126,9 @@
      "year": 2026,
      "duration": "6 min",
      "poster": "/assets/villadelcine-2026/solo.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
+     "lbSlug": "solo-2026-2",
+     "tmdb_id": 1791673,
      "synopsis": "Cansado de una rutina que parece no conducirlo a ningún lugar, un joven decide ascender solo a Monserrate. El esfuerzo físico, la música y el paisaje transforman el recorrido en una prueba interior, donde cada paso despierta emociones distintas y le revela que romper la monotonía también depende de atreverse a comenzar.",
      "genre": "Drama / Experimental",
      "synopsis_lang": "es"
@@ -2077,10 +2192,15 @@
      "flags": "🇨🇴",
      "duration": "19 min",
      "poster": "/assets/villadelcine-2026/momentos-en-movimiento-primeros-pasos-del-ballet-en-colombia.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
+     "lbSlug": "momentos-en-movimiento-primeros-pasos-del",
+     "tmdb_id": 1791674,
      "synopsis": "A través de archivos y testimonios de quienes abrieron camino, este documental reconstruye el nacimiento y la consolidación del ballet en Colombia. Las primeras academias, maestras y bailarinas revelan una historia de disciplina, migraciones y perseverancia, rescatando del olvido a las mujeres que transformaron el movimiento en memoria y profesión.",
      "genre": "Documental / Archivo",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "titulos_anteriores": [
+      "Momentos en movimiento. Primeros pasos del ballet en Colombia"
+     ]
     },
     {
      "title": "Quazar",
@@ -2136,7 +2256,7 @@
     },
     {
      "title": "O Cravista",
-     "director": "Luis E. Ozório",
+     "director": "Luiz E. Ozório",
      "country": "Brasil",
      "flags": "🇧🇷",
      "year": 2026,
@@ -2181,7 +2301,9 @@
      "year": 2026,
      "duration": "4 min",
      "poster": "/assets/villadelcine-2026/benditos-los-viejos.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
+     "lbSlug": "benditos-los-viejos",
+     "tmdb_id": 1791675,
      "synopsis": "En el corazón de una maloca, una mujer atraviesa un ritual de gestación acompañado por el fuego, la danza y figuras de barro trazadas sobre su cuerpo. Mientras la naturaleza anuncia el nacimiento de una nueva vida, el parto se transforma en una celebración de la memoria ancestral, la gratitud y los ciclos que conectan el cuerpo, la tierra y las generaciones.",
      "genre": "Experimental",
      "synopsis_lang": "es"
@@ -2197,7 +2319,10 @@
      "posterSource": "oficial",
      "synopsis": "Cada noche, los relámpagos iluminan el Catatumbo, una tierra donde la belleza natural convive con las marcas del conflicto. Entre guerrillas, desplazamientos y cultivos convertidos en sustento y estigma, esta animación recorre la memoria de una región que, bajo un cielo que nunca se apaga, continúa defendiendo su dignidad y su esperanza.",
      "genre": "Animación y Ciencia Ficción",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "titulos_anteriores": [
+      "Catatumbo: House of Thunder, Memory, and Dignity"
+     ]
     },
     {
      "title": "No se fía, ni aunque lloren",
@@ -2207,7 +2332,9 @@
      "year": 2025,
      "duration": "7 min",
      "poster": "/assets/villadelcine-2026/no-se-fia-ni-aunque-lloren.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
+     "lbSlug": "no-se-fia-ni-aunque-lloren",
+     "tmdb_id": 1791676,
      "synopsis": "Tras despedirse de su abuela Rosa, Mateo decide prepararse para asumir el legado familiar. Su única guía es una lista de reglas escrita durante la infancia, que lo conduce por misiones tan absurdas como solemnes. Entre planes criminales y recuerdos, descubrirá que algunos legados no se reciben: se comprenden.",
      "genre": "Drama y Comedia",
      "synopsis_lang": "es"
@@ -2220,7 +2347,9 @@
      "year": 2026,
      "duration": "4 min",
      "poster": "/assets/villadelcine-2026/anima-de-marea.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
+     "lbSlug": "anima-de-marea",
+     "tmdb_id": 1791677,
      "synopsis": "Durante el Día de los Muertos, José ignora la advertencia de su esposa y sale a pescar en las aguas de La Boquilla. Cuando el mar comienza a devolverle señales imposibles, una presencia sobrenatural lo enfrenta a su mayor temor. En ese territorio, algunas tradiciones no son supersticiones: son reglas de supervivencia.",
      "genre": "Fantasía y Terror",
      "synopsis_lang": "es"
@@ -2233,7 +2362,9 @@
      "year": 2026,
      "duration": "11 min",
      "poster": "/assets/villadelcine-2026/maleza.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
+     "lbSlug": "maleza-2026",
+     "tmdb_id": 1791678,
      "synopsis": "Alba, una sanadora y partera solitaria, ha dedicado su existencia a preservar la vida. Guiada por el espíritu de su gato, recibe una noche a una joven desesperada cuya petición sacude sus convicciones. Entre dolor y silencios, deberá comprender que acompañar también significa permitir que cada quien elija su propio camino.",
      "genre": "Drama y Fantasía",
      "synopsis_lang": "es"
@@ -2245,11 +2376,11 @@
      "flags": "🇨🇴",
      "year": 2025,
      "duration": "4 min",
-     "poster": "/assets/villadelcine-2026/despues-de-tanto-amor.jpg",
-     "posterSource": "editorial",
      "synopsis": "Después de una ruptura, una mujer convierte el duelo en un ritual hecho de colores, palabras y objetos. Entre espinas que brotan del pecho, una casa rota y la silueta del amor ausente, atraviesa el dolor hasta encontrar una nueva forma de habitar aquello que permanece después de tanto amor.",
      "genre": "Drama y Experimental",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "poster": "/assets/ficcali-2026/despues-de-tanto-amor.jpg",
+     "posterSource": "oficial"
     },
     {
      "title": "Shorts",
@@ -2418,7 +2549,10 @@
      "posterSource": "oficial",
      "synopsis": "Desde 1735, los Juegos de Cuadrillas transforman a San Martín, Meta, en escenario de una tradición ecuestre donde convergen memorias indígenas, españolas y africanas. A través de las familias que heredan sus colores y destrezas, el documental descubre el orgullo de quienes convierten cada encuentro en una promesa de continuidad.",
      "genre": "Documental",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "titulos_anteriores": [
+      "Cuadrileros, orgullo y legado"
+     ]
     },
     {
      "title": "La sinfonía Guanentá",
@@ -2430,7 +2564,10 @@
      "posterSource": "oficial",
      "synopsis": "En una expedición por el Cañón del Chicamocha, el maestro Giovanni Laguado reconstruye instrumentos precolombinos para devolverle sonido a la memoria guane. Entre paisaje, arqueología y música, una sinfonía ancestral emerge como puente hacia la identidad cultural de Santander y los saberes que aún resuenan en su territorio.",
      "genre": "Documental",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "titulos_anteriores": [
+      "The Guanentá Symphony"
+     ]
     },
     {
      "title": "Gestos de refugio",
@@ -2446,7 +2583,11 @@
      "synopsis_en": "A group of young dancers witnessed the gradual disappearance of the traditional Danza de las Tabliteras. Determined to bring it back to life, they learned its rhythms and choreography from the four remaining elders who still carried the dance in their bodies. Once again, these gestures echo the movements that decades ago filled the community of San Antonio, Bolívar, with pride, vitality, and collective spirit.",
      "genre": "Videodanza",
      "synopsis_lang": "es",
-     "title_en": "Sheltering Gestures"
+     "title_en": "Sheltering Gestures",
+     "year": 2026,
+     "titulos_anteriores": [
+      "Sheltering Gestures"
+     ]
     }
    ]
   },
@@ -2542,7 +2683,7 @@
    "title": "Claquetazo — Laboratorio de creación",
    "type": "event",
    "section": "🎓 Ruta Académica",
-   "duration": "15 min",
+   "duration": "30 min",
    "day": "2026-10-17",
    "time": "15:30",
    "day_order": 3,
@@ -2631,7 +2772,7 @@
    "year": 2025,
    "country": "Colombia",
    "flags": "🇨🇴",
-   "duration": "120 min",
+   "duration": "123 min",
    "genre": "Comedia / Drama",
    "day": "2026-10-17",
    "time": "19:15",
@@ -2650,12 +2791,16 @@
    "lbSlug": "a-poet",
    "tmdb_id": 1465563,
    "synopsis_en": "An aging poet finds purpose mentoring Yurlady, a talented teen, though exposing her to the poetry scene might be unwise. His own poetic pursuits led nowhere, leaving him a stereotypical obscure writer.",
-   "title_en": "A Poet"
+   "title_en": "A Poet",
+   "_duracion_corregida": "TMDB 1465563 (123, Cannes 2025); Ficmontañas 124"
   }
+ ],
+ "_avisos_duracion": [
+  "«El último campeón»: 5 min en el festival, 77 en TMDB"
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-07T06:49:26",
+  "fecha": "2026-10-14T20:03:25",
   "plan_sha": "59bf137b7d874efe",
   "paso": 16,
   "cmd": "python3 pipeline/ensamblar.py villadelcine-2026"

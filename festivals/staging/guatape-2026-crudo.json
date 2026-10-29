@@ -1,0 +1,960 @@
+{
+ "_provenance": {
+  "fuente": "Instagram @guatapefilmfest — el carrusel oficial de programación (11 láminas)",
+  "capturado": "2026-10-27",
+  "que_aporta": "la programación entera: día, hora, lugar, sección y actividad",
+  "url": "https://www.instagram.com/p/Def6fhKDSQy/",
+  "metodo": "transcripción a ojo lámina por lámina, confirmada hora por hora y título por título con el OCR de la lámina oficial"
+ },
+ "_acceso": {
+  "estado": "Entrada libre",
+  "revisado": "2026-10-18",
+  "fuentes": [
+   "las 11 láminas del carrusel oficial (instagram.com/p/Def6fhKDSQy/)",
+   "los afiches de las masterclass (instagram.com/p/DehGQpgoAvX/)",
+   "12 posts de @guatapefilmfest leídos sin sesión el 17 oct"
+  ],
+  "_por_que": "Ninguna fuente anuncia boletería; regla de Juan: sin aviso de pago es gratis. Las dos masterclass piden inscripción por QR («cupos limitados»)."
+ },
+ "funciones": [
+  {
+   "dia": "2026-10-21",
+   "hora": "09:00",
+   "sede": "IE Sede la Piedra",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Def6fhKDSQy/",
+    "date": "2026-10-14",
+    "lamina": 1
+   },
+   "titulo": "Cine para reflejar territorio",
+   "tipo": "evento",
+   "event_kind": "taller",
+   "seccion": "Actividades",
+   "duracion_min": 180,
+   "poster": "/assets/guatape-2026/cine-para-reflejar-territorio-v2.jpg",
+   "posterSource": "oficial",
+   "sinopsis": "Taller en Iniciación Audiovisual."
+  },
+  {
+   "dia": "2026-10-21",
+   "hora": "14:00",
+   "sede": "Centro Día Gerontológico",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Def6fhKDSQy/",
+    "date": "2026-10-14",
+    "lamina": 1
+   },
+   "titulo": "Allá Cartas al Corazón",
+   "seccion": "El Reflejo del Cine",
+   "director": "Montserrat Larqué",
+   "_creditos_por_que": "mismo título que en FICPA 2026 («Allá, cartas al corazón»); ningún homónimo conocido"
+  },
+  {
+   "dia": "2026-10-21",
+   "hora": "18:00",
+   "sede": "Casa 18 Gastro Bar",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Def6fhKDSQy/",
+    "date": "2026-10-14",
+    "lamina": 1
+   },
+   "titulo": "Competencia Internacional de Cortometrajes",
+   "seccion": "Competencia Internacional de Cortometrajes",
+   "obras": [
+    {
+     "titulo": "Planeta Fome",
+     "pais": "Brasil",
+     "director": "Édier William",
+     "_creditos_fuente": "https://www.themoviedb.org/movie/1470780"
+    },
+    {
+     "titulo": "La Parada del Colectivo",
+     "pais": "Argentina"
+    },
+    {
+     "titulo": "Una muñeca vestida de Azul",
+     "pais": "España"
+    }
+   ]
+  },
+  {
+   "dia": "2026-10-21",
+   "hora": "18:00",
+   "sede": "Centro de Eventos Guatapé Plaza",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Def6fhKDSQy/",
+    "date": "2026-10-14",
+    "lamina": 1
+   },
+   "titulo": "Un poeta",
+   "seccion": "Película Inaugural",
+   "premiere": "Película inaugural",
+   "director": "Simón Mesa Soto",
+   "_creditos_fuente": "https://www.themoviedb.org/movie/1465563"
+  },
+  {
+   "dia": "2026-10-21",
+   "hora": "18:00",
+   "sede": "Domo parque principal",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Def6fhKDSQy/",
+    "date": "2026-10-14",
+    "lamina": 1
+   },
+   "titulo": "Ipatu",
+   "seccion": "Muestra de Cine Comunitario Colombiano"
+  },
+  {
+   "dia": "2026-10-21",
+   "hora": "18:15",
+   "sede": "Domo parque principal",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Def6fhKDSQy/",
+    "date": "2026-10-14",
+    "lamina": 1
+   },
+   "titulo": "La fuente",
+   "seccion": "Competencia Nacional de Cine Universitario"
+  },
+  {
+   "dia": "2026-10-21",
+   "hora": "20:00",
+   "sede": "Centro de Eventos Guatapé Plaza",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Def6fhKDSQy/",
+    "date": "2026-10-14",
+    "lamina": 1
+   },
+   "titulo": "Coctel Inaugural",
+   "tipo": "evento",
+   "event_kind": "cóctel",
+   "seccion": "Actividades",
+   "duracion_min": 90,
+   "sinopsis": "EL REFELJO DEL CINE."
+  },
+  {
+   "dia": "2026-10-22",
+   "hora": "10:30",
+   "sede": "Parque principal",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Def6fhKDSQy/",
+    "date": "2026-10-14",
+    "lamina": 2
+   },
+   "titulo": "El Reflejo de la Memoria",
+   "tipo": "evento",
+   "event_kind": "conversatorio",
+   "seccion": "Actividades",
+   "duracion_min": 90,
+   "sinopsis": "Conversatorio con Semillero de Comunicaciones."
+  },
+  {
+   "dia": "2026-10-22",
+   "hora": "11:00",
+   "sede": "Biblioteca Municipal",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Def6fhKDSQy/",
+    "date": "2026-10-14",
+    "lamina": 2
+   },
+   "titulo": "El Reflejo entre Regiones",
+   "tipo": "evento",
+   "event_kind": "entrega",
+   "seccion": "Actividades",
+   "sinopsis": "Entrega Maleta Audiovisual Cinemateca del Tolima a Biblioteca de Guatapé."
+  },
+  {
+   "dia": "2026-10-22",
+   "hora": "13:00",
+   "sede": "Parque Principal",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Def6fhKDSQy/",
+    "date": "2026-10-14",
+    "lamina": 2
+   },
+   "titulo": "Me Llamo Tierra",
+   "tipo": "evento",
+   "event_kind": "obra de títeres",
+   "seccion": "Actividades",
+   "sinopsis": "Obra de titereras EPM."
+  },
+  {
+   "dia": "2026-10-22",
+   "hora": "14:00",
+   "sede": "COMFAMA sede Parque primcipal",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Def6fhKDSQy/",
+    "date": "2026-10-14",
+    "lamina": 2
+   },
+   "titulo": "Territorios que Filman",
+   "tipo": "evento",
+   "event_kind": "encuentro",
+   "seccion": "Actividades",
+   "duracion_min": 180,
+   "sinopsis": "Encuentro de Comisiones Fílmicas."
+  },
+  {
+   "dia": "2026-10-22",
+   "hora": "14:00",
+   "sede": "Casa de la Juventud",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Def6fhKDSQy/",
+    "date": "2026-10-14",
+    "lamina": 2
+   },
+   "titulo": "El Reflejo de las Generaciones",
+   "tipo": "evento",
+   "event_kind": "taller",
+   "seccion": "Actividades",
+   "poster": "/assets/guatape-2026/el-reflejo-de-las-generaciones-v2.jpg",
+   "posterSource": "oficial",
+   "sinopsis": "Taller de Creación Audiovisual Intergeneracional."
+  },
+  {
+   "dia": "2026-10-22",
+   "hora": "14:00",
+   "sede": "Museo Comunitario",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Def6fhKDSQy/",
+    "date": "2026-10-14",
+    "lamina": 2
+   },
+   "titulo": "El Reflejo de un Actor",
+   "tipo": "evento",
+   "event_kind": "conversatorio",
+   "seccion": "Actividades",
+   "duracion_min": 120,
+   "poster": "/assets/guatape-2026/el-reflejo-de-un-actor-v2.jpg",
+   "posterSource": "oficial",
+   "sinopsis": "Conversatorio Actores Invitados. Como un actor lleva algo de si mismo a los personajes."
+  },
+  {
+   "dia": "2026-10-22",
+   "hora": "14:00",
+   "sede": "Museo Comunitario",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Def6fhKDSQy/",
+    "date": "2026-10-14",
+    "lamina": 2
+   },
+   "titulo": "Taller Memoria y Patrimonio Visual",
+   "tipo": "evento",
+   "event_kind": "taller",
+   "seccion": "Actividades",
+   "duracion_min": 120,
+   "poster": "/assets/guatape-2026/taller-memoria-y-patrimonio-visual-v2.jpg",
+   "posterSource": "oficial"
+  },
+  {
+   "dia": "2026-10-22",
+   "hora": "18:00",
+   "sede": "Domo Parque Principal",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Def6fhKDSQy/",
+    "date": "2026-10-14",
+    "lamina": 3
+   },
+   "titulo": "Competencia Nacional de Cine Universitario · Programa 1",
+   "seccion": "Competencia Nacional de Cine Universitario",
+   "obras": [
+    {
+     "titulo": "Hasta que amanezca",
+     "pais": "Colombia",
+     "director": "Sebastián Rosas Santamaría",
+     "_creditos_por_que": "la lámina dice «Hasta que amanezca - Bogotá»; es el corto bogotano que publicamos en el BHFF 2026"
+    },
+    {
+     "titulo": "El Umbral",
+     "pais": "Colombia"
+    }
+   ]
+  },
+  {
+   "dia": "2026-10-22",
+   "hora": "18:00",
+   "sede": "Muelle Corona - Malecón",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Def6fhKDSQy/",
+    "date": "2026-10-14",
+    "lamina": 3
+   },
+   "titulo": "Coctel Invitados",
+   "tipo": "evento",
+   "event_kind": "cóctel",
+   "seccion": "Actividades"
+  },
+  {
+   "dia": "2026-10-22",
+   "hora": "18:00",
+   "sede": "Muelle Corona - Malecón",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Def6fhKDSQy/",
+    "date": "2026-10-14",
+    "lamina": 3
+   },
+   "titulo": "Horizonte",
+   "seccion": "Rumbo a los Macondo",
+   "director": "César Augusto Acevedo",
+   "_creditos_fuente": "https://www.themoviedb.org/movie/1265716"
+  },
+  {
+   "dia": "2026-10-22",
+   "hora": "18:00",
+   "sede": "Pantalla CORNARE - Malecón",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Def6fhKDSQy/",
+    "date": "2026-10-14",
+    "lamina": 3
+   },
+   "titulo": "La Gran Hazaña",
+   "seccion": "Muestra de Cine Colombiano",
+   "director": "Luber Yesid Zúñiga Ordóñez",
+   "_creditos_por_que": "corto colombiano en «Muestra de Cine Colombiano»; ya circuló por 7 de nuestros festivales (Ficcali, FICDEH, FICICA, Ficmontañas, Popayán, SiembraFest) con ese título"
+  },
+  {
+   "dia": "2026-10-22",
+   "hora": "18:30",
+   "sede": "Domo Parque Principal",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Def6fhKDSQy/",
+    "date": "2026-10-14",
+    "lamina": 3
+   },
+   "titulo": "Basta Mamá",
+   "seccion": "Rumbo a los Macondo",
+   "director": "Flora Martínez",
+   "_creditos_fuente": "https://www.themoviedb.org/movie/1627217"
+  },
+  {
+   "dia": "2026-10-22",
+   "hora": "18:30",
+   "sede": "Pantalla CORNARE - Malecón",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Def6fhKDSQy/",
+    "date": "2026-10-14",
+    "lamina": 3
+   },
+   "titulo": "Niños de Las Brisas",
+   "seccion": "FIACINE",
+   "_titulo_lamina": "Niño de las Brisas",
+   "director": "Marianela Maldonado",
+   "_creditos_fuente": "https://www.themoviedb.org/movie/995319"
+  },
+  {
+   "dia": "2026-10-23",
+   "hora": "09:00",
+   "sede": "Museo del Zócalo",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Def6fhKDSQy/",
+    "date": "2026-10-14",
+    "lamina": 7
+   },
+   "titulo": "Territorios que Filman",
+   "tipo": "evento",
+   "event_kind": "encuentro",
+   "seccion": "Actividades",
+   "duracion_min": 180,
+   "sinopsis": "Encuentro de comisiones fílmicas."
+  },
+  {
+   "dia": "2026-10-23",
+   "hora": "13:00",
+   "sede": "Parque principal",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Def6fhKDSQy/",
+    "date": "2026-10-14",
+    "lamina": 7
+   },
+   "titulo": "Detrás del Reflejo - El Productor",
+   "tipo": "evento",
+   "event_kind": "conversatorio",
+   "seccion": "Actividades",
+   "duracion_min": 90,
+   "poster": "/assets/guatape-2026/detras-del-reflejo-el-productor-v2.jpg",
+   "posterSource": "oficial",
+   "sinopsis": "Una conversación para descubrir el trabajo, las decisiones y los desafios que hacen posible una película. Proyección CortoMetraje Desde Adentro."
+  },
+  {
+   "dia": "2026-10-23",
+   "hora": "14:00",
+   "sede": "Museo Comunitario",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Def6fhKDSQy/",
+    "date": "2026-10-14",
+    "lamina": 7
+   },
+   "titulo": "Taller Memoria y Patrimonio Visual",
+   "tipo": "evento",
+   "event_kind": "taller",
+   "seccion": "Actividades",
+   "duracion_min": 120,
+   "poster": "/assets/guatape-2026/taller-memoria-y-patrimonio-visual-v2.jpg",
+   "posterSource": "oficial"
+  },
+  {
+   "dia": "2026-10-23",
+   "hora": "14:00",
+   "sede": "Parque Educativo El Zócalo",
+   "acceso": "Entrada libre con inscripción previa",
+   "_src": {
+    "url": "https://www.instagram.com/p/Def6fhKDSQy/",
+    "date": "2026-10-14",
+    "lamina": 7
+   },
+   "titulo": "Concept Art para Cine",
+   "tipo": "evento",
+   "event_kind": "masterclass",
+   "seccion": "Actividades",
+   "duracion_min": 180,
+   "is_recurring": true,
+   "poster": "/assets/guatape-2026/concept-art-para-cine-v2.jpg",
+   "posterSource": "oficial",
+   "sinopsis": "Master Class. CERTIFICADO SENA."
+  },
+  {
+   "dia": "2026-10-23",
+   "hora": "14:00",
+   "sede": "Parque Educativo El Zócalo",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Def6fhKDSQy/",
+    "date": "2026-10-14",
+    "lamina": 7
+   },
+   "titulo": "Reflejos de un Personaje",
+   "tipo": "evento",
+   "event_kind": "taller",
+   "seccion": "Actividades",
+   "duracion_min": 180,
+   "poster": "/assets/guatape-2026/reflejos-de-un-personaje-v2.jpg",
+   "posterSource": "oficial",
+   "sinopsis": "Taller de Actuación y efectos físicos."
+  },
+  {
+   "dia": "2026-10-23",
+   "hora": "14:00",
+   "sede": "Parque principal",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Def6fhKDSQy/",
+    "date": "2026-10-14",
+    "lamina": 7
+   },
+   "titulo": "Conversatorio Actores",
+   "tipo": "evento",
+   "event_kind": "conversatorio",
+   "seccion": "Actividades",
+   "duracion_min": 60,
+   "poster": "/assets/guatape-2026/conversatorio-actores-v2.jpg",
+   "posterSource": "oficial"
+  },
+  {
+   "dia": "2026-10-23",
+   "hora": "14:00",
+   "sede": "Parque principal",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Def6fhKDSQy/",
+    "date": "2026-10-14",
+    "lamina": 7
+   },
+   "titulo": "Conversatorio Historias que se Juegan",
+   "tipo": "evento",
+   "event_kind": "conversatorio",
+   "seccion": "Actividades",
+   "duracion_min": 60,
+   "poster": "/assets/guatape-2026/conversatorio-historias-que-se-juegan-v2.jpg",
+   "posterSource": "oficial",
+   "sinopsis": "Creando un video juego."
+  },
+  {
+   "dia": "2026-10-23",
+   "hora": "18:00",
+   "sede": "Domo Parque primcipal",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Def6fhKDSQy/",
+    "date": "2026-10-14",
+    "lamina": 6
+   },
+   "titulo": "Competencia Nacional de Cine Universitario · Programa 2",
+   "seccion": "Competencia Nacional de Cine Universitario",
+   "obras": [
+    {
+     "titulo": "Carola",
+     "pais": "Colombia",
+     "director": "Violeta Barrios Ramírez",
+     "_creditos_por_que": "la lámina dice «Carola - Medellín»; es el corto antioqueño de Violeta Barrios que publicamos en Girardota y SiembraFest 2026"
+    },
+    {
+     "titulo": "La Ultima Palabra",
+     "pais": "Colombia"
+    }
+   ]
+  },
+  {
+   "dia": "2026-10-23",
+   "hora": "18:00",
+   "sede": "Museo del Zócalo",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Def6fhKDSQy/",
+    "date": "2026-10-14",
+    "lamina": 6
+   },
+   "titulo": "Sobre las olas",
+   "seccion": "Competencia Internacional de Largometraje",
+   "pais": "México",
+   "director": "Horacio Alcalá",
+   "_creditos_fuente": "https://www.themoviedb.org/movie/1478001"
+  },
+  {
+   "dia": "2026-10-23",
+   "hora": "18:00",
+   "sede": "Pantalla CORNARE Malecón",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Def6fhKDSQy/",
+    "date": "2026-10-14",
+    "lamina": 6
+   },
+   "titulo": "Luma",
+   "seccion": "Muestra de Cine Comunitario Colombiano"
+  },
+  {
+   "dia": "2026-10-23",
+   "hora": "18:20",
+   "sede": "Pantalla CORNARE",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Def6fhKDSQy/",
+    "date": "2026-10-14",
+    "lamina": 6
+   },
+   "titulo": "Luis Antonio",
+   "seccion": "Muestra de Cine Colombiano",
+   "director": "Juan José Arias Gil",
+   "_creditos_por_que": "corto colombiano en «Muestra de Cine Colombiano»; el mismo de Popayán y FICICA 2026"
+  },
+  {
+   "dia": "2026-10-23",
+   "hora": "18:30",
+   "sede": "Auditorio Centro día Gerontológico",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Def6fhKDSQy/",
+    "date": "2026-10-14",
+    "lamina": 7
+   },
+   "titulo": "Historias que se Juegan",
+   "tipo": "evento",
+   "event_kind": "taller",
+   "seccion": "Actividades",
+   "duracion_min": 90,
+   "poster": "/assets/guatape-2026/historias-que-se-juegan-v2.jpg",
+   "posterSource": "oficial",
+   "sinopsis": "Taller."
+  },
+  {
+   "dia": "2026-10-23",
+   "hora": "18:30",
+   "sede": "Domo Parque primcipal",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Def6fhKDSQy/",
+    "date": "2026-10-14",
+    "lamina": 6
+   },
+   "titulo": "Culebra negra",
+   "seccion": "Rumbo a los Macondo",
+   "director": "Aurélien Vernhes-Lermusiaux",
+   "_creditos_fuente": "https://www.themoviedb.org/movie/1018962"
+  },
+  {
+   "dia": "2026-10-23",
+   "hora": "18:30",
+   "sede": "Pizzeria Majagual",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Def6fhKDSQy/",
+    "date": "2026-10-14",
+    "lamina": 6
+   },
+   "titulo": "Leo tus Labios",
+   "seccion": "Cinema Luna",
+   "director": "Daniel Bautista",
+   "anio": 2026,
+   "duracion_min": 147,
+   "_creditos_fuente": "https://www.elheraldo.co/contenidos-en-alianza/2026/04/30/leo-tus-labios-un-reencuentro-que-desafia-el-tiempo-y-pone-a-prueba-el-amor/",
+   "_creditos_por_que": "estrenó en la Cinemateca del Caribe el 30 abr 2026; va en la sección Cinema Luna, aliado del festival (@cinemalunafilms en el pie de la programación)"
+  },
+  {
+   "dia": "2026-10-23",
+   "hora": "20:00",
+   "sede": "Parque Principal",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Def6fhKDSQy/",
+    "date": "2026-10-14",
+    "lamina": 6
+   },
+   "titulo": "Concierto El Reflejo del Cine",
+   "tipo": "evento",
+   "event_kind": "concierto",
+   "seccion": "Actividades",
+   "sinopsis": "Banda de Rock SUCERKIA. Carlitus Music. DJ Electrónica."
+  },
+  {
+   "dia": "2026-10-24",
+   "hora": "09:00",
+   "sede": "Parque Educativo El Zócalo",
+   "acceso": "Entrada libre con inscripción previa",
+   "_src": {
+    "url": "https://www.instagram.com/p/Def6fhKDSQy/",
+    "date": "2026-10-14",
+    "lamina": 5
+   },
+   "titulo": "Concept Art para Cine",
+   "tipo": "evento",
+   "event_kind": "masterclass",
+   "seccion": "Actividades",
+   "duracion_min": 180,
+   "is_recurring": true,
+   "poster": "/assets/guatape-2026/concept-art-para-cine-v2.jpg",
+   "posterSource": "oficial",
+   "sinopsis": "Master Class. CERTIFICADO SENA."
+  },
+  {
+   "dia": "2026-10-24",
+   "hora": "10:00",
+   "sede": "Parque Educativo el zócalo",
+   "acceso": "Entrada libre con inscripción previa",
+   "_src": {
+    "url": "https://www.instagram.com/p/Def6fhKDSQy/",
+    "date": "2026-10-14",
+    "lamina": 5
+   },
+   "titulo": "Cine y Nuevas Narrativas",
+   "tipo": "evento",
+   "event_kind": "masterclass",
+   "seccion": "Actividades",
+   "duracion_min": 120,
+   "poster": "/assets/guatape-2026/cine-y-nuevas-narrativas-v2.jpg",
+   "posterSource": "oficial",
+   "sinopsis": "Master Class. CERTIFICADO UNIR."
+  },
+  {
+   "dia": "2026-10-24",
+   "hora": "13:30",
+   "sede": "Tarima Principal",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Def6fhKDSQy/",
+    "date": "2026-10-14",
+    "lamina": 5
+   },
+   "titulo": "Cine con Legado Social",
+   "tipo": "evento",
+   "event_kind": "conversatorio",
+   "seccion": "Actividades",
+   "duracion_min": 60,
+   "poster": "/assets/guatape-2026/cine-con-legado-social-v2.jpg",
+   "posterSource": "oficial",
+   "sinopsis": "Conversatorio."
+  },
+  {
+   "dia": "2026-10-24",
+   "hora": "14:00",
+   "sede": "Parque Educativo El Zócalo",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Def6fhKDSQy/",
+    "date": "2026-10-14",
+    "lamina": 5
+   },
+   "titulo": "Reflejos de un Personaje",
+   "tipo": "evento",
+   "event_kind": "taller",
+   "seccion": "Actividades",
+   "duracion_min": 180,
+   "poster": "/assets/guatape-2026/reflejos-de-un-personaje-v2.jpg",
+   "posterSource": "oficial",
+   "sinopsis": "Taller de Actuación y efectos físicos."
+  },
+  {
+   "dia": "2026-10-24",
+   "hora": "15:00",
+   "sede": "Parque Principal",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Def6fhKDSQy/",
+    "date": "2026-10-14",
+    "lamina": 5
+   },
+   "titulo": "Reflejos Sonoros",
+   "tipo": "evento",
+   "event_kind": "concierto",
+   "seccion": "Actividades",
+   "duracion_min": 90,
+   "sinopsis": "Concierto Sinfónico. Banda Sinfónica Juvenil de la red de músicas de Medellín – La Banda Sinfónica infantil juvenil de Guatapé."
+  },
+  {
+   "dia": "2026-10-24",
+   "hora": "18:00",
+   "sede": "Domo Parque Principal",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Def6fhKDSQy/",
+    "date": "2026-10-14",
+    "lamina": 4
+   },
+   "titulo": "Muestra Local",
+   "seccion": "Muestra Local",
+   "obras": [
+    {
+     "titulo": "El Gesto de la Muerte"
+    },
+    {
+     "titulo": "Cosas que Pasan"
+    },
+    {
+     "titulo": "El último Biscocho"
+    }
+   ]
+  },
+  {
+   "dia": "2026-10-24",
+   "hora": "18:00",
+   "sede": "Finca La Manuela",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Def6fhKDSQy/",
+    "date": "2026-10-14",
+    "lamina": 8
+   },
+   "titulo": "Sierra: El Álbum Mortuorio",
+   "seccion": "Terror",
+   "_titulo_lamina": "La Sierra",
+   "director": "Carlos Ortiz",
+   "_creditos_fuente": "https://www.instagram.com/p/DervW-Tifu0/",
+   "_creditos_por_que": "la pieza del festival para la función del 24 oct en La Manuela imprime el afiche («Sierra – El álbum mortuorio») y «Dirrctor Carlos Ortiz»"
+  },
+  {
+   "dia": "2026-10-24",
+   "hora": "18:00",
+   "sede": "Pantalla CORNARE Malecón",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Def6fhKDSQy/",
+    "date": "2026-10-14",
+    "lamina": 4
+   },
+   "titulo": "Cicatrices",
+   "seccion": "Muestra de Cine Comunitario Colombiano"
+  },
+  {
+   "dia": "2026-10-24",
+   "hora": "18:30",
+   "sede": "Pantalla CORNARE Malecón",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Def6fhKDSQy/",
+    "date": "2026-10-14",
+    "lamina": 4
+   },
+   "titulo": "El convento",
+   "seccion": "Competencia Internacional de Largometraje",
+   "pais": "España",
+   "director": "Ángel M. Chivite, Luis Galindo",
+   "_creditos_fuente": "https://www.themoviedb.org/movie/1361852"
+  },
+  {
+   "dia": "2026-10-24",
+   "hora": "18:30",
+   "sede": "Zona de camping La Espacial",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Def6fhKDSQy/",
+    "date": "2026-10-14",
+    "lamina": 4
+   },
+   "titulo": "Volar",
+   "seccion": "Cinema Luna",
+   "director": "Jeiver Pinto Vargas",
+   "_creditos_por_que": "largo colombiano de Jeiver Pinto, el mismo que publicamos en Villa del Cine 2026; va en Cinema Luna, aliado del festival"
+  },
+  {
+   "dia": "2026-10-24",
+   "hora": "19:30",
+   "sede": "Parque principal",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Def6fhKDSQy/",
+    "date": "2026-10-14",
+    "lamina": 8
+   },
+   "titulo": "Premiación Competencia y Reconocimientos",
+   "tipo": "evento",
+   "event_kind": "premiación",
+   "seccion": "Actividades"
+  },
+  {
+   "dia": "2026-10-24",
+   "hora": "21:00",
+   "sede": "El Majagual",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Def6fhKDSQy/",
+    "date": "2026-10-14",
+    "lamina": 8
+   },
+   "titulo": "Fiesta Electrónica",
+   "tipo": "evento",
+   "event_kind": "fiesta",
+   "seccion": "Actividades"
+  },
+  {
+   "dia": "2026-10-25",
+   "hora": "11:00",
+   "sede": "Parque principal",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Def6fhKDSQy/",
+    "date": "2026-10-14",
+    "lamina": 9
+   },
+   "titulo": "El Reflejo de los Festivales",
+   "tipo": "evento",
+   "event_kind": "conversatorio",
+   "seccion": "Actividades",
+   "poster": "/assets/guatape-2026/el-reflejo-de-los-festivales-v2.jpg",
+   "posterSource": "oficial",
+   "sinopsis": "Donde el Cine enuentra su Reflejo. Coversatorio Festivales Invitados."
+  },
+  {
+   "dia": "2026-10-25",
+   "hora": "13:30",
+   "sede": "Tarima Principal",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Def6fhKDSQy/",
+    "date": "2026-10-14",
+    "lamina": 9
+   },
+   "titulo": "Tres Miradas, un Reflejo",
+   "tipo": "evento",
+   "event_kind": "conversatorio",
+   "seccion": "Actividades",
+   "duracion_min": 60,
+   "poster": "/assets/guatape-2026/tres-miradas-un-reflejo-v2.jpg",
+   "posterSource": "oficial",
+   "sinopsis": "Conversatorio Directores Invitados."
+  },
+  {
+   "dia": "2026-10-25",
+   "hora": "14:00",
+   "sede": "Parque principal",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Def6fhKDSQy/",
+    "date": "2026-10-14",
+    "lamina": 9
+   },
+   "titulo": "Sangre de Palermo y su Reflejo",
+   "tipo": "evento",
+   "event_kind": "conversatorio",
+   "seccion": "Actividades",
+   "poster": "/assets/guatape-2026/sangre-de-palermo-y-su-reflejo-v2.jpg",
+   "posterSource": "oficial",
+   "sinopsis": "Conversatorio con los directores y actores de la Película Sangre de Palermo."
+  },
+  {
+   "dia": "2026-10-25",
+   "hora": "18:00",
+   "sede": "Pantalla CORNARE",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Def6fhKDSQy/",
+    "date": "2026-10-14",
+    "lamina": 9
+   },
+   "titulo": "Canelones",
+   "seccion": "Competencia Internacional de Largometraje",
+   "pais": "Argentina",
+   "director": "Christian Basilis, Ana Laura Gussoni",
+   "_creditos_fuente": "https://www.themoviedb.org/movie/1743296"
+  },
+  {
+   "dia": "2026-10-25",
+   "hora": "18:00",
+   "sede": "Parque principal",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Def6fhKDSQy/",
+    "date": "2026-10-14",
+    "lamina": 9
+   },
+   "titulo": "La Gallina Saraviada",
+   "seccion": "Muestra de Cine Colombiano",
+   "director": "Ingrid Paola Bonilla Rodríguez",
+   "_creditos_por_que": "corto colombiano en «Muestra de Cine Colombiano»; el mismo de FICPA y SiembraFest 2026"
+  },
+  {
+   "dia": "2026-10-25",
+   "hora": "18:20",
+   "sede": "Parque principal",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Def6fhKDSQy/",
+    "date": "2026-10-14",
+    "lamina": 9
+   },
+   "titulo": "Sangre de Palermo",
+   "seccion": "Muestra de Cine Colombiano",
+   "director": "Edwin Daniel Díaz, Alejandro Aguilar",
+   "anio": 2025,
+   "duracion_min": 93,
+   "_creditos_fuente": "https://lavillaproducciones.com/la-sangre-de-palermo",
+   "_creditos_por_que": "la productora la acredita y nombra a María Irene Toro en el reparto, la misma actriz que el festival anuncia para su conversatorio (p/Deenf5Tu8vO)"
+  },
+  {
+   "dia": "2026-10-25",
+   "hora": "20:00",
+   "sede": "Bahía Plus -Muelle",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Def6fhKDSQy/",
+    "date": "2026-10-14",
+    "lamina": 9
+   },
+   "titulo": "Clausura El Reflejo del Cine",
+   "tipo": "evento",
+   "event_kind": "clausura",
+   "seccion": "Actividades"
+  }
+ ]
+}

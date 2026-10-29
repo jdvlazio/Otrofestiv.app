@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "Nominatim con verificación: caja de ciudad + token distintivo + clase de lugar (una sede fija nunca es un barrio). _prec:manual intocable.",
-  "capturado": "2026-10-07"
+  "capturado": "2026-10-15"
  },
  "Teatro Regional Valerio Antonio Jiménez": {
   "n": 0,
@@ -20,10 +20,10 @@
  },
  "Teatro Municipal Simona Duque": {
   "n": 0,
-  "lat": 6.1729564,
-  "lng": -75.3341178,
+  "lat": 6.173035,
+  "lng": -75.3347087,
   "_prec": "manual",
-  "_match": "Google Maps: Teatro Municipal Simona Duque, Marinilla"
+  "_match": "Google Maps: Teatro Municipal Simona Duque, Marinilla (place 0x3a48097ef241b462, 12 oct 2026; el pin anterior caía ~65 m al oriente)"
  },
  "Parque Principal de Marinilla": {
   "n": 0,

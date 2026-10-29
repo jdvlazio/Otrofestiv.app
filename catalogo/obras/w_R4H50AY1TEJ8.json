@@ -1,0 +1,49 @@
+{
+ "id": "w_R4H50AY1TEJ8",
+ "titulo_original": "Alivios",
+ "anio": 2025,
+ "paises": [
+  "MX",
+  "VE"
+ ],
+ "directores": [
+  "Juan Manuel González"
+ ],
+ "aliases": [
+  {
+   "titulo": "Reliefs",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "Carlos se acerca a la mediana edad, atrapado en una crisis personal que se ha prolongado demasiado. Rosa, su madre, sufre un dolor incapacitante que solo se mitiga con las cálidas aguas de la hidroterapia. Una noche, ella se ofrece a hacer el sacrificio máximo para que ambos puedan transitar a un lugar mejor. Un cortometraje sobre el amor, la esperanza y el alivio que todos anhelamos.",
+  "en": "Carlos is approaching midlife trapped in a personal crisis that has lingered too long. Rosa, his mother, suffers from disabling pain that is only mitigated by the warm waters of hydrotherapy. One night, she offers to make the ultimate sacrifice so that they can both transit to a better place. A short film about love, hope and relief we all long for."
+ },
+ "generos": [
+  "Drama"
+ ],
+ "afiche": {
+  "archivo": "/assets/ficcali-2026/alivios.jpg",
+  "veredicto": "oficial"
+ },
+ "xref": {
+  "tmdb": 1469210,
+  "letterboxd": "reliefs-2025"
+ },
+ "versiones": [
+  {
+   "etiqueta": "18 min",
+   "duracion_min": 18
+  },
+  {
+   "etiqueta": "19 min",
+   "duracion_min": 19
+  }
+ ],
+ "presentaciones": [
+  "ficcali-2026",
+  "ficica-2026",
+  "villadelcine-2026"
+ ]
+}

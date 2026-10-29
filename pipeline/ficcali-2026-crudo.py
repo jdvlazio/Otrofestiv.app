@@ -86,18 +86,37 @@ SECCION = {
     'ZOOM': 'Zoom',
     'Foco: Claire Simon': 'Foco Claire Simon',
     '¡Que viva la música!': '¡Que viva la música!',
+    '¡Que Viva la Música!': '¡Que viva la música!',   # la subpágina del 10 oct, otra caja
+    # 21 oct 2026: dos subpáginas nuevas de la Selección, con su nombre verbatim
+    # (decisión de Juan); arquetipo en src/config.js, emoji e inglés en el plan.
+    'Clásicos': 'Clásicos',
+    'Plano General': 'Plano General',
 }
 # LA SEDE: el nombre de la tarjeta → (sede, sala). Investigada sede por sede
 # (7 oct) con dos fuentes por pin; la página de sedes 2025 del festival (Wayback)
 # desempató los nombres: «TEATRINO» es el del Teatro Municipal Enrique
 # Buenaventura, «CCMI» es Casa Ethel, «Casa Yurtas» y «Yurtas Ulpiano Lloreda»
 # son el mismo lugar. Pines y preguntas en -venues-geo.json.
+# LA EDICIÓN DEL 8 OCT reescribe cinco sedes: cuatro son las mismas con otro
+# nombre; «Idea Lab» es nueva y no tiene dirección en ninguna fuente, así que su
+# tarjeta queda FUERA hasta que el festival la confirme (regla: ninguna sede sin pin).
+SEDE_SIN_PIN = {'Idea Lab': 'sede nueva (8 oct) sin dirección pública; preguntado al festival'}
 SEDES = {
     'CINEMATECA LA TERTULIA': ('Cinemateca La Tertulia', ''),
+    # 27 oct: la web oficial ya trae «Las pesadillas del siervo» en la sede a la
+    # que se movió (la afirmación del 24 oct, briosafilms + @festivaldecinecali)
+    'CINE CLUB EL VENTANAL': ('Cine Club El Ventanal', ''),
+    'CINEMATECA MUSEO LA TERTULIA': ('Cinemateca La Tertulia', ''),
+    'SALA MADAME BLUE': ('Madame Blue', ''),
+    'CURADOR CLUB SOCIAL': ('Curador', ''),
+    'Bulevar del Río': ('Bulevar del Río', ''),
     'Yurtas Ulpiano Lloreda': ('Casa Yurtas', ''),
     'Casa Yurtas': ('Casa Yurtas', ''),
     'Online': ('En línea', ''),
     'MADAME BLUE': ('Madame Blue', ''),
+    # 21 oct 2026: la charla de Pablo Solarz (tarjeta 14576) pasó de Madame Blue al
+    # Teatro La Concha (web, editada el 20 oct 20:43; lo confirma @algoencomun.co)
+    'TEATRO LA CONCHA': ('Teatro La Concha', ''),
     'Ciudad Pacífica': ('Ciudad Pacífica', ''),
     'Sendero Comuna 8': ('Sendero del Bosque', ''),
     'Altos de Melendez': ('Alto Meléndez', ''),
@@ -126,6 +145,17 @@ SEDES = {
     'Boulevard del Rio': ('Bulevar del Río', ''),
 }
 EN_LINEA = 'En línea'
+# LO QUE ANUNCIÓ IG Y LA WEB NO TIENE (vigía 15 oct 2026, #1024; OK de Juan).
+# Cada una con día, hora y lugar dichos por la fuente; sin aviso de pago, libre.
+_CINE_EXPANDIDO = 'https://www.instagram.com/p/DefUB_ksTlh/'
+DEL_IG = (
+    [{'dia': d, 'hora': '15:00', 'duracion_min': 180, 'titulo': 'Taller Gemelos Digitales', 'fuente': _CINE_EXPANDIDO}
+     for d in ('2026-10-16', '2026-10-19', '2026-10-20')] +  # el 15 queda fuera del 16–25 oficial
+    [{'dia': d, 'hora': '14:00', 'duracion_min': 240, 'titulo': 'Taller Cine Atmosférico', 'fuente': _CINE_EXPANDIDO}
+     for d in ('2026-10-21', '2026-10-22', '2026-10-23')])
+# la SEGUNDA función del cineconcierto: la anuncia la sede (@centrodecreacion.musical,
+# IG p/Deg4GpNHCB_, 15 oct), no el festival — va con la misma ficha que la del 21
+METROPOLIS_24 = {'dia': '2026-10-24', 'fuente': 'https://www.instagram.com/p/Deg4GpNHCB_/'}
 
 # la categoría de la tarjeta, cuando la obra no tiene ficha o es una actividad
 SECCION_TARJETA = {'Proyecciones': 'Proyecciones', 'Cine sin límites': 'Cine Sin Límites',
@@ -139,6 +169,7 @@ ALIAS = {
     'escribir la vida': 'Écrire la vie: Annie Ernaux racontée par des lycéennes et des lycéens',
     'ellas guardianas de la amazonia': 'Ellas, gardiennes de l’Amazonie',
     'mukira': 'Mu-ki-ra',
+    'erase una vez en harlem': 'Once Upon a Time in Harlem',   # la tarjeta traduce; la ficha, en inglés
     'ninxs': 'Niñxs',
     'seis meses en el edificio rosa': 'Seis meses en el edificio rosa con azul',
     'amelie y los secretos de lluvia': 'Amélie y los secretos de la lluvia',
@@ -158,6 +189,63 @@ PROGRAMA = {
     14496: ['Arco', 'Akababuru: Expresión de Asombro'],                     # Largo Arco + Corto Akababuru
     14042: ('rotulo', 'We Cam Fest'),                   # WE CAM FEST 3
 }
+# LAS TARJETAS QUE JUNTAN DOS OBRAS CON «+» y que NO están en la Selección (sin
+# ficha en el catálogo): cada obra con lo que la tarjeta dice de ella; la ficha
+# de TMDB se declara en -correcciones.json. Antes se publicaban como UNA obra
+# («Rodilla Negra + El Coloso») y ninguna de las dos se buscaba (8 oct).
+# UNA ACTIVIDAD EN LA CATEGORÍA «PROYECCIONES»: la tarjeta 14017 es un conversatorio
+# (Concip y Telepacífico) y salía como película sin afiche; [proyeccion-que-es-actividad]
+# lo cazó el 9 oct. Por id, porque la categoría de la tarjeta miente.
+EVENTO_EN_PROYECCIONES = {14017: 'conversatorio',
+                          # la tarjeta 14037 es la CEREMONIA DE PREMIACIÓN, que proyecta
+                          # «Historias del buen valle» (IG De0V1lFDU4D, lámina 1, 23 oct
+                          # 2026); la obra va en su film_list por afirmación
+                          14037: 'premiación'}
+# LO QUE LA TARJETA CALLA y otra fuente dice (8 oct): «Guapi: ritmo y balsada» es
+# el documental de la Expedición Guapi 1963 del Instituto Popular de Cultura
+# (nexus.univalle.edu.co/index.php/nexus/article/view/13321; trasmishuellas.univalle.edu.co),
+# sin director acreditado (camarógrafo Juan B. Ocampo)
+# …y las proyecciones especiales cuya ficha de TMDB se declaró a mano en
+# -correcciones.json: el director y el año, de esa ficha, van aquí porque el
+# ensamblador los lee del crudo
+DATOS_TARJETA = {14002: {'anio': 1963},
+                 14040: {'director': 'Andrey Zvyagintsev', 'anio': 2026},          # Minotauro
+                 14025: {'director': 'José Luis Guerín', 'anio': 2001},            # En construcción
+                 14001: {'director': 'Eliza Capai', 'anio': 2026},                 # La fabulosa máquina del tiempo
+                 13904: {'director': 'Eliza Capai', 'anio': 2026},
+                 14038: {'director': 'José Varón', 'anio': 2025},             # El Coloso (sáb 24)
+                 # LA TARJETA CALLA DIRECTOR Y AÑO y la misma obra ya está publicada,
+                 # completa, en otro festival nuestro; confirmado contra la ficha
+                 # TMDB (director, año y duración) el 10 oct 2026
+                 14003: {'director': 'Lisandro Alonso', 'anio': 2026},       # La libertad doble (BIFF 12)
+                 14018: {'director': 'Augusto Zegarra', 'anio': 2025},       # Runa Simi (AFF 2026)
+                 14037: {'director': 'José Luis Guerín', 'anio': 2025},      # Historias del buen Valle (FICCI 65)
+                 14049: {'director': 'José Luis Guerín', 'anio': 2025},
+                 14041: {'director': 'Javier Calvo, Javier Ambrossi', 'anio': 2026},  # La bola negra (BIFF 12, TIFF)
+                 14046: {'director': 'Javier Calvo, Javier Ambrossi', 'anio': 2026}}
+OBRAS_TARJETA = {
+    14016: [{'titulo': 'Rodilla Negra', 'pais': 'Colombia', 'director': 'Carlos Mayolo', 'anio': 1975, 'duracion_min': 14},
+            {'titulo': 'El Coloso', 'pais': 'Colombia', 'director': 'José Varón', 'anio': 2025, 'duracion_min': 70}],
+    # dos SERIES documentales de Telepacífico (telepacifico.com/37-novedades): la
+    # función proyecta episodios; directores de la fuente, sin ficha en TMDB
+    14021: [{'titulo': 'Salseando ando', 'pais': 'Colombia', 'director': 'Álvaro Varón'},
+            {'titulo': 'Convergencias', 'pais': 'Colombia', 'director': 'Jorge Navas'}],
+    # PROGRAMAS cuya lista no está en ficcali.com sino en la programación del
+    # Teatrino publicada por El País Cali (elpais.com.co/cultura/el-teatro-
+    # municipal-enrique-buenaventura-se-reactiva-con-programacion-en-su-teatrino-
+    # eventos-culturales-para-octubre-0230.html). Trópico interior: muestra de
+    # terror/fantástico (curaduría Melissa Saavedra y Alejandra Rocas); Anibia: la
+    # muestra itinerante del festival de animación Anibia (Bogotá).
+    14019: [{'titulo': '¿Por qué se esconde Drácula?', 'director': 'Camila Loboguerrero', 'anio': 1980, 'duracion_min': 11, 'pais': 'Colombia'},
+            {'titulo': 'Sirenas en la niebla', 'director': 'Daniela Narváez', 'anio': 2023, 'duracion_min': 16, 'pais': 'Colombia'},
+            {'titulo': 'El ocaso de las criaturas', 'director': 'Jenny David Piedrahita', 'anio': 2023, 'duracion_min': 10, 'pais': 'Colombia'},
+            {'titulo': 'Estirpe', 'director': 'Ana María Ferro', 'anio': 2023, 'duracion_min': 16, 'pais': 'Colombia'},
+            {'titulo': 'Mi Demonio', 'director': 'Rossana Montoya', 'anio': 2024, 'duracion_min': 17, 'pais': 'Colombia'},
+            {'titulo': 'Liebres', 'director': 'Laura Carvajal', 'anio': 2024, 'duracion_min': 13, 'pais': 'Colombia'},
+            {'titulo': 'Somnolítico', 'director': 'Abril Natalia Velázquez', 'anio': 2026, 'duracion_min': 13, 'pais': 'Colombia'}],
+    14043: [{'titulo': t, 'pais': 'Colombia'} for t in ('Fabricia', 'Corte Eléctrico', 'Una porción por envase', 'Quimera',
+                                                       'Tapir Memories', 'Caída libre', 'Pájaro Cubo', 'Susurros del mar')],
+}
 # LOS PROGRAMAS SIN LISTA: la tarjeta parte una sección sin decir cómo
 SIN_LISTA = {13995: 'Competencia Cortometraje Nacional', 13999: 'Competencia Cortometraje Nacional',
              14033: 'Vanguardias Afro e Indígenas', 14034: 'Vanguardias Afro e Indígenas'}
@@ -166,6 +254,12 @@ SIN_LISTA = {13995: 'Competencia Cortometraje Nacional', 13999: 'Competencia Cor
 # CaliLee»: cada una lleva el título de su libro; el distintivo de la tarjeta ya
 # dice «lanzamiento de libro»). Propuesta para Juan (7 oct). Por id de tarjeta.
 TITULO = {
+    # 21 oct 2026: la ficha de «Historias del buen valle» salió de la Selección
+    # (sigue en ficcali.com/pelicula/ con ese título, y la obra sigue en la
+    # programación); sin ficha mandaba la tarjeta, «buen Valle». Se queda el de
+    # la ficha, el publicado.
+    14037: 'Ceremonia de premiación',   # lámina 1 de IG De0V1lFDU4D (23 oct 2026)
+    14049: 'Historias del buen valle',
     14518: 'Encuentro local estudiantes de cine 2026: Bailar con el caos',
     14519: 'Encuentro local estudiantes de cine 2026: Bailar con el caos',
     14521: 'Desarmar la mirada. Taller de crítica para pensar el cine',
@@ -189,7 +283,25 @@ TITULO = {
     14019: 'Trópico interior: Todos los colores de la oscuridad',   # la tarjeta no deja espacio tras «:»
 }
 # EL LUGAR EXACTO que dos tarjetas dan en su última línea («Lugar: …»)
-SALA_TARJETA = {14624: 'Auditorio Celsia', 14625: 'Carpa de la Red de Bibliotecas Públicas de Cali'}
+SALA_TARJETA = {14624: 'Auditorio Celsia', 14625: 'Carpa de la Red de Bibliotecas Públicas de Cali',
+                # vigía 22 oct 2026: la lámina de cada lanzamiento (IG DezOJbQkf6x, 3 y 6)
+                # dice «LUGAR Auditorio Celsia, Bulevar del Río»; la meta de la web ya lo decía
+                14607: 'Auditorio Celsia', 14608: 'Auditorio Celsia',
+                # vigía 22 oct 2026: lámina 2 del mismo IG (DezOJbQkf6x) dice «LUGAR Carpa GEUP
+                # (Grupo Editoriales Universitarias del Pacífico), Bulevar del Río · 4:00 p.m. a 5:00 p.m.»
+                14606: 'Carpa GEUP'}
+# LA ABIERTA DE VARIOS DÍAS (vigía 22 oct 2026): la web publica la Muestra VR solo el
+# sáb 17, 3–7 p. m.; el IG del festival (DezVbZHRunB, 22 oct) dice «Muestra VR
+# Realidades en 360° · 3:00 p.m. a 7:00 p.m. Hasta el 25 de octubre» e «Inscripciones
+# en la Bio». Es UNA función `info` con `hasta` (modelo #1229/#1230).
+ABIERTA = {14841: {'hasta': '2026-10-25', 'acceso': 'Inscripción previa',
+                   'fuente': 'https://www.instagram.com/p/DezVbZHRunB/'}}
+# CITY TOUR (Conexiones): lámina 6 del IG DezWCmQEdHT (22 oct 2026), la web no lo
+# tiene: «CITY TOUR · Cupos: 53 · Con inscripción previa · Sábado 24 de octubre ·
+# Salida: Hotel Obelisco, Av. Colombia # 4 Oeste-49 · 10:00 a.m. a 12:30 p.m.»
+CITY_TOUR = {'dia': '2026-10-24', 'hora': '10:00', 'duracion_min': 150, 'titulo': 'City Tour',
+             'acceso': 'Inscripción previa · Cupos: 53', 'sinopsis': 'Conoce Cali en un recorrido único.',
+             'fuente': 'https://www.instagram.com/p/DezWCmQEdHT/'}
 
 # EL TIPO DE ACTIVIDAD por la palabra del título (vocabulario que la app conoce)
 KIND = [('master class', 'masterclass'), ('máster class', 'masterclass'), ('taller', 'taller'),
@@ -202,9 +314,15 @@ EXPERIENCIA = {14841, 13931, 14447, 14448, 14919, 14006}
 
 
 def acceso(x):
-    t = ' '.join(filter(None, [x['titulo'], x.get('meta_impresa') or '']))
+    # la categoría también: en la 3.ª sesión del Seminario (tarjeta 16325, 19 oct)
+    # la web corrió su línea, con «Link de inscripción aquí.», a ese campo
+    t = ' '.join(filter(None, [x['titulo'], x.get('meta_impresa') or '', x.get('categoria') or '']))
     if x['id'] == 13880:          # el lanzamiento (nota oficial del festival)
         return 'Entrada libre y gratuita hasta completar aforo'
+    # la inauguración: «🎟️ Entrada libre hasta completar aforo» (@festivaldecinecali,
+    # instagram.com/p/DeQLkfeESTZ, 8 oct: Los Cristales, viernes 16, 6 p. m.)
+    if x['id'] == 13924:          # MUKIRA, Teatro Los Cristales, 16 oct
+        return 'Entrada libre hasta completar aforo'
     if re.search(r'inscripci[oó]n|cupo', t, re.I):
         return 'Inscripción previa' + (f' · {m.group()}' if (m := re.search(r'Cupo:\s*\d+(\s*personas)?', t)) else '')
     return DESCONOCIDO
@@ -229,6 +347,12 @@ def _obra(o):
                                   'genero': genero_uno(o.get('genero')), 'sinopsis': o.get('sinopsis')}.items() if v}
 
 
+VANGUARDIAS = (json.load(io.open(f'{REPO}/festivals/staging/ficcali-2026-ig.json', encoding='utf-8'))['vanguardias']
+               if os.path.exists(f'{REPO}/festivals/staging/ficcali-2026-ig.json') else {})
+ANIMA = (json.load(io.open(f'{REPO}/festivals/staging/ficcali-2026-anima.json', encoding='utf-8'))
+         if os.path.exists(f'{REPO}/festivals/staging/ficcali-2026-anima.json') else {})
+
+
 def main():
     T = json.load(io.open(PROG, encoding='utf-8'))['tarjetas']
     O = json.load(io.open(CAT, encoding='utf-8'))['obras']
@@ -236,8 +360,15 @@ def main():
     fallos, funciones, fuera = [], [], []
 
 
+    # LA SECCIÓN DECLARADA PRIMERO (10 oct 2026): la web sumó una subpágina
+    # «Primer plano» que también enlaza obras de Zoom y de Muestras de Muestras.
+    # Una obra listada en varias va en la primera que el plan ya declara; una
+    # sección nueva entra solo cuando Juan la declara en el plan.
+    _plan_secs = set(json.load(io.open(f'{REPO}/pipeline/ficcali-2026.plan.json', encoding='utf-8'))['festival']['secciones'])
+
     def seccion_de(o):
-        return SECCION.get(o['secciones'][0], o['secciones'][0])
+        cands = [SECCION.get(x, x) for x in o['secciones']]
+        return next((c for c in cands if c in _plan_secs), cands[0])
 
     for x in T:
         if not (DESDE <= x['dia'] <= HASTA):
@@ -246,12 +377,18 @@ def main():
         if not x.get('hora'):
             fuera.append(f'{x["dia"]} {x["titulo"]}: sin hora en la tarjeta')
             continue
+        if x['sede'] in SEDE_SIN_PIN:
+            fuera.append(f'tarjeta {x["id"]} · {x["dia"]} {x["titulo"][:60]}: {SEDE_SIN_PIN[x["sede"]]}')
+            continue
         partes = [p.strip() for p in x['titulo'].split('|')]
         nombre, detalle = partes[0], ' | '.join(partes[1:]) or None
-        if x['sede'] not in SEDES:
+        # sin distinguir mayúsculas: la web pasó «SALA MADAME BLUE» a «Sala Madame
+        # Blue» (17 oct) y tres tarjetas se caían de la tabla por la caja
+        _sedes = {k.upper(): v for k, v in SEDES.items()}
+        if x['sede'].upper() not in _sedes:
             fallos.append(f'tarjeta {x["id"]}: sede sin entrada en la tabla: {x["sede"]!r}')
             continue
-        sede, sala = SEDES[x['sede']]
+        sede, sala = _sedes[x['sede'].upper()]
         r = {'dia': x['dia'], 'hora': x['hora'], 'sede': sede, 'sala': sala, 'sede_cruda': x['sede'],
              'acceso': acceso(x),
              '_src': {'url': URL, 'date': '2026-10-06', 'tarjeta': x['id']}}
@@ -268,7 +405,7 @@ def main():
         k = plano(nombre)
         o = idx.get(k) or idx.get(plano(ALIAS.get(k, '')))
         cat = x['categoria']
-        es_proy = cat in ('Proyecciones', 'Cine sin límites') or x.get('duracion_min')
+        es_proy = (cat in ('Proyecciones', 'Cine sin límites') or x.get('duracion_min')) and x['id'] not in EVENTO_EN_PROYECCIONES
         if x['id'] in PROGRAMA:
             p = PROGRAMA[x['id']]
             if isinstance(p, list):
@@ -284,12 +421,21 @@ def main():
                       (p[1] if p[0] != 'rotulo' else 'Muestras de Muestras'),
                       'obras': [_obra(o_) for o_ in obras]})
             r.setdefault('duracion_min', sum(o_.get('duracion_min') or 0 for o_ in obras) or None)
+        elif x['id'] in OBRAS_TARJETA:
+            r.update({'titulo': nombre, 'seccion': SECCION_TARJETA.get(cat, 'Proyecciones'),
+                      'obras': [dict(o_) for o_ in OBRAS_TARJETA[x['id']]]})
+            r.setdefault('duracion_min', x.get('duracion_min'))
         elif x['id'] in SIN_LISTA:
             # sin lista no hay programa (un `is_cortos` vacío rompe el contrato):
             # va como función de la categoría de su tarjeta; preguntado al festival
             r.update({'titulo': nombre, 'seccion': SECCION_TARJETA.get(cat, 'Proyecciones')})
         elif o and es_proy:
             r.update(_obra(o))
+            # lo que la ficha calla y la tarjeta declara (DATOS_TARJETA) se suma;
+            # nunca pisa un dato de la ficha
+            for k_, v_ in (DATOS_TARJETA.get(x['id']) or {}).items():
+                if not r.get(k_):
+                    r[k_] = v_
             r['seccion'] = seccion_de(o)
             if plano(o['titulo']) != k:
                 r['titulo_es'] = nombre
@@ -297,10 +443,11 @@ def main():
             r['duracion_min'] = max(filter(None, [o.get('duracion_min'), x.get('duracion_min')]), default=None)
         elif es_proy and x['id'] not in EXPERIENCIA:
             r.update({'titulo': nombre, 'seccion': SECCION_TARJETA.get(cat, 'Proyecciones'),
+                      **(DATOS_TARJETA.get(x['id']) or {}),
                       'pais': x.get('pais') if x.get('pais') not in ('Cali, Colombia', 'Cali') else None,
                       'duracion_min': x.get('duracion_min')})
         else:
-            kind = next((v for w, v in KIND if w in nombre.lower()), 'evento')
+            kind = EVENTO_EN_PROYECCIONES.get(x['id']) or next((v for w, v in KIND if w in nombre.lower()), 'evento')
             r.update({'titulo': nombre, 'tipo': 'evento', 'event_kind': kind,
                       'seccion': SECCION_TARJETA.get(cat, 'Académico' if cat not in SECCION_TARJETA else cat)})
             if detalle:
@@ -308,29 +455,61 @@ def main():
             # la meta de la tarjeta, si es de ESTA actividad: una línea que se
             # repite en varias («Cali. Panel en alianza con la Academia…») es del
             # lugar o del ciclo, no de la actividad
-            if x.get('meta_impresa') and x['meta_impresa'] not in ('Cali, Colombia', 'Cali, Colombia.') \
-                    and sum(1 for y in T if y.get('meta_impresa') == x['meta_impresa']) == 1:
-                r['invitados'] = x['meta_impresa']
+            # «Link de inscripción aquí.» es el rótulo del enlace (18 oct: la web lo
+            # pegó a la línea de los seminarios), no texto de la actividad: sin él
+            # la línea del 20 dejaba de ser única y se perdía su descripción
+            _meta = lambda y: re.sub(r'\s*Link de inscripci[oó]n aqu[ií]\.?', '', y.get('meta_impresa') or '').strip()
+            if _meta(x) and _meta(x) not in ('Cali, Colombia', 'Cali, Colombia.') \
+                    and sum(1 for y in T if _meta(y) == _meta(x)) == 1:
+                r['invitados'] = _meta(x)
         if x['id'] in TITULO:
             r['titulo'] = TITULO[x['id']]
         if x['id'] in SALA_TARJETA:
             r['sala'] = SALA_TARJETA[x['id']]
+        if x['id'] in ABIERTA:
+            _ab = ABIERTA[x['id']]
+            r.update({'info': True, 'hasta': _ab['hasta'], 'acceso': _ab['acceso']})
+            r['_src']['ventana'] = _ab['fuente']
         r['titulo'] = recta(r['titulo'])
+        # LAS OBRAS DE VANGUARDIAS (17 oct): la web publica los dos programas sin
+        # sus cortos; el IG del festival los lista (ficcali-2026-ig.py → sidecar)
+        _mv = re.match(r'Vanguardias Afro e Indígena\s*[–-]\s*Prog\.?\s*(\d+)', r.get('titulo') or '')
+        if _mv and VANGUARDIAS.get(_mv.group(1)):
+            r['obras'] = [dict(o) for o in VANGUARDIAS[_mv.group(1)]]
+            r['_src']['obras'] = 'https://www.instagram.com/p/DenDhbtmnyO/'
+        # LA RETROSPECTIVA DE MARÍA CRISTINA PÉREZ (21 oct): la programación la
+        # publica sin obras; la página de Animá Ve las lista (sidecar ficcali-2026-anima.json)
+        if re.search(r'Retrospectiva de Mar[ií]a Cristina P[ée]rez', r.get('titulo') or '') and ANIMA.get('retrospectiva_mcp'):
+            r['obras'] = [dict(o) for o in ANIMA['retrospectiva_mcp']]
+            r['_src']['obras'] = 'https://ficcali.com/anima-ve-2026/'
+        # MUJERES EN LA ANIMACIÓN (25 oct): la programación la publica sin obras.
+        # Le damos el bloque «Expansión de un territorio» de Animá Ve — decisión
+        # NUESTRA (Juan, 21 oct), con su porqué en el sidecar (_provenance_mujeres).
+        if re.search(r'Mujeres en la animaci[oó]n', r.get('titulo') or '') and ANIMA.get('mujeres_en_la_animacion'):
+            r['obras'] = [dict(o) for o in ANIMA['mujeres_en_la_animacion']]
+            r['_src']['obras'] = 'https://ficcali.com/anima-ve-2026/'
         funciones.append({k_: v for k_, v in r.items() if v not in (None, '')})
 
     # LA MISMA ACTIVIDAD EN VARIAS FECHAS lleva UN texto ([programa-mismo-titulo]):
-    # el de su primera tarjeta; la línea de aula y cupo de cada una ya está en
-    # su acceso
-    primero = {}
+    # el PRIMERO QUE EXISTA entre sus tarjetas, no el de la primera tarjeta: el
+    # XV Seminario «Pantallas que piensan» trae su línea en las sesiones 1 y 3 y
+    # la 2 viene vacía; tomar «la primera» las dejaba a las tres sin texto (20 oct
+    # 2026). La línea de aula y cupo de cada una ya está en su acceso.
+    texto, vistos = {}, {}
     for f in funciones:
-        if f.get('tipo') != 'evento':
+        if f.get('tipo') == 'evento':
+            vistos.setdefault(f['titulo'], []).append(f)
+            # su texto: la sinopsis, o si no la línea propia de la tarjeta
+            # (`invitados`, la meta única): la del Seminario es esa
+            if f.get('sinopsis') or f.get('invitados'):
+                texto.setdefault(f['titulo'], f.get('sinopsis') or f['invitados'])
+    for t_, grupo in vistos.items():
+        if len(grupo) < 2:
             continue
-        p0 = primero.setdefault(f['titulo'], f)
-        if p0 is not f:
+        for f in grupo:
             f.pop('invitados', None)
-            if p0.get('sinopsis'):
-                f['sinopsis'] = p0['sinopsis']
-            p0.pop('invitados', None)
+            if t_ in texto:
+                f['sinopsis'] = texto[t_]
 
     # DURACIÓN DEDUCIDA de lo que no la trae
     def mins(h):
@@ -348,6 +527,20 @@ def main():
         fallos.append(f'{len(T)} tarjetas y {len(funciones)} funciones + {len(fuera)} fuera')
     if fallos:
         sys.exit('✗ el crudo no cuadra:\n  · ' + '\n  · '.join(fallos))
+    for x in DEL_IG:
+        funciones.append({'dia': x['dia'], 'hora': x['hora'], 'sede': 'Yawa', 'sede_cruda': 'YAWA',
+                          'acceso': 'Entrada libre (no se anuncia pago)', 'titulo': x['titulo'],
+                          'tipo': 'evento', 'event_kind': 'taller', 'seccion': 'Académico',
+                          'is_recurring': True, 'duracion_min': x['duracion_min'],
+                          '_src': {'url': x['fuente'], 'date': '2026-10-14'}})
+    funciones.append({'dia': CITY_TOUR['dia'], 'hora': CITY_TOUR['hora'], 'sede': 'Hotel Obelisco',
+                      'sede_cruda': 'Hotel Obelisco', 'acceso': CITY_TOUR['acceso'], 'titulo': CITY_TOUR['titulo'],
+                      'tipo': 'evento', 'event_kind': 'evento', 'seccion': 'Conexiones',
+                      'duracion_min': CITY_TOUR['duracion_min'], 'sinopsis': CITY_TOUR['sinopsis'],
+                      '_src': {'url': CITY_TOUR['fuente'], 'date': '2026-10-22'}})
+    _m21 = next(f for f in funciones if f.get('titulo') == 'Cineconcierto: Metrópolis')
+    funciones.append({**_m21, 'dia': METROPOLIS_24['dia'],
+                      '_src': {'url': METROPOLIS_24['fuente'], 'date': '2026-10-15'}})
     io.open(DESTINO, 'w', encoding='utf-8').write(json.dumps({
         '_provenance': provenance('ficcali.com — Programación 2026 (WP 14870) + fichas de la Selección 2026',
                                   url=URL, metodo='tarjeta por función; obra por la ficha del catálogo'),

@@ -27,6 +27,7 @@
 import { state } from './state.js';
 import { storage } from '../storage/storage.js';
 import { normTitle } from '../domain/film.js';
+import { renamesDe, migrarEstado } from '../domain/titulos.js';
 
 // Helpers de (de)serialización de nube compartidos entre entradas.
 const _setToCloud   = (v)=>[...v];
@@ -45,6 +46,16 @@ export const FESTIVAL_STATE = [
     toCloud:_setToCloud, fromCloud:_setFromCloud },
   { key:'notWatched',  empty:()=>new Set(), storage:'NotWatched',  cloud:'notwatched',
     hydrate:()=>new Set([...storage.getNotWatched()].map(normTitle)),
+    toCloud:_setToCloud, fromCloud:_setFromCloud },
+  // watchedMeta — la función en que se vio cada obra marcada fuera del Plan
+  // (#1055). Objeto por título, como ratings: parcial MERGEA, wholesale reemplaza.
+  { key:'watchedMeta', empty:()=>({}),      storage:'WatchedMeta', cloud:'watched_meta',
+    hydrate:()=>({...state.get('watchedMeta'), ...storage.getWatchedMeta()}),
+    toCloud:_id,
+    fromCloud:(d,whole,cur)=> (whole||(d&&Object.keys(d).length)) ? (whole?(d||{}):{...cur,...d}) : undefined },
+  // ticketed — funciones con boleta comprada (#1077), «título|día|hora».
+  { key:'ticketed',    empty:()=>new Set(), storage:'Ticketed',    cloud:'ticketed',
+    hydrate:()=>storage.getTicketed(),
     toCloud:_setToCloud, fromCloud:_setFromCloud },
   { key:'prioritized', empty:()=>new Set(), storage:'Prioritized', cloud:'prioritized',
     hydrate:()=>new Set([...storage.getPrioritized()].map(normTitle)),
@@ -153,4 +164,27 @@ export function deriveCloudApply(data, whole){
     if(v!==undefined) u[e.key]=v;
   }
   return u;
+}
+
+// migrarTitulosAnteriores(films) — mueve lo guardado bajo un título viejo al
+// vigente (ver domain/titulos.js) y lo persiste en LOCAL, como syncSchedule: la
+// corrección es derivada e idempotente, subirla crearía ping-pong entre
+// dispositivos que se normalizan solos. Recorre FESTIVAL_STATE → cualquier estado
+// por-festival nuevo queda cubierto si migrarEstado sabe leerlo. Devuelve cuántas
+// claves cambiaron (0 = el caso de siempre, sin escrituras).
+export function migrarTitulosAnteriores(films){
+  const ren=renamesDe(films, normTitle);
+  if(!ren.size) return 0;
+  const st={};
+  for(const e of FESTIVAL_STATE) st[e.key]=state.get(e.key);
+  const u=migrarEstado(st, ren);
+  const claves=Object.keys(u);
+  if(!claves.length) return 0;
+  state.batchUpdate(u);
+  for(const e of FESTIVAL_STATE){
+    if(!(e.key in u)) continue;
+    const set=storage['set'+e.storage];
+    if(typeof set==='function') set.call(storage, u[e.key]);
+  }
+  return claves.length;
 }

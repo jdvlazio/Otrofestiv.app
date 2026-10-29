@@ -80,6 +80,8 @@ SEDES = {
     # cual y sin pin hasta saberlo.
     'Capilla, Comfama': 'Capilla, Comfama',
     'Maker Lab, Colombo': 'Maker Lab, Colombo',
+    # la sala histórica que cerró en 2008 y abre una última vez (ver FUNCIONES_DE_OTRO_POST)
+    'Cine Centro': 'Cine Centro',
 }
 
 # ── LAS SECCIONES. El festival no agrupa por secciones; como en Girardota,
@@ -111,6 +113,10 @@ ACTIVIDAD = {
     'Huella mi frente': 'live cinema',
     # el festival no lo rotula; «convite» es nuestra lectura (SiembraFest), por aprobar
     '¡Sancocho!': 'convite',
+    # NO es una proyección: la lámina 7 dice «Presentación Cuadernos de Cine
+    # Colombiano #35 Prácticas documentales · Conversación con Juana Schlenker,
+    # Daniel Cortés, Ana Tiagx, Tomás Campuzano». Iba como obra sin afiche (9 oct).
+    'Programa SHUB: Hocico de cerdo': 'encuentro',
 }
 INSCRIPCION = {
     # linktr.ee/M.A.M.U.T, el único de los cuatro formularios que sigue abierto (28 sep)
@@ -126,6 +132,17 @@ SINOPSIS_TALLER = {
 # LA SALA QUE LA LÁMINA NO DICE Y OTRA FUENTE DEL FESTIVAL SÍ. El post de la
 # función (p/DdwI93AkW1e, 25 sep): «08 de octubre | 6:30 p. m. | Teatro MAMM».
 SALA_DE_OTRA_FUENTE = {'Frío metal': 'Teatro'}
+# LA HISTORIA DEL DOMINGO (11 oct, @mamut_festival, captura que mandó Juan:
+# fuentes/mamut-2026/historia-domingo-11oct.jpg) corrige la lámina 8–9: el
+# Sancocho es a las 2:30 p. m. (no a las 12) y Bombardeo a Washington va en la
+# Sala 0 de Coocine. Por (título, día): Bombardeo también abrió la inauguración.
+DEL_DOMINGO = {('¡Sancocho!', '2026-10-11'): {'hora': '14:30'},
+               ('Bombardeo a Washington', '2026-10-11'): {'sala': 'Sala 0'},
+               # REPROGRAMADA (p/DeSPVs5CcQW) del vie 9 a: «Domingo 11 de Octubre ·
+               # 2:30 pm · Centro Colombo Americano» (p/DeXPxuopBmt, 11 oct;
+               # fuentes/mamut-2026/mariposas-domingo-DeXPxuopBmt.jpg)
+               ('La memoria de las mariposas', '2026-10-09'): {
+                   'dia': '2026-10-11', 'hora': '14:30', 'sede': 'Centro Colombo Americano', 'sala': None}}
 # EL RENGLÓN DE LA LÁMINA, REESCRITO (decisión de Juan, 1 oct 2026). Va en
 # mayúscula sostenida y sin tildes («(VERSIÓN RESTAURADA) CONVERSACION CON
 # DIRECTOR»); pasado a minúsculas quedaba «(versión restaurada) conversacion con
@@ -145,6 +162,24 @@ SINOPSIS_DE_OTRA_FUENTE = {
 # acompañadas de conversaciones con sus Directores»; la lámina solo la marcaba en
 # dos de las tres.
 QA_DE_OTRA_FUENTE = {'La memoria de las mariposas': 'https://www.instagram.com/p/DeAIFYqJAQE/'}
+
+# LA FUNCIÓN QUE EL CARRUSEL NO TRAE Y OTRO POST DEL FESTIVAL SÍ (9 oct 2026).
+# p/DeQQqCqiUdb (8 oct): «¡La última función del Cine Centro!» — la sala que
+# programó entre 1990 y 2008 abre una última vez. Lámina: «LOLITA EN HONDA ·
+# Daniel Torres. Colombia. 2026. 60 min. · ÚLTIMA FUNCIÓN DEL TEATRO CINE
+# CENTRO · SÁBADO 10 DE OCTUBRE · Conversación + Proyección en 16 mm · 2:30
+# p. m. · Cine Centro - Esquina de la Avenida Oriental (Carrera 46) con la calle
+# Ecuador (Carrera 48) · Entrada libre». El pie: con presencia del director y de
+# Luis Carlos Uribe, fundador de Cine Centro, y «algunos cortos en 16 mm» que no
+# nombra (no se inventan). Juan aprobó sumarla el 9 oct. Es una SEGUNDA función
+# de una obra que ya está, no una obra nueva.
+FUNCIONES_DE_OTRO_POST = [
+    {'titulo': 'Lolita en Honda', 'dia': '2026-10-10', 'hora': '14:30', 'sede': 'Cine Centro',
+     # los invitados (Daniel Torres y Luis Carlos Uribe) NO van en `invitados`: el
+     # ensamblador los pega a la sinopsis y la misma obra quedaría con dos
+     # sinopsis ([programa-mismo-titulo]). La conversación la marca has_qa.
+     'post': 'DeQQqCqiUdb', 'fecha_post': '2026-10-08'},
+]
 
 # El Q&A lo dice la lámina corregida («CONVERSACION CON DIRECTOR», `qa` en la
 # transcripción). Con invitados nombrados, `guests` y la lista va a la ficha.
@@ -336,6 +371,26 @@ def main():
                 and t not in ACTIVIDAD and not reg.get('sinopsis') and a.get('credito')):
             c = CREDITO_REESCRITO.get(t) or a['credito'].strip().capitalize()
             reg['sinopsis'] = c if c.endswith('.') else c + '.'
+        if (t, a['dia']) in DEL_DOMINGO:
+            for k, v in DEL_DOMINGO[(t, a['dia'])].items():
+                if v is None:
+                    reg.pop(k, None)
+                else:
+                    reg[k] = SEDES[v] if k == 'sede' else v
+            reg['_src']['corrige'] = 'historia de @mamut_festival, 11 oct 2026 (captura de Juan)'
+        funciones.append(reg)
+
+    for x in FUNCIONES_DE_OTRO_POST:
+        reg = {'titulo': x['titulo'], 'dia': x['dia'], 'hora': x['hora'], 'sede': SEDES[x['sede']],
+               'acceso': 'Entrada libre', 'seccion': SECCION_PROYECCION,
+               'has_qa': True, 'qa_type': 'guests',
+               '_src': {'url': f'https://www.instagram.com/p/{x["post"]}/', 'date': x['fecha_post']}}
+        o = catalogo.get(x['titulo'])
+        if not o:
+            sys.exit(f'✗ {x["titulo"]!r} no está en el catálogo de la programación')
+        for c in ('director', 'pais', 'anio', 'duracion_min'):
+            if o.get(c):
+                reg[c] = o[c]
         funciones.append(reg)
 
     duracion_sin_dato(funciones)

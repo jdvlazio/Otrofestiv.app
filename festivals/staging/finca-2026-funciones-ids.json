@@ -1,0 +1,218 @@
+{
+ "_provenance": {
+  "fuente": "ids-legado.py: ids estables congelados desde lo publicado (docs/FUNCION.md §11.2)",
+  "capturado": "2026-10-18"
+ },
+ "funciones": {
+  "f_30d013d332": {
+   "sede": "Alianza Francesa de Buenos Aires - Buenos Aires",
+   "dia": "2026-08-12",
+   "hora": "19:30",
+   "sala": "",
+   "titulo": "nunca mas una historia sin nosotros"
+  },
+  "f_fe27bc5725": {
+   "sede": "Alianza Francesa de Buenos Aires - Buenos Aires",
+   "dia": "2026-08-13",
+   "hora": "19:30",
+   "sala": "",
+   "titulo": "toroboro el nombre de las plantas"
+  },
+  "f_bb6e6fc02d": {
+   "sede": "Cine York - Buenos Aires",
+   "dia": "2026-08-13",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "propiedad privada prohibido pasar"
+  },
+  "f_4e1cb4f763": {
+   "sede": "Cine York - Buenos Aires",
+   "dia": "2026-08-13",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "mi casa es su casa"
+  },
+  "f_ffcbdad860": {
+   "sede": "Cine York - Buenos Aires",
+   "dia": "2026-08-13",
+   "hora": "20:30",
+   "sala": "",
+   "titulo": "ziki"
+  },
+  "f_704ec95de1": {
+   "sede": "Cine York - Buenos Aires",
+   "dia": "2026-08-13",
+   "hora": "20:30",
+   "sala": "",
+   "titulo": "yurlu"
+  },
+  "f_2fb4a9d85c": {
+   "sede": "Cine Arte Cacodelphia - Buenos Aires",
+   "dia": "2026-08-14",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "pailako cosmovision en resistencia"
+  },
+  "f_599cf11d7e": {
+   "sede": "Cine Arte Cacodelphia - Buenos Aires",
+   "dia": "2026-08-14",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "la granja de la libertad"
+  },
+  "f_a605ac40c9": {
+   "sede": "Cine York - Buenos Aires",
+   "dia": "2026-08-14",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "tigre es yaguarete"
+  },
+  "f_129f1bcdc1": {
+   "sede": "Cine York - Buenos Aires",
+   "dia": "2026-08-14",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "pau d arco"
+  },
+  "f_2a8c9e51a6": {
+   "sede": "Cine York - Buenos Aires",
+   "dia": "2026-08-14",
+   "hora": "20:30",
+   "sala": "",
+   "titulo": "el arbol de la autenticidad"
+  },
+  "f_e7cb353bad": {
+   "sede": "Cine Arte Cacodelphia - Buenos Aires",
+   "dia": "2026-08-15",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "de la guerra fria a la guerra verde"
+  },
+  "f_19ec3045fd": {
+   "sede": "Cine York - Buenos Aires",
+   "dia": "2026-08-15",
+   "hora": "20:30",
+   "sala": "",
+   "titulo": "karuara la gente del rio"
+  },
+  "f_85d9778f96": {
+   "sede": "Cine York - Buenos Aires",
+   "dia": "2026-08-15",
+   "hora": "20:30",
+   "sala": "",
+   "titulo": "colorado"
+  },
+  "f_122295e552": {
+   "sede": "Cine Arte Cacodelphia - Buenos Aires",
+   "dia": "2026-08-16",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "la vida fracturada"
+  },
+  "f_c72ebc8bf0": {
+   "sede": "Cine Arte Cacodelphia - Buenos Aires",
+   "dia": "2026-08-17",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "amora"
+  },
+  "f_89ecb92871": {
+   "sede": "Centro Cultural 25 de Mayo - Buenos Aires",
+   "dia": "2026-08-17",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "cuan profundo es tu amor"
+  },
+  "f_aa9d8e30bb": {
+   "sede": "Cine Arte Cacodelphia - Buenos Aires",
+   "dia": "2026-08-18",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "tierra que habla"
+  },
+  "f_7fc9cde3a0": {
+   "sede": "Alianza Francesa de Buenos Aires - Buenos Aires",
+   "dia": "2026-08-18",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "yintah"
+  },
+  "f_344d9c607c": {
+   "sede": "Teatro Empire - Buenos Aires",
+   "dia": "2026-08-18",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "que perforado esta mi valle"
+  },
+  "f_074ca58925": {
+   "sede": "Teatro Empire - Buenos Aires",
+   "dia": "2026-08-18",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "sangre de plomo"
+  },
+  "f_c8f1d247a9": {
+   "sede": "Teatro Empire - Buenos Aires",
+   "dia": "2026-08-18",
+   "hora": "21:00",
+   "sala": "",
+   "titulo": "el amor duerme en la calle"
+  },
+  "f_180276505c": {
+   "sede": "Cine Arte Cacodelphia - Buenos Aires",
+   "dia": "2026-08-19",
+   "hora": "21:30",
+   "sala": "",
+   "titulo": "el costo del crecimiento"
+  },
+  "f_5b8810f409": {
+   "sede": "Cine Arte Cacodelphia - Buenos Aires",
+   "dia": "2026-08-13",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "cortometrajes en competencia oficial programa 1"
+  },
+  "f_7595594801": {
+   "sede": "Alianza Francesa de Buenos Aires - Buenos Aires",
+   "dia": "2026-08-14",
+   "hora": "19:30",
+   "sala": "",
+   "titulo": "cortometrajes en competencia oficial programa 2"
+  },
+  "f_c75fa1ffa2": {
+   "sede": "Cine York - Buenos Aires",
+   "dia": "2026-08-15",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "finquita cine para infancias"
+  },
+  "f_c4ebea1366": {
+   "sede": "Alianza Francesa de Buenos Aires - Buenos Aires",
+   "dia": "2026-08-12",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "ceremonia de apertura"
+  },
+  "f_8a6afc5edb": {
+   "sede": "CCEBA - Buenos Aires",
+   "dia": "2026-08-13",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "sabotear el futuro charla con enar de dios rodriguez"
+  },
+  "f_21c778db88": {
+   "sede": "Alianza Francesa de Buenos Aires - Buenos Aires",
+   "dia": "2026-08-19",
+   "hora": "14:30",
+   "sala": "",
+   "titulo": "pitch publico semillas lab"
+  },
+  "f_357f7fec15": {
+   "sede": "Alianza Francesa de Buenos Aires - Buenos Aires",
+   "dia": "2026-08-19",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "ceremonia de premiacion"
+  }
+ }
+}

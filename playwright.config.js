@@ -83,15 +83,14 @@ module.exports = defineConfig({
     },
   ],
   webServer: {
-    // Servidor CONCURRENTE (ThreadingHTTPServer). El `python3 -m http.server`
-    // por defecto es single-thread: con el split a 13+ módulos ESM, cada carga
-    // de página dispara 13+ requests HTTP que se encolan contra un único hilo;
-    // bajo los workers paralelos de Playwright eso saturaba el server y las
-    // cargas superaban el timeout → flaky (#splash-dropdown y otros). Threading
-    // sirve los módulos en paralelo y elimina la contención.
-    command: `python3 -c "from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler; ThreadingHTTPServer((\'\', ${PORT}), SimpleHTTPRequestHandler).serve_forever()"`,
+    // Servidor CONCURRENTE y con cola ancha: scripts/servidor-pruebas.py dice por
+    // qué (la cola de 5 por defecto cortaba módulos y la app no arrancaba).
+    command: `python3 scripts/servidor-pruebas.py ${PORT}`,
     url: `http://localhost:${PORT}`,
-    reuseExistingServer: !process.env.CI,
+    // Con PW_PORT (scripts/test.sh eligió un puerto para ESTA corrida) nunca se
+    // reusa un servidor ajeno: si el puerto se ocupó entre la elección y el
+    // arranque, falla claro en vez de colgarse del servidor de otra corrida.
+    reuseExistingServer: !process.env.CI && !process.env.PW_PORT,
     timeout: 10000,
   },
 });

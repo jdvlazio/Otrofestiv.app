@@ -1,0 +1,937 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		033275132FFF187C00FE50C8 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 033275122FFF187C00FE50C8 /* WidgetKit.framework */; };
+		033275152FFF187C00FE50C8 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 033275142FFF187C00FE50C8 /* SwiftUI.framework */; };
+		033275202FFF187D00FE50C8 /* OtrofestivComplicationExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 033275102FFF187C00FE50C8 /* OtrofestivComplicationExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0345A12A2FFE935B006FAECA /* OtrofestivWatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 0345A1202FFE935A006FAECA /* OtrofestivWatch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0345A1332FFE96B0006FAECA /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 0345A1322FFE96B0006FAECA /* Supabase */; };
+		52F0FFAB9FEA30D977A33BBD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4464B05F2B76890D7313501B /* Foundation.framework */; };
+		9E6A4D426E330AD976516722 /* OtrofestivLive.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 91051F694C54DE859C126B04 /* OtrofestivLive.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0332751E2FFF187D00FE50C8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 031394452FB5F02700F22711 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0332750F2FFF187C00FE50C8;
+			remoteInfo = OtrofestivComplicationExtension;
+		};
+		0345A1282FFE935B006FAECA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 031394452FB5F02700F22711 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0345A11F2FFE935A006FAECA;
+			remoteInfo = "OtrofestivWatch Watch App";
+		};
+		9FD0070BBFE70D6D0B002B65 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 031394452FB5F02700F22711 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1088C9A596DF499E708594DB;
+			remoteInfo = OtrofestivLive;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		033275212FFF187D00FE50C8 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				033275202FFF187D00FE50C8 /* OtrofestivComplicationExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0345A12E2FFE935B006FAECA /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				0345A12A2FFE935B006FAECA /* OtrofestivWatch Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65A004EC459030171AFC5BF5 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				9E6A4D426E330AD976516722 /* OtrofestivLive.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0313944D2FB5F02700F22711 /* Otrofestiv.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Otrofestiv.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		033275102FFF187C00FE50C8 /* OtrofestivComplicationExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OtrofestivComplicationExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		033275122FFF187C00FE50C8 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		033275142FFF187C00FE50C8 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		033275272FFF1A1600FE50C8 /* OtrofestivComplicationExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OtrofestivComplicationExtension.entitlements; sourceTree = "<group>"; };
+		0345A1202FFE935A006FAECA /* OtrofestivWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OtrofestivWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4464B05F2B76890D7313501B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		91051F694C54DE859C126B04 /* OtrofestivLive.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OtrofestivLive.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		0313945C2FB5F40F00F22711 /* Exceptions for "Otrofestiv" folder in "Otrofestiv" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+				Otrofestiv.entitlements,
+			);
+			target = 0313944C2FB5F02700F22711 /* Otrofestiv */;
+		};
+		033275252FFF187D00FE50C8 /* Exceptions for "OtrofestivComplication" folder in "OtrofestivComplicationExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 0332750F2FFF187C00FE50C8 /* OtrofestivComplicationExtension */;
+		};
+		0332752B2FFF1AFB00FE50C8 /* Exceptions for "OtrofestivWatch Watch App" folder in "OtrofestivComplicationExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				SharedPlan.swift,
+				WatchStrings.swift,
+			);
+			target = 0332750F2FFF187C00FE50C8 /* OtrofestivComplicationExtension */;
+		};
+		D20195712EAAE282EF35631C /* Exceptions for "OtrofestivLive" folder in "OtrofestivLive" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+				OtrofestivLive.entitlements,
+			);
+			target = 1088C9A596DF499E708594DB /* OtrofestivLive */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		0313944F2FB5F02700F22711 /* Otrofestiv */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				0313945C2FB5F40F00F22711 /* Exceptions for "Otrofestiv" folder in "Otrofestiv" target */,
+			);
+			path = Otrofestiv;
+			sourceTree = "<group>";
+		};
+		033275162FFF187C00FE50C8 /* OtrofestivComplication */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				033275252FFF187D00FE50C8 /* Exceptions for "OtrofestivComplication" folder in "OtrofestivComplicationExtension" target */,
+			);
+			path = OtrofestivComplication;
+			sourceTree = "<group>";
+		};
+		0345A1212FFE935A006FAECA /* OtrofestivWatch Watch App */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				0332752B2FFF1AFB00FE50C8 /* Exceptions for "OtrofestivWatch Watch App" folder in "OtrofestivComplicationExtension" target */,
+			);
+			path = "OtrofestivWatch Watch App";
+			sourceTree = "<group>";
+		};
+		B19EDDF66F9F119C98795B3D /* OtrofestivLive */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				D20195712EAAE282EF35631C /* Exceptions for "OtrofestivLive" folder in "OtrofestivLive" target */,
+			);
+			path = OtrofestivLive;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0313944A2FB5F02700F22711 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0332750D2FFF187C00FE50C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				033275152FFF187C00FE50C8 /* SwiftUI.framework in Frameworks */,
+				033275132FFF187C00FE50C8 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0345A11D2FFE935A006FAECA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0345A1332FFE96B0006FAECA /* Supabase in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6DA95F37286AC8AA22872F76 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52F0FFAB9FEA30D977A33BBD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		031394442FB5F02700F22711 = {
+			isa = PBXGroup;
+			children = (
+				033275272FFF1A1600FE50C8 /* OtrofestivComplicationExtension.entitlements */,
+				0313944F2FB5F02700F22711 /* Otrofestiv */,
+				0345A1212FFE935A006FAECA /* OtrofestivWatch Watch App */,
+				033275162FFF187C00FE50C8 /* OtrofestivComplication */,
+				033275112FFF187C00FE50C8 /* Frameworks */,
+				0313944E2FB5F02700F22711 /* Products */,
+				B19EDDF66F9F119C98795B3D /* OtrofestivLive */,
+			);
+			sourceTree = "<group>";
+		};
+		0313944E2FB5F02700F22711 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0313944D2FB5F02700F22711 /* Otrofestiv.app */,
+				0345A1202FFE935A006FAECA /* OtrofestivWatch Watch App.app */,
+				033275102FFF187C00FE50C8 /* OtrofestivComplicationExtension.appex */,
+				91051F694C54DE859C126B04 /* OtrofestivLive.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		033275112FFF187C00FE50C8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				033275122FFF187C00FE50C8 /* WidgetKit.framework */,
+				033275142FFF187C00FE50C8 /* SwiftUI.framework */,
+				540D5E87D23D96F554A379DA /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		540D5E87D23D96F554A379DA /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				4464B05F2B76890D7313501B /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0313944C2FB5F02700F22711 /* Otrofestiv */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 031394582FB5F02800F22711 /* Build configuration list for PBXNativeTarget "Otrofestiv" */;
+			buildPhases = (
+				031394492FB5F02700F22711 /* Sources */,
+				0313944A2FB5F02700F22711 /* Frameworks */,
+				0313944B2FB5F02700F22711 /* Resources */,
+				0345A12E2FFE935B006FAECA /* Embed Watch Content */,
+				65A004EC459030171AFC5BF5 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0345A1292FFE935B006FAECA /* PBXTargetDependency */,
+				53D6B6EDF47AF3AF114BB80A /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				0313944F2FB5F02700F22711 /* Otrofestiv */,
+			);
+			name = Otrofestiv;
+			productName = Otrofestiv;
+			productReference = 0313944D2FB5F02700F22711 /* Otrofestiv.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0332750F2FFF187C00FE50C8 /* OtrofestivComplicationExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 033275242FFF187D00FE50C8 /* Build configuration list for PBXNativeTarget "OtrofestivComplicationExtension" */;
+			buildPhases = (
+				0332750C2FFF187C00FE50C8 /* Sources */,
+				0332750D2FFF187C00FE50C8 /* Frameworks */,
+				0332750E2FFF187C00FE50C8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				033275162FFF187C00FE50C8 /* OtrofestivComplication */,
+			);
+			name = OtrofestivComplicationExtension;
+			productName = OtrofestivComplicationExtension;
+			productReference = 033275102FFF187C00FE50C8 /* OtrofestivComplicationExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		0345A11F2FFE935A006FAECA /* OtrofestivWatch Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0345A12B2FFE935B006FAECA /* Build configuration list for PBXNativeTarget "OtrofestivWatch Watch App" */;
+			buildPhases = (
+				0345A11C2FFE935A006FAECA /* Sources */,
+				0345A11D2FFE935A006FAECA /* Frameworks */,
+				0345A11E2FFE935A006FAECA /* Resources */,
+				033275212FFF187D00FE50C8 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0332751F2FFF187D00FE50C8 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				0345A1212FFE935A006FAECA /* OtrofestivWatch Watch App */,
+			);
+			name = "OtrofestivWatch Watch App";
+			packageProductDependencies = (
+				0345A1322FFE96B0006FAECA /* Supabase */,
+			);
+			productName = "OtrofestivWatch Watch App";
+			productReference = 0345A1202FFE935A006FAECA /* OtrofestivWatch Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1088C9A596DF499E708594DB /* OtrofestivLive */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 09EB7FBAB745504A58376B05 /* Build configuration list for PBXNativeTarget "OtrofestivLive" */;
+			buildPhases = (
+				2E86DFD49FEED330EE0130A5 /* Sources */,
+				6DA95F37286AC8AA22872F76 /* Frameworks */,
+				ACA4D69EC610D2ACDBBEC7FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				B19EDDF66F9F119C98795B3D /* OtrofestivLive */,
+			);
+			name = OtrofestivLive;
+			productName = OtrofestivLive;
+			productReference = 91051F694C54DE859C126B04 /* OtrofestivLive.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		031394452FB5F02700F22711 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2660;
+				LastUpgradeCheck = 2650;
+				TargetAttributes = {
+					0313944C2FB5F02700F22711 = {
+						CreatedOnToolsVersion = 26.5;
+					};
+					0332750F2FFF187C00FE50C8 = {
+						CreatedOnToolsVersion = 26.6;
+					};
+					0345A11F2FFE935A006FAECA = {
+						CreatedOnToolsVersion = 26.6;
+					};
+				};
+			};
+			buildConfigurationList = 031394482FB5F02700F22711 /* Build configuration list for PBXProject "Otrofestiv" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				es,
+				Base,
+			);
+			mainGroup = 031394442FB5F02700F22711;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				0345A1312FFE96B0006FAECA /* XCRemoteSwiftPackageReference "supabase-swift" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 0313944E2FB5F02700F22711 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0313944C2FB5F02700F22711 /* Otrofestiv */,
+				0345A11F2FFE935A006FAECA /* OtrofestivWatch Watch App */,
+				0332750F2FFF187C00FE50C8 /* OtrofestivComplicationExtension */,
+				1088C9A596DF499E708594DB /* OtrofestivLive */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0313944B2FB5F02700F22711 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0332750E2FFF187C00FE50C8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0345A11E2FFE935A006FAECA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACA4D69EC610D2ACDBBEC7FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		031394492FB5F02700F22711 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0332750C2FFF187C00FE50C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0345A11C2FFE935A006FAECA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E86DFD49FEED330EE0130A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0332751F2FFF187D00FE50C8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0332750F2FFF187C00FE50C8 /* OtrofestivComplicationExtension */;
+			targetProxy = 0332751E2FFF187D00FE50C8 /* PBXContainerItemProxy */;
+		};
+		0345A1292FFE935B006FAECA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0345A11F2FFE935A006FAECA /* OtrofestivWatch Watch App */;
+			targetProxy = 0345A1282FFE935B006FAECA /* PBXContainerItemProxy */;
+		};
+		53D6B6EDF47AF3AF114BB80A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = OtrofestivLive;
+			target = 1088C9A596DF499E708594DB /* OtrofestivLive */;
+			targetProxy = 9FD0070BBFE70D6D0B002B65 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		031394562FB5F02800F22711 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = SA6AP6G8L7;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		031394572FB5F02800F22711 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = SA6AP6G8L7;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		031394592FB5F02800F22711 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Otrofestiv/Otrofestiv.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SA6AP6G8L7;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Otrofestiv/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = NO;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = NO;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 26.5;
+				MARKETING_VERSION = 1.17;
+				PRODUCT_BUNDLE_IDENTIFIER = app.otrofestiv.Otrofestiv;
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=iphoneos*]" = app.otrofestiv.mobile;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = auto;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				XROS_DEPLOYMENT_TARGET = 26.5;
+			};
+			name = Debug;
+		};
+		0313945A2FB5F02800F22711 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Otrofestiv/Otrofestiv.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SA6AP6G8L7;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Otrofestiv/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = NO;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = NO;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 26.5;
+				MARKETING_VERSION = 1.17;
+				PRODUCT_BUNDLE_IDENTIFIER = app.otrofestiv.Otrofestiv;
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=iphoneos*]" = app.otrofestiv.mobile;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = auto;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				XROS_DEPLOYMENT_TARGET = 26.5;
+			};
+			name = Release;
+		};
+		033275222FFF187D00FE50C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = OtrofestivComplicationExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SA6AP6G8L7;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OtrofestivComplication/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = OtrofestivComplication;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.17;
+				PRODUCT_BUNDLE_IDENTIFIER = app.otrofestiv.mobile.watchkitapp.OtrofestivComplication;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 26.5;
+			};
+			name = Debug;
+		};
+		033275232FFF187D00FE50C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = OtrofestivComplicationExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SA6AP6G8L7;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OtrofestivComplication/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = OtrofestivComplication;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.17;
+				PRODUCT_BUNDLE_IDENTIFIER = app.otrofestiv.mobile.watchkitapp.OtrofestivComplication;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 26.5;
+			};
+			name = Release;
+		};
+		0345A12C2FFE935B006FAECA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "OtrofestivWatch Watch App/OtrofestivWatch Watch App.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SA6AP6G8L7;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Otrofestiv;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = app.otrofestiv.mobile;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.17;
+				PRODUCT_BUNDLE_IDENTIFIER = app.otrofestiv.mobile.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 26.5;
+			};
+			name = Debug;
+		};
+		0345A12D2FFE935B006FAECA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "OtrofestivWatch Watch App/OtrofestivWatch Watch App.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SA6AP6G8L7;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Otrofestiv;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = app.otrofestiv.mobile;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.17;
+				PRODUCT_BUNDLE_IDENTIFIER = app.otrofestiv.mobile.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 26.5;
+			};
+			name = Release;
+		};
+		8B6BE62EDA7D293F32284EB9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_ENTITLEMENTS = OtrofestivLive/OtrofestivLive.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SA6AP6G8L7;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OtrofestivLive/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Otrofestiv;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.17;
+				PRODUCT_BUNDLE_IDENTIFIER = app.otrofestiv.mobile.LiveActivity;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A0EA6D9420AE1F5F74A265E7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_ENTITLEMENTS = OtrofestivLive/OtrofestivLive.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SA6AP6G8L7;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OtrofestivLive/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Otrofestiv;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.17;
+				PRODUCT_BUNDLE_IDENTIFIER = app.otrofestiv.mobile.LiveActivity;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		031394482FB5F02700F22711 /* Build configuration list for PBXProject "Otrofestiv" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				031394562FB5F02800F22711 /* Debug */,
+				031394572FB5F02800F22711 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		031394582FB5F02800F22711 /* Build configuration list for PBXNativeTarget "Otrofestiv" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				031394592FB5F02800F22711 /* Debug */,
+				0313945A2FB5F02800F22711 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		033275242FFF187D00FE50C8 /* Build configuration list for PBXNativeTarget "OtrofestivComplicationExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				033275222FFF187D00FE50C8 /* Debug */,
+				033275232FFF187D00FE50C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0345A12B2FFE935B006FAECA /* Build configuration list for PBXNativeTarget "OtrofestivWatch Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0345A12C2FFE935B006FAECA /* Debug */,
+				0345A12D2FFE935B006FAECA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		09EB7FBAB745504A58376B05 /* Build configuration list for PBXNativeTarget "OtrofestivLive" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B6BE62EDA7D293F32284EB9 /* Release */,
+				A0EA6D9420AE1F5F74A265E7 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0345A1312FFE96B0006FAECA /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/supabase/supabase-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0345A1322FFE96B0006FAECA /* Supabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0345A1312FFE96B0006FAECA /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Supabase;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 031394452FB5F02700F22711 /* Project object */;
+}

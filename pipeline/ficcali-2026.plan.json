@@ -19,6 +19,10 @@
    "que": "las tarjetas de la Programación → sidecar"
   },
   {
+   "cmd": "python3 pipeline/ficcali-2026-ig.py",
+   "que": "el IG del festival → las obras de los programas que la web no lista (Vanguardias)"
+  },
+  {
    "cmd": "python3 pipeline/ficcali-2026-crudo.py",
    "que": "programación + catálogo → crudo (16–25 oct)"
   },
@@ -104,6 +108,16 @@
     "emoji": "🔦",
     "en": "Claire Simon Focus",
     "archetype": "Retrospectiva / Tributo"
+   },
+   "Clásicos": {
+    "emoji": "🏛️",
+    "en": "Classics",
+    "archetype": "Retrospectiva / Tributo"
+   },
+   "Plano General": {
+    "emoji": "🌀",
+    "en": "Wide Shot",
+    "archetype": "Muestra / País"
    },
    "¡Que viva la música!": {
     "emoji": "🎶",
@@ -243,8 +257,16 @@
     "Hotel Obelisco - Cali",
     ""
    ],
+   "Cine Club El Ventanal": [
+    "Cine Club El Ventanal - Cali",
+    ""
+   ],
    "Bulevar del Río": [
     "Bulevar del Río - Cali",
+    ""
+   ],
+   "Teatro La Concha": [
+    "Teatro La Concha - Cali",
     ""
    ]
   },
@@ -262,12 +284,46 @@
   "storageKey": "ficcali2026_",
   "festivalStartStr": "2026-10-16T00:00:00",
   "festivalEndStr": "2026-10-25T23:00:00",
-  "sharedSlotIsOneScreening": false,
+  "sharedSlotIsOneScreening": true,
   "mes_es": "octubre",
   "dias_vacios": [],
   "_por_que_sedes": "Tabla canónica: el nombre de la tarjeta → (sede, sala), en el crudo (SEDES). Pines: 28 a mano con dos fuentes, 2 aproximados (Ciudad Pacífica, Alto Meléndez) y la transmisión en línea sin pin. Preguntas al festival en el _pregunta de cada sede del -venues-geo.",
   "_fuentes_versionadas": {
+   "festivals/staging/ficcali-2026-sinopsis.json": "las sinopsis declaradas a mano (texto oficial de ficcali.com o traducción nuestra de la oficial en inglés), cada una con su fuente; la lee enriquecer.py",
    "festivals/staging/ficcali-2026-radar.json": "el volcado del radar #1024, que escribe y relee pipeline/radar.py"
+  },
+  "_por_que_slot_compartido": "8 oct: la edición de la programación pone «Guapi: ritmo y balsada» (30 min) y «La fabulosa máquina del tiempo» (70 min) a las 6:00 p. m. del 21 en Comfandi — la misma franja; se publica como UNA función (anclaje). Es el único slot compartido de Ficcali. Preguntado al festival.",
+  "_por_que_secciones_21oct": "«Clásicos» y «Plano General» (subpáginas nuevas de la Selección, 21 oct): nombre verbatim, decisión de Juan. Clásicos = 🏛️ «Classics», Retrospectiva / Tributo: Olhar de Cinema usa 🎞️ para Clásicos, pero en Ficcali 🎞️ ya es Muestras de Muestras (un emoji por sección); 🏛️ es el de Retrospectiva en Olhar, y sus obras son Metrópolis (1927) y Guapi (1963), patrimonio. Plano General = 🌀 «Wide Shot», Muestra / País: estrenos de autor internacionales fuera de competencia (Zvyagintsev, Alonso, Ambrossi/Calvo), como los «Panorama» de otros festivales (🌀 Panorama)."
+ },
+ "_fuentes_versionadas": {
+  "festivals/staging/ficcali-2026-ig.json": "las 14 obras de Vanguardias del IG del festival (DenDhbtmnyO, 17 oct); lo lee el crudo",
+  "festivals/staging/ficcali-2026-anima.json": "las 4 obras de la Retrospectiva María Cristina Pérez y las 6 de «Expansión de un territorio» que asignamos a «Mujeres en la animación» (Animá Ve, ficcali.com/anima-ve-2026/, 21 oct); lo lee el crudo"
+ },
+ "fuentes_vivas": [
+  {
+   "archivo": "fuentes/ficcali-2026/programacion.json",
+   "cmd": "python3 pipeline/ficcali-2026-programacion.py --bajar",
+   "que": "la página de programación (WP 14870) que lee el crudo"
+  },
+  {
+   "archivo": "fuentes/ficcali-2026/programacion-ficcali.json",
+   "url": "https://ficcali.com/wp-json/wp/v2/programacion-ficcali",
+   "como": "wp-json",
+   "que": "las tarjetas por la API REST, que lee el verificador"
+  },
+  {
+   "archivo": "fuentes/ficcali-2026/programacion-ficcali-2026.html",
+   "url": "https://ficcali.com/programacion-ficcali-2026/",
+   "como": "pagina",
+   "debe_contener": "programacion-ficcali",
+   "que": "la página pública renderizada: la HORA de cada tarjeta, para el verificador"
+  },
+  {
+   "archivo": "fuentes/ficcali-2026/anima-ve-2026.html",
+   "url": "https://ficcali.com/anima-ve-2026/",
+   "como": "pagina",
+   "debe_contener": "Retrospectiva",
+   "que": "Animá Ve: las obras de la Retrospectiva María Cristina Pérez (sidecar ficcali-2026-anima.json)"
   }
- }
+ ]
 }

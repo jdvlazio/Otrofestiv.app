@@ -1,0 +1,22 @@
+{
+ "titulo_original": {
+  "fuente": "festival:aff-2026,anibia-2026,anibia-2026,olhar-2026",
+  "regla": "el título que más festivales imprimen"
+ },
+ "directores": {
+  "fuente": "tmdb:1592956",
+  "regla": "tmdb-manda"
+ },
+ "anio": {
+  "fuente": "tmdb:1592956",
+  "regla": "tmdb-manda"
+ },
+ "paises": {
+  "fuente": "tmdb:1592956",
+  "regla": "tmdb-manda"
+ },
+ "generos": {
+  "fuente": "festival",
+  "regla": "todos los publicados, del más al menos frecuente"
+ }
+}

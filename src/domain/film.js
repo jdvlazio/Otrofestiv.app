@@ -8,7 +8,7 @@
 //     savedAgenda (_endedStats), FILMS + watched/filmRatings (scoreFilm).
 //
 // WORKER: las sched pure fns tienen COPIAS en el template del calc worker; el
-//   worker las consume vía eval(name).toString(). [worker-overlap] valida.
+//   worker las consume vía fn.toString() (calc.js, sin eval desde el 26 oct). [worker-overlap] valida.
 
 import { FESTIVAL_QA_MIN } from "../config.js";
 import { parseDur, _festDate, simNow, festivalEnded, toMin } from "./time.js";
@@ -318,6 +318,19 @@ export function prioLiveCount(){
 // ofrecían estrellas igual. Guardián [califica-dueno].
 export function seCalifica(f){ return !!f && f.type!=='event'; }
 
+// obrasDe — DUEÑO ÚNICO de «qué obras viste al estar en esto» (Juan, 9 oct 2026:
+// «se respeta lo visto de lo asistido»). Obra suelta → ella; programa de cortos
+// → sus cortos; EVENTO → las obras que el festival declaró en su film_list (una
+// apertura que proyecta una película, un cineconcierto, un Award Screening ya
+// anunciado), o ninguna. El evento sigue contando como actividad aparte: una
+// apertura con «Gabin» es 1 actividad Y 1 obra. Nunca se infiere por el título.
+export function obrasDe(f){
+  if(!f) return [];
+  const lista=(f.film_list&&f.film_list.length)?f.film_list:null;
+  if(f.type==='event') return lista||[];
+  return (f.is_cortos&&lista)?lista:[f];
+}
+
 export function effectiveWatched(){
   const out=new Set(watched);
   if(savedAgenda&&savedAgenda.schedule){
@@ -349,7 +362,7 @@ export function _endedStats(){
   [...effectiveWatched()].forEach(t=>{
     const f=FILMS.find(fi=>fi.title===t);
     if(!f) return;
-    if(!seCalifica(f)){ totalWatched+=1; return; }
+    if(!seCalifica(f)){ totalWatched+=1+obrasDe(f).length; return; }
     if(f.is_cortos&&f.film_list&&f.film_list.length){
       totalWatched+=f.film_list.length;
       pendingRatings+=f.film_list.filter(it=>!filmRatings[it.title]).length;
@@ -371,23 +384,35 @@ export function _endedStats(){
 // explodeScreenings — screenings[] → un objeto plano por función.
 // Compatibilidad total con el formato plano existente (day/time/venue).
 export function explodeScreenings(films){
+  const _CASILLAS_FUNCION=['has_qa','qa_type','premiere','ticket_url','requires_registration','duration','invitados'];
+
   const exploded=[];
   (films||[]).forEach(f=>{
     if(Array.isArray(f.screenings)&&f.screenings.length){
       const base=Object.assign({},f);
       delete base.screenings;
+      // un código a nivel OBRA no es de ninguna función: cada función trae el suyo
+      delete base.id; delete base.ids_anteriores;
       f.screenings.forEach((s,i)=>{
         exploded.push(Object.assign({},base,{
           day:s.day||s.date,date:s.date||s.day,time:s.time,venue:s.venue||'',
           day_order:s.day_order!==undefined?s.day_order:i,
           sala:s.sala||'',
+          // el código estable es de la FUNCIÓN, no de la obra (docs/FUNCION.md §11)
+          ...(s.id?{id:s.id}:{}), ...(Array.isArray(s.ids_anteriores)?{ids_anteriores:s.ids_anteriores}:{}),
           ...(s.is_free!=null?{is_free:s.is_free}:{}), // por-función (festivales mixed)
           ...(s.by_invitation?{by_invitation:true}:{}), // por-función: la gala, no las demás
           // EN LÍNEA (Fantasmagoría 8: dos charlas por Twitch): por función, con su canal
           ...(s.online?{online:true,stream_url:s.stream_url||'',stream_platform:s.stream_platform||''}:{}),
+          // La obra empieza después de que abre la función (Parapeto, BHFF): solo
+          // informa en la ficha; card y plan siguen con `time`.
+          ...(s.film_start?{film_start:s.film_start}:{}),
           // El formulario es de ESA actividad, no del festival (la Master Class de
           // FICDEH se titula con su propio nombre) → viaja por función, como is_free.
-          ...(s.registration_url?{registration_url:s.registration_url}:{})
+          ...(s.registration_url?{registration_url:s.registration_url}:{}),
+          // El resto de las casillas de la función (docs/FUNCION.md §4): si la
+          // función la dice, manda sobre la de la obra; si no, queda la de la obra.
+          ...Object.fromEntries(_CASILLAS_FUNCION.filter(k=>s[k]!=null&&s[k]!=='').map(k=>[k,s[k]]))
         }));
       });
     } else {
@@ -395,6 +420,33 @@ export function explodeScreenings(films){
     }
   });
   return exploded;
+}
+
+// expandVentanas — ACTIVIDAD ABIERTA DE VARIOS DÍAS (21 oct 2026, aprobado por Juan).
+// Una exposición abierta del 22 oct al 13 nov es UNA actividad: el dato la trae
+// como una sola función `info` con `day` (el primero) y `hasta` (el último, que
+// puede caer después del festival). Antes se cargaba como N funciones con
+// `is_recurring`, y la ficha la mostraba como un taller de 9 sesiones («Habitar
+// la imagen», Anibia). Acá se abre en una copia por día del festival dentro de
+// la ventana —así el carril «sin hora fija» de cada día, Mi Plan y las fases
+// siguen leyendo funciones de un día— y cada copia lleva `_ventana` para que la
+// ficha y el listado las cuenten como UNA fila. Los `dias_vacios` del festival
+// (Anibia: 26 y 29 oct) no reciben copia, como no la recibían las 9 funciones.
+export function expandVentanas(films, dayKeys, vacios){
+  const out=[];
+  (films||[]).forEach(f=>{
+    if(!(f&&f.info&&f.hasta&&f.day)){ out.push(f); return; }
+    const v={desde:f.day,hasta:f.hasta};
+    const dias=(dayKeys||[]).filter(k=>k>=f.day&&k<=f.hasta&&!(vacios||[]).includes(k));
+    if(!dias.length){ out.push(Object.assign({},f,{_ventana:v})); return; }
+    dias.forEach((k,j)=>{
+      const c=Object.assign({},f,{day:k,date:k,day_order:(dayKeys||[]).indexOf(k),_ventana:v});
+      delete c.is_recurring;
+      if(j>0){ delete c.id; delete c.ids_anteriores; }   // el código es de la actividad, una vez
+      out.push(c);
+    });
+  });
+  return out;
 }
 
 // sealSharedSlots — ANCLAJE DE FUNCIÓN (opt-in: root `sharedSlotIsOneScreening`).

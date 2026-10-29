@@ -1,0 +1,666 @@
+{
+ "_provenance": {
+  "fuente": "ensamblar.py: ids estables de las funciones (docs/FUNCION.md C1)",
+  "capturado": "2026-10-19"
+ },
+ "funciones": {
+  "f_5ac7fb72c7": {
+   "sede": "Biblioteca Comfenalco Castilla - Medellín",
+   "dia": "2026-10-14",
+   "hora": "13:00",
+   "sala": "",
+   "titulo": "taller fantasmagoritos con la corporacion trama"
+  },
+  "f_7cefffa86e": {
+   "sede": "Twitch · Sociedad Fantasmagoría - Medellín",
+   "dia": "2026-10-14",
+   "hora": "21:00",
+   "sala": "",
+   "titulo": "charla virtual maria rosa y sina las murallas de la desigualdad en shingeki no kyojin"
+  },
+  "f_616d8d3706": {
+   "sede": "Centro Colombo Americano - Medellín",
+   "dia": "2026-10-15",
+   "hora": "19:00",
+   "sala": "Sala 1",
+   "titulo": "decorado"
+  },
+  "f_8a5b0dae24": {
+   "sede": "Biblioteca Comfenalco Castilla - Medellín",
+   "dia": "2026-10-16",
+   "hora": "13:00",
+   "sala": "",
+   "titulo": "taller fantasmagoritos con la corporacion trama"
+  },
+  "f_68fd341b3d": {
+   "sede": "Centro Colombo Americano - Medellín",
+   "dia": "2026-10-16",
+   "hora": "16:00",
+   "sala": "Sala 2",
+   "titulo": "saluda al diablo de mi parte"
+  },
+  "f_6d398ce3d3": {
+   "sede": "Museo de Arte Moderno de Medellín - MAMM - Medellín",
+   "dia": "2026-10-16",
+   "hora": "16:30",
+   "sala": "",
+   "titulo": "coracao das trevas heart of darkness"
+  },
+  "f_3032ba11cd": {
+   "sede": "Comfama San Ignacio - Medellín",
+   "dia": "2026-10-16",
+   "hora": "17:00",
+   "sala": "La Capilla",
+   "titulo": "hammer heroes legends and monsters"
+  },
+  "f_9eaf0533ab": {
+   "sede": "Estación Metrocable Andalucía - Medellín",
+   "dia": "2026-10-16",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "mu ki ra"
+  },
+  "f_71622280dd": {
+   "sede": "La Pascasia - Medellín",
+   "dia": "2026-10-16",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "grabacion en vivo del podcast gente que hace cine colombia es fantastica"
+  },
+  "f_ce8e1c3e3b": {
+   "sede": "Cineprox Las Américas - Medellín",
+   "dia": "2026-10-16",
+   "hora": "18:40",
+   "sala": "Sala 3",
+   "titulo": "el despertar"
+  },
+  "f_791ef070ed": {
+   "sede": "Centro Colombo Americano - Medellín",
+   "dia": "2026-10-16",
+   "hora": "19:00",
+   "sala": "Sala 1",
+   "titulo": "schichinin no samurai seven samurai"
+  },
+  "f_e5c6bba8ff": {
+   "sede": "Comfama San Ignacio - Medellín",
+   "dia": "2026-10-16",
+   "hora": "19:00",
+   "sala": "La Capilla",
+   "titulo": "motherwitch"
+  },
+  "f_3efcd0e556": {
+   "sede": "Draco Hobby - Medellín",
+   "dia": "2026-10-16",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "torneos tcg one piece y pokemon tcg"
+  },
+  "f_3ad87ad624": {
+   "sede": "Nueva Villa de Aburrá - Medellín",
+   "dia": "2026-10-16",
+   "hora": "20:00",
+   "sala": "",
+   "titulo": "seleccion oficial de cortometrajes de animacion cortometrajes de macondo"
+  },
+  "f_3e85908256": {
+   "sede": "Cineprox Las Américas - Medellín",
+   "dia": "2026-10-16",
+   "hora": "21:00",
+   "sala": "Sala 3",
+   "titulo": "familia teme enfrentar una nueva noche de terror"
+  },
+  "f_6671f848db": {
+   "sede": "Silencio - Medellín",
+   "dia": "2026-10-16",
+   "hora": "21:30",
+   "sala": "",
+   "titulo": "almas en plena fiesta de disfraces baile de animas y sustos que dan gusto"
+  },
+  "f_db5e635c32": {
+   "sede": "Centro de Desarrollo Cultural de Moravia - Medellín",
+   "dia": "2026-10-17",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "muestra fantasmagoritos cortometrajes infantiles"
+  },
+  "f_ce8551648d": {
+   "sede": "Centro Colombo Americano - Medellín",
+   "dia": "2026-10-17",
+   "hora": "16:00",
+   "sala": "Sala 2",
+   "titulo": "iris de cristal"
+  },
+  "f_d8b6dbb8cb": {
+   "sede": "Museo de Arte Moderno de Medellín - MAMM - Medellín",
+   "dia": "2026-10-17",
+   "hora": "16:30",
+   "sala": "",
+   "titulo": "black moon"
+  },
+  "f_1a50fcd1e3": {
+   "sede": "Planetario de Medellín - Medellín",
+   "dia": "2026-10-17",
+   "hora": "17:00",
+   "sala": "Auditorio",
+   "titulo": "critters"
+  },
+  "f_aea41d767c": {
+   "sede": "Comfama San Ignacio - Medellín",
+   "dia": "2026-10-17",
+   "hora": "18:30",
+   "sala": "La Capilla",
+   "titulo": "siu lam juk kau shaolin soccer"
+  },
+  "f_eb89eef871": {
+   "sede": "Parque de los Deseos - Medellín",
+   "dia": "2026-10-17",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "al final del espectro"
+  },
+  "f_648ae9e4fc": {
+   "sede": "Cineprox Las Américas - Medellín",
+   "dia": "2026-10-17",
+   "hora": "18:40",
+   "sala": "Sala 3",
+   "titulo": "familia teme enfrentar una nueva noche de terror"
+  },
+  "f_5daad4fb01": {
+   "sede": "Cineprox Las Américas - Medellín",
+   "dia": "2026-10-17",
+   "hora": "21:00",
+   "sala": "Sala 3",
+   "titulo": "huo zhe yan the furious"
+  },
+  "f_63de6e541f": {
+   "sede": "Librería Antimateria - Medellín",
+   "dia": "2026-10-17",
+   "hora": "22:00",
+   "sala": "",
+   "titulo": "noche de librerias lectura de cuentos de terror"
+  },
+  "f_51d5a70e6b": {
+   "sede": "Centro de Desarrollo Cultural de Moravia - Medellín",
+   "dia": "2026-10-18",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "la sinfonia de los bichos raros"
+  },
+  "f_f922b58d57": {
+   "sede": "Centro Colombo Americano - Medellín",
+   "dia": "2026-10-18",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "historia de lo oculto"
+  },
+  "f_df256816d9": {
+   "sede": "Museo de Arte Moderno de Medellín - MAMM - Medellín",
+   "dia": "2026-10-18",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "rio bravo"
+  },
+  "f_ff12951d65": {
+   "sede": "Comfama San Ignacio - Medellín",
+   "dia": "2026-10-18",
+   "hora": "17:00",
+   "sala": "La Capilla",
+   "titulo": "coracao das trevas heart of darkness"
+  },
+  "f_837b10967a": {
+   "sede": "Planetario de Medellín - Medellín",
+   "dia": "2026-10-18",
+   "hora": "18:00",
+   "sala": "Auditorio",
+   "titulo": "the x files y lectura de la verdad esta ahi afuera antologia de cuentos"
+  },
+  "f_fda125e919": {
+   "sede": "Cineprox Las Américas - Medellín",
+   "dia": "2026-10-18",
+   "hora": "18:40",
+   "sala": "Sala 3",
+   "titulo": "hablando con extranos"
+  },
+  "f_d10f2c53da": {
+   "sede": "Centro Colombo Americano - Medellín",
+   "dia": "2026-10-18",
+   "hora": "19:00",
+   "sala": "Sala 2",
+   "titulo": "seleccion oficial de cortometrajes colombianos"
+  },
+  "f_5f586fa176": {
+   "sede": "Cineprox Las Américas - Medellín",
+   "dia": "2026-10-18",
+   "hora": "21:00",
+   "sala": "Sala 3",
+   "titulo": "assault on precinct 13"
+  },
+  "f_2c99f929c4": {
+   "sede": "Paraninfo Universidad de Antioquia - Medellín",
+   "dia": "2026-10-19",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "seleccion oficial de cortometrajes latinoamericanos"
+  },
+  "f_369cd3e339": {
+   "sede": "Comfama Otraparte - Medellín",
+   "dia": "2026-10-19",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "black zombie"
+  },
+  "f_86a77a34dd": {
+   "sede": "Twitch · Sociedad Fantasmagoría - Medellín",
+   "dia": "2026-10-19",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "entrevista a luigi cozzi con jose andres gomez"
+  },
+  "f_6d1887da36": {
+   "sede": "Twitch · Sociedad Fantasmagoría - Medellín",
+   "dia": "2026-10-19",
+   "hora": "20:30",
+   "sala": "",
+   "titulo": "una psicologia de los asedios explicada con pelis de zombies con pedro alejandro gonzalez"
+  },
+  "f_ce6e95c016": {
+   "sede": "Cineprox Las Américas - Medellín",
+   "dia": "2026-10-19",
+   "hora": "21:00",
+   "sala": "Sala 3",
+   "titulo": "la frecuencia kirlian"
+  },
+  "f_046528f965": {
+   "sede": "Universidad Católica Luis Amigó - Medellín",
+   "dia": "2026-10-20",
+   "hora": "14:00",
+   "sala": "Auditorio Santa Rita",
+   "titulo": "conversatorio con cristian ponce"
+  },
+  "f_b188191cf3": {
+   "sede": "Paraninfo Universidad de Antioquia - Medellín",
+   "dia": "2026-10-20",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "horror and love"
+  },
+  "f_67cabf6ac5": {
+   "sede": "Centro Colombo Americano - Medellín",
+   "dia": "2026-10-20",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "al final del espectro"
+  },
+  "f_580c051611": {
+   "sede": "Universidad Nacional - Medellín",
+   "dia": "2026-10-20",
+   "hora": "17:30",
+   "sala": "Plazoleta de la Luz",
+   "titulo": "conversatorio con alberto romo y andres buitrago"
+  },
+  "f_b7d599833b": {
+   "sede": "Universidad Nacional - Medellín",
+   "dia": "2026-10-20",
+   "hora": "18:00",
+   "sala": "Plazoleta de la Luz",
+   "titulo": "robo macabro pura sangre"
+  },
+  "f_af356e73fb": {
+   "sede": "Comfama Otraparte - Medellín",
+   "dia": "2026-10-20",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "the last unicorn"
+  },
+  "f_3d242c0931": {
+   "sede": "Cineprox Las Américas - Medellín",
+   "dia": "2026-10-20",
+   "hora": "18:40",
+   "sala": "Sala 3",
+   "titulo": "ghost in the cell"
+  },
+  "f_1cf6122c0b": {
+   "sede": "Centro Colombo Americano - Medellín",
+   "dia": "2026-10-20",
+   "hora": "19:30",
+   "sala": "Sala 2",
+   "titulo": "cuadecuc vampir"
+  },
+  "f_e1bbf0fbf4": {
+   "sede": "Cineprox Las Américas - Medellín",
+   "dia": "2026-10-20",
+   "hora": "21:00",
+   "sala": "Sala 3",
+   "titulo": "green room"
+  },
+  "f_f060938a2c": {
+   "sede": "Parque Biblioteca Belén - Medellín",
+   "dia": "2026-10-21",
+   "hora": "10:00",
+   "sala": "Auditorio",
+   "titulo": "taller animacion analoga con oscar triana"
+  },
+  "f_0966cb32c1": {
+   "sede": "Biblioteca Comfenalco Castilla - Medellín",
+   "dia": "2026-10-21",
+   "hora": "13:00",
+   "sala": "",
+   "titulo": "cortometrajes y taller fantasmagoritos con la corporacion trama"
+  },
+  "f_f2869c9b28": {
+   "sede": "Parque Biblioteca Belén - Medellín",
+   "dia": "2026-10-21",
+   "hora": "13:00",
+   "sala": "Auditorio",
+   "titulo": "charla el camino de la produccion y la animacion con alejandra morales"
+  },
+  "f_6aae9d94c1": {
+   "sede": "Cámara de Comercio de Medellín - Medellín",
+   "dia": "2026-10-21",
+   "hora": "14:00",
+   "sala": "Auditorio",
+   "titulo": "fantascatedra muestra cortometrajes universitarios de medellin"
+  },
+  "f_9009af258e": {
+   "sede": "Cámara de Comercio de Medellín - Medellín",
+   "dia": "2026-10-21",
+   "hora": "15:30",
+   "sala": "Auditorio",
+   "titulo": "de cinema zombie a zinema zombie"
+  },
+  "f_8cb0fb7587": {
+   "sede": "Casa Libre - Medellín",
+   "dia": "2026-10-21",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "charla de las trincheras del somme a la caida de gondolin por camilo lopez"
+  },
+  "f_10f401ac5d": {
+   "sede": "Centro Colombo Americano - Medellín",
+   "dia": "2026-10-21",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "ana rosa"
+  },
+  "f_bfe0101182": {
+   "sede": "Comfama San Ignacio - Medellín",
+   "dia": "2026-10-21",
+   "hora": "17:00",
+   "sala": "La Capilla",
+   "titulo": "theatre of horrors the sordid story of paris grand guignol"
+  },
+  "f_0dc1182aa6": {
+   "sede": "Cámara de Comercio de Medellín - Medellín",
+   "dia": "2026-10-21",
+   "hora": "17:00",
+   "sala": "Auditorio",
+   "titulo": "presentaciones de productoras colectivos y made in medellin"
+  },
+  "f_a0c267d031": {
+   "sede": "Casa Libre - Medellín",
+   "dia": "2026-10-21",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "taller parche de collage construccion de fortalezas"
+  },
+  "f_8c8ed2b650": {
+   "sede": "Cineprox Las Américas - Medellín",
+   "dia": "2026-10-21",
+   "hora": "18:40",
+   "sala": "Sala 3",
+   "titulo": "el despertar"
+  },
+  "f_ec7d1ac485": {
+   "sede": "Comfama San Ignacio - Medellín",
+   "dia": "2026-10-21",
+   "hora": "19:00",
+   "sala": "La Capilla",
+   "titulo": "la mancha"
+  },
+  "f_b03192468d": {
+   "sede": "Cineprox Las Américas - Medellín",
+   "dia": "2026-10-21",
+   "hora": "21:00",
+   "sala": "Sala 3",
+   "titulo": "cuckoo"
+  },
+  "f_da07738eaf": {
+   "sede": "Universidad Católica Luis Amigó - Medellín",
+   "dia": "2026-10-22",
+   "hora": "10:00",
+   "sala": "Sala de tecnología",
+   "titulo": "taller animacion digital con oscar triana"
+  },
+  "f_fd4153474f": {
+   "sede": "Instituto Cultural Alexander von Humboldt - Medellín",
+   "dia": "2026-10-22",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "fremde welten los extranos universos de tilman singer"
+  },
+  "f_3d8daa87c1": {
+   "sede": "Comfama San Ignacio - Medellín",
+   "dia": "2026-10-22",
+   "hora": "17:00",
+   "sala": "La Capilla",
+   "titulo": "blood on melies moon"
+  },
+  "f_425dcc5372": {
+   "sede": "Comfama San Ignacio - Medellín",
+   "dia": "2026-10-22",
+   "hora": "17:00",
+   "sala": "Mediateca",
+   "titulo": "kondor el mago el cigarro mortal de jairo pinilla"
+  },
+  "f_7673a612be": {
+   "sede": "Universidad Nacional - Medellín",
+   "dia": "2026-10-22",
+   "hora": "17:00",
+   "sala": "Auditorio Gerardo Molina",
+   "titulo": "seleccion oficial de cortometrajes latinoamericanos"
+  },
+  "f_a65ef109be": {
+   "sede": "Centro Colombo Americano - Medellín",
+   "dia": "2026-10-22",
+   "hora": "18:00",
+   "sala": "Sala 2",
+   "titulo": "funcion grindhouse seleccion oficial de cortometrajes"
+  },
+  "f_2a874c5862": {
+   "sede": "La Comarca - Medellín",
+   "dia": "2026-10-22",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "jornada juegos de mesa fantastable"
+  },
+  "f_090db4e52b": {
+   "sede": "Museo de Arte Moderno de Medellín - MAMM - Medellín",
+   "dia": "2026-10-22",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "carrie"
+  },
+  "f_cac4d446e2": {
+   "sede": "Universidad Nacional - Medellín",
+   "dia": "2026-10-22",
+   "hora": "18:30",
+   "sala": "Jardín Bloque 41",
+   "titulo": "club de la medianoche club de lectura"
+  },
+  "f_f45832ccfd": {
+   "sede": "Cineprox Las Américas - Medellín",
+   "dia": "2026-10-22",
+   "hora": "18:40",
+   "sala": "Sala 3",
+   "titulo": "you are the film"
+  },
+  "f_09fdfe0458": {
+   "sede": "Centro Colombo Americano - Medellín",
+   "dia": "2026-10-22",
+   "hora": "20:10",
+   "sala": "Sala 2",
+   "titulo": "demoni"
+  },
+  "f_ef120f621a": {
+   "sede": "Cineprox Las Américas - Medellín",
+   "dia": "2026-10-22",
+   "hora": "21:00",
+   "sala": "Sala 3",
+   "titulo": "hablando con extranos"
+  },
+  "f_45f331d701": {
+   "sede": "Biblioteca Comfenalco Castilla - Medellín",
+   "dia": "2026-10-23",
+   "hora": "13:00",
+   "sala": "",
+   "titulo": "cortometrajes en competencia deliberacion del jurado infantil"
+  },
+  "f_16b980e401": {
+   "sede": "Centro Colombo Americano - Medellín",
+   "dia": "2026-10-23",
+   "hora": "16:00",
+   "sala": "Sala 1",
+   "titulo": "motherwitch"
+  },
+  "f_b181530f81": {
+   "sede": "Comfama San Ignacio - Medellín",
+   "dia": "2026-10-23",
+   "hora": "17:00",
+   "sala": "Mediateca",
+   "titulo": "muestra catalana cortometrajes c trencada"
+  },
+  "f_3659784613": {
+   "sede": "Librería Antimateria - Medellín",
+   "dia": "2026-10-23",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "asedios y otras tacticas militares en la saga dune de frank herbert por alejandro vesga"
+  },
+  "f_d08c399eed": {
+   "sede": "Planetario de Medellín - Medellín",
+   "dia": "2026-10-23",
+   "hora": "17:00",
+   "sala": "Auditorio",
+   "titulo": "vida"
+  },
+  "f_13e6e00bbf": {
+   "sede": "Librería Antimateria - Medellín",
+   "dia": "2026-10-23",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "seleccion oficial de cortometrajes de animacion"
+  },
+  "f_b2651d23c1": {
+   "sede": "Museo de Arte Moderno de Medellín - MAMM - Medellín",
+   "dia": "2026-10-23",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "you are the film"
+  },
+  "f_6a536b00ff": {
+   "sede": "Cineprox Las Américas - Medellín",
+   "dia": "2026-10-23",
+   "hora": "18:40",
+   "sala": "Sala 3",
+   "titulo": "mag mag"
+  },
+  "f_14505eab1b": {
+   "sede": "Centro Colombo Americano - Medellín",
+   "dia": "2026-10-23",
+   "hora": "19:00",
+   "sala": "Sala 1",
+   "titulo": "manual para invocar fantasmas"
+  },
+  "f_ece5961594": {
+   "sede": "La Pascasia - Medellín",
+   "dia": "2026-10-23",
+   "hora": "19:30",
+   "sala": "",
+   "titulo": "charla musicalizada en vivo sinners el asedio de los condenados por mario fernando castano"
+  },
+  "f_57b40ca533": {
+   "sede": "Cineprox Las Américas - Medellín",
+   "dia": "2026-10-23",
+   "hora": "21:00",
+   "sala": "Sala 3",
+   "titulo": "ghost in the cell"
+  },
+  "f_e18cb62b27": {
+   "sede": "La Pascasia - Medellín",
+   "dia": "2026-10-23",
+   "hora": "21:00",
+   "sala": "",
+   "titulo": "fiesta fantasmagoria brujas espectros y otros fantasmas"
+  },
+  "f_8e2fe45c48": {
+   "sede": "Librería Antimateria - Medellín",
+   "dia": "2026-10-24",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "presentacion de libros ediciones sociedad fantasmagoria colombia es fantastica y las murallas del miedo con sus autores"
+  },
+  "f_a5c9a10cf2": {
+   "sede": "Museo de Arte Moderno de Medellín - MAMM - Medellín",
+   "dia": "2026-10-24",
+   "hora": "16:30",
+   "sala": "",
+   "titulo": "il deserto rosso"
+  },
+  "f_399c12af29": {
+   "sede": "Centro Colombo Americano - Medellín",
+   "dia": "2026-10-24",
+   "hora": "17:00",
+   "sala": "Sala 1",
+   "titulo": "luz"
+  },
+  "f_8bfe5f4cb1": {
+   "sede": "Planetario de Medellín - Medellín",
+   "dia": "2026-10-24",
+   "hora": "17:00",
+   "sala": "Auditorio",
+   "titulo": "cortometrajes colombianos que miran al cielo"
+  },
+  "f_32b2036c70": {
+   "sede": "Comfama San Ignacio - Medellín",
+   "dia": "2026-10-24",
+   "hora": "18:30",
+   "sala": "La Capilla",
+   "titulo": "seleccion oficial de cortometrajes"
+  },
+  "f_558e1285ca": {
+   "sede": "Cineprox Las Américas - Medellín",
+   "dia": "2026-10-24",
+   "hora": "18:40",
+   "sala": "Sala 3",
+   "titulo": "dong bei jing cha gu shi 3 fight against evil 3"
+  },
+  "f_5954a9f979": {
+   "sede": "Centro Colombo Americano - Medellín",
+   "dia": "2026-10-24",
+   "hora": "19:30",
+   "sala": "",
+   "titulo": "the craft"
+  },
+  "f_1e4a28efb0": {
+   "sede": "Cineprox Las Américas - Medellín",
+   "dia": "2026-10-24",
+   "hora": "21:00",
+   "sala": "Sala 3",
+   "titulo": "huo zhe yan the furious"
+  },
+  "f_c631be53a9": {
+   "sede": "Comfama San Ignacio - Medellín",
+   "dia": "2026-10-25",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "evento de clausura premiacion y presentacion musical"
+  },
+  "f_9e8c770636": {
+   "sede": "Comfama San Ignacio - Medellín",
+   "dia": "2026-10-25",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "ikatan darah"
+  }
+ }
+}

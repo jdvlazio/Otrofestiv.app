@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, emparejado con ficha_verifica() (director + año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-10-07"
+  "capturado": "2026-10-15"
  },
  "obras": [
   {
@@ -267,6 +267,62 @@
    "posterSource": "tmdb"
   },
   {
+   "titulo": "El espejo de la vida",
+   "tmdb_id": 1791654,
+   "titulo_original": "El espejo de la vida",
+   "poster_path": "/AlyX23QDpLTkWn3jSvZkt3nIFNT.jpg",
+   "synopsis_es": "En una noche oscura, un niño sigue una señal que lo lleva a una misteriosa máquina expendedora de dulces escondida en un bar prohibido. Para alcanzarla, deberá armarse de valor y afrontar desafíos que pondrán a prueba su ingenio, valentía y determinación.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 9,
+   "pais_tmdb": "",
+   "lbSlug": "el-espejo-de-la-vida",
+   "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía; tres sondas): Simón Sánchez Plazas, 2025, 9 min, Colombia; sinopsis y afiche de la matriz de FILCMAR (afiche recortado 2,6 % arriba para la proporción de TMDB, aprobado por Juan).",
+   "_director": "Simón Sánchez Plazas",
+   "_sondeado": "2026-10-15",
+   "poster": "/assets/filcmar-2026/el-espejo-de-la-vida.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "El ocaso de los dioses",
+   "tmdb_id": 1526356,
+   "titulo_original": "El Ocaso de los Dioses",
+   "poster_path": "/bpxLaIkyd7L0dtlGkAZh4fednki.jpg",
+   "synopsis_es": "Aurora, una joven que junto a su madre hace parte de una secta religiosa, duda de la veracidad de las palabras de Bernabé, el líder y busca la manera de hacerle entender tanto a su madre como a el resto de la comunidad que en ese lugar no está la verdad. Todo se torna caótico cuando Aurora comienza a tener conexiones con el ídolo sagrado y su objetivo cambia drásticamente, cambiando la normalidad de la comunidad.",
+   "synopsis_en": "Aurora, a young woman who is part of a religious sect with her mother, doubts the veracity of the words of Bernabé, the leader, and seeks a way to make her mother and the rest of the community understand that the truth is not there. Everything becomes chaotic when Aurora begins to have connections with the sacred idol and her objective changes drastically, changing the normality of the community.",
+   "genero": "Drama",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 24,
+   "pais_tmdb": "Colombia",
+   "title_en": "El Ocaso de los Dioses (Nightfall of Gods)",
+   "lbSlug": "el-ocaso-de-los-dioses-nightfall-of-gods",
+   "_verificado": "declarada a mano: Existía en TMDB (sonda por título, 8 oct 2026) sin año: «El Ocaso de los Dioses (Nightfall of Gods)», Juan Pablo Rendón, Colombia — el candado no tenía con qué corroborar. Letterboxd: el-ocaso-de-los-dioses-nightfall-of-gods.",
+   "_director": "Juan Pablo Rendón",
+   "_sondeado": "2026-10-15",
+   "poster": "/assets/filcmar-2026/el-ocaso-de-los-dioses.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "El pesebre",
+   "tmdb_id": 1543600,
+   "titulo_original": "Presépio",
+   "poster_path": "/6iyzA9HcJYerRUOYfi7Z3uxnM1r.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "On Christmas Eve, Dejair, a former resistance fighter against the military dictatorship, gathers with his family in the backyard. During a Secret Santa game, the contrast between appearances and private truths emerges. A water gun gift leads Dejair to denounce the absurdity of giving a child a weapon.",
+   "genero": "Drama",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 18,
+   "pais_tmdb": "Brazil",
+   "title_en": "Nativity Scene",
+   "lbSlug": "nativity-scene",
+   "_verificado": "declarada a mano: Existía en TMDB como «Presépio» / «Nativity Scene» (Felipe Bibian, Brasil, 2025, 18 min, el mismo argumento de Dejair); FILCMAR lo publica traducido. Letterboxd: nativity-scene.",
+   "_director": "Felipe Bibian",
+   "_sondeado": "2026-10-15",
+   "poster": "/assets/filcmar-2026/el-pesebre.jpg",
+   "posterSource": "tmdb"
+  },
+  {
    "titulo": "El vuelo del moscardón",
    "tmdb_id": 1587029,
    "titulo_original": "El vuelo del moscardón",
@@ -291,9 +347,9 @@
     {
      "festival": "fantasmagoria-2026",
      "titulo": "HDLT",
-     "poster": "/assets/siembrafest/hdlt.jpg",
+     "poster": "/assets/filcmar-2026/hdlt.jpg",
      "posterSource": "oficial",
-     "sinopsis": "Tras el ataque que sufrió, Luz trata de entender lo que le pasó: el Hijo de la Tierra llegó a destruir la humanidad robándole sus recuerdos más tristes y más felices."
+     "sinopsis": "Después del ataque que sufrió, Luz trata de entender lo que le sucedió: el Hijo de la Tierra vino a destruir a la humanidad robando sus recuerdos más tristes y felices. Pero desembarcó en Suba, el distrito más lejano de Bogotá, donde una extraña adicción cambiará el curso de la historia."
     },
     {
      "festival": "siembrafest-2026",
@@ -304,16 +360,20 @@
     {
      "festival": "popayan-2026",
      "titulo": "HDLT Hijo de la Tierra",
-     "poster": "/assets/siembrafest/hdlt.jpg",
+     "poster": "/assets/filcmar-2026/hdlt.jpg",
      "posterSource": "oficial",
      "sinopsis": "Tras el ataque que sufrió, Luz trata de entender lo que le pasó: el Hijo de la Tierra llegó a destruir la humanidad robándole sus recuerdos más tristes y más felices."
     }
    ],
    "_verificado": "ya publicada en fantasmagoria-2026: se reusa su sinopsis",
-   "sinopsis": "Tras el ataque que sufrió, Luz trata de entender lo que le pasó: el Hijo de la Tierra llegó a destruir la humanidad robándole sus recuerdos más tristes y más felices.",
+   "sinopsis": "Después del ataque que sufrió, Luz trata de entender lo que le sucedió: el Hijo de la Tierra vino a destruir a la humanidad robando sus recuerdos más tristes y felices. Pero desembarcó en Suba, el distrito más lejano de Bogotá, donde una extraña adicción cambiará el curso de la historia.",
    "poster": "/assets/filcmar-2026/hdlt.jpg",
    "posterSource": "oficial",
-   "_afiche": "declarado: matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1YHboac8QvRexThT7ZD0052JMRD_RsTF2"
+   "_afiche": "declarado: matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1YHboac8QvRexThT7ZD0052JMRD_RsTF2",
+   "genero": "Drama",
+   "_heredado": {
+    "genero": "catálogo w_R4GBJ7SNPXDQ (fantasmagoria-2026, filcmar-2026, siembrafest-2026)"
+   }
   },
   {
    "titulo": "La corazonada",
@@ -345,6 +405,24 @@
    ],
    "_sinopsis_de": "ya publicada en cinemancia-2026",
    "poster": "/assets/filcmar-2026/la-corazonada.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "La danza del caos",
+   "tmdb_id": 1791655,
+   "titulo_original": "La danza del caos",
+   "poster_path": "/8dfaUuA7VQE8CAt3VV4pq0O0ohu.jpg",
+   "synopsis_es": "La Danza del Caos es un cortometraje de animación experimental que traduce la teoría de los Cinco Ritmos de Gabrielle Roth en una experiencia audiovisual abstracta. Mediante el movimiento y el diseño sonoro, la animación sustituye al cuerpo físico para llevar al espectador en un viaje sensorial que recorre diferentes ritmos hasta alcanzar un estado de caos contenido. El cortometraje sumerge al espectador en una experiencia sensorial que lo invita a sentir y dejarse llevar por el ritmo como guía para la interpretación.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 6,
+   "pais_tmdb": "",
+   "lbSlug": "la-danza-del-caos",
+   "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía; tres sondas): Valeria Preciado Romaña, 2025, 6 min, Colombia; sinopsis y afiche de la matriz de FILCMAR (afiche recortado 6 % a los lados para la proporción de TMDB, aprobado por Juan).",
+   "_director": "Valeria Preciado Romaña",
+   "_sondeado": "2026-10-15",
+   "poster": "/assets/filcmar-2026/la-danza-del-caos.jpg",
    "posterSource": "tmdb"
   },
   {
@@ -383,7 +461,7 @@
    "poster_path": "/5nM3a0jcl9UlcCwFyELvvCvDNGq.jpg",
    "synopsis_es": "En los Andes colombo-venezolanos, un campesino trabaja la tierra en condiciones de explotación para asegurar la supervivencia de su familia. Sin dinero para tratamiento médico, una noche se emborracha y es arrestado.",
    "synopsis_en": "In the Colombian-Venezuelan Andes, a peasant works the land under exploitative conditions to ensure the survival of his family. His son is ill, his wife is pregnant, and he himself reproduces the violence that surrounds him. With no money for medical treatment, one night he gets drunk and is arrested. In jail, in a burst of fury, he rebels against the town's political boss in the only way he can.  La Paga was a pioneering work of social and political cinema in Latin America, released the same year as Barravento, Glauber Rocha’s debut feature, and anticipating movements such as Third Cinema. Influenced by Italian Neorealism and Soviet cinema in its aesthetics, forms, and ideological approach, the film uses the archetypal representation of characters and the social and economic forces they embody. Based on the director’s childhood observations in his hometown, La Paga denounces the exploitation of the rural peasantry.",
-   "genero": "",
+   "genero": "Drama",
    "anio_tmdb": 1962,
    "duracion_tmdb": 62,
    "pais_tmdb": "Venezuela, Colombia",
@@ -404,7 +482,10 @@
    ],
    "_sinopsis_de": "ya publicada en cinemancia-2025",
    "poster": "/assets/filcmar-2026/la-paga.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "_heredado": {
+    "genero": "catálogo w_R4ERSF68AGVJ (cinemancia-2025, filcmar-2026, mubibogota-2026)"
+   }
   },
   {
    "titulo": "Lo demás es ruido",
@@ -503,7 +584,7 @@
    "poster_path": "/k2RvfqR0QSL4D5PzFkkomzRZJ8q.jpg",
    "synopsis_es": "Cuando Karina se entera de que está embarazada del bebé de Charlie, ella y su mejor amiga Eli se disponen a encontrarlo por las calles nocturnas de Santa Marta. En el camino, se enfrentan al deseo, la maternidad y su vínculo cambiante. Al amanecer, el mar las abraza, y vuelven a jugar como niñas.",
    "synopsis_en": "",
-   "genero": "",
+   "genero": "Drama",
    "anio_tmdb": 0,
    "duracion_tmdb": 11,
    "pais_tmdb": "",
@@ -533,7 +614,10 @@
     }
    ],
    "poster": "/assets/filcmar-2026/para-no-volver.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "_heredado": {
+    "genero": "catálogo w_R4DRKZWFVT9V (biff-2026, cinemancia-2026, filcmar-2026)"
+   }
   },
   {
    "titulo": "Petra y el sol",
@@ -635,6 +719,24 @@
    "posterSource": "tmdb"
   },
   {
+   "titulo": "Reverb",
+   "tmdb_id": 1791605,
+   "titulo_original": "Reverb",
+   "poster_path": "/pj0T2i7lFHIzhlK1c4k1Kfkojcw.jpg",
+   "synopsis_es": "Este cortometraje surgió como un intento de plasmar los sonidos que escuchaba por la noche. Mediante animación manual, escaneo y stop motion, el film pretende evocar la anticipación de algo que podría ocurrir durante la noche.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 2,
+   "pais_tmdb": "",
+   "lbSlug": "reverb-2025-2",
+   "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas): María Elizabeth López, 2025, 2 min, Colombia, sinopsis y afiche de la matriz de curaduría de FILCMAR. Letterboxd: reverb-1.",
+   "_director": "María Elizabeth López",
+   "_sondeado": "2026-10-15",
+   "poster": "/assets/filcmar-2026/reverb.jpg",
+   "posterSource": "tmdb"
+  },
+  {
    "titulo": "Show de Ziggy: La maldición del mariachi bondage",
    "tmdb_id": 1638911,
    "titulo_original": "El Show de Ziggy: La Maldición del Mariachi Bondage",
@@ -685,13 +787,31 @@
    "posterSource": "tmdb"
   },
   {
+   "titulo": "Sol de niebla",
+   "tmdb_id": 1791609,
+   "titulo_original": "Sol de niebla",
+   "poster_path": "/2aLKjUXGx6kWEd7i1Sf8PSa9WZe.jpg",
+   "synopsis_es": "Misty Sun presenta una visión fragmentada y multiángulosa de la Espeletia frailejones a través de la yuxtaposición de tomas detalladas (macro), funcionando como una especie de estudio morfológico de la planta. Contrasta las ilustraciones científicas, las representaciones institucionales y los discursos en torno a la Espeletia frailejones. Las imágenes, filmadas en película, transmiten una sensación de registro tangible de las frailejones y sus inflorescencias, creando una metáfora de la planta como un territorio habitado por diversas manifestaciones de la vida.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 6,
+   "pais_tmdb": "",
+   "lbSlug": "sol-de-niebla",
+   "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas): María José Ibarra y Florentino Vargas, 2026, 6 min, Colombia, sinopsis y afiche de la matriz de FILCMAR. Letterboxd: sol-de-niebla.",
+   "_director": "Maria José Ibarra, Florentino Vargas",
+   "_sondeado": "2026-10-15",
+   "poster": "/assets/filcmar-2026/sol-de-niebla.jpg",
+   "posterSource": "tmdb"
+  },
+  {
    "titulo": "Somnolítico",
    "tmdb_id": 1590709,
    "titulo_original": "Somnolithic",
    "poster_path": "/24MJ3IfL9LrKmAG11sCM8GfonrQ.jpg",
    "synopsis_es": "Un ser extraño pierde su rumbo en el caos del sistema de transporte, desplazándose de un lugar a otro sin encontrar una salida. Los trayectos se ven desbordados por flujos acelerados que van y vienen como cascadas humanas. Los transeúntes, desdibujados y sin rostro, se mueven de manera automática, creando un laberinto en el que las rutas parecen infinitas. Personas adormiladas se funden con el entorno y, mientras el autobús sigue su marcha, el ser finalmente se descubre a sí mismo.",
    "synopsis_en": "A strange being loses its way in the chaos of the transportation system without finding an exit. The pathways are overwhelmed by accelerated flows that come and go like human waterfalls. The passersby, faceless, move automatically, creating a maze in which the routes seem endless. Sleepy and exhausted people merge with the surroundings, and as the bus continues on its way, the being finally manages to discover itself.",
-   "genero": "",
+   "genero": "Experimental",
    "anio_tmdb": 2025,
    "duracion_tmdb": 11,
    "pais_tmdb": "Colombia",
@@ -720,6 +840,45 @@
    ],
    "_sinopsis_de": "ya publicada en cineautopsia-2026",
    "poster": "/assets/filcmar-2026/somnolitico.jpg",
+   "posterSource": "tmdb",
+   "_heredado": {
+    "genero": "catálogo w_R4H3V76PWV4G (ficcali-2026, filcmar-2026, jardin-2026)"
+   }
+  },
+  {
+   "titulo": "Testimonio",
+   "tmdb_id": 1519246,
+   "titulo_original": "Testemunho",
+   "poster_path": "/sVD2hUTGKdG5myVVbDhqPzqdrZh.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "",
+   "genero": "Documental",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "Brazil",
+   "lbSlug": "testemunho",
+   "_verificado": "declarada a mano: Existía en TMDB como «Testemunho» (Leonardo Amaral y Roberto Cotta, Brasil, 2025): mismos directores que FILCMAR, que la publica traducida. TMDB tiene un duplicado sin fecha (1563990); se elige la ficha con fecha.",
+   "_director": "Leonardo Amaral, Roberto Cotta",
+   "_sondeado": "2026-10-15",
+   "poster": "/assets/filcmar-2026/testimonio.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "The Raules",
+   "tmdb_id": 1794424,
+   "titulo_original": "The Raules",
+   "poster_path": "/8mthk77gIq3irUZOkRcV5hZ3fyH.jpg",
+   "synopsis_es": "Convencido de que a Flor solo le interesan los rockeros tatuados, Raúl intenta reinventarse para conquistarla. Con la ayuda de su vecina, quien le hace un tatuaje de henna, y de su abuelo (también llamado Raúl), que le enseña a tocar la guitarra, emprende un dulce y torpe intento por llamar su atención.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 1,
+   "pais_tmdb": "",
+   "lbSlug": "the-raules",
+   "_verificado": "declarada a mano: Ficha CREADA por nosotros el 11 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas) con los datos y el afiche original que publica el festival.",
+   "_director": "Hugo Chamorro",
+   "_sondeado": "2026-10-15",
+   "poster": "/assets/filcmar-2026/the-raules.jpg",
    "posterSource": "tmdb"
   },
   {
@@ -771,40 +930,20 @@
    "posterSource": "tmdb"
   },
   {
-   "titulo": "El espejo de la vida",
-   "poster": "/assets/filcmar-2026/el-espejo-de-la-vida.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1t529HfEIBNyF4nvuat1sX8q7dLw-bHi1"
-  },
-  {
-   "titulo": "El ocaso de los dioses",
-   "poster": "/assets/filcmar-2026/el-ocaso-de-los-dioses.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1IwlfB0pCs8UtybSCmY70JTwWjqAsR0Jg"
-  },
-  {
-   "titulo": "El pesebre",
-   "poster": "/assets/filcmar-2026/el-pesebre.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1MD1PnZHKUlpAFQKg3jDdAoOvYOSmaGLk"
-  },
-  {
    "titulo": "HUSH",
    "poster": "/assets/filcmar-2026/hush.jpg",
    "posterSource": "oficial",
    "_afiche": "declarado: matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1t7-tqrkWh3ru-pVLRzAyd1IsKJS46yrN"
   },
   {
-   "titulo": "La danza del caos",
-   "poster": "/assets/filcmar-2026/la-danza-del-caos.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1_us7KFFNT8BGH89I-cOK2YeZ4RvL969W"
-  },
-  {
    "titulo": "La pecera",
    "poster": "/assets/filcmar-2026/la-pecera.jpg",
    "posterSource": "oficial",
-   "_afiche": "declarado: matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=16q3KzbbeuMm3MPfmaBf9Aib_3yLUBFIX"
+   "_afiche": "declarado: matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=16q3KzbbeuMm3MPfmaBf9Aib_3yLUBFIX",
+   "genero": "Animación",
+   "_heredado": {
+    "genero": "catálogo w_R4JK2FZ3Y9X2 (filcmar-2026, siembrafest-2026)"
+   }
   },
   {
    "titulo": "Miguel Ángel, Federico, y el carro que pasó encima de las gafas",
@@ -813,28 +952,9 @@
    "_afiche": "declarado: matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1kjnbHGPSC1bjCYWSaSmul6dXPen-TPMu"
   },
   {
-   "titulo": "Reverb",
-   "poster": "/assets/filcmar-2026/reverb.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1EUX4zVS8PjYQyd7liTH1zis67mZD10lO"
-  },
-  {
-   "titulo": "Sol de niebla",
-   "poster": "/assets/filcmar-2026/sol-de-niebla.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1oXfWkfyzUABbwTtEZV0_Bmd5DTDtIMS4"
-  },
-  {
-   "titulo": "Testimonio",
-   "poster": "/assets/filcmar-2026/testimonio.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1a04Hgq9_x1PfEEBr0gajCF4dwLuZXkzE"
-  },
-  {
-   "titulo": "The Raules",
-   "poster": "/assets/filcmar-2026/the-raules.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1eHzpvygaIvl-IRbFX60pUXE57SMiwbUQ"
+   "titulo": "Cierra ojos",
+   "sinopsis": "Basada en el personaje Cierraojos de Hans Christian Andersen, es el sueño, pero también la muerte quien cierra los ojos en nuestras vidas, narración con ecos de cuento infantil y dimensión surrealista.",
+   "_sinopsis": "https://www.youtube.com/watch?v=Ga5jBqAts2w — «El Cierra Ojos», canal de su director Marco Mejía T.; la descripción empieza «Pelicula S8 1981.» (dato, no sinopsis)"
   }
  ],
  "verificadas": {
@@ -1091,6 +1211,59 @@
    "poster": "/assets/filcmar-2026/el-dia-interrumpido.jpg",
    "posterSource": "tmdb"
   },
+  "El espejo de la vida": {
+   "tmdb_id": 1791654,
+   "titulo_original": "El espejo de la vida",
+   "poster_path": "/AlyX23QDpLTkWn3jSvZkt3nIFNT.jpg",
+   "synopsis_es": "En una noche oscura, un niño sigue una señal que lo lleva a una misteriosa máquina expendedora de dulces escondida en un bar prohibido. Para alcanzarla, deberá armarse de valor y afrontar desafíos que pondrán a prueba su ingenio, valentía y determinación.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 9,
+   "pais_tmdb": "",
+   "lbSlug": "el-espejo-de-la-vida",
+   "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía; tres sondas): Simón Sánchez Plazas, 2025, 9 min, Colombia; sinopsis y afiche de la matriz de FILCMAR (afiche recortado 2,6 % arriba para la proporción de TMDB, aprobado por Juan).",
+   "_director": "Simón Sánchez Plazas",
+   "_sondeado": "2026-10-15",
+   "poster": "/assets/filcmar-2026/el-espejo-de-la-vida.jpg",
+   "posterSource": "tmdb"
+  },
+  "El ocaso de los dioses": {
+   "tmdb_id": 1526356,
+   "titulo_original": "El Ocaso de los Dioses",
+   "poster_path": "/bpxLaIkyd7L0dtlGkAZh4fednki.jpg",
+   "synopsis_es": "Aurora, una joven que junto a su madre hace parte de una secta religiosa, duda de la veracidad de las palabras de Bernabé, el líder y busca la manera de hacerle entender tanto a su madre como a el resto de la comunidad que en ese lugar no está la verdad. Todo se torna caótico cuando Aurora comienza a tener conexiones con el ídolo sagrado y su objetivo cambia drásticamente, cambiando la normalidad de la comunidad.",
+   "synopsis_en": "Aurora, a young woman who is part of a religious sect with her mother, doubts the veracity of the words of Bernabé, the leader, and seeks a way to make her mother and the rest of the community understand that the truth is not there. Everything becomes chaotic when Aurora begins to have connections with the sacred idol and her objective changes drastically, changing the normality of the community.",
+   "genero": "Drama",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 24,
+   "pais_tmdb": "Colombia",
+   "title_en": "El Ocaso de los Dioses (Nightfall of Gods)",
+   "lbSlug": "el-ocaso-de-los-dioses-nightfall-of-gods",
+   "_verificado": "declarada a mano: Existía en TMDB (sonda por título, 8 oct 2026) sin año: «El Ocaso de los Dioses (Nightfall of Gods)», Juan Pablo Rendón, Colombia — el candado no tenía con qué corroborar. Letterboxd: el-ocaso-de-los-dioses-nightfall-of-gods.",
+   "_director": "Juan Pablo Rendón",
+   "_sondeado": "2026-10-15",
+   "poster": "/assets/filcmar-2026/el-ocaso-de-los-dioses.jpg",
+   "posterSource": "tmdb"
+  },
+  "El pesebre": {
+   "tmdb_id": 1543600,
+   "titulo_original": "Presépio",
+   "poster_path": "/6iyzA9HcJYerRUOYfi7Z3uxnM1r.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "On Christmas Eve, Dejair, a former resistance fighter against the military dictatorship, gathers with his family in the backyard. During a Secret Santa game, the contrast between appearances and private truths emerges. A water gun gift leads Dejair to denounce the absurdity of giving a child a weapon.",
+   "genero": "Drama",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 18,
+   "pais_tmdb": "Brazil",
+   "title_en": "Nativity Scene",
+   "lbSlug": "nativity-scene",
+   "_verificado": "declarada a mano: Existía en TMDB como «Presépio» / «Nativity Scene» (Felipe Bibian, Brasil, 2025, 18 min, el mismo argumento de Dejair); FILCMAR lo publica traducido. Letterboxd: nativity-scene.",
+   "_director": "Felipe Bibian",
+   "_sondeado": "2026-10-15",
+   "poster": "/assets/filcmar-2026/el-pesebre.jpg",
+   "posterSource": "tmdb"
+  },
   "El vuelo del moscardón": {
    "tmdb_id": 1587029,
    "titulo_original": "El vuelo del moscardón",
@@ -1140,6 +1313,23 @@
    "poster": "/assets/filcmar-2026/la-corazonada.jpg",
    "posterSource": "tmdb"
   },
+  "La danza del caos": {
+   "tmdb_id": 1791655,
+   "titulo_original": "La danza del caos",
+   "poster_path": "/8dfaUuA7VQE8CAt3VV4pq0O0ohu.jpg",
+   "synopsis_es": "La Danza del Caos es un cortometraje de animación experimental que traduce la teoría de los Cinco Ritmos de Gabrielle Roth en una experiencia audiovisual abstracta. Mediante el movimiento y el diseño sonoro, la animación sustituye al cuerpo físico para llevar al espectador en un viaje sensorial que recorre diferentes ritmos hasta alcanzar un estado de caos contenido. El cortometraje sumerge al espectador en una experiencia sensorial que lo invita a sentir y dejarse llevar por el ritmo como guía para la interpretación.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 6,
+   "pais_tmdb": "",
+   "lbSlug": "la-danza-del-caos",
+   "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía; tres sondas): Valeria Preciado Romaña, 2025, 6 min, Colombia; sinopsis y afiche de la matriz de FILCMAR (afiche recortado 6 % a los lados para la proporción de TMDB, aprobado por Juan).",
+   "_director": "Valeria Preciado Romaña",
+   "_sondeado": "2026-10-15",
+   "poster": "/assets/filcmar-2026/la-danza-del-caos.jpg",
+   "posterSource": "tmdb"
+  },
   "La misteriosa mirada del flamenco": {
    "tmdb_id": 896096,
    "titulo_original": "La misteriosa mirada del flamenco",
@@ -1174,7 +1364,7 @@
    "poster_path": "/5nM3a0jcl9UlcCwFyELvvCvDNGq.jpg",
    "synopsis_es": "En los Andes colombo-venezolanos, un campesino trabaja la tierra en condiciones de explotación para asegurar la supervivencia de su familia. Sin dinero para tratamiento médico, una noche se emborracha y es arrestado.",
    "synopsis_en": "In the Colombian-Venezuelan Andes, a peasant works the land under exploitative conditions to ensure the survival of his family. His son is ill, his wife is pregnant, and he himself reproduces the violence that surrounds him. With no money for medical treatment, one night he gets drunk and is arrested. In jail, in a burst of fury, he rebels against the town's political boss in the only way he can.  La Paga was a pioneering work of social and political cinema in Latin America, released the same year as Barravento, Glauber Rocha’s debut feature, and anticipating movements such as Third Cinema. Influenced by Italian Neorealism and Soviet cinema in its aesthetics, forms, and ideological approach, the film uses the archetypal representation of characters and the social and economic forces they embody. Based on the director’s childhood observations in his hometown, La Paga denounces the exploitation of the rural peasantry.",
-   "genero": "",
+   "genero": "Drama",
    "anio_tmdb": 1962,
    "duracion_tmdb": 62,
    "pais_tmdb": "Venezuela, Colombia",
@@ -1195,7 +1385,10 @@
    ],
    "_sinopsis_de": "ya publicada en cinemancia-2025",
    "poster": "/assets/filcmar-2026/la-paga.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "_heredado": {
+    "genero": "catálogo w_R4ERSF68AGVJ (cinemancia-2025, filcmar-2026, mubibogota-2026)"
+   }
   },
   "Lo demás es ruido": {
    "tmdb_id": 1616861,
@@ -1289,7 +1482,7 @@
    "poster_path": "/k2RvfqR0QSL4D5PzFkkomzRZJ8q.jpg",
    "synopsis_es": "Cuando Karina se entera de que está embarazada del bebé de Charlie, ella y su mejor amiga Eli se disponen a encontrarlo por las calles nocturnas de Santa Marta. En el camino, se enfrentan al deseo, la maternidad y su vínculo cambiante. Al amanecer, el mar las abraza, y vuelven a jugar como niñas.",
    "synopsis_en": "",
-   "genero": "",
+   "genero": "Drama",
    "anio_tmdb": 0,
    "duracion_tmdb": 11,
    "pais_tmdb": "",
@@ -1319,7 +1512,10 @@
     }
    ],
    "poster": "/assets/filcmar-2026/para-no-volver.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "_heredado": {
+    "genero": "catálogo w_R4DRKZWFVT9V (biff-2026, cinemancia-2026, filcmar-2026)"
+   }
   },
   "Petra y el sol": {
    "tmdb_id": 1484063,
@@ -1417,6 +1613,23 @@
    "poster": "/assets/filcmar-2026/pudor-ante-el-asalto-de-los-ojos-furtivos.jpg",
    "posterSource": "tmdb"
   },
+  "Reverb": {
+   "tmdb_id": 1791605,
+   "titulo_original": "Reverb",
+   "poster_path": "/pj0T2i7lFHIzhlK1c4k1Kfkojcw.jpg",
+   "synopsis_es": "Este cortometraje surgió como un intento de plasmar los sonidos que escuchaba por la noche. Mediante animación manual, escaneo y stop motion, el film pretende evocar la anticipación de algo que podría ocurrir durante la noche.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 2,
+   "pais_tmdb": "",
+   "lbSlug": "reverb-2025-2",
+   "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas): María Elizabeth López, 2025, 2 min, Colombia, sinopsis y afiche de la matriz de curaduría de FILCMAR. Letterboxd: reverb-1.",
+   "_director": "María Elizabeth López",
+   "_sondeado": "2026-10-15",
+   "poster": "/assets/filcmar-2026/reverb.jpg",
+   "posterSource": "tmdb"
+  },
   "Show de Ziggy: La maldición del mariachi bondage": {
    "tmdb_id": 1638911,
    "titulo_original": "El Show de Ziggy: La Maldición del Mariachi Bondage",
@@ -1465,13 +1678,30 @@
    "poster": "/assets/filcmar-2026/si-no-ardemos-como-iluminar-la-noche.jpg",
    "posterSource": "tmdb"
   },
+  "Sol de niebla": {
+   "tmdb_id": 1791609,
+   "titulo_original": "Sol de niebla",
+   "poster_path": "/2aLKjUXGx6kWEd7i1Sf8PSa9WZe.jpg",
+   "synopsis_es": "Misty Sun presenta una visión fragmentada y multiángulosa de la Espeletia frailejones a través de la yuxtaposición de tomas detalladas (macro), funcionando como una especie de estudio morfológico de la planta. Contrasta las ilustraciones científicas, las representaciones institucionales y los discursos en torno a la Espeletia frailejones. Las imágenes, filmadas en película, transmiten una sensación de registro tangible de las frailejones y sus inflorescencias, creando una metáfora de la planta como un territorio habitado por diversas manifestaciones de la vida.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 6,
+   "pais_tmdb": "",
+   "lbSlug": "sol-de-niebla",
+   "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas): María José Ibarra y Florentino Vargas, 2026, 6 min, Colombia, sinopsis y afiche de la matriz de FILCMAR. Letterboxd: sol-de-niebla.",
+   "_director": "Maria José Ibarra, Florentino Vargas",
+   "_sondeado": "2026-10-15",
+   "poster": "/assets/filcmar-2026/sol-de-niebla.jpg",
+   "posterSource": "tmdb"
+  },
   "Somnolítico": {
    "tmdb_id": 1590709,
    "titulo_original": "Somnolithic",
    "poster_path": "/24MJ3IfL9LrKmAG11sCM8GfonrQ.jpg",
    "synopsis_es": "Un ser extraño pierde su rumbo en el caos del sistema de transporte, desplazándose de un lugar a otro sin encontrar una salida. Los trayectos se ven desbordados por flujos acelerados que van y vienen como cascadas humanas. Los transeúntes, desdibujados y sin rostro, se mueven de manera automática, creando un laberinto en el que las rutas parecen infinitas. Personas adormiladas se funden con el entorno y, mientras el autobús sigue su marcha, el ser finalmente se descubre a sí mismo.",
    "synopsis_en": "A strange being loses its way in the chaos of the transportation system without finding an exit. The pathways are overwhelmed by accelerated flows that come and go like human waterfalls. The passersby, faceless, move automatically, creating a maze in which the routes seem endless. Sleepy and exhausted people merge with the surroundings, and as the bus continues on its way, the being finally manages to discover itself.",
-   "genero": "",
+   "genero": "Experimental",
    "anio_tmdb": 2025,
    "duracion_tmdb": 11,
    "pais_tmdb": "Colombia",
@@ -1500,6 +1730,43 @@
    ],
    "_sinopsis_de": "ya publicada en cineautopsia-2026",
    "poster": "/assets/filcmar-2026/somnolitico.jpg",
+   "posterSource": "tmdb",
+   "_heredado": {
+    "genero": "catálogo w_R4H3V76PWV4G (ficcali-2026, filcmar-2026, jardin-2026)"
+   }
+  },
+  "Testimonio": {
+   "tmdb_id": 1519246,
+   "titulo_original": "Testemunho",
+   "poster_path": "/sVD2hUTGKdG5myVVbDhqPzqdrZh.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "",
+   "genero": "Documental",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "Brazil",
+   "lbSlug": "testemunho",
+   "_verificado": "declarada a mano: Existía en TMDB como «Testemunho» (Leonardo Amaral y Roberto Cotta, Brasil, 2025): mismos directores que FILCMAR, que la publica traducida. TMDB tiene un duplicado sin fecha (1563990); se elige la ficha con fecha.",
+   "_director": "Leonardo Amaral, Roberto Cotta",
+   "_sondeado": "2026-10-15",
+   "poster": "/assets/filcmar-2026/testimonio.jpg",
+   "posterSource": "tmdb"
+  },
+  "The Raules": {
+   "tmdb_id": 1794424,
+   "titulo_original": "The Raules",
+   "poster_path": "/8mthk77gIq3irUZOkRcV5hZ3fyH.jpg",
+   "synopsis_es": "Convencido de que a Flor solo le interesan los rockeros tatuados, Raúl intenta reinventarse para conquistarla. Con la ayuda de su vecina, quien le hace un tatuaje de henna, y de su abuelo (también llamado Raúl), que le enseña a tocar la guitarra, emprende un dulce y torpe intento por llamar su atención.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 1,
+   "pais_tmdb": "",
+   "lbSlug": "the-raules",
+   "_verificado": "declarada a mano: Ficha CREADA por nosotros el 11 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas) con los datos y el afiche original que publica el festival.",
+   "_director": "Hugo Chamorro",
+   "_sondeado": "2026-10-15",
+   "poster": "/assets/filcmar-2026/the-raules.jpg",
    "posterSource": "tmdb"
   },
   "Una vez en un cuerpo": {
@@ -1558,106 +1825,66 @@
   "Competencia Espíritu del Trasnoche",
   "Cortoconcierto inaugural Antioquia Super Ochera",
   "El cargador de hombres",
-  "El espejo de la vida",
-  "El ocaso de los dioses",
-  "El pesebre",
   "El tajamar y la astromelia",
   "HDLT",
   "HUSH",
-  "La danza del caos",
   "La pecera",
-  "Miguel Ángel, Federico, y el carro que pasó encima de las gafas",
-  "Reverb",
-  "Sol de niebla",
-  "Testimonio",
-  "The Raules"
+  "Miguel Ángel, Federico, y el carro que pasó encima de las gafas"
  ],
  "_sin_ficha_sondeo": {
   "6.º Competencia Universitaria — Programa 1": {
    "director": "",
-   "fecha": "2026-10-01"
+   "fecha": "2026-10-15"
   },
   "6.º Competencia Universitaria — Programa 2": {
    "director": "",
-   "fecha": "2026-10-01"
+   "fecha": "2026-10-15"
   },
   "6.º Competencia Universitaria — Programa 3": {
    "director": "",
-   "fecha": "2026-10-01"
+   "fecha": "2026-10-15"
   },
   "Cierra ojos": {
    "director": "Marcos Mejía",
-   "fecha": "2026-10-01"
+   "fecha": "2026-10-15"
   },
   "Competencia Espíritu del Trasnoche": {
    "director": "",
-   "fecha": "2026-10-01"
+   "fecha": "2026-10-15"
   },
   "Cortoconcierto inaugural Antioquia Super Ochera": {
    "director": "",
-   "fecha": "2026-10-01"
+   "fecha": "2026-10-15"
   },
   "El cargador de hombres": {
    "director": "Gustavo Mejía",
-   "fecha": "2026-10-01"
-  },
-  "El espejo de la vida": {
-   "director": "Simón Sánchez Plazas",
-   "fecha": "2026-10-01"
-  },
-  "El ocaso de los dioses": {
-   "director": "Juan Pablo Rendón",
-   "fecha": "2026-10-01"
-  },
-  "El pesebre": {
-   "director": "Felipe Bibian",
-   "fecha": "2026-10-01"
+   "fecha": "2026-10-15"
   },
   "El tajamar y la astromelia": {
    "director": "Héctor Gallego",
-   "fecha": "2026-10-01"
+   "fecha": "2026-10-15"
   },
   "HDLT": {
    "director": "Colectivo Artefactum Suba",
-   "fecha": "2026-10-06"
+   "fecha": "2026-10-15"
   },
   "HUSH": {
    "director": "Santiago Franco",
-   "fecha": "2026-10-01"
-  },
-  "La danza del caos": {
-   "director": "Valeria Preciado Romaña",
-   "fecha": "2026-10-01"
+   "fecha": "2026-10-15"
   },
   "La pecera": {
    "director": "Angela Tatiana Fonseca Galvez",
-   "fecha": "2026-10-01"
+   "fecha": "2026-10-15"
   },
   "Miguel Ángel, Federico, y el carro que pasó encima de las gafas": {
    "director": "Juan David Rodriguez",
-   "fecha": "2026-10-01"
-  },
-  "Reverb": {
-   "director": "María Elizabeth López",
-   "fecha": "2026-10-01"
-  },
-  "Sol de niebla": {
-   "director": "Maria José Ibarra, Florentino Vargas",
-   "fecha": "2026-10-01"
-  },
-  "Testimonio": {
-   "director": "Leonardo Amaral, Roberto Cotta",
-   "fecha": "2026-10-01"
-  },
-  "The Raules": {
-   "director": "Hugo Chamorro",
-   "fecha": "2026-10-01"
+   "fecha": "2026-10-15"
   }
  },
  "_fuentes": [
   {
    "fuente": "proimagenescolombia.com — la base oficial del cine colombiano",
-   "capturado": "2026-10-07",
+   "capturado": "2026-10-15",
    "que_aporta": "país, año, duración, género, sinopsis y afiche de las obras que TMDB no registra",
    "metodo": "búsqueda por título en los catálogos de largos y cortos, y el MISMO candado del director que TMDB: el buscador es laxo y también mira dentro de la sinopsis"
   }

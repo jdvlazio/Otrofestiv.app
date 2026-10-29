@@ -1,0 +1,18 @@
+{
+ "titulo_original": {
+  "fuente": "festival:anibia-2026,anibia-2026",
+  "regla": "el título que más festivales imprimen"
+ },
+ "directores": {
+  "fuente": "tmdb:1614246",
+  "regla": "tmdb-manda"
+ },
+ "anio": {
+  "fuente": "tmdb:1614246",
+  "regla": "tmdb-manda"
+ },
+ "paises": {
+  "fuente": "festival",
+  "regla": "pais-union"
+ }
+}

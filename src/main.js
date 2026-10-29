@@ -6,6 +6,7 @@
 // SW: regla network-first /src/ garantiza que el deploy propaga (D-INFRA-1=B).
 
 // ── Step 1: config.js (import directo, sin bridge — constantes estáticas) ─────
+import { refrescarFichas } from './controller/datos-fuente.js';
 import {
   TMDB_IMG, TMDB_API_BASE, TMDB_POSTER_BASE, _POSTER_CACHE_PFX,
   FESTIVAL_BUFFER, MAX_REMEMBERED_SLOTS, DEFAULT_DURATION_MIN,
@@ -26,6 +27,7 @@ import './state/viewstate.js';
 //   FESTIVAL_STORAGE_KEY). saveX/loadState orquestadoras se quedan en main.js. ──
 import { storage } from './storage/storage.js';
 import { onDomReady } from './util/ready.js';
+import { instalarSinInline } from './controller/sin-inline.js';
 import { report } from './telemetry.js';
 
 // ── Step 4: i18n.js (import — _I18N + t + _applyI18nDOM). _lang vive en state
@@ -34,7 +36,7 @@ import { LANGS, t, _applyI18nDOM } from './i18n/i18n.js';
 
 // ── Step 5: domain/ (funciones puras). Importan config (DEFAULT_DURATION_MIN,
 //   FESTIVAL_BUFFER, FESTIVAL_CONFIG) y leen festival-state vía bridge. El worker
-//   las consume vía eval(name).toString(); sus copias worker-local se quedan. ──
+//   las consume vía fn.toString() (calc.js, sin eval desde el 26 oct); sus copias worker-local se quedan. ──
 import { toMin, parseDur, minToStr, _festDate, simNow, simTodayStr, dayFullyPassed, festivalEnded } from './domain/time.js';
 import { _djb2, _titleSeed, _mulberry32, shuffle, scoreFilm, effectiveDuration, screeningPassed, _classifyTodayScreenings, _endedStats, normTitle } from './domain/film.js';
 import { sameEntry, screensConflict, isScreeningBlocked, plannableScreens, sortScreensByStrategy, computeScenarios, verifyPlan } from './domain/schedule.js';
@@ -111,7 +113,7 @@ import {
 
 // ── Step 7d-1: controller/sheets-controller.js — sheets+rating+AV+toast+utils. ──
 import {
-  openPelSheet, closePelSheet, _closeTopSheet, quedarmeHastaFinal, openCortoSheet, openCortoSheetFromEl, _openCombinedFilmSheet, _findParentProgram, openConflictSheet, closeConflictSheet, openPrioLimit, openPlanConfirm, closePlanConfirm, openPostViewRating, openRatingSheet, closeRatingSheet, openAvSheet, selectAvDay, setAvType, confirmAvBlock, renderAvDay, addBlock, removeBlock, toggleFullDay, _setAvAddOpen, showActionToast, _dismissToastAction, countryToFlags, filmDisplayTitle, _genreEN, _removePlanItem, savePVRating, pvLater, openDiary, closeDiary, openPalmares, closePalmares, openVenueSheet, closeVenueSheet,
+  openPelSheet, closePelSheet, _closeTopSheet, quedarmeHastaFinal, openCortoSheet, openCortoSheetFromEl, _openCombinedFilmSheet, _findParentProgram, openConflictSheet, closeConflictSheet, openPrioLimit, openPlanConfirm, closePlanConfirm, invitarCuenta, openPostViewRating, openRatingSheet, closeRatingSheet, openAvSheet, selectAvDay, setAvType, confirmAvBlock, renderAvDay, addBlock, removeBlock, toggleFullDay, _setAvAddOpen, showActionToast, _dismissToastAction, countryToFlags, filmDisplayTitle, _genreEN, _removePlanItem, savePVRating, pvLater, openDiary, closeDiary, openPalmares, closePalmares, openVenueSheet, closeVenueSheet,
 } from './controller/sheets-controller.js';
 
 // ── Step 7d-2: controller/overlays.js — seccion/search/lugar dropdowns. ──────
@@ -122,9 +124,9 @@ import {
 // ── Step 7d-3: controller/handlers.js — mutators+filters+composites. ─────────
 import {
   citySheetPick, citySheetAll,
-  toggleWL, toggleWatched, diaryToggleVista, diaryNotaCerrar, togglePelPrio, togglePelWL, setDelay, undoDelay, clearDelay, removeFromAgenda, addSuggestion, addRecurringBlock, removeRecurringBlock, _planFixNotice,  forceInclude, includeAnyway, togglePriority, swapPriority, markWatchedFromPlan, confirmReplace, removeFilmFromScenario, _dismissNotice, selectMiPlanDay, miPlanNav, toggleMplanProg, setActivePlanFilm, selectFromDetail, toggleFilmAlternatives, _toggleEveningFilms, filterByVenue, filterByDay, filterBySection, setProgramaMode, toggleProgramaView, setProgramaView, setProgramaChip, clearProgramaChip, _pafClearSec, _pafClearVenue, _toggleWLFromList, saveCurrentScenario, _setExpandedFilm, _closePelAndRemove, _closePelAndRate, _navTo, _closeAuthAndReset, _toggleCtxOlder, _toggleWatchedAndClose, _toggleWLAndClose, _activatePlanFilm, _scrollToSuggestions, _removeConflictModal, _scrollToTop, _searchOpenFilm, _searchOpenCorto,
+  toggleWL, toggleWatched, diaryToggleVista, diaryNotaCerrar, togglePelPrio, togglePelWL, setDelay, undoDelay, clearDelay, applyOwnCloudDelay, removeFromAgenda, addSuggestion, addRecurringBlock, removeRecurringBlock, _planFixNotice,  forceInclude, includeAnyway, togglePriority, swapPriority, markWatchedFromPlan, toggleBoleta, toggleSoloSinBoleta, abrirAviso, confirmReplace, removeFilmFromScenario, _dismissNotice, selectMiPlanDay, miPlanNav, toggleMplanProg, setActivePlanFilm, selectFromDetail, toggleFilmAlternatives, _toggleEveningFilms, filterByVenue, filterByDay, filterBySection, setProgramaMode, toggleProgramaView, setProgramaView, setProgramaChip, clearProgramaChip, _pafClearSec, _pafClearVenue, _toggleWLFromList, saveCurrentScenario, _setExpandedFilm, _closePelAndRemove, _closePelAndRate, _navTo, _closeAuthAndReset, _toggleCtxOlder, _toggleWatchedAndClose, _toggleWLAndClose, _activatePlanFilm, _scrollToSuggestions, _removeConflictModal, _scrollToTop, _searchOpenFilm, _searchOpenCorto,
 } from './controller/handlers.js';
-import { setDelaysRerender } from './controller/delays-cloud.js';
+import { setDelaysRerender, setOwnDelayCb } from './controller/delays-cloud.js';
 import { initWatchBridge } from './controller/watch-bridge.js';
 
 // ── Step 8d-4: controller/loader.js (loadFestival + dismissSplash) ───────────
@@ -147,11 +149,9 @@ import {
 import {
   sharePlan, shareDiary, exportICS,
 } from './controller/share.js';
+import { abrirCompartirFestival, abrirCompartirPlan } from './controller/story.js';
 
-// ── Step 7e: controller/poster-err.js ────────────────────────────────────────────
-import {
-  _posterErr, _cortoSheetPosterErr, _edPosterErr,
-} from './controller/poster-err.js';
+// controller/poster-err.js: lo importa controller/sin-inline.js (data-err), no main.
 
 // storage (adapter de localStorage) → src/storage/storage.js (Step 3).
 // Importado al top del módulo. Usa FESTIVAL_STORAGE_KEY vía el STATE BRIDGE.
@@ -238,6 +238,7 @@ const ACTION_REGISTRY = {
   closePVRating:         ()      => closePVRating(),
   pvLater:               ()      => pvLater(),
   closePlanConfirm:      (el)    => closePlanConfirm(el.dataset.force === '1'),
+  invitarCuenta:         ()      => invitarCuenta(),
   closePrioLimit:        ()      => closePrioLimit(),
   dismissSplash:         ()      => dismissSplash(),
   searchOpen:            ()      => searchOpen(),
@@ -299,6 +300,8 @@ const ACTION_REGISTRY = {
   openPalmares:        ()      => openPalmares(),
   closePalmares:       ()      => closePalmares(),
   shareDiary:          ()      => shareDiary(),
+  abrirCompartirFestival: ()    => abrirCompartirFestival(),
+  abrirCompartirPlan:    ()    => abrirCompartirPlan(),
   scrollToSuggestions: ()      => _scrollToSuggestions(),
   removeConflictModal: ()      => _removeConflictModal(),
   scrollToTop:         ()      => _scrollToTop(),
@@ -309,6 +312,8 @@ const ACTION_REGISTRY = {
   setActivePlanFilm:     (el)    => setActivePlanFilm(el),
   toggleFilmAlternatives:(el)    => toggleFilmAlternatives(el.dataset.key, el.dataset.title, el.dataset.day, el.dataset.time),
   toggleMplanProg:       (el, e) => toggleMplanProg(el, e),
+  toggleBoleta:          (el)    => toggleBoleta(el.dataset.key),
+  toggleSoloSinBoleta:   ()      => toggleSoloSinBoleta(),
   markWatchedFromPlan:   (el, e) => markWatchedFromPlan(el.dataset.title, el.dataset.day, el.dataset.time, el.dataset.venue, el.dataset.dur, e),
   sharePlan:             ()      => sharePlan(),
   exportICS:             ()      => exportICS(),
@@ -372,6 +377,7 @@ document.addEventListener('click', function(e) {
     if (closeFn) closeFn();
   }
 });
+instalarSinInline(ACTION_REGISTRY, searchQuery);   // 3b. sin on*= en el HTML (CSP) — controller/sin-inline.js
 // ── CONTROLLER LAYER END (p7c-1) ──────────────────────────────────────
 
 // ── i18n — sistema de traducción ─────────────────────────────────────────
@@ -502,7 +508,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202610072055';
+const BUILD_VERSION='202610192124';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -1020,6 +1026,9 @@ try{
   const _capApp=window.Capacitor?.Plugins?.App;
   if(window.Capacitor?.isNativePlatform?.()&&_capApp?.addListener){
     _capApp.addListener('backButton',()=>{ if(!_closeTopSheet()) _capApp.minimizeApp?.(); });
+    // Tocar un aviso que trae destino (el del día después: «Tu festival») abre Mi Plan.
+    window.Capacitor.Plugins?.LocalNotifications?.addListener?.('localNotificationActionPerformed',
+      a=>{ try{ abrirAviso(a?.notification?.extra); }catch(e){} });
   }
 }catch(e){ /* sin plugin: comportamiento de siempre */ }
 
@@ -1364,6 +1373,7 @@ state.subscribeRender(
   // contenido es visible por default y JS NO toca opacity → imposible que quede
   // atascado invisible en WKWebView (Bug 1 se resuelve en la capa CSS).
   _renderFestivalSelector(activeFest);
+  _fichasYPortada();   // FICHAS FRESCAS (B1) — ver la función, junto a los canales
   // El selector del splash NO se rellena — queda el placeholder del markup
   // (data-i18n="splash_elegi"). "Entrar" arranca disabled hasta que se elige.
   // Revelar el splash recién cuando el selector YA tiene el festival correcto:
@@ -1444,29 +1454,20 @@ document.addEventListener('click', function(e){
   // p8 Step 8b: el bloque `_lets` (29 viewstate/festival-data/auth) se reubicó a
   // state/viewstate.js (side-effect import, instala en import-phase). Aquí queda
   // solo la exposición de {state, FESTIVAL_CONFIG, ACTION_REGISTRY} + las fns
-  // (inline on* de producción + page.evaluate de tests) → 8c.
+  // (page.evaluate de tests) → 8c.
   for (const [k, val] of Object.entries({ state, FESTIVAL_CONFIG, ACTION_REGISTRY })) {
     Object.defineProperty(globalThis, k, { get: () => val, configurable: true });
   }
-  // Funciones invocadas desde:
-  //  (a) handlers inline on* en HTML generado (onerror=_posterErr/_cortoSheetPosterErr)
-  //      — corren en GLOBAL scope, no module scope → DEBEN estar en globalThis
-  //      (correctness de producción, no solo tests; onerror no se migró en 7c).
-  //  (b) page.evaluate de la suite Playwright.
+  // Funciones que usa page.evaluate de la suite Playwright. Ya NO hay handlers
+  // on*= que las necesiten en global (CSP, 26 oct: controller/sin-inline.js).
   Object.assign(globalThis, { venueLabel, sala,
-    // (a) inline on* handlers — producción
-    //     en HTML generado (main.js innerHTML): onerror=_posterErr/_cortoSheetPosterErr
-    //     en markup estático (index.html): oninput/onkeyup/onkeydown=searchQuery,
-    //     onkeydown=submitAuthEmail/submitOTP (#search-input, #auth-email-inp, #auth-otp-inp)
-    _posterErr, _cortoSheetPosterErr, _edPosterErr,
-    searchQuery, submitAuthEmail, submitOTP,
     // (b) page.evaluate — tests
     // NOTICES: CONFIG, no estado — no va al roster de state (rompería la frontera
     // que vigila [state-mirror], igual que FESTIVAL_CONFIG/VENUES). Se expone acá
     // para que la suite pueda INYECTAR un aviso y ejercer el camino REAL:
     // NOTICES.push(...) → limpiar cfg.films → loadFestival() → el sellado del
     // loader. Era la única ruta crítica sin test: se verificaba a mano.
-    NOTICES,
+    NOTICES, searchQuery, submitAuthEmail, submitOTP,   // los tres últimos: page.evaluate de auth/search.spec
     // _applyCloudRow: la puerta por donde entra el plan desde la nube — expuesta
     // para que la suite pueda ejercer su normalización contra el catálogo
     // (syncScheduleWithCatalog) sin montar Supabase. Solo tests.
@@ -1554,6 +1555,20 @@ updateAgTab();
 setDelaysRerender(function(){
   if(activeMNav==='mnav-miplan' && activeView==='agenda') renderAgenda();
 });
+// Retraso marcado en el RELOJ (14 oct 2026): tu propio reporte llega por Realtime
+// o la carga inicial (setOwnDelayCb), o directo del wrapper de iOS por
+// WCSession (__otfWatchDelay). Los dos terminan en applyOwnCloudDelay, que no
+// vuelve a escribir la nube.
+setOwnDelayCb((key, mins) => { if(applyOwnCloudDelay(key, mins) && activeMNav==='mnav-miplan' && activeView==='agenda') renderAgenda(); });
+// iOS: el wrapper (1.16+) pasa el destino del aviso tocado. Devuelve true si la
+// app ya estaba lista para atenderlo (si no, el wrapper reintenta).
+window.__otfAbrirAviso = (a) => { try{ return abrirAviso(a); }catch(e){ report(e,'abrirAviso'); return false; } };
+window.__otfWatchDelay = (m) => {
+  try{
+    if(!m || !m.key || (m.festival && m.festival!==_activeFestId)) return;
+    if(applyOwnCloudDelay(m.key, m.minutes) && activeMNav==='mnav-miplan' && activeView==='agenda') renderAgenda();
+  }catch(e){ report(e,'watchDelay'); }
+};
 
 // Sync del plan EN VIVO (F0.5): al llegar un cambio de OTRO dispositivo por Realtime,
 // repintar la vista ACTIVA sin navegar. renderActiveView() rutea internamente
@@ -1787,6 +1802,13 @@ function _offerUpdate(serverBuild){
 // Permite staged rollout: android e ios con builds independientes en version.json.
 _checkVersionJson();
 
+// FICHAS FRESCAS (B1): corre en el arranque Y en los tres canales vivos. Una ficha
+// no sube la versión de la app, así que ningún canal la veía, y casi nadie abre
+// desde cero: se deja en segundo plano y se vuelve (Juan, 19 oct). Si seguís en la
+// portada, se re-dibuja; si no, el riel de «cambiar festival» la lee al abrirse.
+function _fichasYPortada(){ refrescarFichas().then(ids=>{ const sp=document.getElementById('otrofestiv-splash'), sel=_splashSelectedFestId;
+  if(ids.length&&sp&&!sp.classList.contains('fade-out')){ _renderSplashRail(sel); if(sel) selectSplashFest(null,null,sel); } }).catch(()=>{}); }
+
 // ── Canal version.json #2 + SW re-check: visibilitychange ────────────
 // Corre cuando el usuario vuelve la app desde background.
 // En mobile, el JS no recarga al volver del background — sin este listener,
@@ -1796,7 +1818,7 @@ document.addEventListener('visibilitychange', function(){
   if(document.visibilityState === 'visible' && !_reloading){
     _checkVersionJson();
     _swRecheck();
-    refrescarDatosFestival();   // capa 2: los DATOS también, sin recargar
+    refrescarDatosFestival(); _fichasYPortada();   // capa 2: los DATOS y las fichas, sin recargar
   }
 });
 
@@ -1815,7 +1837,7 @@ window.addEventListener('online', function(){
   if(!_reloading){
     _checkVersionJson();
     _swRecheck();
-    refrescarDatosFestival();
+    refrescarDatosFestival(); _fichasYPortada();
   }
 });
 
@@ -1835,7 +1857,7 @@ var _POLL_MS = (function(){
 setInterval(function(){
   if(document.visibilityState === 'visible' && !_reloading){
     _checkVersionJson({offer:true});
-    refrescarDatosFestival();   // capa 2 — mismo pulso, otra carga: el catálogo
+    refrescarDatosFestival(); _fichasYPortada();   // capa 2 — mismo pulso, otra carga: el catálogo
   }
 }, _POLL_MS);
 

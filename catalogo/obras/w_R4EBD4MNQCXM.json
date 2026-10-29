@@ -1,0 +1,48 @@
+{
+ "id": "w_R4EBD4MNQCXM",
+ "titulo_original": "Este no es tu jardín",
+ "anio": 2025,
+ "paises": [
+  "CO"
+ ],
+ "directores": [
+  "Carlos Velandia",
+  "Angélica Restrepo"
+ ],
+ "aliases": [
+  {
+   "titulo": "This Is Not Your Garden",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "Enraizados en humedales, páramos y bosques centenarios a punto de desaparecer, recuerdos y un futuro especulado convergen. 500 años de explotación, exilio y resiliencia se nutren de un dolor colectivo y un deseo de agrietarlo todo.",
+  "en": "Rooted in wetlands, páramos and centennial forests at the verge of disappearing, memories and a speculated future collide. 500 years of exploitation, exile and resilience are nourished by a collective pain and a desire to crack through it all."
+ },
+ "generos": [
+  "Animación"
+ ],
+ "afiche": {
+  "archivo": "/assets/anibia-2026/este-no-es-tu-jardin.jpg",
+  "veredicto": "oficial"
+ },
+ "xref": {
+  "tmdb": 1417902,
+  "letterboxd": "this-is-not-your-garden"
+ },
+ "versiones": [
+  {
+   "etiqueta": "12 min",
+   "duracion_min": 12
+  },
+  {
+   "etiqueta": "13 min",
+   "duracion_min": 13
+  }
+ ],
+ "presentaciones": [
+  "anibia-2026",
+  "cineautopsia-2026"
+ ]
+}

@@ -1,0 +1,39 @@
+{
+ "id": "w_R4EWPMXEMM9Q",
+ "titulo_original": "Sol menor",
+ "anio": 2025,
+ "paises": [
+  "PT"
+ ],
+ "directores": [
+  "André Silva Santos"
+ ],
+ "aliases": [
+  {
+   "titulo": "April Tune",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "Comienzos de primavera. Una sonata, un tren, una carta. Entre su trabajo como profesor de flauta y los rituales del duelo por la muerte temprana de su mujer, Samuel enfrenta un dilema tras la visita de su hermano.",
+  "en": "Early Spring. A sonata, a train, a letter. Between his work as a flute teacher and the rituals of mourning the early death of his wife, Samuel faces a dilemma after a visit from his brother."
+ },
+ "afiche": {
+  "archivo": "https://image.tmdb.org/t/p/w500/dyDNNgnVIaI4MR83kPpoVNCWoVV.jpg",
+  "veredicto": "oficial"
+ },
+ "xref": {
+  "tmdb": 1500856,
+  "letterboxd": "april-tune"
+ },
+ "versiones": [
+  {
+   "etiqueta": "27 min",
+   "duracion_min": 27
+  }
+ ],
+ "presentaciones": [
+  "cinemancia-2026"
+ ]
+}

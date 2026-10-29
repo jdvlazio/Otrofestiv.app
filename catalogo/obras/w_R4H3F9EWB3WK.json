@@ -1,0 +1,39 @@
+{
+ "id": "w_R4H3F9EWB3WK",
+ "titulo_original": "Liebres",
+ "anio": 2023,
+ "paises": [
+  "CO"
+ ],
+ "directores": [
+  "Laura Carvajal"
+ ],
+ "aliases": [
+  {
+   "titulo": "Hare",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "Valentina y Pilar, dos adolescentes de mundos sociales distintos, viven un hecho violento que las cambia para siempre: rompe las barreras que las separaban y las hace habitar un mismo cuerpo herido.",
+  "en": "The short film follows Valentina and Pilar, two young teenagers from different socio-cultural contexts who will experience a violent event that will change them forever, breaking the barriers that distance them and making them live in the same wounded body."
+ },
+ "afiche": {
+  "archivo": "/assets/ficcali-2026/liebres.jpg",
+  "veredicto": "oficial"
+ },
+ "xref": {
+  "tmdb": 1392101,
+  "letterboxd": "hare"
+ },
+ "versiones": [
+  {
+   "etiqueta": "13 min",
+   "duracion_min": 13
+  }
+ ],
+ "presentaciones": [
+  "ficcali-2026"
+ ]
+}

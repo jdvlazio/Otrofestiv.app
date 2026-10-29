@@ -1,0 +1,561 @@
+{
+ "_provenance": {
+  "fuente": "ids-legado.py: ids estables congelados desde lo publicado (docs/FUNCION.md §11.2)",
+  "capturado": "2026-10-18"
+ },
+ "funciones": {
+  "f_d5c26c36ad": {
+   "sede": "Teatro Comfama Alfonso Restrepo Moreno - Medellín",
+   "dia": "2026-09-03",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "todas las canciones del mundo lamentos de un balcon"
+  },
+  "f_3c28463c90": {
+   "sede": "Centro Colombo Americano - Sede centro - Medellín",
+   "dia": "2026-09-04",
+   "hora": "14:30",
+   "sala": "Sala 2",
+   "titulo": "todos los planos del mundo debate que cine colombiano queremos"
+  },
+  "f_bf43117ba2": {
+   "sede": "Biblioteca Comfama Bello Centro - Bello",
+   "dia": "2026-09-04",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "retrospectiva sergio navarro programa 1"
+  },
+  "f_3e6ac4d5ec": {
+   "sede": "Centro Colombo Americano - Sede centro - Medellín",
+   "dia": "2026-09-04",
+   "hora": "16:30",
+   "sala": "Sala 1",
+   "titulo": "oublie pas le gruau sol menor"
+  },
+  "f_2bfb3aa38b": {
+   "sede": "Cineprox Las Américas - Medellín",
+   "dia": "2026-09-04",
+   "hora": "16:30",
+   "sala": "",
+   "titulo": "asi llego la noche"
+  },
+  "f_c167714fe5": {
+   "sede": "Centro Colombo Americano - Sede centro - Medellín",
+   "dia": "2026-09-04",
+   "hora": "17:00",
+   "sala": "Sala 2",
+   "titulo": "viviendo juntos zusammenleben"
+  },
+  "f_2d980fe35e": {
+   "sede": "Teatro Caribe - Itagüí",
+   "dia": "2026-09-04",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "la corazonada cairo streets las calles de el cairo"
+  },
+  "f_1c69d1c05d": {
+   "sede": "Casa Municipal de la Cultura - Caldas",
+   "dia": "2026-09-04",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "la tempesta no conteis con los dedos vampir cuadecuc"
+  },
+  "f_270a8152b1": {
+   "sede": "Antimateria Libros y Café - Medellín",
+   "dia": "2026-09-04",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "alquimia de la luz el cine de luciana decker"
+  },
+  "f_62daf36038": {
+   "sede": "Casa Museo Otraparte - Envigado",
+   "dia": "2026-09-04",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "dice que las picapedreras"
+  },
+  "f_9b71da49bb": {
+   "sede": "Centro Colombo Americano - Sede centro - Medellín",
+   "dia": "2026-09-04",
+   "hora": "19:00",
+   "sala": "Sala 1",
+   "titulo": "macho dancer"
+  },
+  "f_3c8aaf67e4": {
+   "sede": "Centro Colombo Americano - Sede centro - Medellín",
+   "dia": "2026-09-04",
+   "hora": "19:30",
+   "sala": "Sala 2",
+   "titulo": "competencia de cortometrajes programa 1"
+  },
+  "f_a749aeb6a9": {
+   "sede": "Centro Colombo Americano - Sede centro - Medellín",
+   "dia": "2026-09-05",
+   "hora": "14:00",
+   "sala": "Sala 1",
+   "titulo": "buddies"
+  },
+  "f_3630b4a744": {
+   "sede": "La Capilla del Claustro Comfama - Medellín",
+   "dia": "2026-09-05",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "un techo sin cielo"
+  },
+  "f_b192f800f6": {
+   "sede": "Centro Colombo Americano - Sede centro - Medellín",
+   "dia": "2026-09-05",
+   "hora": "16:00",
+   "sala": "Sala 2",
+   "titulo": "competencia de cortometrajes programa 2"
+  },
+  "f_46a337a340": {
+   "sede": "Cineprox Las Américas - Medellín",
+   "dia": "2026-09-05",
+   "hora": "16:30",
+   "sala": "",
+   "titulo": "el viento sabe que vuelvo a casa"
+  },
+  "f_201effc5e1": {
+   "sede": "La Capilla del Claustro Comfama - Medellín",
+   "dia": "2026-09-05",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "competencia nuevas voces programa 1"
+  },
+  "f_538d9b65ec": {
+   "sede": "Centro Colombo Americano - Sede centro - Medellín",
+   "dia": "2026-09-05",
+   "hora": "18:00",
+   "sala": "Sala 2",
+   "titulo": "retrospectiva sergio navarro programa 2"
+  },
+  "f_a95b8b9ba9": {
+   "sede": "Teatro Caribe - Itagüí",
+   "dia": "2026-09-05",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "pere portabella legado inmarcesible"
+  },
+  "f_b463ea7727": {
+   "sede": "Casa Municipal de la Cultura - Caldas",
+   "dia": "2026-09-05",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "que historia es esta y cual es su final obreras saliendo de la fabrica"
+  },
+  "f_e83c5d7aca": {
+   "sede": "Centro Colombo Americano - Sede centro - Medellín",
+   "dia": "2026-09-05",
+   "hora": "19:30",
+   "sala": "Sala 1",
+   "titulo": "el hogar fue sepultado en esa tierra que nunca pudimos encontrar decaer"
+  },
+  "f_f2c75364db": {
+   "sede": "Centro Colombo Americano - Sede centro - Medellín",
+   "dia": "2026-09-06",
+   "hora": "14:00",
+   "sala": "Sala 1",
+   "titulo": "jose luis torres leiva la primavera llega para los que esperan"
+  },
+  "f_451cf5c2d6": {
+   "sede": "La Capilla del Claustro Comfama - Medellín",
+   "dia": "2026-09-06",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "asi llego la noche"
+  },
+  "f_8f55ca7698": {
+   "sede": "Cine MAMM - Medellín",
+   "dia": "2026-09-06",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "sobre cosas que me han pasado verano"
+  },
+  "f_929e289d3b": {
+   "sede": "Centro Colombo Americano - Sede centro - Medellín",
+   "dia": "2026-09-06",
+   "hora": "16:30",
+   "sala": "Sala 1",
+   "titulo": "beaucoup parler mucho hablar futuros luminosos"
+  },
+  "f_1ae1f1128d": {
+   "sede": "Cineprox Las Américas - Medellín",
+   "dia": "2026-09-06",
+   "hora": "16:30",
+   "sala": "",
+   "titulo": "los golfos"
+  },
+  "f_a56cc67bca": {
+   "sede": "Centro Colombo Americano - Sede centro - Medellín",
+   "dia": "2026-09-06",
+   "hora": "17:00",
+   "sala": "Sala 2",
+   "titulo": "competencia de cortometrajes programa 3"
+  },
+  "f_0b0821559f": {
+   "sede": "Teatro Caribe - Itagüí",
+   "dia": "2026-09-06",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "viviendo juntos zusammenleben"
+  },
+  "f_ee9e4bc042": {
+   "sede": "Centro Colombo Americano - Sede centro - Medellín",
+   "dia": "2026-09-06",
+   "hora": "19:00",
+   "sala": "Sala 2",
+   "titulo": "chico electrico solo qu3r3mos un poco de amor"
+  },
+  "f_46e2f83c10": {
+   "sede": "Cineprox Las Américas - Medellín",
+   "dia": "2026-09-07",
+   "hora": "16:30",
+   "sala": "",
+   "titulo": "cleaning cleansing"
+  },
+  "f_baf5e74153": {
+   "sede": "ITM - Facultad de Artes y Humanidades - Medellín",
+   "dia": "2026-09-07",
+   "hora": "17:30",
+   "sala": "Sede La Floresta",
+   "titulo": "the children s hour"
+  },
+  "f_f23a4162c5": {
+   "sede": "Teatro Caribe - Itagüí",
+   "dia": "2026-09-07",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "cuando las nubes esconden la sombra el sueno de ana"
+  },
+  "f_849d7f501a": {
+   "sede": "La Capilla del Claustro Comfama - Medellín",
+   "dia": "2026-09-07",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "competencia nuevas voces programa 2"
+  },
+  "f_4b1de81241": {
+   "sede": "ITM - Facultad de Artes y Humanidades - Medellín",
+   "dia": "2026-09-07",
+   "hora": "19:30",
+   "sala": "Sede La Floresta",
+   "titulo": "michael koresky y jose miccio itinerarios de una tradicion"
+  },
+  "f_d34c708dbd": {
+   "sede": "Centro Colombo Americano - Sede centro - Medellín",
+   "dia": "2026-09-08",
+   "hora": "14:00",
+   "sala": "Sala 1",
+   "titulo": "une vie manifeste"
+  },
+  "f_6fbff3f95a": {
+   "sede": "La Capilla del Claustro Comfama - Medellín",
+   "dia": "2026-09-08",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "alquimia de la luz el cine de luciana decker"
+  },
+  "f_0497c201c5": {
+   "sede": "Centro Colombo Americano - Sede centro - Medellín",
+   "dia": "2026-09-08",
+   "hora": "16:00",
+   "sala": "Sala 2",
+   "titulo": "un techo sin cielo"
+  },
+  "f_b521d50acf": {
+   "sede": "Cineprox Las Américas - Medellín",
+   "dia": "2026-09-08",
+   "hora": "16:30",
+   "sala": "",
+   "titulo": "vendra la muerte y tendra tus ojos alicia sono con un faro"
+  },
+  "f_1df34d873f": {
+   "sede": "ITM - Facultad de Artes y Humanidades - Medellín",
+   "dia": "2026-09-08",
+   "hora": "17:30",
+   "sala": "Sede La Floresta",
+   "titulo": "las almas ni los ojos una danca non sancta"
+  },
+  "f_5238ef049b": {
+   "sede": "Centro Colombo Americano - Sede centro - Medellín",
+   "dia": "2026-09-08",
+   "hora": "18:00",
+   "sala": "Sala 1",
+   "titulo": "dry leaf"
+  },
+  "f_70752e0b29": {
+   "sede": "Teatro Caribe - Itagüí",
+   "dia": "2026-09-08",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "competencia nuevas voces programa 1"
+  },
+  "f_9f527ff911": {
+   "sede": "Teatro Otraparte - Envigado",
+   "dia": "2026-09-08",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "auslandsreise viaje al extranjero"
+  },
+  "f_3440bee0bd": {
+   "sede": "Centro Colombo Americano - Sede centro - Medellín",
+   "dia": "2026-09-08",
+   "hora": "19:00",
+   "sala": "Sala 2",
+   "titulo": "vive l amour"
+  },
+  "f_37e744803b": {
+   "sede": "Antimateria Libros y Café - Medellín",
+   "dia": "2026-09-08",
+   "hora": "20:00",
+   "sala": "",
+   "titulo": "retrospectiva sergio navarro programa 1"
+  },
+  "f_047824fe82": {
+   "sede": "Centro Colombo Americano - Sede centro - Medellín",
+   "dia": "2026-09-09",
+   "hora": "14:00",
+   "sala": "Sala 1",
+   "titulo": "el viento sabe que vuelvo a casa"
+  },
+  "f_652b38ae14": {
+   "sede": "Centro Colombo Americano - Sede centro - Medellín",
+   "dia": "2026-09-09",
+   "hora": "16:00",
+   "sala": "Sala 2",
+   "titulo": "carta blanca luciana decker"
+  },
+  "f_1b07b00409": {
+   "sede": "Centro Colombo Americano - Sede centro - Medellín",
+   "dia": "2026-09-09",
+   "hora": "16:30",
+   "sala": "Sala 1",
+   "titulo": "las almas ni los ojos una danca non sancta"
+  },
+  "f_ca6dfb2128": {
+   "sede": "Cineprox Las Américas - Medellín",
+   "dia": "2026-09-09",
+   "hora": "16:30",
+   "sala": "",
+   "titulo": "the souffleur"
+  },
+  "f_3af00d62a3": {
+   "sede": "La Capilla del Claustro Comfama - Medellín",
+   "dia": "2026-09-09",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "la tercera opcion die dritte option the third option"
+  },
+  "f_849e0c25eb": {
+   "sede": "ITM - Facultad de Artes y Humanidades - Medellín",
+   "dia": "2026-09-09",
+   "hora": "17:30",
+   "sala": "Sede La Floresta",
+   "titulo": "disciplina lolita en honda"
+  },
+  "f_dd12dbe077": {
+   "sede": "Teatro Caribe - Itagüí",
+   "dia": "2026-09-09",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "beaucoup parler mucho hablar futuros luminosos"
+  },
+  "f_328ecad929": {
+   "sede": "Centro Colombo Americano - Sede centro - Medellín",
+   "dia": "2026-09-09",
+   "hora": "18:30",
+   "sala": "Sala 2",
+   "titulo": "para hacer una pelicula solo se necesita un arma"
+  },
+  "f_94ed5f5eb9": {
+   "sede": "Antimateria Libros y Café - Medellín",
+   "dia": "2026-09-09",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "proces d un jeune poete juicio a un joven poeta solitudes soledades hold my hand"
+  },
+  "f_36a22e396f": {
+   "sede": "Casa Museo Otraparte - Envigado",
+   "dia": "2026-09-09",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "competencia de cortometrajes programa 1"
+  },
+  "f_4687d7e85c": {
+   "sede": "La Capilla del Claustro Comfama - Medellín",
+   "dia": "2026-09-09",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "ver y escuchar"
+  },
+  "f_a2ef52c131": {
+   "sede": "ITM - Facultad de Artes y Humanidades - Medellín",
+   "dia": "2026-09-10",
+   "hora": "14:00",
+   "sala": "Sede La Floresta",
+   "titulo": "encuentro internacional de investigacion creacion en musica y sonido cinematografico"
+  },
+  "f_eaad542bb9": {
+   "sede": "Casa Museo Otraparte - Envigado",
+   "dia": "2026-09-10",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "retrospectiva sergio navarro programa 2"
+  },
+  "f_06c13ba054": {
+   "sede": "Centro Colombo Americano - Sede centro - Medellín",
+   "dia": "2026-09-10",
+   "hora": "16:00",
+   "sala": "Sala 1",
+   "titulo": "fuera de competencia programa 1"
+  },
+  "f_84b1616f9c": {
+   "sede": "Cineprox Las Américas - Medellín",
+   "dia": "2026-09-10",
+   "hora": "16:30",
+   "sala": "",
+   "titulo": "la tercera opcion die dritte option the third option"
+  },
+  "f_7574455a00": {
+   "sede": "Centro Colombo Americano - Sede centro - Medellín",
+   "dia": "2026-09-10",
+   "hora": "17:30",
+   "sala": "Sala 2",
+   "titulo": "sobre cosas que me han pasado verano"
+  },
+  "f_478a6f4b7a": {
+   "sede": "ITM - Facultad de Artes y Humanidades - Medellín",
+   "dia": "2026-09-10",
+   "hora": "17:30",
+   "sala": "Sede La Floresta",
+   "titulo": "rancho homenaje a la obra de philip henry gosse spot fuera de campo 1 spot fuera de campo 2"
+  },
+  "f_5995e8371e": {
+   "sede": "Teatro Caribe - Itagüí",
+   "dia": "2026-09-10",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "competencia nuevas voces programa 2"
+  },
+  "f_f445fc166e": {
+   "sede": "Teatro Otraparte - Envigado",
+   "dia": "2026-09-10",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "oublie pas le gruau sol menor"
+  },
+  "f_fef21a8cfa": {
+   "sede": "Centro Colombo Americano - Sede centro - Medellín",
+   "dia": "2026-09-10",
+   "hora": "19:00",
+   "sala": "Sala 1",
+   "titulo": "auslandsreise viaje al extranjero"
+  },
+  "f_f2325eaa62": {
+   "sede": "La Capilla del Claustro Comfama - Medellín",
+   "dia": "2026-09-10",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "ich denke oft an hawaii muchas veces pienso en hawai"
+  },
+  "f_5f9c5841cc": {
+   "sede": "Terko - Copacabana",
+   "dia": "2026-09-10",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "el cielo la tierra y la lluvia"
+  },
+  "f_fc96ced45e": {
+   "sede": "Centro Colombo Americano - Sede centro - Medellín",
+   "dia": "2026-09-10",
+   "hora": "19:30",
+   "sala": "Sala 2",
+   "titulo": "fuera de competencia programa 2"
+  },
+  "f_6d60430dbc": {
+   "sede": "Centro Colombo Americano - Sede centro - Medellín",
+   "dia": "2026-09-11",
+   "hora": "14:00",
+   "sala": "Sala 1",
+   "titulo": "la tercera opcion die dritte option the third option"
+  },
+  "f_e1b82bde74": {
+   "sede": "Biblioteca Comfama Bello Centro - Bello",
+   "dia": "2026-09-11",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "vendra la muerte y tendra tus ojos alicia sono con un faro"
+  },
+  "f_74cfac4444": {
+   "sede": "Centro Colombo Americano - Sede centro - Medellín",
+   "dia": "2026-09-11",
+   "hora": "16:00",
+   "sala": "Sala 1",
+   "titulo": "el cielo la tierra y la lluvia"
+  },
+  "f_7f485206f0": {
+   "sede": "Cineprox Las Américas - Medellín",
+   "dia": "2026-09-11",
+   "hora": "16:30",
+   "sala": "",
+   "titulo": "la corazonada cairo streets las calles de el cairo"
+  },
+  "f_8dfcb79dd9": {
+   "sede": "Centro Colombo Americano - Sede centro - Medellín",
+   "dia": "2026-09-11",
+   "hora": "17:00",
+   "sala": "Sala 2",
+   "titulo": "programa de cortometrajes rajenda gour"
+  },
+  "f_de8db12e71": {
+   "sede": "Teatro Caribe - Itagüí",
+   "dia": "2026-09-11",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "competencia de cortometrajes programa 3"
+  },
+  "f_95cd2351a3": {
+   "sede": "Cine MAMM - Medellín",
+   "dia": "2026-09-11",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "proces d un jeune poete juicio a un joven poeta solitudes soledades hold my hand"
+  },
+  "f_5e9e0fe574": {
+   "sede": "Centro Colombo Americano - Sede centro - Medellín",
+   "dia": "2026-09-11",
+   "hora": "19:00",
+   "sala": "Sala 2",
+   "titulo": "cleaning cleansing"
+  },
+  "f_3d261d0953": {
+   "sede": "Terko - Copacabana",
+   "dia": "2026-09-11",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "competencia de cortometrajes programa 2"
+  },
+  "f_1155cbeee2": {
+   "sede": "Centro Colombo Americano - Sede centro - Medellín",
+   "dia": "2026-09-12",
+   "hora": "14:30",
+   "sala": "Sala 1",
+   "titulo": "a arvore do conhecimento el arbol del conocimiento"
+  },
+  "f_74c5ba9ff8": {
+   "sede": "Centro Colombo Americano - Sede centro - Medellín",
+   "dia": "2026-09-12",
+   "hora": "17:00",
+   "sala": "Sala 2",
+   "titulo": "was soll n wir denn machen ohne den tod que haremos sin la muerte"
+  },
+  "f_12626e6754": {
+   "sede": "Centro Colombo Americano - Sede centro - Medellín",
+   "dia": "2026-09-12",
+   "hora": "19:00",
+   "sala": "Sala 1",
+   "titulo": "iluminaciones"
+  }
+ }
+}

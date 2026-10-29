@@ -95,7 +95,9 @@
    "duration": "83 min",
    "synopsis_en": "In a remote village without electricity, a teenage girl rallies the entire town to find a way to watch her estranged uncle compete in a world boxing championship bout.",
    "synopsis_lang": "es",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "work_id": "w_R4KFXWS33ACS",
+   "id": "f_bdb394900f"
   },
   {
    "title": "Rebelión",
@@ -116,7 +118,9 @@
    "duration": "101 min",
    "synopsis_en": "The film portrays a vulnerable and anonymous Joe Arroyo — perhaps the most important Colombian salsa singer in history — in a claustrophobic journey through different moments of his life.",
    "synopsis_lang": "es",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "work_id": "w_R4KG8QBBVRPG",
+   "id": "f_6f1678ef81"
   },
   {
    "title": "Muestra Competencia Nacional de Ficción — Jueves",
@@ -133,7 +137,8 @@
      "flags": "🇨🇴",
      "poster": "/assets/leviza/images.jpeg",
      "lbSlug": "⚠️ LB PENDIENTE",
-     "posterSource": "custom"
+     "posterSource": "custom",
+     "work_id": "w_R4KGMXSP2VK2"
     },
     {
      "title": "La Bruja de Mi Ex",
@@ -142,7 +147,8 @@
      "flags": "🇨🇴",
      "poster": "/assets/leviza/LaBruja.jpg",
      "lbSlug": "⚠️ LB PENDIENTE",
-     "posterSource": "custom"
+     "posterSource": "custom",
+     "work_id": "w_R4KGMX18577G"
     },
     {
      "title": "La Mujer en el Espejo",
@@ -151,7 +157,8 @@
      "flags": "🇨🇴",
      "poster": "/assets/leviza/LaMujer.png",
      "lbSlug": "⚠️ LB PENDIENTE",
-     "posterSource": "custom"
+     "posterSource": "custom",
+     "work_id": "w_R4KGMXT17248"
     },
     {
      "title": "Legado Sinuano",
@@ -160,19 +167,22 @@
      "flags": "🇨🇴",
      "poster": "/assets/leviza/Legado.jpeg",
      "lbSlug": "⚠️ LB PENDIENTE",
-     "posterSource": "custom"
+     "posterSource": "custom",
+     "work_id": "w_R4KGMXXRXJBC"
     },
     {
      "title": "Manual para Reparar",
      "director": "Laura Mora",
      "country": "Colombia",
      "flags": "🇨🇴",
-     "lbSlug": "⚠️ LB PENDIENTE"
+     "lbSlug": "⚠️ LB PENDIENTE",
+     "work_id": "w_R4KGMXHQS4F6"
     }
    ],
    "day_order": 2,
    "flags": "🇨🇴",
-   "lbSlug": "⚠️ LB PENDIENTE"
+   "lbSlug": "⚠️ LB PENDIENTE",
+   "id": "f_38c7d446b8"
   },
   {
    "title": "Muestra Competencia Nacional de Ficción — Viernes",
@@ -187,7 +197,8 @@
      "director": "Deimer Vergara / Julián García",
      "country": "Colombia",
      "flags": "🇨🇴",
-     "lbSlug": "⚠️ LB PENDIENTE"
+     "lbSlug": "⚠️ LB PENDIENTE",
+     "work_id": "w_R4KGMXSNBMBH"
     },
     {
      "title": "No Te Despiertes",
@@ -196,7 +207,8 @@
      "flags": "🇨🇴",
      "poster": "/assets/leviza/NoTeDespiertes.jpg",
      "lbSlug": "⚠️ LB PENDIENTE",
-     "posterSource": "custom"
+     "posterSource": "custom",
+     "work_id": "w_R4KGMXZD62G5"
     },
     {
      "title": "Pawa",
@@ -205,7 +217,23 @@
      "flags": "🇨🇴",
      "poster": "/assets/leviza/Pawa.jpeg",
      "lbSlug": "⚠️ LB PENDIENTE",
-     "posterSource": "custom"
+     "posterSource": "custom",
+     "work_id": "w_R4HCNBABG3FG",
+     "genre": "Ficción",
+     "_src": {
+      "heredado": {
+       "genre": "catálogo w_R4HCNBABG3FG (ficci-65, ficdeh-2026, leviza-2026)",
+       "year": "catálogo w_R4HCNBABG3FG (ficci-65, ficdeh-2026, leviza-2026)",
+       "synopsis": "catálogo w_R4HCNBABG3FG (ficci-65, ficdeh-2026, leviza-2026)",
+       "synopsis_en": "catálogo w_R4HCNBABG3FG (ficci-65, ficdeh-2026, leviza-2026)",
+       "tmdb_id": "catálogo w_R4HCNBABG3FG (ficci-65, ficdeh-2026, ficica-2026, leviza-2026)"
+      }
+     },
+     "year": 2026,
+     "synopsis": "En una tranquila mañana en una ranchería de La Guajira, Indira da de comer a los pavos y las gallinas. Ante la sequía y el inicio de clases, Josefa, abuela de Indira, emprende un viaje junto a su nieta por las comunidades aledañas con la esperanza de vender a Taata, el pavo más grande, para comprar útiles escolares y comida.",
+     "synopsis_lang": "es",
+     "synopsis_en": "On a quiet morning in a ranchería in La Guajira, Indira feeds the turkeys and hens. With the drought and the school year about to start, her grandmother Josefa sets out with her through the neighboring communities, hoping to sell Taata, the largest turkey, and buy school supplies and food.",
+     "tmdb_id": 1668893
     },
     {
      "title": "Refracción",
@@ -214,14 +242,16 @@
      "flags": "🇨🇴",
      "poster": "/assets/leviza/Refraccio_n.jpeg",
      "lbSlug": "⚠️ LB PENDIENTE",
-     "posterSource": "custom"
+     "posterSource": "custom",
+     "work_id": "w_R4KGMYX31GDT"
     },
     {
      "title": "Tiene que Ser Ella",
      "director": "Valeria Rojas",
      "country": "Colombia",
      "flags": "🇨🇴",
-     "lbSlug": "⚠️ LB PENDIENTE"
+     "lbSlug": "⚠️ LB PENDIENTE",
+     "work_id": "w_R4KGMYE64A0A"
     },
     {
      "title": "Saltus",
@@ -230,7 +260,8 @@
      "flags": "🇨🇴",
      "poster": "/assets/leviza/Saltus.jpeg",
      "lbSlug": "⚠️ LB PENDIENTE",
-     "posterSource": "custom"
+     "posterSource": "custom",
+     "work_id": "w_R4KGMYVY5RZ6"
     },
     {
      "title": "Tándem",
@@ -239,12 +270,14 @@
      "flags": "🇨🇴",
      "poster": "/assets/leviza/Tandem.webp",
      "lbSlug": "⚠️ LB PENDIENTE",
-     "posterSource": "custom"
+     "posterSource": "custom",
+     "work_id": "w_R4KGMYDBTTAC"
     }
    ],
    "day_order": 4,
    "flags": "🇨🇴",
-   "lbSlug": "⚠️ LB PENDIENTE"
+   "lbSlug": "⚠️ LB PENDIENTE",
+   "id": "f_4bfcd42b0d"
   },
   {
    "title": "Mateo",
@@ -266,7 +299,9 @@
    "duration": "86 min",
    "synopsis_en": "At the striking age of 16, young Mateo faces the temptation of joining his neighborhood gangs or finding another way to express himself.",
    "synopsis_lang": "es",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "work_id": "w_R4KGMYY2KR49",
+   "id": "f_2e4a2ce794"
   },
   {
    "title": "Sumas y Restas",
@@ -288,7 +323,9 @@
    "duration": "107 min",
    "synopsis_en": "A look at Medellín's infamous cocaine cartel, focusing on the relationship between a construction contractor and a drug trafficker.",
    "synopsis_lang": "es",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "work_id": "w_R4KGZD5Q7T9V",
+   "id": "f_a00ea9e1ad"
   },
   {
    "title": "Muestra Competencia Nacional de Ficción — Sábado",
@@ -305,7 +342,23 @@
      "flags": "🇨🇴",
      "poster": "/assets/leviza/LaIndependencia.webp",
      "lbSlug": "⚠️ LB PENDIENTE",
-     "posterSource": "custom"
+     "posterSource": "custom",
+     "work_id": "w_R4HF7EVH2VC7",
+     "title_en": "Independence",
+     "_src": {
+      "heredado": {
+       "title_en": "catálogo w_R4HF7EVH2VC7 (ficdeh-2026, leviza-2026, siembrafest-2026, villadelcine-2026)",
+       "year": "catálogo w_R4HF7EVH2VC7 (ficdeh-2026, leviza-2026, siembrafest-2026, villadelcine-2026)",
+       "synopsis": "catálogo w_R4HF7EVH2VC7 (ficdeh-2026, leviza-2026, siembrafest-2026, villadelcine-2026)",
+       "synopsis_en": "catálogo w_R4HF7EVH2VC7 (ficdeh-2026, leviza-2026, siembrafest-2026, villadelcine-2026)",
+       "tmdb_id": "catálogo w_R4HF7EVH2VC7 (cortoscali-2026, ficdeh-2026, ficica-2026, leviza-2026, siembrafest-2026, villadelcine-2026)"
+      }
+     },
+     "year": 2025,
+     "synopsis": "Cecilia, una mujer abnegada de 52 años, decide romper con su vida de sacrificios tras años de soportar la irresponsabilidad de su hijo y la ingratitud de su familia, buscando finalmente su independencia.",
+     "synopsis_lang": "es",
+     "synopsis_en": "Cecilia, a selfless 52-year-old woman, decides to break with her life of sacrifices after years of enduring her son s irresponsibility and her family s ingratitude, finally seeking her independence.",
+     "tmdb_id": 1595081
     },
     {
      "title": "Luz Blanca",
@@ -314,21 +367,24 @@
      "flags": "🇨🇴",
      "poster": "/assets/leviza/Luz-Blanca.jpg",
      "lbSlug": "⚠️ LB PENDIENTE",
-     "posterSource": "custom"
+     "posterSource": "custom",
+     "work_id": "w_R4KHBET8AKVM"
     },
     {
      "title": "Retrato de un Adiós",
      "director": "Santiago Atehortúa",
      "country": "Colombia",
      "flags": "🇨🇴",
-     "lbSlug": "⚠️ LB PENDIENTE"
+     "lbSlug": "⚠️ LB PENDIENTE",
+     "work_id": "w_R4KHBEPJMDT7"
     },
     {
      "title": "Ruidos",
      "director": "Lala Corredor",
      "country": "Colombia",
      "flags": "🇨🇴",
-     "lbSlug": "⚠️ LB PENDIENTE"
+     "lbSlug": "⚠️ LB PENDIENTE",
+     "work_id": "w_R4KHBEP3KSRZ"
     },
     {
      "title": "Téngale Fe",
@@ -337,19 +393,22 @@
      "flags": "🇨🇴",
      "poster": "/assets/leviza/TengaleFE.png",
      "lbSlug": "⚠️ LB PENDIENTE",
-     "posterSource": "custom"
+     "posterSource": "custom",
+     "work_id": "w_R4KHBEGW6124"
     },
     {
      "title": "Tiempos Revelados",
      "director": "Paola Nova / Fredy Roldán",
      "country": "Colombia",
      "flags": "🇨🇴",
-     "lbSlug": "⚠️ LB PENDIENTE"
+     "lbSlug": "⚠️ LB PENDIENTE",
+     "work_id": "w_R4KHBESJGKHE"
     }
    ],
    "day_order": 2,
    "flags": "🇨🇴",
-   "lbSlug": "⚠️ LB PENDIENTE"
+   "lbSlug": "⚠️ LB PENDIENTE",
+   "id": "f_0ba5a4814a"
   },
   {
    "title": "La Vendedora de Rosas",
@@ -371,7 +430,9 @@
    "duration": "116 min",
    "synopsis_en": "Mónica, 13 years old, lives on the streets, earning a living selling roses.",
    "synopsis_lang": "es",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "work_id": "w_R4KHBEB7FSRD",
+   "id": "f_aa60162814"
   },
   {
    "title": "Los Súper Descendientes",
@@ -392,7 +453,9 @@
    "duration": "76 min",
    "synopsis_en": "You don't have to be a superhero to be super. Eleven-year-old Hedvig accidentally shrinks her father's superhero suit, and will have to find her own superpower.",
    "synopsis_lang": "es",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "work_id": "w_R4KHT2KBD0K7",
+   "id": "f_aa6ba25865"
   },
   {
    "title": "Clausura — Filminutos Movimiento Audiovisual LEVIZA",
@@ -404,32 +467,39 @@
    "film_list": [
     {
      "title": "Un Recuerdo Muerto",
-     "lbSlug": "⚠️ LB PENDIENTE"
+     "lbSlug": "⚠️ LB PENDIENTE",
+     "work_id": "w_R4KJ60NKC2NM"
     },
     {
      "title": "Perdón",
-     "lbSlug": "⚠️ LB PENDIENTE"
+     "lbSlug": "⚠️ LB PENDIENTE",
+     "work_id": "w_R4KJ60KX3PN9"
     },
     {
      "title": "La Lluvia",
-     "lbSlug": "⚠️ LB PENDIENTE"
+     "lbSlug": "⚠️ LB PENDIENTE",
+     "work_id": "w_R4KJ60741B2F"
     },
     {
      "title": "Entre Ventanas",
-     "lbSlug": "⚠️ LB PENDIENTE"
+     "lbSlug": "⚠️ LB PENDIENTE",
+     "work_id": "w_R4KJ60A63H1G"
     },
     {
      "title": "Justa Medida",
-     "lbSlug": "⚠️ LB PENDIENTE"
+     "lbSlug": "⚠️ LB PENDIENTE",
+     "work_id": "w_R4KJ60N4297B"
     },
     {
      "title": "Del Otro Lado del Solar",
-     "lbSlug": "⚠️ LB PENDIENTE"
+     "lbSlug": "⚠️ LB PENDIENTE",
+     "work_id": "w_R4KJ604144F7"
     }
    ],
    "day_order": 2,
    "flags": "🇨🇴",
-   "lbSlug": "⚠️ LB PENDIENTE"
+   "lbSlug": "⚠️ LB PENDIENTE",
+   "id": "f_046dd73b92"
   },
   {
    "title": "Taller de Producción y Financiación",
@@ -441,7 +511,8 @@
    "day_order": 3,
    "duration": "240 min",
    "is_recurring": true,
-   "director": "Tere Gaviria"
+   "director": "Tere Gaviria",
+   "id": "f_d289b1269f"
   },
   {
    "title": "Taller de Producción y Financiación",
@@ -453,7 +524,8 @@
    "day_order": 5,
    "duration": "240 min",
    "is_recurring": true,
-   "director": "Tere Gaviria"
+   "director": "Tere Gaviria",
+   "id": "f_d62359ebea"
   },
   {
    "title": "Taller de Producción y Financiación",
@@ -465,7 +537,8 @@
    "day_order": 3,
    "duration": "240 min",
    "is_recurring": true,
-   "director": "Tere Gaviria"
+   "director": "Tere Gaviria",
+   "id": "f_3b1ca1243f"
   },
   {
    "title": "Taller de Guion",
@@ -477,7 +550,8 @@
    "day_order": 4,
    "duration": "240 min",
    "is_recurring": true,
-   "director": "Raúl Gutiérrez"
+   "director": "Raúl Gutiérrez",
+   "id": "f_9052af09e8"
   },
   {
    "title": "Taller de Guion",
@@ -489,7 +563,8 @@
    "day_order": 6,
    "duration": "240 min",
    "is_recurring": true,
-   "director": "Raúl Gutiérrez"
+   "director": "Raúl Gutiérrez",
+   "id": "f_cea653ebab"
   },
   {
    "title": "Taller de Guion",
@@ -501,7 +576,8 @@
    "day_order": 4,
    "duration": "240 min",
    "is_recurring": true,
-   "director": "Raúl Gutiérrez"
+   "director": "Raúl Gutiérrez",
+   "id": "f_0ec4ee3508"
   },
   {
    "title": "Taller de Dirección de Actores",
@@ -513,7 +589,8 @@
    "day_order": 7,
    "duration": "240 min",
    "is_recurring": true,
-   "director": "María Gamboa"
+   "director": "María Gamboa",
+   "id": "f_3fb8e1b7c4"
   },
   {
    "title": "Taller de Dirección de Actores",
@@ -525,7 +602,8 @@
    "day_order": 5,
    "duration": "240 min",
    "is_recurring": true,
-   "director": "María Gamboa"
+   "director": "María Gamboa",
+   "id": "f_95fa0e7d21"
   },
   {
    "title": "Taller de Dirección de Actores",
@@ -537,7 +615,8 @@
    "day_order": 3,
    "duration": "240 min",
    "is_recurring": true,
-   "director": "María Gamboa"
+   "director": "María Gamboa",
+   "id": "f_7e83fe3f02"
   },
   {
    "title": "Taller de Iniciación Actoral",
@@ -549,7 +628,8 @@
    "day_order": 8,
    "duration": "240 min",
    "is_recurring": true,
-   "director": "Herman Sánchez"
+   "director": "Herman Sánchez",
+   "id": "f_6601b6b60c"
   },
   {
    "title": "Taller de Iniciación Actoral",
@@ -561,7 +641,8 @@
    "day_order": 6,
    "duration": "240 min",
    "is_recurring": true,
-   "director": "Herman Sánchez"
+   "director": "Herman Sánchez",
+   "id": "f_b305946402"
   },
   {
    "title": "Taller de Iniciación Actoral",
@@ -573,7 +654,8 @@
    "day_order": 4,
    "duration": "240 min",
    "is_recurring": true,
-   "director": "Herman Sánchez"
+   "director": "Herman Sánchez",
+   "id": "f_d24c416475"
   },
   {
    "title": "Chist + Sin la Luz Perpetua",
@@ -597,7 +679,8 @@
      "synopsis": "Un escritor que no escribe llega a su casa entrada la noche con cara de suicidio, dispuesto a torturar a los suyos debido a su estreñimiento creativo. En su despacho, una galería de grandes escritores parece burlarse de sus malos intentos.",
      "synopsis_lang": "es",
      "posterSource": "custom",
-     "lbSlug": "chist-1"
+     "lbSlug": "chist-1",
+     "work_id": "w_R4KJ60H1BVY2"
     },
     {
      "title": "Sin la Luz Perpetua",
@@ -609,13 +692,15 @@
      "poster": "/assets/leviza/SinLaLuz.jpg",
      "synopsis": "Tres historias entrelazadas a través de décadas de historia colombiana: un militar desaparecido en la Guerra de Corea, un sacerdote que busca a un colega desaparecido por paramilitares, y una periodista en busca de la familia de un hombre enterrado como N.N.",
      "synopsis_lang": "es",
-     "posterSource": "custom"
+     "posterSource": "custom",
+     "work_id": "w_R4KJ60BP46E6"
     }
    ],
    "poster": "/assets/leviza/Chist.jpg",
    "genre": "Comedia",
    "posterSource": "custom",
-   "flags": "🇨🇴"
+   "flags": "🇨🇴",
+   "id": "f_d5701b3c4e"
   },
   {
    "title": "Filminutos YarimaFICS + Candelaria",
@@ -636,7 +721,8 @@
      "country": "Colombia",
      "flags": "🇨🇴",
      "synopsis": "Selección de cortometrajes de un minuto realizados por jóvenes del Semillero YarimaFICS en Barrancabermeja.",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "work_id": "w_R4KJ617KAF74"
     },
     {
      "title": "Candelaria",
@@ -649,13 +735,15 @@
      "lbSlug": "candelaria-2017",
      "poster": "/3xszLcSPv2ntc5QLKx86UAsp52E.jpg",
      "synopsis_lang": "es",
-     "posterSource": "tmdb"
+     "posterSource": "tmdb",
+     "work_id": "w_R4KJ61C0ZKD5"
     }
    ],
    "poster": "/3xszLcSPv2ntc5QLKx86UAsp52E.jpg",
    "genre": "Comedia",
    "posterSource": "tmdb",
-   "flags": "🇨🇴🇨🇺"
+   "flags": "🇨🇴🇨🇺",
+   "id": "f_e80d0f63e1"
   }
  ]
 }

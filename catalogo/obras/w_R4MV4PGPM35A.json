@@ -1,0 +1,42 @@
+{
+ "id": "w_R4MV4PGPM35A",
+ "titulo_original": "Cielo Roto",
+ "anio": 2023,
+ "paises": [
+  "CO"
+ ],
+ "directores": [
+  "María José Alarcón Ardila"
+ ],
+ "aliases": [
+  {
+   "titulo": "Broken Sky",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "Desde el terremoto de 1983, Popayán jamás volvió a ser la misma. Tres décadas después, algunas de sus edificaciones abandonadas y en ruinas lo evidencian. María José y Alejandra, al igual que la ciudad en la que nacieron, también habitan grietas que les generan preguntas sobre el pasado, el presente y el futuro.",
+  "en": "The last earthquake that struck Popayán in 1983 not only destroyed the Colombian city itself, but left lasting scars on the lives of its men and women that have been inherited by younger generations. Friends María José and Alejandra deal with the traumas of the past and the pain in their own way – through sunsets, art, poetry and cinema itself."
+ },
+ "generos": [
+  "Documental"
+ ],
+ "afiche": {
+  "archivo": "/assets/popayan-2026/cielo-roto.jpg",
+  "veredicto": "oficial"
+ },
+ "xref": {
+  "tmdb": 1190241,
+  "letterboxd": "broken-sky-2023"
+ },
+ "versiones": [
+  {
+   "etiqueta": "24 min",
+   "duracion_min": 24
+  }
+ ],
+ "presentaciones": [
+  "popayan-2026"
+ ]
+}

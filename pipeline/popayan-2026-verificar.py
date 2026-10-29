@@ -40,6 +40,8 @@ _H = r'(\d{1,2})(?::\s*(\d{2}))?\s*([ap])\.?\s*m\.?'
 SEDES_PAGINA = {'Teatro Bolívar': 'Teatro Bolívar', 'Auditorio Maya Facultad de Artes Unicauca': 'Facultad de Artes Unicauca',
                 'Museo de Arte Moderno de Popayán MAMPO': 'Museo de Arte Moderno de Popayán MAMPO',
                 'Casa Taller Sirirí': 'Casa Taller Sirirí', 'Mikuna Casa Cultural': 'Mikuna Casa Cultural',
+                # 8 oct: la misma sede con su barrio pegado
+                'Mikuna Casa Cultural. Barrio el Tunel Bajo': 'Mikuna Casa Cultural',
                 'Centro Comercial Terra Plaza – Pantalla gigante': 'Centro Comercial Terra Plaza'}
 _SEDE = '(' + '|'.join(map(re.escape, SEDES_PAGINA)) + ')'
 # desde el 6 oct la hora va también PEGADA a la sede, sin la barra

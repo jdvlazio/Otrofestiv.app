@@ -130,12 +130,16 @@
   "sharedSlotIsOneScreening": true,
   "_por_que_slot": "Los bloques sin nombre juntan un corto y un largo (o dos obras de la Competencia Latinoamericana) bajo una sola hora y sede; la ceremonia de premiación del lunes lleva dentro dos obras de la competencia.",
   "mes_es": "octubre",
-  "dias_vacios": []
+  "dias_vacios": [],
+  "_fuentes_versionadas": {
+   "festivals/staging/filcmar-2026-correcciones.json": "fichas de TMDB declaradas a mano (creadas por nosotros o verificadas), cada una con su porqué; las lee pipeline/enriquecer.py"
+  }
  },
  "_fuentes_versionadas": {
   "festivals/staging/filcmar-2026-seleccion-oficial.json": "el catálogo de la Selección Oficial (pre-onboarding)",
   "festivals/staging/filcmar-2026-seleccion-oficial-enriquecido.json": "sus fichas (pre-onboarding)",
   "festivals/staging/filcmar-2026-venues-geo.json": "los pines a mano (Google Maps)",
-  "festivals/staging/filcmar-2026-radar.json": "el volcado del radar #903, que escribe y relee pipeline/radar.py"
+  "festivals/staging/filcmar-2026-radar.json": "el volcado del radar #903, que escribe y relee pipeline/radar.py",
+  "festivals/staging/filcmar-2026-sinopsis.json": "la sinopsis declarada de «Cierra ojos» (YouTube de su director), que lee enriquecer.py"
  }
 }

@@ -1,7 +1,7 @@
 // @ts-check
 // programa.spec.js — Tab Programa: lista, grid, filtros, posters, topbar.
 const { test, expect } = require('@playwright/test');
-const { LEVIZA_SIMTIME, abrirHojaCiudad, enterFestival, goToPlanear, reentrar, esperarCalculo } = require('./helpers');
+const { LEVIZA_SIMTIME, abrirHojaCiudad, enterFestival, goToPlanear, reentrar, esperarCalculo, soloWeb } = require('./helpers');
 
 // T01 — Apóstrofe: corazón en lista agrega al watchlist
 test('T01 — apóstrofe: corazón en lista agrega al watchlist', async ({ page }) => {
@@ -910,10 +910,14 @@ test('T70 — el Diario y el Recuerdo cuentan lo mismo, incluidos los talleres',
   const retro = await page.evaluate(async () => {
     _simTime = '2026-08-21T12:00:00-05:00'; showAgView();
     await new Promise(r => setTimeout(r, 1200));
-    return (document.body.innerText.match(/Viste [^\n]*/) || [null])[0];
+    return { tit: (document.body.innerText.match(/Viste [^\n]*/) || [null])[0],
+      rec: (document.querySelector('.recap-recorrido') || {}).textContent || '' };
   });
-  expect(retro, 'el Recuerdo dice el MISMO número, con el paraguas correcto')
-    .toBe('Viste 3 actividades');
+  // «Se respeta lo visto de lo asistido» (Juan, 9 oct): el titular cuenta OBRAS
+  // y el taller va en la línea del recorrido. El total sigue siendo el del
+  // Diario (3): 2 obras + 1 actividad.
+  expect(retro.tit, 'el titular cuenta solo las obras').toBe('Viste 2 obras');
+  expect(retro.rec, 'y el taller va en el recorrido').toMatch(/1 actividad\b/);
 });
 
 // 18 ago (vista asumida): la banda del Plan quedó solo con su cuenta y el día —
@@ -2484,6 +2488,8 @@ test('T102 — sin API de service worker, el poll igual ofrece el build nuevo', 
 
 test.describe('T103/T104 — capa 2: los datos se refrescan en caliente (sin SW: page.route no ve fetches vía SW)', () => {
   test.use({ serviceWorkers: 'block' });
+  // Interceptan el JSON del festival: el almacén va cortado para que la app lo lea de la web.
+  test.beforeEach(async ({ page }) => { await soloWeb(page); });
 
 test('T103 — un cambio de sede aterriza EN SILENCIO, en su casilla, sin scroll ni toast', async ({ page }) => {
   test.setTimeout(90000);
@@ -3772,4 +3778,35 @@ test('P-GQ — Gratis y Con Q&A filtran por función y solo aparecen donde separ
       .filter(s => s === '__gratis' || s === '__qa');
   });
   expect(v, 'todo gratis y sin Q&A: no aparece ninguna de las dos').toEqual([]);
+});
+
+// T-OJO — el ojo del Diario (Juan, 12 oct): en una vista es ESTADO, ámbar; la
+// estrella de una no calificada sigue tenue; tocar el ojo la saca y «Deshacer»
+// la devuelve tal cual (antes borraba sin vuelta y el ojo gris parecía apagado).
+test('T-OJO — Diario: ojo ámbar en la vista, estrella tenue sin nota, sacar se deshace', async ({ page }) => {
+  await enterFestival(page, 'jardin2026', '2026-09-28T12:00:00-05:00');
+  const r = await page.evaluate(async () => {
+    const w = ms => new Promise(res => setTimeout(res, ms));
+    const ts = ['La marcha del hambre', 'Romero'];
+    state.set('watched', new Set(ts)); state.set('filmRatings', {}); state.set('notWatched', new Set());
+    state.set('savedAgenda', { scenarioIdx: 0, schedule: [] });
+    switchMainNav('mnav-miplan'); showAgView(); await w(800);
+    const ojo = document.querySelector('.dw-ctrl.dw-vista');
+    const estrella = document.querySelector('.dw-ctrl-star');
+    const color = el => getComputedStyle(el).color;
+    const ambar = getComputedStyle(document.documentElement).getPropertyValue('--amber').trim();
+    const ojoColor = color(ojo), estrellaColor = color(estrella);
+    const titulo = ojo.dataset.title;
+    ojo.click(); await w(400);
+    const sacada = !watched.has(titulo);
+    const deshacer = [...document.querySelectorAll('#prio-toast button, .prio-toast button')].find(b => /Deshacer/.test(b.textContent));
+    deshacer && deshacer.click(); await w(400);
+    return { ojoColor, estrellaColor, ambar, sacada, hayDeshacer: !!deshacer, vuelta: watched.has(titulo) };
+  });
+  const rgb = h => { const n = parseInt(h.replace('#', ''), 16); return `rgb(${n >> 16}, ${(n >> 8) & 255}, ${n & 255})`; };
+  expect(r.ojoColor, 'el ojo de una vista es ámbar').toBe(rgb(r.ambar));
+  expect(r.estrellaColor, 'la estrella sin nota no es ámbar').not.toBe(rgb(r.ambar));
+  expect(r.sacada, 'tocar el ojo la saca').toBe(true);
+  expect(r.hayDeshacer, 'y ofrece Deshacer').toBe(true);
+  expect(r.vuelta, 'Deshacer la devuelve a vista').toBe(true);
 });

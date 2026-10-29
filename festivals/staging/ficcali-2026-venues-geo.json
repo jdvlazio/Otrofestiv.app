@@ -214,6 +214,20 @@
  },
  "_provenance": {
   "fuente": "Nominatim con verificación: caja de ciudad + token distintivo + clase de lugar (una sede fija nunca es un barrio). _prec:manual intocable.",
-  "capturado": "2026-10-07"
+  "capturado": "2026-10-27"
+ },
+ "Teatro La Concha": {
+  "_prec": "manual",
+  "lat": 3.4457545,
+  "lng": -76.537896,
+  "address": "Calle 4 #10-48, San Antonio",
+  "_nota": "Google Maps «TEATRO LA CONCHA» 3.4457545,-76.537896, Cl. 4 #10-48, Comuna 3, Cali (21 oct 2026). Sede de la charla de Pablo Solarz (tarjeta 14576), que la web pasó desde Madame Blue el 20 oct."
+ },
+ "Cine Club El Ventanal": {
+  "_prec": "manual",
+  "_nota": "Google Maps 3.4018453,-76.5511452 («Cra. 63a #2A-89, Cuarto de Legua, Cali») · OSM/Nominatim solo da el tramo de Carrera 63A (Pampalinda) 3.4013836,-76.5468378. Dirección del post de briosafilms + @festivaldecinecali (De4w_O_mYax, 24 oct 2026): «Cine Club El Ventanal (Cra 63A #2A -89)».",
+  "lat": 3.4018453,
+  "lng": -76.5511452,
+  "address": "Cra. 63A #2A-89, Cuarto de Legua"
  }
 }

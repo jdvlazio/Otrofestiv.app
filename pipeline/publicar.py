@@ -27,6 +27,16 @@ DOS TRABAJOS, Y EL SEGUNDO ES EL QUE DUELE.
     que tenían comando y cada uno produjo el defecto que el comando evita; con
     esto, ese camino no llega a festivals/. --forzar sigue siendo el escape.
 
+4 · NINGUNA OBRA SIN AFICHE EN SILENCIO (8 oct 2026). Ficcali salió con 23 obras
+    sin afiche —El Coloso, Minotauro, En construcción, todas en TMDB— porque la
+    lista `sin_ficha` del enriquecido existía y nadie la miró; lo vio Juan en la
+    app. La doctrina de [afiche-cobertura] («no se prohíbe publicar sin afiche:
+    se prohíbe hacerlo en silencio») era opcional, festival por festival, y por
+    eso no alcanzó. Desde hoy la exige el publicador: toda obra publicada sin
+    `poster` tiene que estar cubierta por un porqué escrito, en `sin_afiche` de
+    `-correcciones.json` (por título de obra o de su programa) o en la
+    `_cobertura.destino` de un sidecar. Lo que nadie miró no se publica.
+
     python3 pipeline/publicar.py <id>
     python3 pipeline/publicar.py <id> --forzar   # sí, quiero perder esos datos / publicar sin sello
 """
@@ -106,18 +116,92 @@ def _cobertura(films):
     Es simétrico —los dos lados se cuentan igual—, así que la comparación
     sigue siendo válida y además deja de mentir sobre los festivales que usan
     programas, que son casi todos los de cortos."""
+    # `_conservado` es una NOTA, no un dato: dice que un campo se arrastró de la
+    # publicación anterior. Cuando el campo llega por fin de su fuente, la nota
+    # se va y el dato se queda; contarla frenaba esa mejora como pérdida
+    # (FICPA, 13 oct: la sinopsis oficial de «Tuktu» reemplazó a la conservada).
+    NOTAS = {'_conservado'}
     c = collections.Counter()
     for f in films:
         for k, v in f.items():
-            if k == 'film_list':
+            if k == 'film_list' or k in NOTAS:
                 continue
             if v not in (None, '', [], {}):
                 c[k] += 1
         for it in (f.get('film_list') or []):
             for k, v in it.items():
-                if v not in (None, '', [], {}):
+                if k not in NOTAS and v not in (None, '', [], {}):
                     c[k] += 1
     return c
+
+
+def _n_cob(s):
+    import unicodedata
+    s = unicodedata.normalize('NFD', str(s or '')).lower()
+    return ''.join(c for c in s if c.isalnum())
+
+
+def _cruce_con_lo_publicado(fid, films):
+    """Trabajo 5 (27 oct 2026): lo que otro festival nuestro YA publicó de una
+    obra no se publica vacío, y un porqué que dice «no está en otro festival
+    nuestro» se contrasta con el cruce. «Lolita en Honda» (Mamut, 28 sep) y
+    cuatro cortos de Miradas (27 oct) pasaron porque el cruce existía y nadie
+    lo miraba al publicar. FALLA CERRADO: si no puede leer los otros
+    festivales, no se publica (eso no lo salta --forzar).
+
+    Escape por obra: `no_heredar` de -correcciones.json {título: {"_por_que"}}
+    (un homónimo, un afiche ajeno que la hoja de contacto rechazó)."""
+    try:
+        idx = lib.obras_publicadas_estricto(REPO, excluir=(fid,))
+    except lib.CruceIlegible as e:
+        sys.exit(f'✗ NO se publica {fid}: no se pudo cruzar con los otros festivales — {e}')
+    corr = {}
+    cp = f'{REPO}/festivals/staging/{fid}-correcciones.json'
+    if os.path.exists(cp):
+        corr = json.load(open(cp, encoding='utf-8'))
+    no_her = {lib.norm(k) for k, v in (corr.get('no_heredar') or {}).items()
+              if str((v.get('_por_que') if isinstance(v, dict) else v) or '').strip()}
+    out = [f'«{t[:50]}» sin {k}: {", ".join(de)} lo tiene(n)'
+           for t, k, de in lib.cruce_faltantes(fid, films, idx, no_her)]
+    out += [f'«{t[:50]}»: su `sin_afiche` dice que no está en otro festival nuestro, '
+            f'y está en {", ".join(de)}'
+            for t, de in lib.razones_que_mienten(fid, films, corr.get('sin_afiche'), idx)]
+    return out
+
+
+def _sin_afiche_mudas(fid, films):
+    """Las obras publicadas sin `poster` que ninguna declaración cubre.
+
+    Cubre: `sin_afiche` de -correcciones.json ({título o título del programa:
+    {"_por_que"}}) y `_cobertura.destino` de cualquier sidecar del festival
+    (lo que ya vigila [afiche-cobertura]). Los eventos no llevan afiche de obra."""
+    import glob
+    cubre = {}
+    cp = f'{REPO}/festivals/staging/{fid}-correcciones.json'
+    if os.path.exists(cp):
+        for k, v in (json.load(open(cp, encoding='utf-8')).get('sin_afiche') or {}).items():
+            cubre[_n_cob(k)] = v if isinstance(v, dict) else {'_por_que': v}
+    for sp in glob.glob(f'{REPO}/festivals/staging/{fid}-*.json'):
+        try:
+            cob = (json.load(open(sp, encoding='utf-8')) or {}).get('_cobertura') or {}
+        except Exception:
+            continue
+        for k, v in (cob.get('destino') or {}).items():
+            cubre.setdefault(_n_cob(k), v)
+    mudas, vistas = [], set()
+    for f in films:
+        if f.get('event_kind') or f.get('type') == 'event':
+            continue
+        inner = f.get('film_list') or []
+        for o in (inner or [f]):
+            t = o.get('title')
+            if not t or o.get('poster') or _n_cob(t) in vistas:
+                continue
+            vistas.add(_n_cob(t))
+            e = cubre.get(_n_cob(t)) or (cubre.get(_n_cob(f.get('title'))) if inner else None)
+            if not e or not str(e.get('_por_que') or '').strip():
+                mudas.append(f'«{t[:50]}»' + (f' (en «{f["title"][:30]}»)' if inner else ''))
+    return mudas
 
 
 def publicar(fid, forzar=False):
@@ -145,6 +229,12 @@ def publicar(fid, forzar=False):
     out['sections'] = {k: limpio(v) for k, v in (b.get('sections') or {}).items()}
     out['venues'] = {k: limpio(v) for k, v in (b.get('venues') or {}).items()}
     out['films'] = [lib.normaliza(limpio(f), rep) for f in b['films']]
+    # palmarés y avisos viajan EN el dato (Etapa 2·A, #1174): su fuente es un
+    # sidecar del festival, así el próximo armado no los borra (19 oct 2026)
+    for campo in ('palmares', 'avisos'):
+        sp = f'{REPO}/festivals/staging/{fid}-{campo}.json'
+        if os.path.exists(sp):
+            out[campo] = json.load(open(sp, encoding='utf-8'))[campo]
     # sinopsis de obra / descripción de programa o actividad (lib.separar_descripcion)
     for f in out['films']:
         lib.separar_descripcion(f)
@@ -175,6 +265,46 @@ def publicar(fid, forzar=False):
             print('   ', x)
         sys.exit(1)
 
+    # ── ninguna obra sin afiche EN SILENCIO (trabajo 4 del docstring) ───────
+    mudas = _sin_afiche_mudas(fid, out['films'])
+    if mudas and not forzar:
+        print(f'✗ NO se publica {fid}: {len(mudas)} obra(s) sin afiche que NADIE miró — '
+              f'cada una lleva su ficha en `fichas` o su porqué en `sin_afiche` '
+              f'(festivals/staging/{fid}-correcciones.json), por título de obra o de su programa:')
+        for x in mudas[:12]:
+            print('   ·', x)
+        if len(mudas) > 12:
+            print(f'   … y {len(mudas) - 12} más')
+        sys.exit(1)
+    if mudas:
+        print(f'⚠ --forzar: se publican {len(mudas)} obra(s) sin afiche y sin porqué')
+
+    # ── ni sin lo que OTRO festival nuestro ya publicó (trabajo 5) ──────────
+    cruce = _cruce_con_lo_publicado(fid, out['films'])
+    if cruce and not forzar:
+        print(f'✗ NO se publica {fid}: el cruce con nuestros festivales publicados lo contradice:')
+        for x in cruce[:15]:
+            print('   ·', x)
+        if len(cruce) > 15:
+            print(f'   … y {len(cruce) - 15} más')
+        print(f'  → re-correr el enriquecido (hereda afiche, ficha y sinopsis con su procedencia), '
+              f'o declarar el porqué en `no_heredar` de festivals/staging/{fid}-correcciones.json')
+        sys.exit(1)
+    if cruce:
+        print(f'⚠ --forzar: se publican {len(cruce)} contradicción(es) con el cruce')
+
+    # cada obra apunta a la suya del catálogo (docs/CATALOGO-OBRAS.md, fase 3b);
+    # ANTES de la compuerta de pérdida, que cuenta campos: puestos después, la
+    # compuerta leía «work_id: 65 → 0» (FICPA, 12 oct) y frenaba con razón
+    import catalogo
+    _obs = catalogo.obras()
+    if _obs:
+        _nuevas = catalogo.enlazar(out, fid, _obs)
+        if _nuevas:
+            print(f'  ⚠ {len(_nuevas)} obras que el catálogo no tiene todavía (el push queda frenado hasta sumarlas):')
+            for t in _nuevas[:10]:
+                print(f'    · {t}')
+            print('  → TMDB_API_KEY=… python3 pipeline/catalogo_construir.py --escribir  (re-arma TODO el catálogo: se commitea todo lo que cambie)')
     # ── ¿esta publicación PIERDE datos? ─────────────────────────────────────
     if os.path.exists(out_p):
         viejo = json.load(open(out_p, encoding='utf-8'))
@@ -205,8 +335,41 @@ def publicar(fid, forzar=False):
         # o gana los campos que son de la sede (sala, dirección). Eso no es
         # perder datos: es la corrección misma. Lo que sí es pérdida es que una
         # función quieta amanezca sin un campo que ayer tenía.
+        # LO RETIRADO A PROPÓSITO no es pérdida (14 oct 2026): se le quita a la
+        # copia de producción exactamente lo declarado en <fid>-quitar.json
+        # (lib.quitados), y se compara parejo. Cualquier otra baja sigue frenando
+        # UNA BAJA REGISTRADA NO ES PÉRDIDA (20 oct 2026, hallazgo de Onboarding):
+        # una función que el registro de ids (<fid>-funciones-ids.json, que escribe
+        # ensamblar.py) marcó `ausente`, `partida_en` o `fusionada_en` salió A
+        # PROPÓSITO y con su porqué. Contarla obligaba a --forzar (MIDBO, «86 → 85»),
+        # y un --forzar de rutina es el que un día tapa una pérdida de verdad. Se
+        # descuenta de los dos lados; toda baja SIN registro sigue frenando.
+        _rp = os.path.join(REPO, 'festivals', 'staging', f'{fid}-funciones-ids.json')
+        _regf = (json.load(open(_rp, encoding='utf-8')).get('funciones') or {}) if os.path.exists(_rp) else {}
+        _ids_nuevos = {f.get('id') for f in out['films'] if f.get('id')}
+        _bajas = [f for f in viejo.get('films') or []
+                  if f.get('id') and f['id'] not in _ids_nuevos
+                  and any((_regf.get(f['id']) or {}).get(k) for k in ('ausente', 'partida_en', 'fusionada_en'))]
+        for f in _bajas:
+            print(f'    · baja registrada, no pérdida: {f.get("title", "")[:50]} ({f["id"]})')
+        if _bajas:
+            viejo = {**viejo, 'films': [f for f in viejo['films'] if f not in _bajas]}
+        _qt = lib.quitados(fid)
+        if _qt:
+            for _f in viejo.get('films') or []:
+                for _o in [_f] + (_f.get('film_list') or []):
+                    for _t, _c in _qt:
+                        if _o.get('title') == _t:
+                            for _x in lib.RETIRABLES.get(_c, (_c,)):
+                                _o.pop(_x, None)
         _movidos = {t for t, _a, _b in _mov}
-        _quietas = lambda fs: [f for f in fs if f.get('title') not in _movidos]
+        # …y también DENTRO de los programas (19 oct 2026, MIDBO): una obra que sale
+        # de un programa a su propia función se cuenta en la lista del programa de
+        # ayer y no en la función de hoy (que es «movida»): la cuenta pareja
+        # excluye la obra movida en los dos lados, esté arriba o en un film_list
+        _quietas = lambda fs: [{**f, 'film_list': [o for o in f['film_list'] if o.get('title') not in _movidos]}
+                               if f.get('film_list') else f
+                               for f in fs if f.get('title') not in _movidos]
         ca, cb = _cobertura(_quietas(viejo.get('films') or [])), _cobertura(_quietas(out['films']))
         perdidos = {k: (ca[k], cb[k]) for k in ca if cb[k] < ca[k]}
         menos_films = len(viejo.get('films') or []) - len(out['films'])
@@ -248,6 +411,10 @@ def publicar(fid, forzar=False):
         print('  contrato aplicado:', dict(rep))
     sin_src = sum(1 for f in out['films'] if not f.get('_src'))
     print(f'  films sin _src: {sin_src}')
+    # LOS IDS QUE NACIERON POR UN CAMBIO DOBLE (Juan, 18 oct 2026): visibles al
+    # publicar, con la función vieja y la nueva — no solo en un registro
+    for _x in b.get('_avisos_id') or []:
+        print(f'  {_x}')
     return out
 
 

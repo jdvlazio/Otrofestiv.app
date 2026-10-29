@@ -1,0 +1,596 @@
+{
+ "_provenance": {
+  "fuente": "ids-legado.py: ids estables congelados desde lo publicado (docs/FUNCION.md §11.2)",
+  "capturado": "2026-10-18"
+ },
+ "funciones": {
+  "f_0c01f19aba": {
+   "sede": "Centro Cultural del Banco de la República - Manizales",
+   "dia": "2026-09-19",
+   "hora": "09:00",
+   "sala": "",
+   "titulo": "el principe de nanawa"
+  },
+  "f_89b9026de9": {
+   "sede": "Confa - Manizales",
+   "dia": "2026-09-19",
+   "hora": "13:30",
+   "sala": "",
+   "titulo": "onward"
+  },
+  "f_87ef7935a5": {
+   "sede": "Teatro los Fundadores - Manizales",
+   "dia": "2026-09-19",
+   "hora": "14:00",
+   "sala": "Sala Olimpia",
+   "titulo": "sone su nombre"
+  },
+  "f_1819e929d5": {
+   "sede": "Casa de la Cultura de Palogrande - Manizales",
+   "dia": "2026-09-19",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "cine en movimiento taller teorico practico de plano secuencia"
+  },
+  "f_0ba94ae5f0": {
+   "sede": "Teatro los Fundadores - Manizales",
+   "dia": "2026-09-19",
+   "hora": "16:00",
+   "sala": "Sala Olimpia",
+   "titulo": "ayuno y cenizas"
+  },
+  "f_943d4280bf": {
+   "sede": "Confa - Manizales",
+   "dia": "2026-09-19",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "onward"
+  },
+  "f_cf59762809": {
+   "sede": "Samaria - Manizales",
+   "dia": "2026-09-19",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "las aventuras de tintin"
+  },
+  "f_0c7d133433": {
+   "sede": "Confa - Manizales",
+   "dia": "2026-09-19",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "semillas"
+  },
+  "f_728efe4053": {
+   "sede": "Casa de la Cultura de Palogrande - Manizales",
+   "dia": "2026-09-19",
+   "hora": "19:00",
+   "sala": "Calle externa",
+   "titulo": "que el cielo nos perdone"
+  },
+  "f_28afedad03": {
+   "sede": "Casa de la Cultura de Palogrande - Manizales",
+   "dia": "2026-09-19",
+   "hora": "19:30",
+   "sala": "Calle externa",
+   "titulo": "el hogar fue sepultado en esa tierra que nunca pudimos encontrar"
+  },
+  "f_dabe1ee13b": {
+   "sede": "Zoom - Manizales",
+   "dia": "2026-09-20",
+   "hora": "09:00",
+   "sala": "",
+   "titulo": "un sueno se hace realidad en 1 minuto"
+  },
+  "f_008b5fbf21": {
+   "sede": "Teatro los Fundadores - Manizales",
+   "dia": "2026-09-20",
+   "hora": "10:00",
+   "sala": "Sala Olimpia",
+   "titulo": "juanpis gonzalez el presidente de la gente"
+  },
+  "f_778c63fe29": {
+   "sede": "Confa - Manizales",
+   "dia": "2026-09-20",
+   "hora": "11:00",
+   "sala": "",
+   "titulo": "memorias de un caracol"
+  },
+  "f_0a3771ea55": {
+   "sede": "Parque Ernesto Gutiérrez - Manizales",
+   "dia": "2026-09-20",
+   "hora": "11:30",
+   "sala": "",
+   "titulo": "manizales city"
+  },
+  "f_64afa35f2e": {
+   "sede": "Confa - Manizales",
+   "dia": "2026-09-20",
+   "hora": "13:30",
+   "sala": "",
+   "titulo": "onward"
+  },
+  "f_651e240247": {
+   "sede": "Teatro los Fundadores - Manizales",
+   "dia": "2026-09-20",
+   "hora": "14:00",
+   "sala": "Sala Olimpia",
+   "titulo": "brigitte planeta b"
+  },
+  "f_8050e3fe16": {
+   "sede": "Teatro los Fundadores - Manizales",
+   "dia": "2026-09-20",
+   "hora": "16:00",
+   "sala": "Sala Olimpia",
+   "titulo": "apuntes sobre anomalias y fantasmas"
+  },
+  "f_fad0f77ca1": {
+   "sede": "Confa - Manizales",
+   "dia": "2026-09-20",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "onward"
+  },
+  "f_25c6dcac6f": {
+   "sede": "Bajo Tablazo - Manizales",
+   "dia": "2026-09-20",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "o menino e o mundo"
+  },
+  "f_4e9ce6d35c": {
+   "sede": "Confa - Manizales",
+   "dia": "2026-09-20",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "semillas"
+  },
+  "f_a7af36bbb0": {
+   "sede": "Monumento a los Colonizadores - Manizales",
+   "dia": "2026-09-20",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "la tortue rouge"
+  },
+  "f_25e036ab5e": {
+   "sede": "Fundación Batuta Caldas - Manizales",
+   "dia": "2026-09-21",
+   "hora": "08:00",
+   "sala": "Auditorio Olga del Socorro Serna de Quintero",
+   "titulo": "habitante"
+  },
+  "f_1a7a164d24": {
+   "sede": "Centro Cultural del Banco de la República - Manizales",
+   "dia": "2026-09-21",
+   "hora": "10:00",
+   "sala": "",
+   "titulo": "museos sentimentales notas sueltas sobre el coleccionismo"
+  },
+  "f_c3e746280f": {
+   "sede": "Centro Cultural del Banco de la República - Manizales",
+   "dia": "2026-09-21",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "la luz por primera vez"
+  },
+  "f_83f3934ea2": {
+   "sede": "Casa de la Cultura de Palogrande - Manizales",
+   "dia": "2026-09-21",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "taller de periodismo cultural"
+  },
+  "f_48ab014b29": {
+   "sede": "El Carmen - Manizales",
+   "dia": "2026-09-21",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "beautiful losers"
+  },
+  "f_1c8b5c0f01": {
+   "sede": "Fundación Batuta Caldas - Manizales",
+   "dia": "2026-09-21",
+   "hora": "17:00",
+   "sala": "Auditorio Olga del Socorro Serna de Quintero",
+   "titulo": "la sirena the siren"
+  },
+  "f_0b04e2b480": {
+   "sede": "Alianza Francesa - Manizales",
+   "dia": "2026-09-21",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "l argent"
+  },
+  "f_37db612bd6": {
+   "sede": "Teatro los Fundadores - Manizales",
+   "dia": "2026-09-21",
+   "hora": "18:30",
+   "sala": "Sala Olimpia",
+   "titulo": "el juego de la vida"
+  },
+  "f_339fe4f5e6": {
+   "sede": "San José - Manizales",
+   "dia": "2026-09-21",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "columbus"
+  },
+  "f_7e0aec352d": {
+   "sede": "Fama - Manizales",
+   "dia": "2026-09-21",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "la infiltrada"
+  },
+  "f_3c0493ff8b": {
+   "sede": "Fundación Batuta Caldas - Manizales",
+   "dia": "2026-09-22",
+   "hora": "08:00",
+   "sala": "Auditorio Olga del Socorro Serna de Quintero",
+   "titulo": "el juego de la vida"
+  },
+  "f_959c695826": {
+   "sede": "Centro Cultural del Banco de la República - Manizales",
+   "dia": "2026-09-22",
+   "hora": "10:00",
+   "sala": "",
+   "titulo": "colombia a traves de sus monedas y billetes historia y desarrollo del coleccionismo"
+  },
+  "f_b403628b39": {
+   "sede": "Centro Cultural del Banco de la República - Manizales",
+   "dia": "2026-09-22",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "dicen que tu y yo estamos locos"
+  },
+  "f_84787d00c5": {
+   "sede": "Fundación Batuta Caldas - Manizales",
+   "dia": "2026-09-22",
+   "hora": "15:00",
+   "sala": "Auditorio Olga del Socorro Serna de Quintero",
+   "titulo": "my favourite cake"
+  },
+  "f_0d3e329227": {
+   "sede": "Casa de la Cultura de Palogrande - Manizales",
+   "dia": "2026-09-22",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "escribir con la camara del guion a la puesta en escena"
+  },
+  "f_bc8deb99ef": {
+   "sede": "Aranjuez - Manizales",
+   "dia": "2026-09-22",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "cortos colombia de pelicula"
+  },
+  "f_9c3b5c5af3": {
+   "sede": "Fundación Batuta Caldas - Manizales",
+   "dia": "2026-09-22",
+   "hora": "17:00",
+   "sala": "Auditorio Olga del Socorro Serna de Quintero",
+   "titulo": "no se admiten perros ni italianos"
+  },
+  "f_19cd21b92a": {
+   "sede": "Alianza Francesa - Manizales",
+   "dia": "2026-09-22",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "the great arch"
+  },
+  "f_1ec18614b4": {
+   "sede": "Teatro los Fundadores - Manizales",
+   "dia": "2026-09-22",
+   "hora": "18:30",
+   "sala": "Sala Olimpia",
+   "titulo": "las bravas"
+  },
+  "f_94ccd6ad63": {
+   "sede": "Parque Ernesto Gutiérrez - Manizales",
+   "dia": "2026-09-22",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "buena vista social club"
+  },
+  "f_102fca03fe": {
+   "sede": "Fama - Manizales",
+   "dia": "2026-09-22",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "la grazia"
+  },
+  "f_354bd82338": {
+   "sede": "Cámara de Comercio de Manizales por Caldas - Manizales",
+   "dia": "2026-09-23",
+   "hora": "08:00",
+   "sala": "Auditorio Carlos E. Pinzón",
+   "titulo": "andariega"
+  },
+  "f_43a8528123": {
+   "sede": "Centro Cultural del Banco de la República - Manizales",
+   "dia": "2026-09-23",
+   "hora": "10:00",
+   "sala": "",
+   "titulo": "coleccionismo patrimonio y las distintas formas en que los objetos cuentan historias y construyen memoria"
+  },
+  "f_36d11d987f": {
+   "sede": "Cámara de Comercio de Manizales por Caldas - Manizales",
+   "dia": "2026-09-23",
+   "hora": "14:00",
+   "sala": "Auditorio Carlos E. Pinzón",
+   "titulo": "nina y los cuentos del erizo"
+  },
+  "f_f7764eeb2d": {
+   "sede": "Universidad Autónoma - Manizales",
+   "dia": "2026-09-23",
+   "hora": "16:00",
+   "sala": "Aula Torreón F-101",
+   "titulo": "herb dorothy"
+  },
+  "f_8dade1f12c": {
+   "sede": "Cámara de Comercio de Manizales por Caldas - Manizales",
+   "dia": "2026-09-23",
+   "hora": "16:00",
+   "sala": "Auditorio Carlos E. Pinzón",
+   "titulo": "la quimera de oro"
+  },
+  "f_cdbb23a5d7": {
+   "sede": "Cancha de Bengala - Manizales",
+   "dia": "2026-09-23",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "loving vincent"
+  },
+  "f_3268e648bf": {
+   "sede": "Universidad de Caldas - Manizales",
+   "dia": "2026-09-23",
+   "hora": "18:00",
+   "sala": "Sala Roberto Vélez Correa",
+   "titulo": "desierto verde"
+  },
+  "f_78ee386cf6": {
+   "sede": "Centro Colombo Americano - Manizales",
+   "dia": "2026-09-23",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "the dig"
+  },
+  "f_fda205405a": {
+   "sede": "Fama - Manizales",
+   "dia": "2026-09-23",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "o ultimo azul"
+  },
+  "f_ff3093cf7f": {
+   "sede": "Barrio La Estrella - Manizales",
+   "dia": "2026-09-23",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "system k"
+  },
+  "f_29bdebe61b": {
+   "sede": "Centro Cultural Rogelio Salmona - Manizales",
+   "dia": "2026-09-24",
+   "hora": "08:00",
+   "sala": "Auditorio",
+   "titulo": "en tierra"
+  },
+  "f_8364740dee": {
+   "sede": "Centro Cultural del Banco de la República - Manizales",
+   "dia": "2026-09-24",
+   "hora": "10:00",
+   "sala": "",
+   "titulo": "coleccionar para recordar museos arte y la construccion de la memoria"
+  },
+  "f_8de19b7261": {
+   "sede": "Centro Cultural Rogelio Salmona - Manizales",
+   "dia": "2026-09-24",
+   "hora": "14:00",
+   "sala": "Auditorio",
+   "titulo": "dossier 137"
+  },
+  "f_ecc9048a3f": {
+   "sede": "Centro Cultural del Banco de la República - Manizales",
+   "dia": "2026-09-24",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "aa965 un rescate imposible"
+  },
+  "f_1deac3b658": {
+   "sede": "Centro Cultural Rogelio Salmona - Manizales",
+   "dia": "2026-09-24",
+   "hora": "16:00",
+   "sala": "Auditorio",
+   "titulo": "sois belle et tais toi"
+  },
+  "f_fd937d38cc": {
+   "sede": "Casa de la Cultura de Palogrande - Manizales",
+   "dia": "2026-09-24",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "taller de animacion de fotografias e imagenes de cero a cien para dummies con ias"
+  },
+  "f_64ef28b678": {
+   "sede": "Parque Fundadores - Manizales",
+   "dia": "2026-09-24",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "microcosmos le peuple de l herbe"
+  },
+  "f_eb4e831041": {
+   "sede": "Centro Cultural Rogelio Salmona - Manizales",
+   "dia": "2026-09-24",
+   "hora": "17:30",
+   "sala": "",
+   "titulo": "para su tranquilidad haga su propio museo"
+  },
+  "f_2adffd5e0a": {
+   "sede": "Alianza Francesa - Manizales",
+   "dia": "2026-09-24",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "the human scale"
+  },
+  "f_dfa78486d0": {
+   "sede": "Clandestino Records - Manizales",
+   "dia": "2026-09-24",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "record safari"
+  },
+  "f_98e963109d": {
+   "sede": "Centro Cultural Rogelio Salmona - Manizales",
+   "dia": "2026-09-24",
+   "hora": "19:00",
+   "sala": "Óculo",
+   "titulo": "concierto sinfonico"
+  },
+  "f_92d2a723e7": {
+   "sede": "Teatro los Fundadores - Manizales",
+   "dia": "2026-09-24",
+   "hora": "19:00",
+   "sala": "Sala Olimpia",
+   "titulo": "llueve sobre babel"
+  },
+  "f_f0dfcb902b": {
+   "sede": "Centro Cultural Rogelio Salmona - Manizales",
+   "dia": "2026-09-25",
+   "hora": "08:00",
+   "sala": "Auditorio",
+   "titulo": "apprendre"
+  },
+  "f_9ceab4fbbb": {
+   "sede": "Zoom - Manizales",
+   "dia": "2026-09-25",
+   "hora": "09:00",
+   "sala": "",
+   "titulo": "propiedad intelectual en el audiovisual"
+  },
+  "f_3b4c4d740e": {
+   "sede": "Centro Cultural del Banco de la República - Manizales",
+   "dia": "2026-09-25",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "bien inmueble"
+  },
+  "f_c71cb64ca3": {
+   "sede": "Casa de la Cultura de Palogrande - Manizales",
+   "dia": "2026-09-25",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "cuando el dolor se nombra dialogo abierto y violencia de genero"
+  },
+  "f_763e804615": {
+   "sede": "Casa de la Cultura de Palogrande - Manizales",
+   "dia": "2026-09-25",
+   "hora": "15:30",
+   "sala": "",
+   "titulo": "con la fuerza del rio"
+  },
+  "f_29beef665d": {
+   "sede": "Casa de la Cultura de Palogrande - Manizales",
+   "dia": "2026-09-25",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "poniendole voz a tu historia silenciada"
+  },
+  "f_cb9ea07752": {
+   "sede": "Cancha La Isla - Manizales",
+   "dia": "2026-09-25",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "the general"
+  },
+  "f_08e85dcc93": {
+   "sede": "Universidad Nacional · El Cable - Manizales",
+   "dia": "2026-09-25",
+   "hora": "18:00",
+   "sala": "Aula 007",
+   "titulo": "crumb"
+  },
+  "f_4b4ff0fc67": {
+   "sede": "Centro Colombo Americano - Manizales",
+   "dia": "2026-09-25",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "my octopus teacher"
+  },
+  "f_1487a066b4": {
+   "sede": "Clandestino Records - Manizales",
+   "dia": "2026-09-25",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "vinyl nation"
+  },
+  "f_d531cd453b": {
+   "sede": "Auditorio Redentoristas - Manizales",
+   "dia": "2026-09-25",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "como limpiar un espejo"
+  },
+  "f_c9212003f1": {
+   "sede": "Auditorio Redentoristas - Manizales",
+   "dia": "2026-09-25",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "entrelazados"
+  },
+  "f_109154c556": {
+   "sede": "Torre del Cable - Manizales",
+   "dia": "2026-09-25",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "exit through the gift shop"
+  },
+  "f_c70e4c70ec": {
+   "sede": "Auditorio Redentoristas - Manizales",
+   "dia": "2026-09-25",
+   "hora": "20:00",
+   "sala": "",
+   "titulo": "la marcha del hambre"
+  },
+  "f_1751297ccd": {
+   "sede": "Clandestino Records - Manizales",
+   "dia": "2026-09-25",
+   "hora": "21:00",
+   "sala": "",
+   "titulo": "noche de vinilos"
+  },
+  "f_bcc8e538ad": {
+   "sede": "Casa de la Cultura de Palogrande - Manizales",
+   "dia": "2026-09-26",
+   "hora": "10:00",
+   "sala": "",
+   "titulo": "largometrajes ubpd"
+  },
+  "f_731b0efb02": {
+   "sede": "Casa de la Cultura de Palogrande - Manizales",
+   "dia": "2026-09-26",
+   "hora": "13:00",
+   "sala": "",
+   "titulo": "muestra de cortometrajes realizadores locales y eje cafetero"
+  },
+  "f_2d3f5d6ef7": {
+   "sede": "Parque de la Mujer - Manizales",
+   "dia": "2026-09-26",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "en busca del arca perdida"
+  },
+  "f_f4677b22ba": {
+   "sede": "Barrio La Cumbre - Manizales",
+   "dia": "2026-09-26",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "la colina de las amapolas"
+  },
+  "f_7bf7622c67": {
+   "sede": "Fama - Manizales",
+   "dia": "2026-09-26",
+   "hora": "21:00",
+   "sala": "",
+   "titulo": "sonora vol 4"
+  }
+ }
+}

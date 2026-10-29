@@ -1,0 +1,55 @@
+{
+ "_provenance": {
+  "fuente": "issue de radar #1088 — https://github.com/jdvlazio/Otrofestiv.app/issues/1088",
+  "capturado": "2026-10-28",
+  "titulo": "RADAR: Miradas Medellín — Festival de Cine y Artes Audiovisuales, Medellín, 3–8 NOV 2026",
+  "estado": "OPEN",
+  "comentarios": 10
+ },
+ "issue": 1088,
+ "titulo": "RADAR: Miradas Medellín — Festival de Cine y Artes Audiovisuales, Medellín, 3–8 NOV 2026",
+ "estado": "OPEN",
+ "cuerpo": "Fuente: pedido de Juan (11 oct 2026). No estaba en la lista ancla ni salió del triaje de Proimágenes.\n\n- **Estado:** fechas anunciadas en la agenda oficial de eventos de la Alcaldía de Medellín (3–8 nov 2026). Programación y selección: no publicadas (11 oct).\n- **Organiza:** Secretaría de Cultura Ciudadana de Medellín (entrada libre).\n- **Sedes:** varias en Medellín, incluido el MAMM (2025: 27 espacios, 95 producciones).\n- **Web:** https://www.miradasmedellin.com/ — no responde el 11 oct (conexión fallida). **IG:** sin perfil propio (instagram.com/miradasmedellin «no disponible»); en 2025 la Alcaldía remitía a @cultura.med y @cinematecademedellin.\n- **Secciones 2025:** memoria, Caribe y Centroamérica, crisis climática, cine expandido, cine infantil, hecho en Medellín; Miradas LAB.\n\nFuentes:\n- https://www.medellin.gov.co/es/sala-de-prensa/noticias/la-alcaldia-de-medellin-presenta-las-fechas-de-los-principales-eventos-de-ciudad-para-2026/\n- https://medellin.co/event/festival-miradas-medellin-2026/\n- https://www.medellin.gov.co/es/sala-de-prensa/noticias/compromiso-con-las-artes-audiovisuales-miradas-medellin-tendra-27-espacios-para-celebrar-el-cine/\n\nPlan: vigilar @cultura.med y @cinematecademedellin (sin sesión) y la web; pre-onboarding en cuanto salga la selección.",
+ "comentarios": [
+  {
+   "fecha": "2026-10-16",
+   "cuerpo": "**Vigía 16 oct — publicaron la selección → toca pre-onboarding.** La publicó @cinematecademedellin (leída sin sesión, por el embed):\n- Largometrajes iberoamericanos: https://www.instagram.com/p/DefnwMYDHVV/ (14 oct, 14 láminas: portada + ~13 obras)\n- Cortometrajes iberoamericanos: https://www.instagram.com/p/DeiGFLoIKqz/ (15 oct, 10 láminas: portada + ~9 obras)\n- Cine hecho en Medellín: https://www.instagram.com/p/DeX03IEDKSe/ (11 oct, 13 láminas; la portada anuncia 3 largometrajes, 10 cortometrajes, 4 proyectos de cine expandido, 7 obras de cine comunitario y 5 procesos de mediación) y https://www.instagram.com/p/DeiTfQeDd4e/ (15 oct, cortos).\n\nHay una lámina por obra y **cada lámina trae ficha + funciones (día, hora y sede)**. Por ejemplo, *6 meses en el edificio rosa con azul*: mar 3 nov, 7:00 p. m., Teatro Pablo Tobón Uribe, y jue 5 nov, 7:00 p. m., Colombo Americano, Sala 1, con presencia del director. Es selección **y** programación parcial.\nSolo miré la portada y una lámina de cada carrusel: los conteos son aproximados (una lámina por obra). La web miradasmedellin.com sigue sin responder.\n"
+  },
+  {
+   "fecha": "2026-10-16",
+   "cuerpo": "**Pre-onboarding 16 oct — rama `data/miradas2026` (sin PR).**\n\n- Catálogo: 42 obras de los 3 carruseles de @cinematecademedellin (leídos sin sesión, embed).\n  - 11 largos + 7 cortos iberoamericanos: dirección, año, país, duración, sinopsis oficial y **sus funciones** (día, hora, sala).\n  - 24 de Cine hecho en Medellín (largos, cortos, comunitario, expandido): título + dirección. Fe de erratas del pie aplicada: «El paradero» es del Semillero Colectivo Cinestrato.\n- Enriquecido: 23 de 42 con ficha (TMDB + cascada; 12 ya publicadas en otro festival nuestro). Las 19 sin ficha son comunitario, expandido y cortos de Medellín.\n- Verificador: 4 lecturas independientes (ig-lecturas.py) → 0 diferencias en títulos, directores, horas y duraciones.\n- Ojo: la sinopsis de «Última vez hace mucho tiempo» (Santiago Martin, Venezuela) repite la de «Quien se mueve»: error del festival, no se publica.\n- Falta: la parrilla de Cine hecho en Medellín / expandido / comunitario / LAB, y los 5 procesos de mediación (no son obras).\n"
+  },
+  {
+   "fecha": "2026-10-18",
+   "cuerpo": "**Vigía 18 oct 2026 — Miradas: hay datos nuevos de @cinematecademedellin (sin sesión)**\n\n1. **Hora de la inaugural, dos fuentes distintas.** https://www.instagram.com/p/Dekwxvdsblt/ dice que *6 meses en el edificio rosa con azul* abre el festival el **mar 3 nov a las 6:30 p. m.** en el Teatro Pablo Tobón, con entrada libre. La lámina del carrusel ibero (la que está en `funciones_lamina` de la rama `data/miradas2026`) dice **7:00 p. m.** Con la regla de la hora más temprana, quedaría 6:30.\n2. **Ya hay horario del Cine expandido** (https://www.instagram.com/p/DenPVn5CsnG/, 17 oct, leído en las láminas). Es un recorrido guiado por las 4 obras (El sueño de Sedna, Sosiego al atardecer, Todas las cosas que algún día se desvanecieron, Vórtice nebular): **jue 5, vie 6 y sáb 7 nov, 2:00 p. m., Exploratorio del Parque Explora**, con entrada libre. La portada dice que la muestra va «del 3 al 8 de noviembre». Las 4 obras ya estaban en el catálogo, pero sin funciones.\n3. https://www.instagram.com/p/DenBlA3RIKC/ (reel, 17 oct) muestra los 3 largos de Cine hecho en Medellín. Ya están en el catálogo y el reel no trae horarios.\n- Sigue faltando el horario de los cortos de Medellín, del cine comunitario y del LAB. La web miradasmedellin.com no responde (DNS).\n"
+  },
+  {
+   "fecha": "2026-10-19",
+   "cuerpo": "**Vigía 19 oct 2026 — Miradas: salió el horario de mediación y formación (@cinematecademedellin, sin sesión)**\n\nhttps://www.instagram.com/p/Dep67rsCZmE/ (18 oct, 7 láminas, leídas una por una). Cinco actividades con día, hora y lugar:\n\n1. **Cine Corto detrás de cámara** (Festival Cine Corto) — mié 4, jue 5 y vie 6 nov, 10:00 a. m.–12:00 m. · Institución Educativa La Independencia (calle 39D # 112-81, San Javier).\n2. **Colombia es fantástica — Laboratorio de cine fantástico y terror colombiano** (Festival Fantasmagoría) — Centro Colombo Americano, Aula Múltiple. Sesiones 1 y 2: vie 6 nov, 2:00 y 4:00 p. m.; sesiones 3, 4 y 5: sáb 7 nov, 10:00 a. m., 2:00 y 4:00 p. m.\n3. **La otra orilla: revolver la mirada autorizada para manchar la cámara de barro** (Cine-Foro «En Construcción») — mar 3, jue 5 y sáb 7 nov, 6:00–8:00 p. m. · Librería y Espacio Cultural Antimateria (calle 45E # 72-09, Laureles).\n4. **Luces, cámara y estampa** (KXVRX Cineclub) — Edificio Paraninfo UdeA (carrera 44 # 48-72, La Candelaria). Vie 6 nov 2:00–4:00 p. m.; sáb 7 nov 10:00 a. m.–12:00 m. y 1:00–3:00 p. m.\n5. **Rodando formación: mediaciones en comunidad** (CorpoTEA) — Casa TEA (calle 53 # 47-44, La Candelaria). Mar 3, jue 5 y vie 6 nov 7:00–9:00 p. m.; sáb 7 nov 6:00–8:00 p. m.\n\nTambién: https://www.instagram.com/p/Depo5G9D1qN/ (18 oct) anuncia seis propuestas de cine comunitario y dice «Conoce próximamente nuestra programación gratuita»: todavía sin horario (no se pudieron bajar láminas de ese post). https://www.instagram.com/reel/DenBlA3RIKC/ (17 oct): los tres largos de Cine hecho en Medellín, sin horario.\n\n→ Toca sumarlas al pre-onboarding de la rama `data/miradas2026` (son actividades, no funciones). Sin tocar nada desde el vigía.\n"
+  },
+  {
+   "fecha": "2026-10-21",
+   "cuerpo": "**Vigía 21 oct 13:00 — Miradas.** Hay posts nuevos de @cinematecademedellin (Deu21UiGoQ4, 20 oct: los 3 largos de Cine hecho en Medellín; Depo5G9D1qN, 18 oct: cine comunitario; DesTf3AEy9o, 19 oct: cine expandido). No traen horarios: la programación sigue «próximamente». Las tres obras ya están en el catálogo de la rama data/miradas2026. Una diferencia de título: el pie dice «Las pesadillas del siervo» y el catálogo tiene «La pesadilla del siervo» → mirar en la lámina antes de publicar. El post de comunitario dice «seis propuestas» y el catálogo tiene 7 en esa sección. miradasmedellin.com sigue sin resolver (DNS).\n"
+  },
+  {
+   "fecha": "2026-10-26",
+   "cuerpo": "26 oct · rama `data/miradas2026` (75c8acfd): sumados 3 carruseles de @cinematecademedellin — De2vCbSjAvy (7 cortos colombianos nuevos), De5YY1EjVYl (Cine Comunitario), De71yR-jinh (cortos Hecho en Medellín). **Traen funciones con día, hora y sala** (Teatro MAMM, Colombo Sala 2, Cineprox Las Américas, Parque de los Deseos, sedes barriales); clausura dom 8 nov 6:30 p. m. Parque de los Deseos. Catálogo 49 obras, preonboarding en 0. Mamá Chila tiene función el 28 oct (fuera de ventana, no se monta). Pendiente: retrospectiva Fernando Eimbcke (anunciada en De4MmOSj8gv, sin títulos), largos de Medellín, cine expandido sin parrilla salvo el recorrido, LAB. El taller de coproducciones (De9xNesDC2Y, 29–30 oct, UdeA) es de la Cinemateca, fuera de las fechas del festival."
+  },
+  {
+   "fecha": "2026-10-26",
+   "cuerpo": "Decisión de Juan (26 oct): esperar más programación antes de montar Miradas. Hoy hay 24 obras con funciones (3 carruseles de @cinematecademedellin, rama data/miradas2026 75c8acfd); faltan largos de Medellín, cine expandido, LAB y la retrospectiva Fernando Eimbcke (el festival anuncia +65 producciones / 50 funciones). Retomar cuando el vigía detecte más programación (vigilancia diaria desde el 27 oct)."
+  },
+  {
+   "fecha": "2026-10-27",
+   "cuerpo": "**Vigía 27 oct 13:00:** el reel https://www.instagram.com/p/De-hVjhCTMG/ de @cinematecademedellin («Los nuevos», Rodrigo Plá) dice «Conoce la programación completa en el enlace de la biografía». Revisar ese enlace. miradasmedellin.com no resuelve DNS."
+  },
+  {
+   "fecha": "2026-10-28",
+   "cuerpo": "**Vigía 28 oct 09:15 — Miradas sin vigilar por Apify:** ig_vigia.py lo reporta en SIN_CUENTA_IG (está en config sin `instagram:`). Hay que agregar `cinematecademedellin`. Hoy lo leí por el navegador sin sesión: la inaugural «Seis meses en el edificio rosa con azul», 3 nov a las 6:30 p. m. en el Teatro Pablo Tobón (DfAzifIj8zZ), ya está en la app. El PDF no cambió.\n"
+  },
+  {
+   "fecha": "2026-10-28",
+   "cuerpo": "**Vigía 28 oct 13:00 — Miradas: inaugural confirmada, con una contradicción en el propio post.** Post de @cinematecademedellin https://www.instagram.com/p/DfAzifIj8zZ/ (vía Apify): «Seis meses en el edificio rosa con azul», martes 3 nov, Teatro Pablo Tobón Uribe, entrada libre, conversatorio con Bruno Santamaría y Bruna Haddad. **Lámina 1 dice 7:00 p. m.; lámina 3 y el pie dicen 6:30 p. m.** La app ya tiene 18:30 en el Pablo Tobón (= la hora más temprana, regla del 17 oct). Sin acción salvo que el festival aclare.\n"
+  }
+ ]
+}

@@ -7,7 +7,7 @@ el crudo EXIGE día, hora y sede —con razón: es el formato de una función—
 catálogo sin parrilla no puede cumplir ese contrato sin inventarse los tres, y
 un dato inventado para pasar una compuerta es peor que no tener el dato.
 
-No duplica la doctrina: importa `cascada_tmdb` de `enriquecer.py`, así que el
+No duplica la doctrina: importa `cascada_obra` (catálogo único → `cascada_tmdb`) de `enriquecer.py`, así que el
 candado sigue siendo el mismo —director ✓ Y (año ±1 O duración ±3 min)— y vive
 en un solo sitio.
 
@@ -24,7 +24,7 @@ Esc.  festivals/staging/<lo-que-sea>-enriquecido.json
 import json, os, re, sys, time
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from enriquecer import ficha_declarada, cascada_tmdb
+from enriquecer import ficha_declarada, cascada_obra, reuso_publicada
 from lib import provenance, director_coincide, obras_publicadas, ya_publicada
 import proimagenes
 import cinecorto
@@ -94,7 +94,7 @@ def main():
             e = ficha_declarada(t, declaradas[t], key)
             fuente = 'declarada' if e else None
         if not e:
-            e, fuente = cascada_tmdb(o, key, {}, pub)
+            e, fuente = cascada_obra(o, key, {}, pub)
         if not e and o.get('director'):
             for idp in proimagenes.busca(t):
                 h = proimagenes.ficha(idp)
@@ -125,6 +125,19 @@ def main():
         if pub:
             e = dict(e or {})
             e['_ya_publicada'] = pub
+            # EL CRUCE SE GUARDABA Y NO SE USABA (27 oct 2026): «Luis Antonio»
+            # salía de cinecorto con `_ya_publicada` lleno y sin heredar nada.
+            # Lo que la fuente no trajo se toma de lo ya publicado, con su
+            # procedencia (`_afiche_de`, `_ficha_de`, `_sinopsis_de`).
+            r = reuso_publicada(pub, _fid) or {}
+            ya = bool(e.get('poster_path') or e.get('poster'))
+            for k in ('poster', '_afiche_de'):
+                if r.get(k) and not ya:
+                    e[k] = r[k]
+            if r.get('tmdb_id') and not e.get('tmdb_id'):
+                e['tmdb_id'], e['_ficha_de'] = r['tmdb_id'], r['_ficha_de']
+            if r.get('sinopsis') and not (e.get('sinopsis') or e.get('synopsis_es')):
+                e['sinopsis'], e['_sinopsis_de'] = r['sinopsis'], r['_sinopsis_de']
         if e and fuente:
             ok[t] = e
             por_fuente[fuente] = por_fuente.get(fuente, 0) + 1

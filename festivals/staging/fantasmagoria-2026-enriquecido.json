@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, emparejado con ficha_verifica() (director + año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-10-07"
+  "capturado": "2026-10-20"
  },
  "obras": [
   {
@@ -212,7 +212,6 @@
    "poster_path": "/fhvA2plccJRbTQgL6HRAAUPhPic.jpg",
    "synopsis_es": "Valentina, una cosmonauta rusa de 76 años, llega a una Cuba ucrónica y nebulosa tras recibir, con treinta años de retraso, una invitación para una expedición agrícola a Marte. Entre paisajes difusos y promesas del pasado, busca las ruinas de un futuro que nunca llegó.",
    "synopsis_en": "",
-   "genero": "",
    "anio_tmdb": 2025,
    "duracion_tmdb": 15,
    "pais_tmdb": "",
@@ -258,7 +257,11 @@
     }
    ],
    "poster": "/assets/fantasmagoria-2026/chaika.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "genero": "Ciencia Ficción",
+   "_heredado": {
+    "genero": "catálogo w_R4EP71550W43 (bhff-2026, cineautopsia-2026, fantasmagoria-2026, fantasofest-2026, ficica-2026, ficpa-2026, narrarelfuturo-2026, popayan-2026)"
+   }
   },
   {
    "titulo": "Coração das Trevas (Heart of Darkness)",
@@ -372,7 +375,7 @@
    "lbSlug": "fight-against-evil-3",
    "_verificado": "declarada a mano: TMDB «Fight Against Evil 3» (东北警察故事3): Yang Bingjia, 2026, 100 min, China — los cuatro datos del festival. La búsqueda por la romanización del festival no la devuelve.",
    "_director": "Bingjia Yang",
-   "_sondeado": "2026-10-07",
+   "_sondeado": "2026-10-20",
    "poster": "/assets/fantasmagoria-2026/dong-bei-jing-cha-gu-shi-3-fight-against-evil-3.jpg",
    "posterSource": "tmdb"
   },
@@ -393,7 +396,9 @@
    "_director": "Danny Piñeros",
    "_sondeado": "2026-09-29",
    "poster": "/assets/fantasmagoria-2026/don-t-watch-this.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "sinopsis": "Una mujer se da cuenta, poco a poco, de que es un personaje de una película. Mientras se hunde en el terror, todos a su alrededor la tachan de delirante, sin saber que ella es la única que sabe que la estamos viendo.",
+   "_sinopsis": "traducción nuestra con contexto (Content Design, 10 oct 2026) de la sinopsis oficial en inglés: https://www.themoviedb.org/movie/1493377"
   },
   {
    "titulo": "Dormilón",
@@ -412,7 +417,9 @@
    "_director": "Olivia Marie Valdez",
    "_sondeado": "2026-09-29",
    "poster": "/assets/fantasmagoria-2026/dormilon.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "sinopsis": "Dormilón cuida con cariño el cine abandonado que convirtió en su hogar. Cada noche graba sus sueños, en los que es la estrella del teatro y no su antiguo conserje. Una noche de tormenta, la vida que ha construido con tanto cuidado se tambalea cuando sus pesadillas se acumulan y lo enfrentan. Dormilón tendrá que vencer sus miedos y aceptar sus inseguridades para ser una versión más completa de sí mismo.",
+   "_sinopsis": "traducción nuestra con contexto (Content Design, 10 oct 2026) de la sinopsis oficial en inglés: https://www.themoviedb.org/movie/1426072"
   },
   {
    "titulo": "Dèmoni",
@@ -532,25 +539,40 @@
      "titulo": "HDLT",
      "poster": "/assets/filcmar-2026/hdlt.jpg",
      "posterSource": "oficial",
+     "country": "Colombia",
+     "year": 2026,
+     "duration": "18 min",
+     "genre": "Drama",
      "sinopsis": "Después del ataque que sufrió, Luz trata de entender lo que le sucedió: el Hijo de la Tierra vino a destruir a la humanidad robando sus recuerdos más tristes y felices. Pero desembarcó en Suba, el distrito más lejano de Bogotá, donde una extraña adicción cambiará el curso de la historia."
     },
     {
      "festival": "siembrafest-2026",
      "titulo": "HDLT",
      "poster": "/assets/siembrafest/hdlt.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "18 min",
+     "genre": "Drama"
     },
     {
      "festival": "popayan-2026",
      "titulo": "HDLT Hijo de la Tierra",
-     "poster": "/assets/siembrafest/hdlt.jpg",
+     "poster": "/assets/filcmar-2026/hdlt.jpg",
      "posterSource": "oficial",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "18 min",
      "sinopsis": "Tras el ataque que sufrió, Luz trata de entender lo que le pasó: el Hijo de la Tierra llegó a destruir la humanidad robándole sus recuerdos más tristes y más felices."
     }
    ],
    "poster": "/assets/filcmar-2026/hdlt.jpg",
    "_verificado": "ya publicada en filcmar-2026: se reusa su afiche",
-   "sinopsis": "Después del ataque que sufrió, Luz trata de entender lo que le sucedió: el Hijo de la Tierra vino a destruir a la humanidad robando sus recuerdos más tristes y felices. Pero desembarcó en Suba, el distrito más lejano de Bogotá, donde una extraña adicción cambiará el curso de la historia."
+   "sinopsis": "Después del ataque que sufrió, Luz trata de entender lo que le sucedió: el Hijo de la Tierra vino a destruir a la humanidad robando sus recuerdos más tristes y felices. Pero desembarcó en Suba, el distrito más lejano de Bogotá, donde una extraña adicción cambiará el curso de la historia.",
+   "pais": "Colombia",
+   "anio": 2026,
+   "duracion_tmdb": 18,
+   "genero": "Drama"
   },
   {
    "titulo": "Hablando con Extraños",
@@ -605,7 +627,7 @@
    "lbSlug": "herencia-2025-1",
    "_verificado": "declarada a mano: Cristóbal Miranda Cáceres, 2025, la misma dirección y año. TMDB no da duración.",
    "_director": "Cristóbal Miranda Cáceres",
-   "_sondeado": "2026-10-07",
+   "_sondeado": "2026-10-20",
    "poster": "/assets/fantasmagoria-2026/herencia.jpg",
    "posterSource": "tmdb"
   },
@@ -663,7 +685,9 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Huasi",
    "_director": "Juan Sebastian Torales",
-   "_sondeado": "2026-09-29"
+   "_sondeado": "2026-09-29",
+   "sinopsis": "Dos hombres atraviesan el bosque en busca de un objeto misterioso, mientras en una casa abandonada una mujer llorosa no se conmueve con las palabras de consuelo de su compañero. Un cortometraje atmosférico y metafísico que apela más a los sentidos que al intelecto y que, aun así, plantea una pregunta: ¿salvar a un ser humano es salvar a toda la humanidad?",
+   "_sinopsis": "traducción nuestra con contexto (Content Design, 10 oct 2026) de la sinopsis oficial en inglés: https://www.themoviedb.org/movie/1655535"
   },
   {
    "titulo": "Huo zhe yan (The Furious)",
@@ -739,8 +763,32 @@
    "lbSlug": "crystal-iris",
    "_verificado": "declarada a mano: TMDB «Crystal Iris» (Iris de Cristal): Diego Gaviria, Colombia, 2024, 13 min, la única obra con ese título. El programa 2026 no da la dirección; el propio Fantasmagoría la programó en 2025 como «Iris de cristal de Diego Gaviria», y esta función es su proyección con autodescripción (Narrafilms). Ligada por decisión de Juan (30 sep).",
    "_director": "",
-   "_sondeado": "2026-10-07",
+   "_sondeado": "2026-10-20",
    "poster": "/assets/fantasmagoria-2026/iris-de-cristal.jpg",
+   "posterSource": "tmdb",
+   "director_heredado": "Diego Gaviria",
+   "_heredado": {
+    "director_heredado": "catálogo w_R4G651V5H1G6 (bhff-2026, fantasmagoria-2026)",
+    "pais_heredado": "catálogo w_R4G651V5H1G6 (bhff-2026, fantasmagoria-2026)"
+   },
+   "pais_heredado": "Colombia"
+  },
+  {
+   "titulo": "Kondor, El Mago",
+   "tmdb_id": 1558429,
+   "titulo_original": "Kondor, El Mago",
+   "poster_path": "/ybJBPMtuVtnkW6MFgxsdjhxJfZC.jpg",
+   "synopsis_es": "En el Parque Nacional de Bogotá¸ pasean unos sujetos que se cruzan con los integrantes de un paseo¸ posteriormente se encuentran con una niña que desea hacer una llamada y pide a los sujetos le cambien una moneda¸ se dirige al teléfono y llama¸ entre tanto los del paseo pasan frente a unos enamorados que se besan burlándose de ellos. Los enamorados disgustados se retiran mientras los del paseo siguen su trayectoria para realizar su piquete. Entre tanto un raponero se da cuenta que la niña que llama por teléfono posee un bolso¸ acercándose lo rapta y sale a toda velocidad y ella detrás gritando: pasan frente a un mago que se encuentra leyendo una de sus magias y pone en práctica una de ellas deteniendo al raponero y haciéndolo retroceder¸ se incorpora y devuelve el bolso a la niña¸ en ese instante se acercan los sujetos que antes habían cambiado la moneda a la niña y felicitan al mago por su oportuna acción.",
+   "synopsis_en": "",
+   "genero": "Fantasía",
+   "anio_tmdb": 1975,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "kondor-el-mago",
+   "_verificado": "declarada a mano: la doble de Jairo Pinilla del 22 oct (Archivo Fantasmagoría) junta dos obras; TMDB tiene «Kondor, El Mago» (Jairo Pinilla, Colombia, 1975) con afiche. Verificado a mano el 8 oct.",
+   "_director": "Jairo Pinilla",
+   "_sondeado": "2026-10-20",
+   "poster": "/assets/fantasmagoria-2026/kondor-el-mago.jpg",
    "posterSource": "tmdb"
   },
   {
@@ -776,7 +824,9 @@
    "lbSlug": "the-flower-of-fear",
    "_verificado": "declarada a mano: TMDB «The Flower of Fear»: Jorge Florez Arcila, la misma dirección; ganó en Oldenburg 2025 con ese título. TMDB no tiene año NI duración, así que el candado no puede corroborar: se declara a mano (decisión de Juan, 30 sep).",
    "_director": "Jorge Flórez Arcila",
-   "_sondeado": "2026-10-07"
+   "_sondeado": "2026-10-20",
+   "sinopsis": "Un niño colombiano de 10 años es secuestrado por un grupo armado mientras juega en el bosque. Su madre lo busca desesperadamente y él, para protegerse, se refugia en un mundo de fantasía: un jardín oscuro y surreal donde a los niños los «siembran» y les hacen brotar flores de la cabeza, de las que sale un perfume conocido como el olor del miedo.",
+   "_sinopsis": "traducción nuestra con contexto (Content Design, 10 oct 2026) de la sinopsis oficial en inglés: https://filmfest-oldenburg.de/en/film/the-flower-of-fear"
   },
   {
    "titulo": "La Frecuencia Kirlian",
@@ -868,7 +918,9 @@
    "_director": "Martín André y Josefina Montino",
    "_sondeado": "2026-09-29",
    "poster": "/assets/fantasmagoria-2026/la-pena-no-duerme-de-noche.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "sinopsis": "Un hombre se aísla en el bosque con su gato. Los fantasmas de su pasado empiezan a atormentarlo y lo obligan a enfrentar sus miedos y sus culpas para no dejarse consumir por la locura.",
+   "_sinopsis": "traducción nuestra con contexto (Content Design, 10 oct 2026) de la sinopsis oficial en inglés: https://www.themoviedb.org/movie/1515864"
   },
   {
    "titulo": "La Sinfonía de los Bichos Raros",
@@ -908,7 +960,9 @@
    "_director": "Gustine Füdickar y Justin Streichman",
    "_sondeado": "2026-09-29",
    "poster": "/assets/fantasmagoria-2026/lady-puritan.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "sinopsis": "Mientras la vida onírica se filtra en la vigilia, una mujer acechada por su antepasada puritana debe enfrentar el terror enterrado en lo más hondo de su linaje.",
+   "_sinopsis": "traducción nuestra con contexto (Content Design, 10 oct 2026) de la sinopsis oficial en inglés: https://www.themoviedb.org/movie/1637564"
   },
   {
    "titulo": "Line 12",
@@ -924,10 +978,12 @@
    "lbSlug": "line-12",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Line 12",
-   "_director": "Saskia Stirn y Christopher Schmier",
-   "_sondeado": "2026-09-29",
+   "_director": "Sarah Schulz y Christopher Schmier",
+   "_sondeado": "2026-10-10",
    "poster": "/assets/fantasmagoria-2026/line-12.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "sinopsis": "En un mundo de montañas imponentes, Peregrin, un meticuloso conductor de tren, mantiene su máquina en marcha con precisión. Cuando la inquieta música Clara se cuela en la cabina, una catástrofe los obliga a superar sus diferencias para evitar el descarrilamiento.",
+   "_sinopsis": "BAFICI 28, ficha de la película (https://bafici.org/pelicula/line-12/), leída el 10 oct 2026; el mismo texto en TMDB es-MX"
   },
   {
    "titulo": "Lullaby",
@@ -943,7 +999,9 @@
    "lbSlug": "lullaby-2026-2",
    "_verificado": "declarada a mano: Helena Melin, 2026, la misma dirección y año. TMDB no da duración ni afiche.",
    "_director": "Helena Melin",
-   "_sondeado": "2026-10-07"
+   "_sondeado": "2026-10-20",
+   "sinopsis": "Una niña y su gato se enfrentan al duelo cuando una inquietante canción de cuna los arrastra a las profundidades de una mansión, de noche.",
+   "_sinopsis": "traducción nuestra con contexto (Content Design, 10 oct 2026) de la sinopsis oficial en inglés: https://www.galwayfilmfleadh.com/project/irish-animation-2/"
   },
   {
    "titulo": "Luz",
@@ -959,7 +1017,7 @@
    "lbSlug": "luz-2019-2",
    "_verificado": "declarada a mano: Tilman Singer, 70 min, Alemania (TMDB la fecha 2019; su estreno fue la Berlinale 2018, el año del festival). «Luz» es un título genérico: las demás «Luz» de TMDB tienen otra dirección.",
    "_director": "Tilman Singer",
-   "_sondeado": "2026-10-07",
+   "_sondeado": "2026-10-20",
    "poster": "/assets/fantasmagoria-2026/luz.jpg",
    "posterSource": "tmdb"
   },
@@ -1055,7 +1113,9 @@
    "_director": "Ariel de la Garza Davidoff y Michal Vojtech",
    "_sondeado": "2026-09-29",
    "poster": "/assets/fantasmagoria-2026/morana.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "sinopsis": "En las vacaciones de Semana Santa de comienzos de los años dos mil, Mathilde, una adolescente nihilista, recibe una maldición de su hermana: morir a manos de Morana, la mismísima diosa de la muerte.",
+   "_sinopsis": "traducción nuestra con contexto (Content Design, 10 oct 2026) de la sinopsis oficial en inglés: https://www.themoviedb.org/movie/1649572"
   },
   {
    "titulo": "Motherwitch",
@@ -1122,7 +1182,9 @@
    "_director": "Fabiano Barros",
    "_sondeado": "2026-09-29",
    "poster": "/assets/fantasmagoria-2026/mucura.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "sinopsis": "En una casa sofocante de Rondônia, Marta despierta paralizada. La noche toma formas, voces y presencias que invaden su cuerpo y su mente. Atrapada entre el delirio y la realidad, enfrenta una espiral de miedo, violencia y derrumbe en la que todo a su alrededor parece brotar de su interior.",
+   "_sinopsis": "traducción nuestra con contexto (Content Design, 10 oct 2026) de la sinopsis oficial en inglés: https://www.themoviedb.org/movie/1774280"
   },
   {
    "titulo": "No Vacancy",
@@ -1141,7 +1203,9 @@
    "_director": "Miguel Rodrick",
    "_sondeado": "2026-09-29",
    "poster": "/assets/fantasmagoria-2026/no-vacancy.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "sinopsis": "La mente de Jack se desmorona, retratada a través de un motel en ruinas. Atraviesa noches caóticas de llamadas misteriosas, huéspedes problemáticos, humillaciones de la infancia y batallas con la adicción.",
+   "_sinopsis": "traducción nuestra con contexto (Content Design, 10 oct 2026) de la sinopsis oficial en inglés: https://www.themoviedb.org/movie/1461232"
   },
   {
    "titulo": "No es el Fin del Mundo",
@@ -1158,7 +1222,7 @@
    "anio": 2025,
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 1 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas: título, filmografía del director, Letterboxd): Sebastián Flórez, 2025 (ficha de Macabro 2026: «CORTO INT · Colombia · 2025»; publicábamos 2026), 17 min, Colombia, Terror (apocalipsis zombi), sinopsis de Macabro y su afiche oficial recortado arriba y abajo a 2:3. Letterboxd: no-es-el-fin-del-mundo. El género se declara aquí porque la API de TMDB tardaba en servir la ficha recién editada; es el mismo que cargamos en TMDB.",
    "_director": "Sebastián Flórez",
-   "_sondeado": "2026-10-07",
+   "_sondeado": "2026-10-20",
    "poster": "/assets/fantasmagoria-2026/no-es-el-fin-del-mundo.jpg",
    "posterSource": "tmdb"
   },
@@ -1224,10 +1288,10 @@
    "pais_tmdb": "Colombia",
    "title_en": "Pure Blood",
    "lbSlug": "pure-blood-1982",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Pura Sangre",
+   "_verificado": "el catálogo ya la tiene (w_R4GFC0AMPBK7, fantasmagoria-2026, girardota-2026)",
+   "work_id": "w_R4GFC0AMPBK7",
    "_director": "Luis Ospina",
-   "_sondeado": "2026-09-29",
+   "_sondeado": "2026-10-19",
    "_ya_publicada": [
     {
      "festival": "girardota-2026",
@@ -1236,6 +1300,11 @@
      "poster": "/assets/girardota-2026/pura-sangre.jpg",
      "posterSource": "tmdb",
      "lbSlug": "pure-blood-1982",
+     "country": "Colombia",
+     "year": 1982,
+     "duration": "90 min",
+     "genre": "Crimen",
+     "synopsis_en": "Roberto Hurtado suffers from a rare disease that requires massive transfusions of blood from children or adolescents. His son blackmails three employees to get blood for him and they resort to unscrupulous methods to obtain it.",
      "sinopsis": "Roberto Hurtado, potentado azucarero del Valle del Cauca, padece una extraña enfermedad que lo obliga a permanentes transfusiones sanguíneas para sobrevivir. La sangre proviene de jóvenes cazados por el macabro grupo que integran Florencia, Perfecto y Ever, bajo la dirección de Adolfo, hijo del magnate enfermo. Las víctimas mueren desangradas, no sin antes verse sometidas a terribles vejaciones por parte de sus desalmados captores. El terror reina en la ciudad.  Está película está dedicada a la memoria de Andrés Caicedo."
     }
    ],
@@ -1257,7 +1326,7 @@
    "anio": 2023,
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 1 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas: título, filmografía del director, Letterboxd): Alejandro Vargas, 2023 (Bogoshorts 2023 la programó; publicábamos 2026, el año del festival), 20 min, Colombia, Ciencia ficción (por la sinopsis), sinopsis del festival y su afiche oficial. Letterboxd: quazar. El género se declara aquí porque la API de TMDB tardaba en servir la ficha recién editada; es el mismo que cargamos en TMDB.",
    "_director": "Alejandro Vargas",
-   "_sondeado": "2026-10-07",
+   "_sondeado": "2026-10-20",
    "poster": "/assets/fantasmagoria-2026/quazar.jpg",
    "posterSource": "tmdb"
   },
@@ -1267,7 +1336,6 @@
    "titulo_original": "Que el cielo nos perdone",
    "poster_path": "/fyvT3ZlgNJO5lswCC8XdXkXFVnB.jpg",
    "synopsis_es": "Colombia, 1951: En medio de La Violencia, el período de brutal guerra política entre liberales y conservadores, un par de chulavitas –asesinos a sueldo pagados por el gobierno– acechan a un sacerdote en la oscuridad de la noche, esperando que los conduzca a la cabaña en el bosque en donde se esconden sus próximas víctimas. Pero el horror que encontrarán allí es mil veces peor que el dolor que pensaban infligir.",
-   "synopsis_en": "",
    "genero": "Terror",
    "anio_tmdb": 2025,
    "duracion_tmdb": 0,
@@ -1304,7 +1372,11 @@
     }
    ],
    "poster": "/assets/fantasmagoria-2026/que-el-cielo-nos-perdone.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "synopsis_en": "Colombia, 1951. In the thick of La Violencia, the period of brutal political war between Liberals and Conservatives, two chulavitas —hired killers on the government’s payroll— stalk a priest through the dark, waiting for him to lead them to the cabin in the woods where their next victims are hiding. But the horror they find there is a thousand times worse than the pain they meant to inflict.",
+   "_heredado": {
+    "synopsis_en": "catálogo w_R4GP49AWA2ZH (bhff-2026, fantasmagoria-2026, ficica-2026, ficma-2026, siembrafest-2026, villadelcine-2026)"
+   }
   },
   {
    "titulo": "Remembrance of Night Whispers",
@@ -1323,7 +1395,9 @@
    "_director": "Lucien Leung",
    "_sondeado": "2026-09-29",
    "poster": "/assets/fantasmagoria-2026/remembrance-of-night-whispers.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "sinopsis": "Un joven vislumbra el pasado enigmático de su difunto padre.",
+   "_sinopsis": "traducción nuestra con contexto (Content Design, 10 oct 2026) de la sinopsis oficial en inglés: https://www.themoviedb.org/movie/1671522"
   },
   {
    "titulo": "Rio Bravo",
@@ -1343,6 +1417,23 @@
    "_sondeado": "2026-09-29",
    "poster": "/assets/fantasmagoria-2026/rio-bravo.jpg",
    "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Robo Macabro",
+   "tmdb_id": 939823,
+   "titulo_original": "Robo Macabro",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "Two grave robbers are ready to commit their misdeeds without expecting the little surprise that awaits them.",
+   "genero": "Terror",
+   "anio_tmdb": 1982,
+   "duracion_tmdb": 10,
+   "pais_tmdb": "",
+   "lbSlug": "robo-macabro",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_director": "Jairo Pinilla",
+   "_sondeado": "2026-10-19",
+   "_afiche_rechazado": "TMDB /3HM13mmdNbSiKIuyBpH1vZwz9H1.jpg: fotograma según el catálogo (w_BCSJ1Z4J99ED)"
   },
   {
    "titulo": "Saluda al Diablo de Mi Parte",
@@ -1382,6 +1473,36 @@
    "_director": "Akira Kurosawa",
    "_sondeado": "2026-09-29",
    "poster": "/assets/fantasmagoria-2026/schichinin-no-samurai-seven-samurai.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Siempre Hay un Monstruo",
+   "tmdb_id": 1794456,
+   "titulo_original": "Siempre hay un Monstruo",
+   "poster_path": "/y86znNNqzkzwJSMXwcFCcoJ4mpN.jpg",
+   "synopsis_es": "Un grupo de agentes investiga un incidente ocurrido durante una fiesta privada en la casa de un joven actor. Lo que comienza como un caso rutinario se convierte rápidamente en el caso más monstruoso y aterrador de sus vidas.",
+   "synopsis_en": "",
+   "genero": "Terror",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 16,
+   "pais_tmdb": "",
+   "lbSlug": "siempre-hay-un-monstruo",
+   "_verificado": "el catálogo ya la tiene (w_R4GNQ1TN3A5H, bhff-2026, fantasmagoria-2026)",
+   "work_id": "w_R4GNQ1TN3A5H",
+   "_director": "Gaston Haag",
+   "_sondeado": "2026-10-15",
+   "_ya_publicada": [
+    {
+     "festival": "bhff-2026",
+     "titulo": "Siempre hay un monstruo",
+     "tmdb_id": 1794456,
+     "poster": "/assets/bhff-2026/siempre-hay-un-monstruo.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "siempre-hay-un-monstruo",
+     "sinopsis": "Un grupo de agentes investiga un incidente ocurrido durante una fiesta privada en la casa de un joven actor. Lo que comienza como un caso rutinario se convierte rápidamente en el caso más monstruoso y aterrador de sus vidas."
+    }
+   ],
+   "poster": "/assets/fantasmagoria-2026/siempre-hay-un-monstruo.jpg",
    "posterSource": "tmdb"
   },
   {
@@ -1498,6 +1619,26 @@
    "_director": "Radheya Jang",
    "_sondeado": "2026-09-29",
    "poster": "/assets/fantasmagoria-2026/trading-cards.jpg",
+   "posterSource": "tmdb",
+   "sinopsis": "Un hombre enigmático viaja al pasado para encontrar a su yo de niño, en apariencia para revivir la nostalgia de las cartas coleccionables. Una exploración de la identidad, la salud mental y la pérdida de la inocencia: Trading Cards es un corto animado de fantasía oscura sobre el peso de vivir con un trastorno obsesivo-compulsivo.",
+   "_sinopsis": "traducción nuestra con contexto (Content Design, 10 oct 2026) de la sinopsis oficial en inglés: https://www.themoviedb.org/movie/1616600"
+  },
+  {
+   "titulo": "Ubicua",
+   "tmdb_id": 1794425,
+   "titulo_original": "Ubicua",
+   "poster_path": "/cVJGywwUIUXNgtMSEZzNzIvDvGU.jpg",
+   "synopsis_es": "Quién no se ha visto en las altas horas de la noche, cayendo en un agujero de conejo virtual que nos atrapa por horas en vez de hacer nuestras labores?… Que tal que ese tema se convirtiera en realidad? Un relato de terror digital que estremecerá a todos los trabajadores independientes.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 13,
+   "pais_tmdb": "",
+   "lbSlug": "ubicua",
+   "_verificado": "declarada a mano: Ficha CREADA por nosotros el 11 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas) con los datos y el afiche original que publica el festival.",
+   "_director": "Juan González Henao",
+   "_sondeado": "2026-10-20",
+   "poster": "/assets/fantasmagoria-2026/ubicua.jpg",
    "posterSource": "tmdb"
   },
   {
@@ -1514,9 +1655,28 @@
    "lbSlug": "vida-2016",
    "_verificado": "declarada a mano: Carlos Santiago Amézquita Villamizar, 2016: la dirección completa y el año de la ficha de la página de largometrajes. TMDB no da duración.",
    "_director": "Carlos Amézquita",
-   "_sondeado": "2026-10-07",
+   "_sondeado": "2026-10-20",
    "poster": "/assets/fantasmagoria-2026/vida.jpg",
    "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Vientre",
+   "_ya_publicada": [
+    {
+     "festival": "bhff-2026",
+     "titulo": "Vientre",
+     "poster": "/assets/bhff-2026/vientre.jpg",
+     "posterSource": "oficial",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "14 min"
+    }
+   ],
+   "poster": "/assets/bhff-2026/vientre.jpg",
+   "_verificado": "ya publicada en bhff-2026: se reusa su afiche",
+   "pais": "Colombia",
+   "anio": 2025,
+   "duracion_tmdb": 14
   },
   {
    "titulo": "You Are The Film",
@@ -1538,16 +1698,39 @@
    "posterSource": "tmdb"
   },
   {
-   "titulo": "Ubicua",
-   "poster": "/assets/fantasmagoria-2026/ubicua.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: https://www.imdb.com/title/tt39674500/"
+   "titulo": "Muestra Fantasmagoritos: Cortometrajes infantiles",
+   "poster": "/assets/fantasmagoria-2026/muestra-fantasmagoritos-cortometrajes-infantiles.jpg",
+   "posterSource": "custom",
+   "_afiche": "declarado: https://wggmrznxnzyoufcnzdef.supabase.co/storage/v1/object/public/posters/eventos/cortometrajes-infantiles.webp — la pieza oficial del festival para esta actividad en su cartelera (base v5, 7 oct) — lámina 4:5: 6 % de recorte por lado y estirón (regla SiembraFest)"
   },
   {
-   "titulo": "Siempre Hay un Monstruo",
-   "poster": "/assets/fantasmagoria-2026/siempre-hay-un-monstruo.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: https://www.instagram.com/p/DZfGyK5I5w9/"
+   "titulo": "Fantascátedra – Muestra Cortometrajes universitarios de Medellín",
+   "poster": "/assets/fantasmagoria-2026/fantascatedra-muestra-cortometrajes-universitarios-de-medell.jpg",
+   "posterSource": "custom",
+   "_afiche": "declarado: https://wggmrznxnzyoufcnzdef.supabase.co/storage/v1/object/public/posters/eventos/fantascatedra.webp — la pieza oficial del festival para esta actividad en su cartelera (base v5, 7 oct); la pieza lista sus cortos: Vientre (2026), Bajo el último aliento (2025), Nativos de la tierra negra (2026), Profano (2026), Ahora y en la hora (2026) — lámina 4:5: 6 % de recorte por lado y estirón (regla SiembraFest)"
+  },
+  {
+   "titulo": "Cortometrajes en competencia: deliberación del Jurado Infantil",
+   "poster": "/assets/fantasmagoria-2026/cortometrajes-en-competencia-deliberacion-del-jurado-infanti.jpg",
+   "posterSource": "custom",
+   "_afiche": "declarado: https://wggmrznxnzyoufcnzdef.supabase.co/storage/v1/object/public/posters/eventos/fantasmagoritos-cortos-en-competencia.webp — la pieza oficial del festival para esta actividad en su cartelera (base v5, 7 oct) — lámina 4:5: 6 % de recorte por lado y estirón (regla SiembraFest)"
+  },
+  {
+   "titulo": "Cortometrajes y Taller Fantasmagoritos con la Corporación Trama",
+   "poster": "/assets/fantasmagoria-2026/cortometrajes-y-taller-fantasmagoritos-con-la-corporacion-tr.jpg",
+   "posterSource": "custom",
+   "_afiche": "declarado: https://wggmrznxnzyoufcnzdef.supabase.co/storage/v1/object/public/posters/eventos/fantasmagoritos-grillos-animados.webp — la pieza oficial del festival para esta actividad en su cartelera (base v5, 7 oct) — lámina 4:5: 6 % de recorte por lado y estirón (regla SiembraFest)"
+  },
+  {
+   "titulo": "Taller Fantasmagoritos con la Corporación Trama",
+   "poster": "/assets/fantasmagoria-2026/taller-fantasmagoritos-con-la-corporacion-trama.jpg",
+   "posterSource": "custom",
+   "_afiche": "declarado: https://wggmrznxnzyoufcnzdef.supabase.co/storage/v1/object/public/posters/eventos/taller-fantasmagoritos-trama.webp — la pieza oficial del festival para esta actividad en su cartelera (base v5, 7 oct) — lámina 4:5: 6 % de recorte por lado y estirón (regla SiembraFest)"
+  },
+  {
+   "titulo": "Contrafrente",
+   "sinopsis": "Un nuevo comienzo, un pasado trágico y la esperanza de ayudar terminan convirtiendo al protagonista en el causante de un problema sin solución. Sean Daniel Quinn envuelve un drama ordinario en fantasmas atemporales, regalándonos una mirada al pasado a través de una herida que nunca termina de cerrar.",
+   "_sinopsis": "texto del festival, verbatim, en su nota «Selección Cortometrajes Latinoamericanos» (https://festivalfantasmagoriamedellin.com/noticias/seleccion-cortometrajes-latinoamericanos/), leída el 10 oct 2026"
   }
  ],
  "verificadas": {
@@ -1749,7 +1932,6 @@
    "poster_path": "/fhvA2plccJRbTQgL6HRAAUPhPic.jpg",
    "synopsis_es": "Valentina, una cosmonauta rusa de 76 años, llega a una Cuba ucrónica y nebulosa tras recibir, con treinta años de retraso, una invitación para una expedición agrícola a Marte. Entre paisajes difusos y promesas del pasado, busca las ruinas de un futuro que nunca llegó.",
    "synopsis_en": "",
-   "genero": "",
    "anio_tmdb": 2025,
    "duracion_tmdb": 15,
    "pais_tmdb": "",
@@ -1795,7 +1977,11 @@
     }
    ],
    "poster": "/assets/fantasmagoria-2026/chaika.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "genero": "Ciencia Ficción",
+   "_heredado": {
+    "genero": "catálogo w_R4EP71550W43 (bhff-2026, cineautopsia-2026, fantasmagoria-2026, fantasofest-2026, ficica-2026, ficpa-2026, narrarelfuturo-2026, popayan-2026)"
+   }
   },
   "Coração das Trevas (Heart of Darkness)": {
    "tmdb_id": 588801,
@@ -1903,7 +2089,7 @@
    "lbSlug": "fight-against-evil-3",
    "_verificado": "declarada a mano: TMDB «Fight Against Evil 3» (东北警察故事3): Yang Bingjia, 2026, 100 min, China — los cuatro datos del festival. La búsqueda por la romanización del festival no la devuelve.",
    "_director": "Bingjia Yang",
-   "_sondeado": "2026-10-07",
+   "_sondeado": "2026-10-20",
    "poster": "/assets/fantasmagoria-2026/dong-bei-jing-cha-gu-shi-3-fight-against-evil-3.jpg",
    "posterSource": "tmdb"
   },
@@ -1923,7 +2109,9 @@
    "_director": "Danny Piñeros",
    "_sondeado": "2026-09-29",
    "poster": "/assets/fantasmagoria-2026/don-t-watch-this.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "sinopsis": "Una mujer se da cuenta, poco a poco, de que es un personaje de una película. Mientras se hunde en el terror, todos a su alrededor la tachan de delirante, sin saber que ella es la única que sabe que la estamos viendo.",
+   "_sinopsis": "traducción nuestra con contexto (Content Design, 10 oct 2026) de la sinopsis oficial en inglés: https://www.themoviedb.org/movie/1493377"
   },
   "Dormilón": {
    "tmdb_id": 1426072,
@@ -1941,7 +2129,9 @@
    "_director": "Olivia Marie Valdez",
    "_sondeado": "2026-09-29",
    "poster": "/assets/fantasmagoria-2026/dormilon.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "sinopsis": "Dormilón cuida con cariño el cine abandonado que convirtió en su hogar. Cada noche graba sus sueños, en los que es la estrella del teatro y no su antiguo conserje. Una noche de tormenta, la vida que ha construido con tanto cuidado se tambalea cuando sus pesadillas se acumulan y lo enfrentan. Dormilón tendrá que vencer sus miedos y aceptar sus inseguridades para ser una versión más completa de sí mismo.",
+   "_sinopsis": "traducción nuestra con contexto (Content Design, 10 oct 2026) de la sinopsis oficial en inglés: https://www.themoviedb.org/movie/1426072"
   },
   "Dèmoni": {
    "tmdb_id": 14029,
@@ -2098,7 +2288,7 @@
    "lbSlug": "herencia-2025-1",
    "_verificado": "declarada a mano: Cristóbal Miranda Cáceres, 2025, la misma dirección y año. TMDB no da duración.",
    "_director": "Cristóbal Miranda Cáceres",
-   "_sondeado": "2026-10-07",
+   "_sondeado": "2026-10-20",
    "poster": "/assets/fantasmagoria-2026/herencia.jpg",
    "posterSource": "tmdb"
   },
@@ -2153,7 +2343,9 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Huasi",
    "_director": "Juan Sebastian Torales",
-   "_sondeado": "2026-09-29"
+   "_sondeado": "2026-09-29",
+   "sinopsis": "Dos hombres atraviesan el bosque en busca de un objeto misterioso, mientras en una casa abandonada una mujer llorosa no se conmueve con las palabras de consuelo de su compañero. Un cortometraje atmosférico y metafísico que apela más a los sentidos que al intelecto y que, aun así, plantea una pregunta: ¿salvar a un ser humano es salvar a toda la humanidad?",
+   "_sinopsis": "traducción nuestra con contexto (Content Design, 10 oct 2026) de la sinopsis oficial en inglés: https://www.themoviedb.org/movie/1655535"
   },
   "Huo zhe yan (The Furious)": {
    "tmdb_id": 1280738,
@@ -2225,8 +2417,31 @@
    "lbSlug": "crystal-iris",
    "_verificado": "declarada a mano: TMDB «Crystal Iris» (Iris de Cristal): Diego Gaviria, Colombia, 2024, 13 min, la única obra con ese título. El programa 2026 no da la dirección; el propio Fantasmagoría la programó en 2025 como «Iris de cristal de Diego Gaviria», y esta función es su proyección con autodescripción (Narrafilms). Ligada por decisión de Juan (30 sep).",
    "_director": "",
-   "_sondeado": "2026-10-07",
+   "_sondeado": "2026-10-20",
    "poster": "/assets/fantasmagoria-2026/iris-de-cristal.jpg",
+   "posterSource": "tmdb",
+   "director_heredado": "Diego Gaviria",
+   "_heredado": {
+    "director_heredado": "catálogo w_R4G651V5H1G6 (bhff-2026, fantasmagoria-2026)",
+    "pais_heredado": "catálogo w_R4G651V5H1G6 (bhff-2026, fantasmagoria-2026)"
+   },
+   "pais_heredado": "Colombia"
+  },
+  "Kondor, El Mago": {
+   "tmdb_id": 1558429,
+   "titulo_original": "Kondor, El Mago",
+   "poster_path": "/ybJBPMtuVtnkW6MFgxsdjhxJfZC.jpg",
+   "synopsis_es": "En el Parque Nacional de Bogotá¸ pasean unos sujetos que se cruzan con los integrantes de un paseo¸ posteriormente se encuentran con una niña que desea hacer una llamada y pide a los sujetos le cambien una moneda¸ se dirige al teléfono y llama¸ entre tanto los del paseo pasan frente a unos enamorados que se besan burlándose de ellos. Los enamorados disgustados se retiran mientras los del paseo siguen su trayectoria para realizar su piquete. Entre tanto un raponero se da cuenta que la niña que llama por teléfono posee un bolso¸ acercándose lo rapta y sale a toda velocidad y ella detrás gritando: pasan frente a un mago que se encuentra leyendo una de sus magias y pone en práctica una de ellas deteniendo al raponero y haciéndolo retroceder¸ se incorpora y devuelve el bolso a la niña¸ en ese instante se acercan los sujetos que antes habían cambiado la moneda a la niña y felicitan al mago por su oportuna acción.",
+   "synopsis_en": "",
+   "genero": "Fantasía",
+   "anio_tmdb": 1975,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "kondor-el-mago",
+   "_verificado": "declarada a mano: la doble de Jairo Pinilla del 22 oct (Archivo Fantasmagoría) junta dos obras; TMDB tiene «Kondor, El Mago» (Jairo Pinilla, Colombia, 1975) con afiche. Verificado a mano el 8 oct.",
+   "_director": "Jairo Pinilla",
+   "_sondeado": "2026-10-20",
+   "poster": "/assets/fantasmagoria-2026/kondor-el-mago.jpg",
    "posterSource": "tmdb"
   },
   "La Caça": {
@@ -2260,7 +2475,9 @@
    "lbSlug": "the-flower-of-fear",
    "_verificado": "declarada a mano: TMDB «The Flower of Fear»: Jorge Florez Arcila, la misma dirección; ganó en Oldenburg 2025 con ese título. TMDB no tiene año NI duración, así que el candado no puede corroborar: se declara a mano (decisión de Juan, 30 sep).",
    "_director": "Jorge Flórez Arcila",
-   "_sondeado": "2026-10-07"
+   "_sondeado": "2026-10-20",
+   "sinopsis": "Un niño colombiano de 10 años es secuestrado por un grupo armado mientras juega en el bosque. Su madre lo busca desesperadamente y él, para protegerse, se refugia en un mundo de fantasía: un jardín oscuro y surreal donde a los niños los «siembran» y les hacen brotar flores de la cabeza, de las que sale un perfume conocido como el olor del miedo.",
+   "_sinopsis": "traducción nuestra con contexto (Content Design, 10 oct 2026) de la sinopsis oficial en inglés: https://filmfest-oldenburg.de/en/film/the-flower-of-fear"
   },
   "La Frecuencia Kirlian": {
    "tmdb_id": 1239261,
@@ -2348,7 +2565,9 @@
    "_director": "Martín André y Josefina Montino",
    "_sondeado": "2026-09-29",
    "poster": "/assets/fantasmagoria-2026/la-pena-no-duerme-de-noche.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "sinopsis": "Un hombre se aísla en el bosque con su gato. Los fantasmas de su pasado empiezan a atormentarlo y lo obligan a enfrentar sus miedos y sus culpas para no dejarse consumir por la locura.",
+   "_sinopsis": "traducción nuestra con contexto (Content Design, 10 oct 2026) de la sinopsis oficial en inglés: https://www.themoviedb.org/movie/1515864"
   },
   "La Sinfonía de los Bichos Raros": {
    "tmdb_id": 1776754,
@@ -2386,7 +2605,9 @@
    "_director": "Gustine Füdickar y Justin Streichman",
    "_sondeado": "2026-09-29",
    "poster": "/assets/fantasmagoria-2026/lady-puritan.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "sinopsis": "Mientras la vida onírica se filtra en la vigilia, una mujer acechada por su antepasada puritana debe enfrentar el terror enterrado en lo más hondo de su linaje.",
+   "_sinopsis": "traducción nuestra con contexto (Content Design, 10 oct 2026) de la sinopsis oficial en inglés: https://www.themoviedb.org/movie/1637564"
   },
   "Line 12": {
    "tmdb_id": 1493302,
@@ -2401,10 +2622,12 @@
    "lbSlug": "line-12",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Line 12",
-   "_director": "Saskia Stirn y Christopher Schmier",
-   "_sondeado": "2026-09-29",
+   "_director": "Sarah Schulz y Christopher Schmier",
+   "_sondeado": "2026-10-10",
    "poster": "/assets/fantasmagoria-2026/line-12.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "sinopsis": "En un mundo de montañas imponentes, Peregrin, un meticuloso conductor de tren, mantiene su máquina en marcha con precisión. Cuando la inquieta música Clara se cuela en la cabina, una catástrofe los obliga a superar sus diferencias para evitar el descarrilamiento.",
+   "_sinopsis": "BAFICI 28, ficha de la película (https://bafici.org/pelicula/line-12/), leída el 10 oct 2026; el mismo texto en TMDB es-MX"
   },
   "Lullaby": {
    "tmdb_id": 1730339,
@@ -2419,7 +2642,9 @@
    "lbSlug": "lullaby-2026-2",
    "_verificado": "declarada a mano: Helena Melin, 2026, la misma dirección y año. TMDB no da duración ni afiche.",
    "_director": "Helena Melin",
-   "_sondeado": "2026-10-07"
+   "_sondeado": "2026-10-20",
+   "sinopsis": "Una niña y su gato se enfrentan al duelo cuando una inquietante canción de cuna los arrastra a las profundidades de una mansión, de noche.",
+   "_sinopsis": "traducción nuestra con contexto (Content Design, 10 oct 2026) de la sinopsis oficial en inglés: https://www.galwayfilmfleadh.com/project/irish-animation-2/"
   },
   "Luz": {
    "tmdb_id": 498062,
@@ -2434,7 +2659,7 @@
    "lbSlug": "luz-2019-2",
    "_verificado": "declarada a mano: Tilman Singer, 70 min, Alemania (TMDB la fecha 2019; su estreno fue la Berlinale 2018, el año del festival). «Luz» es un título genérico: las demás «Luz» de TMDB tienen otra dirección.",
    "_director": "Tilman Singer",
-   "_sondeado": "2026-10-07",
+   "_sondeado": "2026-10-20",
    "poster": "/assets/fantasmagoria-2026/luz.jpg",
    "posterSource": "tmdb"
   },
@@ -2526,7 +2751,9 @@
    "_director": "Ariel de la Garza Davidoff y Michal Vojtech",
    "_sondeado": "2026-09-29",
    "poster": "/assets/fantasmagoria-2026/morana.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "sinopsis": "En las vacaciones de Semana Santa de comienzos de los años dos mil, Mathilde, una adolescente nihilista, recibe una maldición de su hermana: morir a manos de Morana, la mismísima diosa de la muerte.",
+   "_sinopsis": "traducción nuestra con contexto (Content Design, 10 oct 2026) de la sinopsis oficial en inglés: https://www.themoviedb.org/movie/1649572"
   },
   "Motherwitch": {
    "tmdb_id": 1461870,
@@ -2590,7 +2817,9 @@
    "_director": "Fabiano Barros",
    "_sondeado": "2026-09-29",
    "poster": "/assets/fantasmagoria-2026/mucura.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "sinopsis": "En una casa sofocante de Rondônia, Marta despierta paralizada. La noche toma formas, voces y presencias que invaden su cuerpo y su mente. Atrapada entre el delirio y la realidad, enfrenta una espiral de miedo, violencia y derrumbe en la que todo a su alrededor parece brotar de su interior.",
+   "_sinopsis": "traducción nuestra con contexto (Content Design, 10 oct 2026) de la sinopsis oficial en inglés: https://www.themoviedb.org/movie/1774280"
   },
   "No Vacancy": {
    "tmdb_id": 1461232,
@@ -2608,7 +2837,9 @@
    "_director": "Miguel Rodrick",
    "_sondeado": "2026-09-29",
    "poster": "/assets/fantasmagoria-2026/no-vacancy.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "sinopsis": "La mente de Jack se desmorona, retratada a través de un motel en ruinas. Atraviesa noches caóticas de llamadas misteriosas, huéspedes problemáticos, humillaciones de la infancia y batallas con la adicción.",
+   "_sinopsis": "traducción nuestra con contexto (Content Design, 10 oct 2026) de la sinopsis oficial en inglés: https://www.themoviedb.org/movie/1461232"
   },
   "No es el Fin del Mundo": {
    "tmdb_id": 1786249,
@@ -2624,7 +2855,7 @@
    "anio": 2025,
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 1 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas: título, filmografía del director, Letterboxd): Sebastián Flórez, 2025 (ficha de Macabro 2026: «CORTO INT · Colombia · 2025»; publicábamos 2026), 17 min, Colombia, Terror (apocalipsis zombi), sinopsis de Macabro y su afiche oficial recortado arriba y abajo a 2:3. Letterboxd: no-es-el-fin-del-mundo. El género se declara aquí porque la API de TMDB tardaba en servir la ficha recién editada; es el mismo que cargamos en TMDB.",
    "_director": "Sebastián Flórez",
-   "_sondeado": "2026-10-07",
+   "_sondeado": "2026-10-20",
    "poster": "/assets/fantasmagoria-2026/no-es-el-fin-del-mundo.jpg",
    "posterSource": "tmdb"
   },
@@ -2688,10 +2919,10 @@
    "pais_tmdb": "Colombia",
    "title_en": "Pure Blood",
    "lbSlug": "pure-blood-1982",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Pura Sangre",
+   "_verificado": "el catálogo ya la tiene (w_R4GFC0AMPBK7, fantasmagoria-2026, girardota-2026)",
+   "work_id": "w_R4GFC0AMPBK7",
    "_director": "Luis Ospina",
-   "_sondeado": "2026-09-29",
+   "_sondeado": "2026-10-19",
    "_ya_publicada": [
     {
      "festival": "girardota-2026",
@@ -2700,6 +2931,11 @@
      "poster": "/assets/girardota-2026/pura-sangre.jpg",
      "posterSource": "tmdb",
      "lbSlug": "pure-blood-1982",
+     "country": "Colombia",
+     "year": 1982,
+     "duration": "90 min",
+     "genre": "Crimen",
+     "synopsis_en": "Roberto Hurtado suffers from a rare disease that requires massive transfusions of blood from children or adolescents. His son blackmails three employees to get blood for him and they resort to unscrupulous methods to obtain it.",
      "sinopsis": "Roberto Hurtado, potentado azucarero del Valle del Cauca, padece una extraña enfermedad que lo obliga a permanentes transfusiones sanguíneas para sobrevivir. La sangre proviene de jóvenes cazados por el macabro grupo que integran Florencia, Perfecto y Ever, bajo la dirección de Adolfo, hijo del magnate enfermo. Las víctimas mueren desangradas, no sin antes verse sometidas a terribles vejaciones por parte de sus desalmados captores. El terror reina en la ciudad.  Está película está dedicada a la memoria de Andrés Caicedo."
     }
    ],
@@ -2720,7 +2956,7 @@
    "anio": 2023,
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 1 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas: título, filmografía del director, Letterboxd): Alejandro Vargas, 2023 (Bogoshorts 2023 la programó; publicábamos 2026, el año del festival), 20 min, Colombia, Ciencia ficción (por la sinopsis), sinopsis del festival y su afiche oficial. Letterboxd: quazar. El género se declara aquí porque la API de TMDB tardaba en servir la ficha recién editada; es el mismo que cargamos en TMDB.",
    "_director": "Alejandro Vargas",
-   "_sondeado": "2026-10-07",
+   "_sondeado": "2026-10-20",
    "poster": "/assets/fantasmagoria-2026/quazar.jpg",
    "posterSource": "tmdb"
   },
@@ -2729,7 +2965,6 @@
    "titulo_original": "Que el cielo nos perdone",
    "poster_path": "/fyvT3ZlgNJO5lswCC8XdXkXFVnB.jpg",
    "synopsis_es": "Colombia, 1951: En medio de La Violencia, el período de brutal guerra política entre liberales y conservadores, un par de chulavitas –asesinos a sueldo pagados por el gobierno– acechan a un sacerdote en la oscuridad de la noche, esperando que los conduzca a la cabaña en el bosque en donde se esconden sus próximas víctimas. Pero el horror que encontrarán allí es mil veces peor que el dolor que pensaban infligir.",
-   "synopsis_en": "",
    "genero": "Terror",
    "anio_tmdb": 2025,
    "duracion_tmdb": 0,
@@ -2766,7 +3001,11 @@
     }
    ],
    "poster": "/assets/fantasmagoria-2026/que-el-cielo-nos-perdone.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "synopsis_en": "Colombia, 1951. In the thick of La Violencia, the period of brutal political war between Liberals and Conservatives, two chulavitas —hired killers on the government’s payroll— stalk a priest through the dark, waiting for him to lead them to the cabin in the woods where their next victims are hiding. But the horror they find there is a thousand times worse than the pain they meant to inflict.",
+   "_heredado": {
+    "synopsis_en": "catálogo w_R4GP49AWA2ZH (bhff-2026, fantasmagoria-2026, ficica-2026, ficma-2026, siembrafest-2026, villadelcine-2026)"
+   }
   },
   "Remembrance of Night Whispers": {
    "tmdb_id": 1671522,
@@ -2784,7 +3023,9 @@
    "_director": "Lucien Leung",
    "_sondeado": "2026-09-29",
    "poster": "/assets/fantasmagoria-2026/remembrance-of-night-whispers.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "sinopsis": "Un joven vislumbra el pasado enigmático de su difunto padre.",
+   "_sinopsis": "traducción nuestra con contexto (Content Design, 10 oct 2026) de la sinopsis oficial en inglés: https://www.themoviedb.org/movie/1671522"
   },
   "Rio Bravo": {
    "tmdb_id": 301,
@@ -2803,6 +3044,22 @@
    "_sondeado": "2026-09-29",
    "poster": "/assets/fantasmagoria-2026/rio-bravo.jpg",
    "posterSource": "tmdb"
+  },
+  "Robo Macabro": {
+   "tmdb_id": 939823,
+   "titulo_original": "Robo Macabro",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "Two grave robbers are ready to commit their misdeeds without expecting the little surprise that awaits them.",
+   "genero": "Terror",
+   "anio_tmdb": 1982,
+   "duracion_tmdb": 10,
+   "pais_tmdb": "",
+   "lbSlug": "robo-macabro",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_director": "Jairo Pinilla",
+   "_sondeado": "2026-10-19",
+   "_afiche_rechazado": "TMDB /3HM13mmdNbSiKIuyBpH1vZwz9H1.jpg: fotograma según el catálogo (w_BCSJ1Z4J99ED)"
   },
   "Saluda al Diablo de Mi Parte": {
    "tmdb_id": 85768,
@@ -2840,6 +3097,35 @@
    "_director": "Akira Kurosawa",
    "_sondeado": "2026-09-29",
    "poster": "/assets/fantasmagoria-2026/schichinin-no-samurai-seven-samurai.jpg",
+   "posterSource": "tmdb"
+  },
+  "Siempre Hay un Monstruo": {
+   "tmdb_id": 1794456,
+   "titulo_original": "Siempre hay un Monstruo",
+   "poster_path": "/y86znNNqzkzwJSMXwcFCcoJ4mpN.jpg",
+   "synopsis_es": "Un grupo de agentes investiga un incidente ocurrido durante una fiesta privada en la casa de un joven actor. Lo que comienza como un caso rutinario se convierte rápidamente en el caso más monstruoso y aterrador de sus vidas.",
+   "synopsis_en": "",
+   "genero": "Terror",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 16,
+   "pais_tmdb": "",
+   "lbSlug": "siempre-hay-un-monstruo",
+   "_verificado": "el catálogo ya la tiene (w_R4GNQ1TN3A5H, bhff-2026, fantasmagoria-2026)",
+   "work_id": "w_R4GNQ1TN3A5H",
+   "_director": "Gaston Haag",
+   "_sondeado": "2026-10-15",
+   "_ya_publicada": [
+    {
+     "festival": "bhff-2026",
+     "titulo": "Siempre hay un monstruo",
+     "tmdb_id": 1794456,
+     "poster": "/assets/bhff-2026/siempre-hay-un-monstruo.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "siempre-hay-un-monstruo",
+     "sinopsis": "Un grupo de agentes investiga un incidente ocurrido durante una fiesta privada en la casa de un joven actor. Lo que comienza como un caso rutinario se convierte rápidamente en el caso más monstruoso y aterrador de sus vidas."
+    }
+   ],
+   "poster": "/assets/fantasmagoria-2026/siempre-hay-un-monstruo.jpg",
    "posterSource": "tmdb"
   },
   "Siu Lam Juk Kau -Shaolin Soccer": {
@@ -2950,6 +3236,25 @@
    "_director": "Radheya Jang",
    "_sondeado": "2026-09-29",
    "poster": "/assets/fantasmagoria-2026/trading-cards.jpg",
+   "posterSource": "tmdb",
+   "sinopsis": "Un hombre enigmático viaja al pasado para encontrar a su yo de niño, en apariencia para revivir la nostalgia de las cartas coleccionables. Una exploración de la identidad, la salud mental y la pérdida de la inocencia: Trading Cards es un corto animado de fantasía oscura sobre el peso de vivir con un trastorno obsesivo-compulsivo.",
+   "_sinopsis": "traducción nuestra con contexto (Content Design, 10 oct 2026) de la sinopsis oficial en inglés: https://www.themoviedb.org/movie/1616600"
+  },
+  "Ubicua": {
+   "tmdb_id": 1794425,
+   "titulo_original": "Ubicua",
+   "poster_path": "/cVJGywwUIUXNgtMSEZzNzIvDvGU.jpg",
+   "synopsis_es": "Quién no se ha visto en las altas horas de la noche, cayendo en un agujero de conejo virtual que nos atrapa por horas en vez de hacer nuestras labores?… Que tal que ese tema se convirtiera en realidad? Un relato de terror digital que estremecerá a todos los trabajadores independientes.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 13,
+   "pais_tmdb": "",
+   "lbSlug": "ubicua",
+   "_verificado": "declarada a mano: Ficha CREADA por nosotros el 11 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas) con los datos y el afiche original que publica el festival.",
+   "_director": "Juan González Henao",
+   "_sondeado": "2026-10-20",
+   "poster": "/assets/fantasmagoria-2026/ubicua.jpg",
    "posterSource": "tmdb"
   },
   "Vida": {
@@ -2965,7 +3270,7 @@
    "lbSlug": "vida-2016",
    "_verificado": "declarada a mano: Carlos Santiago Amézquita Villamizar, 2016: la dirección completa y el año de la ficha de la página de largometrajes. TMDB no da duración.",
    "_director": "Carlos Amézquita",
-   "_sondeado": "2026-10-07",
+   "_sondeado": "2026-10-20",
    "poster": "/assets/fantasmagoria-2026/vida.jpg",
    "posterSource": "tmdb"
   },
@@ -2986,6 +3291,11 @@
    "_sondeado": "2026-09-29",
    "poster": "/assets/fantasmagoria-2026/you-are-the-film.jpg",
    "posterSource": "tmdb"
+  },
+  "Taller Fantasmagoritos con la Corporación Trama": {
+   "poster": "/assets/fantasmagoria-2026/taller-fantasmagoritos-con-la-corporacion-trama.jpg",
+   "posterSource": "custom",
+   "_afiche": "declarado: https://wggmrznxnzyoufcnzdef.supabase.co/storage/v1/object/public/posters/eventos/taller-fantasmagoritos-trama.webp — la pieza oficial del festival para esta actividad en su cartelera (base v5, 7 oct) — lámina 4:5: 6 % de recorte por lado y estirón (regla SiembraFest)"
   }
  },
  "sin_ficha": [
@@ -2993,98 +3303,98 @@
   "Cortometrajes colombianos que miran al cielo",
   "Cortometrajes en competencia: deliberación del Jurado Infantil",
   "Cortometrajes y Taller Fantasmagoritos con la Corporación Trama",
+  "El Cigarro Mortal",
   "Fantascátedra – Muestra Cortometrajes universitarios de Medellín",
   "Función Grindhouse: Selección Oficial de Cortometrajes",
   "HDLT",
   "Kondor, El Mago + El Cigarro Mortal de Jairo Pinilla",
   "Muestra Catalana: Cortometrajes C-Trencada",
   "Muestra Fantasmagoritos: Cortometrajes infantiles",
+  "Robo Macabro + Pura Sangre",
   "Selección Oficial de Cortometrajes",
   "Selección Oficial de Cortometrajes Colombianos",
   "Selección Oficial de Cortometrajes Latinoamericanos",
   "Selección Oficial de Cortometrajes de Animación",
   "Selección Oficial de Cortometrajes de Animación + Cortometrajes de Macondo",
   "Selección oficial de cortometrajes latinoamericanos",
-  "Siempre Hay un Monstruo",
-  "Ubicua",
   "Vientre"
  ],
  "_sin_ficha_sondeo": {
   "Contrafrente": {
    "director": "Sean Quinn",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-15"
   },
   "Cortometrajes colombianos que miran al cielo": {
    "director": "",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-15"
   },
   "Cortometrajes en competencia: deliberación del Jurado Infantil": {
    "director": "",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-15"
   },
   "Cortometrajes y Taller Fantasmagoritos con la Corporación Trama": {
    "director": "",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-15"
+  },
+  "El Cigarro Mortal": {
+   "director": "Jairo Pinilla",
+   "fecha": "2026-10-15"
   },
   "Fantascátedra – Muestra Cortometrajes universitarios de Medellín": {
    "director": "",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-15"
   },
   "Función Grindhouse: Selección Oficial de Cortometrajes": {
    "director": "",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-15"
   },
   "HDLT": {
    "director": "ARTEFACTUM SUBA",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-15"
   },
   "Kondor, El Mago + El Cigarro Mortal de Jairo Pinilla": {
-   "director": "Jairo Pinilla",
-   "fecha": "2026-10-07"
+   "director": "",
+   "fecha": "2026-10-15"
   },
   "Muestra Catalana: Cortometrajes C-Trencada": {
    "director": "",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-15"
   },
   "Muestra Fantasmagoritos: Cortometrajes infantiles": {
    "director": "",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-15"
+  },
+  "Robo Macabro + Pura Sangre": {
+   "director": "",
+   "fecha": "2026-10-19"
   },
   "Selección Oficial de Cortometrajes": {
    "director": "",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-15"
   },
   "Selección Oficial de Cortometrajes Colombianos": {
    "director": "",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-15"
   },
   "Selección Oficial de Cortometrajes Latinoamericanos": {
    "director": "",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-15"
   },
   "Selección Oficial de Cortometrajes de Animación": {
    "director": "",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-15"
   },
   "Selección Oficial de Cortometrajes de Animación + Cortometrajes de Macondo": {
    "director": "",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-15"
   },
   "Selección oficial de cortometrajes latinoamericanos": {
    "director": "",
-   "fecha": "2026-10-07"
-  },
-  "Siempre Hay un Monstruo": {
-   "director": "Gaston Haag",
-   "fecha": "2026-10-07"
-  },
-  "Ubicua": {
-   "director": "Juan González Henao",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-15"
   },
   "Vientre": {
    "director": "Pablo Sánchez Mejía y Moisés Cataño Rivillas",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-15"
   }
  }
 }

@@ -134,8 +134,12 @@
  "films": [
   {
    "_tipo": "Tipo 1 — Largometraje (una función). Misma obra con 2 funciones = 2 entradas, mismo title.",
+   "id": "f_0123456789",
+   "_id_nota": "Id estable de la función (docs/FUNCION.md §11). NO se escribe a mano: lo asigna el ensamblador desde festivals/staging/<fid>-funciones-ids.json y sobrevive a cambios de hora, sala, sede y título.",
    "title": "Título con el que se exhibe",
    "title_en": "English title (si difiere)",
+   "titulos_anteriores": [],
+   "_titulos_anteriores_nota": "NO se escribe a mano: lo pone el ensamblador desde festivals/staging/<fid>-titulos-anteriores.json cuando una obra o actividad cambia de título, para que la app migre lo guardado (domain/titulos.js).",
    "type": "film",
    "director": "Nombre Director",
    "year": 2026,
@@ -311,7 +315,9 @@
    "is_cortos": false,
    "film_list": null,
    "event_kind": "",
-   "_event_kind_nota": "Opcional: 'ponencia' | 'masterclass' | 'encuentro' | 'cineconcierto'. Controla el poster generativo."
+   "_event_kind_nota": "Opcional: 'ponencia' | 'masterclass' | 'encuentro' | 'cineconcierto'. Controla el poster generativo.",
+   "hasta": "",
+   "_hasta_nota": "Solo con info:true (actividad abierta: exposición, instalación). Último día YYYY-MM-DD, recortado a las fechas oficiales: UNA función, la app la abre día por día (#1229)."
   }
  ],
  "displayName": "",

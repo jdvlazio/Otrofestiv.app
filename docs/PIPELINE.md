@@ -665,6 +665,36 @@ así que el sidecar no puede aprobarse a sí mismo—. Toda obra publicada sin
 silencio.** Alcanza solo a los festivales cuyo sidecar declara `_cobertura`; se
 adopta festival por festival, sin inventar deuda retroactiva.
 
+**Tres reglas más de la misma semana (9 oct 2026), una por cada error que
+Juan vio en la app:**
+
+- `[programa-sin-desglosar]`: una función «A + B» publicada como una sola obra
+  es un error en los festivales vivos (Rodilla Negra + El Coloso; la doble de
+  Pinilla): va como programa con `film_list`, cada obra con su ficha.
+- `[proyeccion-que-es-actividad]`: una obra cuyo título empieza por
+  presentación, lanzamiento, conversatorio, charla, taller, panel o clase
+  magistral se clasifica a mano (Mamut publicó la presentación de *Cuadernos de
+  Cine* como proyección).
+- **Lo publicado no se pierde porque la fuente lo calle:** `ensamblar.py`
+  rellena de `festivals/<id>.json` los campos conservables (director, año,
+  duración, país, sinopsis, género) que la fuente dejó de dar, y lo anota en
+  `_conservado`. Lo que la fuente sí dice, manda.
+- **Y antes de publicar se MIRA la app:** `node scripts/capturas-festival.js
+  <id>` deja en `fuentes/capturas/<id>/` el Programa, una ficha, Intereses y Mi Plan a
+  390×844; las capturas van a Juan junto con la hoja de contacto. MAPISTAS se
+  veía en la pantalla, no en el dato.
+
+**Y desde el 8 oct de 2026 ya no es opcional: la exige el publicador.** Ficcali
+salió a producción con 23 obras sin afiche —*El Coloso*, *Minotauro*, *En
+construcción*, todas en TMDB— porque la lista `sin_ficha` del enriquecido
+existía y nadie la miró; lo vio Juan en la app. `pipeline/publicar.py` se niega
+a publicar una obra sin `poster` que ninguna declaración cubra: o su ficha en
+`fichas` de `-correcciones.json`, o su porqué en `sin_afiche` del mismo archivo
+(por título de obra o de su programa, que cubre a sus obras), o la
+`_cobertura.destino` de un sidecar. `[afiche-cobertura]` lee las dos fuentes.
+`--forzar` sigue siendo el escape, a mano y con el OK de Juan. Lo que nadie
+miró no se publica.
+
 **Decimoquinto: `[arquetipo-existe]` — el color que no existe se pinta gris.**
 `[seccion-sin-arquetipo]` comprueba que la sección ESTÉ en `SECTION_ARCHETYPES`.
 Nadie comprobaba que el arquetipo asignado sea uno de los NUEVE que tienen
@@ -1360,6 +1390,27 @@ tiene huecos. CineAutopsia fue la excepción.
 guardián ignora los festivales legacy con rótulos en vez de fechas ISO (Leviza).
 
 
+### `[caja-titulo]` — programas y secciones en Título
+
+Regla de Juan (15 oct 2026): «Muestra de Cortos», «Selección Oficial de
+Cortometrajes Latinoamericanos», «Colombia Viva». Las palabras son del festival
+y la caja de la app: mayúscula en las palabras con peso y conectores en
+minúscula, como pide la RAE para nombres de eventos y colecciones. Los títulos
+de obra —también las uniones «Obra + Obra»— van tal cual, en sentence case.
+Un dueño, `pipeline/caja.py`: lo aplica `ensamblar.py` en cada montaje,
+`pipeline/caja-titulo.py --escribir` sobre lo ya publicado (con
+`titulos_anteriores` para no perder lo guardado) y `validate.py` lo vigila.
+`[renombre-no-se-borra]` compara cada `-titulos-anteriores.json` contra `main`: un renombre que estaba no puede desaparecer (17 oct 2026, #1146 — reescribir el sidecar en vez de sumarle se llevaba el de «Voilà Varda»). Se agrega, nunca se reescribe.
+Festivales en otro idioma (Olhar, Tribeca, TIFF) quedan fuera.
+
+### `[inicio-obra]` — la obra empieza dentro de su función
+
+`film_start` es la hora en que empieza la OBRA cuando la función abre antes
+(Parapeto, BHFF 2026: la web dice 19:00 y la pieza de IG 19:30). Solo informa:
+la ficha muestra el aviso «Inicio»; la card y el plan siguen con `time`
+(decisión de Juan, 15 oct 2026). `scripts/validate-festivals.js` bloquea un
+`film_start` que no caiga después de `time` y antes de que termine la función.
+
 ### `[genero-unico]` — una obra, un género, y de los comunes
 
 **Regla (Juan, 24 ago 2026):** cada obra declara **un solo género**: el
@@ -1399,3 +1450,5 @@ Sin reconocerlas, 28 obras se quedaban sin género **teniendo uno**.
 vocabulario → **warning**, porque puede ser una etiqueta colada… o un género
 legítimo que falte en `_GENRE_EN`, y esa decisión es de quien monta.
 
+
+`[preonboarding-completo]` (18 oct 2026): un festival que todavía no salió y ya tiene `<fid>-catalogo.json` no pasa si alguna obra no tiene afiche ni su porqué (`sin_afiche`). `python3 pipeline/preonboarding.py`; deuda en `pipeline/preonboarding-deuda.json`, solo baja. Lo publicado lo vigila `[afiche-cobertura]`.

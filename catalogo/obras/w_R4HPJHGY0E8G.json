@@ -1,0 +1,42 @@
+{
+ "id": "w_R4HPJHGY0E8G",
+ "titulo_original": "O menino e o mundo",
+ "anio": 2013,
+ "paises": [
+  "BR"
+ ],
+ "directores": [
+  "Alê Abreu"
+ ],
+ "aliases": [
+  {
+   "titulo": "Boy & the World",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "Un niño que sufre por la falta de un padre deja su aldea y descubre un mundo fantástico, dominado por animales-máquina y seres extraños. Película de animación extraordinaria, con muchas técnicas distintas, que aborda los problemas del mundo moderno a través de los ojos de un niño.",
+  "en": "Suffering because of his father's departure to the big city, a boy leaves his village and discovers a fantastic world dominated by bug-engines and strange beings. An unusual animation with various artistic techniques that portrays the issues of the modern world through the eyes of a child."
+ },
+ "generos": [
+  "Animación"
+ ],
+ "afiche": {
+  "archivo": "/assets/ficma/o-menino-e-o-mundo.jpg",
+  "veredicto": "oficial"
+ },
+ "xref": {
+  "tmdb": 223706,
+  "letterboxd": "boy-the-world"
+ },
+ "versiones": [
+  {
+   "etiqueta": "80 min",
+   "duracion_min": 80
+  }
+ ],
+ "presentaciones": [
+  "ficma-2026"
+ ]
+}

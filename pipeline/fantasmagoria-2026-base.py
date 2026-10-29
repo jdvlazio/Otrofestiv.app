@@ -79,6 +79,7 @@ SEDES = {
     'La Villa': 'Nueva Villa de Aburrá',
     # el mismo punto: Google Maps lo llama «Silencio y Ruido» (ver -venues-geo)
     'Bar Silencio Ruido': 'Silencio',
+    'Bar Silencio / Ruido': 'Silencio',     # así lo escribe la v5 (7 oct)
     'Parque de los Deseos': 'Parque de los Deseos',
     'Universidad Luis Amigó': 'Universidad Católica Luis Amigó',
     'La Comarca': 'La Comarca',
@@ -88,6 +89,18 @@ SEDES = {
     'Instituto Alexander von Humboldt': 'Instituto Cultural Alexander von Humboldt',
 }
 # la sala: la de la base, salvo las que no son una sala
+# LA LÁMINA DE IG MANDA SOBRE LA BASE cuando se contradicen (Juan, 11 oct: «si
+# publicaron hace poco en IG, confiemos en esa información»). Las 28 láminas de
+# la programación oficial (p/DeX20XnlD0R, p/DeX4HHplB6z, 11 oct, ~1:40 p. m.)
+# salieron después de la base v19 (12:57 p. m.). (título en la base, fecha, hora) → hora.
+HORA_IG = {
+    ('You Are The Film', '2026-10-22', '18:30'): '18:40',
+    # «Ana Rosa» ya NO se mueve a las 18:00 (15 oct): la lámina 10 del post del
+    # Colombo Americano del 14 oct (DefDK-RlLH5) dice «Miércoles 21 oct, 5:00 p.m.»,
+    # igual que la base v21; la de las 18:00 era la lámina del 11 oct
+    ('You Are The Film', '2026-10-23', '16:00'): '18:30',
+    ('Brujas, Espectros y Otros Fantasmas', '2026-10-23', '21:30'): '21:00',
+}
 SALA = {'Sala por confirmar': '', 'Transmisión en línea': '', 'San Ignacio': '',
         'Mediateca (San Ignacio)': 'Mediateca', 'Librerías y café (Laureles)': '',
         'Paraninfo UdeA': ''}   # repite la sede
@@ -124,6 +137,26 @@ def parecido(a, b):
     return max(difflib.SequenceMatcher(None, a, b).ratio(), len(wa & wb) / max(1, min(len(wa), len(wb))))
 
 
+# LA DOBLE DE JAIRO PINILLA (Archivo Fantasmagoría, 22 oct) junta dos obras en un
+# registro: se publican como programa, cada una con su ficha. Antes era UNA obra
+# y ninguna de las dos se buscaba en TMDB (8 oct).
+OBRAS_DOBLE = {
+    '2026-10-22-17-00-kondor-el-mago-el-cigarro-mortal-de-jairo-pinilla': [
+        # 12 min: filmografía de Cuadernos de Cine Colombiano n.º 8 (Cinemateca
+        # Distrital), «Cóndor, el mago», 1975, 35 mm; TMDB lo tiene en 0
+        {'titulo': 'Kondor, El Mago', 'director': 'Jairo Pinilla', 'pais': 'Colombia', 'anio': 1975, 'duracion_min': 12},
+        {'titulo': 'El Cigarro Mortal', 'director': 'Jairo Pinilla', 'pais': 'Colombia'}],
+    # «Proyección especial» del 20 oct en la Plazoleta de la Luz (lámina 3 del
+    # post de IG DerwqxjlMye, 19 oct): Robo Macabro de Jairo Pinilla y Pura
+    # Sangre de Luis Ospina, una sola función a las 6:00 p. m.
+    '2026-10-20-18-30-pura-sangre': [
+        # 10 min: TMDB 939823 (1982, Jairo Pinilla); 98: la corrección ya
+        # publicada de Pura Sangre (retrospectiva Luis Ospina, cali.gov.co)
+        {'titulo': 'Robo Macabro', 'director': 'Jairo Pinilla', 'pais': 'Colombia', 'anio': 1982, 'duracion_min': 10},
+        {'titulo': 'Pura Sangre', 'director': 'Luis Ospina', 'pais': 'Colombia', 'anio': 1982, 'duracion_min': 98}],
+}
+
+
 def acceso(r):
     """La entrada de la base, con las palabras que ya usa el crudo."""
     txt = ' '.join([r.get('entrada') or ''] + (r.get('notas') or []))
@@ -153,6 +186,8 @@ def main():
     viejas = cr['funciones']
     fallos, usados, salida, nuevas, movidas = [], set(), [], [], []
     for r in sorted(base, key=lambda r: (r['fecha'], r['hora'])):
+        if (r['titulo'], r['fecha'], r['hora']) in HORA_IG:
+            r = {**r, 'hora': HORA_IG[(r['titulo'], r['fecha'], r['hora'])]}
         if r['sede'] not in SEDES:
             fallos.append(f'{r["fecha"]} {r["hora"]}: sede sin entrada en la tabla: {r["sede"]!r}')
             continue
@@ -169,6 +204,14 @@ def main():
                  # misma obra en otro día (Critters, que pasó del 18 al 17)
                  if i not in usados and parecido(r['titulo'], g['titulo']) >= 0.5]
         best = max(cands, key=lambda c: c[0], default=None)
+        # un título EXACTO que es único en la noticia y en la base es la misma
+        # función aunque la base la haya movido de día: manda la base en día y
+        # hora (Critters, del 18 a las 19:00 al 17 a las 17:00)
+        unicos = [(9, i, g) for i, g in enumerate(viejas)
+                  if i not in usados and plano(g['titulo']) == plano(r['titulo'])]
+        if (len(unicos) == 1 and sum(plano(g['titulo']) == plano(r['titulo']) for g in viejas) == 1
+                and sum(plano(b['titulo']) == plano(r['titulo']) for b in base) == 1):
+            best = unicos[0]
         if best and best[0] >= 1.6:
             usados.add(best[1])
             f = dict(best[2])
@@ -189,6 +232,18 @@ def main():
             f.update({'online': True, 'stream_url': crudo.STREAM_URL, 'stream_platform': 'Twitch'})
         if r.get('invitados') or any('presencia' in n.lower() for n in r.get('notas') or []):
             f['has_qa'], f['qa_type'] = True, 'team'
+        if r['id'] in OBRAS_DOBLE:
+            f['obras'] = [dict(o) for o in OBRAS_DOBLE[r['id']]]
+            f.pop('director', None)
+            # si la base titula la función con UNA de sus obras, el programa se
+            # llama con todas («A + B», como la doble de Kondor): con el nombre
+            # de una obra, la cascada le pegaría a la FUNCIÓN la ficha de esa
+            # obra (póster, director, año) y el programa saldría disfrazado de largo
+            if any(plano(f['titulo']) == plano(o['titulo'])
+                   for o in f['obras']):
+                f['titulo'] = ' + '.join(o['titulo'] for o in f['obras'])
+                for k in ('anio', 'genero', 'duracion_min', 'sinopsis'):
+                    f.pop(k, None)
         salida.append({k: v for k, v in f.items() if v not in (None, '')})
     fuera = [f'{g["dia"]} {g["hora"]} {g["titulo"][:60]}' for i, g in enumerate(viejas) if i not in usados]
 
@@ -197,6 +252,10 @@ def main():
         # (también una función de cine sin duración en la base: la doble de
         # Jairo Pinilla, «Kondor, El Mago + El Cigarro Mortal», no la trae)
         if f.get('duracion_min'):
+            continue
+        # un programa cuyas obras traen TODAS su duración dura su suma
+        if f.get('obras') and all(o.get('duracion_min') for o in f['obras']):
+            f['duracion_min'] = sum(o['duracion_min'] for o in f['obras'])
             continue
         ini = int(f['hora'][:2]) * 60 + int(f['hora'][3:])
         sig = sorted(int(g['hora'][:2]) * 60 + int(g['hora'][3:]) for g in salida

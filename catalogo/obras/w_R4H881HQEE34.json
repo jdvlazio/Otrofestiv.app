@@ -1,0 +1,48 @@
+{
+ "id": "w_R4H881HQEE34",
+ "titulo_original": "Caída libre",
+ "anio": 2024,
+ "paises": [
+  "CO"
+ ],
+ "directores": [
+  "Wilson Borja"
+ ],
+ "aliases": [
+  {
+   "titulo": "Caída Libre",
+   "tipo": "festival"
+  },
+  {
+   "titulo": "Free Fall",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "En el desesperado intento de escapar del aislamiento, un personaje sin rostro salta del borde esperando cambiar su realidad, sin saber que en el fondo de esa caída la ley de la gravedad no aplica para él, este personaje simplemente rebota.",
+  "en": "In a desperate attempt to escape isolation, a faceless character jumps from a ledge hoping to meet his end, unaware that at the bottom of the fall, the laws of gravity do not apply: he bounces back. Frustrated by this fact, he keeps trying in different scenarios, in a constant cycle. All this takes place in a desolate, polluted landscape devoid of resources."
+ },
+ "generos": [
+  "Animación"
+ ],
+ "afiche": {
+  "archivo": "/assets/anibia-2026/caida-libre.jpg",
+  "veredicto": "oficial"
+ },
+ "xref": {
+  "tmdb": 1487969,
+  "letterboxd": "caida-libre"
+ },
+ "versiones": [
+  {
+   "etiqueta": "9 min",
+   "duracion_min": 9
+  }
+ ],
+ "presentaciones": [
+  "anibia-2026",
+  "ficcali-2026",
+  "qaff-2026"
+ ]
+}

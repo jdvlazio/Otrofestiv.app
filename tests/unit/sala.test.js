@@ -71,3 +71,22 @@ test('venueLabel: sin sala, solo el edificio (sin separador colgando)', () => {
     'una sede fuera del mapa se dice tal cual: mejor eso que vacío');
   assert.strictEqual(venueLabel(''), '');
 });
+
+// La sala de LA FUNCIÓN (modelo de la función, docs/FUNCION.md §4): misma sede,
+// dos funciones, dos salas. BHFF 2026: «Sala Capital» y «Sala 2» de la
+// Cinemateca, publicadas por función y pintadas como «Cinemateca» a secas.
+test('la sala de la función manda: misma sede, dos salas', () => {
+  const { sala, venueLabel } = cargar();
+  const a = { venue: 'Teatro Adolfo Mejía', sala: 'Sala Capital' };
+  const b = { venue: 'Teatro Adolfo Mejía', sala: 'Sala 2' };
+  assert.strictEqual(sala(a), 'Sala Capital');
+  assert.strictEqual(sala(b), 'Sala 2');
+  assert.strictEqual(venueLabel(b), 'Teatro Adolfo Mejía · Sala 2');
+});
+
+test('función sin sala propia: la de su sede, como siempre', () => {
+  const { sala } = cargar();
+  assert.strictEqual(sala({ venue: 'Colombo Sala 2' }), 'Sala Tulio Ospina');
+  assert.strictEqual(sala({ venue: 'Plaza Bocagrande ‒ Sala 3', sala: '' }), 'Sala 3');
+  assert.strictEqual(sala({ venue: 'Teatro Adolfo Mejía' }), '');
+});

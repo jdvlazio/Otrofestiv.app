@@ -33,7 +33,7 @@ import time
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(REPO, 'pipeline'))
-from lib import provenance  # noqa: E402
+from lib import json_wp, provenance  # noqa: E402
 
 DIR = f'{REPO}/fuentes/ficcali-2026'
 SECCIONES = f'{DIR}/seleccion-secciones.json'
@@ -41,22 +41,42 @@ DESTINO = f'{REPO}/festivals/staging/ficcali-2026-catalogo.json'
 # FICHAS PROGRAMADAS FUERA DE LAS SUBPÁGINAS: la sección no tiene subpágina
 # (¡Que viva la música!), pero la obra está en la programación 2026 —el
 # lanzamiento del sáb 3 en La Tertulia— y su ficha existe
-EXTRA = {'https://ficcali.com/pelicula/para-vivir-el-implacable-tiempo-de-pablo-milanes/': '¡Que viva la música!'}
+EXTRA = {'https://ficcali.com/pelicula/para-vivir-el-implacable-tiempo-de-pablo-milanes/': '¡Que viva la música!',
+         # LAS FICHAS DE LOS PROGRAMAS (10 oct 2026). Existen en ficcali.com
+         # pero ninguna subpágina de la Selección las enlaza: sus obras salían
+         # sin sinopsis ni director aunque el festival los publica. Halladas
+         # por la API /wp-json/wp/v2/pelicula; la sección es el programa.
+         **{f'https://ficcali.com/pelicula/{s}/': sec for s, sec in [
+             ('a-fabulosa-maquina-do-tempo', 'Primer plano: las infancias y el futuro'),
+             ('por-que-se-esconde-dracula', 'Trópico interior: Todos los colores de la oscuridad'),
+             ('alivios', 'We Cam Fest 3'), ('borrador-automatico-5', 'We Cam Fest 3'),
+             ('el-maestro-de-la-piqueria', 'We Cam Fest 3'), ('khazana', 'We Cam Fest 3'),
+             ('la-fuga', 'We Cam Fest 3'), ('quinto-primera', 'We Cam Fest 3'),
+             ('donde-esta-richard', 'We Cam Fest 3'),
+             ('bankolombia', 'Plano sonoro: muestra de videoclips'),
+             ('infinita-cancion-el-secreto', 'Plano sonoro: muestra de videoclips'),
+             ('nancy-resabiada', 'Plano sonoro: muestra de videoclips'),
+             ('sense-of-reality', 'Plano sonoro: muestra de videoclips'),
+             ('sentenciados', 'Plano sonoro: muestra de videoclips'),
+             ('una-cancion-para-mi-tierra', 'Canción para mi tierra')]}}
 UA = 'Mozilla/5.0 (Macintosh) AppleWebKit/605.1.15 Version/17.0 Safari/605.1.15'
+ETIQUETA_DIR = re.compile(r'^Director(a|es|as)?(\s+y\s+\w+)?$', re.I)
 CAMPO = re.compile(r'^(Género|Duración|País|Año|Idioma):\s*(.*)$')
 # LOS RÓTULOS DE SECCIÓN que la ficha pone entre el título y la sinopsis: los
 # nombres de categoría del sitio (categorias.json) más «Competencia». Lo que no
 # es uno de ellos es sinopsis — también una línea corta: la sinopsis suele
 # empezar con el título en cursiva, partido en su propio renglón.
 _CAT = f'{DIR}/categorias.json'
-ROTULOS = {'competencia'} | ({v[0].strip().lower() for v in json.load(io.open(_CAT, encoding='utf-8')).values()}
+# «Cali ciudad creativa» es el rótulo de las fichas de Cali Ciudad Abierta y no
+# está en categorias.json: se colaba como comienzo de 5 sinopsis (8 oct)
+ROTULOS = {'competencia', 'cali ciudad creativa', 'muestra infantil'} | ({v[0].strip().lower() for v in json.load(io.open(_CAT, encoding='utf-8')).values()}
                             if os.path.exists(_CAT) else set())
 
 
 def bajar_secciones():
     r = subprocess.run(['curl', '-s', 'https://ficcali.com/wp-json/wp/v2/pages?parent=12862&per_page=100'],
                        capture_output=True, text=True).stdout
-    pags = json.loads(r, strict=False)
+    pags = json_wp(r)
     out = {}
     for p in pags:
         c = p['content']['rendered']
@@ -84,7 +104,13 @@ def ficha(L):
         i += 1
     titulo = L[i]
     fin = L.index('Funciones') if 'Funciones' in L else len(L)
-    resto = L[i + 1:fin]
+    # LA ETIQUETA DEL DIRECTOR no siempre es «Dirigido por»: las fichas de We Cam
+    # Fest y de los videoclips dicen «Director y guionista», «Directora»,
+    # «Dirección»… (10 oct 2026). Sin esto el nombre quedaba pegado al final de
+    # la sinopsis y la obra sin director.
+    j = (L.index('Dirigido por') if 'Dirigido por' in L else
+         next((k for k in range(i + 1, fin) if ETIQUETA_DIR.match(L[k])), None))
+    resto = L[i + 1:j if j is not None and j < fin else fin]
     # el rótulo de la sección: «Competencia» suelto y debajo la competencia, o
     # directamente la sección; la sinopsis es lo que sigue (líneas largas)
     rot = []
@@ -92,8 +118,21 @@ def ficha(L):
         rot.append(resto.pop(0))
     # las cursivas parten la frase en renglones: se pegan con espacio, y sin
     # espacio delante de la puntuación que las sigue
+    # LA FICHA VACÍA (10 oct 2026): el sitio publicó fichas nuevas sin texto
+    # (En construcción, Historias del buen valle) y lo único que había después
+    # del título era el PIE DEL SITIO —«Síguenos Instagram Facebook-f…»—, que
+    # entraba como sinopsis y le ganaba a la buena. El pie no es de la obra.
+    if 'Síguenos' in resto:
+        resto = resto[:resto.index('Síguenos')]
+    # LA FICHA CON FUNCIONES (21 oct 2026): el sitio le sumó a cada ficha, después
+    # de la sinopsis, el botón «Comprar boletas…» y la lista «Funciones» (día,
+    # hora, sala). Nada de eso es la sinopsis; entraba pegado a ella.
+    corte = next((k for k, x in enumerate(resto) if x == 'Funciones' or x.startswith('Comprar boletas')), None)
+    if corte is not None:
+        resto = resto[:corte]
+    resto = [x.replace('\ufeff', '').strip() for x in resto if x.replace('\ufeff', '').strip()]
     sinopsis = re.sub(r'\s+([,.;:)])', r'\1', re.sub(r'\s+', ' ', ' '.join(resto))).strip()
-    j = L.index('Dirigido por') + 1 if 'Dirigido por' in L else None
+    j = j + 1 if j is not None else None
     director = L[j] if j is not None and j < len(L) else None
     # SIN NOMBRE: hay fichas donde debajo de «Dirigido por» va directo la
     # biografía (Aguapanela). No se adivina: queda vacío y lo resuelve la cascada
@@ -107,6 +146,9 @@ def ficha(L):
         pais = ''
     d['País'] = pais
     dur = re.match(r'(\d+)', d.get('Duración', ''))
+    # «Duración: 1989» (Kiki, 8 oct): el año en la casilla de la duración
+    if dur and int(dur.group(1)) > 600:
+        dur = None
     anio = re.search(r'(19|20)\d{2}', d.get('Año', ''))
     return {'titulo': titulo, 'director': director,
             'pais': d.get('País') or None, 'anio': int(anio.group()) if anio else None,
@@ -139,6 +181,45 @@ def main():
                 o['secciones'].append(sec)
     if fallos:
         sys.exit('✗ fichas que no se leen:\n  · ' + '\n  · '.join(fallos))
+    # LO QUE LA FICHA YA NO DICE NO SE BORRA (8 oct): la edición del sitio del 8 oct
+    # quitó año, duración, dirección o sinopsis de varias fichas (Para vivir,
+    # Niñxs, Mi vecino Totoro…). Que la página calle no hace falso el dato que
+    # publicó antes: se conserva el de la captura anterior y queda anotado.
+    previo = {}
+    if os.path.exists(DESTINO):
+        previo = {o['url'].rstrip('/'): o for o in json.load(io.open(DESTINO, encoding='utf-8'))['obras'] if o.get('url')}
+    _prog = f'{REPO}/festivals/staging/ficcali-2026-programacion.json'
+    _tarjetas = {x['titulo'].split('|')[0].strip().casefold()
+                 for x in json.load(io.open(_prog, encoding='utf-8'))['tarjetas']} if os.path.exists(_prog) else set()
+    for o in obras.values():
+        v = previo.get(o['url'].rstrip('/'))
+        if not v:
+            continue
+        kept = [k for k in ('director', 'anio', 'duracion_min', 'sinopsis', 'pais')
+                if not o.get(k) and v.get(k)]
+        # LA NOTA DE LA FUNCIÓN (21 oct 2026): debajo de la sinopsis la ficha anuncia
+        # quién acompaña la función («X conversará sobre la película…»). Es de la
+        # función, no de la obra: si la sinopsis nueva es la anterior más una
+        # cola, se queda la anterior. Y al revés: si la nueva es la anterior
+        # cortada a media palabra (Para vivir: «…mientras at»), también.
+        _n = o.get('sinopsis') or ''
+        if v.get('sinopsis') and _n != v['sinopsis'] and (
+                _n.startswith(v['sinopsis'].rstrip('.')) or (_n and v['sinopsis'].startswith(_n))):
+            o['sinopsis'] = v['sinopsis']
+        # EL TÍTULO ORIGINAL (Juan, 7 oct) — 21 oct 2026: el sitio tradujo al
+        # español el título de cuatro fichas (An Incomplete Calendar, Notre
+        # corps…): el título nuevo es el de la TARJETA, el español. Una ficha que
+        # pasa a llamarse como su tarjeta no se retituló, se tradujo: se conserva
+        # el original publicado y el de la ficha queda anotado, para Juan.
+        _nt = o['titulo'].casefold()
+        if o['titulo'] != v['titulo'] and any(
+                t and (_nt == t or _nt.startswith(t + ':')) for t in _tarjetas):
+            o['_titulo_ficha'] = o['titulo']
+            o['titulo'] = v['titulo']
+        for k in kept:
+            o[k] = v[k]
+        if kept or v.get('_conservado'):
+            o['_conservado'] = sorted(set(kept) | set(v.get('_conservado') or []))
     sin = [o['titulo'] for o in obras.values() if not o.get('sinopsis')]
     io.open(DESTINO, 'w', encoding='utf-8').write(json.dumps({
         '_provenance': provenance('ficcali.com, Selección de películas 2026 (11 subpáginas de la página 12862)',

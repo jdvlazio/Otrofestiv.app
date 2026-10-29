@@ -40,7 +40,16 @@ export const storage = {
 
   getWatched() { try { const r=localStorage.getItem(FESTIVAL_STORAGE_KEY+'watched'); return r?new Set(JSON.parse(r)):new Set(); } catch(e) { return new Set(); } },
   setWatched(s) { try { localStorage.setItem(FESTIVAL_STORAGE_KEY+'watched', JSON.stringify([...s])); } catch(e) {} },
+  // watchedMeta — en QUÉ función se vio cada obra marcada fuera del Plan
+  // ({title: {day,time,venue}}). «Tu festival» (#1055) cuenta días y sedes con
+  // esto; sin el dato la obra cuenta como vista pero no suma día ni sede.
+  getWatchedMeta() { try { const r=localStorage.getItem(FESTIVAL_STORAGE_KEY+'wmeta'); const p=r?JSON.parse(r):{}; return p&&typeof p==='object'&&!Array.isArray(p)?p:{}; } catch(e) { return {}; } },
+  setWatchedMeta(o) { try { localStorage.setItem(FESTIVAL_STORAGE_KEY+'wmeta', JSON.stringify(o||{})); } catch(e) {} },
   getNotWatched() { try { const r=localStorage.getItem(FESTIVAL_STORAGE_KEY+'notWatched'); return r?new Set(JSON.parse(r)):new Set(); } catch(e) { return new Set(); } },
+  // ticketed — funciones del Plan marcadas «Tengo boleta» (#1077). Claves
+  // «título|día|hora» (una función, no una obra: se compra la entrada a ESA).
+  getTicketed() { try { const r=localStorage.getItem(FESTIVAL_STORAGE_KEY+'tickets'); return r?new Set(JSON.parse(r)):new Set(); } catch(e) { return new Set(); } },
+  setTicketed(s) { try { localStorage.setItem(FESTIVAL_STORAGE_KEY+'tickets', JSON.stringify([...s])); } catch(e) {} },
   setNotWatched(s) { try { localStorage.setItem(FESTIVAL_STORAGE_KEY+'notWatched', JSON.stringify([...s])); } catch(e) {} },
 
   getPrioritized() { try { const r=localStorage.getItem(FESTIVAL_STORAGE_KEY+'prio'); return r?new Set(JSON.parse(r)):new Set(); } catch(e) { return new Set(); } },
@@ -112,6 +121,9 @@ export const storage = {
 
   // ── Global keys (NO prefix) ──
   getActiveFestId() { return localStorage.getItem('otrofestiv_festival'); },
+  // Fichas del almacén (Etapa 2·B1): la última copia vista, para el próximo arranque.
+  getFichas() { try { return JSON.parse(localStorage.getItem('otf_fichas_v1')||'{}')||{}; } catch(e) { return {}; } },
+  setFichas(o) { try { localStorage.setItem('otf_fichas_v1', JSON.stringify(o||{})); } catch(e) {} },
   setActiveFestId(id) { try { localStorage.setItem('otrofestiv_festival', id); } catch(e) {} },
 
   // Idioma: clave v2 (12 jul 2026). La clave vieja 'otrofestiv_lang' se IGNORA
@@ -120,6 +132,9 @@ export const storage = {
   // persistido para siempre, pisando el idioma del celular — el default
   // correcto). Regla: el idioma del DISPOSITIVO manda en el arranque; solo una
   // elección explícita POSTERIOR en el toggle (que escribe v2) lo pisa.
+  // Identificador al azar del dispositivo para reportar retrasos sin cuenta
+  // (migración 0006). No es una cuenta; null si no hay almacenamiento.
+  getDispositivo() { try { let t = localStorage.getItem('otrofestiv_dispositivo'); if (!t) { t = crypto.randomUUID(); localStorage.setItem('otrofestiv_dispositivo', t); } return t; } catch (e) { return null; } },
   getLang() { return localStorage.getItem('otrofestiv_lang_v2'); },
   setLang(l) { try { localStorage.setItem('otrofestiv_lang_v2', l); localStorage.removeItem('otrofestiv_lang'); } catch(e) {} },
 

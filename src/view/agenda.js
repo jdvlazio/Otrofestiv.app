@@ -14,7 +14,7 @@ import {
 } from './components.js';
 import {
   DAYS, DAY_SHORT_EN, _dayChips, _lblLocalized, _minFmt, _mkCortoItemHtml, _posterThumb, hayEvento, getCortoItemPoster, dayLabel, dayLabelLong, durFmt, emptyState, emptyStateHero, flagFmt, getFilmPoster, isToday, keepCityOnly, mplanBlockType, mplanEndStr, programParts, planCityVenues, planInputSignature, sala, starsText, travelWarn, vcfg, venueCity, venueMatches, delayConsensusBadge, conflictAccount,
- abiertaLabel } from './helpers.js';
+ abiertaLabel, funcionPaga, urlCompra, claveBoleta, faltaBoleta } from './helpers.js';
 import {
   _festNowMin, dayFullyPassed, durEstimada, festivalEnded, minToStr, simNow, simTodayStr, toMin,
 } from '../domain/time.js';
@@ -34,8 +34,9 @@ import { sameEntry,
   isScreeningBlocked, screeningPlannable, screensConflict, screensConflictReason,
 } from '../domain/schedule.js';
 import {
-  _getFestivalPhase, travelMins,
+  _getFestivalPhase, travelMins, festivalRecap,
 } from '../domain/festival.js';
+import { recapTitular, renderRecapExtraHTML } from './recap.js';
 import {
   state,
 } from '../state/state.js';
@@ -346,6 +347,30 @@ function _mismaFuncion(a,b){
   const ka=_slotKeyOf(a); return !!ka&&ka===_slotKeyOf(b);
 }
 
+// ── Boleta, nivel 1 (#1077) ─────────────────────────────────────────────────
+// El filtro «sin boleta» vive acá (vista): tocar «N sin boleta» en la banda de
+// Mi Plan deja en la lista solo las funciones pagas sin marcar. Otro toque lo saca.
+let _soloSinBoleta=false;
+export const soloSinBoleta=()=>_soloSinBoleta;
+export function setSoloSinBoleta(v){ _soloSinBoleta=!!v; }
+const _filmDe=s=>FILMS.find(fi=>sameEntry(fi,s));
+// funcionesSinBoleta(schedule) — las entradas del Plan que faltan, una vez cada una.
+export function funcionesSinBoleta(schedule){
+  const vistas=new Set();
+  return (schedule||[]).filter(s=>{ const k=claveBoleta(s); if(vistas.has(k)) return false; vistas.add(k); return faltaBoleta(s,_filmDe(s)); });
+}
+// _filaBoleta(s) — debajo de la sede: «Ya tengo boleta» + «Comprar →», o, ya
+// marcada, «Tengo boleta» en gris (tocar de nuevo desmarca). Solo pagas y vivas.
+function _filaBoleta(s){
+  const f=_filmDe(s);
+  if(!f||!funcionPaga(f)||screeningPassed(s)) return '';
+  const k=claveBoleta(s).replace(/"/g,'&quot;');
+  if(ticketed.has(claveBoleta(s)))
+    return `<div class="mplan-boleta"><button class="mplan-prog-toggle boleta-marcar" data-action="toggleBoleta" data-key="${k}" data-stop="1">${ICONS.check} ${t('boleta_tengo')}</button></div>`;
+  const url=urlCompra(f);
+  return `<div class="mplan-boleta"><button class="mplan-prog-toggle boleta-marcar" data-action="toggleBoleta" data-key="${k}" data-stop="1">${ICONS.ticket} ${t('boleta_ya_tengo')}</button>${url?`<a class="boleta-comprar" href="${url.replace(/"/g,'&quot;')}" target="_blank" rel="noopener" data-stop="1">${t('boleta_comprar')}</a>`:''}</div>`;
+}
+
 export function renderMiPlanCalendar(state){
   const {savedAgenda, FILMS, prioritized, watched, filmRatings, FESTIVAL_DATES} = state.snapshot();
   if(!savedAgenda||!savedAgenda.schedule.length) return'';
@@ -524,7 +549,7 @@ export function renderMiPlanCalendar(state){
 
   // ── Detail list for active day ──
   const activeKey=DAY_KEYS[activeMiPlanDay];
-  const dayFilms=schedule.filter(s=>s.day===activeKey).sort((a,b)=>toMin(a.time)-toMin(b.time));
+  const dayFilms=schedule.filter(s=>s.day===activeKey&&(!_soloSinBoleta||faltaBoleta(s,_filmDe(s)))).sort((a,b)=>toMin(a.time)-toMin(b.time));
   const isPastDay=nowDayIdx>=0&&activeMiPlanDay<nowDayIdx;
 
   // Día landmark en formato largo (mismo patrón que Planear/buildResultHTML).
@@ -645,7 +670,7 @@ export function renderMiPlanCalendar(state){
       const _mphInner=_mp
           ?_posterThumb(_mf,'lb-poster')
           :_isEventRow
-            ?`<img class="lb-poster" src="${makeEventPoster(state,_mf.title,_mf.duration,_mf.event_kind)}" alt="" loading="lazy" onerror="this.remove()">`
+            ?`<img class="lb-poster" src="${makeEventPoster(state,_mf.title,_mf.duration,_mf.event_kind)}" alt="" loading="lazy" data-err="quitar">`
             :_posterThumb(_mf,'lb-poster');
       const _mph=`<div class="js-open-pel" data-title="${escXML(s._title||'')}" style="flex-shrink:0;cursor:pointer" data-stop="1">${_mphInner}</div>`
       listHtml+=`<div class="mplan-row${_rowKey===_activeMiPlanFilm?' active':''}${isSeen?' mp-seen':''}" style="cursor:pointer" data-rkey="${_safeRowKey}" data-action="selectFromDetail">
@@ -685,8 +710,9 @@ export function renderMiPlanCalendar(state){
             return `<span class="mp-void-t">${_fin}</span>`;
           })()}${_voidFix}${prioritized.has(s._title)?` <span class="txt-amber60-xs">${ICONS.bookmarkFill}</span>`:''}${_rowStars?` <span class="txt-amber-sm">${_rowStars}</span>`:''}${isNow?` <span class="txt-green-semi">${t('label_en_curso_min')}</span>`:''}</div>
           <div>${(()=>{const{displayTitle:_dt,progSuffix:_ps}=parseProgramTitle(s._title||'');const _mfqa=FILMS.find(fi=>sameEntry(fi,s));const _qab=_mfqa?.has_qa?`<span class="meta-badge sm">Q&A</span>`:'';return`<div class="mplan-rtitle${_isEventRow?' mp-event-title':''}"><span class="mplan-rtitle-txt">${_dt}</span>${_qab}</div>${_ps?`<div class="prog-suffix">${_ps}</div>`:''}`;})()} </div>
-          <div class="mplan-rvenue${_isEventRow?' mp-event-venue':''}">${ICONS.pin} ${vcfg(s.venue).short||s.venue}${venueCity(s.venue)?` · <span class="plist-city">${venueCity(s.venue)}</span>`:''}${sala(s.venue)?' \u00b7 '+sala(s.venue):''}</div>
+          <div class="mplan-rvenue${_isEventRow?' mp-event-venue':''}">${ICONS.pin} ${vcfg(s.venue).short||s.venue}${venueCity(s.venue)?` · <span class="plist-city">${venueCity(s.venue)}</span>`:''}${sala(s)?' \u00b7 '+sala(s):''}</div>
           ${_sesionDeBloque(s)}
+          ${_filaBoleta(s)}
           ${(()=>{const _mf=FILMS.find(fi=>sameEntry(fi,s));if(!_mf||!_mf.is_cortos||!_mf.film_list||!_mf.film_list.length) return'';return`<button class="row-xs mplan-prog-toggle" data-action="toggleMplanProg">${ICONS.chevronR} ${t('label_programa')}</button>`;})()}
         </div>
         <div class="col-end">
@@ -718,7 +744,7 @@ export function renderMiPlanCalendar(state){
     <div class="mplan-div"></div>
     ${listHtml}
     <div class="mplan-foot">
-      <button class="mplan-foot-btn" data-action="sharePlan">${ICONS.share} ${t('plan_compartir_plan')}</button>
+      <button class="mplan-foot-btn" data-action="abrirCompartirPlan">${ICONS.share} ${t('plan_compartir_plan')}</button>
       <button class="mplan-foot-btn" data-action="exportICS">${ICONS.calendarPlus} ${t('plan_exportar_cal')}</button>
     </div>
   </div>`
@@ -771,7 +797,7 @@ export function renderFilmAlternatives(state,title,day,time){
       <div class="checkin-opt-info">
         <div class="checkin-opt-time">${f.time} · ${f.info?abiertaLabel(f):durFmt(f.duration)}</div>
         <div class="checkin-opt-title">${short}</div>
-        <div class="checkin-opt-venue">${ICONS.pin} ${vc2.short}${sala(f.venue)?' \u00b7 '+sala(f.venue):''}</div>
+        <div class="checkin-opt-venue">${ICONS.pin} ${vc2.short}${sala(f)?' \u00b7 '+sala(f):''}</div>
       </div>
       <div class="checkin-opt-add" data-action="confirmReplace" data-rmtitle="${safeT}" data-newtitle="${safeTNew}" data-day="${f.day}" data-time="${f.time}">${ICONS.plus}</div>
     </div>`;
@@ -808,12 +834,15 @@ export function renderContextualHeader(state, consensus){
   // ── ENDED ─────────────────────────────────────────────────
   if(ph.phase==='ended'){
     const{totalWatched,pendingRatings}=ph;
+    const _rec=festivalRecap();
     const mainTitle=totalWatched===0
       ?((FESTIVAL_CONFIG[_activeFestId]||{}).name||t('misc_festival_default'))+` ${t('plan_fest_terminado')}`
       // ACTIVIDADES y no «obras»: la cuenta incluye los talleres y charlas que
       // marcaste (son lo que el Diario muestra, y el chip ya los contaba). Un
       // taller no es una obra, pero sí es una actividad — el paraguas correcto.
-      :`${t('plan_viste_n')} ${totalWatched} ${totalWatched!==1?t('misc_actividades'):t('misc_actividad')}`;
+      // «obras» si todo se califica, «actividades» si hubo eventos (recapTitular,
+      // dueño único con la historia 9:16 — #1055).
+      :(()=>{ const T=recapTitular(_rec); return `${T.verbo} ${T.n} ${T.unidad}`; })();
     // Header del Recuerdo (rediseño 21 jul 2026): título + el estado de calificación
     // como CHIP semántico en la MISMA línea, no un subtítulo suelto debajo. Verde
     // "Todo calificado" (logrado) / ámbar "N sin calificar" (pendiente) — mismos tokens
@@ -829,7 +858,7 @@ export function renderContextualHeader(state, consensus){
     return`<div class="recap-hdr">
       <span class="ctx-main-title">${mainTitle}</span>
       ${_chip}
-    </div>`;
+    </div>${totalWatched?renderRecapExtraHTML(_rec):''}`;
   }
 
   // ── BEFORE ─────────────────────────────────────────────────
@@ -959,7 +988,7 @@ export function renderContextualHeader(state, consensus){
       </div>
       <div class="ctx-next-row js-open-pel" data-title="${escXML(next._title||'')}" style="cursor:pointer">
         ${src
-          ?`<img class="ctx-next-poster" src="${src}" data-title="${(next._title||'').replace(/"/g,'&quot;')}" onerror="_posterErr(this)" alt="" loading="lazy">`
+          ?`<img class="ctx-next-poster" src="${src}" data-title="${(next._title||'').replace(/"/g,'&quot;')}" data-err="poster" alt="" loading="lazy">`
           :_isEvent
             ?makeEventPoster(state,next._title,next.duration,_filmObj?.event_kind).replace('<svg','<svg class="bg-surf-3 poster-sm ctx-next-poster"')
             :`<div class="ctx-next-poster"></div>`}
@@ -968,7 +997,7 @@ export function renderContextualHeader(state, consensus){
             <div class="ctx-next-title">${dt}</div>
             ${badge}
           </div>
-          <div class="ctx-next-detail">${next.time} · ${vc.short}${sala(next.venue)?' \u00b7 '+sala(next.venue):''}</div>
+          <div class="ctx-next-detail">${next.time} · ${vc.short}${sala(next)?' \u00b7 '+sala(next):''}</div>
         </div>
       </div>
       ${consensusHtml}${delayHtml}${warnHtml}
@@ -998,7 +1027,7 @@ export function renderContextualHeader(state, consensus){
           <div class="ctx-suggest-badge">${gapSuggestion.time}</div>
           <div class="ctx-suggest-info">
             <div class="ctx-suggest-title">${dt.length>26?dt.slice(0,24)+'…':dt}</div>
-            <div class="ctx-suggest-venue">${vc2.short}${sala(gapSuggestion.venue)?' \u00b7 '+sala(gapSuggestion.venue):''}</div>
+            <div class="ctx-suggest-venue">${vc2.short}${sala(gapSuggestion)?' \u00b7 '+sala(gapSuggestion):''}</div>
           </div>
         </div>`;
     })():'';
@@ -1374,8 +1403,12 @@ function _renderSavedAgendaHTML(state, consensus){
       <div class="mb-2 sec-hdr">${ICONS.bookOpen} <span>${t('diary_eyebrow')}</span></div>
       ${renderDiaryHTML(state)}</div>`:'';
     // Compartir mi festival (RFC F2): reutiliza el export del Diario.
-    const _shareBtn=_eff.size>0?`<button class="ag-save-btn" data-action="shareDiary">${ICONS.share} ${t('recap_compartir')}</button>`:'';
-    if(_recap||_vivido) return`<div class="saved-agenda">${_recap}${_hero}${_vivido}${_shareBtn}</div>`;
+    const _shareBtn=_eff.size>0?`<button class="ag-save-btn" data-action="abrirCompartirFestival">${ICONS.share} ${t('recap_compartir')}</button>`:'';
+    // Sin sesión, una línea debajo: el Diario recién completado es lo que más
+    // vale guardar (invitación a la cuenta, la menos invasiva posible).
+    const _invita=_eff.size>0&&!_sbUser?`<button class="link-gray-xs invitar-cuenta" data-action="openAuthSheet">${t('invita_diario')}</button>`:'';
+    // «Tu festival» (#1055): compartir sube debajo del recorrido, antes del Diario.
+    if(_recap||_vivido) return`<div class="saved-agenda">${_recap}${_shareBtn}${_invita}${_hero}${_vivido}</div>`;
     // Sin vistas NI plan: empty state canónico
     const _festNameMp=(FESTIVAL_CONFIG[_activeFestId]||{}).name||t('misc_festival_default');
     return emptyStateHero(ICONS.sparkles,`${_festNameMp} ${t('plan_fest_terminado')}`,t('empty_vistas'),t('plan_ir_programa'),'mnav-cartelera');
@@ -1389,7 +1422,7 @@ function _renderSavedAgendaHTML(state, consensus){
   if(!savedAgenda||!savedAgenda.schedule.length) return watchlist.size
     ? emptyStateHero(ICONS.calendar,t('plan_tu_plan_empty'),t('empty_intereses'),t('cta_ir_planear'),'mnav-planner')
     : emptyStateHero(ICONS.calendar,t('plan_tu_plan_empty'),t('empty_intereses'),t('plan_ir_programa'),'mnav-cartelera');
-  const all=savedAgenda.schedule;
+  const all=savedAgenda.schedule;   // la abierta de varios días (_ventana en FILMS: el plan guardado no la trae) cuenta UNA vez
   // Películas marcadas vistas FUERA del plan — en watched pero no en savedAgenda
   const upcoming=all.filter(s=>!screeningPassed(s)&&!watched.has(s._title));
   const futureItems=upcoming.filter(s=>!isToday(s.day));
@@ -1422,7 +1455,10 @@ function _renderSavedAgendaHTML(state, consensus){
   // en ámbar con chevron, «Día 7 de 8» en gris — solo uno invita al tacto.
   // El chip del Diario murió (18 ago): la sección DIARIO al final del tab lo
   // reemplaza — la banda del Plan queda solo con su cuenta y el día.
-  const progressBar=`<div class="sec-hdr">${ICONS.calendar} <span>${t('label_mi_plan_hdr')}</span> <span class="count-badge cb-neutral">${all.length}</span><span class="hdr-end">${currentDayNum?`<span class="sec-hdr-opt">${t('label_dia_prog')} <b>${currentDayNum}</b> ${t('label_de_dias')} ${totalDays}</span>`:''}</span></div>`;
+  // «N sin boleta» (#1077): a la derecha de «Mi Plan · 18», en ámbar; tocar filtra.
+  const _nSin=funcionesSinBoleta(all).length;
+  const _sinBoleta=(_nSin||_soloSinBoleta)?`<button class="boleta-falta${_soloSinBoleta?' on':''}" data-action="toggleSoloSinBoleta">${ICONS.ticket} ${t('boleta_sin',{n:_nSin})}</button>`:'';
+  const progressBar=`<div class="sec-hdr">${ICONS.calendar} <span>${t('label_mi_plan_hdr')}</span> <span class="count-badge cb-neutral">${new Set(all.map(s=>FILMS.some(f=>f._ventana&&f.title===s._title)?'v|'+s._title:s)).size}</span>${_sinBoleta}<span class="hdr-end">${currentDayNum?`<span class="sec-hdr-opt">${t('label_dia_prog')} <b>${currentDayNum}</b> ${t('label_de_dias')} ${totalDays}</span>`:''}</span></div>`;
 
   const _ctxHeader=renderContextualHeader(state, consensus);
   let html=`<div class="saved-agenda">
@@ -1472,7 +1508,7 @@ function _renderSavedAgendaHTML(state, consensus){
     suggDays.forEach(day=>{
       html+=`<div class="suggestion-day-lbl">${dayLabelLong(day)}</div>`;
       html+=suggsByDay[day].map(f=>{
-        const vc2=vcfg(f.venue),sl=sala(f.venue);
+        const vc2=vcfg(f.venue),sl=sala(f);
         const _sph=_posterThumb(f,'lb-poster');
         return`<div class="suggestion-item js-open-pel" data-title="${escXML(f.title)}">
           ${_sph}
@@ -1533,7 +1569,10 @@ function _dwCard(state,{title,poster,posterSVG,rating,off,califica=true}){
       :rating
       ?`<div class="dw-stars">${[1,2,3,4,5].map(i=>`<span class="dw-star${i<=rating?' on':''}">${ICONS.starFill}</span>`).join('')}</div>`
       :`<button class="dw-ctrl dw-ctrl-star" data-action="openRatingSheet" data-title="${safe}" data-stop="1" aria-label="${t('aria_calificar')}">${ICONS.starFill}</button>`)
-     +`<button class="dw-ctrl" data-action="diaryToggleVista" data-title="${safe}" data-stop="1" aria-label="${t('aria_no_la_vi')}">${ICONS.eye}</button>`;
+     // El ojo de una VISTA es su estado, en ámbar (Juan, 12 oct): gris se leía
+     // «apagado». Tocarlo la saca —con «Deshacer»—; la estrella sigue siendo la
+     // invitación tenue mientras no esté calificada.
+     +`<button class="dw-ctrl dw-vista" data-action="diaryToggleVista" data-title="${safe}" data-stop="1" aria-label="${t('aria_no_la_vi')}">${ICONS.eye}</button>`;
   return`<div class="dw-card">
     <div class="dw-poster${off?' dw-off':''} js-open-pel" data-title="${safe}">
       ${posterSVG
@@ -1541,7 +1580,7 @@ function _dwCard(state,{title,poster,posterSVG,rating,off,califica=true}){
         // remotos, y dentro de un <img> un SVG es documento aislado que tiene
         // prohibido cargar recursos externos — saldrían rotos.
         ? `<div class="img-cover dw-svg">${posterSVG}</div>`
-        : poster?`<img class="img-cover" src="${poster}" loading="lazy" onerror="this.remove()" alt="">`:''}
+        : poster?`<img class="img-cover" src="${poster}" loading="lazy" data-err="quitar" alt="">`:''}
     </div>
     <div class="dw-row">${ctrl}</div>
   </div>`;
@@ -1616,7 +1655,7 @@ function renderDiarioSection(state){
   if(!posters.length) return '';
   const MAX=6;
   const tira=posters.slice(0,MAX).map((p,i)=>p
-    ?`<img class="dw-strip-p" src="${p}" loading="lazy" onerror="this.remove()" alt="" style="${i?'margin-left:-20px;':''}z-index:${MAX-i}">`
+    ?`<img class="dw-strip-p" src="${p}" loading="lazy" data-err="quitar" alt="" style="${i?'margin-left:-20px;':''}z-index:${MAX-i}">`
     :'').join('');
   const resto=posters.length>MAX?`<span class="dw-strip-mas">+${posters.length-MAX}</span>`:'';
   return`<div class="diario-wrap">
@@ -1849,12 +1888,24 @@ export function buildResultHTML(scenarios){
           reason=`<div class="excl-reason">${t(_yaPaso)}</div>`;
         }
       }
+      // La disponibilidad no es «ya pasó» (#1060): `screens` descarta las
+      // funciones que caen en un bloque de «¿Cuándo NO podés ir?», y una obra
+      // con todas sus funciones vivas bloqueadas llegaba a la rama de arriba y
+      // decía «Ya pasó» — Fjord en BIFF, con funciones el 12 y el 14. Sin botón:
+      // «Agendar» busca entre las funciones planificables y estas no lo son; el
+      // camino es editar la disponibilidad, que está arriba en la misma pantalla.
+      // plannable-ok: se buscan justo las que el dueño descarta por disponibilidad.
+      const _bloq=!screens.length?FILMS.filter(fi=>fi.title===excTitle&&!screeningPassed(fi)&&isScreeningBlocked(fi)):[];
+      if(_bloq.length){
+        reason=`<div class="excl-reason">${t('plan_choca_dispo')}</div>`;
+        _cuando=`${dayLabel(_bloq[0].day)||_bloq[0].day||''}${_bloq[0].time?' '+_bloq[0].time:''}`;
+      }
       const includeBtn=canInclude
         ?(_qaOnlySlot
           ?`<button class="excl-include-btn" data-action="includeAnyway" data-title="${safeT}" data-day="${_qaOnlySlot.day}" data-time="${_qaOnlySlot.time}" data-stop="1">${ICONS.plus} ${t('plan_agendar')}</button>`
           :`<button class="excl-include-btn" data-action="forceInclude" data-title="${safeT}" data-stop="1">${ICONS.plus} ${t('plan_agendar')}</button>`)
         :'';
-      const opacity=!screens.length?'opacity:.45;':'';
+      const opacity=!screens.length&&!_bloq.length?'opacity:.45;':'';
       // En «En otra ciudad» la razón se dice UNA vez, en el encabezado de la
       // sección: repetirla en cada fila era la misma frase cuatro veces, con una
       // hora que además era de OTRA función. Acá la fila solo aporta su ciudad.
@@ -1862,10 +1913,10 @@ export function buildResultHTML(scenarios){
       const _when=_esCiudad
         ?(_cuando?`${_cuando} · ${_ciudadFn}`:_ciudadFn)
         :_cuando;
-      return{k:_kind,ciudad:_ciudadPlan,html:`<div class="int-item js-open-pel" style="${opacity}" data-title="${escXML(f.title)}">
+      return{k:_kind,ciudad:_ciudadPlan,prio:prioritized.has(excTitle)?1:0,html:`<div class="int-item js-open-pel" style="${opacity}" data-title="${escXML(f.title)}">
         ${posterHtml}
         <div class="int-item-info">
-          <div class="int-item-title"><span class="int-item-name">${dt}</span>${_excCanc?`<span class="notice-badge">${t('notice_cancelada')}</span>`:''}</div>
+          <div class="int-item-title"><span class="int-item-name">${dt}</span>${prioritized.has(excTitle)?` <span class="txt-amber60-xs">${ICONS.bookmarkFill}</span>`:''}${_excCanc?`<span class="notice-badge">${t('notice_cancelada')}</span>`:''}</div>
           <div class="int-item-sec">${flagFmt(f?.flags)||''}${flagFmt(f?.flags)?' ':''} ${secLabel}</div>
           ${_when?`<div class="int-item-when">${_when}</div>`:''}
           ${_esCiudad?'':reason}
@@ -1874,7 +1925,9 @@ export function buildResultHTML(scenarios){
       </div>`};
     });
     const _ciudad=_excItems.filter(i=>i.k==='ciudad');
-    const _compiten=_excItems.filter(i=>i.k!=='ciudad');
+    // Las prioridades que quedaron fuera van PRIMERO (#1060): son lo que el
+    // usuario dijo que no se quería perder, y no pueden quedar enterradas.
+    const _compiten=_excItems.filter(i=>i.k!=='ciudad').sort((a,b)=>b.prio-a.prio);
     _nFuera=_compiten.length;
     if(_compiten.length) _htmlNoIncl=`<div class="ag-excl-block">
       <div class="sec-hdr sm">
@@ -1927,10 +1980,18 @@ export function buildResultHTML(scenarios){
     _nFuera?(_nFuera===1?t('res_fuera_1'):t('res_fuera',{n:_nFuera})):'',
   ].filter(Boolean).join(' · ');
   const _fuera=_cola?` <span class="dato-linea">· ${_cola}</span>`:'';
+  // Cuántas prioridades entraron (#1060): «· 3 prioridades» o «· 2 de 3
+  // prioridades». Las vistas no cuentan: el planificador tampoco las busca.
+  const _prioVivas=[...prioritized].filter(x=>!watched.has(x)&&FILMS.some(fi=>fi.title===x&&!screeningPassed(fi)));
+  const _prioDentro=_prioVivas.filter(x=>sc.schedule.some(s=>s._title===x)).length;
+  const _prioTxt=!_prioVivas.length?''
+    :_prioDentro===_prioVivas.length
+      ?` · ${t(_prioDentro===1?'res_prio_1':'res_prio',{n:_prioDentro})}`
+      :` · ${t('res_prio_de',{n:_prioDentro,tot:_prioVivas.length})}`;
   let html=`${_staleBanner}<div class="ag-summary ag-summary-res">
     <div class="dato-resultado">${hayEvento(sc.schedule,FILMS)
       ?`${ok} ${ok!==1?t('misc_actividades'):t('misc_actividad')}`
-      :t(ok===1?'pre_obra':'pre_obras',{n:ok})} · ${_nDias===1?t('res_dia'):t('res_dias',{n:_nDias})}${_fuera}</div>
+      :t(ok===1?'pre_obra':'pre_obras',{n:ok})} · ${_nDias===1?t('res_dia'):t('res_dias',{n:_nDias})}${_prioTxt}${_fuera}</div>
     ${sc.incompatiblePriorities?(()=>{
       const pairs=sc.conflictingPriorityPairs||[];
       const pairMsg=pairs.length
@@ -1981,7 +2042,7 @@ export function mkAgendaRow(s, mode='saved'){
   const f=FILMS.find(fi=>fi.title===title);
   const _phInner=_posterThumb(f,'lb-poster');
   const _ph=`<div class="js-open-pel" data-title="${escXML(title)}" style="flex-shrink:0;cursor:pointer">${_phInner}</div>`;
-  const vc2=vcfg(s.venue),sl=sala(s.venue);
+  const vc2=vcfg(s.venue),sl=sala(s);
   const safeT=(s._title||'').replace(/"/g,'&quot;');
   const isDone=watched.has(title);
   // altBadge ("X alt.") eliminado del template — rediseño visual: las
@@ -2000,7 +2061,10 @@ export function mkAgendaRow(s, mode='saved'){
   // Layout: en Planear (scenario) la hora vive ARRIBA del título dentro de .saved-info
   // (jerarquía vertical: hora → título → venue). En Mi Plan (saved) la hora sigue como
   // columna lateral (layout familiar para usuarios del plan guardado).
-  const _timeHTML=`<div class="saved-time">${s.time}</div>`;
+  // La prioridad se ve en el plan (#1060): la misma marca que ya llevan la fila
+  // y el bloque de Mi Plan, junto a la hora. Faltaba solo acá, en Planear.
+  const _prioMark=prioritized.has(title)?` <span class="txt-amber60-xs">${ICONS.bookmarkFill}</span>`:'';
+  const _timeHTML=`<div class="saved-time">${s.time}${_prioMark}</div>`;
   // Affordances de la fila de Planear: Cambiar (switch) + el CORAZÓN.
   // El corazón y no una ✕ (revisión de UX Writer, 16 ago 2026): este control
   // saca de Intereses, prioridades y vistas —no del plan—, y con la ✕ era

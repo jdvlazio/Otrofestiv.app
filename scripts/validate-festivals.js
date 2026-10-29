@@ -208,6 +208,43 @@ function validateFestival(fname, data) {
     errors.push('GATE BLOQUEANTE: config{} presente en el JSON — mover a FESTIVAL_CONFIG en src/config.js y eliminar este bloque');
   }
 
+  // GATE [avisos-palmares-forma] (Etapa 2·A, 19 oct 2026): los avisos y el
+  // palmarés salieron de src/config.js al JSON del festival. El loader los
+  // aplica tal cual (sella cancelaciones, mueve funciones, dibuja premiadas),
+  // así que una forma mala no avisa: se ve mal o no se ve. Se frena acá.
+  if (data.avisos !== undefined) {
+    if (!Array.isArray(data.avisos)) errors.push('GATE BLOQUEANTE [avisos-palmares-forma]: `avisos` tiene que ser una lista');
+    else data.avisos.forEach((n, i) => {
+      const q = `avisos[${i}]`;
+      if (!['cancelled', 'rescheduled', 'info'].includes(n.type)) errors.push(`GATE BLOQUEANTE [avisos-palmares-forma]: ${q}.type debe ser 'cancelled' | 'rescheduled' | 'info'`);
+      if (n.type === 'info') {
+        // Informativo: del festival entero. Lleva id (clave de descarte) y note; sin alcance.
+        if (!n.id) errors.push(`GATE BLOQUEANTE [avisos-palmares-forma]: ${q} informativo sin \`id\` (es su clave de descarte)`);
+        if (!n.note) errors.push(`GATE BLOQUEANTE [avisos-palmares-forma]: ${q} informativo sin \`note\``);
+        if (n.title || n.date || n.cities) errors.push(`GATE BLOQUEANTE [avisos-palmares-forma]: ${q} informativo con title/date/cities — no tiene alcance; usar cancelled/rescheduled`);
+        if (n.festival !== undefined) errors.push(`GATE BLOQUEANTE [avisos-palmares-forma]: ${q} trae \`festival\` — en el JSON sobra (lo pone el loader)`);
+        return;
+      }
+      if (!Array.isArray(n.cities) && !n.title) errors.push(`GATE BLOQUEANTE [avisos-palmares-forma]: ${q} sin alcance — lleva \`title\` (+\`date\`) o \`cities\``);
+      if (Array.isArray(n.cities) && !n.id) errors.push(`GATE BLOQUEANTE [avisos-palmares-forma]: ${q} por ciudades sin \`id\` (es su clave de descarte)`);
+      if (n.date && !/^\d{4}-\d{2}-\d{2}$/.test(n.date)) errors.push(`GATE BLOQUEANTE [avisos-palmares-forma]: ${q}.date no es YYYY-MM-DD`);
+      if (n.type === 'rescheduled' && !(n.newDay || n.newTime || n.newVenue)) errors.push(`GATE BLOQUEANTE [avisos-palmares-forma]: ${q} reprogramada sin newDay/newTime/newVenue`);
+      if (n.newDay && dayKeys.length && !dayKeys.includes(n.newDay)) errors.push(`GATE BLOQUEANTE [avisos-palmares-forma]: ${q}.newDay «${n.newDay}» no está en dayKeys`);
+      if (n.festival !== undefined) errors.push(`GATE BLOQUEANTE [avisos-palmares-forma]: ${q} trae \`festival\` — en el JSON sobra (lo pone el loader)`);
+    });
+  }
+  if (data.palmares !== undefined) {
+    if (!Array.isArray(data.palmares)) errors.push('GATE BLOQUEANTE [avisos-palmares-forma]: `palmares` tiene que ser una lista');
+    else data.palmares.forEach((p, i) => {
+      const q = `palmares[${i}]`;
+      if (!p.categoria || !p.titulo) errors.push(`GATE BLOQUEANTE [avisos-palmares-forma]: ${q} sin categoria o titulo`);
+      if (!['ganadora', 'mencion'].includes(p.nivel)) errors.push(`GATE BLOQUEANTE [avisos-palmares-forma]: ${q}.nivel debe ser 'ganadora' | 'mencion'`);
+      if (p.fest !== undefined) errors.push(`GATE BLOQUEANTE [avisos-palmares-forma]: ${q} trae \`fest\` — en el JSON sobra (lo pone el loader)`);
+      if (p.obra && !films.some(f => f.title === p.obra || (f.film_list || []).some(c => c.title === p.obra)))
+        errors.push(`GATE BLOQUEANTE [avisos-palmares-forma]: ${q}.obra «${p.obra}» no es un título del festival (ni de sus programas) — usar el exacto, o null`);
+    });
+  }
+
   // GATE [genero-unico]: UNA obra, UN género — y de los comunes.
   //
   // Juan, 24 ago 2026: «No me gusta que incluyamos varios géneros en la card.
@@ -349,6 +386,15 @@ function validateFestival(fname, data) {
     const isEvent = film.type === 'event';
     const isCortos = !!film.is_cortos;
 
+    // ── [inicio-obra]: film_start cae DENTRO de la función ─────────────────
+    // Es la hora en que empieza la obra cuando la función abre antes (Parapeto,
+    // BHFF). Antes de que abra, o después de que termine, es un dato roto.
+    if (film.film_start != null) {
+      const _m = h => /^\d{2}:\d{2}$/.test(h || '') ? +h.slice(0, 2) * 60 + +h.slice(3) : null;
+      const _a = _m(film.time), _i = _m(film.film_start), _d = parseInt(film.duration) || 0;
+      if (_i == null || _a == null || _i <= _a || (_d && _i >= _a + _d))
+        errors.push(`GATE BLOQUEANTE [inicio-obra]: "${title}": film_start='${film.film_start}' no cae dentro de la función (${film.time}, ${film.duration || 'sin duración'})`);
+    }
     // ── RULE 1: day must exist in dayKeys ─────────────────────────────────
     // 'TBD' es un marcador DELIBERADO: la función existe y el festival aún no
     // anunció su fecha (Tribeca la usa junto con time:'TBD'). No es un día roto,
@@ -1053,8 +1099,10 @@ for (const fname of files) {
   const _coveredKeys = new Set(
     [...Object.keys(data.customPosters || {}), ...Object.keys(data.posters || {})].map(_normKey)
   );
+  // un programa que todavía no lista sus cortos (FICICA, «muy pronto») no es una
+  // obra: no tiene afiche propio, como un bloque de cortos (catalogo.no_es_obra)
   const filmableFilms = (data.films || []).filter(f =>
-    f.type !== 'event' && !f.is_cortos
+    f.type !== 'event' && !f.is_cortos && !(f.is_programa && !(f.film_list || []).length)
   );
   const _isCovered = f => (f.poster && f.poster !== '') || _coveredKeys.has(_normKey(f.title));
   const totalPosters = filmableFilms.filter(_isCovered).length;

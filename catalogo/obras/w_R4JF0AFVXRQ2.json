@@ -1,0 +1,39 @@
+{
+ "id": "w_R4JF0AFVXRQ2",
+ "titulo_original": "Lo que queda del mar",
+ "anio": 2026,
+ "paises": [
+  "AR"
+ ],
+ "directores": [
+  "Cami Adaro Liloff"
+ ],
+ "aliases": [
+  {
+   "titulo": "After the Sea",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "A través de materiales de archivo, un cineasta reconstruye la figura de su padre, un marinero comerciante ausente, y cuestiona cómo existe ese vínculo dentro de su propia memoria.",
+  "en": "Using archival material, a filmmaker reconstructs the figure of her father, an absent merchant seaman, and wonders what place that bond occupies in her memory."
+ },
+ "afiche": {
+  "archivo": "/assets/filcmar-2026/lo-que-queda-del-mar.jpg",
+  "veredicto": "oficial"
+ },
+ "xref": {
+  "tmdb": 1661515,
+  "letterboxd": "after-the-sea"
+ },
+ "versiones": [
+  {
+   "etiqueta": "5 min",
+   "duracion_min": 5
+  }
+ ],
+ "presentaciones": [
+  "filcmar-2026"
+ ]
+}

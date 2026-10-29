@@ -1,0 +1,6196 @@
+{
+ "_provenance": {
+  "fuente": "ids-legado.py: ids estables congelados desde lo publicado (docs/FUNCION.md §11.2)",
+  "capturado": "2026-10-18"
+ },
+ "funciones": {
+  "f_9fc17d65a1": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-14",
+   "hora": "15:20",
+   "sala": "SCOTIA 10",
+   "titulo": "2 6 seconds death in the outback"
+  },
+  "f_1f698a257a": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-10",
+   "hora": "12:10",
+   "sala": "SCOTIA 10",
+   "titulo": "2 6 seconds death in the outback"
+  },
+  "f_ed1a1868e5": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-15",
+   "hora": "18:25",
+   "sala": "SCOTIA 8",
+   "titulo": "2 6 seconds death in the outback"
+  },
+  "f_f37357b522": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-11",
+   "hora": "21:00",
+   "sala": "SCOTIA 9",
+   "titulo": "a common story"
+  },
+  "f_b86e651919": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-14",
+   "hora": "17:30",
+   "sala": "SCOTIA 5",
+   "titulo": "a common story"
+  },
+  "f_50eb782291": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-16",
+   "hora": "21:15",
+   "sala": "SCOTIA 7",
+   "titulo": "a common story"
+  },
+  "f_61caaf3d23": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-20",
+   "hora": "13:25",
+   "sala": "SCOTIA 11",
+   "titulo": "a girl unknown"
+  },
+  "f_42654e4a72": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-16",
+   "hora": "15:00",
+   "sala": "SCOTIA 11",
+   "titulo": "a girl unknown"
+  },
+  "f_2a21fd0854": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-10",
+   "hora": "12:05",
+   "sala": "SCOTIA 8",
+   "titulo": "a girl unknown"
+  },
+  "f_a0f495479c": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-17",
+   "hora": "20:30",
+   "sala": "SCOTIA 5",
+   "titulo": "a girl unknown"
+  },
+  "f_1b6868a79c": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-19",
+   "hora": "15:45",
+   "sala": "SCOTIA 11",
+   "titulo": "a good little soldier"
+  },
+  "f_915d3091bf": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-16",
+   "hora": "15:00",
+   "sala": "TLB 2",
+   "titulo": "a good little soldier"
+  },
+  "f_71dff023aa": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-10",
+   "hora": "15:00",
+   "sala": "SCOTIA 13",
+   "titulo": "a good little soldier"
+  },
+  "f_95e129ea44": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-17",
+   "hora": "11:50",
+   "sala": "SCOTIA 2",
+   "titulo": "a good little soldier"
+  },
+  "f_ff85622d13": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-16",
+   "hora": "18:15",
+   "sala": "TLB 2",
+   "titulo": "a long winter"
+  },
+  "f_13f082ea50": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-17",
+   "hora": "11:15",
+   "sala": "TLB 3",
+   "titulo": "a long winter"
+  },
+  "f_cf66ca0f5e": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-11",
+   "hora": "09:30",
+   "sala": "TLB 2",
+   "titulo": "a long winter"
+  },
+  "f_53daef85aa": {
+   "sede": "Roy Thomson Hall - Toronto",
+   "dia": "2026-09-14",
+   "hora": "13:30",
+   "sala": "RTH",
+   "titulo": "a talent for murder"
+  },
+  "f_4bc2af5f95": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-15",
+   "hora": "12:00",
+   "sala": "SCOTIA 4",
+   "titulo": "a talent for murder"
+  },
+  "f_93968233ed": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-15",
+   "hora": "15:20",
+   "sala": "SCOTIA 1",
+   "titulo": "a talent for murder"
+  },
+  "f_c5c8631826": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-12",
+   "hora": "15:45",
+   "sala": "SCOTIA 9",
+   "titulo": "after elena"
+  },
+  "f_bdb95aee09": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-12",
+   "hora": "21:15",
+   "sala": "SCOTIA 10",
+   "titulo": "after elena"
+  },
+  "f_9b16b6fe5e": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-11",
+   "hora": "15:15",
+   "sala": "TLB 2",
+   "titulo": "after elena"
+  },
+  "f_85e2742fdc": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-19",
+   "hora": "13:15",
+   "sala": "SCOTIA 11",
+   "titulo": "after elena"
+  },
+  "f_eb005b5cf8": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-20",
+   "hora": "10:15",
+   "sala": "SCOTIA 11",
+   "titulo": "ah girl"
+  },
+  "f_bf60b1c279": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-16",
+   "hora": "12:00",
+   "sala": "SCOTIA 14",
+   "titulo": "ah girl"
+  },
+  "f_1b24b2fd4a": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-11",
+   "hora": "21:35",
+   "sala": "SCOTIA 8",
+   "titulo": "ah girl"
+  },
+  "f_4c50fbd47b": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-17",
+   "hora": "18:20",
+   "sala": "SCOTIA 4",
+   "titulo": "ah girl"
+  },
+  "f_960065a6fa": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-14",
+   "hora": "21:15",
+   "sala": "TLB 2",
+   "titulo": "alice"
+  },
+  "f_a4d1a091d9": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-16",
+   "hora": "21:35",
+   "sala": "SCOTIA 9",
+   "titulo": "alice"
+  },
+  "f_94f24844e8": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-15",
+   "hora": "08:40",
+   "sala": "SCOTIA 13",
+   "titulo": "alice"
+  },
+  "f_16139038da": {
+   "sede": "Roy Thomson Hall - Toronto",
+   "dia": "2026-09-14",
+   "hora": "17:30",
+   "sala": "RTH",
+   "titulo": "all about corinne"
+  },
+  "f_fe9159172f": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-15",
+   "hora": "11:30",
+   "sala": "SCOTIA 2",
+   "titulo": "all about corinne"
+  },
+  "f_f8cd129e21": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-10",
+   "hora": "08:50",
+   "sala": "SCOTIA 4",
+   "titulo": "all about corinne"
+  },
+  "f_5dd4d9ace2": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-19",
+   "hora": "18:20",
+   "sala": "SCOTIA 4",
+   "titulo": "all that she wants"
+  },
+  "f_f886fa405e": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-15",
+   "hora": "18:15",
+   "sala": "SCOTIA 14",
+   "titulo": "all that she wants"
+  },
+  "f_bf38fa3198": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-14",
+   "hora": "12:45",
+   "sala": "SCOTIA 14",
+   "titulo": "all that she wants"
+  },
+  "f_0a48363eee": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-20",
+   "hora": "19:30",
+   "sala": "SCOTIA 1",
+   "titulo": "all that she wants"
+  },
+  "f_ff4f030411": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-13",
+   "hora": "21:30",
+   "sala": "TLB 1",
+   "titulo": "all that she wants"
+  },
+  "f_04b7d55a95": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-10",
+   "hora": "09:00",
+   "sala": "TLB 1",
+   "titulo": "all of a sudden"
+  },
+  "f_132e305f4f": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-19",
+   "hora": "14:15",
+   "sala": "SCOTIA 10",
+   "titulo": "all of a sudden"
+  },
+  "f_8ca9adcda6": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-14",
+   "hora": "12:30",
+   "sala": "TLB 2",
+   "titulo": "all of a sudden"
+  },
+  "f_04e424f4a6": {
+   "sede": "VISA Screening Room at the Princess of Wales Theatre - Toronto",
+   "dia": "2026-09-17",
+   "hora": "14:00",
+   "sala": "VSR",
+   "titulo": "alpha gang"
+  },
+  "f_07f34dcbdc": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-15",
+   "hora": "08:30",
+   "sala": "TLB 1",
+   "titulo": "alpha gang"
+  },
+  "f_4ea4768cd5": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-14",
+   "hora": "17:30",
+   "sala": "SCOTIA 3",
+   "titulo": "alpha gang"
+  },
+  "f_381fa5ea9a": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-20",
+   "hora": "17:00",
+   "sala": "SCOTIA 4",
+   "titulo": "alpha gang"
+  },
+  "f_faf1ff4aab": {
+   "sede": "VISA Screening Room at the Princess of Wales Theatre - Toronto",
+   "dia": "2026-09-13",
+   "hora": "21:30",
+   "sala": "VSR",
+   "titulo": "alpha gang"
+  },
+  "f_3f6b720241": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-18",
+   "hora": "09:00",
+   "sala": "SCOTIA 1",
+   "titulo": "always lalisa"
+  },
+  "f_d63ab5ff35": {
+   "sede": "Roy Thomson Hall - Toronto",
+   "dia": "2026-09-11",
+   "hora": "21:30",
+   "sala": "RTH",
+   "titulo": "always lalisa"
+  },
+  "f_55de6080b0": {
+   "sede": "John Bassett Theatre - Toronto",
+   "dia": "2026-09-15",
+   "hora": "08:30",
+   "sala": "JBT",
+   "titulo": "always lalisa"
+  },
+  "f_a443b055a7": {
+   "sede": "Roy Thomson Hall - Toronto",
+   "dia": "2026-09-12",
+   "hora": "10:30",
+   "sala": "RTH",
+   "titulo": "always lalisa"
+  },
+  "f_d6349f7829": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-20",
+   "hora": "16:45",
+   "sala": "SCOTIA 1",
+   "titulo": "always lalisa"
+  },
+  "f_27754ad326": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-11",
+   "hora": "11:40",
+   "sala": "SCOTIA 4",
+   "titulo": "american hostage"
+  },
+  "f_cbc1d6d966": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-12",
+   "hora": "14:15",
+   "sala": "TLB 2",
+   "titulo": "american hostage"
+  },
+  "f_73653b0981": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-16",
+   "hora": "21:00",
+   "sala": "SCOTIA 2",
+   "titulo": "american hostage"
+  },
+  "f_81d0958128": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-18",
+   "hora": "21:30",
+   "sala": "SCOTIA 4",
+   "titulo": "american hostage"
+  },
+  "f_e304adce5c": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-14",
+   "hora": "21:40",
+   "sala": "SCOTIA 10",
+   "titulo": "ancestors"
+  },
+  "f_0e86a8abe9": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-20",
+   "hora": "15:45",
+   "sala": "SCOTIA 14",
+   "titulo": "ancestors"
+  },
+  "f_ff057f5593": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-12",
+   "hora": "21:30",
+   "sala": "TLB 4",
+   "titulo": "ancestors"
+  },
+  "f_3db626230a": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-13",
+   "hora": "08:30",
+   "sala": "TLB 3",
+   "titulo": "ancestors"
+  },
+  "f_2830024355": {
+   "sede": "Royal Alexandra Theatre - Toronto",
+   "dia": "2026-09-16",
+   "hora": "23:59",
+   "sala": "RA",
+   "titulo": "anchors aweigh"
+  },
+  "f_ae5211b221": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-17",
+   "hora": "16:00",
+   "sala": "SCOTIA 3",
+   "titulo": "anchors aweigh"
+  },
+  "f_8414bf4eeb": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-18",
+   "hora": "15:15",
+   "sala": "TLB 3",
+   "titulo": "anchors aweigh"
+  },
+  "f_f018a1c0e2": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-14",
+   "hora": "12:15",
+   "sala": "SCOTIA 7",
+   "titulo": "anchors aweigh"
+  },
+  "f_13a5ffa145": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-19",
+   "hora": "12:20",
+   "sala": "SCOTIA 9",
+   "titulo": "angh"
+  },
+  "f_bb3fa7a48d": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-15",
+   "hora": "21:00",
+   "sala": "TLB 1",
+   "titulo": "angh"
+  },
+  "f_3079d6e852": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-16",
+   "hora": "12:00",
+   "sala": "SCOTIA 11",
+   "titulo": "angh"
+  },
+  "f_e419be1540": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-13",
+   "hora": "11:40",
+   "sala": "SCOTIA 8",
+   "titulo": "angh"
+  },
+  "f_6edb6f50b7": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-11",
+   "hora": "08:40",
+   "sala": "SCOTIA 13",
+   "titulo": "arne goes to space"
+  },
+  "f_4730df7365": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-20",
+   "hora": "09:50",
+   "sala": "SCOTIA 6",
+   "titulo": "arne goes to space"
+  },
+  "f_f6debe2a88": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-11",
+   "hora": "12:45",
+   "sala": "TLB 4",
+   "titulo": "arne goes to space"
+  },
+  "f_c27ec80447": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-12",
+   "hora": "21:45",
+   "sala": "SCOTIA 7",
+   "titulo": "arne goes to space"
+  },
+  "f_6ebbe6f415": {
+   "sede": "Royal Alexandra Theatre - Toronto",
+   "dia": "2026-09-17",
+   "hora": "23:59",
+   "sala": "RA",
+   "titulo": "arrested memory"
+  },
+  "f_02b27ca9a2": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-19",
+   "hora": "18:45",
+   "sala": "TLB 3",
+   "titulo": "arrested memory"
+  },
+  "f_2da867b25c": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-10",
+   "hora": "09:35",
+   "sala": "SCOTIA 14",
+   "titulo": "arrested memory"
+  },
+  "f_89dfa2a5f7": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-18",
+   "hora": "15:30",
+   "sala": "SCOTIA 3",
+   "titulo": "arrested memory"
+  },
+  "f_e5aad5d326": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-14",
+   "hora": "15:30",
+   "sala": "SCOTIA 6",
+   "titulo": "ashes"
+  },
+  "f_d36ce63859": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-16",
+   "hora": "15:20",
+   "sala": "SCOTIA 1",
+   "titulo": "ashes"
+  },
+  "f_cc71d5eff3": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-15",
+   "hora": "18:10",
+   "sala": "SCOTIA 2",
+   "titulo": "ashes"
+  },
+  "f_3a6312320b": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-10",
+   "hora": "15:45",
+   "sala": "SCOTIA 9",
+   "titulo": "at night"
+  },
+  "f_cb230871f9": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-14",
+   "hora": "21:20",
+   "sala": "SCOTIA 8",
+   "titulo": "at night"
+  },
+  "f_b93991bd09": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-12",
+   "hora": "18:45",
+   "sala": "TLB 4",
+   "titulo": "at night"
+  },
+  "f_3e8bdb1833": {
+   "sede": "Roy Thomson Hall - Toronto",
+   "dia": "2026-09-15",
+   "hora": "17:30",
+   "sala": "RTH",
+   "titulo": "atonement"
+  },
+  "f_b886b4c07f": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-18",
+   "hora": "15:15",
+   "sala": "SCOTIA 11",
+   "titulo": "atonement"
+  },
+  "f_04e8b3a4c7": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-10",
+   "hora": "14:00",
+   "sala": "SCOTIA 2",
+   "titulo": "atonement"
+  },
+  "f_4c51f086e8": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-16",
+   "hora": "21:20",
+   "sala": "SCOTIA 13",
+   "titulo": "atonement"
+  },
+  "f_4fd0ee07fe": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-15",
+   "hora": "18:40",
+   "sala": "SCOTIA 9",
+   "titulo": "ba s book"
+  },
+  "f_447aa0f21b": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-15",
+   "hora": "09:30",
+   "sala": "SCOTIA 14",
+   "titulo": "ba s book"
+  },
+  "f_3429a05aa1": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-17",
+   "hora": "12:35",
+   "sala": "SCOTIA 14",
+   "titulo": "ba s book"
+  },
+  "f_f4e8593e3e": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-17",
+   "hora": "17:30",
+   "sala": "SCOTIA 5",
+   "titulo": "ba s book"
+  },
+  "f_c0b7077f8a": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-19",
+   "hora": "12:45",
+   "sala": "SCOTIA 8",
+   "titulo": "ba s book"
+  },
+  "f_3624c3e153": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-18",
+   "hora": "09:15",
+   "sala": "SCOTIA 3",
+   "titulo": "babies"
+  },
+  "f_9f647f3cfb": {
+   "sede": "Roy Thomson Hall - Toronto",
+   "dia": "2026-09-12",
+   "hora": "17:30",
+   "sala": "RTH",
+   "titulo": "babies"
+  },
+  "f_6b381fcdf7": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-13",
+   "hora": "11:45",
+   "sala": "SCOTIA 3",
+   "titulo": "babies"
+  },
+  "f_5338433413": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-13",
+   "hora": "18:10",
+   "sala": "SCOTIA 2",
+   "titulo": "babies"
+  },
+  "f_b2a384c9b0": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-14",
+   "hora": "15:10",
+   "sala": "SCOTIA 4",
+   "titulo": "back in black"
+  },
+  "f_50777efbf0": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-12",
+   "hora": "10:00",
+   "sala": "SCOTIA 12",
+   "titulo": "back in black"
+  },
+  "f_ad38510894": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-13",
+   "hora": "17:45",
+   "sala": "SCOTIA 1",
+   "titulo": "back in black"
+  },
+  "f_2cbff7435d": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-17",
+   "hora": "08:40",
+   "sala": "SCOTIA 13",
+   "titulo": "back in black"
+  },
+  "f_8dfd7c37b4": {
+   "sede": "Royal Alexandra Theatre - Toronto",
+   "dia": "2026-09-14",
+   "hora": "20:30",
+   "sala": "RA",
+   "titulo": "bad lieutenant tokyo"
+  },
+  "f_291ed0b370": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-15",
+   "hora": "08:40",
+   "sala": "SCOTIA 2",
+   "titulo": "bad lieutenant tokyo"
+  },
+  "f_e22f6b163d": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-15",
+   "hora": "21:40",
+   "sala": "SCOTIA 1",
+   "titulo": "bad lieutenant tokyo"
+  },
+  "f_c2946898ca": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-10",
+   "hora": "18:40",
+   "sala": "SCOTIA 9",
+   "titulo": "bedford park"
+  },
+  "f_e6d8dfeb0e": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-12",
+   "hora": "14:30",
+   "sala": "TLB 1",
+   "titulo": "bedford park"
+  },
+  "f_e09e8f3159": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-17",
+   "hora": "13:30",
+   "sala": "SCOTIA 8",
+   "titulo": "bedford park"
+  },
+  "f_3530593ab9": {
+   "sede": "Roy Thomson Hall - Toronto",
+   "dia": "2026-09-10",
+   "hora": "20:00",
+   "sala": "RTH",
+   "titulo": "being heumann"
+  },
+  "f_dd7f48b054": {
+   "sede": "VISA Screening Room at the Princess of Wales Theatre - Toronto",
+   "dia": "2026-09-10",
+   "hora": "18:00",
+   "sala": "VSR",
+   "titulo": "being heumann"
+  },
+  "f_f2eaea8bb0": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-17",
+   "hora": "10:45",
+   "sala": "TLB 1",
+   "titulo": "being heumann"
+  },
+  "f_e2924596b3": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-11",
+   "hora": "08:45",
+   "sala": "TLB 1",
+   "titulo": "being heumann"
+  },
+  "f_d4571be4a1": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-19",
+   "hora": "18:00",
+   "sala": "TLB 1",
+   "titulo": "being heumann"
+  },
+  "f_70e66c63ec": {
+   "sede": "VISA Screening Room at the Princess of Wales Theatre - Toronto",
+   "dia": "2026-09-12",
+   "hora": "11:00",
+   "sala": "VSR",
+   "titulo": "being heumann"
+  },
+  "f_5286fb07df": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-10",
+   "hora": "21:30",
+   "sala": "TLB 2",
+   "titulo": "below"
+  },
+  "f_1e112c6ff9": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-11",
+   "hora": "08:30",
+   "sala": "TLB 3",
+   "titulo": "below"
+  },
+  "f_8d4c4e9721": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-11",
+   "hora": "21:55",
+   "sala": "SCOTIA 3",
+   "titulo": "below"
+  },
+  "f_0e388cb89c": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-19",
+   "hora": "13:00",
+   "sala": "TLB 3",
+   "titulo": "below"
+  },
+  "f_faa779fe74": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-10",
+   "hora": "09:30",
+   "sala": "SCOTIA 10",
+   "titulo": "ben imana"
+  },
+  "f_c07cc64cdc": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-16",
+   "hora": "18:55",
+   "sala": "SCOTIA 14",
+   "titulo": "ben imana"
+  },
+  "f_ffeb285b57": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-15",
+   "hora": "18:30",
+   "sala": "SCOTIA 10",
+   "titulo": "ben imana"
+  },
+  "f_b5fd8dbf19": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-19",
+   "hora": "15:30",
+   "sala": "SCOTIA 9",
+   "titulo": "ben imana"
+  },
+  "f_e1a62958a0": {
+   "sede": "John Bassett Theatre - Toronto",
+   "dia": "2026-09-14",
+   "hora": "08:30",
+   "sala": "JBT",
+   "titulo": "bitter christmas"
+  },
+  "f_5311268ca9": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-15",
+   "hora": "15:00",
+   "sala": "SCOTIA 3",
+   "titulo": "bitter christmas"
+  },
+  "f_08e7cf8857": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-13",
+   "hora": "21:20",
+   "sala": "SCOTIA 2",
+   "titulo": "bitter christmas"
+  },
+  "f_e667c01cb7": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-18",
+   "hora": "12:00",
+   "sala": "SCOTIA 8",
+   "titulo": "black sunflowers"
+  },
+  "f_58c9d5395b": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-11",
+   "hora": "18:45",
+   "sala": "SCOTIA 3",
+   "titulo": "black sunflowers"
+  },
+  "f_55a380e2e5": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-13",
+   "hora": "08:55",
+   "sala": "SCOTIA 8",
+   "titulo": "black sunflowers"
+  },
+  "f_a0a388491f": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-13",
+   "hora": "18:25",
+   "sala": "SCOTIA 8",
+   "titulo": "black sunflowers"
+  },
+  "f_1a5186900f": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-18",
+   "hora": "14:00",
+   "sala": "SCOTIA 14",
+   "titulo": "bleeding hearts"
+  },
+  "f_43d25d7fc0": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-14",
+   "hora": "14:15",
+   "sala": "SCOTIA 12",
+   "titulo": "bleeding hearts"
+  },
+  "f_bd96ced61c": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-17",
+   "hora": "15:20",
+   "sala": "SCOTIA 1",
+   "titulo": "bleeding hearts"
+  },
+  "f_fa87ae807c": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-20",
+   "hora": "19:35",
+   "sala": "SCOTIA 7",
+   "titulo": "bleeding hearts"
+  },
+  "f_4a1d0be036": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-13",
+   "hora": "18:00",
+   "sala": "SCOTIA 10",
+   "titulo": "blindspot berlin"
+  },
+  "f_ca6d2c0522": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-10",
+   "hora": "21:40",
+   "sala": "SCOTIA 14",
+   "titulo": "blindspot berlin"
+  },
+  "f_502b27ddc6": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-15",
+   "hora": "20:30",
+   "sala": "SCOTIA 5",
+   "titulo": "blindspot berlin"
+  },
+  "f_e984de4421": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-15",
+   "hora": "18:00",
+   "sala": "TLB 1",
+   "titulo": "brace your heart"
+  },
+  "f_5edd48893d": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-17",
+   "hora": "21:15",
+   "sala": "SCOTIA 11",
+   "titulo": "brace your heart"
+  },
+  "f_3722b5d524": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-12",
+   "hora": "17:50",
+   "sala": "SCOTIA 6",
+   "titulo": "brace your heart"
+  },
+  "f_fe928d2071": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-18",
+   "hora": "12:00",
+   "sala": "SCOTIA 4",
+   "titulo": "brace your heart"
+  },
+  "f_ad18a673bd": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-14",
+   "hora": "12:00",
+   "sala": "TLB 1",
+   "titulo": "bucking fastard"
+  },
+  "f_6623d6a8d1": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-11",
+   "hora": "16:00",
+   "sala": "SCOTIA 3",
+   "titulo": "bucking fastard"
+  },
+  "f_c07df9e185": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-20",
+   "hora": "15:00",
+   "sala": "SCOTIA 13",
+   "titulo": "bucking fastard"
+  },
+  "f_497adf6542": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-16",
+   "hora": "21:15",
+   "sala": "SCOTIA 1",
+   "titulo": "bucking fastard"
+  },
+  "f_ddb256bbba": {
+   "sede": "Roy Thomson Hall - Toronto",
+   "dia": "2026-09-14",
+   "hora": "21:30",
+   "sala": "RTH",
+   "titulo": "bunker"
+  },
+  "f_4b99acc03a": {
+   "sede": "VISA Screening Room at the Princess of Wales Theatre - Toronto",
+   "dia": "2026-09-15",
+   "hora": "11:00",
+   "sala": "VSR",
+   "titulo": "bunker"
+  },
+  "f_093e223086": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-15",
+   "hora": "08:00",
+   "sala": "TLB 2",
+   "titulo": "bunker"
+  },
+  "f_c272d910e9": {
+   "sede": "Royal Alexandra Theatre - Toronto",
+   "dia": "2026-09-18",
+   "hora": "20:30",
+   "sala": "RA",
+   "titulo": "carrie"
+  },
+  "f_0d1715adeb": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-19",
+   "hora": "20:30",
+   "sala": "SCOTIA 1",
+   "titulo": "carrie"
+  },
+  "f_d344375556": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-14",
+   "hora": "12:00",
+   "sala": "SCOTIA 3",
+   "titulo": "carrie"
+  },
+  "f_e39d9849bd": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-20",
+   "hora": "19:00",
+   "sala": "SCOTIA 3",
+   "titulo": "carrie"
+  },
+  "f_dfdb4eeec5": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-13",
+   "hora": "12:15",
+   "sala": "SCOTIA 14",
+   "titulo": "cheyenne"
+  },
+  "f_5949e5dd46": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-15",
+   "hora": "15:30",
+   "sala": "SCOTIA 9",
+   "titulo": "cheyenne"
+  },
+  "f_c5968631e8": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-20",
+   "hora": "13:05",
+   "sala": "SCOTIA 8",
+   "titulo": "cheyenne"
+  },
+  "f_f1c5a1d61a": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-12",
+   "hora": "15:15",
+   "sala": "SCOTIA 8",
+   "titulo": "cheyenne"
+  },
+  "f_26c2a8332a": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-10",
+   "hora": "17:15",
+   "sala": "TLB 1",
+   "titulo": "children untold"
+  },
+  "f_84bcda9ab5": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-11",
+   "hora": "09:25",
+   "sala": "SCOTIA 14",
+   "titulo": "children untold"
+  },
+  "f_ca42ebcee0": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-19",
+   "hora": "10:00",
+   "sala": "SCOTIA 1",
+   "titulo": "children untold"
+  },
+  "f_d58651b588": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-11",
+   "hora": "20:00",
+   "sala": "SCOTIA 11",
+   "titulo": "children untold"
+  },
+  "f_d755659ccb": {
+   "sede": "VISA Screening Room at the Princess of Wales Theatre - Toronto",
+   "dia": "2026-09-11",
+   "hora": "14:45",
+   "sala": "VSR",
+   "titulo": "clarissa"
+  },
+  "f_355106f0f3": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-11",
+   "hora": "08:45",
+   "sala": "SCOTIA 2",
+   "titulo": "clarissa"
+  },
+  "f_a4ec862258": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-12",
+   "hora": "12:00",
+   "sala": "SCOTIA 14",
+   "titulo": "clarissa"
+  },
+  "f_613ef63fea": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-13",
+   "hora": "08:50",
+   "sala": "SCOTIA 4",
+   "titulo": "closing night"
+  },
+  "f_0b50205f86": {
+   "sede": "VISA Screening Room at the Princess of Wales Theatre - Toronto",
+   "dia": "2026-09-12",
+   "hora": "14:45",
+   "sala": "VSR",
+   "titulo": "closing night"
+  },
+  "f_cc8caed279": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-13",
+   "hora": "14:45",
+   "sala": "SCOTIA 2",
+   "titulo": "closing night"
+  },
+  "f_3880964d5a": {
+   "sede": "VISA Screening Room at the Princess of Wales Theatre - Toronto",
+   "dia": "2026-09-18",
+   "hora": "21:30",
+   "sala": "VSR",
+   "titulo": "club kid"
+  },
+  "f_b7348eafb8": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-10",
+   "hora": "21:40",
+   "sala": "SCOTIA 1",
+   "titulo": "club kid"
+  },
+  "f_123a621040": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-13",
+   "hora": "21:00",
+   "sala": "TLB 2",
+   "titulo": "club kid"
+  },
+  "f_e180591498": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-19",
+   "hora": "17:15",
+   "sala": "SCOTIA 1",
+   "titulo": "club kid"
+  },
+  "f_c1b46c527d": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-18",
+   "hora": "20:20",
+   "sala": "SCOTIA 9",
+   "titulo": "congo boy"
+  },
+  "f_fcda08d7ae": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-10",
+   "hora": "15:20",
+   "sala": "SCOTIA 10",
+   "titulo": "congo boy"
+  },
+  "f_b3e3bcc5fe": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-20",
+   "hora": "10:15",
+   "sala": "SCOTIA 7",
+   "titulo": "congo boy"
+  },
+  "f_cf35c9550e": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-15",
+   "hora": "15:10",
+   "sala": "SCOTIA 4",
+   "titulo": "congo boy"
+  },
+  "f_e93a187998": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-11",
+   "hora": "14:15",
+   "sala": "SCOTIA 11",
+   "titulo": "conversation with the sea"
+  },
+  "f_ac0a095c97": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-16",
+   "hora": "18:10",
+   "sala": "SCOTIA 13",
+   "titulo": "conversation with the sea"
+  },
+  "f_a87b3d23b3": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-17",
+   "hora": "11:40",
+   "sala": "SCOTIA 11",
+   "titulo": "conversation with the sea"
+  },
+  "f_5c1f2c4c95": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-10",
+   "hora": "08:30",
+   "sala": "TLB 3",
+   "titulo": "coward"
+  },
+  "f_927fc28227": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-14",
+   "hora": "17:45",
+   "sala": "SCOTIA 2",
+   "titulo": "coward"
+  },
+  "f_aff5258fe6": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-13",
+   "hora": "17:45",
+   "sala": "TLB 2",
+   "titulo": "coward"
+  },
+  "f_cb2e39ba8a": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-16",
+   "hora": "21:30",
+   "sala": "TLB 2",
+   "titulo": "crystal lake"
+  },
+  "f_ec17ff7af5": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-14",
+   "hora": "08:30",
+   "sala": "TLB 3",
+   "titulo": "crystal lake"
+  },
+  "f_f1d82b7d0f": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-19",
+   "hora": "21:15",
+   "sala": "TLB 3",
+   "titulo": "crystal lake"
+  },
+  "f_14940731e8": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-17",
+   "hora": "21:30",
+   "sala": "SCOTIA 4",
+   "titulo": "crystal lake"
+  },
+  "f_16de60efc6": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-13",
+   "hora": "10:00",
+   "sala": "SCOTIA 12",
+   "titulo": "darlene love i know where i ve been"
+  },
+  "f_3a25b89035": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-15",
+   "hora": "19:30",
+   "sala": "SCOTIA 12",
+   "titulo": "darlene love i know where i ve been"
+  },
+  "f_aa9ef7dae6": {
+   "sede": "Royal Alexandra Theatre - Toronto",
+   "dia": "2026-09-14",
+   "hora": "13:00",
+   "sala": "RA",
+   "titulo": "darlene love i know where i ve been"
+  },
+  "f_665640661d": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-19",
+   "hora": "13:45",
+   "sala": "SCOTIA 13",
+   "titulo": "darlene love i know where i ve been"
+  },
+  "f_6f540ec13a": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-17",
+   "hora": "08:40",
+   "sala": "SCOTIA 2",
+   "titulo": "darlene love i know where i ve been"
+  },
+  "f_51c335ec0f": {
+   "sede": "Roy Thomson Hall - Toronto",
+   "dia": "2026-09-18",
+   "hora": "21:30",
+   "sala": "RTH",
+   "titulo": "diary of a mad old man"
+  },
+  "f_c57b477b1e": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-20",
+   "hora": "11:50",
+   "sala": "SCOTIA 13",
+   "titulo": "diary of a mad old man"
+  },
+  "f_eee3ddf8f5": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-11",
+   "hora": "11:15",
+   "sala": "SCOTIA 13",
+   "titulo": "diary of a mad old man"
+  },
+  "f_48d9be9b4b": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-18",
+   "hora": "21:00",
+   "sala": "SCOTIA 10",
+   "titulo": "djinn wedding"
+  },
+  "f_a58428464e": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-16",
+   "hora": "21:00",
+   "sala": "TLB 1",
+   "titulo": "djinn wedding"
+  },
+  "f_cb3f055ed6": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-17",
+   "hora": "12:25",
+   "sala": "SCOTIA 3",
+   "titulo": "djinn wedding"
+  },
+  "f_5ecb200789": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-12",
+   "hora": "12:00",
+   "sala": "SCOTIA 11",
+   "titulo": "djinn wedding"
+  },
+  "f_d55aefdb2d": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-12",
+   "hora": "14:30",
+   "sala": "SCOTIA 13",
+   "titulo": "dorothy"
+  },
+  "f_b8214061b4": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-11",
+   "hora": "17:30",
+   "sala": "SCOTIA 2",
+   "titulo": "dorothy"
+  },
+  "f_f3fad932d2": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-20",
+   "hora": "19:15",
+   "sala": "TLB 4",
+   "titulo": "dorothy"
+  },
+  "f_025bcc1eb3": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-12",
+   "hora": "09:05",
+   "sala": "SCOTIA 7",
+   "titulo": "dorothy"
+  },
+  "f_495ad03cf1": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-10",
+   "hora": "21:15",
+   "sala": "SCOTIA 8",
+   "titulo": "double freedom"
+  },
+  "f_b2d3453ab2": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-14",
+   "hora": "16:00",
+   "sala": "TLB 4",
+   "titulo": "double freedom"
+  },
+  "f_60730f1032": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-16",
+   "hora": "21:50",
+   "sala": "SCOTIA 14",
+   "titulo": "double freedom"
+  },
+  "f_cc3aaa0c8d": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-14",
+   "hora": "08:40",
+   "sala": "SCOTIA 13",
+   "titulo": "drifter"
+  },
+  "f_ae060f55fc": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-18",
+   "hora": "20:30",
+   "sala": "SCOTIA 2",
+   "titulo": "drifter"
+  },
+  "f_4a696e5e42": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-14",
+   "hora": "19:30",
+   "sala": "SCOTIA 12",
+   "titulo": "drifter"
+  },
+  "f_5468481650": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-12",
+   "hora": "20:45",
+   "sala": "SCOTIA 1",
+   "titulo": "drifter"
+  },
+  "f_58674c5cdc": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-12",
+   "hora": "18:10",
+   "sala": "SCOTIA 13",
+   "titulo": "edward said between worlds"
+  },
+  "f_49d0579c2c": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-20",
+   "hora": "13:15",
+   "sala": "SCOTIA 7",
+   "titulo": "edward said between worlds"
+  },
+  "f_d270131b2c": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-13",
+   "hora": "14:30",
+   "sala": "SCOTIA 8",
+   "titulo": "edward said between worlds"
+  },
+  "f_b21b31770b": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-13",
+   "hora": "20:50",
+   "sala": "SCOTIA 6",
+   "titulo": "edward said between worlds"
+  },
+  "f_717fd343a2": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-19",
+   "hora": "19:45",
+   "sala": "SCOTIA 14",
+   "titulo": "eklipse"
+  },
+  "f_153e3a04e2": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-11",
+   "hora": "09:05",
+   "sala": "SCOTIA 7",
+   "titulo": "eklipse"
+  },
+  "f_026b2b1172": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-14",
+   "hora": "14:30",
+   "sala": "SCOTIA 3",
+   "titulo": "eklipse"
+  },
+  "f_8f2448de66": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-16",
+   "hora": "15:10",
+   "sala": "SCOTIA 3",
+   "titulo": "eklipse"
+  },
+  "f_1899ffb7c0": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-10",
+   "hora": "12:25",
+   "sala": "SCOTIA 11",
+   "titulo": "elephants in the fog"
+  },
+  "f_cb0411acbe": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-13",
+   "hora": "18:30",
+   "sala": "SCOTIA 14",
+   "titulo": "elephants in the fog"
+  },
+  "f_212575c619": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-19",
+   "hora": "17:00",
+   "sala": "SCOTIA 13",
+   "titulo": "elephants in the fog"
+  },
+  "f_0548f16013": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-15",
+   "hora": "11:30",
+   "sala": "SCOTIA 8",
+   "titulo": "elephants in the fog"
+  },
+  "f_c6d9d186a5": {
+   "sede": "VISA Screening Room at the Princess of Wales Theatre - Toronto",
+   "dia": "2026-09-14",
+   "hora": "12:00",
+   "sala": "VSR",
+   "titulo": "elsinore"
+  },
+  "f_25c47a8b9c": {
+   "sede": "Roy Thomson Hall - Toronto",
+   "dia": "2026-09-19",
+   "hora": "13:00",
+   "sala": "RTH",
+   "titulo": "elsinore"
+  },
+  "f_bbb5e6a4eb": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-20",
+   "hora": "16:00",
+   "sala": "SCOTIA 3",
+   "titulo": "elsinore"
+  },
+  "f_1c1aa21c3c": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-15",
+   "hora": "18:30",
+   "sala": "SCOTIA 1",
+   "titulo": "elsinore"
+  },
+  "f_6fe298a666": {
+   "sede": "John Bassett Theatre - Toronto",
+   "dia": "2026-09-12",
+   "hora": "18:30",
+   "sala": "JBT",
+   "titulo": "elsinore"
+  },
+  "f_3cce0bfd7f": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-18",
+   "hora": "19:30",
+   "sala": "SCOTIA 12",
+   "titulo": "everest the other side"
+  },
+  "f_4373f86f16": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-19",
+   "hora": "14:15",
+   "sala": "SCOTIA 12",
+   "titulo": "everest the other side"
+  },
+  "f_f7bc42a1ad": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-10",
+   "hora": "10:00",
+   "sala": "SCOTIA 12",
+   "titulo": "everest the other side"
+  },
+  "f_8caa502d22": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-12",
+   "hora": "19:30",
+   "sala": "SCOTIA 12",
+   "titulo": "everest the other side"
+  },
+  "f_e8691e58a4": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-13",
+   "hora": "19:30",
+   "sala": "SCOTIA 12",
+   "titulo": "everest the other side"
+  },
+  "f_a0b84368c7": {
+   "sede": "Royal Alexandra Theatre - Toronto",
+   "dia": "2026-09-19",
+   "hora": "20:30",
+   "sala": "RA",
+   "titulo": "everybody wants to f ck me"
+  },
+  "f_71d1987327": {
+   "sede": "VISA Screening Room at the Princess of Wales Theatre - Toronto",
+   "dia": "2026-09-11",
+   "hora": "21:30",
+   "sala": "VSR",
+   "titulo": "everybody wants to f ck me"
+  },
+  "f_424589d3c8": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-12",
+   "hora": "21:20",
+   "sala": "SCOTIA 2",
+   "titulo": "everybody wants to f ck me"
+  },
+  "f_32a15b7006": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-12",
+   "hora": "09:00",
+   "sala": "SCOTIA 1",
+   "titulo": "everybody wants to f ck me"
+  },
+  "f_596ca5c255": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-10",
+   "hora": "20:30",
+   "sala": "TLB 3",
+   "titulo": "everything else is noise"
+  },
+  "f_7a0c59e650": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-18",
+   "hora": "22:00",
+   "sala": "TLB 4",
+   "titulo": "everything else is noise"
+  },
+  "f_ad54e149b6": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-11",
+   "hora": "12:15",
+   "sala": "SCOTIA 7",
+   "titulo": "everything else is noise"
+  },
+  "f_aaa22822bf": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-16",
+   "hora": "14:30",
+   "sala": "SCOTIA 2",
+   "titulo": "everytime"
+  },
+  "f_4e2f878994": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-10",
+   "hora": "11:30",
+   "sala": "SCOTIA 3",
+   "titulo": "everytime"
+  },
+  "f_328d7b55ea": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-15",
+   "hora": "15:25",
+   "sala": "SCOTIA 7",
+   "titulo": "everytime"
+  },
+  "f_b3fba9a0bc": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-18",
+   "hora": "21:20",
+   "sala": "SCOTIA 13",
+   "titulo": "evil genius"
+  },
+  "f_ba110be8a5": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-20",
+   "hora": "18:00",
+   "sala": "SCOTIA 13",
+   "titulo": "evil genius"
+  },
+  "f_556afde648": {
+   "sede": "Roy Thomson Hall - Toronto",
+   "dia": "2026-09-12",
+   "hora": "14:00",
+   "sala": "RTH",
+   "titulo": "evil genius"
+  },
+  "f_85a63251f9": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-13",
+   "hora": "08:15",
+   "sala": "TLB 2",
+   "titulo": "evil genius"
+  },
+  "f_9c76d68a40": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-13",
+   "hora": "14:00",
+   "sala": "SCOTIA 1",
+   "titulo": "evil genius"
+  },
+  "f_a6e140eb96": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-12",
+   "hora": "08:30",
+   "sala": "SCOTIA 13",
+   "titulo": "faith"
+  },
+  "f_d5f1580fbc": {
+   "sede": "Royal Alexandra Theatre - Toronto",
+   "dia": "2026-09-11",
+   "hora": "14:15",
+   "sala": "RA",
+   "titulo": "faith"
+  },
+  "f_d540aef9fe": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-12",
+   "hora": "11:20",
+   "sala": "SCOTIA 13",
+   "titulo": "faith"
+  },
+  "f_3c946a4f4c": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-19",
+   "hora": "12:25",
+   "sala": "SCOTIA 3",
+   "titulo": "faith"
+  },
+  "f_3c963198a6": {
+   "sede": "VISA Screening Room at the Princess of Wales Theatre - Toronto",
+   "dia": "2026-09-10",
+   "hora": "21:30",
+   "sala": "VSR",
+   "titulo": "fjord"
+  },
+  "f_d21b28b35c": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-10",
+   "hora": "15:20",
+   "sala": "SCOTIA 1",
+   "titulo": "fjord"
+  },
+  "f_0185485ae5": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-11",
+   "hora": "16:15",
+   "sala": "SCOTIA 13",
+   "titulo": "fjord"
+  },
+  "f_71efe8541a": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-10",
+   "hora": "09:10",
+   "sala": "SCOTIA 9",
+   "titulo": "flies"
+  },
+  "f_c186a992c8": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-18",
+   "hora": "11:00",
+   "sala": "SCOTIA 9",
+   "titulo": "flies"
+  },
+  "f_c957cd2270": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-16",
+   "hora": "17:30",
+   "sala": "SCOTIA 10",
+   "titulo": "flies"
+  },
+  "f_d59817060e": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-19",
+   "hora": "14:15",
+   "sala": "SCOTIA 6",
+   "titulo": "flies"
+  },
+  "f_190c2d1785": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-20",
+   "hora": "12:00",
+   "sala": "SCOTIA 9",
+   "titulo": "four seasons in java"
+  },
+  "f_579b5e5e68": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-13",
+   "hora": "17:30",
+   "sala": "SCOTIA 3",
+   "titulo": "four seasons in java"
+  },
+  "f_b4ec81f546": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-11",
+   "hora": "18:20",
+   "sala": "SCOTIA 4",
+   "titulo": "four seasons in java"
+  },
+  "f_db87e367c2": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-15",
+   "hora": "13:45",
+   "sala": "SCOTIA 11",
+   "titulo": "four seasons in java"
+  },
+  "f_d2f99df638": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-14",
+   "hora": "14:15",
+   "sala": "TLB 3",
+   "titulo": "furies"
+  },
+  "f_cb423d5eb6": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-12",
+   "hora": "18:35",
+   "sala": "SCOTIA 7",
+   "titulo": "furies"
+  },
+  "f_88c0c73e5e": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-18",
+   "hora": "18:00",
+   "sala": "SCOTIA 7",
+   "titulo": "furies"
+  },
+  "f_c34a4348c2": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-16",
+   "hora": "21:30",
+   "sala": "SCOTIA 4",
+   "titulo": "furies"
+  },
+  "f_d141d5fc10": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-10",
+   "hora": "21:30",
+   "sala": "SCOTIA 9",
+   "titulo": "future tense"
+  },
+  "f_f019e43e7a": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-14",
+   "hora": "20:45",
+   "sala": "TLB 3",
+   "titulo": "future tense"
+  },
+  "f_0267f4644d": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-16",
+   "hora": "19:00",
+   "sala": "TLB 4",
+   "titulo": "future tense"
+  },
+  "f_b7ea26ff8e": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-19",
+   "hora": "20:50",
+   "sala": "SCOTIA 6",
+   "titulo": "future tense"
+  },
+  "f_4dd3eb77db": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-17",
+   "hora": "21:55",
+   "sala": "TLB 2",
+   "titulo": "gail"
+  },
+  "f_56927da5f3": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-10",
+   "hora": "08:40",
+   "sala": "SCOTIA 2",
+   "titulo": "gail"
+  },
+  "f_a84d730b88": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-12",
+   "hora": "18:20",
+   "sala": "SCOTIA 4",
+   "titulo": "gail"
+  },
+  "f_f582bf95ae": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-20",
+   "hora": "12:30",
+   "sala": "SCOTIA 14",
+   "titulo": "gail"
+  },
+  "f_b080ce9ad0": {
+   "sede": "Royal Alexandra Theatre - Toronto",
+   "dia": "2026-09-14",
+   "hora": "17:00",
+   "sala": "RA",
+   "titulo": "gentle monster"
+  },
+  "f_58cb58014c": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-15",
+   "hora": "08:45",
+   "sala": "TLB 3",
+   "titulo": "gentle monster"
+  },
+  "f_a3f5d656e5": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-16",
+   "hora": "11:30",
+   "sala": "TLB 2",
+   "titulo": "gentle monster"
+  },
+  "f_e863cba694": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-19",
+   "hora": "15:15",
+   "sala": "TLB 2",
+   "titulo": "gentle monster"
+  },
+  "f_bc5413a2a1": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-20",
+   "hora": "09:00",
+   "sala": "TLB 2",
+   "titulo": "gentle monster"
+  },
+  "f_2ea8ca1c10": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-12",
+   "hora": "11:30",
+   "sala": "SCOTIA 1",
+   "titulo": "girl group"
+  },
+  "f_84f2f4cc6e": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-12",
+   "hora": "18:45",
+   "sala": "SCOTIA 3",
+   "titulo": "girl group"
+  },
+  "f_6e8a8d2aa7": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-17",
+   "hora": "21:40",
+   "sala": "SCOTIA 1",
+   "titulo": "girl group"
+  },
+  "f_4122b7a8c3": {
+   "sede": "Roy Thomson Hall - Toronto",
+   "dia": "2026-09-11",
+   "hora": "17:30",
+   "sala": "RTH",
+   "titulo": "girl group"
+  },
+  "f_13ee47db6d": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-19",
+   "hora": "19:30",
+   "sala": "SCOTIA 12",
+   "titulo": "girl group"
+  },
+  "f_8d8e44e4ff": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-19",
+   "hora": "18:30",
+   "sala": "SCOTIA 9",
+   "titulo": "glaxo"
+  },
+  "f_863b6bd183": {
+   "sede": "Royal Alexandra Theatre - Toronto",
+   "dia": "2026-09-11",
+   "hora": "17:30",
+   "sala": "RA",
+   "titulo": "glaxo"
+  },
+  "f_d2c151c7ec": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-12",
+   "hora": "09:25",
+   "sala": "SCOTIA 14",
+   "titulo": "glaxo"
+  },
+  "f_c877f040cd": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-12",
+   "hora": "21:30",
+   "sala": "SCOTIA 4",
+   "titulo": "glaxo"
+  },
+  "f_ca87ab3799": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-11",
+   "hora": "18:40",
+   "sala": "SCOTIA 9",
+   "titulo": "god bless you mr kopu"
+  },
+  "f_52c45739b0": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-14",
+   "hora": "20:30",
+   "sala": "SCOTIA 5",
+   "titulo": "god bless you mr kopu"
+  },
+  "f_dbfc236a38": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-16",
+   "hora": "18:15",
+   "sala": "SCOTIA 7",
+   "titulo": "god bless you mr kopu"
+  },
+  "f_4437a36381": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-19",
+   "hora": "21:40",
+   "sala": "SCOTIA 9",
+   "titulo": "god bless you mr kopu"
+  },
+  "f_30eefd70a3": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-13",
+   "hora": "12:00",
+   "sala": "SCOTIA 11",
+   "titulo": "growth of the soil"
+  },
+  "f_47c1cd02d8": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-12",
+   "hora": "17:15",
+   "sala": "TLB 2",
+   "titulo": "growth of the soil"
+  },
+  "f_473909b0f4": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-13",
+   "hora": "09:00",
+   "sala": "SCOTIA 10",
+   "titulo": "growth of the soil"
+  },
+  "f_256f292c4e": {
+   "sede": "Royal Alexandra Theatre - Toronto",
+   "dia": "2026-09-18",
+   "hora": "23:59",
+   "sala": "RA",
+   "titulo": "half"
+  },
+  "f_f72e9c073a": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-14",
+   "hora": "11:30",
+   "sala": "SCOTIA 4",
+   "titulo": "half"
+  },
+  "f_ae2c0afe6c": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-19",
+   "hora": "18:15",
+   "sala": "SCOTIA 7",
+   "titulo": "half"
+  },
+  "f_9aae9417da": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-20",
+   "hora": "19:45",
+   "sala": "SCOTIA 4",
+   "titulo": "half"
+  },
+  "f_cd05280ab2": {
+   "sede": "Royal Alexandra Theatre - Toronto",
+   "dia": "2026-09-15",
+   "hora": "20:30",
+   "sala": "RA",
+   "titulo": "ha chan shake your booty"
+  },
+  "f_bd47ef8f6f": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-10",
+   "hora": "11:50",
+   "sala": "SCOTIA 13",
+   "titulo": "ha chan shake your booty"
+  },
+  "f_8a99d9ea37": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-16",
+   "hora": "12:00",
+   "sala": "SCOTIA 1",
+   "titulo": "ha chan shake your booty"
+  },
+  "f_5d144cdb6b": {
+   "sede": "Royal Alexandra Theatre - Toronto",
+   "dia": "2026-09-17",
+   "hora": "19:30",
+   "sala": "RA",
+   "titulo": "happily ever after"
+  },
+  "f_53de976929": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-14",
+   "hora": "10:00",
+   "sala": "SCOTIA 9",
+   "titulo": "happily ever after"
+  },
+  "f_7dad03d210": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-18",
+   "hora": "12:15",
+   "sala": "SCOTIA 3",
+   "titulo": "happily ever after"
+  },
+  "f_b21a1f6ec0": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-19",
+   "hora": "12:30",
+   "sala": "SCOTIA 4",
+   "titulo": "happily ever after"
+  },
+  "f_61d6b3bfe6": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-20",
+   "hora": "12:50",
+   "sala": "SCOTIA 6",
+   "titulo": "happily ever after"
+  },
+  "f_638aa83d58": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-14",
+   "hora": "08:30",
+   "sala": "SCOTIA 11",
+   "titulo": "head to head"
+  },
+  "f_d8717fd988": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-20",
+   "hora": "15:30",
+   "sala": "SCOTIA 9",
+   "titulo": "head to head"
+  },
+  "f_8a549c951b": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-15",
+   "hora": "15:20",
+   "sala": "SCOTIA 10",
+   "titulo": "head to head"
+  },
+  "f_159352116e": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-13",
+   "hora": "14:00",
+   "sala": "TLB 3",
+   "titulo": "head to head"
+  },
+  "f_2e54984d47": {
+   "sede": "Royal Alexandra Theatre - Toronto",
+   "dia": "2026-09-15",
+   "hora": "13:30",
+   "sala": "RA",
+   "titulo": "hombre al agua"
+  },
+  "f_9546a62b8a": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-17",
+   "hora": "21:20",
+   "sala": "SCOTIA 13",
+   "titulo": "hombre al agua"
+  },
+  "f_deb83cd3cd": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-19",
+   "hora": "14:00",
+   "sala": "SCOTIA 14",
+   "titulo": "hombre al agua"
+  },
+  "f_275c0b77bf": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-10",
+   "hora": "14:30",
+   "sala": "SCOTIA 3",
+   "titulo": "hombre al agua"
+  },
+  "f_d6cacaaf57": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-10",
+   "hora": "12:35",
+   "sala": "SCOTIA 14",
+   "titulo": "how we stand"
+  },
+  "f_4b835c57a6": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-13",
+   "hora": "15:45",
+   "sala": "SCOTIA 11",
+   "titulo": "how we stand"
+  },
+  "f_055d12e20d": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-15",
+   "hora": "21:15",
+   "sala": "TLB 4",
+   "titulo": "how we stand"
+  },
+  "f_54c481c348": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-17",
+   "hora": "09:30",
+   "sala": "SCOTIA 4",
+   "titulo": "how we stand"
+  },
+  "f_1b4080a741": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-10",
+   "hora": "15:15",
+   "sala": "SCOTIA 8",
+   "titulo": "i am mario"
+  },
+  "f_2c895b22c6": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-20",
+   "hora": "15:50",
+   "sala": "SCOTIA 10",
+   "titulo": "i am mario"
+  },
+  "f_96c408f1d2": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-12",
+   "hora": "12:10",
+   "sala": "SCOTIA 10",
+   "titulo": "i am mario"
+  },
+  "f_f278227982": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-14",
+   "hora": "18:40",
+   "sala": "SCOTIA 9",
+   "titulo": "i am mario"
+  },
+  "f_988227e59b": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-18",
+   "hora": "17:45",
+   "sala": "TLB 2",
+   "titulo": "i play rocky"
+  },
+  "f_7d4d43de7d": {
+   "sede": "John Bassett Theatre - Toronto",
+   "dia": "2026-09-13",
+   "hora": "08:30",
+   "sala": "JBT",
+   "titulo": "i play rocky"
+  },
+  "f_bd462370f1": {
+   "sede": "VISA Screening Room at the Princess of Wales Theatre - Toronto",
+   "dia": "2026-09-12",
+   "hora": "18:00",
+   "sala": "VSR",
+   "titulo": "i play rocky"
+  },
+  "f_ec74952d57": {
+   "sede": "VISA Screening Room at the Princess of Wales Theatre - Toronto",
+   "dia": "2026-09-13",
+   "hora": "11:15",
+   "sala": "VSR",
+   "titulo": "i play rocky"
+  },
+  "f_ea8eda0177": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-10",
+   "hora": "09:10",
+   "sala": "SCOTIA 3",
+   "titulo": "idda"
+  },
+  "f_c9d7a9f15f": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-18",
+   "hora": "18:25",
+   "sala": "SCOTIA 8",
+   "titulo": "idda"
+  },
+  "f_4063638915": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-11",
+   "hora": "21:15",
+   "sala": "TLB 1",
+   "titulo": "idda"
+  },
+  "f_d78d7ae4d0": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-12",
+   "hora": "11:45",
+   "sala": "TLB 3",
+   "titulo": "idda"
+  },
+  "f_01c828485d": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-12",
+   "hora": "11:30",
+   "sala": "SCOTIA 4",
+   "titulo": "in alaska"
+  },
+  "f_85138a2f9c": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-11",
+   "hora": "11:45",
+   "sala": "TLB 1",
+   "titulo": "in alaska"
+  },
+  "f_e133c9ce98": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-13",
+   "hora": "21:30",
+   "sala": "SCOTIA 4",
+   "titulo": "in alaska"
+  },
+  "f_f226a8fd89": {
+   "sede": "Royal Alexandra Theatre - Toronto",
+   "dia": "2026-09-12",
+   "hora": "14:30",
+   "sala": "RA",
+   "titulo": "in conversation with andrew scott"
+  },
+  "f_9c4b392a1a": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-13",
+   "hora": "11:45",
+   "sala": "TLB 1",
+   "titulo": "in conversation with chris rock"
+  },
+  "f_ac3e0815ab": {
+   "sede": "VISA Screening Room at the Princess of Wales Theatre - Toronto",
+   "dia": "2026-09-17",
+   "hora": "18:00",
+   "sala": "VSR",
+   "titulo": "in conversation with lee min ho"
+  },
+  "f_3d6fbb5004": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-15",
+   "hora": "15:30",
+   "sala": "TLB 2",
+   "titulo": "in conversation with rachel morrison"
+  },
+  "f_5cd238569a": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-16",
+   "hora": "08:45",
+   "sala": "TLB 2",
+   "titulo": "in waves"
+  },
+  "f_221c7d925c": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-14",
+   "hora": "11:15",
+   "sala": "TLB 3",
+   "titulo": "in waves"
+  },
+  "f_f905f14b91": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-15",
+   "hora": "15:30",
+   "sala": "TLB 4",
+   "titulo": "in waves"
+  },
+  "f_f792573ce4": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-20",
+   "hora": "16:15",
+   "sala": "TLB 4",
+   "titulo": "in waves"
+  },
+  "f_0def29dbc1": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-10",
+   "hora": "21:00",
+   "sala": "TLB 1",
+   "titulo": "in the heart of the south"
+  },
+  "f_fa94145e7d": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-11",
+   "hora": "09:00",
+   "sala": "SCOTIA 10",
+   "titulo": "in the heart of the south"
+  },
+  "f_84c0ea0836": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-18",
+   "hora": "21:00",
+   "sala": "SCOTIA 6",
+   "titulo": "in the heart of the south"
+  },
+  "f_7b9d40091b": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-12",
+   "hora": "21:15",
+   "sala": "SCOTIA 13",
+   "titulo": "in the heart of the south"
+  },
+  "f_8b5f78446e": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-14",
+   "hora": "17:15",
+   "sala": "TLB 2",
+   "titulo": "inherit"
+  },
+  "f_d70a1f4713": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-15",
+   "hora": "18:00",
+   "sala": "SCOTIA 3",
+   "titulo": "inherit"
+  },
+  "f_3fd7b46b4a": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-15",
+   "hora": "08:50",
+   "sala": "SCOTIA 4",
+   "titulo": "inherit"
+  },
+  "f_c4aeaa918f": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-19",
+   "hora": "19:30",
+   "sala": "SCOTIA 8",
+   "titulo": "inherit"
+  },
+  "f_b9ad2aa00e": {
+   "sede": "VISA Screening Room at the Princess of Wales Theatre - Toronto",
+   "dia": "2026-09-15",
+   "hora": "14:30",
+   "sala": "VSR",
+   "titulo": "ink"
+  },
+  "f_29e270e427": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-18",
+   "hora": "21:00",
+   "sala": "TLB 1",
+   "titulo": "ink"
+  },
+  "f_bc83baaf90": {
+   "sede": "John Bassett Theatre - Toronto",
+   "dia": "2026-09-16",
+   "hora": "18:30",
+   "sala": "JBT",
+   "titulo": "ink"
+  },
+  "f_6a26e714a1": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-18",
+   "hora": "09:00",
+   "sala": "SCOTIA 6",
+   "titulo": "intermission"
+  },
+  "f_e0392eefa8": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-15",
+   "hora": "08:50",
+   "sala": "SCOTIA 6",
+   "titulo": "intermission"
+  },
+  "f_adbb5d10e2": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-16",
+   "hora": "15:15",
+   "sala": "SCOTIA 8",
+   "titulo": "intermission"
+  },
+  "f_f715236871": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-11",
+   "hora": "15:20",
+   "sala": "SCOTIA 10",
+   "titulo": "iron boy"
+  },
+  "f_12ea433a60": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-14",
+   "hora": "15:30",
+   "sala": "SCOTIA 9",
+   "titulo": "iron boy"
+  },
+  "f_cc54176fd4": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-12",
+   "hora": "15:35",
+   "sala": "SCOTIA 3",
+   "titulo": "iron boy"
+  },
+  "f_6a2d30b7d4": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-19",
+   "hora": "20:15",
+   "sala": "SCOTIA 2",
+   "titulo": "it will happen tonight"
+  },
+  "f_1a7c3b2316": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-16",
+   "hora": "14:45",
+   "sala": "TLB 1",
+   "titulo": "it will happen tonight"
+  },
+  "f_c485087f09": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-10",
+   "hora": "21:00",
+   "sala": "SCOTIA 13",
+   "titulo": "it will happen tonight"
+  },
+  "f_f1cbd792f1": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-17",
+   "hora": "18:10",
+   "sala": "SCOTIA 2",
+   "titulo": "it will happen tonight"
+  },
+  "f_e158d254f0": {
+   "sede": "Roy Thomson Hall - Toronto",
+   "dia": "2026-09-17",
+   "hora": "21:30",
+   "sala": "RTH",
+   "titulo": "it s my time"
+  },
+  "f_ac7f96d99d": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-18",
+   "hora": "15:20",
+   "sala": "SCOTIA 1",
+   "titulo": "it s my time"
+  },
+  "f_495baa32b6": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-15",
+   "hora": "12:15",
+   "sala": "SCOTIA 1",
+   "titulo": "it s my time"
+  },
+  "f_0ddadcc48a": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-20",
+   "hora": "09:30",
+   "sala": "SCOTIA 3",
+   "titulo": "it s my time"
+  },
+  "f_a22451da1f": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-14",
+   "hora": "09:00",
+   "sala": "SCOTIA 10",
+   "titulo": "josephine"
+  },
+  "f_642d5b133e": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-14",
+   "hora": "21:20",
+   "sala": "SCOTIA 13",
+   "titulo": "josephine"
+  },
+  "f_c18344cf45": {
+   "sede": "Royal Alexandra Theatre - Toronto",
+   "dia": "2026-09-13",
+   "hora": "14:15",
+   "sala": "RA",
+   "titulo": "josephine"
+  },
+  "f_c61234ad2f": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-13",
+   "hora": "11:30",
+   "sala": "SCOTIA 2",
+   "titulo": "julian"
+  },
+  "f_20c0e4970a": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-11",
+   "hora": "19:30",
+   "sala": "SCOTIA 12",
+   "titulo": "julian"
+  },
+  "f_bb069bbe7a": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-19",
+   "hora": "12:30",
+   "sala": "TLB 2",
+   "titulo": "julian"
+  },
+  "f_c553e6075c": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-10",
+   "hora": "13:30",
+   "sala": "TLB 1",
+   "titulo": "ken russell s the devils"
+  },
+  "f_7cec6be690": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-18",
+   "hora": "20:50",
+   "sala": "SCOTIA 11",
+   "titulo": "kick on"
+  },
+  "f_d0a14e3870": {
+   "sede": "Royal Alexandra Theatre - Toronto",
+   "dia": "2026-09-14",
+   "hora": "23:59",
+   "sala": "RA",
+   "titulo": "kick on"
+  },
+  "f_f4fa388022": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-15",
+   "hora": "09:15",
+   "sala": "SCOTIA 3",
+   "titulo": "kick on"
+  },
+  "f_1d9f002e91": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-16",
+   "hora": "18:45",
+   "sala": "SCOTIA 4",
+   "titulo": "kick on"
+  },
+  "f_909cd9d5b7": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-15",
+   "hora": "18:30",
+   "sala": "TLB 4",
+   "titulo": "kissed"
+  },
+  "f_e1e68e1fe4": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-13",
+   "hora": "14:00",
+   "sala": "SCOTIA 9",
+   "titulo": "krux"
+  },
+  "f_49df74c617": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-18",
+   "hora": "14:30",
+   "sala": "SCOTIA 5",
+   "titulo": "krux"
+  },
+  "f_e699237a95": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-12",
+   "hora": "08:30",
+   "sala": "TLB 3",
+   "titulo": "krux"
+  },
+  "f_d7d9459a3c": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-12",
+   "hora": "15:00",
+   "sala": "TLB 3",
+   "titulo": "krux"
+  },
+  "f_a8eb4d952d": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-14",
+   "hora": "12:30",
+   "sala": "SCOTIA 9",
+   "titulo": "l autre"
+  },
+  "f_e0e1f74064": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-12",
+   "hora": "18:55",
+   "sala": "SCOTIA 14",
+   "titulo": "l autre"
+  },
+  "f_2edd78e820": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-12",
+   "hora": "12:05",
+   "sala": "SCOTIA 8",
+   "titulo": "l autre"
+  },
+  "f_1f4b31f23b": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-17",
+   "hora": "09:10",
+   "sala": "SCOTIA 9",
+   "titulo": "l autre"
+  },
+  "f_dd6d98470e": {
+   "sede": "Royal Alexandra Theatre - Toronto",
+   "dia": "2026-09-18",
+   "hora": "16:15",
+   "sala": "RA",
+   "titulo": "la bola negra"
+  },
+  "f_d6acb3dc89": {
+   "sede": "VISA Screening Room at the Princess of Wales Theatre - Toronto",
+   "dia": "2026-09-15",
+   "hora": "17:45",
+   "sala": "VSR",
+   "titulo": "la bola negra"
+  },
+  "f_9833cdb145": {
+   "sede": "Royal Alexandra Theatre - Toronto",
+   "dia": "2026-09-16",
+   "hora": "16:30",
+   "sala": "RA",
+   "titulo": "la bola negra"
+  },
+  "f_6dd7739aeb": {
+   "sede": "VISA Screening Room at the Princess of Wales Theatre - Toronto",
+   "dia": "2026-09-19",
+   "hora": "14:00",
+   "sala": "VSR",
+   "titulo": "la bola negra"
+  },
+  "f_2b420b4886": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-16",
+   "hora": "09:30",
+   "sala": "TLB 3",
+   "titulo": "la bola negra"
+  },
+  "f_6e98d35371": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-14",
+   "hora": "17:30",
+   "sala": "SCOTIA 11",
+   "titulo": "la gradiva"
+  },
+  "f_f03bdeac0f": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-10",
+   "hora": "15:00",
+   "sala": "SCOTIA 11",
+   "titulo": "la gradiva"
+  },
+  "f_4e64040672": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-16",
+   "hora": "11:45",
+   "sala": "SCOTIA 9",
+   "titulo": "la gradiva"
+  },
+  "f_62906326e1": {
+   "sede": "Royal Alexandra Theatre - Toronto",
+   "dia": "2026-09-15",
+   "hora": "23:59",
+   "sala": "RA",
+   "titulo": "ladies and gentlemen brian mulroney"
+  },
+  "f_435815e6d3": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-13",
+   "hora": "14:15",
+   "sala": "SCOTIA 12",
+   "titulo": "ladies and gentlemen brian mulroney"
+  },
+  "f_a7e3b745af": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-19",
+   "hora": "09:45",
+   "sala": "SCOTIA 8",
+   "titulo": "ladies and gentlemen brian mulroney"
+  },
+  "f_a9c80577d3": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-17",
+   "hora": "18:10",
+   "sala": "SCOTIA 13",
+   "titulo": "ladies and gentlemen brian mulroney"
+  },
+  "f_3be8507bfd": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-17",
+   "hora": "09:15",
+   "sala": "SCOTIA 3",
+   "titulo": "ladies and gentlemen brian mulroney"
+  },
+  "f_b98aea52bb": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-10",
+   "hora": "11:00",
+   "sala": "SCOTIA 2",
+   "titulo": "le faux soir"
+  },
+  "f_0de1adc680": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-18",
+   "hora": "14:45",
+   "sala": "SCOTIA 2",
+   "titulo": "le faux soir"
+  },
+  "f_d7bd7c810a": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-11",
+   "hora": "14:45",
+   "sala": "TLB 1",
+   "titulo": "le faux soir"
+  },
+  "f_4f9bdd7924": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-13",
+   "hora": "21:10",
+   "sala": "SCOTIA 3",
+   "titulo": "le faux soir"
+  },
+  "f_375076d2da": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-13",
+   "hora": "09:15",
+   "sala": "SCOTIA 11",
+   "titulo": "lemonade"
+  },
+  "f_c8774ecf41": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-20",
+   "hora": "16:15",
+   "sala": "SCOTIA 8",
+   "titulo": "lemonade"
+  },
+  "f_24558d11a5": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-12",
+   "hora": "21:00",
+   "sala": "TLB 3",
+   "titulo": "lemonade"
+  },
+  "f_269398be84": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-14",
+   "hora": "12:10",
+   "sala": "SCOTIA 10",
+   "titulo": "lemonade"
+  },
+  "f_29a9a12382": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-18",
+   "hora": "14:00",
+   "sala": "SCOTIA 6",
+   "titulo": "life of jorge luis borges"
+  },
+  "f_360ace15d6": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-17",
+   "hora": "11:00",
+   "sala": "TLB 4",
+   "titulo": "life of jorge luis borges"
+  },
+  "f_7f8e306c5e": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-14",
+   "hora": "08:50",
+   "sala": "SCOTIA 6",
+   "titulo": "life of jorge luis borges"
+  },
+  "f_cb8963b62c": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-18",
+   "hora": "21:15",
+   "sala": "SCOTIA 7",
+   "titulo": "light pillar"
+  },
+  "f_f1fff38c2d": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-10",
+   "hora": "15:25",
+   "sala": "SCOTIA 7",
+   "titulo": "light pillar"
+  },
+  "f_e3a8e309d8": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-16",
+   "hora": "22:00",
+   "sala": "TLB 4",
+   "titulo": "light pillar"
+  },
+  "f_de658d70ea": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-17",
+   "hora": "15:30",
+   "sala": "SCOTIA 9",
+   "titulo": "light pillar"
+  },
+  "f_50f9eab3d9": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-11",
+   "hora": "09:10",
+   "sala": "SCOTIA 9",
+   "titulo": "like magic"
+  },
+  "f_f81b9827c1": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-14",
+   "hora": "22:00",
+   "sala": "TLB 4",
+   "titulo": "like magic"
+  },
+  "f_21c6f30df7": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-16",
+   "hora": "21:40",
+   "sala": "SCOTIA 11",
+   "titulo": "like magic"
+  },
+  "f_63cc3c942b": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-15",
+   "hora": "11:00",
+   "sala": "SCOTIA 11",
+   "titulo": "london"
+  },
+  "f_7318decbad": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-16",
+   "hora": "20:30",
+   "sala": "TLB 3",
+   "titulo": "london"
+  },
+  "f_9f39eb6d13": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-17",
+   "hora": "18:40",
+   "sala": "SCOTIA 9",
+   "titulo": "london"
+  },
+  "f_dba9589d33": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-10",
+   "hora": "18:20",
+   "sala": "SCOTIA 4",
+   "titulo": "long long night"
+  },
+  "f_e56043d23b": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-18",
+   "hora": "11:30",
+   "sala": "SCOTIA 5",
+   "titulo": "long long night"
+  },
+  "f_697ef99c08": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-12",
+   "hora": "17:30",
+   "sala": "SCOTIA 1",
+   "titulo": "long long night"
+  },
+  "f_5796ca6417": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-13",
+   "hora": "21:35",
+   "sala": "SCOTIA 8",
+   "titulo": "long long night"
+  },
+  "f_acc0824639": {
+   "sede": "VISA Screening Room at the Princess of Wales Theatre - Toronto",
+   "dia": "2026-09-14",
+   "hora": "21:45",
+   "sala": "VSR",
+   "titulo": "look back"
+  },
+  "f_f7585eae19": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-16",
+   "hora": "11:45",
+   "sala": "TLB 1",
+   "titulo": "look back"
+  },
+  "f_58fbca6565": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-20",
+   "hora": "14:00",
+   "sala": "SCOTIA 4",
+   "titulo": "look back"
+  },
+  "f_3fb3a4f1e3": {
+   "sede": "Royal Alexandra Theatre - Toronto",
+   "dia": "2026-09-19",
+   "hora": "17:30",
+   "sala": "RA",
+   "titulo": "look back"
+  },
+  "f_e904760512": {
+   "sede": "John Bassett Theatre - Toronto",
+   "dia": "2026-09-10",
+   "hora": "18:30",
+   "sala": "JBT",
+   "titulo": "look back"
+  },
+  "f_16ff6b4979": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-14",
+   "hora": "14:30",
+   "sala": "SCOTIA 11",
+   "titulo": "love is the monster"
+  },
+  "f_bbd19b4d4c": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-15",
+   "hora": "20:50",
+   "sala": "SCOTIA 11",
+   "titulo": "love is the monster"
+  },
+  "f_8f02f6e166": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-15",
+   "hora": "09:30",
+   "sala": "TLB 4",
+   "titulo": "love is the monster"
+  },
+  "f_99da61a0e3": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-19",
+   "hora": "11:30",
+   "sala": "SCOTIA 6",
+   "titulo": "love is the monster"
+  },
+  "f_22066d130b": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-14",
+   "hora": "09:30",
+   "sala": "TLB 2",
+   "titulo": "love of your life"
+  },
+  "f_a9e79f4930": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-14",
+   "hora": "17:45",
+   "sala": "TLB 3",
+   "titulo": "love of your life"
+  },
+  "f_ef6017b93b": {
+   "sede": "Royal Alexandra Theatre - Toronto",
+   "dia": "2026-09-13",
+   "hora": "20:30",
+   "sala": "RA",
+   "titulo": "love of your life"
+  },
+  "f_9b53b33052": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-19",
+   "hora": "10:00",
+   "sala": "TLB 3",
+   "titulo": "love of your life"
+  },
+  "f_4bae35ebdd": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-18",
+   "hora": "11:30",
+   "sala": "SCOTIA 14",
+   "titulo": "low lies the land"
+  },
+  "f_d9d148ee7d": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-11",
+   "hora": "15:45",
+   "sala": "TLB 4",
+   "titulo": "low lies the land"
+  },
+  "f_db74bc7a04": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-10",
+   "hora": "18:15",
+   "sala": "SCOTIA 11",
+   "titulo": "low lies the land"
+  },
+  "f_51e1b4a74e": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-15",
+   "hora": "21:35",
+   "sala": "SCOTIA 8",
+   "titulo": "low lies the land"
+  },
+  "f_73b63666e1": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-18",
+   "hora": "18:15",
+   "sala": "SCOTIA 11",
+   "titulo": "magazine"
+  },
+  "f_7f8a57287a": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-13",
+   "hora": "12:45",
+   "sala": "SCOTIA 10",
+   "titulo": "magazine"
+  },
+  "f_b5d7f676b6": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-13",
+   "hora": "21:30",
+   "sala": "SCOTIA 11",
+   "titulo": "magazine"
+  },
+  "f_256b3e62cc": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-11",
+   "hora": "12:15",
+   "sala": "TLB 2",
+   "titulo": "magazine"
+  },
+  "f_113792a96a": {
+   "sede": "Royal Alexandra Theatre - Toronto",
+   "dia": "2026-09-17",
+   "hora": "16:00",
+   "sala": "RA",
+   "titulo": "making waves with hudson williams"
+  },
+  "f_df527ba7df": {
+   "sede": "Roy Thomson Hall - Toronto",
+   "dia": "2026-09-11",
+   "hora": "13:30",
+   "sala": "RTH",
+   "titulo": "man in motion the rick hansen story"
+  },
+  "f_589606ef5c": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-19",
+   "hora": "09:30",
+   "sala": "SCOTIA 4",
+   "titulo": "man in motion the rick hansen story"
+  },
+  "f_4d65812270": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-12",
+   "hora": "08:45",
+   "sala": "TLB 2",
+   "titulo": "man in motion the rick hansen story"
+  },
+  "f_5d8c22392b": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-12",
+   "hora": "11:15",
+   "sala": "TLB 2",
+   "titulo": "man in motion the rick hansen story"
+  },
+  "f_4f9efb0d39": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-11",
+   "hora": "18:30",
+   "sala": "SCOTIA 10",
+   "titulo": "marie madeleine"
+  },
+  "f_92aa3a4c84": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-15",
+   "hora": "22:00",
+   "sala": "TLB 3",
+   "titulo": "marie madeleine"
+  },
+  "f_e3b1642f6c": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-16",
+   "hora": "15:30",
+   "sala": "SCOTIA 9",
+   "titulo": "marie madeleine"
+  },
+  "f_a7155ca4eb": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-20",
+   "hora": "19:25",
+   "sala": "SCOTIA 8",
+   "titulo": "marie madeleine"
+  },
+  "f_b4ea1a5633": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-13",
+   "hora": "08:30",
+   "sala": "SCOTIA 9",
+   "titulo": "masc"
+  },
+  "f_4e038ebb74": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-19",
+   "hora": "11:45",
+   "sala": "SCOTIA 10",
+   "titulo": "masc"
+  },
+  "f_24133040a7": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-13",
+   "hora": "11:50",
+   "sala": "SCOTIA 13",
+   "titulo": "masc"
+  },
+  "f_9d7e3cc8b8": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-12",
+   "hora": "17:45",
+   "sala": "TLB 1",
+   "titulo": "masc"
+  },
+  "f_9970b50eac": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-16",
+   "hora": "18:40",
+   "sala": "SCOTIA 9",
+   "titulo": "memories of a forest"
+  },
+  "f_2a60c4e782": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-17",
+   "hora": "18:30",
+   "sala": "SCOTIA 14",
+   "titulo": "memories of a forest"
+  },
+  "f_764f0bdb65": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-15",
+   "hora": "09:05",
+   "sala": "SCOTIA 7",
+   "titulo": "memories of a forest"
+  },
+  "f_e4a86275cd": {
+   "sede": "Royal Alexandra Theatre - Toronto",
+   "dia": "2026-09-15",
+   "hora": "16:45",
+   "sala": "RA",
+   "titulo": "minotaur"
+  },
+  "f_7851885522": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-10",
+   "hora": "14:00",
+   "sala": "TLB 3",
+   "titulo": "minotaur"
+  },
+  "f_a965c1d359": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-16",
+   "hora": "18:15",
+   "sala": "SCOTIA 3",
+   "titulo": "minotaur"
+  },
+  "f_0db04fa119": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-18",
+   "hora": "12:10",
+   "sala": "SCOTIA 1",
+   "titulo": "misty green"
+  },
+  "f_5c2589d24c": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-19",
+   "hora": "15:00",
+   "sala": "TLB 1",
+   "titulo": "misty green"
+  },
+  "f_653675babf": {
+   "sede": "Roy Thomson Hall - Toronto",
+   "dia": "2026-09-12",
+   "hora": "21:30",
+   "sala": "RTH",
+   "titulo": "misty green"
+  },
+  "f_56ee058137": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-13",
+   "hora": "21:00",
+   "sala": "SCOTIA 1",
+   "titulo": "misty green"
+  },
+  "f_d2af690f79": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-13",
+   "hora": "08:40",
+   "sala": "SCOTIA 2",
+   "titulo": "misty green"
+  },
+  "f_063a48194b": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-18",
+   "hora": "18:00",
+   "sala": "SCOTIA 10",
+   "titulo": "mr nelson did you kill people"
+  },
+  "f_ae8f25c9d9": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-15",
+   "hora": "18:15",
+   "sala": "TLB 2",
+   "titulo": "mr nelson did you kill people"
+  },
+  "f_76f9b6e882": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-10",
+   "hora": "18:10",
+   "sala": "SCOTIA 13",
+   "titulo": "mr nelson did you kill people"
+  },
+  "f_6602edc462": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-16",
+   "hora": "18:30",
+   "sala": "SCOTIA 11",
+   "titulo": "mr nelson did you kill people"
+  },
+  "f_9526845de4": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-19",
+   "hora": "09:45",
+   "sala": "SCOTIA 2",
+   "titulo": "musk"
+  },
+  "f_815c260872": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-17",
+   "hora": "11:50",
+   "sala": "SCOTIA 13",
+   "titulo": "musk"
+  },
+  "f_03db4e8822": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-14",
+   "hora": "15:20",
+   "sala": "SCOTIA 1",
+   "titulo": "musk"
+  },
+  "f_f1c914e520": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-13",
+   "hora": "09:00",
+   "sala": "SCOTIA 1",
+   "titulo": "musk"
+  },
+  "f_25b026a262": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-17",
+   "hora": "14:30",
+   "sala": "TLB 3",
+   "titulo": "muyi"
+  },
+  "f_7bad3070ed": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-16",
+   "hora": "12:15",
+   "sala": "SCOTIA 10",
+   "titulo": "muyi"
+  },
+  "f_e8270ed27a": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-19",
+   "hora": "15:30",
+   "sala": "SCOTIA 4",
+   "titulo": "muyi"
+  },
+  "f_7ce03dc7ce": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-18",
+   "hora": "18:00",
+   "sala": "TLB 3",
+   "titulo": "my wife cries"
+  },
+  "f_b7fd1b7895": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-10",
+   "hora": "21:45",
+   "sala": "SCOTIA 7",
+   "titulo": "my wife cries"
+  },
+  "f_96f5f08ce4": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-20",
+   "hora": "13:15",
+   "sala": "TLB 4",
+   "titulo": "my wife cries"
+  },
+  "f_f573c046e2": {
+   "sede": "VISA Screening Room at the Princess of Wales Theatre - Toronto",
+   "dia": "2026-09-16",
+   "hora": "21:30",
+   "sala": "VSR",
+   "titulo": "neil peart no one s disciple"
+  },
+  "f_57a09b0763": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-17",
+   "hora": "09:00",
+   "sala": "SCOTIA 1",
+   "titulo": "neil peart no one s disciple"
+  },
+  "f_de540b5836": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-19",
+   "hora": "21:00",
+   "sala": "TLB 1",
+   "titulo": "neil peart no one s disciple"
+  },
+  "f_b04a486ea9": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-10",
+   "hora": "18:55",
+   "sala": "SCOTIA 14",
+   "titulo": "neverman"
+  },
+  "f_1e182d6219": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-16",
+   "hora": "15:00",
+   "sala": "SCOTIA 13",
+   "titulo": "neverman"
+  },
+  "f_ae130200e6": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-14",
+   "hora": "21:15",
+   "sala": "SCOTIA 11",
+   "titulo": "neverman"
+  },
+  "f_3d19240644": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-17",
+   "hora": "08:30",
+   "sala": "SCOTIA 5",
+   "titulo": "neverman"
+  },
+  "f_dcc8b97cdd": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-10",
+   "hora": "18:25",
+   "sala": "SCOTIA 8",
+   "titulo": "nobody s violence"
+  },
+  "f_eb46a0ae41": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-13",
+   "hora": "15:15",
+   "sala": "SCOTIA 14",
+   "titulo": "nobody s violence"
+  },
+  "f_d0677fd25f": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-11",
+   "hora": "21:30",
+   "sala": "SCOTIA 4",
+   "titulo": "nobody s violence"
+  },
+  "f_a18590bd44": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-19",
+   "hora": "11:00",
+   "sala": "SCOTIA 5",
+   "titulo": "nobody s violence"
+  },
+  "f_0bfeba83c2": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-12",
+   "hora": "18:30",
+   "sala": "SCOTIA 10",
+   "titulo": "nosotros"
+  },
+  "f_82c93805c1": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-14",
+   "hora": "15:15",
+   "sala": "SCOTIA 8",
+   "titulo": "nosotros"
+  },
+  "f_543d66cdec": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-11",
+   "hora": "21:40",
+   "sala": "SCOTIA 10",
+   "titulo": "nosotros"
+  },
+  "f_a594ab0f4c": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-19",
+   "hora": "21:30",
+   "sala": "TLB 4",
+   "titulo": "nosotros"
+  },
+  "f_61e16c4bdb": {
+   "sede": "John Bassett Theatre - Toronto",
+   "dia": "2026-09-11",
+   "hora": "18:30",
+   "sala": "JBT",
+   "titulo": "obsession"
+  },
+  "f_a851b68293": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-18",
+   "hora": "11:15",
+   "sala": "TLB 2",
+   "titulo": "on behalf of my son"
+  },
+  "f_05e2d5a60d": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-15",
+   "hora": "12:15",
+   "sala": "TLB 4",
+   "titulo": "on behalf of my son"
+  },
+  "f_ae2dbc459c": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-12",
+   "hora": "20:15",
+   "sala": "TLB 1",
+   "titulo": "on behalf of my son"
+  },
+  "f_b383abf344": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-14",
+   "hora": "12:15",
+   "sala": "TLB 4",
+   "titulo": "on behalf of my son"
+  },
+  "f_8fb9023c0f": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-15",
+   "hora": "18:20",
+   "sala": "SCOTIA 4",
+   "titulo": "once upon a time in harlem"
+  },
+  "f_5899aab144": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-16",
+   "hora": "10:00",
+   "sala": "TLB 4",
+   "titulo": "once upon a time in harlem"
+  },
+  "f_7f984e63de": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-14",
+   "hora": "16:10",
+   "sala": "SCOTIA 7",
+   "titulo": "once upon a time in harlem"
+  },
+  "f_cff57f237e": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-18",
+   "hora": "15:00",
+   "sala": "SCOTIA 13",
+   "titulo": "onwards and sideways"
+  },
+  "f_3c7dfc86bb": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-14",
+   "hora": "08:40",
+   "sala": "SCOTIA 2",
+   "titulo": "onwards and sideways"
+  },
+  "f_59d4d94bb9": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-14",
+   "hora": "18:20",
+   "sala": "SCOTIA 4",
+   "titulo": "onwards and sideways"
+  },
+  "f_bc68434bed": {
+   "sede": "Roy Thomson Hall - Toronto",
+   "dia": "2026-09-13",
+   "hora": "14:00",
+   "sala": "RTH",
+   "titulo": "onwards and sideways"
+  },
+  "f_d31075e03d": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-10",
+   "hora": "17:30",
+   "sala": "TLB 3",
+   "titulo": "our loves"
+  },
+  "f_002026ba96": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-15",
+   "hora": "11:00",
+   "sala": "TLB 2",
+   "titulo": "our loves"
+  },
+  "f_2fa665b5d0": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-13",
+   "hora": "14:30",
+   "sala": "TLB 2",
+   "titulo": "our loves"
+  },
+  "f_d6bf65fca7": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-19",
+   "hora": "09:30",
+   "sala": "TLB 2",
+   "titulo": "our loves"
+  },
+  "f_db74721d96": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-11",
+   "hora": "12:35",
+   "sala": "SCOTIA 14",
+   "titulo": "oxygen masks will not drop automatically"
+  },
+  "f_efd90a0525": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-17",
+   "hora": "18:30",
+   "sala": "SCOTIA 1",
+   "titulo": "oxygen masks will not drop automatically"
+  },
+  "f_580b221316": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-15",
+   "hora": "21:15",
+   "sala": "SCOTIA 3",
+   "titulo": "oxygen masks will not drop automatically"
+  },
+  "f_fb3ad50e7f": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-19",
+   "hora": "21:45",
+   "sala": "TLB 2",
+   "titulo": "paradise lost"
+  },
+  "f_44edf8a9f5": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-14",
+   "hora": "14:45",
+   "sala": "SCOTIA 2",
+   "titulo": "paradise lost"
+  },
+  "f_abdfcf0d25": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-18",
+   "hora": "18:20",
+   "sala": "SCOTIA 4",
+   "titulo": "paradise lost"
+  },
+  "f_827698445c": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-14",
+   "hora": "08:50",
+   "sala": "SCOTIA 4",
+   "titulo": "paradise lost"
+  },
+  "f_93dd262d4b": {
+   "sede": "Royal Alexandra Theatre - Toronto",
+   "dia": "2026-09-13",
+   "hora": "17:30",
+   "sala": "RA",
+   "titulo": "paradise lost"
+  },
+  "f_54c629a69e": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-14",
+   "hora": "19:15",
+   "sala": "TLB 4",
+   "titulo": "pelechian project"
+  },
+  "f_316b154a71": {
+   "sede": "VISA Screening Room at the Princess of Wales Theatre - Toronto",
+   "dia": "2026-09-16",
+   "hora": "18:00",
+   "sala": "VSR",
+   "titulo": "phoolan"
+  },
+  "f_7dc8a2f8ac": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-17",
+   "hora": "12:15",
+   "sala": "TLB 2",
+   "titulo": "phoolan"
+  },
+  "f_d9ca367922": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-11",
+   "hora": "10:45",
+   "sala": "TLB 3",
+   "titulo": "phoolan"
+  },
+  "f_c478b0caf5": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-19",
+   "hora": "14:30",
+   "sala": "SCOTIA 5",
+   "titulo": "phoolan"
+  },
+  "f_90e2932382": {
+   "sede": "VISA Screening Room at the Princess of Wales Theatre - Toronto",
+   "dia": "2026-09-14",
+   "hora": "18:00",
+   "sala": "VSR",
+   "titulo": "possible love"
+  },
+  "f_4d61378eee": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-18",
+   "hora": "11:00",
+   "sala": "TLB 1",
+   "titulo": "possible love"
+  },
+  "f_d437e1fff5": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-15",
+   "hora": "11:15",
+   "sala": "TLB 3",
+   "titulo": "possible love"
+  },
+  "f_ef8bd1da68": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-19",
+   "hora": "11:00",
+   "sala": "TLB 1",
+   "titulo": "possible love"
+  },
+  "f_3149c3e4da": {
+   "sede": "John Bassett Theatre - Toronto",
+   "dia": "2026-09-15",
+   "hora": "18:15",
+   "sala": "JBT",
+   "titulo": "possible love"
+  },
+  "f_e73c802593": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-18",
+   "hora": "14:15",
+   "sala": "SCOTIA 12",
+   "titulo": "pretenders"
+  },
+  "f_38299b3eb1": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-15",
+   "hora": "15:00",
+   "sala": "SCOTIA 14",
+   "titulo": "pretenders"
+  },
+  "f_840afa04a4": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-14",
+   "hora": "09:00",
+   "sala": "SCOTIA 1",
+   "titulo": "pretenders"
+  },
+  "f_6b8c1ae25c": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-19",
+   "hora": "14:45",
+   "sala": "SCOTIA 2",
+   "titulo": "pretenders"
+  },
+  "f_4cca65fd78": {
+   "sede": "Roy Thomson Hall - Toronto",
+   "dia": "2026-09-13",
+   "hora": "10:30",
+   "sala": "RTH",
+   "titulo": "pretenders"
+  },
+  "f_3139793524": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-18",
+   "hora": "18:45",
+   "sala": "SCOTIA 3",
+   "titulo": "prima facie"
+  },
+  "f_1242d5a80a": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-14",
+   "hora": "09:00",
+   "sala": "TLB 1",
+   "titulo": "prima facie"
+  },
+  "f_47fe325da9": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-14",
+   "hora": "12:10",
+   "sala": "SCOTIA 1",
+   "titulo": "prima facie"
+  },
+  "f_32d3460942": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-19",
+   "hora": "21:00",
+   "sala": "SCOTIA 4",
+   "titulo": "prima facie"
+  },
+  "f_1862892f03": {
+   "sede": "Roy Thomson Hall - Toronto",
+   "dia": "2026-09-13",
+   "hora": "17:45",
+   "sala": "RTH",
+   "titulo": "prima facie"
+  },
+  "f_eff81c2a8d": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-12",
+   "hora": "15:20",
+   "sala": "SCOTIA 10",
+   "titulo": "purgatory"
+  },
+  "f_d54c877ed4": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-13",
+   "hora": "18:35",
+   "sala": "SCOTIA 7",
+   "titulo": "purgatory"
+  },
+  "f_8319acdaf8": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-13",
+   "hora": "12:15",
+   "sala": "SCOTIA 7",
+   "titulo": "purgatory"
+  },
+  "f_796832774c": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-17",
+   "hora": "12:00",
+   "sala": "SCOTIA 4",
+   "titulo": "purgatory"
+  },
+  "f_1e3f3ff430": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-16",
+   "hora": "18:00",
+   "sala": "TLB 3",
+   "titulo": "redefined short film showcase"
+  },
+  "f_489c7a50c0": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-10",
+   "hora": "18:30",
+   "sala": "TLB 2",
+   "titulo": "rapinoe"
+  },
+  "f_a59f4ef6e2": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-11",
+   "hora": "20:45",
+   "sala": "SCOTIA 14",
+   "titulo": "rapinoe"
+  },
+  "f_f9aac07dda": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-20",
+   "hora": "09:30",
+   "sala": "SCOTIA 10",
+   "titulo": "rapinoe"
+  },
+  "f_b334a78fb3": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-11",
+   "hora": "10:00",
+   "sala": "SCOTIA 12",
+   "titulo": "rapinoe"
+  },
+  "f_6a2af1a9d0": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-18",
+   "hora": "21:00",
+   "sala": "SCOTIA 14",
+   "titulo": "re pair"
+  },
+  "f_deaaa6a245": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-14",
+   "hora": "15:45",
+   "sala": "SCOTIA 14",
+   "titulo": "re pair"
+  },
+  "f_1f1c4f93c1": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-16",
+   "hora": "21:55",
+   "sala": "SCOTIA 3",
+   "titulo": "re pair"
+  },
+  "f_fdd3bc0ffa": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-15",
+   "hora": "14:15",
+   "sala": "SCOTIA 12",
+   "titulo": "re pair"
+  },
+  "f_65667721cf": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-10",
+   "hora": "20:30",
+   "sala": "SCOTIA 10",
+   "titulo": "rehearsals for a revolution"
+  },
+  "f_4da8b0dd65": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-15",
+   "hora": "19:00",
+   "sala": "TLB 3",
+   "titulo": "rehearsals for a revolution"
+  },
+  "f_bea77ecf4c": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-17",
+   "hora": "21:00",
+   "sala": "SCOTIA 10",
+   "titulo": "rehearsals for a revolution"
+  },
+  "f_628637070b": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-19",
+   "hora": "17:50",
+   "sala": "SCOTIA 6",
+   "titulo": "rehearsals for a revolution"
+  },
+  "f_fd7aaecb48": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-13",
+   "hora": "15:30",
+   "sala": "TLB 4",
+   "titulo": "report to mother"
+  },
+  "f_e92cdaf277": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-12",
+   "hora": "17:30",
+   "sala": "SCOTIA 5",
+   "titulo": "rescue"
+  },
+  "f_4f3fb58ba0": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-15",
+   "hora": "12:15",
+   "sala": "SCOTIA 14",
+   "titulo": "rescue"
+  },
+  "f_c50cd0af7d": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-17",
+   "hora": "18:15",
+   "sala": "SCOTIA 11",
+   "titulo": "rescue"
+  },
+  "f_b576409213": {
+   "sede": "Royal Alexandra Theatre - Toronto",
+   "dia": "2026-09-10",
+   "hora": "23:59",
+   "sala": "RA",
+   "titulo": "river"
+  },
+  "f_5f6a68d4b2": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-11",
+   "hora": "21:40",
+   "sala": "SCOTIA 1",
+   "titulo": "river"
+  },
+  "f_623211b73b": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-11",
+   "hora": "08:50",
+   "sala": "SCOTIA 4",
+   "titulo": "river"
+  },
+  "f_7e9e74c288": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-18",
+   "hora": "18:10",
+   "sala": "SCOTIA 2",
+   "titulo": "river"
+  },
+  "f_ee2f6bd878": {
+   "sede": "Royal Alexandra Theatre - Toronto",
+   "dia": "2026-09-19",
+   "hora": "23:59",
+   "sala": "RA",
+   "titulo": "rogue trooper"
+  },
+  "f_f3ca0ca142": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-10",
+   "hora": "18:45",
+   "sala": "SCOTIA 1",
+   "titulo": "rogue trooper"
+  },
+  "f_bc0925b4f0": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-20",
+   "hora": "13:15",
+   "sala": "SCOTIA 2",
+   "titulo": "rogue trooper"
+  },
+  "f_43660f99c1": {
+   "sede": "Roy Thomson Hall - Toronto",
+   "dia": "2026-09-19",
+   "hora": "16:15",
+   "sala": "RTH",
+   "titulo": "run terry run"
+  },
+  "f_10357c991f": {
+   "sede": "John Bassett Theatre - Toronto",
+   "dia": "2026-09-11",
+   "hora": "08:30",
+   "sala": "JBT",
+   "titulo": "run terry run"
+  },
+  "f_244e218761": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-20",
+   "hora": "10:00",
+   "sala": "SCOTIA 1",
+   "titulo": "run terry run"
+  },
+  "f_8343f38773": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-13",
+   "hora": "15:25",
+   "sala": "SCOTIA 7",
+   "titulo": "run terry run"
+  },
+  "f_71ae97a9fb": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-18",
+   "hora": "17:45",
+   "sala": "SCOTIA 9",
+   "titulo": "salvation"
+  },
+  "f_e65fe3508b": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-11",
+   "hora": "17:00",
+   "sala": "SCOTIA 11",
+   "titulo": "salvation"
+  },
+  "f_9f264507dd": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-12",
+   "hora": "12:20",
+   "sala": "SCOTIA 9",
+   "titulo": "salvation"
+  },
+  "f_8571c25722": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-13",
+   "hora": "21:45",
+   "sala": "SCOTIA 7",
+   "titulo": "salvation"
+  },
+  "f_57576350e4": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-10",
+   "hora": "11:30",
+   "sala": "TLB 3",
+   "titulo": "seventeen"
+  },
+  "f_bc550261ea": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-14",
+   "hora": "18:55",
+   "sala": "SCOTIA 14",
+   "titulo": "seventeen"
+  },
+  "f_c070be0a5b": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-15",
+   "hora": "12:20",
+   "sala": "SCOTIA 9",
+   "titulo": "seventeen"
+  },
+  "f_9e99bdce33": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-17",
+   "hora": "09:15",
+   "sala": "SCOTIA 11",
+   "titulo": "seventeen"
+  },
+  "f_98361f1eca": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-17",
+   "hora": "08:55",
+   "sala": "SCOTIA 8",
+   "titulo": "short cuts 2026 strange cuts"
+  },
+  "f_4e62e4206d": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-19",
+   "hora": "19:30",
+   "sala": "SCOTIA 11",
+   "titulo": "short cuts 2026 strange cuts"
+  },
+  "f_2f1c95c046": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-16",
+   "hora": "21:15",
+   "sala": "SCOTIA 10",
+   "titulo": "short cuts 2026 strange cuts"
+  },
+  "f_b1739e2bed": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-15",
+   "hora": "21:00",
+   "sala": "SCOTIA 6",
+   "titulo": "short cuts 2026 programme 01"
+  },
+  "f_5c4358414f": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-10",
+   "hora": "18:10",
+   "sala": "SCOTIA 2",
+   "titulo": "short cuts 2026 programme 01"
+  },
+  "f_c06997f09f": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-10",
+   "hora": "12:45",
+   "sala": "SCOTIA 9",
+   "titulo": "short cuts 2026 programme 01"
+  },
+  "f_a8920725e6": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-11",
+   "hora": "21:20",
+   "sala": "SCOTIA 13",
+   "titulo": "short cuts 2026 programme 02"
+  },
+  "f_89c2c0010c": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-11",
+   "hora": "09:15",
+   "sala": "SCOTIA 11",
+   "titulo": "short cuts 2026 programme 02"
+  },
+  "f_1aed551dc3": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-16",
+   "hora": "15:30",
+   "sala": "SCOTIA 4",
+   "titulo": "short cuts 2026 programme 02"
+  },
+  "f_7b1f30519c": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-17",
+   "hora": "15:30",
+   "sala": "SCOTIA 7",
+   "titulo": "short cuts 2026 programme 03"
+  },
+  "f_29d7e36bff": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-12",
+   "hora": "09:15",
+   "sala": "SCOTIA 3",
+   "titulo": "short cuts 2026 programme 03"
+  },
+  "f_55a15877af": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-12",
+   "hora": "15:15",
+   "sala": "SCOTIA 4",
+   "titulo": "short cuts 2026 programme 03"
+  },
+  "f_819843df70": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-13",
+   "hora": "17:45",
+   "sala": "SCOTIA 9",
+   "titulo": "short cuts 2026 programme 04"
+  },
+  "f_9de7593ad6": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-17",
+   "hora": "20:30",
+   "sala": "SCOTIA 8",
+   "titulo": "short cuts 2026 programme 04"
+  },
+  "f_927a5b3c5f": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-13",
+   "hora": "11:30",
+   "sala": "SCOTIA 9",
+   "titulo": "short cuts 2026 programme 04"
+  },
+  "f_3470c3ce9b": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-18",
+   "hora": "14:45",
+   "sala": "SCOTIA 9",
+   "titulo": "short cuts 2026 programme 05"
+  },
+  "f_e3007d2b59": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-14",
+   "hora": "11:30",
+   "sala": "SCOTIA 11",
+   "titulo": "short cuts 2026 programme 05"
+  },
+  "f_f0b3e65ad9": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-14",
+   "hora": "08:55",
+   "sala": "SCOTIA 8",
+   "titulo": "short cuts 2026 programme 05"
+  },
+  "f_63b3343150": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-19",
+   "hora": "10:00",
+   "sala": "SCOTIA 11",
+   "titulo": "short cuts 2026 programme 06"
+  },
+  "f_96fd007afe": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-15",
+   "hora": "14:15",
+   "sala": "SCOTIA 6",
+   "titulo": "short cuts 2026 programme 06"
+  },
+  "f_28bf03fe01": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-15",
+   "hora": "08:55",
+   "sala": "SCOTIA 8",
+   "titulo": "short cuts 2026 programme 06"
+  },
+  "f_a5fd94d05a": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-18",
+   "hora": "14:50",
+   "sala": "SCOTIA 10",
+   "titulo": "silenced nights"
+  },
+  "f_5557d47de4": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-15",
+   "hora": "11:45",
+   "sala": "SCOTIA 3",
+   "titulo": "silenced nights"
+  },
+  "f_64cc6055e3": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-12",
+   "hora": "15:00",
+   "sala": "SCOTIA 11",
+   "titulo": "silenced nights"
+  },
+  "f_12c9f7bdae": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-13",
+   "hora": "18:15",
+   "sala": "TLB 1",
+   "titulo": "silenced nights"
+  },
+  "f_e0a4349c5b": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-17",
+   "hora": "18:00",
+   "sala": "SCOTIA 10",
+   "titulo": "sisters"
+  },
+  "f_c63419acf1": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-12",
+   "hora": "20:30",
+   "sala": "SCOTIA 5",
+   "titulo": "sisters"
+  },
+  "f_c6c6c56549": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-15",
+   "hora": "12:15",
+   "sala": "SCOTIA 7",
+   "titulo": "sisters"
+  },
+  "f_0b7cec66a6": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-10",
+   "hora": "12:00",
+   "sala": "TLB 2",
+   "titulo": "slow horses"
+  },
+  "f_93a8cc9324": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-11",
+   "hora": "18:00",
+   "sala": "TLB 2",
+   "titulo": "slow horses"
+  },
+  "f_b2a7a042e2": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-13",
+   "hora": "08:40",
+   "sala": "SCOTIA 13",
+   "titulo": "smudge the blades"
+  },
+  "f_95b452982d": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-12",
+   "hora": "21:15",
+   "sala": "TLB 2",
+   "titulo": "smudge the blades"
+  },
+  "f_7ce837c9df": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-14",
+   "hora": "12:00",
+   "sala": "SCOTIA 13",
+   "titulo": "smudge the blades"
+  },
+  "f_b3fd964b2d": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-17",
+   "hora": "12:15",
+   "sala": "SCOTIA 7",
+   "titulo": "smudge the blades"
+  },
+  "f_04e538d979": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-18",
+   "hora": "21:15",
+   "sala": "TLB 2",
+   "titulo": "soumsoum the night of the stars"
+  },
+  "f_ada11e6363": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-17",
+   "hora": "15:30",
+   "sala": "TLB 2",
+   "titulo": "soumsoum the night of the stars"
+  },
+  "f_238e8cad87": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-11",
+   "hora": "17:50",
+   "sala": "SCOTIA 6",
+   "titulo": "soumsoum the night of the stars"
+  },
+  "f_1dddb89e67": {
+   "sede": "Roy Thomson Hall - Toronto",
+   "dia": "2026-09-18",
+   "hora": "17:30",
+   "sala": "RTH",
+   "titulo": "spirit guardians the last secret of the first emperor"
+  },
+  "f_250a9b77bf": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-19",
+   "hora": "13:30",
+   "sala": "SCOTIA 1",
+   "titulo": "spirit guardians the last secret of the first emperor"
+  },
+  "f_6dce125609": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-11",
+   "hora": "12:45",
+   "sala": "SCOTIA 3",
+   "titulo": "spirit guardians the last secret of the first emperor"
+  },
+  "f_f09e57fd38": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-20",
+   "hora": "13:00",
+   "sala": "SCOTIA 1",
+   "titulo": "spirit guardians the last secret of the first emperor"
+  },
+  "f_54b2cbdf19": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-16",
+   "hora": "13:00",
+   "sala": "TLB 4",
+   "titulo": "spring in a small town"
+  },
+  "f_91b062ca29": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-14",
+   "hora": "21:45",
+   "sala": "SCOTIA 7",
+   "titulo": "still night burning house"
+  },
+  "f_85645f59b1": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-18",
+   "hora": "15:15",
+   "sala": "SCOTIA 8",
+   "titulo": "still night burning house"
+  },
+  "f_b9dfa21025": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-12",
+   "hora": "18:00",
+   "sala": "TLB 3",
+   "titulo": "still night burning house"
+  },
+  "f_58ffe3c734": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-14",
+   "hora": "14:10",
+   "sala": "SCOTIA 7",
+   "titulo": "still night burning house"
+  },
+  "f_255b693237": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-17",
+   "hora": "14:15",
+   "sala": "SCOTIA 5",
+   "titulo": "still night burning house"
+  },
+  "f_66978b61ec": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-11",
+   "hora": "14:00",
+   "sala": "SCOTIA 13",
+   "titulo": "strong son"
+  },
+  "f_4a9c1fc8d2": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-16",
+   "hora": "14:30",
+   "sala": "SCOTIA 10",
+   "titulo": "strong son"
+  },
+  "f_ab5483b531": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-14",
+   "hora": "21:55",
+   "sala": "SCOTIA 14",
+   "titulo": "strong son"
+  },
+  "f_a0a6292f59": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-18",
+   "hora": "17:30",
+   "sala": "SCOTIA 5",
+   "titulo": "strong son"
+  },
+  "f_af170e0aac": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-17",
+   "hora": "11:50",
+   "sala": "SCOTIA 6",
+   "titulo": "strong son"
+  },
+  "f_41ee9a3bc3": {
+   "sede": "Royal Alexandra Theatre - Toronto",
+   "dia": "2026-09-10",
+   "hora": "17:30",
+   "sala": "RA",
+   "titulo": "stuffed"
+  },
+  "f_23a20b819d": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-20",
+   "hora": "19:00",
+   "sala": "SCOTIA 10",
+   "titulo": "stuffed"
+  },
+  "f_f311494908": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-11",
+   "hora": "11:50",
+   "sala": "SCOTIA 2",
+   "titulo": "stuffed"
+  },
+  "f_15a280beaf": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-11",
+   "hora": "21:20",
+   "sala": "SCOTIA 2",
+   "titulo": "stuffed"
+  },
+  "f_83ce3adf14": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-11",
+   "hora": "15:30",
+   "sala": "SCOTIA 9",
+   "titulo": "sunburn"
+  },
+  "f_b78008e465": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-19",
+   "hora": "18:30",
+   "sala": "SCOTIA 10",
+   "titulo": "sunburn"
+  },
+  "f_fa6f0387ee": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-16",
+   "hora": "18:10",
+   "sala": "SCOTIA 2",
+   "titulo": "sunburn"
+  },
+  "f_5fea4b3e1e": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-14",
+   "hora": "18:25",
+   "sala": "SCOTIA 8",
+   "titulo": "sunburn"
+  },
+  "f_f0832f6a24": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-17",
+   "hora": "17:50",
+   "sala": "SCOTIA 6",
+   "titulo": "sunburn"
+  },
+  "f_728cefb21e": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-18",
+   "hora": "12:15",
+   "sala": "SCOTIA 7",
+   "titulo": "tangles"
+  },
+  "f_e421d90d37": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-11",
+   "hora": "14:15",
+   "sala": "SCOTIA 12",
+   "titulo": "tangles"
+  },
+  "f_cd9e726e73": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-16",
+   "hora": "09:00",
+   "sala": "SCOTIA 1",
+   "titulo": "tangles"
+  },
+  "f_d2b58b58c6": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-13",
+   "hora": "14:30",
+   "sala": "SCOTIA 3",
+   "titulo": "tangles"
+  },
+  "f_c71552cb9d": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-11",
+   "hora": "20:30",
+   "sala": "SCOTIA 5",
+   "titulo": "tehran under the skin"
+  },
+  "f_70e04851ac": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-15",
+   "hora": "17:15",
+   "sala": "SCOTIA 6",
+   "titulo": "tehran under the skin"
+  },
+  "f_b48873dbde": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-17",
+   "hora": "17:00",
+   "sala": "SCOTIA 8",
+   "titulo": "tehran under the skin"
+  },
+  "f_3d6ed26745": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-17",
+   "hora": "17:30",
+   "sala": "TLB 3",
+   "titulo": "ten dark women"
+  },
+  "f_0417a83348": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-18",
+   "hora": "15:00",
+   "sala": "SCOTIA 7",
+   "titulo": "tender loving care"
+  },
+  "f_52e8f142d2": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-10",
+   "hora": "08:40",
+   "sala": "SCOTIA 13",
+   "titulo": "tender loving care"
+  },
+  "f_bdff5115cb": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-13",
+   "hora": "12:00",
+   "sala": "SCOTIA 4",
+   "titulo": "tender loving care"
+  },
+  "f_12d75380a6": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-12",
+   "hora": "11:30",
+   "sala": "TLB 1",
+   "titulo": "tender loving care"
+  },
+  "f_dd8202073b": {
+   "sede": "Roy Thomson Hall - Toronto",
+   "dia": "2026-09-15",
+   "hora": "21:30",
+   "sala": "RTH",
+   "titulo": "tenzing"
+  },
+  "f_b256b3bc5d": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-18",
+   "hora": "21:00",
+   "sala": "TLB 3",
+   "titulo": "tenzing"
+  },
+  "f_3eb45576bd": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-16",
+   "hora": "08:15",
+   "sala": "TLB 1",
+   "titulo": "tenzing"
+  },
+  "f_84a398e3a4": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-19",
+   "hora": "18:30",
+   "sala": "TLB 2",
+   "titulo": "tenzing"
+  },
+  "f_268967c35f": {
+   "sede": "John Bassett Theatre - Toronto",
+   "dia": "2026-09-16",
+   "hora": "08:30",
+   "sala": "JBT",
+   "titulo": "tenzing"
+  },
+  "f_db5ff1acda": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-18",
+   "hora": "17:15",
+   "sala": "SCOTIA 14",
+   "titulo": "the age of goodbyes"
+  },
+  "f_93ea2a71b0": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-16",
+   "hora": "13:30",
+   "sala": "TLB 3",
+   "titulo": "the age of goodbyes"
+  },
+  "f_480a8802b3": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-14",
+   "hora": "09:05",
+   "sala": "SCOTIA 7",
+   "titulo": "the age of goodbyes"
+  },
+  "f_cc03e22f2c": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-19",
+   "hora": "15:45",
+   "sala": "SCOTIA 8",
+   "titulo": "the age of goodbyes"
+  },
+  "f_19d472278e": {
+   "sede": "Roy Thomson Hall - Toronto",
+   "dia": "2026-09-16",
+   "hora": "21:30",
+   "sala": "RTH",
+   "titulo": "the assassin s"
+  },
+  "f_0d233bffe2": {
+   "sede": "VISA Screening Room at the Princess of Wales Theatre - Toronto",
+   "dia": "2026-09-17",
+   "hora": "21:30",
+   "sala": "VSR",
+   "titulo": "the assassin s"
+  },
+  "f_054931be3a": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-18",
+   "hora": "18:10",
+   "sala": "SCOTIA 13",
+   "titulo": "the assassin s"
+  },
+  "f_a0bc94faff": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-11",
+   "hora": "15:10",
+   "sala": "SCOTIA 4",
+   "titulo": "the assassin s"
+  },
+  "f_55f451cf2c": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-20",
+   "hora": "19:15",
+   "sala": "SCOTIA 2",
+   "titulo": "the assassin s"
+  },
+  "f_518f315aa6": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-18",
+   "hora": "10:45",
+   "sala": "TLB 3",
+   "titulo": "the beloved"
+  },
+  "f_7bf41879bd": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-10",
+   "hora": "09:00",
+   "sala": "SCOTIA 1",
+   "titulo": "the beloved"
+  },
+  "f_9fc8f5dd5d": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-14",
+   "hora": "11:15",
+   "sala": "SCOTIA 2",
+   "titulo": "the beloved"
+  },
+  "f_66f17f6a1e": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-20",
+   "hora": "19:00",
+   "sala": "SCOTIA 14",
+   "titulo": "the beloved"
+  },
+  "f_235f8d7e15": {
+   "sede": "VISA Screening Room at the Princess of Wales Theatre - Toronto",
+   "dia": "2026-09-13",
+   "hora": "14:45",
+   "sala": "VSR",
+   "titulo": "the beloved"
+  },
+  "f_6ccf92c1ed": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-14",
+   "hora": "21:30",
+   "sala": "SCOTIA 4",
+   "titulo": "the betrayers"
+  },
+  "f_b6f3dc0885": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-13",
+   "hora": "17:50",
+   "sala": "SCOTIA 6",
+   "titulo": "the betrayers"
+  },
+  "f_b4449d8448": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-12",
+   "hora": "18:10",
+   "sala": "SCOTIA 2",
+   "titulo": "the betrayers"
+  },
+  "f_fff6685373": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-17",
+   "hora": "09:00",
+   "sala": "SCOTIA 10",
+   "titulo": "the betrayers"
+  },
+  "f_743cb833a4": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-15",
+   "hora": "17:30",
+   "sala": "SCOTIA 5",
+   "titulo": "the black box is orange"
+  },
+  "f_53a17a7ac8": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-15",
+   "hora": "09:00",
+   "sala": "SCOTIA 10",
+   "titulo": "the black box is orange"
+  },
+  "f_a6c9dcbba4": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-13",
+   "hora": "18:45",
+   "sala": "TLB 4",
+   "titulo": "the black box is orange"
+  },
+  "f_dab074df64": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-12",
+   "hora": "09:15",
+   "sala": "SCOTIA 11",
+   "titulo": "the city of the living"
+  },
+  "f_4f2335910d": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-15",
+   "hora": "21:40",
+   "sala": "SCOTIA 9",
+   "titulo": "the city of the living"
+  },
+  "f_5873ed17f5": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-13",
+   "hora": "15:00",
+   "sala": "SCOTIA 13",
+   "titulo": "the city of the living"
+  },
+  "f_da7b0e66c4": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-18",
+   "hora": "12:00",
+   "sala": "SCOTIA 13",
+   "titulo": "the city of the living"
+  },
+  "f_18884ddb64": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-14",
+   "hora": "12:00",
+   "sala": "SCOTIA 8",
+   "titulo": "the daughters of abraham"
+  },
+  "f_9f2104b9ec": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-13",
+   "hora": "18:45",
+   "sala": "SCOTIA 11",
+   "titulo": "the daughters of abraham"
+  },
+  "f_554a2af6fc": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-20",
+   "hora": "18:50",
+   "sala": "SCOTIA 6",
+   "titulo": "the daughters of abraham"
+  },
+  "f_056553213e": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-15",
+   "hora": "21:45",
+   "sala": "SCOTIA 7",
+   "titulo": "the daughters of abraham"
+  },
+  "f_9be06f6305": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-17",
+   "hora": "14:00",
+   "sala": "TLB 1",
+   "titulo": "the debut"
+  },
+  "f_84494c8771": {
+   "sede": "John Bassett Theatre - Toronto",
+   "dia": "2026-09-14",
+   "hora": "18:30",
+   "sala": "JBT",
+   "titulo": "the debut"
+  },
+  "f_f82d5208b5": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-14",
+   "hora": "20:45",
+   "sala": "SCOTIA 1",
+   "titulo": "the debut"
+  },
+  "f_f9a2e95efd": {
+   "sede": "VISA Screening Room at the Princess of Wales Theatre - Toronto",
+   "dia": "2026-09-13",
+   "hora": "18:15",
+   "sala": "VSR",
+   "titulo": "the debut"
+  },
+  "f_02aa5b7d72": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-20",
+   "hora": "18:40",
+   "sala": "SCOTIA 9",
+   "titulo": "the diary of a chambermaid"
+  },
+  "f_416e9ee52f": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-17",
+   "hora": "08:30",
+   "sala": "TLB 3",
+   "titulo": "the diary of a chambermaid"
+  },
+  "f_78c7cdcd9e": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-19",
+   "hora": "15:45",
+   "sala": "TLB 3",
+   "titulo": "the diary of a chambermaid"
+  },
+  "f_5f8f0b7204": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-17",
+   "hora": "22:00",
+   "sala": "TLB 4",
+   "titulo": "the difficult bride"
+  },
+  "f_8692219026": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-11",
+   "hora": "12:05",
+   "sala": "SCOTIA 8",
+   "titulo": "the difficult bride"
+  },
+  "f_181e3ddd4e": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-16",
+   "hora": "16:00",
+   "sala": "TLB 4",
+   "titulo": "the difficult bride"
+  },
+  "f_ceebac99be": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-19",
+   "hora": "12:15",
+   "sala": "SCOTIA 7",
+   "titulo": "the difficult bride"
+  },
+  "f_9f3b22585b": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-14",
+   "hora": "21:20",
+   "sala": "SCOTIA 2",
+   "titulo": "the dreamed adventure"
+  },
+  "f_1a06cce6e2": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-11",
+   "hora": "09:15",
+   "sala": "SCOTIA 3",
+   "titulo": "the dreamed adventure"
+  },
+  "f_c8605e94c9": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-13",
+   "hora": "16:45",
+   "sala": "TLB 3",
+   "titulo": "the dreamed adventure"
+  },
+  "f_e897a6936f": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-18",
+   "hora": "21:40",
+   "sala": "SCOTIA 1",
+   "titulo": "the face of horror"
+  },
+  "f_a258f88502": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-12",
+   "hora": "14:15",
+   "sala": "SCOTIA 12",
+   "titulo": "the face of horror"
+  },
+  "f_156aa81843": {
+   "sede": "Royal Alexandra Theatre - Toronto",
+   "dia": "2026-09-11",
+   "hora": "23:59",
+   "sala": "RA",
+   "titulo": "the face of horror"
+  },
+  "f_6e2326d793": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-12",
+   "hora": "21:55",
+   "sala": "SCOTIA 14",
+   "titulo": "the face of horror"
+  },
+  "f_509c2a10bd": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-15",
+   "hora": "15:15",
+   "sala": "SCOTIA 8",
+   "titulo": "the final act"
+  },
+  "f_1dd3341bac": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-12",
+   "hora": "08:55",
+   "sala": "SCOTIA 8",
+   "titulo": "the final act"
+  },
+  "f_f4f1bb3c4d": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-13",
+   "hora": "11:00",
+   "sala": "TLB 3",
+   "titulo": "the final act"
+  },
+  "f_c8ded6172e": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-17",
+   "hora": "08:50",
+   "sala": "SCOTIA 6",
+   "titulo": "the final act"
+  },
+  "f_e9e18dd35e": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-10",
+   "hora": "22:00",
+   "sala": "TLB 4",
+   "titulo": "the fortunate isles"
+  },
+  "f_db19c43de4": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-15",
+   "hora": "18:00",
+   "sala": "SCOTIA 11",
+   "titulo": "the fortunate isles"
+  },
+  "f_be7d66c774": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-17",
+   "hora": "11:45",
+   "sala": "SCOTIA 10",
+   "titulo": "the fortunate isles"
+  },
+  "f_7e251bea8b": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-20",
+   "hora": "15:50",
+   "sala": "SCOTIA 6",
+   "titulo": "the fortunate isles"
+  },
+  "f_f0b88794f5": {
+   "sede": "Royal Alexandra Theatre - Toronto",
+   "dia": "2026-09-10",
+   "hora": "20:45",
+   "sala": "RA",
+   "titulo": "the housewife"
+  },
+  "f_12366384f7": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-18",
+   "hora": "09:30",
+   "sala": "SCOTIA 4",
+   "titulo": "the housewife"
+  },
+  "f_bf4c96c28a": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-11",
+   "hora": "09:00",
+   "sala": "SCOTIA 1",
+   "titulo": "the housewife"
+  },
+  "f_fe7fb246b2": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-12",
+   "hora": "15:45",
+   "sala": "SCOTIA 14",
+   "titulo": "the housewife"
+  },
+  "f_3181fe9ee4": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-13",
+   "hora": "20:45",
+   "sala": "SCOTIA 9",
+   "titulo": "the hummingbird paints fragrant songs"
+  },
+  "f_aabc20746e": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-19",
+   "hora": "19:00",
+   "sala": "TLB 4",
+   "titulo": "the hummingbird paints fragrant songs"
+  },
+  "f_0dca05f373": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-12",
+   "hora": "12:45",
+   "sala": "TLB 4",
+   "titulo": "the hummingbird paints fragrant songs"
+  },
+  "f_ddbb6d10af": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-12",
+   "hora": "20:50",
+   "sala": "SCOTIA 6",
+   "titulo": "the hummingbird paints fragrant songs"
+  },
+  "f_58fece1f0e": {
+   "sede": "VISA Screening Room at the Princess of Wales Theatre - Toronto",
+   "dia": "2026-09-15",
+   "hora": "21:30",
+   "sala": "VSR",
+   "titulo": "the idiot s"
+  },
+  "f_9bfc12c2ef": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-17",
+   "hora": "17:00",
+   "sala": "TLB 1",
+   "titulo": "the idiot s"
+  },
+  "f_8b94cdd36e": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-19",
+   "hora": "10:45",
+   "sala": "SCOTIA 14",
+   "titulo": "the idiot s"
+  },
+  "f_c7c4a69dbe": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-11",
+   "hora": "15:20",
+   "sala": "SCOTIA 1",
+   "titulo": "the idiot s"
+  },
+  "f_56701c7c51": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-20",
+   "hora": "09:25",
+   "sala": "SCOTIA 14",
+   "titulo": "the julia set"
+  },
+  "f_53f3df5774": {
+   "sede": "VISA Screening Room at the Princess of Wales Theatre - Toronto",
+   "dia": "2026-09-19",
+   "hora": "11:00",
+   "sala": "VSR",
+   "titulo": "the julia set"
+  },
+  "f_a1562474f7": {
+   "sede": "VISA Screening Room at the Princess of Wales Theatre - Toronto",
+   "dia": "2026-09-11",
+   "hora": "18:15",
+   "sala": "VSR",
+   "titulo": "the julia set"
+  },
+  "f_e208e7ac4a": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-12",
+   "hora": "14:00",
+   "sala": "SCOTIA 1",
+   "titulo": "the julia set"
+  },
+  "f_1e384326c2": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-12",
+   "hora": "11:50",
+   "sala": "SCOTIA 2",
+   "titulo": "the julia set"
+  },
+  "f_e96aece51c": {
+   "sede": "Royal Alexandra Theatre - Toronto",
+   "dia": "2026-09-16",
+   "hora": "20:30",
+   "sala": "RA",
+   "titulo": "the liberation"
+  },
+  "f_4f2427a684": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-17",
+   "hora": "12:10",
+   "sala": "SCOTIA 1",
+   "titulo": "the liberation"
+  },
+  "f_7b15caac76": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-15",
+   "hora": "09:00",
+   "sala": "SCOTIA 1",
+   "titulo": "the liberation"
+  },
+  "f_933f49a997": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-14",
+   "hora": "09:25",
+   "sala": "SCOTIA 14",
+   "titulo": "the life and deaths of wilson shedd"
+  },
+  "f_7267af7767": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-18",
+   "hora": "18:30",
+   "sala": "SCOTIA 1",
+   "titulo": "the life and deaths of wilson shedd"
+  },
+  "f_1e05aadabd": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-14",
+   "hora": "21:00",
+   "sala": "SCOTIA 3",
+   "titulo": "the life and deaths of wilson shedd"
+  },
+  "f_933bc08709": {
+   "sede": "Roy Thomson Hall - Toronto",
+   "dia": "2026-09-13",
+   "hora": "21:30",
+   "sala": "RTH",
+   "titulo": "the life and deaths of wilson shedd"
+  },
+  "f_35e658cd31": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-14",
+   "hora": "21:40",
+   "sala": "SCOTIA 9",
+   "titulo": "the lost children of tuam"
+  },
+  "f_76dead9ee5": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-11",
+   "hora": "15:45",
+   "sala": "SCOTIA 14",
+   "titulo": "the lost children of tuam"
+  },
+  "f_96a78073a2": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-13",
+   "hora": "18:10",
+   "sala": "SCOTIA 13",
+   "titulo": "the lost children of tuam"
+  },
+  "f_bcba2b260f": {
+   "sede": "Royal Alexandra Theatre - Toronto",
+   "dia": "2026-09-19",
+   "hora": "14:30",
+   "sala": "RA",
+   "titulo": "the man i love"
+  },
+  "f_68a77fd5be": {
+   "sede": "VISA Screening Room at the Princess of Wales Theatre - Toronto",
+   "dia": "2026-09-16",
+   "hora": "15:00",
+   "sala": "VSR",
+   "titulo": "the man i love"
+  },
+  "f_70f5c8a54c": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-18",
+   "hora": "15:00",
+   "sala": "TLB 1",
+   "titulo": "the man i love"
+  },
+  "f_2bc7634f03": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-10",
+   "hora": "21:30",
+   "sala": "SCOTIA 4",
+   "titulo": "the man i love"
+  },
+  "f_646f5d7df1": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-20",
+   "hora": "11:00",
+   "sala": "SCOTIA 4",
+   "titulo": "the man i love"
+  },
+  "f_b357af7126": {
+   "sede": "Roy Thomson Hall - Toronto",
+   "dia": "2026-09-16",
+   "hora": "17:30",
+   "sala": "RTH",
+   "titulo": "the only living pickpocket in new york"
+  },
+  "f_311539b461": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-17",
+   "hora": "15:00",
+   "sala": "SCOTIA 2",
+   "titulo": "the only living pickpocket in new york"
+  },
+  "f_ac67e701e9": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-10",
+   "hora": "15:10",
+   "sala": "SCOTIA 4",
+   "titulo": "the only living pickpocket in new york"
+  },
+  "f_6dee00484f": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-19",
+   "hora": "20:00",
+   "sala": "SCOTIA 13",
+   "titulo": "the pervert s guide to utopias"
+  },
+  "f_ee79afaa91": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-15",
+   "hora": "17:15",
+   "sala": "SCOTIA 13",
+   "titulo": "the pervert s guide to utopias"
+  },
+  "f_1ca993a91e": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-17",
+   "hora": "14:30",
+   "sala": "SCOTIA 10",
+   "titulo": "the pervert s guide to utopias"
+  },
+  "f_f2e850f333": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-15",
+   "hora": "08:00",
+   "sala": "SCOTIA 11",
+   "titulo": "the pervert s guide to utopias"
+  },
+  "f_8345c90c95": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-14",
+   "hora": "08:45",
+   "sala": "TLB 4",
+   "titulo": "the remotes"
+  },
+  "f_cf594ba465": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-11",
+   "hora": "18:30",
+   "sala": "TLB 4",
+   "titulo": "the remotes"
+  },
+  "f_e0129e4f23": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-13",
+   "hora": "21:15",
+   "sala": "TLB 4",
+   "titulo": "the remotes"
+  },
+  "f_5f81377e18": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-10",
+   "hora": "09:15",
+   "sala": "SCOTIA 11",
+   "titulo": "the road not taken"
+  },
+  "f_f76220098f": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-20",
+   "hora": "19:45",
+   "sala": "SCOTIA 11",
+   "titulo": "the road not taken"
+  },
+  "f_2a6f773685": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-19",
+   "hora": "15:15",
+   "sala": "SCOTIA 3",
+   "titulo": "the road not taken"
+  },
+  "f_9ddceea6a1": {
+   "sede": "VISA Screening Room at the Princess of Wales Theatre - Toronto",
+   "dia": "2026-09-18",
+   "hora": "18:00",
+   "sala": "VSR",
+   "titulo": "the road not taken"
+  },
+  "f_f059df17bf": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-19",
+   "hora": "10:30",
+   "sala": "SCOTIA 13",
+   "titulo": "the secret lives of baba segi s wives"
+  },
+  "f_f4b7f2bbe2": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-11",
+   "hora": "21:00",
+   "sala": "TLB 2",
+   "titulo": "the secret lives of baba segi s wives"
+  },
+  "f_066b9b488f": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-12",
+   "hora": "08:50",
+   "sala": "SCOTIA 4",
+   "titulo": "the secret lives of baba segi s wives"
+  },
+  "f_427b95564e": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-13",
+   "hora": "14:45",
+   "sala": "TLB 1",
+   "titulo": "the secret lives of baba segi s wives"
+  },
+  "f_c6fa2657f6": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-12",
+   "hora": "18:00",
+   "sala": "SCOTIA 11",
+   "titulo": "the smell of apples"
+  },
+  "f_0ea7f4822f": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-11",
+   "hora": "18:15",
+   "sala": "TLB 1",
+   "titulo": "the smell of apples"
+  },
+  "f_19c1192c43": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-12",
+   "hora": "08:40",
+   "sala": "SCOTIA 2",
+   "titulo": "the smell of apples"
+  },
+  "f_5193facb82": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-18",
+   "hora": "11:45",
+   "sala": "SCOTIA 2",
+   "titulo": "the smell of apples"
+  },
+  "f_268159d85a": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-17",
+   "hora": "18:30",
+   "sala": "TLB 2",
+   "titulo": "the spiral"
+  },
+  "f_7f0be3dc27": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-14",
+   "hora": "09:15",
+   "sala": "SCOTIA 3",
+   "titulo": "the spiral"
+  },
+  "f_11e7855219": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-15",
+   "hora": "21:20",
+   "sala": "SCOTIA 13",
+   "titulo": "the spiral"
+  },
+  "f_91fb814071": {
+   "sede": "Royal Alexandra Theatre - Toronto",
+   "dia": "2026-09-13",
+   "hora": "23:59",
+   "sala": "RA",
+   "titulo": "the spiral"
+  },
+  "f_04c38165cf": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-10",
+   "hora": "14:15",
+   "sala": "SCOTIA 12",
+   "titulo": "the stunt driver"
+  },
+  "f_3f49dd96ca": {
+   "sede": "Royal Alexandra Theatre - Toronto",
+   "dia": "2026-09-11",
+   "hora": "20:45",
+   "sala": "RA",
+   "titulo": "the stunt driver"
+  },
+  "f_4f286167a7": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-12",
+   "hora": "21:55",
+   "sala": "SCOTIA 3",
+   "titulo": "the stunt driver"
+  },
+  "f_fee165d48d": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-17",
+   "hora": "15:10",
+   "sala": "SCOTIA 4",
+   "titulo": "the stunt driver"
+  },
+  "f_6c3329d1ef": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-15",
+   "hora": "21:20",
+   "sala": "SCOTIA 2",
+   "titulo": "the surgeon"
+  },
+  "f_83f1fa7452": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-18",
+   "hora": "21:10",
+   "sala": "SCOTIA 8",
+   "titulo": "the surgeon"
+  },
+  "f_d45d0cb254": {
+   "sede": "Royal Alexandra Theatre - Toronto",
+   "dia": "2026-09-12",
+   "hora": "20:30",
+   "sala": "RA",
+   "titulo": "the surgeon"
+  },
+  "f_689042f901": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-13",
+   "hora": "09:25",
+   "sala": "SCOTIA 14",
+   "titulo": "the surgeon"
+  },
+  "f_ac6aa55248": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-12",
+   "hora": "09:10",
+   "sala": "SCOTIA 9",
+   "titulo": "the ultra runner"
+  },
+  "f_14bae727c6": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-11",
+   "hora": "17:30",
+   "sala": "TLB 3",
+   "titulo": "the ultra runner"
+  },
+  "f_6b5b6696a8": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-12",
+   "hora": "21:35",
+   "sala": "SCOTIA 8",
+   "titulo": "the ultra runner"
+  },
+  "f_4d25d19ca0": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-17",
+   "hora": "11:30",
+   "sala": "SCOTIA 5",
+   "titulo": "the ultra runner"
+  },
+  "f_5751944e30": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-19",
+   "hora": "09:15",
+   "sala": "SCOTIA 3",
+   "titulo": "the ultra runner"
+  },
+  "f_d2daaef397": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-15",
+   "hora": "15:15",
+   "sala": "TLB 3",
+   "titulo": "the unknown"
+  },
+  "f_9e4714dd55": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-10",
+   "hora": "15:15",
+   "sala": "SCOTIA 14",
+   "titulo": "the unknown"
+  },
+  "f_9cc5adf6b5": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-17",
+   "hora": "19:00",
+   "sala": "SCOTIA 7",
+   "titulo": "the unknown"
+  },
+  "f_fdac7ee09e": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-11",
+   "hora": "12:20",
+   "sala": "SCOTIA 9",
+   "titulo": "the violinist"
+  },
+  "f_197db7fe64": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-18",
+   "hora": "11:30",
+   "sala": "SCOTIA 10",
+   "titulo": "the violinist"
+  },
+  "f_d03b329264": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-17",
+   "hora": "18:45",
+   "sala": "SCOTIA 3",
+   "titulo": "the violinist"
+  },
+  "f_4cf32e445b": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-20",
+   "hora": "16:25",
+   "sala": "SCOTIA 7",
+   "titulo": "the violinist"
+  },
+  "f_c244e8c112": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-16",
+   "hora": "17:45",
+   "sala": "TLB 1",
+   "titulo": "the world before"
+  },
+  "f_a70dc29e34": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-19",
+   "hora": "21:00",
+   "sala": "SCOTIA 10",
+   "titulo": "the world before"
+  },
+  "f_b00ee03be0": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-17",
+   "hora": "15:00",
+   "sala": "SCOTIA 11",
+   "titulo": "the world before"
+  },
+  "f_739b5e1279": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-13",
+   "hora": "15:20",
+   "sala": "SCOTIA 10",
+   "titulo": "the world before"
+  },
+  "f_2242d51024": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-12",
+   "hora": "18:30",
+   "sala": "SCOTIA 9",
+   "titulo": "the bovine with the curved horns"
+  },
+  "f_cc2b1abc0c": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-11",
+   "hora": "15:15",
+   "sala": "SCOTIA 8",
+   "titulo": "the bovine with the curved horns"
+  },
+  "f_07a7267cc0": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-14",
+   "hora": "21:00",
+   "sala": "SCOTIA 6",
+   "titulo": "the bovine with the curved horns"
+  },
+  "f_c3c5ecb38b": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-19",
+   "hora": "21:15",
+   "sala": "SCOTIA 5",
+   "titulo": "the bovine with the curved horns"
+  },
+  "f_9fd42ace08": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-10",
+   "hora": "09:30",
+   "sala": "TLB 2",
+   "titulo": "thirteen in gaza"
+  },
+  "f_c1e3484b6f": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-15",
+   "hora": "21:30",
+   "sala": "TLB 2",
+   "titulo": "thirteen in gaza"
+  },
+  "f_36e5750db6": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-17",
+   "hora": "09:30",
+   "sala": "TLB 2",
+   "titulo": "thirteen in gaza"
+  },
+  "f_b56f615fd3": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-20",
+   "hora": "10:00",
+   "sala": "TLB 3",
+   "titulo": "thirteen in gaza"
+  },
+  "f_9eaef1e38c": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-10",
+   "hora": "14:45",
+   "sala": "TLB 2",
+   "titulo": "toy gun bandit"
+  },
+  "f_cec8c1c869": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-15",
+   "hora": "21:00",
+   "sala": "SCOTIA 14",
+   "titulo": "toy gun bandit"
+  },
+  "f_3f593d6cd5": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-11",
+   "hora": "08:55",
+   "sala": "SCOTIA 8",
+   "titulo": "toy gun bandit"
+  },
+  "f_63554fdee0": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-17",
+   "hora": "12:20",
+   "sala": "SCOTIA 9",
+   "titulo": "toy gun bandit"
+  },
+  "f_9d4b2d0b0b": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-12",
+   "hora": "21:00",
+   "sala": "SCOTIA 11",
+   "titulo": "trash mountain"
+  },
+  "f_aeb9ea7078": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-19",
+   "hora": "17:30",
+   "sala": "SCOTIA 2",
+   "titulo": "trash mountain"
+  },
+  "f_c9dc588e37": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-12",
+   "hora": "12:25",
+   "sala": "SCOTIA 3",
+   "titulo": "trash mountain"
+  },
+  "f_a89560035b": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-11",
+   "hora": "18:15",
+   "sala": "SCOTIA 1",
+   "titulo": "trash mountain"
+  },
+  "f_0e826a2607": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-18",
+   "hora": "18:00",
+   "sala": "TLB 1",
+   "titulo": "trees are watching"
+  },
+  "f_e51cf76a80": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-17",
+   "hora": "09:25",
+   "sala": "SCOTIA 14",
+   "titulo": "trees are watching"
+  },
+  "f_0809c65061": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-15",
+   "hora": "18:35",
+   "sala": "SCOTIA 7",
+   "titulo": "turtle island rap"
+  },
+  "f_a87e94f282": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-11",
+   "hora": "18:25",
+   "sala": "SCOTIA 8",
+   "titulo": "turtle island rap"
+  },
+  "f_787d4f9a6d": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-13",
+   "hora": "18:20",
+   "sala": "SCOTIA 4",
+   "titulo": "turtle island rap"
+  },
+  "f_7174761d36": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-17",
+   "hora": "14:50",
+   "sala": "SCOTIA 6",
+   "titulo": "turtle island rap"
+  },
+  "f_44e2c0d997": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-20",
+   "hora": "12:40",
+   "sala": "SCOTIA 10",
+   "titulo": "union town"
+  },
+  "f_3e85ddca87": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-11",
+   "hora": "12:10",
+   "sala": "SCOTIA 1",
+   "titulo": "union town"
+  },
+  "f_b72e65c4c2": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-15",
+   "hora": "14:45",
+   "sala": "SCOTIA 2",
+   "titulo": "union town"
+  },
+  "f_999cab8111": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-17",
+   "hora": "15:30",
+   "sala": "SCOTIA 14",
+   "titulo": "union town"
+  },
+  "f_709f6cc9c7": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-18",
+   "hora": "15:10",
+   "sala": "SCOTIA 4",
+   "titulo": "up against it"
+  },
+  "f_cd6a63e90f": {
+   "sede": "Roy Thomson Hall - Toronto",
+   "dia": "2026-09-17",
+   "hora": "17:30",
+   "sala": "RTH",
+   "titulo": "up against it"
+  },
+  "f_c8ff33475a": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-12",
+   "hora": "08:15",
+   "sala": "TLB 1",
+   "titulo": "up against it"
+  },
+  "f_7a36946503": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-19",
+   "hora": "18:45",
+   "sala": "SCOTIA 3",
+   "titulo": "up against it"
+  },
+  "f_bf469630d4": {
+   "sede": "Roy Thomson Hall - Toronto",
+   "dia": "2026-09-19",
+   "hora": "20:00",
+   "sala": "RTH",
+   "titulo": "villeneuve the rise of a legend"
+  },
+  "f_74aa160c05": {
+   "sede": "VISA Screening Room at the Princess of Wales Theatre - Toronto",
+   "dia": "2026-09-19",
+   "hora": "18:00",
+   "sala": "VSR",
+   "titulo": "villeneuve the rise of a legend"
+  },
+  "f_f0970c12cf": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-20",
+   "hora": "12:50",
+   "sala": "SCOTIA 3",
+   "titulo": "villeneuve the rise of a legend"
+  },
+  "f_fd54d1164a": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-13",
+   "hora": "09:15",
+   "sala": "SCOTIA 3",
+   "titulo": "villeneuve the rise of a legend"
+  },
+  "f_8f1f62b716": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-13",
+   "hora": "21:15",
+   "sala": "SCOTIA 13",
+   "titulo": "vintage violence"
+  },
+  "f_7cc3e12e06": {
+   "sede": "Royal Alexandra Theatre - Toronto",
+   "dia": "2026-09-12",
+   "hora": "23:59",
+   "sala": "RA",
+   "titulo": "vintage violence"
+  },
+  "f_0077858d35": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-17",
+   "hora": "21:55",
+   "sala": "SCOTIA 3",
+   "titulo": "vintage violence"
+  },
+  "f_2c8e27c7ac": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-14",
+   "hora": "14:15",
+   "sala": "SCOTIA 5",
+   "titulo": "vintage violence"
+  },
+  "f_1602ec81de": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-10",
+   "hora": "08:55",
+   "sala": "SCOTIA 8",
+   "titulo": "viva carmen"
+  },
+  "f_5e58cc621a": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-11",
+   "hora": "18:00",
+   "sala": "SCOTIA 14",
+   "titulo": "viva carmen"
+  },
+  "f_e47732a29a": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-19",
+   "hora": "15:00",
+   "sala": "SCOTIA 7",
+   "titulo": "viva carmen"
+  },
+  "f_4c80262ac8": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-12",
+   "hora": "18:25",
+   "sala": "SCOTIA 8",
+   "titulo": "viva carmen"
+  },
+  "f_65e59aa853": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-14",
+   "hora": "15:00",
+   "sala": "SCOTIA 13",
+   "titulo": "voices"
+  },
+  "f_ad0efa73a6": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-11",
+   "hora": "11:45",
+   "sala": "SCOTIA 11",
+   "titulo": "voices"
+  },
+  "f_5844c9dd2e": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-15",
+   "hora": "21:40",
+   "sala": "SCOTIA 10",
+   "titulo": "voices"
+  },
+  "f_3f3a0964cd": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-20",
+   "hora": "16:30",
+   "sala": "SCOTIA 2",
+   "titulo": "voices"
+  },
+  "f_36fc75485f": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-11",
+   "hora": "14:30",
+   "sala": "TLB 3",
+   "titulo": "wavelengths 1 house and home"
+  },
+  "f_0969ae1e65": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-12",
+   "hora": "16:15",
+   "sala": "TLB 4",
+   "titulo": "wavelengths 2 this suffocating now"
+  },
+  "f_e63f6faf25": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-15",
+   "hora": "12:00",
+   "sala": "TLB 1",
+   "titulo": "wavelengths 3 time and tide"
+  },
+  "f_89b9d5220d": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-13",
+   "hora": "13:00",
+   "sala": "TLB 4",
+   "titulo": "wavelengths anoushahpour aljafari"
+  },
+  "f_f0e46c86a4": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-10",
+   "hora": "17:30",
+   "sala": "SCOTIA 3",
+   "titulo": "we are all strangers"
+  },
+  "f_7fc29c562f": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-15",
+   "hora": "11:15",
+   "sala": "SCOTIA 10",
+   "titulo": "we are all strangers"
+  },
+  "f_1433996eeb": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-16",
+   "hora": "14:50",
+   "sala": "SCOTIA 14",
+   "titulo": "we are all strangers"
+  },
+  "f_0c9871a92a": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-19",
+   "hora": "17:30",
+   "sala": "SCOTIA 5",
+   "titulo": "we are all strangers"
+  },
+  "f_c4ff7c2578": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-10",
+   "hora": "18:00",
+   "sala": "SCOTIA 10",
+   "titulo": "we are born good"
+  },
+  "f_8750e532c8": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-15",
+   "hora": "11:00",
+   "sala": "SCOTIA 13",
+   "titulo": "we are born good"
+  },
+  "f_543bb00ff4": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-13",
+   "hora": "15:10",
+   "sala": "SCOTIA 4",
+   "titulo": "we are born good"
+  },
+  "f_aeceb7f876": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-20",
+   "hora": "10:15",
+   "sala": "TLB 4",
+   "titulo": "we are born good"
+  },
+  "f_0e1b46b140": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-13",
+   "hora": "21:00",
+   "sala": "SCOTIA 10",
+   "titulo": "what lies between us"
+  },
+  "f_19605a7c5c": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-19",
+   "hora": "21:30",
+   "sala": "SCOTIA 7",
+   "titulo": "what lies between us"
+  },
+  "f_2a4b38d4bc": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-11",
+   "hora": "17:30",
+   "sala": "SCOTIA 5",
+   "titulo": "what lies between us"
+  },
+  "f_81138c0d5c": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-11",
+   "hora": "20:30",
+   "sala": "TLB 3",
+   "titulo": "what lies between us"
+  },
+  "f_138f4bdf8b": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-13",
+   "hora": "09:05",
+   "sala": "SCOTIA 7",
+   "titulo": "whatcha want"
+  },
+  "f_f4a5ad0e6b": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-13",
+   "hora": "21:30",
+   "sala": "SCOTIA 14",
+   "titulo": "whatcha want"
+  },
+  "f_9af201e8ce": {
+   "sede": "Royal Alexandra Theatre - Toronto",
+   "dia": "2026-09-12",
+   "hora": "17:30",
+   "sala": "RA",
+   "titulo": "whatcha want"
+  },
+  "f_f13128f7f5": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-12",
+   "hora": "09:00",
+   "sala": "SCOTIA 10",
+   "titulo": "where the river begins"
+  },
+  "f_9c8ecac1de": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-14",
+   "hora": "18:10",
+   "sala": "SCOTIA 13",
+   "titulo": "where the river begins"
+  },
+  "f_e71b48cdee": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-16",
+   "hora": "18:30",
+   "sala": "SCOTIA 1",
+   "titulo": "where the river begins"
+  },
+  "f_a1d159db06": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-17",
+   "hora": "09:05",
+   "sala": "SCOTIA 7",
+   "titulo": "where the river begins"
+  },
+  "f_d24193722f": {
+   "sede": "VISA Screening Room at the Princess of Wales Theatre - Toronto",
+   "dia": "2026-09-14",
+   "hora": "15:00",
+   "sala": "VSR",
+   "titulo": "wild horse nine"
+  },
+  "f_6c155f9eeb": {
+   "sede": "VISA Screening Room at the Princess of Wales Theatre - Toronto",
+   "dia": "2026-09-19",
+   "hora": "21:00",
+   "sala": "VSR",
+   "titulo": "wild horse nine"
+  },
+  "f_50254ce301": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-10",
+   "hora": "19:30",
+   "sala": "SCOTIA 12",
+   "titulo": "wild horse nine"
+  },
+  "f_f56c9eb28c": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-15",
+   "hora": "21:30",
+   "sala": "SCOTIA 4",
+   "titulo": "wild horse nine"
+  },
+  "f_dc32a5395b": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-20",
+   "hora": "10:15",
+   "sala": "SCOTIA 2",
+   "titulo": "wild horse nine"
+  },
+  "f_af9e0ab31b": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-14",
+   "hora": "21:00",
+   "sala": "TLB 1",
+   "titulo": "wild wild east"
+  },
+  "f_768dc2881e": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-11",
+   "hora": "12:10",
+   "sala": "SCOTIA 10",
+   "titulo": "wild wild east"
+  },
+  "f_c84a0191fd": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-19",
+   "hora": "16:45",
+   "sala": "SCOTIA 14",
+   "titulo": "wild wild east"
+  },
+  "f_a0dec36204": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-15",
+   "hora": "14:00",
+   "sala": "SCOTIA 13",
+   "titulo": "wild wild east"
+  },
+  "f_a07e613b19": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-10",
+   "hora": "12:00",
+   "sala": "SCOTIA 4",
+   "titulo": "woman unknown"
+  },
+  "f_ddafdf8da4": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-15",
+   "hora": "14:30",
+   "sala": "TLB 1",
+   "titulo": "woman unknown"
+  },
+  "f_32bb3b0479": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-20",
+   "hora": "16:35",
+   "sala": "SCOTIA 11",
+   "titulo": "woman unknown"
+  },
+  "f_5cf15a1358": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-17",
+   "hora": "20:30",
+   "sala": "TLB 3",
+   "titulo": "woman unknown"
+  },
+  "f_032b675850": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-18",
+   "hora": "14:45",
+   "sala": "TLB 2",
+   "titulo": "yaga"
+  },
+  "f_a7f327e082": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-10",
+   "hora": "21:00",
+   "sala": "SCOTIA 3",
+   "titulo": "yaga"
+  },
+  "f_83c6024cdf": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-17",
+   "hora": "21:00",
+   "sala": "TLB 1",
+   "titulo": "yaga"
+  },
+  "f_c719383b6b": {
+   "sede": "VISA Screening Room at the Princess of Wales Theatre - Toronto",
+   "dia": "2026-09-18",
+   "hora": "14:30",
+   "sala": "VSR",
+   "titulo": "your mother your mother your mother"
+  },
+  "f_3797019bf8": {
+   "sede": "John Bassett Theatre - Toronto",
+   "dia": "2026-09-12",
+   "hora": "08:30",
+   "sala": "JBT",
+   "titulo": "your mother your mother your mother"
+  },
+  "f_edd9e726c8": {
+   "sede": "VISA Screening Room at the Princess of Wales Theatre - Toronto",
+   "dia": "2026-09-12",
+   "hora": "21:30",
+   "sala": "VSR",
+   "titulo": "your mother your mother your mother"
+  },
+  "f_787fd4d81d": {
+   "sede": "TIFF Lightbox - Toronto",
+   "dia": "2026-09-13",
+   "hora": "11:15",
+   "sala": "TLB 2",
+   "titulo": "your mother your mother your mother"
+  },
+  "f_4aaa17198f": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-10",
+   "hora": "18:00",
+   "sala": "SCOTIA 7",
+   "titulo": "zjili a story of sisterhood and the burdens of excess"
+  },
+  "f_cc07dbca00": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-14",
+   "hora": "18:30",
+   "sala": "SCOTIA 10",
+   "titulo": "zjili a story of sisterhood and the burdens of excess"
+  },
+  "f_5d50166f08": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-16",
+   "hora": "20:30",
+   "sala": "SCOTIA 8",
+   "titulo": "zjili a story of sisterhood and the burdens of excess"
+  },
+  "f_6e4686c231": {
+   "sede": "Scotiabank Theatre Toronto - Toronto",
+   "dia": "2026-09-18",
+   "hora": "12:25",
+   "sala": "SCOTIA 11",
+   "titulo": "zjili a story of sisterhood and the burdens of excess"
+  }
+ }
+}

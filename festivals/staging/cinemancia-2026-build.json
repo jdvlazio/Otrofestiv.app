@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "PDF oficial de programación + hoja de programas y charlas enviada por el festival",
-  "capturado": "2026-09-13",
+  "capturado": "2026-10-16",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "name": "Cinemancia",
@@ -144,7 +144,7 @@
   "2026-09-12": "Sábado 12 de septiembre"
  },
  "sections": {
-  "⭐ Función inaugural": {
+  "⭐ Función Inaugural": {
    "en": "Opening Film",
    "archetype": "Apertura / Gala",
    "order": 1
@@ -154,17 +154,17 @@
    "archetype": "Especiales / Eventos",
    "order": 2
   },
-  "📼 La sutil materia. Sergio Navarro": {
+  "📼 La Sutil Materia. Sergio Navarro": {
    "en": "The Subtle Matter. Sergio Navarro",
    "archetype": "Retrospectiva / Tributo",
    "order": 3
   },
-  "🏆 Competencia central": {
+  "🏆 Competencia Central": {
    "en": "Main Competition",
    "archetype": "Competencia",
    "order": 4
   },
-  "🌡️ Febril incisión. El cine de Thomas Fürhapter": {
+  "🌡️ Febril Incisión. El Cine de Thomas Fürhapter": {
    "en": "Feverish Incision. The Cinema of Thomas Fürhapter",
    "archetype": "Retrospectiva / Tributo",
    "order": 5
@@ -174,12 +174,12 @@
    "archetype": "Perspectivas / Miradas",
    "order": 6
   },
-  "🇦🇷 Historia(s) del cine: Argentina. Curaduría de José Miccio": {
+  "🇦🇷 Historia(s) del Cine: Argentina. Curaduría de José Miccio": {
    "en": "Histoire(s) of Cinema: Argentina. Curated by José Miccio",
    "archetype": "Muestra / País",
    "order": 7
   },
-  "🎞️ Competencia de cortometrajes": {
+  "🎞️ Competencia de Cortometrajes": {
    "en": "Short Film Competition",
    "archetype": "Competencia",
    "order": 8
@@ -189,7 +189,7 @@
    "archetype": "Perspectivas / Miradas",
    "order": 9
   },
-  "🌷 La primavera llega para los que esperan. El cine de José Luis Torres Leiva": {
+  "🌷 La Primavera Llega para los que Esperan. El Cine de José Luis Torres Leiva": {
    "en": "Spring Comes for Those Who Wait. The Cinema of José Luis Torres Leiva",
    "archetype": "Retrospectiva / Tributo",
    "order": 10
@@ -199,17 +199,17 @@
    "archetype": "Competencia",
    "order": 11
   },
-  "🔺 Programa 1. El espesor de las formas": {
+  "🔺 Programa 1. El Espesor de las Formas": {
    "en": "Programme 1. The Thickness of Forms",
    "archetype": "Cortos / Programas",
    "order": 12
   },
-  "👁️ Programa 2. Teoremas sobre la mirada": {
+  "👁️ Programa 2. Teoremas sobre la Mirada": {
    "en": "Programme 2. Theorems on the Gaze",
    "archetype": "Cortos / Programas",
    "order": 13
   },
-  "🎬 Función de clausura": {
+  "🎬 Función de Clausura": {
    "en": "Closing Film",
    "archetype": "Clausura",
    "order": 14
@@ -340,10 +340,15 @@
   {
    "title": "Todas las canciones del mundo + Lamentos de un balcón",
    "type": "film",
-   "section": "⭐ Función inaugural",
+   "section": "⭐ Función Inaugural",
    "country": "Colombia",
    "flags": "🇨🇴",
    "duration": "88 min",
+   "_ancla": [
+    "Teatro Comfama Alfonso Restrepo Moreno - Medellín",
+    "2026-09-03",
+    "19:00"
+   ],
    "day": "2026-09-03",
    "time": "19:00",
    "day_order": 0,
@@ -383,13 +388,19 @@
      "synopsis": "Lamentos de un balcón es un cortometraje experimental colombiano dirigido por el realizador Hans Chispas. La producción vio la luz en el año 2026 y posee una duración exacta de 4 minutos.",
      "synopsis_lang": "es"
     }
-   ]
+   ],
+   "id": "f_d5c26c36ad"
   },
   {
    "title": "Todos los planos del mundo — Debate: ¿Qué cine colombiano queremos?",
    "type": "event",
    "section": "✨ Proyecciones Especiales",
    "duration": "60 min",
+   "_ancla": [
+    "Centro Colombo Americano - Sede centro - Medellín",
+    "2026-09-04",
+    "14:30"
+   ],
    "day": "2026-09-04",
    "time": "14:30",
    "day_order": 1,
@@ -401,15 +412,21 @@
    "_src": "hoja oficial del festival (conversatorios y charlas)",
    "is_free": true,
    "description": "A partir de la experiencia al filmar Todos los planos del mundo, se toma como ejemplo para pensar el cine nacional, sus tradiciones y su futuro.",
-   "description_lang": "es"
+   "description_lang": "es",
+   "id": "f_3c28463c90"
   },
   {
    "title": "Retrospectiva Sergio Navarro Programa 1",
    "type": "film",
-   "section": "📼 La sutil materia. Sergio Navarro",
+   "section": "📼 La Sutil Materia. Sergio Navarro",
    "country": "Chile",
    "flags": "🇨🇱",
    "duration": "67 min",
+   "_ancla": [
+    "Biblioteca Comfama Bello Centro - Bello",
+    "2026-09-04",
+    "16:00"
+   ],
    "day": "2026-09-04",
    "time": "16:00",
    "day_order": 1,
@@ -453,15 +470,21 @@
      "synopsis": "La vida de un grupo de jóvenes en la población La Pincoya, durante fines de los años ochenta",
      "synopsis_lang": "es"
     }
-   ]
+   ],
+   "id": "f_bf43117ba2"
   },
   {
    "title": "Oublie pas le gruau + Sol menor",
    "type": "film",
-   "section": "🏆 Competencia central",
+   "section": "🏆 Competencia Central",
    "country": "Canadá, Portugal",
    "flags": "🇨🇦🇵🇹",
    "duration": "102 min",
+   "_ancla": [
+    "Centro Colombo Americano - Sede centro - Medellín",
+    "2026-09-04",
+    "16:30"
+   ],
    "day": "2026-09-04",
    "time": "16:30",
    "day_order": 1,
@@ -504,16 +527,22 @@
      "synopsis": "Comienzos de primavera. Una sonata, un tren, una carta. Entre su trabajo como profesor de flauta y los rituales del duelo por la muerte temprana de su mujer, Samuel enfrenta un dilema tras la visita de su hermano.",
      "synopsis_lang": "es"
     }
-   ]
+   ],
+   "id": "f_3e6ac4d5ec"
   },
   {
    "title": "Así llegó la noche",
    "type": "film",
-   "section": "🏆 Competencia central",
+   "section": "🏆 Competencia Central",
    "director": "Ángel Santos",
    "country": "España",
    "flags": "🇪🇸",
    "duration": "122 min",
+   "_ancla": [
+    "Cineprox Las Américas - Medellín",
+    "2026-09-04",
+    "16:30"
+   ],
    "day": "2026-09-04",
    "time": "16:30",
    "day_order": 1,
@@ -529,16 +558,30 @@
    "title_en": "And So the Night Fell",
    "year": 2025,
    "tmdb_id": 1574164,
-   "_programa_original": "Así llegó la noche"
+   "_programa_original": "Así llegó la noche",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   },
+   "id": "f_2bfb3aa38b"
   },
   {
    "title": "Viviendo juntos / Zusammenleben",
    "type": "film",
-   "section": "🌡️ Febril incisión. El cine de Thomas Fürhapter",
+   "section": "🌡️ Febril Incisión. El Cine de Thomas Fürhapter",
    "director": "Thomas Fürhapter",
    "country": "Austria",
    "flags": "🇦🇹",
    "duration": "90 min",
+   "_ancla": [
+    "Centro Colombo Americano - Sede centro - Medellín",
+    "2026-09-04",
+    "17:00"
+   ],
    "day": "2026-09-04",
    "time": "17:00",
    "day_order": 1,
@@ -557,15 +600,21 @@
    "synopsis_en": "A documentary following immigrants attending voluntary integration courses in Vienna.",
    "lbSlug": "zusammenleben",
    "tmdb_id": 1041158,
-   "_programa_original": "Thomas Fülhapter: Febril incisión"
+   "_programa_original": "Thomas Fülhapter: Febril incisión",
+   "id": "f_c167714fe5"
   },
   {
    "title": "La corazonada + Cairo Streets / Las calles de El Cairo",
    "type": "film",
-   "section": "🏆 Competencia central",
+   "section": "🏆 Competencia Central",
    "country": "Chile, Egipto",
    "flags": "🇨🇱🇪🇬",
    "duration": "97 min",
+   "_ancla": [
+    "Teatro Caribe - Itagüí",
+    "2026-09-04",
+    "18:00"
+   ],
    "day": "2026-09-04",
    "time": "18:00",
    "day_order": 1,
@@ -607,7 +656,8 @@
      "synopsis": "Enero de 2007: he vuelto a El Cairo. Por trabajo. Has cambiado de número, Omar. Tengo que encontrarte… Te quiero. Abdellah.",
      "synopsis_lang": "es"
     }
-   ]
+   ],
+   "id": "f_2d980fe35e"
   },
   {
    "title": "La tempestá + No contéis con los dedos + Vampir Cuadecuc",
@@ -616,6 +666,11 @@
    "country": "España",
    "flags": "🇪🇸",
    "duration": "99 min",
+   "_ancla": [
+    "Casa Municipal de la Cultura - Caldas",
+    "2026-09-04",
+    "18:30"
+   ],
    "day": "2026-09-04",
    "time": "18:30",
    "day_order": 1,
@@ -673,15 +728,21 @@
      "synopsis": "Un ensayo atmosférico, que viene a ser una versión alternativa de «El conde Drácula», película dirigida por Jesús Franco en 1970; una narración fantasmal entre la ficción y la realidad.",
      "synopsis_lang": "es"
     }
-   ]
+   ],
+   "id": "f_1c69d1c05d"
   },
   {
-   "title": "Alquimia de la luz el cine de Luciana Decker",
+   "title": "Alquimia de la Luz el Cine de Luciana Decker",
    "type": "film",
    "section": "✨ Proyecciones Especiales",
    "country": "Bolivia, Estados Unidos",
    "flags": "🇧🇴🇺🇸",
    "duration": "82 min",
+   "_ancla": [
+    "Antimateria Libros y Café - Medellín",
+    "2026-09-04",
+    "19:00"
+   ],
    "day": "2026-09-04",
    "time": "19:00",
    "day_order": 1,
@@ -690,8 +751,8 @@
    "poster": "/assets/cinemancia/seccion-alquimia-de-la-luz-luciana-decker.jpg",
    "posterSource": "oficial",
    "_src": "hoja «Otros programas» que envió el festival (orden de proyección)",
-   "is_free": true,
    "is_cortos": true,
+   "is_free": true,
    "film_list": [
     {
      "title": "Larama",
@@ -782,22 +843,29 @@
      "duration": "15 min",
      "title_en": "Shards",
      "synopsis_en": "Fragments of pottery. Gold, silver, jewellery. Contemporary art. Luciana Decker Orozco visits various museums and collections in London, tracing a homegrown past present on another continent. Each piece are windows that open and close, briefly revealing what they hide, a mystery that she encapsulates in her celluloid and magical editing.",
-     "poster": "https://image.tmdb.org/t/p/w500/6561nDr66xGl3MFVSMsVqGEKtn.jpg",
-     "posterSource": "tmdb",
      "lbSlug": "shards-2026",
      "tmdb_id": 1604094,
      "synopsis": "Dos viajes se cruzan de forma anacrónica: el de un médico inglés en Bolivia en los años treinta y el de la cineasta en Londres en 2024. La película aborda los objetos como fragmentos inestables, restos de mundos más amplios, como espejos que solo se dejan entrever momentáneamente. El recorrido pasa por la colección de las Américas del Museo Británico, la colección de joyería y fotografía del V&A y una colección privada de arte latinoamericano en Londres.",
      "synopsis_lang": "es"
     }
-   ]
+   ],
+   "titulos_anteriores": [
+    "Alquimia de la luz el cine de Luciana Decker"
+   ],
+   "id": "f_270a8152b1"
   },
   {
    "title": "Dice que… + Las picapedreras",
    "type": "film",
-   "section": "🇦🇷 Historia(s) del cine: Argentina. Curaduría de José Miccio",
+   "section": "🇦🇷 Historia(s) del Cine: Argentina. Curaduría de José Miccio",
    "country": "Argentina",
    "flags": "🇦🇷",
    "duration": "84 min",
+   "_ancla": [
+    "Casa Museo Otraparte - Envigado",
+    "2026-09-04",
+    "19:00"
+   ],
    "day": "2026-09-04",
    "time": "19:00",
    "day_order": 1,
@@ -841,7 +909,8 @@
      "synopsis": "No hay imágenes de la Huelga Grande de Tandil, llevada a cabo en 1908 por los obreros picapedreros durante casi un año. Las mujeres, todas venidas del otro lado del océano a título de esposas, sabotearon los intentos de los patrones por torcer la rebelión. Las herramientas del trabajo doméstico fueron sus armas para la lucha de clases, en un gesto inédito que reunió sin proponérselo, género y condición obrera. A un siglo de distancia, este documental recupera sus testimonios orales para reconstruir su historia con imágenes de películas ajenas, buscando en los gestos de otras mujeres las imágenes ausentes de las picapedreras.",
      "synopsis_lang": "es"
     }
-   ]
+   ],
+   "id": "f_62daf36038"
   },
   {
    "title": "Macho Dancer",
@@ -851,6 +920,11 @@
    "country": "Filipinas",
    "flags": "🇵🇭",
    "duration": "136 min",
+   "_ancla": [
+    "Centro Colombo Americano - Sede centro - Medellín",
+    "2026-09-04",
+    "19:00"
+   ],
    "day": "2026-09-04",
    "time": "19:00",
    "day_order": 1,
@@ -868,15 +942,21 @@
    "title_en": "Macho Dancer",
    "year": 1988,
    "tmdb_id": 170924,
-   "_programa_original": "Macho Dancer"
+   "_programa_original": "Macho Dancer",
+   "id": "f_9b71da49bb"
   },
   {
-   "title": "Competencia de cortometrajes Programa 1",
+   "title": "Competencia de Cortometrajes Programa 1",
    "type": "film",
-   "section": "🎞️ Competencia de cortometrajes",
+   "section": "🎞️ Competencia de Cortometrajes",
    "country": "Alemania, Argentina, Portugal, Bélgica, Colombia",
    "flags": "🇩🇪🇦🇷🇵🇹🇧🇪🇨🇴",
    "duration": "71 min",
+   "_ancla": [
+    "Centro Colombo Americano - Sede centro - Medellín",
+    "2026-09-04",
+    "19:30"
+   ],
    "day": "2026-09-04",
    "time": "19:30",
    "day_order": 1,
@@ -969,7 +1049,11 @@
      "synopsis": "Una mujer inventa un relato para evocar una amistad perdida. Junto a sus amigos imagina una fábula: la historia de dos pájaros que un día se hicieron humanos, un Ornitólogo y su amigo, El Arquitecto.",
      "synopsis_lang": "es"
     }
-   ]
+   ],
+   "titulos_anteriores": [
+    "Competencia de cortometrajes Programa 1"
+   ],
+   "id": "f_3c8aaf67e4"
   },
   {
    "title": "Buddies",
@@ -979,6 +1063,11 @@
    "country": "Estados Unidos",
    "flags": "🇺🇸",
    "duration": "81 min",
+   "_ancla": [
+    "Centro Colombo Americano - Sede centro - Medellín",
+    "2026-09-05",
+    "14:00"
+   ],
    "day": "2026-09-05",
    "time": "14:00",
    "day_order": 2,
@@ -996,16 +1085,22 @@
    "title_en": "Buddies",
    "year": 1985,
    "tmdb_id": 259433,
-   "_programa_original": "Buddies"
+   "_programa_original": "Buddies",
+   "id": "f_a749aeb6a9"
   },
   {
    "title": "Un techo sin cielo",
    "type": "film",
-   "section": "🏆 Competencia central",
+   "section": "🏆 Competencia Central",
    "director": "Diego Hernández",
    "country": "México",
    "flags": "🇲🇽",
    "duration": "90 min",
+   "_ancla": [
+    "La Capilla del Claustro Comfama - Medellín",
+    "2026-09-05",
+    "15:00"
+   ],
    "day": "2026-09-05",
    "time": "15:00",
    "day_order": 2,
@@ -1022,15 +1117,21 @@
    "title_en": "A Skyless Roof",
    "year": 2025,
    "tmdb_id": 1373119,
-   "_programa_original": "Un techo sin cielo"
+   "_programa_original": "Un techo sin cielo",
+   "id": "f_3630b4a744"
   },
   {
-   "title": "Competencia de cortometrajes Programa 2",
+   "title": "Competencia de Cortometrajes Programa 2",
    "type": "film",
-   "section": "🎞️ Competencia de cortometrajes",
+   "section": "🎞️ Competencia de Cortometrajes",
    "country": "Grecia, Países Bajos, Colombia, Serbia",
    "flags": "🇬🇷🇳🇱🇨🇴🇷🇸",
    "duration": "86 min",
+   "_ancla": [
+    "Centro Colombo Americano - Sede centro - Medellín",
+    "2026-09-05",
+    "16:00"
+   ],
    "day": "2026-09-05",
    "time": "16:00",
    "day_order": 2,
@@ -1121,16 +1222,25 @@
      "synopsis": "Toda carta es un recuerdo, dedicado a películas en donde el archivo familiar aparece como una forma de correspondencia íntima: cartas a hijos, a padres, a abuelos, a quienes estuvieron y también a quienes fuimos. Entre fotografías, archivos domésticos, voces, objetos y gestos heredados, este programa reúne formas de mirar hacia atrás para decir algo en el presente: reconstruir un vínculo, nombrar una ausencia, acompañar una pérdida o afirmar una identidad.",
      "synopsis_lang": "es"
     }
-   ]
+   ],
+   "titulos_anteriores": [
+    "Competencia de cortometrajes Programa 2"
+   ],
+   "id": "f_b192f800f6"
   },
   {
    "title": "El viento sabe que vuelvo a casa",
    "type": "film",
-   "section": "🌷 La primavera llega para los que esperan. El cine de José Luis Torres Leiva",
+   "section": "🌷 La Primavera Llega para los que Esperan. El Cine de José Luis Torres Leiva",
    "director": "José Luis Torres Leiva",
    "country": "Chile",
    "flags": "🇨🇱",
    "duration": "102 min",
+   "_ancla": [
+    "Cineprox Las Américas - Medellín",
+    "2026-09-05",
+    "16:30"
+   ],
    "day": "2026-09-05",
    "time": "16:30",
    "day_order": 2,
@@ -1146,7 +1256,16 @@
    "title_en": "The Winds Know That I'm Coming Back Home",
    "year": 2016,
    "tmdb_id": 381639,
-   "_programa_original": "El viento sabe que vuelvo a casa"
+   "_programa_original": "El viento sabe que vuelvo a casa",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   },
+   "id": "f_46a337a340"
   },
   {
    "title": "Competencia Nuevas Voces Programa 1",
@@ -1155,6 +1274,11 @@
    "country": "Colombia",
    "flags": "🇨🇴",
    "duration": "59 min",
+   "_ancla": [
+    "La Capilla del Claustro Comfama - Medellín",
+    "2026-09-05",
+    "17:00"
+   ],
    "day": "2026-09-05",
    "time": "17:00",
    "day_order": 2,
@@ -1243,7 +1367,8 @@
      "synopsis": "Eloísa, una chica de 20 años, está en dos relaciones al mismo tiempo. Una noche, después de haber estado con ambas chicas, se siente agobiada por estar en esa situación de engaño y en medio de su confusión sale a recorrer las calles de Medellín en bicicleta, donde se dará cuenta de que no quiere reconocerse pero deberá encontrarse consigo misma.",
      "synopsis_lang": "es"
     }
-   ]
+   ],
+   "id": "f_201effc5e1"
   },
   {
    "title": "Retrospectiva Sergio Navarro Programa 2",
@@ -1252,6 +1377,11 @@
    "country": "Chile",
    "flags": "🇨🇱",
    "duration": "87 min",
+   "_ancla": [
+    "Centro Colombo Americano - Sede centro - Medellín",
+    "2026-09-05",
+    "18:00"
+   ],
    "day": "2026-09-05",
    "time": "18:00",
    "day_order": 2,
@@ -1304,15 +1434,21 @@
      "synopsis": "Cortometraje documental dirigido por Sergio Navarro que explora la vida, bohemia y cultura del puerto principal de Chile.",
      "synopsis_lang": "es"
     }
-   ]
+   ],
+   "id": "f_538d9b65ec"
   },
   {
-   "title": "Pere Portabella: legado inmarcesible",
+   "title": "Pere Portabella: Legado Inmarcesible",
    "type": "film",
    "section": "💡 Iluminaciones",
    "country": "España",
    "flags": "🇪🇸",
    "duration": "99 min",
+   "_ancla": [
+    "Teatro Caribe - Itagüí",
+    "2026-09-05",
+    "18:00"
+   ],
    "day": "2026-09-05",
    "time": "18:00",
    "day_order": 2,
@@ -1371,15 +1507,24 @@
      "synopsis": "Un ensayo atmosférico, que viene a ser una versión alternativa de «El conde Drácula», película dirigida por Jesús Franco en 1970; una narración fantasmal entre la ficción y la realidad.",
      "synopsis_lang": "es"
     }
-   ]
+   ],
+   "titulos_anteriores": [
+    "Pere Portabella: legado inmarcesible"
+   ],
+   "id": "f_a95b8b9ba9"
   },
   {
    "title": "¿Qué historia es ésta y cuál es su final? + Obreras saliendo de la fábrica",
    "type": "film",
-   "section": "🌷 La primavera llega para los que esperan. El cine de José Luis Torres Leiva",
+   "section": "🌷 La Primavera Llega para los que Esperan. El Cine de José Luis Torres Leiva",
    "country": "Chile",
    "flags": "🇨🇱",
    "duration": "74 min",
+   "_ancla": [
+    "Casa Municipal de la Cultura - Caldas",
+    "2026-09-05",
+    "18:30"
+   ],
    "day": "2026-09-05",
    "time": "18:30",
    "day_order": 2,
@@ -1423,7 +1568,8 @@
      "synopsis": "Es un día arduo en el trabajo. Un grupo de mujeres termina la jornada, sin embargo, la salida no es solo el fin de la jornada, es el inicio a un viaje, un día de vacaciones.",
      "synopsis_lang": "es"
     }
-   ]
+   ],
+   "id": "f_b463ea7727"
   },
   {
    "title": "El hogar fue sepultado en esa tierra que nunca pudimos encontrar + Decaer",
@@ -1432,6 +1578,11 @@
    "country": "Colombia",
    "flags": "🇨🇴",
    "duration": "101 min",
+   "_ancla": [
+    "Centro Colombo Americano - Sede centro - Medellín",
+    "2026-09-05",
+    "19:30"
+   ],
    "day": "2026-09-05",
    "time": "19:30",
    "day_order": 2,
@@ -1473,15 +1624,21 @@
      "synopsis": "Gracias a los chinos por la pólvora, parece que la hubieran hecho para mí. Su invención sucede como un accidente, pensada inicialmente para espantar los espíritus malos. Esta película inicia en China, luego un evento en Cartagena y se acaba siglos después en Bogotá.",
      "synopsis_lang": "es"
     }
-   ]
+   ],
+   "id": "f_e83c5d7aca"
   },
   {
-   "title": "José Luis Torres Leiva: la primavera llega para los que esperan",
+   "title": "José Luis Torres Leiva: La Primavera Llega para los que Esperan",
    "type": "film",
-   "section": "🌷 La primavera llega para los que esperan. El cine de José Luis Torres Leiva",
+   "section": "🌷 La Primavera Llega para los que Esperan. El Cine de José Luis Torres Leiva",
    "country": "Chile",
    "flags": "🇨🇱",
    "duration": "74 min",
+   "_ancla": [
+    "Centro Colombo Americano - Sede centro - Medellín",
+    "2026-09-06",
+    "14:00"
+   ],
    "day": "2026-09-06",
    "time": "14:00",
    "day_order": 3,
@@ -1527,16 +1684,25 @@
      "synopsis": "Es un día arduo en el trabajo. Un grupo de mujeres termina la jornada, sin embargo, la salida no es solo el fin de la jornada, es el inicio a un viaje, un día de vacaciones.",
      "synopsis_lang": "es"
     }
-   ]
+   ],
+   "titulos_anteriores": [
+    "José Luis Torres Leiva: la primavera llega para los que esperan"
+   ],
+   "id": "f_f2c75364db"
   },
   {
    "title": "Así llegó la noche",
    "type": "film",
-   "section": "🏆 Competencia central",
+   "section": "🏆 Competencia Central",
    "director": "Ángel Santos",
    "country": "España",
    "flags": "🇪🇸",
    "duration": "122 min",
+   "_ancla": [
+    "La Capilla del Claustro Comfama - Medellín",
+    "2026-09-06",
+    "14:00"
+   ],
    "day": "2026-09-06",
    "time": "14:00",
    "day_order": 3,
@@ -1553,15 +1719,21 @@
    "title_en": "And So the Night Fell",
    "year": 2025,
    "tmdb_id": 1574164,
-   "_programa_original": "Así llegó la noche"
+   "_programa_original": "Así llegó la noche",
+   "id": "f_451cf5c2d6"
   },
   {
    "title": "Sobre cosas que me han pasado + Verano",
    "type": "film",
-   "section": "🌷 La primavera llega para los que esperan. El cine de José Luis Torres Leiva",
+   "section": "🌷 La Primavera Llega para los que Esperan. El Cine de José Luis Torres Leiva",
    "country": "Chile",
    "flags": "🇨🇱",
    "duration": "110 min",
+   "_ancla": [
+    "Cine MAMM - Medellín",
+    "2026-09-06",
+    "15:00"
+   ],
    "day": "2026-09-06",
    "time": "15:00",
    "day_order": 3,
@@ -1604,15 +1776,29 @@
      "synopsis": "Durante un caluroso día de verano, cosas pequeñas ocurren a los visitantes y trabajadores de un antiguo balneario en el sur de Chile. Julieta, Francisco, Isa, Rodrigo, Ignacio, Mariana, Muriel, Gabriela, Eliseo, Norma, Alejandra y Claudio experimentarán las largas horas de vacaciones en la naturaleza, durmiendo al sol, aprendiendo a conducir, limpiando la casa, besándose por primera vez, nadando en la noche o simplemente caminando y hablando, mientras que el día irá desvelando pequeños fragmentos de felicidad y descubrimiento.",
      "synopsis_lang": "es"
     }
-   ]
+   ],
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   },
+   "id": "f_8f55ca7698"
   },
   {
    "title": "Beaucoup parler / Mucho hablar + Futuros luminosos",
    "type": "film",
-   "section": "🏆 Competencia central",
+   "section": "🏆 Competencia Central",
    "country": "Francia, Colombia",
    "flags": "🇫🇷🇨🇴",
    "duration": "103 min",
+   "_ancla": [
+    "Centro Colombo Americano - Sede centro - Medellín",
+    "2026-09-06",
+    "16:30"
+   ],
    "day": "2026-09-06",
    "time": "16:30",
    "day_order": 3,
@@ -1655,7 +1841,8 @@
      "synopsis": "En un lugar extraño y oscuro, un grupo de jóvenes de colores proyecta su futuro.",
      "synopsis_lang": "es"
     }
-   ]
+   ],
+   "id": "f_929e289d3b"
   },
   {
    "title": "Los golfos",
@@ -1665,6 +1852,11 @@
    "country": "España",
    "flags": "🇪🇸",
    "duration": "83 min",
+   "_ancla": [
+    "Cineprox Las Américas - Medellín",
+    "2026-09-06",
+    "16:30"
+   ],
    "day": "2026-09-06",
    "time": "16:30",
    "day_order": 3,
@@ -1680,15 +1872,29 @@
    "title_en": "The Delinquents",
    "year": 1960,
    "tmdb_id": 198915,
-   "_programa_original": "Los golfos"
+   "_programa_original": "Los golfos",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   },
+   "id": "f_1ae1f1128d"
   },
   {
-   "title": "Competencia de cortometrajes Programa 3",
+   "title": "Competencia de Cortometrajes Programa 3",
    "type": "film",
-   "section": "🎞️ Competencia de cortometrajes",
+   "section": "🎞️ Competencia de Cortometrajes",
    "country": "Alemania, Brasil, Rusia, Reino Unido, Colombia, España, Portugal",
    "flags": "🇩🇪🇧🇷🇷🇺🇬🇧🇨🇴🇪🇸🇵🇹",
    "duration": "85 min",
+   "_ancla": [
+    "Centro Colombo Americano - Sede centro - Medellín",
+    "2026-09-06",
+    "17:00"
+   ],
    "day": "2026-09-06",
    "time": "17:00",
    "day_order": 3,
@@ -1780,16 +1986,25 @@
      "synopsis": "Desde que tiene memoria, Francisca vive con una aversión inexplicable e incontrolable a los ombligos. Nada le produce más angustia que esa simple parte del cuerpo y las formas del mundo que se le parecen. Cuando la terapia no alcanza para resolver su querida fobia, Francisca recurre a otros métodos: sin ninguna base científica y nada recomendables para quien padezca lo mismo.",
      "synopsis_lang": "es"
     }
-   ]
+   ],
+   "titulos_anteriores": [
+    "Competencia de cortometrajes Programa 3"
+   ],
+   "id": "f_a56cc67bca"
   },
   {
    "title": "Viviendo juntos / Zusammenleben",
    "type": "film",
-   "section": "🌡️ Febril incisión. El cine de Thomas Fürhapter",
+   "section": "🌡️ Febril Incisión. El Cine de Thomas Fürhapter",
    "director": "Thomas Fürhapter",
    "country": "Austria",
    "flags": "🇦🇹",
    "duration": "90 min",
+   "_ancla": [
+    "Teatro Caribe - Itagüí",
+    "2026-09-06",
+    "18:00"
+   ],
    "day": "2026-09-06",
    "time": "18:00",
    "day_order": 3,
@@ -1806,15 +2021,21 @@
    "title_en": "Zusammenleben",
    "year": 2022,
    "tmdb_id": 1041158,
-   "_programa_original": "Viviendo juntos / Zusammenleben"
+   "_programa_original": "Viviendo juntos / Zusammenleben",
+   "id": "f_0b0821559f"
   },
   {
    "title": "Chico eléctrico + Solo qu3r3mos un poco de amor",
    "type": "film",
-   "section": "🇦🇷 Historia(s) del cine: Argentina. Curaduría de José Miccio",
+   "section": "🇦🇷 Historia(s) del Cine: Argentina. Curaduría de José Miccio",
    "country": "Argentina",
    "flags": "🇦🇷",
    "duration": "103 min",
+   "_ancla": [
+    "Centro Colombo Americano - Sede centro - Medellín",
+    "2026-09-06",
+    "19:00"
+   ],
    "day": "2026-09-06",
    "time": "19:00",
    "day_order": 3,
@@ -1856,19 +2077,25 @@
      "posterSource": "tmdb",
      "lbSlug": "solo-qu3r3mos-un-poco-de-amor",
      "tmdb_id": 1388911,
-     "synopsis": "hace tiempo que decidí no hacer mas sinopsis  De mis películas  Quiero que la gente llegue sin saber  que va A mirar.  Tampoco habrá un tráiler – son mentirosos  Y nunca reflejan realmente  El espíritu de la película.  Gracias por comprender.",
+     "synopsis": "Hace tiempo que decidí no hacer mas sinopsis  De mis películas  Quiero que la gente llegue sin saber  que va A mirar.  Tampoco habrá un tráiler – son mentirosos  Y nunca reflejan realmente  El espíritu de la película.  Gracias por comprender.",
      "synopsis_lang": "es"
     }
-   ]
+   ],
+   "id": "f_ee9e4bc042"
   },
   {
    "title": "Cleaning & Cleansing",
    "type": "film",
-   "section": "🌡️ Febril incisión. El cine de Thomas Fürhapter",
+   "section": "🌡️ Febril Incisión. El Cine de Thomas Fürhapter",
    "director": "Thomas Fürhapter",
    "country": "Austria",
    "flags": "🇦🇹",
    "duration": "92 min",
+   "_ancla": [
+    "Cineprox Las Américas - Medellín",
+    "2026-09-07",
+    "16:30"
+   ],
    "day": "2026-09-07",
    "time": "16:30",
    "day_order": 4,
@@ -1884,7 +2111,16 @@
    "title_en": "Cleaning & Cleansing",
    "year": 2024,
    "tmdb_id": 1361665,
-   "_programa_original": "Cleaning & Cleansing"
+   "_programa_original": "Cleaning & Cleansing",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   },
+   "id": "f_46e2f83c10"
   },
   {
    "title": "The Children's Hour",
@@ -1894,6 +2130,11 @@
    "country": "Estados Unidos",
    "flags": "🇺🇸",
    "duration": "108 min",
+   "_ancla": [
+    "ITM - Facultad de Artes y Humanidades - Medellín",
+    "2026-09-07",
+    "17:30"
+   ],
    "day": "2026-09-07",
    "time": "17:30",
    "day_order": 4,
@@ -1911,15 +2152,21 @@
    "title_en": "The Children's Hour",
    "year": 1961,
    "tmdb_id": 20139,
-   "_programa_original": "The Children's Hour"
+   "_programa_original": "The Children's Hour",
+   "id": "f_baf5e74153"
   },
   {
    "title": "Cuando las nubes esconden la sombra + El sueño de Ana",
    "type": "film",
-   "section": "🌷 La primavera llega para los que esperan. El cine de José Luis Torres Leiva",
+   "section": "🌷 La Primavera Llega para los que Esperan. El Cine de José Luis Torres Leiva",
    "country": "Chile",
    "flags": "🇨🇱",
    "duration": "80 min",
+   "_ancla": [
+    "Teatro Caribe - Itagüí",
+    "2026-09-07",
+    "18:00"
+   ],
    "day": "2026-09-07",
    "time": "18:00",
    "day_order": 4,
@@ -1963,7 +2210,8 @@
      "synopsis": "No sabemos muy bien cómo pero, de manera inesperada, ha fallecido la pareja de Ana. Así de intempestivo como el momento de su muerte, Ana tiene un sueño con y sobre su pareja, finalmente, después de tanta ausencia.",
      "synopsis_lang": "es"
     }
-   ]
+   ],
+   "id": "f_f23a4162c5"
   },
   {
    "title": "Competencia Nuevas Voces Programa 2",
@@ -1972,6 +2220,11 @@
    "country": "Colombia",
    "flags": "🇨🇴",
    "duration": "64 min",
+   "_ancla": [
+    "La Capilla del Claustro Comfama - Medellín",
+    "2026-09-07",
+    "19:00"
+   ],
    "day": "2026-09-07",
    "time": "19:00",
    "day_order": 4,
@@ -2051,21 +2304,26 @@
      "flags": "🇨🇴",
      "year": 2026,
      "duration": "22 min",
-     "title_en": "Borrachos escuchando las gotas de lluvia caer",
      "poster": "https://image.tmdb.org/t/p/w500/3R73xUlBIBGXY5q8i9HZYLEidLy.jpg",
      "posterSource": "tmdb",
-     "lbSlug": "borrachos-escuchando-las-gotas-de-lluvia",
+     "lbSlug": "borrachos-mientras-escuchamos-las-gotas-caer",
      "tmdb_id": 1743109,
      "synopsis": "Retrata la historia de León Ramírez e Isabel Velásquez, dos ancianos de casi 90 años que atienden una tienda de barrio para sobrevivir. El cortometraje aborda de forma íntima y crítica temas como la resignación de la vejez, el abandono a la tercera edad, el desarraigo territorial y los impactos colaterales del conflicto armado en Colombia (abusos del Estado, ELN y AUC).",
      "synopsis_lang": "es"
     }
-   ]
+   ],
+   "id": "f_849d7f501a"
   },
   {
    "title": "Michael Koresky y José Miccio: Itinerarios de una tradición",
    "type": "event",
    "section": "✨ Proyecciones Especiales",
    "duration": "60 min",
+   "_ancla": [
+    "ITM - Facultad de Artes y Humanidades - Medellín",
+    "2026-09-07",
+    "19:30"
+   ],
    "day": "2026-09-07",
    "time": "19:30",
    "day_order": 4,
@@ -2077,7 +2335,8 @@
    "_src": "hoja oficial del festival (conversatorios y charlas)",
    "is_free": true,
    "description": "Proyección de la película The Children’s Hour y diálogo sobre cinematografías nacionales, la conformación del canon y la crítica como herramienta que configura nuevas miradas en el legado cinematográfico.",
-   "description_lang": "es"
+   "description_lang": "es",
+   "id": "f_4b1de81241"
   },
   {
    "title": "Une vie manifeste",
@@ -2087,6 +2346,11 @@
    "country": "Francia",
    "flags": "🇫🇷",
    "duration": "86 min",
+   "_ancla": [
+    "Centro Colombo Americano - Sede centro - Medellín",
+    "2026-09-08",
+    "14:00"
+   ],
    "day": "2026-09-08",
    "time": "14:00",
    "day_order": 5,
@@ -2104,15 +2368,21 @@
    "title_en": "A Life, A Manifesto",
    "year": 2026,
    "tmdb_id": 1483908,
-   "_programa_original": "Une vie manifeste"
+   "_programa_original": "Une vie manifeste",
+   "id": "f_d34c708dbd"
   },
   {
-   "title": "Alquimia de la luz el cine de Luciana Decker",
+   "title": "Alquimia de la Luz el Cine de Luciana Decker",
    "type": "film",
    "section": "✨ Proyecciones Especiales",
    "country": "Bolivia, Estados Unidos",
    "flags": "🇧🇴🇺🇸",
    "duration": "82 min",
+   "_ancla": [
+    "La Capilla del Claustro Comfama - Medellín",
+    "2026-09-08",
+    "15:00"
+   ],
    "day": "2026-09-08",
    "time": "15:00",
    "day_order": 5,
@@ -2122,8 +2392,8 @@
    "poster": "/assets/cinemancia/seccion-alquimia-de-la-luz-luciana-decker.jpg",
    "posterSource": "oficial",
    "_src": "hoja «Otros programas» que envió el festival (orden de proyección)",
-   "is_free": true,
    "is_cortos": true,
+   "is_free": true,
    "film_list": [
     {
      "title": "Larama",
@@ -2214,23 +2484,30 @@
      "duration": "15 min",
      "title_en": "Shards",
      "synopsis_en": "Fragments of pottery. Gold, silver, jewellery. Contemporary art. Luciana Decker Orozco visits various museums and collections in London, tracing a homegrown past present on another continent. Each piece are windows that open and close, briefly revealing what they hide, a mystery that she encapsulates in her celluloid and magical editing.",
-     "poster": "https://image.tmdb.org/t/p/w500/6561nDr66xGl3MFVSMsVqGEKtn.jpg",
-     "posterSource": "tmdb",
      "lbSlug": "shards-2026",
      "tmdb_id": 1604094,
      "synopsis": "Dos viajes se cruzan de forma anacrónica: el de un médico inglés en Bolivia en los años treinta y el de la cineasta en Londres en 2024. La película aborda los objetos como fragmentos inestables, restos de mundos más amplios, como espejos que solo se dejan entrever momentáneamente. El recorrido pasa por la colección de las Américas del Museo Británico, la colección de joyería y fotografía del V&A y una colección privada de arte latinoamericano en Londres.",
      "synopsis_lang": "es"
     }
-   ]
+   ],
+   "titulos_anteriores": [
+    "Alquimia de la luz el cine de Luciana Decker"
+   ],
+   "id": "f_6fbff3f95a"
   },
   {
    "title": "Un techo sin cielo",
    "type": "film",
-   "section": "🏆 Competencia central",
+   "section": "🏆 Competencia Central",
    "director": "Diego Hernández",
    "country": "México",
    "flags": "🇲🇽",
    "duration": "90 min",
+   "_ancla": [
+    "Centro Colombo Americano - Sede centro - Medellín",
+    "2026-09-08",
+    "16:00"
+   ],
    "day": "2026-09-08",
    "time": "16:00",
    "day_order": 5,
@@ -2248,15 +2525,21 @@
    "title_en": "A Skyless Roof",
    "year": 2025,
    "tmdb_id": 1373119,
-   "_programa_original": "Un techo sin cielo"
+   "_programa_original": "Un techo sin cielo",
+   "id": "f_0497c201c5"
   },
   {
    "title": "Vendrá la muerte y tendrá tus ojos + Alicia soñó con un faro",
    "type": "film",
-   "section": "🌷 La primavera llega para los que esperan. El cine de José Luis Torres Leiva",
+   "section": "🌷 La Primavera Llega para los que Esperan. El Cine de José Luis Torres Leiva",
    "country": "Chile",
    "flags": "🇨🇱",
    "duration": "94 min",
+   "_ancla": [
+    "Cineprox Las Américas - Medellín",
+    "2026-09-08",
+    "16:30"
+   ],
    "day": "2026-09-08",
    "time": "16:30",
    "day_order": 5,
@@ -2299,15 +2582,29 @@
      "synopsis": "Alicia tiene un nuevo día frente a ella. Es escritora pero le está costando terminar incluso un solo párrafo. Quiere escribir sobre los faros, los barcos, los marineros, sobre el mar, las olas y los precipicios de piedras. Los barcos y sus navegantes usan los faros para llegar a tierra. Ella, en tierra pero aparentemente perdida, tiene que encontrar una mejor forma de enfrentar su destino. Parece que ha perdido su arraigo existencial.",
      "synopsis_lang": "es"
     }
-   ]
+   ],
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   },
+   "id": "f_b521d50acf"
   },
   {
    "title": "Las almas ni los ojos + Una Dança Non Sancta",
    "type": "film",
-   "section": "🏆 Competencia central",
+   "section": "🏆 Competencia Central",
    "country": "Colombia, Portugal",
    "flags": "🇨🇴🇵🇹",
    "duration": "82 min",
+   "_ancla": [
+    "ITM - Facultad de Artes y Humanidades - Medellín",
+    "2026-09-08",
+    "17:30"
+   ],
    "day": "2026-09-08",
    "time": "17:30",
    "day_order": 5,
@@ -2350,7 +2647,8 @@
      "synopsis": "Cada invierno, en Luzón, un pequeño pueblo de Castilla-La Mancha, renace un antiguo ritual. Los vecinos, cubiertos de hollín y adornados con cuernos y campanas, se internan en la oscuridad para transformarse en diablos. Una experiencia hipnótica, un viaje en blanco y negro que se deja llevar por el pulso vibrante de un trance pagano suspendido en el tiempo.",
      "synopsis_lang": "es"
     }
-   ]
+   ],
+   "id": "f_1df34d873f"
   },
   {
    "title": "Dry Leaf",
@@ -2360,6 +2658,11 @@
    "country": "Georgia",
    "flags": "🇬🇪",
    "duration": "186 min",
+   "_ancla": [
+    "Centro Colombo Americano - Sede centro - Medellín",
+    "2026-09-08",
+    "18:00"
+   ],
    "day": "2026-09-08",
    "time": "18:00",
    "day_order": 5,
@@ -2377,7 +2680,8 @@
    "title_en": "Dry Leaf",
    "year": 2025,
    "tmdb_id": 1057888,
-   "_programa_original": "Dry Leaf"
+   "_programa_original": "Dry Leaf",
+   "id": "f_5238ef049b"
   },
   {
    "title": "Competencia Nuevas Voces Programa 1",
@@ -2386,6 +2690,11 @@
    "country": "Colombia",
    "flags": "🇨🇴",
    "duration": "58 min",
+   "_ancla": [
+    "Teatro Caribe - Itagüí",
+    "2026-09-08",
+    "18:00"
+   ],
    "day": "2026-09-08",
    "time": "18:00",
    "day_order": 5,
@@ -2475,16 +2784,22 @@
      "synopsis": "Eloísa, una chica de 20 años, está en dos relaciones al mismo tiempo. Una noche, después de haber estado con ambas chicas, se siente agobiada por estar en esa situación de engaño y en medio de su confusión sale a recorrer las calles de Medellín en bicicleta, donde se dará cuenta de que no quiere reconocerse pero deberá encontrarse consigo misma.",
      "synopsis_lang": "es"
     }
-   ]
+   ],
+   "id": "f_70752e0b29"
   },
   {
    "title": "Auslandsreise / Viaje al extranjero",
    "type": "film",
-   "section": "🏆 Competencia central",
+   "section": "🏆 Competencia Central",
    "director": "Ted Fendt",
    "country": "Alemania",
    "flags": "🇩🇪",
    "duration": "63 min",
+   "_ancla": [
+    "Teatro Otraparte - Envigado",
+    "2026-09-08",
+    "18:00"
+   ],
    "day": "2026-09-08",
    "time": "18:00",
    "day_order": 5,
@@ -2501,7 +2816,8 @@
    "title_en": "Foreign Travel",
    "year": 2026,
    "tmdb_id": 1616882,
-   "_programa_original": "Auslandsreise / Viaje al extranjero"
+   "_programa_original": "Auslandsreise / Viaje al extranjero",
+   "id": "f_9f527ff911"
   },
   {
    "title": "Vive L'Amour",
@@ -2511,6 +2827,11 @@
    "country": "Taiwán",
    "flags": "🇹🇼",
    "duration": "118 min",
+   "_ancla": [
+    "Centro Colombo Americano - Sede centro - Medellín",
+    "2026-09-08",
+    "19:00"
+   ],
    "day": "2026-09-08",
    "time": "19:00",
    "day_order": 5,
@@ -2528,15 +2849,21 @@
    "title_en": "Vive L'Amour",
    "year": 1994,
    "tmdb_id": 11985,
-   "_programa_original": "Vive L'Amour"
+   "_programa_original": "Vive L'Amour",
+   "id": "f_3440bee0bd"
   },
   {
    "title": "Retrospectiva Sergio Navarro Programa 1",
    "type": "film",
-   "section": "📼 La sutil materia. Sergio Navarro",
+   "section": "📼 La Sutil Materia. Sergio Navarro",
    "country": "Chile",
    "flags": "🇨🇱",
    "duration": "67 min",
+   "_ancla": [
+    "Antimateria Libros y Café - Medellín",
+    "2026-09-08",
+    "20:00"
+   ],
    "day": "2026-09-08",
    "time": "20:00",
    "day_order": 5,
@@ -2580,16 +2907,22 @@
      "synopsis": "La vida de un grupo de jóvenes en la población La Pincoya, durante fines de los años ochenta",
      "synopsis_lang": "es"
     }
-   ]
+   ],
+   "id": "f_37e744803b"
   },
   {
    "title": "El viento sabe que vuelvo a casa",
    "type": "film",
-   "section": "🌷 La primavera llega para los que esperan. El cine de José Luis Torres Leiva",
+   "section": "🌷 La Primavera Llega para los que Esperan. El Cine de José Luis Torres Leiva",
    "director": "José Luis Torres Leiva",
    "country": "Chile",
    "flags": "🇨🇱",
    "duration": "102 min",
+   "_ancla": [
+    "Centro Colombo Americano - Sede centro - Medellín",
+    "2026-09-09",
+    "14:00"
+   ],
    "day": "2026-09-09",
    "time": "14:00",
    "day_order": 6,
@@ -2607,7 +2940,8 @@
    "title_en": "The Winds Know That I'm Coming Back Home",
    "year": 2016,
    "tmdb_id": 381639,
-   "_programa_original": "El viento sabe que vuelvo a casa"
+   "_programa_original": "El viento sabe que vuelvo a casa",
+   "id": "f_047824fe82"
   },
   {
    "title": "Carta Blanca Luciana Decker",
@@ -2616,6 +2950,11 @@
    "country": "Bolivia, Cuba, Alemania",
    "flags": "🇧🇴🇨🇺🇩🇪",
    "duration": "55 min",
+   "_ancla": [
+    "Centro Colombo Americano - Sede centro - Medellín",
+    "2026-09-09",
+    "16:00"
+   ],
    "day": "2026-09-09",
    "time": "16:00",
    "day_order": 6,
@@ -2625,8 +2964,8 @@
    "poster": "/assets/cinemancia/seccion-alquimia-de-la-luz-luciana-decker.jpg",
    "posterSource": "oficial",
    "_src": "hoja «Otros programas» que envió el festival (orden de proyección)",
-   "is_free": true,
    "is_cortos": true,
+   "is_free": true,
    "film_list": [
     {
      "title": "Derroteros, Derroteros, Derroteros, Derroteros, Derroteros, Derroteros, Derroteros",
@@ -2673,15 +3012,21 @@
      "synopsis": "Tres generaciones de mujeres aimaras, habitantes del lago Titicaca en Bolivia, trabajan la tierra siguiendo una larga tradición familiar. La textura de manos y pies, así como la del material fílmico, protagonizan esta propuesta, reflejando la mirada personal e íntima de la directora hacia su familia y cultura.",
      "synopsis_lang": "es"
     }
-   ]
+   ],
+   "id": "f_652b38ae14"
   },
   {
    "title": "Las almas ni los ojos + Una Dança Non Sancta",
    "type": "film",
-   "section": "🏆 Competencia central",
+   "section": "🏆 Competencia Central",
    "country": "Colombia, Portugal",
    "flags": "🇨🇴🇵🇹",
    "duration": "82 min",
+   "_ancla": [
+    "Centro Colombo Americano - Sede centro - Medellín",
+    "2026-09-09",
+    "16:30"
+   ],
    "day": "2026-09-09",
    "time": "16:30",
    "day_order": 6,
@@ -2724,7 +3069,8 @@
      "synopsis": "Cada invierno, en Luzón, un pequeño pueblo de Castilla-La Mancha, renace un antiguo ritual. Los vecinos, cubiertos de hollín y adornados con cuernos y campanas, se internan en la oscuridad para transformarse en diablos. Una experiencia hipnótica, un viaje en blanco y negro que se deja llevar por el pulso vibrante de un trance pagano suspendido en el tiempo.",
      "synopsis_lang": "es"
     }
-   ]
+   ],
+   "id": "f_1b07b00409"
   },
   {
    "title": "The Souffleur",
@@ -2734,6 +3080,11 @@
    "country": "Argentina",
    "flags": "🇦🇷",
    "duration": "78 min",
+   "_ancla": [
+    "Cineprox Las Américas - Medellín",
+    "2026-09-09",
+    "16:30"
+   ],
    "day": "2026-09-09",
    "time": "16:30",
    "day_order": 6,
@@ -2749,16 +3100,30 @@
    "title_en": "The Souffleur",
    "year": 2026,
    "tmdb_id": 1418361,
-   "_programa_original": "The Souffleur"
+   "_programa_original": "The Souffleur",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   },
+   "id": "f_ca6dfb2128"
   },
   {
    "title": "La tercera opción / Die dritte Option / The Third Option",
    "type": "film",
-   "section": "🌡️ Febril incisión. El cine de Thomas Fürhapter",
+   "section": "🌡️ Febril Incisión. El Cine de Thomas Fürhapter",
    "director": "Thomas Fürhapter",
    "country": "Austria",
    "flags": "🇦🇹",
    "duration": "78 min",
+   "_ancla": [
+    "La Capilla del Claustro Comfama - Medellín",
+    "2026-09-09",
+    "17:00"
+   ],
    "day": "2026-09-09",
    "time": "17:00",
    "day_order": 6,
@@ -2775,7 +3140,8 @@
    "title_en": "The Third Option",
    "year": 2017,
    "tmdb_id": 476369,
-   "_programa_original": "La tercera opción / Die dritte Option / The Third Option"
+   "_programa_original": "La tercera opción / Die dritte Option / The Third Option",
+   "id": "f_3af00d62a3"
   },
   {
    "title": "Disciplina + Lolita en Honda",
@@ -2784,6 +3150,11 @@
    "country": "Brasil, Colombia",
    "flags": "🇧🇷🇨🇴",
    "duration": "106 min",
+   "_ancla": [
+    "ITM - Facultad de Artes y Humanidades - Medellín",
+    "2026-09-09",
+    "17:30"
+   ],
    "day": "2026-09-09",
    "time": "17:30",
    "day_order": 6,
@@ -2825,15 +3196,21 @@
      "synopsis": "Detrás de los ojos de Lolita hay un velo que ciega sus palabras. Es el recuerdo de una infancia que, aún en la vejez, le oscurece la vista y no le permite escapar. Cuando habla me parece intuir, por el eco de las historias que repite, un mundo espectral de hambre, abandono, el estigma social de una madre soltera, la magia del Río Magdalena y todas las ilusiones y demonios de esa niñez.",
      "synopsis_lang": "es"
     }
-   ]
+   ],
+   "id": "f_849e0c25eb"
   },
   {
    "title": "Beaucoup parler / Mucho hablar + Futuros luminosos",
    "type": "film",
-   "section": "🏆 Competencia central",
+   "section": "🏆 Competencia Central",
    "country": "Francia, Colombia",
    "flags": "🇫🇷🇨🇴",
    "duration": "103 min",
+   "_ancla": [
+    "Teatro Caribe - Itagüí",
+    "2026-09-09",
+    "18:00"
+   ],
    "day": "2026-09-09",
    "time": "18:00",
    "day_order": 6,
@@ -2875,7 +3252,8 @@
      "synopsis": "En un lugar extraño y oscuro, un grupo de jóvenes de colores proyecta su futuro.",
      "synopsis_lang": "es"
     }
-   ]
+   ],
+   "id": "f_dd12dbe077"
   },
   {
    "title": "Para hacer una película solo se necesita un arma",
@@ -2885,6 +3263,11 @@
    "country": "Argentina",
    "flags": "🇦🇷",
    "duration": "146 min",
+   "_ancla": [
+    "Centro Colombo Americano - Sede centro - Medellín",
+    "2026-09-09",
+    "18:30"
+   ],
    "day": "2026-09-09",
    "time": "18:30",
    "day_order": 6,
@@ -2902,15 +3285,21 @@
    "title_en": "All You Need to Make a Movie Is a Gun",
    "year": 2026,
    "tmdb_id": 1196863,
-   "_programa_original": "Para hacer una película solo se necesita un arma"
+   "_programa_original": "Para hacer una película solo se necesita un arma",
+   "id": "f_328ecad929"
   },
   {
    "title": "Procès d'un jeune poète / Juicio a un joven poeta + Solitudes / Soledades + Hold My Hand",
    "type": "film",
-   "section": "🏆 Competencia central",
+   "section": "🏆 Competencia Central",
    "country": "Bélgica, Canadá",
    "flags": "🇧🇪🇨🇦",
    "duration": "115 min",
+   "_ancla": [
+    "Antimateria Libros y Café - Medellín",
+    "2026-09-09",
+    "19:00"
+   ],
    "day": "2026-09-09",
    "time": "19:00",
    "day_order": 6,
@@ -2967,15 +3356,21 @@
      "synopsis": "Durante la pandemia de covid-19, Sophie Sherman filma a sus parientes confinados entre Francia, Bélgica e Inglaterra. Marcada por un nacimiento y una muerte, se detiene en los gestos de cuidado, en el contacto humano y en la gracia y la fragilidad de los momentos compartidos.",
      "synopsis_lang": "es"
     }
-   ]
+   ],
+   "id": "f_94ed5f5eb9"
   },
   {
-   "title": "Competencia de cortometrajes Programa 1",
+   "title": "Competencia de Cortometrajes Programa 1",
    "type": "film",
-   "section": "🎞️ Competencia de cortometrajes",
+   "section": "🎞️ Competencia de Cortometrajes",
    "country": "Alemania, Argentina, Portugal, Bélgica, Colombia",
    "flags": "🇩🇪🇦🇷🇵🇹🇧🇪🇨🇴",
    "duration": "71 min",
+   "_ancla": [
+    "Casa Museo Otraparte - Envigado",
+    "2026-09-09",
+    "19:00"
+   ],
    "day": "2026-09-09",
    "time": "19:00",
    "day_order": 6,
@@ -3067,16 +3462,25 @@
      "synopsis": "Una mujer inventa un relato para evocar una amistad perdida. Junto a sus amigos imagina una fábula: la historia de dos pájaros que un día se hicieron humanos, un Ornitólogo y su amigo, El Arquitecto.",
      "synopsis_lang": "es"
     }
-   ]
+   ],
+   "titulos_anteriores": [
+    "Competencia de cortometrajes Programa 1"
+   ],
+   "id": "f_36a22e396f"
   },
   {
    "title": "Ver y escuchar",
    "type": "film",
-   "section": "🌷 La primavera llega para los que esperan. El cine de José Luis Torres Leiva",
+   "section": "🌷 La Primavera Llega para los que Esperan. El Cine de José Luis Torres Leiva",
    "director": "José Luis Torres Leiva",
    "country": "Chile",
    "flags": "🇨🇱",
    "duration": "90 min",
+   "_ancla": [
+    "La Capilla del Claustro Comfama - Medellín",
+    "2026-09-09",
+    "19:00"
+   ],
    "day": "2026-09-09",
    "time": "19:00",
    "day_order": 6,
@@ -3093,12 +3497,18 @@
    "title_en": "See and Listen",
    "year": 2013,
    "tmdb_id": 407151,
-   "_programa_original": "Ver y escuchar"
+   "_programa_original": "Ver y escuchar",
+   "id": "f_4687d7e85c"
   },
   {
    "title": "Encuentro Internacional de Investigación-Creación en Música y Sonido Cinematográfico",
    "type": "event",
    "section": "✨ Proyecciones Especiales",
+   "_ancla": [
+    "ITM - Facultad de Artes y Humanidades - Medellín",
+    "2026-09-10",
+    "14:00"
+   ],
    "day": "2026-09-10",
    "time": "14:00",
    "day_order": 7,
@@ -3110,15 +3520,21 @@
    "_src": "hoja oficial del festival (conversatorios y charlas)",
    "is_free": true,
    "description": "Ponencias seleccionadas",
-   "description_lang": "es"
+   "description_lang": "es",
+   "id": "f_a2ef52c131"
   },
   {
    "title": "Retrospectiva Sergio Navarro Programa 2",
    "type": "film",
-   "section": "📼 La sutil materia. Sergio Navarro",
+   "section": "📼 La Sutil Materia. Sergio Navarro",
    "country": "Chile",
    "flags": "🇨🇱",
    "duration": "87 min",
+   "_ancla": [
+    "Casa Museo Otraparte - Envigado",
+    "2026-09-10",
+    "16:00"
+   ],
    "day": "2026-09-10",
    "time": "16:00",
    "day_order": 7,
@@ -3170,15 +3586,21 @@
      "synopsis": "Cortometraje documental dirigido por Sergio Navarro que explora la vida, bohemia y cultura del puerto principal de Chile.",
      "synopsis_lang": "es"
     }
-   ]
+   ],
+   "id": "f_eaad542bb9"
   },
   {
-   "title": "Fuera de competencia programa 1",
+   "title": "Fuera de Competencia Programa 1",
    "type": "film",
-   "section": "🔺 Programa 1. El espesor de las formas",
+   "section": "🔺 Programa 1. El Espesor de las Formas",
    "country": "Colombia",
    "flags": "🇨🇴",
    "duration": "88 min",
+   "_ancla": [
+    "Centro Colombo Americano - Sede centro - Medellín",
+    "2026-09-10",
+    "16:00"
+   ],
    "day": "2026-09-10",
    "time": "16:00",
    "day_order": 7,
@@ -3268,16 +3690,25 @@
      "synopsis": "Entre formatos de imagen en movimiento, texturas locales y voces de otro tiempo, Óscar Ruiz Navia piensa la pérdida y el duelo como experiencias de dislocación temporal.",
      "synopsis_lang": "es"
     }
-   ]
+   ],
+   "titulos_anteriores": [
+    "Fuera de competencia programa 1"
+   ],
+   "id": "f_06c13ba054"
   },
   {
    "title": "La tercera opción / Die dritte Option / The Third Option",
    "type": "film",
-   "section": "🌡️ Febril incisión. El cine de Thomas Fürhapter",
+   "section": "🌡️ Febril Incisión. El Cine de Thomas Fürhapter",
    "director": "Thomas Fürhapter",
    "country": "Austria",
    "flags": "🇦🇹",
    "duration": "78 min",
+   "_ancla": [
+    "Cineprox Las Américas - Medellín",
+    "2026-09-10",
+    "16:30"
+   ],
    "day": "2026-09-10",
    "time": "16:30",
    "day_order": 7,
@@ -3293,15 +3724,29 @@
    "title_en": "The Third Option",
    "year": 2017,
    "tmdb_id": 476369,
-   "_programa_original": "La tercera opción / Die dritte Option / The Third Option"
+   "_programa_original": "La tercera opción / Die dritte Option / The Third Option",
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   },
+   "id": "f_84b1616f9c"
   },
   {
    "title": "Sobre cosas que me han pasado + Verano",
    "type": "film",
-   "section": "🌷 La primavera llega para los que esperan. El cine de José Luis Torres Leiva",
+   "section": "🌷 La Primavera Llega para los que Esperan. El Cine de José Luis Torres Leiva",
    "country": "Chile",
    "flags": "🇨🇱",
    "duration": "110 min",
+   "_ancla": [
+    "Centro Colombo Americano - Sede centro - Medellín",
+    "2026-09-10",
+    "17:30"
+   ],
    "day": "2026-09-10",
    "time": "17:30",
    "day_order": 7,
@@ -3346,15 +3791,21 @@
      "synopsis": "Durante un caluroso día de verano, cosas pequeñas ocurren a los visitantes y trabajadores de un antiguo balneario en el sur de Chile. Julieta, Francisco, Isa, Rodrigo, Ignacio, Mariana, Muriel, Gabriela, Eliseo, Norma, Alejandra y Claudio experimentarán las largas horas de vacaciones en la naturaleza, durmiendo al sol, aprendiendo a conducir, limpiando la casa, besándose por primera vez, nadando en la noche o simplemente caminando y hablando, mientras que el día irá desvelando pequeños fragmentos de felicidad y descubrimiento.",
      "synopsis_lang": "es"
     }
-   ]
+   ],
+   "id": "f_7574455a00"
   },
   {
    "title": "Rancho + Homenaje a la obra de Philip Henry Gosse + Spot Fuera de campo 1 + Spot Fuera de campo 2",
    "type": "film",
-   "section": "🇦🇷 Historia(s) del cine: Argentina. Curaduría de José Miccio",
+   "section": "🇦🇷 Historia(s) del Cine: Argentina. Curaduría de José Miccio",
    "country": "Argentina",
    "flags": "🇦🇷",
    "duration": "98 min",
+   "_ancla": [
+    "ITM - Facultad de Artes y Humanidades - Medellín",
+    "2026-09-10",
+    "17:30"
+   ],
    "day": "2026-09-10",
    "time": "17:30",
    "day_order": 7,
@@ -3429,7 +3880,8 @@
      "synopsis": "El proyecto indaga en el concepto de off-screen (\"fuera de campo\"), un recurso fundamental del lenguaje cinematográfico donde lo no mostrado cobra la misma o mayor fuerza que el encuadre visible",
      "synopsis_lang": "es"
     }
-   ]
+   ],
+   "id": "f_478a6f4b7a"
   },
   {
    "title": "Competencia Nuevas Voces Programa 2",
@@ -3438,6 +3890,11 @@
    "country": "Colombia",
    "flags": "🇨🇴",
    "duration": "64 min",
+   "_ancla": [
+    "Teatro Caribe - Itagüí",
+    "2026-09-10",
+    "18:00"
+   ],
    "day": "2026-09-10",
    "time": "18:00",
    "day_order": 7,
@@ -3518,23 +3975,28 @@
      "flags": "🇨🇴",
      "year": 2026,
      "duration": "22 min",
-     "title_en": "Borrachos escuchando las gotas de lluvia caer",
      "poster": "https://image.tmdb.org/t/p/w500/3R73xUlBIBGXY5q8i9HZYLEidLy.jpg",
      "posterSource": "tmdb",
-     "lbSlug": "borrachos-escuchando-las-gotas-de-lluvia",
+     "lbSlug": "borrachos-mientras-escuchamos-las-gotas-caer",
      "tmdb_id": 1743109,
      "synopsis": "Retrata la historia de León Ramírez e Isabel Velásquez, dos ancianos de casi 90 años que atienden una tienda de barrio para sobrevivir. El cortometraje aborda de forma íntima y crítica temas como la resignación de la vejez, el abandono a la tercera edad, el desarraigo territorial y los impactos colaterales del conflicto armado en Colombia (abusos del Estado, ELN y AUC).",
      "synopsis_lang": "es"
     }
-   ]
+   ],
+   "id": "f_5995e8371e"
   },
   {
    "title": "Oublie pas le gruau + Sol menor",
    "type": "film",
-   "section": "🏆 Competencia central",
+   "section": "🏆 Competencia Central",
    "country": "Canadá, Portugal",
    "flags": "🇨🇦🇵🇹",
    "duration": "102 min",
+   "_ancla": [
+    "Teatro Otraparte - Envigado",
+    "2026-09-10",
+    "18:00"
+   ],
    "day": "2026-09-10",
    "time": "18:00",
    "day_order": 7,
@@ -3576,16 +4038,22 @@
      "synopsis": "Comienzos de primavera. Una sonata, un tren, una carta. Entre su trabajo como profesor de flauta y los rituales del duelo por la muerte temprana de su mujer, Samuel enfrenta un dilema tras la visita de su hermano.",
      "synopsis_lang": "es"
     }
-   ]
+   ],
+   "id": "f_f445fc166e"
   },
   {
    "title": "Auslandsreise / Viaje al extranjero",
    "type": "film",
-   "section": "🏆 Competencia central",
+   "section": "🏆 Competencia Central",
    "director": "Ted Fendt",
    "country": "Alemania",
    "flags": "🇩🇪",
    "duration": "63 min",
+   "_ancla": [
+    "Centro Colombo Americano - Sede centro - Medellín",
+    "2026-09-10",
+    "19:00"
+   ],
    "day": "2026-09-10",
    "time": "19:00",
    "day_order": 7,
@@ -3604,7 +4072,8 @@
    "synopsis_en": "A year in Berlin: Leonie wanders through the city and the texts of Anna Maria Ortese. Speaking with friends and translator Sigrid Vagt, she is also looking for the narrative threads of her own life. A film of reading shot in glowing, matter-of-fact 16mm.",
    "lbSlug": "foreign-travel",
    "tmdb_id": 1616882,
-   "_programa_original": "Leonie Rodrian: Contra la falsa intensidad"
+   "_programa_original": "Leonie Rodrian: Contra la falsa intensidad",
+   "id": "f_fef21a8cfa"
   },
   {
    "title": "Ich denke oft an Hawaii / Muchas veces pienso en Hawái",
@@ -3614,6 +4083,11 @@
    "country": "Alemania",
    "flags": "🇩🇪",
    "duration": "82 min",
+   "_ancla": [
+    "La Capilla del Claustro Comfama - Medellín",
+    "2026-09-10",
+    "19:00"
+   ],
    "day": "2026-09-10",
    "time": "19:00",
    "day_order": 7,
@@ -3630,16 +4104,22 @@
    "title_en": "I Often Think of Hawaii",
    "year": 1978,
    "tmdb_id": 512475,
-   "_programa_original": "Ich denke oft an Hawaii / Muchas veces pienso en Hawái"
+   "_programa_original": "Ich denke oft an Hawaii / Muchas veces pienso en Hawái",
+   "id": "f_f2325eaa62"
   },
   {
    "title": "El cielo, la tierra y la lluvia",
    "type": "film",
-   "section": "🌷 La primavera llega para los que esperan. El cine de José Luis Torres Leiva",
+   "section": "🌷 La Primavera Llega para los que Esperan. El Cine de José Luis Torres Leiva",
    "director": "José Luis Torres Leiva",
    "country": "Chile",
    "flags": "🇨🇱",
    "duration": "110 min",
+   "_ancla": [
+    "Terko - Copacabana",
+    "2026-09-10",
+    "19:00"
+   ],
    "day": "2026-09-10",
    "time": "19:00",
    "day_order": 7,
@@ -3656,15 +4136,21 @@
    "title_en": "The Sky, the Earth and the Rain",
    "year": 2008,
    "tmdb_id": 102339,
-   "_programa_original": "El cielo, la tierra y la lluvia"
+   "_programa_original": "El cielo, la tierra y la lluvia",
+   "id": "f_5f9c5841cc"
   },
   {
-   "title": "Fuera de competencia programa 2",
+   "title": "Fuera de Competencia Programa 2",
    "type": "film",
-   "section": "👁️ Programa 2. Teoremas sobre la mirada",
+   "section": "👁️ Programa 2. Teoremas sobre la Mirada",
    "country": "Colombia",
    "flags": "🇨🇴",
    "duration": "43 min",
+   "_ancla": [
+    "Centro Colombo Americano - Sede centro - Medellín",
+    "2026-09-10",
+    "19:30"
+   ],
    "day": "2026-09-10",
    "time": "19:30",
    "day_order": 7,
@@ -3708,16 +4194,25 @@
      "synopsis": "Esta película se proyecta junto a: Parece el mundo (Santiago Quirama)",
      "synopsis_lang": "es"
     }
-   ]
+   ],
+   "titulos_anteriores": [
+    "Fuera de competencia programa 2"
+   ],
+   "id": "f_fc96ced45e"
   },
   {
    "title": "La tercera opción / Die dritte Option / The Third Option",
    "type": "film",
-   "section": "🌡️ Febril incisión. El cine de Thomas Fürhapter",
+   "section": "🌡️ Febril Incisión. El Cine de Thomas Fürhapter",
    "director": "Thomas Fürhapter",
    "country": "Austria",
    "flags": "🇦🇹",
    "duration": "78 min",
+   "_ancla": [
+    "Centro Colombo Americano - Sede centro - Medellín",
+    "2026-09-11",
+    "14:00"
+   ],
    "day": "2026-09-11",
    "time": "14:00",
    "day_order": 8,
@@ -3735,15 +4230,21 @@
    "title_en": "The Third Option",
    "year": 2017,
    "tmdb_id": 476369,
-   "_programa_original": "La tercera opción / Die dritte Option / The Third Option"
+   "_programa_original": "La tercera opción / Die dritte Option / The Third Option",
+   "id": "f_6d60430dbc"
   },
   {
    "title": "Vendrá la muerte y tendrá tus ojos + Alicia soñó con un faro",
    "type": "film",
-   "section": "🌷 La primavera llega para los que esperan. El cine de José Luis Torres Leiva",
+   "section": "🌷 La Primavera Llega para los que Esperan. El Cine de José Luis Torres Leiva",
    "country": "Chile",
    "flags": "🇨🇱",
    "duration": "94 min",
+   "_ancla": [
+    "Biblioteca Comfama Bello Centro - Bello",
+    "2026-09-11",
+    "16:00"
+   ],
    "day": "2026-09-11",
    "time": "16:00",
    "day_order": 8,
@@ -3787,16 +4288,22 @@
      "synopsis": "Alicia tiene un nuevo día frente a ella. Es escritora pero le está costando terminar incluso un solo párrafo. Quiere escribir sobre los faros, los barcos, los marineros, sobre el mar, las olas y los precipicios de piedras. Los barcos y sus navegantes usan los faros para llegar a tierra. Ella, en tierra pero aparentemente perdida, tiene que encontrar una mejor forma de enfrentar su destino. Parece que ha perdido su arraigo existencial.",
      "synopsis_lang": "es"
     }
-   ]
+   ],
+   "id": "f_e1b82bde74"
   },
   {
    "title": "El cielo, la tierra y la lluvia",
    "type": "film",
-   "section": "🌷 La primavera llega para los que esperan. El cine de José Luis Torres Leiva",
+   "section": "🌷 La Primavera Llega para los que Esperan. El Cine de José Luis Torres Leiva",
    "director": "José Luis Torres Leiva",
    "country": "Chile",
    "flags": "🇨🇱",
    "duration": "110 min",
+   "_ancla": [
+    "Centro Colombo Americano - Sede centro - Medellín",
+    "2026-09-11",
+    "16:00"
+   ],
    "day": "2026-09-11",
    "time": "16:00",
    "day_order": 8,
@@ -3814,15 +4321,21 @@
    "title_en": "The Sky, the Earth and the Rain",
    "year": 2008,
    "tmdb_id": 102339,
-   "_programa_original": "El cielo, la tierra y la lluvia"
+   "_programa_original": "El cielo, la tierra y la lluvia",
+   "id": "f_74cfac4444"
   },
   {
    "title": "La corazonada + Cairo Streets / Las calles de El Cairo",
    "type": "film",
-   "section": "🏆 Competencia central",
+   "section": "🏆 Competencia Central",
    "country": "Chile, Egipto",
    "flags": "🇨🇱🇪🇬",
    "duration": "97 min",
+   "_ancla": [
+    "Cineprox Las Américas - Medellín",
+    "2026-09-11",
+    "16:30"
+   ],
    "day": "2026-09-11",
    "time": "16:30",
    "day_order": 8,
@@ -3863,15 +4376,29 @@
      "synopsis": "Enero de 2007: he vuelto a El Cairo. Por trabajo. Has cambiado de número, Omar. Tengo que encontrarte… Te quiero. Abdellah.",
      "synopsis_lang": "es"
     }
-   ]
+   ],
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   },
+   "id": "f_7f485206f0"
   },
   {
-   "title": "Programa de cortometrajes Rajenda Gour",
+   "title": "Programa de Cortometrajes Rajenda Gour",
    "type": "film",
    "section": "✨ Proyecciones Especiales",
    "country": "Singapur",
    "flags": "🇸🇬",
    "duration": "65 min",
+   "_ancla": [
+    "Centro Colombo Americano - Sede centro - Medellín",
+    "2026-09-11",
+    "17:00"
+   ],
    "day": "2026-09-11",
    "time": "17:00",
    "day_order": 8,
@@ -3879,8 +4406,8 @@
    "sala": "Sala 2",
    "has_qa": false,
    "_src": "hoja «Otros programas» que envió el festival (orden de proyección)",
-   "is_free": true,
    "is_cortos": true,
+   "is_free": true,
    "film_list": [
     {
      "title": "Eyes",
@@ -3962,15 +4489,24 @@
      "synopsis": "Imágenes de un Singapur onírico y encendido de los años setenta, montadas sobre una música que lleva al espectador de lo lánguido y exótico a lo abiertamente eufórico, y que encarna las contradicciones de un país al borde de la modernidad. Lejos de la distancia del archivo en blanco y negro, Gour imagina con esperanza el Singapur de entonces y no disimula su enamoramiento juguetón de la ciudad. Restaurado en 4K en 2018 a partir de la copia en 16 mm que conserva el Asian Film Archive.",
      "synopsis_lang": "es"
     }
-   ]
+   ],
+   "titulos_anteriores": [
+    "Programa de cortometrajes Rajenda Gour"
+   ],
+   "id": "f_8dfcb79dd9"
   },
   {
-   "title": "Competencia de cortometrajes Programa 3",
+   "title": "Competencia de Cortometrajes Programa 3",
    "type": "film",
-   "section": "🎞️ Competencia de cortometrajes",
+   "section": "🎞️ Competencia de Cortometrajes",
    "country": "Alemania, Brasil, Rusia, Reino Unido, Colombia, España, Portugal",
    "flags": "🇩🇪🇧🇷🇷🇺🇬🇧🇨🇴🇪🇸🇵🇹",
    "duration": "85 min",
+   "_ancla": [
+    "Teatro Caribe - Itagüí",
+    "2026-09-11",
+    "18:00"
+   ],
    "day": "2026-09-11",
    "time": "18:00",
    "day_order": 8,
@@ -4061,15 +4597,24 @@
      "synopsis": "Desde que tiene memoria, Francisca vive con una aversión inexplicable e incontrolable a los ombligos. Nada le produce más angustia que esa simple parte del cuerpo y las formas del mundo que se le parecen. Cuando la terapia no alcanza para resolver su querida fobia, Francisca recurre a otros métodos: sin ninguna base científica y nada recomendables para quien padezca lo mismo.",
      "synopsis_lang": "es"
     }
-   ]
+   ],
+   "titulos_anteriores": [
+    "Competencia de cortometrajes Programa 3"
+   ],
+   "id": "f_de8db12e71"
   },
   {
    "title": "Procès d'un jeune poète / Juicio a un joven poeta + Solitudes / Soledades + Hold My Hand",
    "type": "film",
-   "section": "🏆 Competencia central",
+   "section": "🏆 Competencia Central",
    "country": "Bélgica, Canadá",
    "flags": "🇧🇪🇨🇦",
    "duration": "115 min",
+   "_ancla": [
+    "Cine MAMM - Medellín",
+    "2026-09-11",
+    "18:30"
+   ],
    "day": "2026-09-11",
    "time": "18:30",
    "day_order": 8,
@@ -4125,16 +4670,30 @@
      "synopsis": "Durante la pandemia de covid-19, Sophie Sherman filma a sus parientes confinados entre Francia, Bélgica e Inglaterra. Marcada por un nacimiento y una muerte, se detiene en los gestos de cuidado, en el contacto humano y en la gracia y la fragilidad de los momentos compartidos.",
      "synopsis_lang": "es"
     }
-   ]
+   ],
+   "is_free": false,
+   "_procedencia": {
+    "entrada": {
+     "tipo": "regla",
+     "regla": "mixed: sin dato de entrada = boleta",
+     "marca": "supuesto"
+    }
+   },
+   "id": "f_95cd2351a3"
   },
   {
    "title": "Cleaning & Cleansing",
    "type": "film",
-   "section": "🌡️ Febril incisión. El cine de Thomas Fürhapter",
+   "section": "🌡️ Febril Incisión. El Cine de Thomas Fürhapter",
    "director": "Thomas Fürhapter",
    "country": "Austria",
    "flags": "🇦🇹",
    "duration": "92 min",
+   "_ancla": [
+    "Centro Colombo Americano - Sede centro - Medellín",
+    "2026-09-11",
+    "19:00"
+   ],
    "day": "2026-09-11",
    "time": "19:00",
    "day_order": 8,
@@ -4153,15 +4712,21 @@
    "synopsis_en": "CLEANING AND CLEANSING tells of the glamor and misery of hygiene. Without resorting to interviews or explanatory off-camera commentary, it stages its subject in a way that can be experienced by the senses. In doing so, it follows an analytical approach that thematizes hygiene as an order of the „healthy“ and the „harmful“, which is reflected in institutions, architectures and production processes and regulates human behavior. The filmthus raises a topic that has been central to our society since the beginning of modernity: the optimization and improvement of life, which – if pursued with too much commitment and carelessly – can quickly turn against itself.",
    "lbSlug": "cleaning-cleansing",
    "tmdb_id": 1361665,
-   "_programa_original": "Ciencia, cuerpos, trabajos y las políticas de la pureza"
+   "_programa_original": "Ciencia, cuerpos, trabajos y las políticas de la pureza",
+   "id": "f_5e9e0fe574"
   },
   {
-   "title": "Competencia de cortometrajes Programa 2",
+   "title": "Competencia de Cortometrajes Programa 2",
    "type": "film",
-   "section": "🎞️ Competencia de cortometrajes",
+   "section": "🎞️ Competencia de Cortometrajes",
    "country": "Grecia, Países Bajos, Colombia, Serbia",
    "flags": "🇬🇷🇳🇱🇨🇴🇷🇸",
    "duration": "86 min",
+   "_ancla": [
+    "Terko - Copacabana",
+    "2026-09-11",
+    "19:00"
+   ],
    "day": "2026-09-11",
    "time": "19:00",
    "day_order": 8,
@@ -4251,7 +4816,11 @@
      "synopsis": "Toda carta es un recuerdo, dedicado a películas en donde el archivo familiar aparece como una forma de correspondencia íntima: cartas a hijos, a padres, a abuelos, a quienes estuvieron y también a quienes fuimos. Entre fotografías, archivos domésticos, voces, objetos y gestos heredados, este programa reúne formas de mirar hacia atrás para decir algo en el presente: reconstruir un vínculo, nombrar una ausencia, acompañar una pérdida o afirmar una identidad.",
      "synopsis_lang": "es"
     }
-   ]
+   ],
+   "titulos_anteriores": [
+    "Competencia de cortometrajes Programa 2"
+   ],
+   "id": "f_3d261d0953"
   },
   {
    "title": "A Árvore do Conhecimento / El árbol del conocimiento",
@@ -4261,6 +4830,11 @@
    "country": "Portugal",
    "flags": "🇵🇹",
    "duration": "100 min",
+   "_ancla": [
+    "Centro Colombo Americano - Sede centro - Medellín",
+    "2026-09-12",
+    "14:30"
+   ],
    "day": "2026-09-12",
    "time": "14:30",
    "day_order": 9,
@@ -4278,7 +4852,8 @@
    "title_en": "The Tree of Knowledge",
    "year": 2025,
    "tmdb_id": 1523438,
-   "_programa_original": "A Árvore do Conhecimento / El árbol del conocimiento"
+   "_programa_original": "A Árvore do Conhecimento / El árbol del conocimiento",
+   "id": "f_1155cbeee2"
   },
   {
    "title": "Was soll'n wir denn machen ohne den Tod / ¿Qué haremos sin la muerte?",
@@ -4288,6 +4863,11 @@
    "country": "Alemania",
    "flags": "🇩🇪",
    "duration": "101 min",
+   "_ancla": [
+    "Centro Colombo Americano - Sede centro - Medellín",
+    "2026-09-12",
+    "17:00"
+   ],
    "day": "2026-09-12",
    "time": "17:00",
    "day_order": 9,
@@ -4305,16 +4885,22 @@
    "title_en": "What Shall We Do Without Death",
    "year": 1980,
    "tmdb_id": 544319,
-   "_programa_original": "Was soll'n wir denn machen ohne den Tod / ¿Qué haremos sin la muerte?"
+   "_programa_original": "Was soll'n wir denn machen ohne den Tod / ¿Qué haremos sin la muerte?",
+   "id": "f_74c5ba9ff8"
   },
   {
    "title": "Iluminaciones",
    "type": "film",
-   "section": "🎬 Función de clausura",
+   "section": "🎬 Función de Clausura",
    "director": "Pablo Llorca",
    "country": "España",
    "flags": "🇪🇸",
    "duration": "61 min",
+   "_ancla": [
+    "Centro Colombo Americano - Sede centro - Medellín",
+    "2026-09-12",
+    "19:00"
+   ],
    "day": "2026-09-12",
    "time": "19:00",
    "day_order": 9,
@@ -4331,13 +4917,14 @@
    "title_en": "Iluminaciones",
    "year": 2025,
    "tmdb_id": 1478518,
-   "_programa_original": "Iluminaciones"
+   "_programa_original": "Iluminaciones",
+   "id": "f_12626e6754"
   }
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-13T13:40:00",
-  "plan_sha": "1acf3548b90c0acc",
+  "fecha": "2026-10-16T11:02:41",
+  "plan_sha": "1bfed46a7c769cf0",
   "paso": 3,
   "cmd": "python3 pipeline/ensamblar.py cinemancia-2026"
  }

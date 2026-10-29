@@ -6,7 +6,7 @@
 
 import { FILM_CATEGORY_LABEL, FILM_CATEGORY_ORDER, SECTION_ORDER_LIST } from '../config.js';
 import { ICONS, _secLabelFull, parseProgramTitle, SEC_GRATIS, SEC_QA, SEC_FILTRO_EMOJI } from '../view/components.js';
-import { emptyState, getFilmPoster, vcfg, venueMatches, isCitySel, festivalCities, SEDE_SEP, dayLabelLong, secMatches } from '../view/helpers.js';
+import { emptyState, getFilmPoster, vcfg, venueMatches, isCitySel, festivalCities, filterCity, SEDE_SEP, dayLabelLong, secMatches } from '../view/helpers.js';
 import { storage } from '../storage/storage.js';
 import { _renderProgramaContent, lugarClose, lugarOutside, render } from '../view/programa.js';
 import { t } from '../i18n/i18n.js';
@@ -261,7 +261,7 @@ function _searchIndex(){
     filas.forEach(s=>{
       const v=s.venue||f.venue;
       if(v){
-        const c=vcfg(v), short=c.short||v, city=c.city||'';
+        const c=vcfg(v), short=c.short||v, city=filterCity(v);
         const k=city+SEDE_SEP+short;
         (lugares[k]=lugares[k]||{key:'sede:'+k,label:short,city,n:0}).n++;
       }
@@ -385,7 +385,7 @@ export function searchQuery(){
         ?`data-action="searchOpenCorto" data-title="${_q(f.title)}" data-country="${_q(f.country||'')}" data-dur="${_q(_dur)}" data-section="${_q(f.section||'')}" data-flags="${_q(f.flags||'🌍')}"`
         :`data-action="searchOpenFilm" data-title="${_q(f.title)}"`;
       return '<div class="search-item" '+_siAttrs+'>'
-        +(poster?'<img class="search-item-poster" src="'+poster+'" onerror="this.remove()" alt="" loading="lazy">'
+        +(poster?'<img class="search-item-poster" src="'+poster+'" data-err="quitar" alt="" loading="lazy">'
                 :'<div class="search-item-poster"></div>')
         +'<div class="search-item-info">'
         +'<div class="search-item-title">'+displayTitle
@@ -445,7 +445,7 @@ export function lugarOpen(){
   function _acum(venue,film){
     const cfg=vcfg(venue);const short=cfg.short||venue;
     if(!short) return;
-    const city=cfg.city||'';
+    const city=filterCity(venue);
     const k=city+SEDE_SEP+short;
     if(!venueMap[k]) venueMap[k]={key:k,label:short,city,films:[]};
     venueMap[k].films.push(film);

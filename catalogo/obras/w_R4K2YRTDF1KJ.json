@@ -1,0 +1,43 @@
+{
+ "id": "w_R4K2YRTDF1KJ",
+ "titulo_original": "La salsa vive",
+ "anio": 2025,
+ "paises": [
+  "CO",
+  "US"
+ ],
+ "directores": [
+  "Juan Carvajal"
+ ],
+ "aliases": [
+  {
+   "titulo": "Salsa Lives",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "La película es un recorrido cinematográfico por las raíces de la salsa en Nueva York, su cuna, y su transformación en Cali, Colombia, donde este género musical se vive como una pasión colectiva que define la identidad de la ciudad. Con la participación de leyendas como Rubén Blades, Henry Fiol, Alfredo Linares, Ángel Lebrón, Grupo Niche, y otros grandes exponentes, 'La Salsa Vive' muestra cómo este ritmo ha transformado vidas, convirtiéndose en refugio e inspiración para generaciones enteras.",
+  "en": "La Salsa Vive is a vibrant cinematic exploration of Afro-Cuban music's history, tracing its roots from New York's lively streets to Cali, Colombia, now the global salsa capital."
+ },
+ "generos": [
+  "Documental"
+ ],
+ "afiche": {
+  "archivo": "/assets/girardota-2026/la-salsa-vive.jpg",
+  "veredicto": "oficial"
+ },
+ "xref": {
+  "tmdb": 1422107,
+  "letterboxd": "salsa-lives"
+ },
+ "versiones": [
+  {
+   "etiqueta": "101 min",
+   "duracion_min": 101
+  }
+ ],
+ "presentaciones": [
+  "girardota-2026"
+ ]
+}

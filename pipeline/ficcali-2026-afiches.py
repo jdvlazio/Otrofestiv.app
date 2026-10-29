@@ -24,6 +24,8 @@ import sys
 import unicodedata
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.join(REPO, 'pipeline'))
+from lib import json_wp  # noqa: E402
 DIR = f'{REPO}/fuentes/ficcali-2026'
 MEDIA = f'{DIR}/media-posters.json'
 CAT = f'{REPO}/festivals/staging/ficcali-2026-catalogo.json'
@@ -62,7 +64,7 @@ def bajar_media():
                             f'&page={n}&after=2026-07-01T00:00:00&_fields=id,source_url,media_details,date,slug'],
                            capture_output=True, text=True).stdout
         try:
-            d = json.loads(r, strict=False)
+            d = json_wp(r)
         except ValueError:
             break
         if not isinstance(d, list) or not d:
@@ -94,7 +96,9 @@ def main():
         if not os.path.exists(dest) or os.path.getsize(dest) < 5000:
             subprocess.run(['curl', '-sL', '--max-time', '40', m['source_url'], '-o', dest])
         if os.path.exists(dest) and os.path.getsize(dest) > 5000:
-            afiches[o['titulo']] = {'archivo': os.path.relpath(dest, REPO),
+            # con comillas rectas, como el programa: con la tipográfica la obra
+            # quedaba dos veces en el enriquecido y el afiche pisaba a la ficha
+            afiches[o['titulo'].replace('’', "'").replace('‘', "'")] = {'archivo': os.path.relpath(dest, REPO),
                                     'fuente': f'ficcali.com, biblioteca de medios: {m["source_url"]} ({w}×{h})'}
         else:
             sin.append(f'{o["titulo"]} (no se pudo bajar)')

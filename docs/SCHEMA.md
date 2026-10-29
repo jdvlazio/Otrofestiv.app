@@ -24,13 +24,44 @@ Documento normativo. Toda discrepancia entre este archivo y el código es un bug
   "ticketing_model": "string — 'paid' | 'mixed' (obligatorio si ticket_url existe)",
   "// registration_url": "va en la FUNCIÓN, no en la raíz — ver § Ticketing",
   "sharedSlotIsOneScreening": "bool — opt-in: dos obras en el mismo día+hora+sala son UNA función",
+  "avisos": "[ ... ] — opcional: cancelaciones / reprogramaciones (ver § Avisos y palmarés)",
+  "palmares": "[ ... ] — opcional: premiadas del festival (ver § Avisos y palmarés)",
   "films": [ ... ]
 }
 ```
 
+### Avisos y palmarés (19 oct 2026)
+
+Viven en el JSON para corregirse con `publicar-datos.py` en minutos, no con un
+deploy. Misma forma que tenían en `src/config.js`, **sin** `festival` / `fest`
+(el loader lo pone). Si el JSON trae el campo —aunque sea `[]`— manda el JSON;
+si no lo trae, la app usa todavía `NOTICES` / `PALMARES` de `src/config.js`
+(transición). Guardián: `[avisos-palmares-forma]` en `validate-festivals.js`.
+
+**`type: "info"`** (25 oct 2026) — aviso informativo del festival entero: `id`
+(clave de descarte) + `note` (+ `note_en`), **sin** `title` / `date` / `cities`.
+El banner de Programa lo muestra con «AVISO DEL FESTIVAL» y el texto según idioma,
+siempre (con cualquier filtro de lugar) hasta que se descarte. No sella funciones:
+ni la card ni la Ficha lo heredan. Primer uso: Festival de Cine Funza (ejemplo abajo).
+
+```json
+"avisos": [
+  { "type": "cancelled", "title": "Obra", "date": "2026-10-20", "note": "…", "note_en": "…", "url": "…" },
+  { "type": "rescheduled", "title": "Obra", "date": "2026-10-20", "newDay": "MAR 21", "newTime": "18:00", "newVenue": "…" },
+  { "type": "cancelled", "cities": ["Cali"], "id": "fest-motivo", "note": "…" },
+  { "type": "info", "id": "funza-competencia",
+    "note": "Las obras en competencia se suman cuando el festival las anuncie.",
+    "note_en": "Competition titles will be added once the festival announces them." }
+],
+"palmares": [
+  { "categoria": "Verbatim del festival", "nivel": "ganadora", "premio": "opcional",
+    "titulo": "Como lo nombra el festival", "autoria": "…", "obra": "título EXACTO en films, o null" }
+]
+```
+
 ### El reloj también lee este JSON (22 sep 2026)
 
-La app de Apple Watch (`native/watch/CatalogStore.swift`) baja `festivals/<id>.json`
+La app de Apple Watch (`native/ios/OtrofestivWatch Watch App/CatalogStore.swift`) baja `festivals/<id>.json`
 de producción para el Programa (Hoy y Mañana) y para fijar la **zona horaria**
 del festival. Es el SEGUNDO consumidor del esquema: un cambio de nombre o forma
 en estos campos rompe el reloj en silencio (decodifica solo lo que usa, el resto
@@ -281,22 +312,22 @@ está pasando de verdad — no lo que alguien recordaba al escribirlo.
 
 | campo | tipo | formato / valores | lo usan | notas |
 |---|---|---|---|---|
-| `title` | string | — | 29 fest | Nombre oficial, verbatim del festival. La palabra la pone el festival. |
-| `section` | string | — | 29 fest | Nombre VERBATIM del festival + nuestro emoji. Arquetipo de los 9 canónicos. |
-| `day` | string | `^\d{4}-\d{2}-\d{2}$` | 29 fest | Clave exacta de dayKeys, en ISO. Los 5 festivales legacy usan «MAR 21» y quedan exentos. |
-| `time` | string | `^\d{2}:\d{2}$` | 29 fest | 24h con dos dígitos. Nunca 12h con AM/PM. |
-| `venue` | string | ` - .+$` | 29 fest | «Nombre de la Sede - Ciudad», SIEMPRE. La sala va en `sala`, nunca en el nombre. |
-| `day_order` | number | — | 29 fest | **derivado de `day`** — no viene de ninguna fuente Orden del día en la grilla. |
+| `title` | string | — | 39 fest | Nombre oficial, verbatim del festival. La palabra la pone el festival. |
+| `section` | string | — | 39 fest | Nombre VERBATIM del festival + nuestro emoji. Arquetipo de los 9 canónicos. |
+| `day` | string | `^\d{4}-\d{2}-\d{2}$` | 39 fest | Clave exacta de dayKeys, en ISO. Los 5 festivales legacy usan «MAR 21» y quedan exentos. |
+| `time` | string | `^\d{2}:\d{2}$` | 39 fest | 24h con dos dígitos. Nunca 12h con AM/PM. |
+| `venue` | string | ` - .+$` | 39 fest | «Nombre de la Sede - Ciudad», SIEMPRE. La sala va en `sala`, nunca en el nombre. |
+| `day_order` | number | — | 39 fest | **derivado de `day`** — no viene de ninguna fuente Orden del día en la grilla. |
 
 ### Cómo se entra — la casilla que no se deja en blanco
 
 | campo | tipo | formato / valores | lo usan | notas |
 |---|---|---|---|---|
-| `ticket_url` | string | `^https://` | 7 fest | URL de compra de ESTA función. En snake_case: `ticketUrl` no lo lee nadie. |
-| `is_free` | boolean | — | 20 fest | Entrada libre. Booleano de verdad — la app compara con === true. |
-| `requires_registration` | boolean | — | 10 fest |  |
-| `registration_url` | string | `^https://` | 6 fest |  |
-| `by_invitation` | boolean | — | 2 fest | Función CERRADA al público, solo con invitación. Anula el badge de precio y el plan no la propone (screeningPlannable); se agenda a mano. Por función: la gala sí, las demás funciones de la obra no. |
+| `ticket_url` | string | `^https://` | 12 fest | URL de compra de ESTA función. En snake_case: `ticketUrl` no lo lee nadie. |
+| `is_free` | boolean | — | 31 fest | Entrada libre. Booleano de verdad — la app compara con === true. |
+| `requires_registration` | boolean | — | 16 fest |  |
+| `registration_url` | string | `^https://` | 10 fest |  |
+| `by_invitation` | boolean | — | 3 fest | Función CERRADA al público, solo con invitación. Anula el badge de precio y el plan no la propone (screeningPlannable); se agenda a mano. Por función: la gala sí, las demás funciones de la obra no. |
 | `online` | boolean | — | 1 fest | Función EN LÍNEA (una charla por Twitch): su sede no tiene pin a propósito y el planificador no le suma traslado (travelMins da 0 sin coordenadas); choca solo por horario. Por función. |
 | `stream_url` | string | — | 1 fest | El link del canal de una función en línea (https). Lo abre el aviso de la ficha. |
 | `stream_platform` | string | — | 1 fest | Dónde se transmite una función en línea («Twitch»): completa el aviso «Se transmite en línea por …». |
@@ -306,53 +337,59 @@ está pasando de verdad — no lo que alguien recordaba al escribirlo.
 
 | campo | tipo | formato / valores | lo usan | notas |
 |---|---|---|---|---|
-| `title_en` | string | — | 20 fest |  |
+| `film_start` | string | `^\d{2}:\d{2}$` | 1 fest | Hora en que EMPIEZA LA OBRA cuando la función abre antes (BHFF: Parapeto abre 19:00, la obra 19:30). Solo informa: el aviso «Inicio» de la ficha; la card y el plan siguen con `time`. Por función. |
+| `title_en` | string | — | 29 fest |  |
 | `title_es` | string | — | — | Título en español, SOLO cuando el festival titula en otro idioma y el afiche que mostramos dice el español. El buscador lo mira además de `title`: la única pista que el usuario tiene delante es el afiche. No es una traducción de cortesía; `title` sigue siendo el nombre oficial. |
-| `director` | string | — | 28 fest |  |
-| `year` | number | — | 27 fest | Entero. Dos festivales legacy lo tienen como string. |
-| `country` | string | — | 29 fest |  |
-| `flags` | string | — | 29 fest | **derivado de `country`** — no viene de ninguna fuente Emoji de bandera. NUNCA viene de la fuente: se calcula del país. |
-| `duration` | string | `^\d+ min$` | 29 fest | «90 min». No es un número, y la doc dijo lo contrario durante meses. |
+| `director` | string | — | 36 fest |  |
+| `year` | number | — | 35 fest | Entero. Dos festivales legacy lo tienen como string. |
+| `country` | string | — | 39 fest |  |
+| `flags` | string | — | 39 fest | **derivado de `country`** — no viene de ninguna fuente Emoji de bandera. NUNCA viene de la fuente: se calcula del país. |
+| `duration` | string | `^\d+ min$` | 39 fest | «90 min». No es un número, y la doc dijo lo contrario durante meses. |
 | `language` | string | — | 9 fest |  |
-| `genre` | string | — | 25 fest |  |
-| `synopsis` | string | — | 28 fest | SIEMPRE en español. La traducción no es opcional. |
-| `synopsis_en` | string | — | 26 fest |  |
+| `genre` | string | — | 33 fest |  |
+| `synopsis` | string | — | 36 fest | SIEMPRE en español. La traducción no es opcional. |
+| `synopsis_en` | string | — | 34 fest |  |
 | `synopsis_es` | string | — | 2 fest |  |
-| `synopsis_lang` | string | `es` · `en` · `pt` | 28 fest | no lo lee la vista: guardianes No lo lee la vista: lo consumen los guardianes ([paridad-derivados]). |
-| `description` | string | — | 25 fest | Texto de un PROGRAMA o una ACTIVIDAD (no de una obra: eso es synopsis). En español; lib.separar_descripcion es la regla. |
+| `synopsis_lang` | string | `es` · `en` · `pt` | 36 fest | no lo lee la vista: guardianes No lo lee la vista: lo consumen los guardianes ([paridad-derivados]). |
+| `description` | string | — | 35 fest | Texto de un PROGRAMA o una ACTIVIDAD (no de una obra: eso es synopsis). En español; lib.separar_descripcion es la regla. |
 | `description_en` | string | — | 5 fest |  |
 | `description_es` | string | — | 1 fest |  |
-| `description_lang` | string | `es` · `en` · `pt` | 25 fest |  |
-| `rating` | string | — | 5 fest |  |
-| `premiere` | string | — | 10 fest | Texto libre del festival («World Premiere», «Estreno argentino»). |
-| `type` | string | `film` · `event` · `short` | 26 fest |  |
-| `event_kind` | string | — | 19 fest | Palabra del festival, verbatim (charla, taller, masterclass). Enum en validate-festivals. |
-| `is_cortos` | boolean | — | 27 fest | exige `film_list` Programa curado: exige film_list no vacío. |
-| `film_list` | array | — | 26 fest |  |
-| `is_programa` | boolean | — | 3 fest |  |
-| `is_recurring` | boolean | — | 4 fest |  |
+| `description_lang` | string | `es` · `en` · `pt` | 35 fest |  |
+| `rating` | string | — | 7 fest |  |
+| `premiere` | string | — | 17 fest | Texto libre del festival («World Premiere», «Estreno argentino»). |
+| `type` | string | `film` · `event` · `short` | 36 fest |  |
+| `event_kind` | string | — | 29 fest | Palabra del festival, verbatim (charla, taller, masterclass). Enum en validate-festivals. |
+| `is_cortos` | boolean | — | 36 fest | exige `film_list` Programa curado: exige film_list no vacío. |
+| `film_list` | array | — | 35 fest |  |
+| `is_programa` | boolean | — | 4 fest |  |
+| `is_recurring` | boolean | — | 7 fest |  |
 | `is_awards_screening` | boolean | — | 1 fest |  |
-| `info` | boolean | — | 6 fest | Drop-in sin hora fija: NO entra al plan ni a conflictos. |
+| `info` | boolean | — | 13 fest | Drop-in sin hora fija: NO entra al plan ni a conflictos. |
+| `hasta` | string | — | 4 fest | Último día (YYYY-MM-DD) de una `info` abierta varios días: UNA función, la app la abre día por día (#1229). |
 | `unscheduled` | boolean | — | 1 fest | En catálogo sin jornada. Única exención de day/time/venue. |
 | `sessions` | array | — | 1 fest |  |
-| `has_qa` | boolean | — | 23 fest | Afecta conflictos vía durationForTravel. |
-| `qa_type` | string | `team` · `guests` | 13 fest | La variante del Q&A. Se pinta traducida; NO se escribe la frase en el dato. |
+| `has_qa` | boolean | — | 33 fest | Afecta conflictos vía durationForTravel. |
+| `titulos_anteriores` | array | — | 20 fest | Títulos con que el festival publicó ANTES esta obra. Lo llena Onboarding cuando un festival renombra (p. ej. «Tránsito» → «Tránsitos»). La app mueve en silencio lo que el usuario guardó bajo el viejo (Interés, Plan, vista, prioridad, calificación, retrasos) — domain/titulos.js. Obra partida en dos: el viejo va en las dos y gana la primera del catálogo. Nunca un título que siga vigente. |
+| `qa_type` | string | `team` · `guests` | 17 fest | La variante del Q&A. Se pinta traducida; NO se escribe la frase en el dato. |
 | `competencia` | string | — | 1 fest |  |
 | `premium` | boolean | — | 1 fest |  |
-| `sala` | string | — | 16 fest | Sala DENTRO de la sede. Que no aparezca en el nombre de la sede ([sala-en-sede]). |
+| `sala` | string | — | 25 fest | Sala DENTRO de la sede. Que no aparezca en el nombre de la sede ([sala-en-sede]). |
 | `date` | string | `^\d{4}-\d{2}-\d{2}$` | 6 fest | Requerido si hay screenings[]. Tres festivales legacy lo tienen como número de día. |
 | `screenings` | array | — | 3 fest |  |
-| `poster` | string | — | 29 fest | URL, /assets/… o path TMDB. poster:"" está PROHIBIDO. Reglas: docs/POSTERS.md |
-| `posterSource` | string | `tmdb` · `custom` · `editorial` · `letterboxd` · `oficial` | 29 fest | **derivado de `poster`** — no viene de ninguna fuente |
+| `poster` | string | — | 37 fest | URL, /assets/… o path TMDB. poster:"" está PROHIBIDO. Reglas: docs/POSTERS.md |
+| `posterSource` | string | `tmdb` · `custom` · `editorial` · `letterboxd` · `oficial` | 37 fest | **derivado de `poster`** — no viene de ninguna fuente |
 | `posterPosition` | string | `center` · `top` · `bottom` | 1 fest |  |
-| `lbSlug` | string | — | 23 fest | Slug de Letterboxd. En camelCase: `lb_slug` no lo lee nadie. |
+| `lbSlug` | string | — | 35 fest | Slug de Letterboxd. En camelCase: `lb_slug` no lo lee nadie. |
 | `slug` | string | — | 1 fest |  |
 | `filmCategory` | string | — | 1 fest |  |
-| `tmdb_id` | number | — | 19 fest | no lo lee la vista: pipeline No lo lee la vista: lo usa el pipeline para reenriquecer sin volver a buscar. |
-| `_src` | — | — | 21 fest | De dónde salió el dato. Toda obra nueva lo lleva. |
+| `tmdb_id` | number | — | 34 fest | no lo lee la vista: pipeline No lo lee la vista: lo usa el pipeline para reenriquecer sin volver a buscar. |
+| `_src` | — | — | 37 fest | De dónde salió el dato. Toda obra nueva lo lleva. |
 | `format` | string | — | 1 fest | Formato de proyección (DCP, 35mm). Lo publica el festival; TIFF es el único que lo trae. |
 | `section_tags` | array | — | 1 fest | no lo lee la vista: ninguno todavía Sellos del festival (TIFF). Decisión de Juan: etiqueta, no sección. Falta cablearlo en la vista. |
 | `accessibility` | array | — | 1 fest | no lo lee la vista: ninguno todavía Accesibilidad de la función (p. ej. «oc» = subtítulos descriptivos). Sin superficie que la muestre. |
+| `work_id` | string | — | 36 fest | La obra del catálogo único (catalogo/obras/<work_id>.json, docs/CATALOGO-OBRAS.md). Lo ponen publicar.py y catalogo_construir.py --escribir, nunca a mano. Va en cada obra, también dentro de film_list; las actividades no llevan. [presentacion-con-obra] frena el push si falta o apunta a una obra que no existe. |
+| `id` | string | `^f_[0-9a-f]{10}$` | 39 fest | Identificador ESTABLE de esta función (schema.org ScreeningEvent.identifier; docs/FUNCION.md §11). Lo asigna ensamblar UNA vez (funcion.asignar_ids, registro <fid>-funciones-ids.json) y nunca se recalcula: sobrevive a cambios de hora, sala, sede y título. Único dentro del festival. [id-funcion-estable] frena si un id publicado desaparece o cambia de función. La app no lo lee todavía (18 oct 2026). |
+| `ids_anteriores` | array | — | 1 fest | Ids de funciones que esta REEMPLAZA (partida, fusionada o casada por decisión registrada; docs/FUNCION.md §11.4). Hermano de titulos_anteriores: la app mueve lo guardado bajo el id viejo. |
 
 ### Excepciones congeladas (festivales archivados)
 
@@ -384,6 +421,8 @@ fiestas, conciertos, performances, presentaciones virtuales.
 - Regla de clasificación al montar: *¿el asistente "reserva" ese horario?* Sí →
   `duration` (planificable). No (entra/sale cuando quiere) → `info: true`.
 - `info` se propaga a los screenings exploded vía el `Object.assign` del loader.
+- **Y `validate.py` vigila el olvido** con `[abierta-sin-info]`: en los festivales vivos, un evento cuyo título o descripción dice exposición, expo, instalación, exhibición o muestra fotográfica y no lleva `info` es un error (MAPISTAS, FILCMAR, 9 oct 2026: cuatro funciones ancladas en el plan). Un falso positivo se declara en `_ABIERTA_NO` con su porqué.
+- **Varios días = UNA función con `hasta`** (21 oct 2026). Una exposición abierta del 22 oct al 13 nov va como UNA función `info` con `day` (el primer día), `time`/`duration` (la ventana diaria) y `hasta` (`"2026-11-13"`, el último día, aunque caiga después del festival). La app la abre en una copia por día del festival (`expandVentanas`, domain/film.js): una tarjeta en «sin hora fija» de cada día, y en la ficha y el listado UNA fila «22 oct – 13 nov · 8:00 a 17:00». Nunca N funciones con `is_recurring`: eso es un taller de sesiones. `[abierta-varios-dias]` frena una `info` con el mismo título en 2+ días sin `hasta`, y un evento sin `info` de 6 h o más a la misma hora en 3+ días; un taller largo de verdad se declara en `_VARIOS_NO` con su porqué.
 - **Lo vigila `validate-festivals.js`** en las dos direcciones: `[info-solo-evento]` exige que `info` vaya sobre `type: 'event'`, y la advertencia de *duración anómala* (techo de 400 min) **no le aplica**, porque su duración es la VENTANA en que está abierta y no un compromiso del asistente. Una duración de cero sigue siendo dato roto.
 
 ### Bloques de cortos: `is_cortos` + `film_list` (+ `unscheduled`)
@@ -392,12 +431,21 @@ Un **bloque de cortos** agrupa varios cortometrajes que se proyectan juntos:
 
 ```jsonc
 { "title": "Cortometraje Documental", "section": "📽️ Cortometrajes",
-  "type": "event", "is_cortos": true, "flags": "<derivado>",
+  "type": "film", "is_cortos": true, "flags": "<derivado>",
   "film_list": [ { "title": "Madres de nacimiento", "director": "...",
                    "country": "Colombia/Francia", "genre": "Documental",
                    "duration": "18 min" }, ... ] }
 ```
 
+- **Un bloque de cortos NO es `type: "event"`** (va como `film` o sin `type`):
+  con `event` sus cortos dejaban de calificarse y de contar como obras vistas
+  (FICMontañas y Tribeca, corregidos en #1058).
+- **Evento que proyecta obras** (apertura con película, cineconcierto, Award
+  Screening ya anunciado): sigue siendo `type: "event"` y las obras van en su
+  `film_list`, verbatim. Regla «lo visto y lo asistido» (Juan, 9 oct 2026):
+  cuenta 1 actividad + sus obras (`obrasDe`, `domain/film.js`). Nunca se
+  infiere por el título. También aplica a una actividad abierta (`info: true`)
+  que expone obras.
 - `is_cortos: true` **requiere** `film_list` no vacío (guard bloqueante en
   `validate-festivals.js` — un bloque vacío invisibiliza cortos que sí están).
 - Cada item del `film_list` es **buscable como card propia** (`_searchAll` los

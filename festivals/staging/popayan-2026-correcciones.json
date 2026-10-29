@@ -38,6 +38,55 @@
    "genero": "Drama",
    "_fuente": "https://www.themoviedb.org/movie/1786242",
    "_por_que": "Ficha CREADA por nosotros el 1 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas: título, filmografía del director, Letterboxd): Wiston Fernández Madriñan, 2024, 15 min, Colombia, Drama (por la sinopsis), sinopsis del festival; el afiche oficial (600x800) recortado por los costados a 2:3 para que TMDB lo acepte. Letterboxd: la-volqueta. El género se declara aquí porque la API de TMDB tardaba en servir la ficha recién editada; es el mismo que cargamos en TMDB."
+  },
+  "El patio de la infancia": {
+   "tmdb": 1791680,
+   "_fuente": "https://www.themoviedb.org/movie/1791680",
+   "_por_que": "Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Cecilia Traslaviña (2214637, Bogotá, directora y animadora), 2025, 14 min, CO; sinopsis del festival y afiche original de la fuente del afiche declarada en popayan-2026-afiches.json, recortado 1% para la proporción de TMDB."
+  }
+ },
+ "sin_afiche": {
+  "El sincretismo del agua": {
+   "_por_que": "sin ficha en TMDB (por título ni por la filmografía del director) ni en nuestros otros festivales; cinecorto.co no tiene ficha de la obra (búsqueda en su API, 9 oct)."
+  },
+  "Tabanoka Otjenayá": {
+   "_por_que": "sin ficha en TMDB (por título ni por la filmografía del director) ni en nuestros otros festivales; cinecorto.co no tiene ficha de la obra (búsqueda en su API, 9 oct)."
+  },
+  "Ley de Origen y Espiritualidad": {
+   "_por_que": "sin ficha en TMDB (por título ni por la filmografía del director) ni en nuestros otros festivales; cinecorto.co no tiene ficha de la obra (búsqueda en su API, 9 oct)."
+  },
+  "Historias al margen: Martha y Eduardo": {
+   "_por_que": "sin ficha en TMDB (por título ni por la filmografía del director) ni en nuestros otros festivales; cinecorto.co no tiene ficha de la obra (búsqueda en su API, 9 oct)."
+  },
+  "El Segundo": {
+   "_por_que": "sin ficha en TMDB (por título ni por la filmografía del director) ni en nuestros otros festivales; cinecorto.co no tiene ficha de la obra (búsqueda en su API, 9 oct)."
+  },
+  "El odio del padre": {
+   "_por_que": "sin ficha en TMDB (por título ni por la filmografía del director) ni en nuestros otros festivales; cinecorto.co no tiene ficha de la obra (búsqueda en su API, 9 oct)."
+  },
+  "Dientes de yuca": {
+   "_por_que": "sin ficha en TMDB (por título ni por la filmografía del director) ni en nuestros otros festivales; cinecorto.co no tiene ficha de la obra (búsqueda en su API, 9 oct)."
+  },
+  "Juan PorOcho": {
+   "_por_que": "sin ficha en TMDB (por título ni por la filmografía del director) ni en nuestros otros festivales; cinecorto.co no tiene ficha de la obra (búsqueda en su API, 9 oct)."
+  },
+  "Diente X Diente": {
+   "_por_que": "sin ficha en TMDB (por título ni por la filmografía del director) ni en nuestros otros festivales; cinecorto.co no tiene ficha de la obra (búsqueda en su API, 9 oct)."
+  },
+  "Luis Antonio": {
+   "_por_que": "sin ficha en TMDB (por título ni por la filmografía del director) ni en nuestros otros festivales; cinecorto.co no tiene ficha de la obra (búsqueda en su API, 9 oct)."
+  },
+  "Chicanoa": {
+   "_por_que": "sin ficha en TMDB (por título ni por la filmografía del director) ni en nuestros otros festivales; su ficha en cinecorto.co/chicanoa/ no trae afiche propio (las imágenes de la página son de otras obras, 9 oct)."
+  },
+  "Legado": {
+   "_por_que": "sin ficha en TMDB (por título ni por la filmografía del director) ni en nuestros otros festivales; su ficha en cinecorto.co/legado/ no trae afiche propio (las imágenes de la página son de otras obras, 9 oct)."
+  },
+  "Murmullos": {
+   "_por_que": "sin ficha en TMDB (por título ni por la filmografía del director) ni en nuestros otros festivales; su ficha en cinecorto.co/murmullos/ no trae afiche propio (las imágenes de la página son de otras obras, 9 oct)."
+  },
+  "Las piedras del río": {
+   "_por_que": "sin ficha en TMDB; la única imagen es la tarjeta de sección de SiembraFest, que no es afiche. Juan decidió publicarla sin afiche (8 oct)."
   }
  }
 }

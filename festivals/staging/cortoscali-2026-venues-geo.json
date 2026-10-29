@@ -1,0 +1,19 @@
+{
+ "_provenance": {
+  "fuente": "Nominatim con verificación: caja de ciudad + token distintivo + clase de lugar (una sede fija nunca es un barrio). _prec:manual intocable.",
+  "capturado": "2026-10-27"
+ },
+ "Universidad Autónoma de Occidente - Cali": {
+  "n": 0,
+  "lat": 3.3537129,
+  "lng": -76.5227039,
+  "_prec": "manual",
+  "_match": "Google Maps «Auditorio Xepia» (Universidad Autónoma de Occidente, Cali; 4,5★ con 4 reseñas)",
+  "_nota": "Exacto: el pin es el Auditorio Xepia, la sala de toda la programación, dentro del campus de la UAO."
+ },
+ "Auditorio Xepia UAO": {
+  "n": 15,
+  "_prec": "sin verificar",
+  "_todo": "buscar a mano (sedes-html.py genera la página)"
+ }
+}

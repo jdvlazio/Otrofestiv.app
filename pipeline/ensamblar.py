@@ -23,6 +23,8 @@ QUÉ ES DE CADA QUIEN:
 import json, os, re, sys, collections
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import caja  # noqa: E402
+import funcion  # noqa: E402
 import lib
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -104,6 +106,17 @@ def _min(v):
     return int(m.group(1)) if m else None
 
 
+
+def ficha_de_la_funcion(e, it):
+    """La entrada del enriquecido que le corresponde a la FUNCIÓN `e`, o None.
+    Un programa de 2+ obras no toma una ficha de TMDB (20 oct 2026, BHFF): una
+    ficha con tmdb_id/lbSlug describe UNA película, y pegada al programa le daba
+    el lbSlug, el año, el género y la descripción de una sola de sus obras. Lo
+    declarado a mano para el programa (su descripción, sin tmdb_id) sí pasa."""
+    if it and len(e.get('film_list') or []) >= 2 and (it.get('tmdb_id') or it.get('lbSlug')):
+        return None
+    return it
+
 def _enriquece(dst, it):
     """Copia del enriquecido SOLO lo que la fuente del festival no trae. La
     fuente manda: su duración es la que programó, su título es el que publicó."""
@@ -138,7 +151,9 @@ def _enriquece(dst, it):
                           # genérico se caía entero. Itagüí publicó 15 películas
                           # colombianas sin bandera teniendo TMDB el país de cada
                           # una, y ninguna con año (23 sep).
-                          ('country', ('pais', 'country', 'pais_tmdb')),
+                          ('country', ('pais', 'country', 'pais_tmdb', 'pais_heredado')),
+                          # el director que la fuente no da y el catálogo sí (herencia.py)
+                          ('director', ('director_heredado',)),
                           ('year', ('anio', 'year', 'anio_tmdb'))):
         if dst.get(campo):
             continue
@@ -199,6 +214,156 @@ def mayuscula_inicial(s):
     return s
 
 
+CONSERVABLES = ('director', 'year', 'duration', 'country', 'synopsis', 'synopsis_lang', 'genre', 'title_en')
+
+
+def _conservar_publicado(fid, films, sin=()):
+    """Lo que ya publicamos de una obra no se pierde porque la fuente lo calle.
+
+    Ficcali, 8 oct 2026: la edición del sitio borró año, duración, dirección o
+    sinopsis de 8 fichas (Para vivir, Niñxs, Mi vecino Totoro…) y el build nuevo
+    las publicaba vacías. Que una página deje de decir algo no hace falso el
+    dato que publicó antes. Para cada obra del build (también dentro de los
+    programas) que YA está en festivals/<fid>.json, un campo conservable vacío
+    toma el valor publicado y queda anotado en `_conservado` (clave interna: el
+    publicador no la escribe). Solo rellena huecos: lo que la fuente SÍ dice,
+    manda. Una obra que cambia de título no se reconoce (titulos_anteriores).
+
+    LO QUE SE QUITA A PROPÓSITO (14 oct 2026). Conservar todo hacía imposible
+    sacar un dato MALO ya publicado: Cinemancia 2026 publicó para «Borrachos
+    mientras escuchamos las gotas caer» un title_en viejo y en español; se
+    corrigió la fuente y esto lo volvía a poner. Lo que se retira se declara en
+    festivals/staging/<id>-quitar.json — {"quitar": [{"titulo", "campo",
+    "por_que"}]} — y no se conserva. Se ABORTA si la obra no está en el build o
+    el campo no es conservable: una declaración que no apunta a nada no quita
+    nada y nadie se entera."""
+    quitar = lib.quitados(fid)
+    _tit = {o.get('title') for f in films for o in [f] + (f.get('film_list') or [])}
+    for _t, _c in quitar:
+        if _t not in _tit:
+            sys.exit(f'✗ {fid}-quitar.json: «{_t}» no está en el build')
+        if _c not in CONSERVABLES and _c not in lib.RETIRABLES:
+            sys.exit(f'✗ {fid}-quitar.json: «{_c}» no es un campo conservable')
+    # UN AFICHE QUE NO LO ES SE RETIRA DEL BUILD (15 oct 2026): `poster` no se
+    # conserva de lo publicado —llega fresco de su fuente—, así que declararlo
+    # acá no bastaba: Trizas volvía a salir con el fotograma de TMDB en cada
+    # montaje. Lo declarado se saca del build, con su procedencia
+    for f in films:
+        for o in [f] + (f.get('film_list') or []):
+            for _c in lib.RETIRABLES.get(next((c for t, c in quitar if t == o.get('title') and c in lib.RETIRABLES), ''), ()):
+                o.pop(_c, None)
+    p = f'{REPO}/festivals/{fid}.json'
+    if not os.path.exists(p):
+        return
+    pub = {}
+    for f in json.load(open(p, encoding='utf-8')).get('films') or []:
+        for o in [f] + (f.get('film_list') or []):
+            if o.get('title') and o.get('title') not in pub:
+                pub[o['title']] = o
+    n = 0
+    for f in films:
+        for o in [f] + (f.get('film_list') or []):
+            v = pub.get(o.get('title'))
+            if not v:
+                continue
+            kept = [k for k in CONSERVABLES if k not in sin and not o.get(k) and v.get(k)
+                    and (o.get('title'), k) not in quitar]
+            for k in kept:
+                o[k] = v[k]
+            if kept:
+                o['_conservado'] = kept
+                n += 1
+    if n:
+        print(f'  conservado de lo publicado: {n} obra(s) con campos que la fuente dejó de decir')
+
+
+def _duraciones_corregidas(fid, films):
+    """La duración que el festival publicó mal, corregida con su fuente.
+
+    PROTOCOLO §5·bis: «toda excepción (duración corregida…) en tabla explícita
+    con fecha, nunca editando el crudo». El 14 oct 2026 Juan aprobó corregir 8
+    duraciones de festivales en curso que no cuadraban con la fuente primaria
+    (Cannes, San Sebastián, TMDB, los datos oficiales del propio festival):
+    Villa del Cine programó «Llueve sobre Babel» a 120 min y dura 113; FICPA
+    publicó «Sierra» a 102 y sus datos oficiales dicen 89. Con la duración mal,
+    la app calcula mal los choques. Va en festivals/staging/<id>-duraciones.json
+    — {"duraciones": [{"titulo", "min", "fuente", "por_que"}]} — y se aplica
+    DESPUÉS de conservar lo publicado, para que gane. Se ABORTA si la obra no
+    está en el build: una corrección que no apunta a nada no corrige nada."""
+    p = f'{REPO}/festivals/staging/{fid}-duraciones.json'
+    if not os.path.exists(p):
+        return
+    tabla = json.load(open(p, encoding='utf-8')).get('duraciones') or []
+    n = 0
+    for x in tabla:
+        if not (x.get('fuente') and x.get('por_que') and int(x.get('min') or 0) > 0):
+            sys.exit(f'✗ {fid}-duraciones.json: «{x.get("titulo")}» sin fuente, porqué o minutos')
+        hit = 0
+        for f in films:
+            obras = f.get('film_list') or []
+            for o in [f] + obras:
+                if o.get('title') == x['titulo']:
+                    o['duration'] = f"{int(x['min'])} min"
+                    o['_duracion_corregida'] = x['fuente']
+                    hit += 1
+            # una función de UNA obra: su franja es la obra
+            if len(obras) == 1 and obras[0].get('title') == x['titulo']:
+                f['duration'] = f"{int(x['min'])} min"
+        if not hit:
+            sys.exit(f'✗ {fid}-duraciones.json: «{x["titulo"]}» no está en el build')
+        n += hit
+    print(f'  duraciones corregidas ({os.path.basename(p)}): {n}')
+
+
+def _titulos_anteriores(fid, films):
+    """`titulos_anteriores` desde festivals/staging/<id>-titulos-anteriores.json.
+
+    Cuando una obra cambia de título, lo que el usuario guardó queda bajo el
+    viejo; la app lo mueve si la obra declara cómo se llamaba (domain/titulos.js).
+    El sidecar es {"renombres": [{"antes", "ahora", "por_que"}]}. Se ABORTA si el
+    título nuevo no existe en el build (el renombre apuntaría a nada) o si el
+    viejo sigue vigente (la app no lo migra, y con razón). Una obra partida en
+    dos lleva el viejo en las dos: dos entradas con el mismo «antes»."""
+    p = f'{REPO}/festivals/staging/{fid}-titulos-anteriores.json'
+    if not os.path.exists(p):
+        return
+    renombres = json.load(open(p, encoding='utf-8')).get('renombres') or []
+    obras = [o for f in films for o in [f] + (f.get('film_list') or [])]
+    vigentes = {o.get('title') for o in obras}
+    # UN RENOMBRE VIEJO HACIA UN PROGRAMA QUE AHORA SALE EN TÍTULO ([caja-titulo],
+    # 15 oct 2026): «Cali, ciudad abierta (cortos)» → «…– Prog. Cortos» apunta a un
+    # nombre que el build ya publica como «Cali, Ciudad Abierta – Prog. Cortos».
+    # Se encadena al nombre en Título: lo guardado bajo el más viejo también llega
+    renombres = [dict(r, ahora=caja.titulo(r['ahora']))
+                 if r['ahora'] not in vigentes and caja.titulo(r['ahora']) in vigentes else r
+                 for r in renombres]
+    # UNA CADENA (20 oct 2026, MUBI): «A» → «B» y después «B» → «C». El renombre
+    # viejo no se borra ([renombre-no-se-borra]); se sigue la cadena hasta el
+    # título vigente, así lo guardado bajo «A» también llega a «C»
+    _sig = {r['antes']: r['ahora'] for r in renombres}
+    def _final(t, vistos=()):
+        return _final(_sig[t], vistos + (t,)) if t not in vigentes and t in _sig and t not in vistos else t
+    renombres = [dict(r, ahora=_final(r['ahora'])) for r in renombres]
+    # IDA Y VUELTA (20 oct 2026): «X» → «Y» y después «Y» → «X». La cadena de «X»
+    # vuelve a «X», que está vigente: ese renombre ya no mueve nada. Se descarta
+    # (y se dice) en vez de frenar con «el viejo sigue vigente» — si frenara, el
+    # festival quedaría trabado, porque [renombre-no-se-borra] no deja quitarlo.
+    _vuelta = [r for r in renombres if r['antes'] == r['ahora']]
+    for r in _vuelta:
+        print(f"  · renombre de ida y vuelta, sin efecto: «{r['antes']}»")
+    renombres = [r for r in renombres if r['antes'] != r['ahora']]
+    malos = [f"«{r['antes']}» → «{r['ahora']}»: " + ('el nuevo no está en el build' if r['ahora'] not in vigentes
+                                                    else 'el viejo sigue vigente')
+             for r in renombres if r['ahora'] not in vigentes or r['antes'] in vigentes]
+    if malos:
+        sys.exit(f'✗ {os.path.basename(p)}:\n  · ' + '\n  · '.join(malos))
+    for o in obras:
+        viejos = [r['antes'] for r in renombres if r['ahora'] == o.get('title')]
+        if viejos:
+            o['titulos_anteriores'] = sorted(set(viejos))
+    print(f'  títulos anteriores: {len(renombres)} renombres declarados')
+
+
 def ensamblar(fid, escribir=True):
     plan = _plan(fid)
     cfg = plan['festival']
@@ -214,7 +379,12 @@ def ensamblar(fid, escribir=True):
         for it in _lista:
             k = lib.norm(it.get('titulo') or it.get('title') or '')
             if k:
-                enr[k] = it
+                # DOS ENTRADAS DE LA MISMA OBRA (17 oct 2026): «La Tinaja» con su
+                # ficha y «La tinaja» con solo el afiche declarado. La segunda
+                # PISABA a la primera y la obra perdía sinopsis, género, año y
+                # duración ([dato-que-no-viaja], Ficcali). Se combinan: la primera
+                # manda en lo que tiene, la otra completa lo que falta
+                enr[k] = {**it, **enr[k]} if k in enr else it
 
 
     geo = {}
@@ -266,11 +436,19 @@ def ensamblar(fid, escribir=True):
             'language': f.get('idioma') or None,
             'genre': f.get('genero') or None,
             'rating': f.get('clasificacion') or None,
+            # EL ANCLA de la función (docs/FUNCION.md §3.1): el venue PUBLICADO (con
+            # su ciudad: «Cinema Local» existe en Bogotá y en Cali, FICDEH), día y
+            # hora tal como los dio la fuente principal
+            '_ancla': (sede, f.get('dia'), f.get('hora')),
             'day': f.get('dia'), 'time': f.get('hora'), 'day_order': orden.get(f.get('dia')),
             'venue': sede, 'sala': sala or None,
             'event_kind': f.get('event_kind') or None,
             # `info`: drop-in sin hora de fin — se muestra y NO se planifica.
             'info': True if f.get('info') else None,
+            # ABIERTA DE VARIOS DÍAS (21 oct 2026): UNA función `info` con `hasta`
+            # (el último día) en vez de N funciones; la app la abre por día
+            # (domain/film.js expandVentanas). Sin copiarla acá, no llega al JSON.
+            'hasta': (f.get('hasta') or None) if f.get('info') else None,
             # UN TALLER DE VARIAS SESIONES es un bloque: `is_recurring` en cada
             # sesión, y la app ofrece «Añadir las N sesiones» (PROTOCOLO §4).
             # El crudo lo escribía y acá no se copiaba: el campo del protocolo
@@ -393,7 +571,7 @@ def ensamblar(fid, escribir=True):
                 e['country'] = ', '.join(_u)
                 e['flags'] = ''.join(dict.fromkeys(lib.banderas(p) for p in _u))
             e.pop('year', None)
-        it = enr.get(lib.norm(f['titulo']))
+        it = ficha_de_la_funcion(e, enr.get(lib.norm(f['titulo'])))
         if it:
             _enriquece(e, it)
         if not e.get('film_list'):
@@ -416,7 +594,7 @@ def ensamblar(fid, escribir=True):
             # explícita, que se pudre mucho más despacio.
             _DE_LA_FUNCION = {'day', 'day_order', 'date', 'time', 'venue', 'sala',
                               'screenings', 'sessions', 'ticket_url', 'is_free',
-                              'requires_registration', 'registration_url', 'by_invitation', 'online', 'stream_url', 'stream_platform', 'has_qa',
+                              'requires_registration', 'registration_url', 'by_invitation', 'online', 'stream_url', 'stream_platform', 'film_start', 'has_qa',
                               'qa_type', 'film_list', 'is_cortos', 'is_programa',
                               'type', 'unscheduled', '_src', 'title'}
             for _c, _v in _u.items():
@@ -481,6 +659,103 @@ def ensamblar(fid, escribir=True):
                     _o[_k] = mayuscula_inicial(_o[_k])
         # programa o actividad: su texto es DESCRIPCIÓN, no sinopsis (lib)
         lib.separar_descripcion(_f)
+    # PROGRAMAS Y SECCIONES EN TÍTULO (regla de Juan, 15 oct 2026): las
+    # palabras son del festival, la caja es de la app (pipeline/caja.py). Antes
+    # de conservar lo publicado y de los títulos anteriores, que comparan por
+    # nombre con lo que ya está en producción
+    if fid not in caja.OTRO_IDIOMA:
+        for _f in films:
+            if caja.es_programa(_f):
+                _f['title'] = caja.titulo(_f['title'])
+            for _o in [_f] + (_f.get('film_list') or []):
+                if _o.get('section'):
+                    _o['section'] = caja.seccion(_o['section'])
+        out['sections'] = {caja.seccion(k): v for k, v in out['sections'].items()}
+    _afs = funcion.cargar(fid)
+    _conf_p = f'{REPO}/festivals/staging/{fid}-conflictos.json'
+    # EL ID ESTABLE, PARA TODO FESTIVAL (docs/FUNCION.md §11.6 paso 4): cada
+    # función recibe su id del registro <fid>-funciones-ids.json, con las
+    # decisiones humanas de <fid>-funciones-decisiones.json, y lo publica
+    _reg_p = f'{REPO}/festivals/staging/{fid}-funciones-ids.json'
+    _reg = json.load(open(_reg_p, encoding='utf-8')) if os.path.exists(_reg_p) else {}
+    _dec_p = f'{REPO}/festivals/staging/{fid}-funciones-decisiones.json'
+    _dec = json.load(open(_dec_p, encoding='utf-8')).get('decisiones') if os.path.exists(_dec_p) else []
+    try:
+        films[:], _reg, _avisos = funcion.ids_del_montaje(films, _reg, _dec)
+    except funcion.AfirmacionInvalida as _e:
+        sys.exit(f'✗ {fid}: {_e} → {os.path.relpath(_dec_p, REPO)}')
+    for _x in _avisos:
+        print(f'  · función: {_x}')
+    # los avisos de ids (movida, renombrada, cambio doble) viajan en el build
+    # para que publicar.py los muestre: un id nuevo por cambio doble no puede
+    # quedar solo en un registro (Juan, 18 oct)
+    out['_avisos_id'] = [x for x in _avisos if x.startswith('⚠')]
+    # EL MODELO DE LA FUNCIÓN (docs/FUNCION.md): si el festival tiene
+    # <fid>-afirmaciones.json, cada casilla se resuelve con su regla, y un
+    # conflicto o una afirmación que no encuentra su función FRENA con un
+    # reporte en <fid>-conflictos.json (C9)
+    if _afs is not None:
+        try:
+            _r = funcion.resolver(films, _afs, funcion.contexto(crudo, cfg, funcion.ticketing_model_de(fid)))
+            _conf = _r.conflictos
+        except (funcion.AnclaPerdida, funcion.AfirmacionInvalida) as _e:
+            _r, _conf = None, [{'tipo': 'afirmacion-rota', 'detalle': str(_e)}]
+        if _conf:
+            if escribir:   # H2: --ver no escribe nada
+                json.dump({'_provenance': lib.provenance('ensamblar.py: conflictos del modelo de la función'),
+                           'conflictos': _conf}, open(_conf_p, 'w', encoding='utf-8'), ensure_ascii=False, indent=1, default=str)
+            sys.exit(f'✗ {fid}: {len(_conf)} conflicto(s) del modelo de la función, sin decisión → '
+                     f'{os.path.relpath(_conf_p, REPO)}\n  · ' + '\n  · '.join(
+                         c.get('detalle') or f"{c.get('funcion')} · {c.get('casilla')} ({c.get('tipo', 'empate')}): " +
+                         ' / '.join(f"{o['valor']!r} ({o['fuente']['tipo']} {o['fuente'].get('publicado') or o['fuente']['fecha']})"
+                                    for o in c.get('opciones', [])) for c in _conf))
+        if escribir and os.path.exists(_conf_p):   # H2: --ver no escribe nada
+            os.remove(_conf_p)
+        films[:] = _r.funciones
+        # una función que agregó una afirmación (existe:{…}) trae su `_fid` del
+        # resolutor pero no pasó por ids_del_montaje: publica su id igual
+        for _f in films:
+            if _f.get('_fid') and not _f.get('id'):
+                _f['id'] = _f['_fid']
+            # …y su day_order, del mismo calendario que las demás. También la
+            # que una afirmación de `day` MOVIÓ: el day_order venía del día base
+            # (FICCALI 22 oct 2026: «Agujero» al 25 quedaba con el orden del 23)
+            if _f.get('day') in orden:
+                _f['day_order'] = orden[_f['day']]
+            # …y su sede, si una afirmación de `venue` la llevó a una que el
+            # crudo no tiene: `venues` se arma del crudo, antes del resolver, y
+            # la sede nueva quedaba sin entrada ni pin (FICCALI 25 oct 2026:
+            # «Las pesadillas del siervo» al Cine Club El Ventanal)
+            _s = _f.get('venue')
+            if _s and _s not in venues:
+                venues[_s] = {'short': _s.split(' - ')[0], 'city': _s.split(' - ')[-1],
+                              **(geo.get(_s) or geo.get(_s.split(' - ')[0]) or {})}
+        print(f'  modelo de la función: {len(_afs)} afirmaciones · {len(films)} funciones')
+    # L7: el registro se reescribe solo si cambió lo que guarda (sin ruido diario),
+    # y solo después de que el modelo no frenó
+    if escribir and _reg.get('funciones'):
+        _viejo = json.load(open(_reg_p, encoding='utf-8')).get('funciones') if os.path.exists(_reg_p) else None
+        if _viejo != _reg['funciones']:
+            json.dump({'_provenance': lib.provenance('ensamblar.py: ids estables de las funciones (docs/FUNCION.md C1)'),
+                       **_reg}, open(_reg_p, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+    # H1 (revisión del 16 oct): en un festival del modelo la duración NO se repone
+    # de lo publicado — lo publicado puede ser una ESTIMACIÓN de la corrida
+    # anterior, y volvería como dato. Las correcciones reales van por -duraciones
+    # o por afirmaciones
+    _conservar_publicado(fid, films, sin=('duration',) if _afs is not None else ())
+    _duraciones_corregidas(fid, films)
+    _titulos_anteriores(fid, films)
+    # Festival mixed: la función sin dato de entrada es PAGA — explícito y
+    # marcado supuesto, no deducido por la app de la falta del dato (16 oct 2026).
+    # Después de reponer lo publicado: un is_free que la fuente dejó de decir vuelve
+    # primero, y el supuesto solo llena lo que de verdad nadie dijo
+    _n = funcion.marcar_paga_supuesta(films, funcion.ticketing_model_de(fid))
+    if _n:
+        print(f'  entrada: {_n} función(es) paga(s) por supuesto (festival mixed, sin dato)')
+    # C2: la duración que siga vacía se ESTIMA al final, después de reponer lo
+    # publicado y las duraciones corregidas — nunca antes
+    if _afs is not None:
+        funcion.estimar_duraciones(films)
     out['films'] = films
 
     print(f'  {fid}: {len(films)} funciones · {len(venues)} sedes · {len(secciones)} secciones '

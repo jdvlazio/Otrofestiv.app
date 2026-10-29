@@ -49,14 +49,18 @@ export function _sbInit(){
       if(event==='INITIAL_SESSION' && session?.user && !session.user.is_anonymous){
         await _cloudLoad({guard:true});
         subscribePlanCloud();
+        subscribeDelaysCloud();   // si el festival cargó antes, cambia el sondeo sin cuenta por el canal en vivo
         _renderAfterSync();
       }
-      if(event==='SIGNED_OUT'){ unsubscribePlanCloud(); _sbUpdateUI(); }
+      if(event==='SIGNED_OUT'){ unsubscribePlanCloud(); _sbUpdateUI(); subscribeDelaysCloud(); }
     });
     _sb.auth.getSession().then(({data:{session}})=>{
       _sbUser=session?.user??null;
       if(session?.access_token) try{ _sb.realtime.setAuth(session.access_token); }catch(e){} // token al socket de Realtime (cold start)
       _sbUpdateUI();
+      // Sin sesión: el loader pudo correr antes de que _sb existiera, y entonces
+      // nadie arrancó el sondeo del consenso (0006). Idempotente.
+      if(!session) subscribeDelaysCloud();
       // Sin auth anónima (Camino A). La identidad es SOLO la sesión de email (opt-in).
       // Antes, signInAnonymously() abría una sesión de dispositivo que pisaba el slot
       // ÚNICO de sesión del cliente Supabase → clobbeaba la sesión de email → _cloudSave

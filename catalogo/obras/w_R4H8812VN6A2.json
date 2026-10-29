@@ -1,0 +1,57 @@
+{
+ "id": "w_R4H8812VN6A2",
+ "titulo_original": "Historias del buen valle",
+ "anio": 2025,
+ "paises": [
+  "FR",
+  "ES"
+ ],
+ "directores": [
+  "José Luis Guerín"
+ ],
+ "aliases": [
+  {
+   "titulo": "Histoires de la bonne vallée",
+   "tipo": "festival"
+  },
+  {
+   "titulo": "Historias del buen Valle",
+   "tipo": "festival"
+  },
+  {
+   "titulo": "Good Valley Stories",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "En un barrio periférico donde se encuentran el mundo rural y el urbano, las casas de los primeros migrantes de la posguerra conviven con los nuevos bloques de una ciudad dormitorio donde se concentra la última oleada migratoria. Este rincón humilde se ha convertido en una auténtica aldea global, un retrato sereno y humanista de los conflictos sociales, generacionales e identitarios del mundo actual.",
+  "en": "In a peripheral neighbourhood, where the rural and urban worlds meet, the houses of the first migrants who arrived after the post-war period coexist with the new blocks of the dormitory city, where the latest wave of migration is concentrated. This humble corner is now an authentic global village. Good Valley Stories is a sum of constructs, of social, generational and identity, urban and ecological conflicts, but it is also a calm and humanistic look at today’s world."
+ },
+ "generos": [
+  "Documental"
+ ],
+ "afiche": {
+  "archivo": "/assets/ficcali-2026/historias-del-buen-valle.jpg",
+  "veredicto": "oficial"
+ },
+ "xref": {
+  "tmdb": 1457842,
+  "letterboxd": "good-valley-stories"
+ },
+ "versiones": [
+  {
+   "etiqueta": "120 min",
+   "duracion_min": 120
+  },
+  {
+   "etiqueta": "122 min",
+   "duracion_min": 122
+  }
+ ],
+ "presentaciones": [
+  "ficcali-2026",
+  "ficci-65",
+  "olhar-2026"
+ ]
+}
