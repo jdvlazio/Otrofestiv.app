@@ -5219,11 +5219,11 @@
    "region": "Caribe",
    "mes": 11,
    "mes_texto": null,
-   "fechas_2026": "según issue #1042: «Festival Internacional de Cine Diverso (FICIDI) — Barranquilla, 4–7 NOV (IV)»",
+   "fechas_2026": "3–7 NOV (Calendario de programación en PDF enviado por el festival, 29 oct 2026; antes, issue #1042: 4–7 NOV)",
    "web": "https://www.festivaldecinediverso.com/",
    "ig": "@festivaldecinediverso",
-   "estado": "radar",
-   "id_config": null,
+   "estado": "en_app",
+   "id_config": ["ficidi2026"],
    "issue": [
     1042
    ],
