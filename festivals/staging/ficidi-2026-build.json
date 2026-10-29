@@ -506,7 +506,7 @@
    "section": "🏳️‍🌈 Selección Oficial",
    "country": "Argentina, Colombia, España",
    "flags": "🇦🇷🇨🇴🇪🇸",
-   "duration": "108 min",
+   "duration": "150 min",
    "_ancla": [
     "Alianza Francesa de Barranquilla - Barranquilla",
     "2026-11-04",
@@ -581,7 +581,9 @@
       "catalogo": "Yo soy yo"
      },
      "synopsis": "Historias de personas LGBTIQA+ en Colombia visibilizan identidades diversas y experiencias de exclusión.",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "poster": "/assets/ficidi-2026/yo-soy-yo.jpg",
+     "posterSource": "oficial"
     },
     {
      "title": "Maricones",
@@ -669,7 +671,9 @@
       "catalogo": "Miradas trans-parentes"
      },
      "synopsis": "Un archivo visual y afectivo recoge experiencias trans y no binarias, vínculos y memorias.",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "poster": "/assets/ficidi-2026/miradas-trans-parentes.jpg",
+     "posterSource": "oficial"
     },
     {
      "title": "Made to Shine",
@@ -683,7 +687,9 @@
       "catalogo": "Made to Shine"
      },
      "synopsis": "El proceso creativo de una artista drag revela el trabajo que hay detrás de una identidad escénica.",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "poster": "/assets/ficidi-2026/made-to-shine.jpg",
+     "posterSource": "oficial"
     }
    ],
    "description": "Homenaje a Víctor Ladrón de Guevara “La Loba” y Gustavo Turizo. Conversatorio “La Memoria Revelada” con Hemel Noñera, Danny González y Víctor Ladrón de Guevara “La Loba”. Muestra artística: “La memoria de Gustavo Turizo”.",
@@ -697,7 +703,7 @@
    "section": "🏳️‍🌈 Selección Oficial",
    "country": "España, Brasil, Colombia, Argentina, Chile",
    "flags": "🇪🇸🇧🇷🇨🇴🇦🇷🇨🇱",
-   "duration": "60 min",
+   "duration": "180 min",
    "_ancla": [
     "La Maloca Cultural - Barranquilla",
     "2026-11-05",
@@ -945,7 +951,7 @@
    "section": "🏳️‍🌈 Selección Oficial",
    "country": "España, Brasil, Reino Unido, Argentina, Colombia",
    "flags": "🇪🇸🇧🇷🇬🇧🇦🇷🇨🇴",
-   "duration": "130 min",
+   "duration": "186 min",
    "_ancla": [
     "Universidad de la Costa – CUC - Barranquilla",
     "2026-11-06",
@@ -1199,7 +1205,7 @@
    "section": "🏳️‍🌈 Selección Oficial",
    "country": "España, Colombia, Brasil, Argentina",
    "flags": "🇪🇸🇨🇴🇧🇷🇦🇷",
-   "duration": "20 min",
+   "duration": "180 min",
    "_ancla": [
     "Universidad de la Costa – CUC - Barranquilla",
     "2026-11-06",
@@ -1407,7 +1413,7 @@
    "section": "🏳️‍🌈 Selección Oficial",
    "country": "Brasil, Colombia, México",
    "flags": "🇧🇷🇨🇴🇲🇽",
-   "duration": "29 min",
+   "duration": "150 min",
    "_ancla": [
     "La Fábrica de Cultura - Barranquilla",
     "2026-11-07",
@@ -1531,7 +1537,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-29T16:36:39",
+  "fecha": "2026-10-29T17:40:59",
   "plan_sha": "7f1d2e48ae2becc3",
   "paso": 9,
   "cmd": "python3 pipeline/ficidi-2026-verificar.py"

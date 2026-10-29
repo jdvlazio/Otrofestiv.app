@@ -27,10 +27,14 @@ LAS REGLAS:
     ahí va la caja del catálogo.
   · la duración del bloque: el 3 nov la da el PDF (2:00–6:00 p. m.); los demás,
     la SUMA de sus obras; si a alguna le falta, la suma es parcial y se declara
-    en `_duracion_de`. No se estima lo que no se sabe.
+    en `_duracion_de`. 29 oct 2026, Juan: «Publica con la estimada» → a cada
+    obra sin duración se le suma el PROMEDIO de las obras con duración del
+    festival, y queda declarado ESTIMADA hasta que el festival dé la hora de fin.
   · acceso: «La entrada es completamente GRATIS.» (PDF, pág. 5) → todas.
 """
 import io
+
+FIN_FESTIVAL = {'18:00': '21:00', '09:00': '12:00'}
 import json
 import os
 import re
@@ -219,7 +223,12 @@ def main():
             f['has_qa'], f['qa_type'] = True, 'team'       # conversatorios con equipo y director
         else:
             f['titulo'] = rotulo
-        if hasta:
+        # 29 oct 2026, respuesta del festival a Juan: «Las que son a las 6:00 PM
+        # son hasta las 9:00 PM. El de las 9:00 AM son hasta las 12:00 PM»
+        if not hasta and hora in FIN_FESTIVAL:
+            f['duracion_min'] = mins(FIN_FESTIVAL[hora]) - mins(hora)
+            f['_duracion_de'] = f'el festival a Juan (29 oct): hasta las {FIN_FESTIVAL[hora]}'
+        elif hasta:
             f['duracion_min'] = mins(hasta) - mins(hora)
             f['_duracion_de'] = 'el PDF: 2:00 p. m. – 6:00 p. m.'
         else:
@@ -229,7 +238,20 @@ def main():
             f['_duracion_de'] = (f'suma de las {len(lista)} obras' if not faltan else
                                  f'suma PARCIAL: {len(lista) - len(faltan)} de {len(lista)} obras con duración; '
                                  f'sin duración: {" · ".join(faltan)}')
+        if f.get('has_qa') and f['_duracion_de'].startswith('el festival'):
+            # la app suma FESTIVAL_QA_MIN (30, src/config.js) a toda función con
+            # conversatorio; la hora de fin del festival YA lo incluye
+            f['duracion_min'] -= 30
+            f['_duracion_de'] += ', con el conversatorio dentro (−30 que la app vuelve a sumar)'
         funciones.append(f)
+    conocidas = [o['duracion_min'] for f in funciones for o in f['obras'] if o.get('duracion_min')]
+    prom = round(sum(conocidas) / len(conocidas))
+    for f in funciones:
+        faltan = [o for o in f['obras'] if not o.get('duracion_min')]
+        if faltan and f['_duracion_de'].startswith('suma'):
+            f['duracion_min'] += prom * len(faltan)
+            f['_duracion_de'] = (f'ESTIMADA (Juan, 29 oct): {f["_duracion_de"]}; + {len(faltan)} × {prom} min, '
+                                 f'promedio de las {len(conocidas)} obras con duración')
     fuera = [o['titulo'] for o in cat if o['titulo'] not in usadas]
     n = sum(len(f['obras']) for f in funciones)
     io.open(DESTINO, 'w', encoding='utf-8').write(json.dumps({
