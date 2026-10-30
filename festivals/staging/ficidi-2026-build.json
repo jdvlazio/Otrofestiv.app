@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "Calendario de programación IV FICIDI 2026 (PDF enviado por el festival)",
-  "capturado": "2026-10-29",
+  "capturado": "2026-10-30",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "radar": 1042,
@@ -363,7 +363,11 @@
      "synopsis": "Tres jóvenes viajan en busca de su identidad a través de la memoria y el deseo.",
      "synopsis_lang": "es",
      "poster": "/assets/ficidi-2026/exilio.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "lbSlug": "exilio-2",
+     "tmdb_id": 1812216,
+     "synopsis_en": "Three young people travel in search of their identity through memory and desire.",
+     "genre": "Drama"
     },
     {
      "title": "Muñecas de porcelana",
@@ -379,7 +383,11 @@
      "synopsis": "La identidad y los vínculos familiares se ponen a prueba ante las dificultades de la aceptación.",
      "synopsis_lang": "es",
      "poster": "/assets/ficidi-2026/munecas-de-porcelana.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "lbSlug": "munecas-de-porcelana-1",
+     "tmdb_id": 1812213,
+     "synopsis_en": "Identity and family bonds are put to the test by the difficulties of acceptance.",
+     "genre": "Drama"
     },
     {
      "title": "Aquí donde soy",
@@ -457,7 +465,12 @@
      "synopsis": "El regreso a un pueblo conecta el territorio, las leyendas y la identidad.",
      "synopsis_lang": "es",
      "poster": "/assets/ficidi-2026/onades.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "lbSlug": "onades",
+     "tmdb_id": 1554852,
+     "synopsis_en": "Álvaro returns to his Mediterranean hometown to sell the family house. There, the Mediterranean comes alive and guides him through legends, customs and memories, on an intimate journey where past and present intertwine. Onades is a contemporary fable about identity, nostalgia and desire, a poetic and queer short film created from and for La Vila.",
+     "genre": "Drama",
+     "year": 2026
     },
     {
      "title": "Todos los nombres empiezan con M",
@@ -494,7 +507,11 @@
      "synopsis": "Una persona que busca pareja confronta sus propios fantasmas tras sufrir ghosting.",
      "synopsis_lang": "es",
      "poster": "/assets/ficidi-2026/verdulera.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "lbSlug": "verdulera",
+     "tmdb_id": 1812218,
+     "synopsis_en": "A person looking for a partner confronts their own ghosts after being ghosted.",
+     "genre": "Comedia"
     }
    ],
    "_fid": "f_a1fea83cb5",
@@ -620,7 +637,11 @@
      "synopsis": "Un trabajador sexual explora la relación entre su identidad y el personaje femenino que interpreta.",
      "synopsis_lang": "es",
      "poster": "/assets/ficidi-2026/solo-natalie.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "lbSlug": "solo-natalie",
+     "tmdb_id": 1812219,
+     "synopsis_en": "A sex worker explores the relationship between his identity and the female character he plays.",
+     "genre": "Drama"
     },
     {
      "title": "Reina de polvo y luz",
@@ -636,7 +657,11 @@
      "synopsis": "Un joven confronta los prejuicios de su entorno y busca reconocerse a través de un espacio drag.",
      "synopsis_lang": "es",
      "poster": "/assets/ficidi-2026/reina-de-polvo-y-luz.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "lbSlug": "reina-de-polvo-y-luz",
+     "tmdb_id": 1812220,
+     "synopsis_en": "A young man confronts the prejudices of those around him and seeks to recognize himself through a drag space.",
+     "genre": "Drama"
     },
     {
      "title": "Más allá de la corona",
@@ -668,12 +693,16 @@
      "_src": {
       "pdf": "Calendario_IV_FICIDI_2026.pdf · MIÉRCOLES 4 nov, obra 08",
       "duracion": "lámina IG DfDlyoFEdJD/09",
-      "catalogo": "Miradas trans-parentes"
+      "catalogo": "Miradas Trans-Parentes"
      },
      "synopsis": "Un archivo visual y afectivo recoge experiencias trans y no binarias, vínculos y memorias.",
      "synopsis_lang": "es",
      "poster": "/assets/ficidi-2026/miradas-trans-parentes.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "lbSlug": "miradas-trans-parentes",
+     "tmdb_id": 1812222,
+     "synopsis_en": "A visual and affective archive gathers trans and non-binary experiences, bonds and memories.",
+     "genre": "Documental"
     },
     {
      "title": "Made to Shine",
@@ -689,7 +718,11 @@
      "synopsis": "El proceso creativo de una artista drag revela el trabajo que hay detrás de una identidad escénica.",
      "synopsis_lang": "es",
      "poster": "/assets/ficidi-2026/made-to-shine.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "lbSlug": "made-to-shine",
+     "tmdb_id": 1812223,
+     "synopsis_en": "The creative process of a drag artist reveals the work behind a stage identity.",
+     "genre": "Documental"
     }
    ],
    "description": "Homenaje a Víctor Ladrón de Guevara “La Loba” y Gustavo Turizo. Conversatorio “La Memoria Revelada” con Hemel Noñera, Danny González y Víctor Ladrón de Guevara “La Loba”. Muestra artística: “La memoria de Gustavo Turizo”.",
@@ -819,7 +852,10 @@
      "synopsis": "Una pareja enfrenta las diferencias entre sus proyectos de vida y su relación con la ciudad.",
      "synopsis_lang": "es",
      "poster": "/assets/ficidi-2026/verano.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "lbSlug": "verano-2",
+     "tmdb_id": 1721867,
+     "genre": "Drama"
     },
     {
      "title": "¿Quién se lleva las estrellas?",
@@ -1537,7 +1573,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-29T17:40:59",
+  "fecha": "2026-10-30T05:45:13",
   "plan_sha": "7f1d2e48ae2becc3",
   "paso": 9,
   "cmd": "python3 pipeline/ficidi-2026-verificar.py"

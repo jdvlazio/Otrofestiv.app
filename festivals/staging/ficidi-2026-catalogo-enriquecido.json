@@ -1,10 +1,38 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, con el MISMO candado de enriquecer.py: director ✓ y (año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-10-29"
+  "capturado": "2026-10-30"
  },
  "_origen": "ficidi-2026-catalogo.json",
  "obras": [
+  {
+   "titulo": "Exilio",
+   "tmdb_id": 1812216,
+   "titulo_original": "Exilio",
+   "poster_path": "/mvBAx2Gw5wm3R81UWsLOO6QmS8S.jpg",
+   "synopsis_es": "Tres jóvenes viajan en busca de su identidad a través de la memoria y el deseo.",
+   "synopsis_en": "Three young people travel in search of their identity through memory and desire.",
+   "genero": "Drama",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 28,
+   "pais_tmdb": "",
+   "lbSlug": "exilio-2",
+   "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 30 oct 2026 desde el afiche y el calendario oficial de FICIDI"
+  },
+  {
+   "titulo": "Verdulera",
+   "tmdb_id": 1812218,
+   "titulo_original": "Verdulera",
+   "poster_path": "/7iU42NeXawKziZE8sP8tTJF5icT.jpg",
+   "synopsis_es": "Una persona que busca pareja confronta sus propios fantasmas tras sufrir ghosting.",
+   "synopsis_en": "A person looking for a partner confronts their own ghosts after being ghosted.",
+   "genero": "Comedia",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 5,
+   "pais_tmdb": "",
+   "lbSlug": "verdulera",
+   "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 30 oct 2026 desde el afiche y el calendario oficial de FICIDI"
+  },
   {
    "titulo": "La mujer sentada",
    "tmdb_id": 1697643,
@@ -49,6 +77,20 @@
    "lbSlug": "los-pajaros-2026",
    "_verificado": "el catálogo ya la tiene (w_4RPVGQ25BYWC, ficidi-2026)",
    "work_id": "w_4RPVGQ25BYWC"
+  },
+  {
+   "titulo": "Muñecas de porcelana",
+   "tmdb_id": 1812213,
+   "titulo_original": "Muñecas de porcelana",
+   "poster_path": "/sDVIvEWnUnwsXrWmi60FeKmjp5s.jpg",
+   "synopsis_es": "La identidad y los vínculos familiares se ponen a prueba ante las dificultades de la aceptación.",
+   "synopsis_en": "Identity and family bonds are put to the test by the difficulties of acceptance.",
+   "genero": "Drama",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 8,
+   "pais_tmdb": "",
+   "lbSlug": "munecas-de-porcelana-1",
+   "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 30 oct 2026 desde el afiche y el calendario oficial de FICIDI"
   },
   {
    "titulo": "A mi edad",
@@ -126,6 +168,20 @@
    "lbSlug": "tell-me-a-lie",
    "_verificado": "el catálogo ya la tiene (w_4RPSDXA435BS, ficidi-2026)",
    "work_id": "w_4RPSDXA435BS"
+  },
+  {
+   "titulo": "Verano",
+   "tmdb_id": 1721867,
+   "titulo_original": "Verano",
+   "poster_path": "/bMfQVPDQ0FtEOIgaxML3oJlRwkZ.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "",
+   "genero": "Drama",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "Brazil",
+   "lbSlug": "verano-2",
+   "_verificado": "declarada a mano: TMDB 1721867: mismo título, Daniel Zacariotti, Brasil; TMDB sin año ni duración, el candado no tenía con qué corroborar"
   },
   {
    "titulo": "Aquí donde soy",
@@ -230,7 +286,21 @@
    "duracion_tmdb": 20,
    "pais_tmdb": "Spain",
    "lbSlug": "onades",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "_verificado": "declarada a mano: TMDB 1554852: mismo título, Andoni Martínez, España, 15 min; el candado no la tomó porque nos falta el año"
+  },
+  {
+   "titulo": "Solo Natalie",
+   "tmdb_id": 1812219,
+   "titulo_original": "Solo Natalie",
+   "poster_path": "/np0FrWTLfoS3EoGqbgb8LWqGEJW.jpg",
+   "synopsis_es": "Un trabajador sexual explora la relación entre su identidad y el personaje femenino que interpreta.",
+   "synopsis_en": "A sex worker explores the relationship between his identity and the female character he plays.",
+   "genero": "Drama",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 13,
+   "pais_tmdb": "",
+   "lbSlug": "solo-natalie",
+   "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 30 oct 2026 desde el afiche y el calendario oficial de FICIDI"
   },
   {
    "titulo": "Todos los nombres empiezan con M",
@@ -262,6 +332,20 @@
    "lbSlug": "perros-2026",
    "_verificado": "el catálogo ya la tiene (w_4RPVXBR5XHJY, ficidi-2026)",
    "work_id": "w_4RPVXBR5XHJY"
+  },
+  {
+   "titulo": "Reina de polvo y luz",
+   "tmdb_id": 1812220,
+   "titulo_original": "Reina de polvo y luz",
+   "poster_path": "/zglr7dXwnkCsti7n10zgmLFNzwM.jpg",
+   "synopsis_es": "Un joven confronta los prejuicios de su entorno y busca reconocerse a través de un espacio drag.",
+   "synopsis_en": "A young man confronts the prejudices of those around him and seeks to recognize himself through a drag space.",
+   "genero": "Drama",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 16,
+   "pais_tmdb": "",
+   "lbSlug": "reina-de-polvo-y-luz",
+   "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 30 oct 2026 desde el afiche y el calendario oficial de FICIDI"
   },
   {
    "titulo": "Lo que fuimos",
@@ -579,9 +663,63 @@
      "sinopsis": "Ángel debe responder tres preguntas y superar una serie de obstáculos antes de lograr su sueño: ser coronada Reina Trans de Palmira, Colombia."
     }
    ]
+  },
+  {
+   "titulo": "Miradas Trans-Parentes",
+   "tmdb_id": 1812222,
+   "titulo_original": "Miradas Trans-Parentes",
+   "poster_path": "/hO5dH7bOTenVW70YRe0nFRvlpol.jpg",
+   "synopsis_es": "Un archivo visual y afectivo recoge experiencias trans y no binarias, vínculos y memorias.",
+   "synopsis_en": "A visual and affective archive gathers trans and non-binary experiences, bonds and memories.",
+   "genero": "Documental",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 3,
+   "pais_tmdb": "",
+   "lbSlug": "miradas-trans-parentes",
+   "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 30 oct 2026 desde el afiche y el calendario oficial de FICIDI"
+  },
+  {
+   "titulo": "Made to Shine",
+   "tmdb_id": 1812223,
+   "titulo_original": "Made to Shine",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "The creative process of a drag artist reveals the work behind a stage identity.",
+   "genero": "Documental",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 8,
+   "pais_tmdb": "",
+   "lbSlug": "made-to-shine",
+   "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 30 oct 2026 desde el afiche y el calendario oficial de FICIDI"
   }
  ],
  "verificadas": {
+  "Exilio": {
+   "tmdb_id": 1812216,
+   "titulo_original": "Exilio",
+   "poster_path": "/mvBAx2Gw5wm3R81UWsLOO6QmS8S.jpg",
+   "synopsis_es": "Tres jóvenes viajan en busca de su identidad a través de la memoria y el deseo.",
+   "synopsis_en": "Three young people travel in search of their identity through memory and desire.",
+   "genero": "Drama",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 28,
+   "pais_tmdb": "",
+   "lbSlug": "exilio-2",
+   "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 30 oct 2026 desde el afiche y el calendario oficial de FICIDI"
+  },
+  "Verdulera": {
+   "tmdb_id": 1812218,
+   "titulo_original": "Verdulera",
+   "poster_path": "/7iU42NeXawKziZE8sP8tTJF5icT.jpg",
+   "synopsis_es": "Una persona que busca pareja confronta sus propios fantasmas tras sufrir ghosting.",
+   "synopsis_en": "A person looking for a partner confronts their own ghosts after being ghosted.",
+   "genero": "Comedia",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 5,
+   "pais_tmdb": "",
+   "lbSlug": "verdulera",
+   "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 30 oct 2026 desde el afiche y el calendario oficial de FICIDI"
+  },
   "La mujer sentada": {
    "tmdb_id": 1697643,
    "titulo_original": "La mujer sentada",
@@ -623,6 +761,19 @@
    "lbSlug": "los-pajaros-2026",
    "_verificado": "el catálogo ya la tiene (w_4RPVGQ25BYWC, ficidi-2026)",
    "work_id": "w_4RPVGQ25BYWC"
+  },
+  "Muñecas de porcelana": {
+   "tmdb_id": 1812213,
+   "titulo_original": "Muñecas de porcelana",
+   "poster_path": "/sDVIvEWnUnwsXrWmi60FeKmjp5s.jpg",
+   "synopsis_es": "La identidad y los vínculos familiares se ponen a prueba ante las dificultades de la aceptación.",
+   "synopsis_en": "Identity and family bonds are put to the test by the difficulties of acceptance.",
+   "genero": "Drama",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 8,
+   "pais_tmdb": "",
+   "lbSlug": "munecas-de-porcelana-1",
+   "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 30 oct 2026 desde el afiche y el calendario oficial de FICIDI"
   },
   "A mi edad": {
    "tmdb_id": 1572696,
@@ -695,6 +846,19 @@
    "lbSlug": "tell-me-a-lie",
    "_verificado": "el catálogo ya la tiene (w_4RPSDXA435BS, ficidi-2026)",
    "work_id": "w_4RPSDXA435BS"
+  },
+  "Verano": {
+   "tmdb_id": 1721867,
+   "titulo_original": "Verano",
+   "poster_path": "/bMfQVPDQ0FtEOIgaxML3oJlRwkZ.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "",
+   "genero": "Drama",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "Brazil",
+   "lbSlug": "verano-2",
+   "_verificado": "declarada a mano: TMDB 1721867: mismo título, Daniel Zacariotti, Brasil; TMDB sin año ni duración, el candado no tenía con qué corroborar"
   },
   "Aquí donde soy": {
    "tmdb_id": 1574595,
@@ -792,7 +956,20 @@
    "duracion_tmdb": 20,
    "pais_tmdb": "Spain",
    "lbSlug": "onades",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "_verificado": "declarada a mano: TMDB 1554852: mismo título, Andoni Martínez, España, 15 min; el candado no la tomó porque nos falta el año"
+  },
+  "Solo Natalie": {
+   "tmdb_id": 1812219,
+   "titulo_original": "Solo Natalie",
+   "poster_path": "/np0FrWTLfoS3EoGqbgb8LWqGEJW.jpg",
+   "synopsis_es": "Un trabajador sexual explora la relación entre su identidad y el personaje femenino que interpreta.",
+   "synopsis_en": "A sex worker explores the relationship between his identity and the female character he plays.",
+   "genero": "Drama",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 13,
+   "pais_tmdb": "",
+   "lbSlug": "solo-natalie",
+   "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 30 oct 2026 desde el afiche y el calendario oficial de FICIDI"
   },
   "Todos los nombres empiezan con M": {
    "tmdb_id": 1661544,
@@ -822,6 +999,19 @@
    "lbSlug": "perros-2026",
    "_verificado": "el catálogo ya la tiene (w_4RPVXBR5XHJY, ficidi-2026)",
    "work_id": "w_4RPVXBR5XHJY"
+  },
+  "Reina de polvo y luz": {
+   "tmdb_id": 1812220,
+   "titulo_original": "Reina de polvo y luz",
+   "poster_path": "/zglr7dXwnkCsti7n10zgmLFNzwM.jpg",
+   "synopsis_es": "Un joven confronta los prejuicios de su entorno y busca reconocerse a través de un espacio drag.",
+   "synopsis_en": "A young man confronts the prejudices of those around him and seeks to recognize himself through a drag space.",
+   "genero": "Drama",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 16,
+   "pais_tmdb": "",
+   "lbSlug": "reina-de-polvo-y-luz",
+   "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 30 oct 2026 desde el afiche y el calendario oficial de FICIDI"
   },
   "Lo que fuimos": {
    "tmdb_id": 1777436,
@@ -1127,6 +1317,32 @@
      "sinopsis": "Ángel debe responder tres preguntas y superar una serie de obstáculos antes de lograr su sueño: ser coronada Reina Trans de Palmira, Colombia."
     }
    ]
+  },
+  "Miradas Trans-Parentes": {
+   "tmdb_id": 1812222,
+   "titulo_original": "Miradas Trans-Parentes",
+   "poster_path": "/hO5dH7bOTenVW70YRe0nFRvlpol.jpg",
+   "synopsis_es": "Un archivo visual y afectivo recoge experiencias trans y no binarias, vínculos y memorias.",
+   "synopsis_en": "A visual and affective archive gathers trans and non-binary experiences, bonds and memories.",
+   "genero": "Documental",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 3,
+   "pais_tmdb": "",
+   "lbSlug": "miradas-trans-parentes",
+   "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 30 oct 2026 desde el afiche y el calendario oficial de FICIDI"
+  },
+  "Made to Shine": {
+   "tmdb_id": 1812223,
+   "titulo_original": "Made to Shine",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "The creative process of a drag artist reveals the work behind a stage identity.",
+   "genero": "Documental",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 8,
+   "pais_tmdb": "",
+   "lbSlug": "made-to-shine",
+   "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 30 oct 2026 desde el afiche y el calendario oficial de FICIDI"
   }
  },
  "sin_ficha": [
@@ -1141,27 +1357,19 @@
   "Corpo e identidade",
   "De aquellos polvos",
   "Espacios húmedos",
-  "Exilio",
   "Fragmentos",
   "Jamás volveremos",
   "Kiboko",
   "La masculinidad es una pregunta",
   "Las cosas que no te dije",
-  "Made to Shine",
   "Mil mortes de um sobrevivente",
-  "Miradas trans-parentes",
-  "Muñecas de porcelana",
   "No",
   "Pendiente de estrella",
   "Pepa Gaitán presente, ahora y siempre",
-  "Reina de polvo y luz",
-  "Solo Natalie",
   "Todo lo que pasará mañana",
   "Transitar lo marica negro",
   "Travestis, bombas y un cortejo fúnebre",
   "Tuesday Session",
-  "Verano",
-  "Verdulera",
   "Yo soy yo",
   "Young Wild Things",
   "¿A mí quién me cuida? Experiencias negras diversas en el paro nacional del 2021",
