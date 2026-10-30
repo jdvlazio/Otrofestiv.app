@@ -368,6 +368,16 @@
    "_nota": "edificio distinto del de Posgrados (M16), ~85 m, mismo campus",
    "n": 1,
    "address": "Cra. 4 #22-40"
+  },
+  "Parque de los Periodistas - Bogotá": {
+   "short": "Parque de los Periodistas",
+   "city": "Bogotá",
+   "n": 1,
+   "_prec": "manual",
+   "lat": 4.6012192,
+   "lng": -74.0694809,
+   "_match": "Google Maps: Parque de los Periodistas Gabriel García Márquez (30 oct 2026)",
+   "address": "Eje Ambiental y Av. Jiménez"
   }
  },
  "_avisos_id": [],
@@ -9608,6 +9618,99 @@
    }
   },
   {
+   "title": "Los Archivos Actúan sobre lo Público",
+   "type": "event",
+   "section": "🎙️ Encuentro Pensar lo Real",
+   "duration": "90 min",
+   "_ancla": [
+    "Parque de los Periodistas - Bogotá",
+    "2026-10-30",
+    "20:00"
+   ],
+   "day": "2026-10-30",
+   "time": "20:00",
+   "day_order": 3,
+   "venue": "Parque de los Periodistas - Bogotá",
+   "event_kind": "evento",
+   "has_qa": false,
+   "_src": {
+    "url": "https://www.instagram.com/p/DfH6g9fB58A/",
+    "date": "2026-10-30"
+   },
+   "is_cortos": true,
+   "film_list": [
+    {
+     "title": "Desmontaje de tigres de papel",
+     "director": "Taller de usos críticos de archivos sonoros y audiovisuales (MIDBO) - Creación colectiva"
+    },
+    {
+     "title": "La lucha es un tecnopoema colectivo",
+     "director": "Posmonumenta"
+    },
+    {
+     "title": "Videomapping + muestra audiovisual",
+     "director": "@watchingyoulab + creaciones poéticas de procesos de memoria participantes + freestyle"
+    }
+   ],
+   "description": "El Parque de los Periodistas se transforma en un espacio de creación y activación audiovisual para hacer una intervención colectiva que pone los archivos en circulación y los lleva al espacio público. Proyecciones, videomapping, poesía y freestyle se entrelazan para traer esas memorias al presente y crear alternativas de habitar y construir lo público.",
+   "description_lang": "es",
+   "_fid": "f_06cbb93311",
+   "id": "f_06cbb93311",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://midbo.co/"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://midbo.co/"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://midbo.co/"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://midbo.co/"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://midbo.co/"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://midbo.co/"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://midbo.co/"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://midbo.co/"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://midbo.co/"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://midbo.co/"
+    }
+   }
+  },
+  {
    "title": "Inauguración Documental Expandido",
    "type": "event",
    "section": "🔊 Documental Expandido",
@@ -10022,8 +10125,8 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-30T09:29:40",
-  "plan_sha": "a59415cd50b61e59",
+  "fecha": "2026-10-30T13:20:03",
+  "plan_sha": "18f7fb7e2b601fc4",
   "paso": 8,
   "cmd": "python3 pipeline/midbo-2026-verificar.py"
  }

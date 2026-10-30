@@ -4,7 +4,7 @@
   "capturado": "2026-10-30",
   "titulo": "RADAR: Muestra Internacional Documental de Bogotá (MIDBO) — Bogotá, 28 OCT–4 NOV (28ª)",
   "estado": "OPEN",
-  "comentarios": 21
+  "comentarios": 22
  },
  "issue": 1031,
  "titulo": "RADAR: Muestra Internacional Documental de Bogotá (MIDBO) — Bogotá, 28 OCT–4 NOV (28ª)",
@@ -94,6 +94,10 @@
   {
    "fecha": "2026-10-30",
    "cuerpo": "**Vigía 30 oct 09:00 — MIDBO canceló las dos funciones de hoy en la Universidad Nacional.** Leído en la lámina 3 del carrusel https://www.instagram.com/p/DfHn6M1AP4s/ (Apify), que lleva el sello «CANCELADO»: la causa es la suspensión de actividades presenciales en el campus.\n\n- 10:00 «Las almas ni los ojos» (Auditorio 313, ed. 303C NEA) → queda la función del lun 2 nov a las 19:30 en la Sala Capital de la Cinemateca\n- 14:00 «Hombres perdidos» (mismo auditorio) → queda la del dom 1 nov a las 17:00 en la Sala 3 de la Cinemateca\n\nLa app (almacén) todavía las muestra como vigentes y la web midbo.co no refleja la cancelación. Hay que vigilar las otras 4 funciones en la U. Nacional (3 nov 14:00 y 18:30; 4 nov 10:00 «Cuba y la noche» y «Relicto»).\nMenores: hoy la app no marca Q&A en «Bosque arriba en la montaña» (lámina 4), «De cierta manera» (Q&A virtual, lámina 6) ni «Programa 1: Materias Insumisas» (lámina 8).\n"
+  },
+  {
+   "fecha": "2026-10-30",
+   "cuerpo": "**Vigía 30 oct 13:00 — MIDBO: evento de hoy que la app no tiene.** «Los archivos actúan sobre lo público», viernes 30 oct, 8:00 p. m., Parque de los Periodistas (Eje Ambiental y Av. Jiménez). Trae la proyección «Desmontaje de tigres de papel», «La lucha es un tecnopoema colectivo» (Posmonumenta), videomapping y freestyle. Lo leí en la lámina 1 de https://www.instagram.com/p/DfH6g9fB58A/ (vía Apify). No está en el almacén ni en la web (la API está sin cambios: 121/121 obras, mismo contenido)."
   }
  ]
 }
