@@ -6,12 +6,23 @@
   "CO"
  ],
  "directores": [
-  "Mariana Gutiérrez Zapata"
+  "Mariana Gutiérrez"
  ],
  "sinopsis": {
-  "es": "El proceso creativo de una artista drag revela el trabajo que hay detrás de una identidad escénica."
+  "es": "El proceso creativo de una artista drag revela el trabajo que hay detrás de una identidad escénica.",
+  "en": "The creative process of a drag artist reveals the work behind a stage identity."
  },
- "xref": {},
+ "generos": [
+  "Documental"
+ ],
+ "afiche": {
+  "archivo": "/assets/ficidi-2026/made-to-shine.jpg",
+  "veredicto": "oficial"
+ },
+ "xref": {
+  "tmdb": 1812223,
+  "letterboxd": "made-to-shine"
+ },
  "versiones": [
   {
    "etiqueta": "8 min",

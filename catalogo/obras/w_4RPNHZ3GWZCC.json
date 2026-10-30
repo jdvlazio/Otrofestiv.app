@@ -9,13 +9,20 @@
   "Jose Barbado"
  ],
  "sinopsis": {
-  "es": "Una persona que busca pareja confronta sus propios fantasmas tras sufrir ghosting."
+  "es": "Una persona que busca pareja confronta sus propios fantasmas tras sufrir ghosting.",
+  "en": "A person looking for a partner confronts their own ghosts after being ghosted."
  },
+ "generos": [
+  "Comedia"
+ ],
  "afiche": {
   "archivo": "/assets/ficidi-2026/verdulera.jpg",
   "veredicto": "oficial"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 1812218,
+  "letterboxd": "verdulera"
+ },
  "versiones": [
   {
    "etiqueta": "5 min",

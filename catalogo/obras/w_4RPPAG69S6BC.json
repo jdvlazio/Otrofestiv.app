@@ -6,12 +6,23 @@
   "CO"
  ],
  "directores": [
-  "Efra"
+  "Efra Solarte"
  ],
  "sinopsis": {
-  "es": "Un archivo visual y afectivo recoge experiencias trans y no binarias, vínculos y memorias."
+  "es": "Un archivo visual y afectivo recoge experiencias trans y no binarias, vínculos y memorias.",
+  "en": "A visual and affective archive gathers trans and non-binary experiences, bonds and memories."
  },
- "xref": {},
+ "generos": [
+  "Documental"
+ ],
+ "afiche": {
+  "archivo": "/assets/ficidi-2026/miradas-trans-parentes.jpg",
+  "veredicto": "oficial"
+ },
+ "xref": {
+  "tmdb": 1812222,
+  "letterboxd": "miradas-trans-parentes"
+ },
  "versiones": [
   {
    "etiqueta": "3 min",

@@ -9,13 +9,17 @@
   "Jeff Saldaña"
  ],
  "sinopsis": {
-  "es": "Un hombre que vive con VIH enfrenta el estigma y una decisión que puede cambiar su vida."
+  "es": "Un hombre que vive con VIH enfrenta el estigma y una decisión que puede cambiar su vida.",
+  "en": "A man living with HIV faces stigma and a decision that could change his life."
  },
  "afiche": {
   "archivo": "/assets/ficidi-2026/amor-en-positivo.jpg",
   "veredicto": "oficial"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 1812505,
+  "letterboxd": "amor-en-positivo"
+ },
  "presentaciones": [
   "ficidi-2026"
  ]

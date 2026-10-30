@@ -9,13 +9,17 @@
   "Sofía Plesky"
  ],
  "sinopsis": {
-  "es": "Durante unas vacaciones, dos jóvenes descubren un sentimiento nuevo y afrontan sus dudas."
+  "es": "Durante unas vacaciones, dos jóvenes descubren un sentimiento nuevo y afrontan sus dudas.",
+  "en": "During a vacation, two young women discover a new feeling and face their doubts."
  },
  "afiche": {
   "archivo": "/assets/ficidi-2026/cielo-de-enero.jpg",
   "veredicto": "oficial"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 1812491,
+  "letterboxd": "cielo-de-enero"
+ },
  "presentaciones": [
   "ficidi-2026"
  ]

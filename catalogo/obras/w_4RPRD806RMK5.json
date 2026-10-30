@@ -9,13 +9,17 @@
   "Conam Calderón"
  ],
  "sinopsis": {
-  "es": "Un joven vuelve a acercarse a su madre después de años de separación."
+  "es": "Un joven vuelve a acercarse a su madre después de años de separación.",
+  "en": "A young man reconnects with his mother after years of separation."
  },
  "afiche": {
   "archivo": "/assets/ficidi-2026/me-vas-a-estar-esperando.jpg",
   "veredicto": "oficial"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 1812493,
+  "letterboxd": "me-vas-a-estar-esperando"
+ },
  "presentaciones": [
   "ficidi-2026"
  ]

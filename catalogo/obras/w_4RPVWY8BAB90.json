@@ -9,13 +9,17 @@
   "Tatiana Cantalejo"
  ],
  "sinopsis": {
-  "es": "La separación de dos hermanos revela heridas vinculadas a la violencia, el racismo y la homofobia."
+  "es": "La separación de dos hermanos revela heridas vinculadas a la violencia, el racismo y la homofobia.",
+  "en": "The separation of two brothers reveals wounds tied to violence, racism and homophobia."
  },
  "afiche": {
   "archivo": "/assets/ficidi-2026/mil-mortes-de-um-sobrevivente.jpg",
   "veredicto": "oficial"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 1812515,
+  "letterboxd": "mil-mortes-de-um-sobrevivente"
+ },
  "presentaciones": [
   "ficidi-2026"
  ]

@@ -9,13 +9,17 @@
   "Jose Provencio"
  ],
  "sinopsis": {
-  "es": "Tras una agresión, un joven afronta el juicio mediático y decide si cuenta su verdad."
+  "es": "Tras una agresión, un joven afronta el juicio mediático y decide si cuenta su verdad.",
+  "en": "After an assault, a young man faces trial by media and decides whether to tell his truth."
  },
  "afiche": {
   "archivo": "/assets/ficidi-2026/pendiente-de-estrella.jpg",
   "veredicto": "oficial"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 1812512,
+  "letterboxd": "pendiente-de-estrella"
+ },
  "presentaciones": [
   "ficidi-2026"
  ]

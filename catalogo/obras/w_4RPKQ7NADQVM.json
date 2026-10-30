@@ -9,13 +9,17 @@
   "Valeria Romina Albarracín"
  ],
  "sinopsis": {
-  "es": "La historieta y la poesía recuperan la memoria de Pepa Gaitán y su defensa de la libertad."
+  "es": "La historieta y la poesía recuperan la memoria de Pepa Gaitán y su defensa de la libertad.",
+  "en": "Comics and poetry recover the memory of Pepa Gaitán and her defense of freedom."
  },
  "afiche": {
   "archivo": "/assets/ficidi-2026/pepa-gaitan-presente-ahora-y-siempre.jpg",
   "veredicto": "oficial"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 1812481,
+  "letterboxd": "pepa-gaitan-presente-ahora-y-siempre"
+ },
  "presentaciones": [
   "ficidi-2026"
  ]

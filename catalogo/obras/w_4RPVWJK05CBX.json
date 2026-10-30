@@ -9,13 +9,17 @@
   "Cecilia Gaspà Giribets"
  ],
  "sinopsis": {
-  "es": "Una mujer realiza un trabajo físico e invisible mientras carga con responsabilidades de cuidado."
+  "es": "Una mujer realiza un trabajo físico e invisible mientras carga con responsabilidades de cuidado.",
+  "en": "A woman does physical, invisible work while carrying the weight of caregiving responsibilities."
  },
  "afiche": {
   "archivo": "/assets/ficidi-2026/de-aquellos-polvos.jpg",
   "veredicto": "oficial"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 1812514,
+  "letterboxd": "de-aquellos-polvos"
+ },
  "presentaciones": [
   "ficidi-2026"
  ]

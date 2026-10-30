@@ -9,13 +9,17 @@
   "Camila Andrea Elizalde Carabali"
  ],
  "sinopsis": {
-  "es": "Un fotógrafo y su novio emprenden una aventura atravesada por la ausencia."
+  "es": "Un fotógrafo y su novio emprenden una aventura atravesada por la ausencia.",
+  "en": "A photographer and his boyfriend set out on an adventure marked by absence."
  },
  "afiche": {
   "archivo": "/assets/ficidi-2026/quien-se-lleva-las-estrellas.jpg",
   "veredicto": "oficial"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 1812490,
+  "letterboxd": "quien-se-lleva-las-estrellas"
+ },
  "presentaciones": [
   "ficidi-2026"
  ]

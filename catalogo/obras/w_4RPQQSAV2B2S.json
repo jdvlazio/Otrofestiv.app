@@ -11,11 +11,17 @@
  "sinopsis": {
   "es": "Una pareja enfrenta las diferencias entre sus proyectos de vida y su relación con la ciudad."
  },
+ "generos": [
+  "Drama"
+ ],
  "afiche": {
   "archivo": "/assets/ficidi-2026/verano.jpg",
   "veredicto": "oficial"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 1721867,
+  "letterboxd": "verano-2"
+ },
  "presentaciones": [
   "ficidi-2026"
  ]
