@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, emparejado con ficha_verifica() (director + año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-10-29"
+  "capturado": "2026-10-30"
  },
  "obras": [
   {
@@ -218,6 +218,24 @@
    "_afiche": "declarado: portada enviada por el festival (Drive de portadas, autorizado por Juan 29 oct 2026): 4-poster_El bañador.jpg"
   },
   {
+   "titulo": "Exilio",
+   "tmdb_id": 1812216,
+   "titulo_original": "Exilio",
+   "synopsis_es": "Tres jóvenes viajan en busca de su identidad a través de la memoria y el deseo.",
+   "synopsis_en": "Three young people travel in search of their identity through memory and desire.",
+   "genero": "Drama",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 28,
+   "pais_tmdb": "",
+   "lbSlug": "exilio-2",
+   "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 30 oct 2026 desde el afiche y el calendario oficial de FICIDI",
+   "_director": "Ander Parra",
+   "_sondeado": "2026-10-30",
+   "poster": "/assets/ficidi-2026/exilio.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: portada enviada por el festival (Drive de portadas, autorizado por Juan 29 oct 2026): 1-poster_Exilio.jpg"
+  },
+  {
    "titulo": "Fielmente",
    "tmdb_id": 1765996,
    "titulo_original": "Faithfully",
@@ -391,6 +409,24 @@
    "_afiche": "declarado: portada enviada por el festival (Drive de portadas, autorizado por Juan 29 oct 2026): 5-poster_LOS PÁJAROS.jpg"
   },
   {
+   "titulo": "Made to Shine",
+   "tmdb_id": 1812223,
+   "titulo_original": "Made to Shine",
+   "synopsis_es": "",
+   "synopsis_en": "The creative process of a drag artist reveals the work behind a stage identity.",
+   "genero": "Documental",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 8,
+   "pais_tmdb": "",
+   "lbSlug": "made-to-shine",
+   "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 30 oct 2026 desde el afiche y el calendario oficial de FICIDI",
+   "_director": "Mariana Gutiérrez Zapata",
+   "_sondeado": "2026-10-30",
+   "poster": "/assets/ficidi-2026/made-to-shine.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: enviado por el festival a Juan el 29 oct 2026, nombrado por ellos como el afiche de «Made to Shine»: POSTER MADE TO SHINE.jpeg"
+  },
+  {
    "titulo": "Maricones",
    "tmdb_id": 1756766,
    "titulo_original": "Maricones",
@@ -423,6 +459,42 @@
    "_afiche": "declarado: portada enviada por el festival (Drive de portadas, autorizado por Juan 29 oct 2026): 54-poster_Maricones.jpg",
    "poster": "/assets/ficidi-2026/maricones.jpg",
    "posterSource": "oficial"
+  },
+  {
+   "titulo": "Miradas Trans-Parentes",
+   "tmdb_id": 1812222,
+   "titulo_original": "Miradas Trans-Parentes",
+   "synopsis_es": "Un archivo visual y afectivo recoge experiencias trans y no binarias, vínculos y memorias.",
+   "synopsis_en": "A visual and affective archive gathers trans and non-binary experiences, bonds and memories.",
+   "genero": "Documental",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 3,
+   "pais_tmdb": "",
+   "lbSlug": "miradas-trans-parentes",
+   "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 30 oct 2026 desde el afiche y el calendario oficial de FICIDI",
+   "_director": "Efra",
+   "_sondeado": "2026-10-30",
+   "poster": "/assets/ficidi-2026/miradas-trans-parentes.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: enviado por el festival a Juan el 29 oct 2026, nombrado por ellos como el afiche de «Miradas Trans-Parentes»: POSTER MIRADAS TRANS PARENTES.png"
+  },
+  {
+   "titulo": "Muñecas de porcelana",
+   "tmdb_id": 1812213,
+   "titulo_original": "Muñecas de porcelana",
+   "synopsis_es": "La identidad y los vínculos familiares se ponen a prueba ante las dificultades de la aceptación.",
+   "synopsis_en": "Identity and family bonds are put to the test by the difficulties of acceptance.",
+   "genero": "Drama",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 8,
+   "pais_tmdb": "",
+   "lbSlug": "munecas-de-porcelana-1",
+   "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 30 oct 2026 desde el afiche y el calendario oficial de FICIDI",
+   "_director": "Antonio José López Gómez",
+   "_sondeado": "2026-10-30",
+   "poster": "/assets/ficidi-2026/munecas-de-porcelana.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: portada enviada por el festival (Drive de portadas, autorizado por Juan 29 oct 2026): 6-poster_muñecas de porcelana (Porcelain dolls).jpg"
   },
   {
    "titulo": "Más allá de la corona",
@@ -481,6 +553,24 @@
    "poster": "/assets/ficidi-2026/o-diario-imaginado.jpg",
    "posterSource": "oficial",
    "_afiche": "declarado: portada enviada por el festival (Drive de portadas, autorizado por Juan 29 oct 2026): 80-poster_O Diário Imaginado.jpg"
+  },
+  {
+   "titulo": "Onades",
+   "tmdb_id": 1554852,
+   "titulo_original": "Onades",
+   "synopsis_es": "Álvaro regresa a su pueblo mediterráneo para vender la casa familiar. Allí, el Mediterráneo cobra vida y lo guía a través de leyendas, costumbres y recuerdos, en un viaje íntimo donde pasado y presente se entrelazan. Onades es una fábula contemporánea sobre identidad, nostalgia y deseo, un corto poético y queer nacido desde y para La Vila.",
+   "synopsis_en": "Álvaro returns to his Mediterranean hometown to sell the family house. There, the Mediterranean comes alive and guides him through legends, customs and memories, on an intimate journey where past and present intertwine. Onades is a contemporary fable about identity, nostalgia and desire, a poetic and queer short film created from and for La Vila.",
+   "genero": "Drama",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 20,
+   "pais_tmdb": "Spain",
+   "lbSlug": "onades",
+   "_verificado": "declarada a mano: TMDB 1554852: mismo título, Andoni Martínez, España, 15 min; el candado no la tomó porque nos falta el año",
+   "_director": "Andoni Martínez",
+   "_sondeado": "2026-10-30",
+   "poster": "/assets/ficidi-2026/onades.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: portada enviada por el festival (Drive de portadas, autorizado por Juan 29 oct 2026): 58-poster_Onades.jpg"
   },
   {
    "titulo": "Perros",
@@ -628,6 +718,42 @@
    "posterSource": "oficial"
   },
   {
+   "titulo": "Reina de polvo y luz",
+   "tmdb_id": 1812220,
+   "titulo_original": "Reina de polvo y luz",
+   "synopsis_es": "Un joven confronta los prejuicios de su entorno y busca reconocerse a través de un espacio drag.",
+   "synopsis_en": "A young man confronts the prejudices of those around him and seeks to recognize himself through a drag space.",
+   "genero": "Drama",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 16,
+   "pais_tmdb": "",
+   "lbSlug": "reina-de-polvo-y-luz",
+   "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 30 oct 2026 desde el afiche y el calendario oficial de FICIDI",
+   "_director": "José Luis Ostos Molina",
+   "_sondeado": "2026-10-30",
+   "poster": "/assets/ficidi-2026/reina-de-polvo-y-luz.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: portada enviada por el festival (Drive de portadas, autorizado por Juan 29 oct 2026): 76-poster_Reina de Polvo y Luz.jpg"
+  },
+  {
+   "titulo": "Solo Natalie",
+   "tmdb_id": 1812219,
+   "titulo_original": "Solo Natalie",
+   "synopsis_es": "Un trabajador sexual explora la relación entre su identidad y el personaje femenino que interpreta.",
+   "synopsis_en": "A sex worker explores the relationship between his identity and the female character he plays.",
+   "genero": "Drama",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 13,
+   "pais_tmdb": "",
+   "lbSlug": "solo-natalie",
+   "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 30 oct 2026 desde el afiche y el calendario oficial de FICIDI",
+   "_director": "Natalie Ramón Ramírez",
+   "_sondeado": "2026-10-30",
+   "poster": "/assets/ficidi-2026/solo-natalie.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: portada enviada por el festival (Drive de portadas, autorizado por Juan 29 oct 2026): 71-poster_SOLO NATALIE.jpg"
+  },
+  {
    "titulo": "Todos los nombres empiezan con M",
    "tmdb_id": 1661544,
    "titulo_original": "Todos los nombres empiezan con M",
@@ -705,6 +831,24 @@
    "_afiche": "declarado: portada enviada por el festival (Drive de portadas, autorizado por Juan 29 oct 2026): 12-poster_Tia Morgana.jpg"
   },
   {
+   "titulo": "Verano",
+   "tmdb_id": 1721867,
+   "titulo_original": "Verano",
+   "synopsis_es": "",
+   "synopsis_en": "",
+   "genero": "Drama",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "Brazil",
+   "lbSlug": "verano-2",
+   "_verificado": "declarada a mano: TMDB 1721867: mismo título, Daniel Zacariotti, Brasil; TMDB sin año ni duración, el candado no tenía con qué corroborar",
+   "_director": "Daniel Zacariotti",
+   "_sondeado": "2026-10-30",
+   "poster": "/assets/ficidi-2026/verano.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: portada enviada por el festival (Drive de portadas, autorizado por Juan 29 oct 2026): 15-poster_Verano.jpg"
+  },
+  {
    "titulo": "Verdades",
    "tmdb_id": 1653100,
    "titulo_original": "Verdades",
@@ -724,19 +868,19 @@
    "_afiche": "declarado: portada enviada por el festival (Drive de portadas, autorizado por Juan 29 oct 2026): 34-poster_Verdades.jpg"
   },
   {
-   "titulo": "Exilio",
-   "poster": "/assets/ficidi-2026/exilio.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: portada enviada por el festival (Drive de portadas, autorizado por Juan 29 oct 2026): 1-poster_Exilio.jpg"
-  },
-  {
-   "titulo": "Verano",
-   "poster": "/assets/ficidi-2026/verano.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: portada enviada por el festival (Drive de portadas, autorizado por Juan 29 oct 2026): 15-poster_Verano.jpg"
-  },
-  {
    "titulo": "Verdulera",
+   "tmdb_id": 1812218,
+   "titulo_original": "Verdulera",
+   "synopsis_es": "Una persona que busca pareja confronta sus propios fantasmas tras sufrir ghosting.",
+   "synopsis_en": "A person looking for a partner confronts their own ghosts after being ghosted.",
+   "genero": "Comedia",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 5,
+   "pais_tmdb": "",
+   "lbSlug": "verdulera",
+   "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 30 oct 2026 desde el afiche y el calendario oficial de FICIDI",
+   "_director": "Jose Barbado",
+   "_sondeado": "2026-10-30",
    "poster": "/assets/ficidi-2026/verdulera.jpg",
    "posterSource": "oficial",
    "_afiche": "declarado: portada enviada por el festival (Drive de portadas, autorizado por Juan 29 oct 2026): 2-poster_Verdulera.jpg"
@@ -766,34 +910,10 @@
    "_afiche": "declarado: portada enviada por el festival (Drive de portadas, autorizado por Juan 29 oct 2026): 51-poster_De aquellos polvos.jpg"
   },
   {
-   "titulo": "Onades",
-   "poster": "/assets/ficidi-2026/onades.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: portada enviada por el festival (Drive de portadas, autorizado por Juan 29 oct 2026): 58-poster_Onades.jpg"
-  },
-  {
-   "titulo": "Muñecas de porcelana",
-   "poster": "/assets/ficidi-2026/munecas-de-porcelana.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: portada enviada por el festival (Drive de portadas, autorizado por Juan 29 oct 2026): 6-poster_muñecas de porcelana (Porcelain dolls).jpg"
-  },
-  {
    "titulo": "Young Wild Things",
    "poster": "/assets/ficidi-2026/young-wild-things.jpg",
    "posterSource": "oficial",
    "_afiche": "declarado: portada enviada por el festival (Drive de portadas, autorizado por Juan 29 oct 2026): 69-poster_Young Wild Things.jpg"
-  },
-  {
-   "titulo": "Solo Natalie",
-   "poster": "/assets/ficidi-2026/solo-natalie.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: portada enviada por el festival (Drive de portadas, autorizado por Juan 29 oct 2026): 71-poster_SOLO NATALIE.jpg"
-  },
-  {
-   "titulo": "Reina de polvo y luz",
-   "poster": "/assets/ficidi-2026/reina-de-polvo-y-luz.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: portada enviada por el festival (Drive de portadas, autorizado por Juan 29 oct 2026): 76-poster_Reina de Polvo y Luz.jpg"
   },
   {
    "titulo": "Travestis, bombas y un cortejo fúnebre",
@@ -914,18 +1034,6 @@
    "poster": "/assets/ficidi-2026/yo-soy-yo.jpg",
    "posterSource": "oficial",
    "_afiche": "declarado: enviado por el festival a Juan el 29 oct 2026, nombrado por ellos como el afiche de «Yo soy yo»: 44-poster_Soy quien soy.jpg"
-  },
-  {
-   "titulo": "Miradas Trans-Parentes",
-   "poster": "/assets/ficidi-2026/miradas-trans-parentes.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: enviado por el festival a Juan el 29 oct 2026, nombrado por ellos como el afiche de «Miradas Trans-Parentes»: POSTER MIRADAS TRANS PARENTES.png"
-  },
-  {
-   "titulo": "Made to Shine",
-   "poster": "/assets/ficidi-2026/made-to-shine.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: enviado por el festival a Juan el 29 oct 2026, nombrado por ellos como el afiche de «Made to Shine»: POSTER MADE TO SHINE.jpeg"
   }
  ],
  "verificadas": {
@@ -1131,6 +1239,23 @@
    "posterSource": "oficial",
    "_afiche": "declarado: portada enviada por el festival (Drive de portadas, autorizado por Juan 29 oct 2026): 4-poster_El bañador.jpg"
   },
+  "Exilio": {
+   "tmdb_id": 1812216,
+   "titulo_original": "Exilio",
+   "synopsis_es": "Tres jóvenes viajan en busca de su identidad a través de la memoria y el deseo.",
+   "synopsis_en": "Three young people travel in search of their identity through memory and desire.",
+   "genero": "Drama",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 28,
+   "pais_tmdb": "",
+   "lbSlug": "exilio-2",
+   "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 30 oct 2026 desde el afiche y el calendario oficial de FICIDI",
+   "_director": "Ander Parra",
+   "_sondeado": "2026-10-30",
+   "poster": "/assets/ficidi-2026/exilio.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: portada enviada por el festival (Drive de portadas, autorizado por Juan 29 oct 2026): 1-poster_Exilio.jpg"
+  },
   "Fielmente": {
    "tmdb_id": 1765996,
    "titulo_original": "Faithfully",
@@ -1295,6 +1420,23 @@
    "posterSource": "oficial",
    "_afiche": "declarado: portada enviada por el festival (Drive de portadas, autorizado por Juan 29 oct 2026): 5-poster_LOS PÁJAROS.jpg"
   },
+  "Made to Shine": {
+   "tmdb_id": 1812223,
+   "titulo_original": "Made to Shine",
+   "synopsis_es": "",
+   "synopsis_en": "The creative process of a drag artist reveals the work behind a stage identity.",
+   "genero": "Documental",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 8,
+   "pais_tmdb": "",
+   "lbSlug": "made-to-shine",
+   "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 30 oct 2026 desde el afiche y el calendario oficial de FICIDI",
+   "_director": "Mariana Gutiérrez Zapata",
+   "_sondeado": "2026-10-30",
+   "poster": "/assets/ficidi-2026/made-to-shine.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: enviado por el festival a Juan el 29 oct 2026, nombrado por ellos como el afiche de «Made to Shine»: POSTER MADE TO SHINE.jpeg"
+  },
   "Maricones": {
    "tmdb_id": 1756766,
    "titulo_original": "Maricones",
@@ -1327,6 +1469,40 @@
    "_afiche": "declarado: portada enviada por el festival (Drive de portadas, autorizado por Juan 29 oct 2026): 54-poster_Maricones.jpg",
    "poster": "/assets/ficidi-2026/maricones.jpg",
    "posterSource": "oficial"
+  },
+  "Miradas Trans-Parentes": {
+   "tmdb_id": 1812222,
+   "titulo_original": "Miradas Trans-Parentes",
+   "synopsis_es": "Un archivo visual y afectivo recoge experiencias trans y no binarias, vínculos y memorias.",
+   "synopsis_en": "A visual and affective archive gathers trans and non-binary experiences, bonds and memories.",
+   "genero": "Documental",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 3,
+   "pais_tmdb": "",
+   "lbSlug": "miradas-trans-parentes",
+   "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 30 oct 2026 desde el afiche y el calendario oficial de FICIDI",
+   "_director": "Efra",
+   "_sondeado": "2026-10-30",
+   "poster": "/assets/ficidi-2026/miradas-trans-parentes.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: enviado por el festival a Juan el 29 oct 2026, nombrado por ellos como el afiche de «Miradas Trans-Parentes»: POSTER MIRADAS TRANS PARENTES.png"
+  },
+  "Muñecas de porcelana": {
+   "tmdb_id": 1812213,
+   "titulo_original": "Muñecas de porcelana",
+   "synopsis_es": "La identidad y los vínculos familiares se ponen a prueba ante las dificultades de la aceptación.",
+   "synopsis_en": "Identity and family bonds are put to the test by the difficulties of acceptance.",
+   "genero": "Drama",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 8,
+   "pais_tmdb": "",
+   "lbSlug": "munecas-de-porcelana-1",
+   "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 30 oct 2026 desde el afiche y el calendario oficial de FICIDI",
+   "_director": "Antonio José López Gómez",
+   "_sondeado": "2026-10-30",
+   "poster": "/assets/ficidi-2026/munecas-de-porcelana.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: portada enviada por el festival (Drive de portadas, autorizado por Juan 29 oct 2026): 6-poster_muñecas de porcelana (Porcelain dolls).jpg"
   },
   "Más allá de la corona": {
    "tmdb_id": 1738928,
@@ -1383,6 +1559,23 @@
    "poster": "/assets/ficidi-2026/o-diario-imaginado.jpg",
    "posterSource": "oficial",
    "_afiche": "declarado: portada enviada por el festival (Drive de portadas, autorizado por Juan 29 oct 2026): 80-poster_O Diário Imaginado.jpg"
+  },
+  "Onades": {
+   "tmdb_id": 1554852,
+   "titulo_original": "Onades",
+   "synopsis_es": "Álvaro regresa a su pueblo mediterráneo para vender la casa familiar. Allí, el Mediterráneo cobra vida y lo guía a través de leyendas, costumbres y recuerdos, en un viaje íntimo donde pasado y presente se entrelazan. Onades es una fábula contemporánea sobre identidad, nostalgia y deseo, un corto poético y queer nacido desde y para La Vila.",
+   "synopsis_en": "Álvaro returns to his Mediterranean hometown to sell the family house. There, the Mediterranean comes alive and guides him through legends, customs and memories, on an intimate journey where past and present intertwine. Onades is a contemporary fable about identity, nostalgia and desire, a poetic and queer short film created from and for La Vila.",
+   "genero": "Drama",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 20,
+   "pais_tmdb": "Spain",
+   "lbSlug": "onades",
+   "_verificado": "declarada a mano: TMDB 1554852: mismo título, Andoni Martínez, España, 15 min; el candado no la tomó porque nos falta el año",
+   "_director": "Andoni Martínez",
+   "_sondeado": "2026-10-30",
+   "poster": "/assets/ficidi-2026/onades.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: portada enviada por el festival (Drive de portadas, autorizado por Juan 29 oct 2026): 58-poster_Onades.jpg"
   },
   "Perros": {
    "tmdb_id": 1613681,
@@ -1527,6 +1720,40 @@
    "poster": "/assets/ficidi-2026/refraccion.jpg",
    "posterSource": "oficial"
   },
+  "Reina de polvo y luz": {
+   "tmdb_id": 1812220,
+   "titulo_original": "Reina de polvo y luz",
+   "synopsis_es": "Un joven confronta los prejuicios de su entorno y busca reconocerse a través de un espacio drag.",
+   "synopsis_en": "A young man confronts the prejudices of those around him and seeks to recognize himself through a drag space.",
+   "genero": "Drama",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 16,
+   "pais_tmdb": "",
+   "lbSlug": "reina-de-polvo-y-luz",
+   "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 30 oct 2026 desde el afiche y el calendario oficial de FICIDI",
+   "_director": "José Luis Ostos Molina",
+   "_sondeado": "2026-10-30",
+   "poster": "/assets/ficidi-2026/reina-de-polvo-y-luz.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: portada enviada por el festival (Drive de portadas, autorizado por Juan 29 oct 2026): 76-poster_Reina de Polvo y Luz.jpg"
+  },
+  "Solo Natalie": {
+   "tmdb_id": 1812219,
+   "titulo_original": "Solo Natalie",
+   "synopsis_es": "Un trabajador sexual explora la relación entre su identidad y el personaje femenino que interpreta.",
+   "synopsis_en": "A sex worker explores the relationship between his identity and the female character he plays.",
+   "genero": "Drama",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 13,
+   "pais_tmdb": "",
+   "lbSlug": "solo-natalie",
+   "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 30 oct 2026 desde el afiche y el calendario oficial de FICIDI",
+   "_director": "Natalie Ramón Ramírez",
+   "_sondeado": "2026-10-30",
+   "poster": "/assets/ficidi-2026/solo-natalie.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: portada enviada por el festival (Drive de portadas, autorizado por Juan 29 oct 2026): 71-poster_SOLO NATALIE.jpg"
+  },
   "Todos los nombres empiezan con M": {
    "tmdb_id": 1661544,
    "titulo_original": "Todos los nombres empiezan con M",
@@ -1600,6 +1827,23 @@
    "posterSource": "oficial",
    "_afiche": "declarado: portada enviada por el festival (Drive de portadas, autorizado por Juan 29 oct 2026): 12-poster_Tia Morgana.jpg"
   },
+  "Verano": {
+   "tmdb_id": 1721867,
+   "titulo_original": "Verano",
+   "synopsis_es": "",
+   "synopsis_en": "",
+   "genero": "Drama",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "Brazil",
+   "lbSlug": "verano-2",
+   "_verificado": "declarada a mano: TMDB 1721867: mismo título, Daniel Zacariotti, Brasil; TMDB sin año ni duración, el candado no tenía con qué corroborar",
+   "_director": "Daniel Zacariotti",
+   "_sondeado": "2026-10-30",
+   "poster": "/assets/ficidi-2026/verano.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: portada enviada por el festival (Drive de portadas, autorizado por Juan 29 oct 2026): 15-poster_Verano.jpg"
+  },
   "Verdades": {
    "tmdb_id": 1653100,
    "titulo_original": "Verdades",
@@ -1617,6 +1861,23 @@
    "poster": "/assets/ficidi-2026/verdades.jpg",
    "posterSource": "oficial",
    "_afiche": "declarado: portada enviada por el festival (Drive de portadas, autorizado por Juan 29 oct 2026): 34-poster_Verdades.jpg"
+  },
+  "Verdulera": {
+   "tmdb_id": 1812218,
+   "titulo_original": "Verdulera",
+   "synopsis_es": "Una persona que busca pareja confronta sus propios fantasmas tras sufrir ghosting.",
+   "synopsis_en": "A person looking for a partner confronts their own ghosts after being ghosted.",
+   "genero": "Comedia",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 5,
+   "pais_tmdb": "",
+   "lbSlug": "verdulera",
+   "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 30 oct 2026 desde el afiche y el calendario oficial de FICIDI",
+   "_director": "Jose Barbado",
+   "_sondeado": "2026-10-30",
+   "poster": "/assets/ficidi-2026/verdulera.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: portada enviada por el festival (Drive de portadas, autorizado por Juan 29 oct 2026): 2-poster_Verdulera.jpg"
   }
  },
  "sin_ficha": [
@@ -1630,25 +1891,16 @@
   "Corpo e Identidade",
   "De aquellos polvos",
   "Espacios húmedos",
-  "Exilio",
   "Fragmentos",
   "Jamás volveremos",
   "Kiboko",
-  "Made to Shine",
   "Mil mortes de um sobrevivente",
-  "Miradas Trans-Parentes",
-  "Muñecas de porcelana",
   "No",
-  "Onades",
   "Pendiente de estrella",
   "Pepa Gaitán presente, Ahora y Siempre",
-  "Reina de polvo y luz",
-  "Solo Natalie",
   "Todo lo que pasará mañana",
   "Travestis, bombas y un cortejo fúnebre",
   "Tuesday Session",
-  "Verano",
-  "Verdulera",
   "Yo soy yo",
   "Young Wild Things",
   "¿Me vas a estar esperando?",
@@ -1696,10 +1948,6 @@
    "director": "Guillermo Paiva",
    "fecha": "2026-10-29"
   },
-  "Exilio": {
-   "director": "Ander Parra",
-   "fecha": "2026-10-29"
-  },
   "Fragmentos": {
    "director": "Camila Andrea Pérez León",
    "fecha": "2026-10-29"
@@ -1712,28 +1960,12 @@
    "director": "Julie-estel Soard, Noelia Fluxá",
    "fecha": "2026-10-29"
   },
-  "Made to Shine": {
-   "director": "Mariana Gutiérrez Zapata",
-   "fecha": "2026-10-29"
-  },
   "Mil mortes de um sobrevivente": {
    "director": "Tatiana Cantalejo",
    "fecha": "2026-10-29"
   },
-  "Miradas Trans-Parentes": {
-   "director": "Efra",
-   "fecha": "2026-10-29"
-  },
-  "Muñecas de porcelana": {
-   "director": "Antonio José López Gómez",
-   "fecha": "2026-10-29"
-  },
   "No": {
    "director": "Luis Daniel Abril",
-   "fecha": "2026-10-29"
-  },
-  "Onades": {
-   "director": "Andoni Martínez",
    "fecha": "2026-10-29"
   },
   "Pendiente de estrella": {
@@ -1742,14 +1974,6 @@
   },
   "Pepa Gaitán presente, Ahora y Siempre": {
    "director": "Valeria Romina Albarracín",
-   "fecha": "2026-10-29"
-  },
-  "Reina de polvo y luz": {
-   "director": "José Luis Ostos Molina",
-   "fecha": "2026-10-29"
-  },
-  "Solo Natalie": {
-   "director": "Natalie Ramón Ramírez",
    "fecha": "2026-10-29"
   },
   "Todo lo que pasará mañana": {
@@ -1762,14 +1986,6 @@
   },
   "Tuesday Session": {
    "director": "David Martinez Rojas",
-   "fecha": "2026-10-29"
-  },
-  "Verano": {
-   "director": "Daniel Zacariotti",
-   "fecha": "2026-10-29"
-  },
-  "Verdulera": {
-   "director": "Jose Barbado",
    "fecha": "2026-10-29"
   },
   "Yo soy yo": {
