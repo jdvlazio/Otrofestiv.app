@@ -228,12 +228,15 @@
      "_src": {
       "pdf": "Calendario_IV_FICIDI_2026.pdf · MARTES 3 nov, obra 02",
       "duracion": null,
-      "catalogo": "Pepa Gaitán presente, ahora y siempre"
+      "catalogo": "Pepa Gaitán presente, Ahora y Siempre"
      },
      "synopsis": "La historieta y la poesía recuperan la memoria de Pepa Gaitán y su defensa de la libertad.",
      "synopsis_lang": "es",
      "poster": "/assets/ficidi-2026/pepa-gaitan-presente-ahora-y-siempre.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "lbSlug": "pepa-gaitan-presente-ahora-y-siempre",
+     "tmdb_id": 1812481,
+     "synopsis_en": "Comics and poetry recover the memory of Pepa Gaitán and her defense of freedom."
     },
     {
      "title": "Fragmentos",
@@ -263,7 +266,10 @@
      "synopsis": "Un joven gimnasta lucha por competir en una disciplina estigmatizada por considerarse femenina.",
      "synopsis_lang": "es",
      "poster": "/assets/ficidi-2026/90-segundos.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "lbSlug": "90-segundos",
+     "tmdb_id": 1812486,
+     "synopsis_en": "A young gymnast fights to compete in a discipline stigmatized as feminine."
     },
     {
      "title": "Young Wild Things",
@@ -278,7 +284,10 @@
      "synopsis": "La confesión de bisexualidad de una joven deja al descubierto las dinámicas dañinas de una amistad de muchos años.",
      "synopsis_lang": "es",
      "poster": "/assets/ficidi-2026/young-wild-things.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "lbSlug": "young-wild-things",
+     "tmdb_id": 1812488,
+     "synopsis_en": "A young woman’s confession of bisexuality exposes the harmful dynamics of a long friendship."
     },
     {
      "title": "Dafne y Pol",
@@ -314,7 +323,10 @@
      "synopsis": "En terapia, Noa revive un conflicto familiar y enfrenta las consecuencias emocionales del rechazo.",
      "synopsis_lang": "es",
      "poster": "/assets/ficidi-2026/tuesday-session.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "lbSlug": "tuesday-session",
+     "tmdb_id": 1812489,
+     "synopsis_en": "In therapy, Noa relives a family conflict and faces the emotional consequences of rejection."
     }
    ],
    "description": "Siete cortometrajes.",
@@ -870,7 +882,10 @@
      "synopsis": "Un fotógrafo y su novio emprenden una aventura atravesada por la ausencia.",
      "synopsis_lang": "es",
      "poster": "/assets/ficidi-2026/quien-se-lleva-las-estrellas.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "lbSlug": "quien-se-lleva-las-estrellas",
+     "tmdb_id": 1812490,
+     "synopsis_en": "A photographer and his boyfriend set out on an adventure marked by absence."
     },
     {
      "title": "Verdades",
@@ -905,7 +920,10 @@
      "synopsis": "Durante unas vacaciones, dos jóvenes descubren un sentimiento nuevo y afrontan sus dudas.",
      "synopsis_lang": "es",
      "poster": "/assets/ficidi-2026/cielo-de-enero.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "lbSlug": "cielo-de-enero",
+     "tmdb_id": 1812491,
+     "synopsis_en": "During a vacation, two young women discover a new feeling and face their doubts."
     },
     {
      "title": "Jugo en polvo",
@@ -942,7 +960,10 @@
      "synopsis": "Un joven vuelve a acercarse a su madre después de años de separación.",
      "synopsis_lang": "es",
      "poster": "/assets/ficidi-2026/me-vas-a-estar-esperando.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "lbSlug": "me-vas-a-estar-esperando",
+     "tmdb_id": 1812493,
+     "synopsis_en": "A young man reconnects with his mother after years of separation."
     },
     {
      "title": "621km",
@@ -1103,7 +1124,10 @@
      "synopsis": "Un actor colombiano y una influencer argentina intentan reconstruir sus carreras entre audiciones, promesas y vínculos frágiles.",
      "synopsis_lang": "es",
      "poster": "/assets/ficidi-2026/cast-me.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "lbSlug": "cast-me-1",
+     "tmdb_id": 1812495,
+     "synopsis_en": "A Colombian actor and an Argentine influencer try to rebuild their careers amid auditions, promises and fragile bonds."
     },
     {
      "title": "Todo lo que pasará mañana",
@@ -1573,7 +1597,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-30T05:45:13",
+  "fecha": "2026-10-30T06:10:44",
   "plan_sha": "7f1d2e48ae2becc3",
   "paso": 9,
   "cmd": "python3 pipeline/ficidi-2026-verificar.py"

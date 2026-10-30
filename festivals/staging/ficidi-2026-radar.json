@@ -4,7 +4,7 @@
   "capturado": "2026-10-30",
   "titulo": "RADAR: Festival Internacional de Cine Diverso (FICIDI) — Barranquilla, 4–7 NOV (IV)",
   "estado": "OPEN",
-  "comentarios": 3
+  "comentarios": 4
  },
  "issue": 1042,
  "titulo": "RADAR: Festival Internacional de Cine Diverso (FICIDI) — Barranquilla, 4–7 NOV (IV)",
@@ -22,6 +22,10 @@
   {
    "fecha": "2026-10-29",
    "cuerpo": "**Vigía 29 oct 09:00 — FICIDI publicó la INAUGURACIÓN del 4 nov** (https://www.instagram.com/p/DfDlyoFEdJD/, vía Apify; miré las 12 láminas)\n\n- **Proyección inaugural**: homenaje a Víctor Ladrón de Guevara «La Loba» | Gustavo Turizo. **4 de noviembre · 6:00 p. m. · Alianza Francesa de Barranquilla, Calle 52 # 54-75 · Entrada libre** (lo leí en la lámina 1; el pie dice lo mismo).\n- **Conversatorio «La Memoria Revelada»**: Retrospectiva y memoria, dinámicas diversas en Barranquilla, con Danny González Cueto, Víctor Ladrón de Guevara «La Loba» y Hemel Noreña, más un micrófono abierto «para recordar memorias diversas» (lámina 2). En la lámina no figura la hora del conversatorio; el pie lo pone dentro de la misma convocatoria de las 6:00 p. m.\n- **Láminas 3 a 11**: 9 tarjetas de «Selección oficial»: Travas sobrevivientes (Valeria Meneguzzi · Cristian Gonzalez, Argentina, 11) · Transitar lo marica negro (May Romero Quiñones, Colombia, 6 min) · Yo soy yo (Norberto Díaz, Colombia, 22 min) · Maricones (Maria Paz Ruiz Gonzalez, Colombia, 14 min) · Solo Natalie (Natalie Ramón Ramírez, España, 13 min) · Reina de polvo y luz (José Luis-Ostos Molina, España, 16 min) · Más allá de la corona (Juan David Mesa Buitrago, Colombia, 15 min) · Miradas trans-parentes (Efra, Colombia, 3 min) · Made to Shine (Mariana Gutiérrez Zapata, Colombia, 8 min). ⚠ El post **no dice de forma explícita** que estos 9 cortos sean el programa de la proyección inaugural: lo sugiere el carrusel, pero hay que confirmarlo.\n- Se suma a lo del día 1 que ya estaba reportado (2:00 p. m., Universidad Simón Bolívar). La web del festival sigue sin programación (la home trae 63 caracteres de texto).\n"
+  },
+  {
+   "fecha": "2026-10-30",
+   "cuerpo": "**Vigía 30 oct 05:40 — FICIDI, Día 2 (jue 5 nov, 18:00, La Maloca Cultural):** https://www.instagram.com/p/DfGMc0HkcHB/ (14 láminas, miradas). Fecha, hora, sede y las 12 obras en orden coinciden con la app. Duraciones según las láminas: El bañador **13** min (lám. 2; app 14), Blue Berri **17** (lám. 4; app 16). La app no tiene estas: Tía Morgana 22 (lám. 5), Verano 15 (6), ¿Quién se lleva las estrellas? 17 (7), Cielo de enero 20 (9), ¿Me vas a estar esperando? 5 (11), 621km 4 (12), 1 año y un mes en Colombiamaricx 6 (13).\nAdemás: ficidi-2026 **no está en indice.json del almacén** (solo en la copia de main), y src/config.js no tiene `instagram:` → ig_vigia no lo vigila (SIN_CUENTA_IG)."
   }
  ]
 }
