@@ -1142,7 +1142,10 @@
      "synopsis": "Un encuentro entre amigos se convierte en una experiencia que altera su realidad y transforma sus relaciones.",
      "synopsis_lang": "es",
      "poster": "/assets/ficidi-2026/todo-lo-que-pasara-manana.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "lbSlug": "todo-lo-que-pasara-manana",
+     "tmdb_id": 1812504,
+     "synopsis_en": "A gathering of friends turns into an experience that alters their reality and transforms their relationships."
     },
     {
      "title": "Há sinais",
@@ -1178,7 +1181,10 @@
      "synopsis": "Un hombre que vive con VIH enfrenta el estigma y una decisión que puede cambiar su vida.",
      "synopsis_lang": "es",
      "poster": "/assets/ficidi-2026/amor-en-positivo.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "lbSlug": "amor-en-positivo",
+     "tmdb_id": 1812505,
+     "synopsis_en": "A man living with HIV faces stigma and a decision that could change his life."
     },
     {
      "title": "Fielmente",
@@ -1233,7 +1239,11 @@
      "synopsis": "Testimonios y recreaciones reconstruyen la historia de un bar convertido en símbolo de libertad.",
      "synopsis_lang": "es",
      "poster": "/assets/ficidi-2026/kiboko.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "lbSlug": "kiboko",
+     "tmdb_id": 1812508,
+     "synopsis_en": "Testimonies and reenactments reconstruct the story of a bar that became a symbol of freedom.",
+     "genre": "Documental"
     },
     {
      "title": "Alwasiyya",
@@ -1320,7 +1330,10 @@
      "synopsis": "Un joven expulsado de su hogar por ser homosexual debe decidir si retoma el contacto con su familia.",
      "synopsis_lang": "es",
      "poster": "/assets/ficidi-2026/ansio-despertar.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "lbSlug": "ansio-despertar",
+     "tmdb_id": 1812509,
+     "synopsis_en": "A young man thrown out of his home for being gay must decide whether to reconnect with his family."
     },
     {
      "title": "Pendiente de estrella",
@@ -1335,7 +1348,10 @@
      "synopsis": "Tras una agresión, un joven afronta el juicio mediático y decide si cuenta su verdad.",
      "synopsis_lang": "es",
      "poster": "/assets/ficidi-2026/pendiente-de-estrella.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "lbSlug": "pendiente-de-estrella",
+     "tmdb_id": 1812512,
+     "synopsis_en": "After an assault, a young man faces trial by media and decides whether to tell his truth."
     },
     {
      "title": "De aquellos polvos",
@@ -1350,7 +1366,10 @@
      "synopsis": "Una mujer realiza un trabajo físico e invisible mientras carga con responsabilidades de cuidado.",
      "synopsis_lang": "es",
      "poster": "/assets/ficidi-2026/de-aquellos-polvos.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "lbSlug": "de-aquellos-polvos",
+     "tmdb_id": 1812514,
+     "synopsis_en": "A woman does physical, invisible work while carrying the weight of caregiving responsibilities."
     },
     {
      "title": "Mil mortes de um sobrevivente",
@@ -1365,7 +1384,10 @@
      "synopsis": "La separación de dos hermanos revela heridas vinculadas a la violencia, el racismo y la homofobia.",
      "synopsis_lang": "es",
      "poster": "/assets/ficidi-2026/mil-mortes-de-um-sobrevivente.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "lbSlug": "mil-mortes-de-um-sobrevivente",
+     "tmdb_id": 1812515,
+     "synopsis_en": "The separation of two brothers reveals wounds tied to violence, racism and homophobia."
     },
     {
      "title": "Perros",
@@ -1401,7 +1423,10 @@
      "synopsis": "Una procesión travesti en la Barcelona de 1933 revela la destrucción de un refugio y un acto de resistencia queer.",
      "synopsis_lang": "es",
      "poster": "/assets/ficidi-2026/travestis-bombas-y-un-cortejo-funebre.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "lbSlug": "travestis-bombas-y-un-cortejo-funebre",
+     "tmdb_id": 1812519,
+     "synopsis_en": "A trans procession in 1933 Barcelona reveals the destruction of a refuge and an act of queer resistance."
     },
     {
      "title": "Jamás volveremos",
@@ -1416,7 +1441,10 @@
      "synopsis": "Una familia queer recibe a alguien que altera su convivencia y sus vínculos.",
      "synopsis_lang": "es",
      "poster": "/assets/ficidi-2026/jamas-volveremos.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "lbSlug": "jamas-volveremos",
+     "tmdb_id": 1812521,
+     "synopsis_en": "A queer family takes in someone who upends their life together and their bonds."
     },
     {
      "title": "¿Y a mí, quién me cuida? Experiencias negras diversas en el paro nacional del 2021",
@@ -1426,12 +1454,15 @@
      "_src": {
       "pdf": "Calendario_IV_FICIDI_2026.pdf · VIERNES 6 nov, obra 09",
       "duracion": null,
-      "catalogo": "¿A mí quién me cuida? Experiencias negras diversas en el paro nacional del 2021"
+      "catalogo": "¿Y a mí, quién me cuida? Experiencias negras diversas en el paro nacional del 2021"
      },
      "synopsis": "Comunidades negras y afrodescendientes documentan organización, resistencia y cuidado durante el paro nacional.",
      "synopsis_lang": "es",
      "poster": "/assets/ficidi-2026/y-a-mi-quien-me-cuida-experiencias-negras-diversas-en-el-par.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "lbSlug": "y-a-mi-quien-me-cuida-experiencias-negras",
+     "tmdb_id": 1812522,
+     "synopsis_en": "Black and Afro-descendant communities document organizing, resistance and care during the 2021 national strike in Colombia."
     },
     {
      "title": "Espacios húmedos",
@@ -1446,7 +1477,10 @@
      "synopsis": "Un documental explora los saunas gays como espacios de encuentro y las formas de discriminación ligadas al territorio.",
      "synopsis_lang": "es",
      "poster": "/assets/ficidi-2026/espacios-humedos.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "lbSlug": "espacios-humedos",
+     "tmdb_id": 1812523,
+     "synopsis_en": "A documentary exploring gay saunas as meeting places and the forms of discrimination tied to territory."
     },
     {
      "title": "Aguijón Rojo",
@@ -1456,12 +1490,15 @@
      "_src": {
       "pdf": "Calendario_IV_FICIDI_2026.pdf · VIERNES 6 nov, obra 11",
       "duracion": null,
-      "catalogo": "Aguijón rojo"
+      "catalogo": "Aguijón Rojo"
      },
      "synopsis": "Una prueba de amor relacionada con el VIH revela consecuencias irreversibles.",
      "synopsis_lang": "es",
      "poster": "/assets/ficidi-2026/aguijon-rojo.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "lbSlug": "aguijon-rojo",
+     "tmdb_id": 1812525,
+     "synopsis_en": "A test of love involving HIV reveals irreversible consequences."
     }
    ],
    "_fid": "f_a6c79ab1b8",
@@ -1503,12 +1540,15 @@
      "_src": {
       "pdf": "Calendario_IV_FICIDI_2026.pdf · SÁBADO 7 nov, obra 01",
       "duracion": null,
-      "catalogo": "Corpo e identidade"
+      "catalogo": "Corpo e Identidade"
      },
      "synopsis": "Siete mujeres travestis de Brasil construyen su propia representación a través de la fotografía, los testimonios y la performance.",
      "synopsis_lang": "es",
      "poster": "/assets/ficidi-2026/corpo-e-identidade.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "lbSlug": "corpo-e-identidade",
+     "tmdb_id": 1812526,
+     "synopsis_en": "Seven travesti women from Brazil build their own representation through photography, testimony and performance."
     },
     {
      "title": "Danzan Las Luciérnagas",
@@ -1586,7 +1626,10 @@
      "synopsis": "Un hombre intenta construir un futuro con su pareja más joven, pero pierde de vista los deseos de él.",
      "synopsis_lang": "es",
      "poster": "/assets/ficidi-2026/no.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "lbSlug": "no-3",
+     "tmdb_id": 1812527,
+     "synopsis_en": "A man tries to build a future with his younger partner, but loses sight of what he wants."
     }
    ],
    "description": "Incluye “La otra mitad del dolor” + conversatorio con el equipo realizador Tonnie Zanabria y Ana Sofía Ávila desde México; y “NO” + conversatorio con el director Luis Daniel Abril desde Bogotá, Colombia.",
@@ -1597,7 +1640,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-30T06:10:44",
+  "fecha": "2026-10-30T06:33:50",
   "plan_sha": "7f1d2e48ae2becc3",
   "paso": 9,
   "cmd": "python3 pipeline/ficidi-2026-verificar.py"

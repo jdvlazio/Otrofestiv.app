@@ -69,8 +69,6 @@ SEDES = [
 ALIAS = {
     '621km': '621 km',
     '1 año y un mes en Colombiamaricx': '1 año y un mez en Colombiamaricx',   # «mez»: errata de la lectura de IG
-    '¿Y a mí, quién me cuida? Experiencias negras diversas en el paro nacional del 2021':
-        '¿A mí quién me cuida? Experiencias negras diversas en el paro nacional del 2021',
 }
 # LÁMINAS DE IG (dirección y minutos pintados), mirados uno por uno el 29 oct.
 # «(28)» y «(11)»: así, entre paréntesis, en Exilio y Travas sobrevivientes; las
