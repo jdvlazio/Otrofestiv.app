@@ -9,13 +9,17 @@
   "Santiago Calle García"
  ],
  "sinopsis": {
-  "es": "Un encuentro entre amigos se convierte en una experiencia que altera su realidad y transforma sus relaciones."
+  "es": "Un encuentro entre amigos se convierte en una experiencia que altera su realidad y transforma sus relaciones.",
+  "en": "A gathering of friends turns into an experience that alters their reality and transforms their relationships."
  },
  "afiche": {
   "archivo": "/assets/ficidi-2026/todo-lo-que-pasara-manana.jpg",
   "veredicto": "oficial"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 1812504,
+  "letterboxd": "todo-lo-que-pasara-manana"
+ },
  "presentaciones": [
   "ficidi-2026"
  ]

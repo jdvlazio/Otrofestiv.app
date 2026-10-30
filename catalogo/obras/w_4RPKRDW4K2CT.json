@@ -9,13 +9,17 @@
   "Ines Serrano"
  ],
  "sinopsis": {
-  "es": "La confesión de bisexualidad de una joven deja al descubierto las dinámicas dañinas de una amistad de muchos años."
+  "es": "La confesión de bisexualidad de una joven deja al descubierto las dinámicas dañinas de una amistad de muchos años.",
+  "en": "A young woman’s confession of bisexuality exposes the harmful dynamics of a long friendship."
  },
  "afiche": {
   "archivo": "/assets/ficidi-2026/young-wild-things.jpg",
   "veredicto": "oficial"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 1812488,
+  "letterboxd": "young-wild-things"
+ },
  "presentaciones": [
   "ficidi-2026"
  ]

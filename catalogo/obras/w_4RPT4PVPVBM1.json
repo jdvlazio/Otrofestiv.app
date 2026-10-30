@@ -9,13 +9,17 @@
   "Aranzazu Larrinaga"
  ],
  "sinopsis": {
-  "es": "Un actor colombiano y una influencer argentina intentan reconstruir sus carreras entre audiciones, promesas y vínculos frágiles."
+  "es": "Un actor colombiano y una influencer argentina intentan reconstruir sus carreras entre audiciones, promesas y vínculos frágiles.",
+  "en": "A Colombian actor and an Argentine influencer try to rebuild their careers amid auditions, promises and fragile bonds."
  },
  "afiche": {
   "archivo": "/assets/ficidi-2026/cast-me.jpg",
   "veredicto": "oficial"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 1812495,
+  "letterboxd": "cast-me-1"
+ },
  "presentaciones": [
   "ficidi-2026"
  ]

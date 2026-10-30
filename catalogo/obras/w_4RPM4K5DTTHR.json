@@ -9,13 +9,20 @@
   "Ander Parra"
  ],
  "sinopsis": {
-  "es": "Tres jóvenes viajan en busca de su identidad a través de la memoria y el deseo."
+  "es": "Tres jóvenes viajan en busca de su identidad a través de la memoria y el deseo.",
+  "en": "Three young people travel in search of their identity through memory and desire."
  },
+ "generos": [
+  "Drama"
+ ],
  "afiche": {
   "archivo": "/assets/ficidi-2026/exilio.jpg",
   "veredicto": "oficial"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 1812216,
+  "letterboxd": "exilio-2"
+ },
  "versiones": [
   {
    "etiqueta": "28 min",

@@ -1,7 +1,7 @@
 {
  "id": "w_4RPN7H4DBSS5",
  "titulo_original": "Onades",
- "anio": null,
+ "anio": 2026,
  "paises": [
   "ES"
  ],
@@ -9,13 +9,20 @@
   "Andoni Martínez"
  ],
  "sinopsis": {
-  "es": "El regreso a un pueblo conecta el territorio, las leyendas y la identidad."
+  "es": "El regreso a un pueblo conecta el territorio, las leyendas y la identidad.",
+  "en": "Álvaro returns to his Mediterranean hometown to sell the family house. There, the Mediterranean comes alive and guides him through legends, customs and memories, on an intimate journey where past and present intertwine. Onades is a contemporary fable about identity, nostalgia and desire, a poetic and queer short film created from and for La Vila."
  },
+ "generos": [
+  "Drama"
+ ],
  "afiche": {
   "archivo": "/assets/ficidi-2026/onades.jpg",
   "veredicto": "oficial"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 1554852,
+  "letterboxd": "onades"
+ },
  "versiones": [
   {
    "etiqueta": "15 min",

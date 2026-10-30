@@ -6,16 +6,20 @@
   "ES"
  ],
  "directores": [
-  "Álvaro J. Figueroa Garrucho"
+  "Álvaro J. Figueroa"
  ],
  "sinopsis": {
-  "es": "Un joven gimnasta lucha por competir en una disciplina estigmatizada por considerarse femenina."
+  "es": "Un joven gimnasta lucha por competir en una disciplina estigmatizada por considerarse femenina.",
+  "en": "A young gymnast fights to compete in a discipline stigmatized as feminine."
  },
  "afiche": {
   "archivo": "/assets/ficidi-2026/90-segundos.jpg",
   "veredicto": "oficial"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 1812486,
+  "letterboxd": "90-segundos"
+ },
  "presentaciones": [
   "ficidi-2026"
  ]

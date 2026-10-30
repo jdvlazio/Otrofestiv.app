@@ -6,16 +6,23 @@
   "ES"
  ],
  "directores": [
-  "Natalie Ramón Ramírez"
+  "Ramón Ramírez"
  ],
  "sinopsis": {
-  "es": "Un trabajador sexual explora la relación entre su identidad y el personaje femenino que interpreta."
+  "es": "Un trabajador sexual explora la relación entre su identidad y el personaje femenino que interpreta.",
+  "en": "A sex worker explores the relationship between his identity and the female character he plays."
  },
+ "generos": [
+  "Drama"
+ ],
  "afiche": {
   "archivo": "/assets/ficidi-2026/solo-natalie.jpg",
   "veredicto": "oficial"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 1812219,
+  "letterboxd": "solo-natalie"
+ },
  "versiones": [
   {
    "etiqueta": "13 min",

@@ -9,13 +9,17 @@
   "Cesar Guerrero"
  ],
  "sinopsis": {
-  "es": "Comunidades negras y afrodescendientes documentan organización, resistencia y cuidado durante el paro nacional."
+  "es": "Comunidades negras y afrodescendientes documentan organización, resistencia y cuidado durante el paro nacional.",
+  "en": "Black and Afro-descendant communities document organizing, resistance and care during the 2021 national strike in Colombia."
  },
  "afiche": {
   "archivo": "/assets/ficidi-2026/y-a-mi-quien-me-cuida-experiencias-negras-diversas-en-el-par.jpg",
   "veredicto": "oficial"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 1812522,
+  "letterboxd": "y-a-mi-quien-me-cuida-experiencias-negras"
+ },
  "presentaciones": [
   "ficidi-2026"
  ]
