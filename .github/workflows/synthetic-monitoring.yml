@@ -8,7 +8,7 @@ on:
 
 jobs:
   monitor:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04  # 26.04 rompe «playwright install» (28 oct 2026)
     name: Flujos críticos en producción
 
     steps:
