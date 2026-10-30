@@ -1007,6 +1007,7 @@ export const FESTIVAL_CONFIG={
     keyArt:'/assets/keyart/ficidi2026-v2.jpg',
     tagline:'Festival Internacional de Cine Diverso',
     city:'Barranquilla',country:'CO',
+    instagram:'festivaldecinediverso',
     dates:'3–7 NOV',dates_en:'NOV 3–7',year:2026,timezoneOffset:'-05:00',
     storageKey:'ficidi2026_',festivalStartStr:'2026-11-03T00:00:00',festivalEndStr:'2026-11-07T23:59:00',
     festivalDates:{'2026-11-03':'2026-11-03','2026-11-04':'2026-11-04','2026-11-05':'2026-11-05','2026-11-06':'2026-11-06','2026-11-07':'2026-11-07'},
