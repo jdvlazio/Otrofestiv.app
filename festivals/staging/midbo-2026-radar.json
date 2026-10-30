@@ -1,10 +1,10 @@
 {
  "_provenance": {
   "fuente": "issue de radar #1031 — https://github.com/jdvlazio/Otrofestiv.app/issues/1031",
-  "capturado": "2026-10-28",
+  "capturado": "2026-10-30",
   "titulo": "RADAR: Muestra Internacional Documental de Bogotá (MIDBO) — Bogotá, 28 OCT–4 NOV (28ª)",
   "estado": "OPEN",
-  "comentarios": 19
+  "comentarios": 21
  },
  "issue": 1031,
  "titulo": "RADAR: Muestra Internacional Documental de Bogotá (MIDBO) — Bogotá, 28 OCT–4 NOV (28ª)",
@@ -86,6 +86,14 @@
   {
    "fecha": "2026-10-28",
    "cuerpo": "**Vigía 28 oct 09:15 — MIDBO, carrusel del miércoles 28** (https://www.instagram.com/p/DfCiPvXoGqF/, Apify, las 7 láminas leídas a ojo)\n\n1. **Falta en la app:** «Un lugar más grande» (Nicolás Défossé, 115 min), **hoy 28 oct a las 6:00 p. m.** en el Paraninfo de la UdeA, Sala de Cine, Medellín. Es la inauguración paralela de Regiones, con Q&A y entrada libre (lámina 6). La app no tiene sedes en Medellín: la obra solo figura el 30 y el 31.\n2. **Título distinto:** a las 2:30 p. m. en la Alianza Francesa, la lámina 3 dice «Charla \"Herramientas inclusivas para personas sordas y ciegas. El caso de Estancia: accesible con audiodescripción\"», con intérprete de lengua de señas y entrada libre. La app dice «Charla: Audio descripción para documental», con inscripción.\n3. Observación: el bloque de las 4:00 p. m. «Espejos» sale en la lámina 4 como un solo programa de 3 cortos. La app lo parte en dos entradas.\n\nTodo lo demás del día coincide. La web (API, 121 obras, y los bloques de Funciones) está igual a la copia del 27 oct.\n"
+  },
+  {
+   "fecha": "2026-10-29",
+   "cuerpo": "**Vigía 29 oct 09:00 — MIDBO: la parrilla del jueves 29 coincide con producción** (https://www.instagram.com/p/DfFAx5LFU1E/, vía Apify; miré las 12 láminas). Las 19 funciones y actividades de las láminas están en la app con el mismo día, hora y sede. La API (121 obras) y las 121 fichas de la web, comparadas por contenido, no cambiaron desde ayer a las 09:35.\nHay una sola cosa para revisar: en la lámina 4, «OBRAS INSTALATIVAS» aparece en la Cinemateca de Bogotá, Sala E, de 2:00 a 6:00 p. m., como «Exposición permanente desde el 28 de octubre al 16 de noviembre». En la app la Sala E solo tiene dos eventos del 28 oct («Escuchar lo que permanece» a las 14:00 e «Inauguración Documental Expandido» a las 16:30). Si se quiere mostrar la exposición, podría ir como actividad abierta. Lo dejo a criterio de Onboarding.\n"
+  },
+  {
+   "fecha": "2026-10-30",
+   "cuerpo": "**Vigía 30 oct 09:00 — MIDBO canceló las dos funciones de hoy en la Universidad Nacional.** Leído en la lámina 3 del carrusel https://www.instagram.com/p/DfHn6M1AP4s/ (Apify), que lleva el sello «CANCELADO»: la causa es la suspensión de actividades presenciales en el campus.\n\n- 10:00 «Las almas ni los ojos» (Auditorio 313, ed. 303C NEA) → queda la función del lun 2 nov a las 19:30 en la Sala Capital de la Cinemateca\n- 14:00 «Hombres perdidos» (mismo auditorio) → queda la del dom 1 nov a las 17:00 en la Sala 3 de la Cinemateca\n\nLa app (almacén) todavía las muestra como vigentes y la web midbo.co no refleja la cancelación. Hay que vigilar las otras 4 funciones en la U. Nacional (3 nov 14:00 y 18:30; 4 nov 10:00 «Cuba y la noche» y «Relicto»).\nMenores: hoy la app no marca Q&A en «Bosque arriba en la montaña» (lámina 4), «De cierta manera» (Q&A virtual, lámina 6) ni «Programa 1: Materias Insumisas» (lámina 8).\n"
   }
  ]
 }
