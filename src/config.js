@@ -1019,6 +1019,27 @@ export const FESTIVAL_CONFIG={
     prioLimit:3,eventPosterLabel:['EVENTO',''],
     films:null,posters:null,lbSlugs:{}
   },
+  'mambe2026': {
+    // EL NOMBRE es el del festival (@festivalmambe); la edición va en fullName.
+    name:'MAMBE',displayName:'MAMBE',fullName:'Festival MAMBE 2026 — 13.ª edición',shortName:'MAMBE',
+    // EL AFICHE OFICIAL de la 13.ª edición (p/DfAg8PnFmir, lámina 1, 27 oct 2026,
+    // «Diseño Poster: @mariana_medina.ph»), 3:4 estirado a 2:3.
+    keyArt:'/assets/keyart/mambe2026-v2.jpg',
+    // PENDIENTE DE JUAN: del pie de la programación («Cinco días de cine ambiental y étnico»)
+    tagline:'Cine Ambiental y Étnico',
+    city:'Florencia',country:'CO',
+    instagram:'festivalmambe',
+    dates:'3–7 NOV',dates_en:'NOV 3–7',year:2026,timezoneOffset:'-05:00',
+    storageKey:'mambe2026_',festivalStartStr:'2026-11-03T00:00:00',festivalEndStr:'2026-11-07T23:59:00',
+    festivalDates:{'2026-11-03':'2026-11-03','2026-11-04':'2026-11-04','2026-11-05':'2026-11-05','2026-11-06':'2026-11-06','2026-11-07':'2026-11-07'},
+    days:[{k:'2026-11-03',d:3,lbl:'MAR'},{k:'2026-11-04',d:4,lbl:'MIÉ'},{k:'2026-11-05',d:5,lbl:'JUE'},{k:'2026-11-06',d:6,lbl:'VIE'},{k:'2026-11-07',d:7,lbl:'SÁB'}],
+    dayKeys:['2026-11-03','2026-11-04','2026-11-05','2026-11-06','2026-11-07'],
+    dayShort:{'2026-11-03':'MAR 3','2026-11-04':'MIÉ 4','2026-11-05':'JUE 5','2026-11-06':'VIE 6','2026-11-07':'SÁB 7'},
+    dayShort_en:{'2026-11-03':'TUE 3','2026-11-04':'WED 4','2026-11-05':'THU 5','2026-11-06':'FRI 6','2026-11-07':'SAT 7'},
+    dayLong:{'2026-11-03':'Martes 3 de noviembre','2026-11-04':'Miércoles 4 de noviembre','2026-11-05':'Jueves 5 de noviembre','2026-11-06':'Viernes 6 de noviembre','2026-11-07':'Sábado 7 de noviembre'},
+    prioLimit:3,eventPosterLabel:['EVENTO',''],
+    films:null,posters:null,lbSlugs:{}
+  },
   'fantasmagoria2026': {
     name:'Fantasmagoría',displayName:'Fantasmagoría',fullName:'Fantasmagoría 8 — Festival Internacional de Cine Fantástico y de Terror de Medellín',shortName:'FANTASMAGORÍA',
     city:'Medellín',country:'CO',
@@ -1229,6 +1250,8 @@ export const SECTION_ARCHETYPES = {
   '💬 Charla': 'Charlas / Industria',
   '🎻 Cine Concierto & Panel': 'Especiales / Eventos',
   '🖼️ Exposición': 'Especiales / Eventos',
+  // ── Festival MAMBE 2026 · Florencia ───────────────────────────────────
+  '🌿 Proyecciones': 'Muestra / País',
   // ── Guatapé Film Fest 2026 · Guatapé ──────────────────────────────────
   '🎬 Película Inaugural': 'Apertura / Gala',
   '🏆 Competencia Internacional de Largometraje': 'Competencia',
