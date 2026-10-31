@@ -7,7 +7,7 @@
 // (lo escribe loadFestival). Roster/viewstate vía bridge.
 
 import {FESTIVAL_CONFIG, MAX_REMEMBERED_SLOTS, TMDB_IMG} from '../config.js';
-import { DAY_ABBR, DAY_NUM, ICONS, _secLabel, _sectionColor, escXML, festivalTagline, isFullDayBlocked, makeProgramPoster, makeSharedSlotSVG, parseProgramTitle, renderRatingStarsHTML } from '../view/components.js';
+import { DAY_ABBR, DAY_NUM, ICONS, _secLabel, _sectionColor, escXML, festivalTagline, isFullDayBlocked, makeMesaDeLuzSVG, makeProgramPoster, parseProgramTitle, renderRatingStarsHTML } from '../view/components.js';
 import { _getItemPoster, _mkCortoItemHtml, _posterStyle, _posterThumb, dayLabel, ventanaDias, emptyState, durFmt, flagFmt, getCortoItemPoster, getFilmPoster, getFilmPosterUntitled, getPosterSrc, itemPosterParts, posterAmbient, posterParts, sala, starsText, vcfg, venueCity, venueMatches, isCitySel, ticketBadgeTarget, conflictAccount, programParts, abiertaLabel, abiertaRango } from '../view/helpers.js';
 // countryToFlags vive en dominio (src/domain/banderas.js), junto a la tabla de
 // países GENERADA (scripts/generate-paises.js, ICU es+en). Aquí había un
@@ -206,7 +206,7 @@ export function openPelSheet(title){
   // encabezado dice sección, duración y título, así que el póster no los repite.
   const _escF=programParts(f);
   if(_escF){
-    posterHtml=`<div class="psp-escalera">${makeSharedSlotSVG({modules:_escF.modules, secLabel:_escF.secLabel, accent:_escF.accent, dato:''})}</div>`;
+    posterHtml=`<div class="psp-escalera">${makeMesaDeLuzSVG({modules:_escF.modules, accent:_escF.accent, dato:'', semilla:_escF.semilla})}</div>`;
   } else if(f.is_programa&&f.film_list&&f.film_list.length>=2){
     const _sp1=_getItemPoster(f.film_list[0]);
     const _sp2=_getItemPoster(f.film_list[1]);

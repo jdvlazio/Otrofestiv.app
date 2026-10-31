@@ -632,70 +632,120 @@ export function _buildPosterV16({accent, headerLabel, title, num, dato, firma, k
   return `data:image/svg+xml,${encodeURIComponent(svg)}`;
 }
 
-// ── Póster de FUNCIÓN COMPARTIDA (Tipo 2) — «Escalera mayor», §6.0 ──────────
-// Aprobado por Juan (21 ago 2026) tras revisión exhaustiva. Reglas de frontera:
-// SOLO funciones compartidas (anclaje) de 2-3 obras con ≥1 afiche real; los
-// PROGRAMAS (Tipo 3) jamás usan esta forma — sus obras suelen tener stills, y un
-// still se dibuja dentro del marco editorial, que ya es un póster propio: sería
-// un póster propio dentro de otro. SIN TÍTULO interno («en una película con
-// póster nunca vemos títulos»): la identidad nominal vive en lista/ficha/plan,
-// y en las superficies mudas queda a un tap, igual que cualquier obra.
-// Este builder SOLO dibuja: la decisión de qué es módulo real y qué es mudo la
-// toma helpers (slotPosterParts), dueño del modelo de póster.
-// Devuelve MARKUP SVG INLINE, no data-uri: contiene <image> y un SVG dentro de
-// <img> tiene prohibido cargar recursos — los afiches saldrían rotos.
-export function makeSharedSlotSVG({modules, secLabel:_secLabel, accent, dato}){
-  const U=15, VW=120, VH=180, M=11.25, CW=VW-2*M, NEGRO='#0B0A08';
-  const r=n=>+n.toFixed(2);
-  // slice y NO meet (26 ago): meet dejaba bandas negras en todo afiche que no
-  // fuera 2:3 exacto. slice CUBRE = object-fit:cover. Sin stroke. Ver POSTERS.md.
-  // UID por póster: los clipPath se llamaban ssp0/ssp1/… IGUAL en todos. Con más
-  // de una Escalera en la misma página —o sea, la grilla— cada url(#ssp0) resuelve
-  // al PRIMERO del documento y recorta los demás contra el rectángulo ajeno.
-  const UID='ssp'+Math.abs(_djb2(modules.join('|')+modules.length)).toString(36);
-  const mod=(ux,uy,uw,src,i)=>{
-    const x=ux*U,y=uy*U,w=uw*U,h=uw*1.5*U,rx=w*0.13;
-    const id=`${UID}_${i}`;
-    return `<clipPath id="${id}"><rect x="${r(x)}" y="${r(y)}" width="${r(w)}" height="${r(h)}" rx="${r(rx)}"/></clipPath>`
-      +`<rect x="${r(x)}" y="${r(y)}" width="${r(w)}" height="${r(h)}" rx="${r(rx)}" fill="${NEGRO}"/>`
-      +`<image href="${escXML(src)}" x="${r(x)}" y="${r(y)}" width="${r(w)}" height="${r(h)}" preserveAspectRatio="xMidYMid slice" clip-path="url(#${id})"/>`;
-  };
-  // Sombra DIFUSA y a la IZQUIERDA (26 ago): cae SOBRE el afiche de atrás, que
-  // es lo que lo hace leer como lámina encima. Antes: rect duro a la derecha.
-  const sombra=(ux,uy,uw)=>`<rect x="${r(ux*U-3.2)}" y="${r(uy*U-1)}" width="${r(uw*U)}" height="${r(uw*1.5*U)}" rx="${r(uw*U*0.13)}" fill="#000" opacity=".55" filter="url(#${UID}-sb)"/>`;
-  // RIMA 2:3 (25 ago) — POSTERS.md §Forma C. dy = 1,5·dx → envolvente 2:3 para
-  // cualquier N. modules va atrás→delante: el ÚLTIMO al frente.
+// ── MESA DE LUZ — el póster de los programas (Juan, 31 oct 2026) ────────────
+// Reemplaza a la Escalera (spec .specify/features/mesa-de-luz/spec.md). Las
+// obras del programa, en orden de catálogo, quedan sueltas sobre la mesa, cada
+// una a una altura distinta. Sin tope de obras y sin dejar a nadie afuera:
+//   afiche  → el afiche con un filo oscuro
+//   foto    → boleta negra con el fotograma arriba
+//   nada    → boleta negra
+// Negro y luz de sección, como las demás tarjetas (Juan, 31 oct: el gris y el
+// hueso «se salen de la identidad»).
+// La boleta va siempre ENCIMA de lo que pisa. Este builder SOLO dibuja: qué es
+// cada obra lo decide slotPosterParts (helpers), dueño del modelo.
+// MARKUP INLINE, no data-uri: lleva <image> remotos, y un SVG dentro de <img>
+// no carga recursos. Por eso cada id lleva el UID del póster: en la grilla hay
+// muchas mesas en el mismo documento y `url(#id)` resuelve al primero.
+let _mesaN=0;
+export function makeMesaDeLuzSVG({modules, accent, dato, semilla}){
+  const VW=120, VH=180, MESA='#100E0C', FILO='#2A2622';
+  const r=n=>+(+n).toFixed(2);
   const n=modules.length;
+  // UID por DIBUJO, no por contenido: la misma mesa se pinta en la grilla y en
+  // la lista, y si una de las dos copias está oculta (display:none) sus
+  // <filter> no se resuelven — y el navegador NO dibuja lo que los usa. Con ids
+  // iguales, la copia visible apuntaba a los filtros de la oculta y salía vacía
+  // (medido en la grilla de Jardín y FICIDI, 31 oct).
+  const UID='mdl'+Math.abs(_djb2(modules.map(m=>m.kind+(m.src||m.title||'')).join('|')+n)).toString(36)+'_'+(++_mesaN).toString(36);
+  const rnd=_mulberry32(_djb2(String(semilla||modules.map(m=>m.title||'').join('|'))));
+  // ±9° con 4 o menos; ±5° de 5 a 7; ±7° con 8 o más, que si no se lee como
+  // cuadrícula y deja de ser una mesa (Juan, 31 oct).
+  const giro=n<=4?18:n>=8?14:10;
+  const top=8.6, bot=17, side=5.4;
+  // Filas parejas, las más llenas al medio (7 → 2-3-2): ningún afiche solo abajo.
+  const cols=Math.ceil(Math.sqrt(n)), rows=Math.ceil(n/cols);
+  const cnt=Array(rows).fill(Math.floor(n/rows));
+  let extra=n-cnt.reduce((a,b)=>a+b,0);
+  const orden=[...Array(rows).keys()].sort((a,b)=>Math.abs(a-(rows-1)/2)-Math.abs(b-(rows-1)/2));
+  for(let j=0;extra>0;j++,extra--) cnt[orden[j]]++;
+  const huecos=[]; cnt.forEach((q,fila)=>{ for(let k=0;k<q;k++) huecos.push([k,fila,q]); });
+  const cw=(VW-2*side)/cols, ch=(VH-top-bot)/rows;
+  let tw=Math.min(cw*1.06, ch*1.04/1.5);
+  const centros=[];
+  if(n===2){                                               // dos grandes cruzados
+    tw=VW*0.56;
+    centros.push([VW*0.37, top+tw*0.75+2], [VW*0.63, VH-bot-tw*0.75-2]);
+  } else {
+    huecos.forEach(([k,fila,q])=>{
+      const off=(cols-q)*cw/2;
+      centros.push([side+off+k*cw+cw/2+(rnd()-.5)*cw*.06, top+fila*ch+ch/2+(rnd()-.5)*ch*.06]);
+    });
+  }
+  const th=tw*1.5, rad=tw*0.13, filo=tw*0.025;
+  // Tres alturas de sombra: hacia arriba a la derecha, lejos de la luz.
+  const sombra=(id,e)=>{
+    const q=tw/110*e;
+    const capa=(dx,dy,sd,op)=>`<feDropShadow dx="${r(dx)}" dy="${r(dy)}" stdDeviation="${r(sd)}" flood-color="#000" flood-opacity="${op}"/>`;
+    return `<filter id="${id}" x="-60%" y="-60%" width="220%" height="220%">`
+      +capa(.8*tw/110,-.5*tw/110,.75*tw/110,.55)+capa(7*q,-4*q,7*q,.42)+capa(18*q,-10*q,18*q,.45)+capa(30*q,-16*q,30*q,(.2+.2*e).toFixed(2))+`</filter>`;
+  };
+  const niveles=[.55,.95,1.35];
+  let defs=niveles.map((e,i)=>sombra(`${UID}-s${i}`,e)).join('');
+  defs+=`<radialGradient id="${UID}-luz" cx=".62" cy="1" r=".75"><stop offset="0" stop-color="${accent}" stop-opacity=".34"/><stop offset="1" stop-color="${accent}" stop-opacity="0"/></radialGradient>`
+    +`<filter id="${UID}-hl" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="${r(tw*0.14)}"/></filter>`
+    +`<radialGradient id="${UID}-bl" cx="1" cy="1" r="1"><stop offset="0" stop-color="${accent}" stop-opacity=".12"/><stop offset="1" stop-color="${accent}" stop-opacity="0"/></radialGradient>`
+    +`<filter id="${UID}-gr"><feTurbulence type="fractalNoise" baseFrequency="1.1" numOctaves="1"/><feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .22 0"/></filter>`;
+  const piezas=modules.map((m,i)=>{
+    const [cx,cy]=centros[i], x=cx-tw/2, y=cy-th/2;
+    const rot=(rnd()-.5)*giro, nivel=Math.min(2,Math.floor(i/Math.max(1,n)*3));
+    const id=`${UID}_${i}`;
+    defs+=`<clipPath id="${id}"><rect x="${r(x)}" y="${r(y)}" width="${r(tw)}" height="${r(th)}" rx="${r(rad)}"/></clipPath>`;
+    let cuerpo;
+    if(m.kind==='afiche'){
+      cuerpo=`<rect x="${r(x)}" y="${r(y)}" width="${r(tw)}" height="${r(th)}" rx="${r(rad)}" fill="${FILO}"/>`
+        +`<image href="${escXML(m.src)}" x="${r(x+filo)}" y="${r(y+filo)}" width="${r(tw-2*filo)}" height="${r(th-2*filo)}" preserveAspectRatio="xMidYMid slice" clip-path="url(#${id})"/>`;
+    } else {
+      // La boleta, como afuera de la mesa (Juan, 31 oct: el hueso «se sale de
+      // la identidad»): negro con la luz de sección, (fotograma), título si hay
+      // lugar, troquel y talón delgado del color de la sección.
+      const pad=tw*0.09, trY=y+th*0.88;
+      let foto='', tTop=y+pad;
+      if(m.kind==='foto'&&m.src){
+        const fw=tw-2*pad, fh=fw*9/16;
+        foto=`<image href="${escXML(m.src)}" x="${r(x+pad)}" y="${r(y+pad)}" width="${r(fw)}" height="${r(fh)}" preserveAspectRatio="xMidYMid slice"/>`;
+        tTop+=fh+pad*0.6;
+      }
+      let ttl='';
+      if(tw>=40&&m.title){
+        const fs=tw/9, L=_fitLines(String(m.title),{boxW:tw-2*pad, boxH:1e4, maxLines:3, fsMax:fs, fsMin:fs, lhRatio:1.12});
+        ttl=L.lines.map((l,j)=>`<text x="${r(x+pad)}" y="${r(tTop+fs*0.9+j*L.lh)}" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="${r(fs)}" font-weight="800" fill="#F0EDE8">${escXML(l)}</text>`).join('');
+      }
+      const mu=tw*0.05;
+      cuerpo=`<g clip-path="url(#${id})"><rect x="${r(x)}" y="${r(y)}" width="${r(tw)}" height="${r(th)}" fill="#100E0C"/>`
+        +`<rect x="${r(x)}" y="${r(y)}" width="${r(tw)}" height="${r(th)}" fill="url(#${UID}-bl)"/>`+foto+ttl
+        +`<line x1="${r(x+pad*0.8)}" y1="${r(trY)}" x2="${r(x+tw-pad*0.8)}" y2="${r(trY)}" stroke="#F0EDE8" stroke-opacity=".22" stroke-width="${r(tw*0.012)}" stroke-dasharray="${r(tw*0.03)} ${r(tw*0.03)}"/>`
+        +`<circle cx="${r(x)}" cy="${r(trY)}" r="${r(mu)}" fill="${MESA}"/><circle cx="${r(x+tw)}" cy="${r(trY)}" r="${r(mu)}" fill="${MESA}"/>`
+        +`<rect x="${r(x)}" y="${r(y+th*0.955)}" width="${r(tw)}" height="${r(th*0.045)}" fill="${accent}"/></g>`;
+    }
+    // Borde de luz: una línea clara del lado de la luz.
+    // Sobre negro la sombra casi no se ve: la profundidad la da la LUZ, con un
+    // halo de sección detrás de las obras más altas. Sin bordes de luz: sobre
+    // el negro se leían como una línea de más (Juan, 31 oct).
+    // La boleta tampoco lleva halo: su color ya está en el talón. Y su luz
+    // interna es apenas un tinte: con la mesa entera a la vista, la luz de cada
+    // obra competía con la luz general (Juan, 31 oct: «mucho más oscuro»).
+    const esBoleta=m.kind!=='afiche';
+    const halo=(nivel>0&&!esBoleta)?`<rect x="${r(x)}" y="${r(y)}" width="${r(tw)}" height="${r(th)}" rx="${r(rad)}" fill="${accent}" opacity="${nivel===2?.16:.09}" filter="url(#${UID}-hl)"/>`:'';
+    return {z:m.kind==='afiche'?i:100+i,
+      svg:`<g transform="rotate(${r(rot)} ${r(cx)} ${r(cy)})">${halo}<g filter="url(#${UID}-s${nivel})">${cuerpo}</g></g>`};
+  }).sort((a,b)=>a.z-b.z).map(p=>p.svg).join('');
   const datoFS=VW*0.05;
-  // 2,2·datoFS de aire sobre el dato: antes parecían apoyados encima (26 ago).
-  const YTOP=0.9*U, YBOT=VH-M-datoFS*0.30-datoFS*2.2;
-  const HENV=YBOT-YTOP, WENV=HENV/1.5;
-  // EL PASO ES FRACCIÓN DE LA LÁMINA, NO DE LA ENVOLVENTE (26 ago 2026).
-  // Antes: K fija sobre la envolvente (0,30 con 2 obras, 0,235 con 3+). Esa forma
-  // no escala — el ancho de lámina es 1-(n-1)K, que con 5 obras cae al 6% y con 6
-  // da NEGATIVO: no había dibujo posible, y por eso el modelo cortaba en 3.
-  // Pero las dos constantes viejas YA ERAN esta regla congelada: 0,30/0,70 = 0,429
-  // y 0,235/0,53 = 0,443. Escribiéndola como dx = P·w se despeja
-  //   w = WENV / (1 + (n-1)·P)
-  // y la forma vale para CUALQUIER n conservando lo aprobado (70,0% con 2 obras,
-  // 53,7% con 3), sin una forma para el par y otra para el programa. La rima 2:3
-  // se sostiene sola: alto = 1,5w + (n-1)·1,5dx = 1,5·(w + (n-1)dx) = 1,5·ancho.
-  const P=0.43;
-  const MW=WENV/(1+(n-1)*P)/U, DX=P*MW*U, X0=(VW-WENV)/2;
-  let comp='';
-  modules.forEach((src,i)=>{
-    const ux=(X0+i*DX)/U, uy=(YTOP+i*DX*1.5)/U;
-    comp += (i===n-1?sombra(ux,uy,MW):'') + mod(ux,uy,MW,src,i);
-  });
-  // SIN rótulo (Juan, 25 ago): robaba 3u a los afiches. La sección la dice el filete.
-  const datoY=VH-M-datoFS*0.30;
-  const datoTxt=dato?_lineaSVG(dato,{x:M,y:datoY,fs:datoFS,ls:datoFS*0.02,fill:'#888',boxW:CW,upper:false}):'';
-  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${VW} ${VH}">`
-    +`<defs><radialGradient id="${UID}-luz" cx="0" cy="1" r="1"><stop offset="0" stop-color="${accent}" stop-opacity=".28"/><stop offset="1" stop-color="${accent}" stop-opacity="0"/></radialGradient>`
-    +`<filter id="${UID}-sb" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="2.6"/></filter></defs>`
-    +`<rect width="${VW}" height="${VH}" fill="${NEGRO}"/>`
-    +`<rect x="0" y="99" width="66" height="81" fill="url(#${UID}-luz)"/>`
-    +comp
+  const datoTxt=dato?_lineaSVG(dato,{x:7.5, y:VH-6.5, fs:datoFS, ls:datoFS*0.02, fill:'#8A847B', boxW:VW-15, upper:false}):'';
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${VW} ${VH}"><defs>${defs}</defs>`
+    +`<rect width="${VW}" height="${VH}" fill="${MESA}"/>`
+    +`<rect width="${VW}" height="${VH}" filter="url(#${UID}-gr)"/>`
+    +`<rect x="0" y="${VH*0.4}" width="${VW}" height="${VH*0.6}" fill="url(#${UID}-luz)"/>`
+    +piezas
     +`<rect width="${VW}" height="3.75" fill="${accent}"/>`
     +datoTxt+`</svg>`;
 }

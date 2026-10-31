@@ -8,7 +8,7 @@
 import { FESTIVAL_BUFFER, FESTIVAL_QA_MIN, FESTIVAL_CONFIG, TMDB_IMG } from '../config.js';
 import {
   DAY_ABBR, DAY_NUM, ICONS, _buildPosterMini, _lineasTitulo, _posterForma, _datoCompuesto, _fitLines, _secLabel, _seccionPartes, _sectionColor,
-  makeProgramPoster, makeEventPoster, makeSorpresaPoster, makeSharedSlotSVG, escXML, _langDates, parseProgramTitle,
+  makeProgramPoster, makeEventPoster, makeSorpresaPoster, makeMesaDeLuzSVG, escXML, _langDates, parseProgramTitle,
 } from './components.js';
 // _langDates se REEXPORTA: el dueño vive en components.js (helpers importa
 // components — el ciclo decide dónde vive; ver el comentario del dueño).
@@ -233,7 +233,7 @@ export function posterAmbient(src,fallbackHex,cb){
 //     tarjeta se hacía pasar por la única obra visible. Falta un afiche → null:
 //     cada obra conserva su card, como hoy. Nada se inventa.
 //   · Delantero = primera obra en orden de catálogo (regla neutra).
-// El dibujo lo hace components.makeSharedSlotSVG — acá solo el modelo.
+// El dibujo lo hace components.makeMesaDeLuzSVG — acá solo el modelo.
 // programParts — el póster de una función que agrupa 2-3 obras, sea programa
 // legacy («A + B», is_programa) o de cortos (is_cortos, como se modelan hoy).
 // Arregla una mentira vieja: getFilmPoster (camino 5) devuelve el afiche de la
@@ -256,7 +256,7 @@ export function programParts(f){
   return slotPosterParts(f.film_list.map(it=>({
     title:it.title, poster:it.poster, posterSource:it.posterSource,
     duration:it.duration||f.duration, section:f.section,
-  })), blockDuration(f));
+  })), blockDuration(f), f.title);
 }
 
 // `blockDur` es la duración DEL BLOQUE y viaja aparte a propósito: el pie dice
@@ -265,34 +265,27 @@ export function programParts(f){
 // 42—, y el número engañaba justo donde el usuario decide si le cabe en la
 // tarde. Medido: 209 de los 225 programas del repo tenían el líder con otra
 // duración que su bloque.
-export function slotPosterParts(members, blockDur){
-  // Tope 8 (prototipo aprobado, 25 ago): la Escalera escala a cualquier N porque
-  // el paso es fracción de la lámina — ver makeSharedSlotSVG. Con 9+ la lámina
-  // baja del 23% y a 56px queda en textura, así que ahí sí cae a la forma vieja.
+export function slotPosterParts(members, blockDur, semilla){
+  // MESA DE LUZ (Juan, 31 oct 2026 — spec mesa-de-luz). Revoca el tope de 8 y
+  // la regla de «solo las que tienen afiche»: la mesa muestra TODAS las obras.
+  //   afiche real          → afiche
+  //   solo fotograma       → boleta con la foto
+  //   nada                 → boleta
+  // Si ninguna obra trae imagen no hay mesa: cae al generativo (jerarquía).
   if(!Array.isArray(members)||members.length<2) return null;
-  const clasif=members.map(f=>{
+  const modules=members.map(f=>{
     const src=getPosterSrc(f.title,true)||f.poster||null;
-    const real=!!src&&!_isEditorialPoster(f);
-    return {f, src:real?src:null};
+    if(src&&!_isEditorialPoster(f)) return {kind:'afiche', src, title:f.title};
+    if(src) return {kind:'foto', src, title:f.title};
+    return {kind:'nada', src:null, title:f.title};
   });
-  // LA PILA SE DIBUJA CON LAS OBRAS QUE TIENEN AFICHE (Juan, 16 sep 2026). Antes
-  // era «solo completa»: un still entre ocho afiches tumbaba la tarjeta entera.
-  // Con #NarrarElFuturo se vio el costo — sus diez programas caían al generativo
-  // teniendo 33 afiches propios, y a cada uno le estorbaba UNA obra—. Medido en
-  // el repo antes de cambiarlo: 112 → 143 programas con pila (+31). Lo que NO
-  // cambia es por qué el still no entra: se dibuja dentro del marco editorial,
-  // que ya es un póster, y sería un póster dentro de otro. El pie sigue diciendo
-  // la verdad del programa («10 obras · 91 min»), que es el dato con el que el
-  // usuario decide; las láminas son la muestra, no el índice.
-  const reales=clasif.filter(c=>c.src);
-  if(reales.length<2||reales.length>8) return null;
-  // atrás→delante: el 1º del catálogo queda delante
-  const modules=[...reales.slice(1).reverse().map(c=>c.src), reales[0].src];
-  const lider=reales[0].f;
+  if(!modules.some(m=>m.src)) return null;
+  const lider=members[0];
   const dur=blockDur||blockDuration(lider);
   const dato=`${members.length} ${t('misc_peliculas')}${dur?` · ${dur} min`:''}`;
-  return {modules, secLabel:_secLabel(lider.section||''), accent:_sectionColor(lider.section||''), dato,
-    svg:makeSharedSlotSVG({modules, secLabel:_secLabel(lider.section||''), accent:_sectionColor(lider.section||''), dato})};
+  const accent=_sectionColor(lider.section||'');
+  return {modules, secLabel:_secLabel(lider.section||''), accent, dato, semilla,
+    svg:makeMesaDeLuzSVG({modules, accent, dato, semilla})};
 }
 
 export function posterParts(f,{header=false,body='',loading}={}){

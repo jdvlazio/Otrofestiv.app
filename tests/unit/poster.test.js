@@ -301,95 +301,57 @@ test('_edHdrSVG: sin accent cae a un color válido, nunca a "undefined"', () => 
 // cada uno le estorbaba UNA obra) y la medida fue 112 → 143 programas con pila
 // en todo el repo. El tope de 8 NO se movió, y ahora cuenta LÁMINAS.
 // Estos casos son las fronteras; cada uno mata una mutación distinta.
-test('slotPosterParts: funciones compartidas de 2 a 8 obras, y solo completas', () => {
+// MESA DE LUZ (Juan, 31 oct 2026 — spec mesa-de-luz). Revoca el tope de 8 y la
+// regla de «solo las obras con afiche»: la mesa muestra TODAS las obras. La que
+// tiene afiche, con su afiche; la que solo tiene fotograma, como boleta con la
+// foto; la que no tiene nada, como boleta. Sin ninguna imagen no hay mesa.
+test('slotPosterParts: la mesa muestra todas las obras, sin tope', () => {
   const afiche = (title, poster) => ({ title, poster, posterSource: 'custom', duration: '90 min', section: 'Sec' });
   const still  = (title) => ({ title, poster: '/assets/x/still.jpg', posterSource: 'editorial', duration: '20 min', section: 'Sec' });
   const sinImg = (title) => ({ title, duration: '10 min', section: 'Sec' });
-
   const dos = [afiche('A', 'https://image.tmdb.org/t/p/w342/a.jpg'), afiche('B', 'https://image.tmdb.org/t/p/w342/b.jpg')];
-  const tres = [...dos, afiche('C', 'https://image.tmdb.org/t/p/w342/c.jpg')];
 
   const p2 = H.slotPosterParts(dos);
-  assert.ok(p2, 'dúo completo SÍ recibe tarjeta');
-  assert.strictEqual(p2.modules.length, 2, 'dos módulos');
-  assert.ok(p2.modules.every(Boolean), 'ningún módulo vacío: la forma es solo completa');
+  assert.ok(p2, 'dos afiches SÍ');
+  assert.deepStrictEqual(p2.modules.map(m => m.kind), ['afiche', 'afiche']);
   assert.ok(/<svg[^>]*viewBox="0 0 120 180"/.test(p2.svg), 'dibuja en la retícula de §6.0');
-  assert.ok(p2.dato.startsWith('2 obras'), 'el dato declara la pluralidad (única ancla de texto)');
-  assert.ok(!/#F0EDE8/.test(p2.svg), 'SIN título interno: no hay texto en blanco de título');
+  assert.ok(p2.dato.startsWith('2 obras'), 'el pie declara la pluralidad');
 
-  assert.ok(H.slotPosterParts(tres), 'trío completo SÍ');
+  const mixto = H.slotPosterParts([dos[0], still('S'), sinImg('X')]);
+  assert.ok(mixto, 'el programa mixto SÍ tiene mesa: nadie queda afuera');
+  assert.deepStrictEqual(mixto.modules.map(m => m.kind), ['afiche', 'foto', 'nada'],
+    'afiche, boleta con foto y boleta');
+  assert.ok(mixto.dato.startsWith('3 obras'));
 
-  // El still no es módulo, y con un solo afiche al lado no hay pila que dibujar.
-  assert.strictEqual(H.slotPosterParts([dos[0], still('S')]), null,
-    'un STILL no es afiche (sería un póster dentro de otro) → queda 1, y 1 no es pila');
-  assert.strictEqual(H.slotPosterParts([dos[0], sinImg('X')]), null,
-    'sin imagen tampoco es módulo (el módulo mudo murió: se leía como sombra)');
+  assert.ok(H.slotPosterParts([still('S1'), still('S2')]), 'solo fotogramas también: dos boletas con foto');
+  assert.strictEqual(H.slotPosterParts([sinImg('X'), sinImg('Y')]), null,
+    'sin NINGUNA imagen no hay mesa: cae al generativo (jerarquía)');
 
-  // REGLA NUEVA (16 sep 2026): con afiches suficientes, la pila se dibuja
-  // saltando al que trae still. El pie sigue contando el programa entero.
-  const conStill = [...tres, still('S')];
-  const rS = H.slotPosterParts(conStill);
-  assert.ok(rS, 'tres afiches + un still SÍ recibe tarjeta');
-  assert.strictEqual(rS.modules.length, 3, 'se dibujan los tres afiches, no el still');
-  assert.ok(rS.dato.startsWith('4 obras'),
-    'el pie declara las CUATRO obras del programa: la pila es muestra, no índice');
-  // FRONTERA 8 (26 ago 2026) — antes era 3, y su razón escrita era «mostrar 3 de 4
-  // sería elegir por el festival». El diseño nuevo responde esa objeción en vez de
-  // violarla: no muestra 3 de 4, muestra LAS 4. La forma escala porque el paso es
-  // fracción de la lámina y no de la envolvente, así que la rima 2:3 se sostiene
-  // para cualquier n (ver makeSharedSlotSVG). Se corta en 9 porque ahí la lámina
-  // baja del 23% y a 56px queda en textura.
   const mas = k => Array.from({length:k}, (_,i) => afiche('X'+i, 'https://image.tmdb.org/t/p/w342/'+i+'.jpg'));
-  for (const k of [4, 5, 6, 7, 8]) {
+  for (const k of [3, 8, 9, 12, 14]) {
     const r = H.slotPosterParts(mas(k));
-    assert.ok(r, k + ' obras SÍ recibe tarjeta');
-    assert.strictEqual(r.modules.length, k, 'se dibujan LAS ' + k + ', no un subconjunto elegido por nosotros');
-    assert.ok(r.dato.startsWith(k + ' obras'), 'el dato declara la pluralidad real');
+    assert.ok(r, k + ' obras SÍ: la mesa no tiene tope');
+    assert.strictEqual(r.modules.length, k, 'se dibujan LAS ' + k);
   }
-  assert.strictEqual(H.slotPosterParts(mas(9)), null,
-    '9+ → sin tarjeta: la lámina baja del 23% y en el chip de 56px es textura, no afiches');
-  // El tope cuenta LÁMINAS, no miembros: diez obras de las que ocho tienen
-  // afiche sí caben; nueve con afiche, no.
-  assert.ok(H.slotPosterParts([...mas(8), still('S1'), still('S2')]),
-    'diez obras con ocho afiches: se dibujan los ocho');
-  assert.strictEqual(H.slotPosterParts([...mas(9), still('S1')]), null,
-    'nueve afiches siguen pasándose del tope, haya stills o no');
-  assert.strictEqual(H.slotPosterParts([dos[0]]), null, 'una sola obra no es función compartida');
+  assert.strictEqual(H.slotPosterParts([dos[0]]), null, 'una sola obra no es programa');
   assert.strictEqual(H.slotPosterParts(null), null, 'sin miembros, nada');
 });
 
-// Los clipPath de la Escalera se llamaban ssp0/ssp1/… IGUAL en cada póster, y el
-// gradiente y el filtro eran ssp-luz/ssp-sb, también fijos. En SVG `url(#id)`
-// resuelve al PRIMERO del documento: con varias Escaleras en pantalla —o sea, la
-// grilla— todas se recortaban contra el rectángulo de la primera. Medido en la app
-// con Cinemancia publicado: 14 Escaleras, 11 de 2 obras y 3 de 3; las de 3
-// declaraban 49,55 de ancho y se recortaban con 65,45. Un 32% de más.
-// Nadie lo cazó porque ningún test miraba DOS pósters a la vez.
-test('la Escalera no reutiliza ids entre pósters distintos', () => {
+// Ids por DIBUJO: la misma mesa se pinta en la grilla y en la lista, y si una
+// copia está oculta sus <filter> no se resuelven y la visible sale VACÍA (31 oct,
+// medido en Jardín y FICIDI). Tampoco pueden compartir ids dos mesas distintas.
+test('la mesa no reutiliza ids, ni entre mesas distintas ni entre copias', () => {
   const af = (i) => ({ title: 'T' + i, poster: 'https://image.tmdb.org/t/p/w342/' + i + '.jpg',
                        posterSource: 'custom', duration: '90 min', section: 'Sec' });
-  const dos = H.slotPosterParts([af(1), af(2)]);
-  const tres = H.slotPosterParts([af(1), af(2), af(3)]);
   const ids = (svg) => [...String(svg).matchAll(/id="([^"]+)"/g)].map(m => m[1]);
-  const a = ids(dos.svg), b = ids(tres.svg);
-  assert.ok(a.length >= 2 && b.length >= 3, 'cada póster declara sus ids');
-  const compartidos = a.filter(x => b.includes(x));
-  assert.deepStrictEqual(compartidos, [],
-    'dos Escaleras distintas no pueden compartir NINGÚN id — el segundo se recorta con el rect del primero');
-  // y dos pósters IGUALES sí pueden compartirlos: el rect es el mismo, no hay daño
-  const otroDos = H.slotPosterParts([af(1), af(2)]);
-  assert.deepStrictEqual(ids(otroDos.svg), a, 'mismo contenido → mismos ids (determinista, sin ruido en el diff)');
+  const a = ids(H.slotPosterParts([af(1), af(2)]).svg);
+  const b = ids(H.slotPosterParts([af(1), af(2), af(3)]).svg);
+  const c = ids(H.slotPosterParts([af(1), af(2)]).svg);
+  assert.ok(a.length >= 2, 'cada mesa declara sus ids');
+  assert.deepStrictEqual(a.filter(x => b.includes(x)), [], 'dos mesas distintas no comparten ids');
+  assert.deepStrictEqual(a.filter(x => c.includes(x)), [], 'dos copias de la misma mesa tampoco');
 });
 
-// JERARQUÍA DEL PÓSTER DE UNA FUNCIÓN COMPUESTA (regla de Juan, 26 ago 2026):
-//   1. el afiche OFICIAL del programa, si el festival mandó uno
-//   2. la Escalera, con los afiches oficiales de TODAS sus obras
-//   3. el generativo nuestro
-// La Escalera es un póster NUESTRO: solo entra donde íbamos a inventar uno. El
-// código preguntaba `programParts` «ANTES que nada» y su modelo solo miraba los
-// afiches de las OBRAS, nunca si el programa traía el suyo — así que la pila
-// tapaba el arte del festival. Medido: 19 de 59 compuestos, con Cinemancia y
-// Leviza ya publicados.
 test('el afiche oficial del programa gana sobre la Escalera', () => {
   const af = (i) => ({ title: 'Obra ' + i, poster: 'https://image.tmdb.org/t/p/w342/' + i + '.jpg',
                        posterSource: 'custom', duration: '20 min' });
@@ -427,10 +389,11 @@ test('programParts: la Escalera alcanza a los programas de cortos, no solo a los
 
   // Las fronteras las guarda slotPosterParts, pero deben SOBREVIVIR al gate:
   // un still dentro anula la tarjeta aunque la función sea de cortos.
+  // Con la Mesa de luz (31 oct) el still entra como boleta con foto.
   const conStill = { is_cortos: true, section: 'Sec', duration: '60 min',
     film_list: [dos[0], { title: 'S', poster: '/assets/x/s.jpg', posterSource: 'editorial', duration: '20 min' }] };
-  assert.strictEqual(H.programParts(conStill), null,
-    'afiche original + still nuestro NO fusiona (regla de Juan, 25 ago)');
+  assert.deepStrictEqual(H.programParts(conStill).modules.map(m => m.kind), ['afiche', 'foto'],
+    'afiche + fotograma: la mesa los muestra a los dos');
 
   assert.strictEqual(H.programParts({ film_list: dos }), null, 'sin is_cortos ni is_programa, nada');
   assert.strictEqual(H.programParts(null), null, 'sin función, nada');
