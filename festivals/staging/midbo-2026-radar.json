@@ -1,10 +1,10 @@
 {
  "_provenance": {
   "fuente": "issue de radar #1031 — https://github.com/jdvlazio/Otrofestiv.app/issues/1031",
-  "capturado": "2026-10-27",
+  "capturado": "2026-10-30",
   "titulo": "RADAR: Muestra Internacional Documental de Bogotá (MIDBO) — Bogotá, 28 OCT–4 NOV (28ª)",
   "estado": "OPEN",
-  "comentarios": 17
+  "comentarios": 22
  },
  "issue": 1031,
  "titulo": "RADAR: Muestra Internacional Documental de Bogotá (MIDBO) — Bogotá, 28 OCT–4 NOV (28ª)",
@@ -78,6 +78,26 @@
   {
    "fecha": "2026-10-27",
    "cuerpo": "**Vigía 27 oct 13:00:** «Notre corps» (hoy 16:00, Alianza Francesa) es función con Q&A★ (https://www.instagram.com/p/DfAWypbCTFa/, leído en lámina 2). La app tiene has_qa=false → poner true. La API y las 121 fichas de midbo.co no cambiaron respecto de la bajada del 26 oct."
+  },
+  {
+   "fecha": "2026-10-28",
+   "cuerpo": "**Salas — corrida del 28 oct 2026 (Cinemateca de Bogotá Centro, agenda/11)**\n\nLa agenda de la sala llega hasta el **31 oct**: las 21 funciones de MIDBO que publica del 28 al 31 coinciden con la app en día, hora y sala (la inaugural *El hogar fue sepultado…* del 28 a las 19:00 aparece en Sala 2, Sala 3 y Sala Capital, con entrada libre, igual que la app).\n\nÚnica diferencia: **el link de compra**. La app enlaza la página general del evento (`tuboleta.com/es/eventos/<obra>`) y la sala da el checkout directo de cada función (`cinemateca.checkout.tuboleta.com/selection/event/date?productId=…`). Probé el de *Muchedumbre*: abre la ficha de TuBoleta de esa función (Cinemateca Centro, Sala 2), así que **funciona**. Si se quiere el link directo, son 20 funciones del 29–31 oct (productId 10230576236138 y 10230581839501–10230581839521; fuente: `https://cinematecadebogota.gov.co/node/peliculas/<n>?sede=11`, nodos 3598–3615).\n\nNo son hallazgos: las master class, mesas y diálogos (la sala no los pone en su agenda de cine) ni lo del 1–4 nov (la agenda todavía no llega a esas fechas).\n"
+  },
+  {
+   "fecha": "2026-10-28",
+   "cuerpo": "**Vigía 28 oct 09:15 — MIDBO, carrusel del miércoles 28** (https://www.instagram.com/p/DfCiPvXoGqF/, Apify, las 7 láminas leídas a ojo)\n\n1. **Falta en la app:** «Un lugar más grande» (Nicolás Défossé, 115 min), **hoy 28 oct a las 6:00 p. m.** en el Paraninfo de la UdeA, Sala de Cine, Medellín. Es la inauguración paralela de Regiones, con Q&A y entrada libre (lámina 6). La app no tiene sedes en Medellín: la obra solo figura el 30 y el 31.\n2. **Título distinto:** a las 2:30 p. m. en la Alianza Francesa, la lámina 3 dice «Charla \"Herramientas inclusivas para personas sordas y ciegas. El caso de Estancia: accesible con audiodescripción\"», con intérprete de lengua de señas y entrada libre. La app dice «Charla: Audio descripción para documental», con inscripción.\n3. Observación: el bloque de las 4:00 p. m. «Espejos» sale en la lámina 4 como un solo programa de 3 cortos. La app lo parte en dos entradas.\n\nTodo lo demás del día coincide. La web (API, 121 obras, y los bloques de Funciones) está igual a la copia del 27 oct.\n"
+  },
+  {
+   "fecha": "2026-10-29",
+   "cuerpo": "**Vigía 29 oct 09:00 — MIDBO: la parrilla del jueves 29 coincide con producción** (https://www.instagram.com/p/DfFAx5LFU1E/, vía Apify; miré las 12 láminas). Las 19 funciones y actividades de las láminas están en la app con el mismo día, hora y sede. La API (121 obras) y las 121 fichas de la web, comparadas por contenido, no cambiaron desde ayer a las 09:35.\nHay una sola cosa para revisar: en la lámina 4, «OBRAS INSTALATIVAS» aparece en la Cinemateca de Bogotá, Sala E, de 2:00 a 6:00 p. m., como «Exposición permanente desde el 28 de octubre al 16 de noviembre». En la app la Sala E solo tiene dos eventos del 28 oct («Escuchar lo que permanece» a las 14:00 e «Inauguración Documental Expandido» a las 16:30). Si se quiere mostrar la exposición, podría ir como actividad abierta. Lo dejo a criterio de Onboarding.\n"
+  },
+  {
+   "fecha": "2026-10-30",
+   "cuerpo": "**Vigía 30 oct 09:00 — MIDBO canceló las dos funciones de hoy en la Universidad Nacional.** Leído en la lámina 3 del carrusel https://www.instagram.com/p/DfHn6M1AP4s/ (Apify), que lleva el sello «CANCELADO»: la causa es la suspensión de actividades presenciales en el campus.\n\n- 10:00 «Las almas ni los ojos» (Auditorio 313, ed. 303C NEA) → queda la función del lun 2 nov a las 19:30 en la Sala Capital de la Cinemateca\n- 14:00 «Hombres perdidos» (mismo auditorio) → queda la del dom 1 nov a las 17:00 en la Sala 3 de la Cinemateca\n\nLa app (almacén) todavía las muestra como vigentes y la web midbo.co no refleja la cancelación. Hay que vigilar las otras 4 funciones en la U. Nacional (3 nov 14:00 y 18:30; 4 nov 10:00 «Cuba y la noche» y «Relicto»).\nMenores: hoy la app no marca Q&A en «Bosque arriba en la montaña» (lámina 4), «De cierta manera» (Q&A virtual, lámina 6) ni «Programa 1: Materias Insumisas» (lámina 8).\n"
+  },
+  {
+   "fecha": "2026-10-30",
+   "cuerpo": "**Vigía 30 oct 13:00 — MIDBO: evento de hoy que la app no tiene.** «Los archivos actúan sobre lo público», viernes 30 oct, 8:00 p. m., Parque de los Periodistas (Eje Ambiental y Av. Jiménez). Trae la proyección «Desmontaje de tigres de papel», «La lucha es un tecnopoema colectivo» (Posmonumenta), videomapping y freestyle. Lo leí en la lámina 1 de https://www.instagram.com/p/DfH6g9fB58A/ (vía Apify). No está en el almacén ni en la web (la API está sin cambios: 121/121 obras, mismo contenido)."
   }
  ]
 }

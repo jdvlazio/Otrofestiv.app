@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, emparejado con ficha_verifica() (director + año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-10-26"
+  "capturado": "2026-10-27"
  },
  "obras": [
   {
@@ -70,7 +70,7 @@
    "lbSlug": "akababuru-expresion-de-asombro",
    "_verificado": "declarada a mano: La lámina acredita a «Laura Giraldo», que en TMDB es la PRODUCTORA (Laura Giraldo Mira); la dirección es de Irati Dojura Landa Yagarí, como ya la publicamos en FICCALI y Popayán (misma ficha 1418533). Confirmada el 25 oct 2026.",
    "_director": "Irati Dojura Landa Yagarí",
-   "_sondeado": "2026-10-26",
+   "_sondeado": "2026-10-27",
    "poster": "/assets/cortoscali-2026/akababuru-expresion-de-asombro.jpg",
    "posterSource": "tmdb",
    "_heredado": {
@@ -93,7 +93,7 @@
    "lbSlug": "amor-y-cine",
    "_verificado": "declarada a mano: TMDB la registra como «Amor y Cine» (2026), de Julián Camilo Lloves, la dirección que da la lámina. Sin año ni duración en la lámina el candado no la aceptaba sola; se confirmó por título y dirección el 25 oct 2026.",
    "_director": "Julián Camilo Lloves",
-   "_sondeado": "2026-10-26",
+   "_sondeado": "2026-10-27",
    "sinopsis": "Un estudiante de cine, que niega estar enamorado de su profesora, se pregunta qué es el cine, qué es el amor y por qué hacemos lo que hacemos.",
    "_sinopsis": "traducción propia con contexto (Content Design, 25 oct 2026) de la sinopsis oficial en inglés: synopsis_en de la ficha de TMDB",
    "poster": "/assets/cortoscali-2026/amor-cine.jpg",
@@ -141,7 +141,7 @@
    "lbSlug": "dos-veces-muerto",
    "_verificado": "declarada a mano: La lámina acredita al «Colectivo Pix & Hertz» (Colombia, Perú, Paraguay); TMDB «Dos veces muerto» (5 min) es de Joseline Urco Sánchez (Perú, la masacre de Lucanamarca), con sonido de Nathalia Quimbay Cadena (Colombia) y montaje de Verónica Díaz (Asunción, Paraguay): el equipo del colectivo, en los tres países de la lámina. Se conserva la dirección de la lámina. Confirmada el 26 oct 2026.",
    "_director": "Colectivo Pix & Hertz",
-   "_sondeado": "2026-10-26",
+   "_sondeado": "2026-10-27",
    "_afiche_rechazado": "TMDB /p2pdJ39KCZwmTqN4nCJMcTFQKs7.jpg: fotograma según el catálogo (w_SCSBGTNMZM6G)",
    "pais_heredado": "Colombia, Perú, Paraguay",
    "_heredado": {
@@ -161,6 +161,7 @@
      "duration": "4 min"
     }
    ],
+   "_afiche_de": "ya publicada en bhff-2026",
    "poster": "/assets/bhff-2026/el-festin-de-las-moscas.jpg",
    "_verificado": "ya publicada en bhff-2026: se reusa su afiche",
    "pais": "Colombia",
@@ -362,7 +363,7 @@
    "lbSlug": "a-tempestade",
    "_verificado": "declarada a mano: El post de selección la nombra por su título original, «A tempestade» (Diego Müller, Brasil); TMDB: «A Tempestade» (2026), de Diego Müller. La lámina de programación la traduce. Confirmada el 25 oct 2026.",
    "_director": "Diego Müller",
-   "_sondeado": "2026-10-26",
+   "_sondeado": "2026-10-27",
    "poster": "/assets/cortoscali-2026/la-tempestad.jpg",
    "posterSource": "tmdb",
    "pais_heredado": "Brasil",
@@ -392,6 +393,7 @@
      "genre": "Drama"
     }
    ],
+   "_sinopsis_de": "ya publicada en popayan-2026",
    "_verificado": "ya publicada en popayan-2026: se reusa su sinopsis",
    "sinopsis": "En las orillas del río Magdalena, Esther guía a los espíritus de desaparecidos, víctimas de la violencia, mientras buscan reconstruir sus historias interrumpidas y encontrar su lugar entre la vida y la muerte.",
    "pais": "Colombia",
@@ -420,7 +422,7 @@
    "lbSlug": "lo-que-fue-nuestro-hogar",
    "_verificado": "declarada a mano: El post de selección la titula «Lo que fué nuestro hogar» (Angelo Lobos, Chile); TMDB: «Lo que fue nuestro hogar» (2025), de Angelo Lobos. Confirmada el 25 oct 2026; se conserva el título de la lámina de programación.",
    "_director": "Angelo Lobos",
-   "_sondeado": "2026-10-26",
+   "_sondeado": "2026-10-27",
    "poster": "/assets/cortoscali-2026/lo-que-fue-en-nuestro-hogar.jpg",
    "posterSource": "tmdb",
    "pais_heredado": "Chile",
@@ -467,7 +469,7 @@
    "lbSlug": "the-days-are-getting-shorter",
    "_verificado": "declarada a mano: La lámina acredita a David Fernando Poot Fuentes (México); TMDB «Los días cada vez son más cortos» (2024, 7 min, México) es de «David Igneas», animación hecha en Mérida, Yucatán (Diario de Yucatán, 24 jul 2024: «David Ignias (director)»). Mismo título exacto, mismo país y región; «Igneas» se lee como nombre artístico. Se conserva la dirección de la lámina. Confirmada el 26 oct 2026. País en la forma de la lámina («México»), no la de TMDB («Mexico»).",
    "_director": "David Fernando Poot Fuentes",
-   "_sondeado": "2026-10-26",
+   "_sondeado": "2026-10-27",
    "sinopsis": "En una casa antigua de Mérida, un gato naranja enfrenta la soledad cuando su cuidadora, una Abuelita, no regresa a casa tras salir por el mandado. A medida que los días pasan, la rutina cambia y su hogar comienza a cambiar.",
    "_sinopsis": "sinopsis oficial en español de la ficha de TMDB (https://www.themoviedb.org/movie/1369344, traducción es-MX), verbatim",
    "poster": "/assets/cortoscali-2026/los-dias-cada-vez-son-mas-cortos.jpg",
@@ -590,6 +592,7 @@
      "sinopsis": "Un demonio saxofonista entra en crisis tras otro concierto mediocre. Solo y decaído en la ciudad, se embarcará en un viaje surrealista y colorido de autodescubrimiento y pasión por la música."
     }
    ],
+   "_sinopsis_de": "ya publicada en anibia-2026",
    "_verificado": "ya publicada en anibia-2026: se reusa su sinopsis",
    "sinopsis": "Un demonio saxofonista entra en crisis tras otro concierto mediocre. Solo y decaído en la ciudad, se embarcará en un viaje surrealista y colorido de autodescubrimiento y pasión por la música.",
    "pais": "Colombia",
@@ -1355,7 +1358,7 @@
    "lbSlug": "akababuru-expresion-de-asombro",
    "_verificado": "declarada a mano: La lámina acredita a «Laura Giraldo», que en TMDB es la PRODUCTORA (Laura Giraldo Mira); la dirección es de Irati Dojura Landa Yagarí, como ya la publicamos en FICCALI y Popayán (misma ficha 1418533). Confirmada el 25 oct 2026.",
    "_director": "Irati Dojura Landa Yagarí",
-   "_sondeado": "2026-10-26",
+   "_sondeado": "2026-10-27",
    "poster": "/assets/cortoscali-2026/akababuru-expresion-de-asombro.jpg",
    "posterSource": "tmdb",
    "_heredado": {
@@ -1377,7 +1380,7 @@
    "lbSlug": "amor-y-cine",
    "_verificado": "declarada a mano: TMDB la registra como «Amor y Cine» (2026), de Julián Camilo Lloves, la dirección que da la lámina. Sin año ni duración en la lámina el candado no la aceptaba sola; se confirmó por título y dirección el 25 oct 2026.",
    "_director": "Julián Camilo Lloves",
-   "_sondeado": "2026-10-26",
+   "_sondeado": "2026-10-27",
    "sinopsis": "Un estudiante de cine, que niega estar enamorado de su profesora, se pregunta qué es el cine, qué es el amor y por qué hacemos lo que hacemos.",
    "_sinopsis": "traducción propia con contexto (Content Design, 25 oct 2026) de la sinopsis oficial en inglés: synopsis_en de la ficha de TMDB",
    "poster": "/assets/cortoscali-2026/amor-cine.jpg",
@@ -1423,7 +1426,7 @@
    "lbSlug": "dos-veces-muerto",
    "_verificado": "declarada a mano: La lámina acredita al «Colectivo Pix & Hertz» (Colombia, Perú, Paraguay); TMDB «Dos veces muerto» (5 min) es de Joseline Urco Sánchez (Perú, la masacre de Lucanamarca), con sonido de Nathalia Quimbay Cadena (Colombia) y montaje de Verónica Díaz (Asunción, Paraguay): el equipo del colectivo, en los tres países de la lámina. Se conserva la dirección de la lámina. Confirmada el 26 oct 2026.",
    "_director": "Colectivo Pix & Hertz",
-   "_sondeado": "2026-10-26",
+   "_sondeado": "2026-10-27",
    "_afiche_rechazado": "TMDB /p2pdJ39KCZwmTqN4nCJMcTFQKs7.jpg: fotograma según el catálogo (w_SCSBGTNMZM6G)",
    "pais_heredado": "Colombia, Perú, Paraguay",
    "_heredado": {
@@ -1617,7 +1620,7 @@
    "lbSlug": "a-tempestade",
    "_verificado": "declarada a mano: El post de selección la nombra por su título original, «A tempestade» (Diego Müller, Brasil); TMDB: «A Tempestade» (2026), de Diego Müller. La lámina de programación la traduce. Confirmada el 25 oct 2026.",
    "_director": "Diego Müller",
-   "_sondeado": "2026-10-26",
+   "_sondeado": "2026-10-27",
    "poster": "/assets/cortoscali-2026/la-tempestad.jpg",
    "posterSource": "tmdb",
    "pais_heredado": "Brasil",
@@ -1638,7 +1641,7 @@
    "lbSlug": "lo-que-fue-nuestro-hogar",
    "_verificado": "declarada a mano: El post de selección la titula «Lo que fué nuestro hogar» (Angelo Lobos, Chile); TMDB: «Lo que fue nuestro hogar» (2025), de Angelo Lobos. Confirmada el 25 oct 2026; se conserva el título de la lámina de programación.",
    "_director": "Angelo Lobos",
-   "_sondeado": "2026-10-26",
+   "_sondeado": "2026-10-27",
    "poster": "/assets/cortoscali-2026/lo-que-fue-en-nuestro-hogar.jpg",
    "posterSource": "tmdb",
    "pais_heredado": "Chile",
@@ -1683,7 +1686,7 @@
    "lbSlug": "the-days-are-getting-shorter",
    "_verificado": "declarada a mano: La lámina acredita a David Fernando Poot Fuentes (México); TMDB «Los días cada vez son más cortos» (2024, 7 min, México) es de «David Igneas», animación hecha en Mérida, Yucatán (Diario de Yucatán, 24 jul 2024: «David Ignias (director)»). Mismo título exacto, mismo país y región; «Igneas» se lee como nombre artístico. Se conserva la dirección de la lámina. Confirmada el 26 oct 2026. País en la forma de la lámina («México»), no la de TMDB («Mexico»).",
    "_director": "David Fernando Poot Fuentes",
-   "_sondeado": "2026-10-26",
+   "_sondeado": "2026-10-27",
    "sinopsis": "En una casa antigua de Mérida, un gato naranja enfrenta la soledad cuando su cuidadora, una Abuelita, no regresa a casa tras salir por el mandado. A medida que los días pasan, la rutina cambia y su hogar comienza a cambiar.",
    "_sinopsis": "sinopsis oficial en español de la ficha de TMDB (https://www.themoviedb.org/movie/1369344, traducción es-MX), verbatim",
    "poster": "/assets/cortoscali-2026/los-dias-cada-vez-son-mas-cortos.jpg",

@@ -96,7 +96,7 @@ deliberada existe la etiqueta `frontera-ok`.
 | `fantasofest2026` | FantasoFest | Bogotá | 13–19 JUL | Archivado |
 | `ficpa2026` | FICPA | Pasto | 13–17 OCT | Recién terminado |
 | `villadelcine2026` | Villa del Cine | Villa de Leyva | 14–17 OCT | Recién terminado |
-| `ficma2026` | FICMA | Manizales | 19–26 SEP | Recién terminado |
+| `ficma2026` | FICMA | Manizales | 19–26 SEP | Archivado |
 | `ficdeh2026` | FICDEH | Colombia | 12–19 AGO | Archivado |
 | `finca2026` | FINCA | Buenos Aires | 12–19 AGO | Archivado |
 | `cinemancia2026` | Cinemancia | Valle de Aburrá | 3–12 SEP | Archivado |
@@ -106,28 +106,31 @@ deliberada existe la etiqueta `frontera-ok`.
 | `tiff2026` | TIFF | Toronto | 10–20 SEP | Archivado |
 | `ficmontanas2026` | Ficmontañas | Salento | JUL 1–5 | Archivado |
 | `siembrafest2026` | SiembraFest | Sasaima y Villeta | 9–18 SEP | Archivado |
-| `jardin2026` | Festival de Cine de Jardín | Jardín | 24–27 SEP | Recién terminado |
-| `itagui2026` | Festicine Itagüí | Itagüí | 23–27 SEP | Recién terminado |
+| `jardin2026` | Festival de Cine de Jardín | Jardín | 24–27 SEP | Archivado |
+| `itagui2026` | Festicine Itagüí | Itagüí | 23–27 SEP | Archivado |
 | `girardota2026` | Festigirardota | Girardota | 30 SEP–4 OCT | Recién terminado |
 | `anibia2026` | Anibia | Bogotá | 20 OCT–1 NOV | **Próximo / activo** |
-| `guatape2026` | Guatapé Film Fest | Guatapé | 21–25 OCT | **Próximo / activo** |
-| `cortoscali2026` | Cortos Cali | Cali | 27–30 OCT | **Próximo / activo** |
+| `guatape2026` | Guatapé Film Fest | Guatapé | 21–25 OCT | Recién terminado |
+| `cortoscali2026` | Cortos Cali | Cali | 27–30 OCT | Recién terminado |
 | `biff2026` | BIFF | Bogotá | 8–14 OCT | Recién terminado |
 | `popayan2026` | Cine Corto Popayán | Popayán | 5–11 OCT | Recién terminado |
 | `mamut2026` | Mamut | Medellín | 5–11 OCT | Recién terminado |
 | `filcmar2026` | FILCMAR | Marinilla | 9–13 OCT | Recién terminado |
-| `ficcali2026` | FICCALI | Cali | 16–25 OCT | **Próximo / activo** |
+| `ficcali2026` | FICCALI | Cali | 16–25 OCT | Recién terminado |
 | `bhff2026` | Bogotá Horror | Bogotá | 22–31 OCT | **Próximo / activo** |
 | `ficica2026` | FICICA | Barranquilla | 20–24 OCT | Recién terminado |
-| `fantasmagoria2026` | Fantasmagoría | Medellín | 14–25 OCT | **Próximo / activo** |
+| `ficidi2026` | FICIDI | Barranquilla | 3–7 NOV | **Próximo / activo** |
+| `mambe2026` | MAMBE | Florencia | 3–7 NOV | **Próximo / activo** |
+| `fantasmagoria2026` | Fantasmagoría | Medellín | 14–25 OCT | Recién terminado |
 | `midbo2026` | MIDBO | Bogotá | 27 OCT–4 NOV | **Próximo / activo** |
-| `mubibogota2026` | MUBI Fest | Bogotá | 24–25 OCT | **Próximo / activo** |
+| `mubibogota2026` | MUBI Fest | Bogotá | 24–25 OCT | Recién terminado |
 | `funza2026` | Festival de Cine Funza | Funza | 18–21 NOV | **Próximo / activo** |
+| `miradas2026` | Miradas Medellín | Medellín | 3–8 NOV | **Próximo / activo** |
 | `narrarelfuturo2026` | #NarrarElFuturo | Bogotá | 15–20 SEP | Archivado |
 
 ### Features activas (desde `.specify/features/`)
 
-_Sin features activas en `.specify/features/`._
+- `mesa-de-luz/` — fase actual: **spec**
 
 ---
 

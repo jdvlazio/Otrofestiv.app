@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "midbo.co — ficha de cada obra (bloque «Funciones») + API pelicula/seccion",
-  "capturado": "2026-10-27",
+  "capturado": "2026-10-30",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_secciones": "Las categorías madre de la taxonomía `seccion` de midbo.co, tal cual; «Encuentro Pensar lo Real» es el nombre del menú del seminario; «Proyecciones» (nuestra) para la única obra sin sección.",
@@ -368,6 +368,16 @@
    "_nota": "edificio distinto del de Posgrados (M16), ~85 m, mismo campus",
    "n": 1,
    "address": "Cra. 4 #22-40"
+  },
+  "Parque de los Periodistas - Bogotá": {
+   "short": "Parque de los Periodistas",
+   "city": "Bogotá",
+   "n": 1,
+   "_prec": "manual",
+   "lat": 4.6012192,
+   "lng": -74.0694809,
+   "_match": "Google Maps: Parque de los Periodistas Gabriel García Márquez (30 oct 2026)",
+   "address": "Eje Ambiental y Av. Jiménez"
   }
  },
  "_avisos_id": [],
@@ -462,7 +472,7 @@
    "section": "🪞 Espejos: Gestos de Reparación",
    "country": "Colombia",
    "flags": "🇨🇴",
-   "duration": "57 min",
+   "duration": "90 min",
    "_ancla": [
     "Alianza Francesa - Bogotá",
     "2026-10-28",
@@ -508,10 +518,32 @@
      "lbSlug": "ubuntu-la-metrica-de-los-afectos",
      "tmdb_id": 1794426,
      "genre": "Documental"
+    },
+    {
+     "title": "Si La Escombrera hablara",
+     "director": "Juan Prado",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "year": 2025,
+     "duration": "33 min",
+     "synopsis": "En la comuna 13 de Medellín existe la fosa urbana a cielo abierto más grande de América Latina. Durante más de veinte años, La Escombrera ha sido señalada por familias de personas víctimas de desaparición forzada como el lugar donde posiblemente se encuentren muchos de los 503 desaparecidos de este territorio. Mujeres Caminando por la Verdad lidera la búsqueda forense que, en medio de incontables obstáculos y tras dos décadas de negacionismo, desencadenó en el hallazgo de cuerpos en diciembre del año 2024. Este acontecimiento histórico, una bocanada de aire fresco para las familias buscadoras, envió un mensaje muy claro a toda Colombia: la tierra ha comenzado a hablar.",
+     "synopsis_lang": "es",
+     "poster": "/assets/midbo-2026/si-la-escombrera-hablara.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "si-la-escombrera-hablara",
+     "tmdb_id": 1738942,
+     "synopsis_en": "Medellín’s Comuna 13 is home to the largest urban mass grave in Latin America. La Escombrera has been identified by families of victims of enforced disappearance as the site where many of the territory’s 503 disappeared persons are buried. Mujeres Caminando por la Verdad leads the forensic search that, after two decades of denialism, led to the discovery of human remains in 2024. This historic event sent a clear message across Colombia: the earth has begun to speak.",
+     "genre": "Documental"
     }
    ],
    "_fid": "f_fc9e0356a0",
+   "_ids_anteriores": [
+    "f_9f903a6d40"
+   ],
    "id": "f_fc9e0356a0",
+   "ids_anteriores": [
+    "f_9f903a6d40"
+   ],
    "is_free": true,
    "_procedencia": {
     "day": {
@@ -568,84 +600,6 @@
    "titulos_anteriores": [
     "Espejos: Gestos de reparación"
    ]
-  },
-  {
-   "title": "Si La Escombrera hablara",
-   "type": "film",
-   "section": "🪞 Espejos: Gestos de Reparación",
-   "director": "Juan Prado",
-   "country": "Colombia",
-   "flags": "🇨🇴",
-   "duration": "33 min",
-   "genre": "Documental",
-   "_ancla": [
-    "Alianza Francesa - Bogotá",
-    "2026-10-28",
-    "16:00"
-   ],
-   "day": "2026-10-28",
-   "time": "16:00",
-   "day_order": 1,
-   "venue": "Alianza Francesa - Bogotá",
-   "has_qa": false,
-   "synopsis": "En la comuna 13 de Medellín existe la fosa urbana a cielo abierto más grande de América Latina. Durante más de veinte años, La Escombrera ha sido señalada por familias de personas víctimas de desaparición forzada como el lugar donde posiblemente se encuentren muchos de los 503 desaparecidos de este territorio. Mujeres Caminando por la Verdad lidera la búsqueda forense que, en medio de incontables obstáculos y tras dos décadas de negacionismo, desencadenó en el hallazgo de cuerpos en diciembre del año 2024. Este acontecimiento histórico, una bocanada de aire fresco para las familias buscadoras, envió un mensaje muy claro a toda Colombia: la tierra ha comenzado a hablar.",
-   "synopsis_lang": "es",
-   "poster": "/assets/midbo-2026/si-la-escombrera-hablara.jpg",
-   "posterSource": "tmdb",
-   "_src": {
-    "url": "https://midbo.co/peliculas/si-la-escombrera-hablara/",
-    "date": "2026-10-10"
-   },
-   "year": 2025,
-   "lbSlug": "si-la-escombrera-hablara",
-   "tmdb_id": 1738942,
-   "synopsis_en": "Medellín’s Comuna 13 is home to the largest urban mass grave in Latin America. La Escombrera has been identified by families of victims of enforced disappearance as the site where many of the territory’s 503 disappeared persons are buried. Mujeres Caminando por la Verdad leads the forensic search that, after two decades of denialism, led to the discovery of human remains in 2024. This historic event sent a clear message across Colombia: the earth has begun to speak.",
-   "_programa_original": "Programa 2: Comunidades que siguen en búsqueda",
-   "_fid": "f_9f903a6d40",
-   "id": "f_9f903a6d40",
-   "is_free": true,
-   "_procedencia": {
-    "day": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-10",
-     "url": "https://midbo.co/"
-    },
-    "time": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-10",
-     "url": "https://midbo.co/"
-    },
-    "venue": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-10",
-     "url": "https://midbo.co/"
-    },
-    "duration": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-10",
-     "url": "https://midbo.co/"
-    },
-    "entrada": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-10",
-     "url": "https://midbo.co/"
-    },
-    "has_qa": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-10",
-     "url": "https://midbo.co/"
-    },
-    "title": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-10",
-     "url": "https://midbo.co/"
-    },
-    "type": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-10",
-     "url": "https://midbo.co/"
-    }
-   }
   },
   {
    "title": "El hogar fue sepultado en esa tierra que nunca pudimos encontrar",
@@ -2123,8 +2077,8 @@
      "duration": "15 min",
      "synopsis": "Un cuerpo cubierto con una sábana manchada de sangre yace sobre una mesa de ping-pong, ubicada en lo que parece ser un escenario. A partir de esta imagen encontrada en el archivo noticioso colombiano, esta pieza documental da cuenta de cómo la muerte, paradójica e inefable, ha habitado un lugar no pensado para ella: el Auditorio León de Greiff de la Universidad Nacional de Colombia.",
      "synopsis_lang": "es",
-     "poster": "/assets/midbo-2026/el-leon.jpg",
-     "posterSource": "tmdb",
+     "poster": "/assets/midbo-2026/el-leon-afiche.jpg",
+     "posterSource": "oficial",
      "lbSlug": "el-leon",
      "tmdb_id": 1616865,
      "synopsis_en": "Strange images overlap like floating ghosts: a dead body, a singer, an audience. The film shows, paradoxically and theatrically, how death inhabits the León de Greiff Auditorium in Colombia.",
@@ -2193,7 +2147,8 @@
      "poster": "/assets/midbo-2026/las-formas-de-la-magia.jpg",
      "posterSource": "tmdb",
      "lbSlug": "las-formas-de-la-magia",
-     "tmdb_id": 1668889
+     "tmdb_id": 1668889,
+     "genre": "Documental"
     },
     {
      "title": "Lo que no está",
@@ -7088,8 +7043,8 @@
      "duration": "15 min",
      "synopsis": "Un cuerpo cubierto con una sábana manchada de sangre yace sobre una mesa de ping-pong, ubicada en lo que parece ser un escenario. A partir de esta imagen encontrada en el archivo noticioso colombiano, esta pieza documental da cuenta de cómo la muerte, paradójica e inefable, ha habitado un lugar no pensado para ella: el Auditorio León de Greiff de la Universidad Nacional de Colombia.",
      "synopsis_lang": "es",
-     "poster": "/assets/midbo-2026/el-leon.jpg",
-     "posterSource": "tmdb",
+     "poster": "/assets/midbo-2026/el-leon-afiche.jpg",
+     "posterSource": "oficial",
      "lbSlug": "el-leon",
      "tmdb_id": 1616865,
      "synopsis_en": "Strange images overlap like floating ghosts: a dead body, a singer, an audience. The film shows, paradoxically and theatrically, how death inhabits the León de Greiff Auditorium in Colombia.",
@@ -7158,7 +7113,8 @@
      "poster": "/assets/midbo-2026/las-formas-de-la-magia.jpg",
      "posterSource": "tmdb",
      "lbSlug": "las-formas-de-la-magia",
-     "tmdb_id": 1668889
+     "tmdb_id": 1668889,
+     "genre": "Documental"
     },
     {
      "title": "Lo que no está",
@@ -8815,7 +8771,7 @@
    }
   },
   {
-   "title": "Charla: Audio descripción para documental",
+   "title": "Charla \"Herramientas inclusivas para personas sordas y ciegas. El caso de Estancia: accesible con audiodescripción\"",
    "type": "event",
    "section": "🎙️ Encuentro Pensar lo Real",
    "duration": "90 min",
@@ -8835,7 +8791,7 @@
     "url": "https://midbo.co/encuentro-pensar-lo-real/seminario/",
     "date": "2026-10-10"
    },
-   "requires_registration": true,
+   "requires_registration": false,
    "description": "Invitados: Luis Guillermo Torres (ATMedios) y Andrés Carmona, director Estancia (2024) · Modera: Julio Lamaña.",
    "description_lang": "es",
    "_fid": "f_78956f102c",
@@ -8868,14 +8824,14 @@
      "url": "https://midbo.co/"
     },
     "entrada": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-10",
-     "url": "https://midbo.co/"
+     "tipo": "festival-ig",
+     "fecha": "2026-10-28",
+     "url": "https://www.instagram.com/p/DfCiPvXoGqF/"
     },
     "requires_registration": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-10",
-     "url": "https://midbo.co/"
+     "tipo": "festival-ig",
+     "fecha": "2026-10-28",
+     "url": "https://www.instagram.com/p/DfCiPvXoGqF/"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -8883,9 +8839,9 @@
      "url": "https://midbo.co/"
     },
     "title": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-10",
-     "url": "https://midbo.co/"
+     "tipo": "festival-ig",
+     "fecha": "2026-10-28",
+     "url": "https://www.instagram.com/p/DfCiPvXoGqF/"
     },
     "type": {
      "tipo": "festival-web",
@@ -8897,7 +8853,10 @@
      "fecha": "2026-10-10",
      "url": "https://midbo.co/"
     }
-   }
+   },
+   "titulos_anteriores": [
+    "Charla: Audio descripción para documental"
+   ]
   },
   {
    "title": "Master Class: Puntos de escucha",
@@ -9659,6 +9618,99 @@
    }
   },
   {
+   "title": "Los Archivos Actúan sobre lo Público",
+   "type": "event",
+   "section": "🎙️ Encuentro Pensar lo Real",
+   "duration": "90 min",
+   "_ancla": [
+    "Parque de los Periodistas - Bogotá",
+    "2026-10-30",
+    "20:00"
+   ],
+   "day": "2026-10-30",
+   "time": "20:00",
+   "day_order": 3,
+   "venue": "Parque de los Periodistas - Bogotá",
+   "event_kind": "evento",
+   "has_qa": false,
+   "_src": {
+    "url": "https://www.instagram.com/p/DfH6g9fB58A/",
+    "date": "2026-10-30"
+   },
+   "is_cortos": true,
+   "film_list": [
+    {
+     "title": "Desmontaje de tigres de papel",
+     "director": "Taller de usos críticos de archivos sonoros y audiovisuales (MIDBO) - Creación colectiva"
+    },
+    {
+     "title": "La lucha es un tecnopoema colectivo",
+     "director": "Posmonumenta"
+    },
+    {
+     "title": "Videomapping + muestra audiovisual",
+     "director": "@watchingyoulab + creaciones poéticas de procesos de memoria participantes + freestyle"
+    }
+   ],
+   "description": "El Parque de los Periodistas se transforma en un espacio de creación y activación audiovisual para hacer una intervención colectiva que pone los archivos en circulación y los lleva al espacio público. Proyecciones, videomapping, poesía y freestyle se entrelazan para traer esas memorias al presente y crear alternativas de habitar y construir lo público.",
+   "description_lang": "es",
+   "_fid": "f_06cbb93311",
+   "id": "f_06cbb93311",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://midbo.co/"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://midbo.co/"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://midbo.co/"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://midbo.co/"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://midbo.co/"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://midbo.co/"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://midbo.co/"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://midbo.co/"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://midbo.co/"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://midbo.co/"
+    }
+   }
+  },
+  {
    "title": "Inauguración Documental Expandido",
    "type": "event",
    "section": "🔊 Documental Expandido",
@@ -10073,8 +10125,8 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-27T13:23:20",
-  "plan_sha": "a59415cd50b61e59",
+  "fecha": "2026-10-30T13:20:03",
+  "plan_sha": "18f7fb7e2b601fc4",
   "paso": 8,
   "cmd": "python3 pipeline/midbo-2026-verificar.py"
  }

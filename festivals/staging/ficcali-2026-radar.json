@@ -1,10 +1,10 @@
 {
  "_provenance": {
   "fuente": "issue de radar #1024 — https://github.com/jdvlazio/Otrofestiv.app/issues/1024",
-  "capturado": "2026-10-25",
+  "capturado": "2026-10-27",
   "titulo": "RADAR: FICCALI 18 — Festival Internacional de Cine de Cali, 3–27 OCT 2026",
   "estado": "OPEN",
-  "comentarios": 9
+  "comentarios": 10
  },
  "issue": 1024,
  "titulo": "RADAR: FICCALI 18 — Festival Internacional de Cine de Cali, 3–27 OCT 2026",
@@ -46,6 +46,10 @@
   {
    "fecha": "2026-10-23",
    "cuerpo": "**Vigía 23 oct 07:00 — FICCALI.** El post https://www.instagram.com/p/De0V1lFDU4D/ (lámina 1) dice: **Ceremonia de premiación** el sábado 24 oct a las 7:30 p.m. en la Cinemateca La Tertulia, con *Historias del buen valle* y entrada libre hasta completar aforo. La app ya tiene esa función (24 oct, 19:30, Cinemateca La Tertulia), pero como una proyección común: no dice que es la ceremonia de premiación ni la gala de cierre, y no dice que la entrada es libre. El conversatorio con José Luis Guerín después de la película solo aparece en el pie del post; ninguna lámina lo confirma. Duración: la lámina 3 dice 122 min y la app dice 120. La web de programación no cambió (misma huella que el 22 oct).\n"
+  },
+  {
+   "fecha": "2026-10-27",
+   "cuerpo": "**Vigía 26 oct 21:30** — FICCALI publicó palmarés: [De-XK0IkfZK](https://www.instagram.com/p/De-XK0IkfZK/) (8 láminas de premio leídas). En el almacén `palmares` está vacío.\n- Corto Nacional · Premio María: *Agua fría* (Meme Cabello & Antonia Martínez Valls) — no está en nuestro JSON.\n- Corto Nacional · Premio Luis Ospina (dirección): *Futuros luminosos* (Ismael García) — no está en nuestro JSON.\n- Largo Internacional · Mención especial: *Un calendario incompleto* (= An Incomplete Calendar).\n- Largo Internacional · Premio Luis Ospina: *Siempre soy tu animal materno*.\n- Largo Internacional · Premio María: *Seis meses en el edificio rosa con azul*.\n- Largo Nacional · Mención especial: *Las pesadillas del siervo*.\n- Largo Nacional · Premio María + Premio Luis Ospina: *Relicto*.\nNo se cierra (sin lista oficial de categorías).\n"
   }
  ]
 }

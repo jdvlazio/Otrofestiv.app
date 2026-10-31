@@ -1,6 +1,6 @@
 {
  "_provenance": {
-  "fuente": "Instagram @mfantasmagoria (sin sesión, memoria del vigía), carrusel «Ganadores 2026 · Cortometrajes» https://www.instagram.com/p/De-f88xlKpl/ leído lámina por lámina (26 oct). Premio como en el encabezado de cada lámina; en Morana el encabezado dice «al Mejor Cortometraje» y el laurel «al mejor Cortometraje de ficción»: se toma el laurel. La lámina de «Que El Cielo Nos Perdone» con encabezado «Premio “Jose Mojica Marins”» y laurel «Premio del Público “Narciso Ibañez Menta”» — se contradicen; Juan decidió (27 oct) que manda el laurel: Premio del Público, categoría «cortometraje de Ficción». «Appol-o» no está en nuestra programación: obra null.",
+  "fuente": "Instagram @mfantasmagoria (sin sesión, memoria del vigía), carrusel «Ganadores 2026 · Cortometrajes» https://www.instagram.com/p/De-f88xlKpl/ leído lámina por lámina (26 oct). Premio como en el encabezado de cada lámina; en Morana el encabezado dice «al Mejor Cortometraje» y el laurel «al mejor Cortometraje de ficción»: se toma el laurel. La lámina de «Que El Cielo Nos Perdone» con encabezado «Premio “Jose Mojica Marins”» y laurel «Premio del Público “Narciso Ibañez Menta”» — se contradicen; Juan decidió (27 oct) que manda el laurel: Premio del Público, categoría «cortometraje de Ficción». «Appol-o» no está en nuestra programación: obra null. | LARGOS: carrusel «Ganadores 2026 · Largometrajes» https://www.instagram.com/p/DfC_VNAlJpo/ (28 oct), 12 láminas leídas una por una sin sesión. Encabezado manda. Lámina 6 (Ghost in the Cell, grupo de actores): encabezado «Mención especial Mejor actor», laurel «Premio Tres Moiras al mejor actor»; se toma el encabezado (mención), igual que la lámina 5. El Premio del Público de largos es distinto del de cortos: los dos llevan el nombre Narciso Ibáñez Menta.",
   "capturado": "2026-10-26"
  },
  "palmares": [
@@ -75,6 +75,86 @@
    "titulo": "Que El Cielo Nos Perdone",
    "autoria": "Andrés Buitrago",
    "obra": "Que El Cielo Nos Perdone"
+  },
+  {
+   "categoria": "Largometraje",
+   "nivel": "ganadora",
+   "premio": "Premio “Carlos Enrique Taboada” a Mejor Película",
+   "titulo": "Ghost in the Cell",
+   "autoria": "Joko Anwar",
+   "obra": "Ghost in the Cell"
+  },
+  {
+   "categoria": "Dirección",
+   "nivel": "ganadora",
+   "premio": "Premio “Narciso Ibáñez Serrador” a Mejor Dirección",
+   "titulo": "Huo zhe yan (The Furious)",
+   "autoria": "Kenki Tanigaki",
+   "obra": "Huo zhe yan (The Furious)"
+  },
+  {
+   "categoria": "Guion",
+   "nivel": "ganadora",
+   "premio": "Premio “Julio Jimenez” a Mejor Guion",
+   "titulo": "Ghost in the Cell",
+   "autoria": "Joko Anwar",
+   "obra": "Ghost in the Cell"
+  },
+  {
+   "categoria": "Largometraje Latinoamericano",
+   "nivel": "ganadora",
+   "premio": "Premio “Jaime Osorio” a Mejor Película Latinoamericana",
+   "titulo": "Coração das Trevas (Heart of Darkness)",
+   "autoria": "Rogério Nunes",
+   "obra": "Coração das Trevas (Heart of Darkness)"
+  },
+  {
+   "categoria": "Largometraje de Ficción",
+   "nivel": "ganadora",
+   "premio": "Premio del Público “Narciso Ibáñez Menta” al mejor Largometraje de Ficción",
+   "titulo": "You Are The Film",
+   "autoria": "Makoto Ueda",
+   "obra": "You Are The Film"
+  },
+  {
+   "categoria": "Actriz",
+   "nivel": "ganadora",
+   "premio": "Premio “Tres Moiras” a la mejor Actriz en Largometraje de Ficción",
+   "titulo": "Familia Teme Enfrentar Una Nueva Noche de Terror",
+   "autoria": "Nadia Lozano",
+   "obra": "Familia Teme Enfrentar Una Nueva Noche de Terror"
+  },
+  {
+   "categoria": "Actor",
+   "nivel": "mencion",
+   "premio": "Mención especial Mejor actor",
+   "titulo": "Ghost in the Cell",
+   "autoria": "Grupo de actores",
+   "obra": "Ghost in the Cell"
+  },
+  {
+   "categoria": "Actor",
+   "nivel": "mencion",
+   "premio": "Mención especial Mejor actor",
+   "titulo": "Familia Teme Enfrentar Una Nueva Noche de Terror",
+   "autoria": "Max Federico Alemán",
+   "obra": "Familia Teme Enfrentar Una Nueva Noche de Terror"
+  },
+  {
+   "categoria": "Documental",
+   "nivel": "ganadora",
+   "premio": "Premio “Gótico tropical” a Mejor documental",
+   "titulo": "Black Zombie",
+   "autoria": "Maya Annik Bedward",
+   "obra": "Black Zombie"
+  },
+  {
+   "categoria": "Documental",
+   "nivel": "mencion",
+   "premio": "Mención especial Documental de género",
+   "titulo": "Theatre of Horrors: The Sordid Story of Paris' Grand Guignol",
+   "autoria": "David Gregory",
+   "obra": "Theatre of Horrors: The Sordid Story of Paris' Grand Guignol"
   }
  ]
 }

@@ -1,19 +1,19 @@
 {
  "titulo_original": {
-  "fuente": "festival:villadelcine-2026",
+  "fuente": "festival:miradas-2026,miradas-2026",
   "regla": "el título que más festivales imprimen"
  },
  "directores": {
-  "fuente": "tmdb:1791678",
-  "regla": "tmdb-manda"
+  "fuente": "festival",
+  "regla": "la grafía más completa que acreditan los festivales"
  },
  "anio": {
-  "fuente": "tmdb:1791678",
+  "fuente": "tmdb:1305858",
   "regla": "tmdb-manda"
  },
  "paises": {
-  "fuente": "festival",
-  "regla": "pais-union"
+  "fuente": "tmdb:1305858",
+  "regla": "tmdb-manda"
  },
  "generos": {
   "fuente": "festival",

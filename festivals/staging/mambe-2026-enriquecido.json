@@ -1,0 +1,255 @@
+{
+ "_provenance": {
+  "fuente": "TMDB + letterboxd.com/tmdb/<id>, emparejado con ficha_verifica() (director + año ±1 o duración ±3 min). Lo que no verifica no entra.",
+  "capturado": "2026-10-31"
+ },
+ "obras": [
+  {
+   "titulo": "Horizonte",
+   "tmdb_id": 1265716,
+   "titulo_original": "Horizonte",
+   "poster_path": "/99eXFsGBtH0MH2YEOLihmEuyt0z.jpg",
+   "synopsis_es": "Dos fantasmas, una madre y su hijo, buscan al padre desaparecido del muchacho en un viaje físico y espiritual por un mundo arrasado por la guerra. Basilio, que en vida fue un criminal, debe revivir sus actos con su madre como testigo. Solo a través de un gran sacrificio encontrarán la redención que buscan.",
+   "synopsis_en": "It is about two ghosts, a mother and son, search for the boy’s missing father on a journey, both physical and spiritual, through a world ravaged by war. Only through great sacrifice will they mend the fragile bonds that bind them and perhaps find redemption.",
+   "genero": "Drama",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 125,
+   "pais_tmdb": "Chile, Colombia, France, Germany, Luxembourg",
+   "title_en": "Horizon",
+   "lbSlug": "horizon-2024-4",
+   "_verificado": "declarada a mano: Obra sin créditos en la lámina. Película de apertura de un festival colombiano: el largo colombiano de César Augusto Acevedo (2025), el mismo que publicamos en Guatapé 2026. El otro «Horizonte» de TMDB (1786666) es brasileño, de 2026. Investigación del 31 oct 2026.",
+   "_director": "",
+   "_sondeado": "2026-10-31",
+   "poster": "/assets/mambe-2026/horizonte.jpg",
+   "posterSource": "tmdb",
+   "_heredado": {
+    "synopsis_es": "catálogo w_8GJ7B5KCEQ78 (funza-2026, guatape-2026, mambe-2026)",
+    "director_heredado": "catálogo w_8GJ7B5KCEQ78 (funza-2026, guatape-2026, mambe-2026)",
+    "pais_heredado": "catálogo w_8GJ7B5KCEQ78 (funza-2026, guatape-2026, mambe-2026)"
+   },
+   "director_heredado": "César Augusto Acevedo",
+   "pais_heredado": "Chile, Colombia, Francia, Alemania, Luxemburgo"
+  },
+  {
+   "titulo": "La memoria de las mariposas",
+   "tmdb_id": 1418601,
+   "titulo_original": "La memoria de las mariposas",
+   "poster_path": "/eoTEpNsHXfWAXtM2blrNiYhrjfV.jpg",
+   "synopsis_es": "Emergiendo de la era del caucho, las historias perdidas de Omarino y Aredomi se revelan a través de un viaje sensorial que entrelaza la propia historia de la cineasta con archivos de la Amazonía de inicios del siglo veinte. La película es a la vez un ritual y una invocación a dialogar entre vivos y muertos, reflexionando sobre los límites de la investigación, la especulación, el poder, la memoria y las reparaciones.",
+   "synopsis_en": "A photo of two indigenous boys brought by force to Europe opens an investigation of the past with meditations on the filmmaker’s own family using roughly textured analogue footage. A monument for the indigenous victims of the rubber trade in Peru.",
+   "genero": "Documental",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 77,
+   "pais_tmdb": "Portugal, Peru",
+   "title_en": "The Memory of Butterflies",
+   "lbSlug": "the-memory-of-butterflies",
+   "_verificado": "declarada a mano: Obra sin créditos en la lámina; única ficha con ese título en TMDB: Tatiana Fuentes Sadowski (Perú/Portugal, 2026). El festival la proyecta en la Maloca Uitoto. Investigación del 31 oct 2026.",
+   "_director": "",
+   "_sondeado": "2026-10-31",
+   "poster": "/assets/mambe-2026/la-memoria-de-las-mariposas.jpg",
+   "posterSource": "tmdb",
+   "_heredado": {
+    "synopsis_es": "catálogo w_R4KQGMB4710G (mambe-2026, mamut-2026)",
+    "director_heredado": "catálogo w_R4KQGMB4710G (mambe-2026, mamut-2026)",
+    "pais_heredado": "catálogo w_R4KQGMB4710G (mambe-2026, mamut-2026)"
+   },
+   "director_heredado": "Tatiana Fuentes Sadowski",
+   "pais_heredado": "Portugal, Perú"
+  },
+  {
+   "titulo": "Lactar",
+   "tmdb_id": 1694304,
+   "titulo_original": "Lactar",
+   "poster_path": "/zfqfD82FkdoKjMn6m6CwmvuoSyx.jpg",
+   "synopsis_es": "Una mujer de 62 años, atrapada en una vida de privilegios vacíos, queda embarazada de su chofer. Enfrentándose al rechazo de su familia y de la sociedad, decide luchar por traer a la vida un bebé que parece imposible a su tardía edad, sin importar las consecuencias.",
+   "synopsis_en": "A 62-year-old woman, trapped in a life of empty privilege, becomes pregnant by her driver. Facing rejection from her family and society, she decides to fight to bring to life a baby that seems impossible at her late age, regardless of the consequences.",
+   "genero": "Drama",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 75,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "lactar",
+   "_verificado": "declarada a mano: Obra sin créditos en la lámina; única ficha con ese título en TMDB: película colombiana de Harold Trompetero (2026). Investigación del 31 oct 2026.",
+   "_director": "",
+   "_sondeado": "2026-10-31",
+   "poster": "/assets/mambe-2026/lactar.jpg",
+   "posterSource": "tmdb",
+   "director_heredado": "Harold Trompetero",
+   "_heredado": {
+    "director_heredado": "catálogo w_R4J6SRMMD6E9 (ficmontanas-2026, ficpa-2026, itagui-2026, mambe-2026)",
+    "pais_heredado": "catálogo w_R4J6SRMMD6E9 (ficmontanas-2026, ficpa-2026, itagui-2026, mambe-2026)"
+   },
+   "pais_heredado": "Colombia"
+  },
+  {
+   "titulo": "Soñé su nombre",
+   "tmdb_id": 1454365,
+   "titulo_original": "Soñé su nombre",
+   "poster_path": "/xlXvgdoTqDdzUFoBAb2ANqka4tC.jpg",
+   "synopsis_es": "Después de 30 años negando su dolor, Ángela se enfrenta a su pasado cuando su padre, en un sueño, le pide que lo busque. Junto a su hermana Juliana, emprende un viaje a través de Colombia hasta las tierras indígenas donde su padre, un agricultor afrodescendiente, fue víctima de desaparición forzada.  Mientras las hermanas atraviesan el país, no solo vemos los paisajes contrastantes de Colombia, sino que también se entablan conversaciones que revelan el perfil de su padre, Esaú Carabalí Brand: un arrocero independiente, rebelde y víctima de un robo crucial. En el camino, descubren un inesperado archivo sonoro familiar y hacen una parada en la casa de su introspectiva abuela paterna.  Días después, las hermanas salen del territorio, habiendo encontrado el amor, el legado de su padre y una comunidad atravesada por la violencia que aún resiste manteniendo una conexión profunda con su tierra y su alimento.",
+   "synopsis_en": "Thirty years after his forced disappearance, the filmmaker’s Afro Colombian father comes to her in a dream, asking her to find him. With her sister, she sets out on a journey of discovery across Colombia’s painful history, reconnecting with their father and his activism.",
+   "genero": "Documental",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 86,
+   "pais_tmdb": "Colombia",
+   "title_en": "I Dreamed His Name",
+   "lbSlug": "i-dreamed-his-name",
+   "_verificado": "declarada a mano: Obra sin créditos en la lámina; única ficha con ese título en TMDB: película colombiana de Ángela Carabalí (2026). Investigación del 31 oct 2026.",
+   "_director": "",
+   "_sondeado": "2026-10-31",
+   "poster": "/assets/mambe-2026/sone-su-nombre.jpg",
+   "posterSource": "tmdb",
+   "director_heredado": "Ángela Carabalí",
+   "_heredado": {
+    "director_heredado": "catálogo w_R4HKHDXFCZNZ (ficdeh-2026, ficma-2026, jardin-2026, mambe-2026, narrarelfuturo-2026, qaff-2026, siembrafest-2026)",
+    "pais_heredado": "catálogo w_R4HKHDXFCZNZ (ficdeh-2026, ficma-2026, jardin-2026, mambe-2026, narrarelfuturo-2026, qaff-2026, siembrafest-2026)"
+   },
+   "pais_heredado": "Colombia"
+  }
+ ],
+ "verificadas": {
+  "Horizonte": {
+   "tmdb_id": 1265716,
+   "titulo_original": "Horizonte",
+   "poster_path": "/99eXFsGBtH0MH2YEOLihmEuyt0z.jpg",
+   "synopsis_es": "Dos fantasmas, una madre y su hijo, buscan al padre desaparecido del muchacho en un viaje físico y espiritual por un mundo arrasado por la guerra. Basilio, que en vida fue un criminal, debe revivir sus actos con su madre como testigo. Solo a través de un gran sacrificio encontrarán la redención que buscan.",
+   "synopsis_en": "It is about two ghosts, a mother and son, search for the boy’s missing father on a journey, both physical and spiritual, through a world ravaged by war. Only through great sacrifice will they mend the fragile bonds that bind them and perhaps find redemption.",
+   "genero": "Drama",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 125,
+   "pais_tmdb": "Chile, Colombia, France, Germany, Luxembourg",
+   "title_en": "Horizon",
+   "lbSlug": "horizon-2024-4",
+   "_verificado": "declarada a mano: Obra sin créditos en la lámina. Película de apertura de un festival colombiano: el largo colombiano de César Augusto Acevedo (2025), el mismo que publicamos en Guatapé 2026. El otro «Horizonte» de TMDB (1786666) es brasileño, de 2026. Investigación del 31 oct 2026.",
+   "_director": "",
+   "_sondeado": "2026-10-31",
+   "poster": "/assets/mambe-2026/horizonte.jpg",
+   "posterSource": "tmdb",
+   "_heredado": {
+    "synopsis_es": "catálogo w_8GJ7B5KCEQ78 (funza-2026, guatape-2026, mambe-2026)",
+    "director_heredado": "catálogo w_8GJ7B5KCEQ78 (funza-2026, guatape-2026, mambe-2026)",
+    "pais_heredado": "catálogo w_8GJ7B5KCEQ78 (funza-2026, guatape-2026, mambe-2026)"
+   },
+   "director_heredado": "César Augusto Acevedo",
+   "pais_heredado": "Chile, Colombia, Francia, Alemania, Luxemburgo"
+  },
+  "La memoria de las mariposas": {
+   "tmdb_id": 1418601,
+   "titulo_original": "La memoria de las mariposas",
+   "poster_path": "/eoTEpNsHXfWAXtM2blrNiYhrjfV.jpg",
+   "synopsis_es": "Emergiendo de la era del caucho, las historias perdidas de Omarino y Aredomi se revelan a través de un viaje sensorial que entrelaza la propia historia de la cineasta con archivos de la Amazonía de inicios del siglo veinte. La película es a la vez un ritual y una invocación a dialogar entre vivos y muertos, reflexionando sobre los límites de la investigación, la especulación, el poder, la memoria y las reparaciones.",
+   "synopsis_en": "A photo of two indigenous boys brought by force to Europe opens an investigation of the past with meditations on the filmmaker’s own family using roughly textured analogue footage. A monument for the indigenous victims of the rubber trade in Peru.",
+   "genero": "Documental",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 77,
+   "pais_tmdb": "Portugal, Peru",
+   "title_en": "The Memory of Butterflies",
+   "lbSlug": "the-memory-of-butterflies",
+   "_verificado": "declarada a mano: Obra sin créditos en la lámina; única ficha con ese título en TMDB: Tatiana Fuentes Sadowski (Perú/Portugal, 2026). El festival la proyecta en la Maloca Uitoto. Investigación del 31 oct 2026.",
+   "_director": "",
+   "_sondeado": "2026-10-31",
+   "poster": "/assets/mambe-2026/la-memoria-de-las-mariposas.jpg",
+   "posterSource": "tmdb",
+   "_heredado": {
+    "synopsis_es": "catálogo w_R4KQGMB4710G (mambe-2026, mamut-2026)",
+    "director_heredado": "catálogo w_R4KQGMB4710G (mambe-2026, mamut-2026)",
+    "pais_heredado": "catálogo w_R4KQGMB4710G (mambe-2026, mamut-2026)"
+   },
+   "director_heredado": "Tatiana Fuentes Sadowski",
+   "pais_heredado": "Portugal, Perú"
+  },
+  "Lactar": {
+   "tmdb_id": 1694304,
+   "titulo_original": "Lactar",
+   "poster_path": "/zfqfD82FkdoKjMn6m6CwmvuoSyx.jpg",
+   "synopsis_es": "Una mujer de 62 años, atrapada en una vida de privilegios vacíos, queda embarazada de su chofer. Enfrentándose al rechazo de su familia y de la sociedad, decide luchar por traer a la vida un bebé que parece imposible a su tardía edad, sin importar las consecuencias.",
+   "synopsis_en": "A 62-year-old woman, trapped in a life of empty privilege, becomes pregnant by her driver. Facing rejection from her family and society, she decides to fight to bring to life a baby that seems impossible at her late age, regardless of the consequences.",
+   "genero": "Drama",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 75,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "lactar",
+   "_verificado": "declarada a mano: Obra sin créditos en la lámina; única ficha con ese título en TMDB: película colombiana de Harold Trompetero (2026). Investigación del 31 oct 2026.",
+   "_director": "",
+   "_sondeado": "2026-10-31",
+   "poster": "/assets/mambe-2026/lactar.jpg",
+   "posterSource": "tmdb",
+   "director_heredado": "Harold Trompetero",
+   "_heredado": {
+    "director_heredado": "catálogo w_R4J6SRMMD6E9 (ficmontanas-2026, ficpa-2026, itagui-2026, mambe-2026)",
+    "pais_heredado": "catálogo w_R4J6SRMMD6E9 (ficmontanas-2026, ficpa-2026, itagui-2026, mambe-2026)"
+   },
+   "pais_heredado": "Colombia"
+  },
+  "Soñé su nombre": {
+   "tmdb_id": 1454365,
+   "titulo_original": "Soñé su nombre",
+   "poster_path": "/xlXvgdoTqDdzUFoBAb2ANqka4tC.jpg",
+   "synopsis_es": "Después de 30 años negando su dolor, Ángela se enfrenta a su pasado cuando su padre, en un sueño, le pide que lo busque. Junto a su hermana Juliana, emprende un viaje a través de Colombia hasta las tierras indígenas donde su padre, un agricultor afrodescendiente, fue víctima de desaparición forzada.  Mientras las hermanas atraviesan el país, no solo vemos los paisajes contrastantes de Colombia, sino que también se entablan conversaciones que revelan el perfil de su padre, Esaú Carabalí Brand: un arrocero independiente, rebelde y víctima de un robo crucial. En el camino, descubren un inesperado archivo sonoro familiar y hacen una parada en la casa de su introspectiva abuela paterna.  Días después, las hermanas salen del territorio, habiendo encontrado el amor, el legado de su padre y una comunidad atravesada por la violencia que aún resiste manteniendo una conexión profunda con su tierra y su alimento.",
+   "synopsis_en": "Thirty years after his forced disappearance, the filmmaker’s Afro Colombian father comes to her in a dream, asking her to find him. With her sister, she sets out on a journey of discovery across Colombia’s painful history, reconnecting with their father and his activism.",
+   "genero": "Documental",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 86,
+   "pais_tmdb": "Colombia",
+   "title_en": "I Dreamed His Name",
+   "lbSlug": "i-dreamed-his-name",
+   "_verificado": "declarada a mano: Obra sin créditos en la lámina; única ficha con ese título en TMDB: película colombiana de Ángela Carabalí (2026). Investigación del 31 oct 2026.",
+   "_director": "",
+   "_sondeado": "2026-10-31",
+   "poster": "/assets/mambe-2026/sone-su-nombre.jpg",
+   "posterSource": "tmdb",
+   "director_heredado": "Ángela Carabalí",
+   "_heredado": {
+    "director_heredado": "catálogo w_R4HKHDXFCZNZ (ficdeh-2026, ficma-2026, jardin-2026, mambe-2026, narrarelfuturo-2026, qaff-2026, siembrafest-2026)",
+    "pais_heredado": "catálogo w_R4HKHDXFCZNZ (ficdeh-2026, ficma-2026, jardin-2026, mambe-2026, narrarelfuturo-2026, qaff-2026, siembrafest-2026)"
+   },
+   "pais_heredado": "Colombia"
+  }
+ },
+ "sin_ficha": [
+  "Antes de la nieve",
+  "Chiribiquete",
+  "El río que siempre se va",
+  "Guardianes de la fauna amazónica: Plecturocebus caquetensis",
+  "Los guardianes de las aves",
+  "Provisorium",
+  "Volar y tres claveles"
+ ],
+ "_sin_ficha_sondeo": {
+  "Antes de la nieve": {
+   "director": "",
+   "fecha": "2026-10-31"
+  },
+  "Chiribiquete": {
+   "director": "",
+   "fecha": "2026-10-31"
+  },
+  "El río que siempre se va": {
+   "director": "",
+   "fecha": "2026-10-31"
+  },
+  "Guardianes de la fauna amazónica: Plecturocebus caquetensis": {
+   "director": "",
+   "fecha": "2026-10-31"
+  },
+  "Los guardianes de las aves": {
+   "director": "",
+   "fecha": "2026-10-31"
+  },
+  "Provisorium": {
+   "director": "",
+   "fecha": "2026-10-31"
+  },
+  "Volar y tres claveles": {
+   "director": "",
+   "fecha": "2026-10-31"
+  }
+ },
+ "_fuentes": [
+  {
+   "fuente": "proimagenescolombia.com — la base oficial del cine colombiano",
+   "capturado": "2026-10-31",
+   "que_aporta": "país, año, duración, género, sinopsis y afiche de las obras que TMDB no registra",
+   "metodo": "búsqueda por título en los catálogos de largos y cortos, y el MISMO candado del director que TMDB: el buscador es laxo y también mira dentro de la sinopsis"
+  }
+ ]
+}

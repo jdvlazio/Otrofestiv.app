@@ -92,6 +92,8 @@ SEDES = {
     'Universidad de Antioquia, Paraninfo, sala de cine': ('Universidad de Antioquia', 'Paraninfo', 'Medellín'),
 }
 # LO QUE NO ES PARA EL PÚBLICO: dentro de cárceles y colegios (como en FICPA y Popayán)
+BLOQUES_IG = {('2026-10-28', '16:00', 'Alianza Francesa')}
+
 SEDE_FUERA = {
     'Centro Penitenciario La Picota': 'función dentro de un centro penitenciario («MIDBO va a las cárceles»)',
     'Colegio Alejandro Obregón': 'función dentro de un colegio («MIDBO va a los colegios»)',
@@ -267,6 +269,30 @@ ACTIVACIONES = [
                  'proyectaran fragmentos de las peliculas Fragmentos (1999), Batallas Sagradas (2002), Quién paga el pato '
                  '(2001) para las que Roberto García hizo la música.',
      '_src': _SRC_ACT},
+    # LA ACTIVACIÓN EN EL PARQUE DE LOS PERIODISTAS (post de @midbo_doc del 30
+    # oct, instagram.com/p/DfH6g9fB58A, 1 lámina + pie, leídos vía Apify el 30
+    # oct): no está en midbo.co. Título verbatim en caja de oración (la lámina va
+    # en mayúscula sostenida). La lámina dice «ENCUENTRO Pensar lo Real» → su
+    # sección. Parque público y sin aviso de pago → entrada libre. Ni la lámina
+    # ni el pie dan hora de fin → duración ESTIMADA en 90 min (tres activaciones
+    # cortas, como el homenaje). Sinopsis = el pie, verbatim, sin emojis.
+    {'titulo': 'Los archivos actúan sobre lo público', 'dia': '2026-10-30', 'hora': '20:00',
+     'sede': 'Parque de los Periodistas', 'ciudad': 'Bogotá',
+     'tipo': 'evento', 'event_kind': 'evento', 'seccion': SECCION_SEMINARIO,
+     'duracion_min': 90, '_duracion_de': 'estimada: la lámina no da hora de fin',
+     'acceso': 'Entrada libre (no se anuncia pago)',
+     'sinopsis': 'El Parque de los Periodistas se transforma en un espacio de creación y activación audiovisual para '
+                 'hacer una intervención colectiva que pone los archivos en circulación y los lleva al espacio público. '
+                 'Proyecciones, videomapping, poesía y freestyle se entrelazan para traer esas memorias al presente y '
+                 'crear alternativas de habitar y construir lo público.',
+     'obras': [
+         {'titulo': 'Desmontaje de tigres de papel',
+          'director': 'Taller de usos críticos de archivos sonoros y audiovisuales (MIDBO) - Creación colectiva'},
+         {'titulo': 'La lucha es un tecnopoema colectivo', 'director': 'Posmonumenta'},
+         {'titulo': 'Videomapping + muestra audiovisual',
+          'director': '@watchingyoulab + creaciones poéticas de procesos de memoria participantes + freestyle'},
+     ],
+     '_src': {'url': 'https://www.instagram.com/p/DfH6g9fB58A/', 'date': '2026-10-30'}},
     # LA INAUGURACIÓN (post de @midbo_doc del 23 oct, instagram.com/p/De3AsKjiTRT,
     # 4 láminas, leídas sin sesión con ig-lecturas.py + a ojo): lámina 1 = título,
     # sede, sala, día, hora, «PROYECCIÓN EN 16MM Y SONIDO EN VIVO», «Entrada
@@ -467,6 +493,12 @@ def main():
             # el segundo al terminar el primero). Se agrupa por programa, día y sala,
             # y la función arranca con el primero.
             conjunta = any('proyección conjunta' in n.lower() for n in f['notas'])
+            # UN BLOQUE QUE LA WEB PARTE (28 oct 2026, IG p/DfCiPvXoGqF lámina 4):
+            # «Espejos» del 28 oct 16:00 en la Alianza es UN bloque de 3 cortos,
+            # pero midbo.co etiqueta «Si la Escombrera hablara» con el Programa 2
+            # y los otros dos con el Programa 4; agrupado por programa, salía en
+            # dos funciones a la misma hora y sede. Se agrupa por día, hora y sede.
+            conjunta = conjunta or (f['dia'], f['hora'], SEDES[f['lugar']][0]) in BLOQUES_IG
             k = (f['dia'], f['lugar'], html.unescape(hija['name'])) if hija and not conjunta else (f['dia'], f['hora'], f['lugar'])
             s = slots.setdefault(k, {'obras': [], 'notas': [], 'por_obra': [], 'programa': None, 'hora': f['hora'],
                                      'sede': sede, 'sala': sala, 'ciudad': ciudad})

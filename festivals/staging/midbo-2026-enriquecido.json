@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, emparejado con ficha_verifica() (director + año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-10-27"
+  "capturado": "2026-10-30"
  },
  "obras": [
   {
@@ -228,7 +228,7 @@
    "lbSlug": "retour-a-fukushima",
    "_verificado": "declarada a mano: Ya existía en TMDB y el enriquecido no la casó: «Retour à Fukushima» (2026), Thomas Licata: mismo director y año; estaba con su título francés. Hallada por las tres sondas (título, filmografía del director, Letterboxd) el 10 oct 2026.",
    "_director": "Thomas Licata",
-   "_sondeado": "2026-10-27",
+   "_sondeado": "2026-10-30",
    "poster": "/assets/midbo-2026/back-to-fukushima.jpg",
    "posterSource": "tmdb"
   },
@@ -348,7 +348,7 @@
    "lbSlug": "good-morning-wiraqocha",
    "_verificado": "declarada a mano: Ya existía en TMDB y el enriquecido no la casó: «Good Morning, Wiraqocha» (2025), Mauricio Godoy: mismo director y año; estaba con su título inglés. Hallada por las tres sondas (título, filmografía del director, Letterboxd) el 10 oct 2026.",
    "_director": "Mauricio Godoy",
-   "_sondeado": "2026-10-27",
+   "_sondeado": "2026-10-30",
    "poster": "/assets/midbo-2026/buenos-dias-wiracocha.jpg",
    "posterSource": "tmdb"
   },
@@ -586,7 +586,7 @@
    "lbSlug": "one-way-or-another-1975",
    "_verificado": "declarada a mano: Ya existía en TMDB y el enriquecido no la casó: «One Way or Another» (1977), Sara Gómez. Hallada por las tres sondas (título, filmografía del director, Letterboxd) el 10 oct 2026.",
    "_director": "",
-   "_sondeado": "2026-10-27",
+   "_sondeado": "2026-10-30",
    "poster": "/assets/midbo-2026/de-cierta-manera.jpg",
    "posterSource": "tmdb",
    "director_heredado": "Sara Gómez",
@@ -683,7 +683,6 @@
    "titulo": "El León",
    "tmdb_id": 1616865,
    "titulo_original": "El León",
-   "poster_path": "/5an6XZNE07yS7ahXEMZ78htlORg.jpg",
    "synopsis_es": "",
    "synopsis_en": "Strange images overlap like floating ghosts: a dead body, a singer, an audience. The film shows, paradoxically and theatrically, how death inhabits the León de Greiff Auditorium in Colombia.",
    "genero": "Documental",
@@ -695,8 +694,9 @@
    "_busqueda": "El León",
    "_director": "Diana Bustamante",
    "_sondeado": "2026-10-10",
-   "poster": "/assets/midbo-2026/el-leon.jpg",
-   "posterSource": "tmdb"
+   "_afiche": "declarado: TMDB 1616865, póster es /5aYMbnZEGwKp2QnypVZBFtspgam.jpg — «EL LEÓN · una película de Diana Bustamante» (Cinéma du Réel 2026)",
+   "poster": "/assets/midbo-2026/el-leon-afiche.jpg",
+   "posterSource": "oficial"
   },
   {
    "titulo": "El coloquio de los pájaros",
@@ -732,7 +732,7 @@
    "lbSlug": "el-espiritu-de-los-andes",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 11 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas): dirección, año, país, duración y sinopsis de la ficha de midbo.co, afiche original del festival.",
    "_director": "Dirección: Francisco Ciri, Ingrid Hincapie",
-   "_sondeado": "2026-10-27",
+   "_sondeado": "2026-10-30",
    "poster": "/assets/midbo-2026/el-espiritu-de-los-andes.jpg",
    "posterSource": "tmdb"
   },
@@ -929,7 +929,7 @@
    "lbSlug": "escrito-sobre-un-cuerpo",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 11 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas): dirección, año, país, duración y sinopsis de la ficha de midbo.co, afiche original del festival.",
    "_director": "Esteban Prudencio",
-   "_sondeado": "2026-10-27",
+   "_sondeado": "2026-10-30",
    "poster": "/assets/midbo-2026/escrito-sobre-un-cuerpo.jpg",
    "posterSource": "tmdb"
   },
@@ -1205,7 +1205,7 @@
    "lbSlug": "winter-flowers-garden",
    "_verificado": "declarada a mano: Ya existía en TMDB y el enriquecido no la casó: «Winter Flowers Garden» (2026), Sara Piñeros Cortés: misma directora y año; estaba con su título inglés. Hallada por las tres sondas (título, filmografía del director, Letterboxd) el 10 oct 2026.",
    "_director": "Sara Piñeros Cortés",
-   "_sondeado": "2026-10-27",
+   "_sondeado": "2026-10-30",
    "poster": "/assets/midbo-2026/invierno-flores-jardin.jpg",
    "posterSource": "oficial",
    "_afiche": "declarado: ficha de midbo.co, afiche oficial (https://midbo.co/wp-content/uploads/2026/10/peliculas-invierno-flores-jardin-afiche.jpg)"
@@ -1350,7 +1350,7 @@
    "lbSlug": "la-verdad-duerme-en-silencio",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 11 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas): dirección, año, país, duración y sinopsis de la ficha de midbo.co, afiche original del festival.",
    "_director": "Andrew Simon Tucker",
-   "_sondeado": "2026-10-27",
+   "_sondeado": "2026-10-30",
    "poster": "/assets/midbo-2026/la-verdad-duerme-en-silencio.jpg",
    "posterSource": "tmdb"
   },
@@ -1368,7 +1368,7 @@
    "lbSlug": "la-voz-de-los-que-no-hablan",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 11 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas): dirección, año, país, duración y sinopsis de la ficha de midbo.co, afiche original del festival.",
    "_director": "Dirección: Jerónimo Agudelo, Juan Fernando Ramírez",
-   "_sondeado": "2026-10-27",
+   "_sondeado": "2026-10-30",
    "poster": "/assets/midbo-2026/la-voz-de-los-que-no-hablan.jpg",
    "posterSource": "tmdb"
   },
@@ -1416,7 +1416,6 @@
    "poster_path": "/lEWolBB40mm3KON8u2dWnPk0cVJ.jpg",
    "synopsis_es": "Un año después de la muerte de su padre, el reconocido mago colombiano Gustavo Lorgia, la directora realiza una exploración por sus archivos de video que revelan su trayectoria como artista, su rol como padre y la estética televisiva de una época. Una película que acude al archivo como medio para atravesar el duelo y a la memoria como forma de resistir a la desaparición.",
    "synopsis_en": "",
-   "genero": "",
    "anio_tmdb": 2026,
    "duracion_tmdb": 17,
    "pais_tmdb": "",
@@ -1443,7 +1442,11 @@
     }
    ],
    "poster": "/assets/midbo-2026/las-formas-de-la-magia.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "genero": "Documental",
+   "_heredado": {
+    "genero": "catálogo w_R4FSHA335BXS (cinemancia-2026, ficci-65, midbo-2026, miradas-2026)"
+   }
   },
   {
    "titulo": "Latidos",
@@ -1459,7 +1462,7 @@
    "lbSlug": "latidos-2026",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 11 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas): dirección, año, país, duración y sinopsis de la ficha de midbo.co, afiche original del festival.",
    "_director": "Baptista Joao",
-   "_sondeado": "2026-10-27",
+   "_sondeado": "2026-10-30",
    "poster": "/assets/midbo-2026/latidos.jpg",
    "posterSource": "tmdb"
   },
@@ -1477,7 +1480,7 @@
    "lbSlug": "legados-de-un-mismo-suelo",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 11 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas): dirección, año, país, duración y sinopsis de la ficha de midbo.co, afiche original del festival.",
    "_director": "Dirección: Fraktal 19",
-   "_sondeado": "2026-10-27",
+   "_sondeado": "2026-10-30",
    "poster": "/assets/midbo-2026/legados-de-un-mismo-suelo.jpg",
    "posterSource": "tmdb"
   },
@@ -1535,7 +1538,7 @@
    "lbSlug": "lo-que-no-esta",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 11 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas): dirección, año, país, duración y sinopsis de la ficha de midbo.co, afiche original del festival.",
    "_director": "Jean Paul Sánchez Flórez",
-   "_sondeado": "2026-10-27",
+   "_sondeado": "2026-10-30",
    "poster": "/assets/midbo-2026/lo-que-no-esta.jpg",
    "posterSource": "tmdb"
   },
@@ -1601,7 +1604,7 @@
    "lbSlug": "los-guardianes-del-agua",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 11 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas): dirección, año, país, duración y sinopsis de la ficha de midbo.co, afiche original del festival.",
    "_director": "Dirección: Santiago Pulgarin, María Isabel Santos",
-   "_sondeado": "2026-10-27",
+   "_sondeado": "2026-10-30",
    "poster": "/assets/midbo-2026/los-guardianes-del-agua.jpg",
    "posterSource": "tmdb"
   },
@@ -1670,8 +1673,8 @@
    "posterSource": "tmdb",
    "genero": "Documental",
    "_heredado": {
-    "genero": "catálogo w_R4FH541S52JK (cinemancia-2026, ficci-65, ficdeh-2026, ficmontanas-2026, jardin-2026, midbo-2026, popayan-2026)",
-    "synopsis_en": "catálogo w_R4FH541S52JK (cinemancia-2026, ficci-65, ficdeh-2026, ficmontanas-2026, jardin-2026, midbo-2026, popayan-2026)"
+    "genero": "catálogo w_R4FH541S52JK (cinemancia-2026, ficci-65, ficdeh-2026, ficmontanas-2026, jardin-2026, midbo-2026, miradas-2026, popayan-2026)",
+    "synopsis_en": "catálogo w_R4FH541S52JK (cinemancia-2026, ficci-65, ficdeh-2026, ficmontanas-2026, jardin-2026, midbo-2026, miradas-2026, popayan-2026)"
    },
    "synopsis_en": "Out of oblivion and darkness, images and sounds resurface to control the bodies of Latin American women, regarded since childhood as mothers by birth. But within these archives an interference emerges from the past, carrying a message of struggle, memory and freedom."
   },
@@ -1776,7 +1779,7 @@
    "lbSlug": "no-es-una-herida",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 11 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas): dirección, año, país, duración y sinopsis de la ficha de midbo.co, afiche original del festival.",
    "_director": "Violeta Zambrano",
-   "_sondeado": "2026-10-27",
+   "_sondeado": "2026-10-30",
    "poster": "/assets/midbo-2026/no-es-una-herida.jpg",
    "posterSource": "tmdb"
   },
@@ -1858,7 +1861,7 @@
    "lbSlug": "now",
    "_verificado": "declarada a mano: Ya existía en TMDB y el enriquecido no la casó: «Now!» (1965), Santiago Álvarez. Hallada por las tres sondas (título, filmografía del director, Letterboxd) el 10 oct 2026.",
    "_director": "Santiago Álvarez",
-   "_sondeado": "2026-10-27",
+   "_sondeado": "2026-10-30",
    "poster": "/assets/midbo-2026/now.jpg",
    "posterSource": "tmdb"
   },
@@ -2055,7 +2058,7 @@
    "lbSlug": "querida-engativa",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 11 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas): dirección, año, país, duración y sinopsis de la ficha de midbo.co, afiche original del festival.",
    "_director": "Dirección: Carolina Martínez",
-   "_sondeado": "2026-10-27",
+   "_sondeado": "2026-10-30",
    "poster": "/assets/midbo-2026/querida-engativa.jpg",
    "posterSource": "tmdb"
   },
@@ -2123,7 +2126,7 @@
    "lbSlug": "salvando-el-proyecto",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 11 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas): dirección, año, país, duración y sinopsis de la ficha de midbo.co, afiche original del festival.",
    "_director": "Dirección: Sindy Joya",
-   "_sondeado": "2026-10-27",
+   "_sondeado": "2026-10-30",
    "poster": "/assets/midbo-2026/salvando-el-proyecto.jpg",
    "posterSource": "tmdb"
   },
@@ -2301,7 +2304,7 @@
    "lbSlug": "tercer-acto-2026",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 11 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas): dirección, año, país, duración y sinopsis de la ficha de midbo.co, afiche original del festival.",
    "_director": "Dirección: Entramados",
-   "_sondeado": "2026-10-27",
+   "_sondeado": "2026-10-30",
    "poster": "/assets/midbo-2026/tercer-acto.jpg",
    "posterSource": "tmdb"
   },
@@ -2357,7 +2360,7 @@
    "lbSlug": "the-travelers-2025",
    "_verificado": "declarada a mano: Ya existía en TMDB y el enriquecido no la casó: «The Travelers» (2025), David Bingong. Hallada por las tres sondas (título, filmografía del director, Letterboxd) el 10 oct 2026.",
    "_director": "David Bingong",
-   "_sondeado": "2026-10-27",
+   "_sondeado": "2026-10-30",
    "poster": "/assets/midbo-2026/the-travelers.jpg",
    "posterSource": "tmdb"
   },
@@ -2450,7 +2453,7 @@
    "lbSlug": "ubuntu-la-metrica-de-los-afectos",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 11 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas): dirección, año, país, duración y sinopsis de la ficha de midbo.co, afiche original del festival.",
    "_director": "Leonardo Rua",
-   "_sondeado": "2026-10-27",
+   "_sondeado": "2026-10-30",
    "poster": "/assets/midbo-2026/ubuntu-la-metrica-de-los-afectos.jpg",
    "posterSource": "tmdb",
    "_heredado": {
@@ -2559,7 +2562,7 @@
    "lbSlug": "voces-y-sombras",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 11 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas): dirección, año, país, duración y sinopsis de la ficha de midbo.co, afiche original del festival.",
    "_director": "Dirección: Colectivo Cinescape",
-   "_sondeado": "2026-10-27",
+   "_sondeado": "2026-10-30",
    "poster": "/assets/midbo-2026/voces-y-sombras.jpg",
    "posterSource": "tmdb"
   },
@@ -2577,7 +2580,7 @@
    "lbSlug": "wild-flowers-2022-2",
    "_verificado": "declarada a mano: Ya existía en TMDB y el enriquecido no la casó: «Wild Flowers» (2022), Karla Crnčević. Hallada por las tres sondas (título, filmografía del director, Letterboxd) el 10 oct 2026.",
    "_director": "Karla Crnčević",
-   "_sondeado": "2026-10-27",
+   "_sondeado": "2026-10-30",
    "poster": "/assets/midbo-2026/wild-flowers.jpg",
    "posterSource": "tmdb"
   },
@@ -2897,7 +2900,7 @@
    "lbSlug": "retour-a-fukushima",
    "_verificado": "declarada a mano: Ya existía en TMDB y el enriquecido no la casó: «Retour à Fukushima» (2026), Thomas Licata: mismo director y año; estaba con su título francés. Hallada por las tres sondas (título, filmografía del director, Letterboxd) el 10 oct 2026.",
    "_director": "Thomas Licata",
-   "_sondeado": "2026-10-27",
+   "_sondeado": "2026-10-30",
    "poster": "/assets/midbo-2026/back-to-fukushima.jpg",
    "posterSource": "tmdb"
   },
@@ -3012,7 +3015,7 @@
    "lbSlug": "good-morning-wiraqocha",
    "_verificado": "declarada a mano: Ya existía en TMDB y el enriquecido no la casó: «Good Morning, Wiraqocha» (2025), Mauricio Godoy: mismo director y año; estaba con su título inglés. Hallada por las tres sondas (título, filmografía del director, Letterboxd) el 10 oct 2026.",
    "_director": "Mauricio Godoy",
-   "_sondeado": "2026-10-27",
+   "_sondeado": "2026-10-30",
    "poster": "/assets/midbo-2026/buenos-dias-wiracocha.jpg",
    "posterSource": "tmdb"
   },
@@ -3240,7 +3243,7 @@
    "lbSlug": "one-way-or-another-1975",
    "_verificado": "declarada a mano: Ya existía en TMDB y el enriquecido no la casó: «One Way or Another» (1977), Sara Gómez. Hallada por las tres sondas (título, filmografía del director, Letterboxd) el 10 oct 2026.",
    "_director": "",
-   "_sondeado": "2026-10-27",
+   "_sondeado": "2026-10-30",
    "poster": "/assets/midbo-2026/de-cierta-manera.jpg",
    "posterSource": "tmdb",
    "director_heredado": "Sara Gómez",
@@ -3334,7 +3337,6 @@
   "El León": {
    "tmdb_id": 1616865,
    "titulo_original": "El León",
-   "poster_path": "/5an6XZNE07yS7ahXEMZ78htlORg.jpg",
    "synopsis_es": "",
    "synopsis_en": "Strange images overlap like floating ghosts: a dead body, a singer, an audience. The film shows, paradoxically and theatrically, how death inhabits the León de Greiff Auditorium in Colombia.",
    "genero": "Documental",
@@ -3346,8 +3348,9 @@
    "_busqueda": "El León",
    "_director": "Diana Bustamante",
    "_sondeado": "2026-10-10",
-   "poster": "/assets/midbo-2026/el-leon.jpg",
-   "posterSource": "tmdb"
+   "_afiche": "declarado: TMDB 1616865, póster es /5aYMbnZEGwKp2QnypVZBFtspgam.jpg — «EL LEÓN · una película de Diana Bustamante» (Cinéma du Réel 2026)",
+   "poster": "/assets/midbo-2026/el-leon-afiche.jpg",
+   "posterSource": "oficial"
   },
   "El coloquio de los pájaros": {
    "tmdb_id": 1657856,
@@ -3381,7 +3384,7 @@
    "lbSlug": "el-espiritu-de-los-andes",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 11 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas): dirección, año, país, duración y sinopsis de la ficha de midbo.co, afiche original del festival.",
    "_director": "Dirección: Francisco Ciri, Ingrid Hincapie",
-   "_sondeado": "2026-10-27",
+   "_sondeado": "2026-10-30",
    "poster": "/assets/midbo-2026/el-espiritu-de-los-andes.jpg",
    "posterSource": "tmdb"
   },
@@ -3572,7 +3575,7 @@
    "lbSlug": "escrito-sobre-un-cuerpo",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 11 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas): dirección, año, país, duración y sinopsis de la ficha de midbo.co, afiche original del festival.",
    "_director": "Esteban Prudencio",
-   "_sondeado": "2026-10-27",
+   "_sondeado": "2026-10-30",
    "poster": "/assets/midbo-2026/escrito-sobre-un-cuerpo.jpg",
    "posterSource": "tmdb"
   },
@@ -3836,7 +3839,7 @@
    "lbSlug": "winter-flowers-garden",
    "_verificado": "declarada a mano: Ya existía en TMDB y el enriquecido no la casó: «Winter Flowers Garden» (2026), Sara Piñeros Cortés: misma directora y año; estaba con su título inglés. Hallada por las tres sondas (título, filmografía del director, Letterboxd) el 10 oct 2026.",
    "_director": "Sara Piñeros Cortés",
-   "_sondeado": "2026-10-27",
+   "_sondeado": "2026-10-30",
    "poster": "/assets/midbo-2026/invierno-flores-jardin.jpg",
    "posterSource": "oficial",
    "_afiche": "declarado: ficha de midbo.co, afiche oficial (https://midbo.co/wp-content/uploads/2026/10/peliculas-invierno-flores-jardin-afiche.jpg)"
@@ -3974,7 +3977,7 @@
    "lbSlug": "la-verdad-duerme-en-silencio",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 11 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas): dirección, año, país, duración y sinopsis de la ficha de midbo.co, afiche original del festival.",
    "_director": "Andrew Simon Tucker",
-   "_sondeado": "2026-10-27",
+   "_sondeado": "2026-10-30",
    "poster": "/assets/midbo-2026/la-verdad-duerme-en-silencio.jpg",
    "posterSource": "tmdb"
   },
@@ -3991,7 +3994,7 @@
    "lbSlug": "la-voz-de-los-que-no-hablan",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 11 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas): dirección, año, país, duración y sinopsis de la ficha de midbo.co, afiche original del festival.",
    "_director": "Dirección: Jerónimo Agudelo, Juan Fernando Ramírez",
-   "_sondeado": "2026-10-27",
+   "_sondeado": "2026-10-30",
    "poster": "/assets/midbo-2026/la-voz-de-los-que-no-hablan.jpg",
    "posterSource": "tmdb"
   },
@@ -4037,7 +4040,6 @@
    "poster_path": "/lEWolBB40mm3KON8u2dWnPk0cVJ.jpg",
    "synopsis_es": "Un año después de la muerte de su padre, el reconocido mago colombiano Gustavo Lorgia, la directora realiza una exploración por sus archivos de video que revelan su trayectoria como artista, su rol como padre y la estética televisiva de una época. Una película que acude al archivo como medio para atravesar el duelo y a la memoria como forma de resistir a la desaparición.",
    "synopsis_en": "",
-   "genero": "",
    "anio_tmdb": 2026,
    "duracion_tmdb": 17,
    "pais_tmdb": "",
@@ -4064,7 +4066,11 @@
     }
    ],
    "poster": "/assets/midbo-2026/las-formas-de-la-magia.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "genero": "Documental",
+   "_heredado": {
+    "genero": "catálogo w_R4FSHA335BXS (cinemancia-2026, ficci-65, midbo-2026, miradas-2026)"
+   }
   },
   "Latidos": {
    "tmdb_id": 1794413,
@@ -4079,7 +4085,7 @@
    "lbSlug": "latidos-2026",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 11 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas): dirección, año, país, duración y sinopsis de la ficha de midbo.co, afiche original del festival.",
    "_director": "Baptista Joao",
-   "_sondeado": "2026-10-27",
+   "_sondeado": "2026-10-30",
    "poster": "/assets/midbo-2026/latidos.jpg",
    "posterSource": "tmdb"
   },
@@ -4096,7 +4102,7 @@
    "lbSlug": "legados-de-un-mismo-suelo",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 11 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas): dirección, año, país, duración y sinopsis de la ficha de midbo.co, afiche original del festival.",
    "_director": "Dirección: Fraktal 19",
-   "_sondeado": "2026-10-27",
+   "_sondeado": "2026-10-30",
    "poster": "/assets/midbo-2026/legados-de-un-mismo-suelo.jpg",
    "posterSource": "tmdb"
   },
@@ -4151,7 +4157,7 @@
    "lbSlug": "lo-que-no-esta",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 11 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas): dirección, año, país, duración y sinopsis de la ficha de midbo.co, afiche original del festival.",
    "_director": "Jean Paul Sánchez Flórez",
-   "_sondeado": "2026-10-27",
+   "_sondeado": "2026-10-30",
    "poster": "/assets/midbo-2026/lo-que-no-esta.jpg",
    "posterSource": "tmdb"
   },
@@ -4215,7 +4221,7 @@
    "lbSlug": "los-guardianes-del-agua",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 11 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas): dirección, año, país, duración y sinopsis de la ficha de midbo.co, afiche original del festival.",
    "_director": "Dirección: Santiago Pulgarin, María Isabel Santos",
-   "_sondeado": "2026-10-27",
+   "_sondeado": "2026-10-30",
    "poster": "/assets/midbo-2026/los-guardianes-del-agua.jpg",
    "posterSource": "tmdb"
   },
@@ -4283,8 +4289,8 @@
    "posterSource": "tmdb",
    "genero": "Documental",
    "_heredado": {
-    "genero": "catálogo w_R4FH541S52JK (cinemancia-2026, ficci-65, ficdeh-2026, ficmontanas-2026, jardin-2026, midbo-2026, popayan-2026)",
-    "synopsis_en": "catálogo w_R4FH541S52JK (cinemancia-2026, ficci-65, ficdeh-2026, ficmontanas-2026, jardin-2026, midbo-2026, popayan-2026)"
+    "genero": "catálogo w_R4FH541S52JK (cinemancia-2026, ficci-65, ficdeh-2026, ficmontanas-2026, jardin-2026, midbo-2026, miradas-2026, popayan-2026)",
+    "synopsis_en": "catálogo w_R4FH541S52JK (cinemancia-2026, ficci-65, ficdeh-2026, ficmontanas-2026, jardin-2026, midbo-2026, miradas-2026, popayan-2026)"
    },
    "synopsis_en": "Out of oblivion and darkness, images and sounds resurface to control the bodies of Latin American women, regarded since childhood as mothers by birth. But within these archives an interference emerges from the past, carrying a message of struggle, memory and freedom."
   },
@@ -4384,7 +4390,7 @@
    "lbSlug": "no-es-una-herida",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 11 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas): dirección, año, país, duración y sinopsis de la ficha de midbo.co, afiche original del festival.",
    "_director": "Violeta Zambrano",
-   "_sondeado": "2026-10-27",
+   "_sondeado": "2026-10-30",
    "poster": "/assets/midbo-2026/no-es-una-herida.jpg",
    "posterSource": "tmdb"
   },
@@ -4463,7 +4469,7 @@
    "lbSlug": "now",
    "_verificado": "declarada a mano: Ya existía en TMDB y el enriquecido no la casó: «Now!» (1965), Santiago Álvarez. Hallada por las tres sondas (título, filmografía del director, Letterboxd) el 10 oct 2026.",
    "_director": "Santiago Álvarez",
-   "_sondeado": "2026-10-27",
+   "_sondeado": "2026-10-30",
    "poster": "/assets/midbo-2026/now.jpg",
    "posterSource": "tmdb"
   },
@@ -4652,7 +4658,7 @@
    "lbSlug": "querida-engativa",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 11 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas): dirección, año, país, duración y sinopsis de la ficha de midbo.co, afiche original del festival.",
    "_director": "Dirección: Carolina Martínez",
-   "_sondeado": "2026-10-27",
+   "_sondeado": "2026-10-30",
    "poster": "/assets/midbo-2026/querida-engativa.jpg",
    "posterSource": "tmdb"
   },
@@ -4717,7 +4723,7 @@
    "lbSlug": "salvando-el-proyecto",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 11 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas): dirección, año, país, duración y sinopsis de la ficha de midbo.co, afiche original del festival.",
    "_director": "Dirección: Sindy Joya",
-   "_sondeado": "2026-10-27",
+   "_sondeado": "2026-10-30",
    "poster": "/assets/midbo-2026/salvando-el-proyecto.jpg",
    "posterSource": "tmdb"
   },
@@ -4889,7 +4895,7 @@
    "lbSlug": "tercer-acto-2026",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 11 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas): dirección, año, país, duración y sinopsis de la ficha de midbo.co, afiche original del festival.",
    "_director": "Dirección: Entramados",
-   "_sondeado": "2026-10-27",
+   "_sondeado": "2026-10-30",
    "poster": "/assets/midbo-2026/tercer-acto.jpg",
    "posterSource": "tmdb"
   },
@@ -4942,7 +4948,7 @@
    "lbSlug": "the-travelers-2025",
    "_verificado": "declarada a mano: Ya existía en TMDB y el enriquecido no la casó: «The Travelers» (2025), David Bingong. Hallada por las tres sondas (título, filmografía del director, Letterboxd) el 10 oct 2026.",
    "_director": "David Bingong",
-   "_sondeado": "2026-10-27",
+   "_sondeado": "2026-10-30",
    "poster": "/assets/midbo-2026/the-travelers.jpg",
    "posterSource": "tmdb"
   },
@@ -5031,7 +5037,7 @@
    "lbSlug": "ubuntu-la-metrica-de-los-afectos",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 11 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas): dirección, año, país, duración y sinopsis de la ficha de midbo.co, afiche original del festival.",
    "_director": "Leonardo Rua",
-   "_sondeado": "2026-10-27",
+   "_sondeado": "2026-10-30",
    "poster": "/assets/midbo-2026/ubuntu-la-metrica-de-los-afectos.jpg",
    "posterSource": "tmdb",
    "_heredado": {
@@ -5135,7 +5141,7 @@
    "lbSlug": "voces-y-sombras",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 11 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas): dirección, año, país, duración y sinopsis de la ficha de midbo.co, afiche original del festival.",
    "_director": "Dirección: Colectivo Cinescape",
-   "_sondeado": "2026-10-27",
+   "_sondeado": "2026-10-30",
    "poster": "/assets/midbo-2026/voces-y-sombras.jpg",
    "posterSource": "tmdb"
   },
@@ -5152,7 +5158,7 @@
    "lbSlug": "wild-flowers-2022-2",
    "_verificado": "declarada a mano: Ya existía en TMDB y el enriquecido no la casó: «Wild Flowers» (2022), Karla Crnčević. Hallada por las tres sondas (título, filmografía del director, Letterboxd) el 10 oct 2026.",
    "_director": "Karla Crnčević",
-   "_sondeado": "2026-10-27",
+   "_sondeado": "2026-10-30",
    "poster": "/assets/midbo-2026/wild-flowers.jpg",
    "posterSource": "tmdb"
   },
@@ -5234,8 +5240,10 @@
   "A Women 's College in the Village",
   "Circo",
   "Crónica de un baile de muñeco",
+  "Desmontaje de tigres de papel",
   "Galu dugbis. La memoria de las abuelas",
   "Instrucciones para cuando no esté",
+  "La lucha es un tecnopoema colectivo",
   "La taquigrafista",
   "Patrimonio Líquido II",
   "Programa 1: Reparación simbólica y búsquedas por justicia restaurativa",
@@ -5250,6 +5258,7 @@
   "Reexistir: entre lo político y lo íntimo",
   "Sey Arimaku, la otra oscuridad",
   "Un río de aguas profundas y luminosas",
+  "Videomapping + muestra audiovisual",
   "¿Quién paga el pato?"
  ],
  "_sin_ficha_sondeo": {
@@ -5265,6 +5274,10 @@
    "director": "Pablo Mora",
    "fecha": "2026-10-26"
   },
+  "Desmontaje de tigres de papel": {
+   "director": "Taller de usos críticos de archivos sonoros y audiovisuales (MIDBO) - Creación colectiva",
+   "fecha": "2026-10-30"
+  },
   "Galu dugbis. La memoria de las abuelas": {
    "director": "Olowaili Green Santacruz",
    "fecha": "2026-10-26"
@@ -5272,6 +5285,10 @@
   "Instrucciones para cuando no esté": {
    "director": "Yira Plaza O´Byrne y Germán Arango a.k.a Luckas Perro",
    "fecha": "2026-10-27"
+  },
+  "La lucha es un tecnopoema colectivo": {
+   "director": "Posmonumenta",
+   "fecha": "2026-10-30"
   },
   "La taquigrafista": {
    "director": "Azul Aizenberg",
@@ -5329,6 +5346,10 @@
    "director": "Andrés Dávila",
    "fecha": "2026-10-26"
   },
+  "Videomapping + muestra audiovisual": {
+   "director": "@watchingyoulab + creaciones poéticas de procesos de memoria participantes + freestyle",
+   "fecha": "2026-10-30"
+  },
   "¿Quién paga el pato?": {
    "director": "Pablo Mora Calderón",
    "fecha": "2026-10-26"
@@ -5337,7 +5358,7 @@
  "_fuentes": [
   {
    "fuente": "proimagenescolombia.com — la base oficial del cine colombiano",
-   "capturado": "2026-10-27",
+   "capturado": "2026-10-30",
    "que_aporta": "país, año, duración, género, sinopsis y afiche de las obras que TMDB no registra",
    "metodo": "búsqueda por título en los catálogos de largos y cortos, y el MISMO candado del director que TMDB: el buscador es laxo y también mira dentro de la sinopsis"
   }

@@ -19,6 +19,14 @@ FICMA (90 funciones desde un PDF de imágenes). Todo lo que dice aquí se pagó.
 > guardián lee. Doce vueltas para encontrarlos uno a uno. El camino corto es
 > `python3 pipeline/correr.py <id>`; todo lo demás es el camino largo.
 
+> **Un cambio chico es UN comando: `python3 pipeline/corto.py <id>`** (28 oct 2026).
+> Horas, salas, sedes o duraciones de unas pocas funciones: se escribe la
+> afirmación y `corto.py` rearma desde el primer paso que la lee, muestra el
+> diff función por función y publica con los mismos guardianes. Segundos, no
+> una tarde. `correr.py` completo es solo para cuando la fuente cambió en muchos
+> puntos — nunca «por las dudas» (Miradas, 28 oct: unas horas → el pipeline
+> entero). Y un PR de datos no toca `validate.py`: el candado lo frena en el Mac.
+
 ---
 
 ## 0 · Lo primero es el issue de radar

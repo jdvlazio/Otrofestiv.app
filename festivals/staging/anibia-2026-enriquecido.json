@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, emparejado con ficha_verifica() (director + año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-10-25"
+  "capturado": "2026-10-27"
  },
  "obras": [
   {
@@ -16,6 +16,7 @@
      "sinopsis": "Tras la conquista de la Luna por Estados Unidos, el primer astronauta presencia la llegada de una cápsula soviética. Decidido a defender el nuevo territorio, la persigue hasta el lado oscuro, donde descubre los restos de una carrera espacial fallida y a un tercer contendiente que amenaza no solo la Luna, sino el orden universal."
     }
    ],
+   "_sinopsis_de": "ya publicada en ficica-2026",
    "_verificado": "ya publicada en ficica-2026: se reusa su sinopsis",
    "sinopsis": "Tras la conquista de la Luna por Estados Unidos, el primer astronauta presencia la llegada de una cápsula soviética. Decidido a defender el nuevo territorio, la persigue hasta el lado oscuro, donde descubre los restos de una carrera espacial fallida y a un tercer contendiente que amenaza no solo la Luna, sino el orden universal.",
    "pais": "Colombia",
@@ -285,7 +286,7 @@
    "lbSlug": "ceu-inferno-e-outras-partes-do-corpo",
    "_verificado": "declarada a mano: «Céu, Inferno e Outras Partes do Corpo» (2011, 8 min), dir. Rodrigo John: el título español no está en TMDB",
    "_director": "Rodrigo John",
-   "_sondeado": "2026-10-25",
+   "_sondeado": "2026-10-27",
    "poster": "/assets/anibia-2026/cielo-infierno-y-otras-partes-del-cuerpo.jpg",
    "posterSource": "tmdb"
   },
@@ -916,6 +917,8 @@
      "genre": "Animación"
     }
    ],
+   "_afiche_de": "ya publicada en filcmar-2026",
+   "_sinopsis_de": "ya publicada en filcmar-2026",
    "poster": "/assets/filcmar-2026/la-pecera.jpg",
    "_verificado": "ya publicada en filcmar-2026: se reusa su afiche",
    "sinopsis": "En una ciudad bulliciosa, un robot mecánico lleva una vida rutinaria, hasta que el casco de cristal que protege su cabeza se rompe. Obligado a encontrar un reemplazo, el robot emprende un viaje, solo para darse cuenta poco a poco de que lo que ocultaba el cristal tal vez no sea tan temible después de todo.",
@@ -958,7 +961,7 @@
    "lbSlug": "the-devil-room",
    "_verificado": "declarada a mano: «La Habitación del Macho Cabrío» (2025, 12 min), dir. Duban Pinzón (la Cinemateca escribe «Pizon»); tilde distinta en el título",
    "_director": "Duban Pizon",
-   "_sondeado": "2026-10-25",
+   "_sondeado": "2026-10-27",
    "poster": "/assets/anibia-2026/la-habitacion-del-macho-cabrio.jpg",
    "posterSource": "tmdb"
   },
@@ -1120,6 +1123,25 @@
    "_sondeado": "2026-10-21",
    "poster": "/assets/anibia-2026/mukira.jpg",
    "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Noche con el demonio",
+   "_ya_publicada": [
+    {
+     "festival": "cortoscali-2026",
+     "titulo": "Noche con el demonio",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "4 min",
+     "sinopsis": "Un demonio saxofonista entra en crisis tras otro concierto mediocre. Solo y decaído en la ciudad, se embarcará en un viaje surrealista y colorido de autodescubrimiento y pasión por la música."
+    }
+   ],
+   "_sinopsis_de": "ya publicada en cortoscali-2026",
+   "_verificado": "ya publicada en cortoscali-2026: se reusa su sinopsis",
+   "sinopsis": "Un demonio saxofonista entra en crisis tras otro concierto mediocre. Solo y decaído en la ciudad, se embarcará en un viaje surrealista y colorido de autodescubrimiento y pasión por la música.",
+   "pais": "Colombia",
+   "anio": 2025,
+   "duracion_tmdb": 4
   },
   {
    "titulo": "Pelures d´estomac",
@@ -1523,7 +1545,7 @@
    "lbSlug": "umassuma-lascas-de-memoria",
    "_verificado": "declarada a mano: «UMASSUMA - Lascas de Memória» (2025, 8 min), dir. Guaracy Britto Jr. y Andrei Miralha: el título español no está en TMDB",
    "_director": "Guaracy Britto Jr. e Andrei Miralha",
-   "_sondeado": "2026-10-25",
+   "_sondeado": "2026-10-27",
    "poster": "/assets/anibia-2026/umassuma-lascas-de-memorias.jpg",
    "posterSource": "tmdb"
   },
@@ -1680,7 +1702,7 @@
    "lbSlug": "viagem-na-chuva",
    "_verificado": "declarada a mano: «Viagem na Chuva» (2014, 12 min), dir. Wesley Rodrigues en TMDB; el candado no abrió porque la ficha 3591 de la Cinemateca dice 2024 (la 3579 de Fontanar dice 2014: errata)",
    "_director": "Wesley Rodrigues",
-   "_sondeado": "2026-10-25",
+   "_sondeado": "2026-10-27",
    "poster": "/assets/anibia-2026/viaje-bajo-la-lluvia.jpg",
    "posterSource": "tmdb"
   },
@@ -1972,7 +1994,7 @@
    "lbSlug": "ceu-inferno-e-outras-partes-do-corpo",
    "_verificado": "declarada a mano: «Céu, Inferno e Outras Partes do Corpo» (2011, 8 min), dir. Rodrigo John: el título español no está en TMDB",
    "_director": "Rodrigo John",
-   "_sondeado": "2026-10-25",
+   "_sondeado": "2026-10-27",
    "poster": "/assets/anibia-2026/cielo-infierno-y-otras-partes-del-cuerpo.jpg",
    "posterSource": "tmdb"
   },
@@ -2591,7 +2613,7 @@
    "lbSlug": "the-devil-room",
    "_verificado": "declarada a mano: «La Habitación del Macho Cabrío» (2025, 12 min), dir. Duban Pinzón (la Cinemateca escribe «Pizon»); tilde distinta en el título",
    "_director": "Duban Pizon",
-   "_sondeado": "2026-10-25",
+   "_sondeado": "2026-10-27",
    "poster": "/assets/anibia-2026/la-habitacion-del-macho-cabrio.jpg",
    "posterSource": "tmdb"
   },
@@ -3119,7 +3141,7 @@
    "lbSlug": "umassuma-lascas-de-memoria",
    "_verificado": "declarada a mano: «UMASSUMA - Lascas de Memória» (2025, 8 min), dir. Guaracy Britto Jr. y Andrei Miralha: el título español no está en TMDB",
    "_director": "Guaracy Britto Jr. e Andrei Miralha",
-   "_sondeado": "2026-10-25",
+   "_sondeado": "2026-10-27",
    "poster": "/assets/anibia-2026/umassuma-lascas-de-memorias.jpg",
    "posterSource": "tmdb"
   },
@@ -3273,7 +3295,7 @@
    "lbSlug": "viagem-na-chuva",
    "_verificado": "declarada a mano: «Viagem na Chuva» (2014, 12 min), dir. Wesley Rodrigues en TMDB; el candado no abrió porque la ficha 3591 de la Cinemateca dice 2024 (la 3579 de Fontanar dice 2014: errata)",
    "_director": "Wesley Rodrigues",
-   "_sondeado": "2026-10-25",
+   "_sondeado": "2026-10-27",
    "poster": "/assets/anibia-2026/viaje-bajo-la-lluvia.jpg",
    "posterSource": "tmdb"
   },

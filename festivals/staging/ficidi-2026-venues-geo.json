@@ -1,0 +1,48 @@
+{
+ "_provenance": {
+  "fuente": "Nominatim con verificación: caja de ciudad + token distintivo + clase de lugar (una sede fija nunca es un barrio). _prec:manual intocable.",
+  "capturado": "2026-10-30"
+ },
+ "Aduana de Barranquilla": {
+  "_prec": "manual",
+  "_nota": "Google Maps (29 oct 2026): «Museo CIMU», Vía 40 #36-135 — el edificio de la Antigua Aduana. Sala CIMU.",
+  "lat": 10.9883467,
+  "lng": -74.7789565,
+  "address": "Vía 40 #36-135"
+ },
+ "Universidad Simón Bolívar, sede 1": {
+  "_prec": "manual",
+  "_nota": "Google Maps (29 oct 2026): «Universidad Simón Bolívar Sede 1». El PDF: Cra 59 # 59-132; Salón del Mirador de la Bandera, azotea.",
+  "lat": 10.9944069,
+  "lng": -74.7919365,
+  "address": "Carrera 59 #59-132"
+ },
+ "La Maloca Cultural": {
+  "_prec": "manual",
+  "_nota": "Google Maps (29 oct 2026): «La Maloca Cultural». El PDF: Carrera 46 # 79-82.",
+  "lat": 10.9984824,
+  "lng": -74.8126315,
+  "address": "Carrera 46 #79-82"
+ },
+ "Alianza Francesa de Barranquilla": {
+  "_prec": "manual",
+  "_nota": "Google Maps (FICICA, 15 oct 2026): «Alianza Francesa de Barranquilla». El PDF: Calle 52 # 54-75.",
+  "lat": 10.9934124,
+  "lng": -74.7890175,
+  "address": "Calle 52 #54-75"
+ },
+ "Universidad de la Costa – CUC": {
+  "_prec": "manual",
+  "_nota": "Google Maps (FICICA, 15 oct 2026): «Universidad De La Costa, CUC». El PDF: Calle 52 # 56A-75, Bloque 11 piso 3, Sala de Conferencias.",
+  "lat": 10.9953387,
+  "lng": -74.78881,
+  "address": "Calle 52 #56A-75"
+ },
+ "La Fábrica de Cultura": {
+  "_prec": "manual",
+  "_nota": "Google Maps (FICICA, 15 oct 2026): «Fábrica de Cultura». El PDF: Calle 40 con Carrera 50 esquina; Auditorio EDA.",
+  "lat": 10.988688,
+  "lng": -74.7806353,
+  "address": "Calle 40 con Carrera 50"
+ }
+}
