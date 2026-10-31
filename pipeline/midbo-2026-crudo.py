@@ -339,20 +339,6 @@ ACTIVACIONES = [
        'acceso': 'Entrada gratuita con inscripción previa',
        '_src': {'url': 'https://www.instagram.com/p/De7_QLjCTdz/', 'date': '2026-10-26'}}
       for _d in ('2026-10-29', '2026-11-03')],
-    # LA VISITA GUIADA a la exposición (post de @cinematecabta con @midbo_doc del
-    # 31 oct, instagram.com/p/DfKdzHMEUck, pie leído con ig_posts.py; las 10
-    # láminas son fotos de la muestra, sin texto): «Miércoles 4 de noviembre | 3
-    # p. m. Lidera: Jorjan Betancourt.» · «Sala E, Cinemateca de Bogotá» ·
-    # «Entrada libre, reclamando boleta en taquilla». La del sáb 7 nov queda
-    # fuera: solo días oficiales. El pie no da hora de fin → duración ESTIMADA
-    # en 60 min, como las visitas al CMPR. Sección: la de la exposición.
-    {'titulo': 'Visita guiada a la exposición Escuchar lo que permanece', 'dia': '2026-11-04', 'hora': '15:00',
-     'sede': 'Cinemateca de Bogotá', 'sala': 'Sala E', 'ciudad': 'Bogotá',
-     'tipo': 'evento', 'event_kind': 'evento', 'seccion': 'Documental Expandido',
-     'duracion_min': 60, '_duracion_de': 'estimada: el pie no da hora de fin',
-     'acceso': 'Entrada libre reclamando boleta en taquilla',
-     'invitados': 'Lidera: Jorjan Betancourt.',
-     '_src': {'url': 'https://www.instagram.com/p/DfKdzHMEUck/', 'date': '2026-10-31'}},
     # La exposición de la Cinemateca (agenda de la sala = fuente de sala, hora y
     # acceso; cinematecadebogota.gov.co/exposiciones?id=3663, leída el 22 oct):
     # va del 28 oct al 16 nov → abierta (info) recortada al 4 nov, último día
@@ -369,7 +355,10 @@ ACTIVACIONES = [
      'sinopsis': '¿Qué escuchamos cuando una imagen guarda silencio? En las cuatro obras de la exposición, el sonido '
                  'aparece como una materia inestable. Puede habitar una voz, adherirse a un paisaje, surgir de una '
                  'textura o permanecer latente en una imagen. A veces se oye. A veces debe ser imaginado. '
-                 'Martes a viernes: 2:00 p.m. a 6:00 p.m. Sábados, domingos y festivos: 11:00 a.m. a 6:00 p.m.',
+                 'Martes a viernes: 2:00 p.m. a 6:00 p.m. Sábados, domingos y festivos: 11:00 a.m. a 6:00 p.m. '
+                 # la visita guiada no es actividad aparte: el festival la anuncia como parte
+                 # de la muestra (IG DfKdzHMEUck, 31 oct); la del sáb 7 queda fuera de los días oficiales
+                 'Visita guiada: miércoles 4 de noviembre, 3 p. m. Lidera: Jorjan Betancourt.',
      'invitados': 'Artista: María Isabella Arenas, Sergio Díaz, Daniel Torres, Yareni Velázquez Mendoza · '
                   'Curaduría: Jorjan Betancourt.',
      '_src': {'url': 'https://cinematecadebogota.gov.co/exposiciones?id=3663', 'date': '2026-10-22'}},
