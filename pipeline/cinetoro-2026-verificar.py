@@ -23,7 +23,10 @@ ALIAS = {'la-gargante-del-diablo': 'La garganta del diablo',   # errata en el no
          'haswe-clouds': 'ḤAŚWƐ: Clouds Seen from a Distance Before the Sea Wind Comes'}
 cat = json.load(io.open(f'{REPO}/festivals/staging/cinetoro-2026-catalogo.json', encoding='utf-8'))['obras']
 fallos, n = [], 0
-for url in sorted({o['_src']['url'] for o in cat}):
+# las páginas de la selección traen una imagen por obra; lo que está fuera de la
+# selección (el largo invitado) sale de la parrilla, que no la trae: se verifica
+# en la 2.ª parte, contra el build
+for url in sorted({o['_src']['url'] for o in cat if 'programacion-2026' not in o['_src']['url']}):
     slug = url.rstrip('/').rsplit('/', 1)[1]
     s = io.open(f'{REPO}/fuentes/cinetoro-2026/{slug}.html', encoding='utf-8').read()
     imgs = list(dict.fromkeys(re.findall(r'uploads/2026/10/([^"\s]+?)(?:-\d+x\d+)?\.png', s)))

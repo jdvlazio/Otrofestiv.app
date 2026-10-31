@@ -1,12 +1,27 @@
 {
  "id": "w_96QPCNKYF1FX",
  "titulo_original": "Bajo una lluvia ajena",
- "anio": null,
- "paises": [],
- "directores": [
-  "Martha Hincapie"
+ "anio": 2024,
+ "paises": [
+  "CO"
  ],
- "xref": {},
+ "directores": [
+  "Marta Hincapié Uribe"
+ ],
+ "sinopsis": {
+  "en": "After twenty years, the director returns to archives that she filmed on analogue tapes and proposes a game of glances where she constructs a reflection on various times: the life of her grandfather, who emigrated to Europe in the 1920s; the present day of the people who send messages to their loved ones with their desire to return to their land in Morocco, Palestine, Colombia, India; and the ghostly text of a young Ghanaian who is shipwrecked in the Mediterranean before reaching his destination."
+ },
+ "generos": [
+  "Documental"
+ ],
+ "afiche": {
+  "archivo": "/assets/cinetoro-2026/bajo-una-lluvia-ajena.jpg",
+  "veredicto": "oficial"
+ },
+ "xref": {
+  "tmdb": 1353088,
+  "letterboxd": "bajo-una-lluvia-ajena"
+ },
  "versiones": [
   {
    "etiqueta": "120 min",

@@ -105,6 +105,7 @@ def obras(slug, seccion, programa, tipo):
     return out
 
 
+
 def main():
     todas = []
     for slug, (sec, prog, n, tipo) in PAGINAS.items():
@@ -113,6 +114,17 @@ def main():
             sys.exit(f'✗ {slug}: {len(ob)} obras, se contaron {n} a mano')
         todas += ob
         print(f'  {sec}: {len(ob)}')
+    # Obras que se proyectan pero no están en las páginas de la selección: el
+    # catálogo es de TODO lo que se proyecta, no solo de la competencia (Juan,
+    # 31 oct 2026). La parrilla es su única fuente del festival.
+    largo_invitado = [
+        {'titulo': 'Bajo una lluvia ajena', 'director': 'Martha Hincapie', 'pais': 'Colombia',
+         'anio': None, 'duracion_txt': None, 'duracion_min': None, 'sinopsis': '',
+         'tipo': 'largo', 'seccion': 'Especial', 'programa': 'Largo invitado'},
+    ]
+    for o in largo_invitado:
+        todas.append(dict(o, _src={'url': 'https://cinetoro.org/programacion-2026-2/', 'date': FECHA}))
+    print(f'  fuera de la selección: {len(largo_invitado)}')
     d = {'_provenance': {'fuente': 'cinetoro.org/edicion-2026 — las 4 páginas de la selección oficial',
                          'capturado': FECHA,
                          'metodo': 'HTML: Título / Dirección / Lugar / Año / Duración / Sinopsis, cerrado por su imagen'},
