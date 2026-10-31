@@ -1,0 +1,21 @@
+{
+ "_provenance": {
+  "fuente": "afiches buscados fuera de TMDB y MIRADOS uno por uno",
+  "capturado": "2026-10-31",
+  "regla": "solo donde TMDB y lo ya publicado no tienen afiche"
+ },
+ "afiches": {
+  "Dynamo": {
+   "archivo": "assets/cinetoro-2026/dynamo.jpg",
+   "fuente": "afiche oficial del Tirana IFF 2026 (https://tiranafilmfest.org/?p=30047), ya en el catálogo del pre-onboarding (catalogo_afiche, 26 oct)"
+  },
+  "Blue": {
+   "archivo": "assets/cinetoro-2026/blue.jpg",
+   "fuente": "locandina oficial del Split Film Festival 2026 (https://splitfilmfestival.hr/programme/blue/), ya en el catálogo del pre-onboarding (catalogo_afiche, 26 oct)"
+  },
+  "Tres gatos parias": {
+   "archivo": "assets/siembrafest/tres-gatos-parias.jpg",
+   "fuente": "el afiche oficial que ya publicamos en SiembraFest 2026 (misma obra, Iván Sierra, 2025)"
+  }
+ }
+}

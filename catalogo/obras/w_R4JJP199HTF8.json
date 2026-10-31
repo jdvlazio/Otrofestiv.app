@@ -8,16 +8,27 @@
  "directores": [
   "Valeria Preciado Romaña"
  ],
+ "aliases": [
+  {
+   "titulo": "The Dance of Chaos",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
  "sinopsis": {
-  "es": "La Danza del Caos es un cortometraje de animación experimental que traduce la teoría de los Cinco Ritmos de Gabrielle Roth en una experiencia audiovisual abstracta. Mediante el movimiento y el diseño sonoro, la animación sustituye al cuerpo físico para llevar al espectador en un viaje sensorial que recorre diferentes ritmos hasta alcanzar un estado de caos contenido. El cortometraje sumerge al espectador en una experiencia sensorial que lo invita a sentir y dejarse llevar por el ritmo como guía para la interpretación."
+  "es": "«La danza del caos» es un cortometraje animado experimental que traduce la teoría de los «Cinco Ritmos» de Gabrielle Roth en una experiencia audiovisual abstracta. A través del movimiento y el diseño de sonido, la animación sustituye al cuerpo físico para llevar a los espectadores a un viaje sensorial que recorre diferentes ritmos hasta alcanzar un estado de caos contenido. El cortometraje sumerge al espectador en una experiencia sensorial que lo invita a sentir y a dejarse llevar por el ritmo como guía para la interpretación.",
+  "en": "The Dance of Chaos is an experimental animated short film that translates Gabrielle Roth's Five Rhythms theory into an abstract audiovisual experience. Through movement and sound design, the animation replaces the physical body to take viewers on a sensory journey that traverses different rhythms until reaching a state of contained chaos. The short film immerses the viewer in a sensory experience that invites them to feel and let themselves be carried away by the rhythm as a guide to interpretation."
  },
+ "generos": [
+  "Animación"
+ ],
  "afiche": {
-  "archivo": "/assets/filcmar-2026/la-danza-del-caos.jpg",
+  "archivo": "/assets/cinetoro-2026/la-danza-del-caos.jpg",
   "veredicto": "oficial"
  },
  "xref": {
   "tmdb": 1791655,
-  "letterboxd": "la-danza-del-caos"
+  "letterboxd": "the-dance-of-chaos"
  },
  "versiones": [
   {
@@ -26,6 +37,7 @@
   }
  ],
  "presentaciones": [
+  "cinetoro-2026",
   "filcmar-2026"
  ]
 }

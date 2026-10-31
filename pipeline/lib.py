@@ -745,6 +745,9 @@ SIGLAS = {
     # FICCALI (22 oct 2026): «Carpa GEUP (Grupo Editoriales Universitarias del Pacífico)»,
     # lámina 2 del IG DezOJbQkf6x
     'GEUP',
+    # CINETORO (31 oct 2026): «Lugar: CCMI», la sede del lanzamiento en Cali (Centro
+    # de Creación Musical Interdisciplinaria, Casa Ethel)
+    'CCMI',
     # MARCAS DE PROGRAMA que el festival escribe así —no son siglas y no
     # gritan una sección: son el nombre de un proceso—. FINQUITA es el
     # diminutivo de FINCA; LABRA, «el proceso de formación LABRA» de SiembraFest,

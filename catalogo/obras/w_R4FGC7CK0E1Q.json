@@ -1,6 +1,6 @@
 {
  "id": "w_R4FGC7CK0E1Q",
- "titulo_original": "El Salto",
+ "titulo_original": "El salto",
  "anio": 2026,
  "paises": [
   "CO"
@@ -10,8 +10,13 @@
  ],
  "aliases": [
   {
-   "titulo": "El salto",
+   "titulo": "El Salto",
    "tipo": "festival"
+  },
+  {
+   "titulo": "El Salto",
+   "idioma": "en",
+   "tipo": "traduccion"
   }
  ],
  "sinopsis": {
@@ -33,6 +38,7 @@
  ],
  "presentaciones": [
   "cinemancia-2026",
+  "cinetoro-2026",
   "midbo-2026"
  ]
 }

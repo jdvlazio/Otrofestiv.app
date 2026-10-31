@@ -111,6 +111,7 @@ deliberada existe la etiqueta `frontera-ok`.
 | `girardota2026` | Festigirardota | Girardota | 30 SEP–4 OCT | Recién terminado |
 | `anibia2026` | Anibia | Bogotá | 20 OCT–1 NOV | **Próximo / activo** |
 | `guatape2026` | Guatapé Film Fest | Guatapé | 21–25 OCT | Recién terminado |
+| `cinetoro2026` | CINETORO | Toro | 10–15 NOV | **Próximo / activo** |
 | `cortoscali2026` | Cortos Cali | Cali | 27–30 OCT | Recién terminado |
 | `biff2026` | BIFF | Bogotá | 8–14 OCT | Recién terminado |
 | `popayan2026` | Cine Corto Popayán | Popayán | 5–11 OCT | Recién terminado |

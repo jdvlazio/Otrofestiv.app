@@ -141,6 +141,11 @@ export const SECTION_COLORS = {
 //  · Tribeca se omite entero: sus secciones ya están en inglés.
 //  · "Impact Hits"/"Industry Days" (AFF) ya están en inglés → se omiten.
 export const SECTION_EN = {
+  // CINETORO 2026
+  '🏆 Selección Oficial': 'Official Selection',
+  '🎨 Cinetoro al Aula': 'Cinetoro in the Classroom',
+  '🎓 Programación Académica': 'Academic Program',
+  '✨ Especial': 'Special',
   // Cortos Cali 2026
   '🌎 Selección Oficial Internacional': 'Official Selection: International',
   '🎬 Selección Oficial Nacional': 'Official Selection: National',
@@ -839,6 +844,27 @@ export const FESTIVAL_CONFIG={
     prioLimit:3,
     films:null,posters:null,lbSlugs:{}
   },
+  'cinetoro2026': {
+    // EL NOMBRE es el del festival (cinetoro.org); la edición va en fullName.
+    // Días oficiales 10–15 NOV (Roldanillo 10, Toro 11–15). Lo de otras ciudades
+    // (Bogotá, Cali, Palmira) queda fuera (decisión de Juan, 31 oct 2026).
+    name:'CINETORO',displayName:'CINETORO',
+    fullName:'CINETORO Experimental Film Festival 2026',shortName:'CINETORO',
+    city:'Toro',country:'CO',
+    dates:'10–15 NOV',dates_en:'NOV 10–15',year:2026,timezoneOffset:'-05:00',
+    // el subtítulo expande el nombre; el lema del año («Límites convergentes») vive en el afiche
+    tagline:'Festival de Cine Experimental de Toro',
+    keyArt:'/assets/keyart/cinetoro2026-v2.jpg',
+    instagram:'cinetorofilmfestival', storageKey:'cinetoro2026_',festivalStartStr:'2026-11-10T00:00:00',festivalEndStr:'2026-11-15T23:59:00',
+    festivalDates:{'2026-11-10':'2026-11-10','2026-11-11':'2026-11-11','2026-11-12':'2026-11-12','2026-11-13':'2026-11-13','2026-11-14':'2026-11-14','2026-11-15':'2026-11-15'},
+    days:[{k:'2026-11-10',d:10,lbl:'MAR'},{k:'2026-11-11',d:11,lbl:'MIÉ'},{k:'2026-11-12',d:12,lbl:'JUE'},{k:'2026-11-13',d:13,lbl:'VIE'},{k:'2026-11-14',d:14,lbl:'SÁB'},{k:'2026-11-15',d:15,lbl:'DOM'}],
+    dayKeys:['2026-11-10','2026-11-11','2026-11-12','2026-11-13','2026-11-14','2026-11-15'],
+    dayShort:{'2026-11-10':'MAR 10','2026-11-11':'MIÉ 11','2026-11-12':'JUE 12','2026-11-13':'VIE 13','2026-11-14':'SÁB 14','2026-11-15':'DOM 15'},
+    dayShort_en:{'2026-11-10':'TUE 10','2026-11-11':'WED 11','2026-11-12':'THU 12','2026-11-13':'FRI 13','2026-11-14':'SAT 14','2026-11-15':'SUN 15'},
+    dayLong:{'2026-11-10':'Martes 10 de noviembre','2026-11-11':'Miércoles 11 de noviembre','2026-11-12':'Jueves 12 de noviembre','2026-11-13':'Viernes 13 de noviembre','2026-11-14':'Sábado 14 de noviembre','2026-11-15':'Domingo 15 de noviembre'},
+    prioLimit:4,
+    films:null,posters:null,lbSlugs:{}
+  },
   'cortoscali2026': {
     // EL NOMBRE es el del festival (@cortoscali); la edición va en fullName.
     name:'Cortos Cali',displayName:'Cortos Cali',
@@ -1233,6 +1259,11 @@ export const SECTION_ARCHETYPES = {
   '📱 Circulación / Industria': 'Charlas / Industria',
   '🎤 Conversatorio / Clausura': 'Clausura',
   '🏆 Premiación': 'Especiales / Eventos',
+  // ── CINETORO 2026 · Toro ──────────────────────────────────────────────
+  '🏆 Selección Oficial': 'Competencia',
+  '🎨 Cinetoro al Aula': 'Cortos / Programas',
+  '🎓 Programación Académica': 'Charlas / Industria',
+  '✨ Especial': 'Especiales / Eventos',
   // ── Cortos Cali 2026 · Cali ───────────────────────────────────────────
   '🌎 Selección Oficial Internacional': 'Competencia',
   '🎬 Selección Oficial Nacional': 'Competencia',

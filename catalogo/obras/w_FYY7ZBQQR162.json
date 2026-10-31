@@ -3,7 +3,8 @@
  "titulo_original": "Karten der Wildnis",
  "anio": 2026,
  "paises": [
-  "DE"
+  "DE",
+  "CO"
  ],
  "directores": [
   "Aline Helmcke",
@@ -15,6 +16,10 @@
   "Sandra Reyes Sotomayor"
  ],
  "aliases": [
+  {
+   "titulo": "Maps of Wilderness",
+   "tipo": "festival"
+  },
   {
    "titulo": "Maps of Wilderness",
    "idioma": "en",
@@ -43,6 +48,7 @@
   }
  ],
  "presentaciones": [
-  "anibia-2026"
+  "anibia-2026",
+  "cinetoro-2026"
  ]
 }
