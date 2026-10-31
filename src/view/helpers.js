@@ -7,7 +7,7 @@
 
 import { FESTIVAL_BUFFER, FESTIVAL_QA_MIN, FESTIVAL_CONFIG, TMDB_IMG } from '../config.js';
 import {
-  DAY_ABBR, DAY_NUM, ICONS, _buildPosterMini, _buildPosterV16, _datoCompuesto, _fitLines, _secLabel, _seccionPartes, _sectionColor,
+  DAY_ABBR, DAY_NUM, ICONS, _buildPosterMini, _buildPosterV16, _posterForma, _datoCompuesto, _fitLines, _secLabel, _seccionPartes, _sectionColor,
   makeProgramPoster, makeEventPoster, makeSorpresaPoster, makeSharedSlotSVG, escXML, _langDates, parseProgramTitle,
 } from './components.js';
 // _langDates se REEXPORTA: el dueño vive en components.js (helpers importa
@@ -80,20 +80,10 @@ export function getFilmPoster(f){
   if(_tmdb) return _tmdb;
   // 7. f.poster directo — editorial cloudfront o formato Jardín 2026
   if(f.poster) return (f.poster.startsWith('http')||f.poster.startsWith('/assets/'))?f.poster:TMDB_IMG+f.poster;
-  // 8. Poster generativo
-  // Regla de carga (Juan, 24 ago): rótulo = primera oración; la firma de
-  // curaduría solo baja al pie con TÍTULO SIMPLE — con pila/compuesto cede y
-  // vive en la ficha. Tres voces: sección, cuerpo, pie.
-  const _partes=_seccionPartes(_secLabel(f.section||''));
-  const _compuesto=/\s\+\s/.test(f.title||'');
-  return _buildPosterV16({
-    accent: _sectionColor(f.section||''),
-    headerLabel: _partes.rotulo||'TRIBECA',
-    title: f.title,
-    num: null,
-    dato: _datoCompuesto(f.title, f.duration), // «3 obras · 99 min» si es compuesto
-    firma: _compuesto?null:_partes.firma
-  });
+  // 8. Obra sin afiche ni fotograma → BOLETA (Juan, 31 oct 2026, spec mesa-de-luz):
+  // solo el título y la duración; la sección la dice el talón y el separador.
+  return _posterForma({forma:'boleta', accent:_sectionColor(f.section||''),
+    title:f.title, dato:_datoCompuesto(f.title, f.duration)});
 }
 
 // ── LA MINI para superficies de 56px (mejora 1, auditoría Apple Music) ──────
@@ -128,12 +118,7 @@ export function getFilmPosterUntitled(f){
   if(f.title&&f.title.toLowerCase().includes('sorpresa')) return src;
   if(f.type==='event'){const _et=f.is_awards_screening?f.title.replace(/^Award Screening:\s*/i,''):f.title;return makeEventPoster(state,_et,f.duration,f.event_kind,f.section,{untitled:true});}
   if(f.is_cortos||(f.is_programa&&f.film_list&&f.film_list.length)) return makeProgramPoster(state,f.title,f.duration,f.section,{untitled:true});
-  return _buildPosterV16({
-    accent: _sectionColor(f.section||''),
-    headerLabel: _seccionPartes(_secLabel(f.section||'')).rotulo||'TRIBECA', // mismo rótulo que #8
-    title: '',
-    num: null
-  });
+  return _posterForma({forma:'boleta', accent:_sectionColor(f.section||''), title:'', dato:''});
 }
 
 export function getCortoItemPoster(item){
