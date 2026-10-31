@@ -207,15 +207,19 @@ test('posterModel fail-safe: host desconocido NO se marca editorial (no se mete 
 // Devuelve los HIJOS del marco; el contenedor aporta poster-ed + --ed-accent.
 // Zona imagen = blur-fill (.ed-blur) + still 16:9 al ras (.ed-still) + scrim
 // opcional (.ed-scrim con .ed-title). El título va en el scrim, no en un ed-body.
-test('editorialFrame (forma B §6.0): filete + sección + campo 16:9 + pie', () => {
+// La tarjeta CON título dejó de ser la Forma B (Juan, 31 oct 2026 — spec
+// mesa-de-luz): es la BOLETA CON FOTOGRAMA. Sin rótulo de sección (lo dice el
+// talón), el fotograma enmarcado, su luz derramada, título, duración, troquel.
+test('editorialFrame con título → boleta con fotograma', () => {
   const html = H.editorialFrame({ header: 'Cine Cubano', body: 'La Peli', src: 'https://x/y.jpg', title: 'La Peli', dato: '96 min' });
-  assert.ok(html.includes('class="ed-fil"') && html.includes('class="ed-hdr"'), 'filete de sección + sección');
-  assert.ok(html.includes('class="ed-img"') && html.includes('class="ed-still"'), 'campo de imagen con el still');
-  assert.ok(!html.includes('ed-blur'), 'el blur murió: ensuciaba el negro y competía con la imagen');
-  assert.ok(!html.includes('ed-scrim'), 'el scrim murió: el título ya no va encima de la imagen');
-  assert.ok(html.includes('class="ed-foot"') && html.includes('class="ed-title"'), 'título anclado al pie');
-  assert.ok(html.includes('class="ed-dato"') && html.includes('96 min'), 'el dato vive en el pie');
-  assert.ok(html.includes('data-err="ed"'), 'usa el fallback unificado editorial (en el still; data-err, sin onerror inline — CSP)');
+  assert.ok(html.includes('class="edb"'), 'es una boleta');
+  assert.ok(html.includes('class="edb-foto"') && html.includes('class="ed-still"'), 'el fotograma enmarcado');
+  assert.ok(html.includes('class="edb-luz"'), 'la luz de proyección');
+  assert.ok(html.includes('class="edb-ttl"') && html.includes('La Peli'), 'el título');
+  assert.ok(html.includes('class="edb-dato"') && html.includes('96 min'), 'la duración');
+  assert.ok(html.includes('edb-troquel') && html.includes('edb-talon'), 'troquel y talón');
+  assert.ok(!html.includes('Cine Cubano') && !html.includes('ed-hdr'), 'sin rótulo de sección');
+  assert.ok(html.includes('data-err="ed"'), 'usa el fallback unificado editorial (data-err, sin onerror inline — CSP)');
   assert.ok(!html.includes('poster-ed'), 'NO incluye el wrapper — eso lo pone el contenedor');
 });
 
@@ -231,7 +235,7 @@ test('editorialFrame: body undefined/"" → sin título · texto → título al 
   assert.ok(!H.editorialFrame({ src: 'x' }).includes('ed-title'), 'undefined → sin título');
   assert.ok(!H.editorialFrame({ src: 'x', body: '' }).includes('ed-title'), '"" (ended-poster) → sin título');
   const titled = H.editorialFrame({ src: 'x', body: 'Peli' });
-  assert.ok(titled.includes('<div class="ed-title">Peli</div>'), 'texto → título en el pie (§6.0)');
+  assert.ok(/class="edb-ttl"[^>]*>Peli</.test(titled), 'texto → boleta con el título (31 oct)');
 });
 
 test('editorialFrame: escapa body, header y data-title (sin & crudo)', () => {
@@ -257,7 +261,9 @@ test('editorialFrame: la miniatura centra el campo; el halo va en AMBAS', () => 
     'la miniatura conserva su halo con el ancla de siempre (68,75%)');
   assert.ok(mini.includes('ed-img ed-img-mid'), 'y el campo centrado');
 
-  const tapa = H.editorialFrame({ header: 'Sec', body: 'Una obra', src: 'https://x/y.jpg', title: 'T' });
+  // La tapa SIN título (cabecera de la ficha) conserva el marco; con título es
+  // la boleta con fotograma, que tiene su propia luz (edb-luz).
+  const tapa = H.editorialFrame({ header: 'Sec', src: 'https://x/y.jpg', title: 'T' });
   assert.ok(tapa.includes('ed-halo ed-halo-full'),
     'el póster grande lleva halo anclado a SU campo — el vacío ya no es diseño');
   assert.ok(!tapa.includes('ed-img-mid'), 'y no centra el campo');
@@ -521,11 +527,16 @@ test('Forma A — regla de carga: la sección ya no pasa de 2 líneas', () => {
 });
 
 test('Forma B — el halo llena el vacío también en el póster grande', () => {
-  const grande = H.editorialFrame({header:'La primavera llega para los que esperan',
+  // Con título ahora es la boleta con fotograma (31 oct): su luz es edb-luz y
+  // la firma no va (la boleta lleva solo título y duración). La tapa sin
+  // título conserva el halo anclado a su campo.
+  const boleta = H.editorialFrame({header:'La primavera llega para los que esperan',
     body:'Ver y escuchar', src:'/x.jpg', title:'Ver y escuchar', accent:'#E05252',
     firma:'El cine de José Luis Torres Leiva'});
+  assert.ok(boleta.includes('class="edb-luz"'), 'la boleta derrama la luz del fotograma');
+  assert.ok(!boleta.includes('Torres Leiva'), 'la boleta no lleva firma');
+  const grande = H.editorialFrame({header:'La primavera', src:'/x.jpg', title:'T'});
   assert.ok(grande.includes('ed-halo ed-halo-full'), 'halo con ancla del campo grande');
-  assert.ok(grande.includes('class="ed-firma"'), 'la firma vive en el pie');
   const mini = H.editorialFrame({src:'/x.jpg', title:'Corto'});
   assert.ok(mini.includes('class="ed-halo"') && !mini.includes('ed-halo-full'),
     'la miniatura conserva su ancla de siempre (68,75%)');
