@@ -723,13 +723,78 @@ function _quitaEco(title, label){
   const _resto=_tras.replace(/^[\s·:—–-]+/,'');
   return _resto?_resto[0].toUpperCase()+_resto.slice(1):_t;
 }
+// CORTE DE LÍNEA «emparejar» (Juan, 31 oct 2026 — eligió entre tres sobre
+// títulos reales). La letra NUNCA se comprime: comprimir para que una línea
+// quepa «es donde se empieza a ver feo». Por eso el ancho se MIDE con la
+// fuente real en el navegador (canvas), y no con el estimador, que en peso
+// 800 se queda corto. Sin DOM (tests en node) cae al estimador.
+//   1. Una palabra débil («de», «y», «la», un guion) viaja pegada a la que
+//      sigue: ninguna línea termina en ella (regla de Juan de siempre).
+//   2. Se cuenta cuántas líneas hacen falta llenando cada una hasta el borde.
+//   3. Con ESE número de líneas, se reparten las palabras para que queden de
+//      largo parecido. Pasada la línea 6, «…».
+let _ctxMedir=null;
+function _medidor(fs){
+  if(typeof document==='undefined') return s=>_emWidth(s,false)*fs*1.12;
+  if(!_ctxMedir) _ctxMedir=document.createElement('canvas').getContext('2d');
+  const font=`800 ${fs}px -apple-system,BlinkMacSystemFont,sans-serif`;
+  return s=>{_ctxMedir.font=font;return _ctxMedir.measureText(s).width;};
+}
+const _esDebil=w=>/^[·–—-]+$/.test(w)||_BAND_WEAK.has(w.toLowerCase().replace(/[^\p{L}]/gu,'').normalize('NFD').replace(/[̀-ͯ]/g,''));
+function _unidades(str){
+  const U=[]; let pend=[];
+  for(const w of String(str||'').trim().split(/\s+/).filter(Boolean)){
+    pend.push(w);
+    if(!_esDebil(w)){ U.push(pend.join(' ')); pend=[]; }
+  }
+  if(pend.length){ if(U.length) U[U.length-1]+=' '+pend.join(' '); else U.push(pend.join(' ')); }
+  return U;
+}
+function _llenar(U, W, boxW){
+  const L=[]; let cur='';
+  for(const u of U){ const c=cur?cur+' '+u:u; if(cur&&W(c)>boxW){ L.push(cur); cur=u; } else cur=c; }
+  if(cur) L.push(cur);
+  return L;
+}
+function _emparejar(U, W, boxW, n){
+  if(U.length>14||n<2) return null;
+  let best=null;
+  const rec=(i,acc)=>{
+    if(acc.length>n) return;
+    if(i===U.length){
+      if(acc.length!==n) return;
+      const ls=acc.map(a=>a.join(' ')), ww=ls.map(W);
+      if(ww.some(x=>x>boxW)) return;
+      const sc=ww.slice(0,-1).reduce((t,x)=>t+(boxW-x)**2,0)
+        +Math.max(0,ww[ww.length-1]-Math.max(...ww.slice(0,-1)))**2;
+      if(!best||sc<best.sc) best={sc,ls};
+      return;
+    }
+    for(let j=i+1;j<=U.length;j++) rec(j,[...acc,U.slice(i,j)]);
+  };
+  rec(0,[]);
+  return best&&best.ls;
+}
 function _tituloFijo(str, boxW, maxLines){
-  let fs=_TIT;
-  const _ancha=Math.max(0,...String(str||'').split(/\s+/).map(w=>_emWidth(w,false)*1.12));
-  if(_ancha*fs>boxW*0.98) fs=Math.max(_ROT, boxW*0.98/_ancha);
-  // Se envuelve al 84 % de la caja: el estimador mide la fuente del sistema
-  // en peso 800 de menos, y una línea que toca el borde se ve (Jardín, 31 oct).
-  return _fitLines(str,{boxW:boxW*0.84, boxH:1e4, maxLines, fsMax:fs, fsMin:fs, lhRatio:1.18, lsEm:0, upper:false});
+  const s=String(str||'').trim();
+  if(!s) return {lines:[], fs:_TIT, lh:_TIT*1.18};
+  let fs=_TIT, W=_medidor(fs);
+  // Solo baja cuando una palabra —con su «de», «y» o «la» pegados— no entra
+  // en el ancho («y representación.»): partirla con guion lo descartó Juan, y
+  // dejar la «y» huérfana o al final de la línea anterior se ve peor. Baja lo
+  // justo, nunca por debajo del rótulo.
+  const U=_unidades(s);
+  const ancha=Math.max(...U.map(u=>W(u)));
+  if(ancha>boxW){ fs=Math.max(_ROT, fs*boxW/ancha*0.995); W=_medidor(fs); }
+  const lleno=_llenar(U, W, boxW);
+  let L=_emparejar(U, W, boxW, lleno.length)||lleno;
+  if(L.length>maxLines){
+    L=lleno.slice(0,maxLines);
+    let u=L[maxLines-1].split(' ');
+    while(u.length>1&&W(u.join(' ')+'…')>boxW) u.pop();
+    L[maxLines-1]=u.join(' ').replace(/[\s.,;:–—-]+$/,'')+'…';
+  }
+  return {lines:L, fs:+fs.toFixed(2), lh:+(fs*1.18).toFixed(2)};
 }
 // El tipo puede venir ESCRITO en el título: «Panel: Memoria…» marcado como
 // foro. La escarapela dice la palabra del festival (PANEL) y el título no la
@@ -750,9 +815,7 @@ export function _posterForma({forma, accent, label, title, dato}){
   const datoY=VH-_PAD-_DAT*0.3;
   let cuerpo='';
   const _txt=(l,x,y,fs,fill,{w=800,ls=0}={})=>{
-    const est=(_emWidth(l,false)*fs+l.length*ls)*1.3, tope=CW*0.98;
-    const aj=est>tope?` textLength="${r(tope)}" lengthAdjust="spacingAndGlyphs"`:'';
-    return `<text x="${r(x)}" y="${r(y)}"${aj} font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="${r(fs)}" font-weight="${w}" letter-spacing="${r(ls)}" fill="${fill}">${escXML(l)}</text>`;};
+    return `<text x="${r(x)}" y="${r(y)}" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="${r(fs)}" font-weight="${w}" letter-spacing="${r(ls)}" fill="${fill}">${escXML(l)}</text>`;};
   if(forma==='escarapela'){
     const rot=_fitLines(String(label||'').toUpperCase(),
       {boxW:CW, boxH:1e4, maxLines:2, fsMax:_ROT, fsMin:_ROT*0.8, lhRatio:1.25, lsEm:0.16, upper:true});
@@ -760,12 +823,12 @@ export function _posterForma({forma, accent, label, title, dato}){
     cuerpo+=`<rect width="${VW}" height="${r(bandH)}" fill="${acc}"/>`
       +`<rect x="${r(VW/2-15*_PX)}" y="${r(8*_PX)}" width="${r(30*_PX)}" height="${r(6*_PX)}" rx="${r(3*_PX)}" fill="${NEGRO}"/>`
       +rot.lines.map((l,i)=>_txt(l,_PAD,bandH-6*_PX-(rot.lines.length-1-i)*rot.lh-rot.fs*0.2,rot.fs,NEGRO,{ls:rot.fs*0.16})).join('');
-    const ttl=_tituloFijo(title, CW, 6);
+    const ttl=_tituloFijo(title, CW*0.97, 6);
     const ultima=(_dato?datoY-_DAT-4*_PX:datoY)-ttl.fs*0.05;
     cuerpo+=ttl.lines.map((l,i)=>_txt(l,_PAD,ultima-(ttl.lines.length-1-i)*ttl.lh,ttl.fs,'#F0EDE8')).join('');
   } else {
     const talon=VH*0.09, trY=VH-talon;
-    const ttl=_tituloFijo(title, CW, 6);
+    const ttl=_tituloFijo(title, CW*0.97, 6);
     const y0=13*_PX+ttl.fs*0.9;
     cuerpo+=ttl.lines.map((l,i)=>_txt(l,_PAD,y0+i*ttl.lh,ttl.fs,'#F0EDE8')).join('');
     const dY=trY-8*_PX;
