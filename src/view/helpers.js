@@ -7,7 +7,7 @@
 
 import { FESTIVAL_BUFFER, FESTIVAL_QA_MIN, FESTIVAL_CONFIG, TMDB_IMG } from '../config.js';
 import {
-  DAY_ABBR, DAY_NUM, ICONS, _buildPosterMini, _buildPosterV16, _posterForma, _datoCompuesto, _fitLines, _secLabel, _seccionPartes, _sectionColor,
+  DAY_ABBR, DAY_NUM, ICONS, _buildPosterMini, _posterForma, _datoCompuesto, _fitLines, _secLabel, _seccionPartes, _sectionColor,
   makeProgramPoster, makeEventPoster, makeSorpresaPoster, makeSharedSlotSVG, escXML, _langDates, parseProgramTitle,
 } from './components.js';
 // _langDates se REEXPORTA: el dueño vive en components.js (helpers importa
