@@ -5225,7 +5225,9 @@
    "web": "https://www.festivaldecinediverso.com/",
    "ig": "@festivaldecinediverso",
    "estado": "en_app",
-   "id_config": ["ficidi2026"],
+   "id_config": [
+    "ficidi2026"
+   ],
    "issue": [
     1042
    ],
@@ -6385,6 +6387,39 @@
    "verificado_el": "2026-10-28",
    "origen": [
     "Juan, 28 oct"
+   ],
+   "copias": {
+    "ancla_2026-10-11": null,
+    "fuentes_lista_2026-10-20": null
+   }
+  },
+  {
+   "clave": "ficd",
+   "nombre": "Festival Internacional de Cine por la Democracia (FICD)",
+   "sigla": "FICD",
+   "ciudad": "Bogotá",
+   "departamento": "Bogotá D.C.",
+   "region": "Andina",
+   "mes": 10,
+   "mes_texto": null,
+   "fechas_2026": "8.ª edición, OCT 2026 en Bogotá (fechas no encontradas); 2025: 27–31 OCT",
+   "web": null,
+   "ig": null,
+   "estado": "pasado_2026",
+   "id_config": null,
+   "issue": null,
+   "apoyo": null,
+   "fuente": [
+    "https://canaltrece.com.co/noticias/el-festival-internacional-de-cine-por-la-democracia-llega-a-las-aulas-30-instituciones-en-todo-el-pais-proyectaran-cine-para-pensar-la-participacion/",
+    "https://www.periodicocubano.com/plantadas-de-lilo-vilaplana-llega-a-festival-de-cine-por-la-democracia-en-colombia/?amp=1"
+   ],
+   "nota": "Para 2027 (Juan, 31 oct 2026). VERIFICAR SI ES ABIERTO AL PÚBLICO: en 2025 se hizo en 30 instituciones educativas de 7 regiones, para estudiantes y docentes. 2026: inauguración con «Plantadas» (Lilo y Camilo Vilaplana); sin fechas, sedes ni acceso encontrados. Buscar web e IG oficiales.",
+   "discrepancias": null,
+   "motivo_descarte": null,
+   "importancia": null,
+   "verificado_el": "2026-10-31",
+   "origen": [
+    "Juan, chat 31 oct 2026"
    ],
    "copias": {
     "ancla_2026-10-11": null,
