@@ -1,0 +1,903 @@
+{
+ "_provenance": {
+  "fuente": "Calendario de programación IV FICIDI 2026 (PDF enviado por el festival)",
+  "capturado": "2026-10-30",
+  "archivo": "fuentes/ficidi-2026/Calendario_IV_FICIDI_2026.pdf",
+  "metodo": "pdftotext -layout; un bloque por función; obras cruzadas con el catálogo"
+ },
+ "_catalogo_sin_funcion": [
+  "La masculinidad es una pregunta",
+  "Las cosas que no te dije"
+ ],
+ "_avisos": [
+  "Muñecas de porcelana: dirección lámina «Antonio José López Gómez» / catálogo «Antonio Jose López Gómez» — manda la lámina",
+  "Inés: dirección lámina «José Antonio Gutiérrez Moreno» / catálogo «José Gutiérrez Moreno» — manda la lámina",
+  "Onades: lámina 15 min, TMDB 20 — manda la lámina",
+  "Transitar lo marica negro: dirección lámina «May Romero Quiñones» / catálogo «May Romero Quiñónez» — manda la lámina",
+  "Solo Natalie: dirección lámina «Natalie Ramón Ramírez» / catálogo «Ramón Ramírez» — manda la lámina"
+ ],
+ "funciones": [
+  {
+   "dia": "2026-11-03",
+   "hora": "14:00",
+   "sede": "Aduana de Barranquilla",
+   "acceso": "Entrada libre",
+   "seccion": "Proyección especial",
+   "is_programa": true,
+   "obras": [
+    {
+     "titulo": "O diário imaginado",
+     "director": "Txai Ferraz",
+     "pais": "Brasil",
+     "duracion_min": 20,
+     "sinopsis": "La infancia, la imaginación y el desplazamiento se convierten en un archivo de identidad queer.",
+     "_src": {
+      "pdf": "Calendario_IV_FICIDI_2026.pdf · MARTES 3 nov, obra 01",
+      "duracion": "TMDB 1687430",
+      "catalogo": "O diário imaginado"
+     }
+    },
+    {
+     "titulo": "Pepa Gaitán presente, Ahora y Siempre",
+     "director": "Valeria Romina Albarracín",
+     "pais": "Argentina",
+     "sinopsis": "La historieta y la poesía recuperan la memoria de Pepa Gaitán y su defensa de la libertad.",
+     "_src": {
+      "pdf": "Calendario_IV_FICIDI_2026.pdf · MARTES 3 nov, obra 02",
+      "duracion": null,
+      "catalogo": "Pepa Gaitán presente, Ahora y Siempre"
+     }
+    },
+    {
+     "titulo": "Fragmentos",
+     "director": "Camila Andrea Pérez León",
+     "pais": "Colombia",
+     "sinopsis": "Una videodanza explora la construcción de la identidad drag mediante el movimiento, el maquillaje y el vestuario.",
+     "_src": {
+      "pdf": "Calendario_IV_FICIDI_2026.pdf · MARTES 3 nov, obra 03",
+      "duracion": null,
+      "catalogo": "Fragmentos"
+     }
+    },
+    {
+     "titulo": "90 segundos",
+     "director": "Álvaro J. Figueroa Garrucho",
+     "pais": "España",
+     "sinopsis": "Un joven gimnasta lucha por competir en una disciplina estigmatizada por considerarse femenina.",
+     "_src": {
+      "pdf": "Calendario_IV_FICIDI_2026.pdf · MARTES 3 nov, obra 04",
+      "duracion": null,
+      "catalogo": "90 segundos"
+     }
+    },
+    {
+     "titulo": "Young Wild Things",
+     "director": "Ines Serrano",
+     "pais": "Reino Unido",
+     "sinopsis": "La confesión de bisexualidad de una joven deja al descubierto las dinámicas dañinas de una amistad de muchos años.",
+     "_src": {
+      "pdf": "Calendario_IV_FICIDI_2026.pdf · MARTES 3 nov, obra 05",
+      "duracion": null,
+      "catalogo": "Young Wild Things"
+     }
+    },
+    {
+     "titulo": "Dafne y Pol",
+     "director": "Sergio Checa",
+     "pais": "España",
+     "duracion_min": 17,
+     "sinopsis": "Dos estudiantes sufren acoso homófobo por su relación y afrontan la hostilidad de su entorno escolar.",
+     "_src": {
+      "pdf": "Calendario_IV_FICIDI_2026.pdf · MARTES 3 nov, obra 06",
+      "duracion": "TMDB 1706164",
+      "catalogo": "Dafne y Pol"
+     }
+    },
+    {
+     "titulo": "Tuesday Session",
+     "director": "David Martinez Rojas",
+     "pais": "Italia",
+     "sinopsis": "En terapia, Noa revive un conflicto familiar y enfrenta las consecuencias emocionales del rechazo.",
+     "_src": {
+      "pdf": "Calendario_IV_FICIDI_2026.pdf · MARTES 3 nov, obra 07",
+      "duracion": null,
+      "catalogo": "Tuesday Session"
+     }
+    }
+   ],
+   "_src": {
+    "pdf": "Calendario_IV_FICIDI_2026.pdf",
+    "cabecera": "MARTES 3 DE NOVIEMBRE | Proyección especial",
+    "sede": "Sala CIMU · Aduana de Barranquilla • 2:00 p. m. – 6:00 p. m."
+   },
+   "sala": "Sala CIMU",
+   "titulo": "Proyección especial",
+   "sinopsis": "Siete cortometrajes.",
+   "duracion_min": 240,
+   "_duracion_de": "el PDF: 2:00 p. m. – 6:00 p. m."
+  },
+  {
+   "dia": "2026-11-04",
+   "hora": "14:00",
+   "sede": "Universidad Simón Bolívar, sede 1",
+   "acceso": "Entrada libre",
+   "seccion": "Selección Oficial",
+   "is_programa": true,
+   "obras": [
+    {
+     "titulo": "Exilio",
+     "director": "Ander Parra",
+     "pais": "España",
+     "duracion_min": 28,
+     "sinopsis": "Tres jóvenes viajan en busca de su identidad a través de la memoria y el deseo.",
+     "_src": {
+      "pdf": "Calendario_IV_FICIDI_2026.pdf · MIÉRCOLES 4 nov, obra 01",
+      "duracion": "lámina IG DfA_GjWkT_g/01",
+      "catalogo": "Exilio"
+     }
+    },
+    {
+     "titulo": "Muñecas de porcelana",
+     "director": "Antonio José López Gómez",
+     "pais": "España",
+     "duracion_min": 8,
+     "sinopsis": "La identidad y los vínculos familiares se ponen a prueba ante las dificultades de la aceptación.",
+     "_src": {
+      "pdf": "Calendario_IV_FICIDI_2026.pdf · MIÉRCOLES 4 nov, obra 02",
+      "duracion": "lámina IG DfA_GjWkT_g/02",
+      "catalogo": "Muñecas de porcelana"
+     }
+    },
+    {
+     "titulo": "Aquí donde soy",
+     "director": "Daniel Braga Alonso",
+     "pais": "España",
+     "duracion_min": 22,
+     "sinopsis": "Un archivo de experiencias queer conecta la memoria personal con la familia y el territorio.",
+     "_src": {
+      "pdf": "Calendario_IV_FICIDI_2026.pdf · MIÉRCOLES 4 nov, obra 03",
+      "duracion": "lámina IG DfA_GjWkT_g/03",
+      "catalogo": "Aquí donde soy"
+     }
+    },
+    {
+     "titulo": "Ius del tiempo",
+     "director": "Roberto F. Canuto, Xiaoxi Xu",
+     "pais": "España",
+     "duracion_min": 25,
+     "sinopsis": "Las raíces, los prejuicios y la conexión intergeneracional se relacionan con el arte.",
+     "_src": {
+      "pdf": "Calendario_IV_FICIDI_2026.pdf · MIÉRCOLES 4 nov, obra 04",
+      "duracion": "lámina IG DfA_GjWkT_g/04",
+      "catalogo": "Ius del tiempo"
+     }
+    },
+    {
+     "titulo": "Inés",
+     "director": "José Antonio Gutiérrez Moreno",
+     "pais": "España",
+     "duracion_min": 11,
+     "sinopsis": "El regreso de alguien del pasado hace emerger recuerdos y experiencias traumáticas.",
+     "_src": {
+      "pdf": "Calendario_IV_FICIDI_2026.pdf · MIÉRCOLES 4 nov, obra 05",
+      "duracion": "lámina IG DfA_GjWkT_g/05",
+      "catalogo": "Inés"
+     }
+    },
+    {
+     "titulo": "Onades",
+     "director": "Andoni Martínez",
+     "pais": "España",
+     "duracion_min": 15,
+     "sinopsis": "El regreso a un pueblo conecta el territorio, las leyendas y la identidad.",
+     "_src": {
+      "pdf": "Calendario_IV_FICIDI_2026.pdf · MIÉRCOLES 4 nov, obra 06",
+      "duracion": "lámina IG DfA_GjWkT_g/06",
+      "catalogo": "Onades"
+     }
+    },
+    {
+     "titulo": "Todos los nombres empiezan con M",
+     "director": "Carla Scolari",
+     "pais": "Argentina",
+     "duracion_min": 19,
+     "sinopsis": "Una mujer trans visita a su madre, que padece Alzheimer, en un reencuentro donde la memoria personal se cruza con la colectiva.",
+     "_src": {
+      "pdf": "Calendario_IV_FICIDI_2026.pdf · MIÉRCOLES 4 nov, obra 07",
+      "duracion": "lámina IG DfA_GjWkT_g/07",
+      "catalogo": "Todos los nombres empiezan con M"
+     }
+    },
+    {
+     "titulo": "Verdulera",
+     "director": "Jose Barbado",
+     "pais": "España",
+     "duracion_min": 5,
+     "sinopsis": "Una persona que busca pareja confronta sus propios fantasmas tras sufrir ghosting.",
+     "_src": {
+      "pdf": "Calendario_IV_FICIDI_2026.pdf · MIÉRCOLES 4 nov, obra 08",
+      "duracion": "lámina IG DfA_GjWkT_g/08",
+      "catalogo": "Verdulera"
+     }
+    }
+   ],
+   "_src": {
+    "pdf": "Calendario_IV_FICIDI_2026.pdf",
+    "cabecera": "MIÉRCOLES 4 DE NOVIEMBRE | Día 1 · Primera función",
+    "sede": "Universidad Simón Bolívar · Salón del Mirador de la Bandera, azotea, sede 1 CRA 59 # 59 -132 • 2:00 p. m."
+   },
+   "sala": "Salón del Mirador de la Bandera (azotea)",
+   "titulo": "Día 1 · Primera función",
+   "duracion_min": 133,
+   "_duracion_de": "suma de las 8 obras"
+  },
+  {
+   "dia": "2026-11-04",
+   "hora": "18:00",
+   "sede": "Alianza Francesa de Barranquilla",
+   "acceso": "Entrada libre",
+   "seccion": "Selección Oficial",
+   "is_programa": true,
+   "obras": [
+    {
+     "titulo": "Travas sobrevivientes",
+     "director": "Valeria Meneguzzi, Cristian Gonzalez",
+     "pais": "Argentina",
+     "duracion_min": 11,
+     "sinopsis": "Testimonios sobre la exclusión histórica y la lucha por la reparación de personas travesti-trans.",
+     "_src": {
+      "pdf": "Calendario_IV_FICIDI_2026.pdf · MIÉRCOLES 4 nov, obra 01",
+      "duracion": "lámina IG DfDlyoFEdJD/02",
+      "catalogo": "Travas sobrevivientes"
+     }
+    },
+    {
+     "titulo": "Transitar lo marica negro",
+     "director": "May Romero Quiñones",
+     "pais": "Colombia",
+     "duracion_min": 6,
+     "sinopsis": "Una experiencia autobiográfica aborda la identidad negra y disidente de género, la discriminación y la búsqueda de reconocimiento.",
+     "_src": {
+      "pdf": "Calendario_IV_FICIDI_2026.pdf · MIÉRCOLES 4 nov, obra 02",
+      "duracion": "lámina IG DfDlyoFEdJD/03",
+      "catalogo": "Transitar lo marica negro"
+     }
+    },
+    {
+     "titulo": "Yo soy yo",
+     "director": "Norberto Díaz",
+     "pais": "Colombia",
+     "duracion_min": 22,
+     "sinopsis": "Historias de personas LGBTIQA+ en Colombia visibilizan identidades diversas y experiencias de exclusión.",
+     "_src": {
+      "pdf": "Calendario_IV_FICIDI_2026.pdf · MIÉRCOLES 4 nov, obra 03",
+      "duracion": "lámina IG DfDlyoFEdJD/04",
+      "catalogo": "Yo soy yo"
+     }
+    },
+    {
+     "titulo": "Maricones",
+     "director": "Maria Paz Ruiz Gonzalez",
+     "pais": "Colombia",
+     "duracion_min": 14,
+     "sinopsis": "Dos jóvenes queer exploran sus identidades a través del cuerpo, el arte y la expresión personal.",
+     "_src": {
+      "pdf": "Calendario_IV_FICIDI_2026.pdf · MIÉRCOLES 4 nov, obra 04",
+      "duracion": "lámina IG DfDlyoFEdJD/05",
+      "catalogo": "Maricones"
+     }
+    },
+    {
+     "titulo": "Solo Natalie",
+     "director": "Natalie Ramón Ramírez",
+     "pais": "España",
+     "duracion_min": 13,
+     "sinopsis": "Un trabajador sexual explora la relación entre su identidad y el personaje femenino que interpreta.",
+     "_src": {
+      "pdf": "Calendario_IV_FICIDI_2026.pdf · MIÉRCOLES 4 nov, obra 05",
+      "duracion": "lámina IG DfDlyoFEdJD/06",
+      "catalogo": "Solo Natalie"
+     }
+    },
+    {
+     "titulo": "Reina de polvo y luz",
+     "director": "José Luis Ostos Molina",
+     "pais": "España",
+     "duracion_min": 16,
+     "sinopsis": "Un joven confronta los prejuicios de su entorno y busca reconocerse a través de un espacio drag.",
+     "_src": {
+      "pdf": "Calendario_IV_FICIDI_2026.pdf · MIÉRCOLES 4 nov, obra 06",
+      "duracion": "lámina IG DfDlyoFEdJD/07",
+      "catalogo": "Reina de polvo y luz"
+     }
+    },
+    {
+     "titulo": "Más allá de la corona",
+     "director": "Juan David Mesa Buitrago",
+     "pais": "Colombia",
+     "duracion_min": 15,
+     "sinopsis": "Una persona trans enfrenta obstáculos para alcanzar el sueño de convertirse en Reina Trans de Palmira.",
+     "_src": {
+      "pdf": "Calendario_IV_FICIDI_2026.pdf · MIÉRCOLES 4 nov, obra 07",
+      "duracion": "lámina IG DfDlyoFEdJD/08",
+      "catalogo": "Más allá de la corona"
+     }
+    },
+    {
+     "titulo": "Miradas Trans-Parentes",
+     "director": "Efra",
+     "pais": "Colombia",
+     "duracion_min": 3,
+     "sinopsis": "Un archivo visual y afectivo recoge experiencias trans y no binarias, vínculos y memorias.",
+     "_src": {
+      "pdf": "Calendario_IV_FICIDI_2026.pdf · MIÉRCOLES 4 nov, obra 08",
+      "duracion": "lámina IG DfDlyoFEdJD/09",
+      "catalogo": "Miradas Trans-Parentes"
+     }
+    },
+    {
+     "titulo": "Made to Shine",
+     "director": "Mariana Gutiérrez Zapata",
+     "pais": "Colombia",
+     "duracion_min": 8,
+     "sinopsis": "El proceso creativo de una artista drag revela el trabajo que hay detrás de una identidad escénica.",
+     "_src": {
+      "pdf": "Calendario_IV_FICIDI_2026.pdf · MIÉRCOLES 4 nov, obra 09",
+      "duracion": "lámina IG DfDlyoFEdJD/10",
+      "catalogo": "Made to Shine"
+     }
+    }
+   ],
+   "_src": {
+    "pdf": "Calendario_IV_FICIDI_2026.pdf",
+    "cabecera": "MIÉRCOLES 4 DE NOVIEMBRE | Día 1 · Inauguración",
+    "sede": "Alianza Francesa de Barranquilla CALLE 52 # 54-75 • 6:00 p. m."
+   },
+   "titulo": "La memoria revelada",
+   "premiere": "Inauguración",
+   "sinopsis": "Homenaje a Víctor Ladrón de Guevara “La Loba” y Gustavo Turizo. Conversatorio “La Memoria Revelada” con Hemel Noñera, Danny González y Víctor Ladrón de Guevara “La Loba”. Muestra artística: “La memoria de Gustavo Turizo”.",
+   "has_qa": true,
+   "qa_type": "guests",
+   "duracion_min": 150,
+   "_duracion_de": "el festival a Juan (29 oct): hasta las 21:00, con el conversatorio dentro (−30 que la app vuelve a sumar)"
+  },
+  {
+   "dia": "2026-11-05",
+   "hora": "18:00",
+   "sede": "La Maloca Cultural",
+   "acceso": "Entrada libre",
+   "seccion": "Selección Oficial",
+   "is_programa": true,
+   "obras": [
+    {
+     "titulo": "El bañador",
+     "director": "Cristian Valenciano",
+     "pais": "España",
+     "duracion_min": 14,
+     "sinopsis": "Una apuesta entre dos amigos adolescentes transforma su amistad y despierta nuevos deseos.",
+     "_src": {
+      "pdf": "Calendario_IV_FICIDI_2026.pdf · JUEVES 5 nov, obra 01",
+      "duracion": "TMDB 1656528",
+      "catalogo": "El bañador"
+     }
+    },
+    {
+     "titulo": "A mi edad",
+     "director": "Ángela Angulo",
+     "pais": "España",
+     "duracion_min": 5,
+     "sinopsis": "Una mujer mayor busca orientación para acercarse a otra mujer por quien siente algo.",
+     "_src": {
+      "pdf": "Calendario_IV_FICIDI_2026.pdf · JUEVES 5 nov, obra 02",
+      "duracion": "TMDB 1572696",
+      "catalogo": "A mi edad"
+     }
+    },
+    {
+     "titulo": "Blue Berri",
+     "director": "Verónica Sáenz, Raquel Durán",
+     "pais": "España",
+     "duracion_min": 16,
+     "sinopsis": "Una relación se transforma cuando una mujer embarazada vuelve a convivir con la persona que ama.",
+     "_src": {
+      "pdf": "Calendario_IV_FICIDI_2026.pdf · JUEVES 5 nov, obra 03",
+      "duracion": "TMDB 1548621",
+      "catalogo": "Blue Berri"
+     }
+    },
+    {
+     "titulo": "Tía Morgana",
+     "director": "Athena Sofia",
+     "pais": "Brasil",
+     "sinopsis": "Una mujer trans regresa a un entorno familiar distante tras la muerte de su madre.",
+     "_src": {
+      "pdf": "Calendario_IV_FICIDI_2026.pdf · JUEVES 5 nov, obra 04",
+      "duracion": null,
+      "catalogo": "Tía Morgana"
+     }
+    },
+    {
+     "titulo": "Verano",
+     "director": "Daniel Zacariotti",
+     "pais": "Brasil",
+     "sinopsis": "Una pareja enfrenta las diferencias entre sus proyectos de vida y su relación con la ciudad.",
+     "_src": {
+      "pdf": "Calendario_IV_FICIDI_2026.pdf · JUEVES 5 nov, obra 05",
+      "duracion": null,
+      "catalogo": "Verano"
+     }
+    },
+    {
+     "titulo": "¿Quién se lleva las estrellas?",
+     "director": "Camila Andrea Elizalde Carabali",
+     "pais": "Colombia",
+     "sinopsis": "Un fotógrafo y su novio emprenden una aventura atravesada por la ausencia.",
+     "_src": {
+      "pdf": "Calendario_IV_FICIDI_2026.pdf · JUEVES 5 nov, obra 06",
+      "duracion": null,
+      "catalogo": "¿Quién se lleva las estrellas?"
+     }
+    },
+    {
+     "titulo": "Verdades",
+     "director": "Ignacio Ondaro",
+     "pais": "España",
+     "duracion_min": 6,
+     "sinopsis": "Dos hombres se encuentran por última vez y deben decidir si expresan lo que han callado.",
+     "_src": {
+      "pdf": "Calendario_IV_FICIDI_2026.pdf · JUEVES 5 nov, obra 07",
+      "duracion": "TMDB 1653100",
+      "catalogo": "Verdades"
+     }
+    },
+    {
+     "titulo": "Cielo de enero",
+     "director": "Sofía Plesky",
+     "pais": "Argentina",
+     "sinopsis": "Durante unas vacaciones, dos jóvenes descubren un sentimiento nuevo y afrontan sus dudas.",
+     "_src": {
+      "pdf": "Calendario_IV_FICIDI_2026.pdf · JUEVES 5 nov, obra 08",
+      "duracion": null,
+      "catalogo": "Cielo de enero"
+     }
+    },
+    {
+     "titulo": "Jugo en polvo",
+     "director": "Sofía Flores Pinto",
+     "pais": "Chile",
+     "duracion_min": 19,
+     "sinopsis": "Una adolescente vive un primer amor que se enfrenta al control y la hostilidad de su madre.",
+     "_src": {
+      "pdf": "Calendario_IV_FICIDI_2026.pdf · JUEVES 5 nov, obra 09",
+      "duracion": "TMDB 1491904",
+      "catalogo": "Jugo en polvo"
+     }
+    },
+    {
+     "titulo": "¿Me vas a estar esperando?",
+     "director": "Conam Calderón",
+     "pais": "Chile",
+     "sinopsis": "Un joven vuelve a acercarse a su madre después de años de separación.",
+     "_src": {
+      "pdf": "Calendario_IV_FICIDI_2026.pdf · JUEVES 5 nov, obra 10",
+      "duracion": null,
+      "catalogo": "¿Me vas a estar esperando?"
+     }
+    },
+    {
+     "titulo": "621km",
+     "director": "Jordi Castejón",
+     "pais": "España",
+     "sinopsis": "Un viaje entre Barcelona y Madrid abre la posibilidad de un cambio personal.",
+     "_src": {
+      "pdf": "Calendario_IV_FICIDI_2026.pdf · JUEVES 5 nov, obra 11",
+      "duracion": null,
+      "catalogo": "621 km"
+     }
+    },
+    {
+     "titulo": "1 año y un mes en Colombiamaricx",
+     "director": "Jano Rhode Pineda",
+     "pais": "Colombia",
+     "sinopsis": "Archivos personales y dibujos narran transformaciones íntimas y redes de protección entre personas maricas.",
+     "_src": {
+      "pdf": "Calendario_IV_FICIDI_2026.pdf · JUEVES 5 nov, obra 12",
+      "duracion": null,
+      "catalogo": "1 año y un mez en Colombiamaricx"
+     }
+    }
+   ],
+   "_src": {
+    "pdf": "Calendario_IV_FICIDI_2026.pdf",
+    "cabecera": "JUEVES 5 DE NOVIEMBRE | Día 2",
+    "sede": "Maloca Cultural CARRERA 46 # 79-82 • 6:00 p. m."
+   },
+   "titulo": "Día 2",
+   "duracion_min": 180,
+   "_duracion_de": "el festival a Juan (29 oct): hasta las 21:00"
+  },
+  {
+   "dia": "2026-11-06",
+   "hora": "13:00",
+   "sede": "Universidad de la Costa – CUC",
+   "acceso": "Entrada libre",
+   "seccion": "Selección Oficial",
+   "is_programa": true,
+   "obras": [
+    {
+     "titulo": "La mujer sentada",
+     "director": "Ana González",
+     "pais": "España",
+     "duracion_min": 6,
+     "sinopsis": "Una escultora lucha por realizar la obra de su vida mientras su bloqueo creativo afecta su relación.",
+     "_src": {
+      "pdf": "Calendario_IV_FICIDI_2026.pdf · VIERNES 6 nov, obra 01",
+      "duracion": "TMDB 1697643",
+      "catalogo": "La mujer sentada"
+     }
+    },
+    {
+     "titulo": "Couraça",
+     "director": "Susan Kalik, Daniel Arcades",
+     "pais": "Brasil",
+     "duracion_min": 20,
+     "sinopsis": "Dos amantes atraviesan el sertón tras una masacre y enfrentan decisiones que desafían las normas de su mundo.",
+     "_src": {
+      "pdf": "Calendario_IV_FICIDI_2026.pdf · VIERNES 6 nov, obra 02",
+      "duracion": "TMDB 1540239",
+      "catalogo": "Couraça"
+     }
+    },
+    {
+     "titulo": "Ar-dor",
+     "director": "Mike Peixoto",
+     "pais": "Brasil",
+     "duracion_min": 19,
+     "sinopsis": "Un operador de una línea erótica se proyecta en las fantasías ajenas para escapar de su soledad.",
+     "_src": {
+      "pdf": "Calendario_IV_FICIDI_2026.pdf · VIERNES 6 nov, obra 03",
+      "duracion": "TMDB 1722336",
+      "catalogo": "Ar-dor"
+     }
+    },
+    {
+     "titulo": "A sin de fella story",
+     "director": "Sheryn Yidi",
+     "pais": "Reino Unido",
+     "duracion_min": 15,
+     "sinopsis": "Un artista construye un hogar para una comunidad itinerante y sostiene un espacio de arte, libertad y cuidado.",
+     "_src": {
+      "pdf": "Calendario_IV_FICIDI_2026.pdf · VIERNES 6 nov, obra 04",
+      "duracion": "TMDB 1500524",
+      "catalogo": "A Sin de Fella Story"
+     }
+    },
+    {
+     "titulo": "Cast Me",
+     "director": "Aranzazu Larrinaga",
+     "pais": "Argentina",
+     "sinopsis": "Un actor colombiano y una influencer argentina intentan reconstruir sus carreras entre audiciones, promesas y vínculos frágiles.",
+     "_src": {
+      "pdf": "Calendario_IV_FICIDI_2026.pdf · VIERNES 6 nov, obra 05",
+      "duracion": null,
+      "catalogo": "Cast Me"
+     }
+    },
+    {
+     "titulo": "Todo lo que pasará mañana",
+     "director": "Santiago Calle García",
+     "pais": "Colombia",
+     "sinopsis": "Un encuentro entre amigos se convierte en una experiencia que altera su realidad y transforma sus relaciones.",
+     "_src": {
+      "pdf": "Calendario_IV_FICIDI_2026.pdf · VIERNES 6 nov, obra 06",
+      "duracion": null,
+      "catalogo": "Todo lo que pasará mañana"
+     }
+    },
+    {
+     "titulo": "Há sinais",
+     "director": "Édier William",
+     "pais": "Brasil",
+     "duracion_min": 15,
+     "sinopsis": "Un adolescente sordo encuentra en el teatro y en una comunidad de artistas sordos una forma de expresar sus deseos y su dolor.",
+     "_src": {
+      "pdf": "Calendario_IV_FICIDI_2026.pdf · VIERNES 6 nov, obra 07",
+      "duracion": "TMDB 1733521",
+      "catalogo": "Há sinais"
+     }
+    },
+    {
+     "titulo": "Amor en positivo",
+     "director": "Jeff Saldaña",
+     "pais": "Colombia",
+     "sinopsis": "Un hombre que vive con VIH enfrenta el estigma y una decisión que puede cambiar su vida.",
+     "_src": {
+      "pdf": "Calendario_IV_FICIDI_2026.pdf · VIERNES 6 nov, obra 08",
+      "duracion": null,
+      "catalogo": "Amor en positivo"
+     }
+    },
+    {
+     "titulo": "Fielmente",
+     "director": "Pablo Chacón M.",
+     "pais": "Colombia",
+     "duracion_min": 7,
+     "sinopsis": "Un niño a punto de hacer la primera comunión experimenta una fascinación inesperada por la figura de Cristo.",
+     "_src": {
+      "pdf": "Calendario_IV_FICIDI_2026.pdf · VIERNES 6 nov, obra 09",
+      "duracion": "TMDB 1765996",
+      "catalogo": "Fielmente"
+     }
+    },
+    {
+     "titulo": "Lo que fuimos",
+     "director": "J.a. Valdivia, Eloy Otin",
+     "pais": "España",
+     "duracion_min": 19,
+     "sinopsis": "Una visita entre exparejas se convierte en un día de recuerdos antes de una partida.",
+     "_src": {
+      "pdf": "Calendario_IV_FICIDI_2026.pdf · VIERNES 6 nov, obra 10",
+      "duracion": "TMDB 1777436",
+      "catalogo": "Lo que fuimos"
+     }
+    },
+    {
+     "titulo": "Kiboko",
+     "director": "Julie-estel Soard, Noelia Fluxá",
+     "pais": "España",
+     "sinopsis": "Testimonios y recreaciones reconstruyen la historia de un bar convertido en símbolo de libertad.",
+     "_src": {
+      "pdf": "Calendario_IV_FICIDI_2026.pdf · VIERNES 6 nov, obra 11",
+      "duracion": null,
+      "catalogo": "Kiboko"
+     }
+    },
+    {
+     "titulo": "Alwasiyya",
+     "director": "Richard Zubelzu, Magda Calabres",
+     "pais": "España",
+     "duracion_min": 29,
+     "sinopsis": "El duelo por la pareja se convierte en un proceso de reconciliación con la ausencia y preservación del legado artístico.",
+     "_src": {
+      "pdf": "Calendario_IV_FICIDI_2026.pdf · VIERNES 6 nov, obra 12",
+      "duracion": "TMDB 1705471",
+      "catalogo": "Alwasiyya",
+      "pais": "el PDF dice «No especificado»; país del catálogo"
+     }
+    }
+   ],
+   "_src": {
+    "pdf": "Calendario_IV_FICIDI_2026.pdf",
+    "cabecera": "VIERNES 6 DE NOVIEMBRE | Día 3 · Primera función",
+    "sede": "Universidad de la Costa Bloque 11 piso 3 Sala de Conferencias CALLE 52 # 56A-75 • 1:00 p. m."
+   },
+   "sala": "Bloque 11, piso 3 · Sala de Conferencias",
+   "titulo": "Día 3 · Primera función",
+   "duracion_min": 186,
+   "_duracion_de": "ESTIMADA (Juan, 29 oct): suma PARCIAL: 8 de 12 obras con duración; sin duración: Cast Me · Todo lo que pasará mañana · Amor en positivo · Kiboko; + 4 × 14 min, promedio de las 36 obras con duración"
+  },
+  {
+   "dia": "2026-11-06",
+   "hora": "18:00",
+   "sede": "Universidad de la Costa – CUC",
+   "acceso": "Entrada libre",
+   "seccion": "Selección Oficial",
+   "is_programa": true,
+   "obras": [
+    {
+     "titulo": "Los pájaros",
+     "director": "Fran Expósito",
+     "pais": "España",
+     "duracion_min": 10,
+     "sinopsis": "Un adolescente busca refugio frente a la violencia doméstica y encuentra un espacio de confianza.",
+     "_src": {
+      "pdf": "Calendario_IV_FICIDI_2026.pdf · VIERNES 6 nov, obra 01",
+      "duracion": "TMDB 1707240",
+      "catalogo": "Los pájaros"
+     }
+    },
+    {
+     "titulo": "Ansío despertar",
+     "director": "Jeremy O'neill",
+     "pais": "Colombia",
+     "sinopsis": "Un joven expulsado de su hogar por ser homosexual debe decidir si retoma el contacto con su familia.",
+     "_src": {
+      "pdf": "Calendario_IV_FICIDI_2026.pdf · VIERNES 6 nov, obra 02",
+      "duracion": null,
+      "catalogo": "Ansío despertar"
+     }
+    },
+    {
+     "titulo": "Pendiente de estrella",
+     "director": "Jose Provencio",
+     "pais": "España",
+     "sinopsis": "Tras una agresión, un joven afronta el juicio mediático y decide si cuenta su verdad.",
+     "_src": {
+      "pdf": "Calendario_IV_FICIDI_2026.pdf · VIERNES 6 nov, obra 03",
+      "duracion": null,
+      "catalogo": "Pendiente de estrella"
+     }
+    },
+    {
+     "titulo": "De aquellos polvos",
+     "director": "Cecilia Gaspà Giribets",
+     "pais": "España",
+     "sinopsis": "Una mujer realiza un trabajo físico e invisible mientras carga con responsabilidades de cuidado.",
+     "_src": {
+      "pdf": "Calendario_IV_FICIDI_2026.pdf · VIERNES 6 nov, obra 04",
+      "duracion": null,
+      "catalogo": "De aquellos polvos"
+     }
+    },
+    {
+     "titulo": "Mil mortes de um sobrevivente",
+     "director": "Tatiana Cantalejo",
+     "pais": "Brasil",
+     "sinopsis": "La separación de dos hermanos revela heridas vinculadas a la violencia, el racismo y la homofobia.",
+     "_src": {
+      "pdf": "Calendario_IV_FICIDI_2026.pdf · VIERNES 6 nov, obra 05",
+      "duracion": null,
+      "catalogo": "Mil mortes de um sobrevivente"
+     }
+    },
+    {
+     "titulo": "Perros",
+     "director": "Ezequiel Rossi, Facundo Salomón",
+     "pais": "Argentina",
+     "duracion_min": 10,
+     "sinopsis": "Un hombre en duelo participa en un ritual que lo enfrenta a fuerzas desconocidas y al precio de intentar recuperar lo perdido.",
+     "_src": {
+      "pdf": "Calendario_IV_FICIDI_2026.pdf · VIERNES 6 nov, obra 06",
+      "duracion": "TMDB 1613681",
+      "catalogo": "Perros"
+     }
+    },
+    {
+     "titulo": "Travestis, bombas y un cortejo fúnebre",
+     "director": "Jose Luis Garcia Garcia",
+     "pais": "España",
+     "sinopsis": "Una procesión travesti en la Barcelona de 1933 revela la destrucción de un refugio y un acto de resistencia queer.",
+     "_src": {
+      "pdf": "Calendario_IV_FICIDI_2026.pdf · VIERNES 6 nov, obra 07",
+      "duracion": null,
+      "catalogo": "Travestis, bombas y un cortejo fúnebre"
+     }
+    },
+    {
+     "titulo": "Jamás volveremos",
+     "director": "Mariano Modica",
+     "pais": "Argentina",
+     "sinopsis": "Una familia queer recibe a alguien que altera su convivencia y sus vínculos.",
+     "_src": {
+      "pdf": "Calendario_IV_FICIDI_2026.pdf · VIERNES 6 nov, obra 08",
+      "duracion": null,
+      "catalogo": "Jamás volveremos"
+     }
+    },
+    {
+     "titulo": "¿Y a mí, quién me cuida? Experiencias negras diversas en el paro nacional del 2021",
+     "director": "Cesar Guerrero",
+     "pais": "Colombia",
+     "sinopsis": "Comunidades negras y afrodescendientes documentan organización, resistencia y cuidado durante el paro nacional.",
+     "_src": {
+      "pdf": "Calendario_IV_FICIDI_2026.pdf · VIERNES 6 nov, obra 09",
+      "duracion": null,
+      "catalogo": "¿Y a mí, quién me cuida? Experiencias negras diversas en el paro nacional del 2021"
+     }
+    },
+    {
+     "titulo": "Espacios húmedos",
+     "director": "Guillermo Paiva",
+     "pais": "Colombia",
+     "sinopsis": "Un documental explora los saunas gays como espacios de encuentro y las formas de discriminación ligadas al territorio.",
+     "_src": {
+      "pdf": "Calendario_IV_FICIDI_2026.pdf · VIERNES 6 nov, obra 10",
+      "duracion": null,
+      "catalogo": "Espacios húmedos"
+     }
+    },
+    {
+     "titulo": "Aguijón Rojo",
+     "director": "Juan Pablo Gelvez Bustamante",
+     "pais": "Colombia",
+     "sinopsis": "Una prueba de amor relacionada con el VIH revela consecuencias irreversibles.",
+     "_src": {
+      "pdf": "Calendario_IV_FICIDI_2026.pdf · VIERNES 6 nov, obra 11",
+      "duracion": null,
+      "catalogo": "Aguijón Rojo"
+     }
+    }
+   ],
+   "_src": {
+    "pdf": "Calendario_IV_FICIDI_2026.pdf",
+    "cabecera": "VIERNES 6 DE NOVIEMBRE | Día 3 · Segunda función",
+    "sede": "Universidad de la Costa Bloque 11 piso 3 Sala de Conferencias CALLE 52 # 56A-75 • 6:00 p. m."
+   },
+   "sala": "Bloque 11, piso 3 · Sala de Conferencias",
+   "titulo": "Día 3 · Segunda función",
+   "duracion_min": 180,
+   "_duracion_de": "el festival a Juan (29 oct): hasta las 21:00"
+  },
+  {
+   "dia": "2026-11-07",
+   "hora": "09:00",
+   "sede": "La Fábrica de Cultura",
+   "acceso": "Entrada libre",
+   "seccion": "Selección Oficial",
+   "is_programa": true,
+   "obras": [
+    {
+     "titulo": "Corpo e Identidade",
+     "director": "Cristal Luz",
+     "pais": "Brasil",
+     "sinopsis": "Siete mujeres travestis de Brasil construyen su propia representación a través de la fotografía, los testimonios y la performance.",
+     "_src": {
+      "pdf": "Calendario_IV_FICIDI_2026.pdf · SÁBADO 7 nov, obra 01",
+      "duracion": null,
+      "catalogo": "Corpo e Identidade"
+     }
+    },
+    {
+     "titulo": "Danzan Las Luciérnagas",
+     "director": "Eleggua Luna Laverde",
+     "pais": "Colombia",
+     "duracion_min": 18,
+     "sinopsis": "Una sabedora trans negra debe decidir si abandona la Tierra y a sus amores para emigrar a Marte.",
+     "_src": {
+      "pdf": "Calendario_IV_FICIDI_2026.pdf · SÁBADO 7 nov, obra 02",
+      "duracion": "TMDB 1456289",
+      "catalogo": "Danzan las luciérnagas"
+     }
+    },
+    {
+     "titulo": "Refracción",
+     "director": "Isabella Palacio Mesa",
+     "pais": "Colombia",
+     "duracion_min": 11,
+     "sinopsis": "Una joven que mantiene dos relaciones simultáneas recorre Medellín para afrontar su confusión y encontrarse consigo misma.",
+     "_src": {
+      "pdf": "Calendario_IV_FICIDI_2026.pdf · SÁBADO 7 nov, obra 03",
+      "duracion": "TMDB 1584776",
+      "catalogo": "Refracción"
+     }
+    },
+    {
+     "titulo": "La otra mitad del dolor",
+     "director": "Tonnie Zanabria",
+     "pais": "México",
+     "sinopsis": "Objetos, grabaciones y recuerdos ayudan a procesar la pérdida de una pareja.",
+     "_src": {
+      "pdf": "Calendario_IV_FICIDI_2026.pdf · SÁBADO 7 nov, obra 04",
+      "duracion": null,
+      "catalogo": "La otra mitad del dolor",
+      "pais": "el PDF dice «Con conversatorio»; país del catálogo"
+     }
+    },
+    {
+     "titulo": "No",
+     "director": "Luis Daniel Abril",
+     "pais": "Colombia",
+     "sinopsis": "Un hombre intenta construir un futuro con su pareja más joven, pero pierde de vista los deseos de él.",
+     "_src": {
+      "pdf": "Calendario_IV_FICIDI_2026.pdf · SÁBADO 7 nov, obra 05",
+      "duracion": null,
+      "catalogo": "No",
+      "pais": "el PDF dice «Con conversatorio»; país del catálogo"
+     }
+    }
+   ],
+   "_src": {
+    "pdf": "Calendario_IV_FICIDI_2026.pdf",
+    "cabecera": "SÁBADO 7 DE NOVIEMBRE | Día 4 · REVELAR(SE)",
+    "sede": "Auditorio EDA Fabrica de Cultura CALLE 40 CON CARRERA 50 ESQUINA• 9:00 a. m."
+   },
+   "sala": "Auditorio EDA",
+   "titulo": "Revelar(se)",
+   "sinopsis": "Incluye “La otra mitad del dolor” + conversatorio con el equipo realizador Tonnie Zanabria y Ana Sofía Ávila desde México; y “NO” + conversatorio con el director Luis Daniel Abril desde Bogotá, Colombia.",
+   "has_qa": true,
+   "qa_type": "team",
+   "duracion_min": 150,
+   "_duracion_de": "el festival a Juan (29 oct): hasta las 12:00, con el conversatorio dentro (−30 que la app vuelve a sumar)"
+  }
+ ]
+}
