@@ -5,55 +5,6 @@
  },
  "funciones": [
   {
-   "titulo": "Lanzamiento CINETORO Experimental 19 / Límites convergentes",
-   "dia": "2026-11-07",
-   "hora": "19:30",
-   "sede": "CCMI",
-   "sala": "",
-   "seccion": "Especial",
-   "acceso": "Evento con boletería",
-   "_src": {
-    "url": "https://cinetoro.org/programacion-2026-2/",
-    "bloque": "Lanzamiento CINETORO EXPERIMENTAL 19 / Límites Convergentes",
-    "fecha": "Sábado 07/11/2026",
-    "lugar": "CCMI",
-    "hora": "19:30 a 22:00",
-    "programa": "https://cinetoro.org/programas-2/#LIMITES"
-   },
-   "is_free": false,
-   "tipo": "evento",
-   "event_kind": "evento",
-   "duracion_min": 150,
-   "_duracion_de": "la franja «Hora:» de la parrilla",
-   "obras": [
-    {
-     "titulo": "La taquigrafista",
-     "director": "Azul Aizemberg",
-     "anio": 2026,
-     "pais": "Argentina"
-    },
-    {
-     "titulo": "100 vistas parcialmente oscurecidas",
-     "director": "Nicole Antebi",
-     "anio": 2024,
-     "pais": "Estados Unidos"
-    },
-    {
-     "titulo": "Las picapiedreras",
-     "director": "Azul Aizemberg",
-     "anio": 2021,
-     "pais": "Argentina"
-    },
-    {
-     "titulo": "Public Domain Review Animated Intervention",
-     "director": "Nicole Antebi",
-     "anio": 2025,
-     "pais": "Estados Unidos"
-    }
-   ],
-   "sinopsis": "Dos invitadas ponen en diálogo sus trabajos: una viene del montaje, Azul Aizemberg y el trabajo con archivo, y la otra desde la exploración con la animación y el territorio fronterizo de USA y México, Nicole Antebi. Ponemos en diálogo sus procesos creativos junto con el sonido en vivo propuesto por CCMI."
-  },
-  {
    "titulo": "Panel: archivos, fabulaciones y resistencias",
    "dia": "2026-11-10",
    "hora": "16:00",
@@ -918,6 +869,7 @@
   }
  ],
  "_fuera": {
+  "Lanzamiento CINETORO EXPERIMENTAL 19 / Límites Convergentes": "Cali (7 nov), fuera de los días oficiales 10–15 nov (Juan, 31 oct)",
   "Lanzamiento CINETORO EN BOGOTÁ – INVITADA MAIA GATTÁS": "Bogotá (15 oct, ya ocurrió)",
   "MASTER CLASS NICOLE ANTEBI: Hago cosas que se mueven, se repiten y, a veces, sostienen.": "Bogotá (5 nov)",
   "SEMINARIO FICCALI Maia Gattás / ALIANZA FICCALI – YAWA – ERMITAÑAS": "Cali, fuera de los días oficiales (20 oct, ya ocurrió)",

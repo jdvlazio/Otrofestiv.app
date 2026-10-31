@@ -19,18 +19,11 @@
  "year": 2026,
  "timezoneOffset": "-05:00",
  "storageKey": "cinetoro2026_",
- "festivalStartStr": "2026-11-07T00:00:00",
+ "festivalStartStr": "2026-11-10T00:00:00",
  "festivalEndStr": "2026-11-15T23:59:00",
  "sharedSlotIsOneScreening": false,
- "dias_vacios": [
-  "2026-11-08",
-  "2026-11-09"
- ],
- "prioLimit": 4,
+ "prioLimit": 3,
  "dias": [
-  "2026-11-07",
-  "2026-11-08",
-  "2026-11-09",
   "2026-11-10",
   "2026-11-11",
   "2026-11-12",
@@ -39,9 +32,6 @@
   "2026-11-15"
  ],
  "festivalDates": {
-  "2026-11-07": "2026-11-07",
-  "2026-11-08": "2026-11-08",
-  "2026-11-09": "2026-11-09",
   "2026-11-10": "2026-11-10",
   "2026-11-11": "2026-11-11",
   "2026-11-12": "2026-11-12",
@@ -50,21 +40,6 @@
   "2026-11-15": "2026-11-15"
  },
  "days": [
-  {
-   "k": "2026-11-07",
-   "d": 7,
-   "lbl": "SÁB"
-  },
-  {
-   "k": "2026-11-08",
-   "d": 8,
-   "lbl": "DOM"
-  },
-  {
-   "k": "2026-11-09",
-   "d": 9,
-   "lbl": "LUN"
-  },
   {
    "k": "2026-11-10",
    "d": 10,
@@ -97,9 +72,6 @@
   }
  ],
  "dayKeys": [
-  "2026-11-07",
-  "2026-11-08",
-  "2026-11-09",
   "2026-11-10",
   "2026-11-11",
   "2026-11-12",
@@ -108,9 +80,6 @@
   "2026-11-15"
  ],
  "dayShort": {
-  "2026-11-07": "SÁB 7",
-  "2026-11-08": "DOM 8",
-  "2026-11-09": "LUN 9",
   "2026-11-10": "MAR 10",
   "2026-11-11": "MIÉ 11",
   "2026-11-12": "JUE 12",
@@ -119,9 +88,6 @@
   "2026-11-15": "DOM 15"
  },
  "dayShort_en": {
-  "2026-11-07": "SAT 7",
-  "2026-11-08": "SUN 8",
-  "2026-11-09": "MON 9",
   "2026-11-10": "TUE 10",
   "2026-11-11": "WED 11",
   "2026-11-12": "THU 12",
@@ -130,9 +96,6 @@
   "2026-11-15": "SUN 15"
  },
  "dayLong": {
-  "2026-11-07": "Sábado 7 de noviembre",
-  "2026-11-08": "Domingo 8 de noviembre",
-  "2026-11-09": "Lunes 9 de noviembre",
   "2026-11-10": "Martes 10 de noviembre",
   "2026-11-11": "Miércoles 11 de noviembre",
   "2026-11-12": "Jueves 12 de noviembre",
@@ -141,19 +104,19 @@
   "2026-11-15": "Domingo 15 de noviembre"
  },
  "sections": {
-  "✨ Especial": {
-   "en": "Special",
-   "archetype": "Especiales / Eventos",
-   "order": 1
-  },
   "🎓 Programación Académica": {
    "en": "Academic Program",
    "archetype": "Charlas / Industria",
-   "order": 2
+   "order": 1
   },
   "🏆 Selección Oficial": {
    "en": "Official Selection",
    "archetype": "Competencia",
+   "order": 2
+  },
+  "✨ Especial": {
+   "en": "Special",
+   "archetype": "Especiales / Eventos",
    "order": 3
   },
   "🎨 Cinetoro al Aula": {
@@ -163,15 +126,6 @@
   }
  },
  "venues": {
-  "CCMI - Cali": {
-   "short": "CCMI",
-   "city": "Cali",
-   "lat": 3.4389718,
-   "lng": -76.5455675,
-   "_prec": "manual",
-   "_match": "Google Maps: «Casa Ethel - Centro de Creación Musical Interdisciplinaria»",
-   "_nota": "La parrilla solo dice «CCMI». En el perfil de @cinetorofilmfestival aparece un post de @centrodecreacion.musical («Centro de Creación Musical Interdisciplinaria», DehYksiuvmp, 15 oct 2026), y en Maps esa institución es «Casa Ethel - Centro de Creación Musical Interdisciplinaria». Que el lanzamiento sea en esa sede es inferido: confirmar con el festival."
-  },
   "Museo Rayo - Roldanillo": {
    "short": "Museo Rayo",
    "city": "Roldanillo",
@@ -263,69 +217,6 @@
  "_avisos_id": [],
  "films": [
   {
-   "title": "Lanzamiento CINETORO Experimental 19 / Límites Convergentes",
-   "type": "event",
-   "section": "✨ Especial",
-   "country": "Argentina, Estados Unidos",
-   "flags": "🇦🇷🇺🇸",
-   "duration": "150 min",
-   "_ancla": [
-    "CCMI - Cali",
-    "2026-11-07",
-    "19:30"
-   ],
-   "day": "2026-11-07",
-   "time": "19:30",
-   "day_order": 0,
-   "venue": "CCMI - Cali",
-   "event_kind": "evento",
-   "has_qa": false,
-   "_src": {
-    "url": "https://cinetoro.org/programacion-2026-2/",
-    "bloque": "Lanzamiento CINETORO EXPERIMENTAL 19 / Límites Convergentes",
-    "fecha": "Sábado 07/11/2026",
-    "lugar": "CCMI",
-    "hora": "19:30 a 22:00",
-    "programa": "https://cinetoro.org/programas-2/#LIMITES"
-   },
-   "is_free": false,
-   "is_cortos": true,
-   "film_list": [
-    {
-     "title": "La taquigrafista",
-     "director": "Azul Aizemberg",
-     "country": "Argentina",
-     "flags": "🇦🇷",
-     "year": 2026
-    },
-    {
-     "title": "100 vistas parcialmente oscurecidas",
-     "director": "Nicole Antebi",
-     "country": "Estados Unidos",
-     "flags": "🇺🇸",
-     "year": 2024
-    },
-    {
-     "title": "Las picapiedreras",
-     "director": "Azul Aizemberg",
-     "country": "Argentina",
-     "flags": "🇦🇷",
-     "year": 2021
-    },
-    {
-     "title": "Public Domain Review Animated Intervention",
-     "director": "Nicole Antebi",
-     "country": "Estados Unidos",
-     "flags": "🇺🇸",
-     "year": 2025
-    }
-   ],
-   "description": "Dos invitadas ponen en diálogo sus trabajos: una viene del montaje, Azul Aizemberg y el trabajo con archivo, y la otra desde la exploración con la animación y el territorio fronterizo de USA y México, Nicole Antebi. Ponemos en diálogo sus procesos creativos junto con el sonido en vivo propuesto por CCMI.",
-   "description_lang": "es",
-   "_fid": "f_db65aa409f",
-   "id": "f_db65aa409f"
-  },
-  {
    "title": "Panel: archivos, fabulaciones y resistencias",
    "type": "event",
    "section": "🎓 Programación Académica",
@@ -337,7 +228,7 @@
    ],
    "day": "2026-11-10",
    "time": "16:00",
-   "day_order": 3,
+   "day_order": 0,
    "venue": "Museo Rayo - Roldanillo",
    "event_kind": "evento",
    "has_qa": false,
@@ -372,7 +263,7 @@
    ],
    "day": "2026-11-10",
    "time": "19:00",
-   "day_order": 3,
+   "day_order": 0,
    "venue": "Museo Rayo - Roldanillo",
    "has_qa": false,
    "synopsis": "A medida que la mirada se hunde en el paisaje, una relación se desintegra, dejando el amor como un recuerdo fugaz entre archivos y sueños. La escritura de los días queda impresa en rastros que se repiten en un constante déjà vu. El dolor se convierte en ruido y se disuelve como partículas en el aire, en un intento por reconstruir lo inevitable. Un salto al vacío entre el deseo de permanecer y el impulso de borrar una herida.",
@@ -407,7 +298,7 @@
    ],
    "day": "2026-11-10",
    "time": "20:00",
-   "day_order": 3,
+   "day_order": 0,
    "venue": "Museo Rayo - Roldanillo",
    "event_kind": "evento",
    "has_qa": false,
@@ -438,7 +329,7 @@
    ],
    "day": "2026-11-11",
    "time": "19:00",
-   "day_order": 4,
+   "day_order": 1,
    "venue": "Coliseo Corregimiento de San Francisco - Toro",
    "has_qa": false,
    "_src": {
@@ -533,7 +424,7 @@
    ],
    "day": "2026-11-11",
    "time": "20:30",
-   "day_order": 4,
+   "day_order": 1,
    "venue": "Coliseo Corregimiento de San Francisco - Toro",
    "has_qa": false,
    "_src": {
@@ -640,7 +531,7 @@
    ],
    "day": "2026-11-12",
    "time": "09:00",
-   "day_order": 5,
+   "day_order": 2,
    "venue": "Mambo House - Toro",
    "has_qa": false,
    "_src": {
@@ -695,7 +586,7 @@
    ],
    "day": "2026-11-12",
    "time": "09:00",
-   "day_order": 5,
+   "day_order": 2,
    "venue": "Hotel Miracruz - Toro",
    "event_kind": "taller",
    "is_recurring": true,
@@ -727,7 +618,7 @@
    ],
    "day": "2026-11-12",
    "time": "19:00",
-   "day_order": 5,
+   "day_order": 2,
    "venue": "Polideportivo San Antonio - Toro",
    "has_qa": false,
    "_src": {
@@ -876,7 +767,7 @@
    ],
    "day": "2026-11-12",
    "time": "20:20",
-   "day_order": 5,
+   "day_order": 2,
    "venue": "Polideportivo San Antonio - Toro",
    "event_kind": "evento",
    "has_qa": false,
@@ -907,7 +798,7 @@
    ],
    "day": "2026-11-12",
    "time": "21:00",
-   "day_order": 5,
+   "day_order": 2,
    "venue": "Polideportivo San Antonio - Toro",
    "has_qa": false,
    "_src": {
@@ -965,7 +856,7 @@
    ],
    "day": "2026-11-13",
    "time": "09:00",
-   "day_order": 6,
+   "day_order": 3,
    "venue": "Hotel Miracruz - Toro",
    "event_kind": "taller",
    "is_recurring": true,
@@ -995,7 +886,7 @@
    ],
    "day": "2026-11-13",
    "time": "15:00",
-   "day_order": 6,
+   "day_order": 3,
    "venue": "Por confirmar - Toro",
    "event_kind": "taller",
    "is_recurring": true,
@@ -1029,7 +920,7 @@
    ],
    "day": "2026-11-13",
    "time": "19:00",
-   "day_order": 6,
+   "day_order": 3,
    "venue": "Coliseo Institución Educativa Fray José Joaquín Escobar - Toro",
    "has_qa": false,
    "_src": {
@@ -1135,7 +1026,7 @@
    ],
    "day": "2026-11-13",
    "time": "20:30",
-   "day_order": 6,
+   "day_order": 3,
    "venue": "Coliseo Institución Educativa Fray José Joaquín Escobar - Toro",
    "has_qa": false,
    "_src": {
@@ -1215,7 +1106,7 @@
    ],
    "day": "2026-11-13",
    "time": "22:30",
-   "day_order": 6,
+   "day_order": 3,
    "venue": "Coliseo Institución Educativa Fray José Joaquín Escobar - Toro",
    "event_kind": "evento",
    "has_qa": false,
@@ -1244,7 +1135,7 @@
    ],
    "day": "2026-11-14",
    "time": "09:00",
-   "day_order": 7,
+   "day_order": 4,
    "venue": "Por confirmar - Toro",
    "event_kind": "taller",
    "is_recurring": true,
@@ -1277,7 +1168,7 @@
    ],
    "day": "2026-11-14",
    "time": "14:00",
-   "day_order": 7,
+   "day_order": 4,
    "venue": "Vereda Patio Bonito - Toro",
    "has_qa": false,
    "_src": {
@@ -1305,7 +1196,7 @@
    ],
    "day": "2026-11-14",
    "time": "18:30",
-   "day_order": 7,
+   "day_order": 4,
    "venue": "Coliseo Institución Educativa Fray José Joaquín Escobar - Toro",
    "has_qa": false,
    "_src": {
@@ -1416,7 +1307,7 @@
    ],
    "day": "2026-11-14",
    "time": "20:00",
-   "day_order": 7,
+   "day_order": 4,
    "venue": "Coliseo Institución Educativa Fray José Joaquín Escobar - Toro",
    "has_qa": false,
    "_src": {
@@ -1505,7 +1396,7 @@
    ],
    "day": "2026-11-14",
    "time": "22:00",
-   "day_order": 7,
+   "day_order": 4,
    "venue": "Por definir - Toro",
    "event_kind": "evento",
    "has_qa": false,
@@ -1534,7 +1425,7 @@
    ],
    "day": "2026-11-14",
    "time": "23:00",
-   "day_order": 7,
+   "day_order": 4,
    "venue": "Por definir - Toro",
    "event_kind": "evento",
    "has_qa": false,
@@ -1563,7 +1454,7 @@
    ],
    "day": "2026-11-15",
    "time": "18:30",
-   "day_order": 8,
+   "day_order": 5,
    "venue": "Rosalia's Garden - Toro",
    "has_qa": false,
    "_src": {
@@ -1652,7 +1543,7 @@
    ],
    "day": "2026-11-15",
    "time": "20:30",
-   "day_order": 8,
+   "day_order": 5,
    "venue": "Rosalia's Garden - Toro",
    "event_kind": "clausura",
    "has_qa": false,
@@ -1678,7 +1569,7 @@
    ],
    "day": "2026-11-15",
    "time": "22:30",
-   "day_order": 8,
+   "day_order": 5,
    "venue": "Rosalia's Garden - Toro",
    "event_kind": "evento",
    "info": true,
@@ -1697,8 +1588,8 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-31T10:04:18",
-  "plan_sha": "a42a1e0ff47080f8",
+  "fecha": "2026-10-31T10:11:26",
+  "plan_sha": "f6b51c1a2fb72461",
   "paso": 8,
   "cmd": "python3 pipeline/cinetoro-2026-verificar.py"
  }

@@ -1,5 +1,5 @@
 {
- "_nota": "MONTAJE (31 oct 2026). CINETORO Experimental Film Festival 2026, «Límites convergentes» (19.ª edición). Fuentes: la parrilla cinetoro.org/programacion-2026-2/ y los programas cinetoro.org/programas-2/ (9 programas de la Selección Oficial con sus obras, 2 de Cinetoro al aula, eventos especiales), más el catálogo del pre-onboarding (26 oct). Criterio de Juan (31 oct): solo los días oficiales 10–15 nov (Roldanillo 10, Museo Rayo; Toro 11–15 en veredas y corregimientos por el terremoto) más el lanzamiento en el CCMI de Cali (sáb 7 nov, con boletería). Fuera: Bogotá, el resto de Cali, Palmira, el Laboratorio Hibridaciones y el taller exclusivo Univalle (lista en el `_fuera` del crudo). 8 y 9 nov sin programación (dias_vacios).",
+ "_nota": "MONTAJE (31 oct 2026). CINETORO Experimental Film Festival 2026, «Límites convergentes» (19.ª edición). Fuentes: la parrilla cinetoro.org/programacion-2026-2/ y los programas cinetoro.org/programas-2/ (9 programas de la Selección Oficial con sus obras, 2 de Cinetoro al aula, eventos especiales), más el catálogo del pre-onboarding (26 oct). Criterio de Juan (31 oct): solo los días oficiales 10–15 nov (Roldanillo 10, Museo Rayo; Toro 11–15 en veredas y corregimientos por el terremoto). Fuera: Bogotá, Cali (también el lanzamiento del 7 nov), Palmira, el Laboratorio Hibridaciones y el taller exclusivo Univalle (lista en el `_fuera` del crudo).",
  "radar": 1268,
  "fuentes_vivas": [
   {
@@ -93,10 +93,6 @@
   "geo": "festivals/staging/cinetoro-2026-venues-geo.json",
   "_por_que_sedes": "Los lugares de la parrilla con su ciudad. «Por confirmar» y «POR DEFINIR» son rótulos del festival y se publican tal cual, con pin aproximado declarado. «Mambo House / Polideportivo (San Antonio)» (el intermedio musical) se publica en el Polideportivo, donde van los programas 3 y 4 que lo rodean: inferido.",
   "sedes": {
-   "CCMI": [
-    "CCMI - Cali",
-    ""
-   ],
    "Museo Rayo": [
     "Museo Rayo - Roldanillo",
     ""
@@ -173,13 +169,9 @@
   "year": 2026,
   "timezoneOffset": "-05:00",
   "storageKey": "cinetoro2026_",
-  "festivalStartStr": "2026-11-07T00:00:00",
+  "festivalStartStr": "2026-11-10T00:00:00",
   "festivalEndStr": "2026-11-15T23:59:00",
   "sharedSlotIsOneScreening": false,
-  "mes_es": "noviembre",
-  "dias_vacios": [
-   "2026-11-08",
-   "2026-11-09"
-  ]
+  "mes_es": "noviembre"
  }
 }

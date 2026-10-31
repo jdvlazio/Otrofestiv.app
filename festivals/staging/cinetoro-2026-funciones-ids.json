@@ -4,13 +4,6 @@
   "capturado": "2026-10-31"
  },
  "funciones": {
-  "f_db65aa409f": {
-   "sede": "CCMI - Cali",
-   "dia": "2026-11-07",
-   "hora": "19:30",
-   "sala": "",
-   "titulo": "lanzamiento cinetoro experimental 19 limites convergentes"
-  },
   "f_cacd2cabb6": {
    "sede": "Museo Rayo - Roldanillo",
    "dia": "2026-11-10",
@@ -178,6 +171,14 @@
    "hora": "22:30",
    "sala": "",
    "titulo": "karaoke hibrido"
+  },
+  "f_db65aa409f": {
+   "sede": "CCMI - Cali",
+   "dia": "2026-11-07",
+   "hora": "19:30",
+   "sala": "",
+   "titulo": "lanzamiento cinetoro experimental 19 limites convergentes",
+   "ausente": true
   }
  }
 }

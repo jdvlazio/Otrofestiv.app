@@ -22,9 +22,8 @@ QUIÉN MANDA EN QUÉ (PROTOCOLO §2·ter, la fusión):
 
 CRITERIO DE JUAN (31 oct 2026): solo los días oficiales, 10–15 nov — Roldanillo
 (10 nov, Museo Rayo) y Toro (11–15 nov, en veredas y corregimientos por el
-terremoto). Excepción: el «Lanzamiento CINETORO EXPERIMENTAL 19 / Límites
-Convergentes» (sáb 7 nov, CCMI, Cali, con boletería). Fuera, con su porqué en
-`_fuera`: Bogotá, el resto de Cali, Palmira, el Laboratorio Hibridaciones
+terremoto). Fuera, con su porqué en `_fuera`: Bogotá, Cali (incluido el
+lanzamiento del 7 nov: no es día oficial, Juan 31 oct), Palmira, el Laboratorio Hibridaciones
 («Solo para participantes aceptados») y el taller exclusivo Univalle.
 
 ACCESO: Roldanillo «ENTRADA LIBRE» por actividad; Toro, la frase de la sección
@@ -70,11 +69,6 @@ SEL, AULA, ACAD, ESP = 'Selección Oficial', 'Cinetoro al Aula', 'Programación 
 # ensamblar.py con caja.py). `ancla` = el programa de programas-2 cuyas obras
 # lleva. `sesiones` = días/horas cuando el bloque trae más de uno.
 LECTURA = {
-    'Lanzamiento CINETORO EXPERIMENTAL 19 / Límites Convergentes': dict(
-        titulo='Lanzamiento CINETORO Experimental 19 / Límites convergentes', seccion=ESP,
-        tipo='evento', event_kind='evento',
-        ancla='LIMITES', acceso='Evento con boletería', is_free=False,
-        _por_que='la excepción de Juan: el lanzamiento en Cali, con boletería'),
     'Panel: archivos, fabulaciones y resistencias con Azul Aizemberg, Cristina Hadwa y Martha Hincapie. Modera Laura Alhach': dict(
         titulo='Panel: archivos, fabulaciones y resistencias', seccion=ACAD, tipo='evento',
         event_kind='evento', invitados='Azul Aizemberg, Cristina Hadwa y Martha Hincapie. Modera Laura Alhach',
@@ -138,6 +132,7 @@ LECTURA = {
 
 # ── LOS BLOQUES QUE NO ENTRAN (criterio de Juan, 31 oct 2026) ──────────────────────────
 DESCARTADOS_JUAN = {
+    'Lanzamiento CINETORO EXPERIMENTAL 19 / Límites Convergentes': 'Cali (7 nov), fuera de los días oficiales 10–15 nov (Juan, 31 oct)',
     'Lanzamiento CINETORO EN BOGOTÁ – INVITADA MAIA GATTÁS': 'Bogotá (15 oct, ya ocurrió)',
     'MASTER CLASS NICOLE ANTEBI: Hago cosas que se mueven, se repiten y, a veces, sostienen.': 'Bogotá (5 nov)',
     'SEMINARIO FICCALI Maia Gattás / ALIANZA FICCALI – YAWA – ERMITAÑAS': 'Cali, fuera de los días oficiales (20 oct, ya ocurrió)',

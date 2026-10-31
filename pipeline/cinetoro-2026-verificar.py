@@ -63,7 +63,7 @@ if os.path.exists(_b):
     en_build = {(f['day'], f['time']) for f in build}
     multi = {('2026-11-13', '15:00'), ('2026-11-14', '09:00')}   # 2.ª sesión del taller de archivo: «Viernes de 15:00…; Sábado de 09:00…»
     fuera_b = sorted(x for x in en_build - pares - multi)
-    oficiales = {x for x in pares if '2026-11-10' <= x[0] <= '2026-11-15' or x[0] == '2026-11-07'}
+    oficiales = {x for x in pares if '2026-11-10' <= x[0] <= '2026-11-15'}
     # el laboratorio (11–14) y los talleres de Cali (9–11) caen en esas fechas y están fuera a propósito
     # el Laboratorio (11–14 nov, 09:00) y los talleres de Cali/Univalle (9–11 nov,
     # 09:00) caen en estas fechas y están fuera a propósito (crudo `_fuera`)
