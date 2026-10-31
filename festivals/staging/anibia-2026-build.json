@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "programación oficial de Anibia 2026 (PDF del Linktree = carrusel IG DeQG0NPGy2f)",
-  "capturado": "2026-10-27",
+  "capturado": "2026-10-31",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_sedes": "Tabla canónica en el crudo: una sede por edificio, la sala aparte. La Cinemateca Sala Alterna UNAL es el Auditorio 422 del 303C (UNAL): misma sede que la charla del Bloque C. Pines de Google Maps, a mano (venues-geo). Corrección 25 oct: la Sala Alterna proyecta en el Auditorio 105 del Edificio 301 (la sala misma, IG De2wLBxDY-Q), sede propia; el 303 queda para el Reel/WIP Day y la charla del Bloque C.",
@@ -4783,12 +4783,12 @@
    }
   },
   {
-   "title": "Surgentes - Con Extremos",
+   "title": "SURGENTES-Animación Latinoamericana",
    "type": "film",
    "section": "🌋 Surgentes",
    "country": "México, República Dominicana, Brasil, Perú, Francia",
    "flags": "🇲🇽🇩🇴🇧🇷🇵🇪🇫🇷",
-   "duration": "80 min",
+   "duration": "90 min",
    "rating": "Mayores de 12 años",
    "_ancla": [
     "Cinemateca Fontanar del Río - Bogotá",
@@ -4851,6 +4851,21 @@
      "lbSlug": "umassuma-lascas-de-memoria",
      "tmdb_id": 1614246,
      "synopsis_en": "Follows a man who has cultivated a lifelong relationship with trees, centered on a specific Kapok specimen named 'Umassuma.' Upon the tree’s demise, the protagonist experiences a profound sense of bereavement, triggering a series of poetic memories that illustrate the ontological connection between his existence and the century-old tree."
+    },
+    {
+     "title": "Una parvada de estruendo",
+     "director": "Mariana Mendivil",
+     "country": "México",
+     "flags": "🇲🇽",
+     "year": 2025,
+     "duration": "10 min",
+     "poster": "/assets/anibia-2026/una-parvada-de-estruendo.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "a-flock-of-thunder",
+     "tmdb_id": 1602532,
+     "synopsis_en": "A journey inward that delves into female identity, fragmenting and reinterpreting its representations, intervening in the images through stop-motion collage in search of freedom.",
+     "title_en": "A Flock of Thunder",
+     "genre": "Animación"
     },
     {
      "title": "Hacker Leonilia",
@@ -5064,8 +5079,8 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-27T17:37:16",
-  "plan_sha": "fa8c0d17f16aadbe",
+  "fecha": "2026-10-31T13:26:14",
+  "plan_sha": "17ea9621d1a0e533",
   "paso": 7,
   "cmd": "python3 pipeline/anibia-2026-verificar.py"
  }

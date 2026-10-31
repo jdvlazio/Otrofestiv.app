@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "Cinemateca de Bogotá (fichas de programa) + programación PDF de Anibia",
-  "capturado": "2026-10-27",
+  "capturado": "2026-10-31",
   "metodo": "HTML de las fichas, «Título / (Dir. X, año) País. m:ss min. / sinopsis»"
  },
  "obras": [
@@ -1357,6 +1357,23 @@
    "_src": {
     "url": "https://cinematecadebogota.gov.co/node/peliculas/3692?sede=11",
     "date": "2026-10-21"
+   }
+  },
+  {
+   "titulo": "Una parvada de estruendo",
+   "director": "Mariana Mendivil",
+   "pais": "México",
+   "duracion_txt": "10 min",
+   "duracion_min": 10,
+   "anio": 2025,
+   "tipo": "corto",
+   "seccion": "Surgentes",
+   "programa": "Surgentes - Con extremos",
+   "_solo_funcion": "2026-11-01 14:00",
+   "_lugar": 3,
+   "_src": {
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3846?sede=80",
+    "date": "2026-10-31"
    }
   },
   {

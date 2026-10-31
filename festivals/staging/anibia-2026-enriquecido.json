@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, emparejado con ficha_verifica() (director + año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-10-27"
+  "capturado": "2026-10-31"
  },
  "obras": [
   {
@@ -286,7 +286,7 @@
    "lbSlug": "ceu-inferno-e-outras-partes-do-corpo",
    "_verificado": "declarada a mano: «Céu, Inferno e Outras Partes do Corpo» (2011, 8 min), dir. Rodrigo John: el título español no está en TMDB",
    "_director": "Rodrigo John",
-   "_sondeado": "2026-10-27",
+   "_sondeado": "2026-10-31",
    "poster": "/assets/anibia-2026/cielo-infierno-y-otras-partes-del-cuerpo.jpg",
    "posterSource": "tmdb"
   },
@@ -961,7 +961,7 @@
    "lbSlug": "the-devil-room",
    "_verificado": "declarada a mano: «La Habitación del Macho Cabrío» (2025, 12 min), dir. Duban Pinzón (la Cinemateca escribe «Pizon»); tilde distinta en el título",
    "_director": "Duban Pizon",
-   "_sondeado": "2026-10-27",
+   "_sondeado": "2026-10-31",
    "poster": "/assets/anibia-2026/la-habitacion-del-macho-cabrio.jpg",
    "posterSource": "tmdb"
   },
@@ -1515,6 +1515,17 @@
    "titulo": "Tres gatos parias",
    "_ya_publicada": [
     {
+     "festival": "cinetoro-2026",
+     "titulo": "Tres gatos parias",
+     "poster": "/assets/cinetoro-2026/tres-gatos-parias.jpg",
+     "posterSource": "oficial",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "7 min",
+     "genre": "Animación",
+     "sinopsis": "Dos gatos persas y un dibujante tratan de hacer películas en medio de una guerra, desafortunadamente nadie las entiende."
+    },
+    {
      "festival": "siembrafest-2026",
      "titulo": "Tres gatos parias",
      "poster": "/assets/siembrafest/tres-gatos-parias.jpg",
@@ -1525,7 +1536,9 @@
      "genre": "Animación"
     }
    ],
-   "_verificado": "ya publicada en siembrafest-2026: se reusan sus datos",
+   "_sinopsis_de": "ya publicada en cinetoro-2026",
+   "_verificado": "ya publicada en cinetoro-2026: se reusa su sinopsis",
+   "sinopsis": "Dos gatos persas y un dibujante tratan de hacer películas en medio de una guerra, desafortunadamente nadie las entiende.",
    "pais": "Colombia",
    "anio": 2025,
    "duracion_tmdb": 7,
@@ -1545,8 +1558,28 @@
    "lbSlug": "umassuma-lascas-de-memoria",
    "_verificado": "declarada a mano: «UMASSUMA - Lascas de Memória» (2025, 8 min), dir. Guaracy Britto Jr. y Andrei Miralha: el título español no está en TMDB",
    "_director": "Guaracy Britto Jr. e Andrei Miralha",
-   "_sondeado": "2026-10-27",
+   "_sondeado": "2026-10-31",
    "poster": "/assets/anibia-2026/umassuma-lascas-de-memorias.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Una parvada de estruendo",
+   "tmdb_id": 1602532,
+   "titulo_original": "Una parvada de estruendo",
+   "poster_path": "/qswsDPxtCqK9R8REu79x8P05D3X.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "A journey inward that delves into female identity, fragmenting and reinterpreting its representations, intervening in the images through stop-motion collage in search of freedom.",
+   "genero": "Animación",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 10,
+   "pais_tmdb": "Mexico",
+   "title_en": "A Flock of Thunder",
+   "lbSlug": "a-flock-of-thunder",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Una parvada de estruendo",
+   "_director": "Mariana Mendivil",
+   "_sondeado": "2026-10-31",
+   "poster": "/assets/anibia-2026/una-parvada-de-estruendo.jpg",
    "posterSource": "tmdb"
   },
   {
@@ -1702,7 +1735,7 @@
    "lbSlug": "viagem-na-chuva",
    "_verificado": "declarada a mano: «Viagem na Chuva» (2014, 12 min), dir. Wesley Rodrigues en TMDB; el candado no abrió porque la ficha 3591 de la Cinemateca dice 2024 (la 3579 de Fontanar dice 2014: errata)",
    "_director": "Wesley Rodrigues",
-   "_sondeado": "2026-10-27",
+   "_sondeado": "2026-10-31",
    "poster": "/assets/anibia-2026/viaje-bajo-la-lluvia.jpg",
    "posterSource": "tmdb"
   },
@@ -1994,7 +2027,7 @@
    "lbSlug": "ceu-inferno-e-outras-partes-do-corpo",
    "_verificado": "declarada a mano: «Céu, Inferno e Outras Partes do Corpo» (2011, 8 min), dir. Rodrigo John: el título español no está en TMDB",
    "_director": "Rodrigo John",
-   "_sondeado": "2026-10-27",
+   "_sondeado": "2026-10-31",
    "poster": "/assets/anibia-2026/cielo-infierno-y-otras-partes-del-cuerpo.jpg",
    "posterSource": "tmdb"
   },
@@ -2613,7 +2646,7 @@
    "lbSlug": "the-devil-room",
    "_verificado": "declarada a mano: «La Habitación del Macho Cabrío» (2025, 12 min), dir. Duban Pinzón (la Cinemateca escribe «Pizon»); tilde distinta en el título",
    "_director": "Duban Pizon",
-   "_sondeado": "2026-10-27",
+   "_sondeado": "2026-10-31",
    "poster": "/assets/anibia-2026/la-habitacion-del-macho-cabrio.jpg",
    "posterSource": "tmdb"
   },
@@ -3141,8 +3174,27 @@
    "lbSlug": "umassuma-lascas-de-memoria",
    "_verificado": "declarada a mano: «UMASSUMA - Lascas de Memória» (2025, 8 min), dir. Guaracy Britto Jr. y Andrei Miralha: el título español no está en TMDB",
    "_director": "Guaracy Britto Jr. e Andrei Miralha",
-   "_sondeado": "2026-10-27",
+   "_sondeado": "2026-10-31",
    "poster": "/assets/anibia-2026/umassuma-lascas-de-memorias.jpg",
+   "posterSource": "tmdb"
+  },
+  "Una parvada de estruendo": {
+   "tmdb_id": 1602532,
+   "titulo_original": "Una parvada de estruendo",
+   "poster_path": "/qswsDPxtCqK9R8REu79x8P05D3X.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "A journey inward that delves into female identity, fragmenting and reinterpreting its representations, intervening in the images through stop-motion collage in search of freedom.",
+   "genero": "Animación",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 10,
+   "pais_tmdb": "Mexico",
+   "title_en": "A Flock of Thunder",
+   "lbSlug": "a-flock-of-thunder",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Una parvada de estruendo",
+   "_director": "Mariana Mendivil",
+   "_sondeado": "2026-10-31",
+   "poster": "/assets/anibia-2026/una-parvada-de-estruendo.jpg",
    "posterSource": "tmdb"
   },
   "Una vez en un cuerpo": {
@@ -3295,7 +3347,7 @@
    "lbSlug": "viagem-na-chuva",
    "_verificado": "declarada a mano: «Viagem na Chuva» (2014, 12 min), dir. Wesley Rodrigues en TMDB; el candado no abrió porque la ficha 3591 de la Cinemateca dice 2024 (la 3579 de Fontanar dice 2014: errata)",
    "_director": "Wesley Rodrigues",
-   "_sondeado": "2026-10-27",
+   "_sondeado": "2026-10-31",
    "poster": "/assets/anibia-2026/viaje-bajo-la-lluvia.jpg",
    "posterSource": "tmdb"
   },
@@ -3358,143 +3410,143 @@
  "_sin_ficha_sondeo": {
   "APPOL-O": {
    "director": "Juan José Calvo Lozano",
-   "fecha": "2026-10-21"
+   "fecha": "2026-10-31"
   },
   "Afrotoscopia Breaking": {
    "director": "Wilson Borja",
-   "fecha": "2026-10-21"
+   "fecha": "2026-10-31"
   },
   "Aguacero": {
    "director": "Emily Calderon Paloma/ Mariana Jaramillo",
-   "fecha": "2026-10-21"
+   "fecha": "2026-10-31"
   },
   "Aún recuerdo la lluvia": {
    "director": "Juan Francisco Reyes Orduz",
-   "fecha": "2026-10-21"
+   "fecha": "2026-10-31"
   },
   "Contratiempo": {
    "director": "Sofía León González",
-   "fecha": "2026-10-21"
+   "fecha": "2026-10-31"
   },
   "Cosechando Valor- Una lucha por el hogar": {
    "director": "Daniel Gonzalez , Maria Jose Cabratt, Ana Bernal",
-   "fecha": "2026-10-21"
+   "fecha": "2026-10-31"
   },
   "Cruda": {
    "director": "Valeria Zapata Uribe",
-   "fecha": "2026-10-21"
+   "fecha": "2026-10-31"
   },
   "El Palo de Ofunfó": {
    "director": "Camilo López Mondragón",
-   "fecha": "2026-10-21"
+   "fecha": "2026-10-31"
   },
   "El corazón no olvida… Lucha": {
    "director": "Sharon García, Luisa Pinzón y Joel Vásquez",
-   "fecha": "2026-10-21"
+   "fecha": "2026-10-31"
   },
   "El personaje Animado": {
    "director": "Varixs directorxs",
-   "fecha": "2026-10-21"
+   "fecha": "2026-10-31"
   },
   "Entre orillas": {
    "director": "Gustavo Ramos, Juan Acuña, Andrés Agredo",
-   "fecha": "2026-10-21"
+   "fecha": "2026-10-31"
   },
   "Entre paredes y flores": {
    "director": "Valentina Molano Muñoz",
-   "fecha": "2026-10-21"
+   "fecha": "2026-10-31"
   },
   "Esta piel se habita": {
    "director": "Valeria Aguirre",
-   "fecha": "2026-10-21"
+   "fecha": "2026-10-31"
   },
   "Flux": {
    "director": "Laura Moncada",
-   "fecha": "2026-10-21"
+   "fecha": "2026-10-31"
   },
   "Frenezy": {
    "director": "Angela Gabriela Macías Álvarez",
-   "fecha": "2026-10-21"
+   "fecha": "2026-10-31"
   },
   "Galgo": {
    "director": "Alexandra Wild",
-   "fecha": "2026-10-21"
+   "fecha": "2026-10-31"
   },
   "Germinator": {
    "director": "Nicol Dayana Ortiz Yara",
-   "fecha": "2026-10-21"
+   "fecha": "2026-10-31"
   },
   "Inbox": {
    "director": "Wilson Borja",
-   "fecha": "2026-10-21"
+   "fecha": "2026-10-31"
   },
   "Ir hacia adentro": {
    "director": "Laura Alejandra Jiménez Ruiz",
-   "fecha": "2026-10-21"
+   "fecha": "2026-10-31"
   },
   "Kafei": {
    "director": "Valentina Becerra",
-   "fecha": "2026-10-21"
+   "fecha": "2026-10-31"
   },
   "La Pecera": {
    "director": "Angela Tatiana Fonseca Galvez",
-   "fecha": "2026-10-21"
+   "fecha": "2026-10-31"
   },
   "La última pieza": {
    "director": "Juan Felipe Vargas Tejada",
-   "fecha": "2026-10-21"
+   "fecha": "2026-10-31"
   },
   "Love & Strife": {
    "director": "Jay Mehta and Isha Jambhalea",
-   "fecha": "2026-10-21"
+   "fecha": "2026-10-31"
   },
   "Mind Scratcher": {
    "director": "Daniel Corredor Rincón",
-   "fecha": "2026-10-21"
+   "fecha": "2026-10-31"
   },
   "Negro - 01": {
    "director": "Sebastian Peña",
-   "fecha": "2026-10-21"
+   "fecha": "2026-10-31"
   },
   "Noche con el demonio": {
    "director": "Santiago Montes Pardo",
-   "fecha": "2026-10-21"
+   "fecha": "2026-10-31"
   },
   "Piko 3 (<3)": {
    "director": "Nicolás Mesa y Laura Valencia",
-   "fecha": "2026-10-21"
+   "fecha": "2026-10-31"
   },
   "Precipitación de los deseos": {
    "director": "Johan Sebastian Casallas Orjuela",
-   "fecha": "2026-10-21"
+   "fecha": "2026-10-31"
   },
   "Q´ij Tikal: Teaser Oficial": {
    "director": "Jesús Alejandro Guzmán Ramírez",
-   "fecha": "2026-10-21"
+   "fecha": "2026-10-31"
   },
   "Seven Years In Twitter": {
    "director": "David Graham",
-   "fecha": "2026-10-21"
+   "fecha": "2026-10-31"
   },
   "Sueño Cítrico": {
    "director": "Nicol Barrero",
-   "fecha": "2026-10-21"
+   "fecha": "2026-10-31"
   },
   "Tapaito": {
    "director": "Sofía Baptiste González",
-   "fecha": "2026-10-21"
+   "fecha": "2026-10-31"
   },
   "Trace écrite": {
    "director": "Don Hertzfeldt",
-   "fecha": "2026-10-21"
+   "fecha": "2026-10-31"
   },
   "Tres gatos parias": {
    "director": "Iván Sierra",
-   "fecha": "2026-10-21"
+   "fecha": "2026-10-31"
   },
   "Vagón de Medianoche": {
    "director": "Fátima Montserrat Castillo Gutiérrez",
-   "fecha": "2026-10-21"
+   "fecha": "2026-10-31"
   }
  }
 }
