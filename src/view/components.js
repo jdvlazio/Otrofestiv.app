@@ -796,6 +796,14 @@ function _tituloFijo(str, boxW, maxLines){
   }
   return {lines:L, fs:+fs.toFixed(2), lh:+(fs*1.18).toFixed(2)};
 }
+// Las líneas del título para el marco HTML de la boleta con fotograma: mismo
+// corte «emparejar» que los SVG, y el tamaño como fracción del ancho (cqi),
+// así el HTML y el SVG dicen el título igual.
+export function _lineasTitulo(str){
+  const PAD=_PAD, CW=120-2*PAD;
+  const ttl=_tituloFijo(str, CW*0.97, 4);
+  return {lines:ttl.lines, cqi:+(ttl.fs/120*100).toFixed(3)};
+}
 // El tipo puede venir ESCRITO en el título: «Panel: Memoria…» marcado como
 // foro. La escarapela dice la palabra del festival (PANEL) y el título no la
 // repite (Juan, 31 oct). Solo palabras de actividad y solo con dos puntos:

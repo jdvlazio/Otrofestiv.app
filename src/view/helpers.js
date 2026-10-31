@@ -7,7 +7,7 @@
 
 import { FESTIVAL_BUFFER, FESTIVAL_QA_MIN, FESTIVAL_CONFIG, TMDB_IMG } from '../config.js';
 import {
-  DAY_ABBR, DAY_NUM, ICONS, _buildPosterMini, _posterForma, _datoCompuesto, _fitLines, _secLabel, _seccionPartes, _sectionColor,
+  DAY_ABBR, DAY_NUM, ICONS, _buildPosterMini, _lineasTitulo, _posterForma, _datoCompuesto, _fitLines, _secLabel, _seccionPartes, _sectionColor,
   makeProgramPoster, makeEventPoster, makeSorpresaPoster, makeSharedSlotSVG, escXML, _langDates, parseProgramTitle,
 } from './components.js';
 // _langDates se REEXPORTA: el dueño vive en components.js (helpers importa
@@ -299,7 +299,10 @@ export function posterParts(f,{header=false,body='',loading}={}){
   const m=posterModel(f);
   if(m.kind!=='editorial') return m;                       // {kind,src,...} decidido
   return {...m, ed:true,
-    inner:editorialFrame({header:header?m.header:undefined, body, src:m.src, title:m.title, loading, accent:m.accent, firma:body?m.firma:undefined})};
+    // Con cuerpo es la tarjeta grande → boleta con fotograma: lleva la
+    // duración al pie (o «N obras · X min»), como la boleta sin imagen.
+    inner:editorialFrame({header:header?m.header:undefined, body, src:m.src, title:m.title, loading, accent:m.accent,
+      dato:body?_datoCompuesto(f.title, f.duration):undefined})};
 }
 
 export function _getItemPoster(item){
@@ -456,6 +459,20 @@ export function editorialFrame({header, body, src, title, loading, accent, dato,
   // el vacío no existe, lo llenan el título y el dato») era falsa en pantalla.
   // Mismo mecanismo que la miniatura —contenido, con máscara— pero anclado al
   // borde del campo grande (66,67%, clase ed-halo-full) para no dejar costura.
+  // BOLETA CON FOTOGRAMA (Juan, 31 oct 2026 — spec mesa-de-luz, camino C3).
+  // La tarjeta con título: el fotograma ENMARCADO arriba, sin recortar, su luz
+  // derramada sobre el negro (opacidad .26), el título debajo con el mismo
+  // corte y tamaño que las boletas SVG, la duración, el troquel y el talón.
+  // Sin rótulo de sección: la boleta no lo lleva, lo dice el talón.
+  if(_ttl){
+    const tl=_lineasTitulo(_ttl);
+    return `<div class="edb">`
+      + (src?`<div class="edb-luz"><img src="${src}" loading="${_l}" aria-hidden="true" data-err="quitar" alt=""></div>`:'')
+      + `<div class="edb-foto">${img}</div>`
+      + `<div class="edb-ttl" style="font-size:${tl.cqi}cqi">${tl.lines.map(escXML).join('<br>')}</div>`
+      + (_dato?`<div class="edb-dato">${escXML(_dato)}</div>`:'')
+      + `<div class="edb-troquel"></div><div class="edb-muesca i"></div><div class="edb-muesca d"></div><div class="edb-talon"></div></div>`;
+  }
   const halo=(src)?`<div class="ed-halo${_mini?'':' ed-halo-full'}"><img src="${src}" loading="${_l}" aria-hidden="true" data-err="quitar" alt=""></div>`:'';
   return `<div class="ed-fil"></div>`
     + `<div class="ed-hdr">${header?_edHdrSVG(header, accent):''}</div>`
