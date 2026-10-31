@@ -6096,7 +6096,11 @@ check = 'abierta-sin-info'
 try:
     import json as _jab, re as _reab
     _PAL = _reab.compile(r'(?i)\b(expo|exposici[oó]n|exposiciones|instalaci[oó]n|exhibici[oó]n|muestra fotogr[aá]fica|galer[ií]a abierta)\b')
-    _ABIERTA_NO = {}   # (festival, título): porqué
+    _ABIERTA_NO = {   # (festival, título): porqué
+        ('midbo-2026', 'Visita guiada a la exposición Escuchar lo que permanece'):
+            'la visita es un recorrido guiado con hora (mié 4 nov 3 p. m., IG DfKdzHMEUck); '
+            'la exposición en sí ya va como abierta con info:true',
+    }
     _malas = []
     for _fab in _festivalesVivos():
         try:
