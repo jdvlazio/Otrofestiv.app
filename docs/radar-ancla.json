@@ -6202,8 +6202,10 @@
    "fechas_2026": "3–7 NOV 2026 (13.ª), Florencia y alrededores — confirmado por el festival",
    "web": null,
    "ig": "@festivalmambe",
-   "estado": "radar",
-   "id_config": null,
+   "estado": "en_app",
+   "id_config": [
+    "mambe2026"
+   ],
    "issue": [
     1323
    ],

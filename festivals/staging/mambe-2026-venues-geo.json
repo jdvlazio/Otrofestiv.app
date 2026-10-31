@@ -1,0 +1,70 @@
+{
+ "_provenance": {
+  "fuente": "Google Maps, a mano, sede por sede (31 oct 2026); las láminas no dan direcciones",
+  "capturado": "2026-10-31"
+ },
+ "Uniamazonia Sede Porvenir - Florencia": {
+  "n": 0,
+  "lat": 1.620127,
+  "lng": -75.6042556,
+  "_prec": "manual",
+  "_match": "Google Maps «Universidad de la Amazonia sede principal»",
+  "_nota": "La sede Porvenir es el campus principal. El Auditorio Angel Cuniberti va como sala."
+ },
+ "Uniamazonia Sede Centro - Florencia": {
+  "n": 0,
+  "lat": 1.6068188,
+  "lng": -75.6062179,
+  "_prec": "manual",
+  "_match": "Google Maps «Universidad De La Amazonia Sede Centro»",
+  "_nota": "«Centro Idema» / «Juan XXIII» en la lámina. Auditorio Callicebus y Edificio Yapura van como sala."
+ },
+ "Biblioteca SENA - Florencia": {
+  "n": 0,
+  "lat": 1.6211754,
+  "lng": -75.6120795,
+  "_prec": "manual",
+  "_match": "Google Maps «CENTRO TECNOLOGICO DE LA AMAZONIA» (SENA Caquetá)",
+  "_nota": "PIN APROXIMADO: la lámina dice «Biblioteca SENA»; Google no tiene la biblioteca. Hay otra sede «SENA CAQUETA» (1.6036,-75.5832). Preguntar al festival."
+ },
+ "Inspección de Policía Santuario - Florencia": {
+  "n": 0,
+  "lat": 1.654916,
+  "lng": -75.6145,
+  "_prec": "manual",
+  "_match": "Google Maps «Santuario» (Florencia)",
+  "_nota": "PIN APROXIMADO: la lámina dice «Santuario (inspección de policía)»; Google no tiene la inspección, solo el lugar «Santuario». Preguntar al festival."
+ },
+ "Candela Café Bar - Florencia": {
+  "n": 0,
+  "lat": 1.6313624,
+  "lng": -75.6038036,
+  "_prec": "manual",
+  "_match": "Google Maps «Candela Café Bar»",
+  "_nota": "Exacto. Candela está entre los aliados del festival (lámina 11)."
+ },
+ "I.E. Juan Bautista La Salle - Florencia": {
+  "n": 0,
+  "lat": 1.6134841,
+  "lng": -75.6157586,
+  "_prec": "manual",
+  "_match": "Google Maps «Colegio Juan Bautista La Salle»",
+  "_nota": "Exacto."
+ },
+ "Maloca Huitoto - Florencia": {
+  "n": 0,
+  "lat": 1.6344962,
+  "lng": -75.5841374,
+  "_prec": "manual",
+  "_match": "Google Maps «Maloca Indígena el Manantial»",
+  "_nota": "La lámina: «Maloca Huitoto (Maloka Uitoto vereda el Manantial)»."
+ },
+ "Casa Campesina - Florencia": {
+  "n": 0,
+  "lat": 1.6497377,
+  "lng": -75.611525,
+  "_prec": "manual",
+  "_match": "Google Maps «Restaurante Balneario Casa Campesina»",
+  "_nota": "Casa Campesina está entre los aliados del festival (lámina 11); el único con ese nombre en Florencia en Google."
+ }
+}

@@ -1,0 +1,2532 @@
+{
+ "_etapa": "build generado por pipeline/ensamblar.py",
+ "_provenance": {
+  "fuente": "Instagram @festivalmambe — el carrusel oficial de programación (12 láminas)",
+  "capturado": "2026-10-31",
+  "ensamblador": "pipeline/ensamblar.py"
+ },
+ "radar": 1323,
+ "_por_que_sedes": "El lugar de la lámina → la sede, en tabla explícita. Uniamazonia tiene dos sedes en Florencia: «(Porvenir)» = sede principal, con el Auditorio Angel Cuniberti; «(Centro Idema)» / «Juan XXIII» = sede Centro, con el Auditorio Callicebus y el Edificio Yapura (van como sala). «Filmemoria» es el programa del taller, no el lugar: el lugar es la I.E. Juan Bautista La Salle (la lámina escribe «Bautisya»).",
+ "_por_que_secciones": "Las láminas no traen secciones. «Proyecciones» y «Actividades» son palabras nuestras (como «Actividades» en Guatapé): pendientes de Juan.",
+ "name": "MAMBE",
+ "displayName": "MAMBE",
+ "fullName": "Festival MAMBE 2026 — 13.ª edición",
+ "shortName": "MAMBE",
+ "tagline": "Cine Ambiental y Étnico",
+ "city": "Florencia",
+ "country": "CO",
+ "dates": "3–7 NOV",
+ "dates_en": "NOV 3–7",
+ "year": 2026,
+ "timezoneOffset": "-05:00",
+ "storageKey": "mambe2026_",
+ "festivalStartStr": "2026-11-03T00:00:00",
+ "festivalEndStr": "2026-11-07T23:59:00",
+ "sharedSlotIsOneScreening": false,
+ "dias_vacios": [],
+ "_por_que_acceso": "Sin `ticketing_model`: el pie del post dice «Todo es gratis y de entrada libre». El acceso va declarado en `_acceso` del crudo.",
+ "_fuentes_versionadas": {},
+ "prioLimit": 3,
+ "dias": [
+  "2026-11-03",
+  "2026-11-04",
+  "2026-11-05",
+  "2026-11-06",
+  "2026-11-07"
+ ],
+ "festivalDates": {
+  "2026-11-03": "2026-11-03",
+  "2026-11-04": "2026-11-04",
+  "2026-11-05": "2026-11-05",
+  "2026-11-06": "2026-11-06",
+  "2026-11-07": "2026-11-07"
+ },
+ "days": [
+  {
+   "k": "2026-11-03",
+   "d": 3,
+   "lbl": "MAR"
+  },
+  {
+   "k": "2026-11-04",
+   "d": 4,
+   "lbl": "MIÉ"
+  },
+  {
+   "k": "2026-11-05",
+   "d": 5,
+   "lbl": "JUE"
+  },
+  {
+   "k": "2026-11-06",
+   "d": 6,
+   "lbl": "VIE"
+  },
+  {
+   "k": "2026-11-07",
+   "d": 7,
+   "lbl": "SÁB"
+  }
+ ],
+ "dayKeys": [
+  "2026-11-03",
+  "2026-11-04",
+  "2026-11-05",
+  "2026-11-06",
+  "2026-11-07"
+ ],
+ "dayShort": {
+  "2026-11-03": "MAR 3",
+  "2026-11-04": "MIÉ 4",
+  "2026-11-05": "JUE 5",
+  "2026-11-06": "VIE 6",
+  "2026-11-07": "SÁB 7"
+ },
+ "dayShort_en": {
+  "2026-11-03": "TUE 3",
+  "2026-11-04": "WED 4",
+  "2026-11-05": "THU 5",
+  "2026-11-06": "FRI 6",
+  "2026-11-07": "SAT 7"
+ },
+ "dayLong": {
+  "2026-11-03": "Martes 3 de noviembre",
+  "2026-11-04": "Miércoles 4 de noviembre",
+  "2026-11-05": "Jueves 5 de noviembre",
+  "2026-11-06": "Viernes 6 de noviembre",
+  "2026-11-07": "Sábado 7 de noviembre"
+ },
+ "_acceso": {
+  "estado": "Entrada libre",
+  "revisado": "2026-10-31",
+  "fuentes": [
+   "el pie del carrusel oficial (instagram.com/p/DfIOLhBloOw/)"
+  ],
+  "_por_que": "«Todo es gratis y de entrada libre» (pie del post de programación, 30 oct 2026)."
+ },
+ "sections": {
+  "🎪 Actividades": {
+   "en": "Activities",
+   "archetype": "Especiales / Eventos",
+   "order": 1
+  },
+  "🌿 Proyecciones": {
+   "en": "Screenings",
+   "archetype": "Muestra / País",
+   "order": 2
+  }
+ },
+ "venues": {
+  "Uniamazonia Sede Porvenir - Florencia": {
+   "short": "Uniamazonia Sede Porvenir",
+   "city": "Florencia",
+   "n": 0,
+   "lat": 1.620127,
+   "lng": -75.6042556,
+   "_prec": "manual",
+   "_match": "Google Maps «Universidad de la Amazonia sede principal»",
+   "_nota": "La sede Porvenir es el campus principal. El Auditorio Angel Cuniberti va como sala."
+  },
+  "Biblioteca SENA - Florencia": {
+   "short": "Biblioteca SENA",
+   "city": "Florencia",
+   "n": 0,
+   "lat": 1.6211754,
+   "lng": -75.6120795,
+   "_prec": "manual",
+   "_match": "Google Maps «CENTRO TECNOLOGICO DE LA AMAZONIA» (SENA Caquetá)",
+   "_nota": "PIN APROXIMADO: la lámina dice «Biblioteca SENA»; Google no tiene la biblioteca. Hay otra sede «SENA CAQUETA» (1.6036,-75.5832). Preguntar al festival."
+  },
+  "Inspección de Policía Santuario - Florencia": {
+   "short": "Inspección de Policía Santuario",
+   "city": "Florencia",
+   "n": 0,
+   "lat": 1.654916,
+   "lng": -75.6145,
+   "_prec": "manual",
+   "_match": "Google Maps «Santuario» (Florencia)",
+   "_nota": "PIN APROXIMADO: la lámina dice «Santuario (inspección de policía)»; Google no tiene la inspección, solo el lugar «Santuario». Preguntar al festival."
+  },
+  "Candela Café Bar - Florencia": {
+   "short": "Candela Café Bar",
+   "city": "Florencia",
+   "n": 0,
+   "lat": 1.6313624,
+   "lng": -75.6038036,
+   "_prec": "manual",
+   "_match": "Google Maps «Candela Café Bar»",
+   "_nota": "Exacto. Candela está entre los aliados del festival (lámina 11)."
+  },
+  "I.E. Juan Bautista La Salle - Florencia": {
+   "short": "I.E. Juan Bautista La Salle",
+   "city": "Florencia",
+   "n": 0,
+   "lat": 1.6134841,
+   "lng": -75.6157586,
+   "_prec": "manual",
+   "_match": "Google Maps «Colegio Juan Bautista La Salle»",
+   "_nota": "Exacto."
+  },
+  "Uniamazonia Sede Centro - Florencia": {
+   "short": "Uniamazonia Sede Centro",
+   "city": "Florencia",
+   "n": 0,
+   "lat": 1.6068188,
+   "lng": -75.6062179,
+   "_prec": "manual",
+   "_match": "Google Maps «Universidad De La Amazonia Sede Centro»",
+   "_nota": "«Centro Idema» / «Juan XXIII» en la lámina. Auditorio Callicebus y Edificio Yapura van como sala."
+  },
+  "Maloca Huitoto - Florencia": {
+   "short": "Maloca Huitoto",
+   "city": "Florencia",
+   "n": 0,
+   "lat": 1.6344962,
+   "lng": -75.5841374,
+   "_prec": "manual",
+   "_match": "Google Maps «Maloca Indígena el Manantial»",
+   "_nota": "La lámina: «Maloca Huitoto (Maloka Uitoto vereda el Manantial)»."
+  },
+  "Casa Campesina - Florencia": {
+   "short": "Casa Campesina",
+   "city": "Florencia",
+   "n": 0,
+   "lat": 1.6497377,
+   "lng": -75.611525,
+   "_prec": "manual",
+   "_match": "Google Maps «Restaurante Balneario Casa Campesina»",
+   "_nota": "Casa Campesina está entre los aliados del festival (lámina 11); el único con ese nombre en Florencia en Google."
+  }
+ },
+ "_avisos_id": [],
+ "films": [
+  {
+   "title": "Inauguración Exposición: Javier Murillo",
+   "type": "event",
+   "section": "🎪 Actividades",
+   "_ancla": [
+    "Uniamazonia Sede Porvenir - Florencia",
+    "2026-11-03",
+    "18:00"
+   ],
+   "day": "2026-11-03",
+   "time": "18:00",
+   "day_order": 0,
+   "venue": "Uniamazonia Sede Porvenir - Florencia",
+   "sala": "Auditorio Angel Cuniberti",
+   "event_kind": "evento",
+   "info": true,
+   "has_qa": false,
+   "_src": {
+    "url": "https://www.instagram.com/p/DfIOLhBloOw/",
+    "date": "2026-10-30",
+    "lamina": 2
+   },
+   "_fid": "f_5e79db88f3",
+   "id": "f_5e79db88f3",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "duration": {
+     "tipo": "regla",
+     "marca": "estimado"
+    }
+   },
+   "duration": "90 min"
+  },
+  {
+   "title": "Horizonte",
+   "type": "film",
+   "section": "🌿 Proyecciones",
+   "director": "César Augusto Acevedo",
+   "year": 2025,
+   "country": "Chile, Colombia, France, Germany, Luxembourg",
+   "flags": "🇨🇱🇨🇴🇫🇷🇩🇪🇱🇺",
+   "duration": "180 min",
+   "genre": "Drama",
+   "_ancla": [
+    "Uniamazonia Sede Porvenir - Florencia",
+    "2026-11-03",
+    "19:30"
+   ],
+   "day": "2026-11-03",
+   "time": "19:30",
+   "day_order": 0,
+   "venue": "Uniamazonia Sede Porvenir - Florencia",
+   "sala": "Auditorio Angel Cuniberti",
+   "has_qa": true,
+   "synopsis": "Dos fantasmas, una madre y su hijo, buscan al padre desaparecido del muchacho en un viaje físico y espiritual por un mundo arrasado por la guerra. Basilio, que en vida fue un criminal, debe revivir sus actos con su madre como testigo. Solo a través de un gran sacrificio encontrarán la redención que buscan.",
+   "synopsis_lang": "es",
+   "poster": "/assets/mambe-2026/horizonte.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfIOLhBloOw/",
+    "date": "2026-10-30",
+    "lamina": 2
+   },
+   "premiere": "Apertura Festival",
+   "lbSlug": "horizon-2024-4",
+   "tmdb_id": 1265716,
+   "synopsis_en": "It is about two ghosts, a mother and son, search for the boy’s missing father on a journey, both physical and spiritual, through a world ravaged by war. Only through great sacrifice will they mend the fragile bonds that bind them and perhaps find redemption.",
+   "title_en": "Horizon",
+   "_fid": "f_c667295ec7",
+   "id": "f_c667295ec7",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "premiere": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    }
+   }
+  },
+  {
+   "title": "Taller: Cine Comunitario",
+   "type": "event",
+   "section": "🎪 Actividades",
+   "duration": "180 min",
+   "_ancla": [
+    "Biblioteca SENA - Florencia",
+    "2026-11-04",
+    "09:00"
+   ],
+   "day": "2026-11-04",
+   "time": "09:00",
+   "day_order": 1,
+   "venue": "Biblioteca SENA - Florencia",
+   "event_kind": "taller",
+   "is_recurring": true,
+   "has_qa": false,
+   "_src": {
+    "url": "https://www.instagram.com/p/DfIOLhBloOw/",
+    "date": "2026-10-30",
+    "lamina": 3
+   },
+   "_fid": "f_7d50fa9fc2",
+   "id": "f_7d50fa9fc2",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    }
+   }
+  },
+  {
+   "title": "Taller: Stop Motion Pedaliando Cine",
+   "type": "event",
+   "section": "🎪 Actividades",
+   "duration": "120 min",
+   "_ancla": [
+    "Inspección de Policía Santuario - Florencia",
+    "2026-11-04",
+    "17:00"
+   ],
+   "day": "2026-11-04",
+   "time": "17:00",
+   "day_order": 1,
+   "venue": "Inspección de Policía Santuario - Florencia",
+   "event_kind": "taller",
+   "has_qa": false,
+   "_src": {
+    "url": "https://www.instagram.com/p/DfIOLhBloOw/",
+    "date": "2026-10-30",
+    "lamina": 3
+   },
+   "_fid": "f_b440739599",
+   "id": "f_b440739599",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    }
+   }
+  },
+  {
+   "title": "Laboratorio: Serigrafía",
+   "type": "event",
+   "section": "🎪 Actividades",
+   "duration": "150 min",
+   "_ancla": [
+    "Uniamazonia Sede Porvenir - Florencia",
+    "2026-11-04",
+    "17:00"
+   ],
+   "day": "2026-11-04",
+   "time": "17:00",
+   "day_order": 1,
+   "venue": "Uniamazonia Sede Porvenir - Florencia",
+   "event_kind": "evento",
+   "is_recurring": true,
+   "has_qa": false,
+   "_src": {
+    "url": "https://www.instagram.com/p/DfIOLhBloOw/",
+    "date": "2026-10-30",
+    "lamina": 3
+   },
+   "_fid": "f_c6a10170f8",
+   "id": "f_c6a10170f8",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    }
+   }
+  },
+  {
+   "title": "Volar y tres claveles",
+   "type": "film",
+   "section": "🌿 Proyecciones",
+   "duration": "180 min",
+   "_ancla": [
+    "Inspección de Policía Santuario - Florencia",
+    "2026-11-04",
+    "19:00"
+   ],
+   "day": "2026-11-04",
+   "time": "19:00",
+   "day_order": 1,
+   "venue": "Inspección de Policía Santuario - Florencia",
+   "has_qa": false,
+   "_src": {
+    "url": "https://www.instagram.com/p/DfIOLhBloOw/",
+    "date": "2026-10-30",
+    "lamina": 3
+   },
+   "_fid": "f_4f75eff30f",
+   "id": "f_4f75eff30f",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    }
+   }
+  },
+  {
+   "title": "Provisorium",
+   "type": "film",
+   "section": "🌿 Proyecciones",
+   "_ancla": [
+    "Candela Café Bar - Florencia",
+    "2026-11-04",
+    "19:30"
+   ],
+   "day": "2026-11-04",
+   "time": "19:30",
+   "day_order": 1,
+   "venue": "Candela Café Bar - Florencia",
+   "has_qa": true,
+   "_src": {
+    "url": "https://www.instagram.com/p/DfIOLhBloOw/",
+    "date": "2026-10-30",
+    "lamina": 3
+   },
+   "_fid": "f_d72cae91b1",
+   "id": "f_d72cae91b1",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "duration": {
+     "tipo": "regla",
+     "marca": "estimado"
+    }
+   },
+   "duration": "60 min"
+  },
+  {
+   "title": "El Río que Siempre se Va y Antes de la Nieve",
+   "type": "film",
+   "section": "🌿 Proyecciones",
+   "duration": "150 min",
+   "_ancla": [
+    "Uniamazonia Sede Porvenir - Florencia",
+    "2026-11-04",
+    "19:30"
+   ],
+   "day": "2026-11-04",
+   "time": "19:30",
+   "day_order": 1,
+   "venue": "Uniamazonia Sede Porvenir - Florencia",
+   "sala": "Auditorio Angel Cuniberti",
+   "has_qa": true,
+   "_src": {
+    "url": "https://www.instagram.com/p/DfIOLhBloOw/",
+    "date": "2026-10-30",
+    "lamina": 3
+   },
+   "is_cortos": true,
+   "film_list": [
+    {
+     "title": "El río que siempre se va"
+    },
+    {
+     "title": "Antes de la nieve"
+    }
+   ],
+   "_fid": "f_d40959d283",
+   "id": "f_d40959d283",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    }
+   }
+  },
+  {
+   "title": "Taller: Stenopeica",
+   "type": "event",
+   "section": "🎪 Actividades",
+   "duration": "240 min",
+   "_ancla": [
+    "I.E. Juan Bautista La Salle - Florencia",
+    "2026-11-05",
+    "08:00"
+   ],
+   "day": "2026-11-05",
+   "time": "08:00",
+   "day_order": 2,
+   "venue": "I.E. Juan Bautista La Salle - Florencia",
+   "event_kind": "taller",
+   "has_qa": false,
+   "_src": {
+    "url": "https://www.instagram.com/p/DfIOLhBloOw/",
+    "date": "2026-10-30",
+    "lamina": 4
+   },
+   "_fid": "f_7b4663dd10",
+   "id": "f_7b4663dd10",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    }
+   }
+  },
+  {
+   "title": "Taller: Cine Comunitario",
+   "type": "event",
+   "section": "🎪 Actividades",
+   "duration": "180 min",
+   "_ancla": [
+    "Biblioteca SENA - Florencia",
+    "2026-11-05",
+    "09:00"
+   ],
+   "day": "2026-11-05",
+   "time": "09:00",
+   "day_order": 2,
+   "venue": "Biblioteca SENA - Florencia",
+   "event_kind": "taller",
+   "is_recurring": true,
+   "has_qa": false,
+   "_src": {
+    "url": "https://www.instagram.com/p/DfIOLhBloOw/",
+    "date": "2026-10-30",
+    "lamina": 4
+   },
+   "_fid": "f_2d0a7d4b44",
+   "id": "f_2d0a7d4b44",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    }
+   }
+  },
+  {
+   "title": "Taller Actuación: María Cecilia Sanchez",
+   "type": "event",
+   "section": "🎪 Actividades",
+   "duration": "180 min",
+   "_ancla": [
+    "Uniamazonia Sede Centro - Florencia",
+    "2026-11-05",
+    "15:00"
+   ],
+   "day": "2026-11-05",
+   "time": "15:00",
+   "day_order": 2,
+   "venue": "Uniamazonia Sede Centro - Florencia",
+   "sala": "Edificio Yapura - Sala 17, piso 7",
+   "event_kind": "taller",
+   "is_recurring": true,
+   "has_qa": false,
+   "_src": {
+    "url": "https://www.instagram.com/p/DfIOLhBloOw/",
+    "date": "2026-10-30",
+    "lamina": 4
+   },
+   "_fid": "f_69b06d9d14",
+   "id": "f_69b06d9d14",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    }
+   }
+  },
+  {
+   "title": "Coctel + Conversatorio: Exposición Fotográfica Gerson Saenz",
+   "type": "event",
+   "section": "🎪 Actividades",
+   "duration": "120 min",
+   "_ancla": [
+    "Uniamazonia Sede Porvenir - Florencia",
+    "2026-11-05",
+    "15:30"
+   ],
+   "day": "2026-11-05",
+   "time": "15:30",
+   "day_order": 2,
+   "venue": "Uniamazonia Sede Porvenir - Florencia",
+   "sala": "Auditorio Angel Cuniberti",
+   "event_kind": "conversatorio",
+   "info": true,
+   "has_qa": false,
+   "_src": {
+    "url": "https://www.instagram.com/p/DfIOLhBloOw/",
+    "date": "2026-10-30",
+    "lamina": 4
+   },
+   "_fid": "f_1841f5f387",
+   "id": "f_1841f5f387",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    }
+   }
+  },
+  {
+   "title": "Festival de Cortos Psicoactivos + Conversatorio",
+   "type": "event",
+   "section": "🎪 Actividades",
+   "duration": "120 min",
+   "_ancla": [
+    "Uniamazonia Sede Centro - Florencia",
+    "2026-11-05",
+    "16:00"
+   ],
+   "day": "2026-11-05",
+   "time": "16:00",
+   "day_order": 2,
+   "venue": "Uniamazonia Sede Centro - Florencia",
+   "sala": "Auditorio Callicebus",
+   "event_kind": "evento",
+   "has_qa": false,
+   "_src": {
+    "url": "https://www.instagram.com/p/DfIOLhBloOw/",
+    "date": "2026-10-30",
+    "lamina": 5
+   },
+   "_fid": "f_0045484728",
+   "id": "f_0045484728",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    }
+   }
+  },
+  {
+   "title": "Taller: Cianotipia",
+   "type": "event",
+   "section": "🎪 Actividades",
+   "duration": "120 min",
+   "_ancla": [
+    "Uniamazonia Sede Centro - Florencia",
+    "2026-11-05",
+    "16:00"
+   ],
+   "day": "2026-11-05",
+   "time": "16:00",
+   "day_order": 2,
+   "venue": "Uniamazonia Sede Centro - Florencia",
+   "sala": "Edificio Yapura - Aula 15, piso 2",
+   "event_kind": "taller",
+   "has_qa": false,
+   "_src": {
+    "url": "https://www.instagram.com/p/DfIOLhBloOw/",
+    "date": "2026-10-30",
+    "lamina": 5
+   },
+   "_fid": "f_c0cefd9779",
+   "id": "f_c0cefd9779",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    }
+   }
+  },
+  {
+   "title": "Laboratorio: Serigrafía",
+   "type": "event",
+   "section": "🎪 Actividades",
+   "duration": "150 min",
+   "_ancla": [
+    "Uniamazonia Sede Porvenir - Florencia",
+    "2026-11-05",
+    "17:00"
+   ],
+   "day": "2026-11-05",
+   "time": "17:00",
+   "day_order": 2,
+   "venue": "Uniamazonia Sede Porvenir - Florencia",
+   "sala": "Auditorio Angel Cuniberti",
+   "event_kind": "evento",
+   "is_recurring": true,
+   "has_qa": false,
+   "_src": {
+    "url": "https://www.instagram.com/p/DfIOLhBloOw/",
+    "date": "2026-10-30",
+    "lamina": 5
+   },
+   "_fid": "f_ad935eb4f2",
+   "id": "f_ad935eb4f2",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    }
+   }
+  },
+  {
+   "title": "Guardianes de la Fauna Amazónica: Plecturocebus Caquetensis y Los Guardianes de las Aves",
+   "type": "film",
+   "section": "🌿 Proyecciones",
+   "duration": "150 min",
+   "_ancla": [
+    "Uniamazonia Sede Porvenir - Florencia",
+    "2026-11-05",
+    "19:00"
+   ],
+   "day": "2026-11-05",
+   "time": "19:00",
+   "day_order": 2,
+   "venue": "Uniamazonia Sede Porvenir - Florencia",
+   "sala": "Auditorio Angel Cuniberti",
+   "has_qa": true,
+   "_src": {
+    "url": "https://www.instagram.com/p/DfIOLhBloOw/",
+    "date": "2026-10-30",
+    "lamina": 5
+   },
+   "is_cortos": true,
+   "film_list": [
+    {
+     "title": "Guardianes de la fauna amazónica: Plecturocebus caquetensis"
+    },
+    {
+     "title": "Los guardianes de las aves"
+    }
+   ],
+   "_fid": "f_bfcb3bae18",
+   "id": "f_bfcb3bae18",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    }
+   }
+  },
+  {
+   "title": "La memoria de las mariposas",
+   "type": "film",
+   "section": "🌿 Proyecciones",
+   "director": "Tatiana Fuentes Sadowski",
+   "year": 2026,
+   "country": "Portugal, Peru",
+   "flags": "🇵🇹🇵🇪",
+   "duration": "150 min",
+   "genre": "Documental",
+   "_ancla": [
+    "Maloca Huitoto - Florencia",
+    "2026-11-05",
+    "19:30"
+   ],
+   "day": "2026-11-05",
+   "time": "19:30",
+   "day_order": 2,
+   "venue": "Maloca Huitoto - Florencia",
+   "has_qa": true,
+   "synopsis": "Emergiendo de la era del caucho, las historias perdidas de Omarino y Aredomi se revelan a través de un viaje sensorial que entrelaza la propia historia de la cineasta con archivos de la Amazonía de inicios del siglo veinte. La película es a la vez un ritual y una invocación a dialogar entre vivos y muertos, reflexionando sobre los límites de la investigación, la especulación, el poder, la memoria y las reparaciones.",
+   "synopsis_lang": "es",
+   "poster": "/assets/mambe-2026/la-memoria-de-las-mariposas.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfIOLhBloOw/",
+    "date": "2026-10-30",
+    "lamina": 5
+   },
+   "lbSlug": "the-memory-of-butterflies",
+   "tmdb_id": 1418601,
+   "synopsis_en": "A photo of two indigenous boys brought by force to Europe opens an investigation of the past with meditations on the filmmaker’s own family using roughly textured analogue footage. A monument for the indigenous victims of the rubber trade in Peru.",
+   "title_en": "The Memory of Butterflies",
+   "_fid": "f_8375220d16",
+   "id": "f_8375220d16",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    }
+   }
+  },
+  {
+   "title": "Taller: Cine Comunitario",
+   "type": "event",
+   "section": "🎪 Actividades",
+   "duration": "180 min",
+   "_ancla": [
+    "Biblioteca SENA - Florencia",
+    "2026-11-06",
+    "09:00"
+   ],
+   "day": "2026-11-06",
+   "time": "09:00",
+   "day_order": 3,
+   "venue": "Biblioteca SENA - Florencia",
+   "event_kind": "taller",
+   "is_recurring": true,
+   "has_qa": false,
+   "_src": {
+    "url": "https://www.instagram.com/p/DfIOLhBloOw/",
+    "date": "2026-10-30",
+    "lamina": 6
+   },
+   "_fid": "f_a07e292564",
+   "id": "f_a07e292564",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    }
+   }
+  },
+  {
+   "title": "Encuentro: Taller Mujeres Buscadoras",
+   "type": "event",
+   "section": "🎪 Actividades",
+   "duration": "180 min",
+   "_ancla": [
+    "Casa Campesina - Florencia",
+    "2026-11-06",
+    "09:00"
+   ],
+   "day": "2026-11-06",
+   "time": "09:00",
+   "day_order": 3,
+   "venue": "Casa Campesina - Florencia",
+   "event_kind": "encuentro",
+   "has_qa": false,
+   "_src": {
+    "url": "https://www.instagram.com/p/DfIOLhBloOw/",
+    "date": "2026-10-30",
+    "lamina": 6
+   },
+   "_fid": "f_69f5e0db88",
+   "id": "f_69f5e0db88",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    }
+   }
+  },
+  {
+   "title": "Taller Actuación: María Cecilia Sanchez",
+   "type": "event",
+   "section": "🎪 Actividades",
+   "duration": "180 min",
+   "_ancla": [
+    "Uniamazonia Sede Centro - Florencia",
+    "2026-11-06",
+    "15:00"
+   ],
+   "day": "2026-11-06",
+   "time": "15:00",
+   "day_order": 3,
+   "venue": "Uniamazonia Sede Centro - Florencia",
+   "sala": "Edificio Yapura - Sala 17, piso 7",
+   "event_kind": "taller",
+   "is_recurring": true,
+   "has_qa": false,
+   "_src": {
+    "url": "https://www.instagram.com/p/DfIOLhBloOw/",
+    "date": "2026-10-30",
+    "lamina": 6
+   },
+   "_fid": "f_6dd8ac0000",
+   "id": "f_6dd8ac0000",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    }
+   }
+  },
+  {
+   "title": "Soñé su nombre",
+   "type": "film",
+   "section": "🌿 Proyecciones",
+   "director": "Ángela Carabalí",
+   "year": 2026,
+   "country": "Colombia",
+   "flags": "🇨🇴",
+   "duration": "180 min",
+   "genre": "Documental",
+   "_ancla": [
+    "Uniamazonia Sede Centro - Florencia",
+    "2026-11-06",
+    "16:00"
+   ],
+   "day": "2026-11-06",
+   "time": "16:00",
+   "day_order": 3,
+   "venue": "Uniamazonia Sede Centro - Florencia",
+   "sala": "Auditorio Callicebus",
+   "has_qa": true,
+   "synopsis": "Después de 30 años negando su dolor, Ángela se enfrenta a su pasado cuando su padre, en un sueño, le pide que lo busque. Junto a su hermana Juliana, emprende un viaje a través de Colombia hasta las tierras indígenas donde su padre, un agricultor afrodescendiente, fue víctima de desaparición forzada.  Mientras las hermanas atraviesan el país, no solo vemos los paisajes contrastantes de Colombia, sino que también se entablan conversaciones que revelan el perfil de su padre, Esaú Carabalí Brand: un arrocero independiente, rebelde y víctima de un robo crucial. En el camino, descubren un inesperado archivo sonoro familiar y hacen una parada en la casa de su introspectiva abuela paterna.  Días después, las hermanas salen del territorio, habiendo encontrado el amor, el legado de su padre y una comunidad atravesada por la violencia que aún resiste manteniendo una conexión profunda con su tierra y su alimento.",
+   "synopsis_lang": "es",
+   "poster": "/assets/mambe-2026/sone-su-nombre.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfIOLhBloOw/",
+    "date": "2026-10-30",
+    "lamina": 7
+   },
+   "lbSlug": "i-dreamed-his-name",
+   "tmdb_id": 1454365,
+   "synopsis_en": "Thirty years after his forced disappearance, the filmmaker’s Afro Colombian father comes to her in a dream, asking her to find him. With her sister, she sets out on a journey of discovery across Colombia’s painful history, reconnecting with their father and his activism.",
+   "title_en": "I Dreamed His Name",
+   "_fid": "f_fceb45d866",
+   "id": "f_fceb45d866",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    }
+   }
+  },
+  {
+   "title": "Taller: Serigrafía",
+   "type": "event",
+   "section": "🎪 Actividades",
+   "duration": "150 min",
+   "_ancla": [
+    "Uniamazonia Sede Centro - Florencia",
+    "2026-11-06",
+    "17:00"
+   ],
+   "day": "2026-11-06",
+   "time": "17:00",
+   "day_order": 3,
+   "venue": "Uniamazonia Sede Centro - Florencia",
+   "sala": "Auditorio Callicebus",
+   "event_kind": "taller",
+   "is_recurring": true,
+   "has_qa": false,
+   "_src": {
+    "url": "https://www.instagram.com/p/DfIOLhBloOw/",
+    "date": "2026-10-30",
+    "lamina": 7
+   },
+   "_fid": "f_b860098bab",
+   "id": "f_b860098bab",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    }
+   }
+  },
+  {
+   "title": "Lactar",
+   "type": "film",
+   "section": "🌿 Proyecciones",
+   "director": "Harold Trompetero",
+   "year": 2026,
+   "country": "Colombia",
+   "flags": "🇨🇴",
+   "duration": "150 min",
+   "genre": "Drama",
+   "_ancla": [
+    "Uniamazonia Sede Centro - Florencia",
+    "2026-11-06",
+    "19:30"
+   ],
+   "day": "2026-11-06",
+   "time": "19:30",
+   "day_order": 3,
+   "venue": "Uniamazonia Sede Centro - Florencia",
+   "sala": "Auditorio Callicebus",
+   "has_qa": true,
+   "synopsis": "Una mujer de 62 años, atrapada en una vida de privilegios vacíos, queda embarazada de su chofer. Enfrentándose al rechazo de su familia y de la sociedad, decide luchar por traer a la vida un bebé que parece imposible a su tardía edad, sin importar las consecuencias.",
+   "synopsis_lang": "es",
+   "poster": "/assets/mambe-2026/lactar.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfIOLhBloOw/",
+    "date": "2026-10-30",
+    "lamina": 7
+   },
+   "lbSlug": "lactar",
+   "tmdb_id": 1694304,
+   "synopsis_en": "A 62-year-old woman, trapped in a life of empty privilege, becomes pregnant by her driver. Facing rejection from her family and society, she decides to fight to bring to life a baby that seems impossible at her late age, regardless of the consequences.",
+   "_fid": "f_f552f070a8",
+   "id": "f_f552f070a8",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    }
+   }
+  },
+  {
+   "title": "Exhibición: Taller Cianotipia",
+   "type": "event",
+   "section": "🎪 Actividades",
+   "duration": "300 min",
+   "_ancla": [
+    "Uniamazonia Sede Porvenir - Florencia",
+    "2026-11-07",
+    "17:00"
+   ],
+   "day": "2026-11-07",
+   "time": "17:00",
+   "day_order": 4,
+   "venue": "Uniamazonia Sede Porvenir - Florencia",
+   "sala": "Auditorio Angel Cuniberti",
+   "event_kind": "evento",
+   "info": true,
+   "has_qa": false,
+   "_src": {
+    "url": "https://www.instagram.com/p/DfIOLhBloOw/",
+    "date": "2026-10-30",
+    "lamina": 8
+   },
+   "_fid": "f_7550d449f4",
+   "id": "f_7550d449f4",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    }
+   }
+  },
+  {
+   "title": "Exhibición: Taller Cine Comunitario",
+   "type": "event",
+   "section": "🎪 Actividades",
+   "duration": "300 min",
+   "_ancla": [
+    "Uniamazonia Sede Porvenir - Florencia",
+    "2026-11-07",
+    "17:00"
+   ],
+   "day": "2026-11-07",
+   "time": "17:00",
+   "day_order": 4,
+   "venue": "Uniamazonia Sede Porvenir - Florencia",
+   "sala": "Auditorio Angel Cuniberti",
+   "event_kind": "evento",
+   "info": true,
+   "has_qa": false,
+   "_src": {
+    "url": "https://www.instagram.com/p/DfIOLhBloOw/",
+    "date": "2026-10-30",
+    "lamina": 8
+   },
+   "_fid": "f_ad8975ca9f",
+   "id": "f_ad8975ca9f",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    }
+   }
+  },
+  {
+   "title": "Exhibición: Taller Stenopeica",
+   "type": "event",
+   "section": "🎪 Actividades",
+   "duration": "300 min",
+   "_ancla": [
+    "Uniamazonia Sede Porvenir - Florencia",
+    "2026-11-07",
+    "17:00"
+   ],
+   "day": "2026-11-07",
+   "time": "17:00",
+   "day_order": 4,
+   "venue": "Uniamazonia Sede Porvenir - Florencia",
+   "sala": "Auditorio Angel Cuniberti",
+   "event_kind": "evento",
+   "info": true,
+   "has_qa": false,
+   "_src": {
+    "url": "https://www.instagram.com/p/DfIOLhBloOw/",
+    "date": "2026-10-30",
+    "lamina": 8
+   },
+   "_fid": "f_96d2ec3e8a",
+   "id": "f_96d2ec3e8a",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    }
+   }
+  },
+  {
+   "title": "Taller: Serigrafía",
+   "type": "event",
+   "section": "🎪 Actividades",
+   "duration": "150 min",
+   "_ancla": [
+    "Uniamazonia Sede Porvenir - Florencia",
+    "2026-11-07",
+    "17:00"
+   ],
+   "day": "2026-11-07",
+   "time": "17:00",
+   "day_order": 4,
+   "venue": "Uniamazonia Sede Porvenir - Florencia",
+   "sala": "Auditorio Angel Cuniberti",
+   "event_kind": "taller",
+   "is_recurring": true,
+   "has_qa": false,
+   "_src": {
+    "url": "https://www.instagram.com/p/DfIOLhBloOw/",
+    "date": "2026-10-30",
+    "lamina": 8
+   },
+   "_fid": "f_6aa1247e28",
+   "id": "f_6aa1247e28",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    }
+   }
+  },
+  {
+   "title": "Proyección: Resultado Taller Cine Comunitario y Ganadores Filmemoria",
+   "type": "event",
+   "section": "🎪 Actividades",
+   "_ancla": [
+    "Uniamazonia Sede Porvenir - Florencia",
+    "2026-11-07",
+    "19:00"
+   ],
+   "day": "2026-11-07",
+   "time": "19:00",
+   "day_order": 4,
+   "venue": "Uniamazonia Sede Porvenir - Florencia",
+   "sala": "Auditorio Angel Cuniberti",
+   "event_kind": "evento",
+   "has_qa": false,
+   "_src": {
+    "url": "https://www.instagram.com/p/DfIOLhBloOw/",
+    "date": "2026-10-30",
+    "lamina": 9
+   },
+   "_fid": "f_5501c7545e",
+   "id": "f_5501c7545e",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "duration": {
+     "tipo": "regla",
+     "marca": "estimado"
+    }
+   },
+   "duration": "30 min"
+  },
+  {
+   "title": "Chiribiquete",
+   "type": "film",
+   "section": "🌿 Proyecciones",
+   "duration": "150 min",
+   "_ancla": [
+    "Uniamazonia Sede Porvenir - Florencia",
+    "2026-11-07",
+    "19:30"
+   ],
+   "day": "2026-11-07",
+   "time": "19:30",
+   "day_order": 4,
+   "venue": "Uniamazonia Sede Porvenir - Florencia",
+   "sala": "Auditorio Angel Cuniberti",
+   "has_qa": true,
+   "_src": {
+    "url": "https://www.instagram.com/p/DfIOLhBloOw/",
+    "date": "2026-10-30",
+    "lamina": 9
+   },
+   "_fid": "f_bc52a64c65",
+   "id": "f_bc52a64c65",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    }
+   }
+  },
+  {
+   "title": "Fiesta de Cierre",
+   "type": "event",
+   "section": "🎪 Actividades",
+   "_ancla": [
+    "Casa Campesina - Florencia",
+    "2026-11-07",
+    "22:00"
+   ],
+   "day": "2026-11-07",
+   "time": "22:00",
+   "day_order": 4,
+   "venue": "Casa Campesina - Florencia",
+   "event_kind": "fiesta",
+   "has_qa": false,
+   "_src": {
+    "url": "https://www.instagram.com/p/DfIOLhBloOw/",
+    "date": "2026-10-30",
+    "lamina": 9
+   },
+   "_fid": "f_e8310ce9f2",
+   "id": "f_e8310ce9f2",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-30",
+     "url": "https://www.instagram.com/p/DfIOLhBloOw/"
+    },
+    "duration": {
+     "tipo": "regla",
+     "marca": "estimado"
+    }
+   },
+   "duration": "60 min"
+  }
+ ],
+ "_avisos_duracion": [
+  "«Horizonte»: 180 min en el festival, 125 en TMDB",
+  "«La memoria de las mariposas»: 150 min en el festival, 77 en TMDB",
+  "«Soñé su nombre»: 180 min en el festival, 86 en TMDB",
+  "«Lactar»: 150 min en el festival, 75 en TMDB"
+ ],
+ "_corrido": {
+  "por": "pipeline/correr.py",
+  "fecha": "2026-10-31T09:35:51",
+  "plan_sha": "c68a49d47fe0aabb",
+  "paso": 7,
+  "cmd": "python3 pipeline/mambe-2026-verificar.py"
+ }
+}

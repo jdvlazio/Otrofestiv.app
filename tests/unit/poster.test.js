@@ -324,8 +324,9 @@ test('slotPosterParts: la mesa muestra todas las obras, sin tope', () => {
   assert.ok(mixto.dato.startsWith('3 obras'));
 
   assert.ok(H.slotPosterParts([still('S1'), still('S2')]), 'solo fotogramas también: dos boletas con foto');
-  assert.strictEqual(H.slotPosterParts([sinImg('X'), sinImg('Y')]), null,
-    'sin NINGUNA imagen no hay mesa: cae al generativo (jerarquía)');
+  const sinNada = H.slotPosterParts([sinImg('X'), sinImg('Y')]);
+  assert.deepStrictEqual(sinNada && sinNada.modules.map(m => m.kind), ['nada', 'nada'],
+    'sin NINGUNA imagen también hay mesa: una boleta con su título por obra (Juan, 31 oct)');
 
   const mas = k => Array.from({length:k}, (_,i) => afiche('X'+i, 'https://image.tmdb.org/t/p/w342/'+i+'.jpg'));
   for (const k of [3, 8, 9, 12, 14]) {

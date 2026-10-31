@@ -373,12 +373,9 @@ export function _seccionPartes(label){
 // dejaba la sección en 3,3px y el dato en 2,8px — ruido que además REPITE lo
 // que la fila ya dice al lado (anti-repetición). La mini responde con UNA voz:
 //  · SERIE (título con «Programa N»): el ordinal a 5u — legible de verdad.
-//  · Obra o programa con nombre: SU MARCA — 2-3 formas geométricas sobre
-//    retícula de 2u, sembradas por _djb2(título) → _mulberry32. Determinista:
-//    la misma obra dibuja SIEMPRE la misma marca — se reconoce como una
-//    portada de disco, sin leer. (Primera versión sin marca: Juan la tumbó —
-//    «no hay diferenciador, no sirve». El color es de la SECCIÓN; a 56px solo
-//    una marca por obra distingue a dos vecinas.)
+//  · Obra o programa con nombre: la BOLETA vacía, la misma de la ficha. Las
+//    formas geométricas al azar se eliminaron (Juan, 31 oct 2026: «un poco
+//    random»; todo lo que no tiene afiche habla con las formas aprobadas).
 // El GRID NO CAMBIA (decisión de Juan, 25 ago): la marca ahí era «demasiado
 // ruidosa, minimalismo cero». La mini vive solo donde el título va al lado.
 export function _buildPosterMini({accent, title, esPrograma}){
@@ -396,20 +393,9 @@ export function _buildPosterMini({accent, title, esPrograma}){
   if(_m){
     cuerpo=`<text x="${M}" y="${VH-M}" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="${5*U}" font-weight="800" fill="#F0EDE8">${escXML(_m[1])}</text>`;
   } else {
-    const rnd=_mulberry32(_djb2(String(title||'')));
-    const cel=2*U, usadas=new Set(), n=2+Math.floor(rnd()*2);
-    for(let i=0;i<n;i++){
-      let cx,cy,k=0;
-      do{ cx=Math.floor(rnd()*4); cy=1+Math.floor(rnd()*4); k++; }while(usadas.has(cx+'-'+cy)&&k<8);
-      usadas.add(cx+'-'+cy);
-      const x=cx*cel, y=cy*cel, op=i===0?'':' opacity=".45"';
-      switch(Math.floor(rnd()*4)){
-        case 0: cuerpo+=`<circle cx="${x+cel/2}" cy="${y+cel/2}" r="${cel/2}" fill="${_acc}"${op}/>`; break;
-        case 1: cuerpo+=`<path d="M${x} ${y+cel} A${cel} ${cel} 0 0 1 ${x+cel} ${y} L${x+cel} ${y+cel} Z" fill="${_acc}"${op}/>`; break;
-        case 2: cuerpo+=`<rect x="${x}" y="${y}" width="${cel}" height="${cel/2}" fill="${_acc}"${op}/>`; break;
-        case 3: cuerpo+=`<path d="M${x} ${y} L${x+cel} ${y} L${x} ${y+cel} Z" fill="${_acc}"${op}/>`; break;
-      }
-    }
+    // Sin ordinal: la boleta vacía, la misma de la ficha (Juan, 31 oct 2026:
+    // las figuras geométricas al azar se eliminan por completo).
+    return _posterForma({forma:'boleta', accent:_acc, title:'', dato:''});
   }
   return 'data:image/svg+xml,'+encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${VW} ${VH}">${base}${cuerpo}</svg>`);
 }
@@ -891,6 +877,14 @@ export function _posterForma({forma, accent, label, title, dato}){
     cuerpo+=ttl.lines.map((l,i)=>_txt(l,_PAD,y0+i*ttl.lh,ttl.fs,'#F0EDE8')).join('');
     const dY=trY-8*_PX;
     if(_dato) cuerpo+=_txt(_dato,_PAD,dY,_DAT,'#8A847B',{w:500});
+    // La marca (Juan, 31 oct 2026, opción B): el anillo de Otrofestiv abajo a la
+    // derecha, a la altura de la duración. En la ficha la boleta va sin título
+    // y sin ella quedaba vacía. Hueso atenuado: el ámbar es del talón.
+    const mk=13*_PX, mx=VW-8*_PX-mk, my=trY-6*_PX-mk, u=mk/24;
+    cuerpo+=`<g transform="translate(${r(mx)} ${r(my)}) scale(${r(u)})" fill="#F0EDE8" fill-opacity=".55">`
+      +`<circle cx="12" cy="12" r="9.5" fill="none" stroke="#F0EDE8" stroke-opacity=".55" stroke-width="3.4"/>`
+      +[[8.6,7.6],[10.9,7.6],[13.2,7.6],[8.6,9.9],[10.9,9.9],[13.2,9.9],[8.6,12.2],[10.9,12.2],[8.6,14.5]]
+        .map(([x,y])=>`<rect x="${x}" y="${y}" width="1.9" height="1.9" rx=".3"/>`).join('')+`</g>`;
     cuerpo+=`<line x1="${r(9*_PX)}" y1="${r(trY)}" x2="${r(VW-9*_PX)}" y2="${r(trY)}" stroke="#F0EDE8" stroke-opacity=".22" stroke-width="${r(_PX)}" stroke-dasharray="3 3"/>`
       +`<circle cx="0" cy="${r(trY)}" r="${r(6*_PX)}" fill="${NEGRO}"/><circle cx="${VW}" cy="${r(trY)}" r="${r(6*_PX)}" fill="${NEGRO}"/>`
       +`<rect y="${r(VH-3*_PX)}" width="${VW}" height="${r(3*_PX)}" fill="${acc}"/>`;
