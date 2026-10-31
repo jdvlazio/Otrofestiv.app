@@ -1,6 +1,6 @@
 {
  "_provenance": {
-  "fuente": "IG @fecisofest, láminas De-YoeFnxa- y De-Se7PxX6z (leídas a ojo); DfHy8m7EawM, DfDdO5uxecF, DfBG5XIkeOq, DfDAL9QFDhP, DfH7R8Skfa4 (láminas a ojo + pies, 31 oct)",
+  "fuente": "IG @fecisofest, láminas De-YoeFnxa- y De-Se7PxX6z (leídas a ojo); DfHy8m7EawM, DfDdO5uxecF, DfBG5XIkeOq, DfDAL9QFDhP, DfH7R8Skfa4 (láminas a ojo + pies, 31 oct); DfKqcEAERcs (7 láminas a ojo + pie, 31 oct: ceremonia de apertura)",
   "capturado": "2026-10-31",
   "metodo": "funciones sueltas anunciadas por post; la programación completa aún no está publicada"
  },
@@ -142,6 +142,38 @@
     "date": "2026-10-26"
    },
    "_nota": "al aire libre; la lámina pinta «Exhibición · Competencia Nacional de Larcometraje» [sic]"
+  },
+  {
+   "titulo": "Ceremonia de apertura 10° FECISO",
+   "dia": "2026-11-01",
+   "hora": "17:00",
+   "sede": "Cinemateca del Sol",
+   "sala": "",
+   "ciudad": "Sogamoso",
+   "is_cortos": true,
+   "film_list": [
+    {
+     "titulo": "La bondad de la feijoa",
+     "director": "Karen Sofía Gómez Estupiñán",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Teresa",
+     "director": "Edgar Medina Fetecua",
+     "pais": "Colombia"
+    }
+   ],
+   "has_qa": true,
+   "qa_type": "team",
+   "acceso": "Entrada libre",
+   "ticket_url": "",
+   "en_app": true,
+   "sinopsis": "Cóctel de bienvenida (Licores Suamox), Claquetazo FECISO 10 años (Oku Producciones SAS BIC.), La chispa que enciende el cine en Boyacá (Cinemateca del Sol), lanzamiento del mural de la Sala Suamox (Chamox), proyección de cortometrajes, conversatorio con realizadores invitados, emprendimientos locales (Artesanos de Sugamuxi) y música en vivo con Laura Chaparro Nossa y La Caracola.",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfKqcEAERcs/",
+    "date": "2026-10-31"
+   },
+   "_nota": "lámina 00: programa de la ceremonia, «Domingo / 1 de noviembre / 5:00PM», Calle 9 # 9-64, Barrio Mochacá; láminas 01 y 02 son los afiches de los cortos (La Bondad de La Feijoa, Teresa), sin otra lista; 03–05 música y la sala. No nombran a los realizadores invitados. Sin aviso de pago → entrada libre."
   }
  ]
 }
