@@ -127,8 +127,9 @@ FUNCIONES = [
     # 31 oct: la función de Fontanar tiene ficha propia (3846) con NUEVE obras —
     # una más que «Con extremos» del Centro (3592)—. Mismo título con otra lista
     # es otra obra para la app ([programa-mismo-titulo]): va con el título
-    # VERBATIM de su ficha, «SURGENTES-Animación latinoamericana».
-    ('2026-11-01', '14:00', 'SURGENTES-Animación latinoamericana', 'Surgentes', FON, '', LIBRE, 12, None, {'programa': 'Surgentes - Con extremos'}),
+    # el nombre de su ficha («SURGENTES-Animación latinoamericana») en caja de
+    # título como el resto de «Surgentes - …»: nunca mayúscula sostenida (Juan).
+    ('2026-11-01', '14:00', 'Surgentes - Animación latinoamericana', 'Surgentes', FON, '', LIBRE, 12, None, {'programa': 'Surgentes - Con extremos'}),
 ]
 # La exposición: 22 oct–13 nov, 8:00–17:00; el PDF la lista en cada día de
 # programación desde el 22 (no el 26 ni el 29). Se recorre, no se reserva → info.

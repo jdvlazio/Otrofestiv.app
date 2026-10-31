@@ -4783,7 +4783,7 @@
    }
   },
   {
-   "title": "SURGENTES-Animación Latinoamericana",
+   "title": "Surgentes - Animación Latinoamericana",
    "type": "film",
    "section": "🌋 Surgentes",
    "country": "México, República Dominicana, Brasil, Perú, Francia",
@@ -5079,7 +5079,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-31T13:26:14",
+  "fecha": "2026-10-31T13:58:13",
   "plan_sha": "17ea9621d1a0e533",
   "paso": 7,
   "cmd": "python3 pipeline/anibia-2026-verificar.py"
