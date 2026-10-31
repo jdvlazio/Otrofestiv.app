@@ -120,6 +120,7 @@ deliberada existe la etiqueta `frontera-ok`.
 | `bhff2026` | Bogotá Horror | Bogotá | 22–31 OCT | **Próximo / activo** |
 | `ficica2026` | FICICA | Barranquilla | 20–24 OCT | Recién terminado |
 | `ficidi2026` | FICIDI | Barranquilla | 3–7 NOV | **Próximo / activo** |
+| `mambe2026` | MAMBE | Florencia | 3–7 NOV | **Próximo / activo** |
 | `fantasmagoria2026` | Fantasmagoría | Medellín | 14–25 OCT | Recién terminado |
 | `midbo2026` | MIDBO | Bogotá | 27 OCT–4 NOV | **Próximo / activo** |
 | `mubibogota2026` | MUBI Fest | Bogotá | 24–25 OCT | Recién terminado |
