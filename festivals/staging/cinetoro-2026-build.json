@@ -1160,7 +1160,11 @@
    "type": "film",
    "section": "✨ Especial",
    "director": "Martha Hincapie",
+   "year": 2024,
+   "country": "Colombia",
+   "flags": "🇨🇴",
    "duration": "120 min",
+   "genre": "Documental",
    "_ancla": [
     "Vereda Patio Bonito - Toro",
     "2026-11-14",
@@ -1171,6 +1175,8 @@
    "day_order": 4,
    "venue": "Vereda Patio Bonito - Toro",
    "has_qa": false,
+   "poster": "/assets/cinetoro-2026/bajo-una-lluvia-ajena.jpg",
+   "posterSource": "tmdb",
    "_src": {
     "url": "https://cinetoro.org/programacion-2026-2/",
     "bloque": "Bajo una lluvia ajena",
@@ -1179,6 +1185,9 @@
     "hora": "14:00 a 16:00"
    },
    "is_free": true,
+   "lbSlug": "bajo-una-lluvia-ajena",
+   "tmdb_id": 1353088,
+   "synopsis_en": "After twenty years, the director returns to archives that she filmed on analogue tapes and proposes a game of glances where she constructs a reflection on various times: the life of her grandfather, who emigrated to Europe in the 1920s; the present day of the people who send messages to their loved ones with their desire to return to their land in Morocco, Palestine, Colombia, India; and the ghostly text of a young Ghanaian who is shipwrecked in the Mediterranean before reaching his destination.",
    "_fid": "f_e3e323c6ee",
    "id": "f_e3e323c6ee"
   },
@@ -1586,9 +1595,12 @@
    "id": "f_dc2a4b6a2b"
   }
  ],
+ "_avisos_duracion": [
+  "«Bajo una lluvia ajena»: 120 min en el festival, 83 en TMDB"
+ ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-31T10:11:26",
+  "fecha": "2026-10-31T12:56:40",
   "plan_sha": "f6b51c1a2fb72461",
   "paso": 8,
   "cmd": "python3 pipeline/cinetoro-2026-verificar.py"
