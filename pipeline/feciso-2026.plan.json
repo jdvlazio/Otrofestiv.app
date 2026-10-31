@@ -14,7 +14,12 @@
     "De4bPYXkf4D": "Selección Oficial Cortometraje Documental Nacional 2026 (24 oct, 13 láminas; el pie da la sede: Cinemateca del Sol, Sogamoso, 1–7 nov)",
     "De7bL1hn8vU": "Selección Oficial Cortometraje Ficción Nacional 2026 (25 oct, 13 láminas)",
     "De-YoeFnxa-": "Exhibición Kaugsankamalla en Tibasosa (vie 6 nov 6:30 p.m., Parque Principal, entrada libre; 2 láminas)",
-    "De-Se7PxX6z": "Taller «Cine colombiano como lenguaje patrimonial» (vie 6 nov 3–6 p.m., Biblioteca Francisco Mariño Soler, Tibasosa, entrada libre; 1 lámina)"
+    "De-Se7PxX6z": "Taller «Cine colombiano como lenguaje patrimonial» (vie 6 nov 3–6 p.m., Biblioteca Francisco Mariño Soler, Tibasosa, entrada libre; 1 lámina)",
+    "DfHy8m7EawM": "Aguas turbias II (lun 2 nov 4:30 p.m., Cinemateca del Sol, conversatorio con el director, entrada libre; 2 láminas)",
+    "DfDdO5uxecF": "Lanzamiento exposición «Testigos de la contaminación del agua» (lun 2 nov 5 p.m., Cinemateca del Sol, entrada libre; solo pie)",
+    "DfBG5XIkeOq": "Taller de pixilación «Un recuerdo en movimiento» (mié 4 nov 8–12, Cinemateca del Sol, solo estudiantes INSEANDES)",
+    "DfDAL9QFDhP": "Taller de cine hecho con celulares SMARTFILMS (jue 5 nov 8 a.m., UNAD Sogamoso, entrada libre)",
+    "DfH7R8Skfa4": "Exposición «Tras las huellas de Erwin Kraus» (jue 5 nov 5 p.m., Cinemateca del Sol, entrada libre)"
   },
   "sedes": [
     {
@@ -42,6 +47,15 @@
       "lng": -73.0065225,
       "_prec": "manual",
       "_fuente": "Google Maps (lugar: Biblioteca Publica Tibasosa FMS, /g/11g1nn55r2), 27 oct 2026; la nombra De-Se7PxX6z"
+    },
+    {
+      "nombre": "UNAD Sogamoso",
+      "direccion": "Cl. 5 #1-08, barrio Monquirá, Sogamoso, Boyacá",
+      "lat": 5.7035502,
+      "lng": -72.9203281,
+      "_prec": "manual",
+      "_match": "UNAD universidad Nacional A Distancia Sede Sogamoso",
+      "_fuente": "Google Maps (lugar: UNAD universidad Nacional A Distancia Sede Sogamoso, /g/11c1ncvqhk; Maps da Cl. 5 #1a52), 31 oct 2026; la nombra DfDAL9QFDhP (Calle 5 # 1-08)"
     }
   ],
   "pasos": [

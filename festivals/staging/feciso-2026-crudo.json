@@ -1,29 +1,107 @@
 {
  "_provenance": {
-  "fuente": "IG @fecisofest, láminas De-YoeFnxa- y De-Se7PxX6z (leídas a ojo)",
-  "capturado": "2026-10-27",
+  "fuente": "IG @fecisofest, láminas De-YoeFnxa- y De-Se7PxX6z (leídas a ojo); DfHy8m7EawM, DfDdO5uxecF, DfBG5XIkeOq, DfDAL9QFDhP, DfH7R8Skfa4 (láminas a ojo + pies, 31 oct)",
+  "capturado": "2026-10-31",
   "metodo": "funciones sueltas anunciadas por post; la programación completa aún no está publicada"
  },
  "funciones": [
   {
-   "titulo": "Kaugsankamalla: mientras vivamos",
-   "dia": "2026-11-06",
-   "hora": "18:30",
-   "sede": "Parque Principal de Tibasosa",
+   "titulo": "Aguas turbias II: Minas huérfanas en el territorio boyacense",
+   "dia": "2026-11-02",
+   "hora": "16:30",
+   "sede": "Cinemateca del Sol",
    "sala": "",
-   "ciudad": "Tibasosa",
-   "director": "Soraida Chindoy, Karoline Pelikan",
+   "ciudad": "Sogamoso",
+   "director": "David Mesa",
    "pais": "Colombia",
-   "has_qa": false,
-   "seccion": "Largometraje Nacional",
+   "has_qa": true,
    "acceso": "Entrada libre",
    "ticket_url": "",
    "en_app": true,
+   "sinopsis": "Una obra de David Mesa que nos acerca a las realidades de nuestro territorio y nos invita a mirar, cuestionar y reflexionar sobre las huellas que deja la actividad minera en nuestros paisajes y comunidades.",
    "_src": {
-    "url": "https://www.instagram.com/p/De-YoeFnxa-/",
-    "date": "2026-10-26"
+    "url": "https://www.instagram.com/p/DfHy8m7EawM/",
+    "date": "2026-10-30"
    },
-   "_nota": "al aire libre; la lámina pinta «Exhibición · Competencia Nacional de Larcometraje» [sic]"
+   "_nota": "lámina 00: «Proyección lunes 2 de noviembre, 4:30PM · Conversatorio con Director · Entrada libre»; lámina 01 es el afiche (Orígenes Ambientales). Sin sección de competencia."
+  },
+  {
+   "titulo": "Testigos de la contaminación del agua: drenajes ácidos de mina",
+   "dia": "2026-11-02",
+   "hora": "17:00",
+   "sede": "Cinemateca del Sol",
+   "sala": "",
+   "ciudad": "Sogamoso",
+   "tipo": "evento",
+   "event_kind": "vernissage",
+   "acceso": "Entrada libre",
+   "ticket_url": "",
+   "en_app": true,
+   "sinopsis": "Lanzamiento de la exposición fotográfica del fotógrafo y documentalista sogamoseño David Mesa, una muestra que nos invita a detenernos frente a esas realidades que muchas veces pasan inadvertidas, pero que dejan huellas en nuestros ecosistemas, nuestras comunidades y nuestro futuro. Exposición permanente del 2 al 21 de noviembre.",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfDdO5uxecF/",
+    "date": "2026-10-28"
+   },
+   "_nota": "solo pie (el embed no sirvió láminas); el pie lo llama «Lanzamiento»"
+  },
+  {
+   "titulo": "Un recuerdo en movimiento",
+   "dia": "2026-11-04",
+   "hora": "08:00",
+   "duracion_min": 240,
+   "sede": "Cinemateca del Sol",
+   "sala": "",
+   "ciudad": "Sogamoso",
+   "tipo": "evento",
+   "event_kind": "taller",
+   "by_invitation": true,
+   "acceso": "Exclusivo para estudiantes de la I. E. INSEANDES",
+   "ticket_url": "",
+   "en_app": true,
+   "sinopsis": "Taller de pixilación con Sin Permiso Films. A través de la proyección de cortometrajes y ejercicios prácticos, exploraremos la pixilación, una técnica de animación cuadro a cuadro en la que las personas se convierten en protagonistas de la imagen. Talleristas: Diego H. Gutiérrez y Lawless.",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfBG5XIkeOq/",
+    "date": "2026-10-28"
+   },
+   "_nota": "8:00 a. m. a 12:00 m.; actividad exclusiva para estudiantes de la I. E. INSEANDES (cerrada)"
+  },
+  {
+   "titulo": "Taller de cine hecho con celulares",
+   "dia": "2026-11-05",
+   "hora": "08:00",
+   "sede": "UNAD Sogamoso",
+   "sala": "",
+   "ciudad": "Sogamoso",
+   "tipo": "evento",
+   "event_kind": "taller",
+   "acceso": "Entrada libre",
+   "ticket_url": "",
+   "en_app": true,
+   "sinopsis": "Con SMARTFILMS®, una oportunidad para descubrir el poder de la imagen, fortalecer tus competencias comunicativas y transformar tus ideas en historias audiovisuales. Invitación especial a los estudiantes del curso de Competencias Comunicativas de la UNAD Sogamoso y al público en general.",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfDAL9QFDhP/",
+    "date": "2026-10-28"
+   },
+   "_nota": "lámina 00: «Jueves 5 de noviembre, 8:00 AM · Universidad Nacional Abierta y a Distancia · Calle 5 # 1-08, Barrio Monquirá · Entrada libre»; sin hora de fin"
+  },
+  {
+   "titulo": "Tras las huellas de Erwin Kraus",
+   "dia": "2026-11-05",
+   "hora": "17:00",
+   "sede": "Cinemateca del Sol",
+   "sala": "",
+   "ciudad": "Sogamoso",
+   "tipo": "evento",
+   "event_kind": "vernissage",
+   "acceso": "Entrada libre",
+   "ticket_url": "",
+   "en_app": true,
+   "sinopsis": "Un diálogo fotográfico entre la memoria y el deshielo de la Sierra Nevada del Cocuy. Juan Sebastián Perdomo presentará el proyecto ganador del Portafolio de Estímulos de la Gobernación de Boyacá.",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfH7R8Skfa4/",
+    "date": "2026-10-30"
+   },
+   "_nota": "lámina 00: «Jueves 5 de noviembre, 5:00PM · Entrada libre»; el pie la llama exposición"
   },
   {
    "titulo": "Cine colombiano como lenguaje patrimonial",
@@ -44,6 +122,26 @@
    },
    "sinopsis": "Taller a cargo de Scrap Films Colombia.",
    "_nota": "3:00–6:00 p.m. según la lámina"
+  },
+  {
+   "titulo": "Kaugsankamalla: mientras vivamos",
+   "dia": "2026-11-06",
+   "hora": "18:30",
+   "sede": "Parque Principal de Tibasosa",
+   "sala": "",
+   "ciudad": "Tibasosa",
+   "director": "Soraida Chindoy, Karoline Pelikan",
+   "pais": "Colombia",
+   "has_qa": false,
+   "seccion": "Largometraje Nacional",
+   "acceso": "Entrada libre",
+   "ticket_url": "",
+   "en_app": true,
+   "_src": {
+    "url": "https://www.instagram.com/p/De-YoeFnxa-/",
+    "date": "2026-10-26"
+   },
+   "_nota": "al aire libre; la lámina pinta «Exhibición · Competencia Nacional de Larcometraje» [sic]"
   }
  ]
 }
