@@ -846,15 +846,15 @@ export const FESTIVAL_CONFIG={
   },
   'cinetoro2026': {
     // EL NOMBRE es el del festival (cinetoro.org); la edición va en fullName.
-    // Días oficiales 10–15 NOV (Roldanillo 10, Toro 11–15). El calendario arranca
-    // el 7 por el lanzamiento en el CCMI de Cali (decisión de Juan, 31 oct 2026);
-    // 8 y 9 sin programación.
+    // Días oficiales 10–15 NOV (Roldanillo 10, Toro 11–15). Lo de otras ciudades
+    // (Bogotá, Cali, Palmira) queda fuera (decisión de Juan, 31 oct 2026).
     name:'CINETORO',displayName:'CINETORO',
     fullName:'CINETORO Experimental Film Festival 2026',shortName:'CINETORO',
     city:'Toro',country:'CO',
     dates:'10–15 NOV',dates_en:'NOV 10–15',year:2026,timezoneOffset:'-05:00',
     // el subtítulo expande el nombre; el lema del año («Límites convergentes») vive en el afiche
     tagline:'Festival de Cine Experimental de Toro',
+    keyArt:'/assets/keyart/cinetoro2026-v2.jpg',
     instagram:'cinetorofilmfestival', storageKey:'cinetoro2026_',festivalStartStr:'2026-11-10T00:00:00',festivalEndStr:'2026-11-15T23:59:00',
     festivalDates:{'2026-11-10':'2026-11-10','2026-11-11':'2026-11-11','2026-11-12':'2026-11-12','2026-11-13':'2026-11-13','2026-11-14':'2026-11-14','2026-11-15':'2026-11-15'},
     days:[{k:'2026-11-10',d:10,lbl:'MAR'},{k:'2026-11-11',d:11,lbl:'MIÉ'},{k:'2026-11-12',d:12,lbl:'JUE'},{k:'2026-11-13',d:13,lbl:'VIE'},{k:'2026-11-14',d:14,lbl:'SÁB'},{k:'2026-11-15',d:15,lbl:'DOM'}],
