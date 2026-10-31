@@ -4790,8 +4790,10 @@
    "fechas_2026": "10–15 NOV 2026 (19ª, Festhome)",
    "web": "https://cinetoro.org",
    "ig": "@cinetorofilmfestival",
-   "estado": "radar",
-   "id_config": null,
+   "estado": "en_app",
+   "id_config": [
+    "cinetoro2026"
+   ],
    "issue": [
     1268
    ],

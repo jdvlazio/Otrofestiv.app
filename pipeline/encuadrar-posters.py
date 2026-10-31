@@ -70,7 +70,10 @@ FONDO_ES_ARTE = {'funeral-siniestro.jpg',
                  'familia-teme-enfrentar-una-nueva-noche-de-terror.jpg', 'horror-and-love.jpg',
                  # Bogotá Horror 8 (7 oct): el negro de «Sigilo» y «El susurro» y el
                  # fondo oscuro de «Esquirlas de caracol» llegan al borde; no hay marco
-                 'sigilo.jpg', 'el-susurro.jpg', 'esquirlas-de-caracol.jpg'}
+                 'sigilo.jpg', 'el-susurro.jpg', 'esquirlas-de-caracol.jpg',
+                 # CINETORO 2026 (31 oct): el cielo gris de «Traducir lo propio» y el
+                 # papel claro de «Um corpo sem cavalo?» llegan al borde; mirados, no hay marco
+                 'traducir-lo-propio-o-el-sintoma-de-recordar.jpg', 'um-corpo-sem-cavalo.jpg'}
 
 
 def rejilla(path):

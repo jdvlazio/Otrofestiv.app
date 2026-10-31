@@ -1,16 +1,35 @@
 {
  "id": "w_R4HBN9AY1HWQ",
  "titulo_original": "La garganta del diablo",
- "anio": null,
+ "anio": 2026,
  "paises": [
   "CO"
  ],
- "directores": [],
- "afiche": {
-  "archivo": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_LaGargantadeDiablo%20-%20Juanita%20Urue%C3%B1a%20Barreto.png?itok=WsH78OYf",
-  "veredicto": "oficial-festival"
+ "directores": [
+  "Mateo Ramírez"
+ ],
+ "aliases": [
+  {
+   "titulo": "The Devil’s Throat",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "Un hombre recorre el camino que llevó a su padre a caer en la Garganta del Diablo a través de las imágenes que este dejó. Entre el eco del agua y el silencio hueco del archivo, surge un vacío que solo se revela cuando el reflejo en el agua ya no es el de ellos, sino el nuestro. Un viaje a través del tiempo, entre el duelo y la redención.",
+  "en": "A man retraces his father’s fall into the Devil’s Throat through the footage he left behind. Between the water’s echo and the archive’s hollow silence, a void emerges, exposed only when the reflection in the water is no longer theirs but ours. A journey through time, between grief and redemption."
  },
- "xref": {},
+ "generos": [
+  "Drama"
+ ],
+ "afiche": {
+  "archivo": "/assets/cinetoro-2026/la-garganta-del-diablo.jpg",
+  "veredicto": "oficial"
+ },
+ "xref": {
+  "tmdb": 1641446,
+  "letterboxd": "the-devils-throat"
+ },
  "versiones": [
   {
    "etiqueta": "15 min",
@@ -18,6 +37,7 @@
   }
  ],
  "presentaciones": [
+  "cinetoro-2026",
   "ficci-65"
  ]
 }

@@ -1,0 +1,59 @@
+{
+ "_provenance": {
+  "fuente": "issue de radar #1268 — https://github.com/jdvlazio/Otrofestiv.app/issues/1268",
+  "capturado": "2026-10-31",
+  "titulo": "RADAR: CINETORO Experimental Film Festival — Toro (Valle), 10–15 NOV 2026 (19ª)",
+  "estado": "OPEN",
+  "comentarios": 11
+ },
+ "issue": 1268,
+ "titulo": "RADAR: CINETORO Experimental Film Festival — Toro (Valle), 10–15 NOV 2026 (19ª)",
+ "estado": "OPEN",
+ "cuerpo": "Web: https://cinetoro.org · IG: @cinetorofilmfestival\nFechas: ficha de Festhome (https://filmmakers.festhome.com/en/festival/280). IG activo en oct 2026 (cine concierto, laboratorio, diplomado). Selección del laboratorio publicada el 16 oct; la selección oficial de obras aún no se ve.\nCine experimental, mediano, con apoyo de la Gobernación del Valle. En otros años con sedes también en Cali, Cartago y Roldanillo.\nDecisión (Juan, 25 oct): al radar para tenerlo; se decide montarlo al ver su tamaño y programación.",
+ "comentarios": [
+  {
+   "fecha": "2026-10-26",
+   "cuerpo": "**Vigía 26 oct (13:00): CINETORO publicó su selección oficial → toca pre-onboarding.**\n\nEn la web hay 4 páginas de competencia, publicadas el 6 oct y modificadas el 11 oct. Por eso el radar no las vio el 25. Suman **37 obras**:\n- «Vector imaginado» / Competencia Oficial Nacional: 11 obras. https://cinetoro.org/edicion-2026/vector-imaginado-competencia-oficial-nacional/\n- «Geometría de la diferencia» / Competencia Oficial Internacional: 13 obras. https://cinetoro.org/edicion-2026/geometria-de-la-diferencia-competencia-oficial-internacional/\n- «Curvas Interlineadas» / Competencia Oficial Emergente: 8 obras. https://cinetoro.org/edicion-2026/curvas-interlineadas-competencia-oficial-emergente/\n- «Puntos de fuga» / Competencia Oficial de Mediometrajes: 5 obras. https://cinetoro.org/edicion-2026/puntos-de-fuga-competencia-oficial-de-mediometrajes/\n\nCada obra trae título, dirección, país, año, duración y sinopsis. **No hay programación** con día, hora o sede. Tampoco aparece en el sitio la categoría «Selección 2026» con otras secciones.\nOjo: «Una vez en un cuerpo» (María Cristina Pérez) también está en la selección de FICFUSA.\nVía: web (sin IG).\n"
+  },
+  {
+   "fecha": "2026-10-26",
+   "cuerpo": "Pre-onboarding en la rama `data/cinetoro-2026` (sin PR ni config): **39 obras**, no 37. Nacional 11, Internacional **14**, Emergente **9**, Mediometrajes 5. Cascada: 30 con ficha (16 ya publicadas en otros festivales nuestros), 27 con afiche. Las 12 sin afiche tienen su porqué: la web solo publica fotogramas. Falta la programación."
+  },
+  {
+   "fecha": "2026-10-26",
+   "cuerpo": "Enriquecido de CINETORO en `data/cinetoro-2026` (0801437b): +3 afiches (Dynamo de Tirana, Blue de Split, «Muchas, muchas gracias» de TMDB 1592612); los otros 9 siguen sin afiche, con el motivo real (hay que pedírselos al festival). Las 39 sinopsis son oficiales en español. Duraciones: Dynamo 11 min, La garganta del diablo 15 min; Sensual, Traducir lo propio y Pudor se quedan como dice la web, con su fuente. preonboarding: deuda 0."
+  },
+  {
+   "fecha": "2026-10-26",
+   "cuerpo": "Decisión de Juan (26 oct): CINETORO SÍ se publica. Cuando salga la programación: montar desde la rama data/cinetoro-2026 y preparar el mensaje al festival con lo que falte (afiches de Yerba, Jonah, Rastro, Un aparato para detectar fantasmas, Atarashi Ouchi ni Chu!, ḤAŚWƐ, Anthropos, Boyuna, Wild Yeast). Pendiente: confirmar la ficha TMDB de «Muchas, muchas gracias» (TMDB acredita dirección a «Oiyi Kan»)."
+  },
+  {
+   "fecha": "2026-10-26",
+   "cuerpo": "«Muchas, muchas gracias»: doble verificación hecha (26 oct). TMDB 1592612 es la misma obra (sinopsis idéntica a la del festival: Macao → Buenaventura; Colombia, 2025, 20 min). TMDB acredita dirección a «Oiyi Kan» y a Manuel Orozco como productor; se usa la ficha solo para el afiche y la dirección queda la del festival: Manuel Alejandro Orozco Van. Aprobado por Juan."
+  },
+  {
+   "fecha": "2026-10-27",
+   "cuerpo": "**Vigía 27 oct 09:00 — CINETORO publicó una muestra para colegios: «Toda tierra anhela el sol» (CINETORO al aula, 8 cortos de animación).**\n\nFuente: https://cinetoro.org/cinetoro/cinetoro-al-aula/ (post del 26 oct 19:43, modificado 20:20) y la página https://cinetoro.org/cinetoro-al-aula/.\n\nObras (título tal cual de la web): Four Percent (Monika Maslon) · How (Marko Mestrovic) · Invisible Walls (Florian Schönerstedt) · Microcosmos. Un gabinete de curiosidades (María Lorenzo) · The Spring Sea (Koji Yamamura) · Zirkus (Thomas Renoldner) · (DIS)CONNECTED · Tres gatos parias.\n\nNinguna está en la rama `data/cinetoro-2026`. La web no da día, hora ni sede, y por el texto de ediciones anteriores es una muestra para colegios (puede no ser abierta al público). Toca decidir si entra al pre-onboarding.\n"
+  },
+  {
+   "fecha": "2026-10-28",
+   "cuerpo": "**Vigía 28 oct 13:00 — CINETORO creó la página «Programacion 2026»** (https://cinetoro.org/programacion-2026/, creada 28 oct 01:05, modificada 01:15 según la API de WordPress), pero **todavía está vacía**: solo trae menú y pie, sin días, horas ni sedes. Nada que montar aún; la grilla probablemente llega en los próximos días. Fuente: API `wp/v2/pages?slug=programacion-2026` + HTML de la página. (Selección 2026 sin cambios desde el 11 oct.)\n"
+  },
+  {
+   "fecha": "2026-10-29",
+   "cuerpo": "**Vigía 29 oct 09:00 — CINETORO: la página «Programacion 2026» ya no existe.** https://cinetoro.org/programacion-2026/ ahora responde 404 (ayer estaba creada y vacía), y la API de WordPress no la devuelve. El menú sigue mostrando la Selección 2026 por competencias. No hay programación publicada.\n"
+  },
+  {
+   "fecha": "2026-10-29",
+   "cuerpo": "**Vigía 29 oct 13:00 — CINETORO publicó su PROGRAMACIÓN → toca onboarding.**\nPágina nueva: https://cinetoro.org/programacion-2026-2/ (WordPress: creada 28 oct 22:59, modificada hoy 29 oct 17:34; la vieja `/programacion-2026/` sigue en 404). Leída por curl (web, sin IG).\n\n- **32 actividades** con fecha, lugar y hora, agrupadas por ciudad: Bogotá (Javeriana), Cali (CCMI, YAWA, Univalle, Javeriana Cali), Palmira (Espacio Local), Roldanillo (Museo Rayo) y Toro.\n- **Selección Oficial: Programas 1 a 9** — mar 10 nov Museo Rayo, Roldanillo (P1 «Traducir lo propio», 19:00) → mié 11 Coliseo Corregimiento de San Francisco (P2 20:30) → jue 12 Polideportivo San Antonio (P3 19:00, P4 21:00) → vie 13 Coliseo I.E. Fray José Joaquín Escobar (P5 19:00, P6 20:30) → sáb 14 mismo coliseo (P7 y P8 18:30) → dom 15 Rosalia´s Garden (P9 «Líneas imaginarias», 18:30; clausura y premiación 20:30).\n- Por el terremoto no usan el Cine Teatro de Toro (lo dice la página).\n- **Ojo al pasarlo:** la página repite «Programa No 7» y «Programa No 8» con el MISMO título («El azul del horizonte») y la misma hora (sáb 14, 18:30) — parece error de carga del festival; confirmar antes de publicar. Hay lugares «POR DEFINIR» / «Por confirmar» (Cinetoro Expandido sáb 14, taller de archivo, Cinetoro al aula del viernes).\n- Fuera de las fechas oficiales (10–15 nov): lanzamiento en Bogotá 1 oct, actividades en Cali 20–23 oct, 6–7 y 9 nov, Palmira 6 nov y masterclass 5 nov — por la regla de «solo días oficiales» quedan fuera.\n- Las obras de cada programa están detrás de los botones «PROGRAMA» de cada bloque (no las abrí).\n\nSolo aviso; no monté nada.\n"
+  },
+  {
+   "fecha": "2026-10-30",
+   "cuerpo": "**Vigía 30 oct 05:40 — CINETORO cambió su programación (04:26) y publicó la página «Programas» (04:28).** Leído por curl (web).\n- Taller Nicole Antebi «Moviendo montañas»: ahora SOLO jue 12/11, 09:00 a 13:00, Mambo House, San Antonio, «(Dos funciones)». Ya no está la sesión del viernes 13/11 en Toro.\n- El intermedio musical ahora se llama «Cuerdas cruzadas por Jerónimo Saldarriaga».\n- El mapping ahora se llama «Mapping geografías en transformación por el colectivo AZMA».\n- Mar 10/11 19:00, Museo Rayo, Programa No 1: la etiqueta pasó de «ENTRADA LIBRE» a «PROGRAMA».\n- Lanzamiento en Bogotá (Maia Gattás): la fecha se corrigió de 1/10 a 15/10 (ya pasó).\n- Página nueva https://cinetoro.org/programas-2/ con la composición de los programas: al aula «Huellas de una generación pasada» (2) y «Toda tierra anhela el sol» (7); Programa 1 «Traducir lo propio» (1); Programa 2 «Especies de espacios» (5); Programa 3 «Cartografías de un cuerpo en movimiento» (7)."
+  },
+  {
+   "fecha": "2026-10-31",
+   "cuerpo": "Vigía 31 oct: CINETORO publicó su parrilla 2026 en https://cinetoro.org/programacion-2026-2/ (Toro 10–15 nov en veredas/corregimientos por el terremoto, más Bogotá 5 nov, Cali 6–11 nov y Palmira 6 nov). La rama data/cinetoro-2026 decía «todavía no hay programación» → toca montar. Algunas sedes «Por definir/Por confirmar»."
+  }
+ ]
+}

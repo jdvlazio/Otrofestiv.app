@@ -1,45 +1,185 @@
 {
- "_nota": "CINETORO Experimental Film Festival 2026 (Toro, Valle del Cauca; 10–15 nov 2026). PRE-ONBOARDING (26 oct): la selección oficial está en la web (4 competencias, 39 obras); todavía no hay programación (día, hora, sede). Faltan el crudo, las sedes y el bloque festival completo cuando salga la parrilla. Sin bloque `festival` (como Festicine Antioquia): se escribe al montar. Secciones verbatim en Título: Competencia Oficial Nacional, Competencia Oficial Internacional, Competencia Oficial Emergente, Competencia Oficial de Mediometrajes; el nombre poético de cada competencia va como `programa` en el catálogo. Propuesta de emoji/inglés/arquetipo, para Juan: {\"Competencia Oficial Nacional\": {\"emoji\": \"🇨🇴\", \"en\": \"National Official Competition\", \"archetype\": \"Competencia\"}, \"Competencia Oficial Internacional\": {\"emoji\": \"🌍\", \"en\": \"International Official Competition\", \"archetype\": \"Competencia\"}, \"Competencia Oficial Emergente\": {\"emoji\": \"🌱\", \"en\": \"Emerging Official Competition\", \"archetype\": \"Competencia\"}, \"Competencia Oficial de Mediometrajes\": {\"emoji\": \"⏳\", \"en\": \"Official Medium-Length Competition\", \"archetype\": \"Competencia\"}}",
+ "_nota": "MONTAJE (31 oct 2026). CINETORO Experimental Film Festival 2026, «Límites convergentes» (19.ª edición). Fuentes: la parrilla cinetoro.org/programacion-2026-2/ y los programas cinetoro.org/programas-2/ (9 programas de la Selección Oficial con sus obras, 2 de Cinetoro al aula, eventos especiales), más el catálogo del pre-onboarding (26 oct). Criterio de Juan (31 oct): solo los días oficiales 10–15 nov (Roldanillo 10, Museo Rayo; Toro 11–15 en veredas y corregimientos por el terremoto) más el lanzamiento en el CCMI de Cali (sáb 7 nov, con boletería). Fuera: Bogotá, el resto de Cali, Palmira, el Laboratorio Hibridaciones y el taller exclusivo Univalle (lista en el `_fuera` del crudo). 8 y 9 nov sin programación (dias_vacios).",
  "radar": 1268,
  "fuentes_vivas": [
   {
+   "archivo": "fuentes/cinetoro-2026/programacion-2026-2.html",
+   "url": "https://cinetoro.org/programacion-2026-2/",
+   "como": "pagina",
+   "debe_contener": "Fecha:",
+   "que": "la parrilla (día, hora, lugar, acceso)"
+  },
+  {
+   "archivo": "fuentes/cinetoro-2026/programas-2.html",
+   "url": "https://cinetoro.org/programas-2/",
+   "como": "pagina",
+   "debe_contener": "PROGRAMA 9",
+   "que": "las obras de cada programa"
+  },
+  {
    "archivo": "fuentes/cinetoro-2026/vector-imaginado-competencia-oficial-nacional.html",
-   "pagina": "https://cinetoro.org/edicion-2026/vector-imaginado-competencia-oficial-nacional/",
-   "_que": "Competencia Oficial Nacional (11)"
+   "url": "https://cinetoro.org/edicion-2026/vector-imaginado-competencia-oficial-nacional/",
+   "como": "pagina",
+   "debe_contener": "min",
+   "que": "Competencia Oficial Nacional (11)"
   },
   {
    "archivo": "fuentes/cinetoro-2026/geometria-de-la-diferencia-competencia-oficial-internacional.html",
-   "pagina": "https://cinetoro.org/edicion-2026/geometria-de-la-diferencia-competencia-oficial-internacional/",
-   "_que": "Competencia Oficial Internacional (14)"
+   "url": "https://cinetoro.org/edicion-2026/geometria-de-la-diferencia-competencia-oficial-internacional/",
+   "como": "pagina",
+   "debe_contener": "min",
+   "que": "Competencia Oficial Internacional (14)"
   },
   {
    "archivo": "fuentes/cinetoro-2026/curvas-interlineadas-competencia-oficial-emergente.html",
-   "pagina": "https://cinetoro.org/edicion-2026/curvas-interlineadas-competencia-oficial-emergente/",
-   "_que": "Competencia Oficial Emergente (9)"
+   "url": "https://cinetoro.org/edicion-2026/curvas-interlineadas-competencia-oficial-emergente/",
+   "como": "pagina",
+   "debe_contener": "min",
+   "que": "Competencia Oficial Emergente (9)"
   },
   {
    "archivo": "fuentes/cinetoro-2026/puntos-de-fuga-competencia-oficial-de-mediometrajes.html",
-   "pagina": "https://cinetoro.org/edicion-2026/puntos-de-fuga-competencia-oficial-de-mediometrajes/",
-   "_que": "Competencia Oficial de Mediometrajes (5)"
+   "url": "https://cinetoro.org/edicion-2026/puntos-de-fuga-competencia-oficial-de-mediometrajes/",
+   "como": "pagina",
+   "debe_contener": "min",
+   "que": "Competencia Oficial de Mediometrajes (5)"
   }
  ],
  "pasos": [
+  {
+   "cmd": "python3 pipeline/radar.py cinetoro-2026",
+   "que": "el volcado del radar #1268"
+  },
   {
    "cmd": "python3 pipeline/cinetoro-2026-catalogo.py",
    "que": "las 4 páginas de la selección → catálogo (39 obras)"
   },
   {
-   "cmd": "python3 pipeline/cinetoro-2026-verificar.py",
-   "que": "2.ª lectura independiente (nombres de las imágenes) contra el catálogo, en las dos direcciones"
+   "cmd": "python3 pipeline/enriquecer_catalogo.py festivals/staging/cinetoro-2026-catalogo.json",
+   "que": "TMDB verificado + cascada contra lo publicado (catálogo)"
   },
   {
-   "cmd": "python3 pipeline/enriquecer_catalogo.py festivals/staging/cinetoro-2026-catalogo.json",
-   "que": "TMDB verificado + cascada contra lo publicado"
+   "cmd": "python3 pipeline/cinetoro-2026-crudo.py",
+   "que": "parrilla + programas + catálogo → crudo (25 funciones)"
+  },
+  {
+   "cmd": "python3 pipeline/enriquecer.py cinetoro-2026 --posters",
+   "que": "TMDB verificado + la cascada + afiches a assets/"
+  },
+  {
+   "cmd": "python3 pipeline/ensamblar.py cinetoro-2026",
+   "que": "crudo + plan → build"
+  },
+  {
+   "cmd": "python3 pipeline/encuadrar-posters.py cinetoro-2026 --aplicar --desde festivals/staging/cinetoro-2026-build.json",
+   "que": "los afiches a 2:3"
+  },
+  {
+   "cmd": "python3 pipeline/cinetoro-2026-verificar.py",
+   "que": "2.ª lectura independiente del catálogo y del build contra las fuentes"
   }
  ],
  "_fuentes_versionadas": {
   "festivals/staging/cinetoro-2026-catalogo.json": "las obras (39)",
   "festivals/staging/cinetoro-2026-catalogo-enriquecido.json": "las fichas del pre-onboarding; las mide pipeline/preonboarding.py",
-  "festivals/staging/cinetoro-2026-correcciones.json": "sin_afiche con su porqué"
+  "festivals/staging/cinetoro-2026-correcciones.json": "sin_afiche con su porqué",
+  "festivals/staging/cinetoro-2026-venues-geo.json": "los pines, Google Maps 31 oct",
+  "festivals/staging/cinetoro-2026-radar.json": "el volcado del radar #1268",
+  "festivals/staging/cinetoro-2026-afiches.json": "3 afiches declarados (Dynamo, Blue del pre-onboarding; «Tres gatos parias» de SiembraFest); lo lee enriquecer.py"
+ },
+ "festival": {
+  "crudo": "festivals/staging/cinetoro-2026-crudo.json",
+  "enriquecido": "festivals/staging/cinetoro-2026-enriquecido.json",
+  "geo": "festivals/staging/cinetoro-2026-venues-geo.json",
+  "_por_que_sedes": "Los lugares de la parrilla con su ciudad. «Por confirmar» y «POR DEFINIR» son rótulos del festival y se publican tal cual, con pin aproximado declarado. «Mambo House / Polideportivo (San Antonio)» (el intermedio musical) se publica en el Polideportivo, donde van los programas 3 y 4 que lo rodean: inferido.",
+  "sedes": {
+   "CCMI": [
+    "CCMI - Cali",
+    ""
+   ],
+   "Museo Rayo": [
+    "Museo Rayo - Roldanillo",
+    ""
+   ],
+   "Coliseo Corregimiento de San Francisco": [
+    "Coliseo Corregimiento de San Francisco - Toro",
+    ""
+   ],
+   "Mambo House": [
+    "Mambo House - Toro",
+    ""
+   ],
+   "Hotel Miracruz": [
+    "Hotel Miracruz - Toro",
+    ""
+   ],
+   "Polideportivo San Antonio": [
+    "Polideportivo San Antonio - Toro",
+    ""
+   ],
+   "Coliseo Institución Educativa Fray José Joaquín Escobar": [
+    "Coliseo Institución Educativa Fray José Joaquín Escobar - Toro",
+    ""
+   ],
+   "Vereda Patio Bonito": [
+    "Vereda Patio Bonito - Toro",
+    ""
+   ],
+   "Rosalia's Garden": [
+    "Rosalia's Garden - Toro",
+    ""
+   ],
+   "Por confirmar": [
+    "Por confirmar - Toro",
+    ""
+   ],
+   "Por definir": [
+    "Por definir - Toro",
+    ""
+   ]
+  },
+  "_por_que_secciones": "El rótulo de cada actividad en la parrilla, tal cual (Título por caja.py): «Selección oficial», «Cinetoro al aula», «Programación académica», «Especial». Emoji, inglés y arquetipo: propuesta para Juan.",
+  "secciones": {
+   "Selección Oficial": {
+    "emoji": "🏆",
+    "en": "Official Selection",
+    "archetype": "Competencia"
+   },
+   "Cinetoro al Aula": {
+    "emoji": "🎨",
+    "en": "Cinetoro in the Classroom",
+    "archetype": "Cortos / Programas"
+   },
+   "Programación Académica": {
+    "emoji": "🎓",
+    "en": "Academic Program",
+    "archetype": "Charlas / Industria"
+   },
+   "Especial": {
+    "emoji": "✨",
+    "en": "Special",
+    "archetype": "Especiales / Eventos"
+   }
+  },
+  "name": "CINETORO",
+  "displayName": "CINETORO",
+  "fullName": "CINETORO Experimental Film Festival 2026",
+  "shortName": "CINETORO",
+  "tagline": "Festival de Cine Experimental de Toro",
+  "city": "Toro",
+  "country": "CO",
+  "dates": "10–15 NOV",
+  "dates_en": "NOV 10–15",
+  "year": 2026,
+  "timezoneOffset": "-05:00",
+  "storageKey": "cinetoro2026_",
+  "festivalStartStr": "2026-11-07T00:00:00",
+  "festivalEndStr": "2026-11-15T23:59:00",
+  "sharedSlotIsOneScreening": false,
+  "mes_es": "noviembre",
+  "dias_vacios": [
+   "2026-11-08",
+   "2026-11-09"
+  ]
  }
 }

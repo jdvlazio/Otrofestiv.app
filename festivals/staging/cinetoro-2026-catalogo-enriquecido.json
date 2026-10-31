@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, con el MISMO candado de enriquecer.py: director ✓ y (año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-10-26"
+  "capturado": "2026-10-31"
  },
  "_origen": "cinetoro-2026-catalogo.json",
  "obras": [
@@ -24,6 +24,7 @@
     {
      "festival": "aff-2026",
      "titulo": "Una vez en un cuerpo",
+     "tmdb_id": 1522316,
      "poster": "https://admin.alternativa.film/uploads/Oficial_Poster_Una_Michel_d4a64a67e9.jpg",
      "posterSource": "custom",
      "lbSlug": "once-in-a-body",
@@ -91,6 +92,20 @@
      "sinopsis": "Mientras lidia con un ser extraño que habita en su interior, una mujer busca reconciliarse con su hermana tras un incidente de su adolescencia. Al explorar las experiencias que comparten a través de sus cuerpos, logra confrontar la naturaleza de lo que la habita."
     },
     {
+     "festival": "miradas-2026",
+     "titulo": "Una vez en un cuerpo",
+     "tmdb_id": 1522316,
+     "poster": "/assets/miradas-2026/una-vez-en-un-cuerpo.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "once-in-a-body",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "10 min",
+     "genre": "Animación",
+     "synopsis_en": "While dealing with a strange being that lives inside her, a woman seeks to reconcile with her sister over an incident from their adolescence.",
+     "sinopsis": "Mientras lidia con un extraño ser que vive en su interior, una mujer intenta reconciliarse con su hermana tras un incidente que las separó durante la adolescencia. Un viaje inquietante en el que tendrá que enfrentarse tanto a lo que lleva dentro como a las heridas del pasado."
+    },
+    {
      "festival": "popayan-2026",
      "titulo": "Una vez en un cuerpo",
      "tmdb_id": 1522316,
@@ -138,6 +153,7 @@
     {
      "festival": "ficci-65",
      "titulo": "Futuros luminosos",
+     "tmdb_id": 1603950,
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_P%C3%B3ster%20Futuros%20luminosos%20-%20Ismael%20Garcia.jpg?itok=6WCvT13b",
      "posterSource": "custom",
      "lbSlug": "a-brighter-future",
@@ -162,7 +178,9 @@
      "synopsis_en": "In a strange, dark place, a colourful group of young people project their future.",
      "sinopsis": "Simón (13) vive en un pueblo abandonado, allí pasa una última noche junto a su hermana Sol (18), quien se irá a trabajar a la ciudad. Junto a un grupo de amigxs, recorren los oscuros caminos del lugar en el que crecieron, iluminando las ruinas, que cobran vida con el paso de sus linternas."
     }
-   ]
+   ],
+   "sinopsis": "En un lugar extraño y oscuro, un grupo de jóvenes de colores proyecta su futuro.",
+   "_sinopsis_de": "ya publicada en cinemancia-2026"
   },
   {
    "titulo": "Preguntas frecuentes",
@@ -206,7 +224,9 @@
      "synopsis_en": "S. writes to Juan, who is deeply asleep. She reflects on images and cinema, and a piece of advice from a director she admires challenges her and all her previous work. Determined to find an idea behind the images she has recorded so far, S. wanders among materials, her own archive of images and sounds, internet browser tabs, western films and Japanese short stories. S. compiles all these thoughts and findings into a letter, hoping to deliver it to Juan when he wakes up.",
      "sinopsis": "S. escribe a Juan, que está profundamente dormido. S. reflexiona sobre imágenes y cine, y un consejo de un director que admira la desafía a ella y a todo su trabajo anterior. Decidida a encontrar una idea detrás de las imágenes que ha grabado hasta ahora, S. deambula entre los materiales, su propio archivo de imágenes y sonidos, pestañas de navegador de Internet, películas occidentales y cuentos japoneses. S. recopila todos estos pensamientos y hallazgos en una carta, con la esperanza de entregárselo a Juan cuando se despierte."
     }
-   ]
+   ],
+   "sinopsis": "S. escribe a Juan, que está profundamente dormido. S. reflexiona sobre imágenes y cine, y un consejo de un director que admira la desafía a ella y a todo su trabajo anterior. Decidida a encontrar una idea detrás de las imágenes que ha grabado hasta ahora, S. deambula entre los materiales, su propio archivo de imágenes y sonidos, pestañas de navegador de Internet, películas occidentales y cuentos japoneses. S. recopila todos estos pensamientos y hallazgos en una carta, con la esperanza de entregárselo a Juan cuando se despierte.",
+   "_sinopsis_de": "ya publicada en cinemancia-2026"
   },
   {
    "titulo": "Pudor ante el asalto de los ojos furtivos",
@@ -292,8 +312,23 @@
      "genre": "Animación",
      "synopsis_en": "The city as a stage of desire, where the male gaze provokes surveillance and scrutiny of the female body. This power relationship turns the body into a field of contestation in public space.",
      "sinopsis": "La ciudad como un escenario de deseo, donde la mirada masculina suscita vigilancia y escrutinio ante el cuerpo femenino. Esta relación de poder convierte al cuerpo en un campo de disputa en el espacio público."
+    },
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "Pudor ante el asalto de los ojos furtivos",
+     "poster": "https://image.tmdb.org/t/p/w500/9elraxytkfPvx8jsoLsWtDeF3pV.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "shame-in-the-face-of-furtive-eyes",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "9 min",
+     "genre": "Animación",
+     "synopsis_en": "The city as a stage of desire, where the male gaze provokes surveillance and scrutiny of the female body. This power relationship turns the body into a field of contestation in public space.",
+     "sinopsis": "La ciudad como un escenario de deseo, donde la mirada masculina suscita vigilancia y escrutinio ante el cuerpo femenino. Esta relación de poder convierte al cuerpo en un campo de disputa en el espacio público."
     }
-   ]
+   ],
+   "sinopsis": "La ciudad como un escenario de deseo, donde la mirada masculina suscita vigilancia y escrutinio ante el cuerpo femenino. Esta relación de poder convierte al cuerpo en un campo de disputa en el espacio público.",
+   "_sinopsis_de": "ya publicada en anibia-2026"
   },
   {
    "titulo": "Rastro",
@@ -347,7 +382,9 @@
      "genre": "Documental",
      "synopsis_en": "A casting director reunites with a young non-professional actor with the mission of re-recording some dialogues to complete the post-production of a film. Surrounded by a forest, in the sway of flickering lights, fantasy, imagination, and play collide in an exercise of repetition and hypnosis, where ghosts wander, complicit in the fiction."
     }
-   ]
+   ],
+   "sinopsis": "Un director de casting regresa a la ladera de la ciudad para reunirse con un actor no profesional y volver a grabar voces para terminar la posproducción de una película. La fantasía y la imaginación chocan bajo la sombra del bosque, donde el juego y la repetición convocan a fantasmas cómplices de la ficción. El encuentro de trabajo con el actor rápidamente se vuelve otra cosa: una experiencia casi de trance, una búsqueda de presencias, un ejercicio de observación y fe.",
+   "_sinopsis_de": "ya publicada en cinemancia-2026"
   },
   {
    "titulo": "Borrachos mientras escuchamos las gotas caer",
@@ -444,7 +481,9 @@
      "synopsis_en": "In the Sibundoy Valley, Mercedes Cuatindioy cultivates her chagra as an act of resistance and remembrance. Between seeds and polyculture practices, her life embodies the transmission of indigenous knowledge threatened by oblivion.",
      "sinopsis": "Se acerca a la chagra de Mercedes Cuatindioy, donde el policultivo es cuidado, resistencia y transmisión de saberes."
     }
-   ]
+   ],
+   "sinopsis": "En el valle de Sibundoy, Mercedes Cuatindioy cultiva su chagra como un acto de resistencia y memoria. A través de la forma en que siembra, cuida e interactúa con sus plantas, transmite un conocimiento indígena que se ve amenazado por el olvido y el monocultivo.",
+   "_sinopsis_de": "ya publicada en ficpa-2026"
   },
   {
    "titulo": "Lamentos de un balcón",
@@ -547,7 +586,9 @@
      "synopsis_en": "In a city - evoking, without specificity, a city of the Roman Empire - the poem depicts a state of waiting: the arrival of the ‘Barbarians’ has been announced. The city holds its breath in anticipation… But who, exactly, are these “Barbarians”? And what if they do not come?",
      "sinopsis": "Conteniendo la respiración, la ciudad aguarda la llegada de los «bárbaros». ¿Quiénes son? ¿Y qué se hará si no vienen?"
     }
-   ]
+   ],
+   "sinopsis": "Conteniendo la respiración, la ciudad aguarda la llegada de los «bárbaros». ¿Quiénes son? ¿Y qué se hará si no vienen?",
+   "_sinopsis_de": "ya publicada en ficpa-2026"
   },
   {
    "titulo": "Primeiro Retrato",
@@ -725,7 +766,9 @@
      "duration": "12 min",
      "sinopsis": "Según el mito indígena Muisca, la llanura de Bogotá alguna vez fue inundada por arroyos que amenazaban con arrasarlo todo. Apareció entonces el dios Bochica, quien con su bastón hirió la serranía y abrió paso a sus aguas represadas, formando así el Salto del Tequendama. En la orilla del precipicio, el río Bogotá se lanza sobre un banco de piedras. Allí se estrella y se arroja en forma de espumas y vapores hacia el abismo que lo espera."
     }
-   ]
+   ],
+   "sinopsis": "Según el mito indígena Muisca, la llanura de Bogotá alguna vez fue inundada por arroyos que amenazaban con arrasarlo todo. Apareció entonces el dios Bochica, quien con su bastón hirió la serranía y abrió paso a sus aguas represadas, formando así el Salto del Tequendama. En la orilla del precipicio, el río Bogotá se lanza sobre un banco de piedras. Allí se estrella y se arroja en forma de espumas y vapores hacia el abismo que lo espera.",
+   "_sinopsis_de": "ya publicada en cinemancia-2026"
   },
   {
    "titulo": "Um corpo sem cavalo?",
@@ -840,15 +883,16 @@
   {
    "titulo": "La danza del caos",
    "tmdb_id": 1791655,
-   "titulo_original": "La danza del caos",
+   "titulo_original": "La Danza del Caos",
    "poster_path": "/8dfaUuA7VQE8CAt3VV4pq0O0ohu.jpg",
    "synopsis_es": "La Danza del Caos es un cortometraje de animación experimental que traduce la teoría de los Cinco Ritmos de Gabrielle Roth en una experiencia audiovisual abstracta. Mediante el movimiento y el diseño sonoro, la animación sustituye al cuerpo físico para llevar al espectador en un viaje sensorial que recorre diferentes ritmos hasta alcanzar un estado de caos contenido. El cortometraje sumerge al espectador en una experiencia sensorial que lo invita a sentir y dejarse llevar por el ritmo como guía para la interpretación.",
-   "synopsis_en": "",
-   "genero": "",
+   "synopsis_en": "The Dance of Chaos is an experimental animated short film that translates Gabrielle Roth's Five Rhythms theory into an abstract audiovisual experience. Through movement and sound design, the animation replaces the physical body to take viewers on a sensory journey that traverses different rhythms until reaching a state of contained chaos. The short film immerses the viewer in a sensory experience that invites them to feel and let themselves be carried away by the rhythm as a guide to interpretation.",
+   "genero": "Animación",
    "anio_tmdb": 2025,
    "duracion_tmdb": 6,
    "pais_tmdb": "",
-   "lbSlug": "la-danza-del-caos",
+   "title_en": "The Dance of Chaos",
+   "lbSlug": "the-dance-of-chaos",
    "_verificado": "el catálogo ya la tiene (w_R4JJP199HTF8, filcmar-2026)",
    "work_id": "w_R4JJP199HTF8",
    "_ya_publicada": [
@@ -937,7 +981,9 @@
      "synopsis_en": "Months after experiencing abuse at the hands of a woman, Micaela (21) returns to the bathroom where the events took place. In an attempt to heal from her trauma, she retraces and reenacts the path she followed in the past, transforming her memory into an artistic act that reveals how the experience became etched into her subconscious.",
      "sinopsis": "Meses después de haber vivido un abuso por parte de una mujer, Micaela (21) regresa al baño donde ocurrieron los hechos. En un intento por sanar su trauma, registra y revive el recorrido que realizó en el pasado, transformando su recuerdo en un acto artístico que revela cómo esa experiencia quedó grabada en su subconsciente."
     }
-   ]
+   ],
+   "sinopsis": "Meses después de haber vivido un abuso por parte de una mujer, Micaela (21) regresa al baño donde ocurrieron los hechos. En un intento por sanar su trauma, registra y revive el recorrido que realizó en el pasado, transformando su recuerdo en un acto artístico que revela cómo esa experiencia quedó grabada en su subconsciente.",
+   "_sinopsis_de": "ya publicada en midbo-2026"
   },
   {
    "titulo": "Boyuna",
@@ -967,7 +1013,11 @@
      "synopsis_en": "Marseille, 2135. Following the disappearance of most terrestrial ecosystems, the Boyuna corporation offers survivors an escape into a world where they can relive dreams of the past alongside extinct animals.",
      "sinopsis": "Marsella, 2135. Tras la desaparición de la mayoría de los ecosistemas de la Tierra, la empresa Boyuna abre un pasaje hacia el pasado, donde los subrevivientes pueden habitar sus sueños entre animales extintos. Creada en colaboración con participantes privados de libertad que asisten a un programa de formación audiovisual en la prisión de Baumettes, Marsella."
     }
-   ]
+   ],
+   "poster": "/assets/midbo-2026/boyuna.jpg",
+   "_afiche_de": "ya publicada en midbo-2026",
+   "sinopsis": "Marsella, 2135. Tras la desaparición de la mayoría de los ecosistemas de la Tierra, la empresa Boyuna abre un pasaje hacia el pasado, donde los subrevivientes pueden habitar sus sueños entre animales extintos. Creada en colaboración con participantes privados de libertad que asisten a un programa de formación audiovisual en la prisión de Baumettes, Marsella.",
+   "_sinopsis_de": "ya publicada en midbo-2026"
   },
   {
    "titulo": "Traducir lo propio (o el síntoma de recordar)",
@@ -1020,6 +1070,7 @@
     {
      "festival": "aff-2026",
      "titulo": "Una vez en un cuerpo",
+     "tmdb_id": 1522316,
      "poster": "https://admin.alternativa.film/uploads/Oficial_Poster_Una_Michel_d4a64a67e9.jpg",
      "posterSource": "custom",
      "lbSlug": "once-in-a-body",
@@ -1087,6 +1138,20 @@
      "sinopsis": "Mientras lidia con un ser extraño que habita en su interior, una mujer busca reconciliarse con su hermana tras un incidente de su adolescencia. Al explorar las experiencias que comparten a través de sus cuerpos, logra confrontar la naturaleza de lo que la habita."
     },
     {
+     "festival": "miradas-2026",
+     "titulo": "Una vez en un cuerpo",
+     "tmdb_id": 1522316,
+     "poster": "/assets/miradas-2026/una-vez-en-un-cuerpo.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "once-in-a-body",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "10 min",
+     "genre": "Animación",
+     "synopsis_en": "While dealing with a strange being that lives inside her, a woman seeks to reconcile with her sister over an incident from their adolescence.",
+     "sinopsis": "Mientras lidia con un extraño ser que vive en su interior, una mujer intenta reconciliarse con su hermana tras un incidente que las separó durante la adolescencia. Un viaje inquietante en el que tendrá que enfrentarse tanto a lo que lleva dentro como a las heridas del pasado."
+    },
+    {
      "festival": "popayan-2026",
      "titulo": "Una vez en un cuerpo",
      "tmdb_id": 1522316,
@@ -1133,6 +1198,7 @@
     {
      "festival": "ficci-65",
      "titulo": "Futuros luminosos",
+     "tmdb_id": 1603950,
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_P%C3%B3ster%20Futuros%20luminosos%20-%20Ismael%20Garcia.jpg?itok=6WCvT13b",
      "posterSource": "custom",
      "lbSlug": "a-brighter-future",
@@ -1157,7 +1223,9 @@
      "synopsis_en": "In a strange, dark place, a colourful group of young people project their future.",
      "sinopsis": "Simón (13) vive en un pueblo abandonado, allí pasa una última noche junto a su hermana Sol (18), quien se irá a trabajar a la ciudad. Junto a un grupo de amigxs, recorren los oscuros caminos del lugar en el que crecieron, iluminando las ruinas, que cobran vida con el paso de sus linternas."
     }
-   ]
+   ],
+   "sinopsis": "En un lugar extraño y oscuro, un grupo de jóvenes de colores proyecta su futuro.",
+   "_sinopsis_de": "ya publicada en cinemancia-2026"
   },
   "Preguntas frecuentes": {
    "tmdb_id": 1592609,
@@ -1200,7 +1268,9 @@
      "synopsis_en": "S. writes to Juan, who is deeply asleep. She reflects on images and cinema, and a piece of advice from a director she admires challenges her and all her previous work. Determined to find an idea behind the images she has recorded so far, S. wanders among materials, her own archive of images and sounds, internet browser tabs, western films and Japanese short stories. S. compiles all these thoughts and findings into a letter, hoping to deliver it to Juan when he wakes up.",
      "sinopsis": "S. escribe a Juan, que está profundamente dormido. S. reflexiona sobre imágenes y cine, y un consejo de un director que admira la desafía a ella y a todo su trabajo anterior. Decidida a encontrar una idea detrás de las imágenes que ha grabado hasta ahora, S. deambula entre los materiales, su propio archivo de imágenes y sonidos, pestañas de navegador de Internet, películas occidentales y cuentos japoneses. S. recopila todos estos pensamientos y hallazgos en una carta, con la esperanza de entregárselo a Juan cuando se despierte."
     }
-   ]
+   ],
+   "sinopsis": "S. escribe a Juan, que está profundamente dormido. S. reflexiona sobre imágenes y cine, y un consejo de un director que admira la desafía a ella y a todo su trabajo anterior. Decidida a encontrar una idea detrás de las imágenes que ha grabado hasta ahora, S. deambula entre los materiales, su propio archivo de imágenes y sonidos, pestañas de navegador de Internet, películas occidentales y cuentos japoneses. S. recopila todos estos pensamientos y hallazgos en una carta, con la esperanza de entregárselo a Juan cuando se despierte.",
+   "_sinopsis_de": "ya publicada en cinemancia-2026"
   },
   "Pudor ante el asalto de los ojos furtivos": {
    "tmdb_id": 1592968,
@@ -1285,8 +1355,23 @@
      "genre": "Animación",
      "synopsis_en": "The city as a stage of desire, where the male gaze provokes surveillance and scrutiny of the female body. This power relationship turns the body into a field of contestation in public space.",
      "sinopsis": "La ciudad como un escenario de deseo, donde la mirada masculina suscita vigilancia y escrutinio ante el cuerpo femenino. Esta relación de poder convierte al cuerpo en un campo de disputa en el espacio público."
+    },
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "Pudor ante el asalto de los ojos furtivos",
+     "poster": "https://image.tmdb.org/t/p/w500/9elraxytkfPvx8jsoLsWtDeF3pV.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "shame-in-the-face-of-furtive-eyes",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "9 min",
+     "genre": "Animación",
+     "synopsis_en": "The city as a stage of desire, where the male gaze provokes surveillance and scrutiny of the female body. This power relationship turns the body into a field of contestation in public space.",
+     "sinopsis": "La ciudad como un escenario de deseo, donde la mirada masculina suscita vigilancia y escrutinio ante el cuerpo femenino. Esta relación de poder convierte al cuerpo en un campo de disputa en el espacio público."
     }
-   ]
+   ],
+   "sinopsis": "La ciudad como un escenario de deseo, donde la mirada masculina suscita vigilancia y escrutinio ante el cuerpo femenino. Esta relación de poder convierte al cuerpo en un campo de disputa en el espacio público.",
+   "_sinopsis_de": "ya publicada en anibia-2026"
   },
   "Un aparato para detectar fantasmas": {
    "tmdb_id": 1593571,
@@ -1329,7 +1414,9 @@
      "genre": "Documental",
      "synopsis_en": "A casting director reunites with a young non-professional actor with the mission of re-recording some dialogues to complete the post-production of a film. Surrounded by a forest, in the sway of flickering lights, fantasy, imagination, and play collide in an exercise of repetition and hypnosis, where ghosts wander, complicit in the fiction."
     }
-   ]
+   ],
+   "sinopsis": "Un director de casting regresa a la ladera de la ciudad para reunirse con un actor no profesional y volver a grabar voces para terminar la posproducción de una película. La fantasía y la imaginación chocan bajo la sombra del bosque, donde el juego y la repetición convocan a fantasmas cómplices de la ficción. El encuentro de trabajo con el actor rápidamente se vuelve otra cosa: una experiencia casi de trance, una búsqueda de presencias, un ejercicio de observación y fe.",
+   "_sinopsis_de": "ya publicada en cinemancia-2026"
   },
   "Borrachos mientras escuchamos las gotas caer": {
    "tmdb_id": 1743109,
@@ -1424,7 +1511,9 @@
      "synopsis_en": "In the Sibundoy Valley, Mercedes Cuatindioy cultivates her chagra as an act of resistance and remembrance. Between seeds and polyculture practices, her life embodies the transmission of indigenous knowledge threatened by oblivion.",
      "sinopsis": "Se acerca a la chagra de Mercedes Cuatindioy, donde el policultivo es cuidado, resistencia y transmisión de saberes."
     }
-   ]
+   ],
+   "sinopsis": "En el valle de Sibundoy, Mercedes Cuatindioy cultiva su chagra como un acto de resistencia y memoria. A través de la forma en que siembra, cuida e interactúa con sus plantas, transmite un conocimiento indígena que se ve amenazado por el olvido y el monocultivo.",
+   "_sinopsis_de": "ya publicada en ficpa-2026"
   },
   "Lamentos de un balcón": {
    "tmdb_id": 1744098,
@@ -1523,7 +1612,9 @@
      "synopsis_en": "In a city - evoking, without specificity, a city of the Roman Empire - the poem depicts a state of waiting: the arrival of the ‘Barbarians’ has been announced. The city holds its breath in anticipation… But who, exactly, are these “Barbarians”? And what if they do not come?",
      "sinopsis": "Conteniendo la respiración, la ciudad aguarda la llegada de los «bárbaros». ¿Quiénes son? ¿Y qué se hará si no vienen?"
     }
-   ]
+   ],
+   "sinopsis": "Conteniendo la respiración, la ciudad aguarda la llegada de los «bárbaros». ¿Quiénes son? ¿Y qué se hará si no vienen?",
+   "_sinopsis_de": "ya publicada en ficpa-2026"
   },
   "Primeiro Retrato": {
    "tmdb_id": 1578197,
@@ -1692,7 +1783,9 @@
      "duration": "12 min",
      "sinopsis": "Según el mito indígena Muisca, la llanura de Bogotá alguna vez fue inundada por arroyos que amenazaban con arrasarlo todo. Apareció entonces el dios Bochica, quien con su bastón hirió la serranía y abrió paso a sus aguas represadas, formando así el Salto del Tequendama. En la orilla del precipicio, el río Bogotá se lanza sobre un banco de piedras. Allí se estrella y se arroja en forma de espumas y vapores hacia el abismo que lo espera."
     }
-   ]
+   ],
+   "sinopsis": "Según el mito indígena Muisca, la llanura de Bogotá alguna vez fue inundada por arroyos que amenazaban con arrasarlo todo. Apareció entonces el dios Bochica, quien con su bastón hirió la serranía y abrió paso a sus aguas represadas, formando así el Salto del Tequendama. En la orilla del precipicio, el río Bogotá se lanza sobre un banco de piedras. Allí se estrella y se arroja en forma de espumas y vapores hacia el abismo que lo espera.",
+   "_sinopsis_de": "ya publicada en cinemancia-2026"
   },
   "Um corpo sem cavalo?": {
    "tmdb_id": 1659047,
@@ -1802,15 +1895,16 @@
   },
   "La danza del caos": {
    "tmdb_id": 1791655,
-   "titulo_original": "La danza del caos",
+   "titulo_original": "La Danza del Caos",
    "poster_path": "/8dfaUuA7VQE8CAt3VV4pq0O0ohu.jpg",
    "synopsis_es": "La Danza del Caos es un cortometraje de animación experimental que traduce la teoría de los Cinco Ritmos de Gabrielle Roth en una experiencia audiovisual abstracta. Mediante el movimiento y el diseño sonoro, la animación sustituye al cuerpo físico para llevar al espectador en un viaje sensorial que recorre diferentes ritmos hasta alcanzar un estado de caos contenido. El cortometraje sumerge al espectador en una experiencia sensorial que lo invita a sentir y dejarse llevar por el ritmo como guía para la interpretación.",
-   "synopsis_en": "",
-   "genero": "",
+   "synopsis_en": "The Dance of Chaos is an experimental animated short film that translates Gabrielle Roth's Five Rhythms theory into an abstract audiovisual experience. Through movement and sound design, the animation replaces the physical body to take viewers on a sensory journey that traverses different rhythms until reaching a state of contained chaos. The short film immerses the viewer in a sensory experience that invites them to feel and let themselves be carried away by the rhythm as a guide to interpretation.",
+   "genero": "Animación",
    "anio_tmdb": 2025,
    "duracion_tmdb": 6,
    "pais_tmdb": "",
-   "lbSlug": "la-danza-del-caos",
+   "title_en": "The Dance of Chaos",
+   "lbSlug": "the-dance-of-chaos",
    "_verificado": "el catálogo ya la tiene (w_R4JJP199HTF8, filcmar-2026)",
    "work_id": "w_R4JJP199HTF8",
    "_ya_publicada": [
@@ -1896,7 +1990,9 @@
      "synopsis_en": "Months after experiencing abuse at the hands of a woman, Micaela (21) returns to the bathroom where the events took place. In an attempt to heal from her trauma, she retraces and reenacts the path she followed in the past, transforming her memory into an artistic act that reveals how the experience became etched into her subconscious.",
      "sinopsis": "Meses después de haber vivido un abuso por parte de una mujer, Micaela (21) regresa al baño donde ocurrieron los hechos. En un intento por sanar su trauma, registra y revive el recorrido que realizó en el pasado, transformando su recuerdo en un acto artístico que revela cómo esa experiencia quedó grabada en su subconsciente."
     }
-   ]
+   ],
+   "sinopsis": "Meses después de haber vivido un abuso por parte de una mujer, Micaela (21) regresa al baño donde ocurrieron los hechos. En un intento por sanar su trauma, registra y revive el recorrido que realizó en el pasado, transformando su recuerdo en un acto artístico que revela cómo esa experiencia quedó grabada en su subconsciente.",
+   "_sinopsis_de": "ya publicada en midbo-2026"
   },
   "Boyuna": {
    "tmdb_id": 1711419,
@@ -1925,7 +2021,11 @@
      "synopsis_en": "Marseille, 2135. Following the disappearance of most terrestrial ecosystems, the Boyuna corporation offers survivors an escape into a world where they can relive dreams of the past alongside extinct animals.",
      "sinopsis": "Marsella, 2135. Tras la desaparición de la mayoría de los ecosistemas de la Tierra, la empresa Boyuna abre un pasaje hacia el pasado, donde los subrevivientes pueden habitar sus sueños entre animales extintos. Creada en colaboración con participantes privados de libertad que asisten a un programa de formación audiovisual en la prisión de Baumettes, Marsella."
     }
-   ]
+   ],
+   "poster": "/assets/midbo-2026/boyuna.jpg",
+   "_afiche_de": "ya publicada en midbo-2026",
+   "sinopsis": "Marsella, 2135. Tras la desaparición de la mayoría de los ecosistemas de la Tierra, la empresa Boyuna abre un pasaje hacia el pasado, donde los subrevivientes pueden habitar sus sueños entre animales extintos. Creada en colaboración con participantes privados de libertad que asisten a un programa de formación audiovisual en la prisión de Baumettes, Marsella.",
+   "_sinopsis_de": "ya publicada en midbo-2026"
   },
   "Traducir lo propio (o el síntoma de recordar)": {
    "tmdb_id": 1462028,

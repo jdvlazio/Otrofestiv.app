@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "pre-onboarding: enriquecer_catalogo + revisión de las imágenes de cinetoro.org",
-  "capturado": "2026-10-26"
+  "capturado": "2026-10-31"
  },
  "fichas": {
   "Muchas, muchas gracias": {
@@ -37,6 +37,42 @@
   },
   "Wild Yeast": {
    "_por_que": "TMDB 1611610 («Levures sauvages», Girault/Soudan/Zahno, 34 min, Bélgica) sin póster; búsqueda web 26 oct sin afiche. Sin afiche publicado: pedirlo al festival."
+  },
+  "La taquigrafista": {
+   "_por_que": "retrospectiva de invitadas (Azul Aizemberg, 2026). TMDB: enriquecer.py (31 oct 2026) no halla ficha verificable; cinetoro.org/programas-2 no publica afiche de la obra. Sin afiche publicado: pedirlo al festival."
+  },
+  "100 vistas parcialmente oscurecidas": {
+   "_por_que": "retrospectiva de invitadas (Nicole Antebi, 2024). TMDB: enriquecer.py (31 oct 2026) no halla ficha verificable; cinetoro.org/programas-2 no publica afiche de la obra. Sin afiche publicado: pedirlo al festival."
+  },
+  "Las picapiedreras": {
+   "_por_que": "retrospectiva de invitadas (Azul Aizemberg, 2021). TMDB: enriquecer.py (31 oct 2026) no halla ficha verificable; cinetoro.org/programas-2 no publica afiche de la obra. Sin afiche publicado: pedirlo al festival."
+  },
+  "Public Domain Review Animated Intervention": {
+   "_por_que": "retrospectiva de invitadas (Nicole Antebi, 2025). TMDB: enriquecer.py (31 oct 2026) no halla ficha verificable; cinetoro.org/programas-2 no publica afiche de la obra. Sin afiche publicado: pedirlo al festival."
+  },
+  "Zirkus (Circus)": {
+   "_por_que": "Cinetoro al aula (Thomas Renoldner). TMDB: enriquecer.py (31 oct 2026) no halla ficha verificable; cinetoro.org/programas-2 no publica afiche de la obra. Sin afiche publicado: pedirlo al festival."
+  },
+  "Four Percent": {
+   "_por_que": "Cinetoro al aula (Monika Maslon, 2025). TMDB: enriquecer.py (31 oct 2026) no halla ficha verificable; cinetoro.org/programas-2 no publica afiche de la obra. Sin afiche publicado: pedirlo al festival."
+  },
+  "Invisible Walls": {
+   "_por_que": "Cinetoro al aula (Florian Schönerstedt, 2025). TMDB: enriquecer.py (31 oct 2026) no halla ficha verificable; cinetoro.org/programas-2 no publica afiche de la obra. Sin afiche publicado: pedirlo al festival."
+  },
+  "How": {
+   "_por_que": "Cinetoro al aula (Marko Mestrovic, 2025). TMDB: enriquecer.py (31 oct 2026) no halla ficha verificable; cinetoro.org/programas-2 no publica afiche de la obra. Sin afiche publicado: pedirlo al festival."
+  },
+  "(DIS)CONNECTED": {
+   "_por_que": "Cinetoro al aula (Yoni, 2026). TMDB: enriquecer.py (31 oct 2026) no halla ficha verificable; cinetoro.org/programas-2 no publica afiche de la obra. Sin afiche publicado: pedirlo al festival."
+  },
+  "Microcosmos. Un gabinate de curiosidades": {
+   "_por_que": "Cinetoro al aula (María Lorenzo, 2026). TMDB: enriquecer.py (31 oct 2026) no halla ficha verificable; cinetoro.org/programas-2 no publica afiche de la obra. Sin afiche publicado: pedirlo al festival."
+  },
+  "Bajo una lluvia ajena": {
+   "_por_que": "largo invitado (Martha Hincapie). TMDB: enriquecer.py (31 oct 2026) no halla ficha verificable; cinetoro.org/programas-2 no publica afiche de la obra. Sin afiche publicado: pedirlo al festival."
+  },
+  "Primeiro Retrato": {
+   "_por_que": "TMDB 1578197 (verificada) trae como póster una tarjeta de solo texto, rechazada por enriquecer.py (31 oct 2026); cinetoro.org no publica afiche. Sin afiche publicado: pedirlo al festival."
   }
  },
  "catalogo_titulo": {
@@ -65,6 +101,10 @@
   "María José Ibarra y Florentino Vargas": {
    "a": "María José Ibarra, Florentino Vargas",
    "_por_que": "separador de directores de la app"
+  },
+  "Laura María Rodrígez": {
+   "a": "Laura María Rodríguez",
+   "_por_que": "la página de programas del festival (cinetoro.org/programas-2/, Programa 3, bajada 31 oct 2026) escribe «Laura María Rodríguez»: la web de la competencia y el nombre de su imagen («Rodrigez») eran la errata"
   }
  },
  "catalogo_afiche": {
@@ -92,6 +132,6 @@
  "dudas_resueltas": {
   "Sensual": "país: se queda «Alemania, Suiza» (web). Tanja Nuijten es suiza y la obra es de la Filmakademie Baden-Württemberg (https://animationsinstitut.de/en/beyond-study/diplomashowroom/sensual; Animafest Zagreb la da de Alemania). «Países Bajos» del nombre de la imagen no lo sostiene ninguna fuente (sería el origen del apellido). 26 oct.",
   "Traducir lo propio (o el síntoma de recordar)": "duración: se quedan los 60 min de la web. No hay otra fuente en web abierta que la contradiga; que exceda el rango de la convocatoria (25–40 min) es decisión del festival, no errata demostrada. 26 oct.",
-  "Pudor ante el asalto de los ojos furtivos": "dirección: se queda «Laura María Rodrígez» verbatim. La web y el nombre de archivo de su imagen («Laura-Maria-Rodrigez») coinciden y no hay fuente externa que diga «Rodríguez». 26 oct."
+  "Pudor ante el asalto de los ojos furtivos": "dirección: se queda «Laura María Rodrígez» verbatim. La web y el nombre de archivo de su imagen («Laura-Maria-Rodrigez») coinciden y no hay fuente externa que diga «Rodríguez». 26 oct. · 31 oct: RESUELTA de otro modo — la página de programas del propio festival escribe «Rodríguez»; se corrige en catalogo_director."
  }
 }
