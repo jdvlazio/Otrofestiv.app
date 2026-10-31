@@ -1,10 +1,10 @@
 {
  "_provenance": {
   "fuente": "issue de radar #1031 — https://github.com/jdvlazio/Otrofestiv.app/issues/1031",
-  "capturado": "2026-10-30",
+  "capturado": "2026-10-31",
   "titulo": "RADAR: Muestra Internacional Documental de Bogotá (MIDBO) — Bogotá, 28 OCT–4 NOV (28ª)",
   "estado": "OPEN",
-  "comentarios": 22
+  "comentarios": 25
  },
  "issue": 1031,
  "titulo": "RADAR: Muestra Internacional Documental de Bogotá (MIDBO) — Bogotá, 28 OCT–4 NOV (28ª)",
@@ -98,6 +98,18 @@
   {
    "fecha": "2026-10-30",
    "cuerpo": "**Vigía 30 oct 13:00 — MIDBO: evento de hoy que la app no tiene.** «Los archivos actúan sobre lo público», viernes 30 oct, 8:00 p. m., Parque de los Periodistas (Eje Ambiental y Av. Jiménez). Trae la proyección «Desmontaje de tigres de papel», «La lucha es un tecnopoema colectivo» (Posmonumenta), videomapping y freestyle. Lo leí en la lámina 1 de https://www.instagram.com/p/DfH6g9fB58A/ (vía Apify). No está en el almacén ni en la web (la API está sin cambios: 121/121 obras, mismo contenido)."
+  },
+  {
+   "fecha": "2026-10-31",
+   "cuerpo": "**Salas · Cinemateca de Bogotá (corrida del 31 oct 2026)**\n\nComparé las 31 funciones de MIDBO en la Cinemateca desde hoy hasta el 4 nov: día, hora y sala coinciden en las 31. Hay **una diferencia de boletería, y es para mañana**:\n\n- **«Como me da la gana» — dom 1 nov, 2:00 p.m., Sala 3**\n  - La sala (https://cinematecadebogota.gov.co/node/peliculas/3838?sede=11) dice **«Entrada libre»** y no da link de compra.\n  - La app la cobra, con link a https://tuboleta.com/es/eventos/como-me-da-la-gana. Esa página de TuBoleta sí la vende: TARIFA PLENA $7.000 + $750, Sala 3, dom 1 nov 2:00 PM.\n  - Las dos fuentes de la sala se contradicen. Acción sugerida: confirmar con el festival o con la Cinemateca antes de tocar nada. Si no hay respuesta, dejar la app como está, porque TuBoleta tiene la venta activa.\n\nNota aparte, no es diferencia: la sala enlaza cada función al checkout directo (`cinemateca.checkout.tuboleta.com/...productId=…`). La app usa la página del evento (`tuboleta.com/es/eventos/<slug>`). Las dos llevan a la compra.\n"
+  },
+  {
+   "fecha": "2026-10-31",
+   "cuerpo": "Vigía 31 oct: «The Red Moon Eclipse» hoy — la lámina 6 del IG (https://www.instagram.com/p/DfKK6QDlebX/) dice 8:30 p.m. Sala 3; la web de la obra y la agenda de la Cinemateca dicen 20:00. La app tiene 20:00 (la más temprana) → sin acción obligatoria. Resto del sábado coincide."
+  },
+  {
+   "fecha": "2026-10-31",
+   "cuerpo": "Vigía 31 oct 13:00 — MIDBO (web + IG por Apify)\n- Web: las 121 obras de la API y los bloques «Funciones» de sus páginas coinciden con producción. Solo cambiaron sinopsis (¡Viva México!, Sey Arimaku, Un río de aguas profundas y luminosas, ya bien en la app); ninguna función cambió de día, hora ni sala.\n- IG DfKX7AyhhvM (reel; el fotograma no trae datos, el dato sale solo del pie): Master class de Ignacio Agüero hoy 31 oct a las 4:30 p. m. en la Cinemateca. La web la pone como nota de la función de «Cien niños esperando un tren» (16:30, Sala Capital). La app tiene la función, pero no nombra la master class. Se puede agregar la nota.\n- IG DfKdzHMEUck: visitas guiadas a «Escuchar lo que permanece» el miércoles 4 nov a las 3 p. m. y el sábado 7 nov a las 4 p. m., en la Sala E. La app no las tiene. La del 7 nov cae fuera de los días oficiales.\n"
   }
  ]
 }

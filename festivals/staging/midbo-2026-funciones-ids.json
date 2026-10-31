@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "ensamblar.py: ids estables de las funciones (docs/FUNCION.md C1)",
-  "capturado": "2026-10-30"
+  "capturado": "2026-10-31"
  },
  "funciones": {
   "f_4476aa7fd2": {
@@ -646,6 +646,13 @@
    "hora": "15:00",
    "sala": "",
    "titulo": "visita guiada por el cmpr"
+  },
+  "f_33efd015fd": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-11-04",
+   "hora": "15:00",
+   "sala": "Sala E",
+   "titulo": "visita guiada a la exposicion escuchar lo que permanece"
   },
   "f_092f382469": {
    "sede": "Cinemateca de Bogotá - Bogotá",
