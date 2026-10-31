@@ -7,7 +7,7 @@
 // (lo escribe loadFestival). Roster/viewstate vía bridge.
 
 import {FESTIVAL_CONFIG, MAX_REMEMBERED_SLOTS, TMDB_IMG} from '../config.js';
-import { DAY_ABBR, DAY_NUM, ICONS, _secLabel, _sectionColor, escXML, festivalTagline, isFullDayBlocked, makeMesaDeLuzSVG, makeProgramPoster, parseProgramTitle, renderRatingStarsHTML } from '../view/components.js';
+import { DAY_ABBR, DAY_NUM, ICONS, _secLabel, _sectionColor, escXML, festivalTagline, isFullDayBlocked, _posterForma, makeMesaDeLuzSVG, makeProgramPoster, parseProgramTitle, renderRatingStarsHTML } from '../view/components.js';
 import { _getItemPoster, _mkCortoItemHtml, _posterStyle, _posterThumb, dayLabel, ventanaDias, emptyState, durFmt, flagFmt, getCortoItemPoster, getFilmPoster, getFilmPosterUntitled, getPosterSrc, itemPosterParts, posterAmbient, posterParts, sala, starsText, vcfg, venueCity, venueMatches, isCitySel, ticketBadgeTarget, conflictAccount, programParts, abiertaLabel, abiertaRango } from '../view/helpers.js';
 // countryToFlags vive en dominio (src/domain/banderas.js), junto a la tabla de
 // países GENERADA (scripts/generate-paises.js, ICU es+en). Aquí había un
@@ -691,7 +691,8 @@ export function openCortoSheet(title, country, duration, section, flags, directo
     ?`<div class="psp-editorial poster-ed" style="--ed-accent:${_pp3.accent}">${_pp3.inner}</div>`
     :posterUrl
       ?`<img class="pel-sheet-poster" src="${posterUrl}" data-title="${(title||"").replace(/"/g,'&quot;')}" loading="lazy" data-err="corto" alt="">`
-      :`<img class="pel-sheet-poster" src="${makeProgramPoster(state,title,dur,section||'')||''}" alt="" loading="lazy">`;
+      // Sin póster: la boleta vacía de itemPosterParts — el título va al lado.
+      :`<img class="pel-sheet-poster" src="${_pp3.src||''}" alt="" loading="lazy">`;
   const ps=document.getElementById('pel-sheet');
   if(ps) ps.scrollTop=0;
   _pushSheetState();
@@ -1185,7 +1186,7 @@ function _pvShowCurrent(){
   const poster=document.getElementById('pv-poster');
   if(poster){
     poster.style.opacity='';
-    poster.src=getCortoItemPoster(item)||makeProgramPoster(state,item.title,item.duration||'',_pvSection);
+    poster.src=getCortoItemPoster(item)||_posterForma({forma:'boleta', accent:_sectionColor(_pvSection||''), title:'', dato:''});
     poster.onerror=()=>{poster.style.opacity='0';};
   }
   const titleEl=document.getElementById('pv-film-title');

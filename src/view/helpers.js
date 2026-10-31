@@ -138,11 +138,10 @@ export function getCortoItemPoster(item){
 // poster-ed + --ed-accent). Ninguna superficie de cortos debe volver a construir
 // el <img> del still a mano — enforced por validate.py [poster-editorial-parity].
 export function itemPosterParts(item, section, imgClass, {header=false}={}){
-  // Sin póster propio: la CARD grande (header) conserva el generativo entero;
-  // el thumb de 56px recibe la mini — la marca de la obra, su título va al lado.
+  // Sin póster propio: la boleta vacía, en el thumb y en la card grande — el
+  // título va al lado (Juan, 31 oct 2026: fuera las figuras geométricas).
   const src=getCortoItemPoster(item)
-    ||(header?makeProgramPoster(state,item.title,item.duration||'',section||'')
-             :_buildPosterMini({accent:_sectionColor(section||''), title:item.title, esPrograma:false}));
+    ||_posterForma({forma:'boleta', accent:_sectionColor(section||''), title:'', dato:''});
   if(_isEditorialPoster(item)){
     // thumb pequeño → still enmarcado SIN banda de texto (precedente _posterThumb);
     // card grande (Diario) → con banda de sección, como _recapPosterCard.
@@ -271,7 +270,8 @@ export function slotPosterParts(members, blockDur, semilla){
   //   afiche real          → afiche
   //   solo fotograma       → boleta con la foto
   //   nada                 → boleta
-  // Si ninguna obra trae imagen no hay mesa: cae al generativo (jerarquía).
+  // Aunque NINGUNA obra traiga imagen hay mesa: una boleta con su título por
+  // obra dice «función múltiple» mejor que el generativo (Juan, 31 oct 2026).
   if(!Array.isArray(members)||members.length<2) return null;
   const modules=members.map(f=>{
     const src=getPosterSrc(f.title,true)||f.poster||null;
@@ -279,7 +279,6 @@ export function slotPosterParts(members, blockDur, semilla){
     if(src) return {kind:'foto', src, title:f.title};
     return {kind:'nada', src:null, title:f.title};
   });
-  if(!modules.some(m=>m.src)) return null;
   const lider=members[0];
   const dur=blockDur||blockDuration(lider);
   const dato=`${members.length} ${t('misc_peliculas')}${dur?` · ${dur} min`:''}`;
