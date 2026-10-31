@@ -124,7 +124,11 @@ FUNCIONES = [
       'sinopsis': 'Nocroma. Un espacio para conversar sobre el proceso creativo, las historias y los detalles detrás '
                   'del inicio de la producción de un largometraje.'}),
     ('2026-10-31', '16:00', 'Surgentes - Animage', 'Surgentes', FON, '', LIBRE, 12, 3579, {'programa': 'Surgentes - Animage'}),
-    ('2026-11-01', '14:00', 'Surgentes - Con extremos', 'Surgentes', FON, '', LIBRE, 12, None, {'programa': 'Surgentes - Con extremos'}),
+    # 31 oct: la función de Fontanar tiene ficha propia (3846) con NUEVE obras —
+    # una más que «Con extremos» del Centro (3592)—. Mismo título con otra lista
+    # es otra obra para la app ([programa-mismo-titulo]): va con el título
+    # VERBATIM de su ficha, «SURGENTES-Animación latinoamericana».
+    ('2026-11-01', '14:00', 'SURGENTES-Animación latinoamericana', 'Surgentes', FON, '', LIBRE, 12, None, {'programa': 'Surgentes - Con extremos'}),
 ]
 # La exposición: 22 oct–13 nov, 8:00–17:00; el PDF la lista en cada día de
 # programación desde el 22 (no el 26 ni el 29). Se recorre, no se reserva → info.
@@ -210,6 +214,13 @@ def main():
             if not L:
                 fallos.append(f'{tit}: el programa no está en el catálogo')
                 continue
+            # una obra con `_solo_funcion` va solo en esa función y en su lugar
+            # de la ficha (la 4ª de «Con extremos» en Fontanar, ficha 3846)
+            sol = [o for o in L if o.get('_solo_funcion')]
+            L = [o for o in L if not o.get('_solo_funcion')]
+            for o in sol:
+                if o['_solo_funcion'] == f'{dia} {hora}':
+                    L.insert(o['_lugar'], o)
             f['obras'] = [obra(o) for o in L]
         if 'obra' in x:
             f.update({k: v for k, v in obra(por_tit[x.pop('obra')]).items() if k != 'titulo'})
