@@ -9970,85 +9970,6 @@
    }
   },
   {
-   "title": "Visita guiada a la exposición Escuchar lo que permanece",
-   "type": "event",
-   "section": "🔊 Documental Expandido",
-   "duration": "60 min",
-   "_ancla": [
-    "Cinemateca de Bogotá - Bogotá",
-    "2026-11-04",
-    "15:00"
-   ],
-   "day": "2026-11-04",
-   "time": "15:00",
-   "day_order": 8,
-   "venue": "Cinemateca de Bogotá - Bogotá",
-   "sala": "Sala E",
-   "event_kind": "evento",
-   "has_qa": false,
-   "_src": {
-    "url": "https://www.instagram.com/p/DfKdzHMEUck/",
-    "date": "2026-10-31"
-   },
-   "description": "Lidera: Jorjan Betancourt.",
-   "description_lang": "es",
-   "_fid": "f_33efd015fd",
-   "id": "f_33efd015fd",
-   "is_free": true,
-   "_procedencia": {
-    "day": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-31",
-     "url": "https://midbo.co/"
-    },
-    "time": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-31",
-     "url": "https://midbo.co/"
-    },
-    "venue": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-31",
-     "url": "https://midbo.co/"
-    },
-    "sala": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-31",
-     "url": "https://midbo.co/"
-    },
-    "duration": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-31",
-     "url": "https://midbo.co/"
-    },
-    "entrada": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-31",
-     "url": "https://midbo.co/"
-    },
-    "has_qa": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-31",
-     "url": "https://midbo.co/"
-    },
-    "title": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-31",
-     "url": "https://midbo.co/"
-    },
-    "type": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-31",
-     "url": "https://midbo.co/"
-    },
-    "event_kind": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-31",
-     "url": "https://midbo.co/"
-    }
-   }
-  },
-  {
    "title": "Escuchar lo que permanece",
    "type": "event",
    "section": "🔊 Documental Expandido",
@@ -10071,7 +9992,7 @@
     "url": "https://cinematecadebogota.gov.co/exposiciones?id=3663",
     "date": "2026-10-22"
    },
-   "description": "¿Qué escuchamos cuando una imagen guarda silencio? En las cuatro obras de la exposición, el sonido aparece como una materia inestable. Puede habitar una voz, adherirse a un paisaje, surgir de una textura o permanecer latente en una imagen. A veces se oye. A veces debe ser imaginado. Martes a viernes: 2:00 p.m. a 6:00 p.m. Sábados, domingos y festivos: 11:00 a.m. a 6:00 p.m. Artista: María Isabella Arenas, Sergio Díaz, Daniel Torres, Yareni Velázquez Mendoza · Curaduría: Jorjan Betancourt.",
+   "description": "¿Qué escuchamos cuando una imagen guarda silencio? En las cuatro obras de la exposición, el sonido aparece como una materia inestable. Puede habitar una voz, adherirse a un paisaje, surgir de una textura o permanecer latente en una imagen. A veces se oye. A veces debe ser imaginado. Martes a viernes: 2:00 p.m. a 6:00 p.m. Sábados, domingos y festivos: 11:00 a.m. a 6:00 p.m. Visita guiada: miércoles 4 de noviembre, 3 p. m. Lidera: Jorjan Betancourt. Artista: María Isabella Arenas, Sergio Díaz, Daniel Torres, Yareni Velázquez Mendoza · Curaduría: Jorjan Betancourt.",
    "description_lang": "es",
    "_fid": "f_092f382469",
    "id": "f_092f382469",
@@ -10210,7 +10131,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-31T13:42:12",
+  "fecha": "2026-10-31T14:18:01",
   "plan_sha": "18f7fb7e2b601fc4",
   "paso": 8,
   "cmd": "python3 pipeline/midbo-2026-verificar.py"
