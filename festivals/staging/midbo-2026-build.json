@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "midbo.co — ficha de cada obra (bloque «Funciones») + API pelicula/seccion",
-  "capturado": "2026-10-30",
+  "capturado": "2026-10-31",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_secciones": "Las categorías madre de la taxonomía `seccion` de midbo.co, tal cual; «Encuentro Pensar lo Real» es el nombre del menú del seminario; «Proyecciones» (nuestra) para la única obra sin sección.",
@@ -3373,7 +3373,7 @@
    "day_order": 4,
    "venue": "Cinemateca de Bogotá - Bogotá",
    "sala": "Sala Capital",
-   "has_qa": false,
+   "has_qa": true,
    "synopsis": "Un documental sobre un taller de cine para niños impartido por Alicia Vega, una profesora de un barrio marginal de Santiago, dirigido a niños cuya característica común es que nunca han ido al cine. Cien años después de la invención del cine, cien niños asisten por primera vez a una sala de cine. Luego cuentan su experiencia en una película que realizan mediante dibujos sobre fotogramas de papel.",
    "synopsis_lang": "es",
    "poster": "/assets/midbo-2026/cien-ninos-esperando-un-tren.jpg",
@@ -3390,6 +3390,7 @@
    "_fid": "f_38cd77e22b",
    "id": "f_38cd77e22b",
    "is_free": false,
+   "qa_type": "team",
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -3428,8 +3429,13 @@
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-10-10",
-     "url": "https://midbo.co/"
+     "fecha": "2026-10-31",
+     "url": "https://midbo.co/peliculas/cien-ninos-esperando-un-tren/"
+    },
+    "qa_type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-31",
+     "url": "https://midbo.co/peliculas/cien-ninos-esperando-un-tren/"
     },
     "title": {
      "tipo": "festival-web",
@@ -9964,6 +9970,85 @@
    }
   },
   {
+   "title": "Visita guiada a la exposición Escuchar lo que permanece",
+   "type": "event",
+   "section": "🔊 Documental Expandido",
+   "duration": "60 min",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-11-04",
+    "15:00"
+   ],
+   "day": "2026-11-04",
+   "time": "15:00",
+   "day_order": 8,
+   "venue": "Cinemateca de Bogotá - Bogotá",
+   "sala": "Sala E",
+   "event_kind": "evento",
+   "has_qa": false,
+   "_src": {
+    "url": "https://www.instagram.com/p/DfKdzHMEUck/",
+    "date": "2026-10-31"
+   },
+   "description": "Lidera: Jorjan Betancourt.",
+   "description_lang": "es",
+   "_fid": "f_33efd015fd",
+   "id": "f_33efd015fd",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-31",
+     "url": "https://midbo.co/"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-31",
+     "url": "https://midbo.co/"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-31",
+     "url": "https://midbo.co/"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-31",
+     "url": "https://midbo.co/"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-31",
+     "url": "https://midbo.co/"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-31",
+     "url": "https://midbo.co/"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-31",
+     "url": "https://midbo.co/"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-31",
+     "url": "https://midbo.co/"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-31",
+     "url": "https://midbo.co/"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-31",
+     "url": "https://midbo.co/"
+    }
+   }
+  },
+  {
    "title": "Escuchar lo que permanece",
    "type": "event",
    "section": "🔊 Documental Expandido",
@@ -10125,7 +10210,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-30T13:20:03",
+  "fecha": "2026-10-31T13:42:12",
   "plan_sha": "18f7fb7e2b601fc4",
   "paso": 8,
   "cmd": "python3 pipeline/midbo-2026-verificar.py"

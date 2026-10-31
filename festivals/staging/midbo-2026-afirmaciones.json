@@ -310,6 +310,36 @@
     "fecha": "2026-10-28"
    },
    "evidencia": "lámina 3 de p/DfCiPvXoGqF (28 oct): «Charla \"Herramientas inclusivas para personas sordas y ciegas. El caso de Estancia: accesible con audiodescripción\"» · 28 oct 2:30 p.m. · Alianza Francesa Sede Centro · entrada libre · con intérprete de lengua de señas en vivo. Regla vigente: IG más reciente manda sobre la web (midbo.co decía «Charla: Audio descripción para documental», con inscripción)."
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-10-31",
+    "hora": "16:30"
+   },
+   "casilla": "has_qa",
+   "valor": true,
+   "fuente": {
+    "tipo": "festival-web",
+    "url": "https://midbo.co/peliculas/cien-ninos-esperando-un-tren/",
+    "fecha": "2026-10-31"
+   },
+   "evidencia": "pie de p/DfKX7AyhhvM (31 oct): «Sábado 31 de octubre | 4:30 p. m. Máster class con Ignacio Agüero.» · midbo.co/peliculas/cien-ninos-esperando-un-tren/ (31 oct): «31 de octubre / 16:30 H Sala Capital, Cinemateca de Bogotá» · «Master Class MIDBO con el director Ignacio Agüero»"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-10-31",
+    "hora": "16:30"
+   },
+   "casilla": "qa_type",
+   "valor": "team",
+   "fuente": {
+    "tipo": "festival-web",
+    "url": "https://midbo.co/peliculas/cien-ninos-esperando-un-tren/",
+    "fecha": "2026-10-31"
+   },
+   "evidencia": "pie de p/DfKX7AyhhvM (31 oct): «Sábado 31 de octubre | 4:30 p. m. Máster class con Ignacio Agüero.» · midbo.co/peliculas/cien-ninos-esperando-un-tren/ (31 oct): «31 de octubre / 16:30 H Sala Capital, Cinemateca de Bogotá» · «Master Class MIDBO con el director Ignacio Agüero» (el director de la obra)"
   }
  ]
 }
