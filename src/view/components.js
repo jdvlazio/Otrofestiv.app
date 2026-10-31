@@ -127,8 +127,42 @@ const _secHash=s=>[...String(s)].reduce((h,c)=>(Math.imul(31,h)+c.charCodeAt(0))
 export function _sectionColor(sec){
   if(!sec) return '#F59E0B';                       // sin sección: ámbar de marca
   const arch = SECTION_ARCHETYPES[sec];
-  if(arch && ARCHETYPE_COLORS[arch]) return ARCHETYPE_COLORS[arch];
-  return SECTION_COLORS[sec] || ACCENT_PALETTE[Math.abs(_secHash(sec))%ACCENT_PALETTE.length];
+  if(arch && ARCHETYPE_COLORS[arch]) return _sala(ARCHETYPE_COLORS[arch]);
+  return _sala(SECTION_COLORS[sec] || ACCENT_PALETTE[Math.abs(_secHash(sec))%ACCENT_PALETTE.length]);
+}
+
+// ── Paleta «Sala» (Juan, 31 oct 2026 — spec mesa-de-luz) ────────────────────
+// Los colores de sección conservan su TONO y bajan a la misma luz y la misma
+// saturación: oklch(0.66 0.075 h). Se distinguen sin gritar, y el ámbar de
+// marca queda como el único color vivo de la app — por eso se exime. Se aplica
+// acá, en el dueño, y no en config: el dato del festival no cambia, cambia
+// cómo lo pinta la app. Devuelve hex: posterAmbient y los SVG lo leen así.
+const _SALA_EXENTOS=new Set(['#F59E0B','#EF9F27']);
+const _salaCache=new Map();
+export function _sala(hex){
+  const h=String(hex||'').trim();
+  if(!/^#[0-9a-f]{6}$/i.test(h)||_SALA_EXENTOS.has(h.toUpperCase())) return h;
+  if(_salaCache.has(h)) return _salaCache.get(h);
+  const lin=c=>{c/=255;return c<=0.04045?c/12.92:Math.pow((c+0.055)/1.055,2.4);};
+  const [r,g,b]=[1,3,5].map(i=>lin(parseInt(h.slice(i,i+2),16)));
+  const l=Math.cbrt(0.4122214708*r+0.5363325363*g+0.0514459929*b);
+  const m=Math.cbrt(0.2119034982*r+0.6806995451*g+0.1073969566*b);
+  const q=Math.cbrt(0.0883024619*r+0.2817188376*g+0.6299787005*b);
+  const A=1.9779984951*l-2.4285922050*m+0.4505937099*q;
+  const B=0.0259040371*l+0.7827717662*m-0.8086757660*q;
+  const hue=Math.atan2(B,A), L=0.66, C=0.075;
+  const a2=C*Math.cos(hue), b2=C*Math.sin(hue);
+  const l3=Math.pow(L+0.3963377774*a2+0.2158037573*b2,3);
+  const m3=Math.pow(L-0.1055613458*a2-0.0638541728*b2,3);
+  const s3=Math.pow(L-0.0894841775*a2-1.2914855480*b2,3);
+  const out=[4.0767416621*l3-3.3077115913*m3+0.2309699292*s3,
+             -1.2684380046*l3+2.6097574011*m3-0.3413193965*s3,
+             -0.0041960863*l3-0.7034186147*m3+1.7076147010*s3]
+    .map(c=>{c=c<=0.0031308?12.92*c:1.055*Math.pow(c,1/2.4)-0.055;
+      return Math.round(Math.min(1,Math.max(0,c))*255).toString(16).padStart(2,'0');});
+  const res='#'+out.join('').toUpperCase();
+  _salaCache.set(h,res);
+  return res;
 }
 // ── REGLA INAMOVIBLE DE ARQUITECTURA ─────────────────────────────────────────
 // Todo display de nombre de sección DEBE pasar por _secLabel() (o _secLabelFull()
@@ -666,6 +700,155 @@ export function makeSharedSlotSVG({modules, secLabel:_secLabel, accent, dato}){
     +datoTxt+`</svg>`;
 }
 
+// ── Escarapela y boleta (Juan, 31 oct 2026 — spec mesa-de-luz) ──────────────
+// Lo que no tiene afiche se dibuja sobre negro con la luz de sección, la
+// identidad de siempre, y toma la forma de lo que ES:
+//   escarapela — un evento: se entra con credencial. Banda sólida de color con
+//                el rótulo en negro y el agujero del cordón; título ABAJO.
+//   boleta     — una obra: se entra a una función. Troquel con muescas y talón
+//                delgado de color; título ARRIBA (sin banda, arriba).
+// TEXTO DE UN SOLO TAMAÑO en todos: rótulo 9, título 11, duración 8 (px sobre
+// la tarjeta de 112 del prototipo aprobado; acá en el viewBox de 120). El
+// título nunca crece ni se encoge: lo que no cabe se recorta con «…» en la
+// línea 6. Solo baja —hasta el tamaño del rótulo— cuando UNA palabra no entra
+// en el ancho, porque partirla con guion lo descartó Juan.
+// Cada SVG va en su propio <img>, así que los id del grano no chocan.
+const _PX=120/112, _ROT=9*_PX, _TIT=11*_PX, _DAT=8*_PX, _PAD=10*_PX;
+function _quitaEco(title, label){
+  const _n=x=>String(x||'').normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase().trim();
+  const _t=String(title||'').trim(), _l=String(label||'').trim();
+  if(!_t||!_l||!_n(_t).startsWith(_n(_l))) return _t;
+  const _tras=_t.slice(_l.length);
+  if(!/^\s*[·:—–-]|^\s+\S/.test(_tras)) return _t;     // «Charlatán» no es «Charla»
+  const _resto=_tras.replace(/^[\s·:—–-]+/,'');
+  return _resto?_resto[0].toUpperCase()+_resto.slice(1):_t;
+}
+// CORTE DE LÍNEA «emparejar» (Juan, 31 oct 2026 — eligió entre tres sobre
+// títulos reales). La letra NUNCA se comprime: comprimir para que una línea
+// quepa «es donde se empieza a ver feo». Por eso el ancho se MIDE con la
+// fuente real en el navegador (canvas), y no con el estimador, que en peso
+// 800 se queda corto. Sin DOM (tests en node) cae al estimador.
+//   1. Una palabra débil («de», «y», «la», un guion) viaja pegada a la que
+//      sigue: ninguna línea termina en ella (regla de Juan de siempre).
+//   2. Se cuenta cuántas líneas hacen falta llenando cada una hasta el borde.
+//   3. Con ESE número de líneas, se reparten las palabras para que queden de
+//      largo parecido. Pasada la línea 6, «…».
+let _ctxMedir=null;
+function _medidor(fs){
+  if(typeof document==='undefined') return s=>_emWidth(s,false)*fs*1.12;
+  if(!_ctxMedir) _ctxMedir=document.createElement('canvas').getContext('2d');
+  const font=`800 ${fs}px -apple-system,BlinkMacSystemFont,sans-serif`;
+  return s=>{_ctxMedir.font=font;return _ctxMedir.measureText(s).width;};
+}
+const _esDebil=w=>/^[·–—-]+$/.test(w)||_BAND_WEAK.has(w.toLowerCase().replace(/[^\p{L}]/gu,'').normalize('NFD').replace(/[̀-ͯ]/g,''));
+function _unidades(str){
+  const U=[]; let pend=[];
+  for(const w of String(str||'').trim().split(/\s+/).filter(Boolean)){
+    pend.push(w);
+    if(!_esDebil(w)){ U.push(pend.join(' ')); pend=[]; }
+  }
+  if(pend.length){ if(U.length) U[U.length-1]+=' '+pend.join(' '); else U.push(pend.join(' ')); }
+  return U;
+}
+function _llenar(U, W, boxW){
+  const L=[]; let cur='';
+  for(const u of U){ const c=cur?cur+' '+u:u; if(cur&&W(c)>boxW){ L.push(cur); cur=u; } else cur=c; }
+  if(cur) L.push(cur);
+  return L;
+}
+function _emparejar(U, W, boxW, n){
+  if(U.length>14||n<2) return null;
+  let best=null;
+  const rec=(i,acc)=>{
+    if(acc.length>n) return;
+    if(i===U.length){
+      if(acc.length!==n) return;
+      const ls=acc.map(a=>a.join(' ')), ww=ls.map(W);
+      if(ww.some(x=>x>boxW)) return;
+      const sc=ww.slice(0,-1).reduce((t,x)=>t+(boxW-x)**2,0)
+        +Math.max(0,ww[ww.length-1]-Math.max(...ww.slice(0,-1)))**2;
+      if(!best||sc<best.sc) best={sc,ls};
+      return;
+    }
+    for(let j=i+1;j<=U.length;j++) rec(j,[...acc,U.slice(i,j)]);
+  };
+  rec(0,[]);
+  return best&&best.ls;
+}
+function _tituloFijo(str, boxW, maxLines){
+  const s=String(str||'').trim();
+  if(!s) return {lines:[], fs:_TIT, lh:_TIT*1.18};
+  let fs=_TIT, W=_medidor(fs);
+  // Solo baja cuando una palabra —con su «de», «y» o «la» pegados— no entra
+  // en el ancho («y representación.»): partirla con guion lo descartó Juan, y
+  // dejar la «y» huérfana o al final de la línea anterior se ve peor. Baja lo
+  // justo, nunca por debajo del rótulo.
+  const U=_unidades(s);
+  const ancha=Math.max(...U.map(u=>W(u)));
+  if(ancha>boxW){ fs=Math.max(_ROT, fs*boxW/ancha*0.995); W=_medidor(fs); }
+  const lleno=_llenar(U, W, boxW);
+  let L=_emparejar(U, W, boxW, lleno.length)||lleno;
+  if(L.length>maxLines){
+    L=lleno.slice(0,maxLines);
+    let u=L[maxLines-1].split(' ');
+    while(u.length>1&&W(u.join(' ')+'…')>boxW) u.pop();
+    L[maxLines-1]=u.join(' ').replace(/[\s.,;:–—-]+$/,'')+'…';
+  }
+  return {lines:L, fs:+fs.toFixed(2), lh:+(fs*1.18).toFixed(2)};
+}
+// El tipo puede venir ESCRITO en el título: «Panel: Memoria…» marcado como
+// foro. La escarapela dice la palabra del festival (PANEL) y el título no la
+// repite (Juan, 31 oct). Solo palabras de actividad y solo con dos puntos:
+// «Pedro: una vida» no es un tipo.
+const _TIPO_EN_TITULO=/^(panel|charla|taller|foro|conversatorio|masterclass|clase magistral|seminario|debate|di[aá]logo|mesa redonda|laboratorio|conferencia|conversaci[oó]n|encuentro|lanzamiento)\s*:\s*/i;
+function _tipoDelTitulo(title, label){
+  const m=String(title||'').match(_TIPO_EN_TITULO);
+  if(!m) return {label, title:_quitaEco(title,label)};
+  const resto=String(title).slice(m[0].length);
+  return resto?{label:m[1].toUpperCase(), title:resto[0].toUpperCase()+resto.slice(1)}:{label, title};
+}
+export function _posterForma({forma, accent, label, title, dato}){
+  const VW=120, VH=180, CW=VW-2*_PAD, FONDO='#100E0C', NEGRO='#0B0A08';
+  const r=n=>+n.toFixed(2);
+  const acc=accent||'#F59E0B';
+  const _dato=String(dato||'').trim();
+  const datoY=VH-_PAD-_DAT*0.3;
+  let cuerpo='';
+  const _txt=(l,x,y,fs,fill,{w=800,ls=0}={})=>{
+    return `<text x="${r(x)}" y="${r(y)}" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="${r(fs)}" font-weight="${w}" letter-spacing="${r(ls)}" fill="${fill}">${escXML(l)}</text>`;};
+  if(forma==='escarapela'){
+    const rot=_fitLines(String(label||'').toUpperCase(),
+      {boxW:CW, boxH:1e4, maxLines:2, fsMax:_ROT, fsMin:_ROT*0.8, lhRatio:1.25, lsEm:0.16, upper:true});
+    const bandH=22*_PX+rot.lines.length*rot.lh+6*_PX;
+    cuerpo+=`<rect width="${VW}" height="${r(bandH)}" fill="${acc}"/>`
+      +`<rect x="${r(VW/2-15*_PX)}" y="${r(8*_PX)}" width="${r(30*_PX)}" height="${r(6*_PX)}" rx="${r(3*_PX)}" fill="${NEGRO}"/>`
+      +rot.lines.map((l,i)=>_txt(l,_PAD,bandH-6*_PX-(rot.lines.length-1-i)*rot.lh-rot.fs*0.2,rot.fs,NEGRO,{ls:rot.fs*0.16})).join('');
+    const ttl=_tituloFijo(title, CW*0.97, 6);
+    const ultima=(_dato?datoY-_DAT-4*_PX:datoY)-ttl.fs*0.05;
+    cuerpo+=ttl.lines.map((l,i)=>_txt(l,_PAD,ultima-(ttl.lines.length-1-i)*ttl.lh,ttl.fs,'#F0EDE8')).join('');
+  } else {
+    const talon=VH*0.09, trY=VH-talon;
+    const ttl=_tituloFijo(title, CW*0.97, 6);
+    const y0=13*_PX+ttl.fs*0.9;
+    cuerpo+=ttl.lines.map((l,i)=>_txt(l,_PAD,y0+i*ttl.lh,ttl.fs,'#F0EDE8')).join('');
+    const dY=trY-8*_PX;
+    if(_dato) cuerpo+=_txt(_dato,_PAD,dY,_DAT,'#8A847B',{w:500});
+    cuerpo+=`<line x1="${r(9*_PX)}" y1="${r(trY)}" x2="${r(VW-9*_PX)}" y2="${r(trY)}" stroke="#F0EDE8" stroke-opacity=".22" stroke-width="${r(_PX)}" stroke-dasharray="3 3"/>`
+      +`<circle cx="0" cy="${r(trY)}" r="${r(6*_PX)}" fill="${NEGRO}"/><circle cx="${VW}" cy="${r(trY)}" r="${r(6*_PX)}" fill="${NEGRO}"/>`
+      +`<rect y="${r(VH-3*_PX)}" width="${VW}" height="${r(3*_PX)}" fill="${acc}"/>`;
+  }
+  const datoEsc=(forma==='escarapela'&&_dato)?_txt(_dato,_PAD,datoY,_DAT,'#8A847B',{w:500}):'';
+  const svg=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${VW} ${VH}">`
+    +`<defs><radialGradient id="lz" cx="1" cy="1" r="1"><stop offset="0" stop-color="${acc}" stop-opacity=".38"/><stop offset="1" stop-color="${acc}" stop-opacity="0"/></radialGradient>`
+    +`<filter id="gr"><feTurbulence type="fractalNoise" baseFrequency="1.1" numOctaves="2"/><feColorMatrix values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .07 0"/></filter></defs>`
+    +`<rect width="${VW}" height="${VH}" fill="${FONDO}"/>`
+    +`<rect x="${r(VW*0.15)}" y="${r(VH*0.45)}" width="${r(VW*0.85)}" height="${r(VH*0.55)}" fill="url(#lz)"/>`
+    +`<rect width="${VW}" height="${VH}" filter="url(#gr)"/>`
+    +`<rect width="${VW}" height="${r(_PX)}" fill="#FFFFFF" fill-opacity=".06"/>`
+    +cuerpo+datoEsc+`</svg>`;
+  return `data:image/svg+xml,${encodeURIComponent(svg)}`;
+}
+
 export function makeEventPoster(state,title,duration,eventKind,section,opts){
   const {_activeFestId, _lang} = state.snapshot();
   const festCfg=(FESTIVAL_CONFIG&&FESTIVAL_CONFIG[_activeFestId])||Object.values(FESTIVAL_CONFIG||{})[0]||{};
@@ -790,13 +973,13 @@ export function makeEventPoster(state,title,duration,eventKind,section,opts){
   // está en la cabecera del sheet. La banda de kind/sección se conserva.
   const _bodyTitle=(opts&&opts.untitled)?'':title;
   const kind=_kindMap[eventKind];
-  if(kind) return _buildPosterV16({...kind, title:_bodyTitle, num:null, kindLabel:true});
+  if(kind) return _posterForma({forma:'escarapela', accent:_sala(kind.accent), ..._tipoDelTitulo(_bodyTitle,kind.headerLabel), dato:duration});
   // Fallback — usa la sección del film si existe, sino eventPosterLabel del config
   const _secFallback=section?_secLabel(section):'';
   const lbl=_secFallback?[_secFallback]:((festCfg.eventPosterLabel)||[t('poster_evento'),'']);
   const headerLabel=lbl.filter(Boolean).join(' ');
   const _sectionAccent=section?_sectionColor(section):'#6B9BD1';
-  return _buildPosterV16({accent:_sectionAccent||'#6B9BD1', headerLabel, title:_bodyTitle, num:null});
+  return _posterForma({forma:'escarapela', accent:_sectionAccent||_sala('#6B9BD1'), ..._tipoDelTitulo(_bodyTitle,headerLabel), dato:duration});
 }
 
 export const ICONS={
