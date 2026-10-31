@@ -891,6 +891,14 @@ export function _posterForma({forma, accent, label, title, dato}){
     cuerpo+=ttl.lines.map((l,i)=>_txt(l,_PAD,y0+i*ttl.lh,ttl.fs,'#F0EDE8')).join('');
     const dY=trY-8*_PX;
     if(_dato) cuerpo+=_txt(_dato,_PAD,dY,_DAT,'#8A847B',{w:500});
+    // La marca (Juan, 31 oct 2026, opción B): el anillo de Otrofestiv abajo a la
+    // derecha, a la altura de la duración. En la ficha la boleta va sin título
+    // y sin ella quedaba vacía. Hueso atenuado: el ámbar es del talón.
+    const mk=13*_PX, mx=VW-8*_PX-mk, my=trY-6*_PX-mk, u=mk/24;
+    cuerpo+=`<g transform="translate(${r(mx)} ${r(my)}) scale(${r(u)})" fill="#F0EDE8" fill-opacity=".55">`
+      +`<circle cx="12" cy="12" r="9.5" fill="none" stroke="#F0EDE8" stroke-opacity=".55" stroke-width="3.4"/>`
+      +[[8.6,7.6],[10.9,7.6],[13.2,7.6],[8.6,9.9],[10.9,9.9],[13.2,9.9],[8.6,12.2],[10.9,12.2],[8.6,14.5]]
+        .map(([x,y])=>`<rect x="${x}" y="${y}" width="1.9" height="1.9" rx=".3"/>`).join('')+`</g>`;
     cuerpo+=`<line x1="${r(9*_PX)}" y1="${r(trY)}" x2="${r(VW-9*_PX)}" y2="${r(trY)}" stroke="#F0EDE8" stroke-opacity=".22" stroke-width="${r(_PX)}" stroke-dasharray="3 3"/>`
       +`<circle cx="0" cy="${r(trY)}" r="${r(6*_PX)}" fill="${NEGRO}"/><circle cx="${VW}" cy="${r(trY)}" r="${r(6*_PX)}" fill="${NEGRO}"/>`
       +`<rect y="${r(VH-3*_PX)}" width="${VW}" height="${r(3*_PX)}" fill="${acc}"/>`;
