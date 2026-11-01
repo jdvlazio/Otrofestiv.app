@@ -702,8 +702,13 @@ export function makeMesaDeLuzSVG({modules, accent, dato, semilla}){
         tTop+=fh+pad*0.6;
       }
       let ttl='';
-      if(tw>=40&&m.title){
-        const fs=tw/9, L=_fitLines(String(m.title),{boxW:tw-2*pad, boxH:1e4, maxLines:3, fsMax:fs, fsMin:fs, lhRatio:1.12});
+      // Desde 5 obras la boleta mide menos de 40 y el título ya no se lee —
+      // pero va igual, diminuto, como TEXTURA: con muchas obras tampoco los
+      // afiches se leen, solo se ve que son obras distintas (Juan, 1 nov 2026).
+      // Una línea que no cabe se corta con «…» dentro de la boleta.
+      if(m.title){
+        const fs=tw/9, bw=tw-2*pad, W=_medidor(fs), L=_fitLines(String(m.title),{boxW:bw, boxH:1e4, maxLines:3, fsMax:fs, fsMin:fs, lhRatio:1.12});
+        L.lines=L.lines.map(l=>{ if(W(l)<=bw) return l; let c=l; while(c.length>1&&W(c+'…')>bw) c=c.slice(0,-1); return c.trimEnd()+'…'; });
         ttl=L.lines.map((l,j)=>`<text x="${r(x+pad)}" y="${r(tTop+fs*0.9+j*L.lh)}" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="${r(fs)}" font-weight="800" fill="#F0EDE8">${escXML(l)}</text>`).join('');
       }
       const mu=tw*0.05;
