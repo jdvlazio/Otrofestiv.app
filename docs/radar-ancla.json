@@ -5463,16 +5463,16 @@
   },
   {
    "clave": "bajo-cauca",
-   "nombre": "Festival de Cine del Bajo Cauca",
-   "sigla": null,
+   "nombre": "Festival de Cine del Bajo Cauca (FECIBAC)",
+   "sigla": "FECIBAC",
    "ciudad": "Caucasia",
    "departamento": "Antioquia",
    "region": "Andina",
    "mes": 11,
    "mes_texto": null,
-   "fechas_2026": "3–7 NOV 2026 (12.º; Festhome, sin fuente propia)",
-   "web": "https://filmmakers.festhome.com/en/festival/10625",
-   "ig": null,
+   "fechas_2026": "10–14 NOV 2026 (12.º «Somos Chilapos»; Proimágenes, Comfenalco e IG 27 oct)",
+   "web": "https://infolocal.comfenalcoantioquia.com/index.php/agenda/fecibac-2026",
+   "ig": "@festivaldecine.bc",
    "estado": "radar",
    "id_config": null,
    "issue": [
@@ -5488,13 +5488,14 @@
    ],
    "fuente": [
     "https://github.com/jdvlazio/Otrofestiv.app/issues/1318",
-    "ICPA Antioquia — Resolución 422 de 2026 (18 ago 2026), Convocatoria Cinematografía y Audiovisuales"
+    "ICPA Antioquia — Resolución 422 de 2026 (18 ago 2026), Convocatoria Cinematografía y Audiovisuales",
+    "https://www.proimagenescolombia.com/secciones/eventos/evento_interna.php?ntd=1346"
    ],
-   "nota": null,
+   "nota": "Gratuito; organiza el municipio de Caucasia. Programación aún no publicada (1 nov). Festhome decía 3–7 NOV: errado.",
    "discrepancias": null,
    "motivo_descarte": null,
    "importancia": null,
-   "verificado_el": "2026-10-28",
+   "verificado_el": "2026-11-01",
    "origen": [
     "issue #1318"
    ],
