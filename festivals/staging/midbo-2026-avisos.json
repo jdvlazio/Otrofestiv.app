@@ -1,7 +1,31 @@
 {
- "_provenance": {"fuente": "IG de MIDBO, lámina 3 de https://www.instagram.com/p/DfHn6M1AP4s/ (sello CANCELADO, 30 oct 2026); texto aprobado por Juan el 30 oct 2026", "capturado": "2026-10-30"},
+ "_provenance": {
+  "fuente": "IG de MIDBO, lámina 3 de https://www.instagram.com/p/DfHn6M1AP4s/ (sello CANCELADO, 30 oct 2026); texto aprobado por Juan el 30 oct 2026 · 1 nov: comunicado p/DfNKlNRDoYe (Agüero ausente); texto aprobado por Juan el 1 nov 2026",
+  "capturado": "2026-10-30"
+ },
  "avisos": [
-  {"type": "cancelled", "id": "midbo2026-almas-30oct", "title": "Las almas ni los ojos", "date": "2026-10-30", "note": "Se canceló la función de hoy en la U. Nacional por la suspensión de actividades presenciales en el campus. Sigue la del lun 2 nov, 7:30 p.m., Sala Capital.", "url": "https://www.instagram.com/p/DfHn6M1AP4s/"},
-  {"type": "cancelled", "id": "midbo2026-hombres-30oct", "title": "Hombres perdidos", "date": "2026-10-30", "note": "Se canceló la función de hoy en la U. Nacional por la suspensión de actividades presenciales en el campus. Sigue la del dom 1 nov, 5:00 p.m., Sala 3.", "url": "https://www.instagram.com/p/DfHn6M1AP4s/"}
+  {
+   "type": "cancelled",
+   "id": "midbo2026-almas-30oct",
+   "title": "Las almas ni los ojos",
+   "date": "2026-10-30",
+   "note": "Se canceló la función de hoy en la U. Nacional por la suspensión de actividades presenciales en el campus. Sigue la del lun 2 nov, 7:30 p.m., Sala Capital.",
+   "url": "https://www.instagram.com/p/DfHn6M1AP4s/"
+  },
+  {
+   "type": "cancelled",
+   "id": "midbo2026-hombres-30oct",
+   "title": "Hombres perdidos",
+   "date": "2026-10-30",
+   "note": "Se canceló la función de hoy en la U. Nacional por la suspensión de actividades presenciales en el campus. Sigue la del dom 1 nov, 5:00 p.m., Sala 3.",
+   "url": "https://www.instagram.com/p/DfHn6M1AP4s/"
+  },
+  {
+   "type": "info",
+   "id": "midbo2026-aguero-1nov",
+   "note": "«Como me da la gana» (hoy, 2:00 p.m., Sala 3): Ignacio Agüero no estará por motivos de salud. Conversan Patricia Ayala y Hugo Chaparro.",
+   "note_en": "«Como me da la gana» (today, 2:00 p.m., Sala 3): Ignacio Agüero will not attend for health reasons. Patricia Ayala and Hugo Chaparro will lead the conversation.",
+   "url": "https://www.instagram.com/p/DfNKlNRDoYe/"
+  }
  ]
 }
