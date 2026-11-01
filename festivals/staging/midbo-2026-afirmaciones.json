@@ -340,6 +340,78 @@
     "fecha": "2026-10-31"
    },
    "evidencia": "pie de p/DfKX7AyhhvM (31 oct): «Sábado 31 de octubre | 4:30 p. m. Máster class con Ignacio Agüero.» · midbo.co/peliculas/cien-ninos-esperando-un-tren/ (31 oct): «31 de octubre / 16:30 H Sala Capital, Cinemateca de Bogotá» · «Master Class MIDBO con el director Ignacio Agüero» (el director de la obra)"
+  },
+  {
+   "funcion": "f_1f7f1e5ecd",
+   "casilla": "has_qa",
+   "valor": true,
+   "contra": false,
+   "fuente": {
+    "tipo": "juan",
+    "frase": "Sí, claro, hay que marcarlas (las 6 con «Función con Q&A ★» en las láminas de p/DfM62ZOIG6R)",
+    "fecha": "2026-11-01"
+   },
+   "evidencia": "lámina 05 de p/DfM62ZOIG6R (programación dom 1 nov), mirada en hoja de contacto: «4:00 p.m. · Sala 2 · Curadurías Especiales. Programa 3 · Función con Q&A ★»"
+  },
+  {
+   "funcion": "f_75c0129c89",
+   "casilla": "has_qa",
+   "valor": true,
+   "contra": false,
+   "fuente": {
+    "tipo": "juan",
+    "frase": "Sí, claro, hay que marcarlas (las 6 con «Función con Q&A ★» en las láminas de p/DfM62ZOIG6R)",
+    "fecha": "2026-11-01"
+   },
+   "evidencia": "lámina 06 de p/DfM62ZOIG6R (programación dom 1 nov), mirada en hoja de contacto: «5:00 p.m. · Sala Capital · Retrospectiva Sara Gómez, cortometrajes restaurados · Función con Q&A virtual ★»"
+  },
+  {
+   "funcion": "f_3fe0efbac0",
+   "casilla": "has_qa",
+   "valor": true,
+   "contra": false,
+   "fuente": {
+    "tipo": "juan",
+    "frase": "Sí, claro, hay que marcarlas (las 6 con «Función con Q&A ★» en las láminas de p/DfM62ZOIG6R)",
+    "fecha": "2026-11-01"
+   },
+   "evidencia": "lámina 07 de p/DfM62ZOIG6R (programación dom 1 nov), mirada en hoja de contacto: «5:00 p.m. · Sala 3 · Hombres perdidos · Función con Q&A ★»"
+  },
+  {
+   "funcion": "f_63080f9547",
+   "casilla": "has_qa",
+   "valor": true,
+   "contra": false,
+   "fuente": {
+    "tipo": "juan",
+    "frase": "Sí, claro, hay que marcarlas (las 6 con «Función con Q&A ★» en las láminas de p/DfM62ZOIG6R)",
+    "fecha": "2026-11-01"
+   },
+   "evidencia": "lámina 07 de p/DfM62ZOIG6R (programación dom 1 nov), mirada en hoja de contacto: «5:00 p.m. · Canterbury Café · Bojayá: la verdad desde adentro · Función con Q&A ★»"
+  },
+  {
+   "funcion": "f_c7055cc97e",
+   "casilla": "has_qa",
+   "valor": true,
+   "contra": false,
+   "fuente": {
+    "tipo": "juan",
+    "frase": "Sí, claro, hay que marcarlas (las 6 con «Función con Q&A ★» en las láminas de p/DfM62ZOIG6R)",
+    "fecha": "2026-11-01"
+   },
+   "evidencia": "lámina 08 de p/DfM62ZOIG6R (programación dom 1 nov), mirada en hoja de contacto: «6:30 p.m. · Sala 2 · Curadurías Especiales. Programa 2 · Función con Q&A ★»"
+  },
+  {
+   "funcion": "f_a6f030914b",
+   "casilla": "has_qa",
+   "valor": true,
+   "contra": false,
+   "fuente": {
+    "tipo": "juan",
+    "frase": "Sí, claro, hay que marcarlas (las 6 con «Función con Q&A ★» en las láminas de p/DfM62ZOIG6R)",
+    "fecha": "2026-11-01"
+   },
+   "evidencia": "lámina 10 de p/DfM62ZOIG6R (programación dom 1 nov), mirada en hoja de contacto: «7:30 p.m. · Sala 3 · Back to Fukushima · Función con Q&A ★»"
   }
  ]
 }
