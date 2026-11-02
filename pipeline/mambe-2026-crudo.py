@@ -2,8 +2,8 @@
 """mambe-2026-crudo.py — la programación del 13.º Festival MAMBE (Florencia, Caquetá,
 3–7 nov 2026) → crudo.
 
-LA FUENTE es el carrusel oficial de programación de @festivalmambe,
-`p/DfIOLhBloOw` del 30 oct 2026: 12 láminas. 00 es la portada, 01 las
+LA FUENTE es el carrusel de la «programación actualizada… es la oficial» de
+@festivalmambe, `p/DfOE-FSAVWB` del 2 nov 2026 (reemplaza a p/DfIOLhBloOw del 30 oct): 12 láminas. 00 es la portada, 01 las
 «Exposiciones permanentes» (sin hora: no son funciones), 02–09 la agenda día por
 día y 10–11 los logos. El pie dice «Todo es gratis y de entrada libre».
 
@@ -37,11 +37,11 @@ sys.path.insert(0, os.path.join(REPO, 'pipeline'))
 from lib import provenance  # noqa: E402
 
 FID = 'mambe-2026'
-POST = 'DfIOLhBloOw'
+POST = 'DfOE-FSAVWB'
 LAMINAS = f'{REPO}/fuentes/ig/{POST}'
-OJOS = f'{REPO}/fuentes/{FID}/{FID}-laminas-ojos.json'
+OJOS = f'{REPO}/fuentes/{FID}/{FID}-laminas-ojos-v2.json'
 OUT = f'{REPO}/festivals/staging/mambe-2026-crudo.json'
-SRC = {'url': f'https://www.instagram.com/p/{POST}/', 'date': '2026-10-30'}
+SRC = {'url': f'https://www.instagram.com/p/{POST}/', 'date': '2026-11-02'}
 
 PROYECCIONES = 'Proyecciones'
 ACTIVIDADES = 'Actividades'
@@ -56,14 +56,17 @@ PROYECCION = {
     # la lámina no dice si es una obra o dos; se publica tal cual
     (H + '04', '19:00', 'PROYECCIÓN: VOLAR Y TRES CLAVELES'): {'titulo': 'Volar y tres claveles'},
     # la «y» va en minúscula y más chica que los títulos: son dos obras
-    (H + '04', '19:30', 'PROYECCIÓN + CONVERSATORIO: EL RÍO QUE SIEMPRE SE VA y ANTES DE LA NIEVE'): {
+    (H + '04', '19:30', 'PROYECCIÓN + CONVERSATORIO: EL RÍO QUE SIEMPRE SE VA Y ANTES DE LA NIEVE'): {
         'titulo': 'El río que siempre se va y Antes de la nieve',
         'obras': [{'titulo': 'El río que siempre se va'}, {'titulo': 'Antes de la nieve'}]},
     # dos encabezados con un solo lugar y una sola hora: una sesión con dos obras
     (H + '05', '19:00', 'PROYECCIÓN + CONVERSATORIO: GUARDIANES DE LA FAUNA AMAZÓNICA: Plecturocebus '
-                        'Caquetensis · PROYECCIÓN + CONVERSATORIO: LOS GUARDIANES DE LAS AVES'): {
-        'titulo': 'Guardianes de la fauna amazónica: Plecturocebus caquetensis y Los guardianes de las aves',
+                        'Caquetensis · PROYECCIÓN TAPIR MEMORIES · PROYECCIÓN + CONVERSATORIO: LOS GUARDIANES DE LAS AVES'): {
+        # 2 nov: la programación actualizada suma «Tapir Memories» entre las dos
+        'titulo': 'Guardianes de la fauna amazónica: Plecturocebus caquetensis, Tapir Memories y Los guardianes de las aves',
         'obras': [{'titulo': 'Guardianes de la fauna amazónica: Plecturocebus caquetensis'},
+                  # país: el que ya publica FICCALI 2026 para la misma obra (catálogo, 2 nov)
+                  {'titulo': 'Tapir Memories', 'pais': 'Colombia'},
                   {'titulo': 'Los guardianes de las aves'}]},
     (H + '05', '19:30', 'PROYECCIÓN + CONVERSATORIO: LA MEMORIA DE LAS MARIPOSAS'):
         {'titulo': 'La memoria de las mariposas'},
@@ -81,34 +84,35 @@ PROYECCION = {
 ACTIVIDAD = {
     (H + '03', '18:00', 'INAUGURACIÓN EXPOSICIÓN: JAVIER MURILLO'):
         {'titulo': 'Inauguración Exposición: Javier Murillo', 'kind': 'evento'},
-    (H + '04', '09:00', 'TALLER: CINE COMUNITARIO'): {'titulo': 'Taller: Cine Comunitario', 'kind': 'taller'},
+    (H + '04', '15:00', 'TALLER: CINE COMUNITARIO'): {'titulo': 'Taller: Cine Comunitario', 'kind': 'taller'},
     (H + '05', '09:00', 'TALLER: CINE COMUNITARIO'): {'titulo': 'Taller: Cine Comunitario', 'kind': 'taller'},
-    (H + '06', '09:00', 'TALLER: CINE COMUNITARIO'): {'titulo': 'Taller: Cine Comunitario', 'kind': 'taller'},
+    (H + '05', '15:00', 'TALLER: CINE COMUNITARIO'): {'titulo': 'Taller: Cine Comunitario', 'kind': 'taller'},
     (H + '04', '17:00', 'TALLER: STOP MOTION PEDALIANDO CINE'):
         {'titulo': 'Taller: Stop Motion Pedaliando Cine', 'kind': 'taller'},
     (H + '04', '17:00', 'LABORATORIO: SERIGRAFÍA'): {'titulo': 'Laboratorio: Serigrafía', 'kind': 'evento'},
     (H + '05', '17:00', 'LABORATORIO: SERIGRAFÍA'): {'titulo': 'Laboratorio: Serigrafía', 'kind': 'evento'},
-    (H + '05', '08:00', 'TALLER: STENOPEICA'): {'titulo': 'Taller: Stenopeica', 'kind': 'taller'},
+    (H + '06', '17:00', 'LABORATORIO: SERIGRAFÍA'): {'titulo': 'Laboratorio: Serigrafía', 'kind': 'evento'},
+    (H + '07', '17:00', 'LABORATORIO: SERIGRAFÍA'): {'titulo': 'Laboratorio: Serigrafía', 'kind': 'evento'},
+    (H + '05', '09:00', 'TALLER: STENOPEICA'): {'titulo': 'Taller: Stenopeica', 'kind': 'taller'},
+    (H + '05', '14:00', 'TALLER: VIDEO DANZA'): {'titulo': 'Taller: Video Danza', 'kind': 'taller'},
     (H + '05', '15:00', 'TALLER ACTUACIÓN: MARÍA CECILIA SANCHEZ'):
         {'titulo': 'Taller Actuación: María Cecilia Sanchez', 'kind': 'taller'},
     (H + '06', '15:00', 'TALLER ACTUACIÓN: MARÍA CECILIA SANCHEZ'):
         {'titulo': 'Taller Actuación: María Cecilia Sanchez', 'kind': 'taller'},
-    (H + '05', '15:30', 'COCTEL + CONVERSATORIO: EXPOSICIÓN FOTOGRÁFICA GERSON SAENZ'):
+    (H + '04', '15:30', 'COCTEL + CONVERSATORIO: EXPOSICIÓN FOTOGRÁFICA GERSON SAENZ'):
         {'titulo': 'Coctel + Conversatorio: Exposición Fotográfica Gerson Saenz', 'kind': 'conversatorio'},
-    (H + '05', '16:00', 'FESTIVAL DE CORTOS PSICOACTIVOS + CONVERSATORIO'):
-        {'titulo': 'Festival de Cortos Psicoactivos + Conversatorio', 'kind': 'evento'},
-    (H + '05', '16:00', 'TALLER: CIANOTIPIA'): {'titulo': 'Taller: Cianotipia', 'kind': 'taller'},
-    (H + '06', '09:00', 'ENCUENTRO: TALLER MUJERES BUSCADORAS'):
+    (H + '05', '16:00', 'CORTOS PSICOACTIVOS + CONVERSATORIO'):
+        {'titulo': 'Cortos Psicoactivos + Conversatorio', 'kind': 'evento'},
+    (H + '05', '14:00', 'TALLER: CIANOTIPIA'): {'titulo': 'Taller: Cianotipia', 'kind': 'taller'},
+    (H + '06', '14:00', 'ENCUENTRO: TALLER MUJERES BUSCADORAS'):
         {'titulo': 'Encuentro: Taller Mujeres Buscadoras', 'kind': 'encuentro'},
-    (H + '06', '17:00', 'TALLER: SERIGRAFÍA'): {'titulo': 'Taller: Serigrafía', 'kind': 'taller'},
-    (H + '07', '17:00', 'TALLER: SERIGRAFÍA'): {'titulo': 'Taller: Serigrafía', 'kind': 'taller'},
     (H + '07', '17:00', 'EXHIBICIÓN: TALLER CINE COMUNITARIO'):
         {'titulo': 'Exhibición: Taller Cine Comunitario', 'kind': 'evento'},
     (H + '07', '17:00', 'EXHIBICIÓN: TALLER CIANOTIPIA'):
         {'titulo': 'Exhibición: Taller Cianotipia', 'kind': 'evento'},
     (H + '07', '17:00', 'EXHIBICIÓN: TALLER STENOPEICA'):
         {'titulo': 'Exhibición: Taller Stenopeica', 'kind': 'evento'},
-    (H + '07', '19:00', 'PROYECCIÓN: RESULTADO TALLER CINE COMUNITARIOY GANADORES FILMEMORIA'):
+    (H + '07', '19:00', 'PROYECCIÓN: RESULTADO TALLER CINE COMUNITARIO Y GANADORES FILMEMORIA'):
         {'titulo': 'Proyección: Resultado Taller Cine Comunitario y Ganadores Filmemoria', 'kind': 'evento'},
     (H + '07', '22:00', 'FIESTA DE CIERRE'): {'titulo': 'Fiesta de Cierre', 'kind': 'fiesta'},
 }
@@ -123,22 +127,22 @@ ABIERTAS = {'Inauguración Exposición: Javier Murillo',
 
 # Los talleres de varias jornadas: un bloque (PROTOCOLO §4)
 RECURRENTES = {'Taller: Cine Comunitario', 'Taller Actuación: María Cecilia Sanchez',
-               'Laboratorio: Serigrafía', 'Taller: Serigrafía'}
+               'Laboratorio: Serigrafía'}
 
 NO_SE_PUBLICA = {
     (H + '05', '09:00', 'PROYECCIÓN: CUANDO LAS PALABRAS VUELAN SE HACEN BUSQUEDA'):
         'proyección dentro de la Cárcel Heliconias: no es abierta al público',
     (H + '06', '09:00', 'PROYECCIÓN: CUANDO LAS PALABRAS VUELAN SE HACEN BUSQUEDA'):
         'proyección dentro de la Cárcel El Cunduy: no es abierta al público',
-    (H + '07', '', 'ENCUENTRO: TALLER MUJERES BUSCADORAS'): 'la lámina dice «Todo el día», sin hora',
+    (H + '07', '', 'TALLER: LA BÚSQUEDA EN PRIMER PLANO'): 'la lámina dice «Todo el día», sin hora',
 }
 
 ACCESO = 'Entrada libre'
 _ACCESO = {
     'estado': ACCESO,
-    'revisado': '2026-10-31',
-    'fuentes': ['el pie del carrusel oficial (instagram.com/p/DfIOLhBloOw/)'],
-    '_por_que': '«Todo es gratis y de entrada libre» (pie del post de programación, 30 oct 2026).',
+    'revisado': '2026-11-02',
+    'fuentes': ['el pie del carrusel oficial (instagram.com/p/DfOE-FSAVWB/)'],
+    '_por_que': '«Todas las actividades son gratuitas y de entrada libre» (pie del post de programación actualizada, 2 nov 2026).',
 }
 
 

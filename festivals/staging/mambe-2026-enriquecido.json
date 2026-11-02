@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, emparejado con ficha_verifica() (director + año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-10-31"
+  "capturado": "2026-11-02"
  },
  "obras": [
   {
@@ -19,7 +19,7 @@
    "lbSlug": "horizon-2024-4",
    "_verificado": "declarada a mano: Obra sin créditos en la lámina. Película de apertura de un festival colombiano: el largo colombiano de César Augusto Acevedo (2025), el mismo que publicamos en Guatapé 2026. El otro «Horizonte» de TMDB (1786666) es brasileño, de 2026. Investigación del 31 oct 2026.",
    "_director": "",
-   "_sondeado": "2026-10-31",
+   "_sondeado": "2026-11-02",
    "poster": "/assets/mambe-2026/horizonte.jpg",
    "posterSource": "tmdb",
    "_heredado": {
@@ -45,7 +45,7 @@
    "lbSlug": "the-memory-of-butterflies",
    "_verificado": "declarada a mano: Obra sin créditos en la lámina; única ficha con ese título en TMDB: Tatiana Fuentes Sadowski (Perú/Portugal, 2026). El festival la proyecta en la Maloca Uitoto. Investigación del 31 oct 2026.",
    "_director": "",
-   "_sondeado": "2026-10-31",
+   "_sondeado": "2026-11-02",
    "poster": "/assets/mambe-2026/la-memoria-de-las-mariposas.jpg",
    "posterSource": "tmdb",
    "_heredado": {
@@ -70,7 +70,7 @@
    "lbSlug": "lactar",
    "_verificado": "declarada a mano: Obra sin créditos en la lámina; única ficha con ese título en TMDB: película colombiana de Harold Trompetero (2026). Investigación del 31 oct 2026.",
    "_director": "",
-   "_sondeado": "2026-10-31",
+   "_sondeado": "2026-11-02",
    "poster": "/assets/mambe-2026/lactar.jpg",
    "posterSource": "tmdb",
    "director_heredado": "Harold Trompetero",
@@ -95,7 +95,7 @@
    "lbSlug": "i-dreamed-his-name",
    "_verificado": "declarada a mano: Obra sin créditos en la lámina; única ficha con ese título en TMDB: película colombiana de Ángela Carabalí (2026). Investigación del 31 oct 2026.",
    "_director": "",
-   "_sondeado": "2026-10-31",
+   "_sondeado": "2026-11-02",
    "poster": "/assets/mambe-2026/sone-su-nombre.jpg",
    "posterSource": "tmdb",
    "director_heredado": "Ángela Carabalí",
@@ -104,6 +104,13 @@
     "pais_heredado": "catálogo w_R4HKHDXFCZNZ (ficdeh-2026, ficma-2026, jardin-2026, mambe-2026, narrarelfuturo-2026, qaff-2026, siembrafest-2026)"
    },
    "pais_heredado": "Colombia"
+  },
+  {
+   "titulo": "Provisorium",
+   "duracion_tmdb": 60,
+   "_heredado": {
+    "duracion_tmdb": "catálogo w_95X3QS2CWWNM (mambe-2026)"
+   }
   }
  ],
  "verificadas": {
@@ -121,7 +128,7 @@
    "lbSlug": "horizon-2024-4",
    "_verificado": "declarada a mano: Obra sin créditos en la lámina. Película de apertura de un festival colombiano: el largo colombiano de César Augusto Acevedo (2025), el mismo que publicamos en Guatapé 2026. El otro «Horizonte» de TMDB (1786666) es brasileño, de 2026. Investigación del 31 oct 2026.",
    "_director": "",
-   "_sondeado": "2026-10-31",
+   "_sondeado": "2026-11-02",
    "poster": "/assets/mambe-2026/horizonte.jpg",
    "posterSource": "tmdb",
    "_heredado": {
@@ -146,7 +153,7 @@
    "lbSlug": "the-memory-of-butterflies",
    "_verificado": "declarada a mano: Obra sin créditos en la lámina; única ficha con ese título en TMDB: Tatiana Fuentes Sadowski (Perú/Portugal, 2026). El festival la proyecta en la Maloca Uitoto. Investigación del 31 oct 2026.",
    "_director": "",
-   "_sondeado": "2026-10-31",
+   "_sondeado": "2026-11-02",
    "poster": "/assets/mambe-2026/la-memoria-de-las-mariposas.jpg",
    "posterSource": "tmdb",
    "_heredado": {
@@ -170,7 +177,7 @@
    "lbSlug": "lactar",
    "_verificado": "declarada a mano: Obra sin créditos en la lámina; única ficha con ese título en TMDB: película colombiana de Harold Trompetero (2026). Investigación del 31 oct 2026.",
    "_director": "",
-   "_sondeado": "2026-10-31",
+   "_sondeado": "2026-11-02",
    "poster": "/assets/mambe-2026/lactar.jpg",
    "posterSource": "tmdb",
    "director_heredado": "Harold Trompetero",
@@ -194,7 +201,7 @@
    "lbSlug": "i-dreamed-his-name",
    "_verificado": "declarada a mano: Obra sin créditos en la lámina; única ficha con ese título en TMDB: película colombiana de Ángela Carabalí (2026). Investigación del 31 oct 2026.",
    "_director": "",
-   "_sondeado": "2026-10-31",
+   "_sondeado": "2026-11-02",
    "poster": "/assets/mambe-2026/sone-su-nombre.jpg",
    "posterSource": "tmdb",
    "director_heredado": "Ángela Carabalí",
@@ -212,6 +219,7 @@
   "Guardianes de la fauna amazónica: Plecturocebus caquetensis",
   "Los guardianes de las aves",
   "Provisorium",
+  "Tapir Memories",
   "Volar y tres claveles"
  ],
  "_sin_ficha_sondeo": {
@@ -239,6 +247,10 @@
    "director": "",
    "fecha": "2026-10-31"
   },
+  "Tapir Memories": {
+   "director": "",
+   "fecha": "2026-11-02"
+  },
   "Volar y tres claveles": {
    "director": "",
    "fecha": "2026-10-31"
@@ -247,7 +259,7 @@
  "_fuentes": [
   {
    "fuente": "proimagenescolombia.com — la base oficial del cine colombiano",
-   "capturado": "2026-10-31",
+   "capturado": "2026-11-02",
    "que_aporta": "país, año, duración, género, sinopsis y afiche de las obras que TMDB no registra",
    "metodo": "búsqueda por título en los catálogos de largos y cortos, y el MISMO candado del director que TMDB: el buscador es laxo y también mira dentro de la sinopsis"
   }
