@@ -4123,6 +4123,9 @@ try:
         # Miradas 2026 (28 oct): la Cinemateca pone los dos laboratorios del Centro Ático
         # a las 10:00 del sáb 7 en el laboratorio de la Cinemateca móvil; son dos talleres
         ('miradas-2026', '2026-11-07|10:00|Parque de los Deseos - Medellín'),       # IA generativa + postproducción móvil
+        # MAMBE 2026 (2 nov): la programación actualizada (p/DfOE-FSAVWB, lámina 4) pone dos
+        # talleres distintos a las 9:00 del jue 5 en Filmemoria, I.E. Juan Bautista La Salle
+        ('mambe-2026', '2026-11-05|09:00|I.E. Juan Bautista La Salle - Florencia'),  # Cine Comunitario + Stenopeica
     }
     _viol = []
     for _fname in _ACTIVE:
