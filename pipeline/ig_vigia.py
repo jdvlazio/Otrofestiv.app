@@ -54,6 +54,17 @@ DIARIO_H = 20     # horas mínimas entre consultas de un festival terminado
 LIMITE = 5        # posts máximos por cuenta y corrida (26 oct: 10→5 para no pasar el plan gratis; 3 corridas al día bastan)
 PRIMERA_VEZ_D = 3  # sin historial: mirar solo los últimos N días
 ACTOR = 'apify~instagram-post-scraper'
+# RESPALDO (2 nov 2026): lobstr.io, plan gratis de 100 posts/mes, sin cuenta de
+# Instagram (lee solo lo público). Entra cuando a Apify le queda menos de
+# APIFY_PISO_USD del mes o cuando una llamada a Apify falla por HTTP (el 502
+# del 2 nov tumbó la corrida entera). Devuelve hasta 10 láminas por carrusel;
+# las demás se bajan por el embed como siempre.
+APIFY_PISO_USD = 1.0
+LOBSTR_CRAWLER = 'd25fddae52eb78eb385e60bc2adb6d1e'   # Instagram Post Scraper
+LOBSTR_SQUID = 'otrofestiv-vigia'
+# lobstr NO respeta `hours_back` (2 nov: con 3 h devolvió posts de hace 15 y 20 h)
+# y cobra cada post devuelto: se topa por cuenta y corrida más bajo que Apify
+LOBSTR_LIMITE = 2
 ACTOR_FB = 'apify~facebook-posts-scraper'
 
 _ENTRADA = re.compile(r"\n\s{2}'?([a-z0-9]+)'?\s*:\s*\{")
@@ -236,6 +247,16 @@ def clasificar(items, cuentas, estado):
 
 
 def apify(cuentas, desde_iso, token):
+    """Un error HTTP de Apify (502, 429…) ya no tumba la corrida (2 nov): vuelve
+    como ítem de error por cuenta, que `clasificar` manda a NO_PUDE_LEER y el
+    respaldo de lobstr reintenta."""
+    try:
+        return _apify(cuentas, desde_iso, token)
+    except Exception as ex:  # noqa: BLE001 — urllib, timeout, JSON roto: todo es «no se leyó»
+        return [{'error': 'http', 'errorDescription': f'Apify: {ex}', 'username': c} for c in cuentas]
+
+
+def _apify(cuentas, desde_iso, token):
     cuerpo = json.dumps({'username': cuentas, 'resultsLimit': LIMITE,
                          'onlyPostsNewerThan': desde_iso, 'skipPinnedPosts': True}).encode()
     url = (f'https://api.apify.com/v2/acts/{ACTOR}/run-sync-get-dataset-items'
@@ -278,6 +299,74 @@ def vigilar_fb(cuentas_json, estado, ahora, token, informe):
                                                'texto': (it.get('text') or '')[:300]})
 
 
+def apify_saldo(token):
+    """USD que le quedan a Apify en el mes, o None si no se pudo saber."""
+    try:
+        with urllib.request.urlopen(f'https://api.apify.com/v2/users/me/limits?token={token}', timeout=30) as r:
+            d = json.load(r)['data']
+        return d['limits']['maxMonthlyUsageUsd'] - d['current']['monthlyUsageUsd']
+    except Exception:  # noqa: BLE001
+        return None
+
+
+def _lobstr(metodo, ruta, clave, cuerpo=None):
+    req = urllib.request.Request(f'https://api.lobstr.io/v1/{ruta}', method=metodo,
+                                 data=json.dumps(cuerpo).encode() if cuerpo is not None else None,
+                                 headers={'Authorization': f'Token {clave}', 'Content-Type': 'application/json'})
+    with urllib.request.urlopen(req, timeout=60) as r:
+        return json.load(r)
+
+
+def lobstr_a_apify(x):
+    """Un resultado de lobstr con la forma de un ítem de Apify: así `clasificar`,
+    el informe y ig_posts.py lo leen sin saber de dónde vino."""
+    hijos = [x[f'child_post_{i}'] for i in range(1, 11) if isinstance(x.get(f'child_post_{i}'), dict)]
+    ts = x.get('timestamp_datetime') or ''
+    return {'shortCode': x.get('shortcode'), 'url': x.get('url'), 'timestamp': ts,
+            'ownerUsername': x.get('owner_username'), 'caption': x.get('caption') or '',
+            'coauthorProducers': [{'username': c.get('username')} for c in x.get('coauthors') or []],
+            'displayUrl': x.get('display_url'), 'type': x.get('media_type'),
+            'childPosts': [{'displayUrl': h.get('display_url')} for h in hijos],
+            '_via': 'lobstr'}
+
+
+def lobstr_por_cuentas(cuentas, desde_iso, clave, ahora, espera=5, intentos=60):
+    """Una corrida de lobstr para estas cuentas, desde `desde_iso`. Reusa un
+    solo squid (lo vacía y le pone las tareas de hoy). Cobra 1 crédito por post
+    devuelto; `max_results` lo topa. Un fallo devuelve ítems de error, como Apify."""
+    import time
+    try:
+        sq = next((q for q in _lobstr('GET', 'squids?limit=100', clave).get('data', [])
+                   if q.get('name') == LOBSTR_SQUID), None)
+        if not sq:
+            sq = _lobstr('POST', 'squids', clave, {'crawler': LOBSTR_CRAWLER, 'name': LOBSTR_SQUID})
+        horas = max(1, int((ahora - datetime.fromisoformat(desde_iso)).total_seconds() // 3600) + 1)
+        _lobstr('POST', f"squids/{sq['id']}/empty", clave, {'type': 'url'})
+        _lobstr('POST', f"squids/{sq['id']}", clave, {'params': {
+            'hours_back': horas, 'max_results': LOBSTR_LIMITE, 'enrich_comments': False, 'skip_pinned_posts': True}})
+        _lobstr('POST', 'tasks', clave, {'squid': sq['id'], 'tasks': [{'url': c} for c in cuentas]})
+        run = _lobstr('POST', 'runs', clave, {'squid': sq['id']})
+        for _ in range(intentos):
+            time.sleep(espera)
+            # GET runs/<id> no trae `is_done` (solo la lista de corridas): se mira
+            # `ended_at`/`status` (2 nov: la corrida terminó en 5 s y se esperó 6 min)
+            g = _lobstr('GET', f"runs/{run['id']}", clave)
+            if g.get('is_done') or g.get('ended_at') or g.get('status') in ('done', 'error', 'aborted'):
+                break
+        else:
+            raise TimeoutError('la corrida de lobstr no terminó')
+        res, pag = [], 1
+        while True:
+            r = _lobstr('GET', f"results?squid={sq['id']}&run={run['id']}&page={pag}&page_size=100", clave)
+            res += r.get('data', [])
+            if not r.get('next'):
+                break
+            pag += 1
+        return [lobstr_a_apify(x) for x in res]
+    except Exception as ex:  # noqa: BLE001
+        return [{'error': 'http', 'errorDescription': f'lobstr: {ex}', 'username': c} for c in cuentas]
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--simular', action='store_true')
@@ -305,13 +394,26 @@ def main():
     token = os.environ.get('APIFY_TOKEN')
     if not token:
         sys.exit('Falta APIFY_TOKEN (hacer `source ~/.zshrc`).')
-    items = apify_por_cuenta(cuentas, estado, ahora, token)
+    clave_lobstr = os.environ.get('LOBSTR_API_KEY')
+    saldo = apify_saldo(token)
+    informe['apify_saldo_usd'] = None if saldo is None else round(saldo, 2)
+    if saldo is not None and saldo < APIFY_PISO_USD and clave_lobstr:
+        # sin saldo en Apify: todo va por lobstr (no se gasta lo que queda)
+        informe['via'] = 'lobstr (Apify bajo el piso)'
+        items = lobstr_por_cuentas(cuentas, d, clave_lobstr, ahora)
+    else:
+        informe['via'] = 'apify'
+        items = apify_por_cuenta(cuentas, estado, ahora, token)
     nuevos, sin_leer = clasificar(items, cuentas, estado)
     # Reintento: Apify devuelve «Empty or private data» por rachas; una cuenta
     # sola, en una segunda llamada, suele pasar.
     reintentar = [c for c in sin_leer if c != '*']
     if reintentar:
-        n2, s2 = clasificar(apify_por_cuenta(reintentar, estado, ahora, token), reintentar, estado)
+        # el reintento va por lobstr si hay clave (2 nov): si Apify falló por
+        # HTTP, pedirle otra vez lo mismo suele fallar igual
+        otra = (lambda cs: lobstr_por_cuentas(cs, desde(cs, estado, ahora), clave_lobstr, ahora)) if clave_lobstr \
+            else (lambda cs: apify_por_cuenta(cs, estado, ahora, token))
+        n2, s2 = clasificar(otra(reintentar), reintentar, estado)
         for c in reintentar:
             if c not in s2:
                 nuevos[c] = n2[c]
