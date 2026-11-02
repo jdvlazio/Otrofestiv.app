@@ -146,6 +146,17 @@ class Respaldo(unittest.TestCase):
         # el colaborativo se reconoce igual que con Apify
         self.assertEqual([i['shortCode'] for i in v.clasificar([it], ['festivalmambe'], {})[0]['festivalmambe']], ['DfOE'])
 
+    def test_carrusel_de_mas_de_10_se_completa_por_el_embed(self):
+        x = {'shortcode': 'DfN9', 'timestamp_datetime': '2026-11-01T00:00:00Z', 'owner_username': 'a',
+             'carousel_media_count': 12, **{f'child_post_{i}': {'display_url': f'u{i}'} for i in range(1, 11)}}
+        it = v.completar_laminas(v.lobstr_a_apify(x),
+                                 leer=lambda sc: {'laminas': [{'url': f'e{i}'} for i in range(1, 13)]})
+        self.assertEqual(len(it['childPosts']), 12)
+        def falla(sc):
+            raise SystemExit('embed caído')
+        it = v.completar_laminas(v.lobstr_a_apify(x), leer=falla)
+        self.assertEqual((len(it['childPosts']), it['laminas_incompletas'][:8]), (10, '10 de 12'))
+
 
 if __name__ == '__main__':
     unittest.main()
