@@ -471,10 +471,10 @@
    "_ancla": [
     "Casa Occio - Cali",
     "2026-11-06",
-    "17:00"
+    "16:00"
    ],
    "day": "2026-11-06",
-   "time": "17:00",
+   "time": "16:00",
    "day_order": 3,
    "venue": "Casa Occio - Cali",
    "event_kind": "conversatorio",
@@ -483,7 +483,7 @@
     "url": "https://www.instagram.com/p/DfKgpBVpyUt/",
     "date": "2026-10-31",
     "tipo": "festival-ig",
-    "fila": "2026-11-06 17:00 · Conversatorio «Experiencias en la Dirección de 100 años de Soledad»"
+    "fila": "2026-11-06 16:00 · Conversatorio «Experiencias en la Dirección de 100 años de Soledad»"
    },
    "is_free": true,
    "description": "Con Carlos Moreno (director).",
@@ -550,7 +550,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-02T08:25:30",
+  "fecha": "2026-11-02T08:39:55",
   "plan_sha": "3bcd1072c52cfb0c",
   "paso": 4,
   "cmd": "python3 pipeline/encuadrar-posters.py semanacine-2026 --aplicar --desde festivals/staging/semanacine-2026-build.json"

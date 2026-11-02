@@ -46,7 +46,9 @@ FILAS = [
     ('2026-11-05', '18:00', 'Anina', 'Película', USC, 'Auditorio T-Usaca', {'director': 'Alfredo Soderguit'}),
     ('2026-11-06', '14:00', 'Conversatorio «El Metafilme Georgina»', 'Conversatorio', USC, 'Auditorio 1101',
      {'sinopsis': 'Con Sebastián Ospina (actor y director).'}),
-    ('2026-11-06', '17:00', 'Conversatorio «Experiencias en la Dirección de 100 años de Soledad»', 'Conversatorio',
+    # HORA: la lámina general dice 5 pm; la pieza propia (p/DfBHkY-pbPy) «4:00 PM». Contradicción
+    # sin respuesta aún (correo a ajmurgas, 2 nov): va la más temprana (regla de Juan)
+    ('2026-11-06', '16:00', 'Conversatorio «Experiencias en la Dirección de 100 años de Soledad»', 'Conversatorio',
      'Casa Occio', '', {'sinopsis': 'Con Carlos Moreno (director).'}),
     ('2026-11-09', '12:00', 'Conversatorio «Del Barrio a la Embajada»', 'Conversatorio', USC, 'Auditorio T-Usaca',
      {'sinopsis': 'Con Héctor Aguirre (fotógrafo y realizador).'}),
