@@ -26,6 +26,11 @@ Una lectura solo cuenta como independiente si falla por motivos distintos:
   D · el texto ALT del post                  SIN OCR: la descripción que sirve
                                              el propio Instagram. No comparte
                                              ni motor ni píxeles.
+  T · Tesseract                              OTRO MOTOR de OCR (2 nov 2026). A,
+                                             B y C son todas Vision: si Vision
+                                             confunde un 6 con un 8, las tres
+                                             lo confunden. Tesseract falla por
+                                             otros motivos.
 
 Y la quinta, que no es automática y manda sobre las cuatro: MIRAR LA LÁMINA.
 `--ojos <json>` recibe lo que se leyó a ojo y lo cruza como una lectura más.
@@ -39,6 +44,17 @@ aquí. Su salida es un informe para ir a mirar la lámina.
 
     python3 pipeline/ig-lecturas.py DdmhX7gFIZa
     python3 pipeline/ig-lecturas.py DdmhX7gFIZa --salida fuentes/ig/itagui.json
+
+EL VEREDICTO PARA APLICAR SOLO (2 nov 2026). Juan: «esa lámina la puedan leer
+tres métodos distintos». El vigía aplica un cambio sin preguntar SOLO si los
+tres métodos —Vision (A o C), Tesseract (T) y la mirada (--ojos)— leen en la
+MISMA lámina la hora y cada texto del dato. Si uno no lo lee, no se aplica:
+se le pregunta a Juan con lo que leyó cada uno.
+
+    python3 pipeline/ig-lecturas.py DfP4GD4hlpV --ojos ojos.json --dato dato.json
+    # dato.json: {"lamina": "01.jpg", "hora": "18:00",
+    #             "textos": ["Uno vuelve siempre", "Parque de los Deseos"]}
+    # sale 0 con «✓ TRES MÉTODOS COINCIDEN», 1 si no
 """
 import io
 import json
@@ -120,6 +136,64 @@ def vision(rutas, correccion=True, pie=PIE):
     return out
 
 
+def tesseract(rutas, pie=PIE):
+    """Otro motor de OCR. Recorta la misma franja de logos que Vision."""
+    from PIL import Image
+    import tempfile
+    out = {}
+    for p in rutas:
+        im = Image.open(p).convert('RGB')
+        im = im.crop((0, 0, im.width, int(im.height * pie)))
+        im = im.resize((im.width * 2, im.height * 2), Image.LANCZOS)
+        with tempfile.NamedTemporaryFile(suffix='.png') as f:
+            im.save(f.name)
+            r = subprocess.run(['tesseract', f.name, 'stdout', '-l', TESS_LANG],
+                               capture_output=True, text=True)
+        if r.returncode != 0:
+            sys.exit(f'✗ Tesseract falló ({r.returncode}): {(r.stderr or "")[:300]}')
+        out[os.path.basename(p)] = r.stdout
+    return out
+
+
+# spa si está instalado; si no, eng (las horas y los nombres se leen igual y
+# las tildes no cuentan: todo se compara sin_tildes)
+TESS_LANG = 'spa' if 'spa' in subprocess.run(['tesseract', '--list-langs'], capture_output=True,
+                                              text=True).stdout.split() else 'eng'
+
+
+def _plano(s):
+    return ' '.join(re.sub(r'[^0-9a-zñ]+', ' ', sin_tildes(s)).split())
+
+
+def lee(texto, buscado):
+    """¿Esta lectura trae `buscado`? Exacto tras normalizar, o casi (≥90 %)."""
+    import difflib
+    t, b = _plano(texto), _plano(buscado)
+    if not b or b in t:
+        return bool(b)
+    n = len(b)
+    return any(difflib.SequenceMatcher(None, t[i:i + n], b).ratio() >= 0.9
+               for i in range(0, max(1, len(t) - n + 1)))
+
+
+def veredicto(lecturas, ojos, dato):
+    """Por cada método, qué partes del dato leyó en su lámina. Pasa solo si
+    los TRES métodos leen TODAS las partes."""
+    lam = dato['lamina']
+    metodos = {
+        'Vision':    '\n'.join(lecturas.get(k, {}).get(lam, '') for k in ('A·vision', 'C·al-doble')),
+        'Tesseract': lecturas.get('T·tesseract', {}).get(lam, ''),
+        'mirada':    (ojos or {}).get(lam, ''),
+    }
+    partes = ([('hora', dato['hora'])] if dato.get('hora') else []) + \
+             [('texto', x) for x in dato.get('textos', [])]
+    res = {}
+    for m, txt in metodos.items():
+        res[m] = {v: (v in tokens(txt)['horas']) if k == 'hora' else lee(txt, v) for k, v in partes}
+    ok = bool(partes) and all(all(r.values()) for r in res.values())
+    return ok, res
+
+
 def al_doble(rutas, destino):
     """Las mismas láminas al 200%, cacheadas: el OCR es lo caro."""
     from PIL import Image
@@ -168,7 +242,7 @@ def informe(lecturas, ojos=None):
                     continue
                 # el ALT y la mirada no transcriben la lámina entera: solo
                 # cuentan cuando AÑADEN algo que el OCR no vio
-                ocr = {n for n in presentes if n.startswith(('A', 'B', 'C'))}
+                ocr = {n for n in presentes if n.startswith(('A', 'B', 'C', 'T'))}
                 if not (tienen & ocr) and (ocr & presentes):
                     avisos.append((lam, clase, val, sorted(tienen), 'solo fuera del OCR'))
                 elif tienen & ocr and len(tienen & ocr) < len(ocr & presentes):
@@ -179,7 +253,7 @@ def informe(lecturas, ojos=None):
 def main():
     # OJO: las banderas con valor se llevan su valor. Sin esto, `--salida x.json`
     # metía «x.json» como si fuera un shortcode.
-    _con_valor = {'--salida', '--ojos', '--pie'}
+    _con_valor = {'--salida', '--ojos', '--pie', '--dato'}
     args, _saltar = [], False
     for a in sys.argv[1:]:
         if _saltar:
@@ -212,6 +286,7 @@ def main():
             'B·sin-corrector': vision(rutas, correccion=False),
             'C·al-doble':      vision(dobles, correccion=True),
             'D·alt':           alts,
+            'T·tesseract':     tesseract(rutas),
         }
         print(f'\n═══ {sc} · {len(rutas)} láminas')
         for n, v in lecturas.items():
@@ -230,11 +305,39 @@ def main():
                     'discrepancias': [{'lamina': a, 'clase': b, 'valor': c,
                                        'solo_en': d, 'por_que': e} for a, b, c, d, e in avisos]}
 
+    if '--dato' in sys.argv:
+        dato = json.load(open(sys.argv[sys.argv.index('--dato') + 1], encoding='utf-8'))
+        if len(args) != 1:
+            sys.exit('✗ --dato va con UN solo shortcode')
+        if not (ojos and ojos.get(args[0])):
+            sys.exit('✗ --dato exige --ojos: la mirada es uno de los tres métodos')
+        # LA LÁMINA ENTERA, sin recortar el pie: el recorte de logos (PIE) se
+        # comía justo la línea «Miércoles 4 de noviembre, 7:30 p. m. Centro
+        # Colombo Americano» de Eimbcke (2 nov 2026). Para buscar un dato
+        # concreto los logos no estorban.
+        sc = args[0]
+        lam_ruta = [r for r in ig.bajar_laminas(sc, ig.urls_laminas(sc))
+                    if os.path.basename(r) == dato['lamina']]
+        if not lam_ruta:
+            sys.exit(f'✗ {sc}: no hay lámina {dato["lamina"]}')
+        doble = al_doble(lam_ruta, os.path.join(ig.CACHE, f'{sc}-x2'))
+        enteras = {'A·vision': vision(lam_ruta, pie=1.01), 'C·al-doble': vision(doble, pie=1.01),
+                   'T·tesseract': tesseract(lam_ruta, pie=1.0)}
+        ok, res = veredicto(enteras, ojos[sc], dato)
+        print(f'\n═══ veredicto · lámina {dato["lamina"]}')
+        for m, r in res.items():
+            print(f'   {m:10} ' + ' · '.join(f'{"✓" if v else "✗"} {k}' for k, v in r.items()))
+        print('   ✓ TRES MÉTODOS COINCIDEN — se aplica solo' if ok else
+              '   ✗ NO COINCIDEN — no se aplica: va a Juan con estas lecturas')
+        if salida:
+            todo[args[0]]['veredicto'] = {'ok': ok, 'metodos': res, 'dato': dato}
     if salida:
         os.makedirs(os.path.dirname(salida) or '.', exist_ok=True)
         io.open(salida, 'w', encoding='utf-8').write(
             json.dumps(todo, ensure_ascii=False, indent=1) + '\n')
         print(f'\n✓ {salida}')
+    if '--dato' in sys.argv and not ok:
+        sys.exit(1)
 
 
 if __name__ == '__main__':
