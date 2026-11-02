@@ -412,6 +412,66 @@
     "fecha": "2026-11-01"
    },
    "evidencia": "lámina 10 de p/DfM62ZOIG6R (programación dom 1 nov), mirada en hoja de contacto: «7:30 p.m. · Sala 3 · Back to Fukushima · Función con Q&A ★»"
+  },
+  {
+   "funcion": "f_b65b88001d",
+   "casilla": "has_qa",
+   "valor": true,
+   "contra": false,
+   "fuente": {
+    "tipo": "juan",
+    "frase": "Sí, hazlo (las 4 con «Función con Q&A» en las láminas de p/DfPT4i1jXbI, y quitar el Q&A de Geografías en Resistencia en Canterbury)",
+    "fecha": "2026-11-02"
+   },
+   "evidencia": "lámina 2 de p/DfPT4i1jXbI (programación lun 2 nov), leída por el vigía: «10:00 · Sala Capital · CREAndo Documental en los Barrios · Función con Q&A»"
+  },
+  {
+   "funcion": "f_b24136dee4",
+   "casilla": "has_qa",
+   "valor": true,
+   "contra": false,
+   "fuente": {
+    "tipo": "juan",
+    "frase": "Sí, hazlo (las 4 con «Función con Q&A» en las láminas de p/DfPT4i1jXbI, y quitar el Q&A de Geografías en Resistencia en Canterbury)",
+    "fecha": "2026-11-02"
+   },
+   "evidencia": "lámina 7 de p/DfPT4i1jXbI (programación lun 2 nov), leída por el vigía: «5:00 p.m. · Sala 3 · Foco Santiago Álvarez · Función con Q&A»"
+  },
+  {
+   "funcion": "f_09f0901453",
+   "casilla": "has_qa",
+   "valor": true,
+   "contra": false,
+   "fuente": {
+    "tipo": "juan",
+    "frase": "Sí, hazlo (las 4 con «Función con Q&A» en las láminas de p/DfPT4i1jXbI, y quitar el Q&A de Geografías en Resistencia en Canterbury)",
+    "fecha": "2026-11-02"
+   },
+   "evidencia": "lámina 9 de p/DfPT4i1jXbI (programación lun 2 nov), leída por el vigía: «5:00 p.m. · Sala Capital · Programa 1: Miradas Convulsas desde el Presente · Función con Q&A»"
+  },
+  {
+   "funcion": "f_578041b8e8",
+   "casilla": "has_qa",
+   "valor": true,
+   "contra": false,
+   "fuente": {
+    "tipo": "juan",
+    "frase": "Sí, hazlo (las 4 con «Función con Q&A» en las láminas de p/DfPT4i1jXbI, y quitar el Q&A de Geografías en Resistencia en Canterbury)",
+    "fecha": "2026-11-02"
+   },
+   "evidencia": "lámina 12 de p/DfPT4i1jXbI (programación lun 2 nov), leída por el vigía: «7:00 p.m. · Sala 2 · Programa 1: Tanto Trabajo por Hacer · Función con Q&A»"
+  },
+  {
+   "funcion": "f_49532613f0",
+   "casilla": "has_qa",
+   "valor": false,
+   "contra": true,
+   "fuente": {
+    "tipo": "juan",
+    "frase": "Sí, hazlo (las 4 con «Función con Q&A» en las láminas de p/DfPT4i1jXbI, y quitar el Q&A de Geografías en Resistencia en Canterbury)",
+    "fecha": "2026-11-02"
+   },
+   "evidencia": "lámina 10 de p/DfPT4i1jXbI (programación lun 2 nov), leída por el vigía: «5:00 p.m. · Canterbury Café · Programa 2: Geografías en Resistencia · «Con mediación · Entrada libre» + concierto de Santiago García; sin Q&A»"
   }
  ]
 }
