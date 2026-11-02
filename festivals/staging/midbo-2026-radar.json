@@ -4,7 +4,7 @@
   "capturado": "2026-11-02",
   "titulo": "RADAR: Muestra Internacional Documental de Bogotá (MIDBO) — Bogotá, 28 OCT–4 NOV (28ª)",
   "estado": "OPEN",
-  "comentarios": 29
+  "comentarios": 30
  },
  "issue": 1031,
  "titulo": "RADAR: Muestra Internacional Documental de Bogotá (MIDBO) — Bogotá, 28 OCT–4 NOV (28ª)",
@@ -126,6 +126,10 @@
   {
    "fecha": "2026-11-02",
    "cuerpo": "Vigía 2 nov 09:15 — MIDBO hoy lun 2 nov (https://www.instagram.com/p/DfPT4i1jXbI/, 13 láminas leídas): 4 funciones «Función con Q&A» con has_qa=false en la app: 10:00 Sala Capital «CREAndo Documental en los Barrios» (lámina 2); 17:00 Sala 3 «Foco Santiago Álvarez» (L7); 17:00 Sala Capital «Programa 1: Miradas Convulsas desde el Presente» (L9); 19:00 Sala 2 «Programa 1: Tanto Trabajo por Hacer» (L12). Al revés: 17:00 Canterbury Café figura con Q&A en la app y la lámina 10 dice «Con mediación». Web midbo.co sin cambios."
+  },
+  {
+   "fecha": "2026-11-02",
+   "cuerpo": "**Vigía 2 nov 17:15: MIDBO, falta un Q&A en la app**\n\n«Bojayá: la verdad desde adentro», miércoles 4 nov a las 16:00, Sala 2, Cinemateca de Bogotá. La web dice «Con presencia del director y producción»: https://midbo.co/peliculas/bojaya-la-verdad-desde-adentro/\n\nEn el almacén está con `has_qa=false`. La frase va sin el «*» inicial, así que el patrón NOTA del crudo no la toma.\n\nTambién cambiaron en la API las sinopsis de «¡Viva México!» (antes «Viva México»), «Sey Arimaku, la otra oscuridad» y «Un río de aguas profundas y luminosas». No cambia ninguna función.\n"
   }
  ]
 }
