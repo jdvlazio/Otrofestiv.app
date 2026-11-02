@@ -123,5 +123,29 @@ class Historial(unittest.TestCase):
         self.assertEqual(v.clasificar([], ['a'], {})[1], {})
 
 
+class Respaldo(unittest.TestCase):
+    """2 nov 2026: un 502 de Apify tumbó la corrida; lobstr.io entra de respaldo."""
+
+    def test_http_de_apify_no_tumba_la_corrida(self):
+        orig = v._apify
+        try:
+            def falla(*a):
+                raise OSError('HTTP Error 502: Bad Gateway')
+            v._apify = falla
+            items = v.apify(['a', 'b'], '2026-11-01T00:00:00', 't')
+        finally:
+            v._apify = orig
+        self.assertEqual(set(v.clasificar(items, ['a', 'b'], {})[1]), {'a', 'b'})
+
+    def test_lobstr_con_forma_de_apify(self):
+        x = {'shortcode': 'DfOE', 'url': 'https://www.instagram.com/p/DfOE/', 'timestamp_datetime': '2026-11-02T00:10:02Z',
+             'owner_username': 'productora', 'caption': 'programación', 'coauthors': [{'username': 'festivalmambe'}],
+             'display_url': 'u0', 'child_post_1': {'display_url': 'u1'}, 'child_post_2': {'display_url': 'u2'}, 'child_post_3': ''}
+        it = v.lobstr_a_apify(x)
+        self.assertEqual((it['shortCode'], it['timestamp'], len(it['childPosts'])), ('DfOE', '2026-11-02T00:10:02Z', 2))
+        # el colaborativo se reconoce igual que con Apify
+        self.assertEqual([i['shortCode'] for i in v.clasificar([it], ['festivalmambe'], {})[0]['festivalmambe']], ['DfOE'])
+
+
 if __name__ == '__main__':
     unittest.main()
