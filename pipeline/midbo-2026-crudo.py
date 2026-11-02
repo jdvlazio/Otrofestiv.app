@@ -418,6 +418,11 @@ def bloques(p):
             propias.append('TICKET ' + html.unescape(cm.group(1)))
         for e in re.findall(r'f-entrada">(.*?)</span>', li, re.S):
             propias.append(re.sub(r'\s+', ' ', t(e)))
+        # …y el Q&A también: <span class="f-nota">Con presencia del director y
+        # producción</span> (Bojayá, 4 nov; sin el «*» de las observaciones)
+        for e in re.findall(r'f-nota">(.*?)</span>', li, re.S):
+            if 'con presencia' in t(e).lower():
+                propias.append(re.sub(r'\s+', ' ', t(e)))
         base = ([x for x in comun if not x.startswith('TICKET ') and 'entrada libre' not in x.lower()]
                 if propias else comun)
         if c and d:
