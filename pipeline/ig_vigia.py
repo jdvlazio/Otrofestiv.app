@@ -327,7 +327,24 @@ def lobstr_a_apify(x):
             'coauthorProducers': [{'username': c.get('username')} for c in x.get('coauthors') or []],
             'displayUrl': x.get('display_url'), 'type': x.get('media_type'),
             'childPosts': [{'displayUrl': h.get('display_url')} for h in hijos],
+            'laminas_total': x.get('carousel_media_count') or len(hijos),
             '_via': 'lobstr'}
+
+
+def completar_laminas(it, leer=None):
+    """lobstr corta el carrusel en 10 láminas (2 nov: MIDBO publicó uno de 20).
+    Si el post tiene más, se piden todas al embed público —gratis, sin cuenta—.
+    Si el embed falla, queda lo que trajo lobstr y `laminas_incompletas` lo dice."""
+    total = it.get('laminas_total') or 0
+    if total <= len(it.get('childPosts') or []):
+        return it
+    try:
+        if leer is None:
+            from ig_carrusel import laminas as leer
+        it['childPosts'] = [{'displayUrl': l['url']} for l in leer(it['shortCode'])['laminas']]
+    except BaseException:  # noqa: BLE001 — ig_carrusel sale con SystemExit
+        it['laminas_incompletas'] = f"{len(it['childPosts'])} de {total} (el embed no las sirvió)"
+    return it
 
 
 def lobstr_por_cuentas(cuentas, desde_iso, clave, ahora, espera=5, intentos=60):
@@ -362,7 +379,7 @@ def lobstr_por_cuentas(cuentas, desde_iso, clave, ahora, espera=5, intentos=60):
             if not r.get('next'):
                 break
             pag += 1
-        return [lobstr_a_apify(x) for x in res]
+        return [completar_laminas(lobstr_a_apify(x)) for x in res]
     except Exception as ex:  # noqa: BLE001
         return [{'error': 'http', 'errorDescription': f'lobstr: {ex}', 'username': c} for c in cuentas]
 
