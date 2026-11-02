@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, emparejado con ficha_verifica() (director + año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-10-27"
+  "capturado": "2026-11-02"
  },
  "obras": [
   {
@@ -62,7 +62,7 @@
    "lbSlug": "pig-that-survived-foot-and-mouth-disease",
    "_verificado": "declarada a mano: «The Pig That Survived Foot-and-Mouth Disease», Hur Bum-wook, 105 min: director y obra coinciden con la parrilla; el título en español no casa solo con TMDB",
    "_director": "Hur Bum-Wook",
-   "_sondeado": "2026-10-27",
+   "_sondeado": "2026-11-02",
    "poster": "/assets/bhff-2026/cerdo-que-sobrevivio-a-la-fiebre-aftosa.jpg",
    "posterSource": "tmdb"
   },
@@ -419,11 +419,11 @@
    "genero": "Terror",
    "anio_tmdb": 2025,
    "duracion_tmdb": 90,
-   "pais_tmdb": "",
+   "pais_tmdb": "United States of America",
    "lbSlug": "the-demonatrix",
    "_verificado": "declarada a mano: «The Demonatrix», Aurelio Voltaire y Jeff Ferrell, 90 min: los dos directores coinciden con la parrilla; el título en español no casa solo con TMDB",
    "_director": "Jeff Ferrell, Aurelio Voltair",
-   "_sondeado": "2026-10-27",
+   "_sondeado": "2026-11-02",
    "sinopsis": "Durante una sesión espiritista, una dominatrix invoca por accidente a un íncubo y tiene que unir fuerzas con el cura del barrio para exorcizar al demonio.",
    "_sinopsis": "traducción propia con contexto (Content Design, 25 oct 2026) de la sinopsis oficial en inglés: https://www.cine-excess.co.uk/the-demonatrix-aurelio-voltaire-jeff-ferrell-usa-2025.html",
    "poster": "/assets/bhff-2026/la-demonatrix.jpg",
@@ -1122,7 +1122,7 @@
    "lbSlug": "pig-that-survived-foot-and-mouth-disease",
    "_verificado": "declarada a mano: «The Pig That Survived Foot-and-Mouth Disease», Hur Bum-wook, 105 min: director y obra coinciden con la parrilla; el título en español no casa solo con TMDB",
    "_director": "Hur Bum-Wook",
-   "_sondeado": "2026-10-27",
+   "_sondeado": "2026-11-02",
    "poster": "/assets/bhff-2026/cerdo-que-sobrevivio-a-la-fiebre-aftosa.jpg",
    "posterSource": "tmdb"
   },
@@ -1385,11 +1385,11 @@
    "genero": "Terror",
    "anio_tmdb": 2025,
    "duracion_tmdb": 90,
-   "pais_tmdb": "",
+   "pais_tmdb": "United States of America",
    "lbSlug": "the-demonatrix",
    "_verificado": "declarada a mano: «The Demonatrix», Aurelio Voltaire y Jeff Ferrell, 90 min: los dos directores coinciden con la parrilla; el título en español no casa solo con TMDB",
    "_director": "Jeff Ferrell, Aurelio Voltair",
-   "_sondeado": "2026-10-27",
+   "_sondeado": "2026-11-02",
    "sinopsis": "Durante una sesión espiritista, una dominatrix invoca por accidente a un íncubo y tiene que unir fuerzas con el cura del barrio para exorcizar al demonio.",
    "_sinopsis": "traducción propia con contexto (Content Design, 25 oct 2026) de la sinopsis oficial en inglés: https://www.cine-excess.co.uk/the-demonatrix-aurelio-voltaire-jeff-ferrell-usa-2025.html",
    "poster": "/assets/bhff-2026/la-demonatrix.jpg",
@@ -1946,95 +1946,95 @@
  "_sin_ficha_sondeo": {
   "Anax": {
    "director": "LSDavid, Miguel Solís",
-   "fecha": "2026-10-25"
+   "fecha": "2026-11-02"
   },
   "Bajo El Mismo Techo": {
    "director": "Sophia Cadavid",
-   "fecha": "2026-10-25"
+   "fecha": "2026-11-02"
   },
   "Búhos": {
    "director": "Luis Enrique Vanegas",
-   "fecha": "2026-10-25"
+   "fecha": "2026-11-02"
   },
   "Eco": {
    "director": "Valeria Lopera Salas",
-   "fecha": "2026-10-25"
+   "fecha": "2026-11-02"
   },
   "El Diente Negro": {
    "director": "Anita Serrano",
-   "fecha": "2026-10-25"
+   "fecha": "2026-11-02"
   },
   "El Festín de las Moscas": {
    "director": "Katerine Franco Garzón",
-   "fecha": "2026-10-25"
+   "fecha": "2026-11-02"
   },
   "El Laberinto del Cuerpo": {
    "director": "Esteban J. Corzo",
-   "fecha": "2026-10-25"
+   "fecha": "2026-11-02"
   },
   "El Teatro": {
    "director": "Nicolás Bernal",
-   "fecha": "2026-10-25"
+   "fecha": "2026-11-02"
   },
   "Enigma": {
    "director": "Andrés Pulido",
-   "fecha": "2026-10-25"
+   "fecha": "2026-11-02"
   },
   "Gabriel": {
    "director": "Edwin Daniel Díaz",
-   "fecha": "2026-10-25"
+   "fecha": "2026-11-02"
   },
   "Happy": {
    "director": "Víctor Basallote",
-   "fecha": "2026-10-25"
+   "fecha": "2026-11-02"
   },
   "Hasta que Amanezca": {
    "director": "Sebastián Rosas Santamaría",
-   "fecha": "2026-10-25"
+   "fecha": "2026-11-02"
   },
   "Hush": {
    "director": "Santiago Franco",
-   "fecha": "2026-10-25"
+   "fecha": "2026-11-02"
   },
   "La Noche De Las Bestias": {
    "director": "Eduart Zapata",
-   "fecha": "2026-10-25"
+   "fecha": "2026-11-02"
   },
   "Los Lobo": {
    "director": "Saeed García Pérez",
-   "fecha": "2026-10-25"
+   "fecha": "2026-11-02"
   },
   "MEAT the Movie": {
    "director": "Roger Conners",
-   "fecha": "2026-10-25"
+   "fecha": "2026-11-02"
   },
   "Niños Bien - Amanecer": {
    "director": "Daniel Vargas",
-   "fecha": "2026-10-25"
+   "fecha": "2026-11-02"
   },
   "Parásitos": {
    "director": "Samuel Andrés Ruiz Pico",
-   "fecha": "2026-10-25"
+   "fecha": "2026-11-02"
   },
   "Prototipo": {
    "director": "Jeff Ruiz Rave",
-   "fecha": "2026-10-25"
+   "fecha": "2026-11-02"
   },
   "Ruth": {
    "director": "Santiago Correa, Raquel Zapata, Marvin Cardona",
-   "fecha": "2026-10-25"
+   "fecha": "2026-11-02"
   },
   "The Callback": {
    "director": "Alvaro Pruneda",
-   "fecha": "2026-10-25"
+   "fecha": "2026-11-02"
   },
   "Vientre": {
    "director": "Pablo Sánchez Mejía, Moisés Cataño Rivillas",
-   "fecha": "2026-10-25"
+   "fecha": "2026-11-02"
   },
   "Work in Progress": {
    "director": "Diego Mezarina",
-   "fecha": "2026-10-25"
+   "fecha": "2026-11-02"
   }
  }
 }

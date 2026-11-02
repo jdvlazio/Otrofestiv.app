@@ -1,0 +1,32 @@
+{
+ "_provenance": {
+  "fuente": "Instagram, sin sesión (vigía 1 nov 21:05, Apify): no hay post oficial de ganadores; palmarés PARCIAL desde posts de los premiados con coautor @bogotahorrorfest. «Tarde o Temprano»: placa del trofeo, lámina 1 https://www.instagram.com/p/DfL3mvUjhXa/ — en la app va en el programa «Tarde o Temprano + Siempre hay un monstruo» sin film_list: obra null para no premiar el programa entero. «Work in Progress»: certificado «Ganador», lámina 1 https://www.instagram.com/p/DfNO6eex__m/. «Parapeto»: certificado de mención, lámina 1 https://www.instagram.com/p/DfNQW98CWtS/. OK de Juan para publicar el parcial: 2 nov.",
+  "capturado": "2026-11-01"
+ },
+ "palmares": [
+  {
+   "categoria": "Largometraje Nacional",
+   "nivel": "ganadora",
+   "premio": "Mejor Largometraje Nacional",
+   "titulo": "Tarde o Temprano",
+   "autoria": "Juan Pablo Chajín",
+   "obra": null
+  },
+  {
+   "categoria": "Largometraje Transgresor",
+   "nivel": "ganadora",
+   "premio": "Mejor Largometraje Transgresor",
+   "titulo": "Work in Progress",
+   "autoria": "Diego Mezarina",
+   "obra": "Work in Progress"
+  },
+  {
+   "categoria": "Largometraje nacional mejor actuación",
+   "nivel": "mencion",
+   "premio": "Mención honorífica",
+   "titulo": "Parapeto",
+   "autoria": "Jonas Ruiz",
+   "obra": "Parapeto"
+  }
+ ]
+}
