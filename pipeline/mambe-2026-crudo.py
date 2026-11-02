@@ -65,7 +65,8 @@ PROYECCION = {
         # 2 nov: la programación actualizada suma «Tapir Memories» entre las dos
         'titulo': 'Guardianes de la fauna amazónica: Plecturocebus caquetensis, Tapir Memories y Los guardianes de las aves',
         'obras': [{'titulo': 'Guardianes de la fauna amazónica: Plecturocebus caquetensis'},
-                  {'titulo': 'Tapir Memories'},
+                  # país: el que ya publica FICCALI 2026 para la misma obra (catálogo, 2 nov)
+                  {'titulo': 'Tapir Memories', 'pais': 'Colombia'},
                   {'titulo': 'Los guardianes de las aves'}]},
     (H + '05', '19:30', 'PROYECCIÓN + CONVERSATORIO: LA MEMORIA DE LAS MARIPOSAS'):
         {'titulo': 'La memoria de las mariposas'},

@@ -1492,6 +1492,8 @@
    "title": "Guardianes de la Fauna Amazónica: Plecturocebus Caquetensis, Tapir Memories y Los Guardianes de las Aves",
    "type": "film",
    "section": "🌿 Proyecciones",
+   "country": "Colombia",
+   "flags": "🇨🇴",
    "duration": "150 min",
    "_ancla": [
     "Uniamazonia Sede Porvenir - Florencia",
@@ -1515,7 +1517,9 @@
      "title": "Guardianes de la fauna amazónica: Plecturocebus caquetensis"
     },
     {
-     "title": "Tapir Memories"
+     "title": "Tapir Memories",
+     "country": "Colombia",
+     "flags": "🇨🇴"
     },
     {
      "title": "Los guardianes de las aves"
@@ -2605,7 +2609,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-02T09:22:40",
+  "fecha": "2026-11-02T09:56:23",
   "plan_sha": "c68a49d47fe0aabb",
   "paso": 7,
   "cmd": "python3 pipeline/mambe-2026-verificar.py"
