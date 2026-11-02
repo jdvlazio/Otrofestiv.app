@@ -3890,7 +3890,7 @@
     "19:00"
    ],
    "day": "2026-11-05",
-   "time": "19:00",
+   "time": "18:00",
    "day_order": 2,
    "venue": "Parque de los Deseos - Medellín",
    "has_qa": false,
@@ -3915,8 +3915,9 @@
      "fecha": "2026-11-02"
     },
     "time": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "tipo": "juan",
+     "fecha": "2026-11-02",
+     "frase": "Sí, ambos (publicar «Uno vuelve siempre» a las 18:00)"
     },
     "venue": {
      "tipo": "festival-web",
@@ -9903,7 +9904,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-02T09:47:45",
+  "fecha": "2026-11-02T13:25:08",
   "plan_sha": "1476fecbd41f2797",
   "paso": 10,
   "cmd": "python3 pipeline/miradas-2026-verificar.py"

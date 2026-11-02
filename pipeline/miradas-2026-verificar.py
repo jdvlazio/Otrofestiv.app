@@ -65,6 +65,9 @@ ACEPTADAS = {
     ('B', '2026-11-06', '16:00', 'narciso'): 'movida por la lámina 1 nov de IG (afirmación, Juan 2 nov)',
     ('C', '2026-11-04', '10:00', 'papaya'): 'movida por la lámina 1 nov de IG (afirmación, Juan 2 nov)',
     ('C', '2026-11-06', '16:00', 'narciso'): 'movida por la lámina 1 nov de IG (afirmación, Juan 2 nov)',
+    ('A', '2026-11-05', '19:00', 'uno vuelve'): 'movida a las 18:00 por el reel de IG p/DfP4GD4hlpV (afirmación, Juan 2 nov)',
+    ('B', '2026-11-05', '19:00', 'cine hecho'): 'movida a las 18:00 por el reel de IG p/DfP4GD4hlpV (afirmación, Juan 2 nov)',
+    ('C', '2026-11-05', '19:00', 'uno vuelve'): 'movida a las 18:00 por el reel de IG p/DfP4GD4hlpV (afirmación, Juan 2 nov)',
 }
 
 
