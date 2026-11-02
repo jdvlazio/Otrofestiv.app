@@ -20,6 +20,40 @@
     "fecha": "2026-10-28"
    },
    "evidencia": "mensaje de la Cinemateca de Medellín a Juan (28 oct), sin URL pública: lo lista bajo «10:00 a. m.» junto al laboratorio de IA generativa. El PDF (pág. 58) lo daba a las 2:00 p. m.; la respuesta del festival es la fuente más reciente."
+  },
+  {
+   "ancla": {
+    "sede": "Coocine - Medellín",
+    "dia": "2026-11-04",
+    "hora": "10:00"
+   },
+   "funcion": "f_63027920b6",
+   "casilla": "day",
+   "valor": "2026-11-05",
+   "contra": "2026-11-04",
+   "fuente": {
+    "tipo": "juan",
+    "frase": "Sí, hazlo (Papaya jue 5 10:00 y Narciso vie 6 7:00 p. m., láminas 6 y 8 de p/DfNwV3QiVe6)",
+    "fecha": "2026-11-02"
+   },
+   "evidencia": "lámina 6 de p/DfNwV3QiVe6 (IG del festival, 1 nov): «Papaya» · Coocine sala 0, Vereda El Plan · JUEVES 5 nov 10:00 a. m.; el PDF del 20 oct (pág. 71) decía mié 4. IG más nuevo manda."
+  },
+  {
+   "ancla": {
+    "sede": "Biblioteca Comfama Bello - Medellín",
+    "dia": "2026-11-06",
+    "hora": "16:00"
+   },
+   "funcion": "f_a613f777ab",
+   "casilla": "time",
+   "valor": "19:00",
+   "contra": "16:00",
+   "fuente": {
+    "tipo": "juan",
+    "frase": "Sí, hazlo (Papaya jue 5 10:00 y Narciso vie 6 7:00 p. m., láminas 6 y 8 de p/DfNwV3QiVe6)",
+    "fecha": "2026-11-02"
+   },
+   "evidencia": "lámina 8 de p/DfNwV3QiVe6 (IG del festival, 1 nov): «Narciso» · Biblioteca Comfama Bello · VIERNES 6 nov 7:00 p. m.; el PDF del 20 oct (pág. 80) decía 16:00. IG más nuevo manda."
   }
  ]
 }
