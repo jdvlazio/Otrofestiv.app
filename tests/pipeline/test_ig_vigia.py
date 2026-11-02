@@ -158,5 +158,39 @@ class Respaldo(unittest.TestCase):
         self.assertEqual((len(it['childPosts']), it['laminas_incompletas'][:8]), (10, '10 de 12'))
 
 
+class Cascada(unittest.TestCase):
+    """2 nov 2026: Bright Data → Apify → lobstr, de mayor a menor cupo."""
+
+    def test_brightdata_con_forma_de_apify(self):
+        x = {'shortcode': 'DfPb', 'url': 'u', 'date_posted': '2026-11-02T13:00:00.000Z', 'user_posted': 'otra',
+             'description': 'pie', 'coauthor_producers': [{'username': 'fecisofest'}],
+             'post_content': [{'url': f'l{i}'} for i in range(12)]}
+        it = v.brightdata_a_apify(x)
+        self.assertEqual((it['shortCode'], len(it['childPosts'])), ('DfPb', 12))
+        self.assertEqual(len(v.clasificar([it], ['fecisofest'], {})[0]['fecisofest']), 1)
+
+    def test_pasa_a_la_siguiente_solo_lo_que_no_se_leyo(self):
+        llamadas = []
+        def bd(cs, es, ah):
+            llamadas.append(('bd', list(cs)))
+            return [{'error': 'http', 'username': 'a'}, {'error': 'no_items', 'username': 'b'}]
+        def ap(cs, es, ah):
+            llamadas.append(('apify', list(cs)))
+            return [{'ownerUsername': 'a', 'timestamp': '2026-11-02T10:00:00Z', 'shortCode': 'x'}]
+        nuevos, sin_leer, via = v.cascada(['a', 'b'], {}, AHORA, [('brightdata', bd), ('apify', ap)])
+        self.assertEqual(llamadas, [('bd', ['a', 'b']), ('apify', ['a'])])   # «b» no publicó: no se re-pide
+        self.assertEqual((sin_leer, via), ({}, {'b': 'brightdata', 'a': 'apify'}))
+        self.assertEqual([i['shortCode'] for i in nuevos['a']], ['x'])
+
+    def test_todas_agotadas(self):
+        caida = lambda cs, es, ah: [{'error': 'http', 'username': c} for c in cs]
+        _, sin_leer, _ = v.cascada(['a'], {}, AHORA, [('brightdata', caida), ('lobstr', caida)])
+        self.assertTrue(sin_leer['a'].startswith('lobstr'))
+
+    def test_apify_bajo_el_piso_se_salta(self):
+        nombres = [n for n, _ in v.fuentes_ig('t', 0.5)]
+        self.assertNotIn('apify', nombres)
+
+
 if __name__ == '__main__':
     unittest.main()
