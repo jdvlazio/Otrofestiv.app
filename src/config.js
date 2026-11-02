@@ -1155,7 +1155,7 @@ export const FESTIVAL_CONFIG={
     dates:'3–8 NOV',dates_en:'NOV 3–8',year:2026,timezoneOffset:'-05:00',
     // LA PORTADA de la programación oficial (PDF de la Alcaldía, 20 oct 2026, pág. 1):
     // el arte de la edición con «MIRADAS MDE 2026». Estirada a 400×600 (keyart-estirado)
-    keyArt:'/assets/keyart/miradas2026-v1.jpg',
+    keyArt:'/assets/keyart/miradas2026-v2.jpg',
     // el descriptor que el festival imprime junto a su nombre (portada del PDF)
     tagline:'Festival de Cine y Artes Audiovisuales',
     storageKey:'miradas2026_',festivalStartStr:'2026-11-03T00:00:00',festivalEndStr:'2026-11-08T23:59:00',
