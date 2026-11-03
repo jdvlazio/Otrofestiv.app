@@ -91,7 +91,26 @@ LAMINA = {
     'Más allá de la corona': ('DfDlyoFEdJD/08', 'Juan David Mesa Buitrago', 15),
     'Miradas Trans-Parentes': ('DfDlyoFEdJD/09', 'Efra', 3),
     'Made to Shine': ('DfDlyoFEdJD/10', 'Mariana Gutiérrez Zapata', 8),
+    # post «Día 3 · Segunda Función» (p/DfSWDVxEYCQ, 3 nov), mirado a ojo
+    'Pepa Gaitán presente, Ahora y Siempre': ('DfSWDVxEYCQ/12', 'Valeria Romina Albarracín', 11),
+    'Fragmentos': ('DfSWDVxEYCQ/13', 'Camila Andrea Pérez León', 2),
+    'Tuesday Session': ('DfSWDVxEYCQ/14', 'David Santiago Martinez Rojas', 4),
+    '90 segundos': ('DfSWDVxEYCQ/15', 'Álvaro J. Figueroa Garrucho', 10),
 }
+# OBRAS QUE EL IG SUMA A UNA FUNCIÓN DEL PDF. El post «Día 3 · Segunda Función»
+# (p/DfSWDVxEYCQ, 3 nov) trae 15 obras; el PDF, 11. Las 4 de más también van en la
+# Proyección especial del 3 nov, que el post no quita. Manda el IG, que es más
+# reciente (regla de Juan, 27 oct). (título, país, sinopsis de la lámina)
+IG_SUMA = {('VIERNES 6', '18:00'): [
+    ('Pepa Gaitán presente, Ahora y Siempre', 'ARGENTINA',
+     'La historieta y la poesía recuperan la memoria de Pepa Gaitán y su defensa de la libertad.'),
+    ('Fragmentos', 'COLOMBIA',
+     'Una videodanza explora la construcción de la identidad drag mediante el movimiento, el maquillaje y el vestuario.'),
+    ('Tuesday Session', 'ITALIA',
+     'En terapia, Noa revive un conflicto familiar y enfrenta las consecuencias emocionales del rechazo.'),
+    ('90 segundos', 'ESPAÑA',
+     'Un joven gimnasta lucha por competir en una disciplina estigmatizada por considerarse femenina.'),
+]}
 PAIS = {'BRASIL': 'Brasil', 'ARGENTINA': 'Argentina', 'COLOMBIA': 'Colombia', 'ESPAÑA': 'España',
         'REINO UNIDO': 'Reino Unido', 'ITALIA': 'Italia', 'CHILE': 'Chile'}
 
@@ -173,6 +192,8 @@ def main():
         obras = obras_de(cuerpo)
         if [o['n'] for o in obras] != list(range(1, len(obras) + 1)):
             sys.exit(f'✗ {dia_k}: numeración rota {[o["n"] for o in obras]}')
+        for tit_ig, marca, sin in IG_SUMA.get((dia_k, hora), []):
+            obras.append({'n': len(obras) + 1, 'titulo': tit_ig, 'marca': marca, 'sinopsis': sin, '_ig': True})
         lista = []
         for o in obras:
             c = por_t.get(plano(ALIAS.get(o['titulo'], o['titulo'])))
@@ -192,7 +213,8 @@ def main():
             pais = PAIS.get(o['marca'].upper(), c.get('pais'))
             r = {'titulo': tit, 'director': lam[1] if lam else c.get('director'), 'pais': pais,
                  'duracion_min': dur, 'sinopsis': o['sinopsis'],
-                 '_src': {'pdf': f'{os.path.basename(PDF)} · {dia_k} nov, obra {o["n"]:02d}',
+                 '_src': {'pdf': (f'IG p/DfSWDVxEYCQ · suma a {dia_k} nov' if o.get('_ig') else
+                                  f'{os.path.basename(PDF)} · {dia_k} nov, obra {o["n"]:02d}'),
                           'duracion': dur_de, 'catalogo': c['titulo']}}
             if lam and lam[1] != c.get('director'):
                 avisos.append(f'{tit}: dirección lámina «{lam[1]}» / catálogo «{c.get("director")}» — manda la lámina')
