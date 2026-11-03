@@ -4762,7 +4762,7 @@
    "day_order": 3,
    "venue": "Museo de Arte Moderno de Medellín - MAMM - Medellín",
    "sala": "Teatro MAMM",
-   "has_qa": false,
+   "has_qa": true,
    "poster": "/assets/miradas-2026/como-limpiar-una-casa-en-10-pasos-faciles.jpg",
    "posterSource": "tmdb",
    "_src": {
@@ -4802,8 +4802,9 @@
      "fecha": "2026-11-02"
     },
     "has_qa": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "tipo": "juan",
+     "fecha": "2026-11-02",
+     "frase": "«El Instagram si es más reciente, es más actualizado que la web» (regla de Juan, 27 oct 2026)"
     },
     "title": {
      "tipo": "festival-web",
@@ -9203,7 +9204,7 @@
    "day_order": 5,
    "venue": "Museo de Arte Moderno de Medellín - MAMM - Medellín",
    "sala": "Teatro MAMM",
-   "has_qa": false,
+   "has_qa": true,
    "synopsis": "En algún lugar del norte de la Amazonía colombiana está el viejo Sixto Muñoz, el «último indio tinigua». Según cuentan en la región donde ha vivido durante las últimas décadas, a sus ciento cinco años ha decidido dejar su casa junto a la laguna para emprender su «último viaje» hacia la selva. En un recorrido por el río Guayabero, desde La Macarena hasta el Guaviare, el director sigue su rastro con la esperanza de encontrarlo antes de su muerte. El viaje y todas las entrevistas brindan una imagen compleja y contradictoria del personaje, una hermosa crónica de los múltiples modos de mestizaje en esos territorios y de las variadas economías y formas de intercambio y solidaridad que estructuran la vida allí.",
    "synopsis_lang": "es",
    "poster": "/assets/miradas-2026/relicto.jpg",
@@ -9245,8 +9246,9 @@
      "fecha": "2026-11-02"
     },
     "has_qa": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "tipo": "juan",
+     "fecha": "2026-11-02",
+     "frase": "«El Instagram si es más reciente, es más actualizado que la web» (regla de Juan, 27 oct 2026)"
     },
     "title": {
      "tipo": "festival-web",
@@ -9904,7 +9906,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-02T13:25:08",
+  "fecha": "2026-11-02T21:22:40",
   "plan_sha": "1476fecbd41f2797",
   "paso": 10,
   "cmd": "python3 pipeline/miradas-2026-verificar.py"
