@@ -10141,7 +10141,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-03T09:18:30",
+  "fecha": "2026-11-03T09:18:57",
   "plan_sha": "18f7fb7e2b601fc4",
   "paso": 8,
   "cmd": "python3 pipeline/midbo-2026-verificar.py"
