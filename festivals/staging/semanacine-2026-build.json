@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "Lámina «Programación 2026» de @semanadelcinecolombiano (IG p/DfKgpBVpyUt, 31 oct 2026)",
-  "capturado": "2026-11-02",
+  "capturado": "2026-11-03",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_secciones": "Sección = la palabra que la lámina de programación pone a cada actividad (decisión de Juan, 2 nov 2026).",
@@ -190,6 +190,16 @@
    "_prec": "nominatim",
    "_match": "Casa Occio, 2A-258, Carrera 24B, Miraflores, Comuna 19, Cali ciudad, Cali, Sur, Valle del ",
    "n": 1
+  },
+  "Centro Cultural Brisas de Mayo": {
+   "short": "Centro Cultural Brisas de Mayo",
+   "city": "Centro Cultural Brisas de Mayo",
+   "n": 1,
+   "_prec": "manual",
+   "lat": 3.4169915,
+   "lng": -76.5677396,
+   "address": "Diagonal 38 Oeste #54 E-35, Cali",
+   "_match": "Google Maps «Centro Cultural Brisas De Mayo» (3 nov 2026)."
   }
  },
  "_avisos_id": [],
@@ -512,6 +522,30 @@
    "_duracion_corregida": "genérica de conversatorio (Juan, 2 nov 2026)"
   },
   {
+   "title": "Cine Bajo las Estrellas, película y encuentro musical",
+   "type": "film",
+   "section": "🌌 Cine Bajo las Estrellas",
+   "_ancla": [
+    "Centro Cultural Brisas de Mayo",
+    "2026-11-07",
+    "18:00"
+   ],
+   "day": "2026-11-07",
+   "time": "18:00",
+   "day_order": 4,
+   "venue": "Centro Cultural Brisas de Mayo",
+   "has_qa": false,
+   "_src": {
+    "url": "https://www.instagram.com/p/DfKgpBVpyUt/",
+    "date": "2026-10-31",
+    "tipo": "festival-ig",
+    "fila": "2026-11-07 18:00 · Cine Bajo las Estrellas, película y encuentro musical"
+   },
+   "is_free": true,
+   "_fid": "f_1812bde51b",
+   "id": "f_1812bde51b"
+  },
+  {
    "title": "Conversatorio \"Del Barrio a la Embajada\"",
    "type": "event",
    "section": "💬 Conversatorio",
@@ -574,7 +608,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-02T21:49:00",
+  "fecha": "2026-11-03T06:45:04",
   "plan_sha": "913d0099ab00012c",
   "paso": 5,
   "cmd": "python3 pipeline/semanacine-2026-verificar.py"

@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "Lámina «Programación 2026» de @semanadelcinecolombiano (IG p/DfKgpBVpyUt, 31 oct 2026)",
-  "capturado": "2026-11-02",
+  "capturado": "2026-11-03",
   "metodo": "transcripción a ojo cruzada con pipeline/ocr.py",
   "que_aporta": "la programación entera: día, hora, actividad, sede, sala"
  },
@@ -15,14 +15,7 @@
   ],
   "_por_que": "Ninguna fuente anuncia boletería; El País: «eventos gratuitos». Regla de Juan: sin aviso de pago es gratis."
  },
- "_no_se_publica": [
-  {
-   "dia": "2026-11-07",
-   "hora": "",
-   "actividad": "Cine Bajo las Estrellas, película y encuentro musical (Centro Cultural Brisas de Mayo)",
-   "por_que": "la lámina no da hora ni película (decisión de Juan, 2 nov)"
-  }
- ],
+ "_no_se_publica": [],
  "funciones": [
   {
    "dia": "2026-11-03",
@@ -189,6 +182,22 @@
    "tipo": "evento",
    "event_kind": "conversatorio",
    "sinopsis": "Con Carlos Moreno (director)."
+  },
+  {
+   "dia": "2026-11-07",
+   "hora": "18:00",
+   "titulo": "Cine Bajo las Estrellas, película y encuentro musical",
+   "sede": "Centro Cultural Brisas de Mayo",
+   "sala": "",
+   "ciudad": "Cali",
+   "seccion": "Cine Bajo las Estrellas",
+   "acceso": "Entrada libre (no se anuncia pago)",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfKgpBVpyUt/",
+    "date": "2026-10-31",
+    "tipo": "festival-ig",
+    "fila": "2026-11-07 18:00 · Cine Bajo las Estrellas, película y encuentro musical"
+   }
   },
   {
    "dia": "2026-11-09",

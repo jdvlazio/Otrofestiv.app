@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, emparejado con ficha_verifica() (director + año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-11-02"
+  "capturado": "2026-11-03"
  },
  "obras": [
   {
@@ -18,7 +18,7 @@
    "lbSlug": "anina",
    "_verificado": "declarada a mano: Alfredo Soderguit, 2013 (Uruguay-Colombia).",
    "_director": "Alfredo Soderguit",
-   "_sondeado": "2026-11-02",
+   "_sondeado": "2026-11-03",
    "poster": "/assets/semanacine-2026/anina.jpg",
    "posterSource": "tmdb",
    "pais_heredado": "Colombia, Uruguay",
@@ -40,7 +40,7 @@
    "lbSlug": "choco",
    "_verificado": "declarada a mano: Jhonny Hendrix, 2012.",
    "_director": "Jhonny Hendrix",
-   "_sondeado": "2026-11-02",
+   "_sondeado": "2026-11-03",
    "poster": "/assets/semanacine-2026/choco.jpg",
    "posterSource": "tmdb",
    "pais_heredado": "Colombia",
@@ -62,7 +62,7 @@
    "lbSlug": "el-titan",
    "_verificado": "declarada a mano: Alexander Giraldo, sobre Kraken y Elkin Ramírez (post del festival p/DfMs0KoJgLT).",
    "_director": "Alexander Giraldo",
-   "_sondeado": "2026-11-02",
+   "_sondeado": "2026-11-03",
    "poster": "/assets/semanacine-2026/el-titan.jpg",
    "posterSource": "tmdb",
    "pais_heredado": "Colombia",
@@ -84,7 +84,7 @@
    "lbSlug": "lejos-aqui",
    "_verificado": "declarada a mano: TMDB 1623557 «Lejos, aquí», Colombia, 76 min, dirección Ana Sofía Osorio Ruiz; la lámina dice «Ana María Osorio (Directora)». Sin fecha en TMDB.",
    "_director": "Ana Sofía Osorio Ruiz",
-   "_sondeado": "2026-11-02",
+   "_sondeado": "2026-11-03",
    "poster": "/assets/semanacine-2026/lejos-aqui.jpg",
    "posterSource": "tmdb",
    "pais_heredado": "Colombia",
@@ -107,7 +107,7 @@
    "lbSlug": "dog-eat-dog-2008",
    "_verificado": "declarada a mano: Carlos Moreno, 2008; la lámina: «Homenaje 20 años».",
    "_director": "Carlos Moreno",
-   "_sondeado": "2026-11-02",
+   "_sondeado": "2026-11-03",
    "poster": "/assets/semanacine-2026/perro-come-perro.jpg",
    "posterSource": "tmdb",
    "pais_heredado": "Colombia",
@@ -130,7 +130,7 @@
    "lbSlug": "anina",
    "_verificado": "declarada a mano: Alfredo Soderguit, 2013 (Uruguay-Colombia).",
    "_director": "Alfredo Soderguit",
-   "_sondeado": "2026-11-02",
+   "_sondeado": "2026-11-03",
    "poster": "/assets/semanacine-2026/anina.jpg",
    "posterSource": "tmdb",
    "pais_heredado": "Colombia, Uruguay",
@@ -151,7 +151,7 @@
    "lbSlug": "choco",
    "_verificado": "declarada a mano: Jhonny Hendrix, 2012.",
    "_director": "Jhonny Hendrix",
-   "_sondeado": "2026-11-02",
+   "_sondeado": "2026-11-03",
    "poster": "/assets/semanacine-2026/choco.jpg",
    "posterSource": "tmdb",
    "pais_heredado": "Colombia",
@@ -172,7 +172,7 @@
    "lbSlug": "el-titan",
    "_verificado": "declarada a mano: Alexander Giraldo, sobre Kraken y Elkin Ramírez (post del festival p/DfMs0KoJgLT).",
    "_director": "Alexander Giraldo",
-   "_sondeado": "2026-11-02",
+   "_sondeado": "2026-11-03",
    "poster": "/assets/semanacine-2026/el-titan.jpg",
    "posterSource": "tmdb",
    "pais_heredado": "Colombia",
@@ -193,7 +193,7 @@
    "lbSlug": "lejos-aqui",
    "_verificado": "declarada a mano: TMDB 1623557 «Lejos, aquí», Colombia, 76 min, dirección Ana Sofía Osorio Ruiz; la lámina dice «Ana María Osorio (Directora)». Sin fecha en TMDB.",
    "_director": "Ana Sofía Osorio Ruiz",
-   "_sondeado": "2026-11-02",
+   "_sondeado": "2026-11-03",
    "poster": "/assets/semanacine-2026/lejos-aqui.jpg",
    "posterSource": "tmdb",
    "pais_heredado": "Colombia",
@@ -215,7 +215,7 @@
    "lbSlug": "dog-eat-dog-2008",
    "_verificado": "declarada a mano: Carlos Moreno, 2008; la lámina: «Homenaje 20 años».",
    "_director": "Carlos Moreno",
-   "_sondeado": "2026-11-02",
+   "_sondeado": "2026-11-03",
    "poster": "/assets/semanacine-2026/perro-come-perro.jpg",
    "posterSource": "tmdb",
    "pais_heredado": "Colombia",
@@ -225,9 +225,14 @@
   }
  },
  "sin_ficha": [
+  "Cine Bajo las Estrellas, película y encuentro musical",
   "Proyección de cortos locales"
  ],
  "_sin_ficha_sondeo": {
+  "Cine Bajo las Estrellas, película y encuentro musical": {
+   "director": "",
+   "fecha": "2026-11-03"
+  },
   "Proyección de cortos locales": {
    "director": "",
    "fecha": "2026-11-02"
