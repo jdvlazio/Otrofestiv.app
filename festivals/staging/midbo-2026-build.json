@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "midbo.co — ficha de cada obra (bloque «Funciones») + API pelicula/seccion",
-  "capturado": "2026-11-02",
+  "capturado": "2026-11-03",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_secciones": "Las categorías madre de la taxonomía `seccion` de midbo.co, tal cual; «Encuentro Pensar lo Real» es el nombre del menú del seminario; «Proyecciones» (nuestra) para la única obra sin sección.",
@@ -6524,7 +6524,7 @@
    "time": "10:00",
    "day_order": 7,
    "venue": "Alianza Francesa - Bogotá",
-   "has_qa": false,
+   "has_qa": true,
    "_src": {
     "url": "https://midbo.co/peliculas/sey-arimaku-la-otra-oscuridad/",
     "date": "2026-10-10"
@@ -6585,9 +6585,9 @@
      "url": "https://midbo.co/"
     },
     "has_qa": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-10",
-     "url": "https://midbo.co/"
+     "tipo": "juan",
+     "fecha": "2026-10-27",
+     "frase": "El Instagram si es más reciente, es más actualizado que la web"
     },
     "title": {
      "tipo": "festival-web",
@@ -6798,7 +6798,7 @@
    "day_order": 7,
    "venue": "Centro de Memoria, Paz y Reconciliación - Bogotá",
    "sala": "Auditorio",
-   "has_qa": false,
+   "has_qa": true,
    "synopsis": "En la comuna 13 de Medellín existe la fosa urbana a cielo abierto más grande de América Latina. Durante más de veinte años, La Escombrera ha sido señalada por familias de personas víctimas de desaparición forzada como el lugar donde posiblemente se encuentren muchos de los 503 desaparecidos de este territorio. Mujeres Caminando por la Verdad lidera la búsqueda forense que, en medio de incontables obstáculos y tras dos décadas de negacionismo, desencadenó en el hallazgo de cuerpos en diciembre del año 2024. Este acontecimiento histórico, una bocanada de aire fresco para las familias buscadoras, envió un mensaje muy claro a toda Colombia: la tierra ha comenzado a hablar.",
    "synopsis_lang": "es",
    "poster": "/assets/midbo-2026/si-la-escombrera-hablara.jpg",
@@ -6847,9 +6847,9 @@
      "url": "https://midbo.co/"
     },
     "has_qa": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-10",
-     "url": "https://midbo.co/"
+     "tipo": "juan",
+     "fecha": "2026-10-27",
+     "frase": "El Instagram si es más reciente, es más actualizado que la web"
     },
     "title": {
      "tipo": "festival-web",
@@ -6883,7 +6883,7 @@
    "day_order": 7,
    "venue": "Centro de Memoria, Paz y Reconciliación - Bogotá",
    "sala": "Auditorio",
-   "has_qa": false,
+   "has_qa": true,
    "synopsis": "El hogar ha desaparecido; la casa fue paraíso, pero también infierno. Aunque la guerra intentó destruirlo todo a su paso, la familia intenta volver. Entre anhelos y pesadillas crean un nuevo territorio, un refugio donde se reencuentran con sus amigos y su comunidad. Allí logran volver a la casa grande, el parque de diversiones de la infancia, ahora habitado por seres fantásticos y espectros, en donde buscan conjurar un abrazo.",
    "synopsis_lang": "es",
    "poster": "/assets/midbo-2026/el-hogar-fue-sepultado-en-esa-tierra-que-nunca-pudimos-encon.jpg",
@@ -6931,9 +6931,9 @@
      "url": "https://midbo.co/"
     },
     "has_qa": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-10",
-     "url": "https://midbo.co/"
+     "tipo": "juan",
+     "fecha": "2026-10-27",
+     "frase": "El Instagram si es más reciente, es más actualizado que la web"
     },
     "title": {
      "tipo": "festival-web",
@@ -6965,7 +6965,7 @@
    "time": "18:30",
    "day_order": 7,
    "venue": "Alianza Francesa - Bogotá",
-   "has_qa": false,
+   "has_qa": true,
    "synopsis": "«Reexistir: entre lo político y lo íntimo» reúne tres cortometrajes documentales —«Dicen», «El cuerpo archivado» y «El Camino»— como un tríptico que explora las relaciones entre cuerpo, memoria, identidad y resistencia. Desde aproximaciones íntimas y profundamente personales, las obras cuestionan los discursos de género, las violencias que atraviesan los cuerpos y los mandatos sociales que configuran las formas de ser. A través de la música, la poesía, la performance y el propio cine como herramientas de creación y enunciación, cada película convierte la experiencia individual en una reflexión colectiva sobre las múltiples formas de habitar el cuerpo y disputar las narrativas que históricamente lo han condicionado. Más que ofrecer respuestas, este tríptico propone un espacio de escucha y sensibilidad, donde lo íntimo se revela inseparable de lo político y el gesto creativo se afirma como una forma de reexistencia. Este proyecto fue realizado en Barranquilla como resultado del Taller Ojos a la Obra, desarrollado conjuntamente por Encuadradas, Comptoir du doc y la MIDBO.",
    "synopsis_lang": "es",
    "_src": {
@@ -7002,9 +7002,9 @@
      "url": "https://midbo.co/"
     },
     "has_qa": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-10",
-     "url": "https://midbo.co/"
+     "tipo": "juan",
+     "fecha": "2026-10-27",
+     "frase": "El Instagram si es más reciente, es más actualizado que la web"
     },
     "title": {
      "tipo": "festival-web",
@@ -10141,7 +10141,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-02T17:18:20",
+  "fecha": "2026-11-03T09:17:54",
   "plan_sha": "18f7fb7e2b601fc4",
   "paso": 8,
   "cmd": "python3 pipeline/midbo-2026-verificar.py"
