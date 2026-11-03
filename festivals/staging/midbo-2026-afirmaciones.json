@@ -472,6 +472,54 @@
     "fecha": "2026-11-02"
    },
    "evidencia": "lámina 10 de p/DfPT4i1jXbI (programación lun 2 nov), leída por el vigía: «5:00 p.m. · Canterbury Café · Programa 2: Geografías en Resistencia · «Con mediación · Entrada libre» + concierto de Santiago García; sin Q&A»"
+  },
+  {
+   "funcion": "f_a4f8eede0f",
+   "casilla": "has_qa",
+   "valor": true,
+   "contra": false,
+   "fuente": {
+    "tipo": "juan",
+    "frase": "El Instagram si es más reciente, es más actualizado que la web",
+    "fecha": "2026-10-27"
+   },
+   "evidencia": "https://www.instagram.com/p/DfR4wWnjstW/ (3 nov 2026, 07:30) lámina 01: «MAR 03 NOV · 10:00 a.m. · Alianza Francesa · Homenaje Pablo Mora. Programa 2 · Función con Q&A ★». La web no lo dice; el IG es más reciente."
+  },
+  {
+   "funcion": "f_d433716839",
+   "casilla": "has_qa",
+   "valor": true,
+   "contra": false,
+   "fuente": {
+    "tipo": "juan",
+    "frase": "El Instagram si es más reciente, es más actualizado que la web",
+    "fecha": "2026-10-27"
+   },
+   "evidencia": "https://www.instagram.com/p/DfR4wWnjstW/ (3 nov 2026, 07:30) lámina 03: «MAR 03 NOV · 4:30 p.m. · CMPR | Auditorio · Si la escombrera hablara · Función con Q&A». La web no lo dice; el IG es más reciente."
+  },
+  {
+   "funcion": "f_932a0854f0",
+   "casilla": "has_qa",
+   "valor": true,
+   "contra": false,
+   "fuente": {
+    "tipo": "juan",
+    "frase": "El Instagram si es más reciente, es más actualizado que la web",
+    "fecha": "2026-10-27"
+   },
+   "evidencia": "https://www.instagram.com/p/DfR4wWnjstW/ (3 nov 2026, 07:30) lámina 03: «MAR 03 NOV · 5:30 p.m. · CMPR · El hogar fue sepultado en esa tierra que nunca pudimos encontrar · Función con Q&A ★». La web no lo dice; el IG es más reciente."
+  },
+  {
+   "funcion": "f_db3d6ef0f1",
+   "casilla": "has_qa",
+   "valor": true,
+   "contra": false,
+   "fuente": {
+    "tipo": "juan",
+    "frase": "El Instagram si es más reciente, es más actualizado que la web",
+    "fecha": "2026-10-27"
+   },
+   "evidencia": "https://www.instagram.com/p/DfR4wWnjstW/ (3 nov 2026, 07:30) lámina 04: «MAR 03 NOV · 6:30 p.m. · Alianza Francesa · Resultado de laboratorios del Encuentro Pensar lo Real + Proyección «Reexistir» · Función con Q&A ★». La web no lo dice; el IG es más reciente."
   }
  ]
 }
