@@ -5414,7 +5414,7 @@
    "clave": "al-este",
    "nombre": "Festival de Cine de Europa Central y Oriental - Al Este",
    "sigla": null,
-   "ciudad": "Bogotá",
+   "ciudad": "Bogotá y Medellín",
    "departamento": "Antioquia / Bogotá D.C.",
    "region": "Andina",
    "mes": 11,
@@ -5424,17 +5424,19 @@
    "ig": "@aleste.colombia",
    "estado": "radar",
    "id_config": null,
-   "issue": null,
+   "issue": [
+    1397
+   ],
    "apoyo": null,
    "fuente": [
     "https://www.proimagenescolombia.com/secciones/eventos/eventos.php?pagina=30",
     "https://filmmakers.festhome.com/en/festival/6774"
    ],
-   "nota": "2025: 19–23 NOV en Medellín. El mes del ancla (junio) parece estar mal.",
+   "nota": "2025: 19–23 NOV en Medellín. Medellín 2026 sin fechas confirmadas. El mes del ancla (junio) parece estar mal.",
    "discrepancias": null,
    "motivo_descarte": null,
    "importancia": 2,
-   "verificado_el": "2026-10-11",
+   "verificado_el": "2026-11-03",
    "origen": [
     "ancla 11 oct: calendario 11 oct"
    ],
