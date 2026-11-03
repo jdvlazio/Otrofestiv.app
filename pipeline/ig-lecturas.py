@@ -175,9 +175,14 @@ def tesseract(rutas, pie=PIE):
 
 
 # spa si está instalado; si no, eng (las horas y los nombres se leen igual y
-# las tildes no cuentan: todo se compara sin_tildes)
-TESS_LANG = 'spa' if 'spa' in subprocess.run(['tesseract', '--list-langs'], capture_output=True,
-                                              text=True).stdout.split() else 'eng'
+# las tildes no cuentan: todo se compara sin_tildes). Sin tesseract instalado
+# (el CI de Linux) el módulo tiene que importar igual: los tests del veredicto
+# no lo usan.
+try:
+    TESS_LANG = 'spa' if 'spa' in subprocess.run(['tesseract', '--list-langs'], capture_output=True,
+                                                  text=True).stdout.split() else 'eng'
+except FileNotFoundError:
+    TESS_LANG = 'eng'
 
 
 def _plano(s):
