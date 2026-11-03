@@ -525,6 +525,7 @@
    "title": "Cine Bajo las Estrellas, película y encuentro musical",
    "type": "film",
    "section": "🌌 Cine Bajo las Estrellas",
+   "duration": "90 min",
    "_ancla": [
     "Centro Cultural Brisas de Mayo - Cali",
     "2026-11-07",
@@ -543,7 +544,8 @@
    },
    "is_free": true,
    "_fid": "f_1812bde51b",
-   "id": "f_1812bde51b"
+   "id": "f_1812bde51b",
+   "_duracion_corregida": "genérica de función (Juan, 3 nov 2026)"
   },
   {
    "title": "Conversatorio \"Del Barrio a la Embajada\"",
@@ -582,6 +584,7 @@
    "title": "Proyección de cortos locales",
    "type": "film",
    "section": "🎞️ Proyección de Cortos Locales",
+   "duration": "60 min",
    "_ancla": [
     "Universidad Santiago de Cali - Cali",
     "2026-11-09",
@@ -603,12 +606,13 @@
    },
    "is_free": true,
    "_fid": "f_bb237a6500",
-   "id": "f_bb237a6500"
+   "id": "f_bb237a6500",
+   "_duracion_corregida": "estimada (Juan, 3 nov 2026)"
   }
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-03T06:47:03",
+  "fecha": "2026-11-03T12:41:39",
   "plan_sha": "eb8065204a0a16b5",
   "paso": 5,
   "cmd": "python3 pipeline/semanacine-2026-verificar.py"
