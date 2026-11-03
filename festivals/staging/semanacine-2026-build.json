@@ -191,9 +191,9 @@
    "_match": "Casa Occio, 2A-258, Carrera 24B, Miraflores, Comuna 19, Cali ciudad, Cali, Sur, Valle del ",
    "n": 1
   },
-  "Centro Cultural Brisas de Mayo": {
+  "Centro Cultural Brisas de Mayo - Cali": {
    "short": "Centro Cultural Brisas de Mayo",
-   "city": "Centro Cultural Brisas de Mayo",
+   "city": "Cali",
    "n": 1,
    "_prec": "manual",
    "lat": 3.4169915,
@@ -526,14 +526,14 @@
    "type": "film",
    "section": "🌌 Cine Bajo las Estrellas",
    "_ancla": [
-    "Centro Cultural Brisas de Mayo",
+    "Centro Cultural Brisas de Mayo - Cali",
     "2026-11-07",
     "18:00"
    ],
    "day": "2026-11-07",
    "time": "18:00",
    "day_order": 4,
-   "venue": "Centro Cultural Brisas de Mayo",
+   "venue": "Centro Cultural Brisas de Mayo - Cali",
    "has_qa": false,
    "_src": {
     "url": "https://www.instagram.com/p/DfKgpBVpyUt/",
@@ -608,8 +608,8 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-03T06:45:04",
-  "plan_sha": "913d0099ab00012c",
+  "fecha": "2026-11-03T06:47:03",
+  "plan_sha": "eb8065204a0a16b5",
   "paso": 5,
   "cmd": "python3 pipeline/semanacine-2026-verificar.py"
  }
