@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "Calendario de programación IV FICIDI 2026 (PDF enviado por el festival)",
-  "capturado": "2026-10-30",
+  "capturado": "2026-11-03",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "radar": 1042,
@@ -225,9 +225,10 @@
      "director": "Valeria Romina Albarracín",
      "country": "Argentina",
      "flags": "🇦🇷",
+     "duration": "11 min",
      "_src": {
       "pdf": "Calendario_IV_FICIDI_2026.pdf · MARTES 3 nov, obra 02",
-      "duracion": null,
+      "duracion": "lámina IG DfSWDVxEYCQ/12",
       "catalogo": "Pepa Gaitán presente, Ahora y Siempre"
      },
      "synopsis": "La historieta y la poesía recuperan la memoria de Pepa Gaitán y su defensa de la libertad.",
@@ -243,9 +244,10 @@
      "director": "Camila Andrea Pérez León",
      "country": "Colombia",
      "flags": "🇨🇴",
+     "duration": "2 min",
      "_src": {
       "pdf": "Calendario_IV_FICIDI_2026.pdf · MARTES 3 nov, obra 03",
-      "duracion": null,
+      "duracion": "lámina IG DfSWDVxEYCQ/13",
       "catalogo": "Fragmentos"
      },
      "synopsis": "Una videodanza explora la construcción de la identidad drag mediante el movimiento, el maquillaje y el vestuario.",
@@ -258,9 +260,10 @@
      "director": "Álvaro J. Figueroa Garrucho",
      "country": "España",
      "flags": "🇪🇸",
+     "duration": "10 min",
      "_src": {
       "pdf": "Calendario_IV_FICIDI_2026.pdf · MARTES 3 nov, obra 04",
-      "duracion": null,
+      "duracion": "lámina IG DfSWDVxEYCQ/15",
       "catalogo": "90 segundos"
      },
      "synopsis": "Un joven gimnasta lucha por competir en una disciplina estigmatizada por considerarse femenina.",
@@ -312,12 +315,13 @@
     },
     {
      "title": "Tuesday Session",
-     "director": "David Martinez Rojas",
+     "director": "David Santiago Martinez Rojas",
      "country": "Italia",
      "flags": "🇮🇹",
+     "duration": "4 min",
      "_src": {
       "pdf": "Calendario_IV_FICIDI_2026.pdf · MARTES 3 nov, obra 07",
-      "duracion": null,
+      "duracion": "lámina IG DfSWDVxEYCQ/14",
       "catalogo": "Tuesday Session"
      },
      "synopsis": "En terapia, Noa revive un conflicto familiar y enfrenta las consecuencias emocionales del rechazo.",
@@ -1008,7 +1012,7 @@
    "section": "🏳️‍🌈 Selección Oficial",
    "country": "España, Brasil, Reino Unido, Argentina, Colombia",
    "flags": "🇪🇸🇧🇷🇬🇧🇦🇷🇨🇴",
-   "duration": "186 min",
+   "duration": "182 min",
    "_ancla": [
     "Universidad de la Costa – CUC - Barranquilla",
     "2026-11-06",
@@ -1273,8 +1277,8 @@
    "title": "Día 3 · Segunda Función",
    "type": "film",
    "section": "🏳️‍🌈 Selección Oficial",
-   "country": "España, Colombia, Brasil, Argentina",
-   "flags": "🇪🇸🇨🇴🇧🇷🇦🇷",
+   "country": "España, Colombia, Brasil, Argentina, Italia",
+   "flags": "🇪🇸🇨🇴🇧🇷🇦🇷🇮🇹",
    "duration": "180 min",
    "_ancla": [
     "Universidad de la Costa – CUC - Barranquilla",
@@ -1462,7 +1466,8 @@
      "posterSource": "oficial",
      "lbSlug": "y-a-mi-quien-me-cuida-experiencias-negras",
      "tmdb_id": 1812522,
-     "synopsis_en": "Black and Afro-descendant communities document organizing, resistance and care during the 2021 national strike in Colombia."
+     "synopsis_en": "Black and Afro-descendant communities document organizing, resistance and care during the 2021 national strike in Colombia.",
+     "genre": "Documental"
     },
     {
      "title": "Espacios húmedos",
@@ -1480,7 +1485,8 @@
      "posterSource": "oficial",
      "lbSlug": "espacios-humedos",
      "tmdb_id": 1812523,
-     "synopsis_en": "A documentary exploring gay saunas as meeting places and the forms of discrimination tied to territory."
+     "synopsis_en": "A documentary exploring gay saunas as meeting places and the forms of discrimination tied to territory.",
+     "genre": "Documental"
     },
     {
      "title": "Aguijón Rojo",
@@ -1499,6 +1505,79 @@
      "lbSlug": "aguijon-rojo",
      "tmdb_id": 1812525,
      "synopsis_en": "A test of love involving HIV reveals irreversible consequences."
+    },
+    {
+     "title": "Pepa Gaitán presente, Ahora y Siempre",
+     "director": "Valeria Romina Albarracín",
+     "country": "Argentina",
+     "flags": "🇦🇷",
+     "duration": "11 min",
+     "_src": {
+      "pdf": "IG p/DfSWDVxEYCQ · suma a VIERNES 6 nov",
+      "duracion": "lámina IG DfSWDVxEYCQ/12",
+      "catalogo": "Pepa Gaitán presente, Ahora y Siempre"
+     },
+     "synopsis": "La historieta y la poesía recuperan la memoria de Pepa Gaitán y su defensa de la libertad.",
+     "synopsis_lang": "es",
+     "poster": "/assets/ficidi-2026/pepa-gaitan-presente-ahora-y-siempre.jpg",
+     "posterSource": "oficial",
+     "lbSlug": "pepa-gaitan-presente-ahora-y-siempre",
+     "tmdb_id": 1812481,
+     "synopsis_en": "Comics and poetry recover the memory of Pepa Gaitán and her defense of freedom."
+    },
+    {
+     "title": "Fragmentos",
+     "director": "Camila Andrea Pérez León",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "duration": "2 min",
+     "_src": {
+      "pdf": "IG p/DfSWDVxEYCQ · suma a VIERNES 6 nov",
+      "duracion": "lámina IG DfSWDVxEYCQ/13",
+      "catalogo": "Fragmentos"
+     },
+     "synopsis": "Una videodanza explora la construcción de la identidad drag mediante el movimiento, el maquillaje y el vestuario.",
+     "synopsis_lang": "es",
+     "poster": "/assets/ficidi-2026/fragmentos.jpg",
+     "posterSource": "oficial"
+    },
+    {
+     "title": "Tuesday Session",
+     "director": "David Santiago Martinez Rojas",
+     "country": "Italia",
+     "flags": "🇮🇹",
+     "duration": "4 min",
+     "_src": {
+      "pdf": "IG p/DfSWDVxEYCQ · suma a VIERNES 6 nov",
+      "duracion": "lámina IG DfSWDVxEYCQ/14",
+      "catalogo": "Tuesday Session"
+     },
+     "synopsis": "En terapia, Noa revive un conflicto familiar y enfrenta las consecuencias emocionales del rechazo.",
+     "synopsis_lang": "es",
+     "poster": "/assets/ficidi-2026/tuesday-session.jpg",
+     "posterSource": "oficial",
+     "lbSlug": "tuesday-session",
+     "tmdb_id": 1812489,
+     "synopsis_en": "In therapy, Noa relives a family conflict and faces the emotional consequences of rejection."
+    },
+    {
+     "title": "90 segundos",
+     "director": "Álvaro J. Figueroa Garrucho",
+     "country": "España",
+     "flags": "🇪🇸",
+     "duration": "10 min",
+     "_src": {
+      "pdf": "IG p/DfSWDVxEYCQ · suma a VIERNES 6 nov",
+      "duracion": "lámina IG DfSWDVxEYCQ/15",
+      "catalogo": "90 segundos"
+     },
+     "synopsis": "Un joven gimnasta lucha por competir en una disciplina estigmatizada por considerarse femenina.",
+     "synopsis_lang": "es",
+     "poster": "/assets/ficidi-2026/90-segundos.jpg",
+     "posterSource": "oficial",
+     "lbSlug": "90-segundos",
+     "tmdb_id": 1812486,
+     "synopsis_en": "A young gymnast fights to compete in a discipline stigmatized as feminine."
     }
    ],
    "_fid": "f_a6c79ab1b8",
@@ -1548,7 +1627,8 @@
      "posterSource": "oficial",
      "lbSlug": "corpo-e-identidade",
      "tmdb_id": 1812526,
-     "synopsis_en": "Seven travesti women from Brazil build their own representation through photography, testimony and performance."
+     "synopsis_en": "Seven travesti women from Brazil build their own representation through photography, testimony and performance.",
+     "genre": "Documental"
     },
     {
      "title": "Danzan Las Luciérnagas",
@@ -1640,7 +1720,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-30T06:33:50",
+  "fecha": "2026-11-03T13:17:32",
   "plan_sha": "7f1d2e48ae2becc3",
   "paso": 9,
   "cmd": "python3 pipeline/ficidi-2026-verificar.py"

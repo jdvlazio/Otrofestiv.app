@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "Calendario de programación IV FICIDI 2026 (PDF enviado por el festival)",
-  "capturado": "2026-10-30",
+  "capturado": "2026-11-03",
   "archivo": "fuentes/ficidi-2026/Calendario_IV_FICIDI_2026.pdf",
   "metodo": "pdftotext -layout; un bloque por función; obras cruzadas con el catálogo"
  },
@@ -10,11 +10,13 @@
   "Las cosas que no te dije"
  ],
  "_avisos": [
+  "Tuesday Session: dirección lámina «David Santiago Martinez Rojas» / catálogo «David Martinez Rojas» — manda la lámina",
   "Muñecas de porcelana: dirección lámina «Antonio José López Gómez» / catálogo «Antonio Jose López Gómez» — manda la lámina",
   "Inés: dirección lámina «José Antonio Gutiérrez Moreno» / catálogo «José Gutiérrez Moreno» — manda la lámina",
   "Onades: lámina 15 min, TMDB 20 — manda la lámina",
   "Transitar lo marica negro: dirección lámina «May Romero Quiñones» / catálogo «May Romero Quiñónez» — manda la lámina",
-  "Solo Natalie: dirección lámina «Natalie Ramón Ramírez» / catálogo «Ramón Ramírez» — manda la lámina"
+  "Solo Natalie: dirección lámina «Natalie Ramón Ramírez» / catálogo «Ramón Ramírez» — manda la lámina",
+  "Tuesday Session: dirección lámina «David Santiago Martinez Rojas» / catálogo «David Martinez Rojas» — manda la lámina"
  ],
  "funciones": [
   {
@@ -41,10 +43,11 @@
      "titulo": "Pepa Gaitán presente, Ahora y Siempre",
      "director": "Valeria Romina Albarracín",
      "pais": "Argentina",
+     "duracion_min": 11,
      "sinopsis": "La historieta y la poesía recuperan la memoria de Pepa Gaitán y su defensa de la libertad.",
      "_src": {
       "pdf": "Calendario_IV_FICIDI_2026.pdf · MARTES 3 nov, obra 02",
-      "duracion": null,
+      "duracion": "lámina IG DfSWDVxEYCQ/12",
       "catalogo": "Pepa Gaitán presente, Ahora y Siempre"
      }
     },
@@ -52,10 +55,11 @@
      "titulo": "Fragmentos",
      "director": "Camila Andrea Pérez León",
      "pais": "Colombia",
+     "duracion_min": 2,
      "sinopsis": "Una videodanza explora la construcción de la identidad drag mediante el movimiento, el maquillaje y el vestuario.",
      "_src": {
       "pdf": "Calendario_IV_FICIDI_2026.pdf · MARTES 3 nov, obra 03",
-      "duracion": null,
+      "duracion": "lámina IG DfSWDVxEYCQ/13",
       "catalogo": "Fragmentos"
      }
     },
@@ -63,10 +67,11 @@
      "titulo": "90 segundos",
      "director": "Álvaro J. Figueroa Garrucho",
      "pais": "España",
+     "duracion_min": 10,
      "sinopsis": "Un joven gimnasta lucha por competir en una disciplina estigmatizada por considerarse femenina.",
      "_src": {
       "pdf": "Calendario_IV_FICIDI_2026.pdf · MARTES 3 nov, obra 04",
-      "duracion": null,
+      "duracion": "lámina IG DfSWDVxEYCQ/15",
       "catalogo": "90 segundos"
      }
     },
@@ -95,12 +100,13 @@
     },
     {
      "titulo": "Tuesday Session",
-     "director": "David Martinez Rojas",
+     "director": "David Santiago Martinez Rojas",
      "pais": "Italia",
+     "duracion_min": 4,
      "sinopsis": "En terapia, Noa revive un conflicto familiar y enfrenta las consecuencias emocionales del rechazo.",
      "_src": {
       "pdf": "Calendario_IV_FICIDI_2026.pdf · MARTES 3 nov, obra 07",
-      "duracion": null,
+      "duracion": "lámina IG DfSWDVxEYCQ/14",
       "catalogo": "Tuesday Session"
      }
     }
@@ -673,8 +679,8 @@
    },
    "sala": "Bloque 11, piso 3 · Sala de Conferencias",
    "titulo": "Día 3 · Primera función",
-   "duracion_min": 186,
-   "_duracion_de": "ESTIMADA (Juan, 29 oct): suma PARCIAL: 8 de 12 obras con duración; sin duración: Cast Me · Todo lo que pasará mañana · Amor en positivo · Kiboko; + 4 × 14 min, promedio de las 36 obras con duración"
+   "duracion_min": 182,
+   "_duracion_de": "ESTIMADA (Juan, 29 oct): suma PARCIAL: 8 de 12 obras con duración; sin duración: Cast Me · Todo lo que pasará mañana · Amor en positivo · Kiboko; + 4 × 13 min, promedio de las 44 obras con duración"
   },
   {
    "dia": "2026-11-06",
@@ -805,6 +811,54 @@
       "pdf": "Calendario_IV_FICIDI_2026.pdf · VIERNES 6 nov, obra 11",
       "duracion": null,
       "catalogo": "Aguijón Rojo"
+     }
+    },
+    {
+     "titulo": "Pepa Gaitán presente, Ahora y Siempre",
+     "director": "Valeria Romina Albarracín",
+     "pais": "Argentina",
+     "duracion_min": 11,
+     "sinopsis": "La historieta y la poesía recuperan la memoria de Pepa Gaitán y su defensa de la libertad.",
+     "_src": {
+      "pdf": "IG p/DfSWDVxEYCQ · suma a VIERNES 6 nov",
+      "duracion": "lámina IG DfSWDVxEYCQ/12",
+      "catalogo": "Pepa Gaitán presente, Ahora y Siempre"
+     }
+    },
+    {
+     "titulo": "Fragmentos",
+     "director": "Camila Andrea Pérez León",
+     "pais": "Colombia",
+     "duracion_min": 2,
+     "sinopsis": "Una videodanza explora la construcción de la identidad drag mediante el movimiento, el maquillaje y el vestuario.",
+     "_src": {
+      "pdf": "IG p/DfSWDVxEYCQ · suma a VIERNES 6 nov",
+      "duracion": "lámina IG DfSWDVxEYCQ/13",
+      "catalogo": "Fragmentos"
+     }
+    },
+    {
+     "titulo": "Tuesday Session",
+     "director": "David Santiago Martinez Rojas",
+     "pais": "Italia",
+     "duracion_min": 4,
+     "sinopsis": "En terapia, Noa revive un conflicto familiar y enfrenta las consecuencias emocionales del rechazo.",
+     "_src": {
+      "pdf": "IG p/DfSWDVxEYCQ · suma a VIERNES 6 nov",
+      "duracion": "lámina IG DfSWDVxEYCQ/14",
+      "catalogo": "Tuesday Session"
+     }
+    },
+    {
+     "titulo": "90 segundos",
+     "director": "Álvaro J. Figueroa Garrucho",
+     "pais": "España",
+     "duracion_min": 10,
+     "sinopsis": "Un joven gimnasta lucha por competir en una disciplina estigmatizada por considerarse femenina.",
+     "_src": {
+      "pdf": "IG p/DfSWDVxEYCQ · suma a VIERNES 6 nov",
+      "duracion": "lámina IG DfSWDVxEYCQ/15",
+      "catalogo": "90 segundos"
      }
     }
    ],

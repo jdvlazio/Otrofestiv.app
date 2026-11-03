@@ -1,10 +1,10 @@
 {
  "_provenance": {
   "fuente": "issue de radar #1042 — https://github.com/jdvlazio/Otrofestiv.app/issues/1042",
-  "capturado": "2026-10-30",
+  "capturado": "2026-11-03",
   "titulo": "RADAR: Festival Internacional de Cine Diverso (FICIDI) — Barranquilla, 4–7 NOV (IV)",
   "estado": "OPEN",
-  "comentarios": 4
+  "comentarios": 6
  },
  "issue": 1042,
  "titulo": "RADAR: Festival Internacional de Cine Diverso (FICIDI) — Barranquilla, 4–7 NOV (IV)",
@@ -26,6 +26,14 @@
   {
    "fecha": "2026-10-30",
    "cuerpo": "**Vigía 30 oct 05:40 — FICIDI, Día 2 (jue 5 nov, 18:00, La Maloca Cultural):** https://www.instagram.com/p/DfGMc0HkcHB/ (14 láminas, miradas). Fecha, hora, sede y las 12 obras en orden coinciden con la app. Duraciones según las láminas: El bañador **13** min (lám. 2; app 14), Blue Berri **17** (lám. 4; app 16). La app no tiene estas: Tía Morgana 22 (lám. 5), Verano 15 (6), ¿Quién se lleva las estrellas? 17 (7), Cielo de enero 20 (9), ¿Me vas a estar esperando? 5 (11), 621km 4 (12), 1 año y un mes en Colombiamaricx 6 (13).\nAdemás: ficidi-2026 **no está en indice.json del almacén** (solo en la copia de main), y src/config.js no tiene `instagram:` → ig_vigia no lo vigila (SIN_CUENTA_IG)."
+  },
+  {
+   "fecha": "2026-11-01",
+   "cuerpo": "Vigía 31 oct 21:03 — FICIDI no figura en el índice del almacén (indice.json, 41 festivales). La app lo carga por la copia de main (otrofestiv.app/festivals/ficidi-2026.json, 200), así que se ve, pero las correcciones de último momento no pueden ir por el almacén. Sugerido: `python3 pipeline/publicar-datos.py ficidi-2026` antes del 3 nov. Programación: sin cambios (IG ya visto hoy)."
+  },
+  {
+   "fecha": "2026-11-03",
+   "cuerpo": "Vigía 3 nov 13:05 — post https://www.instagram.com/p/DfSWDVxEYCQ/ (Día 3 · Segunda Función, vie 6 nov, 6:00 p. m., CUC Sala de Conferencias): las láminas traen 15 obras y la app tiene 11. Faltan «Pepa Gaitán presente, Ahora y Siempre», «Fragmentos», «Tuesday Session» y «90 segundos» (láminas 12–15). Hoy esas 4 solo están en la Proyección Especial del 3 nov. Hay que sumarlas al film_list del 6 nov a las 18:00 (el IG es más nuevo que el PDF)."
   }
  ]
 }
