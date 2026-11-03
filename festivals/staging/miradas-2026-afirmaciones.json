@@ -71,6 +71,40 @@
     "fecha": "2026-11-02"
    },
    "evidencia": "pie del reel p/DfP4GD4hlpV (IG del festival, 2 nov): jue 5 nov 6:00 p. m., Parque de los Deseos, con ensamble musical antes de la película. El PDF decía 19:00. IG más nuevo manda; ante la duda, la hora más temprana."
+  },
+  {
+   "ancla": {
+    "sede": "Museo de Arte Moderno de Medellín - MAMM - Medellín",
+    "dia": "2026-11-06",
+    "hora": "16:00"
+   },
+   "funcion": "f_130069c5a1",
+   "casilla": "has_qa",
+   "valor": true,
+   "contra": false,
+   "fuente": {
+    "tipo": "juan",
+    "frase": "«El Instagram si es más reciente, es más actualizado que la web» (regla de Juan, 27 oct 2026)",
+    "fecha": "2026-11-02"
+   },
+   "evidencia": "lámina 4 de la grilla del MAMM (＠cinematecademedellin, 2 nov): «Función con conversación» sobre «Cómo limpiar una casa en 10 pasos fáciles». Leído por Vision, Tesseract y a ojo (pipeline/ig-lecturas.py --dato: tres métodos coinciden). Post del 2 nov, más nuevo que el PDF."
+  },
+  {
+   "ancla": {
+    "sede": "Museo de Arte Moderno de Medellín - MAMM - Medellín",
+    "dia": "2026-11-08",
+    "hora": "14:00"
+   },
+   "funcion": "f_e22f48016b",
+   "casilla": "has_qa",
+   "valor": true,
+   "contra": false,
+   "fuente": {
+    "tipo": "juan",
+    "frase": "«El Instagram si es más reciente, es más actualizado que la web» (regla de Juan, 27 oct 2026)",
+    "fecha": "2026-11-02"
+   },
+   "evidencia": "lámina 5 de la grilla del MAMM (＠cinematecademedellin, 2 nov): «Función con conversación» sobre «Relicto». Leído por Vision, Tesseract y a ojo (pipeline/ig-lecturas.py --dato: tres métodos coinciden). Post del 2 nov, más nuevo que el PDF."
   }
  ]
 }

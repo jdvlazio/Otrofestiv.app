@@ -6426,6 +6426,31 @@
     "ancla_2026-10-11": null,
     "fuentes_lista_2026-10-20": null
    }
+  },
+  {
+   "clave": "semana-cine-colombiano",
+   "nombre": "Semana del Cine Colombiano",
+   "sigla": null,
+   "ciudad": "Cali",
+   "departamento": "Valle del Cauca",
+   "region": "Pacífico",
+   "mes": 11,
+   "mes_texto": null,
+   "fechas_2026": "3–9 NOV 2026 (5.ª) — lámina de programación y afiche oficial",
+   "web": null,
+   "ig": "@semanadelcinecolombiano",
+   "estado": "en_app",
+   "id_config": [
+    "semanacine2026"
+   ],
+   "issue": [],
+   "apoyo": [],
+   "fuente": [
+    "https://www.instagram.com/p/DfKgpBVpyUt/ (IG oficial, 31 oct 2026)",
+    "correo de Arturo Murgas (organización), 2 nov 2026"
+   ],
+   "nota": "Muestra independiente (Cinema Carmesí, U. Santiago de Cali, Proyecto Oriente). La halló el descubridor semanal el 2 nov.",
+   "verificado_el": "2026-11-02"
   }
  ]
 }
