@@ -1,0 +1,230 @@
+{
+ "_provenance": {
+  "fuente": "Lámina «Programación 2026» de @semanadelcinecolombiano (IG p/DfKgpBVpyUt, 31 oct 2026)",
+  "capturado": "2026-11-02",
+  "metodo": "transcripción a ojo cruzada con pipeline/ocr.py",
+  "que_aporta": "la programación entera: día, hora, actividad, sede, sala"
+ },
+ "_acceso": {
+  "estado": "Entrada libre",
+  "revisado": "2026-11-02",
+  "fuentes": [
+   "lámina de programación",
+   "post de El Titán (1 nov)",
+   "El País, 29 oct"
+  ],
+  "_por_que": "Ninguna fuente anuncia boletería; El País: «eventos gratuitos». Regla de Juan: sin aviso de pago es gratis."
+ },
+ "_no_se_publica": [
+  {
+   "dia": "2026-11-07",
+   "hora": "",
+   "actividad": "Cine Bajo las Estrellas, película y encuentro musical (Centro Cultural Brisas de Mayo)",
+   "por_que": "la lámina no da hora ni película (decisión de Juan, 2 nov)"
+  }
+ ],
+ "funciones": [
+  {
+   "dia": "2026-11-03",
+   "hora": "08:30",
+   "titulo": "Conversatorio \"Cine Colombiano: nuevo Café de Colombia\"",
+   "sede": "Acajel",
+   "sala": "",
+   "ciudad": "Cali",
+   "seccion": "Conversatorio",
+   "acceso": "Entrada libre (no se anuncia pago)",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfKgpBVpyUt/",
+    "date": "2026-10-31",
+    "tipo": "festival-ig",
+    "fila": "2026-11-03 08:30 · Conversatorio \"Cine Colombiano: nuevo Café de Colombia\""
+   },
+   "tipo": "evento",
+   "event_kind": "conversatorio",
+   "sinopsis": "Con Arturo Murgas (Semana del Cine Colombiano)."
+  },
+  {
+   "dia": "2026-11-03",
+   "hora": "12:00",
+   "titulo": "Lejos, aquí",
+   "sede": "Universidad Santiago de Cali",
+   "sala": "Auditorio T-Usaca",
+   "ciudad": "Cali",
+   "seccion": "Película",
+   "acceso": "Entrada libre (no se anuncia pago)",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfKgpBVpyUt/",
+    "date": "2026-10-31",
+    "tipo": "festival-ig",
+    "fila": "2026-11-03 12:00 · Lejos, aquí"
+   },
+   "director": "Ana Sofía Osorio Ruiz",
+   "has_qa": true,
+   "_nota": "Presentación con Ana María Osorio (Directora)"
+  },
+  {
+   "dia": "2026-11-03",
+   "hora": "18:00",
+   "titulo": "Perro come perro",
+   "sede": "Universidad Santiago de Cali",
+   "sala": "Plazoleta de Los Sabios",
+   "ciudad": "Cali",
+   "seccion": "Cine Bajo las Estrellas",
+   "acceso": "Entrada libre (no se anuncia pago)",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfKgpBVpyUt/",
+    "date": "2026-10-31",
+    "tipo": "festival-ig",
+    "fila": "2026-11-03 18:00 · Perro come perro"
+   },
+   "director": "Carlos Moreno",
+   "_nota": "Homenaje 20 años de la película Perro, Come Perro."
+  },
+  {
+   "dia": "2026-11-04",
+   "hora": "09:00",
+   "titulo": "Conversatorio \"Experiencias y Vivencias en el Cine\"",
+   "sede": "Universidad Santiago de Cali",
+   "sala": "Auditorio 1101",
+   "ciudad": "Cali",
+   "seccion": "Conversatorio",
+   "acceso": "Entrada libre (no se anuncia pago)",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfKgpBVpyUt/",
+    "date": "2026-10-31",
+    "tipo": "festival-ig",
+    "fila": "2026-11-04 09:00 · Conversatorio \"Experiencias y Vivencias en el Cine\""
+   },
+   "tipo": "evento",
+   "event_kind": "conversatorio",
+   "sinopsis": "Con Jhonny Hendrix (director)."
+  },
+  {
+   "dia": "2026-11-04",
+   "hora": "18:30",
+   "titulo": "El Titán",
+   "sede": "Teatrino Proyecto Oriente",
+   "sala": "",
+   "ciudad": "Cali",
+   "seccion": "Película",
+   "acceso": "Entrada libre (no se anuncia pago)",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfKgpBVpyUt/",
+    "date": "2026-10-31",
+    "tipo": "festival-ig",
+    "fila": "2026-11-04 18:30 · El Titán"
+   },
+   "director": "Alexander Giraldo",
+   "has_qa": true,
+   "_nota": "Presentación con Alex Giraldo (Director). Homenaje a Elkin Ramírez (post p/DfMs0KoJgLT)."
+  },
+  {
+   "dia": "2026-11-05",
+   "hora": "12:00",
+   "titulo": "Chocó",
+   "sede": "Universidad Santiago de Cali",
+   "sala": "Auditorio T-Usaca",
+   "ciudad": "Cali",
+   "seccion": "Película",
+   "acceso": "Entrada libre (no se anuncia pago)",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfKgpBVpyUt/",
+    "date": "2026-10-31",
+    "tipo": "festival-ig",
+    "fila": "2026-11-05 12:00 · Chocó"
+   },
+   "director": "Jhonny Hendrix"
+  },
+  {
+   "dia": "2026-11-05",
+   "hora": "18:00",
+   "titulo": "Anina",
+   "sede": "Universidad Santiago de Cali",
+   "sala": "Auditorio T-Usaca",
+   "ciudad": "Cali",
+   "seccion": "Película",
+   "acceso": "Entrada libre (no se anuncia pago)",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfKgpBVpyUt/",
+    "date": "2026-10-31",
+    "tipo": "festival-ig",
+    "fila": "2026-11-05 18:00 · Anina"
+   },
+   "director": "Alfredo Soderguit"
+  },
+  {
+   "dia": "2026-11-06",
+   "hora": "14:00",
+   "titulo": "Conversatorio \"El Metafilme Georgina\"",
+   "sede": "Universidad Santiago de Cali",
+   "sala": "Auditorio 1101",
+   "ciudad": "Cali",
+   "seccion": "Conversatorio",
+   "acceso": "Entrada libre (no se anuncia pago)",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfKgpBVpyUt/",
+    "date": "2026-10-31",
+    "tipo": "festival-ig",
+    "fila": "2026-11-06 14:00 · Conversatorio \"El Metafilme Georgina\""
+   },
+   "tipo": "evento",
+   "event_kind": "conversatorio",
+   "sinopsis": "Con Sebastián Ospina (actor y director)."
+  },
+  {
+   "dia": "2026-11-06",
+   "hora": "16:00",
+   "titulo": "Conversatorio \"Experiencias en la Dirección de 100 años de Soledad\"",
+   "sede": "Casa Occio",
+   "sala": "",
+   "ciudad": "Cali",
+   "seccion": "Conversatorio",
+   "acceso": "Entrada libre (no se anuncia pago)",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfKgpBVpyUt/",
+    "date": "2026-10-31",
+    "tipo": "festival-ig",
+    "fila": "2026-11-06 16:00 · Conversatorio \"Experiencias en la Dirección de 100 años de Soledad\""
+   },
+   "tipo": "evento",
+   "event_kind": "conversatorio",
+   "sinopsis": "Con Carlos Moreno (director)."
+  },
+  {
+   "dia": "2026-11-09",
+   "hora": "12:00",
+   "titulo": "Conversatorio \"Del Barrio a la Embajada\"",
+   "sede": "Universidad Santiago de Cali",
+   "sala": "Auditorio T-Usaca",
+   "ciudad": "Cali",
+   "seccion": "Conversatorio",
+   "acceso": "Entrada libre (no se anuncia pago)",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfKgpBVpyUt/",
+    "date": "2026-10-31",
+    "tipo": "festival-ig",
+    "fila": "2026-11-09 12:00 · Conversatorio \"Del Barrio a la Embajada\""
+   },
+   "tipo": "evento",
+   "event_kind": "conversatorio",
+   "sinopsis": "Con Héctor Aguirre (fotógrafo y realizador)."
+  },
+  {
+   "dia": "2026-11-09",
+   "hora": "13:00",
+   "titulo": "Proyección de cortos locales",
+   "sede": "Universidad Santiago de Cali",
+   "sala": "Auditorio T-Usaca",
+   "ciudad": "Cali",
+   "seccion": "Proyección de cortos locales",
+   "acceso": "Entrada libre (no se anuncia pago)",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfKgpBVpyUt/",
+    "date": "2026-10-31",
+    "tipo": "festival-ig",
+    "fila": "2026-11-09 13:00 · Proyección de cortos locales"
+   },
+   "sinopsis": "Presentación del video «Barrio Brother», realizado entre Cali y Nueva York."
+  }
+ ]
+}

@@ -1,0 +1,236 @@
+{
+ "_provenance": {
+  "fuente": "TMDB + letterboxd.com/tmdb/<id>, emparejado con ficha_verifica() (director + año ±1 o duración ±3 min). Lo que no verifica no entra.",
+  "capturado": "2026-11-02"
+ },
+ "obras": [
+  {
+   "titulo": "Anina",
+   "tmdb_id": 180644,
+   "titulo_original": "Anina",
+   "poster_path": "/lw3MWGsBDfRKeAWgk00pjDNZi6G.jpg",
+   "synopsis_es": "Una película de animación que relata las aventuras de una niña que debe resistir las burlas de sus compañeros de colegio por la particularidad de su nombre y apellidos: Anina Yatay Salas, ya que los tres se leen igual en ambos sentidos. Incluida en el apartado Generación del Festival de Cine de Berlín del 2013.",
+   "synopsis_en": "Anina Yatay Salas is a ten-year-old whose name spells trouble: those three palindromes in a row are an ongoing source of teasing at school. When a playground fight results in mysterious punishment, Anina will learn to put her problems in perspective and empathize with others in this sweet little daydream of a tale.",
+   "genero": "Aventura",
+   "anio_tmdb": 2013,
+   "duracion_tmdb": 80,
+   "pais_tmdb": "Colombia, Uruguay",
+   "lbSlug": "anina",
+   "_verificado": "declarada a mano: Alfredo Soderguit, 2013 (Uruguay-Colombia).",
+   "_director": "Alfredo Soderguit",
+   "_sondeado": "2026-11-02",
+   "poster": "/assets/semanacine-2026/anina.jpg",
+   "posterSource": "tmdb",
+   "pais_heredado": "Colombia, Uruguay",
+   "_heredado": {
+    "pais_heredado": "catálogo w_FMSVXZ5D83WM (semanacine-2026)"
+   }
+  },
+  {
+   "titulo": "Chocó",
+   "tmdb_id": 327167,
+   "titulo_original": "Chocó",
+   "poster_path": "/v72JxyWprsaEKDY4hzGxwI2Lv2h.jpg",
+   "synopsis_es": "Chocó es una mujer negra de 27 años, desplazada de sus tierras por la violencia. Lleva a cuestas una familia de dos hijos menores y a Everlides, su esposo músico que sólo sabe tocar marimba, beber viche y jugar dominó.  Chocó es una mujer fuerte y luchadora. En la mañana ella trabaja buscando oro en el río San Juan y en las tardes lava ropa de otras familias para alimentar y educar a sus hijos.  Es el cumpleaños de la pequeña Candelaria, y por primera vez Chocó le promete una torta, sin embargo, las cosas se complican al tratar de cumplir esta promesa, desencadenando consecuencias inesperadas para Chocó y toda su familia.",
+   "synopsis_en": "A young woman raising alone her children while her husband gets drunk but when she breaks free nothing will be the same.",
+   "genero": "Drama",
+   "anio_tmdb": 2012,
+   "duracion_tmdb": 80,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "choco",
+   "_verificado": "declarada a mano: Jhonny Hendrix, 2012.",
+   "_director": "Jhonny Hendrix",
+   "_sondeado": "2026-11-02",
+   "poster": "/assets/semanacine-2026/choco.jpg",
+   "posterSource": "tmdb",
+   "pais_heredado": "Colombia",
+   "_heredado": {
+    "pais_heredado": "catálogo w_FMSRCQKPBZRZ (semanacine-2026)"
+   }
+  },
+  {
+   "titulo": "El Titán",
+   "tmdb_id": 1270331,
+   "titulo_original": "El Titán",
+   "poster_path": "/vbiD3RWRmgE8Ab8VliMtVDO9DIE.jpg",
+   "synopsis_es": "Elkin Ramírez, el exponente más importante del rock colombiano, lideró Kraken durante 32 años. El último disco de la banda fue grabado mientras Elkin combatía un tumor cerebral. ¡Se vive una vez para ser eternamente libre!",
+   "synopsis_en": "Elkin Ramírez, the most important figure in Colombian rock, led Kraken for 32 years. The band's final album was recorded while Elkin was fighting a brain tumor. You live once to be eternally free!",
+   "genero": "Documental",
+   "anio_tmdb": 2024,
+   "duracion_tmdb": 107,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "el-titan",
+   "_verificado": "declarada a mano: Alexander Giraldo, sobre Kraken y Elkin Ramírez (post del festival p/DfMs0KoJgLT).",
+   "_director": "Alexander Giraldo",
+   "_sondeado": "2026-11-02",
+   "poster": "/assets/semanacine-2026/el-titan.jpg",
+   "posterSource": "tmdb",
+   "pais_heredado": "Colombia",
+   "_heredado": {
+    "pais_heredado": "catálogo w_FMSQKQAYT93A (semanacine-2026)"
+   }
+  },
+  {
+   "titulo": "Lejos, aquí",
+   "tmdb_id": 1623557,
+   "titulo_original": "Lejos, aquí",
+   "poster_path": "/tldvyZbNBFaofCTUXxSF9pyxkZI.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Adrian (42) and Emma (38), two divorced parents, meet for the first time in fifteen years to honor the memory of Malena, their only daughter. Before she died, Malena wrote her parents a travel journal, which they must follow together, in each other's company. The trip will not only be a light that allows them to cope with their pain, but also an opportunity to listen to each other and forgive one another. To reconnect.",
+   "genero": "Drama",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 76,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "lejos-aqui",
+   "_verificado": "declarada a mano: TMDB 1623557 «Lejos, aquí», Colombia, 76 min, dirección Ana Sofía Osorio Ruiz; la lámina dice «Ana María Osorio (Directora)». Sin fecha en TMDB.",
+   "_director": "Ana Sofía Osorio Ruiz",
+   "_sondeado": "2026-11-02",
+   "poster": "/assets/semanacine-2026/lejos-aqui.jpg",
+   "posterSource": "tmdb",
+   "pais_heredado": "Colombia",
+   "_heredado": {
+    "pais_heredado": "catálogo w_FMSMYR6H8CG8 (semanacine-2026)"
+   }
+  },
+  {
+   "titulo": "Perro come perro",
+   "tmdb_id": 33558,
+   "titulo_original": "Perro come perro",
+   "poster_path": "/fbh7D8kaSLezUdh3dpiLHHMDFDA.jpg",
+   "synopsis_es": "Sin que lo sepan, Víctor Peñaranda y Eusebio Benítez están condenados a muerte. Son dos ex-policías, ahora sicarios al servicio de una soterrada oficina de cobranzas de Cali. Ambos han sido citados para llevar a cabo un operativo del cual tienen pocos detalles. Se conocen compartiendo la habitación de un céntrico hotel, desde donde deben permanecer atentos y a la espera de instrucciones telefónicas. Ambos han llegado acatando una orden, pero ocultando sus culpas: Peñaranda guarda desde hace dos días una gruesa suma de dólares que escondió durante un turbio operativo de allanamiento. Benítez arrastra el lastre de un asesinato y calladamente sufre lo que parece ser un maleficio pues lo acosan horribles pesadillas y visiones con su víctima que lo van descomponiendo física y mentalmente.",
+   "synopsis_en": "In the crime world of Colombia, there is an unwritten code. When Víctor and Eusebio, two hoods who bungle a shake-down job, break that code, they unwittingly sign their own death sentence.",
+   "genero": "Acción",
+   "anio_tmdb": 2008,
+   "duracion_tmdb": 101,
+   "pais_tmdb": "Colombia",
+   "title_en": "Dog Eat Dog",
+   "lbSlug": "dog-eat-dog-2008",
+   "_verificado": "declarada a mano: Carlos Moreno, 2008; la lámina: «Homenaje 20 años».",
+   "_director": "Carlos Moreno",
+   "_sondeado": "2026-11-02",
+   "poster": "/assets/semanacine-2026/perro-come-perro.jpg",
+   "posterSource": "tmdb",
+   "pais_heredado": "Colombia",
+   "_heredado": {
+    "pais_heredado": "catálogo w_FMSQ3J6GN5RV (semanacine-2026)"
+   }
+  }
+ ],
+ "verificadas": {
+  "Anina": {
+   "tmdb_id": 180644,
+   "titulo_original": "Anina",
+   "poster_path": "/lw3MWGsBDfRKeAWgk00pjDNZi6G.jpg",
+   "synopsis_es": "Una película de animación que relata las aventuras de una niña que debe resistir las burlas de sus compañeros de colegio por la particularidad de su nombre y apellidos: Anina Yatay Salas, ya que los tres se leen igual en ambos sentidos. Incluida en el apartado Generación del Festival de Cine de Berlín del 2013.",
+   "synopsis_en": "Anina Yatay Salas is a ten-year-old whose name spells trouble: those three palindromes in a row are an ongoing source of teasing at school. When a playground fight results in mysterious punishment, Anina will learn to put her problems in perspective and empathize with others in this sweet little daydream of a tale.",
+   "genero": "Aventura",
+   "anio_tmdb": 2013,
+   "duracion_tmdb": 80,
+   "pais_tmdb": "Colombia, Uruguay",
+   "lbSlug": "anina",
+   "_verificado": "declarada a mano: Alfredo Soderguit, 2013 (Uruguay-Colombia).",
+   "_director": "Alfredo Soderguit",
+   "_sondeado": "2026-11-02",
+   "poster": "/assets/semanacine-2026/anina.jpg",
+   "posterSource": "tmdb",
+   "pais_heredado": "Colombia, Uruguay",
+   "_heredado": {
+    "pais_heredado": "catálogo w_FMSVXZ5D83WM (semanacine-2026)"
+   }
+  },
+  "Chocó": {
+   "tmdb_id": 327167,
+   "titulo_original": "Chocó",
+   "poster_path": "/v72JxyWprsaEKDY4hzGxwI2Lv2h.jpg",
+   "synopsis_es": "Chocó es una mujer negra de 27 años, desplazada de sus tierras por la violencia. Lleva a cuestas una familia de dos hijos menores y a Everlides, su esposo músico que sólo sabe tocar marimba, beber viche y jugar dominó.  Chocó es una mujer fuerte y luchadora. En la mañana ella trabaja buscando oro en el río San Juan y en las tardes lava ropa de otras familias para alimentar y educar a sus hijos.  Es el cumpleaños de la pequeña Candelaria, y por primera vez Chocó le promete una torta, sin embargo, las cosas se complican al tratar de cumplir esta promesa, desencadenando consecuencias inesperadas para Chocó y toda su familia.",
+   "synopsis_en": "A young woman raising alone her children while her husband gets drunk but when she breaks free nothing will be the same.",
+   "genero": "Drama",
+   "anio_tmdb": 2012,
+   "duracion_tmdb": 80,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "choco",
+   "_verificado": "declarada a mano: Jhonny Hendrix, 2012.",
+   "_director": "Jhonny Hendrix",
+   "_sondeado": "2026-11-02",
+   "poster": "/assets/semanacine-2026/choco.jpg",
+   "posterSource": "tmdb",
+   "pais_heredado": "Colombia",
+   "_heredado": {
+    "pais_heredado": "catálogo w_FMSRCQKPBZRZ (semanacine-2026)"
+   }
+  },
+  "El Titán": {
+   "tmdb_id": 1270331,
+   "titulo_original": "El Titán",
+   "poster_path": "/vbiD3RWRmgE8Ab8VliMtVDO9DIE.jpg",
+   "synopsis_es": "Elkin Ramírez, el exponente más importante del rock colombiano, lideró Kraken durante 32 años. El último disco de la banda fue grabado mientras Elkin combatía un tumor cerebral. ¡Se vive una vez para ser eternamente libre!",
+   "synopsis_en": "Elkin Ramírez, the most important figure in Colombian rock, led Kraken for 32 years. The band's final album was recorded while Elkin was fighting a brain tumor. You live once to be eternally free!",
+   "genero": "Documental",
+   "anio_tmdb": 2024,
+   "duracion_tmdb": 107,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "el-titan",
+   "_verificado": "declarada a mano: Alexander Giraldo, sobre Kraken y Elkin Ramírez (post del festival p/DfMs0KoJgLT).",
+   "_director": "Alexander Giraldo",
+   "_sondeado": "2026-11-02",
+   "poster": "/assets/semanacine-2026/el-titan.jpg",
+   "posterSource": "tmdb",
+   "pais_heredado": "Colombia",
+   "_heredado": {
+    "pais_heredado": "catálogo w_FMSQKQAYT93A (semanacine-2026)"
+   }
+  },
+  "Lejos, aquí": {
+   "tmdb_id": 1623557,
+   "titulo_original": "Lejos, aquí",
+   "poster_path": "/tldvyZbNBFaofCTUXxSF9pyxkZI.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Adrian (42) and Emma (38), two divorced parents, meet for the first time in fifteen years to honor the memory of Malena, their only daughter. Before she died, Malena wrote her parents a travel journal, which they must follow together, in each other's company. The trip will not only be a light that allows them to cope with their pain, but also an opportunity to listen to each other and forgive one another. To reconnect.",
+   "genero": "Drama",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 76,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "lejos-aqui",
+   "_verificado": "declarada a mano: TMDB 1623557 «Lejos, aquí», Colombia, 76 min, dirección Ana Sofía Osorio Ruiz; la lámina dice «Ana María Osorio (Directora)». Sin fecha en TMDB.",
+   "_director": "Ana Sofía Osorio Ruiz",
+   "_sondeado": "2026-11-02",
+   "poster": "/assets/semanacine-2026/lejos-aqui.jpg",
+   "posterSource": "tmdb",
+   "pais_heredado": "Colombia",
+   "_heredado": {
+    "pais_heredado": "catálogo w_FMSMYR6H8CG8 (semanacine-2026)"
+   }
+  },
+  "Perro come perro": {
+   "tmdb_id": 33558,
+   "titulo_original": "Perro come perro",
+   "poster_path": "/fbh7D8kaSLezUdh3dpiLHHMDFDA.jpg",
+   "synopsis_es": "Sin que lo sepan, Víctor Peñaranda y Eusebio Benítez están condenados a muerte. Son dos ex-policías, ahora sicarios al servicio de una soterrada oficina de cobranzas de Cali. Ambos han sido citados para llevar a cabo un operativo del cual tienen pocos detalles. Se conocen compartiendo la habitación de un céntrico hotel, desde donde deben permanecer atentos y a la espera de instrucciones telefónicas. Ambos han llegado acatando una orden, pero ocultando sus culpas: Peñaranda guarda desde hace dos días una gruesa suma de dólares que escondió durante un turbio operativo de allanamiento. Benítez arrastra el lastre de un asesinato y calladamente sufre lo que parece ser un maleficio pues lo acosan horribles pesadillas y visiones con su víctima que lo van descomponiendo física y mentalmente.",
+   "synopsis_en": "In the crime world of Colombia, there is an unwritten code. When Víctor and Eusebio, two hoods who bungle a shake-down job, break that code, they unwittingly sign their own death sentence.",
+   "genero": "Acción",
+   "anio_tmdb": 2008,
+   "duracion_tmdb": 101,
+   "pais_tmdb": "Colombia",
+   "title_en": "Dog Eat Dog",
+   "lbSlug": "dog-eat-dog-2008",
+   "_verificado": "declarada a mano: Carlos Moreno, 2008; la lámina: «Homenaje 20 años».",
+   "_director": "Carlos Moreno",
+   "_sondeado": "2026-11-02",
+   "poster": "/assets/semanacine-2026/perro-come-perro.jpg",
+   "posterSource": "tmdb",
+   "pais_heredado": "Colombia",
+   "_heredado": {
+    "pais_heredado": "catálogo w_FMSQ3J6GN5RV (semanacine-2026)"
+   }
+  }
+ },
+ "sin_ficha": [
+  "Proyección de cortos locales"
+ ],
+ "_sin_ficha_sondeo": {
+  "Proyección de cortos locales": {
+   "director": "",
+   "fecha": "2026-11-02"
+  }
+ }
+}
