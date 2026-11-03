@@ -9906,7 +9906,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-02T21:22:16",
+  "fecha": "2026-11-02T21:22:40",
   "plan_sha": "1476fecbd41f2797",
   "paso": 10,
   "cmd": "python3 pipeline/miradas-2026-verificar.py"
