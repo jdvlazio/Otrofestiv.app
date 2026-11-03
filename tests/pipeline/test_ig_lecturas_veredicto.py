@@ -38,5 +38,14 @@ class Veredicto(unittest.TestCase):
         self.assertFalse(m.lee('Teatro Pablo Tobón', 'Centro Colombo Americano'))
 
 
+class HoraSinMinutos(unittest.TestCase):
+    def test_4_pm_es_16_00(self):
+        # la grilla del MAMM (Miradas, 2 nov) escribe «4 p.m.», sin minutos
+        self.assertEqual(m.tokens('Relicto 2 p.m. y Moscas 7 p.m.')['horas'], {'14:00', '19:00'})
+
+    def test_no_pisa_horas_con_minutos(self):
+        self.assertEqual(m.tokens('7:30 p. m.')['horas'], {'19:30'})
+
+
 if __name__ == '__main__':
     unittest.main()

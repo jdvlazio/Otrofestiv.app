@@ -75,6 +75,7 @@ SWIFT = os.path.join(REPO, 'pipeline', 'ocr.swift')
 # lecturas discrepan por construcción y el informe se llena de ruido que
 # parece dato. Fueron 29 de 29 en la primera pasada de Itagüí.
 RE_HORA = re.compile(r'\b(\d{1,2})[:.](\d{2})\s*(a\.?\s*m|p\.?\s*m)?', re.I)
+RE_HORA_SOLA = re.compile(r'(?<![\d:.])\b(\d{1,2})\s*(a\.?\s*m|p\.?\s*m)\b', re.I)
 RE_DURA = re.compile(r'\b(\d{1,3})\s*min', re.I)
 RE_ANIO = re.compile(r'\b((?:19|20)\d{2})\b')
 RE_DIA = re.compile(r'\b(\d{1,2})\s+de\s+[a-záéíóú]+', re.I)
@@ -103,6 +104,15 @@ def tokens(texto):
         elif mer.startswith('a') and hh == 12:
             hh = 0
         horas.add(f'{hh % 24:02d}:{m}')
+    # «4 p.m.», sin minutos: así escribe el MAMM su grilla (Miradas, 2 nov 2026)
+    for h, mer in RE_HORA_SOLA.findall(texto):
+        hh = int(h)
+        mer = mer.replace('.', '').replace(' ', '').lower()
+        if mer.startswith('p') and hh < 12:
+            hh += 12
+        elif mer.startswith('a') and hh == 12:
+            hh = 0
+        horas.add(f'{hh % 24:02d}:00')
     t['horas'] = horas
     t['duraciones'] = {f'{int(n)} min' for n in RE_DURA.findall(texto)}
     t['anios'] = set(RE_ANIO.findall(texto))
@@ -145,13 +155,22 @@ def tesseract(rutas, pie=PIE):
         im = Image.open(p).convert('RGB')
         im = im.crop((0, 0, im.width, int(im.height * pie)))
         im = im.resize((im.width * 2, im.height * 2), Image.LANCZOS)
-        with tempfile.NamedTemporaryFile(suffix='.png') as f:
-            im.save(f.name)
-            r = subprocess.run(['tesseract', f.name, 'stdout', '-l', TESS_LANG],
-                               capture_output=True, text=True)
-        if r.returncode != 0:
-            sys.exit(f'✗ Tesseract falló ({r.returncode}): {(r.stderr or "")[:300]}')
-        out[os.path.basename(p)] = r.stdout
+        # el texto sobre FOTO (la grilla del MAMM) Tesseract no lo lee en color:
+        # se le pasa también en grises con umbral, claro sobre oscuro y al revés
+        from PIL import ImageOps
+        g = ImageOps.grayscale(im)
+        variantes = [im, g.point(lambda v: 255 if v > 150 else 0),
+                     ImageOps.invert(g).point(lambda v: 255 if v > 105 else 0)]
+        textos = []
+        for v in variantes:
+            with tempfile.NamedTemporaryFile(suffix='.png') as f:
+                v.save(f.name)
+                r = subprocess.run(['tesseract', f.name, 'stdout', '-l', TESS_LANG],
+                                   capture_output=True, text=True)
+            if r.returncode != 0:
+                sys.exit(f'✗ Tesseract falló ({r.returncode}): {(r.stderr or "")[:300]}')
+            textos.append(r.stdout)
+        out[os.path.basename(p)] = '\n'.join(textos)
     return out
 
 
