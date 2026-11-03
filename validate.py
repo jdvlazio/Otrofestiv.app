@@ -4190,6 +4190,8 @@ try:
         # Semana del Cine Colombiano (Cali) — el programa del lun 9 («Barrio Brother» y
         # otros cortos locales) no tiene minutaje publicado: pedido a Arturo Murgas (2 nov)
         ('semanacine-2026', 'Proyección de cortos locales'),
+        # sáb 7: Arturo dio la hora (6 pm, 3 nov) pero no la película: sin minutaje
+        ('semanacine-2026', 'Cine Bajo las Estrellas, película y encuentro musical'),
     }
     _viol = []
     for _fname in _ACTIVE:
