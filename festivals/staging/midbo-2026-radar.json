@@ -1,10 +1,10 @@
 {
  "_provenance": {
   "fuente": "issue de radar #1031 — https://github.com/jdvlazio/Otrofestiv.app/issues/1031",
-  "capturado": "2026-10-31",
+  "capturado": "2026-11-02",
   "titulo": "RADAR: Muestra Internacional Documental de Bogotá (MIDBO) — Bogotá, 28 OCT–4 NOV (28ª)",
   "estado": "OPEN",
-  "comentarios": 25
+  "comentarios": 30
  },
  "issue": 1031,
  "titulo": "RADAR: Muestra Internacional Documental de Bogotá (MIDBO) — Bogotá, 28 OCT–4 NOV (28ª)",
@@ -110,6 +110,26 @@
   {
    "fecha": "2026-10-31",
    "cuerpo": "Vigía 31 oct 13:00 — MIDBO (web + IG por Apify)\n- Web: las 121 obras de la API y los bloques «Funciones» de sus páginas coinciden con producción. Solo cambiaron sinopsis (¡Viva México!, Sey Arimaku, Un río de aguas profundas y luminosas, ya bien en la app); ninguna función cambió de día, hora ni sala.\n- IG DfKX7AyhhvM (reel; el fotograma no trae datos, el dato sale solo del pie): Master class de Ignacio Agüero hoy 31 oct a las 4:30 p. m. en la Cinemateca. La web la pone como nota de la función de «Cien niños esperando un tren» (16:30, Sala Capital). La app tiene la función, pero no nombra la master class. Se puede agregar la nota.\n- IG DfKdzHMEUck: visitas guiadas a «Escuchar lo que permanece» el miércoles 4 nov a las 3 p. m. y el sábado 7 nov a las 4 p. m., en la Sala E. La app no las tiene. La del 7 nov cae fuera de los días oficiales.\n"
+  },
+  {
+   "fecha": "2026-11-01",
+   "cuerpo": "**Salas — Cinemateca de Bogotá (corrida 1 nov 2026, ~07:45)**\n\nLa agenda de la sala arranca hoy (1 nov); se compararon las 25 funciones de MIDBO del 1, 2 y 4 nov. Día, hora y sala coinciden en las 25. **Una diferencia de boletería:**\n\n- **«Como me da la gana» (Ignacio Agüero) — HOY dom 1 nov, 14:00, Sala 3.** La sala dice **«Entrada libre»** y no da link de compra (https://cinematecadebogota.gov.co/node/peliculas/3838?sede=11). La app la publica con `is_free: false` y `ticket_url` https://tuboleta.com/es/eventos/como-me-da-la-gana. Acción sugerida: `is_free: true` y quitar `ticket_url` (o confirmar con el festival).\n\nAparte (no es diferencia): las otras 24 funciones tienen en la sala su link de compra por función (`cinemateca.checkout.tuboleta.com/selection/event/date?productId=…`); la app tiene el link de evento de tuboleta.com, que sirve.\n\n_Reporte automático de la tarea salas-agenda-festivales; no se tocó nada._\n"
+  },
+  {
+   "fecha": "2026-11-01",
+   "cuerpo": "URGENTE (hoy)\n1. MIDBO — Foco Ignacio Agüero, hoy 1 nov 2:00 p.m., Cinemateca Sala 3, «Como me da la gana» + lanzamiento revista La Pesadilla de Nanook.\n   Fuente: https://www.instagram.com/p/DfNKlNRDoYe/ (comunicado, leído en láminas 1 y 2; vía Apify; cuenta @lapesadilladenanook coautora con MIDBO).\n   Dice: Agüero tuvo una situación médica el sáb 31 oct, no estuvo en la Master Class tras «Cien niños esperando un tren» y vuelve hoy a Chile. El lanzamiento se hace SIN él, con la proyección de «Como me da la gana» y la grabación en vivo del podcast «Diálogos Nanook» con Patricia Ayala (directora de la revista) y Hugo Chaparro.\n   App: función 14:00 Sala 3 correcta, has_qa=false, sin aviso. «Cien niños…» (31 oct, ya pasó) sigue con has_qa=true.\n   Acción sugerida: aviso corto en `avisos` para hoy («sin Ignacio Agüero; conversan Patricia Ayala y Hugo Chaparro»). Lo de la Master Class del 31 ya pasó: no hace falta tocarlo.\n\nMIDBO (vivo hasta 4 nov) — resto\n- Web: API pelicula (121) y seccion (41) sin altas/bajas ni cambios de contenido vs copia de las 09:05; bloque «Funciones» de las 121 fichas sin cambios.\n- Programación del dom 1 nov (https://www.instagram.com/p/DfM62ZOIG6R/, 13 láminas, leídas las 9 láminas de programación: 2, 4, 5, 6, 7, 8, 9, 11, 12; el resto son portada y videos): las 13 funciones del día coinciden en hora y sede con la app.\n  Menor: las láminas marcan «Función con Q&A ★» en Hombres perdidos (17:00 Sala 3), Bojayá (17:00 Canterbury), Curadurías Especiales P3 (16:00) y P2 (18:30), Back to Fukushima (19:30) y Sara Gómez restaurados (Q&A virtual, 17:00); la app tiene has_qa=false en esas. La Fiesta MIDBO (9:00 p.m., La Mecánica) no está en la app — no es función; solo si se quiere.\n- Ojo UNAL: el 30 oct se cancelaron las funciones en la U. Nacional por suspensión de actividades presenciales. Siguen publicadas en la UNAL: 3 nov 14:00 (Auditorio 313) y 18:30 (Sala Alterna, Pasaje entre Mundos), 4 nov 10:00 (Cuba y la noche, Relicto). @cinematecasalalterna confirmó el 31 oct la del martes 3, 6:30 p.m., Aud. 105 Ed. 301 (coincide con la app). Vigilar si la UNAL sigue suspendida.\n\n\n_(vigía diario, 1 nov 13:30)_\n"
+  },
+  {
+   "fecha": "2026-11-02",
+   "cuerpo": "**Vigía 1 nov 2026, 21:05 — MIDBO**\n\n- Web (API + bloque «Funciones» de las 121 fichas): sin cambios de programación respecto de la copia del 1 nov a las 09:06. Cambios solo de texto (sinopsis de *Sey Arimaku*, *Un río de aguas profundas…*, título «¡Viva México!»), y ya están en la app (la de ¡Viva México! es la master class de Medellín, que no está montada).\n- **Para verificar (el dato viene del pie, no de una lámina; la única lámina es un video):** https://www.instagram.com/p/DfNVixGB-0F/ (Homenaje a Pablo Mora) dice: «Martes 3 de noviembre | 10:00 a. m. Conversación con Germán Ayala y la cineasta indígena Luz Adriana Quigua. 📍Cinemateca de Bogotá». La web y la app dicen: mar 3 nov 10:00, *Sey Arimaku + Galu dugbis*, **Alianza Francesa**, entrada libre, `has_qa: false`. O hay una conversación aparte en la Cinemateca, o la proyección de la Alianza tiene conversatorio (y entonces debería ser has_qa true). El lun 2 nov a las 14:00 (Cinemateca, *Quién paga el pato + Crónica…*) ya cuadra en la app (has_qa true).\n"
+  },
+  {
+   "fecha": "2026-11-02",
+   "cuerpo": "Vigía 2 nov 09:15 — MIDBO hoy lun 2 nov (https://www.instagram.com/p/DfPT4i1jXbI/, 13 láminas leídas): 4 funciones «Función con Q&A» con has_qa=false en la app: 10:00 Sala Capital «CREAndo Documental en los Barrios» (lámina 2); 17:00 Sala 3 «Foco Santiago Álvarez» (L7); 17:00 Sala Capital «Programa 1: Miradas Convulsas desde el Presente» (L9); 19:00 Sala 2 «Programa 1: Tanto Trabajo por Hacer» (L12). Al revés: 17:00 Canterbury Café figura con Q&A en la app y la lámina 10 dice «Con mediación». Web midbo.co sin cambios."
+  },
+  {
+   "fecha": "2026-11-02",
+   "cuerpo": "**Vigía 2 nov 17:15: MIDBO, falta un Q&A en la app**\n\n«Bojayá: la verdad desde adentro», miércoles 4 nov a las 16:00, Sala 2, Cinemateca de Bogotá. La web dice «Con presencia del director y producción»: https://midbo.co/peliculas/bojaya-la-verdad-desde-adentro/\n\nEn el almacén está con `has_qa=false`. La frase va sin el «*» inicial, así que el patrón NOTA del crudo no la toma.\n\nTambién cambiaron en la API las sinopsis de «¡Viva México!» (antes «Viva México»), «Sey Arimaku, la otra oscuridad» y «Un río de aguas profundas y luminosas». No cambia ninguna función.\n"
   }
  ]
 }

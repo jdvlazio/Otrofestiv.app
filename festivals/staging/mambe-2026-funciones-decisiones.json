@@ -1,0 +1,34 @@
+{
+ "_provenance": {
+  "fuente": "decisiones humanas de id (docs/FUNCION.md §11.3.4)",
+  "capturado": "2026-11-02"
+ },
+ "decisiones": [
+  {
+   "viejo": "f_7d50fa9fc2",
+   "nuevo": {
+    "sede": "Biblioteca SENA - Florencia",
+    "dia": "2026-11-04",
+    "hora": "15:00",
+    "sala": "",
+    "titulo": "taller cine comunitario"
+   },
+   "por_que": "La programación actualizada (p/DfOE-FSAVWB, 2 nov, lámina 3) mueve la sesión del mié 4 del Taller: Cine Comunitario en la Biblioteca SENA de las 9:00 a las 3:00 p. m. Es la misma sesión: quien la tenía en su plan la conserva.",
+   "quien": "Claude (aprobado por Juan: «Sí, hazlo», re-montar MAMBE con la programación actualizada)",
+   "fecha": "2026-11-02"
+  },
+  {
+   "viejo": "f_69f5e0db88",
+   "nuevo": {
+    "sede": "Uniamazonia Sede Centro - Florencia",
+    "dia": "2026-11-06",
+    "hora": "14:00",
+    "sala": "Auditorio Callicebus",
+    "titulo": "encuentro taller mujeres buscadoras"
+   },
+   "por_que": "La programación actualizada (p/DfOE-FSAVWB, 2 nov, lámina 6) mueve el Encuentro: Taller Mujeres Buscadoras del vie 6 de la Casa Campesina 9:00 a Uniamazonia Centro Idema, Auditorio Callicebus, 2:00 p. m. Es el mismo encuentro.",
+   "quien": "Claude (aprobado por Juan: «Sí, hazlo», re-montar MAMBE con la programación actualizada)",
+   "fecha": "2026-11-02"
+  }
+ ]
+}

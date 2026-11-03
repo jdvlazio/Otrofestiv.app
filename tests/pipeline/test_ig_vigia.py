@@ -123,5 +123,74 @@ class Historial(unittest.TestCase):
         self.assertEqual(v.clasificar([], ['a'], {})[1], {})
 
 
+class Respaldo(unittest.TestCase):
+    """2 nov 2026: un 502 de Apify tumbó la corrida; lobstr.io entra de respaldo."""
+
+    def test_http_de_apify_no_tumba_la_corrida(self):
+        orig = v._apify
+        try:
+            def falla(*a):
+                raise OSError('HTTP Error 502: Bad Gateway')
+            v._apify = falla
+            items = v.apify(['a', 'b'], '2026-11-01T00:00:00', 't')
+        finally:
+            v._apify = orig
+        self.assertEqual(set(v.clasificar(items, ['a', 'b'], {})[1]), {'a', 'b'})
+
+    def test_lobstr_con_forma_de_apify(self):
+        x = {'shortcode': 'DfOE', 'url': 'https://www.instagram.com/p/DfOE/', 'timestamp_datetime': '2026-11-02T00:10:02Z',
+             'owner_username': 'productora', 'caption': 'programación', 'coauthors': [{'username': 'festivalmambe'}],
+             'display_url': 'u0', 'child_post_1': {'display_url': 'u1'}, 'child_post_2': {'display_url': 'u2'}, 'child_post_3': ''}
+        it = v.lobstr_a_apify(x)
+        self.assertEqual((it['shortCode'], it['timestamp'], len(it['childPosts'])), ('DfOE', '2026-11-02T00:10:02Z', 2))
+        # el colaborativo se reconoce igual que con Apify
+        self.assertEqual([i['shortCode'] for i in v.clasificar([it], ['festivalmambe'], {})[0]['festivalmambe']], ['DfOE'])
+
+    def test_carrusel_de_mas_de_10_se_completa_por_el_embed(self):
+        x = {'shortcode': 'DfN9', 'timestamp_datetime': '2026-11-01T00:00:00Z', 'owner_username': 'a',
+             'carousel_media_count': 12, **{f'child_post_{i}': {'display_url': f'u{i}'} for i in range(1, 11)}}
+        it = v.completar_laminas(v.lobstr_a_apify(x),
+                                 leer=lambda sc: {'laminas': [{'url': f'e{i}'} for i in range(1, 13)]})
+        self.assertEqual(len(it['childPosts']), 12)
+        def falla(sc):
+            raise SystemExit('embed caído')
+        it = v.completar_laminas(v.lobstr_a_apify(x), leer=falla)
+        self.assertEqual((len(it['childPosts']), it['laminas_incompletas'][:8]), (10, '10 de 12'))
+
+
+class Cascada(unittest.TestCase):
+    """2 nov 2026: Bright Data → Apify → lobstr, de mayor a menor cupo."""
+
+    def test_brightdata_con_forma_de_apify(self):
+        x = {'shortcode': 'DfPb', 'url': 'u', 'date_posted': '2026-11-02T13:00:00.000Z', 'user_posted': 'otra',
+             'description': 'pie', 'coauthor_producers': [{'username': 'fecisofest'}],
+             'post_content': [{'url': f'l{i}'} for i in range(12)]}
+        it = v.brightdata_a_apify(x)
+        self.assertEqual((it['shortCode'], len(it['childPosts'])), ('DfPb', 12))
+        self.assertEqual(len(v.clasificar([it], ['fecisofest'], {})[0]['fecisofest']), 1)
+
+    def test_pasa_a_la_siguiente_solo_lo_que_no_se_leyo(self):
+        llamadas = []
+        def bd(cs, es, ah):
+            llamadas.append(('bd', list(cs)))
+            return [{'error': 'http', 'username': 'a'}, {'error': 'no_items', 'username': 'b'}]
+        def ap(cs, es, ah):
+            llamadas.append(('apify', list(cs)))
+            return [{'ownerUsername': 'a', 'timestamp': '2026-11-02T10:00:00Z', 'shortCode': 'x'}]
+        nuevos, sin_leer, via = v.cascada(['a', 'b'], {}, AHORA, [('brightdata', bd), ('apify', ap)])
+        self.assertEqual(llamadas, [('bd', ['a', 'b']), ('apify', ['a'])])   # «b» no publicó: no se re-pide
+        self.assertEqual((sin_leer, via), ({}, {'b': 'brightdata', 'a': 'apify'}))
+        self.assertEqual([i['shortCode'] for i in nuevos['a']], ['x'])
+
+    def test_todas_agotadas(self):
+        caida = lambda cs, es, ah: [{'error': 'http', 'username': c} for c in cs]
+        _, sin_leer, _ = v.cascada(['a'], {}, AHORA, [('brightdata', caida), ('lobstr', caida)])
+        self.assertTrue(sin_leer['a'].startswith('lobstr'))
+
+    def test_apify_bajo_el_piso_se_salta(self):
+        nombres = [n for n, _ in v.fuentes_ig('t', 0.5)]
+        self.assertNotIn('apify', nombres)
+
+
 if __name__ == '__main__':
     unittest.main()

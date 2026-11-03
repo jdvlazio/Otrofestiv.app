@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, con el MISMO candado de enriquecer.py: director ✓ y (año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-10-28"
+  "capturado": "2026-11-02"
  },
  "_origen": "miradas-2026-catalogo.json",
  "obras": [
@@ -43,7 +43,7 @@
    "titulo": "El deshielo",
    "tmdb_id": 1210268,
    "titulo_original": "El deshielo",
-   "poster_path": "/7wREwMWtKOy6TF7NS9RWchJoKQC.jpg",
+   "poster_path": "/sLP4vn5MHnumTozQ699X8vtCOgC.jpg",
    "synopsis_es": "Chile, 1992. Los padres de Inés, una niña de nueve años, están de viaje de negocios y la dejan al cuidado de sus abuelos, dueños de un hotel a los pies de una estación de esquí. Inés entabla amistad con Hanna, una joven esquiadora europea que ha llegado a Chile para entrenar. Una noche, Hanna desaparece. La búsqueda sacará a la luz una serie de situaciones ocultas.",
    "synopsis_en": "1992, Chile. Nine-year-old Inés' parents are away on business, leaving her in the care of her grandparents, who own a hotel at the foot of a ski resort. Inés befriends Hanna, a teenage European skier who has come to train in Chile. One night, Hanna disappears. The process of her search will unveil a series of hidden situations.",
    "genero": "Misterio",
@@ -554,7 +554,7 @@
    "duracion_tmdb": 11,
    "pais_tmdb": "Colombia",
    "lbSlug": "refraccion",
-   "_verificado": "el catálogo ya la tiene (w_R4F8T5DKXC9W, cinemancia-2026, ficica-2026, ficmontanas-2026, girardota-2026, jardin-2026, miradas-2026, narrarelfuturo-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4F8T5DKXC9W, cinemancia-2026, ficica-2026, ficidi-2026, ficmontanas-2026, girardota-2026, jardin-2026, miradas-2026, narrarelfuturo-2026)",
    "work_id": "w_R4F8T5DKXC9W",
    "_ya_publicada": [
     {
@@ -583,6 +583,20 @@
      "genre": "Drama",
      "synopsis_en": "Eloísa, a 20-year-old girl, is in two relationships at the same time. One night, after having been with both girls, she feels overwhelmed by living in this situation of deceit, and in the middle of her confusion she goes out to ride her bike through the streets of Medellín, where she will realize that she does not want to acknowledge who she is — but will ultimately have to come face-to-face with herself.",
      "sinopsis": "Eloísa, una chica de 20 años, está en dos relaciones al mismo tiempo. Una noche, después de haber estado con ambas chicas, se siente agobiada por estar en esa situación de engaño y en medio de su confusión sale a recorrer las calles de Medellín en bicicleta, donde se dará cuenta de que no quiere reconocerse pero deberá encontrarse consigo misma."
+    },
+    {
+     "festival": "ficidi-2026",
+     "titulo": "Refracción",
+     "tmdb_id": 1584776,
+     "poster": "/assets/ficidi-2026/refraccion.jpg",
+     "posterSource": "oficial",
+     "lbSlug": "refraccion",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "11 min",
+     "genre": "Drama",
+     "synopsis_en": "Eloísa, a 20-year-old girl, is in two relationships at the same time. One night, after having been with both girls, she feels overwhelmed by living in this situation of deceit, and in the middle of her confusion she goes out to ride her bike through the streets of Medellín, where she will realize that she does not want to acknowledge who she is — but will ultimately have to come face-to-face with herself.",
+     "sinopsis": "Una joven que mantiene dos relaciones simultáneas recorre Medellín para afrontar su confusión y encontrarse consigo misma."
     },
     {
      "festival": "ficmontanas-2026",
@@ -911,7 +925,7 @@
    "pais_tmdb": "Colombia, United States of America",
    "title_en": "Once in a Body",
    "lbSlug": "once-in-a-body",
-   "_verificado": "el catálogo ya la tiene (w_R4DJH9SYECN9, aff-2026, anibia-2026, ficcali-2026, filcmar-2026, jardin-2026, miradas-2026, popayan-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4DJH9SYECN9, aff-2026, anibia-2026, cinetoro-2026, ficcali-2026, filcmar-2026, jardin-2026, miradas-2026, popayan-2026)",
    "work_id": "w_R4DJH9SYECN9",
    "_ya_publicada": [
     {
@@ -941,6 +955,20 @@
      "genre": "Animación",
      "synopsis_en": "While dealing with a strange being that lives inside her, a woman seeks to reconcile with her sister over an incident from their adolescence.",
      "sinopsis": "Mientras lidia con un extraño ser que vive en su interior, una mujer busca reconciliarse con su hermana por un incidente de su adolescencia. Al explorar las experiencias que comparten a través de sus cuerpos, logra confrontar la naturaleza de aquello que la habita."
+    },
+    {
+     "festival": "cinetoro-2026",
+     "titulo": "Una vez en un cuerpo",
+     "tmdb_id": 1522316,
+     "poster": "/assets/cinetoro-2026/una-vez-en-un-cuerpo.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "once-in-a-body",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "10 min",
+     "genre": "Animación",
+     "synopsis_en": "While dealing with a strange being that lives inside her, a woman seeks to reconcile with her sister over an incident from their adolescence.",
+     "sinopsis": "Mientras lidia con un ser extraño que vive en su interior, una mujer busca reconciliarse con su hermana por un incidente ocurrido durante su adolescencia. Al explorar las experiencias que comparten a través de sus cuerpos, logra enfrentarse a la naturaleza de lo que habita en ella."
     },
     {
      "festival": "ficcali-2026",
@@ -1327,7 +1355,7 @@
   "El deshielo": {
    "tmdb_id": 1210268,
    "titulo_original": "El deshielo",
-   "poster_path": "/7wREwMWtKOy6TF7NS9RWchJoKQC.jpg",
+   "poster_path": "/sLP4vn5MHnumTozQ699X8vtCOgC.jpg",
    "synopsis_es": "Chile, 1992. Los padres de Inés, una niña de nueve años, están de viaje de negocios y la dejan al cuidado de sus abuelos, dueños de un hotel a los pies de una estación de esquí. Inés entabla amistad con Hanna, una joven esquiadora europea que ha llegado a Chile para entrenar. Una noche, Hanna desaparece. La búsqueda sacará a la luz una serie de situaciones ocultas.",
    "synopsis_en": "1992, Chile. Nine-year-old Inés' parents are away on business, leaving her in the care of her grandparents, who own a hotel at the foot of a ski resort. Inés befriends Hanna, a teenage European skier who has come to train in Chile. One night, Hanna disappears. The process of her search will unveil a series of hidden situations.",
    "genero": "Misterio",
@@ -1819,7 +1847,7 @@
    "duracion_tmdb": 11,
    "pais_tmdb": "Colombia",
    "lbSlug": "refraccion",
-   "_verificado": "el catálogo ya la tiene (w_R4F8T5DKXC9W, cinemancia-2026, ficica-2026, ficmontanas-2026, girardota-2026, jardin-2026, miradas-2026, narrarelfuturo-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4F8T5DKXC9W, cinemancia-2026, ficica-2026, ficidi-2026, ficmontanas-2026, girardota-2026, jardin-2026, miradas-2026, narrarelfuturo-2026)",
    "work_id": "w_R4F8T5DKXC9W",
    "_ya_publicada": [
     {
@@ -1848,6 +1876,20 @@
      "genre": "Drama",
      "synopsis_en": "Eloísa, a 20-year-old girl, is in two relationships at the same time. One night, after having been with both girls, she feels overwhelmed by living in this situation of deceit, and in the middle of her confusion she goes out to ride her bike through the streets of Medellín, where she will realize that she does not want to acknowledge who she is — but will ultimately have to come face-to-face with herself.",
      "sinopsis": "Eloísa, una chica de 20 años, está en dos relaciones al mismo tiempo. Una noche, después de haber estado con ambas chicas, se siente agobiada por estar en esa situación de engaño y en medio de su confusión sale a recorrer las calles de Medellín en bicicleta, donde se dará cuenta de que no quiere reconocerse pero deberá encontrarse consigo misma."
+    },
+    {
+     "festival": "ficidi-2026",
+     "titulo": "Refracción",
+     "tmdb_id": 1584776,
+     "poster": "/assets/ficidi-2026/refraccion.jpg",
+     "posterSource": "oficial",
+     "lbSlug": "refraccion",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "11 min",
+     "genre": "Drama",
+     "synopsis_en": "Eloísa, a 20-year-old girl, is in two relationships at the same time. One night, after having been with both girls, she feels overwhelmed by living in this situation of deceit, and in the middle of her confusion she goes out to ride her bike through the streets of Medellín, where she will realize that she does not want to acknowledge who she is — but will ultimately have to come face-to-face with herself.",
+     "sinopsis": "Una joven que mantiene dos relaciones simultáneas recorre Medellín para afrontar su confusión y encontrarse consigo misma."
     },
     {
      "festival": "ficmontanas-2026",
@@ -2144,7 +2186,7 @@
    "pais_tmdb": "Colombia, United States of America",
    "title_en": "Once in a Body",
    "lbSlug": "once-in-a-body",
-   "_verificado": "el catálogo ya la tiene (w_R4DJH9SYECN9, aff-2026, anibia-2026, ficcali-2026, filcmar-2026, jardin-2026, miradas-2026, popayan-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4DJH9SYECN9, aff-2026, anibia-2026, cinetoro-2026, ficcali-2026, filcmar-2026, jardin-2026, miradas-2026, popayan-2026)",
    "work_id": "w_R4DJH9SYECN9",
    "_ya_publicada": [
     {
@@ -2174,6 +2216,20 @@
      "genre": "Animación",
      "synopsis_en": "While dealing with a strange being that lives inside her, a woman seeks to reconcile with her sister over an incident from their adolescence.",
      "sinopsis": "Mientras lidia con un extraño ser que vive en su interior, una mujer busca reconciliarse con su hermana por un incidente de su adolescencia. Al explorar las experiencias que comparten a través de sus cuerpos, logra confrontar la naturaleza de aquello que la habita."
+    },
+    {
+     "festival": "cinetoro-2026",
+     "titulo": "Una vez en un cuerpo",
+     "tmdb_id": 1522316,
+     "poster": "/assets/cinetoro-2026/una-vez-en-un-cuerpo.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "once-in-a-body",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "10 min",
+     "genre": "Animación",
+     "synopsis_en": "While dealing with a strange being that lives inside her, a woman seeks to reconcile with her sister over an incident from their adolescence.",
+     "sinopsis": "Mientras lidia con un ser extraño que vive en su interior, una mujer busca reconciliarse con su hermana por un incidente ocurrido durante su adolescencia. Al explorar las experiencias que comparten a través de sus cuerpos, logra enfrentarse a la naturaleza de lo que habita en ella."
     },
     {
      "festival": "ficcali-2026",

@@ -1,18 +1,18 @@
 {
  "_provenance": {
   "fuente": "Instagram @festivalmambe — el carrusel oficial de programación (12 láminas)",
-  "capturado": "2026-10-31",
+  "capturado": "2026-11-02",
   "que_aporta": "la programación entera: día, hora, lugar y actividad",
-  "url": "https://www.instagram.com/p/DfIOLhBloOw/",
+  "url": "https://www.instagram.com/p/DfOE-FSAVWB/",
   "metodo": "transcripción a ojo lámina por lámina, confirmada hora por hora y palabra por palabra con el OCR de la lámina oficial"
  },
  "_acceso": {
   "estado": "Entrada libre",
-  "revisado": "2026-10-31",
+  "revisado": "2026-11-02",
   "fuentes": [
-   "el pie del carrusel oficial (instagram.com/p/DfIOLhBloOw/)"
+   "el pie del carrusel oficial (instagram.com/p/DfOE-FSAVWB/)"
   ],
-  "_por_que": "«Todo es gratis y de entrada libre» (pie del post de programación, 30 oct 2026)."
+  "_por_que": "«Todas las actividades son gratuitas y de entrada libre» (pie del post de programación actualizada, 2 nov 2026)."
  },
  "funciones": [
   {
@@ -21,8 +21,8 @@
    "sede": "Uniamazonia (Porvenir) · Auditorio Angel Cuniberti",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://www.instagram.com/p/DfIOLhBloOw/",
-    "date": "2026-10-30",
+    "url": "https://www.instagram.com/p/DfOE-FSAVWB/",
+    "date": "2026-11-02",
     "lamina": 2
    },
    "titulo": "Inauguración Exposición: Javier Murillo",
@@ -37,8 +37,8 @@
    "sede": "Uniamazonia (Porvenir) · Auditorio Angel Cuniberti",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://www.instagram.com/p/DfIOLhBloOw/",
-    "date": "2026-10-30",
+    "url": "https://www.instagram.com/p/DfOE-FSAVWB/",
+    "date": "2026-11-02",
     "lamina": 2
    },
    "duracion_min": 180,
@@ -49,15 +49,15 @@
   },
   {
    "dia": "2026-11-04",
-   "hora": "09:00",
+   "hora": "15:00",
    "sede": "Biblioteca SENA",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://www.instagram.com/p/DfIOLhBloOw/",
-    "date": "2026-10-30",
+    "url": "https://www.instagram.com/p/DfOE-FSAVWB/",
+    "date": "2026-11-02",
     "lamina": 3
    },
-   "duracion_min": 180,
+   "duracion_min": 120,
    "titulo": "Taller: Cine Comunitario",
    "tipo": "evento",
    "event_kind": "taller",
@@ -66,12 +66,29 @@
   },
   {
    "dia": "2026-11-04",
+   "hora": "15:30",
+   "sede": "Uniamazonia (Porvenir) · Auditorio Angel Cuniberti",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfOE-FSAVWB/",
+    "date": "2026-11-02",
+    "lamina": 3
+   },
+   "duracion_min": 120,
+   "titulo": "Coctel + Conversatorio: Exposición Fotográfica Gerson Saenz",
+   "tipo": "evento",
+   "event_kind": "conversatorio",
+   "seccion": "Actividades",
+   "info": true
+  },
+  {
+   "dia": "2026-11-04",
    "hora": "17:00",
    "sede": "Santuario (inspección de policía)",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://www.instagram.com/p/DfIOLhBloOw/",
-    "date": "2026-10-30",
+    "url": "https://www.instagram.com/p/DfOE-FSAVWB/",
+    "date": "2026-11-02",
     "lamina": 3
    },
    "duracion_min": 120,
@@ -86,8 +103,8 @@
    "sede": "Uniamazonia (Porvenir)",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://www.instagram.com/p/DfIOLhBloOw/",
-    "date": "2026-10-30",
+    "url": "https://www.instagram.com/p/DfOE-FSAVWB/",
+    "date": "2026-11-02",
     "lamina": 3
    },
    "duracion_min": 150,
@@ -103,8 +120,8 @@
    "sede": "Santuario (inspección de policía)",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://www.instagram.com/p/DfIOLhBloOw/",
-    "date": "2026-10-30",
+    "url": "https://www.instagram.com/p/DfOE-FSAVWB/",
+    "date": "2026-11-02",
     "lamina": 3
    },
    "duracion_min": 180,
@@ -118,8 +135,8 @@
    "sede": "Candela Café Bar",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://www.instagram.com/p/DfIOLhBloOw/",
-    "date": "2026-10-30",
+    "url": "https://www.instagram.com/p/DfOE-FSAVWB/",
+    "date": "2026-11-02",
     "lamina": 3
    },
    "titulo": "Provisorium",
@@ -132,8 +149,8 @@
    "sede": "Uniamazonia (Porvenir) · Auditorio Angel Cuniberti",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://www.instagram.com/p/DfIOLhBloOw/",
-    "date": "2026-10-30",
+    "url": "https://www.instagram.com/p/DfOE-FSAVWB/",
+    "date": "2026-11-02",
     "lamina": 3
    },
    "duracion_min": 150,
@@ -151,15 +168,32 @@
   },
   {
    "dia": "2026-11-05",
-   "hora": "08:00",
+   "hora": "09:00",
    "sede": "Filmemoria · I.E Juan Bautisya La Salle",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://www.instagram.com/p/DfIOLhBloOw/",
-    "date": "2026-10-30",
+    "url": "https://www.instagram.com/p/DfOE-FSAVWB/",
+    "date": "2026-11-02",
     "lamina": 4
    },
-   "duracion_min": 240,
+   "duracion_min": 180,
+   "titulo": "Taller: Cine Comunitario",
+   "tipo": "evento",
+   "event_kind": "taller",
+   "seccion": "Actividades",
+   "is_recurring": true
+  },
+  {
+   "dia": "2026-11-05",
+   "hora": "09:00",
+   "sede": "Filmemoria · I.E Juan Bautisya La Salle",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfOE-FSAVWB/",
+    "date": "2026-11-02",
+    "lamina": 4
+   },
+   "duracion_min": 180,
    "titulo": "Taller: Stenopeica",
    "tipo": "evento",
    "event_kind": "taller",
@@ -167,15 +201,47 @@
   },
   {
    "dia": "2026-11-05",
-   "hora": "09:00",
-   "sede": "Biblioteca SENA",
+   "hora": "14:00",
+   "sede": "Filmemoria · I.E Juan Bautisya La Salle",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://www.instagram.com/p/DfIOLhBloOw/",
-    "date": "2026-10-30",
+    "url": "https://www.instagram.com/p/DfOE-FSAVWB/",
+    "date": "2026-11-02",
+    "lamina": 4
+   },
+   "duracion_min": 240,
+   "titulo": "Taller: Video Danza",
+   "tipo": "evento",
+   "event_kind": "taller",
+   "seccion": "Actividades"
+  },
+  {
+   "dia": "2026-11-05",
+   "hora": "14:00",
+   "sede": "Uniamazonia (Centro Idema) · Juan XXIII-Edificio Yapura Aula 15, piso 2",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfOE-FSAVWB/",
+    "date": "2026-11-02",
     "lamina": 4
    },
    "duracion_min": 180,
+   "titulo": "Taller: Cianotipia",
+   "tipo": "evento",
+   "event_kind": "taller",
+   "seccion": "Actividades"
+  },
+  {
+   "dia": "2026-11-05",
+   "hora": "15:00",
+   "sede": "Biblioteca SENA",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfOE-FSAVWB/",
+    "date": "2026-11-02",
+    "lamina": 5
+   },
+   "duracion_min": 120,
    "titulo": "Taller: Cine Comunitario",
    "tipo": "evento",
    "event_kind": "taller",
@@ -188,9 +254,9 @@
    "sede": "Uniamazonia (Centro Idema) · Edificio Yapura - Sala 17, piso 7",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://www.instagram.com/p/DfIOLhBloOw/",
-    "date": "2026-10-30",
-    "lamina": 4
+    "url": "https://www.instagram.com/p/DfOE-FSAVWB/",
+    "date": "2026-11-02",
+    "lamina": 5
    },
    "duracion_min": 180,
    "titulo": "Taller Actuación: María Cecilia Sanchez",
@@ -201,51 +267,18 @@
   },
   {
    "dia": "2026-11-05",
-   "hora": "15:30",
-   "sede": "Uniamazonia (Porvenir) · Auditorio Angel Cuniberti",
-   "acceso": "Entrada libre",
-   "_src": {
-    "url": "https://www.instagram.com/p/DfIOLhBloOw/",
-    "date": "2026-10-30",
-    "lamina": 4
-   },
-   "duracion_min": 120,
-   "titulo": "Coctel + Conversatorio: Exposición Fotográfica Gerson Saenz",
-   "tipo": "evento",
-   "event_kind": "conversatorio",
-   "seccion": "Actividades",
-   "info": true
-  },
-  {
-   "dia": "2026-11-05",
    "hora": "16:00",
    "sede": "Uniamazonia (Centro Idema) · Juan XXIII - Auditorio Callicebus",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://www.instagram.com/p/DfIOLhBloOw/",
-    "date": "2026-10-30",
+    "url": "https://www.instagram.com/p/DfOE-FSAVWB/",
+    "date": "2026-11-02",
     "lamina": 5
    },
    "duracion_min": 120,
-   "titulo": "Festival de Cortos Psicoactivos + Conversatorio",
+   "titulo": "Cortos Psicoactivos + Conversatorio",
    "tipo": "evento",
    "event_kind": "evento",
-   "seccion": "Actividades"
-  },
-  {
-   "dia": "2026-11-05",
-   "hora": "16:00",
-   "sede": "Uniamazonia (Centro Idema) · Juan XXIII-Edificio Yapura Aula 15, piso 2",
-   "acceso": "Entrada libre",
-   "_src": {
-    "url": "https://www.instagram.com/p/DfIOLhBloOw/",
-    "date": "2026-10-30",
-    "lamina": 5
-   },
-   "duracion_min": 120,
-   "titulo": "Taller: Cianotipia",
-   "tipo": "evento",
-   "event_kind": "taller",
    "seccion": "Actividades"
   },
   {
@@ -254,8 +287,8 @@
    "sede": "Lugar: Uniamazonia (Porvenir) · Auditorio Angel Cuniberti",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://www.instagram.com/p/DfIOLhBloOw/",
-    "date": "2026-10-30",
+    "url": "https://www.instagram.com/p/DfOE-FSAVWB/",
+    "date": "2026-11-02",
     "lamina": 5
    },
    "duracion_min": 150,
@@ -271,17 +304,21 @@
    "sede": "Uniamazonia (Porvenir) · Auditorio Angel Cuniberti",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://www.instagram.com/p/DfIOLhBloOw/",
-    "date": "2026-10-30",
+    "url": "https://www.instagram.com/p/DfOE-FSAVWB/",
+    "date": "2026-11-02",
     "lamina": 5
    },
    "duracion_min": 150,
-   "titulo": "Guardianes de la fauna amazónica: Plecturocebus caquetensis y Los guardianes de las aves",
+   "titulo": "Guardianes de la fauna amazónica: Plecturocebus caquetensis, Tapir Memories y Los guardianes de las aves",
    "seccion": "Proyecciones",
    "has_qa": true,
    "obras": [
     {
      "titulo": "Guardianes de la fauna amazónica: Plecturocebus caquetensis"
+    },
+    {
+     "titulo": "Tapir Memories",
+     "pais": "Colombia"
     },
     {
      "titulo": "Los guardianes de las aves"
@@ -294,8 +331,8 @@
    "sede": "Maloca Huitoto · (Maloka Uitoto vereda el Manantial)",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://www.instagram.com/p/DfIOLhBloOw/",
-    "date": "2026-10-30",
+    "url": "https://www.instagram.com/p/DfOE-FSAVWB/",
+    "date": "2026-11-02",
     "lamina": 5
    },
    "duracion_min": 150,
@@ -305,32 +342,14 @@
   },
   {
    "dia": "2026-11-06",
-   "hora": "09:00",
-   "sede": "Biblioteca SENA",
+   "hora": "14:00",
+   "sede": "Uniamazonia (Centro Idema) · Juan XXIII - Auditorio Callicebus",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://www.instagram.com/p/DfIOLhBloOw/",
-    "date": "2026-10-30",
+    "url": "https://www.instagram.com/p/DfOE-FSAVWB/",
+    "date": "2026-11-02",
     "lamina": 6
    },
-   "duracion_min": 180,
-   "titulo": "Taller: Cine Comunitario",
-   "tipo": "evento",
-   "event_kind": "taller",
-   "seccion": "Actividades",
-   "is_recurring": true
-  },
-  {
-   "dia": "2026-11-06",
-   "hora": "09:00",
-   "sede": "Casa Campesina",
-   "acceso": "Entrada libre",
-   "_src": {
-    "url": "https://www.instagram.com/p/DfIOLhBloOw/",
-    "date": "2026-10-30",
-    "lamina": 6
-   },
-   "duracion_min": 180,
    "titulo": "Encuentro: Taller Mujeres Buscadoras",
    "tipo": "evento",
    "event_kind": "encuentro",
@@ -342,8 +361,8 @@
    "sede": "Uniamazonia (Centro Idema) · Juan XXIII - Edificio Yapura - Sala 17 Piso 7",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://www.instagram.com/p/DfIOLhBloOw/",
-    "date": "2026-10-30",
+    "url": "https://www.instagram.com/p/DfOE-FSAVWB/",
+    "date": "2026-11-02",
     "lamina": 6
    },
    "duracion_min": 180,
@@ -359,8 +378,8 @@
    "sede": "Uniamazonia (Centro Idema) · Juan XXIII - Auditorio Callicebus",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://www.instagram.com/p/DfIOLhBloOw/",
-    "date": "2026-10-30",
+    "url": "https://www.instagram.com/p/DfOE-FSAVWB/",
+    "date": "2026-11-02",
     "lamina": 7
    },
    "duracion_min": 180,
@@ -374,14 +393,14 @@
    "sede": "Uniamazonia (Centro Idema) · Juan XXIII - Auditorio Callicebus",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://www.instagram.com/p/DfIOLhBloOw/",
-    "date": "2026-10-30",
+    "url": "https://www.instagram.com/p/DfOE-FSAVWB/",
+    "date": "2026-11-02",
     "lamina": 7
    },
    "duracion_min": 150,
-   "titulo": "Taller: Serigrafía",
+   "titulo": "Laboratorio: Serigrafía",
    "tipo": "evento",
-   "event_kind": "taller",
+   "event_kind": "evento",
    "seccion": "Actividades",
    "is_recurring": true
   },
@@ -391,8 +410,8 @@
    "sede": "Uniamazonia (Centro Idema) · Juan XXIII - Auditorio Callicebus",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://www.instagram.com/p/DfIOLhBloOw/",
-    "date": "2026-10-30",
+    "url": "https://www.instagram.com/p/DfOE-FSAVWB/",
+    "date": "2026-11-02",
     "lamina": 7
    },
    "duracion_min": 150,
@@ -406,8 +425,8 @@
    "sede": "Uniamazonia (Porvenir) · Auditorio Angel Cuniberti",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://www.instagram.com/p/DfIOLhBloOw/",
-    "date": "2026-10-30",
+    "url": "https://www.instagram.com/p/DfOE-FSAVWB/",
+    "date": "2026-11-02",
     "lamina": 8
    },
    "duracion_min": 300,
@@ -423,8 +442,8 @@
    "sede": "Uniamazonia (Porvenir) · Auditorio Angel Cuniberti",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://www.instagram.com/p/DfIOLhBloOw/",
-    "date": "2026-10-30",
+    "url": "https://www.instagram.com/p/DfOE-FSAVWB/",
+    "date": "2026-11-02",
     "lamina": 8
    },
    "duracion_min": 300,
@@ -440,8 +459,8 @@
    "sede": "Uniamazonia (Porvenir) · Auditorio Angel Cuniberti",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://www.instagram.com/p/DfIOLhBloOw/",
-    "date": "2026-10-30",
+    "url": "https://www.instagram.com/p/DfOE-FSAVWB/",
+    "date": "2026-11-02",
     "lamina": 8
    },
    "duracion_min": 300,
@@ -457,14 +476,14 @@
    "sede": "Uniamazonia (Porvenir) · Auditorio Angel Cuniberti",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://www.instagram.com/p/DfIOLhBloOw/",
-    "date": "2026-10-30",
+    "url": "https://www.instagram.com/p/DfOE-FSAVWB/",
+    "date": "2026-11-02",
     "lamina": 8
    },
    "duracion_min": 150,
-   "titulo": "Taller: Serigrafía",
+   "titulo": "Laboratorio: Serigrafía",
    "tipo": "evento",
-   "event_kind": "taller",
+   "event_kind": "evento",
    "seccion": "Actividades",
    "is_recurring": true
   },
@@ -474,8 +493,8 @@
    "sede": "Uniamazonia (Porvenir) · Auditorio Angel Cuniberti",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://www.instagram.com/p/DfIOLhBloOw/",
-    "date": "2026-10-30",
+    "url": "https://www.instagram.com/p/DfOE-FSAVWB/",
+    "date": "2026-11-02",
     "lamina": 9
    },
    "titulo": "Proyección: Resultado Taller Cine Comunitario y Ganadores Filmemoria",
@@ -489,8 +508,8 @@
    "sede": "Uniamazonia (Porvenir) · Auditorio Angel Cuniberti",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://www.instagram.com/p/DfIOLhBloOw/",
-    "date": "2026-10-30",
+    "url": "https://www.instagram.com/p/DfOE-FSAVWB/",
+    "date": "2026-11-02",
     "lamina": 9
    },
    "duracion_min": 150,
@@ -504,8 +523,8 @@
    "sede": "Casa Campesina",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://www.instagram.com/p/DfIOLhBloOw/",
-    "date": "2026-10-30",
+    "url": "https://www.instagram.com/p/DfOE-FSAVWB/",
+    "date": "2026-11-02",
     "lamina": 9
    },
    "titulo": "Fiesta de Cierre",
