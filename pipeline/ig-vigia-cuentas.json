@@ -1,6 +1,7 @@
 {
   "_nota": "Cuentas de IG que vigila pipeline/ig_vigia.py. 'festivales': id de FESTIVAL_CONFIG → cuenta, solo para los que no traen `instagram:` en src/config.js (ese campo manda). 'preonboarding': festivales aún sin config, con sus fechas oficiales. 'facebook': festivales que se comunican por Facebook y no por IG ({id,url,inicio,fin}); los lee el actor apify~facebook-posts-scraper.",
   "festivales": {
+    "semanacine2026": "semanadelcinecolombiano",
     "ficpa2026": "ficpapasto",
     "ficcali2026": "festivaldecinecali",
     "bhff2026": "bogotahorrorfest",
