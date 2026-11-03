@@ -33,5 +33,13 @@
  "_provenance": {
   "fuente": "Nominatim con verificación: caja de ciudad + token distintivo + clase de lugar (una sede fija nunca es un barrio). _prec:manual intocable.",
   "capturado": "2026-11-02"
+ },
+ "Centro Cultural Brisas de Mayo": {
+  "n": 1,
+  "_prec": "manual",
+  "lat": 3.4169915,
+  "lng": -76.5677396,
+  "address": "Diagonal 38 Oeste #54 E-35, Cali",
+  "_match": "Google Maps «Centro Cultural Brisas De Mayo» (3 nov 2026)."
  }
 }

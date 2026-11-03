@@ -13,7 +13,7 @@ DECISIONES (Juan, 2 nov 2026):
   · sección = la palabra del festival en la lámina («Película»,
     «Conversatorio», «Cine Bajo las Estrellas», «Proyección de cortos locales»);
   · el sábado 7 («Cine Bajo las Estrellas, película y encuentro musical»,
-    Brisas de Mayo) no trae hora ni película: no se publica hasta que la anuncien;
+    Brisas de Mayo): la lámina no trae hora; Arturo la dio por correo (6 pm, 3 nov);
   · acceso: ninguna pieza anuncia pago (El Titán: «ingreso hasta agotar aforo")
     → entrada libre (regla de Juan, 13 oct).
 DURACIÓN: la lámina no la da. Las películas la toman de TMDB (enriquecer);
@@ -50,13 +50,16 @@ FILAS = [
     # (organización) lo confirmó por correo el 2 nov: «4 pm»
     ('2026-11-06', '16:00', 'Conversatorio "Experiencias en la Dirección de 100 años de Soledad"', 'Conversatorio',
      'Casa Occio', '', {'sinopsis': 'Con Carlos Moreno (director).'}),
+    # HORA: la lámina no la da; Arturo Murgas (organización) por correo el 3 nov: «6 pm».
+    # La película no está anunciada (pedida el 3 nov)
+    ('2026-11-07', '18:00', 'Cine Bajo las Estrellas, película y encuentro musical', 'Cine Bajo las Estrellas',
+     'Centro Cultural Brisas de Mayo', '', {}),
     ('2026-11-09', '12:00', 'Conversatorio "Del Barrio a la Embajada"', 'Conversatorio', USC, 'Auditorio T-Usaca',
      {'sinopsis': 'Con Héctor Aguirre (fotógrafo y realizador).'}),
     ('2026-11-09', '13:00', 'Proyección de cortos locales', 'Proyección de cortos locales', USC, 'Auditorio T-Usaca',
      {'sinopsis': 'Presentación del video «Barrio Brother», realizado entre Cali y Nueva York.'}),
 ]
-NO_SE_PUBLICA = [{'dia': '2026-11-07', 'hora': '', 'actividad': 'Cine Bajo las Estrellas, película y encuentro musical (Centro Cultural Brisas de Mayo)',
-                  'por_que': 'la lámina no da hora ni película (decisión de Juan, 2 nov)'}]
+NO_SE_PUBLICA = []
 # «Proyección de cortos locales» es una proyección (el video «Barrio Brother»), no un
 # evento: va como obra, y el tipo de evento «proyección» no existe en la app
 EVENTOS = {'Conversatorio'}
