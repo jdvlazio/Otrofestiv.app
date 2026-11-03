@@ -7230,7 +7230,7 @@
    "day_order": 8,
    "venue": "Universidad Nacional de Colombia - Bogotá",
    "sala": "Auditorio 422, edificio 303C (NEA)",
-   "has_qa": false,
+   "has_qa": true,
    "synopsis": "«Cuba y la noche» es un testimonio del poder del arte y de la memoria frente al silenciamiento. De cómo la internet abrió una grieta en el control monolítico del régimen, permitiendo que voces marginadas narraran en primera persona la violencia, el miedo y la esperanza de un país. Es la historia de un grupo de artistas que convirtió sus teléfonos móviles en armas de resistencia.",
    "synopsis_lang": "es",
    "poster": "/assets/midbo-2026/cuba-y-la-noche.jpg",
@@ -7278,9 +7278,9 @@
      "url": "https://midbo.co/"
     },
     "has_qa": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-10",
-     "url": "https://midbo.co/"
+     "tipo": "juan",
+     "fecha": "2026-10-27",
+     "frase": "El Instagram si es más reciente, es más actualizado que la web"
     },
     "title": {
      "tipo": "festival-web",
@@ -8019,7 +8019,7 @@
    "day_order": 8,
    "venue": "Cinemateca de Bogotá - Bogotá",
    "sala": "Sala 3",
-   "has_qa": false,
+   "has_qa": true,
    "synopsis": "«Cuba y la noche» es un testimonio del poder del arte y de la memoria frente al silenciamiento. De cómo la internet abrió una grieta en el control monolítico del régimen, permitiendo que voces marginadas narraran en primera persona la violencia, el miedo y la esperanza de un país. Es la historia de un grupo de artistas que convirtió sus teléfonos móviles en armas de resistencia.",
    "synopsis_lang": "es",
    "poster": "/assets/midbo-2026/cuba-y-la-noche.jpg",
@@ -8073,9 +8073,9 @@
      "url": "https://midbo.co/"
     },
     "has_qa": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-10",
-     "url": "https://midbo.co/"
+     "tipo": "juan",
+     "fecha": "2026-10-27",
+     "frase": "El Instagram si es más reciente, es más actualizado que la web"
     },
     "title": {
      "tipo": "festival-web",
@@ -10141,7 +10141,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-03T09:18:57",
+  "fecha": "2026-11-03T17:20:56",
   "plan_sha": "18f7fb7e2b601fc4",
   "paso": 8,
   "cmd": "python3 pipeline/midbo-2026-verificar.py"
