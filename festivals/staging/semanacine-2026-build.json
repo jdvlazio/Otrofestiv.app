@@ -195,7 +195,7 @@
  "_avisos_id": [],
  "films": [
   {
-   "title": "Conversatorio «Cine Colombiano: nuevo Café de Colombia»",
+   "title": "Conversatorio \"Cine Colombiano: nuevo Café de Colombia\"",
    "type": "event",
    "section": "💬 Conversatorio",
    "_ancla": [
@@ -213,13 +213,18 @@
     "url": "https://www.instagram.com/p/DfKgpBVpyUt/",
     "date": "2026-10-31",
     "tipo": "festival-ig",
-    "fila": "2026-11-03 08:30 · Conversatorio «Cine Colombiano: nuevo Café de Colombia»"
+    "fila": "2026-11-03 08:30 · Conversatorio \"Cine Colombiano: nuevo Café de Colombia\""
    },
    "is_free": true,
    "description": "Con Arturo Murgas (Semana del Cine Colombiano).",
    "description_lang": "es",
    "_fid": "f_a5dfc53ae1",
-   "id": "f_a5dfc53ae1"
+   "id": "f_a5dfc53ae1",
+   "duration": "60 min",
+   "_conservado": [
+    "duration"
+   ],
+   "_duracion_corregida": "genérica de conversatorio (Juan, 2 nov 2026)"
   },
   {
    "title": "Lejos, aquí",
@@ -296,7 +301,7 @@
    "id": "f_17329a2163"
   },
   {
-   "title": "Conversatorio «Experiencias y Vivencias en el Cine»",
+   "title": "Conversatorio \"Experiencias y Vivencias en el Cine\"",
    "type": "event",
    "section": "💬 Conversatorio",
    "_ancla": [
@@ -315,13 +320,18 @@
     "url": "https://www.instagram.com/p/DfKgpBVpyUt/",
     "date": "2026-10-31",
     "tipo": "festival-ig",
-    "fila": "2026-11-04 09:00 · Conversatorio «Experiencias y Vivencias en el Cine»"
+    "fila": "2026-11-04 09:00 · Conversatorio \"Experiencias y Vivencias en el Cine\""
    },
    "is_free": true,
    "description": "Con Jhonny Hendrix (director).",
    "description_lang": "es",
    "_fid": "f_70ef845209",
-   "id": "f_70ef845209"
+   "id": "f_70ef845209",
+   "duration": "60 min",
+   "_conservado": [
+    "duration"
+   ],
+   "_duracion_corregida": "genérica de conversatorio (Juan, 2 nov 2026)"
   },
   {
    "title": "El Titán",
@@ -437,7 +447,7 @@
    "id": "f_cd43c23fb8"
   },
   {
-   "title": "Conversatorio «El Metafilme Georgina»",
+   "title": "Conversatorio \"El Metafilme Georgina\"",
    "type": "event",
    "section": "💬 Conversatorio",
    "_ancla": [
@@ -456,16 +466,21 @@
     "url": "https://www.instagram.com/p/DfKgpBVpyUt/",
     "date": "2026-10-31",
     "tipo": "festival-ig",
-    "fila": "2026-11-06 14:00 · Conversatorio «El Metafilme Georgina»"
+    "fila": "2026-11-06 14:00 · Conversatorio \"El Metafilme Georgina\""
    },
    "is_free": true,
    "description": "Con Sebastián Ospina (actor y director).",
    "description_lang": "es",
    "_fid": "f_4a062a2ffc",
-   "id": "f_4a062a2ffc"
+   "id": "f_4a062a2ffc",
+   "duration": "60 min",
+   "_conservado": [
+    "duration"
+   ],
+   "_duracion_corregida": "genérica de conversatorio (Juan, 2 nov 2026)"
   },
   {
-   "title": "Conversatorio «Experiencias en la Dirección de 100 años de Soledad»",
+   "title": "Conversatorio \"Experiencias en la Dirección de 100 años de Soledad\"",
    "type": "event",
    "section": "💬 Conversatorio",
    "_ancla": [
@@ -483,16 +498,21 @@
     "url": "https://www.instagram.com/p/DfKgpBVpyUt/",
     "date": "2026-10-31",
     "tipo": "festival-ig",
-    "fila": "2026-11-06 16:00 · Conversatorio «Experiencias en la Dirección de 100 años de Soledad»"
+    "fila": "2026-11-06 16:00 · Conversatorio \"Experiencias en la Dirección de 100 años de Soledad\""
    },
    "is_free": true,
    "description": "Con Carlos Moreno (director).",
    "description_lang": "es",
    "_fid": "f_563ff8a6d5",
-   "id": "f_563ff8a6d5"
+   "id": "f_563ff8a6d5",
+   "duration": "60 min",
+   "_conservado": [
+    "duration"
+   ],
+   "_duracion_corregida": "genérica de conversatorio (Juan, 2 nov 2026)"
   },
   {
-   "title": "Conversatorio «Del Barrio a la Embajada»",
+   "title": "Conversatorio \"Del Barrio a la Embajada\"",
    "type": "event",
    "section": "💬 Conversatorio",
    "_ancla": [
@@ -511,17 +531,22 @@
     "url": "https://www.instagram.com/p/DfKgpBVpyUt/",
     "date": "2026-10-31",
     "tipo": "festival-ig",
-    "fila": "2026-11-09 12:00 · Conversatorio «Del Barrio a la Embajada»"
+    "fila": "2026-11-09 12:00 · Conversatorio \"Del Barrio a la Embajada\""
    },
    "is_free": true,
    "description": "Con Héctor Aguirre (fotógrafo y realizador).",
    "description_lang": "es",
    "_fid": "f_a12a22d428",
-   "id": "f_a12a22d428"
+   "id": "f_a12a22d428",
+   "duration": "60 min",
+   "_conservado": [
+    "duration"
+   ],
+   "_duracion_corregida": "genérica de conversatorio (Juan, 2 nov 2026)"
   },
   {
    "title": "Proyección de cortos locales",
-   "type": "event",
+   "type": "film",
    "section": "🎞️ Proyección de Cortos Locales",
    "_ancla": [
     "Universidad Santiago de Cali - Cali",
@@ -533,8 +558,9 @@
    "day_order": 6,
    "venue": "Universidad Santiago de Cali - Cali",
    "sala": "Auditorio T-Usaca",
-   "event_kind": "proyección",
    "has_qa": false,
+   "synopsis": "Presentación del video «Barrio Brother», realizado entre Cali y Nueva York.",
+   "synopsis_lang": "es",
    "_src": {
     "url": "https://www.instagram.com/p/DfKgpBVpyUt/",
     "date": "2026-10-31",
@@ -542,17 +568,15 @@
     "fila": "2026-11-09 13:00 · Proyección de cortos locales"
    },
    "is_free": true,
-   "description": "Presentación del video «Barrio Brother», realizado entre Cali y Nueva York.",
-   "description_lang": "es",
    "_fid": "f_bb237a6500",
    "id": "f_bb237a6500"
   }
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-02T08:39:55",
-  "plan_sha": "3bcd1072c52cfb0c",
-  "paso": 4,
-  "cmd": "python3 pipeline/encuadrar-posters.py semanacine-2026 --aplicar --desde festivals/staging/semanacine-2026-build.json"
+  "fecha": "2026-11-02T21:49:00",
+  "plan_sha": "913d0099ab00012c",
+  "paso": 5,
+  "cmd": "python3 pipeline/semanacine-2026-verificar.py"
  }
 }

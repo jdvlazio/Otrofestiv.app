@@ -4187,6 +4187,9 @@ try:
         # el chat de Cinemancia. NOTA: este error estaba EN MAIN (el guardián
         # llegó en #698 con este caso ya rojo); esta línea desbloquea a los dos.
         ('cinemancia-2026', 'Encuentro Internacional de Investigación-Creación en Música y Sonido Cinematográfico'),
+        # Semana del Cine Colombiano (Cali) — el programa del lun 9 («Barrio Brother» y
+        # otros cortos locales) no tiene minutaje publicado: pedido a Arturo Murgas (2 nov)
+        ('semanacine-2026', 'Proyección de cortos locales'),
     }
     _viol = []
     for _fname in _ACTIVE:

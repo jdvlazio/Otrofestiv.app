@@ -31,33 +31,35 @@ ACCESO = 'Entrada libre (no se anuncia pago)'
 
 # (día, hora, título, sección, sede, sala, extra)
 FILAS = [
-    ('2026-11-03', '08:30', 'Conversatorio «Cine Colombiano: nuevo Café de Colombia»', 'Conversatorio', 'Acajel', '',
+    ('2026-11-03', '08:30', 'Conversatorio "Cine Colombiano: nuevo Café de Colombia"', 'Conversatorio', 'Acajel', '',
      {'sinopsis': 'Con Arturo Murgas (Semana del Cine Colombiano).'}),
     ('2026-11-03', '12:00', 'Lejos, aquí', 'Película', USC, 'Auditorio T-Usaca',
      {'director': 'Ana Sofía Osorio Ruiz', 'has_qa': True, '_nota': 'Presentación con Ana María Osorio (Directora)'}),
     ('2026-11-03', '18:00', 'Perro come perro', 'Cine Bajo las Estrellas', USC, 'Plazoleta de Los Sabios',
      {'director': 'Carlos Moreno', '_nota': 'Homenaje 20 años de la película Perro, Come Perro.'}),
-    ('2026-11-04', '09:00', 'Conversatorio «Experiencias y Vivencias en el Cine»', 'Conversatorio', USC, 'Auditorio 1101',
+    ('2026-11-04', '09:00', 'Conversatorio "Experiencias y Vivencias en el Cine"', 'Conversatorio', USC, 'Auditorio 1101',
      {'sinopsis': 'Con Jhonny Hendrix (director).'}),
     ('2026-11-04', '18:30', 'El Titán', 'Película', 'Teatrino Proyecto Oriente', '',
      {'director': 'Alexander Giraldo', 'has_qa': True,
       '_nota': 'Presentación con Alex Giraldo (Director). Homenaje a Elkin Ramírez (post p/DfMs0KoJgLT).'}),
     ('2026-11-05', '12:00', 'Chocó', 'Película', USC, 'Auditorio T-Usaca', {'director': 'Jhonny Hendrix'}),
     ('2026-11-05', '18:00', 'Anina', 'Película', USC, 'Auditorio T-Usaca', {'director': 'Alfredo Soderguit'}),
-    ('2026-11-06', '14:00', 'Conversatorio «El Metafilme Georgina»', 'Conversatorio', USC, 'Auditorio 1101',
+    ('2026-11-06', '14:00', 'Conversatorio "El Metafilme Georgina"', 'Conversatorio', USC, 'Auditorio 1101',
      {'sinopsis': 'Con Sebastián Ospina (actor y director).'}),
-    # HORA: la lámina general dice 5 pm; la pieza propia (p/DfBHkY-pbPy) «4:00 PM». Contradicción
-    # sin respuesta aún (correo a ajmurgas, 2 nov): va la más temprana (regla de Juan)
-    ('2026-11-06', '16:00', 'Conversatorio «Experiencias en la Dirección de 100 años de Soledad»', 'Conversatorio',
+    # HORA: la lámina general dice 5 pm; la pieza propia (p/DfBHkY-pbPy) «4:00 PM». Arturo Murgas
+    # (organización) lo confirmó por correo el 2 nov: «4 pm»
+    ('2026-11-06', '16:00', 'Conversatorio "Experiencias en la Dirección de 100 años de Soledad"', 'Conversatorio',
      'Casa Occio', '', {'sinopsis': 'Con Carlos Moreno (director).'}),
-    ('2026-11-09', '12:00', 'Conversatorio «Del Barrio a la Embajada»', 'Conversatorio', USC, 'Auditorio T-Usaca',
+    ('2026-11-09', '12:00', 'Conversatorio "Del Barrio a la Embajada"', 'Conversatorio', USC, 'Auditorio T-Usaca',
      {'sinopsis': 'Con Héctor Aguirre (fotógrafo y realizador).'}),
     ('2026-11-09', '13:00', 'Proyección de cortos locales', 'Proyección de cortos locales', USC, 'Auditorio T-Usaca',
      {'sinopsis': 'Presentación del video «Barrio Brother», realizado entre Cali y Nueva York.'}),
 ]
 NO_SE_PUBLICA = [{'dia': '2026-11-07', 'hora': '', 'actividad': 'Cine Bajo las Estrellas, película y encuentro musical (Centro Cultural Brisas de Mayo)',
                   'por_que': 'la lámina no da hora ni película (decisión de Juan, 2 nov)'}]
-EVENTOS = {'Conversatorio', 'Proyección de cortos locales'}
+# «Proyección de cortos locales» es una proyección (el video «Barrio Brother»), no un
+# evento: va como obra, y el tipo de evento «proyección» no existe en la app
+EVENTOS = {'Conversatorio'}
 
 
 def main():
@@ -66,7 +68,7 @@ def main():
         r = {'dia': dia, 'hora': hora, 'titulo': tit, 'sede': sede, 'sala': sala, 'ciudad': 'Cali',
              'seccion': sec, 'acceso': ACCESO, '_src': dict(SRC, fila=f'{dia} {hora} · {tit}')}
         if sec in EVENTOS:
-            r.update(tipo='evento', event_kind='conversatorio' if sec == 'Conversatorio' else 'proyección')
+            r.update(tipo='evento', event_kind='conversatorio')
         r.update(extra)
         funciones.append(r)
     io.open(OUT, 'w', encoding='utf-8').write(json.dumps({

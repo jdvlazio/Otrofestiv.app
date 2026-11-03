@@ -1153,9 +1153,9 @@ export const FESTIVAL_CONFIG={
     name:'Semana del Cine Colombiano',displayName:'Semana del Cine Colombiano',fullName:'Quinta Semana del Cine Colombiano',shortName:'SEMANA CINE COL',
     city:'Cali',country:'CO',
     dates:'3–9 NOV',dates_en:'NOV 3–9',year:2026,timezoneOffset:'-05:00',
-    // PROVISIONAL (pre-onboarding, 2 nov): no hay afiche de la edición; es la lámina
-    // «Programación 2026» de su IG (p/DfKgpBVpyUt), recortada a 2:3
-    keyArt:'/assets/keyart/semanacine2026.jpg',
+    // afiche oficial de la edición: lo mandó Arturo Murgas (organización) por correo
+    // el 2 nov, recortado a 2:3 por los lados
+    keyArt:'/assets/keyart/semanacine2026-v2.jpg',
     tagline:'Muestra de Cine Colombiano en Cali',
     storageKey:'semanacine2026_',festivalStartStr:'2026-11-03T00:00:00',festivalEndStr:'2026-11-09T23:59:00',
     festivalDates:{'2026-11-03':'2026-11-03','2026-11-04':'2026-11-04','2026-11-05':'2026-11-05','2026-11-06':'2026-11-06','2026-11-07':'2026-11-07','2026-11-08':'2026-11-08','2026-11-09':'2026-11-09'},
@@ -1311,6 +1311,10 @@ export const SECTION_ARCHETYPES = {
   '🦋 Rumbo a los Macondo': 'Perspectivas / Miradas',
   '🌎 FIACINE': 'Muestra / País',
   '🌙 Cinema Luna': 'Especiales / Eventos',
+  // Semana del Cine Colombiano (Cali, nov 2026): la palabra que su lámina pone a cada actividad
+  '🎬 Película': 'Muestra / País',
+  '🌌 Cine Bajo las Estrellas': 'Especiales / Eventos',
+  '🎞️ Proyección de Cortos Locales': 'Cortos / Programas',
   '🏡 Muestra Local': 'Muestra / País',
   '👻 Terror': 'Especiales / Eventos',
   '🪞 El Reflejo del Cine': 'Muestra / País',

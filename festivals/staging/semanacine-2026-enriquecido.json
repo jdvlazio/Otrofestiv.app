@@ -20,7 +20,11 @@
    "_director": "Alfredo Soderguit",
    "_sondeado": "2026-11-02",
    "poster": "/assets/semanacine-2026/anina.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "pais_heredado": "Colombia, Uruguay",
+   "_heredado": {
+    "pais_heredado": "catálogo w_FMSVXZ5D83WM (semanacine-2026)"
+   }
   },
   {
    "titulo": "Chocó",
@@ -38,7 +42,11 @@
    "_director": "Jhonny Hendrix",
    "_sondeado": "2026-11-02",
    "poster": "/assets/semanacine-2026/choco.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "pais_heredado": "Colombia",
+   "_heredado": {
+    "pais_heredado": "catálogo w_FMSRCQKPBZRZ (semanacine-2026)"
+   }
   },
   {
    "titulo": "El Titán",
@@ -56,7 +64,11 @@
    "_director": "Alexander Giraldo",
    "_sondeado": "2026-11-02",
    "poster": "/assets/semanacine-2026/el-titan.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "pais_heredado": "Colombia",
+   "_heredado": {
+    "pais_heredado": "catálogo w_FMSQKQAYT93A (semanacine-2026)"
+   }
   },
   {
    "titulo": "Lejos, aquí",
@@ -74,7 +86,11 @@
    "_director": "Ana Sofía Osorio Ruiz",
    "_sondeado": "2026-11-02",
    "poster": "/assets/semanacine-2026/lejos-aqui.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "pais_heredado": "Colombia",
+   "_heredado": {
+    "pais_heredado": "catálogo w_FMSMYR6H8CG8 (semanacine-2026)"
+   }
   },
   {
    "titulo": "Perro come perro",
@@ -93,7 +109,11 @@
    "_director": "Carlos Moreno",
    "_sondeado": "2026-11-02",
    "poster": "/assets/semanacine-2026/perro-come-perro.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "pais_heredado": "Colombia",
+   "_heredado": {
+    "pais_heredado": "catálogo w_FMSQ3J6GN5RV (semanacine-2026)"
+   }
   }
  ],
  "verificadas": {
@@ -112,7 +132,11 @@
    "_director": "Alfredo Soderguit",
    "_sondeado": "2026-11-02",
    "poster": "/assets/semanacine-2026/anina.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "pais_heredado": "Colombia, Uruguay",
+   "_heredado": {
+    "pais_heredado": "catálogo w_FMSVXZ5D83WM (semanacine-2026)"
+   }
   },
   "Chocó": {
    "tmdb_id": 327167,
@@ -129,7 +153,11 @@
    "_director": "Jhonny Hendrix",
    "_sondeado": "2026-11-02",
    "poster": "/assets/semanacine-2026/choco.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "pais_heredado": "Colombia",
+   "_heredado": {
+    "pais_heredado": "catálogo w_FMSRCQKPBZRZ (semanacine-2026)"
+   }
   },
   "El Titán": {
    "tmdb_id": 1270331,
@@ -146,7 +174,11 @@
    "_director": "Alexander Giraldo",
    "_sondeado": "2026-11-02",
    "poster": "/assets/semanacine-2026/el-titan.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "pais_heredado": "Colombia",
+   "_heredado": {
+    "pais_heredado": "catálogo w_FMSQKQAYT93A (semanacine-2026)"
+   }
   },
   "Lejos, aquí": {
    "tmdb_id": 1623557,
@@ -163,7 +195,11 @@
    "_director": "Ana Sofía Osorio Ruiz",
    "_sondeado": "2026-11-02",
    "poster": "/assets/semanacine-2026/lejos-aqui.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "pais_heredado": "Colombia",
+   "_heredado": {
+    "pais_heredado": "catálogo w_FMSMYR6H8CG8 (semanacine-2026)"
+   }
   },
   "Perro come perro": {
    "tmdb_id": 33558,
@@ -181,9 +217,20 @@
    "_director": "Carlos Moreno",
    "_sondeado": "2026-11-02",
    "poster": "/assets/semanacine-2026/perro-come-perro.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "pais_heredado": "Colombia",
+   "_heredado": {
+    "pais_heredado": "catálogo w_FMSQ3J6GN5RV (semanacine-2026)"
+   }
   }
  },
- "sin_ficha": [],
- "_sin_ficha_sondeo": {}
+ "sin_ficha": [
+  "Proyección de cortos locales"
+ ],
+ "_sin_ficha_sondeo": {
+  "Proyección de cortos locales": {
+   "director": "",
+   "fecha": "2026-11-02"
+  }
+ }
 }
