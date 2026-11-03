@@ -109,7 +109,7 @@ deliberada existe la etiqueta `frontera-ok`.
 | `jardin2026` | Festival de Cine de Jardín | Jardín | 24–27 SEP | Archivado |
 | `itagui2026` | Festicine Itagüí | Itagüí | 23–27 SEP | Archivado |
 | `girardota2026` | Festigirardota | Girardota | 30 SEP–4 OCT | Recién terminado |
-| `anibia2026` | Anibia | Bogotá | 20 OCT–1 NOV | **Próximo / activo** |
+| `anibia2026` | Anibia | Bogotá | 20 OCT–1 NOV | Recién terminado |
 | `guatape2026` | Guatapé Film Fest | Guatapé | 21–25 OCT | Recién terminado |
 | `cinetoro2026` | CINETORO | Toro | 10–15 NOV | **Próximo / activo** |
 | `cortoscali2026` | Cortos Cali | Cali | 27–30 OCT | Recién terminado |
@@ -118,7 +118,7 @@ deliberada existe la etiqueta `frontera-ok`.
 | `mamut2026` | Mamut | Medellín | 5–11 OCT | Recién terminado |
 | `filcmar2026` | FILCMAR | Marinilla | 9–13 OCT | Recién terminado |
 | `ficcali2026` | FICCALI | Cali | 16–25 OCT | Recién terminado |
-| `bhff2026` | Bogotá Horror | Bogotá | 22–31 OCT | **Próximo / activo** |
+| `bhff2026` | Bogotá Horror | Bogotá | 22–31 OCT | Recién terminado |
 | `ficica2026` | FICICA | Barranquilla | 20–24 OCT | Recién terminado |
 | `ficidi2026` | FICIDI | Barranquilla | 3–7 NOV | **Próximo / activo** |
 | `mambe2026` | MAMBE | Florencia | 3–7 NOV | **Próximo / activo** |
@@ -126,6 +126,7 @@ deliberada existe la etiqueta `frontera-ok`.
 | `midbo2026` | MIDBO | Bogotá | 27 OCT–4 NOV | **Próximo / activo** |
 | `mubibogota2026` | MUBI Fest | Bogotá | 24–25 OCT | Recién terminado |
 | `funza2026` | Festival de Cine Funza | Funza | 18–21 NOV | **Próximo / activo** |
+| `semanacine2026` | Semana del Cine Colombiano | Cali | 3–9 NOV | **Próximo / activo** |
 | `miradas2026` | Miradas Medellín | Medellín | 3–8 NOV | **Próximo / activo** |
 | `narrarelfuturo2026` | #NarrarElFuturo | Bogotá | 15–20 SEP | Archivado |
 

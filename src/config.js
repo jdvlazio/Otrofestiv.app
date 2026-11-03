@@ -1149,6 +1149,24 @@ export const FESTIVAL_CONFIG={
     prioLimit:3,eventPosterLabel:['EVENTO',''],
     films:null,posters:null,lbSlugs:{}
   },
+  'semanacine2026': {
+    name:'Semana del Cine Colombiano',displayName:'Semana del Cine Colombiano',fullName:'Quinta Semana del Cine Colombiano',shortName:'SEMANA CINE COL',
+    city:'Cali',country:'CO',
+    dates:'3–9 NOV',dates_en:'NOV 3–9',year:2026,timezoneOffset:'-05:00',
+    // afiche oficial de la edición: lo mandó Arturo Murgas (organización) por correo
+    // el 2 nov, recortado a 2:3 por los lados
+    keyArt:'/assets/keyart/semanacine2026-v2.jpg',
+    tagline:'Muestra de Cine Colombiano en Cali',
+    storageKey:'semanacine2026_',festivalStartStr:'2026-11-03T00:00:00',festivalEndStr:'2026-11-09T23:59:00',
+    festivalDates:{'2026-11-03':'2026-11-03','2026-11-04':'2026-11-04','2026-11-05':'2026-11-05','2026-11-06':'2026-11-06','2026-11-07':'2026-11-07','2026-11-08':'2026-11-08','2026-11-09':'2026-11-09'},
+    days:[{k:'2026-11-03',d:3,lbl:'MAR'},{k:'2026-11-04',d:4,lbl:'MIÉ'},{k:'2026-11-05',d:5,lbl:'JUE'},{k:'2026-11-06',d:6,lbl:'VIE'},{k:'2026-11-07',d:7,lbl:'SÁB'},{k:'2026-11-08',d:8,lbl:'DOM'},{k:'2026-11-09',d:9,lbl:'LUN'}],
+    dayKeys:['2026-11-03','2026-11-04','2026-11-05','2026-11-06','2026-11-07','2026-11-08','2026-11-09'],
+    dayShort:{'2026-11-03':'MAR 3','2026-11-04':'MIÉ 4','2026-11-05':'JUE 5','2026-11-06':'VIE 6','2026-11-07':'SÁB 7','2026-11-08':'DOM 8','2026-11-09':'LUN 9'},
+    dayShort_en:{'2026-11-03':'TUE 3','2026-11-04':'WED 4','2026-11-05':'THU 5','2026-11-06':'FRI 6','2026-11-07':'SAT 7','2026-11-08':'SUN 8','2026-11-09':'MON 9'},
+    dayLong:{'2026-11-03':'Martes 3 de noviembre','2026-11-04':'Miércoles 4 de noviembre','2026-11-05':'Jueves 5 de noviembre','2026-11-06':'Viernes 6 de noviembre','2026-11-07':'Sábado 7 de noviembre','2026-11-08':'Domingo 8 de noviembre','2026-11-09':'Lunes 9 de noviembre'},
+    prioLimit:3,eventPosterLabel:['EVENTO',''],
+    films:null,posters:null,lbSlugs:{}
+  },
   'miradas2026': {
     name:'Miradas Medellín',displayName:'Miradas Medellín',fullName:'Miradas Medellín 2026 — Festival de cine y artes audiovisuales',shortName:'MIRADAS',
     city:'Medellín',country:'CO',
@@ -1293,6 +1311,10 @@ export const SECTION_ARCHETYPES = {
   '🦋 Rumbo a los Macondo': 'Perspectivas / Miradas',
   '🌎 FIACINE': 'Muestra / País',
   '🌙 Cinema Luna': 'Especiales / Eventos',
+  // Semana del Cine Colombiano (Cali, nov 2026): la palabra que su lámina pone a cada actividad
+  '🎬 Película': 'Muestra / País',
+  '🌌 Cine Bajo las Estrellas': 'Especiales / Eventos',
+  '🎞️ Proyección de Cortos Locales': 'Cortos / Programas',
   '🏡 Muestra Local': 'Muestra / País',
   '👻 Terror': 'Especiales / Eventos',
   '🪞 El Reflejo del Cine': 'Muestra / País',
