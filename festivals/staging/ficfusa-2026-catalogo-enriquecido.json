@@ -2156,12 +2156,18 @@
   },
   {
    "titulo": "Animista",
-   "_fuente": "cinecorto",
-   "_cinecorto": "https://cinecorto.co/animista/",
-   "_verificado": "cinecorto.co, dirección: Sebastian Giraldo",
-   "anio": 2026,
-   "duracion_min": 8,
-   "sinopsis": "Karent investiga algunas memorias filmadas conversando con su abuela, acerca de una tradición familiar que conlleva ritual Animista en el que pueden descomponer su espíritu en varios fragmentos. Se prepara para hacerlo.",
+   "tmdb_id": 1817272,
+   "titulo_original": "Animista",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "Karent looks into filmed memories while talking with her grandmother about a family tradition involving an Animist ritual in which they can break their spirit into several fragments. She prepares to do it.",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 8,
+   "pais_tmdb": "",
+   "lbSlug": "animista",
+   "poster": "/assets/popayan-2026/animista.jpg",
+   "_verificado": "declarada a mano: alta del 4 nov 2026 con el afiche y el laurel de Popayán (Juan: el laurel se deja). Sin fecha en TMDB: el año está en conflicto, FICFUSA 2024 contra Popayán y Cinecorto 2026; duración 8 min según el catálogo (8:19)",
    "_ya_publicada": [
     {
      "festival": "popayan-2026",
@@ -2174,8 +2180,8 @@
      "sinopsis": "Karent investiga algunas memorias filmadas conversando con su abuela, acerca de una tradición familiar que conlleva ritual Animista en el que pueden descomponer su espíritu en varios fragmentos. Se prepara para hacerlo."
     }
    ],
-   "poster": "/assets/popayan-2026/animista.jpg",
-   "_afiche_de": "ya publicada en popayan-2026"
+   "sinopsis": "Karent investiga algunas memorias filmadas conversando con su abuela, acerca de una tradición familiar que conlleva ritual Animista en el que pueden descomponer su espíritu en varios fragmentos. Se prepara para hacerlo.",
+   "_sinopsis_de": "ya publicada en popayan-2026"
   },
   {
    "titulo": "Domingo",
@@ -4485,12 +4491,18 @@
    ]
   },
   "Animista": {
-   "_fuente": "cinecorto",
-   "_cinecorto": "https://cinecorto.co/animista/",
-   "_verificado": "cinecorto.co, dirección: Sebastian Giraldo",
-   "anio": 2026,
-   "duracion_min": 8,
-   "sinopsis": "Karent investiga algunas memorias filmadas conversando con su abuela, acerca de una tradición familiar que conlleva ritual Animista en el que pueden descomponer su espíritu en varios fragmentos. Se prepara para hacerlo.",
+   "tmdb_id": 1817272,
+   "titulo_original": "Animista",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "Karent looks into filmed memories while talking with her grandmother about a family tradition involving an Animist ritual in which they can break their spirit into several fragments. She prepares to do it.",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 8,
+   "pais_tmdb": "",
+   "lbSlug": "animista",
+   "poster": "/assets/popayan-2026/animista.jpg",
+   "_verificado": "declarada a mano: alta del 4 nov 2026 con el afiche y el laurel de Popayán (Juan: el laurel se deja). Sin fecha en TMDB: el año está en conflicto, FICFUSA 2024 contra Popayán y Cinecorto 2026; duración 8 min según el catálogo (8:19)",
    "_ya_publicada": [
     {
      "festival": "popayan-2026",
@@ -4503,8 +4515,8 @@
      "sinopsis": "Karent investiga algunas memorias filmadas conversando con su abuela, acerca de una tradición familiar que conlleva ritual Animista en el que pueden descomponer su espíritu en varios fragmentos. Se prepara para hacerlo."
     }
    ],
-   "poster": "/assets/popayan-2026/animista.jpg",
-   "_afiche_de": "ya publicada en popayan-2026"
+   "sinopsis": "Karent investiga algunas memorias filmadas conversando con su abuela, acerca de una tradición familiar que conlleva ritual Animista en el que pueden descomponer su espíritu en varios fragmentos. Se prepara para hacerlo.",
+   "_sinopsis_de": "ya publicada en popayan-2026"
   },
   "Domingo": {
    "tmdb_id": 1742409,
