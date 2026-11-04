@@ -23,6 +23,9 @@
  "festivalEndStr": "2026-11-08T23:59:00",
  "sharedSlotIsOneScreening": false,
  "dias_vacios": [],
+ "radar_salas_ok": {
+  "Laboratorio Materia": "es el taller «Materia expandida», no una sala: el radar leyó «Laboratorio Materia» en un comentario del vigía (4 nov)"
+ },
  "prioLimit": 3,
  "dias": [
   "2026-11-03",
@@ -9914,8 +9917,8 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-04T09:40:11",
-  "plan_sha": "1476fecbd41f2797",
+  "fecha": "2026-11-04T09:54:54",
+  "plan_sha": "e0e0ab6cfccb9084",
   "paso": 10,
   "cmd": "python3 pipeline/miradas-2026-verificar.py"
  }

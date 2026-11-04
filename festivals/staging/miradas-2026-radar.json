@@ -1,10 +1,10 @@
 {
  "_provenance": {
   "fuente": "issue de radar #1088 — https://github.com/jdvlazio/Otrofestiv.app/issues/1088",
-  "capturado": "2026-11-02",
+  "capturado": "2026-11-04",
   "titulo": "RADAR: Miradas Medellín — Festival de Cine y Artes Audiovisuales, Medellín, 3–8 NOV 2026",
   "estado": "OPEN",
-  "comentarios": 11
+  "comentarios": 15
  },
  "issue": 1088,
  "titulo": "RADAR: Miradas Medellín — Festival de Cine y Artes Audiovisuales, Medellín, 3–8 NOV 2026",
@@ -54,6 +54,22 @@
   {
    "fecha": "2026-11-02",
    "cuerpo": "Vigía 2 nov 09:15 — Miradas (https://www.instagram.com/p/DfNwV3QiVe6/): la lámina 6 pone «Papaya» en Coocine el JUEVES 5 nov 10:00 a. m. (app/PDF: mié 4 nov 10:00) y la lámina 8 pone «Narciso» en Biblioteca Comfama Bello el viernes 6 nov 7:00 p. m. (app/PDF: 16:00). Las otras 7 funciones de ese carrusel coinciden. Por confirmar con el festival."
+  },
+  {
+   "fecha": "2026-11-02",
+   "cuerpo": "Vigía 2 nov 13:00 — Miradas (IG por brightdata, @cinematecademedellin)\n\n**Hora contradictoria — «Uno vuelve siempre», jue 5 nov, Parque de los Deseos**\n- Post https://www.instagram.com/p/DfP4GD4hlpV/ (pie): «📍 Parque de los Deseos 🗓️ 5 de noviembre 🕡 6:00 p. m.» y aclara que *antes de la película* hay un ensamble musical (Escuelas de Música + instrumental de LDS). La lámina es un reel sin texto de horario: el dato es solo del pie, no confirmado en lámina.\n- El PDF de programación (sin cambios: sha 3c384848c3dc, el mismo de esta mañana) y la app dicen 7:00 p. m.\n- Lectura probable: el evento empieza a las 6:00 y la proyección a las 7:00. Si se aplica la regla de la hora más temprana, sería 18:00. Queda para que lo decida Onboarding.\n\nConfirmado en lámina, sin novedad: inaugural «Seis meses en el edificio rosa con azul» mar 3 nov 6:30 p. m. en el Pablo Tobón con director y productora (DfPlIllFJMo, la lámina de portada; hora y sede salen del pie). «Temporada de patos» mié 4 nov 7:30 p. m. en el Colombo Americano Sede Centro, proyección + conversación con el director (DfPrUSIBPXg, lámina 1). La app coincide en los dos, con has_qa=true.\n"
+  },
+  {
+   "fecha": "2026-11-03",
+   "cuerpo": "**Vigía 2 nov 21:00 — Miradas: 2 Q&A para publicar y 2 contradicciones para Juan** (IG por brightdata, @cinematecademedellin; láminas miradas a ojo + ig-lecturas)\n\nAPLICAR (Q&A, regla 1 nov):\n- **Cómo limpiar una casa en 10 pasos fáciles** — vie 6 nov 16:00, Teatro MAMM: lámina 4 de https://www.instagram.com/p/DfQcUMADWCP/ dice «Función con conversación» (y la lámina 4 de https://www.instagram.com/p/DfQi4P6Fq-A/ trae a Carolina González Valencia como invitada en esa función). La app: `has_qa` false.\n- **Relicto** — dom 8 nov 14:00, Teatro MAMM: lámina 5 de DfQcUMADWCP, «Función con conversación». La app: `has_qa` false.\n\nJUAN (contradicción que ninguna regla resuelve):\n- **Las pesadillas del siervo**: la lámina 3 de DfQi4P6Fq-A dice «Jueves 5 de noviembre, 6:00 p. m.» en Comfama La Capilla, con el director. El PDF oficial (sin cambios, sha 3c384848) y la app dicen vie 6 nov 18:00 La Capilla (más mié 4 19:00 Cineprox). En la app, el jue 5 a las 18:00 en La Capilla está «El río de los espíritus», así que mover la función choca con esa.\n- **Letanía, performance audiovisual** (jue 5 19:00): la lámina 9 de DfQi4P6Fq-A la pone en Parque Explora, Exploratorio; el PDF y la app, en el Planetario (auditorio). La misma lámina 9 pone el Laboratorio Materia expandida en el Planetario, mientras que la lámina 8 y la app lo ponen en Parque Explora: parece que la lámina intercambió las dos sedes.\n\nPara tener en cuenta, sin acción: Moscas (vie 6 19:00) la lámina 4 de DfQcUMADWCP la pone en la «Plazoleta MAMM», con 99 min y sin «conversación»; la app dice MAMM, 102 min y has_qa true. Duraciones de la lámina contra la app: Iván & Hadoum 101 contra 103, Narciso 100 contra 101. Todo lo demás de la grilla MAMM (mié 4 a dom 8) coincide en día, hora y sede.\n"
+  },
+  {
+   "fecha": "2026-11-04",
+   "cuerpo": "**Salas contra la app — 4 nov 2026**\n\nLas 11 funciones de la cartelera del MAMM coinciden en día, hora y sala, y todas son de entrada libre, como en la app. Fuente: https://www.elmamm.org/cine/\n\nPara revisar:\n\n1. **«Red de Creación Audiovisual de Medellín», sáb 7 nov, 8:00 a.m., Teatro MAMM (540 min).** Está en la app (PDF p. 83), pero la cartelera del MAMM ese día solo trae «Programa de cortos 4» a las 7:00 p.m. Puede ser que la cartelera no liste este tipo de evento. Sugerencia: confirmar con el festival; no cambiar nada todavía.\n2. **«Moscas», vie 6 nov, 7:00 p.m., Plazoleta.** La app marca conversación con el equipo (`has_qa`, `qa_type: team`, PDF p. 82). El MAMM la rotula «Función al aire libre», sin conversación, y sí la anuncia en otras funciones. Sugerencia: confirmar con el festival. Fuente: https://www.elmamm.org/producto/moscas/\n3. **Duraciones (menor).** Iván & Hadoum: app 103 min, MAMM 101. Narciso: app 101, MAMM 100. Moscas: app 102, MAMM 99.\n\nSin revisar:\n\n- **Colombo Americano (15 funciones):** la web responde con una verificación captcha; no se intentó saltar.\n- **10 actividades de industria en el Quinto piso del MAMM:** la cartelera de cine no las lista y la página de programación no las muestra en el HTML descargado.\n"
+  },
+  {
+   "fecha": "2026-11-04",
+   "cuerpo": "Vigía 4 nov. Tres horas de IG que no coinciden con la app. Ninguna aplicada.\n\n- «Narciso», vie 6 nov, Biblioteca Comfama Bello: la app dice 19:00 y [p/DfTkDBonHQ9](https://www.instagram.com/p/DfTkDBonHQ9/) lámina 3 dice 4:00 p. m. Los 19:00 son una afirmación `tipo: juan` del 2 nov (post del 1 nov), que le gana a `festival-ig`.\n- «Relicto», sáb 7 nov, Coocine sala 0: la app dice 14:00 y [p/DfUg6vuDC2o](https://www.instagram.com/p/DfUg6vuDC2o/) lámina 7 dice 5:00 p. m. El modelo da empate con el PDF y conflicto.\n- «Uno vuelve siempre», jue 5 nov, Parque de los Deseos: la app dice 18:00 (reel del 2 nov) y [p/DfTHoSpCYmi](https://www.instagram.com/p/DfTHoSpCYmi/) dice 6:30 p. m. Por la regla de la hora más temprana sigue en 18:00.\n\nLas dos primeras pasaron la triple lectura; las frenó el paso del `--probar`.\n"
   }
  ]
 }
