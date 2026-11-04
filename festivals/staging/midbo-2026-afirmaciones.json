@@ -568,6 +568,40 @@
     "fecha": "2026-10-27"
    },
    "evidencia": "https://www.instagram.com/p/DfTLJWpjXQg/ (3 nov 2026) lámina 3, pieza de CLAUSURA: «Miércoles 04 de noviembre 7:30 PM Q&A con directora», Cinemateca de Bogotá, Sala Capital. Leída a ojo; Vision y Tesseract leen el Q&A. La web no lo dice; el IG es más reciente."
+  },
+  {
+   "ancla": {
+    "sede": "Universidad Nacional de Colombia - Bogotá",
+    "dia": "2026-11-04",
+    "hora": "10:00"
+   },
+   "funcion": "f_37e27b916c",
+   "casilla": "sala",
+   "valor": "Auditorio 313, edificio 303C (NEA)",
+   "contra": "Sala AMA, edificio 303C (NEA)",
+   "fuente": {
+    "tipo": "festival-ig",
+    "url": "https://www.instagram.com/p/DfUeGkYFQbi/",
+    "fecha": "2026-11-04"
+   },
+   "evidencia": "lámina 2 del carrusel (4 nov, programación del día; 01.jpg en ig-lecturas): «10:00 a.m. · UNIVERSIDAD NACIONAL | AUDITORIO 313 EDIFICIO 303C (NEA) · Relicto · Función con Q&A». midbo.co decía Sala AMA; el IG es más reciente. Vision, Tesseract y a ojo coinciden."
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-11-04",
+    "hora": "14:00"
+   },
+   "funcion": "f_65c12af2cc",
+   "casilla": "has_qa",
+   "valor": true,
+   "contra": false,
+   "fuente": {
+    "tipo": "juan",
+    "frase": "El Instagram si es más reciente, es más actualizado que la web",
+    "fecha": "2026-10-27"
+   },
+   "evidencia": "https://www.instagram.com/p/DfUeGkYFQbi/ (4 nov 2026) lámina 5 (03.jpg en ig-lecturas): «2:00 p.m. · CINEMATECA DE BOGOTÁ | SALA CAPITAL · COMPETENCIA IBEROAMERICANA DE CORTOMETRAJE. PROGRAMA 3 · Función con Q&A virtual ★». La web no lo dice; el IG es más reciente. Vision, Tesseract y a ojo coinciden."
   }
  ]
 }
