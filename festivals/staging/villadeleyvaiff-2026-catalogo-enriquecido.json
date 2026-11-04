@@ -370,6 +370,20 @@
    "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
   },
   {
+   "titulo": "Lo que no se puede borrar",
+   "tmdb_id": 1817229,
+   "titulo_original": "Lo que no se puede borrar",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "A sister wakes up in the middle of the night and wakes the other. She says she saw their mother. She does not know whether she dreamed it or whether their mother was there. They talk in the dark, between breaths and memories that surface without warning.",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "",
+   "lbSlug": "lo-que-no-se-puede-borrar",
+   "_verificado": "declarada a mano: alta hecha el 4 nov 2026 con el afiche original, tras las sondas anti-duplicado"
+  },
+  {
    "titulo": "Tragedia sentimental",
    "tmdb_id": 1591726,
    "titulo_original": "Tragedia Sentimental",
@@ -1180,6 +1194,17 @@
   },
   {
    "titulo": "Noche de vuelo",
+   "tmdb_id": 1817231,
+   "titulo_original": "Noche de vuelo",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "A short film about a phone call between two people on the verge of suicide that holds back, for an instant, the leap into the void.",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 19,
+   "pais_tmdb": "",
+   "lbSlug": "noche-de-vuelo",
+   "_verificado": "declarada a mano: alta hecha el 4 nov 2026 con el afiche original, tras las sondas anti-duplicado",
    "_ya_publicada": [
     {
      "festival": "siembrafest-2026",
@@ -1678,6 +1703,19 @@
    "pais_tmdb": "",
    "lbSlug": "logos-2025-1",
    "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+  },
+  "Lo que no se puede borrar": {
+   "tmdb_id": 1817229,
+   "titulo_original": "Lo que no se puede borrar",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "A sister wakes up in the middle of the night and wakes the other. She says she saw their mother. She does not know whether she dreamed it or whether their mother was there. They talk in the dark, between breaths and memories that surface without warning.",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "",
+   "lbSlug": "lo-que-no-se-puede-borrar",
+   "_verificado": "declarada a mano: alta hecha el 4 nov 2026 con el afiche original, tras las sondas anti-duplicado"
   },
   "Tragedia sentimental": {
    "tmdb_id": 1591726,
@@ -2445,6 +2483,31 @@
    "sinopsis": "Entre más insiste en cumplir su rol de padre proveedor, Henry más se aleja de la posibilidad de volver a su hogar. Desde la finca de su hermano, él busca vender un ternero para así enviar dinero a su casa. Las malas posturas arrojarán su cuerpo, cansado de insistir.",
    "_sinopsis_de": "ya publicada en ficica-2026"
   },
+  "Noche de vuelo": {
+   "tmdb_id": 1817231,
+   "titulo_original": "Noche de vuelo",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "A short film about a phone call between two people on the verge of suicide that holds back, for an instant, the leap into the void.",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 19,
+   "pais_tmdb": "",
+   "lbSlug": "noche-de-vuelo",
+   "_verificado": "declarada a mano: alta hecha el 4 nov 2026 con el afiche original, tras las sondas anti-duplicado",
+   "_ya_publicada": [
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "Noche de vuelo",
+     "poster": "/assets/siembrafest/noche-de-vuelo.jpg",
+     "posterSource": "oficial",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "19 min",
+     "genre": "Ficción"
+    }
+   ]
+  },
   "Refracción": {
    "tmdb_id": 1584776,
    "titulo_original": "Refracción",
@@ -2594,9 +2657,7 @@
   "Las criaturas",
   "Lia",
   "Lo que calla el hoyo",
-  "Lo que no se puede borrar",
   "Loop",
-  "Noche de vuelo",
   "Rol – El río se llevaba las manchas de la vida",
   "Zakih",
   "¡Florecerán!"
