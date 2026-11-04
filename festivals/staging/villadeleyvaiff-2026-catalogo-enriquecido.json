@@ -554,6 +554,21 @@
    "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
   },
   {
+   "titulo": "Bumblebee",
+   "tmdb_id": 899567,
+   "titulo_original": "Николай Римский-Корсаков. Полет Шмеля",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "Animated film from the almanac of classical music for children “Children’s Album”.",
+   "genero": "Animación",
+   "anio_tmdb": 2020,
+   "duracion_tmdb": 2,
+   "pais_tmdb": "Belarus, Russia",
+   "title_en": "Nikolai Rimsky-Korsakov. Flight of the Bumblebee",
+   "lbSlug": "nikolai-rimsky-korsakov-flight-of-the-bumblebee",
+   "_verificado": "declarada a mano: título en TMDB «Nikolai Rimsky-Korsakov. Flight of the Bumblebee», misma dirección (Natalia Chernysheva, Rusia-Bielorrusia), del almanaque «Children's Album». El still publicado por CUFF tiene el mismo dibujo que la lámina: abejorro fotografiado sobre personaje en negro y amarillo y fondo con trazos"
+  },
+  {
    "titulo": "Cuna de lobas",
    "tmdb_id": 1797587,
    "titulo_original": "Cuna de Lobas",
@@ -925,6 +940,20 @@
    "_verificado": "declarada a mano: traducción de «Моя маленькая жизнь на острове», misma dirección (Nina Bisyarina), que la lámina acredita como Rusia"
   },
   {
+   "titulo": "Snorri",
+   "tmdb_id": 1660120,
+   "titulo_original": "Snorri 4D - Catch Me If You Candy",
+   "poster_path": "/jrKOyBkfxi8uZEG2h05PPmKZrSE.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "",
+   "genero": "Animación",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "Germany",
+   "lbSlug": "snorri-4d-catch-me-if-you-candy",
+   "_verificado": "declarada a mano: «Snorri 4D - Catch Me If You Candy» (2026, Alemania). TMDB no acredita dirección y el candado no la ve; Blooloop la da dirigida por Thierry Marchand, 10 min. El afiche de TMDB y el still de la lámina muestran el mismo pulpo azul con casco vikingo, la paleta de caramelo y el cangrejo"
+  },
+  {
    "titulo": "Agachar el rostro",
    "tmdb_id": 1595079,
    "titulo_original": "Agachar el rostro",
@@ -1116,8 +1145,8 @@
    "pais_tmdb": "Colombia",
    "title_en": "Bad Postures",
    "lbSlug": "bad-postures",
-   "_verificado": "el catálogo ya la tiene (w_R4KECG9BFSX8, ficica-2026, jardin-2026)",
-   "work_id": "w_R4KECG9BFSX8",
+   "poster": "/assets/villadeleyvaiff-2026/malas-posturas.jpg",
+   "_verificado": "declarada a mano: misma ficha que ya encontraba el candado (Juan Pablo Castro, Colombia, 2025, 17 min); TMDB no tiene afiche y cinecorto.co publica el oficial, recortado a los lados 1,3 % para la proporción",
    "_ya_publicada": [
     {
      "festival": "ficica-2026",
@@ -1822,6 +1851,20 @@
    "lbSlug": "mare-2026-1",
    "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
   },
+  "Bumblebee": {
+   "tmdb_id": 899567,
+   "titulo_original": "Николай Римский-Корсаков. Полет Шмеля",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "Animated film from the almanac of classical music for children “Children’s Album”.",
+   "genero": "Animación",
+   "anio_tmdb": 2020,
+   "duracion_tmdb": 2,
+   "pais_tmdb": "Belarus, Russia",
+   "title_en": "Nikolai Rimsky-Korsakov. Flight of the Bumblebee",
+   "lbSlug": "nikolai-rimsky-korsakov-flight-of-the-bumblebee",
+   "_verificado": "declarada a mano: título en TMDB «Nikolai Rimsky-Korsakov. Flight of the Bumblebee», misma dirección (Natalia Chernysheva, Rusia-Bielorrusia), del almanaque «Children's Album». El still publicado por CUFF tiene el mismo dibujo que la lámina: abejorro fotografiado sobre personaje en negro y amarillo y fondo con trazos"
+  },
   "Cuna de lobas": {
    "tmdb_id": 1797587,
    "titulo_original": "Cuna de Lobas",
@@ -2184,6 +2227,19 @@
    "lbSlug": "film:1510119",
    "_verificado": "declarada a mano: traducción de «Моя маленькая жизнь на острове», misma dirección (Nina Bisyarina), que la lámina acredita como Rusia"
   },
+  "Snorri": {
+   "tmdb_id": 1660120,
+   "titulo_original": "Snorri 4D - Catch Me If You Candy",
+   "poster_path": "/jrKOyBkfxi8uZEG2h05PPmKZrSE.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "",
+   "genero": "Animación",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "Germany",
+   "lbSlug": "snorri-4d-catch-me-if-you-candy",
+   "_verificado": "declarada a mano: «Snorri 4D - Catch Me If You Candy» (2026, Alemania). TMDB no acredita dirección y el candado no la ve; Blooloop la da dirigida por Thierry Marchand, 10 min. El afiche de TMDB y el still de la lámina muestran el mismo pulpo azul con casco vikingo, la paleta de caramelo y el cangrejo"
+  },
   "Agachar el rostro": {
    "tmdb_id": 1595079,
    "titulo_original": "Agachar el rostro",
@@ -2356,8 +2412,8 @@
    "pais_tmdb": "Colombia",
    "title_en": "Bad Postures",
    "lbSlug": "bad-postures",
-   "_verificado": "el catálogo ya la tiene (w_R4KECG9BFSX8, ficica-2026, jardin-2026)",
-   "work_id": "w_R4KECG9BFSX8",
+   "poster": "/assets/villadeleyvaiff-2026/malas-posturas.jpg",
+   "_verificado": "declarada a mano: misma ficha que ya encontraba el candado (Juan Pablo Castro, Colombia, 2025, 17 min); TMDB no tiene afiche y cinecorto.co publica el oficial, recortado a los lados 1,3 % para la proporción",
    "_ya_publicada": [
     {
      "festival": "ficica-2026",
@@ -2527,7 +2583,6 @@
  "sin_ficha": [
   "A la sombra de los árboles",
   "Baile por la ciudad",
-  "Bumblebee",
   "Criatura",
   "Dance dance evolution",
   "Danza de las muñecas",
@@ -2543,7 +2598,6 @@
   "Loop",
   "Noche de vuelo",
   "Rol – El río se llevaba las manchas de la vida",
-  "Snorri",
   "Zakih",
   "¡Florecerán!"
  ]
