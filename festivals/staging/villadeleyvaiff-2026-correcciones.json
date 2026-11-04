@@ -106,9 +106,6 @@
   "Lia": {
    "_por_que": "sin ficha TMDB verificable (ni título idéntico, ni traducción, ni créditos de la dirección); las láminas de @festcinevilla y los PDF de la web (28–29 oct) son stills bajo banda de color, no afiches"
   },
-  "Lo que no se puede borrar": {
-   "_por_que": "sin ficha TMDB verificable (ni título idéntico, ni traducción, ni créditos de la dirección); las láminas de @festcinevilla y los PDF de la web (28–29 oct) son stills bajo banda de color, no afiches"
-  },
   "El derrumbe": {
    "_por_que": "ficha TMDB 1717008 sin afiche; las láminas de @festcinevilla y los PDF de la web (28–29 oct) son stills bajo banda de color, no afiches"
   },
@@ -139,11 +136,20 @@
   "Criatura": {
    "_por_que": "lo publicado en Jardín 2026 es un fotograma, no un afiche, sin ficha TMDB verificable; las láminas de @festcinevilla y los PDF de la web (28–29 oct) son stills bajo banda de color, no afiches"
   },
-  "Noche de vuelo": {
-   "_por_que": "lo publicado en SiembraFest es su tarjeta de sección, no un afiche, sin ficha TMDB verificable; las láminas de @festcinevilla y los PDF de la web (28–29 oct) son stills bajo banda de color, no afiches"
-  },
   "Lo que calla el hoyo": {
    "_por_que": "sin ficha TMDB verificable (ni título idéntico, ni traducción, ni créditos de la dirección); las láminas de @festcinevilla y los PDF de la web (28–29 oct) son stills bajo banda de color, no afiches"
+  }
+ },
+ "afiches_sin_ficha": {
+  "Lo que no se puede borrar": {
+   "poster": "/assets/villadeleyvaiff-2026/lo-que-no-se-puede-borrar.jpg",
+   "_fuente": "https://syncrofilmfest.com/lo-que-no-se-puede-borrar/",
+   "_por_que": "afiche oficial con título y dirección impresos; la obra no tiene ficha TMDB y espera el alta"
+  },
+  "Noche de vuelo": {
+   "poster": "/assets/villadeleyvaiff-2026/noche-de-vuelo.jpg",
+   "_fuente": "https://cinedidymedome.co/resenas/2025/10/29/noche-de-vuelo-2025/",
+   "_por_que": "afiche con el título y las escenas de la obra, recortado solo en el margen lateral; la obra no tiene ficha TMDB y espera el alta"
   }
  }
 }
