@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, emparejado con ficha_verifica() (director + año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-11-02"
+  "capturado": "2026-11-04"
  },
  "obras": [
   {
@@ -602,6 +602,24 @@
    ],
    "poster": "/assets/miradas-2026/ivan-hadoum.jpg",
    "posterSource": "tmdb"
+  },
+  {
+   "titulo": "La danza de los ángeles",
+   "tmdb_id": 1809915,
+   "titulo_original": "La danza de los ángeles",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "A group of young people conquer the heavens and return to earth as angels. But they are invisible to mortals. Only an old camcorder, forgotten in a family drawer, is capable of capturing a faint trace of their presence.",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 15,
+   "pais_tmdb": "Colombia",
+   "title_en": "The Dance of the Angels",
+   "lbSlug": "the-dance-of-the-angels",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "La danza de los ángeles",
+   "_director": "Juan Restrepo Molina",
+   "_sondeado": "2026-11-04"
   },
   {
    "titulo": "La mona",
@@ -2472,6 +2490,23 @@
    "poster": "/assets/miradas-2026/ivan-hadoum.jpg",
    "posterSource": "tmdb"
   },
+  "La danza de los ángeles": {
+   "tmdb_id": 1809915,
+   "titulo_original": "La danza de los ángeles",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "A group of young people conquer the heavens and return to earth as angels. But they are invisible to mortals. Only an old camcorder, forgotten in a family drawer, is capable of capturing a faint trace of their presence.",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 15,
+   "pais_tmdb": "Colombia",
+   "title_en": "The Dance of the Angels",
+   "lbSlug": "the-dance-of-the-angels",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "La danza de los ángeles",
+   "_director": "Juan Restrepo Molina",
+   "_sondeado": "2026-11-04"
+  },
   "La mona": {
    "tmdb_id": 1444298,
    "titulo_original": "La Mona",
@@ -3724,7 +3759,6 @@
   "Entreluz",
   "Falcon 98",
   "Kof-kof",
-  "La danza de los ángeles",
   "La escucha, la razón. Memoria acústica de un mural",
   "La muerte nos declaró adultos",
   "Luis Antonio",
@@ -3740,99 +3774,95 @@
  "_sin_ficha_sondeo": {
   "ACDM": {
    "director": "Ilgin İçözü, Bruno Tripodi, Jana Tox",
-   "fecha": "2026-10-27"
+   "fecha": "2026-11-04"
   },
   "ASCII Sound Experience": {
    "director": "Julián Angarita",
-   "fecha": "2026-10-27"
+   "fecha": "2026-11-04"
   },
   "Alga-Rio": {
    "director": "Cristóbal Parra, Almendra Díaz",
-   "fecha": "2026-10-27"
+   "fecha": "2026-11-04"
   },
   "Chapecó, el último sobreviviente: nace una hermandad": {
    "director": "Edison Vanegas Álvarez",
-   "fecha": "2026-10-27"
+   "fecha": "2026-11-04"
   },
   "Chico de barrio": {
    "director": "Juan David Echavarría Urrego",
-   "fecha": "2026-10-27"
+   "fecha": "2026-11-04"
   },
   "De: Saúl": {
    "director": "Santiago Gomxz",
-   "fecha": "2026-10-27"
+   "fecha": "2026-11-04"
   },
   "El paradero": {
    "director": "Semillero Colectivo Cinestrato",
-   "fecha": "2026-10-27"
+   "fecha": "2026-11-04"
   },
   "El teléfono morado": {
    "director": "Taller de Cine Corporación Mi Comuna",
-   "fecha": "2026-10-27"
+   "fecha": "2026-11-04"
   },
   "El vuelo 2.0": {
    "director": "Jhon Melo",
-   "fecha": "2026-10-27"
+   "fecha": "2026-11-04"
   },
   "Entreluz": {
    "director": "Jorge Bandera",
-   "fecha": "2026-10-27"
+   "fecha": "2026-11-04"
   },
   "Falcon 98": {
    "director": "Yosman Serrano Lindarte",
-   "fecha": "2026-10-27"
+   "fecha": "2026-11-04"
   },
   "Kof-kof": {
    "director": "Juan David Cardona Arboleda",
-   "fecha": "2026-10-27"
-  },
-  "La danza de los ángeles": {
-   "director": "Juan Restrepo Molina",
-   "fecha": "2026-10-27"
+   "fecha": "2026-11-04"
   },
   "La escucha, la razón. Memoria acústica de un mural": {
    "director": "Juan David Bolívar Araque",
-   "fecha": "2026-10-27"
+   "fecha": "2026-11-04"
   },
   "La muerte nos declaró adultos": {
    "director": "Luisa María Charry Valencia",
-   "fecha": "2026-10-27"
+   "fecha": "2026-11-04"
   },
   "Luis Antonio": {
    "director": "Juan José Arias Gil",
-   "fecha": "2026-10-27"
+   "fecha": "2026-11-04"
   },
   "Mamá chila: raíz y corazón de la comunidad": {
    "director": "Arbey Antonio Gómez Muñoz",
-   "fecha": "2026-10-27"
+   "fecha": "2026-11-04"
   },
   "Materia ondulatoria": {
    "director": "Daniel Shambo, Pierre Puentes",
-   "fecha": "2026-10-27"
+   "fecha": "2026-11-04"
   },
   "Oro molido # 2": {
    "director": "Juan David Medrano",
-   "fecha": "2026-10-27"
+   "fecha": "2026-11-04"
   },
   "Paralelo": {
    "director": "Escuela de Comunicación Comunitaria",
-   "fecha": "2026-10-27"
+   "fecha": "2026-11-04"
   },
   "Sentidos en disputa": {
    "director": "Carlos Serrano, José Miguel Mejía",
-   "fecha": "2026-10-27"
+   "fecha": "2026-11-04"
   },
   "Sputnik": {
    "director": "Juan Pablo Sánchez",
-   "fecha": "2026-10-27"
+   "fecha": "2026-11-04"
   },
   "Un día en la vida de...": {
    "director": "Carlos Álvarez",
-   "fecha": "2026-10-27"
+   "fecha": "2026-11-04"
   },
   "Éther, somos todo": {
    "director": "Fabián Cataño Torres",
-   "fecha": "2026-10-27"
+   "fecha": "2026-11-04"
   }
  }
 }

@@ -269,6 +269,21 @@ ACTIVACIONES = [
                  'proyectaran fragmentos de las peliculas Fragmentos (1999), Batallas Sagradas (2002), Quién paga el pato '
                  '(2001) para las que Roberto García hizo la música.',
      '_src': _SRC_ACT},
+    # LA ACTIVACIÓN DEL ÚLTIMO DÍA (post de @midbo_doc del 4 nov, instagram.com/p/DfUeGkYFQbi,
+    # lámina 05.jpg): «Obras instalativas · Circo · Activación en vivo», 3:00 p.m., Sala E.
+    # La lámina no da hora de fin → duración ESTIMADA en 60 min. Sinopsis: midbo.co/obras/circo/.
+    {'titulo': 'Circo', 'dia': '2026-11-04', 'hora': '15:00',
+     'sede': 'Cinemateca de Bogotá', 'sala': 'Sala E', 'ciudad': 'Bogotá',
+     'tipo': 'evento', 'event_kind': 'evento', 'seccion': 'Documental Expandido',
+     'duracion_min': 60, '_duracion_de': 'estimada: la lámina no da hora de fin',
+     'acceso': 'Entrada libre (no se anuncia pago)',
+     'invitados': 'Daniel Torres.',
+     'sinopsis': 'Circo convierte una carpa construida con retazos de tela en un dispositivo de memoria. En su '
+                 'interior, los recuerdos de infancia de “Lolita” reaparecen de manera fragmentaria a través de '
+                 'imágenes en 16 mm, video, voces y variaciones de luz. Daniel Torres articula estos elementos '
+                 'mediante una operación performativa en la que las proyecciones se desplazan sobre las superficies '
+                 'textiles, transformándolas en pantallas inestables y cuerpos en movimiento.',
+     '_src': {'url': 'https://www.instagram.com/p/DfUeGkYFQbi/', 'date': '2026-11-04'}},
     # LA ACTIVACIÓN EN EL PARQUE DE LOS PERIODISTAS (post de @midbo_doc del 30
     # oct, instagram.com/p/DfH6g9fB58A, 1 lámina + pie, leídos vía Apify el 30
     # oct): no está en midbo.co. Título verbatim en caja de oración (la lámina va
