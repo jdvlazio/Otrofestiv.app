@@ -169,7 +169,7 @@ test('T58 — Planear recalcula al entrar, salvo si ya hay plan guardado', async
 });
 
 // 17 ago 2026 — el worker llevaba DÍAS muerto y nadie lo vio: screeningPlannable
-// entró a _SCHED_PURE_FNS sin su import en calc.js, eval(name) tiraba
+// entró a _SCHED_PURE_FNS sin su import en calc.js, eval(name) tiraba (sin eval desde el 26 oct)
 // ReferenceError, y TODO cálculo caía al fallback síncrono en el main thread.
 // El guardián estático y el test de paridad estaban verdes (el primero solo
 // miraba que la fn existiera; el segundo ensambla desde las fuentes del dominio,

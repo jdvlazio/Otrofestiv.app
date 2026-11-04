@@ -35,6 +35,18 @@ _frenar(){  # $1 = qué falló; $2 = el detalle. Por ARGUMENTO, no por pipe: den
 _sucio=$(git status --porcelain --untracked-files=no)
 [ -z "$_sucio" ] || _frenar 'hay cambios sin commitear (¿bump a medias?)' "$_sucio"
 
+# 1·bis. La frontera código/datos, la MISMA regla que el CI (scripts/frontera.sh).
+# Contra origin/main: es lo que verá el PR. Una rama de datos con una línea de
+# validate.py se frena acá en un segundo, no tras 20 min de CI (#1338, 28 oct).
+# Un push a `main` o a `datos` no es un PR: no aplica.
+_rama=$(git rev-parse --abbrev-ref HEAD 2>/dev/null)
+if [ -f scripts/frontera.sh ] && [ "$_rama" != main ] && [ "$_rama" != datos ] \
+   && git rev-parse -q --verify origin/main >/dev/null; then
+  salida=$(bash scripts/frontera.sh "$(git merge-base origin/main HEAD)" HEAD 2>&1) \
+    || _frenar 'mezcla código y datos: van en dos PR (primero el de código)' \
+         "$(printf '%s\n' "$salida" | sed -n '/^Código:/,$p' | grep -v '::error::')"
+fi
+
 # 2. validate.py
 salida=$(python3 validate.py 2>&1) || true
 if printf '%s' "$salida" | grep -q "PUSH BLOQUEADO"; then

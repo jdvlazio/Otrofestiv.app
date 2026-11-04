@@ -45,14 +45,27 @@ RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CONFIG = os.path.join(RAIZ, 'src', 'config.js')
 CUENTAS = os.path.join(RAIZ, 'pipeline', 'ig-vigia-cuentas.json')
 ESTADO = os.path.expanduser('~/.otrofestiv/ig-vigia-estado.json')
+CERRADOS = os.path.expanduser('~/.otrofestiv/palmares-cerrados.json')
 SALIDA = os.path.join(RAIZ, 'fuentes', 'ig-vigia')
 
 CAMINO = 7        # días antes del inicio en que se empieza a mirar
 TERMINADO = 8     # días después del fin en que se sigue mirando (palmarés)
 DIARIO_H = 20     # horas mínimas entre consultas de un festival terminado
-LIMITE = 10       # posts máximos por cuenta y corrida
+LIMITE = 5        # posts máximos por cuenta y corrida (26 oct: 10→5 para no pasar el plan gratis; 3 corridas al día bastan)
 PRIMERA_VEZ_D = 3  # sin historial: mirar solo los últimos N días
 ACTOR = 'apify~instagram-post-scraper'
+# RESPALDO (2 nov 2026): lobstr.io, plan gratis de 100 posts/mes, sin cuenta de
+# Instagram (lee solo lo público). Entra cuando a Apify le queda menos de
+# APIFY_PISO_USD del mes o cuando una llamada a Apify falla por HTTP (el 502
+# del 2 nov tumbó la corrida entera). Devuelve hasta 10 láminas por carrusel;
+# las demás se bajan por el embed como siempre.
+APIFY_PISO_USD = 1.0
+LOBSTR_CRAWLER = 'd25fddae52eb78eb385e60bc2adb6d1e'   # Instagram Post Scraper
+LOBSTR_SQUID = 'otrofestiv-vigia'
+# lobstr NO respeta `hours_back` (2 nov: con 3 h devolvió posts de hace 15 y 20 h)
+# y cobra cada post devuelto: se topa por cuenta y corrida más bajo que Apify
+LOBSTR_LIMITE = 2
+BRIGHTDATA_DATASET = 'gd_lk5ns7kz21pck8jpis'   # Instagram Posts
 ACTOR_FB = 'apify~facebook-posts-scraper'
 
 _ENTRADA = re.compile(r"\n\s{2}'?([a-z0-9]+)'?\s*:\s*\{")
@@ -74,8 +87,9 @@ def festivales_config(texto):
     return out
 
 
-def vigilados(config, cuentas, ahora):
-    """Lista de {id, cuenta, tier} que tocan hoy. tier: 'vivo' | 'terminado'."""
+def vigilados(config, cuentas, ahora, cerrados=()):
+    """Lista de {id, cuenta, tier} que tocan hoy. tier: 'vivo' (en curso o
+    empieza mañana: cada corrida) | 'camino' | 'terminado' (una vez al día)."""
     fests = dict(config)
     for fid, cta in cuentas.get('festivales', {}).items():
         if fid in fests and not fests[fid]['cuenta']:
@@ -89,9 +103,17 @@ def vigilados(config, cuentas, ahora):
             continue
         ini = datetime.strptime(f['inicio'], '%Y-%m-%d').date()
         fin = datetime.strptime(f['fin'], '%Y-%m-%d').date()
-        if ini - timedelta(days=CAMINO) <= hoy <= fin:
+        if ini - timedelta(days=1) <= hoy <= fin:
             out.append({'id': fid, 'cuenta': f['cuenta'], 'tier': 'vivo'})
-        elif fin < hoy <= fin + timedelta(days=TERMINADO):
+        elif ini - timedelta(days=CAMINO) <= hoy < ini - timedelta(days=1):
+            # En camino: una vez al día. Apify cobra cada consulta aunque no haya
+            # posts nuevos (~US$0,003 por cuenta): mirar 3 veces al día una cuenta
+            # que publica una selección por semana era casi todo el gasto (26 oct).
+            out.append({'id': fid, 'cuenta': f['cuenta'], 'tier': 'camino'})
+        elif fin < hoy <= fin + timedelta(days=TERMINADO) and fid not in cerrados:
+            # Terminado: solo se mira por el palmarés. Si el vigía lo declaró
+            # COMPLETO (todas las categorías anunciadas tienen ganadora publicada,
+            # con evidencia en palmares-cerrados.json) deja de mirarse.
             out.append({'id': fid, 'cuenta': f['cuenta'], 'tier': 'terminado'})
     return out
 
@@ -162,7 +184,7 @@ def clasificar_fb(items, paginas, estado):
 
 
 def toca(v, estado, ahora):
-    """¿Se consulta esta cuenta en esta corrida? (terminados: una vez al día)."""
+    """¿Se consulta esta cuenta en esta corrida? (camino y terminados: una vez al día)."""
     if v['tier'] == 'vivo':
         return True
     ult = estado.get(v['cuenta'], {}).get('consultado')
@@ -179,6 +201,17 @@ def desde(cuentas, estado, ahora):
         fechas.append(datetime.fromisoformat(u) - timedelta(hours=1) if u
                       else ahora - timedelta(days=PRIMERA_VEZ_D))
     return min(fechas).strftime('%Y-%m-%dT%H:%M:%S')
+
+
+def apify_por_cuenta(cuentas, estado, ahora, token):
+    """Una llamada por cuenta, cada una desde SU última consulta (26 oct). Con
+    una sola llamada desde la fecha más vieja del grupo, Apify devolvía —y
+    cobraba— posts de las cuentas recientes que ya teníamos. Apify cobra por
+    ítem devuelto, no por llamada: partirlas no cuesta más. En paralelo."""
+    from concurrent.futures import ThreadPoolExecutor
+    with ThreadPoolExecutor(max_workers=5) as ex:
+        lotes = ex.map(lambda c: apify([c], desde([c], estado, ahora), token), cuentas)
+    return [it for lote in lotes for it in lote]
 
 
 def clasificar(items, cuentas, estado):
@@ -215,6 +248,16 @@ def clasificar(items, cuentas, estado):
 
 
 def apify(cuentas, desde_iso, token):
+    """Un error HTTP de Apify (502, 429…) ya no tumba la corrida (2 nov): vuelve
+    como ítem de error por cuenta, que `clasificar` manda a NO_PUDE_LEER y el
+    respaldo de lobstr reintenta."""
+    try:
+        return _apify(cuentas, desde_iso, token)
+    except Exception as ex:  # noqa: BLE001 — urllib, timeout, JSON roto: todo es «no se leyó»
+        return [{'error': 'http', 'errorDescription': f'Apify: {ex}', 'username': c} for c in cuentas]
+
+
+def _apify(cuentas, desde_iso, token):
     cuerpo = json.dumps({'username': cuentas, 'resultsLimit': LIMITE,
                          'onlyPostsNewerThan': desde_iso, 'skipPinnedPosts': True}).encode()
     url = (f'https://api.apify.com/v2/acts/{ACTOR}/run-sync-get-dataset-items'
@@ -257,6 +300,192 @@ def vigilar_fb(cuentas_json, estado, ahora, token, informe):
                                                'texto': (it.get('text') or '')[:300]})
 
 
+def apify_saldo(token):
+    """USD que le quedan a Apify en el mes, o None si no se pudo saber."""
+    try:
+        with urllib.request.urlopen(f'https://api.apify.com/v2/users/me/limits?token={token}', timeout=30) as r:
+            d = json.load(r)['data']
+        return d['limits']['maxMonthlyUsageUsd'] - d['current']['monthlyUsageUsd']
+    except Exception:  # noqa: BLE001
+        return None
+
+
+def _lobstr(metodo, ruta, clave, cuerpo=None):
+    req = urllib.request.Request(f'https://api.lobstr.io/v1/{ruta}', method=metodo,
+                                 data=json.dumps(cuerpo).encode() if cuerpo is not None else None,
+                                 headers={'Authorization': f'Token {clave}', 'Content-Type': 'application/json'})
+    with urllib.request.urlopen(req, timeout=60) as r:
+        return json.load(r)
+
+
+def lobstr_a_apify(x):
+    """Un resultado de lobstr con la forma de un ítem de Apify: así `clasificar`,
+    el informe y ig_posts.py lo leen sin saber de dónde vino."""
+    hijos = [x[f'child_post_{i}'] for i in range(1, 11) if isinstance(x.get(f'child_post_{i}'), dict)]
+    ts = x.get('timestamp_datetime') or ''
+    return {'shortCode': x.get('shortcode'), 'url': x.get('url'), 'timestamp': ts,
+            'ownerUsername': x.get('owner_username'), 'caption': x.get('caption') or '',
+            'coauthorProducers': [{'username': c.get('username')} for c in x.get('coauthors') or []],
+            'displayUrl': x.get('display_url'), 'type': x.get('media_type'),
+            'childPosts': [{'displayUrl': h.get('display_url')} for h in hijos],
+            'laminas_total': x.get('carousel_media_count') or len(hijos),
+            '_via': 'lobstr'}
+
+
+def completar_laminas(it, leer=None):
+    """lobstr corta el carrusel en 10 láminas (2 nov: MIDBO publicó uno de 20).
+    Si el post tiene más, se piden todas al embed público —gratis, sin cuenta—.
+    Si el embed falla, queda lo que trajo lobstr y `laminas_incompletas` lo dice."""
+    total = it.get('laminas_total') or 0
+    if total <= len(it.get('childPosts') or []):
+        return it
+    try:
+        if leer is None:
+            from ig_carrusel import laminas as leer
+        it['childPosts'] = [{'displayUrl': l['url']} for l in leer(it['shortCode'])['laminas']]
+    except BaseException:  # noqa: BLE001 — ig_carrusel sale con SystemExit
+        it['laminas_incompletas'] = f"{len(it['childPosts'])} de {total} (el embed no las sirvió)"
+    return it
+
+
+def lobstr_por_cuentas(cuentas, desde_iso, clave, ahora, espera=5, intentos=60):
+    """Una corrida de lobstr para estas cuentas, desde `desde_iso`. Reusa un
+    solo squid (lo vacía y le pone las tareas de hoy). Cobra 1 crédito por post
+    devuelto; `max_results` lo topa. Un fallo devuelve ítems de error, como Apify."""
+    import time
+    try:
+        sq = next((q for q in _lobstr('GET', 'squids?limit=100', clave).get('data', [])
+                   if q.get('name') == LOBSTR_SQUID), None)
+        if not sq:
+            sq = _lobstr('POST', 'squids', clave, {'crawler': LOBSTR_CRAWLER, 'name': LOBSTR_SQUID})
+        horas = max(1, int((ahora - datetime.fromisoformat(desde_iso)).total_seconds() // 3600) + 1)
+        _lobstr('POST', f"squids/{sq['id']}/empty", clave, {'type': 'url'})
+        _lobstr('POST', f"squids/{sq['id']}", clave, {'params': {
+            'hours_back': horas, 'max_results': LOBSTR_LIMITE, 'enrich_comments': False, 'skip_pinned_posts': True}})
+        _lobstr('POST', 'tasks', clave, {'squid': sq['id'], 'tasks': [{'url': c} for c in cuentas]})
+        run = _lobstr('POST', 'runs', clave, {'squid': sq['id']})
+        for _ in range(intentos):
+            time.sleep(espera)
+            # GET runs/<id> no trae `is_done` (solo la lista de corridas): se mira
+            # `ended_at`/`status` (2 nov: la corrida terminó en 5 s y se esperó 6 min)
+            g = _lobstr('GET', f"runs/{run['id']}", clave)
+            if g.get('is_done') or g.get('ended_at') or g.get('status') in ('done', 'error', 'aborted'):
+                break
+        else:
+            raise TimeoutError('la corrida de lobstr no terminó')
+        res, pag = [], 1
+        while True:
+            r = _lobstr('GET', f"results?squid={sq['id']}&run={run['id']}&page={pag}&page_size=100", clave)
+            res += r.get('data', [])
+            if not r.get('next'):
+                break
+            pag += 1
+        return [completar_laminas(lobstr_a_apify(x)) for x in res]
+    except Exception as ex:  # noqa: BLE001
+        return [{'error': 'http', 'errorDescription': f'lobstr: {ex}', 'username': c} for c in cuentas]
+
+
+def brightdata_por_cuentas(cuentas, estado, ahora, clave, espera=8, intentos=100):
+    """Bright Data, «Instagram Posts – discover by url»: los posts de cada perfil
+    desde su última consulta (`start_date`, por DÍA: lo repetido lo descarta
+    `clasificar`). 1 crédito por post; plan gratis 5.000/mes con freno duro al
+    agotarse (devuelve error, nunca cobra). Trae TODAS las láminas."""
+    import subprocess
+    import time
+
+    def api(metodo, ruta, cuerpo=None):
+        a = ['curl', '-sS', '--max-time', '60', '-X', metodo, f'https://api.brightdata.com/datasets/v3/{ruta}',
+             '-H', f'Authorization: Bearer {clave}', '-H', 'Content-Type: application/json']
+        if cuerpo is not None:
+            a += ['-d', json.dumps(cuerpo)]
+        out = subprocess.run(a, capture_output=True, text=True, check=True).stdout
+        try:
+            return json.loads(out)
+        except json.JSONDecodeError:
+            raise RuntimeError(out.strip()[:200])
+    try:
+        entrada = [{'url': f'https://www.instagram.com/{c}/', 'num_of_posts': LIMITE,
+                    'start_date': datetime.fromisoformat(desde([c], estado, ahora)).strftime('%m-%d-%Y')}
+                   for c in cuentas]
+        sid = api('POST', f'trigger?dataset_id={BRIGHTDATA_DATASET}&include_errors=true&type=discover_new'
+                          f'&discover_by=url&format=json', entrada).get('snapshot_id')
+        if not sid:
+            raise RuntimeError('sin snapshot_id')
+        for _ in range(intentos):
+            p = api('GET', f'progress/{sid}')
+            if p.get('status') in ('ready', 'failed'):
+                break
+            time.sleep(espera)
+        if p.get('status') != 'ready':
+            raise RuntimeError(f"snapshot {p.get('status')}")
+        res = api('GET', f'snapshot/{sid}?format=json')
+        res = res if isinstance(res, list) else [res]
+        items = [brightdata_a_apify(x) for x in res if x.get('shortcode')]
+        # una fila sin post es un error de ESE perfil (privado, bloqueo…): no se leyó;
+        # la que avisa que no hay posts en el rango es «sin novedades»
+        malos = {}
+        for x in res:
+            if x.get('shortcode'):
+                continue
+            u = ((x.get('input') or {}).get('url') or '').rstrip('/').split('/')[-1]
+            txt = str(x.get('error') or x.get('warning') or '')
+            if u and not re.search(r'no (posts|results|data)|not found any|0 posts', txt, re.I):
+                malos[u] = txt or 'fila sin post'
+        return items + [{'error': 'http', 'errorDescription': f'Bright Data: {malos[c]}', 'username': c}
+                        if c in malos else {'error': 'no_items', 'username': c} for c in cuentas]
+    except Exception as ex:  # noqa: BLE001
+        return [{'error': 'http', 'errorDescription': f'Bright Data: {ex}', 'username': c} for c in cuentas]
+
+
+def brightdata_a_apify(x):
+    """Un post de Bright Data con la forma de un ítem de Apify."""
+    laminas = [p.get('url') for p in x.get('post_content') or [] if isinstance(p, dict)]
+    return {'shortCode': x.get('shortcode'), 'url': x.get('url'), 'timestamp': x.get('date_posted') or '',
+            'ownerUsername': x.get('user_posted'), 'caption': x.get('description') or '',
+            'coauthorProducers': [{'username': c.get('username') if isinstance(c, dict) else c}
+                                  for c in x.get('coauthor_producers') or []],
+            'displayUrl': x.get('thumbnail') or (laminas[0] if laminas else None),
+            'type': x.get('content_type'),
+            'childPosts': [{'displayUrl': u} for u in laminas] if len(laminas) > 1 else [],
+            '_via': 'brightdata'}
+
+
+def fuentes_ig(token, saldo_apify):
+    """La CASCADA (Juan, 2 nov 2026): de mayor a menor cupo gratis. Si una se
+    agota o falla, la cuenta pasa a la siguiente. Bright Data ~5.000 posts/mes ·
+    Apify US$5/mes (se salta bajo APIFY_PISO_USD) · lobstr 100 posts/mes."""
+    out = []
+    bd = os.environ.get('BRIGHTDATA_API_KEY')
+    if bd:
+        out.append(('brightdata', lambda cs, es, ah: brightdata_por_cuentas(cs, es, ah, bd)))
+    if saldo_apify is None or saldo_apify >= APIFY_PISO_USD:
+        out.append(('apify', lambda cs, es, ah: apify_por_cuenta(cs, es, ah, token)))
+    lo = os.environ.get('LOBSTR_API_KEY')
+    if lo:
+        out.append(('lobstr', lambda cs, es, ah: lobstr_por_cuentas(cs, desde(cs, es, ah), lo, ah)))
+    return out
+
+
+def cascada(cuentas, estado, ahora, fuentes):
+    """Cada cuenta se lee con la primera fuente que la sirve. Devuelve
+    (nuevos, sin_leer, vía por cuenta). Una cuenta sin novedades NO pasa a la
+    siguiente fuente: «no publicó» no es «no se pudo leer»."""
+    nuevos = {c: [] for c in cuentas}
+    via, pendientes, sin_leer = {}, list(cuentas), {}
+    for nombre, leer in fuentes:
+        if not pendientes:
+            break
+        n, s = clasificar(leer(pendientes, estado, ahora), pendientes, estado)
+        for c in pendientes:
+            if c not in s and '*' not in s:
+                nuevos[c], via[c] = n[c], nombre
+        sin_leer = {c: f'{nombre}: {s.get(c) or s.get("*")}' for c in pendientes if c in s or '*' in s}
+        pendientes = list(sin_leer)
+    if not fuentes:
+        sin_leer = {c: 'ninguna fuente de Instagram configurada' for c in cuentas}
+    return nuevos, sin_leer, via
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--simular', action='store_true')
@@ -264,7 +493,8 @@ def main():
     a = ap.parse_args()
     ahora = datetime.fromisoformat(a.hoy) if a.hoy else datetime.now()
     estado = json.load(open(ESTADO)) if os.path.exists(ESTADO) else {}
-    vig = vigilados(festivales_config(open(CONFIG).read()), json.load(open(CUENTAS)), ahora)
+    cerrados = json.load(open(CERRADOS)) if os.path.exists(CERRADOS) else {}
+    vig = vigilados(festivales_config(open(CONFIG).read()), json.load(open(CUENTAS)), ahora, cerrados)
     ahora_toca = [v for v in vig if toca(v, estado, ahora)]
     faltan = sin_cuenta(festivales_config(open(CONFIG).read()), json.load(open(CUENTAS)), ahora)
     cuentas = sorted({v['cuenta'] for v in ahora_toca})
@@ -283,17 +513,9 @@ def main():
     token = os.environ.get('APIFY_TOKEN')
     if not token:
         sys.exit('Falta APIFY_TOKEN (hacer `source ~/.zshrc`).')
-    items = apify(cuentas, d, token)
-    nuevos, sin_leer = clasificar(items, cuentas, estado)
-    # Reintento: Apify devuelve «Empty or private data» por rachas; una cuenta
-    # sola, en una segunda llamada, suele pasar.
-    reintentar = [c for c in sin_leer if c != '*']
-    if reintentar:
-        n2, s2 = clasificar(apify(reintentar, d, token), reintentar, estado)
-        for c in reintentar:
-            if c not in s2:
-                nuevos[c] = n2[c]
-                del sin_leer[c]
+    saldo = apify_saldo(token)
+    informe['apify_saldo_usd'] = None if saldo is None else round(saldo, 2)
+    nuevos, sin_leer, informe['via'] = cascada(cuentas, estado, ahora, fuentes_ig(token, saldo))
     os.makedirs(SALIDA, exist_ok=True)
     informe['nuevos'] = []
     informe['ALERTA_FALLOS_SEGUIDOS'] = {}

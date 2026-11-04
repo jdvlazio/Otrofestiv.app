@@ -24,7 +24,7 @@ Esc.  festivals/staging/<lo-que-sea>-enriquecido.json
 import json, os, re, sys, time
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from enriquecer import ficha_declarada, cascada_obra
+from enriquecer import ficha_declarada, cascada_obra, reuso_publicada
 from lib import provenance, director_coincide, obras_publicadas, ya_publicada
 import proimagenes
 import cinecorto
@@ -125,14 +125,19 @@ def main():
         if pub:
             e = dict(e or {})
             e['_ya_publicada'] = pub
-            # la misma regla que enriquecer.py (Mamut, 28 sep): TMDB sin
-            # sinopsis en español y ya la publicamos con una → se reusa la
-            # nuestra. Aquí faltaba: «Niña chilapa» (FICFUSA, 23 oct 2026).
-            if fuente and not (e.get('synopsis_es') or e.get('sinopsis') or '').strip():
-                x = next((x for x in pub if x.get('sinopsis')), None)
-                if x:
-                    e['synopsis_es'] = x['sinopsis']
-                    e['_sinopsis_de'] = f'ya publicada en {x["festival"]}'
+            # EL CRUCE SE GUARDABA Y NO SE USABA (27 oct 2026): «Luis Antonio»
+            # salía de cinecorto con `_ya_publicada` lleno y sin heredar nada.
+            # Lo que la fuente no trajo se toma de lo ya publicado, con su
+            # procedencia (`_afiche_de`, `_ficha_de`, `_sinopsis_de`).
+            r = reuso_publicada(pub, _fid) or {}
+            ya = bool(e.get('poster_path') or e.get('poster'))
+            for k in ('poster', '_afiche_de'):
+                if r.get(k) and not ya:
+                    e[k] = r[k]
+            if r.get('tmdb_id') and not e.get('tmdb_id'):
+                e['tmdb_id'], e['_ficha_de'] = r['tmdb_id'], r['_ficha_de']
+            if r.get('sinopsis') and not (e.get('sinopsis') or e.get('synopsis_es')):
+                e['sinopsis'], e['_sinopsis_de'] = r['sinopsis'], r['_sinopsis_de']
         if e and fuente:
             ok[t] = e
             por_fuente[fuente] = por_fuente.get(fuente, 0) + 1

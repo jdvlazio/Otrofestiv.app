@@ -148,10 +148,12 @@ def main():
                 'Con acento nacional - Procesos de formación - Programa 2': 3617,
                 'Con acento nacional - Profesional - Programa 1': 3595,
                 'Con acento nacional - Profesional - Programa 2': 3618}
+    # la función con ficha propia (Fontanar, 1 nov: la 3846 trae una obra más)
+    ficha_ancla = {('2026-11-01', '14:00', 'Cinemateca Fontanar del Río - Bogotá'): 3846}
     n_obras = 0
     for p, anclas in prog.items():
-        esperado = [plano(t) for t in titulos_de_la_ficha(ficha_de[p])]
         for k in anclas:
+            esperado = [plano(t) for t in titulos_de_la_ficha(ficha_ancla.get(k, ficha_de[p]))]
             k = next((a for a in idx if a[0] == k[0] and a[2] == k[2] and (a[1] == k[1] or
                       any(z['casilla'] == 'time' and z['ancla']['dia'] == k[0] and z['ancla']['hora'] == k[1] and z['valor'] == a[1] for z in af))), None)
             f = idx.get(k)

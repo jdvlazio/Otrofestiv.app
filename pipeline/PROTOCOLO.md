@@ -19,6 +19,14 @@ FICMA (90 funciones desde un PDF de imágenes). Todo lo que dice aquí se pagó.
 > guardián lee. Doce vueltas para encontrarlos uno a uno. El camino corto es
 > `python3 pipeline/correr.py <id>`; todo lo demás es el camino largo.
 
+> **Un cambio chico es UN comando: `python3 pipeline/corto.py <id>`** (28 oct 2026).
+> Horas, salas, sedes o duraciones de unas pocas funciones: se escribe la
+> afirmación y `corto.py` rearma desde el primer paso que la lee, muestra el
+> diff función por función y publica con los mismos guardianes. Segundos, no
+> una tarde. `correr.py` completo es solo para cuando la fuente cambió en muchos
+> puntos — nunca «por las dudas» (Miradas, 28 oct: unas horas → el pipeline
+> entero). Y un PR de datos no toca `validate.py`: el candado lo frena en el Mac.
+
 ---
 
 ## 0 · Lo primero es el issue de radar
@@ -45,6 +53,13 @@ mismo error. El número de issue se declara en el plan (`festival.radar`), porqu
 las decisiones viven en el plan y no en la memoria de quien monta.
 
 ## 0·bis · Instagram se LEE, y la mitad del dato está dentro de la imagen
+
+**Qué publicó una cuenta: `python3 pipeline/ig_posts.py <cuenta>`. Nunca Apify
+directo.** El vigía ya guarda cada post en `fuentes/ig-vigia/` y ese comando lo
+lee gratis (colaborativos incluidos). `--traer` pide a Apify SOLO lo posterior a
+la última consulta y lo suma a la misma memoria. Llamar a Apify a mano vuelve a
+bajar lo ya guardado: del 21 al 25 oct 2026 eso se comió más de la mitad del plan
+gratis (US$5/mes). Las láminas se siguen leyendo con `ig-lecturas.py`.
 
 Es la fuente donde más festivales publican antes que en su web, y la que peor se
 extrae si uno solo mira el pie. Tres hechos medidos en #NarrarElFuturo (16 sep

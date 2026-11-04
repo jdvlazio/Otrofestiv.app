@@ -16,7 +16,7 @@
 //
 // WORKER: venueTravelMins/travelMins tienen COPIAS worker-local (leen
 //   _venueCoords/_transport). Las sched pure fns se consumen vía
-//   eval(name).toString(). [worker-overlap] valida.
+//   fn.toString() (calc.js, sin eval desde el 26 oct). [worker-overlap] valida.
 
 import { FESTIVAL_CONFIG, DEFAULT_DURATION_MIN, FESTIVAL_BUFFER } from "../config.js";
 import { toMin, simNow, simTodayStr, festivalEnded, _festNowMin, parseDur, durEstimada } from "./time.js";

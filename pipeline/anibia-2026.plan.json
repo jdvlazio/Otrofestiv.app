@@ -25,7 +25,7 @@
   },
   {
    "archivo": "fuentes/anibia-2026/fichas/3592.html",
-   "cmd": "for n in 3513 3579 3590 3591 3592 3593 3594 3595 3596 3616 3617 3618 3692; do curl -sL --max-time 60 https://cinematecadebogota.gov.co/node/peliculas/$n -o fuentes/anibia-2026/fichas/$n.html || exit 1; done; for n in 3590 3591 3592 3593 3594 3595 3596 3616 3617 3618 3692; do curl -sL --max-time 60 'https://cinematecadebogota.gov.co/node/peliculas/'$n'?sede=11' -o fuentes/anibia-2026/fichas/s11-$n.html || exit 1; done",
+   "cmd": "for n in 3513 3579 3590 3591 3592 3593 3594 3595 3596 3616 3617 3618 3692 3846; do curl -sL --max-time 60 https://cinematecadebogota.gov.co/node/peliculas/$n -o fuentes/anibia-2026/fichas/$n.html || exit 1; done; for n in 3590 3591 3592 3593 3594 3595 3596 3616 3617 3618 3692; do curl -sL --max-time 60 'https://cinematecadebogota.gov.co/node/peliculas/'$n'?sede=11' -o fuentes/anibia-2026/fichas/s11-$n.html || exit 1; done",
    "_que": "las fichas de programa (obras, sinopsis, afiche) y su versión ?sede=11 (link de TuBoleta)"
   },
   {

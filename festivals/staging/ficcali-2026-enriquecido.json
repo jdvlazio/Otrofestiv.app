@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, emparejado con ficha_verifica() (director + año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-10-25"
+  "capturado": "2026-10-27"
  },
  "obras": [
   {
@@ -18,7 +18,7 @@
    "lbSlug": "afilando-memoria",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Eugenio Gómez, 2026, 7 min, CO; sinopsis del festival y afiche original de ficcali.com (biblioteca de medios).",
    "_director": "Eugenio Gómez Borrero",
-   "_sondeado": "2026-10-25",
+   "_sondeado": "2026-10-27",
    "poster": "/assets/ficcali-2026/afilando-memoria.jpg",
    "posterSource": "tmdb"
   },
@@ -37,6 +37,8 @@
      "sinopsis": "En un barrio colombiano donde los dioses griegos toman aguapanela, Miguel huye de un Cupido decidido a flecharlo. Con la ayuda de dos deidades musicales y un cáliz cargado de energía celestial, emprende una divertida venganza contra el amor. Sin embargo, ni siquiera un héroe mitológico puede escapar para siempre de sus flechas."
     }
    ],
+   "_afiche_de": "ya publicada en villadelcine-2026",
+   "_sinopsis_de": "ya publicada en villadelcine-2026",
    "poster": "/assets/villadelcine-2026/aguapanela.jpg",
    "_verificado": "ya publicada en villadelcine-2026: se reusa su afiche",
    "sinopsis": "En un barrio colombiano donde los dioses griegos toman aguapanela, Miguel huye de un Cupido decidido a flecharlo. Con la ayuda de dos deidades musicales y un cáliz cargado de energía celestial, emprende una divertida venganza contra el amor. Sin embargo, ni siquiera un héroe mitológico puede escapar para siempre de sus flechas.",
@@ -262,7 +264,7 @@
    "lbSlug": "boato",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Alexandra Julio, 2026, 7 min, CO; sinopsis del festival y afiche original de ficcali.com (biblioteca de medios).",
    "_director": "Alexandra Julio",
-   "_sondeado": "2026-10-25",
+   "_sondeado": "2026-10-27",
    "poster": "/assets/ficcali-2026/boato.jpg",
    "posterSource": "tmdb"
   },
@@ -286,6 +288,33 @@
    "posterSource": "tmdb"
   },
   {
+   "titulo": "Caída libre",
+   "tmdb_id": 1487969,
+   "titulo_original": "Caída Libre",
+   "poster_path": "/zQCkdatZEByFF9GelSWn90V01Jg.jpg",
+   "synopsis_es": "En el desesperado intento de escapar del aislamiento, un personaje sin rostro salta del borde esperando cambiar su realidad, sin saber que en el fondo de esa caída la ley de la gravedad no aplica para él, este personaje simplemente rebota.",
+   "synopsis_en": "In a desperate attempt to escape isolation, a faceless character jumps from a ledge hoping to meet his end, unaware that at the bottom of the fall, the laws of gravity do not apply: he bounces back. Frustrated by this fact, he keeps trying in different scenarios, in a constant cycle. All this takes place in a desolate, polluted landscape devoid of resources.",
+   "genero": "Animación",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 9,
+   "pais_tmdb": "",
+   "lbSlug": "caida-libre",
+   "_verificado": "declarada a mano: 27 oct 2026: heredada de lo ya publicado en anibia-2026 (tmdb 1487969); misma obra por dirección: Wilson Borja, aquí Wilson Borja 2024",
+   "_director": "",
+   "_sondeado": "2026-10-27",
+   "poster": "/assets/ficcali-2026/caida-libre.jpg",
+   "posterSource": "tmdb",
+   "_heredado": {
+    "genero": "catálogo w_R4H881HQEE34 (anibia-2026, ficcali-2026, qaff-2026)",
+    "anio": "catálogo w_R4H881HQEE34 (anibia-2026, ficcali-2026, qaff-2026)",
+    "synopsis_es": "catálogo w_R4H881HQEE34 (anibia-2026, ficcali-2026, qaff-2026)",
+    "director_heredado": "catálogo w_R4H881HQEE34 (anibia-2026, ficcali-2026, qaff-2026)",
+    "duracion_tmdb": "catálogo w_R4H881HQEE34 (anibia-2026, ficcali-2026, qaff-2026)"
+   },
+   "anio": 2024,
+   "director_heredado": "Wilson Borja"
+  },
+  {
    "titulo": "Cineconcierto: Metrópolis",
    "tmdb_id": 19,
    "titulo_original": "Metropolis",
@@ -299,7 +328,7 @@
    "lbSlug": "metropolis",
    "_verificado": "declarada a mano: 21 oct 2026: la ficha de ficcali.com (sección Clásicos, «Cine Concierto Metrópolis») la da como Fritz Lang, Alemania, 1927, 120 min; TMDB 19 es Metropolis de Fritz Lang, 1927 (153 min la versión restaurada; el cineconcierto usa otro corte). Única obra con ese título y director.",
    "_director": "Fritz Lang",
-   "_sondeado": "2026-10-25",
+   "_sondeado": "2026-10-27",
    "poster": "/assets/ficcali-2026/cineconcierto-metropolis.jpg",
    "posterSource": "tmdb"
   },
@@ -338,7 +367,7 @@
    "lbSlug": "despues-de-las-seis",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Diana Kuellar (1740740, directora de Marímbula), 2026, 24 min, CO; sinopsis del festival y afiche original de ficcali.com (biblioteca de medios).",
    "_director": "Diana Kuéllar",
-   "_sondeado": "2026-10-25",
+   "_sondeado": "2026-10-27",
    "poster": "/assets/ficcali-2026/despues-de-las-seis.jpg",
    "posterSource": "tmdb"
   },
@@ -357,6 +386,7 @@
      "sinopsis": "Después de una ruptura, una mujer convierte el duelo en un ritual hecho de colores, palabras y objetos. Entre espinas que brotan del pecho, una casa rota y la silueta del amor ausente, atraviesa el dolor hasta encontrar una nueva forma de habitar aquello que permanece después de tanto amor."
     }
    ],
+   "_sinopsis_de": "ya publicada en villadelcine-2026",
    "_verificado": "ya publicada en villadelcine-2026: se reusa su sinopsis",
    "sinopsis": "Después de una ruptura, una mujer convierte el duelo en un ritual hecho de colores, palabras y objetos. Entre espinas que brotan del pecho, una casa rota y la silueta del amor ausente, atraviesa el dolor hasta encontrar una nueva forma de habitar aquello que permanece después de tanto amor.",
    "pais": "Colombia",
@@ -403,7 +433,7 @@
    "lbSlug": "el-coloso",
    "_verificado": "declarada a mano: Proyección especial fuera de la Selección: la tarjeta solo dice Colombia, 70 min. TMDB: «El coloso», José Varón, Colombia, 2025, 66 min (la otra ficha homónima, 1612550, es un corto peruano de 17 min). Verificado a mano el 8 oct.",
    "_director": "José Varón",
-   "_sondeado": "2026-10-25",
+   "_sondeado": "2026-10-27",
    "sinopsis": "El Coloso cuenta la vida y el legado de Freddy Rincón, un gigante del fútbol colombiano que conquistó Brasil con su fuerza y su talento, llenó estadios en España y le dio a su país uno de sus goles más inolvidables, contra Alemania. De sus raíces en Buenaventura a convertirse en símbolo de orgullo nacional, Rincón trascendió la cancha para inspirar a toda una generación. Más que un futbolista, fue un faro de esperanza cuya grandeza sigue viva en la memoria de los colombianos.",
    "_sinopsis": "traducción nuestra con contexto (Content Design, 10 oct 2026) de la sinopsis en inglés de TMDB: https://www.themoviedb.org/movie/1566489",
    "poster": "/assets/ficcali-2026/el-coloso.jpg",
@@ -423,7 +453,7 @@
    "lbSlug": "el-bitcoin-de-oro",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 10 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título, por director y en Letterboxd): Bernardo Hernández, 2026, 18 min, ES; sinopsis del festival y afiche original de ficcali.com (biblioteca de medios).",
    "_director": "Bernardo Hernández",
-   "_sondeado": "2026-10-25",
+   "_sondeado": "2026-10-27",
    "poster": "/assets/ficcali-2026/el-bitcoin-de-oro.jpg",
    "posterSource": "tmdb"
   },
@@ -460,7 +490,7 @@
    "lbSlug": "el-maestro-de-la-piqueria",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 10 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título, por director y en Letterboxd): Yinet Molero, 2025, 8 min, CO; sinopsis del festival y afiche original de ficcali.com (biblioteca de medios).",
    "_director": "Yinet Molero",
-   "_sondeado": "2026-10-25",
+   "_sondeado": "2026-10-27",
    "poster": "/assets/ficcali-2026/el-maestro-de-la-piqueria.jpg",
    "posterSource": "tmdb"
   },
@@ -478,7 +508,7 @@
    "lbSlug": "el-mundo-de-humberto",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Paula Ortiz, 2025, 14 min, CO; sinopsis del festival y afiche original de ficcali.com (biblioteca de medios).",
    "_director": "Paula Ortiz",
-   "_sondeado": "2026-10-25",
+   "_sondeado": "2026-10-27",
    "poster": "/assets/ficcali-2026/el-mundo-de-humberto.jpg",
    "posterSource": "tmdb"
   },
@@ -518,7 +548,7 @@
    "lbSlug": "el-viaje-2026",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Ana Sofía Franco, 2026, 8 min, CO; sinopsis del festival y afiche original de ficcali.com (biblioteca de medios).",
    "_director": "Ana Sofía Franco",
-   "_sondeado": "2026-10-25",
+   "_sondeado": "2026-10-27",
    "poster": "/assets/ficcali-2026/el-viaje.jpg",
    "posterSource": "tmdb"
   },
@@ -536,7 +566,7 @@
    "lbSlug": "ellas-gardiennes-de-lamazonie",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 10 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título, por director y en Letterboxd): Estelle Lalisse y Jade Fort, 2022, 39 min, CO/PE/EC; sinopsis del festival y afiche original de ficcali.com (biblioteca de medios).",
    "_director": "Estelle Lalisse, Jade Fort",
-   "_sondeado": "2026-10-25",
+   "_sondeado": "2026-10-27",
    "poster": "/assets/ficcali-2026/ellas-gardiennes-de-l-amazonie.jpg",
    "posterSource": "tmdb"
   },
@@ -555,7 +585,7 @@
    "lbSlug": "work-in-progress",
    "_verificado": "declarada a mano: Proyección especial: la tarjeta dice España, 124 min. TMDB: José Luis Guerín, 2001, 125 min, España. Verificado a mano el 8 oct.",
    "_director": "José Luis Guerín",
-   "_sondeado": "2026-10-25",
+   "_sondeado": "2026-10-27",
    "poster": "/assets/ficcali-2026/en-construccion.jpg",
    "posterSource": "tmdb"
   },
@@ -596,7 +626,7 @@
    "lbSlug": "good-valley-stories",
    "_verificado": "declarada a mano: FICCI 65 la publicó (José Luis Guerín, 2025); TMDB: Guerín, 2025, 125 min contra 120 de la tarjeta (10 oct 2026). La tarjeta de Ficcali no da director ni año: sin ellos el candado no podía corroborar.",
    "_director": "José Luis Guerín",
-   "_sondeado": "2026-10-25",
+   "_sondeado": "2026-10-27",
    "poster": "/assets/ficcali-2026/historias-del-buen-valle.jpg",
    "posterSource": "tmdb"
   },
@@ -809,7 +839,7 @@
    "lbSlug": "la-bola-negra",
    "_verificado": "declarada a mano: BIFF 12 y TIFF 2026 la publican con esta ficha; director, año (2026) y duración (155 min) coinciden (10 oct 2026). La tarjeta de Ficcali no da director ni año: sin ellos el candado no podía corroborar.",
    "_director": "Javier Ambrossi, Javier Calvo",
-   "_sondeado": "2026-10-25",
+   "_sondeado": "2026-10-27",
    "poster": "/assets/ficcali-2026/la-bola-negra.jpg",
    "posterSource": "tmdb"
   },
@@ -828,7 +858,7 @@
    "lbSlug": "the-fabulous-time-machine",
    "_verificado": "declarada a mano: Proyección especial: la tarjeta dice Brasil, 70 min. TMDB: «A Fabulosa Máquina do Tempo», Eliza Capai, 2026, 73 min, Brasil. Verificado a mano el 8 oct.",
    "_director": "Eliza Capai",
-   "_sondeado": "2026-10-25",
+   "_sondeado": "2026-10-27",
    "sinopsis": "En el corazón del árido sertão brasileño, un grupo de niñas de diez años juega a inventar máquinas del tiempo imaginarias. Las pequeñas viajan al pasado para explorar la dura realidad de supervivencia que vivieron sus madres y abuelas, al mismo tiempo que se proyectan. El documental utiliza la inocencia y la imaginación infantil como un poderoso catalizador para debatir con madurez sobre la autonomía de las mujeres, el género, el ciclo de la pobreza y sus propios sueños de libertad.",
    "_sinopsis": "ficha de ficcali.com, verbatim (https://ficcali.com/pelicula/a-fabulosa-maquina-do-tempo), leída el 10 oct 2026",
    "poster": "/assets/ficcali-2026/la-fabulosa-maquina-del-tiempo.jpg",
@@ -901,7 +931,7 @@
    "lbSlug": "double-freedom",
    "_verificado": "declarada a mano: BIFF 12 la publica con esta ficha; Lisandro Alonso, 2026, 100 min coinciden (10 oct 2026). La tarjeta de Ficcali no da director ni año: sin ellos el candado no podía corroborar.",
    "_director": "Lisandro Alonso",
-   "_sondeado": "2026-10-25",
+   "_sondeado": "2026-10-27",
    "poster": "/assets/ficcali-2026/la-libertad-doble-v2.jpg",
    "posterSource": "tmdb"
   },
@@ -950,7 +980,7 @@
    "lbSlug": "las-pesadillas-del-siervo",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Manuel Villa (1711036, director de No amanece igual para todos), 2025, 90 min, CO; sinopsis del festival y afiche original de ficcali.com (biblioteca de medios).",
    "_director": "Manuel Villa",
-   "_sondeado": "2026-10-25",
+   "_sondeado": "2026-10-27",
    "poster": "/assets/ficcali-2026/las-pesadillas-del-siervo.jpg",
    "posterSource": "tmdb"
   },
@@ -1064,7 +1094,7 @@
    "lbSlug": "minotaur-2026",
    "_verificado": "declarada a mano: Proyección especial: la tarjeta dice Rusia, 135 min. TMDB: «Minotaur», Andrey Zvyagintsev, 2026, 135 min exactos (origen FR por la coproducción; el director es ruso). Verificado a mano el 8 oct.",
    "_director": "Andrey Zvyagintsev",
-   "_sondeado": "2026-10-25",
+   "_sondeado": "2026-10-27",
    "poster": "/assets/ficcali-2026/minotauro.jpg",
    "posterSource": "tmdb"
   },
@@ -1189,7 +1219,7 @@
    "lbSlug": "ona-2026",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 10 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título, por director y en Letterboxd): Matilde Gimeno, 2026, 4 min, ES; sinopsis del festival y afiche original de ficcali.com (biblioteca de medios).",
    "_director": "Matilde Gimeno",
-   "_sondeado": "2026-10-25",
+   "_sondeado": "2026-10-27",
    "poster": "/assets/ficcali-2026/ona.jpg",
    "posterSource": "tmdb"
   },
@@ -1312,7 +1342,7 @@
    "lbSlug": "quinto-primera",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 10 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título, por director y en Letterboxd): Fran Menchón, 2026, 18 min, ES; sinopsis del festival y afiche original de ficcali.com (biblioteca de medios).",
    "_director": "Fran Menchón",
-   "_sondeado": "2026-10-25",
+   "_sondeado": "2026-10-27",
    "poster": "/assets/ficcali-2026/quinto-primera.jpg",
    "posterSource": "tmdb"
   },
@@ -1349,7 +1379,7 @@
    "lbSlug": "rodilla-negra",
    "_verificado": "declarada a mano: Proyección especial junto a El Coloso: la tarjeta solo dice Colombia. Es «Rodilla negra» de Carlos Mayolo (Cali, 1975, 14 min), el único título así en TMDB; cuadra con un festival caleño. Verificado a mano el 8 oct.",
    "_director": "Carlos Mayolo",
-   "_sondeado": "2026-10-25",
+   "_sondeado": "2026-10-27",
    "sinopsis": "Un equipo de fútbol, interpretado por jugadores del Barrios Unidos de Cali, se topa en el campo con una pareja de hippies que se bañan desnudos y les roba el radio de transistores. Eso parece desatar algo en su jugador más legendario, Jonny Mosquera: un síndrome terrible que lo hace caer, literalmente, de rodillas.",
    "_sinopsis": "traducción nuestra con contexto (Content Design, 10 oct 2026) de la sinopsis en inglés de TMDB: https://www.themoviedb.org/movie/947607",
    "poster": "/assets/ficcali-2026/rodilla-negra.jpg",
@@ -1369,7 +1399,7 @@
    "lbSlug": "runa-simi",
    "_verificado": "declarada a mano: AFF 2026 la publicó (Augusto Zegarra, 2025); TMDB: Zegarra, 2025, 81 min contra 85 de la tarjeta (10 oct 2026). La tarjeta de Ficcali no da director ni año: sin ellos el candado no podía corroborar.",
    "_director": "Augusto Zegarra",
-   "_sondeado": "2026-10-25",
+   "_sondeado": "2026-10-27",
    "poster": "/assets/ficcali-2026/runa-simi.jpg",
    "posterSource": "tmdb"
   },
@@ -1472,7 +1502,7 @@
    "lbSlug": "somnolytic",
    "_verificado": "declarada a mano: Ya existía en TMDB con su título en inglés, «Somnolytic» (original «Somnolithic»), de Abril Velasquez: la misma directora (Abril Natalia Velázquez). La encontró la búsqueda de personas el 10 oct 2026.",
    "_director": "Abril Natalia Velázquez",
-   "_sondeado": "2026-10-25",
+   "_sondeado": "2026-10-27",
    "poster": "/assets/ficcali-2026/somnolitico.jpg",
    "posterSource": "tmdb",
    "_heredado": {
@@ -1611,7 +1641,7 @@
    "lbSlug": "vertigo-2025-1",
    "_verificado": "declarada a mano: Ya existía en TMDB (Jimmy Llamas, 2025) y el enriquecido no la casó; la encontró la sonda por título el 10 oct 2026.",
    "_director": "Jimmy Llamas",
-   "_sondeado": "2026-10-25",
+   "_sondeado": "2026-10-27",
    "poster": "/assets/ficcali-2026/vertigo.jpg",
    "posterSource": "tmdb"
   },
@@ -1683,7 +1713,7 @@
    "lbSlug": "donde-esta-richard",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 10 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título, por director y en Letterboxd): Juan Carlos Álvarez, 2025, 6 min, ES; sinopsis del festival y afiche original de ficcali.com (biblioteca de medios).",
    "_director": "Juan Carlos Álvarez",
-   "_sondeado": "2026-10-25",
+   "_sondeado": "2026-10-27",
    "poster": "/assets/ficcali-2026/donde-esta-richard.jpg",
    "posterSource": "tmdb"
   },
@@ -1966,31 +1996,6 @@
    "titulo": "Bailar con la línea",
    "sinopsis": "El silencio de una habitación vacía es interrumpido por una invasión de formas, líneas, círculos incompletos, garabatos y rayas danzantes. Un baile de formas retorcidas y un concierto de ruidos. Es el fruto de una mirada diferente. Coordinación ojo-mano: ojo torcido, mano torcida, bailan juntos sobre el papel. Era necesaria una corrección, un enderezamiento de la mirada.",
    "_sinopsis": "texto oficial de la ficha, 21 oct 2026: https://ficcali.com/pelicula/bailar-con-la-linea/"
-  },
-  {
-   "titulo": "Caída libre",
-   "genero": "Animación",
-   "_heredado": {
-    "genero": "catálogo w_R4H881HQEE34 (anibia-2026, ficcali-2026, qaff-2026)",
-    "title_en": "catálogo w_R4H881HQEE34 (anibia-2026, ficcali-2026, qaff-2026)",
-    "lbSlug": "catálogo w_R4H881HQEE34 (anibia-2026, ficcali-2026, qaff-2026)",
-    "anio": "catálogo w_R4H881HQEE34 (anibia-2026, ficcali-2026, qaff-2026)",
-    "synopsis_es": "catálogo w_R4H881HQEE34 (anibia-2026, ficcali-2026, qaff-2026)",
-    "synopsis_en": "catálogo w_R4H881HQEE34 (anibia-2026, ficcali-2026, qaff-2026)",
-    "posterSource": "catálogo w_R4H881HQEE34 (anibia-2026, ficcali-2026, qaff-2026)",
-    "poster": "catálogo w_R4H881HQEE34 (anibia-2026, ficcali-2026, qaff-2026)",
-    "director_heredado": "catálogo w_R4H881HQEE34 (anibia-2026, ficcali-2026, qaff-2026)",
-    "duracion_tmdb": "catálogo w_R4H881HQEE34 (anibia-2026, ficcali-2026, qaff-2026)"
-   },
-   "title_en": "Free Fall",
-   "lbSlug": "caida-libre",
-   "anio": 2024,
-   "synopsis_es": "En el desesperado intento de escapar del aislamiento, un personaje sin rostro salta del borde esperando cambiar su realidad, sin saber que en el fondo de esa caída la ley de la gravedad no aplica para él, este personaje simplemente rebota.",
-   "synopsis_en": "In a desperate attempt to escape isolation, a faceless character jumps from a ledge hoping to meet his end, unaware that at the bottom of the fall, the laws of gravity do not apply: he bounces back. Frustrated by this fact, he keeps trying in different scenarios, in a constant cycle. All this takes place in a desolate, polluted landscape devoid of resources.",
-   "poster": "/assets/anibia-2026/caida-libre.jpg",
-   "posterSource": "oficial",
-   "director_heredado": "Wilson Borja",
-   "duracion_tmdb": 9
   }
  ],
  "verificadas": {
@@ -2007,7 +2012,7 @@
    "lbSlug": "afilando-memoria",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Eugenio Gómez, 2026, 7 min, CO; sinopsis del festival y afiche original de ficcali.com (biblioteca de medios).",
    "_director": "Eugenio Gómez Borrero",
-   "_sondeado": "2026-10-25",
+   "_sondeado": "2026-10-27",
    "poster": "/assets/ficcali-2026/afilando-memoria.jpg",
    "posterSource": "tmdb"
   },
@@ -2221,7 +2226,7 @@
    "lbSlug": "boato",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Alexandra Julio, 2026, 7 min, CO; sinopsis del festival y afiche original de ficcali.com (biblioteca de medios).",
    "_director": "Alexandra Julio",
-   "_sondeado": "2026-10-25",
+   "_sondeado": "2026-10-27",
    "poster": "/assets/ficcali-2026/boato.jpg",
    "posterSource": "tmdb"
   },
@@ -2243,6 +2248,32 @@
    "poster": "/assets/ficcali-2026/boca-vieja.jpg",
    "posterSource": "tmdb"
   },
+  "Caída libre": {
+   "tmdb_id": 1487969,
+   "titulo_original": "Caída Libre",
+   "poster_path": "/zQCkdatZEByFF9GelSWn90V01Jg.jpg",
+   "synopsis_es": "En el desesperado intento de escapar del aislamiento, un personaje sin rostro salta del borde esperando cambiar su realidad, sin saber que en el fondo de esa caída la ley de la gravedad no aplica para él, este personaje simplemente rebota.",
+   "synopsis_en": "In a desperate attempt to escape isolation, a faceless character jumps from a ledge hoping to meet his end, unaware that at the bottom of the fall, the laws of gravity do not apply: he bounces back. Frustrated by this fact, he keeps trying in different scenarios, in a constant cycle. All this takes place in a desolate, polluted landscape devoid of resources.",
+   "genero": "Animación",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 9,
+   "pais_tmdb": "",
+   "lbSlug": "caida-libre",
+   "_verificado": "declarada a mano: 27 oct 2026: heredada de lo ya publicado en anibia-2026 (tmdb 1487969); misma obra por dirección: Wilson Borja, aquí Wilson Borja 2024",
+   "_director": "",
+   "_sondeado": "2026-10-27",
+   "poster": "/assets/ficcali-2026/caida-libre.jpg",
+   "posterSource": "tmdb",
+   "_heredado": {
+    "genero": "catálogo w_R4H881HQEE34 (anibia-2026, ficcali-2026, qaff-2026)",
+    "anio": "catálogo w_R4H881HQEE34 (anibia-2026, ficcali-2026, qaff-2026)",
+    "synopsis_es": "catálogo w_R4H881HQEE34 (anibia-2026, ficcali-2026, qaff-2026)",
+    "director_heredado": "catálogo w_R4H881HQEE34 (anibia-2026, ficcali-2026, qaff-2026)",
+    "duracion_tmdb": "catálogo w_R4H881HQEE34 (anibia-2026, ficcali-2026, qaff-2026)"
+   },
+   "anio": 2024,
+   "director_heredado": "Wilson Borja"
+  },
   "Cineconcierto: Metrópolis": {
    "tmdb_id": 19,
    "titulo_original": "Metropolis",
@@ -2256,7 +2287,7 @@
    "lbSlug": "metropolis",
    "_verificado": "declarada a mano: 21 oct 2026: la ficha de ficcali.com (sección Clásicos, «Cine Concierto Metrópolis») la da como Fritz Lang, Alemania, 1927, 120 min; TMDB 19 es Metropolis de Fritz Lang, 1927 (153 min la versión restaurada; el cineconcierto usa otro corte). Única obra con ese título y director.",
    "_director": "Fritz Lang",
-   "_sondeado": "2026-10-25",
+   "_sondeado": "2026-10-27",
    "poster": "/assets/ficcali-2026/cineconcierto-metropolis.jpg",
    "posterSource": "tmdb"
   },
@@ -2293,7 +2324,7 @@
    "lbSlug": "despues-de-las-seis",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Diana Kuellar (1740740, directora de Marímbula), 2026, 24 min, CO; sinopsis del festival y afiche original de ficcali.com (biblioteca de medios).",
    "_director": "Diana Kuéllar",
-   "_sondeado": "2026-10-25",
+   "_sondeado": "2026-10-27",
    "poster": "/assets/ficcali-2026/despues-de-las-seis.jpg",
    "posterSource": "tmdb"
   },
@@ -2331,7 +2362,7 @@
    "lbSlug": "el-coloso",
    "_verificado": "declarada a mano: Proyección especial fuera de la Selección: la tarjeta solo dice Colombia, 70 min. TMDB: «El coloso», José Varón, Colombia, 2025, 66 min (la otra ficha homónima, 1612550, es un corto peruano de 17 min). Verificado a mano el 8 oct.",
    "_director": "José Varón",
-   "_sondeado": "2026-10-25",
+   "_sondeado": "2026-10-27",
    "sinopsis": "El Coloso cuenta la vida y el legado de Freddy Rincón, un gigante del fútbol colombiano que conquistó Brasil con su fuerza y su talento, llenó estadios en España y le dio a su país uno de sus goles más inolvidables, contra Alemania. De sus raíces en Buenaventura a convertirse en símbolo de orgullo nacional, Rincón trascendió la cancha para inspirar a toda una generación. Más que un futbolista, fue un faro de esperanza cuya grandeza sigue viva en la memoria de los colombianos.",
    "_sinopsis": "traducción nuestra con contexto (Content Design, 10 oct 2026) de la sinopsis en inglés de TMDB: https://www.themoviedb.org/movie/1566489",
    "poster": "/assets/ficcali-2026/el-coloso.jpg",
@@ -2350,7 +2381,7 @@
    "lbSlug": "el-bitcoin-de-oro",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 10 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título, por director y en Letterboxd): Bernardo Hernández, 2026, 18 min, ES; sinopsis del festival y afiche original de ficcali.com (biblioteca de medios).",
    "_director": "Bernardo Hernández",
-   "_sondeado": "2026-10-25",
+   "_sondeado": "2026-10-27",
    "poster": "/assets/ficcali-2026/el-bitcoin-de-oro.jpg",
    "posterSource": "tmdb"
   },
@@ -2385,7 +2416,7 @@
    "lbSlug": "el-maestro-de-la-piqueria",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 10 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título, por director y en Letterboxd): Yinet Molero, 2025, 8 min, CO; sinopsis del festival y afiche original de ficcali.com (biblioteca de medios).",
    "_director": "Yinet Molero",
-   "_sondeado": "2026-10-25",
+   "_sondeado": "2026-10-27",
    "poster": "/assets/ficcali-2026/el-maestro-de-la-piqueria.jpg",
    "posterSource": "tmdb"
   },
@@ -2402,7 +2433,7 @@
    "lbSlug": "el-mundo-de-humberto",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Paula Ortiz, 2025, 14 min, CO; sinopsis del festival y afiche original de ficcali.com (biblioteca de medios).",
    "_director": "Paula Ortiz",
-   "_sondeado": "2026-10-25",
+   "_sondeado": "2026-10-27",
    "poster": "/assets/ficcali-2026/el-mundo-de-humberto.jpg",
    "posterSource": "tmdb"
   },
@@ -2440,7 +2471,7 @@
    "lbSlug": "el-viaje-2026",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Ana Sofía Franco, 2026, 8 min, CO; sinopsis del festival y afiche original de ficcali.com (biblioteca de medios).",
    "_director": "Ana Sofía Franco",
-   "_sondeado": "2026-10-25",
+   "_sondeado": "2026-10-27",
    "poster": "/assets/ficcali-2026/el-viaje.jpg",
    "posterSource": "tmdb"
   },
@@ -2457,7 +2488,7 @@
    "lbSlug": "ellas-gardiennes-de-lamazonie",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 10 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título, por director y en Letterboxd): Estelle Lalisse y Jade Fort, 2022, 39 min, CO/PE/EC; sinopsis del festival y afiche original de ficcali.com (biblioteca de medios).",
    "_director": "Estelle Lalisse, Jade Fort",
-   "_sondeado": "2026-10-25",
+   "_sondeado": "2026-10-27",
    "poster": "/assets/ficcali-2026/ellas-gardiennes-de-l-amazonie.jpg",
    "posterSource": "tmdb"
   },
@@ -2475,7 +2506,7 @@
    "lbSlug": "work-in-progress",
    "_verificado": "declarada a mano: Proyección especial: la tarjeta dice España, 124 min. TMDB: José Luis Guerín, 2001, 125 min, España. Verificado a mano el 8 oct.",
    "_director": "José Luis Guerín",
-   "_sondeado": "2026-10-25",
+   "_sondeado": "2026-10-27",
    "poster": "/assets/ficcali-2026/en-construccion.jpg",
    "posterSource": "tmdb"
   },
@@ -2514,7 +2545,7 @@
    "lbSlug": "good-valley-stories",
    "_verificado": "declarada a mano: FICCI 65 la publicó (José Luis Guerín, 2025); TMDB: Guerín, 2025, 125 min contra 120 de la tarjeta (10 oct 2026). La tarjeta de Ficcali no da director ni año: sin ellos el candado no podía corroborar.",
    "_director": "José Luis Guerín",
-   "_sondeado": "2026-10-25",
+   "_sondeado": "2026-10-27",
    "poster": "/assets/ficcali-2026/historias-del-buen-valle.jpg",
    "posterSource": "tmdb"
   },
@@ -2720,7 +2751,7 @@
    "lbSlug": "la-bola-negra",
    "_verificado": "declarada a mano: BIFF 12 y TIFF 2026 la publican con esta ficha; director, año (2026) y duración (155 min) coinciden (10 oct 2026). La tarjeta de Ficcali no da director ni año: sin ellos el candado no podía corroborar.",
    "_director": "Javier Ambrossi, Javier Calvo",
-   "_sondeado": "2026-10-25",
+   "_sondeado": "2026-10-27",
    "poster": "/assets/ficcali-2026/la-bola-negra.jpg",
    "posterSource": "tmdb"
   },
@@ -2738,7 +2769,7 @@
    "lbSlug": "the-fabulous-time-machine",
    "_verificado": "declarada a mano: Proyección especial: la tarjeta dice Brasil, 70 min. TMDB: «A Fabulosa Máquina do Tempo», Eliza Capai, 2026, 73 min, Brasil. Verificado a mano el 8 oct.",
    "_director": "Eliza Capai",
-   "_sondeado": "2026-10-25",
+   "_sondeado": "2026-10-27",
    "sinopsis": "En el corazón del árido sertão brasileño, un grupo de niñas de diez años juega a inventar máquinas del tiempo imaginarias. Las pequeñas viajan al pasado para explorar la dura realidad de supervivencia que vivieron sus madres y abuelas, al mismo tiempo que se proyectan. El documental utiliza la inocencia y la imaginación infantil como un poderoso catalizador para debatir con madurez sobre la autonomía de las mujeres, el género, el ciclo de la pobreza y sus propios sueños de libertad.",
    "_sinopsis": "ficha de ficcali.com, verbatim (https://ficcali.com/pelicula/a-fabulosa-maquina-do-tempo), leída el 10 oct 2026",
    "poster": "/assets/ficcali-2026/la-fabulosa-maquina-del-tiempo.jpg",
@@ -2809,7 +2840,7 @@
    "lbSlug": "double-freedom",
    "_verificado": "declarada a mano: BIFF 12 la publica con esta ficha; Lisandro Alonso, 2026, 100 min coinciden (10 oct 2026). La tarjeta de Ficcali no da director ni año: sin ellos el candado no podía corroborar.",
    "_director": "Lisandro Alonso",
-   "_sondeado": "2026-10-25",
+   "_sondeado": "2026-10-27",
    "poster": "/assets/ficcali-2026/la-libertad-doble-v2.jpg",
    "posterSource": "tmdb"
   },
@@ -2856,7 +2887,7 @@
    "lbSlug": "las-pesadillas-del-siervo",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Manuel Villa (1711036, director de No amanece igual para todos), 2025, 90 min, CO; sinopsis del festival y afiche original de ficcali.com (biblioteca de medios).",
    "_director": "Manuel Villa",
-   "_sondeado": "2026-10-25",
+   "_sondeado": "2026-10-27",
    "poster": "/assets/ficcali-2026/las-pesadillas-del-siervo.jpg",
    "posterSource": "tmdb"
   },
@@ -2965,7 +2996,7 @@
    "lbSlug": "minotaur-2026",
    "_verificado": "declarada a mano: Proyección especial: la tarjeta dice Rusia, 135 min. TMDB: «Minotaur», Andrey Zvyagintsev, 2026, 135 min exactos (origen FR por la coproducción; el director es ruso). Verificado a mano el 8 oct.",
    "_director": "Andrey Zvyagintsev",
-   "_sondeado": "2026-10-25",
+   "_sondeado": "2026-10-27",
    "poster": "/assets/ficcali-2026/minotauro.jpg",
    "posterSource": "tmdb"
   },
@@ -3085,7 +3116,7 @@
    "lbSlug": "ona-2026",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 10 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título, por director y en Letterboxd): Matilde Gimeno, 2026, 4 min, ES; sinopsis del festival y afiche original de ficcali.com (biblioteca de medios).",
    "_director": "Matilde Gimeno",
-   "_sondeado": "2026-10-25",
+   "_sondeado": "2026-10-27",
    "poster": "/assets/ficcali-2026/ona.jpg",
    "posterSource": "tmdb"
   },
@@ -3203,7 +3234,7 @@
    "lbSlug": "quinto-primera",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 10 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título, por director y en Letterboxd): Fran Menchón, 2026, 18 min, ES; sinopsis del festival y afiche original de ficcali.com (biblioteca de medios).",
    "_director": "Fran Menchón",
-   "_sondeado": "2026-10-25",
+   "_sondeado": "2026-10-27",
    "poster": "/assets/ficcali-2026/quinto-primera.jpg",
    "posterSource": "tmdb"
   },
@@ -3238,7 +3269,7 @@
    "lbSlug": "rodilla-negra",
    "_verificado": "declarada a mano: Proyección especial junto a El Coloso: la tarjeta solo dice Colombia. Es «Rodilla negra» de Carlos Mayolo (Cali, 1975, 14 min), el único título así en TMDB; cuadra con un festival caleño. Verificado a mano el 8 oct.",
    "_director": "Carlos Mayolo",
-   "_sondeado": "2026-10-25",
+   "_sondeado": "2026-10-27",
    "sinopsis": "Un equipo de fútbol, interpretado por jugadores del Barrios Unidos de Cali, se topa en el campo con una pareja de hippies que se bañan desnudos y les roba el radio de transistores. Eso parece desatar algo en su jugador más legendario, Jonny Mosquera: un síndrome terrible que lo hace caer, literalmente, de rodillas.",
    "_sinopsis": "traducción nuestra con contexto (Content Design, 10 oct 2026) de la sinopsis en inglés de TMDB: https://www.themoviedb.org/movie/947607",
    "poster": "/assets/ficcali-2026/rodilla-negra.jpg",
@@ -3257,7 +3288,7 @@
    "lbSlug": "runa-simi",
    "_verificado": "declarada a mano: AFF 2026 la publicó (Augusto Zegarra, 2025); TMDB: Zegarra, 2025, 81 min contra 85 de la tarjeta (10 oct 2026). La tarjeta de Ficcali no da director ni año: sin ellos el candado no podía corroborar.",
    "_director": "Augusto Zegarra",
-   "_sondeado": "2026-10-25",
+   "_sondeado": "2026-10-27",
    "poster": "/assets/ficcali-2026/runa-simi.jpg",
    "posterSource": "tmdb"
   },
@@ -3356,7 +3387,7 @@
    "lbSlug": "somnolytic",
    "_verificado": "declarada a mano: Ya existía en TMDB con su título en inglés, «Somnolytic» (original «Somnolithic»), de Abril Velasquez: la misma directora (Abril Natalia Velázquez). La encontró la búsqueda de personas el 10 oct 2026.",
    "_director": "Abril Natalia Velázquez",
-   "_sondeado": "2026-10-25",
+   "_sondeado": "2026-10-27",
    "poster": "/assets/ficcali-2026/somnolitico.jpg",
    "posterSource": "tmdb",
    "_heredado": {
@@ -3491,7 +3522,7 @@
    "lbSlug": "vertigo-2025-1",
    "_verificado": "declarada a mano: Ya existía en TMDB (Jimmy Llamas, 2025) y el enriquecido no la casó; la encontró la sonda por título el 10 oct 2026.",
    "_director": "Jimmy Llamas",
-   "_sondeado": "2026-10-25",
+   "_sondeado": "2026-10-27",
    "poster": "/assets/ficcali-2026/vertigo.jpg",
    "posterSource": "tmdb"
   },
@@ -3561,7 +3592,7 @@
    "lbSlug": "donde-esta-richard",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 10 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título, por director y en Letterboxd): Juan Carlos Álvarez, 2025, 6 min, ES; sinopsis del festival y afiche original de ficcali.com (biblioteca de medios).",
    "_director": "Juan Carlos Álvarez",
-   "_sondeado": "2026-10-25",
+   "_sondeado": "2026-10-27",
    "poster": "/assets/ficcali-2026/donde-esta-richard.jpg",
    "posterSource": "tmdb"
   },
@@ -3741,7 +3772,6 @@
   "Bailar con la línea",
   "Bankolombia",
   "Canción para mi tierra",
-  "Caída libre",
   "Competencia corto nacional – Prog. 1",
   "Competencia corto nacional – Prog. 2",
   "Convergencias",
@@ -3799,10 +3829,6 @@
    "fecha": "2026-10-22"
   },
   "Canción para mi tierra": {
-   "director": "",
-   "fecha": "2026-10-22"
-  },
-  "Caída libre": {
    "director": "",
    "fecha": "2026-10-22"
   },

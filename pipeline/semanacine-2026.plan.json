@@ -1,0 +1,101 @@
+{
+ "_nota": "Quinta Semana del Cine Colombiano (Cali, 3–9 nov 2026). Muestra independiente gestionada por Arturo Murgas (Cinema Carmesí, Universidad Santiago de Cali, Proyecto Oriente); no tiene web ni competencia. Fuente: la lámina de programación de su IG. Juan pidió montarlo el 2 nov, al llegar el afiche oficial de Arturo Murgas. Lo halló el descubridor semanal (2 nov).",
+ "pasos": [
+  {
+   "cmd": "python3 pipeline/semanacine-2026-crudo.py",
+   "que": "la lámina de programación → crudo (11 actividades; el sábado 7 fuera por no traer hora)"
+  },
+  {
+   "cmd": "python3 pipeline/enriquecer.py semanacine-2026 --posters",
+   "que": "TMDB verificado + las fichas declaradas en -correcciones"
+  },
+  {
+   "cmd": "python3 pipeline/ensamblar.py semanacine-2026",
+   "que": "crudo + plan → staging/semanacine-2026-build.json"
+  },
+  {
+   "cmd": "python3 pipeline/encuadrar-posters.py semanacine-2026 --aplicar --desde festivals/staging/semanacine-2026-build.json",
+   "que": "los afiches al lienzo 780×1170"
+  },
+  {
+   "cmd": "python3 pipeline/semanacine-2026-verificar.py",
+   "que": "lo publicado contra la lámina: hora y título de cada función leídos por Vision y Tesseract, y cada hora impresa con su función"
+  }
+ ],
+ "festival": {
+  "crudo": "festivals/staging/semanacine-2026-crudo.json",
+  "enriquecido": "festivals/staging/semanacine-2026-enriquecido.json",
+  "geo": "festivals/staging/semanacine-2026-venues-geo.json",
+  "sedes": {
+   "Universidad Santiago de Cali": [
+    "Universidad Santiago de Cali - Cali",
+    ""
+   ],
+   "Acajel": [
+    "Acajel - Cali",
+    ""
+   ],
+   "Teatrino Proyecto Oriente": [
+    "Teatrino Proyecto Oriente - Cali",
+    ""
+   ],
+   "Casa Occio": [
+    "Casa Occio - Cali",
+    ""
+   ],
+   "Centro Cultural Brisas de Mayo": [
+    "Centro Cultural Brisas de Mayo - Cali",
+    ""
+   ]
+  },
+  "_por_que_secciones": "Sección = la palabra que la lámina de programación pone a cada actividad (decisión de Juan, 2 nov 2026).",
+  "secciones": {
+   "Película": {
+    "emoji": "🎬",
+    "en": "Film",
+    "archetype": "Muestra / País"
+   },
+   "Cine Bajo las Estrellas": {
+    "emoji": "🌌",
+    "en": "Cinema Under the Stars",
+    "archetype": "Especiales / Eventos"
+   },
+   "Conversatorio": {
+    "emoji": "💬",
+    "en": "Talk",
+    "archetype": "Charlas / Industria"
+   },
+   "Proyección de cortos locales": {
+    "emoji": "🎞️",
+    "en": "Local Short Films",
+    "archetype": "Muestra / País"
+   }
+  },
+  "name": "Semana del Cine Colombiano",
+  "displayName": "Semana del Cine Colombiano",
+  "fullName": "Quinta Semana del Cine Colombiano",
+  "shortName": "SEMANA CINE COL",
+  "tagline": "Muestra de Cine Colombiano en Cali",
+  "city": "Cali",
+  "country": "CO",
+  "dates": "3–9 NOV",
+  "dates_en": "NOV 3–9",
+  "year": 2026,
+  "timezoneOffset": "-05:00",
+  "storageKey": "semanacine2026_",
+  "festivalStartStr": "2026-11-03T00:00:00",
+  "festivalEndStr": "2026-11-09T23:59:00",
+  "sharedSlotIsOneScreening": false,
+  "mes_es": "noviembre",
+  "dias_vacios": [
+   "2026-11-07",
+   "2026-11-08"
+  ],
+  "_por_que_acceso": "Sin `ticketing_model`: ninguna pieza anuncia pago. El acceso va en `_acceso` del crudo.",
+  "_fuentes_versionadas": {}
+ },
+ "fuentes_vivas": [],
+ "_nota_fuentes_vivas": "Sin web: todo sale de láminas de IG (@semanadelcinecolombiano), que lee el vigía.",
+ "radar": null,
+ "radar_nota": "Sin issue de radar: lo halló el descubridor semanal el 2 nov, a un día del festival."
+}

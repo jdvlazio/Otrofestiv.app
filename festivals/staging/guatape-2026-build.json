@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "Instagram @guatapefilmfest — el carrusel oficial de programación (11 láminas)",
-  "capturado": "2026-10-25",
+  "capturado": "2026-10-27",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_sedes": "El nombre de la lámina → la sede, en tabla explícita. El Domo y la Tarima Principal están dentro del Parque Principal y van como sala; la Pantalla CORNARE es la sala del Malecón.",
@@ -2575,6 +2575,7 @@
    "country": "Colombia",
    "flags": "🇨🇴",
    "duration": "12 min",
+   "genre": "Ficción",
    "_ancla": [
     "Malecón - Guatapé",
     "2026-10-23",
@@ -2588,6 +2589,8 @@
    "has_qa": false,
    "synopsis": "La mañana de un sábado Luis Antonio, un niño de 8 años, quiere aprender a montar en bicicleta. Pero su madre tiene que trabajar y lo deja al cuidado de Ofelia, su estricta vecina.",
    "synopsis_lang": "es",
+   "poster": "/assets/miradas-2026/luis-antonio.jpg",
+   "posterSource": "oficial",
    "_src": {
     "url": "https://www.instagram.com/p/Def6fhKDSQy/",
     "date": "2026-10-14",
@@ -4511,7 +4514,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-25T10:04:38",
+  "fecha": "2026-10-27T18:48:14",
   "plan_sha": "e4564939112b8067",
   "paso": 6,
   "cmd": "python3 pipeline/guatape-2026-verificar.py"

@@ -24,7 +24,7 @@
   "Documental"
  ],
  "afiche": {
-  "archivo": "/assets/mamut-2026/la-memoria-de-las-mariposas.jpg",
+  "archivo": "/assets/mambe-2026/la-memoria-de-las-mariposas.jpg",
   "veredicto": "oficial"
  },
  "xref": {
@@ -35,9 +35,14 @@
   {
    "etiqueta": "77 min",
    "duracion_min": 77
+  },
+  {
+   "etiqueta": "150 min",
+   "duracion_min": 150
   }
  ],
  "presentaciones": [
+  "mambe-2026",
   "mamut-2026"
  ]
 }

@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "Instagram @girardotaescultura — el carrusel de programación (5 láminas)",
-  "capturado": "2026-10-07",
+  "capturado": "2026-10-27",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_sedes": "Los nueve lugares con el nombre que imprime la lámina, tal cual. Ninguna lámina da dirección.",
@@ -216,6 +216,7 @@
    "address": "Cl. 6 #12-7"
   }
  },
+ "_avisos_id": [],
  "films": [
   {
    "title": "La otra forma",
@@ -227,6 +228,11 @@
    "flags": "🇧🇷🇨🇴",
    "duration": "99 min",
    "genre": "Animación",
+   "_ancla": [
+    "Comfama - Girardota",
+    "2026-09-30",
+    "10:00"
+   ],
    "day": "2026-09-30",
    "time": "10:00",
    "day_order": 0,
@@ -244,13 +250,20 @@
    "lbSlug": "the-other-shape",
    "tmdb_id": 970589,
    "synopsis_en": "In the near future, humanity has built a paradise on the surface of the moon, but only people with square heads can enter. One man will do anything to try to fit into this geometric world.",
-   "title_en": "The Other Shape"
+   "title_en": "The Other Shape",
+   "_fid": "f_6880d8159c",
+   "id": "f_6880d8159c"
   },
   {
    "title": "Muestra de cortos Girardotanos",
    "type": "film",
    "section": "🎬 Proyecciones",
    "duration": "60 min",
+   "_ancla": [
+    "Punto de Turismo - Girardota",
+    "2026-09-30",
+    "16:00"
+   ],
    "day": "2026-09-30",
    "time": "16:00",
    "day_order": 0,
@@ -260,15 +273,22 @@
     "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
     "date": "2026-09-22"
    },
-   "is_free": true
+   "is_free": true,
+   "_fid": "f_7f42f40371",
+   "id": "f_7f42f40371"
   },
   {
-   "title": "Muestra de cortometrajes: Fantasía tropical",
+   "title": "Muestra de Cortometrajes: Fantasía Tropical",
    "type": "film",
    "section": "🎬 Proyecciones",
    "country": "Colombia",
    "flags": "🇨🇴",
    "duration": "83 min",
+   "_ancla": [
+    "Punto de Turismo - Girardota",
+    "2026-09-30",
+    "17:00"
+   ],
    "day": "2026-09-30",
    "time": "17:00",
    "day_order": 0,
@@ -327,10 +347,12 @@
      "posterSource": "tmdb",
      "lbSlug": "mermaids-in-the-mist",
      "tmdb_id": 1117116,
+     "synopsis": "Mariela se enfrenta a la creencia del pueblo de que una sirena se está llevando a los jóvenes y, en el camino, descubre al verdadero monstruo.",
      "synopsis_en": "Mariela will fight against the belief of the people that a mermaid is leading to young people, discovering the true monster on her journey.",
      "title_en": "Mermaids in the Mist",
      "genre": "Drama",
      "country": "Colombia",
+     "synopsis_lang": "es",
      "flags": "🇨🇴"
     },
     {
@@ -349,6 +371,11 @@
      "synopsis_lang": "es",
      "flags": "🇨🇴"
     }
+   ],
+   "_fid": "f_25a1f46f9c",
+   "id": "f_25a1f46f9c",
+   "titulos_anteriores": [
+    "Muestra de cortometrajes: Fantasía tropical"
    ]
   },
   {
@@ -361,6 +388,11 @@
    "flags": "🇨🇴🇺🇸🇪🇸",
    "duration": "111 min",
    "genre": "Fantasía",
+   "_ancla": [
+    "Palmas del Llano - Girardota",
+    "2026-09-30",
+    "19:00"
+   ],
    "day": "2026-09-30",
    "time": "19:00",
    "day_order": 0,
@@ -380,7 +412,9 @@
    "lbSlug": "rains-over-babel",
    "tmdb_id": 1388977,
    "synopsis_en": "In a retro-futuristic, tropical-punk twist on Dante’s Inferno, a group of misfits converges at Babel, a legendary dive bar that doubles as purgatory, where La Flaca—the city’s Grim Reaper—presides. Here, souls gamble years of their lives with her, daring to outwit Death Herself.",
-   "title_en": "Rains Over Babel"
+   "title_en": "Rains Over Babel",
+   "_fid": "f_4806b72c96",
+   "id": "f_4806b72c96"
   },
   {
    "title": "La otra forma",
@@ -392,6 +426,11 @@
    "flags": "🇧🇷🇨🇴",
    "duration": "99 min",
    "genre": "Animación",
+   "_ancla": [
+    "Comfama - Girardota",
+    "2026-10-01",
+    "10:00"
+   ],
    "day": "2026-10-01",
    "time": "10:00",
    "day_order": 1,
@@ -409,13 +448,20 @@
    "lbSlug": "the-other-shape",
    "tmdb_id": 970589,
    "synopsis_en": "In the near future, humanity has built a paradise on the surface of the moon, but only people with square heads can enter. One man will do anything to try to fit into this geometric world.",
-   "title_en": "The Other Shape"
+   "title_en": "The Other Shape",
+   "_fid": "f_7134383f30",
+   "id": "f_7134383f30"
   },
   {
    "title": "Cianotipia: las impresiones del sol",
    "type": "event",
    "section": "🎪 Actividades",
    "duration": "90 min",
+   "_ancla": [
+    "I.E. San Andrés - Girardota",
+    "2026-10-01",
+    "14:00"
+   ],
    "day": "2026-10-01",
    "time": "14:00",
    "day_order": 1,
@@ -428,13 +474,20 @@
    },
    "is_free": true,
    "description": "Con Veanve Fotografía.",
-   "description_lang": "es"
+   "description_lang": "es",
+   "_fid": "f_efc055f517",
+   "id": "f_efc055f517"
   },
   {
    "title": "Del vampiro del bosque al psicópata de al lado: Cómo el monstruo dejó de tener colmillos",
    "type": "event",
    "section": "🎪 Actividades",
    "duration": "180 min",
+   "_ancla": [
+    "Biblioteca Municipal Alberto Aguirre Ceballos - Girardota",
+    "2026-10-01",
+    "15:00"
+   ],
    "day": "2026-10-01",
    "time": "15:00",
    "day_order": 1,
@@ -447,13 +500,20 @@
    },
    "is_free": true,
    "description": "Con José Andrés Gómez.",
-   "description_lang": "es"
+   "description_lang": "es",
+   "_fid": "f_7669b744e9",
+   "id": "f_7669b744e9"
   },
   {
    "title": "Colombia es fantástica",
    "type": "event",
    "section": "🎪 Actividades",
    "duration": "60 min",
+   "_ancla": [
+    "Punto de Turismo - Girardota",
+    "2026-10-01",
+    "17:30"
+   ],
    "day": "2026-10-01",
    "time": "17:30",
    "day_order": 1,
@@ -466,7 +526,9 @@
    },
    "is_free": true,
    "description": "Ediciones Fantasmagoría. Invitados: Vincent Gil y Cristián Jaramillo.",
-   "description_lang": "es"
+   "description_lang": "es",
+   "_fid": "f_5a34f115ff",
+   "id": "f_5a34f115ff"
   },
   {
    "title": "Funeral siniestro",
@@ -478,6 +540,11 @@
    "flags": "🇨🇴",
    "duration": "101 min",
    "genre": "Terror",
+   "_ancla": [
+    "Punto de Turismo - Girardota",
+    "2026-10-01",
+    "18:30"
+   ],
    "day": "2026-10-01",
    "time": "18:30",
    "day_order": 1,
@@ -495,7 +562,9 @@
    "lbSlug": "sinister-funeral",
    "tmdb_id": 127593,
    "synopsis_en": "Upon a small property in a Colombian field, a woman's ambitions against a defenceless girl result in the woman's death. As tradition, the funeral is carried out in the small house. The girl lives alone, and is accompanied only by few nearby neighbours. With great fear for the dead one, without light and without any communication, the night arrives, and at the same time the solitude. The girl suspects that the woman's bad intentions have not yet passed on...",
-   "title_en": "Sinister Funeral"
+   "title_en": "Sinister Funeral",
+   "_fid": "f_0a0b3f54f7",
+   "id": "f_0a0b3f54f7"
   },
   {
    "title": "El Páramo",
@@ -507,6 +576,11 @@
    "flags": "🇨🇴🇦🇷🇪🇸",
    "duration": "108 min",
    "genre": "Drama",
+   "_ancla": [
+    "Morning - Girardota",
+    "2026-10-01",
+    "20:30"
+   ],
    "day": "2026-10-01",
    "time": "20:30",
    "day_order": 1,
@@ -524,7 +598,9 @@
    "lbSlug": "the-squad",
    "tmdb_id": 83705,
    "synopsis_en": "A special commando unit made up of 9 soldiers is sent to a military base in a moorland region after contact was lost and it was believed to have been the target of an attack. Upon arrival, they find a single mysterious survivor: a woman in chains.",
-   "title_en": "The Squad"
+   "title_en": "The Squad",
+   "_fid": "f_e68f79f9af",
+   "id": "f_e68f79f9af"
   },
   {
    "title": "Al final del espectro",
@@ -536,6 +612,11 @@
    "flags": "🇨🇴",
    "duration": "100 min",
    "genre": "Misterio",
+   "_ancla": [
+    "Escuela de Encenillos - Girardota",
+    "2026-10-02",
+    "09:00"
+   ],
    "day": "2026-10-02",
    "time": "09:00",
    "day_order": 2,
@@ -553,15 +634,22 @@
    "lbSlug": "at-the-end-of-the-spectra",
    "tmdb_id": 40511,
    "synopsis_en": "After a traumatic situation that makes Vega become an agoraphobic person, she decides to live like a hermit in an apartment because of her father's recommendation. But some strange things start happening, she sees visions, and hears noises and voices. She starts to worry about the dark past of that apartment, and the bizarre obsession of her neighbor.",
-   "title_en": "At the End of the Spectra"
+   "title_en": "At the End of the Spectra",
+   "_fid": "f_cea100f33b",
+   "id": "f_cea100f33b"
   },
   {
-   "title": "Muestra de cortometrajes: Fantasía tropical",
+   "title": "Muestra de Cortometrajes: Fantasía Tropical",
    "type": "film",
    "section": "🎬 Proyecciones",
    "country": "Colombia",
    "flags": "🇨🇴",
    "duration": "83 min",
+   "_ancla": [
+    "Punto de Turismo - Girardota",
+    "2026-10-02",
+    "16:00"
+   ],
    "day": "2026-10-02",
    "time": "16:00",
    "day_order": 2,
@@ -620,10 +708,12 @@
      "posterSource": "tmdb",
      "lbSlug": "mermaids-in-the-mist",
      "tmdb_id": 1117116,
+     "synopsis": "Mariela se enfrenta a la creencia del pueblo de que una sirena se está llevando a los jóvenes y, en el camino, descubre al verdadero monstruo.",
      "synopsis_en": "Mariela will fight against the belief of the people that a mermaid is leading to young people, discovering the true monster on her journey.",
      "title_en": "Mermaids in the Mist",
      "genre": "Drama",
      "country": "Colombia",
+     "synopsis_lang": "es",
      "flags": "🇨🇴"
     },
     {
@@ -642,6 +732,11 @@
      "synopsis_lang": "es",
      "flags": "🇨🇴"
     }
+   ],
+   "_fid": "f_08a2bec2e0",
+   "id": "f_08a2bec2e0",
+   "titulos_anteriores": [
+    "Muestra de cortometrajes: Fantasía tropical"
    ]
   },
   {
@@ -649,6 +744,11 @@
    "type": "event",
    "section": "🎪 Actividades",
    "duration": "90 min",
+   "_ancla": [
+    "Biblioteca Municipal Alberto Aguirre Ceballos - Girardota",
+    "2026-10-02",
+    "17:00"
+   ],
    "day": "2026-10-02",
    "time": "17:00",
    "day_order": 2,
@@ -661,7 +761,9 @@
    },
    "is_free": true,
    "description": "Con el director Jefferson Cardoza y la productora Melissa Salazar.",
-   "description_lang": "es"
+   "description_lang": "es",
+   "_fid": "f_07d06b108c",
+   "id": "f_07d06b108c"
   },
   {
    "title": "El origen de las especies",
@@ -672,6 +774,11 @@
    "country": "Colombia",
    "flags": "🇨🇴",
    "duration": "70 min",
+   "_ancla": [
+    "Comfama - Girardota",
+    "2026-10-02",
+    "18:00"
+   ],
    "day": "2026-10-02",
    "time": "18:00",
    "day_order": 2,
@@ -688,13 +795,20 @@
    "is_free": true,
    "lbSlug": "el-origen-de-las-especies",
    "tmdb_id": 1275337,
-   "synopsis_en": "A misty jungle opens the confines of time and space to converge the times of a colonial era, the echoes of an apocalyptic beast and the open-air prayers of a transanimal ritual. An incantation film, composed of three invocations thirsty for rage and faith in the world."
+   "synopsis_en": "A misty jungle opens the confines of time and space to converge the times of a colonial era, the echoes of an apocalyptic beast and the open-air prayers of a transanimal ritual. An incantation film, composed of three invocations thirsty for rage and faith in the world.",
+   "_fid": "f_4f73603489",
+   "id": "f_4f73603489"
   },
   {
    "title": "Fantasía disidente: Ficciones transgenerístas y antihegemónicas",
    "type": "event",
    "section": "🎪 Actividades",
    "duration": "90 min",
+   "_ancla": [
+    "Comfama - Girardota",
+    "2026-10-02",
+    "19:00"
+   ],
    "day": "2026-10-02",
    "time": "19:00",
    "day_order": 2,
@@ -707,7 +821,9 @@
    },
    "is_free": true,
    "description": "Con Tiagx Vélez y Ciara Echeverry.",
-   "description_lang": "es"
+   "description_lang": "es",
+   "_fid": "f_3cac1b2f05",
+   "id": "f_3cac1b2f05"
   },
   {
    "title": "Pura Sangre",
@@ -719,6 +835,11 @@
    "flags": "🇨🇴",
    "duration": "90 min",
    "genre": "Crimen",
+   "_ancla": [
+    "Parque de la Poesía - Girardota",
+    "2026-10-02",
+    "20:00"
+   ],
    "day": "2026-10-02",
    "time": "20:00",
    "day_order": 2,
@@ -736,13 +857,20 @@
    "lbSlug": "pure-blood-1982",
    "tmdb_id": 134245,
    "synopsis_en": "Roberto Hurtado suffers from a rare disease that requires massive transfusions of blood from children or adolescents. His son blackmails three employees to get blood for him and they resort to unscrupulous methods to obtain it.",
-   "title_en": "Pure Blood"
+   "title_en": "Pure Blood",
+   "_fid": "f_b3dad84b85",
+   "id": "f_b3dad84b85"
   },
   {
    "title": "Hacer películas: desarrollo y producción de cortometrajes de género fantástico",
    "type": "event",
    "section": "🎪 Actividades",
    "duration": "240 min",
+   "_ancla": [
+    "Biblioteca Municipal Alberto Aguirre Ceballos - Girardota",
+    "2026-10-03",
+    "09:00"
+   ],
    "day": "2026-10-03",
    "time": "09:00",
    "day_order": 3,
@@ -755,7 +883,9 @@
    },
    "is_free": true,
    "description": "Con Melissa Salazar y Jefferson Cardoza.",
-   "description_lang": "es"
+   "description_lang": "es",
+   "_fid": "f_199674f728",
+   "id": "f_199674f728"
   },
   {
    "title": "La mansión de Araucaima",
@@ -767,6 +897,11 @@
    "flags": "🇨🇴",
    "duration": "85 min",
    "genre": "Drama",
+   "_ancla": [
+    "Comfama - Girardota",
+    "2026-10-03",
+    "16:00"
+   ],
    "day": "2026-10-03",
    "time": "16:00",
    "day_order": 3,
@@ -784,13 +919,20 @@
    "lbSlug": "the-manor-of-araucaima",
    "tmdb_id": 327176,
    "synopsis_en": "In an old and mysterious tropical mansion cohabit the supposed owner, a friar, a convalescent pilot, the Haitian servant, the mercenary guardian and the Machiche, a mature and dominant female. A young model arrives there to unleash all kinds of passions.",
-   "title_en": "The Manor of Araucaima"
+   "title_en": "The Manor of Araucaima",
+   "_fid": "f_b8e01db8f6",
+   "id": "f_b8e01db8f6"
   },
   {
    "title": "Selección de Cortometrajes fantásticos para toda la familia",
    "type": "film",
    "section": "🎬 Proyecciones",
    "duration": "120 min",
+   "_ancla": [
+    "Parque Principal - Girardota",
+    "2026-10-03",
+    "16:00"
+   ],
    "day": "2026-10-03",
    "time": "16:00",
    "day_order": 3,
@@ -802,13 +944,20 @@
     "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
     "date": "2026-09-22"
    },
-   "is_free": true
+   "is_free": true,
+   "_fid": "f_2b73882226",
+   "id": "f_2b73882226"
   },
   {
    "title": "Vampiros acalorados",
    "type": "event",
    "section": "🎪 Actividades",
    "duration": "90 min",
+   "_ancla": [
+    "Comfama - Girardota",
+    "2026-10-03",
+    "17:30"
+   ],
    "day": "2026-10-03",
    "time": "17:30",
    "day_order": 3,
@@ -821,15 +970,22 @@
    },
    "is_free": true,
    "description": "Con Sandro Romero Rey y Oswaldo Osorio.",
-   "description_lang": "es"
+   "description_lang": "es",
+   "_fid": "f_1d3bc52168",
+   "id": "f_1d3bc52168"
   },
   {
-   "title": "Competencia oficial de cortometrajes",
+   "title": "Competencia Oficial de Cortometrajes",
    "type": "film",
    "section": "🎬 Proyecciones",
    "country": "Colombia",
    "flags": "🇨🇴",
    "duration": "90 min",
+   "_ancla": [
+    "Parque Principal - Girardota",
+    "2026-10-03",
+    "18:00"
+   ],
    "day": "2026-10-03",
    "time": "18:00",
    "day_order": 3,
@@ -863,7 +1019,12 @@
      "title": "Elementales",
      "director": "Camilo Botero Jaramillo",
      "synopsis": "ELEMENTALES, rodado en 16mm entre 1954 y 1961, despierta en el espectador aquellas memorias primitivas y emotivas de la infancia, en las que acciones o momentos que podrían ser vistos como cotidianos, se revelan como marcas poderosas de aquello que constituye la primera vez que vimos, sentimos o aprendimos algo. Momentos, acciones, descubrimientos ELEMENTALES.",
-     "synopsis_lang": "es"
+     "genre": "Documental",
+     "country": "Colombia",
+     "year": 2025,
+     "synopsis_lang": "es",
+     "duration": "8 min",
+     "flags": "🇨🇴"
     },
     {
      "title": "Mantener la Democracia Maestro",
@@ -906,7 +1067,12 @@
      "poster": "/assets/girardota-2026/en-todo-y-en-nada.jpg",
      "posterSource": "custom",
      "synopsis": "“En todo y en nada” es un Documental-Experimental poético donde nosotras –Ximena y Raquel– dos jóvenes foráneas antioqueñas que nos sentimos perdidas en una ciudad tan caótica como lo es Medellín, materializamos todas esas dudas y cuestionamientos sobre el no pertenecer, ese sentimiento de no encajar ya en ningún lugar, a causa de dejar lo que llamábamos hogar por seguir nuestros sueños. Este documental es un viaje introspectivo que materializa y abraza los duelos, preguntas y el limbo en el que habitamos, al intentar dejar ir lo que fuimos y afrontar lo que ahora somos, todo a través de una mirada nostálgica al material de archivo de una infancia perdida, el uso de la carretera como espacio de limbo que genera sensaciones de pérdida, y el constante movimiento, imágenes que son fusionadas entre sí e intervenidas, creando una atmósfera de confusión por ser todo y nada al mismo tiempo, sonidos desafinados, incómodos, caóticos y desenfrenados refuerzan dicha sensación. La vida es un constante devenir, todos hemos estado en todo y en nada, todos hemos cargado en algún momento con el sentimiento de no pertenecer.",
-     "synopsis_lang": "es"
+     "genre": "Experimental",
+     "country": "Colombia",
+     "year": 2026,
+     "synopsis_lang": "es",
+     "duration": "11 min",
+     "flags": "🇨🇴"
     },
     {
      "title": "Bajo el Último Aliento",
@@ -923,18 +1089,29 @@
     {
      "title": "Maleza",
      "director": "Nicolle Estrada Díaz",
-     "poster": "/assets/villadelcine-2026/maleza.jpg",
+     "poster": "/assets/girardota-2026/maleza.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "maleza-2026",
+     "tmdb_id": 1791678,
      "synopsis": "Alba, una sanadora y partera solitaria, ha dedicado su existencia a preservar la vida. Guiada por el espíritu de su gato, recibe una noche a una joven desesperada cuya petición sacude sus convicciones. Entre dolor y silencios, deberá comprender que acompañar también significa permitir que cada quien elija su propio camino.",
-     "posterSource": "oficial",
-     "synopsis_lang": "es"
+     "genre": "Drama y Fantasía",
+     "country": "Colombia",
+     "year": 2026,
+     "synopsis_lang": "es",
+     "duration": "11 min",
+     "flags": "🇨🇴"
     },
     {
      "title": "Carola",
      "director": "Violeta Barrios",
      "tmdb_id": 1497688,
      "synopsis": "Octavio, un anciano solitario y azotado por su pasado, recibe un extraño mensaje de su única compañía: su mula Carola. Para morir en paz, debe reconciliarse con Julián, su hijo a quien no ve desde hace años. Juntos emprenden un viaje marcado por el rencor, el silencio y la posibilidad de sanar lo que parecía roto para siempre.",
+     "genre": "Ficción",
+     "country": "Colombia",
+     "year": 2025,
      "synopsis_lang": "es",
-     "duration": "11 min"
+     "duration": "11 min",
+     "flags": "🇨🇴"
     },
     {
      "title": "Refracción",
@@ -970,7 +1147,12 @@
      "poster": "/assets/girardota-2026/deus-ex-necro-machina.jpg",
      "posterSource": "custom",
      "synopsis": "¿Qué relación existe entre los trucos de inmortalidad de un videojuego y las mecánicas de poder en un país atravesado por el conflicto? DEUS EX NECRO MACHINA es un ensayo fílmico que tensiona la memoria afectiva de la infancia con la violencia estructural en Colombia. A través del despiece de archivos fotográficos, prensa y gameplay de GTA: San Andreas, el cortometraje confronta la estetización del consumo con la ausencia irremplazable de quienes fueron borrados del mapa.",
-     "synopsis_lang": "es"
+     "genre": "Experimental",
+     "country": "Colombia",
+     "year": 2026,
+     "synopsis_lang": "es",
+     "duration": "6 min",
+     "flags": "🇨🇴"
     },
     {
      "title": "De lo Oculto",
@@ -983,8 +1165,12 @@
      "director": "Flora Rodríguez",
      "poster": "/assets/popayan-2026/la-rebelion-de-un-fantasma.jpg",
      "synopsis": "En Medellín, el río Aburrá fluye encajonado entre autopistas y concreto, ignorado por la ciudad que creció sobre su cuerpo. Ofelia lo busca. Camina sus orillas, intenta tocarlo, es expulsada. En ese trayecto -entre el deseo de acercarse y la imposibilidad de hacerlo- emergen los fantasmas del agua: los gallinazos que alguna vez sobrevolaron sus riberas, los cuerpos que el río ha guardado en silencio, las memorias de quienes lavaban ropa y navegaban en balsas donde hoy pasa el tráfico.",
+     "country": "Colombia",
+     "year": 2026,
      "posterSource": "oficial",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "duration": "15 min",
+     "flags": "🇨🇴"
     },
     {
      "title": "Idilio",
@@ -1010,6 +1196,11 @@
      "poster": "/assets/girardota-2026/habitat-venus.jpg",
      "posterSource": "custom"
     }
+   ],
+   "_fid": "f_22a03b3125",
+   "id": "f_22a03b3125",
+   "titulos_anteriores": [
+    "Competencia oficial de cortometrajes"
    ]
   },
   {
@@ -1017,6 +1208,11 @@
    "type": "event",
    "section": "🎪 Actividades",
    "duration": "90 min",
+   "_ancla": [
+    "Parque Principal - Girardota",
+    "2026-10-03",
+    "19:30"
+   ],
    "day": "2026-10-03",
    "time": "19:30",
    "day_order": 3,
@@ -1029,13 +1225,20 @@
    },
    "is_free": true,
    "description": "Presentación de los procesos artísticos del grupo de danza urbana.",
-   "description_lang": "es"
+   "description_lang": "es",
+   "_fid": "f_ff74b6d263",
+   "id": "f_ff74b6d263"
   },
   {
    "title": "Ceremonia de premiación de cortometrajes",
    "type": "event",
    "section": "🎪 Actividades",
    "duration": "90 min",
+   "_ancla": [
+    "Parque Principal - Girardota",
+    "2026-10-03",
+    "21:00"
+   ],
    "day": "2026-10-03",
    "time": "21:00",
    "day_order": 3,
@@ -1046,13 +1249,20 @@
     "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
     "date": "2026-09-22"
    },
-   "is_free": true
+   "is_free": true,
+   "_fid": "f_a079b65eaf",
+   "id": "f_a079b65eaf"
   },
   {
    "title": "Rumba tropical",
    "type": "event",
    "section": "🎪 Actividades",
    "duration": "90 min",
+   "_ancla": [
+    "Morning - Girardota",
+    "2026-10-03",
+    "22:00"
+   ],
    "day": "2026-10-03",
    "time": "22:00",
    "day_order": 3,
@@ -1063,13 +1273,20 @@
     "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
     "date": "2026-09-22"
    },
-   "is_free": true
+   "is_free": true,
+   "_fid": "f_f393c40b2c",
+   "id": "f_f393c40b2c"
   },
   {
    "title": "Muestra de cortos Girardotanos",
    "type": "film",
    "section": "🎬 Proyecciones",
    "duration": "60 min",
+   "_ancla": [
+    "Parque Principal - Girardota",
+    "2026-10-04",
+    "15:00"
+   ],
    "day": "2026-10-04",
    "time": "15:00",
    "day_order": 4,
@@ -1079,7 +1296,9 @@
     "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
     "date": "2026-09-22"
    },
-   "is_free": true
+   "is_free": true,
+   "_fid": "f_0d4c90f808",
+   "id": "f_0d4c90f808"
   },
   {
    "title": "El libro de Lila",
@@ -1091,6 +1310,11 @@
    "flags": "🇨🇴🇺🇾",
    "duration": "76 min",
    "genre": "Animación",
+   "_ancla": [
+    "Parque Principal - Girardota",
+    "2026-10-04",
+    "16:00"
+   ],
    "day": "2026-10-04",
    "time": "16:00",
    "day_order": 4,
@@ -1108,13 +1332,20 @@
    "lbSlug": "lilas-book",
    "tmdb_id": 478795,
    "synopsis_en": "Lila, a character in a children's story book, suddenly falls out of her paper world and becomes trapped in a world where she doesn’t belong and discovers that only Ramón—the now–grown owner of the book who no longer believes in fantasy—can save her. With the help of her new friend Manuela, Lila tries to convince him of her situation, and together they embark on a risky journey to the Desert of Lost Memories to recover her lost book.",
-   "title_en": "Lila's Book"
+   "title_en": "Lila's Book",
+   "_fid": "f_57fabf3cf8",
+   "id": "f_57fabf3cf8"
   },
   {
    "title": "Un baile de película",
    "type": "event",
    "section": "🎪 Actividades",
    "duration": "90 min",
+   "_ancla": [
+    "Parque Principal - Girardota",
+    "2026-10-04",
+    "17:00"
+   ],
    "day": "2026-10-04",
    "time": "17:00",
    "day_order": 4,
@@ -1127,7 +1358,9 @@
    },
    "is_free": true,
    "description": "Una clase de salsa y ritmos tropicales a cielo abierto.",
-   "description_lang": "es"
+   "description_lang": "es",
+   "_fid": "f_f5394cc754",
+   "id": "f_f5394cc754"
   },
   {
    "title": "La salsa vive",
@@ -1139,6 +1372,11 @@
    "flags": "🇨🇴🇺🇸",
    "duration": "101 min",
    "genre": "Documental",
+   "_ancla": [
+    "Parque Principal - Girardota",
+    "2026-10-04",
+    "18:30"
+   ],
    "day": "2026-10-04",
    "time": "18:30",
    "day_order": 4,
@@ -1156,18 +1394,21 @@
    "lbSlug": "salsa-lives",
    "tmdb_id": 1422107,
    "synopsis_en": "La Salsa Vive is a vibrant cinematic exploration of Afro-Cuban music's history, tracing its roots from New York's lively streets to Cali, Colombia, now the global salsa capital.",
-   "title_en": "Salsa Lives"
+   "title_en": "Salsa Lives",
+   "_fid": "f_91f813c071",
+   "id": "f_91f813c071"
   }
  ],
  "_avisos_duracion": [
   "«Al final del espectro»: 100 min en el festival, 86 en TMDB",
-  "«Pura Sangre»: 90 min en el festival, 105 en TMDB"
+  "«Pura Sangre»: 90 min en el festival, 105 en TMDB",
+  "programa «Competencia oficial de cortometrajes» (2026-10-03 18:00): sus obras suman 110 min (10 de 20 con duración) y la función dura 90"
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-07T16:19:39",
+  "fecha": "2026-10-27T19:10:52",
   "plan_sha": "89d6e69df8fcc84e",
-  "paso": 6,
-  "cmd": "python3 pipeline/ensamblar.py girardota-2026"
+  "paso": 8,
+  "cmd": "python3 pipeline/girardota-2026-verificar.py"
  }
 }

@@ -1,0 +1,73 @@
+{
+ "_provenance": {
+  "fuente": "Google Maps desde el navegador integrado (31 oct 2026); _prec:manual intocable",
+  "capturado": "2026-10-31"
+ },
+ "Museo Rayo - Roldanillo": {
+  "lat": 4.4096964,
+  "lng": -76.1539664,
+  "address": "Cl. 8 #8-53, Roldanillo, Valle del Cauca",
+  "_prec": "manual",
+  "_match": "Google Maps: «Museo Rayo»"
+ },
+ "Coliseo Corregimiento de San Francisco - Toro": {
+  "lat": 4.681899,
+  "lng": -76.0345245,
+  "_prec": "manual",
+  "_match": "Google Maps: «San Francisco, Toro, Valle del Cauca» (el corregimiento)",
+  "_nota": "PIN APROXIMADO: Maps no tiene el coliseo; el pin es el centro del corregimiento. Preguntar al festival."
+ },
+ "Mambo House - Toro": {
+  "lat": 4.5926679,
+  "lng": -76.0611898,
+  "_prec": "manual",
+  "_match": "Google Maps: «Mambo's House» (en el corregimiento San Antonio, Toro)"
+ },
+ "Hotel Miracruz - Toro": {
+  "lat": 4.6117939,
+  "lng": -76.0793798,
+  "_prec": "manual",
+  "_match": "Google Maps: «Hotel Mira Cruz Toro Valle»"
+ },
+ "Polideportivo San Antonio - Toro": {
+  "lat": 4.5925149,
+  "lng": -76.0609688,
+  "_prec": "manual",
+  "_match": "Google Maps: «San Antonio, Toro, Valle del Cauca» (el corregimiento)",
+  "_nota": "PIN APROXIMADO: Maps no tiene el polideportivo de San Antonio (el «Polideportivo» que da está en el casco urbano de Toro); el pin es el centro del corregimiento, a ~30 m de Mambo's House: son dos sedes distintas del mismo corregimiento. Preguntar al festival."
+ },
+ "Coliseo Institución Educativa Fray José Joaquín Escobar - Toro": {
+  "lat": 4.6092418,
+  "lng": -76.0773237,
+  "_prec": "manual",
+  "_match": "Google Maps: «Institución Educativa Fray José Joaquín \"J.J.\" Escobar»",
+  "_nota": "el pin es el colegio; el coliseo está en él"
+ },
+ "Vereda Patio Bonito - Toro": {
+  "lat": 4.5896948,
+  "lng": -76.1334538,
+  "_prec": "manual",
+  "_match": "Google Maps: «Patio bonito» (vereda, Toro)",
+  "_nota": "PIN APROXIMADO: la parrilla dice solo «Vereda de Patio bonito», sin el lugar exacto de la proyección."
+ },
+ "Rosalia's Garden - Toro": {
+  "lat": 4.6091797,
+  "lng": -76.0785289,
+  "_prec": "manual",
+  "_match": "Google Maps: «Rosalia’s Garden»"
+ },
+ "Por confirmar - Toro": {
+  "lat": 4.6089432,
+  "lng": -76.0823845,
+  "_prec": "manual",
+  "_match": "Google Maps: «Parque Principal de Toro»",
+  "_nota": "PIN APROXIMADO: la parrilla dice «Lugar: Por confirmar» (taller de archivo de Laura Alhach); el pin es el parque principal de Toro. Misma coordenada que «Por definir - Toro»: dos rótulos del festival, ninguno es un lugar."
+ },
+ "Por definir - Toro": {
+  "lat": 4.6089432,
+  "lng": -76.0823845,
+  "_prec": "manual",
+  "_match": "Google Maps: «Parque Principal de Toro»",
+  "_nota": "PIN APROXIMADO: la parrilla dice «Lugar: POR DEFINIR» (Cinetoro Expandido, sáb 14); el pin es el parque principal de Toro. Misma coordenada que «Por confirmar - Toro»."
+ }
+}

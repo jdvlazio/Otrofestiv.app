@@ -68,7 +68,7 @@ def pais_es(p):
     return ', '.join(NOMBRE_PAIS.get(x, x) for x in partes)
 
 
-DIR = re.compile(r'^(?P<pre>.*?)\(\s*Dir\.?\s*(?P<dir>.+?)(?:,\s*(?P<anio>\d{4}|sin estrenar))?\)\s*'
+DIR = re.compile(r'^(?P<pre>.*?)\(\s*Dir\.?\s*(?P<dir>.+?)(?:[,.]\s*(?P<anio>\d{4}|sin estrenar))?\)\s*'
                  r'(?P<pais>.*?)\.?\s+(?P<dur>[\d:,]+)\s*min\.?\s*$')
 
 
@@ -133,6 +133,21 @@ def main():
             o.update({'tipo': 'corto', 'seccion': seccion, 'programa': programa,
                       '_src': {'url': FICHA.format(n, sede), 'date': FECHA}})
             obras.append(o)
+
+    # LA FUNCIÓN DE FONTANAR de «Con extremos» (1 nov 14:00) tiene ficha propia,
+    # la 3846, y lista NUEVE obras: las ocho de la 3592 y «Una parvada de
+    # estruendo» (4ª). La que falta en la 3592 entra solo en esa función
+    # (`_solo_funcion`, con su lugar en la ficha). Visto el 31 oct 2026.
+    lin = obras_de(3846)
+    tit_ce = {plano(o['titulo']) for o in obras if o['programa'] == 'Surgentes - Con extremos'}
+    nuevas = [(k, o) for k, o in enumerate(lin) if plano(o['titulo']) not in tit_ce]
+    if len(lin) != 9 or [o['titulo'] for _, o in nuevas] != ['Una parvada de estruendo']:
+        sys.exit(f'✗ ficha 3846 (Fontanar, Con extremos): cambió — {[o["titulo"] for o in lin]}')
+    for k, o in nuevas:
+        o.update({'tipo': 'corto', 'seccion': 'Surgentes', 'programa': 'Surgentes - Con extremos',
+                  '_solo_funcion': '2026-11-01 14:00', '_lugar': k,
+                  '_src': {'url': FICHA.format(3846, 80), 'date': '2026-10-31'}})
+        obras.append(o)
 
     # Cruce con la ficha de Fontanar (3579): mismas cinco obras de Animage
     lin, _ = texto(3579)

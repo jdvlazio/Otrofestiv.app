@@ -361,9 +361,20 @@ def reuso_publicada(pub, fid=None):
                                 ('duracion_tmdb', _min_de(_de('duration'))),
                                 ('genero', _de('genre')), ('synopsis_en', _de('synopsis_en')),
                                 ('lbSlug', _de('lbSlug'))) if v}
+    # LA FICHA (27 oct 2026): el tmdb_id con que ya la publicamos se quedaba
+    # atrás —139 presentaciones sin ficha que otro festival nuestro tiene—.
+    # Solo si es UNO: con dos ids distintos, heredar uno sería elegir.
+    _ids = {y['tmdb_id'] for y in pub if y.get('tmdb_id')}
+    if len(_ids) == 1:
+        resto['tmdb_id'] = _ids.pop()
+        resto['_ficha_de'] = 'ya publicada en ' + next(y['festival'] for y in pub if y.get('tmdb_id'))
     if not x and not s and not resto:
         return None
     e = {'_ya_publicada': pub}
+    if x:
+        e['_afiche_de'] = f'ya publicada en {x["festival"]}'
+    if s:
+        e['_sinopsis_de'] = f'ya publicada en {s["festival"]}'
     if x:
         e['poster'] = x['poster']
         e['_verificado'] = f'ya publicada en {x["festival"]}: se reusa su afiche'
@@ -727,9 +738,13 @@ def main():
                 continue
             if campo == 'poster' and e.get('poster_path'):
                 continue
-            v = herencia.valor(w, campo, fid, t, e.get('tmdb_id'), key)
+            v = herencia.valor(w, campo, fid, t, e.get('tmdb_id'), key,
+                               obra={'director': f.get('director') or e.get('_director'),
+                                     'anio': f.get('anio') or e.get('anio_tmdb')})
             if v:
                 e[campo] = v
+                if campo == 'tmdb_id':
+                    e['_ficha_de'] = de
                 if campo == 'poster':
                     e['posterSource'] = herencia.poster_source(w, v)
                     e['_heredado']= {**e.get('_heredado', {}), 'posterSource': de}

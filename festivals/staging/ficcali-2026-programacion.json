@@ -1,11 +1,11 @@
 {
  "_provenance": {
   "fuente": "ficcali.com, Programación 2026 (WP 14870)",
-  "capturado": "2026-10-25",
+  "capturado": "2026-10-27",
   "url": "https://ficcali.com/programacion-ficcali-2026/",
   "metodo": "una tarjeta del loop de Elementor por función; fecha cruzada con su etiqueta"
  },
- "_modificada": "2026-10-19T17:22:36",
+ "_modificada": "2026-10-27T17:07:07",
  "sin_hora": [],
  "tarjetas": [
   {
@@ -1078,19 +1078,6 @@
    "hora_impresa": "8:00 p.m."
   },
   {
-   "id": 14030,
-   "dia": "2026-10-23",
-   "hora": "20:30",
-   "sede": "CINE COLOMBIA UNICENTRO",
-   "sede_slug": "cine-colombia-unicentro",
-   "titulo": "Las pesadillas del siervo",
-   "categoria": "Proyecciones",
-   "meta_impresa": "Colombia | 90 min",
-   "pais": "Colombia",
-   "duracion_min": 90,
-   "hora_impresa": "8:30 p.m."
-  },
-  {
    "id": 14026,
    "dia": "2026-10-23",
    "hora": "21:00",
@@ -1322,6 +1309,19 @@
    "sede_slug": "cinemateca-la-tertulia",
    "titulo": "Animá Ve – Mujeres en la animación",
    "categoria": "Proyecciones",
+   "hora_impresa": "3:00 p.m."
+  },
+  {
+   "id": 14030,
+   "dia": "2026-10-25",
+   "hora": "15:00",
+   "sede": "Cine Club El ventanal",
+   "sede_slug": "cine-club-el-ventanal",
+   "titulo": "Las pesadillas del siervo",
+   "categoria": "Proyecciones",
+   "meta_impresa": "Colombia | 90 min",
+   "pais": "Colombia",
+   "duracion_min": 90,
    "hora_impresa": "3:00 p.m."
   },
   {

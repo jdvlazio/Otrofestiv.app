@@ -1,25 +1,15 @@
 {
   "_nota": "Cuentas de IG que vigila pipeline/ig_vigia.py. 'festivales': id de FESTIVAL_CONFIG → cuenta, solo para los que no traen `instagram:` en src/config.js (ese campo manda). 'preonboarding': festivales aún sin config, con sus fechas oficiales. 'facebook': festivales que se comunican por Facebook y no por IG ({id,url,inicio,fin}); los lee el actor apify~facebook-posts-scraper.",
   "festivales": {
+    "semanacine2026": "semanadelcinecolombiano",
     "ficpa2026": "ficpapasto",
     "ficcali2026": "festivaldecinecali",
     "bhff2026": "bogotahorrorfest",
     "ficica2026": "cinealacalle",
-    "fantasmagoria2026": "mfantasmagoria"
+    "fantasmagoria2026": "mfantasmagoria",
+    "miradas2026": "cinematecademedellin"
   },
   "preonboarding": [
-    {
-      "id": "feciso2026",
-      "cuenta": "fecisofest",
-      "inicio": "2026-11-01",
-      "fin": "2026-11-07"
-    },
-    {
-      "id": "ficidi2026",
-      "cuenta": "festivaldecinediverso",
-      "inicio": "2026-11-04",
-      "fin": "2026-11-07"
-    },
     {
       "id": "miradas2026",
       "cuenta": "cinematecademedellin",
@@ -49,6 +39,60 @@
       "cuenta": "bogoshorts",
       "inicio": "2026-12-01",
       "fin": "2026-12-08"
+    },
+    {
+      "id": "aleste2026",
+      "cuenta": "aleste.colombia",
+      "inicio": "2026-11-18",
+      "fin": "2026-11-29"
+    },
+    {
+      "id": "cinetoro2026",
+      "cuenta": "cinetorofilmfestival",
+      "inicio": "2026-11-10",
+      "fin": "2026-11-15"
+    },
+    {
+      "id": "cuaff2026",
+      "cuenta": "colombianurbanfilm",
+      "inicio": "2026-11-27",
+      "fin": "2026-11-29"
+    },
+    {
+      "id": "festicinerio2026",
+      "cuenta": "festicinerio",
+      "inicio": "2026-11-08",
+      "fin": "2026-11-13"
+    },
+    {
+      "id": "mambe2026",
+      "cuenta": "festivalmambe",
+      "inicio": "2026-11-03",
+      "fin": "2026-11-07"
+    },
+    {
+      "id": "ficoconcepcion2026",
+      "cuenta": "cineoriente",
+      "inicio": "2026-11-13",
+      "fin": "2026-11-17"
+    },
+    {
+      "id": "aleste2026",
+      "cuenta": "aleste.colombia",
+      "inicio": "2026-11-18",
+      "fin": "2026-11-29"
+    },
+    {
+      "id": "medellinhorror2026",
+      "cuenta": "medellinhorrorfest",
+      "inicio": "2026-11-27",
+      "fin": "2026-11-30"
+    },
+    {
+      "id": "fecibac2026",
+      "cuenta": "festivaldecine.bc",
+      "inicio": "2026-11-10",
+      "fin": "2026-11-14"
     }
   ],
   "facebook": [

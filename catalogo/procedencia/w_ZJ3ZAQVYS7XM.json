@@ -1,0 +1,28 @@
+{
+ "titulo_original": {
+  "fuente": "festival:miradas-2026,miradas-2026",
+  "regla": "el título que más festivales imprimen"
+ },
+ "directores": {
+  "fuente": "tmdb:1390333",
+  "regla": "tmdb-manda"
+ },
+ "anio": {
+  "fuente": "tmdb:1390333",
+  "regla": "tmdb-manda"
+ },
+ "paises": {
+  "fuente": "festival",
+  "regla": "pais-union"
+ },
+ "generos": {
+  "fuente": "festival",
+  "regla": "todos los publicados, del más al menos frecuente"
+ },
+ "afiche": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "la única imagen de la ficha de TMDB (1390333) son muñecos de fieltro con carteles «KAYPIMI KANCHI», sin título ni créditos: un fotograma, no el afiche; no se encontró afiche oficial (TMDB, búsqueda web, 27 oct 2026)",
+  "fecha": "2026-10-27"
+ }
+}

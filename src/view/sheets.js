@@ -152,7 +152,7 @@ export function openCitySheet(){
   // fallback tipográfico del riel — misma degradación que la card del splash.
   const art=document.getElementById('city-sheet-art');
   art.innerHTML=cfg.keyArt
-    ?`<img class="splash-card-art" src="${cfg.keyArt}" alt="" onerror="this.remove()">`
+    ?`<img class="splash-card-art" src="${cfg.keyArt}" alt="" data-err="quitar">`
     :`<span class="splash-card-fb">${festivalShortName(cfg)||cfg.name||''}</span>`;
   document.getElementById('city-sheet-label').textContent=t('city_sheet_label');
   // SIN conteo de funciones (Juan, 7 ago): en el filtro el número dice "vas a ver

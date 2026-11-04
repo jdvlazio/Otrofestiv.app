@@ -9,7 +9,7 @@
 //     FESTIVAL_END (festivalEnded).
 //
 // WORKER: las sched pure fns tienen COPIAS en el template del calc worker (Blob
-//   clásico). El worker las consume vía eval(name).toString() — su source es
+//   clásico). El worker las consume vía fn.toString() (calc.js, sin eval desde el 26 oct) — su source es
 //   portable. Las copias worker-local (FESTIVAL_BUFFER, etc.) se mantienen en
 //   main.js; [worker-overlap] valida.
 import { DEFAULT_DURATION_MIN } from "../config.js";

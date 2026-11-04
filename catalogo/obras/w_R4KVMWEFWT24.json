@@ -8,6 +8,12 @@
  "directores": [
   "Diana Bustamante"
  ],
+ "aliases": [
+  {
+   "titulo": "El león",
+   "tipo": "festival"
+  }
+ ],
  "sinopsis": {
   "es": "Un cuerpo cubierto con una sábana manchada de sangre yace sobre una mesa de ping-pong, ubicada en lo que parece ser un escenario. A partir de esta imagen encontrada en el archivo noticioso colombiano, esta pieza documental da cuenta de cómo la muerte, paradójica e inefable, ha habitado un lugar no pensado para ella: el Auditorio León de Greiff de la Universidad Nacional de Colombia.",
   "en": "Strange images overlap like floating ghosts: a dead body, a singer, an audience. The film shows, paradoxically and theatrically, how death inhabits the León de Greiff Auditorium in Colombia."
@@ -16,7 +22,7 @@
   "Documental"
  ],
  "afiche": {
-  "archivo": "/assets/midbo-2026/el-leon.jpg",
+  "archivo": "/assets/midbo-2026/el-leon-afiche.jpg",
   "veredicto": "oficial"
  },
  "xref": {
@@ -30,6 +36,7 @@
   }
  ],
  "presentaciones": [
-  "midbo-2026"
+  "midbo-2026",
+  "miradas-2026"
  ]
 }

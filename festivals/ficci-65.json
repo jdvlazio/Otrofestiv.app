@@ -269,13 +269,15 @@
      "genre": "catálogo w_R4FJFY7626WB (cinemancia-2026, ficci-65, midbo-2026)",
      "lbSlug": "catálogo w_R4FJFY7626WB (cinemancia-2026, ficci-65, midbo-2026)",
      "year": "catálogo w_R4FJFY7626WB (cinemancia-2026, ficci-65, midbo-2026)",
-     "director": "catálogo w_R4FJFY7626WB (cinemancia-2026, ficci-65, midbo-2026)"
+     "director": "catálogo w_R4FJFY7626WB (cinemancia-2026, ficci-65, midbo-2026)",
+     "tmdb_id": "catálogo w_R4FJFY7626WB (cinemancia-2026, ficci-65, midbo-2026)"
     }
    },
    "lbSlug": "las-almas-ni-los-ojos",
    "year": 2026,
    "director": "María Canela Reyes, César Alejandro Jaimes",
-   "id": "f_2c47fe1a52"
+   "id": "f_2c47fe1a52",
+   "tmdb_id": 1665538
   },
   {
    "title": "Lolita en Honda",
@@ -302,12 +304,14 @@
     "heredado": {
      "lbSlug": "catálogo w_R4FPSFY03SBY (cinemancia-2026, ficci-65, mamut-2026, midbo-2026)",
      "year": "catálogo w_R4FPSFY03SBY (cinemancia-2026, ficci-65, mamut-2026, midbo-2026)",
-     "director": "catálogo w_R4FPSFY03SBY (cinemancia-2026, ficci-65, mamut-2026, midbo-2026)"
+     "director": "catálogo w_R4FPSFY03SBY (cinemancia-2026, ficci-65, mamut-2026, midbo-2026)",
+     "tmdb_id": "catálogo w_R4FPSFY03SBY (cinemancia-2026, ficci-65, mamut-2026, midbo-2026)"
     }
    },
    "year": 2026,
    "director": "Daniel Torres",
-   "id": "f_e173ae642e"
+   "id": "f_e173ae642e",
+   "tmdb_id": 1665546
   },
   {
    "title": "Prog. Cortometrajes — Jorge Cadena",
@@ -400,11 +404,13 @@
    "_src": {
     "heredado": {
      "genre": "catálogo w_R4GY6YGMWCSK (ficcali-2026, ficci-65)",
-     "lbSlug": "catálogo w_R4GY6YGMWCSK (ficcali-2026, ficci-65)"
+     "lbSlug": "catálogo w_R4GY6YGMWCSK (ficcali-2026, ficci-65)",
+     "tmdb_id": "catálogo w_R4GY6YGMWCSK (ficcali-2026, ficci-65)"
     }
    },
    "lbSlug": "the-fabulous-time-machine",
-   "id": "f_547a45c462"
+   "id": "f_547a45c462",
+   "tmdb_id": 1599779
   },
   {
    "title": "Die papierene Brücke",
@@ -457,10 +463,12 @@
    "lbSlug": "if-we-dont-burn-how-do-we-light-up-the-night",
    "_src": {
     "heredado": {
-     "lbSlug": "catálogo w_R4HAG9H5XRYK (ficci-65, filcmar-2026)"
+     "lbSlug": "catálogo w_R4HAG9H5XRYK (ficci-65, filcmar-2026)",
+     "tmdb_id": "catálogo w_R4HAG9H5XRYK (ficci-65, filcmar-2026)"
     }
    },
-   "id": "f_abdfc20c65"
+   "id": "f_abdfc20c65",
+   "tmdb_id": 1327436
   },
   {
    "title": "Iván & Hadoum",
@@ -484,7 +492,17 @@
    "posterSource": "tmdb",
    "poster": "https://image.tmdb.org/t/p/w185/gqtBos9yGlMPFulwcGjdX53CZx8.jpg",
    "work_id": "w_R4HAT4P4YQ74",
-   "id": "f_e32864d04a"
+   "id": "f_e32864d04a",
+   "genre": "Ficción",
+   "_src": {
+    "heredado": {
+     "genre": "catálogo w_R4HAT4P4YQ74 (ficci-65, miradas-2026)",
+     "lbSlug": "catálogo w_R4HAT4P4YQ74 (ficci-65, miradas-2026)",
+     "tmdb_id": "catálogo w_R4HAT4P4YQ74 (ficci-65, miradas-2026)"
+    }
+   },
+   "lbSlug": "ivan-hadoum",
+   "tmdb_id": 1514847
   },
   {
    "title": "Cine Indígena — Prog. 2",
@@ -523,7 +541,8 @@
        "year": "catálogo w_R4DHSYGCHRN0 (aff-2026, ficcali-2026, ficci-65)",
        "synopsis": "catálogo w_R4DHSYGCHRN0 (aff-2026, ficcali-2026, ficci-65)",
        "synopsis_en": "catálogo w_R4DHSYGCHRN0 (aff-2026, ficcali-2026, ficci-65)",
-       "director": "catálogo w_R4DHSYGCHRN0 (aff-2026, ficcali-2026, ficci-65)"
+       "director": "catálogo w_R4DHSYGCHRN0 (aff-2026, ficcali-2026, ficci-65)",
+       "tmdb_id": "catálogo w_R4DHSYGCHRN0 (aff-2026, ficcali-2026, ficci-65)"
       }
      },
      "lbSlug": "runa-simi",
@@ -531,7 +550,8 @@
      "synopsis": "Un actor de doblaje peruano busca convencer a Disney de doblar El Rey León al quechua. El viaje se convierte en una odisea personal de paternidad y activismo.",
      "synopsis_lang": "es",
      "synopsis_en": "A Peruvian voice actor sets out to convince Disney to dub The Lion King into Quechua. The journey becomes a personal odyssey of fatherhood and activism.",
-     "director": "Augusto Zegarra"
+     "director": "Augusto Zegarra",
+     "tmdb_id": 1465974
     }
    ],
    "id": "f_836746a481"
@@ -562,12 +582,14 @@
     "heredado": {
      "genre": "catálogo w_R4GR2FGPV8X4 (fantasmagoria-2026, ficci-65, mamut-2026)",
      "lbSlug": "catálogo w_R4GR2FGPV8X4 (fantasmagoria-2026, ficci-65, mamut-2026)",
-     "director": "catálogo w_R4GR2FGPV8X4 (fantasmagoria-2026, ficci-65, mamut-2026)"
+     "director": "catálogo w_R4GR2FGPV8X4 (fantasmagoria-2026, ficci-65, mamut-2026)",
+     "tmdb_id": "catálogo w_R4GR2FGPV8X4 (fantasmagoria-2026, ficci-65, mamut-2026)"
     }
    },
    "lbSlug": "manual-para-invocar-fantasmas",
    "director": "Juliana Zuluaga",
-   "id": "f_26275629ca"
+   "id": "f_26275629ca",
+   "tmdb_id": 1665528
   },
   {
    "title": "Las corrientes",
@@ -862,10 +884,12 @@
    "lbSlug": "forest-up-in-the-mountain",
    "_src": {
     "heredado": {
-     "lbSlug": "catálogo w_R4HAT5A0J0QY (ficci-65, midbo-2026)"
+     "lbSlug": "catálogo w_R4HAT5A0J0QY (ficci-65, midbo-2026)",
+     "tmdb_id": "catálogo w_R4HAT5A0J0QY (ficci-65, midbo-2026)"
     }
    },
-   "id": "f_6da434c7d7"
+   "id": "f_6da434c7d7",
+   "tmdb_id": 1616844
   },
   {
    "title": "Puntos de fuga",
@@ -1283,11 +1307,13 @@
    "_src": {
     "heredado": {
      "genre": "catálogo w_R4GY6YGMWCSK (ficcali-2026, ficci-65)",
-     "lbSlug": "catálogo w_R4GY6YGMWCSK (ficcali-2026, ficci-65)"
+     "lbSlug": "catálogo w_R4GY6YGMWCSK (ficcali-2026, ficci-65)",
+     "tmdb_id": "catálogo w_R4GY6YGMWCSK (ficcali-2026, ficci-65)"
     }
    },
    "lbSlug": "the-fabulous-time-machine",
-   "id": "f_35ad4908f1"
+   "id": "f_35ad4908f1",
+   "tmdb_id": 1599779
   },
   {
    "title": "Cine Afro — Prog. de Cortos",
@@ -1429,10 +1455,12 @@
    "lbSlug": "the-prince-of-nanawa",
    "_src": {
     "heredado": {
-     "lbSlug": "catálogo w_R4HB86VE5454 (ficci-65, ficma-2026)"
+     "lbSlug": "catálogo w_R4HB86VE5454 (ficci-65, ficma-2026)",
+     "tmdb_id": "catálogo w_R4HB86VE5454 (ficci-65, ficma-2026)"
     }
    },
-   "id": "f_14e932be80"
+   "id": "f_14e932be80",
+   "tmdb_id": 808224
   },
   {
    "title": "Risa y la cabina del viento",
@@ -1489,7 +1517,8 @@
        "year": "catálogo w_R4EPHC0WCQM5 (cineautopsia-2026, cinemancia-2026, ficci-65, mamut-2026, midbo-2026, popayan-2026)",
        "synopsis": "catálogo w_R4EPHC0WCQM5 (cineautopsia-2026, cinemancia-2026, ficci-65, mamut-2026, midbo-2026, popayan-2026)",
        "synopsis_en": "catálogo w_R4EPHC0WCQM5 (cineautopsia-2026, cinemancia-2026, ficci-65, mamut-2026, midbo-2026, popayan-2026)",
-       "director": "catálogo w_R4EPHC0WCQM5 (cineautopsia-2026, cinemancia-2026, ficci-65, ficica-2026, mamut-2026, midbo-2026, popayan-2026)"
+       "director": "catálogo w_R4EPHC0WCQM5 (cineautopsia-2026, cinemancia-2026, ficci-65, ficica-2026, mamut-2026, midbo-2026, popayan-2026)",
+       "tmdb_id": "catálogo w_R4EPHC0WCQM5 (anibia-2026, cineautopsia-2026, cinemancia-2026, ficci-65, ficica-2026, mamut-2026, midbo-2026, miradas-2026, popayan-2026)"
       }
      },
      "title_en": "decay",
@@ -1498,7 +1527,8 @@
      "synopsis": "Gracias a los chinos por la pólvora, parece que la hubieran hecho para mí. Su invención sucede como un accidente, pensada inicialmente para espantar los espíritus malos. Esta película inicia en China, luego un evento en Cartagena y se acaba siglos después en Bogotá.",
      "synopsis_lang": "es",
      "synopsis_en": "I am grateful to the Chinese for the invention of gunpowder — it feels as if they made it for me. Its discovery happened by accident, originally conceived as a way to ward off evil spirits. This film begins in China, then moves to an event in Cartagena, and ends centuries later in Bogotá.",
-     "director": "Juan Camilo González"
+     "director": "Juan Camilo González",
+     "tmdb_id": 1668881
     },
     {
      "title": "La garganta del diablo",
@@ -1521,13 +1551,17 @@
        "lbSlug": "catálogo w_R4FSHA335BXS (cinemancia-2026, ficci-65, midbo-2026)",
        "year": "catálogo w_R4FSHA335BXS (cinemancia-2026, ficci-65, midbo-2026)",
        "synopsis": "catálogo w_R4FSHA335BXS (cinemancia-2026, ficci-65, midbo-2026)",
-       "director": "catálogo w_R4FSHA335BXS (cinemancia-2026, ficci-65, midbo-2026)"
+       "director": "catálogo w_R4FSHA335BXS (cinemancia-2026, ficci-65, midbo-2026)",
+       "genre": "catálogo w_R4FSHA335BXS (cinemancia-2026, ficci-65, midbo-2026, miradas-2026)",
+       "tmdb_id": "catálogo w_R4FSHA335BXS (cinemancia-2026, ficci-65, midbo-2026, miradas-2026)"
       }
      },
      "year": 2026,
      "synopsis": "Un año después de la muerte de su padre, el reconocido mago colombiano Gustavo Lorgia, la directora realiza una exploración por sus archivos de video que revelan su trayectoria como artista, su rol como padre y la estética televisiva de una época. Una película que acude al archivo como medio para atravesar el duelo y a la memoria como forma de resistir a la desaparición.",
      "synopsis_lang": "es",
-     "director": "María Paula Lorgia"
+     "director": "María Paula Lorgia",
+     "genre": "Documental",
+     "tmdb_id": 1668889
     },
     {
      "title": "Madres de nacimiento",
@@ -1544,7 +1578,8 @@
        "year": "catálogo w_R4FH541S52JK (cinemancia-2026, ficci-65, ficdeh-2026, ficmontanas-2026, jardin-2026, midbo-2026, popayan-2026)",
        "synopsis": "catálogo w_R4FH541S52JK (cinemancia-2026, ficci-65, ficdeh-2026, ficmontanas-2026, jardin-2026, midbo-2026, popayan-2026)",
        "synopsis_en": "catálogo w_R4FH541S52JK (cinemancia-2026, ficci-65, ficdeh-2026, ficmontanas-2026, jardin-2026, midbo-2026, popayan-2026)",
-       "director": "catálogo w_R4FH541S52JK (cinemancia-2026, ficci-65, ficdeh-2026, ficmontanas-2026, jardin-2026, midbo-2026, popayan-2026)"
+       "director": "catálogo w_R4FH541S52JK (cinemancia-2026, ficci-65, ficdeh-2026, ficmontanas-2026, jardin-2026, midbo-2026, popayan-2026)",
+       "tmdb_id": "catálogo w_R4FH541S52JK (cinemancia-2026, ficci-65, ficdeh-2026, ficmontanas-2026, jardin-2026, midbo-2026, miradas-2026, popayan-2026)"
       }
      },
      "lbSlug": "madres-de-nacimiento",
@@ -1552,7 +1587,8 @@
      "synopsis": "Del olvido y la oscuridad hay imágenes y sonidos que resurgen para controlar los cuerpos de las mujeres latinoamericanas, quienes desde niñas han sido consideradas madres de nacimiento. Pero en estos archivos emerge una interferencia que proviene del pasado para evocar un mensaje de lucha, memoria y libertad.",
      "synopsis_lang": "es",
      "synopsis_en": "Out of oblivion and darkness, images and sounds resurface to control the bodies of Latin American women, regarded since childhood as mothers by birth. But within these archives an interference emerges from the past, carrying a message of struggle, memory and freedom.",
-     "director": "Gloria Isabel Gómez Ceballos"
+     "director": "Gloria Isabel Gómez Ceballos",
+     "tmdb_id": 1668902
     },
     {
      "title": "Todas las manos que solté",
@@ -1578,7 +1614,8 @@
        "year": "catálogo w_R4FT5JJDASKV (cinemancia-2026, ficci-65, midbo-2026)",
        "synopsis": "catálogo w_R4FT5JJDASKV (cinemancia-2026, ficci-65, midbo-2026)",
        "synopsis_en": "catálogo w_R4FT5JJDASKV (cinemancia-2026, ficci-65, midbo-2026)",
-       "director": "catálogo w_R4FT5JJDASKV (cinemancia-2026, ficci-65, midbo-2026)"
+       "director": "catálogo w_R4FT5JJDASKV (cinemancia-2026, ficci-65, midbo-2026)",
+       "tmdb_id": "catálogo w_R4FT5JJDASKV (cinemancia-2026, ficci-65, midbo-2026)"
       }
      },
      "title_en": "Tigers Can Be Seen In The Rain",
@@ -1587,7 +1624,8 @@
      "synopsis": "Entre formatos de imagen en movimiento, texturas locales y voces de otro tiempo, Óscar Ruiz Navia piensa la pérdida y el duelo como experiencias de dislocación temporal.",
      "synopsis_lang": "es",
      "synopsis_en": "Drifting between moving-image formats and collaging local textures and bygone voices, Oscar Ruiz Navia’s film reflects on loss and mourning as experiences of temporal dislocation.",
-     "director": "Óscar Ruiz Navia"
+     "director": "Óscar Ruiz Navia",
+     "tmdb_id": 1526866
     }
    ],
    "id": "f_bf35c98021"
@@ -1618,13 +1656,15 @@
      "genre": "catálogo w_R4HBNA1T7S2G (ficci-65, ficdeh-2026, midbo-2026)",
      "lbSlug": "catálogo w_R4HBNA1T7S2G (ficci-65, ficdeh-2026, midbo-2026)",
      "year": "catálogo w_R4HBNA1T7S2G (ficci-65, ficdeh-2026, midbo-2026)",
-     "director": "catálogo w_R4HBNA1T7S2G (ficci-65, ficdeh-2026, midbo-2026)"
+     "director": "catálogo w_R4HBNA1T7S2G (ficci-65, ficdeh-2026, midbo-2026)",
+     "tmdb_id": "catálogo w_R4HBNA1T7S2G (ficci-65, ficdeh-2026, midbo-2026)"
     }
    },
    "lbSlug": "el-valor-de-la-palabra",
    "year": 2026,
    "director": "Marta Rodríguez, Fernando Restrepo Castañeda",
-   "id": "f_cf3c682e5d"
+   "id": "f_cf3c682e5d",
+   "tmdb_id": 1665557
   },
   {
    "title": "Dao",
@@ -1677,10 +1717,12 @@
    "lbSlug": "good-valley-stories",
    "_src": {
     "heredado": {
-     "lbSlug": "catálogo w_R4H8812VN6A2 (ficcali-2026, ficci-65, olhar-2026)"
+     "lbSlug": "catálogo w_R4H8812VN6A2 (ficcali-2026, ficci-65, olhar-2026)",
+     "tmdb_id": "catálogo w_R4H8812VN6A2 (ficcali-2026, ficci-65, olhar-2026)"
     }
    },
-   "id": "f_e5c03fbb2b"
+   "id": "f_e5c03fbb2b",
+   "tmdb_id": 1457842
   },
   {
    "title": "Two Years at Sea",
@@ -1770,7 +1812,15 @@
    "posterSource": "tmdb",
    "poster": "https://image.tmdb.org/t/p/w500/wElH8qOEoF1Fl09DI0CA82AW4oe.jpg",
    "work_id": "w_R4HC1FG5Y5N5",
-   "id": "f_e864dbac94"
+   "id": "f_e864dbac94",
+   "lbSlug": "the-river-train",
+   "_src": {
+    "heredado": {
+     "lbSlug": "catálogo w_R4HC1FG5Y5N5 (ficci-65, miradas-2026)",
+     "tmdb_id": "catálogo w_R4HC1FG5Y5N5 (ficci-65, miradas-2026)"
+    }
+   },
+   "tmdb_id": 1574074
   },
   {
    "title": "Iván & Hadoum",
@@ -1794,7 +1844,17 @@
    "poster": "https://image.tmdb.org/t/p/w185/gqtBos9yGlMPFulwcGjdX53CZx8.jpg",
    "posterSource": "tmdb",
    "work_id": "w_R4HAT4P4YQ74",
-   "id": "f_5e4bb31908"
+   "id": "f_5e4bb31908",
+   "genre": "Ficción",
+   "_src": {
+    "heredado": {
+     "genre": "catálogo w_R4HAT4P4YQ74 (ficci-65, miradas-2026)",
+     "lbSlug": "catálogo w_R4HAT4P4YQ74 (ficci-65, miradas-2026)",
+     "tmdb_id": "catálogo w_R4HAT4P4YQ74 (ficci-65, miradas-2026)"
+    }
+   },
+   "lbSlug": "ivan-hadoum",
+   "tmdb_id": 1514847
   },
   {
    "title": "Cortos Colombia — Prog. 2",
@@ -1824,14 +1884,16 @@
        "lbSlug": "catálogo w_R4HC1FD68XAQ (ficci-65, midbo-2026)",
        "year": "catálogo w_R4HC1FD68XAQ (ficci-65, midbo-2026)",
        "synopsis": "catálogo w_R4HC1FD68XAQ (ficci-65, midbo-2026)",
-       "director": "catálogo w_R4HC1FD68XAQ (ficci-65, midbo-2026)"
+       "director": "catálogo w_R4HC1FD68XAQ (ficci-65, midbo-2026)",
+       "tmdb_id": "catálogo w_R4HC1FD68XAQ (ficci-65, midbo-2026)"
       }
      },
      "lbSlug": "la-forma-y-la-raiz",
      "year": 2026,
      "synopsis": "Un retrato de la vida en transformación en el campo: se nace, crece y muere. Es una invitación a percibir la existencia con mayor calma, prestando atención a aquellos pequeños detalles y micro-mundos que suelen pasar desapercibidos en nuestra cotidianidad, en donde se mezcla la vida de las plantas y los animales en su constante transcurso de crecimiento y muerte. Esta contemplación de la vida rural se captura a través de planos fijos y visualmente serenos, que contrastan con un vasto y dinámico movimiento de sonido, creando una experiencia sensorial inmersiva y profundamente reflexiva. Nos invita a recordar lo insignificantes que somos en este ciclo eterno, donde finalmente todos nos convertimos en polvo.",
      "synopsis_lang": "es",
-     "director": "Nathalia Quimbay Cadena, Valeria Moraima Berríos"
+     "director": "Nathalia Quimbay Cadena, Valeria Moraima Berríos",
+     "tmdb_id": 1660700
     },
     {
      "title": "Montaña luminosa",
@@ -1846,13 +1908,15 @@
        "lbSlug": "catálogo w_R4HC9RW9N29F (ficci-65, midbo-2026)",
        "year": "catálogo w_R4HC9RW9N29F (ficci-65, midbo-2026)",
        "synopsis": "catálogo w_R4HC9RW9N29F (ficci-65, midbo-2026)",
-       "director": "catálogo w_R4HC9RW9N29F (ficci-65, midbo-2026)"
+       "director": "catálogo w_R4HC9RW9N29F (ficci-65, midbo-2026)",
+       "tmdb_id": "catálogo w_R4HC9RW9N29F (ficci-65, midbo-2026)"
       }
      },
      "year": 2026,
      "synopsis": "En La Jagua, un pequeño pueblo ribereño del Huila, la llegada de los hombres que vienen a abrir la tierra para construir una represa hidroeléctrica altera el delicado pulso del territorio. Nidia (55), una mujer campesina y maestra artesana del fique, espera con silenciosa tristeza la partida de su único hijo, quien se marcha en busca de un futuro «mejor». A medida que la ansiedad y el insomnio se instalan en su vida, una extraña sensación comienza a crecer en su interior: una presencia inquietante que no logra nombrar. Mientras la tierra es abierta y herida, Nidia se debate entre expulsar o abrazar aquello que la rodea, aquello que se filtra en su cuerpo. Entre el barro, el viento, las lágrimas y las alucinantes e intoxicantes flores del borrachero, avanza hacia una revelación: una que contiene el antídoto para su dolor y el último aliento necesario para que la montaña dé a luz.",
      "synopsis_lang": "es",
-     "director": "Lony Welter"
+     "director": "Lony Welter",
+     "tmdb_id": 1668886
     },
     {
      "title": "Pawa",
@@ -1869,7 +1933,8 @@
        "year": "catálogo w_R4HCNBABG3FG (ficci-65, ficdeh-2026, leviza-2026)",
        "synopsis": "catálogo w_R4HCNBABG3FG (ficci-65, ficdeh-2026, leviza-2026)",
        "synopsis_en": "catálogo w_R4HCNBABG3FG (ficci-65, ficdeh-2026, leviza-2026)",
-       "director": "catálogo w_R4HCNBABG3FG (ficci-65, ficdeh-2026, ficica-2026, leviza-2026)"
+       "director": "catálogo w_R4HCNBABG3FG (ficci-65, ficdeh-2026, ficica-2026, leviza-2026)",
+       "tmdb_id": "catálogo w_R4HCNBABG3FG (ficci-65, ficdeh-2026, ficica-2026, leviza-2026)"
       }
      },
      "lbSlug": "pawa",
@@ -1877,7 +1942,8 @@
      "synopsis": "En una tranquila mañana en una ranchería de La Guajira, Indira da de comer a los pavos y las gallinas. Ante la sequía y el inicio de clases, Josefa, abuela de Indira, emprende un viaje junto a su nieta por las comunidades aledañas con la esperanza de vender a Taata, el pavo más grande, para comprar útiles escolares y comida.",
      "synopsis_lang": "es",
      "synopsis_en": "On a quiet morning in a ranchería in La Guajira, Indira feeds the turkeys and hens. With the drought and the school year about to start, her grandmother Josefa sets out with her through the neighboring communities, hoping to sell Taata, the largest turkey, and buy school supplies and food.",
-     "director": "Marbel Ina Vanegas Jusayu"
+     "director": "Marbel Ina Vanegas Jusayu",
+     "tmdb_id": 1668893
     },
     {
      "title": "Sombras en la niebla",
@@ -1895,7 +1961,8 @@
        "year": "catálogo w_R4FRTV2Q7YA2 (cinemancia-2026, ficci-65, ficmontanas-2026, midbo-2026, popayan-2026)",
        "synopsis": "catálogo w_R4FRTV2Q7YA2 (cinemancia-2026, ficci-65, ficmontanas-2026, midbo-2026, popayan-2026)",
        "synopsis_en": "catálogo w_R4FRTV2Q7YA2 (cinemancia-2026, ficci-65, ficmontanas-2026, midbo-2026, popayan-2026)",
-       "director": "catálogo w_R4FRTV2Q7YA2 (cinemancia-2026, ficci-65, ficica-2026, ficmontanas-2026, midbo-2026, popayan-2026)"
+       "director": "catálogo w_R4FRTV2Q7YA2 (cinemancia-2026, ficci-65, ficica-2026, ficmontanas-2026, midbo-2026, popayan-2026)",
+       "tmdb_id": "catálogo w_R4FRTV2Q7YA2 (cinemancia-2026, ficci-65, ficica-2026, ficmontanas-2026, midbo-2026, popayan-2026)"
       }
      },
      "title_en": "Into the fog",
@@ -1904,7 +1971,8 @@
      "synopsis": "En el páramo de Chiscas, don Vicente Molina y su familia cuidan un enorme rebaño de ovejas. La cotidianidad de la familia transcurre entre montañas cubiertas de niebla y la cocina, cuyo fogón de leña los reúne en torno a la comida y el juego. Entre el grupo se encuentra Will, el niño de la familia, quien se debate entre jugar y acompañar a los mayores en las labores de pastoreo.",
      "synopsis_lang": "es",
      "synopsis_en": "High in a páramo in Colombia, the sheep that Edualdo and Ana have tended for decades graze across the land. Amid the fog and the demands of herding, their youngest son, Will, grows up between childhood play and the rhythms of rural life.",
-     "director": "Pedro Pablo Vega"
+     "director": "Pedro Pablo Vega",
+     "tmdb_id": 1668876
     }
    ],
    "id": "f_4cbb26c590"
@@ -2115,7 +2183,8 @@
        "year": "catálogo w_R4DHSYGCHRN0 (aff-2026, ficcali-2026, ficci-65)",
        "synopsis": "catálogo w_R4DHSYGCHRN0 (aff-2026, ficcali-2026, ficci-65)",
        "synopsis_en": "catálogo w_R4DHSYGCHRN0 (aff-2026, ficcali-2026, ficci-65)",
-       "director": "catálogo w_R4DHSYGCHRN0 (aff-2026, ficcali-2026, ficci-65)"
+       "director": "catálogo w_R4DHSYGCHRN0 (aff-2026, ficcali-2026, ficci-65)",
+       "tmdb_id": "catálogo w_R4DHSYGCHRN0 (aff-2026, ficcali-2026, ficci-65)"
       }
      },
      "lbSlug": "runa-simi",
@@ -2123,7 +2192,8 @@
      "synopsis": "Un actor de doblaje peruano busca convencer a Disney de doblar El Rey León al quechua. El viaje se convierte en una odisea personal de paternidad y activismo.",
      "synopsis_lang": "es",
      "synopsis_en": "A Peruvian voice actor sets out to convince Disney to dub The Lion King into Quechua. The journey becomes a personal odyssey of fatherhood and activism.",
-     "director": "Augusto Zegarra"
+     "director": "Augusto Zegarra",
+     "tmdb_id": 1465974
     }
    ],
    "id": "f_7165561656"
@@ -2569,13 +2639,15 @@
      "genre": "catálogo w_R4FJFY7626WB (cinemancia-2026, ficci-65, midbo-2026)",
      "lbSlug": "catálogo w_R4FJFY7626WB (cinemancia-2026, ficci-65, midbo-2026)",
      "year": "catálogo w_R4FJFY7626WB (cinemancia-2026, ficci-65, midbo-2026)",
-     "director": "catálogo w_R4FJFY7626WB (cinemancia-2026, ficci-65, midbo-2026)"
+     "director": "catálogo w_R4FJFY7626WB (cinemancia-2026, ficci-65, midbo-2026)",
+     "tmdb_id": "catálogo w_R4FJFY7626WB (cinemancia-2026, ficci-65, midbo-2026)"
     }
    },
    "lbSlug": "las-almas-ni-los-ojos",
    "year": 2026,
    "director": "María Canela Reyes, César Alejandro Jaimes",
-   "id": "f_a00f49e548"
+   "id": "f_a00f49e548",
+   "tmdb_id": 1665538
   },
   {
    "title": "Chicas tristes",
@@ -2656,7 +2728,8 @@
        "year": "catálogo w_R4FS61XPY9M6 (cinemancia-2026, ficci-65, filcmar-2026)",
        "synopsis": "catálogo w_R4FS61XPY9M6 (cinemancia-2026, ficci-65, filcmar-2026)",
        "synopsis_en": "catálogo w_R4FS61XPY9M6 (cinemancia-2026, ficci-65, filcmar-2026)",
-       "director": "catálogo w_R4FS61XPY9M6 (cinemancia-2026, ficci-65, filcmar-2026)"
+       "director": "catálogo w_R4FS61XPY9M6 (cinemancia-2026, ficci-65, filcmar-2026)",
+       "tmdb_id": "catálogo w_R4FS61XPY9M6 (cinemancia-2026, ficci-65, filcmar-2026)"
       }
      },
      "title_en": "The Hunter",
@@ -2665,7 +2738,8 @@
      "synopsis": "En un paisaje ondulante, la tierra es escrita y reescrita por El Cazador. La relación entre él y el territorio revelan la esencia de una geografía. Su obsesión por el oro lo lleva a una búsqueda incesante de tesoros. El poder está en el significado que otorga a lo que encuentra. En las profundidades de la tierra y de sí mismo, descubre la verdad que le permite perpetuar su búsqueda.",
      "synopsis_lang": "es",
      "synopsis_en": "Metal detector in hand, the Hunter roams through forest and city in search of treasure. It is his way of life, his calling: the summons of Lord Gold.",
-     "director": "Luciana Riso Soto, Manuel Villa"
+     "director": "Luciana Riso Soto, Manuel Villa",
+     "tmdb_id": 1668874
     },
     {
      "title": "Filme Pin",
@@ -2682,7 +2756,8 @@
        "year": "catálogo w_R4EPV0KGHMRN (cineautopsia-2026, ficci-65, midbo-2026, popayan-2026)",
        "synopsis": "catálogo w_R4EPV0KGHMRN (cineautopsia-2026, ficci-65, midbo-2026, popayan-2026)",
        "synopsis_en": "catálogo w_R4EPV0KGHMRN (cineautopsia-2026, ficci-65, midbo-2026, popayan-2026)",
-       "director": "catálogo w_R4EPV0KGHMRN (cineautopsia-2026, ficci-65, midbo-2026, popayan-2026)"
+       "director": "catálogo w_R4EPV0KGHMRN (cineautopsia-2026, ficci-65, midbo-2026, popayan-2026)",
+       "tmdb_id": "catálogo w_R4EPV0KGHMRN (cineautopsia-2026, ficci-65, midbo-2026, popayan-2026)"
       }
      },
      "lbSlug": "filme-pin",
@@ -2690,7 +2765,8 @@
      "synopsis": "Entre luz, metal y plata, Filme Pin transforma una colección de pines solidarios en un archivo a otra escala: espectros del exilio y de la lucha internacional contra el régimen fascista y colonial de Portugal.",
      "synopsis_lang": "es",
      "synopsis_en": "Between light, metal and silver, a collection of solidarity pins turns into an archive of another scale: spectres of exile and international struggle against Portugal’s fascist and colonial regime.",
-     "director": "María Rojas Arias, Andrés Jurado"
+     "director": "María Rojas Arias, Andrés Jurado",
+     "tmdb_id": 1616856
     },
     {
      "title": "Futuros luminosos",
@@ -2708,7 +2784,8 @@
        "year": "catálogo w_R4FBMPTV0JG2 (cinemancia-2026, ficci-65, jardin-2026)",
        "synopsis": "catálogo w_R4FBMPTV0JG2 (cinemancia-2026, ficci-65, jardin-2026)",
        "synopsis_en": "catálogo w_R4FBMPTV0JG2 (cinemancia-2026, ficci-65, jardin-2026)",
-       "director": "catálogo w_R4FBMPTV0JG2 (cinemancia-2026, ficci-65, jardin-2026)"
+       "director": "catálogo w_R4FBMPTV0JG2 (cinemancia-2026, ficci-65, jardin-2026)",
+       "tmdb_id": "catálogo w_R4FBMPTV0JG2 (cinemancia-2026, ficci-65, jardin-2026)"
       }
      },
      "title_en": "A Brighter Future",
@@ -2717,7 +2794,8 @@
      "synopsis": "En un lugar extraño y oscuro, un grupo de jóvenes de colores proyecta su futuro.",
      "synopsis_lang": "es",
      "synopsis_en": "In a strange, dark place, a colourful group of young people project their future.",
-     "director": "Ismael García Ramírez"
+     "director": "Ismael García Ramírez",
+     "tmdb_id": 1603950
     },
     {
      "title": "Lejanía",
@@ -2733,14 +2811,16 @@
        "lbSlug": "catálogo w_R4HCND964DS3 (ficci-65, jardin-2026)",
        "year": "catálogo w_R4HCND964DS3 (ficci-65, jardin-2026)",
        "synopsis": "catálogo w_R4HCND964DS3 (ficci-65, jardin-2026)",
-       "director": "catálogo w_R4HCND964DS3 (ficci-65, jardin-2026)"
+       "director": "catálogo w_R4HCND964DS3 (ficci-65, jardin-2026)",
+       "tmdb_id": "catálogo w_R4HCND964DS3 (ficci-65, jardin-2026)"
       }
      },
      "lbSlug": "lejania-1",
      "year": 2026,
      "synopsis": "Un viajero se dirige hacia Lejanía, una playa en una isla escondida en la inmensidad del océano pacífico, donde se presume, sus visitantes tienen visiones sobrenaturales. En medio de paisajes fragmentados y presencias clandestinas entre las sombras ,la realidad se desdibuja y el tiempo se deshace.",
      "synopsis_lang": "es",
-     "director": "Daniel Velásquez Patarroyo"
+     "director": "Daniel Velásquez Patarroyo",
+     "tmdb_id": 1668904
     },
     {
      "title": "Winter Blumen Garten",
@@ -3040,7 +3120,8 @@
        "year": "catálogo w_R4F45MWYW0TY (cinemancia-2026, ficci-65)",
        "synopsis": "catálogo w_R4F45MWYW0TY (cinemancia-2026, ficci-65)",
        "synopsis_en": "catálogo w_R4F45MWYW0TY (cinemancia-2026, ficci-65)",
-       "director": "catálogo w_R4F45MWYW0TY (cinemancia-2026, ficci-65)"
+       "director": "catálogo w_R4F45MWYW0TY (cinemancia-2026, ficci-65)",
+       "tmdb_id": "catálogo w_R4F45MWYW0TY (cinemancia-2026, ficci-65)"
       }
      },
      "lbSlug": "my-friend-the-architect",
@@ -3048,7 +3129,8 @@
      "synopsis": "Una mujer inventa un relato para evocar una amistad perdida. Junto a sus amigos imagina una fábula: la historia de dos pájaros que un día se hicieron humanos, un Ornitólogo y su amigo, El Arquitecto.",
      "synopsis_lang": "es",
      "synopsis_en": "A woman invents a story to evoke a lost friendship. Along with her friends, they imagine a fable: the story of two birds that one day became human — an Ornithologist and his friend, The Architect.",
-     "director": "Óscar Garzón"
+     "director": "Óscar Garzón",
+     "tmdb_id": 1655621
     },
     {
      "title": "Sirena mecánica",
@@ -3064,14 +3146,16 @@
        "lbSlug": "catálogo w_R4HD241JZEE7 (ficci-65, jardin-2026, popayan-2026)",
        "year": "catálogo w_R4HD241JZEE7 (ficci-65, jardin-2026, popayan-2026)",
        "synopsis": "catálogo w_R4HD241JZEE7 (ficci-65, jardin-2026, popayan-2026)",
-       "director": "catálogo w_R4HD241JZEE7 (ficci-65, jardin-2026, popayan-2026)"
+       "director": "catálogo w_R4HD241JZEE7 (ficci-65, jardin-2026, popayan-2026)",
+       "tmdb_id": "catálogo w_R4HD241JZEE7 (ficci-65, jardin-2026, popayan-2026)"
       }
      },
      "lbSlug": "sirena-mecanica",
      "year": 2026,
      "synopsis": "Sirena Mecánica es un documental fantástico que desde de los estudios transfeministas reinterpreta el modo en cómo se representa el cuerpo (material y social) femenino dentro del mito de la sirena. Este procedimiento subversivo narra a través de los recuerdos de la primera infancia y los procesos de sanación en la relación intima de la pareja codirectora de la pieza. En el desencuentro con la realidad, SM transita entre paisajes materialmente confusos (fílmicos y plásticos) TRANSitando en la ambigüedad de la protección, amenaza, belleza y violencia.",
      "synopsis_lang": "es",
-     "director": "Violeta Vieytes Vivares, Damián Sato"
+     "director": "Violeta Vieytes Vivares, Damián Sato",
+     "tmdb_id": 1668871
     },
     {
      "title": "Suite intercontinental",
@@ -3087,14 +3171,16 @@
        "year": "catálogo w_R4HDE4TF8RNM (ficci-65, popayan-2026)",
        "synopsis": "catálogo w_R4HDE4TF8RNM (ficci-65, popayan-2026)",
        "synopsis_en": "catálogo w_R4HDE4TF8RNM (ficci-65, popayan-2026)",
-       "director": "catálogo w_R4HDE4TF8RNM (ficci-65, popayan-2026)"
+       "director": "catálogo w_R4HDE4TF8RNM (ficci-65, popayan-2026)",
+       "tmdb_id": "catálogo w_R4HDE4TF8RNM (ficci-65, popayan-2026)"
       }
      },
      "year": 2026,
      "synopsis": "Desde el piso 30 de una torre de cristal, la ciudad de Cali, presa de la tensión, bulle bajo la mirada de Margot. Cegada por el sol tropical, Margot deambula por la ciudad, ajena a todo. Lejos de los demás y de su entorno, sus fantasías se funden con la realidad. Su mirada se cruza con la de un hombre en la calle, de torso desnudo y ojos penetrantes. Cada día, Margot sigue al joven, acercándose lentamente al objeto de su deseo.",
      "synopsis_lang": "es",
      "synopsis_en": "From the 30th floor of a glass tower, the city of Cali, gripped by tension, bubbles beneath Margot’s gaze. Blinded by the tropical sun, Margot wanders through the city, oblivious to it all. Far from others and her surroundings, her fantasies merge with reality. Her gaze meets that of a man on the street, his chest bare and his eyes piercing. Every day, Margot follows the young man, slowly drawing closer to the object of her desire.",
-     "director": "Lola Tartane"
+     "director": "Lola Tartane",
+     "tmdb_id": 1668898
     }
    ],
    "id": "f_8277fe808d"
@@ -3129,7 +3215,8 @@
        "year": "catálogo w_R4HDSRY0KBZB (ficci-65, ficdeh-2026, midbo-2026)",
        "synopsis": "catálogo w_R4HDSRY0KBZB (ficci-65, ficdeh-2026, midbo-2026)",
        "synopsis_en": "catálogo w_R4HDSRY0KBZB (ficci-65, ficdeh-2026, midbo-2026)",
-       "director": "catálogo w_R4HDSRY0KBZB (ficci-65, ficdeh-2026, midbo-2026)"
+       "director": "catálogo w_R4HDSRY0KBZB (ficci-65, ficdeh-2026, midbo-2026)",
+       "tmdb_id": "catálogo w_R4HDSRY0KBZB (ficci-65, ficdeh-2026, midbo-2026)"
       }
      },
      "title_en": "The House of the Wind",
@@ -3138,7 +3225,8 @@
      "synopsis": "Ana Rosa Jusayu (mi madre), lideresa ancestral de la comunidad Apotnojushi ubicada en cercanias del cerro de la teta en la alta Guajira colombiana, trata de recuperar el tejido y la unión familiar que se vieron alterados por el “desarrollo sostenible” invasivo. En medio de las pocas esperanzas de sobrevivir en lo desolado de su territorio ancestral, la familia comparte su añoranza de permanecer allí, enfrentándose a las dificultades y los cambios económicos que afectan al pueblo wayuu.",
      "synopsis_lang": "es",
      "synopsis_en": "Ana Rosa Jusayu (My Mother), an ancestral leader of the Apotnojushi community located near Cerro de la Teta in the upper Guajira region of Colombia, is trying to rebuild the family fabric and unity that was disrupted by invasive “sustainable development.” Amidst the slim hopes of surviving in the desolation of their ancestral territory, the family shares their longing to remain there, facing the hardships and economic changes that affect the Wayuu people.",
-     "director": "Marbel Ina Vanegas Jusayu"
+     "director": "Marbel Ina Vanegas Jusayu",
+     "tmdb_id": 1668905
     },
     {
      "title": "La Raya",
@@ -3221,10 +3309,12 @@
    "lbSlug": "good-valley-stories",
    "_src": {
     "heredado": {
-     "lbSlug": "catálogo w_R4H8812VN6A2 (ficcali-2026, ficci-65, olhar-2026)"
+     "lbSlug": "catálogo w_R4H8812VN6A2 (ficcali-2026, ficci-65, olhar-2026)",
+     "tmdb_id": "catálogo w_R4H8812VN6A2 (ficcali-2026, ficci-65, olhar-2026)"
     }
    },
-   "id": "f_1275b5a034"
+   "id": "f_1275b5a034",
+   "tmdb_id": 1457842
   },
   {
    "title": "La noche está marchándose ya",
@@ -3252,10 +3342,12 @@
    "lbSlug": "the-night-is-fading-away",
    "_src": {
     "heredado": {
-     "lbSlug": "catálogo w_R4HE768025KE (ficci-65, olhar-2026)"
+     "lbSlug": "catálogo w_R4HE768025KE (ficci-65, olhar-2026)",
+     "tmdb_id": "catálogo w_R4HE768025KE (ficci-65, olhar-2026)"
     }
    },
-   "id": "f_1d4a3625d0"
+   "id": "f_1d4a3625d0",
+   "tmdb_id": 1554544
   },
   {
    "title": "Tóc, Giấy và Nước…",
@@ -3311,7 +3403,8 @@
        "year": "catálogo w_R4HE76VVXEXH (ficci-65, midbo-2026)",
        "synopsis": "catálogo w_R4HE76VVXEXH (ficci-65, midbo-2026)",
        "synopsis_en": "catálogo w_R4HE76VVXEXH (ficci-65, midbo-2026)",
-       "director": "catálogo w_R4HE76VVXEXH (ficci-65, midbo-2026)"
+       "director": "catálogo w_R4HE76VVXEXH (ficci-65, midbo-2026)",
+       "tmdb_id": "catálogo w_R4HE76VVXEXH (ficci-65, midbo-2026)"
       }
      },
      "lbSlug": "abortion-party",
@@ -3319,7 +3412,8 @@
      "synopsis": "Después de conseguir reunir el dinero para pagar un aborto tras quedar embarazada de su novio polaco de intercambio, la directora decide celebrarlo con una fiesta. Entre los invitados están su vecino músico de ska de edad avanzada, unos miembros semirretirados de una pandilla, su compañero de piso gay y sucio, y las siempre presentes chinches.",
      "synopsis_lang": "es",
      "synopsis_en": "After managing to scrape together money to pay for a pregnancy after her Polish exchange student boyfriend gets her pregnant, the director decides to celebrate with a party. In attendance are her geriatric ska musician neighbor, semi-retired gang affiliates, her dirty gay roomate, and ever present bedbugs.",
-     "director": "Julia Mellen"
+     "director": "Julia Mellen",
+     "tmdb_id": 1512855
     },
     {
      "title": "A donde nos lleva la fe de José Gerónimo",
@@ -3342,7 +3436,8 @@
        "year": "catálogo w_R4HEGBYCA03G (ficci-65, midbo-2026)",
        "synopsis": "catálogo w_R4HEGBYCA03G (ficci-65, midbo-2026)",
        "synopsis_en": "catálogo w_R4HEGBYCA03G (ficci-65, midbo-2026)",
-       "director": "catálogo w_R4HEGBYCA03G (ficci-65, midbo-2026)"
+       "director": "catálogo w_R4HEGBYCA03G (ficci-65, midbo-2026)",
+       "tmdb_id": "catálogo w_R4HEGBYCA03G (cortoscali-2026, ficci-65, midbo-2026)"
       }
      },
      "lbSlug": "agua-fria-2025",
@@ -3350,7 +3445,8 @@
      "synopsis": "En el campamento Ribera del Río, en Talagante, Ángel (9) y Kimberly (11), dos niñxs atravesados por la migración, convierten una furgoneta estacionada en su nave imaginaria para emprender un viaje en busca de su amiga Sofía (9), quien recientemente tuvo que volver a su país natal, Colombia. En el viaje, recorren lugares que habitan en sus recuerdos, exploran su pasado y presente por medio de conversaciones, y se encuentran con otros niños que se suman a la aventura. En este espacio entre la realidad y la fantasía experimentan la construcción de la identidad, la sensación de pertenencia y la amistad en medio del desarraigo.",
      "synopsis_lang": "es",
      "synopsis_en": "Ángel and Kimberly, two children affected by migration, turn a parked van into an imaginary vessel to go look for their friend Sofía, who returned to her homeland, Colombia. In this space between reality and fantasy, they build their sense of identity, belonging, and friendship amid uprooting.",
-     "director": "Meme Cabello, Antonia Martínez Valls"
+     "director": "Meme Cabello, Antonia Martínez Valls",
+     "tmdb_id": 1562451
     },
     {
      "title": "Fim de Rodovia",
@@ -3723,12 +3819,14 @@
     "heredado": {
      "lbSlug": "catálogo w_R4FPSFY03SBY (cinemancia-2026, ficci-65, mamut-2026, midbo-2026)",
      "year": "catálogo w_R4FPSFY03SBY (cinemancia-2026, ficci-65, mamut-2026, midbo-2026)",
-     "director": "catálogo w_R4FPSFY03SBY (cinemancia-2026, ficci-65, mamut-2026, midbo-2026)"
+     "director": "catálogo w_R4FPSFY03SBY (cinemancia-2026, ficci-65, mamut-2026, midbo-2026)",
+     "tmdb_id": "catálogo w_R4FPSFY03SBY (cinemancia-2026, ficci-65, mamut-2026, midbo-2026)"
     }
    },
    "year": 2026,
    "director": "Daniel Torres",
-   "id": "f_5b9af9b244"
+   "id": "f_5b9af9b244",
+   "tmdb_id": 1665546
   },
   {
    "title": "Cortos Colombia — Prog. 2",
@@ -3758,14 +3856,16 @@
        "lbSlug": "catálogo w_R4HC1FD68XAQ (ficci-65, midbo-2026)",
        "year": "catálogo w_R4HC1FD68XAQ (ficci-65, midbo-2026)",
        "synopsis": "catálogo w_R4HC1FD68XAQ (ficci-65, midbo-2026)",
-       "director": "catálogo w_R4HC1FD68XAQ (ficci-65, midbo-2026)"
+       "director": "catálogo w_R4HC1FD68XAQ (ficci-65, midbo-2026)",
+       "tmdb_id": "catálogo w_R4HC1FD68XAQ (ficci-65, midbo-2026)"
       }
      },
      "lbSlug": "la-forma-y-la-raiz",
      "year": 2026,
      "synopsis": "Un retrato de la vida en transformación en el campo: se nace, crece y muere. Es una invitación a percibir la existencia con mayor calma, prestando atención a aquellos pequeños detalles y micro-mundos que suelen pasar desapercibidos en nuestra cotidianidad, en donde se mezcla la vida de las plantas y los animales en su constante transcurso de crecimiento y muerte. Esta contemplación de la vida rural se captura a través de planos fijos y visualmente serenos, que contrastan con un vasto y dinámico movimiento de sonido, creando una experiencia sensorial inmersiva y profundamente reflexiva. Nos invita a recordar lo insignificantes que somos en este ciclo eterno, donde finalmente todos nos convertimos en polvo.",
      "synopsis_lang": "es",
-     "director": "Nathalia Quimbay Cadena, Valeria Moraima Berríos"
+     "director": "Nathalia Quimbay Cadena, Valeria Moraima Berríos",
+     "tmdb_id": 1660700
     },
     {
      "title": "Montaña luminosa",
@@ -3780,13 +3880,15 @@
        "lbSlug": "catálogo w_R4HC9RW9N29F (ficci-65, midbo-2026)",
        "year": "catálogo w_R4HC9RW9N29F (ficci-65, midbo-2026)",
        "synopsis": "catálogo w_R4HC9RW9N29F (ficci-65, midbo-2026)",
-       "director": "catálogo w_R4HC9RW9N29F (ficci-65, midbo-2026)"
+       "director": "catálogo w_R4HC9RW9N29F (ficci-65, midbo-2026)",
+       "tmdb_id": "catálogo w_R4HC9RW9N29F (ficci-65, midbo-2026)"
       }
      },
      "year": 2026,
      "synopsis": "En La Jagua, un pequeño pueblo ribereño del Huila, la llegada de los hombres que vienen a abrir la tierra para construir una represa hidroeléctrica altera el delicado pulso del territorio. Nidia (55), una mujer campesina y maestra artesana del fique, espera con silenciosa tristeza la partida de su único hijo, quien se marcha en busca de un futuro «mejor». A medida que la ansiedad y el insomnio se instalan en su vida, una extraña sensación comienza a crecer en su interior: una presencia inquietante que no logra nombrar. Mientras la tierra es abierta y herida, Nidia se debate entre expulsar o abrazar aquello que la rodea, aquello que se filtra en su cuerpo. Entre el barro, el viento, las lágrimas y las alucinantes e intoxicantes flores del borrachero, avanza hacia una revelación: una que contiene el antídoto para su dolor y el último aliento necesario para que la montaña dé a luz.",
      "synopsis_lang": "es",
-     "director": "Lony Welter"
+     "director": "Lony Welter",
+     "tmdb_id": 1668886
     },
     {
      "title": "Pawa",
@@ -3803,7 +3905,8 @@
        "year": "catálogo w_R4HCNBABG3FG (ficci-65, ficdeh-2026, leviza-2026)",
        "synopsis": "catálogo w_R4HCNBABG3FG (ficci-65, ficdeh-2026, leviza-2026)",
        "synopsis_en": "catálogo w_R4HCNBABG3FG (ficci-65, ficdeh-2026, leviza-2026)",
-       "director": "catálogo w_R4HCNBABG3FG (ficci-65, ficdeh-2026, ficica-2026, leviza-2026)"
+       "director": "catálogo w_R4HCNBABG3FG (ficci-65, ficdeh-2026, ficica-2026, leviza-2026)",
+       "tmdb_id": "catálogo w_R4HCNBABG3FG (ficci-65, ficdeh-2026, ficica-2026, leviza-2026)"
       }
      },
      "lbSlug": "pawa",
@@ -3811,7 +3914,8 @@
      "synopsis": "En una tranquila mañana en una ranchería de La Guajira, Indira da de comer a los pavos y las gallinas. Ante la sequía y el inicio de clases, Josefa, abuela de Indira, emprende un viaje junto a su nieta por las comunidades aledañas con la esperanza de vender a Taata, el pavo más grande, para comprar útiles escolares y comida.",
      "synopsis_lang": "es",
      "synopsis_en": "On a quiet morning in a ranchería in La Guajira, Indira feeds the turkeys and hens. With the drought and the school year about to start, her grandmother Josefa sets out with her through the neighboring communities, hoping to sell Taata, the largest turkey, and buy school supplies and food.",
-     "director": "Marbel Ina Vanegas Jusayu"
+     "director": "Marbel Ina Vanegas Jusayu",
+     "tmdb_id": 1668893
     },
     {
      "title": "Sombras en la niebla",
@@ -3829,7 +3933,8 @@
        "year": "catálogo w_R4FRTV2Q7YA2 (cinemancia-2026, ficci-65, ficmontanas-2026, midbo-2026, popayan-2026)",
        "synopsis": "catálogo w_R4FRTV2Q7YA2 (cinemancia-2026, ficci-65, ficmontanas-2026, midbo-2026, popayan-2026)",
        "synopsis_en": "catálogo w_R4FRTV2Q7YA2 (cinemancia-2026, ficci-65, ficmontanas-2026, midbo-2026, popayan-2026)",
-       "director": "catálogo w_R4FRTV2Q7YA2 (cinemancia-2026, ficci-65, ficica-2026, ficmontanas-2026, midbo-2026, popayan-2026)"
+       "director": "catálogo w_R4FRTV2Q7YA2 (cinemancia-2026, ficci-65, ficica-2026, ficmontanas-2026, midbo-2026, popayan-2026)",
+       "tmdb_id": "catálogo w_R4FRTV2Q7YA2 (cinemancia-2026, ficci-65, ficica-2026, ficmontanas-2026, midbo-2026, popayan-2026)"
       }
      },
      "title_en": "Into the fog",
@@ -3838,7 +3943,8 @@
      "synopsis": "En el páramo de Chiscas, don Vicente Molina y su familia cuidan un enorme rebaño de ovejas. La cotidianidad de la familia transcurre entre montañas cubiertas de niebla y la cocina, cuyo fogón de leña los reúne en torno a la comida y el juego. Entre el grupo se encuentra Will, el niño de la familia, quien se debate entre jugar y acompañar a los mayores en las labores de pastoreo.",
      "synopsis_lang": "es",
      "synopsis_en": "High in a páramo in Colombia, the sheep that Edualdo and Ana have tended for decades graze across the land. Amid the fog and the demands of herding, their youngest son, Will, grows up between childhood play and the rhythms of rural life.",
-     "director": "Pedro Pablo Vega"
+     "director": "Pedro Pablo Vega",
+     "tmdb_id": 1668876
     }
    ],
    "id": "f_4adbe34007"
@@ -3869,13 +3975,15 @@
      "genre": "catálogo w_R4HBNA1T7S2G (ficci-65, ficdeh-2026, midbo-2026)",
      "lbSlug": "catálogo w_R4HBNA1T7S2G (ficci-65, ficdeh-2026, midbo-2026)",
      "year": "catálogo w_R4HBNA1T7S2G (ficci-65, ficdeh-2026, midbo-2026)",
-     "director": "catálogo w_R4HBNA1T7S2G (ficci-65, ficdeh-2026, midbo-2026)"
+     "director": "catálogo w_R4HBNA1T7S2G (ficci-65, ficdeh-2026, midbo-2026)",
+     "tmdb_id": "catálogo w_R4HBNA1T7S2G (ficci-65, ficdeh-2026, midbo-2026)"
     }
    },
    "lbSlug": "el-valor-de-la-palabra",
    "year": 2026,
    "director": "Marta Rodríguez, Fernando Restrepo Castañeda",
-   "id": "f_fa825cf9a4"
+   "id": "f_fa825cf9a4",
+   "tmdb_id": 1665557
   },
   {
    "title": "Costas — Prog. 1",
@@ -3906,7 +4014,8 @@
        "year": "catálogo w_R4GTPYZRA4KK (ficcali-2026, ficci-65, olhar-2026)",
        "synopsis": "catálogo w_R4GTPYZRA4KK (ficcali-2026, ficci-65, olhar-2026)",
        "synopsis_en": "catálogo w_R4GTPYZRA4KK (ficcali-2026, ficci-65, olhar-2026)",
-       "director": "catálogo w_R4GTPYZRA4KK (ficcali-2026, ficci-65, olhar-2026)"
+       "director": "catálogo w_R4GTPYZRA4KK (ficcali-2026, ficci-65, olhar-2026)",
+       "tmdb_id": "catálogo w_R4GTPYZRA4KK (ficcali-2026, ficci-65, olhar-2026)"
       }
      },
      "lbSlug": "an-incomplete-calendar",
@@ -3914,7 +4023,8 @@
      "synopsis": "Un disco de vinilo de 1980 es el punto de partida. Rhymes and Songs for OPEC es una grabación especial del coro de la Universidad Central de Venezuela, para conmemorar el vigésimo aniversario de la Organización de Países Exportadores de Petróleo. Mediante una superposición de canciones y material inédito o poco visto, se replantea el petróleo como una herramienta política al servicio de las luchas de liberación en Palestina y del fortalecimiento de la solidaridad panárabe entre 1960 y 1970. Se propone una revisión aguda de la geopolítica de los últimos cincuenta años, desde representaciones como la música, las estampillas y el arte; señala cómo las alianzas de los países petroleros buscan formas de contrarrestar el poder.",
      "synopsis_lang": "es",
      "synopsis_en": "A forgotten musical record connects Caracas to Tehran, revealing untold stories of oil, not as a commodity, but as a political leverage for the liberation struggles in Palestine and building Pan-Arab solidarity between 1960-1970.",
-     "director": "Sanaz Sohrabi"
+     "director": "Sanaz Sohrabi",
+     "tmdb_id": 1633334
     },
     {
      "title": "Fuego en el mar",
@@ -4009,10 +4119,12 @@
    "lbSlug": "forest-up-in-the-mountain",
    "_src": {
     "heredado": {
-     "lbSlug": "catálogo w_R4HAT5A0J0QY (ficci-65, midbo-2026)"
+     "lbSlug": "catálogo w_R4HAT5A0J0QY (ficci-65, midbo-2026)",
+     "tmdb_id": "catálogo w_R4HAT5A0J0QY (ficci-65, midbo-2026)"
     }
    },
-   "id": "f_8ba43b4904"
+   "id": "f_8ba43b4904",
+   "tmdb_id": 1616844
   },
   {
    "title": "Cortos Colombia — Prog. 1",
@@ -4044,7 +4156,8 @@
        "year": "catálogo w_R4EPHC0WCQM5 (cineautopsia-2026, cinemancia-2026, ficci-65, mamut-2026, midbo-2026, popayan-2026)",
        "synopsis": "catálogo w_R4EPHC0WCQM5 (cineautopsia-2026, cinemancia-2026, ficci-65, mamut-2026, midbo-2026, popayan-2026)",
        "synopsis_en": "catálogo w_R4EPHC0WCQM5 (cineautopsia-2026, cinemancia-2026, ficci-65, mamut-2026, midbo-2026, popayan-2026)",
-       "director": "catálogo w_R4EPHC0WCQM5 (cineautopsia-2026, cinemancia-2026, ficci-65, ficica-2026, mamut-2026, midbo-2026, popayan-2026)"
+       "director": "catálogo w_R4EPHC0WCQM5 (cineautopsia-2026, cinemancia-2026, ficci-65, ficica-2026, mamut-2026, midbo-2026, popayan-2026)",
+       "tmdb_id": "catálogo w_R4EPHC0WCQM5 (anibia-2026, cineautopsia-2026, cinemancia-2026, ficci-65, ficica-2026, mamut-2026, midbo-2026, miradas-2026, popayan-2026)"
       }
      },
      "title_en": "decay",
@@ -4053,7 +4166,8 @@
      "synopsis": "Gracias a los chinos por la pólvora, parece que la hubieran hecho para mí. Su invención sucede como un accidente, pensada inicialmente para espantar los espíritus malos. Esta película inicia en China, luego un evento en Cartagena y se acaba siglos después en Bogotá.",
      "synopsis_lang": "es",
      "synopsis_en": "I am grateful to the Chinese for the invention of gunpowder — it feels as if they made it for me. Its discovery happened by accident, originally conceived as a way to ward off evil spirits. This film begins in China, then moves to an event in Cartagena, and ends centuries later in Bogotá.",
-     "director": "Juan Camilo González"
+     "director": "Juan Camilo González",
+     "tmdb_id": 1668881
     },
     {
      "title": "La garganta del diablo",
@@ -4076,13 +4190,17 @@
        "lbSlug": "catálogo w_R4FSHA335BXS (cinemancia-2026, ficci-65, midbo-2026)",
        "year": "catálogo w_R4FSHA335BXS (cinemancia-2026, ficci-65, midbo-2026)",
        "synopsis": "catálogo w_R4FSHA335BXS (cinemancia-2026, ficci-65, midbo-2026)",
-       "director": "catálogo w_R4FSHA335BXS (cinemancia-2026, ficci-65, midbo-2026)"
+       "director": "catálogo w_R4FSHA335BXS (cinemancia-2026, ficci-65, midbo-2026)",
+       "genre": "catálogo w_R4FSHA335BXS (cinemancia-2026, ficci-65, midbo-2026, miradas-2026)",
+       "tmdb_id": "catálogo w_R4FSHA335BXS (cinemancia-2026, ficci-65, midbo-2026, miradas-2026)"
       }
      },
      "year": 2026,
      "synopsis": "Un año después de la muerte de su padre, el reconocido mago colombiano Gustavo Lorgia, la directora realiza una exploración por sus archivos de video que revelan su trayectoria como artista, su rol como padre y la estética televisiva de una época. Una película que acude al archivo como medio para atravesar el duelo y a la memoria como forma de resistir a la desaparición.",
      "synopsis_lang": "es",
-     "director": "María Paula Lorgia"
+     "director": "María Paula Lorgia",
+     "genre": "Documental",
+     "tmdb_id": 1668889
     },
     {
      "title": "Madres de nacimiento",
@@ -4099,7 +4217,8 @@
        "year": "catálogo w_R4FH541S52JK (cinemancia-2026, ficci-65, ficdeh-2026, ficmontanas-2026, jardin-2026, midbo-2026, popayan-2026)",
        "synopsis": "catálogo w_R4FH541S52JK (cinemancia-2026, ficci-65, ficdeh-2026, ficmontanas-2026, jardin-2026, midbo-2026, popayan-2026)",
        "synopsis_en": "catálogo w_R4FH541S52JK (cinemancia-2026, ficci-65, ficdeh-2026, ficmontanas-2026, jardin-2026, midbo-2026, popayan-2026)",
-       "director": "catálogo w_R4FH541S52JK (cinemancia-2026, ficci-65, ficdeh-2026, ficmontanas-2026, jardin-2026, midbo-2026, popayan-2026)"
+       "director": "catálogo w_R4FH541S52JK (cinemancia-2026, ficci-65, ficdeh-2026, ficmontanas-2026, jardin-2026, midbo-2026, popayan-2026)",
+       "tmdb_id": "catálogo w_R4FH541S52JK (cinemancia-2026, ficci-65, ficdeh-2026, ficmontanas-2026, jardin-2026, midbo-2026, miradas-2026, popayan-2026)"
       }
      },
      "lbSlug": "madres-de-nacimiento",
@@ -4107,7 +4226,8 @@
      "synopsis": "Del olvido y la oscuridad hay imágenes y sonidos que resurgen para controlar los cuerpos de las mujeres latinoamericanas, quienes desde niñas han sido consideradas madres de nacimiento. Pero en estos archivos emerge una interferencia que proviene del pasado para evocar un mensaje de lucha, memoria y libertad.",
      "synopsis_lang": "es",
      "synopsis_en": "Out of oblivion and darkness, images and sounds resurface to control the bodies of Latin American women, regarded since childhood as mothers by birth. But within these archives an interference emerges from the past, carrying a message of struggle, memory and freedom.",
-     "director": "Gloria Isabel Gómez Ceballos"
+     "director": "Gloria Isabel Gómez Ceballos",
+     "tmdb_id": 1668902
     },
     {
      "title": "Todas las manos que solté",
@@ -4133,7 +4253,8 @@
        "year": "catálogo w_R4FT5JJDASKV (cinemancia-2026, ficci-65, midbo-2026)",
        "synopsis": "catálogo w_R4FT5JJDASKV (cinemancia-2026, ficci-65, midbo-2026)",
        "synopsis_en": "catálogo w_R4FT5JJDASKV (cinemancia-2026, ficci-65, midbo-2026)",
-       "director": "catálogo w_R4FT5JJDASKV (cinemancia-2026, ficci-65, midbo-2026)"
+       "director": "catálogo w_R4FT5JJDASKV (cinemancia-2026, ficci-65, midbo-2026)",
+       "tmdb_id": "catálogo w_R4FT5JJDASKV (cinemancia-2026, ficci-65, midbo-2026)"
       }
      },
      "title_en": "Tigers Can Be Seen In The Rain",
@@ -4142,7 +4263,8 @@
      "synopsis": "Entre formatos de imagen en movimiento, texturas locales y voces de otro tiempo, Óscar Ruiz Navia piensa la pérdida y el duelo como experiencias de dislocación temporal.",
      "synopsis_lang": "es",
      "synopsis_en": "Drifting between moving-image formats and collaging local textures and bygone voices, Oscar Ruiz Navia’s film reflects on loss and mourning as experiences of temporal dislocation.",
-     "director": "Óscar Ruiz Navia"
+     "director": "Óscar Ruiz Navia",
+     "tmdb_id": 1526866
     }
    ],
    "id": "f_602b145a47"
@@ -4190,7 +4312,8 @@
        "year": "catálogo w_R4F1D2Q71DK4 (cinemancia-2026, ficci-65, midbo-2026)",
        "synopsis": "catálogo w_R4F1D2Q71DK4 (cinemancia-2026, ficci-65, midbo-2026)",
        "synopsis_en": "catálogo w_R4F1D2Q71DK4 (cinemancia-2026, ficci-65, midbo-2026)",
-       "director": "catálogo w_R4F1D2Q71DK4 (cinemancia-2026, ficci-65, midbo-2026)"
+       "director": "catálogo w_R4F1D2Q71DK4 (cinemancia-2026, ficci-65, midbo-2026)",
+       "tmdb_id": "catálogo w_R4F1D2Q71DK4 (cinemancia-2026, ficci-65, midbo-2026)"
       }
      },
      "lbSlug": "shards-2026",
@@ -4198,7 +4321,8 @@
      "synopsis": "Dos viajes se cruzan de forma anacrónica: el de un médico inglés en Bolivia en los años treinta y el de la cineasta en Londres en 2024. La película aborda los objetos como fragmentos inestables, restos de mundos más amplios, como espejos que solo se dejan entrever momentáneamente. El recorrido pasa por la colección de las Américas del Museo Británico, la colección de joyería y fotografía del V&A y una colección privada de arte latinoamericano en Londres.",
      "synopsis_lang": "es",
      "synopsis_en": "Fragments of pottery. Gold, silver, jewellery. Contemporary art. Luciana Decker Orozco visits various museums and collections in London, tracing a homegrown past present on another continent. Each piece are windows that open and close, briefly revealing what they hide, a mystery that she encapsulates in her celluloid and magical editing.",
-     "director": "Luciana Decker Orozco"
+     "director": "Luciana Decker Orozco",
+     "tmdb_id": 1604094
     }
    ],
    "id": "f_da75b4e2f2"
@@ -4272,14 +4396,16 @@
        "year": "catálogo w_R4HEVVQPTDC1 (ficci-65, ficdeh-2026)",
        "synopsis": "catálogo w_R4HEVVQPTDC1 (ficci-65, ficdeh-2026)",
        "synopsis_en": "catálogo w_R4HEVVQPTDC1 (ficci-65, ficdeh-2026)",
-       "director": "catálogo w_R4HEVVQPTDC1 (ficcali-2026, ficci-65, ficdeh-2026)"
+       "director": "catálogo w_R4HEVVQPTDC1 (ficcali-2026, ficci-65, ficdeh-2026)",
+       "tmdb_id": "catálogo w_R4HEVVQPTDC1 (ficcali-2026, ficci-65, ficdeh-2026)"
       }
      },
      "year": 2026,
      "synopsis": "Cortometraje rodado por los niños y niñas de la comunidad indígena de Morotrwa, en la Sierra Nevada de Gonawindua. A través de sus propias fotografías y vídeos, documentan sus vidas y su territorio, eligiendo libremente qué mostrar.",
      "synopsis_lang": "es",
      "synopsis_en": "Heroes of the silence is a short film shot by the children of the Morotrwa indigenous community in the Sierra Nevada de Gonawindua. Through their own photographs and videos, they document their lives and their territory, freely choosing what to show.",
-     "director": "Santiago Alejandro Muñoz, Atikeinis Durán Izquierdo"
+     "director": "Santiago Alejandro Muñoz, Atikeinis Durán Izquierdo",
+     "tmdb_id": 1668935
     },
     {
      "title": "Kuagro",
@@ -4295,14 +4421,16 @@
        "year": "catálogo w_R4HEVVW6AQR2 (ficcali-2026, ficci-65)",
        "synopsis": "catálogo w_R4HEVVW6AQR2 (ficcali-2026, ficci-65)",
        "synopsis_en": "catálogo w_R4HEVVW6AQR2 (ficcali-2026, ficci-65)",
-       "director": "catálogo w_R4HEVVW6AQR2 (ficcali-2026, ficci-65)"
+       "director": "catálogo w_R4HEVVW6AQR2 (ficcali-2026, ficci-65)",
+       "tmdb_id": "catálogo w_R4HEVVW6AQR2 (ficcali-2026, ficci-65)"
       }
      },
      "year": 2026,
      "synopsis": "En palenque, un pueblo afrodescendiente en el departamento de Bolívar ubicado a una hora de Cartagena, se viven diariamente las tradiciones que gestaron nuestros ancestros. Los kuagros es una de ellas; siendo esta la forma organizacional que existe en el territorio. Se entiende el Kuagro como una segunda familia que nace gracias a los años de andanzas de un grupo de niños o jóvenes de una misma calle, barrio o sector.  La película KUAGRO cuenta como se da esta formación de grupo cuando no hay un rumbo seguro o fijo, solo la amistad y hermandad que nace del corazón y los amigos de infancia, esta película habla desde el relevo generacional, la lengua palenquera, el amor de mama y la libertad de ser niño en el palenque de Benko.",
      "synopsis_lang": "es",
      "synopsis_en": "Makakito tries to escape his mother’s punishment so he can play with his friends in a magical place in Palenque. His grandfather, a storyteller, captivates him with a traditional folk tale, which is interrupted by the adventures that ensnare Makakito.",
-     "director": "Diego Casseres"
+     "director": "Diego Casseres",
+     "tmdb_id": 1668919
     },
     {
      "title": "La tinaja",
@@ -4319,7 +4447,8 @@
        "lbSlug": "catálogo w_R4HEVVDKDN9Y (ficci-65, popayan-2026, qaff-2026, siembrafest-2026)",
        "year": "catálogo w_R4HEVVDKDN9Y (ficci-65, popayan-2026, qaff-2026, siembrafest-2026)",
        "synopsis": "catálogo w_R4HEVVDKDN9Y (ficci-65, popayan-2026, qaff-2026, siembrafest-2026)",
-       "director": "catálogo w_R4HEVVDKDN9Y (ficcali-2026, ficci-65, popayan-2026, qaff-2026, siembrafest-2026)"
+       "director": "catálogo w_R4HEVVDKDN9Y (ficcali-2026, ficci-65, popayan-2026, qaff-2026, siembrafest-2026)",
+       "tmdb_id": "catálogo w_R4HEVVDKDN9Y (ficcali-2026, ficci-65, popayan-2026, qaff-2026, siembrafest-2026)"
       }
      },
      "title_en": "The Clay Vase",
@@ -4327,7 +4456,8 @@
      "year": 2025,
      "synopsis": "Musicos: Rosalina Cañate “La Paloma”, Emelia Reyes Salgado “La Burgo”, Felipa Tejedor, Brenda Torres, Sofia Obeso, Anita Marimón, Ali Navarro Salas “Ali MCPM”, Joao Salgado.",
      "synopsis_lang": "es",
-     "director": "Ernestina Miranda, Mar Ajé"
+     "director": "Ernestina Miranda, Mar Ajé",
+     "tmdb_id": 1668923
     },
     {
      "title": "Piratas de La Boquilla",
@@ -4490,10 +4620,12 @@
    "lbSlug": "the-night-is-fading-away",
    "_src": {
     "heredado": {
-     "lbSlug": "catálogo w_R4HE768025KE (ficci-65, olhar-2026)"
+     "lbSlug": "catálogo w_R4HE768025KE (ficci-65, olhar-2026)",
+     "tmdb_id": "catálogo w_R4HE768025KE (ficci-65, olhar-2026)"
     }
    },
-   "id": "f_67e9182ddb"
+   "id": "f_67e9182ddb",
+   "tmdb_id": 1554544
   },
   {
    "title": "El príncipe de Nanawa",
@@ -4521,10 +4653,12 @@
    "lbSlug": "the-prince-of-nanawa",
    "_src": {
     "heredado": {
-     "lbSlug": "catálogo w_R4HB86VE5454 (ficci-65, ficma-2026)"
+     "lbSlug": "catálogo w_R4HB86VE5454 (ficci-65, ficma-2026)",
+     "tmdb_id": "catálogo w_R4HB86VE5454 (ficci-65, ficma-2026)"
     }
    },
-   "id": "f_ac689966ff"
+   "id": "f_ac689966ff",
+   "tmdb_id": 808224
   },
   {
    "title": "Los cruces",
@@ -4573,7 +4707,15 @@
    "poster": "https://image.tmdb.org/t/p/w500/wElH8qOEoF1Fl09DI0CA82AW4oe.jpg",
    "posterSource": "tmdb",
    "work_id": "w_R4HC1FG5Y5N5",
-   "id": "f_5a925bcaf4"
+   "id": "f_5a925bcaf4",
+   "lbSlug": "the-river-train",
+   "_src": {
+    "heredado": {
+     "lbSlug": "catálogo w_R4HC1FG5Y5N5 (ficci-65, miradas-2026)",
+     "tmdb_id": "catálogo w_R4HC1FG5Y5N5 (ficci-65, miradas-2026)"
+    }
+   },
+   "tmdb_id": 1574074
   },
   {
    "title": "Cortos Iberoamérica — Prog. 1",
@@ -4604,7 +4746,8 @@
        "year": "catálogo w_R4HE76VVXEXH (ficci-65, midbo-2026)",
        "synopsis": "catálogo w_R4HE76VVXEXH (ficci-65, midbo-2026)",
        "synopsis_en": "catálogo w_R4HE76VVXEXH (ficci-65, midbo-2026)",
-       "director": "catálogo w_R4HE76VVXEXH (ficci-65, midbo-2026)"
+       "director": "catálogo w_R4HE76VVXEXH (ficci-65, midbo-2026)",
+       "tmdb_id": "catálogo w_R4HE76VVXEXH (ficci-65, midbo-2026)"
       }
      },
      "lbSlug": "abortion-party",
@@ -4612,7 +4755,8 @@
      "synopsis": "Después de conseguir reunir el dinero para pagar un aborto tras quedar embarazada de su novio polaco de intercambio, la directora decide celebrarlo con una fiesta. Entre los invitados están su vecino músico de ska de edad avanzada, unos miembros semirretirados de una pandilla, su compañero de piso gay y sucio, y las siempre presentes chinches.",
      "synopsis_lang": "es",
      "synopsis_en": "After managing to scrape together money to pay for a pregnancy after her Polish exchange student boyfriend gets her pregnant, the director decides to celebrate with a party. In attendance are her geriatric ska musician neighbor, semi-retired gang affiliates, her dirty gay roomate, and ever present bedbugs.",
-     "director": "Julia Mellen"
+     "director": "Julia Mellen",
+     "tmdb_id": 1512855
     },
     {
      "title": "A donde nos lleva la fe de José Gerónimo",
@@ -4635,7 +4779,8 @@
        "year": "catálogo w_R4HEGBYCA03G (ficci-65, midbo-2026)",
        "synopsis": "catálogo w_R4HEGBYCA03G (ficci-65, midbo-2026)",
        "synopsis_en": "catálogo w_R4HEGBYCA03G (ficci-65, midbo-2026)",
-       "director": "catálogo w_R4HEGBYCA03G (ficci-65, midbo-2026)"
+       "director": "catálogo w_R4HEGBYCA03G (ficci-65, midbo-2026)",
+       "tmdb_id": "catálogo w_R4HEGBYCA03G (cortoscali-2026, ficci-65, midbo-2026)"
       }
      },
      "lbSlug": "agua-fria-2025",
@@ -4643,7 +4788,8 @@
      "synopsis": "En el campamento Ribera del Río, en Talagante, Ángel (9) y Kimberly (11), dos niñxs atravesados por la migración, convierten una furgoneta estacionada en su nave imaginaria para emprender un viaje en busca de su amiga Sofía (9), quien recientemente tuvo que volver a su país natal, Colombia. En el viaje, recorren lugares que habitan en sus recuerdos, exploran su pasado y presente por medio de conversaciones, y se encuentran con otros niños que se suman a la aventura. En este espacio entre la realidad y la fantasía experimentan la construcción de la identidad, la sensación de pertenencia y la amistad en medio del desarraigo.",
      "synopsis_lang": "es",
      "synopsis_en": "Ángel and Kimberly, two children affected by migration, turn a parked van into an imaginary vessel to go look for their friend Sofía, who returned to her homeland, Colombia. In this space between reality and fantasy, they build their sense of identity, belonging, and friendship amid uprooting.",
-     "director": "Meme Cabello, Antonia Martínez Valls"
+     "director": "Meme Cabello, Antonia Martínez Valls",
+     "tmdb_id": 1562451
     },
     {
      "title": "Fim de Rodovia",
@@ -4809,12 +4955,14 @@
     "heredado": {
      "genre": "catálogo w_R4GR2FGPV8X4 (fantasmagoria-2026, ficci-65, mamut-2026)",
      "lbSlug": "catálogo w_R4GR2FGPV8X4 (fantasmagoria-2026, ficci-65, mamut-2026)",
-     "director": "catálogo w_R4GR2FGPV8X4 (fantasmagoria-2026, ficci-65, mamut-2026)"
+     "director": "catálogo w_R4GR2FGPV8X4 (fantasmagoria-2026, ficci-65, mamut-2026)",
+     "tmdb_id": "catálogo w_R4GR2FGPV8X4 (fantasmagoria-2026, ficci-65, mamut-2026)"
     }
    },
    "lbSlug": "manual-para-invocar-fantasmas",
    "director": "Juliana Zuluaga",
-   "id": "f_3e59cf7729"
+   "id": "f_3e59cf7729",
+   "tmdb_id": 1665528
   },
   {
    "title": "Isabel",
@@ -5123,7 +5271,8 @@
        "year": "catálogo w_R4FS61XPY9M6 (cinemancia-2026, ficci-65, filcmar-2026)",
        "synopsis": "catálogo w_R4FS61XPY9M6 (cinemancia-2026, ficci-65, filcmar-2026)",
        "synopsis_en": "catálogo w_R4FS61XPY9M6 (cinemancia-2026, ficci-65, filcmar-2026)",
-       "director": "catálogo w_R4FS61XPY9M6 (cinemancia-2026, ficci-65, filcmar-2026)"
+       "director": "catálogo w_R4FS61XPY9M6 (cinemancia-2026, ficci-65, filcmar-2026)",
+       "tmdb_id": "catálogo w_R4FS61XPY9M6 (cinemancia-2026, ficci-65, filcmar-2026)"
       }
      },
      "title_en": "The Hunter",
@@ -5132,7 +5281,8 @@
      "synopsis": "En un paisaje ondulante, la tierra es escrita y reescrita por El Cazador. La relación entre él y el territorio revelan la esencia de una geografía. Su obsesión por el oro lo lleva a una búsqueda incesante de tesoros. El poder está en el significado que otorga a lo que encuentra. En las profundidades de la tierra y de sí mismo, descubre la verdad que le permite perpetuar su búsqueda.",
      "synopsis_lang": "es",
      "synopsis_en": "Metal detector in hand, the Hunter roams through forest and city in search of treasure. It is his way of life, his calling: the summons of Lord Gold.",
-     "director": "Luciana Riso Soto, Manuel Villa"
+     "director": "Luciana Riso Soto, Manuel Villa",
+     "tmdb_id": 1668874
     },
     {
      "title": "Filme Pin",
@@ -5149,7 +5299,8 @@
        "year": "catálogo w_R4EPV0KGHMRN (cineautopsia-2026, ficci-65, midbo-2026, popayan-2026)",
        "synopsis": "catálogo w_R4EPV0KGHMRN (cineautopsia-2026, ficci-65, midbo-2026, popayan-2026)",
        "synopsis_en": "catálogo w_R4EPV0KGHMRN (cineautopsia-2026, ficci-65, midbo-2026, popayan-2026)",
-       "director": "catálogo w_R4EPV0KGHMRN (cineautopsia-2026, ficci-65, midbo-2026, popayan-2026)"
+       "director": "catálogo w_R4EPV0KGHMRN (cineautopsia-2026, ficci-65, midbo-2026, popayan-2026)",
+       "tmdb_id": "catálogo w_R4EPV0KGHMRN (cineautopsia-2026, ficci-65, midbo-2026, popayan-2026)"
       }
      },
      "lbSlug": "filme-pin",
@@ -5157,7 +5308,8 @@
      "synopsis": "Entre luz, metal y plata, Filme Pin transforma una colección de pines solidarios en un archivo a otra escala: espectros del exilio y de la lucha internacional contra el régimen fascista y colonial de Portugal.",
      "synopsis_lang": "es",
      "synopsis_en": "Between light, metal and silver, a collection of solidarity pins turns into an archive of another scale: spectres of exile and international struggle against Portugal’s fascist and colonial regime.",
-     "director": "María Rojas Arias, Andrés Jurado"
+     "director": "María Rojas Arias, Andrés Jurado",
+     "tmdb_id": 1616856
     },
     {
      "title": "Futuros luminosos",
@@ -5175,7 +5327,8 @@
        "year": "catálogo w_R4FBMPTV0JG2 (cinemancia-2026, ficci-65, jardin-2026)",
        "synopsis": "catálogo w_R4FBMPTV0JG2 (cinemancia-2026, ficci-65, jardin-2026)",
        "synopsis_en": "catálogo w_R4FBMPTV0JG2 (cinemancia-2026, ficci-65, jardin-2026)",
-       "director": "catálogo w_R4FBMPTV0JG2 (cinemancia-2026, ficci-65, jardin-2026)"
+       "director": "catálogo w_R4FBMPTV0JG2 (cinemancia-2026, ficci-65, jardin-2026)",
+       "tmdb_id": "catálogo w_R4FBMPTV0JG2 (cinemancia-2026, ficci-65, jardin-2026)"
       }
      },
      "title_en": "A Brighter Future",
@@ -5184,7 +5337,8 @@
      "synopsis": "En un lugar extraño y oscuro, un grupo de jóvenes de colores proyecta su futuro.",
      "synopsis_lang": "es",
      "synopsis_en": "In a strange, dark place, a colourful group of young people project their future.",
-     "director": "Ismael García Ramírez"
+     "director": "Ismael García Ramírez",
+     "tmdb_id": 1603950
     },
     {
      "title": "Lejanía",
@@ -5200,14 +5354,16 @@
        "lbSlug": "catálogo w_R4HCND964DS3 (ficci-65, jardin-2026)",
        "year": "catálogo w_R4HCND964DS3 (ficci-65, jardin-2026)",
        "synopsis": "catálogo w_R4HCND964DS3 (ficci-65, jardin-2026)",
-       "director": "catálogo w_R4HCND964DS3 (ficci-65, jardin-2026)"
+       "director": "catálogo w_R4HCND964DS3 (ficci-65, jardin-2026)",
+       "tmdb_id": "catálogo w_R4HCND964DS3 (ficci-65, jardin-2026)"
       }
      },
      "lbSlug": "lejania-1",
      "year": 2026,
      "synopsis": "Un viajero se dirige hacia Lejanía, una playa en una isla escondida en la inmensidad del océano pacífico, donde se presume, sus visitantes tienen visiones sobrenaturales. En medio de paisajes fragmentados y presencias clandestinas entre las sombras ,la realidad se desdibuja y el tiempo se deshace.",
      "synopsis_lang": "es",
-     "director": "Daniel Velásquez Patarroyo"
+     "director": "Daniel Velásquez Patarroyo",
+     "tmdb_id": 1668904
     },
     {
      "title": "Winter Blumen Garten",
@@ -5250,7 +5406,8 @@
        "year": "catálogo w_R4HDSRY0KBZB (ficci-65, ficdeh-2026, midbo-2026)",
        "synopsis": "catálogo w_R4HDSRY0KBZB (ficci-65, ficdeh-2026, midbo-2026)",
        "synopsis_en": "catálogo w_R4HDSRY0KBZB (ficci-65, ficdeh-2026, midbo-2026)",
-       "director": "catálogo w_R4HDSRY0KBZB (ficci-65, ficdeh-2026, midbo-2026)"
+       "director": "catálogo w_R4HDSRY0KBZB (ficci-65, ficdeh-2026, midbo-2026)",
+       "tmdb_id": "catálogo w_R4HDSRY0KBZB (ficci-65, ficdeh-2026, midbo-2026)"
       }
      },
      "title_en": "The House of the Wind",
@@ -5259,7 +5416,8 @@
      "synopsis": "Ana Rosa Jusayu (mi madre), lideresa ancestral de la comunidad Apotnojushi ubicada en cercanias del cerro de la teta en la alta Guajira colombiana, trata de recuperar el tejido y la unión familiar que se vieron alterados por el “desarrollo sostenible” invasivo. En medio de las pocas esperanzas de sobrevivir en lo desolado de su territorio ancestral, la familia comparte su añoranza de permanecer allí, enfrentándose a las dificultades y los cambios económicos que afectan al pueblo wayuu.",
      "synopsis_lang": "es",
      "synopsis_en": "Ana Rosa Jusayu (My Mother), an ancestral leader of the Apotnojushi community located near Cerro de la Teta in the upper Guajira region of Colombia, is trying to rebuild the family fabric and unity that was disrupted by invasive “sustainable development.” Amidst the slim hopes of surviving in the desolation of their ancestral territory, the family shares their longing to remain there, facing the hardships and economic changes that affect the Wayuu people.",
-     "director": "Marbel Ina Vanegas Jusayu"
+     "director": "Marbel Ina Vanegas Jusayu",
+     "tmdb_id": 1668905
     },
     {
      "title": "La Raya",
@@ -5417,14 +5575,16 @@
        "year": "catálogo w_R4HEVVQPTDC1 (ficci-65, ficdeh-2026)",
        "synopsis": "catálogo w_R4HEVVQPTDC1 (ficci-65, ficdeh-2026)",
        "synopsis_en": "catálogo w_R4HEVVQPTDC1 (ficci-65, ficdeh-2026)",
-       "director": "catálogo w_R4HEVVQPTDC1 (ficcali-2026, ficci-65, ficdeh-2026)"
+       "director": "catálogo w_R4HEVVQPTDC1 (ficcali-2026, ficci-65, ficdeh-2026)",
+       "tmdb_id": "catálogo w_R4HEVVQPTDC1 (ficcali-2026, ficci-65, ficdeh-2026)"
       }
      },
      "year": 2026,
      "synopsis": "Cortometraje rodado por los niños y niñas de la comunidad indígena de Morotrwa, en la Sierra Nevada de Gonawindua. A través de sus propias fotografías y vídeos, documentan sus vidas y su territorio, eligiendo libremente qué mostrar.",
      "synopsis_lang": "es",
      "synopsis_en": "Heroes of the silence is a short film shot by the children of the Morotrwa indigenous community in the Sierra Nevada de Gonawindua. Through their own photographs and videos, they document their lives and their territory, freely choosing what to show.",
-     "director": "Santiago Alejandro Muñoz, Atikeinis Durán Izquierdo"
+     "director": "Santiago Alejandro Muñoz, Atikeinis Durán Izquierdo",
+     "tmdb_id": 1668935
     },
     {
      "title": "Kuagro",
@@ -5440,14 +5600,16 @@
        "year": "catálogo w_R4HEVVW6AQR2 (ficcali-2026, ficci-65)",
        "synopsis": "catálogo w_R4HEVVW6AQR2 (ficcali-2026, ficci-65)",
        "synopsis_en": "catálogo w_R4HEVVW6AQR2 (ficcali-2026, ficci-65)",
-       "director": "catálogo w_R4HEVVW6AQR2 (ficcali-2026, ficci-65)"
+       "director": "catálogo w_R4HEVVW6AQR2 (ficcali-2026, ficci-65)",
+       "tmdb_id": "catálogo w_R4HEVVW6AQR2 (ficcali-2026, ficci-65)"
       }
      },
      "year": 2026,
      "synopsis": "En palenque, un pueblo afrodescendiente en el departamento de Bolívar ubicado a una hora de Cartagena, se viven diariamente las tradiciones que gestaron nuestros ancestros. Los kuagros es una de ellas; siendo esta la forma organizacional que existe en el territorio. Se entiende el Kuagro como una segunda familia que nace gracias a los años de andanzas de un grupo de niños o jóvenes de una misma calle, barrio o sector.  La película KUAGRO cuenta como se da esta formación de grupo cuando no hay un rumbo seguro o fijo, solo la amistad y hermandad que nace del corazón y los amigos de infancia, esta película habla desde el relevo generacional, la lengua palenquera, el amor de mama y la libertad de ser niño en el palenque de Benko.",
      "synopsis_lang": "es",
      "synopsis_en": "Makakito tries to escape his mother’s punishment so he can play with his friends in a magical place in Palenque. His grandfather, a storyteller, captivates him with a traditional folk tale, which is interrupted by the adventures that ensnare Makakito.",
-     "director": "Diego Casseres"
+     "director": "Diego Casseres",
+     "tmdb_id": 1668919
     },
     {
      "title": "La tinaja",
@@ -5464,7 +5626,8 @@
        "lbSlug": "catálogo w_R4HEVVDKDN9Y (ficci-65, popayan-2026, qaff-2026, siembrafest-2026)",
        "year": "catálogo w_R4HEVVDKDN9Y (ficci-65, popayan-2026, qaff-2026, siembrafest-2026)",
        "synopsis": "catálogo w_R4HEVVDKDN9Y (ficci-65, popayan-2026, qaff-2026, siembrafest-2026)",
-       "director": "catálogo w_R4HEVVDKDN9Y (ficcali-2026, ficci-65, popayan-2026, qaff-2026, siembrafest-2026)"
+       "director": "catálogo w_R4HEVVDKDN9Y (ficcali-2026, ficci-65, popayan-2026, qaff-2026, siembrafest-2026)",
+       "tmdb_id": "catálogo w_R4HEVVDKDN9Y (ficcali-2026, ficci-65, popayan-2026, qaff-2026, siembrafest-2026)"
       }
      },
      "title_en": "The Clay Vase",
@@ -5472,7 +5635,8 @@
      "year": 2025,
      "synopsis": "Musicos: Rosalina Cañate “La Paloma”, Emelia Reyes Salgado “La Burgo”, Felipa Tejedor, Brenda Torres, Sofia Obeso, Anita Marimón, Ali Navarro Salas “Ali MCPM”, Joao Salgado.",
      "synopsis_lang": "es",
-     "director": "Ernestina Miranda, Mar Ajé"
+     "director": "Ernestina Miranda, Mar Ajé",
+     "tmdb_id": 1668923
     },
     {
      "title": "Piratas de La Boquilla",
@@ -5564,11 +5728,13 @@
      "genre": "catálogo w_R4G1R6GM6QWF (fantasmagoria-2026, ficcali-2026, ficci-65, ficmontanas-2026, filcmar-2026)",
      "lbSlug": "catálogo w_R4G1R6GM6QWF (fantasmagoria-2026, ficcali-2026, ficci-65, ficmontanas-2026, filcmar-2026)",
      "year": "catálogo w_R4G1R6GM6QWF (fantasmagoria-2026, ficcali-2026, ficci-65, ficmontanas-2026, filcmar-2026)",
-     "director": "catálogo w_R4G1R6GM6QWF (fantasmagoria-2026, ficcali-2026, ficci-65, ficmontanas-2026, filcmar-2026)"
+     "director": "catálogo w_R4G1R6GM6QWF (fantasmagoria-2026, ficcali-2026, ficci-65, ficmontanas-2026, filcmar-2026)",
+     "tmdb_id": "catálogo w_R4G1R6GM6QWF (anibia-2026, fantasmagoria-2026, ficcali-2026, ficci-65, ficmontanas-2026, filcmar-2026, miradas-2026)"
     }
    },
    "lbSlug": "mu-ki-ra",
-   "id": "f_d22115cbf9"
+   "id": "f_d22115cbf9",
+   "tmdb_id": 1446898
   },
   {
    "title": "Frío metal",
@@ -5696,7 +5862,8 @@
        "year": "catálogo w_R4F45MWYW0TY (cinemancia-2026, ficci-65)",
        "synopsis": "catálogo w_R4F45MWYW0TY (cinemancia-2026, ficci-65)",
        "synopsis_en": "catálogo w_R4F45MWYW0TY (cinemancia-2026, ficci-65)",
-       "director": "catálogo w_R4F45MWYW0TY (cinemancia-2026, ficci-65)"
+       "director": "catálogo w_R4F45MWYW0TY (cinemancia-2026, ficci-65)",
+       "tmdb_id": "catálogo w_R4F45MWYW0TY (cinemancia-2026, ficci-65)"
       }
      },
      "lbSlug": "my-friend-the-architect",
@@ -5704,7 +5871,8 @@
      "synopsis": "Una mujer inventa un relato para evocar una amistad perdida. Junto a sus amigos imagina una fábula: la historia de dos pájaros que un día se hicieron humanos, un Ornitólogo y su amigo, El Arquitecto.",
      "synopsis_lang": "es",
      "synopsis_en": "A woman invents a story to evoke a lost friendship. Along with her friends, they imagine a fable: the story of two birds that one day became human — an Ornithologist and his friend, The Architect.",
-     "director": "Óscar Garzón"
+     "director": "Óscar Garzón",
+     "tmdb_id": 1655621
     },
     {
      "title": "Sirena mecánica",
@@ -5720,14 +5888,16 @@
        "lbSlug": "catálogo w_R4HD241JZEE7 (ficci-65, jardin-2026, popayan-2026)",
        "year": "catálogo w_R4HD241JZEE7 (ficci-65, jardin-2026, popayan-2026)",
        "synopsis": "catálogo w_R4HD241JZEE7 (ficci-65, jardin-2026, popayan-2026)",
-       "director": "catálogo w_R4HD241JZEE7 (ficci-65, jardin-2026, popayan-2026)"
+       "director": "catálogo w_R4HD241JZEE7 (ficci-65, jardin-2026, popayan-2026)",
+       "tmdb_id": "catálogo w_R4HD241JZEE7 (ficci-65, jardin-2026, popayan-2026)"
       }
      },
      "lbSlug": "sirena-mecanica",
      "year": 2026,
      "synopsis": "Sirena Mecánica es un documental fantástico que desde de los estudios transfeministas reinterpreta el modo en cómo se representa el cuerpo (material y social) femenino dentro del mito de la sirena. Este procedimiento subversivo narra a través de los recuerdos de la primera infancia y los procesos de sanación en la relación intima de la pareja codirectora de la pieza. En el desencuentro con la realidad, SM transita entre paisajes materialmente confusos (fílmicos y plásticos) TRANSitando en la ambigüedad de la protección, amenaza, belleza y violencia.",
      "synopsis_lang": "es",
-     "director": "Violeta Vieytes Vivares, Damián Sato"
+     "director": "Violeta Vieytes Vivares, Damián Sato",
+     "tmdb_id": 1668871
     },
     {
      "title": "Suite intercontinental",
@@ -5743,14 +5913,16 @@
        "year": "catálogo w_R4HDE4TF8RNM (ficci-65, popayan-2026)",
        "synopsis": "catálogo w_R4HDE4TF8RNM (ficci-65, popayan-2026)",
        "synopsis_en": "catálogo w_R4HDE4TF8RNM (ficci-65, popayan-2026)",
-       "director": "catálogo w_R4HDE4TF8RNM (ficci-65, popayan-2026)"
+       "director": "catálogo w_R4HDE4TF8RNM (ficci-65, popayan-2026)",
+       "tmdb_id": "catálogo w_R4HDE4TF8RNM (ficci-65, popayan-2026)"
       }
      },
      "year": 2026,
      "synopsis": "Desde el piso 30 de una torre de cristal, la ciudad de Cali, presa de la tensión, bulle bajo la mirada de Margot. Cegada por el sol tropical, Margot deambula por la ciudad, ajena a todo. Lejos de los demás y de su entorno, sus fantasías se funden con la realidad. Su mirada se cruza con la de un hombre en la calle, de torso desnudo y ojos penetrantes. Cada día, Margot sigue al joven, acercándose lentamente al objeto de su deseo.",
      "synopsis_lang": "es",
      "synopsis_en": "From the 30th floor of a glass tower, the city of Cali, gripped by tension, bubbles beneath Margot’s gaze. Blinded by the tropical sun, Margot wanders through the city, oblivious to it all. Far from others and her surroundings, her fantasies merge with reality. Her gaze meets that of a man on the street, his chest bare and his eyes piercing. Every day, Margot follows the young man, slowly drawing closer to the object of her desire.",
-     "director": "Lola Tartane"
+     "director": "Lola Tartane",
+     "tmdb_id": 1668898
     }
    ],
    "id": "f_34c3015bf3"
@@ -5822,7 +5994,8 @@
        "year": "catálogo w_R4F1D2Q71DK4 (cinemancia-2026, ficci-65, midbo-2026)",
        "synopsis": "catálogo w_R4F1D2Q71DK4 (cinemancia-2026, ficci-65, midbo-2026)",
        "synopsis_en": "catálogo w_R4F1D2Q71DK4 (cinemancia-2026, ficci-65, midbo-2026)",
-       "director": "catálogo w_R4F1D2Q71DK4 (cinemancia-2026, ficci-65, midbo-2026)"
+       "director": "catálogo w_R4F1D2Q71DK4 (cinemancia-2026, ficci-65, midbo-2026)",
+       "tmdb_id": "catálogo w_R4F1D2Q71DK4 (cinemancia-2026, ficci-65, midbo-2026)"
       }
      },
      "lbSlug": "shards-2026",
@@ -5830,7 +6003,8 @@
      "synopsis": "Dos viajes se cruzan de forma anacrónica: el de un médico inglés en Bolivia en los años treinta y el de la cineasta en Londres en 2024. La película aborda los objetos como fragmentos inestables, restos de mundos más amplios, como espejos que solo se dejan entrever momentáneamente. El recorrido pasa por la colección de las Américas del Museo Británico, la colección de joyería y fotografía del V&A y una colección privada de arte latinoamericano en Londres.",
      "synopsis_lang": "es",
      "synopsis_en": "Fragments of pottery. Gold, silver, jewellery. Contemporary art. Luciana Decker Orozco visits various museums and collections in London, tracing a homegrown past present on another continent. Each piece are windows that open and close, briefly revealing what they hide, a mystery that she encapsulates in her celluloid and magical editing.",
-     "director": "Luciana Decker Orozco"
+     "director": "Luciana Decker Orozco",
+     "tmdb_id": 1604094
     }
    ],
    "id": "f_dc5384c337"
@@ -6220,14 +6394,16 @@
        "year": "catálogo w_R4HEVVQPTDC1 (ficci-65, ficdeh-2026)",
        "synopsis": "catálogo w_R4HEVVQPTDC1 (ficci-65, ficdeh-2026)",
        "synopsis_en": "catálogo w_R4HEVVQPTDC1 (ficci-65, ficdeh-2026)",
-       "director": "catálogo w_R4HEVVQPTDC1 (ficcali-2026, ficci-65, ficdeh-2026)"
+       "director": "catálogo w_R4HEVVQPTDC1 (ficcali-2026, ficci-65, ficdeh-2026)",
+       "tmdb_id": "catálogo w_R4HEVVQPTDC1 (ficcali-2026, ficci-65, ficdeh-2026)"
       }
      },
      "year": 2026,
      "synopsis": "Cortometraje rodado por los niños y niñas de la comunidad indígena de Morotrwa, en la Sierra Nevada de Gonawindua. A través de sus propias fotografías y vídeos, documentan sus vidas y su territorio, eligiendo libremente qué mostrar.",
      "synopsis_lang": "es",
      "synopsis_en": "Heroes of the silence is a short film shot by the children of the Morotrwa indigenous community in the Sierra Nevada de Gonawindua. Through their own photographs and videos, they document their lives and their territory, freely choosing what to show.",
-     "director": "Santiago Alejandro Muñoz, Atikeinis Durán Izquierdo"
+     "director": "Santiago Alejandro Muñoz, Atikeinis Durán Izquierdo",
+     "tmdb_id": 1668935
     },
     {
      "title": "Kuagro",
@@ -6243,14 +6419,16 @@
        "year": "catálogo w_R4HEVVW6AQR2 (ficcali-2026, ficci-65)",
        "synopsis": "catálogo w_R4HEVVW6AQR2 (ficcali-2026, ficci-65)",
        "synopsis_en": "catálogo w_R4HEVVW6AQR2 (ficcali-2026, ficci-65)",
-       "director": "catálogo w_R4HEVVW6AQR2 (ficcali-2026, ficci-65)"
+       "director": "catálogo w_R4HEVVW6AQR2 (ficcali-2026, ficci-65)",
+       "tmdb_id": "catálogo w_R4HEVVW6AQR2 (ficcali-2026, ficci-65)"
       }
      },
      "year": 2026,
      "synopsis": "En palenque, un pueblo afrodescendiente en el departamento de Bolívar ubicado a una hora de Cartagena, se viven diariamente las tradiciones que gestaron nuestros ancestros. Los kuagros es una de ellas; siendo esta la forma organizacional que existe en el territorio. Se entiende el Kuagro como una segunda familia que nace gracias a los años de andanzas de un grupo de niños o jóvenes de una misma calle, barrio o sector.  La película KUAGRO cuenta como se da esta formación de grupo cuando no hay un rumbo seguro o fijo, solo la amistad y hermandad que nace del corazón y los amigos de infancia, esta película habla desde el relevo generacional, la lengua palenquera, el amor de mama y la libertad de ser niño en el palenque de Benko.",
      "synopsis_lang": "es",
      "synopsis_en": "Makakito tries to escape his mother’s punishment so he can play with his friends in a magical place in Palenque. His grandfather, a storyteller, captivates him with a traditional folk tale, which is interrupted by the adventures that ensnare Makakito.",
-     "director": "Diego Casseres"
+     "director": "Diego Casseres",
+     "tmdb_id": 1668919
     },
     {
      "title": "La tinaja",
@@ -6267,7 +6445,8 @@
        "lbSlug": "catálogo w_R4HEVVDKDN9Y (ficci-65, popayan-2026, qaff-2026, siembrafest-2026)",
        "year": "catálogo w_R4HEVVDKDN9Y (ficci-65, popayan-2026, qaff-2026, siembrafest-2026)",
        "synopsis": "catálogo w_R4HEVVDKDN9Y (ficci-65, popayan-2026, qaff-2026, siembrafest-2026)",
-       "director": "catálogo w_R4HEVVDKDN9Y (ficcali-2026, ficci-65, popayan-2026, qaff-2026, siembrafest-2026)"
+       "director": "catálogo w_R4HEVVDKDN9Y (ficcali-2026, ficci-65, popayan-2026, qaff-2026, siembrafest-2026)",
+       "tmdb_id": "catálogo w_R4HEVVDKDN9Y (ficcali-2026, ficci-65, popayan-2026, qaff-2026, siembrafest-2026)"
       }
      },
      "title_en": "The Clay Vase",
@@ -6275,7 +6454,8 @@
      "year": 2025,
      "synopsis": "Musicos: Rosalina Cañate “La Paloma”, Emelia Reyes Salgado “La Burgo”, Felipa Tejedor, Brenda Torres, Sofia Obeso, Anita Marimón, Ali Navarro Salas “Ali MCPM”, Joao Salgado.",
      "synopsis_lang": "es",
-     "director": "Ernestina Miranda, Mar Ajé"
+     "director": "Ernestina Miranda, Mar Ajé",
+     "tmdb_id": 1668923
     },
     {
      "title": "Piratas de La Boquilla",
