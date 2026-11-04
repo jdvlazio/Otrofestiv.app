@@ -4,9 +4,6 @@
   "capturado": "2026-11-04"
  },
  "sin_afiche": {
-  "Sinfonía del viaje a la luna": {
-   "_por_que": "sin ficha verificable (el TMDB 549260 es de 2015 y no se puede afirmar que sea esta obra de 2026) y no está en ningún festival nuestro; lo único publicado es la tarjeta de selección de FICFUSA (fotograma con su marca), que no es el afiche oficial (25 oct)"
-  },
   "Bajo el último aliento": {
    "_por_que": "sin ficha verificable (TMDB, Proimágenes, cinecorto.co: título + Pedro Valencia + 2024 no casan). Está en Girardota 2026, pero su imagen allá es la lámina de selección del festival (marca «Selección Oficial · Festival Audiovisual de Girardota 2026»), no el afiche oficial de la obra: no se hereda tarjeta ajena. Aquí solo hay la tarjeta de FICFUSA (25 oct)"
   },
@@ -48,7 +45,9 @@
    "_por_que": "misma ficha con que ya la publicamos en Popayán, FICPA, Ficica, Villa del Cine y Cortos Cali (declarada en popayan-2026-correcciones): TMDB escribe «Tuktu, padre maíz» con coma y al director «Mauricio Pietro Muriel» (sic); la tarjeta de FICFUSA dice Mauricio Prieto, 2025, 13:45 — TMDB 13 min (25 oct)"
   },
   "Sinfonía del viaje a la luna": {
-   "_por_que": "se RECHAZA el TMDB 549260 que propuso la cascada: es de 2015 a nombre de «Sandra Reyes», sin sinopsis ni país, y la tarjeta dice 2026 y Sandra Reyes Sotomayor (TMDB tiene a esa persona aparte, 6249186, sin esta obra). Solo casaba por duración (12 vs 9:24); con 11 años de diferencia no se cuelga (25 oct)"
+   "tmdb": 549260,
+   "_fuente": "https://www.themoviedb.org/movie/549260",
+   "_por_que": "se REVIERTE el rechazo del 25 oct con evidencia nueva: Fantoche (https://archive2.fantoche.ch/en/node/6580) acredita «Sinfonía del Viaje a la Luna» a Sandra Reyes Sotomayor, Colombia, 13:40, y la imagen de TMDB muestra los mismos muñecos tejidos (abuela, perro, mesa de crochet, papel de colgadura) que la tarjeta de FICFUSA. Mismo título y misma autora. Discrepan: la tarjeta dice 2026 y 9:24, TMDB 2015 y 12 min, Fantoche 2014 (4 nov)"
   },
   "Salsa": {
    "tmdb": 1281066,
@@ -79,6 +78,11 @@
    "tmdb": 1709833,
    "_fuente": "https://www.themoviedb.org/movie/1709833",
    "_por_que": "está en TMDB como «Standing Tree»: 6 min, 2026, con Rodrigo Torrijos, Mapa López y Magdalena Morales; se completó el 4 nov con directores, afiche y título y sinopsis en español"
+  },
+  "Cuando la palabra se hace búsqueda: El eco de sus voces": {
+   "tmdb": 1738005,
+   "_fuente": "https://www.themoviedb.org/movie/1738005",
+   "_por_que": "TMDB la titula «Cuando la palabra se hace búsqueda»: Frank Benitez Peña, 2026, 61 min, igual que la tarjeta; su afiche trae el subtítulo «El eco de sus voces» y la misma sinopsis de la UBPD. El candado no casó por el título acortado (4 nov)"
   }
  }
 }

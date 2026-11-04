@@ -564,7 +564,17 @@
   },
   {
    "titulo": "Sinfonía del viaje a la luna",
-   "_verificado": "declarada a mano: se RECHAZA el TMDB 549260 que propuso la cascada: es de 2015 a nombre de «Sandra Reyes», sin sinopsis ni país, y la tarjeta dice 2026 y Sandra Reyes Sotomayor (TMDB tiene a esa persona aparte, 6249186, sin esta obra). Solo casaba por duración (12 vs 9:24); con 11 años de diferencia no se cuelga (25 oct)"
+   "tmdb_id": 549260,
+   "titulo_original": "Sinfonía del viaje a la Luna",
+   "poster_path": "/mVWpaX1jFLLg7mLMkCAq298mJxp.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Nicolás is a little kid who thinks that when his grandmother dies, she goes to the moon. Therefore, he begins to create a lot of artifacts, to travel to the moon to see her again. However, he fails in all his inventions and his father tries to make his dream come true.",
+   "genero": "",
+   "anio_tmdb": 2015,
+   "duracion_tmdb": 12,
+   "pais_tmdb": "",
+   "lbSlug": "sinfonia-del-viaje-a-la-luna",
+   "_verificado": "declarada a mano: se REVIERTE el rechazo del 25 oct con evidencia nueva: Fantoche (https://archive2.fantoche.ch/en/node/6580) acredita «Sinfonía del Viaje a la Luna» a Sandra Reyes Sotomayor, Colombia, 13:40, y la imagen de TMDB muestra los mismos muñecos tejidos (abuela, perro, mesa de crochet, papel de colgadura) que la tarjeta de FICFUSA. Mismo título y misma autora. Discrepan: la tarjeta dice 2026 y 9:24, TMDB 2015 y 12 min, Fantoche 2014 (4 nov)"
   },
   {
    "titulo": "Kanekalon",
@@ -2231,14 +2241,17 @@
   },
   {
    "titulo": "Cuando la palabra se hace búsqueda: El eco de sus voces",
-   "_fuente": "proimagenes",
-   "_proimagenes_id": "3240",
-   "pais": "Colombia",
-   "_verificado": "Proimágenes, director:  Frank Benitez Peña",
-   "anio": 2026,
-   "duracion_min": 61,
-   "sinopsis": "En Colombia, la búsqueda de las personas desaparecidas ha abierto caminos inesperados de encuentro entre quienes sufren su ausencia y quienes guardan información clave sobre su paradero. Este largometraje revela el papel fundamental de los aportantes de información, en las voces de quienes participaron directa e indirectamente en las hostilidades y que, desde el compromiso, han decidido sumarse al proceso humanitario de la búsqueda liderado por la Unidad de Búsqueda (UBPD).",
-   "_afiche_proimagenes": "https://www.proimagenescolombia.com/photos/520436_12308__imagen__.jpg",
+   "tmdb_id": 1738005,
+   "titulo_original": "Cuando la palabra se hace búsqueda",
+   "poster_path": "/8l6hgYijRQD1W5rFdklCNUaQh2N.jpg",
+   "synopsis_es": "En Colombia, la búsqueda de personas desaparecidas ha abierto caminos inesperados de encuentro entre quienes sufren su ausencia y quienes guardan información clave sobre su paradero. Este largometraje revela el papel fundamental de los aportantes de información, en las voces de quienes participaron directa e indirectamente en las hostilidades y que, desde el compromiso, han decidido sumarse al proceso humanitario de la búsqueda liderado por la Unidad de Búsqueda de Personas dadas por Desaparecidas.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 61,
+   "pais_tmdb": "",
+   "lbSlug": "cuando-la-palabra-se-hace-busqueda",
+   "_verificado": "declarada a mano: TMDB la titula «Cuando la palabra se hace búsqueda»: Frank Benitez Peña, 2026, 61 min, igual que la tarjeta; su afiche trae el subtítulo «El eco de sus voces» y la misma sinopsis de la UBPD. El candado no casó por el título acortado (4 nov)",
    "_ya_publicada": [
     {
      "festival": "ficdeh-2026",
@@ -2266,9 +2279,7 @@
      "synopsis_en": "A documentary on the search for the disappeared: the voices of those who search and the echo of an absence that lingers.",
      "sinopsis": "Documental sobre la búsqueda de personas dadas por desaparecidas: las voces de quienes buscan y el eco de una ausencia que insiste."
     }
-   ],
-   "poster": "/assets/ficdeh/cuando-la-palabra-se-hace-busqueda.jpg",
-   "_afiche_de": "ya publicada en ficdeh-2026"
+   ]
   },
   {
    "titulo": "El espejo de la vida",
@@ -2957,7 +2968,17 @@
    "_sinopsis_de": "ya publicada en anibia-2026"
   },
   "Sinfonía del viaje a la luna": {
-   "_verificado": "declarada a mano: se RECHAZA el TMDB 549260 que propuso la cascada: es de 2015 a nombre de «Sandra Reyes», sin sinopsis ni país, y la tarjeta dice 2026 y Sandra Reyes Sotomayor (TMDB tiene a esa persona aparte, 6249186, sin esta obra). Solo casaba por duración (12 vs 9:24); con 11 años de diferencia no se cuelga (25 oct)"
+   "tmdb_id": 549260,
+   "titulo_original": "Sinfonía del viaje a la Luna",
+   "poster_path": "/mVWpaX1jFLLg7mLMkCAq298mJxp.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Nicolás is a little kid who thinks that when his grandmother dies, she goes to the moon. Therefore, he begins to create a lot of artifacts, to travel to the moon to see her again. However, he fails in all his inventions and his father tries to make his dream come true.",
+   "genero": "",
+   "anio_tmdb": 2015,
+   "duracion_tmdb": 12,
+   "pais_tmdb": "",
+   "lbSlug": "sinfonia-del-viaje-a-la-luna",
+   "_verificado": "declarada a mano: se REVIERTE el rechazo del 25 oct con evidencia nueva: Fantoche (https://archive2.fantoche.ch/en/node/6580) acredita «Sinfonía del Viaje a la Luna» a Sandra Reyes Sotomayor, Colombia, 13:40, y la imagen de TMDB muestra los mismos muñecos tejidos (abuela, perro, mesa de crochet, papel de colgadura) que la tarjeta de FICFUSA. Mismo título y misma autora. Discrepan: la tarjeta dice 2026 y 9:24, TMDB 2015 y 12 min, Fantoche 2014 (4 nov)"
   },
   "Kanekalon": {
    "tmdb_id": 1454683,
@@ -4525,14 +4546,17 @@
    ]
   },
   "Cuando la palabra se hace búsqueda: El eco de sus voces": {
-   "_fuente": "proimagenes",
-   "_proimagenes_id": "3240",
-   "pais": "Colombia",
-   "_verificado": "Proimágenes, director:  Frank Benitez Peña",
-   "anio": 2026,
-   "duracion_min": 61,
-   "sinopsis": "En Colombia, la búsqueda de las personas desaparecidas ha abierto caminos inesperados de encuentro entre quienes sufren su ausencia y quienes guardan información clave sobre su paradero. Este largometraje revela el papel fundamental de los aportantes de información, en las voces de quienes participaron directa e indirectamente en las hostilidades y que, desde el compromiso, han decidido sumarse al proceso humanitario de la búsqueda liderado por la Unidad de Búsqueda (UBPD).",
-   "_afiche_proimagenes": "https://www.proimagenescolombia.com/photos/520436_12308__imagen__.jpg",
+   "tmdb_id": 1738005,
+   "titulo_original": "Cuando la palabra se hace búsqueda",
+   "poster_path": "/8l6hgYijRQD1W5rFdklCNUaQh2N.jpg",
+   "synopsis_es": "En Colombia, la búsqueda de personas desaparecidas ha abierto caminos inesperados de encuentro entre quienes sufren su ausencia y quienes guardan información clave sobre su paradero. Este largometraje revela el papel fundamental de los aportantes de información, en las voces de quienes participaron directa e indirectamente en las hostilidades y que, desde el compromiso, han decidido sumarse al proceso humanitario de la búsqueda liderado por la Unidad de Búsqueda de Personas dadas por Desaparecidas.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 61,
+   "pais_tmdb": "",
+   "lbSlug": "cuando-la-palabra-se-hace-busqueda",
+   "_verificado": "declarada a mano: TMDB la titula «Cuando la palabra se hace búsqueda»: Frank Benitez Peña, 2026, 61 min, igual que la tarjeta; su afiche trae el subtítulo «El eco de sus voces» y la misma sinopsis de la UBPD. El candado no casó por el título acortado (4 nov)",
    "_ya_publicada": [
     {
      "festival": "ficdeh-2026",
@@ -4560,9 +4584,7 @@
      "synopsis_en": "A documentary on the search for the disappeared: the voices of those who search and the echo of an absence that lingers.",
      "sinopsis": "Documental sobre la búsqueda de personas dadas por desaparecidas: las voces de quienes buscan y el eco de una ausencia que insiste."
     }
-   ],
-   "poster": "/assets/ficdeh/cuando-la-palabra-se-hace-busqueda.jpg",
-   "_afiche_de": "ya publicada en ficdeh-2026"
+   ]
   },
   "El espejo de la vida": {
    "tmdb_id": 1791654,
