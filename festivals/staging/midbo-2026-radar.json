@@ -1,10 +1,10 @@
 {
  "_provenance": {
   "fuente": "issue de radar #1031 — https://github.com/jdvlazio/Otrofestiv.app/issues/1031",
-  "capturado": "2026-11-02",
+  "capturado": "2026-11-03",
   "titulo": "RADAR: Muestra Internacional Documental de Bogotá (MIDBO) — Bogotá, 28 OCT–4 NOV (28ª)",
   "estado": "OPEN",
-  "comentarios": 30
+  "comentarios": 32
  },
  "issue": 1031,
  "titulo": "RADAR: Muestra Internacional Documental de Bogotá (MIDBO) — Bogotá, 28 OCT–4 NOV (28ª)",
@@ -130,6 +130,14 @@
   {
    "fecha": "2026-11-02",
    "cuerpo": "**Vigía 2 nov 17:15: MIDBO, falta un Q&A en la app**\n\n«Bojayá: la verdad desde adentro», miércoles 4 nov a las 16:00, Sala 2, Cinemateca de Bogotá. La web dice «Con presencia del director y producción»: https://midbo.co/peliculas/bojaya-la-verdad-desde-adentro/\n\nEn el almacén está con `has_qa=false`. La frase va sin el «*» inicial, así que el patrón NOTA del crudo no la toma.\n\nTambién cambiaron en la API las sinopsis de «¡Viva México!» (antes «Viva México»), «Sey Arimaku, la otra oscuridad» y «Un río de aguas profundas y luminosas». No cambia ninguna función.\n"
+  },
+  {
+   "fecha": "2026-11-03",
+   "cuerpo": "**Vigía 3 nov 17:15 — Q&A sin marcar en «Cuba y la noche» (funciones de mañana, 4 nov).**\n\nPost https://www.instagram.com/p/DfStaKRnN3P/ (@casatarantula con coautor @midbo_doc), lámina 3: «Proyecciones (con conversatorio) MIDBO 28», 4 nov 10:00 H (Auditorio 422, edificio 303C, Universidad Nacional) y 4 nov 17:00 H (Sala 3, Cinemateca de Bogotá). Vision, Tesseract y lectura a ojo coinciden.\n\nLa app tiene `has_qa: false` en las dos (`f_45b502268f`, `f_f195c56576`). Día, hora y sede sí coinciden.\n\n**No aplicado:** con `fuente.tipo: festival-ig` el resolver deja ganar a la web (`has_qa` la pone por encima de IG) y `corto.py --probar` da 0 cambios. Pasa a la sesión Onboarding.\n"
+  },
+  {
+   "fecha": "2026-11-04",
+   "cuerpo": "Vigía 3 nov 21:04. **JUAN (no aplicado): clausura mié 4 nov 19:30, Sala Capital, «El coloquio de los pájaros».** La lámina 3 del post https://www.instagram.com/p/DfTLJWpjXQg/ (archivo 02.jpg) dice «Q&A con directora» y «Mención de películas ganadoras»; la app tiene `has_qa: false`.\n\nTriple lectura en 02.jpg: Vision y la mirada leen todo; Tesseract lee 19:30 y «Q&A con directora», pero NO «Sala Capital» ni «Miércoles 04 de noviembre» (texto sobre fondo de bajo contraste). Veredicto ✗, por eso no se aplicó solo. La web no marca el Q&A en esta función.\n\nResto del 4 nov: la web coincide con la app (día, hora, sede).\n"
   }
  ]
 }
