@@ -13,9 +13,6 @@
   "Victorias y Glorias - Relatos de campeonas": {
    "_por_que": "sin ficha TMDB. En SiembraFest su imagen es la tarjeta de sección de ese festival (laurel «Siembra Fest»): no se hereda tarjeta ajena; lo único publicado es la tarjeta de selección de FICFUSA (fotograma con su marca), que no es el afiche oficial (4 nov)"
   },
-  "Legado": {
-   "_por_que": "ficha en cinecorto.co sin afiche; TMDB no la tiene y Popayán la publicó sin afiche; lo único publicado es la tarjeta de selección de FICFUSA (fotograma con su marca), que no es el afiche oficial (4 nov)"
-  },
   "La libertad es mi causa": {
    "_por_que": "TMDB 1499403 no tiene ningún póster; lo único publicado es la tarjeta de selección de FICFUSA (fotograma con su marca), que no es el afiche oficial (4 nov)"
   },
@@ -83,6 +80,11 @@
    "tmdb": 1738005,
    "_fuente": "https://www.themoviedb.org/movie/1738005",
    "_por_que": "TMDB la titula «Cuando la palabra se hace búsqueda»: Frank Benitez Peña, 2026, 61 min, igual que la tarjeta; su afiche trae el subtítulo «El eco de sus voces» y la misma sinopsis de la UBPD. El candado no casó por el título acortado (4 nov)"
+  },
+  "Legado": {
+   "tmdb": 1817230,
+   "_fuente": "https://www.themoviedb.org/movie/1817230",
+   "_por_que": "alta hecha el 4 nov 2026 con el afiche original, tras las sondas anti-duplicado"
   }
  }
 }
