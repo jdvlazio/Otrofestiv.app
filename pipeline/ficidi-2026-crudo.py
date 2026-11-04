@@ -96,6 +96,14 @@ LAMINA = {
     'Fragmentos': ('DfSWDVxEYCQ/13', 'Camila Andrea Pérez León', 2),
     'Tuesday Session': ('DfSWDVxEYCQ/14', 'David Santiago Martinez Rojas', 4),
     '90 segundos': ('DfSWDVxEYCQ/15', 'Álvaro J. Figueroa Garrucho', 10),
+    # post de la clausura (p/DfVRPEHD1R4, 4 nov), mirado a ojo
+    'Corpo e Identidade': ('DfVRPEHD1R4/02', 'Cristal Luz', 17),
+    'Danzan Las Luciérnagas': ('DfVRPEHD1R4/03', 'Eleggua Luna Laverde', 19),
+    'Refracción': ('DfVRPEHD1R4/04', 'Isabella Palacio Mesa', 11),
+    'Dafne y Pol': ('DfVRPEHD1R4/05', 'Sergio Checa', 17),
+    'O diário imaginado': ('DfVRPEHD1R4/06', 'Txai Ferraz', 20),
+    'La otra mitad del dolor': ('DfVRPEHD1R4/07', 'Tonnie Zanabria', 27),
+    'NO': ('DfVRPEHD1R4/08', 'Luis Daniel Abril', 15),
 }
 # OBRAS QUE EL IG SUMA A UNA FUNCIÓN DEL PDF. El post «Día 3 · Segunda Función»
 # (p/DfSWDVxEYCQ, 3 nov) trae 15 obras; el PDF, 11. Las 4 de más también van en la
@@ -110,6 +118,14 @@ IG_SUMA = {('VIERNES 6', '18:00'): [
      'En terapia, Noa revive un conflicto familiar y enfrenta las consecuencias emocionales del rechazo.'),
     ('90 segundos', 'ESPAÑA',
      'Un joven gimnasta lucha por competir en una disciplina estigmatizada por considerarse femenina.'),
+],
+    # post de la clausura (p/DfVRPEHD1R4, 4 nov): 7 obras; el PDF, 5. Las 2 de más
+    # también van en la Proyección especial del 3 nov.
+    ('SÁBADO 7', '09:00'): [
+    ('Dafne y Pol', 'ESPAÑA',
+     'Dos estudiantes sufren acoso homófobo por su relación y afrontan la hostilidad de su entorno escolar.'),
+    ('O diário imaginado', 'BRASIL',
+     'La infancia, la imaginación y el desplazamiento se convierten en un archivo de identidad queer.'),
 ]}
 PAIS = {'BRASIL': 'Brasil', 'ARGENTINA': 'Argentina', 'COLOMBIA': 'Colombia', 'ESPAÑA': 'España',
         'REINO UNIDO': 'Reino Unido', 'ITALIA': 'Italia', 'CHILE': 'Chile'}
