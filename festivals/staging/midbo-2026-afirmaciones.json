@@ -544,6 +544,30 @@
     "fecha": "2026-10-27"
    },
    "evidencia": "https://www.instagram.com/p/DfStaKRnN3P/ (3 nov 2026, @casatarantula con @midbo_doc) lámina 3: «Proyecciones (con conversatorio) MIDBO 28: 4 de noviembre / 10:00 H […] 4 de noviembre / 17:00 H». El título sale en la lámina 1. La web no lo dice; el IG es más reciente."
+  },
+  {
+   "funcion": "f_3d3b4e839f",
+   "casilla": "has_qa",
+   "valor": true,
+   "contra": false,
+   "fuente": {
+    "tipo": "juan",
+    "frase": "El Instagram si es más reciente, es más actualizado que la web",
+    "fecha": "2026-10-27"
+   },
+   "evidencia": "https://www.instagram.com/p/DfTLJWpjXQg/ (3 nov 2026) lámina 3, pieza de CLAUSURA: «Miércoles 04 de noviembre 7:30 PM Q&A con directora», Cinemateca de Bogotá, Sala Capital. Leída a ojo; Vision y Tesseract leen el Q&A. La web no lo dice; el IG es más reciente."
+  },
+  {
+   "funcion": "f_3d3b4e839f",
+   "casilla": "qa_type",
+   "valor": "team",
+   "contra": false,
+   "fuente": {
+    "tipo": "juan",
+    "frase": "El Instagram si es más reciente, es más actualizado que la web",
+    "fecha": "2026-10-27"
+   },
+   "evidencia": "https://www.instagram.com/p/DfTLJWpjXQg/ (3 nov 2026) lámina 3, pieza de CLAUSURA: «Miércoles 04 de noviembre 7:30 PM Q&A con directora», Cinemateca de Bogotá, Sala Capital. Leída a ojo; Vision y Tesseract leen el Q&A. La web no lo dice; el IG es más reciente."
   }
  ]
 }

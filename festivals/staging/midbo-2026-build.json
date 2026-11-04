@@ -8365,7 +8365,7 @@
    "day_order": 8,
    "venue": "Cinemateca de Bogotá - Bogotá",
    "sala": "Sala Capital",
-   "has_qa": false,
+   "has_qa": true,
    "synopsis": "Un buen día, no amaneció más. En ese reino de oscuridad que inevitablemente atrajo plagas, persecución, devastación y muerte, un grupo de viejos anarco-poetas se ve obligado a vivir en la clandestinidad y, durante sus aquelarres y secretas reuniones, buscan adoptar identidades no humanas. En esta fábula documental, que utiliza como alegoría el mito sufí del mismo nombre, la poesía, la danza y la amistad se erigen como armas de insubordinación al orden actual de las cosas.",
    "synopsis_lang": "es",
    "poster": "/assets/midbo-2026/el-coloquio-de-los-pajaros.jpg",
@@ -8383,6 +8383,7 @@
    "_fid": "f_3d3b4e839f",
    "id": "f_3d3b4e839f",
    "is_free": false,
+   "qa_type": "team",
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -8420,9 +8421,14 @@
      "url": "https://midbo.co/"
     },
     "has_qa": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-10",
-     "url": "https://midbo.co/"
+     "tipo": "juan",
+     "fecha": "2026-10-27",
+     "frase": "El Instagram si es más reciente, es más actualizado que la web"
+    },
+    "qa_type": {
+     "tipo": "juan",
+     "fecha": "2026-10-27",
+     "frase": "El Instagram si es más reciente, es más actualizado que la web"
     },
     "premiere": {
      "tipo": "festival-web",
@@ -10141,7 +10147,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-03T17:20:56",
+  "fecha": "2026-11-03T21:17:26",
   "plan_sha": "18f7fb7e2b601fc4",
   "paso": 8,
   "cmd": "python3 pipeline/midbo-2026-verificar.py"
