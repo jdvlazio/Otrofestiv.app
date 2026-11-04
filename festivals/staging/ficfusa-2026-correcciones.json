@@ -7,14 +7,8 @@
   "Bajo el último aliento": {
    "_por_que": "sin ficha verificable (TMDB, Proimágenes, cinecorto.co: título + Pedro Valencia + 2024 no casan). Está en Girardota 2026, pero su imagen allá es la lámina de selección del festival (marca «Selección Oficial · Festival Audiovisual de Girardota 2026»), no el afiche oficial de la obra: no se hereda tarjeta ajena. Aquí solo hay la tarjeta de FICFUSA (25 oct)"
   },
-  "Sinfonía Incompleta de Oficios del Fonce": {
-   "_por_que": "sin ficha TMDB. En SiembraFest su imagen es la tarjeta de sección de ese festival (laurel «Siembra Fest»): no se hereda tarjeta ajena; lo único publicado es la tarjeta de selección de FICFUSA (fotograma con su marca), que no es el afiche oficial (4 nov)"
-  },
   "Victorias y Glorias - Relatos de campeonas": {
    "_por_que": "sin ficha TMDB. En SiembraFest su imagen es la tarjeta de sección de ese festival (laurel «Siembra Fest»): no se hereda tarjeta ajena; lo único publicado es la tarjeta de selección de FICFUSA (fotograma con su marca), que no es el afiche oficial (4 nov)"
-  },
-  "La libertad es mi causa": {
-   "_por_que": "TMDB 1499403 no tiene ningún póster; lo único publicado es la tarjeta de selección de FICFUSA (fotograma con su marca), que no es el afiche oficial (4 nov)"
   },
   "Un trato brillante": {
    "_por_que": "sin ficha en TMDB ni créditos de sus directoras; búsqueda web sin resultado; lo único publicado es la tarjeta de selección de FICFUSA (fotograma con su marca), que no es el afiche oficial (4 nov)"
@@ -86,6 +80,18 @@
    "_fuente": "https://www.themoviedb.org/movie/1817230",
    "_por_que": "alta hecha el 4 nov 2026 con el afiche original, tras las sondas anti-duplicado",
    "poster": "/assets/ficfusa-2026/legado.jpg"
+  },
+  "Sinfonía Incompleta de Oficios del Fonce": {
+   "tmdb": 1817245,
+   "poster": "/assets/ficfusa-2026/sinfonia-incompleta-de-oficios-del-fonce.jpg",
+   "_fuente": "https://www.themoviedb.org/movie/1817245",
+   "_por_que": "alta hecha el 4 nov 2026 con el afiche del press kit de FilmFreeway"
+  },
+  "La libertad es mi causa": {
+   "tmdb": 1499403,
+   "poster": "/assets/ficfusa-2026/la-libertad-es-mi-causa.jpg",
+   "_fuente": "https://www.themoviedb.org/movie/1499403",
+   "_por_que": "ficha existente; el 4 nov 2026 se le subió el afiche publicado por Vanguardia"
   }
  }
 }

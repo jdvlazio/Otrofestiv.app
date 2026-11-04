@@ -2390,8 +2390,8 @@
    "duracion_tmdb": 102,
    "pais_tmdb": "Colombia",
    "lbSlug": "la-libertad-es-mi-causa",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "La libertad es mi causa"
+   "poster": "/assets/ficfusa-2026/la-libertad-es-mi-causa.jpg",
+   "_verificado": "declarada a mano: ficha existente; el 4 nov 2026 se le subió el afiche publicado por Vanguardia"
   },
   {
    "titulo": "Salud Mutante",
@@ -2410,6 +2410,18 @@
   },
   {
    "titulo": "Sinfonía Incompleta de Oficios del Fonce",
+   "tmdb_id": 1817245,
+   "titulo_original": "Sinfonía incompleta de oficios del Fonce",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "In a journey of images accompanied by music, the camera reveals the interior of places closed to the public where ancient crafts still persist.",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 16,
+   "pais_tmdb": "",
+   "lbSlug": "sinfonia-incompleta-de-oficios-del-fonce",
+   "poster": "/assets/ficfusa-2026/sinfonia-incompleta-de-oficios-del-fonce.jpg",
+   "_verificado": "declarada a mano: alta hecha el 4 nov 2026 con el afiche del press kit de FilmFreeway",
    "_ya_publicada": [
     {
      "festival": "siembrafest-2026",
@@ -4700,8 +4712,8 @@
    "duracion_tmdb": 102,
    "pais_tmdb": "Colombia",
    "lbSlug": "la-libertad-es-mi-causa",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "La libertad es mi causa"
+   "poster": "/assets/ficfusa-2026/la-libertad-es-mi-causa.jpg",
+   "_verificado": "declarada a mano: ficha existente; el 4 nov 2026 se le subió el afiche publicado por Vanguardia"
   },
   "Salud Mutante": {
    "tmdb_id": 1559325,
@@ -4716,6 +4728,32 @@
    "lbSlug": "salud-mutante",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Salud Mutante"
+  },
+  "Sinfonía Incompleta de Oficios del Fonce": {
+   "tmdb_id": 1817245,
+   "titulo_original": "Sinfonía incompleta de oficios del Fonce",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "In a journey of images accompanied by music, the camera reveals the interior of places closed to the public where ancient crafts still persist.",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 16,
+   "pais_tmdb": "",
+   "lbSlug": "sinfonia-incompleta-de-oficios-del-fonce",
+   "poster": "/assets/ficfusa-2026/sinfonia-incompleta-de-oficios-del-fonce.jpg",
+   "_verificado": "declarada a mano: alta hecha el 4 nov 2026 con el afiche del press kit de FilmFreeway",
+   "_ya_publicada": [
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "Sinfonía incompleta de oficios del Fonce",
+     "poster": "/assets/siembrafest/sinfonia-incompleta-de-oficios-del-fonce.jpg",
+     "posterSource": "oficial",
+     "country": "Colombia",
+     "year": 2024,
+     "duration": "16 min",
+     "genre": "Documental"
+    }
+   ]
   }
  },
  "sin_ficha": [
@@ -4723,7 +4761,6 @@
   "Florecerán!",
   "Ir hacia adentro",
   "La",
-  "Sinfonía Incompleta de Oficios del Fonce",
   "Sonidos de la resistencia",
   "Un trato brillante",
   "Victorias y Glorias - Relatos de campeonas",
