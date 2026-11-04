@@ -54,7 +54,7 @@ export function renderRecapExtraHTML(rec){
         const safe=dt.replace(/</g,'&lt;');
         return `<div class="recap-top-item">
           <span class="recap-top-n">${i+1}</span>
-          ${src?`<img class="recap-top-poster" src="${src}" alt="" loading="lazy" onerror="this.remove()">`:'<span class="recap-top-poster"></span>'}
+          ${src?`<img class="recap-top-poster" src="${src}" alt="" loading="lazy" data-err="quitar">`:'<span class="recap-top-poster"></span>'}
           <span class="recap-top-txt"><span class="recap-top-title">${safe}</span><span class="recap-top-stars">${starsText(o.rating)}</span></span>
         </div>`;}).join('')}</div>
     </div>`:'';

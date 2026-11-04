@@ -141,6 +141,16 @@ export const SECTION_COLORS = {
 //  · Tribeca se omite entero: sus secciones ya están en inglés.
 //  · "Impact Hits"/"Industry Days" (AFF) ya están en inglés → se omiten.
 export const SECTION_EN = {
+  // CINETORO 2026
+  '🏆 Selección Oficial': 'Official Selection',
+  '🎨 Cinetoro al Aula': 'Cinetoro in the Classroom',
+  '🎓 Programación Académica': 'Academic Program',
+  '✨ Especial': 'Special',
+  // Cortos Cali 2026
+  '🌎 Selección Oficial Internacional': 'Official Selection: International',
+  '🎬 Selección Oficial Nacional': 'Official Selection: National',
+  '🎓 Selección Oficial Internacional Universitaria': 'Official Selection: International Student',
+  '📚 Selección Oficial Nacional Universitaria': 'Official Selection: National Student',
   '🌍 Muestra Internacional': 'International Showcase',
   '🇨🇴 Muestra Nacional':     'National Showcase',
   '🏆 Muestra Local':         'Official Selection · Local',
@@ -834,6 +844,49 @@ export const FESTIVAL_CONFIG={
     prioLimit:3,
     films:null,posters:null,lbSlugs:{}
   },
+  'cinetoro2026': {
+    // EL NOMBRE es el del festival (cinetoro.org); la edición va en fullName.
+    // Días oficiales 10–15 NOV (Roldanillo 10, Toro 11–15). Lo de otras ciudades
+    // (Bogotá, Cali, Palmira) queda fuera (decisión de Juan, 31 oct 2026).
+    name:'CINETORO',displayName:'CINETORO',
+    fullName:'CINETORO Experimental Film Festival 2026',shortName:'CINETORO',
+    city:'Toro',country:'CO',
+    dates:'10–15 NOV',dates_en:'NOV 10–15',year:2026,timezoneOffset:'-05:00',
+    // el subtítulo expande el nombre; el lema del año («Límites convergentes») vive en el afiche
+    tagline:'Festival de Cine Experimental de Toro',
+    keyArt:'/assets/keyart/cinetoro2026-v2.jpg',
+    instagram:'cinetorofilmfestival', storageKey:'cinetoro2026_',festivalStartStr:'2026-11-10T00:00:00',festivalEndStr:'2026-11-15T23:59:00',
+    festivalDates:{'2026-11-10':'2026-11-10','2026-11-11':'2026-11-11','2026-11-12':'2026-11-12','2026-11-13':'2026-11-13','2026-11-14':'2026-11-14','2026-11-15':'2026-11-15'},
+    days:[{k:'2026-11-10',d:10,lbl:'MAR'},{k:'2026-11-11',d:11,lbl:'MIÉ'},{k:'2026-11-12',d:12,lbl:'JUE'},{k:'2026-11-13',d:13,lbl:'VIE'},{k:'2026-11-14',d:14,lbl:'SÁB'},{k:'2026-11-15',d:15,lbl:'DOM'}],
+    dayKeys:['2026-11-10','2026-11-11','2026-11-12','2026-11-13','2026-11-14','2026-11-15'],
+    dayShort:{'2026-11-10':'MAR 10','2026-11-11':'MIÉ 11','2026-11-12':'JUE 12','2026-11-13':'VIE 13','2026-11-14':'SÁB 14','2026-11-15':'DOM 15'},
+    dayShort_en:{'2026-11-10':'TUE 10','2026-11-11':'WED 11','2026-11-12':'THU 12','2026-11-13':'FRI 13','2026-11-14':'SAT 14','2026-11-15':'SUN 15'},
+    dayLong:{'2026-11-10':'Martes 10 de noviembre','2026-11-11':'Miércoles 11 de noviembre','2026-11-12':'Jueves 12 de noviembre','2026-11-13':'Viernes 13 de noviembre','2026-11-14':'Sábado 14 de noviembre','2026-11-15':'Domingo 15 de noviembre'},
+    prioLimit:4,
+    films:null,posters:null,lbSlugs:{}
+  },
+  'cortoscali2026': {
+    // EL NOMBRE es el del festival (@cortoscali); la edición va en fullName.
+    name:'Cortos Cali',displayName:'Cortos Cali',
+    fullName:'XVIII Festival Internacional de Cine Corto de Cali',shortName:'CORTOS CALI',
+    city:'Cali',country:'CO',
+    dates:'27–30 OCT',dates_en:'OCT 27–30',year:2026,timezoneOffset:'-05:00',
+    // EL AFICHE OFICIAL de la edición 18 («Narrativas verticales», diseño de
+    // @bengala_zul), del post de @cortoscali p/DdXQi8jgcMY (16 sep, 2160×2704):
+    // el original estirado a 400×600, sin bandas ni recorte.
+    keyArt:'/assets/keyart/cortoscali2026.jpg',
+    // el subtítulo expande el nombre; el lema del año vive en el afiche
+    tagline:'Festival Internacional de Cine Corto de Cali',
+    instagram:'cortoscali', storageKey:'cortoscali2026_',festivalStartStr:'2026-10-27T00:00:00',festivalEndStr:'2026-10-30T23:59:00',
+    festivalDates:{'2026-10-27':'2026-10-27','2026-10-28':'2026-10-28','2026-10-29':'2026-10-29','2026-10-30':'2026-10-30'},
+    days:[{k:'2026-10-27',d:27,lbl:'MAR'},{k:'2026-10-28',d:28,lbl:'MIÉ'},{k:'2026-10-29',d:29,lbl:'JUE'},{k:'2026-10-30',d:30,lbl:'VIE'}],
+    dayKeys:['2026-10-27','2026-10-28','2026-10-29','2026-10-30'],
+    dayShort:{'2026-10-27':'MAR 27','2026-10-28':'MIÉ 28','2026-10-29':'JUE 29','2026-10-30':'VIE 30'},
+    dayShort_en:{'2026-10-27':'TUE 27','2026-10-28':'WED 28','2026-10-29':'THU 29','2026-10-30':'FRI 30'},
+    dayLong:{'2026-10-27':'Martes 27 de octubre','2026-10-28':'Miércoles 28 de octubre','2026-10-29':'Jueves 29 de octubre','2026-10-30':'Viernes 30 de octubre'},
+    prioLimit:3,
+    films:null,posters:null,lbSlugs:{}
+  },
   'biff2026': {
     name:'BIFF',displayName:'BIFF',fullName:'BIFF 12 — Bogota International Film Festival',shortName:'BIFF',
     city:'Bogotá',country:'CO',
@@ -973,6 +1026,46 @@ export const FESTIVAL_CONFIG={
     prioLimit:3,eventPosterLabel:['EVENTO',''],
     films:null,posters:null,lbSlugs:{}
   },
+  'ficidi2026': {
+    name:'FICIDI',displayName:'FICIDI',fullName:'IV FICIDI — Festival Internacional de Cine Diverso',shortName:'FICIDI',
+    // EL AFICHE OFICIAL de la IV edición («POST POSTER FICIDI IV», Drive de
+    // recursos visuales del festival, 29 oct 2026), 4:5 estirado a 2:3.
+    keyArt:'/assets/keyart/ficidi2026-v2.jpg',
+    tagline:'Festival Internacional de Cine Diverso',
+    city:'Barranquilla',country:'CO',
+    instagram:'festivaldecinediverso',
+    dates:'3–7 NOV',dates_en:'NOV 3–7',year:2026,timezoneOffset:'-05:00',
+    storageKey:'ficidi2026_',festivalStartStr:'2026-11-03T00:00:00',festivalEndStr:'2026-11-07T23:59:00',
+    festivalDates:{'2026-11-03':'2026-11-03','2026-11-04':'2026-11-04','2026-11-05':'2026-11-05','2026-11-06':'2026-11-06','2026-11-07':'2026-11-07'},
+    days:[{k:'2026-11-03',d:3,lbl:'MAR'},{k:'2026-11-04',d:4,lbl:'MIÉ'},{k:'2026-11-05',d:5,lbl:'JUE'},{k:'2026-11-06',d:6,lbl:'VIE'},{k:'2026-11-07',d:7,lbl:'SÁB'}],
+    dayKeys:['2026-11-03','2026-11-04','2026-11-05','2026-11-06','2026-11-07'],
+    dayShort:{'2026-11-03':'MAR 3','2026-11-04':'MIÉ 4','2026-11-05':'JUE 5','2026-11-06':'VIE 6','2026-11-07':'SÁB 7'},
+    dayShort_en:{'2026-11-03':'TUE 3','2026-11-04':'WED 4','2026-11-05':'THU 5','2026-11-06':'FRI 6','2026-11-07':'SAT 7'},
+    dayLong:{'2026-11-03':'Martes 3 de noviembre','2026-11-04':'Miércoles 4 de noviembre','2026-11-05':'Jueves 5 de noviembre','2026-11-06':'Viernes 6 de noviembre','2026-11-07':'Sábado 7 de noviembre'},
+    prioLimit:3,eventPosterLabel:['EVENTO',''],
+    films:null,posters:null,lbSlugs:{}
+  },
+  'mambe2026': {
+    // EL NOMBRE es el del festival (@festivalmambe); la edición va en fullName.
+    name:'MAMBE',displayName:'MAMBE',fullName:'Festival MAMBE 2026 — 13.ª edición',shortName:'MAMBE',
+    // EL AFICHE OFICIAL de la 13.ª edición (p/DfAg8PnFmir, lámina 1, 27 oct 2026,
+    // «Diseño Poster: @mariana_medina.ph»), 3:4 estirado a 2:3.
+    keyArt:'/assets/keyart/mambe2026-v2.jpg',
+    // PENDIENTE DE JUAN: del pie de la programación («Cinco días de cine ambiental y étnico»)
+    tagline:'Cine Ambiental y Étnico',
+    city:'Florencia',country:'CO',
+    instagram:'festivalmambe',
+    dates:'3–7 NOV',dates_en:'NOV 3–7',year:2026,timezoneOffset:'-05:00',
+    storageKey:'mambe2026_',festivalStartStr:'2026-11-03T00:00:00',festivalEndStr:'2026-11-07T23:59:00',
+    festivalDates:{'2026-11-03':'2026-11-03','2026-11-04':'2026-11-04','2026-11-05':'2026-11-05','2026-11-06':'2026-11-06','2026-11-07':'2026-11-07'},
+    days:[{k:'2026-11-03',d:3,lbl:'MAR'},{k:'2026-11-04',d:4,lbl:'MIÉ'},{k:'2026-11-05',d:5,lbl:'JUE'},{k:'2026-11-06',d:6,lbl:'VIE'},{k:'2026-11-07',d:7,lbl:'SÁB'}],
+    dayKeys:['2026-11-03','2026-11-04','2026-11-05','2026-11-06','2026-11-07'],
+    dayShort:{'2026-11-03':'MAR 3','2026-11-04':'MIÉ 4','2026-11-05':'JUE 5','2026-11-06':'VIE 6','2026-11-07':'SÁB 7'},
+    dayShort_en:{'2026-11-03':'TUE 3','2026-11-04':'WED 4','2026-11-05':'THU 5','2026-11-06':'FRI 6','2026-11-07':'SAT 7'},
+    dayLong:{'2026-11-03':'Martes 3 de noviembre','2026-11-04':'Miércoles 4 de noviembre','2026-11-05':'Jueves 5 de noviembre','2026-11-06':'Viernes 6 de noviembre','2026-11-07':'Sábado 7 de noviembre'},
+    prioLimit:3,eventPosterLabel:['EVENTO',''],
+    films:null,posters:null,lbSlugs:{}
+  },
   'fantasmagoria2026': {
     name:'Fantasmagoría',displayName:'Fantasmagoría',fullName:'Fantasmagoría 8 — Festival Internacional de Cine Fantástico y de Terror de Medellín',shortName:'FANTASMAGORÍA',
     city:'Medellín',country:'CO',
@@ -1035,6 +1128,62 @@ export const FESTIVAL_CONFIG={
     prioLimit:5,
     ticketing_model:'mixed', // al aire libre gratis; seis funciones en sala con boleta en Entradas Inteligentes (enlace por función)
     eventPosterLabel:['EVENTO',''],
+    films:null,posters:null,lbSlugs:{}
+  },
+  'funza2026': {
+    name:'Festival de Cine Funza',displayName:'Festival de Cine Funza',fullName:'4.º Festival de Cine Funza 2026',shortName:'FUNZA',
+    city:'Funza',country:'CO',
+    dates:'18–21 NOV',dates_en:'NOV 18–21',year:2026,timezoneOffset:'-05:00',
+    // EL AFICHE OFICIAL de la 4.ª edición («Ojos siempre abiertos»), 2:3 de origen,
+    // llevado a 400×600 (keyart-estirado). Lo mandó el festival a Juan el 25 oct
+    keyArt:'/assets/keyart/funza2026.jpg',
+    // PROPUESTA a Juan (25 oct): dice qué es sin repetir el nombre; el lema vive en el afiche
+    tagline:'',
+    storageKey:'funza2026_',festivalStartStr:'2026-11-18T00:00:00',festivalEndStr:'2026-11-21T23:59:00',
+    festivalDates:{'2026-11-18':'2026-11-18','2026-11-19':'2026-11-19','2026-11-20':'2026-11-20','2026-11-21':'2026-11-21'},
+    days:[{k:'2026-11-18',d:18,lbl:'MIÉ'},{k:'2026-11-19',d:19,lbl:'JUE'},{k:'2026-11-20',d:20,lbl:'VIE'},{k:'2026-11-21',d:21,lbl:'SÁB'}],
+    dayKeys:['2026-11-18','2026-11-19','2026-11-20','2026-11-21'],
+    dayShort:{'2026-11-18':'MIÉ 18','2026-11-19':'JUE 19','2026-11-20':'VIE 20','2026-11-21':'SÁB 21'},
+    dayShort_en:{'2026-11-18':'WED 18','2026-11-19':'THU 19','2026-11-20':'FRI 20','2026-11-21':'SAT 21'},
+    dayLong:{'2026-11-18':'Miércoles 18 de noviembre','2026-11-19':'Jueves 19 de noviembre','2026-11-20':'Viernes 20 de noviembre','2026-11-21':'Sábado 21 de noviembre'},
+    prioLimit:3,eventPosterLabel:['EVENTO',''],
+    films:null,posters:null,lbSlugs:{}
+  },
+  'semanacine2026': {
+    name:'Semana del Cine Colombiano',displayName:'Semana del Cine Colombiano',fullName:'Quinta Semana del Cine Colombiano',shortName:'SEMANA CINE COL',
+    city:'Cali',country:'CO',
+    dates:'3–9 NOV',dates_en:'NOV 3–9',year:2026,timezoneOffset:'-05:00',
+    // afiche oficial de la edición: lo mandó Arturo Murgas (organización) por correo
+    // el 2 nov, recortado a 2:3 por los lados
+    keyArt:'/assets/keyart/semanacine2026-v2.jpg',
+    tagline:'Muestra de Cine Colombiano en Cali',
+    storageKey:'semanacine2026_',festivalStartStr:'2026-11-03T00:00:00',festivalEndStr:'2026-11-09T23:59:00',
+    festivalDates:{'2026-11-03':'2026-11-03','2026-11-04':'2026-11-04','2026-11-05':'2026-11-05','2026-11-06':'2026-11-06','2026-11-07':'2026-11-07','2026-11-08':'2026-11-08','2026-11-09':'2026-11-09'},
+    days:[{k:'2026-11-03',d:3,lbl:'MAR'},{k:'2026-11-04',d:4,lbl:'MIÉ'},{k:'2026-11-05',d:5,lbl:'JUE'},{k:'2026-11-06',d:6,lbl:'VIE'},{k:'2026-11-07',d:7,lbl:'SÁB'},{k:'2026-11-08',d:8,lbl:'DOM'},{k:'2026-11-09',d:9,lbl:'LUN'}],
+    dayKeys:['2026-11-03','2026-11-04','2026-11-05','2026-11-06','2026-11-07','2026-11-08','2026-11-09'],
+    dayShort:{'2026-11-03':'MAR 3','2026-11-04':'MIÉ 4','2026-11-05':'JUE 5','2026-11-06':'VIE 6','2026-11-07':'SÁB 7','2026-11-08':'DOM 8','2026-11-09':'LUN 9'},
+    dayShort_en:{'2026-11-03':'TUE 3','2026-11-04':'WED 4','2026-11-05':'THU 5','2026-11-06':'FRI 6','2026-11-07':'SAT 7','2026-11-08':'SUN 8','2026-11-09':'MON 9'},
+    dayLong:{'2026-11-03':'Martes 3 de noviembre','2026-11-04':'Miércoles 4 de noviembre','2026-11-05':'Jueves 5 de noviembre','2026-11-06':'Viernes 6 de noviembre','2026-11-07':'Sábado 7 de noviembre','2026-11-08':'Domingo 8 de noviembre','2026-11-09':'Lunes 9 de noviembre'},
+    prioLimit:3,eventPosterLabel:['EVENTO',''],
+    films:null,posters:null,lbSlugs:{}
+  },
+  'miradas2026': {
+    name:'Miradas Medellín',displayName:'Miradas Medellín',fullName:'Miradas Medellín 2026 — Festival de cine y artes audiovisuales',shortName:'MIRADAS',
+    city:'Medellín',country:'CO',
+    dates:'3–8 NOV',dates_en:'NOV 3–8',year:2026,timezoneOffset:'-05:00',
+    // LA PORTADA de la programación oficial (PDF de la Alcaldía, 20 oct 2026, pág. 1):
+    // el arte de la edición con «MIRADAS MDE 2026». Estirada a 400×600 (keyart-estirado)
+    keyArt:'/assets/keyart/miradas2026-v2.jpg',
+    // el descriptor que el festival imprime junto a su nombre (portada del PDF)
+    tagline:'Festival de Cine y Artes Audiovisuales',
+    storageKey:'miradas2026_',festivalStartStr:'2026-11-03T00:00:00',festivalEndStr:'2026-11-08T23:59:00',
+    festivalDates:{'2026-11-03':'2026-11-03','2026-11-04':'2026-11-04','2026-11-05':'2026-11-05','2026-11-06':'2026-11-06','2026-11-07':'2026-11-07','2026-11-08':'2026-11-08'},
+    days:[{k:'2026-11-03',d:3,lbl:'MAR'},{k:'2026-11-04',d:4,lbl:'MIÉ'},{k:'2026-11-05',d:5,lbl:'JUE'},{k:'2026-11-06',d:6,lbl:'VIE'},{k:'2026-11-07',d:7,lbl:'SÁB'},{k:'2026-11-08',d:8,lbl:'DOM'}],
+    dayKeys:['2026-11-03','2026-11-04','2026-11-05','2026-11-06','2026-11-07','2026-11-08'],
+    dayShort:{'2026-11-03':'MAR 3','2026-11-04':'MIÉ 4','2026-11-05':'JUE 5','2026-11-06':'VIE 6','2026-11-07':'SÁB 7','2026-11-08':'DOM 8'},
+    dayShort_en:{'2026-11-03':'TUE 3','2026-11-04':'WED 4','2026-11-05':'THU 5','2026-11-06':'FRI 6','2026-11-07':'SAT 7','2026-11-08':'SUN 8'},
+    dayLong:{'2026-11-03':'Martes 3 de noviembre','2026-11-04':'Miércoles 4 de noviembre','2026-11-05':'Jueves 5 de noviembre','2026-11-06':'Viernes 6 de noviembre','2026-11-07':'Sábado 7 de noviembre','2026-11-08':'Domingo 8 de noviembre'},
+    prioLimit:5,eventPosterLabel:['EVENTO',''],
     films:null,posters:null,lbSlugs:{}
   },
   'narrarelfuturo2026': {
@@ -1100,6 +1249,45 @@ export const ARCHETYPE_COLORS = {
 // Cada sección de cada festival → su arquetipo. Generado por scripts/classify-posters
 // (arquetipos) + decisiones de diseño. Sección nueva sin entrada → gate lo caza.
 export const SECTION_ARCHETYPES = {
+  // ── Miradas Medellín 2026 · Medellín (índice del PDF oficial) ─────────
+  '🏙️ Cine Hecho en Medellín': 'Muestra / País',
+  '🇨🇴 Cine Colombiano': 'Muestra / País',
+  '🌎 Cine Iberoamericano': 'Perspectivas / Miradas',
+  '🎞️ Programas de Cortos': 'Cortos / Programas',
+  '🎥 Retrospectiva Fernando Eimbcke': 'Retrospectiva / Tributo',
+  '👨‍👩‍👧 Cine Familiar': 'Especiales / Eventos',
+  '🤟 Cine Accesible': 'Especiales / Eventos',
+  '🏘️ Cine Comunitario - Hecho en Medellín': 'Muestra / País',
+  '🗂️ Cine Memoria': 'Retrospectiva / Tributo',
+  '🌀 Cine Expandido - Hecho en Medellín': 'Especiales / Eventos',
+  '🪐 Cine en el Domo': 'Especiales / Eventos',
+  '🚚 Cinemateca Móvil': 'Especiales / Eventos',
+  '🛠️ Talleres de Desarrollo y Mediación de Audiencias': 'Charlas / Industria',
+  '🤝 Días de Industria': 'Charlas / Industria',
+  '🎆 Evento de Clausura': 'Clausura',
+  // ── Festival de Cine Funza 2026 · Funza (el «Componente» de la agenda) ─
+  '📚 Literatura / Artes Escénicas / Cine': 'Especiales / Eventos',
+  '💬 Conversatorio': 'Charlas / Industria',
+  '🎞️ Exhibición Cinematográfica': 'Muestra / País',
+  '🛠️ Formación Especializada': 'Charlas / Industria',
+  '🤝 Encuentro Departamental': 'Charlas / Industria',
+  '📡 Comunicaciones': 'Charlas / Industria',
+  '🎥 Audiovisuales / Cine': 'Charlas / Industria',
+  '📷 Fotografía / Narrativas': 'Charlas / Industria',
+  '📱 Circulación / Industria': 'Charlas / Industria',
+  '🎤 Conversatorio / Clausura': 'Clausura',
+  '🏆 Premiación': 'Especiales / Eventos',
+  // ── CINETORO 2026 · Toro ──────────────────────────────────────────────
+  '🏆 Selección Oficial': 'Competencia',
+  '🎨 Cinetoro al Aula': 'Cortos / Programas',
+  '🎓 Programación Académica': 'Charlas / Industria',
+  '✨ Especial': 'Especiales / Eventos',
+  // ── Cortos Cali 2026 · Cali ───────────────────────────────────────────
+  '🌎 Selección Oficial Internacional': 'Competencia',
+  '🎬 Selección Oficial Nacional': 'Competencia',
+  '🎓 Selección Oficial Internacional Universitaria': 'Competencia',
+  '📚 Selección Oficial Nacional Universitaria': 'Competencia',
+  '🎤 Masterclass': 'Charlas / Industria',
   // ── Anibia 2026 · Bogotá ───────────────────────────────────────────────
   '🌋 Surgentes': 'Perspectivas / Miradas',
   '🎨 Con Acento Nacional': 'Competencia',
@@ -1111,6 +1299,8 @@ export const SECTION_ARCHETYPES = {
   '💬 Charla': 'Charlas / Industria',
   '🎻 Cine Concierto & Panel': 'Especiales / Eventos',
   '🖼️ Exposición': 'Especiales / Eventos',
+  // ── Festival MAMBE 2026 · Florencia ───────────────────────────────────
+  '🌿 Proyecciones': 'Muestra / País',
   // ── Guatapé Film Fest 2026 · Guatapé ──────────────────────────────────
   '🎬 Película Inaugural': 'Apertura / Gala',
   '🏆 Competencia Internacional de Largometraje': 'Competencia',
@@ -1121,6 +1311,10 @@ export const SECTION_ARCHETYPES = {
   '🦋 Rumbo a los Macondo': 'Perspectivas / Miradas',
   '🌎 FIACINE': 'Muestra / País',
   '🌙 Cinema Luna': 'Especiales / Eventos',
+  // Semana del Cine Colombiano (Cali, nov 2026): la palabra que su lámina pone a cada actividad
+  '🎬 Película': 'Muestra / País',
+  '🌌 Cine Bajo las Estrellas': 'Especiales / Eventos',
+  '🎞️ Proyección de Cortos Locales': 'Cortos / Programas',
   '🏡 Muestra Local': 'Muestra / País',
   '👻 Terror': 'Especiales / Eventos',
   '🪞 El Reflejo del Cine': 'Muestra / País',
@@ -1289,6 +1483,9 @@ export const SECTION_ARCHETYPES = {
   '🏛️ TIFF Classics': 'Retrospectiva / Tributo',
   '🎪 Special Events': 'Especiales / Eventos',
   '✂️ Short Cuts': 'Cortos / Programas',
+  // ── FICIDI 2026 · Barranquilla ──
+  '🏳️‍🌈 Selección Oficial': 'Cortos / Programas',
+  '✨ Proyección Especial': 'Especiales / Eventos',
   // ── FICICA 2026 · Barranquilla (las cuatro categorías de su programación) ──
   '🎬 Exhibiciones': 'Cortos / Programas',
   '🤝 Industria': 'Charlas / Industria',

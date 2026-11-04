@@ -8,16 +8,17 @@
   "CH"
  ],
  "directores": [
-  "Lam Can-Zhao"
+  "Lam Can-zhao"
  ],
  "sinopsis": {
+  "es": "La fuga de un tigre rompe el largo silencio entre un padre y su hijo, y por la grieta asoma un amor contenido.",
   "en": "A tiger's escape shatters the long silence between a father and his son, with suppressed love shining through the crack."
  },
  "generos": [
   "Drama"
  ],
  "afiche": {
-  "archivo": "/assets/ficica-2026/when-the-tiger-roars.jpg",
+  "archivo": "/assets/cortoscali-2026/when-the-tiger-roars.jpg",
   "veredicto": "oficial"
  },
  "xref": {
@@ -31,6 +32,7 @@
   }
  ],
  "presentaciones": [
+  "cortoscali-2026",
   "ficica-2026"
  ]
 }

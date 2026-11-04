@@ -1,0 +1,25 @@
+{
+ "_provenance": {
+  "fuente": "afirmaciones sobre la agenda PDF del festival (25 oct 2026)",
+  "capturado": "2026-10-25"
+ },
+ "afirmaciones": [
+  {
+   "ancla": {
+    "sede": "Centro Cultural Bacatá - Funza",
+    "dia": "2026-11-21",
+    "hora": "22:30"
+   },
+   "casilla": "time",
+   "valor": "10:30",
+   "por_que": "CONFIRMADO por el festival (mensaje a Juan, 25 oct 2026): Horizonte es el sábado 21 nov a las 10:30 a. m. La agenda decía «10:30 p. m. – 11:30 p. m.», errata.",
+   "fuente": {
+    "tipo": "juan",
+    "frase": "el festival le confirmó a Juan por mensaje (25 oct 2026, sin URL pública): Horizonte, sáb 21 nov, 10:30 a. m.",
+    "fecha": "2026-10-25"
+   },
+   "evidencia": "agenda p. 2: «21 de noviembre de 2026 · 10:30 p. m. – 11:30 p. m. · Exhibición cinematográfica · Proyección HORIZONTES · 125 min»",
+   "contra": "22:30"
+  }
+ ]
+}

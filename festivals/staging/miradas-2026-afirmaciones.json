@@ -1,0 +1,110 @@
+{
+ "_provenance": {
+  "fuente": "respuesta de la Cinemateca de Medellín (organiza Miradas) a Juan por mensaje, 28 oct 2026",
+  "capturado": "2026-10-28"
+ },
+ "afirmaciones": [
+  {
+   "ancla": {
+    "sede": "Parque de los Deseos - Medellín",
+    "dia": "2026-11-07",
+    "hora": "14:00"
+   },
+   "funcion": "f_44bbe027e4",
+   "casilla": "time",
+   "valor": "10:00",
+   "contra": "14:00",
+   "fuente": {
+    "tipo": "juan",
+    "frase": "SÁBADO 7 NOV — 10:00 a. m. · «Cinemateca móvil - Laboratorio: Postproducción de video para dispositivos móviles»",
+    "fecha": "2026-10-28"
+   },
+   "evidencia": "mensaje de la Cinemateca de Medellín a Juan (28 oct), sin URL pública: lo lista bajo «10:00 a. m.» junto al laboratorio de IA generativa. El PDF (pág. 58) lo daba a las 2:00 p. m.; la respuesta del festival es la fuente más reciente."
+  },
+  {
+   "ancla": {
+    "sede": "Coocine - Medellín",
+    "dia": "2026-11-04",
+    "hora": "10:00"
+   },
+   "funcion": "f_63027920b6",
+   "casilla": "day",
+   "valor": "2026-11-05",
+   "contra": "2026-11-04",
+   "fuente": {
+    "tipo": "juan",
+    "frase": "Sí, hazlo (Papaya jue 5 10:00 y Narciso vie 6 7:00 p. m., láminas 6 y 8 de p/DfNwV3QiVe6)",
+    "fecha": "2026-11-02"
+   },
+   "evidencia": "lámina 6 de p/DfNwV3QiVe6 (IG del festival, 1 nov): «Papaya» · Coocine sala 0, Vereda El Plan · JUEVES 5 nov 10:00 a. m.; el PDF del 20 oct (pág. 71) decía mié 4. IG más nuevo manda."
+  },
+  {
+   "ancla": {
+    "sede": "Parque de los Deseos - Medellín",
+    "dia": "2026-11-05",
+    "hora": "19:00"
+   },
+   "funcion": "f_82a2221dce",
+   "casilla": "time",
+   "valor": "18:00",
+   "contra": "19:00",
+   "fuente": {
+    "tipo": "juan",
+    "frase": "Sí, ambos (publicar «Uno vuelve siempre» a las 18:00)",
+    "fecha": "2026-11-02"
+   },
+   "evidencia": "pie del reel p/DfP4GD4hlpV (IG del festival, 2 nov): jue 5 nov 6:00 p. m., Parque de los Deseos, con ensamble musical antes de la película. El PDF decía 19:00. IG más nuevo manda; ante la duda, la hora más temprana."
+  },
+  {
+   "ancla": {
+    "sede": "Museo de Arte Moderno de Medellín - MAMM - Medellín",
+    "dia": "2026-11-06",
+    "hora": "16:00"
+   },
+   "funcion": "f_130069c5a1",
+   "casilla": "has_qa",
+   "valor": true,
+   "contra": false,
+   "fuente": {
+    "tipo": "juan",
+    "frase": "«El Instagram si es más reciente, es más actualizado que la web» (regla de Juan, 27 oct 2026)",
+    "fecha": "2026-11-02"
+   },
+   "evidencia": "lámina 4 de la grilla del MAMM (＠cinematecademedellin, 2 nov): «Función con conversación» sobre «Cómo limpiar una casa en 10 pasos fáciles». Leído por Vision, Tesseract y a ojo (pipeline/ig-lecturas.py --dato: tres métodos coinciden). Post del 2 nov, más nuevo que el PDF."
+  },
+  {
+   "ancla": {
+    "sede": "Museo de Arte Moderno de Medellín - MAMM - Medellín",
+    "dia": "2026-11-08",
+    "hora": "14:00"
+   },
+   "funcion": "f_e22f48016b",
+   "casilla": "has_qa",
+   "valor": true,
+   "contra": false,
+   "fuente": {
+    "tipo": "juan",
+    "frase": "«El Instagram si es más reciente, es más actualizado que la web» (regla de Juan, 27 oct 2026)",
+    "fecha": "2026-11-02"
+   },
+   "evidencia": "lámina 5 de la grilla del MAMM (＠cinematecademedellin, 2 nov): «Función con conversación» sobre «Relicto». Leído por Vision, Tesseract y a ojo (pipeline/ig-lecturas.py --dato: tres métodos coinciden). Post del 2 nov, más nuevo que el PDF."
+  },
+  {
+   "ancla": {
+    "sede": "Coocine - Medellín",
+    "dia": "2026-11-07",
+    "hora": "14:00"
+   },
+   "funcion": "f_b5649974c3",
+   "casilla": "time",
+   "valor": "17:00",
+   "contra": "14:00",
+   "fuente": {
+    "tipo": "juan",
+    "frase": "El Instagram si es más reciente, es más actualizado que la web",
+    "fecha": "2026-10-27"
+   },
+   "evidencia": "https://www.instagram.com/p/DfUg6vuDC2o/ (4 nov 2026) lámina 06.jpg, a ojo: «Relicto · Sábado 7 de noviembre · 5:00 p. m. · Coocine, sala 0». El PDF del 20 oct decía 14:00. IG más nuevo manda."
+  }
+ ]
+}

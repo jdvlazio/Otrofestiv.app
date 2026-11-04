@@ -122,11 +122,11 @@
     "archetype": "Cortos / Programas"
    },
    "Documental Expandido": {
-   "emoji": "🔊",
-   "en": "Expanded Documentary",
-   "archetype": "Especiales / Eventos"
-  },
-  "Encuentro Pensar lo Real": {
+    "emoji": "🔊",
+    "en": "Expanded Documentary",
+    "archetype": "Especiales / Eventos"
+   },
+   "Encuentro Pensar lo Real": {
     "emoji": "🎙️",
     "en": "Pensar lo Real Meeting",
     "archetype": "Charlas / Industria"
@@ -204,6 +204,10 @@
    ],
    "La Mecánica": [
     "La Mecánica - Bogotá",
+    ""
+   ],
+   "Parque de los Periodistas": [
+    "Parque de los Periodistas - Bogotá",
     ""
    ]
   },

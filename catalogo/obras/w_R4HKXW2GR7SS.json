@@ -20,15 +20,21 @@
   "veredicto": "oficial-festival"
  },
  "xref": {
+  "tmdb": 1738928,
   "letterboxd": "mas-alla-de-la-corona"
  },
  "versiones": [
   {
    "etiqueta": "14 min",
    "duracion_min": 14
+  },
+  {
+   "etiqueta": "15 min",
+   "duracion_min": 15
   }
  ],
  "presentaciones": [
-  "ficdeh-2026"
+  "ficdeh-2026",
+  "ficidi-2026"
  ]
 }

@@ -216,7 +216,15 @@ function validateFestival(fname, data) {
     if (!Array.isArray(data.avisos)) errors.push('GATE BLOQUEANTE [avisos-palmares-forma]: `avisos` tiene que ser una lista');
     else data.avisos.forEach((n, i) => {
       const q = `avisos[${i}]`;
-      if (!['cancelled', 'rescheduled'].includes(n.type)) errors.push(`GATE BLOQUEANTE [avisos-palmares-forma]: ${q}.type debe ser 'cancelled' | 'rescheduled'`);
+      if (!['cancelled', 'rescheduled', 'info'].includes(n.type)) errors.push(`GATE BLOQUEANTE [avisos-palmares-forma]: ${q}.type debe ser 'cancelled' | 'rescheduled' | 'info'`);
+      if (n.type === 'info') {
+        // Informativo: del festival entero. Lleva id (clave de descarte) y note; sin alcance.
+        if (!n.id) errors.push(`GATE BLOQUEANTE [avisos-palmares-forma]: ${q} informativo sin \`id\` (es su clave de descarte)`);
+        if (!n.note) errors.push(`GATE BLOQUEANTE [avisos-palmares-forma]: ${q} informativo sin \`note\``);
+        if (n.title || n.date || n.cities) errors.push(`GATE BLOQUEANTE [avisos-palmares-forma]: ${q} informativo con title/date/cities — no tiene alcance; usar cancelled/rescheduled`);
+        if (n.festival !== undefined) errors.push(`GATE BLOQUEANTE [avisos-palmares-forma]: ${q} trae \`festival\` — en el JSON sobra (lo pone el loader)`);
+        return;
+      }
       if (!Array.isArray(n.cities) && !n.title) errors.push(`GATE BLOQUEANTE [avisos-palmares-forma]: ${q} sin alcance — lleva \`title\` (+\`date\`) o \`cities\``);
       if (Array.isArray(n.cities) && !n.id) errors.push(`GATE BLOQUEANTE [avisos-palmares-forma]: ${q} por ciudades sin \`id\` (es su clave de descarte)`);
       if (n.date && !/^\d{4}-\d{2}-\d{2}$/.test(n.date)) errors.push(`GATE BLOQUEANTE [avisos-palmares-forma]: ${q}.date no es YYYY-MM-DD`);

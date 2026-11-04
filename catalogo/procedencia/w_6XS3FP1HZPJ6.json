@@ -1,11 +1,11 @@
 {
  "titulo_original": {
-  "fuente": "festival:ficica-2026",
+  "fuente": "festival:cortoscali-2026,ficica-2026",
   "regla": "el título que más festivales imprimen"
  },
  "directores": {
-  "fuente": "festival",
-  "regla": "la grafía más completa que acreditan los festivales"
+  "fuente": "tmdb:1555607",
+  "regla": "tmdb-manda"
  },
  "anio": {
   "fuente": "tmdb:1555607",

@@ -242,6 +242,17 @@
    ],
    "editorial": true,
    "fuente": "MIDBO, formulario de inscripción (planilla Poster películas), recibido 20 oct 2026 — still horizontal: va entero, reducido a 1600 px de ancho como máximo, sin recorte"
+  },
+  "El León": {
+   "archivo": "fuentes/midbo-2026/afiches/el-leon-tmdb-es.jpg",
+   "_px": [
+    906,
+    1359
+   ],
+   "fuente": "TMDB 1616865, póster es /5aYMbnZEGwKp2QnypVZBFtspgam.jpg — «EL LEÓN · una película de Diana Bustamante» (Cinéma du Réel 2026)",
+   "sobre_tmdb": true,
+   "asset": "el-leon-afiche.jpg",
+   "_por_que": "la imagen que publicábamos (/assets/midbo-2026/el-leon.jpg, de TMDB) es un fotograma; el afiche verdadero está en la misma ficha TMDB (auditoría 27 oct 2026, como en Miradas)"
   }
  }
 }

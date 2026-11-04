@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "PDF oficial del BIFF 12 (Programacion_BIFF_12_DIGITAL.pdf, 26 sep 2026)",
-  "capturado": "2026-09-29",
+  "capturado": "2026-10-27",
   "que_aporta": "las fichas: sección, año, país, género, duración, idiomas, dirección, sinopsis y las funciones que cada ficha anota",
   "url": "https://biff.co/documentos/Programacion_BIFF_12_DIGITAL.pdf",
   "metodo": "pdftotext -bbox-layout: columnas por coordenada, cada función a la ficha cuyo título está encima"

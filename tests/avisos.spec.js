@@ -266,3 +266,32 @@ test('AV08 — un aviso nuevo en el JSON llega con la app abierta', async ({ pag
   expect(despues.sellada).toBe(true);
   expect(despues.banner).toEqual(['Yurlu']);
 });
+
+// AV09 — aviso informativo (type:'info'): sin obra ni fecha, se ve en Programa con
+// «AVISO DEL FESTIVAL» (nunca «reprogramada»), aun filtrando una sede, no sella
+// ninguna función y se descarta por su id.
+test('AV09 — el aviso informativo se ve siempre, no sella funciones y se descarta', async ({ page }) => {
+  await conCampos(page, { avisos: [{ type: 'info', id: 'prueba-info',
+    note: 'Las obras en competencia se suman cuando el festival las anuncie.',
+    note_en: 'Competition titles will be added once the festival announces them.' }] });
+  await enterFestival(page, FEST, '2026-08-12T10:00:00-05:00');
+  const r = await page.evaluate(async () => {
+    const p = await import('/src/view/programa.js');
+    const html = p.renderNoticesBannerHTML(state);
+    const sellada = FILMS.some(f => f._cancelled || f._movedFrom);
+    const sede = FILMS.find(f => f.venue).venue;
+    activeVenue = sede;
+    const conSede = p.getActiveNotices().map(n => n.id);
+    activeVenue = 'all';
+    _dismissedNotices.add(p._noticeKey('prueba-info'));
+    const tras = p.getActiveNotices().length;
+    return { html, sellada, conSede, tras };
+  });
+  expect(r.html).toContain('AVISO DEL FESTIVAL');
+  expect(r.html).toContain('Las obras en competencia se suman');
+  expect(r.html).not.toMatch(/reprogramada/i);
+  expect(r.html).toContain('data-title="prueba-info"');
+  expect(r.sellada).toBe(false);
+  expect(r.conSede).toEqual(['prueba-info']);
+  expect(r.tras).toBe(0);
+});

@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "ensamblar.py: ids estables de las funciones (docs/FUNCION.md C1)",
-  "capturado": "2026-10-22"
+  "capturado": "2026-11-04"
  },
  "funciones": {
   "f_4476aa7fd2": {
@@ -16,14 +16,20 @@
    "dia": "2026-10-28",
    "hora": "16:00",
    "sala": "",
-   "titulo": "espejos gestos de reparacion"
-  },
-  "f_9f903a6d40": {
-   "sede": "Alianza Francesa - Bogotá",
-   "dia": "2026-10-28",
-   "hora": "16:00",
-   "sala": "",
-   "titulo": "si la escombrera hablara"
+   "titulo": "espejos gestos de reparacion",
+   "ids_anteriores": [
+    "f_9f903a6d40"
+   ],
+   "decidida": {
+    "fecha": "2026-10-28",
+    "clave": [
+     "Alianza Francesa - Bogotá",
+     "2026-10-28",
+     "16:00",
+     "",
+     "espejos gestos de reparacion"
+    ]
+   }
   },
   "f_c7a0f4f837": {
    "sede": "Cinemateca de Bogotá - Bogotá",
@@ -114,7 +120,7 @@
    "dia": "2026-10-29",
    "hora": "17:00",
    "sala": "",
-   "titulo": "programa 3 creadoras de vida bodega insurgesta"
+   "titulo": "programa 3 creadoras de vida"
   },
   "f_d8f066c776": {
    "sede": "Centro de Memoria, Paz y Reconciliación - Bogotá",
@@ -399,16 +405,16 @@
   "f_0df06dedd6": {
    "sede": "Alianza Francesa - Bogotá",
    "dia": "2026-11-03",
-   "hora": "14:30",
+   "hora": "14:00",
    "sala": "",
    "titulo": "buenos dias wiracocha"
   },
-  "f_8c7386eddd": {
+  "f_3c54af994b": {
    "sede": "Alianza Francesa - Bogotá",
    "dia": "2026-11-03",
-   "hora": "16:30",
+   "hora": "16:00",
    "sala": "",
-   "titulo": "programa 1 tanto trabajo por hacer"
+   "titulo": "l evangile de la revolution"
   },
   "f_d433716839": {
    "sede": "Centro de Memoria, Paz y Reconciliación - Bogotá",
@@ -473,19 +479,19 @@
    "sala": "Sala 3",
    "titulo": "el valor de la palabra"
   },
+  "f_8c7386eddd": {
+   "sede": "Alianza Francesa - Bogotá",
+   "dia": "2026-11-04",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "programa 1 tanto trabajo por hacer"
+  },
   "f_5561ed525d": {
    "sede": "Cinemateca de Bogotá - Bogotá",
    "dia": "2026-11-04",
    "hora": "16:00",
    "sala": "Sala 2",
    "titulo": "bojaya la verdad desde adentro"
-  },
-  "f_3c54af994b": {
-   "sede": "Alianza Francesa - Bogotá",
-   "dia": "2026-11-04",
-   "hora": "16:00",
-   "sala": "",
-   "titulo": "l evangile de la revolution"
   },
   "f_f195c56576": {
    "sede": "Cinemateca de Bogotá - Bogotá",
@@ -613,12 +619,63 @@
    "sala": "Auditorio Fabio Lozano",
    "titulo": "homenaje roberto garcia piedrahita qedp"
   },
+  "f_b47274cbfb": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-11-04",
+   "hora": "15:00",
+   "sala": "Sala E",
+   "titulo": "circo"
+  },
+  "f_06cbb93311": {
+   "sede": "Parque de los Periodistas - Bogotá",
+   "dia": "2026-10-30",
+   "hora": "20:00",
+   "sala": "",
+   "titulo": "los archivos actuan sobre lo publico"
+  },
+  "f_bf79df89fd": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-10-28",
+   "hora": "16:30",
+   "sala": "Sala E",
+   "titulo": "inauguracion documental expandido"
+  },
+  "f_40033979ce": {
+   "sede": "Centro de Memoria, Paz y Reconciliación - Bogotá",
+   "dia": "2026-10-29",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "visita guiada por el cmpr"
+  },
+  "f_04654a67ea": {
+   "sede": "Centro de Memoria, Paz y Reconciliación - Bogotá",
+   "dia": "2026-11-03",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "visita guiada por el cmpr"
+  },
   "f_092f382469": {
    "sede": "Cinemateca de Bogotá - Bogotá",
    "dia": "2026-10-28",
    "hora": "14:00",
    "sala": "Sala E",
    "titulo": "escuchar lo que permanece"
+  },
+  "f_33efd015fd": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-11-04",
+   "hora": "15:00",
+   "sala": "Sala E",
+   "titulo": "visita guiada a la exposicion escuchar lo que permanece",
+   "ausente": true
+  },
+  "f_9f903a6d40": {
+   "sede": "Alianza Francesa - Bogotá",
+   "dia": "2026-10-28",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "si la escombrera hablara",
+   "fusionada_en": "f_fc9e0356a0"
   },
   "f_bdffbabdda": {
    "sede": "Alianza Francesa - Bogotá",

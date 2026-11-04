@@ -1,0 +1,42 @@
+{
+ "id": "w_4RPPP69XXC4G",
+ "titulo_original": "A mi edad",
+ "anio": 2025,
+ "paises": [
+  "ES"
+ ],
+ "directores": [
+  "Ángela Angulo"
+ ],
+ "aliases": [
+  {
+   "titulo": "At My Age",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "Una mujer mayor busca orientación para acercarse a otra mujer por quien siente algo.",
+  "en": "Pilar and Isabel are stunned when a woman approaches them and asks how they do it. She just wants to know how they flirt; at her age, she's fallen in love with a woman and is completely lost."
+ },
+ "generos": [
+  "Comedia"
+ ],
+ "afiche": {
+  "archivo": "/assets/ficidi-2026/a-mi-edad.jpg",
+  "veredicto": "oficial"
+ },
+ "xref": {
+  "tmdb": 1572696,
+  "letterboxd": "at-my-age"
+ },
+ "versiones": [
+  {
+   "etiqueta": "5 min",
+   "duracion_min": 5
+  }
+ ],
+ "presentaciones": [
+  "ficidi-2026"
+ ]
+}

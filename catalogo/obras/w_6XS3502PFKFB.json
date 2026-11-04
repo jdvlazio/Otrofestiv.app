@@ -1,15 +1,25 @@
 {
  "id": "w_6XS3502PFKFB",
  "titulo_original": "Rastro",
- "anio": null,
+ "anio": 2026,
  "paises": [
   "CO"
  ],
  "directores": [
   "Dominique Jeanneret"
  ],
+ "sinopsis": {
+  "es": "Tras la muerte de su padre ausente, la cineasta Dominique Jeanneret sigue el rastro de los objetos y las imágenes que él dejó grabadas para reconstruir su mirada y preguntarse si es posible conectar con alguien a quien no conoció."
+ },
  "xref": {},
+ "versiones": [
+  {
+   "etiqueta": "21 min",
+   "duracion_min": 21
+  }
+ ],
  "presentaciones": [
+  "cinetoro-2026",
   "ficica-2026"
  ]
 }

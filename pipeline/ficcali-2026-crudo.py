@@ -103,6 +103,9 @@ SECCION = {
 SEDE_SIN_PIN = {'Idea Lab': 'sede nueva (8 oct) sin dirección pública; preguntado al festival'}
 SEDES = {
     'CINEMATECA LA TERTULIA': ('Cinemateca La Tertulia', ''),
+    # 27 oct: la web oficial ya trae «Las pesadillas del siervo» en la sede a la
+    # que se movió (la afirmación del 24 oct, briosafilms + @festivaldecinecali)
+    'CINE CLUB EL VENTANAL': ('Cine Club El Ventanal', ''),
     'CINEMATECA MUSEO LA TERTULIA': ('Cinemateca La Tertulia', ''),
     'SALA MADAME BLUE': ('Madame Blue', ''),
     'CURADOR CLUB SOCIAL': ('Curador', ''),
