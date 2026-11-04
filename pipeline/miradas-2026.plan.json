@@ -289,7 +289,10 @@
   "festivalEndStr": "2026-11-08T23:59:00",
   "sharedSlotIsOneScreening": false,
   "mes_es": "noviembre",
-  "dias_vacios": []
+  "dias_vacios": [],
+  "radar_salas_ok": {
+   "Laboratorio Materia": "es el taller «Materia expandida», no una sala: el radar leyó «Laboratorio Materia» en un comentario del vigía (4 nov)"
+  }
  },
  "fuentes_vivas": [
   {

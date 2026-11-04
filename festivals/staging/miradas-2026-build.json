@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "Programación Miradas 2026-Liviano.pdf (Alcaldía de Medellín, 20 oct 2026)",
-  "capturado": "2026-11-02",
+  "capturado": "2026-11-04",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_sedes": "El nombre del lugar que imprime el PDF, normalizado; la sala aparte (Teatro MAMM, Plazoleta y Quinto piso son del Museo de Arte Moderno; la Cinemateca móvil es la sala itinerante del Parque de los Deseos). Otraparte (Envigado), Comfama Bello (Bello) y Comfama Caldas (Caldas) se publican en la ciudad «Medellín» con su pin real, como Otraparte en Fantasmagoría (Juan, 30 sep): evita «¿A cuál ciudad vas?» por 3 funciones.",
@@ -23,6 +23,9 @@
  "festivalEndStr": "2026-11-08T23:59:00",
  "sharedSlotIsOneScreening": false,
  "dias_vacios": [],
+ "radar_salas_ok": {
+  "Laboratorio Materia": "es el taller «Materia expandida», no una sala: el radar leyó «Laboratorio Materia» en un comentario del vigía (4 nov)"
+ },
  "prioLimit": 3,
  "dias": [
   "2026-11-03",
@@ -499,39 +502,39 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "event_kind": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -575,39 +578,39 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "qa_type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -641,39 +644,39 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "event_kind": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -707,43 +710,43 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "sala": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "event_kind": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -777,39 +780,39 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "event_kind": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -857,35 +860,35 @@
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "sala": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -921,51 +924,51 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "sala": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "requires_registration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "registration_url": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "event_kind": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -1016,7 +1019,11 @@
      "flags": "🇨🇴",
      "year": 2026,
      "duration": "15 min",
-     "genre": "Ficción"
+     "genre": "Ficción",
+     "lbSlug": "the-dance-of-the-angels",
+     "tmdb_id": 1809915,
+     "synopsis_en": "A group of young people conquer the heavens and return to earth as angels. But they are invisible to mortals. Only an old camcorder, forgotten in a family drawer, is capable of capturing a faint trace of their presence.",
+     "title_en": "The Dance of the Angels"
     },
     {
      "title": "Decaer",
@@ -1084,43 +1091,43 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "sala": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "film_list": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -1154,43 +1161,43 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "sala": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "event_kind": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -1233,39 +1240,39 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "sala": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -1299,43 +1306,43 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "sala": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "event_kind": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -1445,43 +1452,43 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "sala": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "film_list": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -1525,39 +1532,39 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "sala": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -1592,35 +1599,35 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -1655,35 +1662,35 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -1726,43 +1733,43 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "sala": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "qa_type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -1805,35 +1812,35 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -1876,39 +1883,39 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "sala": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -1953,43 +1960,43 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "sala": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "qa_type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -2023,43 +2030,43 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "sala": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "event_kind": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -2093,39 +2100,39 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "event_kind": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -2160,43 +2167,43 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "sala": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "event_kind": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -2231,35 +2238,35 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -2295,51 +2302,51 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "sala": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "requires_registration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "registration_url": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "event_kind": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -2375,43 +2382,43 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "sala": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "event_kind": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -2545,43 +2552,43 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "sala": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "film_list": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -2615,43 +2622,43 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "sala": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "event_kind": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -2685,43 +2692,43 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "sala": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "event_kind": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -2764,39 +2771,39 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "qa_type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -2838,39 +2845,39 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "sala": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -2904,43 +2911,43 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "sala": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "event_kind": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -3065,43 +3072,43 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "sala": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "film_list": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -3143,39 +3150,39 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "sala": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -3209,43 +3216,43 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "sala": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "event_kind": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -3286,35 +3293,35 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -3348,39 +3355,39 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "event_kind": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -3423,35 +3430,35 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -3536,43 +3543,43 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "sala": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "film_list": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -3611,43 +3618,43 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "sala": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "qa_type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    },
    "synopsis": "Con la presencia del director",
@@ -3687,43 +3694,43 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "sala": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "event_kind": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -3757,39 +3764,39 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "event_kind": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -3834,43 +3841,43 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "sala": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "qa_type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -3912,7 +3919,7 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "juan",
@@ -3921,27 +3928,27 @@
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -3984,43 +3991,43 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "sala": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "qa_type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    },
    "synopsis": "Con la presencia de la directora",
@@ -4060,43 +4067,43 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "sala": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "event_kind": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -4130,39 +4137,39 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "event_kind": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -4197,43 +4204,43 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "sala": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "event_kind": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -4269,51 +4276,51 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "sala": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "requires_registration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "registration_url": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "event_kind": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -4348,43 +4355,43 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "sala": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "event_kind": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -4428,39 +4435,39 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "sala": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -4494,39 +4501,39 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "event_kind": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -4560,43 +4567,43 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "sala": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "event_kind": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -4639,35 +4646,35 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -4702,43 +4709,43 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "sala": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "event_kind": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -4779,27 +4786,27 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "sala": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "juan",
@@ -4808,11 +4815,11 @@
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -4832,7 +4839,7 @@
     "16:00"
    ],
    "day": "2026-11-06",
-   "time": "19:00",
+   "time": "16:00",
    "day_order": 3,
    "venue": "Biblioteca Comfama Bello - Medellín",
    "has_qa": false,
@@ -4854,36 +4861,35 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
-     "tipo": "juan",
-     "fecha": "2026-11-02",
-     "frase": "Sí, hazlo (Papaya jue 5 10:00 y Narciso vie 6 7:00 p. m., láminas 6 y 8 de p/DfNwV3QiVe6)"
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -4927,43 +4933,43 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "sala": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "qa_type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -4997,43 +5003,43 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "sala": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "event_kind": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -5098,39 +5104,39 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "film_list": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -5181,7 +5187,11 @@
      "flags": "🇨🇴",
      "year": 2026,
      "duration": "15 min",
-     "genre": "Ficción"
+     "genre": "Ficción",
+     "lbSlug": "the-dance-of-the-angels",
+     "tmdb_id": 1809915,
+     "synopsis_en": "A group of young people conquer the heavens and return to earth as angels. But they are invisible to mortals. Only an old camcorder, forgotten in a family drawer, is capable of capturing a faint trace of their presence.",
+     "title_en": "The Dance of the Angels"
     },
     {
      "title": "Decaer",
@@ -5249,43 +5259,43 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "sala": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "film_list": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -5327,39 +5337,39 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "qa_type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -5396,35 +5406,35 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    },
    "synopsis": "Con la presencia del director",
@@ -5474,39 +5484,39 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "sala": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -5551,43 +5561,43 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "sala": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "qa_type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -5622,35 +5632,35 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -5735,43 +5745,43 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "sala": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "film_list": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -5805,39 +5815,39 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "event_kind": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -5872,35 +5882,35 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -5944,43 +5954,43 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "sala": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "qa_type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -6015,43 +6025,43 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "sala": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "event_kind": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -6086,43 +6096,43 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "sala": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "event_kind": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -6157,43 +6167,43 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "sala": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "event_kind": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -6228,43 +6238,43 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "sala": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "event_kind": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -6299,43 +6309,43 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "sala": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "event_kind": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -6371,43 +6381,43 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "sala": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "event_kind": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -6441,43 +6451,43 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "sala": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "event_kind": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -6511,39 +6521,39 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "event_kind": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -6586,39 +6596,39 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "sala": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -6757,39 +6767,39 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "film_list": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -6890,43 +6900,43 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "sala": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "film_list": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -6960,39 +6970,39 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "event_kind": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -7027,43 +7037,43 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "sala": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "event_kind": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -7097,7 +7107,7 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "juan",
@@ -7106,35 +7116,35 @@
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "sala": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "event_kind": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -7168,43 +7178,43 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "sala": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "event_kind": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -7224,7 +7234,7 @@
     "14:00"
    ],
    "day": "2026-11-07",
-   "time": "14:00",
+   "time": "17:00",
    "day_order": 4,
    "venue": "Coocine - Medellín",
    "sala": "Sala 0",
@@ -7248,43 +7258,44 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "tipo": "juan",
+     "fecha": "2026-10-27",
+     "frase": "El Instagram si es más reciente, es más actualizado que la web"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "sala": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "qa_type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -7319,43 +7330,43 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "sala": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "event_kind": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -7395,35 +7406,35 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -7465,39 +7476,39 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "sala": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -7540,39 +7551,39 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "sala": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -7606,43 +7617,43 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "sala": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "event_kind": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -7676,43 +7687,43 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "sala": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "event_kind": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -7746,43 +7757,43 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "sala": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "event_kind": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -7824,35 +7835,35 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -7886,39 +7897,39 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "event_kind": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -8003,43 +8014,43 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "sala": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "film_list": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -8073,39 +8084,39 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "event_kind": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -8230,43 +8241,43 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "sala": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "film_list": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -8310,39 +8321,39 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "sala": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -8386,43 +8397,43 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "sala": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "qa_type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -8457,35 +8468,35 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -8595,43 +8606,43 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "sala": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "film_list": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -8665,43 +8676,43 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "sala": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "event_kind": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -8734,39 +8745,39 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "event_kind": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -8809,39 +8820,39 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "sala": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -8875,43 +8886,43 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "sala": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "event_kind": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -8953,39 +8964,39 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "sala": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    },
    "synopsis": "Con la presencia de la directora",
@@ -9144,43 +9155,43 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "sala": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "film_list": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -9223,27 +9234,27 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "sala": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "juan",
@@ -9252,11 +9263,11 @@
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -9299,35 +9310,35 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -9461,43 +9472,43 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "sala": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "film_list": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -9531,43 +9542,43 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "sala": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "event_kind": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -9602,39 +9613,39 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "sala": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -9668,43 +9679,43 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "sala": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "event_kind": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   },
@@ -9855,47 +9866,47 @@
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "sala": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "film_list": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     },
     "event_kind": {
      "tipo": "festival-web",
-     "fecha": "2026-11-02"
+     "fecha": "2026-11-04"
     }
    }
   }
@@ -9906,8 +9917,8 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-02T21:22:40",
-  "plan_sha": "1476fecbd41f2797",
+  "fecha": "2026-11-04T09:54:54",
+  "plan_sha": "e0e0ab6cfccb9084",
   "paso": 10,
   "cmd": "python3 pipeline/miradas-2026-verificar.py"
  }

@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "ensamblar.py: ids estables de las funciones (docs/FUNCION.md C1)",
-  "capturado": "2026-10-31"
+  "capturado": "2026-11-04"
  },
  "funciones": {
   "f_4476aa7fd2": {
@@ -618,6 +618,13 @@
    "hora": "19:00",
    "sala": "Auditorio Fabio Lozano",
    "titulo": "homenaje roberto garcia piedrahita qedp"
+  },
+  "f_b47274cbfb": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-11-04",
+   "hora": "15:00",
+   "sala": "Sala E",
+   "titulo": "circo"
   },
   "f_06cbb93311": {
    "sede": "Parque de los Periodistas - Bogotá",

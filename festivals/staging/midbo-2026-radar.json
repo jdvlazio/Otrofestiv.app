@@ -1,10 +1,10 @@
 {
  "_provenance": {
   "fuente": "issue de radar #1031 — https://github.com/jdvlazio/Otrofestiv.app/issues/1031",
-  "capturado": "2026-11-03",
+  "capturado": "2026-11-04",
   "titulo": "RADAR: Muestra Internacional Documental de Bogotá (MIDBO) — Bogotá, 28 OCT–4 NOV (28ª)",
   "estado": "OPEN",
-  "comentarios": 32
+  "comentarios": 33
  },
  "issue": 1031,
  "titulo": "RADAR: Muestra Internacional Documental de Bogotá (MIDBO) — Bogotá, 28 OCT–4 NOV (28ª)",
@@ -138,6 +138,10 @@
   {
    "fecha": "2026-11-04",
    "cuerpo": "Vigía 3 nov 21:04. **JUAN (no aplicado): clausura mié 4 nov 19:30, Sala Capital, «El coloquio de los pájaros».** La lámina 3 del post https://www.instagram.com/p/DfTLJWpjXQg/ (archivo 02.jpg) dice «Q&A con directora» y «Mención de películas ganadoras»; la app tiene `has_qa: false`.\n\nTriple lectura en 02.jpg: Vision y la mirada leen todo; Tesseract lee 19:30 y «Q&A con directora», pero NO «Sala Capital» ni «Miércoles 04 de noviembre» (texto sobre fondo de bajo contraste). Veredicto ✗, por eso no se aplicó solo. La web no marca el Q&A en esta función.\n\nResto del 4 nov: la web coincide con la app (día, hora, sede).\n"
+  },
+  {
+   "fecha": "2026-11-04",
+   "cuerpo": "Vigía 4 nov, último día. Fuente: lámina de programación [p/DfUeGkYFQbi](https://www.instagram.com/p/DfUeGkYFQbi/).\n\nAPLICADO en #1401, publicado 09:21:\n- «Relicto», 10:00: Sala AMA → Auditorio 313, edificio 303C (NEA)\n- «Programa 3: Volvemos a Nacer», 14:00, Sala Capital: Q&A virtual\n\nSIN APLICAR, Tesseract no leyó la hora:\n- «Programa 1: Tanto Trabajo por Hacer», 16:00, Alianza Francesa: la lámina dice «Función con Q&A»; la app, sin Q&A\n- «Circo», activación en vivo, 15:00, Sala E: no está como función en la app\n"
   }
  ]
 }
