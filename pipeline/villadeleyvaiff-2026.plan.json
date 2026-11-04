@@ -1,8 +1,8 @@
 {
- "_nota": "20 Festival Internacional de Cine de Villa de Leyva (Villa de Leyva, Boyacá, 13–16 nov 2026, lema «De Corazón»). NO es Villa del Cine (villadelcine2026). PRE-ONBOARDING: 37 obras de cinco competencias publicadas en IG (@festcinevilla) entre el 22 y el 25 oct. La web (villadeleyvaiff.co) sigue con los PDF de 2025. Las láminas son stills, no afiches. La programación no está publicada (25 oct). Cuando salga se agregan crudo/enriquecer/ensamblar, en el modelo de la función (docs/FUNCION.md).",
+ "_nota": "20 Festival Internacional de Cine de Villa de Leyva (Villa de Leyva, Boyacá, 13–16 nov 2026, lema «De Corazón»). NO es Villa del Cine (villadelcine2026). PRE-ONBOARDING: 63 obras de ocho competencias publicadas en IG (@festcinevilla) entre el 22 y el 27 oct y en PDF en la web (creados 28–29 oct). Las láminas son stills, no afiches. La programación no está publicada (4 nov). Cuando salga se agregan crudo/enriquecer/ensamblar, en el modelo de la función (docs/FUNCION.md).",
  "radar": 1248,
  "fuentes_vivas": [],
- "_fuentes_vivas": "todo sale de láminas de IG; la web no tiene la edición 2026",
+ "_fuentes_vivas": "salió de láminas de IG y de los PDF de la home de la web, sin URL estable de programación",
  "fuentes": {
   "instagram": "https://www.instagram.com/festcinevilla/",
   "web": "https://www.villadeleyvaiff.co",
@@ -10,16 +10,21 @@
   "De2SOuWmRFm": "RESULTADOS - CORTO EXPERIMENTAL (23 oct, 11 láminas)",
   "De2jZJeGZFd": "COMPETENCIA- CORTO DOCUMENTAL (23 oct, 10 láminas)",
   "De4KTcokcBw": "COMPETENCIA- LARGO DOCUMENTAL (24 oct, 7 láminas)",
-  "De5rlOskZXe": "COMPETENCIA- CORTO INTERNACIONAL (25 oct, 8 láminas)"
+  "De5rlOskZXe": "COMPETENCIA- CORTO INTERNACIONAL (25 oct, 8 láminas)",
+  "De8I8Qqkdah": "COMPETENCIA - CORTO ANIMACIÓN (25 oct, 12 láminas)",
+  "De9ghZ8ka6I": "COMPETENCIA- CORTO FESTIVALITO (26 oct, 12 láminas)",
+  "De96CbVGaEr": "PROYECTOS SELECCIONADOS 20 LAB Ópera de Leyva (26 oct, 9 láminas): no entra, son proyectos",
+  "DfASiVIkW3R": "COMPETENCIA- CORTO PROFESIONAL COLOMBIA (27 oct, 10 láminas)",
+  "pdfs_web": "9 PDF enlazados en la home (creados 28–29 oct), copia en fuentes/villadeleyvaiff-2026/"
  },
  "pasos": [
   {
    "cmd": "python3 pipeline/villadeleyvaiff-2026-catalogo.py",
-   "que": "las láminas de los 5 carruseles (fuentes/ig/<sc>/) transcritas a ojo → catálogo (37 obras)"
+   "que": "las láminas de los 8 carruseles (fuentes/ig/<sc>/) transcritas a ojo + 1 obra solo del PDF → catálogo (63 obras)"
   },
   {
    "cmd": "python3 pipeline/villadeleyvaiff-2026-verificar.py",
-   "que": "ig-lecturas (A/B/C/D + la mirada) y cobertura en los dos sentidos: cada obra pintada en su lámina y ninguna lámina con «Dir.» fuera"
+   "que": "ig-lecturas (A/B/C/D + la mirada), cobertura en los dos sentidos contra láminas y contra los PDF de la web"
   },
   {
    "cmd": "python3 pipeline/enriquecer_catalogo.py festivals/staging/villadeleyvaiff-2026-catalogo.json",
@@ -27,7 +32,7 @@
   }
  ],
  "_fuentes_versionadas": {
-  "festivals/staging/villadeleyvaiff-2026-catalogo.json": "la selección (37 obras); la leerá el crudo",
+  "festivals/staging/villadeleyvaiff-2026-catalogo.json": "la selección (63 obras); la leerá el crudo",
   "festivals/staging/villadeleyvaiff-2026-catalogo-enriquecido.json": "las fichas de la cascada, que escribe el paso 3",
   "festivals/staging/villadeleyvaiff-2026-correcciones.json": "sin_afiche: el porqué de cada obra sin afiche"
  }
