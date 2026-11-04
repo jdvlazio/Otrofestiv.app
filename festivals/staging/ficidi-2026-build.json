@@ -1599,7 +1599,7 @@
    "time": "09:00",
    "day_order": 4,
    "venue": "La Fábrica de Cultura - Barranquilla",
-   "sala": "Auditorio EDA",
+   "sala": "Auditorio Luis G. Henao",
    "has_qa": true,
    "qa_type": "team",
    "_src": {
@@ -1756,7 +1756,7 @@
      "title_en": "A Diary Imagined"
     }
    ],
-   "description": "Incluye “La otra mitad del dolor” + conversatorio con el equipo realizador Tonnie Zanabria y Ana Sofía Ávila desde México; y “NO” + conversatorio con el director Luis Daniel Abril desde Bogotá, Colombia.",
+   "description": "Incluye “La otra mitad del dolor” + conversatorio con el equipo realizador Tonnie Zanabria y Ana Sofía Ávila desde México; y “NO” + conversatorio con el director Luis Daniel Abril desde Bogotá, Colombia. También conversan Camila Elizalde, Samuel Murillo y Fungui Ospina, desde Cali, equipo de “¿Quién se lleva a las estrellas?”.",
    "description_lang": "es",
    "_fid": "f_148464561f",
    "id": "f_148464561f"
@@ -1764,7 +1764,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-04T17:20:04",
+  "fecha": "2026-11-04T17:39:58",
   "plan_sha": "7f1d2e48ae2becc3",
   "paso": 9,
   "cmd": "python3 pipeline/ficidi-2026-verificar.py"

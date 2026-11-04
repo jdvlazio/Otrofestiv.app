@@ -63,7 +63,7 @@ SEDES = [
     ('Alianza Francesa de Barranquilla', 'Alianza Francesa de Barranquilla', ''),
     ('Maloca Cultural', 'La Maloca Cultural', ''),
     ('Universidad de la Costa', 'Universidad de la Costa – CUC', 'Bloque 11, piso 3 · Sala de Conferencias'),
-    ('Auditorio EDA Fabrica de Cultura', 'La Fábrica de Cultura', 'Auditorio EDA'),
+    ('Auditorio EDA Fabrica de Cultura', 'La Fábrica de Cultura', 'Auditorio Luis G. Henao'),
 ]
 # título del PDF → título del catálogo, donde no coinciden normalizados
 ALIAS = {
@@ -255,7 +255,9 @@ def main():
             f['has_qa'], f['qa_type'] = True, 'guests'     # conversatorio con invitados
         elif 'REVELAR(SE)' in rotulo:
             f['titulo'] = 'Revelar(se)'
-            f['sinopsis'] = intro.replace('T onnie', 'Tonnie')
+            # el equipo de Cali: lámina 01 del post de la clausura (p/DfVRPEHD1R4); texto aprobado por Juan, 4 nov
+            f['sinopsis'] = intro.replace('T onnie', 'Tonnie') + (' También conversan Camila Elizalde, Samuel Murillo y Fungui Ospina, '
+                                                                  'desde Cali, equipo de “¿Quién se lleva a las estrellas?”.')
             f['has_qa'], f['qa_type'] = True, 'team'       # conversatorios con equipo y director
         else:
             f['titulo'] = rotulo
