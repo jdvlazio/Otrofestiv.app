@@ -222,6 +222,12 @@ def publicar(fid, forzar=False):
     else:
         print(f'  sello: {motivo}')
 
+    # ── lo cerrado y lo dejado fuera no entran, ni con --forzar ─────────────
+    import no_entra
+    _no = no_entra.revisar_festival(fid, b.get('films', []))
+    if _no:
+        sys.exit(f'✗ NO se publica {fid}: esto no entra a la app:\n  · ' + '\n  · '.join(_no))
+
     rep = collections.Counter()
     out = {k: v for k, v in b.items() if k not in ('films', 'venues', 'sections')}
     out = limpio(out)

@@ -80,6 +80,11 @@ def guardianes(fest, ruta, contenido):
     _v = fuentes_vivas.frenar_si_vencidas(fest, f'python3 pipeline/correr.py {fest} --bajar')
     if _v:
         sys.exit(_v)
+    # 0·b2. lo cerrado y lo dejado fuera no entran (también si el JSON se tocó a mano)
+    import no_entra
+    _no = no_entra.revisar_festival(fest, json.loads(contenido).get('films', []))
+    if _no:
+        sys.exit(f'✗ esto no entra a la app ({fest}):\n  · ' + '\n  · '.join(_no))
     # 0·c. el catálogo al día: es DERIVADO de todos los festivales. Si un cambio no
     #      lo re-arma, el próximo --escribir arrastra 30 archivos ajenos (FICCALI
     #      #1218/#1219, 21 oct 2026). Con la caché de TMDB no usa la red (~60 s)
