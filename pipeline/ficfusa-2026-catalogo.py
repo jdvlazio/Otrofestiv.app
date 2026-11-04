@@ -4,10 +4,10 @@
 
 LA FUENTE: el post «Selección oficial FICFUSA 2026» (wp-json posts/9882,
 publicado 21 oct 2026). Declara 62 obras (42 en competencia, 20 en muestras),
-pero al 22 oct solo publica UNA sección, «Hecho por Colombianas»
-(cortometrajes dirigidos por mujeres), con 3 tarjetas. El resto no está en el
-HTML, ni en wp-json (media del 21 oct = esas 3), ni en Instagram
-(@ficfusa_festival por Apify: último post de la selección, ninguno).
+y las va subiendo por tandas. Al 4 nov 11:54 publica 53 tarjetas en cinco
+secciones: faltan 9 de las 20 no competitivas (ni en la página, ni en wp-json
+media, ni en Instagram). Las tarjetas se leen del HTML de la página: wp-json
+posts/9882 trae los shortcodes del constructor, sin ellas.
 
 El dato está PINTADO en las tarjetas: se lee con pipeline/ocr.py y se cruza con
 la transcripción a ojo (OJOS). El script FRENA si una tarjeta no trae el
@@ -32,6 +32,9 @@ UP = 'https://ficfusa.com/wp-content/uploads/2026/10/'
 SECCION = 'Hecho por Colombianas'   # verbatim: «CORTOMETRAJES DIRIGIDOS POR MUJERES · HECHO POR COLOMBIANAS»
 # Mismo molde: el antetítulo describe, el título grande es el nombre → en Título.
 REGION = 'Un Relato Hecho Región'  # verbatim: «CORTOMETRAJES NACIONALES · Un relato hecho región»
+MUJERES = 'Hechos de Mujeres'  # «CORTOMETRAJES NACIONALES E INTERNACIONALES · Hechos de mujeres» (el antetítulo dice cortos; las 10 tarjetas son de 1:02 h a 1:59 h)
+CORTO = 'Un Hecho Corto'  # «CORTOMETRAJES NACIONALES · Un hecho corto»
+FUERA = 'Selección Oficial'  # «FUERA DE COMPETENCIA · Selección oficial»: 11 de las 20 no competitivas
 
 OJOS = [
     ('seleccion-oficial-hecho-por-colombianas-ficfusa-desaprender-la-maternidad.webp',
@@ -88,8 +91,117 @@ OJOS = [
     ('seleccion-oficial-ficfusa-bajo-el-ultimo-aliento.webp',
      dict(titulo='Bajo el último aliento', director='Pedro Valencia', anio=2024,
           pais='Colombia', duracion_min=6, genero='Drama, Experimental', _dur='5:15', _fecha='2026-10-23', _sec=REGION)),
+    # 30 oct 09:07–13:02 (media 9936–9976) y 2–4 nov (10004–10019): completan las cuatro competitivas
+    # y abren «FUERA DE COMPETENCIA · Selección oficial». Mirado tarjeta por tarjeta.
+    ('seleccion-oficial-ficfusa-mas-alla.webp',
+     dict(titulo='Más allá', director='Bettina López Mendoza', anio=2025,
+          pais='Colombia, Venezuela, Estados Unidos, Canadá', duracion_min=16, genero='Drama, Fantasía', _dur='15:24 min', _fecha='2026-10-30', _sec=REGION, _tipo='corto')),
+    ('seleccion-oficial-ficfusa-sonidos-de-resistencia.webp',
+     dict(titulo='Sonidos de la resistencia', director='Juan Ruiz', anio=2023,
+          pais='Colombia', duracion_min=11, genero='Documental', _dur='10:07 min', _fecha='2026-10-30', _sec=REGION, _tipo='corto')),
+    ('seleccion-oficial-ficfusa-sukua.webp',
+     dict(titulo='Sukua', director='Omar E. Ospina Giraldo', anio=2025,
+          pais='Colombia', duracion_min=17, genero='Drama', _dur='16:42 min', _fecha='2026-10-30', _sec=REGION, _tipo='corto')),
+    ('seleccion-oficial-ficfusa-cayenas-libertarias.webp',
+     dict(titulo='Cayenas libertarias', director='Javier Camilo Aranguren', anio=2025,
+          pais='Colombia', duracion_min=18, genero='Documental', _dur='17:02 min', _fecha='2026-10-30', _sec=REGION, _tipo='corto')),
+    ('seleccion-oficial-ficfusa-la-gallina-saraviada.webp',
+     dict(titulo='La gallina saraviada', director='Ingrid Paola Bonilla Rodríguez', anio=2025,
+          pais='Colombia', duracion_min=11, genero='Drama rural', _dur='11 min', _fecha='2026-10-30', _sec=REGION, _tipo='corto')),
+    ('seleccion-oficial-ficfusa-relatos-del-camino.webp',
+     dict(titulo='Relatos del camino', director='Daniel Prieto', anio=2025,
+          pais='Colombia', duracion_min=12, genero='Animación, Documental', _dur='11:52 min', _fecha='2026-10-30', _sec=REGION, _tipo='corto')),
+    ('seleccion-oficial-ficfusa-legado.webp',
+     dict(titulo='Legado', director='Zumaya Mayers y Rodrigo Cuervo', anio=2024,
+          pais='Colombia, Ecuador', duracion_min=25, genero='Documental', _dur='24:31 min', _fecha='2026-10-30', _sec=REGION, _tipo='corto')),
+    ('seleccion-oficial-ficfusa-pawa.webp',
+     dict(titulo='Pawa', director='Marbel Ina Vanegas Jusayu', anio=2026,
+          pais='Colombia', duracion_min=23, genero='Ficción', _dur='22:05 min', _fecha='2026-10-30', _sec=REGION, _tipo='corto')),
+    ('seleccion-oficial-ficfusa-secuencia.webp',
+     dict(titulo='Secuencia', director='Chiro Castellanos H', anio=2025,
+          pais='Colombia', duracion_min=16, genero='Ficción, Drama', _dur='15:21 min', _fecha='2026-10-30', _sec=REGION, _tipo='corto')),
+    ('seleccion-oficial-ficfusa-puntos-de-fuga.webp',
+     dict(titulo='Puntos de fuga', director='Lina Rodríguez', anio=2025,
+          pais='Colombia, Canadá', duracion_min=72, genero='Documental', _dur='1:12 h', _fecha='2026-10-30', _sec=MUJERES, _tipo='largo')),
+    ('seleccion-oficial-ficfusa-la.webp',
+     dict(titulo='La', director='Tephy Piedrahita Avellaneda', anio=2026,
+          pais='Colombia, Argentina', duracion_min=62, genero='Animación, Documental, Experimental', _dur='1:02 h', _fecha='2026-10-30', _sec=MUJERES, _tipo='largo')),
+    ('seleccion-oficial-ficfusa-la-luz-por-primera-vez.webp',
+     dict(titulo='La luz por primera vez', director='Ibeth Rey y Frank Rodríguez Rojas', anio=2026,
+          pais='Colombia, España', duracion_min=78, genero='Documental', _dur='1:18 h', _fecha='2026-10-30', _sec=MUJERES, _tipo='largo')),
+    ('seleccion-oficial-ficfusa-la-vida-es.webp',
+     dict(titulo='La vida es', director='Lorena Villarreal', anio=2025,
+          pais='México', duracion_min=119, genero='Drama, Comedia', _dur='1:59 h', _fecha='2026-10-30', _sec=MUJERES, _tipo='largo')),
+    ('seleccion-oficial-ficfusa-pelicula-sobre-las-olas.webp',
+     dict(titulo='Sobre las olas', director='Horacio Alcalá', anio=2025,
+          pais='España, México', duracion_min=98, genero='Drama', _dur='1:38 h', _fecha='2026-10-30', _sec=MUJERES, _tipo='largo')),
+    ('seleccion-oficial-ficfusa-comparsa.webp',
+     dict(titulo='Comparsa', director='Vickie Curtis y Doug Anderson', anio=2025,
+          pais='Guatemala, Estados Unidos', duracion_min=78, genero='Documental', _dur='1:18 h', _fecha='2026-10-30', _sec=MUJERES, _tipo='largo')),
+    ('seleccion-oficial-ficfusa-truck-mama.webp',
+     dict(titulo='Truck mama', director='Zippy Nyaruri', anio=2025,
+          pais='Kenia, Países bajos, Arabia saudí, Sudáfrica', duracion_min=85, genero='Documental', _dur='1:25 h', _fecha='2026-10-30', _sec=MUJERES, _tipo='largo')),
+    ('seleccion-oficial-ficfusa-framing-her.webp',
+     dict(titulo='Framing her', director='Coco Wouters', anio=2026,
+          pais='Bélgica, Suecia, Reino Unido, Noruega', duracion_min=92, genero='Documental', _dur='1:32 h', _fecha='2026-10-30', _sec=MUJERES, _tipo='largo')),
+    ('seleccion-oficial-ficfusa-matinino.webp',
+     dict(titulo='Matininó', director='Gabriela Díaz Arp', anio=2026,
+          pais='Puerto Rico, República Dominicana', duracion_min=89, genero='Documental, Fantasía', _dur='1:29 h', _fecha='2026-10-30', _sec=MUJERES, _tipo='largo')),
+    ('seleccion-oficial-ficfusa-la-peluqueria-no-se-cierra.webp',
+     dict(titulo='La peluquería no se cierra', director='Vanesa Valdemoros', anio=2026,
+          pais='España', duracion_min=69, genero='Documental', _dur='1:09 h', _fecha='2026-10-30', _sec=MUJERES, _tipo='largo')),
+    ('seleccion-oficial-ficfusa-ir-hacia-dentro.webp',
+     dict(titulo='Ir hacia adentro', director='Laura Alejandra Jiménez Ruiz', anio=2025,
+          pais='Colombia', duracion_min=6, genero='Animación, Experimental', _dur='5:42 min', _fecha='2026-10-30', _sec=CORTO, _tipo='corto')),
+    ('seleccion-oficial-ficfusa-sol-de-niebla.webp',
+     dict(titulo='Sol de niebla', director='Maria Jose Ibarra y Florentino Vargas', anio=2026,
+          pais='Colombia', duracion_min=6, genero='Documental, Experimental', _dur='5:48 min', _fecha='2026-10-30', _sec=CORTO, _tipo='corto')),
+    ('seleccion-oficial-ficfusa-oyeme-pelicula.webp',
+     dict(titulo='Óyeme', director='Joanna Cecilia Gómez', anio=2025,
+          pais='Colombia', duracion_min=5, genero='Drama, Realismo mágico', _dur='4:33 min', _fecha='2026-10-30', _sec=CORTO, _tipo='corto')),
+    ('seleccion-oficial-ficfusa-victorias-y-glorias-relatos-de-campeonas.webp',
+     dict(titulo='Victorias y Glorias - Relatos de campeonas', director='Luber Yesid Zúñiga Ordóñez', anio=2025,
+          pais='Colombia', duracion_min=12, genero='Documental', _dur='11:10 min', _fecha='2026-10-30', _sec=CORTO, _tipo='corto')),
+    ('seleccion-oficial-ficfusa-que-el-cielo-nos-perdone.webp',
+     dict(titulo='Que el cielo nos perdone', director='Andrés Buitrago', anio=2025,
+          pais='Colombia', duracion_min=17, genero='Horror, Terror', _dur='16:49 min', _fecha='2026-10-30', _sec=CORTO, _tipo='corto')),
+    ('seleccion-oficial-ficfusa-animista-1.webp',
+     dict(titulo='Animista', director='Sebastián Giraldo', anio=2024,
+          pais='Colombia', duracion_min=9, genero='Experimental', _dur='8:20 min', _fecha='2026-10-30', _sec=CORTO, _tipo='corto')),
+    ('ficfusa-muestra-internacional-2026-domingo.webp',
+     dict(titulo='Domingo', director='Day Sena', anio=2025,
+          pais='Brasil', duracion_min=21, genero='Drama', _dur='20:01 min', _fecha='2026-11-04', _sec=FUERA, _tipo='corto')),
+    ('ficfusa-muestra-internacional-2026-un-trato-brillante.webp',
+     dict(titulo='Un trato brillante', director='Libertad Benavides, Alex Parra, Alicia Bullich, Luz Rodriguez, Carolina Cuellar, Consuelo Soto, María Bonillo y Beatriz Esteban', anio=2026,
+          pais='España', duracion_min=9, genero='Fantasía, Stop motion', _dur='8:40 m', _fecha='2026-11-04', _sec=FUERA, _tipo='corto')),
+    ('ficfusa-muestra-internacional-floreceran.webp',
+     dict(titulo='Florecerán!', director='Claudia Ruiz', anio=2026,
+          pais='Argentina', duracion_min=2, genero='Documental Animado', _dur='1:42 m', _fecha='2026-11-04', _sec=FUERA, _tipo='corto')),
+    ('ficfusa-muestra-nacional-arbol-en-pie.webp',
+     dict(afiche='assets/ficcali-2026/arbol-en-pie.jpg', titulo='Árbol en pie', director='Red Comunitaria Trans, Rodrigo Torrijos y Mapa López', anio=2026,
+          pais='Colombia', duracion_min=6, genero='Bullerengue, Afrotravesti', _dur='5:55 min', _fecha='2026-11-04', _sec=FUERA, _tipo='corto')),
+    ('ficfusa-muestra-nacional-transversal-30ff.webp',
+     dict(titulo='Transversal 30ff', director='Checho Mejía', anio=2025,
+          pais='Colombia', duracion_min=6, genero='Comedia', _dur='6:00 min', _fecha='2026-11-04', _sec=FUERA, _tipo='corto')),
+    ('ficfusa-muestra-nacional-cuando-la-palabra-se-hace-busqueda.webp',
+     dict(titulo='Cuando la palabra se hace búsqueda: El eco de sus voces', director='Frank Benítez Peña', anio=2026,
+          pais='Colombia', duracion_min=61, genero='Documental', _dur='1:01 h', _fecha='2026-11-04', _sec=FUERA, _tipo='largo')),
+    ('ficfusa-muestra-nacional-el-espejo-de-la-vida.webp',
+     dict(titulo='El espejo de la vida', director='Simón Sánchez Plazas', anio=2025,
+          pais='Colombia', duracion_min=10, genero='Animación, Drama', _dur='9:17 min', _fecha='2026-11-04', _sec=FUERA, _tipo='corto')),
+    ('ficfusa-muestra-nacional-hdlt.webp',
+     dict(afiche='assets/filcmar-2026/hdlt.jpg', titulo='Hdlt', director='Artefactum Suba', anio=2025,
+          pais='Colombia', duracion_min=19, genero='Falso documental, Comedia', _dur='18:22 min', _fecha='2026-11-04', _sec=FUERA, _tipo='corto')),
+    ('ficfusa-muestra-nacional-la-libertad-es-mi-causa.webp',
+     dict(titulo='La libertad es mi causa', director='Claudia Bermúdez Vélez', anio=2024,
+          pais='Colombia', duracion_min=101, genero='Documental', _dur='1:41 h', _fecha='2026-11-04', _sec=FUERA, _tipo='largo')),
+    ('muestra-nacional-ficfusa-salud-mutante.webp',
+     dict(titulo='Salud Mutante', director='Daniel Rodríguez Gaitán', anio=2025,
+          pais='Colombia', duracion_min=19, genero='Ciencia ficción, Distopía', _dur='18:03 min', _fecha='2026-11-04', _sec=FUERA, _tipo='corto')),
+    ('ficfusa-muestra-nacional-sinfonia-de-oficios.webp',
+     dict(titulo='Sinfonía Incompleta de Oficios del Fonce', director='Nelson Omar Silva Sánchez', anio=2024,
+          pais='Colombia', duracion_min=16, genero='Sinfonía urbana', _dur='15:54 min', _fecha='2026-11-04', _sec=FUERA, _tipo='corto')),
 ]
-
 
 
 def main():
@@ -101,15 +213,18 @@ def main():
     obras = []
     for (arch, o), r in zip(OJOS, rutas):
         txt = ' '.join(ocr[r])
-        for tok in (o['director'], str(o['anio']), o['_dur'] + ' min'):
+        dur = o['_dur'] if o['_dur'].split()[-1] in ('h', 'm', 'min') else o['_dur'] + ' min'
+        for tok in (o['director'], str(o['anio']), dur):
             if tok not in txt:
                 sys.exit(f'✗ {arch}: el OCR no corrobora «{tok}»')
-        o = dict(o); o.pop('_dur'); fecha = o.pop('_fecha', '2026-10-21'); sec = o.pop('_sec', SECCION)
-        obras.append({**o, 'tipo': 'corto', 'seccion': sec,
+        o = dict(o); o.pop('_dur'); fecha = o.pop('_fecha', '2026-10-21'); sec = o.pop('_sec', SECCION); tipo = o.pop('_tipo', 'corto')
+        if sec == FUERA:
+            o['competencia'] = False
+        obras.append({**o, 'tipo': tipo, 'seccion': sec,
                       '_src': {'url': URL, 'tarjeta': UP + arch, 'date': fecha}})
     json.dump({'_provenance': provenance(URL, metodo='wp-json posts/9882 + tarjetas leídas con ocr.py y a ojo',
                                          publicado='2026-10-21'),
-               '_nota': 'el post declara 62 obras (42 en competencia, 20 en muestras); al 23 oct 22:55 publica estas 17 en dos secciones',
+               '_nota': 'el post declara 62 obras (42 en competencia, 20 en muestras); al 4 nov 11:54 publica estas 53: las 42 competitivas y 11 de las 20 fuera de competencia',
                'obras': obras}, io.open(OUT, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     print(f'✓ {len(obras)} obras → {os.path.relpath(OUT, REPO)}')
 

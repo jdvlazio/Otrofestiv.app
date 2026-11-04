@@ -1,20 +1,44 @@
 {
  "_provenance": {
   "fuente": "a mano, revisión del enriquecido del catálogo",
-  "capturado": "2026-10-25"
+  "capturado": "2026-11-04"
  },
  "sin_afiche": {
-  "Desaprender la maternidad": {
-   "_por_que": "sin ficha TMDB verificable (título + director + año no casan) y no está en ningún festival nuestro; lo único publicado es la tarjeta de selección de FICFUSA (fotograma con su marca), que no es el afiche oficial (22 oct)"
-  },
-  "Salsa": {
-   "_por_que": "sin ficha verificable en la cascada (TMDB, Proimágenes, cinecorto.co: título + directora Antonina Kerguelén Román + 2024 no casan) y no está en ningún festival nuestro; lo único publicado es la tarjeta de selección de FICFUSA (fotograma con su marca), que no es el afiche oficial (23 oct)"
-  },
   "Sinfonía del viaje a la luna": {
    "_por_que": "sin ficha verificable (el TMDB 549260 es de 2015 y no se puede afirmar que sea esta obra de 2026) y no está en ningún festival nuestro; lo único publicado es la tarjeta de selección de FICFUSA (fotograma con su marca), que no es el afiche oficial (25 oct)"
   },
   "Bajo el último aliento": {
    "_por_que": "sin ficha verificable (TMDB, Proimágenes, cinecorto.co: título + Pedro Valencia + 2024 no casan). Está en Girardota 2026, pero su imagen allá es la lámina de selección del festival (marca «Selección Oficial · Festival Audiovisual de Girardota 2026»), no el afiche oficial de la obra: no se hereda tarjeta ajena. Aquí solo hay la tarjeta de FICFUSA (25 oct)"
+  },
+  "Sinfonía Incompleta de Oficios del Fonce": {
+   "_por_que": "sin ficha TMDB. En SiembraFest su imagen es la tarjeta de sección de ese festival (laurel «Siembra Fest»): no se hereda tarjeta ajena; lo único publicado es la tarjeta de selección de FICFUSA (fotograma con su marca), que no es el afiche oficial (4 nov)"
+  },
+  "Victorias y Glorias - Relatos de campeonas": {
+   "_por_que": "sin ficha TMDB. En SiembraFest su imagen es la tarjeta de sección de ese festival (laurel «Siembra Fest»): no se hereda tarjeta ajena; lo único publicado es la tarjeta de selección de FICFUSA (fotograma con su marca), que no es el afiche oficial (4 nov)"
+  },
+  "Legado": {
+   "_por_que": "ficha en cinecorto.co sin afiche; TMDB no la tiene y Popayán la publicó sin afiche; lo único publicado es la tarjeta de selección de FICFUSA (fotograma con su marca), que no es el afiche oficial (4 nov)"
+  },
+  "La libertad es mi causa": {
+   "_por_que": "TMDB 1499403 no tiene ningún póster; lo único publicado es la tarjeta de selección de FICFUSA (fotograma con su marca), que no es el afiche oficial (4 nov)"
+  },
+  "Un trato brillante": {
+   "_por_que": "sin ficha en TMDB ni créditos de sus directoras; búsqueda web sin resultado; lo único publicado es la tarjeta de selección de FICFUSA (fotograma con su marca), que no es el afiche oficial (4 nov)"
+  },
+  "Florecerán!": {
+   "_por_que": "sin ficha en TMDB; búsqueda web sin resultado; lo único publicado es la tarjeta de selección de FICFUSA (fotograma con su marca), que no es el afiche oficial (4 nov)"
+  },
+  "Óyeme": {
+   "_por_que": "sin ficha en TMDB; búsqueda web sin resultado; lo único publicado es la tarjeta de selección de FICFUSA (fotograma con su marca), que no es el afiche oficial (4 nov)"
+  },
+  "La": {
+   "_por_que": "título de una sola palabra, sin ficha en TMDB por título ni por directora; búsqueda web sin resultado; lo único publicado es la tarjeta de selección de FICFUSA (fotograma con su marca), que no es el afiche oficial (4 nov)"
+  },
+  "Sonidos de la resistencia": {
+   "_por_que": "sin ficha en TMDB; FICMontañas la publicó sin afiche; búsqueda web sin resultado; lo único publicado es la tarjeta de selección de FICFUSA (fotograma con su marca), que no es el afiche oficial (4 nov)"
+  },
+  "Ir hacia adentro": {
+   "_por_que": "sin ficha en TMDB; Anibia la publicó sin afiche; lo único publicado es la tarjeta de selección de FICFUSA (fotograma con su marca), que no es el afiche oficial (4 nov)"
   }
  },
  "fichas": {
@@ -25,6 +49,26 @@
   },
   "Sinfonía del viaje a la luna": {
    "_por_que": "se RECHAZA el TMDB 549260 que propuso la cascada: es de 2015 a nombre de «Sandra Reyes», sin sinopsis ni país, y la tarjeta dice 2026 y Sandra Reyes Sotomayor (TMDB tiene a esa persona aparte, 6249186, sin esta obra). Solo casaba por duración (12 vs 9:24); con 11 años de diferencia no se cuelga (25 oct)"
+  },
+  "Salsa": {
+   "tmdb": 1281066,
+   "_fuente": "https://www.themoviedb.org/movie/1281066",
+   "_por_que": "TMDB la titula «¡Salsa!»: Antonina Kerguelén Román, 2024, Colombia, 14 min, igual que la tarjeta. El candado no casó por los signos del título (4 nov)"
+  },
+  "Desaprender la maternidad": {
+   "tmdb": 1574997,
+   "_fuente": "https://www.themoviedb.org/movie/1574997",
+   "_por_que": "TMDB la titula «Unlearning Motherhood»: Juliana Erazo Gómez, 2025, Países Bajos, 11 min; la tarjeta dice Colombia, Países bajos, 10:45. Se halló por los créditos de la directora (4 nov)"
+  },
+  "Framing her": {
+   "tmdb": 1531982,
+   "_fuente": "https://www.themoviedb.org/movie/1531982",
+   "_por_que": "TMDB escribe «Coco Wouter», la tarjeta «Coco Wouters»: mismo título, 2026, 90 vs 92 min, Suecia entre los países de la tarjeta (4 nov)"
+  },
+  "Secuencia": {
+   "tmdb": 1485035,
+   "_fuente": "https://www.themoviedb.org/movie/1485035",
+   "_por_que": "TMDB: Secuencia, 2025, Colombia, ficción sobre dos hermanas campesinas de los Montes de María, a nombre de Claudia Castellanos Hernández; la tarjeta dice Chiro Castellanos H, 2025, Colombia, ficción, y su fotograma muestra a dos mujeres con lo cosechado en un camino rural. Que Chiro sea Claudia es inferencia, sin fuente que lo diga: a confirmar (4 nov)"
   }
  }
 }

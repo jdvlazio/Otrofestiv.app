@@ -1,0 +1,42 @@
+{
+ "_provenance": {
+  "fuente": "https://ficfusa.com/programacion/",
+  "capturado": "2026-11-04",
+  "publicado": "2026-11-03T01:19:37",
+  "metodo": "HTML de la página; a mano"
+ },
+ "_nota": "Parcial: la página solo publica el 11 nov. Transcrito sin montar. La parrilla del 12 al 16 nov no está publicada. La muestra Bogotá Experimental no publica sus obras.",
+ "funciones": [
+  {
+   "fecha": "2026-11-11",
+   "hora": "10:00",
+   "sede": "Cinema Los Ángeles",
+   "titulo": "Proyecciones",
+   "acceso": "Entrada gratuita",
+   "obras": [
+    "Sinfonía del viaje a la luna",
+    "Akababuru: expresión de asombro",
+    "La gran hazaña",
+    "Chicha la chicharra",
+    "Tuktu padre maíz"
+   ]
+  },
+  {
+   "fecha": "2026-11-11",
+   "hora": "15:00",
+   "fin": "18:00",
+   "sede": "Casona Tierra Grata",
+   "titulo": "Laboratorio Visual Experimental VIDEOFRAGMENTOS",
+   "acceso": "Gratuito con inscripción previa",
+   "obras": []
+  },
+  {
+   "fecha": "2026-11-11",
+   "hora": "19:00",
+   "sede": "Quinta Balmoral",
+   "titulo": "Muestra Especial Bogotá Experimental",
+   "formato": "Proyección y Conversatorio",
+   "obras": []
+  }
+ ]
+}

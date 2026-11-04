@@ -1,10 +1,10 @@
 {
- "_nota": "FICFUSA 2026 — 13.ª versión del Festival Internacional de Cine de Fusagasugá (11–16 nov 2026). PRE-ONBOARDING: el post de la Selección Oficial (21 oct) declara 62 obras (42 en competencia, 20 en muestras) pero solo publica 3, de «Hecho por Colombianas». Las demás secciones y la programación (/programacion/) no están publicadas (22 oct). Cuando salgan se agregan al catálogo y luego crudo/enriquecer/ensamblar, en el modelo de la función (docs/FUNCION.md).",
+ "_nota": "FICFUSA 2026 — 13.ª versión del Festival Internacional de Cine de Fusagasugá (11–16 nov 2026). PRE-ONBOARDING: la web declara 62 obras (42 en competencia, 20 fuera) y al 4 nov publica 53 tarjetas. La programación solo trae el 11 nov. Faltan 9 obras y la parrilla del 12 al 16; luego crudo/enriquecer/ensamblar, en el modelo de la función (docs/FUNCION.md).",
  "radar": 1032,
  "pasos": [
   {
    "cmd": "python3 pipeline/ficfusa-2026-catalogo.py",
-   "que": "las tarjetas del post «Selección oficial FICFUSA 2026» (wp-json + ocr.py, cruzado con la lectura a ojo) → catálogo (6 cortos)"
+   "que": "las tarjetas del post «Selección oficial FICFUSA 2026» (wp-json + ocr.py, cruzado con la lectura a ojo) → catálogo (53 obras)"
   },
   {
    "cmd": "python3 pipeline/enriquecer_catalogo.py festivals/staging/ficfusa-2026-catalogo.json",
@@ -12,8 +12,10 @@
   }
  ],
  "_fuentes_versionadas": {
-  "festivals/staging/ficfusa-2026-catalogo.json": "la selección publicada (6 obras de 62); la leerá el crudo",
+  "festivals/staging/ficfusa-2026-catalogo.json": "la selección publicada (53 obras de 62); la leerá el crudo",
   "festivals/staging/ficfusa-2026-catalogo-enriquecido.json": "las fichas TMDB/cascada, que escribe el paso 2",
-  "festivals/staging/ficfusa-2026-correcciones.json": "sin_afiche: el porqué de la obra sin afiche; lo leen pipeline/preonboarding.py y, con la parrilla, enriquecer.py/ensamblar.py"
+  "festivals/staging/ficfusa-2026-correcciones.json": "sin_afiche: el porqué de la obra sin afiche; lo leen pipeline/preonboarding.py y, con la parrilla, enriquecer.py/ensamblar.py",
+  "festivals/staging/ficfusa-2026-programacion-oficial.json": "lo que /programacion/ publica (3 entradas del 11 nov), sin montar",
+  "festivals/staging/ficfusa-2026-sinopsis.json": "sinopsis declaradas: reuso de lo publicado y traducciones nuestras"
  }
 }

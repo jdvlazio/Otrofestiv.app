@@ -1,11 +1,11 @@
 {
  "_provenance": {
   "fuente": "https://ficfusa.com/seleccion-oficial-ficfusa-2026/",
-  "capturado": "2026-10-25",
+  "capturado": "2026-11-04",
   "metodo": "wp-json posts/9882 + tarjetas leídas con ocr.py y a ojo",
   "publicado": "2026-10-21"
  },
- "_nota": "el post declara 62 obras (42 en competencia, 20 en muestras); al 23 oct 22:55 publica estas 17 en dos secciones",
+ "_nota": "el post declara 62 obras (42 en competencia, 20 en muestras); al 4 nov 11:54 publica estas 53: las 42 competitivas y 11 de las 20 fuera de competencia",
  "obras": [
   {
    "titulo": "Desaprender la maternidad",
@@ -260,6 +260,559 @@
     "url": "https://ficfusa.com/seleccion-oficial-ficfusa-2026/",
     "tarjeta": "https://ficfusa.com/wp-content/uploads/2026/10/seleccion-oficial-ficfusa-bajo-el-ultimo-aliento.webp",
     "date": "2026-10-23"
+   }
+  },
+  {
+   "titulo": "Más allá",
+   "director": "Bettina López Mendoza",
+   "anio": 2025,
+   "pais": "Colombia, Venezuela, Estados Unidos, Canadá",
+   "duracion_min": 16,
+   "genero": "Drama, Fantasía",
+   "tipo": "corto",
+   "seccion": "Un Relato Hecho Región",
+   "_src": {
+    "url": "https://ficfusa.com/seleccion-oficial-ficfusa-2026/",
+    "tarjeta": "https://ficfusa.com/wp-content/uploads/2026/10/seleccion-oficial-ficfusa-mas-alla.webp",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "titulo": "Sonidos de la resistencia",
+   "director": "Juan Ruiz",
+   "anio": 2023,
+   "pais": "Colombia",
+   "duracion_min": 11,
+   "genero": "Documental",
+   "tipo": "corto",
+   "seccion": "Un Relato Hecho Región",
+   "_src": {
+    "url": "https://ficfusa.com/seleccion-oficial-ficfusa-2026/",
+    "tarjeta": "https://ficfusa.com/wp-content/uploads/2026/10/seleccion-oficial-ficfusa-sonidos-de-resistencia.webp",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "titulo": "Sukua",
+   "director": "Omar E. Ospina Giraldo",
+   "anio": 2025,
+   "pais": "Colombia",
+   "duracion_min": 17,
+   "genero": "Drama",
+   "tipo": "corto",
+   "seccion": "Un Relato Hecho Región",
+   "_src": {
+    "url": "https://ficfusa.com/seleccion-oficial-ficfusa-2026/",
+    "tarjeta": "https://ficfusa.com/wp-content/uploads/2026/10/seleccion-oficial-ficfusa-sukua.webp",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "titulo": "Cayenas libertarias",
+   "director": "Javier Camilo Aranguren",
+   "anio": 2025,
+   "pais": "Colombia",
+   "duracion_min": 18,
+   "genero": "Documental",
+   "tipo": "corto",
+   "seccion": "Un Relato Hecho Región",
+   "_src": {
+    "url": "https://ficfusa.com/seleccion-oficial-ficfusa-2026/",
+    "tarjeta": "https://ficfusa.com/wp-content/uploads/2026/10/seleccion-oficial-ficfusa-cayenas-libertarias.webp",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "titulo": "La gallina saraviada",
+   "director": "Ingrid Paola Bonilla Rodríguez",
+   "anio": 2025,
+   "pais": "Colombia",
+   "duracion_min": 11,
+   "genero": "Drama rural",
+   "tipo": "corto",
+   "seccion": "Un Relato Hecho Región",
+   "_src": {
+    "url": "https://ficfusa.com/seleccion-oficial-ficfusa-2026/",
+    "tarjeta": "https://ficfusa.com/wp-content/uploads/2026/10/seleccion-oficial-ficfusa-la-gallina-saraviada.webp",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "titulo": "Relatos del camino",
+   "director": "Daniel Prieto",
+   "anio": 2025,
+   "pais": "Colombia",
+   "duracion_min": 12,
+   "genero": "Animación, Documental",
+   "tipo": "corto",
+   "seccion": "Un Relato Hecho Región",
+   "_src": {
+    "url": "https://ficfusa.com/seleccion-oficial-ficfusa-2026/",
+    "tarjeta": "https://ficfusa.com/wp-content/uploads/2026/10/seleccion-oficial-ficfusa-relatos-del-camino.webp",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "titulo": "Legado",
+   "director": "Zumaya Mayers y Rodrigo Cuervo",
+   "anio": 2024,
+   "pais": "Colombia, Ecuador",
+   "duracion_min": 25,
+   "genero": "Documental",
+   "tipo": "corto",
+   "seccion": "Un Relato Hecho Región",
+   "_src": {
+    "url": "https://ficfusa.com/seleccion-oficial-ficfusa-2026/",
+    "tarjeta": "https://ficfusa.com/wp-content/uploads/2026/10/seleccion-oficial-ficfusa-legado.webp",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "titulo": "Pawa",
+   "director": "Marbel Ina Vanegas Jusayu",
+   "anio": 2026,
+   "pais": "Colombia",
+   "duracion_min": 23,
+   "genero": "Ficción",
+   "tipo": "corto",
+   "seccion": "Un Relato Hecho Región",
+   "_src": {
+    "url": "https://ficfusa.com/seleccion-oficial-ficfusa-2026/",
+    "tarjeta": "https://ficfusa.com/wp-content/uploads/2026/10/seleccion-oficial-ficfusa-pawa.webp",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "titulo": "Secuencia",
+   "director": "Chiro Castellanos H",
+   "anio": 2025,
+   "pais": "Colombia",
+   "duracion_min": 16,
+   "genero": "Ficción, Drama",
+   "tipo": "corto",
+   "seccion": "Un Relato Hecho Región",
+   "_src": {
+    "url": "https://ficfusa.com/seleccion-oficial-ficfusa-2026/",
+    "tarjeta": "https://ficfusa.com/wp-content/uploads/2026/10/seleccion-oficial-ficfusa-secuencia.webp",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "titulo": "Puntos de fuga",
+   "director": "Lina Rodríguez",
+   "anio": 2025,
+   "pais": "Colombia, Canadá",
+   "duracion_min": 72,
+   "genero": "Documental",
+   "tipo": "largo",
+   "seccion": "Hechos de Mujeres",
+   "_src": {
+    "url": "https://ficfusa.com/seleccion-oficial-ficfusa-2026/",
+    "tarjeta": "https://ficfusa.com/wp-content/uploads/2026/10/seleccion-oficial-ficfusa-puntos-de-fuga.webp",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "titulo": "La",
+   "director": "Tephy Piedrahita Avellaneda",
+   "anio": 2026,
+   "pais": "Colombia, Argentina",
+   "duracion_min": 62,
+   "genero": "Animación, Documental, Experimental",
+   "tipo": "largo",
+   "seccion": "Hechos de Mujeres",
+   "_src": {
+    "url": "https://ficfusa.com/seleccion-oficial-ficfusa-2026/",
+    "tarjeta": "https://ficfusa.com/wp-content/uploads/2026/10/seleccion-oficial-ficfusa-la.webp",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "titulo": "La luz por primera vez",
+   "director": "Ibeth Rey y Frank Rodríguez Rojas",
+   "anio": 2026,
+   "pais": "Colombia, España",
+   "duracion_min": 78,
+   "genero": "Documental",
+   "tipo": "largo",
+   "seccion": "Hechos de Mujeres",
+   "_src": {
+    "url": "https://ficfusa.com/seleccion-oficial-ficfusa-2026/",
+    "tarjeta": "https://ficfusa.com/wp-content/uploads/2026/10/seleccion-oficial-ficfusa-la-luz-por-primera-vez.webp",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "titulo": "La vida es",
+   "director": "Lorena Villarreal",
+   "anio": 2025,
+   "pais": "México",
+   "duracion_min": 119,
+   "genero": "Drama, Comedia",
+   "tipo": "largo",
+   "seccion": "Hechos de Mujeres",
+   "_src": {
+    "url": "https://ficfusa.com/seleccion-oficial-ficfusa-2026/",
+    "tarjeta": "https://ficfusa.com/wp-content/uploads/2026/10/seleccion-oficial-ficfusa-la-vida-es.webp",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "titulo": "Sobre las olas",
+   "director": "Horacio Alcalá",
+   "anio": 2025,
+   "pais": "España, México",
+   "duracion_min": 98,
+   "genero": "Drama",
+   "tipo": "largo",
+   "seccion": "Hechos de Mujeres",
+   "_src": {
+    "url": "https://ficfusa.com/seleccion-oficial-ficfusa-2026/",
+    "tarjeta": "https://ficfusa.com/wp-content/uploads/2026/10/seleccion-oficial-ficfusa-pelicula-sobre-las-olas.webp",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "titulo": "Comparsa",
+   "director": "Vickie Curtis y Doug Anderson",
+   "anio": 2025,
+   "pais": "Guatemala, Estados Unidos",
+   "duracion_min": 78,
+   "genero": "Documental",
+   "tipo": "largo",
+   "seccion": "Hechos de Mujeres",
+   "_src": {
+    "url": "https://ficfusa.com/seleccion-oficial-ficfusa-2026/",
+    "tarjeta": "https://ficfusa.com/wp-content/uploads/2026/10/seleccion-oficial-ficfusa-comparsa.webp",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "titulo": "Truck mama",
+   "director": "Zippy Nyaruri",
+   "anio": 2025,
+   "pais": "Kenia, Países bajos, Arabia saudí, Sudáfrica",
+   "duracion_min": 85,
+   "genero": "Documental",
+   "tipo": "largo",
+   "seccion": "Hechos de Mujeres",
+   "_src": {
+    "url": "https://ficfusa.com/seleccion-oficial-ficfusa-2026/",
+    "tarjeta": "https://ficfusa.com/wp-content/uploads/2026/10/seleccion-oficial-ficfusa-truck-mama.webp",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "titulo": "Framing her",
+   "director": "Coco Wouters",
+   "anio": 2026,
+   "pais": "Bélgica, Suecia, Reino Unido, Noruega",
+   "duracion_min": 92,
+   "genero": "Documental",
+   "tipo": "largo",
+   "seccion": "Hechos de Mujeres",
+   "_src": {
+    "url": "https://ficfusa.com/seleccion-oficial-ficfusa-2026/",
+    "tarjeta": "https://ficfusa.com/wp-content/uploads/2026/10/seleccion-oficial-ficfusa-framing-her.webp",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "titulo": "Matininó",
+   "director": "Gabriela Díaz Arp",
+   "anio": 2026,
+   "pais": "Puerto Rico, República Dominicana",
+   "duracion_min": 89,
+   "genero": "Documental, Fantasía",
+   "tipo": "largo",
+   "seccion": "Hechos de Mujeres",
+   "_src": {
+    "url": "https://ficfusa.com/seleccion-oficial-ficfusa-2026/",
+    "tarjeta": "https://ficfusa.com/wp-content/uploads/2026/10/seleccion-oficial-ficfusa-matinino.webp",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "titulo": "La peluquería no se cierra",
+   "director": "Vanesa Valdemoros",
+   "anio": 2026,
+   "pais": "España",
+   "duracion_min": 69,
+   "genero": "Documental",
+   "tipo": "largo",
+   "seccion": "Hechos de Mujeres",
+   "_src": {
+    "url": "https://ficfusa.com/seleccion-oficial-ficfusa-2026/",
+    "tarjeta": "https://ficfusa.com/wp-content/uploads/2026/10/seleccion-oficial-ficfusa-la-peluqueria-no-se-cierra.webp",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "titulo": "Ir hacia adentro",
+   "director": "Laura Alejandra Jiménez Ruiz",
+   "anio": 2025,
+   "pais": "Colombia",
+   "duracion_min": 6,
+   "genero": "Animación, Experimental",
+   "tipo": "corto",
+   "seccion": "Un Hecho Corto",
+   "_src": {
+    "url": "https://ficfusa.com/seleccion-oficial-ficfusa-2026/",
+    "tarjeta": "https://ficfusa.com/wp-content/uploads/2026/10/seleccion-oficial-ficfusa-ir-hacia-dentro.webp",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "titulo": "Sol de niebla",
+   "director": "Maria Jose Ibarra y Florentino Vargas",
+   "anio": 2026,
+   "pais": "Colombia",
+   "duracion_min": 6,
+   "genero": "Documental, Experimental",
+   "tipo": "corto",
+   "seccion": "Un Hecho Corto",
+   "_src": {
+    "url": "https://ficfusa.com/seleccion-oficial-ficfusa-2026/",
+    "tarjeta": "https://ficfusa.com/wp-content/uploads/2026/10/seleccion-oficial-ficfusa-sol-de-niebla.webp",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "titulo": "Óyeme",
+   "director": "Joanna Cecilia Gómez",
+   "anio": 2025,
+   "pais": "Colombia",
+   "duracion_min": 5,
+   "genero": "Drama, Realismo mágico",
+   "tipo": "corto",
+   "seccion": "Un Hecho Corto",
+   "_src": {
+    "url": "https://ficfusa.com/seleccion-oficial-ficfusa-2026/",
+    "tarjeta": "https://ficfusa.com/wp-content/uploads/2026/10/seleccion-oficial-ficfusa-oyeme-pelicula.webp",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "titulo": "Victorias y Glorias - Relatos de campeonas",
+   "director": "Luber Yesid Zúñiga Ordóñez",
+   "anio": 2025,
+   "pais": "Colombia",
+   "duracion_min": 12,
+   "genero": "Documental",
+   "tipo": "corto",
+   "seccion": "Un Hecho Corto",
+   "_src": {
+    "url": "https://ficfusa.com/seleccion-oficial-ficfusa-2026/",
+    "tarjeta": "https://ficfusa.com/wp-content/uploads/2026/10/seleccion-oficial-ficfusa-victorias-y-glorias-relatos-de-campeonas.webp",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "titulo": "Que el cielo nos perdone",
+   "director": "Andrés Buitrago",
+   "anio": 2025,
+   "pais": "Colombia",
+   "duracion_min": 17,
+   "genero": "Horror, Terror",
+   "tipo": "corto",
+   "seccion": "Un Hecho Corto",
+   "_src": {
+    "url": "https://ficfusa.com/seleccion-oficial-ficfusa-2026/",
+    "tarjeta": "https://ficfusa.com/wp-content/uploads/2026/10/seleccion-oficial-ficfusa-que-el-cielo-nos-perdone.webp",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "titulo": "Animista",
+   "director": "Sebastián Giraldo",
+   "anio": 2024,
+   "pais": "Colombia",
+   "duracion_min": 9,
+   "genero": "Experimental",
+   "tipo": "corto",
+   "seccion": "Un Hecho Corto",
+   "_src": {
+    "url": "https://ficfusa.com/seleccion-oficial-ficfusa-2026/",
+    "tarjeta": "https://ficfusa.com/wp-content/uploads/2026/10/seleccion-oficial-ficfusa-animista-1.webp",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "titulo": "Domingo",
+   "director": "Day Sena",
+   "anio": 2025,
+   "pais": "Brasil",
+   "duracion_min": 21,
+   "genero": "Drama",
+   "competencia": false,
+   "tipo": "corto",
+   "seccion": "Selección Oficial",
+   "_src": {
+    "url": "https://ficfusa.com/seleccion-oficial-ficfusa-2026/",
+    "tarjeta": "https://ficfusa.com/wp-content/uploads/2026/10/ficfusa-muestra-internacional-2026-domingo.webp",
+    "date": "2026-11-04"
+   }
+  },
+  {
+   "titulo": "Un trato brillante",
+   "director": "Libertad Benavides, Alex Parra, Alicia Bullich, Luz Rodriguez, Carolina Cuellar, Consuelo Soto, María Bonillo y Beatriz Esteban",
+   "anio": 2026,
+   "pais": "España",
+   "duracion_min": 9,
+   "genero": "Fantasía, Stop motion",
+   "competencia": false,
+   "tipo": "corto",
+   "seccion": "Selección Oficial",
+   "_src": {
+    "url": "https://ficfusa.com/seleccion-oficial-ficfusa-2026/",
+    "tarjeta": "https://ficfusa.com/wp-content/uploads/2026/10/ficfusa-muestra-internacional-2026-un-trato-brillante.webp",
+    "date": "2026-11-04"
+   }
+  },
+  {
+   "titulo": "Florecerán!",
+   "director": "Claudia Ruiz",
+   "anio": 2026,
+   "pais": "Argentina",
+   "duracion_min": 2,
+   "genero": "Documental Animado",
+   "competencia": false,
+   "tipo": "corto",
+   "seccion": "Selección Oficial",
+   "_src": {
+    "url": "https://ficfusa.com/seleccion-oficial-ficfusa-2026/",
+    "tarjeta": "https://ficfusa.com/wp-content/uploads/2026/10/ficfusa-muestra-internacional-floreceran.webp",
+    "date": "2026-11-04"
+   }
+  },
+  {
+   "afiche": "assets/ficcali-2026/arbol-en-pie.jpg",
+   "titulo": "Árbol en pie",
+   "director": "Red Comunitaria Trans, Rodrigo Torrijos y Mapa López",
+   "anio": 2026,
+   "pais": "Colombia",
+   "duracion_min": 6,
+   "genero": "Bullerengue, Afrotravesti",
+   "competencia": false,
+   "tipo": "corto",
+   "seccion": "Selección Oficial",
+   "_src": {
+    "url": "https://ficfusa.com/seleccion-oficial-ficfusa-2026/",
+    "tarjeta": "https://ficfusa.com/wp-content/uploads/2026/10/ficfusa-muestra-nacional-arbol-en-pie.webp",
+    "date": "2026-11-04"
+   }
+  },
+  {
+   "titulo": "Transversal 30ff",
+   "director": "Checho Mejía",
+   "anio": 2025,
+   "pais": "Colombia",
+   "duracion_min": 6,
+   "genero": "Comedia",
+   "competencia": false,
+   "tipo": "corto",
+   "seccion": "Selección Oficial",
+   "_src": {
+    "url": "https://ficfusa.com/seleccion-oficial-ficfusa-2026/",
+    "tarjeta": "https://ficfusa.com/wp-content/uploads/2026/10/ficfusa-muestra-nacional-transversal-30ff.webp",
+    "date": "2026-11-04"
+   }
+  },
+  {
+   "titulo": "Cuando la palabra se hace búsqueda: El eco de sus voces",
+   "director": "Frank Benítez Peña",
+   "anio": 2026,
+   "pais": "Colombia",
+   "duracion_min": 61,
+   "genero": "Documental",
+   "competencia": false,
+   "tipo": "largo",
+   "seccion": "Selección Oficial",
+   "_src": {
+    "url": "https://ficfusa.com/seleccion-oficial-ficfusa-2026/",
+    "tarjeta": "https://ficfusa.com/wp-content/uploads/2026/10/ficfusa-muestra-nacional-cuando-la-palabra-se-hace-busqueda.webp",
+    "date": "2026-11-04"
+   }
+  },
+  {
+   "titulo": "El espejo de la vida",
+   "director": "Simón Sánchez Plazas",
+   "anio": 2025,
+   "pais": "Colombia",
+   "duracion_min": 10,
+   "genero": "Animación, Drama",
+   "competencia": false,
+   "tipo": "corto",
+   "seccion": "Selección Oficial",
+   "_src": {
+    "url": "https://ficfusa.com/seleccion-oficial-ficfusa-2026/",
+    "tarjeta": "https://ficfusa.com/wp-content/uploads/2026/10/ficfusa-muestra-nacional-el-espejo-de-la-vida.webp",
+    "date": "2026-11-04"
+   }
+  },
+  {
+   "afiche": "assets/filcmar-2026/hdlt.jpg",
+   "titulo": "Hdlt",
+   "director": "Artefactum Suba",
+   "anio": 2025,
+   "pais": "Colombia",
+   "duracion_min": 19,
+   "genero": "Falso documental, Comedia",
+   "competencia": false,
+   "tipo": "corto",
+   "seccion": "Selección Oficial",
+   "_src": {
+    "url": "https://ficfusa.com/seleccion-oficial-ficfusa-2026/",
+    "tarjeta": "https://ficfusa.com/wp-content/uploads/2026/10/ficfusa-muestra-nacional-hdlt.webp",
+    "date": "2026-11-04"
+   }
+  },
+  {
+   "titulo": "La libertad es mi causa",
+   "director": "Claudia Bermúdez Vélez",
+   "anio": 2024,
+   "pais": "Colombia",
+   "duracion_min": 101,
+   "genero": "Documental",
+   "competencia": false,
+   "tipo": "largo",
+   "seccion": "Selección Oficial",
+   "_src": {
+    "url": "https://ficfusa.com/seleccion-oficial-ficfusa-2026/",
+    "tarjeta": "https://ficfusa.com/wp-content/uploads/2026/10/ficfusa-muestra-nacional-la-libertad-es-mi-causa.webp",
+    "date": "2026-11-04"
+   }
+  },
+  {
+   "titulo": "Salud Mutante",
+   "director": "Daniel Rodríguez Gaitán",
+   "anio": 2025,
+   "pais": "Colombia",
+   "duracion_min": 19,
+   "genero": "Ciencia ficción, Distopía",
+   "competencia": false,
+   "tipo": "corto",
+   "seccion": "Selección Oficial",
+   "_src": {
+    "url": "https://ficfusa.com/seleccion-oficial-ficfusa-2026/",
+    "tarjeta": "https://ficfusa.com/wp-content/uploads/2026/10/muestra-nacional-ficfusa-salud-mutante.webp",
+    "date": "2026-11-04"
+   }
+  },
+  {
+   "titulo": "Sinfonía Incompleta de Oficios del Fonce",
+   "director": "Nelson Omar Silva Sánchez",
+   "anio": 2024,
+   "pais": "Colombia",
+   "duracion_min": 16,
+   "genero": "Sinfonía urbana",
+   "competencia": false,
+   "tipo": "corto",
+   "seccion": "Selección Oficial",
+   "_src": {
+    "url": "https://ficfusa.com/seleccion-oficial-ficfusa-2026/",
+    "tarjeta": "https://ficfusa.com/wp-content/uploads/2026/10/ficfusa-muestra-nacional-sinfonia-de-oficios.webp",
+    "date": "2026-11-04"
    }
   }
  ]
