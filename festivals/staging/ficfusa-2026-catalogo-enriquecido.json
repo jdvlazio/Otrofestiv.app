@@ -2176,6 +2176,17 @@
   },
   {
    "titulo": "Árbol en pie",
+   "tmdb_id": 1709833,
+   "titulo_original": "Standing Tree",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "“Ceroxylon quindiuense,” the Quindío wax palm, is Colombia’s national tree. It embodies a perfect paradox for a country steeped in machismo, misogyny, and transphobia, as it is a plant with the ability to change its sex. It is a trans palm and the inspiration for Magdalena Morales, an Afro-Colombian trans leader, to join the Trans Community Network and plant a seed of rebellious light on the horizon of traditional Colombian Caribbean music. Her song of redemption rises above desolation and celebrates social struggles, from Palestine, the Congo, and Sudan to the streets of Bogotá’s Santa Fe neighborhood, where her trans sisters stand firm.",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 6,
+   "pais_tmdb": "",
+   "lbSlug": "standing-tree",
+   "_verificado": "declarada a mano: está en TMDB como «Standing Tree»: 6 min, 2026, con Rodrigo Torrijos, Mapa López y Magdalena Morales; se completó el 4 nov con directores, afiche y título y sinopsis en español",
    "_ya_publicada": [
     {
      "festival": "ficcali-2026",
@@ -2290,6 +2301,17 @@
   },
   {
    "titulo": "Hdlt",
+   "tmdb_id": 1796013,
+   "titulo_original": "HDLT",
+   "poster_path": "/j4A2q3aODb9T1QGbJphYrYB35ur.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Mixed media Found footage film made by a Colombian Collective",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 18,
+   "pais_tmdb": "",
+   "lbSlug": "hdlt",
+   "_verificado": "declarada a mano: misma obra: la ficha TMDB trae el afiche de HDLT – Hijo de la Tierra del Colectivo Artefactum Suba; se completó el 4 nov con director, país, idioma y sinopsis en español",
    "_ya_publicada": [
     {
      "festival": "fantasmagoria-2026",
@@ -2334,8 +2356,6 @@
      "sinopsis": "Tras el ataque que sufrió, Luz trata de entender lo que le pasó: el Hijo de la Tierra llegó a destruir la humanidad robándole sus recuerdos más tristes y más felices."
     }
    ],
-   "poster": "/assets/filcmar-2026/hdlt.jpg",
-   "_afiche_de": "ya publicada en fantasmagoria-2026",
    "sinopsis": "Después del ataque que sufrió, Luz trata de entender lo que le sucedió: el Hijo de la Tierra vino a destruir a la humanidad robando sus recuerdos más tristes y felices. Pero desembarcó en Suba, el distrito más lejano de Bogotá, donde una extraña adicción cambiará el curso de la historia.",
    "_sinopsis_de": "ya publicada en fantasmagoria-2026"
   },
@@ -4451,6 +4471,35 @@
    "_verificado": "el catálogo ya la tiene (w_R4NCVVXT6PQB, qaff-2026)",
    "work_id": "w_R4NCVVXT6PQB"
   },
+  "Árbol en pie": {
+   "tmdb_id": 1709833,
+   "titulo_original": "Standing Tree",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "“Ceroxylon quindiuense,” the Quindío wax palm, is Colombia’s national tree. It embodies a perfect paradox for a country steeped in machismo, misogyny, and transphobia, as it is a plant with the ability to change its sex. It is a trans palm and the inspiration for Magdalena Morales, an Afro-Colombian trans leader, to join the Trans Community Network and plant a seed of rebellious light on the horizon of traditional Colombian Caribbean music. Her song of redemption rises above desolation and celebrates social struggles, from Palestine, the Congo, and Sudan to the streets of Bogotá’s Santa Fe neighborhood, where her trans sisters stand firm.",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 6,
+   "pais_tmdb": "",
+   "lbSlug": "standing-tree",
+   "_verificado": "declarada a mano: está en TMDB como «Standing Tree»: 6 min, 2026, con Rodrigo Torrijos, Mapa López y Magdalena Morales; se completó el 4 nov con directores, afiche y título y sinopsis en español",
+   "_ya_publicada": [
+    {
+     "festival": "ficcali-2026",
+     "titulo": "Árbol en pie",
+     "poster": "/assets/ficcali-2026/arbol-en-pie.jpg",
+     "posterSource": "oficial",
+     "country": "Colombia",
+     "year": 2026,
+     "duration": "6 min",
+     "sinopsis": "La Ceroxylon quindiuense, palma de cera del Quindío, es el árbol nacional de Colombia. Encarna una paradoja perfecta para un país marcado por el machismo, la misoginia y la transfobia, pues es una planta capaz de cambiar de sexo. Es una «palma trans» y la inspiración para que Magdalena Morales, líder trans afrocolombiana, se una a la Red Comunitaria Trans y siembre una semilla de luz rebelde en el horizonte de la música tradicional del Caribe colombiano."
+    }
+   ],
+   "poster": "/assets/ficcali-2026/arbol-en-pie.jpg",
+   "_afiche_de": "ya publicada en ficcali-2026",
+   "sinopsis": "La Ceroxylon quindiuense, palma de cera del Quindío, es el árbol nacional de Colombia. Encarna una paradoja perfecta para un país marcado por el machismo, la misoginia y la transfobia, pues es una planta capaz de cambiar de sexo. Es una «palma trans» y la inspiración para que Magdalena Morales, líder trans afrocolombiana, se una a la Red Comunitaria Trans y siembre una semilla de luz rebelde en el horizonte de la música tradicional del Caribe colombiano.",
+   "_sinopsis_de": "ya publicada en ficcali-2026"
+  },
   "Transversal 30ff": {
    "tmdb_id": 1525925,
    "titulo_original": "Transversal 30ff",
@@ -4543,6 +4592,65 @@
     }
    ]
   },
+  "Hdlt": {
+   "tmdb_id": 1796013,
+   "titulo_original": "HDLT",
+   "poster_path": "/j4A2q3aODb9T1QGbJphYrYB35ur.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Mixed media Found footage film made by a Colombian Collective",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 18,
+   "pais_tmdb": "",
+   "lbSlug": "hdlt",
+   "_verificado": "declarada a mano: misma obra: la ficha TMDB trae el afiche de HDLT – Hijo de la Tierra del Colectivo Artefactum Suba; se completó el 4 nov con director, país, idioma y sinopsis en español",
+   "_ya_publicada": [
+    {
+     "festival": "fantasmagoria-2026",
+     "titulo": "HDLT",
+     "poster": "/assets/filcmar-2026/hdlt.jpg",
+     "posterSource": "oficial",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "18 min",
+     "genre": "Drama",
+     "sinopsis": "Después del ataque que sufrió, Luz trata de entender lo que le sucedió: el Hijo de la Tierra vino a destruir a la humanidad robando sus recuerdos más tristes y felices. Pero desembarcó en Suba, el distrito más lejano de Bogotá, donde una extraña adicción cambiará el curso de la historia."
+    },
+    {
+     "festival": "filcmar-2026",
+     "titulo": "HDLT",
+     "poster": "/assets/filcmar-2026/hdlt.jpg",
+     "posterSource": "oficial",
+     "country": "Colombia",
+     "year": 2026,
+     "duration": "18 min",
+     "genre": "Drama",
+     "sinopsis": "Después del ataque que sufrió, Luz trata de entender lo que le sucedió: el Hijo de la Tierra vino a destruir a la humanidad robando sus recuerdos más tristes y felices. Pero desembarcó en Suba, el distrito más lejano de Bogotá, donde una extraña adicción cambiará el curso de la historia."
+    },
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "HDLT",
+     "poster": "/assets/siembrafest/hdlt.jpg",
+     "posterSource": "oficial",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "18 min",
+     "genre": "Drama"
+    },
+    {
+     "festival": "popayan-2026",
+     "titulo": "HDLT Hijo de la Tierra",
+     "poster": "/assets/filcmar-2026/hdlt.jpg",
+     "posterSource": "oficial",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "18 min",
+     "sinopsis": "Tras el ataque que sufrió, Luz trata de entender lo que le pasó: el Hijo de la Tierra llegó a destruir la humanidad robándole sus recuerdos más tristes y más felices."
+    }
+   ],
+   "sinopsis": "Después del ataque que sufrió, Luz trata de entender lo que le sucedió: el Hijo de la Tierra vino a destruir a la humanidad robando sus recuerdos más tristes y felices. Pero desembarcó en Suba, el distrito más lejano de Bogotá, donde una extraña adicción cambiará el curso de la historia.",
+   "_sinopsis_de": "ya publicada en fantasmagoria-2026"
+  },
   "La libertad es mi causa": {
    "tmdb_id": 1499403,
    "titulo_original": "La libertad es mi causa",
@@ -4575,14 +4683,12 @@
  "sin_ficha": [
   "Bajo el último aliento",
   "Florecerán!",
-  "Hdlt",
   "Ir hacia adentro",
   "La",
   "Sinfonía Incompleta de Oficios del Fonce",
   "Sonidos de la resistencia",
   "Un trato brillante",
   "Victorias y Glorias - Relatos de campeonas",
-  "Árbol en pie",
   "Óyeme"
  ]
 }
