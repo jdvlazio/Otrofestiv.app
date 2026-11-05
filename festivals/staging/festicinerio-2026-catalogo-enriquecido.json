@@ -95,6 +95,13 @@
    "_sinopsis_de": "ya publicada en cinemancia-2025"
   },
   {
+   "titulo": "Simplicity of Chaos",
+   "sinopsis": "Explora la vida y obra del artista visual abstracto colombo-canadiense Carlos Delgado, desde su herencia indígena, el ritual y el Carnaval del Diablo de Riosucio.",
+   "anio": 2025,
+   "pais": "Colombia",
+   "_verificado": "declarada a mano: sinopsis y datos de la investigación del 4 nov"
+  },
+  {
    "titulo": "Diòba",
    "tmdb_id": 1094191,
    "titulo_original": "Diòba",
@@ -106,7 +113,8 @@
    "duracion_tmdb": 83,
    "pais_tmdb": "Colombia",
    "lbSlug": "dioba",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "sinopsis": "Diòba es una mujer indígena que ha perdido sus raíces. Tiene 63 años, vive sola en una humilde vivienda campesina, la cual está ubicada dentro de un bosque. Se provee, en parte, de lo que encuentra en los recorridos que hace diariamente por caminos boscosos, de donde extrae semillas y plantas. Llega el día en que tendrá que batallar con sus delirios, revivirlos, expulsarlos. Esto podrá ayudarla, o no, a reencontrarse con ella misma, con su esencia, con sus raíces.",
+   "_verificado": "declarada a mano: sinopsis y datos de la investigación del 4 nov"
   },
   {
    "titulo": "Paristopia",
@@ -148,7 +156,8 @@
    "duracion_tmdb": 0,
    "pais_tmdb": "Colombia",
    "lbSlug": "en-bajo-de-4-puntas",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "sinopsis": "Un documental que retrata la trayectoria de Luis Guillermo “Memo”, músico bogotano e integrante de agrupaciones emblemáticas como Los Rolling Ruanas y La Pambelé.",
+   "_verificado": "declarada a mano: sinopsis y datos de la investigación del 4 nov"
   },
   {
    "titulo": "Post-Familia",
@@ -163,10 +172,39 @@
    "pais_tmdb": "Colombia",
    "title_en": "Post - Family",
    "lbSlug": "post-family",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "sinopsis": "Abel acaba de enterrar a su padre. En busca de las raíces que nunca tuvo y tratando de entender las razones de su suicidio, viaja al pueblo de sus parientes paternos, donde deberá enfrentar las historias inquietantes y las heridas abiertas de la familia que nunca conoció.",
+   "_verificado": "declarada a mano: sinopsis y datos de la investigación del 4 nov"
+  },
+  {
+   "titulo": "Independencia",
+   "tmdb_id": 1595081,
+   "titulo_original": "La independencia",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "Cecilia, a selfless 52-year-old woman, decides to break with her life of sacrifices after years of enduring her son s irresponsibility and her family s ingratitude, finally seeking her independence.",
+   "genero": "Drama",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 19,
+   "pais_tmdb": "Colombia",
+   "title_en": "Independence",
+   "lbSlug": "independence-2025",
+   "poster": "/assets/ficdeh/la-independencia.jpg",
+   "sinopsis": "Cecilia, una mujer abnegada de 52 años, decide romper con su vida de sacrificios tras años de soportar la irresponsabilidad de su hijo y la ingratitud de su familia, buscando finalmente su independencia.",
+   "_verificado": "declarada a mano: en TMDB como «La independencia», de John Edicson Agudelo Suárez; la lámina escribe Jhon Agudelo; afiche oficial con el título"
   },
   {
    "titulo": "HDLT",
+   "tmdb_id": 1796013,
+   "titulo_original": "HDLT",
+   "poster_path": "/j4A2q3aODb9T1QGbJphYrYB35ur.jpg",
+   "synopsis_es": "Después del ataque que sufrió, Luz trata de entender lo que le sucedió: el Hijo de la Tierra vino a destruir a la humanidad robando sus recuerdos más tristes y felices. Pero desembarcó en Suba, el distrito más lejano de Bogotá, donde una extraña adicción cambiará el curso de la historia.",
+   "synopsis_en": "Mixed media Found footage film made by a Colombian Collective",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 18,
+   "pais_tmdb": "",
+   "lbSlug": "hdlt",
+   "_verificado": "declarada a mano: misma obra publicada en FILCMAR y Fantasmagoría, Colectivo Artefactum Suba; alta completada el 4 nov",
    "_ya_publicada": [
     {
      "festival": "fantasmagoria-2026",
@@ -210,11 +248,7 @@
      "duration": "18 min",
      "sinopsis": "Tras el ataque que sufrió, Luz trata de entender lo que le pasó: el Hijo de la Tierra llegó a destruir la humanidad robándole sus recuerdos más tristes y más felices."
     }
-   ],
-   "poster": "/assets/filcmar-2026/hdlt.jpg",
-   "_afiche_de": "ya publicada en fantasmagoria-2026",
-   "sinopsis": "Después del ataque que sufrió, Luz trata de entender lo que le sucedió: el Hijo de la Tierra vino a destruir a la humanidad robando sus recuerdos más tristes y felices. Pero desembarcó en Suba, el distrito más lejano de Bogotá, donde una extraña adicción cambiará el curso de la historia.",
-   "_sinopsis_de": "ya publicada en fantasmagoria-2026"
+   ]
   },
   {
    "titulo": "No te Despiertes",
@@ -228,7 +262,8 @@
    "duracion_tmdb": 0,
    "pais_tmdb": "Colombia",
    "lbSlug": "no-te-despiertes",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "sinopsis": "Sara está dibujando en casa. Cuando su padre llega del trabajo, empiezan a jugar, sin saber que su tranquilo ambiente familiar se verá inmerso en una situación en la que un juego y la inocencia de Sara serán de vital importancia.",
+   "_verificado": "declarada a mano: sinopsis y datos de la investigación del 4 nov",
    "_ya_publicada": [
     {
      "festival": "leviza-2026",
@@ -288,12 +323,22 @@
   },
   {
    "titulo": "Carlina",
-   "_fuente": "cinecorto",
-   "_cinecorto": "https://cinecorto.co/carlina/",
-   "_verificado": "cinecorto.co, dirección: Angela Leyton",
+   "tmdb_id": 1817628,
+   "titulo_original": "Carlina",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "Carlina, a girl with a boundless imagination, takes refuge in a magical world by the river to cope with the irreversible illness of one of her mothers. With her friend Millita she finds moments of freedom and fantasy, while at home her mothers face their pain in silence. Though sadness fills the house, Carlina clings to her imaginary universe, refusing to let fantasy fade in the face of a reality she is only beginning to understand.",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 13,
+   "pais_tmdb": "",
+   "lbSlug": "carlina",
+   "poster": "/assets/festicinerio-2026/carlina.jpg",
    "anio": 2025,
    "duracion_min": 13,
-   "sinopsis": "Carlina; una niña de imaginación desbordante; se refugia en un mundo mágico junto al río para sobrellevar la enfermedad irreversible de una de sus madres. Con su amiga Millita descubre instantes de libertad y fantasía; mientras en casa sus madres enfrentan en silencio el dolor. Aunque la tristeza habita el hogar; Carlina se aferra a su universo imaginario; resistiéndose a dejar que la fantasía se desvanezca frente a una realidad que apenas comienza a comprender."
+   "pais": "Colombia",
+   "sinopsis": "Carlina, una niña de imaginación desbordante, se refugia en un mundo mágico junto al río para sobrellevar la enfermedad irreversible de una de sus madres. Con su amiga Millita descubre instantes de libertad y fantasía, mientras en casa sus madres enfrentan en silencio el dolor. Aunque la tristeza habita el hogar, Carlina se aferra a su universo imaginario, resistiéndose a dejar que la fantasía se desvanezca frente a una realidad que apenas comienza a comprender.",
+   "_verificado": "declarada a mano: alta del 4 nov; afiche de FanCineQueer; año y duración de cinecorto y FICCali (FanCineQueer dice 2024, 14 min)"
   },
   {
    "titulo": "Tentado de Difunto",
@@ -388,7 +433,8 @@
    "duracion_tmdb": 10,
    "pais_tmdb": "Colombia",
    "lbSlug": "ornamento",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "sinopsis": "Las fachadas tradicionales de Cali exhiben una arquitectura autoconstruida nacida del deseo, reconocible por sus escaleras de caracol, cisnes y balaustres. La obra entrelaza la historia del Edificio Otero con el trabajo de los talleres de la ciudad, donde el concreto moldeado democratizó la decoración. Un ensayo visual sobre el ornamento como declaración política: un lienzo visible de la subjetividad y el imaginario popular.",
+   "_verificado": "declarada a mano: sinopsis y datos de la investigación del 4 nov"
   },
   {
    "titulo": "Chaika",
@@ -563,6 +609,24 @@
    ]
   },
   {
+   "titulo": "Anoche a la Media Noche",
+   "tmdb_id": 1758042,
+   "titulo_original": "Anoche a media noche",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "“Last Night at Midnight” is an experimental short film based on an octosyllabic poem written by Gualberto Gutiérrez in 1819, at a time when terror reigned in the Viceroyalty of New Granada. The poem recounts, with irony and cruelty, the night when Viceroy Juan Sámano fled from Santafé to Cartagena following the defeat of the royalist troops at the Battle of Boyacá.  Far from a conventional historical reconstruction, the film fragments the poem and transforms it into a delirious visual machine: jungles, rituals, prayers, grotesque bodies, and ominous omens accompany the flight of a power that no longer rules. Characters emerging from sculpture, dance, and theater embody a sinister dramaturgy in which official history is dismantled and laid bare.",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 15,
+   "pais_tmdb": "Colombia",
+   "title_en": "Last Night at Midnight",
+   "lbSlug": "last-night-at-midnight",
+   "poster": "/assets/cineautopsia/anoche-a-media-noche.jpg",
+   "anio": 2026,
+   "sinopsis": "Cortometraje experimental basado en un poema octosílabo escrito por Gualberto Gutiérrez en 1819, que relata con ironía y crueldad la noche en que el virrey Juan Sámano huyó de Santafé hacia Cartagena tras la derrota realista en la Batalla de Boyacá.",
+   "_verificado": "declarada a mano: en TMDB como «Anoche a media noche», misma dirección; el afiche oficial dice «Anoche a la Media Noche»"
+  },
+  {
    "titulo": "Todo lo que Pasará Mañana",
    "tmdb_id": 1812504,
    "titulo_original": "Todo lo que pasará mañana",
@@ -591,6 +655,13 @@
    ]
   },
   {
+   "titulo": "Despojo",
+   "sinopsis": "Despojo es una experiencia sensorial que expone cómo la violencia se repite sobre los mismos territorios, transformando cuerpos en materia y memoria en silencio. Lo que emerge no es solo un hombre, sino la huella de una humanidad arrancada una y otra vez de su propia tierra.",
+   "anio": 2026,
+   "pais": "Colombia",
+   "_verificado": "declarada a mano: sinopsis y datos de la investigación del 4 nov"
+  },
+  {
    "titulo": "Cathi e os Elefantes",
    "tmdb_id": 1777548,
    "titulo_original": "Cathi e Os Elefantes",
@@ -602,7 +673,8 @@
    "duracion_tmdb": 0,
    "pais_tmdb": "",
    "lbSlug": "cathi-e-os-elefantes",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "sinopsis": "Cathi é uma pré-adolescente que ama elefantes, mas não gosta de carnaval. Até que algo muito especial cruza o seu caminho e transforma seu coração.",
+   "_verificado": "declarada a mano: sinopsis y datos de la investigación del 4 nov"
   },
   {
    "titulo": "Debajo de esas Galeras",
@@ -616,7 +688,8 @@
    "duracion_tmdb": 17,
    "pais_tmdb": "",
    "lbSlug": "debajo-de-esas-galeras",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "sinopsis": "La Tunga Tunga es una murga comprometida con un proceso creativo, colaborativo y comunitario, que se organiza para participar en el Carnaval y dar voz a reclamos colectivos. En 2025, los gobiernos nacional y local cuestionan las prácticas culturales y desfinancian la cultura y, en particular, los corsos barriales. La Tunga Tunga resiste con humor y baile, y afirma la celebración como derecho y el espacio público como territorio de lucha.",
+   "_verificado": "declarada a mano: sinopsis y datos de la investigación del 4 nov"
   },
   {
    "titulo": "Quarta-Feira",
@@ -631,7 +704,23 @@
    "pais_tmdb": "Germany",
    "title_en": "Ash Wednesday",
    "lbSlug": "ash-wednesday-2023",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "sinopsis": "En una favela de Río de Janeiro, Demétria espera a su hija el último día de Carnaval. Pero una brutal redada policial sella el destino de las dos mujeres. Con ritmos brasileños, este musical en corto aborda el racismo y otros conflictos sociales.",
+   "_verificado": "declarada a mano: sinopsis y datos de la investigación del 4 nov"
+  },
+  {
+   "titulo": "La Dama de las Mil Máscaras",
+   "tmdb_id": 1740164,
+   "titulo_original": "Dama de las Mil Máscaras",
+   "poster_path": "/nRiAXYrOnnEIW1RGlomkc75yCTt.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Damaris Gonzales is a pioneer who defies tradition. In the town of Barva, Heredia—the birthplace of Costa Rican masquerades—she broke the mold by becoming the first female traditional mask maker, challenging a historically male-dominated profession.  This documentary pays tribute to her contribution and career, showing how her workshop is much more than a workspace: it is a place where clay and spirit meet, where tradition comes to life anew through her hands.",
+   "genero": "Documental",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 62,
+   "pais_tmdb": "Costa Rica",
+   "lbSlug": "dama-de-las-mil-mascaras",
+   "sinopsis": "Damaris González desafía la tradición: en Barva de Heredia, cuna de la mascarada costarricense, se convirtió en la primera mujer mascarera en un oficio históricamente masculino. El documental rinde homenaje a su trayectoria y muestra su taller como el lugar donde el barro y el espíritu se encuentran.",
+   "_verificado": "declarada a mano: en TMDB y en su afiche sin el artículo, Wainer Méndez, Costa Rica, 62 min"
   },
   {
    "titulo": "La Gallina Saraviada",
@@ -804,7 +893,42 @@
    "pais_tmdb": "",
    "title_en": "I dreamed I was playing the drums",
    "lbSlug": "i-dreamed-i-was-playing-the-drums",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "sinopsis": "Antonio, terco en sus sueños, cuenta sus sueños entre calles blancas y negras y recuerdos en color, mientras descubre por qué los soñadores prefieren dormir antes que estar despiertos.",
+   "_verificado": "declarada a mano: sinopsis y datos de la investigación del 4 nov"
+  },
+  {
+   "titulo": "Perros Guardianes",
+   "tmdb_id": 1817629,
+   "titulo_original": "Perros Guardianes",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "Two young journalists, Kevin and Sara, investigate a Chinese businessman who is harming artisanal fishermen. Two weeks before the elections they witness his meeting with Méndez, the candidate leading the polls, while their editor asks them to cover the rallies.",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "",
+   "lbSlug": "perros-guardianes",
+   "poster": "/assets/festicinerio-2026/perros-guardianes.jpg",
+   "anio": 2026,
+   "pais": "Perú",
+   "sinopsis": "Dos jóvenes periodistas, Kevin y Sara, investigan a un empresario chino que perjudica a pescadores artesanales. A dos semanas de las elecciones presencian su reunión con Méndez, el candidato que lidera las encuestas, mientras su editor les pide cubrir los mítines.",
+   "_verificado": "declarada a mano: alta del 4 nov; afiche con título y dirección impresos; sinopsis redactada de la reseña de La República"
+  },
+  {
+   "titulo": "Baile del Caos",
+   "tmdb_id": 1791655,
+   "titulo_original": "La Danza del Caos",
+   "poster_path": "/8dfaUuA7VQE8CAt3VV4pq0O0ohu.jpg",
+   "synopsis_es": "La Danza del Caos es un cortometraje de animación experimental que traduce la teoría de los Cinco Ritmos de Gabrielle Roth en una experiencia audiovisual abstracta. Mediante el movimiento y el diseño sonoro, la animación sustituye al cuerpo físico para llevar al espectador en un viaje sensorial que recorre diferentes ritmos hasta alcanzar un estado de caos contenido. El cortometraje sumerge al espectador en una experiencia sensorial que lo invita a sentir y dejarse llevar por el ritmo como guía para la interpretación.",
+   "synopsis_en": "The Dance of Chaos is an experimental animated short film that translates Gabrielle Roth's Five Rhythms theory into an abstract audiovisual experience. Through movement and sound design, the animation replaces the physical body to take viewers on a sensory journey that traverses different rhythms until reaching a state of contained chaos. The short film immerses the viewer in a sensory experience that invites them to feel and let themselves be carried away by the rhythm as a guide to interpretation.",
+   "genero": "Animación",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 6,
+   "pais_tmdb": "",
+   "title_en": "The Dance of Chaos",
+   "lbSlug": "the-dance-of-chaos",
+   "sinopsis": "La Danza del Caos es un cortometraje de animación experimental que traduce la teoría de los Cinco Ritmos de Gabrielle Roth en una experiencia audiovisual abstracta.",
+   "_verificado": "declarada a mano: probablemente «La danza del caos», de Valeria Preciado Romaña, animación 2025: misma dirección y género, ninguna fuente usa «Baile del Caos». A confirmar con la programación"
   },
   {
    "titulo": "El Espejo de la Vida",
@@ -896,6 +1020,13 @@
    ]
   },
   {
+   "titulo": "Suelo",
+   "sinopsis": "Año 7.000 d.C. Dos seres de otra especie llegan a la Tierra en respuesta a una señal de socorro lanzada mil años atrás. Lo que encuentran es polvo, ruinas y un planeta que se extinguió a sí mismo. Cuando intentan leer la memoria del suelo, la Tierra responde: se traga a uno de ellos.",
+   "anio": 2026,
+   "pais": "Colombia",
+   "_verificado": "declarada a mano: sinopsis y datos de la investigación del 4 nov"
+  },
+  {
    "titulo": "Mucho Gusto",
    "_ya_publicada": [
     {
@@ -955,7 +1086,17 @@
    "duracion_tmdb": 0,
    "pais_tmdb": "",
    "lbSlug": "nibbling-of-the-night",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "poster": "/assets/festicinerio-2026/nibbling-of-the-night.jpg",
+   "sinopsis": "Una noche, la visita de dos vampiresas a la habitación de una pareja infeliz de mediana edad cambia el destino de una esposa deprimida y adicta a la gula nocturna. Comedia negra en stop motion con títeres, con diálogos en verso, sobre la alianza entre tres mujeres.",
+   "_verificado": "declarada a mano: afiche con título y créditos impresos; ficha TMDB 1306181 sin afiche"
+  },
+  {
+   "titulo": "The Magical Colors",
+   "sinopsis": "Íris, una camaleona sin color, deja su bosque en blanco y negro y emprende un viaje mágico en busca de sus verdaderos colores; en el camino hace amigos inesperados y aprende a valorar lo que la hace diferente.",
+   "anio": 2025,
+   "duracion_min": 9,
+   "pais": "Brasil",
+   "_verificado": "declarada a mano: sinopsis y datos de la investigación del 4 nov"
   }
  ],
  "verificadas": {
@@ -1047,6 +1188,12 @@
    "sinopsis": "Chena, 26 años, recorre cada año cientos de kilómetros para trabajar como jornalera en los cultivos colombianos. Lleva ocho años sin ahorrar ni alcanzar independencia. Su cuerpo y su voluntad son todo lo que tiene.",
    "_sinopsis_de": "ya publicada en cinemancia-2025"
   },
+  "Simplicity of Chaos": {
+   "sinopsis": "Explora la vida y obra del artista visual abstracto colombo-canadiense Carlos Delgado, desde su herencia indígena, el ritual y el Carnaval del Diablo de Riosucio.",
+   "anio": 2025,
+   "pais": "Colombia",
+   "_verificado": "declarada a mano: sinopsis y datos de la investigación del 4 nov"
+  },
   "Diòba": {
    "tmdb_id": 1094191,
    "titulo_original": "Diòba",
@@ -1058,7 +1205,8 @@
    "duracion_tmdb": 83,
    "pais_tmdb": "Colombia",
    "lbSlug": "dioba",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "sinopsis": "Diòba es una mujer indígena que ha perdido sus raíces. Tiene 63 años, vive sola en una humilde vivienda campesina, la cual está ubicada dentro de un bosque. Se provee, en parte, de lo que encuentra en los recorridos que hace diariamente por caminos boscosos, de donde extrae semillas y plantas. Llega el día en que tendrá que batallar con sus delirios, revivirlos, expulsarlos. Esto podrá ayudarla, o no, a reencontrarse con ella misma, con su esencia, con sus raíces.",
+   "_verificado": "declarada a mano: sinopsis y datos de la investigación del 4 nov"
   },
   "Paristopia": {
    "tmdb_id": 1561131,
@@ -1098,7 +1246,8 @@
    "duracion_tmdb": 0,
    "pais_tmdb": "Colombia",
    "lbSlug": "en-bajo-de-4-puntas",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "sinopsis": "Un documental que retrata la trayectoria de Luis Guillermo “Memo”, músico bogotano e integrante de agrupaciones emblemáticas como Los Rolling Ruanas y La Pambelé.",
+   "_verificado": "declarada a mano: sinopsis y datos de la investigación del 4 nov"
   },
   "Post-Familia": {
    "tmdb_id": 1592617,
@@ -1112,7 +1261,81 @@
    "pais_tmdb": "Colombia",
    "title_en": "Post - Family",
    "lbSlug": "post-family",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "sinopsis": "Abel acaba de enterrar a su padre. En busca de las raíces que nunca tuvo y tratando de entender las razones de su suicidio, viaja al pueblo de sus parientes paternos, donde deberá enfrentar las historias inquietantes y las heridas abiertas de la familia que nunca conoció.",
+   "_verificado": "declarada a mano: sinopsis y datos de la investigación del 4 nov"
+  },
+  "Independencia": {
+   "tmdb_id": 1595081,
+   "titulo_original": "La independencia",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "Cecilia, a selfless 52-year-old woman, decides to break with her life of sacrifices after years of enduring her son s irresponsibility and her family s ingratitude, finally seeking her independence.",
+   "genero": "Drama",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 19,
+   "pais_tmdb": "Colombia",
+   "title_en": "Independence",
+   "lbSlug": "independence-2025",
+   "poster": "/assets/ficdeh/la-independencia.jpg",
+   "sinopsis": "Cecilia, una mujer abnegada de 52 años, decide romper con su vida de sacrificios tras años de soportar la irresponsabilidad de su hijo y la ingratitud de su familia, buscando finalmente su independencia.",
+   "_verificado": "declarada a mano: en TMDB como «La independencia», de John Edicson Agudelo Suárez; la lámina escribe Jhon Agudelo; afiche oficial con el título"
+  },
+  "HDLT": {
+   "tmdb_id": 1796013,
+   "titulo_original": "HDLT",
+   "poster_path": "/j4A2q3aODb9T1QGbJphYrYB35ur.jpg",
+   "synopsis_es": "Después del ataque que sufrió, Luz trata de entender lo que le sucedió: el Hijo de la Tierra vino a destruir a la humanidad robando sus recuerdos más tristes y felices. Pero desembarcó en Suba, el distrito más lejano de Bogotá, donde una extraña adicción cambiará el curso de la historia.",
+   "synopsis_en": "Mixed media Found footage film made by a Colombian Collective",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 18,
+   "pais_tmdb": "",
+   "lbSlug": "hdlt",
+   "_verificado": "declarada a mano: misma obra publicada en FILCMAR y Fantasmagoría, Colectivo Artefactum Suba; alta completada el 4 nov",
+   "_ya_publicada": [
+    {
+     "festival": "fantasmagoria-2026",
+     "titulo": "HDLT",
+     "poster": "/assets/filcmar-2026/hdlt.jpg",
+     "posterSource": "oficial",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "18 min",
+     "genre": "Drama",
+     "sinopsis": "Después del ataque que sufrió, Luz trata de entender lo que le sucedió: el Hijo de la Tierra vino a destruir a la humanidad robando sus recuerdos más tristes y felices. Pero desembarcó en Suba, el distrito más lejano de Bogotá, donde una extraña adicción cambiará el curso de la historia."
+    },
+    {
+     "festival": "filcmar-2026",
+     "titulo": "HDLT",
+     "poster": "/assets/filcmar-2026/hdlt.jpg",
+     "posterSource": "oficial",
+     "country": "Colombia",
+     "year": 2026,
+     "duration": "18 min",
+     "genre": "Drama",
+     "sinopsis": "Después del ataque que sufrió, Luz trata de entender lo que le sucedió: el Hijo de la Tierra vino a destruir a la humanidad robando sus recuerdos más tristes y felices. Pero desembarcó en Suba, el distrito más lejano de Bogotá, donde una extraña adicción cambiará el curso de la historia."
+    },
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "HDLT",
+     "poster": "/assets/siembrafest/hdlt.jpg",
+     "posterSource": "oficial",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "18 min",
+     "genre": "Drama"
+    },
+    {
+     "festival": "popayan-2026",
+     "titulo": "HDLT Hijo de la Tierra",
+     "poster": "/assets/filcmar-2026/hdlt.jpg",
+     "posterSource": "oficial",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "18 min",
+     "sinopsis": "Tras el ataque que sufrió, Luz trata de entender lo que le pasó: el Hijo de la Tierra llegó a destruir la humanidad robándole sus recuerdos más tristes y más felices."
+    }
+   ]
   },
   "No te Despiertes": {
    "tmdb_id": 1536959,
@@ -1125,7 +1348,8 @@
    "duracion_tmdb": 0,
    "pais_tmdb": "Colombia",
    "lbSlug": "no-te-despiertes",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "sinopsis": "Sara está dibujando en casa. Cuando su padre llega del trabajo, empiezan a jugar, sin saber que su tranquilo ambiente familiar se verá inmerso en una situación en la que un juego y la inocencia de Sara serán de vital importancia.",
+   "_verificado": "declarada a mano: sinopsis y datos de la investigación del 4 nov",
    "_ya_publicada": [
     {
      "festival": "leviza-2026",
@@ -1183,12 +1407,22 @@
    ]
   },
   "Carlina": {
-   "_fuente": "cinecorto",
-   "_cinecorto": "https://cinecorto.co/carlina/",
-   "_verificado": "cinecorto.co, dirección: Angela Leyton",
+   "tmdb_id": 1817628,
+   "titulo_original": "Carlina",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "Carlina, a girl with a boundless imagination, takes refuge in a magical world by the river to cope with the irreversible illness of one of her mothers. With her friend Millita she finds moments of freedom and fantasy, while at home her mothers face their pain in silence. Though sadness fills the house, Carlina clings to her imaginary universe, refusing to let fantasy fade in the face of a reality she is only beginning to understand.",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 13,
+   "pais_tmdb": "",
+   "lbSlug": "carlina",
+   "poster": "/assets/festicinerio-2026/carlina.jpg",
    "anio": 2025,
    "duracion_min": 13,
-   "sinopsis": "Carlina; una niña de imaginación desbordante; se refugia en un mundo mágico junto al río para sobrellevar la enfermedad irreversible de una de sus madres. Con su amiga Millita descubre instantes de libertad y fantasía; mientras en casa sus madres enfrentan en silencio el dolor. Aunque la tristeza habita el hogar; Carlina se aferra a su universo imaginario; resistiéndose a dejar que la fantasía se desvanezca frente a una realidad que apenas comienza a comprender."
+   "pais": "Colombia",
+   "sinopsis": "Carlina, una niña de imaginación desbordante, se refugia en un mundo mágico junto al río para sobrellevar la enfermedad irreversible de una de sus madres. Con su amiga Millita descubre instantes de libertad y fantasía, mientras en casa sus madres enfrentan en silencio el dolor. Aunque la tristeza habita el hogar, Carlina se aferra a su universo imaginario, resistiéndose a dejar que la fantasía se desvanezca frente a una realidad que apenas comienza a comprender.",
+   "_verificado": "declarada a mano: alta del 4 nov; afiche de FanCineQueer; año y duración de cinecorto y FICCali (FanCineQueer dice 2024, 14 min)"
   },
   "Tentado de Difunto": {
    "_fuente": "cinecorto",
@@ -1280,7 +1514,8 @@
    "duracion_tmdb": 10,
    "pais_tmdb": "Colombia",
    "lbSlug": "ornamento",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "sinopsis": "Las fachadas tradicionales de Cali exhiben una arquitectura autoconstruida nacida del deseo, reconocible por sus escaleras de caracol, cisnes y balaustres. La obra entrelaza la historia del Edificio Otero con el trabajo de los talleres de la ciudad, donde el concreto moldeado democratizó la decoración. Un ensayo visual sobre el ornamento como declaración política: un lienzo visible de la subjetividad y el imaginario popular.",
+   "_verificado": "declarada a mano: sinopsis y datos de la investigación del 4 nov"
   },
   "Chaika": {
    "tmdb_id": 1689999,
@@ -1452,6 +1687,23 @@
     }
    ]
   },
+  "Anoche a la Media Noche": {
+   "tmdb_id": 1758042,
+   "titulo_original": "Anoche a media noche",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "“Last Night at Midnight” is an experimental short film based on an octosyllabic poem written by Gualberto Gutiérrez in 1819, at a time when terror reigned in the Viceroyalty of New Granada. The poem recounts, with irony and cruelty, the night when Viceroy Juan Sámano fled from Santafé to Cartagena following the defeat of the royalist troops at the Battle of Boyacá.  Far from a conventional historical reconstruction, the film fragments the poem and transforms it into a delirious visual machine: jungles, rituals, prayers, grotesque bodies, and ominous omens accompany the flight of a power that no longer rules. Characters emerging from sculpture, dance, and theater embody a sinister dramaturgy in which official history is dismantled and laid bare.",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 15,
+   "pais_tmdb": "Colombia",
+   "title_en": "Last Night at Midnight",
+   "lbSlug": "last-night-at-midnight",
+   "poster": "/assets/cineautopsia/anoche-a-media-noche.jpg",
+   "anio": 2026,
+   "sinopsis": "Cortometraje experimental basado en un poema octosílabo escrito por Gualberto Gutiérrez en 1819, que relata con ironía y crueldad la noche en que el virrey Juan Sámano huyó de Santafé hacia Cartagena tras la derrota realista en la Batalla de Boyacá.",
+   "_verificado": "declarada a mano: en TMDB como «Anoche a media noche», misma dirección; el afiche oficial dice «Anoche a la Media Noche»"
+  },
   "Todo lo que Pasará Mañana": {
    "tmdb_id": 1812504,
    "titulo_original": "Todo lo que pasará mañana",
@@ -1479,6 +1731,12 @@
     }
    ]
   },
+  "Despojo": {
+   "sinopsis": "Despojo es una experiencia sensorial que expone cómo la violencia se repite sobre los mismos territorios, transformando cuerpos en materia y memoria en silencio. Lo que emerge no es solo un hombre, sino la huella de una humanidad arrancada una y otra vez de su propia tierra.",
+   "anio": 2026,
+   "pais": "Colombia",
+   "_verificado": "declarada a mano: sinopsis y datos de la investigación del 4 nov"
+  },
   "Cathi e os Elefantes": {
    "tmdb_id": 1777548,
    "titulo_original": "Cathi e Os Elefantes",
@@ -1490,7 +1748,8 @@
    "duracion_tmdb": 0,
    "pais_tmdb": "",
    "lbSlug": "cathi-e-os-elefantes",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "sinopsis": "Cathi é uma pré-adolescente que ama elefantes, mas não gosta de carnaval. Até que algo muito especial cruza o seu caminho e transforma seu coração.",
+   "_verificado": "declarada a mano: sinopsis y datos de la investigación del 4 nov"
   },
   "Debajo de esas Galeras": {
    "tmdb_id": 1584649,
@@ -1503,7 +1762,8 @@
    "duracion_tmdb": 17,
    "pais_tmdb": "",
    "lbSlug": "debajo-de-esas-galeras",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "sinopsis": "La Tunga Tunga es una murga comprometida con un proceso creativo, colaborativo y comunitario, que se organiza para participar en el Carnaval y dar voz a reclamos colectivos. En 2025, los gobiernos nacional y local cuestionan las prácticas culturales y desfinancian la cultura y, en particular, los corsos barriales. La Tunga Tunga resiste con humor y baile, y afirma la celebración como derecho y el espacio público como territorio de lucha.",
+   "_verificado": "declarada a mano: sinopsis y datos de la investigación del 4 nov"
   },
   "Quarta-Feira": {
    "tmdb_id": 1072208,
@@ -1517,7 +1777,22 @@
    "pais_tmdb": "Germany",
    "title_en": "Ash Wednesday",
    "lbSlug": "ash-wednesday-2023",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "sinopsis": "En una favela de Río de Janeiro, Demétria espera a su hija el último día de Carnaval. Pero una brutal redada policial sella el destino de las dos mujeres. Con ritmos brasileños, este musical en corto aborda el racismo y otros conflictos sociales.",
+   "_verificado": "declarada a mano: sinopsis y datos de la investigación del 4 nov"
+  },
+  "La Dama de las Mil Máscaras": {
+   "tmdb_id": 1740164,
+   "titulo_original": "Dama de las Mil Máscaras",
+   "poster_path": "/nRiAXYrOnnEIW1RGlomkc75yCTt.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Damaris Gonzales is a pioneer who defies tradition. In the town of Barva, Heredia—the birthplace of Costa Rican masquerades—she broke the mold by becoming the first female traditional mask maker, challenging a historically male-dominated profession.  This documentary pays tribute to her contribution and career, showing how her workshop is much more than a workspace: it is a place where clay and spirit meet, where tradition comes to life anew through her hands.",
+   "genero": "Documental",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 62,
+   "pais_tmdb": "Costa Rica",
+   "lbSlug": "dama-de-las-mil-mascaras",
+   "sinopsis": "Damaris González desafía la tradición: en Barva de Heredia, cuna de la mascarada costarricense, se convirtió en la primera mujer mascarera en un oficio históricamente masculino. El documental rinde homenaje a su trayectoria y muestra su taller como el lugar donde el barro y el espíritu se encuentran.",
+   "_verificado": "declarada a mano: en TMDB y en su afiche sin el artículo, Wainer Méndez, Costa Rica, 62 min"
   },
   "La Gallina Saraviada": {
    "tmdb_id": 1746279,
@@ -1687,7 +1962,40 @@
    "pais_tmdb": "",
    "title_en": "I dreamed I was playing the drums",
    "lbSlug": "i-dreamed-i-was-playing-the-drums",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "sinopsis": "Antonio, terco en sus sueños, cuenta sus sueños entre calles blancas y negras y recuerdos en color, mientras descubre por qué los soñadores prefieren dormir antes que estar despiertos.",
+   "_verificado": "declarada a mano: sinopsis y datos de la investigación del 4 nov"
+  },
+  "Perros Guardianes": {
+   "tmdb_id": 1817629,
+   "titulo_original": "Perros Guardianes",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "Two young journalists, Kevin and Sara, investigate a Chinese businessman who is harming artisanal fishermen. Two weeks before the elections they witness his meeting with Méndez, the candidate leading the polls, while their editor asks them to cover the rallies.",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "",
+   "lbSlug": "perros-guardianes",
+   "poster": "/assets/festicinerio-2026/perros-guardianes.jpg",
+   "anio": 2026,
+   "pais": "Perú",
+   "sinopsis": "Dos jóvenes periodistas, Kevin y Sara, investigan a un empresario chino que perjudica a pescadores artesanales. A dos semanas de las elecciones presencian su reunión con Méndez, el candidato que lidera las encuestas, mientras su editor les pide cubrir los mítines.",
+   "_verificado": "declarada a mano: alta del 4 nov; afiche con título y dirección impresos; sinopsis redactada de la reseña de La República"
+  },
+  "Baile del Caos": {
+   "tmdb_id": 1791655,
+   "titulo_original": "La Danza del Caos",
+   "poster_path": "/8dfaUuA7VQE8CAt3VV4pq0O0ohu.jpg",
+   "synopsis_es": "La Danza del Caos es un cortometraje de animación experimental que traduce la teoría de los Cinco Ritmos de Gabrielle Roth en una experiencia audiovisual abstracta. Mediante el movimiento y el diseño sonoro, la animación sustituye al cuerpo físico para llevar al espectador en un viaje sensorial que recorre diferentes ritmos hasta alcanzar un estado de caos contenido. El cortometraje sumerge al espectador en una experiencia sensorial que lo invita a sentir y dejarse llevar por el ritmo como guía para la interpretación.",
+   "synopsis_en": "The Dance of Chaos is an experimental animated short film that translates Gabrielle Roth's Five Rhythms theory into an abstract audiovisual experience. Through movement and sound design, the animation replaces the physical body to take viewers on a sensory journey that traverses different rhythms until reaching a state of contained chaos. The short film immerses the viewer in a sensory experience that invites them to feel and let themselves be carried away by the rhythm as a guide to interpretation.",
+   "genero": "Animación",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 6,
+   "pais_tmdb": "",
+   "title_en": "The Dance of Chaos",
+   "lbSlug": "the-dance-of-chaos",
+   "sinopsis": "La Danza del Caos es un cortometraje de animación experimental que traduce la teoría de los Cinco Ritmos de Gabrielle Roth en una experiencia audiovisual abstracta.",
+   "_verificado": "declarada a mano: probablemente «La danza del caos», de Valeria Preciado Romaña, animación 2025: misma dirección y género, ninguna fuente usa «Baile del Caos». A confirmar con la programación"
   },
   "El Espejo de la Vida": {
    "tmdb_id": 1791654,
@@ -1775,6 +2083,12 @@
     }
    ]
   },
+  "Suelo": {
+   "sinopsis": "Año 7.000 d.C. Dos seres de otra especie llegan a la Tierra en respuesta a una señal de socorro lanzada mil años atrás. Lo que encuentran es polvo, ruinas y un planeta que se extinguió a sí mismo. Cuando intentan leer la memoria del suelo, la Tierra responde: se traga a uno de ellos.",
+   "anio": 2026,
+   "pais": "Colombia",
+   "_verificado": "declarada a mano: sinopsis y datos de la investigación del 4 nov"
+  },
   "Árbol en Pie": {
    "tmdb_id": 1709833,
    "titulo_original": "Standing Tree",
@@ -1815,31 +2129,30 @@
    "duracion_tmdb": 0,
    "pais_tmdb": "",
    "lbSlug": "nibbling-of-the-night",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "poster": "/assets/festicinerio-2026/nibbling-of-the-night.jpg",
+   "sinopsis": "Una noche, la visita de dos vampiresas a la habitación de una pareja infeliz de mediana edad cambia el destino de una esposa deprimida y adicta a la gula nocturna. Comedia negra en stop motion con títeres, con diálogos en verso, sobre la alianza entre tres mujeres.",
+   "_verificado": "declarada a mano: afiche con título y créditos impresos; ficha TMDB 1306181 sin afiche"
+  },
+  "The Magical Colors": {
+   "sinopsis": "Íris, una camaleona sin color, deja su bosque en blanco y negro y emprende un viaje mágico en busca de sus verdaderos colores; en el camino hace amigos inesperados y aprende a valorar lo que la hace diferente.",
+   "anio": 2025,
+   "duracion_min": 9,
+   "pais": "Brasil",
+   "_verificado": "declarada a mano: sinopsis y datos de la investigación del 4 nov"
   }
  },
  "sin_ficha": [
-  "Anoche a la Media Noche",
-  "Baile del Caos",
   "Baño de Damas",
   "Big Bang Lio",
   "Comadres",
-  "Despojo",
   "El Amor en los Tiempos de Cumbia",
   "Enquanto Meu Coração Bate Impetuoso",
   "Fliehende Stürme: Puppen",
-  "HDLT",
-  "Independencia",
   "La Barbacoa",
-  "La Dama de las Mil Máscaras",
   "Mucho Gusto",
   "Necedades",
-  "Perros Guardianes",
   "Pipona",
   "Red de meliponicultura de Caldas: diversidad y conservación de las meliponinas",
-  "Simplicity of Chaos",
-  "Suelo",
-  "The Magical Colors",
   "The Mango Tree",
   "Tower of Silence by Headless Buddha"
  ]

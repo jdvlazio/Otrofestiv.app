@@ -1,0 +1,19 @@
+{
+ "_nota": "FESTICINERIO V — Festival Internacional de Cine de Riosucio (8–13 nov 2026, Teatro Cuesta). PRE-ONBOARDING: Selección Oficial del post p/DfVZajiG5qG (4 nov), 48 obras en 11 secciones, sin horas ni salas. Radar #1297.",
+ "radar": 1297,
+ "pasos": [
+  {
+   "cmd": "python3 pipeline/festicinerio-2026-catalogo.py",
+   "que": "las láminas de la Selección Oficial (a ojo + ocr.py) → catálogo (48 obras)"
+  },
+  {
+   "cmd": "python3 pipeline/enriquecer_catalogo.py festivals/staging/festicinerio-2026-catalogo.json",
+   "que": "la cascada de TMDB y lo ya publicado → catálogo enriquecido"
+  }
+ ],
+ "_fuentes_versionadas": {
+  "festivals/staging/festicinerio-2026-catalogo.json": "la selección publicada (48 obras); la leerá el crudo",
+  "festivals/staging/festicinerio-2026-catalogo-enriquecido.json": "las fichas TMDB/cascada, que escribe el paso 2",
+  "festivals/staging/festicinerio-2026-correcciones.json": "fichas declaradas y sin_afiche; lo leen pipeline/preonboarding.py y, con la parrilla, enriquecer.py/ensamblar.py"
+ }
+}
