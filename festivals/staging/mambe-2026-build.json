@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "Instagram @festivalmambe — el carrusel oficial de programación (12 láminas)",
-  "capturado": "2026-11-02",
+  "capturado": "2026-11-05",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "radar": 1323,
@@ -1489,11 +1489,11 @@
    }
   },
   {
-   "title": "Guardianes de la Fauna Amazónica: Plecturocebus Caquetensis, Tapir Memories y Los Guardianes de las Aves",
+   "title": "Guardianes de la Fauna Amazónica: Plecturocebus Caquetensis, Tapir Memories y El Canto de las Aves",
    "type": "film",
    "section": "🌿 Proyecciones",
-   "country": "Colombia",
-   "flags": "🇨🇴",
+   "country": "Colombia, Colombia/Francia",
+   "flags": "🇨🇴🇨🇴🇫🇷",
    "duration": "150 min",
    "_ancla": [
     "Uniamazonia Sede Porvenir - Florencia",
@@ -1522,7 +1522,14 @@
      "flags": "🇨🇴"
     },
     {
-     "title": "Los guardianes de las aves"
+     "title": "El canto de las aves",
+     "director": "Muriel Barra",
+     "genre": "Naturaleza",
+     "country": "Colombia/Francia",
+     "flags": "🇨🇴🇫🇷",
+     "titulos_anteriores": [
+      "Los guardianes de las aves"
+     ]
     }
    ],
    "_fid": "f_bfcb3bae18",
@@ -2609,7 +2616,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-02T09:56:23",
+  "fecha": "2026-11-05T13:21:19",
   "plan_sha": "c68a49d47fe0aabb",
   "paso": 7,
   "cmd": "python3 pipeline/mambe-2026-verificar.py"

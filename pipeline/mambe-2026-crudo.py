@@ -63,11 +63,12 @@ PROYECCION = {
     (H + '05', '19:00', 'PROYECCIÓN + CONVERSATORIO: GUARDIANES DE LA FAUNA AMAZÓNICA: Plecturocebus '
                         'Caquetensis · PROYECCIÓN TAPIR MEMORIES · PROYECCIÓN + CONVERSATORIO: LOS GUARDIANES DE LAS AVES'): {
         # 2 nov: la programación actualizada suma «Tapir Memories» entre las dos
-        'titulo': 'Guardianes de la fauna amazónica: Plecturocebus caquetensis, Tapir Memories y Los guardianes de las aves',
+        'titulo': 'Guardianes de la fauna amazónica: Plecturocebus caquetensis, Tapir Memories y El canto de las aves',
         'obras': [{'titulo': 'Guardianes de la fauna amazónica: Plecturocebus caquetensis'},
                   # país: el que ya publica FICCALI 2026 para la misma obra (catálogo, 2 nov)
                   {'titulo': 'Tapir Memories', 'pais': 'Colombia'},
-                  {'titulo': 'Los guardianes de las aves'}]},
+                  # 5 nov: la lámina de hoy (DfXa-lvlTP1) la anuncia con su afiche, misma hora y sala
+                  {'titulo': 'El canto de las aves', 'director': 'Muriel Barra'}]},
     (H + '05', '19:30', 'PROYECCIÓN + CONVERSATORIO: LA MEMORIA DE LAS MARIPOSAS'):
         {'titulo': 'La memoria de las mariposas'},
     (H + '06', '16:00', 'PROYECCIÓN + CONVERSATORIO: SOÑÉ SU NOMBRE'): {'titulo': 'Soñé su nombre'},
