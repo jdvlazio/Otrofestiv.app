@@ -11,7 +11,7 @@ const FEST = 'leviza2026';
 // T46 — La app abre offline tras una visita online (shell + JSON desde caché del SW).
 test('T46 — abre offline tras visita online (shell + programa desde caché)', async ({ page, context }) => {
   // 1) Visita ONLINE: puebla la caché del SW (index + módulos + JSON del festival).
-  await enterFestival(page, FEST, LEVIZA_SIMTIME, { consensoReal: true });
+  await enterFestival(page, FEST, LEVIZA_SIMTIME);
 
   // 2) Esperar a que el SW CONTROLE la página (el activate ya corrió, incluido su
   //    navigate) y a que el shell mínimo esté cacheado. Sin este gate, cortar la red

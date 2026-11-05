@@ -16,7 +16,9 @@ export function _sbInit(){
   // Mismo bug de timing que el i18n: si el módulo se evalúa tras 'load', un
   // addEventListener('load') nunca corre y supabase no inicializa. onWindowLoad
   // reintenta ya si la página ya cargó. Ver src/util/ready.js.
-  if(typeof supabase==='undefined'){onWindowLoad(_sbInit);return;}
+  // Con la página ya cargada no hay más que esperar: sin esta condición, si el CDN
+  // no llegó (offline sin caché), onWindowLoad reintenta ya y la pila se desborda.
+  if(typeof supabase==='undefined'){if(document.readyState!=='complete')onWindowLoad(_sbInit);return;}
   try{
     _sb=supabase.createClient(_SB_URL,_SB_KEY);
     _sb.auth.onAuthStateChange(async(event,session)=>{

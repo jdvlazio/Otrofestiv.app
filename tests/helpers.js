@@ -70,8 +70,7 @@ async function reentrar(page, festId, simTime) {
 // La app consulta consenso_festival() al entrar sin sesión y cada 60 s. Sin esto,
 // cada test llamaba a la base de PRODUCCIÓN: unas 23.600 llamadas el 4 nov 2026,
 // más del 90 % del tráfico de Supabase. Se corta como si no hubiera red, el camino
-// que la app ya tolera. opts.consensoReal deja salir la llamada (T136 la mide; T46
-// falla con esta ruta activa: desbordamiento de pila al recargar offline).
+// que la app ya tolera. opts.consensoReal deja salir la llamada (T136 la mide).
 const CONSENSO_URL = 'https://eytxrvbnwzxuedbmnnqr.supabase.co/rest/v1/rpc/consenso_festival';
 
 async function enterFestival(page, festId, simTime, opts) {
