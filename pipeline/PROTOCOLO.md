@@ -228,6 +228,8 @@ Correcciones en `festivals/staging/<id>-correcciones.json`:
 vs `alias` (el festival rebautizó → se busca por el nombre de distribución,
 se conserva el del festival).
 
+**Los cruces dudosos se deciden** (`[cruce-sin-decidir]`, 5 nov 2026): `python3 pipeline/preonboarding.py` los lista; cada uno se resuelve con `misma_obra` {título: {festival, titulo, _por_que}}, que hereda los datos, o con `no_heredar` en `<fid>-correcciones.json`.
+
 **El pre-onboarding se cierra completo** (`[preonboarding-completo]`, 18 oct 2026): un festival que todavía no salió y ya tiene `<fid>-catalogo.json` no pasa los validadores si alguna obra no tiene afiche ni su porqué en `sin_afiche`. Medir con `python3 pipeline/preonboarding.py`.
 
 ### Paso 3 · Sedes
