@@ -1349,11 +1349,11 @@
    }
   },
   {
-   "titulo": "Narciso",
-   "director": "Marcelo Martinessi",
-   "pais": "Paraguay, Brasil, Portugal, Alemania, España, Francia, Uruguay",
+   "titulo": "Nuestro secreto",
+   "director": "Grace Passô",
+   "pais": "Brasil, Portugal",
    "anio": 2026,
-   "duracion_min": 101,
+   "duracion_min": 104,
    "genero": "Ficción",
    "dia": "2026-11-06",
    "hora": "16:00",
@@ -1387,6 +1387,25 @@
    },
    "has_qa": true,
    "qa_type": "team"
+  },
+  {
+   "titulo": "Iván & Hadoum",
+   "director": "Ian de la Rosa",
+   "pais": "España, Alemania, Bélgica",
+   "anio": 2026,
+   "duracion_min": 103,
+   "genero": "Ficción",
+   "dia": "2026-11-06",
+   "hora": "16:30",
+   "sede": "Museo de Arte Moderno de Medellín - MAMM",
+   "sala": "Teatro MAMM",
+   "seccion": "Cine Iberoamericano",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 80,
+    "tipo": "festival-pdf"
+   }
   },
   {
    "titulo": "La imagen como territorio",
@@ -1700,12 +1719,12 @@
    }
   },
   {
-   "titulo": "Iluminada",
-   "director": "Nicolás Rincón Gille",
-   "pais": "Colombia, Bélgica",
+   "titulo": "Relicto",
+   "director": "Guillermo Quintero",
+   "pais": "Colombia, Francia",
    "anio": 2026,
-   "duracion_min": 120,
-   "genero": "Ficción",
+   "duracion_min": 97,
+   "genero": "Documental",
    "dia": "2026-11-06",
    "hora": "19:30",
    "sede": "Centro Colombo Americano",
@@ -2275,25 +2294,6 @@
    "sinopsis": "Víctor Gaviria conversa con Natalia Reyes, actriz y productora colombiana, sobre su experiencia en la película Aún es de noche en Caracas y los procesos creativos detrás de esta producción."
   },
   {
-   "titulo": "Iván & Hadoum",
-   "director": "Ian de la Rosa",
-   "pais": "España, Alemania, Bélgica",
-   "anio": 2026,
-   "duracion_min": 103,
-   "genero": "Ficción",
-   "dia": "2026-11-07",
-   "hora": "18:00",
-   "sede": "Comfama La Capilla",
-   "sala": "",
-   "seccion": "Cine Iberoamericano",
-   "acceso": "Entrada libre",
-   "_src": {
-    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
-    "pag": 88,
-    "tipo": "festival-pdf"
-   }
-  },
-  {
    "titulo": "La otra orilla: Revolver la mirada autorizada para manchar la cámara de barro",
    "tipo": "evento",
    "event_kind": "taller",
@@ -2475,27 +2475,6 @@
    }
   },
   {
-   "titulo": "Club sándwich",
-   "director": "Fernando Eimbcke",
-   "pais": "México",
-   "anio": 2013,
-   "duracion_min": 82,
-   "genero": "Ficción",
-   "dia": "2026-11-07",
-   "hora": "19:00",
-   "sede": "Cineprox Las Américas",
-   "sala": "Sala 3",
-   "seccion": "Retrospectiva Fernando Eimbcke",
-   "acceso": "Entrada libre",
-   "_src": {
-    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
-    "pag": 89,
-    "tipo": "festival-pdf"
-   },
-   "has_qa": true,
-   "qa_type": "team"
-  },
-  {
    "titulo": "El teléfono morado",
    "director": "Taller de Cine Corporación Mi Comuna",
    "pais": "Colombia",
@@ -2513,6 +2492,27 @@
     "pag": 41,
     "tipo": "festival-pdf"
    }
+  },
+  {
+   "titulo": "Moscas",
+   "director": "Fernando Eimbcke",
+   "pais": "México, España, Argentina",
+   "anio": 2026,
+   "duracion_min": 102,
+   "genero": "Ficción",
+   "dia": "2026-11-07",
+   "hora": "19:00",
+   "sede": "Cineprox Las Américas",
+   "sala": "Sala 3",
+   "seccion": "Retrospectiva Fernando Eimbcke",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 89,
+    "tipo": "festival-pdf"
+   },
+   "has_qa": true,
+   "qa_type": "team"
   },
   {
    "titulo": "Programa de Cortos 4",
@@ -2913,6 +2913,25 @@
    },
    "duracion_min": 60,
    "sinopsis": "Juancho Valencia, ganador del Grammy Latino, dialoga con Diego Londoño (El Fan Fatal) sobre cómo ha tejido una relación entre su música y el cine."
+  },
+  {
+   "titulo": "Iván & Hadoum",
+   "director": "Ian de la Rosa",
+   "pais": "España, Alemania, Bélgica",
+   "anio": 2026,
+   "duracion_min": 103,
+   "genero": "Ficción",
+   "dia": "2026-11-08",
+   "hora": "18:00",
+   "sede": "Comfama La Capilla",
+   "sala": "",
+   "seccion": "Cine Iberoamericano",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 94,
+    "tipo": "festival-pdf"
+   }
   },
   {
    "titulo": "Proyección y Concierto de Clausura",
