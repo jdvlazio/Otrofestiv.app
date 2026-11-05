@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, con el MISMO candado de enriquecer.py: director ✓ y (año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-11-04"
+  "capturado": "2026-11-05"
  },
  "_origen": "festicinerio-2026-catalogo.json",
  "obras": [
@@ -173,13 +173,20 @@
    "title_en": "Post - Family",
    "lbSlug": "post-family",
    "sinopsis": "Abel acaba de enterrar a su padre. En busca de las raíces que nunca tuvo y tratando de entender las razones de su suicidio, viaja al pueblo de sus parientes paternos, donde deberá enfrentar las historias inquietantes y las heridas abiertas de la familia que nunca conoció.",
-   "_verificado": "declarada a mano: sinopsis y datos de la investigación del 4 nov"
+   "_verificado": "declarada a mano: sinopsis y datos de la investigación del 4 nov",
+   "_ya_publicada": [
+    {
+     "festival": "ficica-2026",
+     "titulo": "Post-familia",
+     "country": "Colombia"
+    }
+   ]
   },
   {
    "titulo": "Independencia",
    "tmdb_id": 1595081,
    "titulo_original": "La independencia",
-   "poster_path": null,
+   "poster_path": "/3n5O3ZZ0TNKKvBq322D4mAtZrRJ.jpg",
    "synopsis_es": "",
    "synopsis_en": "Cecilia, a selfless 52-year-old woman, decides to break with her life of sacrifices after years of enduring her son s irresponsibility and her family s ingratitude, finally seeking her independence.",
    "genero": "Drama",
@@ -190,7 +197,22 @@
    "lbSlug": "independence-2025",
    "poster": "/assets/ficdeh/la-independencia.jpg",
    "sinopsis": "Cecilia, una mujer abnegada de 52 años, decide romper con su vida de sacrificios tras años de soportar la irresponsabilidad de su hijo y la ingratitud de su familia, buscando finalmente su independencia.",
-   "_verificado": "declarada a mano: en TMDB como «La independencia», de John Edicson Agudelo Suárez; la lámina escribe Jhon Agudelo; afiche oficial con el título"
+   "_verificado": "declarada a mano: en TMDB como «La independencia», de John Edicson Agudelo Suárez; la lámina escribe Jhon Agudelo; afiche oficial con el título",
+   "_ya_publicada": [
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "La independencia",
+     "poster": "/assets/ficdeh/la-independencia.jpg",
+     "posterSource": "oficial",
+     "lbSlug": "independence-2025",
+     "country": "Colombia",
+     "year": 2024,
+     "duration": "19 min",
+     "genre": "Ficción",
+     "synopsis_en": "Cecilia, a selfless 52-year-old woman, decides to break with her life of sacrifices after years of enduring her son s irresponsibility and her family s ingratitude, finally seeking her independence.",
+     "sinopsis": "Cecilia, una mujer abnegada de 52 años, decide romper con su vida de sacrificios tras años de soportar la irresponsabilidad de su hijo y la ingratitud de su familia, buscando finalmente su independencia."
+    }
+   ]
   },
   {
    "titulo": "HDLT",
@@ -325,10 +347,10 @@
    "titulo": "Carlina",
    "tmdb_id": 1817628,
    "titulo_original": "Carlina",
-   "poster_path": null,
-   "synopsis_es": "",
+   "poster_path": "/8REp4niAtqHP16BoWatGqLtBwgX.jpg",
+   "synopsis_es": "Carlina, una niña de imaginación desbordante, se refugia en un mundo mágico junto al río para sobrellevar la enfermedad irreversible de una de sus madres. Con su amiga Millita descubre instantes de libertad y fantasía, mientras en casa sus madres enfrentan en silencio el dolor. Aunque la tristeza habita el hogar, Carlina se aferra a su universo imaginario, resistiéndose a dejar que la fantasía se desvanezca frente a una realidad que apenas comienza a comprender.",
    "synopsis_en": "Carlina, a girl with a boundless imagination, takes refuge in a magical world by the river to cope with the irreversible illness of one of her mothers. With her friend Millita she finds moments of freedom and fantasy, while at home her mothers face their pain in silence. Though sadness fills the house, Carlina clings to her imaginary universe, refusing to let fantasy fade in the face of a reality she is only beginning to understand.",
-   "genero": "",
+   "genero": "Drama",
    "anio_tmdb": 0,
    "duracion_tmdb": 13,
    "pais_tmdb": "",
@@ -612,7 +634,7 @@
    "titulo": "Anoche a la Media Noche",
    "tmdb_id": 1758042,
    "titulo_original": "Anoche a media noche",
-   "poster_path": null,
+   "poster_path": "/3actveCmOjNoXeFYzsA8849n6SA.jpg",
    "synopsis_es": "",
    "synopsis_en": "“Last Night at Midnight” is an experimental short film based on an octosyllabic poem written by Gualberto Gutiérrez in 1819, at a time when terror reigned in the Viceroyalty of New Granada. The poem recounts, with irony and cruelty, the night when Viceroy Juan Sámano fled from Santafé to Cartagena following the defeat of the royalist troops at the Battle of Boyacá.  Far from a conventional historical reconstruction, the film fragments the poem and transforms it into a delirious visual machine: jungles, rituals, prayers, grotesque bodies, and ominous omens accompany the flight of a power that no longer rules. Characters emerging from sculpture, dance, and theater embody a sinister dramaturgy in which official history is dismantled and laid bare.",
    "genero": "",
@@ -624,7 +646,19 @@
    "poster": "/assets/cineautopsia/anoche-a-media-noche.jpg",
    "anio": 2026,
    "sinopsis": "Cortometraje experimental basado en un poema octosílabo escrito por Gualberto Gutiérrez en 1819, que relata con ironía y crueldad la noche en que el virrey Juan Sámano huyó de Santafé hacia Cartagena tras la derrota realista en la Batalla de Boyacá.",
-   "_verificado": "declarada a mano: en TMDB como «Anoche a media noche», misma dirección; el afiche oficial dice «Anoche a la Media Noche»"
+   "_verificado": "declarada a mano: en TMDB como «Anoche a media noche», misma dirección; el afiche oficial dice «Anoche a la Media Noche»",
+   "_ya_publicada": [
+    {
+     "festival": "cineautopsia-2026",
+     "titulo": "Anoche a media noche",
+     "poster": "/assets/cineautopsia/anoche-a-media-noche.jpg",
+     "posterSource": "oficial",
+     "country": "Colombia",
+     "year": 2026,
+     "duration": "15 min",
+     "sinopsis": "Last Night at Midnight (Anoche a medianoche) es un cortometraje experimental basado en un poema octosílabo escrito por Gualberto Gutiérrez en 1819, en una época en la que el terror dominaba el Virreinato de la Nueva Granada. El poema relata, con ironía y crueldad, la noche en que el virrey Juan Sámano huyó de Santafé hacia Cartagena tras la derrota de las tropas realistas en la Batalla de Boyacá. Lejos de una reconstrucción histórica convencional, la película fragmenta el poema y lo transforma en una delirante máquina visual: selvas, rituales, oraciones, cuerpos grotescos y presagios ominosos acompañan la huida de un poder que ya no gobierna. Personajes que emergen de la escultura, la danza y el teatro encarnan una dramaturgia siniestra en la que la historia oficial es desmantelada y puesta a sangrar. Estableciendo resonancias intemporales entre la huida del virrey y la del rey Juan Carlos I de España, el cortometraje entreteje humor negro, escatología simbólica y una estética del pánico, transformando un mito fundacional en un relato corrosivo sobre la persistencia de la dominación, la memoria y la imaginación histórica."
+    }
+   ]
   },
   {
    "titulo": "Todo lo que Pasará Mañana",
@@ -721,6 +755,17 @@
    "lbSlug": "dama-de-las-mil-mascaras",
    "sinopsis": "Damaris González desafía la tradición: en Barva de Heredia, cuna de la mascarada costarricense, se convirtió en la primera mujer mascarera en un oficio históricamente masculino. El documental rinde homenaje a su trayectoria y muestra su taller como el lugar donde el barro y el espíritu se encuentran.",
    "_verificado": "declarada a mano: en TMDB y en su afiche sin el artículo, Wainer Méndez, Costa Rica, 62 min"
+  },
+  {
+   "titulo": "Comadres",
+   "_ya_publicada": [
+    {
+     "festival": "ficmontanas-2026",
+     "titulo": "Co Madres",
+     "country": "Colombia",
+     "genre": "Siembra Cine"
+    }
+   ]
   },
   {
    "titulo": "La Gallina Saraviada",
@@ -1047,15 +1092,15 @@
   {
    "titulo": "Árbol en Pie",
    "tmdb_id": 1709833,
-   "titulo_original": "Standing Tree",
-   "poster_path": null,
-   "synopsis_es": "",
+   "titulo_original": "Árbol en pie",
+   "poster_path": "/k1KJCbdbRHRxFML62ow6P6ccuW1.jpg",
+   "synopsis_es": "La Ceroxylon quindiuense, palma de cera del Quindío, es el árbol nacional de Colombia. Encarna una paradoja perfecta para un país marcado por el machismo, la misoginia y la transfobia, pues es una planta capaz de cambiar de sexo. Es una «palma trans» y la inspiración para que Magdalena Morales, líder trans afrocolombiana, se una a la Red Comunitaria Trans y siembre una semilla de luz rebelde en el horizonte de la música tradicional del Caribe colombiano.",
    "synopsis_en": "“Ceroxylon quindiuense,” the Quindío wax palm, is Colombia’s national tree. It embodies a perfect paradox for a country steeped in machismo, misogyny, and transphobia, as it is a plant with the ability to change its sex. It is a trans palm and the inspiration for Magdalena Morales, an Afro-Colombian trans leader, to join the Trans Community Network and plant a seed of rebellious light on the horizon of traditional Colombian Caribbean music. Her song of redemption rises above desolation and celebrates social struggles, from Palestine, the Congo, and Sudan to the streets of Bogotá’s Santa Fe neighborhood, where her trans sisters stand firm.",
    "genero": "",
    "anio_tmdb": 2026,
    "duracion_tmdb": 6,
    "pais_tmdb": "",
-   "lbSlug": "standing-tree",
+   "lbSlug": "arbol-en-pie",
    "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
    "_ya_publicada": [
     {
@@ -1068,17 +1113,13 @@
      "duration": "6 min",
      "sinopsis": "La Ceroxylon quindiuense, palma de cera del Quindío, es el árbol nacional de Colombia. Encarna una paradoja perfecta para un país marcado por el machismo, la misoginia y la transfobia, pues es una planta capaz de cambiar de sexo. Es una «palma trans» y la inspiración para que Magdalena Morales, líder trans afrocolombiana, se una a la Red Comunitaria Trans y siembre una semilla de luz rebelde en el horizonte de la música tradicional del Caribe colombiano."
     }
-   ],
-   "poster": "/assets/ficcali-2026/arbol-en-pie.jpg",
-   "_afiche_de": "ya publicada en ficcali-2026",
-   "sinopsis": "La Ceroxylon quindiuense, palma de cera del Quindío, es el árbol nacional de Colombia. Encarna una paradoja perfecta para un país marcado por el machismo, la misoginia y la transfobia, pues es una planta capaz de cambiar de sexo. Es una «palma trans» y la inspiración para que Magdalena Morales, líder trans afrocolombiana, se una a la Red Comunitaria Trans y siembre una semilla de luz rebelde en el horizonte de la música tradicional del Caribe colombiano.",
-   "_sinopsis_de": "ya publicada en ficcali-2026"
+   ]
   },
   {
    "titulo": "Nibbling of the Night",
    "tmdb_id": 1306181,
    "titulo_original": "Nibbling of the Night",
-   "poster_path": null,
+   "poster_path": "/qZAz0Ydc3QVMzSfUndUUvjNe3DF.jpg",
    "synopsis_es": "",
    "synopsis_en": "The visit of two female vampires in the bedroom of an unhappy middle aged couple in search of a victim changes the fate of a depressed wife addicted to night's gluttony.",
    "genero": "",
@@ -1262,12 +1303,19 @@
    "title_en": "Post - Family",
    "lbSlug": "post-family",
    "sinopsis": "Abel acaba de enterrar a su padre. En busca de las raíces que nunca tuvo y tratando de entender las razones de su suicidio, viaja al pueblo de sus parientes paternos, donde deberá enfrentar las historias inquietantes y las heridas abiertas de la familia que nunca conoció.",
-   "_verificado": "declarada a mano: sinopsis y datos de la investigación del 4 nov"
+   "_verificado": "declarada a mano: sinopsis y datos de la investigación del 4 nov",
+   "_ya_publicada": [
+    {
+     "festival": "ficica-2026",
+     "titulo": "Post-familia",
+     "country": "Colombia"
+    }
+   ]
   },
   "Independencia": {
    "tmdb_id": 1595081,
    "titulo_original": "La independencia",
-   "poster_path": null,
+   "poster_path": "/3n5O3ZZ0TNKKvBq322D4mAtZrRJ.jpg",
    "synopsis_es": "",
    "synopsis_en": "Cecilia, a selfless 52-year-old woman, decides to break with her life of sacrifices after years of enduring her son s irresponsibility and her family s ingratitude, finally seeking her independence.",
    "genero": "Drama",
@@ -1278,7 +1326,22 @@
    "lbSlug": "independence-2025",
    "poster": "/assets/ficdeh/la-independencia.jpg",
    "sinopsis": "Cecilia, una mujer abnegada de 52 años, decide romper con su vida de sacrificios tras años de soportar la irresponsabilidad de su hijo y la ingratitud de su familia, buscando finalmente su independencia.",
-   "_verificado": "declarada a mano: en TMDB como «La independencia», de John Edicson Agudelo Suárez; la lámina escribe Jhon Agudelo; afiche oficial con el título"
+   "_verificado": "declarada a mano: en TMDB como «La independencia», de John Edicson Agudelo Suárez; la lámina escribe Jhon Agudelo; afiche oficial con el título",
+   "_ya_publicada": [
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "La independencia",
+     "poster": "/assets/ficdeh/la-independencia.jpg",
+     "posterSource": "oficial",
+     "lbSlug": "independence-2025",
+     "country": "Colombia",
+     "year": 2024,
+     "duration": "19 min",
+     "genre": "Ficción",
+     "synopsis_en": "Cecilia, a selfless 52-year-old woman, decides to break with her life of sacrifices after years of enduring her son s irresponsibility and her family s ingratitude, finally seeking her independence.",
+     "sinopsis": "Cecilia, una mujer abnegada de 52 años, decide romper con su vida de sacrificios tras años de soportar la irresponsabilidad de su hijo y la ingratitud de su familia, buscando finalmente su independencia."
+    }
+   ]
   },
   "HDLT": {
    "tmdb_id": 1796013,
@@ -1409,10 +1472,10 @@
   "Carlina": {
    "tmdb_id": 1817628,
    "titulo_original": "Carlina",
-   "poster_path": null,
-   "synopsis_es": "",
+   "poster_path": "/8REp4niAtqHP16BoWatGqLtBwgX.jpg",
+   "synopsis_es": "Carlina, una niña de imaginación desbordante, se refugia en un mundo mágico junto al río para sobrellevar la enfermedad irreversible de una de sus madres. Con su amiga Millita descubre instantes de libertad y fantasía, mientras en casa sus madres enfrentan en silencio el dolor. Aunque la tristeza habita el hogar, Carlina se aferra a su universo imaginario, resistiéndose a dejar que la fantasía se desvanezca frente a una realidad que apenas comienza a comprender.",
    "synopsis_en": "Carlina, a girl with a boundless imagination, takes refuge in a magical world by the river to cope with the irreversible illness of one of her mothers. With her friend Millita she finds moments of freedom and fantasy, while at home her mothers face their pain in silence. Though sadness fills the house, Carlina clings to her imaginary universe, refusing to let fantasy fade in the face of a reality she is only beginning to understand.",
-   "genero": "",
+   "genero": "Drama",
    "anio_tmdb": 0,
    "duracion_tmdb": 13,
    "pais_tmdb": "",
@@ -1690,7 +1753,7 @@
   "Anoche a la Media Noche": {
    "tmdb_id": 1758042,
    "titulo_original": "Anoche a media noche",
-   "poster_path": null,
+   "poster_path": "/3actveCmOjNoXeFYzsA8849n6SA.jpg",
    "synopsis_es": "",
    "synopsis_en": "“Last Night at Midnight” is an experimental short film based on an octosyllabic poem written by Gualberto Gutiérrez in 1819, at a time when terror reigned in the Viceroyalty of New Granada. The poem recounts, with irony and cruelty, the night when Viceroy Juan Sámano fled from Santafé to Cartagena following the defeat of the royalist troops at the Battle of Boyacá.  Far from a conventional historical reconstruction, the film fragments the poem and transforms it into a delirious visual machine: jungles, rituals, prayers, grotesque bodies, and ominous omens accompany the flight of a power that no longer rules. Characters emerging from sculpture, dance, and theater embody a sinister dramaturgy in which official history is dismantled and laid bare.",
    "genero": "",
@@ -1702,7 +1765,19 @@
    "poster": "/assets/cineautopsia/anoche-a-media-noche.jpg",
    "anio": 2026,
    "sinopsis": "Cortometraje experimental basado en un poema octosílabo escrito por Gualberto Gutiérrez en 1819, que relata con ironía y crueldad la noche en que el virrey Juan Sámano huyó de Santafé hacia Cartagena tras la derrota realista en la Batalla de Boyacá.",
-   "_verificado": "declarada a mano: en TMDB como «Anoche a media noche», misma dirección; el afiche oficial dice «Anoche a la Media Noche»"
+   "_verificado": "declarada a mano: en TMDB como «Anoche a media noche», misma dirección; el afiche oficial dice «Anoche a la Media Noche»",
+   "_ya_publicada": [
+    {
+     "festival": "cineautopsia-2026",
+     "titulo": "Anoche a media noche",
+     "poster": "/assets/cineautopsia/anoche-a-media-noche.jpg",
+     "posterSource": "oficial",
+     "country": "Colombia",
+     "year": 2026,
+     "duration": "15 min",
+     "sinopsis": "Last Night at Midnight (Anoche a medianoche) es un cortometraje experimental basado en un poema octosílabo escrito por Gualberto Gutiérrez en 1819, en una época en la que el terror dominaba el Virreinato de la Nueva Granada. El poema relata, con ironía y crueldad, la noche en que el virrey Juan Sámano huyó de Santafé hacia Cartagena tras la derrota de las tropas realistas en la Batalla de Boyacá. Lejos de una reconstrucción histórica convencional, la película fragmenta el poema y lo transforma en una delirante máquina visual: selvas, rituales, oraciones, cuerpos grotescos y presagios ominosos acompañan la huida de un poder que ya no gobierna. Personajes que emergen de la escultura, la danza y el teatro encarnan una dramaturgia siniestra en la que la historia oficial es desmantelada y puesta a sangrar. Estableciendo resonancias intemporales entre la huida del virrey y la del rey Juan Carlos I de España, el cortometraje entreteje humor negro, escatología simbólica y una estética del pánico, transformando un mito fundacional en un relato corrosivo sobre la persistencia de la dominación, la memoria y la imaginación histórica."
+    }
+   ]
   },
   "Todo lo que Pasará Mañana": {
    "tmdb_id": 1812504,
@@ -2091,15 +2166,15 @@
   },
   "Árbol en Pie": {
    "tmdb_id": 1709833,
-   "titulo_original": "Standing Tree",
-   "poster_path": null,
-   "synopsis_es": "",
+   "titulo_original": "Árbol en pie",
+   "poster_path": "/k1KJCbdbRHRxFML62ow6P6ccuW1.jpg",
+   "synopsis_es": "La Ceroxylon quindiuense, palma de cera del Quindío, es el árbol nacional de Colombia. Encarna una paradoja perfecta para un país marcado por el machismo, la misoginia y la transfobia, pues es una planta capaz de cambiar de sexo. Es una «palma trans» y la inspiración para que Magdalena Morales, líder trans afrocolombiana, se una a la Red Comunitaria Trans y siembre una semilla de luz rebelde en el horizonte de la música tradicional del Caribe colombiano.",
    "synopsis_en": "“Ceroxylon quindiuense,” the Quindío wax palm, is Colombia’s national tree. It embodies a perfect paradox for a country steeped in machismo, misogyny, and transphobia, as it is a plant with the ability to change its sex. It is a trans palm and the inspiration for Magdalena Morales, an Afro-Colombian trans leader, to join the Trans Community Network and plant a seed of rebellious light on the horizon of traditional Colombian Caribbean music. Her song of redemption rises above desolation and celebrates social struggles, from Palestine, the Congo, and Sudan to the streets of Bogotá’s Santa Fe neighborhood, where her trans sisters stand firm.",
    "genero": "",
    "anio_tmdb": 2026,
    "duracion_tmdb": 6,
    "pais_tmdb": "",
-   "lbSlug": "standing-tree",
+   "lbSlug": "arbol-en-pie",
    "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
    "_ya_publicada": [
     {
@@ -2112,16 +2187,12 @@
      "duration": "6 min",
      "sinopsis": "La Ceroxylon quindiuense, palma de cera del Quindío, es el árbol nacional de Colombia. Encarna una paradoja perfecta para un país marcado por el machismo, la misoginia y la transfobia, pues es una planta capaz de cambiar de sexo. Es una «palma trans» y la inspiración para que Magdalena Morales, líder trans afrocolombiana, se una a la Red Comunitaria Trans y siembre una semilla de luz rebelde en el horizonte de la música tradicional del Caribe colombiano."
     }
-   ],
-   "poster": "/assets/ficcali-2026/arbol-en-pie.jpg",
-   "_afiche_de": "ya publicada en ficcali-2026",
-   "sinopsis": "La Ceroxylon quindiuense, palma de cera del Quindío, es el árbol nacional de Colombia. Encarna una paradoja perfecta para un país marcado por el machismo, la misoginia y la transfobia, pues es una planta capaz de cambiar de sexo. Es una «palma trans» y la inspiración para que Magdalena Morales, líder trans afrocolombiana, se una a la Red Comunitaria Trans y siembre una semilla de luz rebelde en el horizonte de la música tradicional del Caribe colombiano.",
-   "_sinopsis_de": "ya publicada en ficcali-2026"
+   ]
   },
   "Nibbling of the Night": {
    "tmdb_id": 1306181,
    "titulo_original": "Nibbling of the Night",
-   "poster_path": null,
+   "poster_path": "/qZAz0Ydc3QVMzSfUndUUvjNe3DF.jpg",
    "synopsis_es": "",
    "synopsis_en": "The visit of two female vampires in the bedroom of an unhappy middle aged couple in search of a victim changes the fate of a depressed wife addicted to night's gluttony.",
    "genero": "",
