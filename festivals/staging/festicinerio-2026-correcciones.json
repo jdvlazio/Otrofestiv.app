@@ -169,7 +169,7 @@
    "_por_que": "sin rastro de la obra en TMDB ni la web"
   },
   "Comadres": {
-   "_por_que": "solo una coincidencia dudosa, la serie sonora «Co-madres»"
+   "_por_que": "es «Co Madres» de Ingryd Ríos Tamayo, publicada en Ficmontañas sin afiche ni ficha TMDB"
   },
   "Enquanto Meu Coração Bate Impetuoso": {
    "_por_que": "existe según prensa, sin ficha ni afiche hallados"
@@ -200,6 +200,17 @@
   },
   "Mucho Gusto": {
    "_por_que": "videoclip de Magallanes sin ficha TMDB; la imagen de Villa del Cine 2026 es editorial, no un afiche"
+  }
+ },
+ "direccion": {
+  "Tentado de Difunto": {
+   "director": "Juan David Corredor Robles",
+   "lamina": "Juan David Correa",
+   "_fuente": [
+    "https://cinecorto.co/tentado-de-difunto/",
+    "festivals/popayan-2026.json"
+   ],
+   "_por_que": "misma obra de Popayán: documental de 14 min; cinecorto y Popayán acreditan a Corredor Robles"
   }
  }
 }
