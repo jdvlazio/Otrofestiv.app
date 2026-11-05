@@ -32,6 +32,7 @@ y las herramientas genéricas leen ESO, no el JSON de cada festival. N lectores
 → 1 formato → M herramientas. Documentado en pipeline/PROTOCOLO.md.
 """
 import os, io, re, json, datetime
+from difflib import SequenceMatcher
 # La raíz del repo, para que cargar_plan resuelva rutas relativas del plan
 # sin depender de quién lo llama (ensamblar, correr o el guardián).
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -374,6 +375,23 @@ def _minutos(v):
     return int(m.group()) if m else None
 
 
+def misma_persona(a, b):
+    """`director_coincide` y además el APELLIDO FINAL de uno está en el otro.
+    «Juan David Correa» y «Juan David Corredor Robles» casaban por «david», un
+    segundo nombre (FESTICINERIO, 5 nov 2026): heredar por eso une a dos personas.
+    La inicial final no cuenta como apellido: «Ingryd Ríos T.» ≡ «Ingryd Ríos Tamayo»."""
+    def apellido(p):
+        t = [x for x in norm(p).split() if len(x) > 2]
+        return t[-1] if t else ''
+    partes = lambda d: [p for p in re.split(r',|\s+y\s+|\s*&\s*|\s+e\s+|/', d or '') if p.strip()]
+    for x in partes(a):
+        for y in partes(b):
+            if (director_coincide(x, [y]) and
+                    (apellido(x) in norm(y).split() or apellido(y) in norm(x).split())):
+                return True
+    return False
+
+
 def ya_publicada(obra, idx):
     """Las veces que esta obra ya salió en un festival nuestro.
 
@@ -395,7 +413,7 @@ def ya_publicada(obra, idx):
         for fest, o in filas:
             d_pub, d_nue = o.get('director'), obra.get('director')
             if d_pub and d_nue:
-                if not director_coincide(d_nue, [d_pub]):
+                if not misma_persona(d_nue, d_pub):
                     continue
             else:
                 dur_ok = (_minutos(o.get('duration')) and obra.get('duracion_min')
@@ -404,15 +422,93 @@ def ya_publicada(obra, idx):
                            and abs(int(o['year']) - obra['anio']) <= 1)
                 if not (dur_ok or anio_ok):
                     continue
-            r = {'festival': fest, 'titulo': o['title']}
-            # todo lo que ya mostramos de la obra (17 oct 2026): la cascada solo
-            # traía afiche y sinopsis, y país/año/duración/género se quedaban atrás
-            for campo in ('tmdb_id', 'poster', 'posterSource', 'lbSlug', 'country', 'year',
-                          'duration', 'genre', 'synopsis_en'):
-                if o.get(campo):
-                    r[campo] = o[campo]
-            if o.get('synopsis'):
-                r['sinopsis'] = o['synopsis']
+            r = _fila_publicada(fest, o)
+            if r not in out:
+                out.append(r)
+    return out
+
+
+def _fila_publicada(fest, o):
+    r = {'festival': fest, 'titulo': o['title']}
+    # todo lo que ya mostramos de la obra (17 oct 2026): la cascada solo
+    # traía afiche y sinopsis, y país/año/duración/género se quedaban atrás
+    for campo in ('tmdb_id', 'poster', 'posterSource', 'lbSlug', 'country', 'year',
+                  'duration', 'genre', 'synopsis_en'):
+        if o.get(campo):
+            r[campo] = o[campo]
+    if o.get('synopsis'):
+        r['sinopsis'] = o['synopsis']
+    return r
+
+
+# ── los cruces que el título exacto no ve (5 nov 2026) ──────────────────────
+# FESTICINERIO: «Comadres» era «Co Madres» y «Anoche a la Media Noche» era «Anoche
+# a media noche»; `ya_publicada` las descartaba en silencio y salieron como obras
+# nuevas. Medido ese día en los catálogos: «Mukira»/«Mu-ki-ra», «Sopro» con otro
+# director, «Ubuntu»/«Ubuntú»… Lo seguro hereda solo; lo dudoso no hereda, pero
+# una persona tiene que decidirlo: `misma_obra` o `no_heredar` en -correcciones.
+
+_VACIAS_TITULO = {'el', 'la', 'los', 'las', 'lo', 'un', 'una', 'unos', 'unas', 'the', 'a', 'an',
+                  'o', 'os', 'as', 'de', 'del', 'y', 'e', 'en'}
+
+
+def clave_sin_vacias(t):
+    """El título sin artículos ni espacios: «Co Madres» ≡ «Comadres»."""
+    return ''.join(x for x in norm(t).split() if x not in _VACIAS_TITULO)
+
+
+def _palabras_titulo(t):
+    return {x for x in norm(t).split() if x not in _VACIAS_TITULO and len(x) >= 4}
+
+
+def posibles_cruces(obra, idx):
+    """[(festival, título publicado, motivo)]: lo que PODRÍA ser esta obra y
+    `ya_publicada` no afirma. Título parecido (cualquier dirección), o la misma
+    dirección con una palabra del título en común («Baile del Caos» / «La danza
+    del caos»). La misma dirección con otro título no cuenta: es su filmografía."""
+    t = obra.get('titulo') or ''
+    c = clave_sin_vacias(t)
+    if not c or _GENERICO.search(norm(t)):
+        return []
+    d = obra.get('director')
+    out = []
+    for k, filas in idx.items():
+        ck = clave_sin_vacias(k)
+        parecido = bool(ck) and (ck == c or (min(len(c), len(ck)) >= 6 and
+                                             SequenceMatcher(None, c, ck).ratio() >= .88))
+        comunes = _palabras_titulo(t) & _palabras_titulo(k)
+        if not parecido and not comunes:
+            continue
+        for fest, o in filas:
+            if ya_publicada(obra, {k: [(fest, o)]}):
+                continue
+            misma_dir = bool(d and o.get('director') and misma_persona(d, o['director']))
+            if parecido:
+                motivo = ('título parecido, misma dirección' if misma_dir else
+                          'mismo título o parecido, otra dirección' if d and o.get('director') else
+                          'título parecido, sin dirección para comparar')
+            elif misma_dir:
+                motivo = 'misma dirección, título con palabras en común'
+            else:
+                continue
+            fila = (fest, o['title'], motivo)
+            if fila not in out:
+                out.append(fila)
+    return out
+
+
+def publicadas_de(obra, idx, misma_obra=None):
+    """`ya_publicada` más lo declarado en `misma_obra` de -correcciones:
+    {título: {"festival", "titulo", "_por_que"}}. Una declaración que ya no
+    encuentra su obra falla: un cruce decidido no se pierde en silencio."""
+    out = ya_publicada(obra, idx)
+    m = (misma_obra or {}).get(obra.get('titulo'))
+    if m:
+        filas = [(f, o) for f, o in idx.get(norm(m['titulo']), []) if f == m['festival']]
+        if not filas:
+            raise ValueError(f'misma_obra: «{m["titulo"]}» no está en {m["festival"]}')
+        for f, o in filas:
+            r = _fila_publicada(f, o)
             if r not in out:
                 out.append(r)
     return out

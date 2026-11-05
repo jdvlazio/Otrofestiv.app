@@ -109,5 +109,55 @@ class Herencia(unittest.TestCase):
         self.assertIsNone(e)
 
 
+class Posibles(unittest.TestCase):
+    """Los casos reales de FESTICINERIO y el falso positivo de «Legado».
+    Mutación: con `posibles_cruces` devolviendo [] estos tests fallan."""
+    def idx(self, *obras):
+        return {lib.norm(o['title']): [('otro', o)] for o in obras}
+
+    def motivos(self, obra, *pub):
+        return [m for _, _, m in lib.posibles_cruces(obra, self.idx(*pub))]
+
+    def test_espacio_y_articulo(self):
+        self.assertEqual(self.motivos({'titulo': 'Comadres', 'director': 'Ingryd Ríos T.'},
+                                      {'title': 'Co Madres', 'director': 'Ingryd Ríos Tamayo'}),
+                         ['título parecido, misma dirección'])
+        self.assertEqual(len(self.motivos({'titulo': 'Anoche a la Media Noche', 'director': 'Ricardo Muñoz Izquierdo'},
+                                          {'title': 'Anoche a media noche', 'director': 'Ricardo Muñoz Izquierdo'})), 1)
+
+    def test_mismo_titulo_otra_direccion_es_duda(self):
+        self.assertEqual(self.motivos({'titulo': 'Tentado de Difunto', 'director': 'Juan David Correa'},
+                                      {'title': 'Tentado de difunto', 'director': 'Juan David Corredor Robles'}),
+                         ['mismo título o parecido, otra dirección'])
+
+    def test_misma_direccion_palabra_comun(self):
+        self.assertEqual(self.motivos({'titulo': 'Baile del Caos', 'director': 'Valeria Preciado'},
+                                      {'title': 'La danza del caos', 'director': 'Valeria Preciado Romaña'}),
+                         ['misma dirección, título con palabras en común'])
+
+    def test_lo_seguro_no_es_duda(self):
+        self.assertEqual(self.motivos({'titulo': 'Mucho Gusto', 'director': 'Cintia Obando'},
+                                      {'title': 'Mucho Gusto', 'director': 'Cintia Obando'}), [])
+
+    def test_no_son_duda(self):
+        # filmografía de la misma persona, título vecino de otra dirección, genérico
+        self.assertEqual(self.motivos({'titulo': 'Chaika', 'director': 'Ingrid Bonilla'},
+                                      {'title': 'La Gallina Saraviada', 'director': 'Ingrid Bonilla'}), [])
+        self.assertEqual(self.motivos({'titulo': 'Suelo', 'director': 'Eduar Pájaro'},
+                                      {'title': 'Duelo', 'director': 'Nicolás Patiño'}), [])
+        self.assertEqual(self.motivos({'titulo': 'Legado', 'director': 'Zumaya Mayers'},
+                                      {'title': 'Noche de legado', 'director': 'Rodrigo Demirjian'}), [])
+        self.assertEqual(self.motivos({'titulo': 'Programa de Cortos 2', 'director': 'Varios'},
+                                      {'title': 'Programa de Cortos 2', 'director': 'Otros'}), [])
+
+    def test_misma_obra_hereda_y_si_no_existe_falla(self):
+        i = {lib.norm('Co Madres'): [('fic', {'title': 'Co Madres', 'poster': '/a.jpg'})]}
+        d = {'Comadres': {'festival': 'fic', 'titulo': 'Co Madres'}}
+        self.assertEqual(lib.publicadas_de({'titulo': 'Comadres'}, i, d)[0]['poster'], '/a.jpg')
+        d['Comadres']['festival'] = 'nada'
+        with self.assertRaises(ValueError):
+            lib.publicadas_de({'titulo': 'Comadres'}, i, d)
+
+
 if __name__ == '__main__':
     unittest.main()

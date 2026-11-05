@@ -7249,6 +7249,20 @@ try:
 except Exception as _e:
     fail(check, f'no pudo medirse: {_e}')
 
+check = 'cruce-sin-decidir'
+# Un festival por salir no pasa con cruces dudosos sin decidir (5 nov 2026:
+# «Comadres» era «Co Madres» y salió como obra nueva). lib.posibles_cruces.
+try:
+    _pos_po = _po.medir_posibles()
+    if _pos_po:
+        fail(check, '¿misma obra? ' + ' · '.join(
+            f'{f}: «{x[0]}» / «{x[2]}» ({x[1]}, {x[3]})' for f, v in _pos_po.items() for x in v[:5])
+            + ' — decidir con `misma_obra` o `no_heredar` en <fid>-correcciones.json')
+    else:
+        ok(check, 'ningún festival por salir tiene cruces dudosos sin decidir')
+except Exception as _e:
+    fail(check, f'no pudo medirse: {_e}')
+
 check = 'id-funcion-estable'
 # El id estable de la función (docs/FUNCION.md §11): contra main, ningún id
 # publicado desaparece sin registro ni cambia de función; ninguno se repite.
