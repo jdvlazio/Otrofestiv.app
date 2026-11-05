@@ -1,5 +1,5 @@
 {
- "_nota": "FESTICINERIO V — Festival Internacional de Cine de Riosucio (8–13 nov 2026, Teatro Cuesta). PRE-ONBOARDING: Selección Oficial del post p/DfVZajiG5qG (4 nov), 48 obras en 11 secciones, sin horas ni salas. Radar #1297.",
+ "_nota": "FESTICINERIO V — Festival Internacional de Cine de Riosucio (8–13 nov 2026, Teatro Cuesta). Selección Oficial: p/DfVZajiG5qG (4 nov, 48 obras en 11 secciones). Programación: p/DfXJjeBm1w7 (5 nov). Radar #1297.",
  "radar": 1297,
  "pasos": [
   {
@@ -9,11 +9,141 @@
   {
    "cmd": "python3 pipeline/enriquecer_catalogo.py festivals/staging/festicinerio-2026-catalogo.json",
    "que": "la cascada de TMDB y lo ya publicado → catálogo enriquecido"
+  },
+  {
+   "cmd": "python3 pipeline/festicinerio-2026-crudo.py",
+   "que": "las láminas de la programación + catálogo → crudo"
+  },
+  {
+   "cmd": "python3 pipeline/enriquecer.py festicinerio-2026 --posters",
+   "que": "TMDB verificado + la cascada + afiches a assets/"
+  },
+  {
+   "cmd": "python3 pipeline/ensamblar.py festicinerio-2026",
+   "que": "crudo + plan → build"
+  },
+  {
+   "cmd": "python3 pipeline/encuadrar-posters.py festicinerio-2026 --aplicar --desde festivals/staging/festicinerio-2026-build.json",
+   "que": "los afiches a 2:3"
+  },
+  {
+   "cmd": "python3 pipeline/festicinerio-2026-verificar.py",
+   "que": "el build contra las láminas, por un camino propio"
   }
  ],
  "_fuentes_versionadas": {
   "festivals/staging/festicinerio-2026-catalogo.json": "la selección publicada (48 obras); la leerá el crudo",
   "festivals/staging/festicinerio-2026-catalogo-enriquecido.json": "las fichas TMDB/cascada, que escribe el paso 2",
-  "festivals/staging/festicinerio-2026-correcciones.json": "fichas declaradas y sin_afiche; lo leen pipeline/preonboarding.py y, con la parrilla, enriquecer.py/ensamblar.py"
+  "festivals/staging/festicinerio-2026-correcciones.json": "fichas declaradas y sin_afiche; lo leen pipeline/preonboarding.py y, con la parrilla, enriquecer.py/ensamblar.py",
+  "festivals/staging/festicinerio-2026-venues-geo.json": "el pin, Google Maps 5 nov"
+ },
+ "fuentes_vivas": [],
+ "_nota_fuentes_vivas": "Sin fuente web viva: la programación sale de las láminas de Instagram. Los cambios los vigila el vigía.",
+ "festival": {
+  "crudo": "festivals/staging/festicinerio-2026-crudo.json",
+  "enriquecido": "festivals/staging/festicinerio-2026-enriquecido.json",
+  "geo": "festivals/staging/festicinerio-2026-venues-geo.json",
+  "_por_que_sedes": "Todas las proyecciones son en el Teatro Cuesta.",
+  "sedes": {
+   "Teatro Cuesta": [
+    "Teatro Cuesta - Riosucio",
+    ""
+   ]
+  },
+  "_por_que_secciones": "El nombre de la parrilla, tal cual. Emoji e inglés: capa nuestra.",
+  "secciones": {
+   "Largometrajes": {
+    "emoji": "🎬",
+    "en": "Feature Films",
+    "archetype": "Muestra / País"
+   },
+   "Largometraje Invitado": {
+    "emoji": "⭐",
+    "en": "Guest Feature",
+    "archetype": "Especiales / Eventos"
+   },
+   "Cortometraje Invitado": {
+    "emoji": "🌟",
+    "en": "Guest Short",
+    "archetype": "Especiales / Eventos"
+   },
+   "Filminuto": {
+    "emoji": "⏱️",
+    "en": "One-Minute Films",
+    "archetype": "Cortos / Programas"
+   },
+   "Conversatorio": {
+    "emoji": "💬",
+    "en": "Talk",
+    "archetype": "Charlas / Industria"
+   },
+   "Animación Internacional": {
+    "emoji": "🌍",
+    "en": "International Animation",
+    "archetype": "Cortos / Programas"
+   },
+   "Animación Nacional": {
+    "emoji": "✏️",
+    "en": "National Animation",
+    "archetype": "Cortos / Programas"
+   },
+   "Documental": {
+    "emoji": "📽️",
+    "en": "Documentary",
+    "archetype": "Cortos / Programas"
+   },
+   "Videoclip": {
+    "emoji": "🎵",
+    "en": "Music Video",
+    "archetype": "Cortos / Programas"
+   },
+   "Ficción Internacional": {
+    "emoji": "🌎",
+    "en": "International Fiction",
+    "archetype": "Cortos / Programas"
+   },
+   "Ficción Nacional": {
+    "emoji": "🎭",
+    "en": "National Fiction",
+    "archetype": "Cortos / Programas"
+   },
+   "Experimental": {
+    "emoji": "🧪",
+    "en": "Experimental",
+    "archetype": "Cortos / Programas"
+   },
+   "Selección Riosucio": {
+    "emoji": "😈",
+    "en": "Riosucio Selection",
+    "archetype": "Cortos / Programas"
+   },
+   "Panorama Regional": {
+    "emoji": "🏔️",
+    "en": "Regional Panorama",
+    "archetype": "Cortos / Programas"
+   },
+   "Historias de Carnaval Internacional": {
+    "emoji": "🎉",
+    "en": "International Carnival Stories",
+    "archetype": "Cortos / Programas"
+   }
+  },
+  "name": "FESTICINERIO",
+  "displayName": "FESTICINERIO",
+  "fullName": "FESTICINERIO V — Festival Internacional de Cine de Riosucio",
+  "shortName": "FESTICINERIO",
+  "tagline": "Festival Internacional de Cine de Riosucio",
+  "city": "Riosucio",
+  "country": "CO",
+  "dates": "8–13 NOV",
+  "dates_en": "NOV 8–13",
+  "year": 2026,
+  "timezoneOffset": "-05:00",
+  "storageKey": "festicinerio2026_",
+  "festivalStartStr": "2026-11-08T00:00:00",
+  "festivalEndStr": "2026-11-13T23:59:00",
+  "sharedSlotIsOneScreening": false,
+  "mes_es": "noviembre",
+  "dias_vacios": []
  }
 }

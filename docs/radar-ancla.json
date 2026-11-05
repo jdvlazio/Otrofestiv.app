@@ -5066,8 +5066,10 @@
    "fechas_2026": "8–13 NOV 2026 (5ª)",
    "web": "https://filmfreeway.com/FestivaldeCinedeRiosucio",
    "ig": "@festicinerio",
-   "estado": "radar",
-   "id_config": null,
+   "estado": "en_app",
+   "id_config": [
+    "festicinerio2026"
+   ],
    "issue": [
     1297
    ],
