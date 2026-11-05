@@ -10,6 +10,10 @@
  ],
  "aliases": [
   {
+   "titulo": "Baile del Caos",
+   "tipo": "festival"
+  },
+  {
    "titulo": "The Dance of Chaos",
    "idioma": "en",
    "tipo": "traduccion"
@@ -38,6 +42,7 @@
  ],
  "presentaciones": [
   "cinetoro-2026",
+  "festicinerio-2026",
   "filcmar-2026"
  ]
 }

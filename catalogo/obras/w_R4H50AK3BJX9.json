@@ -1,23 +1,32 @@
 {
  "id": "w_R4H50AK3BJX9",
- "titulo_original": "Árbol en pie",
+ "titulo_original": "Árbol en Pie",
  "anio": 2026,
  "paises": [
   "CO"
  ],
  "directores": [
-  "Red Comunitaria Trans",
   "Rodrigo Torrijos",
-  "Mapa López"
+  "Mapa Lopez"
+ ],
+ "aliases": [
+  {
+   "titulo": "Árbol en pie",
+   "tipo": "festival"
+  }
  ],
  "sinopsis": {
-  "es": "La Ceroxylon quindiuense, palma de cera del Quindío, es el árbol nacional de Colombia. Encarna una paradoja perfecta para un país marcado por el machismo, la misoginia y la transfobia, pues es una planta capaz de cambiar de sexo. Es una «palma trans» y la inspiración para que Magdalena Morales, líder trans afrocolombiana, se una a la Red Comunitaria Trans y siembre una semilla de luz rebelde en el horizonte de la música tradicional del Caribe colombiano."
+  "es": "La Ceroxylon quindiuense, palma de cera del Quindío, es el árbol nacional de Colombia. Encarna una paradoja perfecta para un país marcado por el machismo, la misoginia y la transfobia, pues es una planta capaz de cambiar de sexo. Es una «palma trans» y la inspiración para que Magdalena Morales, líder trans afrocolombiana, se una a la Red Comunitaria Trans y siembre una semilla de luz rebelde en el horizonte de la música tradicional del Caribe colombiano.",
+  "en": "“Ceroxylon quindiuense,” the Quindío wax palm, is Colombia’s national tree. It embodies a perfect paradox for a country steeped in machismo, misogyny, and transphobia, as it is a plant with the ability to change its sex. It is a trans palm and the inspiration for Magdalena Morales, an Afro-Colombian trans leader, to join the Trans Community Network and plant a seed of rebellious light on the horizon of traditional Colombian Caribbean music. Her song of redemption rises above desolation and celebrates social struggles, from Palestine, the Congo, and Sudan to the streets of Bogotá’s Santa Fe neighborhood, where her trans sisters stand firm."
  },
  "afiche": {
-  "archivo": "/assets/ficcali-2026/arbol-en-pie.jpg",
+  "archivo": "/assets/festicinerio-2026/arbol-en-pie.jpg",
   "veredicto": "oficial"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 1709833,
+  "letterboxd": "arbol-en-pie"
+ },
  "versiones": [
   {
    "etiqueta": "6 min",
@@ -25,6 +34,7 @@
   }
  ],
  "presentaciones": [
+  "festicinerio-2026",
   "ficcali-2026"
  ]
 }
