@@ -65,6 +65,8 @@ def main():
             if o.upper() not in txt(lam).replace('GAITAN', 'GAITÁN'):
                 sys.exit(f'✗ {k}: «{o}» no se lee en la lámina {lam}')
         pdf[k] = pdf[k] + list(obras)
+    # post de IG del 5 nov, más nuevo que el PDF: la función de hoy pasa a las 19:00 (afirmación, Juan)
+    pdf[('2026-11-05', '19:00')] = pdf.pop(('2026-11-05', '18:00'))
     b = json.load(open(BUILD, encoding='utf-8'))
     geo = json.load(open(GEO, encoding='utf-8'))
     fallos, n = [], 0
