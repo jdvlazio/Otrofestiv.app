@@ -35,7 +35,9 @@
   "festivals/staging/festicinerio-2026-catalogo.json": "la selección publicada (48 obras); la leerá el crudo",
   "festivals/staging/festicinerio-2026-catalogo-enriquecido.json": "las fichas TMDB/cascada, que escribe el paso 2",
   "festivals/staging/festicinerio-2026-correcciones.json": "fichas declaradas y sin_afiche; lo leen pipeline/preonboarding.py y, con la parrilla, enriquecer.py/ensamblar.py",
-  "festivals/staging/festicinerio-2026-venues-geo.json": "el pin, Google Maps 5 nov"
+  "festivals/staging/festicinerio-2026-venues-geo.json": "el pin, Google Maps 5 nov",
+  "festivals/staging/festicinerio-2026-afiches.json": "dos afiches oficiales 16:9; lo lee enriquecer.py",
+  "festivals/staging/festicinerio-2026-sinopsis.json": "sinopsis oficial declarada; la lee enriquecer.py"
  },
  "fuentes_vivas": [],
  "_nota_fuentes_vivas": "Sin fuente web viva: la programación sale de las láminas de Instagram. Los cambios los vigila el vigía.",

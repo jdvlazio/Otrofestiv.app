@@ -1,14 +1,26 @@
 {
  "id": "w_P1KYVC8FDSX2",
  "titulo_original": "Sangre Invisible",
- "anio": null,
- "paises": [],
- "directores": [],
+ "anio": 2026,
+ "paises": [
+  "CO"
+ ],
+ "directores": [
+  "Manuel Vélez Arboleda",
+  "Ana Bolena Meléndez"
+ ],
+ "sinopsis": {
+  "es": "Un documental de Revolución Roja sobre pobreza menstrual, dignidad y las mujeres que están transformando esta realidad en Colombia."
+ },
+ "afiche": {
+  "archivo": "/assets/festicinerio-2026/sangre-invisible.jpg",
+  "veredicto": "fotograma"
+ },
  "xref": {},
  "versiones": [
   {
-   "etiqueta": "40 min",
-   "duracion_min": 40
+   "etiqueta": "35 min",
+   "duracion_min": 35
   }
  ],
  "presentaciones": [

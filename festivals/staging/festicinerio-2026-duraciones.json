@@ -5,24 +5,6 @@
  },
  "duraciones": [
   {
-   "titulo": "En Bajo de 4 Puntas",
-   "min": 50,
-   "fuente": "p/DfXJjeBm1w7, lámina 02: 18:10 a 19:00",
-   "por_que": "sin duración publicada; la franja de la parrilla"
-  },
-  {
-   "titulo": "Sangre Invisible",
-   "min": 40,
-   "fuente": "p/DfXJjeBm1w7, lámina 06: 19:20 a 20:00",
-   "por_que": "sin duración publicada; la franja de la parrilla"
-  },
-  {
-   "titulo": "Simplicity of Chaos",
-   "min": 90,
-   "fuente": "estimación: última función del día",
-   "por_que": "largometraje sin duración publicada; el planificador la necesita"
-  },
-  {
    "titulo": "Conversatorio",
    "min": 60,
    "fuente": "estimación: última actividad del festival",
@@ -33,6 +15,60 @@
    "min": 17,
    "fuente": "SiembraFest 2026, la misma obra (TMDB 1565878)",
    "por_que": "el programa no la da por obra"
+  },
+  {
+   "titulo": "En Bajo de 4 Puntas",
+   "min": 51,
+   "fuente": "letterboxd.com/film/en-bajo-de-4-puntas",
+   "por_que": "investigación del 5 nov"
+  },
+  {
+   "titulo": "Sangre Invisible",
+   "min": 35,
+   "fuente": "revolucionroja.org/sangre-invisible",
+   "por_que": "investigación del 5 nov"
+  },
+  {
+   "titulo": "Simplicity of Chaos",
+   "min": 68,
+   "fuente": "vimeo.com/1152098813 (4066 s)",
+   "por_que": "investigación del 5 nov"
+  },
+  {
+   "titulo": "El Amor en los Tiempos de Cumbia",
+   "min": 7,
+   "fuente": "cinematecadebogota.gov.co/node/peliculas/3269",
+   "por_que": "investigación del 5 nov"
+  },
+  {
+   "titulo": "Fliehende Stürme: Puppen",
+   "min": 6,
+   "fuente": "youtube.com/watch?v=dNwvNiu9OUw (5:36)",
+   "por_que": "investigación del 5 nov"
+  },
+  {
+   "titulo": "Tower of Silence by Headless Buddha",
+   "min": 2,
+   "fuente": "youtube.com/watch?v=mlMnY2VIB4I (2:22)",
+   "por_que": "investigación del 5 nov"
+  },
+  {
+   "titulo": "Perros Guardianes",
+   "min": 12,
+   "fuente": "youtube.com/watch?v=zsTdxOOQyXc (11:55)",
+   "por_que": "investigación del 5 nov"
+  },
+  {
+   "titulo": "No te Despiertes",
+   "min": 9,
+   "fuente": "shortfilmwire.com (8:32); Letterboxd 9",
+   "por_que": "investigación del 5 nov"
+  },
+  {
+   "titulo": "Cathi e os Elefantes",
+   "min": 15,
+   "fuente": "letterboxd.com/film/cathi-e-os-elefantes",
+   "por_que": "investigación del 5 nov"
   }
  ]
 }

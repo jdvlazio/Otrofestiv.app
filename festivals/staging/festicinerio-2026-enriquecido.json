@@ -603,17 +603,18 @@
    "synopsis_en": "",
    "genero": "",
    "anio_tmdb": 2026,
-   "duracion_tmdb": 0,
+   "duracion_tmdb": 50,
    "pais_tmdb": "Colombia",
    "lbSlug": "en-bajo-de-4-puntas",
    "sinopsis": "Un documental que retrata la trayectoria de Luis Guillermo “Memo”, músico bogotano e integrante de agrupaciones emblemáticas como Los Rolling Ruanas y La Pambelé.",
    "_verificado": "declarada a mano: sinopsis y datos de la investigación del 4 nov",
    "_director": "Cristian Camilo Camargo C.",
    "_sondeado": "2026-11-05",
-   "pais_heredado": "Colombia",
    "_heredado": {
+    "duracion_tmdb": "catálogo w_P1KV7RHA2B9P (festicinerio-2026)",
     "pais_heredado": "catálogo w_P1KV7RHA2B9P (festicinerio-2026)"
-   }
+   },
+   "pais_heredado": "Colombia"
   },
   {
    "titulo": "HDLT",
@@ -1140,15 +1141,20 @@
   {
    "titulo": "Simplicity of Chaos",
    "sinopsis": "Explora la vida y obra del artista visual abstracto colombo-canadiense Carlos Delgado, desde su herencia indígena, el ritual y el Carnaval del Diablo de Riosucio.",
-   "anio": 2025,
+   "anio": 2026,
    "pais": "Colombia",
    "_verificado": "declarada a mano: sinopsis y datos de la investigación del 4 nov",
    "_director": "Sebastián Montiel",
    "_sondeado": "2026-11-05",
-   "pais_heredado": "Colombia",
+   "poster": "/assets/festicinerio-2026/simplicity-of-chaos.jpg",
+   "posterSource": "editorial",
+   "_afiche": "declarado: afiche oficial 16:9, https://www.sebastianmontiel.com/simplicity-of-chaos-documentary",
+   "duracion_tmdb": 90,
    "_heredado": {
+    "duracion_tmdb": "catálogo w_P1KW2DDX79RN (festicinerio-2026)",
     "pais_heredado": "catálogo w_P1KW2DDX79RN (festicinerio-2026)"
-   }
+   },
+   "pais_heredado": "Colombia"
   },
   {
    "titulo": "Sirena Mecánica",
@@ -1347,6 +1353,18 @@
    "pais_heredado": "Colombia",
    "_heredado": {
     "pais_heredado": "catálogo w_R4H50AK3BJX9 (festicinerio-2026, ficcali-2026)"
+   }
+  },
+  {
+   "titulo": "Sangre Invisible",
+   "poster": "/assets/festicinerio-2026/sangre-invisible.jpg",
+   "posterSource": "editorial",
+   "_afiche": "declarado: imagen oficial 16:9, https://www.revolucionroja.org/sangre-invisible",
+   "sinopsis": "Un documental de Revolución Roja sobre pobreza menstrual, dignidad y las mujeres que están transformando esta realidad en Colombia.",
+   "_sinopsis": "https://www.revolucionroja.org/sangre-invisible",
+   "duracion_tmdb": 40,
+   "_heredado": {
+    "duracion_tmdb": "catálogo w_P1KYVC8FDSX2 (festicinerio-2026)"
    }
   }
  ],
@@ -1918,17 +1936,18 @@
    "synopsis_en": "",
    "genero": "",
    "anio_tmdb": 2026,
-   "duracion_tmdb": 0,
+   "duracion_tmdb": 50,
    "pais_tmdb": "Colombia",
    "lbSlug": "en-bajo-de-4-puntas",
    "sinopsis": "Un documental que retrata la trayectoria de Luis Guillermo “Memo”, músico bogotano e integrante de agrupaciones emblemáticas como Los Rolling Ruanas y La Pambelé.",
    "_verificado": "declarada a mano: sinopsis y datos de la investigación del 4 nov",
    "_director": "Cristian Camilo Camargo C.",
    "_sondeado": "2026-11-05",
-   "pais_heredado": "Colombia",
    "_heredado": {
+    "duracion_tmdb": "catálogo w_P1KV7RHA2B9P (festicinerio-2026)",
     "pais_heredado": "catálogo w_P1KV7RHA2B9P (festicinerio-2026)"
-   }
+   },
+   "pais_heredado": "Colombia"
   },
   "HDLT": {
    "tmdb_id": 1796013,
@@ -2413,15 +2432,20 @@
   },
   "Simplicity of Chaos": {
    "sinopsis": "Explora la vida y obra del artista visual abstracto colombo-canadiense Carlos Delgado, desde su herencia indígena, el ritual y el Carnaval del Diablo de Riosucio.",
-   "anio": 2025,
+   "anio": 2026,
    "pais": "Colombia",
    "_verificado": "declarada a mano: sinopsis y datos de la investigación del 4 nov",
    "_director": "Sebastián Montiel",
    "_sondeado": "2026-11-05",
-   "pais_heredado": "Colombia",
+   "poster": "/assets/festicinerio-2026/simplicity-of-chaos.jpg",
+   "posterSource": "editorial",
+   "_afiche": "declarado: afiche oficial 16:9, https://www.sebastianmontiel.com/simplicity-of-chaos-documentary",
+   "duracion_tmdb": 90,
    "_heredado": {
+    "duracion_tmdb": "catálogo w_P1KW2DDX79RN (festicinerio-2026)",
     "pais_heredado": "catálogo w_P1KW2DDX79RN (festicinerio-2026)"
-   }
+   },
+   "pais_heredado": "Colombia"
   },
   "Sirena Mecánica": {
    "tmdb_id": 1668871,
@@ -2663,7 +2687,7 @@
    "fecha": "2026-11-05"
   },
   "Sangre Invisible": {
-   "director": "",
+   "director": "Manuel Vélez Arboleda, Ana Bolena Meléndez",
    "fecha": "2026-11-05"
   },
   "Tentado de Difunto": {

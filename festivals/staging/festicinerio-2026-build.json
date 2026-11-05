@@ -419,7 +419,9 @@
     },
     {
      "title": "El Amor en los Tiempos de Cumbia",
-     "director": "Violeta Barrios"
+     "director": "Violeta Barrios",
+     "duration": "7 min",
+     "_duracion_corregida": "cinematecadebogota.gov.co/node/peliculas/3269"
     },
     {
      "title": "Ornamento",
@@ -528,7 +530,9 @@
    "film_list": [
     {
      "title": "Fliehende Stürme: Puppen",
-     "director": "Sandra Rengifo"
+     "director": "Sandra Rengifo",
+     "duration": "6 min",
+     "_duracion_corregida": "youtube.com/watch?v=dNwvNiu9OUw (5:36)"
     },
     {
      "title": "Mucho Gusto",
@@ -558,7 +562,9 @@
     },
     {
      "title": "Tower of Silence by Headless Buddha",
-     "director": "Isabel Echeverri"
+     "director": "Isabel Echeverri",
+     "duration": "2 min",
+     "_duracion_corregida": "youtube.com/watch?v=mlMnY2VIB4I (2:22)"
     }
    ],
    "_fid": "f_9ebb3033d9",
@@ -625,7 +631,9 @@
      "synopsis_en": "Two young journalists, Kevin and Sara, investigate a Chinese businessman who is harming artisanal fishermen. Two weeks before the elections they witness his meeting with Méndez, the candidate leading the polls, while their editor asks them to cover the rallies.",
      "genre": "Drama",
      "year": 2026,
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "duration": "12 min",
+     "_duracion_corregida": "youtube.com/watch?v=zsTdxOOQyXc (11:55)"
     }
    ],
    "_fid": "f_e0f6743014",
@@ -663,6 +671,7 @@
    "year": 2026,
    "country": "Colombia",
    "flags": "🇨🇴",
+   "duration": "51 min",
    "_ancla": [
     "Teatro Cuesta - Riosucio",
     "2026-11-09",
@@ -685,11 +694,7 @@
    "tmdb_id": 1692952,
    "_fid": "f_44bd6d48c7",
    "id": "f_44bd6d48c7",
-   "duration": "50 min",
-   "_conservado": [
-    "duration"
-   ],
-   "_duracion_corregida": "p/DfXJjeBm1w7, lámina 02: 18:10 a 19:00"
+   "_duracion_corregida": "letterboxd.com/film/en-bajo-de-4-puntas"
   },
   {
    "title": "Diòba",
@@ -983,6 +988,9 @@
      "synopsis_lang": "es",
      "flags": "🇨🇴",
      "duration": "17 min",
+     "_conservado": [
+      "duration"
+     ],
      "_duracion_corregida": "SiembraFest 2026, la misma obra (TMDB 1565878)"
     }
    ],
@@ -1018,9 +1026,10 @@
    "type": "film",
    "section": "🎬 Largometrajes",
    "director": "Sebastián Montiel",
-   "year": 2025,
+   "year": 2026,
    "country": "Colombia",
    "flags": "🇨🇴",
+   "duration": "68 min",
    "_ancla": [
     "Teatro Cuesta - Riosucio",
     "2026-11-11",
@@ -1033,6 +1042,8 @@
    "has_qa": false,
    "synopsis": "Explora la vida y obra del artista visual abstracto colombo-canadiense Carlos Delgado, desde su herencia indígena, el ritual y el Carnaval del Diablo de Riosucio.",
    "synopsis_lang": "es",
+   "poster": "/assets/festicinerio-2026/simplicity-of-chaos.jpg",
+   "posterSource": "editorial",
    "_src": {
     "url": "https://www.instagram.com/p/DfXJjeBm1w7/",
     "lamina": "04.jpg",
@@ -1041,11 +1052,7 @@
    "is_free": true,
    "_fid": "f_506e054d4a",
    "id": "f_506e054d4a",
-   "duration": "90 min",
-   "_conservado": [
-    "duration"
-   ],
-   "_duracion_corregida": "estimación: última función del día"
+   "_duracion_corregida": "vimeo.com/1152098813 (4066 s)"
   },
   {
    "title": "Ficción Nacional",
@@ -1135,7 +1142,9 @@
      "country": "Colombia",
      "year": 2026,
      "synopsis_lang": "es",
-     "flags": "🇨🇴"
+     "flags": "🇨🇴",
+     "duration": "9 min",
+     "_duracion_corregida": "shortfilmwire.com (8:32); Letterboxd 9"
     },
     {
      "title": "Baño de Damas",
@@ -1275,7 +1284,9 @@
      "synopsis": "Cathi é uma pré-adolescente que ama elefantes, mas não gosta de carnaval. Até que algo muito especial cruza o seu caminho e transforma seu coração.",
      "genre": "Familia",
      "year": 2026,
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "duration": "15 min",
+     "_duracion_corregida": "letterboxd.com/film/cathi-e-os-elefantes"
     },
     {
      "title": "Debajo de esas Galeras",
@@ -1358,6 +1369,11 @@
    "title": "Sangre Invisible",
    "type": "film",
    "section": "🌟 Cortometraje Invitado",
+   "director": "Manuel Vélez Arboleda, Ana Bolena Meléndez",
+   "year": 2026,
+   "country": "Colombia",
+   "flags": "🇨🇴",
+   "duration": "35 min",
    "_ancla": [
     "Teatro Cuesta - Riosucio",
     "2026-11-13",
@@ -1368,6 +1384,10 @@
    "day_order": 5,
    "venue": "Teatro Cuesta - Riosucio",
    "has_qa": false,
+   "synopsis": "Un documental de Revolución Roja sobre pobreza menstrual, dignidad y las mujeres que están transformando esta realidad en Colombia.",
+   "synopsis_lang": "es",
+   "poster": "/assets/festicinerio-2026/sangre-invisible.jpg",
+   "posterSource": "editorial",
    "_src": {
     "url": "https://www.instagram.com/p/DfXJjeBm1w7/",
     "lamina": "06.jpg",
@@ -1376,11 +1396,7 @@
    "is_free": true,
    "_fid": "f_2a3e832ac5",
    "id": "f_2a3e832ac5",
-   "duration": "40 min",
-   "_conservado": [
-    "duration"
-   ],
-   "_duracion_corregida": "p/DfXJjeBm1w7, lámina 06: 19:20 a 20:00"
+   "_duracion_corregida": "revolucionroja.org/sangre-invisible"
   },
   {
    "title": "Conversatorio",
@@ -1414,8 +1430,8 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-05T09:35:10",
-  "plan_sha": "845252b3060139df",
+  "fecha": "2026-11-05T10:31:32",
+  "plan_sha": "96fb7fc23907f8da",
   "paso": 7,
   "cmd": "python3 pipeline/festicinerio-2026-verificar.py"
  }
