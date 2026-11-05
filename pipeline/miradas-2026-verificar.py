@@ -53,6 +53,9 @@ ALIAS_SEDE = {'Museo de Arte Moderno de Medellín - MAMM - Medellín': {'mamm', 
               'Coocine - Medellín': {'coocine'},
               'Comfama Otraparte - Medellín': {'otraparte'}}
 ACEPTADAS = {
+    ('A', '2026-11-05', '18:00', 'el rio de '): 'cambiada por «El tren fluvial»: lámina de IG del 5 nov p/DfX8owjDp7R (Juan, 5 nov)',
+    ('B', '2026-11-05', '18:00', 'el rio de '): 'cambiada por «El tren fluvial»: lámina de IG del 5 nov p/DfX8owjDp7R (Juan, 5 nov)',
+    ('C', '2026-11-05', '18:00', 'el rio de '): 'cambiada por «El tren fluvial»: lámina de IG del 5 nov p/DfX8owjDp7R (Juan, 5 nov)',
     ('A', '2026-10-28', '19:00', 'mama chila'): 'fuera de las fechas oficiales (_no_se_publica)',
     # la Cinemateca a Juan (28 oct) lo pasa a las 10:00 → miradas-2026-afirmaciones.json
     ('B', '2026-11-07', '14:00', 'laboratori'): 'movida a las 10:00 por la respuesta de la Cinemateca (28 oct, afirmación)',

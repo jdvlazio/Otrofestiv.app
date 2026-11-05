@@ -239,7 +239,8 @@ F = [
     peli(D5, '17:00', 'El segundo entierro de Alejandrino', S_ACC, COLOMBO, 'Sala 1', 76,
          sinopsis_nota='Proyección con Lengua de Señas Colombiana y audiodescripción.'),
     peli(D5, '18:00', 'Los nuevos', S_FAM, 'Junta de Acción Comunal El Faro', '', 77),
-    peli(D5, '18:00', 'El río de los espíritus', S_IB, CAPILLA, '', 77),
+    # lámina de IG del 5 nov (p/DfX8owjDp7R): a esta hora y sala va «El tren fluvial» (Juan, 5 nov)
+    peli(D5, '18:00', 'El tren fluvial', S_IB, CAPILLA, '', 75),
     prog(D5, '18:00', 'Perder la Escala: Experiencias Cine Domo para Otros Mundos', DOMO, S_DOMO, PLANETARIO, 'Domo', 77),
     ev(D5, '19:00', 'Letanía, performance audiovisual', 'concierto', S_EXP, PLANETARIO, 'Auditorio', 77, 60,
        _duracion_de='estimada: el PDF no da hora de fin',
