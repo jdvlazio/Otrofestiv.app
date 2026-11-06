@@ -2,10 +2,10 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "cinetoro.org — programacion-2026-2 (parrilla) + programas-2 (obras de cada programa) + el catálogo del pre-onboarding (fichas)",
-  "capturado": "2026-10-31",
+  "capturado": "2026-11-06",
   "ensamblador": "pipeline/ensamblar.py"
  },
- "_por_que_sedes": "Los lugares de la parrilla con su ciudad. «Por confirmar» y «POR DEFINIR» son rótulos del festival y se publican tal cual, con pin aproximado declarado. «Mambo House / Polideportivo (San Antonio)» (el intermedio musical) se publica en el Polideportivo, donde van los programas 3 y 4 que lo rodean: inferido.",
+ "_por_que_sedes": "Los lugares de la parrilla con su ciudad. «POR DEFINIR» es un rótulo del festival y se publica tal cual, con pin aproximado declarado. «Mambo House / Polideportivo (San Antonio)» (el intermedio musical) se publica en el Polideportivo, donde van los programas 3 y 4 que lo rodean: inferido.",
  "_por_que_secciones": "El rótulo de cada actividad en la parrilla, tal cual (Título por caja.py): «Selección oficial», «Cinetoro al aula», «Programación académica», «Especial». Emoji, inglés y arquetipo: propuesta para Juan.",
  "name": "CINETORO",
  "displayName": "CINETORO",
@@ -169,14 +169,15 @@
    "_match": "Google Maps: «San Antonio, Toro, Valle del Cauca» (el corregimiento)",
    "_nota": "PIN APROXIMADO: Maps no tiene el polideportivo de San Antonio (el «Polideportivo» que da está en el casco urbano de Toro); el pin es el centro del corregimiento, a ~30 m de Mambo's House: son dos sedes distintas del mismo corregimiento. Preguntar al festival."
   },
-  "Por confirmar - Toro": {
-   "short": "Por confirmar",
+  "Colegio agrícola - Toro": {
+   "short": "Colegio agrícola",
    "city": "Toro",
-   "lat": 4.6089432,
-   "lng": -76.0823845,
+   "lat": 4.6078384,
+   "lng": -76.0724431,
+   "address": "Cl. 18 #1-123, Toro, Valle del Cauca",
    "_prec": "manual",
-   "_match": "Google Maps: «Parque Principal de Toro»",
-   "_nota": "PIN APROXIMADO: la parrilla dice «Lugar: Por confirmar» (taller de archivo de Laura Alhach); el pin es el parque principal de Toro. Misma coordenada que «Por definir - Toro»: dos rótulos del festival, ninguno es un lugar."
+   "_match": "Google Maps: Institución Educativa Técnica Agropecuaria, Toro",
+   "_nota": "PIN APROXIMADO: la parrilla dice solo «Colegio agrícola»; que sea esta institución es inferencia."
   },
   "Coliseo Institución Educativa Fray José Joaquín Escobar - Toro": {
    "short": "Coliseo Institución Educativa Fray José Joaquín Escobar",
@@ -186,15 +187,6 @@
    "_prec": "manual",
    "_match": "Google Maps: «Institución Educativa Fray José Joaquín \"J.J.\" Escobar»",
    "_nota": "el pin es el colegio; el coliseo está en él"
-  },
-  "Vereda Patio Bonito - Toro": {
-   "short": "Vereda Patio Bonito",
-   "city": "Toro",
-   "lat": 4.5896948,
-   "lng": -76.1334538,
-   "_prec": "manual",
-   "_match": "Google Maps: «Patio bonito» (vereda, Toro)",
-   "_nota": "PIN APROXIMADO: la parrilla dice solo «Vereda de Patio bonito», sin el lugar exacto de la proyección."
   },
   "Por definir - Toro": {
    "short": "Por definir",
@@ -880,14 +872,14 @@
    "section": "🎓 Programación Académica",
    "duration": "180 min",
    "_ancla": [
-    "Por confirmar - Toro",
+    "Colegio agrícola - Toro",
     "2026-11-13",
     "15:00"
    ],
    "day": "2026-11-13",
    "time": "15:00",
    "day_order": 3,
-   "venue": "Por confirmar - Toro",
+   "venue": "Colegio agrícola - Toro",
    "event_kind": "taller",
    "is_recurring": true,
    "has_qa": false,
@@ -895,7 +887,7 @@
     "url": "https://cinetoro.org/programacion-2026-2/",
     "bloque": "TALLER archivo con el centro de memoria toro POR LAURA ALHACH",
     "fecha": "Viernes 13/11/2026 y sábado 14/11/2026",
-    "lugar": "Por confirmar",
+    "lugar": "Colegio agrícola",
     "hora": "Viernes de 15:00 a 18:00; Sábado de 09:00 a 12:00"
    },
    "registration_url": "https://ficcali.com/cine-expandido-2026/#talleres",
@@ -1129,14 +1121,14 @@
    "section": "🎓 Programación Académica",
    "duration": "180 min",
    "_ancla": [
-    "Por confirmar - Toro",
+    "Colegio agrícola - Toro",
     "2026-11-14",
     "09:00"
    ],
    "day": "2026-11-14",
    "time": "09:00",
    "day_order": 4,
-   "venue": "Por confirmar - Toro",
+   "venue": "Colegio agrícola - Toro",
    "event_kind": "taller",
    "is_recurring": true,
    "has_qa": false,
@@ -1144,7 +1136,7 @@
     "url": "https://cinetoro.org/programacion-2026-2/",
     "bloque": "TALLER archivo con el centro de memoria toro POR LAURA ALHACH",
     "fecha": "Viernes 13/11/2026 y sábado 14/11/2026",
-    "lugar": "Por confirmar",
+    "lugar": "Colegio agrícola",
     "hora": "Viernes de 15:00 a 18:00; Sábado de 09:00 a 12:00"
    },
    "registration_url": "https://ficcali.com/cine-expandido-2026/#talleres",
@@ -1154,42 +1146,6 @@
    "description_lang": "es",
    "_fid": "f_10d06e9c3e",
    "id": "f_10d06e9c3e"
-  },
-  {
-   "title": "Bajo una lluvia ajena",
-   "type": "film",
-   "section": "✨ Especial",
-   "director": "Martha Hincapie",
-   "year": 2024,
-   "country": "Colombia",
-   "flags": "🇨🇴",
-   "duration": "120 min",
-   "genre": "Documental",
-   "_ancla": [
-    "Vereda Patio Bonito - Toro",
-    "2026-11-14",
-    "14:00"
-   ],
-   "day": "2026-11-14",
-   "time": "14:00",
-   "day_order": 4,
-   "venue": "Vereda Patio Bonito - Toro",
-   "has_qa": false,
-   "poster": "/assets/cinetoro-2026/bajo-una-lluvia-ajena.jpg",
-   "posterSource": "tmdb",
-   "_src": {
-    "url": "https://cinetoro.org/programacion-2026-2/",
-    "bloque": "Bajo una lluvia ajena",
-    "fecha": "Sábado 14/11/2026",
-    "lugar": "Vereda de Patio bonito",
-    "hora": "14:00 a 16:00"
-   },
-   "is_free": true,
-   "lbSlug": "bajo-una-lluvia-ajena",
-   "tmdb_id": 1353088,
-   "synopsis_en": "After twenty years, the director returns to archives that she filmed on analogue tapes and proposes a game of glances where she constructs a reflection on various times: the life of her grandfather, who emigrated to Europe in the 1920s; the present day of the people who send messages to their loved ones with their desire to return to their land in Morocco, Palestine, Colombia, India; and the ghostly text of a young Ghanaian who is shipwrecked in the Mediterranean before reaching his destination.",
-   "_fid": "f_e3e323c6ee",
-   "id": "f_e3e323c6ee"
   },
   {
    "title": "El Azul del Horizonte",
@@ -1595,13 +1551,10 @@
    "id": "f_dc2a4b6a2b"
   }
  ],
- "_avisos_duracion": [
-  "«Bajo una lluvia ajena»: 120 min en el festival, 83 en TMDB"
- ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-31T12:56:40",
-  "plan_sha": "f6b51c1a2fb72461",
+  "fecha": "2026-11-06T05:19:56",
+  "plan_sha": "b2ac1cab28513174",
   "paso": 8,
   "cmd": "python3 pipeline/cinetoro-2026-verificar.py"
  }
