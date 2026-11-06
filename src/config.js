@@ -159,6 +159,11 @@ export const SECTION_EN = {
   '🏔️ Panorama Regional': 'Regional Panorama',
   '🎉 Historias de Carnaval Internacional': 'International Carnival Stories',
   '🎨 Cinetoro al Aula': 'Cinetoro in the Classroom',
+  '🎞️ Proyección de Película': 'Film Screening',
+  '🏆 La Canoa Dorada': 'La Canoa Dorada',
+  '🛠️ Talleres con Expertos': 'Workshops with Experts',
+  '💬 Conversatorios': 'Talks',
+  '✨ Actividades': 'Activities',
   '🎓 Programación Académica': 'Academic Program',
   '✨ Especial': 'Special',
   // Cortos Cali 2026
@@ -879,6 +884,26 @@ export const FESTIVAL_CONFIG={
     prioLimit:5,
     films:null,posters:null,lbSlugs:{}
   },
+  'fecibac2026': {
+    // EL NOMBRE es la sigla que usa el festival; el subtítulo la expande.
+    // keyArt PROVISIONAL: la pieza de inauguración de @festivaldecine.bc (p/DfVVAlWm8hG, 4 nov);
+    // el afiche oficial de la edición no apareció en sus fuentes públicas.
+    name:'FECIBAC',displayName:'FECIBAC',
+    fullName:'12 Festival de Cine del Bajo Cauca',shortName:'FECIBAC',
+    city:'Caucasia',country:'CO',
+    dates:'10–14 NOV',dates_en:'NOV 10–14',year:2026,timezoneOffset:'-05:00',
+    tagline:'Festival de Cine del Bajo Cauca',
+    keyArt:'/assets/keyart/fecibac2026.jpg',
+    instagram:'festivaldecine.bc', storageKey:'fecibac2026_',festivalStartStr:'2026-11-10T00:00:00',festivalEndStr:'2026-11-14T23:59:00',
+    festivalDates:{'2026-11-10':'2026-11-10','2026-11-11':'2026-11-11','2026-11-12':'2026-11-12','2026-11-13':'2026-11-13','2026-11-14':'2026-11-14'},
+    days:[{k:'2026-11-10',d:10,lbl:'MAR'},{k:'2026-11-11',d:11,lbl:'MIÉ'},{k:'2026-11-12',d:12,lbl:'JUE'},{k:'2026-11-13',d:13,lbl:'VIE'},{k:'2026-11-14',d:14,lbl:'SÁB'}],
+    dayKeys:['2026-11-10','2026-11-11','2026-11-12','2026-11-13','2026-11-14'],
+    dayShort:{'2026-11-10':'MAR 10','2026-11-11':'MIÉ 11','2026-11-12':'JUE 12','2026-11-13':'VIE 13','2026-11-14':'SÁB 14'},
+    dayShort_en:{'2026-11-10':'TUE 10','2026-11-11':'WED 11','2026-11-12':'THU 12','2026-11-13':'FRI 13','2026-11-14':'SAT 14'},
+    dayLong:{'2026-11-10':'Martes 10 de noviembre','2026-11-11':'Miércoles 11 de noviembre','2026-11-12':'Jueves 12 de noviembre','2026-11-13':'Viernes 13 de noviembre','2026-11-14':'Sábado 14 de noviembre'},
+    prioLimit:4,
+    films:null,posters:null,lbSlugs:{}
+  },
   'cinetoro2026': {
     // EL NOMBRE es el del festival (cinetoro.org); la edición va en fullName.
     // Días oficiales 10–15 NOV (Roldanillo 10, Toro 11–15). Lo de otras ciudades
@@ -1329,6 +1354,11 @@ export const SECTION_ARCHETYPES = {
   '🏔️ Panorama Regional': 'Cortos / Programas',
   '🎉 Historias de Carnaval Internacional': 'Cortos / Programas',
   '🎨 Cinetoro al Aula': 'Cortos / Programas',
+  '🎞️ Proyección de Película': 'Muestra / País',
+  '🏆 La Canoa Dorada': 'Competencia',
+  '🛠️ Talleres con Expertos': 'Charlas / Industria',
+  '💬 Conversatorios': 'Charlas / Industria',
+  '✨ Actividades': 'Especiales / Eventos',
   '🎓 Programación Académica': 'Charlas / Industria',
   '✨ Especial': 'Especiales / Eventos',
   // ── Cortos Cali 2026 · Cali ───────────────────────────────────────────

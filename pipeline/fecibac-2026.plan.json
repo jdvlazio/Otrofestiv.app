@@ -1,0 +1,115 @@
+{
+ "_nota": "12 FECIBAC, «Somos Chilapos». Caucasia, 10–14 nov 2026. Fuente: 4 láminas de @festivaldecine.bc, 5 nov 2026.",
+ "radar": 1318,
+ "pasos": [
+  {
+   "cmd": "python3 pipeline/radar.py fecibac-2026",
+   "que": "el volcado del radar #1318"
+  },
+  {
+   "cmd": "python3 pipeline/fecibac-2026-crudo.py",
+   "que": "las 4 láminas → crudo"
+  },
+  {
+   "cmd": "python3 pipeline/enriquecer.py fecibac-2026 --posters",
+   "que": "fichas declaradas + cascada + afiches; la sinopsis declarada de «Entre 2 Aguas» en festivals/staging/fecibac-2026-sinopsis.json"
+  },
+  {
+   "cmd": "python3 pipeline/ensamblar.py fecibac-2026",
+   "que": "crudo + plan → build"
+  },
+  {
+   "cmd": "python3 pipeline/encuadrar-posters.py fecibac-2026 --aplicar --desde festivals/staging/fecibac-2026-build.json",
+   "que": "los afiches a 2:3"
+  },
+  {
+   "cmd": "python3 pipeline/fecibac-2026-verificar.py",
+   "que": "el crudo contra el OCR de las láminas"
+  }
+ ],
+ "festival": {
+  "crudo": "festivals/staging/fecibac-2026-crudo.json",
+  "enriquecido": "festivals/staging/fecibac-2026-enriquecido.json",
+  "geo": "festivals/staging/fecibac-2026-venues-geo.json",
+  "sedes": {
+   "Playa Río Cauca": [
+    "Playa Río Cauca, Barrio Las Vegas - Caucasia",
+    ""
+   ],
+   "Cámara de Comercio": [
+    "Cámara de Comercio - Caucasia",
+    "Auditorio"
+   ],
+   "UdeA Campus Caucasia": [
+    "UdeA Campus Caucasia - Caucasia",
+    ""
+   ],
+   "Plazoleta UdeA": [
+    "UdeA Campus Caucasia - Caucasia",
+    "Plazoleta central"
+   ],
+   "Plaza de mercado": [
+    "Plaza de mercado - Caucasia",
+    ""
+   ],
+   "Bar Yenyeré": [
+    "Bar Yenyeré - Caucasia",
+    ""
+   ]
+  },
+  "secciones": {
+   "Película Inaugural": {
+    "emoji": "🎬",
+    "en": "Opening Film",
+    "archetype": "Apertura / Gala"
+   },
+   "Proyección de Película": {
+    "emoji": "🎞️",
+    "en": "Film Screening",
+    "archetype": "Muestra / País"
+   },
+   "La Canoa Dorada": {
+    "emoji": "🏆",
+    "en": "La Canoa Dorada",
+    "archetype": "Competencia"
+   },
+   "Talleres con Expertos": {
+    "emoji": "🛠️",
+    "en": "Workshops with Experts",
+    "archetype": "Charlas / Industria"
+   },
+   "Conversatorios": {
+    "emoji": "💬",
+    "en": "Talks",
+    "archetype": "Charlas / Industria"
+   },
+   "Actividades": {
+    "emoji": "✨",
+    "en": "Activities",
+    "archetype": "Especiales / Eventos"
+   }
+  },
+  "name": "FECIBAC",
+  "displayName": "FECIBAC",
+  "fullName": "12 Festival de Cine del Bajo Cauca",
+  "shortName": "FECIBAC",
+  "tagline": "Festival de Cine del Bajo Cauca",
+  "city": "Caucasia",
+  "country": "CO",
+  "dates": "10–14 NOV",
+  "dates_en": "NOV 10–14",
+  "year": 2026,
+  "timezoneOffset": "-05:00",
+  "storageKey": "fecibac2026_",
+  "festivalStartStr": "2026-11-10T00:00:00",
+  "festivalEndStr": "2026-11-14T23:59:00",
+  "sharedSlotIsOneScreening": false,
+  "mes_es": "noviembre"
+ },
+ "_fuentes_versionadas": {
+  "festivals/staging/fecibac-2026-radar.json": "el volcado del radar #1318",
+  "festivals/staging/fecibac-2026-correcciones.json": "fichas y sin_afiche con su porqué",
+  "festivals/staging/fecibac-2026-venues-geo.json": "los pines, Google Maps 5 nov",
+  "festivals/staging/fecibac-2026-sinopsis.json": "la sinopsis oficial de Entre 2 Aguas; lo lee enriquecer.py"
+ }
+}
