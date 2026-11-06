@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "cinetoro.org — programacion-2026-2 (parrilla) + programas-2 (obras de cada programa) + el catálogo del pre-onboarding (fichas)",
-  "capturado": "2026-10-31"
+  "capturado": "2026-11-06"
  },
  "funciones": [
   {
@@ -418,7 +418,7 @@
    "titulo": "Taller archivo con el Centro de Memoria Toro",
    "dia": "2026-11-13",
    "hora": "15:00",
-   "sede": "Por confirmar",
+   "sede": "Colegio agrícola",
    "sala": "",
    "seccion": "Programación Académica",
    "acceso": "Entrada libre con inscripción previa",
@@ -426,7 +426,7 @@
     "url": "https://cinetoro.org/programacion-2026-2/",
     "bloque": "TALLER archivo con el centro de memoria toro POR LAURA ALHACH",
     "fecha": "Viernes 13/11/2026 y sábado 14/11/2026",
-    "lugar": "Por confirmar",
+    "lugar": "Colegio agrícola",
     "hora": "Viernes de 15:00 a 18:00; Sábado de 09:00 a 12:00"
    },
    "registration_url": "https://ficcali.com/cine-expandido-2026/#talleres",
@@ -570,7 +570,7 @@
    "titulo": "Taller archivo con el Centro de Memoria Toro",
    "dia": "2026-11-14",
    "hora": "09:00",
-   "sede": "Por confirmar",
+   "sede": "Colegio agrícola",
    "sala": "",
    "seccion": "Programación Académica",
    "acceso": "Entrada libre con inscripción previa",
@@ -578,7 +578,7 @@
     "url": "https://cinetoro.org/programacion-2026-2/",
     "bloque": "TALLER archivo con el centro de memoria toro POR LAURA ALHACH",
     "fecha": "Viernes 13/11/2026 y sábado 14/11/2026",
-    "lugar": "Por confirmar",
+    "lugar": "Colegio agrícola",
     "hora": "Viernes de 15:00 a 18:00; Sábado de 09:00 a 12:00"
    },
    "registration_url": "https://ficcali.com/cine-expandido-2026/#talleres",
@@ -587,26 +587,6 @@
    "invitados": "Laura Alhach",
    "is_recurring": true,
    "duracion_min": 180,
-   "_duracion_de": "la franja «Hora:» de la parrilla"
-  },
-  {
-   "titulo": "Bajo una lluvia ajena",
-   "dia": "2026-11-14",
-   "hora": "14:00",
-   "sede": "Vereda Patio Bonito",
-   "sala": "",
-   "seccion": "Especial",
-   "acceso": "Entrada libre",
-   "_src": {
-    "url": "https://cinetoro.org/programacion-2026-2/",
-    "bloque": "Bajo una lluvia ajena",
-    "fecha": "Sábado 14/11/2026",
-    "lugar": "Vereda de Patio bonito",
-    "hora": "14:00 a 16:00"
-   },
-   "director": "Martha Hincapie",
-   "_nota": "«Largo invitado» en la parrilla",
-   "duracion_min": 120,
    "_duracion_de": "la franja «Hora:» de la parrilla"
   },
   {
@@ -878,6 +858,9 @@
   "Taller de animación Nicole Antebi: Postales infinitas": "«Evento exclusivo Univalle» (Cali, 9–11 nov)",
   "Taller AZMA / Creación de Contenido Inmersivo para Domo": "Cali (YAWA, 9–11 nov): fuera del criterio de Juan",
   "HABITAR EL ARCHIVO": "Palmira (6 nov)",
+  "MASTER CLASS Metodologías de investigación: archivos, circulación y programación cinematográfica": "Cali (Bellas Artes, 9 nov): fuera de los días oficiales",
+  "Proyección programa 9: líneas imaginarias – COTECNOVA con apoyo de asocuar": "Cartago (9 nov): fuera de los días oficiales y de la ciudad",
+  "Bajo una lluvia ajena": "la parrilla la pasó de Toro a Cartago (Santiago Plaza), fuera de la ciudad del festival; Juan la quitó (6 nov)",
   "LABORATORIO HIBRIDACIONES": "«Solo para participantes aceptados»"
  },
  "_catalogo_sin_funcion": [

@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "ensamblar.py: ids estables de las funciones (docs/FUNCION.md C1)",
-  "capturado": "2026-10-31"
+  "capturado": "2026-11-06"
  },
  "funciones": {
   "f_cacd2cabb6": {
@@ -82,7 +82,7 @@
    "titulo": "taller nicole antebi moviendo montanas"
   },
   "f_0d29fa04b1": {
-   "sede": "Por confirmar - Toro",
+   "sede": "Colegio agrícola - Toro",
    "dia": "2026-11-13",
    "hora": "15:00",
    "sala": "",
@@ -110,18 +110,11 @@
    "titulo": "performance vendran otros mares vendran otras barbaras a traves de los mares"
   },
   "f_10d06e9c3e": {
-   "sede": "Por confirmar - Toro",
+   "sede": "Colegio agrícola - Toro",
    "dia": "2026-11-14",
    "hora": "09:00",
    "sala": "",
    "titulo": "taller archivo con el centro de memoria toro"
-  },
-  "f_e3e323c6ee": {
-   "sede": "Vereda Patio Bonito - Toro",
-   "dia": "2026-11-14",
-   "hora": "14:00",
-   "sala": "",
-   "titulo": "bajo una lluvia ajena"
   },
   "f_38741dade9": {
    "sede": "Coliseo Institución Educativa Fray José Joaquín Escobar - Toro",
@@ -171,6 +164,14 @@
    "hora": "22:30",
    "sala": "",
    "titulo": "karaoke hibrido"
+  },
+  "f_e3e323c6ee": {
+   "sede": "Vereda Patio Bonito - Toro",
+   "dia": "2026-11-14",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "bajo una lluvia ajena",
+   "ausente": true
   },
   "f_db65aa409f": {
    "sede": "CCMI - Cali",

@@ -111,9 +111,6 @@ LECTURA = {
     'Performance: Vendrán otros mares: Vendrán otras bárbaras a través de los mares (Cristina Hadwa y Laura Alhach)': dict(
         titulo='Performance: Vendrán otros mares: Vendrán otras bárbaras a través de los mares',
         seccion=ESP, tipo='evento', event_kind='evento', invitados='Cristina Hadwa y Laura Alhach'),
-    'Bajo una lluvia ajena': dict(
-        titulo='Bajo una lluvia ajena', seccion=ESP, director='Martha Hincapie',
-        _nota='«Largo invitado» en la parrilla'),
     'El azul del horizonte': dict(titulo='El azul del horizonte', seccion=SEL, ancla='azul'),
     'PRENDER LA LUZ': dict(titulo='Prender la luz', seccion=SEL, ancla='luz'),
     'Mapping geografías en transformación por el colectivo AZMA': dict(
@@ -141,6 +138,9 @@ DESCARTADOS_JUAN = {
     'Taller de animación Nicole Antebi: Postales infinitas': '«Evento exclusivo Univalle» (Cali, 9–11 nov)',
     'Taller AZMA / Creación de Contenido Inmersivo para Domo': 'Cali (YAWA, 9–11 nov): fuera del criterio de Juan',
     'HABITAR EL ARCHIVO': 'Palmira (6 nov)',
+    'MASTER CLASS Metodologías de investigación: archivos, circulación y programación cinematográfica': 'Cali (Bellas Artes, 9 nov): fuera de los días oficiales',
+    'Proyección programa 9: líneas imaginarias – COTECNOVA con apoyo de asocuar': 'Cartago (9 nov): fuera de los días oficiales y de la ciudad',
+    'Bajo una lluvia ajena': 'la parrilla la pasó de Toro a Cartago (Santiago Plaza), fuera de la ciudad del festival; Juan la quitó (6 nov)',
     'LABORATORIO HIBRIDACIONES': '«Solo para participantes aceptados»',
 }
 
@@ -277,9 +277,8 @@ LUGARES = {
     # el intermedio va ENTRE los programas 3 y 4, que son en el Polideportivo
     # (19:00–20:00 y 21:00–22:00): se publica ahí (inferido, se pregunta)
     'Mambo House / Polideportivo (San Antonio)': 'Polideportivo San Antonio',
-    'Por confirmar': 'Por confirmar',
+    'Colegio agrícola': 'Colegio agrícola',
     'Coliseo: Institución Educativa Fray José Joaquín Escobar': 'Coliseo Institución Educativa Fray José Joaquín Escobar',
-    'Vereda de Patio bonito': 'Vereda Patio Bonito',
     'POR DEFINIR': 'Por definir',
     'Rosalia´s Garden': "Rosalia's Garden",
 }

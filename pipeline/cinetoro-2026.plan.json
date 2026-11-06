@@ -91,7 +91,7 @@
   "crudo": "festivals/staging/cinetoro-2026-crudo.json",
   "enriquecido": "festivals/staging/cinetoro-2026-enriquecido.json",
   "geo": "festivals/staging/cinetoro-2026-venues-geo.json",
-  "_por_que_sedes": "Los lugares de la parrilla con su ciudad. «Por confirmar» y «POR DEFINIR» son rótulos del festival y se publican tal cual, con pin aproximado declarado. «Mambo House / Polideportivo (San Antonio)» (el intermedio musical) se publica en el Polideportivo, donde van los programas 3 y 4 que lo rodean: inferido.",
+  "_por_que_sedes": "Los lugares de la parrilla con su ciudad. «POR DEFINIR» es un rótulo del festival y se publica tal cual, con pin aproximado declarado. «Mambo House / Polideportivo (San Antonio)» (el intermedio musical) se publica en el Polideportivo, donde van los programas 3 y 4 que lo rodean: inferido.",
   "sedes": {
    "Museo Rayo": [
     "Museo Rayo - Roldanillo",
@@ -117,16 +117,12 @@
     "Coliseo Institución Educativa Fray José Joaquín Escobar - Toro",
     ""
    ],
-   "Vereda Patio Bonito": [
-    "Vereda Patio Bonito - Toro",
-    ""
-   ],
    "Rosalia's Garden": [
     "Rosalia's Garden - Toro",
     ""
    ],
-   "Por confirmar": [
-    "Por confirmar - Toro",
+   "Colegio agrícola": [
+    "Colegio agrícola - Toro",
     ""
    ],
    "Por definir": [
