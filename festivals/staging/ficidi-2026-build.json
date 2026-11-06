@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "Calendario de programación IV FICIDI 2026 (PDF enviado por el festival)",
-  "capturado": "2026-11-04",
+  "capturado": "2026-11-05",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "radar": 1042,
@@ -197,7 +197,6 @@
     "sede": "Sala CIMU · Aduana de Barranquilla • 2:00 p. m. – 6:00 p. m."
    },
    "is_programa": true,
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -336,7 +335,50 @@
    "description": "Siete cortometrajes.",
    "description_lang": "es",
    "_fid": "f_1fc0e62b6b",
-   "id": "f_1fc0e62b6b"
+   "id": "f_1fc0e62b6b",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    }
+   }
   },
   {
    "title": "Día 1 · Primera Función",
@@ -362,7 +404,6 @@
     "sede": "Universidad Simón Bolívar · Salón del Mirador de la Bandera, azotea, sede 1 CRA 59 # 59 -132 • 2:00 p. m."
    },
    "is_programa": true,
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -531,7 +572,50 @@
     }
    ],
    "_fid": "f_a1fea83cb5",
-   "id": "f_a1fea83cb5"
+   "id": "f_a1fea83cb5",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    }
+   }
   },
   {
    "title": "La Memoria Revelada",
@@ -558,7 +642,6 @@
    },
    "premiere": "Inauguración",
    "is_programa": true,
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -744,7 +827,54 @@
    "description": "Homenaje a Víctor Ladrón de Guevara “La Loba” y Gustavo Turizo. Conversatorio “La Memoria Revelada” con Hemel Noñera, Danny González y Víctor Ladrón de Guevara “La Loba”. Muestra artística: “La memoria de Gustavo Turizo”.",
    "description_lang": "es",
    "_fid": "f_d8705865e7",
-   "id": "f_d8705865e7"
+   "id": "f_d8705865e7",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "qa_type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "premiere": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    }
+   }
   },
   {
    "title": "Día 2",
@@ -759,7 +889,7 @@
     "18:00"
    ],
    "day": "2026-11-05",
-   "time": "18:00",
+   "time": "19:00",
    "day_order": 2,
    "venue": "La Maloca Cultural - Barranquilla",
    "has_qa": false,
@@ -769,7 +899,6 @@
     "sede": "Maloca Cultural CARRERA 46 # 79-82 • 6:00 p. m."
    },
    "is_programa": true,
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -1004,7 +1133,47 @@
     }
    ],
    "_fid": "f_e81e7f21e9",
-   "id": "f_e81e7f21e9"
+   "id": "f_e81e7f21e9",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "time": {
+     "tipo": "juan",
+     "fecha": "2026-11-05",
+     "frase": "las proyecciones de hoy serán a las 7 p.m. en la Maloca Cultural"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    }
+   }
   },
   {
    "title": "Día 3 · Primera Función",
@@ -1030,7 +1199,6 @@
     "sede": "Universidad de la Costa Bloque 11 piso 3 Sala de Conferencias CALLE 52 # 56A-75 • 1:00 p. m."
    },
    "is_programa": true,
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -1271,7 +1439,50 @@
     }
    ],
    "_fid": "f_7fcfdb61fb",
-   "id": "f_7fcfdb61fb"
+   "id": "f_7fcfdb61fb",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    }
+   }
   },
   {
    "title": "Día 3 · Segunda Función",
@@ -1297,7 +1508,6 @@
     "sede": "Universidad de la Costa Bloque 11 piso 3 Sala de Conferencias CALLE 52 # 56A-75 • 6:00 p. m."
    },
    "is_programa": true,
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -1581,7 +1791,50 @@
     }
    ],
    "_fid": "f_a6c79ab1b8",
-   "id": "f_a6c79ab1b8"
+   "id": "f_a6c79ab1b8",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    }
+   }
   },
   {
    "title": "Revelar(se)",
@@ -1608,7 +1861,6 @@
     "sede": "Auditorio EDA Fabrica de Cultura CALLE 40 CON CARRERA 50 ESQUINA• 9:00 a. m."
    },
    "is_programa": true,
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -1759,12 +2011,59 @@
    "description": "Incluye “La otra mitad del dolor” + conversatorio con el equipo realizador Tonnie Zanabria y Ana Sofía Ávila desde México; y “NO” + conversatorio con el director Luis Daniel Abril desde Bogotá, Colombia. También conversan Camila Elizalde, Samuel Murillo y Fungui Ospina, desde Cali, equipo de “¿Quién se lleva a las estrellas?”.",
    "description_lang": "es",
    "_fid": "f_148464561f",
-   "id": "f_148464561f"
+   "id": "f_148464561f",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "qa_type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    }
+   }
   }
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-04T17:39:58",
+  "fecha": "2026-11-05T18:42:25",
   "plan_sha": "7f1d2e48ae2becc3",
   "paso": 9,
   "cmd": "python3 pipeline/ficidi-2026-verificar.py"

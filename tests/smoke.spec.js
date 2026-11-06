@@ -67,7 +67,7 @@ test('T136 — un visitante sin sesión solo pide el consenso público, una vez 
         fest: (() => { try { return JSON.parse(r.request().postData() || '{}').p_festival; } catch (e) { return null; } })() });
     }
   });
-  await enterFestival(page, 'cinemancia2026', '2026-09-04T10:00:00-05:00');
+  await enterFestival(page, 'cinemancia2026', '2026-09-04T10:00:00-05:00', { consensoReal: true });
   await page.waitForTimeout(3000);
   const conSesion = await page.evaluate(() => !!(typeof _sbUser !== 'undefined' && _sbUser));
   expect(conSesion, 'el visitante del test no tiene sesión — es el caso del bug').toBe(false);

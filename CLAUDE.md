@@ -112,6 +112,7 @@ deliberada existe la etiqueta `frontera-ok`.
 | `anibia2026` | Anibia | Bogotá | 20 OCT–1 NOV | Recién terminado |
 | `guatape2026` | Guatapé Film Fest | Guatapé | 21–25 OCT | Recién terminado |
 | `festicinerio2026` | FESTICINERIO | Riosucio | 8–13 NOV | **Próximo / activo** |
+| `fecibac2026` | FECIBAC | Caucasia | 10–14 NOV | **Próximo / activo** |
 | `cinetoro2026` | CINETORO | Toro | 10–15 NOV | **Próximo / activo** |
 | `cortoscali2026` | Cortos Cali | Cali | 27–30 OCT | Recién terminado |
 | `biff2026` | BIFF | Bogotá | 8–14 OCT | Recién terminado |
