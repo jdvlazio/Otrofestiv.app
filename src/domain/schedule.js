@@ -576,6 +576,9 @@ export function verifyPlan(schedule, opts){
       // consigo mismas y reportarlo dos veces enmascara el hallazgo real.
       if(sameEntry(a,b)){ v.push({kind:'duplicado', title:a._title||a.title||'', day:a.day, time:a.time}); continue; }
       if(a._squeezed||b._squeezed) continue;
+      // Sesiones de un mismo taller el mismo día (14–16 y 16–18, Miradas): se toman
+      // en bloque, y el margen entre funciones no aplica entre ellas.
+      if(a.is_recurring&&b.is_recurring&&(a._title||a.title)===(b._title||b.title)) continue;
       if(screensConflict(a,b)) v.push({kind:'conflicto', title:a._title||a.title, with:b._title||b.title});
     }
   }
