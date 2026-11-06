@@ -1,10 +1,10 @@
 {
  "_provenance": {
   "fuente": "issue de radar #1088 — https://github.com/jdvlazio/Otrofestiv.app/issues/1088",
-  "capturado": "2026-11-05",
+  "capturado": "2026-11-04",
   "titulo": "RADAR: Miradas Medellín — Festival de Cine y Artes Audiovisuales, Medellín, 3–8 NOV 2026",
   "estado": "OPEN",
-  "comentarios": 17
+  "comentarios": 15
  },
  "issue": 1088,
  "titulo": "RADAR: Miradas Medellín — Festival de Cine y Artes Audiovisuales, Medellín, 3–8 NOV 2026",
@@ -70,14 +70,6 @@
   {
    "fecha": "2026-11-04",
    "cuerpo": "Vigía 4 nov. Tres horas de IG que no coinciden con la app. Ninguna aplicada.\n\n- «Narciso», vie 6 nov, Biblioteca Comfama Bello: la app dice 19:00 y [p/DfTkDBonHQ9](https://www.instagram.com/p/DfTkDBonHQ9/) lámina 3 dice 4:00 p. m. Los 19:00 son una afirmación `tipo: juan` del 2 nov (post del 1 nov), que le gana a `festival-ig`.\n- «Relicto», sáb 7 nov, Coocine sala 0: la app dice 14:00 y [p/DfUg6vuDC2o](https://www.instagram.com/p/DfUg6vuDC2o/) lámina 7 dice 5:00 p. m. El modelo da empate con el PDF y conflicto.\n- «Uno vuelve siempre», jue 5 nov, Parque de los Deseos: la app dice 18:00 (reel del 2 nov) y [p/DfTHoSpCYmi](https://www.instagram.com/p/DfTHoSpCYmi/) dice 6:30 p. m. Por la regla de la hora más temprana sigue en 18:00.\n\nLas dos primeras pasaron la triple lectura; las frenó el paso del `--probar`.\n"
-  },
-  {
-   "fecha": "2026-11-05",
-   "cuerpo": "Vigía 5 nov 09:00. Cine en el Metrocable, vie 6 nov, Estación Trece de Noviembre (https://www.instagram.com/p/DfWBBYaF-JI/): la lámina dice 6:00 p. m.; el pie y el PDF dicen 5:00 p. m. Por la regla de la hora más temprana queda 17:00, como está en la app. La lámina agrega «con charla-taller» para «Luis Antonio»; la app tiene has_qa en false. Sin aplicar."
-  },
-  {
-   "fecha": "2026-11-05",
-   "cuerpo": "Vigía 5 nov 17:00. Carrusel de hoy https://www.instagram.com/p/DfX8owjDp7R/ («Diez películas»): 8 de sus 10 láminas dan funciones que no coinciden con el PDF, ni con las parrillas por sala del festival (DfSechJlOAh, DfTkDBonHQ9, DfR1O5YD_SK), ni con la app. No se aplicó nada: lo decide Juan.\n"
   }
  ]
 }
