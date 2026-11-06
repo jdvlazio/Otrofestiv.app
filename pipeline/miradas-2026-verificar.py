@@ -59,6 +59,9 @@ ACEPTADAS = {
     ('B', '2026-11-07', '14:00', 'cinemateca'): 'movida a las 10:00 por la respuesta de la Cinemateca (28 oct, afirmación)',
     ('C', '2026-11-07', '14:00', 'laboratori'): 'movida a las 10:00 por la respuesta de la Cinemateca (28 oct, afirmación)',
     # la lámina de IG del 4 nov (p/DfUg6vuDC2o, más nueva que el PDF) la mueve a las 17:00 → afirmaciones
+    ('A', '2026-11-07', '14:00', 'relicto'): 'movida a las 17:00 por la lámina del 4 nov de IG (afirmación)',
+    ('B', '2026-11-07', '14:00', 'relicto'): 'movida a las 17:00 por la lámina del 4 nov de IG (afirmación)',
+    ('C', '2026-11-07', '14:00', 'relicto'): 'movida a las 17:00 por la lámina del 4 nov de IG (afirmación)',
     # la lámina de IG del 1 nov (p/DfNwV3QiVe6, más nueva que el PDF) las mueve → afirmaciones (Juan, 2 nov)
     ('A', '2026-11-04', '10:00', 'papaya'): 'movida por la lámina 1 nov de IG (afirmación, Juan 2 nov)',
     ('A', '2026-11-06', '16:00', 'narciso'): 'movida por la lámina 1 nov de IG (afirmación, Juan 2 nov)',
