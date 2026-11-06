@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "https://ficfusa.com/programacion/",
-  "capturado": "2026-11-04",
+  "capturado": "2026-11-06",
   "publicado": "2026-11-03T01:19:37",
   "metodo": "HTML de la página; a mano"
  },
@@ -15,10 +15,28 @@
    "acceso": "Entrada gratuita",
    "obras": [
     "Sinfonía del viaje a la luna",
-    "Akababuru: expresión de asombro",
     "La gran hazaña",
+    "Un trato Brillante",
     "Chicha la chicharra",
+    "Akababuru: expresión de asombro",
+    "Ir Hacia adentro",
+    "Sukua",
     "Tuktu padre maíz"
+   ],
+   "fin": "12:00"
+  },
+  {
+   "fecha": "2026-11-11",
+   "hora": "14:30",
+   "fin": "16:00",
+   "sede": "Quinta Balmoral",
+   "titulo": "Serie Campe-Cine",
+   "formato": "Proyección y conversatorio",
+   "obras": [
+    "Tejiendo Herencia",
+    "Vuelo de una Glondrina",
+    "huellas",
+    "Hytcha"
    ]
   },
   {
@@ -32,11 +50,22 @@
   },
   {
    "fecha": "2026-11-11",
+   "hora": "16:30",
+   "fin": "17:30",
+   "sede": "Quinta Balmoral",
+   "titulo": "El reto del audio inmersivo en el cine colombiano",
+   "formato": "Charla",
+   "invitados": "Por Luis Santiesteban",
+   "obras": []
+  },
+  {
+   "fecha": "2026-11-11",
    "hora": "19:00",
    "sede": "Quinta Balmoral",
-   "titulo": "Muestra Especial Bogotá Experimental",
+   "titulo": "Curaduría Invitada: Festival de Cine Experimental de Bogotá",
    "formato": "Proyección y Conversatorio",
-   "obras": []
+   "obras": [],
+   "invitados": "Con Julián Medina, director artístico y conceptual del festival"
   },
   {
    "fecha": "2026-11-14",
