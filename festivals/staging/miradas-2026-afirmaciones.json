@@ -88,23 +88,6 @@
     "fecha": "2026-11-02"
    },
    "evidencia": "lámina 5 de la grilla del MAMM (＠cinematecademedellin, 2 nov): «Función con conversación» sobre «Relicto». Leído por Vision, Tesseract y a ojo (pipeline/ig-lecturas.py --dato: tres métodos coinciden). Post del 2 nov, más nuevo que el PDF."
-  },
-  {
-   "ancla": {
-    "sede": "Coocine - Medellín",
-    "dia": "2026-11-07",
-    "hora": "14:00"
-   },
-   "funcion": "f_b5649974c3",
-   "casilla": "time",
-   "valor": "17:00",
-   "contra": "14:00",
-   "fuente": {
-    "tipo": "juan",
-    "frase": "El Instagram si es más reciente, es más actualizado que la web",
-    "fecha": "2026-10-27"
-   },
-   "evidencia": "https://www.instagram.com/p/DfUg6vuDC2o/ (4 nov 2026) lámina 06.jpg, a ojo: «Relicto · Sábado 7 de noviembre · 5:00 p. m. · Coocine, sala 0». El PDF del 20 oct decía 14:00. IG más nuevo manda."
   }
  ]
 }

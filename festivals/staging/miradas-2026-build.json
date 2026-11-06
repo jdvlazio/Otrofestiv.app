@@ -7234,7 +7234,7 @@
     "14:00"
    ],
    "day": "2026-11-07",
-   "time": "17:00",
+   "time": "14:00",
    "day_order": 4,
    "venue": "Coocine - Medellín",
    "sala": "Sala 0",
@@ -7261,9 +7261,8 @@
      "fecha": "2026-11-06"
     },
     "time": {
-     "tipo": "juan",
-     "fecha": "2026-10-27",
-     "frase": "El Instagram si es más reciente, es más actualizado que la web"
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
     },
     "venue": {
      "tipo": "festival-web",
@@ -9917,7 +9916,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-06T08:30:18",
+  "fecha": "2026-11-06T08:51:48",
   "plan_sha": "e0e0ab6cfccb9084",
   "paso": 10,
   "cmd": "python3 pipeline/miradas-2026-verificar.py"
