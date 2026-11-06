@@ -886,14 +886,13 @@ export const FESTIVAL_CONFIG={
   },
   'fecibac2026': {
     // EL NOMBRE es la sigla que usa el festival; el subtítulo la expande.
-    // keyArt PROVISIONAL: la pieza de inauguración de @festivaldecine.bc (p/DfVVAlWm8hG, 4 nov);
-    // el afiche oficial de la edición no apareció en sus fuentes públicas.
+    // keyArt: el afiche oficial de @festivaldecine.bc (p/DesZ7arBwa_), estirado a 400×600.
     name:'FECIBAC',displayName:'FECIBAC',
     fullName:'12 Festival de Cine del Bajo Cauca',shortName:'FECIBAC',
     city:'Caucasia',country:'CO',
     dates:'10–14 NOV',dates_en:'NOV 10–14',year:2026,timezoneOffset:'-05:00',
     tagline:'Festival de Cine del Bajo Cauca',
-    keyArt:'/assets/keyart/fecibac2026.jpg',
+    keyArt:'/assets/keyart/fecibac2026-v2.jpg',
     instagram:'festivaldecine.bc', storageKey:'fecibac2026_',festivalStartStr:'2026-11-10T00:00:00',festivalEndStr:'2026-11-14T23:59:00',
     festivalDates:{'2026-11-10':'2026-11-10','2026-11-11':'2026-11-11','2026-11-12':'2026-11-12','2026-11-13':'2026-11-13','2026-11-14':'2026-11-14'},
     days:[{k:'2026-11-10',d:10,lbl:'MAR'},{k:'2026-11-11',d:11,lbl:'MIÉ'},{k:'2026-11-12',d:12,lbl:'JUE'},{k:'2026-11-13',d:13,lbl:'VIE'},{k:'2026-11-14',d:14,lbl:'SÁB'}],
