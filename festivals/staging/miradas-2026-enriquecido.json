@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, emparejado con ficha_verifica() (director + año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-11-06"
+  "capturado": "2026-11-05"
  },
  "obras": [
   {
@@ -73,6 +73,25 @@
    "_director": "Mariana Rondón, Marité Ugás",
    "_sondeado": "2026-10-27",
    "poster": "/assets/miradas-2026/aun-es-de-noche-en-caracas.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Club sándwich",
+   "tmdb_id": 213983,
+   "titulo_original": "Club sándwich",
+   "poster_path": "/yVRIfdmOn19Vi7UsKjFOCc8uu6u.jpg",
+   "synopsis_es": "Paloma y Héctor, madre e hijo adolescente de 15 años, mantienen una relación muy intensa y especial. Cuando pasan unas vacaciones en la costa, Héctor conoce a Jazmín, una adolescente con la que descubre los primeros destellos del amor y el sexo.",
+   "synopsis_en": "While vacationing at a beachside resort, a single mother faces inevitable separation anxiety when her 15-year-old son — who is also her best friend — discovers magical chemistry with a girl his own age.",
+   "genero": "Comedia",
+   "anio_tmdb": 2013,
+   "duracion_tmdb": 82,
+   "pais_tmdb": "Mexico",
+   "lbSlug": "club-sandwich",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Club sándwich",
+   "_director": "Fernando Eimbcke",
+   "_sondeado": "2026-10-27",
+   "poster": "/assets/miradas-2026/club-sandwich.jpg",
    "posterSource": "tmdb"
   },
   {
@@ -386,6 +405,26 @@
    "_afiche": "declarado: TMDB 1616865, póster es /5aYMbnZEGwKp2QnypVZBFtspgam.jpg — «EL LEÓN · una película de Diana Bustamante» (Cinéma du Réel 2026)",
    "poster": "/assets/miradas-2026/el-leon.jpg",
    "posterSource": "oficial"
+  },
+  {
+   "titulo": "El río de los espíritus",
+   "tmdb_id": 1599556,
+   "titulo_original": "El Río de los Espíritus",
+   "poster_path": "/gUb93jn9WqwjJQajfWNpU6uOzVv.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "To stem the pollution flowing into the Kapawi River, the indigenous people would need to take the progressive step of switching to solar-powered canoes. The legend of the fish that inhabits the deep waters guides Luciano in his drive to convince them that this ecological transition is necessary, and to maintain peace between the villages that line the banks.",
+   "genero": "Documental",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 61,
+   "pais_tmdb": "Ecuador, United States of America",
+   "title_en": "River of Spirits",
+   "lbSlug": "river-of-spirits",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "El río de los espíritus",
+   "_director": "Colectivo Tawna, Nase Lino Sumpinanch",
+   "_sondeado": "2026-10-27",
+   "poster": "/assets/miradas-2026/el-rio-de-los-espiritus.jpg",
+   "posterSource": "tmdb"
   },
   {
    "titulo": "El segundo entierro de Alejandrino",
@@ -1972,6 +2011,24 @@
    "poster": "/assets/miradas-2026/aun-es-de-noche-en-caracas.jpg",
    "posterSource": "tmdb"
   },
+  "Club sándwich": {
+   "tmdb_id": 213983,
+   "titulo_original": "Club sándwich",
+   "poster_path": "/yVRIfdmOn19Vi7UsKjFOCc8uu6u.jpg",
+   "synopsis_es": "Paloma y Héctor, madre e hijo adolescente de 15 años, mantienen una relación muy intensa y especial. Cuando pasan unas vacaciones en la costa, Héctor conoce a Jazmín, una adolescente con la que descubre los primeros destellos del amor y el sexo.",
+   "synopsis_en": "While vacationing at a beachside resort, a single mother faces inevitable separation anxiety when her 15-year-old son — who is also her best friend — discovers magical chemistry with a girl his own age.",
+   "genero": "Comedia",
+   "anio_tmdb": 2013,
+   "duracion_tmdb": 82,
+   "pais_tmdb": "Mexico",
+   "lbSlug": "club-sandwich",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Club sándwich",
+   "_director": "Fernando Eimbcke",
+   "_sondeado": "2026-10-27",
+   "poster": "/assets/miradas-2026/club-sandwich.jpg",
+   "posterSource": "tmdb"
+  },
   "Compraventa": {
    "tmdb_id": 1469673,
    "titulo_original": "Compraventa",
@@ -2242,6 +2299,25 @@
    "_afiche": "declarado: TMDB 1616865, póster es /5aYMbnZEGwKp2QnypVZBFtspgam.jpg — «EL LEÓN · una película de Diana Bustamante» (Cinéma du Réel 2026)",
    "poster": "/assets/miradas-2026/el-leon.jpg",
    "posterSource": "oficial"
+  },
+  "El río de los espíritus": {
+   "tmdb_id": 1599556,
+   "titulo_original": "El Río de los Espíritus",
+   "poster_path": "/gUb93jn9WqwjJQajfWNpU6uOzVv.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "To stem the pollution flowing into the Kapawi River, the indigenous people would need to take the progressive step of switching to solar-powered canoes. The legend of the fish that inhabits the deep waters guides Luciano in his drive to convince them that this ecological transition is necessary, and to maintain peace between the villages that line the banks.",
+   "genero": "Documental",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 61,
+   "pais_tmdb": "Ecuador, United States of America",
+   "title_en": "River of Spirits",
+   "lbSlug": "river-of-spirits",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "El río de los espíritus",
+   "_director": "Colectivo Tawna, Nase Lino Sumpinanch",
+   "_sondeado": "2026-10-27",
+   "poster": "/assets/miradas-2026/el-rio-de-los-espiritus.jpg",
+   "posterSource": "tmdb"
   },
   "El segundo entierro de Alejandrino": {
    "tmdb_id": 760722,

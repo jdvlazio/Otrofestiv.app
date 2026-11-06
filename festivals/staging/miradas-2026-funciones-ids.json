@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "ensamblar.py: ids estables de las funciones (docs/FUNCION.md C1)",
-  "capturado": "2026-11-05"
+  "capturado": "2026-10-27"
  },
  "funciones": {
   "f_2881acf478": {
@@ -247,7 +247,7 @@
    "dia": "2026-11-05",
    "hora": "18:00",
    "sala": "",
-   "titulo": "el tren fluvial"
+   "titulo": "el rio de los espiritus"
   },
   "f_ccdd8e4a83": {
    "sede": "Librería Antimateria - Medellín",
@@ -394,7 +394,7 @@
    "dia": "2026-11-06",
    "hora": "16:00",
    "sala": "",
-   "titulo": "nuestro secreto"
+   "titulo": "narciso"
   },
   "f_1d00949d68": {
    "sede": "Centro de Desarrollo Cultural de Moravia - Medellín",
@@ -402,13 +402,6 @@
    "hora": "16:00",
    "sala": "Auditorio",
    "titulo": "uno vuelve siempre"
-  },
-  "f_f76d6ba8c7": {
-   "sede": "Museo de Arte Moderno de Medellín - MAMM - Medellín",
-   "dia": "2026-11-06",
-   "hora": "16:30",
-   "sala": "Teatro MAMM",
-   "titulo": "ivan hadoum"
   },
   "f_adf4dcb1ea": {
    "sede": "Parque Explora - Medellín",
@@ -492,7 +485,7 @@
    "dia": "2026-11-06",
    "hora": "19:30",
    "sala": "Sala 1",
-   "titulo": "relicto"
+   "titulo": "iluminada"
   },
   "f_398d47d954": {
    "sede": "Museo de Arte Moderno de Medellín - MAMM - Medellín",
@@ -655,6 +648,13 @@
    "sala": "Cinemateca móvil, sala de cine",
    "titulo": "especiales cinemateca con natalia reyes"
   },
+  "f_c9bb3594f8": {
+   "sede": "Comfama La Capilla - Medellín",
+   "dia": "2026-11-07",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "ivan hadoum"
+  },
   "f_92206ec51c": {
    "sede": "Librería Antimateria - Medellín",
    "dia": "2026-11-07",
@@ -690,19 +690,19 @@
    "sala": "Cinemateca móvil",
    "titulo": "aun es de noche en caracas"
   },
+  "f_3093e1c9e4": {
+   "sede": "Cineprox Las Américas - Medellín",
+   "dia": "2026-11-07",
+   "hora": "19:00",
+   "sala": "Sala 3",
+   "titulo": "club sandwich"
+  },
   "f_822db3367a": {
    "sede": "Finca Agroturística El Encanto de Mis Abuelos - Medellín",
    "dia": "2026-11-07",
    "hora": "19:00",
    "sala": "",
    "titulo": "el telefono morado"
-  },
-  "f_3093e1c9e4": {
-   "sede": "Cineprox Las Américas - Medellín",
-   "dia": "2026-11-07",
-   "hora": "19:00",
-   "sala": "Sala 3",
-   "titulo": "moscas"
   },
   "f_f328317a57": {
    "sede": "Museo de Arte Moderno de Medellín - MAMM - Medellín",
@@ -794,13 +794,6 @@
    "hora": "17:30",
    "sala": "Cinemateca móvil, sala de cine",
    "titulo": "juancho valencia y su relacion con el cine"
-  },
-  "f_c9bb3594f8": {
-   "sede": "Comfama La Capilla - Medellín",
-   "dia": "2026-11-08",
-   "hora": "18:00",
-   "sala": "",
-   "titulo": "ivan hadoum"
   },
   "f_7ecb1024c6": {
    "sede": "Parque de los Deseos - Medellín",

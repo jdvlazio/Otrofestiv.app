@@ -131,16 +131,13 @@ CAPILLA, MORAVIA = 'Comfama La Capilla', 'Centro de Desarrollo Cultural de Morav
 MOVIL = 'Cinemateca móvil'   # la sala itinerante en el Parque de los Deseos
 
 # ── programas (el festival los nombra «Programa de cortos N») ───────────────
-# lámina de IG del 5 nov (p/DfX8owjDp7R): cada corto se anuncia en la función de este programa
-# (Juan, 6 nov). «Blue heart» de la lámina es «Corazón azul», que ya está en P4 y en la clausura.
 P1 = ['Las formas de la magia', 'La danza de los ángeles', 'Decaer', 'El león',
-      'La muerte nos declaró adultos', 'Última vez hace mucho tiempo', 'Madres de nacimiento']                    # 88
+      'La muerte nos declaró adultos', 'Última vez hace mucho tiempo']                    # 80
 P2 = ['Una vez en un cuerpo', 'Madres de nacimiento', 'Norheimsund', 'Refracción',
       'Mal de tierra', 'Quem se move (Quien se mueve)']                                  # 71
-P3 = ['La mona', 'Compraventa', 'De: Saúl', 'Agachar el rostro', 'Kof-kof', 'La sangre', 'Decaer']  # 74
+P3 = ['La mona', 'Compraventa', 'De: Saúl', 'Agachar el rostro', 'Kof-kof', 'La sangre']  # 67
 P4 = ['Planetario', 'Emechiche, el renacer de los cabeciblancos',
-      'La escucha, la razón. Memoria acústica de un mural', 'Mi viche todo el día', 'Corazón azul',
-      'Quem se move (Quien se mueve)']  # 96
+      'La escucha, la razón. Memoria acústica de un mural', 'Mi viche todo el día', 'Corazón azul']  # 76
 CHIQUI = ['Planeta fome', 'Falcon 98', 'Ficus', 'Nangulví', 'Sputnik', 'Mi casa es su casa',
           'Cuentos de hadas', 'La sixtina']                                              # 69
 COMUNITARIO = ['El paradero', 'El teléfono morado', 'Éther, somos todo',
@@ -242,8 +239,7 @@ F = [
     peli(D5, '17:00', 'El segundo entierro de Alejandrino', S_ACC, COLOMBO, 'Sala 1', 76,
          sinopsis_nota='Proyección con Lengua de Señas Colombiana y audiodescripción.'),
     peli(D5, '18:00', 'Los nuevos', S_FAM, 'Junta de Acción Comunal El Faro', '', 77),
-    # lámina de IG del 5 nov (p/DfX8owjDp7R): a esta hora y sala va «El tren fluvial» (Juan, 5 nov)
-    peli(D5, '18:00', 'El tren fluvial', S_IB, CAPILLA, '', 75),
+    peli(D5, '18:00', 'El río de los espíritus', S_IB, CAPILLA, '', 77),
     prog(D5, '18:00', 'Perder la Escala: Experiencias Cine Domo para Otros Mundos', DOMO, S_DOMO, PLANETARIO, 'Domo', 77),
     ev(D5, '19:00', 'Letanía, performance audiovisual', 'concierto', S_EXP, PLANETARIO, 'Auditorio', 77, 60,
        _duracion_de='estimada: el PDF no da hora de fin',
@@ -260,14 +256,11 @@ F = [
        sinopsis='Sesión 2 – Imagen y expansión. Realizado por Almendra Díaz y Cristóbal Parra (Chile). Segunda sesión del laboratorio de fotogrametría, programación visual y videomapping.'),
     peli(D6, '14:00', 'El tren fluvial', S_IB, MAMM, 'Teatro MAMM', 79),
     peli(D6, '15:00', 'Un cabo suelto', S_IB, 'Parque de Cristo Rey', '', 79, _nota='«En alianza con Cultura Parque»'),
-    # lámina de IG del 5 nov (p/DfX8owjDp7R), más nueva que el PDF: manda (Juan, 5 nov)
-    peli(D6, '16:00', 'Nuestro secreto', S_IB, 'Biblioteca Comfama Bello', '', 80),
-    peli(D6, '16:30', 'Iván & Hadoum', S_IB, MAMM, 'Teatro MAMM', 80),
+    peli(D6, '16:00', 'Narciso', S_IB, 'Biblioteca Comfama Bello', '', 80),
     peli(D6, '16:00', 'Uno vuelve siempre', S_HM, MORAVIA, 'Auditorio', 80, qa='Con la presencia del director'),
     peli(D6, '16:00', 'Cómo limpiar una casa en 10 pasos fáciles', S_COL, MAMM, 'Teatro MAMM', 80),
     ev(D6, '16:30', 'La imagen como territorio', 'conversatorio', S_EXP, EXPLORA, 'Exploratorio', 80, 60,
        invitados='Con Cristóbal Parra y Almendra Díaz, modera Alannath Naslyllalyla (artista y curadora)'),
-    # lámina de IG del 5 nov (p/DfX8owjDp7R), más nueva que el PDF: manda (Juan, 5 nov)
     prog(D6, '17:00', 'Programa de Cortos 1', P1, S_PROG, COLOMBO, 'Sala 2', 81, qa=QA_EQ),
     prog(D6, '17:00', 'Luis Antonio y Los Nuevos', ['Luis Antonio', 'Los nuevos'], S_FAM,
          'Estación Trece de Noviembre', '', 81),
@@ -276,8 +269,7 @@ F = [
     peli(D6, '19:00', 'Chapecó, el último sobreviviente: nace una hermandad', S_HM, DESEOS, '', 82),
     peli(D6, '19:00', 'El deshielo', S_IB, CINEPROX, 'Sala 3', 82),
     prog(D6, '19:00', 'Perder la Escala: Experiencias Cine Domo para Otros Mundos', DOMO, S_DOMO, PLANETARIO, 'Domo', 82),
-    # lámina de IG del 5 nov (p/DfX8owjDp7R), más nueva que el PDF: manda (Juan, 5 nov)
-    peli(D6, '19:30', 'Relicto', S_COL, COLOMBO, 'Sala 1', 82, qa='Con la presencia del director'),
+    peli(D6, '19:30', 'Iluminada', S_COL, COLOMBO, 'Sala 1', 82, qa='Con la presencia del actor Pedro Suárez'),
     peli(D6, '19:00', 'Éther, somos todo', S_COM, 'Institución Educativa Pío XII', '', 42),
     peli(D6, '19:00', 'Paralelo', S_COM, 'JAC Santa Cruz parte alta', '', 43),
     # ── sábado 7 (págs. 83–90 y 56–59) ──
@@ -314,12 +306,10 @@ F = [
     prog(D7, '18:00', 'Perder la Escala: Experiencias Cine Domo para Otros Mundos', DOMO, S_DOMO, PLANETARIO, 'Domo', 87),
     ev(D7, '18:00', 'Especiales Cinemateca con Natalia Reyes', 'conversatorio', S_MOV, DESEOS, 'Cinemateca móvil, sala de cine', 59, 60,
        sinopsis='Víctor Gaviria conversa con Natalia Reyes, actriz y productora colombiana, sobre su experiencia en la película Aún es de noche en Caracas y los procesos creativos detrás de esta producción.'),
-    # lámina de IG del 5 nov (p/DfX8owjDp7R), más nueva que el PDF: manda (Juan, 5 nov)
+    peli(D7, '18:00', 'Iván & Hadoum', S_IB, CAPILLA, '', 88),
     prog(D7, '18:30', 'Programa de Cortos 3', P3, S_PROG, COLOMBO, 'Sala 2', 88, qa=QA_EQ),
     peli(D7, '19:00', 'Aún es de noche en Caracas', S_MOV, DESEOS, MOVIL, 59),
-    # lámina de IG del 5 nov (p/DfX8owjDp7R), más nueva que el PDF: manda (Juan, 5 nov)
-    peli(D7, '19:00', 'Moscas', S_RET, CINEPROX, 'Sala 3', 89, qa='Con la presencia del director'),
-    # lámina de IG del 5 nov (p/DfX8owjDp7R), más nueva que el PDF: manda (Juan, 5 nov)
+    peli(D7, '19:00', 'Club sándwich', S_RET, CINEPROX, 'Sala 3', 89, qa='Con la presencia del director'),
     prog(D7, '19:00', 'Programa de Cortos 4', P4, S_PROG, MAMM, 'Teatro MAMM', 90, qa=QA_EQ),
     peli(D7, '19:00', 'El teléfono morado', S_COM, 'Finca Agroturística El Encanto de Mis Abuelos', '', 41),
     # ── domingo 8 (págs. 90–96 y 60–63) ──
@@ -338,9 +328,7 @@ F = [
     ev(D8, '16:00', 'Taller de máscaras: Conviértete en un Bicho Raro', 'taller', S_MOV, DESEOS, 'Cinemateca móvil, laboratorio', 62, 120, _duracion_de='estimada: el PDF no da hora de fin',
        acceso=CUPOS, sinopsis='Construye tu máscara de Macha, la cucaracha, o Yeisy, la araña, personajes de La Sinfonía de los Bichos Raros. Materiales incluidos.'),
     peli(D8, '16:00', 'Un día en la vida de...', S_MEM, COLOMBO, 'Sala 1', 93),
-    # lámina de IG del 5 nov (p/DfX8owjDp7R), más nueva que el PDF: manda (Juan, 5 nov)
     prog(D8, '16:00', 'Programa de Cortos 2', P2, S_PROG, CINEPROX, 'Sala 3', 94, qa=QA_EQ),
-    peli(D8, '18:00', 'Iván & Hadoum', S_IB, CAPILLA, '', 94),
     peli(D8, '16:00', 'El deshielo', S_IB, CAPILLA, '', 94),
     ev(D8, '17:30', 'Juancho Valencia y su relación con el cine', 'conversatorio', S_MOV, DESEOS, 'Cinemateca móvil, sala de cine', 95, 60,
        sinopsis='Juancho Valencia, ganador del Grammy Latino, dialoga con Diego Londoño (El Fan Fatal) sobre cómo ha tejido una relación entre su música y el cine.'),
