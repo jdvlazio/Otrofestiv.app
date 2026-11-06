@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, con el MISMO candado de enriquecer.py: director ✓ y (año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-11-02"
+  "capturado": "2026-11-05"
  },
  "_origen": "miradas-2026-catalogo.json",
  "obras": [
@@ -43,7 +43,7 @@
    "titulo": "El deshielo",
    "tmdb_id": 1210268,
    "titulo_original": "El deshielo",
-   "poster_path": "/sLP4vn5MHnumTozQ699X8vtCOgC.jpg",
+   "poster_path": "/7wREwMWtKOy6TF7NS9RWchJoKQC.jpg",
    "synopsis_es": "Chile, 1992. Los padres de Inés, una niña de nueve años, están de viaje de negocios y la dejan al cuidado de sus abuelos, dueños de un hotel a los pies de una estación de esquí. Inés entabla amistad con Hanna, una joven esquiadora europea que ha llegado a Chile para entrenar. Una noche, Hanna desaparece. La búsqueda sacará a la luz una serie de situaciones ocultas.",
    "synopsis_en": "1992, Chile. Nine-year-old Inés' parents are away on business, leaving her in the care of her grandparents, who own a hotel at the foot of a ski resort. Inés befriends Hanna, a teenage European skier who has come to train in Chile. One night, Hanna disappears. The process of her search will unveil a series of hidden situations.",
    "genero": "Misterio",
@@ -641,14 +641,6 @@
      "sinopsis": "Eloísa, una chica de 20 años, está en dos relaciones al mismo tiempo. Una noche, después de haber estado con ambas chicas, se siente agobiada por estar en esa situación de engaño y en medio de su confusión sale a recorrer las calles de Medellín en bicicleta, donde se dará cuenta de que no quiere reconocerse pero deberá encontrarse consigo misma."
     },
     {
-     "festival": "leviza-2026",
-     "titulo": "Refracción",
-     "poster": "/assets/leviza/Refraccio_n.jpeg",
-     "posterSource": "custom",
-     "lbSlug": "⚠️ LB PENDIENTE",
-     "country": "Colombia"
-    },
-    {
      "festival": "narrarelfuturo-2026",
      "titulo": "REFRACCIÓN",
      "tmdb_id": 1584776,
@@ -804,8 +796,8 @@
    "pais_tmdb": "Colombia",
    "title_en": "The Dance of the Angels",
    "lbSlug": "the-dance-of-the-angels",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "La danza de los ángeles"
+   "_verificado": "el catálogo ya la tiene (w_ZJ3GTK8J0XTJ, miradas-2026)",
+   "work_id": "w_ZJ3GTK8J0XTJ"
   },
   {
    "titulo": "Luis Antonio",
@@ -1165,20 +1157,6 @@
      "sinopsis": "Gracias a los chinos por la pólvora, parece que la hubieran hecho para mí. Su invención sucede como un accidente, pensada inicialmente para espantar los espíritus malos. Esta película inicia en China, luego un evento en Cartagena y se acaba siglos después en Bogotá."
     },
     {
-     "festival": "ficica-2026",
-     "titulo": "Decaer",
-     "tmdb_id": 1668881,
-     "poster": "/assets/ficica-2026/decaer.jpg",
-     "posterSource": "tmdb",
-     "lbSlug": "decay-2026",
-     "country": "Colombia",
-     "year": 2026,
-     "duration": "7 min",
-     "genre": "Animación",
-     "synopsis_en": "I am grateful to the Chinese for the invention of gunpowder — it feels as if they made it for me. Its discovery happened by accident, originally conceived as a way to ward off evil spirits. This film begins in China, then moves to an event in Cartagena, and ends centuries later in Bogotá.",
-     "sinopsis": "Gracias a los chinos por la pólvora, parece que la hubieran hecho para mí. Su invención sucede como un accidente, pensada inicialmente para espantar los espíritus malos. Esta película inicia en China, luego un evento en Cartagena y se acaba siglos después en Bogotá."
-    },
-    {
      "festival": "mamut-2026",
      "titulo": "Decaer",
      "tmdb_id": 1668881,
@@ -1355,7 +1333,7 @@
   "El deshielo": {
    "tmdb_id": 1210268,
    "titulo_original": "El deshielo",
-   "poster_path": "/sLP4vn5MHnumTozQ699X8vtCOgC.jpg",
+   "poster_path": "/7wREwMWtKOy6TF7NS9RWchJoKQC.jpg",
    "synopsis_es": "Chile, 1992. Los padres de Inés, una niña de nueve años, están de viaje de negocios y la dejan al cuidado de sus abuelos, dueños de un hotel a los pies de una estación de esquí. Inés entabla amistad con Hanna, una joven esquiadora europea que ha llegado a Chile para entrenar. Una noche, Hanna desaparece. La búsqueda sacará a la luz una serie de situaciones ocultas.",
    "synopsis_en": "1992, Chile. Nine-year-old Inés' parents are away on business, leaving her in the care of her grandparents, who own a hotel at the foot of a ski resort. Inés befriends Hanna, a teenage European skier who has come to train in Chile. One night, Hanna disappears. The process of her search will unveil a series of hidden situations.",
    "genero": "Misterio",
@@ -1934,14 +1912,6 @@
      "sinopsis": "Eloísa, una chica de 20 años, está en dos relaciones al mismo tiempo. Una noche, después de haber estado con ambas chicas, se siente agobiada por estar en esa situación de engaño y en medio de su confusión sale a recorrer las calles de Medellín en bicicleta, donde se dará cuenta de que no quiere reconocerse pero deberá encontrarse consigo misma."
     },
     {
-     "festival": "leviza-2026",
-     "titulo": "Refracción",
-     "poster": "/assets/leviza/Refraccio_n.jpeg",
-     "posterSource": "custom",
-     "lbSlug": "⚠️ LB PENDIENTE",
-     "country": "Colombia"
-    },
-    {
      "festival": "narrarelfuturo-2026",
      "titulo": "REFRACCIÓN",
      "tmdb_id": 1584776,
@@ -2069,8 +2039,8 @@
    "pais_tmdb": "Colombia",
    "title_en": "The Dance of the Angels",
    "lbSlug": "the-dance-of-the-angels",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "La danza de los ángeles"
+   "_verificado": "el catálogo ya la tiene (w_ZJ3GTK8J0XTJ, miradas-2026)",
+   "work_id": "w_ZJ3GTK8J0XTJ"
   },
   "Luis Antonio": {
    "_fuente": "cinecorto",
@@ -2403,20 +2373,6 @@
      "tmdb_id": 1668881,
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Captura%20de%20pantalla%202026-04-04%20a%20la%28s%29%203.43.18%20p.m..jpg?itok=SfE8u2Hj",
      "posterSource": "custom",
-     "lbSlug": "decay-2026",
-     "country": "Colombia",
-     "year": 2026,
-     "duration": "7 min",
-     "genre": "Animación",
-     "synopsis_en": "I am grateful to the Chinese for the invention of gunpowder — it feels as if they made it for me. Its discovery happened by accident, originally conceived as a way to ward off evil spirits. This film begins in China, then moves to an event in Cartagena, and ends centuries later in Bogotá.",
-     "sinopsis": "Gracias a los chinos por la pólvora, parece que la hubieran hecho para mí. Su invención sucede como un accidente, pensada inicialmente para espantar los espíritus malos. Esta película inicia en China, luego un evento en Cartagena y se acaba siglos después en Bogotá."
-    },
-    {
-     "festival": "ficica-2026",
-     "titulo": "Decaer",
-     "tmdb_id": 1668881,
-     "poster": "/assets/ficica-2026/decaer.jpg",
-     "posterSource": "tmdb",
      "lbSlug": "decay-2026",
      "country": "Colombia",
      "year": 2026,
