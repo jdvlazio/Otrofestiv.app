@@ -131,13 +131,16 @@ CAPILLA, MORAVIA = 'Comfama La Capilla', 'Centro de Desarrollo Cultural de Morav
 MOVIL = 'Cinemateca móvil'   # la sala itinerante en el Parque de los Deseos
 
 # ── programas (el festival los nombra «Programa de cortos N») ───────────────
+# lámina de IG del 5 nov (p/DfX8owjDp7R): cada corto se anuncia en la función de este programa
+# (Juan, 6 nov). «Blue heart» de la lámina es «Corazón azul», que ya está en P4 y en la clausura.
 P1 = ['Las formas de la magia', 'La danza de los ángeles', 'Decaer', 'El león',
-      'La muerte nos declaró adultos', 'Última vez hace mucho tiempo']                    # 80
+      'La muerte nos declaró adultos', 'Última vez hace mucho tiempo', 'Madres de nacimiento']                    # 88
 P2 = ['Una vez en un cuerpo', 'Madres de nacimiento', 'Norheimsund', 'Refracción',
       'Mal de tierra', 'Quem se move (Quien se mueve)']                                  # 71
-P3 = ['La mona', 'Compraventa', 'De: Saúl', 'Agachar el rostro', 'Kof-kof', 'La sangre']  # 67
+P3 = ['La mona', 'Compraventa', 'De: Saúl', 'Agachar el rostro', 'Kof-kof', 'La sangre', 'Decaer']  # 74
 P4 = ['Planetario', 'Emechiche, el renacer de los cabeciblancos',
-      'La escucha, la razón. Memoria acústica de un mural', 'Mi viche todo el día', 'Corazón azul']  # 76
+      'La escucha, la razón. Memoria acústica de un mural', 'Mi viche todo el día', 'Corazón azul',
+      'Quem se move (Quien se mueve)']  # 96
 CHIQUI = ['Planeta fome', 'Falcon 98', 'Ficus', 'Nangulví', 'Sputnik', 'Mi casa es su casa',
           'Cuentos de hadas', 'La sixtina']                                              # 69
 COMUNITARIO = ['El paradero', 'El teléfono morado', 'Éther, somos todo',
