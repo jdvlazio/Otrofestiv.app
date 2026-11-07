@@ -470,7 +470,10 @@
    "_match": "Google Maps: Casa de la Música"
   }
  },
- "_avisos_id": [],
+ "_avisos_id": [
+  "⚠ id nuevo f_3165278632 «Destellos comunes: creaciones en Red» 2026-11-07 09:00 — ¿es la que salió, f_398d47d954 «red de creacion audiovisual de medellin» 2026-11-07 08:00? Si lo es, registrá la decisión: quien la tenía en su plan la pierde",
+  "⚠ id nuevo f_9e4cd0e6b2 «Destellos comunes: creaciones en Red» 2026-11-07 14:00 — ¿es la que salió, f_398d47d954 «red de creacion audiovisual de medellin» 2026-11-07 08:00? Si lo es, registrá la decisión: quien la tenía en su plan la pierde"
+ ],
  "films": [
   {
    "title": "La otra orilla: Revolver la mirada autorizada para manchar la cámara de barro",
@@ -5997,14 +6000,14 @@
    }
   },
   {
-   "title": "Red de Creación Audiovisual de Medellín",
+   "title": "Destellos comunes: creaciones en Red",
    "type": "event",
    "section": "🏙️ Cine Hecho en Medellín",
-   "duration": "540 min",
+   "duration": "180 min",
    "_ancla": [
     "Museo de Arte Moderno de Medellín - MAMM - Medellín",
     "2026-11-07",
-    "08:00"
+    "09:00"
    ],
    "day": "2026-11-07",
    "time": "09:00",
@@ -6021,8 +6024,8 @@
    },
    "description": "La Red de Creación Audiovisual de Medellín presenta los frutos de sus laboratorios de creación y formación artística comunitaria: niños y adolescentes de la ciudad estrenan sus primeras películas.",
    "description_lang": "es",
-   "_fid": "f_398d47d954",
-   "id": "f_398d47d954",
+   "_fid": "f_3165278632",
+   "id": "f_3165278632",
    "is_free": true,
    "_procedencia": {
     "day": {
@@ -6030,9 +6033,8 @@
      "fecha": "2026-11-07"
     },
     "time": {
-     "tipo": "juan",
-     "fecha": "2026-11-07",
-     "frase": "«Te autorizo para que leas las historias de Instagram de la cinemateca de Medellín para que rectifiques horarios y proyecciones» (Juan, 6 nov 2026)"
+     "tipo": "festival-web",
+     "fecha": "2026-11-07"
     },
     "venue": {
      "tipo": "festival-web",
@@ -7081,6 +7083,77 @@
    }
   },
   {
+   "title": "Destellos comunes: creaciones en Red",
+   "type": "event",
+   "section": "🏙️ Cine Hecho en Medellín",
+   "duration": "180 min",
+   "_ancla": [
+    "Museo de Arte Moderno de Medellín - MAMM - Medellín",
+    "2026-11-07",
+    "14:00"
+   ],
+   "day": "2026-11-07",
+   "time": "14:00",
+   "day_order": 4,
+   "venue": "Museo de Arte Moderno de Medellín - MAMM - Medellín",
+   "sala": "Teatro MAMM",
+   "event_kind": "evento",
+   "info": true,
+   "has_qa": false,
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 83,
+    "tipo": "festival-pdf"
+   },
+   "description": "La Red de Creación Audiovisual de Medellín presenta los frutos de sus laboratorios de creación y formación artística comunitaria: niños y adolescentes de la ciudad estrenan sus primeras películas.",
+   "description_lang": "es",
+   "_fid": "f_9e4cd0e6b2",
+   "id": "f_9e4cd0e6b2",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-07"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-07"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-07"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-07"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-07"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-07"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-07"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-07"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-07"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-07"
+    }
+   }
+  },
+  {
    "title": "Laboratorio: Postproducción de video para dispositivos móviles",
    "type": "event",
    "section": "🚚 Cinemateca Móvil",
@@ -7532,7 +7605,7 @@
    "time": "16:00",
    "day_order": 4,
    "venue": "Parque de los Deseos - Medellín",
-   "sala": "Cinemateca móvil",
+   "sala": "Cinemateca móvil, Laboratorio",
    "has_qa": false,
    "synopsis": "Apasionada por volar, una diminuta semilla de papaya en la selva amazónica debe seguir moviéndose para evitar echar raíces. Con perseverancia, descubre el poder de sus raíces, lo que desencadena una revolución que transforma su mundo y hace realidad sus sueños de una forma inesperada.",
    "synopsis_lang": "es",
@@ -7563,8 +7636,9 @@
      "fecha": "2026-11-07"
     },
     "sala": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-07"
+     "tipo": "juan",
+     "fecha": "2026-11-07",
+     "frase": "«Esas historias son recientes y en este caso sí deberíamos aplicar todos los cambios de información» (Juan, 7 nov 2026)"
     },
     "duration": {
      "tipo": "festival-web",
@@ -9918,7 +9992,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-07T06:25:47",
+  "fecha": "2026-11-07T06:35:54",
   "plan_sha": "e0e0ab6cfccb9084",
   "paso": 10,
   "cmd": "python3 pipeline/miradas-2026-verificar.py"

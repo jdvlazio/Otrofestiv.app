@@ -75,23 +75,6 @@
   {
    "ancla": {
     "sede": "Museo de Arte Moderno de Medellín - MAMM - Medellín",
-    "dia": "2026-11-07",
-    "hora": "08:00"
-   },
-   "funcion": "f_398d47d954",
-   "casilla": "time",
-   "valor": "09:00",
-   "contra": "08:00",
-   "fuente": {
-    "tipo": "juan",
-    "frase": "«Te autorizo para que leas las historias de Instagram de la cinemateca de Medellín para que rectifiques horarios y proyecciones» (Juan, 6 nov 2026)",
-    "fecha": "2026-11-07"
-   },
-   "evidencia": "historia de @cinematecademedellin, 6 nov, pieza «Destellos comunes: creaciones en Red», sábado 7, 9:00 a.m. a 12:00 m. y 2:00 p.m. a 5:00 p.m., MAMM."
-  },
-  {
-   "ancla": {
-    "sede": "Museo de Arte Moderno de Medellín - MAMM - Medellín",
     "dia": "2026-11-06",
     "hora": "19:00"
    },
@@ -122,6 +105,23 @@
     "fecha": "2026-11-07"
    },
    "evidencia": "historia de @cinematecademedellin, 6 nov, pieza «Un cabo suelto», viernes 6 de noviembre, 5:00 p.m., Parque de Cristo Rey."
+  },
+  {
+   "ancla": {
+    "sede": "Parque de los Deseos - Medellín",
+    "dia": "2026-11-07",
+    "hora": "16:00"
+   },
+   "funcion": "f_01a50d44b3",
+   "casilla": "sala",
+   "valor": "Cinemateca móvil, Laboratorio",
+   "contra": "Cinemateca móvil",
+   "fuente": {
+    "tipo": "juan",
+    "frase": "«Esas historias son recientes y en este caso sí deberíamos aplicar todos los cambios de información» (Juan, 7 nov 2026)",
+    "fecha": "2026-11-07"
+   },
+   "evidencia": "historia de @cinematecademedellin, 6 nov: pieza «Papaya», Cinemateca móvil, Laboratorio, Parque de los Deseos, 4:00 p.m."
   }
  ]
 }
