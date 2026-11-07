@@ -1721,11 +1721,11 @@
    "qa_type": "team"
   },
   {
-   "titulo": "Red de Creación Audiovisual de Medellín",
+   "titulo": "Destellos comunes: creaciones en Red",
    "tipo": "evento",
    "event_kind": "evento",
    "dia": "2026-11-07",
-   "hora": "08:00",
+   "hora": "09:00",
    "sede": "Museo de Arte Moderno de Medellín - MAMM",
    "sala": "Teatro MAMM",
    "seccion": "Cine Hecho en Medellín",
@@ -1735,7 +1735,7 @@
     "pag": 83,
     "tipo": "festival-pdf"
    },
-   "duracion_min": 540,
+   "duracion_min": 180,
    "sinopsis": "La Red de Creación Audiovisual de Medellín presenta los frutos de sus laboratorios de creación y formación artística comunitaria: niños y adolescentes de la ciudad estrenan sus primeras películas.",
    "info": true
   },
@@ -2084,6 +2084,25 @@
    "duracion_min": 120,
    "sinopsis": "Realizado por Festival Fantasmagoria. Un laboratorio de cinco sesiones para explorar leyendas, imaginarios y nuevas miradas del terror y el fantástico colombiano, y descubrir cómo contamos nuestros propios miedos desde el cine.",
    "is_recurring": true
+  },
+  {
+   "titulo": "Destellos comunes: creaciones en Red",
+   "tipo": "evento",
+   "event_kind": "evento",
+   "dia": "2026-11-07",
+   "hora": "14:00",
+   "sede": "Museo de Arte Moderno de Medellín - MAMM",
+   "sala": "Teatro MAMM",
+   "seccion": "Cine Hecho en Medellín",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://drive.google.com/uc?export=download&id=1TaDM4ZWcoOuMmoGk7ToeVKfieMjdD00b",
+    "pag": 83,
+    "tipo": "festival-pdf"
+   },
+   "duracion_min": 180,
+   "sinopsis": "La Red de Creación Audiovisual de Medellín presenta los frutos de sus laboratorios de creación y formación artística comunitaria: niños y adolescentes de la ciudad estrenan sus primeras películas.",
+   "info": true
   },
   {
    "titulo": "Laboratorio: Postproducción de video para dispositivos móviles",
