@@ -57,8 +57,7 @@ PARRILLA = [
 CREDITOS = {
     'Sangre Invisible': {'director': 'Ana Bolena Meléndez, Manuel Vélez-Arboleda', 'anio': 2026, 'pais': 'Colombia',
                          '_creditos_fuente': 'https://www.lapatria.com/cultura/sangre-invisible-el-documental-que-visibiliza-la-lucha-contra-la-pobreza-menstrual-en'},
-    'Conversatorio': {'invitados': 'Con Revolución Roja, colectivo ecofeminista. Tema: la realización del documental y la labor del colectivo.',
-                      '_invitados_fuente': 'mensaje del festival a Juan, 7 nov'},
+    'Conversatorio': {'invitados': 'Con Revolución Roja, colectivo ecofeminista. Tema: la realización del documental y la labor del colectivo.'},  # mensaje del festival a Juan, 7 nov
     'La Creciente': {'director': 'Pablo Andrés Muñoz Castrillón',
                      '_creditos_por_que': 'único largo colombiano de 2026 con ese título (TMDB 1779631), publicado en Jardín 2026'},
 }
