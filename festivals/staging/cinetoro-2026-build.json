@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "cinetoro.org — programacion-2026-2 (parrilla) + programas-2 (obras de cada programa) + el catálogo del pre-onboarding (fichas)",
-  "capturado": "2026-11-06",
+  "capturado": "2026-11-07",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_sedes": "Los lugares de la parrilla con su ciudad. «POR DEFINIR» es un rótulo del festival y se publica tal cual, con pin aproximado declarado. «Mambo House / Polideportivo (San Antonio)» (el intermedio musical) se publica en el Polideportivo, donde van los programas 3 y 4 que lo rodean: inferido.",
@@ -232,11 +232,49 @@
     "hora": "16:00 a 18:00",
     "programa": "https://cinetoro.org/programas-2/#invitadas"
    },
-   "is_free": true,
    "description": "Revisar el archivo no implica contemplar el pasado como un monumento estático, sino interrogarlo desde la fisura, el cuerpo y la resistencia. En este espacio de encuentro y pensamiento, Azul Aizemberg, Cristina Hadwa y Martha Hincapie cruzan sus miradas en torno a las formas en que el cine experimental subvierte los documentos oficiales mediante la fabulación crítica, la memoria íntima y la resistencia territorial. A través de la visualización de tres trabajos (uno de cada una) y la moderación de Laura Alhach, dialogaremos de cómo el cine desde el trabajo con archivos abre camino a la resistencia, la persistencia comunitaria y a los afectos. Azul Aizemberg, Cristina Hadwa y Martha Hincapie. Modera Laura Alhach",
    "description_lang": "es",
    "_fid": "f_cacd2cabb6",
-   "id": "f_cacd2cabb6"
+   "id": "f_cacd2cabb6",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    }
+   }
   },
   {
    "title": "Traducir lo propio (o el síntoma de recordar)",
@@ -270,13 +308,47 @@
     "hora": "19:00 a 20:00",
     "programa": "https://cinetoro.org/programas-2/#traducir"
    },
-   "is_free": true,
    "lbSlug": "translating-ones-own-or-the-symptom-to-be",
    "tmdb_id": 1462028,
    "synopsis_en": "As the gaze sinks into the landscape, a relationship disintegrates, leaving love as a fleeting memory between archives and dreams. The writing of the days is imprinted on traces that repeat themselves in a constant déjà vu. Pain becomes noise and dissolves like particles in the air, in an attempt to reconstruct the inevitable. A leap into the void between the desire to remain and the impulse to erase a wound.",
    "title_en": "Translating one's own (or the symptom to be remembered)",
    "_fid": "f_07022e7102",
-   "id": "f_07022e7102"
+   "id": "f_07022e7102",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    }
+   }
   },
   {
    "title": "Postales y mapas de límites convergentes",
@@ -301,11 +373,49 @@
     "lugar": "Museo Rayo",
     "hora": "20:00 a 21:00"
    },
-   "is_free": true,
    "description": "Música y animación en vivo. Colectivo CINETORO",
    "description_lang": "es",
    "_fid": "f_a01deb3a8b",
-   "id": "f_a01deb3a8b"
+   "id": "f_a01deb3a8b",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    }
+   }
   },
   {
    "title": "Toda Tierra Anhela el Sol",
@@ -332,7 +442,6 @@
     "hora": "19:00 a 20:00",
     "programa": "https://cinetoro.org/programas-2/#tierra"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -400,7 +509,46 @@
    "description": "Imágenes que se despiertan del vacío: vibraciones, texturas y ecos que buscan la luz a través de los poros para convertirse en sombras, flashes y movimientos extendidos, entrecortados, o fugaces. Animaciones que habitan el intersticio, entre las profundidades de la tierra hasta la superficie.",
    "description_lang": "es",
    "_fid": "f_b310da971b",
-   "id": "f_b310da971b"
+   "id": "f_b310da971b",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    }
+   }
   },
   {
    "title": "Especies de Espacios",
@@ -427,7 +575,6 @@
     "hora": "20:30 a 22:00",
     "programa": "https://cinetoro.org/programas-2/#Especies"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -507,7 +654,46 @@
    "description": "Vivimos en el espacio, en estos espacios, en estas ciudades, en estos campos, en estos pasillos, en estos jardines. Parece evidente. Quizá debería ser evidente. Pero no es evidente, no cae por su peso”. Con estas palabras, Georges Perec subraya cómo, a pesar de que habitamos y vivimos en distintos tipos de espacios, quizás no pensamos lo suficiente en ellos.\n\nEste programa nos invita a pensar en el jardín, la casa, la montaña, el patio, el barrio, la ciudad desde la imagen y el sonido. Estos cortos nos proponen sumergirnos en los espacios desde sus transformaciones, desde la experiencia del tiempo que pasa por ellos, desde los límites que construimos en su interior, haciendo evidente la forma en que los protegemos (a los espacios) y a nosotros de ellos (las especies).",
    "description_lang": "es",
    "_fid": "f_7f0daffb9e",
-   "id": "f_7f0daffb9e"
+   "id": "f_7f0daffb9e",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    }
+   }
   },
   {
    "title": "Huellas de una Generación Pasada",
@@ -534,7 +720,6 @@
     "hora": "09:00 a 13:00 (Dos funciones)",
     "programa": "https://cinetoro.org/programas-2/#Huellas"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -564,7 +749,46 @@
    "description": "La ciudad como una habitación colectiva constituye identidades. La pluralidad recogida en una polís donde el cuerpo establecido por microorganismos juntan sus deseos y construyen un espacio común. Barrios como órganos que laten, digieren y respiran sueños de quienes construyen, habitan o solo transitan. Preguntémonos entonces ¿qué ocurre tras cada cuerpo? Un edificio latiendo recuerdos, una carretera tosiendo y microorganismos que edifican un cosmos de significados, territorios y huellas que identifican no elementos sino memorias.",
    "description_lang": "es",
    "_fid": "f_f8196ffb49",
-   "id": "f_f8196ffb49"
+   "id": "f_f8196ffb49",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    }
+   }
   },
   {
    "title": "Taller Nicole Antebi: Moviendo montañas",
@@ -591,10 +815,56 @@
     "hora": "09:00 a 13:00"
    },
    "registration_url": "https://ficcali.com/cine-expandido-2026/#talleres",
-   "is_free": true,
    "requires_registration": true,
    "_fid": "f_790fba12d7",
-   "id": "f_790fba12d7"
+   "id": "f_790fba12d7",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "requires_registration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "registration_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    }
+   }
   },
   {
    "title": "Cartografías de un Cuerpo en Movimiento",
@@ -621,7 +891,6 @@
     "hora": "19:00 a 20:00",
     "programa": "https://cinetoro.org/programas-2/#cartografia"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -745,7 +1014,46 @@
    "description": "Un cuerpo traza su límite en la piel, en lo que toca, en lo que roza, en lo que acaricia, en lo que golpea, en sus cicatrices. Pero el límite también existe en movimiento, en la aproximación a otros cuerpos. Un cuerpo a veces quiere ser visto, otras veces no; a veces quiere contraerse o expandirse, otras veces solo quiere mutar, transformarse, metamorfosearse.\n\nEste grupo de animaciones, todas realizadas por mujeres, explora lo liminal del cuerpo desde distintos lugares de aproximación: lo sensual, lo metamórfico, lo rabioso, lo fronterizo, para quizás pensar cómo nuestros cuerpos pueden ser líneas, formas y curvas que trazan cartografías en movimiento.",
    "description_lang": "es",
    "_fid": "f_96cd331619",
-   "id": "f_96cd331619"
+   "id": "f_96cd331619",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    }
+   }
   },
   {
    "title": "Intermedio musical: Cuerdas cruzadas",
@@ -770,11 +1078,49 @@
     "lugar": "Mambo House / Polideportivo (San Antonio)",
     "hora": "20:20 a 20:40"
    },
-   "is_free": true,
    "description": "Jerónimo Saldarriaga",
    "description_lang": "es",
    "_fid": "f_b5c12cadbb",
-   "id": "f_b5c12cadbb"
+   "id": "f_b5c12cadbb",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    }
+   }
   },
   {
    "title": "Apariencia de un Mundo Indeseado o una Realidad Absoluta",
@@ -801,7 +1147,6 @@
     "hora": "21:00 a 22:00",
     "programa": "https://cinetoro.org/programas-2/#apariencia"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -834,7 +1179,46 @@
    "description": "La invención de una jerga auténtica que nos permita cuestionar lo aparente en cuanto que quiere parecer real, no serlo. Diagnóstico de un mundo que nunca quisimos, lleno de una falsa esperanza en una realidad desoladora bastante concreta. Simpoiesis como proceso de integración contra la reificación social contemporánea en búsqueda de una utopía negativa que permita la reconciliación de violencias entre especies.\n\nEste programa lo puede ver bajo su propia responsabilidad, pero recuerde, entre la pantalla y usted está la tiniebla siendo atravesada por la luz de su mirada.",
    "description_lang": "es",
    "_fid": "f_097fdef9fd",
-   "id": "f_097fdef9fd"
+   "id": "f_097fdef9fd",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    }
+   }
   },
   {
    "title": "Taller Nicole Antebi: Moviendo montañas",
@@ -861,10 +1245,56 @@
     "hora": "09:00 a 13:00"
    },
    "registration_url": "https://ficcali.com/cine-expandido-2026/#talleres",
-   "is_free": true,
    "requires_registration": true,
    "_fid": "f_1a1808841c",
-   "id": "f_1a1808841c"
+   "id": "f_1a1808841c",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "requires_registration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "registration_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    }
+   }
   },
   {
    "title": "Taller archivo con el Centro de Memoria Toro",
@@ -891,12 +1321,64 @@
     "hora": "Viernes de 15:00 a 18:00; Sábado de 09:00 a 12:00"
    },
    "registration_url": "https://ficcali.com/cine-expandido-2026/#talleres",
-   "is_free": true,
    "requires_registration": true,
    "description": "Laura Alhach",
    "description_lang": "es",
    "_fid": "f_0d29fa04b1",
-   "id": "f_0d29fa04b1"
+   "id": "f_0d29fa04b1",
+   "sala": "Salón audiovisuales",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "sala": {
+     "tipo": "festival-ig",
+     "fecha": "2026-11-06",
+     "url": "https://www.instagram.com/p/DfaYGhzoxaz/"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "requires_registration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "registration_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    }
+   }
   },
   {
    "title": "Territorios Infinitos en Territorios Finitos",
@@ -923,7 +1405,6 @@
     "hora": "19:00 a 20:00",
     "programa": "https://cinetoro.org/programas-2/#infinitos"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -1002,7 +1483,46 @@
    "description": "Cuando se piensa en el territorio, imaginamos una porción de tierra delimitada que agrupa una serie de elementos relacionados con el lugar. Así, podemos hablar de propiedad, de cruces y de fronteras. Al mismo tiempo, cuando grabamos, la cámara delimita y fragmenta el tiempo y el espacio, creando nuevos territorios. De pie, sobre la tierra, la cámara se convierte en un artefacto que, al reenmarcar nuestra percepción, hace evidente que, dentro de un mismo territorio, habitan otros. Y que dentro de esos otros, podemos encontrar otros. Cada espacio se compone de cosas que van más allá de sus límites.\n\nEn este programa, la cámara impone límites y, a su vez, difumina las fronteras que otros ya impusieron sobre un lugar. Dentro de la boca de quien mastica un alimento habita la cueva del pasado del que venimos. En medio del encierro, y a través de las pantallas, nos podemos escapar a la selva amazónica, o en medio del jardín nos damos cuenta de que convive la cosmogonía entera.",
    "description_lang": "es",
    "_fid": "f_2178eec0b0",
-   "id": "f_2178eec0b0"
+   "id": "f_2178eec0b0",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    }
+   }
   },
   {
    "title": "Vestigios de un Sueño Inalcanzado",
@@ -1029,7 +1549,6 @@
     "hora": "20:30 a 22:00",
     "programa": "https://cinetoro.org/programas-2/#vestigios"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -1084,7 +1603,46 @@
    "description": "El futuro pasó por acá y no le fue nada bien. ¿Hay mundo por venir? Lágrimas que rocían el cultivo de rojos sueños sobre villas abandonadas, incoloros por el grisáceo de las armas que, pregonando por un futuro ilustrado, enmudecen los gritos de libertad de los recuerdos entre ruinas que manifiestan una resistencia territorial con un cordón tan fuerte como el umbilical entre la persona y la labranza de los recuerdos.",
    "description_lang": "es",
    "_fid": "f_d485cf85c3",
-   "id": "f_d485cf85c3"
+   "id": "f_d485cf85c3",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    }
+   }
   },
   {
    "title": "Performance: Vendrán otros mares: Vendrán otras bárbaras a través de los mares",
@@ -1109,11 +1667,49 @@
     "lugar": "Coliseo: Institución Educativa Fray José Joaquín Escobar",
     "hora": "22:30 a 23:00"
    },
-   "is_free": true,
    "description": "Cristina Hadwa y Laura Alhach",
    "description_lang": "es",
    "_fid": "f_cec23855bd",
-   "id": "f_cec23855bd"
+   "id": "f_cec23855bd",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    }
+   }
   },
   {
    "title": "Taller archivo con el Centro de Memoria Toro",
@@ -1140,12 +1736,64 @@
     "hora": "Viernes de 15:00 a 18:00; Sábado de 09:00 a 12:00"
    },
    "registration_url": "https://ficcali.com/cine-expandido-2026/#talleres",
-   "is_free": true,
    "requires_registration": true,
    "description": "Laura Alhach",
    "description_lang": "es",
    "_fid": "f_10d06e9c3e",
-   "id": "f_10d06e9c3e"
+   "id": "f_10d06e9c3e",
+   "sala": "Salón audiovisuales",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "sala": {
+     "tipo": "festival-ig",
+     "fecha": "2026-11-06",
+     "url": "https://www.instagram.com/p/DfaYGhzoxaz/"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "requires_registration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "registration_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    }
+   }
   },
   {
    "title": "El Azul del Horizonte",
@@ -1172,7 +1820,6 @@
     "hora": "18:30 a 20:00",
     "programa": "https://cinetoro.org/programas-2/#azul"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -1256,7 +1903,46 @@
    "description": "Cuando el sonido retorna del mar, es preciso escuchar. Navegar entre lenguajes, seres, historias y mitos, aguas abisales, turbias, cristalinas… Desde el horizonte hasta las piedras profundas, desde el borde de la tierra hasta la raíz de los torbellinos.",
    "description_lang": "es",
    "_fid": "f_38741dade9",
-   "id": "f_38741dade9"
+   "id": "f_38741dade9",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    }
+   }
   },
   {
    "title": "Prender la Luz",
@@ -1283,7 +1969,6 @@
     "hora": "20:00- 21:00",
     "programa": "https://cinetoro.org/programas-2/#luz"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -1347,7 +2032,46 @@
    "description": "En un espacio, nos sentamos en torno a las sombras que produce la luz de una vela y junto a ellas nos deslizamos por la correa de transmisión del tiempo. Avanzamos hacia nuestro pasado o somos espectro de nuestro futuro. El cine, como un médium, es un dispositivo mágico que posibilita la conexión entre un lugar y otro. En este caso, es el intento y la posibilidad de tener una comunicación con nuestros muertos.\n\nEste programa constituye el intento por tocar o ver a quienes ya no vemos ni tocamos. Mientras dure encendida la vela, abrimos un portal de comunicación entre dimensiones.",
    "description_lang": "es",
    "_fid": "f_8216e9f4f9",
-   "id": "f_8216e9f4f9"
+   "id": "f_8216e9f4f9",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    }
+   }
   },
   {
    "title": "Mapping geografías en transformación",
@@ -1372,11 +2096,49 @@
     "lugar": "POR DEFINIR",
     "hora": "22:00 a 00:00"
    },
-   "is_free": true,
    "description": "Colectivo AZMA",
    "description_lang": "es",
    "_fid": "f_77ad51bb5e",
-   "id": "f_77ad51bb5e"
+   "id": "f_77ad51bb5e",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    }
+   }
   },
   {
    "title": "Muestra de resultados talleres Nicole Antebi y Maia Gattás",
@@ -1401,9 +2163,47 @@
     "lugar": "POR DEFINIR",
     "hora": "23:00 a 00:00"
    },
-   "is_free": true,
    "_fid": "f_80b4761d99",
-   "id": "f_80b4761d99"
+   "id": "f_80b4761d99",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    }
+   }
   },
   {
    "title": "Líneas Imaginarias",
@@ -1430,7 +2230,6 @@
     "hora": "18:30",
     "programa": "https://cinetoro.org/programas-2/#lineas"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -1494,7 +2293,46 @@
    "description": "Una cámara recorre campos, ciudades, montañas y ríos desde el aire; para esa cámara que vuela no existen líneas divisorias, existe la imagen del campo en contraste con las construcciones urbanas. Una cámara observa edificios burocráticos donde se dictaminan las vidas de los migrantes latinos en Estados Unidos; la cámara no ve las líneas divisorias, ve los espacios impolutos donde parece no haber forma de resistencia. Una cámara recorre la ciudad a pie, observando los espacios de su recorrido; la cámara no ve las líneas divisorias, pero sí detecta las marcas de agua que se esconden en la ciudad. Una mano dibuja a los bárbaros, al extranjero; la mano que anima no ve líneas divisorias que permiten la existencia de las naciones, pero anima el movimiento de estos cuerpos que bailan, que se golpean, que resisten.\n\nEstas son algunas de las formas en que esta selección de cortos nos permite ver, a través de distintos recursos audiovisuales, cómo las fronteras son líneas de imagen y de imaginación.",
    "description_lang": "es",
    "_fid": "f_8579c1a8a8",
-   "id": "f_8579c1a8a8"
+   "id": "f_8579c1a8a8",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    }
+   }
   },
   {
    "title": "Premiación – muestra de procesos y cierre",
@@ -1519,9 +2357,47 @@
     "lugar": "Rosalia´s Garden",
     "hora": "20:30"
    },
-   "is_free": true,
    "_fid": "f_a8fec8bb17",
-   "id": "f_a8fec8bb17"
+   "id": "f_a8fec8bb17",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    }
+   }
   },
   {
    "title": "Karaoke híbrido",
@@ -1546,14 +2422,53 @@
     "lugar": "Rosalia´s Garden",
     "hora": "22:30"
    },
-   "is_free": true,
    "_fid": "f_dc2a4b6a2b",
-   "id": "f_dc2a4b6a2b"
+   "id": "f_dc2a4b6a2b",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-06"
+    },
+    "duration": {
+     "tipo": "regla",
+     "marca": "estimado"
+    }
+   },
+   "duration": "60 min"
   }
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-06T05:19:56",
+  "fecha": "2026-11-07T09:25:26",
   "plan_sha": "b2ac1cab28513174",
   "paso": 8,
   "cmd": "python3 pipeline/cinetoro-2026-verificar.py"
