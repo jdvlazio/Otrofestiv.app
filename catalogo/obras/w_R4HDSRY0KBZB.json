@@ -24,15 +24,15 @@
   }
  ],
  "sinopsis": {
-  "es": "Ana Rosa Jusayu (mi madre), lideresa ancestral de la comunidad Apotnojushi ubicada en cercanias del cerro de la teta en la alta Guajira colombiana, trata de recuperar el tejido y la unión familiar que se vieron alterados por el “desarrollo sostenible” invasivo. En medio de las pocas esperanzas de sobrevivir en lo desolado de su territorio ancestral, la familia comparte su añoranza de permanecer allí, enfrentándose a las dificultades y los cambios económicos que afectan al pueblo wayuu.",
-  "en": "Ana Rosa Jusayu (My Mother), an ancestral leader of the Apotnojushi community located near Cerro de la Teta in the upper Guajira region of Colombia, is trying to rebuild the family fabric and unity that was disrupted by invasive “sustainable development.” Amidst the slim hopes of surviving in the desolation of their ancestral territory, the family shares their longing to remain there, facing the hardships and economic changes that affect the Wayuu people."
+  "es": "Ana Rosa Jusayu (Mi Madre), lideresa ancestral de la comunidad Apotnojushi ubicada en cercanias del cerro de la teta en la alta Guajira Colombiana, trata de recuperar el tejido y unión familiar que ocasionó el “desarrollo sostenible” invasivo. En medio de las pocas esperanzas de sobrevivir en lo desolado de su territorio ancestral, la familia comparte su añoranza de permanecer en el territorio, enfrentando las dificultades y los cambios económicos que afectan al pueblo wayuu.",
+  "en": "In this expressive and community-centered work, Wayuú director Marbel Vanegas Jusayu documents the social, spiritual, and environmental impacts of the installation of a wind farm in Apotnojushi, a historically marginalized community that remains committed to its sovereignty. Women leaders such as Ana Rosa Jusayu, the director’s mother, work to strengthen the social fabric, activate historical memory, and assert their right to determine their future. Through the voices and living portraits of community members, the piece reflects in its vignettes the community’s deep connection to its ancestral territory."
  },
  "generos": [
   "Documental"
  ],
  "afiche": {
-  "archivo": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_PORTADAS%20CASA%20EN%20EL%20%20aire%202-im%C3%A1genes-0%20-%20Aguacate%20Audiovisual.jpg?itok=b37CurBg",
-  "veredicto": "oficial-festival"
+  "archivo": "/assets/festicinerio-2026/apotnojushi-la-casa-del-viento.jpg",
+  "veredicto": "oficial"
  },
  "xref": {
   "tmdb": 1668905,
@@ -42,9 +42,14 @@
   {
    "etiqueta": "12 min",
    "duracion_min": 12
+  },
+  {
+   "etiqueta": "13 min",
+   "duracion_min": 13
   }
  ],
  "presentaciones": [
+  "festicinerio-2026",
   "ficci-65",
   "ficdeh-2026",
   "midbo-2026"

@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "ensamblar.py: ids estables de las funciones (docs/FUNCION.md C1)",
-  "capturado": "2026-10-27"
+  "capturado": "2026-11-07"
  },
  "funciones": {
   "f_2881acf478": {
@@ -487,12 +487,12 @@
    "sala": "Sala 1",
    "titulo": "iluminada"
   },
-  "f_398d47d954": {
+  "f_3165278632": {
    "sede": "Museo de Arte Moderno de Medellín - MAMM - Medellín",
    "dia": "2026-11-07",
-   "hora": "08:00",
+   "hora": "09:00",
    "sala": "Teatro MAMM",
-   "titulo": "red de creacion audiovisual de medellin"
+   "titulo": "destellos comunes creaciones en red"
   },
   "f_ef769d7a14": {
    "sede": "Centro Colombo Americano - Medellín",
@@ -577,6 +577,13 @@
    "hora": "14:00",
    "sala": "Aula Múltiple",
    "titulo": "colombia es fantastica laboratorio de cine fantastico y terror colombiano"
+  },
+  "f_9e4cd0e6b2": {
+   "sede": "Museo de Arte Moderno de Medellín - MAMM - Medellín",
+   "dia": "2026-11-07",
+   "hora": "14:00",
+   "sala": "Teatro MAMM",
+   "titulo": "destellos comunes creaciones en red"
   },
   "f_44bbe027e4": {
    "sede": "Parque de los Deseos - Medellín",
@@ -801,6 +808,22 @@
    "hora": "18:30",
    "sala": "Plazoleta",
    "titulo": "proyeccion y concierto de clausura"
+  },
+  "f_398d47d954": {
+   "sede": "Museo de Arte Moderno de Medellín - MAMM - Medellín",
+   "dia": "2026-11-07",
+   "hora": "08:00",
+   "sala": "Teatro MAMM",
+   "titulo": "red de creacion audiovisual de medellin",
+   "ausente": true
+  },
+  "f_f76d6ba8c7": {
+   "sede": "Museo de Arte Moderno de Medellín - MAMM - Medellín",
+   "dia": "2026-11-06",
+   "hora": "16:30",
+   "sala": "Teatro MAMM",
+   "titulo": "ivan hadoum",
+   "ausente": true
   }
  }
 }

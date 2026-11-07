@@ -29,23 +29,18 @@ struct FilmDetail: View {
         TimelineView(.everyMinute) { ctx in
             ScrollView {
                 VStack(alignment: .leading, spacing: 8) {
-                    // El póster manda: a sangre arriba, el texto sube sobre un degradado.
-                    ZStack(alignment: .bottomLeading) {
-                        PosterLarge(item: item)
-                        LinearGradient(colors: [.clear, .black.opacity(0.85), .black],
-                                       startPoint: .center, endPoint: .bottom)
-                            .allowsHitTesting(false)
-                        VStack(alignment: .leading, spacing: 3) {
-                            if PlanCompute.isLive(item, now: ctx.date) {
-                                Text(L.now).font(.system(size: 9, weight: .bold)).tracking(0.6)
-                                    .foregroundStyle(OT.green)
-                            }
-                            Text(item.title)
-                                .font(.headline).foregroundStyle(OT.warm)
-                                .fixedSize(horizontal: false, vertical: true)
+                    // El póster manda, entero: el título va debajo, no encima.
+                    PosterLarge(item: item)
+                    VStack(alignment: .leading, spacing: 3) {
+                        if PlanCompute.isLive(item, now: ctx.date) {
+                            Text(L.now).font(.system(size: 9, weight: .bold)).tracking(0.6)
+                                .foregroundStyle(OT.green)
                         }
-                        .padding(.horizontal, 8).padding(.bottom, 2)
+                        Text(item.title)
+                            .font(.headline).foregroundStyle(OT.warm)
+                            .fixedSize(horizontal: false, vertical: true)
                     }
+                    .padding(.horizontal, 8)
 
                     if let f = PlanCompute.progress(item, now: ctx.date),
                        let m = PlanCompute.minutesLeft(item, now: ctx.date) {
@@ -95,25 +90,21 @@ private struct PosterLarge: View {
     private var editorial: Bool { PlanCompute.isEditorial(item) }
     private var url: URL? { PlanCompute.posterURL(item.poster, tmdbSize: "w342") }
 
-    var body: some View {
-        artwork.clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
-    }
-
-    // Editorial → 16:9 a lo ancho. Póster → 2:3, pero con TOPE DE ALTO: a todo el
-    // ancho un 2:3 mide 1,5 pantallas de ancho, más alto que la pantalla entera del
-    // Ultra, y el detalle arrancaba con una imagen que no cabía y un scroll larguísimo
-    // (23 sep 2026). El mockup aprobado lo mostraba ocupando el tercio de arriba: el
-    // tope lo devuelve a eso. Sin recortar, la regla de siempre.
-    @ViewBuilder private var artwork: some View {
+    // Editorial → 16:9 a lo ancho. Póster → 2:3 EXACTO y centrado: el marco va en la
+    // imagen, porque con el marco a todo el ancho se recortaba y se veía cuadrado
+    // (6 nov 2026).
+    @ViewBuilder var body: some View {
         if editorial {
             image.aspectRatio(16.0 / 9.0, contentMode: .fit).frame(maxWidth: .infinity)
+                .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
         } else {
-            image.aspectRatio(2.0 / 3.0, contentMode: .fit)
-                .frame(maxWidth: .infinity, maxHeight: PosterLarge.maxAlto)
+            image.frame(width: PosterLarge.alto * 2.0 / 3.0, height: PosterLarge.alto)
+                .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
+                .frame(maxWidth: .infinity)
         }
     }
-    // 40 % del alto de la pantalla: el póster encabeza, no tapa.
-    static var maxAlto: CGFloat { WKInterfaceDevice.current().screenBounds.height * 0.4 }
+    // 65 % del alto de la pantalla: el póster encabeza y se nota que hay más abajo.
+    static var alto: CGFloat { WKInterfaceDevice.current().screenBounds.height * 0.65 }
 
     // RemoteImage comparte la NSCache con la fila → si el thumb ya cargó, el
     // detalle aparece al instante (y viceversa); reemplaza AsyncImage (flaky).
@@ -154,14 +145,9 @@ private struct DelayControl: View {
     }
     var body: some View {
         VStack(alignment: .leading, spacing: 6) {
-            VStack(alignment: .leading, spacing: 1) {
-                Text(mins > 0 ? L.delayState : L.delayAsk)
-                    .font(.footnote).fontWeight(.semibold)
-                    .foregroundStyle(mins > 0 ? OT.amber : OT.warm)
-                Text(mins > 0 ? L.delayScheduled(item.time ?? "") : L.delayHelp)
-                    .font(.caption2).foregroundStyle(OT.secondary)
-                    .fixedSize(horizontal: false, vertical: true)
-            }
+            Text(mins > 0 ? L.delayState : L.delayAsk)
+                .font(.footnote).fontWeight(.semibold)
+                .foregroundStyle(mins > 0 ? OT.amber : OT.warm)
             HStack {
                 Button { set(mins - 5) } label: { Image(systemName: "minus").font(.body.weight(.bold)) }
                     .frame(width: 44, height: 44).disabled(mins == 0)
@@ -179,6 +165,9 @@ private struct DelayControl: View {
                     .accessibilityLabel(L.plus5)
             }
             .buttonStyle(.bordered)
+            Text(mins > 0 ? L.delayScheduled(item.time ?? "") : L.delayHelp)
+                .font(.caption2).foregroundStyle(OT.secondary)
+                .fixedSize(horizontal: false, vertical: true)
         }
         .onAppear { crown = Double(mins) }
         .onChange(of: mins) { _, m in if Int(crown) != m { crown = Double(m) } }

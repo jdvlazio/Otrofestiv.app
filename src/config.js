@@ -143,7 +143,27 @@ export const SECTION_COLORS = {
 export const SECTION_EN = {
   // CINETORO 2026
   '🏆 Selección Oficial': 'Official Selection',
+  '🎬 Largometrajes': 'Feature Films',
+  '⭐ Largometraje Invitado': 'Guest Feature',
+  '🌟 Cortometraje Invitado': 'Guest Short',
+  '⏱️ Filminuto': 'One-Minute Films',
+  '💬 Conversatorio': 'Talk',
+  '🌍 Animación Internacional': 'International Animation',
+  '✏️ Animación Nacional': 'National Animation',
+  '📽️ Documental': 'Documentary',
+  '🎵 Videoclip': 'Music Video',
+  '🌎 Ficción Internacional': 'International Fiction',
+  '🎭 Ficción Nacional': 'National Fiction',
+  '🧪 Experimental': 'Experimental',
+  '😈 Selección Riosucio': 'Riosucio Selection',
+  '🏔️ Panorama Regional': 'Regional Panorama',
+  '🎉 Historias de Carnaval Internacional': 'International Carnival Stories',
   '🎨 Cinetoro al Aula': 'Cinetoro in the Classroom',
+  '🎞️ Proyección de Película': 'Film Screening',
+  '🏆 La Canoa Dorada': 'La Canoa Dorada',
+  '🛠️ Talleres con Expertos': 'Workshops with Experts',
+  '💬 Conversatorios': 'Talks',
+  '✨ Actividades': 'Activities',
   '🎓 Programación Académica': 'Academic Program',
   '✨ Especial': 'Special',
   // Cortos Cali 2026
@@ -844,6 +864,45 @@ export const FESTIVAL_CONFIG={
     prioLimit:3,
     films:null,posters:null,lbSlugs:{}
   },
+  'festicinerio2026': {
+    // EL NOMBRE es el del festival (@festicinerio); la edición va en fullName.
+    // Afiche oficial de Giovany Ladino, p/Derkk2ex3Up (1080×1440, estirado a 400×600).
+    name:'FESTICINERIO',displayName:'FESTICINERIO',
+    fullName:'FESTICINERIO V — Festival Internacional de Cine de Riosucio',shortName:'FESTICINERIO',
+    city:'Riosucio',country:'CO',
+    dates:'8–13 NOV',dates_en:'NOV 8–13',year:2026,timezoneOffset:'-05:00',
+    // el subtítulo expande el nombre
+    tagline:'Festival Internacional de Cine de Riosucio',
+    keyArt:'/assets/keyart/festicinerio2026.jpg',
+    instagram:'festicinerio', storageKey:'festicinerio2026_',festivalStartStr:'2026-11-08T00:00:00',festivalEndStr:'2026-11-13T23:59:00',
+    festivalDates:{'2026-11-08':'2026-11-08','2026-11-09':'2026-11-09','2026-11-10':'2026-11-10','2026-11-11':'2026-11-11','2026-11-12':'2026-11-12','2026-11-13':'2026-11-13'},
+    days:[{k:'2026-11-08',d:8,lbl:'DOM'},{k:'2026-11-09',d:9,lbl:'LUN'},{k:'2026-11-10',d:10,lbl:'MAR'},{k:'2026-11-11',d:11,lbl:'MIÉ'},{k:'2026-11-12',d:12,lbl:'JUE'},{k:'2026-11-13',d:13,lbl:'VIE'}],
+    dayKeys:['2026-11-08','2026-11-09','2026-11-10','2026-11-11','2026-11-12','2026-11-13'],
+    dayShort:{'2026-11-08':'DOM 8','2026-11-09':'LUN 9','2026-11-10':'MAR 10','2026-11-11':'MIÉ 11','2026-11-12':'JUE 12','2026-11-13':'VIE 13'},
+    dayShort_en:{'2026-11-08':'SUN 8','2026-11-09':'MON 9','2026-11-10':'TUE 10','2026-11-11':'WED 11','2026-11-12':'THU 12','2026-11-13':'FRI 13'},
+    dayLong:{'2026-11-08':'Domingo 8 de noviembre','2026-11-09':'Lunes 9 de noviembre','2026-11-10':'Martes 10 de noviembre','2026-11-11':'Miércoles 11 de noviembre','2026-11-12':'Jueves 12 de noviembre','2026-11-13':'Viernes 13 de noviembre'},
+    prioLimit:5,
+    films:null,posters:null,lbSlugs:{}
+  },
+  'fecibac2026': {
+    // EL NOMBRE es la sigla que usa el festival; el subtítulo la expande.
+    // keyArt: el afiche oficial de @festivaldecine.bc (p/DesZ7arBwa_), estirado a 400×600.
+    name:'FECIBAC',displayName:'FECIBAC',
+    fullName:'12 Festival de Cine del Bajo Cauca',shortName:'FECIBAC',
+    city:'Caucasia',country:'CO',
+    dates:'10–14 NOV',dates_en:'NOV 10–14',year:2026,timezoneOffset:'-05:00',
+    tagline:'Festival de Cine del Bajo Cauca',
+    keyArt:'/assets/keyart/fecibac2026-v2.jpg',
+    instagram:'festivaldecine.bc', storageKey:'fecibac2026_',festivalStartStr:'2026-11-10T00:00:00',festivalEndStr:'2026-11-14T23:59:00',
+    festivalDates:{'2026-11-10':'2026-11-10','2026-11-11':'2026-11-11','2026-11-12':'2026-11-12','2026-11-13':'2026-11-13','2026-11-14':'2026-11-14'},
+    days:[{k:'2026-11-10',d:10,lbl:'MAR'},{k:'2026-11-11',d:11,lbl:'MIÉ'},{k:'2026-11-12',d:12,lbl:'JUE'},{k:'2026-11-13',d:13,lbl:'VIE'},{k:'2026-11-14',d:14,lbl:'SÁB'}],
+    dayKeys:['2026-11-10','2026-11-11','2026-11-12','2026-11-13','2026-11-14'],
+    dayShort:{'2026-11-10':'MAR 10','2026-11-11':'MIÉ 11','2026-11-12':'JUE 12','2026-11-13':'VIE 13','2026-11-14':'SÁB 14'},
+    dayShort_en:{'2026-11-10':'TUE 10','2026-11-11':'WED 11','2026-11-12':'THU 12','2026-11-13':'FRI 13','2026-11-14':'SAT 14'},
+    dayLong:{'2026-11-10':'Martes 10 de noviembre','2026-11-11':'Miércoles 11 de noviembre','2026-11-12':'Jueves 12 de noviembre','2026-11-13':'Viernes 13 de noviembre','2026-11-14':'Sábado 14 de noviembre'},
+    prioLimit:4,
+    films:null,posters:null,lbSlugs:{}
+  },
   'cinetoro2026': {
     // EL NOMBRE es el del festival (cinetoro.org); la edición va en fullName.
     // Días oficiales 10–15 NOV (Roldanillo 10, Toro 11–15). Lo de otras ciudades
@@ -1267,7 +1326,6 @@ export const SECTION_ARCHETYPES = {
   '🎆 Evento de Clausura': 'Clausura',
   // ── Festival de Cine Funza 2026 · Funza (el «Componente» de la agenda) ─
   '📚 Literatura / Artes Escénicas / Cine': 'Especiales / Eventos',
-  '💬 Conversatorio': 'Charlas / Industria',
   '🎞️ Exhibición Cinematográfica': 'Muestra / País',
   '🛠️ Formación Especializada': 'Charlas / Industria',
   '🤝 Encuentro Departamental': 'Charlas / Industria',
@@ -1279,7 +1337,27 @@ export const SECTION_ARCHETYPES = {
   '🏆 Premiación': 'Especiales / Eventos',
   // ── CINETORO 2026 · Toro ──────────────────────────────────────────────
   '🏆 Selección Oficial': 'Competencia',
+  '🎬 Largometrajes': 'Muestra / País',
+  '⭐ Largometraje Invitado': 'Especiales / Eventos',
+  '🌟 Cortometraje Invitado': 'Especiales / Eventos',
+  '⏱️ Filminuto': 'Cortos / Programas',
+  '💬 Conversatorio': 'Charlas / Industria',
+  '🌍 Animación Internacional': 'Cortos / Programas',
+  '✏️ Animación Nacional': 'Cortos / Programas',
+  '📽️ Documental': 'Cortos / Programas',
+  '🎵 Videoclip': 'Cortos / Programas',
+  '🌎 Ficción Internacional': 'Cortos / Programas',
+  '🎭 Ficción Nacional': 'Cortos / Programas',
+  '🧪 Experimental': 'Cortos / Programas',
+  '😈 Selección Riosucio': 'Cortos / Programas',
+  '🏔️ Panorama Regional': 'Cortos / Programas',
+  '🎉 Historias de Carnaval Internacional': 'Cortos / Programas',
   '🎨 Cinetoro al Aula': 'Cortos / Programas',
+  '🎞️ Proyección de Película': 'Muestra / País',
+  '🏆 La Canoa Dorada': 'Competencia',
+  '🛠️ Talleres con Expertos': 'Charlas / Industria',
+  '💬 Conversatorios': 'Charlas / Industria',
+  '✨ Actividades': 'Especiales / Eventos',
   '🎓 Programación Académica': 'Charlas / Industria',
   '✨ Especial': 'Especiales / Eventos',
   // ── Cortos Cali 2026 · Cali ───────────────────────────────────────────

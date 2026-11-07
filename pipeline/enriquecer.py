@@ -29,7 +29,7 @@ import json, os, re, subprocess, sys, time
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from lib import (asset_declarado, sin_tmdb_si_se_pide, cargar_crudo, ficha_verifica, norm, provenance, slug,
-                 tmdb_get, tmdb_ficha, UA, ficha_tmdb, director_coincide, ya_publicada,
+                 tmdb_get, tmdb_ficha, UA, ficha_tmdb, director_coincide, publicadas_de,
                  obras_publicadas)
 import catalogo  # noqa: E402
 
@@ -425,6 +425,7 @@ def main():
     alias = corr.get('alias', {})
     # las fichas que declaró una persona, por título del festival
     declaradas = corr.get('fichas', {})
+    misma_obra = corr.get('misma_obra', {})
 
     # TODAS las obras, no solo las de nivel superior. Hasta hoy esto recorría
     # únicamente `funciones`, así que en un festival con programas de cortos el
@@ -539,14 +540,14 @@ def main():
             # el reúso de lo publicado TAMBIÉN desde la caché: la primera
             # versión solo lo hacía al sondear, y la segunda corrida de
             # Girardota perdía 4 afiches (29 sep 2026, lo paró publicar.py)
-            _r = reuso_publicada(ya_publicada({**f, 'titulo': t}, publicadas), fid)
+            _r = reuso_publicada(publicadas_de({**f, 'titulo': t}, publicadas, misma_obra), fid)
             if _r:
                 ok[t] = _r
             print(f'[{i:3}/{len(obras)}] ··  {t[:46]:48} sin ficha '
                   f'(caché del {c["fecha"]})', flush=True)
             continue
 
-        pub = ya_publicada({**f, 'titulo': t}, publicadas)
+        pub = publicadas_de({**f, 'titulo': t}, publicadas, misma_obra)
         e, fuente = cascada_obra({**f, 'titulo': t}, key, alias, pub, _obs)
         if e:
             e['_director'], e['_sondeado'] = _dir, _hoy
@@ -586,7 +587,7 @@ def main():
     for t, f in obras.items():
         e = ok.get(t)
         if e and not e.get('poster_path') and not e.get('poster'):
-            _r = reuso_publicada(ya_publicada({**f, 'titulo': t}, publicadas), fid)
+            _r = reuso_publicada(publicadas_de({**f, 'titulo': t}, publicadas, misma_obra), fid)
             if _r and _r.get('poster') and not _r['poster'].startswith(f'/assets/{fid}/'):
                 e['poster'] = _r['poster']
                 e['_afiche'] = _r['_verificado']

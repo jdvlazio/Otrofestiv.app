@@ -24,10 +24,13 @@ GEO = f'{REPO}/festivals/staging/ficidi-2026-venues-geo.json'
 # trae 4 obras que el PDF no pone el 6 nov. Se verifican por otro camino que el
 # crudo: el título leído por Vision (ocr.py) en su lámina, y la lámina 00 debe
 # decir el día y la hora de la función.
-IG = f'{REPO}/fuentes/ig/DfSWDVxEYCQ'
-IG_SUMA = {('2026-11-06', '18:00'): ('00.jpg', ['6DENOVIEMBRE', '600PM'],
+# El post de la clausura (p/DfVRPEHD1R4, 4 nov) suma 2 el 7 nov; Vision no lee la
+# fecha en su portada, así que el día y la hora se verifican en el pie del post.
+IG_SUMA = {('2026-11-06', '18:00'): ('DfSWDVxEYCQ', '00.jpg', ['6DENOVIEMBRE', '600PM'],
                                     {'pepagaitánpresenteahoraysiempre': '12.jpg', 'fragmentos': '13.jpg',
-                                     'tuesdaysession': '14.jpg', '90segundos': '15.jpg'})}
+                                     'tuesdaysession': '14.jpg', '90segundos': '15.jpg'}),
+           ('2026-11-07', '09:00'): ('DfVRPEHD1R4', None, ['7DENOVIEMBRE', '900AM'],
+                                    {'dafneypol': '05.jpg', 'odiárioimaginado': '06.jpg'})}
 DIA = {'3': '2026-11-03', '4': '2026-11-04', '5': '2026-11-05', '6': '2026-11-06', '7': '2026-11-07'}
 
 
@@ -50,15 +53,20 @@ def main():
         pdf[clave] = obras
     sys.path.insert(0, os.path.join(REPO, 'pipeline'))
     from ocr import leer
-    for k, (portada, claves, obras) in IG_SUMA.items():
-        lec = leer([f'{IG}/{x}' for x in [portada, *obras.values()]])
+    for k, (post, portada, claves, obras) in IG_SUMA.items():
+        IG = f'{REPO}/fuentes/ig/{post}'
+        lec = leer([f'{IG}/{x}' for x in [*([portada] if portada else []), *obras.values()]])
         txt = lambda x: ficha(' '.join(lec.get(f'{IG}/{x}', []))).upper()
-        if not all(c.lower().upper() in txt(portada) for c in claves):
-            sys.exit(f'✗ {k}: la lámina {portada} no dice {claves}')
+        donde = txt(portada) if portada else ficha(json.load(
+            open(f'{REPO}/fuentes/ig-vigia/{post}.json', encoding='utf-8'))['caption']).upper()
+        if not all(c.lower().upper() in donde for c in claves):
+            sys.exit(f'✗ {k}: {portada or "el pie del post"} no dice {claves}')
         for o, lam in obras.items():
             if o.upper() not in txt(lam).replace('GAITAN', 'GAITÁN'):
                 sys.exit(f'✗ {k}: «{o}» no se lee en la lámina {lam}')
         pdf[k] = pdf[k] + list(obras)
+    # post de IG del 5 nov, más nuevo que el PDF: la función de hoy pasa a las 19:00 (afirmación, Juan)
+    pdf[('2026-11-05', '19:00')] = pdf.pop(('2026-11-05', '18:00'))
     b = json.load(open(BUILD, encoding='utf-8'))
     geo = json.load(open(GEO, encoding='utf-8'))
     fallos, n = [], 0

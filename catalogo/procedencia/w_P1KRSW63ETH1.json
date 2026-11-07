@@ -1,6 +1,6 @@
 {
  "titulo_original": {
-  "fuente": "festival:ficmontanas-2026",
+  "fuente": "festival:festicinerio-2026",
   "regla": "el título que más festivales imprimen"
  },
  "directores": {
@@ -14,9 +14,5 @@
  "paises": {
   "fuente": "festival",
   "regla": "pais-union"
- },
- "generos": {
-  "fuente": "festival",
-  "regla": "todos los publicados, del más al menos frecuente"
  }
 }

@@ -8,14 +8,29 @@
  "directores": [
   "Ricardo Muñoz Izquierdo"
  ],
+ "aliases": [
+  {
+   "titulo": "Anoche a la Media Noche",
+   "tipo": "festival"
+  },
+  {
+   "titulo": "Last Night at Midnight",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
  "sinopsis": {
-  "es": "Last Night at Midnight (Anoche a medianoche) es un cortometraje experimental basado en un poema octosílabo escrito por Gualberto Gutiérrez en 1819, en una época en la que el terror dominaba el Virreinato de la Nueva Granada. El poema relata, con ironía y crueldad, la noche en que el virrey Juan Sámano huyó de Santafé hacia Cartagena tras la derrota de las tropas realistas en la Batalla de Boyacá. Lejos de una reconstrucción histórica convencional, la película fragmenta el poema y lo transforma en una delirante máquina visual: selvas, rituales, oraciones, cuerpos grotescos y presagios ominosos acompañan la huida de un poder que ya no gobierna. Personajes que emergen de la escultura, la danza y el teatro encarnan una dramaturgia siniestra en la que la historia oficial es desmantelada y puesta a sangrar. Estableciendo resonancias intemporales entre la huida del virrey y la del rey Juan Carlos I de España, el cortometraje entreteje humor negro, escatología simbólica y una estética del pánico, transformando un mito fundacional en un relato corrosivo sobre la persistencia de la dominación, la memoria y la imaginación histórica."
+  "es": "Last Night at Midnight (Anoche a medianoche) es un cortometraje experimental basado en un poema octosílabo escrito por Gualberto Gutiérrez en 1819, en una época en la que el terror dominaba el Virreinato de la Nueva Granada. El poema relata, con ironía y crueldad, la noche en que el virrey Juan Sámano huyó de Santafé hacia Cartagena tras la derrota de las tropas realistas en la Batalla de Boyacá. Lejos de una reconstrucción histórica convencional, la película fragmenta el poema y lo transforma en una delirante máquina visual: selvas, rituales, oraciones, cuerpos grotescos y presagios ominosos acompañan la huida de un poder que ya no gobierna. Personajes que emergen de la escultura, la danza y el teatro encarnan una dramaturgia siniestra en la que la historia oficial es desmantelada y puesta a sangrar. Estableciendo resonancias intemporales entre la huida del virrey y la del rey Juan Carlos I de España, el cortometraje entreteje humor negro, escatología simbólica y una estética del pánico, transformando un mito fundacional en un relato corrosivo sobre la persistencia de la dominación, la memoria y la imaginación histórica.",
+  "en": "“Last Night at Midnight” is an experimental short film based on an octosyllabic poem written by Gualberto Gutiérrez in 1819, at a time when terror reigned in the Viceroyalty of New Granada. The poem recounts, with irony and cruelty, the night when Viceroy Juan Sámano fled from Santafé to Cartagena following the defeat of the royalist troops at the Battle of Boyacá.  Far from a conventional historical reconstruction, the film fragments the poem and transforms it into a delirious visual machine: jungles, rituals, prayers, grotesque bodies, and ominous omens accompany the flight of a power that no longer rules. Characters emerging from sculpture, dance, and theater embody a sinister dramaturgy in which official history is dismantled and laid bare."
  },
  "afiche": {
   "archivo": "/assets/cineautopsia/anoche-a-media-noche.jpg",
   "veredicto": "oficial"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 1758042,
+  "letterboxd": "last-night-at-midnight"
+ },
  "versiones": [
   {
    "etiqueta": "15 min",
@@ -23,6 +38,7 @@
   }
  ],
  "presentaciones": [
-  "cineautopsia-2026"
+  "cineautopsia-2026",
+  "festicinerio-2026"
  ]
 }

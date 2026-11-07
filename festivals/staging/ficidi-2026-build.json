@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "Calendario de programación IV FICIDI 2026 (PDF enviado por el festival)",
-  "capturado": "2026-11-03",
+  "capturado": "2026-11-05",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "radar": 1042,
@@ -197,7 +197,6 @@
     "sede": "Sala CIMU · Aduana de Barranquilla • 2:00 p. m. – 6:00 p. m."
    },
    "is_programa": true,
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -208,7 +207,7 @@
      "duration": "20 min",
      "_src": {
       "pdf": "Calendario_IV_FICIDI_2026.pdf · MARTES 3 nov, obra 01",
-      "duracion": "TMDB 1687430",
+      "duracion": "lámina IG DfVRPEHD1R4/06",
       "catalogo": "O diário imaginado"
      },
      "synopsis": "La infancia, la imaginación y el desplazamiento se convierten en un archivo de identidad queer.",
@@ -300,7 +299,7 @@
      "duration": "17 min",
      "_src": {
       "pdf": "Calendario_IV_FICIDI_2026.pdf · MARTES 3 nov, obra 06",
-      "duracion": "TMDB 1706164",
+      "duracion": "lámina IG DfVRPEHD1R4/05",
       "catalogo": "Dafne y Pol"
      },
      "synopsis": "Dos estudiantes sufren acoso homófobo por su relación y afrontan la hostilidad de su entorno escolar.",
@@ -336,7 +335,50 @@
    "description": "Siete cortometrajes.",
    "description_lang": "es",
    "_fid": "f_1fc0e62b6b",
-   "id": "f_1fc0e62b6b"
+   "id": "f_1fc0e62b6b",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    }
+   }
   },
   {
    "title": "Día 1 · Primera Función",
@@ -362,7 +404,6 @@
     "sede": "Universidad Simón Bolívar · Salón del Mirador de la Bandera, azotea, sede 1 CRA 59 # 59 -132 • 2:00 p. m."
    },
    "is_programa": true,
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -531,7 +572,50 @@
     }
    ],
    "_fid": "f_a1fea83cb5",
-   "id": "f_a1fea83cb5"
+   "id": "f_a1fea83cb5",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    }
+   }
   },
   {
    "title": "La Memoria Revelada",
@@ -558,7 +642,6 @@
    },
    "premiere": "Inauguración",
    "is_programa": true,
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -744,7 +827,54 @@
    "description": "Homenaje a Víctor Ladrón de Guevara “La Loba” y Gustavo Turizo. Conversatorio “La Memoria Revelada” con Hemel Noñera, Danny González y Víctor Ladrón de Guevara “La Loba”. Muestra artística: “La memoria de Gustavo Turizo”.",
    "description_lang": "es",
    "_fid": "f_d8705865e7",
-   "id": "f_d8705865e7"
+   "id": "f_d8705865e7",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "qa_type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "premiere": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    }
+   }
   },
   {
    "title": "Día 2",
@@ -759,7 +889,7 @@
     "18:00"
    ],
    "day": "2026-11-05",
-   "time": "18:00",
+   "time": "19:00",
    "day_order": 2,
    "venue": "La Maloca Cultural - Barranquilla",
    "has_qa": false,
@@ -769,7 +899,6 @@
     "sede": "Maloca Cultural CARRERA 46 # 79-82 • 6:00 p. m."
    },
    "is_programa": true,
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -1004,7 +1133,47 @@
     }
    ],
    "_fid": "f_e81e7f21e9",
-   "id": "f_e81e7f21e9"
+   "id": "f_e81e7f21e9",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "time": {
+     "tipo": "juan",
+     "fecha": "2026-11-05",
+     "frase": "las proyecciones de hoy serán a las 7 p.m. en la Maloca Cultural"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    }
+   }
   },
   {
    "title": "Día 3 · Primera Función",
@@ -1012,7 +1181,7 @@
    "section": "🏳️‍🌈 Selección Oficial",
    "country": "España, Brasil, Reino Unido, Argentina, Colombia",
    "flags": "🇪🇸🇧🇷🇬🇧🇦🇷🇨🇴",
-   "duration": "182 min",
+   "duration": "186 min",
    "_ancla": [
     "Universidad de la Costa – CUC - Barranquilla",
     "2026-11-06",
@@ -1030,7 +1199,6 @@
     "sede": "Universidad de la Costa Bloque 11 piso 3 Sala de Conferencias CALLE 52 # 56A-75 • 1:00 p. m."
    },
    "is_programa": true,
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -1271,7 +1439,50 @@
     }
    ],
    "_fid": "f_7fcfdb61fb",
-   "id": "f_7fcfdb61fb"
+   "id": "f_7fcfdb61fb",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    }
+   }
   },
   {
    "title": "Día 3 · Segunda Función",
@@ -1297,7 +1508,6 @@
     "sede": "Universidad de la Costa Bloque 11 piso 3 Sala de Conferencias CALLE 52 # 56A-75 • 6:00 p. m."
    },
    "is_programa": true,
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -1581,14 +1791,57 @@
     }
    ],
    "_fid": "f_a6c79ab1b8",
-   "id": "f_a6c79ab1b8"
+   "id": "f_a6c79ab1b8",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    }
+   }
   },
   {
    "title": "Revelar(se)",
    "type": "film",
    "section": "🏳️‍🌈 Selección Oficial",
-   "country": "Brasil, Colombia, México",
-   "flags": "🇧🇷🇨🇴🇲🇽",
+   "country": "Brasil, Colombia, México, España",
+   "flags": "🇧🇷🇨🇴🇲🇽🇪🇸",
    "duration": "150 min",
    "_ancla": [
     "La Fábrica de Cultura - Barranquilla",
@@ -1599,7 +1852,7 @@
    "time": "09:00",
    "day_order": 4,
    "venue": "La Fábrica de Cultura - Barranquilla",
-   "sala": "Auditorio EDA",
+   "sala": "Auditorio Luis G. Henao",
    "has_qa": true,
    "qa_type": "team",
    "_src": {
@@ -1608,7 +1861,6 @@
     "sede": "Auditorio EDA Fabrica de Cultura CALLE 40 CON CARRERA 50 ESQUINA• 9:00 a. m."
    },
    "is_programa": true,
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -1616,9 +1868,10 @@
      "director": "Cristal Luz",
      "country": "Brasil",
      "flags": "🇧🇷",
+     "duration": "17 min",
      "_src": {
       "pdf": "Calendario_IV_FICIDI_2026.pdf · SÁBADO 7 nov, obra 01",
-      "duracion": null,
+      "duracion": "lámina IG DfVRPEHD1R4/02",
       "catalogo": "Corpo e Identidade"
      },
      "synopsis": "Siete mujeres travestis de Brasil construyen su propia representación a través de la fotografía, los testimonios y la performance.",
@@ -1635,10 +1888,10 @@
      "director": "Eleggua Luna Laverde",
      "country": "Colombia",
      "flags": "🇨🇴",
-     "duration": "18 min",
+     "duration": "19 min",
      "_src": {
       "pdf": "Calendario_IV_FICIDI_2026.pdf · SÁBADO 7 nov, obra 02",
-      "duracion": "TMDB 1456289",
+      "duracion": "lámina IG DfVRPEHD1R4/03",
       "catalogo": "Danzan las luciérnagas"
      },
      "synopsis": "Una sabedora trans negra debe decidir si abandona la Tierra y a sus amores para emigrar a Marte.",
@@ -1660,7 +1913,7 @@
      "duration": "11 min",
      "_src": {
       "pdf": "Calendario_IV_FICIDI_2026.pdf · SÁBADO 7 nov, obra 03",
-      "duracion": "TMDB 1584776",
+      "duracion": "lámina IG DfVRPEHD1R4/04",
       "catalogo": "Refracción"
      },
      "synopsis": "Una joven que mantiene dos relaciones simultáneas recorre Medellín para afrontar su confusión y encontrarse consigo misma.",
@@ -1678,9 +1931,10 @@
      "director": "Tonnie Zanabria",
      "country": "México",
      "flags": "🇲🇽",
+     "duration": "27 min",
      "_src": {
       "pdf": "Calendario_IV_FICIDI_2026.pdf · SÁBADO 7 nov, obra 04",
-      "duracion": null,
+      "duracion": "lámina IG DfVRPEHD1R4/07",
       "catalogo": "La otra mitad del dolor",
       "pais": "el PDF dice «Con conversatorio»; país del catálogo"
      },
@@ -1697,9 +1951,10 @@
      "director": "Luis Daniel Abril",
      "country": "Colombia",
      "flags": "🇨🇴",
+     "duration": "15 min",
      "_src": {
       "pdf": "Calendario_IV_FICIDI_2026.pdf · SÁBADO 7 nov, obra 05",
-      "duracion": null,
+      "duracion": "lámina IG DfVRPEHD1R4/08",
       "catalogo": "No",
       "pais": "el PDF dice «Con conversatorio»; país del catálogo"
      },
@@ -1710,17 +1965,105 @@
      "lbSlug": "no-3",
      "tmdb_id": 1812527,
      "synopsis_en": "A man tries to build a future with his younger partner, but loses sight of what he wants."
+    },
+    {
+     "title": "Dafne y Pol",
+     "director": "Sergio Checa",
+     "country": "España",
+     "flags": "🇪🇸",
+     "duration": "17 min",
+     "_src": {
+      "pdf": "IG p/DfSWDVxEYCQ · suma a SÁBADO 7 nov",
+      "duracion": "lámina IG DfVRPEHD1R4/05",
+      "catalogo": "Dafne y Pol"
+     },
+     "synopsis": "Dos estudiantes sufren acoso homófobo por su relación y afrontan la hostilidad de su entorno escolar.",
+     "synopsis_lang": "es",
+     "poster": "/assets/ficidi-2026/dafne-y-pol.jpg",
+     "posterSource": "oficial",
+     "lbSlug": "dafne-y-pol",
+     "tmdb_id": 1706164,
+     "synopsis_en": "Dafne and Clara are two classmates who endure harassment at school because of their sexual orientation. Clara tries to stand up to her classmates' homophobic remarks by treating her relationship with Dafne as something completely normal.",
+     "genre": "Drama",
+     "year": 2026
+    },
+    {
+     "title": "O diário imaginado",
+     "director": "Txai Ferraz",
+     "country": "Brasil",
+     "flags": "🇧🇷",
+     "duration": "20 min",
+     "_src": {
+      "pdf": "IG p/DfSWDVxEYCQ · suma a SÁBADO 7 nov",
+      "duracion": "lámina IG DfVRPEHD1R4/06",
+      "catalogo": "O diário imaginado"
+     },
+     "synopsis": "La infancia, la imaginación y el desplazamiento se convierten en un archivo de identidad queer.",
+     "synopsis_lang": "es",
+     "poster": "/assets/ficidi-2026/o-diario-imaginado.jpg",
+     "posterSource": "oficial",
+     "lbSlug": "a-diary-imagined",
+     "tmdb_id": 1687430,
+     "synopsis_en": "In a suburb of Recife, Brazil, a lonely boy grows up watching a Mexican telenovela on television. Years later, he transforms that childhood into an imagined diary: a diary he never got to have.",
+     "title_en": "A Diary Imagined"
     }
    ],
-   "description": "Incluye “La otra mitad del dolor” + conversatorio con el equipo realizador Tonnie Zanabria y Ana Sofía Ávila desde México; y “NO” + conversatorio con el director Luis Daniel Abril desde Bogotá, Colombia.",
+   "description": "Incluye “La otra mitad del dolor” + conversatorio con el equipo realizador Tonnie Zanabria y Ana Sofía Ávila desde México; y “NO” + conversatorio con el director Luis Daniel Abril desde Bogotá, Colombia. También conversan Camila Elizalde, Samuel Murillo y Fungui Ospina, desde Cali, equipo de “¿Quién se lleva a las estrellas?”.",
    "description_lang": "es",
    "_fid": "f_148464561f",
-   "id": "f_148464561f"
+   "id": "f_148464561f",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "qa_type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-04"
+    }
+   }
   }
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-03T13:17:32",
+  "fecha": "2026-11-05T18:42:25",
   "plan_sha": "7f1d2e48ae2becc3",
   "paso": 9,
   "cmd": "python3 pipeline/ficidi-2026-verificar.py"

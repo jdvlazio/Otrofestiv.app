@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "midbo.co — ficha de cada obra (bloque «Funciones») + API pelicula/seccion",
-  "capturado": "2026-11-04",
+  "capturado": "2026-11-06",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_secciones": "Las categorías madre de la taxonomía `seccion` de midbo.co, tal cual; «Encuentro Pensar lo Real» es el nombre del menú del seminario; «Proyecciones» (nuestra) para la única obra sin sección.",
@@ -9718,12 +9718,8 @@
     }
    },
    "director": "Daniel Torres",
-   "synopsis": "Circo convierte una carpa construida con retazos de tela en un dispositivo de memoria. En su interior, los recuerdos de infancia de “Lolita” reaparecen de manera fragmentaria a través de imágenes en 16 mm, video, voces y variaciones de luz. Daniel Torres articula estos elementos mediante una operación performativa en la que las proyecciones se desplazan sobre las superficies textiles, transformándolas en pantallas inestables y cuerpos en movimiento.",
-   "synopsis_lang": "es",
    "_conservado": [
-    "director",
-    "synopsis",
-    "synopsis_lang"
+    "director"
    ]
   },
   {
@@ -10234,7 +10230,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-04T09:41:13",
+  "fecha": "2026-11-06T17:10:01",
   "plan_sha": "18f7fb7e2b601fc4",
   "paso": 8,
   "cmd": "python3 pipeline/midbo-2026-verificar.py"

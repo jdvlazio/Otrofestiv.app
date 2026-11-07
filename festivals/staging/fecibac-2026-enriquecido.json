@@ -1,0 +1,299 @@
+{
+ "_provenance": {
+  "fuente": "TMDB + letterboxd.com/tmdb/<id>, emparejado con ficha_verifica() (director + año ±1 o duración ±3 min). Lo que no verifica no entra.",
+  "capturado": "2026-11-05"
+ },
+ "obras": [
+  {
+   "titulo": "Brigitte Planeta B",
+   "tmdb_id": 1498786,
+   "titulo_original": "Brigitte, planeta B",
+   "poster_path": "/ajUS8Zl4qCGcsuX9lNgphTYh3Qp.jpg",
+   "synopsis_es": "Brigitte Baptiste, Ph.D., se ha consolidado como una de las principales expertas ambientales de Colombia y también como un ícono transgénero influyente e inesperado.",
+   "synopsis_en": "Brigitte Baptiste is a female transgender ecologist whose groundbreaking research has challenged scientific and social conventions for years. With the help of tracking, archive footage and digital animation, the film weaves an intimate soliloquy and a richly nuanced portrait around an extraordinary protagonist, whose refreshing ideas about life, family and current issues may, perhaps, rekindle hope for the future of our planet.",
+   "genero": "Documental",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 87,
+   "pais_tmdb": "Colombia",
+   "title_en": "Brigitte's Planet B",
+   "lbSlug": "brigittes-planet-b",
+   "_verificado": "declarada a mano: Protagonista Brigitte Baptiste, como dice la lámina.",
+   "_director": "Santiago Posada",
+   "_sondeado": "2026-11-05",
+   "poster": "/assets/fecibac-2026/brigitte-planeta-b.jpg",
+   "posterSource": "tmdb",
+   "_heredado": {
+    "synopsis_es": "catálogo w_R4DFCSRS9XK8 (aff-2026, fecibac-2026, ficma-2026)",
+    "pais_heredado": "catálogo w_R4DFCSRS9XK8 (aff-2026, fecibac-2026, ficma-2026)"
+   },
+   "pais_heredado": "Colombia"
+  },
+  {
+   "titulo": "El juego de la vida",
+   "tmdb_id": 1562450,
+   "titulo_original": "El juego de la vida",
+   "poster_path": "/kTVWwQqbPAk4kw40Ccq3C0j2nmN.jpg",
+   "synopsis_es": "Un documentalista sigue durante 14 años a cinco familias colombianas que enfrentan las desigualdades de un país donde el origen influye en las oportunidades. A través de sus decisiones, frustraciones, resiliencia y logros, revela que, aunque las reglas no son iguales para todos, la voluntad de transformar el propio destino persiste. El juego de la vida es un retrato íntimo sobre la movilidad social, la dignidad y la esperanza en Colombia.",
+   "synopsis_en": "A documentary filmmaker follows five Colombian families for 14 years as they struggle to get ahead in a country where moving forward does not always mean progress.",
+   "genero": "Documental",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 95,
+   "pais_tmdb": "Colombia",
+   "title_en": "The Game of Life",
+   "lbSlug": "the-game-of-life-2025",
+   "_verificado": "declarada a mano: La misma ficha de ficdeh2026 y ficma2026.",
+   "_director": "Mario Andrés Ruiz Zuluaga",
+   "_sondeado": "2026-11-05",
+   "poster": "/assets/fecibac-2026/el-juego-de-la-vida.jpg",
+   "posterSource": "tmdb",
+   "_heredado": {
+    "synopsis_es": "catálogo w_R4HF7EKJN5JE (fecibac-2026, ficdeh-2026, ficma-2026)",
+    "pais_heredado": "catálogo w_R4HF7EKJN5JE (fecibac-2026, ficdeh-2026, ficma-2026)"
+   },
+   "pais_heredado": "Colombia"
+  },
+  {
+   "titulo": "En tierra",
+   "tmdb_id": 1567732,
+   "titulo_original": "En tierra",
+   "poster_path": "/qFTmvdXxRmHDdGXiNXGLho1gP7F.jpg",
+   "synopsis_es": "Old DC-3s are the lifeline for residents of the Colombian Amazon. The film crew joins one of the planes on a flight to remote settlements. But this connection is under threat, and without it communities will face total isolation.",
+   "synopsis_en": "Old DC-3s are the lifeline for residents of the Colombian Amazon. The film crew joins one of the planes on a flight to remote settlements. But this connection is under threat, and without it communities will face total isolation.",
+   "genero": "Documental",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 80,
+   "pais_tmdb": "Colombia, France",
+   "title_en": "Grounded",
+   "lbSlug": "grounded-2025",
+   "_verificado": "declarada a mano: La misma ficha de ficma2026 (Simón Uribe).",
+   "_director": "Simón Uribe",
+   "_sondeado": "2026-11-05",
+   "poster": "/assets/fecibac-2026/en-tierra.jpg",
+   "posterSource": "tmdb",
+   "_heredado": {
+    "synopsis_es": "catálogo w_R4HYZHZ2WVRG (fecibac-2026, ficma-2026)",
+    "pais_heredado": "catálogo w_R4HYZHZ2WVRG (fecibac-2026, ficma-2026)"
+   },
+   "pais_heredado": "Colombia, Francia"
+  },
+  {
+   "titulo": "Entre 2 Aguas",
+   "tmdb_id": 1656180,
+   "titulo_original": "Entre 2 Aguas",
+   "poster_path": "/1sHXXkdwsKwrwSrfLmvCG9WL2EW.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "When Moses discovers the network taking control of the water supply, he must choose between staying in the business that lifted him out of poverty… or exposing it and facing the consequences. In a country thirsty for truth, Moses will have to decide what he’s willing to risk: his comfort, his family, or the lives of millions. And he’ll have to do it before the current pulls him under.  Between Two Waters is an environmental thriller about the planet’s most vital resource and the strategy of a powerful economic group determined to turn access to it into a multibillion-dollar business—no matter the cost.",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 93,
+   "pais_tmdb": "",
+   "lbSlug": "entre-2-aguas",
+   "_verificado": "declarada a mano: Estreno colombiano del 19 mar 2026 (Canal Trece). No es la homónima española de Lacuesta (536808).",
+   "_director": "Carlos Gabriel Vergara",
+   "_sondeado": "2026-11-05",
+   "sinopsis": "Cuando Moisés descubre la red que está apoderándose del agua, debe elegir entre seguir en el negocio que lo sacó de la pobreza... o denunciarlo y asumir las consecuencias. En un país sediento de verdad, Moisés deberá decidir qué está dispuesto a arriesgar: su comodidad, su familia o la vida de millones. Y tendrá que hacerlo antes de que la corriente lo arrastre. Entre 2 Aguas es un thriller ambiental sobre el recurso más importante del planeta y la estrategia de un poderoso grupo económico decidido a convertir su acceso en un negocio multimillonario, cueste lo que cueste.",
+   "_sinopsis": "festivals/siembrafest-2026.json",
+   "poster": "/assets/fecibac-2026/entre-2-aguas.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "La Creciente",
+   "tmdb_id": 1779631,
+   "titulo_original": "La Creciente",
+   "poster_path": "/tuDmoPX1mv2gV5eHPztI27KBrrK.jpg",
+   "synopsis_es": "En el corazón del río Magdalena, una comunidad enfrenta cada año el avance del agua y el abandono institucional. El documental observa la relación entre territorio, inundación, dignidad y resistencia comunitaria.",
+   "synopsis_en": "In the heart of the Magdalena River region, a community confronts the encroaching waters and institutional neglect year after year. The documentary examines the relationship between territory, flooding, dignity, and community resistance.",
+   "genero": "Documental",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 89,
+   "pais_tmdb": "",
+   "lbSlug": "la-creciente",
+   "_verificado": "declarada a mano: Pablo Andrés Muñoz Castrillón: la misma ficha de jardin2026 y festicinerio2026; la lámina nombra a Pablo Muñoz como director.",
+   "_director": "Pablo Andrés Muñoz Castrillón",
+   "_sondeado": "2026-11-05",
+   "poster": "/assets/fecibac-2026/la-creciente.jpg",
+   "posterSource": "tmdb",
+   "_heredado": {
+    "synopsis_es": "catálogo w_R4KARND2806N (fecibac-2026, festicinerio-2026, jardin-2026)",
+    "pais_heredado": "catálogo w_R4KARND2806N (fecibac-2026, festicinerio-2026, jardin-2026)"
+   },
+   "pais_heredado": "Colombia"
+  },
+  {
+   "titulo": "Las pesadillas del siervo",
+   "tmdb_id": 1791689,
+   "titulo_original": "Las pesadillas del siervo",
+   "poster_path": "/kJOypmaBdirRsCsr9iwAT6X4H71.jpg",
+   "synopsis_es": "En Colombia, el obispo Miguel Ángel Builes impuso sus doctrinas ultraconservadoras, basadas en represión y miedo. Su ideología permeó el pensamiento de un país y creó el caldo de cultivo para el nacimiento de uno de los primeros grupos paramilitares de Colombia, Los doce apóstoles, en esa región, durante los años noventa del siglo XX. Su jefe supremo era un cura admirador de las ideas del obispo.",
+   "synopsis_en": "",
+   "genero": "Documental",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 90,
+   "pais_tmdb": "",
+   "lbSlug": "las-pesadillas-del-siervo",
+   "_verificado": "declarada a mano: La lámina nombra a Manuel Villa como director.",
+   "_director": "Manuel Villa",
+   "_sondeado": "2026-11-05",
+   "poster": "/assets/fecibac-2026/las-pesadillas-del-siervo.jpg",
+   "posterSource": "tmdb",
+   "_heredado": {
+    "genero": "catálogo w_R4H45YCZGPMT (fecibac-2026, ficcali-2026, miradas-2026)",
+    "pais_heredado": "catálogo w_R4H45YCZGPMT (fecibac-2026, ficcali-2026, miradas-2026)"
+   },
+   "pais_heredado": "Colombia"
+  }
+ ],
+ "verificadas": {
+  "Brigitte Planeta B": {
+   "tmdb_id": 1498786,
+   "titulo_original": "Brigitte, planeta B",
+   "poster_path": "/ajUS8Zl4qCGcsuX9lNgphTYh3Qp.jpg",
+   "synopsis_es": "Brigitte Baptiste, Ph.D., se ha consolidado como una de las principales expertas ambientales de Colombia y también como un ícono transgénero influyente e inesperado.",
+   "synopsis_en": "Brigitte Baptiste is a female transgender ecologist whose groundbreaking research has challenged scientific and social conventions for years. With the help of tracking, archive footage and digital animation, the film weaves an intimate soliloquy and a richly nuanced portrait around an extraordinary protagonist, whose refreshing ideas about life, family and current issues may, perhaps, rekindle hope for the future of our planet.",
+   "genero": "Documental",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 87,
+   "pais_tmdb": "Colombia",
+   "title_en": "Brigitte's Planet B",
+   "lbSlug": "brigittes-planet-b",
+   "_verificado": "declarada a mano: Protagonista Brigitte Baptiste, como dice la lámina.",
+   "_director": "Santiago Posada",
+   "_sondeado": "2026-11-05",
+   "poster": "/assets/fecibac-2026/brigitte-planeta-b.jpg",
+   "posterSource": "tmdb",
+   "_heredado": {
+    "synopsis_es": "catálogo w_R4DFCSRS9XK8 (aff-2026, fecibac-2026, ficma-2026)",
+    "pais_heredado": "catálogo w_R4DFCSRS9XK8 (aff-2026, fecibac-2026, ficma-2026)"
+   },
+   "pais_heredado": "Colombia"
+  },
+  "El juego de la vida": {
+   "tmdb_id": 1562450,
+   "titulo_original": "El juego de la vida",
+   "poster_path": "/kTVWwQqbPAk4kw40Ccq3C0j2nmN.jpg",
+   "synopsis_es": "Un documentalista sigue durante 14 años a cinco familias colombianas que enfrentan las desigualdades de un país donde el origen influye en las oportunidades. A través de sus decisiones, frustraciones, resiliencia y logros, revela que, aunque las reglas no son iguales para todos, la voluntad de transformar el propio destino persiste. El juego de la vida es un retrato íntimo sobre la movilidad social, la dignidad y la esperanza en Colombia.",
+   "synopsis_en": "A documentary filmmaker follows five Colombian families for 14 years as they struggle to get ahead in a country where moving forward does not always mean progress.",
+   "genero": "Documental",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 95,
+   "pais_tmdb": "Colombia",
+   "title_en": "The Game of Life",
+   "lbSlug": "the-game-of-life-2025",
+   "_verificado": "declarada a mano: La misma ficha de ficdeh2026 y ficma2026.",
+   "_director": "Mario Andrés Ruiz Zuluaga",
+   "_sondeado": "2026-11-05",
+   "poster": "/assets/fecibac-2026/el-juego-de-la-vida.jpg",
+   "posterSource": "tmdb",
+   "_heredado": {
+    "synopsis_es": "catálogo w_R4HF7EKJN5JE (fecibac-2026, ficdeh-2026, ficma-2026)",
+    "pais_heredado": "catálogo w_R4HF7EKJN5JE (fecibac-2026, ficdeh-2026, ficma-2026)"
+   },
+   "pais_heredado": "Colombia"
+  },
+  "En tierra": {
+   "tmdb_id": 1567732,
+   "titulo_original": "En tierra",
+   "poster_path": "/qFTmvdXxRmHDdGXiNXGLho1gP7F.jpg",
+   "synopsis_es": "Old DC-3s are the lifeline for residents of the Colombian Amazon. The film crew joins one of the planes on a flight to remote settlements. But this connection is under threat, and without it communities will face total isolation.",
+   "synopsis_en": "Old DC-3s are the lifeline for residents of the Colombian Amazon. The film crew joins one of the planes on a flight to remote settlements. But this connection is under threat, and without it communities will face total isolation.",
+   "genero": "Documental",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 80,
+   "pais_tmdb": "Colombia, France",
+   "title_en": "Grounded",
+   "lbSlug": "grounded-2025",
+   "_verificado": "declarada a mano: La misma ficha de ficma2026 (Simón Uribe).",
+   "_director": "Simón Uribe",
+   "_sondeado": "2026-11-05",
+   "poster": "/assets/fecibac-2026/en-tierra.jpg",
+   "posterSource": "tmdb",
+   "_heredado": {
+    "synopsis_es": "catálogo w_R4HYZHZ2WVRG (fecibac-2026, ficma-2026)",
+    "pais_heredado": "catálogo w_R4HYZHZ2WVRG (fecibac-2026, ficma-2026)"
+   },
+   "pais_heredado": "Colombia, Francia"
+  },
+  "Entre 2 Aguas": {
+   "tmdb_id": 1656180,
+   "titulo_original": "Entre 2 Aguas",
+   "poster_path": "/1sHXXkdwsKwrwSrfLmvCG9WL2EW.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "When Moses discovers the network taking control of the water supply, he must choose between staying in the business that lifted him out of poverty… or exposing it and facing the consequences. In a country thirsty for truth, Moses will have to decide what he’s willing to risk: his comfort, his family, or the lives of millions. And he’ll have to do it before the current pulls him under.  Between Two Waters is an environmental thriller about the planet’s most vital resource and the strategy of a powerful economic group determined to turn access to it into a multibillion-dollar business—no matter the cost.",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 93,
+   "pais_tmdb": "",
+   "lbSlug": "entre-2-aguas",
+   "_verificado": "declarada a mano: Estreno colombiano del 19 mar 2026 (Canal Trece). No es la homónima española de Lacuesta (536808).",
+   "_director": "Carlos Gabriel Vergara",
+   "_sondeado": "2026-11-05",
+   "sinopsis": "Cuando Moisés descubre la red que está apoderándose del agua, debe elegir entre seguir en el negocio que lo sacó de la pobreza... o denunciarlo y asumir las consecuencias. En un país sediento de verdad, Moisés deberá decidir qué está dispuesto a arriesgar: su comodidad, su familia o la vida de millones. Y tendrá que hacerlo antes de que la corriente lo arrastre. Entre 2 Aguas es un thriller ambiental sobre el recurso más importante del planeta y la estrategia de un poderoso grupo económico decidido a convertir su acceso en un negocio multimillonario, cueste lo que cueste.",
+   "_sinopsis": "festivals/siembrafest-2026.json",
+   "poster": "/assets/fecibac-2026/entre-2-aguas.jpg",
+   "posterSource": "tmdb"
+  },
+  "La Creciente": {
+   "tmdb_id": 1779631,
+   "titulo_original": "La Creciente",
+   "poster_path": "/tuDmoPX1mv2gV5eHPztI27KBrrK.jpg",
+   "synopsis_es": "En el corazón del río Magdalena, una comunidad enfrenta cada año el avance del agua y el abandono institucional. El documental observa la relación entre territorio, inundación, dignidad y resistencia comunitaria.",
+   "synopsis_en": "In the heart of the Magdalena River region, a community confronts the encroaching waters and institutional neglect year after year. The documentary examines the relationship between territory, flooding, dignity, and community resistance.",
+   "genero": "Documental",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 89,
+   "pais_tmdb": "",
+   "lbSlug": "la-creciente",
+   "_verificado": "declarada a mano: Pablo Andrés Muñoz Castrillón: la misma ficha de jardin2026 y festicinerio2026; la lámina nombra a Pablo Muñoz como director.",
+   "_director": "Pablo Andrés Muñoz Castrillón",
+   "_sondeado": "2026-11-05",
+   "poster": "/assets/fecibac-2026/la-creciente.jpg",
+   "posterSource": "tmdb",
+   "_heredado": {
+    "synopsis_es": "catálogo w_R4KARND2806N (fecibac-2026, festicinerio-2026, jardin-2026)",
+    "pais_heredado": "catálogo w_R4KARND2806N (fecibac-2026, festicinerio-2026, jardin-2026)"
+   },
+   "pais_heredado": "Colombia"
+  },
+  "Las pesadillas del siervo": {
+   "tmdb_id": 1791689,
+   "titulo_original": "Las pesadillas del siervo",
+   "poster_path": "/kJOypmaBdirRsCsr9iwAT6X4H71.jpg",
+   "synopsis_es": "En Colombia, el obispo Miguel Ángel Builes impuso sus doctrinas ultraconservadoras, basadas en represión y miedo. Su ideología permeó el pensamiento de un país y creó el caldo de cultivo para el nacimiento de uno de los primeros grupos paramilitares de Colombia, Los doce apóstoles, en esa región, durante los años noventa del siglo XX. Su jefe supremo era un cura admirador de las ideas del obispo.",
+   "synopsis_en": "",
+   "genero": "Documental",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 90,
+   "pais_tmdb": "",
+   "lbSlug": "las-pesadillas-del-siervo",
+   "_verificado": "declarada a mano: La lámina nombra a Manuel Villa como director.",
+   "_director": "Manuel Villa",
+   "_sondeado": "2026-11-05",
+   "poster": "/assets/fecibac-2026/las-pesadillas-del-siervo.jpg",
+   "posterSource": "tmdb",
+   "_heredado": {
+    "genero": "catálogo w_R4H45YCZGPMT (fecibac-2026, ficcali-2026, miradas-2026)",
+    "pais_heredado": "catálogo w_R4H45YCZGPMT (fecibac-2026, ficcali-2026, miradas-2026)"
+   },
+   "pais_heredado": "Colombia"
+  }
+ },
+ "sin_ficha": [
+  "La Canoa Dorada (Tanda 1)",
+  "La Canoa Dorada (Tanda 2)",
+  "Los hijos de Benkos"
+ ],
+ "_sin_ficha_sondeo": {
+  "La Canoa Dorada (Tanda 1)": {
+   "director": "",
+   "fecha": "2026-11-05"
+  },
+  "La Canoa Dorada (Tanda 2)": {
+   "director": "",
+   "fecha": "2026-11-05"
+  },
+  "Los hijos de Benkos": {
+   "director": "",
+   "fecha": "2026-11-05"
+  }
+ }
+}

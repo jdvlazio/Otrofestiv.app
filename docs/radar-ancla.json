@@ -5066,8 +5066,10 @@
    "fechas_2026": "8–13 NOV 2026 (5ª)",
    "web": "https://filmfreeway.com/FestivaldeCinedeRiosucio",
    "ig": "@festicinerio",
-   "estado": "radar",
-   "id_config": null,
+   "estado": "en_app",
+   "id_config": [
+    "festicinerio2026"
+   ],
    "issue": [
     1297
    ],
@@ -5475,8 +5477,10 @@
    "fechas_2026": "10–14 NOV 2026 (12.º «Somos Chilapos»; Proimágenes, Comfenalco e IG 27 oct)",
    "web": "https://infolocal.comfenalcoantioquia.com/index.php/agenda/fecibac-2026",
    "ig": "@festivaldecine.bc",
-   "estado": "radar",
-   "id_config": null,
+   "estado": "en_app",
+   "id_config": [
+    "fecibac2026"
+   ],
    "issue": [
     1318
    ],
