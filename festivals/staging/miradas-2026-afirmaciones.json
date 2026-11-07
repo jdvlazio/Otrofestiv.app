@@ -6,23 +6,6 @@
  "afirmaciones": [
   {
    "ancla": {
-    "sede": "Parque de los Deseos - Medellín",
-    "dia": "2026-11-07",
-    "hora": "14:00"
-   },
-   "funcion": "f_44bbe027e4",
-   "casilla": "time",
-   "valor": "10:00",
-   "contra": "14:00",
-   "fuente": {
-    "tipo": "juan",
-    "frase": "SÁBADO 7 NOV — 10:00 a. m. · «Cinemateca móvil - Laboratorio: Postproducción de video para dispositivos móviles»",
-    "fecha": "2026-10-28"
-   },
-   "evidencia": "mensaje de la Cinemateca de Medellín a Juan (28 oct), sin URL pública: lo lista bajo «10:00 a. m.» junto al laboratorio de IA generativa. El PDF (pág. 58) lo daba a las 2:00 p. m.; la respuesta del festival es la fuente más reciente."
-  },
-  {
-   "ancla": {
     "sede": "Coocine - Medellín",
     "dia": "2026-11-04",
     "hora": "10:00"
@@ -88,6 +71,57 @@
     "fecha": "2026-11-02"
    },
    "evidencia": "lámina 5 de la grilla del MAMM (＠cinematecademedellin, 2 nov): «Función con conversación» sobre «Relicto». Leído por Vision, Tesseract y a ojo (pipeline/ig-lecturas.py --dato: tres métodos coinciden). Post del 2 nov, más nuevo que el PDF."
+  },
+  {
+   "ancla": {
+    "sede": "Museo de Arte Moderno de Medellín - MAMM - Medellín",
+    "dia": "2026-11-07",
+    "hora": "08:00"
+   },
+   "funcion": "f_398d47d954",
+   "casilla": "time",
+   "valor": "09:00",
+   "contra": "08:00",
+   "fuente": {
+    "tipo": "juan",
+    "frase": "«Te autorizo para que leas las historias de Instagram de la cinemateca de Medellín para que rectifiques horarios y proyecciones» (Juan, 6 nov 2026)",
+    "fecha": "2026-11-07"
+   },
+   "evidencia": "historia de @cinematecademedellin, 6 nov, pieza «Destellos comunes: creaciones en Red», sábado 7, 9:00 a.m. a 12:00 m. y 2:00 p.m. a 5:00 p.m., MAMM."
+  },
+  {
+   "ancla": {
+    "sede": "Museo de Arte Moderno de Medellín - MAMM - Medellín",
+    "dia": "2026-11-06",
+    "hora": "19:00"
+   },
+   "funcion": "f_3ecafafd4b",
+   "casilla": "sala",
+   "valor": "Teatro MAMM",
+   "contra": "Plazoleta",
+   "fuente": {
+    "tipo": "juan",
+    "frase": "«Te autorizo para que leas las historias de Instagram de la cinemateca de Medellín para que rectifiques horarios y proyecciones» (Juan, 6 nov 2026)",
+    "fecha": "2026-11-07"
+   },
+   "evidencia": "historia de @cinematecademedellin, 6 nov, pieza «¡Cambio de lugar!»: por clima, Moscas pasa de la Plazoleta MAMM al Teatro, 7:00 p.m."
+  },
+  {
+   "ancla": {
+    "sede": "Parque de Cristo Rey - Medellín",
+    "dia": "2026-11-06",
+    "hora": "15:00"
+   },
+   "funcion": "f_9f0e5c00c2",
+   "casilla": "time",
+   "valor": "17:00",
+   "contra": "15:00",
+   "fuente": {
+    "tipo": "juan",
+    "frase": "«Te autorizo para que leas las historias de Instagram de la cinemateca de Medellín para que rectifiques horarios y proyecciones» (Juan, 6 nov 2026)",
+    "fecha": "2026-11-07"
+   },
+   "evidencia": "historia de @cinematecademedellin, 6 nov, pieza «Un cabo suelto», viernes 6 de noviembre, 5:00 p.m., Parque de Cristo Rey."
   }
  ]
 }

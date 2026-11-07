@@ -53,11 +53,13 @@ ALIAS_SEDE = {'Museo de Arte Moderno de Medellín - MAMM - Medellín': {'mamm', 
               'Coocine - Medellín': {'coocine'},
               'Comfama Otraparte - Medellín': {'otraparte'}}
 ACEPTADAS = {
+    # historias de @cinematecademedellin (6 nov, más nuevas que el PDF) → afirmaciones
+    ('A', '2026-11-06', '15:00', 'un cabo su'): 'a las 17:00 por la historia del 6 nov (afirmación)',
+    ('B', '2026-11-06', '15:00', 'cine ibero'): 'a las 17:00 por la historia del 6 nov (afirmación)',
+    ('C', '2026-11-06', '15:00', 'un cabo su'): 'a las 17:00 por la historia del 6 nov (afirmación)',
+    ('B', '2026-11-07', '08:00', 'sin titulo'): 'a las 09:00 por la historia del 6 nov (afirmación)',
+    ('C', '2026-11-07', '08:00', 'red de cre'): 'a las 09:00 por la historia del 6 nov (afirmación)',
     ('A', '2026-10-28', '19:00', 'mama chila'): 'fuera de las fechas oficiales (_no_se_publica)',
-    # la Cinemateca a Juan (28 oct) lo pasa a las 10:00 → miradas-2026-afirmaciones.json
-    ('B', '2026-11-07', '14:00', 'laboratori'): 'movida a las 10:00 por la respuesta de la Cinemateca (28 oct, afirmación)',
-    ('B', '2026-11-07', '14:00', 'cinemateca'): 'movida a las 10:00 por la respuesta de la Cinemateca (28 oct, afirmación)',
-    ('C', '2026-11-07', '14:00', 'laboratori'): 'movida a las 10:00 por la respuesta de la Cinemateca (28 oct, afirmación)',
     # la lámina de IG del 4 nov (p/DfUg6vuDC2o, más nueva que el PDF) la mueve a las 17:00 → afirmaciones
     # la lámina de IG del 1 nov (p/DfNwV3QiVe6, más nueva que el PDF) las mueve → afirmaciones (Juan, 2 nov)
     ('A', '2026-11-04', '10:00', 'papaya'): 'movida por la lámina 1 nov de IG (afirmación, Juan 2 nov)',
