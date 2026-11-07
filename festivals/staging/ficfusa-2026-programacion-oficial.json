@@ -1,11 +1,11 @@
 {
  "_provenance": {
   "fuente": "https://ficfusa.com/programacion/",
-  "capturado": "2026-11-06",
+  "capturado": "2026-11-07",
   "publicado": "2026-11-03T01:19:37",
   "metodo": "HTML de la página; a mano"
  },
- "_nota": "Parcial: la página solo publica el 11 nov; la charla del 14 nov viene de Instagram. Transcrito sin montar. La parrilla del 12 al 16 nov no está publicada. La muestra Bogotá Experimental no publica sus obras.",
+ "_nota": "Parcial: la página solo publica el 11 nov; la charla del 14 nov viene de Instagram. Transcrito sin montar. La parrilla del 12 al 16 nov no está publicada.",
  "funciones": [
   {
    "fecha": "2026-11-11",
@@ -17,13 +17,25 @@
     "Sinfonía del viaje a la luna",
     "La gran hazaña",
     "Un trato Brillante",
-    "Chicha la chicharra",
+    "Chicha la chicharra"
+   ],
+   "fin": "11:00",
+   "fuente": "https://www.instagram.com/p/DfbEPvcIZBO/ (6 nov, láminas 2 y 3 a ojo)"
+  },
+  {
+   "fecha": "2026-11-11",
+   "hora": "11:00",
+   "sede": "Cinema Los Ángeles",
+   "titulo": "Proyecciones",
+   "acceso": "Entrada gratuita",
+   "obras": [
     "Akababuru: expresión de asombro",
     "Ir Hacia adentro",
     "Sukua",
     "Tuktu padre maíz"
    ],
-   "fin": "12:00"
+   "fin": "12:00",
+   "fuente": "https://www.instagram.com/p/DfbEPvcIZBO/ (6 nov, láminas 2 y 3 a ojo)"
   },
   {
    "fecha": "2026-11-11",
@@ -46,7 +58,9 @@
    "sede": "Casona Tierra Grata",
    "titulo": "Laboratorio Visual Experimental VIDEOFRAGMENTOS",
    "acceso": "Gratuito con inscripción previa",
-   "obras": []
+   "obras": [],
+   "invitados": "Con Julián Medina",
+   "fuente": "https://www.instagram.com/p/DfbEPvcIZBO/ (6 nov, láminas 2 y 3 a ojo); la sede viene de la web, la lámina no la da"
   },
   {
    "fecha": "2026-11-11",
@@ -62,10 +76,21 @@
    "fecha": "2026-11-11",
    "hora": "19:00",
    "sede": "Quinta Balmoral",
-   "titulo": "Curaduría Invitada: Festival de Cine Experimental de Bogotá",
+   "titulo": "Vestigios e Invocaciones",
    "formato": "Proyección y Conversatorio",
-   "obras": [],
-   "invitados": "Con Julián Medina, director artístico y conceptual del festival"
+   "obras": [
+    "Tamashi",
+    "Mal de Tierra",
+    "Allegory of the Cave",
+    "Abjad Hawaz",
+    "Decaer",
+    "Inmarcesible",
+    "Anoche a la media noche"
+   ],
+   "invitados": "Conversatorio con Julián Medina, Carla Low y Elián Cubillos",
+   "curaduria": "Curaduría invitada del Festival de Cine Experimental de Bogotá",
+   "fin": "20:30",
+   "fuente": "https://www.instagram.com/p/DfbEPvcIZBO/ (6 nov, láminas 2 y 3 a ojo); directores en el pie de https://www.instagram.com/p/DfaNEWSERxC/"
   },
   {
    "fecha": "2026-11-14",
