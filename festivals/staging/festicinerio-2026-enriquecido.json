@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, emparejado con ficha_verifica() (director + año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-11-05"
+  "capturado": "2026-11-07"
  },
  "obras": [
   {
@@ -118,7 +118,7 @@
    "sinopsis": "Cortometraje experimental basado en un poema octosílabo escrito por Gualberto Gutiérrez en 1819, que relata con ironía y crueldad la noche en que el virrey Juan Sámano huyó de Santafé hacia Cartagena tras la derrota realista en la Batalla de Boyacá.",
    "_verificado": "declarada a mano: en TMDB como «Anoche a media noche», misma dirección; el afiche oficial dice «Anoche a la Media Noche»",
    "_director": "Ricardo Muñoz Izquierdo",
-   "_sondeado": "2026-11-05",
+   "_sondeado": "2026-11-07",
    "posterSource": "tmdb",
    "pais_heredado": "Colombia",
    "_heredado": {
@@ -210,7 +210,7 @@
    "sinopsis": "La Danza del Caos es un cortometraje de animación experimental que traduce la teoría de los Cinco Ritmos de Gabrielle Roth en una experiencia audiovisual abstracta.",
    "_verificado": "declarada a mano: probablemente «La danza del caos», de Valeria Preciado Romaña, animación 2025: misma dirección y género, ninguna fuente usa «Baile del Caos». A confirmar con la programación",
    "_director": "Valeria Preciado",
-   "_sondeado": "2026-11-05",
+   "_sondeado": "2026-11-07",
    "poster": "/assets/festicinerio-2026/baile-del-caos.jpg",
    "posterSource": "tmdb",
    "pais_heredado": "Colombia",
@@ -276,7 +276,7 @@
    "sinopsis": "Carlina, una niña de imaginación desbordante, se refugia en un mundo mágico junto al río para sobrellevar la enfermedad irreversible de una de sus madres. Con su amiga Millita descubre instantes de libertad y fantasía, mientras en casa sus madres enfrentan en silencio el dolor. Aunque la tristeza habita el hogar, Carlina se aferra a su universo imaginario, resistiéndose a dejar que la fantasía se desvanezca frente a una realidad que apenas comienza a comprender.",
    "_verificado": "declarada a mano: alta del 4 nov; afiche de FanCineQueer; año y duración de cinecorto y FICCali (FanCineQueer dice 2024, 14 min)",
    "_director": "Ángela María Leyton",
-   "_sondeado": "2026-11-05",
+   "_sondeado": "2026-11-07",
    "posterSource": "tmdb",
    "pais_heredado": "Colombia",
    "_heredado": {
@@ -292,15 +292,18 @@
    "synopsis_en": "",
    "genero": "Familia",
    "anio_tmdb": 2026,
-   "duracion_tmdb": 0,
+   "duracion_tmdb": 15,
    "pais_tmdb": "",
    "lbSlug": "cathi-e-os-elefantes",
    "sinopsis": "Cathi é uma pré-adolescente que ama elefantes, mas não gosta de carnaval. Até que algo muito especial cruza o seu caminho e transforma seu coração.",
    "_verificado": "declarada a mano: sinopsis y datos de la investigación del 4 nov",
    "_director": "Morena Dornelas, Caio Dornelas",
-   "_sondeado": "2026-11-05",
+   "_sondeado": "2026-11-07",
    "poster": "/assets/festicinerio-2026/cathi-e-os-elefantes.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "_heredado": {
+    "duracion_tmdb": "catálogo w_P1KXAG05XZPE (festicinerio-2026)"
+   }
   },
   {
    "titulo": "Chaika",
@@ -461,7 +464,7 @@
    "sinopsis": "La Tunga Tunga es una murga comprometida con un proceso creativo, colaborativo y comunitario, que se organiza para participar en el Carnaval y dar voz a reclamos colectivos. En 2025, los gobiernos nacional y local cuestionan las prácticas culturales y desfinancian la cultura y, en particular, los corsos barriales. La Tunga Tunga resiste con humor y baile, y afirma la celebración como derecho y el espacio público como territorio de lucha.",
    "_verificado": "declarada a mano: sinopsis y datos de la investigación del 4 nov",
    "_director": "Rosario Morales Scheller",
-   "_sondeado": "2026-11-05",
+   "_sondeado": "2026-11-07",
    "poster": "/assets/festicinerio-2026/debajo-de-esas-galeras.jpg",
    "posterSource": "tmdb"
   },
@@ -472,7 +475,7 @@
    "pais": "Colombia",
    "_verificado": "declarada a mano: sinopsis y datos de la investigación del 4 nov",
    "_director": "Daniel Rodriguez",
-   "_sondeado": "2026-11-05",
+   "_sondeado": "2026-11-07",
    "pais_heredado": "Colombia",
    "_heredado": {
     "pais_heredado": "catálogo w_P1KW0HK5CQ7S (festicinerio-2026)"
@@ -493,7 +496,7 @@
    "sinopsis": "Diòba es una mujer indígena que ha perdido sus raíces. Tiene 63 años, vive sola en una humilde vivienda campesina, la cual está ubicada dentro de un bosque. Se provee, en parte, de lo que encuentra en los recorridos que hace diariamente por caminos boscosos, de donde extrae semillas y plantas. Llega el día en que tendrá que batallar con sus delirios, revivirlos, expulsarlos. Esto podrá ayudarla, o no, a reencontrarse con ella misma, con su esencia, con sus raíces.",
    "_verificado": "declarada a mano: sinopsis y datos de la investigación del 4 nov",
    "_director": "Adriana Marcela Rojas Espitia",
-   "_sondeado": "2026-11-05",
+   "_sondeado": "2026-11-07",
    "poster": "/assets/festicinerio-2026/dioba.jpg",
    "posterSource": "tmdb",
    "pais_heredado": "Colombia",
@@ -603,13 +606,13 @@
    "synopsis_en": "",
    "genero": "",
    "anio_tmdb": 2026,
-   "duracion_tmdb": 50,
+   "duracion_tmdb": 51,
    "pais_tmdb": "Colombia",
    "lbSlug": "en-bajo-de-4-puntas",
    "sinopsis": "Un documental que retrata la trayectoria de Luis Guillermo “Memo”, músico bogotano e integrante de agrupaciones emblemáticas como Los Rolling Ruanas y La Pambelé.",
    "_verificado": "declarada a mano: sinopsis y datos de la investigación del 4 nov",
    "_director": "Cristian Camilo Camargo C.",
-   "_sondeado": "2026-11-05",
+   "_sondeado": "2026-11-07",
    "_heredado": {
     "duracion_tmdb": "catálogo w_P1KV7RHA2B9P (festicinerio-2026)",
     "pais_heredado": "catálogo w_P1KV7RHA2B9P (festicinerio-2026)"
@@ -630,7 +633,7 @@
    "lbSlug": "hdlt",
    "_verificado": "declarada a mano: misma obra publicada en FILCMAR y Fantasmagoría, Colectivo Artefactum Suba; alta completada el 4 nov",
    "_director": "Artefactum Suba",
-   "_sondeado": "2026-11-05",
+   "_sondeado": "2026-11-07",
    "poster": "/assets/festicinerio-2026/hdlt.jpg",
    "posterSource": "tmdb",
    "_heredado": {
@@ -658,7 +661,7 @@
    "sinopsis": "Cecilia, una mujer abnegada de 52 años, decide romper con su vida de sacrificios tras años de soportar la irresponsabilidad de su hijo y la ingratitud de su familia, buscando finalmente su independencia.",
    "_verificado": "declarada a mano: en TMDB como «La independencia», de John Edicson Agudelo Suárez; la lámina escribe Jhon Agudelo; afiche oficial con el título",
    "_director": "Jhon Agudelo",
-   "_sondeado": "2026-11-05",
+   "_sondeado": "2026-11-07",
    "posterSource": "tmdb",
    "pais_heredado": "Colombia",
    "_heredado": {
@@ -702,7 +705,7 @@
    "posterSource": "tmdb",
    "pais_heredado": "Colombia",
    "_heredado": {
-    "pais_heredado": "catálogo w_R4KARND2806N (festicinerio-2026, jardin-2026)"
+    "pais_heredado": "catálogo w_R4KARND2806N (fecibac-2026, festicinerio-2026, jardin-2026)"
    }
   },
   {
@@ -720,7 +723,7 @@
    "sinopsis": "Damaris González desafía la tradición: en Barva de Heredia, cuna de la mascarada costarricense, se convirtió en la primera mujer mascarera en un oficio históricamente masculino. El documental rinde homenaje a su trayectoria y muestra su taller como el lugar donde el barro y el espíritu se encuentran.",
    "_verificado": "declarada a mano: en TMDB y en su afiche sin el artículo, Wainer Méndez, Costa Rica, 62 min",
    "_director": "Wainer Méndez",
-   "_sondeado": "2026-11-05",
+   "_sondeado": "2026-11-07",
    "poster": "/assets/festicinerio-2026/la-dama-de-las-mil-mascaras.jpg",
    "posterSource": "tmdb",
    "anio": 2026,
@@ -838,7 +841,7 @@
    "sinopsis": "Una noche, la visita de dos vampiresas a la habitación de una pareja infeliz de mediana edad cambia el destino de una esposa deprimida y adicta a la gula nocturna. Comedia negra en stop motion con títeres, con diálogos en verso, sobre la alianza entre tres mujeres.",
    "_verificado": "declarada a mano: afiche con título y créditos impresos; ficha TMDB 1306181 sin afiche",
    "_director": "Gabi Bania",
-   "_sondeado": "2026-11-05",
+   "_sondeado": "2026-11-07",
    "posterSource": "tmdb"
   },
   {
@@ -850,19 +853,20 @@
    "synopsis_en": "Sara is drawing at home. When her father arrives from work, they start playing, unaware that their peaceful family environment will soon be plunged into a situation in which a game and Sara's innocence will be of vital importance.",
    "genero": "Drama",
    "anio_tmdb": 2026,
-   "duracion_tmdb": 0,
+   "duracion_tmdb": 9,
    "pais_tmdb": "Colombia",
    "lbSlug": "no-te-despiertes",
    "sinopsis": "Sara está dibujando en casa. Cuando su padre llega del trabajo, empiezan a jugar, sin saber que su tranquilo ambiente familiar se verá inmerso en una situación en la que un juego y la inocencia de Sara serán de vital importancia.",
    "_verificado": "declarada a mano: sinopsis y datos de la investigación del 4 nov",
    "_director": "Hernán Velasquez Vila",
-   "_sondeado": "2026-11-05",
+   "_sondeado": "2026-11-07",
    "poster": "/assets/festicinerio-2026/no-te-despiertes.jpg",
    "posterSource": "tmdb",
-   "pais_heredado": "Colombia",
    "_heredado": {
+    "duracion_tmdb": "catálogo w_P1KWCFG616WE (festicinerio-2026)",
     "pais_heredado": "catálogo w_P1KWCFG616WE (festicinerio-2026)"
-   }
+   },
+   "pais_heredado": "Colombia"
   },
   {
    "titulo": "Ornamento",
@@ -879,7 +883,7 @@
    "sinopsis": "Las fachadas tradicionales de Cali exhiben una arquitectura autoconstruida nacida del deseo, reconocible por sus escaleras de caracol, cisnes y balaustres. La obra entrelaza la historia del Edificio Otero con el trabajo de los talleres de la ciudad, donde el concreto moldeado democratizó la decoración. Un ensayo visual sobre el ornamento como declaración política: un lienzo visible de la subjetividad y el imaginario popular.",
    "_verificado": "declarada a mano: sinopsis y datos de la investigación del 4 nov",
    "_director": "Esteban López, Lucy Ortega",
-   "_sondeado": "2026-11-05",
+   "_sondeado": "2026-11-07",
    "poster": "/assets/festicinerio-2026/ornamento.jpg",
    "posterSource": "tmdb",
    "pais_heredado": "Colombia",
@@ -935,7 +939,7 @@
    "synopsis_en": "Two young journalists, Kevin and Sara, investigate a Chinese businessman who is harming artisanal fishermen. Two weeks before the elections they witness his meeting with Méndez, the candidate leading the polls, while their editor asks them to cover the rallies.",
    "genero": "Drama",
    "anio_tmdb": 0,
-   "duracion_tmdb": 0,
+   "duracion_tmdb": 12,
    "pais_tmdb": "",
    "lbSlug": "perros-guardianes",
    "poster": "/assets/festicinerio-2026/perros-guardianes.jpg",
@@ -944,8 +948,11 @@
    "sinopsis": "Dos jóvenes periodistas, Kevin y Sara, investigan a un empresario chino que perjudica a pescadores artesanales. A dos semanas de las elecciones presencian su reunión con Méndez, el candidato que lidera las encuestas, mientras su editor les pide cubrir los mítines.",
    "_verificado": "declarada a mano: alta del 4 nov; afiche con título y dirección impresos; sinopsis redactada de la reseña de La República",
    "_director": "Miguel Ángel Condor",
-   "_sondeado": "2026-11-05",
-   "posterSource": "tmdb"
+   "_sondeado": "2026-11-07",
+   "posterSource": "tmdb",
+   "_heredado": {
+    "duracion_tmdb": "catálogo w_P1KTXR0KNAWJ (festicinerio-2026)"
+   }
   },
   {
    "titulo": "Post-Familia",
@@ -963,7 +970,7 @@
    "sinopsis": "Abel acaba de enterrar a su padre. En busca de las raíces que nunca tuvo y tratando de entender las razones de su suicidio, viaja al pueblo de sus parientes paternos, donde deberá enfrentar las historias inquietantes y las heridas abiertas de la familia que nunca conoció.",
    "_verificado": "declarada a mano: sinopsis y datos de la investigación del 4 nov",
    "_director": "Alexis Tafur",
-   "_sondeado": "2026-11-05",
+   "_sondeado": "2026-11-07",
    "poster": "/assets/festicinerio-2026/post-familia.jpg",
    "posterSource": "tmdb",
    "pais_heredado": "Colombia",
@@ -987,7 +994,7 @@
    "sinopsis": "En una favela de Río de Janeiro, Demétria espera a su hija el último día de Carnaval. Pero una brutal redada policial sella el destino de las dos mujeres. Con ritmos brasileños, este musical en corto aborda el racismo y otros conflictos sociales.",
    "_verificado": "declarada a mano: sinopsis y datos de la investigación del 4 nov",
    "_director": "Barbara Santos, Joao Pedro Pardo",
-   "_sondeado": "2026-11-05",
+   "_sondeado": "2026-11-07",
    "poster": "/assets/festicinerio-2026/quarta-feira.jpg",
    "posterSource": "tmdb"
   },
@@ -1145,11 +1152,11 @@
    "pais": "Colombia",
    "_verificado": "declarada a mano: sinopsis y datos de la investigación del 4 nov",
    "_director": "Sebastián Montiel",
-   "_sondeado": "2026-11-05",
+   "_sondeado": "2026-11-07",
    "poster": "/assets/festicinerio-2026/simplicity-of-chaos.jpg",
    "posterSource": "editorial",
    "_afiche": "declarado: afiche oficial 16:9, https://www.sebastianmontiel.com/simplicity-of-chaos-documentary",
-   "duracion_tmdb": 90,
+   "duracion_tmdb": 68,
    "_heredado": {
     "duracion_tmdb": "catálogo w_P1KW2DDX79RN (festicinerio-2026)",
     "pais_heredado": "catálogo w_P1KW2DDX79RN (festicinerio-2026)"
@@ -1236,7 +1243,7 @@
    "sinopsis": "Antonio, terco en sus sueños, cuenta sus sueños entre calles blancas y negras y recuerdos en color, mientras descubre por qué los soñadores prefieren dormir antes que estar despiertos.",
    "_verificado": "declarada a mano: sinopsis y datos de la investigación del 4 nov",
    "_director": "Alexei Gudiño",
-   "_sondeado": "2026-11-05",
+   "_sondeado": "2026-11-07",
    "poster": "/assets/festicinerio-2026/sone-que-tocaba-la-bateria.jpg",
    "posterSource": "tmdb"
   },
@@ -1247,7 +1254,7 @@
    "pais": "Colombia",
    "_verificado": "declarada a mano: sinopsis y datos de la investigación del 4 nov",
    "_director": "Eduar Yosniel Pájaro",
-   "_sondeado": "2026-11-05",
+   "_sondeado": "2026-11-07",
    "pais_heredado": "Colombia",
    "_heredado": {
     "pais_heredado": "catálogo w_P1KS8DNKV57D (festicinerio-2026)"
@@ -1283,7 +1290,7 @@
    "pais": "Brasil",
    "_verificado": "declarada a mano: sinopsis y datos de la investigación del 4 nov",
    "_director": "Victor Vinicius",
-   "_sondeado": "2026-11-05"
+   "_sondeado": "2026-11-07"
   },
   {
    "titulo": "Todo lo que Pasará Mañana",
@@ -1362,9 +1369,30 @@
    "_afiche": "declarado: imagen oficial 16:9, https://www.revolucionroja.org/sangre-invisible",
    "sinopsis": "Un documental de Revolución Roja sobre pobreza menstrual, dignidad y las mujeres que están transformando esta realidad en Colombia.",
    "_sinopsis": "https://www.revolucionroja.org/sangre-invisible",
-   "duracion_tmdb": 40,
+   "duracion_tmdb": 35,
    "_heredado": {
     "duracion_tmdb": "catálogo w_P1KYVC8FDSX2 (festicinerio-2026)"
+   }
+  },
+  {
+   "titulo": "El Amor en los Tiempos de Cumbia",
+   "duracion_tmdb": 7,
+   "_heredado": {
+    "duracion_tmdb": "catálogo w_P1KSB6BZ69RT (festicinerio-2026)"
+   }
+  },
+  {
+   "titulo": "Fliehende Stürme: Puppen",
+   "duracion_tmdb": 6,
+   "_heredado": {
+    "duracion_tmdb": "catálogo w_P1KSYG5KTKGD (festicinerio-2026)"
+   }
+  },
+  {
+   "titulo": "Tower of Silence by Headless Buddha",
+   "duracion_tmdb": 2,
+   "_heredado": {
+    "duracion_tmdb": "catálogo w_P1KTD680QT73 (festicinerio-2026)"
    }
   }
  ],
@@ -1481,7 +1509,7 @@
    "sinopsis": "Cortometraje experimental basado en un poema octosílabo escrito por Gualberto Gutiérrez en 1819, que relata con ironía y crueldad la noche en que el virrey Juan Sámano huyó de Santafé hacia Cartagena tras la derrota realista en la Batalla de Boyacá.",
    "_verificado": "declarada a mano: en TMDB como «Anoche a media noche», misma dirección; el afiche oficial dice «Anoche a la Media Noche»",
    "_director": "Ricardo Muñoz Izquierdo",
-   "_sondeado": "2026-11-05",
+   "_sondeado": "2026-11-07",
    "posterSource": "tmdb",
    "pais_heredado": "Colombia",
    "_heredado": {
@@ -1571,7 +1599,7 @@
    "sinopsis": "La Danza del Caos es un cortometraje de animación experimental que traduce la teoría de los Cinco Ritmos de Gabrielle Roth en una experiencia audiovisual abstracta.",
    "_verificado": "declarada a mano: probablemente «La danza del caos», de Valeria Preciado Romaña, animación 2025: misma dirección y género, ninguna fuente usa «Baile del Caos». A confirmar con la programación",
    "_director": "Valeria Preciado",
-   "_sondeado": "2026-11-05",
+   "_sondeado": "2026-11-07",
    "poster": "/assets/festicinerio-2026/baile-del-caos.jpg",
    "posterSource": "tmdb",
    "pais_heredado": "Colombia",
@@ -1635,7 +1663,7 @@
    "sinopsis": "Carlina, una niña de imaginación desbordante, se refugia en un mundo mágico junto al río para sobrellevar la enfermedad irreversible de una de sus madres. Con su amiga Millita descubre instantes de libertad y fantasía, mientras en casa sus madres enfrentan en silencio el dolor. Aunque la tristeza habita el hogar, Carlina se aferra a su universo imaginario, resistiéndose a dejar que la fantasía se desvanezca frente a una realidad que apenas comienza a comprender.",
    "_verificado": "declarada a mano: alta del 4 nov; afiche de FanCineQueer; año y duración de cinecorto y FICCali (FanCineQueer dice 2024, 14 min)",
    "_director": "Ángela María Leyton",
-   "_sondeado": "2026-11-05",
+   "_sondeado": "2026-11-07",
    "posterSource": "tmdb",
    "pais_heredado": "Colombia",
    "_heredado": {
@@ -1650,15 +1678,18 @@
    "synopsis_en": "",
    "genero": "Familia",
    "anio_tmdb": 2026,
-   "duracion_tmdb": 0,
+   "duracion_tmdb": 15,
    "pais_tmdb": "",
    "lbSlug": "cathi-e-os-elefantes",
    "sinopsis": "Cathi é uma pré-adolescente que ama elefantes, mas não gosta de carnaval. Até que algo muito especial cruza o seu caminho e transforma seu coração.",
    "_verificado": "declarada a mano: sinopsis y datos de la investigación del 4 nov",
    "_director": "Morena Dornelas, Caio Dornelas",
-   "_sondeado": "2026-11-05",
+   "_sondeado": "2026-11-07",
    "poster": "/assets/festicinerio-2026/cathi-e-os-elefantes.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "_heredado": {
+    "duracion_tmdb": "catálogo w_P1KXAG05XZPE (festicinerio-2026)"
+   }
   },
   "Chaika": {
    "tmdb_id": 1689999,
@@ -1799,7 +1830,7 @@
    "sinopsis": "La Tunga Tunga es una murga comprometida con un proceso creativo, colaborativo y comunitario, que se organiza para participar en el Carnaval y dar voz a reclamos colectivos. En 2025, los gobiernos nacional y local cuestionan las prácticas culturales y desfinancian la cultura y, en particular, los corsos barriales. La Tunga Tunga resiste con humor y baile, y afirma la celebración como derecho y el espacio público como territorio de lucha.",
    "_verificado": "declarada a mano: sinopsis y datos de la investigación del 4 nov",
    "_director": "Rosario Morales Scheller",
-   "_sondeado": "2026-11-05",
+   "_sondeado": "2026-11-07",
    "poster": "/assets/festicinerio-2026/debajo-de-esas-galeras.jpg",
    "posterSource": "tmdb"
   },
@@ -1809,7 +1840,7 @@
    "pais": "Colombia",
    "_verificado": "declarada a mano: sinopsis y datos de la investigación del 4 nov",
    "_director": "Daniel Rodriguez",
-   "_sondeado": "2026-11-05",
+   "_sondeado": "2026-11-07",
    "pais_heredado": "Colombia",
    "_heredado": {
     "pais_heredado": "catálogo w_P1KW0HK5CQ7S (festicinerio-2026)"
@@ -1829,7 +1860,7 @@
    "sinopsis": "Diòba es una mujer indígena que ha perdido sus raíces. Tiene 63 años, vive sola en una humilde vivienda campesina, la cual está ubicada dentro de un bosque. Se provee, en parte, de lo que encuentra en los recorridos que hace diariamente por caminos boscosos, de donde extrae semillas y plantas. Llega el día en que tendrá que batallar con sus delirios, revivirlos, expulsarlos. Esto podrá ayudarla, o no, a reencontrarse con ella misma, con su esencia, con sus raíces.",
    "_verificado": "declarada a mano: sinopsis y datos de la investigación del 4 nov",
    "_director": "Adriana Marcela Rojas Espitia",
-   "_sondeado": "2026-11-05",
+   "_sondeado": "2026-11-07",
    "poster": "/assets/festicinerio-2026/dioba.jpg",
    "posterSource": "tmdb",
    "pais_heredado": "Colombia",
@@ -1936,13 +1967,13 @@
    "synopsis_en": "",
    "genero": "",
    "anio_tmdb": 2026,
-   "duracion_tmdb": 50,
+   "duracion_tmdb": 51,
    "pais_tmdb": "Colombia",
    "lbSlug": "en-bajo-de-4-puntas",
    "sinopsis": "Un documental que retrata la trayectoria de Luis Guillermo “Memo”, músico bogotano e integrante de agrupaciones emblemáticas como Los Rolling Ruanas y La Pambelé.",
    "_verificado": "declarada a mano: sinopsis y datos de la investigación del 4 nov",
    "_director": "Cristian Camilo Camargo C.",
-   "_sondeado": "2026-11-05",
+   "_sondeado": "2026-11-07",
    "_heredado": {
     "duracion_tmdb": "catálogo w_P1KV7RHA2B9P (festicinerio-2026)",
     "pais_heredado": "catálogo w_P1KV7RHA2B9P (festicinerio-2026)"
@@ -1962,7 +1993,7 @@
    "lbSlug": "hdlt",
    "_verificado": "declarada a mano: misma obra publicada en FILCMAR y Fantasmagoría, Colectivo Artefactum Suba; alta completada el 4 nov",
    "_director": "Artefactum Suba",
-   "_sondeado": "2026-11-05",
+   "_sondeado": "2026-11-07",
    "poster": "/assets/festicinerio-2026/hdlt.jpg",
    "posterSource": "tmdb",
    "_heredado": {
@@ -1989,7 +2020,7 @@
    "sinopsis": "Cecilia, una mujer abnegada de 52 años, decide romper con su vida de sacrificios tras años de soportar la irresponsabilidad de su hijo y la ingratitud de su familia, buscando finalmente su independencia.",
    "_verificado": "declarada a mano: en TMDB como «La independencia», de John Edicson Agudelo Suárez; la lámina escribe Jhon Agudelo; afiche oficial con el título",
    "_director": "Jhon Agudelo",
-   "_sondeado": "2026-11-05",
+   "_sondeado": "2026-11-07",
    "posterSource": "tmdb",
    "pais_heredado": "Colombia",
    "_heredado": {
@@ -2032,7 +2063,7 @@
    "posterSource": "tmdb",
    "pais_heredado": "Colombia",
    "_heredado": {
-    "pais_heredado": "catálogo w_R4KARND2806N (festicinerio-2026, jardin-2026)"
+    "pais_heredado": "catálogo w_R4KARND2806N (fecibac-2026, festicinerio-2026, jardin-2026)"
    }
   },
   "La Dama de las Mil Máscaras": {
@@ -2049,7 +2080,7 @@
    "sinopsis": "Damaris González desafía la tradición: en Barva de Heredia, cuna de la mascarada costarricense, se convirtió en la primera mujer mascarera en un oficio históricamente masculino. El documental rinde homenaje a su trayectoria y muestra su taller como el lugar donde el barro y el espíritu se encuentran.",
    "_verificado": "declarada a mano: en TMDB y en su afiche sin el artículo, Wainer Méndez, Costa Rica, 62 min",
    "_director": "Wainer Méndez",
-   "_sondeado": "2026-11-05",
+   "_sondeado": "2026-11-07",
    "poster": "/assets/festicinerio-2026/la-dama-de-las-mil-mascaras.jpg",
    "posterSource": "tmdb",
    "anio": 2026,
@@ -2138,7 +2169,7 @@
    "sinopsis": "Una noche, la visita de dos vampiresas a la habitación de una pareja infeliz de mediana edad cambia el destino de una esposa deprimida y adicta a la gula nocturna. Comedia negra en stop motion con títeres, con diálogos en verso, sobre la alianza entre tres mujeres.",
    "_verificado": "declarada a mano: afiche con título y créditos impresos; ficha TMDB 1306181 sin afiche",
    "_director": "Gabi Bania",
-   "_sondeado": "2026-11-05",
+   "_sondeado": "2026-11-07",
    "posterSource": "tmdb"
   },
   "No te Despiertes": {
@@ -2149,19 +2180,20 @@
    "synopsis_en": "Sara is drawing at home. When her father arrives from work, they start playing, unaware that their peaceful family environment will soon be plunged into a situation in which a game and Sara's innocence will be of vital importance.",
    "genero": "Drama",
    "anio_tmdb": 2026,
-   "duracion_tmdb": 0,
+   "duracion_tmdb": 9,
    "pais_tmdb": "Colombia",
    "lbSlug": "no-te-despiertes",
    "sinopsis": "Sara está dibujando en casa. Cuando su padre llega del trabajo, empiezan a jugar, sin saber que su tranquilo ambiente familiar se verá inmerso en una situación en la que un juego y la inocencia de Sara serán de vital importancia.",
    "_verificado": "declarada a mano: sinopsis y datos de la investigación del 4 nov",
    "_director": "Hernán Velasquez Vila",
-   "_sondeado": "2026-11-05",
+   "_sondeado": "2026-11-07",
    "poster": "/assets/festicinerio-2026/no-te-despiertes.jpg",
    "posterSource": "tmdb",
-   "pais_heredado": "Colombia",
    "_heredado": {
+    "duracion_tmdb": "catálogo w_P1KWCFG616WE (festicinerio-2026)",
     "pais_heredado": "catálogo w_P1KWCFG616WE (festicinerio-2026)"
-   }
+   },
+   "pais_heredado": "Colombia"
   },
   "Ornamento": {
    "tmdb_id": 1802123,
@@ -2177,7 +2209,7 @@
    "sinopsis": "Las fachadas tradicionales de Cali exhiben una arquitectura autoconstruida nacida del deseo, reconocible por sus escaleras de caracol, cisnes y balaustres. La obra entrelaza la historia del Edificio Otero con el trabajo de los talleres de la ciudad, donde el concreto moldeado democratizó la decoración. Un ensayo visual sobre el ornamento como declaración política: un lienzo visible de la subjetividad y el imaginario popular.",
    "_verificado": "declarada a mano: sinopsis y datos de la investigación del 4 nov",
    "_director": "Esteban López, Lucy Ortega",
-   "_sondeado": "2026-11-05",
+   "_sondeado": "2026-11-07",
    "poster": "/assets/festicinerio-2026/ornamento.jpg",
    "posterSource": "tmdb",
    "pais_heredado": "Colombia",
@@ -2231,7 +2263,7 @@
    "synopsis_en": "Two young journalists, Kevin and Sara, investigate a Chinese businessman who is harming artisanal fishermen. Two weeks before the elections they witness his meeting with Méndez, the candidate leading the polls, while their editor asks them to cover the rallies.",
    "genero": "Drama",
    "anio_tmdb": 0,
-   "duracion_tmdb": 0,
+   "duracion_tmdb": 12,
    "pais_tmdb": "",
    "lbSlug": "perros-guardianes",
    "poster": "/assets/festicinerio-2026/perros-guardianes.jpg",
@@ -2240,8 +2272,11 @@
    "sinopsis": "Dos jóvenes periodistas, Kevin y Sara, investigan a un empresario chino que perjudica a pescadores artesanales. A dos semanas de las elecciones presencian su reunión con Méndez, el candidato que lidera las encuestas, mientras su editor les pide cubrir los mítines.",
    "_verificado": "declarada a mano: alta del 4 nov; afiche con título y dirección impresos; sinopsis redactada de la reseña de La República",
    "_director": "Miguel Ángel Condor",
-   "_sondeado": "2026-11-05",
-   "posterSource": "tmdb"
+   "_sondeado": "2026-11-07",
+   "posterSource": "tmdb",
+   "_heredado": {
+    "duracion_tmdb": "catálogo w_P1KTXR0KNAWJ (festicinerio-2026)"
+   }
   },
   "Post-Familia": {
    "tmdb_id": 1592617,
@@ -2258,7 +2293,7 @@
    "sinopsis": "Abel acaba de enterrar a su padre. En busca de las raíces que nunca tuvo y tratando de entender las razones de su suicidio, viaja al pueblo de sus parientes paternos, donde deberá enfrentar las historias inquietantes y las heridas abiertas de la familia que nunca conoció.",
    "_verificado": "declarada a mano: sinopsis y datos de la investigación del 4 nov",
    "_director": "Alexis Tafur",
-   "_sondeado": "2026-11-05",
+   "_sondeado": "2026-11-07",
    "poster": "/assets/festicinerio-2026/post-familia.jpg",
    "posterSource": "tmdb",
    "pais_heredado": "Colombia",
@@ -2281,7 +2316,7 @@
    "sinopsis": "En una favela de Río de Janeiro, Demétria espera a su hija el último día de Carnaval. Pero una brutal redada policial sella el destino de las dos mujeres. Con ritmos brasileños, este musical en corto aborda el racismo y otros conflictos sociales.",
    "_verificado": "declarada a mano: sinopsis y datos de la investigación del 4 nov",
    "_director": "Barbara Santos, Joao Pedro Pardo",
-   "_sondeado": "2026-11-05",
+   "_sondeado": "2026-11-07",
    "poster": "/assets/festicinerio-2026/quarta-feira.jpg",
    "posterSource": "tmdb"
   },
@@ -2436,11 +2471,11 @@
    "pais": "Colombia",
    "_verificado": "declarada a mano: sinopsis y datos de la investigación del 4 nov",
    "_director": "Sebastián Montiel",
-   "_sondeado": "2026-11-05",
+   "_sondeado": "2026-11-07",
    "poster": "/assets/festicinerio-2026/simplicity-of-chaos.jpg",
    "posterSource": "editorial",
    "_afiche": "declarado: afiche oficial 16:9, https://www.sebastianmontiel.com/simplicity-of-chaos-documentary",
-   "duracion_tmdb": 90,
+   "duracion_tmdb": 68,
    "_heredado": {
     "duracion_tmdb": "catálogo w_P1KW2DDX79RN (festicinerio-2026)",
     "pais_heredado": "catálogo w_P1KW2DDX79RN (festicinerio-2026)"
@@ -2525,7 +2560,7 @@
    "sinopsis": "Antonio, terco en sus sueños, cuenta sus sueños entre calles blancas y negras y recuerdos en color, mientras descubre por qué los soñadores prefieren dormir antes que estar despiertos.",
    "_verificado": "declarada a mano: sinopsis y datos de la investigación del 4 nov",
    "_director": "Alexei Gudiño",
-   "_sondeado": "2026-11-05",
+   "_sondeado": "2026-11-07",
    "poster": "/assets/festicinerio-2026/sone-que-tocaba-la-bateria.jpg",
    "posterSource": "tmdb"
   },
@@ -2535,7 +2570,7 @@
    "pais": "Colombia",
    "_verificado": "declarada a mano: sinopsis y datos de la investigación del 4 nov",
    "_director": "Eduar Yosniel Pájaro",
-   "_sondeado": "2026-11-05",
+   "_sondeado": "2026-11-07",
    "pais_heredado": "Colombia",
    "_heredado": {
     "pais_heredado": "catálogo w_P1KS8DNKV57D (festicinerio-2026)"
@@ -2548,7 +2583,7 @@
    "pais": "Brasil",
    "_verificado": "declarada a mano: sinopsis y datos de la investigación del 4 nov",
    "_director": "Victor Vinicius",
-   "_sondeado": "2026-11-05"
+   "_sondeado": "2026-11-07"
   },
   "Todo lo que Pasará Mañana": {
    "tmdb_id": 1812504,
@@ -2687,8 +2722,8 @@
    "fecha": "2026-11-05"
   },
   "Sangre Invisible": {
-   "director": "Manuel Vélez Arboleda, Ana Bolena Meléndez",
-   "fecha": "2026-11-05"
+   "director": "Ana Bolena Meléndez, Manuel Vélez-Arboleda",
+   "fecha": "2026-11-07"
   },
   "Tentado de Difunto": {
    "director": "Juan David Correa",

@@ -52,7 +52,7 @@ PARRILLA = [
                           ('19:20', 'Sangre Invisible', 'Cortometraje Invitado'), ('20:00', 'Conversatorio', 'Conversatorio')]),
 ]
 CREDITOS = {
-    'Sangre Invisible': {'director': 'Manuel Vélez Arboleda, Ana Bolena Meléndez', 'anio': 2026, 'pais': 'Colombia',
+    'Sangre Invisible': {'director': 'Ana Bolena Meléndez, Manuel Vélez-Arboleda', 'anio': 2026, 'pais': 'Colombia',
                          '_creditos_fuente': 'https://www.lapatria.com/cultura/sangre-invisible-el-documental-que-visibiliza-la-lucha-contra-la-pobreza-menstrual-en'},
     'La Creciente': {'director': 'Pablo Andrés Muñoz Castrillón',
                      '_creditos_por_que': 'único largo colombiano de 2026 con ese título (TMDB 1779631), publicado en Jardín 2026'},
