@@ -71,7 +71,7 @@ SEL, AULA, ACAD, ESP = 'Selección Oficial', 'Cinetoro al Aula', 'Programación 
 LECTURA = {
     'Panel: archivos, fabulaciones y resistencias con Azul Aizemberg, Cristina Hadwa y Martha Hincapie. Modera Laura Alhach': dict(
         titulo='Panel: archivos, fabulaciones y resistencias', seccion=ACAD, tipo='evento',
-        event_kind='evento', invitados='Azul Aizemberg, Cristina Hadwa y Martha Hincapie. Modera Laura Alhach',
+        event_kind='evento', invitados='Azul Aizenberg, Cristina Hadwa y Martha Hincapie. Modera Laura Alhach',
         ancla_texto='invitadas'),
     'Traducir lo propio': dict(
         # el Programa No 1 es UNA sola obra (un mediometraje de 60 min): se
@@ -358,7 +358,8 @@ def main():
                 f['duracion_min'] = dur(h0, h1)
                 f['_duracion_de'] = 'la franja «Hora:» de la parrilla'
             if a.get('ancla_texto'):
-                f['sinopsis'] = progs[a['ancla_texto']]['texto']
+                # la web mezcla grafías; sus créditos y MIDBO escriben Aizenberg (vigía 7 nov)
+                f['sinopsis'] = progs[a['ancla_texto']]['texto'].replace('Aizemberg', 'Aizenberg')
                 f['_src']['programa'] = f'{URL_PROGRAMAS}#{a["ancla_texto"]}'
             if a.get('ancla'):
                 p = progs[a['ancla']]
