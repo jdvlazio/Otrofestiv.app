@@ -457,6 +457,8 @@
    "day_order": 0,
    "venue": "Teatro Cuesta - Riosucio",
    "has_qa": false,
+   "synopsis": "Muestra de cortometrajes en homenaje y solidaridad con el pueblo palestino: cada día, uno de estos trabajos y una reflexión colectiva. Símbolos de la ausencia (presencia); La piel de Palestina; Mas que el lenguaje, de Tatiana Mazú González; El canto de los pájaros, de Sebastián Zanzottera; Intersticio; Kufiya, de Manque La Banca.",
+   "synopsis_lang": "es",
    "_src": {
     "url": "https://www.instagram.com/p/DfXJjeBm1w7/",
     "lamina": "01.jpg",
@@ -654,6 +656,8 @@
    "day_order": 1,
    "venue": "Teatro Cuesta - Riosucio",
    "has_qa": false,
+   "synopsis": "Muestra de cortometrajes en homenaje y solidaridad con el pueblo palestino: cada día, uno de estos trabajos y una reflexión colectiva. Símbolos de la ausencia (presencia); La piel de Palestina; Mas que el lenguaje, de Tatiana Mazú González; El canto de los pájaros, de Sebastián Zanzottera; Intersticio; Kufiya, de Manque La Banca.",
+   "synopsis_lang": "es",
    "_src": {
     "url": "https://www.instagram.com/p/DfXJjeBm1w7/",
     "lamina": "02.jpg",
@@ -847,6 +851,8 @@
    "day_order": 2,
    "venue": "Teatro Cuesta - Riosucio",
    "has_qa": false,
+   "synopsis": "Muestra de cortometrajes en homenaje y solidaridad con el pueblo palestino: cada día, uno de estos trabajos y una reflexión colectiva. Símbolos de la ausencia (presencia); La piel de Palestina; Mas que el lenguaje, de Tatiana Mazú González; El canto de los pájaros, de Sebastián Zanzottera; Intersticio; Kufiya, de Manque La Banca.",
+   "synopsis_lang": "es",
    "_src": {
     "url": "https://www.instagram.com/p/DfXJjeBm1w7/",
     "lamina": "03.jpg",
@@ -1012,6 +1018,8 @@
    "day_order": 3,
    "venue": "Teatro Cuesta - Riosucio",
    "has_qa": false,
+   "synopsis": "Muestra de cortometrajes en homenaje y solidaridad con el pueblo palestino: cada día, uno de estos trabajos y una reflexión colectiva. Símbolos de la ausencia (presencia); La piel de Palestina; Mas que el lenguaje, de Tatiana Mazú González; El canto de los pájaros, de Sebastián Zanzottera; Intersticio; Kufiya, de Manque La Banca.",
+   "synopsis_lang": "es",
    "_src": {
     "url": "https://www.instagram.com/p/DfXJjeBm1w7/",
     "lamina": "04.jpg",
@@ -1202,6 +1210,8 @@
    "day_order": 4,
    "venue": "Teatro Cuesta - Riosucio",
    "has_qa": false,
+   "synopsis": "Muestra de cortometrajes en homenaje y solidaridad con el pueblo palestino: cada día, uno de estos trabajos y una reflexión colectiva. Símbolos de la ausencia (presencia); La piel de Palestina; Mas que el lenguaje, de Tatiana Mazú González; El canto de los pájaros, de Sebastián Zanzottera; Intersticio; Kufiya, de Manque La Banca.",
+   "synopsis_lang": "es",
    "_src": {
     "url": "https://www.instagram.com/p/DfXJjeBm1w7/",
     "lamina": "05.jpg",
@@ -1356,6 +1366,8 @@
    "day_order": 5,
    "venue": "Teatro Cuesta - Riosucio",
    "has_qa": false,
+   "synopsis": "Muestra de cortometrajes en homenaje y solidaridad con el pueblo palestino: cada día, uno de estos trabajos y una reflexión colectiva. Símbolos de la ausencia (presencia); La piel de Palestina; Mas que el lenguaje, de Tatiana Mazú González; El canto de los pájaros, de Sebastián Zanzottera; Intersticio; Kufiya, de Manque La Banca.",
+   "synopsis_lang": "es",
    "_src": {
     "url": "https://www.instagram.com/p/DfXJjeBm1w7/",
     "lamina": "06.jpg",
@@ -1419,6 +1431,8 @@
     "date": "2026-11-05"
    },
    "is_free": true,
+   "description": "Con Revolución Roja, colectivo ecofeminista. Tema: la realización del documental y la labor del colectivo.",
+   "description_lang": "es",
    "_fid": "f_1dc2f923e6",
    "id": "f_1dc2f923e6",
    "duration": "60 min",
@@ -1433,7 +1447,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-07T10:18:06",
+  "fecha": "2026-11-07T10:42:20",
   "plan_sha": "96fb7fc23907f8da",
   "paso": 7,
   "cmd": "python3 pipeline/festicinerio-2026-verificar.py"
