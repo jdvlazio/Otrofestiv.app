@@ -1,6 +1,6 @@
 {
  "_provenance": {
-  "fuente": "respuesta de la Cinemateca de Medellín (organiza Miradas) a Juan por mensaje, 28 oct 2026",
+  "fuente": "respuesta de la Cinemateca de Medellín (organiza Miradas) a Juan por mensaje, 28 oct 2026 · historias de @cinematecademedellin del 7 nov (Apify, solo las nuevas)",
   "capturado": "2026-10-28"
  },
  "afirmaciones": [
@@ -122,6 +122,42 @@
     "fecha": "2026-11-07"
    },
    "evidencia": "historia de @cinematecademedellin, 6 nov: pieza «Papaya», Cinemateca móvil, Laboratorio, Parque de los Deseos, 4:00 p.m."
+  },
+  {
+   "funcion": "f_822db3367a",
+   "casilla": "time",
+   "valor": "18:00",
+   "contra": "19:00",
+   "fuente": {
+    "tipo": "juan",
+    "frase": "«El Instagram si es más reciente, es más actualizado que la web» (regla de Juan, 27 oct 2026); revisión de las historias de la Cinemateca pedida por Juan el 7 nov",
+    "fecha": "2026-11-07"
+   },
+   "evidencia": "historia de @cinematecademedellin (7 nov, repost de @latrebolrosa y los organizadores): «El teléfono morado» · HORA: 6:00 p. m. · FECHA: Sábado 7 de Noviembre · Finca Agroturística El Encanto de Mis Abuelos, San Cristóbal. El PDF decía 19:00. IG más nuevo manda."
+  },
+  {
+   "funcion": "f_ff53d84213",
+   "casilla": "venue",
+   "valor": "Comfama Aranjuez - Medellín",
+   "contra": "Parque de los Deseos - Medellín",
+   "fuente": {
+    "tipo": "juan",
+    "frase": "«El Instagram si es más reciente, es más actualizado que la web» (regla de Juan, 27 oct 2026); revisión de las historias de la Cinemateca pedida por Juan el 7 nov",
+    "fecha": "2026-11-07"
+   },
+   "evidencia": "historia de @cinematecademedellin (7 nov, 15:01): «Proyección de MU-KI-RA» · Entrada libre · 11:00 a. m. · Domingo 8. · Comfama Aranjuez. Carrera 51A # 91-95, Aranjuez. El PDF (pág. 60) la ponía en el Parque de los Deseos. IG más nuevo manda."
+  },
+  {
+   "funcion": "f_ff53d84213",
+   "casilla": "sala",
+   "valor": "Auditorio",
+   "contra": "Cinemateca móvil",
+   "fuente": {
+    "tipo": "juan",
+    "frase": "«El Instagram si es más reciente, es más actualizado que la web» (regla de Juan, 27 oct 2026); revisión de las historias de la Cinemateca pedida por Juan el 7 nov",
+    "fecha": "2026-11-07"
+   },
+   "evidencia": "misma historia: la función pasa a Comfama Aranjuez; la sala es la de la función del 7 nov en esa sede (Auditorio, PDF pág. 83). La «Cinemateca móvil» es del Parque de los Deseos."
   }
  ]
 }
