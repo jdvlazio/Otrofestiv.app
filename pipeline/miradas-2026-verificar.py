@@ -71,6 +71,9 @@ ACEPTADAS = {
     ('A', '2026-11-05', '19:00', 'uno vuelve'): 'movida a las 18:00 por el reel de IG p/DfP4GD4hlpV (afirmación, Juan 2 nov)',
     ('B', '2026-11-05', '19:00', 'cine hecho'): 'movida a las 18:00 por el reel de IG p/DfP4GD4hlpV (afirmación, Juan 2 nov)',
     ('C', '2026-11-05', '19:00', 'uno vuelve'): 'movida a las 18:00 por el reel de IG p/DfP4GD4hlpV (afirmación, Juan 2 nov)',
+    # historias de @cinematecademedellin (7 nov, más nuevas que el PDF) → afirmaciones
+    ('A', '2026-11-07', '19:00', 'el telefon'): 'a las 18:00 por la historia del 7 nov (afirmación)',
+    ('C', '2026-11-07', '19:00', 'el telefon'): 'a las 18:00 por la historia del 7 nov (afirmación)',
 }
 
 

@@ -470,10 +470,7 @@
    "_match": "Google Maps: Casa de la Música"
   }
  },
- "_avisos_id": [
-  "⚠ id nuevo f_3165278632 «Destellos comunes: creaciones en Red» 2026-11-07 09:00 — ¿es la que salió, f_398d47d954 «red de creacion audiovisual de medellin» 2026-11-07 08:00? Si lo es, registrá la decisión: quien la tenía en su plan la pierde",
-  "⚠ id nuevo f_9e4cd0e6b2 «Destellos comunes: creaciones en Red» 2026-11-07 14:00 — ¿es la que salió, f_398d47d954 «red de creacion audiovisual de medellin» 2026-11-07 08:00? Si lo es, registrá la decisión: quien la tenía en su plan la pierde"
- ],
+ "_avisos_id": [],
  "films": [
   {
    "title": "La otra orilla: Revolver la mirada autorizada para manchar la cámara de barro",
@@ -8528,7 +8525,7 @@
     "19:00"
    ],
    "day": "2026-11-07",
-   "time": "19:00",
+   "time": "18:00",
    "day_order": 4,
    "venue": "Finca Agroturística El Encanto de Mis Abuelos - Medellín",
    "has_qa": false,
@@ -8546,8 +8543,9 @@
      "fecha": "2026-11-07"
     },
     "time": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-07"
+     "tipo": "juan",
+     "fecha": "2026-11-07",
+     "frase": "«El Instagram si es más reciente, es más actualizado que la web» (regla de Juan, 27 oct 2026); revisión de las historias de la Cinemateca pedida por Juan el 7 nov"
     },
     "venue": {
      "tipo": "festival-web",
@@ -8874,8 +8872,8 @@
    "day": "2026-11-08",
    "time": "11:00",
    "day_order": 5,
-   "venue": "Parque de los Deseos - Medellín",
-   "sala": "Cinemateca móvil",
+   "venue": "Comfama Aranjuez - Medellín",
+   "sala": "Auditorio",
    "has_qa": false,
    "synopsis": "Tras los muros que protegen la aldea se extiende una selva mágica y misteriosa, habitada por criaturas consideradas peligrosas. Durante años, los habitantes se han formado como guerreros desde jóvenes.",
    "synopsis_lang": "es",
@@ -8902,12 +8900,14 @@
      "fecha": "2026-11-07"
     },
     "venue": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-07"
+     "tipo": "juan",
+     "fecha": "2026-11-07",
+     "frase": "«El Instagram si es más reciente, es más actualizado que la web» (regla de Juan, 27 oct 2026); revisión de las historias de la Cinemateca pedida por Juan el 7 nov"
     },
     "sala": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-07"
+     "tipo": "juan",
+     "fecha": "2026-11-07",
+     "frase": "«El Instagram si es más reciente, es más actualizado que la web» (regla de Juan, 27 oct 2026); revisión de las historias de la Cinemateca pedida por Juan el 7 nov"
     },
     "duration": {
      "tipo": "festival-web",
@@ -9992,7 +9992,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-07T06:35:54",
+  "fecha": "2026-11-07T16:28:15",
   "plan_sha": "e0e0ab6cfccb9084",
   "paso": 10,
   "cmd": "python3 pipeline/miradas-2026-verificar.py"
