@@ -51,7 +51,7 @@ F = [
  (4, '14', '16:30', 'Actos babilónicos', CAM, CON, 'conversatorio', dict(sinopsis='Detrás de las mariposas amarillas en «Cien años de soledad».', invitados='David Palacios, Mauricio Babilonia en «Cien años de soledad»')),
  (4, '14', '17:30', 'La Canoa Dorada (Tanda 2)', CAM, COR, None, dict(clasificacion='+7')),
  (4, '14', '18:30', 'Gala de premiación La Canoa Dorada', CAM, ACT, 'premiación', {}),
- (4, '14', '20:30', 'Los hijos de Benkos', BAR, PEL, None, dict(clasificacion='+7')),
+ (4, '14', '20:30', 'Los hijos de Benkos', BAR, PEL, None, dict(director='Lucas Silva', anio=2000, clasificacion='+7')),  # director y año: pie del carrusel «Imperdibles» del festival, https://www.instagram.com/p/DfdSh_XFLWK/ (8 nov)
  (4, '14', '21:30', 'Champeta y picó', BAR, CON, 'conversatorio', dict(sinopsis='Herencia del Gran Caribe para los pueblos ribereños.', invitados='Juan Carbonel, académico de la champeta')),
  (4, '14', '23:00', 'Fiesta Chilapa', BAR, ACT, 'evento', dict(sinopsis='Show de cierre.', invitados='DJ Gabriela Morgan')),
 ]
