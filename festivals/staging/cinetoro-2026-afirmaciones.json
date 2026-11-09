@@ -1,0 +1,39 @@
+{
+ "_provenance": {
+  "fuente": "Instagram, post del 6 nov (https://www.instagram.com/p/DfaYGhzoxaz/)",
+  "capturado": "2026-11-07",
+  "metodo": "una afirmación por casilla, con su fuente (docs/FUNCION.md)"
+ },
+ "afirmaciones": [
+  {
+   "ancla": {
+    "sede": "Colegio agrícola - Toro",
+    "dia": "2026-11-13",
+    "hora": "15:00"
+   },
+   "fuente": {
+    "tipo": "festival-ig",
+    "url": "https://www.instagram.com/p/DfaYGhzoxaz/",
+    "fecha": "2026-11-06"
+   },
+   "casilla": "sala",
+   "valor": "Salón audiovisuales",
+   "evidencia": "Lámina 3: «Taller Encuentros en el archivo», Colegio agrícola, Salón audiovisuales; mismo taller por sede y días"
+  },
+  {
+   "ancla": {
+    "sede": "Colegio agrícola - Toro",
+    "dia": "2026-11-14",
+    "hora": "09:00"
+   },
+   "fuente": {
+    "tipo": "festival-ig",
+    "url": "https://www.instagram.com/p/DfaYGhzoxaz/",
+    "fecha": "2026-11-06"
+   },
+   "casilla": "sala",
+   "valor": "Salón audiovisuales",
+   "evidencia": "Lámina 3: «Taller Encuentros en el archivo», Colegio agrícola, Salón audiovisuales; mismo taller por sede y días"
+  }
+ ]
+}

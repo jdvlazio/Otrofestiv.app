@@ -351,10 +351,10 @@ está pasando de verdad — no lo que alguien recordaba al escribirlo.
 | `synopsis_en` | string | — | 39 fest |  |
 | `synopsis_es` | string | — | 2 fest |  |
 | `synopsis_lang` | string | `es` · `en` · `pt` | 41 fest | no lo lee la vista: guardianes No lo lee la vista: lo consumen los guardianes ([paridad-derivados]). |
-| `description` | string | — | 39 fest | Texto de un PROGRAMA o una ACTIVIDAD (no de una obra: eso es synopsis). En español; lib.separar_descripcion es la regla. |
+| `description` | string | — | 40 fest | Texto de un PROGRAMA o una ACTIVIDAD (no de una obra: eso es synopsis). En español; lib.separar_descripcion es la regla. |
 | `description_en` | string | — | 5 fest |  |
 | `description_es` | string | — | 1 fest |  |
-| `description_lang` | string | `es` · `en` · `pt` | 39 fest |  |
+| `description_lang` | string | `es` · `en` · `pt` | 40 fest |  |
 | `rating` | string | — | 8 fest |  |
 | `premiere` | string | — | 19 fest | Texto libre del festival («World Premiere», «Estreno argentino»). |
 | `type` | string | `film` · `event` · `short` | 42 fest |  |
@@ -373,7 +373,7 @@ está pasando de verdad — no lo que alguien recordaba al escribirlo.
 | `qa_type` | string | `team` · `guests` | 18 fest | La variante del Q&A. Se pinta traducida; NO se escribe la frase en el dato. |
 | `competencia` | string | — | 1 fest |  |
 | `premium` | boolean | — | 1 fest |  |
-| `sala` | string | — | 29 fest | Sala DENTRO de la sede. Que no aparezca en el nombre de la sede ([sala-en-sede]). |
+| `sala` | string | — | 30 fest | Sala DENTRO de la sede. Que no aparezca en el nombre de la sede ([sala-en-sede]). |
 | `date` | string | `^\d{4}-\d{2}-\d{2}$` | 6 fest | Requerido si hay screenings[]. Tres festivales legacy lo tienen como número de día. |
 | `screenings` | array | — | 3 fest |  |
 | `poster` | string | — | 42 fest | URL, /assets/… o path TMDB. poster:"" está PROHIBIDO. Reglas: docs/POSTERS.md |

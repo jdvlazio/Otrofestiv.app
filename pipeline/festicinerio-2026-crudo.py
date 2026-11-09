@@ -34,6 +34,9 @@ OUT = f'{REPO}/festivals/staging/festicinerio-2026-crudo.json'
 URL = f'https://www.instagram.com/p/{POST}/'
 SEDE = 'Teatro Cuesta'
 LARGO, FILMI = 'Largometrajes', 'Filminuto'
+FILMINUTOS = ('Muestra de cortometrajes en homenaje y solidaridad con el pueblo palestino: cada día, uno de estos trabajos y una reflexión colectiva. '
+              'Símbolos de la ausencia (presencia); La piel de Palestina; Mas que el lenguaje, de Tatiana Mazú González; '
+              'El canto de los pájaros, de Sebastián Zanzottera; Intersticio; Kufiya, de Manque La Banca.')
 # título en la parrilla → categoría del catálogo, cuando difieren
 CATEGORIA = {'Animación Nacional': 'Animación', 'Ficción Nacional': 'Ficción'}
 
@@ -52,8 +55,9 @@ PARRILLA = [
                           ('19:20', 'Sangre Invisible', 'Cortometraje Invitado'), ('20:00', 'Conversatorio', 'Conversatorio')]),
 ]
 CREDITOS = {
-    'Sangre Invisible': {'director': 'Manuel Vélez Arboleda, Ana Bolena Meléndez', 'anio': 2026, 'pais': 'Colombia',
+    'Sangre Invisible': {'director': 'Ana Bolena Meléndez, Manuel Vélez-Arboleda', 'anio': 2026, 'pais': 'Colombia',
                          '_creditos_fuente': 'https://www.lapatria.com/cultura/sangre-invisible-el-documental-que-visibiliza-la-lucha-contra-la-pobreza-menstrual-en'},
+    'Conversatorio': {'invitados': 'Con Revolución Roja, colectivo ecofeminista. Tema: la realización del documental y la labor del colectivo.'},  # mensaje del festival a Juan, 7 nov
     'La Creciente': {'director': 'Pablo Andrés Muñoz Castrillón',
                      '_creditos_por_que': 'único largo colombiano de 2026 con ese título (TMDB 1779631), publicado en Jardín 2026'},
 }
@@ -106,6 +110,9 @@ def main():
             elif seccion == 'Conversatorio':
                 f.update(tipo='evento', event_kind='conversatorio')
             f.update(CREDITOS.get(titulo, {}))
+            if seccion == FILMI:
+                # p/DeuTmfAG3Lp (20 oct): un corto por día, sin decir cuál: no se asigna.
+                f['invitados'] = FILMINUTOS
             funcs.append(f)
     sueltas = set(por_cat) - usadas
     if sueltas:
