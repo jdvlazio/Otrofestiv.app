@@ -35,7 +35,9 @@ def main():
         for f in delDia:
             h, m = f['time'].split(':')
             a = int(h) % 12 or 12
-            if not re.search(rf'\b{a}\s?(pm|{m})\b' if m == '00' else rf'\b{a}\s{m}\b', t):
+            # una hora que vino de una afirmación (docs/FUNCION.md) no está en la lámina: la respalda su fuente
+            movida = ((f.get('_procedencia') or {}).get('time') or {}).get('tipo') not in (None, 'festival-web')
+            if not movida and not re.search(rf'\b{a}\s?(pm|{m})\b' if m == '00' else rf'\b{a}\s{m}\b', t):
                 fallos.append(f'{d} {f["time"]}: la hora no se lee en la lámina {n}')
             for w in re.findall(r'[a-z]{5,}', plano(f['title'])):
                 if w not in t:
