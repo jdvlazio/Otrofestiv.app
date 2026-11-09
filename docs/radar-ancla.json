@@ -6457,6 +6457,109 @@
    ],
    "nota": "Muestra independiente (Cinema Carmesí, U. Santiago de Cali, Proyecto Oriente). La halló el descubridor semanal el 2 nov.",
    "verificado_el": "2026-11-02"
+  },
+  {
+   "clave": "fecili",
+   "nombre": "FECILI — Festival Cine Libre",
+   "sigla": "FECILI",
+   "ciudad": "Necoclí",
+   "departamento": "Antioquia",
+   "region": "Andina",
+   "mes": 12,
+   "mes_texto": null,
+   "fechas_2026": "4–7 DIC 2026 (11.ª, Festhome)",
+   "web": "https://fecili.com",
+   "ig": "@cinelibrefest",
+   "estado": "radar",
+   "id_config": null,
+   "issue": [
+    1438
+   ],
+   "apoyo": null,
+   "fuente": [
+    "https://filmmakers.festhome.com/festival/2287"
+   ],
+   "nota": "Otro listado daba 12–15 nov; Festhome (del propio festival) dice 4–7 dic. fecili.com no respondió el 9 nov.",
+   "discrepancias": null,
+   "motivo_descarte": null,
+   "importancia": null,
+   "verificado_el": "2026-11-09",
+   "origen": [
+    "issue #1438 (descubridor semanal, 9 nov 2026)"
+   ],
+   "copias": {
+    "ancla_2026-10-11": null,
+    "fuentes_lista_2026-10-20": null
+   }
+  },
+  {
+   "clave": "ficgo",
+   "nombre": "FICGO — Festival Internacional de Cine Golfo de Morrosquillo",
+   "sigla": "FICGO",
+   "ciudad": "Tolú y Golfo de Morrosquillo",
+   "departamento": "Sucre",
+   "region": "Caribe",
+   "mes": 12,
+   "mes_texto": null,
+   "fechas_2026": "9–12 DIC 2026 (6.ª, Festhome)",
+   "web": "https://ficgofestival.com",
+   "ig": "@ficgo_oficial",
+   "estado": "radar",
+   "id_config": null,
+   "issue": [
+    1439
+   ],
+   "apoyo": null,
+   "fuente": [
+    "https://filmmakers.festhome.com/festival/festival-internacional-de-cine-golfo-de-morrosquillo-ficgo",
+    "https://ficgofestival.com"
+   ],
+   "nota": "Itinerante al aire libre: Tolú, Coveñas, San Onofre, Berrugas, Rincón del Mar y San Antero. Su blog decía «noviembre 2026».",
+   "discrepancias": null,
+   "motivo_descarte": null,
+   "importancia": null,
+   "verificado_el": "2026-11-09",
+   "origen": [
+    "issue #1439 (descubridor semanal, 9 nov 2026)"
+   ],
+   "copias": {
+    "ancla_2026-10-11": null,
+    "fuentes_lista_2026-10-20": null
+   }
+  },
+  {
+   "clave": "changuito",
+   "nombre": "Changuito — Festival de Cine para las Niñeces",
+   "sigla": null,
+   "ciudad": "Cali",
+   "departamento": "Valle del Cauca",
+   "region": "Pacífico",
+   "mes": 12,
+   "mes_texto": null,
+   "fechas_2026": "17 DIC 2026 (2.ª, Festhome)",
+   "web": "https://changuitovisual.wixsite.com",
+   "ig": "@changuitofilmfestival",
+   "estado": "radar",
+   "id_config": null,
+   "issue": [
+    1440
+   ],
+   "apoyo": null,
+   "fuente": [
+    "https://filmmakers.festhome.com/de/festival/10141"
+   ],
+   "nota": "Un día. Dice ser descentralizado, sin sedes listadas.",
+   "discrepancias": null,
+   "motivo_descarte": null,
+   "importancia": null,
+   "verificado_el": "2026-11-09",
+   "origen": [
+    "issue #1440 (descubridor semanal, 9 nov 2026)"
+   ],
+   "copias": {
+    "ancla_2026-10-11": null,
+    "fuentes_lista_2026-10-20": null
+   }
   }
  ]
 }
