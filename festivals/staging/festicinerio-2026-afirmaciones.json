@@ -1,0 +1,56 @@
+{
+ "_provenance": {
+  "fuente": "historia de IG de FESTICINERIO, 9 nov (las historias no las guarda el vigía; la reportó Juan)",
+  "capturado": "2026-11-09",
+  "metodo": "una afirmación por casilla, con su fuente (docs/FUNCION.md)"
+ },
+ "afirmaciones": [
+  {
+   "ancla": {
+    "sede": "Teatro Cuesta - Riosucio",
+    "dia": "2026-11-09",
+    "hora": "18:10"
+   },
+   "fuente": {
+    "tipo": "festival-ig",
+    "url": "https://www.instagram.com/stories/festicinerio/",
+    "fecha": "2026-11-09"
+   },
+   "casilla": "time",
+   "valor": "19:20",
+   "evidencia": "Historia de IG del festival (9 nov): ajuste de programación de hoy, Diòba a las 6:00 p. m. y En Bajo de 4 Puntas a las 7:20 p. m. con presencia del director",
+   "contra": "18:10"
+  },
+  {
+   "ancla": {
+    "sede": "Teatro Cuesta - Riosucio",
+    "dia": "2026-11-09",
+    "hora": "19:00"
+   },
+   "fuente": {
+    "tipo": "festival-ig",
+    "url": "https://www.instagram.com/stories/festicinerio/",
+    "fecha": "2026-11-09"
+   },
+   "casilla": "time",
+   "valor": "18:00",
+   "evidencia": "Historia de IG del festival (9 nov): ajuste de programación de hoy, Diòba a las 6:00 p. m. y En Bajo de 4 Puntas a las 7:20 p. m. con presencia del director",
+   "contra": "19:00"
+  },
+  {
+   "ancla": {
+    "sede": "Teatro Cuesta - Riosucio",
+    "dia": "2026-11-09",
+    "hora": "18:10"
+   },
+   "fuente": {
+    "tipo": "festival-ig",
+    "url": "https://www.instagram.com/stories/festicinerio/",
+    "fecha": "2026-11-09"
+   },
+   "casilla": "has_qa",
+   "valor": true,
+   "evidencia": "Historia de IG del festival (9 nov): ajuste de programación de hoy, Diòba a las 6:00 p. m. y En Bajo de 4 Puntas a las 7:20 p. m. con presencia del director"
+  }
+ ]
+}
