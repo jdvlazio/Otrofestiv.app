@@ -600,7 +600,7 @@
    "day_order": 0,
    "venue": "Teatro Cuesta - Riosucio",
    "has_qa": false,
-   "synopsis": "Muestra de cortometrajes en homenaje y solidaridad con el pueblo palestino: cada día, uno de estos trabajos y una reflexión colectiva. Símbolos de la ausencia (presencia); La piel de Palestina; Mas que el lenguaje, de Tatiana Mazú González; El canto de los pájaros, de Sebastián Zanzottera; Intersticio; Kufiya, de Manque La Banca.",
+   "synopsis": "Del dossier de cortometrajes por Palestina de Cine x Palestina, que FESTICINERIO programa un corto por día con una reflexión colectiva. Realización colectiva, Santiago de Chile, 2025. 107 segundos.",
    "synopsis_lang": "es",
    "_src": {
     "url": "https://www.instagram.com/p/DfXJjeBm1w7/",
@@ -980,7 +980,7 @@
    "day_order": 1,
    "venue": "Teatro Cuesta - Riosucio",
    "has_qa": false,
-   "synopsis": "Muestra de cortometrajes en homenaje y solidaridad con el pueblo palestino: cada día, uno de estos trabajos y una reflexión colectiva. Símbolos de la ausencia (presencia); La piel de Palestina; Mas que el lenguaje, de Tatiana Mazú González; El canto de los pájaros, de Sebastián Zanzottera; Intersticio; Kufiya, de Manque La Banca.",
+   "synopsis": "Del dossier de cortometrajes por Palestina de Cine x Palestina, que FESTICINERIO programa un corto por día con una reflexión colectiva. Realización colectiva, Buenos Aires, 2025. 150 segundos.",
    "synopsis_lang": "es",
    "_src": {
     "url": "https://www.instagram.com/p/DfXJjeBm1w7/",
@@ -1352,7 +1352,7 @@
    "day_order": 2,
    "venue": "Teatro Cuesta - Riosucio",
    "has_qa": false,
-   "synopsis": "Muestra de cortometrajes en homenaje y solidaridad con el pueblo palestino: cada día, uno de estos trabajos y una reflexión colectiva. Símbolos de la ausencia (presencia); La piel de Palestina; Mas que el lenguaje, de Tatiana Mazú González; El canto de los pájaros, de Sebastián Zanzottera; Intersticio; Kufiya, de Manque La Banca.",
+   "synopsis": "Del dossier de cortometrajes por Palestina de Cine x Palestina, que FESTICINERIO programa un corto por día con una reflexión colectiva. De Tatiana Mazú González, La Matanza, 2025. 330 segundos.",
    "synopsis_lang": "es",
    "_src": {
     "url": "https://www.instagram.com/p/DfXJjeBm1w7/",
@@ -1698,7 +1698,7 @@
    "day_order": 3,
    "venue": "Teatro Cuesta - Riosucio",
    "has_qa": false,
-   "synopsis": "Muestra de cortometrajes en homenaje y solidaridad con el pueblo palestino: cada día, uno de estos trabajos y una reflexión colectiva. Símbolos de la ausencia (presencia); La piel de Palestina; Mas que el lenguaje, de Tatiana Mazú González; El canto de los pájaros, de Sebastián Zanzottera; Intersticio; Kufiya, de Manque La Banca.",
+   "synopsis": "Del dossier de cortometrajes por Palestina de Cine x Palestina, que FESTICINERIO programa un corto por día con una reflexión colectiva. De Sebastián Zanzottera, Islas del Delta del Paraná, 2025. 260 segundos.",
    "synopsis_lang": "es",
    "poster": "/assets/festicinerio-2026/el-canto-de-los-pajaros.jpg",
    "posterSource": "tmdb",
@@ -2030,7 +2030,7 @@
    "day_order": 4,
    "venue": "Teatro Cuesta - Riosucio",
    "has_qa": false,
-   "synopsis": "Muestra de cortometrajes en homenaje y solidaridad con el pueblo palestino: cada día, uno de estos trabajos y una reflexión colectiva. Símbolos de la ausencia (presencia); La piel de Palestina; Mas que el lenguaje, de Tatiana Mazú González; El canto de los pájaros, de Sebastián Zanzottera; Intersticio; Kufiya, de Manque La Banca.",
+   "synopsis": "Del dossier de cortometrajes por Palestina de Cine x Palestina, que FESTICINERIO programa un corto por día con una reflexión colectiva. Realización colectiva, La Plata, 2025. 105 segundos.",
    "synopsis_lang": "es",
    "_src": {
     "url": "https://www.instagram.com/p/DfXJjeBm1w7/",
@@ -2321,7 +2321,7 @@
    "day_order": 5,
    "venue": "Teatro Cuesta - Riosucio",
    "has_qa": false,
-   "synopsis": "Muestra de cortometrajes en homenaje y solidaridad con el pueblo palestino: cada día, uno de estos trabajos y una reflexión colectiva. Símbolos de la ausencia (presencia); La piel de Palestina; Mas que el lenguaje, de Tatiana Mazú González; El canto de los pájaros, de Sebastián Zanzottera; Intersticio; Kufiya, de Manque La Banca.",
+   "synopsis": "Del dossier de cortometrajes por Palestina de Cine x Palestina, que FESTICINERIO programa un corto por día con una reflexión colectiva. De Manque La Banca, Buenos Aires, 2025. 180 segundos.",
    "synopsis_lang": "es",
    "_src": {
     "url": "https://www.instagram.com/p/DfXJjeBm1w7/",
@@ -2526,7 +2526,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-10T17:31:17",
+  "fecha": "2026-11-10T17:36:17",
   "plan_sha": "ec9703ec11f72a19",
   "paso": 7,
   "cmd": "python3 pipeline/festicinerio-2026-verificar.py"
