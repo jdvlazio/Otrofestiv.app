@@ -39,7 +39,9 @@ def main():
             movida = ((f.get('_procedencia') or {}).get('time') or {}).get('tipo') not in (None, 'festival-web')
             if not movida and not re.search(rf'\b{a}\s?(pm|{m})\b' if m == '00' else rf'\b{a}\s{m}\b', t):
                 fallos.append(f'{d} {f["time"]}: la hora no se lee en la lámina {n}')
-            for w in re.findall(r'[a-z]{5,}', plano(f['title'])):
+            # el filminuto se titula con su corto (lámina 2 de p/DeuTmfAG3Lp): en la parrilla dice «Filminuto»
+            tit = 'Filminuto' if 'Filminuto' in (f.get('section') or '') else f['title']
+            for w in re.findall(r'[a-z]{5,}', plano(tit)):
                 if w not in t:
                     fallos.append(f'{f["title"]}: «{w}» no se lee en la lámina {n}')
     if {f['day'] for f in films} - set(LAM):
