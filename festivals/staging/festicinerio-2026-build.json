@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "IG @festicinerio, carrusel de la programación (5 nov 2026)",
-  "capturado": "2026-11-09",
+  "capturado": "2026-11-10",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_sedes": "Todas las proyecciones son en el Teatro Cuesta.",
@@ -584,9 +584,11 @@
    }
   },
   {
-   "title": "Filminuto",
+   "title": "Símbolos de la ausencia (presencia)",
    "type": "film",
    "section": "⏱️ Filminuto",
+   "country": "Chile",
+   "flags": "🇨🇱",
    "duration": "10 min",
    "_ancla": [
     "Teatro Cuesta - Riosucio",
@@ -605,6 +607,7 @@
     "lamina": "01.jpg",
     "date": "2026-11-05"
    },
+   "_programa_original": "Filminuto",
    "_fid": "f_804ade8e01",
    "id": "f_804ade8e01",
    "is_free": true,
@@ -961,9 +964,11 @@
    }
   },
   {
-   "title": "Filminuto",
+   "title": "La piel de Palestina",
    "type": "film",
    "section": "⏱️ Filminuto",
+   "country": "Argentina",
+   "flags": "🇦🇷",
    "duration": "10 min",
    "_ancla": [
     "Teatro Cuesta - Riosucio",
@@ -982,6 +987,7 @@
     "lamina": "02.jpg",
     "date": "2026-11-05"
    },
+   "_programa_original": "Filminuto",
    "_fid": "f_231eb082ac",
    "id": "f_231eb082ac",
    "is_free": true,
@@ -1329,9 +1335,12 @@
    }
   },
   {
-   "title": "Filminuto",
+   "title": "Mas que el lenguaje",
    "type": "film",
    "section": "⏱️ Filminuto",
+   "director": "Tatiana Mazú González",
+   "country": "Argentina",
+   "flags": "🇦🇷",
    "duration": "10 min",
    "_ancla": [
     "Teatro Cuesta - Riosucio",
@@ -1350,6 +1359,7 @@
     "lamina": "03.jpg",
     "date": "2026-11-05"
    },
+   "_programa_original": "Filminuto",
    "_fid": "f_3cd47a3cbb",
    "id": "f_3cd47a3cbb",
    "is_free": true,
@@ -1671,10 +1681,13 @@
    }
   },
   {
-   "title": "Filminuto",
+   "title": "El canto de los pájaros",
    "type": "film",
    "section": "⏱️ Filminuto",
-   "duration": "20 min",
+   "director": "Sebastián Zanzottera",
+   "country": "Argentina",
+   "flags": "🇦🇷",
+   "duration": "5 min",
    "_ancla": [
     "Teatro Cuesta - Riosucio",
     "2026-11-11",
@@ -1687,11 +1700,18 @@
    "has_qa": false,
    "synopsis": "Muestra de cortometrajes en homenaje y solidaridad con el pueblo palestino: cada día, uno de estos trabajos y una reflexión colectiva. Símbolos de la ausencia (presencia); La piel de Palestina; Mas que el lenguaje, de Tatiana Mazú González; El canto de los pájaros, de Sebastián Zanzottera; Intersticio; Kufiya, de Manque La Banca.",
    "synopsis_lang": "es",
+   "poster": "/assets/festicinerio-2026/el-canto-de-los-pajaros.jpg",
+   "posterSource": "tmdb",
    "_src": {
     "url": "https://www.instagram.com/p/DfXJjeBm1w7/",
     "lamina": "04.jpg",
     "date": "2026-11-05"
    },
+   "lbSlug": "el-canto-de-los-pajaros",
+   "tmdb_id": 1742707,
+   "synopsis_en": "In the drowsiness between sleep and wakefulness, the birds sing. The river forms a border yet also unites; it is a bridge shaped like a 3D dream, where the Río de la Plata wetlands meet the shores of Gaza.",
+   "year": 2026,
+   "_programa_original": "Filminuto",
    "_fid": "f_91ac63bbef",
    "id": "f_91ac63bbef",
    "is_free": true,
@@ -1994,9 +2014,11 @@
    }
   },
   {
-   "title": "Filminuto",
+   "title": "Intersticio",
    "type": "film",
    "section": "⏱️ Filminuto",
+   "country": "Argentina",
+   "flags": "🇦🇷",
    "duration": "20 min",
    "_ancla": [
     "Teatro Cuesta - Riosucio",
@@ -2015,6 +2037,7 @@
     "lamina": "05.jpg",
     "date": "2026-11-05"
    },
+   "_programa_original": "Filminuto",
    "_fid": "f_baebd6ee2c",
    "id": "f_baebd6ee2c",
    "is_free": true,
@@ -2281,9 +2304,12 @@
    }
   },
   {
-   "title": "Filminuto",
+   "title": "Kufiya",
    "type": "film",
    "section": "⏱️ Filminuto",
+   "director": "Manque La Banca",
+   "country": "Argentina",
+   "flags": "🇦🇷",
    "duration": "20 min",
    "_ancla": [
     "Teatro Cuesta - Riosucio",
@@ -2302,6 +2328,7 @@
     "lamina": "06.jpg",
     "date": "2026-11-05"
    },
+   "_programa_original": "Filminuto",
    "_fid": "f_1ca944a025",
    "id": "f_1ca944a025",
    "is_free": true,
@@ -2499,7 +2526,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-09T13:12:53",
+  "fecha": "2026-11-10T17:17:21",
   "plan_sha": "ec9703ec11f72a19",
   "paso": 7,
   "cmd": "python3 pipeline/festicinerio-2026-verificar.py"
