@@ -462,8 +462,23 @@ def fuentes_ig(token, saldo_apify):
         out.append(('apify', lambda cs, es, ah: apify_por_cuenta(cs, es, ah, token)))
     lo = os.environ.get('LOBSTR_API_KEY')
     if lo:
-        out.append(('lobstr', lambda cs, es, ah: lobstr_por_cuentas(cs, desde(cs, es, ah), lo, ah)))
+        out.append(('lobstr', lambda cs, es, ah: lobstr_una_vez_al_dia(cs, es, ah, lo)))
     return out
+
+
+def lobstr_una_vez_al_dia(cuentas, estado, ahora, clave):
+    """lobstr cobra cada post que devuelve aunque sea viejo (no respeta
+    `hours_back`) y tiene 100 al mes. Del 2 al 9 nov 2026 se gastó entero en 8
+    días: Bright Data no leía @semanadelcinecolombiano y cada corrida (3 al día)
+    caía a lobstr. Por eso: una sola vez al día por cuenta. La cuenta que ya lo
+    usó hoy queda sin leer (sale en NO_PUDE_LEER) hasta mañana."""
+    hoy = ahora.date().isoformat()
+    van = [c for c in cuentas if (estado.get(c) or {}).get('lobstr_dia') != hoy]
+    fuera = [{'error': 'cupo', 'errorDescription': 'lobstr: ya se usó hoy con esta cuenta (1 vez al día)',
+              'username': c} for c in cuentas if c not in van]
+    for c in van:
+        estado.setdefault(c, {})['lobstr_dia'] = hoy
+    return (lobstr_por_cuentas(van, desde(van, estado, ahora), clave, ahora) if van else []) + fuera
 
 
 def cascada(cuentas, estado, ahora, fuentes):
@@ -538,6 +553,15 @@ def main():
                                       'laminas': len(it.get('childPosts') or it.get('images') or []) or 1,
                                       'texto': (it.get('caption') or '')[:300]})
     informe['NO_PUDE_LEER'] = sin_leer
+    # Bright Data es la fuente principal: si no lee una cuenta varias corridas
+    # seguidas, el respaldo se gasta en silencio aunque la cuenta «se lea».
+    informe['BRIGHTDATA_NO_LEE'] = {}
+    if os.environ.get('BRIGHTDATA_API_KEY'):
+        for c in cuentas:
+            e = estado.setdefault(c, {})
+            e['bd_fallos'] = 0 if informe['via'].get(c) == 'brightdata' else e.get('bd_fallos', 0) + 1
+            if e['bd_fallos'] >= 3:
+                informe['BRIGHTDATA_NO_LEE'][c] = e['bd_fallos']
     vigilar_fb(json.load(open(CUENTAS)), estado, ahora, token, informe)
     os.makedirs(os.path.dirname(ESTADO), exist_ok=True)
     json.dump(estado, open(ESTADO, 'w'), ensure_ascii=False, indent=1)
