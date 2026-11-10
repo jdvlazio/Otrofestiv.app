@@ -122,7 +122,6 @@ def main():
             f.update(CREDITOS.get(titulo, {}))
             if seccion == FILMI:
                 # p/DeuTmfAG3Lp (20 oct): un corto por día; el orden de la lámina 2 es el de los días
-                f['invitados'] = FILMINUTOS
                 f['obras'] = [CORTOS_PALESTINA[int(dia[-2:]) - 8]]
             funcs.append(f)
     sueltas = set(por_cat) - usadas
