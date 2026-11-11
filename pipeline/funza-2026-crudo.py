@@ -65,8 +65,8 @@ NO_SE_PUBLICA = {
 }
 # proyección → la obra
 OBRAS = {
-    'Proyección Reflejos': {'titulo': 'Reflejos', 'director': 'Miguel Urrutia'},
-    'Proyección Basta Mamá': {'titulo': 'Basta Mamá', 'director': 'Flora Martínez'},
+    'Proyección Reflejos': {'titulo': 'Reflejos', 'director': 'Miguel Urrutia', 'pais': 'Colombia'},  # «thriller colombiano»: cambiocolombia.com (dic 2025), enter.co
+    'Proyección Basta Mamá': {'titulo': 'Basta Mamá', 'director': 'Flora Martínez', 'pais': 'Colombia'},  # estreno en salas de Colombia, 12 feb 2026, elenco colombiano (infobae.com, 4 feb 2026); TMDB 1627217 dice US, sin país de producción: error de la ficha
     'Proyección HORIZONTES': {'titulo': 'Horizonte', 'director': 'César Augusto Acevedo',
                               'titulo_fuente': 'HORIZONTES'},
 }
@@ -138,6 +138,8 @@ def main():
         if act in OBRAS:
             o = OBRAS[act]
             reg.update(titulo=o['titulo'], director=o['director'], titulo_fuente=act)
+            if o.get('pais'):
+                reg['pais'] = o['pais']
             reg['_nota'] = obs
         else:
             reg.update(titulo=act, tipo='evento', event_kind=KIND[act])
