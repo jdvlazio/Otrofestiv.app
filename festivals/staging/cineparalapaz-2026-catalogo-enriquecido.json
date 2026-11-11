@@ -1,0 +1,353 @@
+{
+ "_provenance": {
+  "fuente": "TMDB + letterboxd.com/tmdb/<id>, con el MISMO candado de enriquecer.py: director ✓ y (año ±1 o duración ±3 min). Lo que no verifica no entra.",
+  "capturado": "2026-11-11"
+ },
+ "_origen": "cineparalapaz-2026-catalogo.json",
+ "obras": [
+  {
+   "titulo": "Por una gota de leche",
+   "tmdb_id": 1738896,
+   "titulo_original": "Por una gota de leche",
+   "poster_path": "/i8xbtaZeFkaVvWcAvBVcJ0f7KwC.jpg",
+   "synopsis_es": "En 1985, varios jóvenes militantes del M-19 robaron un camión de leche para repartirla entre la población más vulnerable del sur de Bogotá. Fueron asesinados por las fuerzas del Estado colombiano tras haberse rendido. Cuarenta años después, sus familias y la comunidad cuentan su historia.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 59,
+   "pais_tmdb": "",
+   "lbSlug": "por-una-gota-de-leche",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Por una gota de leche",
+   "_ya_publicada": [
+    {
+     "festival": "ficdeh-2026",
+     "titulo": "Por una gota de leche",
+     "poster": "/assets/ficdeh/por-una-gota-de-leche.jpg",
+     "posterSource": "custom",
+     "lbSlug": "por-una-gota-de-leche",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "59 min",
+     "synopsis_en": "In 1985, several young militants of the M-19 hijacked a milk truck to hand out its cargo among the poorest people of southern Bogotá. They were killed by Colombian state forces after surrendering. Forty years on, their families and their community tell the story.",
+     "sinopsis": "En 1985, varios jóvenes militantes del M-19 robaron un camión de leche para repartirla entre la población más vulnerable del sur de Bogotá. Fueron asesinados por las fuerzas del Estado colombiano tras haberse rendido. Cuarenta años después, sus familias y la comunidad cuentan su historia."
+    }
+   ]
+  },
+  {
+   "titulo": "La niebla de la paz",
+   "tmdb_id": 798643,
+   "titulo_original": "La niebla de la paz",
+   "poster_path": "/oXkH6mudG5rD6FHTX9hkvggim54.jpg",
+   "synopsis_es": "\"La niebla de la paz\" sigue la labor de dos guerrilleros de las FARC antes, durante y después de los acuerdos de paz. Uno recoge en terreno y por escrito las historias de vida, sueños, motivaciones, amores… de guerrilleros anónimos. El otro documenta en video el proceso de negociación en La Habana, los rostros y las voces de esos otros guerrilleros conocidos… Dos “batallas” paralelas se libran: la del diálogo en el calor brumoso de Cuba y la de las armas y su dejación entre la niebla que inunda los amaneceres en la selva… Terminada la misión y entregadas las armas ¿qué sigue? ¿La niebla es aún más espesa?",
+   "synopsis_en": "Through unique access to the peace process and inside the FARC, it is the guerrilla soldiers’ inner life that this poetic documentary explores. The war has lasted so long that the causes have begun to be forgotten, and when the peace process leads to the disbandment of the FARC, it becomes more important than ever for guerrillas to film, write down, and track material about the inner life of the movement so they can own and tell their own story.",
+   "genero": "Documental",
+   "anio_tmdb": 2020,
+   "duracion_tmdb": 85,
+   "pais_tmdb": "",
+   "title_en": "The Fog of Peace",
+   "lbSlug": "the-fog-of-peace",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "La niebla de la paz"
+  },
+  {
+   "titulo": "Medellín, yo te saludo",
+   "tmdb_id": 1740554,
+   "titulo_original": "Medellín, yo te saludo",
+   "poster_path": "/8uFN3cAwlxc5DhLlgXsFtxaBYiT.jpg",
+   "synopsis_es": "A través del montaje con archivos historicos de prensa y reportaje - Yo te saludo Medellín - propone un encuentro entre imágenes que nunca compartieron un mismo tiempo ni un mismo territorio. En ese diálogo, la película revela ecos inesperados entre guerras, rostros y ruinas, mientras pone en tensión nuevas formas de mirar el pasado, explora cómo el cine y la fotografía pueden interrogar la memoria, preguntándose si la violencia realmente cambia de forma o si son las imágenes las que, una y otra vez, vuelven a encontrarse a través del tiempo.",
+   "synopsis_en": "",
+   "genero": "Documental",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 4,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "medellin-yo-te-saludo",
+   "_verificado": "el catálogo ya la tiene (w_R4F7ST1C6JNH, cinemancia-2026)",
+   "work_id": "w_R4F7ST1C6JNH",
+   "_ya_publicada": [
+    {
+     "festival": "cinemancia-2026",
+     "titulo": "Medellín, yo te saludo",
+     "tmdb_id": 1740554,
+     "poster": "https://image.tmdb.org/t/p/w500/8uFN3cAwlxc5DhLlgXsFtxaBYiT.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "medellin-yo-te-saludo",
+     "country": "Colombia",
+     "year": 2026,
+     "duration": "3 min",
+     "sinopsis": "A través del montaje con archivos historicos de prensa y reportaje - Yo te saludo Medellín - propone un encuentro entre imágenes que nunca compartieron un mismo tiempo ni un mismo territorio. En ese diálogo, la película revela ecos inesperados entre guerras, rostros y ruinas, mientras pone en tensión nuevas formas de mirar el pasado, explora cómo el cine y la fotografía pueden interrogar la memoria, preguntándose si la violencia realmente cambia de forma o si son las imágenes las que, una y otra vez, vuelven a encontrarse a través del tiempo."
+    }
+   ]
+  },
+  {
+   "titulo": "Refugiar el Gesto",
+   "tmdb_id": 1713804,
+   "titulo_original": "Refugiar el gesto",
+   "poster_path": "/bHXUP6sTxTX46cmGdVLDh9eLxqB.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "A group of young dancers witnessed the gradual disappearance of the traditional Danza de las Tabliteras. Determined to bring it back to life, they learned its rhythms and choreography from the four remaining elders who still carried the dance in their bodies. Once again, these gestures echo the movements that decades ago filled the community of San Antonio, Bolívar, with pride, vitality, and collective spirit.",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 11,
+   "pais_tmdb": "Colombia",
+   "title_en": "Sheltering Gestures",
+   "lbSlug": "sheltering-gestures",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Refugiar el Gesto",
+   "_ya_publicada": [
+    {
+     "festival": "qaff-2026",
+     "titulo": "Refugiar el Gesto",
+     "poster": "/assets/qaff/sheltering-gestures.jpg",
+     "posterSource": "custom",
+     "lbSlug": "sheltering-gestures",
+     "country": "Colombia",
+     "year": 2026,
+     "duration": "10 min",
+     "genre": "Documental",
+     "sinopsis": "Gestos que resguardan es una videodanza que rastrea los movimientos rituales y espirituales revividos por un grupo de jóvenes bailarinas que fueron testigos de la desaparición gradual de la tradicional Danza de las Tabliteras. Decididas a devolverle la vida, aprendieron sus ritmos y coreografías de los cuatro ancianos que aún conservaban la danza en sus cuerpos. Una vez más, estos gestos hacen eco de los movimientos que hace décadas llenaron de orgullo, vitalidad y espíritu colectivo a la comunidad de San Antonio, Bolívar. Tragaluz es un colectivo colombiano centrado en el cine documental y las artes audiovisuales comunitarias. Está liderado por Adrián Villa-Dávila (Quito, 1982) , cineasta y artista visual formado en Colombia y Alemania, y Andrés Prado Rojas (Bogotá, 1988) , cineasta y director de fotografía con amplia experiencia en cine documental. Su obra profundiza en la memoria, el territorio y los procesos sociales desde una mirada poética y colaborativa."
+    },
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "Refugiar el gesto",
+     "poster": "https://image.tmdb.org/t/p/w500/bHXUP6sTxTX46cmGdVLDh9eLxqB.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "sheltering-gestures",
+     "country": "Colombia",
+     "year": 2026,
+     "duration": "11 min",
+     "genre": "Documental",
+     "synopsis_en": "A group of young dancers witnessed the gradual disappearance of the traditional Danza de las Tabliteras. Determined to bring it back to life, they learned its rhythms and choreography from the four remaining elders who still carried the dance in their bodies. Once again, these gestures echo the movements that decades ago filled the community of San Antonio, Bolívar, with pride, vitality, and collective spirit.",
+     "sinopsis": "A group of young dancers who witnessed the gradual disappearance of the traditional Danza de las Tabliteras."
+    }
+   ],
+   "sinopsis": "Gestos que resguardan es una videodanza que rastrea los movimientos rituales y espirituales revividos por un grupo de jóvenes bailarinas que fueron testigos de la desaparición gradual de la tradicional Danza de las Tabliteras. Decididas a devolverle la vida, aprendieron sus ritmos y coreografías de los cuatro ancianos que aún conservaban la danza en sus cuerpos. Una vez más, estos gestos hacen eco de los movimientos que hace décadas llenaron de orgullo, vitalidad y espíritu colectivo a la comunidad de San Antonio, Bolívar. Tragaluz es un colectivo colombiano centrado en el cine documental y las artes audiovisuales comunitarias. Está liderado por Adrián Villa-Dávila (Quito, 1982) , cineasta y artista visual formado en Colombia y Alemania, y Andrés Prado Rojas (Bogotá, 1988) , cineasta y director de fotografía con amplia experiencia en cine documental. Su obra profundiza en la memoria, el territorio y los procesos sociales desde una mirada poética y colaborativa.",
+   "_sinopsis_de": "ya publicada en qaff-2026"
+  },
+  {
+   "titulo": "LA",
+   "_ya_publicada": [
+    {
+     "festival": "fecibac-2026",
+     "titulo": "La Canoa Dorada (Tanda 2)",
+     "duration": "60 min"
+    },
+    {
+     "festival": "guatape-2026",
+     "titulo": "La fuente",
+     "duration": "60 min"
+    }
+   ]
+  },
+  {
+   "titulo": "La pandemia del feminicidio en Colombia",
+   "tmdb_id": 1796536,
+   "titulo_original": "La Pandemia del Feminicidio",
+   "poster_path": "/w56jCb50TzLdhKBu4UzhfxFeAVf.jpg",
+   "synopsis_es": "Expone la violencia que enfrentan las mujeres en un país marcado por la impunidad. El documental revela historias de activistas que alzan su voz frente al silencio institucional, el dolor, la memoria y la resistencia.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 29,
+   "pais_tmdb": "",
+   "lbSlug": "la-pandemia-del-feminicidio",
+   "_verificado": "el tmdb_id con que ya la publicamos en ficpa-2026, y TMDB confirma la dirección",
+   "_ya_publicada": [
+    {
+     "festival": "ficpa-2026",
+     "titulo": "La Pandemia del Feminicidio",
+     "tmdb_id": 1796536,
+     "poster": "/assets/ficpa-2026/la-pandemia-del-feminicidio.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "la-pandemia-del-feminicidio",
+     "year": 2025,
+     "duration": "29 min",
+     "sinopsis": "Expone la violencia que enfrentan las mujeres en un país marcado por la impunidad. El documental revela historias de activistas que alzan su voz frente al silencio institucional, el dolor, la memoria y la resistencia."
+    }
+   ]
+  },
+  {
+   "titulo": "Manos que dan vida",
+   "tmdb_id": 1537059,
+   "titulo_original": "Manos que Dan Vida",
+   "poster_path": "/9Ld2zbxQ2StfscQMKNCceXMBZFH.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "A story set in Calamar, a village in the middle of the Colombian jungle, where Blanca, a midwife by vocation, continues to bring life into this world. Her hands, the legacy of decades of service to the community, make her a guardian of life in a territory where violence, glyphosate, and neglect have left an indelible mark on the deep memory of its inhabitants. Together with Margarita, her friend and accomplice, we explore the profound relationship that destiny has bestowed upon them in relation to a birth.",
+   "genero": "Documental",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "manos-que-dan-vida",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+  }
+ ],
+ "verificadas": {
+  "Por una gota de leche": {
+   "tmdb_id": 1738896,
+   "titulo_original": "Por una gota de leche",
+   "poster_path": "/i8xbtaZeFkaVvWcAvBVcJ0f7KwC.jpg",
+   "synopsis_es": "En 1985, varios jóvenes militantes del M-19 robaron un camión de leche para repartirla entre la población más vulnerable del sur de Bogotá. Fueron asesinados por las fuerzas del Estado colombiano tras haberse rendido. Cuarenta años después, sus familias y la comunidad cuentan su historia.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 59,
+   "pais_tmdb": "",
+   "lbSlug": "por-una-gota-de-leche",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Por una gota de leche",
+   "_ya_publicada": [
+    {
+     "festival": "ficdeh-2026",
+     "titulo": "Por una gota de leche",
+     "poster": "/assets/ficdeh/por-una-gota-de-leche.jpg",
+     "posterSource": "custom",
+     "lbSlug": "por-una-gota-de-leche",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "59 min",
+     "synopsis_en": "In 1985, several young militants of the M-19 hijacked a milk truck to hand out its cargo among the poorest people of southern Bogotá. They were killed by Colombian state forces after surrendering. Forty years on, their families and their community tell the story.",
+     "sinopsis": "En 1985, varios jóvenes militantes del M-19 robaron un camión de leche para repartirla entre la población más vulnerable del sur de Bogotá. Fueron asesinados por las fuerzas del Estado colombiano tras haberse rendido. Cuarenta años después, sus familias y la comunidad cuentan su historia."
+    }
+   ]
+  },
+  "La niebla de la paz": {
+   "tmdb_id": 798643,
+   "titulo_original": "La niebla de la paz",
+   "poster_path": "/oXkH6mudG5rD6FHTX9hkvggim54.jpg",
+   "synopsis_es": "\"La niebla de la paz\" sigue la labor de dos guerrilleros de las FARC antes, durante y después de los acuerdos de paz. Uno recoge en terreno y por escrito las historias de vida, sueños, motivaciones, amores… de guerrilleros anónimos. El otro documenta en video el proceso de negociación en La Habana, los rostros y las voces de esos otros guerrilleros conocidos… Dos “batallas” paralelas se libran: la del diálogo en el calor brumoso de Cuba y la de las armas y su dejación entre la niebla que inunda los amaneceres en la selva… Terminada la misión y entregadas las armas ¿qué sigue? ¿La niebla es aún más espesa?",
+   "synopsis_en": "Through unique access to the peace process and inside the FARC, it is the guerrilla soldiers’ inner life that this poetic documentary explores. The war has lasted so long that the causes have begun to be forgotten, and when the peace process leads to the disbandment of the FARC, it becomes more important than ever for guerrillas to film, write down, and track material about the inner life of the movement so they can own and tell their own story.",
+   "genero": "Documental",
+   "anio_tmdb": 2020,
+   "duracion_tmdb": 85,
+   "pais_tmdb": "",
+   "title_en": "The Fog of Peace",
+   "lbSlug": "the-fog-of-peace",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "La niebla de la paz"
+  },
+  "Medellín, yo te saludo": {
+   "tmdb_id": 1740554,
+   "titulo_original": "Medellín, yo te saludo",
+   "poster_path": "/8uFN3cAwlxc5DhLlgXsFtxaBYiT.jpg",
+   "synopsis_es": "A través del montaje con archivos historicos de prensa y reportaje - Yo te saludo Medellín - propone un encuentro entre imágenes que nunca compartieron un mismo tiempo ni un mismo territorio. En ese diálogo, la película revela ecos inesperados entre guerras, rostros y ruinas, mientras pone en tensión nuevas formas de mirar el pasado, explora cómo el cine y la fotografía pueden interrogar la memoria, preguntándose si la violencia realmente cambia de forma o si son las imágenes las que, una y otra vez, vuelven a encontrarse a través del tiempo.",
+   "synopsis_en": "",
+   "genero": "Documental",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 4,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "medellin-yo-te-saludo",
+   "_verificado": "el catálogo ya la tiene (w_R4F7ST1C6JNH, cinemancia-2026)",
+   "work_id": "w_R4F7ST1C6JNH",
+   "_ya_publicada": [
+    {
+     "festival": "cinemancia-2026",
+     "titulo": "Medellín, yo te saludo",
+     "tmdb_id": 1740554,
+     "poster": "https://image.tmdb.org/t/p/w500/8uFN3cAwlxc5DhLlgXsFtxaBYiT.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "medellin-yo-te-saludo",
+     "country": "Colombia",
+     "year": 2026,
+     "duration": "3 min",
+     "sinopsis": "A través del montaje con archivos historicos de prensa y reportaje - Yo te saludo Medellín - propone un encuentro entre imágenes que nunca compartieron un mismo tiempo ni un mismo territorio. En ese diálogo, la película revela ecos inesperados entre guerras, rostros y ruinas, mientras pone en tensión nuevas formas de mirar el pasado, explora cómo el cine y la fotografía pueden interrogar la memoria, preguntándose si la violencia realmente cambia de forma o si son las imágenes las que, una y otra vez, vuelven a encontrarse a través del tiempo."
+    }
+   ]
+  },
+  "Refugiar el Gesto": {
+   "tmdb_id": 1713804,
+   "titulo_original": "Refugiar el gesto",
+   "poster_path": "/bHXUP6sTxTX46cmGdVLDh9eLxqB.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "A group of young dancers witnessed the gradual disappearance of the traditional Danza de las Tabliteras. Determined to bring it back to life, they learned its rhythms and choreography from the four remaining elders who still carried the dance in their bodies. Once again, these gestures echo the movements that decades ago filled the community of San Antonio, Bolívar, with pride, vitality, and collective spirit.",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 11,
+   "pais_tmdb": "Colombia",
+   "title_en": "Sheltering Gestures",
+   "lbSlug": "sheltering-gestures",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Refugiar el Gesto",
+   "_ya_publicada": [
+    {
+     "festival": "qaff-2026",
+     "titulo": "Refugiar el Gesto",
+     "poster": "/assets/qaff/sheltering-gestures.jpg",
+     "posterSource": "custom",
+     "lbSlug": "sheltering-gestures",
+     "country": "Colombia",
+     "year": 2026,
+     "duration": "10 min",
+     "genre": "Documental",
+     "sinopsis": "Gestos que resguardan es una videodanza que rastrea los movimientos rituales y espirituales revividos por un grupo de jóvenes bailarinas que fueron testigos de la desaparición gradual de la tradicional Danza de las Tabliteras. Decididas a devolverle la vida, aprendieron sus ritmos y coreografías de los cuatro ancianos que aún conservaban la danza en sus cuerpos. Una vez más, estos gestos hacen eco de los movimientos que hace décadas llenaron de orgullo, vitalidad y espíritu colectivo a la comunidad de San Antonio, Bolívar. Tragaluz es un colectivo colombiano centrado en el cine documental y las artes audiovisuales comunitarias. Está liderado por Adrián Villa-Dávila (Quito, 1982) , cineasta y artista visual formado en Colombia y Alemania, y Andrés Prado Rojas (Bogotá, 1988) , cineasta y director de fotografía con amplia experiencia en cine documental. Su obra profundiza en la memoria, el territorio y los procesos sociales desde una mirada poética y colaborativa."
+    },
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "Refugiar el gesto",
+     "poster": "https://image.tmdb.org/t/p/w500/bHXUP6sTxTX46cmGdVLDh9eLxqB.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "sheltering-gestures",
+     "country": "Colombia",
+     "year": 2026,
+     "duration": "11 min",
+     "genre": "Documental",
+     "synopsis_en": "A group of young dancers witnessed the gradual disappearance of the traditional Danza de las Tabliteras. Determined to bring it back to life, they learned its rhythms and choreography from the four remaining elders who still carried the dance in their bodies. Once again, these gestures echo the movements that decades ago filled the community of San Antonio, Bolívar, with pride, vitality, and collective spirit.",
+     "sinopsis": "A group of young dancers who witnessed the gradual disappearance of the traditional Danza de las Tabliteras."
+    }
+   ],
+   "sinopsis": "Gestos que resguardan es una videodanza que rastrea los movimientos rituales y espirituales revividos por un grupo de jóvenes bailarinas que fueron testigos de la desaparición gradual de la tradicional Danza de las Tabliteras. Decididas a devolverle la vida, aprendieron sus ritmos y coreografías de los cuatro ancianos que aún conservaban la danza en sus cuerpos. Una vez más, estos gestos hacen eco de los movimientos que hace décadas llenaron de orgullo, vitalidad y espíritu colectivo a la comunidad de San Antonio, Bolívar. Tragaluz es un colectivo colombiano centrado en el cine documental y las artes audiovisuales comunitarias. Está liderado por Adrián Villa-Dávila (Quito, 1982) , cineasta y artista visual formado en Colombia y Alemania, y Andrés Prado Rojas (Bogotá, 1988) , cineasta y director de fotografía con amplia experiencia en cine documental. Su obra profundiza en la memoria, el territorio y los procesos sociales desde una mirada poética y colaborativa.",
+   "_sinopsis_de": "ya publicada en qaff-2026"
+  },
+  "La pandemia del feminicidio en Colombia": {
+   "tmdb_id": 1796536,
+   "titulo_original": "La Pandemia del Feminicidio",
+   "poster_path": "/w56jCb50TzLdhKBu4UzhfxFeAVf.jpg",
+   "synopsis_es": "Expone la violencia que enfrentan las mujeres en un país marcado por la impunidad. El documental revela historias de activistas que alzan su voz frente al silencio institucional, el dolor, la memoria y la resistencia.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 29,
+   "pais_tmdb": "",
+   "lbSlug": "la-pandemia-del-feminicidio",
+   "_verificado": "el tmdb_id con que ya la publicamos en ficpa-2026, y TMDB confirma la dirección",
+   "_ya_publicada": [
+    {
+     "festival": "ficpa-2026",
+     "titulo": "La Pandemia del Feminicidio",
+     "tmdb_id": 1796536,
+     "poster": "/assets/ficpa-2026/la-pandemia-del-feminicidio.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "la-pandemia-del-feminicidio",
+     "year": 2025,
+     "duration": "29 min",
+     "sinopsis": "Expone la violencia que enfrentan las mujeres en un país marcado por la impunidad. El documental revela historias de activistas que alzan su voz frente al silencio institucional, el dolor, la memoria y la resistencia."
+    }
+   ]
+  },
+  "Manos que dan vida": {
+   "tmdb_id": 1537059,
+   "titulo_original": "Manos que Dan Vida",
+   "poster_path": "/9Ld2zbxQ2StfscQMKNCceXMBZFH.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "A story set in Calamar, a village in the middle of the Colombian jungle, where Blanca, a midwife by vocation, continues to bring life into this world. Her hands, the legacy of decades of service to the community, make her a guardian of life in a territory where violence, glyphosate, and neglect have left an indelible mark on the deep memory of its inhabitants. Together with Margarita, her friend and accomplice, we explore the profound relationship that destiny has bestowed upon them in relation to a birth.",
+   "genero": "Documental",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "manos-que-dan-vida",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+  }
+ },
+ "sin_ficha": [
+  "Cajamarca: El viaje del desengaño",
+  "De la misma Tierra",
+  "Hecho a mano",
+  "Kinesis",
+  "LA",
+  "La coca: Buen vivir del pueblo Nasa",
+  "Nueve jueves en Riachuelo",
+  "Paseando Te Cuento",
+  "Un Milagro Cada Día",
+  "Un berraco Partido",
+  "¿Una pola o qué?"
+ ]
+}
