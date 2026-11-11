@@ -1409,6 +1409,141 @@
      "fecha": "2026-10-25"
     }
    }
+  },
+  {
+   "title": "Feria de Experiencias Sociales 2026",
+   "type": "event",
+   "event_kind": "evento",
+   "section": "🎬 Inauguración",
+   "day": "2026-11-18",
+   "time": "16:00",
+   "venue": "Centro Cultural Bacatá - Funza",
+   "duration": "120 min",
+   "description": "Organiza UNIMINUTO, Práctica en Responsabilidad Social.",
+   "description_lang": "es",
+   "_src": {
+    "url": "fuentes/funza-2026/pieza-feria-experiencias-sociales.jpg",
+    "date": "2026-11-11"
+   },
+   "_ancla": [
+    "Centro Cultural Bacatá - Funza",
+    "2026-11-18",
+    "16:00"
+   ],
+   "_fid": "f_dcb0a78bb0",
+   "_procedencia": {
+    "existe": {
+     "tipo": "juan",
+     "fecha": "2026-11-11",
+     "frase": "En el desktop te dejé otro par de imágenes que me los enviaron ellos para añadir a la programación de Funza.",
+     "archivo": "fuentes/funza-2026/pieza-feria-experiencias-sociales.jpg"
+    },
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-11"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-11"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-11"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-11"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-11"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-11"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-11"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-11"
+    }
+   },
+   "is_free": true,
+   "id": "f_dcb0a78bb0",
+   "day_order": 0
+  },
+  {
+   "title": "Languages Without Borders 2026",
+   "type": "event",
+   "event_kind": "encuentro",
+   "section": "📚 Literatura / Artes Escénicas / Cine",
+   "day": "2026-11-18",
+   "time": "16:00",
+   "venue": "Centro Cultural Bacatá - Funza",
+   "sala": "Auditorio",
+   "duration": "300 min",
+   "description": "Shared Worlds: Languages, Voices and Transformation. Encuentro de la Licenciatura en Lenguas Extranjeras con Énfasis en Inglés (UNIMINUTO, Centro Universitario Madrid).",
+   "description_lang": "es",
+   "_src": {
+    "url": "fuentes/funza-2026/pieza-languages-without-borders.jpg",
+    "date": "2026-11-11"
+   },
+   "_ancla": [
+    "Centro Cultural Bacatá - Funza",
+    "2026-11-18",
+    "16:00"
+   ],
+   "_fid": "f_ba0dca3096",
+   "_procedencia": {
+    "existe": {
+     "tipo": "juan",
+     "fecha": "2026-11-11",
+     "frase": "En el desktop te dejé otro par de imágenes que me los enviaron ellos para añadir a la programación de Funza.",
+     "archivo": "fuentes/funza-2026/pieza-languages-without-borders.jpg"
+    },
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-11"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-11"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-11"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-11"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-11"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-11"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-11"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-11"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-11"
+    }
+   },
+   "is_free": true,
+   "id": "f_ba0dca3096",
+   "day_order": 0
   }
  ],
  "_avisos_duracion": [
@@ -1416,7 +1551,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-11T13:34:54",
+  "fecha": "2026-11-11T13:40:36",
   "plan_sha": "f88fc562837e7b4f",
   "paso": 6,
   "cmd": "python3 pipeline/funza-2026-verificar.py"
