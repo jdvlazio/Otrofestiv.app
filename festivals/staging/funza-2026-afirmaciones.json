@@ -143,40 +143,6 @@
    },
    "evidencia": "pieza (enviada por el festival, 11 nov): «Feria de Experiencias Sociales 2026 · Noviembre 18 Miércoles 04:00 a 6:00 PM · Complejo Cultural Funza» con los logos del 4.º Festival de Cine Funza y del Centro Cultural Bacatá",
    "funcion": "f_dcb0a78bb0"
-  },
-  {
-   "ancla": {
-    "sede": "Centro Cultural Bacatá - Funza",
-    "dia": "2026-11-18",
-    "hora": "16:00"
-   },
-   "casilla": "existe",
-   "valor": {
-    "title": "Languages Without Borders 2026",
-    "type": "event",
-    "event_kind": "encuentro",
-    "section": "📚 Literatura / Artes Escénicas / Cine",
-    "day": "2026-11-18",
-    "time": "16:00",
-    "venue": "Centro Cultural Bacatá - Funza",
-    "sala": "Auditorio",
-    "duration": "300 min",
-    "is_free": true,
-    "description": "Shared Worlds: Languages, Voices and Transformation. Encuentro de la Licenciatura en Lenguas Extranjeras con Énfasis en Inglés (UNIMINUTO, Centro Universitario Madrid).",
-    "description_lang": "es",
-    "_src": {
-     "url": "fuentes/funza-2026/pieza-languages-without-borders.jpg",
-     "date": "2026-11-11"
-    }
-   },
-   "fuente": {
-    "tipo": "juan",
-    "fecha": "2026-11-11",
-    "frase": "En el desktop te dejé otro par de imágenes que me los enviaron ellos para añadir a la programación de Funza.",
-    "archivo": "fuentes/funza-2026/pieza-languages-without-borders.jpg"
-   },
-   "evidencia": "pieza (enviada por el festival, 11 nov): «Languages Without Borders 2026 · Shared Worlds: Languages, Voices and Transformation · 18 de Noviembre 4:00 p. m. – 9:00 p. m. · Auditorio – Complejo Cultural Bacatá, Funza»",
-   "funcion": "f_ba0dca3096"
   }
  ]
 }
