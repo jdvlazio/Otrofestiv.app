@@ -4517,6 +4517,11 @@
   "fecha": "2026-10-27T18:48:14",
   "plan_sha": "e4564939112b8067",
   "paso": 6,
-  "cmd": "python3 pipeline/guatape-2026-verificar.py"
+  "cmd": "python3 pipeline/guatape-2026-verificar.py",
+  "fallo": {
+   "paso": 1,
+   "cmd": "python3 pipeline/guatape-2026-crudo.py",
+   "fecha": "2026-11-11T16:35:51"
+  }
  }
 }

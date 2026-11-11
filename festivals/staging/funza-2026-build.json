@@ -506,6 +506,8 @@
    "section": "🎞️ Exhibición Cinematográfica",
    "director": "Miguel Urrutia",
    "year": 2025,
+   "country": "Colombia",
+   "flags": "🇨🇴",
    "duration": "88 min",
    "genre": "Terror",
    "_ancla": [
@@ -1142,6 +1144,8 @@
    "section": "🎞️ Exhibición Cinematográfica",
    "director": "Flora Martínez",
    "year": 2026,
+   "country": "Colombia",
+   "flags": "🇨🇴",
    "duration": "125 min",
    "genre": "Comedia",
    "_ancla": [
@@ -1551,7 +1555,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-11T13:40:36",
+  "fecha": "2026-11-11T16:32:24",
   "plan_sha": "f88fc562837e7b4f",
   "paso": 6,
   "cmd": "python3 pipeline/funza-2026-verificar.py"
