@@ -391,7 +391,7 @@
    "posterSource": "tmdb",
    "genero": "Ciencia Ficción",
    "_heredado": {
-    "genero": "catálogo w_R4EP71550W43 (bhff-2026, cineautopsia-2026, fantasmagoria-2026, fantasofest-2026, festicinerio-2026, ficfusa-2026, ficica-2026, ficpa-2026, narrarelfuturo-2026, popayan-2026)"
+    "genero": "catálogo w_R4EP71550W43 (bhff-2026, cineautopsia-2026, fantasmagoria-2026, fantasofest-2026, festicinerio-2026, ficfusa-2026, ficica-2026, ficpa-2026, narrarelfuturo-2026, popayan-2026, villadeleyvaiff-2026)"
    }
   },
   {
@@ -597,6 +597,18 @@
    ],
    "poster": "/assets/ficfusa-2026/entrelazadas.jpg",
    "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Florecerán!",
+   "_ya_publicada": [
+    {
+     "festival": "villadeleyvaiff-2026",
+     "titulo": "¡Florecerán!",
+     "country": "Argentina"
+    }
+   ],
+   "_verificado": "ya publicada en villadeleyvaiff-2026: se reusan sus datos",
+   "pais": "Argentina"
   },
   {
    "titulo": "Hdlt",
@@ -2085,7 +2097,7 @@
    "posterSource": "tmdb",
    "genero": "Ciencia Ficción",
    "_heredado": {
-    "genero": "catálogo w_R4EP71550W43 (bhff-2026, cineautopsia-2026, fantasmagoria-2026, fantasofest-2026, festicinerio-2026, ficfusa-2026, ficica-2026, ficpa-2026, narrarelfuturo-2026, popayan-2026)"
+    "genero": "catálogo w_R4EP71550W43 (bhff-2026, cineautopsia-2026, fantasmagoria-2026, fantasofest-2026, festicinerio-2026, ficfusa-2026, ficica-2026, ficpa-2026, narrarelfuturo-2026, popayan-2026, villadeleyvaiff-2026)"
    }
   },
   "Chicha la chicharra": {
