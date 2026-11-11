@@ -1454,3 +1454,5 @@ legítimo que falte en `_GENRE_EN`, y esa decisión es de quien monta.
 `[cruce-sin-decidir]` (5 nov 2026): un festival que todavía no salió no pasa con cruces dudosos contra lo publicado (título parecido, u otra dirección con el mismo título) sin decidir en `misma_obra` o `no_heredar` de `<fid>-correcciones.json`.
 
 `[preonboarding-completo]` (18 oct 2026): un festival que todavía no salió y ya tiene `<fid>-catalogo.json` no pasa si alguna obra no tiene afiche ni su porqué (`sin_afiche`). `python3 pipeline/preonboarding.py`; deuda en `pipeline/preonboarding-deuda.json`, solo baja. Lo publicado lo vigila `[afiche-cobertura]`.
+
+`[obra-sin-pais]` (11 nov 2026): toda obra de un festival vivo lleva `country` (la bandera) o su porqué en `sin_pais` de `<fid>-correcciones.json`, por título de la obra o de su programa. Nació de Basta Mamá, sin bandera en Guatapé y Funza; había 21 obras así y nada lo frenaba. Un programa sin obras nombradas también se declara. País solo con fuente: TMDB puede equivocarse (Basta Mamá figura como US).
