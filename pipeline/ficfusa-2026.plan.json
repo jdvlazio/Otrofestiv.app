@@ -1,5 +1,5 @@
 {
- "_nota": "FICFUSA 2026 — 13.ª versión del Festival Internacional de Cine de Fusagasugá (11–16 nov 2026). Catálogo: la web (53 de 62 obras). Programación: web /programacion/ + un post de IG por día (6, 7, 8, 10 y 11 nov), transcritos en ficfusa-2026-programacion-oficial.json. MONTADO el 11 nov con el 11–14; el 15 y el 16 no están publicados. Radar #1032.",
+ "_nota": "FICFUSA 2026 — 13.ª versión del Festival Internacional de Cine de Fusagasugá (11–16 nov 2026). Catálogo: la web (53 de 62 obras). Programación: web /programacion/ + un post de IG por día (6, 7, 8, 10 y 11 nov), transcritos en ficfusa-2026-programacion-oficial.json. MONTADO el 11 nov; el 15 y el 16 salen del programa oficial en PDF (ficfusa.com, 11 nov). Radar #1032.",
  "radar": 1032,
  "pasos": [
   {
@@ -40,7 +40,7 @@
   "festivals/staging/ficfusa-2026-crudo.json": "el formato intermedio",
   "festivals/staging/ficfusa-2026-enriquecido.json": "fichas y afiches de las obras de las funciones",
   "festivals/staging/ficfusa-2026-venues-geo.json": "los pines, Google Maps 11 nov",
-  "festivals/staging/ficfusa-2026-avisos.json": "aviso del festival (programación del 15 y 16 nov pendiente); lo lee publicar.py"
+  "fuentes/ficfusa-2026/programa-ficfusa-2026.pdf": "el programa oficial en PDF (11 nov), fuente del 15 y el 16"
  },
  "fuentes_vivas": [],
  "_nota_fuentes_vivas": "La programación sale de un post de IG por día; el vigía mira @ficfusa_festival.",

@@ -25,12 +25,6 @@
    "texto": "En un pueblito de la Sierra de Madrid, un grupo de mujeres mayores decide montar una obra de teatro sobre unas vecinas que luchan contra el desalojo de una peluquería. Lo más difícil no son los ensayos, sino encontrar una sala donde estrenarla.",
    "fuente": "traducción nuestra de la sinopsis en inglés de TMDB 1800195",
    "url": "https://www.themoviedb.org/movie/1800195"
-  }
- },
- "_pendientes": {
-  "Victorias y Glorias - Relatos de campeonas": {
-   "texto": "Recupera la historia de Lucila Rodríguez y su trayectoria en el ciclismo.",
-   "fuente": "ya publicada en siembrafest-2026"
   },
   "La vida es": {
    "texto": "Nora está por cumplir 40 años y no deja de preguntarse: ¿qué sentido tiene todo esto? Lo que iba a ser una celebración se convierte en una serie de tropiezos que la empujan a descubrirse. Con heridas abiertas, deseos no dichos y un pasado que todavía quema, Nora se enfrenta a su historia familiar, a la muerte, al desempleo, al derrumbe de su relación poliamorosa y a la urgencia de redefinir el amor, su sexualidad y lo que de verdad quiere de la vida.",
@@ -42,11 +36,6 @@
    "fuente": "traducción nuestra de la sinopsis en inglés de TMDB 1568191",
    "url": "https://www.themoviedb.org/movie/1568191"
   },
-  "Domingo": {
-   "texto": "Un domingo cuenta la historia de un posible encuentro entre Samuel y una desconocida, en un día en que lo cotidiano abre una grieta hacia otra cosa.",
-   "fuente": "traducción nuestra de la sinopsis en inglés de TMDB 1742409",
-   "url": "https://www.themoviedb.org/movie/1742409"
-  },
   "La libertad es mi causa": {
    "texto": "Este documental cuenta la historia de Causa Justa, el movimiento que logró despolitizar y transformar la conversación sobre el aborto en Colombia. Gracias a su trabajo, la Corte Constitucional despenalizó la interrupción voluntaria del embarazo hasta la semana 24 de gestación, lo que puso al país entre los más avanzados del mundo en este tema. A través de entrevistas y conversaciones, las protagonistas de estos logros, feministas de distintas edades, regiones y organizaciones del país, cuentan cómo hicieron realidad esta meta, por la que las mujeres feministas han luchado durante más de cinco décadas.",
    "fuente": "traducción nuestra de la sinopsis en inglés de TMDB 1499403",
@@ -56,6 +45,17 @@
    "texto": "Una serie documental que viaja por territorios mágicos y exuberantes a través de la memoria afrodescendiente de América Latina, para revelar historias entrelazadas de resistencia, lucha y preservación cultural, con el propósito de conocer la fuerza y profundidad de un legado ancestral que desafía la adversidad y se enorgullece de sus raíces africanas, donde la lucha por la libertad, la conexión con el territorio y la celebración de la vida se entrelazan en una danza de resiliencia y dignidad. Un recorrido visual y sonoro en una polifonía de saberes que resuena con los ritmos ancestrales para redescubrir un legado que sigue vivo y vibrante.",
    "fuente": "cinecorto.co, con la U inicial que su extractor se comió",
    "url": "https://cinecorto.co/legado/"
+  }
+ },
+ "_pendientes": {
+  "Victorias y Glorias - Relatos de campeonas": {
+   "texto": "Recupera la historia de Lucila Rodríguez y su trayectoria en el ciclismo.",
+   "fuente": "ya publicada en siembrafest-2026"
+  },
+  "Domingo": {
+   "texto": "Un domingo cuenta la historia de un posible encuentro entre Samuel y una desconocida, en un día en que lo cotidiano abre una grieta hacia otra cosa.",
+   "fuente": "traducción nuestra de la sinopsis en inglés de TMDB 1742409",
+   "url": "https://www.themoviedb.org/movie/1742409"
   }
  },
  "_pendientes_por_que": "obras del catálogo todavía sin función (15–16 nov sin publicar): vuelven a «sinopsis» cuando entren al programa"
