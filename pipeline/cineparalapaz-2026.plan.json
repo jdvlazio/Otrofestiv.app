@@ -1,5 +1,5 @@
 {
- "_nota": "IV Festival Cine para la Paz (Bogotá, 18–21 nov 2026). PRE-ONBOARDING: la Selección Oficial (17 obras) desde el carrusel de @cineparalapaz Dfk4smulKBB (10 nov), con día y franja de cada obra. Falta la SEDE: ninguna lámina, post ni web la dice (11 nov).",
+ "_nota": "IV Festival Cine para la Paz (Bogotá, 18–21 nov 2026). PRE-ONBOARDING: la Selección Oficial (17 obras) desde el carrusel de @cineparalapaz Dfk4smulKBB (10 nov), con día y franja de cada obra. Falta la SEDE: ninguna lámina, post ni web la dice (11 nov). Sin bloque `festival` (como CINETORO): se escribe al montar. Secciones verbatim de las láminas. Propuesta de emoji/inglés/arquetipo, para Juan: {\"Resistencias al Olvido\": {\"emoji\": \"🕯️\", \"en\": \"Resistances to Oblivion\", \"archetype\": \"Cortos / Programas\"}, \"Miradas que Transforman\": {\"emoji\": \"👁️\", \"en\": \"Transforming Gazes\", \"archetype\": \"Cortos / Programas\"}, \"Futuros de la Paz\": {\"emoji\": \"🕊️\", \"en\": \"Futures of Peace\", \"archetype\": \"Cortos / Programas\"}}. Fuente principal al montar: festival-ig.",
  "pasos": [
   {
    "cmd": "python3 pipeline/cineparalapaz-2026-catalogo.py",
@@ -11,7 +11,10 @@
   }
  ],
  "fuentes_vivas": [],
- "festival": {
-  "fuente_principal": "festival-ig"
+ "radar": null,
+ "radar_nota": "Sin issue de radar: el festival llegó por un enlace de Juan (11 nov 2026), no por el radar.",
+ "_fuentes_versionadas": {
+  "festivals/staging/cineparalapaz-2026-catalogo.json": "la Selección Oficial (17 obras) desde las láminas de IG",
+  "festivals/staging/cineparalapaz-2026-catalogo-enriquecido.json": "fichas TMDB del catálogo"
  }
 }
