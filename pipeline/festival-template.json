@@ -105,6 +105,8 @@
  "_dias_nota": "dias — los días del festival en ISO, el mismo juego que dayKeys. dias_vacios — los que NO tienen ni una función y se pintan como tales en la grilla: van DECLARADOS, porque un día vacío por falta de dato y un día vacío porque el festival descansa se ven igual en la app y no son lo mismo. Lista vacía cuando todos los días tienen programación.",
  "dias": [],
  "dias_vacios": [],
+ "_avisos_nota": "avisos — opcional, lo escribe publicar.py desde festivals/staging/<id>-avisos.json (no a mano). type:info = aviso del festival entero (id + note + note_en), p. ej. programación pendiente (Funza, FICFUSA, Villa de Leyva IFF). Cancelaciones y reprogramaciones: docs/SCHEMA.md § Avisos y palmarés.",
+ "avisos": [],
  "sharedSlotIsOneScreening": false,
  "_sharedSlot_nota": "true SOLO si el programa oficial confirma que 2+ obras comparten UNA función (Tipo 2). El loader ancla los grupos día|hora|sede|sala: no rivalizan, la sala se ocupa por la suma, Q&A una vez. NO derivable: en multisala misma hora+sede = otra sala = otra función.",
  "sections": {
