@@ -1,0 +1,666 @@
+{
+ "_provenance": {
+  "fuente": "FICFUSA: web /programacion/ + posts de IG del 6, 7, 8, 10 y 11 nov 2026",
+  "capturado": "2026-11-11",
+  "que_aporta": "día, hora, sede y obras del 11 al 14 nov",
+  "metodo": "la transcripción de ficfusa-2026-programacion-oficial.json"
+ },
+ "_acceso": {
+  "estado": "Entrada gratuita",
+  "revisado": "2026-11-11",
+  "_por_que": "la programación es gratuita (nota de prensa DflgSQ8FDce); la fiesta del 14 pide aporte"
+ },
+ "_fuera": [
+  {
+   "titulo": "Taller de actuación para cine con activadores emocionales",
+   "dia": "2026-11-12",
+   "hora": "08:00",
+   "_por_que": "la fuente no da sede; sin sede no se publica",
+   "fuente": "https://www.instagram.com/p/DfdB21So3TD/ (7 nov, láminas 1–3 leídas); la lámina no da sede"
+  },
+  {
+   "titulo": "Taller: Autorretrato como una herramienta para la salud menstrual",
+   "dia": "2026-11-14",
+   "hora": "10:00",
+   "_por_que": "la fuente no da sede; sin sede no se publica",
+   "fuente": "https://www.instagram.com/p/DfkS3CukdJ7/ (10 nov, pie); el pie no da sede"
+  }
+ ],
+ "funciones": [
+  {
+   "titulo": "Proyección de cortometrajes · bloque 1",
+   "dia": "2026-11-11",
+   "hora": "10:00",
+   "sede": "Cinema Los Ángeles",
+   "sala": "",
+   "acceso": "Entrada gratuita",
+   "seccion": "Proyección",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfbEPvcIZBO/",
+    "nota": "https://www.instagram.com/p/DfbEPvcIZBO/ (6 nov, láminas 2 y 3 a ojo)",
+    "date": "2026-11-11"
+   },
+   "duracion_min": 60,
+   "_duracion_de": "de la hora de inicio a la de fin de la fuente",
+   "obras": [
+    {
+     "titulo": "Sinfonía del viaje a la luna",
+     "director": "Sandra Reyes Sotomayor",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "La gran hazaña",
+     "director": "Luber Yesid Zúñiga Ordóñez",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Un trato brillante",
+     "director": "Libertad Benavides, Alex Parra, Alicia Bullich, Luz Rodriguez, Carolina Cuellar, Consuelo Soto, María Bonillo y Beatriz Esteban",
+     "pais": "España"
+    },
+    {
+     "titulo": "Chicha la chicharra",
+     "director": "Sofía Alejandra Uzcátegui León",
+     "pais": "Colombia"
+    }
+   ]
+  },
+  {
+   "titulo": "Proyección de cortometrajes · bloque 2",
+   "dia": "2026-11-11",
+   "hora": "11:00",
+   "sede": "Cinema Los Ángeles",
+   "sala": "",
+   "acceso": "Entrada gratuita",
+   "seccion": "Proyección",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfbEPvcIZBO/",
+    "nota": "https://www.instagram.com/p/DfbEPvcIZBO/ (6 nov, láminas 2 y 3 a ojo)",
+    "date": "2026-11-11"
+   },
+   "duracion_min": 60,
+   "_duracion_de": "de la hora de inicio a la de fin de la fuente",
+   "obras": [
+    {
+     "titulo": "Akababuru: expresión de asombro",
+     "director": "Irati Dojura Landa Yagarí",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Ir hacia adentro",
+     "director": "Laura Alejandra Jiménez Ruiz",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Sukua",
+     "director": "Omar E. Ospina Giraldo",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Tuktu padre maíz",
+     "director": "Mauricio Prieto",
+     "pais": "Colombia"
+    }
+   ]
+  },
+  {
+   "titulo": "Serie Campe-Cine",
+   "dia": "2026-11-11",
+   "hora": "14:30",
+   "sede": "Quinta Balmoral",
+   "sala": "",
+   "acceso": "Entrada gratuita",
+   "seccion": "Proyección y conversatorio",
+   "_src": {
+    "url": "https://ficfusa.com/programacion/",
+    "nota": "web /programacion/",
+    "date": "2026-11-11"
+   },
+   "duracion_min": 90,
+   "_duracion_de": "de la hora de inicio a la de fin de la fuente",
+   "obras": [
+    {
+     "titulo": "Tejiendo Herencia"
+    },
+    {
+     "titulo": "Vuelo de una Glondrina"
+    },
+    {
+     "titulo": "huellas"
+    },
+    {
+     "titulo": "Hytcha"
+    }
+   ]
+  },
+  {
+   "titulo": "Laboratorio Visual Experimental VIDEOFRAGMENTOS",
+   "dia": "2026-11-11",
+   "hora": "15:00",
+   "sede": "Casona Tierra Grata",
+   "sala": "",
+   "acceso": "Gratuito con inscripción previa",
+   "seccion": "Taller",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfbEPvcIZBO/",
+    "nota": "https://www.instagram.com/p/DfbEPvcIZBO/ (6 nov, láminas 2 y 3 a ojo); la sede viene de la web, la lámina no la da",
+    "date": "2026-11-11"
+   },
+   "duracion_min": 180,
+   "_duracion_de": "de la hora de inicio a la de fin de la fuente",
+   "invitados": "Con Julián Medina",
+   "tipo": "evento",
+   "event_kind": "taller"
+  },
+  {
+   "titulo": "El reto del audio inmersivo en el cine colombiano",
+   "dia": "2026-11-11",
+   "hora": "11:00",
+   "sede": "Quinta Balmoral",
+   "sala": "",
+   "acceso": "Entrada gratuita",
+   "seccion": "Charla",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dfkx4BenLT3/",
+    "nota": "https://www.instagram.com/p/Dfkx4BenLT3/ (10 nov): «Hora: 11:00 a.m.»; manda sobre la web (16:30–17:30, que daba 1 h)",
+    "date": "2026-11-11"
+   },
+   "duracion_min": 60,
+   "_duracion_de": "1 h, la que daba la web",
+   "invitados": "Por Luis Santiesteban",
+   "tipo": "evento",
+   "event_kind": "charla"
+  },
+  {
+   "titulo": "Vestigios e Invocaciones",
+   "dia": "2026-11-11",
+   "hora": "19:00",
+   "sede": "Quinta Balmoral",
+   "sala": "",
+   "acceso": "Entrada gratuita",
+   "seccion": "Proyección y conversatorio",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfbEPvcIZBO/",
+    "nota": "https://www.instagram.com/p/DfbEPvcIZBO/ (6 nov, láminas 2 y 3 a ojo); directores en el pie de https://www.instagram.com/p/DfaNEWSERxC/",
+    "date": "2026-11-11"
+   },
+   "duracion_min": 90,
+   "_duracion_de": "de la hora de inicio a la de fin de la fuente",
+   "invitados": "Conversatorio con Julián Medina, Carla Low y Elián Cubillos",
+   "obras": [
+    {
+     "titulo": "Tamashi"
+    },
+    {
+     "titulo": "Mal de Tierra"
+    },
+    {
+     "titulo": "Allegory of the Cave"
+    },
+    {
+     "titulo": "Abjad Hawaz"
+    },
+    {
+     "titulo": "Decaer"
+    },
+    {
+     "titulo": "Inmarcesible"
+    },
+    {
+     "titulo": "Anoche a la media noche"
+    }
+   ]
+  },
+  {
+   "titulo": "Club del Pitch",
+   "dia": "2026-11-12",
+   "hora": "09:30",
+   "sede": "Quinta Balmoral",
+   "sala": "",
+   "acceso": "Gratuito con previa inscripción",
+   "seccion": "Taller",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfdB21So3TD/",
+    "nota": "https://www.instagram.com/p/DfdB21So3TD/ (7 nov, láminas 1–3 leídas)",
+    "date": "2026-11-11"
+   },
+   "duracion_min": 240,
+   "_duracion_de": "de la hora de inicio a la de fin de la fuente",
+   "invitados": "Con Carla Low, cineasta colombo-escocesa, guionista y directora",
+   "tipo": "evento",
+   "event_kind": "taller"
+  },
+  {
+   "titulo": "Kanekalon y Comparsa",
+   "dia": "2026-11-12",
+   "hora": "10:00",
+   "sede": "Cinema Los Ángeles",
+   "sala": "",
+   "acceso": "Entrada gratuita",
+   "seccion": "Proyección y conversatorio",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfdB21So3TD/",
+    "nota": "https://www.instagram.com/p/DfdB21So3TD/ (7 nov, láminas 1–3 leídas)",
+    "date": "2026-11-11"
+   },
+   "duracion_min": 120,
+   "_duracion_de": "de la hora de inicio a la de fin de la fuente",
+   "obras": [
+    {
+     "titulo": "Kanekalon",
+     "director": "Sara J. Asprilla",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Comparsa",
+     "director": "Vickie Curtis y Doug Anderson",
+     "pais": "Guatemala, Estados Unidos"
+    }
+   ]
+  },
+  {
+   "titulo": "La luz por primera vez",
+   "dia": "2026-11-12",
+   "hora": "14:30",
+   "sede": "Quinta Balmoral",
+   "sala": "",
+   "acceso": "Entrada gratuita",
+   "seccion": "Proyección y conversatorio",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfdB21So3TD/",
+    "nota": "https://www.instagram.com/p/DfdB21So3TD/ (7 nov, láminas 1–3 leídas)",
+    "date": "2026-11-11"
+   },
+   "duracion_min": 105,
+   "_duracion_de": "de la hora de inicio a la de fin de la fuente",
+   "invitados": "Conversatorio con la directora Ibeth Rey y Mauricio Donoso, dir. de Fotocultura",
+   "director": "Ibeth Rey y Frank Rodríguez Rojas",
+   "pais": "Colombia, España"
+  },
+  {
+   "titulo": "La gran hazaña",
+   "dia": "2026-11-12",
+   "hora": "16:30",
+   "sede": "Quinta Balmoral",
+   "sala": "",
+   "acceso": "Entrada gratuita",
+   "seccion": "Proyección y conversatorio",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfdB21So3TD/",
+    "nota": "https://www.instagram.com/p/DfdB21So3TD/ (7 nov, láminas 1–3 leídas)",
+    "date": "2026-11-11"
+   },
+   "duracion_min": 90,
+   "_duracion_de": "de la hora de inicio a la de fin de la fuente",
+   "invitados": "Proyección con interpretación en lengua de señas. Conversatorio con Andrea Montenegro y Jorge Vela, de Cinemazul",
+   "director": "Luber Yesid Zúñiga Ordóñez",
+   "pais": "Colombia"
+  },
+  {
+   "titulo": "Florecerán! y Sobre las olas",
+   "dia": "2026-11-12",
+   "hora": "18:30",
+   "sede": "Cinema Los Ángeles",
+   "sala": "",
+   "acceso": "Entrada gratuita con previa inscripción",
+   "seccion": "Proyección",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfdB21So3TD/",
+    "nota": "https://www.instagram.com/p/DfdB21So3TD/ (7 nov, láminas 1–3 leídas)",
+    "date": "2026-11-11"
+   },
+   "duracion_min": 120,
+   "_duracion_de": "de la hora de inicio a la de fin de la fuente",
+   "obras": [
+    {
+     "titulo": "Florecerán!",
+     "director": "Claudia Ruiz",
+     "pais": "Argentina"
+    },
+    {
+     "titulo": "Sobre las olas",
+     "director": "Horacio Alcalá",
+     "pais": "España, México"
+    }
+   ]
+  },
+  {
+   "titulo": "Niña chilapa y Puntos de fuga",
+   "dia": "2026-11-13",
+   "hora": "10:00",
+   "sede": "Cinema Los Ángeles",
+   "sala": "",
+   "acceso": "Entrada gratuita hasta completar aforo",
+   "seccion": "Proyección y conversatorio",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dff7g10EXSd/",
+    "nota": "https://www.instagram.com/p/Dff7g10EXSd/ (8 nov, láminas 1–3 leídas)",
+    "date": "2026-11-11"
+   },
+   "duracion_min": 120,
+   "_duracion_de": "de la hora de inicio a la de fin de la fuente",
+   "obras": [
+    {
+     "titulo": "Niña chilapa",
+     "director": "Juana Lotero López",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Puntos de fuga",
+     "director": "Lina Rodríguez",
+     "pais": "Colombia, Canadá"
+    }
+   ]
+  },
+  {
+   "titulo": "Producción audiovisual con material de archivo",
+   "dia": "2026-11-13",
+   "hora": "10:00",
+   "sede": "Quinta Balmoral",
+   "sala": "",
+   "acceso": "Entrada gratuita",
+   "seccion": "Charla",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dff7g10EXSd/",
+    "nota": "https://www.instagram.com/p/Dff7g10EXSd/ (8 nov, láminas 1–3 leídas)",
+    "date": "2026-11-11"
+   },
+   "duracion_min": 120,
+   "_duracion_de": "de la hora de inicio a la de fin de la fuente",
+   "invitados": "Con Ricardo Cuesta Garnica, director de la Fundación Patrimonio Fílmico Colombiano",
+   "tipo": "evento",
+   "event_kind": "charla"
+  },
+  {
+   "titulo": "El poder de la gestión colectiva en la defensa de los derechos de autor – REDES SGC",
+   "dia": "2026-11-13",
+   "hora": "13:00",
+   "sede": "Quinta Balmoral",
+   "sala": "",
+   "acceso": "Entrada gratuita",
+   "seccion": "Charla",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dff7g10EXSd/",
+    "nota": "https://www.instagram.com/p/Dff7g10EXSd/ (8 nov, láminas 1–3 leídas)",
+    "date": "2026-11-11"
+   },
+   "duracion_min": 60,
+   "_duracion_de": "de la hora de inicio a la de fin de la fuente",
+   "invitados": "Con Mónica Guzman, Adriana Bernal Mor y Táriq Zia Burney Arango",
+   "tipo": "evento",
+   "event_kind": "charla"
+  },
+  {
+   "titulo": "Mu-ki-ra",
+   "dia": "2026-11-13",
+   "hora": "15:00",
+   "sede": "Cinema Los Ángeles",
+   "sala": "",
+   "acceso": "Entrada gratuita con previa inscripción",
+   "seccion": "Película de apertura",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dff7g10EXSd/",
+    "nota": "https://www.instagram.com/p/Dff7g10EXSd/ (8 nov, láminas 1–3 leídas)",
+    "date": "2026-11-11"
+   },
+   "duracion_min": 135,
+   "_duracion_de": "de la hora de inicio a la de fin de la fuente",
+   "invitados": "Conversatorio con Jenaro González, director de animación (Dinamita / MU-KI-RA), y María Fernanda Marín, actriz, cantante, voz de Cleo"
+  },
+  {
+   "titulo": "Ensoñación FICFUSA",
+   "dia": "2026-11-13",
+   "hora": "18:30",
+   "sede": "Quinta Balmoral",
+   "sala": "",
+   "acceso": "Entrada gratuita",
+   "seccion": "Evento",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dff7g10EXSd/",
+    "nota": "https://www.instagram.com/p/Dff7g10EXSd/ (8 nov, láminas 1–3 leídas); la lámina no da hora de fin ni qué cortos",
+    "date": "2026-11-11"
+   },
+   "duracion_min": 60,
+   "_duracion_de": "estimada: la fuente no da hora de fin (60 min, el último del día)",
+   "invitados": "Proyección de cortometrajes + Barro Eléctrico A/V_EXP LIVE ACT, Tricofero de Barro (Elviro) + LED",
+   "tipo": "evento",
+   "event_kind": "evento"
+  },
+  {
+   "titulo": "Masterclass: Actuación del subtexto y el lenguaje no verbal",
+   "dia": "2026-11-14",
+   "hora": "09:00",
+   "sede": "Quinta Balmoral",
+   "sala": "",
+   "acceso": "Gratuito con previa inscripción",
+   "seccion": "Taller",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfkS3CukdJ7/",
+    "nota": "https://www.instagram.com/p/DfkS3CukdJ7/ (10 nov, pie)",
+    "date": "2026-11-11"
+   },
+   "duracion_min": 180,
+   "_duracion_de": "de la hora de inicio a la de fin de la fuente",
+   "invitados": "Con Carlos «Fagua» Medina, director de casting y preparador de actores",
+   "tipo": "evento",
+   "event_kind": "masterclass"
+  },
+  {
+   "titulo": "Entrelazadas, Relatos del camino y La peluquería no se cierra",
+   "dia": "2026-11-14",
+   "hora": "10:00",
+   "sede": "Cinema Los Ángeles",
+   "sala": "",
+   "acceso": "Entrada gratuita",
+   "seccion": "Proyección y conversatorio",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfkS3CukdJ7/",
+    "nota": "https://www.instagram.com/p/DfkS3CukdJ7/ (10 nov, pie)",
+    "date": "2026-11-11"
+   },
+   "duracion_min": 120,
+   "_duracion_de": "de la hora de inicio a la de fin de la fuente",
+   "invitados": "Conversatorio vía Meet con Vanessa Valdemoros, directora de La peluquería no se cierra",
+   "obras": [
+    {
+     "titulo": "Entrelazadas",
+     "director": "Alejandra Morales García",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Relatos del camino",
+     "director": "Daniel Prieto",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "La peluquería no se cierra",
+     "director": "Vanesa Valdemoros",
+     "pais": "España"
+    }
+   ]
+  },
+  {
+   "titulo": "La mona y La",
+   "dia": "2026-11-14",
+   "hora": "12:00",
+   "sede": "Cinema Los Ángeles",
+   "sala": "",
+   "acceso": "Entrada gratuita",
+   "seccion": "Proyección y conversatorio",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfkS3CukdJ7/",
+    "nota": "https://www.instagram.com/p/DfkS3CukdJ7/ (10 nov, pie)",
+    "date": "2026-11-11"
+   },
+   "duracion_min": 120,
+   "_duracion_de": "de la hora de inicio a la de fin de la fuente",
+   "invitados": "Conversatorio con Tephy Piedrahita, directora de LA",
+   "obras": [
+    {
+     "titulo": "La mona",
+     "director": "Laura Gutiérrez Ardila",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "La",
+     "director": "Tephy Piedrahita Avellaneda",
+     "pais": "Colombia, Argentina"
+    }
+   ]
+  },
+  {
+   "titulo": "Entre ideas y planos: El espejo de la vida",
+   "dia": "2026-11-14",
+   "hora": "14:00",
+   "sede": "Quinta Balmoral",
+   "sala": "",
+   "acceso": "Gratis",
+   "seccion": "Charla",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfkS3CukdJ7/",
+    "nota": "https://www.instagram.com/p/DfkS3CukdJ7/ (10 nov, pie); el post del 6 nov (DfZuMvzxdp6) decía 2:30 p. m.: manda el más reciente",
+    "date": "2026-11-11"
+   },
+   "duracion_min": 60,
+   "_duracion_de": "de la hora de inicio a la de fin de la fuente",
+   "invitados": "Con Simón Sánchez y Santiago Cruz",
+   "tipo": "evento",
+   "event_kind": "charla"
+  },
+  {
+   "titulo": "El reto de construir y destruir Macondo",
+   "dia": "2026-11-14",
+   "hora": "15:30",
+   "sede": "Quinta Balmoral",
+   "sala": "",
+   "acceso": "Entrada gratuita",
+   "seccion": "Charla",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfkS3CukdJ7/",
+    "nota": "https://www.instagram.com/p/DfkS3CukdJ7/ (10 nov, pie); también https://www.instagram.com/p/DfiDgBkH1K_/",
+    "date": "2026-11-11"
+   },
+   "duracion_min": 60,
+   "_duracion_de": "hasta la charla siguiente en la misma sede (16:30)",
+   "invitados": "Charla con la arquitecta Paula Carrera",
+   "tipo": "evento",
+   "event_kind": "charla"
+  },
+  {
+   "titulo": "¿Y… qué hace una arquitecta en el cine?",
+   "dia": "2026-11-14",
+   "hora": "16:30",
+   "sede": "Quinta Balmoral",
+   "sala": "",
+   "acceso": "Entrada gratuita",
+   "seccion": "Charla",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfkS3CukdJ7/",
+    "nota": "https://www.instagram.com/p/DfkS3CukdJ7/ (10 nov, pie)",
+    "date": "2026-11-11"
+   },
+   "duracion_min": 60,
+   "_duracion_de": "de la hora de inicio a la de fin de la fuente",
+   "invitados": "Charla con Grecia Colomo, set designer de la serie Cien años de soledad",
+   "tipo": "evento",
+   "event_kind": "charla"
+  },
+  {
+   "titulo": "Una selección de cortometrajes",
+   "dia": "2026-11-14",
+   "hora": "18:00",
+   "sede": "CIIS",
+   "sala": "",
+   "acceso": "Entrada gratuita",
+   "seccion": "Proyección",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfkS3CukdJ7/",
+    "nota": "https://www.instagram.com/p/DfkS3CukdJ7/ (10 nov, pie)",
+    "date": "2026-11-11"
+   },
+   "duracion_min": 120,
+   "_duracion_de": "de la hora de inicio a la de fin de la fuente",
+   "obras": [
+    {
+     "titulo": "Chaika",
+     "director": "Ingrid Paola Bonilla Rodríguez",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Bajo el último aliento",
+     "director": "Pedro Valencia",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Sukua",
+     "director": "Omar E. Ospina Giraldo",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Sol de niebla",
+     "director": "Maria Jose Ibarra y Florentino Vargas",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Desaprender la maternidad",
+     "director": "Juliana Erazo Gómez",
+     "pais": "Colombia, Países bajos"
+    },
+    {
+     "titulo": "Animista",
+     "director": "Sebastián Giraldo",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Pudor ante el asalto de los ojos furtivos",
+     "director": "Laura María Rodríguez",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Transversal 30ff",
+     "director": "Checho Mejía",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Hdlt",
+     "director": "Artefactum Suba",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Salud Mutante",
+     "director": "Daniel Rodríguez Gaitán",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Que el cielo nos perdone",
+     "director": "Andrés Buitrago",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Árbol en pie",
+     "director": "Red Comunitaria Trans, Rodrigo Torrijos y Mapa López",
+     "pais": "Colombia"
+    }
+   ]
+  },
+  {
+   "titulo": "¡Fiesta de los 13 años del FICFUSA!",
+   "dia": "2026-11-14",
+   "hora": "20:30",
+   "sede": "Hacienda El Novillero",
+   "sala": "",
+   "acceso": "Con boleta: aporte de $50.000",
+   "seccion": "Evento",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfkS3CukdJ7/",
+    "nota": "https://www.instagram.com/p/DfkS3CukdJ7/ (10 nov, pie)",
+    "date": "2026-11-11"
+   },
+   "duracion_min": 60,
+   "_duracion_de": "estimada: la fuente no da hora de fin (60 min, el último del día)",
+   "invitados": "Proyección especial y presentación musical de Alejandro Rincón y La Saloma",
+   "tipo": "evento",
+   "event_kind": "fiesta"
+  }
+ ]
+}
