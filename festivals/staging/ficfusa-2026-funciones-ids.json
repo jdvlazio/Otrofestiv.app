@@ -1,0 +1,176 @@
+{
+ "_provenance": {
+  "fuente": "ensamblar.py: ids estables de las funciones (docs/FUNCION.md C1)",
+  "capturado": "2026-11-11"
+ },
+ "funciones": {
+  "f_695e9ff244": {
+   "sede": "Cinema Los Ángeles - Fusagasugá",
+   "dia": "2026-11-11",
+   "hora": "10:00",
+   "sala": "",
+   "titulo": "proyeccion de cortometrajes bloque 1"
+  },
+  "f_da3deae959": {
+   "sede": "Cinema Los Ángeles - Fusagasugá",
+   "dia": "2026-11-11",
+   "hora": "11:00",
+   "sala": "",
+   "titulo": "proyeccion de cortometrajes bloque 2"
+  },
+  "f_ee3b7b5a62": {
+   "sede": "Quinta Balmoral - Fusagasugá",
+   "dia": "2026-11-11",
+   "hora": "14:30",
+   "sala": "",
+   "titulo": "serie campe cine"
+  },
+  "f_6074434bff": {
+   "sede": "Casona Tierra Grata - Fusagasugá",
+   "dia": "2026-11-11",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "laboratorio visual experimental videofragmentos"
+  },
+  "f_a44515aaec": {
+   "sede": "Quinta Balmoral - Fusagasugá",
+   "dia": "2026-11-11",
+   "hora": "11:00",
+   "sala": "",
+   "titulo": "el reto del audio inmersivo en el cine colombiano"
+  },
+  "f_cba7d6c218": {
+   "sede": "Quinta Balmoral - Fusagasugá",
+   "dia": "2026-11-11",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "vestigios e invocaciones"
+  },
+  "f_271acd37d1": {
+   "sede": "Quinta Balmoral - Fusagasugá",
+   "dia": "2026-11-12",
+   "hora": "09:30",
+   "sala": "",
+   "titulo": "club del pitch"
+  },
+  "f_30965321f7": {
+   "sede": "Cinema Los Ángeles - Fusagasugá",
+   "dia": "2026-11-12",
+   "hora": "10:00",
+   "sala": "",
+   "titulo": "kanekalon y comparsa"
+  },
+  "f_cd62d8dab7": {
+   "sede": "Quinta Balmoral - Fusagasugá",
+   "dia": "2026-11-12",
+   "hora": "14:30",
+   "sala": "",
+   "titulo": "la luz por primera vez"
+  },
+  "f_5bf21a8ae4": {
+   "sede": "Quinta Balmoral - Fusagasugá",
+   "dia": "2026-11-12",
+   "hora": "16:30",
+   "sala": "",
+   "titulo": "la gran hazana"
+  },
+  "f_7308e61331": {
+   "sede": "Cinema Los Ángeles - Fusagasugá",
+   "dia": "2026-11-12",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "floreceran y sobre las olas"
+  },
+  "f_bac67a0bda": {
+   "sede": "Cinema Los Ángeles - Fusagasugá",
+   "dia": "2026-11-13",
+   "hora": "10:00",
+   "sala": "",
+   "titulo": "nina chilapa y puntos de fuga"
+  },
+  "f_1e03021612": {
+   "sede": "Quinta Balmoral - Fusagasugá",
+   "dia": "2026-11-13",
+   "hora": "10:00",
+   "sala": "",
+   "titulo": "produccion audiovisual con material de archivo"
+  },
+  "f_7e6931b339": {
+   "sede": "Quinta Balmoral - Fusagasugá",
+   "dia": "2026-11-13",
+   "hora": "13:00",
+   "sala": "",
+   "titulo": "el poder de la gestion colectiva en la defensa de los derechos de autor redes sgc"
+  },
+  "f_d8e1aaf023": {
+   "sede": "Cinema Los Ángeles - Fusagasugá",
+   "dia": "2026-11-13",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "mu ki ra"
+  },
+  "f_40bc0fbfe1": {
+   "sede": "Quinta Balmoral - Fusagasugá",
+   "dia": "2026-11-13",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "ensonacion ficfusa"
+  },
+  "f_06fc50c348": {
+   "sede": "Quinta Balmoral - Fusagasugá",
+   "dia": "2026-11-14",
+   "hora": "09:00",
+   "sala": "",
+   "titulo": "masterclass actuacion del subtexto y el lenguaje no verbal"
+  },
+  "f_a2791cd183": {
+   "sede": "Cinema Los Ángeles - Fusagasugá",
+   "dia": "2026-11-14",
+   "hora": "10:00",
+   "sala": "",
+   "titulo": "entrelazadas relatos del camino y la peluqueria no se cierra"
+  },
+  "f_0606cbb622": {
+   "sede": "Cinema Los Ángeles - Fusagasugá",
+   "dia": "2026-11-14",
+   "hora": "12:00",
+   "sala": "",
+   "titulo": "la mona y la"
+  },
+  "f_6b222d0769": {
+   "sede": "Quinta Balmoral - Fusagasugá",
+   "dia": "2026-11-14",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "entre ideas y planos el espejo de la vida"
+  },
+  "f_9c5b46962c": {
+   "sede": "Quinta Balmoral - Fusagasugá",
+   "dia": "2026-11-14",
+   "hora": "15:30",
+   "sala": "",
+   "titulo": "el reto de construir y destruir macondo"
+  },
+  "f_83746b9efd": {
+   "sede": "Quinta Balmoral - Fusagasugá",
+   "dia": "2026-11-14",
+   "hora": "16:30",
+   "sala": "",
+   "titulo": "y que hace una arquitecta en el cine"
+  },
+  "f_68e1a6d223": {
+   "sede": "Centro de Integración e Innovación Social - Fusagasugá",
+   "dia": "2026-11-14",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "una seleccion de cortometrajes"
+  },
+  "f_98d9bdcd24": {
+   "sede": "Hacienda El Novillero - Fusagasugá",
+   "dia": "2026-11-14",
+   "hora": "20:30",
+   "sala": "",
+   "titulo": "fiesta de los 13 anos del ficfusa"
+  }
+ }
+}

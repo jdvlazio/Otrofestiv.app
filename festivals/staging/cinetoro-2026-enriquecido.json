@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, emparejado con ficha_verifica() (director + año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-10-31"
+  "capturado": "2026-11-06"
  },
  "obras": [
   {
@@ -40,24 +40,6 @@
    "_director": "Matías López",
    "_sondeado": "2026-10-31",
    "poster": "/assets/cinetoro-2026/amarre.jpg",
-   "posterSource": "tmdb"
-  },
-  {
-   "titulo": "Bajo una lluvia ajena",
-   "tmdb_id": 1353088,
-   "titulo_original": "Bajo una lluvia ajena",
-   "poster_path": "/Aoq9X6aGpr4JxVHcQYa3TXTgVgk.jpg",
-   "synopsis_es": "",
-   "synopsis_en": "After twenty years, the director returns to archives that she filmed on analogue tapes and proposes a game of glances where she constructs a reflection on various times: the life of her grandfather, who emigrated to Europe in the 1920s; the present day of the people who send messages to their loved ones with their desire to return to their land in Morocco, Palestine, Colombia, India; and the ghostly text of a young Ghanaian who is shipwrecked in the Mediterranean before reaching his destination.",
-   "genero": "Documental",
-   "anio_tmdb": 2024,
-   "duracion_tmdb": 83,
-   "pais_tmdb": "Colombia",
-   "lbSlug": "bajo-una-lluvia-ajena",
-   "_verificado": "declarada a mano: misma obra: Marta Hincapié Uribe (la web escribe «Martha Hincapie»), Colombia, largo invitado; el candado no casó por la grafía del nombre",
-   "_director": "Martha Hincapie",
-   "_sondeado": "2026-10-31",
-   "poster": "/assets/cinetoro-2026/bajo-una-lluvia-ajena.jpg",
    "posterSource": "tmdb"
   },
   {
@@ -554,7 +536,7 @@
    "lbSlug": "thanks-so-so-much",
    "_verificado": "declarada a mano: TMDB «Muchas, muchas gracias»: mismo título, Colombia, 20 min (la web: 19 min 45 s), con Manuel Orozco en los créditos (producción); la dirección figura como Oiyi Kan, el nombre chino del director (la sinopsis habla de su abuela china). El candado no casaba porque el nombre de dirección difiere. Trae el afiche oficial. 26 oct 2026.",
    "_director": "Manuel Alejandro Orozco Van",
-   "_sondeado": "2026-10-31",
+   "_sondeado": "2026-11-06",
    "poster": "/assets/cinetoro-2026/muchas-muchas-gracias.jpg",
    "posterSource": "tmdb"
   },
@@ -1263,23 +1245,6 @@
    "poster": "/assets/cinetoro-2026/amarre.jpg",
    "posterSource": "tmdb"
   },
-  "Bajo una lluvia ajena": {
-   "tmdb_id": 1353088,
-   "titulo_original": "Bajo una lluvia ajena",
-   "poster_path": "/Aoq9X6aGpr4JxVHcQYa3TXTgVgk.jpg",
-   "synopsis_es": "",
-   "synopsis_en": "After twenty years, the director returns to archives that she filmed on analogue tapes and proposes a game of glances where she constructs a reflection on various times: the life of her grandfather, who emigrated to Europe in the 1920s; the present day of the people who send messages to their loved ones with their desire to return to their land in Morocco, Palestine, Colombia, India; and the ghostly text of a young Ghanaian who is shipwrecked in the Mediterranean before reaching his destination.",
-   "genero": "Documental",
-   "anio_tmdb": 2024,
-   "duracion_tmdb": 83,
-   "pais_tmdb": "Colombia",
-   "lbSlug": "bajo-una-lluvia-ajena",
-   "_verificado": "declarada a mano: misma obra: Marta Hincapié Uribe (la web escribe «Martha Hincapie»), Colombia, largo invitado; el candado no casó por la grafía del nombre",
-   "_director": "Martha Hincapie",
-   "_sondeado": "2026-10-31",
-   "poster": "/assets/cinetoro-2026/bajo-una-lluvia-ajena.jpg",
-   "posterSource": "tmdb"
-  },
   "Borrachos mientras escuchamos las gotas caer": {
    "tmdb_id": 1743109,
    "titulo_original": "Borrachos mientras escuchamos las gotas caer",
@@ -1760,7 +1725,7 @@
    "lbSlug": "thanks-so-so-much",
    "_verificado": "declarada a mano: TMDB «Muchas, muchas gracias»: mismo título, Colombia, 20 min (la web: 19 min 45 s), con Manuel Orozco en los créditos (producción); la dirección figura como Oiyi Kan, el nombre chino del director (la sinopsis habla de su abuela china). El candado no casaba porque el nombre de dirección difiere. Trae el afiche oficial. 26 oct 2026.",
    "_director": "Manuel Alejandro Orozco Van",
-   "_sondeado": "2026-10-31",
+   "_sondeado": "2026-11-06",
    "poster": "/assets/cinetoro-2026/muchas-muchas-gracias.jpg",
    "posterSource": "tmdb"
   },

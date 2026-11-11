@@ -3,5 +3,125 @@
   "fuente": "afirmaciones sobre la agenda oficial (p/DfIOLhBloOw, 30 oct)",
   "capturado": "2026-10-31"
  },
- "afirmaciones": []
+ "afirmaciones": [
+  {
+   "ancla": {
+    "sede": "Uniamazonia Sede Centro - Florencia",
+    "dia": "2026-11-06",
+    "hora": "19:30"
+   },
+   "funcion": "f_f552f070a8",
+   "casilla": "time",
+   "valor": "19:00",
+   "contra": "19:30",
+   "fuente": {
+    "tipo": "juan",
+    "frase": "deben hacerse cambios inmediatos en la app",
+    "fecha": "2026-11-05"
+   },
+   "evidencia": "https://www.instagram.com/p/DfaDeXqgX2e/ (6 nov 2026) lámina 00, a ojo: «Lactar · Viernes Nov 6 · Cambio de lugar · Nueva ubicación Curiplaya · 7:00 pm»."
+  },
+  {
+   "ancla": {
+    "sede": "Uniamazonia Sede Centro - Florencia",
+    "dia": "2026-11-06",
+    "hora": "19:30"
+   },
+   "funcion": "f_f552f070a8",
+   "casilla": "venue",
+   "valor": "Curiplaya - Florencia",
+   "contra": "Uniamazonia Sede Centro - Florencia",
+   "fuente": {
+    "tipo": "juan",
+    "frase": "deben hacerse cambios inmediatos en la app",
+    "fecha": "2026-11-05"
+   },
+   "evidencia": "https://www.instagram.com/p/DfaDeXqgX2e/ (6 nov 2026) lámina 00, a ojo: «Lactar · Viernes Nov 6 · Cambio de lugar · Nueva ubicación Curiplaya · 7:00 pm»."
+  },
+  {
+   "ancla": {
+    "sede": "Uniamazonia Sede Centro - Florencia",
+    "dia": "2026-11-06",
+    "hora": "19:30"
+   },
+   "funcion": "f_f552f070a8",
+   "casilla": "sala",
+   "valor": "Edificio Curiplaya",
+   "contra": "Auditorio Callicebus",
+   "fuente": {
+    "tipo": "juan",
+    "frase": "deben hacerse cambios inmediatos en la app",
+    "fecha": "2026-11-05"
+   },
+   "evidencia": "https://www.instagram.com/p/DfaDeXqgX2e/ (6 nov 2026) lámina 00, a ojo: «Lactar · Viernes Nov 6 · Cambio de lugar · Nueva ubicación Curiplaya · 7:00 pm»."
+  },
+  {
+   "ancla": {
+    "sede": "Uniamazonia Sede Porvenir - Florencia",
+    "dia": "2026-11-07",
+    "hora": "19:00"
+   },
+   "funcion": "f_5501c7545e",
+   "casilla": "venue",
+   "valor": "Curiplaya - Florencia",
+   "contra": "Uniamazonia Sede Porvenir - Florencia",
+   "fuente": {
+    "tipo": "juan",
+    "frase": "deben hacerse cambios inmediatos en la app",
+    "fecha": "2026-11-05"
+   },
+   "evidencia": "https://www.instagram.com/p/DfaDeXqgX2e/ (6 nov 2026) pie del post: «Las proyecciones de las noches de hoy viernes 6 y mañana sábado 7 se harán en el emblemático Edificio CURIPLAYA»."
+  },
+  {
+   "ancla": {
+    "sede": "Uniamazonia Sede Porvenir - Florencia",
+    "dia": "2026-11-07",
+    "hora": "19:00"
+   },
+   "funcion": "f_5501c7545e",
+   "casilla": "sala",
+   "valor": "Edificio Curiplaya",
+   "contra": "Auditorio Angel Cuniberti",
+   "fuente": {
+    "tipo": "juan",
+    "frase": "deben hacerse cambios inmediatos en la app",
+    "fecha": "2026-11-05"
+   },
+   "evidencia": "https://www.instagram.com/p/DfaDeXqgX2e/ (6 nov 2026) pie del post: «Las proyecciones de las noches de hoy viernes 6 y mañana sábado 7 se harán en el emblemático Edificio CURIPLAYA»."
+  },
+  {
+   "ancla": {
+    "sede": "Uniamazonia Sede Porvenir - Florencia",
+    "dia": "2026-11-07",
+    "hora": "19:30"
+   },
+   "funcion": "f_bc52a64c65",
+   "casilla": "venue",
+   "valor": "Curiplaya - Florencia",
+   "contra": "Uniamazonia Sede Porvenir - Florencia",
+   "fuente": {
+    "tipo": "juan",
+    "frase": "deben hacerse cambios inmediatos en la app",
+    "fecha": "2026-11-05"
+   },
+   "evidencia": "https://www.instagram.com/p/DfaDeXqgX2e/ (6 nov 2026) pie del post: «Las proyecciones de las noches de hoy viernes 6 y mañana sábado 7 se harán en el emblemático Edificio CURIPLAYA»."
+  },
+  {
+   "ancla": {
+    "sede": "Uniamazonia Sede Porvenir - Florencia",
+    "dia": "2026-11-07",
+    "hora": "19:30"
+   },
+   "funcion": "f_bc52a64c65",
+   "casilla": "sala",
+   "valor": "Edificio Curiplaya",
+   "contra": "Auditorio Angel Cuniberti",
+   "fuente": {
+    "tipo": "juan",
+    "frase": "deben hacerse cambios inmediatos en la app",
+    "fecha": "2026-11-05"
+   },
+   "evidencia": "https://www.instagram.com/p/DfaDeXqgX2e/ (6 nov 2026) pie del post: «Las proyecciones de las noches de hoy viernes 6 y mañana sábado 7 se harán en el emblemático Edificio CURIPLAYA»."
+  }
+ ]
 }

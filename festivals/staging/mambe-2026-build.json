@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "Instagram @festivalmambe — el carrusel oficial de programación (12 láminas)",
-  "capturado": "2026-11-02",
+  "capturado": "2026-11-06",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "radar": 1323,
@@ -196,6 +196,16 @@
    "_prec": "manual",
    "_match": "Google Maps «Restaurante Balneario Casa Campesina»",
    "_nota": "Casa Campesina está entre los aliados del festival (lámina 11); el único con ese nombre en Florencia en Google."
+  },
+  "Curiplaya - Florencia": {
+   "short": "Curiplaya",
+   "city": "Florencia",
+   "n": 0,
+   "lat": 1.61352,
+   "lng": -75.6126315,
+   "_prec": "manual",
+   "_match": "Google Maps «Palacio de Bellas Artes de la Amazonia, edificio Curiplaya», Cra. 12 #12-49",
+   "_nota": "Post del 6 nov, p/DfaDeXqgX2e. Pin que encontró el vigía."
   }
  },
  "_avisos_id": [],
@@ -1489,11 +1499,11 @@
    }
   },
   {
-   "title": "Guardianes de la Fauna Amazónica: Plecturocebus Caquetensis, Tapir Memories y Los Guardianes de las Aves",
+   "title": "Guardianes de la Fauna Amazónica: Plecturocebus Caquetensis, Tapir Memories y El Canto de las Aves",
    "type": "film",
    "section": "🌿 Proyecciones",
-   "country": "Colombia",
-   "flags": "🇨🇴",
+   "country": "Colombia, Colombia/Francia",
+   "flags": "🇨🇴🇨🇴🇫🇷",
    "duration": "150 min",
    "_ancla": [
     "Uniamazonia Sede Porvenir - Florencia",
@@ -1522,7 +1532,14 @@
      "flags": "🇨🇴"
     },
     {
-     "title": "Los guardianes de las aves"
+     "title": "El canto de las aves",
+     "director": "Muriel Barra",
+     "genre": "Naturaleza",
+     "country": "Colombia/Francia",
+     "flags": "🇨🇴🇫🇷",
+     "titulos_anteriores": [
+      "Los guardianes de las aves"
+     ]
     }
    ],
    "_fid": "f_bfcb3bae18",
@@ -1996,10 +2013,10 @@
     "19:30"
    ],
    "day": "2026-11-06",
-   "time": "19:30",
+   "time": "19:00",
    "day_order": 3,
-   "venue": "Uniamazonia Sede Centro - Florencia",
-   "sala": "Auditorio Callicebus",
+   "venue": "Curiplaya - Florencia",
+   "sala": "Edificio Curiplaya",
    "has_qa": true,
    "synopsis": "Una mujer de 62 años, atrapada en una vida de privilegios vacíos, queda embarazada de su chofer. Enfrentándose al rechazo de su familia y de la sociedad, decide luchar por traer a la vida un bebé que parece imposible a su tardía edad, sin importar las consecuencias.",
    "synopsis_lang": "es",
@@ -2023,19 +2040,19 @@
      "url": "https://www.instagram.com/p/DfOE-FSAVWB/"
     },
     "time": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-02",
-     "url": "https://www.instagram.com/p/DfOE-FSAVWB/"
+     "tipo": "juan",
+     "fecha": "2026-11-05",
+     "frase": "deben hacerse cambios inmediatos en la app"
     },
     "venue": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-02",
-     "url": "https://www.instagram.com/p/DfOE-FSAVWB/"
+     "tipo": "juan",
+     "fecha": "2026-11-05",
+     "frase": "deben hacerse cambios inmediatos en la app"
     },
     "sala": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-02",
-     "url": "https://www.instagram.com/p/DfOE-FSAVWB/"
+     "tipo": "juan",
+     "fecha": "2026-11-05",
+     "frase": "deben hacerse cambios inmediatos en la app"
     },
     "duration": {
      "tipo": "festival-web",
@@ -2392,8 +2409,8 @@
    "day": "2026-11-07",
    "time": "19:00",
    "day_order": 4,
-   "venue": "Uniamazonia Sede Porvenir - Florencia",
-   "sala": "Auditorio Angel Cuniberti",
+   "venue": "Curiplaya - Florencia",
+   "sala": "Edificio Curiplaya",
    "event_kind": "evento",
    "has_qa": false,
    "_src": {
@@ -2416,14 +2433,14 @@
      "url": "https://www.instagram.com/p/DfOE-FSAVWB/"
     },
     "venue": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-02",
-     "url": "https://www.instagram.com/p/DfOE-FSAVWB/"
+     "tipo": "juan",
+     "fecha": "2026-11-05",
+     "frase": "deben hacerse cambios inmediatos en la app"
     },
     "sala": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-02",
-     "url": "https://www.instagram.com/p/DfOE-FSAVWB/"
+     "tipo": "juan",
+     "fecha": "2026-11-05",
+     "frase": "deben hacerse cambios inmediatos en la app"
     },
     "entrada": {
      "tipo": "festival-web",
@@ -2470,8 +2487,8 @@
    "day": "2026-11-07",
    "time": "19:30",
    "day_order": 4,
-   "venue": "Uniamazonia Sede Porvenir - Florencia",
-   "sala": "Auditorio Angel Cuniberti",
+   "venue": "Curiplaya - Florencia",
+   "sala": "Edificio Curiplaya",
    "has_qa": true,
    "_src": {
     "url": "https://www.instagram.com/p/DfOE-FSAVWB/",
@@ -2493,14 +2510,14 @@
      "url": "https://www.instagram.com/p/DfOE-FSAVWB/"
     },
     "venue": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-02",
-     "url": "https://www.instagram.com/p/DfOE-FSAVWB/"
+     "tipo": "juan",
+     "fecha": "2026-11-05",
+     "frase": "deben hacerse cambios inmediatos en la app"
     },
     "sala": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-02",
-     "url": "https://www.instagram.com/p/DfOE-FSAVWB/"
+     "tipo": "juan",
+     "fecha": "2026-11-05",
+     "frase": "deben hacerse cambios inmediatos en la app"
     },
     "duration": {
      "tipo": "festival-web",
@@ -2609,7 +2626,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-02T09:56:23",
+  "fecha": "2026-11-06T13:14:33",
   "plan_sha": "c68a49d47fe0aabb",
   "paso": 7,
   "cmd": "python3 pipeline/mambe-2026-verificar.py"

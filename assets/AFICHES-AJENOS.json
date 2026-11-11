@@ -5,6 +5,13 @@
   "regla": "un afiche ajeno se publica solo con veredicto «afiche» y huella vigente"
  },
  "afiches": {
+  "/assets/anibia-2026/decaer.jpg": {
+   "sha1": "bc33ea60755421c023080a40e5ed2928104b7336",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficfusa-2026"
+   ]
+  },
   "/assets/bhff-2026/el-festin-de-las-moscas.jpg": {
    "sha1": "37115d960fd038fadc57266965b984ec5781ed7b",
    "veredicto": "afiche",
@@ -33,6 +40,20 @@
     "fantasmagoria-2026"
    ]
   },
+  "/assets/cineautopsia/abjad-hawaz.jpg": {
+   "sha1": "77159541a76d2b5bd15f74aa6bcd5a8c91b8b71c",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficfusa-2026"
+   ]
+  },
+  "/assets/cineautopsia/allegory-of-the-cave.jpg": {
+   "sha1": "728398502265416a4419592955e2950afd8d9788",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficfusa-2026"
+   ]
+  },
   "/assets/cineautopsia/atmosphaira.jpg": {
    "sha1": "67bcdb696a54acc52415dba639953caeaec7c1ab",
    "veredicto": "afiche",
@@ -44,7 +65,22 @@
    "sha1": "bf53041bf7467d310ad8b881ae98f59b6df70f57",
    "veredicto": "afiche",
    "usado_en": [
+    "ficfusa-2026",
     "miradas-2026"
+   ]
+  },
+  "/assets/cineautopsia/tamashi.jpg": {
+   "sha1": "59decf6ba29b973b2f4a6aa79effcbf6ebcf3f08",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficfusa-2026"
+   ]
+  },
+  "/assets/festicinerio-2026/anoche-a-la-media-noche.jpg": {
+   "sha1": "a98b012a5b3af0fe8e0d1bb0a8ebe0ae22beb467",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficfusa-2026"
    ]
   },
   "/assets/ficcali-2026/alivios.jpg": {
@@ -170,6 +206,13 @@
     "ficmontanas-2026"
    ]
   },
+  "/assets/girardota-2026/bajo-el-ultimo-aliento.jpg": {
+   "sha1": "7f0086f3bc96716e99374ea8e1789151e07ee4fe",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficfusa-2026"
+   ]
+  },
   "/assets/mamut-2026/no-menguara-el-fuego-de-esta-luna.jpg": {
    "sha1": "aa40d660205b7c41d527d003730bd572d0605a71",
    "veredicto": "afiche",
@@ -205,6 +248,13 @@
    "veredicto": "afiche",
    "usado_en": [
     "girardota-2026"
+   ]
+  },
+  "/assets/popayan-2026/tentado-de-difunto.jpg": {
+   "sha1": "b15b24ae86170a6860be0af983c348e48e00e06d",
+   "veredicto": "afiche",
+   "usado_en": [
+    "festicinerio-2026"
    ]
   },
   "/assets/qaff/kanekalon.jpg": {

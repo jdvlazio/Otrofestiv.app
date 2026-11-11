@@ -45,6 +45,7 @@ def main():
     lam = collections.Counter((f['dia'], f['hora'], sede(f['lugar'])) for f in ojos
                               if (f['dia'], f['hora'], f['encabezado']) not in cr.NO_SE_PUBLICA)
     n_ops = collections.Counter()
+    movidas = {}
     for a in af:
         k = (a['ancla']['dia'], a['ancla']['hora'], a['ancla']['sede'])
         if a['casilla'] == 'existe' and a['valor'] is False:
@@ -53,8 +54,11 @@ def main():
             v = a['valor']
             lam[(v['day'], v['time'], v['venue'])] += 1
         elif a['casilla'] in ('venue', 'time'):
-            lam[k] -= 1
-            lam[(k[0], a['valor'], k[2]) if a['casilla'] == 'time' else (k[0], k[1], a['valor'])] += 1
+            # una función puede mudar de hora Y de sede (Lactar, 6 nov): se mueve una sola vez
+            ant = movidas.get(a['funcion'], k)
+            lam[ant] -= 1
+            movidas[a['funcion']] = (ant[0], a['valor'], ant[2]) if a['casilla'] == 'time' else (ant[0], ant[1], a['valor'])
+            lam[movidas[a['funcion']]] += 1
         else:
             continue
         n_ops[a['casilla'] if a['casilla'] != 'existe' else ('sale' if a['valor'] is False else 'entra')] += 1

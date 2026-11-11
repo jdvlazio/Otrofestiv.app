@@ -273,7 +273,10 @@ F = [
     peli(D6, '19:00', 'Éther, somos todo', S_COM, 'Institución Educativa Pío XII', '', 42),
     peli(D6, '19:00', 'Paralelo', S_COM, 'JAC Santa Cruz parte alta', '', 43),
     # ── sábado 7 (págs. 83–90 y 56–59) ──
-    abierta(D7, '08:00', 'Red de Creación Audiovisual de Medellín', S_HM, MAMM, 'Teatro MAMM', 83, 540,
+    # dos bloques y nombre: historia de @cinematecademedellin, 6 nov
+    abierta(D7, '09:00', 'Destellos comunes: creaciones en Red', S_HM, MAMM, 'Teatro MAMM', 83, 180,
+            sinopsis='La Red de Creación Audiovisual de Medellín presenta los frutos de sus laboratorios de creación y formación artística comunitaria: niños y adolescentes de la ciudad estrenan sus primeras películas.'),
+    abierta(D7, '14:00', 'Destellos comunes: creaciones en Red', S_HM, MAMM, 'Teatro MAMM', 83, 180,
             sinopsis='La Red de Creación Audiovisual de Medellín presenta los frutos de sus laboratorios de creación y formación artística comunitaria: niños y adolescentes de la ciudad estrenan sus primeras películas.'),
     abierta(D7, '10:00', 'Exposición: El cine analógico: máquinas, formatos y memoria', S_MOV, DESEOS, 'Cinemateca móvil, galería',
             57, 600, hasta=D8,

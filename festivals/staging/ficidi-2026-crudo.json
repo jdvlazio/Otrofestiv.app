@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "Calendario de programación IV FICIDI 2026 (PDF enviado por el festival)",
-  "capturado": "2026-11-03",
+  "capturado": "2026-11-04",
   "archivo": "fuentes/ficidi-2026/Calendario_IV_FICIDI_2026.pdf",
   "metodo": "pdftotext -layout; un bloque por función; obras cruzadas con el catálogo"
  },
@@ -35,7 +35,7 @@
      "sinopsis": "La infancia, la imaginación y el desplazamiento se convierten en un archivo de identidad queer.",
      "_src": {
       "pdf": "Calendario_IV_FICIDI_2026.pdf · MARTES 3 nov, obra 01",
-      "duracion": "TMDB 1687430",
+      "duracion": "lámina IG DfVRPEHD1R4/06",
       "catalogo": "O diário imaginado"
      }
     },
@@ -94,7 +94,7 @@
      "sinopsis": "Dos estudiantes sufren acoso homófobo por su relación y afrontan la hostilidad de su entorno escolar.",
      "_src": {
       "pdf": "Calendario_IV_FICIDI_2026.pdf · MARTES 3 nov, obra 06",
-      "duracion": "TMDB 1706164",
+      "duracion": "lámina IG DfVRPEHD1R4/05",
       "catalogo": "Dafne y Pol"
      }
     },
@@ -679,8 +679,8 @@
    },
    "sala": "Bloque 11, piso 3 · Sala de Conferencias",
    "titulo": "Día 3 · Primera función",
-   "duracion_min": 182,
-   "_duracion_de": "ESTIMADA (Juan, 29 oct): suma PARCIAL: 8 de 12 obras con duración; sin duración: Cast Me · Todo lo que pasará mañana · Amor en positivo · Kiboko; + 4 × 13 min, promedio de las 44 obras con duración"
+   "duracion_min": 186,
+   "_duracion_de": "ESTIMADA (Juan, 29 oct): suma PARCIAL: 8 de 12 obras con duración; sin duración: Cast Me · Todo lo que pasará mañana · Amor en positivo · Kiboko; + 4 × 14 min, promedio de las 49 obras con duración"
   },
   {
    "dia": "2026-11-06",
@@ -884,10 +884,11 @@
      "titulo": "Corpo e Identidade",
      "director": "Cristal Luz",
      "pais": "Brasil",
+     "duracion_min": 17,
      "sinopsis": "Siete mujeres travestis de Brasil construyen su propia representación a través de la fotografía, los testimonios y la performance.",
      "_src": {
       "pdf": "Calendario_IV_FICIDI_2026.pdf · SÁBADO 7 nov, obra 01",
-      "duracion": null,
+      "duracion": "lámina IG DfVRPEHD1R4/02",
       "catalogo": "Corpo e Identidade"
      }
     },
@@ -895,11 +896,11 @@
      "titulo": "Danzan Las Luciérnagas",
      "director": "Eleggua Luna Laverde",
      "pais": "Colombia",
-     "duracion_min": 18,
+     "duracion_min": 19,
      "sinopsis": "Una sabedora trans negra debe decidir si abandona la Tierra y a sus amores para emigrar a Marte.",
      "_src": {
       "pdf": "Calendario_IV_FICIDI_2026.pdf · SÁBADO 7 nov, obra 02",
-      "duracion": "TMDB 1456289",
+      "duracion": "lámina IG DfVRPEHD1R4/03",
       "catalogo": "Danzan las luciérnagas"
      }
     },
@@ -911,7 +912,7 @@
      "sinopsis": "Una joven que mantiene dos relaciones simultáneas recorre Medellín para afrontar su confusión y encontrarse consigo misma.",
      "_src": {
       "pdf": "Calendario_IV_FICIDI_2026.pdf · SÁBADO 7 nov, obra 03",
-      "duracion": "TMDB 1584776",
+      "duracion": "lámina IG DfVRPEHD1R4/04",
       "catalogo": "Refracción"
      }
     },
@@ -919,10 +920,11 @@
      "titulo": "La otra mitad del dolor",
      "director": "Tonnie Zanabria",
      "pais": "México",
+     "duracion_min": 27,
      "sinopsis": "Objetos, grabaciones y recuerdos ayudan a procesar la pérdida de una pareja.",
      "_src": {
       "pdf": "Calendario_IV_FICIDI_2026.pdf · SÁBADO 7 nov, obra 04",
-      "duracion": null,
+      "duracion": "lámina IG DfVRPEHD1R4/07",
       "catalogo": "La otra mitad del dolor",
       "pais": "el PDF dice «Con conversatorio»; país del catálogo"
      }
@@ -931,12 +933,37 @@
      "titulo": "No",
      "director": "Luis Daniel Abril",
      "pais": "Colombia",
+     "duracion_min": 15,
      "sinopsis": "Un hombre intenta construir un futuro con su pareja más joven, pero pierde de vista los deseos de él.",
      "_src": {
       "pdf": "Calendario_IV_FICIDI_2026.pdf · SÁBADO 7 nov, obra 05",
-      "duracion": null,
+      "duracion": "lámina IG DfVRPEHD1R4/08",
       "catalogo": "No",
       "pais": "el PDF dice «Con conversatorio»; país del catálogo"
+     }
+    },
+    {
+     "titulo": "Dafne y Pol",
+     "director": "Sergio Checa",
+     "pais": "España",
+     "duracion_min": 17,
+     "sinopsis": "Dos estudiantes sufren acoso homófobo por su relación y afrontan la hostilidad de su entorno escolar.",
+     "_src": {
+      "pdf": "IG p/DfSWDVxEYCQ · suma a SÁBADO 7 nov",
+      "duracion": "lámina IG DfVRPEHD1R4/05",
+      "catalogo": "Dafne y Pol"
+     }
+    },
+    {
+     "titulo": "O diário imaginado",
+     "director": "Txai Ferraz",
+     "pais": "Brasil",
+     "duracion_min": 20,
+     "sinopsis": "La infancia, la imaginación y el desplazamiento se convierten en un archivo de identidad queer.",
+     "_src": {
+      "pdf": "IG p/DfSWDVxEYCQ · suma a SÁBADO 7 nov",
+      "duracion": "lámina IG DfVRPEHD1R4/06",
+      "catalogo": "O diário imaginado"
      }
     }
    ],
@@ -945,9 +972,9 @@
     "cabecera": "SÁBADO 7 DE NOVIEMBRE | Día 4 · REVELAR(SE)",
     "sede": "Auditorio EDA Fabrica de Cultura CALLE 40 CON CARRERA 50 ESQUINA• 9:00 a. m."
    },
-   "sala": "Auditorio EDA",
+   "sala": "Auditorio Luis G. Henao",
    "titulo": "Revelar(se)",
-   "sinopsis": "Incluye “La otra mitad del dolor” + conversatorio con el equipo realizador Tonnie Zanabria y Ana Sofía Ávila desde México; y “NO” + conversatorio con el director Luis Daniel Abril desde Bogotá, Colombia.",
+   "sinopsis": "Incluye “La otra mitad del dolor” + conversatorio con el equipo realizador Tonnie Zanabria y Ana Sofía Ávila desde México; y “NO” + conversatorio con el director Luis Daniel Abril desde Bogotá, Colombia. También conversan Camila Elizalde, Samuel Murillo y Fungui Ospina, desde Cali, equipo de “¿Quién se lleva a las estrellas?”.",
    "has_qa": true,
    "qa_type": "team",
    "duracion_min": 150,

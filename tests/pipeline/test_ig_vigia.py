@@ -194,3 +194,29 @@ class Cascada(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
+
+class LobstrUnaVezAlDia(unittest.TestCase):
+    """9 nov 2026: Bright Data no leía una cuenta y lobstr (100/mes) se gastó en 8 días."""
+
+    def setUp(self):
+        self.llamadas = []
+        self._orig = v.lobstr_por_cuentas
+        v.lobstr_por_cuentas = lambda cs, d, k, ah: self.llamadas.append(list(cs)) or []
+
+    def tearDown(self):
+        v.lobstr_por_cuentas = self._orig
+
+    def test_segunda_corrida_del_dia_no_llama(self):
+        estado = {}
+        v.lobstr_una_vez_al_dia(['a', 'b'], estado, AHORA, 'k')
+        it = v.lobstr_una_vez_al_dia(['a'], estado, AHORA.replace(hour=18), 'k')
+        self.assertEqual(self.llamadas, [['a', 'b']])
+        _, sin_leer = v.clasificar(it, ['a'], estado)
+        self.assertIn('1 vez al día', sin_leer['a'])
+
+    def test_al_dia_siguiente_vuelve(self):
+        estado = {}
+        v.lobstr_una_vez_al_dia(['a'], estado, AHORA, 'k')
+        v.lobstr_una_vez_al_dia(['a'], estado, AHORA.replace(day=22), 'k')
+        self.assertEqual(self.llamadas, [['a'], ['a']])

@@ -1,0 +1,499 @@
+{
+ "_provenance": {
+  "fuente": "Programación oficial, 4 láminas de @festivaldecine.bc (5 nov 2026)",
+  "capturado": "2026-11-09",
+  "metodo": "transcripción a ojo; cruzada con OCR en fecibac-2026-verificar.py",
+  "que_aporta": "día, hora, lugar y clasificación"
+ },
+ "_acceso": {
+  "estado": "Entrada libre",
+  "revisado": "2026-11-05",
+  "fuentes": [
+   "https://www.instagram.com/p/DfYAPbqGyr0/"
+  ],
+  "_por_que": "Ninguna fuente anuncia pago; regla de Juan: sin aviso de pago es gratis."
+ },
+ "funciones": [
+  {
+   "titulo": "Fiesta en el Playón",
+   "dia": "2026-11-10",
+   "hora": "17:00",
+   "sede": "Playa Río Cauca",
+   "seccion": "Actividades",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfYAPbqGyr0/",
+    "lamina": 1,
+    "date": "2026-11-05",
+    "tipo": "festival-ig"
+   },
+   "sinopsis": "Inauguración oficial FECIBAC 2026: Somos Chilapos.",
+   "duracion_min": 90,
+   "tipo": "evento",
+   "event_kind": "apertura"
+  },
+  {
+   "titulo": "La barca de los sueños olvidados",
+   "dia": "2026-11-10",
+   "hora": "18:30",
+   "sede": "Playa Río Cauca",
+   "seccion": "Actividades",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfYAPbqGyr0/",
+    "lamina": 1,
+    "date": "2026-11-05",
+    "tipo": "festival-ig"
+   },
+   "sinopsis": "Espectáculo sobre el río Cauca.",
+   "duracion_min": 30,
+   "tipo": "evento",
+   "event_kind": "evento"
+  },
+  {
+   "titulo": "La Creciente",
+   "dia": "2026-11-10",
+   "hora": "19:00",
+   "sede": "Playa Río Cauca",
+   "seccion": "Película Inaugural",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfYAPbqGyr0/",
+    "lamina": 1,
+    "date": "2026-11-05",
+    "tipo": "festival-ig"
+   },
+   "director": "Pablo Andrés Muñoz Castrillón",
+   "clasificacion": "+7"
+  },
+  {
+   "titulo": "Remando con Pablo y Karla",
+   "dia": "2026-11-10",
+   "hora": "20:30",
+   "sede": "Playa Río Cauca",
+   "seccion": "Conversatorios",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfYAPbqGyr0/",
+    "lamina": 1,
+    "date": "2026-11-05",
+    "tipo": "festival-ig"
+   },
+   "invitados": "Pablo Muñoz, director de «La Creciente», y Karla V. Corrales, productora y directora de fotografía",
+   "duracion_min": 60,
+   "tipo": "evento",
+   "event_kind": "conversatorio"
+  },
+  {
+   "titulo": "Narrativas chilapas",
+   "dia": "2026-11-11",
+   "hora": "09:00",
+   "sede": "UdeA Campus Caucasia",
+   "seccion": "Talleres con Expertos",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfYAPbqGyr0/",
+    "lamina": 1,
+    "date": "2026-11-05",
+    "tipo": "festival-ig"
+   },
+   "invitados": "Irina Petro de León",
+   "duracion_min": 120,
+   "tipo": "evento",
+   "event_kind": "taller"
+  },
+  {
+   "titulo": "Los cuerpos que son caudal",
+   "dia": "2026-11-11",
+   "hora": "17:30",
+   "sede": "Cámara de Comercio",
+   "seccion": "Actividades",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfYAPbqGyr0/",
+    "lamina": 1,
+    "date": "2026-11-05",
+    "tipo": "festival-ig"
+   },
+   "sinopsis": "Recital poético.",
+   "invitados": "Irina Petro de León",
+   "duracion_min": 90,
+   "tipo": "evento",
+   "event_kind": "evento"
+  },
+  {
+   "titulo": "Entre 2 Aguas",
+   "dia": "2026-11-11",
+   "hora": "19:00",
+   "sede": "Cámara de Comercio",
+   "seccion": "Proyección de Película",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfYAPbqGyr0/",
+    "lamina": 1,
+    "date": "2026-11-05",
+    "tipo": "festival-ig"
+   },
+   "director": "Carlos Gabriel Vergara",
+   "pais": "Colombia",
+   "genero": "Thriller",
+   "clasificacion": "+16",
+   "titulo_fuente": "Entre dos aguas"
+  },
+  {
+   "titulo": "Conversatorio Entre 2 Aguas",
+   "dia": "2026-11-11",
+   "hora": "20:30",
+   "sede": "Cámara de Comercio",
+   "seccion": "Conversatorios",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfYAPbqGyr0/",
+    "lamina": 1,
+    "date": "2026-11-05",
+    "tipo": "festival-ig"
+   },
+   "invitados": "Los protagonistas: Nelson Camayo y María José Escorcia",
+   "duracion_min": 60,
+   "tipo": "evento",
+   "event_kind": "conversatorio"
+  },
+  {
+   "titulo": "El juego de la vida",
+   "dia": "2026-11-12",
+   "hora": "16:00",
+   "sede": "Cámara de Comercio",
+   "seccion": "Proyección de Película",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfYAPbqGyr0/",
+    "lamina": 2,
+    "date": "2026-11-05",
+    "tipo": "festival-ig"
+   },
+   "director": "Mario Andrés Ruiz Zuluaga",
+   "clasificacion": "+7"
+  },
+  {
+   "titulo": "Brigitte Planeta B",
+   "dia": "2026-11-12",
+   "hora": "18:30",
+   "sede": "Plazoleta UdeA",
+   "seccion": "Proyección de Película",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfYAPbqGyr0/",
+    "lamina": 2,
+    "date": "2026-11-05",
+    "tipo": "festival-ig"
+   },
+   "director": "Santiago Posada",
+   "clasificacion": "+12"
+  },
+  {
+   "titulo": "Conversatorio con Brigitte Baptiste",
+   "dia": "2026-11-12",
+   "hora": "20:30",
+   "sede": "Plazoleta UdeA",
+   "seccion": "Conversatorios",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfYAPbqGyr0/",
+    "lamina": 2,
+    "date": "2026-11-05",
+    "tipo": "festival-ig"
+   },
+   "invitados": "Brigitte Baptiste, protagonista. Modera Yuliana Gómez Zapata, directora de Regionalización UdeA",
+   "duracion_min": 60,
+   "tipo": "evento",
+   "event_kind": "conversatorio"
+  },
+  {
+   "titulo": "Taller de creación de carteles cinematográficos para niños y niñas",
+   "dia": "2026-11-13",
+   "hora": "08:00",
+   "sede": "UdeA Campus Caucasia",
+   "seccion": "Talleres con Expertos",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfYAPbqGyr0/",
+    "lamina": 2,
+    "date": "2026-11-05",
+    "tipo": "festival-ig"
+   },
+   "sinopsis": "Un recorrido por el mundo del cine. Taller infantil Chico y Proqui.",
+   "invitados": "Harold Blanco y Lenys López",
+   "duracion_min": 120,
+   "tipo": "evento",
+   "event_kind": "taller"
+  },
+  {
+   "titulo": "Escuchando con la cámara",
+   "dia": "2026-11-13",
+   "hora": "09:00",
+   "sede": "UdeA Campus Caucasia",
+   "seccion": "Talleres con Expertos",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfYAPbqGyr0/",
+    "lamina": 2,
+    "date": "2026-11-05",
+    "tipo": "festival-ig"
+   },
+   "sinopsis": "Taller de dirección.",
+   "invitados": "Sebastián Bright",
+   "duracion_min": 120,
+   "tipo": "evento",
+   "event_kind": "taller"
+  },
+  {
+   "titulo": "Feria Chilapa",
+   "dia": "2026-11-13",
+   "hora": "15:00",
+   "sede": "Cámara de Comercio",
+   "seccion": "Actividades",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfYAPbqGyr0/",
+    "lamina": 2,
+    "date": "2026-11-05",
+    "tipo": "festival-ig"
+   },
+   "info": true,
+   "hasta": "2026-11-14",
+   "sinopsis": "Feria de emprendimientos de distintas zonas del país. Abierta desde las 3:00 p. m. el viernes y desde las 2:00 p. m. el sábado.",
+   "tipo": "evento",
+   "event_kind": "evento"
+  },
+  {
+   "titulo": "La Canoa Dorada (Tanda 1)",
+   "dia": "2026-11-13",
+   "hora": "16:00",
+   "sede": "Cámara de Comercio",
+   "seccion": "La Canoa Dorada",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfYAPbqGyr0/",
+    "lamina": 2,
+    "date": "2026-11-05",
+    "tipo": "festival-ig"
+   },
+   "clasificacion": "+7",
+   "duracion_min": 120
+  },
+  {
+   "titulo": "En tierra",
+   "dia": "2026-11-13",
+   "hora": "19:00",
+   "sede": "Cámara de Comercio",
+   "seccion": "Proyección de Película",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfYAPbqGyr0/",
+    "lamina": 2,
+    "date": "2026-11-05",
+    "tipo": "festival-ig"
+   },
+   "director": "Simón Uribe",
+   "clasificacion": "+7"
+  },
+  {
+   "titulo": "Una mirada a través del lente",
+   "dia": "2026-11-13",
+   "hora": "20:30",
+   "sede": "Cámara de Comercio",
+   "seccion": "Conversatorios",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfYAPbqGyr0/",
+    "lamina": 3,
+    "date": "2026-11-05",
+    "tipo": "festival-ig"
+   },
+   "invitados": "Sebastián Bright, director de fotografía",
+   "duracion_min": 60,
+   "tipo": "evento",
+   "event_kind": "conversatorio"
+  },
+  {
+   "titulo": "Cine gótico popular",
+   "dia": "2026-11-13",
+   "hora": "22:00",
+   "sede": "Plaza de mercado",
+   "seccion": "Actividades",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfYAPbqGyr0/",
+    "lamina": 3,
+    "date": "2026-11-05",
+    "tipo": "festival-ig"
+   },
+   "clasificacion": "+12",
+   "sinopsis": "Experiencias disruptivas en la plaza de mercado. Telonera: Esquizofrenia.",
+   "duracion_min": 90,
+   "tipo": "evento",
+   "event_kind": "evento"
+  },
+  {
+   "titulo": "2 Taller de creación de carteles cinematográficos para niños y niñas",
+   "dia": "2026-11-14",
+   "hora": "08:00",
+   "sede": "UdeA Campus Caucasia",
+   "seccion": "Talleres con Expertos",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfYAPbqGyr0/",
+    "lamina": 3,
+    "date": "2026-11-05",
+    "tipo": "festival-ig"
+   },
+   "sinopsis": "Un recorrido por el mundo del cine. Taller infantil Chico y Proqui.",
+   "invitados": "Harold Blanco y Lenys López",
+   "duracion_min": 120,
+   "tipo": "evento",
+   "event_kind": "taller"
+  },
+  {
+   "titulo": "Las pesadillas del siervo",
+   "dia": "2026-11-14",
+   "hora": "14:00",
+   "sede": "Cámara de Comercio",
+   "seccion": "Proyección de Película",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfYAPbqGyr0/",
+    "lamina": 3,
+    "date": "2026-11-05",
+    "tipo": "festival-ig"
+   },
+   "director": "Manuel Villa",
+   "clasificacion": "+12"
+  },
+  {
+   "titulo": "Conversatorio con Manuel Villa",
+   "dia": "2026-11-14",
+   "hora": "16:00",
+   "sede": "Cámara de Comercio",
+   "seccion": "Conversatorios",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfYAPbqGyr0/",
+    "lamina": 3,
+    "date": "2026-11-05",
+    "tipo": "festival-ig"
+   },
+   "invitados": "Manuel Villa, director de «Las pesadillas del siervo»",
+   "duracion_min": 30,
+   "tipo": "evento",
+   "event_kind": "conversatorio"
+  },
+  {
+   "titulo": "Actos babilónicos",
+   "dia": "2026-11-14",
+   "hora": "16:30",
+   "sede": "Cámara de Comercio",
+   "seccion": "Conversatorios",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfYAPbqGyr0/",
+    "lamina": 4,
+    "date": "2026-11-05",
+    "tipo": "festival-ig"
+   },
+   "sinopsis": "Detrás de las mariposas amarillas en «Cien años de soledad».",
+   "invitados": "David Palacios, Mauricio Babilonia en «Cien años de soledad»",
+   "duracion_min": 60,
+   "tipo": "evento",
+   "event_kind": "conversatorio"
+  },
+  {
+   "titulo": "La Canoa Dorada (Tanda 2)",
+   "dia": "2026-11-14",
+   "hora": "17:30",
+   "sede": "Cámara de Comercio",
+   "seccion": "La Canoa Dorada",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfYAPbqGyr0/",
+    "lamina": 4,
+    "date": "2026-11-05",
+    "tipo": "festival-ig"
+   },
+   "clasificacion": "+7",
+   "duracion_min": 60
+  },
+  {
+   "titulo": "Gala de premiación La Canoa Dorada",
+   "dia": "2026-11-14",
+   "hora": "18:30",
+   "sede": "Cámara de Comercio",
+   "seccion": "Actividades",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfYAPbqGyr0/",
+    "lamina": 4,
+    "date": "2026-11-05",
+    "tipo": "festival-ig"
+   },
+   "duracion_min": 90,
+   "tipo": "evento",
+   "event_kind": "premiación"
+  },
+  {
+   "titulo": "Los hijos de Benkos",
+   "dia": "2026-11-14",
+   "hora": "20:30",
+   "sede": "Bar Yenyeré",
+   "seccion": "Proyección de Película",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfYAPbqGyr0/",
+    "lamina": 4,
+    "date": "2026-11-05",
+    "tipo": "festival-ig"
+   },
+   "director": "Lucas Silva",
+   "anio": 2000,
+   "clasificacion": "+7",
+   "duracion_min": 60
+  },
+  {
+   "titulo": "Champeta y picó",
+   "dia": "2026-11-14",
+   "hora": "21:30",
+   "sede": "Bar Yenyeré",
+   "seccion": "Conversatorios",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfYAPbqGyr0/",
+    "lamina": 4,
+    "date": "2026-11-05",
+    "tipo": "festival-ig"
+   },
+   "sinopsis": "Herencia del Gran Caribe para los pueblos ribereños.",
+   "invitados": "Juan Carbonel, académico de la champeta",
+   "duracion_min": 90,
+   "tipo": "evento",
+   "event_kind": "conversatorio"
+  },
+  {
+   "titulo": "Fiesta Chilapa",
+   "dia": "2026-11-14",
+   "hora": "23:00",
+   "sede": "Bar Yenyeré",
+   "seccion": "Actividades",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfYAPbqGyr0/",
+    "lamina": 4,
+    "date": "2026-11-05",
+    "tipo": "festival-ig"
+   },
+   "sinopsis": "Show de cierre.",
+   "invitados": "DJ Gabriela Morgan",
+   "duracion_min": 120,
+   "tipo": "evento",
+   "event_kind": "evento"
+  }
+ ]
+}
