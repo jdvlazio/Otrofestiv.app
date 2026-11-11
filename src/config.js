@@ -166,6 +166,16 @@ export const SECTION_EN = {
   '🎤 Charla': 'Talk',
   '🛠️ Taller': 'Workshop',
   '🎉 Evento': 'Event',
+  '🏆 Competencia Oficial Largometraje': 'Official Feature Competition',
+  '📽️ Competencia Largo Documental': 'Feature Documentary Competition',
+  '🇨🇴 Competencia Corto Profesional Colombia': 'Colombian Professional Short Competition',
+  '🌎 Competencia Corto Internacional': 'International Short Competition',
+  '🎥 Competencia Corto Documental': 'Short Documentary Competition',
+  '✏️ Competencia Corto Animación': 'Animated Short Competition',
+  '🧪 Competencia Corto Experimental': 'Experimental Short Competition',
+  '🎓 Competencia Escuelas': 'Film School Competition',
+  '🔎 Foco Reygadas': 'Reygadas Focus',
+  '⭐ Muestra Especial': 'Special Showcase',
   '🏆 La Canoa Dorada': 'La Canoa Dorada',
   '🛠️ Talleres con Expertos': 'Workshops with Experts',
   '💬 Conversatorios': 'Talks',
@@ -929,6 +939,26 @@ export const FESTIVAL_CONFIG={
     prioLimit:4,
     films:null,posters:null,lbSlugs:{}
   },
+  'villadeleyvaiff2026': {
+    // NO es Villa del Cine (villadelcine2026): es el Festival Internacional de @festcinevilla.
+    // EL NOMBRE es el oficial, sin sigla; sin subtítulo (no hay sigla que expandir y el
+    // lema «De Corazón» se lee en el afiche). Afiche oficial de Alejandra Oviedo,
+    // p/DfFhCmgEQBb (1280×1600, estirado a 400×600).
+    name:'Festival Internacional de Cine de Villa de Leyva',displayName:'Festival Internacional de Cine de Villa de Leyva',
+    fullName:'20 Festival Internacional de Cine de Villa de Leyva',shortName:'VILLA DE LEYVA',
+    city:'Villa de Leyva',country:'CO',
+    dates:'13–16 NOV',dates_en:'NOV 13–16',year:2026,timezoneOffset:'-05:00',
+    keyArt:'/assets/keyart/villadeleyvaiff2026.jpg',
+    instagram:'festcinevilla', storageKey:'villadeleyvaiff2026_',festivalStartStr:'2026-11-13T00:00:00',festivalEndStr:'2026-11-16T23:59:00',
+    festivalDates:{'2026-11-13':'2026-11-13','2026-11-14':'2026-11-14','2026-11-15':'2026-11-15'},
+    days:[{k:'2026-11-13',d:13,lbl:'VIE'},{k:'2026-11-14',d:14,lbl:'SÁB'},{k:'2026-11-15',d:15,lbl:'DOM'}],
+    dayKeys:['2026-11-13','2026-11-14','2026-11-15'],
+    dayShort:{'2026-11-13':'VIE 13','2026-11-14':'SÁB 14','2026-11-15':'DOM 15'},
+    dayShort_en:{'2026-11-13':'FRI 13','2026-11-14':'SAT 14','2026-11-15':'SUN 15'},
+    dayLong:{'2026-11-13':'Viernes 13 de noviembre','2026-11-14':'Sábado 14 de noviembre','2026-11-15':'Domingo 15 de noviembre'},
+    prioLimit:5,
+    films:null,posters:null,lbSlugs:{}
+  },
   'cinetoro2026': {
     // EL NOMBRE es el del festival (cinetoro.org); la edición va en fullName.
     // Días oficiales 10–15 NOV (Roldanillo 10, Toro 11–15). Lo de otras ciudades
@@ -1386,6 +1416,16 @@ export const SECTION_ARCHETYPES = {
   '🎤 Charla': 'Charlas / Industria',
   '🛠️ Taller': 'Charlas / Industria',
   '🎉 Evento': 'Especiales / Eventos',
+  '🏆 Competencia Oficial Largometraje': 'Competencia',
+  '📽️ Competencia Largo Documental': 'Competencia',
+  '🇨🇴 Competencia Corto Profesional Colombia': 'Competencia',
+  '🌎 Competencia Corto Internacional': 'Competencia',
+  '🎥 Competencia Corto Documental': 'Competencia',
+  '✏️ Competencia Corto Animación': 'Competencia',
+  '🧪 Competencia Corto Experimental': 'Competencia',
+  '🎓 Competencia Escuelas': 'Competencia',
+  '🔎 Foco Reygadas': 'Muestra / País',
+  '⭐ Muestra Especial': 'Especiales / Eventos',
   '🏆 La Canoa Dorada': 'Competencia',
   '🛠️ Talleres con Expertos': 'Charlas / Industria',
   '💬 Conversatorios': 'Charlas / Industria',

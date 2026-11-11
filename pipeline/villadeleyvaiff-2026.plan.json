@@ -1,0 +1,142 @@
+{
+ "_nota": "20 Festival Internacional de Cine de Villa de Leyva (Villa de Leyva, Boyacá, 13–16 nov 2026, lema «De Corazón»). NO es Villa del Cine (villadelcine2026). MONTADO el 11 nov con la parrilla de la Real Fábrica (p/DfkomnaGQZw, 10 nov): 22 funciones del 13 al 15 nov en Sala Blanca y Sala Rosada. El lunes 16 y otras sedes no están publicados. Catálogo: 63 obras de ocho competencias (pre-onboarding).",
+ "radar": 1248,
+ "fuentes_vivas": [],
+ "_fuentes_vivas": "salió de láminas de IG y de los PDF de la home de la web, sin URL estable de programación",
+ "fuentes": {
+  "instagram": "https://www.instagram.com/festcinevilla/",
+  "web": "https://www.villadeleyvaiff.co",
+  "Dezv0XgmfuC": "COMPETENCIA ESCUELAS (22 oct, 11 láminas)",
+  "De2SOuWmRFm": "RESULTADOS - CORTO EXPERIMENTAL (23 oct, 11 láminas)",
+  "De2jZJeGZFd": "COMPETENCIA- CORTO DOCUMENTAL (23 oct, 10 láminas)",
+  "De4KTcokcBw": "COMPETENCIA- LARGO DOCUMENTAL (24 oct, 7 láminas)",
+  "De5rlOskZXe": "COMPETENCIA- CORTO INTERNACIONAL (25 oct, 8 láminas)",
+  "De8I8Qqkdah": "COMPETENCIA - CORTO ANIMACIÓN (25 oct, 12 láminas)",
+  "De9ghZ8ka6I": "COMPETENCIA- CORTO FESTIVALITO (26 oct, 12 láminas)",
+  "De96CbVGaEr": "PROYECTOS SELECCIONADOS 20 LAB Ópera de Leyva (26 oct, 9 láminas): no entra, son proyectos",
+  "DfASiVIkW3R": "COMPETENCIA- CORTO PROFESIONAL COLOMBIA (27 oct, 10 láminas)",
+  "pdfs_web": "9 PDF enlazados en la home (creados 28–29 oct), copia en fuentes/villadeleyvaiff-2026/"
+ },
+ "pasos": [
+  {
+   "cmd": "python3 pipeline/villadeleyvaiff-2026-catalogo.py",
+   "que": "las láminas de los 8 carruseles (fuentes/ig/<sc>/) transcritas a ojo + 1 obra solo del PDF → catálogo (63 obras)"
+  },
+  {
+   "cmd": "python3 pipeline/villadeleyvaiff-2026-verificar.py",
+   "que": "ig-lecturas (A/B/C/D + la mirada), cobertura en los dos sentidos contra láminas y contra los PDF de la web"
+  },
+  {
+   "cmd": "python3 pipeline/enriquecer_catalogo.py festivals/staging/villadeleyvaiff-2026-catalogo.json",
+   "que": "la cascada (TMDB con candado, lo ya publicado, Proimágenes, cinecorto) → catálogo enriquecido"
+  },
+  {
+   "cmd": "python3 pipeline/villadeleyvaiff-2026-crudo.py",
+   "que": "las láminas de la parrilla de la Real Fábrica + catálogo → crudo"
+  },
+  {
+   "cmd": "python3 pipeline/enriquecer.py villadeleyvaiff-2026 --posters",
+   "que": "TMDB verificado + la cascada + afiches a assets/"
+  },
+  {
+   "cmd": "python3 pipeline/ensamblar.py villadeleyvaiff-2026",
+   "que": "crudo + plan → build"
+  },
+  {
+   "cmd": "python3 pipeline/encuadrar-posters.py villadeleyvaiff-2026 --aplicar --desde festivals/staging/villadeleyvaiff-2026-build.json",
+   "que": "los afiches a 2:3"
+  }
+ ],
+ "_fuentes_versionadas": {
+  "festivals/staging/villadeleyvaiff-2026-catalogo.json": "la selección (63 obras); la leerá el crudo",
+  "festivals/staging/villadeleyvaiff-2026-catalogo-enriquecido.json": "las fichas de la cascada, que escribe el paso 3",
+  "festivals/staging/villadeleyvaiff-2026-correcciones.json": "sin_afiche: el porqué de cada obra sin afiche",
+  "festivals/staging/villadeleyvaiff-2026-crudo.json": "el formato intermedio",
+  "festivals/staging/villadeleyvaiff-2026-enriquecido.json": "fichas y afiches de las obras de las funciones",
+  "festivals/staging/villadeleyvaiff-2026-venues-geo.json": "el pin, Google Maps 11 nov",
+  "festivals/staging/villadeleyvaiff-2026-sinopsis.json": "sinopsis traducidas de TMDB; la lee enriquecer.py"
+ },
+ "festival": {
+  "radar": 1248,
+  "fuente_principal": "festival-ig",
+  "crudo": "festivals/staging/villadeleyvaiff-2026-crudo.json",
+  "enriquecido": "festivals/staging/villadeleyvaiff-2026-enriquecido.json",
+  "geo": "festivals/staging/villadeleyvaiff-2026-venues-geo.json",
+  "_por_que_sedes": "La parrilla publicada es la de la Real Fábrica; la sala (Blanca / Rosada) viaja por función.",
+  "sedes": {
+   "Real Fábrica": [
+    "Real Fábrica - Villa de Leyva",
+    ""
+   ]
+  },
+  "_por_que_secciones": "Las competencias como las nombra el catálogo del festival; Foco Reygadas y Muestra Especial, tal cual la lámina. Emoji e inglés: propuesta, a confirmar con Juan.",
+  "secciones": {
+   "Competencia Oficial Largometraje": {
+    "emoji": "🏆",
+    "en": "Official Feature Competition",
+    "archetype": "Competencia"
+   },
+   "Competencia Largo Documental": {
+    "emoji": "📽️",
+    "en": "Feature Documentary Competition",
+    "archetype": "Competencia"
+   },
+   "Competencia Corto Profesional Colombia": {
+    "emoji": "🇨🇴",
+    "en": "Colombian Professional Short Competition",
+    "archetype": "Competencia"
+   },
+   "Competencia Corto Internacional": {
+    "emoji": "🌎",
+    "en": "International Short Competition",
+    "archetype": "Competencia"
+   },
+   "Competencia Corto Documental": {
+    "emoji": "🎥",
+    "en": "Short Documentary Competition",
+    "archetype": "Competencia"
+   },
+   "Competencia Corto Animación": {
+    "emoji": "✏️",
+    "en": "Animated Short Competition",
+    "archetype": "Competencia"
+   },
+   "Competencia Corto Experimental": {
+    "emoji": "🧪",
+    "en": "Experimental Short Competition",
+    "archetype": "Competencia"
+   },
+   "Competencia Escuelas": {
+    "emoji": "🎓",
+    "en": "Film School Competition",
+    "archetype": "Competencia"
+   },
+   "Foco Reygadas": {
+    "emoji": "🔎",
+    "en": "Reygadas Focus",
+    "archetype": "Muestra / País"
+   },
+   "Muestra Especial": {
+    "emoji": "⭐",
+    "en": "Special Showcase",
+    "archetype": "Especiales / Eventos"
+   }
+  },
+  "name": "Festival Internacional de Cine de Villa de Leyva",
+  "displayName": "Festival Internacional de Cine de Villa de Leyva",
+  "fullName": "20 Festival Internacional de Cine de Villa de Leyva",
+  "shortName": "VILLA DE LEYVA",
+  "city": "Villa de Leyva",
+  "country": "CO",
+  "dates": "13–16 NOV",
+  "dates_en": "NOV 13–16",
+  "year": 2026,
+  "timezoneOffset": "-05:00",
+  "storageKey": "villadeleyvaiff2026_",
+  "festivalStartStr": "2026-11-13T00:00:00",
+  "festivalEndStr": "2026-11-16T23:59:00",
+  "sharedSlotIsOneScreening": true,
+  "mes_es": "noviembre",
+  "dias_vacios": []
+ }
+}

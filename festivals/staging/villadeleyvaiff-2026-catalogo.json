@@ -1,0 +1,785 @@
+{
+ "_provenance": {
+  "fuente": "https://www.instagram.com/festcinevilla/",
+  "capturado": "2026-11-04",
+  "metodo": "láminas de 8 carruseles IG (embed, sin sesión), a ojo + ig-lecturas; PDF de la web",
+  "publicado": "2026-10-22/29"
+ },
+ "obras": [
+  {
+   "titulo": "Cielo de enero",
+   "director": "Sofía Plesky",
+   "pais": "Argentina",
+   "tipo": "corto",
+   "seccion": "Competencia Escuelas",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dezv0XgmfuC/",
+    "date": "2026-10-22",
+    "lamina": "fuentes/ig/Dezv0XgmfuC/01.jpg"
+   }
+  },
+  {
+   "titulo": "Demian",
+   "director": "Diego Padilla",
+   "pais": "México",
+   "tipo": "corto",
+   "seccion": "Competencia Escuelas",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dezv0XgmfuC/",
+    "date": "2026-10-22",
+    "lamina": "fuentes/ig/Dezv0XgmfuC/02.jpg"
+   }
+  },
+  {
+   "titulo": "El mejor regalo",
+   "director": "Argenis Herrera",
+   "pais": "Chile",
+   "tipo": "corto",
+   "seccion": "Competencia Escuelas",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dezv0XgmfuC/",
+    "date": "2026-10-22",
+    "lamina": "fuentes/ig/Dezv0XgmfuC/03.jpg"
+   }
+  },
+  {
+   "titulo": "La casa del marica",
+   "director": "Nicolás Malano",
+   "pais": "Argentina",
+   "tipo": "corto",
+   "seccion": "Competencia Escuelas",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dezv0XgmfuC/",
+    "date": "2026-10-22",
+    "lamina": "fuentes/ig/Dezv0XgmfuC/04.jpg"
+   }
+  },
+  {
+   "titulo": "La muerta que habla",
+   "director": "Candela Gonzalez, Agustín Fittipaldi",
+   "pais": "Argentina",
+   "tipo": "corto",
+   "seccion": "Competencia Escuelas",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dezv0XgmfuC/",
+    "date": "2026-10-22",
+    "lamina": "fuentes/ig/Dezv0XgmfuC/05.jpg"
+   }
+  },
+  {
+   "titulo": "Los lobo",
+   "director": "Saaed García",
+   "pais": "Colombia",
+   "tipo": "corto",
+   "seccion": "Competencia Escuelas",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dezv0XgmfuC/",
+    "date": "2026-10-22",
+    "lamina": "fuentes/ig/Dezv0XgmfuC/06.jpg"
+   }
+  },
+  {
+   "titulo": "Términa",
+   "director": "Juan José Guevara",
+   "pais": "Colombia",
+   "tipo": "corto",
+   "seccion": "Competencia Escuelas",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dezv0XgmfuC/",
+    "date": "2026-10-22",
+    "lamina": "fuentes/ig/Dezv0XgmfuC/07.jpg"
+   }
+  },
+  {
+   "titulo": "Sol en Lidia",
+   "director": "Andrea Boggiano",
+   "pais": "Perú",
+   "tipo": "corto",
+   "seccion": "Competencia Escuelas",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dezv0XgmfuC/",
+    "date": "2026-10-22",
+    "lamina": "fuentes/ig/Dezv0XgmfuC/08.jpg"
+   }
+  },
+  {
+   "titulo": "Valsa para Maria Domingas",
+   "director": "Eugênia Santana",
+   "pais": "Brasil",
+   "tipo": "corto",
+   "seccion": "Competencia Escuelas",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dezv0XgmfuC/",
+    "date": "2026-10-22",
+    "lamina": "fuentes/ig/Dezv0XgmfuC/09.jpg"
+   }
+  },
+  {
+   "titulo": "Ballena",
+   "director": "Ricardo Monteiro",
+   "pais": "Brasil, Cuba",
+   "tipo": "corto",
+   "seccion": "Competencia Corto Experimental",
+   "_src": {
+    "url": "https://www.instagram.com/p/De2SOuWmRFm/",
+    "date": "2026-10-23",
+    "lamina": "fuentes/ig/De2SOuWmRFm/01.jpg"
+   }
+  },
+  {
+   "titulo": "Chaika",
+   "director": "Ingrid Paola Bonilla",
+   "pais": "Colombia, Cuba",
+   "tipo": "corto",
+   "seccion": "Competencia Corto Experimental",
+   "_src": {
+    "url": "https://www.instagram.com/p/De2SOuWmRFm/",
+    "date": "2026-10-23",
+    "lamina": "fuentes/ig/De2SOuWmRFm/02.jpg"
+   }
+  },
+  {
+   "titulo": "“Convocatoria general del gremio”",
+   "director": "Bruna Pessoa",
+   "pais": "Brasil",
+   "tipo": "corto",
+   "seccion": "Competencia Corto Experimental",
+   "_src": {
+    "url": "https://www.instagram.com/p/De2SOuWmRFm/",
+    "date": "2026-10-23",
+    "lamina": "fuentes/ig/De2SOuWmRFm/03.jpg"
+   }
+  },
+  {
+   "titulo": "Cuarto de flores",
+   "director": "Sofía Guerrini",
+   "pais": "Argentina",
+   "tipo": "corto",
+   "seccion": "Competencia Corto Experimental",
+   "_src": {
+    "url": "https://www.instagram.com/p/De2SOuWmRFm/",
+    "date": "2026-10-23",
+    "lamina": "fuentes/ig/De2SOuWmRFm/04.jpg"
+   }
+  },
+  {
+   "titulo": "Día 1 Narita–Tokyo",
+   "director": "João Krefer",
+   "pais": "Japón",
+   "tipo": "corto",
+   "seccion": "Competencia Corto Experimental",
+   "_src": {
+    "url": "https://www.instagram.com/p/De2SOuWmRFm/",
+    "date": "2026-10-23",
+    "lamina": "fuentes/ig/De2SOuWmRFm/05.jpg"
+   }
+  },
+  {
+   "titulo": "Las criaturas",
+   "director": "Francisco Zornosa",
+   "pais": "Colombia",
+   "tipo": "corto",
+   "seccion": "Competencia Corto Experimental",
+   "_src": {
+    "url": "https://www.instagram.com/p/De2SOuWmRFm/",
+    "date": "2026-10-23",
+    "lamina": "fuentes/ig/De2SOuWmRFm/06.jpg"
+   }
+  },
+  {
+   "titulo": "Oigo una ciudad",
+   "director": "Ciro Araujo",
+   "pais": "Brasil",
+   "tipo": "corto",
+   "seccion": "Competencia Corto Experimental",
+   "_src": {
+    "url": "https://www.instagram.com/p/De2SOuWmRFm/",
+    "date": "2026-10-23",
+    "lamina": "fuentes/ig/De2SOuWmRFm/07.jpg"
+   }
+  },
+  {
+   "titulo": "Rol – El río se llevaba las manchas de la vida",
+   "director": "Selma Parreira",
+   "pais": "Brasil",
+   "tipo": "corto",
+   "seccion": "Competencia Corto Experimental",
+   "_src": {
+    "url": "https://www.instagram.com/p/De2SOuWmRFm/",
+    "date": "2026-10-23",
+    "lamina": "fuentes/ig/De2SOuWmRFm/08.jpg"
+   }
+  },
+  {
+   "titulo": "Zakih",
+   "director": "Sara Tavares",
+   "pais": "Brasil",
+   "tipo": "corto",
+   "seccion": "Competencia Corto Experimental",
+   "_src": {
+    "url": "https://www.instagram.com/p/De2SOuWmRFm/",
+    "date": "2026-10-23",
+    "lamina": "fuentes/ig/De2SOuWmRFm/09.jpg"
+   }
+  },
+  {
+   "titulo": "Baile por la ciudad",
+   "director": "Rosana Dias",
+   "pais": "Brasil",
+   "tipo": "corto",
+   "seccion": "Competencia Corto Documental",
+   "_src": {
+    "url": "https://www.instagram.com/p/De2jZJeGZFd/",
+    "date": "2026-10-23",
+    "lamina": "fuentes/ig/De2jZJeGZFd/01.jpg"
+   }
+  },
+  {
+   "titulo": "Claudete",
+   "director": "Gabriela Kopp",
+   "pais": "Brasil",
+   "tipo": "corto",
+   "seccion": "Competencia Corto Documental",
+   "_src": {
+    "url": "https://www.instagram.com/p/De2jZJeGZFd/",
+    "date": "2026-10-23",
+    "lamina": "fuentes/ig/De2jZJeGZFd/02.jpg"
+   }
+  },
+  {
+   "titulo": "Eda",
+   "director": "Giovanna Tumini",
+   "pais": "Argentina",
+   "tipo": "corto",
+   "seccion": "Competencia Corto Documental",
+   "_src": {
+    "url": "https://www.instagram.com/p/De2jZJeGZFd/",
+    "date": "2026-10-23",
+    "lamina": "fuentes/ig/De2jZJeGZFd/03.jpg"
+   }
+  },
+  {
+   "titulo": "Jeña",
+   "director": "Mónica Loza",
+   "pais": "México, Cuba",
+   "tipo": "corto",
+   "seccion": "Competencia Corto Documental",
+   "_src": {
+    "url": "https://www.instagram.com/p/De2jZJeGZFd/",
+    "date": "2026-10-23",
+    "lamina": "fuentes/ig/De2jZJeGZFd/04.jpg"
+   }
+  },
+  {
+   "titulo": "Lia",
+   "director": "Erika Piragauta",
+   "pais": "Colombia",
+   "tipo": "corto",
+   "seccion": "Competencia Corto Documental",
+   "_src": {
+    "url": "https://www.instagram.com/p/De2jZJeGZFd/",
+    "date": "2026-10-23",
+    "lamina": "fuentes/ig/De2jZJeGZFd/05.jpg"
+   }
+  },
+  {
+   "titulo": "Logos",
+   "director": "Britney Federline",
+   "pais": "Brasil",
+   "tipo": "corto",
+   "seccion": "Competencia Corto Documental",
+   "_src": {
+    "url": "https://www.instagram.com/p/De2jZJeGZFd/",
+    "date": "2026-10-23",
+    "lamina": "fuentes/ig/De2jZJeGZFd/06.jpg"
+   }
+  },
+  {
+   "titulo": "Lo que no se puede borrar",
+   "director": "Iñaki Dubourg",
+   "pais": "Argentina",
+   "tipo": "corto",
+   "seccion": "Competencia Corto Documental",
+   "_src": {
+    "url": "https://www.instagram.com/p/De2jZJeGZFd/",
+    "date": "2026-10-23",
+    "lamina": "fuentes/ig/De2jZJeGZFd/07.jpg"
+   }
+  },
+  {
+   "titulo": "Tragedia sentimental",
+   "director": "Juan Ferro",
+   "pais": "Colombia",
+   "tipo": "corto",
+   "seccion": "Competencia Corto Documental",
+   "_src": {
+    "url": "https://www.instagram.com/p/De2jZJeGZFd/",
+    "date": "2026-10-23",
+    "lamina": "fuentes/ig/De2jZJeGZFd/08.jpg"
+   }
+  },
+  {
+   "titulo": "Dama de las mil máscaras",
+   "director": "Wainer Méndez",
+   "pais": "Costa Rica",
+   "tipo": "largo",
+   "seccion": "Competencia Largo Documental",
+   "_src": {
+    "url": "https://www.instagram.com/p/De4KTcokcBw/",
+    "date": "2026-10-24",
+    "lamina": "fuentes/ig/De4KTcokcBw/01.jpg"
+   }
+  },
+  {
+   "titulo": "El extraordinario viaje del dragón",
+   "director": "Kaori Flores Y.",
+   "pais": "Venezuela",
+   "tipo": "largo",
+   "seccion": "Competencia Largo Documental",
+   "_src": {
+    "url": "https://www.instagram.com/p/De4KTcokcBw/",
+    "date": "2026-10-24",
+    "lamina": "fuentes/ig/De4KTcokcBw/02.jpg"
+   }
+  },
+  {
+   "titulo": "Notas sobre un destierro",
+   "director": "Gustavo Castro",
+   "pais": "Brasil",
+   "tipo": "largo",
+   "seccion": "Competencia Largo Documental",
+   "_src": {
+    "url": "https://www.instagram.com/p/De4KTcokcBw/",
+    "date": "2026-10-24",
+    "lamina": "fuentes/ig/De4KTcokcBw/03.jpg"
+   }
+  },
+  {
+   "titulo": "Portento",
+   "director": "Gabriela Nápoles",
+   "pais": "México",
+   "tipo": "largo",
+   "seccion": "Competencia Largo Documental",
+   "_src": {
+    "url": "https://www.instagram.com/p/De4KTcokcBw/",
+    "date": "2026-10-24",
+    "lamina": "fuentes/ig/De4KTcokcBw/04.jpg"
+   }
+  },
+  {
+   "titulo": "Sex panchitos",
+   "director": "Gustavo Gamou",
+   "pais": "México",
+   "tipo": "largo",
+   "seccion": "Competencia Largo Documental",
+   "_src": {
+    "url": "https://www.instagram.com/p/De4KTcokcBw/",
+    "date": "2026-10-24",
+    "lamina": "fuentes/ig/De4KTcokcBw/05.jpg"
+   }
+  },
+  {
+   "titulo": "Armónica",
+   "director": "Michele Diniz",
+   "pais": "Brasil",
+   "tipo": "corto",
+   "seccion": "Competencia Corto Internacional",
+   "_src": {
+    "url": "https://www.instagram.com/p/De5rlOskZXe/",
+    "date": "2026-10-25",
+    "lamina": "fuentes/ig/De5rlOskZXe/01.jpg"
+   }
+  },
+  {
+   "titulo": "El derrumbe",
+   "director": "Iván Djeredjian",
+   "pais": "Argentina",
+   "tipo": "corto",
+   "seccion": "Competencia Corto Internacional",
+   "_src": {
+    "url": "https://www.instagram.com/p/De5rlOskZXe/",
+    "date": "2026-10-25",
+    "lamina": "fuentes/ig/De5rlOskZXe/02.jpg"
+   }
+  },
+  {
+   "titulo": "El silencio de la tierra",
+   "director": "Rogelio Escatel",
+   "pais": "México",
+   "tipo": "corto",
+   "seccion": "Competencia Corto Internacional",
+   "_src": {
+    "url": "https://www.instagram.com/p/De5rlOskZXe/",
+    "date": "2026-10-25",
+    "lamina": "fuentes/ig/De5rlOskZXe/03.jpg"
+   }
+  },
+  {
+   "titulo": "Las heridas",
+   "director": "Nicolás Llanos",
+   "pais": "Chile",
+   "tipo": "corto",
+   "seccion": "Competencia Corto Internacional",
+   "_src": {
+    "url": "https://www.instagram.com/p/De5rlOskZXe/",
+    "date": "2026-10-25",
+    "lamina": "fuentes/ig/De5rlOskZXe/04.jpg"
+   }
+  },
+  {
+   "titulo": "Los chorros",
+   "director": "Juan Manuel Álvarez",
+   "pais": "Argentina",
+   "tipo": "corto",
+   "seccion": "Competencia Corto Internacional",
+   "_src": {
+    "url": "https://www.instagram.com/p/De5rlOskZXe/",
+    "date": "2026-10-25",
+    "lamina": "fuentes/ig/De5rlOskZXe/05.jpg"
+   }
+  },
+  {
+   "titulo": "Yegua",
+   "director": "Virginia Scaro",
+   "pais": "Argentina",
+   "tipo": "corto",
+   "seccion": "Competencia Corto Internacional",
+   "_src": {
+    "url": "https://www.instagram.com/p/De5rlOskZXe/",
+    "date": "2026-10-25",
+    "lamina": "fuentes/ig/De5rlOskZXe/06.jpg"
+   }
+  },
+  {
+   "titulo": "A la sombra de los árboles",
+   "director": "Yulia Ivanova",
+   "pais": "Rusia",
+   "tipo": "corto",
+   "seccion": "Competencia Corto Animación",
+   "_src": {
+    "url": "https://www.instagram.com/p/De8I8Qqkdah/",
+    "date": "2026-10-25",
+    "lamina": "fuentes/ig/De8I8Qqkdah/01.jpg"
+   }
+  },
+  {
+   "titulo": "Bumblebee",
+   "director": "Natalia Chernysheva",
+   "pais": "Rusia",
+   "tipo": "corto",
+   "seccion": "Competencia Corto Animación",
+   "_src": {
+    "url": "https://www.instagram.com/p/De8I8Qqkdah/",
+    "date": "2026-10-25",
+    "lamina": "fuentes/ig/De8I8Qqkdah/02.jpg",
+    "tambien": {
+     "url": "https://www.instagram.com/p/De9ghZ8ka6I/",
+     "date": "2026-10-26",
+     "lamina": "fuentes/ig/De9ghZ8ka6I/01.jpg"
+    }
+   },
+   "_seccion_tambien": "Competencia Corto Festivalito"
+  },
+  {
+   "titulo": "Cuna de lobas",
+   "director": "Emilia Schettino",
+   "pais": "México",
+   "tipo": "corto",
+   "seccion": "Competencia Corto Animación",
+   "_src": {
+    "url": "https://www.instagram.com/p/De8I8Qqkdah/",
+    "date": "2026-10-25",
+    "lamina": "fuentes/ig/De8I8Qqkdah/03.jpg"
+   }
+  },
+  {
+   "titulo": "El cuerpo de Cristo",
+   "director": "Bea Lema",
+   "pais": "España",
+   "tipo": "corto",
+   "seccion": "Competencia Corto Animación",
+   "_src": {
+    "url": "https://www.instagram.com/p/De8I8Qqkdah/",
+    "date": "2026-10-25",
+    "lamina": "fuentes/ig/De8I8Qqkdah/04.jpg"
+   }
+  },
+  {
+   "titulo": "Emechiche, el renacer de los cabeciblancos",
+   "director": "Juan Camilo González",
+   "pais": "Colombia, Argentina",
+   "tipo": "corto",
+   "seccion": "Competencia Corto Animación",
+   "_src": {
+    "url": "https://www.instagram.com/p/De8I8Qqkdah/",
+    "date": "2026-10-25",
+    "lamina": "fuentes/ig/De8I8Qqkdah/05.jpg"
+   }
+  },
+  {
+   "titulo": "En la sombra de la garza",
+   "director": "Nicolas Bianco",
+   "pais": "Francia",
+   "tipo": "corto",
+   "seccion": "Competencia Corto Animación",
+   "_src": {
+    "url": "https://www.instagram.com/p/De8I8Qqkdah/",
+    "date": "2026-10-25",
+    "lamina": "fuentes/ig/De8I8Qqkdah/06.jpg",
+    "tambien": {
+     "url": "https://www.instagram.com/p/De9ghZ8ka6I/",
+     "date": "2026-10-26",
+     "lamina": "fuentes/ig/De9ghZ8ka6I/05.jpg"
+    }
+   },
+   "_seccion_tambien": "Competencia Corto Festivalito"
+  },
+  {
+   "titulo": "¡Florecerán!",
+   "director": "Claudia Ruiz",
+   "pais": "Argentina",
+   "tipo": "corto",
+   "seccion": "Competencia Corto Animación",
+   "_src": {
+    "url": "https://www.instagram.com/p/De8I8Qqkdah/",
+    "date": "2026-10-25",
+    "lamina": "fuentes/ig/De8I8Qqkdah/07.jpg"
+   }
+  },
+  {
+   "titulo": "Merrimundi",
+   "director": "Niles Atallah",
+   "pais": "Chile",
+   "tipo": "corto",
+   "seccion": "Competencia Corto Animación",
+   "_src": {
+    "url": "https://www.instagram.com/p/De8I8Qqkdah/",
+    "date": "2026-10-25",
+    "lamina": "fuentes/ig/De8I8Qqkdah/08.jpg"
+   }
+  },
+  {
+   "titulo": "Saba",
+   "director": "Liron Topaz",
+   "pais": "USA",
+   "tipo": "corto",
+   "seccion": "Competencia Corto Animación",
+   "_src": {
+    "url": "https://www.instagram.com/p/De8I8Qqkdah/",
+    "date": "2026-10-25",
+    "lamina": "fuentes/ig/De8I8Qqkdah/09.jpg",
+    "tambien": {
+     "url": "https://www.instagram.com/p/De9ghZ8ka6I/",
+     "date": "2026-10-26",
+     "lamina": "fuentes/ig/De9ghZ8ka6I/09.jpg"
+    }
+   },
+   "_seccion_tambien": "Competencia Corto Festivalito"
+  },
+  {
+   "titulo": "Una vez en un cuerpo",
+   "director": "María Cristina Pérez",
+   "pais": "Colombia",
+   "tipo": "corto",
+   "seccion": "Competencia Corto Animación",
+   "_src": {
+    "url": "https://www.instagram.com/p/De8I8Qqkdah/",
+    "date": "2026-10-25",
+    "lamina": "fuentes/ig/De8I8Qqkdah/10.jpg"
+   }
+  },
+  {
+   "titulo": "Dance dance evolution",
+   "director": "Jonathan Abbaszadeh, Finn Falk, Yosi Hsu, Mia Lou, Huidi Zhang, Ruiwen Zhang",
+   "pais": "Francia",
+   "tipo": "corto",
+   "seccion": "Competencia Corto Festivalito",
+   "_src": {
+    "url": "https://www.instagram.com/p/De9ghZ8ka6I/",
+    "date": "2026-10-26",
+    "lamina": "fuentes/ig/De9ghZ8ka6I/02.jpg"
+   }
+  },
+  {
+   "titulo": "Danza de las muñecas",
+   "director": "Yulia Ivanova",
+   "pais": "Rusia",
+   "tipo": "corto",
+   "seccion": "Competencia Corto Festivalito",
+   "_src": {
+    "url": "https://www.instagram.com/p/De9ghZ8ka6I/",
+    "date": "2026-10-26",
+    "lamina": "fuentes/ig/De9ghZ8ka6I/03.jpg"
+   }
+  },
+  {
+   "titulo": "Danza invisible",
+   "director": "Marina Kerber, Cristiane Oliveira",
+   "pais": "Brasil",
+   "tipo": "corto",
+   "seccion": "Competencia Corto Festivalito",
+   "_src": {
+    "url": "https://www.instagram.com/p/De9ghZ8ka6I/",
+    "date": "2026-10-26",
+    "lamina": "fuentes/ig/De9ghZ8ka6I/04.jpg"
+   }
+  },
+  {
+   "titulo": "Las zapatillas mágicas",
+   "director": "Luber Yesid Zúñiga",
+   "pais": "Colombia",
+   "tipo": "corto",
+   "seccion": "Competencia Corto Festivalito",
+   "_src": {
+    "url": "https://www.instagram.com/p/De9ghZ8ka6I/",
+    "date": "2026-10-26",
+    "lamina": "fuentes/ig/De9ghZ8ka6I/06.jpg"
+   }
+  },
+  {
+   "titulo": "Loop",
+   "director": "Mali Delepière, Flora Jacon, Alicia Salvi, Hongyi Liu, Saïd Saïd, Tristan Truphemus",
+   "pais": "Francia",
+   "tipo": "corto",
+   "seccion": "Competencia Corto Festivalito",
+   "_src": {
+    "url": "https://www.instagram.com/p/De9ghZ8ka6I/",
+    "date": "2026-10-26",
+    "lamina": "fuentes/ig/De9ghZ8ka6I/07.jpg"
+   }
+  },
+  {
+   "titulo": "Mi pequeña vida en la isla",
+   "director": "Nina Bisyarina",
+   "pais": "Rusia",
+   "tipo": "corto",
+   "seccion": "Competencia Corto Festivalito",
+   "_src": {
+    "url": "https://www.instagram.com/p/De9ghZ8ka6I/",
+    "date": "2026-10-26",
+    "lamina": "fuentes/ig/De9ghZ8ka6I/08.jpg"
+   }
+  },
+  {
+   "titulo": "Snorri",
+   "director": "Thierry Marchand",
+   "pais": "Alemania",
+   "tipo": "corto",
+   "seccion": "Competencia Corto Festivalito",
+   "_src": {
+    "url": "https://www.instagram.com/p/De9ghZ8ka6I/",
+    "date": "2026-10-26",
+    "lamina": "fuentes/ig/De9ghZ8ka6I/10.jpg"
+   }
+  },
+  {
+   "titulo": "Agachar el rostro",
+   "director": "Camilo Medina Noy",
+   "pais": "Colombia",
+   "tipo": "corto",
+   "seccion": "Competencia Corto Profesional Colombia",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfASiVIkW3R/",
+    "date": "2026-10-27",
+    "lamina": "fuentes/ig/DfASiVIkW3R/01.jpg"
+   }
+  },
+  {
+   "titulo": "Criatura",
+   "director": "Juan Pablo Ríos",
+   "pais": "Colombia",
+   "tipo": "corto",
+   "seccion": "Competencia Corto Profesional Colombia",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfASiVIkW3R/",
+    "date": "2026-10-27",
+    "lamina": "fuentes/ig/DfASiVIkW3R/02.jpg"
+   }
+  },
+  {
+   "titulo": "Chaski Pacha",
+   "director": "Ramiro Fierro",
+   "pais": "Colombia",
+   "tipo": "corto",
+   "seccion": "Competencia Corto Profesional Colombia",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfASiVIkW3R/",
+    "date": "2026-10-27",
+    "lamina": "fuentes/ig/DfASiVIkW3R/03.jpg"
+   }
+  },
+  {
+   "titulo": "Esquirlas de caracol",
+   "director": "Manuel Alejandro Sánchez",
+   "pais": "Colombia",
+   "tipo": "corto",
+   "seccion": "Competencia Corto Profesional Colombia",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfASiVIkW3R/",
+    "date": "2026-10-27",
+    "lamina": "fuentes/ig/DfASiVIkW3R/04.jpg"
+   }
+  },
+  {
+   "titulo": "Gris",
+   "director": "Loren Escandón",
+   "pais": "Colombia",
+   "tipo": "corto",
+   "seccion": "Competencia Corto Profesional Colombia",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfASiVIkW3R/",
+    "date": "2026-10-27",
+    "lamina": "fuentes/ig/DfASiVIkW3R/05.jpg"
+   }
+  },
+  {
+   "titulo": "Malas posturas",
+   "director": "Juan Pablo Castro",
+   "pais": "Colombia",
+   "tipo": "corto",
+   "seccion": "Competencia Corto Profesional Colombia",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfASiVIkW3R/",
+    "date": "2026-10-27",
+    "lamina": "fuentes/ig/DfASiVIkW3R/06.jpg"
+   }
+  },
+  {
+   "titulo": "Noche de vuelo",
+   "director": "Zacarías Flores del Campo",
+   "pais": "Colombia",
+   "tipo": "corto",
+   "seccion": "Competencia Corto Profesional Colombia",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfASiVIkW3R/",
+    "date": "2026-10-27",
+    "lamina": "fuentes/ig/DfASiVIkW3R/07.jpg"
+   }
+  },
+  {
+   "titulo": "Refracción",
+   "director": "Isabella Palacio",
+   "pais": "Colombia",
+   "tipo": "corto",
+   "seccion": "Competencia Corto Profesional Colombia",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfASiVIkW3R/",
+    "date": "2026-10-27",
+    "lamina": "fuentes/ig/DfASiVIkW3R/08.jpg"
+   }
+  },
+  {
+   "titulo": "Lo que calla el hoyo",
+   "director": "Francisco Zornosa",
+   "pais": "Colombia",
+   "tipo": "corto",
+   "seccion": "Competencia Corto Documental",
+   "_src": {
+    "url": "https://www.villadeleyvaiff.co/_files/ugd/66001c_061dc0d2b25b413f952e19f20bb5786b.pdf",
+    "date": "2026-10-29",
+    "pdf": "fuentes/villadeleyvaiff-2026/cortos-documental.pdf",
+    "pagina": 9
+   }
+  }
+ ]
+}

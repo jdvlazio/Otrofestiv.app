@@ -1,0 +1,635 @@
+{
+ "_provenance": {
+  "fuente": "IG @festcinevilla, carrusel «Programación · Real Fábrica» (10 nov 2026)",
+  "capturado": "2026-11-11",
+  "que_aporta": "día, hora y sala de la Real Fábrica, 13–15 nov",
+  "url": "https://www.instagram.com/p/DfkomnaGQZw/",
+  "metodo": "lectura a ojo de las láminas 02–06"
+ },
+ "_acceso": {
+  "estado": "Entrada libre (no se anuncia pago)",
+  "revisado": "2026-11-11",
+  "fuentes": [
+   "https://www.instagram.com/p/DfkomnaGQZw/"
+  ],
+  "_por_que": "el festival no anuncia pago (regla de Juan, 13 oct 2026)"
+ },
+ "_dudas": [
+  "«Soy Lidia» (lámina) / «Sol en Lidia» (catálogo): se usa el del catálogo",
+  "«Vals para María Domingas» (lámina) / «Valsa para Maria Domingas» (catálogo, título original)"
+ ],
+ "funciones": [
+  {
+   "dia": "2026-11-13",
+   "hora": "14:30",
+   "sede": "Real Fábrica",
+   "sala": "Sala Blanca",
+   "seccion": "Competencia Escuelas",
+   "acceso": "Entrada libre (no se anuncia pago)",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfkomnaGQZw/",
+    "lamina": "02",
+    "date": "2026-11-10"
+   },
+   "titulo": "Competencia Escuelas 1",
+   "obras": [
+    {
+     "titulo": "Cielo de enero",
+     "director": "Sofía Plesky",
+     "pais": "Argentina"
+    },
+    {
+     "titulo": "Demian",
+     "director": "Diego Padilla",
+     "pais": "México"
+    },
+    {
+     "titulo": "El mejor regalo",
+     "director": "Argenis Herrera",
+     "pais": "Chile"
+    },
+    {
+     "titulo": "La casa del marica",
+     "director": "Nicolás Malano",
+     "pais": "Argentina"
+    },
+    {
+     "titulo": "La muerta que habla",
+     "director": "Candela Gonzalez, Agustín Fittipaldi",
+     "pais": "Argentina"
+    }
+   ],
+   "duracion_min": 120,
+   "_duracion_de": "hueco hasta la función siguiente de la sala"
+  },
+  {
+   "dia": "2026-11-13",
+   "hora": "16:30",
+   "sede": "Real Fábrica",
+   "sala": "Sala Blanca",
+   "seccion": "Competencia Escuelas",
+   "acceso": "Entrada libre (no se anuncia pago)",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfkomnaGQZw/",
+    "lamina": "02",
+    "date": "2026-11-10"
+   },
+   "titulo": "Competencia Escuelas 2",
+   "obras": [
+    {
+     "titulo": "Los lobo",
+     "director": "Saaed García",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Sol en Lidia",
+     "director": "Andrea Boggiano",
+     "pais": "Perú"
+    },
+    {
+     "titulo": "Términa",
+     "director": "Juan José Guevara",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Valsa para Maria Domingas",
+     "director": "Eugênia Santana",
+     "pais": "Brasil"
+    }
+   ],
+   "duracion_min": 90,
+   "_duracion_de": "hueco hasta la función siguiente de la sala"
+  },
+  {
+   "dia": "2026-11-13",
+   "hora": "18:00",
+   "sede": "Real Fábrica",
+   "sala": "Sala Blanca",
+   "seccion": "Competencia Corto Profesional Colombia",
+   "acceso": "Entrada libre (no se anuncia pago)",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfkomnaGQZw/",
+    "lamina": "02",
+    "date": "2026-11-10"
+   },
+   "titulo": "Competencia Corto / Col 1",
+   "obras": [
+    {
+     "titulo": "Chaski Pacha",
+     "director": "Ramiro Fierro",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Criatura",
+     "director": "Juan Pablo Ríos",
+     "pais": "Colombia"
+    }
+   ],
+   "duracion_min": 60,
+   "_duracion_de": "hueco hasta la función siguiente de la sala"
+  },
+  {
+   "dia": "2026-11-13",
+   "hora": "19:00",
+   "sede": "Real Fábrica",
+   "sala": "Sala Blanca",
+   "seccion": "Competencia Corto Internacional",
+   "acceso": "Entrada libre (no se anuncia pago)",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfkomnaGQZw/",
+    "lamina": "02",
+    "date": "2026-11-10"
+   },
+   "titulo": "Competencia Corto Internacional",
+   "obras": [
+    {
+     "titulo": "Armónica",
+     "director": "Michele Diniz",
+     "pais": "Brasil"
+    },
+    {
+     "titulo": "El derrumbe",
+     "director": "Iván Djeredjian",
+     "pais": "Argentina"
+    },
+    {
+     "titulo": "El silencio de la tierra",
+     "director": "Rogelio Escatel",
+     "pais": "México"
+    },
+    {
+     "titulo": "Las heridas",
+     "director": "Nicolás Llanos",
+     "pais": "Chile"
+    },
+    {
+     "titulo": "Los chorros",
+     "director": "Juan Manuel Álvarez",
+     "pais": "Argentina"
+    },
+    {
+     "titulo": "Yegua",
+     "director": "Virginia Scaro",
+     "pais": "Argentina"
+    }
+   ],
+   "duracion_min": 90,
+   "_duracion_de": "hueco hasta la función siguiente de la sala"
+  },
+  {
+   "dia": "2026-11-13",
+   "hora": "20:30",
+   "sede": "Real Fábrica",
+   "sala": "Sala Blanca",
+   "seccion": "Foco Reygadas",
+   "acceso": "Entrada libre (no se anuncia pago)",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfkomnaGQZw/",
+    "lamina": "02",
+    "date": "2026-11-10"
+   },
+   "titulo": "Foco Reygadas",
+   "duracion_min": 120,
+   "_duracion_de": "estimada: un largometraje de Carlos Reygadas; la lámina no dice cuál"
+  },
+  {
+   "dia": "2026-11-14",
+   "hora": "14:00",
+   "sede": "Real Fábrica",
+   "sala": "Sala Blanca",
+   "seccion": "Competencia Corto Profesional Colombia",
+   "acceso": "Entrada libre (no se anuncia pago)",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfkomnaGQZw/",
+    "lamina": "03",
+    "date": "2026-11-10"
+   },
+   "titulo": "Competencia Corto / Col 2",
+   "obras": [
+    {
+     "titulo": "Agachar el rostro",
+     "director": "Camilo Medina Noy",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Esquirlas de caracol",
+     "director": "Manuel Alejandro Sánchez",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Gris",
+     "director": "Loren Escandón",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Malas posturas",
+     "director": "Juan Pablo Castro",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Noche de vuelo",
+     "director": "Zacarías Flores del Campo",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Refracción",
+     "director": "Isabella Palacio",
+     "pais": "Colombia"
+    }
+   ]
+  },
+  {
+   "dia": "2026-11-14",
+   "hora": "18:30",
+   "sede": "Real Fábrica",
+   "sala": "Sala Blanca",
+   "seccion": "Competencia Oficial Largometraje",
+   "acceso": "Entrada libre (no se anuncia pago)",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfkomnaGQZw/",
+    "lamina": "03",
+    "date": "2026-11-10"
+   },
+   "titulo": "El fantasma",
+   "director": "Ignacio Masllorens, David Lamelas",
+   "pais": "Argentina"
+  },
+  {
+   "dia": "2026-11-14",
+   "hora": "21:00",
+   "sede": "Real Fábrica",
+   "sala": "Sala Blanca",
+   "seccion": "Foco Reygadas",
+   "acceso": "Entrada libre (no se anuncia pago)",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfkomnaGQZw/",
+    "lamina": "03",
+    "date": "2026-11-10"
+   },
+   "titulo": "Foco Reygadas",
+   "duracion_min": 120,
+   "_duracion_de": "estimada: un largometraje de Carlos Reygadas; la lámina no dice cuál"
+  },
+  {
+   "dia": "2026-11-15",
+   "hora": "14:00",
+   "sede": "Real Fábrica",
+   "sala": "Sala Blanca",
+   "seccion": "Competencia Oficial Largometraje",
+   "acceso": "Entrada libre (no se anuncia pago)",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfkomnaGQZw/",
+    "lamina": "03",
+    "date": "2026-11-10"
+   },
+   "titulo": "Las almas ni los ojos",
+   "director": "Canela Reyes, César Jaimes",
+   "pais": "Colombia"
+  },
+  {
+   "dia": "2026-11-15",
+   "hora": "15:30",
+   "sede": "Real Fábrica",
+   "sala": "Sala Blanca",
+   "seccion": "Competencia Oficial Largometraje",
+   "acceso": "Entrada libre (no se anuncia pago)",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfkomnaGQZw/",
+    "lamina": "03",
+    "date": "2026-11-10"
+   },
+   "titulo": "No nos moverán",
+   "director": "Pierre Saint-Martin",
+   "pais": "México",
+   "has_qa": true
+  },
+  {
+   "dia": "2026-11-15",
+   "hora": "18:00",
+   "sede": "Real Fábrica",
+   "sala": "Sala Blanca",
+   "seccion": "Competencia Oficial Largometraje",
+   "acceso": "Entrada libre (no se anuncia pago)",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfkomnaGQZw/",
+    "lamina": "03",
+    "date": "2026-11-10"
+   },
+   "titulo": "El jardín que soñamos",
+   "director": "Joaquín Del Paso",
+   "pais": "México"
+  },
+  {
+   "dia": "2026-11-13",
+   "hora": "14:00",
+   "sede": "Real Fábrica",
+   "sala": "Sala Rosada",
+   "seccion": "Competencia Largo Documental",
+   "acceso": "Entrada libre (no se anuncia pago)",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfkomnaGQZw/",
+    "lamina": "04",
+    "date": "2026-11-10"
+   },
+   "titulo": "Dama de las mil máscaras",
+   "director": "Wainer Méndez",
+   "pais": "Costa Rica"
+  },
+  {
+   "dia": "2026-11-13",
+   "hora": "15:30",
+   "sede": "Real Fábrica",
+   "sala": "Sala Rosada",
+   "seccion": "Competencia Largo Documental",
+   "acceso": "Entrada libre (no se anuncia pago)",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfkomnaGQZw/",
+    "lamina": "04",
+    "date": "2026-11-10"
+   },
+   "titulo": "El extraordinario viaje del dragón",
+   "director": "Kaori Flores Y.",
+   "pais": "Venezuela"
+  },
+  {
+   "dia": "2026-11-13",
+   "hora": "17:30",
+   "sede": "Real Fábrica",
+   "sala": "Sala Rosada",
+   "seccion": "Competencia Largo Documental",
+   "acceso": "Entrada libre (no se anuncia pago)",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfkomnaGQZw/",
+    "lamina": "04",
+    "date": "2026-11-10"
+   },
+   "titulo": "Notas sobre un destierro",
+   "director": "Gustavo Castro",
+   "pais": "Brasil"
+  },
+  {
+   "dia": "2026-11-13",
+   "hora": "19:00",
+   "sede": "Real Fábrica",
+   "sala": "Sala Rosada",
+   "seccion": "Competencia Largo Documental",
+   "acceso": "Entrada libre (no se anuncia pago)",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfkomnaGQZw/",
+    "lamina": "04",
+    "date": "2026-11-10"
+   },
+   "titulo": "Portento",
+   "director": "Gabriela Nápoles",
+   "pais": "México"
+  },
+  {
+   "dia": "2026-11-14",
+   "hora": "14:00",
+   "sede": "Real Fábrica",
+   "sala": "Sala Rosada",
+   "seccion": "Muestra Especial",
+   "acceso": "Entrada libre (no se anuncia pago)",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfkomnaGQZw/",
+    "lamina": "05",
+    "date": "2026-11-10"
+   },
+   "titulo": "Tres hermanas",
+   "director": "Joyce Ventura",
+   "pais": "Colombia"
+  },
+  {
+   "dia": "2026-11-14",
+   "hora": "18:30",
+   "sede": "Real Fábrica",
+   "sala": "Sala Rosada",
+   "seccion": "Competencia Corto Animación",
+   "acceso": "Entrada libre (no se anuncia pago)",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfkomnaGQZw/",
+    "lamina": "05",
+    "date": "2026-11-10"
+   },
+   "titulo": "Competencia Corto Animación",
+   "obras": [
+    {
+     "titulo": "A la sombra de los árboles",
+     "director": "Yulia Ivanova",
+     "pais": "Rusia"
+    },
+    {
+     "titulo": "Bumblebee",
+     "director": "Natalia Chernysheva",
+     "pais": "Rusia"
+    },
+    {
+     "titulo": "Cuna de lobas",
+     "director": "Emilia Schettino",
+     "pais": "México"
+    },
+    {
+     "titulo": "El cuerpo de Cristo",
+     "director": "Bea Lema",
+     "pais": "España"
+    },
+    {
+     "titulo": "Emechiche, el renacer de los cabeciblancos",
+     "director": "Juan Camilo González",
+     "pais": "Colombia, Argentina"
+    },
+    {
+     "titulo": "En la sombra de la garza",
+     "director": "Nicolas Bianco",
+     "pais": "Francia"
+    },
+    {
+     "titulo": "¡Florecerán!",
+     "director": "Claudia Ruiz",
+     "pais": "Argentina"
+    },
+    {
+     "titulo": "Merrimundi",
+     "director": "Niles Atallah",
+     "pais": "Chile"
+    },
+    {
+     "titulo": "Saba",
+     "director": "Liron Topaz",
+     "pais": "USA"
+    },
+    {
+     "titulo": "Una vez en un cuerpo",
+     "director": "María Cristina Pérez",
+     "pais": "Colombia"
+    }
+   ],
+   "duracion_min": 90,
+   "_duracion_de": "hueco hasta la función siguiente de la sala"
+  },
+  {
+   "dia": "2026-11-14",
+   "hora": "20:00",
+   "sede": "Real Fábrica",
+   "sala": "Sala Rosada",
+   "seccion": "Competencia Corto Experimental",
+   "acceso": "Entrada libre (no se anuncia pago)",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfkomnaGQZw/",
+    "lamina": "05",
+    "date": "2026-11-10"
+   },
+   "titulo": "Competencia Corto Experimental",
+   "obras": [
+    {
+     "titulo": "Ballena",
+     "director": "Ricardo Monteiro",
+     "pais": "Brasil, Cuba"
+    },
+    {
+     "titulo": "Chaika",
+     "director": "Ingrid Paola Bonilla",
+     "pais": "Colombia, Cuba"
+    },
+    {
+     "titulo": "“Convocatoria general del gremio”",
+     "director": "Bruna Pessoa",
+     "pais": "Brasil"
+    },
+    {
+     "titulo": "Cuarto de flores",
+     "director": "Sofía Guerrini",
+     "pais": "Argentina"
+    },
+    {
+     "titulo": "Día 1 Narita–Tokyo",
+     "director": "João Krefer",
+     "pais": "Japón"
+    },
+    {
+     "titulo": "Rol – El río se llevaba las manchas de la vida",
+     "director": "Selma Parreira",
+     "pais": "Brasil"
+    },
+    {
+     "titulo": "Zakih",
+     "director": "Sara Tavares",
+     "pais": "Brasil"
+    }
+   ]
+  },
+  {
+   "dia": "2026-11-15",
+   "hora": "14:00",
+   "sede": "Real Fábrica",
+   "sala": "Sala Rosada",
+   "seccion": "Competencia Corto Documental",
+   "acceso": "Entrada libre (no se anuncia pago)",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfkomnaGQZw/",
+    "lamina": "06",
+    "date": "2026-11-10"
+   },
+   "titulo": "Competencia Corto Documental 1",
+   "obras": [
+    {
+     "titulo": "Baile por la ciudad",
+     "director": "Rosana Dias",
+     "pais": "Brasil"
+    },
+    {
+     "titulo": "Claudete",
+     "director": "Gabriela Kopp",
+     "pais": "Brasil"
+    },
+    {
+     "titulo": "Eda",
+     "director": "Giovanna Tumini",
+     "pais": "Argentina"
+    },
+    {
+     "titulo": "Jeña",
+     "director": "Mónica Loza",
+     "pais": "México, Cuba"
+    }
+   ],
+   "duracion_min": 60,
+   "_duracion_de": "hueco hasta la función siguiente de la sala"
+  },
+  {
+   "dia": "2026-11-15",
+   "hora": "15:00",
+   "sede": "Real Fábrica",
+   "sala": "Sala Rosada",
+   "seccion": "Competencia Largo Documental",
+   "acceso": "Entrada libre (no se anuncia pago)",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfkomnaGQZw/",
+    "lamina": "06",
+    "date": "2026-11-10"
+   },
+   "titulo": "Sex panchitos",
+   "director": "Gustavo Gamou",
+   "pais": "México"
+  },
+  {
+   "dia": "2026-11-15",
+   "hora": "17:00",
+   "sede": "Real Fábrica",
+   "sala": "Sala Rosada",
+   "seccion": "Competencia Corto Documental",
+   "acceso": "Entrada libre (no se anuncia pago)",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfkomnaGQZw/",
+    "lamina": "06",
+    "date": "2026-11-10"
+   },
+   "titulo": "Competencia Corto Documental 2",
+   "obras": [
+    {
+     "titulo": "Las formas de la magia",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Lia",
+     "director": "Erika Piragauta",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Lo que no se puede borrar",
+     "director": "Iñaki Dubourg",
+     "pais": "Argentina"
+    },
+    {
+     "titulo": "Logos",
+     "director": "Britney Federline",
+     "pais": "Brasil"
+    },
+    {
+     "titulo": "Tragedia sentimental",
+     "director": "Juan Ferro",
+     "pais": "Colombia"
+    }
+   ],
+   "duracion_min": 90,
+   "_duracion_de": "hueco hasta la función siguiente de la sala"
+  },
+  {
+   "dia": "2026-11-15",
+   "hora": "18:30",
+   "sede": "Real Fábrica",
+   "sala": "Sala Rosada",
+   "seccion": "Muestra Especial",
+   "acceso": "Entrada libre (no se anuncia pago)",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfkomnaGQZw/",
+    "lamina": "06",
+    "date": "2026-11-10"
+   },
+   "titulo": "La paga",
+   "director": "Ciro Durán",
+   "pais": "Colombia, Venezuela",
+   "anio": 1962
+  }
+ ]
+}

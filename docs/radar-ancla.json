@@ -5153,8 +5153,10 @@
    "fechas_2026": "según issue #1248: «Festival Internacional de Cine de Villa de Leyva 20 — Villa de Leyva, 13–16 NOV 2026»",
    "web": "https://www.villadeleyvaiff.co",
    "ig": "@festcinevilla",
-   "estado": "radar",
-   "id_config": null,
+   "estado": "en_app",
+   "id_config": [
+    "villadeleyvaiff2026"
+   ],
    "issue": [
     1248
    ],

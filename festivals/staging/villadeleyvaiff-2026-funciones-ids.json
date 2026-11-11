@@ -1,0 +1,162 @@
+{
+ "_provenance": {
+  "fuente": "ensamblar.py: ids estables de las funciones (docs/FUNCION.md C1)",
+  "capturado": "2026-11-11"
+ },
+ "funciones": {
+  "f_4cd815d6b9": {
+   "sede": "Real Fábrica - Villa de Leyva",
+   "dia": "2026-11-13",
+   "hora": "14:30",
+   "sala": "Sala Blanca",
+   "titulo": "competencia escuelas 1"
+  },
+  "f_e66387460b": {
+   "sede": "Real Fábrica - Villa de Leyva",
+   "dia": "2026-11-13",
+   "hora": "16:30",
+   "sala": "Sala Blanca",
+   "titulo": "competencia escuelas 2"
+  },
+  "f_6cd76e4440": {
+   "sede": "Real Fábrica - Villa de Leyva",
+   "dia": "2026-11-13",
+   "hora": "18:00",
+   "sala": "Sala Blanca",
+   "titulo": "competencia corto col 1"
+  },
+  "f_b1d501c34b": {
+   "sede": "Real Fábrica - Villa de Leyva",
+   "dia": "2026-11-13",
+   "hora": "19:00",
+   "sala": "Sala Blanca",
+   "titulo": "competencia corto internacional"
+  },
+  "f_1d54fd4507": {
+   "sede": "Real Fábrica - Villa de Leyva",
+   "dia": "2026-11-13",
+   "hora": "20:30",
+   "sala": "Sala Blanca",
+   "titulo": "foco reygadas"
+  },
+  "f_8a20a4f65c": {
+   "sede": "Real Fábrica - Villa de Leyva",
+   "dia": "2026-11-14",
+   "hora": "14:00",
+   "sala": "Sala Blanca",
+   "titulo": "competencia corto col 2"
+  },
+  "f_c4da2e6aa6": {
+   "sede": "Real Fábrica - Villa de Leyva",
+   "dia": "2026-11-14",
+   "hora": "18:30",
+   "sala": "Sala Blanca",
+   "titulo": "el fantasma"
+  },
+  "f_bcf0d4d5aa": {
+   "sede": "Real Fábrica - Villa de Leyva",
+   "dia": "2026-11-14",
+   "hora": "21:00",
+   "sala": "Sala Blanca",
+   "titulo": "foco reygadas"
+  },
+  "f_5cda49570e": {
+   "sede": "Real Fábrica - Villa de Leyva",
+   "dia": "2026-11-15",
+   "hora": "14:00",
+   "sala": "Sala Blanca",
+   "titulo": "las almas ni los ojos"
+  },
+  "f_1ae3d7390c": {
+   "sede": "Real Fábrica - Villa de Leyva",
+   "dia": "2026-11-15",
+   "hora": "15:30",
+   "sala": "Sala Blanca",
+   "titulo": "no nos moveran"
+  },
+  "f_ec3e4f703c": {
+   "sede": "Real Fábrica - Villa de Leyva",
+   "dia": "2026-11-15",
+   "hora": "18:00",
+   "sala": "Sala Blanca",
+   "titulo": "el jardin que sonamos"
+  },
+  "f_5493877e8e": {
+   "sede": "Real Fábrica - Villa de Leyva",
+   "dia": "2026-11-13",
+   "hora": "14:00",
+   "sala": "Sala Rosada",
+   "titulo": "dama de las mil mascaras"
+  },
+  "f_ad5ff34867": {
+   "sede": "Real Fábrica - Villa de Leyva",
+   "dia": "2026-11-13",
+   "hora": "15:30",
+   "sala": "Sala Rosada",
+   "titulo": "el extraordinario viaje del dragon"
+  },
+  "f_2aaadbc1d5": {
+   "sede": "Real Fábrica - Villa de Leyva",
+   "dia": "2026-11-13",
+   "hora": "17:30",
+   "sala": "Sala Rosada",
+   "titulo": "notas sobre un destierro"
+  },
+  "f_f5301b31d9": {
+   "sede": "Real Fábrica - Villa de Leyva",
+   "dia": "2026-11-13",
+   "hora": "19:00",
+   "sala": "Sala Rosada",
+   "titulo": "portento"
+  },
+  "f_1d26f87d2a": {
+   "sede": "Real Fábrica - Villa de Leyva",
+   "dia": "2026-11-14",
+   "hora": "14:00",
+   "sala": "Sala Rosada",
+   "titulo": "tres hermanas"
+  },
+  "f_67e67ce536": {
+   "sede": "Real Fábrica - Villa de Leyva",
+   "dia": "2026-11-14",
+   "hora": "18:30",
+   "sala": "Sala Rosada",
+   "titulo": "competencia corto animacion"
+  },
+  "f_c5136ce7fd": {
+   "sede": "Real Fábrica - Villa de Leyva",
+   "dia": "2026-11-14",
+   "hora": "20:00",
+   "sala": "Sala Rosada",
+   "titulo": "competencia corto experimental"
+  },
+  "f_e3521cfc28": {
+   "sede": "Real Fábrica - Villa de Leyva",
+   "dia": "2026-11-15",
+   "hora": "14:00",
+   "sala": "Sala Rosada",
+   "titulo": "competencia corto documental 1"
+  },
+  "f_1c4e62f7b9": {
+   "sede": "Real Fábrica - Villa de Leyva",
+   "dia": "2026-11-15",
+   "hora": "15:00",
+   "sala": "Sala Rosada",
+   "titulo": "sex panchitos"
+  },
+  "f_e993b10a9c": {
+   "sede": "Real Fábrica - Villa de Leyva",
+   "dia": "2026-11-15",
+   "hora": "17:00",
+   "sala": "Sala Rosada",
+   "titulo": "competencia corto documental 2"
+  },
+  "f_65f1bbbd73": {
+   "sede": "Real Fábrica - Villa de Leyva",
+   "dia": "2026-11-15",
+   "hora": "18:30",
+   "sala": "Sala Rosada",
+   "titulo": "la paga"
+  }
+ }
+}

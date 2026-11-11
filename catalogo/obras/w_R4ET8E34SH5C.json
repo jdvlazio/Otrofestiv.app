@@ -26,14 +26,22 @@
   "archivo": "https://image.tmdb.org/t/p/w500/g4ibgfPUUcDjFQM3gPI377Z847p.jpg",
   "veredicto": "oficial"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 1546645,
+  "letterboxd": "tres-hermanas"
+ },
  "versiones": [
+  {
+   "etiqueta": "79 min",
+   "duracion_min": 79
+  },
   {
    "etiqueta": "80 min",
    "duracion_min": 80
   }
  ],
  "presentaciones": [
-  "cinemancia-2025"
+  "cinemancia-2025",
+  "villadeleyvaiff-2026"
  ]
 }
