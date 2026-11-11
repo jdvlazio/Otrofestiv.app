@@ -48,6 +48,8 @@ crudo = json.load(io.open(f'{REPO}/festivals/staging/{FID}-crudo.json', encoding
 build = json.load(io.open(f'{REPO}/festivals/staging/{FID}-build.json', encoding='utf-8'))
 afs = json.load(io.open(f'{REPO}/festivals/staging/{FID}-afirmaciones.json', encoding='utf-8'))['afirmaciones']
 movida = {(a['ancla']['dia'], a['valor']): a['ancla']['hora'] for a in afs if a['casilla'] == 'time'}
+# la duración afirmada (la pieza del Encuentro, 11 nov) manda sobre la de la agenda
+dur_af = {(a['ancla']['dia'], a['ancla']['hora']): a['valor'] for a in afs if a['casilla'] == 'duration'}
 
 por_ancla = {(f['dia'], f['hora']): f for f in crudo['funciones']}
 fallos, franjas_pub = [], set()
@@ -64,8 +66,9 @@ for f in build['films']:
             fallos.append(f'{nombre}: no está la franja «{franja}» de {f["title"]}')
         if k(act) not in txt and not (nombre.startswith('C') and act in OCR_NO_LEE):
             fallos.append(f'{nombre}: no está «{act}»')
-    if f.get('duration') != f'{c["duracion_min"]} min':
-        fallos.append(f'duración: {f["title"]} {f.get("duration")} ≠ {c["duracion_min"]} min')
+    esperada = dur_af.get((f['day'], hora), f'{c["duracion_min"]} min')
+    if f.get('duration') != esperada:
+        fallos.append(f'duración: {f["title"]} {f.get("duration")} ≠ {esperada}')
 
 # cobertura inversa: cada franja impresa en B (horas a. m./p. m.) está publicada o declarada fuera
 impresas = re.findall(r'(\d{1,2}:\d{2}[ap]m)(\d{1,2}:\d{2}[ap]?m)', B)

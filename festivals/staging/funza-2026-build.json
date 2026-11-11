@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "Agenda general actualizada del IV Festival de Cine (PDF del festival a Juan, 25 oct 2026)",
-  "capturado": "2026-10-25",
+  "capturado": "2026-11-11",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_secciones": "Sección = el «Componente» de la agenda, verbatim y en caja de Título (pedido de Juan, 25 oct).",
@@ -640,7 +640,7 @@
    }
   },
   {
-   "title": "Panel comunicación nuevas narrativas",
+   "title": "Panel: Comunicación y nuevas narrativas",
    "type": "event",
    "section": "📡 Comunicaciones",
    "duration": "90 min",
@@ -697,8 +697,9 @@
      "fecha": "2026-10-25"
     },
     "title": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-25"
+     "tipo": "juan",
+     "fecha": "2026-11-11",
+     "frase": "en el desktop algo que envió Funza para cargar en la app"
     },
     "type": {
      "tipo": "festival-web",
@@ -777,7 +778,7 @@
    }
   },
   {
-   "title": "Panel cine desde región",
+   "title": "Panel: Cine desde región",
    "type": "event",
    "section": "🎥 Audiovisuales / Cine",
    "duration": "90 min",
@@ -834,8 +835,9 @@
      "fecha": "2026-10-25"
     },
     "title": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-25"
+     "tipo": "juan",
+     "fecha": "2026-11-11",
+     "frase": "en el desktop algo que envió Funza para cargar en la app"
     },
     "type": {
      "tipo": "festival-web",
@@ -848,7 +850,7 @@
    }
   },
   {
-   "title": "Conferencia fotografía y territorio",
+   "title": "Conferencia: Fotografía y territorio",
    "type": "event",
    "section": "📷 Fotografía / Narrativas",
    "duration": "75 min",
@@ -905,8 +907,9 @@
      "fecha": "2026-10-25"
     },
     "title": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-25"
+     "tipo": "juan",
+     "fecha": "2026-11-11",
+     "frase": "en el desktop algo que envió Funza para cargar en la app"
     },
     "type": {
      "tipo": "festival-web",
@@ -919,7 +922,7 @@
    }
   },
   {
-   "title": "Charla app de festivales de cine",
+   "title": "Charla: App de festivales de cine",
    "type": "event",
    "section": "📱 Circulación / Industria",
    "duration": "45 min",
@@ -976,8 +979,9 @@
      "fecha": "2026-10-25"
     },
     "title": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-25"
+     "tipo": "juan",
+     "fecha": "2026-11-11",
+     "frase": "en el desktop algo que envió Funza para cargar en la app"
     },
     "type": {
      "tipo": "festival-web",
@@ -993,7 +997,7 @@
    "title": "Rueda de negocios audiovisual",
    "type": "event",
    "section": "📱 Circulación / Industria",
-   "duration": "60 min",
+   "duration": "90 min",
    "_ancla": [
     "Centro Cultural Bacatá - Funza",
     "2026-11-20",
@@ -1031,8 +1035,9 @@
      "fecha": "2026-10-25"
     },
     "duration": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-25"
+     "tipo": "juan",
+     "fecha": "2026-11-11",
+     "frase": "en el desktop algo que envió Funza para cargar en la app"
     },
     "entrada": {
      "tipo": "festival-web",
@@ -1411,7 +1416,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-25T10:31:07",
+  "fecha": "2026-11-11T13:34:45",
   "plan_sha": "f88fc562837e7b4f",
   "paso": 6,
   "cmd": "python3 pipeline/funza-2026-verificar.py"

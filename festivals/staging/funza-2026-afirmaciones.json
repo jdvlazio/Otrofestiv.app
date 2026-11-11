@@ -20,6 +20,96 @@
    },
    "evidencia": "agenda p. 2: «21 de noviembre de 2026 · 10:30 p. m. – 11:30 p. m. · Exhibición cinematográfica · Proyección HORIZONTES · 125 min»",
    "contra": "22:30"
+  },
+  {
+   "ancla": {
+    "sede": "Centro Cultural Bacatá - Funza",
+    "dia": "2026-11-20",
+    "hora": "09:00"
+   },
+   "funcion": "f_15d4067239",
+   "fuente": {
+    "tipo": "juan",
+    "fecha": "2026-11-11",
+    "frase": "en el desktop algo que envió Funza para cargar en la app",
+    "archivo": "fuentes/funza-2026/pieza-agenda-encuentro-departamental.png"
+   },
+   "casilla": "title",
+   "valor": "Panel: Comunicación y nuevas narrativas",
+   "evidencia": "pieza «Programación Primer Encuentro Departamental de Cine y Comunicaciones» (enviada por el festival, 11 nov): «Panel: Comunicación y nuevas narrativas»",
+   "contra": "Panel comunicación nuevas narrativas"
+  },
+  {
+   "ancla": {
+    "sede": "Centro Cultural Bacatá - Funza",
+    "dia": "2026-11-20",
+    "hora": "10:45"
+   },
+   "funcion": "f_d9a7e52bb9",
+   "fuente": {
+    "tipo": "juan",
+    "fecha": "2026-11-11",
+    "frase": "en el desktop algo que envió Funza para cargar en la app",
+    "archivo": "fuentes/funza-2026/pieza-agenda-encuentro-departamental.png"
+   },
+   "casilla": "title",
+   "valor": "Panel: Cine desde región",
+   "evidencia": "pieza «Programación Primer Encuentro Departamental de Cine y Comunicaciones» (enviada por el festival, 11 nov): «Panel: Cine desde región»",
+   "contra": "Panel cine desde región"
+  },
+  {
+   "ancla": {
+    "sede": "Centro Cultural Bacatá - Funza",
+    "dia": "2026-11-20",
+    "hora": "13:30"
+   },
+   "funcion": "f_31e336c377",
+   "fuente": {
+    "tipo": "juan",
+    "fecha": "2026-11-11",
+    "frase": "en el desktop algo que envió Funza para cargar en la app",
+    "archivo": "fuentes/funza-2026/pieza-agenda-encuentro-departamental.png"
+   },
+   "casilla": "title",
+   "valor": "Conferencia: Fotografía y territorio",
+   "evidencia": "pieza «Programación Primer Encuentro Departamental de Cine y Comunicaciones» (enviada por el festival, 11 nov): «Conferencia: Fotografía y territorio»",
+   "contra": "Conferencia fotografía y territorio"
+  },
+  {
+   "ancla": {
+    "sede": "Centro Cultural Bacatá - Funza",
+    "dia": "2026-11-20",
+    "hora": "14:45"
+   },
+   "funcion": "f_6f19c59638",
+   "fuente": {
+    "tipo": "juan",
+    "fecha": "2026-11-11",
+    "frase": "en el desktop algo que envió Funza para cargar en la app",
+    "archivo": "fuentes/funza-2026/pieza-agenda-encuentro-departamental.png"
+   },
+   "casilla": "title",
+   "valor": "Charla: App de festivales de cine",
+   "evidencia": "pieza «Programación Primer Encuentro Departamental de Cine y Comunicaciones» (enviada por el festival, 11 nov): «Charla: App de festivales de cine»",
+   "contra": "Charla app de festivales de cine"
+  },
+  {
+   "ancla": {
+    "sede": "Centro Cultural Bacatá - Funza",
+    "dia": "2026-11-20",
+    "hora": "15:30"
+   },
+   "funcion": "f_b268a9ede5",
+   "fuente": {
+    "tipo": "juan",
+    "fecha": "2026-11-11",
+    "frase": "en el desktop algo que envió Funza para cargar en la app",
+    "archivo": "fuentes/funza-2026/pieza-agenda-encuentro-departamental.png"
+   },
+   "casilla": "duration",
+   "valor": "90 min",
+   "evidencia": "pieza del Encuentro (11 nov): «3:30 p. m. – 5:00 p. m. Rueda de negocios audiovisual»; «Rueda de negocios audiovisual: 3:30 p. m. – 5:00 p. m.»",
+   "contra": "60 min"
   }
  ]
 }
