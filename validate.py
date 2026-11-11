@@ -4166,6 +4166,54 @@ except Exception as _e:
 # sin duración (contenedor '' + cortos sin minutaje; el PDF de prensa no publica
 # runtimes). Enforce SOLO festivales activos/próximos (los archivados quedan como
 # histórico). Excepción documentada = dato que la organización aún no entregó.
+# ── [obra-sin-pais] toda obra de un festival vivo lleva su país (bandera) ──────
+# Juan, 11 nov 2026: «siguen apareciendo en la app películas sin bandera, eso no
+# debería estar ocurriendo». Basta Mamá salió sin país en Guatapé y en Funza, y en
+# los festivales vivos había 21 obras así; ningún guardián lo frenaba. Misma
+# mecánica que los afiches: o la obra trae `country`, o su porqué está declarado en
+# festivals/staging/<fid>-correcciones.json → "sin_pais": {título: {"_por_que": …}}
+# (por título de la obra o de su programa). Un programa sin obras nombradas
+# («Foco Reygadas») también se declara: no hay obra a la que ponerle bandera.
+def _obras_sin_pais(festival, sin_pais):
+    out = []
+    for _f in festival.get('films', []):
+        if _f.get('type') != 'film':
+            continue
+        _lista = [x for x in (_f.get('film_list') or []) if isinstance(x, dict)]
+        for _x in (_lista or [_f]):
+            if _x.get('country') or _x.get('title') in sin_pais or _f.get('title') in sin_pais:
+                continue
+            out.append(_x.get('title') or '?')
+    return sorted(set(out))
+
+check = 'obra-sin-pais'
+try:
+    import json as _jsp, os as _osp
+    _cebo = {'films': [{'type': 'film', 'title': 'Con', 'country': 'Colombia'},
+                       {'type': 'film', 'title': 'Sin'},
+                       {'type': 'film', 'title': 'Programa', 'film_list': [{'title': 'Corto sin'}, {'title': 'Corto con', 'country': 'Chile'}]},
+                       {'type': 'event', 'title': 'Charla'},
+                       {'type': 'film', 'title': 'Declarada'}]}
+    if _obras_sin_pais(_cebo, {'Declarada': {}}) != ['Corto sin', 'Sin']:
+        fail(check, 'el guardián no distingue el cebo')
+    else:
+        _sp = []
+        for _fid in _festivalesVivos():
+            _fp = f'festivals/{_fid}.json'
+            if not _osp.path.exists(_fp):
+                continue
+            _cp = f'festivals/staging/{_fid}-correcciones.json'
+            _decl = (_jsp.load(open(_cp, encoding='utf-8')).get('sin_pais') or {}) if _osp.path.exists(_cp) else {}
+            _malas = _obras_sin_pais(_jsp.load(open(_fp, encoding='utf-8')), _decl)
+            if _malas:
+                _sp.append(f'{_fid}: {len(_malas)} ({", ".join(_malas[:4])})')
+        if _sp:
+            fail(check, 'obras sin país ni porqué en `sin_pais` de <fid>-correcciones.json — ' + ' · '.join(_sp))
+        else:
+            ok(check, 'toda obra de los festivales vivos lleva país o su porqué declarado')
+except Exception as _e:
+    fail(check, f'el guardián no pudo correr: {_e}')
+
 check = 'activity-duration'
 try:
     import json as _json
