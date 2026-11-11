@@ -5273,8 +5273,10 @@
    "fechas_2026": "11–16 NOV 2026 (13ª)",
    "web": "https://ficfusa.com/",
    "ig": "@ficfusa_festival",
-   "estado": "radar",
-   "id_config": null,
+   "estado": "en_app",
+   "id_config": [
+    "ficfusa2026"
+   ],
    "issue": [
     1032
    ],

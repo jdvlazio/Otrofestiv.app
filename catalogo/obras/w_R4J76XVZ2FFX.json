@@ -6,7 +6,7 @@
   "CO"
  ],
  "directores": [
-  "Sara J. Asprilla"
+  "Sara J. Asprilla Palomino"
  ],
  "sinopsis": {
   "es": "Teyo, una chica trans, se prepara para empezar en su nuevo colegio exclusivo para chicas. Mientras recorre Quibdó, una ciudad cálida y vibrante, sortea los ritmos y las miradas que la reciben antes de entrar a clase.",
@@ -16,10 +16,11 @@
   "Ficción"
  ],
  "afiche": {
-  "archivo": "/assets/qaff/kanekalon.jpg",
-  "veredicto": "oficial-festival"
+  "archivo": "/assets/ficfusa-2026/kanekalon.jpg",
+  "veredicto": "oficial"
  },
  "xref": {
+  "tmdb": 1454683,
   "letterboxd": "kanekalon"
  },
  "versiones": [
@@ -29,6 +30,7 @@
   }
  ],
  "presentaciones": [
+  "ficfusa-2026",
   "ficmontanas-2026",
   "qaff-2026"
  ]

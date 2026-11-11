@@ -27,6 +27,21 @@
   },
   "Ir hacia adentro": {
    "_por_que": "sin ficha en TMDB; Anibia la publicó sin afiche; lo único publicado es la tarjeta de selección de FICFUSA (fotograma con su marca), que no es el afiche oficial (4 nov)"
+  },
+  "Tejiendo Herencia": {
+   "_por_que": "obra de la muestra invitada «Serie Campe-Cine», fuera del catálogo de la web; sin ficha en la cascada TMDB (11 nov 2026). Búsqueda web pendiente: el festival ya estaba en curso."
+  },
+  "Vuelo de una Glondrina": {
+   "_por_que": "obra de la muestra invitada «Serie Campe-Cine», fuera del catálogo de la web; sin ficha en la cascada TMDB (11 nov 2026). Búsqueda web pendiente: el festival ya estaba en curso."
+  },
+  "huellas": {
+   "_por_que": "obra de la muestra invitada «Serie Campe-Cine», fuera del catálogo de la web; sin ficha en la cascada TMDB (11 nov 2026). Búsqueda web pendiente: el festival ya estaba en curso."
+  },
+  "Hytcha": {
+   "_por_que": "obra de la muestra invitada «Serie Campe-Cine», fuera del catálogo de la web; sin ficha en la cascada TMDB (11 nov 2026). Búsqueda web pendiente: el festival ya estaba en curso."
+  },
+  "Inmarcesible": {
+   "_por_que": "tampoco tiene afiche donde ya la publicamos (CineAutopsia 2026); obra de la muestra «Vestigios e Invocaciones»"
   }
  },
  "fichas": {
@@ -106,6 +121,48 @@
   },
   "Puntos de fuga": {
    "_por_que": "No es la de FICCI 65 (Leo Schatzl, 2005): esta es de Lina Rodríguez, 2025."
+  }
+ },
+ "misma_obra": {
+  "Mu-ki-ra": {
+   "festival": "miradas-2026",
+   "titulo": "Mu-ki-ra",
+   "_por_que": "la película de apertura (Estefanía Piñeres, DfhVjPnkSez) es la misma que publicamos en Miradas 2026 con TMDB 1446898; no está en el catálogo de la web"
+  },
+  "Tamashi": {
+   "festival": "cineautopsia-2026",
+   "titulo": "Tamashi",
+   "_por_que": "misma curaduría experimental; el pie no da director — pie de https://www.instagram.com/p/DfaNEWSERxC/ (curaduría de Julián Medina, Festival de Cine Experimental de Bogotá)"
+  },
+  "Mal de Tierra": {
+   "festival": "miradas-2026",
+   "titulo": "Mal de tierra",
+   "_por_que": "el pie: «Dir. Camila Caballero y Sara Idárraga» — pie de https://www.instagram.com/p/DfaNEWSERxC/ (curaduría de Julián Medina, Festival de Cine Experimental de Bogotá) · se hereda de Miradas, que tiene la ficha TMDB 1758059 (Camila Caballero Guzmán)"
+  },
+  "Allegory of the Cave": {
+   "festival": "cineautopsia-2026",
+   "titulo": "Allegory of the Cave",
+   "_por_que": "misma curaduría experimental; el pie no da director — pie de https://www.instagram.com/p/DfaNEWSERxC/ (curaduría de Julián Medina, Festival de Cine Experimental de Bogotá)"
+  },
+  "Inmarcesible": {
+   "festival": "cineautopsia-2026",
+   "titulo": "Inmarcesible",
+   "_por_que": "el pie: «Dir. Juan S. Parra» — pie de https://www.instagram.com/p/DfaNEWSERxC/ (curaduría de Julián Medina, Festival de Cine Experimental de Bogotá)"
+  },
+  "Abjad Hawaz": {
+   "festival": "cineautopsia-2026",
+   "titulo": "Abjad Hawaz",
+   "_por_que": "el pie: «Dir. Hadi Moussally» — pie de https://www.instagram.com/p/DfaNEWSERxC/ (curaduría de Julián Medina, Festival de Cine Experimental de Bogotá)"
+  },
+  "Decaer": {
+   "festival": "anibia-2026",
+   "titulo": "Decaer",
+   "_por_que": "el pie: «Dir. Juan Camilo González» — pie de https://www.instagram.com/p/DfaNEWSERxC/ (curaduría de Julián Medina, Festival de Cine Experimental de Bogotá)"
+  },
+  "Anoche a la media noche": {
+   "festival": "festicinerio-2026",
+   "titulo": "Anoche a la Media Noche",
+   "_por_que": "el pie: «Ricardo Muñoz Izquierdo» — pie de https://www.instagram.com/p/DfaNEWSERxC/ (curaduría de Julián Medina, Festival de Cine Experimental de Bogotá)"
   }
  }
 }

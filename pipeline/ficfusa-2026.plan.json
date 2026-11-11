@@ -1,5 +1,5 @@
 {
- "_nota": "FICFUSA 2026 — 13.ª versión del Festival Internacional de Cine de Fusagasugá (11–16 nov 2026). PRE-ONBOARDING: la web declara 62 obras (42 en competencia, 20 fuera) y al 4 nov publica 53 tarjetas. La programación solo trae el 11 nov. Faltan 9 obras y la parrilla del 12 al 16; luego crudo/enriquecer/ensamblar, en el modelo de la función (docs/FUNCION.md).",
+ "_nota": "FICFUSA 2026 — 13.ª versión del Festival Internacional de Cine de Fusagasugá (11–16 nov 2026). Catálogo: la web (53 de 62 obras). Programación: web /programacion/ + un post de IG por día (6, 7, 8, 10 y 11 nov), transcritos en ficfusa-2026-programacion-oficial.json. MONTADO el 11 nov con el 11–14; el 15 y el 16 no están publicados. Radar #1032.",
  "radar": 1032,
  "pasos": [
   {
@@ -9,6 +9,26 @@
   {
    "cmd": "python3 pipeline/enriquecer_catalogo.py festivals/staging/ficfusa-2026-catalogo.json",
    "que": "la cascada de TMDB (candado de enriquecer.py) y lo ya publicado → catálogo enriquecido"
+  },
+  {
+   "cmd": "python3 pipeline/ficfusa-2026-crudo.py",
+   "que": "la programación transcrita + catálogo → crudo"
+  },
+  {
+   "cmd": "python3 pipeline/enriquecer.py ficfusa-2026 --posters",
+   "que": "TMDB verificado + la cascada + afiches a assets/"
+  },
+  {
+   "cmd": "python3 pipeline/ensamblar.py ficfusa-2026",
+   "que": "crudo + plan → build"
+  },
+  {
+   "cmd": "python3 pipeline/encuadrar-posters.py ficfusa-2026 --aplicar --desde festivals/staging/ficfusa-2026-build.json",
+   "que": "los afiches a 2:3"
+  },
+  {
+   "cmd": "python3 pipeline/ficfusa-2026-verificar.py",
+   "que": "el build contra la transcripción, en los dos sentidos, y cada sede con pin"
   }
  ],
  "_fuentes_versionadas": {
@@ -16,6 +36,91 @@
   "festivals/staging/ficfusa-2026-catalogo-enriquecido.json": "las fichas TMDB/cascada, que escribe el paso 2",
   "festivals/staging/ficfusa-2026-correcciones.json": "sin_afiche: el porqué de la obra sin afiche; lo leen pipeline/preonboarding.py y, con la parrilla, enriquecer.py/ensamblar.py",
   "festivals/staging/ficfusa-2026-programacion-oficial.json": "lo que /programacion/ publica (3 entradas del 11 nov), sin montar",
-  "festivals/staging/ficfusa-2026-sinopsis.json": "sinopsis declaradas: reuso de lo publicado y traducciones nuestras"
+  "festivals/staging/ficfusa-2026-sinopsis.json": "sinopsis declaradas: reuso de lo publicado y traducciones nuestras",
+  "festivals/staging/ficfusa-2026-crudo.json": "el formato intermedio",
+  "festivals/staging/ficfusa-2026-enriquecido.json": "fichas y afiches de las obras de las funciones",
+  "festivals/staging/ficfusa-2026-venues-geo.json": "los pines, Google Maps 11 nov"
+ },
+ "fuentes_vivas": [],
+ "_nota_fuentes_vivas": "La programación sale de un post de IG por día; el vigía mira @ficfusa_festival.",
+ "festival": {
+  "radar": 1032,
+  "fuente_principal": "festival-ig",
+  "crudo": "festivals/staging/ficfusa-2026-crudo.json",
+  "enriquecido": "festivals/staging/ficfusa-2026-enriquecido.json",
+  "geo": "festivals/staging/ficfusa-2026-venues-geo.json",
+  "_por_que_sedes": "La sede como la nombra el festival; los pines de Google Maps.",
+  "sedes": {
+   "Cinema Los Ángeles": [
+    "Cinema Los Ángeles - Fusagasugá",
+    ""
+   ],
+   "Quinta Balmoral": [
+    "Quinta Balmoral - Fusagasugá",
+    ""
+   ],
+   "Casona Tierra Grata": [
+    "Casona Tierra Grata - Fusagasugá",
+    ""
+   ],
+   "CIIS": [
+    "Centro de Integración e Innovación Social - Fusagasugá",
+    ""
+   ],
+   "Hacienda El Novillero": [
+    "Hacienda El Novillero - Fusagasugá",
+    ""
+   ]
+  },
+  "_por_que_secciones": "El formato de cada actividad tal como lo nombra el festival. Emoji e inglés: propuesta, a confirmar con Juan.",
+  "secciones": {
+   "Proyección": {
+    "emoji": "🎬",
+    "en": "Screening",
+    "archetype": "Cortos / Programas"
+   },
+   "Proyección y conversatorio": {
+    "emoji": "💬",
+    "en": "Screening + Talk",
+    "archetype": "Cortos / Programas"
+   },
+   "Película de apertura": {
+    "emoji": "✨",
+    "en": "Opening Film",
+    "archetype": "Especiales / Eventos"
+   },
+   "Charla": {
+    "emoji": "🎤",
+    "en": "Talk",
+    "archetype": "Charlas / Industria"
+   },
+   "Taller": {
+    "emoji": "🛠️",
+    "en": "Workshop",
+    "archetype": "Charlas / Industria"
+   },
+   "Evento": {
+    "emoji": "🎉",
+    "en": "Event",
+    "archetype": "Especiales / Eventos"
+   }
+  },
+  "name": "FICFUSA",
+  "displayName": "FICFUSA",
+  "fullName": "FICFUSA 2026 — Festival Internacional de Cine de Fusagasugá",
+  "shortName": "FICFUSA",
+  "tagline": "Festival Internacional de Cine de Fusagasugá",
+  "city": "Fusagasugá",
+  "country": "CO",
+  "dates": "11–16 NOV",
+  "dates_en": "NOV 11–16",
+  "year": 2026,
+  "timezoneOffset": "-05:00",
+  "storageKey": "ficfusa2026_",
+  "festivalStartStr": "2026-11-11T00:00:00",
+  "festivalEndStr": "2026-11-16T23:59:00",
+  "sharedSlotIsOneScreening": true,
+  "mes_es": "noviembre",
+  "dias_vacios": []
  }
 }

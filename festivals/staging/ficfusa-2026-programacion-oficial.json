@@ -5,7 +5,7 @@
   "publicado": "2026-11-03T01:19:37",
   "metodo": "HTML de la página; a mano"
  },
- "_nota": "Parcial: 11 nov (web + IG 6 nov), 12 nov (IG 7 nov) y 13 nov (IG 8 nov); la charla del 14 nov viene de Instagram. Transcrito sin montar. Faltan 14 (resto), 15 y 16 nov.",
+ "_nota": "Parcial: 11 nov (web + IG 6 nov; confirmado por el post del día, Dfma5V8EbTn), 12 nov (IG 7 nov), 13 nov (IG 8 nov) y 14 nov (pie de DfkS3CukdJ7, 10 nov). Faltan 15 y 16 nov.",
  "funciones": [
   {
    "fecha": "2026-11-11",
@@ -64,13 +64,15 @@
   },
   {
    "fecha": "2026-11-11",
-   "hora": "16:30",
-   "fin": "17:30",
+   "hora": "11:00",
+   "fin": "12:00",
    "sede": "Quinta Balmoral",
    "titulo": "El reto del audio inmersivo en el cine colombiano",
    "formato": "Charla",
    "invitados": "Por Luis Santiesteban",
-   "obras": []
+   "obras": [],
+   "fuente": "https://www.instagram.com/p/Dfkx4BenLT3/ (10 nov): «Hora: 11:00 a.m.»; manda sobre la web (16:30–17:30, que daba 1 h)",
+   "_duracion_por_que": "1 h, la que daba la web"
   },
   {
    "fecha": "2026-11-11",
@@ -224,19 +226,129 @@
    "formato": "Evento",
    "invitados": "Proyección de cortometrajes + Barro Eléctrico A/V_EXP LIVE ACT, Tricofero de Barro (Elviro) + LED",
    "obras": [],
-   "fuente": "https://www.instagram.com/p/Dff7g10EXSd/ (8 nov, láminas 1–3 leídas); la lámina no da hora de fin ni qué cortos"
+   "fuente": "https://www.instagram.com/p/Dff7g10EXSd/ (8 nov, láminas 1–3 leídas); la lámina no da hora de fin ni qué cortos",
+   "fin": "19:30",
+   "_duracion_por_que": "estimada: la fuente no da hora de fin (60 min, el último del día)"
   },
   {
    "fecha": "2026-11-14",
-   "hora": "14:30",
+   "hora": "09:00",
+   "fin": "12:00",
    "sede": "Quinta Balmoral",
-   "titulo": "Entre ideas y planos: «El espejo de la vida»",
+   "titulo": "Masterclass: Actuación del subtexto y el lenguaje no verbal",
+   "formato": "Taller",
+   "acceso": "Gratuito con previa inscripción",
+   "invitados": "Con Carlos «Fagua» Medina, director de casting y preparador de actores",
+   "obras": [],
+   "fuente": "https://www.instagram.com/p/DfkS3CukdJ7/ (10 nov, pie)"
+  },
+  {
+   "fecha": "2026-11-14",
+   "hora": "10:00",
+   "fin": "12:00",
+   "sede": "Cinema Los Ángeles",
+   "titulo": "Proyección y conversatorio",
+   "obras": [
+    "Entrelazadas",
+    "Relatos del camino",
+    "La peluquería no se cierra"
+   ],
+   "invitados": "Conversatorio vía Meet con Vanessa Valdemoros, directora de La peluquería no se cierra",
+   "fuente": "https://www.instagram.com/p/DfkS3CukdJ7/ (10 nov, pie)"
+  },
+  {
+   "fecha": "2026-11-14",
+   "hora": "10:00",
+   "fin": "11:30",
+   "sede": "Por definir",
+   "titulo": "Taller: Autorretrato como una herramienta para la salud menstrual",
+   "formato": "Taller",
+   "invitados": "Con Tephy Piedrahita y Juliana Nieto",
+   "obras": [],
+   "fuente": "https://www.instagram.com/p/DfkS3CukdJ7/ (10 nov, pie); el pie no da sede"
+  },
+  {
+   "fecha": "2026-11-14",
+   "hora": "12:00",
+   "fin": "14:00",
+   "sede": "Cinema Los Ángeles",
+   "titulo": "Proyección y conversatorio",
+   "obras": [
+    "La mona",
+    "La"
+   ],
+   "invitados": "Conversatorio con Tephy Piedrahita, directora de LA",
+   "fuente": "https://www.instagram.com/p/DfkS3CukdJ7/ (10 nov, pie)"
+  },
+  {
+   "fecha": "2026-11-14",
+   "hora": "14:00",
+   "fin": "15:00",
+   "sede": "Quinta Balmoral",
+   "titulo": "Entre ideas y planos: El espejo de la vida",
    "formato": "Charla",
    "acceso": "Gratis",
-   "invitados": "Por Simón Sánchez (director) y Santiago Cruz (productor)",
+   "invitados": "Con Simón Sánchez y Santiago Cruz",
    "obras": [],
-   "direccion": "Transversal 12 #18b – 54, Fusagasugá",
-   "fuente": "https://www.instagram.com/p/DfZuMvzxdp6/ (6 nov, pie y portada a ojo); la portada dice «Casona Balmoral», el pie «Quinta Balmoral»"
+   "fuente": "https://www.instagram.com/p/DfkS3CukdJ7/ (10 nov, pie); el post del 6 nov (DfZuMvzxdp6) decía 2:30 p. m.: manda el más reciente"
+  },
+  {
+   "fecha": "2026-11-14",
+   "hora": "15:30",
+   "sede": "Quinta Balmoral",
+   "titulo": "El reto de construir y destruir Macondo",
+   "formato": "Charla",
+   "invitados": "Charla con la arquitecta Paula Carrera",
+   "obras": [],
+   "fuente": "https://www.instagram.com/p/DfkS3CukdJ7/ (10 nov, pie); también https://www.instagram.com/p/DfiDgBkH1K_/",
+   "fin": "16:30",
+   "_duracion_por_que": "hasta la charla siguiente en la misma sede (16:30)"
+  },
+  {
+   "fecha": "2026-11-14",
+   "hora": "16:30",
+   "fin": "17:30",
+   "sede": "Quinta Balmoral",
+   "titulo": "¿Y… qué hace una arquitecta en el cine?",
+   "formato": "Charla",
+   "invitados": "Charla con Grecia Colomo, set designer de la serie Cien años de soledad",
+   "obras": [],
+   "fuente": "https://www.instagram.com/p/DfkS3CukdJ7/ (10 nov, pie)"
+  },
+  {
+   "fecha": "2026-11-14",
+   "hora": "18:00",
+   "fin": "20:00",
+   "sede": "CIIS",
+   "titulo": "Proyección",
+   "obras": [
+    "Chaika",
+    "Bajo el último aliento",
+    "Sukua",
+    "Sol de niebla",
+    "Desaprender la maternidad",
+    "Animista",
+    "Pudor ante el asalto de los ojos furtivos",
+    "Transversal 30ff",
+    "Hdlt",
+    "Salud Mutante",
+    "Que el cielo nos perdone",
+    "Árbol en pie"
+   ],
+   "fuente": "https://www.instagram.com/p/DfkS3CukdJ7/ (10 nov, pie)"
+  },
+  {
+   "fecha": "2026-11-14",
+   "hora": "20:30",
+   "sede": "Hacienda El Novillero",
+   "titulo": "¡Fiesta de los 13 años del FICFUSA!",
+   "formato": "Evento",
+   "acceso": "Aporte: $50.000",
+   "invitados": "Proyección especial y presentación musical de Alejandro Rincón y La Saloma",
+   "obras": [],
+   "fuente": "https://www.instagram.com/p/DfkS3CukdJ7/ (10 nov, pie)",
+   "fin": "21:30",
+   "_duracion_por_que": "estimada: la fuente no da hora de fin (60 min, el último del día)"
   }
  ]
 }

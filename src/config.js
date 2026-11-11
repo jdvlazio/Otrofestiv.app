@@ -160,6 +160,12 @@ export const SECTION_EN = {
   '🎉 Historias de Carnaval Internacional': 'International Carnival Stories',
   '🎨 Cinetoro al Aula': 'Cinetoro in the Classroom',
   '🎞️ Proyección de Película': 'Film Screening',
+  '🎬 Proyección': 'Screening',
+  '💬 Proyección y Conversatorio': 'Screening + Talk',
+  '✨ Película de Apertura': 'Opening Film',
+  '🎤 Charla': 'Talk',
+  '🛠️ Taller': 'Workshop',
+  '🎉 Evento': 'Event',
   '🏆 La Canoa Dorada': 'La Canoa Dorada',
   '🛠️ Talleres con Expertos': 'Workshops with Experts',
   '💬 Conversatorios': 'Talks',
@@ -884,6 +890,26 @@ export const FESTIVAL_CONFIG={
     prioLimit:5,
     films:null,posters:null,lbSlugs:{}
   },
+  'ficfusa2026': {
+    // EL NOMBRE es la sigla del festival (@ficfusa_festival); la edición va en fullName.
+    // Afiche oficial «Ensoñación», ficfusa.com (poster-oficial, 591×800, estirado a 400×600).
+    name:'FICFUSA',displayName:'FICFUSA',
+    fullName:'FICFUSA 2026 — Festival Internacional de Cine de Fusagasugá',shortName:'FICFUSA',
+    city:'Fusagasugá',country:'CO',
+    dates:'11–16 NOV',dates_en:'NOV 11–16',year:2026,timezoneOffset:'-05:00',
+    // el subtítulo expande la sigla
+    tagline:'Festival Internacional de Cine de Fusagasugá',
+    keyArt:'/assets/keyart/ficfusa2026.jpg',
+    instagram:'ficfusa_festival', storageKey:'ficfusa2026_',festivalStartStr:'2026-11-11T00:00:00',festivalEndStr:'2026-11-16T23:59:00',
+    festivalDates:{'2026-11-11':'2026-11-11','2026-11-12':'2026-11-12','2026-11-13':'2026-11-13','2026-11-14':'2026-11-14'},
+    days:[{k:'2026-11-11',d:11,lbl:'MIÉ'},{k:'2026-11-12',d:12,lbl:'JUE'},{k:'2026-11-13',d:13,lbl:'VIE'},{k:'2026-11-14',d:14,lbl:'SÁB'}],
+    dayKeys:['2026-11-11','2026-11-12','2026-11-13','2026-11-14'],
+    dayShort:{'2026-11-11':'MIÉ 11','2026-11-12':'JUE 12','2026-11-13':'VIE 13','2026-11-14':'SÁB 14'},
+    dayShort_en:{'2026-11-11':'WED 11','2026-11-12':'THU 12','2026-11-13':'FRI 13','2026-11-14':'SAT 14'},
+    dayLong:{'2026-11-11':'Miércoles 11 de noviembre','2026-11-12':'Jueves 12 de noviembre','2026-11-13':'Viernes 13 de noviembre','2026-11-14':'Sábado 14 de noviembre'},
+    prioLimit:5,
+    films:null,posters:null,lbSlugs:{}
+  },
   'fecibac2026': {
     // EL NOMBRE es la sigla que usa el festival; el subtítulo la expande.
     // keyArt: el afiche oficial de @festivaldecine.bc (p/DesZ7arBwa_), estirado a 400×600.
@@ -1354,6 +1380,12 @@ export const SECTION_ARCHETYPES = {
   '🎉 Historias de Carnaval Internacional': 'Cortos / Programas',
   '🎨 Cinetoro al Aula': 'Cortos / Programas',
   '🎞️ Proyección de Película': 'Muestra / País',
+  '🎬 Proyección': 'Cortos / Programas',
+  '💬 Proyección y Conversatorio': 'Cortos / Programas',
+  '✨ Película de Apertura': 'Especiales / Eventos',
+  '🎤 Charla': 'Charlas / Industria',
+  '🛠️ Taller': 'Charlas / Industria',
+  '🎉 Evento': 'Especiales / Eventos',
   '🏆 La Canoa Dorada': 'Competencia',
   '🛠️ Talleres con Expertos': 'Charlas / Industria',
   '💬 Conversatorios': 'Charlas / Industria',

@@ -1,17 +1,26 @@
 {
  "id": "w_R4K2530V6A4Q",
- "titulo_original": "Bajo el Último Aliento",
+ "titulo_original": "Bajo el último aliento",
  "anio": null,
- "paises": [],
+ "paises": [
+  "CO"
+ ],
  "directores": [
   "Pedro Valencia"
  ],
+ "aliases": [
+  {
+   "titulo": "Bajo el Último Aliento",
+   "tipo": "festival"
+  }
+ ],
  "afiche": {
   "archivo": "/assets/girardota-2026/bajo-el-ultimo-aliento.jpg",
-  "veredicto": "oficial-festival"
+  "veredicto": "oficial"
  },
  "xref": {},
  "presentaciones": [
+  "ficfusa-2026",
   "girardota-2026"
  ]
 }

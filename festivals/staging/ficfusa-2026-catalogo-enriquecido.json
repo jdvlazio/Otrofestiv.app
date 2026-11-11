@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, con el MISMO candado de enriquecer.py: director ✓ y (año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-11-04"
+  "capturado": "2026-11-11"
  },
  "_origen": "ficfusa-2026-catalogo.json",
  "obras": [
@@ -326,7 +326,7 @@
    "duracion_tmdb": 15,
    "pais_tmdb": "",
    "lbSlug": "chaika-2025",
-   "_verificado": "el catálogo ya la tiene (w_R4EP71550W43, bhff-2026, cineautopsia-2026, fantasmagoria-2026, fantasofest-2026, ficica-2026, ficpa-2026, narrarelfuturo-2026, popayan-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4EP71550W43, bhff-2026, cineautopsia-2026, fantasmagoria-2026, fantasofest-2026, festicinerio-2026, ficica-2026, ficpa-2026, narrarelfuturo-2026, popayan-2026)",
    "work_id": "w_R4EP71550W43",
    "_ya_publicada": [
     {
@@ -376,6 +376,19 @@
      "lbSlug": "chaika-2026",
      "country": "Colombia, Cuba",
      "year": 2025,
+     "genre": "Ciencia Ficción",
+     "sinopsis": "Valentina, una cosmonauta rusa de 76 años, llega a una Cuba ucrónica y nebulosa tras recibir, con treinta años de retraso, una invitación para una expedición agrícola a Marte. Entre paisajes difusos y promesas del pasado, busca las ruinas de un futuro que nunca llegó."
+    },
+    {
+     "festival": "festicinerio-2026",
+     "titulo": "Chaika",
+     "tmdb_id": 1689999,
+     "poster": "/assets/festicinerio-2026/chaika.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "chaika-2025",
+     "country": "Colombia, Cuba",
+     "year": 2025,
+     "duration": "15 min",
      "genre": "Ciencia Ficción",
      "sinopsis": "Valentina, una cosmonauta rusa de 76 años, llega a una Cuba ucrónica y nebulosa tras recibir, con treinta años de retraso, una invitación para una expedición agrícola a Marte. Entre paisajes difusos y promesas del pasado, busca las ruinas de un futuro que nunca llegó."
     },
@@ -473,19 +486,6 @@
      "year": 2025,
      "duration": "9 min",
      "genre": "Animación",
-     "synopsis_en": "The city as a stage of desire, where the male gaze provokes surveillance and scrutiny of the female body. This power relationship turns the body into a field of contestation in public space.",
-     "sinopsis": "La ciudad como un escenario de deseo, donde la mirada masculina suscita vigilancia y escrutinio ante el cuerpo femenino. Esta relación de poder convierte al cuerpo en un campo de disputa en el espacio público."
-    },
-    {
-     "festival": "cineautopsia-2026",
-     "titulo": "Pudor ante el asalto de los ojos furtivos",
-     "tmdb_id": 1592968,
-     "poster": "/assets/cineautopsia/pudor-ante-el-asalto-de-los-ojos-furtivos.jpg",
-     "posterSource": "oficial",
-     "lbSlug": "shame-in-the-face-of-furtive-eyes",
-     "country": "Colombia",
-     "year": 2025,
-     "duration": "8 min",
      "synopsis_en": "The city as a stage of desire, where the male gaze provokes surveillance and scrutiny of the female body. This power relationship turns the body into a field of contestation in public space.",
      "sinopsis": "La ciudad como un escenario de deseo, donde la mirada masculina suscita vigilancia y escrutinio ante el cuerpo femenino. Esta relación de poder convierte al cuerpo en un campo de disputa en el espacio público."
     },
@@ -1456,9 +1456,23 @@
    "duracion_tmdb": 12,
    "pais_tmdb": "Colombia",
    "lbSlug": "la-gallina-saraviada",
-   "_verificado": "el catálogo ya la tiene (w_R4JDE7TVVFNW, ficpa-2026, guatape-2026, siembrafest-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4JDE7TVVFNW, festicinerio-2026, ficpa-2026, guatape-2026, siembrafest-2026)",
    "work_id": "w_R4JDE7TVVFNW",
    "_ya_publicada": [
+    {
+     "festival": "festicinerio-2026",
+     "titulo": "La Gallina Saraviada",
+     "tmdb_id": 1746279,
+     "poster": "/assets/festicinerio-2026/la-gallina-saraviada.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "la-gallina-saraviada",
+     "country": "Colombia",
+     "year": 2026,
+     "duration": "12 min",
+     "genre": "Ficción",
+     "synopsis_en": "An elderly peasant woman struggles to preserve the lineage of her last hen as it faces extinction; to do so, she draws on her ingenuity and uses various methods to incubate the last few eggs she has left. An elderly woman and her animals, holding on together, because in the small, everyday things, life always finds a way to go on.",
+     "sinopsis": "Una anciana campesina lucha por preservar el linaje de su última gallina ante su desaparición; para ello recurre a su ingenio y diferentes medios de incubación de los últimos huevos que le quedan."
+    },
     {
      "festival": "ficpa-2026",
      "titulo": "La Gallina Saraviada",
@@ -1502,7 +1516,7 @@
     }
    ],
    "sinopsis": "Una anciana campesina lucha por preservar el linaje de su última gallina ante su desaparición; para ello recurre a su ingenio y diferentes medios de incubación de los últimos huevos que le quedan.",
-   "_sinopsis_de": "ya publicada en ficpa-2026"
+   "_sinopsis_de": "ya publicada en festicinerio-2026"
   },
   {
    "titulo": "Relatos del camino",
@@ -1594,8 +1608,8 @@
    "titulo": "Legado",
    "tmdb_id": 1817230,
    "titulo_original": "Legado",
-   "poster_path": null,
-   "synopsis_es": "",
+   "poster_path": "/tWnFmETYWVFKaeVKnXGvVXh62b9.jpg",
+   "synopsis_es": "Una serie documental que viaja por territorios mágicos y exuberantes a través de la memoria afrodescendiente de América Latina, para revelar historias entrelazadas de resistencia, lucha y preservación cultural, con el propósito de conocer la fuerza y profundidad de un legado ancestral que desafía la adversidad y se enorgullece de sus raíces africanas, donde la lucha por la libertad, la conexión con el territorio y la celebración de la vida se entrelazan en una danza de resiliencia y dignidad. Un recorrido visual y sonoro en una polifonía de saberes que resuena con los ritmos ancestrales para redescubrir un legado que sigue vivo y vibrante.",
    "synopsis_en": "A documentary series that travels through the Afro-descendant memory of Latin America to reveal intertwined stories of resistance, struggle and cultural preservation.",
    "genero": "",
    "anio_tmdb": 0,
@@ -1613,9 +1627,7 @@
      "duration": "24 min",
      "sinopsis": "Una serie documental que viaja por territorios mágicos y exuberantes a través de la memoria afrodescendiente de América Latina, para revelar historias entrelazadas de resistencia, lucha y preservación cultural, con el propósito de conocer la fuerza y profundidad de un legado ancestral que desafía la adversidad y se enorgullece de sus raíces africanas, donde la lucha por la libertad, la conexión con el territorio y la celebración de la vida se entrelazan en una danza de resiliencia y dignidad. Un recorrido visual y sonoro en una polifonía de saberes que resuena con los ritmos ancestrales para redescubrir un legado que sigue vivo y vibrante."
     }
-   ],
-   "sinopsis": "Una serie documental que viaja por territorios mágicos y exuberantes a través de la memoria afrodescendiente de América Latina, para revelar historias entrelazadas de resistencia, lucha y preservación cultural, con el propósito de conocer la fuerza y profundidad de un legado ancestral que desafía la adversidad y se enorgullece de sus raíces africanas, donde la lucha por la libertad, la conexión con el territorio y la celebración de la vida se entrelazan en una danza de resiliencia y dignidad. Un recorrido visual y sonoro en una polifonía de saberes que resuena con los ritmos ancestrales para redescubrir un legado que sigue vivo y vibrante.",
-   "_sinopsis_de": "ya publicada en popayan-2026"
+   ]
   },
   {
    "titulo": "Pawa",
@@ -1722,6 +1734,11 @@
   {
    "titulo": "La",
    "_ya_publicada": [
+    {
+     "festival": "fecibac-2026",
+     "titulo": "La Canoa Dorada (Tanda 2)",
+     "duration": "60 min"
+    },
     {
      "festival": "guatape-2026",
      "titulo": "La fuente",
@@ -2067,7 +2084,7 @@
    "duracion_tmdb": 0,
    "pais_tmdb": "Colombia",
    "lbSlug": "que-el-cielo-nos-perdone",
-   "_verificado": "el catálogo ya la tiene (w_R4GP49AWA2ZH, bhff-2026, fantasmagoria-2026, ficica-2026, ficma-2026, siembrafest-2026, villadelcine-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4GP49AWA2ZH, bhff-2026, fantasmagoria-2026, festicinerio-2026, ficica-2026, ficma-2026, siembrafest-2026, villadelcine-2026)",
    "work_id": "w_R4GP49AWA2ZH",
    "_ya_publicada": [
     {
@@ -2094,6 +2111,20 @@
      "country": "Colombia",
      "year": 2025,
      "duration": "16 min",
+     "genre": "Terror",
+     "synopsis_en": "Colombia, 1951. In the thick of La Violencia, the period of brutal political war between Liberals and Conservatives, two chulavitas —hired killers on the government’s payroll— stalk a priest through the dark, waiting for him to lead them to the cabin in the woods where their next victims are hiding. But the horror they find there is a thousand times worse than the pain they meant to inflict.",
+     "sinopsis": "Colombia, 1951: En medio de La Violencia, el período de brutal guerra política entre liberales y conservadores, un par de chulavitas –asesinos a sueldo pagados por el gobierno– acechan a un sacerdote en la oscuridad de la noche, esperando que los conduzca a la cabaña en el bosque en donde se esconden sus próximas víctimas. Pero el horror que encontrarán allí es mil veces peor que el dolor que pensaban infligir."
+    },
+    {
+     "festival": "festicinerio-2026",
+     "titulo": "Que el Cielo Nos Perdone",
+     "tmdb_id": 1565878,
+     "poster": "/assets/festicinerio-2026/que-el-cielo-nos-perdone.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "que-el-cielo-nos-perdone",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "17 min",
      "genre": "Terror",
      "synopsis_en": "Colombia, 1951. In the thick of La Violencia, the period of brutal political war between Liberals and Conservatives, two chulavitas —hired killers on the government’s payroll— stalk a priest through the dark, waiting for him to lead them to the cabin in the woods where their next victims are hiding. But the horror they find there is a thousand times worse than the pain they meant to inflict.",
      "sinopsis": "Colombia, 1951: En medio de La Violencia, el período de brutal guerra política entre liberales y conservadores, un par de chulavitas –asesinos a sueldo pagados por el gobierno– acechan a un sacerdote en la oscuridad de la noche, esperando que los conduzca a la cabaña en el bosque en donde se esconden sus próximas víctimas. Pero el horror que encontrarán allí es mil veces peor que el dolor que pensaban infligir."
@@ -2158,8 +2189,8 @@
    "titulo": "Animista",
    "tmdb_id": 1817272,
    "titulo_original": "Animista",
-   "poster_path": null,
-   "synopsis_es": "",
+   "poster_path": "/q9FirGgLz5Oco3InFlk3Bz8F3Ig.jpg",
+   "synopsis_es": "Karent investiga algunas memorias filmadas conversando con su abuela, acerca de una tradición familiar que conlleva ritual Animista en el que pueden descomponer su espíritu en varios fragmentos. Se prepara para hacerlo.",
    "synopsis_en": "Karent looks into filmed memories while talking with her grandmother about a family tradition involving an Animist ritual in which they can break their spirit into several fragments. She prepares to do it.",
    "genero": "",
    "anio_tmdb": 0,
@@ -2179,9 +2210,7 @@
      "duration": "8 min",
      "sinopsis": "Karent investiga algunas memorias filmadas conversando con su abuela, acerca de una tradición familiar que conlleva ritual Animista en el que pueden descomponer su espíritu en varios fragmentos. Se prepara para hacerlo."
     }
-   ],
-   "sinopsis": "Karent investiga algunas memorias filmadas conversando con su abuela, acerca de una tradición familiar que conlleva ritual Animista en el que pueden descomponer su espíritu en varios fragmentos. Se prepara para hacerlo.",
-   "_sinopsis_de": "ya publicada en popayan-2026"
+   ]
   },
   {
    "titulo": "Domingo",
@@ -2201,17 +2230,30 @@
   {
    "titulo": "Árbol en pie",
    "tmdb_id": 1709833,
-   "titulo_original": "Standing Tree",
-   "poster_path": null,
-   "synopsis_es": "",
+   "titulo_original": "Árbol en pie",
+   "poster_path": "/k1KJCbdbRHRxFML62ow6P6ccuW1.jpg",
+   "synopsis_es": "La Ceroxylon quindiuense, palma de cera del Quindío, es el árbol nacional de Colombia. Encarna una paradoja perfecta para un país marcado por el machismo, la misoginia y la transfobia, pues es una planta capaz de cambiar de sexo. Es una «palma trans» y la inspiración para que Magdalena Morales, líder trans afrocolombiana, se una a la Red Comunitaria Trans y siembre una semilla de luz rebelde en el horizonte de la música tradicional del Caribe colombiano.",
    "synopsis_en": "“Ceroxylon quindiuense,” the Quindío wax palm, is Colombia’s national tree. It embodies a perfect paradox for a country steeped in machismo, misogyny, and transphobia, as it is a plant with the ability to change its sex. It is a trans palm and the inspiration for Magdalena Morales, an Afro-Colombian trans leader, to join the Trans Community Network and plant a seed of rebellious light on the horizon of traditional Colombian Caribbean music. Her song of redemption rises above desolation and celebrates social struggles, from Palestine, the Congo, and Sudan to the streets of Bogotá’s Santa Fe neighborhood, where her trans sisters stand firm.",
    "genero": "",
    "anio_tmdb": 2026,
    "duracion_tmdb": 6,
    "pais_tmdb": "",
-   "lbSlug": "standing-tree",
+   "lbSlug": "arbol-en-pie",
    "_verificado": "declarada a mano: está en TMDB como «Standing Tree»: 6 min, 2026, con Rodrigo Torrijos, Mapa López y Magdalena Morales; se completó el 4 nov con directores, afiche y título y sinopsis en español",
    "_ya_publicada": [
+    {
+     "festival": "festicinerio-2026",
+     "titulo": "Árbol en Pie",
+     "tmdb_id": 1709833,
+     "poster": "/assets/festicinerio-2026/arbol-en-pie.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "arbol-en-pie",
+     "country": "Colombia",
+     "year": 2026,
+     "duration": "6 min",
+     "synopsis_en": "“Ceroxylon quindiuense,” the Quindío wax palm, is Colombia’s national tree. It embodies a perfect paradox for a country steeped in machismo, misogyny, and transphobia, as it is a plant with the ability to change its sex. It is a trans palm and the inspiration for Magdalena Morales, an Afro-Colombian trans leader, to join the Trans Community Network and plant a seed of rebellious light on the horizon of traditional Colombian Caribbean music. Her song of redemption rises above desolation and celebrates social struggles, from Palestine, the Congo, and Sudan to the streets of Bogotá’s Santa Fe neighborhood, where her trans sisters stand firm.",
+     "sinopsis": "La Ceroxylon quindiuense, palma de cera del Quindío, es el árbol nacional de Colombia. Encarna una paradoja perfecta para un país marcado por el machismo, la misoginia y la transfobia, pues es una planta capaz de cambiar de sexo. Es una «palma trans» y la inspiración para que Magdalena Morales, líder trans afrocolombiana, se una a la Red Comunitaria Trans y siembre una semilla de luz rebelde en el horizonte de la música tradicional del Caribe colombiano."
+    },
     {
      "festival": "ficcali-2026",
      "titulo": "Árbol en pie",
@@ -2222,11 +2264,7 @@
      "duration": "6 min",
      "sinopsis": "La Ceroxylon quindiuense, palma de cera del Quindío, es el árbol nacional de Colombia. Encarna una paradoja perfecta para un país marcado por el machismo, la misoginia y la transfobia, pues es una planta capaz de cambiar de sexo. Es una «palma trans» y la inspiración para que Magdalena Morales, líder trans afrocolombiana, se una a la Red Comunitaria Trans y siembre una semilla de luz rebelde en el horizonte de la música tradicional del Caribe colombiano."
     }
-   ],
-   "poster": "/assets/ficcali-2026/arbol-en-pie.jpg",
-   "_afiche_de": "ya publicada en ficcali-2026",
-   "sinopsis": "La Ceroxylon quindiuense, palma de cera del Quindío, es el árbol nacional de Colombia. Encarna una paradoja perfecta para un país marcado por el machismo, la misoginia y la transfobia, pues es una planta capaz de cambiar de sexo. Es una «palma trans» y la inspiración para que Magdalena Morales, líder trans afrocolombiana, se una a la Red Comunitaria Trans y siembre una semilla de luz rebelde en el horizonte de la música tradicional del Caribe colombiano.",
-   "_sinopsis_de": "ya publicada en ficcali-2026"
+   ]
   },
   {
    "titulo": "Transversal 30ff",
@@ -2302,14 +2340,26 @@
    "poster_path": "/AlyX23QDpLTkWn3jSvZkt3nIFNT.jpg",
    "synopsis_es": "En una noche oscura, un niño sigue una señal que lo lleva a una misteriosa máquina expendedora de dulces escondida en un bar prohibido. Para alcanzarla, deberá armarse de valor y afrontar desafíos que pondrán a prueba su ingenio, valentía y determinación.",
    "synopsis_en": "",
-   "genero": "",
+   "genero": "Drama",
    "anio_tmdb": 2025,
    "duracion_tmdb": 9,
    "pais_tmdb": "",
    "lbSlug": "el-espejo-de-la-vida",
-   "_verificado": "el catálogo ya la tiene (w_R4JJ9W6S4FCQ, filcmar-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4JJ9W6S4FCQ, festicinerio-2026, filcmar-2026)",
    "work_id": "w_R4JJ9W6S4FCQ",
    "_ya_publicada": [
+    {
+     "festival": "festicinerio-2026",
+     "titulo": "El Espejo de la Vida",
+     "tmdb_id": 1791654,
+     "poster": "/assets/festicinerio-2026/el-espejo-de-la-vida.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "el-espejo-de-la-vida",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "9 min",
+     "sinopsis": "En una noche oscura, un niño sigue una señal que lo lleva a una misteriosa máquina expendedora de dulces escondida en un bar prohibido. Para alcanzarla, deberá armarse de valor y afrontar desafíos que pondrán a prueba su ingenio, valentía y determinación."
+    },
     {
      "festival": "filcmar-2026",
      "titulo": "El espejo de la vida",
@@ -2329,7 +2379,7 @@
    "tmdb_id": 1796013,
    "titulo_original": "HDLT",
    "poster_path": "/j4A2q3aODb9T1QGbJphYrYB35ur.jpg",
-   "synopsis_es": "",
+   "synopsis_es": "Después del ataque que sufrió, Luz trata de entender lo que le sucedió: el Hijo de la Tierra vino a destruir a la humanidad robando sus recuerdos más tristes y felices. Pero desembarcó en Suba, el distrito más lejano de Bogotá, donde una extraña adicción cambiará el curso de la historia.",
    "synopsis_en": "Mixed media Found footage film made by a Colombian Collective",
    "genero": "",
    "anio_tmdb": 0,
@@ -2347,6 +2397,20 @@
      "year": 2025,
      "duration": "18 min",
      "genre": "Drama",
+     "sinopsis": "Después del ataque que sufrió, Luz trata de entender lo que le sucedió: el Hijo de la Tierra vino a destruir a la humanidad robando sus recuerdos más tristes y felices. Pero desembarcó en Suba, el distrito más lejano de Bogotá, donde una extraña adicción cambiará el curso de la historia."
+    },
+    {
+     "festival": "festicinerio-2026",
+     "titulo": "HDLT",
+     "tmdb_id": 1796013,
+     "poster": "/assets/festicinerio-2026/hdlt.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "hdlt",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "18 min",
+     "genre": "Drama",
+     "synopsis_en": "Mixed media Found footage film made by a Colombian Collective",
      "sinopsis": "Después del ataque que sufrió, Luz trata de entender lo que le sucedió: el Hijo de la Tierra vino a destruir a la humanidad robando sus recuerdos más tristes y felices. Pero desembarcó en Suba, el distrito más lejano de Bogotá, donde una extraña adicción cambiará el curso de la historia."
     },
     {
@@ -2380,15 +2444,13 @@
      "duration": "18 min",
      "sinopsis": "Tras el ataque que sufrió, Luz trata de entender lo que le pasó: el Hijo de la Tierra llegó a destruir la humanidad robándole sus recuerdos más tristes y más felices."
     }
-   ],
-   "sinopsis": "Después del ataque que sufrió, Luz trata de entender lo que le sucedió: el Hijo de la Tierra vino a destruir a la humanidad robando sus recuerdos más tristes y felices. Pero desembarcó en Suba, el distrito más lejano de Bogotá, donde una extraña adicción cambiará el curso de la historia.",
-   "_sinopsis_de": "ya publicada en fantasmagoria-2026"
+   ]
   },
   {
    "titulo": "La libertad es mi causa",
    "tmdb_id": 1499403,
    "titulo_original": "La libertad es mi causa",
-   "poster_path": null,
+   "poster_path": "/8LoCS4MhxXc4JxwiAt4Ay8rHWzv.jpg",
    "synopsis_es": "",
    "synopsis_en": "This documentary tells the story of Causa Justa, a movement that succeeded in depoliticizing and transforming the dialogue on abortion in Colombia. Thanks to their efforts, the Constitutional Court decriminalized the voluntary interruption of pregnancy up to 24 weeks of gestation, placing the country among the most progressive in the world on this issue. Through interviews and conversations, the protagonists of these achievements, feminists of different ages, regions and organizations in the country, share how they made this goal, for which feminist women have fought for more than five decades, a reality.",
    "genero": "Documental",
@@ -2418,8 +2480,8 @@
    "titulo": "Sinfonía Incompleta de Oficios del Fonce",
    "tmdb_id": 1817245,
    "titulo_original": "Sinfonía incompleta de oficios del Fonce",
-   "poster_path": null,
-   "synopsis_es": "",
+   "poster_path": "/1PJGLVtzmDg6WWCmf0ndhdLI3Lc.jpg",
+   "synopsis_es": "En un viaje de imágenes acompañadas con la música, la cámara revela el interior de algunos sitios inaccesibles al público donde se realizan oficios antiguos que aún persisten.",
    "synopsis_en": "In a journey of images accompanied by music, the camera reveals the interior of places closed to the public where ancient crafts still persist.",
    "genero": "",
    "anio_tmdb": 0,
@@ -2759,7 +2821,7 @@
    "duracion_tmdb": 15,
    "pais_tmdb": "",
    "lbSlug": "chaika-2025",
-   "_verificado": "el catálogo ya la tiene (w_R4EP71550W43, bhff-2026, cineautopsia-2026, fantasmagoria-2026, fantasofest-2026, ficica-2026, ficpa-2026, narrarelfuturo-2026, popayan-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4EP71550W43, bhff-2026, cineautopsia-2026, fantasmagoria-2026, fantasofest-2026, festicinerio-2026, ficica-2026, ficpa-2026, narrarelfuturo-2026, popayan-2026)",
    "work_id": "w_R4EP71550W43",
    "_ya_publicada": [
     {
@@ -2809,6 +2871,19 @@
      "lbSlug": "chaika-2026",
      "country": "Colombia, Cuba",
      "year": 2025,
+     "genre": "Ciencia Ficción",
+     "sinopsis": "Valentina, una cosmonauta rusa de 76 años, llega a una Cuba ucrónica y nebulosa tras recibir, con treinta años de retraso, una invitación para una expedición agrícola a Marte. Entre paisajes difusos y promesas del pasado, busca las ruinas de un futuro que nunca llegó."
+    },
+    {
+     "festival": "festicinerio-2026",
+     "titulo": "Chaika",
+     "tmdb_id": 1689999,
+     "poster": "/assets/festicinerio-2026/chaika.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "chaika-2025",
+     "country": "Colombia, Cuba",
+     "year": 2025,
+     "duration": "15 min",
      "genre": "Ciencia Ficción",
      "sinopsis": "Valentina, una cosmonauta rusa de 76 años, llega a una Cuba ucrónica y nebulosa tras recibir, con treinta años de retraso, una invitación para una expedición agrícola a Marte. Entre paisajes difusos y promesas del pasado, busca las ruinas de un futuro que nunca llegó."
     },
@@ -2904,19 +2979,6 @@
      "year": 2025,
      "duration": "9 min",
      "genre": "Animación",
-     "synopsis_en": "The city as a stage of desire, where the male gaze provokes surveillance and scrutiny of the female body. This power relationship turns the body into a field of contestation in public space.",
-     "sinopsis": "La ciudad como un escenario de deseo, donde la mirada masculina suscita vigilancia y escrutinio ante el cuerpo femenino. Esta relación de poder convierte al cuerpo en un campo de disputa en el espacio público."
-    },
-    {
-     "festival": "cineautopsia-2026",
-     "titulo": "Pudor ante el asalto de los ojos furtivos",
-     "tmdb_id": 1592968,
-     "poster": "/assets/cineautopsia/pudor-ante-el-asalto-de-los-ojos-furtivos.jpg",
-     "posterSource": "oficial",
-     "lbSlug": "shame-in-the-face-of-furtive-eyes",
-     "country": "Colombia",
-     "year": 2025,
-     "duration": "8 min",
      "synopsis_en": "The city as a stage of desire, where the male gaze provokes surveillance and scrutiny of the female body. This power relationship turns the body into a field of contestation in public space.",
      "sinopsis": "La ciudad como un escenario de deseo, donde la mirada masculina suscita vigilancia y escrutinio ante el cuerpo femenino. Esta relación de poder convierte al cuerpo en un campo de disputa en el espacio público."
     },
@@ -3850,9 +3912,23 @@
    "duracion_tmdb": 12,
    "pais_tmdb": "Colombia",
    "lbSlug": "la-gallina-saraviada",
-   "_verificado": "el catálogo ya la tiene (w_R4JDE7TVVFNW, ficpa-2026, guatape-2026, siembrafest-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4JDE7TVVFNW, festicinerio-2026, ficpa-2026, guatape-2026, siembrafest-2026)",
    "work_id": "w_R4JDE7TVVFNW",
    "_ya_publicada": [
+    {
+     "festival": "festicinerio-2026",
+     "titulo": "La Gallina Saraviada",
+     "tmdb_id": 1746279,
+     "poster": "/assets/festicinerio-2026/la-gallina-saraviada.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "la-gallina-saraviada",
+     "country": "Colombia",
+     "year": 2026,
+     "duration": "12 min",
+     "genre": "Ficción",
+     "synopsis_en": "An elderly peasant woman struggles to preserve the lineage of her last hen as it faces extinction; to do so, she draws on her ingenuity and uses various methods to incubate the last few eggs she has left. An elderly woman and her animals, holding on together, because in the small, everyday things, life always finds a way to go on.",
+     "sinopsis": "Una anciana campesina lucha por preservar el linaje de su última gallina ante su desaparición; para ello recurre a su ingenio y diferentes medios de incubación de los últimos huevos que le quedan."
+    },
     {
      "festival": "ficpa-2026",
      "titulo": "La Gallina Saraviada",
@@ -3896,7 +3972,7 @@
     }
    ],
    "sinopsis": "Una anciana campesina lucha por preservar el linaje de su última gallina ante su desaparición; para ello recurre a su ingenio y diferentes medios de incubación de los últimos huevos que le quedan.",
-   "_sinopsis_de": "ya publicada en ficpa-2026"
+   "_sinopsis_de": "ya publicada en festicinerio-2026"
   },
   "Relatos del camino": {
    "tmdb_id": 1796541,
@@ -3986,8 +4062,8 @@
   "Legado": {
    "tmdb_id": 1817230,
    "titulo_original": "Legado",
-   "poster_path": null,
-   "synopsis_es": "",
+   "poster_path": "/tWnFmETYWVFKaeVKnXGvVXh62b9.jpg",
+   "synopsis_es": "Una serie documental que viaja por territorios mágicos y exuberantes a través de la memoria afrodescendiente de América Latina, para revelar historias entrelazadas de resistencia, lucha y preservación cultural, con el propósito de conocer la fuerza y profundidad de un legado ancestral que desafía la adversidad y se enorgullece de sus raíces africanas, donde la lucha por la libertad, la conexión con el territorio y la celebración de la vida se entrelazan en una danza de resiliencia y dignidad. Un recorrido visual y sonoro en una polifonía de saberes que resuena con los ritmos ancestrales para redescubrir un legado que sigue vivo y vibrante.",
    "synopsis_en": "A documentary series that travels through the Afro-descendant memory of Latin America to reveal intertwined stories of resistance, struggle and cultural preservation.",
    "genero": "",
    "anio_tmdb": 0,
@@ -4005,9 +4081,7 @@
      "duration": "24 min",
      "sinopsis": "Una serie documental que viaja por territorios mágicos y exuberantes a través de la memoria afrodescendiente de América Latina, para revelar historias entrelazadas de resistencia, lucha y preservación cultural, con el propósito de conocer la fuerza y profundidad de un legado ancestral que desafía la adversidad y se enorgullece de sus raíces africanas, donde la lucha por la libertad, la conexión con el territorio y la celebración de la vida se entrelazan en una danza de resiliencia y dignidad. Un recorrido visual y sonoro en una polifonía de saberes que resuena con los ritmos ancestrales para redescubrir un legado que sigue vivo y vibrante."
     }
-   ],
-   "sinopsis": "Una serie documental que viaja por territorios mágicos y exuberantes a través de la memoria afrodescendiente de América Latina, para revelar historias entrelazadas de resistencia, lucha y preservación cultural, con el propósito de conocer la fuerza y profundidad de un legado ancestral que desafía la adversidad y se enorgullece de sus raíces africanas, donde la lucha por la libertad, la conexión con el territorio y la celebración de la vida se entrelazan en una danza de resiliencia y dignidad. Un recorrido visual y sonoro en una polifonía de saberes que resuena con los ritmos ancestrales para redescubrir un legado que sigue vivo y vibrante.",
-   "_sinopsis_de": "ya publicada en popayan-2026"
+   ]
   },
   "Pawa": {
    "tmdb_id": 1668893,
@@ -4403,7 +4477,7 @@
    "duracion_tmdb": 0,
    "pais_tmdb": "Colombia",
    "lbSlug": "que-el-cielo-nos-perdone",
-   "_verificado": "el catálogo ya la tiene (w_R4GP49AWA2ZH, bhff-2026, fantasmagoria-2026, ficica-2026, ficma-2026, siembrafest-2026, villadelcine-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4GP49AWA2ZH, bhff-2026, fantasmagoria-2026, festicinerio-2026, ficica-2026, ficma-2026, siembrafest-2026, villadelcine-2026)",
    "work_id": "w_R4GP49AWA2ZH",
    "_ya_publicada": [
     {
@@ -4430,6 +4504,20 @@
      "country": "Colombia",
      "year": 2025,
      "duration": "16 min",
+     "genre": "Terror",
+     "synopsis_en": "Colombia, 1951. In the thick of La Violencia, the period of brutal political war between Liberals and Conservatives, two chulavitas —hired killers on the government’s payroll— stalk a priest through the dark, waiting for him to lead them to the cabin in the woods where their next victims are hiding. But the horror they find there is a thousand times worse than the pain they meant to inflict.",
+     "sinopsis": "Colombia, 1951: En medio de La Violencia, el período de brutal guerra política entre liberales y conservadores, un par de chulavitas –asesinos a sueldo pagados por el gobierno– acechan a un sacerdote en la oscuridad de la noche, esperando que los conduzca a la cabaña en el bosque en donde se esconden sus próximas víctimas. Pero el horror que encontrarán allí es mil veces peor que el dolor que pensaban infligir."
+    },
+    {
+     "festival": "festicinerio-2026",
+     "titulo": "Que el Cielo Nos Perdone",
+     "tmdb_id": 1565878,
+     "poster": "/assets/festicinerio-2026/que-el-cielo-nos-perdone.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "que-el-cielo-nos-perdone",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "17 min",
      "genre": "Terror",
      "synopsis_en": "Colombia, 1951. In the thick of La Violencia, the period of brutal political war between Liberals and Conservatives, two chulavitas —hired killers on the government’s payroll— stalk a priest through the dark, waiting for him to lead them to the cabin in the woods where their next victims are hiding. But the horror they find there is a thousand times worse than the pain they meant to inflict.",
      "sinopsis": "Colombia, 1951: En medio de La Violencia, el período de brutal guerra política entre liberales y conservadores, un par de chulavitas –asesinos a sueldo pagados por el gobierno– acechan a un sacerdote en la oscuridad de la noche, esperando que los conduzca a la cabaña en el bosque en donde se esconden sus próximas víctimas. Pero el horror que encontrarán allí es mil veces peor que el dolor que pensaban infligir."
@@ -4493,8 +4581,8 @@
   "Animista": {
    "tmdb_id": 1817272,
    "titulo_original": "Animista",
-   "poster_path": null,
-   "synopsis_es": "",
+   "poster_path": "/q9FirGgLz5Oco3InFlk3Bz8F3Ig.jpg",
+   "synopsis_es": "Karent investiga algunas memorias filmadas conversando con su abuela, acerca de una tradición familiar que conlleva ritual Animista en el que pueden descomponer su espíritu en varios fragmentos. Se prepara para hacerlo.",
    "synopsis_en": "Karent looks into filmed memories while talking with her grandmother about a family tradition involving an Animist ritual in which they can break their spirit into several fragments. She prepares to do it.",
    "genero": "",
    "anio_tmdb": 0,
@@ -4514,9 +4602,7 @@
      "duration": "8 min",
      "sinopsis": "Karent investiga algunas memorias filmadas conversando con su abuela, acerca de una tradición familiar que conlleva ritual Animista en el que pueden descomponer su espíritu en varios fragmentos. Se prepara para hacerlo."
     }
-   ],
-   "sinopsis": "Karent investiga algunas memorias filmadas conversando con su abuela, acerca de una tradición familiar que conlleva ritual Animista en el que pueden descomponer su espíritu en varios fragmentos. Se prepara para hacerlo.",
-   "_sinopsis_de": "ya publicada en popayan-2026"
+   ]
   },
   "Domingo": {
    "tmdb_id": 1742409,
@@ -4534,17 +4620,30 @@
   },
   "Árbol en pie": {
    "tmdb_id": 1709833,
-   "titulo_original": "Standing Tree",
-   "poster_path": null,
-   "synopsis_es": "",
+   "titulo_original": "Árbol en pie",
+   "poster_path": "/k1KJCbdbRHRxFML62ow6P6ccuW1.jpg",
+   "synopsis_es": "La Ceroxylon quindiuense, palma de cera del Quindío, es el árbol nacional de Colombia. Encarna una paradoja perfecta para un país marcado por el machismo, la misoginia y la transfobia, pues es una planta capaz de cambiar de sexo. Es una «palma trans» y la inspiración para que Magdalena Morales, líder trans afrocolombiana, se una a la Red Comunitaria Trans y siembre una semilla de luz rebelde en el horizonte de la música tradicional del Caribe colombiano.",
    "synopsis_en": "“Ceroxylon quindiuense,” the Quindío wax palm, is Colombia’s national tree. It embodies a perfect paradox for a country steeped in machismo, misogyny, and transphobia, as it is a plant with the ability to change its sex. It is a trans palm and the inspiration for Magdalena Morales, an Afro-Colombian trans leader, to join the Trans Community Network and plant a seed of rebellious light on the horizon of traditional Colombian Caribbean music. Her song of redemption rises above desolation and celebrates social struggles, from Palestine, the Congo, and Sudan to the streets of Bogotá’s Santa Fe neighborhood, where her trans sisters stand firm.",
    "genero": "",
    "anio_tmdb": 2026,
    "duracion_tmdb": 6,
    "pais_tmdb": "",
-   "lbSlug": "standing-tree",
+   "lbSlug": "arbol-en-pie",
    "_verificado": "declarada a mano: está en TMDB como «Standing Tree»: 6 min, 2026, con Rodrigo Torrijos, Mapa López y Magdalena Morales; se completó el 4 nov con directores, afiche y título y sinopsis en español",
    "_ya_publicada": [
+    {
+     "festival": "festicinerio-2026",
+     "titulo": "Árbol en Pie",
+     "tmdb_id": 1709833,
+     "poster": "/assets/festicinerio-2026/arbol-en-pie.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "arbol-en-pie",
+     "country": "Colombia",
+     "year": 2026,
+     "duration": "6 min",
+     "synopsis_en": "“Ceroxylon quindiuense,” the Quindío wax palm, is Colombia’s national tree. It embodies a perfect paradox for a country steeped in machismo, misogyny, and transphobia, as it is a plant with the ability to change its sex. It is a trans palm and the inspiration for Magdalena Morales, an Afro-Colombian trans leader, to join the Trans Community Network and plant a seed of rebellious light on the horizon of traditional Colombian Caribbean music. Her song of redemption rises above desolation and celebrates social struggles, from Palestine, the Congo, and Sudan to the streets of Bogotá’s Santa Fe neighborhood, where her trans sisters stand firm.",
+     "sinopsis": "La Ceroxylon quindiuense, palma de cera del Quindío, es el árbol nacional de Colombia. Encarna una paradoja perfecta para un país marcado por el machismo, la misoginia y la transfobia, pues es una planta capaz de cambiar de sexo. Es una «palma trans» y la inspiración para que Magdalena Morales, líder trans afrocolombiana, se una a la Red Comunitaria Trans y siembre una semilla de luz rebelde en el horizonte de la música tradicional del Caribe colombiano."
+    },
     {
      "festival": "ficcali-2026",
      "titulo": "Árbol en pie",
@@ -4555,11 +4654,7 @@
      "duration": "6 min",
      "sinopsis": "La Ceroxylon quindiuense, palma de cera del Quindío, es el árbol nacional de Colombia. Encarna una paradoja perfecta para un país marcado por el machismo, la misoginia y la transfobia, pues es una planta capaz de cambiar de sexo. Es una «palma trans» y la inspiración para que Magdalena Morales, líder trans afrocolombiana, se una a la Red Comunitaria Trans y siembre una semilla de luz rebelde en el horizonte de la música tradicional del Caribe colombiano."
     }
-   ],
-   "poster": "/assets/ficcali-2026/arbol-en-pie.jpg",
-   "_afiche_de": "ya publicada en ficcali-2026",
-   "sinopsis": "La Ceroxylon quindiuense, palma de cera del Quindío, es el árbol nacional de Colombia. Encarna una paradoja perfecta para un país marcado por el machismo, la misoginia y la transfobia, pues es una planta capaz de cambiar de sexo. Es una «palma trans» y la inspiración para que Magdalena Morales, líder trans afrocolombiana, se una a la Red Comunitaria Trans y siembre una semilla de luz rebelde en el horizonte de la música tradicional del Caribe colombiano.",
-   "_sinopsis_de": "ya publicada en ficcali-2026"
+   ]
   },
   "Transversal 30ff": {
    "tmdb_id": 1525925,
@@ -4632,14 +4727,26 @@
    "poster_path": "/AlyX23QDpLTkWn3jSvZkt3nIFNT.jpg",
    "synopsis_es": "En una noche oscura, un niño sigue una señal que lo lleva a una misteriosa máquina expendedora de dulces escondida en un bar prohibido. Para alcanzarla, deberá armarse de valor y afrontar desafíos que pondrán a prueba su ingenio, valentía y determinación.",
    "synopsis_en": "",
-   "genero": "",
+   "genero": "Drama",
    "anio_tmdb": 2025,
    "duracion_tmdb": 9,
    "pais_tmdb": "",
    "lbSlug": "el-espejo-de-la-vida",
-   "_verificado": "el catálogo ya la tiene (w_R4JJ9W6S4FCQ, filcmar-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4JJ9W6S4FCQ, festicinerio-2026, filcmar-2026)",
    "work_id": "w_R4JJ9W6S4FCQ",
    "_ya_publicada": [
+    {
+     "festival": "festicinerio-2026",
+     "titulo": "El Espejo de la Vida",
+     "tmdb_id": 1791654,
+     "poster": "/assets/festicinerio-2026/el-espejo-de-la-vida.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "el-espejo-de-la-vida",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "9 min",
+     "sinopsis": "En una noche oscura, un niño sigue una señal que lo lleva a una misteriosa máquina expendedora de dulces escondida en un bar prohibido. Para alcanzarla, deberá armarse de valor y afrontar desafíos que pondrán a prueba su ingenio, valentía y determinación."
+    },
     {
      "festival": "filcmar-2026",
      "titulo": "El espejo de la vida",
@@ -4658,7 +4765,7 @@
    "tmdb_id": 1796013,
    "titulo_original": "HDLT",
    "poster_path": "/j4A2q3aODb9T1QGbJphYrYB35ur.jpg",
-   "synopsis_es": "",
+   "synopsis_es": "Después del ataque que sufrió, Luz trata de entender lo que le sucedió: el Hijo de la Tierra vino a destruir a la humanidad robando sus recuerdos más tristes y felices. Pero desembarcó en Suba, el distrito más lejano de Bogotá, donde una extraña adicción cambiará el curso de la historia.",
    "synopsis_en": "Mixed media Found footage film made by a Colombian Collective",
    "genero": "",
    "anio_tmdb": 0,
@@ -4676,6 +4783,20 @@
      "year": 2025,
      "duration": "18 min",
      "genre": "Drama",
+     "sinopsis": "Después del ataque que sufrió, Luz trata de entender lo que le sucedió: el Hijo de la Tierra vino a destruir a la humanidad robando sus recuerdos más tristes y felices. Pero desembarcó en Suba, el distrito más lejano de Bogotá, donde una extraña adicción cambiará el curso de la historia."
+    },
+    {
+     "festival": "festicinerio-2026",
+     "titulo": "HDLT",
+     "tmdb_id": 1796013,
+     "poster": "/assets/festicinerio-2026/hdlt.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "hdlt",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "18 min",
+     "genre": "Drama",
+     "synopsis_en": "Mixed media Found footage film made by a Colombian Collective",
      "sinopsis": "Después del ataque que sufrió, Luz trata de entender lo que le sucedió: el Hijo de la Tierra vino a destruir a la humanidad robando sus recuerdos más tristes y felices. Pero desembarcó en Suba, el distrito más lejano de Bogotá, donde una extraña adicción cambiará el curso de la historia."
     },
     {
@@ -4709,14 +4830,12 @@
      "duration": "18 min",
      "sinopsis": "Tras el ataque que sufrió, Luz trata de entender lo que le pasó: el Hijo de la Tierra llegó a destruir la humanidad robándole sus recuerdos más tristes y más felices."
     }
-   ],
-   "sinopsis": "Después del ataque que sufrió, Luz trata de entender lo que le sucedió: el Hijo de la Tierra vino a destruir a la humanidad robando sus recuerdos más tristes y felices. Pero desembarcó en Suba, el distrito más lejano de Bogotá, donde una extraña adicción cambiará el curso de la historia.",
-   "_sinopsis_de": "ya publicada en fantasmagoria-2026"
+   ]
   },
   "La libertad es mi causa": {
    "tmdb_id": 1499403,
    "titulo_original": "La libertad es mi causa",
-   "poster_path": null,
+   "poster_path": "/8LoCS4MhxXc4JxwiAt4Ay8rHWzv.jpg",
    "synopsis_es": "",
    "synopsis_en": "This documentary tells the story of Causa Justa, a movement that succeeded in depoliticizing and transforming the dialogue on abortion in Colombia. Thanks to their efforts, the Constitutional Court decriminalized the voluntary interruption of pregnancy up to 24 weeks of gestation, placing the country among the most progressive in the world on this issue. Through interviews and conversations, the protagonists of these achievements, feminists of different ages, regions and organizations in the country, share how they made this goal, for which feminist women have fought for more than five decades, a reality.",
    "genero": "Documental",
@@ -4744,8 +4863,8 @@
   "Sinfonía Incompleta de Oficios del Fonce": {
    "tmdb_id": 1817245,
    "titulo_original": "Sinfonía incompleta de oficios del Fonce",
-   "poster_path": null,
-   "synopsis_es": "",
+   "poster_path": "/1PJGLVtzmDg6WWCmf0ndhdLI3Lc.jpg",
+   "synopsis_es": "En un viaje de imágenes acompañadas con la música, la cámara revela el interior de algunos sitios inaccesibles al público donde se realizan oficios antiguos que aún persisten.",
    "synopsis_en": "In a journey of images accompanied by music, the camera reveals the interior of places closed to the public where ancient crafts still persist.",
    "genero": "",
    "anio_tmdb": 0,
