@@ -123,10 +123,10 @@
     "archetype": "Especiales / Eventos"
    }
   },
-  "name": "Festival Internacional de Cine de Villa de Leyva",
-  "displayName": "Festival Internacional de Cine de Villa de Leyva",
+  "name": "Festcinevilla",
+  "displayName": "Festcinevilla",
   "fullName": "20 Festival Internacional de Cine de Villa de Leyva",
-  "shortName": "VILLA DE LEYVA",
+  "shortName": "FESTCINEVILLA",
   "city": "Villa de Leyva",
   "country": "CO",
   "dates": "13–16 NOV",
@@ -138,6 +138,7 @@
   "festivalEndStr": "2026-11-16T23:59:00",
   "sharedSlotIsOneScreening": true,
   "mes_es": "noviembre",
-  "dias_vacios": []
+  "dias_vacios": [],
+  "tagline": "Festival Internacional de Cine de Villa de Leyva"
  }
 }

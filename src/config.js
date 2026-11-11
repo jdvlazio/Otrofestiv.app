@@ -941,13 +941,15 @@ export const FESTIVAL_CONFIG={
   },
   'villadeleyvaiff2026': {
     // NO es Villa del Cine (villadelcine2026): es el Festival Internacional de @festcinevilla.
-    // EL NOMBRE es el oficial, sin sigla; sin subtítulo (no hay sigla que expandir y el
-    // lema «De Corazón» se lee en el afiche). Afiche oficial de Alejandra Oviedo,
+    // EL NOMBRE es el corto con que se presenta (@festcinevilla); el subtítulo lo expande
+    // (decisión de Juan, 11 nov). Afiche oficial de Alejandra Oviedo,
     // p/DfFhCmgEQBb (1280×1600, estirado a 400×600).
-    name:'Festival Internacional de Cine de Villa de Leyva',displayName:'Festival Internacional de Cine de Villa de Leyva',
-    fullName:'20 Festival Internacional de Cine de Villa de Leyva',shortName:'VILLA DE LEYVA',
+    name:'Festcinevilla',displayName:'Festcinevilla',
+    fullName:'20 Festival Internacional de Cine de Villa de Leyva',shortName:'FESTCINEVILLA',
     city:'Villa de Leyva',country:'CO',
     dates:'13–16 NOV',dates_en:'NOV 13–16',year:2026,timezoneOffset:'-05:00',
+    // el subtítulo expande el nombre
+    tagline:'Festival Internacional de Cine de Villa de Leyva',
     keyArt:'/assets/keyart/villadeleyvaiff2026.jpg',
     instagram:'festcinevilla', storageKey:'villadeleyvaiff2026_',festivalStartStr:'2026-11-13T00:00:00',festivalEndStr:'2026-11-16T23:59:00',
     festivalDates:{'2026-11-13':'2026-11-13','2026-11-14':'2026-11-14','2026-11-15':'2026-11-15'},

@@ -9,10 +9,10 @@
  "fuente_principal": "festival-ig",
  "_por_que_sedes": "La parrilla publicada es la de la Real Fábrica; la sala (Blanca / Rosada) viaja por función.",
  "_por_que_secciones": "Las competencias como las nombra el catálogo del festival; Foco Reygadas y Muestra Especial, tal cual la lámina. Emoji e inglés: propuesta, a confirmar con Juan.",
- "name": "Festival Internacional de Cine de Villa de Leyva",
- "displayName": "Festival Internacional de Cine de Villa de Leyva",
+ "name": "Festcinevilla",
+ "displayName": "Festcinevilla",
  "fullName": "20 Festival Internacional de Cine de Villa de Leyva",
- "shortName": "VILLA DE LEYVA",
+ "shortName": "FESTCINEVILLA",
  "city": "Villa de Leyva",
  "country": "CO",
  "dates": "13–16 NOV",
@@ -24,6 +24,7 @@
  "festivalEndStr": "2026-11-16T23:59:00",
  "sharedSlotIsOneScreening": true,
  "dias_vacios": [],
+ "tagline": "Festival Internacional de Cine de Villa de Leyva",
  "prioLimit": 3,
  "dias": [
   "2026-11-13",
@@ -1489,8 +1490,8 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-11T11:18:53",
-  "plan_sha": "c37dc5cd358cc408",
+  "fecha": "2026-11-11T12:11:05",
+  "plan_sha": "2b8b43af1a607112",
   "paso": 7,
   "cmd": "python3 pipeline/encuadrar-posters.py villadeleyvaiff-2026 --aplicar --desde festivals/staging/villadeleyvaiff-2026-build.json"
  }
