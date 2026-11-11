@@ -523,7 +523,7 @@
     "17:30"
    ],
    "day": "2026-11-11",
-   "time": "17:30",
+   "time": "17:00",
    "day_order": 1,
    "venue": "Cámara de Comercio - Caucasia",
    "sala": "Auditorio",
@@ -546,8 +546,9 @@
      "fecha": "2026-11-05"
     },
     "time": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-05"
+     "tipo": "festival-ig",
+     "fecha": "2026-11-11",
+     "url": "https://www.instagram.com/p/DfnOtKyhBNZ/"
     },
     "venue": {
      "tipo": "festival-web",
@@ -2061,7 +2062,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-11T16:32:10",
+  "fecha": "2026-11-11T17:10:40",
   "plan_sha": "d5407859a874077e",
   "paso": 6,
   "cmd": "python3 pipeline/fecibac-2026-verificar.py"
