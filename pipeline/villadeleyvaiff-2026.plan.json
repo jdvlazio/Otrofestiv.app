@@ -53,7 +53,8 @@
   "festivals/staging/villadeleyvaiff-2026-correcciones.json": "sin_afiche: el porqué de cada obra sin afiche",
   "festivals/staging/villadeleyvaiff-2026-crudo.json": "el formato intermedio",
   "festivals/staging/villadeleyvaiff-2026-enriquecido.json": "fichas y afiches de las obras de las funciones",
-  "festivals/staging/villadeleyvaiff-2026-venues-geo.json": "el pin, Google Maps 11 nov"
+  "festivals/staging/villadeleyvaiff-2026-venues-geo.json": "el pin, Google Maps 11 nov",
+  "festivals/staging/villadeleyvaiff-2026-sinopsis.json": "sinopsis traducidas de TMDB; la lee enriquecer.py"
  },
  "festival": {
   "radar": 1248,
@@ -121,11 +122,10 @@
     "archetype": "Especiales / Eventos"
    }
   },
-  "name": "Villa de Leyva IFF",
-  "displayName": "Villa de Leyva IFF",
+  "name": "Festival Internacional de Cine de Villa de Leyva",
+  "displayName": "Festival Internacional de Cine de Villa de Leyva",
   "fullName": "20 Festival Internacional de Cine de Villa de Leyva",
   "shortName": "VILLA DE LEYVA",
-  "tagline": "Festival Internacional de Cine de Villa de Leyva",
   "city": "Villa de Leyva",
   "country": "CO",
   "dates": "13–16 NOV",

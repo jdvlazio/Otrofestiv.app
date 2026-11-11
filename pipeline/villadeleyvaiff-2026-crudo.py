@@ -122,6 +122,8 @@ def main():
                 if sig and mins(sig) - mins(hora) <= 150:
                     f['duracion_min'], f['_duracion_de'] = mins(sig) - mins(hora), 'hueco hasta la función siguiente de la sala'
             f.update(extra)
+            if sec == FOCO:
+                f['duracion_min'], f['_duracion_de'] = 120, 'estimada: un largometraje de Carlos Reygadas; la lámina no dice cuál'
             funcs.append(f)
     if fallos:
         sys.exit('✗ ' + '\n  · '.join(fallos))

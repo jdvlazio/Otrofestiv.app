@@ -1,6 +1,6 @@
 {
  "id": "w_5HEQ0553YH74",
- "titulo_original": "Florecerán!",
+ "titulo_original": "¡Florecerán!",
  "anio": null,
  "paises": [
   "AR"
@@ -8,8 +8,15 @@
  "directores": [
   "Claudia Ruiz"
  ],
+ "aliases": [
+  {
+   "titulo": "Florecerán!",
+   "tipo": "festival"
+  }
+ ],
  "xref": {},
  "presentaciones": [
-  "ficfusa-2026"
+  "ficfusa-2026",
+  "villadeleyvaiff-2026"
  ]
 }

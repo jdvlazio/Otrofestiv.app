@@ -1,6 +1,6 @@
 {
  "titulo_original": {
-  "fuente": "festival:cinemancia-2025,cinemancia-2025",
+  "fuente": "festival:cinemancia-2025,cinemancia-2025,villadeleyvaiff-2026",
   "regla": "el título que más festivales imprimen"
  },
  "directores": {
@@ -8,8 +8,8 @@
   "regla": "la grafía más completa que acreditan los festivales"
  },
  "anio": {
-  "fuente": "festival",
-  "regla": "único"
+  "fuente": "tmdb:1546645",
+  "regla": "tmdb-manda"
  },
  "paises": {
   "fuente": "festival",

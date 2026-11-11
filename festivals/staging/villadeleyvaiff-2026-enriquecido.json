@@ -104,7 +104,9 @@
    "_director": "Ricardo Monteiro",
    "_sondeado": "2026-11-11",
    "poster": "/assets/villadeleyvaiff-2026/ballena.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "sinopsis": "Un diaporama fantasmagórico del fin de los tiempos: Ballena es un artefacto visual y sonoro que lleva al espectador por paisajes donde la naturaleza resiste y se enfrenta a las ruinas de la humanidad. Entre los vestigios de un pasado que se derrumba y la promesa de un futuro inmóvil, la película revela la tensión entre destrucción y permanencia.",
+   "_sinopsis": "traducida del portugués de TMDB 1628167 (pt-BR)"
   },
   {
    "titulo": "Bumblebee",
@@ -244,7 +246,7 @@
    "posterSource": "tmdb",
    "genero": "Ciencia Ficción",
    "_heredado": {
-    "genero": "catálogo w_R4EP71550W43 (bhff-2026, cineautopsia-2026, fantasmagoria-2026, fantasofest-2026, ficica-2026, ficpa-2026, narrarelfuturo-2026, popayan-2026)"
+    "genero": "catálogo w_R4EP71550W43 (bhff-2026, cineautopsia-2026, fantasmagoria-2026, fantasofest-2026, festicinerio-2026, ficfusa-2026, ficica-2026, ficpa-2026, narrarelfuturo-2026, popayan-2026, villadeleyvaiff-2026)"
    }
   },
   {
@@ -279,8 +281,8 @@
    "posterSource": "tmdb",
    "genero": "Ficción",
    "_heredado": {
-    "genero": "catálogo w_R4HJ5XKTZM64 (ficdeh-2026)",
-    "synopsis_en": "catálogo w_R4HJ5XKTZM64 (ficdeh-2026)"
+    "genero": "catálogo w_R4HJ5XKTZM64 (ficdeh-2026, villadeleyvaiff-2026)",
+    "synopsis_en": "catálogo w_R4HJ5XKTZM64 (ficdeh-2026, villadeleyvaiff-2026)"
    },
    "synopsis_en": "José, an Indigenous young man with an intellectual disability, makes a living running errands in Ipiales, on the Colombia–Ecuador border. Most afternoons he collects a small suitcase on the Ecuadorian side and delivers it to someone in Colombia, without knowing what it holds. One afternoon a chain of events keeps José from making the next handover, throws him against a new reality and shows him that not everything is as his mind paints it."
   },
@@ -330,7 +332,9 @@
    "lbSlug": "claudete",
    "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
    "_director": "Gabriela Kopp",
-   "_sondeado": "2026-11-11"
+   "_sondeado": "2026-11-11",
+   "sinopsis": "En busca de rastros de su madre fallecida, Gabriela vuelve a recuerdos afectivos y a lugares que guardan la huella de su ausencia. Bajo la mirada atenta de la Muerte, la hija emprende un viaje de duelo para darle un nuevo sentido a su vínculo con la vida.",
+   "_sinopsis": "traducida del portugués de TMDB 1752814 (pt-BR)"
   },
   {
    "titulo": "Criatura",
@@ -394,7 +398,6 @@
    "tmdb_id": 1740164,
    "titulo_original": "Dama de las Mil Máscaras",
    "poster_path": "/nRiAXYrOnnEIW1RGlomkc75yCTt.jpg",
-   "synopsis_es": "",
    "synopsis_en": "Damaris Gonzales is a pioneer who defies tradition. In the town of Barva, Heredia—the birthplace of Costa Rican masquerades—she broke the mold by becoming the first female traditional mask maker, challenging a historically male-dominated profession.  This documentary pays tribute to her contribution and career, showing how her workshop is much more than a workspace: it is a place where clay and spirit meet, where tradition comes to life anew through her hands.",
    "genero": "Documental",
    "anio_tmdb": 0,
@@ -405,7 +408,13 @@
    "_director": "Wainer Méndez",
    "_sondeado": "2026-11-11",
    "poster": "/assets/villadeleyvaiff-2026/dama-de-las-mil-mascaras.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "anio": 2026,
+   "_heredado": {
+    "anio": "catálogo w_P1KYDW0CF2VM (festicinerio-2026, villadeleyvaiff-2026)",
+    "synopsis_es": "catálogo w_P1KYDW0CF2VM (festicinerio-2026, villadeleyvaiff-2026)"
+   },
+   "synopsis_es": "Damaris González desafía la tradición: en Barva de Heredia, cuna de la mascarada costarricense, se convirtió en la primera mujer mascarera en un oficio históricamente masculino. El documental rinde homenaje a su trayectoria y muestra su taller como el lugar donde el barro y el espíritu se encuentran."
   },
   {
    "titulo": "Demian",
@@ -682,9 +691,11 @@
    ],
    "poster": "/assets/villadeleyvaiff-2026/esquirlas-de-caracol.jpg",
    "posterSource": "tmdb",
+   "sinopsis": "Roberto guarda un secreto que no puede compartir: un caracol de mar que les susurra verdades a quienes se atreven a escucharlas. En medio de una celebración íntima, el deseo de revelar ese misterio desata una ruptura sin vuelta atrás.",
+   "_sinopsis": "traducida del polaco de TMDB 1718595 (pl-PL), la única sinopsis que tiene la ficha",
    "duracion_tmdb": 11,
    "_heredado": {
-    "duracion_tmdb": "catálogo w_ZR5J46WM80RV (bhff-2026)"
+    "duracion_tmdb": "catálogo w_ZR5J46WM80RV (bhff-2026, villadeleyvaiff-2026)"
    }
   },
   {
@@ -837,7 +848,7 @@
    "posterSource": "tmdb",
    "genero": "Drama",
    "_heredado": {
-    "genero": "catálogo w_R4ERSF68AGVJ (cinemancia-2025, filcmar-2026, mubibogota-2026)"
+    "genero": "catálogo w_R4ERSF68AGVJ (cinemancia-2025, filcmar-2026, mubibogota-2026, villadeleyvaiff-2026)"
    }
   },
   {
@@ -901,6 +912,40 @@
    ],
    "poster": "/assets/villadeleyvaiff-2026/las-almas-ni-los-ojos.jpg",
    "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Las formas de la magia",
+   "_ya_publicada": [
+    {
+     "festival": "cinemancia-2026",
+     "titulo": "Las formas de la magia",
+     "tmdb_id": 1668889,
+     "poster": "https://image.tmdb.org/t/p/w500/lEWolBB40mm3KON8u2dWnPk0cVJ.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "las-formas-de-la-magia",
+     "country": "Colombia",
+     "year": 2026,
+     "duration": "17 min",
+     "sinopsis": "Un año después de la muerte de su padre, el reconocido mago colombiano Gustavo Lorgia, la directora realiza una exploración por sus archivos de video que revelan su trayectoria como artista, su rol como padre y la estética televisiva de una época. Una película que acude al archivo como medio para atravesar el duelo y a la memoria como forma de resistir a la desaparición."
+    }
+   ],
+   "_afiche_de": "ya publicada en cinemancia-2026",
+   "_sinopsis_de": "ya publicada en cinemancia-2026",
+   "poster": "https://image.tmdb.org/t/p/w500/lEWolBB40mm3KON8u2dWnPk0cVJ.jpg",
+   "_verificado": "ya publicada en cinemancia-2026: se reusa su afiche",
+   "sinopsis": "Un año después de la muerte de su padre, el reconocido mago colombiano Gustavo Lorgia, la directora realiza una exploración por sus archivos de video que revelan su trayectoria como artista, su rol como padre y la estética televisiva de una época. Una película que acude al archivo como medio para atravesar el duelo y a la memoria como forma de resistir a la desaparición.",
+   "pais": "Colombia",
+   "anio": 2026,
+   "duracion_tmdb": 17,
+   "lbSlug": "las-formas-de-la-magia",
+   "tmdb_id": 1668889,
+   "_ficha_de": "ya publicada en cinemancia-2026",
+   "genero": "Documental",
+   "_heredado": {
+    "genero": "catálogo w_R4FSHA335BXS (cinemancia-2026, ficci-65, midbo-2026, miradas-2026, villadeleyvaiff-2026)",
+    "director_heredado": "catálogo w_R4FSHA335BXS (cinemancia-2026, ficci-65, midbo-2026, miradas-2026, villadeleyvaiff-2026)"
+   },
+   "director_heredado": "María Paula Lorgia"
   },
   {
    "titulo": "Las heridas",
@@ -1003,8 +1048,8 @@
    "_director": "Juan Pablo Castro",
    "_sondeado": "2026-11-11",
    "_heredado": {
-    "genero": "catálogo w_R4KECG9BFSX8 (ficica-2026, jardin-2026)",
-    "synopsis_es": "catálogo w_R4KECG9BFSX8 (ficica-2026, jardin-2026)"
+    "genero": "catálogo w_R4KECG9BFSX8 (ficica-2026, jardin-2026, villadeleyvaiff-2026)",
+    "synopsis_es": "catálogo w_R4KECG9BFSX8 (ficica-2026, jardin-2026, villadeleyvaiff-2026)"
    }
   },
   {
@@ -1080,8 +1125,8 @@
    "_sondeado": "2026-11-11",
    "posterSource": "tmdb",
    "_heredado": {
-    "genero": "catálogo w_R4NEB2RNHWKD (siembrafest-2026)",
-    "anio": "catálogo w_R4NEB2RNHWKD (siembrafest-2026)"
+    "genero": "catálogo w_R4NEB2RNHWKD (siembrafest-2026, villadeleyvaiff-2026)",
+    "anio": "catálogo w_R4NEB2RNHWKD (siembrafest-2026, villadeleyvaiff-2026)"
    },
    "anio": 2025
   },
@@ -1096,12 +1141,12 @@
    "_sondeado": "2026-11-11",
    "genero": "Documental",
    "_heredado": {
-    "genero": "catálogo w_R4HKXW3511SF (ficdeh-2026)",
-    "title_en": "catálogo w_R4HKXW3511SF (ficdeh-2026)",
-    "lbSlug": "catálogo w_R4HKXW3511SF (ficdeh-2026)",
-    "synopsis_es": "catálogo w_R4HKXW3511SF (ficdeh-2026)",
-    "synopsis_en": "catálogo w_R4HKXW3511SF (ficdeh-2026)",
-    "duracion_tmdb": "catálogo w_R4HKXW3511SF (ficdeh-2026)"
+    "genero": "catálogo w_R4HKXW3511SF (ficdeh-2026, villadeleyvaiff-2026)",
+    "title_en": "catálogo w_R4HKXW3511SF (ficdeh-2026, villadeleyvaiff-2026)",
+    "lbSlug": "catálogo w_R4HKXW3511SF (ficdeh-2026, villadeleyvaiff-2026)",
+    "synopsis_es": "catálogo w_R4HKXW3511SF (ficdeh-2026, villadeleyvaiff-2026)",
+    "synopsis_en": "catálogo w_R4HKXW3511SF (ficdeh-2026, villadeleyvaiff-2026)",
+    "duracion_tmdb": "catálogo w_R4HKXW3511SF (ficdeh-2026, villadeleyvaiff-2026)"
    },
    "title_en": "Notes On an Exile",
    "lbSlug": "notes-on-an-exile",
@@ -1385,7 +1430,7 @@
    "posterSource": "tmdb",
    "genero": "Drama",
    "_heredado": {
-    "genero": "catálogo w_R4ET8E34SH5C (cinemancia-2025)"
+    "genero": "catálogo w_R4ET8E34SH5C (cinemancia-2025, villadeleyvaiff-2026)"
    }
   },
   {
@@ -1578,6 +1623,18 @@
    "posterSource": "tmdb"
   },
   {
+   "titulo": "¡Florecerán!",
+   "_ya_publicada": [
+    {
+     "festival": "ficfusa-2026",
+     "titulo": "Florecerán!",
+     "country": "Argentina"
+    }
+   ],
+   "_verificado": "ya publicada en ficfusa-2026: se reusan sus datos",
+   "pais": "Argentina"
+  },
+  {
    "titulo": "“Convocatoria general del gremio”",
    "tmdb_id": 1811929,
    "titulo_original": "Convocação Geral da Categoria",
@@ -1692,7 +1749,9 @@
    "_director": "Ricardo Monteiro",
    "_sondeado": "2026-11-11",
    "poster": "/assets/villadeleyvaiff-2026/ballena.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "sinopsis": "Un diaporama fantasmagórico del fin de los tiempos: Ballena es un artefacto visual y sonoro que lleva al espectador por paisajes donde la naturaleza resiste y se enfrenta a las ruinas de la humanidad. Entre los vestigios de un pasado que se derrumba y la promesa de un futuro inmóvil, la película revela la tensión entre destrucción y permanencia.",
+   "_sinopsis": "traducida del portugués de TMDB 1628167 (pt-BR)"
   },
   "Bumblebee": {
    "tmdb_id": 899567,
@@ -1830,7 +1889,7 @@
    "posterSource": "tmdb",
    "genero": "Ciencia Ficción",
    "_heredado": {
-    "genero": "catálogo w_R4EP71550W43 (bhff-2026, cineautopsia-2026, fantasmagoria-2026, fantasofest-2026, ficica-2026, ficpa-2026, narrarelfuturo-2026, popayan-2026)"
+    "genero": "catálogo w_R4EP71550W43 (bhff-2026, cineautopsia-2026, fantasmagoria-2026, fantasofest-2026, festicinerio-2026, ficfusa-2026, ficica-2026, ficpa-2026, narrarelfuturo-2026, popayan-2026, villadeleyvaiff-2026)"
    }
   },
   "Chaski Pacha": {
@@ -1864,8 +1923,8 @@
    "posterSource": "tmdb",
    "genero": "Ficción",
    "_heredado": {
-    "genero": "catálogo w_R4HJ5XKTZM64 (ficdeh-2026)",
-    "synopsis_en": "catálogo w_R4HJ5XKTZM64 (ficdeh-2026)"
+    "genero": "catálogo w_R4HJ5XKTZM64 (ficdeh-2026, villadeleyvaiff-2026)",
+    "synopsis_en": "catálogo w_R4HJ5XKTZM64 (ficdeh-2026, villadeleyvaiff-2026)"
    },
    "synopsis_en": "José, an Indigenous young man with an intellectual disability, makes a living running errands in Ipiales, on the Colombia–Ecuador border. Most afternoons he collects a small suitcase on the Ecuadorian side and delivers it to someone in Colombia, without knowing what it holds. One afternoon a chain of events keeps José from making the next handover, throws him against a new reality and shows him that not everything is as his mind paints it."
   },
@@ -1913,7 +1972,9 @@
    "lbSlug": "claudete",
    "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
    "_director": "Gabriela Kopp",
-   "_sondeado": "2026-11-11"
+   "_sondeado": "2026-11-11",
+   "sinopsis": "En busca de rastros de su madre fallecida, Gabriela vuelve a recuerdos afectivos y a lugares que guardan la huella de su ausencia. Bajo la mirada atenta de la Muerte, la hija emprende un viaje de duelo para darle un nuevo sentido a su vínculo con la vida.",
+   "_sinopsis": "traducida del portugués de TMDB 1752814 (pt-BR)"
   },
   "Cuarto de flores": {
    "tmdb_id": 1661318,
@@ -1954,7 +2015,6 @@
    "tmdb_id": 1740164,
    "titulo_original": "Dama de las Mil Máscaras",
    "poster_path": "/nRiAXYrOnnEIW1RGlomkc75yCTt.jpg",
-   "synopsis_es": "",
    "synopsis_en": "Damaris Gonzales is a pioneer who defies tradition. In the town of Barva, Heredia—the birthplace of Costa Rican masquerades—she broke the mold by becoming the first female traditional mask maker, challenging a historically male-dominated profession.  This documentary pays tribute to her contribution and career, showing how her workshop is much more than a workspace: it is a place where clay and spirit meet, where tradition comes to life anew through her hands.",
    "genero": "Documental",
    "anio_tmdb": 0,
@@ -1965,7 +2025,13 @@
    "_director": "Wainer Méndez",
    "_sondeado": "2026-11-11",
    "poster": "/assets/villadeleyvaiff-2026/dama-de-las-mil-mascaras.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "anio": 2026,
+   "_heredado": {
+    "anio": "catálogo w_P1KYDW0CF2VM (festicinerio-2026, villadeleyvaiff-2026)",
+    "synopsis_es": "catálogo w_P1KYDW0CF2VM (festicinerio-2026, villadeleyvaiff-2026)"
+   },
+   "synopsis_es": "Damaris González desafía la tradición: en Barva de Heredia, cuna de la mascarada costarricense, se convirtió en la primera mujer mascarera en un oficio históricamente masculino. El documental rinde homenaje a su trayectoria y muestra su taller como el lugar donde el barro y el espíritu se encuentran."
   },
   "Demian": {
    "tmdb_id": 1723258,
@@ -2232,9 +2298,11 @@
    ],
    "poster": "/assets/villadeleyvaiff-2026/esquirlas-de-caracol.jpg",
    "posterSource": "tmdb",
+   "sinopsis": "Roberto guarda un secreto que no puede compartir: un caracol de mar que les susurra verdades a quienes se atreven a escucharlas. En medio de una celebración íntima, el deseo de revelar ese misterio desata una ruptura sin vuelta atrás.",
+   "_sinopsis": "traducida del polaco de TMDB 1718595 (pl-PL), la única sinopsis que tiene la ficha",
    "duracion_tmdb": 11,
    "_heredado": {
-    "duracion_tmdb": "catálogo w_ZR5J46WM80RV (bhff-2026)"
+    "duracion_tmdb": "catálogo w_ZR5J46WM80RV (bhff-2026, villadeleyvaiff-2026)"
    }
   },
   "Gris": {
@@ -2383,7 +2451,7 @@
    "posterSource": "tmdb",
    "genero": "Drama",
    "_heredado": {
-    "genero": "catálogo w_R4ERSF68AGVJ (cinemancia-2025, filcmar-2026, mubibogota-2026)"
+    "genero": "catálogo w_R4ERSF68AGVJ (cinemancia-2025, filcmar-2026, mubibogota-2026, villadeleyvaiff-2026)"
    }
   },
   "Las almas ni los ojos": {
@@ -2542,8 +2610,8 @@
    "_director": "Juan Pablo Castro",
    "_sondeado": "2026-11-11",
    "_heredado": {
-    "genero": "catálogo w_R4KECG9BFSX8 (ficica-2026, jardin-2026)",
-    "synopsis_es": "catálogo w_R4KECG9BFSX8 (ficica-2026, jardin-2026)"
+    "genero": "catálogo w_R4KECG9BFSX8 (ficica-2026, jardin-2026, villadeleyvaiff-2026)",
+    "synopsis_es": "catálogo w_R4KECG9BFSX8 (ficica-2026, jardin-2026, villadeleyvaiff-2026)"
    }
   },
   "Merrimundi": {
@@ -2616,8 +2684,8 @@
    "_sondeado": "2026-11-11",
    "posterSource": "tmdb",
    "_heredado": {
-    "genero": "catálogo w_R4NEB2RNHWKD (siembrafest-2026)",
-    "anio": "catálogo w_R4NEB2RNHWKD (siembrafest-2026)"
+    "genero": "catálogo w_R4NEB2RNHWKD (siembrafest-2026, villadeleyvaiff-2026)",
+    "anio": "catálogo w_R4NEB2RNHWKD (siembrafest-2026, villadeleyvaiff-2026)"
    },
    "anio": 2025
   },
@@ -2631,12 +2699,12 @@
    "_sondeado": "2026-11-11",
    "genero": "Documental",
    "_heredado": {
-    "genero": "catálogo w_R4HKXW3511SF (ficdeh-2026)",
-    "title_en": "catálogo w_R4HKXW3511SF (ficdeh-2026)",
-    "lbSlug": "catálogo w_R4HKXW3511SF (ficdeh-2026)",
-    "synopsis_es": "catálogo w_R4HKXW3511SF (ficdeh-2026)",
-    "synopsis_en": "catálogo w_R4HKXW3511SF (ficdeh-2026)",
-    "duracion_tmdb": "catálogo w_R4HKXW3511SF (ficdeh-2026)"
+    "genero": "catálogo w_R4HKXW3511SF (ficdeh-2026, villadeleyvaiff-2026)",
+    "title_en": "catálogo w_R4HKXW3511SF (ficdeh-2026, villadeleyvaiff-2026)",
+    "lbSlug": "catálogo w_R4HKXW3511SF (ficdeh-2026, villadeleyvaiff-2026)",
+    "synopsis_es": "catálogo w_R4HKXW3511SF (ficdeh-2026, villadeleyvaiff-2026)",
+    "synopsis_en": "catálogo w_R4HKXW3511SF (ficdeh-2026, villadeleyvaiff-2026)",
+    "duracion_tmdb": "catálogo w_R4HKXW3511SF (ficdeh-2026, villadeleyvaiff-2026)"
    },
    "title_en": "Notes On an Exile",
    "lbSlug": "notes-on-an-exile",
@@ -2913,7 +2981,7 @@
    "posterSource": "tmdb",
    "genero": "Drama",
    "_heredado": {
-    "genero": "catálogo w_R4ET8E34SH5C (cinemancia-2025)"
+    "genero": "catálogo w_R4ET8E34SH5C (cinemancia-2025, villadeleyvaiff-2026)"
    }
   },
   "Términa": {

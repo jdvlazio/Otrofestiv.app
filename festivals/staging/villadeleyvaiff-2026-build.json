@@ -9,11 +9,10 @@
  "fuente_principal": "festival-ig",
  "_por_que_sedes": "La parrilla publicada es la de la Real Fábrica; la sala (Blanca / Rosada) viaja por función.",
  "_por_que_secciones": "Las competencias como las nombra el catálogo del festival; Foco Reygadas y Muestra Especial, tal cual la lámina. Emoji e inglés: propuesta, a confirmar con Juan.",
- "name": "Villa de Leyva IFF",
- "displayName": "Villa de Leyva IFF",
+ "name": "Festival Internacional de Cine de Villa de Leyva",
+ "displayName": "Festival Internacional de Cine de Villa de Leyva",
  "fullName": "20 Festival Internacional de Cine de Villa de Leyva",
  "shortName": "VILLA DE LEYVA",
- "tagline": "Festival Internacional de Cine de Villa de Leyva",
  "city": "Villa de Leyva",
  "country": "CO",
  "dates": "13–16 NOV",
@@ -496,6 +495,7 @@
    "title": "Foco Reygadas",
    "type": "film",
    "section": "🔎 Foco Reygadas",
+   "duration": "120 min",
    "_ancla": [
     "Real Fábrica - Villa de Leyva",
     "2026-11-13",
@@ -568,7 +568,9 @@
      "posterSource": "tmdb",
      "lbSlug": "esquirlas-de-caracol",
      "tmdb_id": 1718595,
+     "synopsis": "Roberto guarda un secreto que no puede compartir: un caracol de mar que les susurra verdades a quienes se atreven a escucharlas. En medio de una celebración íntima, el deseo de revelar ese misterio desata una ruptura sin vuelta atrás.",
      "year": 2026,
+     "synopsis_lang": "es",
      "duration": "11 min"
     },
     {
@@ -678,6 +680,7 @@
    "title": "Foco Reygadas",
    "type": "film",
    "section": "🔎 Foco Reygadas",
+   "duration": "120 min",
    "_ancla": [
     "Real Fábrica - Villa de Leyva",
     "2026-11-14",
@@ -814,6 +817,7 @@
    "type": "film",
    "section": "📽️ Competencia Largo Documental",
    "director": "Wainer Méndez",
+   "year": 2026,
    "country": "Costa Rica",
    "flags": "🇨🇷",
    "duration": "62 min",
@@ -829,6 +833,8 @@
    "venue": "Real Fábrica - Villa de Leyva",
    "sala": "Sala Rosada",
    "has_qa": false,
+   "synopsis": "Damaris González desafía la tradición: en Barva de Heredia, cuna de la mascarada costarricense, se convirtió en la primera mujer mascarera en un oficio históricamente masculino. El documental rinde homenaje a su trayectoria y muestra su taller como el lugar donde el barro y el espíritu se encuentran.",
+   "synopsis_lang": "es",
    "poster": "/assets/villadeleyvaiff-2026/dama-de-las-mil-mascaras.jpg",
    "posterSource": "tmdb",
    "_src": {
@@ -1189,7 +1195,9 @@
      "posterSource": "tmdb",
      "lbSlug": "ballena",
      "tmdb_id": 1628167,
-     "year": 2026
+     "synopsis": "Un diaporama fantasmagórico del fin de los tiempos: Ballena es un artefacto visual y sonoro que lleva al espectador por paisajes donde la naturaleza resiste y se enfrenta a las ruinas de la humanidad. Entre los vestigios de un pasado que se derrumba y la promesa de un futuro inmóvil, la película revela la tensión entre destrucción y permanencia.",
+     "year": 2026,
+     "synopsis_lang": "es"
     },
     {
      "title": "Chaika",
@@ -1290,7 +1298,9 @@
      "country": "Brasil",
      "flags": "🇧🇷",
      "lbSlug": "claudete",
-     "tmdb_id": 1752814
+     "tmdb_id": 1752814,
+     "synopsis": "En busca de rastros de su madre fallecida, Gabriela vuelve a recuerdos afectivos y a lugares que guardan la huella de su ausencia. Bajo la mirada atenta de la Muerte, la hija emprende un viaje de duelo para darle un nuevo sentido a su vínculo con la vida.",
+     "synopsis_lang": "es"
     },
     {
      "title": "Eda",
@@ -1373,7 +1383,17 @@
     {
      "title": "Las formas de la magia",
      "country": "Colombia",
-     "flags": "🇨🇴"
+     "flags": "🇨🇴",
+     "poster": "https://image.tmdb.org/t/p/w500/lEWolBB40mm3KON8u2dWnPk0cVJ.jpg",
+     "lbSlug": "las-formas-de-la-magia",
+     "tmdb_id": 1668889,
+     "synopsis": "Un año después de la muerte de su padre, el reconocido mago colombiano Gustavo Lorgia, la directora realiza una exploración por sus archivos de video que revelan su trayectoria como artista, su rol como padre y la estética televisiva de una época. Una película que acude al archivo como medio para atravesar el duelo y a la memoria como forma de resistir a la desaparición.",
+     "genre": "Documental",
+     "director": "María Paula Lorgia",
+     "year": 2026,
+     "posterSource": "tmdb",
+     "synopsis_lang": "es",
+     "duration": "17 min"
     },
     {
      "title": "Lia",
@@ -1469,8 +1489,8 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-11T10:16:32",
-  "plan_sha": "ea7762c9763beaf6",
+  "fecha": "2026-11-11T10:21:51",
+  "plan_sha": "2f70ad3d233c955f",
   "paso": 7,
   "cmd": "python3 pipeline/encuadrar-posters.py villadeleyvaiff-2026 --aplicar --desde festivals/staging/villadeleyvaiff-2026-build.json"
  }

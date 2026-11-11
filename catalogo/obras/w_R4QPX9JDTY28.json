@@ -1,9 +1,10 @@
 {
  "id": "w_R4QPX9JDTY28",
  "titulo_original": "Saba",
- "anio": null,
+ "anio": 2026,
  "paises": [
-  "FR"
+  "GB",
+  "US"
  ],
  "directores": [
   "Liron Topaz"
@@ -12,7 +13,17 @@
   "es": "Saba es un cortometraje animado y metafórico sobre la vida, nuestro recorrido y el esfuerzo interminable por hacer las paces con las personas que nos importan.",
   "en": "Saba is a metaphorical animated short film, about life, our journey and the endless effort to get closure with the meaningful people in our life."
  },
- "xref": {},
+ "generos": [
+  "Animación"
+ ],
+ "afiche": {
+  "archivo": "/assets/villadeleyvaiff-2026/saba.jpg",
+  "veredicto": "oficial"
+ },
+ "xref": {
+  "tmdb": 1700766,
+  "letterboxd": "saba-2026"
+ },
  "versiones": [
   {
    "etiqueta": "9 min",
@@ -20,6 +31,7 @@
   }
  ],
  "presentaciones": [
-  "tribeca-2026"
+  "tribeca-2026",
+  "villadeleyvaiff-2026"
  ]
 }

@@ -153,6 +153,9 @@
   },
   "Lo que calla el hoyo": {
    "_por_que": "sin ficha TMDB verificable (ni título idéntico, ni traducción, ni créditos de la dirección); las láminas de @festcinevilla y los PDF de la web (28–29 oct) son stills bajo banda de color, no afiches"
+  },
+  "Foco Reygadas": {
+   "_por_que": "la lámina (p/DfkomnaGQZw 02 y 03) no dice qué película de Carlos Reygadas se proyecta: no hay obra a la que ponerle afiche"
   }
  },
  "afiches_sin_ficha": {
@@ -165,6 +168,13 @@
    "poster": "/assets/villadeleyvaiff-2026/noche-de-vuelo.jpg",
    "_fuente": "https://cinedidymedome.co/resenas/2025/10/29/noche-de-vuelo-2025/",
    "_por_que": "afiche con el título y las escenas de la obra, recortado solo en el margen lateral; la obra no tiene ficha TMDB y espera el alta"
+  }
+ },
+ "misma_obra": {
+  "Las formas de la magia": {
+   "festival": "cinemancia-2026",
+   "titulo": "Las formas de la magia",
+   "_por_que": "corto documental colombiano (lámina 06 de p/DfkomnaGQZw: «Colombia», Competencia Corto Documental); en Cinemancia 2026 es el corto documental de María Paula Lorgia Garnica, 2026, TMDB 1668889"
   }
  }
 }
