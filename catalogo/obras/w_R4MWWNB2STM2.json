@@ -3,16 +3,21 @@
  "titulo_original": "Legado",
  "anio": 2024,
  "paises": [
-  "CO"
+  "CO",
+  "EC"
  ],
  "directores": [
-  "Zumaya Mayers",
-  "Rodrigo Cuervo"
+  "Rodrigo Cuervo J.",
+  "Zumaya Mayers C."
  ],
  "sinopsis": {
-  "es": "Una serie documental que viaja por territorios mágicos y exuberantes a través de la memoria afrodescendiente de América Latina, para revelar historias entrelazadas de resistencia, lucha y preservación cultural, con el propósito de conocer la fuerza y profundidad de un legado ancestral que desafía la adversidad y se enorgullece de sus raíces africanas, donde la lucha por la libertad, la conexión con el territorio y la celebración de la vida se entrelazan en una danza de resiliencia y dignidad. Un recorrido visual y sonoro en una polifonía de saberes que resuena con los ritmos ancestrales para redescubrir un legado que sigue vivo y vibrante."
+  "es": "Una serie documental que viaja por territorios mágicos y exuberantes a través de la memoria afrodescendiente de América Latina, para revelar historias entrelazadas de resistencia, lucha y preservación cultural, con el propósito de conocer la fuerza y profundidad de un legado ancestral que desafía la adversidad y se enorgullece de sus raíces africanas, donde la lucha por la libertad, la conexión con el territorio y la celebración de la vida se entrelazan en una danza de resiliencia y dignidad. Un recorrido visual y sonoro en una polifonía de saberes que resuena con los ritmos ancestrales para redescubrir un legado que sigue vivo y vibrante.",
+  "en": "A documentary series that travels through the Afro-descendant memory of Latin America to reveal intertwined stories of resistance, struggle and cultural preservation."
  },
- "xref": {},
+ "xref": {
+  "tmdb": 1817230,
+  "letterboxd": "legado-3"
+ },
  "versiones": [
   {
    "etiqueta": "24 min",
@@ -20,6 +25,7 @@
   }
  ],
  "presentaciones": [
+  "ficfusa-2026",
   "popayan-2026"
  ]
 }

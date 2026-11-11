@@ -80,6 +80,13 @@ def main():
             g['_duracion_de'] = f.get('_duracion_por_que') or 'de la hora de inicio a la de fin de la fuente'
         if f.get('invitados'):
             g['invitados'] = f['invitados']
+        if sec == 'Proyección y conversatorio':
+            # el PDF del 11 nov dice «proyección y conversatorio»: has_qa (regla del 1 nov).
+            # La app le suma FESTIVAL_QA_MIN (30) a has_qa; si la franja ya lo incluye, se resta.
+            g['has_qa'] = True
+            if g.get('duracion_min', 0) > 30:
+                g['duracion_min'] -= 30
+                g['_duracion_de'] += ' (menos los 30 min del conversatorio, que la app suma por has_qa)'
         if kind:
             g.update(tipo='evento', event_kind=kind)
         obras = []

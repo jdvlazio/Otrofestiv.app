@@ -30,13 +30,17 @@
   "2026-11-11",
   "2026-11-12",
   "2026-11-13",
-  "2026-11-14"
+  "2026-11-14",
+  "2026-11-15",
+  "2026-11-16"
  ],
  "festivalDates": {
   "2026-11-11": "2026-11-11",
   "2026-11-12": "2026-11-12",
   "2026-11-13": "2026-11-13",
-  "2026-11-14": "2026-11-14"
+  "2026-11-14": "2026-11-14",
+  "2026-11-15": "2026-11-15",
+  "2026-11-16": "2026-11-16"
  },
  "days": [
   {
@@ -58,31 +62,49 @@
    "k": "2026-11-14",
    "d": 14,
    "lbl": "SÁB"
+  },
+  {
+   "k": "2026-11-15",
+   "d": 15,
+   "lbl": "DOM"
+  },
+  {
+   "k": "2026-11-16",
+   "d": 16,
+   "lbl": "LUN"
   }
  ],
  "dayKeys": [
   "2026-11-11",
   "2026-11-12",
   "2026-11-13",
-  "2026-11-14"
+  "2026-11-14",
+  "2026-11-15",
+  "2026-11-16"
  ],
  "dayShort": {
   "2026-11-11": "MIÉ 11",
   "2026-11-12": "JUE 12",
   "2026-11-13": "VIE 13",
-  "2026-11-14": "SÁB 14"
+  "2026-11-14": "SÁB 14",
+  "2026-11-15": "DOM 15",
+  "2026-11-16": "LUN 16"
  },
  "dayShort_en": {
   "2026-11-11": "WED 11",
   "2026-11-12": "THU 12",
   "2026-11-13": "FRI 13",
-  "2026-11-14": "SAT 14"
+  "2026-11-14": "SAT 14",
+  "2026-11-15": "SUN 15",
+  "2026-11-16": "MON 16"
  },
  "dayLong": {
   "2026-11-11": "Miércoles 11 de noviembre",
   "2026-11-12": "Jueves 12 de noviembre",
   "2026-11-13": "Viernes 13 de noviembre",
-  "2026-11-14": "Sábado 14 de noviembre"
+  "2026-11-14": "Sábado 14 de noviembre",
+  "2026-11-15": "Domingo 15 de noviembre",
+  "2026-11-16": "Lunes 16 de noviembre"
  },
  "_acceso": {
   "estado": "Entrada gratuita",
@@ -342,7 +364,7 @@
    "title": "Serie Campe-Cine",
    "type": "film",
    "section": "💬 Proyección y Conversatorio",
-   "duration": "90 min",
+   "duration": "60 min",
    "_ancla": [
     "Quinta Balmoral - Fusagasugá",
     "2026-11-11",
@@ -352,7 +374,7 @@
    "time": "14:30",
    "day_order": 0,
    "venue": "Quinta Balmoral - Fusagasugá",
-   "has_qa": false,
+   "has_qa": true,
    "_src": {
     "url": "https://ficfusa.com/programacion/",
     "nota": "web /programacion/",
@@ -438,7 +460,7 @@
    "section": "💬 Proyección y Conversatorio",
    "country": "China, Francia, Japón, Estados Unidos, Colombia, Líbano",
    "flags": "🇨🇳🇫🇷🇯🇵🇺🇸🇨🇴🇱🇧",
-   "duration": "90 min",
+   "duration": "60 min",
    "_ancla": [
     "Quinta Balmoral - Fusagasugá",
     "2026-11-11",
@@ -448,7 +470,7 @@
    "time": "19:00",
    "day_order": 0,
    "venue": "Quinta Balmoral - Fusagasugá",
-   "has_qa": false,
+   "has_qa": true,
    "_src": {
     "url": "https://www.instagram.com/p/DfbEPvcIZBO/",
     "nota": "https://www.instagram.com/p/DfbEPvcIZBO/ (6 nov, láminas 2 y 3 a ojo); directores en el pie de https://www.instagram.com/p/DfaNEWSERxC/",
@@ -599,7 +621,7 @@
    "section": "💬 Proyección y Conversatorio",
    "country": "Colombia, Guatemala, Estados Unidos",
    "flags": "🇨🇴🇬🇹🇺🇸",
-   "duration": "120 min",
+   "duration": "90 min",
    "_ancla": [
     "Cinema Los Ángeles - Fusagasugá",
     "2026-11-12",
@@ -609,7 +631,7 @@
    "time": "10:00",
    "day_order": 1,
    "venue": "Cinema Los Ángeles - Fusagasugá",
-   "has_qa": false,
+   "has_qa": true,
    "_src": {
     "url": "https://www.instagram.com/p/DfdB21So3TD/",
     "nota": "https://www.instagram.com/p/DfdB21So3TD/ (7 nov, láminas 1–3 leídas)",
@@ -662,7 +684,7 @@
    "year": 2026,
    "country": "Colombia, España",
    "flags": "🇨🇴🇪🇸",
-   "duration": "105 min",
+   "duration": "75 min",
    "genre": "Documental",
    "_ancla": [
     "Quinta Balmoral - Fusagasugá",
@@ -673,7 +695,7 @@
    "time": "14:30",
    "day_order": 1,
    "venue": "Quinta Balmoral - Fusagasugá",
-   "has_qa": false,
+   "has_qa": true,
    "synopsis": "Natalia Pinilla, fotógrafa y activista, emprende un viaje que cruza Santander, Norte de Santander y España para descubrir la obra de Amalia Ramírez, una mujer olvidada que, a comienzos del siglo XX, capturó una de las imágenes más impactantes de la historia colombiana: la pirámide de calaveras de Palonegro, símbolo brutal de la Guerra de los Mil Días. Más de un siglo después, esa fotografía resurge y posiciona a Amalia como, quizás, la primera mujer fotógrafa de Colombia. Conversatorio con la directora Ibeth Rey y Mauricio Donoso, dir. de Fotocultura",
    "synopsis_lang": "es",
    "poster": "/assets/ficfusa-2026/la-luz-por-primera-vez.jpg",
@@ -698,7 +720,7 @@
    "year": 2025,
    "country": "Colombia",
    "flags": "🇨🇴",
-   "duration": "90 min",
+   "duration": "60 min",
    "genre": "Aventura",
    "_ancla": [
     "Quinta Balmoral - Fusagasugá",
@@ -709,7 +731,7 @@
    "time": "16:30",
    "day_order": 1,
    "venue": "Quinta Balmoral - Fusagasugá",
-   "has_qa": false,
+   "has_qa": true,
    "synopsis": "Pablo necesita rescatar a su amiga Pascualina, una gallina ponedora que termina secuestrada por el tendero del pueblo, después de que el niño quebrara la cubeta de huevos que llevaba para pagarle una deuda de su familia. Proyección con interpretación en lengua de señas. Conversatorio con Andrea Montenegro y Jorge Vela, de Cinemazul",
    "synopsis_lang": "es",
    "poster": "/assets/ficfusa-2026/la-gran-hazana.jpg",
@@ -785,7 +807,7 @@
    "section": "💬 Proyección y Conversatorio",
    "country": "Colombia, Canadá",
    "flags": "🇨🇴🇨🇦",
-   "duration": "120 min",
+   "duration": "90 min",
    "_ancla": [
     "Cinema Los Ángeles - Fusagasugá",
     "2026-11-13",
@@ -795,7 +817,7 @@
    "time": "10:00",
    "day_order": 2,
    "venue": "Cinema Los Ángeles - Fusagasugá",
-   "has_qa": false,
+   "has_qa": true,
    "_src": {
     "url": "https://www.instagram.com/p/Dff7g10EXSd/",
     "nota": "https://www.instagram.com/p/Dff7g10EXSd/ (8 nov, láminas 1–3 leídas)",
@@ -994,7 +1016,7 @@
    "section": "💬 Proyección y Conversatorio",
    "country": "Colombia, España",
    "flags": "🇨🇴🇪🇸",
-   "duration": "120 min",
+   "duration": "90 min",
    "_ancla": [
     "Cinema Los Ángeles - Fusagasugá",
     "2026-11-14",
@@ -1004,7 +1026,7 @@
    "time": "10:00",
    "day_order": 3,
    "venue": "Cinema Los Ángeles - Fusagasugá",
-   "has_qa": false,
+   "has_qa": true,
    "_src": {
     "url": "https://www.instagram.com/p/DfkS3CukdJ7/",
     "nota": "https://www.instagram.com/p/DfkS3CukdJ7/ (10 nov, pie)",
@@ -1069,7 +1091,7 @@
    "section": "💬 Proyección y Conversatorio",
    "country": "Colombia, Argentina",
    "flags": "🇨🇴🇦🇷",
-   "duration": "120 min",
+   "duration": "90 min",
    "_ancla": [
     "Cinema Los Ángeles - Fusagasugá",
     "2026-11-14",
@@ -1079,7 +1101,7 @@
    "time": "12:00",
    "day_order": 3,
    "venue": "Cinema Los Ángeles - Fusagasugá",
-   "has_qa": false,
+   "has_qa": true,
    "_src": {
     "url": "https://www.instagram.com/p/DfkS3CukdJ7/",
     "nota": "https://www.instagram.com/p/DfkS3CukdJ7/ (10 nov, pie)",
@@ -1427,17 +1449,458 @@
    "description_lang": "es",
    "_fid": "f_98d9bdcd24",
    "id": "f_98d9bdcd24"
+  },
+  {
+   "title": "Madres de Nacimiento y Truck Mama",
+   "type": "film",
+   "section": "💬 Proyección y Conversatorio",
+   "country": "Francia, Kenia, Países bajos, Arabia saudí, Sudáfrica",
+   "flags": "🇫🇷🇰🇪🇳🇱🇸🇦🇿🇦",
+   "duration": "80 min",
+   "_ancla": [
+    "Cinema Los Ángeles - Fusagasugá",
+    "2026-11-15",
+    "10:00"
+   ],
+   "day": "2026-11-15",
+   "time": "10:00",
+   "day_order": 4,
+   "venue": "Cinema Los Ángeles - Fusagasugá",
+   "has_qa": true,
+   "_src": {
+    "url": "http://ficfusa.com/documentos/programa-ficfusa-2026.pdf",
+    "nota": "http://ficfusa.com/documentos/programa-ficfusa-2026.pdf (modificado 11 nov 08:25)",
+    "date": "2026-11-11"
+   },
+   "is_free": true,
+   "is_cortos": true,
+   "film_list": [
+    {
+     "title": "Madres de nacimiento",
+     "director": "Gloria Isabel Gómez Ceballos",
+     "country": "Francia",
+     "flags": "🇫🇷",
+     "poster": "/assets/ficfusa-2026/madres-de-nacimiento.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "madres-de-nacimiento",
+     "tmdb_id": 1668902,
+     "synopsis": "Del olvido y la oscuridad hay imágenes y sonidos que resurgen para controlar los cuerpos de las mujeres latinoamericanas, quienes desde niñas han sido consideradas madres de nacimiento. Pero en estos archivos emerge una interferencia que proviene del pasado para evocar un mensaje de lucha, memoria y libertad.",
+     "synopsis_en": "Out of oblivion and darkness, images and sounds resurface to control the bodies of Latin American women, regarded since childhood as mothers by birth. But within these archives an interference emerges from the past, carrying a message of struggle, memory and freedom.",
+     "genre": "Documental",
+     "year": 2026,
+     "synopsis_lang": "es",
+     "duration": "8 min"
+    },
+    {
+     "title": "Truck mama",
+     "director": "Zippy Nyaruri",
+     "country": "Kenia, Países bajos, Arabia saudí, Sudáfrica",
+     "flags": "🇰🇪🇳🇱🇸🇦🇿🇦",
+     "poster": "/assets/ficfusa-2026/truck-mama.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "truck-mama",
+     "tmdb_id": 1568191,
+     "synopsis": "«Mi familia quedó en shock cuando supo que manejo», dice Eva, una mujer keniana, al volante de un camión y con un embarazo avanzado. Echó a perder sus años de colegio y fue la única de su familia que no se graduó. Una tontería, admite ahora, pero hoy se alegra de haber elegido un oficio del que puede sentirse orgullosa. Conoce más mundo que sus hermanos y hermanas.",
+     "synopsis_en": "“My family was shocked when they found out that I'm driving,” says Eva, a Kenyan woman, as she sits behind the wheel of a truck, heavily pregnant. She botched up her school years and was the only one in her family not to graduate. Pretty foolish, she admits in hindsight, but now she is glad to have chosen a profession she can be proud of. She sees more of the world than her brothers and sisters do.",
+     "genre": "Documental",
+     "year": 2025,
+     "synopsis_lang": "es",
+     "duration": "85 min"
+    }
+   ],
+   "_fid": "f_985310a630",
+   "id": "f_985310a630"
+  },
+  {
+   "title": "Taller de animación experimental con pintura: Mandala Animada",
+   "type": "event",
+   "section": "🛠️ Taller",
+   "duration": "120 min",
+   "_ancla": [
+    "Quinta Balmoral - Fusagasugá",
+    "2026-11-15",
+    "10:00"
+   ],
+   "day": "2026-11-15",
+   "time": "10:00",
+   "day_order": 4,
+   "venue": "Quinta Balmoral - Fusagasugá",
+   "event_kind": "taller",
+   "has_qa": false,
+   "_src": {
+    "url": "http://ficfusa.com/documentos/programa-ficfusa-2026.pdf",
+    "nota": "http://ficfusa.com/documentos/programa-ficfusa-2026.pdf (modificado 11 nov 08:25)",
+    "date": "2026-11-11"
+   },
+   "is_free": true,
+   "requires_registration": true,
+   "description": "Por Laura Jiménez, directora de Ir hacia adentro",
+   "description_lang": "es",
+   "_fid": "f_2dc96ccc4d",
+   "id": "f_2dc96ccc4d"
+  },
+  {
+   "title": "Desaprender la Maternidad y Matininó",
+   "type": "film",
+   "section": "💬 Proyección y Conversatorio",
+   "country": "Colombia, Países bajos, Puerto Rico, República Dominicana",
+   "flags": "🇨🇴🇳🇱🇵🇷🇩🇴",
+   "duration": "99 min",
+   "_ancla": [
+    "Cinema Los Ángeles - Fusagasugá",
+    "2026-11-15",
+    "12:30"
+   ],
+   "day": "2026-11-15",
+   "time": "12:30",
+   "day_order": 4,
+   "venue": "Cinema Los Ángeles - Fusagasugá",
+   "has_qa": true,
+   "_src": {
+    "url": "http://ficfusa.com/documentos/programa-ficfusa-2026.pdf",
+    "nota": "http://ficfusa.com/documentos/programa-ficfusa-2026.pdf (modificado 11 nov 08:25)",
+    "date": "2026-11-11"
+   },
+   "is_free": true,
+   "is_cortos": true,
+   "film_list": [
+    {
+     "title": "Desaprender la maternidad",
+     "director": "Juliana Erazo Gómez",
+     "country": "Colombia, Países bajos",
+     "flags": "🇨🇴🇳🇱",
+     "poster": "/assets/ficfusa-2026/desaprender-la-maternidad.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "unlearning-motherhood",
+     "tmdb_id": 1574997,
+     "synopsis": "Una joven que siempre ha temido perder su libertad por la maternidad se comienza a angustiar tras un retraso en su periodo. El viaje en el que se embarca para adquirir una prueba de embarazo es revelador gracias a las conversaciones que escucha y entabla con mujeres que comparten historias poco convencionales sobre el hecho de ser madre.",
+     "synopsis_en": "Unlearning Motherhood is an animated documentary that tells the tearing and empowering stories of women with their unconventional motherhood experiences, through the journey of a fictional main character who is looking for answers about pregnancy.",
+     "genre": "Animación",
+     "year": 2025,
+     "synopsis_lang": "es",
+     "duration": "11 min"
+    },
+    {
+     "title": "Matininó",
+     "director": "Gabriela Díaz Arp",
+     "country": "Puerto Rico, República Dominicana",
+     "flags": "🇵🇷🇩🇴",
+     "poster": "/assets/ficfusa-2026/matinino.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "matinino",
+     "tmdb_id": 1676525,
+     "synopsis": "Una familia puertorriqueña multigeneracional usa el cine como terapia, actuando y recreando historias de abuso y trauma. Los testimonios personales toman la forma de secuencias fantásticas donde las mujeres se convierten en guerreras.",
+     "synopsis_en": "A multi-generational family of outspoken Puerto Rican women takes center stage as they conceive and perform fantastical film vignettes as a way to navigate painful pasts in this visually-arresting, kaleidoscopic documentary.",
+     "genre": "Documental",
+     "year": 2026,
+     "synopsis_lang": "es",
+     "duration": "88 min"
+    }
+   ],
+   "_fid": "f_a511c8c805",
+   "id": "f_a511c8c805"
+  },
+  {
+   "title": "Framing her",
+   "type": "film",
+   "section": "💬 Proyección y Conversatorio",
+   "director": "Coco Wouters",
+   "year": 2026,
+   "country": "Bélgica, Suecia, Reino Unido, Noruega",
+   "flags": "🇧🇪🇸🇪🇬🇧🇳🇴",
+   "duration": "90 min",
+   "genre": "Documental",
+   "_ancla": [
+    "Quinta Balmoral - Fusagasugá",
+    "2026-11-15",
+    "14:30"
+   ],
+   "day": "2026-11-15",
+   "time": "14:30",
+   "day_order": 4,
+   "venue": "Quinta Balmoral - Fusagasugá",
+   "has_qa": true,
+   "synopsis": "Una joven cineasta recorre Asia para documentar el trabajo de directoras independientes, pero a medida que escucha sus historias, empiezan a aflorar recuerdos de su propio pasado. Un viaje que, además de acercarla a otras mujeres creadoras, la obligará a enfrentarse a sí misma. Conversatorio con la directora Coco Wouters",
+   "synopsis_lang": "es",
+   "poster": "/assets/ficfusa-2026/framing-her.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "http://ficfusa.com/documentos/programa-ficfusa-2026.pdf",
+    "nota": "http://ficfusa.com/documentos/programa-ficfusa-2026.pdf (modificado 11 nov 08:25)",
+    "date": "2026-11-11"
+   },
+   "is_free": true,
+   "lbSlug": "framing-her",
+   "tmdb_id": 1531982,
+   "synopsis_en": "A young filmmaker travels across Asia to document independent women directors, but their stories bring her own past to the surface.",
+   "_fid": "f_3e57828f24",
+   "id": "f_3e57828f24"
+  },
+  {
+   "title": "Cortometrajes en competencia y muestra especial",
+   "type": "film",
+   "section": "🎬 Proyección",
+   "duration": "60 min",
+   "_ancla": [
+    "Centro de Integración e Innovación Social - Fusagasugá",
+    "2026-11-15",
+    "16:00"
+   ],
+   "day": "2026-11-15",
+   "time": "16:00",
+   "day_order": 4,
+   "venue": "Centro de Integración e Innovación Social - Fusagasugá",
+   "has_qa": false,
+   "_src": {
+    "url": "http://ficfusa.com/documentos/programa-ficfusa-2026.pdf",
+    "nota": "http://ficfusa.com/documentos/programa-ficfusa-2026.pdf (modificado 11 nov 08:25); el PDF no dice qué cortos",
+    "date": "2026-11-11"
+   },
+   "is_free": true,
+   "_fid": "f_df93cfd64f",
+   "id": "f_df93cfd64f"
+  },
+  {
+   "title": "Legado",
+   "type": "film",
+   "section": "💬 Proyección y Conversatorio",
+   "director": "Zumaya Mayers y Rodrigo Cuervo",
+   "year": 2024,
+   "country": "Colombia, Ecuador",
+   "flags": "🇨🇴🇪🇨",
+   "duration": "24 min",
+   "_ancla": [
+    "Quinta Balmoral - Fusagasugá",
+    "2026-11-16",
+    "09:00"
+   ],
+   "day": "2026-11-16",
+   "time": "09:00",
+   "day_order": 5,
+   "venue": "Quinta Balmoral - Fusagasugá",
+   "has_qa": true,
+   "synopsis": "Una serie documental que viaja por territorios mágicos y exuberantes a través de la memoria afrodescendiente de América Latina, para revelar historias entrelazadas de resistencia, lucha y preservación cultural, con el propósito de conocer la fuerza y profundidad de un legado ancestral que desafía la adversidad y se enorgullece de sus raíces africanas, donde la lucha por la libertad, la conexión con el territorio y la celebración de la vida se entrelazan en una danza de resiliencia y dignidad. Un recorrido visual y sonoro en una polifonía de saberes que resuena con los ritmos ancestrales para redescubrir un legado que sigue vivo y vibrante.",
+   "synopsis_lang": "es",
+   "poster": "/assets/ficfusa-2026/legado-v2.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "http://ficfusa.com/documentos/programa-ficfusa-2026.pdf",
+    "nota": "http://ficfusa.com/documentos/programa-ficfusa-2026.pdf (modificado 11 nov 08:25)",
+    "date": "2026-11-11"
+   },
+   "is_free": true,
+   "lbSlug": "legado-3",
+   "tmdb_id": 1817230,
+   "synopsis_en": "A documentary series that travels through the Afro-descendant memory of Latin America to reveal intertwined stories of resistance, struggle and cultural preservation.",
+   "_fid": "f_2953ecab3d",
+   "id": "f_2953ecab3d"
+  },
+  {
+   "title": "La libertad es mi causa",
+   "type": "film",
+   "section": "💬 Proyección y Conversatorio",
+   "director": "Claudia Bermúdez Vélez",
+   "year": 2024,
+   "country": "Colombia",
+   "flags": "🇨🇴",
+   "duration": "102 min",
+   "genre": "Documental",
+   "_ancla": [
+    "Quinta Balmoral - Fusagasugá",
+    "2026-11-16",
+    "10:00"
+   ],
+   "day": "2026-11-16",
+   "time": "10:00",
+   "day_order": 5,
+   "venue": "Quinta Balmoral - Fusagasugá",
+   "has_qa": true,
+   "synopsis": "Este documental cuenta la historia de Causa Justa, el movimiento que logró despolitizar y transformar la conversación sobre el aborto en Colombia. Gracias a su trabajo, la Corte Constitucional despenalizó la interrupción voluntaria del embarazo hasta la semana 24 de gestación, lo que puso al país entre los más avanzados del mundo en este tema. A través de entrevistas y conversaciones, las protagonistas de estos logros, feministas de distintas edades, regiones y organizaciones del país, cuentan cómo hicieron realidad esta meta, por la que las mujeres feministas han luchado durante más de cinco décadas.",
+   "synopsis_lang": "es",
+   "poster": "/assets/ficfusa-2026/la-libertad-es-mi-causa-v2.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "http://ficfusa.com/documentos/programa-ficfusa-2026.pdf",
+    "nota": "http://ficfusa.com/documentos/programa-ficfusa-2026.pdf (modificado 11 nov 08:25)",
+    "date": "2026-11-11"
+   },
+   "is_free": true,
+   "lbSlug": "la-libertad-es-mi-causa",
+   "tmdb_id": 1499403,
+   "synopsis_en": "This documentary tells the story of Causa Justa, a movement that succeeded in depoliticizing and transforming the dialogue on abortion in Colombia. Thanks to their efforts, the Constitutional Court decriminalized the voluntary interruption of pregnancy up to 24 weeks of gestation, placing the country among the most progressive in the world on this issue. Through interviews and conversations, the protagonists of these achievements, feminists of different ages, regions and organizations in the country, share how they made this goal, for which feminist women have fought for more than five decades, a reality.",
+   "_fid": "f_4e603ce97f",
+   "id": "f_4e603ce97f"
+  },
+  {
+   "title": "La vida es",
+   "type": "film",
+   "section": "🎬 Proyección",
+   "director": "Lorena Villarreal",
+   "year": 2026,
+   "country": "México",
+   "flags": "🇲🇽",
+   "duration": "119 min",
+   "genre": "Comedia",
+   "_ancla": [
+    "Cinema Los Ángeles - Fusagasugá",
+    "2026-11-16",
+    "12:30"
+   ],
+   "day": "2026-11-16",
+   "time": "12:30",
+   "day_order": 5,
+   "venue": "Cinema Los Ángeles - Fusagasugá",
+   "has_qa": false,
+   "synopsis": "Nora está por cumplir 40 años y no deja de preguntarse: ¿qué sentido tiene todo esto? Lo que iba a ser una celebración se convierte en una serie de tropiezos que la empujan a descubrirse. Con heridas abiertas, deseos no dichos y un pasado que todavía quema, Nora se enfrenta a su historia familiar, a la muerte, al desempleo, al derrumbe de su relación poliamorosa y a la urgencia de redefinir el amor, su sexualidad y lo que de verdad quiere de la vida.",
+   "synopsis_lang": "es",
+   "poster": "/assets/ficfusa-2026/la-vida-es.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "http://ficfusa.com/documentos/programa-ficfusa-2026.pdf",
+    "nota": "http://ficfusa.com/documentos/programa-ficfusa-2026.pdf (modificado 11 nov 08:25)",
+    "date": "2026-11-11"
+   },
+   "is_free": true,
+   "lbSlug": "life-is-2025",
+   "tmdb_id": 1529400,
+   "synopsis_en": "Nora is about to turn 40 and can't stop wondering: what's the point of all this? What was meant to be a celebration turns into a series of unfortunate missteps that push her toward self-discovery. With open wounds, unspoken desires, and a burning past, Nora confronts her family history, death, unemployment, the collapse of her polyamorous relationship, and the urgent need to redefine love, her sexuality, and what she truly wants from life.",
+   "title_en": "Life Is",
+   "_fid": "f_96e7e0389a",
+   "id": "f_96e7e0389a"
+  },
+  {
+   "title": "Camino a la primera cumbre de mujeres del Sumapaz",
+   "type": "film",
+   "section": "💬 Proyección y Conversatorio",
+   "duration": "45 min",
+   "_ancla": [
+    "Quinta Balmoral - Fusagasugá",
+    "2026-11-16",
+    "12:30"
+   ],
+   "day": "2026-11-16",
+   "time": "12:30",
+   "day_order": 5,
+   "venue": "Quinta Balmoral - Fusagasugá",
+   "has_qa": true,
+   "_src": {
+    "url": "http://ficfusa.com/documentos/programa-ficfusa-2026.pdf",
+    "nota": "http://ficfusa.com/documentos/programa-ficfusa-2026.pdf (modificado 11 nov 08:25)",
+    "date": "2026-11-11"
+   },
+   "is_free": true,
+   "_fid": "f_97361955eb",
+   "id": "f_97361955eb"
+  },
+  {
+   "title": "Como el agua, la piedra y la espuma",
+   "type": "film",
+   "section": "💬 Proyección y Conversatorio",
+   "director": "Diana Marcela Moreno",
+   "year": 2024,
+   "country": "Colombia",
+   "flags": "🇨🇴",
+   "duration": "25 min",
+   "genre": "Documental",
+   "_ancla": [
+    "Quinta Balmoral - Fusagasugá",
+    "2026-11-16",
+    "13:45"
+   ],
+   "day": "2026-11-16",
+   "time": "13:45",
+   "day_order": 5,
+   "venue": "Quinta Balmoral - Fusagasugá",
+   "has_qa": true,
+   "synopsis": "Liliana, joven indígena Pasto, recorre su territorio despertando memorias. En un encuentro con sus Mayores y con los lugares sagrados en medio de los Andes, evoca y reconstruye la sentencia de Juan Chiles, quien 200 años atrás invitaba a ser como el agua, la piedra y la espuma.",
+   "synopsis_lang": "es",
+   "poster": "/assets/ficfusa-2026/como-el-agua-la-piedra-y-la-espuma.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "http://ficfusa.com/documentos/programa-ficfusa-2026.pdf",
+    "nota": "http://ficfusa.com/documentos/programa-ficfusa-2026.pdf (modificado 11 nov 08:25)",
+    "date": "2026-11-11"
+   },
+   "is_free": true,
+   "lbSlug": "like-water-stone-and-foam",
+   "tmdb_id": 1386237,
+   "synopsis_en": "A young woman recalls memories of an indigenous person from Nudo de los Pastos, between Ecuador and Colombia, and reflects on the pollution that threatens her land.",
+   "title_en": "Like water, stone and foam",
+   "_fid": "f_826052c92b",
+   "id": "f_826052c92b"
+  },
+  {
+   "title": "Cuando la palabra se hace búsqueda: El eco de sus voces",
+   "type": "film",
+   "section": "💬 Proyección y Conversatorio",
+   "director": "Frank Benítez Peña",
+   "year": 2026,
+   "country": "Colombia",
+   "flags": "🇨🇴",
+   "duration": "61 min",
+   "genre": "Documental",
+   "_ancla": [
+    "Quinta Balmoral - Fusagasugá",
+    "2026-11-16",
+    "15:00"
+   ],
+   "day": "2026-11-16",
+   "time": "15:00",
+   "day_order": 5,
+   "venue": "Quinta Balmoral - Fusagasugá",
+   "has_qa": true,
+   "synopsis": "En Colombia, la búsqueda de personas desaparecidas ha abierto caminos inesperados de encuentro entre quienes sufren su ausencia y quienes guardan información clave sobre su paradero. Este largometraje revela el papel fundamental de los aportantes de información, en las voces de quienes participaron directa e indirectamente en las hostilidades y que, desde el compromiso, han decidido sumarse al proceso humanitario de la búsqueda liderado por la Unidad de Búsqueda de Personas dadas por Desaparecidas. Conversatorio con Angélica, mujer buscadora; Frank Benítez, director de la película, y Juan Carlos Henao, de la Unidad de Búsqueda (UBPD). Modera Daniel Triviño",
+   "synopsis_lang": "es",
+   "poster": "/assets/ficfusa-2026/cuando-la-palabra-se-hace-busqueda-el-eco-de-sus-voces.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "http://ficfusa.com/documentos/programa-ficfusa-2026.pdf",
+    "nota": "http://ficfusa.com/documentos/programa-ficfusa-2026.pdf (modificado 11 nov 08:25)",
+    "date": "2026-11-11"
+   },
+   "is_free": true,
+   "lbSlug": "cuando-la-palabra-se-hace-busqueda",
+   "tmdb_id": 1738005,
+   "synopsis_en": "In Colombia, the search for missing persons has opened unexpected paths of connection between those who suffer their absence and those who hold key information about their whereabouts. This feature film reveals the fundamental role of information providers, through the voices of those who participated directly and indirectly in the hostilities and who, driven by commitment, have decided to join the humanitarian search process led by the Search Unit (UBPD).",
+   "_fid": "f_0b44487234",
+   "id": "f_0b44487234"
+  },
+  {
+   "title": "Ceremonia de clausura y premiación",
+   "type": "event",
+   "section": "🎉 Evento",
+   "duration": "60 min",
+   "_ancla": [
+    "Quinta Balmoral - Fusagasugá",
+    "2026-11-16",
+    "18:30"
+   ],
+   "day": "2026-11-16",
+   "time": "18:30",
+   "day_order": 5,
+   "venue": "Quinta Balmoral - Fusagasugá",
+   "event_kind": "evento",
+   "has_qa": false,
+   "_src": {
+    "url": "http://ficfusa.com/documentos/programa-ficfusa-2026.pdf",
+    "nota": "http://ficfusa.com/documentos/programa-ficfusa-2026.pdf (modificado 11 nov 08:25)",
+    "date": "2026-11-11"
+   },
+   "is_free": true,
+   "_fid": "f_de2311f39e",
+   "id": "f_de2311f39e"
   }
  ],
  "_avisos_duracion": [
-  "«La luz por primera vez»: 105 min en el festival, 79 en TMDB",
-  "«La gran hazaña»: 90 min en el festival, 14 en TMDB",
-  "«Mu-ki-ra»: 135 min en el festival, 82 en TMDB"
+  "«La gran hazaña»: 60 min en el festival, 14 en TMDB",
+  "«Mu-ki-ra»: 135 min en el festival, 82 en TMDB",
+  "programa «Entrelazadas, Relatos del camino y La peluquería no se cierra» (2026-11-14 10:00): sus obras suman 97 min (3 de 3 con duración) y la función dura 90",
+  "programa «Madres de nacimiento y Truck mama» (2026-11-15 10:00): sus obras suman 93 min (2 de 2 con duración) y la función dura 80"
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-11T11:01:03",
-  "plan_sha": "d1043c85315c4083",
+  "fecha": "2026-11-11T13:18:23",
+  "plan_sha": "c64afe4535979dac",
   "paso": 7,
   "cmd": "python3 pipeline/ficfusa-2026-verificar.py"
  }
