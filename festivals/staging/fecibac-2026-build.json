@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "Programación oficial, 4 láminas de @festivaldecine.bc (5 nov 2026)",
-  "capturado": "2026-11-10",
+  "capturado": "2026-11-11",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "name": "FECIBAC",
@@ -1868,6 +1868,8 @@
    "section": "🎞️ Proyección de Película",
    "director": "Lucas Silva",
    "year": 2000,
+   "country": "Colombia",
+   "flags": "🇨🇴",
    "duration": "60 min",
    "rating": "+7",
    "_ancla": [
@@ -2059,7 +2061,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-10T09:11:45",
+  "fecha": "2026-11-11T16:32:10",
   "plan_sha": "d5407859a874077e",
   "paso": 6,
   "cmd": "python3 pipeline/fecibac-2026-verificar.py"
