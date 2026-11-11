@@ -1,0 +1,17 @@
+{
+ "_nota": "IV Festival Cine para la Paz (Bogotá, 18–21 nov 2026). PRE-ONBOARDING: la Selección Oficial (17 obras) desde el carrusel de @cineparalapaz Dfk4smulKBB (10 nov), con día y franja de cada obra. Falta la SEDE: ninguna lámina, post ni web la dice (11 nov).",
+ "pasos": [
+  {
+   "cmd": "python3 pipeline/cineparalapaz-2026-catalogo.py",
+   "que": "las 17 láminas de la Selección Oficial → catálogo"
+  },
+  {
+   "cmd": "python3 pipeline/enriquecer_catalogo.py festivals/staging/cineparalapaz-2026-catalogo.json",
+   "que": "la cascada de TMDB y lo ya publicado → catálogo enriquecido"
+  }
+ ],
+ "fuentes_vivas": [],
+ "festival": {
+  "fuente_principal": "festival-ig"
+ }
+}
