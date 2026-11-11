@@ -1489,8 +1489,8 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-11T10:21:51",
-  "plan_sha": "2f70ad3d233c955f",
+  "fecha": "2026-11-11T11:18:53",
+  "plan_sha": "c37dc5cd358cc408",
   "paso": 7,
   "cmd": "python3 pipeline/encuadrar-posters.py villadeleyvaiff-2026 --aplicar --desde festivals/staging/villadeleyvaiff-2026-build.json"
  }
