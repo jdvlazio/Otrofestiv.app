@@ -21,6 +21,23 @@
    "valor": "17:30",
    "evidencia": "Post de IG del festival (10 nov), más nuevo que la programación oficial (DfYAPbqGyr0, 6:30 p. m.): lámina 1 «La Barca de los Sueños Olvidados · MARTES 10 NOV. · 5:30 p.m. · Playa del barrio Las Vegas» (Vision y a ojo); lámina 2 «ZARPAREMOS DESDE LA PLAYA DE LAS VEGAS A LAS 5:30 P. M.» (Vision, Tesseract y a ojo coinciden)",
    "contra": "18:30"
+  },
+  {
+   "ancla": {
+    "sede": "Cámara de Comercio - Caucasia",
+    "dia": "2026-11-11",
+    "hora": "17:30"
+   },
+   "funcion": "f_20d05e8b4f",
+   "fuente": {
+    "tipo": "festival-ig",
+    "url": "https://www.instagram.com/p/DfnOtKyhBNZ/",
+    "fecha": "2026-11-11"
+   },
+   "casilla": "time",
+   "valor": "17:00",
+   "evidencia": "post de IG del festival (11 nov), más nuevo que la programación DfYAPbqGyr0 (5 nov, 5:30 p. m.): lámina 1 «HORA: 5:00 p.m.» (Vision y a ojo)",
+   "contra": "17:30"
   }
  ]
 }
