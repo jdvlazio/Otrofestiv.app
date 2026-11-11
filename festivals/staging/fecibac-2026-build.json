@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "Programación oficial, 4 láminas de @festivaldecine.bc (5 nov 2026)",
-  "capturado": "2026-11-09",
+  "capturado": "2026-11-10",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "name": "FECIBAC",
@@ -197,11 +197,49 @@
     "date": "2026-11-05",
     "tipo": "festival-ig"
    },
-   "is_free": true,
    "description": "Inauguración oficial FECIBAC 2026: Somos Chilapos.",
    "description_lang": "es",
    "_fid": "f_dd06cb1138",
-   "id": "f_dd06cb1138"
+   "id": "f_dd06cb1138",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    }
+   }
   },
   {
    "title": "La barca de los sueños olvidados",
@@ -214,7 +252,7 @@
     "18:30"
    ],
    "day": "2026-11-10",
-   "time": "18:30",
+   "time": "17:30",
    "day_order": 0,
    "venue": "Playa Río Cauca, Barrio Las Vegas - Caucasia",
    "event_kind": "evento",
@@ -225,11 +263,50 @@
     "date": "2026-11-05",
     "tipo": "festival-ig"
    },
-   "is_free": true,
    "description": "Espectáculo sobre el río Cauca.",
    "description_lang": "es",
    "_fid": "f_1cf68c3d76",
-   "id": "f_1cf68c3d76"
+   "id": "f_1cf68c3d76",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "time": {
+     "tipo": "festival-ig",
+     "fecha": "2026-11-10",
+     "url": "https://www.instagram.com/p/DfkEUCQG1es/"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    }
+   }
   },
   {
    "title": "La Creciente",
@@ -262,12 +339,46 @@
     "date": "2026-11-05",
     "tipo": "festival-ig"
    },
-   "is_free": true,
    "lbSlug": "la-creciente",
    "tmdb_id": 1779631,
    "synopsis_en": "In the heart of the Magdalena River region, a community confronts the encroaching waters and institutional neglect year after year. The documentary examines the relationship between territory, flooding, dignity, and community resistance.",
    "_fid": "f_a91c1d62e8",
-   "id": "f_a91c1d62e8"
+   "id": "f_a91c1d62e8",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    }
+   }
   },
   {
    "title": "Remando con Pablo y Karla",
@@ -291,11 +402,49 @@
     "date": "2026-11-05",
     "tipo": "festival-ig"
    },
-   "is_free": true,
    "description": "Pablo Muñoz, director de «La Creciente», y Karla V. Corrales, productora y directora de fotografía",
    "description_lang": "es",
    "_fid": "f_5f9ce18719",
-   "id": "f_5f9ce18719"
+   "id": "f_5f9ce18719",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    }
+   }
   },
   {
    "title": "Narrativas chilapas",
@@ -319,11 +468,49 @@
     "date": "2026-11-05",
     "tipo": "festival-ig"
    },
-   "is_free": true,
    "description": "Irina Petro de León",
    "description_lang": "es",
    "_fid": "f_10909a4423",
-   "id": "f_10909a4423"
+   "id": "f_10909a4423",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    }
+   }
   },
   {
    "title": "Los cuerpos que son caudal",
@@ -348,11 +535,53 @@
     "date": "2026-11-05",
     "tipo": "festival-ig"
    },
-   "is_free": true,
    "description": "Recital poético. Irina Petro de León",
    "description_lang": "es",
    "_fid": "f_20d05e8b4f",
-   "id": "f_20d05e8b4f"
+   "id": "f_20d05e8b4f",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    }
+   }
   },
   {
    "title": "Entre 2 Aguas",
@@ -386,12 +615,50 @@
     "date": "2026-11-05",
     "tipo": "festival-ig"
    },
-   "is_free": true,
    "lbSlug": "entre-2-aguas",
    "tmdb_id": 1656180,
    "synopsis_en": "When Moses discovers the network taking control of the water supply, he must choose between staying in the business that lifted him out of poverty… or exposing it and facing the consequences. In a country thirsty for truth, Moses will have to decide what he’s willing to risk: his comfort, his family, or the lives of millions. And he’ll have to do it before the current pulls him under.  Between Two Waters is an environmental thriller about the planet’s most vital resource and the strategy of a powerful economic group determined to turn access to it into a multibillion-dollar business—no matter the cost.",
    "_fid": "f_38045d7fcb",
-   "id": "f_38045d7fcb"
+   "id": "f_38045d7fcb",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    }
+   }
   },
   {
    "title": "Conversatorio Entre 2 Aguas",
@@ -416,11 +683,53 @@
     "date": "2026-11-05",
     "tipo": "festival-ig"
    },
-   "is_free": true,
    "description": "Los protagonistas: Nelson Camayo y María José Escorcia",
    "description_lang": "es",
    "_fid": "f_4f5a4f25d2",
-   "id": "f_4f5a4f25d2"
+   "id": "f_4f5a4f25d2",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    }
+   }
   },
   {
    "title": "El juego de la vida",
@@ -454,13 +763,51 @@
     "date": "2026-11-05",
     "tipo": "festival-ig"
    },
-   "is_free": true,
    "lbSlug": "the-game-of-life-2025",
    "tmdb_id": 1562450,
    "synopsis_en": "A documentary filmmaker follows five Colombian families for 14 years as they struggle to get ahead in a country where moving forward does not always mean progress.",
    "title_en": "The Game of Life",
    "_fid": "f_cf559fb0db",
-   "id": "f_cf559fb0db"
+   "id": "f_cf559fb0db",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    }
+   }
   },
   {
    "title": "Brigitte Planeta B",
@@ -494,13 +841,51 @@
     "date": "2026-11-05",
     "tipo": "festival-ig"
    },
-   "is_free": true,
    "lbSlug": "brigittes-planet-b",
    "tmdb_id": 1498786,
    "synopsis_en": "Brigitte Baptiste is a female transgender ecologist whose groundbreaking research has challenged scientific and social conventions for years. With the help of tracking, archive footage and digital animation, the film weaves an intimate soliloquy and a richly nuanced portrait around an extraordinary protagonist, whose refreshing ideas about life, family and current issues may, perhaps, rekindle hope for the future of our planet.",
    "title_en": "Brigitte's Planet B",
    "_fid": "f_193ba4128c",
-   "id": "f_193ba4128c"
+   "id": "f_193ba4128c",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    }
+   }
   },
   {
    "title": "Conversatorio con Brigitte Baptiste",
@@ -525,11 +910,53 @@
     "date": "2026-11-05",
     "tipo": "festival-ig"
    },
-   "is_free": true,
    "description": "Brigitte Baptiste, protagonista. Modera Yuliana Gómez Zapata, directora de Regionalización UdeA",
    "description_lang": "es",
    "_fid": "f_f941657f17",
-   "id": "f_f941657f17"
+   "id": "f_f941657f17",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    }
+   }
   },
   {
    "title": "Taller de creación de carteles cinematográficos para niños y niñas",
@@ -553,11 +980,49 @@
     "date": "2026-11-05",
     "tipo": "festival-ig"
    },
-   "is_free": true,
    "description": "Un recorrido por el mundo del cine. Taller infantil Chico y Proqui. Harold Blanco y Lenys López",
    "description_lang": "es",
    "_fid": "f_9da375126f",
-   "id": "f_9da375126f"
+   "id": "f_9da375126f",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    }
+   }
   },
   {
    "title": "Escuchando con la cámara",
@@ -581,11 +1046,49 @@
     "date": "2026-11-05",
     "tipo": "festival-ig"
    },
-   "is_free": true,
    "description": "Taller de dirección. Sebastián Bright",
    "description_lang": "es",
    "_fid": "f_92edca12de",
-   "id": "f_92edca12de"
+   "id": "f_92edca12de",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    }
+   }
   },
   {
    "title": "Feria Chilapa",
@@ -611,11 +1114,54 @@
     "date": "2026-11-05",
     "tipo": "festival-ig"
    },
-   "is_free": true,
    "description": "Feria de emprendimientos de distintas zonas del país. Abierta desde las 3:00 p. m. el viernes y desde las 2:00 p. m. el sábado.",
    "description_lang": "es",
    "_fid": "f_b08d6ec367",
-   "id": "f_b08d6ec367"
+   "id": "f_b08d6ec367",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "duration": {
+     "tipo": "regla",
+     "marca": "estimado"
+    }
+   },
+   "duration": "60 min"
   },
   {
    "title": "La Canoa Dorada (Tanda 1)",
@@ -640,9 +1186,47 @@
     "date": "2026-11-05",
     "tipo": "festival-ig"
    },
-   "is_free": true,
    "_fid": "f_f499aa1ca7",
-   "id": "f_f499aa1ca7"
+   "id": "f_f499aa1ca7",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    }
+   }
   },
   {
    "title": "En tierra",
@@ -676,13 +1260,51 @@
     "date": "2026-11-05",
     "tipo": "festival-ig"
    },
-   "is_free": true,
    "lbSlug": "grounded-2025",
    "tmdb_id": 1567732,
    "synopsis_en": "Old DC-3s are the lifeline for residents of the Colombian Amazon. The film crew joins one of the planes on a flight to remote settlements. But this connection is under threat, and without it communities will face total isolation.",
    "title_en": "Grounded",
    "_fid": "f_1bc377b9a8",
-   "id": "f_1bc377b9a8"
+   "id": "f_1bc377b9a8",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    }
+   }
   },
   {
    "title": "Una mirada a través del lente",
@@ -707,11 +1329,53 @@
     "date": "2026-11-05",
     "tipo": "festival-ig"
    },
-   "is_free": true,
    "description": "Sebastián Bright, director de fotografía",
    "description_lang": "es",
    "_fid": "f_c85dc80321",
-   "id": "f_c85dc80321"
+   "id": "f_c85dc80321",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    }
+   }
   },
   {
    "title": "Cine gótico popular",
@@ -736,11 +1400,49 @@
     "date": "2026-11-05",
     "tipo": "festival-ig"
    },
-   "is_free": true,
    "description": "Experiencias disruptivas en la plaza de mercado. Telonera: Esquizofrenia.",
    "description_lang": "es",
    "_fid": "f_9ce42b429f",
-   "id": "f_9ce42b429f"
+   "id": "f_9ce42b429f",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    }
+   }
   },
   {
    "title": "2 Taller de creación de carteles cinematográficos para niños y niñas",
@@ -764,11 +1466,49 @@
     "date": "2026-11-05",
     "tipo": "festival-ig"
    },
-   "is_free": true,
    "description": "Un recorrido por el mundo del cine. Taller infantil Chico y Proqui. Harold Blanco y Lenys López",
    "description_lang": "es",
    "_fid": "f_3fd70972ef",
-   "id": "f_3fd70972ef"
+   "id": "f_3fd70972ef",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    }
+   }
   },
   {
    "title": "Las pesadillas del siervo",
@@ -802,11 +1542,49 @@
     "date": "2026-11-05",
     "tipo": "festival-ig"
    },
-   "is_free": true,
    "lbSlug": "las-pesadillas-del-siervo",
    "tmdb_id": 1791689,
    "_fid": "f_d7ae94b837",
-   "id": "f_d7ae94b837"
+   "id": "f_d7ae94b837",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    }
+   }
   },
   {
    "title": "Conversatorio con Manuel Villa",
@@ -831,11 +1609,53 @@
     "date": "2026-11-05",
     "tipo": "festival-ig"
    },
-   "is_free": true,
    "description": "Manuel Villa, director de «Las pesadillas del siervo»",
    "description_lang": "es",
    "_fid": "f_1a67014864",
-   "id": "f_1a67014864"
+   "id": "f_1a67014864",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    }
+   }
   },
   {
    "title": "Actos babilónicos",
@@ -860,11 +1680,53 @@
     "date": "2026-11-05",
     "tipo": "festival-ig"
    },
-   "is_free": true,
    "description": "Detrás de las mariposas amarillas en «Cien años de soledad». David Palacios, Mauricio Babilonia en «Cien años de soledad»",
    "description_lang": "es",
    "_fid": "f_095a535e21",
-   "id": "f_095a535e21"
+   "id": "f_095a535e21",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    }
+   }
   },
   {
    "title": "La Canoa Dorada (Tanda 2)",
@@ -889,9 +1751,47 @@
     "date": "2026-11-05",
     "tipo": "festival-ig"
    },
-   "is_free": true,
    "_fid": "f_8494fa569e",
-   "id": "f_8494fa569e"
+   "id": "f_8494fa569e",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    }
+   }
   },
   {
    "title": "Gala de premiación La Canoa Dorada",
@@ -916,9 +1816,51 @@
     "date": "2026-11-05",
     "tipo": "festival-ig"
    },
-   "is_free": true,
    "_fid": "f_97fed18751",
-   "id": "f_97fed18751"
+   "id": "f_97fed18751",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    }
+   }
   },
   {
    "title": "Los hijos de Benkos",
@@ -944,9 +1886,43 @@
     "date": "2026-11-05",
     "tipo": "festival-ig"
    },
-   "is_free": true,
    "_fid": "f_7601362e10",
-   "id": "f_7601362e10"
+   "id": "f_7601362e10",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    }
+   }
   },
   {
    "title": "Champeta y picó",
@@ -970,11 +1946,49 @@
     "date": "2026-11-05",
     "tipo": "festival-ig"
    },
-   "is_free": true,
    "description": "Herencia del Gran Caribe para los pueblos ribereños. Juan Carbonel, académico de la champeta",
    "description_lang": "es",
    "_fid": "f_e36bedcd17",
-   "id": "f_e36bedcd17"
+   "id": "f_e36bedcd17",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    }
+   }
   },
   {
    "title": "Fiesta Chilapa",
@@ -998,16 +2012,54 @@
     "date": "2026-11-05",
     "tipo": "festival-ig"
    },
-   "is_free": true,
    "description": "Show de cierre. DJ Gabriela Morgan",
    "description_lang": "es",
    "_fid": "f_63cc57a721",
-   "id": "f_63cc57a721"
+   "id": "f_63cc57a721",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-05"
+    }
+   }
   }
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-09T06:46:40",
+  "fecha": "2026-11-10T09:11:45",
   "plan_sha": "d5407859a874077e",
   "paso": 6,
   "cmd": "python3 pipeline/fecibac-2026-verificar.py"

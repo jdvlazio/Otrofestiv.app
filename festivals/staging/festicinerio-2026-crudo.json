@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "IG @festicinerio, carrusel de la programación (5 nov 2026)",
-  "capturado": "2026-11-07",
+  "capturado": "2026-11-10",
   "que_aporta": "día, hora y sala de todo el festival",
   "url": "https://www.instagram.com/p/DfXJjeBm1w7/",
   "metodo": "lectura a ojo de las láminas, confirmada por Vision"
@@ -153,7 +153,12 @@
    },
    "duracion_min": 10,
    "_duracion_de": "hueco hasta la franja siguiente",
-   "invitados": "Muestra de cortometrajes en homenaje y solidaridad con el pueblo palestino: cada día, uno de estos trabajos y una reflexión colectiva. Símbolos de la ausencia (presencia); La piel de Palestina; Mas que el lenguaje, de Tatiana Mazú González; El canto de los pájaros, de Sebastián Zanzottera; Intersticio; Kufiya, de Manque La Banca."
+   "obras": [
+    {
+     "titulo": "Símbolos de la ausencia (presencia)",
+     "pais": "Chile"
+    }
+   ]
   },
   {
    "titulo": "Andariega",
@@ -252,7 +257,12 @@
    },
    "duracion_min": 10,
    "_duracion_de": "hueco hasta la franja siguiente",
-   "invitados": "Muestra de cortometrajes en homenaje y solidaridad con el pueblo palestino: cada día, uno de estos trabajos y una reflexión colectiva. Símbolos de la ausencia (presencia); La piel de Palestina; Mas que el lenguaje, de Tatiana Mazú González; El canto de los pájaros, de Sebastián Zanzottera; Intersticio; Kufiya, de Manque La Banca."
+   "obras": [
+    {
+     "titulo": "La piel de Palestina",
+     "pais": "Argentina"
+    }
+   ]
   },
   {
    "titulo": "En Bajo de 4 Puntas",
@@ -341,7 +351,13 @@
    },
    "duracion_min": 10,
    "_duracion_de": "hueco hasta la franja siguiente",
-   "invitados": "Muestra de cortometrajes en homenaje y solidaridad con el pueblo palestino: cada día, uno de estos trabajos y una reflexión colectiva. Símbolos de la ausencia (presencia); La piel de Palestina; Mas que el lenguaje, de Tatiana Mazú González; El canto de los pájaros, de Sebastián Zanzottera; Intersticio; Kufiya, de Manque La Banca."
+   "obras": [
+    {
+     "titulo": "Mas que el lenguaje",
+     "director": "Tatiana Mazú González",
+     "pais": "Argentina"
+    }
+   ]
   },
   {
    "titulo": "Paristopia",
@@ -429,7 +445,13 @@
    },
    "duracion_min": 20,
    "_duracion_de": "hueco hasta la franja siguiente",
-   "invitados": "Muestra de cortometrajes en homenaje y solidaridad con el pueblo palestino: cada día, uno de estos trabajos y una reflexión colectiva. Símbolos de la ausencia (presencia); La piel de Palestina; Mas que el lenguaje, de Tatiana Mazú González; El canto de los pájaros, de Sebastián Zanzottera; Intersticio; Kufiya, de Manque La Banca."
+   "obras": [
+    {
+     "titulo": "El canto de los pájaros",
+     "director": "Sebastián Zanzottera",
+     "pais": "Argentina"
+    }
+   ]
   },
   {
    "titulo": "Simplicity of Chaos",
@@ -507,7 +529,12 @@
    },
    "duracion_min": 20,
    "_duracion_de": "hueco hasta la franja siguiente",
-   "invitados": "Muestra de cortometrajes en homenaje y solidaridad con el pueblo palestino: cada día, uno de estos trabajos y una reflexión colectiva. Símbolos de la ausencia (presencia); La piel de Palestina; Mas que el lenguaje, de Tatiana Mazú González; El canto de los pájaros, de Sebastián Zanzottera; Intersticio; Kufiya, de Manque La Banca."
+   "obras": [
+    {
+     "titulo": "Intersticio",
+     "pais": "Argentina"
+    }
+   ]
   },
   {
    "titulo": "La Creciente",
@@ -578,7 +605,13 @@
    },
    "duracion_min": 20,
    "_duracion_de": "hueco hasta la franja siguiente",
-   "invitados": "Muestra de cortometrajes en homenaje y solidaridad con el pueblo palestino: cada día, uno de estos trabajos y una reflexión colectiva. Símbolos de la ausencia (presencia); La piel de Palestina; Mas que el lenguaje, de Tatiana Mazú González; El canto de los pájaros, de Sebastián Zanzottera; Intersticio; Kufiya, de Manque La Banca."
+   "obras": [
+    {
+     "titulo": "Kufiya",
+     "director": "Manque La Banca",
+     "pais": "Argentina"
+    }
+   ]
   },
   {
    "titulo": "Sangre Invisible",

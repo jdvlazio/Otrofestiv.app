@@ -13,7 +13,8 @@ DÍAS OFICIALES (regla de Juan, 8 oct): la portada dice 8 al 13. La charla del
 sábado 14 queda en `_fuera`.
 ACCESO: el pie dice «entrada libre». DURACIÓN de un programa: el hueco hasta la
 franja siguiente de la misma sala.
-FILMINUTO: seis franjas sin lista de obras publicada. Se publican sin obras.
+FILMINUTO: un corto palestino por día, en el orden de la lámina 2 de p/DeuTmfAG3Lp
+(Juan, 10 nov: ese es el orden de los filminutos).
 """
 import io
 import json
@@ -37,6 +38,15 @@ LARGO, FILMI = 'Largometrajes', 'Filminuto'
 FILMINUTOS = ('Muestra de cortometrajes en homenaje y solidaridad con el pueblo palestino: cada día, uno de estos trabajos y una reflexión colectiva. '
               'Símbolos de la ausencia (presencia); La piel de Palestina; Mas que el lenguaje, de Tatiana Mazú González; '
               'El canto de los pájaros, de Sebastián Zanzottera; Intersticio; Kufiya, de Manque La Banca.')
+# p/DeuTmfAG3Lp lámina 2, en orden: un corto por día del 8 al 13 nov
+CORTOS_PALESTINA = [
+    {'titulo': 'Símbolos de la ausencia (presencia)', 'pais': 'Chile'},
+    {'titulo': 'La piel de Palestina', 'pais': 'Argentina'},
+    {'titulo': 'Mas que el lenguaje', 'director': 'Tatiana Mazú González', 'pais': 'Argentina'},
+    {'titulo': 'El canto de los pájaros', 'director': 'Sebastián Zanzottera', 'pais': 'Argentina'},
+    {'titulo': 'Intersticio', 'pais': 'Argentina'},
+    {'titulo': 'Kufiya', 'director': 'Manque La Banca', 'pais': 'Argentina'},
+]
 # título en la parrilla → categoría del catálogo, cuando difieren
 CATEGORIA = {'Animación Nacional': 'Animación', 'Ficción Nacional': 'Ficción'}
 
@@ -111,8 +121,8 @@ def main():
                 f.update(tipo='evento', event_kind='conversatorio')
             f.update(CREDITOS.get(titulo, {}))
             if seccion == FILMI:
-                # p/DeuTmfAG3Lp (20 oct): un corto por día, sin decir cuál: no se asigna.
-                f['invitados'] = FILMINUTOS
+                # p/DeuTmfAG3Lp (20 oct): un corto por día; el orden de la lámina 2 es el de los días
+                f['obras'] = [CORTOS_PALESTINA[int(dia[-2:]) - 8]]
             funcs.append(f)
     sueltas = set(por_cat) - usadas
     if sueltas:
@@ -121,7 +131,7 @@ def main():
     faltan = {norm(o['titulo']) for o in por_cat[LARGO]} - largos
     if faltan:
         fallos.append(f'largos sin función: {sorted(faltan)}')
-    n_obras = sum(len(f.get('obras') or []) for f in funcs) + len(largos)
+    n_obras = sum(len(f.get('obras') or []) for f in funcs if f['seccion'] != FILMI) + len(largos)
     if n_obras != 48:
         fallos.append(f'{n_obras} obras del catálogo en la parrilla, se esperaban 48')
     if fallos:
