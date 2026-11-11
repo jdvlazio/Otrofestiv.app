@@ -4126,6 +4126,10 @@ try:
         # MAMBE 2026 (2 nov): la programación actualizada (p/DfOE-FSAVWB, lámina 4) pone dos
         # talleres distintos a las 9:00 del jue 5 en Filmemoria, I.E. Juan Bautista La Salle
         ('mambe-2026', '2026-11-05|09:00|I.E. Juan Bautista La Salle - Florencia'),  # Cine Comunitario + Stenopeica
+        # Funza 2026 (11 nov): la Feria de Experiencias Sociales (UNIMINUTO, pieza que el
+        # festival le mandó a Juan) es a las 4:00 p. m. del 18, igual que la Apertura del
+        # festival en el Centro Cultural Bacatá; son dos actividades, no una función
+        ('funza-2026', '2026-11-18|16:00|Centro Cultural Bacatá - Funza'),          # Apertura + Feria de Experiencias Sociales
     }
     _viol = []
     for _fname in _ACTIVE:
