@@ -51,6 +51,22 @@
    "casilla": "has_qa",
    "valor": true,
    "evidencia": "Historia de IG del festival (9 nov): ajuste de programación de hoy, Diòba a las 6:00 p. m. y En Bajo de 4 Puntas a las 7:20 p. m. con presencia del director"
+  },
+  {
+   "ancla": {
+    "sede": "Teatro Cuesta - Riosucio",
+    "dia": "2026-11-12",
+    "hora": "19:20"
+   },
+   "funcion": "f_0bae5febff",
+   "fuente": {
+    "tipo": "festival-ig",
+    "url": "https://www.instagram.com/p/DflLlcRG_1t/",
+    "fecha": "2026-11-10"
+   },
+   "casilla": "has_qa",
+   "valor": true,
+   "evidencia": "Post de IG del festival (10 nov), lámina 2: «La Creciente. Proyección acompañada por el Director Pablo Muñoz.» Vision, Tesseract y a ojo coinciden"
   }
  ]
 }
