@@ -39,7 +39,8 @@
   "festivals/staging/ficfusa-2026-sinopsis.json": "sinopsis declaradas: reuso de lo publicado y traducciones nuestras",
   "festivals/staging/ficfusa-2026-crudo.json": "el formato intermedio",
   "festivals/staging/ficfusa-2026-enriquecido.json": "fichas y afiches de las obras de las funciones",
-  "festivals/staging/ficfusa-2026-venues-geo.json": "los pines, Google Maps 11 nov"
+  "festivals/staging/ficfusa-2026-venues-geo.json": "los pines, Google Maps 11 nov",
+  "festivals/staging/ficfusa-2026-avisos.json": "aviso del festival (programación del 15 y 16 nov pendiente); lo lee publicar.py"
  },
  "fuentes_vivas": [],
  "_nota_fuentes_vivas": "La programación sale de un post de IG por día; el vigía mira @ficfusa_festival.",

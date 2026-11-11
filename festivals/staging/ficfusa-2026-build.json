@@ -1436,8 +1436,8 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-11T10:00:07",
-  "plan_sha": "f940ba15f2e8ef92",
+  "fecha": "2026-11-11T11:01:03",
+  "plan_sha": "d1043c85315c4083",
   "paso": 7,
   "cmd": "python3 pipeline/ficfusa-2026-verificar.py"
  }
