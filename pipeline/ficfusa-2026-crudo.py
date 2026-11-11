@@ -33,14 +33,9 @@ OUT = f'{REPO}/festivals/staging/ficfusa-2026-crudo.json'
 # formato de la fuente → (sección, event_kind; None = proyección)
 FORMATO = {'Charla': ('Charla', 'charla'), 'Taller': ('Taller', 'taller'),
            'Taller - Laboratorio': ('Taller', 'taller'), 'Evento': ('Evento', 'evento')}
-# Programas de varias obras: el título que les da la fuente, o sus obras unidas con «y».
-# 11 nov: el pie de Dfma5V8EbTn dice «dos bloques de proyecciones»; 14 nov CIIS: «Una
-# selección de cortometrajes» (DfkS3CukdJ7).
-TITULO = {('2026-11-11', '10:00', 'Cinema Los Ángeles'): 'Proyección de cortometrajes · bloque 1',
-          ('2026-11-11', '11:00', 'Cinema Los Ángeles'): 'Proyección de cortometrajes · bloque 2',
-          ('2026-11-11', '14:30', 'Quinta Balmoral'): 'Serie Campe-Cine',
-          ('2026-11-11', '19:00', 'Quinta Balmoral'): 'Vestigios e Invocaciones',
-          ('2026-11-14', '18:00', 'CIIS'): 'Una selección de cortometrajes'}
+# Programas de varias obras: el nombre que les da la fuente (campo `nombre` de la
+# transcripción, con su porqué), o el título que trae, o sus obras unidas con «y».
+GENERICOS = {'Proyecciones', 'Proyección', 'Proyección y conversatorio'}
 KIND = {'Masterclass: Actuación del subtexto y el lenguaje no verbal': 'masterclass',
         '¡Fiesta de los 13 años del FICFUSA!': 'fiesta',
         'Laboratorio Visual Experimental VIDEOFRAGMENTOS': 'taller'}
@@ -92,7 +87,7 @@ def main():
             o = cat.get(norm(t))
             obras.append({k: o[k] for k in ('titulo', 'director', 'pais') if o.get(k)} if o else {'titulo': t})
         if obras and len(obras) > 1:
-            g['titulo'] = TITULO.get((f['fecha'], f['hora'], g['sede'])) or y_lista([o['titulo'] for o in obras])
+            g['titulo'] = f.get('nombre') or (f['titulo'] if f['titulo'] not in GENERICOS else None) or y_lista([o['titulo'] for o in obras])
         if len(obras) == 1 and not kind:
             g['titulo'] = obras[0]['titulo']
             g.update({k: v for k, v in obras[0].items() if k != 'titulo'})

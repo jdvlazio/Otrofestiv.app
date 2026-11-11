@@ -1422,6 +1422,7 @@
     "nota": "https://www.instagram.com/p/DfkS3CukdJ7/ (10 nov, pie)",
     "date": "2026-11-11"
    },
+   "is_free": false,
    "description": "Proyección especial y presentación musical de Alejandro Rincón y La Saloma",
    "description_lang": "es",
    "_fid": "f_98d9bdcd24",
@@ -1435,7 +1436,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-11T09:55:11",
+  "fecha": "2026-11-11T10:00:07",
   "plan_sha": "f940ba15f2e8ef92",
   "paso": 7,
   "cmd": "python3 pipeline/ficfusa-2026-verificar.py"
