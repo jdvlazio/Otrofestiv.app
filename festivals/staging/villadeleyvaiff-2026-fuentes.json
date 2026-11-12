@@ -1,12 +1,12 @@
 {
  "_provenance": {
   "fuente": "pipeline/fuentes_descubrir.py",
-  "capturado": "2026-11-12T12:05",
+  "capturado": "2026-11-12T18:22",
   "paginas_leidas": 6,
   "errores": [
    "https://www.villadeleyvaiff.co/_api/cloud-data: HTTP Error 404: Not Found",
-   "https://www.villadeleyvaiff.co/_api/wix-code-public-dispatcher-ng/siteview: HTTP Error 404: Not Found",
-   "https://www.villadeleyvaiff.co/true: HTTP Error 404: Not Found"
+   "https://www.villadeleyvaiff.co/true: HTTP Error 404: Not Found",
+   "https://www.villadeleyvaiff.co/_api/wix-code-public-dispatcher-ng/siteview: HTTP Error 404: Not Found"
   ]
  },
  "raices": {
@@ -19,7 +19,7 @@
    "tipo": "pdf",
    "visto_en": "https://www.villadeleyvaiff.co",
    "primera_vez": "2026-11-12T11:24",
-   "ultima_vez": "2026-11-12T12:05",
+   "ultima_vez": "2026-11-12T18:22",
    "estado": "usada",
    "_por_que": "PDF de secciones (28–29 oct): catálogo, villadeleyvaiff-2026-catalogo.py y -verificar.py; el 7fa6751c es el LAB Ópera de Leyva (proyectos, no entra)",
    "revisado": "2026-11-12T11:43"
@@ -28,7 +28,7 @@
    "tipo": "pdf",
    "visto_en": "https://www.villadeleyvaiff.co",
    "primera_vez": "2026-11-12T11:24",
-   "ultima_vez": "2026-11-12T12:05",
+   "ultima_vez": "2026-11-12T18:22",
    "estado": "usada",
    "_por_que": "PDF de secciones (28–29 oct): catálogo, villadeleyvaiff-2026-catalogo.py y -verificar.py; el 7fa6751c es el LAB Ópera de Leyva (proyectos, no entra)",
    "revisado": "2026-11-12T11:43"
@@ -37,7 +37,7 @@
    "tipo": "pdf",
    "visto_en": "https://www.villadeleyvaiff.co",
    "primera_vez": "2026-11-12T11:24",
-   "ultima_vez": "2026-11-12T12:05",
+   "ultima_vez": "2026-11-12T18:22",
    "estado": "usada",
    "_por_que": "PDF de secciones (28–29 oct): catálogo, villadeleyvaiff-2026-catalogo.py y -verificar.py; el 7fa6751c es el LAB Ópera de Leyva (proyectos, no entra)",
    "revisado": "2026-11-12T11:43"
@@ -46,7 +46,7 @@
    "tipo": "pdf",
    "visto_en": "https://www.villadeleyvaiff.co",
    "primera_vez": "2026-11-12T11:24",
-   "ultima_vez": "2026-11-12T12:05",
+   "ultima_vez": "2026-11-12T18:22",
    "estado": "usada",
    "_por_que": "PDF de secciones (28–29 oct): catálogo, villadeleyvaiff-2026-catalogo.py y -verificar.py; el 7fa6751c es el LAB Ópera de Leyva (proyectos, no entra)",
    "revisado": "2026-11-12T11:43"
@@ -55,7 +55,7 @@
    "tipo": "pdf",
    "visto_en": "https://www.villadeleyvaiff.co",
    "primera_vez": "2026-11-12T11:24",
-   "ultima_vez": "2026-11-12T12:05",
+   "ultima_vez": "2026-11-12T18:22",
    "estado": "usada",
    "_por_que": "PDF de secciones (28–29 oct): catálogo, villadeleyvaiff-2026-catalogo.py y -verificar.py; el 7fa6751c es el LAB Ópera de Leyva (proyectos, no entra)",
    "revisado": "2026-11-12T11:43"
@@ -73,7 +73,7 @@
    "tipo": "pdf",
    "visto_en": "https://www.villadeleyvaiff.co",
    "primera_vez": "2026-11-12T11:24",
-   "ultima_vez": "2026-11-12T12:05",
+   "ultima_vez": "2026-11-12T18:22",
    "estado": "usada",
    "_por_que": "PDF de secciones (28–29 oct): catálogo, villadeleyvaiff-2026-catalogo.py y -verificar.py; el 7fa6751c es el LAB Ópera de Leyva (proyectos, no entra)",
    "revisado": "2026-11-12T11:43"
@@ -82,7 +82,7 @@
    "tipo": "pdf",
    "visto_en": "https://www.villadeleyvaiff.co",
    "primera_vez": "2026-11-12T11:24",
-   "ultima_vez": "2026-11-12T12:05",
+   "ultima_vez": "2026-11-12T18:22",
    "estado": "usada",
    "_por_que": "PDF de secciones (28–29 oct): catálogo, villadeleyvaiff-2026-catalogo.py y -verificar.py; el 7fa6751c es el LAB Ópera de Leyva (proyectos, no entra)",
    "revisado": "2026-11-12T11:43"
@@ -91,7 +91,7 @@
    "tipo": "pdf",
    "visto_en": "https://www.villadeleyvaiff.co",
    "primera_vez": "2026-11-12T11:24",
-   "ultima_vez": "2026-11-12T12:05",
+   "ultima_vez": "2026-11-12T18:22",
    "estado": "usada",
    "_por_que": "PDF de secciones (28–29 oct): catálogo, villadeleyvaiff-2026-catalogo.py y -verificar.py; el 7fa6751c es el LAB Ópera de Leyva (proyectos, no entra)",
    "revisado": "2026-11-12T11:43"
@@ -100,10 +100,19 @@
    "tipo": "pdf",
    "visto_en": "https://www.villadeleyvaiff.co",
    "primera_vez": "2026-11-12T11:24",
-   "ultima_vez": "2026-11-12T12:05",
+   "ultima_vez": "2026-11-12T18:22",
    "estado": "usada",
    "_por_que": "PDF de secciones (28–29 oct): catálogo, villadeleyvaiff-2026-catalogo.py y -verificar.py; el 7fa6751c es el LAB Ópera de Leyva (proyectos, no entra)",
    "revisado": "2026-11-12T11:43"
+  },
+  "https://www.villadeleyvaiff.co/_files/ugd/66001c_c3b087db0f7c461296126eca2d977c31.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.villadeleyvaiff.co",
+   "primera_vez": "2026-11-12T18:22",
+   "ultima_vez": "2026-11-12T18:22",
+   "estado": "usada",
+   "_por_que": "programa general versión 12 nov: igual al del 11 nov salvo «Foco. ANIBIA» bajo MU-KI-RA y un logo de patrocinador; sin cambios de hora, sala ni obra",
+   "revisado": "2026-11-12T18:23"
   }
  }
 }
