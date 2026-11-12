@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "ensamblar.py: ids estables de las funciones (docs/FUNCION.md C1)",
-  "capturado": "2026-11-11"
+  "capturado": "2026-11-12"
  },
  "funciones": {
   "f_4cd815d6b9": {
@@ -37,7 +37,7 @@
    "dia": "2026-11-13",
    "hora": "20:30",
    "sala": "Sala Blanca",
-   "titulo": "foco reygadas"
+   "titulo": "luz silenciosa"
   },
   "f_8a20a4f65c": {
    "sede": "Real Fábrica - Villa de Leyva",
@@ -58,7 +58,7 @@
    "dia": "2026-11-14",
    "hora": "21:00",
    "sala": "Sala Blanca",
-   "titulo": "foco reygadas"
+   "titulo": "post tenebras lux"
   },
   "f_5cda49570e": {
    "sede": "Real Fábrica - Villa de Leyva",
@@ -116,6 +116,13 @@
    "sala": "Sala Rosada",
    "titulo": "tres hermanas"
   },
+  "f_fc30a29df8": {
+   "sede": "Real Fábrica - Villa de Leyva",
+   "dia": "2026-11-14",
+   "hora": "16:00",
+   "sala": "Sala Rosada",
+   "titulo": "encuentro con carlos reygadas"
+  },
   "f_67e67ce536": {
    "sede": "Real Fábrica - Villa de Leyva",
    "dia": "2026-11-14",
@@ -157,6 +164,125 @@
    "hora": "18:30",
    "sala": "Sala Rosada",
    "titulo": "la paga"
+  },
+  "f_232e2a471c": {
+   "sede": "Plaza Mayor - Villa de Leyva",
+   "dia": "2026-11-13",
+   "hora": "10:00",
+   "sala": "",
+   "titulo": "pelicula para todos los ninos y ninas de villa de leyva"
+  },
+  "f_485edcc35b": {
+   "sede": "Plaza Mayor - Villa de Leyva",
+   "dia": "2026-11-13",
+   "hora": "13:00",
+   "sala": "",
+   "titulo": "retrospectiva festival cortos que nos han encantado"
+  },
+  "f_0013e5479c": {
+   "sede": "Plaza Mayor - Villa de Leyva",
+   "dia": "2026-11-13",
+   "hora": "15:30",
+   "sala": "",
+   "titulo": "mu ki ra"
+  },
+  "f_a97bf087bd": {
+   "sede": "Plaza Mayor - Villa de Leyva",
+   "dia": "2026-11-13",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "goham"
+  },
+  "f_7ac4550533": {
+   "sede": "Plaza Mayor - Villa de Leyva",
+   "dia": "2026-11-14",
+   "hora": "10:00",
+   "sala": "",
+   "titulo": "retrospectiva festival cortos que nos han encantado"
+  },
+  "f_4f5382832f": {
+   "sede": "Plaza Mayor - Villa de Leyva",
+   "dia": "2026-11-14",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "masha y los osos"
+  },
+  "f_fa9ac39afb": {
+   "sede": "Plaza Mayor - Villa de Leyva",
+   "dia": "2026-11-14",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "sinfonia de los bichos raros"
+  },
+  "f_7d022ed46f": {
+   "sede": "Plaza Mayor - Villa de Leyva",
+   "dia": "2026-11-14",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "el corset"
+  },
+  "f_3ba797a6f5": {
+   "sede": "Plaza Mayor - Villa de Leyva",
+   "dia": "2026-11-15",
+   "hora": "10:00",
+   "sala": "",
+   "titulo": "retrospectiva festival cortos que nos han encantado"
+  },
+  "f_0df99defee": {
+   "sede": "Plaza Mayor - Villa de Leyva",
+   "dia": "2026-11-15",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "premiacion festivalito cortos festivalito"
+  },
+  "f_e863918147": {
+   "sede": "Plaza Mayor - Villa de Leyva",
+   "dia": "2026-11-15",
+   "hora": "16:30",
+   "sala": "",
+   "titulo": "kiki entregas a domicilio"
+  },
+  "f_020aa88315": {
+   "sede": "Plaza Mayor - Villa de Leyva",
+   "dia": "2026-11-15",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "moon mi amigo el panda"
+  },
+  "f_268ed35c75": {
+   "sede": "Plaza Mayor - Villa de Leyva",
+   "dia": "2026-11-15",
+   "hora": "21:00",
+   "sala": "",
+   "titulo": "lactar"
+  },
+  "f_41b8718434": {
+   "sede": "Real Fábrica - Villa de Leyva",
+   "dia": "2026-11-14",
+   "hora": "09:00",
+   "sala": "",
+   "titulo": "festivalito talleres y cine"
+  },
+  "f_658853bb2f": {
+   "sede": "Hotel Plaza Mayor - Villa de Leyva",
+   "dia": "2026-11-14",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "espacio redes cual es el valor de los escritores audiovisuales"
+  },
+  "f_bb5278574b": {
+   "sede": "Real Fábrica - Villa de Leyva",
+   "dia": "2026-11-15",
+   "hora": "09:00",
+   "sala": "",
+   "titulo": "festivalito talleres y cine"
+  },
+  "f_6b5e3071a8": {
+   "sede": "Claustro de San Francisco - Villa de Leyva",
+   "dia": "2026-11-16",
+   "hora": "15:30",
+   "sala": "",
+   "titulo": "fragmentos"
   }
  }
 }

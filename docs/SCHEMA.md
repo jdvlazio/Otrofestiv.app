@@ -351,14 +351,14 @@ está pasando de verdad — no lo que alguien recordaba al escribirlo.
 | `synopsis_en` | string | — | 41 fest |  |
 | `synopsis_es` | string | — | 2 fest |  |
 | `synopsis_lang` | string | `es` · `en` · `pt` | 43 fest | no lo lee la vista: guardianes No lo lee la vista: lo consumen los guardianes ([paridad-derivados]). |
-| `description` | string | — | 41 fest | Texto de un PROGRAMA o una ACTIVIDAD (no de una obra: eso es synopsis). En español; lib.separar_descripcion es la regla. |
+| `description` | string | — | 42 fest | Texto de un PROGRAMA o una ACTIVIDAD (no de una obra: eso es synopsis). En español; lib.separar_descripcion es la regla. |
 | `description_en` | string | — | 5 fest |  |
 | `description_es` | string | — | 1 fest |  |
-| `description_lang` | string | `es` · `en` · `pt` | 41 fest |  |
+| `description_lang` | string | `es` · `en` · `pt` | 42 fest |  |
 | `rating` | string | — | 8 fest |  |
 | `premiere` | string | — | 19 fest | Texto libre del festival («World Premiere», «Estreno argentino»). |
 | `type` | string | `film` · `event` · `short` | 44 fest |  |
-| `event_kind` | string | — | 35 fest | Palabra del festival, verbatim (charla, taller, masterclass). Enum en validate-festivals. |
+| `event_kind` | string | — | 36 fest | Palabra del festival, verbatim (charla, taller, masterclass). Enum en validate-festivals. |
 | `is_cortos` | boolean | — | 42 fest | exige `film_list` Programa curado: exige film_list no vacío. |
 | `film_list` | array | — | 41 fest |  |
 | `is_programa` | boolean | — | 5 fest |  |

@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "Google Maps desde el navegador integrado (11 nov 2026); _prec:manual intocable",
-  "capturado": "2026-11-11"
+  "capturado": "2026-11-12"
  },
  "Real Fábrica - Villa de Leyva": {
   "lat": 5.6332892,
@@ -9,5 +9,26 @@
   "address": "Cl. 13 #8-51, Villa de Leyva, Boyacá",
   "_prec": "manual",
   "_match": "Google Maps: «Real Fábrica de Licores»"
+ },
+ "Plaza Mayor - Villa de Leyva": {
+  "lat": 5.6338197,
+  "lng": -73.5236226,
+  "address": "Plaza Mayor, Villa de Leyva, Boyacá",
+  "_prec": "manual",
+  "_match": "Google Maps: «Plaza Mayor de Villa de Leyva»"
+ },
+ "Hotel Plaza Mayor - Villa de Leyva": {
+  "lat": 5.634093,
+  "lng": -73.524086,
+  "address": "Villa de Leyva, Boyacá",
+  "_prec": "manual",
+  "_match": "Google Maps: «Hotel Plaza Mayor Villa de Leyva»"
+ },
+ "Claustro de San Francisco - Villa de Leyva": {
+  "lat": 5.6305425,
+  "lng": -73.5241643,
+  "address": "Villa de Leyva, Boyacá",
+  "_prec": "manual",
+  "_match": "Google Maps: «Claustro San Francisco»"
  }
 }

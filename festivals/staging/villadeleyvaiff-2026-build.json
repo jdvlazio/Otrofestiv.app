@@ -2,12 +2,12 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "IG @festcinevilla, carrusel «Programación · Real Fábrica» (10 nov 2026)",
-  "capturado": "2026-11-11",
+  "capturado": "2026-11-12",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "radar": 1248,
  "fuente_principal": "festival-ig",
- "_por_que_sedes": "La parrilla publicada es la de la Real Fábrica; la sala (Blanca / Rosada) viaja por función.",
+ "_por_que_sedes": "La parrilla publicada es la de la Real Fábrica; la sala (Blanca / Rosada) viaja por función. Desde el 12 nov, el PDF del programa completo suma Cine a la Plaza (Plaza Mayor), Espacio Redes (Hotel Plaza Mayor) y Fragmentos (Claustro de San Francisco).",
  "_por_que_secciones": "Las competencias como las nombra el catálogo del festival; Foco Reygadas y Muestra Especial, tal cual la lámina. Emoji e inglés: propuesta, a confirmar con Juan.",
  "name": "Festcinevilla",
  "displayName": "Festcinevilla",
@@ -29,12 +29,14 @@
  "dias": [
   "2026-11-13",
   "2026-11-14",
-  "2026-11-15"
+  "2026-11-15",
+  "2026-11-16"
  ],
  "festivalDates": {
   "2026-11-13": "2026-11-13",
   "2026-11-14": "2026-11-14",
-  "2026-11-15": "2026-11-15"
+  "2026-11-15": "2026-11-15",
+  "2026-11-16": "2026-11-16"
  },
  "days": [
   {
@@ -51,27 +53,36 @@
    "k": "2026-11-15",
    "d": 15,
    "lbl": "DOM"
+  },
+  {
+   "k": "2026-11-16",
+   "d": 16,
+   "lbl": "LUN"
   }
  ],
  "dayKeys": [
   "2026-11-13",
   "2026-11-14",
-  "2026-11-15"
+  "2026-11-15",
+  "2026-11-16"
  ],
  "dayShort": {
   "2026-11-13": "VIE 13",
   "2026-11-14": "SÁB 14",
-  "2026-11-15": "DOM 15"
+  "2026-11-15": "DOM 15",
+  "2026-11-16": "LUN 16"
  },
  "dayShort_en": {
   "2026-11-13": "FRI 13",
   "2026-11-14": "SAT 14",
-  "2026-11-15": "SUN 15"
+  "2026-11-15": "SUN 15",
+  "2026-11-16": "MON 16"
  },
  "dayLong": {
   "2026-11-13": "Viernes 13 de noviembre",
   "2026-11-14": "Sábado 14 de noviembre",
-  "2026-11-15": "Domingo 15 de noviembre"
+  "2026-11-15": "Domingo 15 de noviembre",
+  "2026-11-16": "Lunes 16 de noviembre"
  },
  "_acceso": {
   "estado": "Entrada libre (no se anuncia pago)",
@@ -117,20 +128,40 @@
    "archetype": "Especiales / Eventos",
    "order": 7
   },
+  "🗣️ Encuentros": {
+   "en": "Talks",
+   "archetype": "Charlas / Industria",
+   "order": 8
+  },
   "✏️ Competencia Corto Animación": {
    "en": "Animated Short Competition",
    "archetype": "Competencia",
-   "order": 8
+   "order": 9
   },
   "🧪 Competencia Corto Experimental": {
    "en": "Experimental Short Competition",
    "archetype": "Competencia",
-   "order": 9
+   "order": 10
   },
   "🎥 Competencia Corto Documental": {
    "en": "Short Documentary Competition",
    "archetype": "Competencia",
-   "order": 10
+   "order": 11
+  },
+  "🏛️ Cine a la Plaza": {
+   "en": "Cinema in the Square",
+   "archetype": "Especiales / Eventos",
+   "order": 12
+  },
+  "🧒 Competencia Corto Festivalito": {
+   "en": "Festivalito Short Competition (kids)",
+   "archetype": "Competencia",
+   "order": 13
+  },
+  "🎉 Evento": {
+   "en": "Event",
+   "archetype": "Especiales / Eventos",
+   "order": 14
   }
  },
  "venues": {
@@ -142,6 +173,33 @@
    "address": "Cl. 13 #8-51, Villa de Leyva, Boyacá",
    "_prec": "manual",
    "_match": "Google Maps: «Real Fábrica de Licores»"
+  },
+  "Plaza Mayor - Villa de Leyva": {
+   "short": "Plaza Mayor",
+   "city": "Villa de Leyva",
+   "lat": 5.6338197,
+   "lng": -73.5236226,
+   "address": "Plaza Mayor, Villa de Leyva, Boyacá",
+   "_prec": "manual",
+   "_match": "Google Maps: «Plaza Mayor de Villa de Leyva»"
+  },
+  "Hotel Plaza Mayor - Villa de Leyva": {
+   "short": "Hotel Plaza Mayor",
+   "city": "Villa de Leyva",
+   "lat": 5.634093,
+   "lng": -73.524086,
+   "address": "Villa de Leyva, Boyacá",
+   "_prec": "manual",
+   "_match": "Google Maps: «Hotel Plaza Mayor Villa de Leyva»"
+  },
+  "Claustro de San Francisco - Villa de Leyva": {
+   "short": "Claustro de San Francisco",
+   "city": "Villa de Leyva",
+   "lat": 5.6305425,
+   "lng": -73.5241643,
+   "address": "Villa de Leyva, Boyacá",
+   "_prec": "manual",
+   "_match": "Google Maps: «Claustro San Francisco»"
   }
  },
  "_avisos_id": [],
@@ -493,10 +551,15 @@
    "id": "f_b1d501c34b"
   },
   {
-   "title": "Foco Reygadas",
+   "title": "Luz silenciosa",
    "type": "film",
    "section": "🔎 Foco Reygadas",
-   "duration": "120 min",
+   "director": "Carlos Reygadas",
+   "year": 2007,
+   "country": "México",
+   "flags": "🇲🇽",
+   "duration": "142 min",
+   "genre": "Drama",
    "_ancla": [
     "Real Fábrica - Villa de Leyva",
     "2026-11-13",
@@ -508,12 +571,20 @@
    "venue": "Real Fábrica - Villa de Leyva",
    "sala": "Sala Blanca",
    "has_qa": false,
+   "synopsis": "México. Estado de Chihuahua. Comunidad de los Menonitas. Johan, casado con Esther, con la que tiene siete hijos, vive desde hace dos años una historia de pasión con Marianne. Entre sus dos vidas, sus dos mujeres, la elección es imposible. Confiesa su situación a su amigo Zacarías y a su padre, que es predicador y considera que la vida de su hijo se halla bajo la influencia del diablo. Sin embargo, los dos lo apoyan, lo compadecen. Y lo envidian...",
+   "synopsis_lang": "es",
+   "poster": "/assets/villadeleyvaiff-2026/luz-silenciosa.jpg",
+   "posterSource": "tmdb",
    "_src": {
     "url": "https://www.instagram.com/p/DfkomnaGQZw/",
     "lamina": "02",
     "date": "2026-11-10"
    },
    "is_free": true,
+   "lbSlug": "silent-light",
+   "tmdb_id": 2012,
+   "synopsis_en": "Johan and his family are Mennonites from the north of Mexico. Against the law of God and Man, Johan falls in love with another woman.",
+   "title_en": "Silent Light",
    "_fid": "f_1d54fd4507",
    "id": "f_1d54fd4507"
   },
@@ -678,10 +749,15 @@
    "id": "f_c4da2e6aa6"
   },
   {
-   "title": "Foco Reygadas",
+   "title": "Post Tenebras Lux",
    "type": "film",
    "section": "🔎 Foco Reygadas",
-   "duration": "120 min",
+   "director": "Carlos Reygadas",
+   "year": 2012,
+   "country": "México",
+   "flags": "🇲🇽",
+   "duration": "115 min",
+   "genre": "Drama",
    "_ancla": [
     "Real Fábrica - Villa de Leyva",
     "2026-11-14",
@@ -693,12 +769,19 @@
    "venue": "Real Fábrica - Villa de Leyva",
    "sala": "Sala Blanca",
    "has_qa": false,
+   "synopsis": "Juan y su familia urbana viven en el campo mexicano, donde ellos disfrutan y sufren un mundo aparte. Y nadie sabe si estos dos mundos son complementarios o si se esfuerzan por eliminar el uno al otro.",
+   "synopsis_lang": "es",
+   "poster": "/assets/villadeleyvaiff-2026/post-tenebras-lux.jpg",
+   "posterSource": "tmdb",
    "_src": {
     "url": "https://www.instagram.com/p/DfkomnaGQZw/",
     "lamina": "03",
     "date": "2026-11-10"
    },
    "is_free": true,
+   "lbSlug": "post-tenebras-lux",
+   "tmdb_id": 103689,
+   "synopsis_en": "Juan and his urban family live in the Mexican countryside, where they enjoy and suffer a world apart. And nobody knows if these two worlds are complimentary or if they strive to eliminate one another.",
    "_fid": "f_bcf0d4d5aa",
    "id": "f_bcf0d4d5aa"
   },
@@ -995,6 +1078,32 @@
    "id": "f_1d26f87d2a"
   },
   {
+   "title": "Encuentro con Carlos Reygadas",
+   "type": "event",
+   "section": "🗣️ Encuentros",
+   "duration": "120 min",
+   "_ancla": [
+    "Real Fábrica - Villa de Leyva",
+    "2026-11-14",
+    "16:00"
+   ],
+   "day": "2026-11-14",
+   "time": "16:00",
+   "day_order": 1,
+   "venue": "Real Fábrica - Villa de Leyva",
+   "sala": "Sala Rosada",
+   "event_kind": "charla",
+   "has_qa": false,
+   "_src": {
+    "url": "https://www.villadeleyvaiff.co/_files/ugd/66001c_a296b2bfe67b41cdba2e0a1c661be1f5.pdf",
+    "date": "2026-11-11",
+    "nota": "programa completo (PDF de la web, 11 nov)"
+   },
+   "is_free": true,
+   "_fid": "f_fc30a29df8",
+   "id": "f_fc30a29df8"
+  },
+  {
    "title": "Competencia Corto Animación",
    "type": "film",
    "section": "✏️ Competencia Corto Animación",
@@ -1246,6 +1355,12 @@
      "flags": "🇯🇵"
     },
     {
+     "title": "Las criaturas",
+     "director": "Francisco Zornosa",
+     "country": "Colombia",
+     "flags": "🇨🇴"
+    },
+    {
      "title": "Rol – El río se llevaba las manchas de la vida",
      "director": "Selma Parreira",
      "country": "Brasil",
@@ -1486,12 +1601,883 @@
    "title_en": "The Wage",
    "_fid": "f_65f1bbbd73",
    "id": "f_65f1bbbd73"
+  },
+  {
+   "title": "Película para todos los niños y niñas de Villa de Leyva",
+   "type": "film",
+   "section": "🏛️ Cine a la Plaza",
+   "duration": "90 min",
+   "_ancla": [
+    "Plaza Mayor - Villa de Leyva",
+    "2026-11-13",
+    "10:00"
+   ],
+   "day": "2026-11-13",
+   "time": "10:00",
+   "day_order": 0,
+   "venue": "Plaza Mayor - Villa de Leyva",
+   "has_qa": false,
+   "_src": {
+    "url": "https://www.villadeleyvaiff.co/_files/ugd/66001c_a296b2bfe67b41cdba2e0a1c661be1f5.pdf",
+    "date": "2026-11-11",
+    "nota": "programa completo (PDF de la web, 11 nov), columna Cine a la Plaza"
+   },
+   "is_free": true,
+   "_fid": "f_232e2a471c",
+   "id": "f_232e2a471c"
+  },
+  {
+   "title": "Retrospectiva Festival: Cortos que nos han encantado",
+   "type": "film",
+   "section": "🏛️ Cine a la Plaza",
+   "duration": "120 min",
+   "_ancla": [
+    "Plaza Mayor - Villa de Leyva",
+    "2026-11-13",
+    "13:00"
+   ],
+   "day": "2026-11-13",
+   "time": "13:00",
+   "day_order": 0,
+   "venue": "Plaza Mayor - Villa de Leyva",
+   "has_qa": false,
+   "_src": {
+    "url": "https://www.villadeleyvaiff.co/_files/ugd/66001c_a296b2bfe67b41cdba2e0a1c661be1f5.pdf",
+    "date": "2026-11-11",
+    "nota": "programa completo (PDF de la web, 11 nov), columna Cine a la Plaza"
+   },
+   "is_free": true,
+   "_fid": "f_485edcc35b",
+   "id": "f_485edcc35b"
+  },
+  {
+   "title": "Mu-ki-ra",
+   "type": "film",
+   "section": "🏛️ Cine a la Plaza",
+   "director": "Estefanía Piñeres",
+   "year": 2026,
+   "country": "Colombia",
+   "flags": "🇨🇴",
+   "duration": "82 min",
+   "genre": "Animación",
+   "_ancla": [
+    "Plaza Mayor - Villa de Leyva",
+    "2026-11-13",
+    "15:30"
+   ],
+   "day": "2026-11-13",
+   "time": "15:30",
+   "day_order": 0,
+   "venue": "Plaza Mayor - Villa de Leyva",
+   "has_qa": false,
+   "synopsis": "Tras los muros que protegen la aldea se extiende una selva mágica y misteriosa, habitada por criaturas consideradas peligrosas. Durante años, los habitantes se han formado como guerreros desde jóvenes.",
+   "synopsis_lang": "es",
+   "poster": "/assets/villadeleyvaiff-2026/mu-ki-ra.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://www.villadeleyvaiff.co/_files/ugd/66001c_a296b2bfe67b41cdba2e0a1c661be1f5.pdf",
+    "date": "2026-11-11",
+    "nota": "programa completo (PDF de la web, 11 nov), columna Cine a la Plaza"
+   },
+   "is_free": true,
+   "lbSlug": "mu-ki-ra",
+   "tmdb_id": 1446898,
+   "synopsis_en": "When her brother is kidnapped by Mu-Ki-Ra, Cleo ventures into a monster-plagued jungle with unlikely allies.",
+   "_fid": "f_0013e5479c",
+   "id": "f_0013e5479c"
+  },
+  {
+   "title": "Goham",
+   "type": "film",
+   "section": "🏛️ Cine a la Plaza",
+   "director": "Chayanop Boonprakob, Nattawut Poonpiriya, Atta Hemwadee",
+   "year": 2026,
+   "country": "Tailandia",
+   "flags": "🇹🇭",
+   "duration": "145 min",
+   "genre": "Drama",
+   "_ancla": [
+    "Plaza Mayor - Villa de Leyva",
+    "2026-11-13",
+    "18:00"
+   ],
+   "day": "2026-11-13",
+   "time": "18:00",
+   "day_order": 0,
+   "venue": "Plaza Mayor - Villa de Leyva",
+   "has_qa": false,
+   "poster": "/assets/villadeleyvaiff-2026/goham.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://www.villadeleyvaiff.co/_files/ugd/66001c_a296b2bfe67b41cdba2e0a1c661be1f5.pdf",
+    "date": "2026-11-11",
+    "nota": "programa completo (PDF de la web, 11 nov), columna Cine a la Plaza"
+   },
+   "is_free": true,
+   "lbSlug": "gohan-2026",
+   "tmdb_id": 1319522,
+   "synopsis_en": "The bonds between humans and animals following a stray dog named Gohan as it moves through life with temporary owners over a decade, through good times and bad times, joy and sorrow, hellos and goodbyes.",
+   "title_en": "Gohan",
+   "_fid": "f_a97bf087bd",
+   "id": "f_a97bf087bd"
+  },
+  {
+   "title": "Retrospectiva Festival: Cortos que nos han encantado",
+   "type": "film",
+   "section": "🏛️ Cine a la Plaza",
+   "duration": "120 min",
+   "_ancla": [
+    "Plaza Mayor - Villa de Leyva",
+    "2026-11-14",
+    "10:00"
+   ],
+   "day": "2026-11-14",
+   "time": "10:00",
+   "day_order": 1,
+   "venue": "Plaza Mayor - Villa de Leyva",
+   "has_qa": false,
+   "_src": {
+    "url": "https://www.villadeleyvaiff.co/_files/ugd/66001c_a296b2bfe67b41cdba2e0a1c661be1f5.pdf",
+    "date": "2026-11-11",
+    "nota": "programa completo (PDF de la web, 11 nov), columna Cine a la Plaza"
+   },
+   "is_free": true,
+   "_fid": "f_7ac4550533",
+   "id": "f_7ac4550533"
+  },
+  {
+   "title": "Masha y los osos",
+   "type": "film",
+   "section": "🏛️ Cine a la Plaza",
+   "director": "Antonina Ruzhe",
+   "year": 2025,
+   "country": "Rusia",
+   "flags": "🇷🇺",
+   "duration": "79 min",
+   "genre": "Aventura",
+   "_ancla": [
+    "Plaza Mayor - Villa de Leyva",
+    "2026-11-14",
+    "15:00"
+   ],
+   "day": "2026-11-14",
+   "time": "15:00",
+   "day_order": 1,
+   "venue": "Plaza Mayor - Villa de Leyva",
+   "has_qa": false,
+   "synopsis": "Masha tiene que salvar a su hermano, que ha caído bajo el hechizo de los espíritus malignos del bosque y se ha convertido en una cabra. Para romper la terrible maldición, la niña tiene que unir fuerzas con los héroes de cuento de hadas que conoce desde la infancia: los tres osos.",
+   "synopsis_lang": "es",
+   "poster": "/assets/villadeleyvaiff-2026/masha-y-los-osos.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://www.villadeleyvaiff.co/_files/ugd/66001c_a296b2bfe67b41cdba2e0a1c661be1f5.pdf",
+    "date": "2026-11-11",
+    "nota": "programa completo (PDF de la web, 11 nov), columna Cine a la Plaza"
+   },
+   "is_free": true,
+   "lbSlug": "masha-and-the-bears",
+   "tmdb_id": 1448028,
+   "synopsis_en": "Masha has to save her brother, who fell under the spell of the forest's evil spirits and turned into a goat. To break the terrible curse, the girl has to join forces with the fairy tale heroes she has known since childhood—the three bears.",
+   "title_en": "Masha and the Bears",
+   "_fid": "f_4f5382832f",
+   "id": "f_4f5382832f"
+  },
+  {
+   "title": "Sinfonía de los bichos raros",
+   "type": "film",
+   "section": "🏛️ Cine a la Plaza",
+   "director": "Julián Duque",
+   "year": 2026,
+   "country": "Colombia",
+   "flags": "🇨🇴",
+   "duration": "90 min",
+   "genre": "Familia",
+   "_ancla": [
+    "Plaza Mayor - Villa de Leyva",
+    "2026-11-14",
+    "17:00"
+   ],
+   "day": "2026-11-14",
+   "time": "17:00",
+   "day_order": 1,
+   "venue": "Plaza Mayor - Villa de Leyva",
+   "has_qa": false,
+   "synopsis": "La trama sigue a Macha, una cucaracha adolescente que sueña con convertirse en cantante. La joven vive junto a su padre, Verdinardo El Sapo, en el barrio Los Matorrales, un lugar separado de la Gran Ciudad por un enorme muro. Cuando la legumbrería de su padre está en riesgo de desaparecer, Macha decide reunir a su grupo de amigos, otros \"bichos raros\" como ella, para participar en un reality de talentos humanos.",
+   "synopsis_lang": "es",
+   "poster": "/assets/villadeleyvaiff-2026/sinfonia-de-los-bichos-raros.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://www.villadeleyvaiff.co/_files/ugd/66001c_a296b2bfe67b41cdba2e0a1c661be1f5.pdf",
+    "date": "2026-11-11",
+    "nota": "programa completo (PDF de la web, 11 nov), columna Cine a la Plaza"
+   },
+   "is_free": true,
+   "lbSlug": "la-sinfonia-de-los-bichos-raros",
+   "tmdb_id": 1776754,
+   "synopsis_en": "In the extraordinary neighborhood of Los Matorrales, hidden behind a massive wall in the city, lives Macha, a kind-hearted and dreamy cockroach who sings while helping at her father's legume shop. Everything changes when the business faces imminent closure. To save the store, protect her community, and fulfill her dream of becoming a singer, Macha convinces her group of friends—fellow misfits like a spider, a centipede, a vulture, and an opossum—to form a band of \"weird bugs\" and enter a human reality TV show. Through music, humor, and adventure, they discover the true power of friendship and self-acceptance.",
+   "_fid": "f_fa9ac39afb",
+   "id": "f_fa9ac39afb"
+  },
+  {
+   "title": "El corset",
+   "type": "film",
+   "section": "🏆 Competencia Oficial Largometraje",
+   "director": "Louis Clichy",
+   "year": 2026,
+   "country": "Francia",
+   "flags": "🇫🇷",
+   "duration": "90 min",
+   "genre": "Animación",
+   "_ancla": [
+    "Plaza Mayor - Villa de Leyva",
+    "2026-11-14",
+    "19:00"
+   ],
+   "day": "2026-11-14",
+   "time": "19:00",
+   "day_order": 1,
+   "venue": "Plaza Mayor - Villa de Leyva",
+   "has_qa": false,
+   "synopsis": "En la Francia rural, Christophe (10 años) intenta estar a la altura de su padre, un hombre rígido y distante, en la granja familiar. Sin embargo, el niño empieza a inclinarse y a desplomarse sin previo aviso: en el tractor, en la escuela, durante la cena... Un médico encuentra la solución: Christophe debe llevar un corsé de hierro para mantenerse erguido. Obligado a reinventar su vida lejos de la granja, Christophe descubre una nueva pasión por la música, conoce a una nueva amiga y la sigue en sus primeras travesuras. Pero ¿acaso servirá todo esto para corregir lo que está desequilibrado?",
+   "synopsis_lang": "es",
+   "poster": "/assets/villadeleyvaiff-2026/el-corset.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://www.villadeleyvaiff.co/_files/ugd/66001c_a296b2bfe67b41cdba2e0a1c661be1f5.pdf",
+    "date": "2026-11-11",
+    "nota": "programa completo (PDF de la web, 11 nov), columna Cine a la Plaza"
+   },
+   "is_free": true,
+   "lbSlug": "iron-boy",
+   "tmdb_id": 947493,
+   "synopsis_en": "In rural France, 10-year-old Christophe tries to live up to his rigid and distant father on the family farm. But the young boy starts to lean over and collapse without warning — on the tractor, at school, at dinner... A doctor finds the solution: Christophe must wear an iron corset to keep himself upright. Forced to reinvent his life away from the farm, Christophe discovers a new passion for music, meets a new friend, and follows her into his first mischief. But will any of this really fix what is out of balance?",
+   "title_en": "Iron Boy",
+   "_fid": "f_7d022ed46f",
+   "id": "f_7d022ed46f"
+  },
+  {
+   "title": "Retrospectiva Festival: Cortos que nos han encantado",
+   "type": "film",
+   "section": "🏛️ Cine a la Plaza",
+   "duration": "240 min",
+   "_ancla": [
+    "Plaza Mayor - Villa de Leyva",
+    "2026-11-15",
+    "10:00"
+   ],
+   "day": "2026-11-15",
+   "time": "10:00",
+   "day_order": 2,
+   "venue": "Plaza Mayor - Villa de Leyva",
+   "has_qa": false,
+   "_src": {
+    "url": "https://www.villadeleyvaiff.co/_files/ugd/66001c_a296b2bfe67b41cdba2e0a1c661be1f5.pdf",
+    "date": "2026-11-11",
+    "nota": "programa completo (PDF de la web, 11 nov), columna Cine a la Plaza"
+   },
+   "is_free": true,
+   "_fid": "f_3ba797a6f5",
+   "id": "f_3ba797a6f5"
+  },
+  {
+   "title": "Premiación Festivalito + Cortos Festivalito",
+   "type": "film",
+   "section": "🧒 Competencia Corto Festivalito",
+   "country": "Rusia, Brasil, Francia, Colombia, USA, Alemania",
+   "flags": "🇷🇺🇧🇷🇫🇷🇨🇴🇺🇸🇩🇪",
+   "duration": "90 min",
+   "_ancla": [
+    "Plaza Mayor - Villa de Leyva",
+    "2026-11-15",
+    "15:00"
+   ],
+   "day": "2026-11-15",
+   "time": "15:00",
+   "day_order": 2,
+   "venue": "Plaza Mayor - Villa de Leyva",
+   "has_qa": false,
+   "_src": {
+    "url": "https://www.villadeleyvaiff.co/_files/ugd/66001c_a296b2bfe67b41cdba2e0a1c661be1f5.pdf",
+    "date": "2026-11-11",
+    "nota": "programa completo (PDF de la web, 11 nov), columna Cine a la Plaza"
+   },
+   "is_free": true,
+   "is_cortos": true,
+   "film_list": [
+    {
+     "title": "Bumblebee",
+     "director": "Natalia Chernysheva",
+     "country": "Rusia",
+     "flags": "🇷🇺",
+     "lbSlug": "nikolai-rimsky-korsakov-flight-of-the-bumblebee",
+     "tmdb_id": 899567,
+     "synopsis_en": "Animated film from the almanac of classical music for children “Children’s Album”.",
+     "title_en": "Nikolai Rimsky-Korsakov. Flight of the Bumblebee",
+     "genre": "Animación",
+     "year": 2020,
+     "duration": "2 min"
+    },
+    {
+     "title": "Danza de las muñecas",
+     "director": "Yulia Ivanova",
+     "country": "Rusia",
+     "flags": "🇷🇺"
+    },
+    {
+     "title": "Danza invisible",
+     "director": "Marina Kerber, Cristiane Oliveira",
+     "country": "Brasil",
+     "flags": "🇧🇷"
+    },
+    {
+     "title": "Dance dance evolution",
+     "director": "Jonathan Abbaszadeh, Finn Falk, Yosi Hsu, Mia Lou, Huidi Zhang, Ruiwen Zhang",
+     "country": "Francia",
+     "flags": "🇫🇷",
+     "poster": "/assets/villadeleyvaiff-2026/dance-dance-evolution.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1817254,
+     "synopsis_en": "Rin is an average teenager who is reaching the end of high school, her parents urging her to choose a realistic path in life, but her only answer is to BECOME AN ALIEN !!",
+     "duration": "8 min"
+    },
+    {
+     "title": "En la sombra de la garza",
+     "director": "Nicolas Bianco",
+     "country": "Francia",
+     "flags": "🇫🇷",
+     "poster": "/assets/villadeleyvaiff-2026/en-la-sombra-de-la-garza.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "in-the-shadow-of-the-heron",
+     "tmdb_id": 1681667,
+     "synopsis_en": "On a beautiful rainy day, a frog wanders along its water lily pad. Along the water, it encounters a heron. The wading bird has decided it will make short work of the amphibian. Thus begins a duel in the heart of the marsh.",
+     "title_en": "In The Shadow Of The Heron",
+     "genre": "Animación",
+     "year": 2026,
+     "duration": "2 min"
+    },
+    {
+     "title": "Las zapatillas mágicas",
+     "director": "Luber Yesid Zúñiga",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "poster": "/assets/villadeleyvaiff-2026/las-zapatillas-magicas.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "las-zapatillas-magicas",
+     "tmdb_id": 1424641,
+     "synopsis": "Yan busca cómo conseguir las mejores zapatillas de ballet del mundo porque cree que son la clave del éxito como bailarina. Al no conseguirlos, acude con Lu con sus abuelos Adolfo y Rodolfo, quienes reviven una escena icónica de la película Cantando bajo la lluvia y aprenden juntos que lo más importante es bailar con el corazón.",
+     "synopsis_en": "Yan searches for the best ballet shoes in the world because she believes they are the key to success as a dancer. When she fails to find them, she goes with Lu to visit her grandparents Adolfo and Rodolfo, who reenact an iconic scene from the movie Singin' in the Rain, and together they learn that the most important thing is to dance with your heart.",
+     "genre": "Animación",
+     "year": 2024,
+     "synopsis_lang": "es",
+     "duration": "9 min"
+    },
+    {
+     "title": "Loop",
+     "director": "Mali Delepière, Flora Jacon, Alicia Salvi, Hongyi Liu, Saïd Saïd, Tristan Truphemus",
+     "country": "Francia",
+     "flags": "🇫🇷"
+    },
+    {
+     "title": "Mi pequeña vida en la isla",
+     "director": "Nina Bisyarina",
+     "country": "Rusia",
+     "flags": "🇷🇺",
+     "lbSlug": "film:1510119",
+     "tmdb_id": 1645792,
+     "synopsis_en": "The story of a boy's journey on a floating island, full of adventures, discoveries and dangers.",
+     "genre": "Animación",
+     "year": 2026,
+     "duration": "13 min"
+    },
+    {
+     "title": "Saba",
+     "director": "Liron Topaz",
+     "country": "USA",
+     "flags": "🇺🇸",
+     "poster": "/assets/villadeleyvaiff-2026/saba.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "saba-2026",
+     "tmdb_id": 1700766,
+     "synopsis": "Saba es un cortometraje animado y metafórico sobre la vida, nuestro recorrido y el esfuerzo interminable por hacer las paces con las personas que nos importan.",
+     "synopsis_en": "In an abstract and symbolic world where gravity is reversed, a unique bond forms between a grandfather and his grandson. As Saba, the grandfather guides the boy through this surreal reality, a violent storm strikes, tearing one of the ropes anchoring their home - and with it, their life together. After suffering a devastating loss of Saba, the boy embarks on an emotional journey in search of closure. Through a stylized and poetic visual language, the film explores life's fundamental questions: the paths we take, separation from those we love, and the endless effort to find closure, reconcile loss, and move forward.",
+     "genre": "Animación",
+     "year": 2026,
+     "synopsis_lang": "es",
+     "duration": "9 min"
+    },
+    {
+     "title": "Snorri",
+     "director": "Thierry Marchand",
+     "country": "Alemania",
+     "flags": "🇩🇪",
+     "poster": "/assets/villadeleyvaiff-2026/snorri.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "snorri-4d-catch-me-if-you-candy",
+     "tmdb_id": 1660120,
+     "synopsis": "Snorri, el pulpo azul de seis brazos, quiere una paleta a toda costa, y ese antojo lo lanza a una persecución desenfrenada por el mundo acuático de Rulantica. Un corto en 4D para toda la familia.",
+     "genre": "Animación",
+     "year": 2026,
+     "synopsis_lang": "es"
+    }
+   ],
+   "_fid": "f_0df99defee",
+   "id": "f_0df99defee"
+  },
+  {
+   "title": "Kiki: entregas a domicilio",
+   "type": "film",
+   "section": "🏛️ Cine a la Plaza",
+   "director": "Hayao Miyazaki",
+   "year": 1989,
+   "country": "Japón",
+   "flags": "🇯🇵",
+   "duration": "102 min",
+   "genre": "Animación",
+   "_ancla": [
+    "Plaza Mayor - Villa de Leyva",
+    "2026-11-15",
+    "16:30"
+   ],
+   "day": "2026-11-15",
+   "time": "16:30",
+   "day_order": 2,
+   "venue": "Plaza Mayor - Villa de Leyva",
+   "has_qa": false,
+   "synopsis": "Nicky no es una niña como otra cualquiera porque es aprendiz de bruja. Con solo 13 años y por tradición del oficio que está aprendiendo, la niña tiene que abandonar la casa de sus padres y buscar algún sitio donde sean necesarios sus servicios de bruja. Para emprender el viaje, Nicky se acompaña de su amigo Jiji y también de su gato; juntos, y sobre una escoba voladora, los amigos se instalan en un pueblecito que da al mar, donde la niña empezará a conocerse verdaderamente a sí misma.",
+   "synopsis_lang": "es",
+   "poster": "/assets/villadeleyvaiff-2026/kiki-entregas-a-domicilio.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://www.villadeleyvaiff.co/_files/ugd/66001c_a296b2bfe67b41cdba2e0a1c661be1f5.pdf",
+    "date": "2026-11-11",
+    "nota": "programa completo (PDF de la web, 11 nov), columna Cine a la Plaza"
+   },
+   "is_free": true,
+   "lbSlug": "kikis-delivery-service",
+   "tmdb_id": 16859,
+   "synopsis_en": "A young witch, on her mandatory year of independent life, finds fitting into a new community difficult while she supports herself by running an air courier service.",
+   "title_en": "Kiki's Delivery Service",
+   "_fid": "f_e863918147",
+   "id": "f_e863918147"
+  },
+  {
+   "title": "Moon, mi amigo el panda",
+   "type": "film",
+   "section": "🏛️ Cine a la Plaza",
+   "director": "Gilles de Maistre",
+   "year": 2025,
+   "country": "Francia, Bélgica",
+   "flags": "🇫🇷🇧🇪",
+   "duration": "99 min",
+   "genre": "Familia",
+   "_ancla": [
+    "Plaza Mayor - Villa de Leyva",
+    "2026-11-15",
+    "18:30"
+   ],
+   "day": "2026-11-15",
+   "time": "18:30",
+   "day_order": 2,
+   "venue": "Plaza Mayor - Villa de Leyva",
+   "has_qa": false,
+   "synopsis": "A sus doce años, Tian es enviado a vivir con su abuela en las montañas chinas por sus malas notas. Allí descubre a un panda al que llama Moon y, en secreto, entabla una amistad que desencadenará una aventura capaz de transformar su vida y la de toda su familia.",
+   "synopsis_lang": "es",
+   "poster": "/assets/villadeleyvaiff-2026/moon-mi-amigo-el-panda.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://www.villadeleyvaiff.co/_files/ugd/66001c_a296b2bfe67b41cdba2e0a1c661be1f5.pdf",
+    "date": "2026-11-11",
+    "nota": "programa completo (PDF de la web, 11 nov), columna Cine a la Plaza"
+   },
+   "is_free": true,
+   "lbSlug": "moon-the-panda",
+   "tmdb_id": 1178532,
+   "synopsis_en": "Due to his poor academic performance, twelve-year-old Tian is sent to live with his grandmother in the remote mountains of Sichuan. Far from the hustle and bustle of the city, he finds himself immersed in nature and secretly befriends a panda cub he names Moon. Together, Tian and Moon embark on a journey of discovery and overcoming challenges. The boy is forced to confront his fears and, in the process, learns valuable lessons about courage, respect, and the profound bond between humankind and nature. This experience profoundly transforms Tian's life and fosters an unexpected family reconciliation.",
+   "title_en": "Moon the Panda",
+   "_fid": "f_020aa88315",
+   "id": "f_020aa88315"
+  },
+  {
+   "title": "Lactar",
+   "type": "film",
+   "section": "🏛️ Cine a la Plaza",
+   "director": "Harold Trompetero",
+   "year": 2026,
+   "country": "Colombia",
+   "flags": "🇨🇴",
+   "duration": "75 min",
+   "genre": "Drama",
+   "_ancla": [
+    "Plaza Mayor - Villa de Leyva",
+    "2026-11-15",
+    "21:00"
+   ],
+   "day": "2026-11-15",
+   "time": "21:00",
+   "day_order": 2,
+   "venue": "Plaza Mayor - Villa de Leyva",
+   "has_qa": false,
+   "synopsis": "Una mujer de 62 años, atrapada en una vida de privilegios vacíos, queda embarazada de su chofer. Enfrentándose al rechazo de su familia y de la sociedad, decide luchar por traer a la vida un bebé que parece imposible a su tardía edad, sin importar las consecuencias.",
+   "synopsis_lang": "es",
+   "poster": "/assets/villadeleyvaiff-2026/lactar.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://www.villadeleyvaiff.co/_files/ugd/66001c_a296b2bfe67b41cdba2e0a1c661be1f5.pdf",
+    "date": "2026-11-11",
+    "nota": "programa completo (PDF de la web, 11 nov), columna Cine a la Plaza"
+   },
+   "is_free": true,
+   "lbSlug": "lactar",
+   "tmdb_id": 1694304,
+   "synopsis_en": "A 62-year-old woman, trapped in a life of empty privilege, becomes pregnant by her driver. Facing rejection from her family and society, she decides to fight to bring to life a baby that seems impossible at her late age, regardless of the consequences.",
+   "_fid": "f_268ed35c75",
+   "id": "f_268ed35c75"
+  },
+  {
+   "title": "Festivalito: Talleres y Cine",
+   "type": "film",
+   "section": "🧒 Competencia Corto Festivalito",
+   "country": "Rusia, Brasil, Francia, Colombia, USA, Alemania",
+   "flags": "🇷🇺🇧🇷🇫🇷🇨🇴🇺🇸🇩🇪",
+   "duration": "180 min",
+   "_ancla": [
+    "Real Fábrica - Villa de Leyva",
+    "2026-11-14",
+    "09:00"
+   ],
+   "day": "2026-11-14",
+   "time": "09:00",
+   "day_order": 1,
+   "venue": "Real Fábrica - Villa de Leyva",
+   "has_qa": false,
+   "_src": {
+    "url": "https://www.villadeleyvaiff.co/_files/ugd/66001c_a296b2bfe67b41cdba2e0a1c661be1f5.pdf",
+    "date": "2026-11-11",
+    "nota": "programa completo (PDF de la web, 11 nov)"
+   },
+   "is_free": true,
+   "is_cortos": true,
+   "film_list": [
+    {
+     "title": "Bumblebee",
+     "director": "Natalia Chernysheva",
+     "country": "Rusia",
+     "flags": "🇷🇺",
+     "lbSlug": "nikolai-rimsky-korsakov-flight-of-the-bumblebee",
+     "tmdb_id": 899567,
+     "synopsis_en": "Animated film from the almanac of classical music for children “Children’s Album”.",
+     "title_en": "Nikolai Rimsky-Korsakov. Flight of the Bumblebee",
+     "genre": "Animación",
+     "year": 2020,
+     "duration": "2 min"
+    },
+    {
+     "title": "Danza de las muñecas",
+     "director": "Yulia Ivanova",
+     "country": "Rusia",
+     "flags": "🇷🇺"
+    },
+    {
+     "title": "Danza invisible",
+     "director": "Marina Kerber, Cristiane Oliveira",
+     "country": "Brasil",
+     "flags": "🇧🇷"
+    },
+    {
+     "title": "Dance dance evolution",
+     "director": "Jonathan Abbaszadeh, Finn Falk, Yosi Hsu, Mia Lou, Huidi Zhang, Ruiwen Zhang",
+     "country": "Francia",
+     "flags": "🇫🇷",
+     "poster": "/assets/villadeleyvaiff-2026/dance-dance-evolution.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1817254,
+     "synopsis_en": "Rin is an average teenager who is reaching the end of high school, her parents urging her to choose a realistic path in life, but her only answer is to BECOME AN ALIEN !!",
+     "duration": "8 min"
+    },
+    {
+     "title": "En la sombra de la garza",
+     "director": "Nicolas Bianco",
+     "country": "Francia",
+     "flags": "🇫🇷",
+     "poster": "/assets/villadeleyvaiff-2026/en-la-sombra-de-la-garza.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "in-the-shadow-of-the-heron",
+     "tmdb_id": 1681667,
+     "synopsis_en": "On a beautiful rainy day, a frog wanders along its water lily pad. Along the water, it encounters a heron. The wading bird has decided it will make short work of the amphibian. Thus begins a duel in the heart of the marsh.",
+     "title_en": "In The Shadow Of The Heron",
+     "genre": "Animación",
+     "year": 2026,
+     "duration": "2 min"
+    },
+    {
+     "title": "Las zapatillas mágicas",
+     "director": "Luber Yesid Zúñiga",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "poster": "/assets/villadeleyvaiff-2026/las-zapatillas-magicas.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "las-zapatillas-magicas",
+     "tmdb_id": 1424641,
+     "synopsis": "Yan busca cómo conseguir las mejores zapatillas de ballet del mundo porque cree que son la clave del éxito como bailarina. Al no conseguirlos, acude con Lu con sus abuelos Adolfo y Rodolfo, quienes reviven una escena icónica de la película Cantando bajo la lluvia y aprenden juntos que lo más importante es bailar con el corazón.",
+     "synopsis_en": "Yan searches for the best ballet shoes in the world because she believes they are the key to success as a dancer. When she fails to find them, she goes with Lu to visit her grandparents Adolfo and Rodolfo, who reenact an iconic scene from the movie Singin' in the Rain, and together they learn that the most important thing is to dance with your heart.",
+     "genre": "Animación",
+     "year": 2024,
+     "synopsis_lang": "es",
+     "duration": "9 min"
+    },
+    {
+     "title": "Loop",
+     "director": "Mali Delepière, Flora Jacon, Alicia Salvi, Hongyi Liu, Saïd Saïd, Tristan Truphemus",
+     "country": "Francia",
+     "flags": "🇫🇷"
+    },
+    {
+     "title": "Mi pequeña vida en la isla",
+     "director": "Nina Bisyarina",
+     "country": "Rusia",
+     "flags": "🇷🇺",
+     "lbSlug": "film:1510119",
+     "tmdb_id": 1645792,
+     "synopsis_en": "The story of a boy's journey on a floating island, full of adventures, discoveries and dangers.",
+     "genre": "Animación",
+     "year": 2026,
+     "duration": "13 min"
+    },
+    {
+     "title": "Saba",
+     "director": "Liron Topaz",
+     "country": "USA",
+     "flags": "🇺🇸",
+     "poster": "/assets/villadeleyvaiff-2026/saba.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "saba-2026",
+     "tmdb_id": 1700766,
+     "synopsis": "Saba es un cortometraje animado y metafórico sobre la vida, nuestro recorrido y el esfuerzo interminable por hacer las paces con las personas que nos importan.",
+     "synopsis_en": "In an abstract and symbolic world where gravity is reversed, a unique bond forms between a grandfather and his grandson. As Saba, the grandfather guides the boy through this surreal reality, a violent storm strikes, tearing one of the ropes anchoring their home - and with it, their life together. After suffering a devastating loss of Saba, the boy embarks on an emotional journey in search of closure. Through a stylized and poetic visual language, the film explores life's fundamental questions: the paths we take, separation from those we love, and the endless effort to find closure, reconcile loss, and move forward.",
+     "genre": "Animación",
+     "year": 2026,
+     "synopsis_lang": "es",
+     "duration": "9 min"
+    },
+    {
+     "title": "Snorri",
+     "director": "Thierry Marchand",
+     "country": "Alemania",
+     "flags": "🇩🇪",
+     "poster": "/assets/villadeleyvaiff-2026/snorri.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "snorri-4d-catch-me-if-you-candy",
+     "tmdb_id": 1660120,
+     "synopsis": "Snorri, el pulpo azul de seis brazos, quiere una paleta a toda costa, y ese antojo lo lanza a una persecución desenfrenada por el mundo acuático de Rulantica. Un corto en 4D para toda la familia.",
+     "genre": "Animación",
+     "year": 2026,
+     "synopsis_lang": "es"
+    }
+   ],
+   "_fid": "f_41b8718434",
+   "id": "f_41b8718434"
+  },
+  {
+   "title": "Espacio Redes: ¿Cuál es el valor de los escritores audiovisuales?",
+   "type": "event",
+   "section": "🗣️ Encuentros",
+   "duration": "90 min",
+   "_ancla": [
+    "Hotel Plaza Mayor - Villa de Leyva",
+    "2026-11-14",
+    "14:00"
+   ],
+   "day": "2026-11-14",
+   "time": "14:00",
+   "day_order": 1,
+   "venue": "Hotel Plaza Mayor - Villa de Leyva",
+   "event_kind": "charla",
+   "has_qa": false,
+   "_src": {
+    "url": "https://www.villadeleyvaiff.co/_files/ugd/66001c_a296b2bfe67b41cdba2e0a1c661be1f5.pdf",
+    "date": "2026-11-11",
+    "nota": "programa completo (PDF de la web, 11 nov)"
+   },
+   "is_free": true,
+   "_fid": "f_658853bb2f",
+   "id": "f_658853bb2f"
+  },
+  {
+   "title": "Festivalito: Talleres y Cine",
+   "type": "film",
+   "section": "🧒 Competencia Corto Festivalito",
+   "country": "Rusia, Brasil, Francia, Colombia, USA, Alemania",
+   "flags": "🇷🇺🇧🇷🇫🇷🇨🇴🇺🇸🇩🇪",
+   "duration": "180 min",
+   "_ancla": [
+    "Real Fábrica - Villa de Leyva",
+    "2026-11-15",
+    "09:00"
+   ],
+   "day": "2026-11-15",
+   "time": "09:00",
+   "day_order": 2,
+   "venue": "Real Fábrica - Villa de Leyva",
+   "has_qa": false,
+   "_src": {
+    "url": "https://www.villadeleyvaiff.co/_files/ugd/66001c_a296b2bfe67b41cdba2e0a1c661be1f5.pdf",
+    "date": "2026-11-11",
+    "nota": "programa completo (PDF de la web, 11 nov)"
+   },
+   "is_free": true,
+   "is_cortos": true,
+   "film_list": [
+    {
+     "title": "Bumblebee",
+     "director": "Natalia Chernysheva",
+     "country": "Rusia",
+     "flags": "🇷🇺",
+     "lbSlug": "nikolai-rimsky-korsakov-flight-of-the-bumblebee",
+     "tmdb_id": 899567,
+     "synopsis_en": "Animated film from the almanac of classical music for children “Children’s Album”.",
+     "title_en": "Nikolai Rimsky-Korsakov. Flight of the Bumblebee",
+     "genre": "Animación",
+     "year": 2020,
+     "duration": "2 min"
+    },
+    {
+     "title": "Danza de las muñecas",
+     "director": "Yulia Ivanova",
+     "country": "Rusia",
+     "flags": "🇷🇺"
+    },
+    {
+     "title": "Danza invisible",
+     "director": "Marina Kerber, Cristiane Oliveira",
+     "country": "Brasil",
+     "flags": "🇧🇷"
+    },
+    {
+     "title": "Dance dance evolution",
+     "director": "Jonathan Abbaszadeh, Finn Falk, Yosi Hsu, Mia Lou, Huidi Zhang, Ruiwen Zhang",
+     "country": "Francia",
+     "flags": "🇫🇷",
+     "poster": "/assets/villadeleyvaiff-2026/dance-dance-evolution.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1817254,
+     "synopsis_en": "Rin is an average teenager who is reaching the end of high school, her parents urging her to choose a realistic path in life, but her only answer is to BECOME AN ALIEN !!",
+     "duration": "8 min"
+    },
+    {
+     "title": "En la sombra de la garza",
+     "director": "Nicolas Bianco",
+     "country": "Francia",
+     "flags": "🇫🇷",
+     "poster": "/assets/villadeleyvaiff-2026/en-la-sombra-de-la-garza.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "in-the-shadow-of-the-heron",
+     "tmdb_id": 1681667,
+     "synopsis_en": "On a beautiful rainy day, a frog wanders along its water lily pad. Along the water, it encounters a heron. The wading bird has decided it will make short work of the amphibian. Thus begins a duel in the heart of the marsh.",
+     "title_en": "In The Shadow Of The Heron",
+     "genre": "Animación",
+     "year": 2026,
+     "duration": "2 min"
+    },
+    {
+     "title": "Las zapatillas mágicas",
+     "director": "Luber Yesid Zúñiga",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "poster": "/assets/villadeleyvaiff-2026/las-zapatillas-magicas.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "las-zapatillas-magicas",
+     "tmdb_id": 1424641,
+     "synopsis": "Yan busca cómo conseguir las mejores zapatillas de ballet del mundo porque cree que son la clave del éxito como bailarina. Al no conseguirlos, acude con Lu con sus abuelos Adolfo y Rodolfo, quienes reviven una escena icónica de la película Cantando bajo la lluvia y aprenden juntos que lo más importante es bailar con el corazón.",
+     "synopsis_en": "Yan searches for the best ballet shoes in the world because she believes they are the key to success as a dancer. When she fails to find them, she goes with Lu to visit her grandparents Adolfo and Rodolfo, who reenact an iconic scene from the movie Singin' in the Rain, and together they learn that the most important thing is to dance with your heart.",
+     "genre": "Animación",
+     "year": 2024,
+     "synopsis_lang": "es",
+     "duration": "9 min"
+    },
+    {
+     "title": "Loop",
+     "director": "Mali Delepière, Flora Jacon, Alicia Salvi, Hongyi Liu, Saïd Saïd, Tristan Truphemus",
+     "country": "Francia",
+     "flags": "🇫🇷"
+    },
+    {
+     "title": "Mi pequeña vida en la isla",
+     "director": "Nina Bisyarina",
+     "country": "Rusia",
+     "flags": "🇷🇺",
+     "lbSlug": "film:1510119",
+     "tmdb_id": 1645792,
+     "synopsis_en": "The story of a boy's journey on a floating island, full of adventures, discoveries and dangers.",
+     "genre": "Animación",
+     "year": 2026,
+     "duration": "13 min"
+    },
+    {
+     "title": "Saba",
+     "director": "Liron Topaz",
+     "country": "USA",
+     "flags": "🇺🇸",
+     "poster": "/assets/villadeleyvaiff-2026/saba.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "saba-2026",
+     "tmdb_id": 1700766,
+     "synopsis": "Saba es un cortometraje animado y metafórico sobre la vida, nuestro recorrido y el esfuerzo interminable por hacer las paces con las personas que nos importan.",
+     "synopsis_en": "In an abstract and symbolic world where gravity is reversed, a unique bond forms between a grandfather and his grandson. As Saba, the grandfather guides the boy through this surreal reality, a violent storm strikes, tearing one of the ropes anchoring their home - and with it, their life together. After suffering a devastating loss of Saba, the boy embarks on an emotional journey in search of closure. Through a stylized and poetic visual language, the film explores life's fundamental questions: the paths we take, separation from those we love, and the endless effort to find closure, reconcile loss, and move forward.",
+     "genre": "Animación",
+     "year": 2026,
+     "synopsis_lang": "es",
+     "duration": "9 min"
+    },
+    {
+     "title": "Snorri",
+     "director": "Thierry Marchand",
+     "country": "Alemania",
+     "flags": "🇩🇪",
+     "poster": "/assets/villadeleyvaiff-2026/snorri.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "snorri-4d-catch-me-if-you-candy",
+     "tmdb_id": 1660120,
+     "synopsis": "Snorri, el pulpo azul de seis brazos, quiere una paleta a toda costa, y ese antojo lo lanza a una persecución desenfrenada por el mundo acuático de Rulantica. Un corto en 4D para toda la familia.",
+     "genre": "Animación",
+     "year": 2026,
+     "synopsis_lang": "es"
+    }
+   ],
+   "_fid": "f_bb5278574b",
+   "id": "f_bb5278574b"
+  },
+  {
+   "title": "Fragmentos",
+   "type": "event",
+   "section": "🎉 Evento",
+   "duration": "60 min",
+   "_ancla": [
+    "Claustro de San Francisco - Villa de Leyva",
+    "2026-11-16",
+    "15:30"
+   ],
+   "day": "2026-11-16",
+   "time": "15:30",
+   "day_order": 3,
+   "venue": "Claustro de San Francisco - Villa de Leyva",
+   "event_kind": "evento",
+   "has_qa": false,
+   "_src": {
+    "url": "https://www.villadeleyvaiff.co/_files/ugd/66001c_a296b2bfe67b41cdba2e0a1c661be1f5.pdf",
+    "date": "2026-11-11",
+    "nota": "programa completo (PDF de la web, 11 nov)"
+   },
+   "is_free": false,
+   "description": "Compañía Cuerpo de Indias",
+   "description_lang": "es",
+   "_fid": "f_6b5e3071a8",
+   "id": "f_6b5e3071a8"
   }
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-11T12:11:05",
-  "plan_sha": "2b8b43af1a607112",
+  "fecha": "2026-11-12T10:52:42",
+  "plan_sha": "4204d6f83e6e5708",
   "paso": 7,
   "cmd": "python3 pipeline/encuadrar-posters.py villadeleyvaiff-2026 --aplicar --desde festivals/staging/villadeleyvaiff-2026-build.json"
  }

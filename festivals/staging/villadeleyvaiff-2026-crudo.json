@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "IG @festcinevilla, carrusel «Programación · Real Fábrica» (10 nov 2026)",
-  "capturado": "2026-11-11",
+  "capturado": "2026-11-12",
   "que_aporta": "día, hora y sala de la Real Fábrica, 13–15 nov",
   "url": "https://www.instagram.com/p/DfkomnaGQZw/",
   "metodo": "lectura a ojo de las láminas 02–06"
@@ -14,6 +14,21 @@
   ],
   "_por_que": "el festival no anuncia pago (regla de Juan, 13 oct 2026)"
  },
+ "_fuera": [
+  {
+   "titulo": "35 Ladrillos",
+   "dias": [
+    "2026-11-14",
+    "2026-11-15"
+   ],
+   "horas": [
+    "18:00",
+    "20:00"
+   ],
+   "_por_que": "la fuente no da sede; sin sede no se publica",
+   "fuente": "https://www.villadeleyvaiff.co/_files/ugd/66001c_a296b2bfe67b41cdba2e0a1c661be1f5.pdf"
+  }
+ ],
  "_dudas": [
   "«Soy Lidia» (lámina) / «Sol en Lidia» (catálogo): se usa el del catálogo",
   "«Vals para María Domingas» (lámina) / «Valsa para Maria Domingas» (catálogo, título original)"
@@ -188,9 +203,10 @@
     "lamina": "02",
     "date": "2026-11-10"
    },
-   "titulo": "Foco Reygadas",
-   "duracion_min": 120,
-   "_duracion_de": "estimada: un largometraje de Carlos Reygadas; la lámina no dice cuál"
+   "titulo": "Luz silenciosa",
+   "director": "Carlos Reygadas",
+   "pais": "México",
+   "anio": 2007
   },
   {
    "dia": "2026-11-14",
@@ -266,9 +282,10 @@
     "lamina": "03",
     "date": "2026-11-10"
    },
-   "titulo": "Foco Reygadas",
-   "duracion_min": 120,
-   "_duracion_de": "estimada: un largometraje de Carlos Reygadas; la lámina no dice cuál"
+   "titulo": "Post Tenebras Lux",
+   "director": "Carlos Reygadas",
+   "pais": "México",
+   "anio": 2012
   },
   {
    "dia": "2026-11-15",
@@ -401,6 +418,24 @@
   },
   {
    "dia": "2026-11-14",
+   "hora": "16:00",
+   "sede": "Real Fábrica",
+   "sala": "Sala Rosada",
+   "seccion": "Encuentros",
+   "acceso": "Entrada libre, hasta completar aforo",
+   "_src": {
+    "url": "https://www.villadeleyvaiff.co/_files/ugd/66001c_a296b2bfe67b41cdba2e0a1c661be1f5.pdf",
+    "date": "2026-11-11",
+    "nota": "programa completo (PDF de la web, 11 nov)"
+   },
+   "titulo": "Encuentro con Carlos Reygadas",
+   "tipo": "evento",
+   "event_kind": "charla",
+   "duracion_min": 120,
+   "_duracion_de": "el hueco hasta el bloque siguiente de la sala (6:30 PM)"
+  },
+  {
+   "dia": "2026-11-14",
    "hora": "18:30",
    "sede": "Real Fábrica",
    "sala": "Sala Rosada",
@@ -505,6 +540,11 @@
      "titulo": "Día 1 Narita–Tokyo",
      "director": "João Krefer",
      "pais": "Japón"
+    },
+    {
+     "titulo": "Las criaturas",
+     "director": "Francisco Zornosa",
+     "pais": "Colombia"
     },
     {
      "titulo": "Rol – El río se llevaba las manchas de la vida",
@@ -630,6 +670,447 @@
    "director": "Ciro Durán",
    "pais": "Colombia, Venezuela",
    "anio": 1962
+  },
+  {
+   "dia": "2026-11-13",
+   "hora": "10:00",
+   "sede": "Plaza Mayor",
+   "sala": "",
+   "seccion": "Cine a la Plaza",
+   "acceso": "Entrada libre (no se anuncia pago)",
+   "_src": {
+    "url": "https://www.villadeleyvaiff.co/_files/ugd/66001c_a296b2bfe67b41cdba2e0a1c661be1f5.pdf",
+    "date": "2026-11-11",
+    "nota": "programa completo (PDF de la web, 11 nov), columna Cine a la Plaza"
+   },
+   "titulo": "Película para todos los niños y niñas de Villa de Leyva",
+   "duracion_min": 90,
+   "_duracion_de": "estimada: la fuente no dice qué película"
+  },
+  {
+   "dia": "2026-11-13",
+   "hora": "13:00",
+   "sede": "Plaza Mayor",
+   "sala": "",
+   "seccion": "Cine a la Plaza",
+   "acceso": "Entrada libre (no se anuncia pago)",
+   "_src": {
+    "url": "https://www.villadeleyvaiff.co/_files/ugd/66001c_a296b2bfe67b41cdba2e0a1c661be1f5.pdf",
+    "date": "2026-11-11",
+    "nota": "programa completo (PDF de la web, 11 nov), columna Cine a la Plaza"
+   },
+   "titulo": "Retrospectiva Festival: Cortos que nos han encantado",
+   "duracion_min": 120,
+   "_duracion_de": "de 1 PM a 3 PM, según la fuente"
+  },
+  {
+   "dia": "2026-11-13",
+   "hora": "15:30",
+   "sede": "Plaza Mayor",
+   "sala": "",
+   "seccion": "Cine a la Plaza",
+   "acceso": "Entrada libre (no se anuncia pago)",
+   "_src": {
+    "url": "https://www.villadeleyvaiff.co/_files/ugd/66001c_a296b2bfe67b41cdba2e0a1c661be1f5.pdf",
+    "date": "2026-11-11",
+    "nota": "programa completo (PDF de la web, 11 nov), columna Cine a la Plaza"
+   },
+   "titulo": "Mu-ki-ra",
+   "director": "Estefanía Piñeres",
+   "pais": "Colombia",
+   "anio": 2026
+  },
+  {
+   "dia": "2026-11-13",
+   "hora": "18:00",
+   "sede": "Plaza Mayor",
+   "sala": "",
+   "seccion": "Cine a la Plaza",
+   "acceso": "Entrada libre (no se anuncia pago)",
+   "_src": {
+    "url": "https://www.villadeleyvaiff.co/_files/ugd/66001c_a296b2bfe67b41cdba2e0a1c661be1f5.pdf",
+    "date": "2026-11-11",
+    "nota": "programa completo (PDF de la web, 11 nov), columna Cine a la Plaza"
+   },
+   "titulo": "Goham",
+   "director": "Chayanop Boonprakob, Nattawut Poonpiriya, Atta Hemwadee",
+   "pais": "Tailandia",
+   "_nota": "Apertura del festival · preestreno · Foco Cineplex"
+  },
+  {
+   "dia": "2026-11-14",
+   "hora": "10:00",
+   "sede": "Plaza Mayor",
+   "sala": "",
+   "seccion": "Cine a la Plaza",
+   "acceso": "Entrada libre (no se anuncia pago)",
+   "_src": {
+    "url": "https://www.villadeleyvaiff.co/_files/ugd/66001c_a296b2bfe67b41cdba2e0a1c661be1f5.pdf",
+    "date": "2026-11-11",
+    "nota": "programa completo (PDF de la web, 11 nov), columna Cine a la Plaza"
+   },
+   "titulo": "Retrospectiva Festival: Cortos que nos han encantado",
+   "duracion_min": 120,
+   "_duracion_de": "estimada como la del viernes; la fuente no da fin"
+  },
+  {
+   "dia": "2026-11-14",
+   "hora": "15:00",
+   "sede": "Plaza Mayor",
+   "sala": "",
+   "seccion": "Cine a la Plaza",
+   "acceso": "Entrada libre (no se anuncia pago)",
+   "_src": {
+    "url": "https://www.villadeleyvaiff.co/_files/ugd/66001c_a296b2bfe67b41cdba2e0a1c661be1f5.pdf",
+    "date": "2026-11-11",
+    "nota": "programa completo (PDF de la web, 11 nov), columna Cine a la Plaza"
+   },
+   "titulo": "Masha y los osos",
+   "director": "Antonina Ruzhe",
+   "pais": "Rusia",
+   "anio": 2025
+  },
+  {
+   "dia": "2026-11-14",
+   "hora": "17:00",
+   "sede": "Plaza Mayor",
+   "sala": "",
+   "seccion": "Cine a la Plaza",
+   "acceso": "Entrada libre (no se anuncia pago)",
+   "_src": {
+    "url": "https://www.villadeleyvaiff.co/_files/ugd/66001c_a296b2bfe67b41cdba2e0a1c661be1f5.pdf",
+    "date": "2026-11-11",
+    "nota": "programa completo (PDF de la web, 11 nov), columna Cine a la Plaza"
+   },
+   "titulo": "Sinfonía de los bichos raros",
+   "director": "Julián Duque",
+   "pais": "Colombia",
+   "anio": 2026
+  },
+  {
+   "dia": "2026-11-14",
+   "hora": "19:00",
+   "sede": "Plaza Mayor",
+   "sala": "",
+   "seccion": "Competencia Oficial Largometraje",
+   "acceso": "Entrada libre (no se anuncia pago)",
+   "_src": {
+    "url": "https://www.villadeleyvaiff.co/_files/ugd/66001c_a296b2bfe67b41cdba2e0a1c661be1f5.pdf",
+    "date": "2026-11-11",
+    "nota": "programa completo (PDF de la web, 11 nov), columna Cine a la Plaza"
+   },
+   "titulo": "El corset",
+   "director": "Louis Clichy",
+   "pais": "Francia",
+   "_nota": "presentación especial; ★ competencia oficial"
+  },
+  {
+   "dia": "2026-11-15",
+   "hora": "10:00",
+   "sede": "Plaza Mayor",
+   "sala": "",
+   "seccion": "Cine a la Plaza",
+   "acceso": "Entrada libre (no se anuncia pago)",
+   "_src": {
+    "url": "https://www.villadeleyvaiff.co/_files/ugd/66001c_a296b2bfe67b41cdba2e0a1c661be1f5.pdf",
+    "date": "2026-11-11",
+    "nota": "programa completo (PDF de la web, 11 nov), columna Cine a la Plaza"
+   },
+   "titulo": "Retrospectiva Festival: Cortos que nos han encantado",
+   "duracion_min": 240,
+   "_duracion_de": "de 10 AM a 2 PM, según la fuente"
+  },
+  {
+   "dia": "2026-11-15",
+   "hora": "15:00",
+   "sede": "Plaza Mayor",
+   "sala": "",
+   "seccion": "Competencia Corto Festivalito",
+   "acceso": "Entrada libre (no se anuncia pago)",
+   "_src": {
+    "url": "https://www.villadeleyvaiff.co/_files/ugd/66001c_a296b2bfe67b41cdba2e0a1c661be1f5.pdf",
+    "date": "2026-11-11",
+    "nota": "programa completo (PDF de la web, 11 nov), columna Cine a la Plaza"
+   },
+   "titulo": "Premiación Festivalito + Cortos Festivalito",
+   "obras": [
+    {
+     "titulo": "Bumblebee",
+     "director": "Natalia Chernysheva",
+     "pais": "Rusia"
+    },
+    {
+     "titulo": "Danza de las muñecas",
+     "director": "Yulia Ivanova",
+     "pais": "Rusia"
+    },
+    {
+     "titulo": "Danza invisible",
+     "director": "Marina Kerber, Cristiane Oliveira",
+     "pais": "Brasil"
+    },
+    {
+     "titulo": "Dance dance evolution",
+     "director": "Jonathan Abbaszadeh, Finn Falk, Yosi Hsu, Mia Lou, Huidi Zhang, Ruiwen Zhang",
+     "pais": "Francia"
+    },
+    {
+     "titulo": "En la sombra de la garza",
+     "director": "Nicolas Bianco",
+     "pais": "Francia"
+    },
+    {
+     "titulo": "Las zapatillas mágicas",
+     "director": "Luber Yesid Zúñiga",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Loop",
+     "director": "Mali Delepière, Flora Jacon, Alicia Salvi, Hongyi Liu, Saïd Saïd, Tristan Truphemus",
+     "pais": "Francia"
+    },
+    {
+     "titulo": "Mi pequeña vida en la isla",
+     "director": "Nina Bisyarina",
+     "pais": "Rusia"
+    },
+    {
+     "titulo": "Saba",
+     "director": "Liron Topaz",
+     "pais": "USA"
+    },
+    {
+     "titulo": "Snorri",
+     "director": "Thierry Marchand",
+     "pais": "Alemania"
+    }
+   ],
+   "duracion_min": 90,
+   "_duracion_de": "hueco hasta la función siguiente de la sala"
+  },
+  {
+   "dia": "2026-11-15",
+   "hora": "16:30",
+   "sede": "Plaza Mayor",
+   "sala": "",
+   "seccion": "Cine a la Plaza",
+   "acceso": "Entrada libre (no se anuncia pago)",
+   "_src": {
+    "url": "https://www.villadeleyvaiff.co/_files/ugd/66001c_a296b2bfe67b41cdba2e0a1c661be1f5.pdf",
+    "date": "2026-11-11",
+    "nota": "programa completo (PDF de la web, 11 nov), columna Cine a la Plaza"
+   },
+   "titulo": "Kiki: entregas a domicilio",
+   "director": "Hayao Miyazaki",
+   "pais": "Japón",
+   "anio": 1989
+  },
+  {
+   "dia": "2026-11-15",
+   "hora": "18:30",
+   "sede": "Plaza Mayor",
+   "sala": "",
+   "seccion": "Cine a la Plaza",
+   "acceso": "Entrada libre (no se anuncia pago)",
+   "_src": {
+    "url": "https://www.villadeleyvaiff.co/_files/ugd/66001c_a296b2bfe67b41cdba2e0a1c661be1f5.pdf",
+    "date": "2026-11-11",
+    "nota": "programa completo (PDF de la web, 11 nov), columna Cine a la Plaza"
+   },
+   "titulo": "Moon, mi amigo el panda",
+   "director": "Gilles de Maistre",
+   "pais": "Francia, Bélgica",
+   "anio": 2025
+  },
+  {
+   "dia": "2026-11-15",
+   "hora": "21:00",
+   "sede": "Plaza Mayor",
+   "sala": "",
+   "seccion": "Cine a la Plaza",
+   "acceso": "Entrada libre (no se anuncia pago)",
+   "_src": {
+    "url": "https://www.villadeleyvaiff.co/_files/ugd/66001c_a296b2bfe67b41cdba2e0a1c661be1f5.pdf",
+    "date": "2026-11-11",
+    "nota": "programa completo (PDF de la web, 11 nov), columna Cine a la Plaza"
+   },
+   "titulo": "Lactar",
+   "director": "Harold Trompetero",
+   "pais": "Colombia",
+   "anio": 2026
+  },
+  {
+   "dia": "2026-11-14",
+   "hora": "09:00",
+   "sede": "Real Fábrica",
+   "sala": "",
+   "seccion": "Competencia Corto Festivalito",
+   "acceso": "Entrada libre (no se anuncia pago)",
+   "_src": {
+    "url": "https://www.villadeleyvaiff.co/_files/ugd/66001c_a296b2bfe67b41cdba2e0a1c661be1f5.pdf",
+    "date": "2026-11-11",
+    "nota": "programa completo (PDF de la web, 11 nov)"
+   },
+   "titulo": "Festivalito: talleres y cine",
+   "obras": [
+    {
+     "titulo": "Bumblebee",
+     "director": "Natalia Chernysheva",
+     "pais": "Rusia"
+    },
+    {
+     "titulo": "Danza de las muñecas",
+     "director": "Yulia Ivanova",
+     "pais": "Rusia"
+    },
+    {
+     "titulo": "Danza invisible",
+     "director": "Marina Kerber, Cristiane Oliveira",
+     "pais": "Brasil"
+    },
+    {
+     "titulo": "Dance dance evolution",
+     "director": "Jonathan Abbaszadeh, Finn Falk, Yosi Hsu, Mia Lou, Huidi Zhang, Ruiwen Zhang",
+     "pais": "Francia"
+    },
+    {
+     "titulo": "En la sombra de la garza",
+     "director": "Nicolas Bianco",
+     "pais": "Francia"
+    },
+    {
+     "titulo": "Las zapatillas mágicas",
+     "director": "Luber Yesid Zúñiga",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Loop",
+     "director": "Mali Delepière, Flora Jacon, Alicia Salvi, Hongyi Liu, Saïd Saïd, Tristan Truphemus",
+     "pais": "Francia"
+    },
+    {
+     "titulo": "Mi pequeña vida en la isla",
+     "director": "Nina Bisyarina",
+     "pais": "Rusia"
+    },
+    {
+     "titulo": "Saba",
+     "director": "Liron Topaz",
+     "pais": "USA"
+    },
+    {
+     "titulo": "Snorri",
+     "director": "Thierry Marchand",
+     "pais": "Alemania"
+    }
+   ],
+   "duracion_min": 180,
+   "_duracion_de": "de 9 AM a 12 M, según la fuente"
+  },
+  {
+   "dia": "2026-11-14",
+   "hora": "14:00",
+   "sede": "Hotel Plaza Mayor",
+   "sala": "",
+   "seccion": "Encuentros",
+   "acceso": "Entrada libre (no se anuncia pago)",
+   "_src": {
+    "url": "https://www.villadeleyvaiff.co/_files/ugd/66001c_a296b2bfe67b41cdba2e0a1c661be1f5.pdf",
+    "date": "2026-11-11",
+    "nota": "programa completo (PDF de la web, 11 nov)"
+   },
+   "titulo": "Espacio Redes: ¿Cuál es el valor de los escritores audiovisuales?",
+   "tipo": "evento",
+   "event_kind": "charla",
+   "duracion_min": 90,
+   "_duracion_de": "estimada: la fuente no da fin"
+  },
+  {
+   "dia": "2026-11-15",
+   "hora": "09:00",
+   "sede": "Real Fábrica",
+   "sala": "",
+   "seccion": "Competencia Corto Festivalito",
+   "acceso": "Entrada libre (no se anuncia pago)",
+   "_src": {
+    "url": "https://www.villadeleyvaiff.co/_files/ugd/66001c_a296b2bfe67b41cdba2e0a1c661be1f5.pdf",
+    "date": "2026-11-11",
+    "nota": "programa completo (PDF de la web, 11 nov)"
+   },
+   "titulo": "Festivalito: talleres y cine",
+   "obras": [
+    {
+     "titulo": "Bumblebee",
+     "director": "Natalia Chernysheva",
+     "pais": "Rusia"
+    },
+    {
+     "titulo": "Danza de las muñecas",
+     "director": "Yulia Ivanova",
+     "pais": "Rusia"
+    },
+    {
+     "titulo": "Danza invisible",
+     "director": "Marina Kerber, Cristiane Oliveira",
+     "pais": "Brasil"
+    },
+    {
+     "titulo": "Dance dance evolution",
+     "director": "Jonathan Abbaszadeh, Finn Falk, Yosi Hsu, Mia Lou, Huidi Zhang, Ruiwen Zhang",
+     "pais": "Francia"
+    },
+    {
+     "titulo": "En la sombra de la garza",
+     "director": "Nicolas Bianco",
+     "pais": "Francia"
+    },
+    {
+     "titulo": "Las zapatillas mágicas",
+     "director": "Luber Yesid Zúñiga",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Loop",
+     "director": "Mali Delepière, Flora Jacon, Alicia Salvi, Hongyi Liu, Saïd Saïd, Tristan Truphemus",
+     "pais": "Francia"
+    },
+    {
+     "titulo": "Mi pequeña vida en la isla",
+     "director": "Nina Bisyarina",
+     "pais": "Rusia"
+    },
+    {
+     "titulo": "Saba",
+     "director": "Liron Topaz",
+     "pais": "USA"
+    },
+    {
+     "titulo": "Snorri",
+     "director": "Thierry Marchand",
+     "pais": "Alemania"
+    }
+   ],
+   "duracion_min": 180,
+   "_duracion_de": "de 9 AM a 12 M, según la fuente"
+  },
+  {
+   "dia": "2026-11-16",
+   "hora": "15:30",
+   "sede": "Claustro de San Francisco",
+   "sala": "",
+   "seccion": "Evento",
+   "acceso": "Con boleta: boletería en El Gato que bebe y lee",
+   "_src": {
+    "url": "https://www.villadeleyvaiff.co/_files/ugd/66001c_a296b2bfe67b41cdba2e0a1c661be1f5.pdf",
+    "date": "2026-11-11",
+    "nota": "programa completo (PDF de la web, 11 nov)"
+   },
+   "titulo": "Fragmentos",
+   "tipo": "evento",
+   "event_kind": "evento",
+   "invitados": "Compañía Cuerpo de Indias",
+   "duracion_min": 60,
+   "_duracion_de": "estimada: la fuente no da fin"
   }
  ]
 }

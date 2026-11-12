@@ -136,11 +136,19 @@ POSTS = [
 ]
 
 PDF_DOC = 'https://www.villadeleyvaiff.co/_files/ugd/66001c_061dc0d2b25b413f952e19f20bb5786b.pdf'
+PDF_PROG = 'https://www.villadeleyvaiff.co/_files/ugd/66001c_a296b2bfe67b41cdba2e0a1c661be1f5.pdf'
 SOLO_PDF = [
     {'titulo': 'Lo que calla el hoyo', 'director': 'Francisco Zornosa', 'pais': 'Colombia',
      'tipo': 'corto', 'seccion': 'Competencia Corto Documental',
      '_src': {'url': PDF_DOC, 'date': '2026-10-29',
               'pdf': 'fuentes/villadeleyvaiff-2026/cortos-documental.pdf', 'pagina': 9}},
+    # programa completo (PDF de la web, 11 nov): dos largos de Cine a la Plaza que llevan ficha TMDB declarada
+    {'titulo': 'Goham', 'director': 'Chayanop Boonprakob, Nattawut Poonpiriya, Atta Hemwadee', 'pais': 'Tailandia',
+     'tipo': 'largo', 'seccion': 'Cine a la Plaza',
+     '_src': {'url': PDF_PROG, 'date': '2026-11-11', 'nota': 'apertura del festival, preestreno, Foco Cineplex'}},
+    {'titulo': 'El corset', 'director': 'Louis Clichy', 'pais': 'Francia',
+     'tipo': 'largo', 'seccion': 'Competencia Oficial Largometraje',
+     '_src': {'url': PDF_PROG, 'date': '2026-11-11', 'nota': 'presentación especial, ★ competencia oficial'}},
 ]
 
 

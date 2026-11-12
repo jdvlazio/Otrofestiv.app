@@ -1,6 +1,6 @@
 {
  "id": "w_R4G8K6M9KW94",
- "titulo_original": "La Sinfonía de los Bichos Raros",
+ "titulo_original": "Sinfonía de los bichos raros",
  "anio": 2026,
  "paises": [
   "CO"
@@ -8,8 +8,15 @@
  "directores": [
   "Julian Duque"
  ],
+ "aliases": [
+  {
+   "titulo": "La Sinfonía de los Bichos Raros",
+   "tipo": "festival"
+  }
+ ],
  "sinopsis": {
-  "es": "La trama sigue a Macha, una cucaracha adolescente que sueña con convertirse en cantante. La joven vive junto a su padre, Verdinardo El Sapo, en el barrio Los Matorrales, un lugar separado de la Gran Ciudad por un enorme muro. Cuando la legumbrería de su padre está en riesgo de desaparecer, Macha decide reunir a su grupo de amigos, otros \"bichos raros\" como ella, para participar en un reality de talentos humanos."
+  "es": "La trama sigue a Macha, una cucaracha adolescente que sueña con convertirse en cantante. La joven vive junto a su padre, Verdinardo El Sapo, en el barrio Los Matorrales, un lugar separado de la Gran Ciudad por un enorme muro. Cuando la legumbrería de su padre está en riesgo de desaparecer, Macha decide reunir a su grupo de amigos, otros \"bichos raros\" como ella, para participar en un reality de talentos humanos.",
+  "en": "In the extraordinary neighborhood of Los Matorrales, hidden behind a massive wall in the city, lives Macha, a kind-hearted and dreamy cockroach who sings while helping at her father's legume shop. Everything changes when the business faces imminent closure. To save the store, protect her community, and fulfill her dream of becoming a singer, Macha convinces her group of friends—fellow misfits like a spider, a centipede, a vulture, and an opossum—to form a band of \"weird bugs\" and enter a human reality TV show. Through music, humor, and adventure, they discover the true power of friendship and self-acceptance."
  },
  "generos": [
   "Familia"
@@ -29,6 +36,7 @@
   }
  ],
  "presentaciones": [
-  "fantasmagoria-2026"
+  "fantasmagoria-2026",
+  "villadeleyvaiff-2026"
  ]
 }

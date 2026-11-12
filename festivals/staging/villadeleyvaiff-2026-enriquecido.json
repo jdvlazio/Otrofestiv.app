@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, emparejado con ficha_verifica() (director + año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-11-11"
+  "capturado": "2026-11-12"
  },
  "obras": [
   {
@@ -84,7 +84,7 @@
    "lbSlug": "harmonica-2026",
    "_verificado": "declarada a mano: traducción del título original «Gaita» (Harmonica), misma dirección (Michele Diniz)",
    "_director": "Michele Diniz",
-   "_sondeado": "2026-11-11",
+   "_sondeado": "2026-11-12",
    "poster": "/assets/villadeleyvaiff-2026/armonica.jpg",
    "posterSource": "tmdb"
   },
@@ -123,7 +123,7 @@
    "lbSlug": "nikolai-rimsky-korsakov-flight-of-the-bumblebee",
    "_verificado": "declarada a mano: título en TMDB «Nikolai Rimsky-Korsakov. Flight of the Bumblebee», misma dirección (Natalia Chernysheva, Rusia-Bielorrusia), del almanaque «Children's Album». El still publicado por CUFF tiene el mismo dibujo que la lámina: abejorro fotografiado sobre personaje en negro y amarillo y fondo con trazos",
    "_director": "Natalia Chernysheva",
-   "_sondeado": "2026-11-11"
+   "_sondeado": "2026-11-12"
   },
   {
    "titulo": "Chaika",
@@ -417,6 +417,23 @@
    "synopsis_es": "Damaris González desafía la tradición: en Barva de Heredia, cuna de la mascarada costarricense, se convirtió en la primera mujer mascarera en un oficio históricamente masculino. El documental rinde homenaje a su trayectoria y muestra su taller como el lugar donde el barro y el espíritu se encuentran."
   },
   {
+   "titulo": "Dance dance evolution",
+   "tmdb_id": 1817254,
+   "titulo_original": "Dance★Dance★Evolution",
+   "poster_path": "/3RmpzIF1aD9hiHGRRDXRwQG8NvH.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Rin is an average teenager who is reaching the end of high school, her parents urging her to choose a realistic path in life, but her only answer is to BECOME AN ALIEN !!",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 8,
+   "pais_tmdb": "",
+   "poster": "/assets/villadeleyvaiff-2026/dance-dance-evolution.jpg",
+   "_verificado": "declarada a mano: alta del 4 nov 2026 con el afiche oficial de IG, recortado a la proporción de TMDB; datos de Miyu",
+   "_director": "Jonathan Abbaszadeh, Finn Falk, Yosi Hsu, Mia Lou, Huidi Zhang, Ruiwen Zhang",
+   "_sondeado": "2026-11-12",
+   "posterSource": "tmdb"
+  },
+  {
    "titulo": "Demian",
    "tmdb_id": 1723258,
    "titulo_original": "Demian",
@@ -432,6 +449,25 @@
    "_director": "Diego Padilla",
    "_sondeado": "2026-11-11",
    "poster": "/assets/villadeleyvaiff-2026/demian.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "El corset",
+   "tmdb_id": 947493,
+   "titulo_original": "Le Corset",
+   "poster_path": "/h4YDklaLjbgdu9yUr6vNybnrnzX.jpg",
+   "synopsis_es": "En la Francia rural, Christophe (10 años) intenta estar a la altura de su padre, un hombre rígido y distante, en la granja familiar. Sin embargo, el niño empieza a inclinarse y a desplomarse sin previo aviso: en el tractor, en la escuela, durante la cena... Un médico encuentra la solución: Christophe debe llevar un corsé de hierro para mantenerse erguido. Obligado a reinventar su vida lejos de la granja, Christophe descubre una nueva pasión por la música, conoce a una nueva amiga y la sigue en sus primeras travesuras. Pero ¿acaso servirá todo esto para corregir lo que está desequilibrado?",
+   "synopsis_en": "In rural France, 10-year-old Christophe tries to live up to his rigid and distant father on the family farm. But the young boy starts to lean over and collapse without warning — on the tractor, at school, at dinner... A doctor finds the solution: Christophe must wear an iron corset to keep himself upright. Forced to reinvent his life away from the farm, Christophe discovers a new passion for music, meets a new friend, and follows her into his first mischief. But will any of this really fix what is out of balance?",
+   "genero": "Animación",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 90,
+   "pais_tmdb": "France, Belgium",
+   "title_en": "Iron Boy",
+   "lbSlug": "iron-boy",
+   "_verificado": "declarada a mano: «Le Corset» (Iron Boy, 2026) de Louis Clichy: director, país y año del PDF",
+   "_director": "Louis Clichy",
+   "_sondeado": "2026-11-12",
+   "poster": "/assets/villadeleyvaiff-2026/el-corset.jpg",
    "posterSource": "tmdb"
   },
   {
@@ -657,7 +693,7 @@
    "lbSlug": "in-the-shadow-of-the-heron",
    "_verificado": "declarada a mano: traducción de «Dans l’ombre du héron», dir. Nicolas Bianco-Levrin; la sinopsis (rana y garza) es la imagen de la lámina",
    "_director": "Nicolas Bianco",
-   "_sondeado": "2026-11-11",
+   "_sondeado": "2026-11-12",
    "poster": "/assets/villadeleyvaiff-2026/en-la-sombra-de-la-garza.jpg",
    "posterSource": "tmdb"
   },
@@ -697,6 +733,25 @@
    "_heredado": {
     "duracion_tmdb": "catálogo w_ZR5J46WM80RV (bhff-2026, villadeleyvaiff-2026)"
    }
+  },
+  {
+   "titulo": "Goham",
+   "tmdb_id": 1319522,
+   "titulo_original": "โกฮัง..หัวใจโกโฮม",
+   "poster_path": "/bUmlrkJe411RzdVKBKLbRSJChem.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "The bonds between humans and animals following a stray dog named Gohan as it moves through life with temporary owners over a decade, through good times and bad times, joy and sorrow, hellos and goodbyes.",
+   "genero": "Drama",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 145,
+   "pais_tmdb": "Thailand",
+   "title_en": "Gohan",
+   "lbSlug": "gohan-2026",
+   "_verificado": "declarada a mano: el PDF escribe «GOHAM»; en TMDB es «Gohan» (โกฮัง..หัวใจโกโฮม, 2026), dirigida por Chayanop Boonprakob y Nattawut Poonpiriya, los mismos que acredita el PDF (Tailandia, 2026)",
+   "_director": "Chayanop Boonprakob, Nattawut Poonpiriya, Atta Hemwadee",
+   "_sondeado": "2026-11-12",
+   "poster": "/assets/villadeleyvaiff-2026/goham.jpg",
+   "posterSource": "tmdb"
   },
   {
    "titulo": "Gris",
@@ -747,6 +802,26 @@
    "posterSource": "tmdb"
   },
   {
+   "titulo": "Kiki: entregas a domicilio",
+   "tmdb_id": 16859,
+   "titulo_original": "魔女の宅急便",
+   "poster_path": "/psw0tp25DNBkdEAfwjZYcgbpgme.jpg",
+   "synopsis_es": "Nicky no es una niña como otra cualquiera porque es aprendiz de bruja. Con solo 13 años y por tradición del oficio que está aprendiendo, la niña tiene que abandonar la casa de sus padres y buscar algún sitio donde sean necesarios sus servicios de bruja. Para emprender el viaje, Nicky se acompaña de su amigo Jiji y también de su gato; juntos, y sobre una escoba voladora, los amigos se instalan en un pueblecito que da al mar, donde la niña empezará a conocerse verdaderamente a sí misma.",
+   "synopsis_en": "A young witch, on her mandatory year of independent life, finds fitting into a new community difficult while she supports herself by running an air courier service.",
+   "genero": "Animación",
+   "anio_tmdb": 1989,
+   "duracion_tmdb": 102,
+   "pais_tmdb": "Japan",
+   "title_en": "Kiki's Delivery Service",
+   "lbSlug": "kikis-delivery-service",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Kiki: entregas a domicilio",
+   "_director": "Hayao Miyazaki",
+   "_sondeado": "2026-11-12",
+   "poster": "/assets/villadeleyvaiff-2026/kiki-entregas-a-domicilio.jpg",
+   "posterSource": "tmdb"
+  },
+  {
    "titulo": "La casa del marica",
    "tmdb_id": 1814147,
    "titulo_original": "La casa del marica",
@@ -779,7 +854,7 @@
    "lbSlug": "48-the-speaking-dead-woman",
    "_verificado": "declarada a mano: en TMDB con su número de serie: «48 - La muerta que habla», misma codirección (Agustín Fittipaldi), Argentina",
    "_director": "Candela Gonzalez, Agustín Fittipaldi",
-   "_sondeado": "2026-11-11",
+   "_sondeado": "2026-11-12",
    "poster": "/assets/villadeleyvaiff-2026/la-muerta-que-habla.jpg",
    "posterSource": "tmdb"
   },
@@ -850,6 +925,83 @@
    "_heredado": {
     "genero": "catálogo w_R4ERSF68AGVJ (cinemancia-2025, filcmar-2026, mubibogota-2026, villadeleyvaiff-2026)"
    }
+  },
+  {
+   "titulo": "Lactar",
+   "tmdb_id": 1694304,
+   "titulo_original": "Lactar",
+   "poster_path": "/zfqfD82FkdoKjMn6m6CwmvuoSyx.jpg",
+   "synopsis_es": "Una mujer de 62 años, atrapada en una vida de privilegios vacíos, queda embarazada de su chofer. Enfrentándose al rechazo de su familia y de la sociedad, decide luchar por traer a la vida un bebé que parece imposible a su tardía edad, sin importar las consecuencias.",
+   "synopsis_en": "A 62-year-old woman, trapped in a life of empty privilege, becomes pregnant by her driver. Facing rejection from her family and society, she decides to fight to bring to life a baby that seems impossible at her late age, regardless of the consequences.",
+   "genero": "Drama",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 75,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "lactar",
+   "_verificado": "el catálogo ya la tiene (w_R4J6SRMMD6E9, ficmontanas-2026, ficpa-2026, itagui-2026, mambe-2026)",
+   "work_id": "w_R4J6SRMMD6E9",
+   "_director": "Harold Trompetero",
+   "_sondeado": "2026-11-12",
+   "_ya_publicada": [
+    {
+     "festival": "ficmontanas-2026",
+     "titulo": "Lactar",
+     "tmdb_id": 1694304,
+     "poster": "/assets/ficmontanas/lactar.jpg",
+     "posterSource": "custom",
+     "lbSlug": "lactar",
+     "country": "Colombia",
+     "year": 2026,
+     "duration": "75 min",
+     "genre": "Drama",
+     "synopsis_en": "A 62-year-old woman in a hollow life of privilege becomes pregnant by her driver and decides to keep the baby against everyone's wishes.",
+     "sinopsis": "Una mujer de 62 años, atrapada en una vida de privilegio vacío, queda embarazada de su conductor y decide tener al bebé pese al rechazo de su familia y la sociedad."
+    },
+    {
+     "festival": "ficpa-2026",
+     "titulo": "Lactar",
+     "tmdb_id": 1694304,
+     "poster": "/assets/ficpa-2026/lactar.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "lactar",
+     "country": "Colombia",
+     "year": 2026,
+     "duration": "75 min",
+     "genre": "Drama",
+     "synopsis_en": "A 62-year-old woman, trapped in a life of empty privilege, becomes pregnant by her driver. Facing rejection from her family and society, she decides to fight to bring to life a baby that seems impossible at her late age, regardless of the consequences.",
+     "sinopsis": "Una mujer de 62 años, atrapada en una vida de privilegios vacíos, queda embarazada de su chofer. Enfrentándose al rechazo de su familia y de la sociedad, decide luchar por traer a la vida un bebé que parece imposible a su tardía edad, sin importar las consecuencias."
+    },
+    {
+     "festival": "itagui-2026",
+     "titulo": "Lactar",
+     "tmdb_id": 1694304,
+     "poster": "/assets/itagui-2026/lactar.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "lactar",
+     "country": "Colombia",
+     "year": 2026,
+     "duration": "75 min",
+     "genre": "Drama",
+     "synopsis_en": "A 62-year-old woman, trapped in a life of empty privilege, becomes pregnant by her driver. Facing rejection from her family and society, she decides to fight to bring to life a baby that seems impossible at her late age, regardless of the consequences.",
+     "sinopsis": "Una mujer de 62 años, atrapada en una vida de privilegios vacíos, queda embarazada de su chofer. Enfrentándose al rechazo de su familia y de la sociedad, decide luchar por traer a la vida un bebé que parece imposible a su tardía edad, sin importar las consecuencias. Invitados: Harold Trompetero (director) y Heidy Carrasco (actriz)."
+    },
+    {
+     "festival": "mambe-2026",
+     "titulo": "Lactar",
+     "tmdb_id": 1694304,
+     "poster": "/assets/mambe-2026/lactar.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "lactar",
+     "country": "Colombia",
+     "year": 2026,
+     "duration": "150 min",
+     "genre": "Drama",
+     "synopsis_en": "A 62-year-old woman, trapped in a life of empty privilege, becomes pregnant by her driver. Facing rejection from her family and society, she decides to fight to bring to life a baby that seems impossible at her late age, regardless of the consequences.",
+     "sinopsis": "Una mujer de 62 años, atrapada en una vida de privilegios vacíos, queda embarazada de su chofer. Enfrentándose al rechazo de su familia y de la sociedad, decide luchar por traer a la vida un bebé que parece imposible a su tardía edad, sin importar las consecuencias."
+    }
+   ],
+   "poster": "/assets/villadeleyvaiff-2026/lactar.jpg",
+   "posterSource": "tmdb"
   },
   {
    "titulo": "Las almas ni los ojos",
@@ -966,6 +1118,40 @@
    "posterSource": "tmdb"
   },
   {
+   "titulo": "Las zapatillas mágicas",
+   "tmdb_id": 1424641,
+   "titulo_original": "Las zapatillas mágicas",
+   "poster_path": "/zut8TXtJYa11qAWXFxfxSexzgE3.jpg",
+   "synopsis_es": "Yan busca cómo conseguir las mejores zapatillas de ballet del mundo porque cree que son la clave del éxito como bailarina. Al no conseguirlos, acude con Lu con sus abuelos Adolfo y Rodolfo, quienes reviven una escena icónica de la película Cantando bajo la lluvia y aprenden juntos que lo más importante es bailar con el corazón.",
+   "synopsis_en": "Yan searches for the best ballet shoes in the world because she believes they are the key to success as a dancer. When she fails to find them, she goes with Lu to visit her grandparents Adolfo and Rodolfo, who reenact an iconic scene from the movie Singin' in the Rain, and together they learn that the most important thing is to dance with your heart.",
+   "genero": "Animación",
+   "anio_tmdb": 2024,
+   "duracion_tmdb": 9,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "las-zapatillas-magicas",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_director": "Luber Yesid Zúñiga",
+   "_sondeado": "2026-11-12",
+   "_ya_publicada": [
+    {
+     "festival": "ficica-2026",
+     "titulo": "Las zapatillas mágicas",
+     "tmdb_id": 1424641,
+     "poster": "/assets/ficica-2026/las-zapatillas-magicas.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "las-zapatillas-magicas",
+     "country": "Colombia",
+     "year": 2024,
+     "duration": "9 min",
+     "genre": "Animación",
+     "synopsis_en": "Yan searches for the best ballet shoes in the world because she believes they are the key to success as a dancer. When she fails to find them, she goes with Lu to visit her grandparents Adolfo and Rodolfo, who reenact an iconic scene from the movie Singin' in the Rain, and together they learn that the most important thing is to dance with your heart.",
+     "sinopsis": "Yan busca cómo conseguir las mejores zapatillas de ballet del mundo porque cree que son la clave del éxito como bailarina. Al no conseguirlos, acude con Lu con sus abuelos Adolfo y Rodolfo, quienes reviven una escena icónica de la película Cantando bajo la lluvia y aprenden juntos que lo más importante es bailar con el corazón."
+    }
+   ],
+   "poster": "/assets/villadeleyvaiff-2026/las-zapatillas-magicas.jpg",
+   "posterSource": "tmdb"
+  },
+  {
    "titulo": "Lo que no se puede borrar",
    "tmdb_id": 1817229,
    "titulo_original": "Lo que no se puede borrar",
@@ -980,7 +1166,7 @@
    "poster": "/assets/villadeleyvaiff-2026/lo-que-no-se-puede-borrar.jpg",
    "_verificado": "declarada a mano: alta hecha el 4 nov 2026 con el afiche original, tras las sondas anti-duplicado",
    "_director": "Iñaki Dubourg",
-   "_sondeado": "2026-11-11",
+   "_sondeado": "2026-11-12",
    "posterSource": "tmdb"
   },
   {
@@ -1028,7 +1214,27 @@
    "poster": "/assets/bhff-2026/los-lobo.jpg",
    "_verificado": "declarada a mano: misma obra publicada en Bogotá Horror 2026 («Los Lobo», dir. Saeed García Pérez, Colombia, 2026, 20 min) con afiche oficial; la lámina de Villa de Leyva escribe «Saaed García», errata del festival. Sin ficha TMDB",
    "_director": "Saaed García",
-   "_sondeado": "2026-11-11"
+   "_sondeado": "2026-11-12"
+  },
+  {
+   "titulo": "Luz silenciosa",
+   "tmdb_id": 2012,
+   "titulo_original": "Luz silenciosa",
+   "poster_path": "/AnNFelQW7nNone1mo19LtYqw7l0.jpg",
+   "synopsis_es": "México. Estado de Chihuahua. Comunidad de los Menonitas. Johan, casado con Esther, con la que tiene siete hijos, vive desde hace dos años una historia de pasión con Marianne. Entre sus dos vidas, sus dos mujeres, la elección es imposible. Confiesa su situación a su amigo Zacarías y a su padre, que es predicador y considera que la vida de su hijo se halla bajo la influencia del diablo. Sin embargo, los dos lo apoyan, lo compadecen. Y lo envidian...",
+   "synopsis_en": "Johan and his family are Mennonites from the north of Mexico. Against the law of God and Man, Johan falls in love with another woman.",
+   "genero": "Drama",
+   "anio_tmdb": 2007,
+   "duracion_tmdb": 142,
+   "pais_tmdb": "Mexico, Germany, France, Netherlands",
+   "title_en": "Silent Light",
+   "lbSlug": "silent-light",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Luz silenciosa",
+   "_director": "Carlos Reygadas",
+   "_sondeado": "2026-11-12",
+   "poster": "/assets/villadeleyvaiff-2026/luz-silenciosa.jpg",
+   "posterSource": "tmdb"
   },
   {
    "titulo": "Malas posturas",
@@ -1046,11 +1252,31 @@
    "poster": "/assets/villadeleyvaiff-2026/malas-posturas.jpg",
    "_verificado": "declarada a mano: misma ficha que ya encontraba el candado (Juan Pablo Castro, Colombia, 2025, 17 min); TMDB no tiene afiche y cinecorto.co publica el oficial, recortado a los lados 1,3 % para la proporción",
    "_director": "Juan Pablo Castro",
-   "_sondeado": "2026-11-11",
+   "_sondeado": "2026-11-12",
    "_heredado": {
     "genero": "catálogo w_R4KECG9BFSX8 (ficica-2026, jardin-2026, villadeleyvaiff-2026)",
     "synopsis_es": "catálogo w_R4KECG9BFSX8 (ficica-2026, jardin-2026, villadeleyvaiff-2026)"
    }
+  },
+  {
+   "titulo": "Masha y los osos",
+   "tmdb_id": 1448028,
+   "titulo_original": "Маша и Медведи",
+   "poster_path": "/8bIrHHzOizxWHzgzmXXp2UnOjWI.jpg",
+   "synopsis_es": "Masha tiene que salvar a su hermano, que ha caído bajo el hechizo de los espíritus malignos del bosque y se ha convertido en una cabra. Para romper la terrible maldición, la niña tiene que unir fuerzas con los héroes de cuento de hadas que conoce desde la infancia: los tres osos.",
+   "synopsis_en": "Masha has to save her brother, who fell under the spell of the forest's evil spirits and turned into a goat. To break the terrible curse, the girl has to join forces with the fairy tale heroes she has known since childhood—the three bears.",
+   "genero": "Aventura",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 79,
+   "pais_tmdb": "Russia",
+   "title_en": "Masha and the Bears",
+   "lbSlug": "masha-and-the-bears",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Masha y los osos",
+   "_director": "Antonina Ruzhe",
+   "_sondeado": "2026-11-12",
+   "poster": "/assets/villadeleyvaiff-2026/masha-y-los-osos.jpg",
+   "posterSource": "tmdb"
   },
   {
    "titulo": "Merrimundi",
@@ -1089,6 +1315,162 @@
    "posterSource": "tmdb"
   },
   {
+   "titulo": "Mi pequeña vida en la isla",
+   "tmdb_id": 1645792,
+   "titulo_original": "Моя маленькая жизнь на острове",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "The story of a boy's journey on a floating island, full of adventures, discoveries and dangers.",
+   "genero": "Animación",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 13,
+   "pais_tmdb": "Russia",
+   "lbSlug": "film:1510119",
+   "_verificado": "declarada a mano: traducción de «Моя маленькая жизнь на острове», misma dirección (Nina Bisyarina), que la lámina acredita como Rusia",
+   "_director": "Nina Bisyarina",
+   "_sondeado": "2026-11-12"
+  },
+  {
+   "titulo": "Moon, mi amigo el panda",
+   "tmdb_id": 1178532,
+   "titulo_original": "Moon le Panda",
+   "poster_path": "/kCNgLDBj2Sd8VxfZjwWfLMfU4Yq.jpg",
+   "synopsis_es": "A sus doce años, Tian es enviado a vivir con su abuela en las montañas chinas por sus malas notas. Allí descubre a un panda al que llama Moon y, en secreto, entabla una amistad que desencadenará una aventura capaz de transformar su vida y la de toda su familia.",
+   "synopsis_en": "Due to his poor academic performance, twelve-year-old Tian is sent to live with his grandmother in the remote mountains of Sichuan. Far from the hustle and bustle of the city, he finds himself immersed in nature and secretly befriends a panda cub he names Moon. Together, Tian and Moon embark on a journey of discovery and overcoming challenges. The boy is forced to confront his fears and, in the process, learns valuable lessons about courage, respect, and the profound bond between humankind and nature. This experience profoundly transforms Tian's life and fosters an unexpected family reconciliation.",
+   "genero": "Familia",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 99,
+   "pais_tmdb": "France",
+   "title_en": "Moon the Panda",
+   "lbSlug": "moon-the-panda",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Moon, mi amigo el panda",
+   "_director": "Gilles de Maistre",
+   "_sondeado": "2026-11-12",
+   "poster": "/assets/villadeleyvaiff-2026/moon-mi-amigo-el-panda.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Mu-ki-ra",
+   "tmdb_id": 1446898,
+   "titulo_original": "Mu-Ki-Ra",
+   "poster_path": "/arJSTCDZ1Q34c6aXZxZJF9XuhhQ.jpg",
+   "synopsis_es": "Tras los muros que protegen la aldea se extiende una selva mágica y misteriosa, habitada por criaturas consideradas peligrosas. Durante años, los habitantes se han formado como guerreros desde jóvenes.",
+   "synopsis_en": "When her brother is kidnapped by Mu-Ki-Ra, Cleo ventures into a monster-plagued jungle with unlikely allies.",
+   "genero": "Animación",
+   "anio_tmdb": 2027,
+   "duracion_tmdb": 82,
+   "pais_tmdb": "Colombia, Spain",
+   "lbSlug": "mu-ki-ra",
+   "_verificado": "el catálogo ya la tiene (w_R4G1R6GM6QWF, anibia-2026, fantasmagoria-2026, ficcali-2026, ficci-65, ficfusa-2026, ficmontanas-2026, filcmar-2026, miradas-2026)",
+   "work_id": "w_R4G1R6GM6QWF",
+   "_director": "Estefanía Piñeres",
+   "_sondeado": "2026-11-12",
+   "_ya_publicada": [
+    {
+     "festival": "fantasmagoria-2026",
+     "titulo": "Mu-Ki-Ra",
+     "tmdb_id": 1446898,
+     "poster": "/assets/fantasmagoria-2026/mu-ki-ra.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "mu-ki-ra",
+     "country": "Colombia, España",
+     "year": 2026,
+     "duration": "81 min",
+     "genre": "Animación",
+     "synopsis_en": "When her brother is kidnapped by Mu-Ki-Ra, Cleo ventures into a monster-plagued jungle with unlikely allies.",
+     "sinopsis": "Tras los muros que protegen la aldea se extiende una selva mágica y misteriosa, habitada por criaturas consideradas peligrosas. Durante años, los habitantes se han formado como guerreros desde jóvenes."
+    },
+    {
+     "festival": "ficcali-2026",
+     "titulo": "Mu-ki-ra",
+     "tmdb_id": 1446898,
+     "poster": "/assets/ficcali-2026/mu-ki-ra.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "mu-ki-ra",
+     "country": "Colombia, España",
+     "year": 2026,
+     "duration": "82 min",
+     "genre": "Animación",
+     "synopsis_en": "When her brother is kidnapped by Mu-Ki-Ra, Cleo ventures into a monster-plagued jungle with unlikely allies.",
+     "sinopsis": "En una tierra acechada por monstruos hechos de vegetación, Cleo, de trece años, afronta su peor pesadilla cuando Martín, su hermano, es atrapado por uno de ellos. Con ayuda de Iolo, una anciana mágica, y una osa hormiguera, Cleo se adentra en la selva para atrapar a Mukira, quien se llevó a Martín, y celebrar un ritual para recuperar al niño; pronto aprende que los monstruos ocultan un sorprendente secreto bajo su enorme capa de pelo. Es una valiente apuesta de la animación colombiana que, con gran imaginación, propone una forma de entender cómo afrontar nuestros miedos y violencias, y hallar maneras de superar las dinámicas que nos hacen enfrentar a quienes no tienen que ser nuestros enemigos."
+    },
+    {
+     "festival": "ficcali-2026",
+     "titulo": "Mu-ki-ra",
+     "tmdb_id": 1446898,
+     "poster": "/assets/ficcali-2026/mu-ki-ra.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "mu-ki-ra",
+     "country": "Colombia, España",
+     "year": 2026,
+     "duration": "90 min",
+     "genre": "Animación",
+     "synopsis_en": "When her brother is kidnapped by Mu-Ki-Ra, Cleo ventures into a monster-plagued jungle with unlikely allies.",
+     "sinopsis": "En una tierra acechada por monstruos hechos de vegetación, Cleo, de trece años, afronta su peor pesadilla cuando Martín, su hermano, es atrapado por uno de ellos. Con ayuda de Iolo, una anciana mágica, y una osa hormiguera, Cleo se adentra en la selva para atrapar a Mukira, quien se llevó a Martín, y celebrar un ritual para recuperar al niño; pronto aprende que los monstruos ocultan un sorprendente secreto bajo su enorme capa de pelo. Es una valiente apuesta de la animación colombiana que, con gran imaginación, propone una forma de entender cómo afrontar nuestros miedos y violencias, y hallar maneras de superar las dinámicas que nos hacen enfrentar a quienes no tienen que ser nuestros enemigos."
+    },
+    {
+     "festival": "ficci-65",
+     "titulo": "Mu-Ki-Ra",
+     "tmdb_id": 1446898,
+     "poster": "https://image.tmdb.org/t/p/w500/mVX41bOzeT1hQHjK66MFTgMTuWi.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "mu-ki-ra",
+     "country": "Colombia/España/Francia",
+     "year": 2026,
+     "duration": "81 min",
+     "genre": "Animación",
+     "synopsis_en": "Beyond the walls that protect the village stretches a magical and mysterious jungle, inhabited by creatures considered dangerous. For years, the villagers have trained as warriors from a young age.",
+     "sinopsis": "Tras los muros que protegen la aldea se extiende una selva mágica y misteriosa, habitada por criaturas consideradas peligrosas. Durante años, los habitantes se han formado como guerreros desde jóvenes."
+    },
+    {
+     "festival": "ficfusa-2026",
+     "titulo": "Mu-ki-ra",
+     "tmdb_id": 1446898,
+     "poster": "/assets/ficfusa-2026/mu-ki-ra.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "mu-ki-ra",
+     "country": "Colombia, Spain",
+     "year": 2027,
+     "duration": "105 min",
+     "genre": "Animación",
+     "synopsis_en": "When her brother is kidnapped by Mu-Ki-Ra, Cleo ventures into a monster-plagued jungle with unlikely allies.",
+     "sinopsis": "En una tierra acechada por monstruos hechos de vegetación, Cleo se adentra en la selva para rescatar a su hermano Martín. Acompañada por Iolo, una anciana mágica, y una divertida osa hormiguera, deberá atrapar al monstruo que se lo llevó, pero pronto descubrirá que estas criaturas esconden un sorprendente secreto. Conversatorio con Jenaro González, director de animación (Dinamita / MU-KI-RA), y María Fernanda Marín, actriz, cantante, voz de Cleo"
+    },
+    {
+     "festival": "filcmar-2026",
+     "titulo": "Mu-Ki-Ra",
+     "tmdb_id": 1446898,
+     "poster": "/assets/filcmar-2026/mu-ki-ra.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "mu-ki-ra",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "81 min",
+     "genre": "Animación",
+     "synopsis_en": "When her brother is kidnapped by Mu-Ki-Ra, Cleo ventures into a monster-plagued jungle with unlikely allies.",
+     "sinopsis": "En una tierra acechada por monstruos hechos de vegetación, Cleo, una niña de trece años, se enfrentará a su peor pesadilla cuando Martín, su hermano pequeño, sea atrapado por uno de ellos. Con la ayuda de Iolo, una anciana mágica, y una divertida osa hormiguera como compañera de viajes, Cleo se adentrará en lo profundo de la selva para atrapar a Mukira, el monstruo que se llevó a Martín.Cleo pronto aprenderá que los monstruos ocultan un sorprendente secreto bajo su enorme capa de pelo, ¿te atreves a descubrirlo? Adéntrate en la selva y en esta increíble aventura musical y verás que la amistad es capaz de florecer en los lugares más inesperados."
+    },
+    {
+     "festival": "miradas-2026",
+     "titulo": "Mu-ki-ra",
+     "tmdb_id": 1446898,
+     "poster": "/assets/miradas-2026/mu-ki-ra.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "mu-ki-ra",
+     "country": "Colombia, España",
+     "year": 2026,
+     "duration": "82 min",
+     "genre": "Ficción",
+     "synopsis_en": "When her brother is kidnapped by Mu-Ki-Ra, Cleo ventures into a monster-plagued jungle with unlikely allies.",
+     "sinopsis": "Tras los muros que protegen la aldea se extiende una selva mágica y misteriosa, habitada por criaturas consideradas peligrosas. Durante años, los habitantes se han formado como guerreros desde jóvenes."
+    }
+   ],
+   "_sinopsis_de": "ya publicada en fantasmagoria-2026",
+   "poster": "/assets/villadeleyvaiff-2026/mu-ki-ra.jpg",
+   "posterSource": "tmdb"
+  },
+  {
    "titulo": "No nos moverán",
    "tmdb_id": 1252505,
    "titulo_original": "No nos moverán",
@@ -1122,7 +1504,7 @@
    "poster": "/assets/villadeleyvaiff-2026/noche-de-vuelo.jpg",
    "_verificado": "declarada a mano: alta hecha el 4 nov 2026 con el afiche original, tras las sondas anti-duplicado",
    "_director": "Zacarías Flores del Campo",
-   "_sondeado": "2026-11-11",
+   "_sondeado": "2026-11-12",
    "posterSource": "tmdb",
    "_heredado": {
     "genero": "catálogo w_R4NEB2RNHWKD (siembrafest-2026, villadeleyvaiff-2026)",
@@ -1138,7 +1520,7 @@
    "poster": "/assets/ficdeh/notas-sobre-un-destierro.jpg",
    "_verificado": "declarada a mano: misma obra publicada en FICDEH 2026 (dir. Gustavo Castro, Brasil, 2025, 80 min) con afiche oficial y sinopsis. Sin ficha TMDB por título idéntico",
    "_director": "Gustavo Castro",
-   "_sondeado": "2026-11-11",
+   "_sondeado": "2026-11-12",
    "genero": "Documental",
    "_heredado": {
     "genero": "catálogo w_R4HKXW3511SF (ficdeh-2026, villadeleyvaiff-2026)",
@@ -1171,6 +1553,25 @@
    "_director": "Gabriela Nápoles",
    "_sondeado": "2026-11-11",
    "poster": "/assets/villadeleyvaiff-2026/portento.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Post Tenebras Lux",
+   "tmdb_id": 103689,
+   "titulo_original": "Post Tenebras Lux",
+   "poster_path": "/5xeOzg1VwWiDhvPsdsvrnOnooBB.jpg",
+   "synopsis_es": "Juan y su familia urbana viven en el campo mexicano, donde ellos disfrutan y sufren un mundo aparte. Y nadie sabe si estos dos mundos son complementarios o si se esfuerzan por eliminar el uno al otro.",
+   "synopsis_en": "Juan and his urban family live in the Mexican countryside, where they enjoy and suffer a world apart. And nobody knows if these two worlds are complimentary or if they strive to eliminate one another.",
+   "genero": "Drama",
+   "anio_tmdb": 2012,
+   "duracion_tmdb": 115,
+   "pais_tmdb": "France, Germany, Mexico, Netherlands",
+   "lbSlug": "post-tenebras-lux",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Post Tenebras Lux",
+   "_director": "Carlos Reygadas",
+   "_sondeado": "2026-11-12",
+   "poster": "/assets/villadeleyvaiff-2026/post-tenebras-lux.jpg",
    "posterSource": "tmdb"
   },
   {
@@ -1360,6 +1761,48 @@
    "posterSource": "tmdb"
   },
   {
+   "titulo": "Sinfonía de los bichos raros",
+   "tmdb_id": 1776754,
+   "titulo_original": "La Sinfonía de los Bichos raros",
+   "poster_path": "/rvzcy8kixJuolV2ltRhSbGwhKKN.jpg",
+   "synopsis_en": "In the extraordinary neighborhood of Los Matorrales, hidden behind a massive wall in the city, lives Macha, a kind-hearted and dreamy cockroach who sings while helping at her father's legume shop. Everything changes when the business faces imminent closure. To save the store, protect her community, and fulfill her dream of becoming a singer, Macha convinces her group of friends—fellow misfits like a spider, a centipede, a vulture, and an opossum—to form a band of \"weird bugs\" and enter a human reality TV show. Through music, humor, and adventure, they discover the true power of friendship and self-acceptance.",
+   "genero": "Familia",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 90,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "la-sinfonia-de-los-bichos-raros",
+   "_verificado": "el catálogo ya la tiene (w_R4G8K6M9KW94, fantasmagoria-2026)",
+   "work_id": "w_R4G8K6M9KW94",
+   "_director": "Julián Duque",
+   "_sondeado": "2026-11-12",
+   "poster": "/assets/villadeleyvaiff-2026/sinfonia-de-los-bichos-raros.jpg",
+   "posterSource": "tmdb",
+   "synopsis_es": "La trama sigue a Macha, una cucaracha adolescente que sueña con convertirse en cantante. La joven vive junto a su padre, Verdinardo El Sapo, en el barrio Los Matorrales, un lugar separado de la Gran Ciudad por un enorme muro. Cuando la legumbrería de su padre está en riesgo de desaparecer, Macha decide reunir a su grupo de amigos, otros \"bichos raros\" como ella, para participar en un reality de talentos humanos.",
+   "_heredado": {
+    "synopsis_es": "catálogo w_R4G8K6M9KW94 (fantasmagoria-2026, villadeleyvaiff-2026)"
+   }
+  },
+  {
+   "titulo": "Snorri",
+   "tmdb_id": 1660120,
+   "titulo_original": "Snorri 4D - Catch Me If You Candy",
+   "poster_path": "/jrKOyBkfxi8uZEG2h05PPmKZrSE.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "",
+   "genero": "Animación",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "Germany",
+   "lbSlug": "snorri-4d-catch-me-if-you-candy",
+   "_verificado": "declarada a mano: «Snorri 4D - Catch Me If You Candy» (2026, Alemania). TMDB no acredita dirección y el candado no la ve; Blooloop la da dirigida por Thierry Marchand, 10 min. El afiche de TMDB y el still de la lámina muestran el mismo pulpo azul con casco vikingo, la paleta de caramelo y el cangrejo",
+   "_director": "Thierry Marchand",
+   "_sondeado": "2026-11-12",
+   "sinopsis": "Snorri, el pulpo azul de seis brazos, quiere una paleta a toda costa, y ese antojo lo lanza a una persecución desenfrenada por el mundo acuático de Rulantica. Un corto en 4D para toda la familia.",
+   "_sinopsis": "resumida en español de la ficha oficial de Europa-Park (https://www.europapark.de/en/theme-park/shows/snorri-4d-catch-me-if-you-candy), 12 nov: TMDB 1660120 no tiene overview",
+   "poster": "/assets/villadeleyvaiff-2026/snorri.jpg",
+   "posterSource": "tmdb"
+  },
+  {
    "titulo": "Sol en Lidia",
    "tmdb_id": 1598500,
    "titulo_original": "Sol en Lidia",
@@ -1447,7 +1890,7 @@
    "lbSlug": "termina",
    "_verificado": "declarada a mano: «TÉRMINA» (2025) en TMDB acredita la dirección como «Juan Ruiz» y el candado no casa con «Juan José Guevara» de la lámina. Es la misma obra publicada en Jardín 2026 con este tmdb_id y en SiembraFest, dir. Juan José Guevara Ruiz, 27 min",
    "_director": "Juan José Guevara",
-   "_sondeado": "2026-11-11",
+   "_sondeado": "2026-11-12",
    "poster": "/assets/villadeleyvaiff-2026/termina.jpg",
    "posterSource": "tmdb"
   },
@@ -1648,7 +2091,7 @@
    "lbSlug": "convocacao-geral-da-categoria",
    "_verificado": "declarada a mano: traducción del título original «Convocação Geral da Categoria», misma dirección (Bruna Pessoa); la sinopsis trata de una asamblea de docentes con su sindicato",
    "_director": "Bruna Pessoa",
-   "_sondeado": "2026-11-11"
+   "_sondeado": "2026-11-12"
   }
  ],
  "verificadas": {
@@ -1730,7 +2173,7 @@
    "lbSlug": "harmonica-2026",
    "_verificado": "declarada a mano: traducción del título original «Gaita» (Harmonica), misma dirección (Michele Diniz)",
    "_director": "Michele Diniz",
-   "_sondeado": "2026-11-11",
+   "_sondeado": "2026-11-12",
    "poster": "/assets/villadeleyvaiff-2026/armonica.jpg",
    "posterSource": "tmdb"
   },
@@ -1767,7 +2210,7 @@
    "lbSlug": "nikolai-rimsky-korsakov-flight-of-the-bumblebee",
    "_verificado": "declarada a mano: título en TMDB «Nikolai Rimsky-Korsakov. Flight of the Bumblebee», misma dirección (Natalia Chernysheva, Rusia-Bielorrusia), del almanaque «Children's Album». El still publicado por CUFF tiene el mismo dibujo que la lámina: abejorro fotografiado sobre personaje en negro y amarillo y fondo con trazos",
    "_director": "Natalia Chernysheva",
-   "_sondeado": "2026-11-11"
+   "_sondeado": "2026-11-12"
   },
   "Chaika": {
    "tmdb_id": 1689999,
@@ -2033,6 +2476,22 @@
    },
    "synopsis_es": "Damaris González desafía la tradición: en Barva de Heredia, cuna de la mascarada costarricense, se convirtió en la primera mujer mascarera en un oficio históricamente masculino. El documental rinde homenaje a su trayectoria y muestra su taller como el lugar donde el barro y el espíritu se encuentran."
   },
+  "Dance dance evolution": {
+   "tmdb_id": 1817254,
+   "titulo_original": "Dance★Dance★Evolution",
+   "poster_path": "/3RmpzIF1aD9hiHGRRDXRwQG8NvH.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Rin is an average teenager who is reaching the end of high school, her parents urging her to choose a realistic path in life, but her only answer is to BECOME AN ALIEN !!",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 8,
+   "pais_tmdb": "",
+   "poster": "/assets/villadeleyvaiff-2026/dance-dance-evolution.jpg",
+   "_verificado": "declarada a mano: alta del 4 nov 2026 con el afiche oficial de IG, recortado a la proporción de TMDB; datos de Miyu",
+   "_director": "Jonathan Abbaszadeh, Finn Falk, Yosi Hsu, Mia Lou, Huidi Zhang, Ruiwen Zhang",
+   "_sondeado": "2026-11-12",
+   "posterSource": "tmdb"
+  },
   "Demian": {
    "tmdb_id": 1723258,
    "titulo_original": "Demian",
@@ -2048,6 +2507,24 @@
    "_director": "Diego Padilla",
    "_sondeado": "2026-11-11",
    "poster": "/assets/villadeleyvaiff-2026/demian.jpg",
+   "posterSource": "tmdb"
+  },
+  "El corset": {
+   "tmdb_id": 947493,
+   "titulo_original": "Le Corset",
+   "poster_path": "/h4YDklaLjbgdu9yUr6vNybnrnzX.jpg",
+   "synopsis_es": "En la Francia rural, Christophe (10 años) intenta estar a la altura de su padre, un hombre rígido y distante, en la granja familiar. Sin embargo, el niño empieza a inclinarse y a desplomarse sin previo aviso: en el tractor, en la escuela, durante la cena... Un médico encuentra la solución: Christophe debe llevar un corsé de hierro para mantenerse erguido. Obligado a reinventar su vida lejos de la granja, Christophe descubre una nueva pasión por la música, conoce a una nueva amiga y la sigue en sus primeras travesuras. Pero ¿acaso servirá todo esto para corregir lo que está desequilibrado?",
+   "synopsis_en": "In rural France, 10-year-old Christophe tries to live up to his rigid and distant father on the family farm. But the young boy starts to lean over and collapse without warning — on the tractor, at school, at dinner... A doctor finds the solution: Christophe must wear an iron corset to keep himself upright. Forced to reinvent his life away from the farm, Christophe discovers a new passion for music, meets a new friend, and follows her into his first mischief. But will any of this really fix what is out of balance?",
+   "genero": "Animación",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 90,
+   "pais_tmdb": "France, Belgium",
+   "title_en": "Iron Boy",
+   "lbSlug": "iron-boy",
+   "_verificado": "declarada a mano: «Le Corset» (Iron Boy, 2026) de Louis Clichy: director, país y año del PDF",
+   "_director": "Louis Clichy",
+   "_sondeado": "2026-11-12",
+   "poster": "/assets/villadeleyvaiff-2026/el-corset.jpg",
    "posterSource": "tmdb"
   },
   "El cuerpo de Cristo": {
@@ -2265,7 +2742,7 @@
    "lbSlug": "in-the-shadow-of-the-heron",
    "_verificado": "declarada a mano: traducción de «Dans l’ombre du héron», dir. Nicolas Bianco-Levrin; la sinopsis (rana y garza) es la imagen de la lámina",
    "_director": "Nicolas Bianco",
-   "_sondeado": "2026-11-11",
+   "_sondeado": "2026-11-12",
    "poster": "/assets/villadeleyvaiff-2026/en-la-sombra-de-la-garza.jpg",
    "posterSource": "tmdb"
   },
@@ -2304,6 +2781,24 @@
    "_heredado": {
     "duracion_tmdb": "catálogo w_ZR5J46WM80RV (bhff-2026, villadeleyvaiff-2026)"
    }
+  },
+  "Goham": {
+   "tmdb_id": 1319522,
+   "titulo_original": "โกฮัง..หัวใจโกโฮม",
+   "poster_path": "/bUmlrkJe411RzdVKBKLbRSJChem.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "The bonds between humans and animals following a stray dog named Gohan as it moves through life with temporary owners over a decade, through good times and bad times, joy and sorrow, hellos and goodbyes.",
+   "genero": "Drama",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 145,
+   "pais_tmdb": "Thailand",
+   "title_en": "Gohan",
+   "lbSlug": "gohan-2026",
+   "_verificado": "declarada a mano: el PDF escribe «GOHAM»; en TMDB es «Gohan» (โกฮัง..หัวใจโกโฮม, 2026), dirigida por Chayanop Boonprakob y Nattawut Poonpiriya, los mismos que acredita el PDF (Tailandia, 2026)",
+   "_director": "Chayanop Boonprakob, Nattawut Poonpiriya, Atta Hemwadee",
+   "_sondeado": "2026-11-12",
+   "poster": "/assets/villadeleyvaiff-2026/goham.jpg",
+   "posterSource": "tmdb"
   },
   "Gris": {
    "tmdb_id": 1490328,
@@ -2352,6 +2847,25 @@
    "poster": "/assets/villadeleyvaiff-2026/gris.jpg",
    "posterSource": "tmdb"
   },
+  "Kiki: entregas a domicilio": {
+   "tmdb_id": 16859,
+   "titulo_original": "魔女の宅急便",
+   "poster_path": "/psw0tp25DNBkdEAfwjZYcgbpgme.jpg",
+   "synopsis_es": "Nicky no es una niña como otra cualquiera porque es aprendiz de bruja. Con solo 13 años y por tradición del oficio que está aprendiendo, la niña tiene que abandonar la casa de sus padres y buscar algún sitio donde sean necesarios sus servicios de bruja. Para emprender el viaje, Nicky se acompaña de su amigo Jiji y también de su gato; juntos, y sobre una escoba voladora, los amigos se instalan en un pueblecito que da al mar, donde la niña empezará a conocerse verdaderamente a sí misma.",
+   "synopsis_en": "A young witch, on her mandatory year of independent life, finds fitting into a new community difficult while she supports herself by running an air courier service.",
+   "genero": "Animación",
+   "anio_tmdb": 1989,
+   "duracion_tmdb": 102,
+   "pais_tmdb": "Japan",
+   "title_en": "Kiki's Delivery Service",
+   "lbSlug": "kikis-delivery-service",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Kiki: entregas a domicilio",
+   "_director": "Hayao Miyazaki",
+   "_sondeado": "2026-11-12",
+   "poster": "/assets/villadeleyvaiff-2026/kiki-entregas-a-domicilio.jpg",
+   "posterSource": "tmdb"
+  },
   "La casa del marica": {
    "tmdb_id": 1814147,
    "titulo_original": "La casa del marica",
@@ -2383,7 +2897,7 @@
    "lbSlug": "48-the-speaking-dead-woman",
    "_verificado": "declarada a mano: en TMDB con su número de serie: «48 - La muerta que habla», misma codirección (Agustín Fittipaldi), Argentina",
    "_director": "Candela Gonzalez, Agustín Fittipaldi",
-   "_sondeado": "2026-11-11",
+   "_sondeado": "2026-11-12",
    "poster": "/assets/villadeleyvaiff-2026/la-muerta-que-habla.jpg",
    "posterSource": "tmdb"
   },
@@ -2453,6 +2967,82 @@
    "_heredado": {
     "genero": "catálogo w_R4ERSF68AGVJ (cinemancia-2025, filcmar-2026, mubibogota-2026, villadeleyvaiff-2026)"
    }
+  },
+  "Lactar": {
+   "tmdb_id": 1694304,
+   "titulo_original": "Lactar",
+   "poster_path": "/zfqfD82FkdoKjMn6m6CwmvuoSyx.jpg",
+   "synopsis_es": "Una mujer de 62 años, atrapada en una vida de privilegios vacíos, queda embarazada de su chofer. Enfrentándose al rechazo de su familia y de la sociedad, decide luchar por traer a la vida un bebé que parece imposible a su tardía edad, sin importar las consecuencias.",
+   "synopsis_en": "A 62-year-old woman, trapped in a life of empty privilege, becomes pregnant by her driver. Facing rejection from her family and society, she decides to fight to bring to life a baby that seems impossible at her late age, regardless of the consequences.",
+   "genero": "Drama",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 75,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "lactar",
+   "_verificado": "el catálogo ya la tiene (w_R4J6SRMMD6E9, ficmontanas-2026, ficpa-2026, itagui-2026, mambe-2026)",
+   "work_id": "w_R4J6SRMMD6E9",
+   "_director": "Harold Trompetero",
+   "_sondeado": "2026-11-12",
+   "_ya_publicada": [
+    {
+     "festival": "ficmontanas-2026",
+     "titulo": "Lactar",
+     "tmdb_id": 1694304,
+     "poster": "/assets/ficmontanas/lactar.jpg",
+     "posterSource": "custom",
+     "lbSlug": "lactar",
+     "country": "Colombia",
+     "year": 2026,
+     "duration": "75 min",
+     "genre": "Drama",
+     "synopsis_en": "A 62-year-old woman in a hollow life of privilege becomes pregnant by her driver and decides to keep the baby against everyone's wishes.",
+     "sinopsis": "Una mujer de 62 años, atrapada en una vida de privilegio vacío, queda embarazada de su conductor y decide tener al bebé pese al rechazo de su familia y la sociedad."
+    },
+    {
+     "festival": "ficpa-2026",
+     "titulo": "Lactar",
+     "tmdb_id": 1694304,
+     "poster": "/assets/ficpa-2026/lactar.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "lactar",
+     "country": "Colombia",
+     "year": 2026,
+     "duration": "75 min",
+     "genre": "Drama",
+     "synopsis_en": "A 62-year-old woman, trapped in a life of empty privilege, becomes pregnant by her driver. Facing rejection from her family and society, she decides to fight to bring to life a baby that seems impossible at her late age, regardless of the consequences.",
+     "sinopsis": "Una mujer de 62 años, atrapada en una vida de privilegios vacíos, queda embarazada de su chofer. Enfrentándose al rechazo de su familia y de la sociedad, decide luchar por traer a la vida un bebé que parece imposible a su tardía edad, sin importar las consecuencias."
+    },
+    {
+     "festival": "itagui-2026",
+     "titulo": "Lactar",
+     "tmdb_id": 1694304,
+     "poster": "/assets/itagui-2026/lactar.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "lactar",
+     "country": "Colombia",
+     "year": 2026,
+     "duration": "75 min",
+     "genre": "Drama",
+     "synopsis_en": "A 62-year-old woman, trapped in a life of empty privilege, becomes pregnant by her driver. Facing rejection from her family and society, she decides to fight to bring to life a baby that seems impossible at her late age, regardless of the consequences.",
+     "sinopsis": "Una mujer de 62 años, atrapada en una vida de privilegios vacíos, queda embarazada de su chofer. Enfrentándose al rechazo de su familia y de la sociedad, decide luchar por traer a la vida un bebé que parece imposible a su tardía edad, sin importar las consecuencias. Invitados: Harold Trompetero (director) y Heidy Carrasco (actriz)."
+    },
+    {
+     "festival": "mambe-2026",
+     "titulo": "Lactar",
+     "tmdb_id": 1694304,
+     "poster": "/assets/mambe-2026/lactar.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "lactar",
+     "country": "Colombia",
+     "year": 2026,
+     "duration": "150 min",
+     "genre": "Drama",
+     "synopsis_en": "A 62-year-old woman, trapped in a life of empty privilege, becomes pregnant by her driver. Facing rejection from her family and society, she decides to fight to bring to life a baby that seems impossible at her late age, regardless of the consequences.",
+     "sinopsis": "Una mujer de 62 años, atrapada en una vida de privilegios vacíos, queda embarazada de su chofer. Enfrentándose al rechazo de su familia y de la sociedad, decide luchar por traer a la vida un bebé que parece imposible a su tardía edad, sin importar las consecuencias."
+    }
+   ],
+   "poster": "/assets/villadeleyvaiff-2026/lactar.jpg",
+   "posterSource": "tmdb"
   },
   "Las almas ni los ojos": {
    "tmdb_id": 1665538,
@@ -2532,6 +3122,39 @@
    "poster": "/assets/villadeleyvaiff-2026/las-heridas.jpg",
    "posterSource": "tmdb"
   },
+  "Las zapatillas mágicas": {
+   "tmdb_id": 1424641,
+   "titulo_original": "Las zapatillas mágicas",
+   "poster_path": "/zut8TXtJYa11qAWXFxfxSexzgE3.jpg",
+   "synopsis_es": "Yan busca cómo conseguir las mejores zapatillas de ballet del mundo porque cree que son la clave del éxito como bailarina. Al no conseguirlos, acude con Lu con sus abuelos Adolfo y Rodolfo, quienes reviven una escena icónica de la película Cantando bajo la lluvia y aprenden juntos que lo más importante es bailar con el corazón.",
+   "synopsis_en": "Yan searches for the best ballet shoes in the world because she believes they are the key to success as a dancer. When she fails to find them, she goes with Lu to visit her grandparents Adolfo and Rodolfo, who reenact an iconic scene from the movie Singin' in the Rain, and together they learn that the most important thing is to dance with your heart.",
+   "genero": "Animación",
+   "anio_tmdb": 2024,
+   "duracion_tmdb": 9,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "las-zapatillas-magicas",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_director": "Luber Yesid Zúñiga",
+   "_sondeado": "2026-11-12",
+   "_ya_publicada": [
+    {
+     "festival": "ficica-2026",
+     "titulo": "Las zapatillas mágicas",
+     "tmdb_id": 1424641,
+     "poster": "/assets/ficica-2026/las-zapatillas-magicas.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "las-zapatillas-magicas",
+     "country": "Colombia",
+     "year": 2024,
+     "duration": "9 min",
+     "genre": "Animación",
+     "synopsis_en": "Yan searches for the best ballet shoes in the world because she believes they are the key to success as a dancer. When she fails to find them, she goes with Lu to visit her grandparents Adolfo and Rodolfo, who reenact an iconic scene from the movie Singin' in the Rain, and together they learn that the most important thing is to dance with your heart.",
+     "sinopsis": "Yan busca cómo conseguir las mejores zapatillas de ballet del mundo porque cree que son la clave del éxito como bailarina. Al no conseguirlos, acude con Lu con sus abuelos Adolfo y Rodolfo, quienes reviven una escena icónica de la película Cantando bajo la lluvia y aprenden juntos que lo más importante es bailar con el corazón."
+    }
+   ],
+   "poster": "/assets/villadeleyvaiff-2026/las-zapatillas-magicas.jpg",
+   "posterSource": "tmdb"
+  },
   "Lo que no se puede borrar": {
    "tmdb_id": 1817229,
    "titulo_original": "Lo que no se puede borrar",
@@ -2546,7 +3169,7 @@
    "poster": "/assets/villadeleyvaiff-2026/lo-que-no-se-puede-borrar.jpg",
    "_verificado": "declarada a mano: alta hecha el 4 nov 2026 con el afiche original, tras las sondas anti-duplicado",
    "_director": "Iñaki Dubourg",
-   "_sondeado": "2026-11-11",
+   "_sondeado": "2026-11-12",
    "posterSource": "tmdb"
   },
   "Logos": {
@@ -2591,7 +3214,26 @@
    "poster": "/assets/bhff-2026/los-lobo.jpg",
    "_verificado": "declarada a mano: misma obra publicada en Bogotá Horror 2026 («Los Lobo», dir. Saeed García Pérez, Colombia, 2026, 20 min) con afiche oficial; la lámina de Villa de Leyva escribe «Saaed García», errata del festival. Sin ficha TMDB",
    "_director": "Saaed García",
-   "_sondeado": "2026-11-11"
+   "_sondeado": "2026-11-12"
+  },
+  "Luz silenciosa": {
+   "tmdb_id": 2012,
+   "titulo_original": "Luz silenciosa",
+   "poster_path": "/AnNFelQW7nNone1mo19LtYqw7l0.jpg",
+   "synopsis_es": "México. Estado de Chihuahua. Comunidad de los Menonitas. Johan, casado con Esther, con la que tiene siete hijos, vive desde hace dos años una historia de pasión con Marianne. Entre sus dos vidas, sus dos mujeres, la elección es imposible. Confiesa su situación a su amigo Zacarías y a su padre, que es predicador y considera que la vida de su hijo se halla bajo la influencia del diablo. Sin embargo, los dos lo apoyan, lo compadecen. Y lo envidian...",
+   "synopsis_en": "Johan and his family are Mennonites from the north of Mexico. Against the law of God and Man, Johan falls in love with another woman.",
+   "genero": "Drama",
+   "anio_tmdb": 2007,
+   "duracion_tmdb": 142,
+   "pais_tmdb": "Mexico, Germany, France, Netherlands",
+   "title_en": "Silent Light",
+   "lbSlug": "silent-light",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Luz silenciosa",
+   "_director": "Carlos Reygadas",
+   "_sondeado": "2026-11-12",
+   "poster": "/assets/villadeleyvaiff-2026/luz-silenciosa.jpg",
+   "posterSource": "tmdb"
   },
   "Malas posturas": {
    "tmdb_id": 1595060,
@@ -2608,11 +3250,30 @@
    "poster": "/assets/villadeleyvaiff-2026/malas-posturas.jpg",
    "_verificado": "declarada a mano: misma ficha que ya encontraba el candado (Juan Pablo Castro, Colombia, 2025, 17 min); TMDB no tiene afiche y cinecorto.co publica el oficial, recortado a los lados 1,3 % para la proporción",
    "_director": "Juan Pablo Castro",
-   "_sondeado": "2026-11-11",
+   "_sondeado": "2026-11-12",
    "_heredado": {
     "genero": "catálogo w_R4KECG9BFSX8 (ficica-2026, jardin-2026, villadeleyvaiff-2026)",
     "synopsis_es": "catálogo w_R4KECG9BFSX8 (ficica-2026, jardin-2026, villadeleyvaiff-2026)"
    }
+  },
+  "Masha y los osos": {
+   "tmdb_id": 1448028,
+   "titulo_original": "Маша и Медведи",
+   "poster_path": "/8bIrHHzOizxWHzgzmXXp2UnOjWI.jpg",
+   "synopsis_es": "Masha tiene que salvar a su hermano, que ha caído bajo el hechizo de los espíritus malignos del bosque y se ha convertido en una cabra. Para romper la terrible maldición, la niña tiene que unir fuerzas con los héroes de cuento de hadas que conoce desde la infancia: los tres osos.",
+   "synopsis_en": "Masha has to save her brother, who fell under the spell of the forest's evil spirits and turned into a goat. To break the terrible curse, the girl has to join forces with the fairy tale heroes she has known since childhood—the three bears.",
+   "genero": "Aventura",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 79,
+   "pais_tmdb": "Russia",
+   "title_en": "Masha and the Bears",
+   "lbSlug": "masha-and-the-bears",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Masha y los osos",
+   "_director": "Antonina Ruzhe",
+   "_sondeado": "2026-11-12",
+   "poster": "/assets/villadeleyvaiff-2026/masha-y-los-osos.jpg",
+   "posterSource": "tmdb"
   },
   "Merrimundi": {
    "tmdb_id": 1515178,
@@ -2649,6 +3310,159 @@
    "poster": "/assets/villadeleyvaiff-2026/merrimundi.jpg",
    "posterSource": "tmdb"
   },
+  "Mi pequeña vida en la isla": {
+   "tmdb_id": 1645792,
+   "titulo_original": "Моя маленькая жизнь на острове",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "The story of a boy's journey on a floating island, full of adventures, discoveries and dangers.",
+   "genero": "Animación",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 13,
+   "pais_tmdb": "Russia",
+   "lbSlug": "film:1510119",
+   "_verificado": "declarada a mano: traducción de «Моя маленькая жизнь на острове», misma dirección (Nina Bisyarina), que la lámina acredita como Rusia",
+   "_director": "Nina Bisyarina",
+   "_sondeado": "2026-11-12"
+  },
+  "Moon, mi amigo el panda": {
+   "tmdb_id": 1178532,
+   "titulo_original": "Moon le Panda",
+   "poster_path": "/kCNgLDBj2Sd8VxfZjwWfLMfU4Yq.jpg",
+   "synopsis_es": "A sus doce años, Tian es enviado a vivir con su abuela en las montañas chinas por sus malas notas. Allí descubre a un panda al que llama Moon y, en secreto, entabla una amistad que desencadenará una aventura capaz de transformar su vida y la de toda su familia.",
+   "synopsis_en": "Due to his poor academic performance, twelve-year-old Tian is sent to live with his grandmother in the remote mountains of Sichuan. Far from the hustle and bustle of the city, he finds himself immersed in nature and secretly befriends a panda cub he names Moon. Together, Tian and Moon embark on a journey of discovery and overcoming challenges. The boy is forced to confront his fears and, in the process, learns valuable lessons about courage, respect, and the profound bond between humankind and nature. This experience profoundly transforms Tian's life and fosters an unexpected family reconciliation.",
+   "genero": "Familia",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 99,
+   "pais_tmdb": "France",
+   "title_en": "Moon the Panda",
+   "lbSlug": "moon-the-panda",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Moon, mi amigo el panda",
+   "_director": "Gilles de Maistre",
+   "_sondeado": "2026-11-12",
+   "poster": "/assets/villadeleyvaiff-2026/moon-mi-amigo-el-panda.jpg",
+   "posterSource": "tmdb"
+  },
+  "Mu-ki-ra": {
+   "tmdb_id": 1446898,
+   "titulo_original": "Mu-Ki-Ra",
+   "poster_path": "/arJSTCDZ1Q34c6aXZxZJF9XuhhQ.jpg",
+   "synopsis_es": "Tras los muros que protegen la aldea se extiende una selva mágica y misteriosa, habitada por criaturas consideradas peligrosas. Durante años, los habitantes se han formado como guerreros desde jóvenes.",
+   "synopsis_en": "When her brother is kidnapped by Mu-Ki-Ra, Cleo ventures into a monster-plagued jungle with unlikely allies.",
+   "genero": "Animación",
+   "anio_tmdb": 2027,
+   "duracion_tmdb": 82,
+   "pais_tmdb": "Colombia, Spain",
+   "lbSlug": "mu-ki-ra",
+   "_verificado": "el catálogo ya la tiene (w_R4G1R6GM6QWF, anibia-2026, fantasmagoria-2026, ficcali-2026, ficci-65, ficfusa-2026, ficmontanas-2026, filcmar-2026, miradas-2026)",
+   "work_id": "w_R4G1R6GM6QWF",
+   "_director": "Estefanía Piñeres",
+   "_sondeado": "2026-11-12",
+   "_ya_publicada": [
+    {
+     "festival": "fantasmagoria-2026",
+     "titulo": "Mu-Ki-Ra",
+     "tmdb_id": 1446898,
+     "poster": "/assets/fantasmagoria-2026/mu-ki-ra.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "mu-ki-ra",
+     "country": "Colombia, España",
+     "year": 2026,
+     "duration": "81 min",
+     "genre": "Animación",
+     "synopsis_en": "When her brother is kidnapped by Mu-Ki-Ra, Cleo ventures into a monster-plagued jungle with unlikely allies.",
+     "sinopsis": "Tras los muros que protegen la aldea se extiende una selva mágica y misteriosa, habitada por criaturas consideradas peligrosas. Durante años, los habitantes se han formado como guerreros desde jóvenes."
+    },
+    {
+     "festival": "ficcali-2026",
+     "titulo": "Mu-ki-ra",
+     "tmdb_id": 1446898,
+     "poster": "/assets/ficcali-2026/mu-ki-ra.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "mu-ki-ra",
+     "country": "Colombia, España",
+     "year": 2026,
+     "duration": "82 min",
+     "genre": "Animación",
+     "synopsis_en": "When her brother is kidnapped by Mu-Ki-Ra, Cleo ventures into a monster-plagued jungle with unlikely allies.",
+     "sinopsis": "En una tierra acechada por monstruos hechos de vegetación, Cleo, de trece años, afronta su peor pesadilla cuando Martín, su hermano, es atrapado por uno de ellos. Con ayuda de Iolo, una anciana mágica, y una osa hormiguera, Cleo se adentra en la selva para atrapar a Mukira, quien se llevó a Martín, y celebrar un ritual para recuperar al niño; pronto aprende que los monstruos ocultan un sorprendente secreto bajo su enorme capa de pelo. Es una valiente apuesta de la animación colombiana que, con gran imaginación, propone una forma de entender cómo afrontar nuestros miedos y violencias, y hallar maneras de superar las dinámicas que nos hacen enfrentar a quienes no tienen que ser nuestros enemigos."
+    },
+    {
+     "festival": "ficcali-2026",
+     "titulo": "Mu-ki-ra",
+     "tmdb_id": 1446898,
+     "poster": "/assets/ficcali-2026/mu-ki-ra.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "mu-ki-ra",
+     "country": "Colombia, España",
+     "year": 2026,
+     "duration": "90 min",
+     "genre": "Animación",
+     "synopsis_en": "When her brother is kidnapped by Mu-Ki-Ra, Cleo ventures into a monster-plagued jungle with unlikely allies.",
+     "sinopsis": "En una tierra acechada por monstruos hechos de vegetación, Cleo, de trece años, afronta su peor pesadilla cuando Martín, su hermano, es atrapado por uno de ellos. Con ayuda de Iolo, una anciana mágica, y una osa hormiguera, Cleo se adentra en la selva para atrapar a Mukira, quien se llevó a Martín, y celebrar un ritual para recuperar al niño; pronto aprende que los monstruos ocultan un sorprendente secreto bajo su enorme capa de pelo. Es una valiente apuesta de la animación colombiana que, con gran imaginación, propone una forma de entender cómo afrontar nuestros miedos y violencias, y hallar maneras de superar las dinámicas que nos hacen enfrentar a quienes no tienen que ser nuestros enemigos."
+    },
+    {
+     "festival": "ficci-65",
+     "titulo": "Mu-Ki-Ra",
+     "tmdb_id": 1446898,
+     "poster": "https://image.tmdb.org/t/p/w500/mVX41bOzeT1hQHjK66MFTgMTuWi.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "mu-ki-ra",
+     "country": "Colombia/España/Francia",
+     "year": 2026,
+     "duration": "81 min",
+     "genre": "Animación",
+     "synopsis_en": "Beyond the walls that protect the village stretches a magical and mysterious jungle, inhabited by creatures considered dangerous. For years, the villagers have trained as warriors from a young age.",
+     "sinopsis": "Tras los muros que protegen la aldea se extiende una selva mágica y misteriosa, habitada por criaturas consideradas peligrosas. Durante años, los habitantes se han formado como guerreros desde jóvenes."
+    },
+    {
+     "festival": "ficfusa-2026",
+     "titulo": "Mu-ki-ra",
+     "tmdb_id": 1446898,
+     "poster": "/assets/ficfusa-2026/mu-ki-ra.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "mu-ki-ra",
+     "country": "Colombia, Spain",
+     "year": 2027,
+     "duration": "105 min",
+     "genre": "Animación",
+     "synopsis_en": "When her brother is kidnapped by Mu-Ki-Ra, Cleo ventures into a monster-plagued jungle with unlikely allies.",
+     "sinopsis": "En una tierra acechada por monstruos hechos de vegetación, Cleo se adentra en la selva para rescatar a su hermano Martín. Acompañada por Iolo, una anciana mágica, y una divertida osa hormiguera, deberá atrapar al monstruo que se lo llevó, pero pronto descubrirá que estas criaturas esconden un sorprendente secreto. Conversatorio con Jenaro González, director de animación (Dinamita / MU-KI-RA), y María Fernanda Marín, actriz, cantante, voz de Cleo"
+    },
+    {
+     "festival": "filcmar-2026",
+     "titulo": "Mu-Ki-Ra",
+     "tmdb_id": 1446898,
+     "poster": "/assets/filcmar-2026/mu-ki-ra.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "mu-ki-ra",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "81 min",
+     "genre": "Animación",
+     "synopsis_en": "When her brother is kidnapped by Mu-Ki-Ra, Cleo ventures into a monster-plagued jungle with unlikely allies.",
+     "sinopsis": "En una tierra acechada por monstruos hechos de vegetación, Cleo, una niña de trece años, se enfrentará a su peor pesadilla cuando Martín, su hermano pequeño, sea atrapado por uno de ellos. Con la ayuda de Iolo, una anciana mágica, y una divertida osa hormiguera como compañera de viajes, Cleo se adentrará en lo profundo de la selva para atrapar a Mukira, el monstruo que se llevó a Martín.Cleo pronto aprenderá que los monstruos ocultan un sorprendente secreto bajo su enorme capa de pelo, ¿te atreves a descubrirlo? Adéntrate en la selva y en esta increíble aventura musical y verás que la amistad es capaz de florecer en los lugares más inesperados."
+    },
+    {
+     "festival": "miradas-2026",
+     "titulo": "Mu-ki-ra",
+     "tmdb_id": 1446898,
+     "poster": "/assets/miradas-2026/mu-ki-ra.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "mu-ki-ra",
+     "country": "Colombia, España",
+     "year": 2026,
+     "duration": "82 min",
+     "genre": "Ficción",
+     "synopsis_en": "When her brother is kidnapped by Mu-Ki-Ra, Cleo ventures into a monster-plagued jungle with unlikely allies.",
+     "sinopsis": "Tras los muros que protegen la aldea se extiende una selva mágica y misteriosa, habitada por criaturas consideradas peligrosas. Durante años, los habitantes se han formado como guerreros desde jóvenes."
+    }
+   ],
+   "_sinopsis_de": "ya publicada en fantasmagoria-2026",
+   "poster": "/assets/villadeleyvaiff-2026/mu-ki-ra.jpg",
+   "posterSource": "tmdb"
+  },
   "No nos moverán": {
    "tmdb_id": 1252505,
    "titulo_original": "No nos moverán",
@@ -2681,7 +3495,7 @@
    "poster": "/assets/villadeleyvaiff-2026/noche-de-vuelo.jpg",
    "_verificado": "declarada a mano: alta hecha el 4 nov 2026 con el afiche original, tras las sondas anti-duplicado",
    "_director": "Zacarías Flores del Campo",
-   "_sondeado": "2026-11-11",
+   "_sondeado": "2026-11-12",
    "posterSource": "tmdb",
    "_heredado": {
     "genero": "catálogo w_R4NEB2RNHWKD (siembrafest-2026, villadeleyvaiff-2026)",
@@ -2696,7 +3510,7 @@
    "poster": "/assets/ficdeh/notas-sobre-un-destierro.jpg",
    "_verificado": "declarada a mano: misma obra publicada en FICDEH 2026 (dir. Gustavo Castro, Brasil, 2025, 80 min) con afiche oficial y sinopsis. Sin ficha TMDB por título idéntico",
    "_director": "Gustavo Castro",
-   "_sondeado": "2026-11-11",
+   "_sondeado": "2026-11-12",
    "genero": "Documental",
    "_heredado": {
     "genero": "catálogo w_R4HKXW3511SF (ficdeh-2026, villadeleyvaiff-2026)",
@@ -2728,6 +3542,24 @@
    "_director": "Gabriela Nápoles",
    "_sondeado": "2026-11-11",
    "poster": "/assets/villadeleyvaiff-2026/portento.jpg",
+   "posterSource": "tmdb"
+  },
+  "Post Tenebras Lux": {
+   "tmdb_id": 103689,
+   "titulo_original": "Post Tenebras Lux",
+   "poster_path": "/5xeOzg1VwWiDhvPsdsvrnOnooBB.jpg",
+   "synopsis_es": "Juan y su familia urbana viven en el campo mexicano, donde ellos disfrutan y sufren un mundo aparte. Y nadie sabe si estos dos mundos son complementarios o si se esfuerzan por eliminar el uno al otro.",
+   "synopsis_en": "Juan and his urban family live in the Mexican countryside, where they enjoy and suffer a world apart. And nobody knows if these two worlds are complimentary or if they strive to eliminate one another.",
+   "genero": "Drama",
+   "anio_tmdb": 2012,
+   "duracion_tmdb": 115,
+   "pais_tmdb": "France, Germany, Mexico, Netherlands",
+   "lbSlug": "post-tenebras-lux",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Post Tenebras Lux",
+   "_director": "Carlos Reygadas",
+   "_sondeado": "2026-11-12",
+   "poster": "/assets/villadeleyvaiff-2026/post-tenebras-lux.jpg",
    "posterSource": "tmdb"
   },
   "Refracción": {
@@ -2913,6 +3745,46 @@
    "poster": "/assets/villadeleyvaiff-2026/sex-panchitos.jpg",
    "posterSource": "tmdb"
   },
+  "Sinfonía de los bichos raros": {
+   "tmdb_id": 1776754,
+   "titulo_original": "La Sinfonía de los Bichos raros",
+   "poster_path": "/rvzcy8kixJuolV2ltRhSbGwhKKN.jpg",
+   "synopsis_en": "In the extraordinary neighborhood of Los Matorrales, hidden behind a massive wall in the city, lives Macha, a kind-hearted and dreamy cockroach who sings while helping at her father's legume shop. Everything changes when the business faces imminent closure. To save the store, protect her community, and fulfill her dream of becoming a singer, Macha convinces her group of friends—fellow misfits like a spider, a centipede, a vulture, and an opossum—to form a band of \"weird bugs\" and enter a human reality TV show. Through music, humor, and adventure, they discover the true power of friendship and self-acceptance.",
+   "genero": "Familia",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 90,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "la-sinfonia-de-los-bichos-raros",
+   "_verificado": "el catálogo ya la tiene (w_R4G8K6M9KW94, fantasmagoria-2026)",
+   "work_id": "w_R4G8K6M9KW94",
+   "_director": "Julián Duque",
+   "_sondeado": "2026-11-12",
+   "poster": "/assets/villadeleyvaiff-2026/sinfonia-de-los-bichos-raros.jpg",
+   "posterSource": "tmdb",
+   "synopsis_es": "La trama sigue a Macha, una cucaracha adolescente que sueña con convertirse en cantante. La joven vive junto a su padre, Verdinardo El Sapo, en el barrio Los Matorrales, un lugar separado de la Gran Ciudad por un enorme muro. Cuando la legumbrería de su padre está en riesgo de desaparecer, Macha decide reunir a su grupo de amigos, otros \"bichos raros\" como ella, para participar en un reality de talentos humanos.",
+   "_heredado": {
+    "synopsis_es": "catálogo w_R4G8K6M9KW94 (fantasmagoria-2026, villadeleyvaiff-2026)"
+   }
+  },
+  "Snorri": {
+   "tmdb_id": 1660120,
+   "titulo_original": "Snorri 4D - Catch Me If You Candy",
+   "poster_path": "/jrKOyBkfxi8uZEG2h05PPmKZrSE.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "",
+   "genero": "Animación",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "Germany",
+   "lbSlug": "snorri-4d-catch-me-if-you-candy",
+   "_verificado": "declarada a mano: «Snorri 4D - Catch Me If You Candy» (2026, Alemania). TMDB no acredita dirección y el candado no la ve; Blooloop la da dirigida por Thierry Marchand, 10 min. El afiche de TMDB y el still de la lámina muestran el mismo pulpo azul con casco vikingo, la paleta de caramelo y el cangrejo",
+   "_director": "Thierry Marchand",
+   "_sondeado": "2026-11-12",
+   "sinopsis": "Snorri, el pulpo azul de seis brazos, quiere una paleta a toda costa, y ese antojo lo lanza a una persecución desenfrenada por el mundo acuático de Rulantica. Un corto en 4D para toda la familia.",
+   "_sinopsis": "resumida en español de la ficha oficial de Europa-Park (https://www.europapark.de/en/theme-park/shows/snorri-4d-catch-me-if-you-candy), 12 nov: TMDB 1660120 no tiene overview",
+   "poster": "/assets/villadeleyvaiff-2026/snorri.jpg",
+   "posterSource": "tmdb"
+  },
   "Sol en Lidia": {
    "tmdb_id": 1598500,
    "titulo_original": "Sol en Lidia",
@@ -2997,7 +3869,7 @@
    "lbSlug": "termina",
    "_verificado": "declarada a mano: «TÉRMINA» (2025) en TMDB acredita la dirección como «Juan Ruiz» y el candado no casa con «Juan José Guevara» de la lámina. Es la misma obra publicada en Jardín 2026 con este tmdb_id y en SiembraFest, dir. Juan José Guevara Ruiz, 27 min",
    "_director": "Juan José Guevara",
-   "_sondeado": "2026-11-11",
+   "_sondeado": "2026-11-12",
    "poster": "/assets/villadeleyvaiff-2026/termina.jpg",
    "posterSource": "tmdb"
   },
@@ -3182,20 +4054,25 @@
    "lbSlug": "convocacao-geral-da-categoria",
    "_verificado": "declarada a mano: traducción del título original «Convocação Geral da Categoria», misma dirección (Bruna Pessoa); la sinopsis trata de una asamblea de docentes con su sindicato",
    "_director": "Bruna Pessoa",
-   "_sondeado": "2026-11-11"
+   "_sondeado": "2026-11-12"
   }
  },
  "sin_ficha": [
   "A la sombra de los árboles",
   "Baile por la ciudad",
   "Criatura",
+  "Danza de las muñecas",
+  "Danza invisible",
   "Día 1 Narita–Tokyo",
   "Eda",
   "El mejor regalo",
-  "Foco Reygadas",
   "Jeña",
+  "Las criaturas",
   "Las formas de la magia",
   "Lia",
+  "Loop",
+  "Película para todos los niños y niñas de Villa de Leyva",
+  "Retrospectiva Festival: Cortos que nos han encantado",
   "Rol – El río se llevaba las manchas de la vida",
   "Zakih",
   "¡Florecerán!"
@@ -3213,6 +4090,14 @@
    "director": "Juan Pablo Ríos",
    "fecha": "2026-11-11"
   },
+  "Danza de las muñecas": {
+   "director": "Yulia Ivanova",
+   "fecha": "2026-11-12"
+  },
+  "Danza invisible": {
+   "director": "Marina Kerber, Cristiane Oliveira",
+   "fecha": "2026-11-12"
+  },
   "Día 1 Narita–Tokyo": {
    "director": "João Krefer",
    "fecha": "2026-11-11"
@@ -3225,13 +4110,13 @@
    "director": "Argenis Herrera",
    "fecha": "2026-11-11"
   },
-  "Foco Reygadas": {
-   "director": "",
-   "fecha": "2026-11-11"
-  },
   "Jeña": {
    "director": "Mónica Loza",
    "fecha": "2026-11-11"
+  },
+  "Las criaturas": {
+   "director": "Francisco Zornosa",
+   "fecha": "2026-11-12"
   },
   "Las formas de la magia": {
    "director": "",
@@ -3240,6 +4125,18 @@
   "Lia": {
    "director": "Erika Piragauta",
    "fecha": "2026-11-11"
+  },
+  "Loop": {
+   "director": "Mali Delepière, Flora Jacon, Alicia Salvi, Hongyi Liu, Saïd Saïd, Tristan Truphemus",
+   "fecha": "2026-11-12"
+  },
+  "Película para todos los niños y niñas de Villa de Leyva": {
+   "director": "",
+   "fecha": "2026-11-12"
+  },
+  "Retrospectiva Festival: Cortos que nos han encantado": {
+   "director": "",
+   "fecha": "2026-11-12"
   },
   "Rol – El río se llevaba las manchas de la vida": {
    "director": "Selma Parreira",
