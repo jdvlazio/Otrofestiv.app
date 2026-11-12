@@ -31,7 +31,7 @@
    "duracion_tmdb": 13,
    "pais_tmdb": "Colombia",
    "lbSlug": "akababuru-expresion-de-asombro",
-   "_verificado": "el catálogo ya la tiene (w_R4DJX92V1WS5, aff-2026, cortoscali-2026, ficcali-2026, ficdeh-2026, ficpa-2026, popayan-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4DJX92V1WS5, aff-2026, cortoscali-2026, ficcali-2026, ficdeh-2026, ficfusa-2026, ficpa-2026, popayan-2026)",
    "work_id": "w_R4DJX92V1WS5",
    "_ya_publicada": [
     {
@@ -311,6 +311,20 @@
      "genre": "Animación",
      "synopsis_en": "While dealing with a strange being that lives inside her, a woman seeks to reconcile with her sister over an incident from their adolescence.",
      "sinopsis": "Mientras lidia con un ser extraño que habita en su interior, una mujer busca reconciliarse con su hermana tras un incidente de su adolescencia. Al explorar las experiencias que comparten a través de sus cuerpos, logra confrontar la naturaleza de lo que la habita."
+    },
+    {
+     "festival": "villadeleyvaiff-2026",
+     "titulo": "Una vez en un cuerpo",
+     "tmdb_id": 1522316,
+     "poster": "/assets/villadeleyvaiff-2026/una-vez-en-un-cuerpo.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "once-in-a-body",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "10 min",
+     "genre": "Animación",
+     "synopsis_en": "While dealing with a strange being that lives inside her, a woman seeks to reconcile with her sister over an incident from their adolescence.",
+     "sinopsis": "Mientras lidia con un extraño ser que vive en su interior, una mujer intenta reconciliarse con su hermana tras un incidente que las separó durante la adolescencia. Un viaje inquietante en el que tendrá que enfrentarse tanto a lo que lleva dentro como a las heridas del pasado."
     }
    ]
   },
@@ -326,7 +340,7 @@
    "duracion_tmdb": 15,
    "pais_tmdb": "",
    "lbSlug": "chaika-2025",
-   "_verificado": "el catálogo ya la tiene (w_R4EP71550W43, bhff-2026, cineautopsia-2026, fantasmagoria-2026, fantasofest-2026, festicinerio-2026, ficica-2026, ficpa-2026, narrarelfuturo-2026, popayan-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4EP71550W43, bhff-2026, cineautopsia-2026, fantasmagoria-2026, fantasofest-2026, festicinerio-2026, ficfusa-2026, ficica-2026, ficpa-2026, narrarelfuturo-2026, popayan-2026, villadeleyvaiff-2026)",
    "work_id": "w_R4EP71550W43",
    "_ya_publicada": [
     {
@@ -442,6 +456,19 @@
      "year": 2025,
      "duration": "15 min",
      "sinopsis": "Valentina, una cosmonauta rusa de 76 años, recibe una carta enviada desde Cuba con treinta años de retraso, invitándola a una expedición agrícola a Marte. Viaja a la isla esperando una utopía científico–social, pero encuentra un territorio golpeado por una silenciosa crisis agrícola y ambiental, una Cuba ucrónica y nebulosa donde las promesas del pasado persisten como sombras. Los paisajes tiemblan, las formas se desdibujan y la política apenas se intuye: un sistema agotado que intenta sostener un ideal ya difuso."
+    },
+    {
+     "festival": "villadeleyvaiff-2026",
+     "titulo": "Chaika",
+     "tmdb_id": 1689999,
+     "poster": "/assets/villadeleyvaiff-2026/chaika.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "chaika-2025",
+     "country": "Colombia, Cuba",
+     "year": 2025,
+     "duration": "15 min",
+     "genre": "Ciencia Ficción",
+     "sinopsis": "Valentina, una cosmonauta rusa de 76 años, llega a una Cuba ucrónica y nebulosa tras recibir, con treinta años de retraso, una invitación para una expedición agrícola a Marte. Entre paisajes difusos y promesas del pasado, busca las ruinas de un futuro que nunca llegó."
     }
    ]
   },
@@ -634,7 +661,7 @@
    "pais_tmdb": "Colombia",
    "title_en": "Heat Wave",
    "lbSlug": "heat-wave-2025",
-   "_verificado": "el catálogo ya la tiene (w_R4J7H92GTG6Q, ficmontanas-2026, jardin-2026, miradas-2026, popayan-2026, siembrafest-2026, villadelcine-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4J7H92GTG6Q, ficfusa-2026, ficmontanas-2026, jardin-2026, miradas-2026, popayan-2026, siembrafest-2026, villadelcine-2026)",
    "work_id": "w_R4J7H92GTG6Q",
    "_ya_publicada": [
     {
@@ -748,8 +775,8 @@
    "duracion_tmdb": 15,
    "pais_tmdb": "Colombia",
    "lbSlug": "entrelazadas",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Entrelazadas",
+   "_verificado": "el catálogo ya la tiene (w_R4ENTHX1MW3N, cineautopsia-2026, ficfusa-2026)",
+   "work_id": "w_R4ENTHX1MW3N",
    "_ya_publicada": [
     {
      "festival": "cineautopsia-2026",
@@ -777,7 +804,7 @@
    "duracion_tmdb": 8,
    "pais_tmdb": "",
    "lbSlug": "madres-de-nacimiento",
-   "_verificado": "el catálogo ya la tiene (w_R4FH541S52JK, cinemancia-2026, ficci-65, ficdeh-2026, ficmontanas-2026, jardin-2026, midbo-2026, miradas-2026, popayan-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4FH541S52JK, cinemancia-2026, ficci-65, ficdeh-2026, ficfusa-2026, ficmontanas-2026, jardin-2026, midbo-2026, miradas-2026, popayan-2026)",
    "work_id": "w_R4FH541S52JK",
    "_ya_publicada": [
     {
@@ -1077,7 +1104,7 @@
    "pais_tmdb": "Colombia",
    "title_en": "Like water, stone and foam",
    "lbSlug": "like-water-stone-and-foam",
-   "_verificado": "el catálogo ya la tiene (w_R4MQSAF570GZ, popayan-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4MQSAF570GZ, ficfusa-2026, popayan-2026)",
    "work_id": "w_R4MQSAF570GZ",
    "_ya_publicada": [
     {
@@ -1312,7 +1339,7 @@
    "duracion_tmdb": 16,
    "pais_tmdb": "Colombia",
    "lbSlug": "sukua",
-   "_verificado": "el catálogo ya la tiene (w_R4HF7EGXSQ60, cortoscali-2026, ficdeh-2026, ficmontanas-2026, villadelcine-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4HF7EGXSQ60, cortoscali-2026, ficdeh-2026, ficfusa-2026, ficmontanas-2026, villadelcine-2026)",
    "work_id": "w_R4HF7EGXSQ60",
    "_ya_publicada": [
     {
@@ -1728,8 +1755,8 @@
    "pais_tmdb": "Canada, Colombia",
    "title_en": "Vanishing Points",
    "lbSlug": "vanishing-points-2025",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Puntos de fuga"
+   "_verificado": "el catálogo ya la tiene (w_5HEQ0WE11RHN, ficfusa-2026)",
+   "work_id": "w_5HEQ0WE11RHN"
   },
   {
    "titulo": "La",
@@ -1758,7 +1785,7 @@
    "duracion_tmdb": 79,
    "pais_tmdb": "Colombia",
    "lbSlug": "la-luz-por-primera-vez",
-   "_verificado": "el catálogo ya la tiene (w_R4HJV3PTGZH0, ficdeh-2026, ficma-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4HJV3PTGZH0, ficdeh-2026, ficfusa-2026, ficma-2026)",
    "work_id": "w_R4HJV3PTGZH0",
    "_ya_publicada": [
     {
@@ -1806,8 +1833,8 @@
    "pais_tmdb": "Mexico, United Kingdom",
    "title_en": "Life Is",
    "lbSlug": "life-is-2025",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "La vida es"
+   "_verificado": "el catálogo ya la tiene (w_5X2YEATYBKSZ, ficfusa-2026)",
+   "work_id": "w_5X2YEATYBKSZ"
   },
   {
    "titulo": "Sobre las olas",
@@ -1821,7 +1848,7 @@
    "duracion_tmdb": 97,
    "pais_tmdb": "Mexico, Spain, France",
    "lbSlug": "sobre-las-olas",
-   "_verificado": "el catálogo ya la tiene (w_8GJ8PFFG53AE, guatape-2026)",
+   "_verificado": "el catálogo ya la tiene (w_8GJ8PFFG53AE, ficfusa-2026, guatape-2026)",
    "work_id": "w_8GJ8PFFG53AE",
    "_ya_publicada": [
     {
@@ -1852,7 +1879,7 @@
    "duracion_tmdb": 79,
    "pais_tmdb": "Guatemala, United States of America",
    "lbSlug": "comparsa-2025",
-   "_verificado": "el catálogo ya la tiene (w_R4M1E4Z3TM9E, midbo-2026, villadelcine-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4M1E4Z3TM9E, ficfusa-2026, midbo-2026, villadelcine-2026)",
    "work_id": "w_R4M1E4Z3TM9E",
    "_ya_publicada": [
     {
@@ -1899,8 +1926,8 @@
    "duracion_tmdb": 85,
    "pais_tmdb": "Kenya, South Africa, Saudi Arabia, Netherlands",
    "lbSlug": "truck-mama",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Truck mama"
+   "_verificado": "el catálogo ya la tiene (w_5X2WMY98HTJN, ficfusa-2026)",
+   "work_id": "w_5X2WMY98HTJN"
   },
   {
    "titulo": "Framing her",
@@ -1928,8 +1955,8 @@
    "duracion_tmdb": 88,
    "pais_tmdb": "Puerto Rico, Dominican Republic",
    "lbSlug": "matinino",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Matininó",
+   "_verificado": "el catálogo ya la tiene (w_R4QPX8P3YFJZ, ficfusa-2026, tribeca-2026)",
+   "work_id": "w_R4QPX8P3YFJZ",
    "_ya_publicada": [
     {
      "festival": "tribeca-2026",
@@ -1959,8 +1986,8 @@
    "duracion_tmdb": 70,
    "pais_tmdb": "",
    "lbSlug": "la-peluqueria-no-se-cierra",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "La peluquería no se cierra"
+   "_verificado": "el catálogo ya la tiene (w_5HEQBRPZ9GJE, ficfusa-2026)",
+   "work_id": "w_5HEQBRPZ9GJE"
   },
   {
    "titulo": "Ir hacia adentro",
@@ -1989,7 +2016,7 @@
    "duracion_tmdb": 6,
    "pais_tmdb": "",
    "lbSlug": "sol-de-niebla",
-   "_verificado": "el catálogo ya la tiene (w_R4JMKBFQW5V3, cinetoro-2026, cortoscali-2026, filcmar-2026, mamut-2026, midbo-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4JMKBFQW5V3, cinetoro-2026, cortoscali-2026, ficfusa-2026, filcmar-2026, mamut-2026, midbo-2026)",
    "work_id": "w_R4JMKBFQW5V3",
    "_ya_publicada": [
     {
@@ -2084,7 +2111,7 @@
    "duracion_tmdb": 0,
    "pais_tmdb": "Colombia",
    "lbSlug": "que-el-cielo-nos-perdone",
-   "_verificado": "el catálogo ya la tiene (w_R4GP49AWA2ZH, bhff-2026, fantasmagoria-2026, festicinerio-2026, ficica-2026, ficma-2026, siembrafest-2026, villadelcine-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4GP49AWA2ZH, bhff-2026, fantasmagoria-2026, festicinerio-2026, ficfusa-2026, ficica-2026, ficma-2026, siembrafest-2026, villadelcine-2026)",
    "work_id": "w_R4GP49AWA2ZH",
    "_ya_publicada": [
     {
@@ -2228,6 +2255,16 @@
    "work_id": "w_R4NCVVXT6PQB"
   },
   {
+   "titulo": "Florecerán!",
+   "_ya_publicada": [
+    {
+     "festival": "villadeleyvaiff-2026",
+     "titulo": "¡Florecerán!",
+     "country": "Argentina"
+    }
+   ]
+  },
+  {
    "titulo": "Árbol en pie",
    "tmdb_id": 1709833,
    "titulo_original": "Árbol en pie",
@@ -2278,8 +2315,8 @@
    "duracion_tmdb": 0,
    "pais_tmdb": "Colombia",
    "lbSlug": "transversal-30ff",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Transversal 30ff",
+   "_verificado": "el catálogo ya la tiene (w_R4ET8FVT5MKJ, cinemancia-2025, ficfusa-2026)",
+   "work_id": "w_R4ET8FVT5MKJ",
    "_ya_publicada": [
     {
      "festival": "cinemancia-2025",
@@ -2336,14 +2373,15 @@
   {
    "titulo": "El espejo de la vida",
    "tmdb_id": 1791654,
-   "titulo_original": "El espejo de la vida",
+   "titulo_original": "El Espejo de la vida",
    "poster_path": "/AlyX23QDpLTkWn3jSvZkt3nIFNT.jpg",
-   "synopsis_es": "En una noche oscura, un niño sigue una señal que lo lleva a una misteriosa máquina expendedora de dulces escondida en un bar prohibido. Para alcanzarla, deberá armarse de valor y afrontar desafíos que pondrán a prueba su ingenio, valentía y determinación.",
-   "synopsis_en": "",
+   "synopsis_es": "",
+   "synopsis_en": "On a dark night, a boy follows a sign leading him to a mysterious candy machine hidden inside a forbidden bar. To reach it, he must summon his courage and face challenges that will test his wit, bravery, and determination.",
    "genero": "Drama",
    "anio_tmdb": 2025,
    "duracion_tmdb": 9,
    "pais_tmdb": "",
+   "title_en": "The mirror of life",
    "lbSlug": "el-espejo-de-la-vida",
    "_verificado": "el catálogo ya la tiene (w_R4JJ9W6S4FCQ, festicinerio-2026, filcmar-2026)",
    "work_id": "w_R4JJ9W6S4FCQ",
@@ -2372,7 +2410,9 @@
      "duration": "9 min",
      "sinopsis": "En una noche oscura, un niño sigue una señal que lo lleva a una misteriosa máquina expendedora de dulces escondida en un bar prohibido. Para alcanzarla, deberá armarse de valor y afrontar desafíos que pondrán a prueba su ingenio, valentía y determinación."
     }
-   ]
+   ],
+   "sinopsis": "En una noche oscura, un niño sigue una señal que lo lleva a una misteriosa máquina expendedora de dulces escondida en un bar prohibido. Para alcanzarla, deberá armarse de valor y afrontar desafíos que pondrán a prueba su ingenio, valentía y determinación.",
+   "_sinopsis_de": "ya publicada en festicinerio-2026"
   },
   {
    "titulo": "Hdlt",
@@ -2473,8 +2513,8 @@
    "duracion_tmdb": 0,
    "pais_tmdb": "Colombia",
    "lbSlug": "salud-mutante",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Salud Mutante"
+   "_verificado": "el catálogo ya la tiene (w_5HER3M083MB8, ficfusa-2026)",
+   "work_id": "w_5HER3M083MB8"
   },
   {
    "titulo": "Sinfonía Incompleta de Oficios del Fonce",
@@ -2529,7 +2569,7 @@
    "duracion_tmdb": 13,
    "pais_tmdb": "Colombia",
    "lbSlug": "akababuru-expresion-de-asombro",
-   "_verificado": "el catálogo ya la tiene (w_R4DJX92V1WS5, aff-2026, cortoscali-2026, ficcali-2026, ficdeh-2026, ficpa-2026, popayan-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4DJX92V1WS5, aff-2026, cortoscali-2026, ficcali-2026, ficdeh-2026, ficfusa-2026, ficpa-2026, popayan-2026)",
    "work_id": "w_R4DJX92V1WS5",
    "_ya_publicada": [
     {
@@ -2807,6 +2847,20 @@
      "genre": "Animación",
      "synopsis_en": "While dealing with a strange being that lives inside her, a woman seeks to reconcile with her sister over an incident from their adolescence.",
      "sinopsis": "Mientras lidia con un ser extraño que habita en su interior, una mujer busca reconciliarse con su hermana tras un incidente de su adolescencia. Al explorar las experiencias que comparten a través de sus cuerpos, logra confrontar la naturaleza de lo que la habita."
+    },
+    {
+     "festival": "villadeleyvaiff-2026",
+     "titulo": "Una vez en un cuerpo",
+     "tmdb_id": 1522316,
+     "poster": "/assets/villadeleyvaiff-2026/una-vez-en-un-cuerpo.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "once-in-a-body",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "10 min",
+     "genre": "Animación",
+     "synopsis_en": "While dealing with a strange being that lives inside her, a woman seeks to reconcile with her sister over an incident from their adolescence.",
+     "sinopsis": "Mientras lidia con un extraño ser que vive en su interior, una mujer intenta reconciliarse con su hermana tras un incidente que las separó durante la adolescencia. Un viaje inquietante en el que tendrá que enfrentarse tanto a lo que lleva dentro como a las heridas del pasado."
     }
    ]
   },
@@ -2821,7 +2875,7 @@
    "duracion_tmdb": 15,
    "pais_tmdb": "",
    "lbSlug": "chaika-2025",
-   "_verificado": "el catálogo ya la tiene (w_R4EP71550W43, bhff-2026, cineautopsia-2026, fantasmagoria-2026, fantasofest-2026, festicinerio-2026, ficica-2026, ficpa-2026, narrarelfuturo-2026, popayan-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4EP71550W43, bhff-2026, cineautopsia-2026, fantasmagoria-2026, fantasofest-2026, festicinerio-2026, ficfusa-2026, ficica-2026, ficpa-2026, narrarelfuturo-2026, popayan-2026, villadeleyvaiff-2026)",
    "work_id": "w_R4EP71550W43",
    "_ya_publicada": [
     {
@@ -2937,6 +2991,19 @@
      "year": 2025,
      "duration": "15 min",
      "sinopsis": "Valentina, una cosmonauta rusa de 76 años, recibe una carta enviada desde Cuba con treinta años de retraso, invitándola a una expedición agrícola a Marte. Viaja a la isla esperando una utopía científico–social, pero encuentra un territorio golpeado por una silenciosa crisis agrícola y ambiental, una Cuba ucrónica y nebulosa donde las promesas del pasado persisten como sombras. Los paisajes tiemblan, las formas se desdibujan y la política apenas se intuye: un sistema agotado que intenta sostener un ideal ya difuso."
+    },
+    {
+     "festival": "villadeleyvaiff-2026",
+     "titulo": "Chaika",
+     "tmdb_id": 1689999,
+     "poster": "/assets/villadeleyvaiff-2026/chaika.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "chaika-2025",
+     "country": "Colombia, Cuba",
+     "year": 2025,
+     "duration": "15 min",
+     "genre": "Ciencia Ficción",
+     "sinopsis": "Valentina, una cosmonauta rusa de 76 años, llega a una Cuba ucrónica y nebulosa tras recibir, con treinta años de retraso, una invitación para una expedición agrícola a Marte. Entre paisajes difusos y promesas del pasado, busca las ruinas de un futuro que nunca llegó."
     }
    ]
   },
@@ -3124,7 +3191,7 @@
    "pais_tmdb": "Colombia",
    "title_en": "Heat Wave",
    "lbSlug": "heat-wave-2025",
-   "_verificado": "el catálogo ya la tiene (w_R4J7H92GTG6Q, ficmontanas-2026, jardin-2026, miradas-2026, popayan-2026, siembrafest-2026, villadelcine-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4J7H92GTG6Q, ficfusa-2026, ficmontanas-2026, jardin-2026, miradas-2026, popayan-2026, siembrafest-2026, villadelcine-2026)",
    "work_id": "w_R4J7H92GTG6Q",
    "_ya_publicada": [
     {
@@ -3237,8 +3304,8 @@
    "duracion_tmdb": 15,
    "pais_tmdb": "Colombia",
    "lbSlug": "entrelazadas",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Entrelazadas",
+   "_verificado": "el catálogo ya la tiene (w_R4ENTHX1MW3N, cineautopsia-2026, ficfusa-2026)",
+   "work_id": "w_R4ENTHX1MW3N",
    "_ya_publicada": [
     {
      "festival": "cineautopsia-2026",
@@ -3265,7 +3332,7 @@
    "duracion_tmdb": 8,
    "pais_tmdb": "",
    "lbSlug": "madres-de-nacimiento",
-   "_verificado": "el catálogo ya la tiene (w_R4FH541S52JK, cinemancia-2026, ficci-65, ficdeh-2026, ficmontanas-2026, jardin-2026, midbo-2026, miradas-2026, popayan-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4FH541S52JK, cinemancia-2026, ficci-65, ficdeh-2026, ficfusa-2026, ficmontanas-2026, jardin-2026, midbo-2026, miradas-2026, popayan-2026)",
    "work_id": "w_R4FH541S52JK",
    "_ya_publicada": [
     {
@@ -3562,7 +3629,7 @@
    "pais_tmdb": "Colombia",
    "title_en": "Like water, stone and foam",
    "lbSlug": "like-water-stone-and-foam",
-   "_verificado": "el catálogo ya la tiene (w_R4MQSAF570GZ, popayan-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4MQSAF570GZ, ficfusa-2026, popayan-2026)",
    "work_id": "w_R4MQSAF570GZ",
    "_ya_publicada": [
     {
@@ -3770,7 +3837,7 @@
    "duracion_tmdb": 16,
    "pais_tmdb": "Colombia",
    "lbSlug": "sukua",
-   "_verificado": "el catálogo ya la tiene (w_R4HF7EGXSQ60, cortoscali-2026, ficdeh-2026, ficmontanas-2026, villadelcine-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4HF7EGXSQ60, cortoscali-2026, ficdeh-2026, ficfusa-2026, ficmontanas-2026, villadelcine-2026)",
    "work_id": "w_R4HF7EGXSQ60",
    "_ya_publicada": [
     {
@@ -4179,8 +4246,8 @@
    "pais_tmdb": "Canada, Colombia",
    "title_en": "Vanishing Points",
    "lbSlug": "vanishing-points-2025",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Puntos de fuga"
+   "_verificado": "el catálogo ya la tiene (w_5HEQ0WE11RHN, ficfusa-2026)",
+   "work_id": "w_5HEQ0WE11RHN"
   },
   "La luz por primera vez": {
    "tmdb_id": 1705404,
@@ -4193,7 +4260,7 @@
    "duracion_tmdb": 79,
    "pais_tmdb": "Colombia",
    "lbSlug": "la-luz-por-primera-vez",
-   "_verificado": "el catálogo ya la tiene (w_R4HJV3PTGZH0, ficdeh-2026, ficma-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4HJV3PTGZH0, ficdeh-2026, ficfusa-2026, ficma-2026)",
    "work_id": "w_R4HJV3PTGZH0",
    "_ya_publicada": [
     {
@@ -4240,8 +4307,8 @@
    "pais_tmdb": "Mexico, United Kingdom",
    "title_en": "Life Is",
    "lbSlug": "life-is-2025",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "La vida es"
+   "_verificado": "el catálogo ya la tiene (w_5X2YEATYBKSZ, ficfusa-2026)",
+   "work_id": "w_5X2YEATYBKSZ"
   },
   "Sobre las olas": {
    "tmdb_id": 1478001,
@@ -4254,7 +4321,7 @@
    "duracion_tmdb": 97,
    "pais_tmdb": "Mexico, Spain, France",
    "lbSlug": "sobre-las-olas",
-   "_verificado": "el catálogo ya la tiene (w_8GJ8PFFG53AE, guatape-2026)",
+   "_verificado": "el catálogo ya la tiene (w_8GJ8PFFG53AE, ficfusa-2026, guatape-2026)",
    "work_id": "w_8GJ8PFFG53AE",
    "_ya_publicada": [
     {
@@ -4284,7 +4351,7 @@
    "duracion_tmdb": 79,
    "pais_tmdb": "Guatemala, United States of America",
    "lbSlug": "comparsa-2025",
-   "_verificado": "el catálogo ya la tiene (w_R4M1E4Z3TM9E, midbo-2026, villadelcine-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4M1E4Z3TM9E, ficfusa-2026, midbo-2026, villadelcine-2026)",
    "work_id": "w_R4M1E4Z3TM9E",
    "_ya_publicada": [
     {
@@ -4330,8 +4397,8 @@
    "duracion_tmdb": 85,
    "pais_tmdb": "Kenya, South Africa, Saudi Arabia, Netherlands",
    "lbSlug": "truck-mama",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Truck mama"
+   "_verificado": "el catálogo ya la tiene (w_5X2WMY98HTJN, ficfusa-2026)",
+   "work_id": "w_5X2WMY98HTJN"
   },
   "Framing her": {
    "tmdb_id": 1531982,
@@ -4357,8 +4424,8 @@
    "duracion_tmdb": 88,
    "pais_tmdb": "Puerto Rico, Dominican Republic",
    "lbSlug": "matinino",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Matininó",
+   "_verificado": "el catálogo ya la tiene (w_R4QPX8P3YFJZ, ficfusa-2026, tribeca-2026)",
+   "work_id": "w_R4QPX8P3YFJZ",
    "_ya_publicada": [
     {
      "festival": "tribeca-2026",
@@ -4387,8 +4454,8 @@
    "duracion_tmdb": 70,
    "pais_tmdb": "",
    "lbSlug": "la-peluqueria-no-se-cierra",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "La peluquería no se cierra"
+   "_verificado": "el catálogo ya la tiene (w_5HEQBRPZ9GJE, ficfusa-2026)",
+   "work_id": "w_5HEQBRPZ9GJE"
   },
   "Sol de niebla": {
    "tmdb_id": 1791609,
@@ -4401,7 +4468,7 @@
    "duracion_tmdb": 6,
    "pais_tmdb": "",
    "lbSlug": "sol-de-niebla",
-   "_verificado": "el catálogo ya la tiene (w_R4JMKBFQW5V3, cinetoro-2026, cortoscali-2026, filcmar-2026, mamut-2026, midbo-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4JMKBFQW5V3, cinetoro-2026, cortoscali-2026, ficfusa-2026, filcmar-2026, mamut-2026, midbo-2026)",
    "work_id": "w_R4JMKBFQW5V3",
    "_ya_publicada": [
     {
@@ -4477,7 +4544,7 @@
    "duracion_tmdb": 0,
    "pais_tmdb": "Colombia",
    "lbSlug": "que-el-cielo-nos-perdone",
-   "_verificado": "el catálogo ya la tiene (w_R4GP49AWA2ZH, bhff-2026, fantasmagoria-2026, festicinerio-2026, ficica-2026, ficma-2026, siembrafest-2026, villadelcine-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4GP49AWA2ZH, bhff-2026, fantasmagoria-2026, festicinerio-2026, ficfusa-2026, ficica-2026, ficma-2026, siembrafest-2026, villadelcine-2026)",
    "work_id": "w_R4GP49AWA2ZH",
    "_ya_publicada": [
     {
@@ -4667,8 +4734,8 @@
    "duracion_tmdb": 0,
    "pais_tmdb": "Colombia",
    "lbSlug": "transversal-30ff",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Transversal 30ff",
+   "_verificado": "el catálogo ya la tiene (w_R4ET8FVT5MKJ, cinemancia-2025, ficfusa-2026)",
+   "work_id": "w_R4ET8FVT5MKJ",
    "_ya_publicada": [
     {
      "festival": "cinemancia-2025",
@@ -4723,14 +4790,15 @@
   },
   "El espejo de la vida": {
    "tmdb_id": 1791654,
-   "titulo_original": "El espejo de la vida",
+   "titulo_original": "El Espejo de la vida",
    "poster_path": "/AlyX23QDpLTkWn3jSvZkt3nIFNT.jpg",
-   "synopsis_es": "En una noche oscura, un niño sigue una señal que lo lleva a una misteriosa máquina expendedora de dulces escondida en un bar prohibido. Para alcanzarla, deberá armarse de valor y afrontar desafíos que pondrán a prueba su ingenio, valentía y determinación.",
-   "synopsis_en": "",
+   "synopsis_es": "",
+   "synopsis_en": "On a dark night, a boy follows a sign leading him to a mysterious candy machine hidden inside a forbidden bar. To reach it, he must summon his courage and face challenges that will test his wit, bravery, and determination.",
    "genero": "Drama",
    "anio_tmdb": 2025,
    "duracion_tmdb": 9,
    "pais_tmdb": "",
+   "title_en": "The mirror of life",
    "lbSlug": "el-espejo-de-la-vida",
    "_verificado": "el catálogo ya la tiene (w_R4JJ9W6S4FCQ, festicinerio-2026, filcmar-2026)",
    "work_id": "w_R4JJ9W6S4FCQ",
@@ -4759,7 +4827,9 @@
      "duration": "9 min",
      "sinopsis": "En una noche oscura, un niño sigue una señal que lo lleva a una misteriosa máquina expendedora de dulces escondida en un bar prohibido. Para alcanzarla, deberá armarse de valor y afrontar desafíos que pondrán a prueba su ingenio, valentía y determinación."
     }
-   ]
+   ],
+   "sinopsis": "En una noche oscura, un niño sigue una señal que lo lleva a una misteriosa máquina expendedora de dulces escondida en un bar prohibido. Para alcanzarla, deberá armarse de valor y afrontar desafíos que pondrán a prueba su ingenio, valentía y determinación.",
+   "_sinopsis_de": "ya publicada en festicinerio-2026"
   },
   "Hdlt": {
    "tmdb_id": 1796013,
@@ -4857,8 +4927,8 @@
    "duracion_tmdb": 0,
    "pais_tmdb": "Colombia",
    "lbSlug": "salud-mutante",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Salud Mutante"
+   "_verificado": "el catálogo ya la tiene (w_5HER3M083MB8, ficfusa-2026)",
+   "work_id": "w_5HER3M083MB8"
   },
   "Sinfonía Incompleta de Oficios del Fonce": {
    "tmdb_id": 1817245,
