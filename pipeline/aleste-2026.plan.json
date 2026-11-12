@@ -1,0 +1,105 @@
+{
+ "_nota": "PRE-ONBOARDING + MONTAJE MEDELLÍN (12 nov 2026). 9.º Festival de Cine de Europa Central y Oriental Al Este. Medellín 18–22 nov (MAMM y Colombo Americano); Bogotá 25–29 nov sin programación publicada todavía. Fuentes: fichas del MAMM y láminas de @aleste.colombia.",
+ "radar": 1397,
+ "fuentes_vivas": [
+  {
+   "archivo": "fuentes/aleste-2026/mamm-ciclo.html",
+   "url": "https://www.elmamm.org/cine/9o-festival-al-este/",
+   "como": "pagina",
+   "debe_contener": "Festival Al Este",
+   "que": "las 4 películas del MAMM"
+  }
+ ],
+ "pasos": [
+  {
+   "cmd": "python3 pipeline/radar.py aleste-2026",
+   "que": "el volcado del radar #1397"
+  },
+  {
+   "cmd": "python3 pipeline/aleste-2026-catalogo.py",
+   "que": "MAMM + láminas IG → catálogo (12 obras)"
+  },
+  {
+   "cmd": "python3 pipeline/enriquecer_catalogo.py festivals/staging/aleste-2026-catalogo.json",
+   "que": "TMDB verificado + fichas declaradas"
+  },
+  {
+   "cmd": "python3 pipeline/aleste-2026-crudo.py",
+   "que": "fichas MAMM + láminas → crudo (12 funciones Medellín)"
+  },
+  {
+   "cmd": "python3 pipeline/enriquecer.py aleste-2026 --posters",
+   "que": "TMDB + cascada + afiches a assets/"
+  },
+  {
+   "cmd": "python3 pipeline/ensamblar.py aleste-2026",
+   "que": "crudo + plan → build"
+  },
+  {
+   "cmd": "python3 pipeline/encuadrar-posters.py aleste-2026 --aplicar --desde festivals/staging/aleste-2026-build.json",
+   "que": "los afiches a 2:3"
+  },
+  {
+   "cmd": "python3 pipeline/aleste-2026-verificar.py",
+   "que": "2.ª lectura: fichas MAMM y OCR de las láminas contra el crudo"
+  }
+ ],
+ "_fuentes_versionadas": {
+  "festivals/staging/aleste-2026-catalogo.json": "las obras (12)",
+  "festivals/staging/aleste-2026-catalogo-enriquecido.json": "fichas del pre-onboarding",
+  "festivals/staging/aleste-2026-correcciones.json": "4 fichas declaradas y sin_afiche",
+  "festivals/staging/aleste-2026-venues-geo.json": "2 sedes, pines verificados en Mamut",
+  "festivals/staging/aleste-2026-fuentes.json": "inventario de fuentes",
+  "festivals/staging/aleste-2026-radar.json": "el volcado del radar #1397",
+  "festivals/staging/aleste-2026-sinopsis.json": "sinopsis oficiales del MAMM + 2 traducidas; lo lee enriquecer.py"
+ },
+ "festival": {
+  "crudo": "festivals/staging/aleste-2026-crudo.json",
+  "enriquecido": "festivals/staging/aleste-2026-enriquecido.json",
+  "geo": "festivals/staging/aleste-2026-venues-geo.json",
+  "sedes": {
+   "Centro Colombo Americano": [
+    "Centro Colombo Americano - Medellín",
+    ""
+   ],
+   "MAMM": [
+    "MAMM - Medellín",
+    ""
+   ]
+  },
+  "_por_que_secciones": "«Al Este Especial» y «Fokus: Las grietas en el muro» son los sellos de las láminas, tal cual. «Al Este en el MAMM» es NUESTRO rótulo para las 4 del museo, que no traen sección: propuesta para Juan.",
+  "secciones": {
+   "Al Este Especial": {
+    "emoji": "✨",
+    "en": "Al Este Special",
+    "archetype": "Especiales / Eventos"
+   },
+   "Fokus: Las grietas en el muro": {
+    "emoji": "🎞️",
+    "en": "Fokus: Cracks in the Wall",
+    "archetype": "Retrospectiva / Tributo"
+   },
+   "Al Este en el MAMM": {
+    "emoji": "🏛️",
+    "en": "Al Este at MAMM",
+    "archetype": "Muestra / País"
+   }
+  },
+  "name": "Al Este",
+  "displayName": "Al Este",
+  "fullName": "9.º Festival de Cine de Europa Central y Oriental Al Este",
+  "shortName": "Al Este",
+  "tagline": "Festival de Cine de Europa Central y Oriental",
+  "city": "Medellín",
+  "country": "CO",
+  "dates": "18–22 NOV",
+  "dates_en": "NOV 18–22",
+  "year": 2026,
+  "timezoneOffset": "-05:00",
+  "storageKey": "aleste2026_",
+  "festivalStartStr": "2026-11-18T00:00:00",
+  "festivalEndStr": "2026-11-22T23:59:00",
+  "sharedSlotIsOneScreening": false,
+  "mes_es": "noviembre"
+ }
+}

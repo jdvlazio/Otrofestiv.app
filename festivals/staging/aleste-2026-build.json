@@ -1,0 +1,619 @@
+{
+ "_etapa": "build generado por pipeline/ensamblar.py",
+ "_provenance": {
+  "fuente": "MAMM (fichas del ciclo) + láminas de @aleste.colombia (3, 5 y 10 nov 2026)",
+  "capturado": "2026-11-12",
+  "ensamblador": "pipeline/ensamblar.py"
+ },
+ "_por_que_secciones": "«Al Este Especial» y «Fokus: Las grietas en el muro» son los sellos de las láminas, tal cual. «Al Este en el MAMM» es NUESTRO rótulo para las 4 del museo, que no traen sección: propuesta para Juan.",
+ "name": "Al Este",
+ "displayName": "Al Este",
+ "fullName": "9.º Festival de Cine de Europa Central y Oriental Al Este",
+ "shortName": "Al Este",
+ "tagline": "Festival de Cine de Europa Central y Oriental",
+ "city": "Medellín",
+ "country": "CO",
+ "dates": "18–22 NOV",
+ "dates_en": "NOV 18–22",
+ "year": 2026,
+ "timezoneOffset": "-05:00",
+ "storageKey": "aleste2026_",
+ "festivalStartStr": "2026-11-18T00:00:00",
+ "festivalEndStr": "2026-11-22T23:59:00",
+ "sharedSlotIsOneScreening": false,
+ "prioLimit": 3,
+ "dias": [
+  "2026-11-18",
+  "2026-11-19",
+  "2026-11-20",
+  "2026-11-21",
+  "2026-11-22"
+ ],
+ "festivalDates": {
+  "2026-11-18": "2026-11-18",
+  "2026-11-19": "2026-11-19",
+  "2026-11-20": "2026-11-20",
+  "2026-11-21": "2026-11-21",
+  "2026-11-22": "2026-11-22"
+ },
+ "days": [
+  {
+   "k": "2026-11-18",
+   "d": 18,
+   "lbl": "MIÉ"
+  },
+  {
+   "k": "2026-11-19",
+   "d": 19,
+   "lbl": "JUE"
+  },
+  {
+   "k": "2026-11-20",
+   "d": 20,
+   "lbl": "VIE"
+  },
+  {
+   "k": "2026-11-21",
+   "d": 21,
+   "lbl": "SÁB"
+  },
+  {
+   "k": "2026-11-22",
+   "d": 22,
+   "lbl": "DOM"
+  }
+ ],
+ "dayKeys": [
+  "2026-11-18",
+  "2026-11-19",
+  "2026-11-20",
+  "2026-11-21",
+  "2026-11-22"
+ ],
+ "dayShort": {
+  "2026-11-18": "MIÉ 18",
+  "2026-11-19": "JUE 19",
+  "2026-11-20": "VIE 20",
+  "2026-11-21": "SÁB 21",
+  "2026-11-22": "DOM 22"
+ },
+ "dayShort_en": {
+  "2026-11-18": "WED 18",
+  "2026-11-19": "THU 19",
+  "2026-11-20": "FRI 20",
+  "2026-11-21": "SAT 21",
+  "2026-11-22": "SUN 22"
+ },
+ "dayLong": {
+  "2026-11-18": "Miércoles 18 de noviembre",
+  "2026-11-19": "Jueves 19 de noviembre",
+  "2026-11-20": "Viernes 20 de noviembre",
+  "2026-11-21": "Sábado 21 de noviembre",
+  "2026-11-22": "Domingo 22 de noviembre"
+ },
+ "sections": {
+  "✨ Al Este Especial": {
+   "en": "Al Este Special",
+   "archetype": "Especiales / Eventos",
+   "order": 1
+  },
+  "🏛️ Al Este en el MAMM": {
+   "en": "Al Este at MAMM",
+   "archetype": "Muestra / País",
+   "order": 2
+  },
+  "🎞️ Fokus: Las Grietas en el Muro": {
+   "en": "Fokus: Cracks in the Wall",
+   "archetype": "Retrospectiva / Tributo",
+   "order": 3
+  }
+ },
+ "venues": {
+  "Centro Colombo Americano - Medellín": {
+   "short": "Centro Colombo Americano",
+   "city": "Medellín",
+   "lat": 6.2499694,
+   "lng": -75.5626063,
+   "address": "Cra. 45 (El Palo) #53-38",
+   "_prec": "manual",
+   "_nota": "pin verificado en Mamut y Fantasmagoría; dirección del post de @aleste.colombia (1 nov 2026)"
+  },
+  "MAMM - Medellín": {
+   "short": "MAMM",
+   "city": "Medellín",
+   "lat": 6.2237797,
+   "lng": -75.57384,
+   "address": "Cra. 44 #19A-100",
+   "_prec": "manual",
+   "_nota": "pin verificado en Mamut; dirección de la web del MAMM"
+  }
+ },
+ "_avisos_id": [],
+ "films": [
+  {
+   "title": "Noche Inaugural",
+   "type": "event",
+   "section": "✨ Al Este Especial",
+   "country": "Colombia, Italia",
+   "flags": "🇨🇴🇮🇹",
+   "duration": "120 min",
+   "_ancla": [
+    "Centro Colombo Americano - Medellín",
+    "2026-11-18",
+    "19:00"
+   ],
+   "day": "2026-11-18",
+   "time": "19:00",
+   "day_order": 0,
+   "venue": "Centro Colombo Americano - Medellín",
+   "event_kind": "apertura",
+   "has_qa": false,
+   "_src": {
+    "url": "https://www.instagram.com/p/DfkttriN6pD/",
+    "date": "2026-11-12",
+    "tipo": "festival-ig"
+   },
+   "is_free": false,
+   "is_cortos": true,
+   "film_list": [
+    {
+     "title": "Latidos: el grafiti como arte, el grafiti como forma de vida",
+     "director": "Juan Zapata",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "year": 2026,
+     "_src": {
+      "url": "https://www.instagram.com/p/DfkttriN6pD/",
+      "date": "2026-11-12"
+     }
+    },
+    {
+     "title": "La última ronda en Venecia",
+     "director": "Francesco Sossai",
+     "country": "Italia",
+     "flags": "🇮🇹",
+     "year": 2025,
+     "_src": {
+      "url": "https://www.instagram.com/p/DfSV6Z3lpE1/",
+      "date": "2026-11-12",
+      "lamina": "01.jpg"
+     },
+     "poster": "/assets/aleste-2026/la-ultima-ronda-en-venecia.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "the-last-one-for-the-road",
+     "tmdb_id": 1462322,
+     "synopsis": "Primera película de Francesco Sossai en Cannes 2025.  Carlobianchi y Doriano, dos cincuentones sin blanca con la filosofía de 'nunca te saltes la última copa', conocen a Giulio, un tímido estudiante de arquitectura a la deriva en la vida. Lo que empieza como un encuentro casual se convierte en un caótico viaje por carretera por las llanuras venecianas, donde los malos consejos, las resacas y una amistad inesperada redefinen los planes de vida y amor de Giulio.",
+     "synopsis_en": "A couple of jovial life-long drunkards run into a shy architecture undergrad, whose way of seeing things will be transformed as the trio wanders from pub to pub in search of a buried treasure.",
+     "title_en": "The Last One for the Road",
+     "genre": "Comedia",
+     "synopsis_lang": "es",
+     "duration": "98 min"
+    }
+   ],
+   "_fid": "f_6c856cce71",
+   "id": "f_6c856cce71"
+  },
+  {
+   "title": "The Souffleur",
+   "type": "film",
+   "section": "🏛️ Al Este en el MAMM",
+   "director": "Gastón Solnicki",
+   "year": 2025,
+   "country": "Argentina, Austria",
+   "flags": "🇦🇷🇦🇹",
+   "duration": "78 min",
+   "genre": "Drama",
+   "_ancla": [
+    "MAMM - Medellín",
+    "2026-11-19",
+    "18:30"
+   ],
+   "day": "2026-11-19",
+   "time": "18:30",
+   "day_order": 1,
+   "venue": "MAMM - Medellín",
+   "has_qa": false,
+   "synopsis": "Lucius Glantz, un veterano director de hotel en Viena, lucha por salvar su querido establecimiento del plan de un intrigante agente inmobiliario para demolerlo, lo que lleva a un choque de voluntades que afecta incluso a la famosa receta del soufflé del hotel.",
+   "synopsis_lang": "es",
+   "poster": "/assets/aleste-2026/the-souffleur.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://www.elmamm.org/producto/the-souffleur/",
+    "date": "2026-11-12",
+    "tipo": "festival-web"
+   },
+   "ticket_url": "https://www.elmamm.org/producto/the-souffleur/",
+   "is_free": false,
+   "lbSlug": "the-souffleur",
+   "tmdb_id": 1418361,
+   "synopsis_en": "Lucius Glantz, a veteran hotel manager in Vienna, fights to save his beloved establishment from a scheming realtor's plan to demolish it, leading to a clash of wills that even affects the hotel's renowned soufflé recipe.",
+   "_fid": "f_4b2cf29622",
+   "id": "f_4b2cf29622"
+  },
+  {
+   "title": "Cenizas y diamantes",
+   "type": "film",
+   "section": "🎞️ Fokus: Las Grietas en el Muro",
+   "director": "Andrzej Wajda",
+   "year": 1958,
+   "country": "Polonia",
+   "flags": "🇵🇱",
+   "duration": "97 min",
+   "genre": "Drama",
+   "_ancla": [
+    "Centro Colombo Americano - Medellín",
+    "2026-11-19",
+    "19:00"
+   ],
+   "day": "2026-11-19",
+   "time": "19:00",
+   "day_order": 1,
+   "venue": "Centro Colombo Americano - Medellín",
+   "has_qa": false,
+   "synopsis": "En Polonia, concluida la Segunda Guerra Mundial, la situación política y social es caótica. El idealismo cede el paso a diversas formas de anarquía y extremismo. El protagonista, un joven que milita en un grupo ultranacionalista, recibe el encargo de asesinar a un importante comunista; pero, cuando el joven encuentra el amor, en pocas horas sus certezas comienzan a convertirse en dudas.",
+   "synopsis_lang": "es",
+   "poster": "/assets/aleste-2026/cenizas-y-diamantes.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfYe-5Slr8E/",
+    "date": "2026-11-12",
+    "tipo": "festival-ig",
+    "lamina": "02.jpg"
+   },
+   "is_free": false,
+   "lbSlug": "ashes-and-diamonds",
+   "tmdb_id": 5055,
+   "synopsis_en": "A young academy soldier, Maciek Chelmicki, is ordered to shoot the secretary of the KW PPR. A coincidence causes him to kill someone else. Meeting face to face with his victim, he gets a shock. He faces the necessity of repeating the assassination.  He meets Krystyna, a girl working as a barmaid in the restaurant of the \"Monopol\" hotel. His affection for her makes him even more aware of the senselessness of killing at the end of the war. Loyalty to the oath he took, and thus the obligation to obey the order, tips the scales.",
+   "title_en": "Ashes and Diamonds",
+   "_fid": "f_dc70814074",
+   "id": "f_dc70814074"
+  },
+  {
+   "title": "Regreso de África",
+   "type": "film",
+   "section": "🎞️ Fokus: Las Grietas en el Muro",
+   "director": "Alain Tanner",
+   "year": 1973,
+   "country": "Suiza, Francia",
+   "flags": "🇨🇭🇫🇷",
+   "duration": "108 min",
+   "genre": "Drama",
+   "_ancla": [
+    "Centro Colombo Americano - Medellín",
+    "2026-11-20",
+    "16:30"
+   ],
+   "day": "2026-11-20",
+   "time": "16:30",
+   "day_order": 2,
+   "venue": "Centro Colombo Americano - Medellín",
+   "has_qa": false,
+   "synopsis": "Una joven pareja suiza, Vincent y Françoise, planea abandonar Ginebra e instalarse en África: un amigo suyo que vive en Argelia les promete darles trabajo allí.",
+   "synopsis_lang": "es",
+   "poster": "/assets/aleste-2026/regreso-de-africa.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfYe-5Slr8E/",
+    "date": "2026-11-12",
+    "tipo": "festival-ig",
+    "lamina": "03.jpg"
+   },
+   "is_free": false,
+   "lbSlug": "return-from-africa",
+   "tmdb_id": 134252,
+   "synopsis_en": "A young Swiss couple, Vincent and Françoise, plan to leave Geneva and settle in Africa: a friend of theirs living in Algeria promises to give them a job there.",
+   "title_en": "Return from Africa",
+   "_fid": "f_6fc36893e9",
+   "id": "f_6fc36893e9"
+  },
+  {
+   "title": "Padre",
+   "type": "film",
+   "section": "🏛️ Al Este en el MAMM",
+   "director": "Tereza Nvotová",
+   "year": 2025,
+   "country": "Eslovaquia, República Checa, Polonia",
+   "flags": "🇸🇰🇨🇿🇵🇱",
+   "duration": "103 min",
+   "genre": "Drama",
+   "_ancla": [
+    "MAMM - Medellín",
+    "2026-11-20",
+    "18:30"
+   ],
+   "day": "2026-11-20",
+   "time": "18:30",
+   "day_order": 2,
+   "venue": "MAMM - Medellín",
+   "has_qa": false,
+   "synopsis": "La vida tranquila de un hombre exitoso se desmorona cuando su bebé desaparece de la guardería. La llamada desesperada de su esposa revela una verdad devastadora. Inspirada en hechos reales en torno al llamado síndrome del bebé olvidado, la película acompaña a Michal y a su esposa Zuzka a través del duelo, de la culpa, del escarnio público y el largo proceso judicial que sigue.",
+   "synopsis_lang": "es",
+   "poster": "/assets/aleste-2026/padre.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://www.elmamm.org/producto/padre/",
+    "date": "2026-11-12",
+    "tipo": "festival-web"
+   },
+   "ticket_url": "https://www.elmamm.org/producto/padre/",
+   "is_free": false,
+   "lbSlug": "father-2025-1",
+   "tmdb_id": 1516518,
+   "synopsis_en": "The life of a man after he experiences forgotten baby syndrome, unintentionally leaving his infant daughter in the back seat of his car.",
+   "title_en": "Father",
+   "_fid": "f_d10cfa308b",
+   "id": "f_d10cfa308b"
+  },
+  {
+   "title": "Los inocentes encantadores",
+   "type": "film",
+   "section": "🎞️ Fokus: Las Grietas en el Muro",
+   "director": "Andrzej Wajda",
+   "year": 1960,
+   "country": "Polonia",
+   "flags": "🇵🇱",
+   "duration": "83 min",
+   "genre": "Romance",
+   "_ancla": [
+    "Centro Colombo Americano - Medellín",
+    "2026-11-20",
+    "19:00"
+   ],
+   "day": "2026-11-20",
+   "time": "19:00",
+   "day_order": 2,
+   "venue": "Centro Colombo Americano - Medellín",
+   "has_qa": false,
+   "synopsis": "Un joven médico está cansado de que las mujeres lo persigan. Una noche conoce a una muchacha que prácticamente se instala en su cuarto, y allí hablan de la moral y del amor.",
+   "synopsis_lang": "es",
+   "poster": "/assets/aleste-2026/los-inocentes-encantadores.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfYe-5Slr8E/",
+    "date": "2026-11-12",
+    "tipo": "festival-ig",
+    "lamina": "05.jpg"
+   },
+   "is_free": false,
+   "lbSlug": "innocent-sorcerers",
+   "tmdb_id": 80324,
+   "synopsis_en": "A young doctor is tired of being sought by women. One night he meets a young girl who all but forces herself into his room where they talk of morals and love.",
+   "title_en": "Innocent Sorcerers",
+   "_fid": "f_0d3bcd98ef",
+   "id": "f_0d3bcd98ef"
+  },
+  {
+   "title": "Gioia mia",
+   "type": "film",
+   "section": "✨ Al Este Especial",
+   "director": "Margherita Spampinato",
+   "year": 2025,
+   "country": "Italia",
+   "flags": "🇮🇹",
+   "duration": "90 min",
+   "genre": "Drama",
+   "_ancla": [
+    "Centro Colombo Americano - Medellín",
+    "2026-11-20",
+    "19:00"
+   ],
+   "day": "2026-11-20",
+   "time": "19:00",
+   "day_order": 2,
+   "venue": "Centro Colombo Americano - Medellín",
+   "has_qa": false,
+   "synopsis": "Un verano que empieza a regañadientes se vuelve una aventura encantada cuando un niño descubre que la misteriosa casa siciliana de su tía guarda secretos y, quizá, espíritus antiguos escondidos entre sus muros.",
+   "synopsis_lang": "es",
+   "poster": "/assets/aleste-2026/gioia-mia.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfSV6Z3lpE1/",
+    "date": "2026-11-12",
+    "tipo": "festival-ig",
+    "lamina": "03.jpg"
+   },
+   "is_free": false,
+   "lbSlug": "sweetheart-2025-3",
+   "tmdb_id": 1510325,
+   "synopsis_en": "A reluctant summer together transforms into an enchanting adventure when a young boy discovers his aunt's mysterious Sicilian house holds secrets and, perhaps, ancient spirits lurking within its walls.",
+   "title_en": "Sweetheart",
+   "_fid": "f_23f0b39afc",
+   "id": "f_23f0b39afc"
+  },
+  {
+   "title": "Pucallpa la Europea",
+   "type": "film",
+   "section": "✨ Al Este Especial",
+   "director": "Santi Zegarra",
+   "year": 2025,
+   "country": "Perú",
+   "flags": "🇵🇪",
+   "duration": "105 min",
+   "genre": "Drama",
+   "_ancla": [
+    "Centro Colombo Americano - Medellín",
+    "2026-11-21",
+    "14:00"
+   ],
+   "day": "2026-11-21",
+   "time": "14:00",
+   "day_order": 3,
+   "venue": "Centro Colombo Americano - Medellín",
+   "has_qa": false,
+   "synopsis": "París 2007. Elsa, una mujer trans peruana, está cumpliendo una condena en una prisión de hombres. Sergio, un detenido, la convierte en su esclava sexual. Además, la administración rechaza su tratamiento hormonal. Cuando Elsa es Estrenada, comienza una nueva vida y conoce a Yena, una joven coreana que le presenta a Aymeric, su marido francés. La atracción entre Elsa y él es vertiginosa, poniendo en duda su identidad sexual. Sin embargo, el último obstáculo",
+   "synopsis_lang": "es",
+   "poster": "/assets/aleste-2026/pucallpa-la-europea.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfSV6Z3lpE1/",
+    "date": "2026-11-12",
+    "tipo": "festival-ig",
+    "lamina": "04.jpg"
+   },
+   "is_free": false,
+   "lbSlug": "pucallpa",
+   "tmdb_id": 1507240,
+   "synopsis_en": "Paris 2007. Elsa, a Peruvian trans woman, is serving a sentence in a men's prison. Sergio, a detainee, makes her his sex slave. Furthermore, the administration refuses her hormone treatment. When Elsa is released, she begins a new life and meets Yena, a young Korean woman who introduces her to Aymeric, her French husband. The attraction between Elsa and him is lightning-fast, calling into question her sexual identity. However, the final obstacle is Sergio. He has just escaped from prison.",
+   "title_en": "Pucallpa",
+   "_fid": "f_0ba6ba1a3a",
+   "id": "f_0ba6ba1a3a"
+  },
+  {
+   "title": "La tierra prometida",
+   "type": "film",
+   "section": "🎞️ Fokus: Las Grietas en el Muro",
+   "director": "Andrzej Wajda",
+   "year": 1974,
+   "country": "Polonia",
+   "flags": "🇵🇱",
+   "duration": "162 min",
+   "genre": "Drama",
+   "_ancla": [
+    "Centro Colombo Americano - Medellín",
+    "2026-11-21",
+    "14:30"
+   ],
+   "day": "2026-11-21",
+   "time": "14:30",
+   "day_order": 3,
+   "venue": "Centro Colombo Americano - Medellín",
+   "has_qa": false,
+   "synopsis": "A finales del siglo XIX, la ciudad de Lodz se ha convertido en el epicentro de la industria textil, con la consiguiente necesidad de mano de obra inmigrante. Tres jóvenes estudiantes de Riga: un polaco católico, hijo de nobles terratenientes, un ambicioso judío y un alemán luterano deciden abrir una fábrica en esa ciudad para hacer fortuna y, sin escrúpulos ni prejuicios, se lanzan a acumular dinero y poder. (FILMAFFINITY)",
+   "synopsis_lang": "es",
+   "poster": "/assets/aleste-2026/la-tierra-prometida.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfYe-5Slr8E/",
+    "date": "2026-11-12",
+    "tipo": "festival-ig",
+    "lamina": "04.jpg"
+   },
+   "is_free": false,
+   "lbSlug": "the-promised-land-1975",
+   "tmdb_id": 511,
+   "synopsis_en": "At the turn of the century, Lodz, Poland, was a quick-paced manufacturing center for textiles, replete with cutthroat industrialists and unsafe working conditions. Three young friends, a Pole, a Jew, and a German, pool their money together to build a factory.",
+   "title_en": "The Promised Land",
+   "_fid": "f_818f6e700e",
+   "id": "f_818f6e700e"
+  },
+  {
+   "title": "1982",
+   "type": "film",
+   "section": "🏛️ Al Este en el MAMM",
+   "director": "Juan Carlos García",
+   "year": 2025,
+   "country": "Perú",
+   "flags": "🇵🇪",
+   "duration": "84 min",
+   "genre": "Drama",
+   "_ancla": [
+    "MAMM - Medellín",
+    "2026-11-21",
+    "16:30"
+   ],
+   "day": "2026-11-21",
+   "time": "16:30",
+   "day_order": 3,
+   "venue": "MAMM - Medellín",
+   "has_qa": false,
+   "synopsis": "En un pueblo andino del Perú, en 1982, Tato, un niño de 12 años, se ve forzado al exilio cuando su familia es amenazada.",
+   "synopsis_lang": "es",
+   "poster": "/assets/aleste-2026/1982.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://www.elmamm.org/producto/1982/",
+    "date": "2026-11-12",
+    "tipo": "festival-web"
+   },
+   "ticket_url": "https://www.elmamm.org/producto/1982/",
+   "is_free": false,
+   "lbSlug": "1982-2025",
+   "tmdb_id": 1517461,
+   "synopsis_en": "In an Andean village in Peru, in 1982, Tato, a 12-year-old boy is forced into exile when his family is threatened.",
+   "_fid": "f_28b57ac1da",
+   "id": "f_28b57ac1da"
+  },
+  {
+   "title": "Gioia mia",
+   "type": "film",
+   "section": "✨ Al Este Especial",
+   "director": "Margherita Spampinato",
+   "year": 2025,
+   "country": "Italia",
+   "flags": "🇮🇹",
+   "duration": "90 min",
+   "genre": "Drama",
+   "_ancla": [
+    "Centro Colombo Americano - Medellín",
+    "2026-11-22",
+    "14:00"
+   ],
+   "day": "2026-11-22",
+   "time": "14:00",
+   "day_order": 4,
+   "venue": "Centro Colombo Americano - Medellín",
+   "has_qa": false,
+   "synopsis": "Un verano que empieza a regañadientes se vuelve una aventura encantada cuando un niño descubre que la misteriosa casa siciliana de su tía guarda secretos y, quizá, espíritus antiguos escondidos entre sus muros.",
+   "synopsis_lang": "es",
+   "poster": "/assets/aleste-2026/gioia-mia.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfSV6Z3lpE1/",
+    "date": "2026-11-12",
+    "tipo": "festival-ig",
+    "lamina": "03.jpg"
+   },
+   "is_free": false,
+   "lbSlug": "sweetheart-2025-3",
+   "tmdb_id": 1510325,
+   "synopsis_en": "A reluctant summer together transforms into an enchanting adventure when a young boy discovers his aunt's mysterious Sicilian house holds secrets and, perhaps, ancient spirits lurking within its walls.",
+   "title_en": "Sweetheart",
+   "_fid": "f_516f75f820",
+   "id": "f_516f75f820"
+  },
+  {
+   "title": "Londres",
+   "type": "film",
+   "section": "🏛️ Al Este en el MAMM",
+   "director": "Sebastian Brameshuber",
+   "year": 2026,
+   "country": "Austria",
+   "flags": "🇦🇹",
+   "duration": "122 min",
+   "genre": "Drama",
+   "_ancla": [
+    "MAMM - Medellín",
+    "2026-11-22",
+    "16:00"
+   ],
+   "day": "2026-11-22",
+   "time": "16:00",
+   "day_order": 4,
+   "venue": "MAMM - Medellín",
+   "has_qa": false,
+   "synopsis": "Bobby siempre está de viaje, conduciendo su coche de un lado a otro por la autopista que une las ciudades austriacas de Viena y Salzburgo. Gracias a un servicio de coche compartido, recoge a otras personas que viajan por la misma ruta pero buscan ahorrar en gasolina. Durante el trayecto, charlan.",
+   "synopsis_lang": "es",
+   "poster": "/assets/aleste-2026/londres.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://www.elmamm.org/producto/londres/",
+    "date": "2026-11-12",
+    "tipo": "festival-web"
+   },
+   "ticket_url": "https://www.elmamm.org/producto/londres/",
+   "is_free": false,
+   "lbSlug": "london-2026",
+   "tmdb_id": 1599764,
+   "synopsis_en": "Bobby drives back and forth between Vienna and Salzburg, giving lifts to strangers on the way, sharing conversations that drift from the mundane to the deeply personal. In this tender portrait of today’s Europe, anonymity and warmth still go hand in hand.",
+   "_fid": "f_ebafd92c4c",
+   "id": "f_ebafd92c4c"
+  }
+ ],
+ "_corrido": {
+  "por": "pipeline/correr.py",
+  "fecha": "2026-11-12T16:50:26",
+  "plan_sha": "c001315ea0e801be",
+  "paso": 8,
+  "cmd": "python3 pipeline/aleste-2026-verificar.py"
+ }
+}

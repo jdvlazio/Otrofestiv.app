@@ -1,0 +1,253 @@
+{
+ "_provenance": {
+  "fuente": "MAMM (fichas del ciclo) + láminas de @aleste.colombia (3, 5 y 10 nov 2026)",
+  "capturado": "2026-11-12",
+  "metodo": "transcripción a ojo; láminas cruzadas con ig-lecturas.py",
+  "que_aporta": "día, hora, sede, acceso"
+ },
+ "_fuera": {
+  "Bogotá 25–29 nov": "sin programación publicada al 12 nov"
+ },
+ "funciones": [
+  {
+   "titulo": "Noche inaugural",
+   "dia": "2026-11-18",
+   "hora": "19:00",
+   "sede": "Centro Colombo Americano",
+   "seccion": "Al Este Especial",
+   "acceso": "Con boleta",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfkttriN6pD/",
+    "date": "2026-11-12",
+    "tipo": "festival-ig"
+   },
+   "event_kind": "apertura",
+   "tipo": "evento",
+   "obras": [
+    {
+     "titulo": "Latidos: el grafiti como arte, el grafiti como forma de vida",
+     "director": "Juan Zapata",
+     "anio": 2026,
+     "pais": "Colombia",
+     "tipo": "corto",
+     "_src": {
+      "url": "https://www.instagram.com/p/DfkttriN6pD/",
+      "date": "2026-11-12"
+     }
+    },
+    {
+     "titulo": "La última ronda en Venecia",
+     "director": "Francesco Sossai",
+     "anio": 2025,
+     "pais": "Italia",
+     "tipo": "largo",
+     "_src": {
+      "url": "https://www.instagram.com/p/DfSV6Z3lpE1/",
+      "date": "2026-11-12",
+      "lamina": "01.jpg"
+     },
+     "seccion": "Al Este Especial"
+    }
+   ],
+   "duracion_min": 120
+  },
+  {
+   "titulo": "The Souffleur",
+   "dia": "2026-11-19",
+   "hora": "18:30",
+   "sede": "MAMM",
+   "seccion": "Al Este en el MAMM",
+   "acceso": "Con boleta: $14.000 general; $10.000 mayores de 60, menores de 12 y estudiantes",
+   "_src": {
+    "url": "https://www.elmamm.org/producto/the-souffleur/",
+    "date": "2026-11-12",
+    "tipo": "festival-web"
+   },
+   "ticket_url": "https://www.elmamm.org/producto/the-souffleur/",
+   "director": "Gastón Solnicki",
+   "pais": "Argentina, Austria",
+   "anio": 2025,
+   "duracion_min": 78
+  },
+  {
+   "titulo": "Cenizas y diamantes",
+   "dia": "2026-11-19",
+   "hora": "19:00",
+   "sede": "Centro Colombo Americano",
+   "seccion": "Fokus: Las grietas en el muro",
+   "acceso": "Con boleta",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfYe-5Slr8E/",
+    "date": "2026-11-12",
+    "tipo": "festival-ig",
+    "lamina": "02.jpg"
+   },
+   "director": "Andrzej Wajda",
+   "pais": "Polonia",
+   "anio": 1958,
+   "duracion_min": 97
+  },
+  {
+   "titulo": "Regreso de África",
+   "dia": "2026-11-20",
+   "hora": "16:30",
+   "sede": "Centro Colombo Americano",
+   "seccion": "Fokus: Las grietas en el muro",
+   "acceso": "Con boleta",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfYe-5Slr8E/",
+    "date": "2026-11-12",
+    "tipo": "festival-ig",
+    "lamina": "03.jpg"
+   },
+   "director": "Alain Tanner",
+   "pais": "Suiza, Francia",
+   "anio": 1973,
+   "duracion_min": 108
+  },
+  {
+   "titulo": "Padre",
+   "dia": "2026-11-20",
+   "hora": "18:30",
+   "sede": "MAMM",
+   "seccion": "Al Este en el MAMM",
+   "acceso": "Con boleta: $14.000 general; $10.000 mayores de 60, menores de 12 y estudiantes",
+   "_src": {
+    "url": "https://www.elmamm.org/producto/padre/",
+    "date": "2026-11-12",
+    "tipo": "festival-web"
+   },
+   "ticket_url": "https://www.elmamm.org/producto/padre/",
+   "director": "Tereza Nvotová",
+   "pais": "Eslovaquia, República Checa, Polonia",
+   "anio": 2025,
+   "duracion_min": 103
+  },
+  {
+   "titulo": "Los inocentes encantadores",
+   "dia": "2026-11-20",
+   "hora": "19:00",
+   "sede": "Centro Colombo Americano",
+   "seccion": "Fokus: Las grietas en el muro",
+   "acceso": "Con boleta",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfYe-5Slr8E/",
+    "date": "2026-11-12",
+    "tipo": "festival-ig",
+    "lamina": "05.jpg"
+   },
+   "director": "Andrzej Wajda",
+   "pais": "Polonia",
+   "anio": 1960,
+   "duracion_min": 83
+  },
+  {
+   "titulo": "Gioia mia",
+   "dia": "2026-11-20",
+   "hora": "19:00",
+   "sede": "Centro Colombo Americano",
+   "seccion": "Al Este Especial",
+   "acceso": "Con boleta",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfSV6Z3lpE1/",
+    "date": "2026-11-12",
+    "tipo": "festival-ig",
+    "lamina": "03.jpg"
+   },
+   "director": "Margherita Spampinato",
+   "pais": "Italia",
+   "anio": 2025,
+   "duracion_min": 90
+  },
+  {
+   "titulo": "Pucallpa la Europea",
+   "dia": "2026-11-21",
+   "hora": "14:00",
+   "sede": "Centro Colombo Americano",
+   "seccion": "Al Este Especial",
+   "acceso": "Con boleta",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfSV6Z3lpE1/",
+    "date": "2026-11-12",
+    "tipo": "festival-ig",
+    "lamina": "04.jpg"
+   },
+   "director": "Santi Zegarra",
+   "pais": "Perú",
+   "anio": 2025,
+   "duracion_min": 105
+  },
+  {
+   "titulo": "La tierra prometida",
+   "dia": "2026-11-21",
+   "hora": "14:30",
+   "sede": "Centro Colombo Americano",
+   "seccion": "Fokus: Las grietas en el muro",
+   "acceso": "Con boleta",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfYe-5Slr8E/",
+    "date": "2026-11-12",
+    "tipo": "festival-ig",
+    "lamina": "04.jpg"
+   },
+   "director": "Andrzej Wajda",
+   "pais": "Polonia",
+   "anio": 1974,
+   "duracion_min": 162
+  },
+  {
+   "titulo": "1982",
+   "dia": "2026-11-21",
+   "hora": "16:30",
+   "sede": "MAMM",
+   "seccion": "Al Este en el MAMM",
+   "acceso": "Con boleta: $14.000 general; $10.000 mayores de 60, menores de 12 y estudiantes",
+   "_src": {
+    "url": "https://www.elmamm.org/producto/1982/",
+    "date": "2026-11-12",
+    "tipo": "festival-web"
+   },
+   "ticket_url": "https://www.elmamm.org/producto/1982/",
+   "director": "Juan Carlos García",
+   "pais": "Perú",
+   "anio": 2025,
+   "duracion_min": 84
+  },
+  {
+   "titulo": "Gioia mia",
+   "dia": "2026-11-22",
+   "hora": "14:00",
+   "sede": "Centro Colombo Americano",
+   "seccion": "Al Este Especial",
+   "acceso": "Con boleta",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfSV6Z3lpE1/",
+    "date": "2026-11-12",
+    "tipo": "festival-ig",
+    "lamina": "03.jpg"
+   },
+   "director": "Margherita Spampinato",
+   "pais": "Italia",
+   "anio": 2025,
+   "duracion_min": 90
+  },
+  {
+   "titulo": "Londres",
+   "dia": "2026-11-22",
+   "hora": "16:00",
+   "sede": "MAMM",
+   "seccion": "Al Este en el MAMM",
+   "acceso": "Con boleta: $14.000 general; $10.000 mayores de 60, menores de 12 y estudiantes",
+   "_src": {
+    "url": "https://www.elmamm.org/producto/londres/",
+    "date": "2026-11-12",
+    "tipo": "festival-web"
+   },
+   "ticket_url": "https://www.elmamm.org/producto/londres/",
+   "director": "Sebastian Brameshuber",
+   "pais": "Austria",
+   "anio": 2026,
+   "duracion_min": 122
+  }
+ ]
+}
