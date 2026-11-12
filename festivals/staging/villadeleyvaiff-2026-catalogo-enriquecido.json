@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, con el MISMO candado de enriquecer.py: director ✓ y (año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-11-04"
+  "capturado": "2026-11-12"
  },
  "_origen": "villadeleyvaiff-2026-catalogo.json",
  "obras": [
@@ -17,7 +17,7 @@
    "duracion_tmdb": 0,
    "pais_tmdb": "",
    "lbSlug": "cielo-de-enero",
-   "_verificado": "el catálogo ya la tiene (w_4RPR35YWZHSF, ficidi-2026)",
+   "_verificado": "el catálogo ya la tiene (w_4RPR35YWZHSF, ficidi-2026, villadeleyvaiff-2026)",
    "work_id": "w_4RPR35YWZHSF",
    "_ya_publicada": [
     {
@@ -45,7 +45,8 @@
    "duracion_tmdb": 19,
    "pais_tmdb": "Mexico",
    "lbSlug": "demian-2026",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "_verificado": "el catálogo ya la tiene (w_5K3ARBZAS9ZE, villadeleyvaiff-2026)",
+   "work_id": "w_5K3ARBZAS9ZE"
   },
   {
    "titulo": "La casa del marica",
@@ -59,7 +60,8 @@
    "duracion_tmdb": 0,
    "pais_tmdb": "",
    "lbSlug": "la-casa-del-marica",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "_verificado": "el catálogo ya la tiene (w_5K3B4FA7Q0EW, villadeleyvaiff-2026)",
+   "work_id": "w_5K3B4FA7Q0EW"
   },
   {
    "titulo": "La muerta que habla",
@@ -149,7 +151,8 @@
    "pais_tmdb": "Peru",
    "title_en": "Sun in Lidia",
    "lbSlug": "sun-in-lidia",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "_verificado": "el catálogo ya la tiene (w_5K3BVXZEB8TA, villadeleyvaiff-2026)",
+   "work_id": "w_5K3BVXZEB8TA"
   },
   {
    "titulo": "Valsa para Maria Domingas",
@@ -164,7 +167,8 @@
    "pais_tmdb": "Brazil",
    "title_en": "Waltz for Maria Domingas",
    "lbSlug": "waltz-for-maria-domingas",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "_verificado": "el catálogo ya la tiene (w_5K3C6N9VGB6Y, villadeleyvaiff-2026)",
+   "work_id": "w_5K3C6N9VGB6Y"
   },
   {
    "titulo": "Ballena",
@@ -178,7 +182,8 @@
    "duracion_tmdb": 0,
    "pais_tmdb": "",
    "lbSlug": "ballena",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "_verificado": "el catálogo ya la tiene (w_5K3HSPZVDP61, villadeleyvaiff-2026)",
+   "work_id": "w_5K3HSPZVDP61"
   },
   {
    "titulo": "Chaika",
@@ -241,6 +246,32 @@
      "lbSlug": "chaika-2026",
      "country": "Colombia, Cuba",
      "year": 2025,
+     "genre": "Ciencia Ficción",
+     "sinopsis": "Valentina, una cosmonauta rusa de 76 años, llega a una Cuba ucrónica y nebulosa tras recibir, con treinta años de retraso, una invitación para una expedición agrícola a Marte. Entre paisajes difusos y promesas del pasado, busca las ruinas de un futuro que nunca llegó."
+    },
+    {
+     "festival": "festicinerio-2026",
+     "titulo": "Chaika",
+     "tmdb_id": 1689999,
+     "poster": "/assets/festicinerio-2026/chaika.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "chaika-2025",
+     "country": "Colombia, Cuba",
+     "year": 2025,
+     "duration": "15 min",
+     "genre": "Ciencia Ficción",
+     "sinopsis": "Valentina, una cosmonauta rusa de 76 años, llega a una Cuba ucrónica y nebulosa tras recibir, con treinta años de retraso, una invitación para una expedición agrícola a Marte. Entre paisajes difusos y promesas del pasado, busca las ruinas de un futuro que nunca llegó."
+    },
+    {
+     "festival": "ficfusa-2026",
+     "titulo": "Chaika",
+     "tmdb_id": 1689999,
+     "poster": "/assets/ficfusa-2026/chaika.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "chaika-2025",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "15 min",
      "genre": "Ciencia Ficción",
      "sinopsis": "Valentina, una cosmonauta rusa de 76 años, llega a una Cuba ucrónica y nebulosa tras recibir, con treinta años de retraso, una invitación para una expedición agrícola a Marte. Entre paisajes difusos y promesas del pasado, busca las ruinas de un futuro que nunca llegó."
     },
@@ -324,7 +355,8 @@
    "pais_tmdb": "Argentina",
    "title_en": "A Room of Flowers",
    "lbSlug": "a-room-of-flowers",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "_verificado": "el catálogo ya la tiene (w_5K3JDWNYXQW2, villadeleyvaiff-2026)",
+   "work_id": "w_5K3JDWNYXQW2"
   },
   {
    "titulo": "Oigo una ciudad",
@@ -353,7 +385,8 @@
    "duracion_tmdb": 0,
    "pais_tmdb": "",
    "lbSlug": "claudete",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "_verificado": "el catálogo ya la tiene (w_5K3JTXWW7T5H, villadeleyvaiff-2026)",
+   "work_id": "w_5K3JTXWW7T5H"
   },
   {
    "titulo": "Logos",
@@ -367,18 +400,19 @@
    "duracion_tmdb": 11,
    "pais_tmdb": "",
    "lbSlug": "logos-2025-1",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "_verificado": "el catálogo ya la tiene (w_5K3KWWCRSFZB, villadeleyvaiff-2026)",
+   "work_id": "w_5K3KWWCRSFZB"
   },
   {
    "titulo": "Lo que no se puede borrar",
    "tmdb_id": 1817229,
    "titulo_original": "Lo que no se puede borrar",
-   "poster_path": null,
-   "synopsis_es": "",
+   "poster_path": "/dRdTsT9Mrp3VEMrdOYLo838OTdL.jpg",
+   "synopsis_es": "Una hermana se despierta en mitad de la noche y despierta a la otra. Dice que vio a su mamá. No sabe si soñó o si la madre estuvo ahí. Hablan en la oscuridad, entre respiraciones y recuerdos que aparecen sin aviso. La noche se llena de imágenes, de fragmentos que vuelven a vivir mientras intentan entender qué vieron, qué sienten. Quizás lo que pasó sea apenas una excusa para encender algo que todavía late en el fondo del pecho.",
    "synopsis_en": "A sister wakes up in the middle of the night and wakes the other. She says she saw their mother. She does not know whether she dreamed it or whether their mother was there. They talk in the dark, between breaths and memories that surface without warning.",
    "genero": "",
    "anio_tmdb": 0,
-   "duracion_tmdb": 0,
+   "duracion_tmdb": 8,
    "pais_tmdb": "",
    "lbSlug": "lo-que-no-se-puede-borrar",
    "poster": "/assets/villadeleyvaiff-2026/lo-que-no-se-puede-borrar.jpg",
@@ -411,7 +445,8 @@
    "duracion_tmdb": 62,
    "pais_tmdb": "Costa Rica",
    "lbSlug": "dama-de-las-mil-mascaras",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "_verificado": "el catálogo ya la tiene (w_P1KYDW0CF2VM, festicinerio-2026, villadeleyvaiff-2026)",
+   "work_id": "w_P1KYDW0CF2VM"
   },
   {
    "titulo": "El extraordinario viaje del dragón",
@@ -465,7 +500,8 @@
    "pais_tmdb": "Mexico",
    "title_en": "Portent",
    "lbSlug": "portent",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "_verificado": "el catálogo ya la tiene (w_5K3G4D1A1AHS, villadeleyvaiff-2026)",
+   "work_id": "w_5K3G4D1A1AHS"
   },
   {
    "titulo": "Sex panchitos",
@@ -479,7 +515,8 @@
    "duracion_tmdb": 115,
    "pais_tmdb": "Mexico",
    "lbSlug": "sex-panchitos",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "_verificado": "el catálogo ya la tiene (w_5K3K61J509GE, villadeleyvaiff-2026)",
+   "work_id": "w_5K3K61J509GE"
   },
   {
    "titulo": "Armónica",
@@ -501,28 +538,31 @@
    "tmdb_id": 1717008,
    "titulo_original": "El derrumbe",
    "poster_path": null,
-   "synopsis_es": "",
+   "synopsis_es": "Pocos días después del derrumbe de una pensión en la Ciudad de Buenos Aires, una madre, su hija y su nieta de meses reciben el alta hospitalaria. Sin un hogar al que regresar, la noche abre un dilema y con ella una decisión irreversible.",
    "synopsis_en": "After their house collapses, a young woman and her mother argue in the hospital about their future and that of their baby.",
    "genero": "",
    "anio_tmdb": 0,
-   "duracion_tmdb": 9,
+   "duracion_tmdb": 11,
    "pais_tmdb": "",
    "lbSlug": "el-derrumbe",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "_verificado": "el catálogo ya la tiene (w_5K3CXF6GY35D, villadeleyvaiff-2026)",
+   "work_id": "w_5K3CXF6GY35D"
   },
   {
    "titulo": "El silencio de la tierra",
    "tmdb_id": 1754039,
    "titulo_original": "El silencio de la Tierra",
-   "poster_path": "/3t9x5bH2vvmkb5egAigon7owrCc.jpg",
-   "synopsis_es": "En un México marcado por la violencia y  la ausencia, dos hermanos enfrentan un  destino que pondrá a prueba el vínculo  que los une. Mientras la tierra guarda  sus secretos, una madre se niega a  quedarse en silencio.",
-   "synopsis_en": "",
+   "poster_path": "/kuFiD7J0Bjehsqisx6LfTohu4OU.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "In a Mexico marked by violence and absence, two brothers face a destiny that will test the bond that unites them. While the earth keeps its secrets, a mother refuses to remain silent.",
    "genero": "Drama",
    "anio_tmdb": 2026,
-   "duracion_tmdb": 0,
+   "duracion_tmdb": 16,
    "pais_tmdb": "",
-   "lbSlug": "el-silencio-de-la-tierra-2026",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "title_en": "The Silence of the Earth",
+   "lbSlug": "the-silence-of-the-earth-2026",
+   "_verificado": "el catálogo ya la tiene (w_5K3D83NV57J8, villadeleyvaiff-2026)",
+   "work_id": "w_5K3D83NV57J8"
   },
   {
    "titulo": "Las heridas",
@@ -566,7 +606,8 @@
    "pais_tmdb": "Argentina",
    "title_en": "Mare",
    "lbSlug": "mare-2026-1",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "_verificado": "el catálogo ya la tiene (w_5K3E6W0W4NVT, villadeleyvaiff-2026)",
+   "work_id": "w_5K3E6W0W4NVT"
   },
   {
    "titulo": "Bumblebee",
@@ -595,7 +636,8 @@
    "duracion_tmdb": 5,
    "pais_tmdb": "Mexico",
    "lbSlug": "cuna-de-lobas",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "_verificado": "el catálogo ya la tiene (w_5K3GT223FVJ7, villadeleyvaiff-2026)",
+   "work_id": "w_5K3GT223FVJ7"
   },
   {
    "titulo": "El cuerpo de Cristo",
@@ -610,7 +652,8 @@
    "pais_tmdb": "Spain",
    "title_en": "Corpus Christi",
    "lbSlug": "corpus-christi-2025",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "_verificado": "el catálogo ya la tiene (w_5K3H6G206GY8, villadeleyvaiff-2026)",
+   "work_id": "w_5K3H6G206GY8"
   },
   {
    "titulo": "Emechiche, el renacer de los cabeciblancos",
@@ -625,7 +668,7 @@
    "pais_tmdb": "Colombia, Argentina",
    "title_en": "Emechiche, The Rebirth of White-Headed",
    "lbSlug": "emechiche-the-rebirth-of-white-headed",
-   "_verificado": "el catálogo ya la tiene (w_R4MXGDRFW189, anibia-2026, ficica-2026, miradas-2026, popayan-2026, siembrafest-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4MXGDRFW189, anibia-2026, ficica-2026, miradas-2026, popayan-2026, siembrafest-2026, villadeleyvaiff-2026)",
    "work_id": "w_R4MXGDRFW189",
    "_ya_publicada": [
     {
@@ -636,20 +679,6 @@
      "posterSource": "tmdb",
      "lbSlug": "emechiche-the-rebirth-of-white-headed",
      "country": "Colombia, Argentina",
-     "year": 2025,
-     "duration": "11 min",
-     "genre": "Animación",
-     "synopsis_en": "The Colombian Montes de María are home to the emechiche  (Saguinus oedipus). An endangered species, we will observe their complex relationship with their young and their environment. We will analyse their survival, allowing us to witness their feelings and wild instincts.",
-     "sinopsis": "En los Montes de María Colombianos, habita el Emechiche (Saguinus oedipus). Una especie en peligro de extinción, observamos las complejas relaciones con sus crías y su entorno. Analizaremos su supervivencia, dejándonos ser testigos de sus sentimientos e instintos salvajes."
-    },
-    {
-     "festival": "ficica-2026",
-     "titulo": "Emechiche, el renacer de los cabeciblancos",
-     "tmdb_id": 1592964,
-     "poster": "/assets/ficica-2026/emechiche-el-renacer-de-los-cabeciblancos.jpg",
-     "posterSource": "tmdb",
-     "lbSlug": "emechiche-the-rebirth-of-white-headed",
-     "country": "Colombia",
      "year": 2025,
      "duration": "11 min",
      "genre": "Animación",
@@ -723,6 +752,16 @@
    "_verificado": "declarada a mano: traducción de «Dans l’ombre du héron», dir. Nicolas Bianco-Levrin; la sinopsis (rana y garza) es la imagen de la lámina"
   },
   {
+   "titulo": "¡Florecerán!",
+   "_ya_publicada": [
+    {
+     "festival": "ficfusa-2026",
+     "titulo": "Florecerán!",
+     "country": "Argentina"
+    }
+   ]
+  },
+  {
    "titulo": "Merrimundi",
    "tmdb_id": 1515178,
    "titulo_original": "Merrimundi",
@@ -734,7 +773,7 @@
    "duracion_tmdb": 21,
    "pais_tmdb": "Chile",
    "lbSlug": "merrimundi",
-   "_verificado": "el catálogo ya la tiene (w_R4JHM5RJ1EZN, filcmar-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4JHM5RJ1EZN, filcmar-2026, villadeleyvaiff-2026)",
    "work_id": "w_R4JHM5RJ1EZN",
    "_ya_publicada": [
     {
@@ -767,7 +806,8 @@
    "duracion_tmdb": 9,
    "pais_tmdb": "United Kingdom, United States of America",
    "lbSlug": "saba-2026",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_verificado": "el catálogo ya la tiene (w_R4QPX9JDTY28, tribeca-2026, villadeleyvaiff-2026)",
+   "work_id": "w_R4QPX9JDTY28",
    "_ya_publicada": [
     {
      "festival": "tribeca-2026",
@@ -914,7 +954,7 @@
    "titulo": "Dance dance evolution",
    "tmdb_id": 1817254,
    "titulo_original": "Dance★Dance★Evolution",
-   "poster_path": null,
+   "poster_path": "/3RmpzIF1aD9hiHGRRDXRwQG8NvH.jpg",
    "synopsis_es": "",
    "synopsis_en": "Rin is an average teenager who is reaching the end of high school, her parents urging her to choose a realistic path in life, but her only answer is to BECOME AN ALIEN !!",
    "genero": "",
@@ -995,7 +1035,7 @@
    "pais_tmdb": "Colombia",
    "title_en": "Lowering the Gaze",
    "lbSlug": "lowering-the-gaze",
-   "_verificado": "el catálogo ya la tiene (w_R4JG4KR5FX9V, ficica-2026, filcmar-2026, miradas-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4JG4KR5FX9V, ficica-2026, filcmar-2026, miradas-2026, villadeleyvaiff-2026)",
    "work_id": "w_R4JG4KR5FX9V",
    "_ya_publicada": [
     {
@@ -1071,7 +1111,8 @@
    "duracion_tmdb": 22,
    "pais_tmdb": "",
    "lbSlug": "chaski-pacha",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_verificado": "el catálogo ya la tiene (w_R4HJ5XKTZM64, ficdeh-2026, villadeleyvaiff-2026)",
+   "work_id": "w_R4HJ5XKTZM64",
    "_ya_publicada": [
     {
      "festival": "ficdeh-2026",
@@ -1100,7 +1141,7 @@
    "duracion_tmdb": 0,
    "pais_tmdb": "Colombia",
    "lbSlug": "esquirlas-de-caracol",
-   "_verificado": "el catálogo ya la tiene (w_ZR5J46WM80RV, bhff-2026)",
+   "_verificado": "el catálogo ya la tiene (w_ZR5J46WM80RV, bhff-2026, villadeleyvaiff-2026)",
    "work_id": "w_ZR5J46WM80RV",
    "_ya_publicada": [
     {
@@ -1128,7 +1169,7 @@
    "duracion_tmdb": 15,
    "pais_tmdb": "Colombia",
    "lbSlug": "gris-2025",
-   "_verificado": "el catálogo ya la tiene (w_R4DKQ3M176MA, aff-2026, popayan-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4DKQ3M176MA, aff-2026, popayan-2026, villadeleyvaiff-2026)",
    "work_id": "w_R4DKQ3M176MA",
    "_ya_publicada": [
     {
@@ -1211,8 +1252,8 @@
    "titulo": "Noche de vuelo",
    "tmdb_id": 1817231,
    "titulo_original": "Noche de vuelo",
-   "poster_path": null,
-   "synopsis_es": "",
+   "poster_path": "/cHeXf1QlN9gLcH3vFEMN6hz6Q8D.jpg",
+   "synopsis_es": "Un cortometraje sobre una llamada entre dos suicidas que detiene, por un instante, el salto al vacío.",
    "synopsis_en": "A short film about a phone call between two people on the verge of suicide that holds back, for an instant, the leap into the void.",
    "genero": "",
    "anio_tmdb": 0,
@@ -1368,6 +1409,36 @@
      "sinopsis": "Eloísa, una chica de 20 años, está en dos relaciones al mismo tiempo. Una noche, después de haber estado con ambas chicas, se siente agobiada por estar en esa situación de engaño y en medio de su confusión sale a recorrer las calles de Medellín en bicicleta, donde se dará cuenta de que no quiere reconocerse pero deberá encontrarse consigo misma."
     }
    ]
+  },
+  {
+   "titulo": "Goham",
+   "tmdb_id": 1319522,
+   "titulo_original": "โกฮัง..หัวใจโกโฮม",
+   "poster_path": "/bUmlrkJe411RzdVKBKLbRSJChem.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "The bonds between humans and animals following a stray dog named Gohan as it moves through life with temporary owners over a decade, through good times and bad times, joy and sorrow, hellos and goodbyes.",
+   "genero": "Drama",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 145,
+   "pais_tmdb": "Thailand",
+   "title_en": "Gohan",
+   "lbSlug": "gohan-2026",
+   "_verificado": "declarada a mano: el PDF escribe «GOHAM»; en TMDB es «Gohan» (โกฮัง..หัวใจโกโฮม, 2026), dirigida por Chayanop Boonprakob y Nattawut Poonpiriya, los mismos que acredita el PDF (Tailandia, 2026)"
+  },
+  {
+   "titulo": "El corset",
+   "tmdb_id": 947493,
+   "titulo_original": "Le Corset",
+   "poster_path": "/h4YDklaLjbgdu9yUr6vNybnrnzX.jpg",
+   "synopsis_es": "En la Francia rural, Christophe (10 años) intenta estar a la altura de su padre, un hombre rígido y distante, en la granja familiar. Sin embargo, el niño empieza a inclinarse y a desplomarse sin previo aviso: en el tractor, en la escuela, durante la cena... Un médico encuentra la solución: Christophe debe llevar un corsé de hierro para mantenerse erguido. Obligado a reinventar su vida lejos de la granja, Christophe descubre una nueva pasión por la música, conoce a una nueva amiga y la sigue en sus primeras travesuras. Pero ¿acaso servirá todo esto para corregir lo que está desequilibrado?",
+   "synopsis_en": "In rural France, 10-year-old Christophe tries to live up to his rigid and distant father on the family farm. But the young boy starts to lean over and collapse without warning — on the tractor, at school, at dinner... A doctor finds the solution: Christophe must wear an iron corset to keep himself upright. Forced to reinvent his life away from the farm, Christophe discovers a new passion for music, meets a new friend, and follows her into his first mischief. But will any of this really fix what is out of balance?",
+   "genero": "Animación",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 90,
+   "pais_tmdb": "France, Belgium",
+   "title_en": "Iron Boy",
+   "lbSlug": "iron-boy",
+   "_verificado": "declarada a mano: «Le Corset» (Iron Boy, 2026) de Louis Clichy: director, país y año del PDF"
   }
  ],
  "verificadas": {
@@ -1382,7 +1453,7 @@
    "duracion_tmdb": 0,
    "pais_tmdb": "",
    "lbSlug": "cielo-de-enero",
-   "_verificado": "el catálogo ya la tiene (w_4RPR35YWZHSF, ficidi-2026)",
+   "_verificado": "el catálogo ya la tiene (w_4RPR35YWZHSF, ficidi-2026, villadeleyvaiff-2026)",
    "work_id": "w_4RPR35YWZHSF",
    "_ya_publicada": [
     {
@@ -1409,7 +1480,8 @@
    "duracion_tmdb": 19,
    "pais_tmdb": "Mexico",
    "lbSlug": "demian-2026",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "_verificado": "el catálogo ya la tiene (w_5K3ARBZAS9ZE, villadeleyvaiff-2026)",
+   "work_id": "w_5K3ARBZAS9ZE"
   },
   "La casa del marica": {
    "tmdb_id": 1814147,
@@ -1422,7 +1494,8 @@
    "duracion_tmdb": 0,
    "pais_tmdb": "",
    "lbSlug": "la-casa-del-marica",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "_verificado": "el catálogo ya la tiene (w_5K3B4FA7Q0EW, villadeleyvaiff-2026)",
+   "work_id": "w_5K3B4FA7Q0EW"
   },
   "La muerta que habla": {
    "tmdb_id": 1661484,
@@ -1508,7 +1581,8 @@
    "pais_tmdb": "Peru",
    "title_en": "Sun in Lidia",
    "lbSlug": "sun-in-lidia",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "_verificado": "el catálogo ya la tiene (w_5K3BVXZEB8TA, villadeleyvaiff-2026)",
+   "work_id": "w_5K3BVXZEB8TA"
   },
   "Valsa para Maria Domingas": {
    "tmdb_id": 1715176,
@@ -1522,7 +1596,8 @@
    "pais_tmdb": "Brazil",
    "title_en": "Waltz for Maria Domingas",
    "lbSlug": "waltz-for-maria-domingas",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "_verificado": "el catálogo ya la tiene (w_5K3C6N9VGB6Y, villadeleyvaiff-2026)",
+   "work_id": "w_5K3C6N9VGB6Y"
   },
   "Ballena": {
    "tmdb_id": 1628167,
@@ -1535,7 +1610,8 @@
    "duracion_tmdb": 0,
    "pais_tmdb": "",
    "lbSlug": "ballena",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "_verificado": "el catálogo ya la tiene (w_5K3HSPZVDP61, villadeleyvaiff-2026)",
+   "work_id": "w_5K3HSPZVDP61"
   },
   "Chaika": {
    "tmdb_id": 1689999,
@@ -1597,6 +1673,32 @@
      "lbSlug": "chaika-2026",
      "country": "Colombia, Cuba",
      "year": 2025,
+     "genre": "Ciencia Ficción",
+     "sinopsis": "Valentina, una cosmonauta rusa de 76 años, llega a una Cuba ucrónica y nebulosa tras recibir, con treinta años de retraso, una invitación para una expedición agrícola a Marte. Entre paisajes difusos y promesas del pasado, busca las ruinas de un futuro que nunca llegó."
+    },
+    {
+     "festival": "festicinerio-2026",
+     "titulo": "Chaika",
+     "tmdb_id": 1689999,
+     "poster": "/assets/festicinerio-2026/chaika.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "chaika-2025",
+     "country": "Colombia, Cuba",
+     "year": 2025,
+     "duration": "15 min",
+     "genre": "Ciencia Ficción",
+     "sinopsis": "Valentina, una cosmonauta rusa de 76 años, llega a una Cuba ucrónica y nebulosa tras recibir, con treinta años de retraso, una invitación para una expedición agrícola a Marte. Entre paisajes difusos y promesas del pasado, busca las ruinas de un futuro que nunca llegó."
+    },
+    {
+     "festival": "ficfusa-2026",
+     "titulo": "Chaika",
+     "tmdb_id": 1689999,
+     "poster": "/assets/ficfusa-2026/chaika.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "chaika-2025",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "15 min",
      "genre": "Ciencia Ficción",
      "sinopsis": "Valentina, una cosmonauta rusa de 76 años, llega a una Cuba ucrónica y nebulosa tras recibir, con treinta años de retraso, una invitación para una expedición agrícola a Marte. Entre paisajes difusos y promesas del pasado, busca las ruinas de un futuro que nunca llegó."
     },
@@ -1678,7 +1780,8 @@
    "pais_tmdb": "Argentina",
    "title_en": "A Room of Flowers",
    "lbSlug": "a-room-of-flowers",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "_verificado": "el catálogo ya la tiene (w_5K3JDWNYXQW2, villadeleyvaiff-2026)",
+   "work_id": "w_5K3JDWNYXQW2"
   },
   "Oigo una ciudad": {
    "tmdb_id": 1560421,
@@ -1705,7 +1808,8 @@
    "duracion_tmdb": 0,
    "pais_tmdb": "",
    "lbSlug": "claudete",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "_verificado": "el catálogo ya la tiene (w_5K3JTXWW7T5H, villadeleyvaiff-2026)",
+   "work_id": "w_5K3JTXWW7T5H"
   },
   "Logos": {
    "tmdb_id": 1526572,
@@ -1718,17 +1822,18 @@
    "duracion_tmdb": 11,
    "pais_tmdb": "",
    "lbSlug": "logos-2025-1",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "_verificado": "el catálogo ya la tiene (w_5K3KWWCRSFZB, villadeleyvaiff-2026)",
+   "work_id": "w_5K3KWWCRSFZB"
   },
   "Lo que no se puede borrar": {
    "tmdb_id": 1817229,
    "titulo_original": "Lo que no se puede borrar",
-   "poster_path": null,
-   "synopsis_es": "",
+   "poster_path": "/dRdTsT9Mrp3VEMrdOYLo838OTdL.jpg",
+   "synopsis_es": "Una hermana se despierta en mitad de la noche y despierta a la otra. Dice que vio a su mamá. No sabe si soñó o si la madre estuvo ahí. Hablan en la oscuridad, entre respiraciones y recuerdos que aparecen sin aviso. La noche se llena de imágenes, de fragmentos que vuelven a vivir mientras intentan entender qué vieron, qué sienten. Quizás lo que pasó sea apenas una excusa para encender algo que todavía late en el fondo del pecho.",
    "synopsis_en": "A sister wakes up in the middle of the night and wakes the other. She says she saw their mother. She does not know whether she dreamed it or whether their mother was there. They talk in the dark, between breaths and memories that surface without warning.",
    "genero": "",
    "anio_tmdb": 0,
-   "duracion_tmdb": 0,
+   "duracion_tmdb": 8,
    "pais_tmdb": "",
    "lbSlug": "lo-que-no-se-puede-borrar",
    "poster": "/assets/villadeleyvaiff-2026/lo-que-no-se-puede-borrar.jpg",
@@ -1759,7 +1864,8 @@
    "duracion_tmdb": 62,
    "pais_tmdb": "Costa Rica",
    "lbSlug": "dama-de-las-mil-mascaras",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "_verificado": "el catálogo ya la tiene (w_P1KYDW0CF2VM, festicinerio-2026, villadeleyvaiff-2026)",
+   "work_id": "w_P1KYDW0CF2VM"
   },
   "El extraordinario viaje del dragón": {
    "tmdb_id": 1556487,
@@ -1810,7 +1916,8 @@
    "pais_tmdb": "Mexico",
    "title_en": "Portent",
    "lbSlug": "portent",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "_verificado": "el catálogo ya la tiene (w_5K3G4D1A1AHS, villadeleyvaiff-2026)",
+   "work_id": "w_5K3G4D1A1AHS"
   },
   "Sex panchitos": {
    "tmdb_id": 1476726,
@@ -1823,7 +1930,8 @@
    "duracion_tmdb": 115,
    "pais_tmdb": "Mexico",
    "lbSlug": "sex-panchitos",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "_verificado": "el catálogo ya la tiene (w_5K3K61J509GE, villadeleyvaiff-2026)",
+   "work_id": "w_5K3K61J509GE"
   },
   "Armónica": {
    "tmdb_id": 1756538,
@@ -1843,27 +1951,30 @@
    "tmdb_id": 1717008,
    "titulo_original": "El derrumbe",
    "poster_path": null,
-   "synopsis_es": "",
+   "synopsis_es": "Pocos días después del derrumbe de una pensión en la Ciudad de Buenos Aires, una madre, su hija y su nieta de meses reciben el alta hospitalaria. Sin un hogar al que regresar, la noche abre un dilema y con ella una decisión irreversible.",
    "synopsis_en": "After their house collapses, a young woman and her mother argue in the hospital about their future and that of their baby.",
    "genero": "",
    "anio_tmdb": 0,
-   "duracion_tmdb": 9,
+   "duracion_tmdb": 11,
    "pais_tmdb": "",
    "lbSlug": "el-derrumbe",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "_verificado": "el catálogo ya la tiene (w_5K3CXF6GY35D, villadeleyvaiff-2026)",
+   "work_id": "w_5K3CXF6GY35D"
   },
   "El silencio de la tierra": {
    "tmdb_id": 1754039,
    "titulo_original": "El silencio de la Tierra",
-   "poster_path": "/3t9x5bH2vvmkb5egAigon7owrCc.jpg",
-   "synopsis_es": "En un México marcado por la violencia y  la ausencia, dos hermanos enfrentan un  destino que pondrá a prueba el vínculo  que los une. Mientras la tierra guarda  sus secretos, una madre se niega a  quedarse en silencio.",
-   "synopsis_en": "",
+   "poster_path": "/kuFiD7J0Bjehsqisx6LfTohu4OU.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "In a Mexico marked by violence and absence, two brothers face a destiny that will test the bond that unites them. While the earth keeps its secrets, a mother refuses to remain silent.",
    "genero": "Drama",
    "anio_tmdb": 2026,
-   "duracion_tmdb": 0,
+   "duracion_tmdb": 16,
    "pais_tmdb": "",
-   "lbSlug": "el-silencio-de-la-tierra-2026",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "title_en": "The Silence of the Earth",
+   "lbSlug": "the-silence-of-the-earth-2026",
+   "_verificado": "el catálogo ya la tiene (w_5K3D83NV57J8, villadeleyvaiff-2026)",
+   "work_id": "w_5K3D83NV57J8"
   },
   "Las heridas": {
    "tmdb_id": 1797162,
@@ -1904,7 +2015,8 @@
    "pais_tmdb": "Argentina",
    "title_en": "Mare",
    "lbSlug": "mare-2026-1",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "_verificado": "el catálogo ya la tiene (w_5K3E6W0W4NVT, villadeleyvaiff-2026)",
+   "work_id": "w_5K3E6W0W4NVT"
   },
   "Bumblebee": {
    "tmdb_id": 899567,
@@ -1931,7 +2043,8 @@
    "duracion_tmdb": 5,
    "pais_tmdb": "Mexico",
    "lbSlug": "cuna-de-lobas",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "_verificado": "el catálogo ya la tiene (w_5K3GT223FVJ7, villadeleyvaiff-2026)",
+   "work_id": "w_5K3GT223FVJ7"
   },
   "El cuerpo de Cristo": {
    "tmdb_id": 1570967,
@@ -1945,7 +2058,8 @@
    "pais_tmdb": "Spain",
    "title_en": "Corpus Christi",
    "lbSlug": "corpus-christi-2025",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "_verificado": "el catálogo ya la tiene (w_5K3H6G206GY8, villadeleyvaiff-2026)",
+   "work_id": "w_5K3H6G206GY8"
   },
   "Emechiche, el renacer de los cabeciblancos": {
    "tmdb_id": 1592964,
@@ -1959,7 +2073,7 @@
    "pais_tmdb": "Colombia, Argentina",
    "title_en": "Emechiche, The Rebirth of White-Headed",
    "lbSlug": "emechiche-the-rebirth-of-white-headed",
-   "_verificado": "el catálogo ya la tiene (w_R4MXGDRFW189, anibia-2026, ficica-2026, miradas-2026, popayan-2026, siembrafest-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4MXGDRFW189, anibia-2026, ficica-2026, miradas-2026, popayan-2026, siembrafest-2026, villadeleyvaiff-2026)",
    "work_id": "w_R4MXGDRFW189",
    "_ya_publicada": [
     {
@@ -1970,20 +2084,6 @@
      "posterSource": "tmdb",
      "lbSlug": "emechiche-the-rebirth-of-white-headed",
      "country": "Colombia, Argentina",
-     "year": 2025,
-     "duration": "11 min",
-     "genre": "Animación",
-     "synopsis_en": "The Colombian Montes de María are home to the emechiche  (Saguinus oedipus). An endangered species, we will observe their complex relationship with their young and their environment. We will analyse their survival, allowing us to witness their feelings and wild instincts.",
-     "sinopsis": "En los Montes de María Colombianos, habita el Emechiche (Saguinus oedipus). Una especie en peligro de extinción, observamos las complejas relaciones con sus crías y su entorno. Analizaremos su supervivencia, dejándonos ser testigos de sus sentimientos e instintos salvajes."
-    },
-    {
-     "festival": "ficica-2026",
-     "titulo": "Emechiche, el renacer de los cabeciblancos",
-     "tmdb_id": 1592964,
-     "poster": "/assets/ficica-2026/emechiche-el-renacer-de-los-cabeciblancos.jpg",
-     "posterSource": "tmdb",
-     "lbSlug": "emechiche-the-rebirth-of-white-headed",
-     "country": "Colombia",
      "year": 2025,
      "duration": "11 min",
      "genre": "Animación",
@@ -2066,7 +2166,7 @@
    "duracion_tmdb": 21,
    "pais_tmdb": "Chile",
    "lbSlug": "merrimundi",
-   "_verificado": "el catálogo ya la tiene (w_R4JHM5RJ1EZN, filcmar-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4JHM5RJ1EZN, filcmar-2026, villadeleyvaiff-2026)",
    "work_id": "w_R4JHM5RJ1EZN",
    "_ya_publicada": [
     {
@@ -2098,7 +2198,8 @@
    "duracion_tmdb": 9,
    "pais_tmdb": "United Kingdom, United States of America",
    "lbSlug": "saba-2026",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_verificado": "el catálogo ya la tiene (w_R4QPX9JDTY28, tribeca-2026, villadeleyvaiff-2026)",
+   "work_id": "w_R4QPX9JDTY28",
    "_ya_publicada": [
     {
      "festival": "tribeca-2026",
@@ -2243,7 +2344,7 @@
   "Dance dance evolution": {
    "tmdb_id": 1817254,
    "titulo_original": "Dance★Dance★Evolution",
-   "poster_path": null,
+   "poster_path": "/3RmpzIF1aD9hiHGRRDXRwQG8NvH.jpg",
    "synopsis_es": "",
    "synopsis_en": "Rin is an average teenager who is reaching the end of high school, her parents urging her to choose a realistic path in life, but her only answer is to BECOME AN ALIEN !!",
    "genero": "",
@@ -2320,7 +2421,7 @@
    "pais_tmdb": "Colombia",
    "title_en": "Lowering the Gaze",
    "lbSlug": "lowering-the-gaze",
-   "_verificado": "el catálogo ya la tiene (w_R4JG4KR5FX9V, ficica-2026, filcmar-2026, miradas-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4JG4KR5FX9V, ficica-2026, filcmar-2026, miradas-2026, villadeleyvaiff-2026)",
    "work_id": "w_R4JG4KR5FX9V",
    "_ya_publicada": [
     {
@@ -2380,7 +2481,8 @@
    "duracion_tmdb": 22,
    "pais_tmdb": "",
    "lbSlug": "chaski-pacha",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_verificado": "el catálogo ya la tiene (w_R4HJ5XKTZM64, ficdeh-2026, villadeleyvaiff-2026)",
+   "work_id": "w_R4HJ5XKTZM64",
    "_ya_publicada": [
     {
      "festival": "ficdeh-2026",
@@ -2408,7 +2510,7 @@
    "duracion_tmdb": 0,
    "pais_tmdb": "Colombia",
    "lbSlug": "esquirlas-de-caracol",
-   "_verificado": "el catálogo ya la tiene (w_ZR5J46WM80RV, bhff-2026)",
+   "_verificado": "el catálogo ya la tiene (w_ZR5J46WM80RV, bhff-2026, villadeleyvaiff-2026)",
    "work_id": "w_ZR5J46WM80RV",
    "_ya_publicada": [
     {
@@ -2435,7 +2537,7 @@
    "duracion_tmdb": 15,
    "pais_tmdb": "Colombia",
    "lbSlug": "gris-2025",
-   "_verificado": "el catálogo ya la tiene (w_R4DKQ3M176MA, aff-2026, popayan-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4DKQ3M176MA, aff-2026, popayan-2026, villadeleyvaiff-2026)",
    "work_id": "w_R4DKQ3M176MA",
    "_ya_publicada": [
     {
@@ -2516,8 +2618,8 @@
   "Noche de vuelo": {
    "tmdb_id": 1817231,
    "titulo_original": "Noche de vuelo",
-   "poster_path": null,
-   "synopsis_es": "",
+   "poster_path": "/cHeXf1QlN9gLcH3vFEMN6hz6Q8D.jpg",
+   "synopsis_es": "Un cortometraje sobre una llamada entre dos suicidas que detiene, por un instante, el salto al vacío.",
    "synopsis_en": "A short film about a phone call between two people on the verge of suicide that holds back, for an instant, the leap into the void.",
    "genero": "",
    "anio_tmdb": 0,
@@ -2672,6 +2774,34 @@
      "sinopsis": "Eloísa, una chica de 20 años, está en dos relaciones al mismo tiempo. Una noche, después de haber estado con ambas chicas, se siente agobiada por estar en esa situación de engaño y en medio de su confusión sale a recorrer las calles de Medellín en bicicleta, donde se dará cuenta de que no quiere reconocerse pero deberá encontrarse consigo misma."
     }
    ]
+  },
+  "Goham": {
+   "tmdb_id": 1319522,
+   "titulo_original": "โกฮัง..หัวใจโกโฮม",
+   "poster_path": "/bUmlrkJe411RzdVKBKLbRSJChem.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "The bonds between humans and animals following a stray dog named Gohan as it moves through life with temporary owners over a decade, through good times and bad times, joy and sorrow, hellos and goodbyes.",
+   "genero": "Drama",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 145,
+   "pais_tmdb": "Thailand",
+   "title_en": "Gohan",
+   "lbSlug": "gohan-2026",
+   "_verificado": "declarada a mano: el PDF escribe «GOHAM»; en TMDB es «Gohan» (โกฮัง..หัวใจโกโฮม, 2026), dirigida por Chayanop Boonprakob y Nattawut Poonpiriya, los mismos que acredita el PDF (Tailandia, 2026)"
+  },
+  "El corset": {
+   "tmdb_id": 947493,
+   "titulo_original": "Le Corset",
+   "poster_path": "/h4YDklaLjbgdu9yUr6vNybnrnzX.jpg",
+   "synopsis_es": "En la Francia rural, Christophe (10 años) intenta estar a la altura de su padre, un hombre rígido y distante, en la granja familiar. Sin embargo, el niño empieza a inclinarse y a desplomarse sin previo aviso: en el tractor, en la escuela, durante la cena... Un médico encuentra la solución: Christophe debe llevar un corsé de hierro para mantenerse erguido. Obligado a reinventar su vida lejos de la granja, Christophe descubre una nueva pasión por la música, conoce a una nueva amiga y la sigue en sus primeras travesuras. Pero ¿acaso servirá todo esto para corregir lo que está desequilibrado?",
+   "synopsis_en": "In rural France, 10-year-old Christophe tries to live up to his rigid and distant father on the family farm. But the young boy starts to lean over and collapse without warning — on the tractor, at school, at dinner... A doctor finds the solution: Christophe must wear an iron corset to keep himself upright. Forced to reinvent his life away from the farm, Christophe discovers a new passion for music, meets a new friend, and follows her into his first mischief. But will any of this really fix what is out of balance?",
+   "genero": "Animación",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 90,
+   "pais_tmdb": "France, Belgium",
+   "title_en": "Iron Boy",
+   "lbSlug": "iron-boy",
+   "_verificado": "declarada a mano: «Le Corset» (Iron Boy, 2026) de Louis Clichy: director, país y año del PDF"
   }
  },
  "sin_ficha": [

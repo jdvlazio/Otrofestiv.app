@@ -88,6 +88,16 @@
    "poster": "/assets/villadeleyvaiff-2026/dance-dance-evolution.jpg",
    "_fuente": "https://www.themoviedb.org/movie/1817254",
    "_por_que": "alta del 4 nov 2026 con el afiche oficial de IG, recortado a la proporción de TMDB; datos de Miyu"
+  },
+  "Goham": {
+   "tmdb": 1319522,
+   "_fuente": "https://www.themoviedb.org/movie/1319522",
+   "_por_que": "el PDF escribe «GOHAM»; en TMDB es «Gohan» (โกฮัง..หัวใจโกโฮม, 2026), dirigida por Chayanop Boonprakob y Nattawut Poonpiriya, los mismos que acredita el PDF (Tailandia, 2026)"
+  },
+  "El corset": {
+   "tmdb": 947493,
+   "_fuente": "https://www.themoviedb.org/movie/947493",
+   "_por_que": "«Le Corset» (Iron Boy, 2026) de Louis Clichy: director, país y año del PDF"
   }
  },
  "sin_afiche": {
@@ -156,6 +166,12 @@
   },
   "Foco Reygadas": {
    "_por_que": "la lámina (p/DfkomnaGQZw 02 y 03) no dice qué película de Carlos Reygadas se proyecta: no hay obra a la que ponerle afiche"
+  },
+  "Película para todos los niños y niñas de Villa de Leyva": {
+   "_por_que": "programa sin obra nombrada en el PDF"
+  },
+  "Retrospectiva Festival: Cortos que nos han encantado": {
+   "_por_que": "programa de cortos de ediciones anteriores; el PDF no nombra las obras"
   }
  },
  "afiches_sin_ficha": {
@@ -178,8 +194,11 @@
   }
  },
  "sin_pais": {
-  "Foco Reygadas": {
-   "_por_que": "la lámina no dice qué película de Carlos Reygadas se proyecta (pregunta enviada al festival el 11 nov)"
+  "Película para todos los niños y niñas de Villa de Leyva": {
+   "_por_que": "programa sin obra nombrada en el PDF"
+  },
+  "Retrospectiva Festival: Cortos que nos han encantado": {
+   "_por_que": "programa sin obras nombradas en el PDF"
   }
  }
 }

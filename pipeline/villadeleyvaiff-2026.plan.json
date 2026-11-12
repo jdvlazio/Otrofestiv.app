@@ -1,5 +1,5 @@
 {
- "_nota": "20 Festival Internacional de Cine de Villa de Leyva (Villa de Leyva, Boyacá, 13–16 nov 2026, lema «De Corazón»). NO es Villa del Cine (villadelcine2026). MONTADO el 11 nov con la parrilla de la Real Fábrica (p/DfkomnaGQZw, 10 nov): 22 funciones del 13 al 15 nov en Sala Blanca y Sala Rosada. El lunes 16 y otras sedes no están publicados. Catálogo: 63 obras de ocho competencias (pre-onboarding).",
+ "_nota": "20 Festival Internacional de Cine de Villa de Leyva (Villa de Leyva, Boyacá, 13–16 nov 2026, lema «De Corazón»). NO es Villa del Cine (villadelcine2026). MONTADO el 11 nov con la parrilla de la Real Fábrica (p/DfkomnaGQZw, 10 nov): 22 funciones del 13 al 15 nov en Sala Blanca y Sala Rosada. El 12 nov se sumó el programa completo (PDF de la web del 11 nov): Cine a la Plaza, Festivalito, encuentros y Fragmentos (lunes 16). Catálogo: 63 obras de ocho competencias (pre-onboarding).",
  "radar": 1248,
  "fuentes_vivas": [],
  "_fuentes_vivas": "salió de láminas de IG y de los PDF de la home de la web, sin URL estable de programación",
@@ -15,7 +15,8 @@
   "De9ghZ8ka6I": "COMPETENCIA- CORTO FESTIVALITO (26 oct, 12 láminas)",
   "De96CbVGaEr": "PROYECTOS SELECCIONADOS 20 LAB Ópera de Leyva (26 oct, 9 láminas): no entra, son proyectos",
   "DfASiVIkW3R": "COMPETENCIA- CORTO PROFESIONAL COLOMBIA (27 oct, 10 láminas)",
-  "pdfs_web": "9 PDF enlazados en la home (creados 28–29 oct), copia en fuentes/villadeleyvaiff-2026/"
+  "pdfs_web": "9 PDF enlazados en la home (creados 28–29 oct), copia en fuentes/villadeleyvaiff-2026/",
+  "programa_completo": "https://www.villadeleyvaiff.co/_files/ugd/66001c_a296b2bfe67b41cdba2e0a1c661be1f5.pdf (PDF, creado 11 nov 13:59)"
  },
  "pasos": [
   {
@@ -63,10 +64,22 @@
   "crudo": "festivals/staging/villadeleyvaiff-2026-crudo.json",
   "enriquecido": "festivals/staging/villadeleyvaiff-2026-enriquecido.json",
   "geo": "festivals/staging/villadeleyvaiff-2026-venues-geo.json",
-  "_por_que_sedes": "La parrilla publicada es la de la Real Fábrica; la sala (Blanca / Rosada) viaja por función.",
+  "_por_que_sedes": "La parrilla publicada es la de la Real Fábrica; la sala (Blanca / Rosada) viaja por función. Desde el 12 nov, el PDF del programa completo suma Cine a la Plaza (Plaza Mayor), Espacio Redes (Hotel Plaza Mayor) y Fragmentos (Claustro de San Francisco).",
   "sedes": {
    "Real Fábrica": [
     "Real Fábrica - Villa de Leyva",
+    ""
+   ],
+   "Plaza Mayor": [
+    "Plaza Mayor - Villa de Leyva",
+    ""
+   ],
+   "Hotel Plaza Mayor": [
+    "Hotel Plaza Mayor - Villa de Leyva",
+    ""
+   ],
+   "Claustro de San Francisco": [
+    "Claustro de San Francisco - Villa de Leyva",
     ""
    ]
   },
@@ -120,6 +133,26 @@
    "Muestra Especial": {
     "emoji": "⭐",
     "en": "Special Showcase",
+    "archetype": "Especiales / Eventos"
+   },
+   "Cine a la Plaza": {
+    "emoji": "🏛️",
+    "en": "Cinema in the Square",
+    "archetype": "Especiales / Eventos"
+   },
+   "Competencia Corto Festivalito": {
+    "emoji": "🧒",
+    "en": "Festivalito Short Competition (kids)",
+    "archetype": "Competencia"
+   },
+   "Encuentros": {
+    "emoji": "🗣️",
+    "en": "Talks",
+    "archetype": "Charlas / Industria"
+   },
+   "Evento": {
+    "emoji": "🎉",
+    "en": "Event",
     "archetype": "Especiales / Eventos"
    }
   },
