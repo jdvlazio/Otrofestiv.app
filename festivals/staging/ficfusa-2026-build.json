@@ -926,7 +926,7 @@
    "year": 2027,
    "country": "Colombia, Spain",
    "flags": "🇨🇴🇪🇸",
-   "duration": "135 min",
+   "duration": "105 min",
    "genre": "Animación",
    "_ancla": [
     "Cinema Los Ángeles - Fusagasugá",
@@ -937,7 +937,7 @@
    "time": "15:00",
    "day_order": 2,
    "venue": "Cinema Los Ángeles - Fusagasugá",
-   "has_qa": false,
+   "has_qa": true,
    "synopsis": "En una tierra acechada por monstruos hechos de vegetación, Cleo se adentra en la selva para rescatar a su hermano Martín. Acompañada por Iolo, una anciana mágica, y una divertida osa hormiguera, deberá atrapar al monstruo que se lo llevó, pero pronto descubrirá que estas criaturas esconden un sorprendente secreto. Conversatorio con Jenaro González, director de animación (Dinamita / MU-KI-RA), y María Fernanda Marín, actriz, cantante, voz de Cleo",
    "synopsis_lang": "es",
    "poster": "/assets/ficfusa-2026/mu-ki-ra.jpg",
@@ -1893,13 +1893,13 @@
  ],
  "_avisos_duracion": [
   "«La gran hazaña»: 60 min en el festival, 14 en TMDB",
-  "«Mu-ki-ra»: 135 min en el festival, 82 en TMDB",
+  "«Mu-ki-ra»: 105 min en el festival, 82 en TMDB",
   "programa «Entrelazadas, Relatos del camino y La peluquería no se cierra» (2026-11-14 10:00): sus obras suman 97 min (3 de 3 con duración) y la función dura 90",
   "programa «Madres de nacimiento y Truck mama» (2026-11-15 10:00): sus obras suman 93 min (2 de 2 con duración) y la función dura 80"
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-11T13:18:23",
+  "fecha": "2026-11-11T21:13:47",
   "plan_sha": "c64afe4535979dac",
   "paso": 7,
   "cmd": "python3 pipeline/ficfusa-2026-verificar.py"

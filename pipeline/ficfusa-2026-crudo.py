@@ -80,7 +80,8 @@ def main():
             g['_duracion_de'] = f.get('_duracion_por_que') or 'de la hora de inicio a la de fin de la fuente'
         if f.get('invitados'):
             g['invitados'] = f['invitados']
-        if sec == 'Proyección y conversatorio':
+        if sec == 'Proyección y conversatorio' or (sec == 'Película de apertura' and 'onversatorio' in f.get('invitados', '')):
+            # la apertura también trae conversatorio (lámina del 13 nov, vigía 11 nov).
             # el PDF del 11 nov dice «proyección y conversatorio»: has_qa (regla del 1 nov).
             # La app le suma FESTIVAL_QA_MIN (30) a has_qa; si la franja ya lo incluye, se resta.
             g['has_qa'] = True
