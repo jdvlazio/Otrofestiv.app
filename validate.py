@@ -4130,6 +4130,9 @@ try:
         # festival le mandó a Juan) es a las 4:00 p. m. del 18, igual que la Apertura del
         # festival en el Centro Cultural Bacatá; son dos actividades, no una función
         ('funza-2026', '2026-11-18|16:00|Centro Cultural Bacatá - Funza'),          # Apertura + Feria de Experiencias Sociales
+        # Al Este 2026 (12 nov): dos láminas distintas del Colombo (p/DfYe-5Slr8E y p/DfSV6Z3lpE1)
+        # ponen «Los inocentes encantadores» y «Gioia mia» el 20.11 a las 19:00; son dos salas
+        ('aleste-2026', '2026-11-20|19:00|Centro Colombo Americano - Medellín'),   # Fokus Wajda + Al Este Especial
     }
     _viol = []
     for _fname in _ACTIVE:
