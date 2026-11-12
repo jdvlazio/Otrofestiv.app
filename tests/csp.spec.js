@@ -16,8 +16,13 @@ async function vigilar(page) {
 }
 
 test('CSP01 — la CSP del <meta> es la estricta', async ({ page }) => {
-  await page.goto('/');
-  const csp = await page.evaluate(() => document.querySelector('meta[http-equiv="Content-Security-Policy"]').content);
+  // Se lee del HTML servido con una petición aparte, no de la página: la app se
+  // recarga sola al arrancar y page.evaluate caía con «Execution context was
+  // destroyed» (12 nov 2026); hasta el cuerpo de la respuesta de page.goto se
+  // pierde. El <meta> que aplica el navegador es este mismo HTML.
+  const html = await (await page.request.get('/')).text();
+  const csp = (html.match(/<meta http-equiv="Content-Security-Policy" content="([^"]*)"/) || [])[1] || '';
+  expect(csp, 'hay <meta> de CSP').not.toBe('');
   const src = (csp.match(/script-src ([^;]*)/) || [])[1] || '';
   expect(src).not.toContain("'unsafe-inline'");
   expect(src).not.toContain("'unsafe-eval'");
