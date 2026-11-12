@@ -827,7 +827,7 @@
     "18:30"
    ],
    "day": "2026-11-12",
-   "time": "18:30",
+   "time": "18:00",
    "day_order": 2,
    "venue": "UdeA Campus Caucasia - Caucasia",
    "sala": "Plazoleta central",
@@ -855,8 +855,9 @@
      "fecha": "2026-11-05"
     },
     "time": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-05"
+     "tipo": "festival-ig",
+     "fecha": "2026-11-12",
+     "url": "https://www.instagram.com/p/Dfp68UeBuCt/"
     },
     "venue": {
      "tipo": "festival-web",
@@ -2087,7 +2088,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-12T11:47:08",
+  "fecha": "2026-11-12T17:16:30",
   "plan_sha": "d5407859a874077e",
   "paso": 6,
   "cmd": "python3 pipeline/fecibac-2026-verificar.py"
