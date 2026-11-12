@@ -114,6 +114,7 @@ deliberada existe la etiqueta `frontera-ok`.
 | `festicinerio2026` | FESTICINERIO | Riosucio | 8–13 NOV | **Próximo / activo** |
 | `ficfusa2026` | FICFUSA | Fusagasugá | 11–16 NOV | **Próximo / activo** |
 | `fecibac2026` | FECIBAC | Caucasia | 10–14 NOV | **Próximo / activo** |
+| `aleste2026` | Al Este | Medellín | 18–22 NOV | **Próximo / activo** |
 | `villadeleyvaiff2026` | Festcinevilla | Villa de Leyva | 13–16 NOV | **Próximo / activo** |
 | `cinetoro2026` | CINETORO | Toro | 10–15 NOV | **Próximo / activo** |
 | `cortoscali2026` | Cortos Cali | Cali | 27–30 OCT | Recién terminado |

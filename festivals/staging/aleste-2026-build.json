@@ -611,9 +611,9 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-12T16:15:44",
-  "plan_sha": "ebda0e550a10681d",
-  "paso": 7,
-  "cmd": "python3 pipeline/encuadrar-posters.py aleste-2026 --aplicar --desde festivals/staging/aleste-2026-build.json"
+  "fecha": "2026-11-12T16:50:26",
+  "plan_sha": "c001315ea0e801be",
+  "paso": 8,
+  "cmd": "python3 pipeline/aleste-2026-verificar.py"
  }
 }

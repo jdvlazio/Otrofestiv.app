@@ -38,6 +38,10 @@
   {
    "cmd": "python3 pipeline/encuadrar-posters.py aleste-2026 --aplicar --desde festivals/staging/aleste-2026-build.json",
    "que": "los afiches a 2:3"
+  },
+  {
+   "cmd": "python3 pipeline/aleste-2026-verificar.py",
+   "que": "2.ª lectura: fichas MAMM y OCR de las láminas contra el crudo"
   }
  ],
  "_fuentes_versionadas": {

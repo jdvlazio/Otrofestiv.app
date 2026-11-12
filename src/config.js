@@ -179,6 +179,9 @@ export const SECTION_EN = {
   '🏛️ Cine a la Plaza': 'Cinema in the Square',
   '🧒 Competencia Corto Festivalito': 'Festivalito Short Competition (kids)',
   '🗣️ Encuentros': 'Talks',
+  '✨ Al Este Especial': 'Al Este Special',
+  '🎞️ Fokus: Las Grietas en el Muro': 'Fokus: Cracks in the Wall',
+  '🏛️ Al Este en el MAMM': 'Al Este at MAMM',
   '🏆 La Canoa Dorada': 'La Canoa Dorada',
   '🛠️ Talleres con Expertos': 'Workshops with Experts',
   '💬 Conversatorios': 'Talks',
@@ -942,6 +945,26 @@ export const FESTIVAL_CONFIG={
     prioLimit:4,
     films:null,posters:null,lbSlugs:{}
   },
+  'aleste2026': {
+    // Por ahora solo Medellín (18–22 nov, MAMM y Colombo); Bogotá (25–29 nov) se suma
+    // cuando publique programación. keyArt: afiche oficial de @aleste.colombia
+    // (p/Def5gEbtQRH, 3072×4096, estirado a 400×600).
+    name:'Al Este',displayName:'Al Este',
+    fullName:'9.º Festival de Cine de Europa Central y Oriental Al Este',shortName:'Al Este',
+    city:'Medellín',country:'CO',
+    dates:'18–22 NOV',dates_en:'NOV 18–22',year:2026,timezoneOffset:'-05:00',
+    tagline:'Festival de Cine de Europa Central y Oriental',
+    keyArt:'/assets/keyart/aleste2026-v2.jpg',
+    instagram:'aleste.colombia', storageKey:'aleste2026_',festivalStartStr:'2026-11-18T00:00:00',festivalEndStr:'2026-11-22T23:59:00',
+    festivalDates:{'2026-11-18':'2026-11-18','2026-11-19':'2026-11-19','2026-11-20':'2026-11-20','2026-11-21':'2026-11-21','2026-11-22':'2026-11-22'},
+    days:[{k:'2026-11-18',d:18,lbl:'MIÉ'},{k:'2026-11-19',d:19,lbl:'JUE'},{k:'2026-11-20',d:20,lbl:'VIE'},{k:'2026-11-21',d:21,lbl:'SÁB'},{k:'2026-11-22',d:22,lbl:'DOM'}],
+    dayKeys:['2026-11-18','2026-11-19','2026-11-20','2026-11-21','2026-11-22'],
+    dayShort:{'2026-11-18':'MIÉ 18','2026-11-19':'JUE 19','2026-11-20':'VIE 20','2026-11-21':'SÁB 21','2026-11-22':'DOM 22'},
+    dayShort_en:{'2026-11-18':'WED 18','2026-11-19':'THU 19','2026-11-20':'FRI 20','2026-11-21':'SAT 21','2026-11-22':'SUN 22'},
+    dayLong:{'2026-11-18':'Miércoles 18 de noviembre','2026-11-19':'Jueves 19 de noviembre','2026-11-20':'Viernes 20 de noviembre','2026-11-21':'Sábado 21 de noviembre','2026-11-22':'Domingo 22 de noviembre'},
+    prioLimit:4,sharedSlotIsOneScreening:false,
+    films:null,posters:null,lbSlugs:{}
+  },
   'villadeleyvaiff2026': {
     // NO es Villa del Cine (villadelcine2026): es el Festival Internacional de @festcinevilla.
     // EL NOMBRE es el corto con que se presenta (@festcinevilla); el subtítulo lo expande
@@ -1434,6 +1457,9 @@ export const SECTION_ARCHETYPES = {
   '🏛️ Cine a la Plaza': 'Especiales / Eventos',
   '🧒 Competencia Corto Festivalito': 'Competencia',
   '🗣️ Encuentros': 'Charlas / Industria',
+  '✨ Al Este Especial': 'Especiales / Eventos',
+  '🎞️ Fokus: Las Grietas en el Muro': 'Retrospectiva / Tributo',
+  '🏛️ Al Este en el MAMM': 'Muestra / País',
   '🏆 La Canoa Dorada': 'Competencia',
   '🛠️ Talleres con Expertos': 'Charlas / Industria',
   '💬 Conversatorios': 'Charlas / Industria',

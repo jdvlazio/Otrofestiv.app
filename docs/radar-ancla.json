@@ -5425,11 +5425,13 @@
    "region": "Andina",
    "mes": 11,
    "mes_texto": "junio",
-   "fechas_2026": "Medellín 18–22/23 NOV, Bogotá 25–29 NOV 2026 (web oficial; se contradice en el cierre de Medellín)",
+   "fechas_2026": "Medellín 18–22 NOV, Bogotá 25–29 NOV 2026 (afiche oficial; programación de Medellín en MAMM y Colombo)",
    "web": "https://www.alestfestival.com/co",
    "ig": "@aleste.colombia",
-   "estado": "radar",
-   "id_config": null,
+   "estado": "en_app",
+   "id_config": [
+    "aleste2026"
+   ],
    "issue": [
     1397
    ],
@@ -5442,7 +5444,7 @@
    "discrepancias": null,
    "motivo_descarte": null,
    "importancia": 2,
-   "verificado_el": "2026-11-03",
+   "verificado_el": "2026-11-12",
    "origen": [
     "ancla 11 oct: calendario 11 oct"
    ],
