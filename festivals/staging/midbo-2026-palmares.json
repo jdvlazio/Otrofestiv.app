@@ -1,6 +1,6 @@
 {
  "_provenance": {
-  "fuente": "Instagram, sin sesión (vigía 6 nov 17:00, Bright Data). Videos de carrusel, leído el primer fotograma de cada ítem: Nacional de Cortometraje https://www.instagram.com/p/DfZ57BboNSR/ (láminas 2-4), Iberoamericana de Largometraje https://www.instagram.com/p/DfaIZCbCdfO/ (láminas 2-3), Iberoamericana de Cortometraje https://www.instagram.com/p/DfaayVciddo/ (láminas 2-4). Premio Quijote de la Federación Internacional de Cineclubes https://www.instagram.com/p/DfapgC0ic3k/ (6 nov, láminas 2-3 y pie). Títulos como están en el JSON. PARCIAL: falta Competencia Nacional de Largometraje Documental.",
+  "fuente": "Instagram, sin sesión (vigía 6 nov 17:00, Bright Data). Videos de carrusel, leído el primer fotograma de cada ítem: Nacional de Cortometraje https://www.instagram.com/p/DfZ57BboNSR/ (láminas 2-4), Iberoamericana de Largometraje https://www.instagram.com/p/DfaIZCbCdfO/ (láminas 2-3), Iberoamericana de Cortometraje https://www.instagram.com/p/DfaayVciddo/ (láminas 2-4). Premio Quijote de la Federación Internacional de Cineclubes https://www.instagram.com/p/DfapgC0ic3k/ (6 nov, láminas 2-3 y pie). Títulos como están en el JSON. PARCIAL: falta Competencia Nacional de Largometraje Documental. Premio ATMEDIOS: https://www.instagram.com/p/DfnIHD9CVcH/ (11 nov, lámina 2, video leído por fotogramas; vigía 12 nov).",
   "capturado": "2026-11-06"
  },
  "palmares": [
@@ -83,6 +83,14 @@
    "titulo": "La taquigrafista",
    "autoria": "Azul Aizenberg",
    "obra": "La taquigrafista"
+  },
+  {
+   "categoria": "Premio ATMEDIOS",
+   "nivel": "ganadora",
+   "premio": "Servicio de subtitulado o close caption",
+   "titulo": "No menguará el fuego de esta luna",
+   "autoria": "Sebastián Pérez",
+   "obra": "No menguará el fuego de esta luna"
   }
  ]
 }
