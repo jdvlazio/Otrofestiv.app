@@ -118,6 +118,23 @@
     "fecha": "2026-11-12"
    },
    "evidencia": "formulario de inscripción: «8:00 a. m. a 11:00 a. m.»"
+  },
+  {
+   "ancla": {
+    "sede": "UdeA Campus Caucasia - Caucasia",
+    "dia": "2026-11-12",
+    "hora": "18:30"
+   },
+   "funcion": "f_193ba4128c",
+   "fuente": {
+    "tipo": "festival-ig",
+    "url": "https://www.instagram.com/p/Dfp68UeBuCt/",
+    "fecha": "2026-11-12"
+   },
+   "casilla": "time",
+   "valor": "18:00",
+   "evidencia": "Reel del festival del 12 nov, en el pie: «Hora: 6:00 p. m.». La programación oficial (DfYAPbqGyr0, lámina 1) dice 6:30 p. m.; regla de Juan: con horas contradictorias se publica la más temprana. Leído por el vigía 17:30.",
+   "contra": "18:30"
   }
  ]
 }
