@@ -4214,6 +4214,36 @@ try:
 except Exception as _e:
     fail(check, f'el guardián no pudo correr: {_e}')
 
+# ── [inventario-fuentes] lo publicado por el festival, revisado entero ──────
+# Villa de Leyva subió su programa completo a un PDF de la home y FICFUSA tenía
+# nueve formularios en el Linktree de su bio: nadie los vio porque mirábamos lo
+# conocido. Todo festival vivo lleva su inventario (pipeline/fuentes_descubrir.py)
+# con las raíces dadas y NADA sin revisar. Lo viejo lo frena publicar.py (24 h).
+check = 'inventario-fuentes'
+try:
+    import json as _jif, os as _osif, sys as _sif
+    _sif.path.insert(0, 'pipeline')
+    import fuentes_descubrir as _fd
+    _ciegos = _fd.autoprueba()
+    if _ciegos:
+        fail(check, f'el guardián no ve su cebo: {_ciegos}')
+    else:
+        _mal_if = []
+        for _fid in _festivalesVivos():
+            if not _osif.path.exists(f'festivals/{_fid}.json'):
+                continue
+            _ip = _fd.ruta(_fid)
+            if not _osif.path.exists(_ip):
+                _mal_if.append(f'{_fid}: sin inventario (correr pipeline/fuentes_descubrir.py {_fid} --raiz web=… --raiz bio=…)')
+                continue
+            _mal_if += [f'{_fid}: {x}' for x in _fd.problemas(_jif.load(open(_ip, encoding='utf-8')))]
+        if _mal_if:
+            fail(check, ' · '.join(_mal_if[:6]))
+        else:
+            ok(check, 'todo festival vivo tiene su inventario de fuentes revisado entero')
+except Exception as _e:
+    fail(check, f'el guardián no pudo correr: {_e}')
+
 check = 'activity-duration'
 try:
     import json as _json
@@ -6937,6 +6967,7 @@ try:
     # `-titulos-anteriores.json` lo lee ensamblar.py para CUALQUIER festival (con
     # f-string, por eso su nombre no está literal en el corpus) — 8 oct 2026
     _CANON = {'crudo.json', 'correcciones.json', 'build.json', 'titulos-anteriores.json',
+              'fuentes.json',  # inventario de fuentes: fuentes_descubrir.py, [inventario-fuentes] y publicar.py (12 nov 2026)
               'quitar.json', 'duraciones.json',  # `-quitar.json` lo lee ensamblar.py (f-string), 14 oct 2026
               # el modelo de la función (docs/FUNCION.md): funcion.cargar y ensamblar, 16 oct 2026
               'afirmaciones.json', 'funciones-ids.json', 'conflictos.json',

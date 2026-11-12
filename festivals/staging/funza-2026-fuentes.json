@@ -1,0 +1,18 @@
+{
+ "_provenance": {
+  "fuente": "pipeline/fuentes_descubrir.py",
+  "capturado": "2026-11-12T12:05",
+  "paginas_leidas": 2,
+  "errores": [
+   "https://www.facebook.com/festivaldecinefunza/: HTTP Error 400: Bad Request",
+   "https://www.facebook.com/centroculturalbacatadefunza/: HTTP Error 400: Bad Request"
+  ]
+ },
+ "raices": {
+  "facebook": "https://www.facebook.com/festivaldecinefunza/",
+  "facebook_2": "https://www.facebook.com/centroculturalbacatadefunza/",
+  "_sin_web": "el festival no tiene web propia: publica en Facebook (lo revisa el vigía en el navegador)",
+  "_sin_bio": "sin Instagram propio conocido"
+ },
+ "items": {}
+}

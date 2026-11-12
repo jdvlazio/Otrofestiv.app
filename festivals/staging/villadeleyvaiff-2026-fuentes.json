@@ -1,0 +1,109 @@
+{
+ "_provenance": {
+  "fuente": "pipeline/fuentes_descubrir.py",
+  "capturado": "2026-11-12T12:05",
+  "paginas_leidas": 6,
+  "errores": [
+   "https://www.villadeleyvaiff.co/_api/cloud-data: HTTP Error 404: Not Found",
+   "https://www.villadeleyvaiff.co/_api/wix-code-public-dispatcher-ng/siteview: HTTP Error 404: Not Found",
+   "https://www.villadeleyvaiff.co/true: HTTP Error 404: Not Found"
+  ]
+ },
+ "raices": {
+  "web": "https://www.villadeleyvaiff.co",
+  "instagram": "festcinevilla",
+  "_sin_bio": "la bio de @festcinevilla enlaza solo la misma web (villadeleyvaiff.co), revisado 12 nov"
+ },
+ "items": {
+  "https://www.villadeleyvaiff.co/_files/ugd/66001c_061dc0d2b25b413f952e19f20bb5786b.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.villadeleyvaiff.co",
+   "primera_vez": "2026-11-12T11:24",
+   "ultima_vez": "2026-11-12T12:05",
+   "estado": "usada",
+   "_por_que": "PDF de secciones (28–29 oct): catálogo, villadeleyvaiff-2026-catalogo.py y -verificar.py; el 7fa6751c es el LAB Ópera de Leyva (proyectos, no entra)",
+   "revisado": "2026-11-12T11:43"
+  },
+  "https://www.villadeleyvaiff.co/_files/ugd/66001c_231990a8eb70478aabd546fe2dedc0b1.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.villadeleyvaiff.co",
+   "primera_vez": "2026-11-12T11:24",
+   "ultima_vez": "2026-11-12T12:05",
+   "estado": "usada",
+   "_por_que": "PDF de secciones (28–29 oct): catálogo, villadeleyvaiff-2026-catalogo.py y -verificar.py; el 7fa6751c es el LAB Ópera de Leyva (proyectos, no entra)",
+   "revisado": "2026-11-12T11:43"
+  },
+  "https://www.villadeleyvaiff.co/_files/ugd/66001c_4f020eb9614342c5bde0d28c801bc55d.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.villadeleyvaiff.co",
+   "primera_vez": "2026-11-12T11:24",
+   "ultima_vez": "2026-11-12T12:05",
+   "estado": "usada",
+   "_por_que": "PDF de secciones (28–29 oct): catálogo, villadeleyvaiff-2026-catalogo.py y -verificar.py; el 7fa6751c es el LAB Ópera de Leyva (proyectos, no entra)",
+   "revisado": "2026-11-12T11:43"
+  },
+  "https://www.villadeleyvaiff.co/_files/ugd/66001c_6267101bfaec493e8c2485951bad5652.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.villadeleyvaiff.co",
+   "primera_vez": "2026-11-12T11:24",
+   "ultima_vez": "2026-11-12T12:05",
+   "estado": "usada",
+   "_por_que": "PDF de secciones (28–29 oct): catálogo, villadeleyvaiff-2026-catalogo.py y -verificar.py; el 7fa6751c es el LAB Ópera de Leyva (proyectos, no entra)",
+   "revisado": "2026-11-12T11:43"
+  },
+  "https://www.villadeleyvaiff.co/_files/ugd/66001c_7fa6751c942d42f1b610c2922d8c2e95.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.villadeleyvaiff.co",
+   "primera_vez": "2026-11-12T11:24",
+   "ultima_vez": "2026-11-12T12:05",
+   "estado": "usada",
+   "_por_que": "PDF de secciones (28–29 oct): catálogo, villadeleyvaiff-2026-catalogo.py y -verificar.py; el 7fa6751c es el LAB Ópera de Leyva (proyectos, no entra)",
+   "revisado": "2026-11-12T11:43"
+  },
+  "https://www.villadeleyvaiff.co/_files/ugd/66001c_a296b2bfe67b41cdba2e0a1c661be1f5.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.villadeleyvaiff.co",
+   "primera_vez": "2026-11-12T11:24",
+   "ultima_vez": "2026-11-12T12:05",
+   "estado": "usada",
+   "_por_que": "PDF de secciones (28–29 oct): catálogo, villadeleyvaiff-2026-catalogo.py y -verificar.py; el 7fa6751c es el LAB Ópera de Leyva (proyectos, no entra)",
+   "revisado": "2026-11-12T11:43"
+  },
+  "https://www.villadeleyvaiff.co/_files/ugd/66001c_a7855aad60844ff7aba7d252b23c97e6.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.villadeleyvaiff.co",
+   "primera_vez": "2026-11-12T11:24",
+   "ultima_vez": "2026-11-12T12:05",
+   "estado": "usada",
+   "_por_que": "PDF de secciones (28–29 oct): catálogo, villadeleyvaiff-2026-catalogo.py y -verificar.py; el 7fa6751c es el LAB Ópera de Leyva (proyectos, no entra)",
+   "revisado": "2026-11-12T11:43"
+  },
+  "https://www.villadeleyvaiff.co/_files/ugd/66001c_a9aea13ba09e4e169b1eae8dca6cf480.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.villadeleyvaiff.co",
+   "primera_vez": "2026-11-12T11:24",
+   "ultima_vez": "2026-11-12T12:05",
+   "estado": "usada",
+   "_por_que": "PDF de secciones (28–29 oct): catálogo, villadeleyvaiff-2026-catalogo.py y -verificar.py; el 7fa6751c es el LAB Ópera de Leyva (proyectos, no entra)",
+   "revisado": "2026-11-12T11:43"
+  },
+  "https://www.villadeleyvaiff.co/_files/ugd/66001c_bf0dc8c66cfd4e94af3189fcfc013bdc.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.villadeleyvaiff.co",
+   "primera_vez": "2026-11-12T11:24",
+   "ultima_vez": "2026-11-12T12:05",
+   "estado": "usada",
+   "_por_que": "PDF de secciones (28–29 oct): catálogo, villadeleyvaiff-2026-catalogo.py y -verificar.py; el 7fa6751c es el LAB Ópera de Leyva (proyectos, no entra)",
+   "revisado": "2026-11-12T11:43"
+  },
+  "https://www.villadeleyvaiff.co/_files/ugd/66001c_ff088bc021e54081a9d9d5063b73de25.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.villadeleyvaiff.co",
+   "primera_vez": "2026-11-12T11:24",
+   "ultima_vez": "2026-11-12T12:05",
+   "estado": "usada",
+   "_por_que": "PDF de secciones (28–29 oct): catálogo, villadeleyvaiff-2026-catalogo.py y -verificar.py; el 7fa6751c es el LAB Ópera de Leyva (proyectos, no entra)",
+   "revisado": "2026-11-12T11:43"
+  }
+ }
+}
