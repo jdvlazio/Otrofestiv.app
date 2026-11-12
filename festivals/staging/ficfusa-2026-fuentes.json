@@ -1,0 +1,487 @@
+{
+ "_provenance": {
+  "fuente": "pipeline/fuentes_descubrir.py",
+  "capturado": "2026-11-12T12:05",
+  "paginas_leidas": 60,
+  "errores": [
+   "https://ficfusa.com/xmlrpc.php: HTTP Error 405: Method Not Allowed"
+  ]
+ },
+ "raices": {
+  "web": "https://ficfusa.com",
+  "bio": "https://linktr.ee/Ficfusa",
+  "instagram": "ficfusa_festival",
+  "bio_2": "https://docs.google.com/forms/d/e/1FAIpQLSc1P8ux4dMrTI8YaxdjVJhqPk6HTtZZEDDZvZY_3oACi272hA/viewform",
+  "_nota": "la bio de @ficfusa_festival enlaza el Linktree y un formulario (bio_2), revisado 12 nov"
+ },
+ "items": {
+  "http://ficfusa.com/catalogo/seleccion-oficial-2026.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://ficfusa.com/programacion/",
+   "primera_vez": "2026-11-12T11:34",
+   "ultima_vez": "2026-11-12T12:05",
+   "estado": "usada",
+   "_por_que": "catálogo de la selección oficial: obras y sinopsis (auditoría 12 nov)",
+   "revisado": "2026-11-12T12:00"
+  },
+  "http://ficfusa.com/documentos/programa-ficfusa-2026.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://ficfusa.com/programacion/",
+   "primera_vez": "2026-11-12T11:34",
+   "ultima_vez": "2026-11-12T12:05",
+   "estado": "usada",
+   "_por_que": "programa completo (PDF 11 nov): coincide con las funciones; el audio inmersivo del 11 nov quedó a las 11:00 por el post de IG del 10 nov (la función ya pasó) (auditoría 12 nov)",
+   "revisado": "2026-11-12T12:00"
+  },
+  "https://docs.google.com/forms/d/14oeDmAbrm6orCMzx4OU7uThGbqC0smQ5SNOyJXRCTqA/edit": {
+   "tipo": "formulario",
+   "visto_en": "https://linktr.ee/Ficfusa",
+   "primera_vez": "2026-11-12T11:34",
+   "ultima_vez": "2026-11-12T12:05",
+   "estado": "descartada",
+   "_por_que": "inscripción de voluntarios (auditoría 12 nov)",
+   "revisado": "2026-11-12T12:00"
+  },
+  "https://docs.google.com/forms/d/e/1FAIpQLScaePjYQdMw4QAHzOzEN-eMu4aGDGcX8tfEkKUDoUEYfuzKTg/viewform": {
+   "tipo": "formulario",
+   "visto_en": "https://ficfusa.com/historias-que-transforman-participa-en-la-12o-edicion-de-ficfusa/",
+   "primera_vez": "2026-11-12T11:34",
+   "ultima_vez": "2026-11-12T12:05",
+   "estado": "descartada",
+   "_por_que": "convocatoria, acreditación o actividad de otra edición (no es programación 2026) (auditoría 12 nov)",
+   "revisado": "2026-11-12T12:00"
+  },
+  "https://docs.google.com/forms/d/e/1FAIpQLSdGngZsmiKoy0SrUE25cNkmLB51H1IcKeopxWhtiHTIlHM-TA/viewform": {
+   "tipo": "formulario",
+   "visto_en": "https://ficfusa.com/12-version-del-festival-internacional-de-cine-de-fusagasuga-ficfusa-transforma/",
+   "primera_vez": "2026-11-12T11:34",
+   "ultima_vez": "2026-11-12T12:05",
+   "estado": "descartada",
+   "_por_que": "convocatoria, acreditación o actividad de otra edición (no es programación 2026) (auditoría 12 nov)",
+   "revisado": "2026-11-12T12:00"
+  },
+  "https://docs.google.com/forms/d/e/1FAIpQLSdfpmJUyTONFsfe4xbxTKOZKcOEq5_XKVcDTR6yNOU-2DL7xw/viewform": {
+   "tipo": "formulario",
+   "visto_en": "https://linktr.ee/Ficfusa",
+   "primera_vez": "2026-11-12T11:34",
+   "ultima_vez": "2026-11-12T11:39",
+   "estado": "usada",
+   "_por_que": "registration_url de su actividad (afirmación, #1469) (auditoría 12 nov)",
+   "revisado": "2026-11-12T12:00"
+  },
+  "https://docs.google.com/forms/d/e/1FAIpQLSdiFR5MT_LD92iHi3gN5GOIgDOVod0eoHSezI5dnZCXqJTeKg/viewform": {
+   "tipo": "formulario",
+   "visto_en": "https://ficfusa.com/historias-que-transforman-participa-en-la-12o-edicion-de-ficfusa/",
+   "primera_vez": "2026-11-12T11:34",
+   "ultima_vez": "2026-11-12T12:05",
+   "estado": "descartada",
+   "_por_que": "convocatoria, acreditación o actividad de otra edición (no es programación 2026) (auditoría 12 nov)",
+   "revisado": "2026-11-12T12:00"
+  },
+  "https://docs.google.com/forms/d/e/1FAIpQLSdiyBd6clbI1Nm31KRg3D-KyqvLYR2nu57iU6ychlidoFlRdQ/viewform": {
+   "tipo": "formulario",
+   "visto_en": "https://ficfusa.com/formando-sector-audiovisual-del-sumapaz/",
+   "primera_vez": "2026-11-12T11:34",
+   "ultima_vez": "2026-11-12T12:05",
+   "estado": "descartada",
+   "_por_que": "convocatoria, acreditación o actividad de otra edición (no es programación 2026) (auditoría 12 nov)",
+   "revisado": "2026-11-12T12:00"
+  },
+  "https://docs.google.com/forms/d/e/1FAIpQLSezmKYZ1NKYo_2iCFaHkmAwkQKdViwyraysQbGKSDrI5gfgKg/viewform": {
+   "tipo": "formulario",
+   "visto_en": "https://linktr.ee/Ficfusa",
+   "primera_vez": "2026-11-12T11:34",
+   "ultima_vez": "2026-11-12T12:05",
+   "estado": "usada",
+   "_por_que": "registration_url de su actividad (afirmación, #1469) (auditoría 12 nov)",
+   "revisado": "2026-11-12T12:00"
+  },
+  "https://docs.google.com/forms/d/e/1FAIpQLSfDunrpzfqJYegx2YrnatAEyrLvhcSp4SrhvlD8eeRT_ispMA/viewform": {
+   "tipo": "formulario",
+   "visto_en": "https://linktr.ee/Ficfusa",
+   "primera_vez": "2026-11-12T11:34",
+   "ultima_vez": "2026-11-12T12:05",
+   "estado": "usada",
+   "_por_que": "registration_url de su actividad (afirmación, #1469) (auditoría 12 nov)",
+   "revisado": "2026-11-12T12:00"
+  },
+  "https://ficfusa.com/convocatoria/orquidea-de-los-andes-2026.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://ficfusa.com/convocatoria-orquidea-de-los-andes-2026/",
+   "primera_vez": "2026-11-12T11:34",
+   "ultima_vez": "2026-11-12T12:05",
+   "estado": "descartada",
+   "_por_que": "convocatoria (mayo 2026) (auditoría 12 nov)",
+   "revisado": "2026-11-12T12:00"
+  },
+  "https://ficfusa.com/documentos/orquidea-de-los-andes-edicion-1.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://ficfusa.com/orquidea-de-los-andes/",
+   "primera_vez": "2026-11-12T11:34",
+   "ultima_vez": "2026-11-12T12:05",
+   "estado": "descartada",
+   "_por_que": "revista Orquídea de los Andes, ediciones 2016–2021 (auditoría 12 nov)",
+   "revisado": "2026-11-12T12:00"
+  },
+  "https://ficfusa.com/documentos/orquidea-de-los-andes-edicion-11.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://ficfusa.com/orquidea-de-los-andes/",
+   "primera_vez": "2026-11-12T11:34",
+   "ultima_vez": "2026-11-12T12:05",
+   "estado": "descartada",
+   "_por_que": "revista Orquídea de los Andes, ediciones 2016–2021 (auditoría 12 nov)",
+   "revisado": "2026-11-12T12:00"
+  },
+  "https://ficfusa.com/documentos/orquidea-de-los-andes-edicion-2.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://ficfusa.com/orquidea-de-los-andes/",
+   "primera_vez": "2026-11-12T11:34",
+   "ultima_vez": "2026-11-12T12:05",
+   "estado": "descartada",
+   "_por_que": "revista Orquídea de los Andes, ediciones 2016–2021 (auditoría 12 nov)",
+   "revisado": "2026-11-12T12:00"
+  },
+  "https://ficfusa.com/documentos/orquidea-de-los-andes-edicion-3.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://ficfusa.com/orquidea-de-los-andes/",
+   "primera_vez": "2026-11-12T11:34",
+   "ultima_vez": "2026-11-12T12:05",
+   "estado": "descartada",
+   "_por_que": "revista Orquídea de los Andes, ediciones 2016–2021 (auditoría 12 nov)",
+   "revisado": "2026-11-12T12:00"
+  },
+  "https://ficfusa.com/documentos/orquidea-de-los-andes-edicion-4.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://ficfusa.com/orquidea-de-los-andes/",
+   "primera_vez": "2026-11-12T11:34",
+   "ultima_vez": "2026-11-12T12:05",
+   "estado": "descartada",
+   "_por_que": "revista Orquídea de los Andes, ediciones 2016–2021 (auditoría 12 nov)",
+   "revisado": "2026-11-12T12:00"
+  },
+  "https://ficfusa.com/documentos/orquidea-de-los-andes-edicion-5.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://ficfusa.com/orquidea-de-los-andes/",
+   "primera_vez": "2026-11-12T11:34",
+   "ultima_vez": "2026-11-12T12:05",
+   "estado": "descartada",
+   "_por_que": "revista Orquídea de los Andes, ediciones 2016–2021 (auditoría 12 nov)",
+   "revisado": "2026-11-12T12:00"
+  },
+  "https://ficfusa.com/documentos/orquidea-de-los-andes-edicion-6.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://ficfusa.com/orquidea-de-los-andes/",
+   "primera_vez": "2026-11-12T11:34",
+   "ultima_vez": "2026-11-12T12:05",
+   "estado": "descartada",
+   "_por_que": "revista Orquídea de los Andes, ediciones 2016–2021 (auditoría 12 nov)",
+   "revisado": "2026-11-12T12:00"
+  },
+  "https://ficfusa.com/documentos/orquidea-de-los-andes-edicion-7.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://ficfusa.com/orquidea-de-los-andes/",
+   "primera_vez": "2026-11-12T11:34",
+   "ultima_vez": "2026-11-12T12:05",
+   "estado": "descartada",
+   "_por_que": "revista Orquídea de los Andes, ediciones 2016–2021 (auditoría 12 nov)",
+   "revisado": "2026-11-12T12:00"
+  },
+  "https://ficfusa.com/documentos/orquidea-de-los-andes-edicion-8.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://ficfusa.com/orquidea-de-los-andes/",
+   "primera_vez": "2026-11-12T11:34",
+   "ultima_vez": "2026-11-12T12:05",
+   "estado": "descartada",
+   "_por_que": "revista Orquídea de los Andes, ediciones 2016–2021 (auditoría 12 nov)",
+   "revisado": "2026-11-12T12:00"
+  },
+  "https://ficfusa.com/producciones/melodia-del-rio.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://ficfusa.com/melodia-del-rio-cortometraje/",
+   "primera_vez": "2026-11-12T11:34",
+   "ultima_vez": "2026-11-12T12:05",
+   "estado": "descartada",
+   "_por_que": "dossier de una producción propia del festival (auditoría 12 nov)",
+   "revisado": "2026-11-12T12:00"
+  },
+  "https://ficfusa.com/programacion": {
+   "tipo": "pagina-programa",
+   "visto_en": "https://ficfusa.com",
+   "primera_vez": "2026-11-12T11:34",
+   "ultima_vez": "2026-11-12T12:05",
+   "estado": "usada",
+   "_por_que": "página de programación: sus láminas y el PDF (auditoría 12 nov)",
+   "revisado": "2026-11-12T12:00"
+  },
+  "https://ficfusa.com/seleccion-oficial-ficfusa-2026": {
+   "tipo": "pagina-programa",
+   "visto_en": "https://ficfusa.com",
+   "primera_vez": "2026-11-12T11:34",
+   "ultima_vez": "2026-11-12T12:05",
+   "estado": "usada",
+   "_por_que": "categorías de la selección, coherente con el catálogo (auditoría 12 nov)",
+   "revisado": "2026-11-12T12:00"
+  },
+  "https://ficfusa.com/wp-content/uploads/2026/11/programacion-11-16-noviembre-ficfusa.webp": {
+   "tipo": "imagen-programa",
+   "visto_en": "https://ficfusa.com/programacion/",
+   "primera_vez": "2026-11-12T11:34",
+   "ultima_vez": "2026-11-12T12:05",
+   "estado": "usada",
+   "_por_que": "láminas diarias de programación 11–16 nov: coinciden con la app (auditoría 12 nov)",
+   "revisado": "2026-11-12T12:00"
+  },
+  "https://ficfusa.com/wp-content/uploads/2026/11/programacion-11-de-noviembre-1.webp": {
+   "tipo": "imagen-programa",
+   "visto_en": "https://ficfusa.com/programacion/",
+   "primera_vez": "2026-11-12T11:34",
+   "ultima_vez": "2026-11-12T12:05",
+   "estado": "usada",
+   "_por_que": "láminas diarias de programación 11–16 nov: coinciden con la app (auditoría 12 nov)",
+   "revisado": "2026-11-12T12:00"
+  },
+  "https://ficfusa.com/wp-content/uploads/2026/11/programacion-12-noviembre-ficfusa-2.webp": {
+   "tipo": "imagen-programa",
+   "visto_en": "https://ficfusa.com/programacion/",
+   "primera_vez": "2026-11-12T11:34",
+   "ultima_vez": "2026-11-12T12:05",
+   "estado": "usada",
+   "_por_que": "láminas diarias de programación 11–16 nov: coinciden con la app (auditoría 12 nov)",
+   "revisado": "2026-11-12T12:00"
+  },
+  "https://ficfusa.com/wp-content/uploads/2026/11/programacion-12-noviembre-ficfusa.webp": {
+   "tipo": "imagen-programa",
+   "visto_en": "https://ficfusa.com/programacion/",
+   "primera_vez": "2026-11-12T11:34",
+   "ultima_vez": "2026-11-12T12:05",
+   "estado": "usada",
+   "_por_que": "láminas diarias de programación 11–16 nov: coinciden con la app (auditoría 12 nov)",
+   "revisado": "2026-11-12T12:00"
+  },
+  "https://ficfusa.com/wp-content/uploads/2026/11/programacion-13-noviembre-ficfusa-barro-electrico.webp": {
+   "tipo": "imagen-programa",
+   "visto_en": "https://ficfusa.com/programacion/",
+   "primera_vez": "2026-11-12T11:34",
+   "ultima_vez": "2026-11-12T12:05",
+   "estado": "usada",
+   "_por_que": "láminas diarias de programación 11–16 nov: coinciden con la app (auditoría 12 nov)",
+   "revisado": "2026-11-12T12:00"
+  },
+  "https://ficfusa.com/wp-content/uploads/2026/11/programacion-13-noviembre-ficfusa.webp": {
+   "tipo": "imagen-programa",
+   "visto_en": "https://ficfusa.com/programacion/",
+   "primera_vez": "2026-11-12T11:34",
+   "ultima_vez": "2026-11-12T12:05",
+   "estado": "usada",
+   "_por_que": "láminas diarias de programación 11–16 nov: coinciden con la app (auditoría 12 nov)",
+   "revisado": "2026-11-12T12:00"
+  },
+  "https://ficfusa.com/wp-content/uploads/2026/11/programacion-14-de-noviembre-1.webp": {
+   "tipo": "imagen-programa",
+   "visto_en": "https://ficfusa.com/programacion/",
+   "primera_vez": "2026-11-12T11:34",
+   "ultima_vez": "2026-11-12T12:05",
+   "estado": "usada",
+   "_por_que": "láminas diarias de programación 11–16 nov: coinciden con la app (auditoría 12 nov)",
+   "revisado": "2026-11-12T12:00"
+  },
+  "https://ficfusa.com/wp-content/uploads/2026/11/programacion-14-de-noviembre-2.webp": {
+   "tipo": "imagen-programa",
+   "visto_en": "https://ficfusa.com/programacion/",
+   "primera_vez": "2026-11-12T11:34",
+   "ultima_vez": "2026-11-12T12:05",
+   "estado": "usada",
+   "_por_que": "láminas diarias de programación 11–16 nov: coinciden con la app (auditoría 12 nov)",
+   "revisado": "2026-11-12T12:00"
+  },
+  "https://ficfusa.com/wp-content/uploads/2026/11/programacion-14-de-noviembre-3.webp": {
+   "tipo": "imagen-programa",
+   "visto_en": "https://ficfusa.com/programacion/",
+   "primera_vez": "2026-11-12T11:34",
+   "ultima_vez": "2026-11-12T12:05",
+   "estado": "usada",
+   "_por_que": "láminas diarias de programación 11–16 nov: coinciden con la app (auditoría 12 nov)",
+   "revisado": "2026-11-12T12:00"
+  },
+  "https://ficfusa.com/wp-content/uploads/2026/11/programacion-14-de-noviembre-4.webp": {
+   "tipo": "imagen-programa",
+   "visto_en": "https://ficfusa.com/programacion/",
+   "primera_vez": "2026-11-12T11:34",
+   "ultima_vez": "2026-11-12T12:05",
+   "estado": "usada",
+   "_por_que": "láminas diarias de programación 11–16 nov: coinciden con la app (auditoría 12 nov)",
+   "revisado": "2026-11-12T12:00"
+  },
+  "https://ficfusa.com/wp-content/uploads/2026/11/programacion-14-de-noviembre-5.webp": {
+   "tipo": "imagen-programa",
+   "visto_en": "https://ficfusa.com/programacion/",
+   "primera_vez": "2026-11-12T11:34",
+   "ultima_vez": "2026-11-12T12:05",
+   "estado": "usada",
+   "_por_que": "láminas diarias de programación 11–16 nov: coinciden con la app (auditoría 12 nov)",
+   "revisado": "2026-11-12T12:00"
+  },
+  "https://ficfusa.com/wp-content/uploads/2026/11/programacion-14-de-noviembre-6.webp": {
+   "tipo": "imagen-programa",
+   "visto_en": "https://ficfusa.com/programacion/",
+   "primera_vez": "2026-11-12T11:34",
+   "ultima_vez": "2026-11-12T12:05",
+   "estado": "usada",
+   "_por_que": "láminas diarias de programación 11–16 nov: coinciden con la app (auditoría 12 nov)",
+   "revisado": "2026-11-12T12:00"
+  },
+  "https://ficfusa.com/wp-content/uploads/2026/11/programacion-14-de-noviembre-7.webp": {
+   "tipo": "imagen-programa",
+   "visto_en": "https://ficfusa.com/programacion/",
+   "primera_vez": "2026-11-12T11:34",
+   "ultima_vez": "2026-11-12T12:05",
+   "estado": "usada",
+   "_por_que": "láminas diarias de programación 11–16 nov: coinciden con la app (auditoría 12 nov)",
+   "revisado": "2026-11-12T12:00"
+  },
+  "https://ficfusa.com/wp-content/uploads/2026/11/programacion-ficfusa.webp": {
+   "tipo": "imagen-programa",
+   "visto_en": "https://ficfusa.com/programacion/",
+   "primera_vez": "2026-11-12T11:34",
+   "ultima_vez": "2026-11-12T12:05",
+   "estado": "usada",
+   "_por_que": "láminas diarias de programación 11–16 nov: coinciden con la app (auditoría 12 nov)",
+   "revisado": "2026-11-12T12:00"
+  },
+  "https://forms.gle/2CjYnqB1Lk6owLUj6": {
+   "tipo": "formulario",
+   "visto_en": "https://ficfusa.com/apoyanos/",
+   "primera_vez": "2026-11-12T11:34",
+   "ultima_vez": "2026-11-12T12:05",
+   "estado": "descartada",
+   "_por_que": "formulario cerrado, inexistente o fuera de las fechas del festival (donaciones, convocatorias, encuentro de mayo) (auditoría 12 nov)",
+   "revisado": "2026-11-12T12:00"
+  },
+  "https://forms.gle/6r2tpyme4AGPwzFT7": {
+   "tipo": "formulario",
+   "visto_en": "https://ficfusa.com/competencia-nacional-hecho-aqui/",
+   "primera_vez": "2026-11-12T11:34",
+   "ultima_vez": "2026-11-12T12:05",
+   "estado": "descartada",
+   "_por_que": "formulario cerrado, inexistente o fuera de las fechas del festival (donaciones, convocatorias, encuentro de mayo) (auditoría 12 nov)",
+   "revisado": "2026-11-12T12:00"
+  },
+  "https://forms.gle/7QQZ1E8xMSBbT7tY7": {
+   "tipo": "formulario",
+   "visto_en": "https://linktr.ee/Ficfusa",
+   "primera_vez": "2026-11-12T11:34",
+   "ultima_vez": "2026-11-12T12:05",
+   "estado": "usada",
+   "_por_que": "registration_url de su actividad (afirmación, #1469) (auditoría 12 nov)",
+   "revisado": "2026-11-12T12:00"
+  },
+  "https://forms.gle/GrqB5bHgz4xHUzLF6": {
+   "tipo": "formulario",
+   "visto_en": "https://linktr.ee/Ficfusa",
+   "primera_vez": "2026-11-12T11:34",
+   "ultima_vez": "2026-11-12T12:05",
+   "estado": "usada",
+   "_por_que": "registration_url de su actividad (afirmación, #1469) (auditoría 12 nov)",
+   "revisado": "2026-11-12T12:00"
+  },
+  "https://forms.gle/RyW6Mvw57CGWS2qe7": {
+   "tipo": "formulario",
+   "visto_en": "https://ficfusa.com/encuentro-audiovisual-del-sumapaz/",
+   "primera_vez": "2026-11-12T11:34",
+   "ultima_vez": "2026-11-12T12:05",
+   "estado": "descartada",
+   "_por_que": "formulario cerrado, inexistente o fuera de las fechas del festival (donaciones, convocatorias, encuentro de mayo) (auditoría 12 nov)",
+   "revisado": "2026-11-12T12:00"
+  },
+  "https://forms.gle/WrALM825Bjh8CvMS6": {
+   "tipo": "formulario",
+   "visto_en": "https://ficfusa.com/festival-internacional-cine-fusagasuga-ficfusa-ganador-comparte-lo-somos/",
+   "primera_vez": "2026-11-12T11:34",
+   "ultima_vez": "2026-11-12T12:05",
+   "estado": "descartada",
+   "_por_que": "formulario cerrado, inexistente o fuera de las fechas del festival (donaciones, convocatorias, encuentro de mayo) (auditoría 12 nov)",
+   "revisado": "2026-11-12T12:00"
+  },
+  "https://forms.gle/YihMckVetY6v56Ft8": {
+   "tipo": "formulario",
+   "visto_en": "https://linktr.ee/Ficfusa",
+   "primera_vez": "2026-11-12T11:34",
+   "ultima_vez": "2026-11-12T12:05",
+   "estado": "usada",
+   "_por_que": "registration_url de su actividad (afirmación, #1469) (auditoría 12 nov)",
+   "revisado": "2026-11-12T12:00"
+  },
+  "https://forms.gle/cgLr9G6SWJMx3d2E8": {
+   "tipo": "formulario",
+   "visto_en": "https://linktr.ee/Ficfusa",
+   "primera_vez": "2026-11-12T11:34",
+   "ultima_vez": "2026-11-12T12:05",
+   "estado": "usada",
+   "_por_que": "registration_url de su actividad (afirmación, #1469) (auditoría 12 nov)",
+   "revisado": "2026-11-12T12:00"
+  },
+  "https://forms.gle/eXJnJDp5KcgRge5z5": {
+   "tipo": "formulario",
+   "visto_en": "https://ficfusa.com/convocatoria-orquidea-de-los-andes-2026/",
+   "primera_vez": "2026-11-12T11:34",
+   "ultima_vez": "2026-11-12T12:05",
+   "estado": "descartada",
+   "_por_que": "formulario cerrado, inexistente o fuera de las fechas del festival (donaciones, convocatorias, encuentro de mayo) (auditoría 12 nov)",
+   "revisado": "2026-11-12T12:00"
+  },
+  "https://forms.gle/fSxnVxS8j2bfDAv56": {
+   "tipo": "formulario",
+   "visto_en": "https://linktr.ee/Ficfusa",
+   "primera_vez": "2026-11-12T11:34",
+   "ultima_vez": "2026-11-12T11:39",
+   "estado": "descartada",
+   "_por_que": "taller de actuación 12–13 nov, pago ($100.000): el formulario solo dice «Lugar: Fusagasugá»; sin sede no se publica (auditoría 12 nov)",
+   "revisado": "2026-11-12T12:00"
+  },
+  "https://forms.gle/qgoBULzJoZyUvMiA8": {
+   "tipo": "formulario",
+   "visto_en": "https://linktr.ee/Ficfusa",
+   "primera_vez": "2026-11-12T11:34",
+   "ultima_vez": "2026-11-12T12:05",
+   "estado": "usada",
+   "_por_que": "registration_url de su actividad (afirmación, #1469) (auditoría 12 nov)",
+   "revisado": "2026-11-12T12:00"
+  },
+  "https://forms.gle/vY9ZGeeAYTspqHmU8": {
+   "tipo": "formulario",
+   "visto_en": "https://ficfusa.com/artes-para-la-paz-en-fusagasuga/",
+   "primera_vez": "2026-11-12T11:34",
+   "ultima_vez": "2026-11-12T12:05",
+   "estado": "descartada",
+   "_por_que": "formulario cerrado, inexistente o fuera de las fechas del festival (donaciones, convocatorias, encuentro de mayo) (auditoría 12 nov)",
+   "revisado": "2026-11-12T12:00"
+  },
+  "https://forms.gle/zf62BNvDmU4Tx3ah6": {
+   "tipo": "formulario",
+   "visto_en": "https://linktr.ee/Ficfusa",
+   "primera_vez": "2026-11-12T11:34",
+   "ultima_vez": "2026-11-12T12:05",
+   "estado": "usada",
+   "_por_que": "registration_url de su actividad (afirmación, #1469) (auditoría 12 nov)",
+   "revisado": "2026-11-12T12:00"
+  },
+  "https://docs.google.com/forms/d/e/1FAIpQLSdgM6T0AHoNwsUHtnp9S8BNMtxd_HclEhHytH8opp2cjX06Gg/viewform": {
+   "tipo": "formulario",
+   "visto_en": "https://ficfusa.com/competencia-internacional-hechos-de-mujeres/",
+   "primera_vez": "2026-11-12T11:39",
+   "ultima_vez": "2026-11-12T11:39",
+   "estado": "descartada",
+   "_por_que": "convocatoria, acreditación o actividad de otra edición (no es programación 2026) (auditoría 12 nov)",
+   "revisado": "2026-11-12T12:00"
+  },
+  "https://docs.google.com/forms/d/e/1FAIpQLSc1P8ux4dMrTI8YaxdjVJhqPk6HTtZZEDDZvZY_3oACi272hA/viewform": {
+   "tipo": "formulario",
+   "visto_en": "raíz bio_2",
+   "primera_vez": "2026-11-12T12:05",
+   "ultima_vez": "2026-11-12T12:05",
+   "estado": "descartada",
+   "_por_que": "«Súmate al equipo FICFUSA»: voluntarios (link de la bio)",
+   "revisado": "2026-11-12T12:05"
+  }
+ }
+}

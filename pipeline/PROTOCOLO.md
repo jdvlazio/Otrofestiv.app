@@ -144,7 +144,22 @@ corrige publicando de nuevo: el barrido se repite durante el festival.
 
 ## 2 · El proceso, paso a paso
 
-### Paso 0 · Fuentes a su carpeta
+### Paso 0 · Inventario de TODO lo que el festival publicó (12 nov 2026)
+
+Antes de transcribir nada: `python3 pipeline/fuentes_descubrir.py <fid> --raiz web=… --raiz bio=…`.
+Las raíces se sacan del perfil de Instagram SIN sesión: la web y **cada link de la
+bio** (Linktree, Drive, formulario, FilmFreeway…). Si no hay web o no hay bio,
+`--raiz _sin_web="porqué"` / `_sin_bio="porqué"`. El comando recorre la web y la
+bio (2 saltos) y anota cada PDF, formulario, Drive, imagen y página de programa en
+`festivals/staging/<fid>-fuentes.json`. **Cada fuente se abre y se marca**:
+`--marcar <url|prefijo> usada|descartada "porqué"`. Un formulario de inscripción
+de una actividad se carga como `registration_url` (afirmación). Por qué existe:
+Villa de Leyva tenía su programa completo en un PDF de la home y FICFUSA nueve
+formularios en el Linktree de la bio; los dos se publicaron incompletos porque
+mirábamos lo conocido, no lo publicado. `[inventario-fuentes]` frena si queda
+algo sin revisar; `publicar.py` frena si el recorrido tiene más de 24 h.
+
+### Paso 0·b · Fuentes a su carpeta
 
 Todo original va a **`fuentes/<fest-id>/`** (gitignored — decenas de MB, y el
 repo sirve GitHub Pages). El escritorio es de TRÁNSITO: nada de trabajo vive
@@ -546,6 +561,7 @@ una hipótesis sobre la fuente, y se comprueba contra ella.
 
 ## 3 · Checklist de publicación
 
+- [ ] **Inventario de fuentes** (`<fid>-fuentes.json`): web + bio de IG como raíces, recorrido de ≤ 24 h, NADA `sin-revisar`
 - [ ] Fuentes en `fuentes/<id>/` · derivados en staging con `capturado`
 - [ ] Tabla de sedes canónica hecha · 0 salas dentro de nombres de sede
 - [ ] Slots compartidos DECIDIDOS (programa vs anclaje vs separadas)

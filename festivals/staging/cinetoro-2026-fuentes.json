@@ -1,0 +1,95 @@
+{
+ "_provenance": {
+  "fuente": "pipeline/fuentes_descubrir.py",
+  "capturado": "2026-11-12T12:01",
+  "paginas_leidas": 60,
+  "errores": [
+   "https://cinetoro.org/en/home-en-2: HTTP Error 404: Not Found",
+   "https://cinetoro.org/wp-admin/admin-ajax.php: HTTP Error 400: Bad Request",
+   "https://cinetoro.org/wp-content/plugins/essential-blocks/assets/images: HTTP Error 403: Forbidden",
+   "https://cinetoro.org/wp-content/plugins/essential-blocks: HTTP Error 403: Forbidden",
+   "https://cinetoro.org/en/sound-lab: HTTP Error 404: Not Found",
+   "https://cinetoro.org/en/contact: HTTP Error 404: Not Found",
+   "https://cinetoro.org/en/our-team: HTTP Error 404: Not Found"
+  ]
+ },
+ "raices": {
+  "web": "https://cinetoro.org",
+  "bio": "https://linktr.ee/cinetoroexperimental",
+  "instagram": "cinetorofilmfestival"
+ },
+ "items": {
+  "https://cinetoro.org/category/edicion-2026/seleccion-2026": {
+   "tipo": "pagina-programa",
+   "visto_en": "https://cinetoro.org",
+   "primera_vez": "2026-11-12T11:42",
+   "ultima_vez": "2026-11-12T12:01",
+   "estado": "usada",
+   "_por_que": "categorías de competencia (auditoría 12 nov)",
+   "revisado": "2026-11-12T12:00"
+  },
+  "https://cinetoro.org/programacion-2026-2": {
+   "tipo": "pagina-programa",
+   "visto_en": "https://cinetoro.org",
+   "primera_vez": "2026-11-12T11:42",
+   "ultima_vez": "2026-11-12T12:01",
+   "estado": "usada",
+   "_por_que": "parrilla oficial: las 23 funciones de Toro y Roldanillo coinciden (lo de otras ciudades, en _fuera) (auditoría 12 nov)",
+   "revisado": "2026-11-12T12:00"
+  },
+  "https://cinetoro.org/programacion-academica": {
+   "tipo": "pagina-programa",
+   "visto_en": "https://cinetoro.org",
+   "primera_vez": "2026-11-12T11:42",
+   "ultima_vez": "2026-11-12T12:01",
+   "estado": "descartada",
+   "_por_que": "programación académica de la edición 2025 (auditoría 12 nov)",
+   "revisado": "2026-11-12T12:00"
+  },
+  "https://cinetoro.org/programas": {
+   "tipo": "pagina-programa",
+   "visto_en": "https://cinetoro.org",
+   "primera_vez": "2026-11-12T11:42",
+   "ultima_vez": "2026-11-12T12:01",
+   "estado": "usada",
+   "_por_que": "biografías de los invitados (auditoría 12 nov)",
+   "revisado": "2026-11-12T12:00"
+  },
+  "https://cinetoro.org/programas-2": {
+   "tipo": "pagina-programa",
+   "visto_en": "https://cinetoro.org",
+   "primera_vez": "2026-11-12T11:42",
+   "ultima_vez": "2026-11-12T12:01",
+   "estado": "usada",
+   "_por_que": "biografías de los invitados (auditoría 12 nov)",
+   "revisado": "2026-11-12T12:00"
+  },
+  "https://forms.gle/EN8kp3aQAbaKbEqn7": {
+   "tipo": "formulario",
+   "visto_en": "https://cinetoro.org/laboratorio-de-sonido/",
+   "primera_vez": "2026-11-12T11:42",
+   "ultima_vez": "2026-11-12T12:01",
+   "estado": "descartada",
+   "_por_que": "Laboratorio Abisal 2025 (auditoría 12 nov)",
+   "revisado": "2026-11-12T12:00"
+  },
+  "https://forms.gle/KrhFmwoZEa2hJJv4A": {
+   "tipo": "formulario",
+   "visto_en": "https://cinetoro.org/laboratoriohibridaciones/",
+   "primera_vez": "2026-11-12T11:42",
+   "ultima_vez": "2026-11-12T12:01",
+   "estado": "descartada",
+   "_por_que": "laboratorio solo para participantes aceptados (en _fuera); formulario cerrado (auditoría 12 nov)",
+   "revisado": "2026-11-12T12:00"
+  },
+  "https://forms.gle/ft8dkcv5hiiCNUZd7": {
+   "tipo": "formulario",
+   "visto_en": "https://linktr.ee/cinetoroexperimental",
+   "primera_vez": "2026-11-12T11:42",
+   "ultima_vez": "2026-11-12T12:01",
+   "estado": "descartada",
+   "_por_que": "venta del libro ÉCFRASIS (auditoría 12 nov)",
+   "revisado": "2026-11-12T12:00"
+  }
+ }
+}
