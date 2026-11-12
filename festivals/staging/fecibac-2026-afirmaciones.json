@@ -38,6 +38,86 @@
    "valor": "17:00",
    "evidencia": "post de IG del festival (11 nov), más nuevo que la programación DfYAPbqGyr0 (5 nov, 5:30 p. m.): lámina 1 «HORA: 5:00 p.m.» (Vision y a ojo)",
    "contra": "17:30"
+  },
+  {
+   "ancla": {
+    "sede": "UdeA Campus Caucasia - Caucasia",
+    "dia": "2026-11-13",
+    "hora": "08:00"
+   },
+   "funcion": "f_9da375126f",
+   "casilla": "registration_url",
+   "valor": "https://docs.google.com/forms/d/e/1FAIpQLSdKjQkJJrfSPGXtYssvZvvt--wHvraN5duUPNg_kDL2cmNtAw/viewform",
+   "fuente": {
+    "tipo": "festival-web",
+    "url": "https://docs.google.com/forms/d/e/1FAIpQLSdKjQkJJrfSPGXtYssvZvvt--wHvraN5duUPNg_kDL2cmNtAw/viewform",
+    "fecha": "2026-11-12"
+   },
+   "evidencia": "formulario «Inscripción Taller infantil \"Un Recorrido por el Mundo del Cine\". Con Chico y Proqui» (enlazado en linktr.ee/festivaldecine): «Viernes 13 de noviembre ⏰ 8:00 a. m. a 11:00 a. m. 🎟️ Inscripción gratuita»"
+  },
+  {
+   "ancla": {
+    "sede": "UdeA Campus Caucasia - Caucasia",
+    "dia": "2026-11-13",
+    "hora": "08:00"
+   },
+   "funcion": "f_9da375126f",
+   "casilla": "requires_registration",
+   "valor": true,
+   "fuente": {
+    "tipo": "festival-web",
+    "url": "https://docs.google.com/forms/d/e/1FAIpQLSdKjQkJJrfSPGXtYssvZvvt--wHvraN5duUPNg_kDL2cmNtAw/viewform",
+    "fecha": "2026-11-12"
+   },
+   "evidencia": "formulario «Inscripción Taller infantil \"Un Recorrido por el Mundo del Cine\". Con Chico y Proqui» (enlazado en linktr.ee/festivaldecine): «Viernes 13 de noviembre ⏰ 8:00 a. m. a 11:00 a. m. 🎟️ Inscripción gratuita»"
+  },
+  {
+   "ancla": {
+    "sede": "UdeA Campus Caucasia - Caucasia",
+    "dia": "2026-11-13",
+    "hora": "09:00"
+   },
+   "funcion": "f_92edca12de",
+   "casilla": "registration_url",
+   "valor": "https://docs.google.com/forms/d/e/1FAIpQLScc2NIuDO7UlgCrMNf8OcZDBZAVIkzhVYMeWW4HDqxNQ6RfSg/viewform",
+   "fuente": {
+    "tipo": "festival-web",
+    "url": "https://docs.google.com/forms/d/e/1FAIpQLScc2NIuDO7UlgCrMNf8OcZDBZAVIkzhVYMeWW4HDqxNQ6RfSg/viewform",
+    "fecha": "2026-11-12"
+   },
+   "evidencia": "formulario «Inscripción Taller de Escuchando con la Cámara» (enlazado en linktr.ee/festivaldecine); el PDF oficial pone el taller el viernes 13 a las 9:00 (el formulario dice miércoles 11: se queda el PDF)"
+  },
+  {
+   "ancla": {
+    "sede": "UdeA Campus Caucasia - Caucasia",
+    "dia": "2026-11-13",
+    "hora": "09:00"
+   },
+   "funcion": "f_92edca12de",
+   "casilla": "requires_registration",
+   "valor": true,
+   "fuente": {
+    "tipo": "festival-web",
+    "url": "https://docs.google.com/forms/d/e/1FAIpQLScc2NIuDO7UlgCrMNf8OcZDBZAVIkzhVYMeWW4HDqxNQ6RfSg/viewform",
+    "fecha": "2026-11-12"
+   },
+   "evidencia": "formulario «Inscripción Taller de Escuchando con la Cámara» (enlazado en linktr.ee/festivaldecine); el PDF oficial pone el taller el viernes 13 a las 9:00 (el formulario dice miércoles 11: se queda el PDF)"
+  },
+  {
+   "ancla": {
+    "sede": "UdeA Campus Caucasia - Caucasia",
+    "dia": "2026-11-13",
+    "hora": "08:00"
+   },
+   "funcion": "f_9da375126f",
+   "casilla": "duration",
+   "valor": "180 min",
+   "fuente": {
+    "tipo": "festival-web",
+    "url": "https://docs.google.com/forms/d/e/1FAIpQLSdKjQkJJrfSPGXtYssvZvvt--wHvraN5duUPNg_kDL2cmNtAw/viewform",
+    "fecha": "2026-11-12"
+   },
+   "evidencia": "formulario de inscripción: «8:00 a. m. a 11:00 a. m.»"
   }
  ]
 }
