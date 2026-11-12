@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "Programación oficial, 4 láminas de @festivaldecine.bc (5 nov 2026)",
-  "capturado": "2026-11-11",
+  "capturado": "2026-11-12",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "name": "FECIBAC",
@@ -963,7 +963,7 @@
    "title": "Taller de creación de carteles cinematográficos para niños y niñas",
    "type": "event",
    "section": "🛠️ Talleres con Expertos",
-   "duration": "120 min",
+   "duration": "180 min",
    "_ancla": [
     "UdeA Campus Caucasia - Caucasia",
     "2026-11-13",
@@ -986,6 +986,8 @@
    "_fid": "f_9da375126f",
    "id": "f_9da375126f",
    "is_free": true,
+   "requires_registration": true,
+   "registration_url": "https://docs.google.com/forms/d/e/1FAIpQLSdKjQkJJrfSPGXtYssvZvvt--wHvraN5duUPNg_kDL2cmNtAw/viewform",
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -1001,11 +1003,22 @@
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-05"
+     "fecha": "2026-11-12",
+     "url": "https://docs.google.com/forms/d/e/1FAIpQLSdKjQkJJrfSPGXtYssvZvvt--wHvraN5duUPNg_kDL2cmNtAw/viewform"
     },
     "entrada": {
      "tipo": "festival-web",
      "fecha": "2026-11-05"
+    },
+    "requires_registration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12",
+     "url": "https://docs.google.com/forms/d/e/1FAIpQLSdKjQkJJrfSPGXtYssvZvvt--wHvraN5duUPNg_kDL2cmNtAw/viewform"
+    },
+    "registration_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12",
+     "url": "https://docs.google.com/forms/d/e/1FAIpQLSdKjQkJJrfSPGXtYssvZvvt--wHvraN5duUPNg_kDL2cmNtAw/viewform"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -1052,6 +1065,8 @@
    "_fid": "f_92edca12de",
    "id": "f_92edca12de",
    "is_free": true,
+   "requires_registration": true,
+   "registration_url": "https://docs.google.com/forms/d/e/1FAIpQLScc2NIuDO7UlgCrMNf8OcZDBZAVIkzhVYMeWW4HDqxNQ6RfSg/viewform",
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -1072,6 +1087,16 @@
     "entrada": {
      "tipo": "festival-web",
      "fecha": "2026-11-05"
+    },
+    "requires_registration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12",
+     "url": "https://docs.google.com/forms/d/e/1FAIpQLScc2NIuDO7UlgCrMNf8OcZDBZAVIkzhVYMeWW4HDqxNQ6RfSg/viewform"
+    },
+    "registration_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12",
+     "url": "https://docs.google.com/forms/d/e/1FAIpQLScc2NIuDO7UlgCrMNf8OcZDBZAVIkzhVYMeWW4HDqxNQ6RfSg/viewform"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -2062,7 +2087,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-11T17:10:40",
+  "fecha": "2026-11-12T11:47:08",
   "plan_sha": "d5407859a874077e",
   "paso": 6,
   "cmd": "python3 pipeline/fecibac-2026-verificar.py"
