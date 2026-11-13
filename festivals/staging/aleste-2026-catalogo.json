@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "MAMM (ciclo 9º Festival Al Este) + IG @aleste.colombia (3, 5 y 10 nov 2026)",
-  "capturado": "2026-11-12",
+  "capturado": "2026-11-13",
   "url": "https://www.elmamm.org/cine/9o-festival-al-este/",
   "metodo": "fichas del MAMM y láminas de IG leídas a ojo y por OCR"
  },
@@ -161,6 +161,45 @@
     "url": "https://www.instagram.com/p/DfkttriN6pD/",
     "date": "2026-11-12"
    }
+  },
+  {
+   "titulo": "Shame and Money",
+   "director": "Visar Morina",
+   "anio": 2026,
+   "pais": "Alemania, Kosovo, Eslovenia, Albania, Macedonia del Norte, Bélgica",
+   "tipo": "largo",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfsHqtAlpmC/",
+    "date": "2026-11-12",
+    "lamina": "01.jpg"
+   },
+   "duracion_min": 130
+  },
+  {
+   "titulo": "Todas las canciones del mundo",
+   "director": "Santiago Flórez Rincón",
+   "anio": 2026,
+   "pais": "Colombia",
+   "tipo": "largo",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfsHqtAlpmC/",
+    "date": "2026-11-12",
+    "lamina": "02.jpg"
+   },
+   "duracion_min": 85
+  },
+  {
+   "titulo": "Histeria",
+   "director": "Mehmet Akif Büyükatalay",
+   "anio": 2025,
+   "pais": "Alemania",
+   "tipo": "largo",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfsHqtAlpmC/",
+    "date": "2026-11-12",
+    "lamina": "04.jpg"
+   },
+   "duracion_min": 104
   }
  ]
 }

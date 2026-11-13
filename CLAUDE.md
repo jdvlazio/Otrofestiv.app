@@ -114,14 +114,14 @@ deliberada existe la etiqueta `frontera-ok`.
 | `festicinerio2026` | FESTICINERIO | Riosucio | 8–13 NOV | **Próximo / activo** |
 | `ficfusa2026` | FICFUSA | Fusagasugá | 11–16 NOV | **Próximo / activo** |
 | `fecibac2026` | FECIBAC | Caucasia | 10–14 NOV | **Próximo / activo** |
-| `aleste2026` | Al Este | Medellín | 18–22 NOV | **Próximo / activo** |
+| `aleste2026` | Al Este | Medellín y Bogotá | 18–29 NOV | **Próximo / activo** |
 | `villadeleyvaiff2026` | Festcinevilla | Villa de Leyva | 13–16 NOV | **Próximo / activo** |
 | `cinetoro2026` | CINETORO | Toro | 10–15 NOV | **Próximo / activo** |
 | `cortoscali2026` | Cortos Cali | Cali | 27–30 OCT | Recién terminado |
 | `biff2026` | BIFF | Bogotá | 8–14 OCT | Recién terminado |
 | `popayan2026` | Cine Corto Popayán | Popayán | 5–11 OCT | Archivado |
 | `mamut2026` | Mamut | Medellín | 5–11 OCT | Archivado |
-| `filcmar2026` | FILCMAR | Marinilla | 9–13 OCT | Recién terminado |
+| `filcmar2026` | FILCMAR | Marinilla | 9–13 OCT | Archivado |
 | `ficcali2026` | FICCALI | Cali | 16–25 OCT | Recién terminado |
 | `bhff2026` | Bogotá Horror | Bogotá | 22–31 OCT | Recién terminado |
 | `ficica2026` | FICICA | Barranquilla | 20–24 OCT | Recién terminado |
