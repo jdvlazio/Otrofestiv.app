@@ -135,6 +135,23 @@
    "valor": "18:00",
    "evidencia": "Reel del festival del 12 nov, en el pie: «Hora: 6:00 p. m.». La programación oficial (DfYAPbqGyr0, lámina 1) dice 6:30 p. m.; regla de Juan: con horas contradictorias se publica la más temprana. Leído por el vigía 17:30.",
    "contra": "18:30"
+  },
+  {
+   "ancla": {
+    "sede": "Plaza de mercado - Caucasia",
+    "dia": "2026-11-13",
+    "hora": "22:00"
+   },
+   "funcion": "f_9ce42b429f",
+   "casilla": "has_qa",
+   "valor": true,
+   "contra": false,
+   "fuente": {
+    "tipo": "juan",
+    "frase": "Por qué no lo publicaste, esto de esperarme habíamos quedado que no",
+    "fecha": "2026-11-13"
+   },
+   "evidencia": "post de IG del festival (13 nov, más nuevo que DfYAPbqGyr0): lámina 00 «Conversatorio: Jefferson Cardoza: los secretos del cine gótico popular · HORA: 11:00 p.m. · LUGAR: Plaza de Mercado de Caucasia · VIERNES 13 NOV.» (a ojo; el pie dice lo mismo). Es el conversatorio dentro del bloque de 22:00–23:30, misma sede: no mueve la hora. · Fuente del post: https://www.instagram.com/p/DfryZjGOKnr/"
   }
  ]
 }

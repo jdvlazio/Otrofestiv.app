@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "Programación oficial, 4 láminas de @festivaldecine.bc (5 nov 2026)",
-  "capturado": "2026-11-12",
+  "capturado": "2026-11-13",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "name": "FECIBAC",
@@ -1420,7 +1420,7 @@
    "day_order": 3,
    "venue": "Plaza de mercado - Caucasia",
    "event_kind": "evento",
-   "has_qa": false,
+   "has_qa": true,
    "_src": {
     "url": "https://www.instagram.com/p/DfYAPbqGyr0/",
     "lamina": 3,
@@ -1454,8 +1454,9 @@
      "fecha": "2026-11-05"
     },
     "has_qa": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-05"
+     "tipo": "juan",
+     "fecha": "2026-11-13",
+     "frase": "Por qué no lo publicaste, esto de esperarme habíamos quedado que no"
     },
     "title": {
      "tipo": "festival-web",
@@ -2088,7 +2089,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-12T17:16:30",
+  "fecha": "2026-11-13T10:25:50",
   "plan_sha": "d5407859a874077e",
   "paso": 6,
   "cmd": "python3 pipeline/fecibac-2026-verificar.py"
