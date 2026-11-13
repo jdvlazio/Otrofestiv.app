@@ -32,11 +32,27 @@ def main():
     sedes = json.load(io.open(f'{REPO}/pipeline/ficfusa-2026.plan.json', encoding='utf-8'))['festival']['sedes']
     fallos = []
     usadas = set()
+    # Encima de la transcripción, las afirmaciones (IG más nuevo): existe:{…}
+    # agrega una función; venue/time/day mueven la de su ancla.
+    afs = json.load(io.open(f'{ST}/ficfusa-2026-afirmaciones.json', encoding='utf-8'))['afirmaciones']
+    for e in prog:
+        if e['sede'] != 'Por definir':
+            e['venue'] = sedes[e['sede']][0]
+    for a in afs:
+        k = (a['ancla']['dia'], a['ancla']['hora'], plano(a['ancla']['sede']))
+        if a['casilla'] == 'existe' and isinstance(a['valor'], dict):
+            v = a['valor']
+            prog.append({'fecha': v['day'], 'hora': v['time'], 'sede': v['venue'], 'venue': v['venue'], 'titulo': v['title']})
+        elif a['casilla'] in ('venue', 'time', 'day'):
+            campo = {'venue': 'venue', 'time': 'hora', 'day': 'fecha'}[a['casilla']]
+            for e in prog:
+                if e['sede'] != 'Por definir' and (e['fecha'], e['hora'], plano(e['venue'])) == k:
+                    e[campo] = a['valor']
     for e in prog:
         if e['sede'] == 'Por definir':
             continue
         cands = [i for i, f in enumerate(films)
-                 if f.get('day') == e['fecha'] and f.get('time') == e['hora'] and plano(sedes[e['sede']][0]) == plano(f.get('venue'))]
+                 if f.get('day') == e['fecha'] and f.get('time') == e['hora'] and plano(e['venue']) == plano(f.get('venue'))]
         if len(cands) != 1:
             fallos.append(f"{e['fecha']} {e['hora']} {e['sede']} «{e['titulo']}»: {len(cands)} funciones en el build")
             continue
