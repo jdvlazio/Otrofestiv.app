@@ -360,7 +360,7 @@ está pasando de verdad — no lo que alguien recordaba al escribirlo.
 | `type` | string | `film` · `event` · `short` | 45 fest |  |
 | `event_kind` | string | — | 37 fest | Palabra del festival, verbatim (charla, taller, masterclass). Enum en validate-festivals. |
 | `is_cortos` | boolean | — | 43 fest | exige `film_list` Programa curado: exige film_list no vacío. |
-| `film_list` | array | — | 42 fest |  |
+| `film_list` | array | — | 43 fest |  |
 | `is_programa` | boolean | — | 5 fest |  |
 | `is_recurring` | boolean | — | 9 fest |  |
 | `is_awards_screening` | boolean | — | 1 fest |  |

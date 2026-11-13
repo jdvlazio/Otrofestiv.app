@@ -1,17 +1,56 @@
 {
- "_provenance": {"fuente": "declaraciones a mano, cada una con su porqué", "capturado": "2026-11-05"},
+ "_provenance": {
+  "fuente": "declaraciones a mano, cada una con su porqué",
+  "capturado": "2026-11-05"
+ },
  "fichas": {
-  "La Creciente": {"tmdb": 1779631, "_fuente": "https://www.themoviedb.org/movie/1779631", "_por_que": "Pablo Andrés Muñoz Castrillón: la misma ficha de jardin2026 y festicinerio2026; la lámina nombra a Pablo Muñoz como director."},
-  "Entre 2 Aguas": {"tmdb": 1656180, "_fuente": "https://www.themoviedb.org/movie/1656180", "_por_que": "Estreno colombiano del 19 mar 2026 (Canal Trece). No es la homónima española de Lacuesta (536808)."},
-  "El juego de la vida": {"tmdb": 1562450, "_fuente": "https://www.themoviedb.org/movie/1562450", "_por_que": "La misma ficha de ficdeh2026 y ficma2026."},
-  "Brigitte Planeta B": {"tmdb": 1498786, "_fuente": "https://www.themoviedb.org/movie/1498786", "_por_que": "Protagonista Brigitte Baptiste, como dice la lámina."},
-  "En tierra": {"tmdb": 1567732, "_fuente": "https://www.themoviedb.org/movie/1567732", "_por_que": "La misma ficha de ficma2026 (Simón Uribe)."},
-  "Las pesadillas del siervo": {"tmdb": 1791689, "_fuente": "https://www.themoviedb.org/movie/1791689", "_por_que": "La lámina nombra a Manuel Villa como director."}
+  "La Creciente": {
+   "tmdb": 1779631,
+   "_fuente": "https://www.themoviedb.org/movie/1779631",
+   "_por_que": "Pablo Andrés Muñoz Castrillón: la misma ficha de jardin2026 y festicinerio2026; la lámina nombra a Pablo Muñoz como director."
+  },
+  "Entre 2 Aguas": {
+   "tmdb": 1656180,
+   "_fuente": "https://www.themoviedb.org/movie/1656180",
+   "_por_que": "Estreno colombiano del 19 mar 2026 (Canal Trece). No es la homónima española de Lacuesta (536808)."
+  },
+  "El juego de la vida": {
+   "tmdb": 1562450,
+   "_fuente": "https://www.themoviedb.org/movie/1562450",
+   "_por_que": "La misma ficha de ficdeh2026 y ficma2026."
+  },
+  "Brigitte Planeta B": {
+   "tmdb": 1498786,
+   "_fuente": "https://www.themoviedb.org/movie/1498786",
+   "_por_que": "Protagonista Brigitte Baptiste, como dice la lámina."
+  },
+  "En tierra": {
+   "tmdb": 1567732,
+   "_fuente": "https://www.themoviedb.org/movie/1567732",
+   "_por_que": "La misma ficha de ficma2026 (Simón Uribe)."
+  },
+  "Las pesadillas del siervo": {
+   "tmdb": 1791689,
+   "_fuente": "https://www.themoviedb.org/movie/1791689",
+   "_por_que": "La lámina nombra a Manuel Villa como director."
+  }
  },
  "sin_afiche": {
   "La Canoa Dorada (Tanda 1)": "Programa de cortos; el festival no ha publicado qué obras lleva (5 nov 2026).",
   "La Canoa Dorada (Tanda 2)": "Programa de cortos; el festival no ha publicado qué obras lleva (5 nov 2026).",
   "Los hijos de Benkos": "Sin ficha en TMDB ni afiche original (buscado 9 nov: ni por título ni en la filmografía de Lucas Silva, TMDB 2785232). Director y año los da el festival: «Los Hijos de Benkos (Lucas Silva, 2000)», pie de https://www.instagram.com/p/DfdSh_XFLWK/ (8 nov)."
  },
- "sin_pais": {"La Canoa Dorada (Tanda 1)": {"_por_que": "programa de cortos de la competencia La Canoa Dorada; el festival no ha dicho qué cortos van en cada tanda"}, "La Canoa Dorada (Tanda 2)": {"_por_que": "programa de cortos de la competencia La Canoa Dorada; el festival no ha dicho qué cortos van en cada tanda"}}
+ "sin_pais": {
+  "La Canoa Dorada (Tanda 1)": {
+   "_por_que": "programa de cortos de la competencia La Canoa Dorada; el festival no ha dicho qué cortos van en cada tanda"
+  },
+  "La Canoa Dorada (Tanda 2)": {
+   "_por_que": "programa de cortos de la competencia La Canoa Dorada; el festival no ha dicho qué cortos van en cada tanda"
+  }
+ },
+ "no_heredar": {
+  "Animero": {
+   "_por_que": "13 nov 2026: lo único publicado es la tarjeta de sección de SiembraFest («Animero: son de la muerte», misma Nadine Holguín); afiches-ajenos.py la rechaza. Sin afiche original no se hereda."
+  }
+ }
 }

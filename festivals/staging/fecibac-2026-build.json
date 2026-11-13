@@ -1216,6 +1216,98 @@
    "_fid": "f_f499aa1ca7",
    "id": "f_f499aa1ca7",
    "is_free": true,
+   "film_list": [
+    {
+     "title": "Refugiar el gesto",
+     "director": "Adrián Villa-Dávila, Andrés Prado Rojas",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "poster": "https://image.tmdb.org/t/p/w500/bHXUP6sTxTX46cmGdVLDh9eLxqB.jpg",
+     "posterSource": "tmdb",
+     "synopsis": "A group of young dancers who witnessed the gradual disappearance of the traditional Danza de las Tabliteras.",
+     "synopsis_lang": "es",
+     "synopsis_en": "A group of young dancers witnessed the gradual disappearance of the traditional Danza de las Tabliteras. Determined to bring it back to life, they learned its rhythms and choreography from the four remaining elders who still carried the dance in their bodies. Once again, these gestures echo the movements that decades ago filled the community of San Antonio, Bolívar, with pride, vitality, and collective spirit.",
+     "year": 2026,
+     "duration": "11 min",
+     "lbSlug": "sheltering-gestures",
+     "genre": "Documental"
+    },
+    {
+     "title": "Deux Ex Necro Machina",
+     "director": "Mateo Montoya Correa",
+     "country": "Colombia",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Animero",
+     "director": "Nadine Holguín",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "year": 2025,
+     "duration": "11 min",
+     "genre": "Drama"
+    },
+    {
+     "title": "La habitación prohibida",
+     "director": "Cine en el Aula",
+     "country": "Colombia",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Te Busqué",
+     "director": "Fabián Correa Múnera",
+     "country": "Colombia",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Tradwife",
+     "director": "Luisa Fernanda Nieto Díaz",
+     "country": "Colombia",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Entre rimas y rutinas -X",
+     "director": "Fabio Martínez «Profeta»",
+     "country": "Colombia",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Lele",
+     "director": "Jairo Barreto",
+     "country": "Colombia",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Pto. Berrío y Pto. Boyacá, orgullo porteño",
+     "director": "Daniel Vargas, Kerely López",
+     "country": "Colombia",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Las caras de un sueño",
+     "director": "Holiver Viloria",
+     "country": "Colombia",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Paturky",
+     "director": "Mauricio Silva",
+     "country": "Colombia",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Caucasia: el ruido de nuestra realidad",
+     "director": "José Daniel Acosta Cordero",
+     "country": "Colombia",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Secreto en el bosque",
+     "director": "Cine en el Aula",
+     "country": "Colombia",
+     "flags": "🇨🇴"
+    }
+   ],
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -1248,6 +1340,11 @@
     "title": {
      "tipo": "festival-web",
      "fecha": "2026-11-05"
+    },
+    "film_list": {
+     "tipo": "festival-ig",
+     "fecha": "2026-11-13",
+     "url": "https://www.instagram.com/p/DfsR7t_G83v/"
     },
     "type": {
      "tipo": "festival-web",
@@ -1782,6 +1879,38 @@
    "_fid": "f_8494fa569e",
    "id": "f_8494fa569e",
    "is_free": true,
+   "film_list": [
+    {
+     "title": "Esquizofrenia – X",
+     "director": "Israel Téllez",
+     "country": "Colombia",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Una vida con sombras",
+     "director": "Taller de Formación Audiovisual Cine en el Aula",
+     "country": "Colombia",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Víctor y la flor",
+     "director": "Taller de Formación Audiovisual Cine en el Aula",
+     "country": "Colombia",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Mucha Jagua",
+     "director": "Andy Núñez",
+     "country": "Colombia",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Hágale que no pasa nada",
+     "director": "Israel Téllez",
+     "country": "Colombia",
+     "flags": "🇨🇴"
+    }
+   ],
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -1814,6 +1943,11 @@
     "title": {
      "tipo": "festival-web",
      "fecha": "2026-11-05"
+    },
+    "film_list": {
+     "tipo": "festival-ig",
+     "fecha": "2026-11-13",
+     "url": "https://www.instagram.com/p/DfsR7t_G83v/"
     },
     "type": {
      "tipo": "festival-web",
@@ -2089,7 +2223,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-13T10:25:50",
+  "fecha": "2026-11-13T17:19:58",
   "plan_sha": "d5407859a874077e",
   "paso": 6,
   "cmd": "python3 pipeline/fecibac-2026-verificar.py"
