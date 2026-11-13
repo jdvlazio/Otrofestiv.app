@@ -291,6 +291,72 @@
    },
    "evidencia": "Linktree oficial de FICFUSA (enlazado desde @ficfusa): la actividad pide inscripción: botón de «cuando la palabra se hace busqueda el eco de sus voces» → https://forms.gle/7QQZ1E8xMSBbT7tY7",
    "funcion": "f_0b44487234"
+  },
+  {
+   "ancla": {
+    "sede": "Museo Arqueológico Jaime Hincapié Santa María - Pasca",
+    "dia": "2026-11-13",
+    "hora": "15:00"
+   },
+   "casilla": "existe",
+   "valor": {
+    "title": "Muestra itinerante",
+    "type": "event",
+    "event_kind": "evento",
+    "section": "💬 Proyección y Conversatorio",
+    "day": "2026-11-13",
+    "time": "15:00",
+    "duration": "120 min",
+    "venue": "Museo Arqueológico Jaime Hincapié Santa María - Pasca",
+    "is_free": true,
+    "has_qa": true,
+    "description": "Proyección de cortometrajes de la Selección Oficial FICFUSA 2026 y conversatorio «Mujeres en el Sumapaz», con mujeres reincorporadas y víctimas de violencia como invitadas especiales.",
+    "_src": {
+     "url": "https://www.instagram.com/p/Dfr1kd7x2gO/",
+     "date": "2026-11-13",
+     "lamina": 0
+    }
+   },
+   "fuente": {
+    "tipo": "festival-ig",
+    "url": "https://www.instagram.com/p/Dfr1kd7x2gO/",
+    "fecha": "2026-11-13"
+   },
+   "evidencia": "lámina única (a ojo): «FICFUSA Muestra itinerante · 13 Nov · Municipio de Pasca · Proyección de cortometrajes Selección Oficial FICFUSA 2026 · Conversatorio mujeres en el Sumapaz · 3:00 p.m. a 5:00 p.m. · Fundación Museo Arqueológico y de Historia Natural, Jaime Hincapié Santa María, Cl. 1 #4-22, Pasca»; pie: «Entrada gratuita»"
+  },
+  {
+   "ancla": {
+    "sede": "Quinta Balmoral - Fusagasugá",
+    "dia": "2026-11-14",
+    "hora": "10:00"
+   },
+   "funcion": "f_dfe8ab7306",
+   "casilla": "venue",
+   "valor": "ESAP - Fusagasugá",
+   "contra": "Quinta Balmoral - Fusagasugá",
+   "fuente": {
+    "tipo": "festival-ig",
+    "url": "https://www.instagram.com/p/DfsMyayDyoh/",
+    "fecha": "2026-11-13"
+   },
+   "evidencia": "lámina 00 de DfsMyayDyoh (13 nov, más nueva que el formulario): «TALLER 14 NOV · Autorretrato como una herramienta para la salud menstrual · 10:00 a.m. - 11:30 a.m. · Escuela Superior de Administración Pública (ESAP)» (Vision y a ojo)"
+  },
+  {
+   "ancla": {
+    "sede": "Quinta Balmoral - Fusagasugá",
+    "dia": "2026-11-14",
+    "hora": "10:00"
+   },
+   "funcion": "f_dfe8ab7306",
+   "casilla": "duration",
+   "valor": "90 min",
+   "contra": "120 min",
+   "fuente": {
+    "tipo": "festival-ig",
+    "url": "https://www.instagram.com/p/DfsMyayDyoh/",
+    "fecha": "2026-11-13"
+   },
+   "evidencia": "lámina 00 de DfsMyayDyoh (13 nov, más nueva que el formulario): «TALLER 14 NOV · Autorretrato como una herramienta para la salud menstrual · 10:00 a.m. - 11:30 a.m. · Escuela Superior de Administración Pública (ESAP)» (Vision y a ojo)"
   }
  ]
 }
