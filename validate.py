@@ -4133,6 +4133,7 @@ try:
         # Al Este 2026 (12 nov): dos láminas distintas del Colombo (p/DfYe-5Slr8E y p/DfSV6Z3lpE1)
         # ponen «Los inocentes encantadores» y «Gioia mia» el 20.11 a las 19:00; son dos salas
         ('aleste-2026', '2026-11-20|19:00|Centro Colombo Americano - Medellín'),   # Fokus Wajda + Al Este Especial
+        ('aleste-2026', '2026-11-26|17:00|Cinemateca de Bogotá - Bogotá'),   # Histeria + The Souffleur (IG DfsHqtAlpmC, dos láminas)
     }
     _viol = []
     for _fname in _ACTIVE:
