@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, con el MISMO candado de enriquecer.py: director ✓ y (año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-11-12"
+  "capturado": "2026-11-13"
  },
  "_origen": "aleste-2026-catalogo.json",
  "obras": [
@@ -205,6 +205,70 @@
    "title_en": "Innocent Sorcerers",
    "lbSlug": "innocent-sorcerers",
    "_verificado": "declarada a mano: «Niewinni czarodzieje» (1960, 83 min), dir. Andrzej Wajda: año y duración exactos"
+  },
+  {
+   "titulo": "Shame and Money",
+   "tmdb_id": 1553591,
+   "titulo_original": "Hatixhja dhe Shabani",
+   "poster_path": "/gr9fei545ySnBPk2xMbdLegB3xN.jpg",
+   "synopsis_es": "Tras perder su medio de vida en su pueblo, una familia kosovar se ve obligada a trasladarse a la capital en busca de un lugar en una sociedad hipercapitalista.",
+   "synopsis_en": "After losing their livelihood in a village, a Kosovar family is forced to move to the capital in pursuit of a place in a hypercapitalist society.",
+   "genero": "Drama",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 129,
+   "pais_tmdb": "Kosovo, Germany, Slovenia, Macedonia, Albania, Belgium",
+   "lbSlug": "shame-and-money",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Shame and Money"
+  },
+  {
+   "titulo": "Todas las canciones del mundo",
+   "tmdb_id": 1744092,
+   "titulo_original": "Todas las canciones del mundo",
+   "poster_path": "/gLjTSINFbzG2cn4goYthcnE1yGt.jpg",
+   "synopsis_es": "La película sigue un viaje narrativo o documental que indaga en la memoria colectiva y afectiva que construyen las canciones en la vida de las personas. La trama teje diversas historias alrededor de la creación, la pérdida o la preservación musical, retratando cómo las melodías definen momentos históricos, geográficos y personales en Colombia.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 83,
+   "pais_tmdb": "",
+   "lbSlug": "todas-las-canciones-del-mundo",
+   "_verificado": "el catálogo ya la tiene (w_R4EVBDPJHAXG, cinemancia-2026)",
+   "work_id": "w_R4EVBDPJHAXG",
+   "_ya_publicada": [
+    {
+     "festival": "cinemancia-2026",
+     "titulo": "Todas las canciones del mundo + Lamentos de un balcón",
+     "country": "Colombia",
+     "duration": "88 min"
+    },
+    {
+     "festival": "cinemancia-2026",
+     "titulo": "Todas las canciones del mundo",
+     "tmdb_id": 1744092,
+     "poster": "/assets/cinemancia/todas-las-canciones-del-mundo.jpg",
+     "posterSource": "editorial",
+     "lbSlug": "todas-las-canciones-del-mundo",
+     "country": "Colombia",
+     "year": 2026,
+     "duration": "83 min",
+     "sinopsis": "La película sigue un viaje narrativo o documental que indaga en la memoria colectiva y afectiva que construyen las canciones en la vida de las personas. La trama teje diversas historias alrededor de la creación, la pérdida o la preservación musical, retratando cómo las melodías definen momentos históricos, geográficos y personales en Colombia."
+    }
+   ]
+  },
+  {
+   "titulo": "Histeria",
+   "tmdb_id": 1399696,
+   "titulo_original": "Hysteria",
+   "poster_path": "/ldXXYliUX865ScI2w1plo1vWFnX.jpg",
+   "synopsis_es": "Cuando se encuentra un Corán quemado en el plató de una película, el equipo se ve envuelto en un caos. Atrapada en el fuego cruzado de las acusaciones, la becaria Elif se ve arrastrada a un peligroso juego de secretos y mentiras y se encuentra en el centro de una conspiración absorbente.",
+   "synopsis_en": "A film shoot takes a dark turn when the burning of a Quran throws the crew into turmoil. Caught in accusations, intern Elif is drawn into a dangerous game of secrets and lies, finding herself at the heart of an all-absorbing conspiracy.",
+   "genero": "Suspense",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 104,
+   "pais_tmdb": "Germany",
+   "lbSlug": "hysteria-2025-1",
+   "_verificado": "declarada a mano: «Hysteria» (2025), dir. Mehmet Akif Büyükatalay en su filmografía de TMDB; Alemania, 103 min (lámina 104)"
   }
  ],
  "verificadas": {
@@ -397,6 +461,67 @@
    "title_en": "Innocent Sorcerers",
    "lbSlug": "innocent-sorcerers",
    "_verificado": "declarada a mano: «Niewinni czarodzieje» (1960, 83 min), dir. Andrzej Wajda: año y duración exactos"
+  },
+  "Shame and Money": {
+   "tmdb_id": 1553591,
+   "titulo_original": "Hatixhja dhe Shabani",
+   "poster_path": "/gr9fei545ySnBPk2xMbdLegB3xN.jpg",
+   "synopsis_es": "Tras perder su medio de vida en su pueblo, una familia kosovar se ve obligada a trasladarse a la capital en busca de un lugar en una sociedad hipercapitalista.",
+   "synopsis_en": "After losing their livelihood in a village, a Kosovar family is forced to move to the capital in pursuit of a place in a hypercapitalist society.",
+   "genero": "Drama",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 129,
+   "pais_tmdb": "Kosovo, Germany, Slovenia, Macedonia, Albania, Belgium",
+   "lbSlug": "shame-and-money",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Shame and Money"
+  },
+  "Todas las canciones del mundo": {
+   "tmdb_id": 1744092,
+   "titulo_original": "Todas las canciones del mundo",
+   "poster_path": "/gLjTSINFbzG2cn4goYthcnE1yGt.jpg",
+   "synopsis_es": "La película sigue un viaje narrativo o documental que indaga en la memoria colectiva y afectiva que construyen las canciones en la vida de las personas. La trama teje diversas historias alrededor de la creación, la pérdida o la preservación musical, retratando cómo las melodías definen momentos históricos, geográficos y personales en Colombia.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 83,
+   "pais_tmdb": "",
+   "lbSlug": "todas-las-canciones-del-mundo",
+   "_verificado": "el catálogo ya la tiene (w_R4EVBDPJHAXG, cinemancia-2026)",
+   "work_id": "w_R4EVBDPJHAXG",
+   "_ya_publicada": [
+    {
+     "festival": "cinemancia-2026",
+     "titulo": "Todas las canciones del mundo + Lamentos de un balcón",
+     "country": "Colombia",
+     "duration": "88 min"
+    },
+    {
+     "festival": "cinemancia-2026",
+     "titulo": "Todas las canciones del mundo",
+     "tmdb_id": 1744092,
+     "poster": "/assets/cinemancia/todas-las-canciones-del-mundo.jpg",
+     "posterSource": "editorial",
+     "lbSlug": "todas-las-canciones-del-mundo",
+     "country": "Colombia",
+     "year": 2026,
+     "duration": "83 min",
+     "sinopsis": "La película sigue un viaje narrativo o documental que indaga en la memoria colectiva y afectiva que construyen las canciones en la vida de las personas. La trama teje diversas historias alrededor de la creación, la pérdida o la preservación musical, retratando cómo las melodías definen momentos históricos, geográficos y personales en Colombia."
+    }
+   ]
+  },
+  "Histeria": {
+   "tmdb_id": 1399696,
+   "titulo_original": "Hysteria",
+   "poster_path": "/ldXXYliUX865ScI2w1plo1vWFnX.jpg",
+   "synopsis_es": "Cuando se encuentra un Corán quemado en el plató de una película, el equipo se ve envuelto en un caos. Atrapada en el fuego cruzado de las acusaciones, la becaria Elif se ve arrastrada a un peligroso juego de secretos y mentiras y se encuentra en el centro de una conspiración absorbente.",
+   "synopsis_en": "A film shoot takes a dark turn when the burning of a Quran throws the crew into turmoil. Caught in accusations, intern Elif is drawn into a dangerous game of secrets and lies, finding herself at the heart of an all-absorbing conspiracy.",
+   "genero": "Suspense",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 104,
+   "pais_tmdb": "Germany",
+   "lbSlug": "hysteria-2025-1",
+   "_verificado": "declarada a mano: «Hysteria» (2025), dir. Mehmet Akif Büyükatalay en su filmografía de TMDB; Alemania, 103 min (lámina 104)"
   }
  },
  "sin_ficha": [

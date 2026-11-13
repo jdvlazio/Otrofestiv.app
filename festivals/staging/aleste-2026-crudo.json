@@ -1,12 +1,9 @@
 {
  "_provenance": {
   "fuente": "MAMM (fichas del ciclo) + láminas de @aleste.colombia (3, 5 y 10 nov 2026)",
-  "capturado": "2026-11-12",
+  "capturado": "2026-11-13",
   "metodo": "transcripción a ojo; láminas cruzadas con ig-lecturas.py",
   "que_aporta": "día, hora, sede, acceso"
- },
- "_fuera": {
-  "Bogotá 25–29 nov": "sin programación publicada al 12 nov"
  },
  "funciones": [
   {
@@ -248,6 +245,96 @@
    "pais": "Austria",
    "anio": 2026,
    "duracion_min": 122
+  },
+  {
+   "titulo": "Shame and Money",
+   "dia": "2026-11-25",
+   "hora": "18:30",
+   "sede": "Cinemateca de Bogotá",
+   "seccion": "Al Este en la Cinemateca",
+   "acceso": "Con boleta",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfsHqtAlpmC/",
+    "date": "2026-11-12",
+    "tipo": "festival-ig",
+    "lamina": "01.jpg"
+   },
+   "director": "Visar Morina",
+   "pais": "Alemania, Kosovo, Eslovenia, Albania, Macedonia del Norte, Bélgica",
+   "anio": 2026,
+   "duracion_min": 130
+  },
+  {
+   "titulo": "Histeria",
+   "dia": "2026-11-26",
+   "hora": "17:00",
+   "sede": "Cinemateca de Bogotá",
+   "seccion": "Al Este en la Cinemateca",
+   "acceso": "Con boleta",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfsHqtAlpmC/",
+    "date": "2026-11-12",
+    "tipo": "festival-ig",
+    "lamina": "04.jpg"
+   },
+   "director": "Mehmet Akif Büyükatalay",
+   "pais": "Alemania",
+   "anio": 2025,
+   "duracion_min": 104
+  },
+  {
+   "titulo": "The Souffleur",
+   "dia": "2026-11-26",
+   "hora": "17:00",
+   "sede": "Cinemateca de Bogotá",
+   "seccion": "Al Este en la Cinemateca",
+   "acceso": "Con boleta",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfsHqtAlpmC/",
+    "date": "2026-11-12",
+    "tipo": "festival-ig",
+    "lamina": "03.jpg"
+   },
+   "director": "Gastón Solnicki",
+   "pais": "Argentina, Austria",
+   "anio": 2025,
+   "duracion_min": 78
+  },
+  {
+   "titulo": "1982",
+   "dia": "2026-11-27",
+   "hora": "16:30",
+   "sede": "Cinemateca de Bogotá",
+   "seccion": "Al Este en la Cinemateca",
+   "acceso": "Con boleta",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfsHqtAlpmC/",
+    "date": "2026-11-12",
+    "tipo": "festival-ig",
+    "lamina": "05.jpg"
+   },
+   "director": "Juan Carlos García",
+   "pais": "Perú",
+   "anio": 2025,
+   "duracion_min": 84
+  },
+  {
+   "titulo": "Todas las canciones del mundo",
+   "dia": "2026-11-28",
+   "hora": "16:30",
+   "sede": "Cinemateca de Bogotá",
+   "seccion": "Al Este en la Cinemateca",
+   "acceso": "Con boleta",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfsHqtAlpmC/",
+    "date": "2026-11-12",
+    "tipo": "festival-ig",
+    "lamina": "02.jpg"
+   },
+   "director": "Santiago Flórez Rincón",
+   "pais": "Colombia",
+   "anio": 2026,
+   "duracion_min": 85
   }
  ]
 }

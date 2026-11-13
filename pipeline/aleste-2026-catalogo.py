@@ -2,7 +2,7 @@
 """aleste-2026-catalogo.py — las obras del 9.º Festival de Cine de Europa Central
 y Oriental Al Este, sede Medellín (18–22 nov 2026). PRE-ONBOARDING (radar #1397).
 
-Bogotá (25–29 nov) todavía no publicó programación (12 nov): se suma cuando salga.
+Bogotá (25–29 nov, Cinemateca): IG p/DfsHqtAlpmC (13 nov), 5 funciones.
 
 LAS FUENTES (12 nov 2026):
 - MAMM: la página del ciclo «9º Festival Al Este» y la ficha de cada película
@@ -45,6 +45,12 @@ OBRAS = [
     ('Los inocentes encantadores', 'Andrzej Wajda', 1960, 'Polonia', 83, FOKUS, (IG + 'DfYe-5Slr8E/', '05.jpg')),
     ('Latidos: el grafiti como arte, el grafiti como forma de vida', 'Juan Zapata', 2026, 'Colombia', None, None,
      (IG + 'DfkttriN6pD/', None)),
+    # Bogotá, Cinemateca (IG p/DfsHqtAlpmC, 13 nov, «Programación Bogotá», leídas a ojo).
+    # La lámina 1 dice «SHAME AND MONEYV»: errata, el título es «Shame and Money».
+    ('Shame and Money', 'Visar Morina', 2026, 'Alemania, Kosovo, Eslovenia, Albania, Macedonia del Norte, Bélgica', 130, None,
+     (IG + 'DfsHqtAlpmC/', '01.jpg')),
+    ('Todas las canciones del mundo', 'Santiago Flórez Rincón', 2026, 'Colombia', 85, None, (IG + 'DfsHqtAlpmC/', '02.jpg')),
+    ('Histeria', 'Mehmet Akif Büyükatalay', 2025, 'Alemania', 104, None, (IG + 'DfsHqtAlpmC/', '04.jpg')),
 ]
 
 
@@ -60,8 +66,8 @@ def main():
         if lam:
             o['_src']['lamina'] = lam
         obras.append(o)
-    if len(obras) != 12:
-        sys.exit(f'✗ {len(obras)} obras, se contaron 12')
+    if len(obras) != 15:
+        sys.exit(f'✗ {len(obras)} obras, se contaron 15')
     with io.open(DESTINO, 'w', encoding='utf-8') as f:
         json.dump({'_provenance': provenance(
             fuente='MAMM (ciclo 9º Festival Al Este) + IG @aleste.colombia (3, 5 y 10 nov 2026)',

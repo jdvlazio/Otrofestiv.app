@@ -182,6 +182,7 @@ export const SECTION_EN = {
   '✨ Al Este Especial': 'Al Este Special',
   '🎞️ Fokus: Las Grietas en el Muro': 'Fokus: Cracks in the Wall',
   '🏛️ Al Este en el MAMM': 'Al Este at MAMM',
+  '🏙️ Al Este en la Cinemateca': 'Al Este at the Cinemateca',
   '🏆 La Canoa Dorada': 'La Canoa Dorada',
   '🛠️ Talleres con Expertos': 'Workshops with Experts',
   '💬 Conversatorios': 'Talks',
@@ -946,22 +947,22 @@ export const FESTIVAL_CONFIG={
     films:null,posters:null,lbSlugs:{}
   },
   'aleste2026': {
-    // Por ahora solo Medellín (18–22 nov, MAMM y Colombo); Bogotá (25–29 nov) se suma
-    // cuando publique programación. keyArt: afiche oficial de @aleste.colombia
-    // (p/Def5gEbtQRH, 3072×4096, estirado a 400×600).
+    // Medellín 18–22 nov (MAMM y Colombo) y Bogotá 25–29 nov (Cinemateca, IG
+    // p/DfsHqtAlpmC del 13 nov). Multiciudad: se enciende solo con las sedes.
+    // keyArt: afiche oficial de @aleste.colombia (p/Def5gEbtQRH, 3072×4096, estirado a 400×600).
     name:'Al Este',displayName:'Al Este',
     fullName:'9.º Festival de Cine de Europa Central y Oriental Al Este',shortName:'Al Este',
-    city:'Medellín',country:'CO',
-    dates:'18–22 NOV',dates_en:'NOV 18–22',year:2026,timezoneOffset:'-05:00',
+    city:'Medellín y Bogotá',country:'CO',
+    dates:'18–29 NOV',dates_en:'NOV 18–29',year:2026,timezoneOffset:'-05:00',
     tagline:'Festival de Cine de Europa Central y Oriental',
     keyArt:'/assets/keyart/aleste2026-v2.jpg',
-    instagram:'aleste.colombia', storageKey:'aleste2026_',festivalStartStr:'2026-11-18T00:00:00',festivalEndStr:'2026-11-22T23:59:00',
-    festivalDates:{'2026-11-18':'2026-11-18','2026-11-19':'2026-11-19','2026-11-20':'2026-11-20','2026-11-21':'2026-11-21','2026-11-22':'2026-11-22'},
-    days:[{k:'2026-11-18',d:18,lbl:'MIÉ'},{k:'2026-11-19',d:19,lbl:'JUE'},{k:'2026-11-20',d:20,lbl:'VIE'},{k:'2026-11-21',d:21,lbl:'SÁB'},{k:'2026-11-22',d:22,lbl:'DOM'}],
-    dayKeys:['2026-11-18','2026-11-19','2026-11-20','2026-11-21','2026-11-22'],
-    dayShort:{'2026-11-18':'MIÉ 18','2026-11-19':'JUE 19','2026-11-20':'VIE 20','2026-11-21':'SÁB 21','2026-11-22':'DOM 22'},
-    dayShort_en:{'2026-11-18':'WED 18','2026-11-19':'THU 19','2026-11-20':'FRI 20','2026-11-21':'SAT 21','2026-11-22':'SUN 22'},
-    dayLong:{'2026-11-18':'Miércoles 18 de noviembre','2026-11-19':'Jueves 19 de noviembre','2026-11-20':'Viernes 20 de noviembre','2026-11-21':'Sábado 21 de noviembre','2026-11-22':'Domingo 22 de noviembre'},
+    instagram:'aleste.colombia', storageKey:'aleste2026_',festivalStartStr:'2026-11-18T00:00:00',festivalEndStr:'2026-11-29T23:59:00',
+    festivalDates:{'2026-11-18':'2026-11-18','2026-11-19':'2026-11-19','2026-11-20':'2026-11-20','2026-11-21':'2026-11-21','2026-11-22':'2026-11-22','2026-11-23':'2026-11-23','2026-11-24':'2026-11-24','2026-11-25':'2026-11-25','2026-11-26':'2026-11-26','2026-11-27':'2026-11-27','2026-11-28':'2026-11-28','2026-11-29':'2026-11-29'},
+    days:[{k:'2026-11-18',d:18,lbl:'MIÉ'},{k:'2026-11-19',d:19,lbl:'JUE'},{k:'2026-11-20',d:20,lbl:'VIE'},{k:'2026-11-21',d:21,lbl:'SÁB'},{k:'2026-11-22',d:22,lbl:'DOM'},{k:'2026-11-23',d:23,lbl:'LUN'},{k:'2026-11-24',d:24,lbl:'MAR'},{k:'2026-11-25',d:25,lbl:'MIÉ'},{k:'2026-11-26',d:26,lbl:'JUE'},{k:'2026-11-27',d:27,lbl:'VIE'},{k:'2026-11-28',d:28,lbl:'SÁB'},{k:'2026-11-29',d:29,lbl:'DOM'}],
+    dayKeys:['2026-11-18','2026-11-19','2026-11-20','2026-11-21','2026-11-22','2026-11-23','2026-11-24','2026-11-25','2026-11-26','2026-11-27','2026-11-28','2026-11-29'],
+    dayShort:{'2026-11-18':'MIÉ 18','2026-11-19':'JUE 19','2026-11-20':'VIE 20','2026-11-21':'SÁB 21','2026-11-22':'DOM 22','2026-11-23':'LUN 23','2026-11-24':'MAR 24','2026-11-25':'MIÉ 25','2026-11-26':'JUE 26','2026-11-27':'VIE 27','2026-11-28':'SÁB 28','2026-11-29':'DOM 29'},
+    dayShort_en:{'2026-11-18':'WED 18','2026-11-19':'THU 19','2026-11-20':'FRI 20','2026-11-21':'SAT 21','2026-11-22':'SUN 22','2026-11-23':'MON 23','2026-11-24':'TUE 24','2026-11-25':'WED 25','2026-11-26':'THU 26','2026-11-27':'FRI 27','2026-11-28':'SAT 28','2026-11-29':'SUN 29'},
+    dayLong:{'2026-11-18':'Miércoles 18 de noviembre','2026-11-19':'Jueves 19 de noviembre','2026-11-20':'Viernes 20 de noviembre','2026-11-21':'Sábado 21 de noviembre','2026-11-22':'Domingo 22 de noviembre','2026-11-23':'Lunes 23 de noviembre','2026-11-24':'Martes 24 de noviembre','2026-11-25':'Miércoles 25 de noviembre','2026-11-26':'Jueves 26 de noviembre','2026-11-27':'Viernes 27 de noviembre','2026-11-28':'Sábado 28 de noviembre','2026-11-29':'Domingo 29 de noviembre'},
     prioLimit:4,sharedSlotIsOneScreening:false,
     films:null,posters:null,lbSlugs:{}
   },
@@ -1460,6 +1461,7 @@ export const SECTION_ARCHETYPES = {
   '✨ Al Este Especial': 'Especiales / Eventos',
   '🎞️ Fokus: Las Grietas en el Muro': 'Retrospectiva / Tributo',
   '🏛️ Al Este en el MAMM': 'Muestra / País',
+  '🏙️ Al Este en la Cinemateca': 'Muestra / País',
   '🏆 La Canoa Dorada': 'Competencia',
   '🛠️ Talleres con Expertos': 'Charlas / Industria',
   '💬 Conversatorios': 'Charlas / Industria',

@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "ensamblar.py: ids estables de las funciones (docs/FUNCION.md C1)",
-  "capturado": "2026-11-12"
+  "capturado": "2026-11-13"
  },
  "funciones": {
   "f_6c856cce71": {
@@ -87,6 +87,41 @@
    "hora": "16:00",
    "sala": "",
    "titulo": "londres"
+  },
+  "f_0372296ef6": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-11-25",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "shame and money"
+  },
+  "f_43f9884be2": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-11-26",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "histeria"
+  },
+  "f_ed7fe5d715": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-11-26",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "the souffleur"
+  },
+  "f_4ef959b53d": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-11-27",
+   "hora": "16:30",
+   "sala": "",
+   "titulo": "1982"
+  },
+  "f_1c1639d27e": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-11-28",
+   "hora": "16:30",
+   "sala": "",
+   "titulo": "todas las canciones del mundo"
   }
  }
 }

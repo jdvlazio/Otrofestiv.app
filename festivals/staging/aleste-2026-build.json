@@ -2,39 +2,59 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "MAMM (fichas del ciclo) + láminas de @aleste.colombia (3, 5 y 10 nov 2026)",
-  "capturado": "2026-11-12",
+  "capturado": "2026-11-13",
   "ensamblador": "pipeline/ensamblar.py"
  },
- "_por_que_secciones": "«Al Este Especial» y «Fokus: Las grietas en el muro» son los sellos de las láminas, tal cual. «Al Este en el MAMM» es NUESTRO rótulo para las 4 del museo, que no traen sección: propuesta para Juan.",
+ "_por_que_secciones": "«Al Este Especial» y «Fokus: Las grietas en el muro» son los sellos de las láminas, tal cual. «Al Este en el MAMM» es NUESTRO rótulo para las 4 del museo, que no traen sección: propuesta para Juan. «Al Este en la Cinemateca», mismo criterio para las 5 de Bogotá (13 nov).",
  "name": "Al Este",
  "displayName": "Al Este",
  "fullName": "9.º Festival de Cine de Europa Central y Oriental Al Este",
  "shortName": "Al Este",
  "tagline": "Festival de Cine de Europa Central y Oriental",
- "city": "Medellín",
+ "city": "Medellín y Bogotá",
  "country": "CO",
- "dates": "18–22 NOV",
- "dates_en": "NOV 18–22",
+ "dates": "18–29 NOV",
+ "dates_en": "NOV 18–29",
  "year": 2026,
  "timezoneOffset": "-05:00",
  "storageKey": "aleste2026_",
  "festivalStartStr": "2026-11-18T00:00:00",
- "festivalEndStr": "2026-11-22T23:59:00",
+ "festivalEndStr": "2026-11-29T23:59:00",
  "sharedSlotIsOneScreening": false,
- "prioLimit": 3,
+ "dias_vacios": [
+  "2026-11-23",
+  "2026-11-24",
+  "2026-11-29"
+ ],
+ "_por_que_dias_vacios": "23 y 24: entre Medellín (18–22) y Bogotá (25–29). 29: el festival lo anuncia, pero ninguna lámina del 13 nov trae función ese día.",
+ "prioLimit": 6,
  "dias": [
   "2026-11-18",
   "2026-11-19",
   "2026-11-20",
   "2026-11-21",
-  "2026-11-22"
+  "2026-11-22",
+  "2026-11-23",
+  "2026-11-24",
+  "2026-11-25",
+  "2026-11-26",
+  "2026-11-27",
+  "2026-11-28",
+  "2026-11-29"
  ],
  "festivalDates": {
   "2026-11-18": "2026-11-18",
   "2026-11-19": "2026-11-19",
   "2026-11-20": "2026-11-20",
   "2026-11-21": "2026-11-21",
-  "2026-11-22": "2026-11-22"
+  "2026-11-22": "2026-11-22",
+  "2026-11-23": "2026-11-23",
+  "2026-11-24": "2026-11-24",
+  "2026-11-25": "2026-11-25",
+  "2026-11-26": "2026-11-26",
+  "2026-11-27": "2026-11-27",
+  "2026-11-28": "2026-11-28",
+  "2026-11-29": "2026-11-29"
  },
  "days": [
   {
@@ -61,6 +81,41 @@
    "k": "2026-11-22",
    "d": 22,
    "lbl": "DOM"
+  },
+  {
+   "k": "2026-11-23",
+   "d": 23,
+   "lbl": "LUN"
+  },
+  {
+   "k": "2026-11-24",
+   "d": 24,
+   "lbl": "MAR"
+  },
+  {
+   "k": "2026-11-25",
+   "d": 25,
+   "lbl": "MIÉ"
+  },
+  {
+   "k": "2026-11-26",
+   "d": 26,
+   "lbl": "JUE"
+  },
+  {
+   "k": "2026-11-27",
+   "d": 27,
+   "lbl": "VIE"
+  },
+  {
+   "k": "2026-11-28",
+   "d": 28,
+   "lbl": "SÁB"
+  },
+  {
+   "k": "2026-11-29",
+   "d": 29,
+   "lbl": "DOM"
   }
  ],
  "dayKeys": [
@@ -68,28 +123,56 @@
   "2026-11-19",
   "2026-11-20",
   "2026-11-21",
-  "2026-11-22"
+  "2026-11-22",
+  "2026-11-23",
+  "2026-11-24",
+  "2026-11-25",
+  "2026-11-26",
+  "2026-11-27",
+  "2026-11-28",
+  "2026-11-29"
  ],
  "dayShort": {
   "2026-11-18": "MIÉ 18",
   "2026-11-19": "JUE 19",
   "2026-11-20": "VIE 20",
   "2026-11-21": "SÁB 21",
-  "2026-11-22": "DOM 22"
+  "2026-11-22": "DOM 22",
+  "2026-11-23": "LUN 23",
+  "2026-11-24": "MAR 24",
+  "2026-11-25": "MIÉ 25",
+  "2026-11-26": "JUE 26",
+  "2026-11-27": "VIE 27",
+  "2026-11-28": "SÁB 28",
+  "2026-11-29": "DOM 29"
  },
  "dayShort_en": {
   "2026-11-18": "WED 18",
   "2026-11-19": "THU 19",
   "2026-11-20": "FRI 20",
   "2026-11-21": "SAT 21",
-  "2026-11-22": "SUN 22"
+  "2026-11-22": "SUN 22",
+  "2026-11-23": "MON 23",
+  "2026-11-24": "TUE 24",
+  "2026-11-25": "WED 25",
+  "2026-11-26": "THU 26",
+  "2026-11-27": "FRI 27",
+  "2026-11-28": "SAT 28",
+  "2026-11-29": "SUN 29"
  },
  "dayLong": {
   "2026-11-18": "Miércoles 18 de noviembre",
   "2026-11-19": "Jueves 19 de noviembre",
   "2026-11-20": "Viernes 20 de noviembre",
   "2026-11-21": "Sábado 21 de noviembre",
-  "2026-11-22": "Domingo 22 de noviembre"
+  "2026-11-22": "Domingo 22 de noviembre",
+  "2026-11-23": "Lunes 23 de noviembre",
+  "2026-11-24": "Martes 24 de noviembre",
+  "2026-11-25": "Miércoles 25 de noviembre",
+  "2026-11-26": "Jueves 26 de noviembre",
+  "2026-11-27": "Viernes 27 de noviembre",
+  "2026-11-28": "Sábado 28 de noviembre",
+  "2026-11-29": "Domingo 29 de noviembre"
  },
  "sections": {
   "✨ Al Este Especial": {
@@ -106,6 +189,11 @@
    "en": "Fokus: Cracks in the Wall",
    "archetype": "Retrospectiva / Tributo",
    "order": 3
+  },
+  "🏙️ Al Este en la Cinemateca": {
+   "en": "Al Este at the Cinemateca",
+   "archetype": "Muestra / País",
+   "order": 4
   }
  },
  "venues": {
@@ -126,6 +214,15 @@
    "address": "Cra. 44 #19A-100",
    "_prec": "manual",
    "_nota": "pin verificado en Mamut; dirección de la web del MAMM"
+  },
+  "Cinemateca de Bogotá - Bogotá": {
+   "short": "Cinemateca de Bogotá",
+   "city": "Bogotá",
+   "lat": 4.6031614,
+   "lng": -74.0676717,
+   "address": "Cra. 3 #19-10, Bogotá",
+   "_prec": "manual",
+   "_match": "heredada de BIFF/MIDBO/BHFF 2026; coincide al decimal con Google Maps «Cinemateca de Bogotá»"
   }
  },
  "_avisos_id": [],
@@ -607,12 +704,195 @@
    "synopsis_en": "Bobby drives back and forth between Vienna and Salzburg, giving lifts to strangers on the way, sharing conversations that drift from the mundane to the deeply personal. In this tender portrait of today’s Europe, anonymity and warmth still go hand in hand.",
    "_fid": "f_ebafd92c4c",
    "id": "f_ebafd92c4c"
+  },
+  {
+   "title": "Shame and Money",
+   "type": "film",
+   "section": "🏙️ Al Este en la Cinemateca",
+   "director": "Visar Morina",
+   "year": 2026,
+   "country": "Alemania, Kosovo, Eslovenia, Albania, Macedonia del Norte, Bélgica",
+   "flags": "🇩🇪🇽🇰🇸🇮🇦🇱🇲🇰🇧🇪",
+   "duration": "130 min",
+   "genre": "Drama",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-11-25",
+    "18:30"
+   ],
+   "day": "2026-11-25",
+   "time": "18:30",
+   "day_order": 7,
+   "venue": "Cinemateca de Bogotá - Bogotá",
+   "has_qa": false,
+   "synopsis": "Tras perder su medio de vida en su pueblo, una familia kosovar se ve obligada a trasladarse a la capital en busca de un lugar en una sociedad hipercapitalista.",
+   "synopsis_lang": "es",
+   "poster": "/assets/aleste-2026/shame-and-money.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfsHqtAlpmC/",
+    "date": "2026-11-12",
+    "tipo": "festival-ig",
+    "lamina": "01.jpg"
+   },
+   "is_free": false,
+   "lbSlug": "shame-and-money",
+   "tmdb_id": 1553591,
+   "synopsis_en": "After losing their livelihood in a village, a Kosovar family is forced to move to the capital in pursuit of a place in a hypercapitalist society.",
+   "_fid": "f_0372296ef6",
+   "id": "f_0372296ef6"
+  },
+  {
+   "title": "Histeria",
+   "type": "film",
+   "section": "🏙️ Al Este en la Cinemateca",
+   "director": "Mehmet Akif Büyükatalay",
+   "year": 2025,
+   "country": "Alemania",
+   "flags": "🇩🇪",
+   "duration": "104 min",
+   "genre": "Suspense",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-11-26",
+    "17:00"
+   ],
+   "day": "2026-11-26",
+   "time": "17:00",
+   "day_order": 8,
+   "venue": "Cinemateca de Bogotá - Bogotá",
+   "has_qa": false,
+   "synopsis": "Cuando se encuentra un Corán quemado en el plató de una película, el equipo se ve envuelto en un caos. Atrapada en el fuego cruzado de las acusaciones, la becaria Elif se ve arrastrada a un peligroso juego de secretos y mentiras y se encuentra en el centro de una conspiración absorbente.",
+   "synopsis_lang": "es",
+   "poster": "/assets/aleste-2026/histeria.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfsHqtAlpmC/",
+    "date": "2026-11-12",
+    "tipo": "festival-ig",
+    "lamina": "04.jpg"
+   },
+   "is_free": false,
+   "lbSlug": "hysteria-2025-1",
+   "tmdb_id": 1399696,
+   "synopsis_en": "A film shoot takes a dark turn when the burning of a Quran throws the crew into turmoil. Caught in accusations, intern Elif is drawn into a dangerous game of secrets and lies, finding herself at the heart of an all-absorbing conspiracy.",
+   "_fid": "f_43f9884be2",
+   "id": "f_43f9884be2"
+  },
+  {
+   "title": "The Souffleur",
+   "type": "film",
+   "section": "🏙️ Al Este en la Cinemateca",
+   "director": "Gastón Solnicki",
+   "year": 2025,
+   "country": "Argentina, Austria",
+   "flags": "🇦🇷🇦🇹",
+   "duration": "78 min",
+   "genre": "Drama",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-11-26",
+    "17:00"
+   ],
+   "day": "2026-11-26",
+   "time": "17:00",
+   "day_order": 8,
+   "venue": "Cinemateca de Bogotá - Bogotá",
+   "has_qa": false,
+   "synopsis": "Lucius Glantz, un veterano director de hotel en Viena, lucha por salvar su querido establecimiento del plan de un intrigante agente inmobiliario para demolerlo, lo que lleva a un choque de voluntades que afecta incluso a la famosa receta del soufflé del hotel.",
+   "synopsis_lang": "es",
+   "poster": "/assets/aleste-2026/the-souffleur.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfsHqtAlpmC/",
+    "date": "2026-11-12",
+    "tipo": "festival-ig",
+    "lamina": "03.jpg"
+   },
+   "is_free": false,
+   "lbSlug": "the-souffleur",
+   "tmdb_id": 1418361,
+   "synopsis_en": "Lucius Glantz, a veteran hotel manager in Vienna, fights to save his beloved establishment from a scheming realtor's plan to demolish it, leading to a clash of wills that even affects the hotel's renowned soufflé recipe.",
+   "_fid": "f_ed7fe5d715",
+   "id": "f_ed7fe5d715"
+  },
+  {
+   "title": "1982",
+   "type": "film",
+   "section": "🏙️ Al Este en la Cinemateca",
+   "director": "Juan Carlos García",
+   "year": 2025,
+   "country": "Perú",
+   "flags": "🇵🇪",
+   "duration": "84 min",
+   "genre": "Drama",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-11-27",
+    "16:30"
+   ],
+   "day": "2026-11-27",
+   "time": "16:30",
+   "day_order": 9,
+   "venue": "Cinemateca de Bogotá - Bogotá",
+   "has_qa": false,
+   "synopsis": "En un pueblo andino del Perú, en 1982, Tato, un niño de 12 años, se ve forzado al exilio cuando su familia es amenazada.",
+   "synopsis_lang": "es",
+   "poster": "/assets/aleste-2026/1982.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfsHqtAlpmC/",
+    "date": "2026-11-12",
+    "tipo": "festival-ig",
+    "lamina": "05.jpg"
+   },
+   "is_free": false,
+   "lbSlug": "1982-2025",
+   "tmdb_id": 1517461,
+   "synopsis_en": "In an Andean village in Peru, in 1982, Tato, a 12-year-old boy is forced into exile when his family is threatened.",
+   "_fid": "f_4ef959b53d",
+   "id": "f_4ef959b53d"
+  },
+  {
+   "title": "Todas las canciones del mundo",
+   "type": "film",
+   "section": "🏙️ Al Este en la Cinemateca",
+   "director": "Santiago Flórez Rincón",
+   "year": 2026,
+   "country": "Colombia",
+   "flags": "🇨🇴",
+   "duration": "85 min",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-11-28",
+    "16:30"
+   ],
+   "day": "2026-11-28",
+   "time": "16:30",
+   "day_order": 10,
+   "venue": "Cinemateca de Bogotá - Bogotá",
+   "has_qa": false,
+   "synopsis": "La película sigue un viaje narrativo o documental que indaga en la memoria colectiva y afectiva que construyen las canciones en la vida de las personas. La trama teje diversas historias alrededor de la creación, la pérdida o la preservación musical, retratando cómo las melodías definen momentos históricos, geográficos y personales en Colombia.",
+   "synopsis_lang": "es",
+   "poster": "/assets/aleste-2026/todas-las-canciones-del-mundo.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfsHqtAlpmC/",
+    "date": "2026-11-12",
+    "tipo": "festival-ig",
+    "lamina": "02.jpg"
+   },
+   "is_free": false,
+   "lbSlug": "todas-las-canciones-del-mundo",
+   "tmdb_id": 1744092,
+   "_fid": "f_1c1639d27e",
+   "id": "f_1c1639d27e"
   }
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-12T16:50:26",
-  "plan_sha": "c001315ea0e801be",
+  "fecha": "2026-11-13T13:32:35",
+  "plan_sha": "6a78da8ea5e28378",
   "paso": 8,
   "cmd": "python3 pipeline/aleste-2026-verificar.py"
  }

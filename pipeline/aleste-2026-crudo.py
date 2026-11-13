@@ -15,7 +15,7 @@ ACCESO: MAMM, el precio de su página. Colombo: «Asegura tus entradas en el lin
 del perfil» y «el aforo para la noche de apertura es limitado», sin precio →
 con boleta, sin monto.
 
-Bogotá (25–29 nov) no publicó nada todavía.
+Bogotá: IG p/DfsHqtAlpmC (13 nov), Cinemateca de Bogotá, «Con boleta» (el pie: «antes de que se agoten las boletas»), sin precio.
 """
 import io, json, os, sys
 
@@ -26,7 +26,8 @@ from lib import provenance  # noqa: E402
 OUT = f'{REPO}/festivals/staging/aleste-2026-crudo.json'
 IG = 'https://www.instagram.com/p/'
 MAMM_URL = 'https://www.elmamm.org/producto/'
-MAMM, COLOMBO = 'MAMM', 'Centro Colombo Americano'
+MAMM, COLOMBO, CINEMATECA = 'MAMM', 'Centro Colombo Americano', 'Cinemateca de Bogotá'
+CINE_SEC = 'Al Este en la Cinemateca'
 ESPECIAL, FOKUS, MUSEO = 'Al Este Especial', 'Fokus: Las grietas en el muro', 'Al Este en el MAMM'
 MAMM_ACC = 'Con boleta: $14.000 general; $10.000 mayores de 60, menores de 12 y estudiantes'
 COL_ACC = 'Con boleta'
@@ -47,6 +48,13 @@ F = [
     ('21', '16:30', '1982', MAMM, MUSEO, (MAMM_URL + '1982/', None), {}),
     ('22', '14:00', 'Gioia mia', COLOMBO, ESPECIAL, (IG + 'DfSV6Z3lpE1/', '03.jpg'), {}),
     ('22', '16:00', 'Londres', MAMM, MUSEO, (MAMM_URL + 'londres/', None), {}),
+    # Bogotá: IG p/DfsHqtAlpmC (13 nov), una lámina por función, leídas a ojo.
+    # Histeria y The Souffleur, las dos el 26 a las 17:00: así lo dicen las láminas.
+    ('25', '18:30', 'Shame and Money', CINEMATECA, CINE_SEC, (IG + 'DfsHqtAlpmC/', '01.jpg'), {}),
+    ('26', '17:00', 'Histeria', CINEMATECA, CINE_SEC, (IG + 'DfsHqtAlpmC/', '04.jpg'), {}),
+    ('26', '17:00', 'The Souffleur', CINEMATECA, CINE_SEC, (IG + 'DfsHqtAlpmC/', '03.jpg'), {}),
+    ('27', '16:30', '1982', CINEMATECA, CINE_SEC, (IG + 'DfsHqtAlpmC/', '05.jpg'), {}),
+    ('28', '16:30', 'Todas las canciones del mundo', CINEMATECA, CINE_SEC, (IG + 'DfsHqtAlpmC/', '02.jpg'), {}),
 ]
 
 cat = {o['titulo']: o for o in json.load(io.open(f'{REPO}/festivals/staging/aleste-2026-catalogo.json', encoding='utf-8'))['obras']}
@@ -75,6 +83,5 @@ io.open(OUT, 'w', encoding='utf-8').write(json.dumps({
     '_provenance': provenance('MAMM (fichas del ciclo) + láminas de @aleste.colombia (3, 5 y 10 nov 2026)',
                               metodo='transcripción a ojo; láminas cruzadas con ig-lecturas.py',
                               que_aporta='día, hora, sede, acceso'),
-    '_fuera': {'Bogotá 25–29 nov': 'sin programación publicada al 12 nov'},
     'funciones': funciones}, ensure_ascii=False, indent=1) + '\n')
 print(f'✓ {len(funciones)} funciones → {os.path.relpath(OUT, REPO)}')

@@ -16,5 +16,12 @@
   "address": "Cra. 44 #19A-100",
   "_prec": "manual",
   "_nota": "pin verificado en Mamut; dirección de la web del MAMM"
+ },
+ "Cinemateca de Bogotá - Bogotá": {
+  "lat": 4.6031614,
+  "lng": -74.0676717,
+  "address": "Cra. 3 #19-10, Bogotá",
+  "_prec": "manual",
+  "_match": "heredada de BIFF/MIDBO/BHFF 2026; coincide al decimal con Google Maps «Cinemateca de Bogotá»"
  }
 }
