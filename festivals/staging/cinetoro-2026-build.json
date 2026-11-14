@@ -2475,11 +2475,74 @@
     }
    },
    "duration": "60 min"
+  },
+  {
+   "title": "Resultados Taller Nicole Antebi - Moviendo montañas",
+   "type": "event",
+   "event_kind": "taller",
+   "day": "2026-11-14",
+   "time": "18:30",
+   "duration": "90 min",
+   "venue": "Coliseo Institución Educativa Fray José Joaquín Escobar - Toro",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dfu8yxaI1ws/",
+    "date": "2026-11-14",
+    "lamina": 1
+   },
+   "section": "🎓 Programación Académica",
+   "_ancla": [
+    "Coliseo Institución Educativa Fray José Joaquín Escobar - Toro",
+    "2026-11-14",
+    "18:30"
+   ],
+   "_fid": "f_9e6446dd35",
+   "_procedencia": {
+    "existe": {
+     "tipo": "festival-ig",
+     "url": "https://www.instagram.com/p/Dfu8yxaI1ws/",
+     "fecha": "2026-11-14"
+    },
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-14"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-14"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-14"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-14"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-14"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-14"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-14"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-14"
+    }
+   },
+   "is_free": true,
+   "id": "f_9e6446dd35",
+   "day_order": 4
   }
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-14T17:23:06",
+  "fecha": "2026-11-14T18:10:39",
   "plan_sha": "84b6e08d3d7ee761",
   "paso": 8,
   "cmd": "python3 pipeline/cinetoro-2026-verificar.py"
