@@ -68,6 +68,37 @@
    "valor": "Cine Teatro - Toro",
    "contra": "Por definir - Toro",
    "evidencia": "Lámina 02: «CINETORO EXPANDIDO Mapping geografías en transformación por el colectivo AZMA · Lugar: Cine Teatro · 10:00 Pm a 12:00 Pm» (a ojo; manda la lámina sobre el pie)"
+  },
+  {
+   "ancla": {
+    "sede": "Coliseo Institución Educativa Fray José Joaquín Escobar - Toro",
+    "dia": "2026-11-14",
+    "hora": "18:30"
+   },
+   "fuente": {
+    "tipo": "festival-ig",
+    "url": "https://www.instagram.com/p/Dfu8yxaI1ws/",
+    "fecha": "2026-11-14"
+   },
+   "casilla": "existe",
+   "valor": {
+    "title": "Resultados Taller Nicole Antebi - Moviendo montañas",
+    "type": "event",
+    "event_kind": "taller",
+    "day": "2026-11-14",
+    "time": "18:30",
+    "duration": "90 min",
+    "venue": "Coliseo Institución Educativa Fray José Joaquín Escobar - Toro",
+    "is_free": true,
+    "_src": {
+     "url": "https://www.instagram.com/p/Dfu8yxaI1ws/",
+     "date": "2026-11-14",
+     "lamina": 1
+    },
+    "section": "🎓 Programación Académica"
+   },
+   "evidencia": "Lámina 01: «RESULTADOS TALLER NICOLE ANTEBI - Moviendo montañas · programacion academica · Lugar: Coliseo: Institución Educativa Fray José Joaquín Escobar · Hora: 6:30 Pm a 8:00 Pm» (a ojo)",
+   "funcion": "f_9e6446dd35"
   }
  ]
 }
