@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "Agenda general actualizada del IV Festival de Cine (PDF del festival a Juan, 25 oct 2026)",
-  "capturado": "2026-11-11",
+  "capturado": "2026-11-14",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_secciones": "Sección = el «Componente» de la agenda, verbatim y en caja de Título (pedido de Juan, 25 oct).",
@@ -166,6 +166,15 @@
    "address": "Cra. 13 #12-55, Funza",
    "_prec": "manual",
    "_match": "Google Maps «Instituto Centro Cultural Bacatá» (25 oct 2026), Cra. 13 #12-55, Funza (491 opiniones). Sede única según el afiche oficial. OJO: Nominatim/OSM pone un edificio «Centro Cultural Bacatá» en la Calle 18 (4.71662,-74.20628), ~730 m al este: no se usa (regla Google Maps primero)."
+  },
+  "Biblioteca de Ciudad Universitaria - Funza": {
+   "short": "Biblioteca de Ciudad Universitaria",
+   "city": "Funza",
+   "lat": 4.7087717,
+   "lng": -74.2062933,
+   "address": "Ciudad Universitaria, Funza",
+   "_prec": "manual",
+   "_match": "Google Maps no tiene ficha «Biblioteca de Ciudad Universitaria»; la Ciudad Universitaria de Funza es el campus de la Universidad Colegio Mayor de Cundinamarca (Google Maps, 14 nov 2026): pin del campus"
   }
  },
  "_avisos_id": [],
@@ -585,7 +594,7 @@
    "day": "2026-11-20",
    "time": "08:30",
    "day_order": 2,
-   "venue": "Centro Cultural Bacatá - Funza",
+   "venue": "Biblioteca de Ciudad Universitaria - Funza",
    "event_kind": "apertura",
    "has_qa": false,
    "_src": {
@@ -598,6 +607,7 @@
    "_fid": "f_69cc45b59e",
    "id": "f_69cc45b59e",
    "is_free": true,
+   "registration_url": "https://forms.gle/c61vUuPhjwTAbZM9A",
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -609,7 +619,8 @@
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-10-25"
+     "fecha": "2026-11-14",
+     "url": "https://www.facebook.com/centroculturalbacatadefunza/posts/pfbid02i5rN4NZhNY4a63LEa1HsyycnVzMSn8n915xguSr8gxu5Saug6hvCXYqDGs6WSoBtl"
     },
     "duration": {
      "tipo": "festival-web",
@@ -622,6 +633,11 @@
     "requires_registration": {
      "tipo": "festival-web",
      "fecha": "2026-10-25"
+    },
+    "registration_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-14",
+     "url": "https://www.facebook.com/centroculturalbacatadefunza/posts/pfbid02i5rN4NZhNY4a63LEa1HsyycnVzMSn8n915xguSr8gxu5Saug6hvCXYqDGs6WSoBtl"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -654,7 +670,7 @@
    "day": "2026-11-20",
    "time": "09:00",
    "day_order": 2,
-   "venue": "Centro Cultural Bacatá - Funza",
+   "venue": "Biblioteca de Ciudad Universitaria - Funza",
    "event_kind": "evento",
    "has_qa": false,
    "_src": {
@@ -669,6 +685,7 @@
    "_fid": "f_15d4067239",
    "id": "f_15d4067239",
    "is_free": true,
+   "registration_url": "https://forms.gle/c61vUuPhjwTAbZM9A",
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -680,7 +697,8 @@
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-10-25"
+     "fecha": "2026-11-14",
+     "url": "https://www.facebook.com/centroculturalbacatadefunza/posts/pfbid02i5rN4NZhNY4a63LEa1HsyycnVzMSn8n915xguSr8gxu5Saug6hvCXYqDGs6WSoBtl"
     },
     "duration": {
      "tipo": "festival-web",
@@ -693,6 +711,11 @@
     "requires_registration": {
      "tipo": "festival-web",
      "fecha": "2026-10-25"
+    },
+    "registration_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-14",
+     "url": "https://www.facebook.com/centroculturalbacatadefunza/posts/pfbid02i5rN4NZhNY4a63LEa1HsyycnVzMSn8n915xguSr8gxu5Saug6hvCXYqDGs6WSoBtl"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -792,7 +815,7 @@
    "day": "2026-11-20",
    "time": "10:45",
    "day_order": 2,
-   "venue": "Centro Cultural Bacatá - Funza",
+   "venue": "Biblioteca de Ciudad Universitaria - Funza",
    "event_kind": "evento",
    "has_qa": false,
    "_src": {
@@ -807,6 +830,7 @@
    "_fid": "f_d9a7e52bb9",
    "id": "f_d9a7e52bb9",
    "is_free": true,
+   "registration_url": "https://forms.gle/c61vUuPhjwTAbZM9A",
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -818,7 +842,8 @@
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-10-25"
+     "fecha": "2026-11-14",
+     "url": "https://www.facebook.com/centroculturalbacatadefunza/posts/pfbid02i5rN4NZhNY4a63LEa1HsyycnVzMSn8n915xguSr8gxu5Saug6hvCXYqDGs6WSoBtl"
     },
     "duration": {
      "tipo": "festival-web",
@@ -831,6 +856,11 @@
     "requires_registration": {
      "tipo": "festival-web",
      "fecha": "2026-10-25"
+    },
+    "registration_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-14",
+     "url": "https://www.facebook.com/centroculturalbacatadefunza/posts/pfbid02i5rN4NZhNY4a63LEa1HsyycnVzMSn8n915xguSr8gxu5Saug6hvCXYqDGs6WSoBtl"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -864,7 +894,7 @@
    "day": "2026-11-20",
    "time": "13:30",
    "day_order": 2,
-   "venue": "Centro Cultural Bacatá - Funza",
+   "venue": "Biblioteca de Ciudad Universitaria - Funza",
    "event_kind": "evento",
    "has_qa": false,
    "_src": {
@@ -879,6 +909,7 @@
    "_fid": "f_31e336c377",
    "id": "f_31e336c377",
    "is_free": true,
+   "registration_url": "https://forms.gle/c61vUuPhjwTAbZM9A",
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -890,7 +921,8 @@
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-10-25"
+     "fecha": "2026-11-14",
+     "url": "https://www.facebook.com/centroculturalbacatadefunza/posts/pfbid02i5rN4NZhNY4a63LEa1HsyycnVzMSn8n915xguSr8gxu5Saug6hvCXYqDGs6WSoBtl"
     },
     "duration": {
      "tipo": "festival-web",
@@ -903,6 +935,11 @@
     "requires_registration": {
      "tipo": "festival-web",
      "fecha": "2026-10-25"
+    },
+    "registration_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-14",
+     "url": "https://www.facebook.com/centroculturalbacatadefunza/posts/pfbid02i5rN4NZhNY4a63LEa1HsyycnVzMSn8n915xguSr8gxu5Saug6hvCXYqDGs6WSoBtl"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -936,7 +973,7 @@
    "day": "2026-11-20",
    "time": "14:45",
    "day_order": 2,
-   "venue": "Centro Cultural Bacatá - Funza",
+   "venue": "Biblioteca de Ciudad Universitaria - Funza",
    "event_kind": "charla",
    "has_qa": false,
    "_src": {
@@ -951,6 +988,7 @@
    "_fid": "f_6f19c59638",
    "id": "f_6f19c59638",
    "is_free": true,
+   "registration_url": "https://forms.gle/c61vUuPhjwTAbZM9A",
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -962,7 +1000,8 @@
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-10-25"
+     "fecha": "2026-11-14",
+     "url": "https://www.facebook.com/centroculturalbacatadefunza/posts/pfbid02i5rN4NZhNY4a63LEa1HsyycnVzMSn8n915xguSr8gxu5Saug6hvCXYqDGs6WSoBtl"
     },
     "duration": {
      "tipo": "festival-web",
@@ -975,6 +1014,11 @@
     "requires_registration": {
      "tipo": "festival-web",
      "fecha": "2026-10-25"
+    },
+    "registration_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-14",
+     "url": "https://www.facebook.com/centroculturalbacatadefunza/posts/pfbid02i5rN4NZhNY4a63LEa1HsyycnVzMSn8n915xguSr8gxu5Saug6hvCXYqDGs6WSoBtl"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -1008,7 +1052,7 @@
    "day": "2026-11-20",
    "time": "15:30",
    "day_order": 2,
-   "venue": "Centro Cultural Bacatá - Funza",
+   "venue": "Biblioteca de Ciudad Universitaria - Funza",
    "event_kind": "evento",
    "has_qa": false,
    "_src": {
@@ -1023,6 +1067,7 @@
    "_fid": "f_b268a9ede5",
    "id": "f_b268a9ede5",
    "is_free": true,
+   "registration_url": "https://forms.gle/c61vUuPhjwTAbZM9A",
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -1034,7 +1079,8 @@
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-10-25"
+     "fecha": "2026-11-14",
+     "url": "https://www.facebook.com/centroculturalbacatadefunza/posts/pfbid02i5rN4NZhNY4a63LEa1HsyycnVzMSn8n915xguSr8gxu5Saug6hvCXYqDGs6WSoBtl"
     },
     "duration": {
      "tipo": "juan",
@@ -1048,6 +1094,11 @@
     "requires_registration": {
      "tipo": "festival-web",
      "fecha": "2026-10-25"
+    },
+    "registration_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-14",
+     "url": "https://www.facebook.com/centroculturalbacatadefunza/posts/pfbid02i5rN4NZhNY4a63LEa1HsyycnVzMSn8n915xguSr8gxu5Saug6hvCXYqDGs6WSoBtl"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -1080,7 +1131,7 @@
    "day": "2026-11-20",
    "time": "17:00",
    "day_order": 2,
-   "venue": "Centro Cultural Bacatá - Funza",
+   "venue": "Biblioteca de Ciudad Universitaria - Funza",
    "event_kind": "evento",
    "has_qa": false,
    "_src": {
@@ -1095,6 +1146,7 @@
    "_fid": "f_cbe3d41709",
    "id": "f_cbe3d41709",
    "is_free": true,
+   "registration_url": "https://forms.gle/c61vUuPhjwTAbZM9A",
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -1106,7 +1158,8 @@
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-10-25"
+     "fecha": "2026-11-14",
+     "url": "https://www.facebook.com/centroculturalbacatadefunza/posts/pfbid02i5rN4NZhNY4a63LEa1HsyycnVzMSn8n915xguSr8gxu5Saug6hvCXYqDGs6WSoBtl"
     },
     "duration": {
      "tipo": "festival-web",
@@ -1119,6 +1172,11 @@
     "requires_registration": {
      "tipo": "festival-web",
      "fecha": "2026-10-25"
+    },
+    "registration_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-14",
+     "url": "https://www.facebook.com/centroculturalbacatadefunza/posts/pfbid02i5rN4NZhNY4a63LEa1HsyycnVzMSn8n915xguSr8gxu5Saug6hvCXYqDGs6WSoBtl"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -1485,8 +1543,8 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-11T16:51:49",
-  "plan_sha": "f88fc562837e7b4f",
+  "fecha": "2026-11-14T13:15:39",
+  "plan_sha": "f21069d77d607207",
   "paso": 6,
   "cmd": "python3 pipeline/funza-2026-verificar.py"
  }
