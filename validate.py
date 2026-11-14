@@ -4134,6 +4134,7 @@ try:
         # ponen «Los inocentes encantadores» y «Gioia mia» el 20.11 a las 19:00; son dos salas
         ('aleste-2026', '2026-11-20|19:00|Centro Colombo Americano - Medellín'),   # Fokus Wajda + Al Este Especial
         ('aleste-2026', '2026-11-26|17:00|Cinemateca de Bogotá - Bogotá'),   # Histeria + The Souffleur (IG DfsHqtAlpmC, dos láminas)
+        ('cinetoro-2026', '2026-11-14|18:30|Coliseo Institución Educativa Fray José Joaquín Escobar - Toro'),   # Programa 7 + resultados del taller de Nicole Antebi (IG Dfu8yxaI1ws, lámina 1: dos entradas)
     }
     _viol = []
     for _fname in _ACTIVE:
