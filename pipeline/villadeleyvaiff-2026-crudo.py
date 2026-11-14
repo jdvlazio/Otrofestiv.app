@@ -117,7 +117,9 @@ PARRILLA = [
     ('pdf', 'Plaza', '2026-11-14', [
         ('10:00', PLAZA, RETRO, [], {**EN_PLAZA, 'duracion_min': 120, '_duracion_de': 'estimada como la del viernes; la fuente no da fin'}),
         ('15:00', PLAZA, None, ['Masha y los osos'], dict(EN_PLAZA)),
-        ('17:00', PLAZA, None, ['Sinfonía de los bichos raros'], dict(EN_PLAZA)),
+        # 14 nov 17:02, Juan en la Plaza: «están dando es Mukira» — el PDF dice Sinfonía
+        # de los bichos raros; manda lo que se proyecta (fuente: juan).
+        ('17:00', PLAZA, None, ['Mu-ki-ra'], dict(EN_PLAZA)),
         ('19:00', LARGO, None, ['El corset'], {**EN_PLAZA, '_nota': 'presentación especial; ★ competencia oficial'})]),
     ('pdf', 'Plaza', '2026-11-15', [
         ('10:00', PLAZA, RETRO, [], {**EN_PLAZA, 'duracion_min': 240, '_duracion_de': 'de 10 AM a 2 PM, según la fuente'}),

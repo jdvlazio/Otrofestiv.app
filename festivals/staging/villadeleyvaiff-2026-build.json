@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "IG @festcinevilla, carrusel «Programación · Real Fábrica» (10 nov 2026)",
-  "capturado": "2026-11-12",
+  "capturado": "2026-11-14",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "radar": 1248,
@@ -1783,15 +1783,15 @@
    "id": "f_4f5382832f"
   },
   {
-   "title": "Sinfonía de los bichos raros",
+   "title": "Mu-ki-ra",
    "type": "film",
    "section": "🏛️ Cine a la Plaza",
-   "director": "Julián Duque",
+   "director": "Estefanía Piñeres",
    "year": 2026,
    "country": "Colombia",
    "flags": "🇨🇴",
-   "duration": "90 min",
-   "genre": "Familia",
+   "duration": "82 min",
+   "genre": "Animación",
    "_ancla": [
     "Plaza Mayor - Villa de Leyva",
     "2026-11-14",
@@ -1802,9 +1802,9 @@
    "day_order": 1,
    "venue": "Plaza Mayor - Villa de Leyva",
    "has_qa": false,
-   "synopsis": "La trama sigue a Macha, una cucaracha adolescente que sueña con convertirse en cantante. La joven vive junto a su padre, Verdinardo El Sapo, en el barrio Los Matorrales, un lugar separado de la Gran Ciudad por un enorme muro. Cuando la legumbrería de su padre está en riesgo de desaparecer, Macha decide reunir a su grupo de amigos, otros \"bichos raros\" como ella, para participar en un reality de talentos humanos.",
+   "synopsis": "Tras los muros que protegen la aldea se extiende una selva mágica y misteriosa, habitada por criaturas consideradas peligrosas. Durante años, los habitantes se han formado como guerreros desde jóvenes.",
    "synopsis_lang": "es",
-   "poster": "/assets/villadeleyvaiff-2026/sinfonia-de-los-bichos-raros.jpg",
+   "poster": "/assets/villadeleyvaiff-2026/mu-ki-ra.jpg",
    "posterSource": "tmdb",
    "_src": {
     "url": "https://www.villadeleyvaiff.co/_files/ugd/66001c_a296b2bfe67b41cdba2e0a1c661be1f5.pdf",
@@ -1812,9 +1812,9 @@
     "nota": "programa completo (PDF de la web, 11 nov), columna Cine a la Plaza"
    },
    "is_free": true,
-   "lbSlug": "la-sinfonia-de-los-bichos-raros",
-   "tmdb_id": 1776754,
-   "synopsis_en": "In the extraordinary neighborhood of Los Matorrales, hidden behind a massive wall in the city, lives Macha, a kind-hearted and dreamy cockroach who sings while helping at her father's legume shop. Everything changes when the business faces imminent closure. To save the store, protect her community, and fulfill her dream of becoming a singer, Macha convinces her group of friends—fellow misfits like a spider, a centipede, a vulture, and an opossum—to form a band of \"weird bugs\" and enter a human reality TV show. Through music, humor, and adventure, they discover the true power of friendship and self-acceptance.",
+   "lbSlug": "mu-ki-ra",
+   "tmdb_id": 1446898,
+   "synopsis_en": "When her brother is kidnapped by Mu-Ki-Ra, Cleo ventures into a monster-plagued jungle with unlikely allies.",
    "_fid": "f_fa9ac39afb",
    "id": "f_fa9ac39afb"
   },
@@ -1850,7 +1850,7 @@
    "is_free": true,
    "lbSlug": "iron-boy",
    "tmdb_id": 947493,
-   "synopsis_en": "In rural France, 10-year-old Christophe tries to live up to his rigid and distant father on the family farm. But the young boy starts to lean over and collapse without warning — on the tractor, at school, at dinner... A doctor finds the solution: Christophe must wear an iron corset to keep himself upright. Forced to reinvent his life away from the farm, Christophe discovers a new passion for music, meets a new friend, and follows her into his first mischief. But will any of this really fix what is out of balance?",
+   "synopsis_en": "11-year-old Christophe tries to live up to his rigid and distant father on the family farm in rural France. But the young boy starts to lean over and collapse without warning — on the tractor, at school, at dinner... A doctor finds the solution: Christophe must wear an iron corset to keep himself upright. Forced to reinvent his life away from the farm, Christophe discovers a new passion for music, meets a new friend, and follows her into his first mischief.",
    "title_en": "Iron Boy",
    "_fid": "f_7d022ed46f",
    "id": "f_7d022ed46f"
@@ -2476,7 +2476,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-12T10:52:42",
+  "fecha": "2026-11-14T17:15:44",
   "plan_sha": "4204d6f83e6e5708",
   "paso": 7,
   "cmd": "python3 pipeline/encuadrar-posters.py villadeleyvaiff-2026 --aplicar --desde festivals/staging/villadeleyvaiff-2026-build.json"

@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, emparejado con ficha_verifica() (director + año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-11-12"
+  "capturado": "2026-11-14"
  },
  "obras": [
   {
@@ -84,7 +84,7 @@
    "lbSlug": "harmonica-2026",
    "_verificado": "declarada a mano: traducción del título original «Gaita» (Harmonica), misma dirección (Michele Diniz)",
    "_director": "Michele Diniz",
-   "_sondeado": "2026-11-12",
+   "_sondeado": "2026-11-14",
    "poster": "/assets/villadeleyvaiff-2026/armonica.jpg",
    "posterSource": "tmdb"
   },
@@ -123,7 +123,7 @@
    "lbSlug": "nikolai-rimsky-korsakov-flight-of-the-bumblebee",
    "_verificado": "declarada a mano: título en TMDB «Nikolai Rimsky-Korsakov. Flight of the Bumblebee», misma dirección (Natalia Chernysheva, Rusia-Bielorrusia), del almanaque «Children's Album». El still publicado por CUFF tiene el mismo dibujo que la lámina: abejorro fotografiado sobre personaje en negro y amarillo y fondo con trazos",
    "_director": "Natalia Chernysheva",
-   "_sondeado": "2026-11-12"
+   "_sondeado": "2026-11-14"
   },
   {
    "titulo": "Chaika",
@@ -430,7 +430,7 @@
    "poster": "/assets/villadeleyvaiff-2026/dance-dance-evolution.jpg",
    "_verificado": "declarada a mano: alta del 4 nov 2026 con el afiche oficial de IG, recortado a la proporción de TMDB; datos de Miyu",
    "_director": "Jonathan Abbaszadeh, Finn Falk, Yosi Hsu, Mia Lou, Huidi Zhang, Ruiwen Zhang",
-   "_sondeado": "2026-11-12",
+   "_sondeado": "2026-11-14",
    "posterSource": "tmdb"
   },
   {
@@ -457,7 +457,7 @@
    "titulo_original": "Le Corset",
    "poster_path": "/h4YDklaLjbgdu9yUr6vNybnrnzX.jpg",
    "synopsis_es": "En la Francia rural, Christophe (10 años) intenta estar a la altura de su padre, un hombre rígido y distante, en la granja familiar. Sin embargo, el niño empieza a inclinarse y a desplomarse sin previo aviso: en el tractor, en la escuela, durante la cena... Un médico encuentra la solución: Christophe debe llevar un corsé de hierro para mantenerse erguido. Obligado a reinventar su vida lejos de la granja, Christophe descubre una nueva pasión por la música, conoce a una nueva amiga y la sigue en sus primeras travesuras. Pero ¿acaso servirá todo esto para corregir lo que está desequilibrado?",
-   "synopsis_en": "In rural France, 10-year-old Christophe tries to live up to his rigid and distant father on the family farm. But the young boy starts to lean over and collapse without warning — on the tractor, at school, at dinner... A doctor finds the solution: Christophe must wear an iron corset to keep himself upright. Forced to reinvent his life away from the farm, Christophe discovers a new passion for music, meets a new friend, and follows her into his first mischief. But will any of this really fix what is out of balance?",
+   "synopsis_en": "11-year-old Christophe tries to live up to his rigid and distant father on the family farm in rural France. But the young boy starts to lean over and collapse without warning — on the tractor, at school, at dinner... A doctor finds the solution: Christophe must wear an iron corset to keep himself upright. Forced to reinvent his life away from the farm, Christophe discovers a new passion for music, meets a new friend, and follows her into his first mischief.",
    "genero": "Animación",
    "anio_tmdb": 2026,
    "duracion_tmdb": 90,
@@ -466,7 +466,7 @@
    "lbSlug": "iron-boy",
    "_verificado": "declarada a mano: «Le Corset» (Iron Boy, 2026) de Louis Clichy: director, país y año del PDF",
    "_director": "Louis Clichy",
-   "_sondeado": "2026-11-12",
+   "_sondeado": "2026-11-14",
    "poster": "/assets/villadeleyvaiff-2026/el-corset.jpg",
    "posterSource": "tmdb"
   },
@@ -693,7 +693,7 @@
    "lbSlug": "in-the-shadow-of-the-heron",
    "_verificado": "declarada a mano: traducción de «Dans l’ombre du héron», dir. Nicolas Bianco-Levrin; la sinopsis (rana y garza) es la imagen de la lámina",
    "_director": "Nicolas Bianco",
-   "_sondeado": "2026-11-12",
+   "_sondeado": "2026-11-14",
    "poster": "/assets/villadeleyvaiff-2026/en-la-sombra-de-la-garza.jpg",
    "posterSource": "tmdb"
   },
@@ -749,7 +749,7 @@
    "lbSlug": "gohan-2026",
    "_verificado": "declarada a mano: el PDF escribe «GOHAM»; en TMDB es «Gohan» (โกฮัง..หัวใจโกโฮม, 2026), dirigida por Chayanop Boonprakob y Nattawut Poonpiriya, los mismos que acredita el PDF (Tailandia, 2026)",
    "_director": "Chayanop Boonprakob, Nattawut Poonpiriya, Atta Hemwadee",
-   "_sondeado": "2026-11-12",
+   "_sondeado": "2026-11-14",
    "poster": "/assets/villadeleyvaiff-2026/goham.jpg",
    "posterSource": "tmdb"
   },
@@ -854,7 +854,7 @@
    "lbSlug": "48-the-speaking-dead-woman",
    "_verificado": "declarada a mano: en TMDB con su número de serie: «48 - La muerta que habla», misma codirección (Agustín Fittipaldi), Argentina",
    "_director": "Candela Gonzalez, Agustín Fittipaldi",
-   "_sondeado": "2026-11-12",
+   "_sondeado": "2026-11-14",
    "poster": "/assets/villadeleyvaiff-2026/la-muerta-que-habla.jpg",
    "posterSource": "tmdb"
   },
@@ -1166,7 +1166,7 @@
    "poster": "/assets/villadeleyvaiff-2026/lo-que-no-se-puede-borrar.jpg",
    "_verificado": "declarada a mano: alta hecha el 4 nov 2026 con el afiche original, tras las sondas anti-duplicado",
    "_director": "Iñaki Dubourg",
-   "_sondeado": "2026-11-12",
+   "_sondeado": "2026-11-14",
    "posterSource": "tmdb"
   },
   {
@@ -1214,7 +1214,7 @@
    "poster": "/assets/bhff-2026/los-lobo.jpg",
    "_verificado": "declarada a mano: misma obra publicada en Bogotá Horror 2026 («Los Lobo», dir. Saeed García Pérez, Colombia, 2026, 20 min) con afiche oficial; la lámina de Villa de Leyva escribe «Saaed García», errata del festival. Sin ficha TMDB",
    "_director": "Saaed García",
-   "_sondeado": "2026-11-12"
+   "_sondeado": "2026-11-14"
   },
   {
    "titulo": "Luz silenciosa",
@@ -1252,7 +1252,7 @@
    "poster": "/assets/villadeleyvaiff-2026/malas-posturas.jpg",
    "_verificado": "declarada a mano: misma ficha que ya encontraba el candado (Juan Pablo Castro, Colombia, 2025, 17 min); TMDB no tiene afiche y cinecorto.co publica el oficial, recortado a los lados 1,3 % para la proporción",
    "_director": "Juan Pablo Castro",
-   "_sondeado": "2026-11-12",
+   "_sondeado": "2026-11-14",
    "_heredado": {
     "genero": "catálogo w_R4KECG9BFSX8 (ficica-2026, jardin-2026, villadeleyvaiff-2026)",
     "synopsis_es": "catálogo w_R4KECG9BFSX8 (ficica-2026, jardin-2026, villadeleyvaiff-2026)"
@@ -1328,7 +1328,7 @@
    "lbSlug": "film:1510119",
    "_verificado": "declarada a mano: traducción de «Моя маленькая жизнь на острове», misma dirección (Nina Bisyarina), que la lámina acredita como Rusia",
    "_director": "Nina Bisyarina",
-   "_sondeado": "2026-11-12"
+   "_sondeado": "2026-11-14"
   },
   {
    "titulo": "Moon, mi amigo el panda",
@@ -1504,7 +1504,7 @@
    "poster": "/assets/villadeleyvaiff-2026/noche-de-vuelo.jpg",
    "_verificado": "declarada a mano: alta hecha el 4 nov 2026 con el afiche original, tras las sondas anti-duplicado",
    "_director": "Zacarías Flores del Campo",
-   "_sondeado": "2026-11-12",
+   "_sondeado": "2026-11-14",
    "posterSource": "tmdb",
    "_heredado": {
     "genero": "catálogo w_R4NEB2RNHWKD (siembrafest-2026, villadeleyvaiff-2026)",
@@ -1520,7 +1520,7 @@
    "poster": "/assets/ficdeh/notas-sobre-un-destierro.jpg",
    "_verificado": "declarada a mano: misma obra publicada en FICDEH 2026 (dir. Gustavo Castro, Brasil, 2025, 80 min) con afiche oficial y sinopsis. Sin ficha TMDB por título idéntico",
    "_director": "Gustavo Castro",
-   "_sondeado": "2026-11-12",
+   "_sondeado": "2026-11-14",
    "genero": "Documental",
    "_heredado": {
     "genero": "catálogo w_R4HKXW3511SF (ficdeh-2026, villadeleyvaiff-2026)",
@@ -1761,28 +1761,6 @@
    "posterSource": "tmdb"
   },
   {
-   "titulo": "Sinfonía de los bichos raros",
-   "tmdb_id": 1776754,
-   "titulo_original": "La Sinfonía de los Bichos raros",
-   "poster_path": "/rvzcy8kixJuolV2ltRhSbGwhKKN.jpg",
-   "synopsis_en": "In the extraordinary neighborhood of Los Matorrales, hidden behind a massive wall in the city, lives Macha, a kind-hearted and dreamy cockroach who sings while helping at her father's legume shop. Everything changes when the business faces imminent closure. To save the store, protect her community, and fulfill her dream of becoming a singer, Macha convinces her group of friends—fellow misfits like a spider, a centipede, a vulture, and an opossum—to form a band of \"weird bugs\" and enter a human reality TV show. Through music, humor, and adventure, they discover the true power of friendship and self-acceptance.",
-   "genero": "Familia",
-   "anio_tmdb": 2026,
-   "duracion_tmdb": 90,
-   "pais_tmdb": "Colombia",
-   "lbSlug": "la-sinfonia-de-los-bichos-raros",
-   "_verificado": "el catálogo ya la tiene (w_R4G8K6M9KW94, fantasmagoria-2026)",
-   "work_id": "w_R4G8K6M9KW94",
-   "_director": "Julián Duque",
-   "_sondeado": "2026-11-12",
-   "poster": "/assets/villadeleyvaiff-2026/sinfonia-de-los-bichos-raros.jpg",
-   "posterSource": "tmdb",
-   "synopsis_es": "La trama sigue a Macha, una cucaracha adolescente que sueña con convertirse en cantante. La joven vive junto a su padre, Verdinardo El Sapo, en el barrio Los Matorrales, un lugar separado de la Gran Ciudad por un enorme muro. Cuando la legumbrería de su padre está en riesgo de desaparecer, Macha decide reunir a su grupo de amigos, otros \"bichos raros\" como ella, para participar en un reality de talentos humanos.",
-   "_heredado": {
-    "synopsis_es": "catálogo w_R4G8K6M9KW94 (fantasmagoria-2026, villadeleyvaiff-2026)"
-   }
-  },
-  {
    "titulo": "Snorri",
    "tmdb_id": 1660120,
    "titulo_original": "Snorri 4D - Catch Me If You Candy",
@@ -1796,7 +1774,7 @@
    "lbSlug": "snorri-4d-catch-me-if-you-candy",
    "_verificado": "declarada a mano: «Snorri 4D - Catch Me If You Candy» (2026, Alemania). TMDB no acredita dirección y el candado no la ve; Blooloop la da dirigida por Thierry Marchand, 10 min. El afiche de TMDB y el still de la lámina muestran el mismo pulpo azul con casco vikingo, la paleta de caramelo y el cangrejo",
    "_director": "Thierry Marchand",
-   "_sondeado": "2026-11-12",
+   "_sondeado": "2026-11-14",
    "sinopsis": "Snorri, el pulpo azul de seis brazos, quiere una paleta a toda costa, y ese antojo lo lanza a una persecución desenfrenada por el mundo acuático de Rulantica. Un corto en 4D para toda la familia.",
    "_sinopsis": "resumida en español de la ficha oficial de Europa-Park (https://www.europapark.de/en/theme-park/shows/snorri-4d-catch-me-if-you-candy), 12 nov: TMDB 1660120 no tiene overview",
    "poster": "/assets/villadeleyvaiff-2026/snorri.jpg",
@@ -1890,7 +1868,7 @@
    "lbSlug": "termina",
    "_verificado": "declarada a mano: «TÉRMINA» (2025) en TMDB acredita la dirección como «Juan Ruiz» y el candado no casa con «Juan José Guevara» de la lámina. Es la misma obra publicada en Jardín 2026 con este tmdb_id y en SiembraFest, dir. Juan José Guevara Ruiz, 27 min",
    "_director": "Juan José Guevara",
-   "_sondeado": "2026-11-12",
+   "_sondeado": "2026-11-14",
    "poster": "/assets/villadeleyvaiff-2026/termina.jpg",
    "posterSource": "tmdb"
   },
@@ -2091,7 +2069,7 @@
    "lbSlug": "convocacao-geral-da-categoria",
    "_verificado": "declarada a mano: traducción del título original «Convocação Geral da Categoria», misma dirección (Bruna Pessoa); la sinopsis trata de una asamblea de docentes con su sindicato",
    "_director": "Bruna Pessoa",
-   "_sondeado": "2026-11-12"
+   "_sondeado": "2026-11-14"
   }
  ],
  "verificadas": {
@@ -2173,7 +2151,7 @@
    "lbSlug": "harmonica-2026",
    "_verificado": "declarada a mano: traducción del título original «Gaita» (Harmonica), misma dirección (Michele Diniz)",
    "_director": "Michele Diniz",
-   "_sondeado": "2026-11-12",
+   "_sondeado": "2026-11-14",
    "poster": "/assets/villadeleyvaiff-2026/armonica.jpg",
    "posterSource": "tmdb"
   },
@@ -2210,7 +2188,7 @@
    "lbSlug": "nikolai-rimsky-korsakov-flight-of-the-bumblebee",
    "_verificado": "declarada a mano: título en TMDB «Nikolai Rimsky-Korsakov. Flight of the Bumblebee», misma dirección (Natalia Chernysheva, Rusia-Bielorrusia), del almanaque «Children's Album». El still publicado por CUFF tiene el mismo dibujo que la lámina: abejorro fotografiado sobre personaje en negro y amarillo y fondo con trazos",
    "_director": "Natalia Chernysheva",
-   "_sondeado": "2026-11-12"
+   "_sondeado": "2026-11-14"
   },
   "Chaika": {
    "tmdb_id": 1689999,
@@ -2489,7 +2467,7 @@
    "poster": "/assets/villadeleyvaiff-2026/dance-dance-evolution.jpg",
    "_verificado": "declarada a mano: alta del 4 nov 2026 con el afiche oficial de IG, recortado a la proporción de TMDB; datos de Miyu",
    "_director": "Jonathan Abbaszadeh, Finn Falk, Yosi Hsu, Mia Lou, Huidi Zhang, Ruiwen Zhang",
-   "_sondeado": "2026-11-12",
+   "_sondeado": "2026-11-14",
    "posterSource": "tmdb"
   },
   "Demian": {
@@ -2514,7 +2492,7 @@
    "titulo_original": "Le Corset",
    "poster_path": "/h4YDklaLjbgdu9yUr6vNybnrnzX.jpg",
    "synopsis_es": "En la Francia rural, Christophe (10 años) intenta estar a la altura de su padre, un hombre rígido y distante, en la granja familiar. Sin embargo, el niño empieza a inclinarse y a desplomarse sin previo aviso: en el tractor, en la escuela, durante la cena... Un médico encuentra la solución: Christophe debe llevar un corsé de hierro para mantenerse erguido. Obligado a reinventar su vida lejos de la granja, Christophe descubre una nueva pasión por la música, conoce a una nueva amiga y la sigue en sus primeras travesuras. Pero ¿acaso servirá todo esto para corregir lo que está desequilibrado?",
-   "synopsis_en": "In rural France, 10-year-old Christophe tries to live up to his rigid and distant father on the family farm. But the young boy starts to lean over and collapse without warning — on the tractor, at school, at dinner... A doctor finds the solution: Christophe must wear an iron corset to keep himself upright. Forced to reinvent his life away from the farm, Christophe discovers a new passion for music, meets a new friend, and follows her into his first mischief. But will any of this really fix what is out of balance?",
+   "synopsis_en": "11-year-old Christophe tries to live up to his rigid and distant father on the family farm in rural France. But the young boy starts to lean over and collapse without warning — on the tractor, at school, at dinner... A doctor finds the solution: Christophe must wear an iron corset to keep himself upright. Forced to reinvent his life away from the farm, Christophe discovers a new passion for music, meets a new friend, and follows her into his first mischief.",
    "genero": "Animación",
    "anio_tmdb": 2026,
    "duracion_tmdb": 90,
@@ -2523,7 +2501,7 @@
    "lbSlug": "iron-boy",
    "_verificado": "declarada a mano: «Le Corset» (Iron Boy, 2026) de Louis Clichy: director, país y año del PDF",
    "_director": "Louis Clichy",
-   "_sondeado": "2026-11-12",
+   "_sondeado": "2026-11-14",
    "poster": "/assets/villadeleyvaiff-2026/el-corset.jpg",
    "posterSource": "tmdb"
   },
@@ -2742,7 +2720,7 @@
    "lbSlug": "in-the-shadow-of-the-heron",
    "_verificado": "declarada a mano: traducción de «Dans l’ombre du héron», dir. Nicolas Bianco-Levrin; la sinopsis (rana y garza) es la imagen de la lámina",
    "_director": "Nicolas Bianco",
-   "_sondeado": "2026-11-12",
+   "_sondeado": "2026-11-14",
    "poster": "/assets/villadeleyvaiff-2026/en-la-sombra-de-la-garza.jpg",
    "posterSource": "tmdb"
   },
@@ -2796,7 +2774,7 @@
    "lbSlug": "gohan-2026",
    "_verificado": "declarada a mano: el PDF escribe «GOHAM»; en TMDB es «Gohan» (โกฮัง..หัวใจโกโฮม, 2026), dirigida por Chayanop Boonprakob y Nattawut Poonpiriya, los mismos que acredita el PDF (Tailandia, 2026)",
    "_director": "Chayanop Boonprakob, Nattawut Poonpiriya, Atta Hemwadee",
-   "_sondeado": "2026-11-12",
+   "_sondeado": "2026-11-14",
    "poster": "/assets/villadeleyvaiff-2026/goham.jpg",
    "posterSource": "tmdb"
   },
@@ -2897,7 +2875,7 @@
    "lbSlug": "48-the-speaking-dead-woman",
    "_verificado": "declarada a mano: en TMDB con su número de serie: «48 - La muerta que habla», misma codirección (Agustín Fittipaldi), Argentina",
    "_director": "Candela Gonzalez, Agustín Fittipaldi",
-   "_sondeado": "2026-11-12",
+   "_sondeado": "2026-11-14",
    "poster": "/assets/villadeleyvaiff-2026/la-muerta-que-habla.jpg",
    "posterSource": "tmdb"
   },
@@ -3169,7 +3147,7 @@
    "poster": "/assets/villadeleyvaiff-2026/lo-que-no-se-puede-borrar.jpg",
    "_verificado": "declarada a mano: alta hecha el 4 nov 2026 con el afiche original, tras las sondas anti-duplicado",
    "_director": "Iñaki Dubourg",
-   "_sondeado": "2026-11-12",
+   "_sondeado": "2026-11-14",
    "posterSource": "tmdb"
   },
   "Logos": {
@@ -3214,7 +3192,7 @@
    "poster": "/assets/bhff-2026/los-lobo.jpg",
    "_verificado": "declarada a mano: misma obra publicada en Bogotá Horror 2026 («Los Lobo», dir. Saeed García Pérez, Colombia, 2026, 20 min) con afiche oficial; la lámina de Villa de Leyva escribe «Saaed García», errata del festival. Sin ficha TMDB",
    "_director": "Saaed García",
-   "_sondeado": "2026-11-12"
+   "_sondeado": "2026-11-14"
   },
   "Luz silenciosa": {
    "tmdb_id": 2012,
@@ -3250,7 +3228,7 @@
    "poster": "/assets/villadeleyvaiff-2026/malas-posturas.jpg",
    "_verificado": "declarada a mano: misma ficha que ya encontraba el candado (Juan Pablo Castro, Colombia, 2025, 17 min); TMDB no tiene afiche y cinecorto.co publica el oficial, recortado a los lados 1,3 % para la proporción",
    "_director": "Juan Pablo Castro",
-   "_sondeado": "2026-11-12",
+   "_sondeado": "2026-11-14",
    "_heredado": {
     "genero": "catálogo w_R4KECG9BFSX8 (ficica-2026, jardin-2026, villadeleyvaiff-2026)",
     "synopsis_es": "catálogo w_R4KECG9BFSX8 (ficica-2026, jardin-2026, villadeleyvaiff-2026)"
@@ -3323,7 +3301,7 @@
    "lbSlug": "film:1510119",
    "_verificado": "declarada a mano: traducción de «Моя маленькая жизнь на острове», misma dirección (Nina Bisyarina), que la lámina acredita como Rusia",
    "_director": "Nina Bisyarina",
-   "_sondeado": "2026-11-12"
+   "_sondeado": "2026-11-14"
   },
   "Moon, mi amigo el panda": {
    "tmdb_id": 1178532,
@@ -3495,7 +3473,7 @@
    "poster": "/assets/villadeleyvaiff-2026/noche-de-vuelo.jpg",
    "_verificado": "declarada a mano: alta hecha el 4 nov 2026 con el afiche original, tras las sondas anti-duplicado",
    "_director": "Zacarías Flores del Campo",
-   "_sondeado": "2026-11-12",
+   "_sondeado": "2026-11-14",
    "posterSource": "tmdb",
    "_heredado": {
     "genero": "catálogo w_R4NEB2RNHWKD (siembrafest-2026, villadeleyvaiff-2026)",
@@ -3510,7 +3488,7 @@
    "poster": "/assets/ficdeh/notas-sobre-un-destierro.jpg",
    "_verificado": "declarada a mano: misma obra publicada en FICDEH 2026 (dir. Gustavo Castro, Brasil, 2025, 80 min) con afiche oficial y sinopsis. Sin ficha TMDB por título idéntico",
    "_director": "Gustavo Castro",
-   "_sondeado": "2026-11-12",
+   "_sondeado": "2026-11-14",
    "genero": "Documental",
    "_heredado": {
     "genero": "catálogo w_R4HKXW3511SF (ficdeh-2026, villadeleyvaiff-2026)",
@@ -3745,27 +3723,6 @@
    "poster": "/assets/villadeleyvaiff-2026/sex-panchitos.jpg",
    "posterSource": "tmdb"
   },
-  "Sinfonía de los bichos raros": {
-   "tmdb_id": 1776754,
-   "titulo_original": "La Sinfonía de los Bichos raros",
-   "poster_path": "/rvzcy8kixJuolV2ltRhSbGwhKKN.jpg",
-   "synopsis_en": "In the extraordinary neighborhood of Los Matorrales, hidden behind a massive wall in the city, lives Macha, a kind-hearted and dreamy cockroach who sings while helping at her father's legume shop. Everything changes when the business faces imminent closure. To save the store, protect her community, and fulfill her dream of becoming a singer, Macha convinces her group of friends—fellow misfits like a spider, a centipede, a vulture, and an opossum—to form a band of \"weird bugs\" and enter a human reality TV show. Through music, humor, and adventure, they discover the true power of friendship and self-acceptance.",
-   "genero": "Familia",
-   "anio_tmdb": 2026,
-   "duracion_tmdb": 90,
-   "pais_tmdb": "Colombia",
-   "lbSlug": "la-sinfonia-de-los-bichos-raros",
-   "_verificado": "el catálogo ya la tiene (w_R4G8K6M9KW94, fantasmagoria-2026)",
-   "work_id": "w_R4G8K6M9KW94",
-   "_director": "Julián Duque",
-   "_sondeado": "2026-11-12",
-   "poster": "/assets/villadeleyvaiff-2026/sinfonia-de-los-bichos-raros.jpg",
-   "posterSource": "tmdb",
-   "synopsis_es": "La trama sigue a Macha, una cucaracha adolescente que sueña con convertirse en cantante. La joven vive junto a su padre, Verdinardo El Sapo, en el barrio Los Matorrales, un lugar separado de la Gran Ciudad por un enorme muro. Cuando la legumbrería de su padre está en riesgo de desaparecer, Macha decide reunir a su grupo de amigos, otros \"bichos raros\" como ella, para participar en un reality de talentos humanos.",
-   "_heredado": {
-    "synopsis_es": "catálogo w_R4G8K6M9KW94 (fantasmagoria-2026, villadeleyvaiff-2026)"
-   }
-  },
   "Snorri": {
    "tmdb_id": 1660120,
    "titulo_original": "Snorri 4D - Catch Me If You Candy",
@@ -3779,7 +3736,7 @@
    "lbSlug": "snorri-4d-catch-me-if-you-candy",
    "_verificado": "declarada a mano: «Snorri 4D - Catch Me If You Candy» (2026, Alemania). TMDB no acredita dirección y el candado no la ve; Blooloop la da dirigida por Thierry Marchand, 10 min. El afiche de TMDB y el still de la lámina muestran el mismo pulpo azul con casco vikingo, la paleta de caramelo y el cangrejo",
    "_director": "Thierry Marchand",
-   "_sondeado": "2026-11-12",
+   "_sondeado": "2026-11-14",
    "sinopsis": "Snorri, el pulpo azul de seis brazos, quiere una paleta a toda costa, y ese antojo lo lanza a una persecución desenfrenada por el mundo acuático de Rulantica. Un corto en 4D para toda la familia.",
    "_sinopsis": "resumida en español de la ficha oficial de Europa-Park (https://www.europapark.de/en/theme-park/shows/snorri-4d-catch-me-if-you-candy), 12 nov: TMDB 1660120 no tiene overview",
    "poster": "/assets/villadeleyvaiff-2026/snorri.jpg",
@@ -3869,7 +3826,7 @@
    "lbSlug": "termina",
    "_verificado": "declarada a mano: «TÉRMINA» (2025) en TMDB acredita la dirección como «Juan Ruiz» y el candado no casa con «Juan José Guevara» de la lámina. Es la misma obra publicada en Jardín 2026 con este tmdb_id y en SiembraFest, dir. Juan José Guevara Ruiz, 27 min",
    "_director": "Juan José Guevara",
-   "_sondeado": "2026-11-12",
+   "_sondeado": "2026-11-14",
    "poster": "/assets/villadeleyvaiff-2026/termina.jpg",
    "posterSource": "tmdb"
   },
@@ -4054,7 +4011,7 @@
    "lbSlug": "convocacao-geral-da-categoria",
    "_verificado": "declarada a mano: traducción del título original «Convocação Geral da Categoria», misma dirección (Bruna Pessoa); la sinopsis trata de una asamblea de docentes con su sindicato",
    "_director": "Bruna Pessoa",
-   "_sondeado": "2026-11-12"
+   "_sondeado": "2026-11-14"
   }
  },
  "sin_ficha": [
