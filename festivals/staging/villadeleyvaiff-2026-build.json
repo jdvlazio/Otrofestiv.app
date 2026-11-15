@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "IG @festcinevilla, carrusel «Programación · Real Fábrica» (10 nov 2026)",
-  "capturado": "2026-11-14",
+  "capturado": "2026-11-15",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "radar": 1248,
@@ -15,13 +15,13 @@
  "shortName": "FESTCINEVILLA",
  "city": "Villa de Leyva",
  "country": "CO",
- "dates": "13–16 NOV",
- "dates_en": "NOV 13–16",
+ "dates": "13–15 NOV",
+ "dates_en": "NOV 13–15",
  "year": 2026,
  "timezoneOffset": "-05:00",
  "storageKey": "villadeleyvaiff2026_",
  "festivalStartStr": "2026-11-13T00:00:00",
- "festivalEndStr": "2026-11-16T23:59:00",
+ "festivalEndStr": "2026-11-15T23:59:00",
  "sharedSlotIsOneScreening": true,
  "dias_vacios": [],
  "tagline": "Festival Internacional de Cine de Villa de Leyva",
@@ -29,14 +29,12 @@
  "dias": [
   "2026-11-13",
   "2026-11-14",
-  "2026-11-15",
-  "2026-11-16"
+  "2026-11-15"
  ],
  "festivalDates": {
   "2026-11-13": "2026-11-13",
   "2026-11-14": "2026-11-14",
-  "2026-11-15": "2026-11-15",
-  "2026-11-16": "2026-11-16"
+  "2026-11-15": "2026-11-15"
  },
  "days": [
   {
@@ -53,36 +51,27 @@
    "k": "2026-11-15",
    "d": 15,
    "lbl": "DOM"
-  },
-  {
-   "k": "2026-11-16",
-   "d": 16,
-   "lbl": "LUN"
   }
  ],
  "dayKeys": [
   "2026-11-13",
   "2026-11-14",
-  "2026-11-15",
-  "2026-11-16"
+  "2026-11-15"
  ],
  "dayShort": {
   "2026-11-13": "VIE 13",
   "2026-11-14": "SÁB 14",
-  "2026-11-15": "DOM 15",
-  "2026-11-16": "LUN 16"
+  "2026-11-15": "DOM 15"
  },
  "dayShort_en": {
   "2026-11-13": "FRI 13",
   "2026-11-14": "SAT 14",
-  "2026-11-15": "SUN 15",
-  "2026-11-16": "MON 16"
+  "2026-11-15": "SUN 15"
  },
  "dayLong": {
   "2026-11-13": "Viernes 13 de noviembre",
   "2026-11-14": "Sábado 14 de noviembre",
-  "2026-11-15": "Domingo 15 de noviembre",
-  "2026-11-16": "Lunes 16 de noviembre"
+  "2026-11-15": "Domingo 15 de noviembre"
  },
  "_acceso": {
   "estado": "Entrada libre (no se anuncia pago)",
@@ -157,11 +146,6 @@
    "en": "Festivalito Short Competition (kids)",
    "archetype": "Competencia",
    "order": 13
-  },
-  "🎉 Evento": {
-   "en": "Event",
-   "archetype": "Especiales / Eventos",
-   "order": 14
   }
  },
  "venues": {
@@ -191,15 +175,6 @@
    "address": "Villa de Leyva, Boyacá",
    "_prec": "manual",
    "_match": "Google Maps: «Hotel Plaza Mayor Villa de Leyva»"
-  },
-  "Claustro de San Francisco - Villa de Leyva": {
-   "short": "Claustro de San Francisco",
-   "city": "Villa de Leyva",
-   "lat": 5.6305425,
-   "lng": -73.5241643,
-   "address": "Villa de Leyva, Boyacá",
-   "_prec": "manual",
-   "_match": "Google Maps: «Claustro San Francisco»"
   }
  },
  "_avisos_id": [],
@@ -2445,39 +2420,12 @@
    ],
    "_fid": "f_bb5278574b",
    "id": "f_bb5278574b"
-  },
-  {
-   "title": "Fragmentos",
-   "type": "event",
-   "section": "🎉 Evento",
-   "duration": "60 min",
-   "_ancla": [
-    "Claustro de San Francisco - Villa de Leyva",
-    "2026-11-16",
-    "15:30"
-   ],
-   "day": "2026-11-16",
-   "time": "15:30",
-   "day_order": 3,
-   "venue": "Claustro de San Francisco - Villa de Leyva",
-   "event_kind": "evento",
-   "has_qa": false,
-   "_src": {
-    "url": "https://www.villadeleyvaiff.co/_files/ugd/66001c_a296b2bfe67b41cdba2e0a1c661be1f5.pdf",
-    "date": "2026-11-11",
-    "nota": "programa completo (PDF de la web, 11 nov)"
-   },
-   "is_free": false,
-   "description": "Compañía Cuerpo de Indias",
-   "description_lang": "es",
-   "_fid": "f_6b5e3071a8",
-   "id": "f_6b5e3071a8"
   }
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-14T17:15:44",
-  "plan_sha": "4204d6f83e6e5708",
+  "fecha": "2026-11-15T11:00:47",
+  "plan_sha": "b4abb893e9e28edd",
   "paso": 7,
   "cmd": "python3 pipeline/encuadrar-posters.py villadeleyvaiff-2026 --aplicar --desde festivals/staging/villadeleyvaiff-2026-build.json"
  }

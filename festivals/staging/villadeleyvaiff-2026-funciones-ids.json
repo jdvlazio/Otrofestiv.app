@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "ensamblar.py: ids estables de las funciones (docs/FUNCION.md C1)",
-  "capturado": "2026-11-14"
+  "capturado": "2026-11-15"
  },
  "funciones": {
   "f_4cd815d6b9": {
@@ -282,7 +282,8 @@
    "dia": "2026-11-16",
    "hora": "15:30",
    "sala": "",
-   "titulo": "fragmentos"
+   "titulo": "fragmentos",
+   "ausente": true
   }
  }
 }

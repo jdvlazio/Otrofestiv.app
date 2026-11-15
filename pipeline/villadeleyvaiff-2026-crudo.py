@@ -134,10 +134,7 @@ PARRILLA = [
           '_duracion_de': 'estimada: la fuente no da fin'})]),
     ('pdf', '', '2026-11-15', [
         ('09:00', FEST, 'Festivalito: talleres y cine', FESTIVALITO, {**EN_PDF, 'sala': '', 'duracion_min': 180, '_duracion_de': 'de 9 AM a 12 M, según la fuente'})]),
-    ('pdf', '', '2026-11-16', [
-        ('15:30', EVT, 'Fragmentos', [], {**EN_PDF, 'sede': 'Claustro de San Francisco', 'sala': '', 'tipo': 'evento', 'event_kind': 'evento',
-                  'invitados': 'Compañía Cuerpo de Indias', 'acceso': 'Con boleta: boletería en El Gato que bebe y lee', 'duracion_min': 60,
-                  '_duracion_de': 'estimada: la fuente no da fin'})]),
+    # 15 nov: Juan en Villa de Leyva — los videos del festival dicen 13–15 nov; el lunes 16 (Fragmentos) se retira.
 ]
 
 
