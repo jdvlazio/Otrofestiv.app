@@ -1,0 +1,98 @@
+{
+ "_provenance": {
+  "fuente": "sondas TMDB por título, alternos y filmografía del director (movie/credits)",
+  "capturado": "2026-11-15"
+ },
+ "fichas": {
+  "2000": {
+   "tmdb": 1712540,
+   "_fuente": "https://www.themoviedb.org/movie/1712540",
+   "_por_que": "director + año + duración cuadran (TMDB search + movie/credits)"
+  },
+  "Barcelona": {
+   "tmdb": 356487,
+   "_fuente": "https://www.themoviedb.org/movie/356487",
+   "_por_que": "«Barcelone, principale ville de la Catalogne», Chomón 1912, 4 min"
+  },
+  "Bus": {
+   "tmdb": 1274419,
+   "_fuente": "https://www.themoviedb.org/movie/1274419",
+   "_por_que": "director + año + duración cuadran (TMDB search + movie/credits)"
+  },
+  "Cuando retornen las garzas": {
+   "tmdb": 1575134,
+   "_fuente": "https://www.themoviedb.org/movie/1575134",
+   "_por_que": "ficha sin póster"
+  },
+  "En el silencio después": {
+   "tmdb": 1724318,
+   "_fuente": "https://www.themoviedb.org/movie/1724318",
+   "_por_que": "director + año + duración cuadran (TMDB search + movie/credits)"
+  },
+  "Eri": {
+   "tmdb": 1118590,
+   "_fuente": "https://www.themoviedb.org/movie/1118590",
+   "_por_que": "título TMDB «エリ / Eri, The Cow», Honami Yano, FR/JP 2026, 12 min"
+  },
+  "Fiction": {
+   "tmdb": 1691015,
+   "_fuente": "https://www.themoviedb.org/movie/1691015",
+   "_por_que": "director + año + duración cuadran (TMDB search + movie/credits)"
+  },
+  "Grounded": {
+   "tmdb": 1700763,
+   "_fuente": "https://www.themoviedb.org/movie/1700763",
+   "_por_que": "DUPLICADO en TMDB: 1700763 (con IMDb) y 1702560, ambos Chris Callus 2026 4 min"
+  },
+  "Idols": {
+   "tmdb": 1654471,
+   "_fuente": "https://www.themoviedb.org/movie/1654471",
+   "_por_que": "director en TMDB «Matthew Halsall» (programa: Matt Halsall)"
+  },
+  "Klase s nuotrauka": {
+   "tmdb": 1668922,
+   "_fuente": "https://www.themoviedb.org/movie/1668922",
+   "_por_que": "director + año + duración cuadran (TMDB search + movie/credits)"
+  },
+  "Mirage": {
+   "tmdb": 1705630,
+   "_fuente": "https://www.themoviedb.org/movie/1705630",
+   "_por_que": "TMDB 2025 SA/NL 8 min"
+  },
+  "Raíces": {
+   "tmdb": 1784652,
+   "_fuente": "https://www.themoviedb.org/movie/1784652",
+   "_por_que": "director + año + duración cuadran (TMDB search + movie/credits)"
+  },
+  "Risorsero dalla tomba e fu... l’Apocalisse!": {
+   "tmdb": 1788289,
+   "_fuente": "https://www.themoviedb.org/movie/1788289",
+   "_por_que": "director + año + duración cuadran (TMDB search + movie/credits)"
+  },
+  "Solos": {
+   "tmdb": 758792,
+   "_fuente": "https://www.themoviedb.org/movie/758792",
+   "_por_que": "TMDB 758792 fecha 2019 (programa dice 2020), Gabriella Marsh ES/GB 5 min; hay duplicado 1223478 sin fecha"
+  },
+  "The End": {
+   "tmdb": 1472669,
+   "_fuente": "https://www.themoviedb.org/movie/1472669",
+   "_por_que": "director + año + duración cuadran (TMDB search + movie/credits)"
+  },
+  "Triangle": {
+   "tmdb": 1567979,
+   "_fuente": "https://www.themoviedb.org/movie/1567979",
+   "_por_que": "TMDB 2025, 31 min (programa 2026, 30)"
+  },
+  "Da je kuća dobra i vuk bi je imao": {
+   "tmdb": 367050,
+   "_fuente": "https://www.themoviedb.org/movie/367050",
+   "_por_que": "No Wolf Has a House, Hana Jušić HR 2015, 25 min"
+  },
+  "Pískoviště": {
+   "tmdb": 1768658,
+   "_fuente": "https://www.themoviedb.org/movie/1768658",
+   "_por_que": "Sandbox, Kateřina Čupová CZ 2026, 3 min; ojo: segunda ficha 1805073 «Sandbox» 2026 de la misma directora"
+  }
+ }
+}
