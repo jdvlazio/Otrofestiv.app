@@ -357,6 +357,271 @@
     "fecha": "2026-11-13"
    },
    "evidencia": "lámina 00 de DfsMyayDyoh (13 nov, más nueva que el formulario): «TALLER 14 NOV · Autorretrato como una herramienta para la salud menstrual · 10:00 a.m. - 11:30 a.m. · Escuela Superior de Administración Pública (ESAP)» (Vision y a ojo)"
+  },
+  {
+   "ancla": {
+    "sede": "Cinema Los Ángeles - Fusagasugá",
+    "dia": "2026-11-15",
+    "hora": "12:30"
+   },
+   "funcion": "f_a511c8c805",
+   "casilla": "film_list",
+   "valor": [
+    {
+     "title": "Cayenas libertarias",
+     "director": "Javier Camilo Aranguren",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "poster": "/assets/ficica-2026/cayenas-libertarias.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "cayenas-libertarias",
+     "tmdb_id": 1737961,
+     "synopsis": "En las llanuras de Colombia, un grupo de mujeres conserva y reinterpreta los lecos, o cantos de trabajo del llano, que durante generaciones fueron interpretados por hombres. A través de sus cantos de vaquería, resignifican su lugar en la tradición llanera, revelando su relación armónica con la naturaleza y su compleja conexión con el arraigo llanero.",
+     "synopsis_en": "On Colombia's eastern plains, a group of women keep and reinterpret the lecos, the work songs of the llano that men sang for generations. Through their cattle-herding songs they reclaim their place in llanero tradition, revealing a harmonious relationship with the land and a complex attachment to plains life.",
+     "genre": "Documental",
+     "year": 2025,
+     "synopsis_lang": "es",
+     "work_id": "w_R4HJ5YQ69QN3",
+     "duration": "17 min"
+    },
+    {
+     "title": "Matininó",
+     "director": "Gabriela Díaz Arp",
+     "country": "Puerto Rico, República Dominicana",
+     "flags": "🇵🇷🇩🇴",
+     "poster": "/assets/ficfusa-2026/matinino.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "matinino",
+     "tmdb_id": 1676525,
+     "synopsis": "Una familia puertorriqueña multigeneracional usa el cine como terapia, actuando y recreando historias de abuso y trauma. Los testimonios personales toman la forma de secuencias fantásticas donde las mujeres se convierten en guerreras.",
+     "synopsis_en": "A multi-generational family of outspoken Puerto Rican women takes center stage as they conceive and perform fantastical film vignettes as a way to navigate painful pasts in this visually-arresting, kaleidoscopic documentary.",
+     "genre": "Documental",
+     "year": 2026,
+     "synopsis_lang": "es",
+     "duration": "88 min",
+     "work_id": "w_R4QPX8P3YFJZ"
+    }
+   ],
+   "fuente": {
+    "tipo": "festival-ig",
+    "url": "https://www.instagram.com/p/DfxFm7oDsFt/",
+    "fecha": "2026-11-15"
+   },
+   "evidencia": "lámina 01 (a ojo, 15 nov): «12:30 p.m · Cinema Los Ángeles · Proyección y conversatorio · Cayenas libertarias - 17:02 min · Matininó - 89 minutos»"
+  },
+  {
+   "ancla": {
+    "sede": "Cinema Los Ángeles - Fusagasugá",
+    "dia": "2026-11-15",
+    "hora": "12:30"
+   },
+   "funcion": "f_a511c8c805",
+   "casilla": "title",
+   "valor": "Cayenas Libertarias y Matininó",
+   "contra": "Desaprender la Maternidad y Matininó",
+   "fuente": {
+    "tipo": "festival-ig",
+    "url": "https://www.instagram.com/p/DfxFm7oDsFt/",
+    "fecha": "2026-11-15"
+   },
+   "evidencia": "lámina 01 (a ojo, 15 nov): «12:30 p.m · Cinema Los Ángeles · Proyección y conversatorio · Cayenas libertarias - 17:02 min · Matininó - 89 minutos»"
+  },
+  {
+   "ancla": {
+    "sede": "Cinema Los Ángeles - Fusagasugá",
+    "dia": "2026-11-15",
+    "hora": "12:30"
+   },
+   "funcion": "f_a511c8c805",
+   "casilla": "duration",
+   "valor": "106 min",
+   "contra": "99 min",
+   "fuente": {
+    "tipo": "festival-ig",
+    "url": "https://www.instagram.com/p/DfxFm7oDsFt/",
+    "fecha": "2026-11-15"
+   },
+   "evidencia": "lámina 01 (a ojo, 15 nov): «12:30 p.m · Cinema Los Ángeles · Proyección y conversatorio · Cayenas libertarias - 17:02 min · Matininó - 89 minutos» → 17 + 89"
+  },
+  {
+   "ancla": {
+    "sede": "Cinema Los Ángeles - Fusagasugá",
+    "dia": "2026-11-15",
+    "hora": "10:00"
+   },
+   "funcion": "f_985310a630",
+   "casilla": "duration",
+   "valor": "93 min",
+   "contra": "80 min",
+   "fuente": {
+    "tipo": "festival-ig",
+    "url": "https://www.instagram.com/p/DfxFm7oDsFt/",
+    "fecha": "2026-11-15"
+   },
+   "evidencia": "lámina 01 (a ojo): «Madres de Nacimiento - 8:08 min · Truck mama - 85 min» → 8 + 85"
+  },
+  {
+   "ancla": {
+    "sede": "Centro de Integración e Innovación Social - Fusagasugá",
+    "dia": "2026-11-15",
+    "hora": "16:00"
+   },
+   "funcion": "f_df93cfd64f",
+   "casilla": "film_list",
+   "valor": [
+    {
+     "title": "Sinfonía incompleta de oficios del fonce",
+     "duration": "16 min"
+    },
+    {
+     "title": "El espejo de la vida",
+     "director": "Simón Sanchez Plazas",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "poster": "/assets/festicinerio-2026/el-espejo-de-la-vida.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "el-espejo-de-la-vida",
+     "tmdb_id": 1791654,
+     "synopsis": "En una noche oscura, un niño sigue una señal que lo lleva a una misteriosa máquina expendedora de dulces escondida en un bar prohibido. Para alcanzarla, deberá armarse de valor y afrontar desafíos que pondrán a prueba su ingenio, valentía y determinación.",
+     "year": 2025,
+     "synopsis_lang": "es",
+     "work_id": "w_R4JJ9W6S4FCQ",
+     "duration": "9 min"
+    },
+    {
+     "title": "La gallina Saraviada",
+     "director": "Ingrid Paola Bonilla Rodriguez",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "poster": "/assets/ficpa-2026/la-gallina-saraviada.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "la-gallina-saraviada",
+     "tmdb_id": 1746279,
+     "synopsis": "Una anciana campesina lucha por preservar el linaje de su última gallina ante su desaparición; para ello recurre a su ingenio y diferentes medios de incubación de los últimos huevos que le quedan.",
+     "synopsis_en": "An elderly peasant woman struggles to preserve the lineage of her last hen as it faces extinction; to do so, she draws on her ingenuity and uses various methods to incubate the last few eggs she has left. An elderly woman and her animals, holding on together, because in the small, everyday things, life always finds a way to go on.",
+     "genre": "Ficción",
+     "year": 2026,
+     "synopsis_lang": "es",
+     "work_id": "w_R4JDE7TVVFNW",
+     "duration": "11 min"
+    },
+    {
+     "title": "Victorias y Glorias: Relatos de Campeonas",
+     "duration": "11 min"
+    },
+    {
+     "title": "Una vez en un cuerpo",
+     "director": "María Cristina Pérez",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "poster": "/assets/cinetoro-2026/una-vez-en-un-cuerpo.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "once-in-a-body",
+     "tmdb_id": 1522316,
+     "synopsis": "Mientras lidia con un ser extraño que vive en su interior, una mujer busca reconciliarse con su hermana por un incidente ocurrido durante su adolescencia. Al explorar las experiencias que comparten a través de sus cuerpos, logra enfrentarse a la naturaleza de lo que habita en ella.",
+     "synopsis_en": "While dealing with a strange being that lives inside her, a woman seeks to reconcile with her sister over an incident from their adolescence.",
+     "genre": "Animación",
+     "year": 2025,
+     "synopsis_lang": "es",
+     "work_id": "w_R4DJH9SYECN9",
+     "duration": "10 min"
+    },
+    {
+     "title": "Más Allá",
+     "director": "Bettina López Mendoza",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "poster": "/assets/popayan-2026/mas-alla.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "beyond-2025",
+     "tmdb_id": 1488751,
+     "synopsis": "Después de haber sido separada de su madre mientras intentaban cruzar la selva entre Colombia y Panamá, una pequeña migrante venezolana, se ve obligada a abandonar su infancia para sobrevivir y empieza a trabajar para un coyote que guía a migrantes dentro de la selva. En uno de sus viajes Zuli tropieza con un portal que la transporta a una tierra mágica donde se ve impulsada a reconectar con su inocencia y su imaginación, aprendiendo a ser una niña otra vez.",
+     "synopsis_en": "After being separated from her mother while crossing the treacherous jungle between Colombia and Panama, Zuli, a young Venezuelan migrant, is forced to abandon her childhood to survive in this dangerous place. While working for a coyote to help guide other migrants through the jungle, Zuli discovers a portal to a magical land, where she must turn to her imagination to reconnect with her innocence and, ultimately, learn how to be a kid again.",
+     "year": 2025,
+     "synopsis_lang": "es",
+     "work_id": "w_R4HHSYKXBWCD",
+     "duration": "15 min"
+    },
+    {
+     "title": "Sonidos de la resistencia",
+     "duration": "10 min",
+     "director": "Juan Ruiz",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "year": 2023,
+     "genre": "Documental"
+    },
+    {
+     "title": "Tuktu Padre maíz",
+     "director": "Mauricio Prieto",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "poster": "/assets/ficfusa-2026/tuktu-padre-maiz.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "tuktu-father-maize",
+     "tmdb_id": 1592955,
+     "synopsis": "En las montañas de Colombia, Juan, un niño mestizo de 13 años, se ve obligado a huir del monstruo de la guerra. En su travesía, la tierra misma lo protege y, guiado por las voces de sus ancestros, despierta un poder ancestral llamado Tucuna, que le permite transformarse y renacer. Convertido en Tuktu, un Taita de fuerza extraordinaria, comprende que su destino no es solo sobrevivir, sino regresar para sanar la herida de la guerra y sembrar la paz en la tierra que lo vio nacer.",
+     "synopsis_en": "In the mountains of Colombia, Juan, a 13-year-old indigenous peasant boy, is forced to flee from the monster of war. In his escape, between the whistling of bullets and the guidance of his ancestors, he awakens an ancestral power that transforms him into Tuktu: a Taita of extraordinary strength destined to return to sow the peace of the earth.",
+     "genre": "Animación",
+     "year": 2025,
+     "synopsis_lang": "es",
+     "work_id": "w_R4HJFE6HF274",
+     "duration": "14 min"
+    }
+   ],
+   "fuente": {
+    "tipo": "festival-ig",
+    "url": "https://www.instagram.com/p/DfxFm7oDsFt/",
+    "fecha": "2026-11-15"
+   },
+   "evidencia": "lámina 02 (a ojo): «4:00 p.m. · CIIS · Proyección · Sinfonía incompleta de oficios del fonce 15:54 · El espejo de la vida 9:17 · La gallina Saraviada 11 min · Victorias y Glorias: Relatos de Campeonas 11:09 min · Una vez en un cuerpo 10:02 min · Más Allá 15:24 min · Sonidos de la resistencia 10:07 min · Tuktu Padre maíz 13:45 min» · «Sonidos de la resistencia» es el documental de Juan Ruiz (Pereira, 2023; Crónica del Quindío 30 abr 2026; IG de tripmedia: «Selección Oficial del FICFUSA»)"
+  },
+  {
+   "ancla": {
+    "sede": "Centro de Integración e Innovación Social - Fusagasugá",
+    "dia": "2026-11-15",
+    "hora": "16:00"
+   },
+   "funcion": "f_df93cfd64f",
+   "casilla": "duration",
+   "valor": "97 min",
+   "contra": "60 min",
+   "fuente": {
+    "tipo": "festival-ig",
+    "url": "https://www.instagram.com/p/DfxFm7oDsFt/",
+    "fecha": "2026-11-15"
+   },
+   "evidencia": "suma de los 8 cortos de la lámina 02"
+  },
+  {
+   "ancla": {
+    "sede": "Casona La Tulipana - Fusagasugá",
+    "dia": "2026-11-15",
+    "hora": "18:30"
+   },
+   "casilla": "existe",
+   "valor": {
+    "title": "Proyección de cortometrajes: muestra de procesos formativos",
+    "type": "event",
+    "event_kind": "evento",
+    "section": "🎬 Proyección",
+    "day": "2026-11-15",
+    "time": "18:30",
+    "venue": "Casona La Tulipana - Fusagasugá",
+    "is_free": true,
+    "description": "Fundación Rodrigo Morales, Kinonautas y Artes para la paz.",
+    "_src": {
+     "url": "https://www.instagram.com/p/DfxFm7oDsFt/",
+     "date": "2026-11-15",
+     "lamina": 2
+    }
+   },
+   "fuente": {
+    "tipo": "festival-ig",
+    "url": "https://www.instagram.com/p/DfxFm7oDsFt/",
+    "fecha": "2026-11-15"
+   },
+   "evidencia": "lámina 02 (a ojo): «6:30 p.m. · Casona Tulipana · Evento · Proyección de cortometrajes · Muestra de procesos formativos · Fundación Rodrigo Morales · Kinonautas · Artes para la paz»"
   }
  ]
 }

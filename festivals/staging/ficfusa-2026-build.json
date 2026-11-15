@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "FICFUSA: web /programacion/ + posts de IG del 6, 7, 8, 10 y 11 nov 2026",
-  "capturado": "2026-11-13",
+  "capturado": "2026-11-15",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "radar": 1032,
@@ -206,6 +206,15 @@
    "address": "Cl. 1 #4-22, Pasca, Cundinamarca",
    "_prec": "manual",
    "_match": "Google Maps: «Museo arqueológico y natural de PASCA Cund.»; dirección de la lámina Dfr1kd7x2gO"
+  },
+  "Casona La Tulipana - Fusagasugá": {
+   "short": "Casona La Tulipana",
+   "city": "Fusagasugá",
+   "lat": 4.337234,
+   "lng": -74.3637005,
+   "address": "Casona La Tulipana, Fusagasugá",
+   "_prec": "manual",
+   "_match": "Google Maps: «Casona La Tulipana» (15 nov 2026)"
   }
  },
  "_avisos_id": [],
@@ -2525,7 +2534,7 @@
    "section": "💬 Proyección y Conversatorio",
    "country": "Francia, Kenia, Países bajos, Arabia saudí, Sudáfrica",
    "flags": "🇫🇷🇰🇪🇳🇱🇸🇦🇿🇦",
-   "duration": "80 min",
+   "duration": "93 min",
    "_ancla": [
     "Cinema Los Ángeles - Fusagasugá",
     "2026-11-15",
@@ -2594,7 +2603,8 @@
     },
     "duration": {
      "tipo": "festival-ig",
-     "fecha": "2026-11-11"
+     "fecha": "2026-11-15",
+     "url": "https://www.instagram.com/p/DfxFm7oDsFt/"
     },
     "entrada": {
      "tipo": "festival-ig",
@@ -2696,12 +2706,12 @@
    }
   },
   {
-   "title": "Desaprender la Maternidad y Matininó",
+   "title": "Cayenas Libertarias y Matininó",
    "type": "film",
    "section": "💬 Proyección y Conversatorio",
    "country": "Colombia, Países bajos, Puerto Rico, República Dominicana",
    "flags": "🇨🇴🇳🇱🇵🇷🇩🇴",
-   "duration": "99 min",
+   "duration": "106 min",
    "_ancla": [
     "Cinema Los Ángeles - Fusagasugá",
     "2026-11-15",
@@ -2720,20 +2730,21 @@
    "is_cortos": true,
    "film_list": [
     {
-     "title": "Desaprender la maternidad",
-     "director": "Juliana Erazo Gómez",
-     "country": "Colombia, Países bajos",
-     "flags": "🇨🇴🇳🇱",
-     "poster": "/assets/ficfusa-2026/desaprender-la-maternidad.jpg",
+     "title": "Cayenas libertarias",
+     "director": "Javier Camilo Aranguren",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "poster": "/assets/ficica-2026/cayenas-libertarias.jpg",
      "posterSource": "tmdb",
-     "lbSlug": "unlearning-motherhood",
-     "tmdb_id": 1574997,
-     "synopsis": "Una joven que siempre ha temido perder su libertad por la maternidad se comienza a angustiar tras un retraso en su periodo. El viaje en el que se embarca para adquirir una prueba de embarazo es revelador gracias a las conversaciones que escucha y entabla con mujeres que comparten historias poco convencionales sobre el hecho de ser madre.",
-     "synopsis_en": "Unlearning Motherhood is an animated documentary that tells the tearing and empowering stories of women with their unconventional motherhood experiences, through the journey of a fictional main character who is looking for answers about pregnancy.",
-     "genre": "Animación",
+     "lbSlug": "cayenas-libertarias",
+     "tmdb_id": 1737961,
+     "synopsis": "En las llanuras de Colombia, un grupo de mujeres conserva y reinterpreta los lecos, o cantos de trabajo del llano, que durante generaciones fueron interpretados por hombres. A través de sus cantos de vaquería, resignifican su lugar en la tradición llanera, revelando su relación armónica con la naturaleza y su compleja conexión con el arraigo llanero.",
+     "synopsis_en": "On Colombia's eastern plains, a group of women keep and reinterpret the lecos, the work songs of the llano that men sang for generations. Through their cattle-herding songs they reclaim their place in llanero tradition, revealing a harmonious relationship with the land and a complex attachment to plains life.",
+     "genre": "Documental",
      "year": 2025,
      "synopsis_lang": "es",
-     "duration": "11 min"
+     "work_id": "w_R4HJ5YQ69QN3",
+     "duration": "17 min"
     },
     {
      "title": "Matininó",
@@ -2749,7 +2760,8 @@
      "genre": "Documental",
      "year": 2026,
      "synopsis_lang": "es",
-     "duration": "88 min"
+     "duration": "88 min",
+     "work_id": "w_R4QPX8P3YFJZ"
     }
    ],
    "_fid": "f_a511c8c805",
@@ -2770,7 +2782,8 @@
     },
     "duration": {
      "tipo": "festival-ig",
-     "fecha": "2026-11-11"
+     "fecha": "2026-11-15",
+     "url": "https://www.instagram.com/p/DfxFm7oDsFt/"
     },
     "entrada": {
      "tipo": "festival-ig",
@@ -2782,11 +2795,13 @@
     },
     "title": {
      "tipo": "festival-ig",
-     "fecha": "2026-11-11"
+     "fecha": "2026-11-15",
+     "url": "https://www.instagram.com/p/DfxFm7oDsFt/"
     },
     "film_list": {
      "tipo": "festival-ig",
-     "fecha": "2026-11-11"
+     "fecha": "2026-11-15",
+     "url": "https://www.instagram.com/p/DfxFm7oDsFt/"
     },
     "type": {
      "tipo": "festival-ig",
@@ -2868,7 +2883,7 @@
    "title": "Cortometrajes en competencia y muestra especial",
    "type": "film",
    "section": "🎬 Proyección",
-   "duration": "60 min",
+   "duration": "97 min",
    "_ancla": [
     "Centro de Integración e Innovación Social - Fusagasugá",
     "2026-11-15",
@@ -2887,6 +2902,107 @@
    "_fid": "f_df93cfd64f",
    "id": "f_df93cfd64f",
    "is_free": true,
+   "film_list": [
+    {
+     "title": "Sinfonía incompleta de oficios del fonce",
+     "duration": "16 min"
+    },
+    {
+     "title": "El espejo de la vida",
+     "director": "Simón Sanchez Plazas",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "poster": "/assets/festicinerio-2026/el-espejo-de-la-vida.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "el-espejo-de-la-vida",
+     "tmdb_id": 1791654,
+     "synopsis": "En una noche oscura, un niño sigue una señal que lo lleva a una misteriosa máquina expendedora de dulces escondida en un bar prohibido. Para alcanzarla, deberá armarse de valor y afrontar desafíos que pondrán a prueba su ingenio, valentía y determinación.",
+     "year": 2025,
+     "synopsis_lang": "es",
+     "work_id": "w_R4JJ9W6S4FCQ",
+     "duration": "9 min"
+    },
+    {
+     "title": "La gallina Saraviada",
+     "director": "Ingrid Paola Bonilla Rodriguez",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "poster": "/assets/ficpa-2026/la-gallina-saraviada.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "la-gallina-saraviada",
+     "tmdb_id": 1746279,
+     "synopsis": "Una anciana campesina lucha por preservar el linaje de su última gallina ante su desaparición; para ello recurre a su ingenio y diferentes medios de incubación de los últimos huevos que le quedan.",
+     "synopsis_en": "An elderly peasant woman struggles to preserve the lineage of her last hen as it faces extinction; to do so, she draws on her ingenuity and uses various methods to incubate the last few eggs she has left. An elderly woman and her animals, holding on together, because in the small, everyday things, life always finds a way to go on.",
+     "genre": "Ficción",
+     "year": 2026,
+     "synopsis_lang": "es",
+     "work_id": "w_R4JDE7TVVFNW",
+     "duration": "11 min"
+    },
+    {
+     "title": "Victorias y Glorias: Relatos de Campeonas",
+     "duration": "11 min"
+    },
+    {
+     "title": "Una vez en un cuerpo",
+     "director": "María Cristina Pérez",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "poster": "/assets/cinetoro-2026/una-vez-en-un-cuerpo.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "once-in-a-body",
+     "tmdb_id": 1522316,
+     "synopsis": "Mientras lidia con un ser extraño que vive en su interior, una mujer busca reconciliarse con su hermana por un incidente ocurrido durante su adolescencia. Al explorar las experiencias que comparten a través de sus cuerpos, logra enfrentarse a la naturaleza de lo que habita en ella.",
+     "synopsis_en": "While dealing with a strange being that lives inside her, a woman seeks to reconcile with her sister over an incident from their adolescence.",
+     "genre": "Animación",
+     "year": 2025,
+     "synopsis_lang": "es",
+     "work_id": "w_R4DJH9SYECN9",
+     "duration": "10 min"
+    },
+    {
+     "title": "Más Allá",
+     "director": "Bettina López Mendoza",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "poster": "/assets/popayan-2026/mas-alla.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "beyond-2025",
+     "tmdb_id": 1488751,
+     "synopsis": "Después de haber sido separada de su madre mientras intentaban cruzar la selva entre Colombia y Panamá, una pequeña migrante venezolana, se ve obligada a abandonar su infancia para sobrevivir y empieza a trabajar para un coyote que guía a migrantes dentro de la selva. En uno de sus viajes Zuli tropieza con un portal que la transporta a una tierra mágica donde se ve impulsada a reconectar con su inocencia y su imaginación, aprendiendo a ser una niña otra vez.",
+     "synopsis_en": "After being separated from her mother while crossing the treacherous jungle between Colombia and Panama, Zuli, a young Venezuelan migrant, is forced to abandon her childhood to survive in this dangerous place. While working for a coyote to help guide other migrants through the jungle, Zuli discovers a portal to a magical land, where she must turn to her imagination to reconnect with her innocence and, ultimately, learn how to be a kid again.",
+     "year": 2025,
+     "synopsis_lang": "es",
+     "work_id": "w_R4HHSYKXBWCD",
+     "duration": "15 min"
+    },
+    {
+     "title": "Sonidos de la resistencia",
+     "duration": "10 min",
+     "director": "Juan Ruiz",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "year": 2023,
+     "genre": "Documental"
+    },
+    {
+     "title": "Tuktu Padre maíz",
+     "director": "Mauricio Prieto",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "poster": "/assets/ficfusa-2026/tuktu-padre-maiz.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "tuktu-father-maize",
+     "tmdb_id": 1592955,
+     "synopsis": "En las montañas de Colombia, Juan, un niño mestizo de 13 años, se ve obligado a huir del monstruo de la guerra. En su travesía, la tierra misma lo protege y, guiado por las voces de sus ancestros, despierta un poder ancestral llamado Tucuna, que le permite transformarse y renacer. Convertido en Tuktu, un Taita de fuerza extraordinaria, comprende que su destino no es solo sobrevivir, sino regresar para sanar la herida de la guerra y sembrar la paz en la tierra que lo vio nacer.",
+     "synopsis_en": "In the mountains of Colombia, Juan, a 13-year-old indigenous peasant boy, is forced to flee from the monster of war. In his escape, between the whistling of bullets and the guidance of his ancestors, he awakens an ancestral power that transforms him into Tuktu: a Taita of extraordinary strength destined to return to sow the peace of the earth.",
+     "genre": "Animación",
+     "year": 2025,
+     "synopsis_lang": "es",
+     "work_id": "w_R4HJFE6HF274",
+     "duration": "14 min"
+    }
+   ],
    "_procedencia": {
     "day": {
      "tipo": "festival-ig",
@@ -2902,7 +3018,8 @@
     },
     "duration": {
      "tipo": "festival-ig",
-     "fecha": "2026-11-11"
+     "fecha": "2026-11-15",
+     "url": "https://www.instagram.com/p/DfxFm7oDsFt/"
     },
     "entrada": {
      "tipo": "festival-ig",
@@ -2915,6 +3032,11 @@
     "title": {
      "tipo": "festival-ig",
      "fecha": "2026-11-11"
+    },
+    "film_list": {
+     "tipo": "festival-ig",
+     "fecha": "2026-11-15",
+     "url": "https://www.instagram.com/p/DfxFm7oDsFt/"
     },
     "type": {
      "tipo": "festival-ig",
@@ -3474,6 +3596,70 @@
    "is_free": true,
    "id": "f_8bdf2bbbed",
    "day_order": 2
+  },
+  {
+   "title": "Proyección de cortometrajes: muestra de procesos formativos",
+   "type": "event",
+   "event_kind": "evento",
+   "section": "🎬 Proyección",
+   "day": "2026-11-15",
+   "time": "18:30",
+   "venue": "Casona La Tulipana - Fusagasugá",
+   "description": "Fundación Rodrigo Morales, Kinonautas y Artes para la paz.",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfxFm7oDsFt/",
+    "date": "2026-11-15",
+    "lamina": 2
+   },
+   "_ancla": [
+    "Casona La Tulipana - Fusagasugá",
+    "2026-11-15",
+    "18:30"
+   ],
+   "_fid": "f_d1927a899f",
+   "_procedencia": {
+    "existe": {
+     "tipo": "festival-ig",
+     "url": "https://www.instagram.com/p/DfxFm7oDsFt/",
+     "fecha": "2026-11-15"
+    },
+    "day": {
+     "tipo": "festival-ig",
+     "fecha": "2026-11-15"
+    },
+    "time": {
+     "tipo": "festival-ig",
+     "fecha": "2026-11-15"
+    },
+    "venue": {
+     "tipo": "festival-ig",
+     "fecha": "2026-11-15"
+    },
+    "entrada": {
+     "tipo": "festival-ig",
+     "fecha": "2026-11-15"
+    },
+    "title": {
+     "tipo": "festival-ig",
+     "fecha": "2026-11-15"
+    },
+    "type": {
+     "tipo": "festival-ig",
+     "fecha": "2026-11-15"
+    },
+    "event_kind": {
+     "tipo": "festival-ig",
+     "fecha": "2026-11-15"
+    },
+    "duration": {
+     "tipo": "regla",
+     "marca": "estimado"
+    }
+   },
+   "is_free": true,
+   "id": "f_d1927a899f",
+   "day_order": 4,
+   "duration": "60 min"
   }
  ],
  "_avisos_duracion": [
@@ -3484,7 +3670,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-13T13:21:33",
+  "fecha": "2026-11-15T13:22:26",
   "plan_sha": "c64afe4535979dac",
   "paso": 7,
   "cmd": "python3 pipeline/ficfusa-2026-verificar.py"

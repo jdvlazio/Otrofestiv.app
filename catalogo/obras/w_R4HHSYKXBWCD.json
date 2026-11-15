@@ -13,6 +13,10 @@
  ],
  "aliases": [
   {
+   "titulo": "Más Allá",
+   "tipo": "festival"
+  },
+  {
    "titulo": "Beyond",
    "idioma": "en",
    "tipo": "traduccion"
@@ -45,6 +49,7 @@
  ],
  "presentaciones": [
   "ficdeh-2026",
+  "ficfusa-2026",
   "ficica-2026",
   "popayan-2026"
  ]
