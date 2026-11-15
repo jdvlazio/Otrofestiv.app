@@ -152,6 +152,22 @@
    "posterSource": "tmdb"
   },
   {
+   "titulo": "A los once",
+   "tmdb_id": 1826830,
+   "titulo_original": "A los once",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "When her mother mistakes a bloodstain for her first period, an eleven-year-old uncovers the devastating truth.",
+   "genero": "Drama",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 15,
+   "pais_tmdb": "",
+   "lbSlug": "a-los-once",
+   "_verificado": "declarada a mano: alta nueva 15 nov 2026 (Priscila Núñez, 2025, 15 min; IMDb tt35506134), afiche original de IMDb; NO es TMDB 684089 (2020, otra directora)",
+   "_director": "Priscila Núñez",
+   "_sondeado": "2026-11-15"
+  },
+  {
    "titulo": "A voz de todas as cousas",
    "tmdb_id": 1555898,
    "titulo_original": "A voz de todas as cousas",
@@ -510,6 +526,22 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Belladonna",
    "_director": "Dubravka Turić",
+   "_sondeado": "2026-11-15"
+  },
+  {
+   "titulo": "Běi Huí Gu− Xiàn",
+   "tmdb_id": 1826831,
+   "titulo_original": "北回歸線",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "In a small-town lingerie factory, a young man's monotonous life is upended by an unexpected bond and his awakening queerness.",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "",
+   "lbSlug": "film:1678938",
+   "_verificado": "declarada a mano: alta nueva 15 nov 2026 como «北回歸線 / Tropic of Cancer» (Alex Jiang, 13 min; IMDb tt38915889), afiche original de IMDb",
+   "_director": "Alex Jiang",
    "_sondeado": "2026-11-15"
   },
   {
@@ -1263,6 +1295,22 @@
    "_sinopsis_de": "ya publicada en cinemancia-2026",
    "poster": "/assets/bogoshorts-2026/el-salto.jpg",
    "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Elefante",
+   "tmdb_id": 1826828,
+   "titulo_original": "Elefante",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "Andrés lives on the road, selling knick-knacks out of his old Renault 4. Meanwhile he can barely stand his elderly, senile father, who lives in the past of old cycling radio commentaries and family memories.",
+   "genero": "Drama",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 15,
+   "pais_tmdb": "",
+   "lbSlug": "elefante-1",
+   "_verificado": "declarada a mano: alta nueva 15 nov 2026 (César Heredia, 2014, 15 min; IMDb tt4392972), afiche original de IMDb",
+   "_director": "César Heredia Cruz",
+   "_sondeado": "2026-11-15"
   },
   {
    "titulo": "En el silencio después",
@@ -4792,6 +4840,21 @@
    "poster": "/assets/bogoshorts-2026/a-wolf-in-the-suburbs.jpg",
    "posterSource": "tmdb"
   },
+  "A los once": {
+   "tmdb_id": 1826830,
+   "titulo_original": "A los once",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "When her mother mistakes a bloodstain for her first period, an eleven-year-old uncovers the devastating truth.",
+   "genero": "Drama",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 15,
+   "pais_tmdb": "",
+   "lbSlug": "a-los-once",
+   "_verificado": "declarada a mano: alta nueva 15 nov 2026 (Priscila Núñez, 2025, 15 min; IMDb tt35506134), afiche original de IMDb; NO es TMDB 684089 (2020, otra directora)",
+   "_director": "Priscila Núñez",
+   "_sondeado": "2026-11-15"
+  },
   "A voz de todas as cousas": {
    "tmdb_id": 1555898,
    "titulo_original": "A voz de todas as cousas",
@@ -5132,6 +5195,21 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Belladonna",
    "_director": "Dubravka Turić",
+   "_sondeado": "2026-11-15"
+  },
+  "Běi Huí Gu− Xiàn": {
+   "tmdb_id": 1826831,
+   "titulo_original": "北回歸線",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "In a small-town lingerie factory, a young man's monotonous life is upended by an unexpected bond and his awakening queerness.",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "",
+   "lbSlug": "film:1678938",
+   "_verificado": "declarada a mano: alta nueva 15 nov 2026 como «北回歸線 / Tropic of Cancer» (Alex Jiang, 13 min; IMDb tt38915889), afiche original de IMDb",
+   "_director": "Alex Jiang",
    "_sondeado": "2026-11-15"
   },
   "Borrachos mientras escuchamos las gotas caer": {
@@ -5853,6 +5931,21 @@
    "_sinopsis_de": "ya publicada en cinemancia-2026",
    "poster": "/assets/bogoshorts-2026/el-salto.jpg",
    "posterSource": "tmdb"
+  },
+  "Elefante": {
+   "tmdb_id": 1826828,
+   "titulo_original": "Elefante",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "Andrés lives on the road, selling knick-knacks out of his old Renault 4. Meanwhile he can barely stand his elderly, senile father, who lives in the past of old cycling radio commentaries and family memories.",
+   "genero": "Drama",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 15,
+   "pais_tmdb": "",
+   "lbSlug": "elefante-1",
+   "_verificado": "declarada a mano: alta nueva 15 nov 2026 (César Heredia, 2014, 15 min; IMDb tt4392972), afiche original de IMDb",
+   "_director": "César Heredia Cruz",
+   "_sondeado": "2026-11-15"
   },
   "En el silencio después": {
    "tmdb_id": 1724318,
@@ -9031,11 +9124,9 @@
  },
  "sin_ficha": [
   "A Body that Hurts",
-  "A los once",
   "Amará",
   "Argentina Is Daing (Marttein)",
   "Berzingue (Crache)",
-  "Běi Huí Gu− Xiàn",
   "Bu",
   "Carta a un joven ladrón",
   "Cartas a Daniel Apóstol",
@@ -9048,7 +9139,6 @@
   "El hombre del reloj",
   "El mandado",
   "El píxel y la parcela",
-  "Elefante",
   "Escritorio",
   "Espaciar",
   "Fantasy Land",
@@ -9116,10 +9206,6 @@
    "director": "David Espitia Calderón",
    "fecha": "2026-11-15"
   },
-  "A los once": {
-   "director": "Priscila Núñez",
-   "fecha": "2026-11-15"
-  },
   "Amará": {
    "director": "Manuela Ocampo",
    "fecha": "2026-11-15"
@@ -9130,10 +9216,6 @@
   },
   "Berzingue (Crache)": {
    "director": "Ewan Rosenstrauch, Cécile Montanès",
-   "fecha": "2026-11-15"
-  },
-  "Běi Huí Gu− Xiàn": {
-   "director": "Alex Jiang",
    "fecha": "2026-11-15"
   },
   "Bu": {
@@ -9182,10 +9264,6 @@
   },
   "El píxel y la parcela": {
    "director": "Hannah Meszaros Martin",
-   "fecha": "2026-11-15"
-  },
-  "Elefante": {
-   "director": "César Heredia Cruz",
    "fecha": "2026-11-15"
   },
   "Escritorio": {
