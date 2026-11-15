@@ -827,6 +827,22 @@
    "_sondeado": "2026-11-15"
   },
   {
+   "titulo": "Cvijeće",
+   "tmdb_id": 1826811,
+   "titulo_original": "Cvijeće",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "Members of two families are visiting their hospitalized fathers sharing the same room. While one family squabbles over trivial issues, the other family takes a very different perspective. Flowers are both for celebrations and for funerals.",
+   "genero": "Drama",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 19,
+   "pais_tmdb": "",
+   "lbSlug": "cvijece",
+   "_verificado": "declarada a mano: alta nueva 15 nov 2026 (Judita Gamulin, 2015, 19 min), afiche oficial de croatian.film/en/films/2890",
+   "_director": "Judita Gamulin",
+   "_sondeado": "2026-11-15"
+  },
+  {
    "titulo": "C’est ma sœur",
    "tmdb_id": 1616193,
    "titulo_original": "C’est ma soeur",
@@ -5418,6 +5434,21 @@
    "_director": "Robert Brand Ordóñez",
    "_sondeado": "2026-11-15"
   },
+  "Cvijeće": {
+   "tmdb_id": 1826811,
+   "titulo_original": "Cvijeće",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "Members of two families are visiting their hospitalized fathers sharing the same room. While one family squabbles over trivial issues, the other family takes a very different perspective. Flowers are both for celebrations and for funerals.",
+   "genero": "Drama",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 19,
+   "pais_tmdb": "",
+   "lbSlug": "cvijece",
+   "_verificado": "declarada a mano: alta nueva 15 nov 2026 (Judita Gamulin, 2015, 19 min), afiche oficial de croatian.film/en/films/2890",
+   "_director": "Judita Gamulin",
+   "_sondeado": "2026-11-15"
+  },
   "C’est ma sœur": {
    "tmdb_id": 1616193,
    "titulo_original": "C’est ma soeur",
@@ -9013,7 +9044,6 @@
   "Cocodrilo (Dillom)",
   "Complementarios",
   "Cumbia pa’ la luna (Fuji Kurosawa ft. Lina Remolina)",
-  "Cvijeće",
   "El Alto de los Buitres",
   "El hombre del reloj",
   "El mandado",
@@ -9136,10 +9166,6 @@
   },
   "Cumbia pa’ la luna (Fuji Kurosawa ft. Lina Remolina)": {
    "director": "Diego Blanco",
-   "fecha": "2026-11-15"
-  },
-  "Cvijeće": {
-   "director": "Judita Gamulin",
    "fecha": "2026-11-15"
   },
   "El Alto de los Buitres": {
