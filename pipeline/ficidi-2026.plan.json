@@ -1,0 +1,116 @@
+{
+ "_nota": "IV FICIDI — Festival Internacional de Cine Diverso, «La memoria revelada» (Barranquilla, 3–7 nov 2026). Fuente máxima: el Calendario de programación en PDF que envió el festival (fuentes/ficidi-2026/Calendario_IV_FICIDI_2026.pdf, 29 oct). Duraciones y dirección de 17 obras: las láminas de IG de la programación (DfA_GjWkT_g, DfDlyoFEdJD). Catálogo: el pre-onboarding de la Selección Oficial (66 obras). Radar #1042.",
+ "radar": 1042,
+ "pasos": [
+  {
+   "cmd": "python3 pipeline/radar.py ficidi-2026",
+   "que": "el volcado del radar #1042"
+  },
+  {
+   "cmd": "python3 pipeline/ficidi-2026-catalogo.py",
+   "que": "las grillas de IG → catálogo (66 obras) y sus afiches recortados"
+  },
+  {
+   "cmd": "python3 pipeline/enriquecer_catalogo.py festivals/staging/ficidi-2026-catalogo.json",
+   "que": "la cascada de TMDB y lo ya publicado → catálogo enriquecido"
+  },
+  {
+   "cmd": "python3 pipeline/ficidi-2026-crudo.py",
+   "que": "el Calendario PDF → crudo (7 funciones, 64 obras cruzadas con el catálogo)"
+  },
+  {
+   "cmd": "python3 pipeline/enriquecer.py ficidi-2026 --posters",
+   "que": "TMDB + cascada + afiches de las obras de cada función"
+  },
+  {
+   "cmd": "python3 pipeline/geocodificar.py ficidi-2026 --centro 10.9685,-74.7813 --ciudad \"Barranquilla\"",
+   "que": "pines: los 6 a mano desde Google Maps"
+  },
+  {
+   "cmd": "python3 pipeline/ensamblar.py ficidi-2026",
+   "que": "el build"
+  },
+  {
+   "cmd": "python3 pipeline/encuadrar-posters.py ficidi-2026 --aplicar --desde festivals/staging/ficidi-2026-build.json",
+   "que": "los afiches a 2:3"
+  },
+  {
+   "cmd": "python3 pipeline/ficidi-2026-verificar.py",
+   "que": "el build contra el PDF por una segunda lectura (pdftotext -raw), en los dos sentidos, y cada sede con pin"
+  }
+ ],
+ "_nota_fuentes_vivas": "Sin fuente web viva: la web del festival no publica programación (29 oct); la fuente es el PDF que envió el festival, versionado en fuentes/. Un PDF nuevo se baja a mano.",
+ "fuentes_vivas": [],
+ "festival": {
+  "radar": 1042,
+  "crudo": "festivals/staging/ficidi-2026-crudo.json",
+  "enriquecido": "festivals/staging/ficidi-2026-enriquecido.json",
+  "geo": "festivals/staging/ficidi-2026-venues-geo.json",
+  "_por_que_secciones": "«Selección Oficial»: así rotulan las láminas cada obra; «Proyección especial»: el rótulo del PDF para el 3 nov. Emoji, inglés y arquetipo: propuesta, a confirmar con Juan.",
+  "secciones": {
+   "Selección Oficial": {
+    "emoji": "🏳️‍🌈",
+    "en": "Official Selection",
+    "archetype": "Cortos / Programas"
+   },
+   "Proyección especial": {
+    "emoji": "✨",
+    "en": "Special Screening",
+    "archetype": "Especiales / Eventos"
+   }
+  },
+  "sedes": {
+   "Aduana de Barranquilla": [
+    "Aduana de Barranquilla - Barranquilla",
+    ""
+   ],
+   "Universidad Simón Bolívar, sede 1": [
+    "Universidad Simón Bolívar, sede 1 - Barranquilla",
+    ""
+   ],
+   "Alianza Francesa de Barranquilla": [
+    "Alianza Francesa de Barranquilla - Barranquilla",
+    ""
+   ],
+   "La Maloca Cultural": [
+    "La Maloca Cultural - Barranquilla",
+    ""
+   ],
+   "Universidad de la Costa – CUC": [
+    "Universidad de la Costa – CUC - Barranquilla",
+    ""
+   ],
+   "La Fábrica de Cultura": [
+    "La Fábrica de Cultura - Barranquilla",
+    ""
+   ]
+  },
+  "_por_que_sedes": "La sede como la nombra el PDF; la sala viaja por función. Mismos nombres que FICICA para las tres sedes compartidas.",
+  "name": "FICIDI",
+  "displayName": "FICIDI",
+  "fullName": "IV FICIDI — Festival Internacional de Cine Diverso",
+  "shortName": "FICIDI",
+  "tagline": "Festival Internacional de Cine Diverso",
+  "city": "Barranquilla",
+  "country": "CO",
+  "dates": "3–7 NOV",
+  "dates_en": "NOV 3–7",
+  "year": 2026,
+  "timezoneOffset": "-05:00",
+  "storageKey": "ficidi2026_",
+  "festivalStartStr": "2026-11-03T00:00:00",
+  "festivalEndStr": "2026-11-07T23:59:00",
+  "sharedSlotIsOneScreening": false,
+  "mes_es": "noviembre",
+  "dias_vacios": [],
+  "_fuentes_versionadas": {
+   "festivals/staging/ficidi-2026-catalogo.json": "la Selección Oficial (66 obras) desde las grillas de IG",
+   "festivals/staging/ficidi-2026-catalogo-enriquecido.json": "fichas TMDB del catálogo",
+   "festivals/staging/ficidi-2026-crudo.json": "el Calendario PDF en formato intermedio",
+   "festivals/staging/ficidi-2026-enriquecido.json": "fichas y afiches de las obras de las funciones",
+   "festivals/staging/ficidi-2026-afiches.json": "las portadas que envió el festival (Drive, 60 obras), cruzadas por nombre de archivo; lo lee enriquecer.py",
+   "festivals/staging/ficidi-2026-radar.json": "el volcado del radar #1042",
+   "festivals/staging/ficidi-2026-titulos.json": "la caja del título de cada obra del catálogo; lo lee el paso del catálogo"
+  }
+ }
+}

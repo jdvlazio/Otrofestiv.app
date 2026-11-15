@@ -1,0 +1,45 @@
+{
+ "Acajel": {
+  "n": 1,
+  "_prec": "manual",
+  "lat": 3.448634,
+  "lng": -76.534318,
+  "address": "Cra. 8 #8-17, piso 4, barrio Santa Rosa, Cali",
+  "_match": "Google Maps, la dirección de la lámina (Cra. 8 #8-17), 2 nov 2026. La sede no aparece por nombre en Maps."
+ },
+ "Casa Occio": {
+  "lat": 3.4369511,
+  "lng": -76.5403896,
+  "_prec": "nominatim",
+  "_match": "Casa Occio, 2A-258, Carrera 24B, Miraflores, Comuna 19, Cali ciudad, Cali, Sur, Valle del ",
+  "n": 1
+ },
+ "Teatrino Proyecto Oriente": {
+  "n": 1,
+  "_prec": "manual",
+  "lat": 3.450566,
+  "lng": -76.510646,
+  "address": "Calle 34 #10-115, barrio El Troncal, Cali",
+  "_match": "Google Maps «PROYECTO ORIENTE» (2 nov 2026); dirección de la lámina y del post p/DfMs0KoJgLT."
+ },
+ "Universidad Santiago de Cali": {
+  "lat": 3.4033961,
+  "lng": -76.5470651,
+  "_prec": "manual",
+  "_match": "Google Maps «Universidad Santiago de Cali» (2 nov 2026), campus Pampalinda (Auditorio T-Usaca, Auditorio 1101, Plazoleta de Los Sabios).",
+  "n": 8,
+  "address": "Calle 5 #62-00, Pampalinda, Cali"
+ },
+ "_provenance": {
+  "fuente": "Nominatim con verificación: caja de ciudad + token distintivo + clase de lugar (una sede fija nunca es un barrio). _prec:manual intocable.",
+  "capturado": "2026-11-02"
+ },
+ "Centro Cultural Brisas de Mayo": {
+  "n": 1,
+  "_prec": "manual",
+  "lat": 3.4169915,
+  "lng": -76.5677396,
+  "address": "Diagonal 38 Oeste #54 E-35, Cali",
+  "_match": "Google Maps «Centro Cultural Brisas De Mayo» (3 nov 2026)."
+ }
+}

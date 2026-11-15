@@ -1,6 +1,6 @@
 {
  "id": "w_R4J8Q0CCTKZ3",
- "titulo_original": "En su Sombra Fértil",
+ "titulo_original": "En su sombra fértil",
  "anio": 2025,
  "paises": [
   "CO"
@@ -10,19 +10,19 @@
  ],
  "aliases": [
   {
-   "titulo": "En su sombra fértil",
+   "titulo": "En su Sombra Fértil",
    "tipo": "festival"
   }
  ],
  "sinopsis": {
-  "es": "En el valle de Sibundoy, Mercedes Cuatindioy cultiva su chagra como un acto de resistencia y memoria. A través de la forma en que siembra, cuida e interactúa con sus plantas, transmite un conocimiento indígena que se ve amenazado por el olvido y el monocultivo.",
+  "es": "En el valle de Sibundoy, Mercedes Cuatindioy cultiva su chagra como un acto de resistencia y memoria. A través de la forma en que siembra, cuida e interactúa con sus plantas, transmite conocimientos indígenas que están en peligro de caer en el olvido y de ser desplazados por los monocultivos.",
   "en": "In the Sibundoy Valley, Mercedes Cuatindioy cultivates her chagra as an act of resistance and remembrance. Between seeds and polyculture practices, her life embodies the transmission of indigenous knowledge threatened by oblivion."
  },
  "generos": [
   "Documental"
  ],
  "afiche": {
-  "archivo": "/assets/ficpa-2026/en-su-sombra-fertil.jpg",
+  "archivo": "/assets/cinetoro-2026/en-su-sombra-fertil.jpg",
   "veredicto": "oficial"
  },
  "xref": {
@@ -36,6 +36,7 @@
   }
  ],
  "presentaciones": [
+  "cinetoro-2026",
   "ficpa-2026",
   "siembrafest-2026"
  ]

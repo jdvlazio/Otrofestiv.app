@@ -78,6 +78,11 @@
    "poster_path": null,
    "_fuente": "https://www.themoviedb.org/movie/1794005",
    "_por_que": "El afiche OFICIAL del festival manda sobre el de TMDB (jerarquía del póster): es el que ya publicamos en FICCALI 2026. Desde el 20 oct la web de FICICA da el director, la cascada casa la ficha de TMDB y su afiche pisaba el oficial. Declarado el 20 oct 2026."
+  },
+  "Compraventa": {
+   "tmdb": 1469673,
+   "_fuente": "https://www.themoviedb.org/movie/1469673",
+   "_por_que": "27 oct 2026: la misma ficha que publica Miradas (catálogo w_6XS3BRDR0PG5). Misma obra por dirección: la tabla de programas de FICICA (fuentes/ficica-2026/programas.html, fila 117) da «COMPRAVENTA · Argentina · Ficción · Thomas Murphy», y TMDB 1469673 es «Compraventa» (AR, 2025) de Tomás Murphy."
   }
  },
  "sin_afiche": {
@@ -106,5 +111,10 @@
   "¿Quién heredará el sabor de mompox?": "corto del Concurso MINI (también listado en el Programa inaugural, programas.html 18 oct): la web del festival no trae afiche y TMDB no tiene la obra ni a su director (búsqueda por título y por persona, 18 oct 2026)",
   "La despedida": "corto del Concurso MINI (también listado en el Programa inaugural, programas.html 18 oct): la web del festival no trae afiche y TMDB no tiene la obra ni a su director (búsqueda por título y por persona, 18 oct 2026)",
   "Bartolo": "corto del Concurso MINI (también listado en el Programa inaugural, programas.html 18 oct): la web del festival no trae afiche y TMDB no tiene la obra ni a su director (búsqueda por título y por persona, 18 oct 2026)"
+ },
+ "no_heredar": {
+  "Zizuma, nuestra casa de agua y nubes": {
+   "_por_que": "27 oct 2026: lo único publicado es la tarjeta de sección de SiembraFest (sección y programa arriba, laureles «Selección Oficial 2026», título y dirección sobre un fotograma), no el afiche de la obra; afiche_criterio la rechaza como ajena. Sin afiche original no se hereda."
+  }
  }
 }

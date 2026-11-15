@@ -1,6 +1,6 @@
 {
  "id": "w_R4G1R6GM6QWF",
- "titulo_original": "Mu-Ki-Ra",
+ "titulo_original": "Mu-ki-ra",
  "anio": 2026,
  "paises": [
   "CO",
@@ -15,7 +15,7 @@
    "tipo": "festival"
   },
   {
-   "titulo": "Mu-ki-ra",
+   "titulo": "Mu-Ki-Ra",
    "tipo": "festival"
   },
   {
@@ -28,7 +28,8 @@
   "en": "When her brother is kidnapped by Mu-Ki-Ra, Cleo ventures into a monster-plagued jungle with unlikely allies."
  },
  "generos": [
-  "Animación"
+  "Animación",
+  "Ficción"
  ],
  "afiche": {
   "archivo": "/assets/anibia-2026/mukira.jpg",
@@ -50,6 +51,10 @@
   {
    "etiqueta": "90 min",
    "duracion_min": 90
+  },
+  {
+   "etiqueta": "105 min",
+   "duracion_min": 105
   }
  ],
  "presentaciones": [
@@ -57,7 +62,10 @@
   "fantasmagoria-2026",
   "ficcali-2026",
   "ficci-65",
+  "ficfusa-2026",
   "ficmontanas-2026",
-  "filcmar-2026"
+  "filcmar-2026",
+  "miradas-2026",
+  "villadeleyvaiff-2026"
  ]
 }

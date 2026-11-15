@@ -9,13 +9,17 @@
   "Sebastián Giraldo"
  ],
  "sinopsis": {
-  "es": "Karent investiga algunas memorias filmadas conversando con su abuela, acerca de una tradición familiar que conlleva ritual Animista en el que pueden descomponer su espíritu en varios fragmentos. Se prepara para hacerlo."
+  "es": "Karent investiga algunas memorias filmadas conversando con su abuela, acerca de una tradición familiar que conlleva ritual Animista en el que pueden descomponer su espíritu en varios fragmentos. Se prepara para hacerlo.",
+  "en": "Karent looks into filmed memories while talking with her grandmother about a family tradition involving an Animist ritual in which they can break their spirit into several fragments. She prepares to do it."
  },
  "afiche": {
-  "archivo": "/assets/popayan-2026/animista.jpg",
-  "veredicto": "oficial-festival"
+  "archivo": "/assets/ficfusa-2026/animista.jpg",
+  "veredicto": "oficial"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 1817272,
+  "letterboxd": "animista"
+ },
  "versiones": [
   {
    "etiqueta": "8 min",
@@ -23,6 +27,7 @@
   }
  ],
  "presentaciones": [
+  "ficfusa-2026",
   "popayan-2026"
  ]
 }

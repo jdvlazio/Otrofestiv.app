@@ -1,15 +1,15 @@
 {
  "titulo_original": {
-  "fuente": "festival:ficdeh-2026,ficdeh-2026,ficdeh-2026",
+  "fuente": "festival:ficdeh-2026,ficdeh-2026,ficdeh-2026,ficidi-2026",
   "regla": "el título que más festivales imprimen"
  },
  "directores": {
-  "fuente": "festival",
-  "regla": "la grafía más completa que acreditan los festivales"
+  "fuente": "tmdb:1738928",
+  "regla": "tmdb-manda"
  },
  "anio": {
-  "fuente": "festival",
-  "regla": "único"
+  "fuente": "tmdb:1738928",
+  "regla": "tmdb-manda"
  },
  "paises": {
   "fuente": "festival",

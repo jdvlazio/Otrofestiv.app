@@ -24,8 +24,8 @@ Esc.  festivals/staging/<lo-que-sea>-enriquecido.json
 import json, os, re, sys, time
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from enriquecer import ficha_declarada, cascada_obra
-from lib import provenance, director_coincide, obras_publicadas, ya_publicada
+from enriquecer import ficha_declarada, cascada_obra, reuso_publicada
+from lib import provenance, director_coincide, obras_publicadas, publicadas_de
 import proimagenes
 import cinecorto
 
@@ -60,8 +60,9 @@ def main():
     # al sidecar: el fest-id es el nombre del sidecar sin «-catalogo.json».
     _fid = os.path.basename(p).replace('-catalogo.json', '')
     corr_p = os.path.join(os.path.dirname(p), f'{_fid}-correcciones.json')
-    declaradas = (json.load(open(corr_p, encoding='utf-8')).get('fichas', {})
-                  if os.path.exists(corr_p) else {})
+    _corr = json.load(open(corr_p, encoding='utf-8')) if os.path.exists(corr_p) else {}
+    declaradas = _corr.get('fichas', {})
+    misma_obra = _corr.get('misma_obra', {})
     _titulos = {o['titulo'] for o in obras}
     _huerf = [t for t in declaradas if t not in _titulos]
     if _huerf:
@@ -85,7 +86,7 @@ def main():
     ok, sin, por_fuente = {}, [], {}
     for i, o in enumerate(verificables, 1):
         t = o['titulo']
-        pub = ya_publicada(o, publicadas)
+        pub = publicadas_de(o, publicadas, misma_obra)
         e, fuente = None, None
         # la fuente se anota SOLO si devolvió algo: la primera versión la ponía
         # antes de saberlo, y «Belleza letal» salía «OK tmdb» sin tmdb_id
@@ -125,6 +126,19 @@ def main():
         if pub:
             e = dict(e or {})
             e['_ya_publicada'] = pub
+            # EL CRUCE SE GUARDABA Y NO SE USABA (27 oct 2026): «Luis Antonio»
+            # salía de cinecorto con `_ya_publicada` lleno y sin heredar nada.
+            # Lo que la fuente no trajo se toma de lo ya publicado, con su
+            # procedencia (`_afiche_de`, `_ficha_de`, `_sinopsis_de`).
+            r = reuso_publicada(pub, _fid) or {}
+            ya = bool(e.get('poster_path') or e.get('poster'))
+            for k in ('poster', '_afiche_de'):
+                if r.get(k) and not ya:
+                    e[k] = r[k]
+            if r.get('tmdb_id') and not e.get('tmdb_id'):
+                e['tmdb_id'], e['_ficha_de'] = r['tmdb_id'], r['_ficha_de']
+            if r.get('sinopsis') and not (e.get('sinopsis') or e.get('synopsis_es')):
+                e['sinopsis'], e['_sinopsis_de'] = r['sinopsis'], r['_sinopsis_de']
         if e and fuente:
             ok[t] = e
             por_fuente[fuente] = por_fuente.get(fuente, 0) + 1

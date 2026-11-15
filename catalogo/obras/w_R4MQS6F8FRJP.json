@@ -10,23 +10,28 @@
  ],
  "aliases": [
   {
+   "titulo": "Los inocentes encantadores",
+   "tipo": "festival"
+  },
+  {
    "titulo": "Innocent Sorcerers",
    "idioma": "en",
    "tipo": "traduccion"
   }
  ],
  "sinopsis": {
-  "es": "Um mulherengo está cansado de ser procurado por mulheres. Uma noite, ele conhece uma jovem que praticamente entra à força em seu quarto, onde conversam sobre moral e amor.",
-  "en": "A womanizer is tired of being sought by women. One night he meets a young girl who all but forces herself into his room, where they talk of morals and love."
+  "es": "Un joven médico está cansado de que las mujeres lo persigan. Una noche conoce a una muchacha que prácticamente se instala en su cuarto, y allí hablan de la moral y del amor.",
+  "en": "A young doctor is tired of being sought by women. One night he meets a young girl who all but forces herself into his room where they talk of morals and love."
  },
  "generos": [
   "Romance"
  ],
  "afiche": {
-  "archivo": "/t8fadEnUuIczqDZVcWaVQECUVRh.jpg",
+  "archivo": "/assets/aleste-2026/los-inocentes-encantadores.jpg",
   "veredicto": "oficial"
  },
  "xref": {
+  "tmdb": 80324,
   "letterboxd": "innocent-sorcerers"
  },
  "versiones": [
@@ -36,6 +41,7 @@
   }
  ],
  "presentaciones": [
+  "aleste-2026",
   "olhar-2026"
  ]
 }

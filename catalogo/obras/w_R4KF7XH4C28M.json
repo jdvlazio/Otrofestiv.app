@@ -12,7 +12,8 @@
   "es": "Alex, un jóven sumido en la depresión y consumido por la promesa de acabar con su propia vida, viaja a Bogotá con un único propósito: vengarse de su abusador, la persona que para él, es el causante de todo el camino de miseria que ha llevado hasta ahora, antes de poner fin a su propia vida."
  },
  "generos": [
-  "Ficción"
+  "Ficción",
+  "Drama"
  ],
  "afiche": {
   "archivo": "/assets/jardin-2026/termina.jpg",
@@ -24,12 +25,17 @@
  },
  "versiones": [
   {
+   "etiqueta": "26 min",
+   "duracion_min": 26
+  },
+  {
    "etiqueta": "27 min",
    "duracion_min": 27
   }
  ],
  "presentaciones": [
   "jardin-2026",
-  "siembrafest-2026"
+  "siembrafest-2026",
+  "villadeleyvaiff-2026"
  ]
 }

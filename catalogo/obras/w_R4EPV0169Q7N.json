@@ -9,14 +9,27 @@
   "Laura Camila Caballero",
   "Sara Idárraga"
  ],
+ "aliases": [
+  {
+   "titulo": "Mal de tierra",
+   "tipo": "festival"
+  }
+ ],
  "sinopsis": {
-  "es": "«Stories that shape the paths along which the water flows Voices that travel between the sky and the mountains The wind and its whistling frighten the water The earth chokes A storm of tears trickles down the skin It is the salt that cultivates the streams to wander Voices that travel between the sky and the mountains»"
+  "es": "«Stories that shape the paths along which the water flows Voices that travel between the sky and the mountains The wind and its whistling frighten the water The earth chokes A storm of tears trickles down the skin It is the salt that cultivates the streams to wander Voices that travel between the sky and the mountains»",
+  "en": "«Stories that shape the paths along which the water flows  Voices that travel between the sky and the mountains  The wind and its whistling frighten the water  The earth chokes  A storm of tears trickles down the skin  It is the salt that cultivates the streams to wander  Voices that travel between the sky and the mountains»"
  },
+ "generos": [
+  "Experimental"
+ ],
  "afiche": {
   "archivo": "/assets/cineautopsia/mal-de-tierra.jpg",
   "veredicto": "oficial"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 1758059,
+  "letterboxd": "mal-de-tierra-2025"
+ },
  "versiones": [
   {
    "etiqueta": "10 min",
@@ -24,6 +37,8 @@
   }
  ],
  "presentaciones": [
-  "cineautopsia-2026"
+  "cineautopsia-2026",
+  "ficfusa-2026",
+  "miradas-2026"
  ]
 }

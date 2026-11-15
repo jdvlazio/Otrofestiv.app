@@ -10,6 +10,12 @@
   "Violeta Vieytes Vivares",
   "Damián Sato"
  ],
+ "aliases": [
+  {
+   "titulo": "Sirena Mecánica",
+   "tipo": "festival"
+  }
+ ],
  "sinopsis": {
   "es": "Sirena Mecánica es un documental fantástico que desde de los estudios transfeministas reinterpreta el modo en cómo se representa el cuerpo (material y social) femenino dentro del mito de la sirena. Este procedimiento subversivo narra a través de los recuerdos de la primera infancia y los procesos de sanación en la relación intima de la pareja codirectora de la pieza. En el desencuentro con la realidad, SM transita entre paisajes materialmente confusos (fílmicos y plásticos) TRANSitando en la ambigüedad de la protección, amenaza, belleza y violencia."
  },
@@ -17,8 +23,8 @@
   "Experimental"
  ],
  "afiche": {
-  "archivo": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Captura%20de%20pantalla%202026-03-23%20205043.png?itok=BR7oyf-o",
-  "veredicto": "oficial-festival"
+  "archivo": "/assets/festicinerio-2026/sirena-mecanica.jpg",
+  "veredicto": "oficial"
  },
  "xref": {
   "tmdb": 1668871,
@@ -31,6 +37,7 @@
   }
  ],
  "presentaciones": [
+  "festicinerio-2026",
   "ficci-65",
   "jardin-2026",
   "popayan-2026"

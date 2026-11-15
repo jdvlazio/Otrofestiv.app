@@ -599,7 +599,7 @@ export function renderMiPlanCalendar(state){
           <div class="mplan-t1 mp-abierta${_isPastRow?' mp-past':''}">${_lbl}</div>
           <div class="mplan-t2">${t('vas_cuando_quieras')}</div>
           <div>${_dt}</div>
-          <div class="mplan-rvenue mp-event-venue">${ICONS.pin} ${vcfg(s.venue).short||s.venue}${venueCity(s.venue)?` · <span class="plist-city">${venueCity(s.venue)}</span>`:''}</div>
+          <div class="mplan-rvenue mp-event-venue" data-action="openVenueSheet" data-venue="${String(s.venue||'').replace(/"/g,'&quot;')}">${ICONS.pin} ${vcfg(s.venue).short||s.venue}${venueCity(s.venue)?` · <span class="plist-city">${venueCity(s.venue)}</span>`:''}</div>
         </div>
         <div class="col-end">
           <button class="icon-btn-circle ag-fi-btn del" data-title="${safeT}" data-action="removeFromAgenda" data-stop="1" aria-label="${t('plan_sacar')}">${ICONS.x}</button>
@@ -670,7 +670,7 @@ export function renderMiPlanCalendar(state){
       const _mphInner=_mp
           ?_posterThumb(_mf,'lb-poster')
           :_isEventRow
-            ?`<img class="lb-poster" src="${makeEventPoster(state,_mf.title,_mf.duration,_mf.event_kind)}" alt="" loading="lazy" onerror="this.remove()">`
+            ?`<img class="lb-poster" src="${makeEventPoster(state,_mf.title,_mf.duration,_mf.event_kind)}" alt="" loading="lazy" data-err="quitar">`
             :_posterThumb(_mf,'lb-poster');
       const _mph=`<div class="js-open-pel" data-title="${escXML(s._title||'')}" style="flex-shrink:0;cursor:pointer" data-stop="1">${_mphInner}</div>`
       listHtml+=`<div class="mplan-row${_rowKey===_activeMiPlanFilm?' active':''}${isSeen?' mp-seen':''}" style="cursor:pointer" data-rkey="${_safeRowKey}" data-action="selectFromDetail">
@@ -710,7 +710,7 @@ export function renderMiPlanCalendar(state){
             return `<span class="mp-void-t">${_fin}</span>`;
           })()}${_voidFix}${prioritized.has(s._title)?` <span class="txt-amber60-xs">${ICONS.bookmarkFill}</span>`:''}${_rowStars?` <span class="txt-amber-sm">${_rowStars}</span>`:''}${isNow?` <span class="txt-green-semi">${t('label_en_curso_min')}</span>`:''}</div>
           <div>${(()=>{const{displayTitle:_dt,progSuffix:_ps}=parseProgramTitle(s._title||'');const _mfqa=FILMS.find(fi=>sameEntry(fi,s));const _qab=_mfqa?.has_qa?`<span class="meta-badge sm">Q&A</span>`:'';return`<div class="mplan-rtitle${_isEventRow?' mp-event-title':''}"><span class="mplan-rtitle-txt">${_dt}</span>${_qab}</div>${_ps?`<div class="prog-suffix">${_ps}</div>`:''}`;})()} </div>
-          <div class="mplan-rvenue${_isEventRow?' mp-event-venue':''}">${ICONS.pin} ${vcfg(s.venue).short||s.venue}${venueCity(s.venue)?` · <span class="plist-city">${venueCity(s.venue)}</span>`:''}${sala(s)?' \u00b7 '+sala(s):''}</div>
+          <div class="mplan-rvenue${_isEventRow?' mp-event-venue':''}" data-action="openVenueSheet" data-venue="${String(s.venue||'').replace(/"/g,'&quot;')}">${ICONS.pin} ${vcfg(s.venue).short||s.venue}${venueCity(s.venue)?` · <span class="plist-city">${venueCity(s.venue)}</span>`:''}${sala(s)?' \u00b7 '+sala(s):''}</div>
           ${_sesionDeBloque(s)}
           ${_filaBoleta(s)}
           ${(()=>{const _mf=FILMS.find(fi=>sameEntry(fi,s));if(!_mf||!_mf.is_cortos||!_mf.film_list||!_mf.film_list.length) return'';return`<button class="row-xs mplan-prog-toggle" data-action="toggleMplanProg">${ICONS.chevronR} ${t('label_programa')}</button>`;})()}
@@ -988,7 +988,7 @@ export function renderContextualHeader(state, consensus){
       </div>
       <div class="ctx-next-row js-open-pel" data-title="${escXML(next._title||'')}" style="cursor:pointer">
         ${src
-          ?`<img class="ctx-next-poster" src="${src}" data-title="${(next._title||'').replace(/"/g,'&quot;')}" onerror="_posterErr(this)" alt="" loading="lazy">`
+          ?`<img class="ctx-next-poster" src="${src}" data-title="${(next._title||'').replace(/"/g,'&quot;')}" data-err="poster" alt="" loading="lazy">`
           :_isEvent
             ?makeEventPoster(state,next._title,next.duration,_filmObj?.event_kind).replace('<svg','<svg class="bg-surf-3 poster-sm ctx-next-poster"')
             :`<div class="ctx-next-poster"></div>`}
@@ -1580,7 +1580,7 @@ function _dwCard(state,{title,poster,posterSVG,rating,off,califica=true}){
         // remotos, y dentro de un <img> un SVG es documento aislado que tiene
         // prohibido cargar recursos externos — saldrían rotos.
         ? `<div class="img-cover dw-svg">${posterSVG}</div>`
-        : poster?`<img class="img-cover" src="${poster}" loading="lazy" onerror="this.remove()" alt="">`:''}
+        : poster?`<img class="img-cover" src="${poster}" loading="lazy" data-err="quitar" alt="">`:''}
     </div>
     <div class="dw-row">${ctrl}</div>
   </div>`;
@@ -1655,7 +1655,7 @@ function renderDiarioSection(state){
   if(!posters.length) return '';
   const MAX=6;
   const tira=posters.slice(0,MAX).map((p,i)=>p
-    ?`<img class="dw-strip-p" src="${p}" loading="lazy" onerror="this.remove()" alt="" style="${i?'margin-left:-20px;':''}z-index:${MAX-i}">`
+    ?`<img class="dw-strip-p" src="${p}" loading="lazy" data-err="quitar" alt="" style="${i?'margin-left:-20px;':''}z-index:${MAX-i}">`
     :'').join('');
   const resto=posters.length>MAX?`<span class="dw-strip-mas">+${posters.length-MAX}</span>`:'';
   return`<div class="diario-wrap">

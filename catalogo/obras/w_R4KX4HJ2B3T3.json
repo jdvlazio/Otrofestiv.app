@@ -9,13 +9,20 @@
   "Azul Aizenberg"
  ],
  "sinopsis": {
-  "es": "En 1976, durante la última dictadura militar en Argentina, 17 trabajadores de Mercedes-Benz fueron desaparecidos. Unos pocos documentos de su historia sobreviven: algunas fotografías tomadas por sus compañeros, un fragmento de película muda y documentos escritos por policías espías infiltrados en la fábrica con la complicidad del directorio. Entre estos archivos, la imagen de tres mujeres de las que sólo se adivina su nombre de pila y su oficio: taquigrafistas. Mari, una de ellas, es la destinataria de una carta que fabula su pasado entre la niebla de un presente signado por el cierre de la fábrica, luego de setenta años en el conurbano bonaerense."
+  "es": "En 1976, durante la última dictadura militar en Argentina, 17 trabajadores de Mercedes-Benz fueron desaparecidos. Unos pocos documentos de su historia sobreviven: algunas fotografías tomadas por sus compañeros, un fragmento de película muda y documentos escritos por policías espías infiltrados en la fábrica con la complicidad del directorio. Entre estos archivos, la imagen de tres mujeres de las que sólo se adivina su nombre de pila y su oficio: taquigrafistas. Mari, una de ellas, es la destinataria de una carta que fabula su pasado entre la niebla de un presente signado por el cierre de la fábrica, luego de setenta años en el conurbano bonaerense.",
+  "en": "In 1976, during Argentina’s last military dictatorship, 17 Mercedes-Benz workers were forcibly disappeared. Only a few documents from their story have survived: some photographs taken by their coworkers, a fragment of a silent film, and documents written by police spies who had infiltrated the factory with the complicity of the company’s board of directors. Among these archives is an image of three women whose first names and occupations can only be guessed at: stenographers. Mari, one of them, is the recipient of a letter that weaves a tale of her past amid the fog of a present marked by the factory’s closure, after seventy years in the Buenos Aires suburbs."
  },
+ "generos": [
+  "Documental"
+ ],
  "afiche": {
   "archivo": "/assets/midbo-2026/la-taquigrafista.jpg",
   "veredicto": "fotograma"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 1814522,
+  "letterboxd": "la-taquigrafista"
+ },
  "versiones": [
   {
    "etiqueta": "25 min",

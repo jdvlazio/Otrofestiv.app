@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "ensamblar.py: ids estables de las funciones (docs/FUNCION.md C1)",
-  "capturado": "2026-10-21"
+  "capturado": "2026-10-25"
  },
  "funciones": {
   "f_4def04d293": {
@@ -10,6 +10,13 @@
    "hora": "19:00",
    "sala": "Sala Capital",
    "titulo": "parapeto"
+  },
+  "f_38bb7e39f2": {
+   "sede": "Cinemateca Fontanar del Río - Bogotá",
+   "dia": "2026-10-23",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "el ritual de huasao"
   },
   "f_48787e7295": {
    "sede": "Casa 32 - Bogotá",
@@ -25,12 +32,26 @@
    "sala": "Sala 3",
    "titulo": "hiperrealidad"
   },
+  "f_e649668e6e": {
+   "sede": "Cinemateca Fontanar del Río - Bogotá",
+   "dia": "2026-10-24",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "el miedo llega a todas partes"
+  },
   "f_c89a65a296": {
    "sede": "Cinemateca de Bogotá - Bogotá",
    "dia": "2026-10-24",
    "hora": "19:30",
    "sala": "Sala Capital",
    "titulo": "sierra el album mortuorio"
+  },
+  "f_9c7ba7eefe": {
+   "sede": "Cinemateca Fontanar del Río - Bogotá",
+   "dia": "2026-10-25",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "nico"
   },
   "f_7c6fef807c": {
    "sede": "Cinemateca de Bogotá - Bogotá",

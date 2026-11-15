@@ -27,6 +27,7 @@ import './state/viewstate.js';
 //   FESTIVAL_STORAGE_KEY). saveX/loadState orquestadoras se quedan en main.js. ──
 import { storage } from './storage/storage.js';
 import { onDomReady } from './util/ready.js';
+import { instalarSinInline } from './controller/sin-inline.js';
 import { report } from './telemetry.js';
 
 // ── Step 4: i18n.js (import — _I18N + t + _applyI18nDOM). _lang vive en state
@@ -35,7 +36,7 @@ import { LANGS, t, _applyI18nDOM } from './i18n/i18n.js';
 
 // ── Step 5: domain/ (funciones puras). Importan config (DEFAULT_DURATION_MIN,
 //   FESTIVAL_BUFFER, FESTIVAL_CONFIG) y leen festival-state vía bridge. El worker
-//   las consume vía eval(name).toString(); sus copias worker-local se quedan. ──
+//   las consume vía fn.toString() (calc.js, sin eval desde el 26 oct); sus copias worker-local se quedan. ──
 import { toMin, parseDur, minToStr, _festDate, simNow, simTodayStr, dayFullyPassed, festivalEnded } from './domain/time.js';
 import { _djb2, _titleSeed, _mulberry32, shuffle, scoreFilm, effectiveDuration, screeningPassed, _classifyTodayScreenings, _endedStats, normTitle } from './domain/film.js';
 import { sameEntry, screensConflict, isScreeningBlocked, plannableScreens, sortScreensByStrategy, computeScenarios, verifyPlan } from './domain/schedule.js';
@@ -150,10 +151,7 @@ import {
 } from './controller/share.js';
 import { abrirCompartirFestival, abrirCompartirPlan } from './controller/story.js';
 
-// ── Step 7e: controller/poster-err.js ────────────────────────────────────────────
-import {
-  _posterErr, _cortoSheetPosterErr, _edPosterErr,
-} from './controller/poster-err.js';
+// controller/poster-err.js: lo importa controller/sin-inline.js (data-err), no main.
 
 // storage (adapter de localStorage) → src/storage/storage.js (Step 3).
 // Importado al top del módulo. Usa FESTIVAL_STORAGE_KEY vía el STATE BRIDGE.
@@ -379,6 +377,7 @@ document.addEventListener('click', function(e) {
     if (closeFn) closeFn();
   }
 });
+instalarSinInline(ACTION_REGISTRY, searchQuery);   // 3b. sin on*= en el HTML (CSP) — controller/sin-inline.js
 // ── CONTROLLER LAYER END (p7c-1) ──────────────────────────────────────
 
 // ── i18n — sistema de traducción ─────────────────────────────────────────
@@ -1455,29 +1454,20 @@ document.addEventListener('click', function(e){
   // p8 Step 8b: el bloque `_lets` (29 viewstate/festival-data/auth) se reubicó a
   // state/viewstate.js (side-effect import, instala en import-phase). Aquí queda
   // solo la exposición de {state, FESTIVAL_CONFIG, ACTION_REGISTRY} + las fns
-  // (inline on* de producción + page.evaluate de tests) → 8c.
+  // (page.evaluate de tests) → 8c.
   for (const [k, val] of Object.entries({ state, FESTIVAL_CONFIG, ACTION_REGISTRY })) {
     Object.defineProperty(globalThis, k, { get: () => val, configurable: true });
   }
-  // Funciones invocadas desde:
-  //  (a) handlers inline on* en HTML generado (onerror=_posterErr/_cortoSheetPosterErr)
-  //      — corren en GLOBAL scope, no module scope → DEBEN estar en globalThis
-  //      (correctness de producción, no solo tests; onerror no se migró en 7c).
-  //  (b) page.evaluate de la suite Playwright.
+  // Funciones que usa page.evaluate de la suite Playwright. Ya NO hay handlers
+  // on*= que las necesiten en global (CSP, 26 oct: controller/sin-inline.js).
   Object.assign(globalThis, { venueLabel, sala,
-    // (a) inline on* handlers — producción
-    //     en HTML generado (main.js innerHTML): onerror=_posterErr/_cortoSheetPosterErr
-    //     en markup estático (index.html): oninput/onkeyup/onkeydown=searchQuery,
-    //     onkeydown=submitAuthEmail/submitOTP (#search-input, #auth-email-inp, #auth-otp-inp)
-    _posterErr, _cortoSheetPosterErr, _edPosterErr,
-    searchQuery, submitAuthEmail, submitOTP,
     // (b) page.evaluate — tests
     // NOTICES: CONFIG, no estado — no va al roster de state (rompería la frontera
     // que vigila [state-mirror], igual que FESTIVAL_CONFIG/VENUES). Se expone acá
     // para que la suite pueda INYECTAR un aviso y ejercer el camino REAL:
     // NOTICES.push(...) → limpiar cfg.films → loadFestival() → el sellado del
     // loader. Era la única ruta crítica sin test: se verificaba a mano.
-    NOTICES,
+    NOTICES, searchQuery, submitAuthEmail, submitOTP,   // los tres últimos: page.evaluate de auth/search.spec
     // _applyCloudRow: la puerta por donde entra el plan desde la nube — expuesta
     // para que la suite pueda ejercer su normalización contra el catálogo
     // (syncScheduleWithCatalog) sin montar Supabase. Solo tests.

@@ -23,6 +23,7 @@ import glob, json, os, re, sys, unicodedata
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DEUDA = os.path.join(REPO, 'pipeline', 'preonboarding-deuda.json')
+sys.path.insert(0, os.path.join(REPO, 'pipeline'))
 
 
 def plano(t):
@@ -85,6 +86,37 @@ def medir(raiz=REPO):
     return out
 
 
+def medir_posibles(raiz=REPO):
+    """{fid: [(título, festival, título publicado, motivo)]}: cruces dudosos sin
+    decidir en los festivales por salir (lib.posibles_cruces). Se decide en
+    <fid>-correcciones.json con `misma_obra` o `no_heredar`, por obra. Si la ficha
+    TMDB coincide ya no hay duda. Sin deuda: 5 nov 2026 no había ninguno por salir."""
+    import lib
+    out = {}
+    for p in sorted(glob.glob(os.path.join(raiz, 'festivals', 'staging', '*-catalogo.json'))):
+        fid = os.path.basename(p)[:-len('-catalogo.json')]
+        if (not os.path.exists(os.path.join(raiz, 'pipeline', f'{fid}.plan.json'))
+                or _publicadas(fid, raiz) is not None):
+            continue
+        cp = os.path.join(raiz, 'festivals', 'staging', f'{fid}-correcciones.json')
+        corr = json.load(open(cp, encoding='utf-8')) if os.path.exists(cp) else {}
+        decididas = {*corr.get('misma_obra', {}), *corr.get('no_heredar', {})}
+        ep = os.path.join(raiz, 'festivals', 'staging', f'{fid}-catalogo-enriquecido.json')
+        enr = json.load(open(ep, encoding='utf-8')).get('obras', []) if os.path.exists(ep) else []
+        ficha = {x.get('titulo'): x.get('tmdb_id') for x in enr}
+        idx = lib.obras_publicadas_estricto(raiz, excluir=(fid,))
+        for o in json.load(open(p, encoding='utf-8')).get('obras') or []:
+            t = o.get('titulo')
+            if not t or t in decididas:
+                continue
+            for fest, pub, motivo in lib.posibles_cruces(o, idx):
+                filas = idx.get(lib.norm(pub), [])
+                if ficha.get(t) and any(f == fest and x.get('tmdb_id') == ficha[t] for f, x in filas):
+                    continue
+                out.setdefault(fid, []).append((t, fest, pub, motivo))
+    return out
+
+
 def comparar(medido, deuda):
     """→ (sobre, bajo): festivales por encima de su deuda / que pueden bajarla."""
     sobre = {f: len(v) for f, v in medido.items() if len(v) > deuda.get(f, 0)}
@@ -103,3 +135,6 @@ if __name__ == '__main__':
     else:
         for f, v in m.items():
             print(f'{f:24} {len(v):3} sin afiche ni porqué (deuda {d.get(f, 0)})' + (f' — p. ej. {v[:3]}' if v else ''))
+        for f, v in medir_posibles().items():
+            for t, fest, pub, motivo in v:
+                print(f'{f:24} ¿misma obra? «{t}» / «{pub}» ({fest}): {motivo}')

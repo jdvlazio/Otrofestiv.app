@@ -1,6 +1,6 @@
 {
  "id": "w_R4HYZHZ2WVRG",
- "titulo_original": "En Tierra",
+ "titulo_original": "En tierra",
  "anio": 2025,
  "paises": [
   "CO",
@@ -10,6 +10,10 @@
   "Simón Uribe"
  ],
  "aliases": [
+  {
+   "titulo": "En Tierra",
+   "tipo": "festival"
+  },
   {
    "titulo": "Grounded",
    "idioma": "en",
@@ -24,7 +28,7 @@
   "Documental"
  ],
  "afiche": {
-  "archivo": "/assets/ficma/en-tierra.jpg",
+  "archivo": "/assets/fecibac-2026/en-tierra.jpg",
   "veredicto": "oficial"
  },
  "xref": {
@@ -38,6 +42,7 @@
   }
  ],
  "presentaciones": [
+  "fecibac-2026",
   "ficma-2026"
  ]
 }

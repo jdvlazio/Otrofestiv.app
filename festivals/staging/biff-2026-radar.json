@@ -1,10 +1,10 @@
 {
  "_provenance": {
   "fuente": "issue de radar #985 — https://github.com/jdvlazio/Otrofestiv.app/issues/985",
-  "capturado": "2026-09-29",
+  "capturado": "2026-10-27",
   "titulo": "RADAR: BIFF 12 — Bogota International Film Festival, Bogotá, 8–14 OCT 2026",
   "estado": "OPEN",
-  "comentarios": 2
+  "comentarios": 5
  },
  "issue": 985,
  "titulo": "RADAR: BIFF 12 — Bogota International Film Festival, Bogotá, 8–14 OCT 2026",
@@ -18,6 +18,18 @@
   {
    "fecha": "2026-09-29",
    "cuerpo": "Registro: el issue no tenía labels, así que la corrida del radar no lo veía. Le pongo `radar` + `radar:en-onboarding` (PR [#987](https://github.com/jdvlazio/Otrofestiv.app/pull/987) abierto). ROJO a **9 días**.\n\nRevisión de hoy, 29 sep: **sin cambios.** El PDF que sirve biff.co tiene el mismo sha256 (`8d340652…`) que el de `fuentes/biff-2026/` con el que se montó; el servidor lo marca `Last-Modified: 29 sep 00:10 GMT`. En IG @biffcol, los posts nuevos son carruseles por sección (Clases de Lucha, Fantasmas de Pasado); la bio sigue igual: «8 al 14 de octubre de 2026»."
+  },
+  {
+   "fecha": "2026-09-29",
+   "cuerpo": "ESTADO: 29 sep 2026 · **PUBLICADO** ([#987](https://github.com/jdvlazio/Otrofestiv.app/pull/987), commit `452a8a6c`, verificado en otrofestiv.app).\n\n153 funciones, 61 obras, 11 sedes. Pasó la triple lectura: prosa del PDF, sus dos grillas y biff.co, cruzadas contra el build. Decisiones de Juan:\n- Espíritu joven como Competencia (Premio de la Juventud)\n- Clausura: Cobarde, mié 14, 19:30, Sala Capital\n- La gala de Fjord, cerrada al público (`by_invitation`, #988)\n\n`radar:en-onboarding` → `radar:publicado`."
+  },
+  {
+   "fecha": "2026-10-12",
+   "cuerpo": "**Vigía 12 oct** — 1 contradicción para HOY (lunes 12)\n\n- **«Minotauro», Cinemateca de Bogotá, Sala Capital.** La lámina «Día 5» de @biffcol (https://www.instagram.com/p/DeZQ5ISAbgv/, 12 oct 07:45, lámina 2) dice **14:00**. La app dice **14:30**, igual que el PDF oficial (pág. 48, sin cambios desde el 29 sep) y que la copia de la cartelera de la Cinemateca. El resto de la grilla del día (Cinemateca, Avenida Chile, CityU 17:00, Slave Bird 17:00 y la charla de las 11:00) coincide con la app.\n- **Acción sugerida:** confirmar con la Cinemateca o tuboleta antes de las 14:00. Si vale la lámina, pasar la función a las 14:00.\n"
+  },
+  {
+   "fecha": "2026-10-19",
+   "cuerpo": "**Vigía 19 oct 2026 (13:00) — BIFF: palmarés (parcial) en IG @biffcol, leído sin sesión**\n\n- **Premio del Público El Espectador a la Mejor Película:** **La Bola Negra** (Javier Calvo, Javier Ambrossi) — https://www.instagram.com/p/Deh0rYttl90/\n- **Premio de la Juventud** (lo dan los participantes del taller de Crítica Cinematográfica del BIFF Bang!): **La Gradiva** (Marine Atlan) — https://www.instagram.com/p/Defe4hqNm-e/\n- Títulos tal como están en nuestro JSON. No encontré otros premios en el perfil ni en biff.co. El post del BIFF Bang! (DekXiZPlJfd) son ganadores de industria/formación, no de obras.\n"
   }
  ]
 }

@@ -91,7 +91,7 @@ test('_renderSplashRailHTML — activo marcado, keyArt + onerror', () => {
   assert.match(html, /class="splash-card[^"]*\bon\b/, 'activo lleva clase on');
   assert.ok(html.includes('/assets/keyart/tercertiempo2026-v2.jpg'), 'usa keyArt');
   // toda <img> degrada si el afiche 404ea (§10.2)
-  assert.ok(html.includes('onerror="this.remove()"'), 'la img de keyArt lleva onerror');
+  assert.ok(html.includes('data-err="quitar"'), 'la img de keyArt degrada (data-err, sin onerror inline — CSP)');
 });
 
 // keyArtPos sigue soportado (custom property --kap, no inline style raw:
@@ -173,7 +173,7 @@ test('_renderFestivalSelectorHTML — muro de afiches con la card del splash', (
   assert.ok(html.includes('data-action="loadFestival"'), 'en el sheet la card carga directo');
   assert.ok(!html.includes('data-action="selectSplashFest"'), 'no usa la acción del splash');
   assert.ok(html.includes('/assets/keyart/olhar2026-v2.jpg'), 'usa el keyArt del festival');
-  assert.ok((html.match(/onerror="this.remove\(\)"/g) || []).length >= visibles, 'cada img degrada (§10.2)');
+  assert.ok((html.match(/data-err="quitar"/g) || []).length >= visibles, 'cada img degrada (§10.2)');
 });
 
 test('_renderFestivalSelectorHTML — fallback tipográfico sin keyArt', () => {

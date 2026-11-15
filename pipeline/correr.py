@@ -23,6 +23,7 @@ Uso:
     python3 pipeline/correr.py <fest-id> --lista    # ver pasos e inventario
     python3 pipeline/correr.py <fest-id> --paso 3   # solo el paso 3
     python3 pipeline/correr.py <fest-id> --bajar    # baja las fuentes vivas y corre el plan
+    python3 pipeline/correr.py <fest-id> --desde 6  # del paso 6 al final (lo usa corto.py)
 
 Fuentes vivas (20 oct 2026, pipeline/fuentes_vivas.py): si el plan declara
 `fuentes_vivas` y el festival está vigente, una fuente sin bajar en 24 h FRENA
@@ -85,7 +86,9 @@ def main():
             fuentes_vivas.bajar(fid)
         except fuentes_vivas.FuenteMala as e:
             sys.exit(f'✗ {e}')
-    _v = fuentes_vivas.frenar_si_vencidas(fid, f'python3 pipeline/correr.py {fid} --bajar')
+    desde = int(sys.argv[sys.argv.index('--desde') + 1]) if '--desde' in sys.argv else None
+    # --desde no vuelve a leer las fuentes (eso es el camino largo): no las exige frescas
+    _v = None if desde else fuentes_vivas.frenar_si_vencidas(fid, f'python3 pipeline/correr.py {fid} --bajar')
     if _v and '--fuentes-viejas' not in sys.argv:
         sys.exit(_v + f'\n  (o --fuentes-viejas, a mano, si de verdad querés armar con lo que hay)')
     if _v:
@@ -93,7 +96,7 @@ def main():
 
     solo = int(sys.argv[sys.argv.index('--paso') + 1]) if '--paso' in sys.argv else None
     for i, p in enumerate(pasos, 1):
-        if solo and i != solo:
+        if (solo and i != solo) or (desde and i < desde):
             continue
         print(f'\n─── paso {i}/{len(pasos)}: {p["cmd"]}')
         _b = f'{REPO}/festivals/staging/{fid}-build.json'

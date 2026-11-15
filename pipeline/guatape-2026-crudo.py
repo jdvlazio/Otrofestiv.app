@@ -180,7 +180,8 @@ CREDITOS = {
                                    'aliado del festival (@cinemalunafilms en el pie de la programación)'},
     # LAS DE FICHA EN TMDB (-correcciones → fichas): TMDB verifica la dirección
     # pero no la publica —la dirección sale de la fuente—, y la lámina no la trae
-    'Basta Mamá': {'director': 'Flora Martínez', '_fuente': 'https://www.themoviedb.org/movie/1627217'},
+    'Basta Mamá': {'director': 'Flora Martínez', 'pais': 'Colombia', '_fuente': 'https://www.themoviedb.org/movie/1627217',
+                   '_pais_de': 'estreno en salas de Colombia, 12 feb 2026, elenco colombiano (infobae.com, 4 feb 2026); TMDB dice US sin país de producción: error de la ficha'},
     'Horizonte': {'director': 'César Augusto Acevedo', '_fuente': 'https://www.themoviedb.org/movie/1265716'},
     'Culebra negra': {'director': 'Aurélien Vernhes-Lermusiaux', '_fuente': 'https://www.themoviedb.org/movie/1018962'},
     'Sobre las olas': {'director': 'Horacio Alcalá', '_fuente': 'https://www.themoviedb.org/movie/1478001'},

@@ -1,0 +1,104 @@
+{
+ "_provenance": {
+  "fuente": "Instagram, post del 6 nov (https://www.instagram.com/p/DfaYGhzoxaz/)",
+  "capturado": "2026-11-07",
+  "metodo": "una afirmación por casilla, con su fuente (docs/FUNCION.md)"
+ },
+ "afirmaciones": [
+  {
+   "ancla": {
+    "sede": "Colegio agrícola - Toro",
+    "dia": "2026-11-13",
+    "hora": "15:00"
+   },
+   "fuente": {
+    "tipo": "festival-ig",
+    "url": "https://www.instagram.com/p/DfaYGhzoxaz/",
+    "fecha": "2026-11-06"
+   },
+   "casilla": "sala",
+   "valor": "Salón audiovisuales",
+   "evidencia": "Lámina 3: «Taller Encuentros en el archivo», Colegio agrícola, Salón audiovisuales; mismo taller por sede y días"
+  },
+  {
+   "ancla": {
+    "sede": "Colegio agrícola - Toro",
+    "dia": "2026-11-14",
+    "hora": "09:00"
+   },
+   "fuente": {
+    "tipo": "festival-ig",
+    "url": "https://www.instagram.com/p/DfaYGhzoxaz/",
+    "fecha": "2026-11-06"
+   },
+   "casilla": "sala",
+   "valor": "Salón audiovisuales",
+   "evidencia": "Lámina 3: «Taller Encuentros en el archivo», Colegio agrícola, Salón audiovisuales; mismo taller por sede y días"
+  },
+  {
+   "ancla": {
+    "sede": "Por definir - Toro",
+    "dia": "2026-11-14",
+    "hora": "23:00"
+   },
+   "funcion": "f_80b4761d99",
+   "fuente": {
+    "tipo": "festival-ig",
+    "url": "https://www.instagram.com/p/Dfu8yxaI1ws/",
+    "fecha": "2026-11-14"
+   },
+   "casilla": "venue",
+   "valor": "Coliseo Institución Educativa Fray José Joaquín Escobar - Toro",
+   "contra": "Por definir - Toro",
+   "evidencia": "Lámina 2 (02.jpg) de «Día 5 · Programación»: «CINETORO EXPANDIDO MUESTRA DE RESULTADOS TALLERES NICOLE ANTEBI», Lugar: Coliseo: Institución Educativa Fray José Joaquín Escobar, 11:00 Pm a 12:00 Pm; las tres lecturas (Vision, Tesseract, a ojo) coinciden"
+  },
+  {
+   "ancla": {
+    "sede": "Por definir - Toro",
+    "dia": "2026-11-14",
+    "hora": "22:00"
+   },
+   "funcion": "f_77ad51bb5e",
+   "fuente": {
+    "tipo": "festival-ig",
+    "url": "https://www.instagram.com/p/Dfu8yxaI1ws/",
+    "fecha": "2026-11-14"
+   },
+   "casilla": "venue",
+   "valor": "Cine Teatro - Toro",
+   "contra": "Por definir - Toro",
+   "evidencia": "Lámina 02: «CINETORO EXPANDIDO Mapping geografías en transformación por el colectivo AZMA · Lugar: Cine Teatro · 10:00 Pm a 12:00 Pm» (a ojo; manda la lámina sobre el pie)"
+  },
+  {
+   "ancla": {
+    "sede": "Coliseo Institución Educativa Fray José Joaquín Escobar - Toro",
+    "dia": "2026-11-14",
+    "hora": "18:30"
+   },
+   "fuente": {
+    "tipo": "festival-ig",
+    "url": "https://www.instagram.com/p/Dfu8yxaI1ws/",
+    "fecha": "2026-11-14"
+   },
+   "casilla": "existe",
+   "valor": {
+    "title": "Resultados Taller Nicole Antebi - Moviendo montañas",
+    "type": "event",
+    "event_kind": "taller",
+    "day": "2026-11-14",
+    "time": "18:30",
+    "duration": "90 min",
+    "venue": "Coliseo Institución Educativa Fray José Joaquín Escobar - Toro",
+    "is_free": true,
+    "_src": {
+     "url": "https://www.instagram.com/p/Dfu8yxaI1ws/",
+     "date": "2026-11-14",
+     "lamina": 1
+    },
+    "section": "🎓 Programación Académica"
+   },
+   "evidencia": "Lámina 01: «RESULTADOS TALLER NICOLE ANTEBI - Moviendo montañas · programacion academica · Lugar: Coliseo: Institución Educativa Fray José Joaquín Escobar · Hora: 6:30 Pm a 8:00 Pm» (a ojo)",
+   "funcion": "f_9e6446dd35"
+  }
+ ]
+}

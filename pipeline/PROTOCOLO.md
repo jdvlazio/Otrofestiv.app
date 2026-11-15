@@ -19,6 +19,14 @@ FICMA (90 funciones desde un PDF de imágenes). Todo lo que dice aquí se pagó.
 > guardián lee. Doce vueltas para encontrarlos uno a uno. El camino corto es
 > `python3 pipeline/correr.py <id>`; todo lo demás es el camino largo.
 
+> **Un cambio chico es UN comando: `python3 pipeline/corto.py <id>`** (28 oct 2026).
+> Horas, salas, sedes o duraciones de unas pocas funciones: se escribe la
+> afirmación y `corto.py` rearma desde el primer paso que la lee, muestra el
+> diff función por función y publica con los mismos guardianes. Segundos, no
+> una tarde. `correr.py` completo es solo para cuando la fuente cambió en muchos
+> puntos — nunca «por las dudas» (Miradas, 28 oct: unas horas → el pipeline
+> entero). Y un PR de datos no toca `validate.py`: el candado lo frena en el Mac.
+
 ---
 
 ## 0 · Lo primero es el issue de radar
@@ -45,6 +53,13 @@ mismo error. El número de issue se declara en el plan (`festival.radar`), porqu
 las decisiones viven en el plan y no en la memoria de quien monta.
 
 ## 0·bis · Instagram se LEE, y la mitad del dato está dentro de la imagen
+
+**Qué publicó una cuenta: `python3 pipeline/ig_posts.py <cuenta>`. Nunca Apify
+directo.** El vigía ya guarda cada post en `fuentes/ig-vigia/` y ese comando lo
+lee gratis (colaborativos incluidos). `--traer` pide a Apify SOLO lo posterior a
+la última consulta y lo suma a la misma memoria. Llamar a Apify a mano vuelve a
+bajar lo ya guardado: del 21 al 25 oct 2026 eso se comió más de la mitad del plan
+gratis (US$5/mes). Las láminas se siguen leyendo con `ig-lecturas.py`.
 
 Es la fuente donde más festivales publican antes que en su web, y la que peor se
 extrae si uno solo mira el pie. Tres hechos medidos en #NarrarElFuturo (16 sep
@@ -129,7 +144,22 @@ corrige publicando de nuevo: el barrido se repite durante el festival.
 
 ## 2 · El proceso, paso a paso
 
-### Paso 0 · Fuentes a su carpeta
+### Paso 0 · Inventario de TODO lo que el festival publicó (12 nov 2026)
+
+Antes de transcribir nada: `python3 pipeline/fuentes_descubrir.py <fid> --raiz web=… --raiz bio=…`.
+Las raíces se sacan del perfil de Instagram SIN sesión: la web y **cada link de la
+bio** (Linktree, Drive, formulario, FilmFreeway…). Si no hay web o no hay bio,
+`--raiz _sin_web="porqué"` / `_sin_bio="porqué"`. El comando recorre la web y la
+bio (2 saltos) y anota cada PDF, formulario, Drive, imagen y página de programa en
+`festivals/staging/<fid>-fuentes.json`. **Cada fuente se abre y se marca**:
+`--marcar <url|prefijo> usada|descartada "porqué"`. Un formulario de inscripción
+de una actividad se carga como `registration_url` (afirmación). Por qué existe:
+Villa de Leyva tenía su programa completo en un PDF de la home y FICFUSA nueve
+formularios en el Linktree de la bio; los dos se publicaron incompletos porque
+mirábamos lo conocido, no lo publicado. `[inventario-fuentes]` frena si queda
+algo sin revisar; `publicar.py` frena si el recorrido tiene más de 24 h.
+
+### Paso 0·b · Fuentes a su carpeta
 
 Todo original va a **`fuentes/<fest-id>/`** (gitignored — decenas de MB, y el
 repo sirve GitHub Pages). El escritorio es de TRÁNSITO: nada de trabajo vive
@@ -212,6 +242,8 @@ Correcciones en `festivals/staging/<id>-correcciones.json`:
 `titulo_oficial` (el OCR/programa escriben mal → se corrige contra el afiche)
 vs `alias` (el festival rebautizó → se busca por el nombre de distribución,
 se conserva el del festival).
+
+**Los cruces dudosos se deciden** (`[cruce-sin-decidir]`, 5 nov 2026): `python3 pipeline/preonboarding.py` los lista; cada uno se resuelve con `misma_obra` {título: {festival, titulo, _por_que}}, que hereda los datos, o con `no_heredar` en `<fid>-correcciones.json`.
 
 **El pre-onboarding se cierra completo** (`[preonboarding-completo]`, 18 oct 2026): un festival que todavía no salió y ya tiene `<fid>-catalogo.json` no pasa los validadores si alguna obra no tiene afiche ni su porqué en `sin_afiche`. Medir con `python3 pipeline/preonboarding.py`.
 
@@ -529,6 +561,7 @@ una hipótesis sobre la fuente, y se comprueba contra ella.
 
 ## 3 · Checklist de publicación
 
+- [ ] **Inventario de fuentes** (`<fid>-fuentes.json`): web + bio de IG como raíces, recorrido de ≤ 24 h, NADA `sin-revisar`
 - [ ] Fuentes en `fuentes/<id>/` · derivados en staging con `capturado`
 - [ ] Tabla de sedes canónica hecha · 0 salas dentro de nombres de sede
 - [ ] Slots compartidos DECIDIDOS (programa vs anclaje vs separadas)

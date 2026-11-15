@@ -13,6 +13,10 @@
  ],
  "aliases": [
   {
+   "titulo": "El deshielo",
+   "tipo": "festival"
+  },
+  {
    "titulo": "The Meltdown",
    "idioma": "en",
    "tipo": "traduccion"
@@ -23,7 +27,8 @@
   "en": "1992, Chile. Inés parents are away on business and she is left in the care of her grandparents, who own a hotel at the foot of a ski resort. Inés befriends Hanna, a European skier who has come to train in Chile. One night, Hanna disappears. The process of her search will unveil a series of hidden situations."
  },
  "generos": [
-  "Drama"
+  "Drama",
+  "Ficción"
  ],
  "afiche": {
   "archivo": "/assets/biff-2026/el-deshielo.jpg",
@@ -40,6 +45,7 @@
   }
  ],
  "presentaciones": [
-  "biff-2026"
+  "biff-2026",
+  "miradas-2026"
  ]
 }

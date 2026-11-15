@@ -1,6 +1,6 @@
 {
  "id": "w_R4JJ9W6S4FCQ",
- "titulo_original": "El espejo de la vida",
+ "titulo_original": "El Espejo de la Vida",
  "anio": 2025,
  "paises": [
   "CO"
@@ -8,11 +8,17 @@
  "directores": [
   "Simón Sánchez Plazas"
  ],
+ "aliases": [
+  {
+   "titulo": "El espejo de la vida",
+   "tipo": "festival"
+  }
+ ],
  "sinopsis": {
   "es": "En una noche oscura, un niño sigue una señal que lo lleva a una misteriosa máquina expendedora de dulces escondida en un bar prohibido. Para alcanzarla, deberá armarse de valor y afrontar desafíos que pondrán a prueba su ingenio, valentía y determinación."
  },
  "afiche": {
-  "archivo": "/assets/filcmar-2026/el-espejo-de-la-vida.jpg",
+  "archivo": "/assets/festicinerio-2026/el-espejo-de-la-vida.jpg",
   "veredicto": "oficial"
  },
  "xref": {
@@ -26,6 +32,7 @@
   }
  ],
  "presentaciones": [
+  "festicinerio-2026",
   "filcmar-2026"
  ]
 }

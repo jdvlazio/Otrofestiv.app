@@ -37,7 +37,11 @@ const DOMAIN_SRC = ['time', 'film', 'schedule', 'festival']
 function schedPureFns() {
   const m = CALC.match(/_SCHED_PURE_FNS\s*=\s*\[([\s\S]*?)\]/);
   assert.ok(m, '_SCHED_PURE_FNS no encontrada en calc.js');
-  return [...m[1].matchAll(/'([^']+)'/g)].map(x => x[1]);
+  // referencias desde el 26 oct (sin eval, CSP); antes, nombres entre comillas
+  const sinComent = m[1].replace(/\/\*[\s\S]*?\*\/|\/\/[^\n]*/g, '');
+  const names = [...sinComent.matchAll(/[A-Za-z_$][\w$]*/g)].map(x => x[0]);
+  assert.ok(names.length >= 10, `_SCHED_PURE_FNS leída con ${names.length} nombres: el test no la entiende`);
+  return names;
 }
 
 // Extrae un bloque template-literal `const NAME=\`...\`;` de calc.js.

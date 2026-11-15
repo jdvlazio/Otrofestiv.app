@@ -1,6 +1,6 @@
 {
  "id": "w_R4R2NT9HKQCQ",
- "titulo_original": "a body without a horse?",
+ "titulo_original": "Um corpo sem cavalo?",
  "anio": 2025,
  "paises": [
   "BR"
@@ -8,15 +8,27 @@
  "directores": [
   "Lara Fuke"
  ],
+ "aliases": [
+  {
+   "titulo": "a body without a horse?",
+   "tipo": "festival"
+  },
+  {
+   "titulo": "A Body without a Horse?",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
  "sinopsis": {
-  "es": "Un cuerpo intenta reconocerse a través de aquello que le falta. Mientras mide sus contornos, se fragmenta y vuelve a componerse, la ausencia de un caballo abre una pregunta sobre el deseo, la memoria y la identidad.",
+  "es": "En un intento por identificarse, un cuerpo sin caballo se desplaza a través de sus ausencias y vacíos.",
   "en": "Trying to understand what a body without a horse is by seeing what it’s capable of, the film shows a very present absence. With minimalist and handcrafted visuals, we follow the body as it performs a series of actions, yet remaining horseless. Playing with choreographic movements, language and its metaphors, the film explores how absence can shape the way we move, desire, forget and remember."
  },
  "generos": [
+  "Fantasía",
   "Experimental y Animación"
  ],
  "afiche": {
-  "archivo": "/assets/villadelcine-2026/a-body-without-a-horse.jpg",
+  "archivo": "/assets/cinetoro-2026/um-corpo-sem-cavalo.jpg",
   "veredicto": "oficial"
  },
  "xref": {
@@ -30,6 +42,7 @@
   }
  ],
  "presentaciones": [
+  "cinetoro-2026",
   "villadelcine-2026"
  ]
 }

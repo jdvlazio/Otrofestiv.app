@@ -61,7 +61,8 @@ def heredar(d, fid, obs, key=None, sin=()):
                     continue
                 if campo == 'synopsis_es' and (o.get('synopsis') or '').strip():
                     continue
-                v = herencia.valor(w, campo, fid, o.get('title') or '', o.get('tmdb_id'), key)
+                v = herencia.valor(w, campo, fid, o.get('title') or '', o.get('tmdb_id'), key,
+                                   obra={'director': o.get('director'), 'anio': o.get('year')})
                 if not v:
                     continue
                 o[pub] = f'{v} min' if pub == 'duration' else v

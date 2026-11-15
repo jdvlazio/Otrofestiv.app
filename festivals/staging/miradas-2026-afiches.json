@@ -1,0 +1,29 @@
+{
+ "_provenance": {
+  "fuente": "afiches buscados fuera de TMDB y MIRADOS uno por uno",
+  "capturado": "2026-10-27",
+  "regla": "solo donde TMDB y lo ya publicado no tienen afiche; el título va en la imagen y la dirección en el afiche o en su página oficial",
+  "stills": "editorial: true = still 16:9 oficial (sin afiche 2:3) enmarcado por nosotros (docs/POSTERS.md). Los fotogramas del PDF de las otras 14 obras quedan en fuentes/miradas-2026/stills-pdf/ (250 px, bajo [poster-mirado]) hasta que lleguen en alta; 27 oct 2026"
+ },
+ "afiches": {
+  "Luis Antonio": {
+   "archivo": "fuentes/miradas-2026/afiches/luis-antonio-cinecorto.jpg",
+   "fuente": "https://cinecorto.co/luis-antonio/ (og:image Poster_LuisAntonio.jpg) — afiche con título y «un corto de Juan José Arias Gil»"
+  },
+  "El león": {
+   "archivo": "fuentes/miradas-2026/afiches/el-leon-tmdb-es.jpg",
+   "fuente": "TMDB 1616865, póster es /5aYMbnZEGwKp2QnypVZBFtspgam.jpg — «EL LEÓN · una película de Diana Bustamante» (Cinéma du Réel 2026)",
+   "sobre_tmdb": true,
+   "_por_que": "la imagen principal de TMDB (/5an6XZNE07yS7ahXEMZ78htlORg.jpg) es un fotograma (auditoría 27 oct 2026)"
+  },
+  "Chapecó, el último sobreviviente: nace una hermandad": {
+   "archivo": "fuentes/miradas-2026/afiches/chapeco-ig-larocafilms.jpg",
+   "fuente": "https://www.instagram.com/p/DeQsaLSlXjU/ (lámina 1, @larocafilms, la productora, 9 oct 2026) — afiche con «CHAPECÓ · EL ÚLTIMO SOBREVIVIENTE · NACE UNA HERMANDAD», «EDISON VANEGAS ALVAREZ» y el laurel «MUESTRA OFICIAL MIRADAS 2026»; OCR 27 oct 2026"
+  },
+  "De: Saúl": {
+   "archivo": "assets/jardin-2026/de-saul.jpg",
+   "editorial": true,
+   "fuente": "still oficial ya publicado en Jardín 2026 (https://festicinejardin.com/wp-content/uploads/2026/09/De-saul-scaled.jpg, 896×504, 16:9); el PDF de Miradas (pág. 14) trae otro fotograma a 250×136"
+  }
+ }
+}

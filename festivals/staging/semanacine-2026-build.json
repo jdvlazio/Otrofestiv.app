@@ -1,0 +1,620 @@
+{
+ "_etapa": "build generado por pipeline/ensamblar.py",
+ "_provenance": {
+  "fuente": "Lámina «Programación 2026» de @semanadelcinecolombiano (IG p/DfKgpBVpyUt, 31 oct 2026)",
+  "capturado": "2026-11-03",
+  "ensamblador": "pipeline/ensamblar.py"
+ },
+ "_por_que_secciones": "Sección = la palabra que la lámina de programación pone a cada actividad (decisión de Juan, 2 nov 2026).",
+ "name": "Semana del Cine Colombiano",
+ "displayName": "Semana del Cine Colombiano",
+ "fullName": "Quinta Semana del Cine Colombiano",
+ "shortName": "SEMANA CINE COL",
+ "tagline": "Muestra de Cine Colombiano en Cali",
+ "city": "Cali",
+ "country": "CO",
+ "dates": "3–9 NOV",
+ "dates_en": "NOV 3–9",
+ "year": 2026,
+ "timezoneOffset": "-05:00",
+ "storageKey": "semanacine2026_",
+ "festivalStartStr": "2026-11-03T00:00:00",
+ "festivalEndStr": "2026-11-09T23:59:00",
+ "sharedSlotIsOneScreening": false,
+ "dias_vacios": [
+  "2026-11-07",
+  "2026-11-08"
+ ],
+ "_por_que_acceso": "Sin `ticketing_model`: ninguna pieza anuncia pago. El acceso va en `_acceso` del crudo.",
+ "_fuentes_versionadas": {},
+ "prioLimit": 4,
+ "dias": [
+  "2026-11-03",
+  "2026-11-04",
+  "2026-11-05",
+  "2026-11-06",
+  "2026-11-07",
+  "2026-11-08",
+  "2026-11-09"
+ ],
+ "festivalDates": {
+  "2026-11-03": "2026-11-03",
+  "2026-11-04": "2026-11-04",
+  "2026-11-05": "2026-11-05",
+  "2026-11-06": "2026-11-06",
+  "2026-11-07": "2026-11-07",
+  "2026-11-08": "2026-11-08",
+  "2026-11-09": "2026-11-09"
+ },
+ "days": [
+  {
+   "k": "2026-11-03",
+   "d": 3,
+   "lbl": "MAR"
+  },
+  {
+   "k": "2026-11-04",
+   "d": 4,
+   "lbl": "MIÉ"
+  },
+  {
+   "k": "2026-11-05",
+   "d": 5,
+   "lbl": "JUE"
+  },
+  {
+   "k": "2026-11-06",
+   "d": 6,
+   "lbl": "VIE"
+  },
+  {
+   "k": "2026-11-07",
+   "d": 7,
+   "lbl": "SÁB"
+  },
+  {
+   "k": "2026-11-08",
+   "d": 8,
+   "lbl": "DOM"
+  },
+  {
+   "k": "2026-11-09",
+   "d": 9,
+   "lbl": "LUN"
+  }
+ ],
+ "dayKeys": [
+  "2026-11-03",
+  "2026-11-04",
+  "2026-11-05",
+  "2026-11-06",
+  "2026-11-07",
+  "2026-11-08",
+  "2026-11-09"
+ ],
+ "dayShort": {
+  "2026-11-03": "MAR 3",
+  "2026-11-04": "MIÉ 4",
+  "2026-11-05": "JUE 5",
+  "2026-11-06": "VIE 6",
+  "2026-11-07": "SÁB 7",
+  "2026-11-08": "DOM 8",
+  "2026-11-09": "LUN 9"
+ },
+ "dayShort_en": {
+  "2026-11-03": "TUE 3",
+  "2026-11-04": "WED 4",
+  "2026-11-05": "THU 5",
+  "2026-11-06": "FRI 6",
+  "2026-11-07": "SAT 7",
+  "2026-11-08": "SUN 8",
+  "2026-11-09": "MON 9"
+ },
+ "dayLong": {
+  "2026-11-03": "Martes 3 de noviembre",
+  "2026-11-04": "Miércoles 4 de noviembre",
+  "2026-11-05": "Jueves 5 de noviembre",
+  "2026-11-06": "Viernes 6 de noviembre",
+  "2026-11-07": "Sábado 7 de noviembre",
+  "2026-11-08": "Domingo 8 de noviembre",
+  "2026-11-09": "Lunes 9 de noviembre"
+ },
+ "_acceso": {
+  "estado": "Entrada libre",
+  "revisado": "2026-11-02",
+  "fuentes": [
+   "lámina de programación",
+   "post de El Titán (1 nov)",
+   "El País, 29 oct"
+  ],
+  "_por_que": "Ninguna fuente anuncia boletería; El País: «eventos gratuitos». Regla de Juan: sin aviso de pago es gratis."
+ },
+ "sections": {
+  "💬 Conversatorio": {
+   "en": "Talk",
+   "archetype": "Charlas / Industria",
+   "order": 1
+  },
+  "🎬 Película": {
+   "en": "Film",
+   "archetype": "Muestra / País",
+   "order": 2
+  },
+  "🌌 Cine Bajo las Estrellas": {
+   "en": "Cinema Under the Stars",
+   "archetype": "Especiales / Eventos",
+   "order": 3
+  },
+  "🎞️ Proyección de Cortos Locales": {
+   "en": "Local Short Films",
+   "archetype": "Muestra / País",
+   "order": 4
+  }
+ },
+ "venues": {
+  "Acajel - Cali": {
+   "short": "Acajel",
+   "city": "Cali",
+   "n": 1,
+   "_prec": "manual",
+   "lat": 3.448634,
+   "lng": -76.534318,
+   "address": "Cra. 8 #8-17, piso 4, barrio Santa Rosa, Cali",
+   "_match": "Google Maps, la dirección de la lámina (Cra. 8 #8-17), 2 nov 2026. La sede no aparece por nombre en Maps."
+  },
+  "Universidad Santiago de Cali - Cali": {
+   "short": "Universidad Santiago de Cali",
+   "city": "Cali",
+   "lat": 3.4033961,
+   "lng": -76.5470651,
+   "_prec": "manual",
+   "_match": "Google Maps «Universidad Santiago de Cali» (2 nov 2026), campus Pampalinda (Auditorio T-Usaca, Auditorio 1101, Plazoleta de Los Sabios).",
+   "n": 8,
+   "address": "Calle 5 #62-00, Pampalinda, Cali"
+  },
+  "Teatrino Proyecto Oriente - Cali": {
+   "short": "Teatrino Proyecto Oriente",
+   "city": "Cali",
+   "n": 1,
+   "_prec": "manual",
+   "lat": 3.450566,
+   "lng": -76.510646,
+   "address": "Calle 34 #10-115, barrio El Troncal, Cali",
+   "_match": "Google Maps «PROYECTO ORIENTE» (2 nov 2026); dirección de la lámina y del post p/DfMs0KoJgLT."
+  },
+  "Casa Occio - Cali": {
+   "short": "Casa Occio",
+   "city": "Cali",
+   "lat": 3.4369511,
+   "lng": -76.5403896,
+   "_prec": "nominatim",
+   "_match": "Casa Occio, 2A-258, Carrera 24B, Miraflores, Comuna 19, Cali ciudad, Cali, Sur, Valle del ",
+   "n": 1
+  },
+  "Centro Cultural Brisas de Mayo - Cali": {
+   "short": "Centro Cultural Brisas de Mayo",
+   "city": "Cali",
+   "n": 1,
+   "_prec": "manual",
+   "lat": 3.4169915,
+   "lng": -76.5677396,
+   "address": "Diagonal 38 Oeste #54 E-35, Cali",
+   "_match": "Google Maps «Centro Cultural Brisas De Mayo» (3 nov 2026)."
+  }
+ },
+ "_avisos_id": [],
+ "films": [
+  {
+   "title": "Conversatorio \"Cine Colombiano: nuevo Café de Colombia\"",
+   "type": "event",
+   "section": "💬 Conversatorio",
+   "_ancla": [
+    "Acajel - Cali",
+    "2026-11-03",
+    "08:30"
+   ],
+   "day": "2026-11-03",
+   "time": "08:30",
+   "day_order": 0,
+   "venue": "Acajel - Cali",
+   "event_kind": "conversatorio",
+   "has_qa": false,
+   "_src": {
+    "url": "https://www.instagram.com/p/DfKgpBVpyUt/",
+    "date": "2026-10-31",
+    "tipo": "festival-ig",
+    "fila": "2026-11-03 08:30 · Conversatorio \"Cine Colombiano: nuevo Café de Colombia\""
+   },
+   "is_free": true,
+   "description": "Con Arturo Murgas (Semana del Cine Colombiano).",
+   "description_lang": "es",
+   "_fid": "f_a5dfc53ae1",
+   "id": "f_a5dfc53ae1",
+   "duration": "60 min",
+   "_conservado": [
+    "duration"
+   ],
+   "_duracion_corregida": "genérica de conversatorio (Juan, 2 nov 2026)"
+  },
+  {
+   "title": "Lejos, aquí",
+   "type": "film",
+   "section": "🎬 Película",
+   "director": "Ana Sofía Osorio Ruiz",
+   "country": "Colombia",
+   "flags": "🇨🇴",
+   "duration": "76 min",
+   "genre": "Drama",
+   "_ancla": [
+    "Universidad Santiago de Cali - Cali",
+    "2026-11-03",
+    "12:00"
+   ],
+   "day": "2026-11-03",
+   "time": "12:00",
+   "day_order": 0,
+   "venue": "Universidad Santiago de Cali - Cali",
+   "sala": "Auditorio T-Usaca",
+   "has_qa": true,
+   "poster": "/assets/semanacine-2026/lejos-aqui.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfKgpBVpyUt/",
+    "date": "2026-10-31",
+    "tipo": "festival-ig",
+    "fila": "2026-11-03 12:00 · Lejos, aquí"
+   },
+   "is_free": true,
+   "lbSlug": "lejos-aqui",
+   "tmdb_id": 1623557,
+   "synopsis_en": "Adrian (42) and Emma (38), two divorced parents, meet for the first time in fifteen years to honor the memory of Malena, their only daughter. Before she died, Malena wrote her parents a travel journal, which they must follow together, in each other's company. The trip will not only be a light that allows them to cope with their pain, but also an opportunity to listen to each other and forgive one another. To reconnect.",
+   "_fid": "f_530f789d10",
+   "id": "f_530f789d10"
+  },
+  {
+   "title": "Perro come perro",
+   "type": "film",
+   "section": "🌌 Cine Bajo las Estrellas",
+   "director": "Carlos Moreno",
+   "year": 2008,
+   "country": "Colombia",
+   "flags": "🇨🇴",
+   "duration": "101 min",
+   "genre": "Acción",
+   "_ancla": [
+    "Universidad Santiago de Cali - Cali",
+    "2026-11-03",
+    "18:00"
+   ],
+   "day": "2026-11-03",
+   "time": "18:00",
+   "day_order": 0,
+   "venue": "Universidad Santiago de Cali - Cali",
+   "sala": "Plazoleta de Los Sabios",
+   "has_qa": false,
+   "synopsis": "Sin que lo sepan, Víctor Peñaranda y Eusebio Benítez están condenados a muerte. Son dos ex-policías, ahora sicarios al servicio de una soterrada oficina de cobranzas de Cali. Ambos han sido citados para llevar a cabo un operativo del cual tienen pocos detalles. Se conocen compartiendo la habitación de un céntrico hotel, desde donde deben permanecer atentos y a la espera de instrucciones telefónicas. Ambos han llegado acatando una orden, pero ocultando sus culpas: Peñaranda guarda desde hace dos días una gruesa suma de dólares que escondió durante un turbio operativo de allanamiento. Benítez arrastra el lastre de un asesinato y calladamente sufre lo que parece ser un maleficio pues lo acosan horribles pesadillas y visiones con su víctima que lo van descomponiendo física y mentalmente.",
+   "synopsis_lang": "es",
+   "poster": "/assets/semanacine-2026/perro-come-perro.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfKgpBVpyUt/",
+    "date": "2026-10-31",
+    "tipo": "festival-ig",
+    "fila": "2026-11-03 18:00 · Perro come perro"
+   },
+   "is_free": true,
+   "lbSlug": "dog-eat-dog-2008",
+   "tmdb_id": 33558,
+   "synopsis_en": "In the crime world of Colombia, there is an unwritten code. When Víctor and Eusebio, two hoods who bungle a shake-down job, break that code, they unwittingly sign their own death sentence.",
+   "title_en": "Dog Eat Dog",
+   "_fid": "f_17329a2163",
+   "id": "f_17329a2163"
+  },
+  {
+   "title": "Conversatorio \"Experiencias y Vivencias en el Cine\"",
+   "type": "event",
+   "section": "💬 Conversatorio",
+   "_ancla": [
+    "Universidad Santiago de Cali - Cali",
+    "2026-11-04",
+    "09:00"
+   ],
+   "day": "2026-11-04",
+   "time": "09:00",
+   "day_order": 1,
+   "venue": "Universidad Santiago de Cali - Cali",
+   "sala": "Auditorio 1101",
+   "event_kind": "conversatorio",
+   "has_qa": false,
+   "_src": {
+    "url": "https://www.instagram.com/p/DfKgpBVpyUt/",
+    "date": "2026-10-31",
+    "tipo": "festival-ig",
+    "fila": "2026-11-04 09:00 · Conversatorio \"Experiencias y Vivencias en el Cine\""
+   },
+   "is_free": true,
+   "description": "Con Jhonny Hendrix (director).",
+   "description_lang": "es",
+   "_fid": "f_70ef845209",
+   "id": "f_70ef845209",
+   "duration": "60 min",
+   "_conservado": [
+    "duration"
+   ],
+   "_duracion_corregida": "genérica de conversatorio (Juan, 2 nov 2026)"
+  },
+  {
+   "title": "El Titán",
+   "type": "film",
+   "section": "🎬 Película",
+   "director": "Alexander Giraldo",
+   "year": 2024,
+   "country": "Colombia",
+   "flags": "🇨🇴",
+   "duration": "107 min",
+   "genre": "Documental",
+   "_ancla": [
+    "Teatrino Proyecto Oriente - Cali",
+    "2026-11-04",
+    "18:30"
+   ],
+   "day": "2026-11-04",
+   "time": "18:30",
+   "day_order": 1,
+   "venue": "Teatrino Proyecto Oriente - Cali",
+   "has_qa": true,
+   "synopsis": "Elkin Ramírez, el exponente más importante del rock colombiano, lideró Kraken durante 32 años. El último disco de la banda fue grabado mientras Elkin combatía un tumor cerebral. ¡Se vive una vez para ser eternamente libre!",
+   "synopsis_lang": "es",
+   "poster": "/assets/semanacine-2026/el-titan.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfKgpBVpyUt/",
+    "date": "2026-10-31",
+    "tipo": "festival-ig",
+    "fila": "2026-11-04 18:30 · El Titán"
+   },
+   "is_free": true,
+   "lbSlug": "el-titan",
+   "tmdb_id": 1270331,
+   "synopsis_en": "Elkin Ramírez, the most important figure in Colombian rock, led Kraken for 32 years. The band's final album was recorded while Elkin was fighting a brain tumor. You live once to be eternally free!",
+   "_fid": "f_121a270a92",
+   "id": "f_121a270a92"
+  },
+  {
+   "title": "Chocó",
+   "type": "film",
+   "section": "🎬 Película",
+   "director": "Jhonny Hendrix",
+   "year": 2012,
+   "country": "Colombia",
+   "flags": "🇨🇴",
+   "duration": "80 min",
+   "genre": "Drama",
+   "_ancla": [
+    "Universidad Santiago de Cali - Cali",
+    "2026-11-05",
+    "12:00"
+   ],
+   "day": "2026-11-05",
+   "time": "12:00",
+   "day_order": 2,
+   "venue": "Universidad Santiago de Cali - Cali",
+   "sala": "Auditorio T-Usaca",
+   "has_qa": false,
+   "synopsis": "Chocó es una mujer negra de 27 años, desplazada de sus tierras por la violencia. Lleva a cuestas una familia de dos hijos menores y a Everlides, su esposo músico que sólo sabe tocar marimba, beber viche y jugar dominó.  Chocó es una mujer fuerte y luchadora. En la mañana ella trabaja buscando oro en el río San Juan y en las tardes lava ropa de otras familias para alimentar y educar a sus hijos.  Es el cumpleaños de la pequeña Candelaria, y por primera vez Chocó le promete una torta, sin embargo, las cosas se complican al tratar de cumplir esta promesa, desencadenando consecuencias inesperadas para Chocó y toda su familia.",
+   "synopsis_lang": "es",
+   "poster": "/assets/semanacine-2026/choco.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfKgpBVpyUt/",
+    "date": "2026-10-31",
+    "tipo": "festival-ig",
+    "fila": "2026-11-05 12:00 · Chocó"
+   },
+   "is_free": true,
+   "lbSlug": "choco",
+   "tmdb_id": 327167,
+   "synopsis_en": "A young woman raising alone her children while her husband gets drunk but when she breaks free nothing will be the same.",
+   "_fid": "f_56ac4f31e9",
+   "id": "f_56ac4f31e9"
+  },
+  {
+   "title": "Anina",
+   "type": "film",
+   "section": "🎬 Película",
+   "director": "Alfredo Soderguit",
+   "year": 2013,
+   "country": "Colombia, Uruguay",
+   "flags": "🇨🇴🇺🇾",
+   "duration": "80 min",
+   "genre": "Aventura",
+   "_ancla": [
+    "Universidad Santiago de Cali - Cali",
+    "2026-11-05",
+    "18:00"
+   ],
+   "day": "2026-11-05",
+   "time": "18:00",
+   "day_order": 2,
+   "venue": "Universidad Santiago de Cali - Cali",
+   "sala": "Auditorio T-Usaca",
+   "has_qa": false,
+   "synopsis": "Una película de animación que relata las aventuras de una niña que debe resistir las burlas de sus compañeros de colegio por la particularidad de su nombre y apellidos: Anina Yatay Salas, ya que los tres se leen igual en ambos sentidos. Incluida en el apartado Generación del Festival de Cine de Berlín del 2013.",
+   "synopsis_lang": "es",
+   "poster": "/assets/semanacine-2026/anina.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfKgpBVpyUt/",
+    "date": "2026-10-31",
+    "tipo": "festival-ig",
+    "fila": "2026-11-05 18:00 · Anina"
+   },
+   "is_free": true,
+   "lbSlug": "anina",
+   "tmdb_id": 180644,
+   "synopsis_en": "Anina Yatay Salas is a ten-year-old whose name spells trouble: those three palindromes in a row are an ongoing source of teasing at school. When a playground fight results in mysterious punishment, Anina will learn to put her problems in perspective and empathize with others in this sweet little daydream of a tale.",
+   "_fid": "f_cd43c23fb8",
+   "id": "f_cd43c23fb8"
+  },
+  {
+   "title": "Conversatorio \"El Metafilme Georgina\"",
+   "type": "event",
+   "section": "💬 Conversatorio",
+   "_ancla": [
+    "Universidad Santiago de Cali - Cali",
+    "2026-11-06",
+    "14:00"
+   ],
+   "day": "2026-11-06",
+   "time": "14:00",
+   "day_order": 3,
+   "venue": "Universidad Santiago de Cali - Cali",
+   "sala": "Auditorio 1101",
+   "event_kind": "conversatorio",
+   "has_qa": false,
+   "_src": {
+    "url": "https://www.instagram.com/p/DfKgpBVpyUt/",
+    "date": "2026-10-31",
+    "tipo": "festival-ig",
+    "fila": "2026-11-06 14:00 · Conversatorio \"El Metafilme Georgina\""
+   },
+   "is_free": true,
+   "description": "Con Sebastián Ospina (actor y director).",
+   "description_lang": "es",
+   "_fid": "f_4a062a2ffc",
+   "id": "f_4a062a2ffc",
+   "duration": "60 min",
+   "_conservado": [
+    "duration"
+   ],
+   "_duracion_corregida": "genérica de conversatorio (Juan, 2 nov 2026)"
+  },
+  {
+   "title": "Conversatorio \"Experiencias en la Dirección de 100 años de Soledad\"",
+   "type": "event",
+   "section": "💬 Conversatorio",
+   "_ancla": [
+    "Casa Occio - Cali",
+    "2026-11-06",
+    "16:00"
+   ],
+   "day": "2026-11-06",
+   "time": "16:00",
+   "day_order": 3,
+   "venue": "Casa Occio - Cali",
+   "event_kind": "conversatorio",
+   "has_qa": false,
+   "_src": {
+    "url": "https://www.instagram.com/p/DfKgpBVpyUt/",
+    "date": "2026-10-31",
+    "tipo": "festival-ig",
+    "fila": "2026-11-06 16:00 · Conversatorio \"Experiencias en la Dirección de 100 años de Soledad\""
+   },
+   "is_free": true,
+   "description": "Con Carlos Moreno (director).",
+   "description_lang": "es",
+   "_fid": "f_563ff8a6d5",
+   "id": "f_563ff8a6d5",
+   "duration": "60 min",
+   "_conservado": [
+    "duration"
+   ],
+   "_duracion_corregida": "genérica de conversatorio (Juan, 2 nov 2026)"
+  },
+  {
+   "title": "Cine Bajo las Estrellas, película y encuentro musical",
+   "type": "film",
+   "section": "🌌 Cine Bajo las Estrellas",
+   "duration": "90 min",
+   "_ancla": [
+    "Centro Cultural Brisas de Mayo - Cali",
+    "2026-11-07",
+    "18:00"
+   ],
+   "day": "2026-11-07",
+   "time": "18:00",
+   "day_order": 4,
+   "venue": "Centro Cultural Brisas de Mayo - Cali",
+   "has_qa": false,
+   "_src": {
+    "url": "https://www.instagram.com/p/DfKgpBVpyUt/",
+    "date": "2026-10-31",
+    "tipo": "festival-ig",
+    "fila": "2026-11-07 18:00 · Cine Bajo las Estrellas, película y encuentro musical"
+   },
+   "is_free": true,
+   "_fid": "f_1812bde51b",
+   "id": "f_1812bde51b",
+   "_duracion_corregida": "genérica de función (Juan, 3 nov 2026)"
+  },
+  {
+   "title": "Conversatorio \"Del Barrio a la Embajada\"",
+   "type": "event",
+   "section": "💬 Conversatorio",
+   "_ancla": [
+    "Universidad Santiago de Cali - Cali",
+    "2026-11-09",
+    "12:00"
+   ],
+   "day": "2026-11-09",
+   "time": "12:00",
+   "day_order": 6,
+   "venue": "Universidad Santiago de Cali - Cali",
+   "sala": "Auditorio T-Usaca",
+   "event_kind": "conversatorio",
+   "has_qa": false,
+   "_src": {
+    "url": "https://www.instagram.com/p/DfKgpBVpyUt/",
+    "date": "2026-10-31",
+    "tipo": "festival-ig",
+    "fila": "2026-11-09 12:00 · Conversatorio \"Del Barrio a la Embajada\""
+   },
+   "is_free": true,
+   "description": "Con Héctor Aguirre (fotógrafo y realizador).",
+   "description_lang": "es",
+   "_fid": "f_a12a22d428",
+   "id": "f_a12a22d428",
+   "duration": "60 min",
+   "_conservado": [
+    "duration"
+   ],
+   "_duracion_corregida": "genérica de conversatorio (Juan, 2 nov 2026)"
+  },
+  {
+   "title": "Proyección de cortos locales",
+   "type": "film",
+   "section": "🎞️ Proyección de Cortos Locales",
+   "duration": "60 min",
+   "_ancla": [
+    "Universidad Santiago de Cali - Cali",
+    "2026-11-09",
+    "13:00"
+   ],
+   "day": "2026-11-09",
+   "time": "13:00",
+   "day_order": 6,
+   "venue": "Universidad Santiago de Cali - Cali",
+   "sala": "Auditorio T-Usaca",
+   "has_qa": false,
+   "synopsis": "Presentación del video «Barrio Brother», realizado entre Cali y Nueva York.",
+   "synopsis_lang": "es",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfKgpBVpyUt/",
+    "date": "2026-10-31",
+    "tipo": "festival-ig",
+    "fila": "2026-11-09 13:00 · Proyección de cortos locales"
+   },
+   "is_free": true,
+   "_fid": "f_bb237a6500",
+   "id": "f_bb237a6500",
+   "_duracion_corregida": "estimada (Juan, 3 nov 2026)"
+  }
+ ],
+ "_corrido": {
+  "por": "pipeline/correr.py",
+  "fecha": "2026-11-03T12:41:39",
+  "plan_sha": "eb8065204a0a16b5",
+  "paso": 5,
+  "cmd": "python3 pipeline/semanacine-2026-verificar.py"
+ }
+}

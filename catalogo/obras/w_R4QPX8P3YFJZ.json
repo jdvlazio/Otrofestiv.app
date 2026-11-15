@@ -11,16 +11,19 @@
  ],
  "sinopsis": {
   "es": "Una familia puertorriqueña multigeneracional usa el cine como terapia, actuando y recreando historias de abuso y trauma. Los testimonios personales toman la forma de secuencias fantásticas donde las mujeres se convierten en guerreras.",
-  "en": "A multigenerational Puerto Rican family uses filmmaking as therapy, performing and reenacting stories of abuse and trauma. Personal testimonies take the form of fantastical sequences where the women become warriors."
+  "en": "A multi-generational family of outspoken Puerto Rican women takes center stage as they conceive and perform fantastical film vignettes as a way to navigate painful pasts in this visually-arresting, kaleidoscopic documentary."
  },
  "generos": [
   "Documental"
  ],
  "afiche": {
-  "archivo": "https://d13jj08vfqimqg.cloudfront.net/uploads/film/photo_1/6970/large_Matinino-Clean-16x9-01.jpg",
-  "veredicto": "fotograma"
+  "archivo": "/assets/ficfusa-2026/matinino.jpg",
+  "veredicto": "oficial"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 1676525,
+  "letterboxd": "matinino"
+ },
  "versiones": [
   {
    "etiqueta": "88 min",
@@ -28,6 +31,7 @@
   }
  ],
  "presentaciones": [
+  "ficfusa-2026",
   "tribeca-2026"
  ]
 }

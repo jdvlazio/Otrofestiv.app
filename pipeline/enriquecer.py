@@ -29,7 +29,7 @@ import json, os, re, subprocess, sys, time
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from lib import (asset_declarado, sin_tmdb_si_se_pide, cargar_crudo, ficha_verifica, norm, provenance, slug,
-                 tmdb_get, tmdb_ficha, UA, ficha_tmdb, director_coincide, ya_publicada,
+                 tmdb_get, tmdb_ficha, UA, ficha_tmdb, director_coincide, publicadas_de,
                  obras_publicadas)
 import catalogo  # noqa: E402
 
@@ -361,9 +361,20 @@ def reuso_publicada(pub, fid=None):
                                 ('duracion_tmdb', _min_de(_de('duration'))),
                                 ('genero', _de('genre')), ('synopsis_en', _de('synopsis_en')),
                                 ('lbSlug', _de('lbSlug'))) if v}
+    # LA FICHA (27 oct 2026): el tmdb_id con que ya la publicamos se quedaba
+    # atrás —139 presentaciones sin ficha que otro festival nuestro tiene—.
+    # Solo si es UNO: con dos ids distintos, heredar uno sería elegir.
+    _ids = {y['tmdb_id'] for y in pub if y.get('tmdb_id')}
+    if len(_ids) == 1:
+        resto['tmdb_id'] = _ids.pop()
+        resto['_ficha_de'] = 'ya publicada en ' + next(y['festival'] for y in pub if y.get('tmdb_id'))
     if not x and not s and not resto:
         return None
     e = {'_ya_publicada': pub}
+    if x:
+        e['_afiche_de'] = f'ya publicada en {x["festival"]}'
+    if s:
+        e['_sinopsis_de'] = f'ya publicada en {s["festival"]}'
     if x:
         e['poster'] = x['poster']
         e['_verificado'] = f'ya publicada en {x["festival"]}: se reusa su afiche'
@@ -414,6 +425,7 @@ def main():
     alias = corr.get('alias', {})
     # las fichas que declaró una persona, por título del festival
     declaradas = corr.get('fichas', {})
+    misma_obra = corr.get('misma_obra', {})
 
     # TODAS las obras, no solo las de nivel superior. Hasta hoy esto recorría
     # únicamente `funciones`, así que en un festival con programas de cortos el
@@ -528,14 +540,14 @@ def main():
             # el reúso de lo publicado TAMBIÉN desde la caché: la primera
             # versión solo lo hacía al sondear, y la segunda corrida de
             # Girardota perdía 4 afiches (29 sep 2026, lo paró publicar.py)
-            _r = reuso_publicada(ya_publicada({**f, 'titulo': t}, publicadas), fid)
+            _r = reuso_publicada(publicadas_de({**f, 'titulo': t}, publicadas, misma_obra), fid)
             if _r:
                 ok[t] = _r
             print(f'[{i:3}/{len(obras)}] ··  {t[:46]:48} sin ficha '
                   f'(caché del {c["fecha"]})', flush=True)
             continue
 
-        pub = ya_publicada({**f, 'titulo': t}, publicadas)
+        pub = publicadas_de({**f, 'titulo': t}, publicadas, misma_obra)
         e, fuente = cascada_obra({**f, 'titulo': t}, key, alias, pub, _obs)
         if e:
             e['_director'], e['_sondeado'] = _dir, _hoy
@@ -575,7 +587,7 @@ def main():
     for t, f in obras.items():
         e = ok.get(t)
         if e and not e.get('poster_path') and not e.get('poster'):
-            _r = reuso_publicada(ya_publicada({**f, 'titulo': t}, publicadas), fid)
+            _r = reuso_publicada(publicadas_de({**f, 'titulo': t}, publicadas, misma_obra), fid)
             if _r and _r.get('poster') and not _r['poster'].startswith(f'/assets/{fid}/'):
                 e['poster'] = _r['poster']
                 e['_afiche'] = _r['_verificado']
@@ -641,6 +653,11 @@ def main():
                 ok[t] = {**e, 'synopsis_en': d['texto'], '_sinopsis': d['fuente']}
                 n_s += 1
                 continue
+            # `texto_en`: la oficial en inglés junto a la española (traducción
+            # nuestra); el inglés no se pierde al declarar el español
+            if d.get('texto_en') and not e.get('synopsis_en'):
+                e = {**e, 'synopsis_en': d['texto_en']}
+                ok[t] = e
             if e.get('sinopsis') or e.get('synopsis_es'):
                 continue
             ok[t] = {**e, 'sinopsis': d['texto'], '_sinopsis': d['fuente']}
@@ -722,9 +739,13 @@ def main():
                 continue
             if campo == 'poster' and e.get('poster_path'):
                 continue
-            v = herencia.valor(w, campo, fid, t, e.get('tmdb_id'), key)
+            v = herencia.valor(w, campo, fid, t, e.get('tmdb_id'), key,
+                               obra={'director': f.get('director') or e.get('_director'),
+                                     'anio': f.get('anio') or e.get('anio_tmdb')})
             if v:
                 e[campo] = v
+                if campo == 'tmdb_id':
+                    e['_ficha_de'] = de
                 if campo == 'poster':
                     e['posterSource'] = herencia.poster_source(w, v)
                     e['_heredado']= {**e.get('_heredado', {}), 'posterSource': de}

@@ -8,6 +8,12 @@
  "directores": [
   "Andrés Julián Yepes"
  ],
+ "aliases": [
+  {
+   "titulo": "Romu",
+   "tipo": "festival"
+  }
+ ],
  "sinopsis": {
   "es": "En una noche estrellada en la ciudad, la calma se rompe con la súbita aparición de Blub, un ser oscuro que despoja al mundo de su color. Sin embargo, ¡la esperanza se interpone en su camino cuando Romu, el niño superhéroe, lo desafía!"
  },
@@ -29,6 +35,7 @@
   }
  ],
  "presentaciones": [
-  "anibia-2026"
+  "anibia-2026",
+  "festicinerio-2026"
  ]
 }

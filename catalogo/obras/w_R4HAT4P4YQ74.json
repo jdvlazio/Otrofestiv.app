@@ -14,11 +14,17 @@
   "es": "Iván trabaja en una empresa agrícola y aspira a un ascenso que le permita mejorar la situación económica de su familia.",
   "en": "Iván works at an agricultural company and aspires to a promotion that would improve his family's financial situation."
  },
+ "generos": [
+  "Ficción"
+ ],
  "afiche": {
   "archivo": "https://image.tmdb.org/t/p/w185/gqtBos9yGlMPFulwcGjdX53CZx8.jpg",
   "veredicto": "oficial"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 1514847,
+  "letterboxd": "ivan-hadoum"
+ },
  "versiones": [
   {
    "etiqueta": "103 min",
@@ -26,6 +32,7 @@
   }
  ],
  "presentaciones": [
-  "ficci-65"
+  "ficci-65",
+  "miradas-2026"
  ]
 }

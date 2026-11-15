@@ -1,0 +1,115 @@
+{
+ "_provenance": {
+  "fuente": "pipeline/fuentes_descubrir.py",
+  "capturado": "2026-11-12T14:59",
+  "paginas_leidas": 41,
+  "errores": [
+   "https://www.alestfestival.com/profile/undefined/blog-likes: HTTP Error 404: Not Found",
+   "https://www.alestfestival.com/_api/cloud-data: HTTP Error 404: Not Found",
+   "https://www.alestfestival.com/_api/dynamic-pages-router/v1: HTTP Error 404: Not Found",
+   "https://www.alestfestival.com/_api/wix-code-public-dispatcher-ng/siteview: HTTP Error 404: Not Found",
+   "https://www.alestfestival.com/profile/undefined/profile: HTTP Error 404: Not Found",
+   "https://www.alestfestival.com/true: HTTP Error 404: Not Found",
+   "https://www.alestfestival.com/_api/members/v1/santa-members: HTTP Error 404: Not Found",
+   "https://www.alestfestival.com/profile/undefined/blog-comments: HTTP Error 404: Not Found",
+   "https://www.alestfestival.com/post/phantom-youth-una-película-de-jóvenes-que-transita-entre-la-desesperación-y-la-esperanza: 'ascii' codec can't encode character '\\xed' in position 31: ordinal not in range",
+   "https://www.alestfestival.com/post/las-favoritas-de-la-década-al-este: 'ascii' codec can't encode character '\\xe9' in position 31: ordinal not in range"
+  ]
+ },
+ "raices": {
+  "web": "https://www.alestfestival.com/co",
+  "bio": "https://linktr.ee/alestefestivalcolombia"
+ },
+ "items": {
+  "https://docs.wixstatic.com/ugd/9df115_f4fae08f13a147a190697dae8704679b.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.alestfestival.com/search?type=blogs&page=2",
+   "primera_vez": "2026-11-12T14:58",
+   "ultima_vez": "2026-11-12T14:59",
+   "estado": "descartada",
+   "_por_que": "Al Este Lima 2019",
+   "revisado": "2026-11-12T14:58"
+  },
+  "https://forms.gle/HxsjxkfiwRYGT8xc8": {
+   "tipo": "formulario",
+   "visto_en": "https://www.alestfestival.com/convocatoria2026",
+   "primera_vez": "2026-11-12T14:58",
+   "ultima_vez": "2026-11-12T14:59",
+   "estado": "descartada",
+   "_por_que": "convocatoria de cortos, no es inscripción de público",
+   "revisado": "2026-11-12T14:58"
+  },
+  "https://forms.gle/JGtzxsto17bG47iLA": {
+   "tipo": "formulario",
+   "visto_en": "https://www.alestfestival.com/convocatoria2026",
+   "primera_vez": "2026-11-12T14:58",
+   "ultima_vez": "2026-11-12T14:59",
+   "estado": "descartada",
+   "_por_que": "convocatoria de largos, no es inscripción de público",
+   "revisado": "2026-11-12T14:58"
+  },
+  "https://www.alestfestival.com/_files/ugd/9df115_74159718fdb24359a0ccde4e8b5b99c7.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.alestfestival.com/convocatoria2026",
+   "primera_vez": "2026-11-12T14:58",
+   "ultima_vez": "2026-11-12T14:59",
+   "estado": "descartada",
+   "_por_que": "afiche de convocatoria COL'26",
+   "revisado": "2026-11-12T14:58"
+  },
+  "https://www.alestfestival.com/_files/ugd/9df115_b514f8cee59745ec868259a52b27b664.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.alestfestival.com/co",
+   "primera_vez": "2026-11-12T14:58",
+   "ultima_vez": "2026-11-12T14:59",
+   "estado": "descartada",
+   "_por_que": "catálogo 2025",
+   "revisado": "2026-11-12T14:58"
+  },
+  "https://www.alestfestival.com/_files/ugd/9df115_c0345da79a3a4080b511ea004ea5880f.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.alestfestival.com/convocatoria2026",
+   "primera_vez": "2026-11-12T14:58",
+   "ultima_vez": "2026-11-12T14:59",
+   "estado": "usada",
+   "_por_que": "bases 2026: Medellín 19–22 y Bogotá 25–29 nov",
+   "revisado": "2026-11-12T14:58"
+  },
+  "https://www.alestfestival.com/_files/ugd/9df115_ee2b6750595948689c89d1922adf1c09.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.alestfestival.com/convocatoria2026",
+   "primera_vez": "2026-11-12T14:58",
+   "ultima_vez": "2026-11-12T14:59",
+   "estado": "descartada",
+   "_por_que": "bases 2026 en inglés, duplicado",
+   "revisado": "2026-11-12T14:58"
+  },
+  "https://docs.google.com/forms/d/e/1FAIpQLScg-UsWymikAB9qep2Ul5FXIhUUdt3_VxPBRgtTfUT9LrtNFQ/viewform": {
+   "tipo": "formulario",
+   "visto_en": "https://linktr.ee/alestefestivalcolombia",
+   "primera_vez": "2026-11-12T14:59",
+   "ultima_vez": "2026-11-12T14:59",
+   "estado": "descartada",
+   "_por_que": "convocatoria de largos (mismo form que forms.gle/JGtz…)",
+   "revisado": "2026-11-12T14:59"
+  },
+  "https://forms.gle/URvUBxqx3vxif7v66": {
+   "tipo": "formulario",
+   "visto_en": "https://linktr.ee/alestefestivalcolombia",
+   "primera_vez": "2026-11-12T14:59",
+   "ultima_vez": "2026-11-12T14:59",
+   "estado": "descartada",
+   "_por_que": "convocatoria de cortos",
+   "revisado": "2026-11-12T14:59"
+  },
+  "https://www.alestfestival.com/_files/ugd/9df115_7977e7a1ac60497ba54a200b0d774926.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://linktr.ee/alestefestivalcolombia",
+   "primera_vez": "2026-11-12T14:59",
+   "ultima_vez": "2026-11-12T14:59",
+   "estado": "descartada",
+   "_por_que": "bases 2026 en inglés, duplicado",
+   "revisado": "2026-11-12T14:59"
+  }
+ }
+}
