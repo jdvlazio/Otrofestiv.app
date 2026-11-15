@@ -33,7 +33,7 @@ def main():
     fallos = []
     usadas = set()
     # Encima de la transcripción, las afirmaciones (IG más nuevo): existe:{…}
-    # agrega una función; venue/time/day mueven la de su ancla.
+    # agrega una función; venue/time/day mueven la de su ancla; film_list cambia sus obras.
     afs = json.load(io.open(f'{ST}/ficfusa-2026-afirmaciones.json', encoding='utf-8'))['afirmaciones']
     for e in prog:
         if e['sede'] != 'Por definir':
@@ -43,6 +43,10 @@ def main():
         if a['casilla'] == 'existe' and isinstance(a['valor'], dict):
             v = a['valor']
             prog.append({'fecha': v['day'], 'hora': v['time'], 'sede': v['venue'], 'venue': v['venue'], 'titulo': v['title']})
+        elif a['casilla'] == 'film_list':     # el IG más nuevo cambia las obras de la función
+            for e in prog:
+                if e['sede'] != 'Por definir' and (e['fecha'], e['hora'], plano(e['venue'])) == k:
+                    e['obras'] = [x['title'] if isinstance(x, dict) else x for x in a['valor']]
         elif a['casilla'] in ('venue', 'time', 'day'):
             campo = {'venue': 'venue', 'time': 'hora', 'day': 'fecha'}[a['casilla']]
             for e in prog:
