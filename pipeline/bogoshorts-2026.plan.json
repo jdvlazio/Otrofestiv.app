@@ -8,7 +8,7 @@
   },
   {
    "cmd": "python3 pipeline/bogoshorts-2026-crudo.py",
-   "que": "la grilla PDF (pdftotext -bbox) → crudo: 119 funciones"
+   "que": "la grilla PDF (pdftotext -bbox) → crudo: 129 funciones"
   },
   {
    "cmd": "python3 pipeline/bogoshorts-2026-verificar.py",

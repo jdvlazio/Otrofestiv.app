@@ -20,7 +20,7 @@ ESP = [('fontanar', 'FONTANAR'), ('sala capital', 'CAPITAL'), ('sala 2', 'SALA2'
        ('imagen', 'IMAGEN'), ('lounge', 'LOUNGE'), ('plazoleta', 'LOUNGE'), ('parque', 'PARQUE'),
        ('sótano', 'SOTANO'), ('alianza', 'ALIANZA'), ('ático', 'ATICO'), ('cefe', 'CEFE'),
        ('delia', 'DELIA'), ('media torta', 'TORTA'), ('gaitán antigua', 'GAITAN'), ('sala gaitán', 'GAITAN'),
-       ('jorge', 'JEG'), ('retina', 'RETINA'), ('city', 'CITYU')]
+       ('jorge', 'JEG'), ('fiestas', 'FIESTAS'), ('retina', 'RETINA'), ('city', 'CITYU')]
 
 
 def esp(s):
@@ -29,6 +29,7 @@ def esp(s):
 
 
 def cod(t):
+    t = re.sub(r'\s*\d{1,2}:\d\d - \d{1,2}:\d\d [ap]\.m\.', '', t)   # «IMAGINATÓN 2:00 - 8:00 p.m.»
     t = t.replace('ES -PER', 'ES-PER')
     m = re.match(r"^([A-Z0-9]+(?:[-/][A-Z0-9]+)*)", t)
     return m[1] if m and re.search(r'[A-Z]-|/', m[1]) else re.sub(r'[^a-záéíóúñ0-9]', '', t.lower())[:14]
@@ -47,7 +48,7 @@ def toks_lectura(n):
     out = set()
     for c in d['celdas']:
         e = esp(c['espacio'])
-        if e in ('CITYU', 'SOTANO', 'RETINA') or c['texto'].startswith('Franja Encuentros'):
+        if e in ('CITYU', 'SOTANO', 'RETINA', 'FIESTAS') or c['texto'].startswith('Franja Encuentros'):
             continue                                  # los descartes declarados del crudo
         out.add((c['dia'], c.get('hora') or '', e, cod(c['texto'])))
     return out

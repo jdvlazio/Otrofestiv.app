@@ -40,27 +40,28 @@ OUT = f'{REPO}/festivals/staging/bogoshorts-2026-crudo.json'
 PROG = f'{REPO}/festivals/staging/bogoshorts-2026-programas.json'
 DIAS = ['2026-12-01', '2026-12-02', '2026-12-03', '2026-12-04',
         '2026-12-05', '2026-12-06', '2026-12-07', '2026-12-08']
-X_MIN, X_MAX = 215, 850          # la grilla; a la derecha (x≥865) está la leyenda
+X_MIN, X_MAX = 209, 852          # la grilla; a la derecha (x≥865) está la leyenda
 
 # (y desde, y hasta, sede, sala) — bandas de los espacios, medidas en el PDF
-ESPACIOS = [
-    (95, 120, 'Teatro Jorge Eliécer Gaitán', ''),
-    (120, 160, 'City U', ''),
-    (160, 220, 'City U', 'Lounge Bogoshorts Plazoleta UHeart'),
-    (220, 325, 'Cinemateca de Bogotá', 'Sala Capital'),
-    (325, 388, 'Cinemateca de Bogotá', 'Sala 2'),
-    (388, 450, 'Cinemateca de Bogotá', 'Sala 3'),
-    (450, 470, 'Cinemateca de Bogotá', 'Salón de la imagen'),
-    (470, 510, 'Cinemateca de Bogotá Sede Fontanar del Río', ''),
-    (510, 552, 'Teatro El Parque', ''),
-    (552, 612, 'Alianza Francesa', ''),
-    (612, 636, 'Alianza Francesa', 'Sótano 1'),
-    (636, 677, 'Centro Ático', ''),
-    (677, 697, 'CEFE', ''),
-    (697, 737, 'Teatro Delia Zapata Olivella', ''),
-    (737, 760, 'Teatro al aire libre La Media Torta', ''),
-    (760, 781, 'Sala Gaitán Antigua Cinemateca', ''),
-    (781, 800, 'Retina Latina', ''),
+ESPACIOS = [            # grilla republicada el 13 nov 2026 (medida en esa versión)
+    (90, 110, 'Teatro Jorge Eliécer Gaitán', ''),
+    (110, 131, 'City U', ''),
+    (131, 172, 'City U', 'Lounge BFM Plazoleta UHeart'),
+    (172, 317, 'Cinemateca de Bogotá', 'Sala Capital'),
+    (317, 399, 'Cinemateca de Bogotá', 'Sala 2'),
+    (399, 482, 'Cinemateca de Bogotá', 'Sala 3'),
+    (482, 503, 'Cinemateca de Bogotá', 'Taller de la imagen'),
+    (503, 544, 'Cinemateca de Bogotá Sede Fontanar del Río', ''),
+    (544, 585, 'Teatro El Parque', ''),
+    (585, 647, 'Alianza Francesa', ''),
+    (647, 668, 'Alianza Francesa', 'Sótano 1'),
+    (668, 709, 'Centro Ático', ''),
+    (709, 730, 'CEFE', ''),
+    (730, 771, 'Teatro Delia Zapata Olivella', ''),
+    (771, 792, 'Teatro al aire libre La Media Torta', ''),
+    (792, 813, 'Sala Gaitán Antigua Cinemateca', ''),
+    (813, 833, 'Fiestas', ''),
+    (833, 860, 'Retina Latina', ''),
 ]
 # código → (grupo de la leyenda = sección, nombre del programa), verbatim del PDF
 LEYENDA = {
@@ -97,7 +98,8 @@ LEYENDA = {
     'CLC-DIVX': ('Colecciones', 'Diversidades'), 'CLC-AMO': ('Colecciones', 'El amor es corto'),
     'CLC-FUT': ('Colecciones', 'El mundo es un balón'),
 }
-DESCARTES = {'BFM - BOGOSHORTS Film Market': 'franja de industria de varios días, no una función',
+DESCARTES = {'Fiestas': 'fila «Fiestas» (13 nov): la grilla no dice dónde son',
+             'BFM - BOGOSHORTS Film Market': 'franja de industria de varios días, no una función',
              'Acreditaciones': 'punto de acreditación, no una función',
              'City U': 'la fila de City U es la franja del BFM - BOGOSHORTS Film Market (industria, varios días)',
              'Alianza Francesa Sótano 1': 'Acreditaciones, 10:00 a.m. - 6:00 p.m.: no es una función',
@@ -119,12 +121,12 @@ def h24(h, m, mer):
 
 def main():
     ws = palabras()
-    cab = [w for w in ws if 80 < w[1] < 95 and re.fullmatch(r'\d', w[3])]
+    cab = [w for w in ws if 70 < w[1] < 85 and re.fullmatch(r'\d', w[3])]
     cols = sorted((w[0] + w[2]) / 2 for w in cab)
     assert len(cols) == 8, f'encabezados de día: {len(cols)}'
     # etiquetas de hora (columna de horas, x 135–205): (y, «HH:MM» de inicio)
     horas = []
-    izq = sorted([w for w in ws if 135 < w[0] < 205], key=lambda w: (round(w[1]), w[0]))
+    izq = sorted([w for w in ws if 129 < w[0] < 200], key=lambda w: (round(w[1]), w[0]))
     for i, w in enumerate(izq):
         m = HORA.match(w[3])
         if m:
@@ -142,7 +144,7 @@ def main():
     grupos = {}
     for w in ws:
         cx = (w[0] + w[2]) / 2
-        if not (X_MIN < w[0] < X_MAX and w[1] > 95):
+        if not (X_MIN < w[0] < X_MAX and w[1] > 90):
             continue
         col = min(range(8), key=lambda i: abs(cols[i] - cx))
         grupos.setdefault((espacio(w[1]), col), []).append(w)
@@ -175,8 +177,12 @@ def main():
             sorted(dentro, key=lambda y: abs(y - y0))[:1]
         h, mi, mer = dict(horas)[min(cerca)] if cerca else ('', '', '')
         # hora escrita en la celda: manda; con «Cóctel» y «Evento», la del cóctel (empieza ahí)
+        rango = re.search(r'(\d{1,2}):(\d\d) - (\d{1,2}):(\d\d) ([ap]\.m\.)', txt)
         mh = re.search(r'(\d{1,2}):(\d\d) ([ap]\.m\.)', txt)
-        if mh:
+        if rango:                       # «IMAGINATÓN 2:00 - 8:00 p.m.»: empieza en la primera
+            h, mi, mer = rango[1], rango[2], rango[5]
+            txt = txt.replace(rango[0], '').strip()
+        elif mh:
             h, mi, mer = mh.groups()
             txt = re.sub(r'\s*\d{1,2}:\d\d [ap]\.m\.( - (Cóctel|Evento))?', '', txt).strip()
         hora = h24(h, mi, mer) if h else ''
@@ -186,7 +192,7 @@ def main():
             hora = '11:00' if DIAS[col] in ('2026-12-05', '2026-12-06', '2026-12-08') else '14:00'
         f = {'dia': DIAS[col], 'hora': hora, 'sede': e[2], 'sala': e[3],
              'ciudad': 'Bogotá', 'texto_grilla': txt,
-             '_src': {'url': URL, 'date': '2026-10-23'}}
+             '_src': {'url': URL, 'date': '2026-11-13'}}
         md = re.search(r"\((\d+)'\)", txt)
         if md:
             f['duracion_min'] = int(md[1])
