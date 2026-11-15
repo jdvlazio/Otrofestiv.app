@@ -87,6 +87,8 @@ def leer_registro(fid, raiz=REPO):
 
 
 def escribir_registro(fid, reg, raiz=REPO):
+    import lib
+    reg['_provenance'] = lib.provenance('pipeline/altas.py (TMDB + fuentes revisadas a mano, una por una)')
     reg['_nota'] = ('registro de altas: por obra sin ficha, las fuentes revisadas y la decisión. '
                     'Se escribe con pipeline/altas.py, no a mano.')
     json.dump(reg, open(ruta_registro(fid, raiz), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
