@@ -111,14 +111,14 @@ deliberada existe la etiqueta `frontera-ok`.
 | `girardota2026` | Festigirardota | Girardota | 30 SEP–4 OCT | Archivado |
 | `anibia2026` | Anibia | Bogotá | 20 OCT–1 NOV | Recién terminado |
 | `guatape2026` | Guatapé Film Fest | Guatapé | 21–25 OCT | Recién terminado |
-| `festicinerio2026` | FESTICINERIO | Riosucio | 8–13 NOV | **Próximo / activo** |
+| `festicinerio2026` | FESTICINERIO | Riosucio | 8–13 NOV | Recién terminado |
 | `ficfusa2026` | FICFUSA | Fusagasugá | 11–16 NOV | **Próximo / activo** |
-| `fecibac2026` | FECIBAC | Caucasia | 10–14 NOV | **Próximo / activo** |
+| `fecibac2026` | FECIBAC | Caucasia | 10–14 NOV | Recién terminado |
 | `aleste2026` | Al Este | Medellín y Bogotá | 18–29 NOV | **Próximo / activo** |
-| `villadeleyvaiff2026` | Festcinevilla | Villa de Leyva | 13–16 NOV | **Próximo / activo** |
+| `villadeleyvaiff2026` | Festcinevilla | Villa de Leyva | 13–15 NOV | **Próximo / activo** |
 | `cinetoro2026` | CINETORO | Toro | 10–15 NOV | **Próximo / activo** |
 | `cortoscali2026` | Cortos Cali | Cali | 27–30 OCT | Recién terminado |
-| `biff2026` | BIFF | Bogotá | 8–14 OCT | Recién terminado |
+| `biff2026` | BIFF | Bogotá | 8–14 OCT | Archivado |
 | `popayan2026` | Cine Corto Popayán | Popayán | 5–11 OCT | Archivado |
 | `mamut2026` | Mamut | Medellín | 5–11 OCT | Archivado |
 | `filcmar2026` | FILCMAR | Marinilla | 9–13 OCT | Archivado |
