@@ -1458,3 +1458,24 @@ legítimo que falte en `_GENRE_EN`, y esa decisión es de quien monta.
 `[obra-sin-pais]` (11 nov 2026): toda obra de un festival vivo lleva `country` (la bandera) o su porqué en `sin_pais` de `<fid>-correcciones.json`, por título de la obra o de su programa. Nació de Basta Mamá, sin bandera en Guatapé y Funza; había 21 obras así y nada lo frenaba. Un programa sin obras nombradas también se declara. País solo con fuente: TMDB puede equivocarse (Basta Mamá figura como US).
 
 `[inventario-fuentes]` (12 nov 2026): todo festival vivo tiene `festivals/staging/<fid>-fuentes.json` (pipeline/fuentes_descubrir.py) con la web y el link de la bio de IG como raíces (o `_sin_web`/`_sin_bio` con su porqué) y NINGUNA fuente `sin-revisar`; publicar.py además exige que el recorrido tenga ≤ 24 h. Nació de Villa de Leyva (programa completo en un PDF nuevo de la home que nadie vio) y FICFUSA (nueve formularios en el Linktree de la bio): mirábamos lo conocido, no lo publicado. El vigía corre `--vivos` en cada pasada.
+
+## Registro de altas — `<fid>-altas.json` (15 nov 2026)
+
+Toda obra en `sin_ficha` del enriquecido tiene una entrada en
+`festivals/staging/<fid>-altas.json`, escrita por `pipeline/altas.py`:
+
+```json
+{"obras": {"<título NFC>": {
+  "titulo": "…", "director": "…",
+  "estado": "ficha_existente | alta_posible | afiche_chico | sin_afiche | alta_hecha",
+  "tmdb_id": 123,
+  "afiche": {"url": "…", "fuente": "…", "archivo": "fuentes/<fid>/altas/<slug>.jpg",
+             "px": [w, h], "ratio": 0.667, "recorte": null, "veredicto_criterio": null},
+  "fuentes": {"<clave>": {"url": "…", "fecha": "AAAA-MM-DD", "resultado": "…"}
+                       | {"na": true, "por_que": "…", "fecha": "…"}}}}}
+```
+
+Las claves obligatorias son `FUENTES_OBLIGATORIAS` de `pipeline/altas.py` (única
+lista); un videoclip suma `canal_oficial_artista`. Toda ficha de
+`<fid>-correcciones.json` `fichas` nueva sale de este registro (`_registro`).
+Proceso completo: `pipeline/PROTOCOLO.md` § Paso 2·bis.
