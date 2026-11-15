@@ -7351,6 +7351,31 @@ try:
 except Exception as _e:
     fail(check, f'no pudo medirse: {_e}')
 
+# EL REGISTRO DE ALTAS (15 nov 2026, BOGOSHORTS): «¿tiene ficha? ¿tiene afiche
+# original? ¿se da de alta?» se decide con evidencia en <fid>-altas.json, escrita
+# por pipeline/altas.py — no por el criterio libre de quien la haga. Deuda
+# congelada en pipeline/altas-deuda.json (solo baja).
+try:
+    import os as _osal, sys as _sysal
+    _sysal.path.insert(0, _osal.path.join(_osal.path.dirname(_osal.path.abspath(__file__)), 'pipeline'))
+    import altas as _al
+    _AL = _al.verificar()
+except Exception as _e:
+    _AL = {'_error': str(_e)}
+for check, _ok_al, _rem_al in (
+        ('alta-sin-evidencia', 'toda obra sin ficha de un festival por salir tiene su evidencia completa en el registro',
+         'python3 pipeline/altas.py <fid> --sondar y --pendientes'),
+        ('ficha-sin-registro', 'toda ficha nueva de `fichas` tiene su entrada ficha_existente/alta_hecha en el registro',
+         'las fichas las escribe pipeline/altas.py (--sondar / --registrar-alta), no la mano'),
+        ('titulo-nfc', 'todo título de crudo/catálogo de staging está en NFC',
+         'normalizar con unicodedata.normalize("NFC", …) en el script que lo escribe')):
+    if '_error' in _AL:
+        fail(check, f'no pudo medirse: {_AL["_error"]}')
+    elif _AL[check]:
+        fail(check, ' · '.join(_AL[check][:6]) + f' — {_rem_al}')
+    else:
+        ok(check, _ok_al)
+
 check = 'id-funcion-estable'
 # El id estable de la función (docs/FUNCION.md §11): contra main, ningún id
 # publicado desaparece sin registro ni cambia de función; ninguno se repite.
