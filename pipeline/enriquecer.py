@@ -670,7 +670,9 @@ def main():
         for t, e in ok.items():
             if not e.get('poster_path'):
                 continue
-            dest = afiche_tmdb(e, fid, slug(t), key)
+            # un título en escritura no latina («环岛», «跳房子») da slug vacío y
+            # los dos afiches chocaban en «.jpg» (BOGOSHORTS, 15 nov 2026)
+            dest = afiche_tmdb(e, fid, slug(t) or f"tmdb-{e.get('tmdb_id')}", key)
             if dest:
                 n += 1
                 # LA RUTA LOCAL, ESCRITA (23 sep 2026). Este paso bajaba el

@@ -25,7 +25,8 @@ el 1 y el 15 de diciembre»). La cobertura inversa de bogoshorts-2026-verificar.
 las cuenta.
 
 Lee   fuentes/bogoshorts-2026/programacion2026.pdf
-      festivals/staging/bogoshorts-2026-programas.json  (obras ya publicadas)
+      festivals/staging/bogoshorts-2026-cortos.json     (los cortos por programa, del catálogo oficial: MANDA)
+      festivals/staging/bogoshorts-2026-programas.json  (boletines e IG: solo si el catálogo no trae el código)
 Esc.  festivals/staging/bogoshorts-2026-crudo.json
 """
 import html, io, json, os, re, subprocess, sys
@@ -38,6 +39,7 @@ PDF = f'{REPO}/fuentes/bogoshorts-2026/programacion2026.pdf'
 URL = 'https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf'
 OUT = f'{REPO}/festivals/staging/bogoshorts-2026-crudo.json'
 PROG = f'{REPO}/festivals/staging/bogoshorts-2026-programas.json'
+CORTOS = f'{REPO}/festivals/staging/bogoshorts-2026-cortos.json'
 DIAS = ['2026-12-01', '2026-12-02', '2026-12-03', '2026-12-04',
         '2026-12-05', '2026-12-06', '2026-12-07', '2026-12-08']
 X_MIN, X_MAX = 209, 852          # la grilla; a la derecha (x≥865) está la leyenda
@@ -159,7 +161,11 @@ def main():
                 rac.append([w])
         celdas += [(e, col, r) for r in rac]
 
+    # el catálogo oficial (13 nov) manda sobre boletines e IG en qué cortos tiene
+    # cada programa; «CI-VC/CN-VC» es una sola función con los dos videoclips
     progs = json.load(open(PROG, encoding='utf-8'))['programas']
+    progs.update(json.load(open(CORTOS, encoding='utf-8'))['programas'])
+    progs['CI-VC/CN-VC'] = progs['CI-VC'] + progs['CN-VC']
     funciones, descartadas = [], []
     for e, col, ws_ in sorted(celdas, key=lambda k: (k[1], k[0][0], k[2][0][1])):
         ws_.sort(key=lambda w: (round(w[1] / 3), w[0]))

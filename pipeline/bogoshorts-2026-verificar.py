@@ -76,6 +76,17 @@ def main():
         for x in fs:
             if x + (k,) not in vistos:
                 print(f'  ⚠ IG publicó {k} {x} y la grilla del 23 oct no lo trae ahí (la grilla es más nueva)')
+    # los números tienen que cuadrar (PROTOCOLO §«Los números tienen que cuadrar»):
+    # la suma de los cortos del catálogo contra los minutos de la grilla. Se LISTA,
+    # no frena: la grilla redondea y algunos programas suman presentación o charla.
+    vistos_cod = {}
+    for f in crudo['funciones']:
+        if f.get('codigo') and f.get('obras'):
+            vistos_cod.setdefault(f['codigo'], (sum(o.get('duracion_min') or 0 for o in f['obras']), f.get('duracion_min')))
+    raros = [(k, s_, g) for k, (s_, g) in sorted(vistos_cod.items()) if not g or abs(s_ - g) > max(3, 0.05 * g)]
+    print(f'duración: {len(vistos_cod) - len(raros)}/{len(vistos_cod)} programas cuadran (±3 min) con la grilla')
+    for k, s_, g in raros:
+        print(f'  ⚠ {k}: los cortos suman {s_} min, la grilla dice {g}')
     if solo_a or bc_no_a:
         sys.exit('✗ ' + '\n✗ '.join([f'solo A (nadie más lo vio): {t}' for t in solo_a] +
                                      [f'B y C lo ven, A no: {t}' for t in bc_no_a]))

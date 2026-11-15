@@ -7,6 +7,10 @@
    "que": "boletines 005/007/009 + pies de IG → los cortos de 10 programas (sidecar que lee el crudo)"
   },
   {
+   "cmd": "python3 pipeline/bogoshorts-2026-catalogo.py",
+   "que": "el catálogo oficial PDF (13 nov, pdftotext -bbox-layout) → los cortos de los 53 programas (sidecar que lee el crudo; manda sobre boletines/IG)"
+  },
+  {
    "cmd": "python3 pipeline/bogoshorts-2026-crudo.py",
    "que": "la grilla PDF (pdftotext -bbox) → crudo: 129 funciones"
   },
@@ -30,10 +34,18 @@
    "como": "pagina",
    "debe_contener": "%PDF",
    "que": "la grilla de programación que lee el crudo"
+  },
+  {
+   "archivo": "fuentes/bogoshorts-2026/catalogo2026.pdf",
+   "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf",
+   "como": "pagina",
+   "debe_contener": "%PDF",
+   "que": "el catálogo: los cortos de cada programa"
   }
  ],
  "_fuentes_versionadas": {
   "festivals/staging/bogoshorts-2026-programas.json": "los cortos ya publicados de 10 programas; lo lee el crudo",
+  "festivals/staging/bogoshorts-2026-cortos.json": "los cortos de cada programa desde el catálogo oficial (13 nov); lo lee el crudo y manda",
   "festivals/staging/bogoshorts-2026-crudo.json": "la grilla → 119 funciones (formato intermedio)",
   "festivals/staging/bogoshorts-2026-lectura-b.json": "lectura B a ojo de la grilla (por celdas), la lee el verificador",
   "festivals/staging/bogoshorts-2026-lectura-c.json": "lectura C a ojo de la grilla (por días), la lee el verificador",
