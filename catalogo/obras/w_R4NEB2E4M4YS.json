@@ -1,12 +1,18 @@
 {
  "id": "w_R4NEB2E4M4YS",
- "titulo_original": "Sinfonía incompleta de oficios del Fonce",
+ "titulo_original": "Sinfonía incompleta de oficios del fonce",
  "anio": 2024,
  "paises": [
   "CO"
  ],
  "directores": [
   "Nelson Omar Silva Sánchez"
+ ],
+ "aliases": [
+  {
+   "titulo": "Sinfonía incompleta de oficios del Fonce",
+   "tipo": "festival"
+  }
  ],
  "generos": [
   "Documental"
@@ -23,6 +29,7 @@
   }
  ],
  "presentaciones": [
+  "ficfusa-2026",
   "siembrafest-2026"
  ]
 }

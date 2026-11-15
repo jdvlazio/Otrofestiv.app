@@ -162,6 +162,24 @@ def guardar(fid, d):
     io.open(ruta(fid), 'w', encoding='utf-8').write(json.dumps(d, ensure_ascii=False, indent=1) + '\n')
 
 
+def registrar(fid, cosas, t=None):
+    """Agrega al inventario las fuentes `cosas` ({url_normal: {tipo, visto_en}})
+    que aún no estén (en cualquier estado: sin-revisar, usada o descartada).
+    Devuelve la lista de las nuevas. Lo usa el vigía para los enlaces escritos
+    en los posts (14 nov 2026)."""
+    d = cargar(fid)
+    t = t or ahora()
+    nuevos = []
+    for u, c in sorted(cosas.items()):
+        if u in d['items']:
+            continue
+        d['items'][u] = {**c, 'primera_vez': t, 'ultima_vez': t, 'estado': 'sin-revisar'}
+        nuevos.append(u)
+    if nuevos:
+        guardar(fid, d)
+    return nuevos
+
+
 def vivos():
     cfg = open(os.path.join(REPO, 'src', 'config.js'), encoding='utf-8').read()
     hoy = (datetime.datetime.now(datetime.UTC).replace(tzinfo=None) - datetime.timedelta(hours=5)).date().isoformat()

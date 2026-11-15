@@ -247,6 +247,41 @@ se conserva el del festival).
 
 **El pre-onboarding se cierra completo** (`[preonboarding-completo]`, 18 oct 2026): un festival que todavía no salió y ya tiene `<fid>-catalogo.json` no pasa los validadores si alguna obra no tiene afiche ni su porqué en `sin_afiche`. Medir con `python3 pipeline/preonboarding.py`.
 
+#### Paso 2·bis · Obras sin ficha: el registro de altas (15 nov 2026)
+
+«¿Tiene ficha en TMDB? ¿Tiene afiche original? ¿Se da de alta?» se decide con
+**evidencia escrita**, no con el criterio libre de quien investigue (BOGOSHORTS:
+ayudantes que dijeron cumplir y no miraron las fuentes de afiche; una ficha
+declarada a mano; un afiche recortado a mano; un título en NFD). Todo pasa por
+`pipeline/altas.py` y queda en `festivals/staging/<fid>-altas.json`:
+
+1. `python3 pipeline/altas.py <fid> --sondar` — lo corre `correr.py` solo tras
+   enriquecer en pre-onboarding (o con `"altas": true` en el plan). TMDB por
+   título, variantes (sin acentos, sin subtítulo, original/inglés, con y sin
+   año), filmografía de cada director (movie + tv) e IMDb `/find`. Ficha
+   existente **solo** si casa el candado (director ✓ + año ±1 o duración ±3), y
+   entonces escribe ella misma la ficha en `fichas` con `_registro`.
+2. `--pendientes` — por obra, las fuentes de `FUENTES_OBLIGATORIAS` (en
+   `altas.py`, única lista) sin evidencia. Cada una se anota con
+   `--fuente <título> <clave> <url> --resultado "…"`, o
+   `--na <título> <clave> --por-que "…"` (un videoclip suma
+   `canal_oficial_artista` y suele justificar N/A en las demás). Sin URL ni
+   porqué la fuente **no está revisada**.
+3. `--preparar <título> --url <afiche> --origen "<dónde>"` — baja el afiche a
+   `fuentes/<fid>/altas/`, lo pasa por `afiche_criterio`, lo deja en JPG con
+   proporción 0,66–0,71 (recorte centrado, documentado en el registro),
+   normaliza el título a NFC y emite `<slug>.tmdb.json` para los helpers del
+   skill tmdb-alta (`wiz` / `personas` / `alta`). En Chrome solo se ejecuta eso.
+   Sin afiche que sirva: `--sin-afiche <título> --por-que "…"`.
+4. `--registrar-alta <título> <tmdb_id>` — marca `alta_hecha` y escribe la ficha
+   en `fichas`. **Ninguna ficha se escribe a mano.**
+
+Guardianes: `[alta-sin-evidencia]` (festival por salir: toda obra sin ficha con
+su entrada completa), `[ficha-sin-registro]` (toda ficha nueva de `fichas` con
+entrada `ficha_existente`/`alta_hecha` del mismo tmdb_id), `[titulo-nfc]`
+(crudos/catálogos de staging en NFC). Deuda congelada en
+`pipeline/altas-deuda.json`; baja con `python3 pipeline/altas.py --bajar-deuda`.
+
 ### Paso 3 · Sedes
 
 **Primero la tabla canónica, a mano.** La fuente nombra el mismo lugar de

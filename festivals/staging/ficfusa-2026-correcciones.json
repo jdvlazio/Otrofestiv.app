@@ -48,6 +48,12 @@
   },
   "Camino a la primera cumbre de mujeres del Sumapaz": {
    "_por_que": "no está en el catálogo de la web; aparece solo en el PDF del 11 nov, sin dirección ni ficha"
+  },
+  "Sinfonía incompleta de oficios del fonce": {
+   "_por_que": "sin ficha TMDB; la única imagen conocida es la tarjeta de sección de SiembraFest (no se hereda). Lámina de FICFUSA 15 nov solo trae el título"
+  },
+  "Victorias y Glorias: Relatos de Campeonas": {
+   "_por_que": "sin ficha TMDB; la única imagen conocida es la tarjeta de sección de SiembraFest (no se hereda). Lámina de FICFUSA 15 nov solo trae el título"
   }
  },
  "fichas": {
@@ -119,6 +125,11 @@
    "poster": "/assets/popayan-2026/animista.jpg",
    "_fuente": "https://www.themoviedb.org/movie/1817272",
    "_por_que": "alta del 4 nov 2026 con el afiche y el laurel de Popayán (Juan: el laurel se deja). Sin fecha en TMDB: el año está en conflicto, FICFUSA 2024 contra Popayán y Cinecorto 2026; duración 8 min según el catálogo (8:19)"
+  },
+  "Cayenas libertarias": {
+   "tmdb": 1737961,
+   "_fuente": "https://www.themoviedb.org/movie/1737961",
+   "_por_que": "única obra con ese título: documental de Javier Camilo Aranguren Montañez (Casanare, 2025, 17–20 min) según cinecorto.co, Cinemateca de Bogotá y la selección de FICICA y FICDEH 2026; la ficha TMDB es de ese director"
   }
  },
  "no_heredar": {
@@ -127,6 +138,12 @@
   },
   "Puntos de fuga": {
    "_por_que": "No es la de FICCI 65 (Leo Schatzl, 2005): esta es de Lina Rodríguez, 2025."
+  },
+  "Sinfonía incompleta de oficios del fonce": {
+   "_por_que": "la imagen de SiembraFest es su tarjeta de sección (laurel «Siembra Fest · Selección oficial 2026» y encabezado de programa), no el afiche de la obra — revisada a ojo 15 nov"
+  },
+  "Victorias y Glorias: Relatos de Campeonas": {
+   "_por_que": "la imagen de SiembraFest es su tarjeta de sección (laurel «Siembra Fest · Selección oficial 2026» y encabezado de programa), no el afiche de la obra — revisada a ojo 15 nov"
   }
  },
  "misma_obra": {

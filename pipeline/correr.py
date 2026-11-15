@@ -112,6 +112,19 @@ def main():
             _c = lib.sellar_build(fid, i, p['cmd'])
             print(f'    sello: {_c["por"]} · plan {_c["plan_sha"]} · {_c["fecha"]}')
 
+    # EL REGISTRO DE ALTAS (15 nov 2026): tras enriquecer, las obras sin ficha se
+    # sondean en TMDB y quedan con su evidencia en <fid>-altas.json. Por defecto en
+    # pre-onboarding (festival por salir); en otro caso, si el plan declara
+    # `"altas": true`. `"altas": false` lo apaga.
+    import altas
+    _q = plan.get('altas')
+    if not solo and _q is not False and (_q or fid in altas.por_salir()):
+        print(f'\n─── registro de altas: python3 pipeline/altas.py {fid} --sondar')
+        if not os.environ.get('TMDB_API_KEY'):
+            print('⚠ sin TMDB_API_KEY: no se sondea; correr a mano con la llave')
+        elif subprocess.run(['python3', 'pipeline/altas.py', fid, '--sondar', '--pendientes'], cwd=REPO).returncode:
+            sys.exit('✗ altas.py --sondar falló')
+
     print(f'\n═══ sidecars después:')
     print('\n'.join(inventario(fid)))
     print('\n→ ahora: python3 validate.py && node scripts/validate-festivals.js')
