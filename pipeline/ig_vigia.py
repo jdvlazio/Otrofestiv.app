@@ -41,6 +41,7 @@ import sys
 import urllib.request
 from datetime import datetime, timedelta
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CONFIG = os.path.join(RAIZ, 'src', 'config.js')
 CUENTAS = os.path.join(RAIZ, 'pipeline', 'ig-vigia-cuentas.json')
@@ -380,6 +381,7 @@ def vigilar_fb(cuentas_json, estado, ahora, token, informe, saldo_apify=None, fu
             informe['nuevos_facebook'].append({'festival': p['id'], 'fecha': ts, 'post': it.get('url'),
                                                'imagenes': len(it.get('media') or []),
                                                'texto': (it.get('text') or '')[:300]})
+            anotar_enlaces(informe, [p['id']], it.get('url'), it.get('text') or '')
 
 
 def apify_saldo(token):
@@ -605,6 +607,68 @@ def cascada(cuentas, estado, ahora, fuentes):
     return nuevos, sin_leer, via
 
 
+# ── Enlaces escritos en los posts (14 nov 2026) ──────────────────────────
+# @bogoshorts publicó 5 bit.ly en un pie (catálogos, programación y la
+# boletería de la Cinemateca) y ninguno entró al inventario de fuentes: el
+# vigía guardaba el texto pero nadie abría sus enlaces. Ahora cada URL del pie
+# se resuelve (acortadores) y entra a festivals/staging/<fid>-fuentes.json como
+# `sin-revisar`, con el post como origen; FUENTES_NUEVAS lo lista en el informe.
+_URL = re.compile(r'(?:https?://|(?<![\w@.])(?:www\.)?(?:[a-z0-9-]+\.)+(?:ly|ee|gl|co|com|org|net|gov|edu|io|me|ai|link|bio|app|site|info|tv|to|cl|ar|mx|pe|ec|br)/)[^\s<>"\'()\[\]{}]*', re.I)
+
+
+def extraer_urls(texto):
+    """Todas las URLs del pie, con o sin esquema (bit.ly/xxx → https://bit.ly/xxx), sin duplicar."""
+    out = []
+    for m in _URL.finditer(texto or ''):
+        u = m.group(0).rstrip('.,;:!?…»”’')
+        if not u.lower().startswith('http'):
+            u = 'https://' + u
+        if u not in out:
+            out.append(u)
+    return out
+
+
+def resolver(url, timeout=6):
+    """Sigue las redirecciones (bit.ly, linktr.ee…); si falla, la URL tal cual."""
+    try:
+        req = urllib.request.Request(url, method='HEAD', headers={'User-Agent': 'Mozilla/5.0'})
+        with urllib.request.urlopen(req, timeout=timeout) as r:
+            return r.geturl() or url
+    except Exception:
+        return url
+
+
+def fid_inventario(fid):
+    """cinetoro2026 → cinetoro-2026 (mismo nombre que usa fuentes_descubrir.vivos)."""
+    return fid if re.search(r'-\d{4}$', fid) else re.sub(r'([a-z]+)(\d+)$', r'\1-\2', fid)
+
+
+def registrar_enlaces(fid, post, texto, resolver=resolver, t=None):
+    """Registra en el inventario de `fid` las URLs del pie; devuelve las nuevas.
+    Si el festival aún no tiene inventario no se lo inventa: devuelve None."""
+    import fuentes_descubrir as fd
+    f = fid_inventario(fid)
+    if not os.path.exists(fd.ruta(f)):
+        return None
+    cosas = {}
+    for u in extraer_urls(texto):
+        try:
+            n = fd.normal(resolver(u))
+        except ValueError:
+            continue
+        cosas.setdefault(n, {'tipo': fd.clasificar(n) or 'enlace-post', 'visto_en': post, 'enlace_en_post': u})
+    return fd.registrar(f, cosas, t) if cosas else []
+
+
+def anotar_enlaces(informe, fids, post, texto):
+    for fid in fids:
+        r = registrar_enlaces(fid, post, texto)
+        if r is None and extraer_urls(texto):
+            informe.setdefault('ENLACES_SIN_INVENTARIO', {}).setdefault(fid, []).extend(extraer_urls(texto))
+        elif r:
+            informe.setdefault('FUENTES_NUEVAS', {}).setdefault(fid_inventario(fid), []).extend(r)
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--simular', action='store_true')
@@ -656,6 +720,8 @@ def main():
             informe['nuevos'].append({'cuenta': c, 'fecha': ts, 'post': f"https://www.instagram.com/p/{it['shortCode']}/",
                                       'laminas': len(it.get('childPosts') or it.get('images') or []) or 1,
                                       'texto': (it.get('caption') or '')[:300]})
+            anotar_enlaces(informe, [v['id'] for v in ahora_toca if v['cuenta'] == c],
+                           f"https://www.instagram.com/p/{it['shortCode']}/", it.get('caption') or '')
     informe['NO_PUDE_LEER'] = sin_leer
     # Bright Data es la fuente principal: si no lee una cuenta varias corridas
     # seguidas, el respaldo se gasta en silencio aunque la cuenta «se lea».
