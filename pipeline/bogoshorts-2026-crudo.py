@@ -39,6 +39,9 @@ PDF = f'{REPO}/fuentes/bogoshorts-2026/programacion2026.pdf'
 URL = 'https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf'
 OUT = f'{REPO}/festivals/staging/bogoshorts-2026-crudo.json'
 PROG = f'{REPO}/festivals/staging/bogoshorts-2026-programas.json'
+_CM = f'{REPO}/festivals/staging/bogoshorts-2026-cinemateca.json'   # bogoshorts-2026-cinemateca.py
+BOLETA = {(c['dia'], c['hora'], c['sala']): c for c in json.load(open(_CM, encoding='utf-8'))['funciones']} \
+    if os.path.exists(_CM) else {}
 CORTOS = f'{REPO}/festivals/staging/bogoshorts-2026-cortos.json'
 DIAS = ['2026-12-01', '2026-12-02', '2026-12-03', '2026-12-04',
         '2026-12-05', '2026-12-06', '2026-12-07', '2026-12-08']
@@ -226,6 +229,10 @@ def main():
                 f['seccion'] = 'Franja Encuentros Cercanos'
         # «* Entrada con invitación»: un asterisco solo (** es Q&A, *** Encuentros)
         f['acceso'] = 'Entrada con invitación' if re.search(r'(?<!\*)\*(?!\*)', txt) else DESCONOCIDO
+        # la sala vende: el enlace de TuBoleta de esa función en la agenda de la Cinemateca
+        b = BOLETA.get((f['dia'], f['hora'], f['sala'])) if e[2] == 'Cinemateca de Bogotá' else None
+        if b:
+            f['acceso'], f['ticket_url'] = 'Con boleta', b['ticket_url']
         if f.get('codigo') in progs:
             f['obras'] = progs[f['codigo']]
         funciones.append(f)
