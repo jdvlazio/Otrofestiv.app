@@ -599,7 +599,7 @@ export function renderMiPlanCalendar(state){
           <div class="mplan-t1 mp-abierta${_isPastRow?' mp-past':''}">${_lbl}</div>
           <div class="mplan-t2">${t('vas_cuando_quieras')}</div>
           <div>${_dt}</div>
-          <div class="mplan-rvenue mp-event-venue">${ICONS.pin} ${vcfg(s.venue).short||s.venue}${venueCity(s.venue)?` · <span class="plist-city">${venueCity(s.venue)}</span>`:''}</div>
+          <div class="mplan-rvenue mp-event-venue" data-action="openVenueSheet" data-venue="${String(s.venue||'').replace(/"/g,'&quot;')}">${ICONS.pin} ${vcfg(s.venue).short||s.venue}${venueCity(s.venue)?` · <span class="plist-city">${venueCity(s.venue)}</span>`:''}</div>
         </div>
         <div class="col-end">
           <button class="icon-btn-circle ag-fi-btn del" data-title="${safeT}" data-action="removeFromAgenda" data-stop="1" aria-label="${t('plan_sacar')}">${ICONS.x}</button>
@@ -710,7 +710,7 @@ export function renderMiPlanCalendar(state){
             return `<span class="mp-void-t">${_fin}</span>`;
           })()}${_voidFix}${prioritized.has(s._title)?` <span class="txt-amber60-xs">${ICONS.bookmarkFill}</span>`:''}${_rowStars?` <span class="txt-amber-sm">${_rowStars}</span>`:''}${isNow?` <span class="txt-green-semi">${t('label_en_curso_min')}</span>`:''}</div>
           <div>${(()=>{const{displayTitle:_dt,progSuffix:_ps}=parseProgramTitle(s._title||'');const _mfqa=FILMS.find(fi=>sameEntry(fi,s));const _qab=_mfqa?.has_qa?`<span class="meta-badge sm">Q&A</span>`:'';return`<div class="mplan-rtitle${_isEventRow?' mp-event-title':''}"><span class="mplan-rtitle-txt">${_dt}</span>${_qab}</div>${_ps?`<div class="prog-suffix">${_ps}</div>`:''}`;})()} </div>
-          <div class="mplan-rvenue${_isEventRow?' mp-event-venue':''}">${ICONS.pin} ${vcfg(s.venue).short||s.venue}${venueCity(s.venue)?` · <span class="plist-city">${venueCity(s.venue)}</span>`:''}${sala(s)?' \u00b7 '+sala(s):''}</div>
+          <div class="mplan-rvenue${_isEventRow?' mp-event-venue':''}" data-action="openVenueSheet" data-venue="${String(s.venue||'').replace(/"/g,'&quot;')}">${ICONS.pin} ${vcfg(s.venue).short||s.venue}${venueCity(s.venue)?` · <span class="plist-city">${venueCity(s.venue)}</span>`:''}${sala(s)?' \u00b7 '+sala(s):''}</div>
           ${_sesionDeBloque(s)}
           ${_filaBoleta(s)}
           ${(()=>{const _mf=FILMS.find(fi=>sameEntry(fi,s));if(!_mf||!_mf.is_cortos||!_mf.film_list||!_mf.film_list.length) return'';return`<button class="row-xs mplan-prog-toggle" data-action="toggleMplanProg">${ICONS.chevronR} ${t('label_programa')}</button>`;})()}
