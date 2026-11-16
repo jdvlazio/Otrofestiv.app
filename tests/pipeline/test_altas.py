@@ -106,6 +106,44 @@ class Sondar(Base):
         self.assertFalse(os.path.exists(os.path.join(self.r, 'festivals/staging/x-correcciones.json')))
 
 
+    def test_parcial_no_cuenta(self):
+        A.anotar_fuente('x', 'Lluvia', 'organismo_nacional', url='https://www.google.com/search?q=lluvia',
+                        resultado='búsqueda web', raiz=self.r, parcial='no se abrió el buscador de Proimágenes')
+        e = self.rd('festivals/staging/x-altas.json')['obras']['Lluvia']
+        self.assertFalse(A.revisada(e['fuentes']['organismo_nacional']))
+        self.assertIn('organismo_nacional', A.pendientes('x', self.r)['Lluvia'])
+        with self.assertRaises(SystemExit):
+            A.anotar_fuente('x', 'Lluvia', 'imdb', url='https://imdb.com/x', raiz=self.r, parcial=' ')
+
+    def _respaldo(self, parcial=None):
+        A.anotar_fuente('x', 'Lluvia', 'imdb', url='https://www.imdb.com/title/tt1/', resultado='tt1', raiz=self.r)
+        A.anotar_fuente('x', 'Lluvia', 'letterboxd', url='https://letterboxd.com/film/lluvia/',
+                        resultado='TMDB 7', raiz=self.r, parcial=parcial)
+
+    def test_ficha_a_mano_con_evidencia_y_respaldo(self):
+        self._respaldo()
+        self.api = {'/movie/7': {'credits': {'crew': [{'job': 'Director', 'name': 'Ana Pérez Gómez'}]}}}
+        A.registrar_ficha('x', 'Lluvia', 7, 'misma directora y sinopsis', ['imdb', 'letterboxd'], self.r)
+        e = self.rd('festivals/staging/x-altas.json')['obras']['Lluvia']
+        self.assertEqual((e['estado'], e['tmdb_id']), ('ficha_existente', 7))
+        self.assertEqual(self.rd('festivals/staging/x-correcciones.json')['fichas']['Lluvia']['tmdb'], 7)
+        self.assertEqual(A.fichas_sin_registro(self.r), {})
+
+    def test_ficha_a_mano_sin_respaldo_o_evidencia_o_director_no_entra(self):
+        self._respaldo(parcial='solo búsqueda web')
+        self.api = {'/movie/7': {'credits': {'crew': [{'job': 'Director', 'name': 'Ana Pérez Gómez'}]}}}
+        for args in (('', ['imdb', 'letterboxd']),           # sin evidencia
+                     ('misma directora', ['imdb']),          # una sola fuente
+                     ('misma directora', ['imdb', 'letterboxd'])):  # letterboxd es parcial
+            with self.assertRaises(SystemExit):
+                A.registrar_ficha('x', 'Lluvia', 7, *args, raiz=self.r)
+        self._respaldo()
+        self.api = {'/movie/7': {'credits': {'crew': [{'job': 'Director', 'name': 'Otra Persona'}]}}}
+        with self.assertRaises(SystemExit):
+            A.registrar_ficha('x', 'Lluvia', 7, 'misma directora', ['imdb', 'letterboxd'], self.r)
+        self.assertNotIn('fichas', self.rd('festivals/staging/x-correcciones.json') if os.path.exists(
+            os.path.join(self.r, 'festivals/staging/x-correcciones.json')) else {})
+
 class Preparar(Base):
     def img(self, w, h):
         from PIL import Image, ImageDraw
