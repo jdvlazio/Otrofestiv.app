@@ -115,5 +115,36 @@ class Almacen(Base):
         self.assertEqual(S.sin_evidencia_nueva(self.r), [])
 
 
+class Ficha(Base):
+    def test_ficha_desde_plan_publicado_y_funciones(self):
+        self.geo('a-2026', {'Cinemateca de Bogotá - Bogotá': {'lat': 4.6105, 'lng': -74.0705, '_prec': 'manual'}})
+        plan = {'festival': {'festivalEndStr': '2099-12-31T23:59:00', 'city': 'Bogotá',
+                             'sedes': {'Cinemateca Sala 2': ['Cinemateca de Bogotá - Bogotá', 'Sala 2']}}}
+        json.dump(plan, open(f'{self.r}/pipeline/a-2026.plan.json', 'w'))
+        os.makedirs(f'{self.r}/festivals', exist_ok=True)
+        json.dump({'venues': {'Cinemateca de Bogotá - Bogotá': {'short': 'Cinemateca', 'city': 'Bogotá',
+                                                                'address': 'Cra. 3 # 19-10'}},
+                   'films': [{'venue': 'Cinemateca de Bogotá - Bogotá', 'sala': 'Sala Capital'}]},
+                  open(f'{self.r}/festivals/a-2026.json', 'w'), ensure_ascii=False)
+        S.construir(self.r)
+        sid, e = self.unico()
+        self.assertEqual((e['ciudad'], e['corto'], e['address']), ('Bogotá', 'Cinemateca', 'Cra. 3 # 19-10'))
+        self.assertEqual(e['salas'], ['Sala 2', 'Sala Capital'])
+        self.assertIn('Cinemateca Sala 2', e['alias'])
+        hit = S.buscar('Cinemateca Sala 2', (4.61, -74.07), raiz=self.r)          # la grafía cruda resuelve
+        self.assertEqual((hit['_matriz'], hit['ciudad'], hit['corto']), (sid, 'Bogotá', 'Cinemateca'))
+
+    def test_lo_fijado_a_mano_no_se_pisa(self):
+        self.geo('a-2026', {'Teatro X - Cali': {'lat': 3.4, 'lng': -76.5}})
+        S.construir(self.r)
+        m = S.leer(self.r)
+        sid = next(iter(m['sedes']))
+        m['sedes'][sid]['corto'] = 'El Teatro'
+        S._escribir(m, self.r)
+        S.construir(self.r)
+        self.assertEqual(S.leer(self.r)['sedes'][sid]['corto'], 'El Teatro')
+        self.assertEqual(S.leer(self.r)['sedes'][sid]['ciudad'], 'Cali')
+
+
 if __name__ == '__main__':
     unittest.main()
