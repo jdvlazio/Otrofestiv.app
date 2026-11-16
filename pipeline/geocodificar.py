@@ -12,6 +12,9 @@ geocoding pagadas con bugs:
     landuse se descartan, salvo para las sedes listadas en `_barrios_ok` del
     sidecar (los puntos de un ciclo itinerante sí son barrios y canchas).
 
+Una sede que ya está en la MATRIZ (catalogo/sedes.json, pipeline/sedes.py)
+entra con su pin, `_prec:"matriz"`, antes de preguntarle a Nominatim.
+
 Las coordenadas con `_prec:"manual"` son verificación humana y NO SE TOCAN —
 correr el geocoder dos veces pisó 40 verificaciones de Juan en FICDEH.
 
@@ -121,6 +124,16 @@ def main():
             ya += 1; continue                      # verificación humana: intocable
         if prev.get('lat'):
             ya += 1; continue
+        # LA MATRIZ DE SEDES PRIMERO (16 nov 2026, catalogo/sedes.json): una
+        # sede que ya ubicamos en otro festival entra con ESE pin verificado, no
+        # se vuelve a buscar ni se copia a mano. Solo las nuevas van a Nominatim.
+        import sedes as _matriz
+        hit = _matriz.buscar(s, (lat0, lng0), radio_m=radio * 111000)
+        if hit:
+            geo[s] = {**prev, **hit, 'n': meta['n']}
+            ok += 1
+            print(f'[{i:2}] MZ  {s[:44]:46} {hit["_matriz"]}', flush=True)
+            continue
         # LA DIRECCIÓN, CUANDO EL FESTIVAL LA PUBLICA (23 sep 2026). Nominatim
         # no conoce «Auditorio Juan Carlos Escobar» ni «Cineprox Mayorca», pero
         # sí conoce «carrera 51 # 51-55, Itagüí». Itagüí imprime las SIETE

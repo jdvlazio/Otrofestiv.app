@@ -5553,6 +5553,38 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar pipeline-circuito: {_e}')
 
+# ── [sede-matriz] un lugar, un pin: la matriz de sedes ─────────────────────────
+# 16 nov 2026 (Juan: «así como hay una de películas, las sedes deberían vivir en
+# un archivo matriz»). catalogo/sedes.json la arma pipeline/sedes.py desde los
+# venues-geo. Frena: (a) la matriz atrasada respecto de los venues-geo (un pin
+# nuevo que no pasó por ella); (b) un pin de festival que se aparta más de
+# TOLERANCIA_M de su lugar ya resuelto. Los lugares en `_divergentes` (dos pines
+# viejos que no coinciden) se avisan: los resuelve una persona con --elegir.
+check = 'sede-matriz'
+try:
+    import sys as _sysm, json as _jm
+    _sysm.path.insert(0, 'pipeline')
+    import sedes as _sm
+    _mz = _sm.leer()
+    if not _mz:
+        fail(check, 'no existe catalogo/sedes.json — python3 pipeline/sedes.py --construir')
+    else:
+        _vistos = {(_f, _k) for _f, _k, _n, _v in _sm.pines()}
+        _en_mz = {(_f, _k) for _e in _mz['sedes'].values() for _f in _e['festivales'] for _k in _e['nombres']}
+        _nuevos = sorted({_f for _f, _k in _vistos} - {_f for _e in _mz['sedes'].values() for _f in _e['festivales']})
+        _sin = sorted(f'{_f}:{_k}' for _f, _k in _vistos if not any(_k in _e['nombres'] and _f in _e['festivales'] for _e in _mz['sedes'].values()))
+        _ap = _sm.apartados()
+        if _sin:
+            fail(check, f'{len(_sin)} pin(es) de venues-geo que la matriz no tiene — python3 pipeline/sedes.py --construir: ' + ', '.join(_sin[:6]))
+        elif _ap:
+            fail(check, 'pin(es) que se apartan de su lugar en la matriz: ' + ', '.join(f'{a}:{b} a {d} m de {c}' for a, b, c, d in _ap[:6]))
+        else:
+            ok(check, f'{len(_mz["sedes"])} lugares en la matriz; todo pin de festival coincide con el suyo')
+        if _mz.get('_divergentes'):
+            warn(check, f'{len(_mz["_divergentes"])} lugar(es) con pines que no coinciden entre festivales — python3 pipeline/sedes.py --divergentes / --elegir: ' + ', '.join(list(_mz['_divergentes'])[:5]))
+except Exception as _e:
+    fail(check, f'el guardián no pudo correr: {_e}')
+
 # ── [sedes-apiladas] + [sala-en-sede] — los guardianes de datos de sede ───────
 # Aprobados tras FICDEH. (a) dos sedes del mismo festival a <60 m casi siempre
 # son la MISMA con dos nombres (63 de 120 apiladas en el geocoding v1); si es
