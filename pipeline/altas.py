@@ -366,9 +366,12 @@ def registrar_ficha(fid, titulo, tmdb_id, evidencia, respaldo, raiz=REPO):
     if not (evidencia or '').strip():
         sys.exit('--ficha necesita --evidencia: por qué es ESA obra (director, año, duración, sinopsis)')
     fu = e.get('fuentes') or {}
-    malas = [k for k in respaldo if not (revisada(fu.get(k)) and fu[k].get('url'))]
+    # tmdb_* es TMDB mismo: no confirma desde afuera (16 nov 2026, tanda 2: una
+    # ficha entró con letterboxd + tmdb_director, y Letterboxd copia de TMDB)
+    malas = [k for k in respaldo if k.startswith('tmdb_')
+             or not (revisada(fu.get(k)) and fu[k].get('url'))]
     if len(set(respaldo)) < 2 or malas:
-        sys.exit(f'--respaldo pide 2+ fuentes del registro revisadas con URL; no sirven: {malas or respaldo}')
+        sys.exit(f'--respaldo pide 2+ fuentes EXTERNAS del registro (no tmdb_*), revisadas con URL; no sirven: {malas or respaldo}')
     det = _tmdb(f'/movie/{tmdb_id}', language='en-US', append_to_response='credits')
     if not det:
         sys.exit(f'TMDB {tmdb_id} no existe o no respondió')
