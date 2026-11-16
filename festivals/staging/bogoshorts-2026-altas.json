@@ -3414,8 +3414,50 @@
      "url": "https://www.themoviedb.org/person/5753356",
      "fecha": "2026-11-15",
      "resultado": "Jairo Arcos (5753356): dirige 0"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/find/?q=Para%C3%ADso%20Jairo%20Arcos",
+     "fecha": "2026-11-16",
+     "resultado": "Sin título; Jairo Arcos (nm6954767/nm10122668) sin esta obra."
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/Para%C3%ADso%20Arcos/",
+     "fecha": "2026-11-16",
+     "resultado": "Sin resultado para Paraíso/Paradise de Jairo Arcos."
+    },
+    "web_director_o_productora": {
+     "url": "https://www.signos.com.co",
+     "fecha": "2026-11-16",
+     "resultado": "Signos Studio (productora del director); sin página de la obra hallada."
+    },
+    "distribuidora_o_agencia": {
+     "na": true,
+     "por_que": "Obra VR producida por Signos Studio (director/productor Oscar Arcos); sin distribuidora en catálogo ni web.",
+     "fecha": "2026-11-16"
+    },
+    "plataformas_festivales": {
+     "url": "https://www.bing.com/search?q=%22Para%C3%ADso%22+%22Jairo+Arcos%22+experiencia+inmersiva",
+     "fecha": "2026-11-16",
+     "resultado": "Sin FilmFreeway/Festhome; solo BOGOSHORTS. Short Film Depot pide sesión y Festhome sin catálogo público (no mirados por dentro)."
+    },
+    "festivales_previos": {
+     "url": "https://www.bing.com/search?q=%22Para%C3%ADso%22+%22Jairo+Arcos%22+experiencia+inmersiva",
+     "fecha": "2026-11-16",
+     "resultado": "Premier colombiana en Competencia VR BOGOSHORTS; sin otros festivales hallados."
+    },
+    "organismo_nacional": {
+     "url": "https://www.proimagenescolombia.com/secciones/buscador/buscador_general_resultado.php?buscar=Arcos",
+     "fecha": "2026-11-16",
+     "resultado": "Proimágenes: búsqueda «Arcos» y «Paraiso» sin la obra."
+    },
+    "busqueda_imagenes": {
+     "url": "https://festival.bogoshorts.com/corto/4423",
+     "fecha": "2026-11-16",
+     "resultado": "Ficha BOGOSHORTS corto/4423 sin afiche (solo foto del director); Bing Imágenes sin afiche."
     }
-   }
+   },
+   "estado": "sin_afiche",
+   "por_que_sin_afiche": "Experiencia VR sin afiche publicado: ficha BOGOSHORTS 4423 solo trae foto del director; Bing Imágenes sin resultado."
   },
   "Pececín": {
    "titulo": "Pececín",
@@ -3435,8 +3477,75 @@
      "url": "https://www.themoviedb.org/search/person?query=Sof%C3%ADa%20Uzc%C3%A1tegui%20Le%C3%B3n",
      "fecha": "2026-11-15",
      "resultado": "Sofía Uzcátegui León: sin perfil en TMDB"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/find/?q=Pecec%C3%ADn",
+     "fecha": "2026-11-16",
+     "resultado": "Sin título; Little Fish tampoco con Uzcátegui."
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/Pecec%C3%ADn/",
+     "fecha": "2026-11-16",
+     "resultado": "Sin resultado (también Little Fish)."
+    },
+    "web_director_o_productora": {
+     "url": "https://www.retinalatina.org/personajes/sofia-uzcategui/",
+     "fecha": "2026-11-16",
+     "resultado": "Perfil de la directora (La macabra); sin web propia de Pececín."
+    },
+    "distribuidora_o_agencia": {
+     "na": true,
+     "por_que": "Contacto del catálogo es la directora (suzk401@gmail.com), autoproducción.",
+     "fecha": "2026-11-16"
+    },
+    "plataformas_festivales": {
+     "url": "https://www.bing.com/search?q=%22Little+Fish%22+OR+%22Pecec%C3%ADn%22+%22Sof%C3%ADa+Uzc%C3%A1tegui%22",
+     "fecha": "2026-11-16",
+     "resultado": "Sin perfil FilmFreeway/Festhome. Short Film Depot pide sesión y Festhome sin catálogo público (no mirados por dentro)."
+    },
+    "festivales_previos": {
+     "url": "https://www.bing.com/search?q=%22Little+Fish%22+OR+%22Pecec%C3%ADn%22+%22Sof%C3%ADa+Uzc%C3%A1tegui%22",
+     "fecha": "2026-11-16",
+     "resultado": "Estreno mundial en BOGOSHORTS 2026 (catálogo): sin festivales previos."
+    },
+    "organismo_nacional": {
+     "url": "https://www.proimagenescolombia.com/secciones/buscador/buscador_general_resultado.php?buscar=Pececin",
+     "fecha": "2026-11-16",
+     "resultado": "Proimágenes: «Pececin» y «Uzcategui» sin resultados."
+    },
+    "busqueda_imagenes": {
+     "url": "https://festival.bogoshorts.com/corto/4323",
+     "fecha": "2026-11-16",
+     "resultado": "Afiche oficial en ficha BOGOSHORTS corto/4323 (338x450); Bing Imágenes sin versión mayor."
     }
-   }
+   },
+   "afiche": {
+    "url": "https://festival.bogoshorts.com/images/peliculas/6ae3dfa630941__Pececi__n_CN-ANI02_Po__ster_24BSFF__1_.png",
+    "fuente": "Afiche oficial en ficha BOGOSHORTS corto/4323",
+    "archivo": "fuentes/bogoshorts-2026/altas/pececin.jpg",
+    "px": [
+     300,
+     450
+    ],
+    "ratio": 0.6667,
+    "recorte": {
+     "de": [
+      338,
+      450
+     ],
+     "caja": [
+      19,
+      0,
+      319,
+      450
+     ],
+     "centrado": true,
+     "objetivo": 0.6667
+    },
+    "veredicto_criterio": null,
+    "fecha": "2026-11-16"
+   },
+   "estado": "afiche_chico"
   },
   "Perjalanan Menuju Surga": {
    "titulo": "Perjalanan Menuju Surga",
@@ -3456,8 +3565,76 @@
      "url": "https://www.themoviedb.org/person/2295793 https://www.themoviedb.org/person/4723939 https://www.themoviedb.org/person/4723938",
      "fecha": "2026-11-15",
      "resultado": "Kenny Gulardi (2295793): dirige 4; Kenny Gulardi (4723939): dirige 0; Kenny Gulardi (4723938): dirige 0"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/find/?q=Perjalanan%20Menuju%20Surga",
+     "fecha": "2026-11-16",
+     "resultado": "Sin título; Kenny Gulardi nm12845530 sin esta obra."
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/Perjalanan%20Menuju%20Surga/",
+     "fecha": "2026-11-16",
+     "resultado": "Sin resultado (también Journey to Heaven)."
+    },
+    "web_director_o_productora": {
+     "url": "https://www.instagram.com/p/Dee1h3jmoX0/",
+     "fecha": "2026-11-16",
+     "resultado": "IG del director con el afiche; productora Minka Rosie Production sin web hallada."
+    },
+    "distribuidora_o_agencia": {
+     "na": true,
+     "por_que": "Contacto del catálogo es el director (gulardiken@gmail.com).",
+     "fecha": "2026-11-16"
+    },
+    "plataformas_festivales": {
+     "url": "https://www.bing.com/search?q=%22Journey+to+Heaven%22+Gulardi+Doha",
+     "fecha": "2026-11-16",
+     "resultado": "Sin FilmFreeway/Festhome. Short Film Depot pide sesión y Festhome sin catálogo público (no mirados por dentro)."
+    },
+    "festivales_previos": {
+     "url": "https://www.dohafilm.com/en/contents/A50FB58F-9335-4CBC-B927-76EE48B288D7",
+     "fecha": "2026-11-16",
+     "resultado": "Estreno mundial en competencia internacional de cortos Doha Film Festival 2026."
+    },
+    "organismo_nacional": {
+     "url": "https://lsf.go.id/film-lulus-Sensor",
+     "fecha": "2026-11-16",
+     "resultado": "",
+     "parcial": "Indonesia: listado LSF «en construcción» y filmindonesia.or.id devuelve 403; no se pudo consultar."
+    },
+    "busqueda_imagenes": {
+     "url": "https://x.com/FilmIndoSource/status/2112494633892942168",
+     "fecha": "2026-11-16",
+     "resultado": "Afiche oficial 3072x4096 (Film Indo Source); en BOGOSHORTS 4214 solo 318x450."
     }
-   }
+   },
+   "afiche": {
+    "url": "https://pbs.twimg.com/media/HVEWo1VbgAAVSom.jpg?name=orig",
+    "fuente": "Afiche oficial (Film Indo Source en X), con laurel Doha",
+    "archivo": "fuentes/bogoshorts-2026/altas/perjalanan-menuju-surga.jpg",
+    "px": [
+     2731,
+     4096
+    ],
+    "ratio": 0.6667,
+    "recorte": {
+     "de": [
+      3072,
+      4096
+     ],
+     "caja": [
+      170,
+      0,
+      2901,
+      4096
+     ],
+     "centrado": true,
+     "objetivo": 0.6667
+    },
+    "veredicto_criterio": null,
+    "fecha": "2026-11-16"
+   },
+   "estado": "alta_posible"
   },
   "Querida A.": {
    "titulo": "Querida A.",
@@ -3477,8 +3654,62 @@
      "url": "https://www.themoviedb.org/person/2579211 https://www.themoviedb.org/person/4378980 https://www.themoviedb.org/person/1476807",
      "fecha": "2026-11-15",
      "resultado": "Elena Molina (2579211): dirige 9; Elena Molina Martinez (4378980): dirige 0; Maria Elena Molina (1476807): dirige 0"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/title/tt27164590/",
+     "fecha": "2026-11-16",
+     "resultado": "IMDb tt27164590 Querida A. (Short 2023); no está en TMDB (find vacío)."
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/Querida%20A./",
+     "fecha": "2026-11-16",
+     "resultado": "Sin resultado (también Dear A.)."
+    },
+    "web_director_o_productora": {
+     "url": "https://elemolina.com/works/querida-a/",
+     "fecha": "2026-11-16",
+     "resultado": "Web de la directora: ficha con afiche, producción CCCB."
+    },
+    "distribuidora_o_agencia": {
+     "url": "https://catalanfilms.cat/es/producciones/querida-a",
+     "fecha": "2026-11-16",
+     "resultado": "Catalan Films la cataloga; producción CCCB, sin distribuidora aparte."
+    },
+    "plataformas_festivales": {
+     "url": "https://www.bing.com/search?q=%22Querida+A.%22+%22Elena+Molina%22",
+     "fecha": "2026-11-16",
+     "resultado": "Sin perfil FilmFreeway/Festhome. Short Film Depot pide sesión y Festhome sin catálogo público (no mirados por dentro)."
+    },
+    "festivales_previos": {
+     "url": "https://dafilmfestival.com/es/movie/querida-a/",
+     "fecha": "2026-11-16",
+     "resultado": "D'A Film Festival 2023, Alcances (Cádiz), Menorca Doc Fest 2023."
+    },
+    "organismo_nacional": {
+     "url": "https://catalanfilms.cat/es/producciones/querida-a",
+     "fecha": "2026-11-16",
+     "resultado": "Registrada en Catalan Films (ICEC, Generalitat); BBDD ICAA da 404."
+    },
+    "busqueda_imagenes": {
+     "url": "https://elemolina.com/wp-content/uploads/2023/05/224-poster_QUERIDA-A..jpg",
+     "fecha": "2026-11-16",
+     "resultado": "Afiche oficial 740x1048 en web de la directora."
     }
-   }
+   },
+   "afiche": {
+    "url": "https://elemolina.com/wp-content/uploads/2023/05/224-poster_QUERIDA-A..jpg",
+    "fuente": "Afiche oficial en web de la directora",
+    "archivo": "fuentes/bogoshorts-2026/altas/querida-a.jpg",
+    "px": [
+     740,
+     1048
+    ],
+    "ratio": 0.7061,
+    "recorte": null,
+    "veredicto_criterio": null,
+    "fecha": "2026-11-16"
+   },
+   "estado": "alta_posible"
   },
   "Querido River Phoenix": {
    "titulo": "Querido River Phoenix",
@@ -3498,8 +3729,63 @@
      "url": "https://www.themoviedb.org/person/4812764",
      "fecha": "2026-11-15",
      "resultado": "Emanuel Schulman (4812764): dirige 0"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/find/?q=Dear%20River%20Phoenix",
+     "fecha": "2026-11-16",
+     "resultado": "Sin título; Emanuel Schulman nm14971910 sin esta obra."
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/Dear%20River%20Phoenix/",
+     "fecha": "2026-11-16",
+     "resultado": "Sin resultado (ni Querido River Phoenix)."
+    },
+    "web_director_o_productora": {
+     "url": "https://www.instagram.com/dearriverphoenix/",
+     "fecha": "2026-11-16",
+     "resultado": "Cuenta IG de la obra (no revisada por dentro: IG sin sesión)."
+    },
+    "distribuidora_o_agencia": {
+     "na": true,
+     "por_que": "Contacto del catálogo es el director (emanuel@schulman.com.br).",
+     "fecha": "2026-11-16"
+    },
+    "plataformas_festivales": {
+     "url": "https://collab.sundance.org/catalog/Dear-River-Phoenix-2026-02-19-062046",
+     "fecha": "2026-11-16",
+     "resultado": "Catálogo Sundance Collab; sin FilmFreeway/Festhome. Short Film Depot pide sesión y Festhome sin catálogo público (no mirados por dentro)."
+    },
+    "festivales_previos": {
+     "url": "https://www.bing.com/search?q=%22Dear+River+Phoenix%22+short+film+2026",
+     "fecha": "2026-11-16",
+     "resultado": "Estreno mundial en BOGOSHORTS (catálogo); sin festivales previos."
+    },
+    "organismo_nacional": {
+     "url": "https://www.gov.br/ancine/",
+     "fecha": "2026-11-16",
+     "resultado": "",
+     "parcial": "Brasil: consulta de CPB de Ancine (SAD) no revisada."
+    },
+    "busqueda_imagenes": {
+     "url": "https://festival.bogoshorts.com/corto/4229",
+     "fecha": "2026-11-16",
+     "resultado": "Afiche oficial en BOGOSHORTS 4229 (318x450); Bing Imágenes sin versión mayor."
     }
-   }
+   },
+   "afiche": {
+    "url": "https://festival.bogoshorts.com/images/peliculas/6ae294c338124__DearRiverPhoenix_CLC-CINE04_FilmPosterEspa__olLaurel_24BSFF.png",
+    "fuente": "Afiche oficial en ficha BOGOSHORTS corto/4229",
+    "archivo": "fuentes/bogoshorts-2026/altas/querido-river-phoenix.jpg",
+    "px": [
+     318,
+     450
+    ],
+    "ratio": 0.7067,
+    "recorte": null,
+    "veredicto_criterio": null,
+    "fecha": "2026-11-16"
+   },
+   "estado": "afiche_chico"
   },
   "Raj’in": {
    "titulo": "Raj’in",
@@ -3519,8 +3805,62 @@
      "url": "https://www.themoviedb.org/search/person?query=Faiz%20Abu%20Rmeleh https://www.themoviedb.org/search/person?query=Keren%20Manor",
      "fecha": "2026-11-15",
      "resultado": "Faiz Abu Rmeleh: sin perfil en TMDB; Keren Manor: sin perfil en TMDB"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/title/tt43680821/",
+     "fecha": "2026-11-16",
+     "resultado": "IMDb tt43680821 We Shall Return (2026, 24m); no está en TMDB (find vacío)."
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/We%20Shall%20Return%202026/",
+     "fecha": "2026-11-16",
+     "resultado": "Sin la obra (solo Crossings (We Shall Return))."
+    },
+    "web_director_o_productora": {
+     "url": "https://www.btselem.org/we-shall-return/index.html",
+     "fecha": "2026-11-16",
+     "resultado": "Página de B'Tselem (coproductora) con afiche."
+    },
+    "distribuidora_o_agencia": {
+     "url": "https://www.btselem.org/we-shall-return/index.html",
+     "fecha": "2026-11-16",
+     "resultado": "Producción NowHere Media / B'Tselem; sin distribuidora aparte."
+    },
+    "plataformas_festivales": {
+     "url": "https://www.bing.com/search?q=%22We+Shall+Return%22+%22Keren+Manor%22",
+     "fecha": "2026-11-16",
+     "resultado": "Sin FilmFreeway/Festhome. Short Film Depot pide sesión y Festhome sin catálogo público (no mirados por dentro)."
+    },
+    "festivales_previos": {
+     "url": "https://www.labiennale.org/en/cinema/2026/venice-immersive/raj%E2%80%99-we-shall-return",
+     "fecha": "2026-11-16",
+     "resultado": "Venice Immersive 2026; DOK Leipzig 2026."
+    },
+    "organismo_nacional": {
+     "url": "https://www.filmportal.de/search?search_api_fulltext=We%20Shall%20Return",
+     "fecha": "2026-11-16",
+     "resultado": "filmportal.de sin la obra; Palestina sin registro público."
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.btselem.org/we-shall-return/poster.jpg",
+     "fecha": "2026-11-16",
+     "resultado": "Afiche oficial 1200x1694; ficha BOGOSHORTS 4381 sin afiche."
     }
-   }
+   },
+   "afiche": {
+    "url": "https://www.btselem.org/we-shall-return/poster.jpg",
+    "fuente": "Afiche oficial en web de B'Tselem (coproductora)",
+    "archivo": "fuentes/bogoshorts-2026/altas/raj-in.jpg",
+    "px": [
+     1200,
+     1694
+    ],
+    "ratio": 0.7084,
+    "recorte": null,
+    "veredicto_criterio": null,
+    "fecha": "2026-11-16"
+   },
+   "estado": "alta_posible"
   },
   "Savia (Alfilera)": {
    "titulo": "Savia (Alfilera)",
@@ -3540,8 +3880,67 @@
      "url": "https://www.themoviedb.org/person/5099459 https://www.themoviedb.org/person/3768952",
      "fecha": "2026-11-15",
      "resultado": "NADIELA (5099459): dirige 0; Nadiela Azalia Mutale (3768952): dirige 0"
+    },
+    "canal_oficial_artista": {
+     "url": "https://www.youtube.com/watch?v=4QGOMkHm3Cg",
+     "fecha": "2026-11-16",
+     "resultado": "Canal Alfilera: Dirección Nadiela; producción Robin Espinoza Farias - Nadiela."
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/find/?q=Savia%20Alfilera",
+     "fecha": "2026-11-16",
+     "resultado": "Sin resultado."
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/Savia%20Nadiela/",
+     "fecha": "2026-11-16",
+     "resultado": "Sin resultado."
+    },
+    "web_director_o_productora": {
+     "url": "https://alfilera.bandcamp.com/track/savia",
+     "fecha": "2026-11-16",
+     "resultado": "Bandcamp de la artista (portada del álbum, no afiche)."
+    },
+    "distribuidora_o_agencia": {
+     "na": true,
+     "por_que": "Videoclip autoproducido; contacto es la directora (nadiela.ec@gmail.com).",
+     "fecha": "2026-11-16"
+    },
+    "plataformas_festivales": {
+     "url": "https://www.bing.com/search?q=Savia+Alfilera+Nadiela+festival+videoclip",
+     "fecha": "2026-11-16",
+     "resultado": "Sin FilmFreeway/Festhome. Short Film Depot pide sesión y Festhome sin catálogo público (no mirados por dentro)."
+    },
+    "festivales_previos": {
+     "url": "https://cortopunzante.com/2026/07/30/alfilera-convierte-el-choque-de-volver-a-la-ciudad-en-un-apocalipsis-vegetal-animado-en-savia/",
+     "fecha": "2026-11-16",
+     "resultado": "Solo prensa musical del estreno; sin festivales previos."
+    },
+    "organismo_nacional": {
+     "na": true,
+     "por_que": "Videoclip: no se registra en organismos de cine de Chile.",
+     "fecha": "2026-11-16"
+    },
+    "busqueda_imagenes": {
+     "url": "https://festival.bogoshorts.com/corto/4344",
+     "fecha": "2026-11-16",
+     "resultado": "Afiche del videoclip en BOGOSHORTS 4344 (318x450); Bing solo portadas/miniaturas."
     }
-   }
+   },
+   "afiche": {
+    "url": "https://festival.bogoshorts.com/images/peliculas/6ae409fe3ba90__SAVIA_CI-VC02_Poster_24BSFF__1_.jpg",
+    "fuente": "Afiche del videoclip en ficha BOGOSHORTS corto/4344",
+    "archivo": "fuentes/bogoshorts-2026/altas/savia-alfilera.jpg",
+    "px": [
+     318,
+     450
+    ],
+    "ratio": 0.7067,
+    "recorte": null,
+    "veredicto_criterio": null,
+    "fecha": "2026-11-16"
+   },
+   "estado": "afiche_chico"
   },
   "Skiladagur": {
    "titulo": "Skiladagur",
@@ -3561,8 +3960,62 @@
      "url": "https://www.themoviedb.org/person/5927411",
      "fecha": "2026-11-15",
      "resultado": "Margrét Seema Takyar (5927411): dirige 1"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/find/?q=Skiladagur",
+     "fecha": "2026-11-16",
+     "resultado": "Sin título; Margret Seema Takyar nm3443964 sin esta obra."
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/Skiladagur/",
+     "fecha": "2026-11-16",
+     "resultado": "Sin resultado (también Return Date)."
+    },
+    "web_director_o_productora": {
+     "url": "https://www.margret-seema-takyar.com/",
+     "fecha": "2026-11-16",
+     "resultado": "Web de la directora sin la obra; productora Hark kvikmyndagerð."
+    },
+    "distribuidora_o_agencia": {
+     "na": true,
+     "por_que": "Contacto del catálogo es la directora (maggietak@gmail.com).",
+     "fecha": "2026-11-16"
+    },
+    "plataformas_festivales": {
+     "url": "https://www.bing.com/search?q=%22Skiladagur%22+Takyar",
+     "fecha": "2026-11-16",
+     "resultado": "Sin FilmFreeway/Festhome. Short Film Depot pide sesión y Festhome sin catálogo público (no mirados por dentro)."
+    },
+    "festivales_previos": {
+     "url": "https://www.bing.com/search?q=%22Skiladagur%22+Takyar",
+     "fecha": "2026-11-16",
+     "resultado": "Estreno mundial en BOGOSHORTS (catálogo); sin festivales previos."
+    },
+    "organismo_nacional": {
+     "url": "https://www.icelandicfilmcentre.is/kvikmyndir/skiladagur",
+     "fecha": "2026-11-16",
+     "resultado": "KMI: Return Date / Skiladagur, Takyar, Hark kvikmyndagerð + Oppheim Film; solo fotograma."
+    },
+    "busqueda_imagenes": {
+     "url": "https://festival.bogoshorts.com/corto/4188",
+     "fecha": "2026-11-16",
+     "resultado": "Afiche oficial en BOGOSHORTS 4188 (450x647); KMI solo fotograma."
     }
-   }
+   },
+   "afiche": {
+    "url": "https://festival.bogoshorts.com/images/peliculas/6ae2545b5044b__ReturnDate_CI-FIC04_PosterHQ_24BSFF__1_.jpg",
+    "fuente": "Afiche oficial en ficha BOGOSHORTS corto/4188",
+    "archivo": "fuentes/bogoshorts-2026/altas/skiladagur.jpg",
+    "px": [
+     450,
+     647
+    ],
+    "ratio": 0.6955,
+    "recorte": null,
+    "veredicto_criterio": null,
+    "fecha": "2026-11-16"
+   },
+   "estado": "afiche_chico"
   },
   "Stadionul Dragostei": {
    "titulo": "Stadionul Dragostei",
@@ -3582,8 +4035,63 @@
      "url": "https://www.themoviedb.org/search/person?query=Jos%C3%A9%20Andr%C3%A9s%20Canales",
      "fecha": "2026-11-15",
      "resultado": "José Andrés Canales: sin perfil en TMDB"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/find/?q=The%20Stadium%20of%20Love",
+     "fecha": "2026-11-16",
+     "resultado": "Sin título."
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/The%20Stadium%20of%20Love/",
+     "fecha": "2026-11-16",
+     "resultado": "Sin resultado (ni Stadionul Dragostei)."
+    },
+    "web_director_o_productora": {
+     "url": "https://www.fcucluj.ro/stire/videograful-universitatii-cluj-jose-canales-premiat-in-cadrul-tiff-romania-scurtmetrajul-stadionul-dragostei-a-castigat-competitia-locala",
+     "fecha": "2026-11-16",
+     "resultado": "Nota del club U Cluj (empleador del director); sin web propia."
+    },
+    "distribuidora_o_agencia": {
+     "na": true,
+     "por_que": "Contacto del catálogo es el director-productor (joseacanalesl@gmail.com).",
+     "fecha": "2026-11-16"
+    },
+    "plataformas_festivales": {
+     "url": "https://www.bing.com/search?q=%22Stadionul+Dragostei%22+Canales",
+     "fecha": "2026-11-16",
+     "resultado": "Sin FilmFreeway/Festhome. Short Film Depot pide sesión y Festhome sin catálogo público (no mirados por dentro)."
+    },
+    "festivales_previos": {
+     "url": "https://stcj.ro/premiu-tiff-pentru-u-cluj-jose-canales-videograful-echipei-a-transformat-fotbalul-in-arta-si-a-cucerit-festivalul-cu-stadionul-dragostei/",
+     "fecha": "2026-11-16",
+     "resultado": "Ganó la competencia local de TIFF (Transilvania) 2026."
+    },
+    "organismo_nacional": {
+     "url": "https://cnc.gov.ro/",
+     "fecha": "2026-11-16",
+     "resultado": "",
+     "parcial": "CNC Rumania bloquea con verificación de navegador (503)."
+    },
+    "busqueda_imagenes": {
+     "url": "https://festival.bogoshorts.com/corto/4278",
+     "fecha": "2026-11-16",
+     "resultado": "Afiche oficial en BOGOSHORTS 4278 (304x450); Bing Imágenes sin versión mayor."
     }
-   }
+   },
+   "afiche": {
+    "url": "https://festival.bogoshorts.com/images/peliculas/6ae380ba4bd9c__TheStadiumofLove_CLC-FUT04_Afiche_2424BSFF_page-0001__1_.jpg",
+    "fuente": "Afiche oficial en ficha BOGOSHORTS corto/4278",
+    "archivo": "fuentes/bogoshorts-2026/altas/stadionul-dragostei.jpg",
+    "px": [
+     304,
+     450
+    ],
+    "ratio": 0.6756,
+    "recorte": null,
+    "veredicto_criterio": null,
+    "fecha": "2026-11-16"
+   },
+   "estado": "afiche_chico"
   },
   "Summer": {
    "titulo": "Summer",
@@ -3626,8 +4134,75 @@
      "url": "https://www.themoviedb.org/person/2766986",
      "fecha": "2026-11-15",
      "resultado": "Marta Hincapié Uribe (2766986): dirige 3"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/find/?q=Susurros%20Hinc",
+     "fecha": "2026-11-16",
+     "resultado": "Sin título; Marta Hincapié Uribe nm12365971 sin esta obra."
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/Susurros%20Hincapi%C3%A9/",
+     "fecha": "2026-11-16",
+     "resultado": "Sin resultado."
+    },
+    "web_director_o_productora": {
+     "url": "https://puertodelaimaginacion.org/marta-hincapie-uribe/",
+     "fecha": "2026-11-16",
+     "resultado": "Perfil de la directora; sin página de Susurros."
+    },
+    "distribuidora_o_agencia": {
+     "na": true,
+     "por_que": "Directora es productora única (catálogo).",
+     "fecha": "2026-11-16"
+    },
+    "plataformas_festivales": {
+     "url": "https://www.bing.com/search?q=%22Susurros%22+%22Marta+Hincapi%C3%A9%22",
+     "fecha": "2026-11-16",
+     "resultado": "Sin FilmFreeway/Festhome. Short Film Depot pide sesión y Festhome sin catálogo público (no mirados por dentro)."
+    },
+    "festivales_previos": {
+     "url": "https://www.bing.com/search?q=%22Susurros%22+%22Marta+Hincapi%C3%A9%22",
+     "fecha": "2026-11-16",
+     "resultado": "Solo BOGOSHORTS (Panorama Experimental); sin festivales previos."
+    },
+    "organismo_nacional": {
+     "url": "https://www.proimagenescolombia.com/secciones/buscador/buscador_general_resultado.php?buscar=Susurros",
+     "fecha": "2026-11-16",
+     "resultado": "Proimágenes: «Susurros» sin resultados; perfil de Marta Hincapié Uribe sin esta obra."
+    },
+    "busqueda_imagenes": {
+     "url": "https://festival.bogoshorts.com/corto/4240",
+     "fecha": "2026-11-16",
+     "resultado": "Afiche oficial en BOGOSHORTS 4240 (253x450); ojo 4200 es otro Susurros (Szepty, Polonia)."
     }
-   }
+   },
+   "afiche": {
+    "url": "https://festival.bogoshorts.com/images/peliculas/6ae2b06f38b3b__susurros_PAC-EXP03_Po__ster_24BSFF__1_.jpg",
+    "fuente": "Afiche oficial en ficha BOGOSHORTS corto/4240",
+    "archivo": "fuentes/bogoshorts-2026/altas/susurros.jpg",
+    "px": [
+     253,
+     380
+    ],
+    "ratio": 0.6658,
+    "recorte": {
+     "de": [
+      253,
+      450
+     ],
+     "caja": [
+      0,
+      35,
+      253,
+      415
+     ],
+     "centrado": true,
+     "objetivo": 0.6667
+    },
+    "veredicto_criterio": null,
+    "fecha": "2026-11-16"
+   },
+   "estado": "afiche_chico"
   },
   "Szepty": {
    "titulo": "Szepty",
