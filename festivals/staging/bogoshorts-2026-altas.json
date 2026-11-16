@@ -121,10 +121,28 @@
      "url": "https://imagenes.portafolio.co/files/image_1200_600/uploads/2026/07/15/6a5798621ea1b.jpeg",
      "fecha": "2026-11-15",
      "resultado": "Única imagen: foto de prensa de Sony; no es afiche."
+    },
+    "pagina_del_festival": {
+     "url": "https://festival.bogoshorts.com/corto/4207",
+     "fecha": "2026-11-16",
+     "resultado": "ficha de la obra en la web del festival; póster oficial 315×450: https://festival.bogoshorts.com/images/peliculas/6ae3d076f2f89__Amara___F3-13_Poster_24BSFF_page-0001__1_.jpg"
     }
    },
-   "estado": "sin_afiche",
-   "por_que_sin_afiche": "Solo foto de prensa de Sony Future Filmmaker Awards; no hay afiche en ninguna fuente"
+   "estado": "afiche_chico",
+   "por_que_sin_afiche": "Solo foto de prensa de Sony Future Filmmaker Awards; no hay afiche en ninguna fuente",
+   "afiche": {
+    "url": "https://festival.bogoshorts.com/images/peliculas/6ae3d076f2f89__Amara___F3-13_Poster_24BSFF_page-0001__1_.jpg",
+    "fuente": "póster oficial de la ficha de la obra en la web del festival (https://festival.bogoshorts.com/corto/4207)",
+    "archivo": "fuentes/bogoshorts-2026/altas/amara.jpg",
+    "px": [
+     315,
+     450
+    ],
+    "ratio": 0.7,
+    "recorte": null,
+    "veredicto_criterio": null,
+    "fecha": "2026-11-16"
+   }
   },
   "Argentina Is Daing (Marttein)": {
    "titulo": "Argentina Is Daing (Marttein)",
@@ -257,6 +275,11 @@
      "url": "https://www.youtube.com/watch?v=3LLbk1jBj58",
      "fecha": "2026-11-15",
      "resultado": "«CRACHE - Berzingue (Official Video)», 22 may 2026."
+    },
+    "pagina_del_festival": {
+     "url": "https://festival.bogoshorts.com/corto/4345",
+     "fecha": "2026-11-16",
+     "resultado": "ficha de la obra en la web del festival, sin póster"
     }
    },
    "estado": "sin_afiche",
@@ -320,10 +343,41 @@
      "url": "https://koubekcenter.org/event/cuban-contemporary-independent-shorts/",
      "fecha": "2026-11-15",
      "resultado": "Sin imágenes de la obra."
+    },
+    "pagina_del_festival": {
+     "url": "https://festival.bogoshorts.com/corto/4331",
+     "fecha": "2026-11-16",
+     "resultado": "ficha de la obra en la web del festival; póster oficial 321×449: https://festival.bogoshorts.com/images/peliculas/6ae3edad4579d__BU_CHI-KIDS01_Poster_espa__ol_24BSFF_jpg.jpg"
     }
    },
-   "estado": "sin_afiche",
-   "por_que_sin_afiche": "La obra no aparece en ninguna fuente en línea; sin imágenes"
+   "estado": "afiche_chico",
+   "por_que_sin_afiche": "La obra no aparece en ninguna fuente en línea; sin imágenes",
+   "afiche": {
+    "url": "https://festival.bogoshorts.com/images/peliculas/6ae3edad4579d__BU_CHI-KIDS01_Poster_espa__ol_24BSFF_jpg.jpg",
+    "fuente": "póster oficial de la ficha de la obra en la web del festival (https://festival.bogoshorts.com/corto/4331)",
+    "archivo": "fuentes/bogoshorts-2026/altas/bu.jpg",
+    "px": [
+     299,
+     449
+    ],
+    "ratio": 0.6659,
+    "recorte": {
+     "de": [
+      321,
+      449
+     ],
+     "caja": [
+      11,
+      0,
+      310,
+      449
+     ],
+     "centrado": true,
+     "objetivo": 0.6667
+    },
+    "veredicto_criterio": null,
+    "fecha": "2026-11-16"
+   }
   },
   "Carta a un joven ladrón": {
    "titulo": "Carta a un joven ladrón",
@@ -383,6 +437,11 @@
      "url": "https://www.bing.com/images/search?q=%22Carta%20a%20un%20joven%20ladr%C3%B3n%22%20afiche",
      "fecha": "2026-11-16",
      "resultado": "Bing Imágenes «Carta a un joven ladrón» afiche/poster: solo libros y notas no relacionadas; sin afiche"
+    },
+    "pagina_del_festival": {
+     "url": "https://festival.bogoshorts.com/corto/4366",
+     "fecha": "2026-11-16",
+     "resultado": "ficha de la obra en la web del festival, sin póster"
     }
    },
    "estado": "sin_afiche",
@@ -446,10 +505,28 @@
      "url": "https://www.bing.com/images/search?q=%22Cartas%20a%20Daniel%20Ap%C3%B3stol%22%20poster",
      "fecha": "2026-11-16",
      "resultado": "Bing Imágenes: solo imágenes bíblicas no relacionadas; sin afiche"
+    },
+    "pagina_del_festival": {
+     "url": "https://festival.bogoshorts.com/corto/4274",
+     "fecha": "2026-11-16",
+     "resultado": "ficha de la obra en la web del festival; póster oficial 318×450: https://festival.bogoshorts.com/images/peliculas/6ae37decb50e3__CartasDaniel_CNDOC05_Poster_Baja_24BSFF__1_.png"
     }
    },
-   "estado": "sin_afiche",
-   "por_que_sin_afiche": "sin afiche en catálogo, redes ni Bing Imágenes; obra en premier mundial sin material público"
+   "estado": "afiche_chico",
+   "por_que_sin_afiche": "sin afiche en catálogo, redes ni Bing Imágenes; obra en premier mundial sin material público",
+   "afiche": {
+    "url": "https://festival.bogoshorts.com/images/peliculas/6ae37decb50e3__CartasDaniel_CNDOC05_Poster_Baja_24BSFF__1_.png",
+    "fuente": "póster oficial de la ficha de la obra en la web del festival (https://festival.bogoshorts.com/corto/4274)",
+    "archivo": "fuentes/bogoshorts-2026/altas/cartas-a-daniel-apostol.jpg",
+    "px": [
+     318,
+     450
+    ],
+    "ratio": 0.7067,
+    "recorte": null,
+    "veredicto_criterio": null,
+    "fecha": "2026-11-16"
+   }
   },
   "Cassandra": {
    "titulo": "Cassandra",
@@ -510,6 +587,11 @@
      "url": "https://www.bing.com/images/search?q=Cassandra%20Mart%C3%ADn%20Arbel%C3%A1ez%20poster",
      "fecha": "2026-11-16",
      "resultado": "Bing Imágenes: solo foto del director en PACCPA y pósters ajenos; sin afiche"
+    },
+    "pagina_del_festival": {
+     "url": "https://festival.bogoshorts.com/corto/4162",
+     "fecha": "2026-11-16",
+     "resultado": "ficha de la obra en la web del festival, sin póster"
     }
    },
    "estado": "sin_afiche",
@@ -573,6 +655,11 @@
      "url": "https://www.bing.com/images/search?q=%22Clasificado%20personal%22%20Juan%20Pablo%20Melo%20afiche",
      "fecha": "2026-11-16",
      "resultado": "Bing Imágenes: homónimos (agente inmobiliario) sin relación; sin afiche"
+    },
+    "pagina_del_festival": {
+     "url": "https://festival.bogoshorts.com/corto/4367",
+     "fecha": "2026-11-16",
+     "resultado": "ficha de la obra en la web del festival, sin póster"
     }
    },
    "estado": "sin_afiche",
@@ -704,10 +791,28 @@
      "url": "https://www.bing.com/images/search?q=%22Complementarios%22%20Mar%20Triana%20afiche",
      "fecha": "2026-11-16",
      "resultado": "Bing Imágenes: posts de IG sin afiche identificable y homónimos; sin afiche"
+    },
+    "pagina_del_festival": {
+     "url": "https://festival.bogoshorts.com/corto/4365",
+     "fecha": "2026-11-16",
+     "resultado": "ficha de la obra en la web del festival; póster oficial 1181×1772: https://festival.bogoshorts.com/images/peliculas/6ae4d1890d016__complementarios_CN-EXP04_poster_24BSFF.jpg"
     }
    },
-   "estado": "sin_afiche",
-   "por_que_sin_afiche": "solo imágenes de proceso en IG de Nebula Cine; sin afiche"
+   "estado": "alta_posible",
+   "por_que_sin_afiche": "solo imágenes de proceso en IG de Nebula Cine; sin afiche",
+   "afiche": {
+    "url": "https://festival.bogoshorts.com/images/peliculas/6ae4d1890d016__complementarios_CN-EXP04_poster_24BSFF.jpg",
+    "fuente": "póster oficial de la ficha de la obra en la web del festival (https://festival.bogoshorts.com/corto/4365)",
+    "archivo": "fuentes/bogoshorts-2026/altas/complementarios.jpg",
+    "px": [
+     1181,
+     1772
+    ],
+    "ratio": 0.6665,
+    "recorte": null,
+    "veredicto_criterio": null,
+    "fecha": "2026-11-16"
+   }
   },
   "Cumbia pa’ la luna (Fuji Kurosawa ft. Lina Remolina)": {
    "titulo": "Cumbia pa’ la luna (Fuji Kurosawa ft. Lina Remolina)",
@@ -835,10 +940,41 @@
      "url": "https://www.bing.com/images/search?q=%22Vulture%20Heights%22%20Villarraga%20poster",
      "fecha": "2026-11-16",
      "resultado": "Bing Imágenes (español e inglés): solo pósters ajenos de buitres; sin afiche"
+    },
+    "pagina_del_festival": {
+     "url": "https://festival.bogoshorts.com/corto/4324",
+     "fecha": "2026-11-16",
+     "resultado": "ficha de la obra en la web del festival; póster oficial 291×450: https://festival.bogoshorts.com/images/peliculas/6ae3e0376c7d2__ElAltoDeLosBuitres_CN-ANI04_Poster_24BSFF__1_.jpg"
     }
    },
-   "estado": "sin_afiche",
-   "por_que_sin_afiche": "tráiler, Pinterest y festivales solo con fotogramas; sin afiche vertical"
+   "estado": "afiche_chico",
+   "por_que_sin_afiche": "tráiler, Pinterest y festivales solo con fotogramas; sin afiche vertical",
+   "afiche": {
+    "url": "https://festival.bogoshorts.com/images/peliculas/6ae3e0376c7d2__ElAltoDeLosBuitres_CN-ANI04_Poster_24BSFF__1_.jpg",
+    "fuente": "póster oficial de la ficha de la obra en la web del festival (https://festival.bogoshorts.com/corto/4324)",
+    "archivo": "fuentes/bogoshorts-2026/altas/el-alto-de-los-buitres.jpg",
+    "px": [
+     291,
+     436
+    ],
+    "ratio": 0.6674,
+    "recorte": {
+     "de": [
+      291,
+      450
+     ],
+     "caja": [
+      0,
+      7,
+      291,
+      443
+     ],
+     "centrado": true,
+     "objetivo": 0.6667
+    },
+    "veredicto_criterio": null,
+    "fecha": "2026-11-16"
+   }
   },
   "El hombre del reloj": {
    "titulo": "El hombre del reloj",
@@ -898,10 +1034,41 @@
      "url": "https://www.bing.com/images/search?q=%22El%20hombre%20del%20reloj%22%20Daniel%20Prieto%20afiche",
      "fecha": "2026-11-16",
      "resultado": "Bing Imágenes: arte de proyecto en Domestika (2022, arte conceptual, no afiche) y libros homónimos; sin afiche"
+    },
+    "pagina_del_festival": {
+     "url": "https://festival.bogoshorts.com/corto/4325",
+     "fecha": "2026-11-16",
+     "resultado": "ficha de la obra en la web del festival; póster oficial 1417×1984: https://festival.bogoshorts.com/images/peliculas/6ae3e0fa84080__EHDR_CN-ANI05_AFICHE_24BSFF.jpg"
     }
    },
-   "estado": "sin_afiche",
-   "por_que_sin_afiche": "web de Cintadhesiva solo con banners y fotogramas; Domestika es arte conceptual de 2022"
+   "estado": "alta_posible",
+   "por_que_sin_afiche": "web de Cintadhesiva solo con banners y fotogramas; Domestika es arte conceptual de 2022",
+   "afiche": {
+    "url": "https://festival.bogoshorts.com/images/peliculas/6ae3e0fa84080__EHDR_CN-ANI05_AFICHE_24BSFF.jpg",
+    "fuente": "póster oficial de la ficha de la obra en la web del festival (https://festival.bogoshorts.com/corto/4325)",
+    "archivo": "fuentes/bogoshorts-2026/altas/el-hombre-del-reloj.jpg",
+    "px": [
+     1323,
+     1984
+    ],
+    "ratio": 0.6668,
+    "recorte": {
+     "de": [
+      1417,
+      1984
+     ],
+     "caja": [
+      47,
+      0,
+      1370,
+      1984
+     ],
+     "centrado": true,
+     "objetivo": 0.6667
+    },
+    "veredicto_criterio": null,
+    "fecha": "2026-11-16"
+   }
   },
   "El mandado": {
    "titulo": "El mandado",
@@ -961,10 +1128,41 @@
      "url": "https://www.bing.com/images/search?q=%22El+mandado%22+Ingrid+Bonilla+afiche",
      "fecha": "2026-11-16",
      "resultado": "Solo foto de prensa de Oberhausen (1280x674, fotograma); nada más de la obra"
+    },
+    "pagina_del_festival": {
+     "url": "https://festival.bogoshorts.com/corto/4332",
+     "fecha": "2026-11-16",
+     "resultado": "ficha de la obra en la web del festival; póster oficial 321×449: https://festival.bogoshorts.com/images/peliculas/6ae3ef61e311e__ELMANDADO_CHI-KIDS02_POSTER-TIFF_24BSFF__1_.png"
     }
    },
-   "estado": "sin_afiche",
-   "por_que_sin_afiche": "Oberhausen, Plein la bobine, Divercine, Montañera Films y Bing Imágenes solo dan fotogramas apaisados; no se halló afiche (Facebook/Instagram de Montañera no revisables sin sesión)"
+   "estado": "afiche_chico",
+   "por_que_sin_afiche": "Oberhausen, Plein la bobine, Divercine, Montañera Films y Bing Imágenes solo dan fotogramas apaisados; no se halló afiche (Facebook/Instagram de Montañera no revisables sin sesión)",
+   "afiche": {
+    "url": "https://festival.bogoshorts.com/images/peliculas/6ae3ef61e311e__ELMANDADO_CHI-KIDS02_POSTER-TIFF_24BSFF__1_.png",
+    "fuente": "póster oficial de la ficha de la obra en la web del festival (https://festival.bogoshorts.com/corto/4332)",
+    "archivo": "fuentes/bogoshorts-2026/altas/el-mandado.jpg",
+    "px": [
+     299,
+     449
+    ],
+    "ratio": 0.6659,
+    "recorte": {
+     "de": [
+      321,
+      449
+     ],
+     "caja": [
+      11,
+      0,
+      310,
+      449
+     ],
+     "centrado": true,
+     "objetivo": 0.6667
+    },
+    "veredicto_criterio": null,
+    "fecha": "2026-11-16"
+   }
   },
   "El píxel y la parcela": {
    "titulo": "El píxel y la parcela",
@@ -1024,10 +1222,28 @@
      "url": "https://www.bing.com/images/search?q=%22The+Pixel+and+the+Plot%22+Meszaros+poster",
      "fecha": "2026-11-16",
      "resultado": "Solo banner 2560x472 en Antipode; nada más de la obra"
+    },
+    "pagina_del_festival": {
+     "url": "https://festival.bogoshorts.com/corto/4244",
+     "fecha": "2026-11-16",
+     "resultado": "ficha de la obra en la web del festival; póster oficial 450×667: https://festival.bogoshorts.com/images/peliculas/6ae3dd4ab0445__2026-10-29_-_Equipo__1_.jpg"
     }
    },
-   "estado": "sin_afiche",
-   "por_que_sin_afiche": "Plano Negativo, Antipode y Bing Imágenes no tienen afiche; solo un banner panorámico 2560x472 y fotogramas/mapas"
+   "estado": "afiche_chico",
+   "por_que_sin_afiche": "Plano Negativo, Antipode y Bing Imágenes no tienen afiche; solo un banner panorámico 2560x472 y fotogramas/mapas",
+   "afiche": {
+    "url": "https://festival.bogoshorts.com/images/peliculas/6ae3dd4ab0445__2026-10-29_-_Equipo__1_.jpg",
+    "fuente": "póster oficial de la ficha de la obra en la web del festival (https://festival.bogoshorts.com/corto/4244)",
+    "archivo": "fuentes/bogoshorts-2026/altas/el-pixel-y-la-parcela.jpg",
+    "px": [
+     450,
+     667
+    ],
+    "ratio": 0.6747,
+    "recorte": null,
+    "veredicto_criterio": null,
+    "fecha": "2026-11-16"
+   }
   },
   "Escritorio": {
    "titulo": "Escritorio",
@@ -1087,10 +1303,41 @@
      "url": "https://www.bing.com/images/search?q=Escritorio+Dar%C3%ADo+Vejarano+afiche",
      "fecha": "2026-11-16",
      "resultado": "Nada de la obra (muebles y otros)"
+    },
+    "pagina_del_festival": {
+     "url": "https://festival.bogoshorts.com/corto/4319",
+     "fecha": "2026-11-16",
+     "resultado": "ficha de la obra en la web del festival; póster oficial 291×450: https://festival.bogoshorts.com/images/peliculas/6ae3d7ebca912__Escritorio_CN-FIC08_Afiche_24BSFF__1_.png"
     }
    },
-   "estado": "sin_afiche",
-   "por_que_sin_afiche": "Premier mundial en BOGOSHORTS 2026; ni web de la productora ni Bing Imágenes ni prensa traen afiche"
+   "estado": "afiche_chico",
+   "por_que_sin_afiche": "Premier mundial en BOGOSHORTS 2026; ni web de la productora ni Bing Imágenes ni prensa traen afiche",
+   "afiche": {
+    "url": "https://festival.bogoshorts.com/images/peliculas/6ae3d7ebca912__Escritorio_CN-FIC08_Afiche_24BSFF__1_.png",
+    "fuente": "póster oficial de la ficha de la obra en la web del festival (https://festival.bogoshorts.com/corto/4319)",
+    "archivo": "fuentes/bogoshorts-2026/altas/escritorio.jpg",
+    "px": [
+     291,
+     436
+    ],
+    "ratio": 0.6674,
+    "recorte": {
+     "de": [
+      291,
+      450
+     ],
+     "caja": [
+      0,
+      7,
+      291,
+      443
+     ],
+     "centrado": true,
+     "objetivo": 0.6667
+    },
+    "veredicto_criterio": null,
+    "fecha": "2026-11-16"
+   }
   },
   "Espaciar": {
    "titulo": "Espaciar",
@@ -1150,6 +1397,11 @@
      "url": "https://www.bing.com/images/search?q=Espaciar+Daniela+Giraldo+Su%C3%A1rez+afiche",
      "fecha": "2026-11-16",
      "resultado": "Fotogramas en Cinemancia y Gibara; el afiche oficial está en la web de Camello Audiovisual"
+    },
+    "pagina_del_festival": {
+     "url": "https://festival.bogoshorts.com/corto/4239",
+     "fecha": "2026-11-16",
+     "resultado": "ficha de la obra en la web del festival; póster oficial 253×450: https://festival.bogoshorts.com/images/peliculas/6ae2aee69f718__Espaciar_PAC-EXP02_Poster_24BSFF__1_.jpg"
     }
    },
    "afiche": {
@@ -1238,6 +1490,11 @@
      "url": "https://www.bing.com/images/search?q=%22Fantasy+Land%22+Aitana+Ahrens+poster",
      "fecha": "2026-11-16",
      "resultado": "Nada de la obra (pósters genéricos de 'fantasy land'); fotogramas 568x320 en alternativeiff.ro"
+    },
+    "pagina_del_festival": {
+     "url": "https://festival.bogoshorts.com/corto/4391",
+     "fecha": "2026-11-16",
+     "resultado": "ficha de la obra en la web del festival, sin póster"
     }
    },
    "estado": "sin_afiche",
@@ -1285,7 +1542,8 @@
     "web_director_o_productora": {
      "url": "https://www.youtube.com/watch?v=OQjN1Q5oiB4",
      "fecha": "2026-11-16",
-     "resultado": "Productora Framefruit y director Daniel Candamil solo con Instagram (no revisable sin sesión); créditos completos en la descripción del canal oficial"
+     "resultado": "Productora Framefruit y director Daniel Candamil solo con Instagram (no revisable sin sesión); créditos completos en la descripción del canal oficial",
+     "parcial": "el Instagram de Framefruit y del director no se abrió (sin sesión)"
     },
     "distribuidora_o_agencia": {
      "na": true,
@@ -1369,6 +1627,11 @@
      "url": "https://www.bing.com/images/search?q=%22Has+estado+aqu%C3%AD%22+Vivian+Mu%C3%B1oz+poster",
      "fecha": "2026-11-16",
      "resultado": "Solo fotogramas apaisados (D'A 1600x900, lamidanoimporta.cat 1600x900, YouTube); ningún afiche"
+    },
+    "pagina_del_festival": {
+     "url": "https://festival.bogoshorts.com/corto/4264",
+     "fecha": "2026-11-16",
+     "resultado": "ficha de la obra en la web del festival, sin póster"
     }
    },
    "estado": "sin_afiche",
@@ -1500,6 +1763,11 @@
      "url": "https://www.bing.com/images/search?q=%22I+Carry+Them%22+Bram+VanderMark+poster",
      "fecha": "2026-11-16",
      "resultado": "Bing Imágenes: solo fotogramas 16:9 (Onepointfour 1920x1080, Directors Notes, Films.Dance); ningún afiche"
+    },
+    "pagina_del_festival": {
+     "url": "https://festival.bogoshorts.com/corto/4401",
+     "fecha": "2026-11-16",
+     "resultado": "ficha de la obra en la web del festival, sin póster"
     }
    },
    "estado": "sin_afiche",
@@ -1563,6 +1831,11 @@
      "url": "https://www.bing.com/images/search?q=Jazzed+2008+court+m%C3%A9trage+animation+Setola+affiche",
      "fecha": "2026-11-16",
      "resultado": "Afiche original (título JAZZED + Anton Setola) en FilmAffinity film781501, solo 400x600; Unifrance trae fotograma horizontal"
+    },
+    "pagina_del_festival": {
+     "url": "https://festival.bogoshorts.com/corto/4400",
+     "fecha": "2026-11-16",
+     "resultado": "ficha de la obra en la web del festival, sin póster"
     }
    },
    "estado": "sin_afiche",
@@ -1626,6 +1899,11 @@
      "url": "https://filmfreeway.com/Joychair",
      "fecha": "2026-11-16",
      "resultado": "Afiche oficial vertical en el press kit de FilmFreeway (original 533x800), con título y créditos completos que coinciden con el catálogo"
+    },
+    "pagina_del_festival": {
+     "url": "https://festival.bogoshorts.com/corto/4194",
+     "fecha": "2026-11-16",
+     "resultado": "ficha de la obra en la web del festival; póster oficial 300×450: https://festival.bogoshorts.com/images/peliculas/6ae377e25cf1a__Joychair_F3-06_poster_24BSFF__1_.jpg"
     }
    },
    "afiche": {
@@ -1701,10 +1979,41 @@
      "url": "https://www.bing.com/images/search?q=%22Kevin+el+ni%C3%B1o+del+espacio%22+afiche",
      "fecha": "2026-11-16",
      "resultado": "Bing Imágenes «Kevin el niño del espacio» afiche: solo imágenes ajenas (stock, otras obras); ningún afiche de la obra"
+    },
+    "pagina_del_festival": {
+     "url": "https://festival.bogoshorts.com/corto/4219",
+     "fecha": "2026-11-16",
+     "resultado": "ficha de la obra en la web del festival; póster oficial 323×450: https://festival.bogoshorts.com/images/peliculas/6ae284457c52f__KevinElNi__oDelEspacio_CLC-ADO06_P__ster_24BSFF.png"
     }
    },
-   "estado": "sin_afiche",
-   "por_que_sin_afiche": "Estreno mundial en BOGOSHORTS: la productora la lista aún como work in progress con una imagen de dossier horizontal y no hay afiche publicado en ninguna fuente"
+   "estado": "afiche_chico",
+   "por_que_sin_afiche": "Estreno mundial en BOGOSHORTS: la productora la lista aún como work in progress con una imagen de dossier horizontal y no hay afiche publicado en ninguna fuente",
+   "afiche": {
+    "url": "https://festival.bogoshorts.com/images/peliculas/6ae284457c52f__KevinElNi__oDelEspacio_CLC-ADO06_P__ster_24BSFF.png",
+    "fuente": "póster oficial de la ficha de la obra en la web del festival (https://festival.bogoshorts.com/corto/4219)",
+    "archivo": "fuentes/bogoshorts-2026/altas/kevin-el-nino-del-espacio.jpg",
+    "px": [
+     300,
+     450
+    ],
+    "ratio": 0.6667,
+    "recorte": {
+     "de": [
+      323,
+      450
+     ],
+     "caja": [
+      11,
+      0,
+      311,
+      450
+     ],
+     "centrado": true,
+     "objetivo": 0.6667
+    },
+    "veredicto_criterio": null,
+    "fecha": "2026-11-16"
+   }
   },
   "Kupljena sjecanja": {
    "titulo": "Kupljena sjecanja",
@@ -2094,10 +2403,28 @@
      "url": "https://www.bing.com/images/search?q=%22La+suma+de+todas+las+partes%22+Maite+Luc%C3%ADa+Valero+poster",
      "fecha": "2026-11-16",
      "resultado": "Solo libros homónimos, videobook de la actriz y fotos de San Sebastián 2021; ningún afiche del corto."
+    },
+    "pagina_del_festival": {
+     "url": "https://festival.bogoshorts.com/corto/4192",
+     "fecha": "2026-11-16",
+     "resultado": "ficha de la obra en la web del festival; póster oficial 1434×2048: https://festival.bogoshorts.com/images/peliculas/6af34cc54643f__La_Suma_de_Todas_las_Partes_CON-ESP02_Afiche_24BSFF.jpeg"
     }
    },
-   "estado": "sin_afiche",
-   "por_que_sin_afiche": "Cartel existe (créditos del post de ECAM nombran su diseño) pero no está publicado: ni web, ni FilmFreeway, ni imágenes; la única imagen pública es un video de rodaje 640x360."
+   "estado": "alta_posible",
+   "por_que_sin_afiche": "Cartel existe (créditos del post de ECAM nombran su diseño) pero no está publicado: ni web, ni FilmFreeway, ni imágenes; la única imagen pública es un video de rodaje 640x360.",
+   "afiche": {
+    "url": "https://festival.bogoshorts.com/images/peliculas/6af34cc54643f__La_Suma_de_Todas_las_Partes_CON-ESP02_Afiche_24BSFF.jpeg",
+    "fuente": "póster oficial de la ficha de la obra en la web del festival (https://festival.bogoshorts.com/corto/4192)",
+    "archivo": "fuentes/bogoshorts-2026/altas/la-suma-de-todas-las-partes.jpg",
+    "px": [
+     1434,
+     2048
+    ],
+    "ratio": 0.7002,
+    "recorte": null,
+    "veredicto_criterio": null,
+    "fecha": "2026-11-16"
+   }
   },
   "La vida de un hilo": {
    "titulo": "La vida de un hilo",
@@ -2157,6 +2484,11 @@
      "url": "https://www.bing.com/images/search?q=%22La+vida+de+un+hilo%22+Guillermo+Casta%C3%B1eda+afiche",
      "fecha": "2026-11-16",
      "resultado": "Bing Imágenes solo trae la película de Neville; el afiche está en Athens Animfest."
+    },
+    "pagina_del_festival": {
+     "url": "https://festival.bogoshorts.com/corto/4422",
+     "fecha": "2026-11-16",
+     "resultado": "ficha de la obra en la web del festival; póster oficial 3072×4608: https://festival.bogoshorts.com/images/peliculas/6af374b274c3a__LaVidaDeuUnHilo_CN-ANI03_P__ster_24BSFF.jpg"
     }
    },
    "afiche": {
@@ -2324,6 +2656,11 @@
      "url": "https://www.bing.com/search?q=%22Lo+entra%C3%B1able%22+Valentina+Laverde",
      "fecha": "2026-11-16",
      "resultado": "El afiche oficial está en Cinespécimen."
+    },
+    "pagina_del_festival": {
+     "url": "https://festival.bogoshorts.com/corto/4287",
+     "fecha": "2026-11-16",
+     "resultado": "ficha de la obra en la web del festival; póster oficial 315×450: https://festival.bogoshorts.com/images/peliculas/6ae386a0d2d66__LoEntra__able_CN-FIC02_P__ster_24BSFF__1___1_.png"
     }
    },
    "afiche": {
@@ -2388,7 +2725,8 @@
     "festivales_previos": {
      "url": "https://www.bing.com/search?q=%22Lucha%22+%22C%C3%A9sar+Heredia%22+cortometraje",
      "fecha": "2026-11-16",
-     "resultado": "Solo SensCritique (court-métrage de César Heredia, 12 min, 2019, Colombie; página bloqueada por Cloudflare) y el homenaje de BOGOSHORTS; ningún festival previo hallado."
+     "resultado": "Solo SensCritique (court-métrage de César Heredia, 12 min, 2019, Colombie; página bloqueada por Cloudflare) y el homenaje de BOGOSHORTS; ningún festival previo hallado.",
+     "parcial": "la ficha de SensCritique no se abrió (Cloudflare)"
     },
     "organismo_nacional": {
      "url": "https://www.proimagenescolombia.com/secciones/buscador/buscador_general_resultado.php?buscar=Lucha",
@@ -2807,6 +3145,11 @@
      "url": "https://www.bing.com/images/search?q=%22Ni%20aqu%C3%AD%2C%20ni%20all%C3%A1%22%20Romero%20Samac%C3%A1%20poster",
      "fecha": "2026-11-16",
      "resultado": "Bing Imágenes: solo homónimas ajenas; afiche oficial en ficha BOGOSHORTS"
+    },
+    "pagina_del_festival": {
+     "url": "https://festival.bogoshorts.com/corto/4196",
+     "fecha": "2026-11-16",
+     "resultado": "ficha de la obra en la web del festival; póster oficial 1080×1350: https://festival.bogoshorts.com/images/peliculas/6ae25f1d39983__NiAquiNiAlla_CON-LTX03_Poster_24BSFF.jpg"
     }
    },
    "afiche": {
@@ -2895,6 +3238,11 @@
      "url": "https://www.bing.com/images/search?q=%22No%20te%20conozcas%22%20Isaza%20afiche",
      "fecha": "2026-11-16",
      "resultado": "Bing Imágenes: nada; afiche oficial bilingüe en ficha BOGOSHORTS"
+    },
+    "pagina_del_festival": {
+     "url": "https://festival.bogoshorts.com/corto/4363",
+     "fecha": "2026-11-16",
+     "resultado": "ficha de la obra en la web del festival; póster oficial 1358×1920: https://festival.bogoshorts.com/images/peliculas/6ae4cf6535ff0__No_te_conozcas_CN-EXP02_Poster_24BSFF.jpg"
     }
    },
    "afiche": {
@@ -2970,6 +3318,11 @@
      "url": "https://www.bing.com/images/search?q=%22No%20todos%20los%20p%C3%A1jaros%20son%20aves%22%20afiche",
      "fecha": "2026-11-16",
      "resultado": "Bing Imágenes: nada; afiche oficial solo en ficha BOGOSHORTS a 300x450"
+    },
+    "pagina_del_festival": {
+     "url": "https://festival.bogoshorts.com/corto/4272",
+     "fecha": "2026-11-16",
+     "resultado": "ficha de la obra en la web del festival; póster oficial 300×450: https://festival.bogoshorts.com/images/peliculas/6ae37c07ddda4__NoTodosLosPajarosSonAves_CLC-AMOR05_POSTER_24BSFF__2___1_.png"
     }
    },
    "afiche": {
@@ -3108,6 +3461,11 @@
      "url": "https://www.bing.com/images/search?q=%22N%C3%A9mica%22%20Fl%C3%B3rez%20afiche",
      "fecha": "2026-11-16",
      "resultado": "Bing Imágenes: nada; afiche oficial en ficha BOGOSHORTS (599x842)"
+    },
+    "pagina_del_festival": {
+     "url": "https://festival.bogoshorts.com/corto/4227",
+     "fecha": "2026-11-16",
+     "resultado": "ficha de la obra en la web del festival; póster oficial 599×842: https://festival.bogoshorts.com/images/peliculas/6ae292bf9d49e__Nemica_CLC-CINE03_Poster_24BSFF.png"
     }
    },
    "afiche": {
@@ -3454,6 +3812,11 @@
      "url": "https://festival.bogoshorts.com/corto/4423",
      "fecha": "2026-11-16",
      "resultado": "Ficha BOGOSHORTS corto/4423 sin afiche (solo foto del director); Bing Imágenes sin afiche."
+    },
+    "pagina_del_festival": {
+     "url": "https://festival.bogoshorts.com/corto/4423",
+     "fecha": "2026-11-16",
+     "resultado": "ficha de la obra en la web del festival, sin póster"
     }
    },
    "estado": "sin_afiche",
@@ -3517,6 +3880,11 @@
      "url": "https://festival.bogoshorts.com/corto/4323",
      "fecha": "2026-11-16",
      "resultado": "Afiche oficial en ficha BOGOSHORTS corto/4323 (338x450); Bing Imágenes sin versión mayor."
+    },
+    "pagina_del_festival": {
+     "url": "https://festival.bogoshorts.com/corto/4323",
+     "fecha": "2026-11-16",
+     "resultado": "ficha de la obra en la web del festival; póster oficial 338×450: https://festival.bogoshorts.com/images/peliculas/6ae3dfa630941__Pececi__n_CN-ANI02_Po__ster_24BSFF__1_.png"
     }
    },
    "afiche": {
@@ -3694,6 +4062,11 @@
      "url": "https://elemolina.com/wp-content/uploads/2023/05/224-poster_QUERIDA-A..jpg",
      "fecha": "2026-11-16",
      "resultado": "Afiche oficial 740x1048 en web de la directora."
+    },
+    "pagina_del_festival": {
+     "url": "https://festival.bogoshorts.com/corto/4257",
+     "fecha": "2026-11-16",
+     "resultado": "ficha de la obra en la web del festival, sin póster"
     }
    },
    "afiche": {
@@ -3743,7 +4116,8 @@
     "web_director_o_productora": {
      "url": "https://www.instagram.com/dearriverphoenix/",
      "fecha": "2026-11-16",
-     "resultado": "Cuenta IG de la obra (no revisada por dentro: IG sin sesión)."
+     "resultado": "Cuenta IG de la obra (no revisada por dentro: IG sin sesión).",
+     "parcial": "la cuenta IG de la obra no se revisó por dentro (sin sesión)"
     },
     "distribuidora_o_agencia": {
      "na": true,
@@ -3770,6 +4144,11 @@
      "url": "https://festival.bogoshorts.com/corto/4229",
      "fecha": "2026-11-16",
      "resultado": "Afiche oficial en BOGOSHORTS 4229 (318x450); Bing Imágenes sin versión mayor."
+    },
+    "pagina_del_festival": {
+     "url": "https://festival.bogoshorts.com/corto/4229",
+     "fecha": "2026-11-16",
+     "resultado": "ficha de la obra en la web del festival; póster oficial 318×450: https://festival.bogoshorts.com/images/peliculas/6ae294c338124__DearRiverPhoenix_CLC-CINE04_FilmPosterEspa__olLaurel_24BSFF.png"
     }
    },
    "afiche": {
@@ -3925,6 +4304,11 @@
      "url": "https://festival.bogoshorts.com/corto/4344",
      "fecha": "2026-11-16",
      "resultado": "Afiche del videoclip en BOGOSHORTS 4344 (318x450); Bing solo portadas/miniaturas."
+    },
+    "pagina_del_festival": {
+     "url": "https://festival.bogoshorts.com/corto/4344",
+     "fecha": "2026-11-16",
+     "resultado": "ficha de la obra en la web del festival; póster oficial 318×450: https://festival.bogoshorts.com/images/peliculas/6ae409fe3ba90__SAVIA_CI-VC02_Poster_24BSFF__1_.jpg"
     }
    },
    "afiche": {
@@ -4174,6 +4558,11 @@
      "url": "https://festival.bogoshorts.com/corto/4240",
      "fecha": "2026-11-16",
      "resultado": "Afiche oficial en BOGOSHORTS 4240 (253x450); ojo 4200 es otro Susurros (Szepty, Polonia)."
+    },
+    "pagina_del_festival": {
+     "url": "https://festival.bogoshorts.com/corto/4200",
+     "fecha": "2026-11-16",
+     "resultado": "ficha de la obra en la web del festival; póster oficial 315×450: https://festival.bogoshorts.com/images/peliculas/6ae378814f6f3__Whispers_ofi.jpg"
     }
    },
    "afiche": {
