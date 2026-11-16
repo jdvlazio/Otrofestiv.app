@@ -266,7 +266,13 @@ declarada a mano; un afiche recortado a mano; un título en NFD). Todo pasa por
    `--fuente <título> <clave> <url> --resultado "…"`, o
    `--na <título> <clave> --por-que "…"` (un videoclip suma
    `canal_oficial_artista` y suele justificar N/A en las demás). Sin URL ni
-   porqué la fuente **no está revisada**.
+   porqué la fuente **no está revisada**. Si no se pudo mirar la fuente misma
+   (un buscador que no existe, un catálogo que no se abrió) y solo se buscó
+   alrededor, va con `--parcial "qué NO se miró"`: queda **pendiente**, no cuenta.
+   Si la búsqueda encuentra una ficha que el sondeo no pudo verificar:
+   `--ficha <título> <tmdb_id> --evidencia "por qué es ESA obra" --respaldo imdb,letterboxd`
+   (2+ fuentes del registro con URL, no N/A ni parciales; el director de la obra
+   tiene que estar en los créditos de TMDB).
 3. `--preparar <título> --url <afiche> --origen "<dónde>"` — baja el afiche a
    `fuentes/<fid>/altas/`, lo pasa por `afiche_criterio`, lo deja en JPG con
    proporción 0,66–0,71 (recorte centrado, documentado en el registro),
