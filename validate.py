@@ -4277,6 +4277,12 @@ try:
         # Semana del Cine Colombiano (Cali) — el programa del lun 9 («Barrio Brother» y
         # otros cortos locales) no tiene minutaje publicado: pedido a Arturo Murgas (2 nov)
         ('semanacine-2026', 'Proyección de cortos locales'),
+        # Cine para la Paz — la lámina del 20 y la del 21 (IG DfzeOb2lq6q) dan solo
+        # la hora de inicio de la premiación, el concierto de cierre y la
+        # conmemoración Samay Punlla; el resto de la parrilla trae franjas
+        ('cineparalapaz-2026', 'Premiación'),
+        ('cineparalapaz-2026', 'Cierre musical · Concierto andino: Yananty y Runa Taky'),
+        ('cineparalapaz-2026', 'Samay Punlla · Conmemoración a las almas'),
     }
     _viol = []
     for _fname in _ACTIVE:
