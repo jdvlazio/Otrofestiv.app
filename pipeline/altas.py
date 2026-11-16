@@ -389,6 +389,8 @@ def registrar_ficha(fid, titulo, tmdb_id, evidencia, respaldo, raiz=REPO):
 def marcar_sin_afiche(fid, titulo, por_que, raiz=REPO):
     reg = leer_registro(fid, raiz)
     e = _entrada(reg, titulo)
+    if e.get('estado') in CON_FICHA:     # 16 nov: le pisaba el estado a una ficha_existente
+        sys.exit(f'«{e["titulo"]}» ya tiene ficha ({e["estado"]} {e.get("tmdb_id")}): --sin-afiche es para obras SIN ficha')
     e.update(estado='sin_afiche', por_que_sin_afiche=por_que)
     escribir_registro(fid, reg, raiz)
 
