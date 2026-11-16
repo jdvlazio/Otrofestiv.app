@@ -36,6 +36,9 @@ fusionados con `--mismo`.
     python3 pipeline/sedes.py --elegir <sid> <fid>        # resuelve una divergencia con el pin de ese festival
     python3 pipeline/sedes.py --campus <sid> <metros> --por-que TXT   # campus: cada festival en su edificio
     python3 pipeline/sedes.py --pendientes                # divergencias, pares cercanos, sin evidencia
+    python3 pipeline/sedes.py --resolver <fid> [--escribir] [--aceptar «cruda=s_xxx» …] [--centro LAT,LNG]
+                                                          # las sedes del crudo: ya / conocida / parecida / nueva
+    python3 pipeline/sedes.py --tablero                   # festivales vivos: qué falta en sus sedes
 
 geocodificar.py consulta el almacén ANTES de Nominatim. Guardián: [sede-matriz].
 """
@@ -177,9 +180,7 @@ def _contexto(raiz):
         for f in (d.get('films') or []) if isinstance(d, dict) else []:
             if isinstance(f, dict) and f.get('venue') and f.get('sala'):
                 c(fid, f['venue']).setdefault('salas', set()).add(f['sala'])
-    for (fid, n), x in ctx.items():
-        if fid in ciudad_plan:
-            x['ciudad_plan'] = ciudad_plan[fid]
+    ctx['__ciudad_plan__'] = ciudad_plan
     return ctx
 
 
@@ -202,7 +203,7 @@ def _ficha(e, g, ctx):
         salas |= c.get('salas') or set()
         pub = c.get('publicado') or {}
         sufijo = clave.split(' - ', 1)[1].strip() if ' - ' in clave else None
-        ciudades.append(pub.get('city') or sufijo or c.get('ciudad_plan'))
+        ciudades.append(pub.get('city') or sufijo or (ctx.get('__ciudad_plan__') or {}).get(fid))
         cortos.append(pub.get('short'))
         dirs.append(pub.get('address') or v.get('address'))
     e['alias'] = sorted(alias - {e['nombre']})
@@ -277,6 +278,21 @@ def construir(raiz=REPO):
     for s, e in viejas.items():
         if s not in redir:
             sedes.setdefault(s, e)
+    # LA CIUDAD SE COMPRUEBA CON EL MAPA (16 nov): un festival de varias ciudades
+    # (MIDBO, Bogotá) le prestaba «Bogotá» a la Universidad de Antioquia. Un
+    # lugar a >40 km de la mediana de su ciudad no es de esa ciudad: se le quita
+    # y queda para revisar.
+    med = lambda xs: sorted(xs)[len(xs) // 2]
+    por_ciudad = {}
+    for e in sedes.values():
+        if e.get('ciudad'):
+            por_ciudad.setdefault(e['ciudad'], []).append((e['lat'], e['lng']))
+    centros = {c: (med([p[0] for p in ps]), med([p[1] for p in ps])) for c, ps in por_ciudad.items() if len(ps) >= 3}
+    for e in sedes.values():
+        c = e.get('ciudad')
+        if c in centros and metros(centros[c], (e['lat'], e['lng'])) > 40000 and not e.get('_ciudad_fijada'):
+            e['_ciudad_dudosa'] = c
+            del e['ciudad']
     deuda = previa.get('_deuda') or {'sin_url': sorted(s for s, e in sedes.items()
                                                        if not (e.get('evidencia') or {}).get('url'))}
     deuda['sin_url'] = sorted(s for s in deuda.get('sin_url', []) if s in sedes and s not in redir and
@@ -430,6 +446,156 @@ def sin_evidencia_nueva(raiz=REPO):
                   if not (e.get('evidencia') or {}).get('url') and s not in deuda)
 
 
+# ── resolver las sedes de un festival en un paso (PR B, 16 nov 2026) ─────────
+def _centro(fid, raiz):
+    """Dónde está el festival: sus pines ya puestos, o los lugares del almacén
+    de su ciudad (la del plan). None si no hay cómo saberlo."""
+    gp = f'{raiz}/festivals/staging/{fid}-venues-geo.json'
+    pts = []
+    if os.path.exists(gp):
+        pts = [(v['lat'], v['lng']) for v in json.load(open(gp, encoding='utf-8')).values()
+               if isinstance(v, dict) and v.get('lat') is not None]
+    if not pts:
+        pp = f'{raiz}/pipeline/{fid}.plan.json'
+        ciudad = ((json.load(open(pp, encoding='utf-8')).get('festival') or {}).get('city') or '') if os.path.exists(pp) else ''
+        pts = [(e['lat'], e['lng']) for e in (leer(raiz).get('sedes') or {}).values()
+               if e.get('ciudad') and plano(e['ciudad']) == plano(ciudad)]
+    if not pts:
+        return None
+    # la MEDIANA, no el promedio: un solo pin mal puesto (o un lugar con la
+    # ciudad mal cosechada) corría el centro de Bogotá 50 km al norte
+    med = lambda xs: sorted(xs)[len(xs) // 2]
+    return (med([p[0] for p in pts]), med([p[1] for p in pts]))
+
+
+def _parecidos(cruda, centro, raiz, radio_m=30000, n=3):
+    """Lugares del almacén con nombre parecido (no igual): por palabras en común
+    y por similitud de letras, dentro del radio."""
+    import difflib
+    stop = {'de', 'del', 'la', 'el', 'los', 'las', 'y', 'sala', 'sede', 'centro', 'teatro', 'auditorio'}
+    pal = lambda t: {w for w in re.findall(r'[a-z0-9]+', unicodedata.normalize('NFD', t.lower()).encode('ascii', 'ignore').decode()) if w not in stop and len(w) > 2}
+    pc = pal(cruda)
+    out = []
+    for sid, e in (leer(raiz).get('sedes') or {}).items():
+        if centro and metros(centro, (e['lat'], e['lng'])) > radio_m:
+            continue
+        best = 0
+        for nom in [e['nombre']] + e.get('alias', []):
+            pn = pal(nombre_de(nom))
+            jac = len(pc & pn) / len(pc | pn) if pc | pn else 0
+            rat = difflib.SequenceMatcher(None, plano(cruda), plano(nombre_de(nom))).ratio()
+            best = max(best, jac, rat - 0.15)
+        if best >= 0.5:
+            out.append((round(best, 2), sid, e))
+    return sorted(out, key=lambda x: -x[0])[:n]
+
+
+def _con_sala(cruda, centro, raiz, radio_m=30000):
+    """«Cinemateca Sala 2» → (sid, 'Sala 2') si el lugar conoce esa sala."""
+    pc = plano(cruda)
+    for sid, e in (leer(raiz).get('sedes') or {}).items():
+        if centro and metros(centro, (e['lat'], e['lng'])) > radio_m:
+            continue
+        noms = [e['nombre'], e.get('corto') or ''] + e.get('alias', [])
+        if e.get('ciudad'):   # «Cinemateca de Bogotá» → «Cinemateca» + «Sala Capital»
+            noms += [re.sub(rf'\s+de\s+{re.escape(e["ciudad"])}$', '', n, flags=re.I) for n in noms if n]
+        for nom in noms:
+            pn = plano(nombre_de(nom))
+            if pn and pc.startswith(pn):
+                resto = pc[len(pn):]
+                sala = next((sa for sa in e.get('salas', []) if plano(sa) == resto), None)
+                if sala:
+                    return sid, sala
+    return None
+
+
+def resolver(fid, raiz=REPO, escribir=False, aceptar=None, centro=None):
+    """Las sedes del crudo de un festival, una por una:
+      ya        — el plan ya la mapea y su pin está;
+      conocida  — el almacén la tiene (nombre, alias o «lugar + sala»);
+      parecida  — candidatos para confirmar con --aceptar «cruda=s_xxx»;
+      nueva     — no está: buscar en Maps (enlace listo).
+    Con `escribir`, las conocidas y las aceptadas entran al plan
+    (festival.sedes: cruda → [«Nombre - Ciudad», sala]) y al venues-geo, con el
+    pin del almacén. → {estado: [(cruda, detalle)]}"""
+    aceptar = dict(aceptar or {})
+    crudo = json.load(open(f'{raiz}/festivals/staging/{fid}-crudo.json', encoding='utf-8'))
+    pp = f'{raiz}/pipeline/{fid}.plan.json'
+    plan = json.load(open(pp, encoding='utf-8'))
+    F = plan.setdefault('festival', {})
+    tabla = F.setdefault('sedes', {})
+    gp = f'{raiz}/festivals/staging/{fid}-venues-geo.json'
+    geo = json.load(open(gp, encoding='utf-8')) if os.path.exists(gp) else {}
+    centro = centro or _centro(fid, raiz)
+    S = leer(raiz).get('sedes') or {}
+    crudas = sorted({f['sede'] for f in crudo.get('funciones', []) if f.get('sede')})
+    out = {'ya': [], 'conocida': [], 'parecida': [], 'nueva': []}
+    for cr in crudas:
+        canon = (tabla.get(cr) or [cr])[0]
+        if (geo.get(canon) or {}).get('lat') is not None:
+            out['ya'].append((cr, canon))
+            continue
+        sala, sid = '', None
+        if cr in aceptar:
+            sid = aceptar[cr]
+            if sid not in S:
+                sys.exit(f'--aceptar: {sid} no existe')
+        else:
+            hit = buscar(cr, centro, raiz=raiz) if centro else None
+            if hit:
+                sid = hit['_matriz']
+            else:
+                cs = _con_sala(cr, centro, raiz)
+                if cs:
+                    sid, sala = cs
+        if not sid:
+            par = _parecidos(cr, centro, raiz)
+            if par:
+                out['parecida'].append((cr, [(p, s_, e['nombre'], e.get('ciudad'),
+                                              round(metros(centro, (e['lat'], e['lng']))) if centro else None)
+                                             for p, s_, e in par]))
+            else:
+                ciudad = F.get('city') or ''
+                q = re.sub(r'\s+', '+', f'{cr} {ciudad}'.strip())
+                out['nueva'].append((cr, f'https://www.google.com/maps/search/{q}'))
+            continue
+        e = S[sid]
+        nuevo = f'{e["nombre"]} - {e["ciudad"]}' if e.get('ciudad') else e['nombre']
+        out['conocida'].append((cr, f'{nuevo}{" / " + sala if sala else ""} ({sid})'))
+        if escribir:
+            tabla[cr] = [nuevo, sala]
+            g = {'lat': e['lat'], 'lng': e['lng'], '_prec': 'matriz', '_matriz': sid,
+                 '_match': f'almacén de sedes ({(e.get("evidencia") or {}).get("nivel")})'}
+            for k in ('address',):
+                if e.get(k):
+                    g[k] = e[k]
+            geo[nuevo] = {**geo.get(nuevo, {}), **g}
+    if escribir and out['conocida']:
+        json.dump(plan, open(pp, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+        json.dump(geo, open(gp, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+    return out
+
+
+def tablero(raiz=REPO):
+    """Lo que falta en las sedes de los festivales VIVOS: sedes del crudo sin
+    pin, pines sin verificar o aproximados, lugares sin enlace de Maps."""
+    S = leer(raiz).get('sedes') or {}
+    filas = []
+    for p in sorted(glob.glob(f'{raiz}/pipeline/*.plan.json')):
+        fid = os.path.basename(p)[:-len('.plan.json')]
+        if not vivo(fid, raiz) or not os.path.exists(f'{raiz}/festivals/staging/{fid}-crudo.json'):
+            continue
+        r = resolver(fid, raiz)
+        gp = f'{raiz}/festivals/staging/{fid}-venues-geo.json'
+        geo = json.load(open(gp, encoding='utf-8')) if os.path.exists(gp) else {}
+        flojos = [k for k, v in geo.items() if isinstance(v, dict) and
+                  (v.get('_prec') in ('sin verificar', 'nominatim', 'aproximado') or v.get('_todo'))]
+        sin_maps = sorted({e['nombre'] for e in S.values() if fid in e['festivales']
+                           and not (e.get('evidencia') or {}).get('url')})
+        filas.append((fid, r, flojos, sin_maps))
+    return filas
+
+
 def _arg(flag, n=1):
     i = sys.argv.index(flag)
     v = sys.argv[i + 1:i + 1 + n]
@@ -465,6 +631,28 @@ def main():
     elif '--elegir' in a:
         elegir(*_arg('--elegir', 2))
         print('✓ divergencia resuelta')
+    elif '--resolver' in a:
+        fid = _arg('--resolver')
+        acept = dict(x.split('=', 1) for x in a[a.index('--aceptar') + 1:] if '=' in x) if '--aceptar' in a else {}
+        c = tuple(map(float, _arg('--centro').split(','))) if '--centro' in a else None
+        r = resolver(fid, escribir='--escribir' in a, aceptar=acept, centro=c)
+        for cr, x in r['ya']:
+            print(f'  ya        {cr}')
+        for cr, x in r['conocida']:
+            print(f'  CONOCIDA  {cr}  →  {x}')
+        for cr, cs in r['parecida']:
+            print(f'  ¿PARECIDA? {cr}')
+            for p, sid, nom, ciu, d in cs:
+                print(f'              {sid}  {nom} ({ciu or "?"}) · similitud {p}{f" · a {d} m" if d is not None else ""}')
+        for cr, url in r['nueva']:
+            print(f'  NUEVA     {cr}  →  buscar en Maps: {url}')
+        print(f"{len(r['ya'])} ya · {len(r['conocida'])} conocidas{' (escritas)' if '--escribir' in a else ' (--escribir para aplicarlas)'}"
+              f" · {len(r['parecida'])} para confirmar (--aceptar «cruda=s_xxx») · {len(r['nueva'])} nuevas")
+    elif '--tablero' in a:
+        for fid, r, flojos, sin_maps in tablero():
+            pend = len(r['conocida']) + len(r['parecida']) + len(r['nueva'])
+            print(f'{fid:28} sin pin {pend:>2} (conocidas {len(r["conocida"])}, parecidas {len(r["parecida"])}, nuevas {len(r["nueva"])})'
+                  f' · pines flojos {len(flojos):>2} · lugares sin Maps {len(sin_maps):>2}')
     elif '--pendientes' in a:
         m = leer()
         for sid, xs in (m.get('_divergentes') or {}).items():

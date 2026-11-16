@@ -513,7 +513,8 @@
    "alias": [],
    "festivales": [
     "jardin-2026"
-   ]
+   ],
+   "ciudad": "Jardín"
   },
   "s_1b7d9bf0": {
    "nombre": "Cámara de Comercio de Bogotá",
@@ -877,7 +878,7 @@
    "festivales": [
     "midbo-2026"
    ],
-   "ciudad": "Bogotá"
+   "_ciudad_dudosa": "Bogotá"
   },
   "s_298b07a2": {
    "nombre": "Co.Laboratorio",
@@ -1446,7 +1447,7 @@
    "festivales": [
     "midbo-2026"
    ],
-   "ciudad": "Bogotá"
+   "_ciudad_dudosa": "Bogotá"
   },
   "s_54536669": {
    "nombre": "Por definir",
@@ -3565,7 +3566,8 @@
    "alias": [],
    "festivales": [
     "jardin-2026"
-   ]
+   ],
+   "ciudad": "Jardín"
   },
   "s_bf32b45a": {
    "nombre": "Fábrica de la Cultura 2",
@@ -4091,7 +4093,7 @@
    "festivales": [
     "midbo-2026"
    ],
-   "ciudad": "Bogotá"
+   "_ciudad_dudosa": "Bogotá"
   },
   "s_dd71de11": {
    "nombre": "Universidad Santiago de Cali",
