@@ -4985,8 +4985,55 @@
      "url": "https://www.themoviedb.org/person/6431095 https://www.themoviedb.org/person/6431094",
      "fecha": "2026-11-15",
      "resultado": "Wei Shiue-ying (6431095): dirige 1; Ko Chia-wen (6431094): dirige 1"
+    },
+    "pagina_del_festival": {
+     "url": "https://festival.bogoshorts.com/corto/4380",
+     "fecha": "2026-11-16",
+     "resultado": "Ficha «蟬與花 (Cuando Florecen Las Flores)»: sin póster (solo foto de directores)"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/find/?q=When%20the%20Flowers%20Bloom&s=tt",
+     "fecha": "2026-11-16",
+     "resultado": "Sin la obra (ni por 蟬與花); solo homónimos"
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/When+the+Flowers+Bloom/",
+     "fecha": "2026-11-16",
+     "resultado": "Solo homónimos (1965, 2014, 2023 de Ming-Yuan Chiu…); la VR no está"
+    },
+    "web_director_o_productora": {
+     "url": "https://acornden.com",
+     "fecha": "2026-11-16",
+     "resultado": "Web de Acorn Den Studio (橡實洞工作室): lista «蟬與花 / When the Flowers Bloom»; solo imagen horizontal 1600×900 (work_flowers.jpg), sin afiche"
+    },
+    "distribuidora_o_agencia": {
+     "na": true,
+     "por_que": "Contacto del catálogo es Chia-Wen Ko de Acorn Den Studio (productora), sin distribuidora",
+     "fecha": "2026-11-16"
+    },
+    "plataformas_festivales": {
+     "url": "https://www.bing.com/search?q=%22When+the+Flowers+Bloom%22+%22Acorn+Den%22+VR",
+     "fecha": "2026-11-16",
+     "resultado": "Sin página FilmFreeway; aparece en NewImages Festival 2024 (Swapcard) y KFF. Short Film Depot pide sesión y Festhome no tiene catálogo público (no mirados)"
+    },
+    "festivales_previos": {
+     "url": "https://kff.tw/en/film/content/2339",
+     "fecha": "2026-11-16",
+     "resultado": "Kaohsiung Film Festival (VR Film Lab Originals), NewImages Festival 2024, Taiwan Pavilion TAICCA 2023: la obra es anterior a 2026 pese al año del catálogo"
+    },
+    "organismo_nacional": {
+     "url": "https://pavilion.taicca.tw/portfolio-item/when-the-flowers-bloom/",
+     "fecha": "2026-11-16",
+     "resultado": "TAICCA (Taiwan Creative Content Agency): ficha WHEN THE FLOWERS BLOOM con imágenes horizontales 1000×562, sin afiche"
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.bing.com/images/search?q=%22When+the+Flowers+Bloom%22+VR+poster+Acorn+Den",
+     "fecha": "2026-11-16",
+     "resultado": "Solo fotogramas/capturas (KFF 1920×1080, TAICCA, Swapcard 1687×1687 cuadrado), ningún afiche vertical"
     }
-   }
+   },
+   "estado": "sin_afiche",
+   "por_que_sin_afiche": "Experiencia VR: ficha del festival sin póster; Acorn Den, TAICCA, KFF y Bing Imágenes solo tienen fotogramas/capturas horizontales o cuadradas"
   },
   "Who Are We Against God?": {
    "titulo": "Who Are We Against God?",
@@ -5006,8 +5053,67 @@
      "url": "https://www.themoviedb.org/person/6052038 https://www.themoviedb.org/search/person?query=Laura%20Adriana%20Weibel",
      "fecha": "2026-11-15",
      "resultado": "Aimée Lavignac (6052038): dirige 1; Laura Adriana Weibel: sin perfil en TMDB"
+    },
+    "pagina_del_festival": {
+     "url": "https://festival.bogoshorts.com/corto/4307",
+     "fecha": "2026-11-16",
+     "resultado": "Ficha «Who Are We Against God?»: póster oficial 450×643 (título, A film by Aimée Lavignac & Laura Adriana Weibel, créditos, HSLU) — bajo el mínimo de 500 px"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/title/tt50320261/",
+     "fecha": "2026-11-16",
+     "resultado": "tt50320261 Who are we Against God? (2026, 20m, doc corto, Suiza, dir. Aimée Lavignac y Laura Weibel, HSLU); sin póster"
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/Who+Are+We+Against+God/",
+     "fecha": "2026-11-16",
+     "resultado": "Sin la obra"
+    },
+    "web_director_o_productora": {
+     "url": "https://www.youtube.com/watch?v=aPGu_Ud8-ys",
+     "fecha": "2026-11-16",
+     "resultado": "Tráiler oficial HSLU BA Video/Film (directoras Aimée Lavignac y Laura Adriana Weibel, doc 19'59''); sin afiche más grande. Sin web propia de las directoras hallada"
+    },
+    "distribuidora_o_agencia": {
+     "na": true,
+     "por_que": "Contacto del catálogo son las directoras (laura.weibel@icloud.com); producción escuela HSLU, sin distribuidora",
+     "fecha": "2026-11-16"
+    },
+    "plataformas_festivales": {
+     "url": "https://www.bing.com/search?q=%22Who+Are+We+Against+God%22+HSLU+filmfreeway+OR+festhome+OR+shortfilmdepot",
+     "fecha": "2026-11-16",
+     "resultado": "Sin página FilmFreeway. Short Film Depot pide sesión y Festhome no tiene catálogo público (no mirados)"
+    },
+    "festivales_previos": {
+     "url": "https://www.kurzfilmtage.ch/en/industry/award-winners-2026",
+     "fecha": "2026-11-16",
+     "resultado": "Kurzfilmtage Winterthur 2026, Competencia Nacional — Premio del Público (CHF 5000)"
+    },
+    "organismo_nacional": {
+     "url": "https://www.swissfilms.ch/en/search?q=Who%20Are%20We%20Against%20God",
+     "fecha": "2026-11-16",
+     "resultado": "Swiss Films: búsqueda sin la obra"
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.bing.com/images/search?q=%22Who+Are+We+Against+God%22+poster",
+     "fecha": "2026-11-16",
+     "resultado": "Solo imágenes de versículos bíblicos; el afiche no aparece en versión mayor que la del festival (450×643)"
     }
-   }
+   },
+   "afiche": {
+    "url": "https://festival.bogoshorts.com/images/peliculas/6ae3b2816673a__WhoAreWeAgainstGod-CI-EXP04-Poster-24BSFF__1_.jpeg",
+    "fuente": "Póster oficial en la ficha del festival (festival.bogoshorts.com/corto/4307), 450×643; no hay versión mayor en web/IMDb/Bing",
+    "archivo": "fuentes/bogoshorts-2026/altas/who-are-we-against-god.jpg",
+    "px": [
+     450,
+     643
+    ],
+    "ratio": 0.6998,
+    "recorte": null,
+    "veredicto_criterio": null,
+    "fecha": "2026-11-16"
+   },
+   "estado": "afiche_chico"
   },
   "You get one (The Plot in You)": {
    "titulo": "You get one (The Plot in You)",
@@ -5027,8 +5133,72 @@
      "url": "https://www.themoviedb.org/search/person?query=George%20Gallardo%20Kattah",
      "fecha": "2026-11-15",
      "resultado": "George Gallardo Kattah: sin perfil en TMDB"
+    },
+    "pagina_del_festival": {
+     "url": "https://festival.bogoshorts.com/corto/4368",
+     "fecha": "2026-11-16",
+     "resultado": "Ficha «You get one (The Plot in You)»: afiche 300×450 px (bajo el mínimo)"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/name/nm13277107/",
+     "fecha": "2026-11-16",
+     "resultado": "Sin título; George Gallardo (nm13277107, dir. de videoclips) no lista You Get One"
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/You+Get+One+Plot+In+You/",
+     "fecha": "2026-11-16",
+     "resultado": "Sin la obra"
+    },
+    "web_director_o_productora": {
+     "url": "https://continentepictures.com",
+     "fecha": "2026-11-16",
+     "resultado": "Continente Pictures (productora, contacto del catálogo): sin página de la obra ni afiche"
+    },
+    "distribuidora_o_agencia": {
+     "na": true,
+     "por_que": "Contacto del catálogo es el director en Continente Pictures (productora); videoclip de Fearless Records",
+     "fecha": "2026-11-16"
+    },
+    "plataformas_festivales": {
+     "url": "https://www.bing.com/search?q=%22You+Get+One%22+%22Gallardo%22+%22Plot+In+You%22",
+     "fecha": "2026-11-16",
+     "resultado": "Videoclip sin página FilmFreeway. Short Film Depot pide sesión y Festhome no tiene catálogo público (no mirados)"
+    },
+    "festivales_previos": {
+     "url": "https://www.bing.com/search?q=%22You+Get+One%22+%22Gallardo%22+%22Plot+In+You%22",
+     "fecha": "2026-11-16",
+     "resultado": "Sin festivales previos hallados; estrenado en YouTube 2 abr 2026"
+    },
+    "organismo_nacional": {
+     "na": true,
+     "por_que": "Videoclip: Proimágenes no registra videoclips (buscador general por «You get one» y «Gallardo Kattah» sin la obra)",
+     "fecha": "2026-11-16"
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.bing.com/images/search?q=%22The+Plot+In+You%22+%22You+Get+One%22",
+     "fecha": "2026-11-16",
+     "resultado": "Portada del sencillo, miniaturas YouTube, fotos de banda; ningún afiche del videoclip"
+    },
+    "canal_oficial_artista": {
+     "url": "https://www.youtube.com/watch?v=AVg4uLaJoSc",
+     "fecha": "2026-11-16",
+     "resultado": "Fearless Records, «The Plot In You - You Get One (Official Music Video)» 2 abr 2026: Directed by George Gallardo Kattah, Produced by Continente Pictures"
     }
-   }
+   },
+   "afiche": {
+    "url": "https://festival.bogoshorts.com/images/peliculas/6ae4e30444da3__You_Get_One_CN-VC01_Afiche_24BSFF__1_.jpg",
+    "fuente": "Afiche en la ficha del festival (festival.bogoshorts.com/corto/4368), 300×450; no hay versión mayor",
+    "archivo": "fuentes/bogoshorts-2026/altas/you-get-one-the-plot-in-you.jpg",
+    "px": [
+     300,
+     450
+    ],
+    "ratio": 0.6667,
+    "recorte": null,
+    "veredicto_criterio": null,
+    "fecha": "2026-11-16"
+   },
+   "estado": "afiche_chico"
   },
   "¿Cómo se ama? (Jorge Drexler)": {
    "titulo": "¿Cómo se ama? (Jorge Drexler)",
@@ -5048,8 +5218,60 @@
      "url": "https://www.themoviedb.org/person/2110678 https://www.themoviedb.org/person/1032542 https://www.themoviedb.org/search/person?query=Joana%20Colomar",
      "fecha": "2026-11-15",
      "resultado": "Rodrigo Méndez (2110678): dirige 0; Rodrigo Mendez-Roca (1032542): dirige 0; Joana Colomar: sin perfil en TMDB"
+    },
+    "pagina_del_festival": {
+     "url": "https://festival.bogoshorts.com/corto/4351",
+     "fecha": "2026-11-16",
+     "resultado": "Ficha «¿Cómo se ama? - Jorge Drexler» sin póster (solo foto de Rodrigo Méndez)"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/title/tt43070476/",
+     "fecha": "2026-11-16",
+     "resultado": "tt43070476 «Jorge Drexler: ¿Cómo se ama?» (2026, Music Video)"
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/Como+se+ama+Drexler/",
+     "fecha": "2026-11-16",
+     "resultado": "Sin resultados"
+    },
+    "web_director_o_productora": {
+     "url": "https://www.bing.com/search?q=Jorge+Drexler+%22C%C3%B3mo+se+ama%22+videoclip+Rodrigo+M%C3%A9ndez+Joana+Colomar",
+     "fecha": "2026-11-16",
+     "resultado": "Sin web propia de Rodrigo Méndez/Joana Colomar con la obra; prensa (Billboard AR, Metalocus) solo con fotogramas/fotos"
+    },
+    "distribuidora_o_agencia": {
+     "na": true,
+     "por_que": "Contacto del catálogo es el director Rodrigo Méndez; videoclip, sin distribuidora",
+     "fecha": "2026-11-16"
+    },
+    "plataformas_festivales": {
+     "url": "https://www.bing.com/search?q=Jorge+Drexler+%22C%C3%B3mo+se+ama%22+videoclip+Rodrigo+M%C3%A9ndez+Joana+Colomar",
+     "fecha": "2026-11-16",
+     "resultado": "Videoclip sin página FilmFreeway. Short Film Depot pide sesión y Festhome no tiene catálogo público (no mirados)"
+    },
+    "festivales_previos": {
+     "url": "https://www.bing.com/search?q=Jorge+Drexler+%22C%C3%B3mo+se+ama%22+videoclip+Rodrigo+M%C3%A9ndez+Joana+Colomar",
+     "fecha": "2026-11-16",
+     "resultado": "Sin festivales previos hallados; estrenado en YouTube 7 may 2026"
+    },
+    "organismo_nacional": {
+     "na": true,
+     "por_que": "Videoclip (Uruguay/España): ni ICAU ni ICAA registran videoclips",
+     "fecha": "2026-11-16"
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.bing.com/images/search?q=Jorge+Drexler+%22C%C3%B3mo+se+ama%22+videoclip",
+     "fecha": "2026-11-16",
+     "resultado": "Fotos de prensa y fotogramas (Metalocus, Billboard); ningún afiche"
+    },
+    "canal_oficial_artista": {
+     "url": "https://www.youtube.com/watch?v=7ecaZnVgQ5M",
+     "fecha": "2026-11-16",
+     "resultado": "JorgeDrexlerVEVO, «¿Cómo se ama? (Video Oficial)» 7 may 2026: Dirigido por Rodrigo Méndez y Joana Colomar, con Bruno Pereyra"
     }
-   }
+   },
+   "estado": "sin_afiche",
+   "por_que_sin_afiche": "Videoclip: ficha del festival sin póster; YouTube/VEVO, prensa y Bing Imágenes solo con fotogramas y fotos de prensa"
   },
   "¿El regreso pa’ cuándo?": {
    "titulo": "¿El regreso pa’ cuándo?",
@@ -5069,8 +5291,80 @@
      "url": "https://www.themoviedb.org/person/4344395",
      "fecha": "2026-11-15",
      "resultado": "Antonia Bello (4344395): dirige 1"
+    },
+    "pagina_del_festival": {
+     "url": "https://festival.bogoshorts.com/corto/4352",
+     "fecha": "2026-11-16",
+     "resultado": "Ficha «¿El regreso pa' cuando?»: póster oficial 2592×3456 (título, Un cortometraje de Antonia Bello Veléz, logos Re:Anima/LUCA/Lusófona/Aalto). La /corto/4327 es duplicado sin póster"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/find/?q=El%20regreso%20pa%20cuando&s=tt",
+     "fecha": "2026-11-16",
+     "resultado": "Sin la obra (ni por When Will You Return? + Bello; directora sin perfil)"
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/El+regreso+pa+cuando/",
+     "fecha": "2026-11-16",
+     "resultado": "Sin resultados"
+    },
+    "web_director_o_productora": {
+     "url": "https://www.antoniabello-visualarts.com/animation/",
+     "fecha": "2026-11-16",
+     "resultado": "Web de la directora: describe la obra (hipopótamo de cerámica) con fotogramas 16:9, sin afiche. Tráiler en vimeo.com/1202541317 (Re:anima)"
+    },
+    "distribuidora_o_agencia": {
+     "na": true,
+     "por_que": "Contacto del catálogo es la directora (antonia.animacion@gmail.com), sin distribuidora",
+     "fecha": "2026-11-16"
+    },
+    "plataformas_festivales": {
+     "url": "https://filmfreeway.com/antoniabello",
+     "fecha": "2026-11-16",
+     "resultado": "Perfil FilmFreeway de Antonia Bello (Cloudflare, no se pudo leer el listado de obras). Short Film Depot pide sesión y Festhome no tiene catálogo público (no mirados)"
+    },
+    "festivales_previos": {
+     "url": "https://www.bing.com/search?q=%22El+regreso+pa%27+cu%C3%A1ndo%22+Antonia+Bello",
+     "fecha": "2026-11-16",
+     "resultado": "Catálogo: premier mundial en BOGOSHORTS; sin festivales previos hallados (también por «When Will You Return» + Bello)"
+    },
+    "organismo_nacional": {
+     "url": "https://www.proimagenescolombia.com/secciones/buscador/buscador_general_resultado.php?buscar=regreso%20pa%20cuando",
+     "fecha": "2026-11-16",
+     "resultado": "Buscador general de Proimágenes: sin la obra (ni por «Antonia Bello»)"
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.bing.com/images/search?q=%22El+regreso+pa+cuando%22+Antonia+Bello",
+     "fecha": "2026-11-16",
+     "resultado": "Solo homónimos; el afiche oficial está en la ficha del festival"
     }
-   }
+   },
+   "afiche": {
+    "url": "https://festival.bogoshorts.com/images/peliculas/6ae4c11c22397____El_regreso_pa__cuando___CN-ANI07_Poster_24BSFF__1_.jpg",
+    "fuente": "Póster oficial en la ficha del festival (festival.bogoshorts.com/corto/4352), 2592×3456",
+    "archivo": "fuentes/bogoshorts-2026/altas/el-regreso-pa-cuando.jpg",
+    "px": [
+     2304,
+     3456
+    ],
+    "ratio": 0.6667,
+    "recorte": {
+     "de": [
+      2592,
+      3456
+     ],
+     "caja": [
+      144,
+      0,
+      2448,
+      3456
+     ],
+     "centrado": true,
+     "objetivo": 0.6667
+    },
+    "veredicto_criterio": null,
+    "fecha": "2026-11-16"
+   },
+   "estado": "alta_posible"
   },
   "Běi Huí Gu− Xiàn": {
    "titulo": "Běi Huí Gu− Xiàn",
