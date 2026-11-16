@@ -242,5 +242,22 @@ class Enlazar(Base):
             self.assertEqual(S.lugar(v, self.r)['nombre'], 'MAMM')
 
 
+class EnlaceManda(Base):
+    def test_maps_mueve_lejos_y_no_se_duplica(self):
+        self.geo('a-2026', {'Antimateria Libros y Café - Medellín': {'lat': 6.20062, 'lng': -75.56368, '_prec': 'aproximado'}})
+        self.geo('b-2026', {'Librería Antimateria': {'lat': 6.2514371, 'lng': -75.5911408, '_prec': 'manual'}})
+        d = S.construir(self.r)
+        S.enlazar(self.r)
+        sa = next(s for s, e in d['sedes'].items() if e['nombre'].startswith('Antimateria'))
+        S.poner_evidencia(sa, MAPS, (6.2514371, -75.5911408), self.r)       # Maps lo mueve 6,4 km
+        S.declarar('mismo', 'Antimateria Libros y Café', 'Librería Antimateria', 'mismo local', self.r)
+        m = S.leer(self.r)
+        self.assertEqual(len(m['sedes']), 1, m['sedes'])
+        self.assertEqual(S.cercanos(self.r), [])
+        e = next(iter(m['sedes'].values()))
+        self.assertEqual(e['lat'], 6.2514371)
+        self.assertEqual(e['festivales'], ['a-2026', 'b-2026'])
+
+
 if __name__ == '__main__':
     unittest.main()
