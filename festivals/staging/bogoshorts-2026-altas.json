@@ -4222,8 +4222,67 @@
      "url": "https://www.themoviedb.org/person/4680249",
      "fecha": "2026-11-15",
      "resultado": "Zofia Żwiruk (4680249): dirige 0"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/find/?q=Szepty&s=tt",
+     "fecha": "2026-11-16",
+     "resultado": "Solo «Szepty» (2022, tt11529288) de Bartlomiej Jakubiak: otra obra. Zofia Zwiruk en IMDb solo con créditos VFX/edición, sin esta obra; «Whispers» 2026 tampoco"
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/Szepty/",
+     "fecha": "2026-11-16",
+     "resultado": "Whispers 2018 (Jordanowicz/Nagłowski) y 2020 (Zubrycka): otras; la de Zwiruk no está ('Whispers 2026' tampoco)"
+    },
+    "web_director_o_productora": {
+     "url": "https://www.youtube.com/watch?v=LSjw_Zuju8c",
+     "fecha": "2026-11-16",
+     "resultado": "Canal YouTube de Zofia Żwiruk publica «Szepty». Filmweb (filmweb.pl/film/Szepty-2026-10122879): reż. Zofia Żwiruk, Polska 2026, sin plakat («Dodaj plakat»)"
+    },
+    "distribuidora_o_agencia": {
+     "url": "https://www.bing.com/search?q=%22Hudzikowski%22+Szepty+OR+Whispers",
+     "fecha": "2026-11-16",
+     "resultado": "Contacto del catálogo: Michal Hudzikowski (gmail personal); búsqueda sin distribuidora ni agencia"
+    },
+    "plataformas_festivales": {
+     "url": "https://www.bing.com/search?q=filmfreeway+%22Szepty%22+OR+%22Whispers%22+Zwiruk",
+     "fecha": "2026-11-16",
+     "resultado": "Sin perfil FilmFreeway (aparece ALTER-NATIVE 34, YouTube, Filmweb); SFD pide sesión y Festhome no tiene catálogo público"
+    },
+    "festivales_previos": {
+     "url": "https://alternativeiff.ro/submitted-films/whispers-2026",
+     "fecha": "2026-11-16",
+     "resultado": "ALTER-NATIVE 34 (Rumanía), films inscritos: Szepty (Whispers), Zofia Zwiruk, Polonia 2026, 11'27''; solo fotogramas, sin afiche"
+    },
+    "pagina_del_festival": {
+     "url": "https://festival.bogoshorts.com/corto/4200",
+     "fecha": "2026-11-16",
+     "resultado": "Ficha «Susurros / Whispers»: póster oficial (WHISPERS, film by Zofia Żwiruk) de 315×450 px"
+    },
+    "organismo_nacional": {
+     "url": "https://www.filmpolski.pl/fp/index.php?szukaj=Szepty",
+     "fecha": "2026-11-16",
+     "resultado": "FilmPolski sin «Szepty» 2026 ni Zofia Żwiruk; buscador de pisf.pl (?s=Szepty / ?s=Żwiruk) solo noticias genéricas"
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.bing.com/images/search?q=Szepty+Zofia+%C5%BBwiruk+plakat",
+     "fecha": "2026-11-16",
+     "resultado": "Sin afiche de esta obra (salen otros «Szepty»: Centrala Film, Szepty lasu, exposiciones)"
     }
-   }
+   },
+   "afiche": {
+    "url": "https://festival.bogoshorts.com/images/peliculas/6ae378814f6f3__Whispers_ofi.jpg",
+    "fuente": "pagina_del_festival: festival.bogoshorts.com/corto/4200 (póster oficial WHISPERS)",
+    "archivo": "fuentes/bogoshorts-2026/altas/szepty.jpg",
+    "px": [
+     315,
+     450
+    ],
+    "ratio": 0.7,
+    "recorte": null,
+    "veredicto_criterio": null,
+    "fecha": "2026-11-16"
+   },
+   "estado": "afiche_chico"
   },
   "The Beat (Matías Aguayo)": {
    "titulo": "The Beat (Matías Aguayo)",
@@ -4243,8 +4302,60 @@
      "url": "https://www.themoviedb.org/person/5429914 https://www.themoviedb.org/person/5429916 https://www.themoviedb.org/person/1992736",
      "fecha": "2026-11-15",
      "resultado": "Lorea Arcelus (5429914): dirige 0; Lorea Arcelus Ortega (5429916): dirige 1; Francisco Schultz (1992736): dirige 2"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/find/?q=Matias%20Aguayo%20The%20Beat&s=tt",
+     "fecha": "2026-11-16",
+     "resultado": "Solo «Battles feat. Matias Aguayo: Ice Cream» (2011, otro videoclip)"
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/The%20Beat%20Matias%20Aguayo/",
+     "fecha": "2026-11-16",
+     "resultado": "Sin resultados"
+    },
+    "web_director_o_productora": {
+     "url": "https://www.bing.com/search?q=%22Matias+Aguayo%22+%22The+Beat%22+video+Lorea+Arcelus",
+     "fecha": "2026-11-16",
+     "resultado": "Sin web de Lorea Arcelus ni Francisco Schultz; prensa: SonOfMarketing (24 jun 2026) y Rolling Stone ES sobre el video"
+    },
+    "distribuidora_o_agencia": {
+     "na": true,
+     "por_que": "Catálogo BOGOSHORTS: contacto es la propia directora-productora (Lorea Arcelus, gmail); videoclip sin agencia",
+     "fecha": "2026-11-16"
+    },
+    "plataformas_festivales": {
+     "url": "https://www.bing.com/search?q=%22Matias+Aguayo%22+%22The+Beat%22+video+Lorea+Arcelus",
+     "fecha": "2026-11-16",
+     "resultado": "Sin perfil FilmFreeway (videoclip); SFD pide sesión y Festhome no tiene catálogo público"
+    },
+    "festivales_previos": {
+     "url": "https://www.sonofmarketing.com/2026/06/24/video-matias-aguayo-the-beat/",
+     "fecha": "2026-11-16",
+     "resultado": "Sin festivales previos hallados; estreno web jun 2026 (título del resultado de Bing)"
+    },
+    "pagina_del_festival": {
+     "url": "https://festival.bogoshorts.com/corto/4347",
+     "fecha": "2026-11-16",
+     "resultado": "Ficha «The Beat» sin póster (solo foto de la directora)"
+    },
+    "organismo_nacional": {
+     "na": true,
+     "por_que": "Videoclip musical (México/Chile/Colombia): los organismos nacionales no registran videoclips",
+     "fecha": "2026-11-16"
+    },
+    "canal_oficial_artista": {
+     "url": "https://www.youtube.com/watch?v=soiY92warQY",
+     "fecha": "2026-11-16",
+     "resultado": "Canal oficial Matias Aguayo: «Matias Aguayo - The Beat (Official Music Video)»; sin afiche (miniatura apaisada)"
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.bing.com/images/search?q=Matias+Aguayo+%22The+Beat%22+video+poster",
+     "fecha": "2026-11-16",
+     "resultado": "Solo miniatura de YouTube y portadas/carteles de fiestas: ningún afiche del video"
     }
-   }
+   },
+   "estado": "sin_afiche",
+   "por_que_sin_afiche": "Videoclip sin afiche: la web del festival no trae póster y solo hay miniatura de YouTube y portada del sencillo"
   },
   "The Waiting Palm": {
    "titulo": "The Waiting Palm",
@@ -4264,8 +4375,68 @@
      "url": "https://www.themoviedb.org/search/person?query=Nazanin%20Zahra%20Rafiei",
      "fecha": "2026-11-15",
      "resultado": "Nazanin Zahra Rafiei: sin perfil en TMDB"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/find/?q=The%20Waiting%20Palm&s=tt",
+     "fecha": "2026-11-16",
+     "resultado": "Sin la obra (solo episodios/podcasts ajenos); «La palma que espera» tampoco"
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/The%20Waiting%20Palm/",
+     "fecha": "2026-11-16",
+     "resultado": "Sin resultados; «La palma que espera» tampoco"
+    },
+    "web_director_o_productora": {
+     "url": "https://www.bing.com/search?q=%22Waiting+Palm%22+Nazanin+Rafiei",
+     "fecha": "2026-11-16",
+     "resultado": "Sin web de la directora ni del productor (Mohammad Sadegh Esmaeili); solo un Instagram nazanin_rafiei70 no confirmado como suyo"
+    },
+    "distribuidora_o_agencia": {
+     "na": true,
+     "por_que": "Catálogo BOGOSHORTS: el contacto es la propia directora (Nazanin Zahra Rafiei, gmail); sin distribuidora ni agencia",
+     "fecha": "2026-11-16"
+    },
+    "plataformas_festivales": {
+     "url": "https://www.bing.com/search?q=filmfreeway+%22Waiting+Palm%22",
+     "fecha": "2026-11-16",
+     "resultado": "Sin perfil FilmFreeway (solo títulos ajenos); SFD pide sesión y Festhome no tiene catálogo público"
+    },
+    "festivales_previos": {
+     "url": "https://www.bing.com/search?q=%22The+Waiting+Palm%22+documentary+Iran+festival",
+     "fecha": "2026-11-16",
+     "resultado": "Sin festivales previos hallados (BOGOSHORTS es premier internacional)"
+    },
+    "pagina_del_festival": {
+     "url": "https://festival.bogoshorts.com/corto/4238",
+     "fecha": "2026-11-16",
+     "resultado": "Ficha «La palma que espera / The Waiting Palm»: póster oficial de 318×450 px"
+    },
+    "organismo_nacional": {
+     "url": "https://www.bing.com/search?q=%22Waiting+Palm%22+Nazanin+Rafiei",
+     "fecha": "2026-11-16",
+     "resultado": "",
+     "parcial": "Irán: no se consultó un registro oficial (Farabi/DEFC) — no se halló base pública buscable"
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.bing.com/images/search?q=%22The+Waiting+Palm%22+poster+Rafiei",
+     "fecha": "2026-11-16",
+     "resultado": "Sin afiche de la obra (solo láminas de palmeras y otros Rafiei)"
     }
-   }
+   },
+   "afiche": {
+    "url": "https://festival.bogoshorts.com/images/peliculas/6ae2ae0862997__TheWaitingPalm_CI-DOC09_Poster_24BSFF_jpg__1_.jpg",
+    "fuente": "pagina_del_festival: festival.bogoshorts.com/corto/4238 (póster oficial)",
+    "archivo": "fuentes/bogoshorts-2026/altas/the-waiting-palm.jpg",
+    "px": [
+     318,
+     450
+    ],
+    "ratio": 0.7067,
+    "recorte": null,
+    "veredicto_criterio": null,
+    "fecha": "2026-11-16"
+   },
+   "estado": "afiche_chico"
   },
   "Todo río lloverá sobre nosotros": {
    "titulo": "Todo río lloverá sobre nosotros",
@@ -4285,8 +4456,55 @@
      "url": "https://www.themoviedb.org/person/2692496",
      "fecha": "2026-11-15",
      "resultado": "César Heredia Cruz (2692496): dirige 1"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/find/?q=Todo%20r%C3%ADo%20llover%C3%A1&s=tt",
+     "fecha": "2026-11-16",
+     "resultado": "No results; «Every River Will Rain» tampoco"
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/Todo%20r%C3%ADo%20llover%C3%A1%20sobre%20nosotros/",
+     "fecha": "2026-11-16",
+     "resultado": "Sin resultados; «Every River Will Rain Upon Us» tampoco"
+    },
+    "web_director_o_productora": {
+     "url": "https://www.bing.com/search?q=%22C%C3%A9sar+Heredia+Cruz%22+cortometraje+2025",
+     "fecha": "2026-11-16",
+     "resultado": "Filmin/Filmaffinity/Cine Qua Non del director (fallecido; homenaje HOM-CESAR); ninguna página de esta obra"
+    },
+    "distribuidora_o_agencia": {
+     "url": "https://www.bing.com/search?q=%22C%C3%A9sar+Heredia%22+%22Todo+r%C3%ADo%22",
+     "fecha": "2026-11-16",
+     "resultado": "El catálogo no trae contacto ni productora; búsqueda sin resultados"
+    },
+    "plataformas_festivales": {
+     "url": "https://www.bing.com/search?q=filmfreeway+%22Torito%22+OR+%22Transastralisme%22+OR+%22Todo+r%C3%ADo+llover%C3%A1%22",
+     "fecha": "2026-11-16",
+     "resultado": "Sin perfil FilmFreeway; SFD pide sesión y Festhome no tiene catálogo público"
+    },
+    "festivales_previos": {
+     "url": "https://www.bing.com/search?q=%22Every+River+Will+Rain+Upon+Us%22",
+     "fecha": "2026-11-16",
+     "resultado": "Sin resultados (ni con el título en español entre comillas)"
+    },
+    "pagina_del_festival": {
+     "na": true,
+     "por_que": "No está en festival.bogoshorts.com: barrido de corto/3800–4560 sin esta obra ni «Elefante» (el programa homenaje HOM-CESAR no tiene fichas en la web)",
+     "fecha": "2026-11-16"
+    },
+    "organismo_nacional": {
+     "url": "https://www.proimagenescolombia.com/secciones/buscador/buscador_general_resultado.php?buscar=todo%20rio%20llovera",
+     "fecha": "2026-11-16",
+     "resultado": "Buscador general (devuelve películas con «río»): sin esta obra"
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.bing.com/images/search?q=%22Todo+r%C3%ADo+llover%C3%A1+sobre+nosotros%22",
+     "fecha": "2026-11-16",
+     "resultado": "Sin imágenes de la obra"
     }
-   }
+   },
+   "estado": "sin_afiche",
+   "por_que_sin_afiche": "Sin afiche en ninguna fuente: no está en la web del festival, sin prensa, sin festivales previos ni imágenes"
   },
   "Torito": {
    "titulo": "Torito",
@@ -4306,8 +4524,72 @@
      "url": "https://www.themoviedb.org/person/3809677 https://www.themoviedb.org/person/2472703 https://www.themoviedb.org/person/1678987",
      "fecha": "2026-11-15",
      "resultado": "Sebastian Cabrera (3809677): dirige 0; Sebastian Cabrera Chelin (2472703): dirige 0; Sebastián Cabrera (1678987): dirige 0"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/find/?q=Torito&s=tt",
+     "fecha": "2026-11-16",
+     "resultado": "Torito 2019 (12', otro), El Torito 2021/2022 y series: ninguna es la guatemalteca de Sebastian Cabrera"
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/Torito/",
+     "fecha": "2026-11-16",
+     "resultado": "Solo Torito 2019 de Laura Litvinoff: otra"
+    },
+    "web_director_o_productora": {
+     "url": "https://vimeo.com/1201258753",
+     "fecha": "2026-11-16",
+     "resultado": "Vimeo: «TORITO | TRAILER | 2026» (Túnel Media, productora co-fundada por el director); sin afiche"
+    },
+    "distribuidora_o_agencia": {
+     "na": true,
+     "por_que": "Catálogo BOGOSHORTS: el contacto es el propio director (sebastian.cabrera@ufm.edu); sin distribuidora",
+     "fecha": "2026-11-16"
+    },
+    "plataformas_festivales": {
+     "url": "https://www.bing.com/search?q=filmfreeway+%22Torito%22+OR+%22Transastralisme%22+OR+%22Todo+r%C3%ADo+llover%C3%A1%22",
+     "fecha": "2026-11-16",
+     "resultado": "Sin perfil FilmFreeway; SFD pide sesión y Festhome no tiene catálogo público"
+    },
+    "festivales_previos": {
+     "url": "https://www.bing.com/search?q=%22Torito%22+%22Los+Skeepers%22",
+     "fecha": "2026-11-16",
+     "resultado": "Sin festivales previos (solo reel de estreno en Instagram del director)"
+    },
+    "pagina_del_festival": {
+     "url": "https://festival.bogoshorts.com/corto/4343",
+     "fecha": "2026-11-16",
+     "resultado": "Ficha «TORITO»: póster oficial (escrito y dirigido por Sebas (Deus), música de Los Skeepers, UFM) de 304×450 px"
+    },
+    "organismo_nacional": {
+     "na": true,
+     "por_que": "Videoclip (Competencia Internacional Videoclip CI-VC, música de Los Skeepers); los organismos nacionales no registran videoclips",
+     "fecha": "2026-11-16"
+    },
+    "canal_oficial_artista": {
+     "url": "https://www.youtube.com/@LosSkeepers/videos",
+     "fecha": "2026-11-16",
+     "resultado": "Canal oficial de Los Skeepers: no publica «Torito» (Hora y Media, Luismigirl, Siempre…)"
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.bing.com/images/search?q=Torito+Sebas+Deus+T%C3%BAnel+Media+poster",
+     "fecha": "2026-11-16",
+     "resultado": "Sin afiche de la obra"
     }
-   }
+   },
+   "afiche": {
+    "url": "https://festival.bogoshorts.com/images/peliculas/6ae409297a5c5__Torito_CI-VC01_Poster_24BSFF__1_.png",
+    "fuente": "pagina_del_festival: festival.bogoshorts.com/corto/4343 (póster oficial)",
+    "archivo": "fuentes/bogoshorts-2026/altas/torito.jpg",
+    "px": [
+     304,
+     450
+    ],
+    "ratio": 0.6756,
+    "recorte": null,
+    "veredicto_criterio": null,
+    "fecha": "2026-11-16"
+   },
+   "estado": "afiche_chico"
   },
   "Transastralisme": {
    "titulo": "Transastralisme",
@@ -4327,8 +4609,55 @@
      "url": "https://www.themoviedb.org/search/person?query=Eva%20Ortega%20Puig",
      "fecha": "2026-11-15",
      "resultado": "Eva Ortega Puig: sin perfil en TMDB"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/find/?q=Transastralisme&s=tt",
+     "fecha": "2026-11-16",
+     "resultado": "Sin la obra; «Transastralismo» tampoco"
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/Transastralisme/",
+     "fecha": "2026-11-16",
+     "resultado": "Sin resultados"
+    },
+    "web_director_o_productora": {
+     "url": "https://catalanfilms.cat/ca/produccions/transastralisme",
+     "fecha": "2026-11-16",
+     "resultado": "Catalan Films: productora Eva Ortega Puig (la directora), España 2020, 2', animación; imágenes solo fotogramas 16:9. evaortega.net vacía, evaortega.com es otra persona"
+    },
+    "distribuidora_o_agencia": {
+     "na": true,
+     "por_que": "La productora es la propia directora (Catalan Films: productora Eva Ortega Puig, contacto personal); sin distribuidora",
+     "fecha": "2026-11-16"
+    },
+    "plataformas_festivales": {
+     "url": "https://mubi.com/es/us/films/transastralism",
+     "fecha": "2026-11-16",
+     "resultado": "MUBI: Transastralism (2020), Eva Ortega Puig; imagen es fotograma. Sin perfil FilmFreeway; SFD pide sesión y Festhome no tiene catálogo público"
+    },
+    "festivales_previos": {
+     "url": "https://alternativa.cccb.org/2020/ca/ph/film/transastralisme",
+     "fecha": "2026-11-16",
+     "resultado": "L'Alternativa 2020 (Hall): ficha sin afiche"
+    },
+    "pagina_del_festival": {
+     "url": "https://festival.bogoshorts.com/corto/4387",
+     "fecha": "2026-11-16",
+     "resultado": "Ficha «Transastralisme» sin póster (ninguna imagen de película)"
+    },
+    "organismo_nacional": {
+     "url": "https://catalanfilms.cat/ca/produccions/transastralisme",
+     "fecha": "2026-11-16",
+     "resultado": "Catalan Films (ICEC, Generalitat): ficha de producción sin afiche (solo 4 fotogramas). ICAA no consultado"
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.bing.com/images/search?q=%22Transastralisme%22+Eva+Ortega",
+     "fecha": "2026-11-16",
+     "resultado": "Sin afiche (otras Eva Ortega)"
     }
-   }
+   },
+   "estado": "sin_afiche",
+   "por_que_sin_afiche": "Solo fotogramas apaisados (Catalan Films, MUBI); la web del festival y L'Alternativa no tienen afiche"
   },
   "Un gallinazo sin suerte": {
    "titulo": "Un gallinazo sin suerte",
@@ -4348,8 +4677,55 @@
      "url": "https://www.themoviedb.org/person/1085129",
      "fecha": "2026-11-15",
      "resultado": "Jairo Pinilla (1085129): dirige 12"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/find/?q=Un%20gallinazo%20sin%20suerte&s=tt",
+     "fecha": "2026-11-16",
+     "resultado": "Sin la obra (resultados ajenos)"
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/Un%20gallinazo%20sin%20suerte/",
+     "fecha": "2026-11-16",
+     "resultado": "Sin resultados"
+    },
+    "web_director_o_productora": {
+     "url": "https://www.bing.com/search?q=%22gallinazo+sin+suerte%22+Pinilla",
+     "fecha": "2026-11-16",
+     "resultado": "Jairo Pinilla sin web propia; Cineaparte (cineaparte.com/p/6515) ficha la obra (1979) sin afiche"
+    },
+    "distribuidora_o_agencia": {
+     "url": "https://www.bing.com/search?q=%22gallinazo+sin+suerte%22+Pinilla",
+     "fecha": "2026-11-16",
+     "resultado": "Sin distribuidora; la exhibe la Cinemateca de Bogotá en la retrospectiva Pinilla (notas Publimetro/El Nuevo Siglo)"
+    },
+    "plataformas_festivales": {
+     "na": true,
+     "por_que": "Corto de 1979: anterior a las plataformas de inscripción (FilmFreeway/SFD/Festhome)",
+     "fecha": "2026-11-16"
+    },
+    "festivales_previos": {
+     "url": "https://www.publimetro.co/cultura/2026/10/29/el-regreso-de-los-fantasmas-de-jairo-pinilla-la-cinemateca-de-bogota-rescata-los-origenes-del-terror-colombiano/",
+     "fecha": "2026-11-16",
+     "resultado": "Solo la retrospectiva de la Cinemateca de Bogotá 2026 (por titular de Bing); sin festivales con ficha o póster"
+    },
+    "pagina_del_festival": {
+     "url": "https://festival.bogoshorts.com/corto/4410",
+     "fecha": "2026-11-16",
+     "resultado": "Ficha «Un gallinazo sin suerte» sin póster"
+    },
+    "organismo_nacional": {
+     "url": "https://www.proimagenescolombia.com/secciones/cine_colombiano/peliculas_colombianas/pelicula_plantilla.php?id_pelicula=1070",
+     "fecha": "2026-11-16",
+     "resultado": "Proimágenes tiene ficha (id 1070) pero con imagen genérica sin_afiche.jpg"
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.bing.com/images/search?q=%22Un+gallinazo+sin+suerte%22+Pinilla",
+     "fecha": "2026-11-16",
+     "resultado": "Sin afiche (solo «Los gallinazos sin plumas» de Ribeyro)"
     }
-   }
+   },
+   "estado": "sin_afiche",
+   "por_que_sin_afiche": "Corto de 1979 sin afiche en Proimágenes, Cineaparte, la web del festival ni en imágenes"
   },
   "Un pájaro más": {
    "titulo": "Un pájaro más",
@@ -4369,8 +4745,67 @@
      "url": "https://www.themoviedb.org/person/4468453 https://www.themoviedb.org/person/5740774",
      "fecha": "2026-11-15",
      "resultado": "Julián Gómez Reyes (4468453): dirige 1; Julián Gómez Reyes (5740774): dirige 1"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/find/?q=Un%20p%C3%A1jaro%20m%C3%A1s&s=tt",
+     "fecha": "2026-11-16",
+     "resultado": "Sin la obra (Un pájaro azul, Un pájaro voló…); «Just Another Bird» tampoco"
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/Un%20p%C3%A1jaro%20m%C3%A1s/",
+     "fecha": "2026-11-16",
+     "resultado": "Sin la obra; «Just Another Bird» tampoco"
+    },
+    "web_director_o_productora": {
+     "url": "https://careloko.com/proyectos/un-pajaro-mas/",
+     "fecha": "2026-11-16",
+     "resultado": "Careloko Producciones: misma sinopsis (Raquelita, Tomás); AFICHE-UN-PAJARO-MAS 1385×2048. Nota: la presenta como serie animada (Abre Cámara 2025 MinTIC)"
+    },
+    "distribuidora_o_agencia": {
+     "url": "https://www.canalcapital.gov.co/programa/un-pajaro-mas/",
+     "fecha": "2026-11-16",
+     "resultado": "Canal Capital la emite (franja Eureka) como programa; sin distribuidora de festivales"
+    },
+    "plataformas_festivales": {
+     "url": "https://www.bing.com/search?q=filmfreeway+%22Varoncito%22+OR+%22Una+carta+supuesta%22+OR+%22Un+p%C3%A1jaro+m%C3%A1s%22",
+     "fecha": "2026-11-16",
+     "resultado": "Sin perfil FilmFreeway; SFD pide sesión y Festhome no tiene catálogo público"
+    },
+    "festivales_previos": {
+     "url": "https://www.bing.com/search?q=%22Un+p%C3%A1jaro+m%C3%A1s%22+%22Juli%C3%A1n+G%C3%B3mez%22+festival",
+     "fecha": "2026-11-16",
+     "resultado": "Sin festivales previos (BOGOSHORTS es premier colombiana)"
+    },
+    "pagina_del_festival": {
+     "url": "https://festival.bogoshorts.com/corto/4333",
+     "fecha": "2026-11-16",
+     "resultado": "Ficha «Un Pájaro Más»: póster oficial de 305×450 px (el mismo de Careloko)"
+    },
+    "organismo_nacional": {
+     "url": "https://www.proimagenescolombia.com/secciones/buscador/buscador_general_resultado.php?buscar=un%20pajaro%20mas",
+     "fecha": "2026-11-16",
+     "resultado": "Buscador general (devuelve películas: Un día más, Belarmina…): sin esta obra"
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.bing.com/images/search?q=%22Un+p%C3%A1jaro+m%C3%A1s%22+afiche+Raquelita",
+     "fecha": "2026-11-16",
+     "resultado": "Primer resultado: afiche de Careloko (el mismo, 693×1024); no hay versión mayor fuera de careloko.com"
     }
-   }
+   },
+   "afiche": {
+    "url": "https://careloko.com/wp-content/uploads/2026/05/AFICHE-UN-PAJARO-MAS-MED-1385x2048.png",
+    "fuente": "web_director_o_productora: careloko.com/proyectos/un-pajaro-mas (afiche oficial 1385×2048)",
+    "archivo": "fuentes/bogoshorts-2026/altas/un-pajaro-mas.jpg",
+    "px": [
+     1385,
+     2048
+    ],
+    "ratio": 0.6763,
+    "recorte": null,
+    "veredicto_criterio": null,
+    "fecha": "2026-11-16"
+   },
+   "estado": "alta_posible"
   },
   "Una carta supuesta": {
    "titulo": "Una carta supuesta",
@@ -4390,8 +4825,67 @@
      "url": "https://www.themoviedb.org/person/6379484",
      "fecha": "2026-11-15",
      "resultado": "Megumi Cardona (6379484): dirige 0"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/find/?q=Una%20carta%20supuesta&s=tt",
+     "fecha": "2026-11-16",
+     "resultado": "Sin la obra (solo episodios de podcast ajenos)"
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/Una%20carta%20supuesta/",
+     "fecha": "2026-11-16",
+     "resultado": "Sin resultados"
+    },
+    "web_director_o_productora": {
+     "url": "https://www.instagram.com/reel/DfAeVpZqWZG/",
+     "fecha": "2026-11-16",
+     "resultado": "Instagram de Megumi Cardona (directora y productora): teaser de «Una Carta Supuesta» (visto en resultado de Bing; no se abrió el reel)"
+    },
+    "distribuidora_o_agencia": {
+     "na": true,
+     "por_que": "Catálogo BOGOSHORTS: contacto es la propia directora-productora (Megumi Cardona, gmail); sin distribuidora",
+     "fecha": "2026-11-16"
+    },
+    "plataformas_festivales": {
+     "url": "https://www.bing.com/search?q=filmfreeway+%22Varoncito%22+OR+%22Una+carta+supuesta%22+OR+%22Un+p%C3%A1jaro+m%C3%A1s%22",
+     "fecha": "2026-11-16",
+     "resultado": "Sin perfil FilmFreeway; SFD pide sesión y Festhome no tiene catálogo público"
+    },
+    "festivales_previos": {
+     "url": "https://www.bing.com/search?q=%22Una+carta+supuesta%22+Megumi+Cardona",
+     "fecha": "2026-11-16",
+     "resultado": "Ninguno: premier mundial en BOGOSHORTS (solo Cinemateca/BOGOSHORTS e Instagram)"
+    },
+    "pagina_del_festival": {
+     "url": "https://festival.bogoshorts.com/corto/4273",
+     "fecha": "2026-11-16",
+     "resultado": "Ficha «Una Carta Supuesta / A Supposed Letter»: póster oficial 1240×1755 (Dirección Megumi Cardona, Sonido Nicolás Gutiérrez)"
+    },
+    "organismo_nacional": {
+     "url": "https://www.proimagenescolombia.com/secciones/buscador/buscador_general_resultado.php?buscar=una%20carta%20supuesta",
+     "fecha": "2026-11-16",
+     "resultado": "Buscador general (con varias palabras sí devuelve películas): sin esta obra"
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.bing.com/images/search?q=%22Una+carta+supuesta%22+Megumi+Cardona",
+     "fecha": "2026-11-16",
+     "resultado": "Sin otra versión del afiche (resultados ajenos)"
     }
-   }
+   },
+   "afiche": {
+    "url": "https://festival.bogoshorts.com/images/peliculas/6ae37c9ba86fb__UnaCartaSupuesta_CN-DOC04_Poster_24BSFF_page-0001.jpg",
+    "fuente": "pagina_del_festival: festival.bogoshorts.com/corto/4273 (póster oficial 1240×1755)",
+    "archivo": "fuentes/bogoshorts-2026/altas/una-carta-supuesta.jpg",
+    "px": [
+     1240,
+     1755
+    ],
+    "ratio": 0.7066,
+    "recorte": null,
+    "veredicto_criterio": null,
+    "fecha": "2026-11-16"
+   },
+   "estado": "alta_posible"
   },
   "Varoncito": {
    "titulo": "Varoncito",
@@ -4411,8 +4905,67 @@
      "url": "https://www.themoviedb.org/person/4170834 https://www.themoviedb.org/person/5330802 https://www.themoviedb.org/person/5919234",
      "fecha": "2026-11-15",
      "resultado": "Camilo Marquez Giraldo (4170834): dirige 0; Camilo Andres Giraldo (5330802): dirige 1; Juan Camilo Giraldo Manrique (5919234): dirige 0"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/find/?q=Varoncito&s=tt",
+     "fecha": "2026-11-16",
+     "resultado": "Sin la obra (Un varoncito episodio TV, El ladroncito…)"
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/Varoncito/",
+     "fecha": "2026-11-16",
+     "resultado": "Sin la obra (Avioncito, Forensita…)"
+    },
+    "web_director_o_productora": {
+     "url": "https://www.bing.com/search?q=%22Varoncito%22+%22Camilo+Giraldo%22",
+     "fecha": "2026-11-16",
+     "resultado": "Sin web del director ni de las productoras (Martha Sofía Duque, Sara Isabel Orrego, Sofía Giraldo); solo prensa: El Colombiano (cortos antioqueños en BOGOSHORTS)"
+    },
+    "distribuidora_o_agencia": {
+     "na": true,
+     "por_que": "Catálogo BOGOSHORTS: contacto es el propio director (Camilo Giraldo, gmail); sin distribuidora",
+     "fecha": "2026-11-16"
+    },
+    "plataformas_festivales": {
+     "url": "https://www.bing.com/search?q=filmfreeway+%22Varoncito%22+OR+%22Una+carta+supuesta%22+OR+%22Un+p%C3%A1jaro+m%C3%A1s%22",
+     "fecha": "2026-11-16",
+     "resultado": "Sin perfil FilmFreeway; SFD pide sesión y Festhome no tiene catálogo público"
+    },
+    "festivales_previos": {
+     "url": "https://www.bing.com/search?q=%22Varoncito%22+cortometraje+festival+2026",
+     "fecha": "2026-11-16",
+     "resultado": "Ninguno: premier mundial en BOGOSHORTS (Teleantioquia, Esquire, Pulzo solo sobre BOGOSHORTS)"
+    },
+    "pagina_del_festival": {
+     "url": "https://festival.bogoshorts.com/corto/4263",
+     "fecha": "2026-11-16",
+     "resultado": "Ficha «Varoncito»: póster oficial 3509×4961 (un cortometraje de Camilo Giraldo, © 2026)"
+    },
+    "organismo_nacional": {
+     "url": "https://www.proimagenescolombia.com/secciones/buscador/buscador_general_resultado.php?buscar=varoncito%20giraldo",
+     "fecha": "2026-11-16",
+     "resultado": "Buscador general: sin esta obra"
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.bing.com/images/search?q=Varoncito+Camilo+Giraldo+cortometraje",
+     "fecha": "2026-11-16",
+     "resultado": "Sin otra versión del afiche (resultados ajenos)"
     }
-   }
+   },
+   "afiche": {
+    "url": "https://festival.bogoshorts.com/images/peliculas/6ae36f97ae973__Varoncito_CLC-DIVX06_Poster_24BSFF.jpg",
+    "fuente": "pagina_del_festival: festival.bogoshorts.com/corto/4263 (póster oficial 3509×4961)",
+    "archivo": "fuentes/bogoshorts-2026/altas/varoncito.jpg",
+    "px": [
+     3509,
+     4961
+    ],
+    "ratio": 0.7073,
+    "recorte": null,
+    "veredicto_criterio": null,
+    "fecha": "2026-11-16"
+   },
+   "estado": "alta_posible"
   },
   "When the Flowers Bloom": {
    "titulo": "When the Flowers Bloom",
