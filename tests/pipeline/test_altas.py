@@ -189,6 +189,17 @@ class Preparar(Base):
         self.assertEqual(e['estado'], 'alta_posible')
         self.assertEqual(out['personas'], {'Juan Ruiz': 'Director'})
 
+    def test_estirar_no_pierde_nada(self):
+        out = A.preparar('x', 'Lluvia', self.img(1080, 1350), 'web', self.r, modo='estirar')
+        a = A.leer_registro('x', self.r)['obras']['Lluvia']['afiche']
+        self.assertTrue(A.RATIO[0] <= a['ratio'] <= A.RATIO[1])
+        self.assertEqual(a['recorte']['de'], [1080, 1350])
+        self.assertEqual(a['recorte']['estirado'], [1080, 1620])  # ancho entero, alto estirado: nada se cortó
+        self.assertNotIn('caja', a['recorte'])
+
+    def test_pagina_del_festival_es_obligatoria(self):
+        self.assertIn('pagina_del_festival', A.FUENTES_OBLIGATORIAS)
+
     def test_afiche_chico(self):
         A.preparar('x', 'Lluvia', self.img(200, 300), 'f', self.r)
         self.assertEqual(A.leer_registro('x', self.r)['obras']['Lluvia']['estado'], 'afiche_chico')
