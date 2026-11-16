@@ -6977,7 +6977,8 @@ try:
               # el modelo de la función (docs/FUNCION.md): funcion.cargar y ensamblar, 16 oct 2026
               'afirmaciones.json', 'funciones-ids.json', 'conflictos.json',
               'funciones-decisiones.json',  # §11.3.4, 18 oct 2026
-              'palmares.json', 'avisos.json'}  # publicar.py los lleva al JSON (f-string), 19 oct 2026
+              'palmares.json', 'avisos.json',  # publicar.py los lleva al JSON (f-string), 19 oct 2026
+              'altas.json'}  # el registro de altas: pipeline/altas.py (f-string) y sus guardianes, 15 nov 2026
     _viv = ['pipeline/lib.py','pipeline/ensamblar.py','pipeline/correr.py','pipeline/publicar.py'] + \
            sorted(_f for _f in _g9.glob('pipeline/*.py') if _re9.search(r'^pipeline/[a-z]+(?:-[a-z]+)*-20\d\d-', _f))
     _corp = '\n'.join(open(_f, encoding='utf-8', errors='ignore').read() for _f in _viv if _os9.path.exists(_f)) + \

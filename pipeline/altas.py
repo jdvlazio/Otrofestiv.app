@@ -23,6 +23,8 @@ fuentes obligatorias vive SOLO acá: FUENTES_OBLIGATORIAS.
     python3 pipeline/altas.py <fid> --pendientes              # qué falta mirar a mano
     python3 pipeline/altas.py <fid> --fuente <título> <clave> <url> [--resultado TXT]
     python3 pipeline/altas.py <fid> --na <título> <clave> --por-que TXT
+    python3 pipeline/altas.py <fid> --fuente <título> <clave> <url> --parcial «qué NO se miró»   # no cuenta
+    python3 pipeline/altas.py <fid> --ficha <título> <tmdb_id> --evidencia TXT --respaldo imdb,letterboxd
     python3 pipeline/altas.py <fid> --sin-afiche <título> --por-que TXT
     python3 pipeline/altas.py <fid> --preparar <título> --url URL --origen TXT
     python3 pipeline/altas.py <fid> --registrar-alta <título> <tmdb_id>
@@ -87,6 +89,8 @@ def leer_registro(fid, raiz=REPO):
 
 
 def escribir_registro(fid, reg, raiz=REPO):
+    import lib
+    reg['_provenance'] = lib.provenance('pipeline/altas.py (TMDB + fuentes revisadas a mano, una por una)')
     reg['_nota'] = ('registro de altas: por obra sin ficha, las fuentes revisadas y la decisión. '
                     'Se escribe con pipeline/altas.py, no a mano.')
     json.dump(reg, open(ruta_registro(fid, raiz), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
@@ -138,8 +142,13 @@ def obligatorias(titulo, obra=None):
 
 
 def revisada(f):
-    """Una fuente cuenta si tiene URL, o si es N/A con su porqué."""
+    """Una fuente cuenta si tiene URL, o si es N/A con su porqué. Una PARCIAL
+    (se buscó alrededor pero no en la fuente misma: un buscador que no existe,
+    un catálogo que no se abrió) NO cuenta: queda pendiente hasta mirarla o
+    declararla N/A con razón (15 nov 2026, tanda 1 de BOGOSHORTS)."""
     f = f or {}
+    if f.get('parcial'):
+        return False
     return bool(str(f.get('url') or '').strip()) or bool(f.get('na') and str(f.get('por_que') or '').strip())
 
 
@@ -317,7 +326,7 @@ def _entrada(reg, titulo):
     return reg['obras'].setdefault(t, {'titulo': t})
 
 
-def anotar_fuente(fid, titulo, clave, url=None, resultado='', por_que=None, raiz=REPO):
+def anotar_fuente(fid, titulo, clave, url=None, resultado='', por_que=None, raiz=REPO, parcial=None):
     if clave not in FUENTES_OBLIGATORIAS + FUENTES_VIDEOCLIP:
         sys.exit(f'clave desconocida: {clave} (las de FUENTES_OBLIGATORIAS)')
     reg = leer_registro(fid, raiz)
@@ -330,7 +339,40 @@ def anotar_fuente(fid, titulo, clave, url=None, resultado='', por_que=None, raiz
         if not re.match(r'https?://', url or ''):
             sys.exit('la fuente necesita una URL http(s)')
         f = {'url': url, 'fecha': hoy(), 'resultado': resultado}
+        if parcial is not None:
+            if not parcial.strip():
+                sys.exit('--parcial necesita decir qué NO se miró')
+            f['parcial'] = parcial
     e.setdefault('fuentes', {})[clave] = f
+    escribir_registro(fid, reg, raiz)
+
+
+def registrar_ficha(fid, titulo, tmdb_id, evidencia, respaldo, raiz=REPO):
+    """Una ficha que apareció en la búsqueda a mano (el sondeo no la pudo
+    verificar: el catálogo no trae año ni duración, el título difiere). Exige
+    la razón escrita y DOS fuentes del registro, revisadas de verdad (con URL,
+    no N/A ni parcial), que la respalden; y que la ficha exista en TMDB con el
+    director de la obra entre sus créditos."""
+    import lib
+    reg = leer_registro(fid, raiz)
+    e = _entrada(reg, titulo)
+    if not (evidencia or '').strip():
+        sys.exit('--ficha necesita --evidencia: por qué es ESA obra (director, año, duración, sinopsis)')
+    fu = e.get('fuentes') or {}
+    malas = [k for k in respaldo if not (revisada(fu.get(k)) and fu[k].get('url'))]
+    if len(set(respaldo)) < 2 or malas:
+        sys.exit(f'--respaldo pide 2+ fuentes del registro revisadas con URL; no sirven: {malas or respaldo}')
+    det = _tmdb(f'/movie/{tmdb_id}', language='en-US', append_to_response='credits')
+    if not det:
+        sys.exit(f'TMDB {tmdb_id} no existe o no respondió')
+    dirs = [c.get('name', '') for c in (det.get('credits') or {}).get('crew') or [] if c.get('job') == 'Director']
+    d_obra = e.get('director') or obra_catalogo(fid, e['titulo'], raiz).get('director') or ''
+    if not (d_obra and any(lib.director_coincide(p.strip(), dirs)
+                           for p in re.split(r',|\s+y\s+|\s*&\s*|/', d_obra) if p.strip())):
+        sys.exit(f'el director de la obra ({d_obra or "?"}) no está en TMDB {tmdb_id} ({", ".join(dirs) or "sin director"})')
+    e.update(estado='ficha_existente', tmdb_id=int(tmdb_id), evidencia=evidencia,
+             respaldo=sorted(set(respaldo)), ficha_fecha=hoy())
+    _escribir_ficha(fid, e['titulo'], tmdb_id, f'altas.py --ficha: {evidencia}', raiz)
     escribir_registro(fid, reg, raiz)
 
 
@@ -549,10 +591,16 @@ def main():
         print(f'✓ {fid}: {len(sin_ficha(fid))} sin ficha sondeadas · {n} con ficha existente (escritas en `fichas`)')
     if '--fuente' in a:
         t, k, u = _arg('--fuente', 3)
-        anotar_fuente(fid, t, k, url=u, resultado=_arg('--resultado') if '--resultado' in a else '')
+        anotar_fuente(fid, t, k, url=u, resultado=_arg('--resultado') if '--resultado' in a else '',
+                      parcial=_arg('--parcial') if '--parcial' in a else None)
     if '--na' in a:
         t, k = _arg('--na', 2)
         anotar_fuente(fid, t, k, por_que=_arg('--por-que') if '--por-que' in a else '')
+    if '--ficha' in a:
+        t, i = _arg('--ficha', 2)
+        registrar_ficha(fid, t, i, _arg('--evidencia') if '--evidencia' in a else '',
+                        [x.strip() for x in (_arg('--respaldo') if '--respaldo' in a else '').split(',') if x.strip()])
+        print(f'✓ ficha_existente y ficha escrita en {fid}-correcciones.json')
     if '--sin-afiche' in a:
         marcar_sin_afiche(fid, _arg('--sin-afiche'), _arg('--por-que'))
     if '--preparar' in a:
