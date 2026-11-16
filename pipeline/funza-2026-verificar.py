@@ -48,10 +48,18 @@ crudo = json.load(io.open(f'{REPO}/festivals/staging/{FID}-crudo.json', encoding
 build = json.load(io.open(f'{REPO}/festivals/staging/{FID}-build.json', encoding='utf-8'))
 afs = json.load(io.open(f'{REPO}/festivals/staging/{FID}-afirmaciones.json', encoding='utf-8'))['afirmaciones']
 movida = {(a['ancla']['dia'], a['valor']): a['ancla']['hora'] for a in afs if a['casilla'] == 'time'}
+# la duración afirmada (la pieza del Encuentro, 11 nov) manda sobre la de la agenda
+dur_af = {(a['ancla']['dia'], a['ancla']['hora']): a['valor'] for a in afs if a['casilla'] == 'duration'}
 
 por_ancla = {(f['dia'], f['hora']): f for f in crudo['funciones']}
+# funciones que agrega una afirmación `existe` (piezas que el festival mandó después de
+# la agenda, 11 nov): no tienen fila en la agenda; se verifican contra su afirmación
+agregadas = {(a['valor']['day'], a['valor']['time'], a['valor']['title']) for a in afs
+             if a['casilla'] == 'existe' and isinstance(a['valor'], dict)}
 fallos, franjas_pub = [], set()
 for f in build['films']:
+    if (f['day'], f['time'], f['title']) in agregadas:
+        continue
     hora = movida.get((f['day'], f['time']), f['time'])
     c = por_ancla.get((f['day'], hora))
     if not c:
@@ -64,14 +72,15 @@ for f in build['films']:
             fallos.append(f'{nombre}: no está la franja «{franja}» de {f["title"]}')
         if k(act) not in txt and not (nombre.startswith('C') and act in OCR_NO_LEE):
             fallos.append(f'{nombre}: no está «{act}»')
-    if f.get('duration') != f'{c["duracion_min"]} min':
-        fallos.append(f'duración: {f["title"]} {f.get("duration")} ≠ {c["duracion_min"]} min')
+    esperada = dur_af.get((f['day'], hora), f'{c["duracion_min"]} min')
+    if f.get('duration') != esperada:
+        fallos.append(f'duración: {f["title"]} {f.get("duration")} ≠ {esperada}')
 
 # cobertura inversa: cada franja impresa en B (horas a. m./p. m.) está publicada o declarada fuera
 impresas = re.findall(r'(\d{1,2}:\d{2}[ap]m)(\d{1,2}:\d{2}[ap]?m)', B)
 declaradas = len(crudo.get('_no_se_publica', []))
-if len(impresas) != len(build['films']) + declaradas:
-    fallos.append(f'cobertura: {len(impresas)} franjas impresas ≠ {len(build["films"])} publicadas + {declaradas} declaradas fuera')
+if len(impresas) != len(build['films']) - len(agregadas) + declaradas:
+    fallos.append(f'cobertura: {len(impresas)} franjas impresas ≠ {len(build["films"]) - len(agregadas)} publicadas (sin las {len(agregadas)} agregadas) + {declaradas} declaradas fuera')
 geo = json.load(io.open(f'{REPO}/festivals/staging/{FID}-venues-geo.json', encoding='utf-8'))
 for v, x in build['venues'].items():
     if x.get('lat') is None or geo.get(v.split(' - ')[0], {}).get('_prec') != 'manual':

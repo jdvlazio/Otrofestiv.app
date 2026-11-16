@@ -1,7 +1,7 @@
 {
  "id": "w_R4MQS7HNCYH6",
  "titulo_original": "Ziemia obiecana",
- "anio": 1974,
+ "anio": 1975,
  "paises": [
   "PL"
  ],
@@ -10,23 +10,28 @@
  ],
  "aliases": [
   {
+   "titulo": "La tierra prometida",
+   "tipo": "festival"
+  },
+  {
    "titulo": "The Promised Land",
    "idioma": "en",
    "tipo": "traduccion"
   }
  ],
  "sinopsis": {
-  "es": "Três amigos esperam construir uma fábrica, mas seus planos são rapidamente ameaçados pela política local e pelo perigoso caso de amor de um dos sócios.",
-  "en": "Three friends hope to build a factory, but their plans are quickly jeopardized by local politics and by the dangerous love affair of one of the partners."
+  "es": "A finales del siglo XIX, la ciudad de Lodz se ha convertido en el epicentro de la industria textil, con la consiguiente necesidad de mano de obra inmigrante. Tres jóvenes estudiantes de Riga: un polaco católico, hijo de nobles terratenientes, un ambicioso judío y un alemán luterano deciden abrir una fábrica en esa ciudad para hacer fortuna y, sin escrúpulos ni prejuicios, se lanzan a acumular dinero y poder. (FILMAFFINITY)",
+  "en": "At the turn of the century, Lodz, Poland, was a quick-paced manufacturing center for textiles, replete with cutthroat industrialists and unsafe working conditions. Three young friends, a Pole, a Jew, and a German, pool their money together to build a factory."
  },
  "generos": [
   "Drama"
  ],
  "afiche": {
-  "archivo": "/pjk8K5MpQJX0XczTC2KOVWNj0lC.jpg",
+  "archivo": "/assets/aleste-2026/la-tierra-prometida.jpg",
   "veredicto": "oficial"
  },
  "xref": {
+  "tmdb": 511,
   "letterboxd": "the-promised-land-1975"
  },
  "versiones": [
@@ -36,6 +41,7 @@
   }
  ],
  "presentaciones": [
+  "aleste-2026",
   "olhar-2026"
  ]
 }

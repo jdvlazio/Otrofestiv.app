@@ -16,12 +16,12 @@
   "Documental"
  ],
  "afiche": {
-  "archivo": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_PO%CC%81STER%20LEJANIA%20-%20Carolina%20Zarate%20Garcia.png?itok=UPHrcFZ4",
-  "veredicto": "oficial-festival"
+  "archivo": "/assets/aleste-2026/lejania.jpg",
+  "veredicto": "oficial"
  },
  "xref": {
   "tmdb": 1668904,
-  "letterboxd": "lejania-1"
+  "letterboxd": "lejania-2026"
  },
  "versiones": [
   {
@@ -30,6 +30,7 @@
   }
  ],
  "presentaciones": [
+  "aleste-2026",
   "ficci-65",
   "jardin-2026"
  ]

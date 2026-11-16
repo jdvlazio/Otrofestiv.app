@@ -1,6 +1,6 @@
 {
  "id": "w_R4ENTHX1MW3N",
- "titulo_original": "Entrelazadas (The Hardest Shapes)",
+ "titulo_original": "Entrelazadas",
  "anio": 2024,
  "paises": [
   "CO"
@@ -8,9 +8,19 @@
  "directores": [
   "Alejandra Morales García"
  ],
+ "aliases": [
+  {
+   "titulo": "Entrelazadas (The Hardest Shapes)",
+   "tipo": "festival"
+  }
+ ],
  "sinopsis": {
-  "es": "Entre las líneas del afecto y el dolor se traza una disputa generacional sobre el deber ser mujer. Una hija se enfrenta al reto de escuchar a su madre y su abuela con el propósito de desdibujar las formas que cimientan su identidad."
+  "es": "Entre las líneas del afecto y el dolor se traza una disputa generacional sobre el deber ser mujer. Una hija se enfrenta al reto de escuchar a su madre y su abuela con el propósito de desdibujar las formas que cimientan su identidad.",
+  "en": "Between the lines of affection and pain, a generational dispute unfolds over what it means to be a woman. A daughter faces the challenge of listening to her mother and grandmother with the aim of blurring the lines that define her identity."
  },
+ "generos": [
+  "Documental"
+ ],
  "afiche": {
   "archivo": "/assets/cineautopsia/entrelazadas-the-hardest-shapes.jpg",
   "veredicto": "oficial"
@@ -26,6 +36,7 @@
   }
  ],
  "presentaciones": [
-  "cineautopsia-2026"
+  "cineautopsia-2026",
+  "ficfusa-2026"
  ]
 }

@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "cinetoro.org — programacion-2026-2 (parrilla) + programas-2 (obras de cada programa) + el catálogo del pre-onboarding (fichas)",
-  "capturado": "2026-11-07",
+  "capturado": "2026-11-14",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_sedes": "Los lugares de la parrilla con su ciudad. «POR DEFINIR» es un rótulo del festival y se publica tal cual, con pin aproximado declarado. «Mambo House / Polideportivo (San Antonio)» (el intermedio musical) se publica en el Polideportivo, donde van los programas 3 y 4 que lo rodean: inferido.",
@@ -204,6 +204,15 @@
    "lng": -76.0785289,
    "_prec": "manual",
    "_match": "Google Maps: «Rosalia’s Garden»"
+  },
+  "Cine Teatro - Toro": {
+   "short": "Cine Teatro",
+   "city": "Toro",
+   "lat": 4.6085973,
+   "lng": -76.0829082,
+   "address": "Toro, Valle del Cauca",
+   "_prec": "manual",
+   "_match": "Google Maps: «CineTeatro \"Wilson Jaramillo Tobón\"», Toro (14 nov 2026)"
   }
  },
  "_avisos_id": [],
@@ -2086,7 +2095,7 @@
    "day": "2026-11-14",
    "time": "22:00",
    "day_order": 4,
-   "venue": "Por definir - Toro",
+   "venue": "Cine Teatro - Toro",
    "event_kind": "evento",
    "has_qa": false,
    "_src": {
@@ -2111,8 +2120,9 @@
      "fecha": "2026-11-07"
     },
     "venue": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-07"
+     "tipo": "festival-ig",
+     "fecha": "2026-11-14",
+     "url": "https://www.instagram.com/p/Dfu8yxaI1ws/"
     },
     "duration": {
      "tipo": "festival-web",
@@ -2153,7 +2163,7 @@
    "day": "2026-11-14",
    "time": "23:00",
    "day_order": 4,
-   "venue": "Por definir - Toro",
+   "venue": "Coliseo Institución Educativa Fray José Joaquín Escobar - Toro",
    "event_kind": "evento",
    "has_qa": false,
    "_src": {
@@ -2176,8 +2186,9 @@
      "fecha": "2026-11-07"
     },
     "venue": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-07"
+     "tipo": "festival-ig",
+     "fecha": "2026-11-14",
+     "url": "https://www.instagram.com/p/Dfu8yxaI1ws/"
     },
     "duration": {
      "tipo": "festival-web",
@@ -2464,12 +2475,75 @@
     }
    },
    "duration": "60 min"
+  },
+  {
+   "title": "Resultados Taller Nicole Antebi - Moviendo montañas",
+   "type": "event",
+   "event_kind": "taller",
+   "day": "2026-11-14",
+   "time": "18:30",
+   "duration": "90 min",
+   "venue": "Coliseo Institución Educativa Fray José Joaquín Escobar - Toro",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dfu8yxaI1ws/",
+    "date": "2026-11-14",
+    "lamina": 1
+   },
+   "section": "🎓 Programación Académica",
+   "_ancla": [
+    "Coliseo Institución Educativa Fray José Joaquín Escobar - Toro",
+    "2026-11-14",
+    "18:30"
+   ],
+   "_fid": "f_9e6446dd35",
+   "_procedencia": {
+    "existe": {
+     "tipo": "festival-ig",
+     "url": "https://www.instagram.com/p/Dfu8yxaI1ws/",
+     "fecha": "2026-11-14"
+    },
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-14"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-14"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-14"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-14"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-14"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-14"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-14"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-14"
+    }
+   },
+   "is_free": true,
+   "id": "f_9e6446dd35",
+   "day_order": 4
   }
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-07T13:12:29",
-  "plan_sha": "b2ac1cab28513174",
+  "fecha": "2026-11-14T18:10:39",
+  "plan_sha": "84b6e08d3d7ee761",
   "paso": 8,
   "cmd": "python3 pipeline/cinetoro-2026-verificar.py"
  }

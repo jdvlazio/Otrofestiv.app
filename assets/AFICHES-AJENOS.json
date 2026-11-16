@@ -5,6 +5,13 @@
   "regla": "un afiche ajeno se publica solo con veredicto «afiche» y huella vigente"
  },
  "afiches": {
+  "/assets/anibia-2026/decaer.jpg": {
+   "sha1": "bc33ea60755421c023080a40e5ed2928104b7336",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficfusa-2026"
+   ]
+  },
   "/assets/bhff-2026/el-festin-de-las-moscas.jpg": {
    "sha1": "37115d960fd038fadc57266965b984ec5781ed7b",
    "veredicto": "afiche",
@@ -26,11 +33,32 @@
     "guatape-2026"
    ]
   },
+  "/assets/bhff-2026/los-lobo.jpg": {
+   "sha1": "90076153f1d5e2de5b1aca1f32792e81cd0c6ce1",
+   "veredicto": "afiche",
+   "usado_en": [
+    "villadeleyvaiff-2026"
+   ]
+  },
   "/assets/bhff-2026/vientre.jpg": {
    "sha1": "5a6c612d486e4863250ae60de8e91785e7c4de86",
    "veredicto": "afiche",
    "usado_en": [
     "fantasmagoria-2026"
+   ]
+  },
+  "/assets/cineautopsia/abjad-hawaz.jpg": {
+   "sha1": "77159541a76d2b5bd15f74aa6bcd5a8c91b8b71c",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficfusa-2026"
+   ]
+  },
+  "/assets/cineautopsia/allegory-of-the-cave.jpg": {
+   "sha1": "728398502265416a4419592955e2950afd8d9788",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficfusa-2026"
    ]
   },
   "/assets/cineautopsia/atmosphaira.jpg": {
@@ -44,7 +72,36 @@
    "sha1": "bf53041bf7467d310ad8b881ae98f59b6df70f57",
    "veredicto": "afiche",
    "usado_en": [
+    "ficfusa-2026",
     "miradas-2026"
+   ]
+  },
+  "/assets/cineautopsia/tamashi.jpg": {
+   "sha1": "59decf6ba29b973b2f4a6aa79effcbf6ebcf3f08",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficfusa-2026"
+   ]
+  },
+  "/assets/cinetoro-2026/una-vez-en-un-cuerpo.jpg": {
+   "sha1": "d1f7decf7183794d721d318176d1c7805816a76d",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficfusa-2026"
+   ]
+  },
+  "/assets/festicinerio-2026/anoche-a-la-media-noche.jpg": {
+   "sha1": "a98b012a5b3af0fe8e0d1bb0a8ebe0ae22beb467",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficfusa-2026"
+   ]
+  },
+  "/assets/festicinerio-2026/el-espejo-de-la-vida.jpg": {
+   "sha1": "7ead486e250e82f72dabaf6e8e96e3f6dccbded0",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficfusa-2026"
    ]
   },
   "/assets/ficcali-2026/alivios.jpg": {
@@ -105,6 +162,13 @@
     "siembrafest-2026"
    ]
   },
+  "/assets/ficdeh/notas-sobre-un-destierro.jpg": {
+   "sha1": "941396fa29a708746aef6c42068101b6e741ab52",
+   "veredicto": "afiche",
+   "usado_en": [
+    "villadeleyvaiff-2026"
+   ]
+  },
   "/assets/ficdeh/semillas.jpg": {
    "sha1": "996e3e1f13af282d30423b1cc4ae0b7fad65e327",
    "veredicto": "afiche",
@@ -127,11 +191,25 @@
     "ficpa-2026"
    ]
   },
+  "/assets/ficica-2026/cayenas-libertarias.jpg": {
+   "sha1": "58780ecd1d4804b7410129147a31094ad0290f8e",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficfusa-2026"
+   ]
+  },
   "/assets/ficmontanas/el-huaquero.jpg": {
    "sha1": "8d1dc5636811bc3deffa929ff059b3e2f8a12dc6",
    "veredicto": "afiche",
    "usado_en": [
     "siembrafest-2026"
+   ]
+  },
+  "/assets/ficpa-2026/la-gallina-saraviada.jpg": {
+   "sha1": "86743e2a085c4c27310a08f6869246c8ffbe2b74",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficfusa-2026"
    ]
   },
   "/assets/ficpa-2026/relatos-del-camino.jpg": {
@@ -170,6 +248,13 @@
     "ficmontanas-2026"
    ]
   },
+  "/assets/girardota-2026/bajo-el-ultimo-aliento.jpg": {
+   "sha1": "7f0086f3bc96716e99374ea8e1789151e07ee4fe",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficfusa-2026"
+   ]
+  },
   "/assets/mamut-2026/no-menguara-el-fuego-de-esta-luna.jpg": {
    "sha1": "aa40d660205b7c41d527d003730bd572d0605a71",
    "veredicto": "afiche",
@@ -205,6 +290,13 @@
    "veredicto": "afiche",
    "usado_en": [
     "girardota-2026"
+   ]
+  },
+  "/assets/popayan-2026/mas-alla.jpg": {
+   "sha1": "928792df65ff0e5b88353ccdc30e74ea1778ac33",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficfusa-2026"
    ]
   },
   "/assets/popayan-2026/tentado-de-difunto.jpg": {

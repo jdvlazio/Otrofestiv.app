@@ -8,16 +8,22 @@
  "directores": [
   "Sebastian Brameshuber"
  ],
+ "aliases": [
+  {
+   "titulo": "Londres",
+   "tipo": "festival"
+  }
+ ],
  "sinopsis": {
-  "es": "Una road movie experimental y a la vez tierna sobre los trayectos compartidos de un hombre enigmático por la escénica autopista del Oeste de Austria, rodada en estudio con técnicas antiguas de retroproyección. La premiada London, de Sebastian Brameshuber, es una rareza de destreza técnica que nunca traiciona su núcleo emocional.",
-  "en": "An experimental yet tender road movie about an enigmatic man’s shared commutes across Austria’s scenic West Autobahn — shot in-studio with vintage rear-projection techniques — Sebastian Brameshuber’s award-winning London is a rare work of technical prowess that never belies its emotional core."
+  "es": "Bobby siempre está de viaje, conduciendo su coche de un lado a otro por la autopista que une las ciudades austriacas de Viena y Salzburgo. Gracias a un servicio de coche compartido, recoge a otras personas que viajan por la misma ruta pero buscan ahorrar en gasolina. Durante el trayecto, charlan.",
+  "en": "Bobby drives back and forth between Vienna and Salzburg, giving lifts to strangers on the way, sharing conversations that drift from the mundane to the deeply personal. In this tender portrait of today’s Europe, anonymity and warmth still go hand in hand."
  },
  "generos": [
   "Drama"
  ],
  "afiche": {
-  "archivo": "https://images.ctfassets.net/22n7d68fswlw/4vdodyzLCLZm0KJbxf46mc/b0d7fec6cf123788d083a7e816a4d246/London_Poster.webp",
-  "veredicto": "oficial-festival"
+  "archivo": "/assets/aleste-2026/londres.jpg",
+  "veredicto": "oficial"
  },
  "xref": {
   "tmdb": 1599764,
@@ -27,9 +33,14 @@
   {
    "etiqueta": "120 min",
    "duracion_min": 120
+  },
+  {
+   "etiqueta": "122 min",
+   "duracion_min": 122
   }
  ],
  "presentaciones": [
+  "aleste-2026",
   "tiff-2026"
  ]
 }

@@ -228,6 +228,17 @@ def publicar(fid, forzar=False):
     if _no:
         sys.exit(f'✗ NO se publica {fid}: esto no entra a la app:\n  · ' + '\n  · '.join(_no))
 
+    # ── ¿se buscó TODO lo que el festival publicó? (inventario de fuentes, ≤ 24 h) ──
+    import fuentes_descubrir
+    _fin = (b.get('festivalEndStr') or '9999')[:10]
+    if _fin >= fuentes_descubrir.ahora()[:10]:
+        _ip = fuentes_descubrir.ruta(fid)
+        _pf = (['sin inventario de fuentes'] if not os.path.exists(_ip)
+               else fuentes_descubrir.problemas(json.load(open(_ip, encoding='utf-8')), horas=24))
+        if _pf and not forzar:
+            sys.exit(f'✗ NO se publica {fid}: la obtención de fuentes no está completa:\n  · ' + '\n  · '.join(_pf)
+                     + f'\n  python3 pipeline/fuentes_descubrir.py {fid}  (y --marcar cada fuente nueva)')
+
     rep = collections.Counter()
     out = {k: v for k, v in b.items() if k not in ('films', 'venues', 'sections')}
     out = limpio(out)

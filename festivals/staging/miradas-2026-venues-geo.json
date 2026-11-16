@@ -9,7 +9,8 @@
   "address": "Cra. 44 #19A-100",
   "_prec": "manual",
   "_match": "heredado de Museo de Arte Moderno de Medellín - MAMM",
-  "_nota": "verificada en Fantasmagoría/Mamut"
+  "_nota": "verificada en Fantasmagoría/Mamut",
+  "_matriz": "s_99915661"
  },
  "Centro Colombo Americano - Medellín": {
   "lat": 6.2499694,
@@ -17,7 +18,8 @@
   "address": "Cra. 45 #53-24",
   "_prec": "manual",
   "_match": "heredado de Centro Colombo Americano",
-  "_nota": "verificada en Fantasmagoría/Mamut; el PDF imprime una vez «Cra. 45 # 5-24» (errata de 53-24, pág. 81)"
+  "_nota": "verificada en Fantasmagoría/Mamut; el PDF imprime una vez «Cra. 45 # 5-24» (errata de 53-24, pág. 81)",
+  "_matriz": "s_b5d25cab"
  },
  "Cineprox Las Américas - Medellín": {
   "lat": 6.2145832,
@@ -25,7 +27,8 @@
   "address": "Dg. 75B #2A-120",
   "_prec": "manual",
   "_match": "heredado de Cineprox Las Américas",
-  "_nota": "verificada en Fantasmagoría"
+  "_nota": "verificada en Fantasmagoría",
+  "_matriz": "s_b3c7c07a"
  },
  "Centro de Desarrollo Cultural de Moravia - Medellín": {
   "lat": 6.2764212,
@@ -33,7 +36,8 @@
   "address": "Cl. 82A #52-25",
   "_prec": "manual",
   "_match": "heredado de Centro de Desarrollo Cultural de Moravia",
-  "_nota": "verificada en Fantasmagoría"
+  "_nota": "verificada en Fantasmagoría",
+  "_matriz": "s_1e670050"
  },
  "Comfama Otraparte - Medellín": {
   "lat": 6.1795206,
@@ -41,7 +45,8 @@
   "address": "Cl. 27 Sur #43A-51, Envigado",
   "_prec": "manual",
   "_match": "heredado de Comfama Otraparte",
-  "_nota": "verificada en Fantasmagoría. Está en Envigado; se publica en «Medellín» como en Fantasmagoría (decisión de Juan, 30 sep)"
+  "_nota": "verificada en Fantasmagoría. Está en Envigado; se publica en «Medellín» como en Fantasmagoría (decisión de Juan, 30 sep)",
+  "_matriz": "s_67c78bba"
  },
  "Comfama La Capilla - Medellín": {
   "lat": 6.2458698,
@@ -49,7 +54,8 @@
   "address": "Claustro Comfama San Ignacio, Cra. 44 #48-18 (2.º piso)",
   "_prec": "manual",
   "_match": "heredado de Capilla, Comfama",
-  "_nota": "verificada en Mamut (Claustro Comfama San Ignacio)"
+  "_nota": "verificada en Mamut (Claustro Comfama San Ignacio)",
+  "_matriz": "s_25caf24a"
  },
  "Librería Antimateria - Medellín": {
   "lat": 6.2514371,
@@ -57,7 +63,8 @@
   "address": "Cl. 45E #72-09",
   "_prec": "manual",
   "_match": "heredado de Librería Antimateria",
-  "_nota": "verificada en Fantasmagoría"
+  "_nota": "verificada en Fantasmagoría",
+  "_matriz": "s_e1907155"
  },
  "Paraninfo Universidad de Antioquia - Medellín": {
   "lat": 6.2464191,
@@ -65,7 +72,8 @@
   "address": "Cra. 44 #48-72 (Plazuela San Ignacio)",
   "_prec": "manual",
   "_match": "heredado de Paraninfo Universidad de Antioquia",
-  "_nota": "verificada en Fantasmagoría"
+  "_nota": "verificada en Fantasmagoría",
+  "_matriz": "s_febabd56"
  },
  "Parque de los Deseos - Medellín": {
   "lat": 6.2684353,
@@ -73,21 +81,24 @@
   "address": "Calle 71 # 52-30, Aranjuez",
   "_prec": "manual",
   "_match": "Google Maps: Parque de los Deseos",
-  "_nota": "El PDF da dos direcciones: Calle 71 # 52-30 y Carrera 52 # 71-117"
+  "_nota": "El PDF da dos direcciones: Calle 71 # 52-30 y Carrera 52 # 71-117",
+  "_matriz": "s_6a3d6ea4"
  },
  "Planetario de Medellín - Medellín": {
   "lat": 6.269143,
   "lng": -75.5659499,
   "address": "Carrera 52 # 71-117, Medellín",
   "_prec": "manual",
-  "_match": "Google Maps: Planetario de Medellín Jesús Emilio Ramírez"
+  "_match": "Google Maps: Planetario de Medellín Jesús Emilio Ramírez",
+  "_matriz": "s_7aa97950"
  },
  "Teatro Pablo Tobón Uribe - Medellín": {
   "lat": 6.2475553,
   "lng": -75.5593819,
   "address": "Cra. 40 #51-24, La Candelaria, Medellín",
   "_prec": "manual",
-  "_match": "Google Maps: Teatro Pablo Tobón Uribe"
+  "_match": "Google Maps: Teatro Pablo Tobón Uribe",
+  "_matriz": "s_42f35085"
  },
  "Parque Explora - Medellín": {
   "lat": 6.2708025,
@@ -95,14 +106,16 @@
   "address": "Cl. 73 #52-100, Aranjuez, Medellín",
   "_prec": "manual",
   "_match": "Google Maps: Parque Explora",
-  "_nota": "Pin del Parque Explora (el Exploratorio está dentro)"
+  "_nota": "Pin del Parque Explora (el Exploratorio está dentro)",
+  "_matriz": "s_d89af029"
  },
  "Parque de Cristo Rey - Medellín": {
   "lat": 6.2072961,
   "lng": -75.5864532,
   "address": "Cra. 52 #16a-33, Cristo Rey (Guayabal), Medellín",
   "_prec": "manual",
-  "_match": "Google Maps: Parque Cristo Rey"
+  "_match": "Google Maps: Parque Cristo Rey",
+  "_matriz": "s_1f206eab"
  },
  "Biblioteca Comfama Bello - Medellín": {
   "lat": 6.3323907,
@@ -110,14 +123,16 @@
   "address": "Cra. 49 #46-57, Prado, Bello",
   "_prec": "manual",
   "_match": "Google Maps: Comfama Bello Sede Centro",
-  "_nota": "Maps no lista la biblioteca aparte; sede Comfama Bello Centro Maps da «Comfama Bello Sede Centro». Está en Bello; se publica en «Medellín» (criterio de Otraparte en Fantasmagoría) — duda para Juan"
+  "_nota": "Maps no lista la biblioteca aparte; sede Comfama Bello Centro Maps da «Comfama Bello Sede Centro». Está en Bello; se publica en «Medellín» (criterio de Otraparte en Fantasmagoría) — duda para Juan",
+  "_matriz": "s_f7766586"
  },
  "Comfama Aranjuez - Medellín": {
   "lat": 6.2832593,
   "lng": -75.5620435,
   "address": "Carrera 51A # 91-95, Aranjuez, Medellín",
   "_prec": "manual",
-  "_match": "Google Maps: Comfama Aranjuez"
+  "_match": "Google Maps: Comfama Aranjuez",
+  "_matriz": "s_4f01e23d"
  },
  "Biblioteca Comfama Caldas - Medellín": {
   "lat": 6.0923196,
@@ -125,14 +140,16 @@
   "address": "Calle 129 Sur # 49-24, Caldas, Antioquia",
   "_prec": "manual",
   "_match": "Google Maps: Comfama Caldas",
-  "_nota": "Está en Caldas; se publica en «Medellín» — duda para Juan"
+  "_nota": "Está en Caldas; se publica en «Medellín» — duda para Juan",
+  "_matriz": "s_72770c6f"
  },
  "Estación Trece de Noviembre - Medellín": {
   "lat": 6.2454624,
   "lng": -75.5441638,
   "address": "Línea M Metrocable, Medellín",
   "_prec": "manual",
-  "_match": "Google Maps: Metro Cable Linea M - Estación Trece De Noviembre"
+  "_match": "Google Maps: Metro Cable Linea M - Estación Trece De Noviembre",
+  "_matriz": "s_0ecc197a"
  },
  "Junta de Acción Comunal El Faro - Medellín": {
   "lat": 6.2545467,
@@ -140,14 +157,16 @@
   "address": "Barrio El Faro, comuna 8, Medellín",
   "_prec": "manual",
   "_match": "Google Maps: Sede Comunitaria El Faro",
-  "_nota": "Maps no tiene 'JAC El Faro'; el resultado más cercano es 'Sede Comunitaria El Faro' — confirmar que es la misma sede Maps: «Sede Comunitaria El Faro» — por confirmar que es la JAC"
+  "_nota": "Maps no tiene 'JAC El Faro'; el resultado más cercano es 'Sede Comunitaria El Faro' — confirmar que es la misma sede Maps: «Sede Comunitaria El Faro» — por confirmar que es la JAC",
+  "_matriz": "s_c160e346"
  },
  "Café Pletórico - Medellín": {
   "lat": 6.2935942,
   "lng": -75.5750755,
   "address": "Castilla, Medellín",
   "_prec": "manual",
-  "_match": "Google Maps: Pletórico Café"
+  "_match": "Google Maps: Pletórico Café",
+  "_matriz": "s_626a169c"
  },
  "Teatro UVA Tricentenario - Medellín": {
   "lat": 6.2935852,
@@ -155,7 +174,8 @@
   "address": "Tricentenario, Medellín",
   "_prec": "manual",
   "_match": "Google Maps: UVA Sin Fronteras",
-  "_nota": "Maps resuelve 'UVA Tricentenario' a 'UVA Sin Fronteras' (barrio Tricentenario); confirmar que es la misma UVA Maps lleva a «UVA Sin Fronteras», en el barrio Tricentenario — por confirmar"
+  "_nota": "Maps resuelve 'UVA Tricentenario' a 'UVA Sin Fronteras' (barrio Tricentenario); confirmar que es la misma UVA Maps lleva a «UVA Sin Fronteras», en el barrio Tricentenario — por confirmar",
+  "_matriz": "s_4bf2bfa4"
  },
  "Institución Educativa Pío XII - Medellín": {
   "lat": 6.2564364,
@@ -163,35 +183,40 @@
   "address": "Cra. 98 #44-38, Medellín",
   "_prec": "manual",
   "_match": "Google Maps: Escuela Pio XII",
-  "_nota": "Maps muestra 2: 'Escuela Pio XII' (6.2564364,-75.6138201, Cra. 98 #44-38, occidente de Medellín) y 'Colegio Pío Xll' (6.1653976,-75.5815685, al sur, fuera de Medellín probablemente Envigado/Itagüí). Se eligió la de Medellín; confirmar Maps: «Escuela Pio XII» (Cra. 98 #44-38, comuna 13, coherente con la obra sobre la Comuna 13); hay otro Pío XII al sur"
+  "_nota": "Maps muestra 2: 'Escuela Pio XII' (6.2564364,-75.6138201, Cra. 98 #44-38, occidente de Medellín) y 'Colegio Pío Xll' (6.1653976,-75.5815685, al sur, fuera de Medellín probablemente Envigado/Itagüí). Se eligió la de Medellín; confirmar Maps: «Escuela Pio XII» (Cra. 98 #44-38, comuna 13, coherente con la obra sobre la Comuna 13); hay otro Pío XII al sur",
+  "_matriz": "s_c0e88ef0"
  },
  "JAC Santa Cruz parte alta - Medellín": {
   "lat": 6.2925953,
   "lng": -75.5500455,
   "address": "Barrio Santa Cruz, comuna 2, Medellín",
   "_prec": "manual",
-  "_match": "Google Maps: JAC Santa Cruz Parte Alta"
+  "_match": "Google Maps: JAC Santa Cruz Parte Alta",
+  "_matriz": "s_6cbcf2c5"
  },
  "Finca Agroturística El Encanto de Mis Abuelos - Medellín": {
   "lat": 6.2985309,
   "lng": -75.6469058,
   "address": "Vereda El Llano, Corregimiento San Cristóbal, Medellín",
   "_prec": "manual",
-  "_match": "Google Maps: Finca agroturistica el encanto de mis abuelos"
+  "_match": "Google Maps: Finca agroturistica el encanto de mis abuelos",
+  "_matriz": "s_a140e4f3"
  },
  "Escuela Vereda El Placer - Medellín": {
   "lat": 6.2253627,
   "lng": -75.490772,
   "address": "Vereda El Placer, Corregimiento Santa Elena, Medellín",
   "_prec": "manual",
-  "_match": "Google Maps: IE El Placer"
+  "_match": "Google Maps: IE El Placer",
+  "_matriz": "s_39a0cbb2"
  },
  "Institución Educativa La Independencia - Medellín": {
   "lat": 6.253025,
   "lng": -75.624726,
   "address": "Calle 39D # 112-81, San Javier, Medellín",
   "_prec": "manual",
-  "_match": "Google Maps: I.E. La Independencia"
+  "_match": "Google Maps: I.E. La Independencia",
+  "_matriz": "s_401a944e"
  },
  "Casa TEA - Medellín": {
   "lat": 6.2514575,
@@ -199,14 +224,16 @@
   "address": "Calle 53 # 47-44, La Candelaria, Medellín",
   "_prec": "manual",
   "_match": "Google Maps: Cl. 53 #47-44, La Candelaria (dirección, no lugar)",
-  "_nota": "PIN APROXIMADO. Maps no tiene Casa TEA/CorpoTEA en Medellín (solo una CASA TEA en Bogotá); pin por la dirección exacta del programa"
+  "_nota": "PIN APROXIMADO. Maps no tiene Casa TEA/CorpoTEA en Medellín (solo una CASA TEA en Bogotá); pin por la dirección exacta del programa",
+  "_matriz": "s_e2717fd7"
  },
  "Casa de la Música - Medellín": {
   "lat": 6.2677102,
   "lng": -75.5662198,
   "address": "Calle 71 # 52-30, Aranjuez, Medellín",
   "_prec": "manual",
-  "_match": "Google Maps: Casa de la Música"
+  "_match": "Google Maps: Casa de la Música",
+  "_matriz": "s_34124cb5"
  },
  "Coocine - Medellín": {
   "lat": 6.2063889,
@@ -214,6 +241,7 @@
   "address": "Diag 5 Este # 8-261 Casa 15, Vereda El Plan, Santa Elena",
   "_prec": "manual",
   "_match": "Google Maps: COOCINE - Cooperativa de cine",
-  "_nota": "Cooperativa COOCINE, Vereda El Plan, Santa Elena (el PDF la escribe en mayúsculas)"
+  "_nota": "Cooperativa COOCINE, Vereda El Plan, Santa Elena (el PDF la escribe en mayúsculas)",
+  "_matriz": "s_e1521829"
  }
 }

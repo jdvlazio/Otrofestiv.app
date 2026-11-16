@@ -60,9 +60,10 @@ struct ProgramView: View {
     // «Hoy» / «Mañana» solo cuando es cierto; si no, el día con su fecha.
     private func title(_ days: ProgramDays, _ c: Catalog) -> String {
         guard let day = days.days.indices.contains(page) ? days.days[page] : days.days.first else { return L.program }
-        if day == days.todayKey { return L.today }
-        if day == days.tomorrowKey { return L.tomorrow }
-        return c.shortDay(day)
+        // «Programa · Hoy» (16 nov 2026): el nombre siempre a la vista, para no
+        // confundirlo con Mi Plan.
+        let d = day == days.todayKey ? L.today : day == days.tomorrowKey ? L.tomorrow : c.shortDay(day)
+        return "\(L.program) · \(d)"
     }
 }
 
@@ -115,7 +116,18 @@ private struct ProgramRow: View {
     let inPlan: Bool
     var body: some View {
         HStack(alignment: .center, spacing: 8) {
+            // Lo que ya está en tu plan: ✓ ámbar sobre el póster (16 nov 2026, como la
+            // estrella de favoritos de Apple Sports). Antes era una rayita de 2 pt.
             PosterThumb(item: item)
+                .overlay(alignment: .topTrailing) {
+                    if inPlan {
+                        Image(systemName: "checkmark.circle.fill")
+                            .font(.system(size: 13, weight: .bold))
+                            .symbolRenderingMode(.palette)
+                            .foregroundStyle(.black, OT.amber)
+                            .offset(x: 5, y: -5)
+                    }
+                }
             VStack(alignment: .leading, spacing: 3) {
                 Text(item.title)
                     .font(.subheadline).fontWeight(.medium).foregroundStyle(OT.warm)
@@ -134,12 +146,6 @@ private struct ProgramRow: View {
             }
         }
         .frame(minHeight: 45)
-        .padding(.leading, inPlan ? 6 : 0)
-        .overlay(alignment: .leading) {
-            if inPlan {
-                Capsule().fill(OT.amber).frame(width: 2).padding(.vertical, 6)
-            }
-        }
         .accessibilityElement(children: .combine)
         .accessibilityLabel(inPlan ? "\(item.title). \(L.inPlan)" : item.title)
     }

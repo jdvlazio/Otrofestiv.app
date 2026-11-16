@@ -144,7 +144,22 @@ corrige publicando de nuevo: el barrido se repite durante el festival.
 
 ## 2 · El proceso, paso a paso
 
-### Paso 0 · Fuentes a su carpeta
+### Paso 0 · Inventario de TODO lo que el festival publicó (12 nov 2026)
+
+Antes de transcribir nada: `python3 pipeline/fuentes_descubrir.py <fid> --raiz web=… --raiz bio=…`.
+Las raíces se sacan del perfil de Instagram SIN sesión: la web y **cada link de la
+bio** (Linktree, Drive, formulario, FilmFreeway…). Si no hay web o no hay bio,
+`--raiz _sin_web="porqué"` / `_sin_bio="porqué"`. El comando recorre la web y la
+bio (2 saltos) y anota cada PDF, formulario, Drive, imagen y página de programa en
+`festivals/staging/<fid>-fuentes.json`. **Cada fuente se abre y se marca**:
+`--marcar <url|prefijo> usada|descartada "porqué"`. Un formulario de inscripción
+de una actividad se carga como `registration_url` (afirmación). Por qué existe:
+Villa de Leyva tenía su programa completo en un PDF de la home y FICFUSA nueve
+formularios en el Linktree de la bio; los dos se publicaron incompletos porque
+mirábamos lo conocido, no lo publicado. `[inventario-fuentes]` frena si queda
+algo sin revisar; `publicar.py` frena si el recorrido tiene más de 24 h.
+
+### Paso 0·b · Fuentes a su carpeta
 
 Todo original va a **`fuentes/<fest-id>/`** (gitignored — decenas de MB, y el
 repo sirve GitHub Pages). El escritorio es de TRÁNSITO: nada de trabajo vive
@@ -231,6 +246,47 @@ se conserva el del festival).
 **Los cruces dudosos se deciden** (`[cruce-sin-decidir]`, 5 nov 2026): `python3 pipeline/preonboarding.py` los lista; cada uno se resuelve con `misma_obra` {título: {festival, titulo, _por_que}}, que hereda los datos, o con `no_heredar` en `<fid>-correcciones.json`.
 
 **El pre-onboarding se cierra completo** (`[preonboarding-completo]`, 18 oct 2026): un festival que todavía no salió y ya tiene `<fid>-catalogo.json` no pasa los validadores si alguna obra no tiene afiche ni su porqué en `sin_afiche`. Medir con `python3 pipeline/preonboarding.py`.
+
+#### Paso 2·bis · Obras sin ficha: el registro de altas (15 nov 2026)
+
+«¿Tiene ficha en TMDB? ¿Tiene afiche original? ¿Se da de alta?» se decide con
+**evidencia escrita**, no con el criterio libre de quien investigue (BOGOSHORTS:
+ayudantes que dijeron cumplir y no miraron las fuentes de afiche; una ficha
+declarada a mano; un afiche recortado a mano; un título en NFD). Todo pasa por
+`pipeline/altas.py` y queda en `festivals/staging/<fid>-altas.json`:
+
+1. `python3 pipeline/altas.py <fid> --sondar` — lo corre `correr.py` solo tras
+   enriquecer en pre-onboarding (o con `"altas": true` en el plan). TMDB por
+   título, variantes (sin acentos, sin subtítulo, original/inglés, con y sin
+   año), filmografía de cada director (movie + tv) e IMDb `/find`. Ficha
+   existente **solo** si casa el candado (director ✓ + año ±1 o duración ±3), y
+   entonces escribe ella misma la ficha en `fichas` con `_registro`.
+2. `--pendientes` — por obra, las fuentes de `FUENTES_OBLIGATORIAS` (en
+   `altas.py`, única lista) sin evidencia. Cada una se anota con
+   `--fuente <título> <clave> <url> --resultado "…"`, o
+   `--na <título> <clave> --por-que "…"` (un videoclip suma
+   `canal_oficial_artista` y suele justificar N/A en las demás). Sin URL ni
+   porqué la fuente **no está revisada**. Si no se pudo mirar la fuente misma
+   (un buscador que no existe, un catálogo que no se abrió) y solo se buscó
+   alrededor, va con `--parcial "qué NO se miró"`: queda **pendiente**, no cuenta.
+   Si la búsqueda encuentra una ficha que el sondeo no pudo verificar:
+   `--ficha <título> <tmdb_id> --evidencia "por qué es ESA obra" --respaldo imdb,letterboxd`
+   (2+ fuentes del registro con URL, no N/A ni parciales; el director de la obra
+   tiene que estar en los créditos de TMDB).
+3. `--preparar <título> --url <afiche> --origen "<dónde>"` — baja el afiche a
+   `fuentes/<fid>/altas/`, lo pasa por `afiche_criterio`, lo deja en JPG con
+   proporción 0,66–0,71 (recorte centrado, documentado en el registro),
+   normaliza el título a NFC y emite `<slug>.tmdb.json` para los helpers del
+   skill tmdb-alta (`wiz` / `personas` / `alta`). En Chrome solo se ejecuta eso.
+   Sin afiche que sirva: `--sin-afiche <título> --por-que "…"`.
+4. `--registrar-alta <título> <tmdb_id>` — marca `alta_hecha` y escribe la ficha
+   en `fichas`. **Ninguna ficha se escribe a mano.**
+
+Guardianes: `[alta-sin-evidencia]` (festival por salir: toda obra sin ficha con
+su entrada completa), `[ficha-sin-registro]` (toda ficha nueva de `fichas` con
+entrada `ficha_existente`/`alta_hecha` del mismo tmdb_id), `[titulo-nfc]`
+(crudos/catálogos de staging en NFC). Deuda congelada en
+`pipeline/altas-deuda.json`; baja con `python3 pipeline/altas.py --bajar-deuda`.
 
 ### Paso 3 · Sedes
 
@@ -546,6 +602,7 @@ una hipótesis sobre la fuente, y se comprueba contra ella.
 
 ## 3 · Checklist de publicación
 
+- [ ] **Inventario de fuentes** (`<fid>-fuentes.json`): web + bio de IG como raíces, recorrido de ≤ 24 h, NADA `sin-revisar`
 - [ ] Fuentes en `fuentes/<id>/` · derivados en staging con `capturado`
 - [ ] Tabla de sedes canónica hecha · 0 salas dentro de nombres de sede
 - [ ] Slots compartidos DECIDIDOS (programa vs anclaje vs separadas)

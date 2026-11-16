@@ -4126,6 +4126,15 @@ try:
         # MAMBE 2026 (2 nov): la programación actualizada (p/DfOE-FSAVWB, lámina 4) pone dos
         # talleres distintos a las 9:00 del jue 5 en Filmemoria, I.E. Juan Bautista La Salle
         ('mambe-2026', '2026-11-05|09:00|I.E. Juan Bautista La Salle - Florencia'),  # Cine Comunitario + Stenopeica
+        # Funza 2026 (11 nov): la Feria de Experiencias Sociales (UNIMINUTO, pieza que el
+        # festival le mandó a Juan) es a las 4:00 p. m. del 18, igual que la Apertura del
+        # festival en el Centro Cultural Bacatá; son dos actividades, no una función
+        ('funza-2026', '2026-11-18|16:00|Centro Cultural Bacatá - Funza'),          # Apertura + Feria de Experiencias Sociales
+        # Al Este 2026 (12 nov): dos láminas distintas del Colombo (p/DfYe-5Slr8E y p/DfSV6Z3lpE1)
+        # ponen «Los inocentes encantadores» y «Gioia mia» el 20.11 a las 19:00; son dos salas
+        ('aleste-2026', '2026-11-20|19:00|Centro Colombo Americano - Medellín'),   # Fokus Wajda + Al Este Especial
+        ('aleste-2026', '2026-11-26|17:00|Cinemateca de Bogotá - Bogotá'),   # Histeria + The Souffleur (IG DfsHqtAlpmC, dos láminas)
+        ('cinetoro-2026', '2026-11-14|18:30|Coliseo Institución Educativa Fray José Joaquín Escobar - Toro'),   # Programa 7 + resultados del taller de Nicole Antebi (IG Dfu8yxaI1ws, lámina 1: dos entradas)
     }
     _viol = []
     for _fname in _ACTIVE:
@@ -4162,6 +4171,84 @@ except Exception as _e:
 # sin duración (contenedor '' + cortos sin minutaje; el PDF de prensa no publica
 # runtimes). Enforce SOLO festivales activos/próximos (los archivados quedan como
 # histórico). Excepción documentada = dato que la organización aún no entregó.
+# ── [obra-sin-pais] toda obra de un festival vivo lleva su país (bandera) ──────
+# Juan, 11 nov 2026: «siguen apareciendo en la app películas sin bandera, eso no
+# debería estar ocurriendo». Basta Mamá salió sin país en Guatapé y en Funza, y en
+# los festivales vivos había 21 obras así; ningún guardián lo frenaba. Misma
+# mecánica que los afiches: o la obra trae `country`, o su porqué está declarado en
+# festivals/staging/<fid>-correcciones.json → "sin_pais": {título: {"_por_que": …}}
+# (por título de la obra o de su programa). Un programa sin obras nombradas
+# («Foco Reygadas») también se declara: no hay obra a la que ponerle bandera.
+def _obras_sin_pais(festival, sin_pais):
+    out = []
+    for _f in festival.get('films', []):
+        if _f.get('type') != 'film':
+            continue
+        _lista = [x for x in (_f.get('film_list') or []) if isinstance(x, dict)]
+        for _x in (_lista or [_f]):
+            if _x.get('country') or _x.get('title') in sin_pais or _f.get('title') in sin_pais:
+                continue
+            out.append(_x.get('title') or '?')
+    return sorted(set(out))
+
+check = 'obra-sin-pais'
+try:
+    import json as _jsp, os as _osp
+    _cebo = {'films': [{'type': 'film', 'title': 'Con', 'country': 'Colombia'},
+                       {'type': 'film', 'title': 'Sin'},
+                       {'type': 'film', 'title': 'Programa', 'film_list': [{'title': 'Corto sin'}, {'title': 'Corto con', 'country': 'Chile'}]},
+                       {'type': 'event', 'title': 'Charla'},
+                       {'type': 'film', 'title': 'Declarada'}]}
+    if _obras_sin_pais(_cebo, {'Declarada': {}}) != ['Corto sin', 'Sin']:
+        fail(check, 'el guardián no distingue el cebo')
+    else:
+        _sp = []
+        for _fid in _festivalesVivos():
+            _fp = f'festivals/{_fid}.json'
+            if not _osp.path.exists(_fp):
+                continue
+            _cp = f'festivals/staging/{_fid}-correcciones.json'
+            _decl = (_jsp.load(open(_cp, encoding='utf-8')).get('sin_pais') or {}) if _osp.path.exists(_cp) else {}
+            _malas = _obras_sin_pais(_jsp.load(open(_fp, encoding='utf-8')), _decl)
+            if _malas:
+                _sp.append(f'{_fid}: {len(_malas)} ({", ".join(_malas[:4])})')
+        if _sp:
+            fail(check, 'obras sin país ni porqué en `sin_pais` de <fid>-correcciones.json — ' + ' · '.join(_sp))
+        else:
+            ok(check, 'toda obra de los festivales vivos lleva país o su porqué declarado')
+except Exception as _e:
+    fail(check, f'el guardián no pudo correr: {_e}')
+
+# ── [inventario-fuentes] lo publicado por el festival, revisado entero ──────
+# Villa de Leyva subió su programa completo a un PDF de la home y FICFUSA tenía
+# nueve formularios en el Linktree de su bio: nadie los vio porque mirábamos lo
+# conocido. Todo festival vivo lleva su inventario (pipeline/fuentes_descubrir.py)
+# con las raíces dadas y NADA sin revisar. Lo viejo lo frena publicar.py (24 h).
+check = 'inventario-fuentes'
+try:
+    import json as _jif, os as _osif, sys as _sif
+    _sif.path.insert(0, 'pipeline')
+    import fuentes_descubrir as _fd
+    _ciegos = _fd.autoprueba()
+    if _ciegos:
+        fail(check, f'el guardián no ve su cebo: {_ciegos}')
+    else:
+        _mal_if = []
+        for _fid in _festivalesVivos():
+            if not _osif.path.exists(f'festivals/{_fid}.json'):
+                continue
+            _ip = _fd.ruta(_fid)
+            if not _osif.path.exists(_ip):
+                _mal_if.append(f'{_fid}: sin inventario (correr pipeline/fuentes_descubrir.py {_fid} --raiz web=… --raiz bio=…)')
+                continue
+            _mal_if += [f'{_fid}: {x}' for x in _fd.problemas(_jif.load(open(_ip, encoding='utf-8')))]
+        if _mal_if:
+            fail(check, ' · '.join(_mal_if[:6]))
+        else:
+            ok(check, 'todo festival vivo tiene su inventario de fuentes revisado entero')
+except Exception as _e:
+    fail(check, f'el guardián no pudo correr: {_e}')
+
 check = 'activity-duration'
 try:
     import json as _json
@@ -5465,6 +5552,52 @@ try:
         ok(check, 'ningún sidecar escrito-sin-lector convive con su gemelo leído-sin-escritor')
 except Exception as _e:
     warn(check, f'no se pudo verificar pipeline-circuito: {_e}')
+
+# ── [sede-matriz] un lugar, un pin: la matriz de sedes ─────────────────────────
+# 16 nov 2026 (Juan: «así como hay una de películas, las sedes deberían vivir en
+# un archivo matriz»). catalogo/sedes.json la arma pipeline/sedes.py desde los
+# venues-geo. Frena: (a) la matriz atrasada respecto de los venues-geo (un pin
+# nuevo que no pasó por ella); (b) un pin de festival que se aparta más de
+# TOLERANCIA_M de su lugar ya resuelto. Los lugares en `_divergentes` (dos pines
+# viejos que no coinciden) se avisan: los resuelve una persona con --elegir.
+check = 'sede-matriz'
+try:
+    import sys as _sysm
+    _sysm.path.insert(0, 'pipeline')
+    import sedes as _sm
+    _mz = _sm.leer()
+    if not _mz:
+        fail(check, 'no existe catalogo/sedes.json — python3 pipeline/sedes.py --construir')
+    else:
+        _S = _mz['sedes']
+        _sin = sorted(f'{_f}:{_k}' for _f, _k, _n, _v in _sm.pines()
+                      if not any(_f in _e['festivales'] and _k in [_e['nombre']] + _e.get('alias', []) for _e in _S.values()))
+        _ap, _ce, _ev = _sm.apartados(), _sm.cercanos(), _sm.sin_evidencia_nueva()
+        _dv = _mz.get('_divergentes') or {}
+        _p = []
+        if _sin:
+            _p.append(f'{len(_sin)} pin(es) que el almacén no tiene (python3 pipeline/sedes.py --construir): ' + ', '.join(_sin[:5]))
+        if _ap:
+            _p.append('pin(es) que se apartan de su lugar: ' + ', '.join(f'{a}:{b} a {d} m' for a, b, c, d in _ap[:5]))
+        if _dv:
+            _p.append(f'{len(_dv)} lugar(es) con pines que no coinciden (--evidencia con Maps, --elegir o --campus): ' + ', '.join(_S[x]['nombre'] for x in _dv))
+        if _ce:
+            _p.append(f'{len(_ce)} par(es) de lugares a <{_sm.CERCA_M} m sin decidir (--mismo / --distintos): ' + ', '.join(f'{_S[a]["nombre"]} ↔ {_S[b]["nombre"]}' for d, a, b in _ce[:4]))
+        if _ev:
+            _p.append(f'{len(_ev)} lugar(es) NUEVO(s) sin enlace de Google Maps (--evidencia): ' + ', '.join(_S[x]['nombre'] for x in _ev[:5]))
+        _se = _sm.sin_enlace()
+        if _se:   # desde #1507 todo pin vivo está enlazado: uno nuevo sin enlace frena
+            _p.append(f'{len(_se)} pin(es) de festivales vivos sin enlace al almacén (python3 pipeline/sedes.py --construir && --enlazar): ' + ', '.join(f'{a}:{b}' for a, b in _se[:5]))
+        _sc = [x['nombre'] for x in _S.values() if not _sm.limpia_ciudad(x.get('ciudad'))]
+        if _sc:
+            _p.append(f'{len(_sc)} lugar(es) sin ciudad válida (python3 pipeline/sedes.py --completar-ciudades): ' + ', '.join(_sc[:5]))
+        if _p:
+            fail(check, ' · '.join(_p))
+        else:
+            ok(check, f'{len(_S)} lugares; todo pin coincide con el suyo, ningún par cercano sin decidir, todo lugar nuevo con Maps '
+                      f'({len((_mz.get("_deuda") or {}).get("sin_url") or [])} viejos sin enlace: deuda que solo baja)')
+except Exception as _e:
+    fail(check, f'el guardián no pudo correr: {_e}')
 
 # ── [sedes-apiladas] + [sala-en-sede] — los guardianes de datos de sede ───────
 # Aprobados tras FICDEH. (a) dos sedes del mismo festival a <60 m casi siempre
@@ -6885,11 +7018,13 @@ try:
     # `-titulos-anteriores.json` lo lee ensamblar.py para CUALQUIER festival (con
     # f-string, por eso su nombre no está literal en el corpus) — 8 oct 2026
     _CANON = {'crudo.json', 'correcciones.json', 'build.json', 'titulos-anteriores.json',
+              'fuentes.json',  # inventario de fuentes: fuentes_descubrir.py, [inventario-fuentes] y publicar.py (12 nov 2026)
               'quitar.json', 'duraciones.json',  # `-quitar.json` lo lee ensamblar.py (f-string), 14 oct 2026
               # el modelo de la función (docs/FUNCION.md): funcion.cargar y ensamblar, 16 oct 2026
               'afirmaciones.json', 'funciones-ids.json', 'conflictos.json',
               'funciones-decisiones.json',  # §11.3.4, 18 oct 2026
-              'palmares.json', 'avisos.json'}  # publicar.py los lleva al JSON (f-string), 19 oct 2026
+              'palmares.json', 'avisos.json',  # publicar.py los lleva al JSON (f-string), 19 oct 2026
+              'altas.json'}  # el registro de altas: pipeline/altas.py (f-string) y sus guardianes, 15 nov 2026
     _viv = ['pipeline/lib.py','pipeline/ensamblar.py','pipeline/correr.py','pipeline/publicar.py'] + \
            sorted(_f for _f in _g9.glob('pipeline/*.py') if _re9.search(r'^pipeline/[a-z]+(?:-[a-z]+)*-20\d\d-', _f))
     _corp = '\n'.join(open(_f, encoding='utf-8', errors='ignore').read() for _f in _viv if _os9.path.exists(_f)) + \
@@ -7262,6 +7397,31 @@ try:
         ok(check, 'ningún festival por salir tiene cruces dudosos sin decidir')
 except Exception as _e:
     fail(check, f'no pudo medirse: {_e}')
+
+# EL REGISTRO DE ALTAS (15 nov 2026, BOGOSHORTS): «¿tiene ficha? ¿tiene afiche
+# original? ¿se da de alta?» se decide con evidencia en <fid>-altas.json, escrita
+# por pipeline/altas.py — no por el criterio libre de quien la haga. Deuda
+# congelada en pipeline/altas-deuda.json (solo baja).
+try:
+    import os as _osal, sys as _sysal
+    _sysal.path.insert(0, _osal.path.join(_osal.path.dirname(_osal.path.abspath(__file__)), 'pipeline'))
+    import altas as _al
+    _AL = _al.verificar()
+except Exception as _e:
+    _AL = {'_error': str(_e)}
+for check, _ok_al, _rem_al in (
+        ('alta-sin-evidencia', 'toda obra sin ficha de un festival por salir tiene su evidencia completa en el registro',
+         'python3 pipeline/altas.py <fid> --sondar y --pendientes'),
+        ('ficha-sin-registro', 'toda ficha nueva de `fichas` tiene su entrada ficha_existente/alta_hecha en el registro',
+         'las fichas las escribe pipeline/altas.py (--sondar / --registrar-alta), no la mano'),
+        ('titulo-nfc', 'todo título de crudo/catálogo de staging está en NFC',
+         'normalizar con unicodedata.normalize("NFC", …) en el script que lo escribe')):
+    if '_error' in _AL:
+        fail(check, f'no pudo medirse: {_AL["_error"]}')
+    elif _AL[check]:
+        fail(check, ' · '.join(_AL[check][:6]) + f' — {_rem_al}')
+    else:
+        ok(check, _ok_al)
 
 check = 'id-funcion-estable'
 # El id estable de la función (docs/FUNCION.md §11): contra main, ningún id

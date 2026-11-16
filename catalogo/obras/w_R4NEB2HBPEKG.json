@@ -1,12 +1,18 @@
 {
  "id": "w_R4NEB2HBPEKG",
- "titulo_original": "Victorias y glorias - relatos de campeonas",
+ "titulo_original": "Victorias y Glorias: Relatos de Campeonas",
  "anio": 2025,
  "paises": [
   "CO"
  ],
  "directores": [
   "Luber Yesid Zúñiga Ordóñez"
+ ],
+ "aliases": [
+  {
+   "titulo": "Victorias y glorias - relatos de campeonas",
+   "tipo": "festival"
+  }
  ],
  "sinopsis": {
   "es": "Recupera la historia de Lucila Rodríguez y su trayectoria en el ciclismo."
@@ -26,6 +32,7 @@
   }
  ],
  "presentaciones": [
+  "ficfusa-2026",
   "siembrafest-2026"
  ]
 }

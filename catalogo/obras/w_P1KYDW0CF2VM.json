@@ -1,12 +1,18 @@
 {
  "id": "w_P1KYDW0CF2VM",
- "titulo_original": "La Dama de las Mil Máscaras",
+ "titulo_original": "Dama de las mil máscaras",
  "anio": 2026,
  "paises": [
   "CR"
  ],
  "directores": [
   "Wainer Méndez"
+ ],
+ "aliases": [
+  {
+   "titulo": "La Dama de las Mil Máscaras",
+   "tipo": "festival"
+  }
  ],
  "sinopsis": {
   "es": "Damaris González desafía la tradición: en Barva de Heredia, cuna de la mascarada costarricense, se convirtió en la primera mujer mascarera en un oficio históricamente masculino. El documental rinde homenaje a su trayectoria y muestra su taller como el lugar donde el barro y el espíritu se encuentran.",
@@ -30,6 +36,7 @@
   }
  ],
  "presentaciones": [
-  "festicinerio-2026"
+  "festicinerio-2026",
+  "villadeleyvaiff-2026"
  ]
 }

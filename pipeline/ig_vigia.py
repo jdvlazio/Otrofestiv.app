@@ -41,6 +41,7 @@ import sys
 import urllib.request
 from datetime import datetime, timedelta
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CONFIG = os.path.join(RAIZ, 'src', 'config.js')
 CUENTAS = os.path.join(RAIZ, 'pipeline', 'ig-vigia-cuentas.json')
@@ -67,6 +68,18 @@ LOBSTR_SQUID = 'otrofestiv-vigia'
 LOBSTR_LIMITE = 2
 BRIGHTDATA_DATASET = 'gd_lk5ns7kz21pck8jpis'   # Instagram Posts
 ACTOR_FB = 'apify~facebook-posts-scraper'
+BRIGHTDATA_DATASET_FB = 'gd_lkaxegm826bjpoo9m5'   # Facebook - Pages Posts by Profile URL (colecta directa, sin discover)
+# «Sin novedades» de Bright Data. El texto real (14 nov 2026, @festicinerio y
+# @cineoriente) es «There are no public posts in the profile for the specified
+# period» con error_code «dead_page» —el código miente: la cuenta existe—. El
+# regex viejo pedía «no posts» literal y mandaba esas cuentas a Apify en cada
+# corrida. Se reconoce el sentido, no una frase exacta.
+SIN_NOVEDADES = re.compile(r'\bno\b[\w ]{0,30}\b(posts?|results|data)\b|not found any|\b0 posts'
+                           r'|specified period|no_items', re.I)
+
+
+def es_sin_novedades(txt):
+    return bool(SIN_NOVEDADES.search(str(txt or '')))
 
 _ENTRADA = re.compile(r"\n\s{2}'?([a-z0-9]+)'?\s*:\s*\{")
 
@@ -267,26 +280,96 @@ def _apify(cuentas, desde_iso, token):
         return json.load(r)
 
 
-def vigilar_fb(cuentas_json, estado, ahora, token, informe):
+def brightdata_fb(paginas, estado, ahora, clave, espera=8, intentos=100):
+    """Bright Data para Facebook (14 nov 2026): los posts de cada página desde su
+    última consulta, con la forma de un ítem de Apify FB para `clasificar_fb`.
+    La página sin posts en el rango es «sin novedades»; otra fila sin post es un
+    error de ESA página."""
+    norm = lambda u: (u or '').rstrip('/').lower()
+    try:
+        entrada = [{'url': p['url'], 'num_of_posts': LIMITE,
+                    'start_date': datetime.fromisoformat(desde(['fb:' + p['id']], estado, ahora)).strftime('%m-%d-%Y')}
+                   for p in paginas]
+        res = _brightdata(clave, BRIGHTDATA_DATASET_FB, '', entrada, espera, intentos)
+    except Exception as ex:  # noqa: BLE001
+        return [{'error': 'http', 'errorDescription': f'Bright Data FB: {ex}', 'inputUrl': p['url']} for p in paginas]
+    out, vistas = [], set()
+    for x in res:
+        u = (x.get('input') or {}).get('url') or ''
+        vistas.add(norm(u))
+        if x.get('post_id'):
+            out.append(brightdata_fb_a_apify(x))
+        elif es_sin_novedades(x.get('error') or x.get('warning')):
+            out.append({'error': 'no_items', 'inputUrl': u})
+        else:
+            out.append({'error': 'http', 'inputUrl': u,
+                        'errorDescription': f"Bright Data FB: {x.get('error') or x.get('warning') or 'fila sin post'}"})
+    return out
+
+
+def brightdata_fb_a_apify(x):
+    """Un post de Bright Data FB con la forma de un ítem de Apify FB."""
+    return {'inputUrl': (x.get('input') or {}).get('url'), 'facebookUrl': x.get('page_url') or x.get('user_url'),
+            'url': x.get('url'), 'postId': x.get('post_id'), 'time': x.get('date_posted') or '',
+            'text': x.get('content') or '', 'media': x.get('attachments') or [], '_via': 'brightdata'}
+
+
+def fuentes_fb(token, saldo_apify):
+    """Misma cascada que IG: Bright Data primero; Apify solo si queda sobre el piso."""
+    out = []
+    bd = os.environ.get('BRIGHTDATA_API_KEY')
+    if bd:
+        out.append(('brightdata', lambda ps, es, ah: brightdata_fb(ps, es, ah, bd)))
+    if saldo_apify is None or saldo_apify >= APIFY_PISO_USD:
+        out.append(('apify', lambda ps, es, ah: _apify_fb_seguro(ps, es, ah, token)))
+    return out
+
+
+def _apify_fb_seguro(paginas, estado, ahora, token):
+    try:
+        return apify_fb([p['url'] for p in paginas], desde(['fb:' + p['id'] for p in paginas], estado, ahora), token)
+    except Exception as e:  # noqa: BLE001 — una falla de FB no tumba la corrida de IG
+        return [{'error': 'http', 'errorDescription': f'Apify FB: {e}', 'inputUrl': p['url']} for p in paginas]
+
+
+def cascada_fb(paginas, estado, ahora, fuentes):
+    """Cada página con la primera fuente que la lee. Devuelve (nuevos, sin_leer, vía)."""
+    nuevos = {p['id']: [] for p in paginas}
+    via, pend, sin_leer = {}, list(paginas), {}
+    for nombre, leer in fuentes:
+        if not pend:
+            break
+        if nombre == 'apify' and any(f == 'brightdata' for f, _ in fuentes):
+            guardia_apify(via, sin_leer, [p['id'] for p in pend])
+        n, s = clasificar_fb(leer(pend, estado, ahora), pend, estado)
+        for p in pend:
+            if p['id'] not in s and '*' not in s:
+                nuevos[p['id']] = n[p['id']]
+                via[p['id']] = nombre
+        sin_leer = {p['id']: f'{nombre}: {s.get(p["id"]) or s.get("*")}' for p in pend
+                    if p['id'] in s or '*' in s}
+        pend = [p for p in pend if p['id'] in sin_leer]
+    if not fuentes:
+        sin_leer = {p['id']: f'Apify bajo el piso de US${APIFY_PISO_USD:g} y sin Bright Data' for p in paginas}
+    elif pend and all(n != 'apify' for n, _ in fuentes):
+        sin_leer = {p['id']: f'{sin_leer[p["id"]]} · Apify saltado (bajo el piso de US${APIFY_PISO_USD:g})'
+                    for p in pend}
+    return nuevos, sin_leer, via
+
+
+def vigilar_fb(cuentas_json, estado, ahora, token, informe, saldo_apify=None, fuentes=None):
     paginas = paginas_fb(cuentas_json, ahora)
     informe['facebook_consultadas'] = [f"{p['id']} {p['url']}" for p in paginas]
     informe['nuevos_facebook'] = []
     if not paginas:
         return
-    claves = ['fb:' + p['id'] for p in paginas]
-    d = desde(claves, estado, ahora)
-    try:
-        items = apify_fb([p['url'] for p in paginas], d, token)
-    except Exception as e:  # una falla de FB no tumba la corrida de IG
-        for p in paginas:
-            informe['NO_PUDE_LEER']['fb:' + p['id']] = f'Apify FB: {e}'
-        return
-    nuevos, sin_leer = clasificar_fb(items, paginas, estado)
+    fuentes = fuentes_fb(token, saldo_apify) if fuentes is None else fuentes
+    nuevos, sin_leer, informe['via_facebook'] = cascada_fb(paginas, estado, ahora, fuentes)
     for p in paginas:
         k = 'fb:' + p['id']
         e = estado.setdefault(k, {})
-        if p['id'] in sin_leer or '*' in sin_leer:
-            informe['NO_PUDE_LEER'][k] = sin_leer.get(p['id']) or sin_leer.get('*')
+        if p['id'] in sin_leer:
+            informe['NO_PUDE_LEER'][k] = sin_leer[p['id']]
             e['fallos'] = e.get('fallos', 0) + 1
             continue
         e['fallos'] = 0
@@ -298,6 +381,7 @@ def vigilar_fb(cuentas_json, estado, ahora, token, informe):
             informe['nuevos_facebook'].append({'festival': p['id'], 'fecha': ts, 'post': it.get('url'),
                                                'imagenes': len(it.get('media') or []),
                                                'texto': (it.get('text') or '')[:300]})
+            anotar_enlaces(informe, [p['id']], it.get('url'), it.get('text') or '')
 
 
 def apify_saldo(token):
@@ -385,11 +469,8 @@ def lobstr_por_cuentas(cuentas, desde_iso, clave, ahora, espera=5, intentos=60):
         return [{'error': 'http', 'errorDescription': f'lobstr: {ex}', 'username': c} for c in cuentas]
 
 
-def brightdata_por_cuentas(cuentas, estado, ahora, clave, espera=8, intentos=100):
-    """Bright Data, «Instagram Posts – discover by url»: los posts de cada perfil
-    desde su última consulta (`start_date`, por DÍA: lo repetido lo descarta
-    `clasificar`). 1 crédito por post; plan gratis 5.000/mes con freno duro al
-    agotarse (devuelve error, nunca cobra). Trae TODAS las láminas."""
+def _brightdata(clave, dataset, extra, entrada, espera=8, intentos=100):
+    """Dispara una colecta en Bright Data, espera el snapshot y devuelve sus filas."""
     import subprocess
     import time
 
@@ -403,23 +484,30 @@ def brightdata_por_cuentas(cuentas, estado, ahora, clave, espera=8, intentos=100
             return json.loads(out)
         except json.JSONDecodeError:
             raise RuntimeError(out.strip()[:200])
+    sid = api('POST', f'trigger?dataset_id={dataset}&include_errors=true{extra}&format=json', entrada).get('snapshot_id')
+    if not sid:
+        raise RuntimeError('sin snapshot_id')
+    for _ in range(intentos):
+        p = api('GET', f'progress/{sid}')
+        if p.get('status') in ('ready', 'failed'):
+            break
+        time.sleep(espera)
+    if p.get('status') != 'ready':
+        raise RuntimeError(f"snapshot {p.get('status')}")
+    res = api('GET', f'snapshot/{sid}?format=json')
+    return res if isinstance(res, list) else [res]
+
+
+def brightdata_por_cuentas(cuentas, estado, ahora, clave, espera=8, intentos=100):
+    """Bright Data, «Instagram Posts – discover by url»: los posts de cada perfil
+    desde su última consulta (`start_date`, por DÍA: lo repetido lo descarta
+    `clasificar`). 1 crédito por post; plan gratis 5.000/mes con freno duro al
+    agotarse (devuelve error, nunca cobra). Trae TODAS las láminas."""
     try:
         entrada = [{'url': f'https://www.instagram.com/{c}/', 'num_of_posts': LIMITE,
                     'start_date': datetime.fromisoformat(desde([c], estado, ahora)).strftime('%m-%d-%Y')}
                    for c in cuentas]
-        sid = api('POST', f'trigger?dataset_id={BRIGHTDATA_DATASET}&include_errors=true&type=discover_new'
-                          f'&discover_by=url&format=json', entrada).get('snapshot_id')
-        if not sid:
-            raise RuntimeError('sin snapshot_id')
-        for _ in range(intentos):
-            p = api('GET', f'progress/{sid}')
-            if p.get('status') in ('ready', 'failed'):
-                break
-            time.sleep(espera)
-        if p.get('status') != 'ready':
-            raise RuntimeError(f"snapshot {p.get('status')}")
-        res = api('GET', f'snapshot/{sid}?format=json')
-        res = res if isinstance(res, list) else [res]
+        res = _brightdata(clave, BRIGHTDATA_DATASET, '&type=discover_new&discover_by=url', entrada, espera, intentos)
         items = [brightdata_a_apify(x) for x in res if x.get('shortcode')]
         # una fila sin post es un error de ESE perfil (privado, bloqueo…): no se leyó;
         # la que avisa que no hay posts en el rango es «sin novedades»
@@ -429,7 +517,7 @@ def brightdata_por_cuentas(cuentas, estado, ahora, clave, espera=8, intentos=100
                 continue
             u = ((x.get('input') or {}).get('url') or '').rstrip('/').split('/')[-1]
             txt = str(x.get('error') or x.get('warning') or '')
-            if u and not re.search(r'no (posts|results|data)|not found any|0 posts', txt, re.I):
+            if u and not es_sin_novedades(txt):
                 malos[u] = txt or 'fila sin post'
         return items + [{'error': 'http', 'errorDescription': f'Bright Data: {malos[c]}', 'username': c}
                         if c in malos else {'error': 'no_items', 'username': c} for c in cuentas]
@@ -481,6 +569,22 @@ def lobstr_una_vez_al_dia(cuentas, estado, ahora, clave):
     return (lobstr_por_cuentas(van, desde(van, estado, ahora), clave, ahora) if van else []) + fuera
 
 
+class ApifyIndebido(RuntimeError):
+    """Se iba a leer con Apify algo que Bright Data ya leyó o que no falló de verdad."""
+
+
+def guardia_apify(via, sin_leer, pendientes):
+    """GUARDIÁN (14 nov 2026): Apify solo lee lo que Bright Data no pudo leer DE
+    VERDAD. Antes de cada lectura de Apify: ninguna pendiente puede venir leída
+    por Bright Data, y cada una tiene que traer un fallo previo que no sea «sin
+    novedades». Si no, se frena la corrida en vez de gastar Apify en silencio
+    (así se fue el cupo de noviembre)."""
+    malas = [c for c in pendientes
+             if via.get(c) == 'brightdata' or c not in sin_leer or es_sin_novedades(sin_leer[c])]
+    if malas:
+        raise ApifyIndebido(f'Apify iba a leer {malas} sin que Bright Data fallara de verdad')
+
+
 def cascada(cuentas, estado, ahora, fuentes):
     """Cada cuenta se lee con la primera fuente que la sirve. Devuelve
     (nuevos, sin_leer, vía por cuenta). Una cuenta sin novedades NO pasa a la
@@ -490,6 +594,8 @@ def cascada(cuentas, estado, ahora, fuentes):
     for nombre, leer in fuentes:
         if not pendientes:
             break
+        if nombre == 'apify' and any(f == 'brightdata' for f, _ in fuentes):
+            guardia_apify(via, sin_leer, pendientes)
         n, s = clasificar(leer(pendientes, estado, ahora), pendientes, estado)
         for c in pendientes:
             if c not in s and '*' not in s:
@@ -499,6 +605,68 @@ def cascada(cuentas, estado, ahora, fuentes):
     if not fuentes:
         sin_leer = {c: 'ninguna fuente de Instagram configurada' for c in cuentas}
     return nuevos, sin_leer, via
+
+
+# ── Enlaces escritos en los posts (14 nov 2026) ──────────────────────────
+# @bogoshorts publicó 5 bit.ly en un pie (catálogos, programación y la
+# boletería de la Cinemateca) y ninguno entró al inventario de fuentes: el
+# vigía guardaba el texto pero nadie abría sus enlaces. Ahora cada URL del pie
+# se resuelve (acortadores) y entra a festivals/staging/<fid>-fuentes.json como
+# `sin-revisar`, con el post como origen; FUENTES_NUEVAS lo lista en el informe.
+_URL = re.compile(r'(?:https?://|(?<![\w@.])(?:www\.)?(?:[a-z0-9-]+\.)+(?:ly|ee|gl|co|com|org|net|gov|edu|io|me|ai|link|bio|app|site|info|tv|to|cl|ar|mx|pe|ec|br)/)[^\s<>"\'()\[\]{}]*', re.I)
+
+
+def extraer_urls(texto):
+    """Todas las URLs del pie, con o sin esquema (bit.ly/xxx → https://bit.ly/xxx), sin duplicar."""
+    out = []
+    for m in _URL.finditer(texto or ''):
+        u = m.group(0).rstrip('.,;:!?…»”’')
+        if not u.lower().startswith('http'):
+            u = 'https://' + u
+        if u not in out:
+            out.append(u)
+    return out
+
+
+def resolver(url, timeout=6):
+    """Sigue las redirecciones (bit.ly, linktr.ee…); si falla, la URL tal cual."""
+    try:
+        req = urllib.request.Request(url, method='HEAD', headers={'User-Agent': 'Mozilla/5.0'})
+        with urllib.request.urlopen(req, timeout=timeout) as r:
+            return r.geturl() or url
+    except Exception:
+        return url
+
+
+def fid_inventario(fid):
+    """cinetoro2026 → cinetoro-2026 (mismo nombre que usa fuentes_descubrir.vivos)."""
+    return fid if re.search(r'-\d{4}$', fid) else re.sub(r'([a-z]+)(\d+)$', r'\1-\2', fid)
+
+
+def registrar_enlaces(fid, post, texto, resolver=resolver, t=None):
+    """Registra en el inventario de `fid` las URLs del pie; devuelve las nuevas.
+    Si el festival aún no tiene inventario no se lo inventa: devuelve None."""
+    import fuentes_descubrir as fd
+    f = fid_inventario(fid)
+    if not os.path.exists(fd.ruta(f)):
+        return None
+    cosas = {}
+    for u in extraer_urls(texto):
+        try:
+            n = fd.normal(resolver(u))
+        except ValueError:
+            continue
+        cosas.setdefault(n, {'tipo': fd.clasificar(n) or 'enlace-post', 'visto_en': post, 'enlace_en_post': u})
+    return fd.registrar(f, cosas, t) if cosas else []
+
+
+def anotar_enlaces(informe, fids, post, texto):
+    for fid in fids:
+        r = registrar_enlaces(fid, post, texto)
+        if r is None and extraer_urls(texto):
+            informe.setdefault('ENLACES_SIN_INVENTARIO', {}).setdefault(fid, []).extend(extraer_urls(texto))
+        elif r:
+            informe.setdefault('FUENTES_NUEVAS', {}).setdefault(fid_inventario(fid), []).extend(r)
 
 
 def main():
@@ -552,6 +720,8 @@ def main():
             informe['nuevos'].append({'cuenta': c, 'fecha': ts, 'post': f"https://www.instagram.com/p/{it['shortCode']}/",
                                       'laminas': len(it.get('childPosts') or it.get('images') or []) or 1,
                                       'texto': (it.get('caption') or '')[:300]})
+            anotar_enlaces(informe, [v['id'] for v in ahora_toca if v['cuenta'] == c],
+                           f"https://www.instagram.com/p/{it['shortCode']}/", it.get('caption') or '')
     informe['NO_PUDE_LEER'] = sin_leer
     # Bright Data es la fuente principal: si no lee una cuenta varias corridas
     # seguidas, el respaldo se gasta en silencio aunque la cuenta «se lea».
@@ -562,7 +732,7 @@ def main():
             e['bd_fallos'] = 0 if informe['via'].get(c) == 'brightdata' else e.get('bd_fallos', 0) + 1
             if e['bd_fallos'] >= 3:
                 informe['BRIGHTDATA_NO_LEE'][c] = e['bd_fallos']
-    vigilar_fb(json.load(open(CUENTAS)), estado, ahora, token, informe)
+    vigilar_fb(json.load(open(CUENTAS)), estado, ahora, token, informe, saldo)
     os.makedirs(os.path.dirname(ESTADO), exist_ok=True)
     json.dump(estado, open(ESTADO, 'w'), ensure_ascii=False, indent=1)
     print(json.dumps(informe, ensure_ascii=False, indent=1))
