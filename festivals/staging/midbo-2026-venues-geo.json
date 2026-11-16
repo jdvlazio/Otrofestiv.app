@@ -5,14 +5,16 @@
   "_prec": "manual",
   "_match": "Google Maps: Alianza Francesa de Bogotá - Sede Centro (el seminario dice «Sede Centro»; las fichas de película, solo «Alianza Francesa») (10 oct 2026)",
   "n": 10,
-  "address": "Cra. 3 #18-45"
+  "address": "Cra. 3 #18-45",
+  "_matriz": "s_1be38f20"
  },
  "Canterbury Café": {
   "lat": 4.6197817,
   "lng": -74.1374424,
   "_prec": "manual",
   "_match": "Google Maps: Canterbury Café (Kennedy) (10 oct 2026)",
-  "n": 1
+  "n": 1,
+  "_matriz": "s_8cc7eb0e"
  },
  "Centro Cultural Gabriel García Márquez": {
   "lat": 4.5978757,
@@ -20,7 +22,8 @@
   "_prec": "manual",
   "_match": "Google Maps: Centro Cultural Gabriel García Márquez (10 oct 2026)",
   "n": 1,
-  "address": "Cl. 11 #5-60"
+  "address": "Cl. 11 #5-60",
+  "_matriz": "s_d883ae77"
  },
  "Centro de Memoria, Paz y Reconciliación": {
   "n": 3,
@@ -29,7 +32,8 @@
   "lat": 4.6193117,
   "lng": -74.0761362,
   "_match": "Google Maps: Centro de Memoria, Paz y Reconciliación (10 oct 2026)",
-  "address": "Cra. 19B #24-86"
+  "address": "Cra. 19B #24-86",
+  "_matriz": "s_1311c9f4"
  },
  "Cine club Cine 40": {
   "n": 2,
@@ -37,7 +41,8 @@
   "_todo": "buscar a mano (sedes-html.py genera la página)",
   "lat": 11.1426579,
   "lng": -74.1165712,
-  "_match": "APROXIMADO: el cineclub no figura en Google Maps; pin en la parroquia Nuestra Señora del Perpetuo Socorro, centro de Minca (10 oct 2026). Pendiente preguntar al festival."
+  "_match": "APROXIMADO: el cineclub no figura en Google Maps; pin en la parroquia Nuestra Señora del Perpetuo Socorro, centro de Minca (10 oct 2026). Pendiente preguntar al festival.",
+  "_matriz": "s_dbb94309"
  },
  "Cinemateca de Bogotá": {
   "lat": 4.6031614,
@@ -45,7 +50,8 @@
   "_prec": "manual",
   "_match": "Google Maps: Cinemateca de Bogotá (10 oct 2026)",
   "n": 52,
-  "address": "Cra. 3 #19-10"
+  "address": "Cra. 3 #19-10",
+  "_matriz": "s_17a71d8b"
  },
  "Potocine": {
   "n": 1,
@@ -54,21 +60,24 @@
   "lat": 4.5687992,
   "lng": -74.1710843,
   "_match": "Google Maps: Potocine, Sala de Cine Comunitario del barrio Potosí (10 oct 2026)",
-  "address": "Cl. 81 Sur #42A-81"
+  "address": "Cl. 81 Sur #42A-81",
+  "_matriz": "s_30a5d6b9"
  },
  "Universidad Central": {
   "lat": 4.6059549,
   "lng": -74.068697,
   "_prec": "manual",
   "_match": "Google Maps: Universidad Central (sede centro, Auditorio Caldas) (10 oct 2026)",
-  "n": 1
+  "n": 1,
+  "_matriz": "s_9d2019dc"
  },
  "Universidad Nacional de Colombia": {
   "lat": 4.6342839,
   "lng": -74.0865589,
   "_prec": "manual",
   "_match": "Google Maps: Edificio 225 Rogelio Salmona, Posgrados de Ciencias Humanas (10 oct 2026)",
-  "n": 1
+  "n": 1,
+  "_matriz": "s_891e8481"
  },
  "Universidad de Antioquia": {
   "n": 1,
@@ -77,7 +86,8 @@
   "lat": 6.2464191,
   "lng": -75.564178,
   "_match": "Google Maps: Edificio Paraninfo Universidad de Antioquia (10 oct 2026)",
-  "address": "Cra. 44 #48-72"
+  "address": "Cra. 44 #48-72",
+  "_matriz": "s_526f7636"
  },
  "_provenance": {
   "fuente": "Nominatim con verificación: caja de ciudad + token distintivo + clase de lugar (una sede fija nunca es un barrio). _prec:manual intocable.",
@@ -89,7 +99,8 @@
   "lng": -74.1873608,
   "_prec": "manual",
   "_match": "Google Maps: Universidad del Magdalena (sala Langosta Azul dentro del campus) (10 oct 2026)",
-  "address": "Carrera 32 #22-08"
+  "address": "Carrera 32 #22-08",
+  "_matriz": "s_274fbe5a"
  },
  "Bodega Insurgesta": {
   "lat": 4.5682746,
@@ -97,7 +108,8 @@
   "_prec": "manual",
   "_match": "Google Maps: Bodega in-surgesta, Cl. 79b Sur #42-39 (13 oct 2026)",
   "n": 0,
-  "address": "Cl. 79b Sur #42-39"
+  "address": "Cl. 79b Sur #42-39",
+  "_matriz": "s_b320c2e3"
  },
  "Servicio Forjar Restaurativo Arborizadora Baja": {
   "lat": 4.5749445,
@@ -105,7 +117,8 @@
   "_prec": "manual",
   "_match": "Google Maps: Servicio Centro Forjar Ciudad Bolívar, Cl. 58c Sur (Arborizadora Baja) (13 oct 2026)",
   "n": 0,
-  "address": "Cl. 58c Sur"
+  "address": "Cl. 58c Sur",
+  "_matriz": "s_ffcf8a2c"
  },
  "Centro Ático, Universidad Javeriana": {
   "lat": 4.6269751,
@@ -113,7 +126,8 @@
   "_prec": "manual",
   "_match": "Google Maps: Centro Ático, Cl. 40b #6-23 (13 oct 2026)",
   "n": 0,
-  "address": "Cl. 40b #6-23"
+  "address": "Cl. 40b #6-23",
+  "_matriz": "s_5ce71f2b"
  },
  "La Mecánica": {
   "lat": 4.6559406,
@@ -121,14 +135,16 @@
   "_prec": "manual",
   "_match": "Google Maps: La Mecánica Original (centro cultural), Cra. 25 #63f-21 (13 oct 2026)",
   "n": 0,
-  "address": "Cra. 25 #63f-21"
+  "address": "Cra. 25 #63f-21",
+  "_matriz": "s_324d7230"
  },
  "Universidad Jorge Tadeo Lozano": {
   "lat": 4.6065633,
   "lng": -74.0666447,
   "_prec": "manual",
   "_match": "Google Maps: Edificio de Postgrados Universidad de Bogotá Jorge Tadeo Lozano (Módulo 16, Cra. 4 # 22-61) (19 oct 2026)",
-  "n": 2
+  "n": 2,
+  "_matriz": "s_808cba64"
  },
  "Universidad Jorge Tadeo Lozano, Edificio Fabio Lozano": {
   "lat": 4.6063616,
@@ -137,7 +153,8 @@
   "_match": "Google Maps: Auditorio Fabio Lozano - Universidad Jorge Tadeo Lozano (Cra. 4 #22-40) (21 oct 2026); coincide al decimal con anibia-2026; Nominatim sin resultado",
   "_nota": "edificio distinto del de Posgrados (M16), ~85 m, mismo campus",
   "n": 1,
-  "address": "Cra. 4 #22-40"
+  "address": "Cra. 4 #22-40",
+  "_matriz": "s_bf8a2fa2"
  },
  "Parque de los Periodistas": {
   "n": 1,
@@ -145,6 +162,7 @@
   "lat": 4.6012192,
   "lng": -74.0694809,
   "_match": "Google Maps: Parque de los Periodistas Gabriel García Márquez (30 oct 2026)",
-  "address": "Eje Ambiental y Av. Jiménez"
+  "address": "Eje Ambiental y Av. Jiménez",
+  "_matriz": "s_d8147483"
  }
 }
