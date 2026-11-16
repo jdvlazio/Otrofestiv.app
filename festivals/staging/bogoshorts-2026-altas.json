@@ -2687,8 +2687,67 @@
      "url": "https://www.themoviedb.org/search/person?query=Valeria%20Mart%C3%AD https://www.themoviedb.org/person/6469787",
      "fecha": "2026-11-15",
      "resultado": "Valeria Martí: sin perfil en TMDB; Santiago Rojas (El Kalvo) (6469787): dirige 0"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/find/?q=Nancy%20resabiada",
+     "fecha": "2026-11-16",
+     "resultado": "«Nancy resabiada», «Stubborn Nancy», «El Kalvo» y «Valeria Marti»: ninguna obra ni persona que corresponda"
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/Nancy%20resabiada/",
+     "fecha": "2026-11-16",
+     "resultado": "«Nancy resabiada» sin resultados; «El Kalvo» solo «El clavo» y otras ajenas"
+    },
+    "web_director_o_productora": {
+     "url": "https://elkalvo.bandcamp.com/track/nancy-resabiada",
+     "fecha": "2026-11-16",
+     "resultado": "Bandcamp de El Kalvo (productor/guionista según catálogo): tema del álbum RESABIADO (2026); sin créditos de video ni afiche"
+    },
+    "distribuidora_o_agencia": {
+     "na": true,
+     "por_que": "Videoclip autoproducido por El Kalvo; sello musical ONErpm distribuye solo el audio; sin agencia de distribución del clip",
+     "fecha": "2026-11-16"
+    },
+    "plataformas_festivales": {
+     "url": "https://www.bing.com/search?q=filmfreeway%20%22Nancy%20resabiada%22",
+     "fecha": "2026-11-16",
+     "resultado": "Short Film Depot pide sesión y Festhome no tiene catálogo público; FilmFreeway por búsqueda web: sin perfil"
+    },
+    "festivales_previos": {
+     "url": "https://ficcali.com/pelicula/nancy-resabiada/",
+     "fecha": "2026-11-16",
+     "resultado": "FICCALI 2026 (ficha con créditos; sin póster propio en la ficha, solo imagen genérica)"
+    },
+    "organismo_nacional": {
+     "na": true,
+     "por_que": "Videoclip musical: Proimágenes no registra videoclips (buscador general «resabiada» sin resultados)",
+     "fecha": "2026-11-16"
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.bing.com/images/search?q=%22Nancy%20resabiada%22%20afiche",
+     "fecha": "2026-11-16",
+     "resultado": "Bing Imágenes: nada de la obra; el afiche oficial está en la ficha BOGOSHORTS"
+    },
+    "canal_oficial_artista": {
+     "url": "https://www.youtube.com/watch?v=0G69CAmErQg",
+     "fecha": "2026-11-16",
+     "resultado": "Canal oficial El Kalvo, video oficial publicado 8 jul 2026; la descripción NO trae créditos de dirección (solo letra y enlaces)"
     }
-   }
+   },
+   "afiche": {
+    "url": "https://festival.bogoshorts.com/images/peliculas/6ae4eab15eccf__NancyResabiada_CN-CV04_Poster_24BSFF.jpg",
+    "fuente": "Afiche oficial en ficha BOGOSHORTS corto/4371 (con laurel de selección)",
+    "archivo": "fuentes/bogoshorts-2026/altas/nancy-resabiada-cumbia-el-kalvo-la-banda-resabiada.jpg",
+    "px": [
+     2160,
+     3225
+    ],
+    "ratio": 0.6698,
+    "recorte": null,
+    "veredicto_criterio": null,
+    "fecha": "2026-11-16"
+   },
+   "estado": "alta_posible"
   },
   "Ni aquí, ni allá": {
    "titulo": "Ni aquí, ni allá",
@@ -2708,8 +2767,75 @@
      "url": "https://www.themoviedb.org/search/person?query=Manuela%20Romero%20Samac%C3%A1",
      "fecha": "2026-11-15",
      "resultado": "Manuela Romero Samacá: sin perfil en TMDB"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/title/tt43676903/",
+     "fecha": "2026-11-16",
+     "resultado": "EXISTE en IMDb: tt43676903 «Ni Aquí, Ni Allá», corto, dir./guion Manuela Romero Samacá (nm14830825), reparto Sofia Figueroa, Nile Assata Harris (coincide con catálogo), estado Post-production, sin año ni póster"
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/Ni%20aqui%20ni%20alla/",
+     "fecha": "2026-11-16",
+     "resultado": "«Ni aqui ni alla» y «Neither Here Nor There»: solo homónimas ajenas (Ley Comas 2021, Gina Herrera 2013, Franco Machado-Pesce 2022); la de Romero Samacá no está"
+    },
+    "web_director_o_productora": {
+     "na": true,
+     "por_que": "Catálogo: sin productora con web (productoras Averi Israel, Nicole Fernández a título personal); búsqueda web sin sitio de la directora",
+     "fecha": "2026-11-16"
+    },
+    "distribuidora_o_agencia": {
+     "na": true,
+     "por_que": "Catálogo BOGOSHORTS sin contacto de agencia; corto de MFA Feirstein sin distribuidora hallada",
+     "fecha": "2026-11-16"
+    },
+    "plataformas_festivales": {
+     "url": "https://www.bing.com/search?q=filmfreeway%20%22Ni%20Aqu%C3%AD%2C%20Ni%20All%C3%A1%22",
+     "fecha": "2026-11-16",
+     "resultado": "Short Film Depot pide sesión y Festhome no tiene catálogo público; FilmFreeway: solo homónimas ajenas (Machado-Pesce, Gina Herrera)"
+    },
+    "festivales_previos": {
+     "url": "https://www.bing.com/search?q=%22Ni%20aqu%C3%AD%2C%20ni%20all%C3%A1%22%20%22Manuela%20Romero%22",
+     "fecha": "2026-11-16",
+     "resultado": "Solo BOGOSHORTS 2026 (estreno mundial) y Cinemateca de Bogotá CON-LTX; ningún festival previo"
+    },
+    "organismo_nacional": {
+     "url": "https://www.proimagenescolombia.com/secciones/buscador/buscador_general_resultado.php?buscar=Samaca",
+     "fecha": "2026-11-16",
+     "resultado": "Proimágenes buscador general «Samaca»: sin resultados (coproducción EE. UU.-Colombia)"
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.bing.com/images/search?q=%22Ni%20aqu%C3%AD%2C%20ni%20all%C3%A1%22%20Romero%20Samac%C3%A1%20poster",
+     "fecha": "2026-11-16",
+     "resultado": "Bing Imágenes: solo homónimas ajenas; afiche oficial en ficha BOGOSHORTS"
     }
-   }
+   },
+   "afiche": {
+    "url": "https://festival.bogoshorts.com/images/peliculas/6ae25f1d39983__NiAquiNiAlla_CON-LTX03_Poster_24BSFF.jpg",
+    "fuente": "Afiche oficial con créditos en ficha BOGOSHORTS corto/4196",
+    "archivo": "fuentes/bogoshorts-2026/altas/ni-aqui-ni-alla.jpg",
+    "px": [
+     900,
+     1350
+    ],
+    "ratio": 0.6667,
+    "recorte": {
+     "de": [
+      1080,
+      1350
+     ],
+     "caja": [
+      90,
+      0,
+      990,
+      1350
+     ],
+     "centrado": true,
+     "objetivo": 0.6667
+    },
+    "veredicto_criterio": null,
+    "fecha": "2026-11-16"
+   },
+   "estado": "alta_posible"
   },
   "No te conozcas": {
    "titulo": "No te conozcas",
@@ -2729,8 +2855,62 @@
      "url": "https://www.themoviedb.org/person/4162540",
      "fecha": "2026-11-15",
      "resultado": "Andrés Isaza Giraldo (4162540): dirige 1"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/find/?q=No%20te%20conozcas",
+     "fecha": "2026-11-16",
+     "resultado": "«No te conozcas», «Don't Know Yourself» y «Andres Isaza Giraldo»: nada que corresponda"
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/No%20te%20conozcas/",
+     "fecha": "2026-11-16",
+     "resultado": "«No te conozcas» (solo «No te conozco» 2025 ajena) y «Don't Know Yourself»: sin la obra"
+    },
+    "web_director_o_productora": {
+     "url": "https://www.isaza.xyz/",
+     "fecha": "2026-11-16",
+     "resultado": "Web del director (también productor): proyectos y publicaciones; no menciona «No te conozcas»"
+    },
+    "distribuidora_o_agencia": {
+     "na": true,
+     "por_que": "Contacto del catálogo es el propio director (gmail); sin distribuidora",
+     "fecha": "2026-11-16"
+    },
+    "plataformas_festivales": {
+     "url": "https://www.bing.com/search?q=filmfreeway%20%22No%20te%20conozcas%22",
+     "fecha": "2026-11-16",
+     "resultado": "Short Film Depot pide sesión y Festhome no tiene catálogo público; FilmFreeway por web: sin perfil"
+    },
+    "festivales_previos": {
+     "url": "https://www.bing.com/search?q=%22No%20te%20conozcas%22%20cortometraje",
+     "fecha": "2026-11-16",
+     "resultado": "Estreno mundial en BOGOSHORTS 2026; sin festivales previos (FILE 2026 exhibió otra obra del director, last_movie_on_earth_run_01)"
+    },
+    "organismo_nacional": {
+     "url": "https://www.proimagenescolombia.com/secciones/buscador/buscador_general_resultado.php?buscar=conozcas",
+     "fecha": "2026-11-16",
+     "resultado": "Proimágenes buscador general: sin resultados («conozcas», «Isaza»)"
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.bing.com/images/search?q=%22No%20te%20conozcas%22%20Isaza%20afiche",
+     "fecha": "2026-11-16",
+     "resultado": "Bing Imágenes: nada; afiche oficial bilingüe en ficha BOGOSHORTS"
     }
-   }
+   },
+   "afiche": {
+    "url": "https://festival.bogoshorts.com/images/peliculas/6ae4cf6535ff0__No_te_conozcas_CN-EXP02_Poster_24BSFF.jpg",
+    "fuente": "Afiche oficial bilingüe en ficha BOGOSHORTS corto/4363",
+    "archivo": "fuentes/bogoshorts-2026/altas/no-te-conozcas.jpg",
+    "px": [
+     1358,
+     1920
+    ],
+    "ratio": 0.7073,
+    "recorte": null,
+    "veredicto_criterio": null,
+    "fecha": "2026-11-16"
+   },
+   "estado": "alta_posible"
   },
   "No todos los pájaros son aves": {
    "titulo": "No todos los pájaros son aves",
@@ -2750,8 +2930,62 @@
      "url": "https://www.themoviedb.org/search/person?query=Mateo%20Guerrero%20Quintero",
      "fecha": "2026-11-15",
      "resultado": "Mateo Guerrero Quintero: sin perfil en TMDB"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/find/?q=No%20todos%20los%20pajaros%20son%20aves",
+     "fecha": "2026-11-16",
+     "resultado": "título ES, «Not all songbirds are birds» y «Mateo Guerrero Quintero»: sin resultados que correspondan"
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/No%20todos%20los%20pajaros%20son%20aves/",
+     "fecha": "2026-11-16",
+     "resultado": "título ES e inglés: sin coincidencias"
+    },
+    "web_director_o_productora": {
+     "url": "https://www.instagram.com/p/De92T-8HXA-/",
+     "fecha": "2026-11-16",
+     "resultado": "Instagram del director: anuncia estreno oficial en BOGOSHORTS; sin web propia ni de productora (Feriado/Pura Lata)"
+    },
+    "distribuidora_o_agencia": {
+     "na": true,
+     "por_que": "Contacto del catálogo es el propio director (gmail); sin distribuidora",
+     "fecha": "2026-11-16"
+    },
+    "plataformas_festivales": {
+     "url": "https://www.bing.com/search?q=filmfreeway%20%22No%20todos%20los%20p%C3%A1jaros%20son%20aves%22",
+     "fecha": "2026-11-16",
+     "resultado": "Short Film Depot pide sesión y Festhome no tiene catálogo público; FilmFreeway: sin perfil; solo tráiler en YouTube"
+    },
+    "festivales_previos": {
+     "url": "https://www.bing.com/search?q=%22No%20todos%20los%20p%C3%A1jaros%20son%20aves%22%20cortometraje%20Guerrero",
+     "fecha": "2026-11-16",
+     "resultado": "Estreno mundial BOGOSHORTS 2026; sin festivales previos"
+    },
+    "organismo_nacional": {
+     "url": "https://www.proimagenescolombia.com/secciones/buscador/buscador_general_resultado.php?buscar=pajaros",
+     "fecha": "2026-11-16",
+     "resultado": "Proimágenes «pajaros»/«Guerrero»: sin la obra"
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.bing.com/images/search?q=%22No%20todos%20los%20p%C3%A1jaros%20son%20aves%22%20afiche",
+     "fecha": "2026-11-16",
+     "resultado": "Bing Imágenes: nada; afiche oficial solo en ficha BOGOSHORTS a 300x450"
     }
-   }
+   },
+   "afiche": {
+    "url": "https://festival.bogoshorts.com/images/peliculas/6ae37c07ddda4__NoTodosLosPajarosSonAves_CLC-AMOR05_POSTER_24BSFF__2___1_.png",
+    "fuente": "Afiche oficial en ficha BOGOSHORTS corto/4272 (con laurel); solo 300x450",
+    "archivo": "fuentes/bogoshorts-2026/altas/no-todos-los-pajaros-son-aves.jpg",
+    "px": [
+     300,
+     450
+    ],
+    "ratio": 0.6667,
+    "recorte": null,
+    "veredicto_criterio": null,
+    "fecha": "2026-11-16"
+   },
+   "estado": "afiche_chico"
   },
   "Nothing Here is Lost": {
    "titulo": "Nothing Here is Lost",
@@ -2771,8 +3005,50 @@
      "url": "https://www.themoviedb.org/person/2864984 https://www.themoviedb.org/person/2816759",
      "fecha": "2026-11-15",
      "resultado": "Kathy Mitrani (2864984): dirige 4; Kathy Esquenazi Mitrani (2816759): dirige 0"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/name/nm15121973/",
+     "fecha": "2026-11-16",
+     "resultado": "Sin título propio. Kathy Mitrani (nm15121973) tiene «Chaos/Order» (2026, tt43734203, largo antológico italiano de 1h03 «six stories», ¿incluiría el corto?); no hay «Nothing Here is Lost»/«Qui niente è perduto»"
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/Nothing%20Here%20is%20Lost/",
+     "fecha": "2026-11-16",
+     "resultado": "«Nothing Here is Lost» y «Qui niente e perduto»: sin coincidencias"
+    },
+    "web_director_o_productora": {
+     "url": "https://www.locarnofestival.ch/about/factory/spring-academy/2026/kathy-mitrani.html",
+     "fecha": "2026-11-16",
+     "resultado": "Producido por Locarno Film Festival / CISA (Spring Academy 2026); perfil de la directora, sin póster"
+    },
+    "distribuidora_o_agencia": {
+     "url": "https://www.gargantuafilm.it/nothing-here-is-lost-by-kathy-mitrani/",
+     "fecha": "2026-11-16",
+     "resultado": "Gargantua Film (agencia, contacto del catálogo): ficha completa, solo 8 fotogramas (Still01-08), sin póster"
+    },
+    "plataformas_festivales": {
+     "url": "https://www.bing.com/search?q=filmfreeway%20%22Nothing%20Here%20is%20Lost%22",
+     "fecha": "2026-11-16",
+     "resultado": "Short Film Depot pide sesión y Festhome no tiene catálogo público; distribuida por Gargantua; FilmFreeway sin perfil"
+    },
+    "festivales_previos": {
+     "url": "https://www.gargantuafilm.it/nothing-here-is-lost-by-kathy-mitrani/",
+     "fecha": "2026-11-16",
+     "resultado": "Estreno mundial 79 Locarno 2026 (posible segmento de la antología CISA «Chaos/Order», TMDB 1783464 / IMDb tt43734203, 6 directores incl. Mitrani)"
+    },
+    "organismo_nacional": {
+     "url": "https://www.proimagenescolombia.com/secciones/buscador/buscador_general_resultado.php?buscar=Mitrani",
+     "fecha": "2026-11-16",
+     "resultado": "Proimágenes «Mitrani»: sin la obra (producción suiza)"
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.bing.com/images/search?q=%22Nothing%20Here%20is%20Lost%22%20Mitrani%20poster",
+     "fecha": "2026-11-16",
+     "resultado": "Bing Imágenes: nada de la obra"
     }
-   }
+   },
+   "estado": "sin_afiche",
+   "por_que_sin_afiche": "Gargantua (agencia) solo publica fotogramas; ficha BOGOSHORTS corto/4364 sin póster; Bing Imágenes sin afiche"
   },
   "Némica": {
    "titulo": "Némica",
@@ -2792,8 +3068,75 @@
      "url": "https://www.themoviedb.org/search/person?query=Felipe%20Fl%C3%B3rez%20Ramos",
      "fecha": "2026-11-15",
      "resultado": "Felipe Flórez Ramos: sin perfil en TMDB"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/find/?q=Nemica",
+     "fecha": "2026-11-16",
+     "resultado": "«Nemica» y «Felipe Florez Ramos»: solo homónimas italianas ajenas; nada del corto colombiano"
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/nemica/",
+     "fecha": "2026-11-16",
+     "resultado": "solo ajenas (Bride Wars alt «Nemica», Nimic…); sin el corto"
+    },
+    "web_director_o_productora": {
+     "url": "https://www.felipeflorezramos.com/home",
+     "fecha": "2026-11-16",
+     "resultado": "Web del director-productor (Wix): portafolio; sin afiche hallado ahí"
+    },
+    "distribuidora_o_agencia": {
+     "na": true,
+     "por_que": "Contacto del catálogo es el propio director (hola@felipeflorezramos.com); coproducción con TIS Studio, sin distribuidora",
+     "fecha": "2026-11-16"
+    },
+    "plataformas_festivales": {
+     "url": "https://www.bing.com/search?q=filmfreeway%20%22N%C3%A9mica%22",
+     "fecha": "2026-11-16",
+     "resultado": "Short Film Depot pide sesión y Festhome no tiene catálogo público; FilmFreeway: sin perfil"
+    },
+    "festivales_previos": {
+     "url": "https://shortscostarica.com/?action=p&id=13397",
+     "fecha": "2026-11-16",
+     "resultado": "Shorts Costa Rica 2026 (Colombia 2025); imagen de la ficha es fotograma 1920x1012. Premios World International Movie Awards / World Class Film Awards (catálogo)"
+    },
+    "organismo_nacional": {
+     "url": "https://www.proimagenescolombia.com/secciones/buscador/buscador_general_resultado.php?buscar=Nemica",
+     "fecha": "2026-11-16",
+     "resultado": "Proimágenes «Nemica»/«Florez»: sin la obra"
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.bing.com/images/search?q=%22N%C3%A9mica%22%20Fl%C3%B3rez%20afiche",
+     "fecha": "2026-11-16",
+     "resultado": "Bing Imágenes: nada; afiche oficial en ficha BOGOSHORTS (599x842)"
     }
-   }
+   },
+   "afiche": {
+    "url": "https://festival.bogoshorts.com/images/peliculas/6ae292bf9d49e__Nemica_CLC-CINE03_Poster_24BSFF.png",
+    "fuente": "Afiche oficial con créditos en ficha BOGOSHORTS corto/4227",
+    "archivo": "fuentes/bogoshorts-2026/altas/nemica.jpg",
+    "px": [
+     561,
+     842
+    ],
+    "ratio": 0.6663,
+    "recorte": {
+     "de": [
+      599,
+      842
+     ],
+     "caja": [
+      19,
+      0,
+      580,
+      842
+     ],
+     "centrado": true,
+     "objetivo": 0.6667
+    },
+    "veredicto_criterio": null,
+    "fecha": "2026-11-16"
+   },
+   "estado": "alta_posible"
   },
   "O sigilo": {
    "titulo": "O sigilo",
@@ -2813,8 +3156,50 @@
      "url": "https://www.themoviedb.org/person/1005081 https://www.themoviedb.org/person/4380928 https://www.themoviedb.org/person/6062904",
      "fecha": "2026-11-15",
      "resultado": "Ángel de Andrés (1005081): dirige 0; Andrés Del Ángel (4380928): dirige 0; Angel Andrés (6062904): dirige 0"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/find/?q=O%20sigilo",
+     "fecha": "2026-11-16",
+     "resultado": "«O sigilo» y «Andres Angel»: solo podcasts/obras ajenas"
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/El%20sigilo/",
+     "fecha": "2026-11-16",
+     "resultado": "«O sigilo» y «El sigilo»: solo ajenas («No Sigilo» 2020/2021 brasileñas)"
+    },
+    "web_director_o_productora": {
+     "url": "https://co.linkedin.com/in/andres-angel-016326119",
+     "fecha": "2026-11-16",
+     "resultado": "Director-productor sin web propia (LinkedIn); productor Victor Cadeias sin web hallada"
+    },
+    "distribuidora_o_agencia": {
+     "na": true,
+     "por_que": "Contacto del catálogo es el propio director (gmail); sin distribuidora",
+     "fecha": "2026-11-16"
+    },
+    "plataformas_festivales": {
+     "url": "https://www.bing.com/search?q=filmfreeway%20%22O%20sigilo%22",
+     "fecha": "2026-11-16",
+     "resultado": "Short Film Depot pide sesión y Festhome no tiene catálogo público; FilmFreeway: solo homónima «O Sigilo» 2008"
+    },
+    "festivales_previos": {
+     "url": "https://www.bing.com/search?q=%22Andr%C3%A9s%20%C3%81ngel%22%20%22El%20sigilo%22%20cortometraje",
+     "fecha": "2026-11-16",
+     "resultado": "Estreno mundial BOGOSHORTS 2026 (ficha festival.bogoshorts.com/corto/4361 sin póster, solo foto del director); su corto previo es «Fieras» (2023)"
+    },
+    "organismo_nacional": {
+     "url": "https://www.proimagenescolombia.com/secciones/buscador/buscador_general_resultado.php?buscar=sigilo",
+     "fecha": "2026-11-16",
+     "resultado": "Proimágenes «sigilo»: sin resultados"
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.bing.com/images/search?q=%22O%20sigilo%22%20Andr%C3%A9s%20%C3%81ngel%20afiche",
+     "fecha": "2026-11-16",
+     "resultado": "Bing Imágenes: solo ajenas (O Sigilo 2008, sigilos esotéricos)"
     }
-   }
+   },
+   "estado": "sin_afiche",
+   "por_que_sin_afiche": "Ficha BOGOSHORTS corto/4361 sin póster (solo foto del director); sin web ni festivales previos; Bing Imágenes sin afiche"
   },
   "On naît seul, on meurt seul": {
    "titulo": "On naît seul, on meurt seul",
@@ -2834,8 +3219,51 @@
      "url": "https://www.themoviedb.org/person/5003585 https://www.themoviedb.org/person/5209711 https://www.themoviedb.org/person/4226279",
      "fecha": "2026-11-15",
      "resultado": "Luna Martin (5003585): dirige 0; Martín Luna (5209711): dirige 3; Martín Luna (4226279): dirige 1"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/find/?q=On%20nait%20seul%20on%20meurt%20seul",
+     "fecha": "2026-11-16",
+     "resultado": "título FR, «We are Born Alone We Die Alone» y «Luna Martin»: solo «On Naît Seul» 2012 ajena; nada de Luna Martin"
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/On%20nait%20seul%20on%20meurt%20seul/",
+     "fecha": "2026-11-16",
+     "resultado": "título FR e inglés: sin coincidencias"
+    },
+    "web_director_o_productora": {
+     "na": true,
+     "por_que": "Directora y productora a título personal (contacto yahoo); sin web propia hallada",
+     "fecha": "2026-11-16"
+    },
+    "distribuidora_o_agencia": {
+     "na": true,
+     "por_que": "Contacto del catálogo es la propia directora; sin distribuidora",
+     "fecha": "2026-11-16"
+    },
+    "plataformas_festivales": {
+     "url": "https://www.bing.com/search?q=%22Luna%20Martin%22%20animation%20sketchbook%20%22On%20na%C3%AEt%20seul%22",
+     "fecha": "2026-11-16",
+     "resultado": "Short Film Depot pide sesión y Festhome no tiene catálogo público; FilmFreeway: sin perfil"
+    },
+    "festivales_previos": {
+     "url": "https://www.bing.com/search?q=%22On%20na%C3%AEt%20seul%2C%20on%20meurt%20seul%22%20%22Luna%20Martin%22",
+     "fecha": "2026-11-16",
+     "resultado": "Catálogo: Festival Nacional de Animación de Rennes 2025-2026, VilladelCine 2025 (mención de honor); sin fichas con póster halladas"
+    },
+    "organismo_nacional": {
+     "url": "https://www.unifrance.org/film/67335/on-nait-seul-on-meurt-seul",
+     "fecha": "2026-11-16",
+     "resultado": "",
+     "parcial": "Unifrance tiene ficha 67335 (Bing: corto de Luna Martin, 2026, 6 min) pero Cloudflare bloquea (403): no se pudo ver el contenido ni si trae afiche"
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.bing.com/images/search?q=%22On%20na%C3%AEt%20seul%2C%20on%20meurt%20seul%22%20Luna%20Martin%20affiche",
+     "fecha": "2026-11-16",
+     "resultado": "Bing Imágenes: solo citas y disco HNS homónimo; sin afiche"
     }
-   }
+   },
+   "estado": "sin_afiche",
+   "por_que_sin_afiche": "Sin afiche en Bing Imágenes ni festivales; Unifrance (posible fuente) bloqueado por Cloudflare"
   },
   "Oui (Balming Tiger)": {
    "titulo": "Oui (Balming Tiger)",
@@ -2855,8 +3283,55 @@
      "url": "https://www.themoviedb.org/search/person?query=Lee%20Suho https://www.themoviedb.org/person/4423971 https://www.themoviedb.org/person/4705563 https://www.themoviedb.org/person/4716112 https://www.themoviedb.org/person/1746339 https://www.themoviedb.org/search/person?query=Im%20Subin https://www.themoviedb.org/search/person?query=Keem%20Dohyeong",
      "fecha": "2026-11-15",
      "resultado": "Lee Suho: sin perfil en TMDB; San Yawn (4423971): dirige 0; San Yawn (4705563): dirige 0; San Yawn (4716112): dirige 0; Joyce Sohyun Lee (1746339): dirige 1; Im Subin: sin perfil en TMDB; Keem Dohyeong: sin perfil en TMDB"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/find/?q=Balming%20Tiger%20Oui",
+     "fecha": "2026-11-16",
+     "resultado": "IMDb tiene otros videoclips de Balming Tiger (Sexy Nukim 2022, Chef Lee…), no «Oui»"
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/Balming%20Tiger%20Oui/",
+     "fecha": "2026-11-16",
+     "resultado": "sin coincidencias"
+    },
+    "web_director_o_productora": {
+     "url": "https://vimeo.com/1202001060",
+     "fecha": "2026-11-16",
+     "resultado": "Vimeo (Boring Studio): créditos completos, Director Lee Suho; sin afiche"
+    },
+    "distribuidora_o_agencia": {
+     "na": true,
+     "por_que": "Videoclip de Balming Tiger (gestión CAM, contacto balmingtiger@camwus.kr); sin agencia de distribución del clip",
+     "fecha": "2026-11-16"
+    },
+    "plataformas_festivales": {
+     "url": "https://www.bing.com/search?q=%22Balming%20Tiger%22%20%22Oui%22%20music%20video",
+     "fecha": "2026-11-16",
+     "resultado": "Short Film Depot pide sesión y Festhome no tiene catálogo público; FilmFreeway: sin perfil; Directors' Library tiene ficha del video"
+    },
+    "festivales_previos": {
+     "url": "https://www.europeanfilmawards.eu/vimeo-movie/balming-tiger-oui-official-video/",
+     "fecha": "2026-11-16",
+     "resultado": "Ficha en European Film Academy (vimeo); sin festivales previos con póster"
+    },
+    "organismo_nacional": {
+     "na": true,
+     "por_que": "Videoclip musical: KOFIC no registra videoclips",
+     "fecha": "2026-11-16"
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.bing.com/images/search?q=Balming%20Tiger%20Oui%20poster",
+     "fecha": "2026-11-16",
+     "resultado": "Bing Imágenes: portada del sencillo (Genius 800x800) y fotos de grupo; sin afiche del video"
+    },
+    "canal_oficial_artista": {
+     "url": "https://www.youtube.com/watch?v=WKZXRgQ7_uw",
+     "fecha": "2026-11-16",
+     "resultado": "Canal oficial Balming Tiger, 12 jun 2026: Production Boring Studio, Director Lee Suho, Creative Director San Yawn, Asst. Directors Lee Sohyun, Im Subin, Keem Dohyeong"
     }
-   }
+   },
+   "estado": "sin_afiche",
+   "por_que_sin_afiche": "Videoclip: solo miniatura YouTube/Vimeo (fotograma) y portada del sencillo; ficha BOGOSHORTS corto/4349 sin póster"
   },
   "Para Dani": {
    "titulo": "Para Dani",
@@ -2876,8 +3351,50 @@
      "url": "https://www.themoviedb.org/person/2692496",
      "fecha": "2026-11-15",
      "resultado": "César Heredia Cruz (2692496): dirige 1"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/name/nm6195758/",
+     "fecha": "2026-11-16",
+     "resultado": "César Heredia Cruz (nm6195758) solo tiene Salvador (2021) y Karen Cries on the Bus; «Para Dani» y «Correspondencia para Dani» sin resultados"
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/Para%20Dani/",
+     "fecha": "2026-11-16",
+     "resultado": "«Para Dani», «Correspondencia para Dani», «Letter to Dani»: solo ajenas"
+    },
+    "web_director_o_productora": {
+     "na": true,
+     "por_que": "César Heredia Cruz falleció en dic 2025 (El Espectador); obra exhibida en el homenaje HOM-CESAR, sin productora ni web",
+     "fecha": "2026-11-16"
+    },
+    "distribuidora_o_agencia": {
+     "na": true,
+     "por_que": "Obra personal póstuma del homenaje; sin distribuidora",
+     "fecha": "2026-11-16"
+    },
+    "plataformas_festivales": {
+     "url": "https://www.bing.com/search?q=%22Para%20Dani%22%20Heredia%20correspondencia",
+     "fecha": "2026-11-16",
+     "resultado": "Short Film Depot pide sesión y Festhome no tiene catálogo público; sin perfil FilmFreeway"
+    },
+    "festivales_previos": {
+     "url": "https://www.bing.com/search?q=%22Correspondencia%20para%20Dani%22",
+     "fecha": "2026-11-16",
+     "resultado": "Sin resultados; «Correspondencia para Dani 8 de dic de 2025» solo existe en el catálogo del homenaje"
+    },
+    "organismo_nacional": {
+     "url": "https://www.proimagenescolombia.com/secciones/cine_colombiano/perfiles/perfil_persona.php?id_perfil=3722",
+     "fecha": "2026-11-16",
+     "resultado": "Perfil Proimágenes de César Heredia: no lista «Para Dani»"
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.bing.com/images/search?q=%22Para%20Dani%22%20C%C3%A9sar%20Heredia%20afiche",
+     "fecha": "2026-11-16",
+     "resultado": "Bing Imágenes: solo notas de fallecimiento y homónimos; sin afiche"
     }
-   }
+   },
+   "estado": "sin_afiche",
+   "por_que_sin_afiche": "Obra póstuma del homenaje a César Heredia (fallecido dic 2025); sin presencia web ni imagen"
   },
   "Paraíso": {
    "titulo": "Paraíso",
