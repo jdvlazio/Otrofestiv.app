@@ -1104,6 +1104,7 @@ guardián que nadie sabe qué protege es uno que el próximo que toque
 | `[title-normalization]` | Ningún título con comillas tipográficas (`‘’“”«»`). |
 | `[activity-duration]` | Toda actividad de un festival vivo tiene duración; las que la organización no publicó viven en `_PENDING` con su razón y se borran de ahí al llegar el dato. |
 | `[pais-conocido]` | Todo `country` de `FESTIVAL_CONFIG` tiene entrada en `COUNTRY_NAMES`: FINCA salió con `'AR'` sin la suya y el splash dijo «BUENOS AIRES» sin Argentina. `country:''` es legítimo. |
+| `[sede-matriz]` | Un lugar, un pin: `catalogo/sedes.json` (lo arma `pipeline/sedes.py --construir` desde los venues-geo) tiene que estar al día, y ningún pin de festival se aparta >120 m de su lugar. `geocodificar.py` consulta la matriz antes que Nominatim. Lugares con pines viejos que no coinciden: warning, se resuelven con `--elegir`. |
 | `[sedes-apiladas]` | Dos sedes de un festival vivo a <60 m casi siempre son la misma (se declara con `_nota`), y la sala no va dentro del nombre de la sede. Warning; los archivados no se reescriben. |
 | `[day-order-indice]` (validate-festivals.js) | `day_order` es el índice del día en `dayKeys`, no un contador: ordena ficha, Mi Plan, Programa y el plan. Deuda por festival en `DAY_ORDER_DEUDA`, que solo baja. |
 | `[synopsis-length]` (validate-festivals.js) | Warning generoso: sinopsis > 600 caracteres, para cazar un dump sin condensar sin spamear. |
