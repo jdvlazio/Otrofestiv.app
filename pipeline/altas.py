@@ -115,12 +115,19 @@ def sin_ficha(fid, raiz=REPO):
 
 
 def obra_catalogo(fid, titulo, raiz=REPO):
-    """Lo que el catálogo (o el crudo) sabe de la obra, por título plano."""
+    """Lo que el catálogo (o el crudo) sabe de la obra, por título plano.
+    El catálogo primero; si no está, las obras de las funciones del crudo
+    (`obras` / `film_list` con director). 16 nov 2026: BOGOSHORTS no tiene
+    `-catalogo.json` —sus cortos viven en el crudo— y el sondeo corrió 96 obras
+    SIN director ni año: el candado no podía verificar ninguna."""
     k = plano(titulo)
-    for n in (f'{fid}-catalogo.json',):
-        for o in _leer(os.path.join(_st(raiz), n)).get('obras') or []:
-            if plano(o.get('titulo')) == k:
-                return o
+    for o in _leer(os.path.join(_st(raiz), f'{fid}-catalogo.json')).get('obras') or []:
+        if plano(o.get('titulo')) == k:
+            return o
+    for f in _leer(os.path.join(_st(raiz), f'{fid}-crudo.json')).get('funciones') or []:
+        for o in (f.get('obras') or []) + (f.get('film_list') or []):
+            if isinstance(o, dict) and plano(o.get('titulo') or o.get('title')) == k and o.get('director'):
+                return {**o, 'titulo': o.get('titulo') or o.get('title')}
     return {'titulo': titulo}
 
 
