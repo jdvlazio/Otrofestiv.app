@@ -5562,26 +5562,34 @@ except Exception as _e:
 # viejos que no coinciden) se avisan: los resuelve una persona con --elegir.
 check = 'sede-matriz'
 try:
-    import sys as _sysm, json as _jm
+    import sys as _sysm
     _sysm.path.insert(0, 'pipeline')
     import sedes as _sm
     _mz = _sm.leer()
     if not _mz:
         fail(check, 'no existe catalogo/sedes.json — python3 pipeline/sedes.py --construir')
     else:
-        _vistos = {(_f, _k) for _f, _k, _n, _v in _sm.pines()}
-        _en_mz = {(_f, _k) for _e in _mz['sedes'].values() for _f in _e['festivales'] for _k in _e['nombres']}
-        _nuevos = sorted({_f for _f, _k in _vistos} - {_f for _e in _mz['sedes'].values() for _f in _e['festivales']})
-        _sin = sorted(f'{_f}:{_k}' for _f, _k in _vistos if not any(_k in _e['nombres'] and _f in _e['festivales'] for _e in _mz['sedes'].values()))
-        _ap = _sm.apartados()
+        _S = _mz['sedes']
+        _sin = sorted(f'{_f}:{_k}' for _f, _k, _n, _v in _sm.pines()
+                      if not any(_f in _e['festivales'] and _k in [_e['nombre']] + _e.get('alias', []) for _e in _S.values()))
+        _ap, _ce, _ev = _sm.apartados(), _sm.cercanos(), _sm.sin_evidencia_nueva()
+        _dv = _mz.get('_divergentes') or {}
+        _p = []
         if _sin:
-            fail(check, f'{len(_sin)} pin(es) de venues-geo que la matriz no tiene — python3 pipeline/sedes.py --construir: ' + ', '.join(_sin[:6]))
-        elif _ap:
-            fail(check, 'pin(es) que se apartan de su lugar en la matriz: ' + ', '.join(f'{a}:{b} a {d} m de {c}' for a, b, c, d in _ap[:6]))
+            _p.append(f'{len(_sin)} pin(es) que el almacén no tiene (python3 pipeline/sedes.py --construir): ' + ', '.join(_sin[:5]))
+        if _ap:
+            _p.append('pin(es) que se apartan de su lugar: ' + ', '.join(f'{a}:{b} a {d} m' for a, b, c, d in _ap[:5]))
+        if _dv:
+            _p.append(f'{len(_dv)} lugar(es) con pines que no coinciden (--evidencia con Maps, --elegir o --campus): ' + ', '.join(_S[x]['nombre'] for x in _dv))
+        if _ce:
+            _p.append(f'{len(_ce)} par(es) de lugares a <{_sm.CERCA_M} m sin decidir (--mismo / --distintos): ' + ', '.join(f'{_S[a]["nombre"]} ↔ {_S[b]["nombre"]}' for d, a, b in _ce[:4]))
+        if _ev:
+            _p.append(f'{len(_ev)} lugar(es) NUEVO(s) sin enlace de Google Maps (--evidencia): ' + ', '.join(_S[x]['nombre'] for x in _ev[:5]))
+        if _p:
+            fail(check, ' · '.join(_p))
         else:
-            ok(check, f'{len(_mz["sedes"])} lugares en la matriz; todo pin de festival coincide con el suyo')
-        if _mz.get('_divergentes'):
-            warn(check, f'{len(_mz["_divergentes"])} lugar(es) con pines que no coinciden entre festivales — python3 pipeline/sedes.py --divergentes / --elegir: ' + ', '.join(list(_mz['_divergentes'])[:5]))
+            ok(check, f'{len(_S)} lugares; todo pin coincide con el suyo, ningún par cercano sin decidir, todo lugar nuevo con Maps '
+                      f'({len((_mz.get("_deuda") or {}).get("sin_url") or [])} viejos sin enlace: deuda que solo baja)')
 except Exception as _e:
     fail(check, f'el guardián no pudo correr: {_e}')
 
