@@ -66,6 +66,14 @@ class Registro(Base):
         self.assertIn('Canción (Los Artistas)', A.leer_registro('x', self.r)['obras'])
 
 
+    def test_obra_del_crudo_si_no_hay_catalogo(self):
+        self.w('festivals/staging/x-crudo.json', {'funciones': [{'obras': [
+            'Suelta', {'titulo': 'Niebla', 'director': 'Eva Ríos', 'anio': 2024, 'duracion_min': 9}]}]})
+        o = A.obra_catalogo('x', 'Niebla', self.r)
+        self.assertEqual((o['director'], o['anio']), ('Eva Ríos', 2024))
+        self.assertEqual(A.obra_catalogo('x', 'Lluvia', self.r)['director'], 'Ana Pérez Gómez')
+        self.assertEqual(A.obra_catalogo('x', 'Nada', self.r), {'titulo': 'Nada'})
+
 class Sondar(Base):
     def setUp(self):
         super().setUp()
