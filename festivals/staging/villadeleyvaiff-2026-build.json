@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "IG @festcinevilla, carrusel «Programación · Real Fábrica» (10 nov 2026)",
-  "capturado": "2026-11-15",
+  "capturado": "2026-11-16",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "radar": 1248,
@@ -156,7 +156,8 @@
    "lng": -73.5222502,
    "address": "Cl. 13 #8-51, Villa de Leyva, Boyacá",
    "_prec": "manual",
-   "_match": "Google Maps: «Real Fábrica de Licores»"
+   "_match": "Google Maps: «Real Fábrica de Licores»",
+   "_matriz": "s_26861d1b"
   },
   "Plaza Mayor - Villa de Leyva": {
    "short": "Plaza Mayor",
@@ -165,7 +166,8 @@
    "lng": -73.5236226,
    "address": "Plaza Mayor, Villa de Leyva, Boyacá",
    "_prec": "manual",
-   "_match": "Google Maps: «Plaza Mayor de Villa de Leyva»"
+   "_match": "Google Maps: «Plaza Mayor de Villa de Leyva»",
+   "_matriz": "s_92850ca4"
   },
   "Hotel Plaza Mayor - Villa de Leyva": {
    "short": "Hotel Plaza Mayor",
@@ -174,7 +176,8 @@
    "lng": -73.524086,
    "address": "Villa de Leyva, Boyacá",
    "_prec": "manual",
-   "_match": "Google Maps: «Hotel Plaza Mayor Villa de Leyva»"
+   "_match": "Google Maps: «Hotel Plaza Mayor Villa de Leyva»",
+   "_matriz": "s_0bdf6316"
   }
  },
  "_avisos_id": [],
@@ -2424,7 +2427,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-15T11:00:47",
+  "fecha": "2026-11-16T17:23:15",
   "plan_sha": "b4abb893e9e28edd",
   "paso": 7,
   "cmd": "python3 pipeline/encuadrar-posters.py villadeleyvaiff-2026 --aplicar --desde festivals/staging/villadeleyvaiff-2026-build.json"
