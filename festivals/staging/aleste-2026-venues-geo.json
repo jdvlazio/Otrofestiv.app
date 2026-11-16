@@ -23,5 +23,13 @@
   "address": "Cra. 3 #19-10, Bogotá",
   "_prec": "manual",
   "_match": "heredada de BIFF/MIDBO/BHFF 2026; coincide al decimal con Google Maps «Cinemateca de Bogotá»"
+ },
+ "Cinemateca Fontanar del Río - Bogotá": {
+  "_prec": "manual",
+  "_nota": "Google Maps «CEFE Fontanar del río»; el mismo pin con que la publicamos en FICDEH y Narrar el Futuro",
+  "lat": 4.7561244,
+  "lng": -74.1110572,
+  "address": "Calle 146 # 138A-99",
+  "_match": "heredada de Anibia/FICDEH/Narrar el Futuro 2026 (Google Maps «CEFE Fontanar del río»)"
  }
 }

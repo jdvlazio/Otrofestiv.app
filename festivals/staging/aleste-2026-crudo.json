@@ -1,7 +1,7 @@
 {
  "_provenance": {
-  "fuente": "MAMM (fichas del ciclo) + láminas de @aleste.colombia (3, 5 y 10 nov 2026)",
-  "capturado": "2026-11-13",
+  "fuente": "MAMM (fichas del ciclo) + láminas de @aleste.colombia (3, 5 y 10 nov 2026) + web oficial programa2026 (16 nov, Bogotá)",
+  "capturado": "2026-11-16",
   "metodo": "transcripción a ojo; láminas cruzadas con ig-lecturas.py",
   "que_aporta": "día, hora, sede, acceso"
  },
@@ -53,7 +53,7 @@
    "dia": "2026-11-19",
    "hora": "18:30",
    "sede": "MAMM",
-   "seccion": "Al Este en el MAMM",
+   "seccion": "Competencia Al Este",
    "acceso": "Con boleta: $14.000 general; $10.000 mayores de 60, menores de 12 y estudiantes",
    "_src": {
     "url": "https://www.elmamm.org/producto/the-souffleur/",
@@ -71,7 +71,7 @@
    "dia": "2026-11-19",
    "hora": "19:00",
    "sede": "Centro Colombo Americano",
-   "seccion": "Fokus: Las grietas en el muro",
+   "seccion": "Fokus: Las grietas del muro",
    "acceso": "Con boleta",
    "_src": {
     "url": "https://www.instagram.com/p/DfYe-5Slr8E/",
@@ -79,6 +79,7 @@
     "tipo": "festival-ig",
     "lamina": "02.jpg"
    },
+   "sala": "Sala 1",
    "director": "Andrzej Wajda",
    "pais": "Polonia",
    "anio": 1958,
@@ -89,7 +90,7 @@
    "dia": "2026-11-20",
    "hora": "16:30",
    "sede": "Centro Colombo Americano",
-   "seccion": "Fokus: Las grietas en el muro",
+   "seccion": "Fokus: Las grietas del muro",
    "acceso": "Con boleta",
    "_src": {
     "url": "https://www.instagram.com/p/DfYe-5Slr8E/",
@@ -97,6 +98,7 @@
     "tipo": "festival-ig",
     "lamina": "03.jpg"
    },
+   "sala": "Sala 2",
    "director": "Alain Tanner",
    "pais": "Suiza, Francia",
    "anio": 1973,
@@ -107,7 +109,7 @@
    "dia": "2026-11-20",
    "hora": "18:30",
    "sede": "MAMM",
-   "seccion": "Al Este en el MAMM",
+   "seccion": "Competencia Al Este",
    "acceso": "Con boleta: $14.000 general; $10.000 mayores de 60, menores de 12 y estudiantes",
    "_src": {
     "url": "https://www.elmamm.org/producto/padre/",
@@ -125,7 +127,7 @@
    "dia": "2026-11-20",
    "hora": "19:00",
    "sede": "Centro Colombo Americano",
-   "seccion": "Fokus: Las grietas en el muro",
+   "seccion": "Fokus: Las grietas del muro",
    "acceso": "Con boleta",
    "_src": {
     "url": "https://www.instagram.com/p/DfYe-5Slr8E/",
@@ -133,6 +135,7 @@
     "tipo": "festival-ig",
     "lamina": "05.jpg"
    },
+   "sala": "Sala 2",
    "director": "Andrzej Wajda",
    "pais": "Polonia",
    "anio": 1960,
@@ -151,6 +154,7 @@
     "tipo": "festival-ig",
     "lamina": "03.jpg"
    },
+   "sala": "Sala 1",
    "director": "Margherita Spampinato",
    "pais": "Italia",
    "anio": 2025,
@@ -179,7 +183,7 @@
    "dia": "2026-11-21",
    "hora": "14:30",
    "sede": "Centro Colombo Americano",
-   "seccion": "Fokus: Las grietas en el muro",
+   "seccion": "Fokus: Las grietas del muro",
    "acceso": "Con boleta",
    "_src": {
     "url": "https://www.instagram.com/p/DfYe-5Slr8E/",
@@ -187,6 +191,7 @@
     "tipo": "festival-ig",
     "lamina": "04.jpg"
    },
+   "sala": "Sala 2",
    "director": "Andrzej Wajda",
    "pais": "Polonia",
    "anio": 1974,
@@ -197,7 +202,7 @@
    "dia": "2026-11-21",
    "hora": "16:30",
    "sede": "MAMM",
-   "seccion": "Al Este en el MAMM",
+   "seccion": "Competencia Al Este",
    "acceso": "Con boleta: $14.000 general; $10.000 mayores de 60, menores de 12 y estudiantes",
    "_src": {
     "url": "https://www.elmamm.org/producto/1982/",
@@ -233,7 +238,7 @@
    "dia": "2026-11-22",
    "hora": "16:00",
    "sede": "MAMM",
-   "seccion": "Al Este en el MAMM",
+   "seccion": "Competencia Vidas Cruzadas",
    "acceso": "Con boleta: $14.000 general; $10.000 mayores de 60, menores de 12 y estudiantes",
    "_src": {
     "url": "https://www.elmamm.org/producto/londres/",
@@ -247,94 +252,599 @@
    "duracion_min": 122
   },
   {
-   "titulo": "Shame and Money",
    "dia": "2026-11-25",
    "hora": "18:30",
    "sede": "Cinemateca de Bogotá",
-   "seccion": "Al Este en la Cinemateca",
    "acceso": "Con boleta",
    "_src": {
-    "url": "https://www.instagram.com/p/DfsHqtAlpmC/",
-    "date": "2026-11-12",
-    "tipo": "festival-ig",
-    "lamina": "01.jpg"
+    "url": "https://www.alestfestival.com/programa2026/shame-and-money",
+    "date": "2026-11-16",
+    "tipo": "festival-web"
    },
+   "sala": "Sala Capital",
+   "titulo": "Shame and Money",
+   "seccion": "Inauguración Bogotá",
    "director": "Visar Morina",
    "pais": "Alemania, Kosovo, Eslovenia, Albania, Macedonia del Norte, Bélgica",
    "anio": 2026,
-   "duracion_min": 130
+   "duracion_min": 130,
+   "event_kind": "apertura"
   },
   {
-   "titulo": "Histeria",
+   "dia": "2026-11-26",
+   "hora": "16:00",
+   "sede": "Cinemateca de Bogotá",
+   "acceso": "Con boleta",
+   "_src": {
+    "url": "https://www.alestfestival.com/programa2026/ciudadano-havel",
+    "date": "2026-11-16",
+    "tipo": "festival-web"
+   },
+   "sala": "Sala 2",
+   "titulo": "Ciudadano Havel",
+   "seccion": "Fokus: Las grietas del muro",
+   "director": "Miroslav Janek, Pavel Koutecký",
+   "pais": "República Checa",
+   "anio": 2008,
+   "duracion_min": 119,
+   "has_qa": true
+  },
+  {
    "dia": "2026-11-26",
    "hora": "17:00",
    "sede": "Cinemateca de Bogotá",
-   "seccion": "Al Este en la Cinemateca",
    "acceso": "Con boleta",
    "_src": {
-    "url": "https://www.instagram.com/p/DfsHqtAlpmC/",
-    "date": "2026-11-12",
-    "tipo": "festival-ig",
-    "lamina": "04.jpg"
+    "url": "https://www.alestfestival.com/programa2026/histeria",
+    "date": "2026-11-16",
+    "tipo": "festival-web"
    },
+   "sala": "Sala 3",
+   "titulo": "Histeria",
+   "seccion": "Competencia Al Este",
    "director": "Mehmet Akif Büyükatalay",
    "pais": "Alemania",
    "anio": 2025,
    "duracion_min": 104
   },
   {
-   "titulo": "The Souffleur",
    "dia": "2026-11-26",
    "hora": "17:00",
    "sede": "Cinemateca de Bogotá",
-   "seccion": "Al Este en la Cinemateca",
    "acceso": "Con boleta",
    "_src": {
-    "url": "https://www.instagram.com/p/DfsHqtAlpmC/",
-    "date": "2026-11-12",
-    "tipo": "festival-ig",
-    "lamina": "03.jpg"
+    "url": "https://www.alestfestival.com/programa2026/the-souffleur",
+    "date": "2026-11-16",
+    "tipo": "festival-web"
    },
+   "sala": "Sala Capital",
+   "titulo": "The Souffleur",
+   "seccion": "Competencia Al Este",
    "director": "Gastón Solnicki",
    "pais": "Argentina, Austria",
    "anio": 2025,
    "duracion_min": 78
   },
   {
-   "titulo": "1982",
+   "dia": "2026-11-26",
+   "hora": "19:00",
+   "sede": "Cinemateca de Bogotá",
+   "acceso": "Con boleta",
+   "_src": {
+    "url": "https://www.alestfestival.com/programa2026/ino-moxo-el-sueño-del-brujo",
+    "date": "2026-11-16",
+    "tipo": "festival-web"
+   },
+   "sala": "Sala 2",
+   "titulo": "Ino Moxo: El sueño del brujo",
+   "seccion": "Competencia Vidas Cruzadas",
+   "director": "Rodolfo Arrascue",
+   "pais": "Perú, Colombia",
+   "anio": 2024,
+   "duracion_min": 80,
+   "has_qa": true,
+   "qa_type": "team"
+  },
+  {
+   "dia": "2026-11-26",
+   "hora": "19:30",
+   "sede": "Cinemateca de Bogotá",
+   "acceso": "Con boleta",
+   "_src": {
+    "url": "https://www.alestfestival.com/programa2026/la-retirada",
+    "date": "2026-11-16",
+    "tipo": "festival-web"
+   },
+   "sala": "Sala 3",
+   "titulo": "La retirada",
+   "seccion": "Fokus: Las grietas del muro",
+   "director": "Václav Havel",
+   "pais": "República Checa",
+   "anio": 2011,
+   "duracion_min": 94,
+   "has_qa": true
+  },
+  {
+   "dia": "2026-11-27",
+   "hora": "14:30",
+   "sede": "Cinemateca de Bogotá",
+   "acceso": "Con boleta",
+   "_src": {
+    "url": "https://www.alestfestival.com/programa2026/historias-de-una-mentira",
+    "date": "2026-11-16",
+    "tipo": "festival-web"
+   },
+   "sala": "Sala 3",
+   "titulo": "Historias de una mentira",
+   "seccion": "Competencia Vidas Cruzadas",
+   "director": "Olia Verriopoulou",
+   "pais": "Grecia, Francia",
+   "anio": 2025,
+   "duracion_min": 76
+  },
+  {
+   "dia": "2026-11-27",
+   "hora": "16:00",
+   "sede": "Cinemateca de Bogotá",
+   "acceso": "Con boleta",
+   "_src": {
+    "url": "https://www.alestfestival.com/programa2026/aquí-en-otros-lugares",
+    "date": "2026-11-16",
+    "tipo": "festival-web"
+   },
+   "sala": "Sala 2",
+   "titulo": "Aquí, en otros lugares",
+   "seccion": "Competencia Vidas Cruzadas",
+   "director": "Comes Chahbazian",
+   "pais": "Bélgica, Armenia",
+   "anio": 2026,
+   "duracion_min": 67,
+   "has_qa": true
+  },
+  {
    "dia": "2026-11-27",
    "hora": "16:30",
    "sede": "Cinemateca de Bogotá",
-   "seccion": "Al Este en la Cinemateca",
    "acceso": "Con boleta",
    "_src": {
-    "url": "https://www.instagram.com/p/DfsHqtAlpmC/",
-    "date": "2026-11-12",
-    "tipo": "festival-ig",
-    "lamina": "05.jpg"
+    "url": "https://www.alestfestival.com/programa2026/la-salamandra",
+    "date": "2026-11-16",
+    "tipo": "festival-web"
    },
+   "sala": "Sala 3",
+   "titulo": "La salamandra",
+   "seccion": "Fokus: Las grietas del muro",
+   "director": "Alain Tanner",
+   "pais": "Suiza, Francia",
+   "anio": 1971,
+   "duracion_min": 123
+  },
+  {
+   "dia": "2026-11-27",
+   "hora": "16:30",
+   "sede": "Cinemateca de Bogotá",
+   "acceso": "Con boleta",
+   "_src": {
+    "url": "https://www.alestfestival.com/programa2026/1982",
+    "date": "2026-11-16",
+    "tipo": "festival-web"
+   },
+   "sala": "Sala Capital",
+   "titulo": "1982",
+   "seccion": "Competencia Al Este",
    "director": "Juan Carlos García",
    "pais": "Perú",
    "anio": 2025,
-   "duracion_min": 84
+   "duracion_min": 84,
+   "has_qa": true
   },
   {
-   "titulo": "Todas las canciones del mundo",
+   "dia": "2026-11-27",
+   "hora": "19:00",
+   "sede": "Cinemateca de Bogotá",
+   "acceso": "Con boleta",
+   "_src": {
+    "url": "https://www.alestfestival.com/programa2026/labriego",
+    "date": "2026-11-16",
+    "tipo": "festival-web"
+   },
+   "sala": "Sala 2",
+   "titulo": "Labriego",
+   "seccion": "Competencia Vidas Cruzadas",
+   "director": "Carlos Matsuo",
+   "pais": "Colombia, México",
+   "anio": 2026,
+   "duracion_min": 85,
+   "has_qa": true,
+   "qa_type": "team"
+  },
+  {
+   "dia": "2026-11-27",
+   "hora": "19:30",
+   "sede": "Cinemateca de Bogotá",
+   "acceso": "Con boleta",
+   "_src": {
+    "url": "https://www.alestfestival.com/programa2026/padre",
+    "date": "2026-11-16",
+    "tipo": "festival-web"
+   },
+   "sala": "Sala 3",
+   "titulo": "Padre",
+   "seccion": "Competencia Al Este",
+   "director": "Tereza Nvotová",
+   "pais": "Eslovaquia, República Checa, Polonia",
+   "anio": 2025,
+   "duracion_min": 103,
+   "has_qa": true
+  },
+  {
+   "dia": "2026-11-28",
+   "hora": "14:30",
+   "sede": "Cinemateca de Bogotá",
+   "acceso": "Con boleta",
+   "_src": {
+    "url": "https://www.alestfestival.com/programa2026",
+    "date": "2026-11-16",
+    "tipo": "festival-web"
+   },
+   "sala": "Sala 3",
+   "titulo": "Hecho en Colombia – Bloque 1",
+   "seccion": "Competencia Hecho en Colombia",
+   "tipo": "evento",
+   "obras": [
+    {
+     "titulo": "Desde acá veo la tormenta",
+     "pais": "Colombia",
+     "duracion_min": 11,
+     "seccion": "Competencia Hecho en Colombia",
+     "tipo": "corto",
+     "_src": {
+      "url": "https://www.alestfestival.com/programa2026/desde-acá-veo-la-tormenta",
+      "date": "2026-11-16"
+     },
+     "director": "Juan Felipe Restrepo"
+    },
+    {
+     "titulo": "Junio 25. Andréi Tarkovski, visita a su tumba",
+     "pais": "Colombia",
+     "duracion_min": 5,
+     "seccion": "Competencia Hecho en Colombia",
+     "tipo": "corto",
+     "_src": {
+      "url": "https://www.alestfestival.com/programa2026/junio-25.-andréi-tarkovski-visita-a-su-tumba",
+      "date": "2026-11-16"
+     },
+     "director": "Juan Camilo Moreno"
+    },
+    {
+     "titulo": "Lejanía",
+     "pais": "Colombia",
+     "duracion_min": 17,
+     "seccion": "Competencia Hecho en Colombia",
+     "tipo": "corto",
+     "_src": {
+      "url": "https://www.alestfestival.com/programa2026/lejanía",
+      "date": "2026-11-16"
+     },
+     "director": "Daniel Velásquez Patarroyo"
+    },
+    {
+     "titulo": "Liminal",
+     "pais": "Colombia",
+     "duracion_min": 16,
+     "seccion": "Competencia Hecho en Colombia",
+     "tipo": "corto",
+     "_src": {
+      "url": "https://www.alestfestival.com/programa2026/liminal",
+      "date": "2026-11-16"
+     },
+     "director": "Gabriella Castelblanco"
+    },
+    {
+     "titulo": "Refracción",
+     "pais": "Colombia",
+     "duracion_min": 11,
+     "seccion": "Competencia Hecho en Colombia",
+     "tipo": "corto",
+     "_src": {
+      "url": "https://www.alestfestival.com/programa2026/refracción",
+      "date": "2026-11-16"
+     },
+     "director": "Isabella Palacio Mesa"
+    },
+    {
+     "titulo": "Sol de niebla",
+     "pais": "Colombia",
+     "duracion_min": 6,
+     "seccion": "Competencia Hecho en Colombia",
+     "tipo": "corto",
+     "_src": {
+      "url": "https://www.alestfestival.com/programa2026/sol-de-niebla",
+      "date": "2026-11-16"
+     },
+     "director": "María José Ibarra, Florentino Vargas"
+    }
+   ],
+   "duracion_min": 66,
+   "has_qa": true,
+   "qa_type": "team"
+  },
+  {
+   "dia": "2026-11-28",
+   "hora": "16:00",
+   "sede": "Cinemateca de Bogotá",
+   "acceso": "Con boleta",
+   "_src": {
+    "url": "https://www.alestfestival.com/programa2026/nadie-a-la-vista",
+    "date": "2026-11-16",
+    "tipo": "festival-web"
+   },
+   "sala": "Sala 2",
+   "titulo": "Nadie a la vista",
+   "seccion": "Competencia Vidas Cruzadas",
+   "director": "Kote Kalandadze",
+   "pais": "Georgia",
+   "anio": 2025,
+   "duracion_min": 75
+  },
+  {
    "dia": "2026-11-28",
    "hora": "16:30",
    "sede": "Cinemateca de Bogotá",
-   "seccion": "Al Este en la Cinemateca",
    "acceso": "Con boleta",
    "_src": {
-    "url": "https://www.instagram.com/p/DfsHqtAlpmC/",
-    "date": "2026-11-12",
-    "tipo": "festival-ig",
-    "lamina": "02.jpg"
+    "url": "https://www.alestfestival.com/programa2026/todas-las-canciones-del-mundo",
+    "date": "2026-11-16",
+    "tipo": "festival-web"
    },
+   "sala": "Sala Capital",
+   "titulo": "Todas las canciones del mundo",
+   "seccion": "Competencia Al Este",
    "director": "Santiago Flórez Rincón",
    "pais": "Colombia",
    "anio": 2026,
-   "duracion_min": 85
+   "duracion_min": 85,
+   "has_qa": true,
+   "qa_type": "team"
+  },
+  {
+   "dia": "2026-11-28",
+   "hora": "17:00",
+   "sede": "Cinemateca de Bogotá",
+   "acceso": "Con boleta",
+   "_src": {
+    "url": "https://www.alestfestival.com/programa2026/laguna",
+    "date": "2026-11-16",
+    "tipo": "festival-web"
+   },
+   "sala": "Sala 3",
+   "titulo": "Laguna",
+   "seccion": "Al Este Especial",
+   "director": "Šarūnas Bartas",
+   "pais": "Lituania, Francia",
+   "anio": 2025,
+   "duracion_min": 102,
+   "has_qa": true,
+   "qa_type": "team"
+  },
+  {
+   "dia": "2026-11-28",
+   "hora": "18:00",
+   "sede": "Cinemateca de Bogotá",
+   "acceso": "Con boleta",
+   "_src": {
+    "url": "https://www.alestfestival.com/programa2026/bright-future",
+    "date": "2026-11-16",
+    "tipo": "festival-web"
+   },
+   "sala": "Sala 2",
+   "titulo": "Bright Future",
+   "seccion": "Far East",
+   "director": "Kiyoshi Kurosawa",
+   "pais": "Japón",
+   "anio": 2003,
+   "duracion_min": 92
+  },
+  {
+   "dia": "2026-11-28",
+   "hora": "19:00",
+   "sede": "Cinemateca de Bogotá",
+   "acceso": "Con boleta",
+   "_src": {
+    "url": "https://www.alestfestival.com/programa2026/the-megalomaniacs",
+    "date": "2026-11-16",
+    "tipo": "festival-web"
+   },
+   "sala": "Sala Capital",
+   "titulo": "The Megalomaniacs",
+   "seccion": "Al Este Especial",
+   "director": "Spiros Stathoulopoulos",
+   "pais": "Grecia, Chipre, Colombia",
+   "anio": 2025,
+   "duracion_min": 105,
+   "has_qa": true,
+   "qa_type": "team"
+  },
+  {
+   "dia": "2026-11-28",
+   "hora": "20:00",
+   "sede": "Cinemateca de Bogotá",
+   "acceso": "Con boleta",
+   "_src": {
+    "url": "https://www.alestfestival.com/programa2026/pulse",
+    "date": "2026-11-16",
+    "tipo": "festival-web"
+   },
+   "sala": "Sala 2",
+   "titulo": "Pulse",
+   "seccion": "Far East",
+   "director": "Kiyoshi Kurosawa",
+   "pais": "Japón",
+   "anio": 2001,
+   "duracion_min": 118
+  },
+  {
+   "dia": "2026-11-29",
+   "hora": "14:00",
+   "sede": "Cinemateca Fontanar del Río",
+   "acceso": "Con boleta",
+   "_src": {
+    "url": "https://www.alestfestival.com/programa2026/cortometrajes-de-altura",
+    "date": "2026-11-16",
+    "tipo": "festival-web"
+   },
+   "titulo": "Cortometrajes de Altura",
+   "seccion": "Kluk - Cine familiar",
+   "pais": "Bolivia",
+   "anio": 2008,
+   "duracion_min": 41
+  },
+  {
+   "dia": "2026-11-29",
+   "hora": "14:00",
+   "sede": "Cinemateca de Bogotá",
+   "acceso": "Con boleta",
+   "_src": {
+    "url": "https://www.alestfestival.com/programa2026",
+    "date": "2026-11-16",
+    "tipo": "festival-web"
+   },
+   "sala": "Sala 3",
+   "titulo": "Hecho en Colombia – Bloque 2",
+   "seccion": "Competencia Hecho en Colombia",
+   "tipo": "evento",
+   "obras": [
+    {
+     "titulo": "Las piedras del río",
+     "pais": "Colombia",
+     "duracion_min": 16,
+     "seccion": "Competencia Hecho en Colombia",
+     "tipo": "corto",
+     "_src": {
+      "url": "https://www.alestfestival.com/programa2026/las-piedras-del-río",
+      "date": "2026-11-16"
+     },
+     "director": "Edna Sierra"
+    },
+    {
+     "titulo": "Muchas, muchas gracias",
+     "pais": "Colombia",
+     "duracion_min": 20,
+     "seccion": "Competencia Hecho en Colombia",
+     "tipo": "corto",
+     "_src": {
+      "url": "https://www.alestfestival.com/programa2026/muchas-muchas-gracias",
+      "date": "2026-11-16"
+     },
+     "director": "Oiyi Kan"
+    },
+    {
+     "titulo": "Todo lo que pasará mañana",
+     "pais": "Colombia",
+     "duracion_min": 15,
+     "seccion": "Competencia Hecho en Colombia",
+     "tipo": "corto",
+     "_src": {
+      "url": "https://www.alestfestival.com/programa2026/todo-lo-que-pasará-mañana",
+      "date": "2026-11-16"
+     },
+     "director": "Santiago Calle García"
+    }
+   ],
+   "duracion_min": 51,
+   "has_qa": true,
+   "qa_type": "team"
+  },
+  {
+   "dia": "2026-11-29",
+   "hora": "16:30",
+   "sede": "Cinemateca de Bogotá",
+   "acceso": "Con boleta",
+   "_src": {
+    "url": "https://www.alestfestival.com/programa2026/la-ciudad-blanca",
+    "date": "2026-11-16",
+    "tipo": "festival-web"
+   },
+   "sala": "Sala 3",
+   "titulo": "La ciudad blanca",
+   "seccion": "Fokus: Las grietas del muro",
+   "director": "Alain Tanner",
+   "pais": "Suiza, Portugal",
+   "anio": 1983,
+   "duracion_min": 108
+  },
+  {
+   "dia": "2026-11-29",
+   "hora": "16:30",
+   "sede": "Cinemateca de Bogotá",
+   "acceso": "Con boleta",
+   "_src": {
+    "url": "https://www.alestfestival.com/programa2026/los-golfos",
+    "date": "2026-11-16",
+    "tipo": "festival-web"
+   },
+   "sala": "Sala Capital",
+   "titulo": "Los golfos",
+   "seccion": "Al Este Especial",
+   "director": "Carlos Saura",
+   "pais": "España",
+   "anio": 1960,
+   "duracion_min": 88
+  },
+  {
+   "dia": "2026-11-29",
+   "hora": "17:00",
+   "sede": "Cinemateca de Bogotá",
+   "acceso": "Con boleta",
+   "_src": {
+    "url": "https://www.alestfestival.com/programa2026/license-to-live",
+    "date": "2026-11-16",
+    "tipo": "festival-web"
+   },
+   "sala": "Sala 2",
+   "titulo": "License to Live",
+   "seccion": "Far East",
+   "director": "Kiyoshi Kurosawa",
+   "pais": "Japón",
+   "anio": 1998,
+   "duracion_min": 109,
+   "has_qa": true
+  },
+  {
+   "dia": "2026-11-29",
+   "hora": "19:00",
+   "sede": "Cinemateca de Bogotá",
+   "acceso": "Con boleta",
+   "_src": {
+    "url": "https://www.alestfestival.com/programa2026/retorno-antes-de-las-3-p.-m.",
+    "date": "2026-11-16",
+    "tipo": "festival-web"
+   },
+   "sala": "Sala 2",
+   "titulo": "Retorno antes de las 3 p. m.",
+   "seccion": "Clausura",
+   "director": "Gaël Lepingle",
+   "pais": "Francia",
+   "anio": 2026,
+   "duracion_min": 74,
+   "event_kind": "clausura"
+  },
+  {
+   "dia": "2026-11-29",
+   "hora": "19:00",
+   "sede": "Cinemateca de Bogotá",
+   "acceso": "Con boleta",
+   "_src": {
+    "url": "https://www.alestfestival.com/programa2026/la-última-ronda-en-venecia",
+    "date": "2026-11-16",
+    "tipo": "festival-web"
+   },
+   "sala": "Sala Capital",
+   "titulo": "La última ronda en Venecia",
+   "seccion": "Al Este Especial",
+   "director": "Francesco Sossai",
+   "pais": "Italia",
+   "anio": 2025
   }
  ]
 }

@@ -1,0 +1,17 @@
+{
+ "_provenance": {
+  "fuente": "afiches oficiales de la web del festival (programa2026), mirados uno por uno",
+  "capturado": "2026-11-16",
+  "regla": "solo donde TMDB y lo ya publicado no tienen afiche; registrados en aleste-2026-altas.json (--preparar)"
+ },
+ "afiches": {
+  "Desde acá veo la tormenta": {
+   "archivo": "assets/aleste-2026/desde-aca-veo-la-tormenta.jpg",
+   "fuente": "afiche oficial de la ficha del festival (https://www.alestfestival.com/programa2026/desde-ac%C3%A1-veo-la-tormenta), 1080x1350, estirado a 2:3 sin recorte; más grande que el de SiembraFest (500x750)"
+  },
+  "Las piedras del río": {
+   "archivo": "assets/aleste-2026/las-piedras-del-rio.jpg",
+   "fuente": "afiche oficial de la ficha del festival (https://www.alestfestival.com/programa2026/las-piedras-del-r%C3%ADo), 3175x4490; más grande que el de Cortos Cali (780x1170)"
+  }
+ }
+}
