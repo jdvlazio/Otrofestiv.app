@@ -1,0 +1,27 @@
+{
+ "_provenance": {
+  "fuente": "pipeline/fuentes_descubrir.py",
+  "capturado": "2026-11-16T13:43",
+  "paginas_leidas": 44,
+  "errores": [
+   "https://cineparalapaz.com/wp-admin/admin-ajax.php: HTTP Error 400: Bad Request",
+   "https://cineparalapaz.com/xmlrpc.php: HTTP Error 405: Method Not Allowed",
+   "https://cineparalapaz.com/wp-content/themes/Divi: HTTP Error 500: Internal Server Error"
+  ]
+ },
+ "raices": {
+  "web": "https://cineparalapaz.com",
+  "bio": "https://www.instagram.com/cineparalapaz/"
+ },
+ "items": {
+  "https://docs.google.com/forms/d/e/1FAIpQLSfNdZT-6gGqhm-S7Pgpn8pbfQeQZqnTnE_Q26LRO8XjXlDdug/viewform": {
+   "tipo": "formulario",
+   "visto_en": "https://cineparalapaz.com/inscripciones/",
+   "primera_vez": "2026-11-16T13:41",
+   "ultima_vez": "2026-11-16T13:43",
+   "estado": "descartada",
+   "_por_que": "formulario de la página /inscripciones/ (convocatoria de obras), no es programación",
+   "revisado": "2026-11-16T13:43"
+  }
+ }
+}

@@ -996,6 +996,27 @@ export const FESTIVAL_CONFIG={
     prioLimit:5,
     films:null,posters:null,lbSlugs:{}
   },
+  'cineparalapaz2026': {
+    // EL NOMBRE es el del festival (@cineparalapaz); la edición va en fullName.
+    name:'Cine para la Paz',displayName:'Cine para la Paz',
+    fullName:'IV Festival Cine para la Paz',shortName:'CINE PARA LA PAZ',
+    city:'Bogotá',country:'CO',
+    dates:'18–21 NOV',dates_en:'NOV 18–21',year:2026,timezoneOffset:'-05:00',
+    // la portada del carrusel de programación (p/DfzeOb2lq6q, 16 nov, 2160×2700):
+    // no hay otro afiche de la edición; estirada a 400×600, sin recorte
+    keyArt:'/assets/keyart/cineparalapaz2026.jpg',
+    // el subtítulo expande el nombre: el sello de la portada
+    tagline:'Festival de Cine por la Memoria Histórica y Cultura de Paz',
+    instagram:'cineparalapaz', storageKey:'cineparalapaz2026_',festivalStartStr:'2026-11-18T00:00:00',festivalEndStr:'2026-11-21T23:59:00',
+    festivalDates:{'2026-11-18':'2026-11-18','2026-11-19':'2026-11-19','2026-11-20':'2026-11-20','2026-11-21':'2026-11-21'},
+    days:[{k:'2026-11-18',d:18,lbl:'MIÉ'},{k:'2026-11-19',d:19,lbl:'JUE'},{k:'2026-11-20',d:20,lbl:'VIE'},{k:'2026-11-21',d:21,lbl:'SÁB'}],
+    dayKeys:['2026-11-18','2026-11-19','2026-11-20','2026-11-21'],
+    dayShort:{'2026-11-18':'MIÉ 18','2026-11-19':'JUE 19','2026-11-20':'VIE 20','2026-11-21':'SÁB 21'},
+    dayShort_en:{'2026-11-18':'WED 18','2026-11-19':'THU 19','2026-11-20':'FRI 20','2026-11-21':'SAT 21'},
+    dayLong:{'2026-11-18':'Miércoles 18 de noviembre','2026-11-19':'Jueves 19 de noviembre','2026-11-20':'Viernes 20 de noviembre','2026-11-21':'Sábado 21 de noviembre'},
+    prioLimit:3,
+    films:null,posters:null,lbSlugs:{}
+  },
   'cinetoro2026': {
     // EL NOMBRE es el del festival (cinetoro.org); la edición va en fullName.
     // Días oficiales 10–15 NOV (Roldanillo 10, Toro 11–15). Lo de otras ciudades

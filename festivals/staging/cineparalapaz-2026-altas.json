@@ -1,0 +1,962 @@
+{
+ "obras": {
+  "Cajamarca: El viaje del desengaño": {
+   "titulo": "Cajamarca: El viaje del desengaño",
+   "director": "Ernesto Ciurlizza",
+   "fuentes": {
+    "tmdb_titulo": {
+     "url": "https://www.themoviedb.org/search/movie?query=Cajamarca%3A%20El%20viaje%20del%20desenga%C3%B1o",
+     "fecha": "2026-11-16",
+     "resultado": "«Cajamarca: El viaje del desengaño»: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_alternos": {
+     "url": "https://www.themoviedb.org/search/movie?query=cajamarca%20el%20viaje%20del%20desengano",
+     "fecha": "2026-11-16",
+     "resultado": "«cajamarca el viaje del desengano»: 0 resultado(s); «Cajamarca»: 6 resultado(s) → ninguna verifica"
+    },
+    "tmdb_director": {
+     "url": "https://www.themoviedb.org/search/person?query=Ernesto%20Ciurlizza",
+     "fecha": "2026-11-16",
+     "resultado": "Ernesto Ciurlizza: sin perfil en TMDB"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/find/?q=Cajamarca%20viaje%20del%20desengano",
+     "fecha": "2026-11-16",
+     "resultado": "tt8386644 «Cajamarca: El Viaje del Desengaño» (2017, corto, dir. Tato Ciurlizza) con póster oficial"
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/Cajamarca%20desengano/",
+     "fecha": "2026-11-16",
+     "resultado": "sin resultados"
+    },
+    "pagina_del_festival": {
+     "url": "https://cineparalapaz.com/",
+     "fecha": "2026-11-16",
+     "resultado": "la web no tiene páginas por obra de 2026 (home: carrusel de películas de ediciones anteriores, proyectos, inscripciones, blog); en el IG @cineparalapaz (carrusel Dfk4smulKBB) la obra solo está en tarjetas del festival con fotograma, no afiche"
+    },
+    "festivales_previos": {
+     "url": "https://www.bing.com/search?q=%22Cajamarca%3A%20El%20viaje%20del%20desenga%C3%B1o%22",
+     "fecha": "2026-11-16",
+     "resultado": "FICNOVA (festivalcinenoviolencia.org/cajamarca-el-viaje-del-desengano/, póster), Rotten Tomatoes, FilmAffinity, BibloRed/Cinencasa"
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.bing.com/images/search?q=%22Cajamarca%20El%20viaje%20del%20desenga%C3%B1o%22%20afiche",
+     "fecha": "2026-11-16",
+     "resultado": "afiche oficial en IMDb (1000x1601, créditos «Dirección: Ernesto Ciurlizza», Universidad de La Sabana) y en FICNOVA"
+    },
+    "organismo_nacional": {
+     "url": "https://www.proimagenescolombia.com/secciones/buscador/buscador_general_resultado.php?buscar=Cajamarca+viaje+desengano",
+     "fecha": "2026-11-16",
+     "resultado": "sin la obra (solo otras con «viaje»)"
+    },
+    "web_director_o_productora": {
+     "na": true,
+     "por_que": "productora Universidad de La Sabana: su buscador (unisabana.edu.co/buscar) da 404 y Bing site:unisabana.edu.co con el título da 0 resultados; el director no tiene web propia",
+     "fecha": "2026-11-16"
+    },
+    "plataformas_festivales": {
+     "na": true,
+     "por_que": "no tienen buscador público de obras: Short Film Depot pide sesión, Festhome no publica catálogo, FilmFreeway no busca proyectos; se buscó «<título> filmfreeway» en la web sin perfil (FilmFreeway: «Private Project», sin búsqueda pública)",
+     "fecha": "2026-11-16"
+    },
+    "distribuidora_o_agencia": {
+     "na": true,
+     "por_que": "no aparece distribuidora ni agencia en ninguna búsqueda (Bing, IMDb, Letterboxd); obra independiente cuyo único contacto visible es el/la realizador/a o la organización productora",
+     "fecha": "2026-11-16"
+    }
+   },
+   "afiche": {
+    "url": "https://m.media-amazon.com/images/M/MV5BOGMwZmRhMTUtNjAyZi00MTg3LWFiNDQtOWQxYjRmNmUzNGFhXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+    "fuente": "póster de IMDb tt8386644 (Cajamarca: El Viaje del Desengaño, 2017, dir. Tato Ciurlizza)",
+    "archivo": "fuentes/cineparalapaz-2026/altas/cajamarca-el-viaje-del-desengano.jpg",
+    "px": [
+     1000,
+     1500
+    ],
+    "ratio": 0.6667,
+    "recorte": {
+     "de": [
+      1000,
+      1601
+     ],
+     "caja": [
+      0,
+      50,
+      1000,
+      1550
+     ],
+     "centrado": true,
+     "objetivo": 0.6667
+    },
+    "veredicto_criterio": null,
+    "fecha": "2026-11-16"
+   },
+   "estado": "alta_posible"
+  },
+  "De la misma Tierra": {
+   "titulo": "De la misma Tierra",
+   "director": "Diego Pachón Castro",
+   "fuentes": {
+    "tmdb_titulo": {
+     "url": "https://www.themoviedb.org/search/movie?query=De%20la%20misma%20Tierra",
+     "fecha": "2026-11-16",
+     "resultado": "«De la misma Tierra»: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_alternos": {
+     "url": "https://www.themoviedb.org/search/movie?query=de%20la%20misma%20tierra",
+     "fecha": "2026-11-16",
+     "resultado": "«de la misma tierra»: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_director": {
+     "url": "https://www.themoviedb.org/search/person?query=Diego%20Pach%C3%B3n%20Castro",
+     "fecha": "2026-11-16",
+     "resultado": "Diego Pachón Castro: sin perfil en TMDB"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/find/?q=De%20la%20misma%20Tierra",
+     "fecha": "2026-11-16",
+     "resultado": "sin la obra (solo títulos ajenos)"
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/De%20la%20misma%20Tierra/",
+     "fecha": "2026-11-16",
+     "resultado": "sin la obra"
+    },
+    "pagina_del_festival": {
+     "url": "https://cineparalapaz.com/",
+     "fecha": "2026-11-16",
+     "resultado": "la web no tiene páginas por obra de 2026 (home: carrusel de películas de ediciones anteriores, proyectos, inscripciones, blog); en el IG @cineparalapaz (carrusel Dfk4smulKBB) la obra solo está en tarjetas del festival con fotograma, no afiche"
+    },
+    "festivales_previos": {
+     "url": "https://www.bing.com/search?q=%22De%20la%20misma%20Tierra%22%20documental",
+     "fecha": "2026-11-16",
+     "resultado": "solo homónimos ajenos (RTN Neuquén 2013, «Sobre la misma tierra»); nada de Diego Pachón Castro"
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.bing.com/images/search?q=%22De%20la%20misma%20Tierra%22%20documental%20afiche",
+     "fecha": "2026-11-16",
+     "resultado": "solo afiches del Día de la Tierra y obras ajenas"
+    },
+    "organismo_nacional": {
+     "url": "https://www.proimagenescolombia.com/secciones/buscador/buscador_general_resultado.php?buscar=De+la+misma+Tierra",
+     "fecha": "2026-11-16",
+     "resultado": "sin la obra"
+    },
+    "web_director_o_productora": {
+     "url": "https://www.bing.com/search?q=%22Diego%20Pach%C3%B3n%20Castro%22%20%22De%20la%20misma%20Tierra%22",
+     "fecha": "2026-11-16",
+     "resultado": "Bing: 0 resultados; sin web del director"
+    },
+    "plataformas_festivales": {
+     "na": true,
+     "por_que": "no tienen buscador público de obras: Short Film Depot pide sesión, Festhome no publica catálogo, FilmFreeway no busca proyectos; se buscó «<título> filmfreeway» en la web sin perfil (sin resultados de la obra en plataformas)",
+     "fecha": "2026-11-16"
+    },
+    "distribuidora_o_agencia": {
+     "na": true,
+     "por_que": "no aparece distribuidora ni agencia en ninguna búsqueda (Bing, IMDb, Letterboxd); obra independiente cuyo único contacto visible es el/la realizador/a o la organización productora",
+     "fecha": "2026-11-16"
+    }
+   },
+   "estado": "sin_afiche",
+   "por_que_sin_afiche": "investigación 16 nov: ni IMDb, Letterboxd, Bing (web e imágenes), Proimágenes ni la web del festival tienen la obra ni un afiche; la tarjeta del festival es un fotograma. Pedir el afiche al festival"
+  },
+  "Hecho a mano": {
+   "titulo": "Hecho a mano",
+   "director": "Carolina Miy",
+   "fuentes": {
+    "tmdb_titulo": {
+     "url": "https://www.themoviedb.org/search/movie?query=Hecho%20a%20mano",
+     "fecha": "2026-11-16",
+     "resultado": "«Hecho a mano»: 1 resultado(s) → ninguna verifica"
+    },
+    "tmdb_alternos": {
+     "url": "https://www.themoviedb.org/search/movie?query=hecho%20a%20mano",
+     "fecha": "2026-11-16",
+     "resultado": "«hecho a mano»: 1 resultado(s) → ninguna verifica"
+    },
+    "tmdb_director": {
+     "url": "https://www.themoviedb.org/person/4009741",
+     "fecha": "2026-11-16",
+     "resultado": "Carolina Miy (4009741): dirige 0"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/find/?q=Hecho%20a%20mano%20Carolina%20Miy",
+     "fecha": "2026-11-16",
+     "resultado": "sin la obra (homónimos 2002, 2010, 2011); Carolina Miy sin perfil"
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/Hecho%20a%20mano/",
+     "fecha": "2026-11-16",
+     "resultado": "solo «Hecho a mano» 2021 de Julia Solomonoff (ajena)"
+    },
+    "pagina_del_festival": {
+     "url": "https://cineparalapaz.com/",
+     "fecha": "2026-11-16",
+     "resultado": "la web no tiene páginas por obra de 2026 (home: carrusel de películas de ediciones anteriores, proyectos, inscripciones, blog); en el IG @cineparalapaz (carrusel Dfk4smulKBB) la obra solo está en tarjetas del festival con fotograma, no afiche"
+    },
+    "festivales_previos": {
+     "url": "https://www.bing.com/search?q=%22Hecho%20a%20mano%22%20Miy%20mardelplatafilmfest",
+     "fecha": "2026-11-16",
+     "resultado": "41.º Festival de Mar del Plata 2026 (El Tribuno de Jujuy, Enlace Cultura Jujuy, Las 24 horas de Jujuy); en la web del festival no se halló ficha (/41/es/pelicula/hecho-a-mano → 404)"
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.bing.com/images/search?q=%22Hecho%20a%20mano%22%20Maimar%C3%A1%20documental",
+     "fecha": "2026-11-16",
+     "resultado": "solo fotos de Maimará; las notas de prensa traen fotos del mural y de la directora, sin afiche"
+    },
+    "organismo_nacional": {
+     "url": "https://www.incaa.gob.ar/?s=Hecho+a+mano",
+     "fecha": "2026-11-16",
+     "resultado": "buscador del INCAA: sin la obra (solo eventos del Cine Gaumont)"
+    },
+    "web_director_o_productora": {
+     "url": "https://www.youtube.com/watch?v=P85UyK8F-SQ",
+     "fecha": "2026-11-16",
+     "resultado": "video del rodaje: corto documental con Apoyo a Rodajes Locales 2025, dir. Carolina Miy; sin afiche"
+    },
+    "plataformas_festivales": {
+     "na": true,
+     "por_que": "no tienen buscador público de obras: Short Film Depot pide sesión, Festhome no publica catálogo, FilmFreeway no busca proyectos; se buscó «<título> filmfreeway» en la web sin perfil (sin resultados de la obra en plataformas)",
+     "fecha": "2026-11-16"
+    },
+    "distribuidora_o_agencia": {
+     "na": true,
+     "por_que": "no aparece distribuidora ni agencia en ninguna búsqueda (Bing, IMDb, Letterboxd); obra independiente cuyo único contacto visible es el/la realizador/a o la organización productora",
+     "fecha": "2026-11-16"
+    }
+   },
+   "estado": "sin_afiche",
+   "por_que_sin_afiche": "16 nov: la obra existe (Mar del Plata 2026, prensa jujeña) pero ninguna fuente publica afiche: solo fotos del mural y de la directora; ficha de Mar del Plata no hallada. Pedir el afiche a la directora/festival"
+  },
+  "Kinesis": {
+   "titulo": "Kinesis",
+   "director": "Yuliana Puentes",
+   "fuentes": {
+    "tmdb_titulo": {
+     "url": "https://www.themoviedb.org/search/movie?query=Kinesis",
+     "fecha": "2026-11-16",
+     "resultado": "«Kinesis»: 19 resultado(s) → ninguna verifica"
+    },
+    "tmdb_alternos": {
+     "url": "https://www.themoviedb.org/search/movie?query=kinesis",
+     "fecha": "2026-11-16",
+     "resultado": "«kinesis»: 19 resultado(s) → ninguna verifica"
+    },
+    "tmdb_director": {
+     "url": "https://www.themoviedb.org/search/person?query=Yuliana%20Puentes",
+     "fecha": "2026-11-16",
+     "resultado": "Yuliana Puentes: sin perfil en TMDB"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/find/?q=Kinesis%20Yuliana%20Puentes",
+     "fecha": "2026-11-16",
+     "resultado": "0 resultados"
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/Kinesis/",
+     "fecha": "2026-11-16",
+     "resultado": "solo Kinesis 1975 (Schwartz), 2018 (Vesperalia) y de Sahar Nejati: ajenas"
+    },
+    "pagina_del_festival": {
+     "url": "https://cineparalapaz.com/",
+     "fecha": "2026-11-16",
+     "resultado": "la web no tiene páginas por obra de 2026 (home: carrusel de películas de ediciones anteriores, proyectos, inscripciones, blog); en el IG @cineparalapaz (carrusel Dfk4smulKBB) la obra solo está en tarjetas del festival con fotograma, no afiche"
+    },
+    "festivales_previos": {
+     "url": "https://www.bing.com/search?q=%22Kinesis%22%20documental%20%22Departamento%20Coreogr%C3%A1fico%22",
+     "fecha": "2026-11-16",
+     "resultado": "0 resultados"
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.bing.com/images/search?q=%22Kinesis%22%20%22Yuliana%20Puentes%22",
+     "fecha": "2026-11-16",
+     "resultado": "solo gimnasios/clínicas homónimas"
+    },
+    "organismo_nacional": {
+     "url": "https://www.proimagenescolombia.com/secciones/buscador/buscador_general_resultado.php?buscar=Kinesis",
+     "fecha": "2026-11-16",
+     "resultado": "sin resultados"
+    },
+    "web_director_o_productora": {
+     "url": "https://www.bing.com/search?q=%22Kinesis%22%20%22Yuliana%20Puentes%22",
+     "fecha": "2026-11-16",
+     "resultado": "sin web de la directora; solo homónimos (Kinesis Art Bogotá, clínicas)"
+    },
+    "plataformas_festivales": {
+     "na": true,
+     "por_que": "no tienen buscador público de obras: Short Film Depot pide sesión, Festhome no publica catálogo, FilmFreeway no busca proyectos; se buscó «<título> filmfreeway» en la web sin perfil (sin resultados de la obra en plataformas)",
+     "fecha": "2026-11-16"
+    },
+    "distribuidora_o_agencia": {
+     "na": true,
+     "por_que": "no aparece distribuidora ni agencia en ninguna búsqueda (Bing, IMDb, Letterboxd); obra independiente cuyo único contacto visible es el/la realizador/a o la organización productora",
+     "fecha": "2026-11-16"
+    }
+   },
+   "estado": "sin_afiche",
+   "por_que_sin_afiche": "investigación 16 nov: ni IMDb, Letterboxd, Bing (web e imágenes), Proimágenes ni la web del festival tienen la obra ni un afiche; la tarjeta del festival es un fotograma. Pedir el afiche al festival"
+  },
+  "LA": {
+   "titulo": "LA",
+   "director": "Tephy Piedrahita Avellaneda",
+   "fuentes": {
+    "tmdb_titulo": {
+     "url": "https://www.themoviedb.org/search/movie?query=LA",
+     "fecha": "2026-11-16",
+     "resultado": "«LA»: 20 resultado(s) → ninguna verifica"
+    },
+    "tmdb_alternos": {
+     "url": "https://www.themoviedb.org/search/movie?query=la",
+     "fecha": "2026-11-16",
+     "resultado": "«la»: 20 resultado(s) → ninguna verifica"
+    },
+    "tmdb_director": {
+     "url": "https://www.themoviedb.org/search/person?query=Tephy%20Piedrahita%20Avellaneda",
+     "fecha": "2026-11-16",
+     "resultado": "Tephy Piedrahita Avellaneda: sin perfil en TMDB"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/find/?q=Tephy%20Piedrahita",
+     "fecha": "2026-11-16",
+     "resultado": "sin perfil de Tephy Piedrahita ni la obra"
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/Piedrahita/",
+     "fecha": "2026-11-16",
+     "resultado": "sin la obra ni la directora"
+    },
+    "pagina_del_festival": {
+     "url": "https://cineparalapaz.com/",
+     "fecha": "2026-11-16",
+     "resultado": "la web no tiene páginas por obra de 2026 (home: carrusel de películas de ediciones anteriores, proyectos, inscripciones, blog); en el IG @cineparalapaz (carrusel Dfk4smulKBB) la obra solo está en tarjetas del festival con fotograma, no afiche"
+    },
+    "festivales_previos": {
+     "url": "https://www.bing.com/search?q=%22Tephy%20Piedrahita%22",
+     "fecha": "2026-11-16",
+     "resultado": "perfil FilmFreeway de Visual EQ, LinkedIn, Behance, ECCA; Cinando 2021 (pista del pre-onboarding)"
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.bing.com/images/search?q=%22Tephy%20Piedrahita%22",
+     "fecha": "2026-11-16",
+     "resultado": "Behance y ECCA; el afiche está en la web de la obra"
+    },
+    "organismo_nacional": {
+     "url": "https://www.proimagenescolombia.com/secciones/buscador/buscador_general_resultado.php?buscar=Piedrahita+Avellaneda",
+     "fecha": "2026-11-16",
+     "resultado": "sin resultados"
+    },
+    "web_director_o_productora": {
+     "url": "https://lapeliculamenstrual.com/",
+     "fecha": "2026-11-16",
+     "resultado": "web oficial de la obra: 60 min, documental ensayo, realización Tephy Piedrahita Avellaneda, Visual EQ, Colombia/Argentina; póster-LA.jpg 600x857 con título y créditos"
+    },
+    "plataformas_festivales": {
+     "url": "https://filmfreeway.com/visualeq",
+     "fecha": "2026-11-16",
+     "resultado": "perfil FilmFreeway de Visual EQ (Tephy Piedrahita); proyectos no listados públicamente"
+    },
+    "distribuidora_o_agencia": {
+     "na": true,
+     "por_que": "no aparece distribuidora ni agencia en ninguna búsqueda (Bing, IMDb, Letterboxd); obra independiente cuyo único contacto visible es el/la realizador/a o la organización productora",
+     "fecha": "2026-11-16"
+    }
+   },
+   "afiche": {
+    "url": "https://lapeliculamenstrual.com/poster-LA.jpg",
+    "fuente": "póster oficial en lapeliculamenstrual.com, web de la obra (Realización: Tephy Piedrahita Avellaneda, Visual EQ)",
+    "archivo": "fuentes/cineparalapaz-2026/altas/la.jpg",
+    "px": [
+     600,
+     857
+    ],
+    "ratio": 0.7001,
+    "recorte": null,
+    "veredicto_criterio": null,
+    "fecha": "2026-11-16"
+   },
+   "estado": "alta_posible"
+  },
+  "La coca: Buen vivir del pueblo Nasa": {
+   "titulo": "La coca: Buen vivir del pueblo Nasa",
+   "director": "Dubier Baicue, Ignacio Ramos, Sonica Cifuentes, Darinson Amaya",
+   "fuentes": {
+    "tmdb_titulo": {
+     "url": "https://www.themoviedb.org/search/movie?query=La%20coca%3A%20Buen%20vivir%20del%20pueblo%20Nasa",
+     "fecha": "2026-11-16",
+     "resultado": "«La coca: Buen vivir del pueblo Nasa»: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_alternos": {
+     "url": "https://www.themoviedb.org/search/movie?query=la%20coca%20buen%20vivir%20del%20pueblo%20nasa",
+     "fecha": "2026-11-16",
+     "resultado": "«la coca buen vivir del pueblo nasa»: 0 resultado(s); «La coca»: 20 resultado(s) → ninguna verifica"
+    },
+    "tmdb_director": {
+     "url": "https://www.themoviedb.org/search/person?query=Dubier%20Baicue https://www.themoviedb.org/person/4612174 https://www.themoviedb.org/person/6499721 https://www.themoviedb.org/person/6499723 https://www.themoviedb.org/search/person?query=Sonica%20Cifuentes https://www.themoviedb.org/search/person?query=Darinson%20Amaya",
+     "fecha": "2026-11-16",
+     "resultado": "Dubier Baicue: sin perfil en TMDB; Ignacio Ramos (4612174): dirige 0; Ignacio Ramos (6499721): dirige 0; Ignacio Ramos Samano (6499723): dirige 1; Sonica Cifuentes: sin perfil en TMDB; Darinson Amaya: sin perfil en TMDB"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/find/?q=La%20coca%20buen%20vivir%20pueblo%20Nasa",
+     "fecha": "2026-11-16",
+     "resultado": "0 resultados"
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/coca%20buen%20vivir%20nasa/",
+     "fecha": "2026-11-16",
+     "resultado": "0 resultados"
+    },
+    "pagina_del_festival": {
+     "url": "https://cineparalapaz.com/",
+     "fecha": "2026-11-16",
+     "resultado": "la web no tiene páginas por obra de 2026 (home: carrusel de películas de ediciones anteriores, proyectos, inscripciones, blog); en el IG @cineparalapaz (carrusel Dfk4smulKBB) la obra solo está en tarjetas del festival con fotograma, no afiche"
+    },
+    "festivales_previos": {
+     "url": "https://www.bing.com/search?q=%22La%20coca%22%20%22buen%20vivir%22%20%22pueblo%20Nasa%22%20documental",
+     "fecha": "2026-11-16",
+     "resultado": "YouTube (película y tráiler), Asociación Minga (dic 2024), reel IG; sin festivales previos"
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.bing.com/images/search?q=%22La%20coca%22%20%22buen%20vivir%22%20Nasa%20Kiwnas%20Cxhab",
+     "fecha": "2026-11-16",
+     "resultado": "foto horizontal 1280x640 de Asociación Minga y miniaturas de YouTube: ninguna es afiche"
+    },
+    "organismo_nacional": {
+     "url": "https://www.proimagenescolombia.com/secciones/buscador/buscador_general_resultado.php?buscar=coca+buen+vivir+Nasa",
+     "fecha": "2026-11-16",
+     "resultado": "sin la obra"
+    },
+    "web_director_o_productora": {
+     "url": "https://asociacionminga.co/la-coca-buen-vivir-del-pueblo-nasa/",
+     "fecha": "2026-11-16",
+     "resultado": "página de la productora (Asociación Minga): solo foto de lanzamiento 1280x640, sin afiche"
+    },
+    "plataformas_festivales": {
+     "na": true,
+     "por_que": "no tienen buscador público de obras: Short Film Depot pide sesión, Festhome no publica catálogo, FilmFreeway no busca proyectos; se buscó «<título> filmfreeway» en la web sin perfil (sin resultados de la obra en plataformas)",
+     "fecha": "2026-11-16"
+    },
+    "distribuidora_o_agencia": {
+     "na": true,
+     "por_que": "no aparece distribuidora ni agencia en ninguna búsqueda (Bing, IMDb, Letterboxd); obra independiente cuyo único contacto visible es el/la realizador/a o la organización productora",
+     "fecha": "2026-11-16"
+    }
+   },
+   "estado": "sin_afiche",
+   "por_que_sin_afiche": "16 nov: la productora (Asociación Minga) solo publica una foto horizontal 1280x640 y el video en YouTube; ningún afiche en Bing Imágenes"
+  },
+  "LezAma. Vivir filmando": {
+   "titulo": "LezAma. Vivir filmando",
+   "director": "",
+   "fuentes": {
+    "tmdb_titulo": {
+     "url": "https://www.themoviedb.org/search/movie?query=LezAma.%20Vivir%20filmando",
+     "fecha": "2026-11-16",
+     "resultado": "«LezAma. Vivir filmando»: 1 resultado(s) → ninguna verifica"
+    },
+    "tmdb_alternos": {
+     "url": "https://www.themoviedb.org/search/movie?query=lezama%20vivir%20filmando",
+     "fecha": "2026-11-16",
+     "resultado": "«lezama vivir filmando»: 1 resultado(s) → ninguna verifica"
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/film/lez-ama-vivir-filmando/",
+     "fecha": "2026-11-16",
+     "resultado": "Lez-Ama: Vivir Filmando (2022), dir. Mónica Moya — la importada de TMDB 1049488"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/title/tt36577296/",
+     "fecha": "2026-11-16",
+     "resultado": "Lez-Ama. Vivir filmando (2020), tt36577296"
+    },
+    "web_director_o_productora": {
+     "url": "https://www.emmanueljaramillo.com/lez-ama-vivir-filmando",
+     "fecha": "2026-11-16",
+     "resultado": "página de la obra en la web de Emmanuel Jaramillo (productor general, como dice el festival)"
+    },
+    "tmdb_director": {
+     "url": "https://api.themoviedb.org/3/movie/1049488?append_to_response=credits",
+     "fecha": "2026-11-16",
+     "resultado": "el festival no da director; TMDB 1049488 lo acredita a Mónica Moya"
+    },
+    "pagina_del_festival": {
+     "url": "https://cineparalapaz.com/",
+     "fecha": "2026-11-16",
+     "resultado": "la web no tiene páginas por obra de 2026 (home: carrusel de películas de ediciones anteriores, proyectos, inscripciones, blog); en el IG @cineparalapaz (carrusel Dfk4smulKBB) la obra solo está en tarjetas del festival con fotograma, no afiche"
+    },
+    "festivales_previos": {
+     "url": "https://www.bing.com/search?q=%22Lez-Ama%22%20%22vivir%20filmando%22",
+     "fecha": "2026-11-16",
+     "resultado": "RTVCPlay, Señal Colombia, cronograma en cineproyecto.mincultura.gov.co, Moviefone"
+    },
+    "distribuidora_o_agencia": {
+     "url": "https://rtvcplay.co/peliculas-documentales/lez-ama-vivir-filmando",
+     "fecha": "2026-11-16",
+     "resultado": "emitida/distribuida por RTVC (RTVCPlay y Señal Colombia)"
+    },
+    "organismo_nacional": {
+     "url": "https://www.proimagenescolombia.com/secciones/buscador/buscador_general_resultado.php?buscar=Lez-Ama+vivir+filmando",
+     "fecha": "2026-11-16",
+     "resultado": "Proimágenes: sin la obra (solo títulos con «Lezo»)"
+    },
+    "plataformas_festivales": {
+     "na": true,
+     "por_que": "no tienen buscador público de obras: Short Film Depot pide sesión, Festhome no publica catálogo, FilmFreeway no busca proyectos; se buscó «<título> filmfreeway» en la web sin perfil (no buscado en plataformas)",
+     "fecha": "2026-11-16"
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.bing.com/images/search?q=%22Lez-Ama%22+vivir+filmando",
+     "fecha": "2026-11-16",
+     "resultado": "pósters en IMDb, TMDB (z0IjhbIrOT9lehYfBR8ZQEFvGt5) y cineclub Imagen Viajera"
+    }
+   },
+   "estado": "ficha_existente",
+   "tmdb_id": 1049488,
+   "evidencia": "«Lez-Ama: Vivir Filmando» (Colombia, 52 min), dir. Mónica Moya; IMDb tt36577296 y Letterboxd la enlazan; la web del productor Emmanuel Jaramillo (que la lámina nombra) la lista",
+   "respaldo": [
+    "imdb",
+    "letterboxd"
+   ],
+   "ficha_fecha": "2026-11-16"
+  },
+  "Mindalae – Viajero Kichwa": {
+   "titulo": "Mindalae – Viajero Kichwa",
+   "director": "Samia Maldonado",
+   "fuentes": {
+    "tmdb_titulo": {
+     "url": "https://www.themoviedb.org/search/movie?query=Mindalae%20%E2%80%93%20Viajero%20Kichwa",
+     "fecha": "2026-11-16",
+     "resultado": "«Mindalae – Viajero Kichwa»: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_alternos": {
+     "url": "https://www.themoviedb.org/search/movie?query=mindalae%20viajero%20kichwa",
+     "fecha": "2026-11-16",
+     "resultado": "«mindalae viajero kichwa»: 0 resultado(s); «Mindalae»: 0 resultado(s) → ninguna verifica"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/find/?q=Mindalae",
+     "fecha": "2026-11-16",
+     "resultado": "sin la obra (solo «The Magical Flight of the Music Mindalae», ajena)"
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/Mindalae/",
+     "fecha": "2026-11-16",
+     "resultado": "sin la obra"
+    },
+    "pagina_del_festival": {
+     "url": "https://cineparalapaz.com/",
+     "fecha": "2026-11-16",
+     "resultado": "la web no tiene páginas por obra de 2026 (home: carrusel de películas de ediciones anteriores, proyectos, inscripciones, blog); en el IG @cineparalapaz (carrusel Dfk4smulKBB) la obra solo está en tarjetas del festival con fotograma, no afiche"
+    },
+    "festivales_previos": {
+     "url": "https://www.bing.com/search?q=%22Mindalae%22%20Samia%20Maldonado",
+     "fecha": "2026-11-16",
+     "resultado": "Les Cinémas du Grütli (Ginebra: «Mindalae», Ecuador 2011, 76'), El Comercio («se verá en Europa»), Universidad de las Artes, ICT News, arqueo-ecuatoriana.ec (première en Francia)"
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.bing.com/images/search?q=Mindalae%20Samia%20Maldonado%20affiche",
+     "fecha": "2026-11-16",
+     "resultado": "Grütli tiene como «affiche» un fotograma horizontal 677x451 (tejedor), no afiche; resto: comercios homónimos y miniatura de tráiler"
+    },
+    "organismo_nacional": {
+     "url": "https://www.creatividad.gob.ec/?s=Mindalae",
+     "fecha": "2026-11-16",
+     "resultado": "buscador del Instituto de Fomento de las Artes, Innovación y Creatividades (Ecuador): ningún resultado"
+    },
+    "web_director_o_productora": {
+     "url": "https://www.uartes.edu.ec/sitio/en/blog/2019/10/24/en-interactos-samia-maldonado-dio-detalles-de-mindalae/",
+     "fecha": "2026-11-16",
+     "resultado": "nota abierta: documental producido por APAK sobre los Kichwa Otavalo 1905–2010; sin afiche"
+    },
+    "plataformas_festivales": {
+     "na": true,
+     "por_que": "no tienen buscador público de obras: Short Film Depot pide sesión, Festhome no publica catálogo, FilmFreeway no busca proyectos; se buscó «<título> filmfreeway» en la web sin perfil (sin resultados de la obra en plataformas)",
+     "fecha": "2026-11-16"
+    },
+    "distribuidora_o_agencia": {
+     "na": true,
+     "por_que": "no aparece distribuidora ni agencia en ninguna búsqueda (Bing, IMDb, Letterboxd); obra independiente cuyo único contacto visible es el/la realizador/a o la organización productora",
+     "fecha": "2026-11-16"
+    },
+    "tmdb_director": {
+     "url": "https://www.themoviedb.org/search/person?query=Samia%20Maldonado",
+     "fecha": "2026-11-16",
+     "resultado": "Samia Maldonado: sin perfil en TMDB"
+    }
+   },
+   "afiche": {
+    "url": "https://www.cinemas-du-grutli.ch/sites/default/grutli/films/affiche/-v3-ngvyaazrb4t99pybt285wwice9n8ukonetd2bjvgyswr8wqufzurdww3d3d-archive.jpeg",
+    "fuente": "afiche de «Mindalae» (Samia Maldonado, Ecuador 2011, 76') en la ficha de Les Cinémas du Grütli (Ginebra), original sin el estilo 'medium'",
+    "archivo": "fuentes/cineparalapaz-2026/altas/mindalae-viajero-kichwa.jpg",
+    "px": [
+     301,
+     451
+    ],
+    "ratio": 0.6674,
+    "recorte": {
+     "de": [
+      677,
+      451
+     ],
+     "caja": [
+      188,
+      0,
+      489,
+      451
+     ],
+     "centrado": true,
+     "objetivo": 0.6667
+    },
+    "veredicto_criterio": null,
+    "fecha": "2026-11-16"
+   },
+   "estado": "sin_afiche",
+   "por_que_sin_afiche": "16 nov: la única imagen marcada «affiche» (Les Cinémas du Grütli) es un fotograma horizontal 677x451, no afiche; sin ficha TMDB/IMDb/Letterboxd"
+  },
+  "Nueve jueves en Riachuelo": {
+   "titulo": "Nueve jueves en Riachuelo",
+   "director": "Nelson Silva",
+   "fuentes": {
+    "tmdb_titulo": {
+     "url": "https://www.themoviedb.org/search/movie?query=Nueve%20jueves%20en%20Riachuelo",
+     "fecha": "2026-11-16",
+     "resultado": "«Nueve jueves en Riachuelo»: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_alternos": {
+     "url": "https://www.themoviedb.org/search/movie?query=nueve%20jueves%20en%20riachuelo",
+     "fecha": "2026-11-16",
+     "resultado": "«nueve jueves en riachuelo»: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_director": {
+     "url": "https://www.themoviedb.org/person/2991788 https://www.themoviedb.org/person/3568743 https://www.themoviedb.org/person/3568734",
+     "fecha": "2026-11-16",
+     "resultado": "Nelson Silva (2991788): dirige 1; Nelson Silva (3568743): dirige 0; Nelson Silva (3568734): dirige 0"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/find/?q=Nueve%20jueves%20en%20Riachuelo",
+     "fecha": "2026-11-16",
+     "resultado": "0 resultados"
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/Nueve%20jueves%20Riachuelo/",
+     "fecha": "2026-11-16",
+     "resultado": "0 resultados"
+    },
+    "pagina_del_festival": {
+     "url": "https://cineparalapaz.com/",
+     "fecha": "2026-11-16",
+     "resultado": "la web no tiene páginas por obra de 2026 (home: carrusel de películas de ediciones anteriores, proyectos, inscripciones, blog); en el IG @cineparalapaz (carrusel Dfk4smulKBB) la obra solo está en tarjetas del festival con fotograma, no afiche"
+    },
+    "festivales_previos": {
+     "url": "https://www.bing.com/search?q=%22Nueve%20jueves%20en%20Riachuelo%22",
+     "fecha": "2026-11-16",
+     "resultado": "solo la presentación en Libro Total Bucaramanga (sep 2026), FB e IG"
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.bing.com/images/search?q=%22Nueve%20jueves%22%20Riachuelo%20Velandia",
+     "fecha": "2026-11-16",
+     "resultado": "nada de la obra"
+    },
+    "organismo_nacional": {
+     "url": "https://www.proimagenescolombia.com/secciones/buscador/buscador_general_resultado.php?buscar=Nueve+jueves+Riachuelo",
+     "fecha": "2026-11-16",
+     "resultado": "sin la obra"
+    },
+    "web_director_o_productora": {
+     "na": true,
+     "por_que": "no existe web/canal identificable del director Nelson Silva: Bing solo da homónimos (cantante paraguayo, etc.); la obra solo aparece en posts de Libro Total",
+     "fecha": "2026-11-16"
+    },
+    "plataformas_festivales": {
+     "na": true,
+     "por_que": "no tienen buscador público de obras: Short Film Depot pide sesión, Festhome no publica catálogo, FilmFreeway no busca proyectos; se buscó «<título> filmfreeway» en la web sin perfil (sin resultados de la obra en plataformas)",
+     "fecha": "2026-11-16"
+    },
+    "distribuidora_o_agencia": {
+     "na": true,
+     "por_que": "no aparece distribuidora ni agencia en ninguna búsqueda (Bing, IMDb, Letterboxd); obra independiente cuyo único contacto visible es el/la realizador/a o la organización productora",
+     "fecha": "2026-11-16"
+    }
+   },
+   "estado": "sin_afiche",
+   "por_que_sin_afiche": "16 nov: solo aparece la presentación en Libro Total Bucaramanga (FB/IG); ningún afiche en Bing Imágenes; IG no revisado sin sesión"
+  },
+  "Paseando Te Cuento": {
+   "titulo": "Paseando Te Cuento",
+   "director": "Diego Alejandro Camargo Ardila",
+   "fuentes": {
+    "tmdb_titulo": {
+     "url": "https://www.themoviedb.org/search/movie?query=Paseando%20Te%20Cuento",
+     "fecha": "2026-11-16",
+     "resultado": "«Paseando Te Cuento»: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_alternos": {
+     "url": "https://www.themoviedb.org/search/movie?query=paseando%20te%20cuento",
+     "fecha": "2026-11-16",
+     "resultado": "«paseando te cuento»: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_director": {
+     "url": "https://www.themoviedb.org/search/person?query=Diego%20Alejandro%20Camargo%20Ardila",
+     "fecha": "2026-11-16",
+     "resultado": "Diego Alejandro Camargo Ardila: sin perfil en TMDB"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/find/?q=Paseando%20te%20cuento",
+     "fecha": "2026-11-16",
+     "resultado": "sin la obra (solo episodios de pódcast)"
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/Paseando%20te%20cuento/",
+     "fecha": "2026-11-16",
+     "resultado": "0 resultados"
+    },
+    "pagina_del_festival": {
+     "url": "https://cineparalapaz.com/",
+     "fecha": "2026-11-16",
+     "resultado": "la web no tiene páginas por obra de 2026 (home: carrusel de películas de ediciones anteriores, proyectos, inscripciones, blog); en el IG @cineparalapaz (carrusel Dfk4smulKBB) la obra solo está en tarjetas del festival con fotograma, no afiche"
+    },
+    "festivales_previos": {
+     "url": "https://www.bing.com/search?q=%22Paseando%20te%20cuento%22%20Jairo%20L%C3%B3pez",
+     "fecha": "2026-11-16",
+     "resultado": "nada de la obra (resultados de toreo y fútbol)"
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.bing.com/images/search?q=%22Paseando%20te%20cuento%22%20documental",
+     "fecha": "2026-11-16",
+     "resultado": "nada de la obra"
+    },
+    "organismo_nacional": {
+     "url": "https://www.proimagenescolombia.com/secciones/buscador/buscador_general_resultado.php?buscar=Paseando+te+cuento",
+     "fecha": "2026-11-16",
+     "resultado": "sin la obra"
+    },
+    "web_director_o_productora": {
+     "url": "https://www.youtube.com/@diegoalejandrocamargoardil90/videos",
+     "fecha": "2026-11-16",
+     "resultado": "canal abierto: 2 videos (Mirador Piedra Blanca, Santa Marta); la obra no está"
+    },
+    "plataformas_festivales": {
+     "na": true,
+     "por_que": "no tienen buscador público de obras: Short Film Depot pide sesión, Festhome no publica catálogo, FilmFreeway no busca proyectos; se buscó «<título> filmfreeway» en la web sin perfil (sin resultados de la obra en plataformas)",
+     "fecha": "2026-11-16"
+    },
+    "distribuidora_o_agencia": {
+     "na": true,
+     "por_que": "no aparece distribuidora ni agencia en ninguna búsqueda (Bing, IMDb, Letterboxd); obra independiente cuyo único contacto visible es el/la realizador/a o la organización productora",
+     "fecha": "2026-11-16"
+    }
+   },
+   "estado": "sin_afiche",
+   "por_que_sin_afiche": "investigación 16 nov: ni IMDb, Letterboxd, Bing (web e imágenes), Proimágenes ni la web del festival tienen la obra ni un afiche; la tarjeta del festival es un fotograma. Pedir el afiche al festival"
+  },
+  "Un Milagro Cada Día": {
+   "titulo": "Un Milagro Cada Día",
+   "director": "Lorena Forero",
+   "fuentes": {
+    "tmdb_titulo": {
+     "url": "https://www.themoviedb.org/search/movie?query=Un%20Milagro%20Cada%20D%C3%ADa",
+     "fecha": "2026-11-16",
+     "resultado": "«Un Milagro Cada Día»: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_alternos": {
+     "url": "https://www.themoviedb.org/search/movie?query=un%20milagro%20cada%20dia",
+     "fecha": "2026-11-16",
+     "resultado": "«un milagro cada dia»: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_director": {
+     "url": "https://www.themoviedb.org/person/5811865",
+     "fecha": "2026-11-16",
+     "resultado": "Lorena Forero (5811865): dirige 1"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/find/?q=Un%20milagro%20cada%20dia",
+     "fecha": "2026-11-16",
+     "resultado": "solo tt1924432 (2008, dir. Jose Luis Escobar): ajena"
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/Un%20milagro%20cada%20dia/",
+     "fecha": "2026-11-16",
+     "resultado": "0 resultados"
+    },
+    "pagina_del_festival": {
+     "url": "https://cineparalapaz.com/",
+     "fecha": "2026-11-16",
+     "resultado": "la web no tiene páginas por obra de 2026 (home: carrusel de películas de ediciones anteriores, proyectos, inscripciones, blog); en el IG @cineparalapaz (carrusel Dfk4smulKBB) la obra solo está en tarjetas del festival con fotograma, no afiche"
+    },
+    "festivales_previos": {
+     "url": "https://www.bing.com/search?q=%22Un%20milagro%20cada%20d%C3%ADa%22%20%22Buen%20Pastor%22",
+     "fecha": "2026-11-16",
+     "resultado": "tráilers en YouTube (CnYDdlvOLbo, C9uGSxLlO0o), archive.org, reels IG; sin festivales"
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.bing.com/images/search?q=%22Un%20milagro%20cada%20d%C3%ADa%22%20Buen%20Pastor%20documental",
+     "fecha": "2026-11-16",
+     "resultado": "solo imágenes religiosas"
+    },
+    "organismo_nacional": {
+     "url": "https://www.proimagenescolombia.com/secciones/buscador/buscador_general_resultado.php?buscar=Un+milagro+cada+dia",
+     "fecha": "2026-11-16",
+     "resultado": "sin la obra"
+    },
+    "web_director_o_productora": {
+     "url": "https://www.youtube.com/watch?v=CnYDdlvOLbo",
+     "fecha": "2026-11-16",
+     "resultado": "tráiler oficial abierto (cárcel El Buen Pastor, Bogotá); sin afiche"
+    },
+    "plataformas_festivales": {
+     "na": true,
+     "por_que": "no tienen buscador público de obras: Short Film Depot pide sesión, Festhome no publica catálogo, FilmFreeway no busca proyectos; se buscó «<título> filmfreeway» en la web sin perfil (sin resultados de la obra en plataformas)",
+     "fecha": "2026-11-16"
+    },
+    "distribuidora_o_agencia": {
+     "na": true,
+     "por_que": "no aparece distribuidora ni agencia en ninguna búsqueda (Bing, IMDb, Letterboxd); obra independiente cuyo único contacto visible es el/la realizador/a o la organización productora",
+     "fecha": "2026-11-16"
+    }
+   },
+   "estado": "sin_afiche",
+   "por_que_sin_afiche": "16 nov: solo tráilers en YouTube y reels; ningún afiche en Bing Imágenes ni en la web del festival"
+  },
+  "Un berraco Partido": {
+   "titulo": "Un berraco Partido",
+   "director": "Andrea Ortiz Ardila",
+   "fuentes": {
+    "tmdb_titulo": {
+     "url": "https://www.themoviedb.org/search/movie?query=Un%20berraco%20Partido",
+     "fecha": "2026-11-16",
+     "resultado": "«Un berraco Partido»: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_alternos": {
+     "url": "https://www.themoviedb.org/search/movie?query=un%20berraco%20partido",
+     "fecha": "2026-11-16",
+     "resultado": "«un berraco partido»: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_director": {
+     "url": "https://www.themoviedb.org/search/person?query=Andrea%20Ortiz%20Ardila",
+     "fecha": "2026-11-16",
+     "resultado": "Andrea Ortiz Ardila: sin perfil en TMDB"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/find/?q=Un%20berraco%20partido",
+     "fecha": "2026-11-16",
+     "resultado": "0 resultados"
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/berraco%20partido/",
+     "fecha": "2026-11-16",
+     "resultado": "sin la obra"
+    },
+    "pagina_del_festival": {
+     "url": "https://cineparalapaz.com/",
+     "fecha": "2026-11-16",
+     "resultado": "la web no tiene páginas por obra de 2026 (home: carrusel de películas de ediciones anteriores, proyectos, inscripciones, blog); en el IG @cineparalapaz (carrusel Dfk4smulKBB) la obra solo está en tarjetas del festival con fotograma, no afiche"
+    },
+    "festivales_previos": {
+     "url": "https://www.bing.com/search?q=%22berraco%20partido%22%20Trigueros",
+     "fecha": "2026-11-16",
+     "resultado": "nada de la obra"
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.bing.com/images/search?q=%22Un%20berraco%20partido%22",
+     "fecha": "2026-11-16",
+     "resultado": "solo fútbol y deportes"
+    },
+    "organismo_nacional": {
+     "url": "https://www.proimagenescolombia.com/secciones/buscador/buscador_general_resultado.php?buscar=berraco+partido",
+     "fecha": "2026-11-16",
+     "resultado": "sin resultados"
+    },
+    "web_director_o_productora": {
+     "url": "https://www.bing.com/search?q=%22Andrea%20Ortiz%20Ardila%22",
+     "fecha": "2026-11-16",
+     "resultado": "solo LinkedIn/IG de homónimas; sin web de la directora"
+    },
+    "plataformas_festivales": {
+     "na": true,
+     "por_que": "no tienen buscador público de obras: Short Film Depot pide sesión, Festhome no publica catálogo, FilmFreeway no busca proyectos; se buscó «<título> filmfreeway» en la web sin perfil (sin resultados de la obra en plataformas)",
+     "fecha": "2026-11-16"
+    },
+    "distribuidora_o_agencia": {
+     "na": true,
+     "por_que": "no aparece distribuidora ni agencia en ninguna búsqueda (Bing, IMDb, Letterboxd); obra independiente cuyo único contacto visible es el/la realizador/a o la organización productora",
+     "fecha": "2026-11-16"
+    }
+   },
+   "estado": "sin_afiche",
+   "por_que_sin_afiche": "investigación 16 nov: ni IMDb, Letterboxd, Bing (web e imágenes), Proimágenes ni la web del festival tienen la obra ni un afiche; la tarjeta del festival es un fotograma. Pedir el afiche al festival"
+  },
+  "¿Una pola o qué?": {
+   "titulo": "¿Una pola o qué?",
+   "director": "Mateo Ramirez",
+   "fuentes": {
+    "tmdb_titulo": {
+     "url": "https://www.themoviedb.org/search/movie?query=%C2%BFUna%20pola%20o%20qu%C3%A9%3F",
+     "fecha": "2026-11-16",
+     "resultado": "«¿Una pola o qué?»: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_alternos": {
+     "url": "https://www.themoviedb.org/search/movie?query=una%20pola%20o%20que",
+     "fecha": "2026-11-16",
+     "resultado": "«una pola o que»: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_director": {
+     "url": "https://www.themoviedb.org/person/4180251 https://www.themoviedb.org/person/4365631 https://www.themoviedb.org/person/5552411",
+     "fecha": "2026-11-16",
+     "resultado": "Mateo Ramírez Nunta (4180251): dirige 0; Anselma Mateo Ramírez (4365631): dirige 0; Mateo Ramírez (5552411): dirige 3"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/find/?q=Una%20pola%20o%20que",
+     "fecha": "2026-11-16",
+     "resultado": "sin la obra"
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/una%20pola%20o%20que/",
+     "fecha": "2026-11-16",
+     "resultado": "sin la obra"
+    },
+    "pagina_del_festival": {
+     "url": "https://cineparalapaz.com/",
+     "fecha": "2026-11-16",
+     "resultado": "la web no tiene páginas por obra de 2026 (home: carrusel de películas de ediciones anteriores, proyectos, inscripciones, blog); en el IG @cineparalapaz (carrusel Dfk4smulKBB) la obra solo está en tarjetas del festival con fotograma, no afiche"
+    },
+    "festivales_previos": {
+     "url": "https://www.bing.com/search?q=%22Una%20pola%20o%20qu%C3%A9%22%20cortometraje",
+     "fecha": "2026-11-16",
+     "resultado": "solo un fragmento en YouTube (uAmNv5K8cm8, dic 2025, de un actor); sin festivales"
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.bing.com/images/search?q=%22Una%20pola%20o%20qu%C3%A9%22%20cortometraje",
+     "fecha": "2026-11-16",
+     "resultado": "nada de la obra"
+    },
+    "organismo_nacional": {
+     "url": "https://www.proimagenescolombia.com/secciones/buscador/buscador_general_resultado.php?buscar=Una+pola+o+que",
+     "fecha": "2026-11-16",
+     "resultado": "sin la obra"
+    },
+    "web_director_o_productora": {
+     "url": "https://www.bing.com/search?q=%22Mateo%20Ramirez%22%20%22Una%20pola%22",
+     "fecha": "2026-11-16",
+     "resultado": "sin web del director (homónimos: ciclista, futbolista)"
+    },
+    "plataformas_festivales": {
+     "na": true,
+     "por_que": "no tienen buscador público de obras: Short Film Depot pide sesión, Festhome no publica catálogo, FilmFreeway no busca proyectos; se buscó «<título> filmfreeway» en la web sin perfil (sin resultados de la obra en plataformas)",
+     "fecha": "2026-11-16"
+    },
+    "distribuidora_o_agencia": {
+     "na": true,
+     "por_que": "no aparece distribuidora ni agencia en ninguna búsqueda (Bing, IMDb, Letterboxd); obra independiente cuyo único contacto visible es el/la realizador/a o la organización productora",
+     "fecha": "2026-11-16"
+    }
+   },
+   "estado": "sin_afiche",
+   "por_que_sin_afiche": "investigación 16 nov: ni IMDb, Letterboxd, Bing (web e imágenes), Proimágenes ni la web del festival tienen la obra ni un afiche; la tarjeta del festival es un fotograma. Pedir el afiche al festival"
+  }
+ },
+ "_provenance": {
+  "fuente": "pipeline/altas.py (TMDB + fuentes revisadas a mano, una por una)",
+  "capturado": "2026-11-16"
+ },
+ "_nota": "registro de altas: por obra sin ficha, las fuentes revisadas y la decisión. Se escribe con pipeline/altas.py, no a mano."
+}

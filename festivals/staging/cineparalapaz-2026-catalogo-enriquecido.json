@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, con el MISMO candado de enriquecer.py: director ✓ y (año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-11-11"
+  "capturado": "2026-11-16"
  },
  "_origen": "cineparalapaz-2026-catalogo.json",
  "obras": [
@@ -17,8 +17,8 @@
    "duracion_tmdb": 59,
    "pais_tmdb": "",
    "lbSlug": "por-una-gota-de-leche",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Por una gota de leche",
+   "_verificado": "el catálogo ya la tiene (w_R4HG7VSG2RV4, cineparalapaz-2026, ficdeh-2026)",
+   "work_id": "w_R4HG7VSG2RV4",
    "_ya_publicada": [
     {
      "festival": "ficdeh-2026",
@@ -62,7 +62,7 @@
    "duracion_tmdb": 4,
    "pais_tmdb": "Colombia",
    "lbSlug": "medellin-yo-te-saludo",
-   "_verificado": "el catálogo ya la tiene (w_R4F7ST1C6JNH, cinemancia-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4F7ST1C6JNH, cinemancia-2026, cineparalapaz-2026)",
    "work_id": "w_R4F7ST1C6JNH",
    "_ya_publicada": [
     {
@@ -96,6 +96,19 @@
    "_busqueda": "Refugiar el Gesto",
    "_ya_publicada": [
     {
+     "festival": "fecibac-2026",
+     "titulo": "Refugiar el gesto",
+     "poster": "https://image.tmdb.org/t/p/w500/bHXUP6sTxTX46cmGdVLDh9eLxqB.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "sheltering-gestures",
+     "country": "Colombia",
+     "year": 2026,
+     "duration": "11 min",
+     "genre": "Documental",
+     "synopsis_en": "A group of young dancers witnessed the gradual disappearance of the traditional Danza de las Tabliteras. Determined to bring it back to life, they learned its rhythms and choreography from the four remaining elders who still carried the dance in their bodies. Once again, these gestures echo the movements that decades ago filled the community of San Antonio, Bolívar, with pride, vitality, and collective spirit.",
+     "sinopsis": "A group of young dancers who witnessed the gradual disappearance of the traditional Danza de las Tabliteras."
+    },
+    {
      "festival": "qaff-2026",
      "titulo": "Refugiar el Gesto",
      "poster": "/assets/qaff/sheltering-gestures.jpg",
@@ -121,8 +134,8 @@
      "sinopsis": "A group of young dancers who witnessed the gradual disappearance of the traditional Danza de las Tabliteras."
     }
    ],
-   "sinopsis": "Gestos que resguardan es una videodanza que rastrea los movimientos rituales y espirituales revividos por un grupo de jóvenes bailarinas que fueron testigos de la desaparición gradual de la tradicional Danza de las Tabliteras. Decididas a devolverle la vida, aprendieron sus ritmos y coreografías de los cuatro ancianos que aún conservaban la danza en sus cuerpos. Una vez más, estos gestos hacen eco de los movimientos que hace décadas llenaron de orgullo, vitalidad y espíritu colectivo a la comunidad de San Antonio, Bolívar. Tragaluz es un colectivo colombiano centrado en el cine documental y las artes audiovisuales comunitarias. Está liderado por Adrián Villa-Dávila (Quito, 1982) , cineasta y artista visual formado en Colombia y Alemania, y Andrés Prado Rojas (Bogotá, 1988) , cineasta y director de fotografía con amplia experiencia en cine documental. Su obra profundiza en la memoria, el territorio y los procesos sociales desde una mirada poética y colaborativa.",
-   "_sinopsis_de": "ya publicada en qaff-2026"
+   "sinopsis": "A group of young dancers who witnessed the gradual disappearance of the traditional Danza de las Tabliteras.",
+   "_sinopsis_de": "ya publicada en fecibac-2026"
   },
   {
    "titulo": "LA",
@@ -131,6 +144,11 @@
      "festival": "fecibac-2026",
      "titulo": "La Canoa Dorada (Tanda 2)",
      "duration": "60 min"
+    },
+    {
+     "festival": "ficfusa-2026",
+     "titulo": "La",
+     "country": "Colombia, Argentina"
     },
     {
      "festival": "guatape-2026",
@@ -179,6 +197,82 @@
    "pais_tmdb": "Colombia",
    "lbSlug": "manos-que-dan-vida",
    "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+  },
+  {
+   "titulo": "LezAma. Vivir filmando",
+   "tmdb_id": 1049488,
+   "titulo_original": "Lez-Ama: Vivir Filmando",
+   "poster_path": "/z0IjhbIrOT9lehYfBR8ZQEFvGt5.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Mauricio Lezama was murdered in May 2019 while casting in Arauca. In a country where a social leader is murdered every three days, his death unites the industry around a reflection on what filmmaking is, why make it and the difference between storytelling in the city and the periphery.",
+   "genero": "Documental",
+   "anio_tmdb": 2022,
+   "duracion_tmdb": 52,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "lez-ama-vivir-filmando",
+   "_verificado": "declarada a mano: altas.py --ficha: «Lez-Ama: Vivir Filmando» (Colombia, 52 min), dir. Mónica Moya; IMDb tt36577296 y Letterboxd la enlazan; la web del productor Emmanuel Jaramillo (que la lámina nombra) la lista"
+  },
+  {
+   "titulo": "Horizonte",
+   "tmdb_id": 1265716,
+   "titulo_original": "Horizonte",
+   "poster_path": "/99eXFsGBtH0MH2YEOLihmEuyt0z.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "It is about two ghosts, a mother and son, search for the boy’s missing father on a journey, both physical and spiritual, through a world ravaged by war. Only through great sacrifice will they mend the fragile bonds that bind them and perhaps find redemption.",
+   "genero": "Drama",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 125,
+   "pais_tmdb": "Chile, Colombia, France, Germany, Luxembourg",
+   "title_en": "Horizon",
+   "lbSlug": "horizon-2024-4",
+   "_verificado": "el catálogo ya la tiene (w_8GJ7B5KCEQ78, cineparalapaz-2026, funza-2026, guatape-2026, mambe-2026)",
+   "work_id": "w_8GJ7B5KCEQ78",
+   "_ya_publicada": [
+    {
+     "festival": "funza-2026",
+     "titulo": "Horizonte",
+     "tmdb_id": 1265716,
+     "poster": "/assets/funza-2026/horizonte.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "horizon-2024-4",
+     "country": "Chile, Colombia, France, Germany, Luxembourg",
+     "year": 2025,
+     "duration": "125 min",
+     "genre": "Drama",
+     "synopsis_en": "It is about two ghosts, a mother and son, search for the boy’s missing father on a journey, both physical and spiritual, through a world ravaged by war. Only through great sacrifice will they mend the fragile bonds that bind them and perhaps find redemption.",
+     "sinopsis": "Dos fantasmas, una madre y su hijo, buscan al padre desaparecido del muchacho en un viaje físico y espiritual por un mundo arrasado por la guerra. Basilio, que en vida fue un criminal, debe revivir sus actos con su madre como testigo. Solo a través de un gran sacrificio encontrarán la redención que buscan."
+    },
+    {
+     "festival": "guatape-2026",
+     "titulo": "Horizonte",
+     "tmdb_id": 1265716,
+     "poster": "/assets/guatape-2026/horizonte.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "horizon-2024-4",
+     "country": "Chile, Colombia, France, Germany, Luxembourg",
+     "year": 2025,
+     "duration": "125 min",
+     "genre": "Drama",
+     "synopsis_en": "It is about two ghosts, a mother and son, search for the boy’s missing father on a journey, both physical and spiritual, through a world ravaged by war. Only through great sacrifice will they mend the fragile bonds that bind them and perhaps find redemption.",
+     "sinopsis": "Dos fantasmas, una madre y su hijo, buscan al padre desaparecido del muchacho en un viaje físico y espiritual por un mundo arrasado por la guerra. Basilio, que en vida fue un criminal, debe revivir sus actos con su madre como testigo. Solo a través de un gran sacrificio encontrarán la redención que buscan."
+    },
+    {
+     "festival": "mambe-2026",
+     "titulo": "Horizonte",
+     "tmdb_id": 1265716,
+     "poster": "/assets/mambe-2026/horizonte.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "horizon-2024-4",
+     "country": "Chile, Colombia, France, Germany, Luxembourg",
+     "year": 2025,
+     "duration": "180 min",
+     "genre": "Drama",
+     "synopsis_en": "It is about two ghosts, a mother and son, search for the boy’s missing father on a journey, both physical and spiritual, through a world ravaged by war. Only through great sacrifice will they mend the fragile bonds that bind them and perhaps find redemption.",
+     "sinopsis": "Dos fantasmas, una madre y su hijo, buscan al padre desaparecido del muchacho en un viaje físico y espiritual por un mundo arrasado por la guerra. Basilio, que en vida fue un criminal, debe revivir sus actos con su madre como testigo. Solo a través de un gran sacrificio encontrarán la redención que buscan."
+    }
+   ],
+   "sinopsis": "Dos fantasmas, una madre y su hijo, buscan al padre desaparecido del muchacho en un viaje físico y espiritual por un mundo arrasado por la guerra. Basilio, que en vida fue un criminal, debe revivir sus actos con su madre como testigo. Solo a través de un gran sacrificio encontrarán la redención que buscan.",
+   "_sinopsis_de": "ya publicada en funza-2026"
   }
  ],
  "verificadas": {
@@ -193,8 +287,8 @@
    "duracion_tmdb": 59,
    "pais_tmdb": "",
    "lbSlug": "por-una-gota-de-leche",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Por una gota de leche",
+   "_verificado": "el catálogo ya la tiene (w_R4HG7VSG2RV4, cineparalapaz-2026, ficdeh-2026)",
+   "work_id": "w_R4HG7VSG2RV4",
    "_ya_publicada": [
     {
      "festival": "ficdeh-2026",
@@ -236,7 +330,7 @@
    "duracion_tmdb": 4,
    "pais_tmdb": "Colombia",
    "lbSlug": "medellin-yo-te-saludo",
-   "_verificado": "el catálogo ya la tiene (w_R4F7ST1C6JNH, cinemancia-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4F7ST1C6JNH, cinemancia-2026, cineparalapaz-2026)",
    "work_id": "w_R4F7ST1C6JNH",
    "_ya_publicada": [
     {
@@ -269,6 +363,19 @@
    "_busqueda": "Refugiar el Gesto",
    "_ya_publicada": [
     {
+     "festival": "fecibac-2026",
+     "titulo": "Refugiar el gesto",
+     "poster": "https://image.tmdb.org/t/p/w500/bHXUP6sTxTX46cmGdVLDh9eLxqB.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "sheltering-gestures",
+     "country": "Colombia",
+     "year": 2026,
+     "duration": "11 min",
+     "genre": "Documental",
+     "synopsis_en": "A group of young dancers witnessed the gradual disappearance of the traditional Danza de las Tabliteras. Determined to bring it back to life, they learned its rhythms and choreography from the four remaining elders who still carried the dance in their bodies. Once again, these gestures echo the movements that decades ago filled the community of San Antonio, Bolívar, with pride, vitality, and collective spirit.",
+     "sinopsis": "A group of young dancers who witnessed the gradual disappearance of the traditional Danza de las Tabliteras."
+    },
+    {
      "festival": "qaff-2026",
      "titulo": "Refugiar el Gesto",
      "poster": "/assets/qaff/sheltering-gestures.jpg",
@@ -294,8 +401,8 @@
      "sinopsis": "A group of young dancers who witnessed the gradual disappearance of the traditional Danza de las Tabliteras."
     }
    ],
-   "sinopsis": "Gestos que resguardan es una videodanza que rastrea los movimientos rituales y espirituales revividos por un grupo de jóvenes bailarinas que fueron testigos de la desaparición gradual de la tradicional Danza de las Tabliteras. Decididas a devolverle la vida, aprendieron sus ritmos y coreografías de los cuatro ancianos que aún conservaban la danza en sus cuerpos. Una vez más, estos gestos hacen eco de los movimientos que hace décadas llenaron de orgullo, vitalidad y espíritu colectivo a la comunidad de San Antonio, Bolívar. Tragaluz es un colectivo colombiano centrado en el cine documental y las artes audiovisuales comunitarias. Está liderado por Adrián Villa-Dávila (Quito, 1982) , cineasta y artista visual formado en Colombia y Alemania, y Andrés Prado Rojas (Bogotá, 1988) , cineasta y director de fotografía con amplia experiencia en cine documental. Su obra profundiza en la memoria, el territorio y los procesos sociales desde una mirada poética y colaborativa.",
-   "_sinopsis_de": "ya publicada en qaff-2026"
+   "sinopsis": "A group of young dancers who witnessed the gradual disappearance of the traditional Danza de las Tabliteras.",
+   "_sinopsis_de": "ya publicada en fecibac-2026"
   },
   "La pandemia del feminicidio en Colombia": {
    "tmdb_id": 1796536,
@@ -335,6 +442,80 @@
    "pais_tmdb": "Colombia",
    "lbSlug": "manos-que-dan-vida",
    "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+  },
+  "LezAma. Vivir filmando": {
+   "tmdb_id": 1049488,
+   "titulo_original": "Lez-Ama: Vivir Filmando",
+   "poster_path": "/z0IjhbIrOT9lehYfBR8ZQEFvGt5.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Mauricio Lezama was murdered in May 2019 while casting in Arauca. In a country where a social leader is murdered every three days, his death unites the industry around a reflection on what filmmaking is, why make it and the difference between storytelling in the city and the periphery.",
+   "genero": "Documental",
+   "anio_tmdb": 2022,
+   "duracion_tmdb": 52,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "lez-ama-vivir-filmando",
+   "_verificado": "declarada a mano: altas.py --ficha: «Lez-Ama: Vivir Filmando» (Colombia, 52 min), dir. Mónica Moya; IMDb tt36577296 y Letterboxd la enlazan; la web del productor Emmanuel Jaramillo (que la lámina nombra) la lista"
+  },
+  "Horizonte": {
+   "tmdb_id": 1265716,
+   "titulo_original": "Horizonte",
+   "poster_path": "/99eXFsGBtH0MH2YEOLihmEuyt0z.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "It is about two ghosts, a mother and son, search for the boy’s missing father on a journey, both physical and spiritual, through a world ravaged by war. Only through great sacrifice will they mend the fragile bonds that bind them and perhaps find redemption.",
+   "genero": "Drama",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 125,
+   "pais_tmdb": "Chile, Colombia, France, Germany, Luxembourg",
+   "title_en": "Horizon",
+   "lbSlug": "horizon-2024-4",
+   "_verificado": "el catálogo ya la tiene (w_8GJ7B5KCEQ78, cineparalapaz-2026, funza-2026, guatape-2026, mambe-2026)",
+   "work_id": "w_8GJ7B5KCEQ78",
+   "_ya_publicada": [
+    {
+     "festival": "funza-2026",
+     "titulo": "Horizonte",
+     "tmdb_id": 1265716,
+     "poster": "/assets/funza-2026/horizonte.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "horizon-2024-4",
+     "country": "Chile, Colombia, France, Germany, Luxembourg",
+     "year": 2025,
+     "duration": "125 min",
+     "genre": "Drama",
+     "synopsis_en": "It is about two ghosts, a mother and son, search for the boy’s missing father on a journey, both physical and spiritual, through a world ravaged by war. Only through great sacrifice will they mend the fragile bonds that bind them and perhaps find redemption.",
+     "sinopsis": "Dos fantasmas, una madre y su hijo, buscan al padre desaparecido del muchacho en un viaje físico y espiritual por un mundo arrasado por la guerra. Basilio, que en vida fue un criminal, debe revivir sus actos con su madre como testigo. Solo a través de un gran sacrificio encontrarán la redención que buscan."
+    },
+    {
+     "festival": "guatape-2026",
+     "titulo": "Horizonte",
+     "tmdb_id": 1265716,
+     "poster": "/assets/guatape-2026/horizonte.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "horizon-2024-4",
+     "country": "Chile, Colombia, France, Germany, Luxembourg",
+     "year": 2025,
+     "duration": "125 min",
+     "genre": "Drama",
+     "synopsis_en": "It is about two ghosts, a mother and son, search for the boy’s missing father on a journey, both physical and spiritual, through a world ravaged by war. Only through great sacrifice will they mend the fragile bonds that bind them and perhaps find redemption.",
+     "sinopsis": "Dos fantasmas, una madre y su hijo, buscan al padre desaparecido del muchacho en un viaje físico y espiritual por un mundo arrasado por la guerra. Basilio, que en vida fue un criminal, debe revivir sus actos con su madre como testigo. Solo a través de un gran sacrificio encontrarán la redención que buscan."
+    },
+    {
+     "festival": "mambe-2026",
+     "titulo": "Horizonte",
+     "tmdb_id": 1265716,
+     "poster": "/assets/mambe-2026/horizonte.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "horizon-2024-4",
+     "country": "Chile, Colombia, France, Germany, Luxembourg",
+     "year": 2025,
+     "duration": "180 min",
+     "genre": "Drama",
+     "synopsis_en": "It is about two ghosts, a mother and son, search for the boy’s missing father on a journey, both physical and spiritual, through a world ravaged by war. Only through great sacrifice will they mend the fragile bonds that bind them and perhaps find redemption.",
+     "sinopsis": "Dos fantasmas, una madre y su hijo, buscan al padre desaparecido del muchacho en un viaje físico y espiritual por un mundo arrasado por la guerra. Basilio, que en vida fue un criminal, debe revivir sus actos con su madre como testigo. Solo a través de un gran sacrificio encontrarán la redención que buscan."
+    }
+   ],
+   "sinopsis": "Dos fantasmas, una madre y su hijo, buscan al padre desaparecido del muchacho en un viaje físico y espiritual por un mundo arrasado por la guerra. Basilio, que en vida fue un criminal, debe revivir sus actos con su madre como testigo. Solo a través de un gran sacrificio encontrarán la redención que buscan.",
+   "_sinopsis_de": "ya publicada en funza-2026"
   }
  },
  "sin_ficha": [
@@ -344,6 +525,7 @@
   "Kinesis",
   "LA",
   "La coca: Buen vivir del pueblo Nasa",
+  "Mindalae – Viajero Kichwa",
   "Nueve jueves en Riachuelo",
   "Paseando Te Cuento",
   "Un Milagro Cada Día",

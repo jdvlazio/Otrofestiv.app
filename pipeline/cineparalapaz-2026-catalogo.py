@@ -67,7 +67,8 @@ LAMINAS = [
     (17, FP, 'Cajamarca: El viaje del desengaño', 'Documental', '21:22', 'Ernesto Ciurlizza', F18T,
      'En Cajamarca, un campesino defiende el futuro agrícola de su pueblo frente al proyecto minero La Colosa. Una consulta popular pone en manos de la comunidad una decisión que cambiaría su territorio.'),
 ]
-PAIS = {'Hecho a mano': 'Argentina'}   # Maimará, Jujuy (su sinopsis)
+PAIS = {'Hecho a mano': 'Argentina',   # Maimará, Jujuy (su sinopsis)
+        'Cajamarca: El viaje del desengaño': 'Colombia'}   # Universidad de La Sabana (afiche, IMDb tt8386644)
 
 
 def minutos(t):
@@ -89,6 +90,18 @@ def main():
         if tit in PAIS:
             o['pais'] = PAIS[tit]
         obras.append(o)
+    # LAS TRES DE LA PROGRAMACIÓN (IG DfzeOb2lq6q, 16 nov) que no estaban en la
+    # Selección: lo que dicen las láminas, y el director de LezAma de sus fichas
+    # (TMDB 1049488, IMDb tt36577296: dir. Mónica Moya; la lámina nombra al productor)
+    PROG = 'https://www.instagram.com/p/DfzeOb2lq6q/'
+    for tit, dire, m, lam in (('LezAma. Vivir filmando', 'Mónica Moya', 52, 2),
+                              ('Horizonte', 'César Acevedo', 125, 3),
+                              ('Mindalae – Viajero Kichwa', 'Samia Maldonado', 76, 4)):
+        obras.append({'titulo': tit, 'director': dire, 'duracion_min': m,
+                      # Mindalae: Universidad de las Artes / APAK, Ecuador
+                      **({'pais': 'Ecuador'} if tit.startswith('Mindalae') else {}),
+                      'tipo': 'largo' if m >= 60 else 'mediometraje',
+                      '_src': {'url': f'{PROG}?img_index={lam + 1}', 'date': '2026-11-16'}})
     d = {'_provenance': {'fuente': f'@cineparalapaz, carrusel Selección Oficial 2026 ({URL})',
                          'capturado': FECHA, 'metodo': 'lectura a ojo de las 17 láminas'},
          'obras': obras}
