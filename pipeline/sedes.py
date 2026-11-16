@@ -11,7 +11,8 @@ MAMM», «Museo de Arte Moderno de Medellín») y la procedencia en texto libre.
 
 EL MODELO. `catalogo/sedes.json`:
     {"sedes": {"s_xxxxxxxx": {
-        "nombre", "alias": [grafías que son ESTE lugar], "lat", "lng", "address"?,
+        "nombre", "corto"?, "ciudad"?, "address"?, "salas"?: [salas conocidas],
+        "alias": [grafías que son ESTE lugar, incluidas las crudas de los planes], "lat", "lng",
         "evidencia": {"nivel": maps|direccion|manual|nominatim|aproximado,
                       "url"?, "fecha"?, "fuente"},
         "festivales": [fid…]}},
@@ -138,6 +139,90 @@ def _nuevo_id(nombre, lat, lng, usados):
     raise RuntimeError('sin id libre')
 
 
+def _contexto(raiz):
+    """Lo que los festivales ya saben de cada pin, además del pin, por
+    (fid, nombre plano): {'crudas': {grafía→sala}, 'publicado': venue de la app,
+    'salas': {salas de sus funciones}, 'ciudad_plan': ciudad única del plan}.
+    Las grafías crudas vienen del mapa `festival.sedes` del plan (349 el 16 nov:
+    «Cinemateca Sala 2» → [«Cinemateca de Bogotá - Bogotá», «Sala 2»]); el
+    nombre corto, la ciudad y la dirección, del JSON publicado; las salas, de
+    las funciones publicadas."""
+    ctx = {}
+
+    def c(fid, clave):
+        return ctx.setdefault((fid, plano(nombre_de(clave))), {})
+    ciudad_plan = {}
+    for p in glob.glob(f'{raiz}/pipeline/*.plan.json'):
+        fid = os.path.basename(p)[:-len('.plan.json')]
+        F = json.load(open(p, encoding='utf-8')).get('festival') or {}
+        cp = (F.get('city') or '').strip()
+        if cp and not re.search(r'\sy\s|,|/', cp):
+            ciudad_plan[fid] = cp
+        sp = F.get('sedes')
+        if isinstance(sp, dict):
+            for cruda, v in sp.items():
+                if isinstance(v, list) and v:
+                    c(fid, v[0]).setdefault('crudas', {})[cruda] = (v[1] if len(v) > 1 else '') or ''
+    for p in glob.glob(f'{raiz}/festivals/*.json'):
+        fid = os.path.basename(p)[:-5]
+        try:
+            d = json.load(open(p, encoding='utf-8'))
+        except ValueError:
+            continue
+        vs = d.get('venues') if isinstance(d, dict) else None
+        if isinstance(vs, dict):
+            for k, v in vs.items():
+                if isinstance(v, dict):
+                    c(fid, k)['publicado'] = v
+        for f in (d.get('films') or []) if isinstance(d, dict) else []:
+            if isinstance(f, dict) and f.get('venue') and f.get('sala'):
+                c(fid, f['venue']).setdefault('salas', set()).add(f['sala'])
+    for (fid, n), x in ctx.items():
+        if fid in ciudad_plan:
+            x['ciudad_plan'] = ciudad_plan[fid]
+    return ctx
+
+
+def _mas_comun(xs):
+    xs = [x for x in xs if x]
+    return max(set(xs), key=xs.count) if xs else None
+
+
+def _ficha(e, g, ctx):
+    """Completa el lugar con lo que saben los festivales: alias crudos, salas,
+    nombre corto, ciudad, dirección. Lo que una persona ya fijó no se pisa."""
+    ciudades, cortos, dirs = [], [], []
+    alias, salas = set(e.get('alias', [])), set(e.get('salas', []))
+    for fid, clave, nombre, v in g:
+        c = ctx.get((fid, plano(nombre))) or {}
+        for cruda, sala in (c.get('crudas') or {}).items():
+            alias.add(cruda)
+            if sala:
+                salas.add(sala)
+        salas |= c.get('salas') or set()
+        pub = c.get('publicado') or {}
+        sufijo = clave.split(' - ', 1)[1].strip() if ' - ' in clave else None
+        ciudades.append(pub.get('city') or sufijo or c.get('ciudad_plan'))
+        cortos.append(pub.get('short'))
+        dirs.append(pub.get('address') or v.get('address'))
+    e['alias'] = sorted(alias - {e['nombre']})
+    if salas:
+        e['salas'] = sorted(salas)
+    ciudades = [x for x in ciudades if x and plano(x) != plano(e['nombre'])]
+    for campo, xs in (('ciudad', ciudades), ('corto', cortos), ('address', dirs)):
+        if not e.get(campo):
+            x = _mas_comun(xs)
+            if x:
+                e[campo] = x
+    ciudades = [x for x in ciudades if x and plano(x) != plano(e['nombre'])]
+    distintas = sorted(set(ciudades))
+    if len(distintas) > 1:
+        e['_ciudades_vistas'] = distintas
+    else:
+        e.pop('_ciudades_vistas', None)
+    return e
+
+
 def construir(raiz=REPO):
     """Arma/actualiza el almacén desde los venues-geo. Lo que ya está —id,
     evidencia, divergencia elegida— se conserva: el almacén es la fuente, los
@@ -147,6 +232,7 @@ def construir(raiz=REPO):
     dec = previa.get('decisiones') or {'mismo': [], 'distintos': []}
     redir = dict(previa.get('redirecciones') or {})
     sedes, div, usados = {}, {}, set(viejas) | set(redir)
+    ctx = _contexto(raiz)
     for g in agrupar(pines(raiz), dec):
         alias = {x[2] for x in g} | {x[1] for x in g}
         planos = {plano(a) for a in alias}
@@ -177,6 +263,7 @@ def construir(raiz=REPO):
                 e['address'] = base[3]['address']
         e['alias'] = sorted((set(e.get('alias', [])) | alias) - {e['nombre']})
         e['festivales'] = sorted(set(e.get('festivales', [])) | {x[0] for x in g})
+        _ficha(e, g, ctx)
         tol = e.get('campus', {}).get('radio_m', TOLERANCIA_M)
         lejos = [x for x in g if metros((e['lat'], e['lng']), (x[3]['lat'], x[3]['lng'])) > tol]
         # un pin verificado en Maps (o elegido a mano) MANDA: los que se apartan
@@ -229,7 +316,7 @@ def buscar(nombre, centro, radio_m=30000, raiz=REPO):
     ev = e.get('evidencia') or {}
     return {'lat': e['lat'], 'lng': e['lng'], '_prec': 'matriz', '_matriz': sid,
             '_match': f'almacén de sedes: {e["nombre"]} ({ev.get("nivel")})',
-            **({'address': e['address']} if e.get('address') else {})}
+            **{k: e[k] for k in ('address', 'ciudad', 'corto', 'salas') if e.get(k)}}
 
 
 def declarar(tipo, a, b, por_que, raiz=REPO):
