@@ -55,7 +55,7 @@ private struct MiPlan: View {
                         .toolbar {
                             ToolbarItem(placement: .topBarLeading) {
                                 NavigationLink { ProgramView() } label: {
-                                    Image(systemName: "calendar")
+                                    Image(systemName: "list.bullet")
                                         .foregroundStyle(OT.amber)
                                         .accessibilityLabel(L.program)
                                 }
@@ -167,32 +167,31 @@ private struct LiveRow: View {
     }
 }
 
+// Fila de Mi Plan = tarjeta tipo marcador (16 nov 2026, al estilo Apple Sports):
+// la hora grande en ámbar manda, póster al lado. Así no se confunde con el
+// Programa, que sigue siendo la lista de la app.
 private struct PlanRow: View {
     let item: ScheduleItem
-    private var live: Bool { PlanCompute.isLive(item, now: Date()) }
     var body: some View {
-        HStack(alignment: .center, spacing: 8) {
-            PosterThumb(item: item)
-            VStack(alignment: .leading, spacing: 3) {
+        HStack(alignment: .center, spacing: 9) {
+            PosterThumb(item: item, width: 38)
+            VStack(alignment: .leading, spacing: 2) {
+                Text(item.time ?? "—")
+                    .font(.title3).fontWeight(.bold).monospacedDigit()
+                    .foregroundStyle(OT.amber)
                 Text(item.title)
-                    .font(.subheadline).fontWeight(.medium).foregroundStyle(OT.warm)
+                    .font(.footnote).fontWeight(.semibold).foregroundStyle(OT.warm)
                     .lineLimit(3).truncationMode(.tail)
                     .fixedSize(horizontal: false, vertical: true)
-                HStack(spacing: 5) {
-                    Text(item.time ?? "—")
-                        .font(.caption).monospacedDigit().fontWeight(.semibold)
-                        .foregroundStyle(OT.amber)
-                    if live {
-                        Text(L.now).font(.caption2).fontWeight(.bold).foregroundStyle(OT.green)
-                    }
-                    if let v = item.venue {
-                        Text("·").font(.caption2).foregroundStyle(OT.faint)
-                        Text(v).font(.caption).foregroundStyle(OT.secondary)
-                            .lineLimit(1).truncationMode(.tail)
-                    }
+                if let v = item.venue {
+                    Text(v).font(.caption2).foregroundStyle(OT.secondary)
+                        .lineLimit(1).truncationMode(.tail)
                 }
             }
+            Spacer(minLength: 0)
         }
-        .frame(minHeight: 45)
+        .padding(8)
+        .background(RoundedRectangle(cornerRadius: 14, style: .continuous).fill(OT.warm.opacity(0.06)))
+        .accessibilityElement(children: .combine)
     }
 }
