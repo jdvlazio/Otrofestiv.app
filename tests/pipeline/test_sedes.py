@@ -195,5 +195,30 @@ class Resolver(Base):
         self.assertEqual(e['_ciudad_dudosa'], 'Bogotá')
 
 
+class Normalizar(Base):
+    def test_salas_compuestas_fuera_y_variantes_juntas(self):
+        e = {'nombre': 'MAMM', 'corto': 'MAMM'}
+        canon, var = S.normalizar_salas({'Teatro MAMM': 5, 'Teatro': 1, 'teatro': 1, 'Salas 2, 3 y Capital': 2,
+                                         'Laboratorios 1 y 2': 1, 'Salón Montreal, 3.er piso': 1, 'Salón Montreal': 3}, e)
+        self.assertEqual(canon, ['Salón Montreal', 'Teatro'])                 # sin el nombre del lugar dentro
+        self.assertEqual(var, {'Salón Montreal, 3.er piso': 'Salón Montreal', 'Teatro MAMM': 'Teatro', 'teatro': 'Teatro'})
+
+    def test_ciudad_que_no_es_ciudad(self):
+        self.assertIsNone(S.limpia_ciudad('Universidad Nacional'))
+        self.assertEqual(S.limpia_ciudad('Perímetro Urbano Santa Marta'), 'Santa Marta')
+
+    def test_completar_ciudades_vecino_o_reverso(self):
+        self.geo('a-2026', {'Teatro A - Manizales': {'lat': 5.068, 'lng': -75.517},
+                            'Plaza B': {'lat': 5.0685, 'lng': -75.5175},
+                            'Finca Lejana': {'lat': 5.3, 'lng': -75.9}})
+        S.construir(self.r)
+        hechas = {n: (c, f) for n, c, f in S.completar_ciudades(self.r, reverso=lambda a, b: 'Perímetro Urbano Neira')}
+        self.assertEqual(hechas['Plaza B'][0], 'Manizales')
+        self.assertIn('vecino', hechas['Plaza B'][1])
+        self.assertEqual(hechas['Finca Lejana'], ('Neira', 'Nominatim reverso'))
+        S.construir(self.r)                                                    # reconstruir no la borra
+        self.assertEqual(next(e for e in S.leer(self.r)['sedes'].values() if e['nombre'] == 'Plaza B')['ciudad'], 'Manizales')
+
+
 if __name__ == '__main__':
     unittest.main()

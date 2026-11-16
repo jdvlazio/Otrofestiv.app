@@ -160,7 +160,9 @@
    "alias": [],
    "festivales": [
     "ficma-2026"
-   ]
+   ],
+   "ciudad": "Manizales",
+   "_ciudad_fijada": "lugar vecino del almacén a 1957 m"
   },
   "s_1071539b": {
    "nombre": "Alto Meléndez",
@@ -432,12 +434,10 @@
    "salas": [
     "Calle Museo",
     "Lab 1",
-    "Laboratorios 1 y 2",
     "Sala 2",
     "Sala 3",
     "Sala Capital",
     "Sala E",
-    "Salas 2, 3 y Capital",
     "Taller de Creación Audiovisual",
     "Taller de la Imagen"
    ],
@@ -643,7 +643,9 @@
    "alias": [],
    "festivales": [
     "ficma-2026"
-   ]
+   ],
+   "ciudad": "Manizales",
+   "_ciudad_fijada": "lugar vecino del almacén a 112 m"
   },
   "s_1f206eab": {
    "nombre": "Parque de Cristo Rey",
@@ -878,7 +880,8 @@
    "festivales": [
     "midbo-2026"
    ],
-   "_ciudad_dudosa": "Bogotá"
+   "ciudad": "Santa Marta",
+   "_ciudad_fijada": "Nominatim reverso"
   },
   "s_298b07a2": {
    "nombre": "Co.Laboratorio",
@@ -926,7 +929,9 @@
    "alias": [],
    "festivales": [
     "ficma-2026"
-   ]
+   ],
+   "ciudad": "Manizales",
+   "_ciudad_fijada": "Nominatim reverso"
   },
   "s_2e88d79d": {
    "nombre": "Parque Ernesto Gutiérrez",
@@ -1077,7 +1082,9 @@
    "alias": [],
    "festivales": [
     "ficma-2026"
-   ]
+   ],
+   "ciudad": "Manizales",
+   "_ciudad_fijada": "lugar vecino del almacén a 1957 m"
   },
   "s_384e68d5": {
    "nombre": "Universidad de Caldas",
@@ -1160,7 +1167,9 @@
    "alias": [],
    "festivales": [
     "ficma-2026"
-   ]
+   ],
+   "ciudad": "Manizales",
+   "_ciudad_fijada": "lugar vecino del almacén a 446 m"
   },
   "s_3d933a6f": {
    "nombre": "Escuela Jahel Peláez Montoya",
@@ -1294,7 +1303,8 @@
    "festivales": [
     "ficma-2026"
    ],
-   "ciudad": "Universidad Nacional de Colombia"
+   "ciudad": "Manizales",
+   "_ciudad_fijada": "lugar vecino del almacén a 0 m"
   },
   "s_46c0ae50": {
    "nombre": "Rogelio Salmona",
@@ -1307,7 +1317,9 @@
    "alias": [],
    "festivales": [
     "ficma-2026"
-   ]
+   ],
+   "ciudad": "Manizales",
+   "_ciudad_fijada": "lugar vecino del almacén a 210 m"
   },
   "s_49d684d9": {
    "nombre": "Placa deportiva Simón Bolívar",
@@ -1447,7 +1459,8 @@
    "festivales": [
     "midbo-2026"
    ],
-   "_ciudad_dudosa": "Bogotá"
+   "ciudad": "Medellín",
+   "_ciudad_fijada": "lugar vecino del almacén a 0 m"
   },
   "s_54536669": {
    "nombre": "Por definir",
@@ -1658,8 +1671,7 @@
     "ficcali-2026"
    ],
    "salas": [
-    "Auditorio Xepia",
-    "Aulas 4, Torreón 1A"
+    "Auditorio Xepia"
    ],
    "ciudad": "Cali",
    "corto": "Universidad Autónoma de Occidente",
@@ -1872,14 +1884,16 @@
    ],
    "salas": [
     "Cinemateca móvil",
-    "Cinemateca móvil, Laboratorio",
     "Cinemateca móvil, galería",
     "Cinemateca móvil, laboratorio",
     "Cinemateca móvil, sala de cine",
     "Plazoleta"
    ],
    "ciudad": "Medellín",
-   "corto": "Parque de los Deseos"
+   "corto": "Parque de los Deseos",
+   "salas_alias": {
+    "Cinemateca móvil, Laboratorio": "Cinemateca móvil, laboratorio"
+   }
   },
   "s_6badfe99": {
    "nombre": "Colombo",
@@ -1892,7 +1906,9 @@
    "alias": [],
    "festivales": [
     "ficma-2026"
-   ]
+   ],
+   "ciudad": "Manizales",
+   "_ciudad_fijada": "lugar vecino del almacén a 135 m"
   },
   "s_6bb19ae3": {
    "nombre": "Casa San Pedro Campestre",
@@ -2129,7 +2145,8 @@
    "festivales": [
     "ficma-2026"
    ],
-   "ciudad": "Universidad Nacional"
+   "ciudad": "Manizales",
+   "_ciudad_fijada": "lugar vecino del almacén a 202 m"
   },
   "s_76882a90": {
    "nombre": "Teatro Colombia",
@@ -2605,7 +2622,9 @@
    "alias": [],
    "festivales": [
     "ficma-2026"
-   ]
+   ],
+   "ciudad": "Manizales",
+   "_ciudad_fijada": "lugar vecino del almacén a 246 m"
   },
   "s_8cc7eb0e": {
    "nombre": "Canterbury Café",
@@ -2790,7 +2809,9 @@
    "alias": [],
    "festivales": [
     "ficma-2026"
-   ]
+   ],
+   "ciudad": "Manizales",
+   "_ciudad_fijada": "lugar vecino del almacén a 1051 m"
   },
   "s_98cccf58": {
    "nombre": "Casa Museo Otraparte",
@@ -2838,11 +2859,13 @@
    ],
    "salas": [
     "Quinto piso",
-    "Teatro",
-    "Teatro MAMM"
+    "Teatro"
    ],
    "ciudad": "Medellín",
-   "corto": "Museo de Arte Moderno de Medellín"
+   "corto": "Museo de Arte Moderno de Medellín",
+   "salas_alias": {
+    "Teatro MAMM": "Teatro"
+   }
   },
   "s_99a993f3": {
    "nombre": "Galería San José",
@@ -3436,7 +3459,9 @@
    "alias": [],
    "festivales": [
     "ficma-2026"
-   ]
+   ],
+   "ciudad": "Manizales",
+   "_ciudad_fijada": "lugar vecino del almacén a 446 m"
   },
   "s_b9e0404b": {
    "nombre": "Uniamazonia Sede Porvenir",
@@ -3650,7 +3675,9 @@
    "alias": [],
    "festivales": [
     "ficma-2026"
-   ]
+   ],
+   "ciudad": "Manizales",
+   "_ciudad_fijada": "lugar vecino del almacén a 638 m"
   },
   "s_bfe8eb92": {
    "nombre": "Cámara de Comercio de Medellín",
@@ -3840,7 +3867,9 @@
    "alias": [],
    "festivales": [
     "ficma-2026"
-   ]
+   ],
+   "ciudad": "Manizales",
+   "_ciudad_fijada": "lugar vecino del almacén a 202 m"
   },
   "s_cf6efa76": {
    "nombre": "Museo Arqueológico Jaime Hincapié Santa María",
@@ -3887,7 +3916,9 @@
    "alias": [],
    "festivales": [
     "ficma-2026"
-   ]
+   ],
+   "ciudad": "Manizales",
+   "_ciudad_fijada": "lugar vecino del almacén a 118 m"
   },
   "s_d1aeb7dc": {
    "nombre": "Yawa",
@@ -4093,7 +4124,8 @@
    "festivales": [
     "midbo-2026"
    ],
-   "_ciudad_dudosa": "Bogotá"
+   "ciudad": "Santa Marta",
+   "_ciudad_fijada": "Nominatim reverso"
   },
   "s_dd71de11": {
    "nombre": "Universidad Santiago de Cali",
@@ -4383,7 +4415,9 @@
    "alias": [],
    "festivales": [
     "ficma-2026"
-   ]
+   ],
+   "ciudad": "Manizales",
+   "_ciudad_fijada": "lugar vecino del almacén a 559 m"
   },
   "s_ea18aa85": {
    "nombre": "Casa Cultural Valerio Antonio Jiménez",
@@ -4494,11 +4528,13 @@
     "villadelcine-2026"
    ],
    "salas": [
-    "Salón principal · 1er piso",
-    "Salón principal · 2do piso"
+    "Salón principal · 1er piso"
    ],
    "ciudad": "Villa de Leyva",
-   "corto": "Museo Casa Antonio Nariño"
+   "corto": "Museo Casa Antonio Nariño",
+   "salas_alias": {
+    "Salón principal · 2do piso": "Salón principal · 1er piso"
+   }
   },
   "s_ee9c7bec": {
    "nombre": "CineQuanon",
@@ -4620,11 +4656,13 @@
    ],
    "salas": [
     "Café Terraza",
-    "Salón Montreal",
     "Salón Montreal, 3.er piso"
    ],
    "ciudad": "Barranquilla",
-   "corto": "Alianza Francesa de Barranquilla"
+   "corto": "Alianza Francesa de Barranquilla",
+   "salas_alias": {
+    "Salón Montreal": "Salón Montreal, 3.er piso"
+   }
   },
   "s_f6cc0705": {
    "nombre": "Maloca Huitoto",
@@ -4829,7 +4867,8 @@
    "festivales": [
     "ficma-2026"
    ],
-   "ciudad": "Universidad de Caldas"
+   "ciudad": "Manizales",
+   "_ciudad_fijada": "lugar vecino del almacén a 0 m"
   },
   "s_febabd56": {
    "nombre": "Paraninfo Universidad de Antioquia",

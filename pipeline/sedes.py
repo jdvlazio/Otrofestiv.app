@@ -39,6 +39,7 @@ fusionados con `--mismo`.
     python3 pipeline/sedes.py --resolver <fid> [--escribir] [--aceptar «cruda=s_xxx» …] [--centro LAT,LNG]
                                                           # las sedes del crudo: ya / conocida / parecida / nueva
     python3 pipeline/sedes.py --tablero                   # festivales vivos: qué falta en sus sedes
+    python3 pipeline/sedes.py --completar-ciudades        # vecino del almacén (<3 km) o Nominatim reverso
 
 geocodificar.py consulta el almacén ANTES de Nominatim. Guardián: [sede-matriz].
 """
@@ -142,6 +143,15 @@ def _nuevo_id(nombre, lat, lng, usados):
     raise RuntimeError('sin id libre')
 
 
+_NO_CIUDAD = re.compile(r'universidad|sede|campus|auditorio|edificio|bloque|sala|teatro|colegio|parque|biblioteca', re.I)
+
+
+def limpia_ciudad(c):
+    """«Perímetro Urbano Santa Marta» (Nominatim) → «Santa Marta»."""
+    c = re.sub(r'^(Perímetro Urbano|Casco Urbano|Cabecera Municipal( de)?)\s+', '', (c or '').strip(), flags=re.I)
+    return None if not c or _NO_CIUDAD.search(c) else c
+
+
 def _contexto(raiz):
     """Lo que los festivales ya saben de cada pin, además del pin, por
     (fid, nombre plano): {'crudas': {grafía→sala}, 'publicado': venue de la app,
@@ -179,7 +189,8 @@ def _contexto(raiz):
                     c(fid, k)['publicado'] = v
         for f in (d.get('films') or []) if isinstance(d, dict) else []:
             if isinstance(f, dict) and f.get('venue') and f.get('sala'):
-                c(fid, f['venue']).setdefault('salas', set()).add(f['sala'])
+                cc = c(fid, f['venue']).setdefault('salas', {})
+                cc[f['sala']] = cc.get(f['sala'], 0) + 1
     ctx['__ciudad_plan__'] = ciudad_plan
     return ctx
 
@@ -193,22 +204,38 @@ def _ficha(e, g, ctx):
     """Completa el lugar con lo que saben los festivales: alias crudos, salas,
     nombre corto, ciudad, dirección. Lo que una persona ya fijó no se pisa."""
     ciudades, cortos, dirs = [], [], []
-    alias, salas = set(e.get('alias', [])), set(e.get('salas', []))
+    if e.get('ciudad') and not limpia_ciudad(e['ciudad']):   # «Universidad Nacional» no es una ciudad
+        del e['ciudad']
+        e.pop('_ciudad_fijada', None)
+    elif e.get('ciudad'):
+        e['ciudad'] = limpia_ciudad(e['ciudad'])
+    alias = set(e.get('alias', []))
+    salas = {x: 1 for x in e.get('salas', [])}
+    for v_, c_ in (e.get('salas_alias') or {}).items():
+        salas[v_] = salas.get(v_, 0)
     for fid, clave, nombre, v in g:
         c = ctx.get((fid, plano(nombre))) or {}
         for cruda, sala in (c.get('crudas') or {}).items():
             alias.add(cruda)
             if sala:
-                salas.add(sala)
-        salas |= c.get('salas') or set()
+                salas[sala] = salas.get(sala, 0) + 1
+        for sala, n in (c.get('salas') or {}).items():
+            salas[sala] = salas.get(sala, 0) + n
         pub = c.get('publicado') or {}
         sufijo = clave.split(' - ', 1)[1].strip() if ' - ' in clave else None
-        ciudades.append(pub.get('city') or sufijo or (ctx.get('__ciudad_plan__') or {}).get(fid))
+        if sufijo and _NO_CIUDAD.search(sufijo):   # «Auditorio 105 - Universidad Nacional»: no es ciudad
+            sufijo = None
+        ciudades.append(limpia_ciudad(pub.get('city')) or sufijo or (ctx.get('__ciudad_plan__') or {}).get(fid))
         cortos.append(pub.get('short'))
         dirs.append(pub.get('address') or v.get('address'))
     e['alias'] = sorted(alias - {e['nombre']})
-    if salas:
-        e['salas'] = sorted(salas)
+    canon, variantes = normalizar_salas(salas, e)
+    if canon:
+        e['salas'] = canon
+    if variantes:
+        e['salas_alias'] = variantes
+    else:
+        e.pop('salas_alias', None)
     ciudades = [x for x in ciudades if x and plano(x) != plano(e['nombre'])]
     for campo, xs in (('ciudad', ciudades), ('corto', cortos), ('address', dirs)):
         if not e.get(campo):
@@ -222,6 +249,43 @@ def _ficha(e, g, ctx):
     else:
         e.pop('_ciudades_vistas', None)
     return e
+
+
+_COMPUESTA = re.compile(r'^(salas|laboratorios|auditorios|aulas)\b|\d\s*(,|\sy\s)\s*\d|\d\s+y\s+\w', re.I)
+
+
+def normalizar_salas(conteo, e):
+    """{sala: veces} → (salas canónicas, {variante: canónica}).
+      · una sala COMPUESTA («Salas 2, 3 y Capital», «Laboratorios 1 y 2») no es
+        una sala: es una función que usa varias; queda fuera;
+      · las variantes de una misma sala —mayúsculas, el nombre del lugar
+        delante («Teatro MAMM» → «Teatro»)— se juntan en la grafía más usada."""
+    lugar = {plano(n) for n in [e.get('nombre'), e.get('corto')] if n}
+    grupos = {}
+    for sala, n in conteo.items():
+        if not sala or _COMPUESTA.search(sala):
+            continue
+        # el piso es un detalle de cómo llegar, no otra sala: «Salón Montreal,
+        # 3.er piso» es «Salón Montreal»
+        k = plano(re.sub(r',?\s*\(?\s*(\d+\.?\s*(er|do|ro|to|vo|no|mo)?\s*piso|piso\s*\d+)\s*\)?\s*$', '', sala, flags=re.I))
+        for l in lugar:
+            if l and k.endswith(l) and k != l:
+                k = k[:-len(l)]
+            if l and k.startswith(l) and k != l:
+                k = k[len(l):]
+        grupos.setdefault(k, []).append((n, sala))
+    canon, variantes = [], {}
+    for k, xs in grupos.items():
+        # la más usada; a igualdad, la más corta y con mayúscula inicial
+        # sin el nombre del lugar dentro ([sala-en-sede]: «Teatro», no «Teatro
+        # MAMM»), luego la más usada, luego la más corta con mayúscula inicial
+        con_lugar = lambda t: any(l and l in plano(t) for l in lugar)
+        xs.sort(key=lambda x: (con_lugar(x[1]), -x[0], not x[1][:1].isupper(), len(x[1]), x[1]))
+        c = xs[0][1]
+        canon.append(c)
+        for _, v in xs[1:]:
+            variantes[v] = c
+    return sorted(canon), dict(sorted(variantes.items()))
 
 
 def construir(raiz=REPO):
@@ -446,6 +510,46 @@ def sin_evidencia_nueva(raiz=REPO):
                   if not (e.get('evidencia') or {}).get('url') and s not in deuda)
 
 
+# ── completar la ciudad (16 nov 2026, Juan: «añadir ciudad») ────────────────
+def _reverso(lat, lng):
+    """Nominatim reverso → municipio. Con la cortesía de 1 consulta/s."""
+    import subprocess, time
+    url = f'https://nominatim.openstreetmap.org/reverse?format=json&zoom=10&lat={lat}&lon={lng}&accept-language=es'
+    r = subprocess.run(['curl', '-s', '--max-time', '25', '-A', 'Otrofestiv/1.0 (sedes; github.com/jdvlazio)', url],
+                       capture_output=True)
+    time.sleep(1.1)
+    try:
+        a = json.loads(r.stdout).get('address') or {}
+    except ValueError:
+        return None
+    return a.get('city') or a.get('town') or a.get('municipality') or a.get('village') or a.get('county')   # en Colombia el municipio rural sale como «county»
+
+
+def completar_ciudades(raiz=REPO, reverso=_reverso):
+    """La ciudad de los lugares que no la tienen (o la tenían dudosa): primero
+    el lugar del almacén más cercano con ciudad, si está a <3 km; si no,
+    Nominatim reverso. Queda fijada, con su fuente. → [(nombre, ciudad, fuente)]"""
+    m = leer(raiz)
+    S = m.get('sedes') or {}
+    con = [(e['lat'], e['lng'], e['ciudad']) for e in S.values() if e.get('ciudad')]
+    out = []
+    for sid, e in S.items():
+        if e.get('ciudad'):
+            continue
+        cerca = sorted((metros((e['lat'], e['lng']), (a, b)), c) for a, b, c in con)
+        if cerca and cerca[0][0] < 3000:
+            ciudad, fuente = cerca[0][1], f'lugar vecino del almacén a {round(cerca[0][0])} m'
+        else:
+            ciudad, fuente = limpia_ciudad(reverso(e['lat'], e['lng'])), 'Nominatim reverso'
+        if ciudad:
+            e.update(ciudad=ciudad, _ciudad_fijada=fuente)
+            e.pop('_ciudad_dudosa', None)
+            out.append((e['nombre'], ciudad, fuente))
+    _escribir(m, raiz)
+    construir(raiz)
+    return out
+
+
 # ── resolver las sedes de un festival en un paso (PR B, 16 nov 2026) ─────────
 def _centro(fid, raiz):
     """Dónde está el festival: sus pines ya puestos, o los lugares del almacén
@@ -504,6 +608,8 @@ def _con_sala(cruda, centro, raiz, radio_m=30000):
             if pn and pc.startswith(pn):
                 resto = pc[len(pn):]
                 sala = next((sa for sa in e.get('salas', []) if plano(sa) == resto), None)
+                if not sala:   # una variante conocida resuelve a la sala canónica
+                    sala = next((c_ for v_, c_ in (e.get('salas_alias') or {}).items() if plano(v_) == resto), None)
                 if sala:
                     return sid, sala
     return None
@@ -648,6 +754,10 @@ def main():
             print(f'  NUEVA     {cr}  →  buscar en Maps: {url}')
         print(f"{len(r['ya'])} ya · {len(r['conocida'])} conocidas{' (escritas)' if '--escribir' in a else ' (--escribir para aplicarlas)'}"
               f" · {len(r['parecida'])} para confirmar (--aceptar «cruda=s_xxx») · {len(r['nueva'])} nuevas")
+    elif '--completar-ciudades' in a:
+        for n, c, f in completar_ciudades():
+            print(f'  {n:50} → {c}  ({f})')
+        print(f'sin ciudad: {sum(1 for e in leer()["sedes"].values() if not e.get("ciudad"))}')
     elif '--tablero' in a:
         for fid, r, flojos, sin_maps in tablero():
             pend = len(r['conocida']) + len(r['parecida']) + len(r['nueva'])
