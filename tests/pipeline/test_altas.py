@@ -146,6 +146,9 @@ class Sondar(Base):
             with self.assertRaises(SystemExit):
                 A.registrar_ficha('x', 'Lluvia', 7, *args, raiz=self.r)
         self._respaldo()
+        A.anotar_fuente('x', 'Lluvia', 'tmdb_director', url='https://www.themoviedb.org/person/1', raiz=self.r)
+        with self.assertRaises(SystemExit):                  # TMDB no se respalda a sí mismo
+            A.registrar_ficha('x', 'Lluvia', 7, 'misma directora', ['letterboxd', 'tmdb_director'], self.r)
         self.api = {'/movie/7': {'credits': {'crew': [{'job': 'Director', 'name': 'Otra Persona'}]}}}
         with self.assertRaises(SystemExit):
             A.registrar_ficha('x', 'Lluvia', 7, 'misma directora', ['imdb', 'letterboxd'], self.r)
