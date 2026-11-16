@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "ensamblar.py: ids estables de las funciones (docs/FUNCION.md C1)",
-  "capturado": "2026-11-13"
+  "capturado": "2026-11-16"
  },
  "funciones": {
   "f_6c856cce71": {
@@ -22,14 +22,14 @@
    "sede": "Centro Colombo Americano - Medellín",
    "dia": "2026-11-19",
    "hora": "19:00",
-   "sala": "",
+   "sala": "Sala 1",
    "titulo": "cenizas y diamantes"
   },
   "f_6fc36893e9": {
    "sede": "Centro Colombo Americano - Medellín",
    "dia": "2026-11-20",
    "hora": "16:30",
-   "sala": "",
+   "sala": "Sala 2",
    "titulo": "regreso de africa"
   },
   "f_d10cfa308b": {
@@ -43,14 +43,14 @@
    "sede": "Centro Colombo Americano - Medellín",
    "dia": "2026-11-20",
    "hora": "19:00",
-   "sala": "",
+   "sala": "Sala 2",
    "titulo": "los inocentes encantadores"
   },
   "f_23f0b39afc": {
    "sede": "Centro Colombo Americano - Medellín",
    "dia": "2026-11-20",
    "hora": "19:00",
-   "sala": "",
+   "sala": "Sala 1",
    "titulo": "gioia mia"
   },
   "f_0ba6ba1a3a": {
@@ -64,7 +64,7 @@
    "sede": "Centro Colombo Americano - Medellín",
    "dia": "2026-11-21",
    "hora": "14:30",
-   "sala": "",
+   "sala": "Sala 2",
    "titulo": "la tierra prometida"
   },
   "f_28b57ac1da": {
@@ -92,36 +92,183 @@
    "sede": "Cinemateca de Bogotá - Bogotá",
    "dia": "2026-11-25",
    "hora": "18:30",
-   "sala": "",
+   "sala": "Sala Capital",
    "titulo": "shame and money"
+  },
+  "f_2654209d6c": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-11-26",
+   "hora": "16:00",
+   "sala": "Sala 2",
+   "titulo": "ciudadano havel"
   },
   "f_43f9884be2": {
    "sede": "Cinemateca de Bogotá - Bogotá",
    "dia": "2026-11-26",
    "hora": "17:00",
-   "sala": "",
+   "sala": "Sala 3",
    "titulo": "histeria"
   },
   "f_ed7fe5d715": {
    "sede": "Cinemateca de Bogotá - Bogotá",
    "dia": "2026-11-26",
    "hora": "17:00",
-   "sala": "",
+   "sala": "Sala Capital",
    "titulo": "the souffleur"
+  },
+  "f_a89c9c3153": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-11-26",
+   "hora": "19:00",
+   "sala": "Sala 2",
+   "titulo": "ino moxo el sueno del brujo"
+  },
+  "f_7eb873bf13": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-11-26",
+   "hora": "19:30",
+   "sala": "Sala 3",
+   "titulo": "la retirada"
+  },
+  "f_f099f216fa": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-11-27",
+   "hora": "14:30",
+   "sala": "Sala 3",
+   "titulo": "historias de una mentira"
+  },
+  "f_3a6030b537": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-11-27",
+   "hora": "16:00",
+   "sala": "Sala 2",
+   "titulo": "aqui en otros lugares"
+  },
+  "f_2402b739a7": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-11-27",
+   "hora": "16:30",
+   "sala": "Sala 3",
+   "titulo": "la salamandra"
   },
   "f_4ef959b53d": {
    "sede": "Cinemateca de Bogotá - Bogotá",
    "dia": "2026-11-27",
    "hora": "16:30",
-   "sala": "",
+   "sala": "Sala Capital",
    "titulo": "1982"
+  },
+  "f_2fd427a663": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-11-27",
+   "hora": "19:00",
+   "sala": "Sala 2",
+   "titulo": "labriego"
+  },
+  "f_28cdee8833": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-11-27",
+   "hora": "19:30",
+   "sala": "Sala 3",
+   "titulo": "padre"
+  },
+  "f_1cbb3fe13a": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-11-28",
+   "hora": "14:30",
+   "sala": "Sala 3",
+   "titulo": "hecho en colombia bloque 1"
+  },
+  "f_e91111ec2d": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-11-28",
+   "hora": "16:00",
+   "sala": "Sala 2",
+   "titulo": "nadie a la vista"
   },
   "f_1c1639d27e": {
    "sede": "Cinemateca de Bogotá - Bogotá",
    "dia": "2026-11-28",
    "hora": "16:30",
-   "sala": "",
+   "sala": "Sala Capital",
    "titulo": "todas las canciones del mundo"
+  },
+  "f_866ea1f464": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-11-28",
+   "hora": "17:00",
+   "sala": "Sala 3",
+   "titulo": "laguna"
+  },
+  "f_1f013248ab": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-11-28",
+   "hora": "18:00",
+   "sala": "Sala 2",
+   "titulo": "bright future"
+  },
+  "f_c121fb1b75": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-11-28",
+   "hora": "19:00",
+   "sala": "Sala Capital",
+   "titulo": "the megalomaniacs"
+  },
+  "f_aeab88b02c": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-11-28",
+   "hora": "20:00",
+   "sala": "Sala 2",
+   "titulo": "pulse"
+  },
+  "f_caf13da1b1": {
+   "sede": "Cinemateca Fontanar del Río - Bogotá",
+   "dia": "2026-11-29",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "cortometrajes de altura"
+  },
+  "f_cb55e388f2": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-11-29",
+   "hora": "14:00",
+   "sala": "Sala 3",
+   "titulo": "hecho en colombia bloque 2"
+  },
+  "f_8b4e1bc31e": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-11-29",
+   "hora": "16:30",
+   "sala": "Sala 3",
+   "titulo": "la ciudad blanca"
+  },
+  "f_5378451bd6": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-11-29",
+   "hora": "16:30",
+   "sala": "Sala Capital",
+   "titulo": "los golfos"
+  },
+  "f_61974e3c92": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-11-29",
+   "hora": "17:00",
+   "sala": "Sala 2",
+   "titulo": "license to live"
+  },
+  "f_4c38bc5347": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-11-29",
+   "hora": "19:00",
+   "sala": "Sala 2",
+   "titulo": "retorno antes de las 3 p m"
+  },
+  "f_730c9c11c9": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-11-29",
+   "hora": "19:00",
+   "sala": "Sala Capital",
+   "titulo": "la ultima ronda en venecia"
   }
  }
 }

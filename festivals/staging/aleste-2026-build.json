@@ -1,11 +1,11 @@
 {
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
-  "fuente": "MAMM (fichas del ciclo) + láminas de @aleste.colombia (3, 5 y 10 nov 2026)",
-  "capturado": "2026-11-13",
+  "fuente": "MAMM (fichas del ciclo) + láminas de @aleste.colombia (3, 5 y 10 nov 2026) + web oficial programa2026 (16 nov, Bogotá)",
+  "capturado": "2026-11-16",
   "ensamblador": "pipeline/ensamblar.py"
  },
- "_por_que_secciones": "«Al Este Especial» y «Fokus: Las grietas en el muro» son los sellos de las láminas, tal cual. «Al Este en el MAMM» es NUESTRO rótulo para las 4 del museo, que no traen sección: propuesta para Juan. «Al Este en la Cinemateca», mismo criterio para las 5 de Bogotá (13 nov).",
+ "_por_que_secciones": "16 nov 2026: las secciones son las de la web oficial (alestfestival.com/programa2026), tal cual. Se retiran «Al Este en el MAMM / en la Cinemateca», que eran rótulos nuestros por sede. «Fokus: Las grietas en el muro» (lámina IG) pasa a «del muro», como dice la web, que es la fuente más nueva. Emojis y nombres en inglés: propuesta, a confirmar con Juan.",
  "name": "Al Este",
  "displayName": "Al Este",
  "fullName": "9.º Festival de Cine de Europa Central y Oriental Al Este",
@@ -180,20 +180,45 @@
    "archetype": "Especiales / Eventos",
    "order": 1
   },
-  "🏛️ Al Este en el MAMM": {
-   "en": "Al Este at MAMM",
-   "archetype": "Muestra / País",
+  "🏆 Competencia Al Este": {
+   "en": "Al Este Competition",
+   "archetype": "Competencia",
    "order": 2
   },
-  "🎞️ Fokus: Las Grietas en el Muro": {
+  "🎞️ Fokus: Las Grietas del Muro": {
    "en": "Fokus: Cracks in the Wall",
    "archetype": "Retrospectiva / Tributo",
    "order": 3
   },
-  "🏙️ Al Este en la Cinemateca": {
-   "en": "Al Este at the Cinemateca",
-   "archetype": "Muestra / País",
+  "🔀 Competencia Vidas Cruzadas": {
+   "en": "Crossed Lives Competition",
+   "archetype": "Competencia",
    "order": 4
+  },
+  "🎉 Inauguración Bogotá": {
+   "en": "Bogotá Opening",
+   "archetype": "Apertura / Gala",
+   "order": 5
+  },
+  "🇨🇴 Competencia Hecho en Colombia": {
+   "en": "Made in Colombia Competition",
+   "archetype": "Competencia",
+   "order": 6
+  },
+  "🗾 Far East": {
+   "en": "Far East",
+   "archetype": "Retrospectiva / Tributo",
+   "order": 7
+  },
+  "🧸 Kluk - Cine Familiar": {
+   "en": "Kluk - Family Cinema",
+   "archetype": "Muestra / País",
+   "order": 8
+  },
+  "🏁 Clausura": {
+   "en": "Closing",
+   "archetype": "Clausura",
+   "order": 9
   }
  },
  "venues": {
@@ -223,6 +248,16 @@
    "address": "Cra. 3 #19-10, Bogotá",
    "_prec": "manual",
    "_match": "heredada de BIFF/MIDBO/BHFF 2026; coincide al decimal con Google Maps «Cinemateca de Bogotá»"
+  },
+  "Cinemateca Fontanar del Río - Bogotá": {
+   "short": "Cinemateca Fontanar del Río",
+   "city": "Bogotá",
+   "_prec": "manual",
+   "_nota": "Google Maps «CEFE Fontanar del río»; el mismo pin con que la publicamos en FICDEH y Narrar el Futuro",
+   "lat": 4.7561244,
+   "lng": -74.1110572,
+   "address": "Calle 146 # 138A-99",
+   "_match": "heredada de Anibia/FICDEH/Narrar el Futuro 2026 (Google Maps «CEFE Fontanar del río»)"
   }
  },
  "_avisos_id": [],
@@ -293,7 +328,7 @@
   {
    "title": "The Souffleur",
    "type": "film",
-   "section": "🏛️ Al Este en el MAMM",
+   "section": "🏆 Competencia Al Este",
    "director": "Gastón Solnicki",
    "year": 2025,
    "country": "Argentina, Austria",
@@ -330,7 +365,7 @@
   {
    "title": "Cenizas y diamantes",
    "type": "film",
-   "section": "🎞️ Fokus: Las Grietas en el Muro",
+   "section": "🎞️ Fokus: Las Grietas del Muro",
    "director": "Andrzej Wajda",
    "year": 1958,
    "country": "Polonia",
@@ -346,6 +381,7 @@
    "time": "19:00",
    "day_order": 1,
    "venue": "Centro Colombo Americano - Medellín",
+   "sala": "Sala 1",
    "has_qa": false,
    "synopsis": "En Polonia, concluida la Segunda Guerra Mundial, la situación política y social es caótica. El idealismo cede el paso a diversas formas de anarquía y extremismo. El protagonista, un joven que milita en un grupo ultranacionalista, recibe el encargo de asesinar a un importante comunista; pero, cuando el joven encuentra el amor, en pocas horas sus certezas comienzan a convertirse en dudas.",
    "synopsis_lang": "es",
@@ -368,7 +404,7 @@
   {
    "title": "Regreso de África",
    "type": "film",
-   "section": "🎞️ Fokus: Las Grietas en el Muro",
+   "section": "🎞️ Fokus: Las Grietas del Muro",
    "director": "Alain Tanner",
    "year": 1973,
    "country": "Suiza, Francia",
@@ -384,6 +420,7 @@
    "time": "16:30",
    "day_order": 2,
    "venue": "Centro Colombo Americano - Medellín",
+   "sala": "Sala 2",
    "has_qa": false,
    "synopsis": "Una joven pareja suiza, Vincent y Françoise, planea abandonar Ginebra e instalarse en África: un amigo suyo que vive en Argelia les promete darles trabajo allí.",
    "synopsis_lang": "es",
@@ -406,7 +443,7 @@
   {
    "title": "Padre",
    "type": "film",
-   "section": "🏛️ Al Este en el MAMM",
+   "section": "🏆 Competencia Al Este",
    "director": "Tereza Nvotová",
    "year": 2025,
    "country": "Eslovaquia, República Checa, Polonia",
@@ -444,7 +481,7 @@
   {
    "title": "Los inocentes encantadores",
    "type": "film",
-   "section": "🎞️ Fokus: Las Grietas en el Muro",
+   "section": "🎞️ Fokus: Las Grietas del Muro",
    "director": "Andrzej Wajda",
    "year": 1960,
    "country": "Polonia",
@@ -460,6 +497,7 @@
    "time": "19:00",
    "day_order": 2,
    "venue": "Centro Colombo Americano - Medellín",
+   "sala": "Sala 2",
    "has_qa": false,
    "synopsis": "Un joven médico está cansado de que las mujeres lo persigan. Una noche conoce a una muchacha que prácticamente se instala en su cuarto, y allí hablan de la moral y del amor.",
    "synopsis_lang": "es",
@@ -498,6 +536,7 @@
    "time": "19:00",
    "day_order": 2,
    "venue": "Centro Colombo Americano - Medellín",
+   "sala": "Sala 1",
    "has_qa": false,
    "synopsis": "Un verano que empieza a regañadientes se vuelve una aventura encantada cuando un niño descubre que la misteriosa casa siciliana de su tía guarda secretos y, quizá, espíritus antiguos escondidos entre sus muros.",
    "synopsis_lang": "es",
@@ -558,7 +597,7 @@
   {
    "title": "La tierra prometida",
    "type": "film",
-   "section": "🎞️ Fokus: Las Grietas en el Muro",
+   "section": "🎞️ Fokus: Las Grietas del Muro",
    "director": "Andrzej Wajda",
    "year": 1974,
    "country": "Polonia",
@@ -574,6 +613,7 @@
    "time": "14:30",
    "day_order": 3,
    "venue": "Centro Colombo Americano - Medellín",
+   "sala": "Sala 2",
    "has_qa": false,
    "synopsis": "A finales del siglo XIX, la ciudad de Lodz se ha convertido en el epicentro de la industria textil, con la consiguiente necesidad de mano de obra inmigrante. Tres jóvenes estudiantes de Riga: un polaco católico, hijo de nobles terratenientes, un ambicioso judío y un alemán luterano deciden abrir una fábrica en esa ciudad para hacer fortuna y, sin escrúpulos ni prejuicios, se lanzan a acumular dinero y poder. (FILMAFFINITY)",
    "synopsis_lang": "es",
@@ -596,7 +636,7 @@
   {
    "title": "1982",
    "type": "film",
-   "section": "🏛️ Al Este en el MAMM",
+   "section": "🏆 Competencia Al Este",
    "director": "Juan Carlos García",
    "year": 2025,
    "country": "Perú",
@@ -671,7 +711,7 @@
   {
    "title": "Londres",
    "type": "film",
-   "section": "🏛️ Al Este en el MAMM",
+   "section": "🔀 Competencia Vidas Cruzadas",
    "director": "Sebastian Brameshuber",
    "year": 2026,
    "country": "Austria",
@@ -708,7 +748,7 @@
   {
    "title": "Shame and Money",
    "type": "film",
-   "section": "🏙️ Al Este en la Cinemateca",
+   "section": "🎉 Inauguración Bogotá",
    "director": "Visar Morina",
    "year": 2026,
    "country": "Alemania, Kosovo, Eslovenia, Albania, Macedonia del Norte, Bélgica",
@@ -724,16 +764,16 @@
    "time": "18:30",
    "day_order": 7,
    "venue": "Cinemateca de Bogotá - Bogotá",
+   "sala": "Sala Capital",
    "has_qa": false,
    "synopsis": "Tras perder su medio de vida en su pueblo, una familia kosovar se ve obligada a trasladarse a la capital en busca de un lugar en una sociedad hipercapitalista.",
    "synopsis_lang": "es",
    "poster": "/assets/aleste-2026/shame-and-money.jpg",
    "posterSource": "tmdb",
    "_src": {
-    "url": "https://www.instagram.com/p/DfsHqtAlpmC/",
-    "date": "2026-11-12",
-    "tipo": "festival-ig",
-    "lamina": "01.jpg"
+    "url": "https://www.alestfestival.com/programa2026/shame-and-money",
+    "date": "2026-11-16",
+    "tipo": "festival-web"
    },
    "is_free": false,
    "lbSlug": "shame-and-money",
@@ -743,9 +783,45 @@
    "id": "f_0372296ef6"
   },
   {
+   "title": "Ciudadano Havel",
+   "type": "film",
+   "section": "🎞️ Fokus: Las Grietas del Muro",
+   "director": "Miroslav Janek, Pavel Koutecký",
+   "year": 2008,
+   "country": "República Checa",
+   "flags": "🇨🇿",
+   "duration": "119 min",
+   "genre": "Documental",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-11-26",
+    "16:00"
+   ],
+   "day": "2026-11-26",
+   "time": "16:00",
+   "day_order": 8,
+   "venue": "Cinemateca de Bogotá - Bogotá",
+   "sala": "Sala 2",
+   "has_qa": true,
+   "poster": "/assets/aleste-2026/ciudadano-havel.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://www.alestfestival.com/programa2026/ciudadano-havel",
+    "date": "2026-11-16",
+    "tipo": "festival-web"
+   },
+   "is_free": false,
+   "lbSlug": "citizen-havel",
+   "tmdb_id": 54346,
+   "synopsis_en": "The documentary explores the presidency of Václav Havel, a poet who unexpectedly became president. The film, starting in 1992, captures Havel’s experiences after the breakup of Czechoslovakia, a significant defeat for him as he had campaigned for its continuation. Despite political opposition and accusations of responsibility for the breakup, Havel runs for president of the new Czech Republic. The film, a unique document, was Koutecký’s most important project, continued by Janek after Koutecký’s death in 2006.",
+   "title_en": "Citizen Havel",
+   "_fid": "f_2654209d6c",
+   "id": "f_2654209d6c"
+  },
+  {
    "title": "Histeria",
    "type": "film",
-   "section": "🏙️ Al Este en la Cinemateca",
+   "section": "🏆 Competencia Al Este",
    "director": "Mehmet Akif Büyükatalay",
    "year": 2025,
    "country": "Alemania",
@@ -761,16 +837,16 @@
    "time": "17:00",
    "day_order": 8,
    "venue": "Cinemateca de Bogotá - Bogotá",
+   "sala": "Sala 3",
    "has_qa": false,
    "synopsis": "Cuando se encuentra un Corán quemado en el plató de una película, el equipo se ve envuelto en un caos. Atrapada en el fuego cruzado de las acusaciones, la becaria Elif se ve arrastrada a un peligroso juego de secretos y mentiras y se encuentra en el centro de una conspiración absorbente.",
    "synopsis_lang": "es",
    "poster": "/assets/aleste-2026/histeria.jpg",
    "posterSource": "tmdb",
    "_src": {
-    "url": "https://www.instagram.com/p/DfsHqtAlpmC/",
-    "date": "2026-11-12",
-    "tipo": "festival-ig",
-    "lamina": "04.jpg"
+    "url": "https://www.alestfestival.com/programa2026/histeria",
+    "date": "2026-11-16",
+    "tipo": "festival-web"
    },
    "is_free": false,
    "lbSlug": "hysteria-2025-1",
@@ -782,7 +858,7 @@
   {
    "title": "The Souffleur",
    "type": "film",
-   "section": "🏙️ Al Este en la Cinemateca",
+   "section": "🏆 Competencia Al Este",
    "director": "Gastón Solnicki",
    "year": 2025,
    "country": "Argentina, Austria",
@@ -798,16 +874,16 @@
    "time": "17:00",
    "day_order": 8,
    "venue": "Cinemateca de Bogotá - Bogotá",
+   "sala": "Sala Capital",
    "has_qa": false,
    "synopsis": "Lucius Glantz, un veterano director de hotel en Viena, lucha por salvar su querido establecimiento del plan de un intrigante agente inmobiliario para demolerlo, lo que lleva a un choque de voluntades que afecta incluso a la famosa receta del soufflé del hotel.",
    "synopsis_lang": "es",
    "poster": "/assets/aleste-2026/the-souffleur.jpg",
    "posterSource": "tmdb",
    "_src": {
-    "url": "https://www.instagram.com/p/DfsHqtAlpmC/",
-    "date": "2026-11-12",
-    "tipo": "festival-ig",
-    "lamina": "03.jpg"
+    "url": "https://www.alestfestival.com/programa2026/the-souffleur",
+    "date": "2026-11-16",
+    "tipo": "festival-web"
    },
    "is_free": false,
    "lbSlug": "the-souffleur",
@@ -817,9 +893,193 @@
    "id": "f_ed7fe5d715"
   },
   {
+   "title": "Ino Moxo: El sueño del brujo",
+   "type": "film",
+   "section": "🔀 Competencia Vidas Cruzadas",
+   "director": "Rodolfo Arrascue",
+   "year": 2024,
+   "country": "Perú, Colombia",
+   "flags": "🇵🇪🇨🇴",
+   "duration": "80 min",
+   "genre": "Documental",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-11-26",
+    "19:00"
+   ],
+   "day": "2026-11-26",
+   "time": "19:00",
+   "day_order": 8,
+   "venue": "Cinemateca de Bogotá - Bogotá",
+   "sala": "Sala 2",
+   "has_qa": true,
+   "qa_type": "team",
+   "synopsis": "Un viaje inmersivo y de misterios a las profundidades del bosque Amazónico en busca del gran brujo Ino Moxo (Pantera Negra), retratando los saberes y conocimientos de los más grandes y últimos curanderos del bosque Amazónico. Javier va en busca de su destino mientras una pantera negra lo guía y acecha.",
+   "synopsis_lang": "es",
+   "poster": "/assets/aleste-2026/ino-moxo-el-sueno-del-brujo.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://www.alestfestival.com/programa2026/ino-moxo-el-sueño-del-brujo",
+    "date": "2026-11-16",
+    "tipo": "festival-web"
+   },
+   "is_free": false,
+   "lbSlug": "ino-moxo-el-sueno-del-brujo",
+   "tmdb_id": 1374972,
+   "synopsis_en": "Documentary on the Amazonian sorcerer Ino Moxo",
+   "_fid": "f_a89c9c3153",
+   "id": "f_a89c9c3153"
+  },
+  {
+   "title": "La retirada",
+   "type": "film",
+   "section": "🎞️ Fokus: Las Grietas del Muro",
+   "director": "Václav Havel",
+   "year": 2011,
+   "country": "República Checa",
+   "flags": "🇨🇿",
+   "duration": "94 min",
+   "genre": "Comedia",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-11-26",
+    "19:30"
+   ],
+   "day": "2026-11-26",
+   "time": "19:30",
+   "day_order": 8,
+   "venue": "Cinemateca de Bogotá - Bogotá",
+   "sala": "Sala 3",
+   "has_qa": true,
+   "poster": "/assets/aleste-2026/la-retirada.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://www.alestfestival.com/programa2026/la-retirada",
+    "date": "2026-11-16",
+    "tipo": "festival-web"
+   },
+   "is_free": false,
+   "lbSlug": "leaving-2011",
+   "tmdb_id": 76598,
+   "synopsis_en": "A bitter sweet comedy that follows a highly appointed Chancellor who set to step down from his position after years of service to his country. With just two last days left to enjoy his palatial villa before he is finally evicted, his situation gradually goes from bad to worse.",
+   "title_en": "Leaving",
+   "_fid": "f_7eb873bf13",
+   "id": "f_7eb873bf13"
+  },
+  {
+   "title": "Historias de una mentira",
+   "type": "film",
+   "section": "🔀 Competencia Vidas Cruzadas",
+   "director": "Olia Verriopoulou",
+   "year": 2025,
+   "country": "Grecia, Francia",
+   "flags": "🇬🇷🇫🇷",
+   "duration": "76 min",
+   "genre": "Documental",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-11-27",
+    "14:30"
+   ],
+   "day": "2026-11-27",
+   "time": "14:30",
+   "day_order": 9,
+   "venue": "Cinemateca de Bogotá - Bogotá",
+   "sala": "Sala 3",
+   "has_qa": false,
+   "poster": "/assets/aleste-2026/historias-de-una-mentira.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://www.alestfestival.com/programa2026/historias-de-una-mentira",
+    "date": "2026-11-16",
+    "tipo": "festival-web"
+   },
+   "is_free": false,
+   "lbSlug": "stories-of-a-lie",
+   "tmdb_id": 1568190,
+   "synopsis_en": "During a stay in her native Greece, Olia hears that her friend Sofia has cancer. Her doctors and family are keeping the illness hidden from her, and Olia isn’t allowed to give anything away either. She decides to investigate the rationale behind this practice.",
+   "title_en": "Stories of a Lie",
+   "_fid": "f_f099f216fa",
+   "id": "f_f099f216fa"
+  },
+  {
+   "title": "Aquí, en otros lugares",
+   "type": "film",
+   "section": "🔀 Competencia Vidas Cruzadas",
+   "director": "Comes Chahbazian",
+   "year": 2026,
+   "country": "Bélgica, Armenia",
+   "flags": "🇧🇪🇦🇲",
+   "duration": "67 min",
+   "genre": "Documental",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-11-27",
+    "16:00"
+   ],
+   "day": "2026-11-27",
+   "time": "16:00",
+   "day_order": 9,
+   "venue": "Cinemateca de Bogotá - Bogotá",
+   "sala": "Sala 2",
+   "has_qa": true,
+   "poster": "/assets/aleste-2026/aqui-en-otros-lugares.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://www.alestfestival.com/programa2026/aquí-en-otros-lugares",
+    "date": "2026-11-16",
+    "tipo": "festival-web"
+   },
+   "is_free": false,
+   "lbSlug": "here-elsewhere-2026",
+   "tmdb_id": 1657855,
+   "synopsis_en": "July 2023. Nagorno-Karabakh has been under siege by Azerbaijan for seven months. As war draws nearer, Comes Chahbazian asks his friend Artziv to f ilm his daily life with his wife Tatev and their five children.",
+   "title_en": "Here, Elsewhere",
+   "_fid": "f_3a6030b537",
+   "id": "f_3a6030b537"
+  },
+  {
+   "title": "La salamandra",
+   "type": "film",
+   "section": "🎞️ Fokus: Las Grietas del Muro",
+   "director": "Alain Tanner",
+   "year": 1971,
+   "country": "Suiza, Francia",
+   "flags": "🇨🇭🇫🇷",
+   "duration": "123 min",
+   "genre": "Drama",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-11-27",
+    "16:30"
+   ],
+   "day": "2026-11-27",
+   "time": "16:30",
+   "day_order": 9,
+   "venue": "Cinemateca de Bogotá - Bogotá",
+   "sala": "Sala 3",
+   "has_qa": false,
+   "synopsis": "Dos jóvenes escritores noveles aparecen en la vida de Rosemonde, una joven de clase trabajadora a la que conocen cuando se hallan escribiendo un drama sobre un pequeño incidente en el que su tío resultó herido, quizás mientras limpiaba su rifle o, peor, quizás le disparase a posta. Pierre, un periodista free-lance, recibe el encargo de escribir el guión, pero falto de tiempo pide ayuda a un poeta bohemio amigo suyo, Paul.",
+   "synopsis_lang": "es",
+   "poster": "/assets/aleste-2026/la-salamandra.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://www.alestfestival.com/programa2026/la-salamandra",
+    "date": "2026-11-16",
+    "tipo": "festival-web"
+   },
+   "is_free": false,
+   "lbSlug": "the-salamander-1971",
+   "tmdb_id": 62978,
+   "synopsis_en": "Pierre and Paul, journalist and writer respectively, team up to write a screenplay based on the real story of a young woman accused by her uncle of trying to kill him. They decide to meet her.",
+   "title_en": "The Salamander",
+   "_fid": "f_2402b739a7",
+   "id": "f_2402b739a7"
+  },
+  {
    "title": "1982",
    "type": "film",
-   "section": "🏙️ Al Este en la Cinemateca",
+   "section": "🏆 Competencia Al Este",
    "director": "Juan Carlos García",
    "year": 2025,
    "country": "Perú",
@@ -835,16 +1095,16 @@
    "time": "16:30",
    "day_order": 9,
    "venue": "Cinemateca de Bogotá - Bogotá",
-   "has_qa": false,
+   "sala": "Sala Capital",
+   "has_qa": true,
    "synopsis": "En un pueblo andino del Perú, en 1982, Tato, un niño de 12 años, se ve forzado al exilio cuando su familia es amenazada.",
    "synopsis_lang": "es",
    "poster": "/assets/aleste-2026/1982.jpg",
    "posterSource": "tmdb",
    "_src": {
-    "url": "https://www.instagram.com/p/DfsHqtAlpmC/",
-    "date": "2026-11-12",
-    "tipo": "festival-ig",
-    "lamina": "05.jpg"
+    "url": "https://www.alestfestival.com/programa2026/1982",
+    "date": "2026-11-16",
+    "tipo": "festival-web"
    },
    "is_free": false,
    "lbSlug": "1982-2025",
@@ -854,9 +1114,251 @@
    "id": "f_4ef959b53d"
   },
   {
+   "title": "Labriego",
+   "type": "film",
+   "section": "🔀 Competencia Vidas Cruzadas",
+   "director": "Carlos Matsuo",
+   "year": 2026,
+   "country": "Colombia, México",
+   "flags": "🇨🇴🇲🇽",
+   "duration": "85 min",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-11-27",
+    "19:00"
+   ],
+   "day": "2026-11-27",
+   "time": "19:00",
+   "day_order": 9,
+   "venue": "Cinemateca de Bogotá - Bogotá",
+   "sala": "Sala 2",
+   "has_qa": true,
+   "qa_type": "team",
+   "_src": {
+    "url": "https://www.alestfestival.com/programa2026/labriego",
+    "date": "2026-11-16",
+    "tipo": "festival-web"
+   },
+   "is_free": false,
+   "_fid": "f_2fd427a663",
+   "id": "f_2fd427a663"
+  },
+  {
+   "title": "Padre",
+   "type": "film",
+   "section": "🏆 Competencia Al Este",
+   "director": "Tereza Nvotová",
+   "year": 2025,
+   "country": "Eslovaquia, República Checa, Polonia",
+   "flags": "🇸🇰🇨🇿🇵🇱",
+   "duration": "103 min",
+   "genre": "Drama",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-11-27",
+    "19:30"
+   ],
+   "day": "2026-11-27",
+   "time": "19:30",
+   "day_order": 9,
+   "venue": "Cinemateca de Bogotá - Bogotá",
+   "sala": "Sala 3",
+   "has_qa": true,
+   "synopsis": "La vida tranquila de un hombre exitoso se desmorona cuando su bebé desaparece de la guardería. La llamada desesperada de su esposa revela una verdad devastadora. Inspirada en hechos reales en torno al llamado síndrome del bebé olvidado, la película acompaña a Michal y a su esposa Zuzka a través del duelo, de la culpa, del escarnio público y el largo proceso judicial que sigue.",
+   "synopsis_lang": "es",
+   "poster": "/assets/aleste-2026/padre.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://www.alestfestival.com/programa2026/padre",
+    "date": "2026-11-16",
+    "tipo": "festival-web"
+   },
+   "is_free": false,
+   "lbSlug": "father-2025-1",
+   "tmdb_id": 1516518,
+   "synopsis_en": "The life of a man after he experiences forgotten baby syndrome, unintentionally leaving his infant daughter in the back seat of his car.",
+   "title_en": "Father",
+   "_fid": "f_28cdee8833",
+   "id": "f_28cdee8833"
+  },
+  {
+   "title": "Hecho en Colombia – Bloque 1",
+   "type": "film",
+   "section": "🇨🇴 Competencia Hecho en Colombia",
+   "country": "Colombia",
+   "flags": "🇨🇴",
+   "duration": "66 min",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-11-28",
+    "14:30"
+   ],
+   "day": "2026-11-28",
+   "time": "14:30",
+   "day_order": 10,
+   "venue": "Cinemateca de Bogotá - Bogotá",
+   "sala": "Sala 3",
+   "has_qa": true,
+   "qa_type": "team",
+   "_src": {
+    "url": "https://www.alestfestival.com/programa2026",
+    "date": "2026-11-16",
+    "tipo": "festival-web"
+   },
+   "is_free": false,
+   "is_cortos": true,
+   "film_list": [
+    {
+     "title": "Desde acá veo la tormenta",
+     "director": "Juan Felipe Restrepo",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "duration": "11 min",
+     "_src": {
+      "url": "https://www.alestfestival.com/programa2026/desde-acá-veo-la-tormenta",
+      "date": "2026-11-16"
+     },
+     "poster": "/assets/aleste-2026/desde-aca-veo-la-tormenta.jpg",
+     "posterSource": "oficial",
+     "genre": "Familia",
+     "year": 2026
+    },
+    {
+     "title": "Junio 25. Andréi Tarkovski, visita a su tumba",
+     "director": "Juan Camilo Moreno",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "duration": "5 min",
+     "_src": {
+      "url": "https://www.alestfestival.com/programa2026/junio-25.-andréi-tarkovski-visita-a-su-tumba",
+      "date": "2026-11-16"
+     },
+     "poster": "/assets/aleste-2026/junio-25-andrei-tarkovski-visita-a-su-tumba.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "junio-25-andrei-tarkovski-visita-a-su-tumba",
+     "tmdb_id": 1193850,
+     "synopsis_en": "Log of a trip to the cemetery where the grave of the Russian filmmaker and poet Andrei Tarkovsky lies."
+    },
+    {
+     "title": "Lejanía",
+     "director": "Daniel Velásquez Patarroyo",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "duration": "17 min",
+     "_src": {
+      "url": "https://www.alestfestival.com/programa2026/lejanía",
+      "date": "2026-11-16"
+     },
+     "poster": "/assets/aleste-2026/lejania.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "lejania-2026",
+     "tmdb_id": 1668904,
+     "synopsis": "Un viajero se dirige hacia Lejanía, una playa en una isla escondida en la inmensidad del océano pacífico, donde se presume, sus visitantes tienen visiones sobrenaturales. En medio de paisajes fragmentados y presencias clandestinas entre las sombras ,la realidad se desdibuja y el tiempo se deshace.",
+     "genre": "Documental",
+     "year": 2026,
+     "synopsis_lang": "es"
+    },
+    {
+     "title": "Liminal",
+     "director": "Gabriella Castelblanco",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "duration": "16 min",
+     "_src": {
+      "url": "https://www.alestfestival.com/programa2026/liminal",
+      "date": "2026-11-16"
+     },
+     "poster": "/assets/aleste-2026/liminal.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "liminal-6",
+     "tmdb_id": 1743116,
+     "synopsis": "¿Qué permanece en un lugar cuando nos vamos? En una travesía por diversos espacios liminales, entendidos como lugares de tránsito, ambigüedad y espera silenciosa, se explora la relación de los seres humanos con los lugares que han habitado y habitan, así como las sensaciones, los recuerdos y las emociones que estos espacios despiertan en los distintos momentos de sus vidas.",
+     "genre": "Documental",
+     "year": 2026,
+     "synopsis_lang": "es"
+    },
+    {
+     "title": "Refracción",
+     "director": "Isabella Palacio Mesa",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "duration": "11 min",
+     "_src": {
+      "url": "https://www.alestfestival.com/programa2026/refracción",
+      "date": "2026-11-16"
+     },
+     "poster": "/assets/aleste-2026/refraccion.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "refraccion",
+     "tmdb_id": 1584776,
+     "synopsis": "Eloísa, una chica de 20 años, está en dos relaciones al mismo tiempo. Una noche, después de haber estado con ambas chicas, se siente agobiada por estar en esa situación de engaño y en medio de su confusión sale a recorrer las calles de Medellín en bicicleta, donde se dará cuenta de que no quiere reconocerse pero deberá encontrarse consigo misma.",
+     "synopsis_en": "Eloísa, a 20-year-old girl, is in two relationships at the same time. One night, after having been with both girls, she feels overwhelmed by living in this situation of deceit, and in the middle of her confusion she goes out to ride her bike through the streets of Medellín, where she will realize that she does not want to acknowledge who she is — but will ultimately have to come face-to-face with herself.",
+     "genre": "Drama",
+     "year": 2025,
+     "synopsis_lang": "es"
+    },
+    {
+     "title": "Sol de niebla",
+     "director": "María José Ibarra, Florentino Vargas",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "duration": "6 min",
+     "_src": {
+      "url": "https://www.alestfestival.com/programa2026/sol-de-niebla",
+      "date": "2026-11-16"
+     },
+     "poster": "/assets/aleste-2026/sol-de-niebla.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "sol-de-niebla",
+     "tmdb_id": 1791609,
+     "synopsis": "Misty Sun presenta una visión fragmentada y multiángulosa de la Espeletia frailejones a través de la yuxtaposición de tomas detalladas (macro), funcionando como una especie de estudio morfológico de la planta. Contrasta las ilustraciones científicas, las representaciones institucionales y los discursos en torno a la Espeletia frailejones. Las imágenes, filmadas en película, transmiten una sensación de registro tangible de las frailejones y sus inflorescencias, creando una metáfora de la planta como un territorio habitado por diversas manifestaciones de la vida.",
+     "year": 2026,
+     "synopsis_lang": "es"
+    }
+   ],
+   "_fid": "f_1cbb3fe13a",
+   "id": "f_1cbb3fe13a"
+  },
+  {
+   "title": "Nadie a la vista",
+   "type": "film",
+   "section": "🔀 Competencia Vidas Cruzadas",
+   "director": "Kote Kalandadze",
+   "year": 2025,
+   "country": "Georgia",
+   "flags": "🇬🇪",
+   "duration": "75 min",
+   "genre": "Documental",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-11-28",
+    "16:00"
+   ],
+   "day": "2026-11-28",
+   "time": "16:00",
+   "day_order": 10,
+   "venue": "Cinemateca de Bogotá - Bogotá",
+   "sala": "Sala 2",
+   "has_qa": false,
+   "poster": "/assets/aleste-2026/nadie-a-la-vista.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://www.alestfestival.com/programa2026/nadie-a-la-vista",
+    "date": "2026-11-16",
+    "tipo": "festival-web"
+   },
+   "is_free": false,
+   "lbSlug": "nobody-in-sight",
+   "tmdb_id": 1594652,
+   "synopsis_en": "A feature documentary film by Kote Kalandadze",
+   "title_en": "Nobody In Sight",
+   "_fid": "f_e91111ec2d",
+   "id": "f_e91111ec2d"
+  },
+  {
    "title": "Todas las canciones del mundo",
    "type": "film",
-   "section": "🏙️ Al Este en la Cinemateca",
+   "section": "🏆 Competencia Al Este",
    "director": "Santiago Flórez Rincón",
    "year": 2026,
    "country": "Colombia",
@@ -871,29 +1373,478 @@
    "time": "16:30",
    "day_order": 10,
    "venue": "Cinemateca de Bogotá - Bogotá",
-   "has_qa": false,
+   "sala": "Sala Capital",
+   "has_qa": true,
+   "qa_type": "team",
    "synopsis": "La película sigue un viaje narrativo o documental que indaga en la memoria colectiva y afectiva que construyen las canciones en la vida de las personas. La trama teje diversas historias alrededor de la creación, la pérdida o la preservación musical, retratando cómo las melodías definen momentos históricos, geográficos y personales en Colombia.",
    "synopsis_lang": "es",
    "poster": "/assets/aleste-2026/todas-las-canciones-del-mundo.jpg",
    "posterSource": "tmdb",
    "_src": {
-    "url": "https://www.instagram.com/p/DfsHqtAlpmC/",
-    "date": "2026-11-12",
-    "tipo": "festival-ig",
-    "lamina": "02.jpg"
+    "url": "https://www.alestfestival.com/programa2026/todas-las-canciones-del-mundo",
+    "date": "2026-11-16",
+    "tipo": "festival-web"
    },
    "is_free": false,
    "lbSlug": "todas-las-canciones-del-mundo",
    "tmdb_id": 1744092,
    "_fid": "f_1c1639d27e",
    "id": "f_1c1639d27e"
+  },
+  {
+   "title": "Laguna",
+   "type": "film",
+   "section": "✨ Al Este Especial",
+   "director": "Šarūnas Bartas",
+   "year": 2025,
+   "country": "Lituania, Francia",
+   "flags": "🇱🇹🇫🇷",
+   "duration": "102 min",
+   "genre": "Documental",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-11-28",
+    "17:00"
+   ],
+   "day": "2026-11-28",
+   "time": "17:00",
+   "day_order": 10,
+   "venue": "Cinemateca de Bogotá - Bogotá",
+   "sala": "Sala 3",
+   "has_qa": true,
+   "qa_type": "team",
+   "poster": "/assets/aleste-2026/laguna.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://www.alestfestival.com/programa2026/laguna",
+    "date": "2026-11-16",
+    "tipo": "festival-web"
+   },
+   "is_free": false,
+   "lbSlug": "laguna-2025",
+   "tmdb_id": 1520513,
+   "synopsis_en": "On the Mexican Pacific coast, the land Ina Marija adopted before dying too young, her father and younger sister Una embark on a journey in her footsteps. There, amidst the lush nature of the mangroves—in a lagoon ravaged by hurricanes and constantly reborn—they begin the process of mourning. As he films this journey, Sharunas Bartas lays bare his emotions and, in an act of transmission, seeks a reconstruction nourished by the natural cycles of life and nature.",
+   "_fid": "f_866ea1f464",
+   "id": "f_866ea1f464"
+  },
+  {
+   "title": "Bright Future",
+   "type": "film",
+   "section": "🗾 Far East",
+   "director": "Kiyoshi Kurosawa",
+   "year": 2003,
+   "country": "Japón",
+   "flags": "🇯🇵",
+   "duration": "92 min",
+   "genre": "Drama",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-11-28",
+    "18:00"
+   ],
+   "day": "2026-11-28",
+   "time": "18:00",
+   "day_order": 10,
+   "venue": "Cinemateca de Bogotá - Bogotá",
+   "sala": "Sala 2",
+   "has_qa": false,
+   "poster": "/assets/aleste-2026/bright-future.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://www.alestfestival.com/programa2026/bright-future",
+    "date": "2026-11-16",
+    "tipo": "festival-web"
+   },
+   "is_free": false,
+   "lbSlug": "bright-future",
+   "tmdb_id": 26886,
+   "synopsis_en": "Buddies working at an oshibori factory bond over an uncontrollable rage neither can control, as well as a strange jellyfish they keep as a pet.",
+   "_fid": "f_1f013248ab",
+   "id": "f_1f013248ab"
+  },
+  {
+   "title": "The Megalomaniacs",
+   "type": "film",
+   "section": "✨ Al Este Especial",
+   "director": "Spiros Stathoulopoulos",
+   "year": 2025,
+   "country": "Grecia, Chipre, Colombia",
+   "flags": "🇬🇷🇨🇾🇨🇴",
+   "duration": "105 min",
+   "genre": "Drama",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-11-28",
+    "19:00"
+   ],
+   "day": "2026-11-28",
+   "time": "19:00",
+   "day_order": 10,
+   "venue": "Cinemateca de Bogotá - Bogotá",
+   "sala": "Sala Capital",
+   "has_qa": true,
+   "qa_type": "team",
+   "poster": "/assets/aleste-2026/the-megalomaniacs.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://www.alestfestival.com/programa2026/the-megalomaniacs",
+    "date": "2026-11-16",
+    "tipo": "festival-web"
+   },
+   "is_free": false,
+   "lbSlug": "the-megalomaniacs",
+   "tmdb_id": 1567508,
+   "synopsis_en": "Convinced that ancient pottery may hold traces of recorded sound, archaeologist Sofia travels to a remote Greek island to test her theory with Potter, an eccentric artist who doubts her idea.",
+   "_fid": "f_c121fb1b75",
+   "id": "f_c121fb1b75"
+  },
+  {
+   "title": "Pulse",
+   "type": "film",
+   "section": "🗾 Far East",
+   "director": "Kiyoshi Kurosawa",
+   "year": 2001,
+   "country": "Japón",
+   "flags": "🇯🇵",
+   "duration": "118 min",
+   "genre": "Terror",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-11-28",
+    "20:00"
+   ],
+   "day": "2026-11-28",
+   "time": "20:00",
+   "day_order": 10,
+   "venue": "Cinemateca de Bogotá - Bogotá",
+   "sala": "Sala 2",
+   "has_qa": false,
+   "synopsis": "Hace tiempo que Michi, Yunko y Yabe no tienen noticias de un amigo. Cuando Michi va a visitarlo a su casa lo encuentra un poco extraño. Aunque él dice encontrarse bien, al poco rato se encuentra colgado del techo. Por otro lado tenemos a Ryusuke, que prueba a conectarse a internet por primera vez, sin mucho éxito. De pronto su ordenador comienza a entrar solo en la red, y aparece una extraña página web, donde aparecen turbadoras imágenes de habitaciones oscuras y finalmente un inquietante mensaje: \"¿Quieres ver un fantasma?\".",
+   "synopsis_lang": "es",
+   "poster": "/assets/aleste-2026/pulse.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://www.alestfestival.com/programa2026/pulse",
+    "date": "2026-11-16",
+    "tipo": "festival-web"
+   },
+   "is_free": false,
+   "lbSlug": "pulse-2001",
+   "tmdb_id": 27324,
+   "synopsis_en": "In the immense city of Tokyo, the darkness of the afterlife lures some of its inhabitants desperately trying to escape the sadness and isolation of the modern world.",
+   "_fid": "f_aeab88b02c",
+   "id": "f_aeab88b02c"
+  },
+  {
+   "title": "Cortometrajes de Altura",
+   "type": "film",
+   "section": "🧸 Kluk - Cine Familiar",
+   "year": 2008,
+   "country": "Bolivia",
+   "flags": "🇧🇴",
+   "duration": "41 min",
+   "_ancla": [
+    "Cinemateca Fontanar del Río - Bogotá",
+    "2026-11-29",
+    "14:00"
+   ],
+   "day": "2026-11-29",
+   "time": "14:00",
+   "day_order": 11,
+   "venue": "Cinemateca Fontanar del Río - Bogotá",
+   "has_qa": false,
+   "_src": {
+    "url": "https://www.alestfestival.com/programa2026/cortometrajes-de-altura",
+    "date": "2026-11-16",
+    "tipo": "festival-web"
+   },
+   "is_free": false,
+   "_fid": "f_caf13da1b1",
+   "id": "f_caf13da1b1"
+  },
+  {
+   "title": "Hecho en Colombia – Bloque 2",
+   "type": "film",
+   "section": "🇨🇴 Competencia Hecho en Colombia",
+   "country": "Colombia",
+   "flags": "🇨🇴",
+   "duration": "51 min",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-11-29",
+    "14:00"
+   ],
+   "day": "2026-11-29",
+   "time": "14:00",
+   "day_order": 11,
+   "venue": "Cinemateca de Bogotá - Bogotá",
+   "sala": "Sala 3",
+   "has_qa": true,
+   "qa_type": "team",
+   "_src": {
+    "url": "https://www.alestfestival.com/programa2026",
+    "date": "2026-11-16",
+    "tipo": "festival-web"
+   },
+   "is_free": false,
+   "is_cortos": true,
+   "film_list": [
+    {
+     "title": "Las piedras del río",
+     "director": "Edna Sierra",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "duration": "16 min",
+     "_src": {
+      "url": "https://www.alestfestival.com/programa2026/las-piedras-del-río",
+      "date": "2026-11-16"
+     },
+     "poster": "/assets/aleste-2026/las-piedras-del-rio.jpg",
+     "posterSource": "oficial",
+     "synopsis": "En las orillas del río Magdalena, Esther guía a los espíritus de desaparecidos, víctimas de la violencia, mientras buscan reconstruir sus historias interrumpidas y encontrar su lugar entre la vida y la muerte.",
+     "genre": "Drama",
+     "year": 2026,
+     "synopsis_lang": "es"
+    },
+    {
+     "title": "Muchas, muchas gracias",
+     "director": "Oiyi Kan",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "duration": "20 min",
+     "_src": {
+      "url": "https://www.alestfestival.com/programa2026/muchas-muchas-gracias",
+      "date": "2026-11-16"
+     },
+     "poster": "/assets/aleste-2026/muchas-muchas-gracias.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "thanks-so-so-much",
+     "tmdb_id": 1592612,
+     "synopsis": "Entre China y Colombia, una abuela y su nieto heredan historias de hambre, abundancia y migración, al intentar descubrir dónde pertenece una familia entre dos mundos.",
+     "synopsis_en": "Across the Pacific drift five continents; there lie two lands that start with C: China and Colombia. In one I was born, in the other my grandmother. Her people, that run away of her lands to live without smiles; mine, once enslaved, sang to die smiling. Both of us learned to accept what belongs to neither here nor there—she, for crossing coasts for a husband who died; I, for being her grandson, bearing my grandfather’s name.",
+     "title_en": "Thanks so, so much",
+     "genre": "Documental",
+     "year": 2025,
+     "synopsis_lang": "es"
+    },
+    {
+     "title": "Todo lo que pasará mañana",
+     "director": "Santiago Calle García",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "duration": "15 min",
+     "_src": {
+      "url": "https://www.alestfestival.com/programa2026/todo-lo-que-pasará-mañana",
+      "date": "2026-11-16"
+     },
+     "poster": "/assets/aleste-2026/todo-lo-que-pasara-manana.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "todo-lo-que-pasara-manana",
+     "tmdb_id": 1812504,
+     "synopsis": "Un encuentro entre amigos se convierte en una experiencia que altera su realidad y transforma sus relaciones.",
+     "synopsis_en": "A hybrid queer short film that follows three friends during a weekend at a cabin in the rural area of Medellín. After spending time at a nearby river, the group arrives at their retreat in the middle of the forest, immersing themselves in a deep psychotropic ritual of love and desire. This experience alters their reality and ends up fracturing their relationship, evoking fragments and scraps of their shared memories. In this trance, a radical transformation is unleashed when they summon, together, a mysterious creature born from within themselves. Through their bodies and visual memory, a mutation occurs that pushes them to escape into the forest during the night. The next morning, each one leaves the cabin on their own, now living in a world where their friendship no longer exists.",
+     "synopsis_lang": "es"
+    }
+   ],
+   "_fid": "f_cb55e388f2",
+   "id": "f_cb55e388f2"
+  },
+  {
+   "title": "La ciudad blanca",
+   "type": "film",
+   "section": "🎞️ Fokus: Las Grietas del Muro",
+   "director": "Alain Tanner",
+   "year": 1983,
+   "country": "Suiza, Portugal",
+   "flags": "🇨🇭🇵🇹",
+   "duration": "108 min",
+   "genre": "Drama",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-11-29",
+    "16:30"
+   ],
+   "day": "2026-11-29",
+   "time": "16:30",
+   "day_order": 11,
+   "venue": "Cinemateca de Bogotá - Bogotá",
+   "sala": "Sala 3",
+   "has_qa": false,
+   "synopsis": "Harto del mar, Paul, un mecánico suizo que trabaja en las ruidosas entrañas de un barco mercante, desembarca en Lisboa.",
+   "synopsis_lang": "es",
+   "poster": "/assets/aleste-2026/la-ciudad-blanca.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://www.alestfestival.com/programa2026/la-ciudad-blanca",
+    "date": "2026-11-16",
+    "tipo": "festival-web"
+   },
+   "is_free": false,
+   "lbSlug": "in-the-white-city",
+   "tmdb_id": 33802,
+   "synopsis_en": "Fed up with the sea, Paul, a Swiss mechanic working in the noisy bowels of a merchant ship, lands in Lisbon.",
+   "title_en": "In the White City",
+   "_fid": "f_8b4e1bc31e",
+   "id": "f_8b4e1bc31e"
+  },
+  {
+   "title": "Los golfos",
+   "type": "film",
+   "section": "✨ Al Este Especial",
+   "director": "Carlos Saura",
+   "year": 1960,
+   "country": "España",
+   "flags": "🇪🇸",
+   "duration": "88 min",
+   "genre": "Drama",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-11-29",
+    "16:30"
+   ],
+   "day": "2026-11-29",
+   "time": "16:30",
+   "day_order": 11,
+   "venue": "Cinemateca de Bogotá - Bogotá",
+   "sala": "Sala Capital",
+   "has_qa": false,
+   "synopsis": "Un grupo de amigos que sobreviven penosamente en los arrabales de Madrid cometen pequeños delitos con el propósito de financiar el debut como torero de uno de ellos.",
+   "synopsis_lang": "es",
+   "poster": "/assets/aleste-2026/los-golfos.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://www.alestfestival.com/programa2026/los-golfos",
+    "date": "2026-11-16",
+    "tipo": "festival-web"
+   },
+   "is_free": false,
+   "lbSlug": "the-delinquents-1960",
+   "tmdb_id": 198915,
+   "synopsis_en": "A group of friends who are struggling to survive in the slums of Madrid commit petty crime in order to finance the debut as a bullfighter of one of them.",
+   "title_en": "The Delinquents",
+   "_fid": "f_5378451bd6",
+   "id": "f_5378451bd6"
+  },
+  {
+   "title": "License to Live",
+   "type": "film",
+   "section": "🗾 Far East",
+   "director": "Kiyoshi Kurosawa",
+   "year": 1998,
+   "country": "Japón",
+   "flags": "🇯🇵",
+   "duration": "109 min",
+   "genre": "Drama",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-11-29",
+    "17:00"
+   ],
+   "day": "2026-11-29",
+   "time": "17:00",
+   "day_order": 11,
+   "venue": "Cinemateca de Bogotá - Bogotá",
+   "sala": "Sala 2",
+   "has_qa": true,
+   "poster": "/assets/aleste-2026/license-to-live.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://www.alestfestival.com/programa2026/license-to-live",
+    "date": "2026-11-16",
+    "tipo": "festival-web"
+   },
+   "is_free": false,
+   "lbSlug": "license-to-live",
+   "tmdb_id": 48341,
+   "synopsis_en": "Having fallen into a coma following a car accident at 14, Yutaka wakes ten years later and realizes that his family is no longer intact: father, mother and sister live at different places, so he decides to reopen the farm that his family once ran.",
+   "_fid": "f_61974e3c92",
+   "id": "f_61974e3c92"
+  },
+  {
+   "title": "Retorno antes de las 3 p. m.",
+   "type": "film",
+   "section": "🏁 Clausura",
+   "director": "Gaël Lepingle",
+   "year": 2026,
+   "country": "Francia",
+   "flags": "🇫🇷",
+   "duration": "74 min",
+   "genre": "Documental",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-11-29",
+    "19:00"
+   ],
+   "day": "2026-11-29",
+   "time": "19:00",
+   "day_order": 11,
+   "venue": "Cinemateca de Bogotá - Bogotá",
+   "sala": "Sala 2",
+   "has_qa": false,
+   "synopsis": "Se trata de un hombre y su hogar, el padre en un complejo habitacional. Es después de su muerte. Se ha encontrado algo. No es un secreto, sino la cara oculta de los días, registrada con precisión obsesiva. Una lucha diaria con la vida material y el paso del tiempo.",
+   "synopsis_lang": "es",
+   "poster": "/assets/aleste-2026/retorno-antes-de-las-3-p-m.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://www.alestfestival.com/programa2026/retorno-antes-de-las-3-p.-m.",
+    "date": "2026-11-16",
+    "tipo": "festival-web"
+   },
+   "is_free": false,
+   "lbSlug": "back-before-3-pm",
+   "tmdb_id": 1633356,
+   "synopsis_en": "It's a man and his place, the father in a housing estate. It's after his death. Something has been found. Not a secret, but the underside of days, recorded with obsessive precision. A daily struggle with material life and the passing of time.",
+   "title_en": "Back Before 3 P.M.",
+   "_fid": "f_4c38bc5347",
+   "id": "f_4c38bc5347"
+  },
+  {
+   "title": "La última ronda en Venecia",
+   "type": "film",
+   "section": "✨ Al Este Especial",
+   "director": "Francesco Sossai",
+   "year": 2025,
+   "country": "Italia",
+   "flags": "🇮🇹",
+   "duration": "98 min",
+   "genre": "Comedia",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-11-29",
+    "19:00"
+   ],
+   "day": "2026-11-29",
+   "time": "19:00",
+   "day_order": 11,
+   "venue": "Cinemateca de Bogotá - Bogotá",
+   "sala": "Sala Capital",
+   "has_qa": false,
+   "synopsis": "Primera película de Francesco Sossai en Cannes 2025.  Carlobianchi y Doriano, dos cincuentones sin blanca con la filosofía de 'nunca te saltes la última copa', conocen a Giulio, un tímido estudiante de arquitectura a la deriva en la vida. Lo que empieza como un encuentro casual se convierte en un caótico viaje por carretera por las llanuras venecianas, donde los malos consejos, las resacas y una amistad inesperada redefinen los planes de vida y amor de Giulio.",
+   "synopsis_lang": "es",
+   "poster": "/assets/aleste-2026/la-ultima-ronda-en-venecia.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://www.alestfestival.com/programa2026/la-última-ronda-en-venecia",
+    "date": "2026-11-16",
+    "tipo": "festival-web"
+   },
+   "is_free": false,
+   "lbSlug": "the-last-one-for-the-road",
+   "tmdb_id": 1462322,
+   "synopsis_en": "A couple of jovial life-long drunkards run into a shy architecture undergrad, whose way of seeing things will be transformed as the trio wanders from pub to pub in search of a buried treasure.",
+   "title_en": "The Last One for the Road",
+   "_fid": "f_730c9c11c9",
+   "id": "f_730c9c11c9"
   }
+ ],
+ "_avisos_duracion": [
+  "«Bright Future»: 92 min en el festival, 115 en TMDB"
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-13T13:32:35",
-  "plan_sha": "6a78da8ea5e28378",
-  "paso": 8,
+  "fecha": "2026-11-16T10:19:38",
+  "plan_sha": "504f5daa1302f309",
+  "paso": 9,
   "cmd": "python3 pipeline/aleste-2026-verificar.py"
  }
 }
