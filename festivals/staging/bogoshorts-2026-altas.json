@@ -921,8 +921,50 @@
      "url": "https://www.themoviedb.org/person/6196306",
      "fecha": "2026-11-15",
      "resultado": "Ingrid Paola Bonilla Rodriguez (6196306): dirige 2"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/find/?q=El%20mandado&s=tt",
+     "fecha": "2026-11-16",
+     "resultado": "Solo 'El mandado' 1998 (28m, otra obra); 'The Favour' 2026 es de Omid Pakbin (Canadá). La obra no está"
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/El+mandado/",
+     "fecha": "2026-11-16",
+     "resultado": "Sin la obra (El Mandadero, El último mandado…); 'The Favour' tampoco"
+    },
+    "organismo_nacional": {
+     "url": "https://www.proimagenescolombia.com/secciones/cine_colombiano/perfiles/perfil_persona.php?id_perfil=4783",
+     "fecha": "2026-11-16",
+     "resultado": "Perfil Proimágenes de la directora: El mandado, beneficiario FDC 2024; filmografía solo lista Chaika (2023); sin ficha de la obra"
+    },
+    "web_director_o_productora": {
+     "url": "https://www.montanerafilms.com/",
+     "fecha": "2026-11-16",
+     "resultado": "Web de Montañera Films (productora de la directora): muestra La gallina saraviada, no El mandado; tráiler en su Facebook/YouTube"
+    },
+    "distribuidora_o_agencia": {
+     "na": true,
+     "por_que": "El catálogo (sección infantil) no trae contacto; Plein la bobine y Vurchel dan como contacto a la productora Montañera Films, sin distribuidora",
+     "fecha": "2026-11-16"
+    },
+    "plataformas_festivales": {
+     "url": "https://vurchel.com/v/51390/the-favour-el-mandado-ingrid-paola-bonilla-rodriguez",
+     "fecha": "2026-11-16",
+     "resultado": "Vurchel: The Favour (El Mandado), Colombia, 19 min, Oberhausen 2026; sin FilmFreeway; Short Film Depot pide sesión y Festhome no tiene catálogo público"
+    },
+    "festivales_previos": {
+     "url": "https://www.bing.com/search?q=%22El+mandado%22+%22Ingrid+Paola+Bonilla%22",
+     "fecha": "2026-11-16",
+     "resultado": "Kurzfilmtage Oberhausen 2026, Divercine (Uruguay), Mostra de Cinema Infantil (Brasil), Plein la bobine (Francia), Ecuador mayo. OJO: catálogo BOGOSHORTS mezcla líneas: la obra es Colombia 2026, ~20' (no Cuba/España 5')"
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.bing.com/images/search?q=%22El+mandado%22+Ingrid+Bonilla+afiche",
+     "fecha": "2026-11-16",
+     "resultado": "Solo foto de prensa de Oberhausen (1280x674, fotograma); nada más de la obra"
     }
-   }
+   },
+   "estado": "sin_afiche",
+   "por_que_sin_afiche": "Oberhausen, Plein la bobine, Divercine, Montañera Films y Bing Imágenes solo dan fotogramas apaisados; no se halló afiche (Facebook/Instagram de Montañera no revisables sin sesión)"
   },
   "El píxel y la parcela": {
    "titulo": "El píxel y la parcela",
@@ -942,8 +984,50 @@
      "url": "https://www.themoviedb.org/search/person?query=Hannah%20Meszaros%20Martin",
      "fecha": "2026-11-15",
      "resultado": "Hannah Meszaros Martin: sin perfil en TMDB"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/find/?q=The%20Pixel%20and%20the%20Plot&s=tt",
+     "fecha": "2026-11-16",
+     "resultado": "Sin la obra (ni por 'El pixel y la parcela')"
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/The+Pixel+and+the+Plot/",
+     "fecha": "2026-11-16",
+     "resultado": "Sin resultados (ni 'El píxel y la parcela')"
+    },
+    "organismo_nacional": {
+     "url": "https://www.proimagenescolombia.com/secciones/buscador/buscador_general_resultado.php?buscar=parcela",
+     "fecha": "2026-11-16",
+     "resultado": "Proimágenes: sin resultados"
+    },
+    "web_director_o_productora": {
+     "url": "https://www.planonegativo.org/en/coca-data",
+     "fecha": "2026-11-16",
+     "resultado": "Plano Negativo (productora, codirigida por la directora): proyecto 'The Data of Coca', 'The Pixel and the Plot, 2025, 17 min'; solo mapas, fotogramas y gráficos, sin afiche"
+    },
+    "distribuidora_o_agencia": {
+     "na": true,
+     "por_que": "El contacto del catálogo es la propia directora (hm@planonegativo.org); producción de Plano Negativo con apoyo de Antipode Foundation, sin distribuidora",
+     "fecha": "2026-11-16"
+    },
+    "plataformas_festivales": {
+     "url": "https://www.bing.com/search?q=%22The+Pixel+and+the+Plot%22+Hannah+Meszaros+Martin+festival",
+     "fecha": "2026-11-16",
+     "resultado": "Sin perfil FilmFreeway; Short Film Depot pide sesión y Festhome no tiene catálogo público"
+    },
+    "festivales_previos": {
+     "url": "https://antipodeonline.org/2026/02/13/the-pixel-and-the-plot/",
+     "fecha": "2026-11-16",
+     "resultado": "Estrenada en línea feb 2026 (Antipode Film Project); proyección en conferencia Future Proofing Human Rights; sin festivales previos hallados (premier colombiana en BOGOSHORTS)"
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.bing.com/images/search?q=%22The+Pixel+and+the+Plot%22+Meszaros+poster",
+     "fecha": "2026-11-16",
+     "resultado": "Solo banner 2560x472 en Antipode; nada más de la obra"
     }
-   }
+   },
+   "estado": "sin_afiche",
+   "por_que_sin_afiche": "Plano Negativo, Antipode y Bing Imágenes no tienen afiche; solo un banner panorámico 2560x472 y fotogramas/mapas"
   },
   "Escritorio": {
    "titulo": "Escritorio",
@@ -963,8 +1047,50 @@
      "url": "https://www.themoviedb.org/search/person?query=Dar%C3%ADo%20Vejarano%20Tafur",
      "fecha": "2026-11-15",
      "resultado": "Darío Vejarano Tafur: sin perfil en TMDB"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/find/?q=Escritorio%20Vejarano",
+     "fecha": "2026-11-16",
+     "resultado": "Sin resultados (tampoco 'Desk')"
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/Escritorio/",
+     "fecha": "2026-11-16",
+     "resultado": "Sin la obra (búsquedas 'Escritorio' y 'Desk Vejarano')"
+    },
+    "organismo_nacional": {
+     "url": "https://www.proimagenescolombia.com/secciones/buscador/buscador_general_resultado.php?buscar=Escritorio",
+     "fecha": "2026-11-16",
+     "resultado": "Proimágenes: sin resultados por título ni por 'Vejarano'"
+    },
+    "web_director_o_productora": {
+     "url": "https://www.marcelarobledo.com/",
+     "fecha": "2026-11-16",
+     "resultado": "Web de Marcela Robledo (productora/contacto del catálogo): no menciona Escritorio; Darío Vejarano sin web propia hallada"
+    },
+    "distribuidora_o_agencia": {
+     "na": true,
+     "por_que": "El contacto del catálogo es la productora Marcela Robledo Isaza (correo personal), sin distribuidora",
+     "fecha": "2026-11-16"
+    },
+    "plataformas_festivales": {
+     "url": "https://www.bing.com/search?q=%22Escritorio%22+%22Vejarano%22+cortometraje",
+     "fecha": "2026-11-16",
+     "resultado": "Sin perfil FilmFreeway; Short Film Depot pide sesión y Festhome no tiene catálogo público"
+    },
+    "festivales_previos": {
+     "url": "https://www.bing.com/search?q=%22Escritorio%22+%22Vejarano%22+cortometraje",
+     "fecha": "2026-11-16",
+     "resultado": "Premier mundial en BOGOSHORTS 2026: solo notas de prensa del festival (SCRD, bogota.gov.co); sin festivales previos"
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.bing.com/images/search?q=Escritorio+Dar%C3%ADo+Vejarano+afiche",
+     "fecha": "2026-11-16",
+     "resultado": "Nada de la obra (muebles y otros)"
     }
-   }
+   },
+   "estado": "sin_afiche",
+   "por_que_sin_afiche": "Premier mundial en BOGOSHORTS 2026; ni web de la productora ni Bing Imágenes ni prensa traen afiche"
   },
   "Espaciar": {
    "titulo": "Espaciar",
@@ -984,8 +1110,75 @@
      "url": "https://www.themoviedb.org/search/person?query=Daniela%20Giraldo%20Su%C3%A1rez",
      "fecha": "2026-11-15",
      "resultado": "Daniela Giraldo Suárez: sin perfil en TMDB"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/find/?q=Espaciar&s=tt",
+     "fecha": "2026-11-16",
+     "resultado": "Sin resultados para la obra"
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/Espaciar/",
+     "fecha": "2026-11-16",
+     "resultado": "Sin la obra (solo Especial, Espacios, Espacial)"
+    },
+    "organismo_nacional": {
+     "url": "https://www.proimagenescolombia.com/secciones/buscador/buscador_general_resultado.php?buscar=Espaciar",
+     "fecha": "2026-11-16",
+     "resultado": "Proimágenes: sin resultados"
+    },
+    "web_director_o_productora": {
+     "url": "https://www.camelloaudiovisual.com/espaciar",
+     "fecha": "2026-11-16",
+     "resultado": "Camello Audiovisual (productora de la directora): ficha con créditos, 7:47, 2024, 'en distribución', afiche oficial 1378x1929"
+    },
+    "distribuidora_o_agencia": {
+     "na": true,
+     "por_que": "El contacto del catálogo es la directora (camelloaudiovisual@gmail.com) y la web de la productora dice 'en distribución' sin nombrar distribuidora",
+     "fecha": "2026-11-16"
+    },
+    "plataformas_festivales": {
+     "url": "https://www.bing.com/search?q=%22Espaciar%22+%22Daniela+Giraldo%22",
+     "fecha": "2026-11-16",
+     "resultado": "Sin perfil FilmFreeway en resultados; Short Film Depot pide sesión y Festhome no tiene catálogo público"
+    },
+    "festivales_previos": {
+     "url": "https://www.ficgibara.icaic.cu/espaciar/19-festival-2025/",
+     "fecha": "2026-11-16",
+     "resultado": "FIC Gibara 2025 (19.º, Cuba: videoarte, 8', Colombia 2023); Cinemancia 2025 (cinemanciafestival.com/pelicula/espaciar/)"
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.bing.com/images/search?q=Espaciar+Daniela+Giraldo+Su%C3%A1rez+afiche",
+     "fecha": "2026-11-16",
+     "resultado": "Fotogramas en Cinemancia y Gibara; el afiche oficial está en la web de Camello Audiovisual"
     }
-   }
+   },
+   "afiche": {
+    "url": "https://static.wixstatic.com/media/8074d4_76e9676e7ac8476389adf9c8f363ee2b~mv2.jpg",
+    "fuente": "Afiche oficial en la web de la productora Camello Audiovisual (camelloaudiovisual.com/espaciar): título, directora, créditos y logos Camello/Archivo Shub",
+    "archivo": "fuentes/bogoshorts-2026/altas/espaciar.jpg",
+    "px": [
+     1286,
+     1929
+    ],
+    "ratio": 0.6667,
+    "recorte": {
+     "de": [
+      1378,
+      1929
+     ],
+     "caja": [
+      46,
+      0,
+      1332,
+      1929
+     ],
+     "centrado": true,
+     "objetivo": 0.6667
+    },
+    "veredicto_criterio": null,
+    "fecha": "2026-11-16"
+   },
+   "estado": "alta_posible"
   },
   "Fantasy Land": {
    "titulo": "Fantasy Land",
@@ -1005,8 +1198,50 @@
      "url": "https://www.themoviedb.org/person/3702810",
      "fecha": "2026-11-15",
      "resultado": "Aitana Ahrens (3702810): dirige 5"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/title/tt50552205/",
+     "fecha": "2026-11-16",
+     "resultado": "Fantasy Land (2026, corto, España) acreditado a 'Aitana Martínez', Kabiria Films, Paula Losada = la obra (mismo equipo que Marvin&Wayne); ojo: nombre del director distinto en IMDb"
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/Fantasy+Land/",
+     "fecha": "2026-11-16",
+     "resultado": "Sin la obra (solo Fantasy Island, Fantasyland 2010, etc.)"
+    },
+    "organismo_nacional": {
+     "na": true,
+     "por_que": "Obra española (Kabiria Films, 2026): el catálogo ICAA de calificación no lista cortos recientes de forma consultable; la ficha de distribuidora y la productora cubren los datos",
+     "fecha": "2026-11-16"
+    },
+    "web_director_o_productora": {
+     "url": "https://kabiriafilms.es/portfolio-item/fantasy-land/",
+     "fecha": "2026-11-16",
+     "resultado": "Kabiria Films: ficha 'Dirección: Aitana Ahrens. Cast: Paula Losada, Amalia Elorza'; sin afiche (solo logos de festivales)"
+    },
+    "distribuidora_o_agencia": {
+     "url": "https://marvinwayne.com/es/fantasy-land",
+     "fecha": "2026-11-16",
+     "resultado": "Marvin&Wayne distribuye: dir./guion Aitana Ahrens, Kabiria Films, España 2026, 18'03''; solo fotograma, sin afiche"
+    },
+    "plataformas_festivales": {
+     "url": "https://alternativeiff.ro/ro/filme-inscrise/fantasy-land-2026",
+     "fecha": "2026-11-16",
+     "resultado": "Inscrita en ALTER-NATIVE 34 (vía distribuidora); sin perfil FilmFreeway; Short Film Depot pide sesión y Festhome no tiene catálogo público"
+    },
+    "festivales_previos": {
+     "url": "https://www.bing.com/search?q=%22Fantasy+Land%22+%22Aitana+Ahrens%22",
+     "fecha": "2026-11-16",
+     "resultado": "Aguilar Film Festival (ficha hoy en 404), ALTER-NATIVE 34 (Rumanía), Cultura Joven sobre BOGOSHORTS España"
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.bing.com/images/search?q=%22Fantasy+Land%22+Aitana+Ahrens+poster",
+     "fecha": "2026-11-16",
+     "resultado": "Nada de la obra (pósters genéricos de 'fantasy land'); fotogramas 568x320 en alternativeiff.ro"
     }
-   }
+   },
+   "estado": "sin_afiche",
+   "por_que_sin_afiche": "Ni Marvin&Wayne, ni Kabiria Films, ni ALTER-NATIVE ni Bing Imágenes tienen afiche: solo fotogramas. (Posible afiche en Instagram p/DeZmsJpDCHk, no revisable sin sesión)"
   },
   "Fragmentos de una tarde en Pance (Sol Menguante)": {
    "titulo": "Fragmentos de una tarde en Pance (Sol Menguante)",
@@ -1026,8 +1261,55 @@
      "url": "https://www.themoviedb.org/person/3879867 https://www.themoviedb.org/person/5660550",
      "fecha": "2026-11-15",
      "resultado": "Daniel Candamil (3879867): dirige 1; Daniel Candamil (5660550): dirige 0"
+    },
+    "canal_oficial_artista": {
+     "url": "https://www.youtube.com/watch?v=OQjN1Q5oiB4",
+     "fecha": "2026-11-16",
+     "resultado": "Canal oficial Sol menguante, 'Video Oficial' 5:04: Dirección y Montaje Daniel Candamil (@danicandamil), Producción James Mathew, Casa prod. Framefruit, Dir. Foto Mercedes Oviedo, Arte Brocatitor = créditos del catálogo; Estímulo Takeshima Videoclip 2025; lanzado 2025-02-08"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/find/?q=Fragmentos%20de%20una%20tarde%20en%20Pance",
+     "fecha": "2026-11-16",
+     "resultado": "Sin la obra"
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/Fragmentos+de+una+tarde+en+Pance/",
+     "fecha": "2026-11-16",
+     "resultado": "Sin resultados"
+    },
+    "organismo_nacional": {
+     "url": "https://www.proimagenescolombia.com/secciones/buscador/buscador_general_resultado.php?buscar=Fragmentos",
+     "fecha": "2026-11-16",
+     "resultado": "Proimágenes: sin resultados (no registra videoclips)"
+    },
+    "web_director_o_productora": {
+     "url": "https://www.youtube.com/watch?v=OQjN1Q5oiB4",
+     "fecha": "2026-11-16",
+     "resultado": "Productora Framefruit y director Daniel Candamil solo con Instagram (no revisable sin sesión); créditos completos en la descripción del canal oficial"
+    },
+    "distribuidora_o_agencia": {
+     "na": true,
+     "por_que": "Videoclip; el contacto del catálogo es el productor James Mathew Carvajal (correo personal), sin distribuidora",
+     "fecha": "2026-11-16"
+    },
+    "plataformas_festivales": {
+     "url": "https://www.bing.com/search?q=%22Sol+Menguante%22+%22Fragmentos+de+una+tarde%22",
+     "fecha": "2026-11-16",
+     "resultado": "Sin perfil FilmFreeway; Short Film Depot pide sesión y Festhome no tiene catálogo público"
+    },
+    "festivales_previos": {
+     "url": "https://www.bing.com/search?q=%22Sol+Menguante%22+%22Fragmentos+de+una+tarde%22",
+     "fecha": "2026-11-16",
+     "resultado": "Catálogo: Takeshima 2025 (Estímulo de Videoclip) y Berlin Commercial 2026 (Selección Oficial Videoclip); la web solo trae YouTube/Spotify/Soundcloud/cifraclub"
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.bing.com/images/search?q=Sol+Menguante+Fragmentos+de+una+tarde+en+Pance+afiche",
+     "fecha": "2026-11-16",
+     "resultado": "Solo miniatura de YouTube y portada del sencillo (no valen como afiche)"
     }
-   }
+   },
+   "estado": "sin_afiche",
+   "por_que_sin_afiche": "Videoclip: solo hay portada del sencillo y miniaturas de YouTube; ningún afiche de la pieza audiovisual"
   },
   "Has estado aquí": {
    "titulo": "Has estado aquí",
@@ -1047,8 +1329,50 @@
      "url": "https://www.themoviedb.org/search/person?query=Vivian%20Mu%C3%B1oz%20Rodr%C3%ADguez",
      "fecha": "2026-11-15",
      "resultado": "Vivian Muñoz Rodríguez: sin perfil en TMDB"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/title/tt27164701/",
+     "fecha": "2026-11-16",
+     "resultado": "Has estado aquí (2023, 10m, corto) dir. y guion Vivian Muñoz Rodríguez, España, prod. CCCB = la obra (IMDb sí; TMDB no)"
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/Has+estado+aqu%C3%AD/",
+     "fecha": "2026-11-16",
+     "resultado": "Sin resultados (ni por 'You Have Been Here')"
+    },
+    "organismo_nacional": {
+     "url": "https://www.bing.com/search?q=%22Has+estado+aqu%C3%AD%22+%22Vivian+Mu%C3%B1oz%22",
+     "fecha": "2026-11-16",
+     "resultado": "Obra española (CCCB, Barcelona): sin ficha ICAA localizada; directora colombiana, Proimágenes no aplica a producción española"
+    },
+    "web_director_o_productora": {
+     "url": "https://www.cccb.org/es/multimedia/videos/has-estado-aqui/241608",
+     "fecha": "2026-11-16",
+     "resultado": "CCCB (productora, programa La mirada no importa/Aula) publica la obra completa con ficha; solo fotogramas"
+    },
+    "distribuidora_o_agencia": {
+     "na": true,
+     "por_que": "El catálogo no trae contacto ni distribuidora (programa City Barcelona); la difusión es del CCCB, que es la productora",
+     "fecha": "2026-11-16"
+    },
+    "plataformas_festivales": {
+     "url": "https://www.bing.com/search?q=%22Has+estado+aqu%C3%AD%22+%22Vivian+Mu%C3%B1oz%22",
+     "fecha": "2026-11-16",
+     "resultado": "Sin perfil FilmFreeway en resultados; Short Film Depot pide sesión y Festhome no tiene catálogo público; está en Vimeo (805883359) y YouTube (xrYhkGxNbb8)"
+    },
+    "festivales_previos": {
+     "url": "https://dafilmfestival.com/es/movie/has-estado-aqui/",
+     "fecha": "2026-11-16",
+     "resultado": "D'A Film Festival Barcelona 2023; ficha en cine.com"
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.bing.com/images/search?q=%22Has+estado+aqu%C3%AD%22+Vivian+Mu%C3%B1oz+poster",
+     "fecha": "2026-11-16",
+     "resultado": "Solo fotogramas apaisados (D'A 1600x900, lamidanoimporta.cat 1600x900, YouTube); ningún afiche"
     }
-   }
+   },
+   "estado": "sin_afiche",
+   "por_que_sin_afiche": "Ni D'A, ni CCCB, ni lamidanoimporta.cat, ni Bing Imágenes tienen afiche: solo fotogramas 16:9 y foto de la directora. Existe en IMDb tt27164701 pero no en TMDB"
   },
   "Herir al viento (Monopop, Monstera Delizziosa)": {
    "titulo": "Herir al viento (Monopop, Monstera Delizziosa)",
@@ -1068,8 +1392,55 @@
      "url": "https://www.themoviedb.org/person/6370160",
      "fecha": "2026-11-15",
      "resultado": "David Rendón Peláez (6370160): dirige 1"
+    },
+    "canal_oficial_artista": {
+     "url": "https://www.youtube.com/watch?v=5j3lgd5bA9g",
+     "fecha": "2026-11-16",
+     "resultado": "Canal oficial Monopop, 'Herir al Viento - Monopop ft. Monstera Delizziosa' 4:13: Video Dirección David Rendón, Dir. foto Luisa Betancur, Arte Susana Peláez = créditos del catálogo"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/find/?q=Herir%20al%20viento",
+     "fecha": "2026-11-16",
+     "resultado": "Sin resultados"
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/Herir+al+viento/",
+     "fecha": "2026-11-16",
+     "resultado": "Sin la obra"
+    },
+    "organismo_nacional": {
+     "url": "https://www.proimagenescolombia.com/secciones/buscador/buscador_general_resultado.php?buscar=Herir+al+viento",
+     "fecha": "2026-11-16",
+     "resultado": "Proimágenes: sin resultados (no registra videoclips)"
+    },
+    "web_director_o_productora": {
+     "url": "https://www.youtube.com/@monop0p",
+     "fecha": "2026-11-16",
+     "resultado": "David Rendón Peláez (director-productor, contacto del catálogo) sin web propia hallada; canal del artista con créditos"
+    },
+    "distribuidora_o_agencia": {
+     "na": true,
+     "por_que": "Videoclip autoproducido; el contacto del catálogo es el director David Rendón Peláez (correo personal)",
+     "fecha": "2026-11-16"
+    },
+    "plataformas_festivales": {
+     "url": "https://www.bing.com/search?q=%22Herir+al+viento%22+Monopop",
+     "fecha": "2026-11-16",
+     "resultado": "Sin perfil FilmFreeway; Short Film Depot pide sesión y Festhome no tiene catálogo público"
+    },
+    "festivales_previos": {
+     "url": "https://www.bing.com/search?q=%22Herir+al+viento%22+Monopop",
+     "fecha": "2026-11-16",
+     "resultado": "Solo 3 resultados: YouTube, Spotify y la ficha de BOGOSHORTS; sin festivales previos"
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.bing.com/images/search?q=Herir+al+viento+Monopop+Monstera+Delizziosa",
+     "fecha": "2026-11-16",
+     "resultado": "Solo portada del sencillo y miniaturas"
     }
-   }
+   },
+   "estado": "sin_afiche",
+   "por_que_sin_afiche": "Videoclip: solo portada del sencillo y miniaturas de YouTube; ningún afiche"
   },
   "I Carry Them": {
    "titulo": "I Carry Them",
@@ -2600,10 +2971,9 @@
    },
    "estado": "ficha_existente",
    "tmdb_id": 1575134,
-   "evidencia": "TMDB 1575134 «When the Herons Return» (2025, 19 min) acreditada a Robert Brand Ordóñez (persona TMDB 4113226): coincide director, año 2025, duración 19'25'' y título inglés del catálogo BOGOSHORTS; Nido Cine (productora del catálogo) lista la obra. Sin IMDb ni póster en TMDB.",
+   "evidencia": "mismo director (Robert Brand Ordóñez), 2025, 19 min (catálogo 19'25''), título en inglés del catálogo «When the Herons Return» igual al de TMDB; la productora Nido Cine la lista",
    "respaldo": [
     "letterboxd",
-    "tmdb_director",
     "web_director_o_productora"
    ],
    "ficha_fecha": "2026-11-16",
@@ -2627,8 +2997,56 @@
      "url": "https://www.themoviedb.org/person/2692496",
      "fecha": "2026-11-15",
      "resultado": "César Heredia Cruz (2692496): dirige 1"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/title/tt4392972/",
+     "fecha": "2026-11-16",
+     "resultado": "Elefante (2014, 15m, corto) dir. Cesar Heredia, elenco Gustavo Angarita y Juan Pablo Barragán, sinopsis del Renault 4 = la obra"
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/film/elefante-1/",
+     "fecha": "2026-11-16",
+     "resultado": "Ficha LB importada de TMDB 1826828 (dir. César Heredia, 15 min); búsqueda 'Elefante Heredia' sin otras"
+    },
+    "organismo_nacional": {
+     "url": "https://www.proimagenescolombia.com/secciones/cine_colombiano/peliculas_colombianas/pelicula_plantilla.php?id_pelicula=2344&lang=es",
+     "fecha": "2026-11-16",
+     "resultado": "Proimágenes: ELEFANTE, dir. César Heredia, ficción 2014, 13 min, elenco Angarita/Barragán; FIC Monterrey 2015"
+    },
+    "web_director_o_productora": {
+     "url": "https://cinecorto.co/elefante/",
+     "fecha": "2026-11-16",
+     "resultado": "Ficha en Cortometrajes Colombianos (cinecorto.co) con afiche oficial 1200x1714; el catálogo (homenaje HOM-CES) no trae contacto ni productora"
+    },
+    "distribuidora_o_agencia": {
+     "na": true,
+     "por_que": "Obra de 2014 en el homenaje a César Heredia (HOM-CES); el catálogo no trae contacto ni distribuidora y Proimágenes no lista distribuidora",
+     "fecha": "2026-11-16"
+    },
+    "plataformas_festivales": {
+     "url": "https://www.bing.com/search?q=%22Elefante%22+%22C%C3%A9sar+Heredia%22+cortometraje",
+     "fecha": "2026-11-16",
+     "resultado": "Sin perfil FilmFreeway en resultados; Short Film Depot pide sesión y Festhome no tiene catálogo público; está en Vimeo (vimeo.com/125202494) y Cineaparte (cineaparte.com/p/7717/elefante)"
+    },
+    "festivales_previos": {
+     "url": "https://www.bing.com/search?q=%22Elefante%22+%22C%C3%A9sar+Heredia%22+cortometraje",
+     "fecha": "2026-11-16",
+     "resultado": "FIC Monterrey 2015 (Proimágenes); Festival de Cine Corto de Popayán 2015 (festicinepopayan.com/2015/elefante/); Cinemateca de Bogotá «Salvador y Elefante»"
+    },
+    "busqueda_imagenes": {
+     "url": "https://cinecorto.co/wp-content/uploads/2015/11/Elefante-1200x1714.jpg",
+     "fecha": "2026-11-16",
+     "resultado": "Afiche oficial en cinecorto.co (1200x1714) y Proimágenes (270x385); la ficha TMDB 1826828 ya tiene póster"
     }
-   }
+   },
+   "estado": "ficha_existente",
+   "tmdb_id": 1826828,
+   "evidencia": "TMDB 1826828 'Elefante' dir. César Heredia, 15 min, sinopsis del Renault 4 y el padre = catálogo (Colombia 2014, 14'36''); coincide con IMDb tt4392972 y Proimágenes id 2344",
+   "respaldo": [
+    "imdb",
+    "organismo_nacional"
+   ],
+   "ficha_fecha": "2026-11-16"
   },
   "En el silencio después": {
    "titulo": "En el silencio después",
@@ -2648,8 +3066,57 @@
      "url": "https://www.themoviedb.org/person/3546884",
      "fecha": "2026-11-15",
      "resultado": "Sebastian Delascasas (3546884): dirige 2"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/title/tt43337293/",
+     "fecha": "2026-11-16",
+     "resultado": "In the Silence After (2026, 17m, corto) dir. Sebastian Delascasas; sinopsis del hijo que cuida a su madre = la obra"
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/film/in-the-silence-after/",
+     "fecha": "2026-11-16",
+     "resultado": "In the Silence After 2026, dir. Sebastian Delascasas (búsqueda letterboxd.com/search/films/In+the+Silence+After/)"
+    },
+    "organismo_nacional": {
+     "url": "https://www.proimagenescolombia.com/secciones/buscador/buscador_general_resultado.php?buscar=silencio+despu%C3%A9s",
+     "fecha": "2026-11-16",
+     "resultado": "Proimágenes: sin resultados por título ni por 'Delascasas' (coproducción Catar/EE.UU./Colombia)"
+    },
+    "web_director_o_productora": {
+     "url": "https://www.dohafilm.com/en/contents/178aebc7-795a-4f42-8cf7-dcb856b31a7c",
+     "fecha": "2026-11-16",
+     "resultado": "Doha Film Institute (Catar, coproductor) tiene ficha 'In The Silence After' con bio de Delascasas"
+    },
+    "distribuidora_o_agencia": {
+     "url": "https://www.travellingdistribution.com/films/in-the-silence-after",
+     "fecha": "2026-11-16",
+     "resultado": "Travelling Distribution (contacto del catálogo, Pierre Brouillette-Hamelin) tiene la obra en su catálogo"
+    },
+    "plataformas_festivales": {
+     "url": "https://pro.festivalscope.com/film/in-the-silence-after-2",
+     "fecha": "2026-11-16",
+     "resultado": "Festival Scope Pro tiene la ficha; sin FilmFreeway público; Short Film Depot pide sesión y Festhome no tiene catálogo público"
+    },
+    "festivales_previos": {
+     "url": "https://www.bing.com/search?q=%22In+the+Silence+After%22+Delascasas",
+     "fecha": "2026-11-16",
+     "resultado": "Locarno 2026 (79.ª edición, catálogo BOGOSHORTS); FilmAffinity film437692; Caracol Radio mayo 2026"
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.bing.com/images/search?q=In+the+Silence+After+Delascasas+poster",
+     "fecha": "2026-11-16",
+     "resultado": "La ficha TMDB 1724318 ya tiene póster (/zYCH1cCoA4MksFgwe3eP78IkPP.jpg)"
     }
-   }
+   },
+   "estado": "ficha_existente",
+   "tmdb_id": 1724318,
+   "evidencia": "TMDB 1724318 'In the Silence After' (2026, 17 min, QA/US/CO) dir./guion/foto/montaje Sebastian Delascasas = catálogo (Catar, EE.UU., Colombia 2026, 16'50'', mismos créditos); IMDb tt43337293 en external_ids",
+   "respaldo": [
+    "distribuidora_o_agencia",
+    "imdb",
+    "letterboxd"
+   ],
+   "ficha_fecha": "2026-11-16"
   },
   "Eri": {
    "titulo": "Eri",

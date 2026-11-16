@@ -99,6 +99,18 @@
    "_fuente": "https://www.themoviedb.org/movie/1575134",
    "_por_que": "altas.py --ficha: TMDB 1575134 «When the Herons Return» (2025, 19 min) acreditada a Robert Brand Ordóñez (persona TMDB 4113226): coincide director, año 2025, duración 19'25'' y título inglés del catálogo BOGOSHORTS. Sin IMDb ni póster en TMDB.",
    "_registro": "bogoshorts-2026-altas.json"
+  },
+  "Elefante": {
+   "tmdb": 1826828,
+   "_fuente": "https://www.themoviedb.org/movie/1826828",
+   "_por_que": "altas.py --ficha: TMDB 1826828 'Elefante' dir. César Heredia, 15 min, sinopsis del Renault 4 y el padre = catálogo (Colombia 2014, 14'36''); coincide con IMDb tt4392972 y Proimágenes id 2344",
+   "_registro": "bogoshorts-2026-altas.json"
+  },
+  "En el silencio después": {
+   "tmdb": 1724318,
+   "_fuente": "https://www.themoviedb.org/movie/1724318",
+   "_por_que": "altas.py --ficha: TMDB 1724318 'In the Silence After' (2026, 17 min, QA/US/CO) dir./guion/foto/montaje Sebastian Delascasas = catálogo (Catar, EE.UU., Colombia 2026, 16'50'', mismos créditos); IMDb tt43337293 en external_ids",
+   "_registro": "bogoshorts-2026-altas.json"
   }
  }
 }
