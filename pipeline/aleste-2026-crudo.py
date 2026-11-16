@@ -134,10 +134,9 @@ for (dia, hora, sede, sala), lst in sorted(grupos.items()):
         r.update(has_qa=True, qa_type='team')
     elif 'cineforo' in nota:
         r['has_qa'] = True
-    if o0['seccion'] == 'Inauguración Bogotá':      # la sección, tal cual la web
-        r['event_kind'] = 'apertura'
-    if o0['seccion'] == 'Clausura':
-        r['event_kind'] = 'clausura'
+    # Inauguración y Clausura de Bogotá son la proyección de UNA película: se
+    # quedan como película (con su sinopsis); la sección ya dice qué noche es.
+    # Un event_kind la volvería evento y se perdería la ficha.
     funciones.append(r)
 n_bog = sum(1 for f in funciones if f['sede'].startswith('Cinemateca'))
 if n_bog != 26:

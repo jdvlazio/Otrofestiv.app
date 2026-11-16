@@ -1,0 +1,43 @@
+{
+ "id": "w_JETFBZMAW32J",
+ "titulo_original": "La ciudad blanca",
+ "anio": 1983,
+ "paises": [
+  "PT",
+  "CH"
+ ],
+ "directores": [
+  "Alain Tanner"
+ ],
+ "aliases": [
+  {
+   "titulo": "In the White City",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "Harto del mar, Paul, un mecánico suizo que trabaja en las ruidosas entrañas de un barco mercante, desembarca en Lisboa.",
+  "en": "Fed up with the sea, Paul, a Swiss mechanic working in the noisy bowels of a merchant ship, lands in Lisbon."
+ },
+ "generos": [
+  "Drama"
+ ],
+ "afiche": {
+  "archivo": "/assets/aleste-2026/la-ciudad-blanca.jpg",
+  "veredicto": "oficial"
+ },
+ "xref": {
+  "tmdb": 33802,
+  "letterboxd": "in-the-white-city"
+ },
+ "versiones": [
+  {
+   "etiqueta": "108 min",
+   "duracion_min": 108
+  }
+ ],
+ "presentaciones": [
+  "aleste-2026"
+ ]
+}

@@ -444,7 +444,7 @@
    "posterSource": "tmdb",
    "genero": "Documental",
    "_heredado": {
-    "genero": "catálogo w_R4HCND964DS3 (ficci-65, jardin-2026)"
+    "genero": "catálogo w_R4HCND964DS3 (aleste-2026, ficci-65, jardin-2026)"
    }
   },
   {
@@ -500,7 +500,7 @@
    "posterSource": "tmdb",
    "anio": 2026,
    "_heredado": {
-    "anio": "catálogo w_R4F84MW9WTH9 (cinemancia-2026)"
+    "anio": "catálogo w_R4F84MW9WTH9 (aleste-2026, cinemancia-2026)"
    }
   },
   {
@@ -877,6 +877,8 @@
    "_verificado": "declarada a mano: altas.py --sondar: tmdb_alternos: TMDB 1633356 «Back Before 3 P.M.» — director ✓ y año/duración ✓",
    "_director": "Gaël Lepingle",
    "_sondeado": "2026-11-16",
+   "sinopsis": "Se trata de un hombre y su hogar, el padre en un complejo habitacional. Es después de su muerte. Se ha encontrado algo. No es un secreto, sino la cara oculta de los días, registrada con precisión obsesiva. Una lucha diaria con la vida material y el paso del tiempo.",
+   "_sinopsis": "https://www.alestfestival.com/programa2026/retorno-antes-de-las-3-p.-m.",
    "poster": "/assets/aleste-2026/retorno-antes-de-las-3-p-m.jpg",
    "posterSource": "tmdb"
   },
@@ -1485,7 +1487,7 @@
    "posterSource": "tmdb",
    "genero": "Documental",
    "_heredado": {
-    "genero": "catálogo w_R4HCND964DS3 (ficci-65, jardin-2026)"
+    "genero": "catálogo w_R4HCND964DS3 (aleste-2026, ficci-65, jardin-2026)"
    }
   },
   "License to Live": {
@@ -1539,7 +1541,7 @@
    "posterSource": "tmdb",
    "anio": 2026,
    "_heredado": {
-    "anio": "catálogo w_R4F84MW9WTH9 (cinemancia-2026)"
+    "anio": "catálogo w_R4F84MW9WTH9 (aleste-2026, cinemancia-2026)"
    }
   },
   "Londres": {
@@ -1905,6 +1907,8 @@
    "_verificado": "declarada a mano: altas.py --sondar: tmdb_alternos: TMDB 1633356 «Back Before 3 P.M.» — director ✓ y año/duración ✓",
    "_director": "Gaël Lepingle",
    "_sondeado": "2026-11-16",
+   "sinopsis": "Se trata de un hombre y su hogar, el padre en un complejo habitacional. Es después de su muerte. Se ha encontrado algo. No es un secreto, sino la cara oculta de los días, registrada con precisión obsesiva. Una lucha diaria con la vida material y el paso del tiempo.",
+   "_sinopsis": "https://www.alestfestival.com/programa2026/retorno-antes-de-las-3-p.-m.",
    "poster": "/assets/aleste-2026/retorno-antes-de-las-3-p-m.jpg",
    "posterSource": "tmdb"
   },

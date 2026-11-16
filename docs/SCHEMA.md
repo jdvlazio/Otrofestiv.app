@@ -351,10 +351,10 @@ está pasando de verdad — no lo que alguien recordaba al escribirlo.
 | `synopsis_en` | string | — | 42 fest |  |
 | `synopsis_es` | string | — | 2 fest |  |
 | `synopsis_lang` | string | `es` · `en` · `pt` | 44 fest | no lo lee la vista: guardianes No lo lee la vista: lo consumen los guardianes ([paridad-derivados]). |
-| `description` | string | — | 42 fest | Texto de un PROGRAMA o una ACTIVIDAD (no de una obra: eso es synopsis). En español; lib.separar_descripcion es la regla. |
-| `description_en` | string | — | 6 fest |  |
+| `description` | string | — | 41 fest | Texto de un PROGRAMA o una ACTIVIDAD (no de una obra: eso es synopsis). En español; lib.separar_descripcion es la regla. |
+| `description_en` | string | — | 5 fest |  |
 | `description_es` | string | — | 1 fest |  |
-| `description_lang` | string | `es` · `en` · `pt` | 42 fest |  |
+| `description_lang` | string | `es` · `en` · `pt` | 41 fest |  |
 | `rating` | string | — | 8 fest |  |
 | `premiere` | string | — | 19 fest | Texto libre del festival («World Premiere», «Estreno argentino»). |
 | `type` | string | `film` · `event` · `short` | 45 fest |  |

@@ -747,7 +747,7 @@
   },
   {
    "title": "Shame and Money",
-   "type": "event",
+   "type": "film",
    "section": "🎉 Inauguración Bogotá",
    "director": "Visar Morina",
    "year": 2026,
@@ -765,8 +765,9 @@
    "day_order": 7,
    "venue": "Cinemateca de Bogotá - Bogotá",
    "sala": "Sala Capital",
-   "event_kind": "apertura",
    "has_qa": false,
+   "synopsis": "Tras perder su medio de vida en su pueblo, una familia kosovar se ve obligada a trasladarse a la capital en busca de un lugar en una sociedad hipercapitalista.",
+   "synopsis_lang": "es",
    "poster": "/assets/aleste-2026/shame-and-money.jpg",
    "posterSource": "tmdb",
    "_src": {
@@ -777,17 +778,9 @@
    "is_free": false,
    "lbSlug": "shame-and-money",
    "tmdb_id": 1553591,
-   "description": "Tras perder su medio de vida en su pueblo, una familia kosovar se ve obligada a trasladarse a la capital en busca de un lugar en una sociedad hipercapitalista.",
-   "description_en": "After losing their livelihood in a village, a Kosovar family is forced to move to the capital in pursuit of a place in a hypercapitalist society.",
-   "description_lang": "es",
+   "synopsis_en": "After losing their livelihood in a village, a Kosovar family is forced to move to the capital in pursuit of a place in a hypercapitalist society.",
    "_fid": "f_0372296ef6",
-   "id": "f_0372296ef6",
-   "synopsis": "Tras perder su medio de vida en su pueblo, una familia kosovar se ve obligada a trasladarse a la capital en busca de un lugar en una sociedad hipercapitalista.",
-   "synopsis_lang": "es",
-   "_conservado": [
-    "synopsis",
-    "synopsis_lang"
-   ]
+   "id": "f_0372296ef6"
   },
   {
    "title": "Ciudadano Havel",
@@ -1769,7 +1762,7 @@
   },
   {
    "title": "Retorno antes de las 3 p. m.",
-   "type": "event",
+   "type": "film",
    "section": "🏁 Clausura",
    "director": "Gaël Lepingle",
    "year": 2026,
@@ -1787,8 +1780,9 @@
    "day_order": 11,
    "venue": "Cinemateca de Bogotá - Bogotá",
    "sala": "Sala 2",
-   "event_kind": "clausura",
    "has_qa": false,
+   "synopsis": "Se trata de un hombre y su hogar, el padre en un complejo habitacional. Es después de su muerte. Se ha encontrado algo. No es un secreto, sino la cara oculta de los días, registrada con precisión obsesiva. Una lucha diaria con la vida material y el paso del tiempo.",
+   "synopsis_lang": "es",
    "poster": "/assets/aleste-2026/retorno-antes-de-las-3-p-m.jpg",
    "posterSource": "tmdb",
    "_src": {
@@ -1799,8 +1793,8 @@
    "is_free": false,
    "lbSlug": "back-before-3-pm",
    "tmdb_id": 1633356,
+   "synopsis_en": "It's a man and his place, the father in a housing estate. It's after his death. Something has been found. Not a secret, but the underside of days, recorded with obsessive precision. A daily struggle with material life and the passing of time.",
    "title_en": "Back Before 3 P.M.",
-   "description_en": "It's a man and his place, the father in a housing estate. It's after his death. Something has been found. Not a secret, but the underside of days, recorded with obsessive precision. A daily struggle with material life and the passing of time.",
    "_fid": "f_4c38bc5347",
    "id": "f_4c38bc5347"
   },
@@ -1848,7 +1842,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-16T10:12:31",
+  "fecha": "2026-11-16T10:19:38",
   "plan_sha": "504f5daa1302f309",
   "paso": 9,
   "cmd": "python3 pipeline/aleste-2026-verificar.py"
