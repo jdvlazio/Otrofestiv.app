@@ -343,8 +343,50 @@
      "url": "https://www.themoviedb.org/person/4955475",
      "fecha": "2026-11-15",
      "resultado": "Daniel Quintero Correa (4955475): dirige 0"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/find/?q=Carta%20a%20un%20joven%20ladr%C3%B3n&s=tt",
+     "fecha": "2026-11-16",
+     "resultado": "Buscador de títulos IMDb con «Carta a un joven ladrón» y «Letter to a Young Thief»: ninguna ficha de la obra"
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/Carta%20a%20un%20joven%20ladr%C3%B3n/",
+     "fecha": "2026-11-16",
+     "resultado": "Búsqueda Letterboxd «Carta a un joven ladrón» y «Letter to a Young Thief»: ninguna ficha de la obra"
+    },
+    "organismo_nacional": {
+     "url": "https://www.proimagenescolombia.com/secciones/buscador/buscador_general_resultado.php?buscar=Carta%20a%20un%20joven%20ladr%C3%B3n",
+     "fecha": "2026-11-16",
+     "resultado": "Buscador general de Proimágenes (verificado que devuelve películas): sin ficha de la obra ni del director"
+    },
+    "web_director_o_productora": {
+     "url": "https://www.imdb.com/name/nm18162452/",
+     "fecha": "2026-11-16",
+     "resultado": "Catálogo: producción Santiago Posada Bernal y el director (colectivo La Misma Gente). Web: solo LinkedIn/Instagram/IMDb del director (nm18162452, acreditado por «Esta es la Historia de Henry»); la obra no aparece en ninguno."
+    },
+    "distribuidora_o_agencia": {
+     "na": true,
+     "por_que": "Catálogo BOGOSHORTS: contacto es el propio director (gmail); sin distribuidora ni agencia",
+     "fecha": "2026-11-16"
+    },
+    "plataformas_festivales": {
+     "url": "https://www.bing.com/search?q=filmfreeway%20%22Carta%20a%20un%20joven%20ladr%C3%B3n%22",
+     "fecha": "2026-11-16",
+     "resultado": "Short Film Depot y Festhome no tienen catálogo público (SFD exige login; Festhome solo lista festivales). FilmFreeway: búsqueda web «filmfreeway <título> <director>» sin perfil de la obra."
+    },
+    "festivales_previos": {
+     "url": "https://www.bing.com/search?q=%22Carta%20a%20un%20joven%20ladr%C3%B3n%22",
+     "fecha": "2026-11-16",
+     "resultado": "Catálogo: Premier mundial en BOGOSHORTS 2026; búsquedas web con comillas (español e inglés «Letter to a Young Thief») sin otros festivales"
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.bing.com/images/search?q=%22Carta%20a%20un%20joven%20ladr%C3%B3n%22%20afiche",
+     "fecha": "2026-11-16",
+     "resultado": "Bing Imágenes «Carta a un joven ladrón» afiche/poster: solo libros y notas no relacionadas; sin afiche"
     }
-   }
+   },
+   "estado": "sin_afiche",
+   "por_que_sin_afiche": "sin afiche tras catálogo, web/redes del director, plataformas y Bing Imágenes"
   },
   "Cartas a Daniel Apóstol": {
    "titulo": "Cartas a Daniel Apóstol",
@@ -364,8 +406,50 @@
      "url": "https://www.themoviedb.org/search/person?query=David%20Su%C3%A1rez%20Mu%C3%B1et%C3%B3n",
      "fecha": "2026-11-15",
      "resultado": "David Suárez Muñetón: sin perfil en TMDB"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/find/?q=Cartas%20a%20Daniel%20Ap%C3%B3stol&s=tt",
+     "fecha": "2026-11-16",
+     "resultado": "Buscador de títulos IMDb con «Cartas a Daniel Apóstol» y «Letters to Apostle Daniel»: ninguna ficha de la obra"
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/Cartas%20a%20Daniel%20Ap%C3%B3stol/",
+     "fecha": "2026-11-16",
+     "resultado": "Búsqueda Letterboxd «Cartas a Daniel Apóstol» y «Letters to Apostle Daniel»: ninguna ficha de la obra"
+    },
+    "organismo_nacional": {
+     "url": "https://www.proimagenescolombia.com/secciones/buscador/buscador_general_resultado.php?buscar=Cartas%20a%20Daniel%20Ap%C3%B3stol",
+     "fecha": "2026-11-16",
+     "resultado": "Buscador general de Proimágenes (verificado que devuelve películas): sin ficha de la obra ni del director"
+    },
+    "web_director_o_productora": {
+     "url": "https://www.bing.com/search?q=%22Cartas%20a%20Daniel%20Ap%C3%B3stol%22",
+     "fecha": "2026-11-16",
+     "resultado": "Catálogo: producción Juan José Arias Gil (contacto gmail). Web: único rastro es un post de IG de Archipiélago Sonoro (22 oct 2026, «próximamente noticias»); sin web de productora ni del director"
+    },
+    "distribuidora_o_agencia": {
+     "na": true,
+     "por_que": "Catálogo BOGOSHORTS: contacto es el productor Juan José Arias Gil (gmail); sin distribuidora ni agencia",
+     "fecha": "2026-11-16"
+    },
+    "plataformas_festivales": {
+     "url": "https://www.bing.com/search?q=filmfreeway%20%22Cartas%20a%20Daniel%20Ap%C3%B3stol%22",
+     "fecha": "2026-11-16",
+     "resultado": "Short Film Depot y Festhome no tienen catálogo público (SFD exige login; Festhome solo lista festivales). FilmFreeway: búsqueda web «filmfreeway <título> <director>» sin perfil de la obra."
+    },
+    "festivales_previos": {
+     "url": "https://www.bing.com/search?q=%22Cartas%20a%20Daniel%20Ap%C3%B3stol%22",
+     "fecha": "2026-11-16",
+     "resultado": "Catálogo: Premier mundial en BOGOSHORTS 2026; búsqueda con comillas en español e inglés sin otros festivales"
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.bing.com/images/search?q=%22Cartas%20a%20Daniel%20Ap%C3%B3stol%22%20poster",
+     "fecha": "2026-11-16",
+     "resultado": "Bing Imágenes: solo imágenes bíblicas no relacionadas; sin afiche"
     }
-   }
+   },
+   "estado": "sin_afiche",
+   "por_que_sin_afiche": "sin afiche en catálogo, redes ni Bing Imágenes; obra en premier mundial sin material público"
   },
   "Cassandra": {
    "titulo": "Cassandra",
@@ -385,8 +469,51 @@
      "url": "https://www.themoviedb.org/person/2826921",
      "fecha": "2026-11-15",
      "resultado": "Martin Arbelaez (2826921): dirige 0"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/find/?q=Cassandra&s=tt",
+     "fecha": "2026-11-16",
+     "resultado": "Buscador de títulos IMDb con «Cassandra» y «Cassandra»: ninguna ficha de la obra"
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/Cassandra/",
+     "fecha": "2026-11-16",
+     "resultado": "Búsqueda Letterboxd «Cassandra» y «Cassandra»: ninguna ficha de la obra"
+    },
+    "organismo_nacional": {
+     "url": "https://www.proimagenescolombia.com/secciones/buscador/buscador_general_resultado.php?buscar=Cassandra",
+     "fecha": "2026-11-16",
+     "resultado": "Buscador general de Proimágenes (verificado que devuelve películas): sin ficha de la obra ni del director",
+     "parcial": "no se miró CNC/Unifrance (coproducción con Francia)"
+    },
+    "web_director_o_productora": {
+     "url": "https://www.panoramaducinemacolombien.com/films/cassandra/",
+     "fecha": "2026-11-16",
+     "resultado": "Sin web del director ni productora; la ficha PACCPA (página de la obra) presenta al director, montajista residente en Francia"
+    },
+    "distribuidora_o_agencia": {
+     "na": true,
+     "por_que": "Catálogo BOGOSHORTS: llega por la alianza con PACCPA (Le Chien qui Aboie); ninguna distribuidora o agencia aparece en catálogo, PACCPA ni búsqueda web",
+     "fecha": "2026-11-16"
+    },
+    "plataformas_festivales": {
+     "url": "https://www.bing.com/search?q=filmfreeway%20%22Cassandra%22",
+     "fecha": "2026-11-16",
+     "resultado": "Short Film Depot y Festhome no tienen catálogo público (SFD exige login; Festhome solo lista festivales). FilmFreeway: búsqueda web «filmfreeway <título> <director>» sin perfil de la obra."
+    },
+    "festivales_previos": {
+     "url": "https://www.panoramaducinemacolombien.com/competition-courts-metrages-2024/",
+     "fecha": "2026-11-16",
+     "resultado": "Competencia de cortos del 12.º Panorama du Cinéma Colombien (París), 16 oct 2024, con el director presente. Ficha PACCPA sin afiche (solo fotogramas apaisados)"
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.bing.com/images/search?q=Cassandra%20Mart%C3%ADn%20Arbel%C3%A1ez%20poster",
+     "fecha": "2026-11-16",
+     "resultado": "Bing Imágenes: solo foto del director en PACCPA y pósters ajenos; sin afiche"
     }
-   }
+   },
+   "estado": "sin_afiche",
+   "por_que_sin_afiche": "PACCPA y BOGOSHORTS solo tienen fotogramas apaisados; Bing Imágenes sin afiche"
   },
   "Clasificado personal": {
    "titulo": "Clasificado personal",
@@ -406,8 +533,50 @@
      "url": "https://www.themoviedb.org/search/person?query=Juan%20Pablo%20Melo",
      "fecha": "2026-11-15",
      "resultado": "Juan Pablo Melo: sin perfil en TMDB"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/find/?q=Clasificado%20personal&s=tt",
+     "fecha": "2026-11-16",
+     "resultado": "Buscador de títulos IMDb con «Clasificado personal» y «Long Lost Personals»: ninguna ficha de la obra"
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/Clasificado%20personal/",
+     "fecha": "2026-11-16",
+     "resultado": "Búsqueda Letterboxd «Clasificado personal» y «Long Lost Personals»: ninguna ficha de la obra"
+    },
+    "organismo_nacional": {
+     "url": "https://www.proimagenescolombia.com/secciones/buscador/buscador_general_resultado.php?buscar=Clasificado%20personal",
+     "fecha": "2026-11-16",
+     "resultado": "Buscador general de Proimágenes (verificado que devuelve películas): sin ficha de la obra ni del director"
+    },
+    "web_director_o_productora": {
+     "url": "https://festivalgabo.com/invitado/juan-pablo-melo/",
+     "fecha": "2026-11-16",
+     "resultado": "Director y productor único (Juan Pablo Melo, curador, ex-Equinoxio, FICCI). Sin web propia ni de productora con la obra; perfil en Festival Gabo no la menciona"
+    },
+    "distribuidora_o_agencia": {
+     "na": true,
+     "por_que": "Catálogo BOGOSHORTS: contacto es el director (gmail); sin distribuidora ni agencia",
+     "fecha": "2026-11-16"
+    },
+    "plataformas_festivales": {
+     "url": "https://www.bing.com/search?q=filmfreeway%20%22Clasificado%20personal%22",
+     "fecha": "2026-11-16",
+     "resultado": "Short Film Depot y Festhome no tienen catálogo público (SFD exige login; Festhome solo lista festivales). FilmFreeway: búsqueda web «filmfreeway <título> <director>» sin perfil de la obra."
+    },
+    "festivales_previos": {
+     "url": "https://www.bing.com/search?q=%22Clasificado%20personal%22%20Melo",
+     "fecha": "2026-11-16",
+     "resultado": "Catálogo: Premier mundial en BOGOSHORTS 2026; búsqueda «Clasificado personal» y «Long Lost Personals» sin festivales (solo la cuenta IG homónima de anuncios viejos)"
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.bing.com/images/search?q=%22Clasificado%20personal%22%20Juan%20Pablo%20Melo%20afiche",
+     "fecha": "2026-11-16",
+     "resultado": "Bing Imágenes: homónimos (agente inmobiliario) sin relación; sin afiche"
     }
-   }
+   },
+   "estado": "sin_afiche",
+   "por_que_sin_afiche": "sin afiche en catálogo, web ni Bing Imágenes"
   },
   "Cocodrilo (Dillom)": {
    "titulo": "Cocodrilo (Dillom)",
@@ -427,8 +596,55 @@
      "url": "https://www.themoviedb.org/person/6062297 https://www.themoviedb.org/person/6062237 https://www.themoviedb.org/person/6062208",
      "fecha": "2026-11-15",
      "resultado": "Rocio Gastaldi (6062297): dirige 0; Andrés “noduerm0” Capasso (6062237): dirige 0; Andrés “no duerm0” Capasso (6062208): dirige 0"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/find/?q=Cocodrilo&s=tt",
+     "fecha": "2026-11-16",
+     "resultado": "Buscador de títulos IMDb con «Cocodrilo» y «Cocodrilo Dillom»: ninguna ficha de la obra"
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/Cocodrilo/",
+     "fecha": "2026-11-16",
+     "resultado": "Búsqueda Letterboxd «Cocodrilo» y «Cocodrilo Dillom»: ninguna ficha de la obra"
+    },
+    "organismo_nacional": {
+     "na": true,
+     "por_que": "Videoclip musical argentino: el INCAA no registra videoclips",
+     "fecha": "2026-11-16"
+    },
+    "web_director_o_productora": {
+     "url": "https://www.bohemiangroovecorp.com/",
+     "fecha": "2026-11-16",
+     "resultado": "Sello/productora de Dillom (Bohemian Groove). Créditos en YouTube: dir. Rocío Gastaldi & Andrés Capasso, prod. ejecutiva Agustina Perez Ponce. Sin página propia del clip"
+    },
+    "distribuidora_o_agencia": {
+     "na": true,
+     "por_que": "Videoclip publicado por el sello del artista (Bohemian Groove); no circula con distribuidora ni agencia de cortos (contacto en catálogo: productora de línea, gmail)",
+     "fecha": "2026-11-16"
+    },
+    "plataformas_festivales": {
+     "url": "https://www.bing.com/search?q=filmfreeway%20%22Cocodrilo%22",
+     "fecha": "2026-11-16",
+     "resultado": "Short Film Depot y Festhome no tienen catálogo público (SFD exige login; Festhome solo lista festivales). FilmFreeway: búsqueda web «filmfreeway <título> <director>» sin perfil de la obra."
+    },
+    "festivales_previos": {
+     "url": "https://www.bing.com/search?q=Dillom%20%22Cocodrilo%22%20videoclip%20festival",
+     "fecha": "2026-11-16",
+     "resultado": "Videoclip lanzado 14 ago 2026; no se hallaron otros festivales en búsqueda web"
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.bing.com/images/search?q=Dillom%20Cocodrilo%20videoclip",
+     "fecha": "2026-11-16",
+     "resultado": "Bing Imágenes: fotos de prensa de Dillom y portada del sencillo; sin afiche del videoclip (la portada no vale)"
+    },
+    "canal_oficial_artista": {
+     "url": "https://www.youtube.com/watch?v=DWlrG7eT8_4",
+     "fecha": "2026-11-16",
+     "resultado": "Canal oficial DILLOM; descripción: «Dirigido por Rocío Gastaldi & Andrés Capasso», prod. ejecutiva Agustina Perez Ponce, prod. de línea Natalia Frances y Nicolas Torcanowski — coincide con el catálogo"
     }
-   }
+   },
+   "estado": "sin_afiche",
+   "por_que_sin_afiche": "videoclip: solo portada del sencillo (no es afiche de la obra) y fotogramas"
   },
   "Complementarios": {
    "titulo": "Complementarios",
@@ -448,8 +664,50 @@
      "url": "https://www.themoviedb.org/search/person?query=Mar%20Triana%20Garc%C3%ADa",
      "fecha": "2026-11-15",
      "resultado": "Mar Triana García: sin perfil en TMDB"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/find/?q=Complementarios&s=tt",
+     "fecha": "2026-11-16",
+     "resultado": "Buscador de títulos IMDb con «Complementarios» y «Complementary»: ninguna ficha de la obra"
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/Complementarios/",
+     "fecha": "2026-11-16",
+     "resultado": "Búsqueda Letterboxd «Complementarios» y «Complementary»: ninguna ficha de la obra"
+    },
+    "organismo_nacional": {
+     "url": "https://www.proimagenescolombia.com/secciones/buscador/buscador_general_resultado.php?buscar=Complementarios",
+     "fecha": "2026-11-16",
+     "resultado": "Buscador general de Proimágenes (verificado que devuelve películas): sin ficha de la obra ni del director"
+    },
+    "web_director_o_productora": {
+     "url": "https://www.instagram.com/p/DXkVkAakcFo/",
+     "fecha": "2026-11-16",
+     "resultado": "Productora Nebula Cine (IG nebula_cine, 25 abr 2026: imágenes del proceso de COMPLEMENTARIOS); prod. Camilo Medina Noy y la directora. Sin web con afiche"
+    },
+    "distribuidora_o_agencia": {
+     "na": true,
+     "por_que": "Catálogo BOGOSHORTS: contacto es la directora (gmail); sin distribuidora ni agencia",
+     "fecha": "2026-11-16"
+    },
+    "plataformas_festivales": {
+     "url": "https://www.bing.com/search?q=filmfreeway%20%22Complementarios%22",
+     "fecha": "2026-11-16",
+     "resultado": "Short Film Depot y Festhome no tienen catálogo público (SFD exige login; Festhome solo lista festivales). FilmFreeway: búsqueda web «filmfreeway <título> <director>» sin perfil de la obra."
+    },
+    "festivales_previos": {
+     "url": "https://www.bing.com/search?q=%22Complementarios%22%20%22Mar%20Triana%22",
+     "fecha": "2026-11-16",
+     "resultado": "Catálogo: Premier mundial en BOGOSHORTS 2026; sin otros festivales"
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.bing.com/images/search?q=%22Complementarios%22%20Mar%20Triana%20afiche",
+     "fecha": "2026-11-16",
+     "resultado": "Bing Imágenes: posts de IG sin afiche identificable y homónimos; sin afiche"
     }
-   }
+   },
+   "estado": "sin_afiche",
+   "por_que_sin_afiche": "solo imágenes de proceso en IG de Nebula Cine; sin afiche"
   },
   "Cumbia pa’ la luna (Fuji Kurosawa ft. Lina Remolina)": {
    "titulo": "Cumbia pa’ la luna (Fuji Kurosawa ft. Lina Remolina)",
@@ -469,8 +727,55 @@
      "url": "https://www.themoviedb.org/person/6216288 https://www.themoviedb.org/person/2996647 https://www.themoviedb.org/person/5596477",
      "fecha": "2026-11-15",
      "resultado": "Diego Blanco (6216288): dirige 0; Diego Blanco (2996647): dirige 0; Diego H. Blanco (5596477): dirige 1"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/find/?q=Cumbia%20pa%E2%80%99%20la%20luna&s=tt",
+     "fecha": "2026-11-16",
+     "resultado": "Buscador de títulos IMDb con «Cumbia pa’ la luna» y «Cumbia pa la luna»: ninguna ficha de la obra"
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/Cumbia%20pa%E2%80%99%20la%20luna/",
+     "fecha": "2026-11-16",
+     "resultado": "Búsqueda Letterboxd «Cumbia pa’ la luna» y «Cumbia pa la luna»: ninguna ficha de la obra"
+    },
+    "organismo_nacional": {
+     "url": "https://www.proimagenescolombia.com/secciones/buscador/buscador_general_resultado.php?buscar=Cumbia%20pa%E2%80%99%20la%20luna",
+     "fecha": "2026-11-16",
+     "resultado": "Buscador general de Proimágenes (verificado que devuelve películas): sin ficha de la obra ni del director"
+    },
+    "web_director_o_productora": {
+     "url": "https://eldiarioboyaca.com/cumbia-pa-la-luna-de-fuji-kurosawa-ft-lina-remolina/",
+     "fecha": "2026-11-16",
+     "resultado": "Escrita, dirigida y producida por Diego Blanco (= Fuji Kurosawa); producción general 1994 Studios. Nota de prensa de El Diario Boyacá sobre el lanzamiento"
+    },
+    "distribuidora_o_agencia": {
+     "na": true,
+     "por_que": "Videoclip autoproducido (1994 Studios); sin distribuidora ni agencia",
+     "fecha": "2026-11-16"
+    },
+    "plataformas_festivales": {
+     "url": "https://www.bing.com/search?q=filmfreeway%20%22Cumbia%20pa%E2%80%99%20la%20luna%22",
+     "fecha": "2026-11-16",
+     "resultado": "Short Film Depot y Festhome no tienen catálogo público (SFD exige login; Festhome solo lista festivales). FilmFreeway: búsqueda web «filmfreeway <título> <director>» sin perfil de la obra."
+    },
+    "festivales_previos": {
+     "url": "https://www.bing.com/search?q=%22Cumbia%20pa%27%20la%20luna%22%20Fuji%20Kurosawa",
+     "fecha": "2026-11-16",
+     "resultado": "Sin festivales previos en búsqueda web"
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.bing.com/images/search?q=%22Cumbia%20pa%20la%20luna%22%20Fuji%20Kurosawa",
+     "fecha": "2026-11-16",
+     "resultado": "Bing Imágenes: portada del sencillo y posts de FB/IG; sin afiche del videoclip"
+    },
+    "canal_oficial_artista": {
+     "url": "https://www.youtube.com/watch?v=aR1-NXrM74s",
+     "fecha": "2026-11-16",
+     "resultado": "Canal oficial Fuji Kurosawa; descripción: «Escrita, Dirigida y Producida por: Diego Blanco», producción general 1994 Studios — coincide con el catálogo"
     }
-   }
+   },
+   "estado": "sin_afiche",
+   "por_que_sin_afiche": "videoclip: solo portada del sencillo y miniaturas; sin afiche"
   },
   "El Alto de los Buitres": {
    "titulo": "El Alto de los Buitres",
@@ -490,8 +795,50 @@
      "url": "https://www.themoviedb.org/search/person?query=Sebastian%20Felipe%20Villarraga%20Acosta",
      "fecha": "2026-11-15",
      "resultado": "Sebastian Felipe Villarraga Acosta: sin perfil en TMDB"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/find/?q=El%20Alto%20de%20los%20Buitres&s=tt",
+     "fecha": "2026-11-16",
+     "resultado": "Buscador de títulos IMDb con «El Alto de los Buitres» y «Vulture Heights»: ninguna ficha de la obra"
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/El%20Alto%20de%20los%20Buitres/",
+     "fecha": "2026-11-16",
+     "resultado": "Búsqueda Letterboxd «El Alto de los Buitres» y «Vulture Heights»: ninguna ficha de la obra"
+    },
+    "organismo_nacional": {
+     "url": "https://www.proimagenescolombia.com/secciones/buscador/buscador_general_resultado.php?buscar=El%20Alto%20de%20los%20Buitres",
+     "fecha": "2026-11-16",
+     "resultado": "Buscador general de Proimágenes (verificado que devuelve películas): sin ficha de la obra ni del director"
+    },
+    "web_director_o_productora": {
+     "url": "https://co.pinterest.com/sebasfvilla/el-alto-de-los-buitres/",
+     "fecha": "2026-11-16",
+     "resultado": "Director-productor único. Tablero Pinterest del director, tráiler en YouTube «Vulture Heights | Animation Teaser Trailer» (dic 2025), IG de la coproductora Nuchita; sin afiche vertical"
+    },
+    "distribuidora_o_agencia": {
+     "na": true,
+     "por_que": "Catálogo BOGOSHORTS: contacto es el director (gmail); sin distribuidora ni agencia",
+     "fecha": "2026-11-16"
+    },
+    "plataformas_festivales": {
+     "url": "https://www.bing.com/search?q=filmfreeway%20%22El%20Alto%20de%20los%20Buitres%22",
+     "fecha": "2026-11-16",
+     "resultado": "Short Film Depot y Festhome no tienen catálogo público (SFD exige login; Festhome solo lista festivales). FilmFreeway: búsqueda web «filmfreeway <título> <director>» sin perfil de la obra."
+    },
+    "festivales_previos": {
+     "url": "https://chaniartoonfest.gr/en/films/2026/vulture-heights",
+     "fecha": "2026-11-16",
+     "resultado": "Chaniartoon 2026 (Grecia) y Mequinenza IFF 2026 (MIFF); en BOGOSHORTS es premier colombiana"
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.bing.com/images/search?q=%22Vulture%20Heights%22%20Villarraga%20poster",
+     "fecha": "2026-11-16",
+     "resultado": "Bing Imágenes (español e inglés): solo pósters ajenos de buitres; sin afiche"
     }
-   }
+   },
+   "estado": "sin_afiche",
+   "por_que_sin_afiche": "tráiler, Pinterest y festivales solo con fotogramas; sin afiche vertical"
   },
   "El hombre del reloj": {
    "titulo": "El hombre del reloj",
@@ -511,8 +858,50 @@
      "url": "https://www.themoviedb.org/person/4069658 https://www.themoviedb.org/person/6546793",
      "fecha": "2026-11-15",
      "resultado": "Daniel Prieto Muriel (4069658): dirige 0; Daniel Prieto Muriel (6546793): dirige 1"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/find/?q=El%20hombre%20del%20reloj&s=tt",
+     "fecha": "2026-11-16",
+     "resultado": "Buscador de títulos IMDb con «El hombre del reloj» y «The Clock Man»: ninguna ficha de la obra"
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/El%20hombre%20del%20reloj/",
+     "fecha": "2026-11-16",
+     "resultado": "Búsqueda Letterboxd «El hombre del reloj» y «The Clock Man»: ninguna ficha de la obra"
+    },
+    "organismo_nacional": {
+     "url": "https://www.proimagenescolombia.com/secciones/buscador/buscador_general_resultado.php?buscar=El%20hombre%20del%20reloj",
+     "fecha": "2026-11-16",
+     "resultado": "Buscador general de Proimágenes (verificado que devuelve películas): sin ficha de la obra ni del director"
+    },
+    "web_director_o_productora": {
+     "url": "https://www.cintadhesiva.com/elhombredelreloj/",
+     "fecha": "2026-11-16",
+     "resultado": "Página de la obra en Cintadhesiva (productora): sinopsis, créditos, tráiler y banners/fotogramas; sin afiche vertical"
+    },
+    "distribuidora_o_agencia": {
+     "na": true,
+     "por_que": "Contacto del catálogo es la productora Cintadhesiva; sin distribuidora ni agencia",
+     "fecha": "2026-11-16"
+    },
+    "plataformas_festivales": {
+     "url": "https://www.bing.com/search?q=filmfreeway%20%22El%20hombre%20del%20reloj%22",
+     "fecha": "2026-11-16",
+     "resultado": "Short Film Depot y Festhome no tienen catálogo público (SFD exige login; Festhome solo lista festivales). FilmFreeway: búsqueda web «filmfreeway <título> <director>» sin perfil de la obra."
+    },
+    "festivales_previos": {
+     "url": "https://www.bing.com/search?q=%22El%20hombre%20del%20reloj%22%20cortometraje%20animaci%C3%B3n",
+     "fecha": "2026-11-16",
+     "resultado": "Catálogo: Premier mundial en BOGOSHORTS 2026; solo portafolios del equipo (Domestika, Daniela Palomino) y el pitch del proyecto"
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.bing.com/images/search?q=%22El%20hombre%20del%20reloj%22%20Daniel%20Prieto%20afiche",
+     "fecha": "2026-11-16",
+     "resultado": "Bing Imágenes: arte de proyecto en Domestika (2022, arte conceptual, no afiche) y libros homónimos; sin afiche"
     }
-   }
+   },
+   "estado": "sin_afiche",
+   "por_que_sin_afiche": "web de Cintadhesiva solo con banners y fotogramas; Domestika es arte conceptual de 2022"
   },
   "El mandado": {
    "titulo": "El mandado",
@@ -2167,8 +2556,58 @@
      "url": "https://www.themoviedb.org/person/4113226",
      "fecha": "2026-11-15",
      "resultado": "Robert Brand Ordóñez (4113226): dirige 2"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/find/?q=When%20the%20Herons%20Return&s=tt",
+     "fecha": "2026-11-16",
+     "resultado": "Buscador IMDb con «When the Herons Return» y «Cuando retornen las garzas»: sin ficha (solo títulos parecidos ajenos)"
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/film/when-the-herons-return/",
+     "fecha": "2026-11-16",
+     "resultado": "Ficha «When the Herons Return» (2025) dir. Robert Brand Ordóñez; letterboxd.com/tmdb/1575134 redirige aquí (importada de TMDB, no independiente)"
+    },
+    "organismo_nacional": {
+     "url": "https://www.proimagenescolombia.com/secciones/buscador/buscador_general_resultado.php?buscar=Cuando%20retornen%20las%20garzas",
+     "fecha": "2026-11-16",
+     "resultado": "Buscador general de Proimágenes (verificado que devuelve películas): sin ficha de la obra ni del director"
+    },
+    "web_director_o_productora": {
+     "url": "https://www.nidocine.com/pel%C3%ADculas",
+     "fecha": "2026-11-16",
+     "resultado": "Nido Cine (productora, contacto del catálogo) lista «Cuando retornen las garzas»; solo fotogramas apaisados, sin afiche"
+    },
+    "distribuidora_o_agencia": {
+     "na": true,
+     "por_que": "Contacto del catálogo es la productora Nido Cine; sin distribuidora ni agencia",
+     "fecha": "2026-11-16"
+    },
+    "plataformas_festivales": {
+     "url": "https://www.bing.com/search?q=filmfreeway%20%22Cuando%20retornen%20las%20garzas%22",
+     "fecha": "2026-11-16",
+     "resultado": "Short Film Depot y Festhome no tienen catálogo público (SFD exige login; Festhome solo lista festivales). FilmFreeway: búsqueda web «filmfreeway <título> <director>» sin perfil de la obra."
+    },
+    "festivales_previos": {
+     "url": "https://future-storytellers.de/en/program/films/film/?id=8256&f=121",
+     "fecha": "2026-11-16",
+     "resultado": "Festival of Future Storytellers 2025 (Filmfest München) — dato del catálogo y del índice de Bing; la página hoy da 404. Catálogo: Premier latinoamericana en BOGOSHORTS"
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.bing.com/images/search?q=%22Cuando%20retornen%20las%20garzas%22%20afiche",
+     "fecha": "2026-11-16",
+     "resultado": "Bing Imágenes: un post de IG sin afiche verificable y fotos de garzas; sin afiche"
     }
-   }
+   },
+   "estado": "ficha_existente",
+   "tmdb_id": 1575134,
+   "evidencia": "TMDB 1575134 «When the Herons Return» (2025, 19 min) acreditada a Robert Brand Ordóñez (persona TMDB 4113226): coincide director, año 2025, duración 19'25'' y título inglés del catálogo BOGOSHORTS; Nido Cine (productora del catálogo) lista la obra. Sin IMDb ni póster en TMDB.",
+   "respaldo": [
+    "letterboxd",
+    "tmdb_director",
+    "web_director_o_productora"
+   ],
+   "ficha_fecha": "2026-11-16",
+   "por_que_sin_afiche": "Nido Cine solo tiene fotogramas apaisados; TMDB sin póster; Bing Imágenes sin afiche"
   },
   "Elefante": {
    "titulo": "Elefante",
@@ -2467,6 +2906,6 @@
  "_nota": "registro de altas: por obra sin ficha, las fuentes revisadas y la decisión. Se escribe con pipeline/altas.py, no a mano.",
  "_provenance": {
   "fuente": "pipeline/altas.py (TMDB + fuentes revisadas a mano, una por una)",
-  "capturado": "2026-11-15"
+  "capturado": "2026-11-16"
  }
 }

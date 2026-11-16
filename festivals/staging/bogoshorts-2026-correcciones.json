@@ -93,6 +93,12 @@
    "_fuente": "https://www.themoviedb.org/movie/1567979",
    "_por_que": "altas.py --sondar: tmdb_director: TMDB 1567979 «Triangle» — director ✓ y año/duración ✓",
    "_registro": "bogoshorts-2026-altas.json"
+  },
+  "Cuando retornen las garzas": {
+   "tmdb": 1575134,
+   "_fuente": "https://www.themoviedb.org/movie/1575134",
+   "_por_que": "altas.py --ficha: TMDB 1575134 «When the Herons Return» (2025, 19 min) acreditada a Robert Brand Ordóñez (persona TMDB 4113226): coincide director, año 2025, duración 19'25'' y título inglés del catálogo BOGOSHORTS. Sin IMDb ni póster en TMDB.",
+   "_registro": "bogoshorts-2026-altas.json"
   }
  }
 }
