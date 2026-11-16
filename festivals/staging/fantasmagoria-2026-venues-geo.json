@@ -4,146 +4,167 @@
   "lng": -75.5626063,
   "address": "Cra. 45 #53-24",
   "_prec": "manual",
-  "_nota": "Google Maps (y OSM a 29 m), ya verificada en Mamut"
+  "_nota": "Google Maps (y OSM a 29 m), ya verificada en Mamut",
+  "_matriz": "s_b5d25cab"
  },
  "Museo de Arte Moderno de Medellín - MAMM": {
   "lat": 6.2237797,
   "lng": -75.57384,
   "address": "Cra. 44 #19A-100",
   "_prec": "manual",
-  "_nota": "verificada en Mamut"
+  "_nota": "verificada en Mamut",
+  "_matriz": "s_99915661"
  },
  "Cineprox Las Américas": {
   "lat": 6.2145832,
   "lng": -75.5963458,
   "address": "Dg. 75B #2A-120",
   "_prec": "manual",
-  "_nota": "verificada en Mamut"
+  "_nota": "verificada en Mamut",
+  "_matriz": "s_b3c7c07a"
  },
  "La Pascasia": {
   "lat": 6.2449131,
   "lng": -75.5649531,
   "address": "Cl. 47 #43-88",
   "_prec": "manual",
-  "_nota": "verificada en Mamut"
+  "_nota": "verificada en Mamut",
+  "_matriz": "s_c564ed7b"
  },
  "Comfama San Ignacio": {
   "lat": 6.2458698,
   "lng": -75.5639884,
   "address": "Claustro Comfama San Ignacio, Cra. 44 #48-18",
   "_prec": "manual",
-  "_nota": "Google Maps «Comfama Claustro San Ignacio»; La Capilla (2.º piso) y la Mediateca son salas del claustro"
+  "_nota": "Google Maps «Comfama Claustro San Ignacio»; La Capilla (2.º piso) y la Mediateca son salas del claustro",
+  "_matriz": "s_1347d668"
  },
  "Planetario de Medellín": {
   "lat": 6.269143,
   "lng": -75.5659499,
   "address": "Cra. 52 #71-117",
   "_prec": "manual",
-  "_nota": "Google Maps «Planetario de Medellín Jesús Emilio Ramírez»"
+  "_nota": "Google Maps «Planetario de Medellín Jesús Emilio Ramírez»",
+  "_matriz": "s_7aa97950"
  },
  "Centro de Desarrollo Cultural de Moravia": {
   "lat": 6.2764212,
   "lng": -75.5645804,
   "address": "Cl. 82A #52-25",
   "_prec": "manual",
-  "_nota": "Google Maps"
+  "_nota": "Google Maps",
+  "_matriz": "s_1e670050"
  },
  "Estación Metrocable Andalucía": {
   "lat": 6.2960781,
   "lng": -75.5518993,
   "address": "Estación Andalucía, Metrocable línea K",
   "_prec": "manual",
-  "_nota": "Google Maps «Metro Cable Estación Andalucía»"
+  "_nota": "Google Maps «Metro Cable Estación Andalucía»",
+  "_matriz": "s_bab68d8b"
  },
  "Parque Biblioteca Belén": {
   "lat": 6.223695,
   "lng": -75.5983286,
   "address": "Cra. 76 #18A-19",
   "_prec": "manual",
-  "_nota": "Google Maps"
+  "_nota": "Google Maps",
+  "_matriz": "s_8858d894"
  },
  "Parque de los Deseos": {
   "lat": 6.2684353,
   "lng": -75.5660855,
   "address": "Cl. 71, Aranjuez",
   "_prec": "manual",
-  "_nota": "Google Maps"
+  "_nota": "Google Maps",
+  "_matriz": "s_6a3d6ea4"
  },
  "Paraninfo Universidad de Antioquia": {
   "lat": 6.2464191,
   "lng": -75.564178,
   "address": "Cra. 44 #48-72 (Plazuela San Ignacio)",
   "_prec": "manual",
-  "_nota": "Google Maps «Edificio Paraninfo Universidad de Antioquia»: el Paraninfo está en el centro, no en la Ciudad Universitaria"
+  "_nota": "Google Maps «Edificio Paraninfo Universidad de Antioquia»: el Paraninfo está en el centro, no en la Ciudad Universitaria",
+  "_matriz": "s_febabd56"
  },
  "Universidad Católica Luis Amigó": {
   "lat": 6.258973,
   "lng": -75.5841253,
   "address": "Tv. 51A #67B-90",
   "_prec": "manual",
-  "_nota": "Google Maps (sede Medellín); el Auditorio Santa Rita y la sala de tecnología son salas"
+  "_nota": "Google Maps (sede Medellín); el Auditorio Santa Rita y la sala de tecnología son salas",
+  "_matriz": "s_f95d634b"
  },
  "Universidad Nacional": {
   "lat": 6.2615936,
   "lng": -75.577683,
   "address": "Universidad Nacional, sede Medellín (Cra. 65 #59A-110)",
   "_prec": "manual",
-  "_nota": "pin en la Biblioteca Efe Gómez (Google Maps), donde está la Plaza de la Biblioteca; el Auditorio Gerardo Molina (Bloque 41) queda a 30 m. La Plazoleta de la Luz no figura con nombre: va como sala"
+  "_nota": "pin en la Biblioteca Efe Gómez (Google Maps), donde está la Plaza de la Biblioteca; el Auditorio Gerardo Molina (Bloque 41) queda a 30 m. La Plazoleta de la Luz no figura con nombre: va como sala",
+  "_matriz": "s_2635c36c"
  },
  "Librería Antimateria": {
   "lat": 6.2514371,
   "lng": -75.5911408,
   "address": "Cl. 45E #72-09",
   "_prec": "manual",
-  "_nota": "Google Maps «Antimateria»"
+  "_nota": "Google Maps «Antimateria»",
+  "_matriz": "s_c5c17b27"
  },
  "La Grieta": {
   "lat": 6.2556968,
   "lng": -75.5985767,
   "_prec": "manual",
-  "_nota": "Google Maps: único resultado con ese nombre en Medellín, «La Grieta Café Bar»"
+  "_nota": "Google Maps: único resultado con ese nombre en Medellín, «La Grieta Café Bar»",
+  "_matriz": "s_23e9dece"
  },
  "Draco Hobby": {
   "lat": 6.2315525,
   "lng": -75.601953,
   "address": "Av. 80 #30-18",
   "_prec": "manual",
-  "_nota": "Google Maps «Draco Hobby Center»"
+  "_nota": "Google Maps «Draco Hobby Center»",
+  "_matriz": "s_f9e78567"
  },
  "La Comarca": {
   "lat": 6.2344921,
   "lng": -75.6023711,
   "address": "Av. 80 #32-31",
   "_prec": "manual",
-  "_nota": "Google Maps «La Comarca Hobbies & Food» (juegos de mesa)"
+  "_nota": "Google Maps «La Comarca Hobbies & Food» (juegos de mesa)",
+  "_matriz": "s_bb5ec19d"
  },
  "Comfama Otraparte": {
   "lat": 6.1795206,
   "lng": -75.5836212,
   "address": "Cl. 27 Sur #43A-51, Envigado",
   "_prec": "manual",
-  "_nota": "Google Maps «Parque Cultural y Ambiental Otraparte» (Comfama), en ENVIGADO"
+  "_nota": "Google Maps «Parque Cultural y Ambiental Otraparte» (Comfama), en ENVIGADO",
+  "_matriz": "s_67c78bba"
  },
  "Cámara de Comercio de Medellín": {
   "lat": 6.2501303,
   "lng": -75.5637803,
   "address": "Cl. 53 #45-77, Centro, Medellín",
   "_prec": "manual",
-  "_nota": "PIN APROXIMADO (30 sep, pedido de Juan: mejor una sede ubicada que sin pin). La parrilla dice «Cámara de Comercio – Auditorio» sin la sede; se pone la Sede Centro, la principal (Google Maps «Sede Centro - Cámara de Comercio de Medellín para Antioquia», Cl. 53 #45-77). Tiene otras con auditorio (El Poblado): preguntado al festival."
+  "_nota": "PIN APROXIMADO (30 sep, pedido de Juan: mejor una sede ubicada que sin pin). La parrilla dice «Cámara de Comercio – Auditorio» sin la sede; se pone la Sede Centro, la principal (Google Maps «Sede Centro - Cámara de Comercio de Medellín para Antioquia», Cl. 53 #45-77). Tiene otras con auditorio (El Poblado): preguntado al festival.",
+  "_matriz": "s_bfe8eb92"
  },
  "Silencio": {
   "lat": 6.2456401,
   "lng": -75.5630864,
   "address": "Cra. 42A #48-53, La Candelaria",
   "_prec": "manual",
-  "_nota": "OSM «Silencio» (Cra. 42A #48-53) y Google Maps «Silencio y Ruido» en el mismo punto (2 m), junto a La Pascasia"
+  "_nota": "OSM «Silencio» (Cra. 42A #48-53) y Google Maps «Silencio y Ruido» en el mismo punto (2 m), junto a La Pascasia",
+  "_matriz": "s_936e7c22"
  },
  "Nueva Villa de Aburrá": {
   "lat": 6.2353651,
   "lng": -75.6018571,
   "address": "Cra. 80A #32B-26, Belén, Medellín",
   "_prec": "manual",
-  "_nota": "PIN APROXIMADO (30 sep, pedido de Juan). La parrilla solo dice el barrio; función al aire libre. Se pone la Plazoleta Nueva Villa de Aburrá (Google Maps, Cra. 80A #32B-26), la plaza central del barrio, a ~280 m del centroide de OSM. Preguntado al festival."
+  "_nota": "PIN APROXIMADO (30 sep, pedido de Juan). La parrilla solo dice el barrio; función al aire libre. Se pone la Plazoleta Nueva Villa de Aburrá (Google Maps, Cra. 80A #32B-26), la plaza central del barrio, a ~280 m del centroide de OSM. Preguntado al festival.",
+  "_matriz": "s_6c6c37df"
  },
  "Twitch · Sociedad Fantasmagoría": {
   "lat": null,
@@ -156,21 +177,24 @@
   "lng": -75.5702767,
   "address": "Cra. 65 #95-57, Castilla",
   "_prec": "manual",
-  "_nota": "Google Maps «Bibliotecas Publicas Castilla Comfenalco» y OSM «Biblioteca Pública Comfenalco Castilla» en el mismo punto (3 m). Sede nueva de la base v2 (6 oct)."
+  "_nota": "Google Maps «Bibliotecas Publicas Castilla Comfenalco» y OSM «Biblioteca Pública Comfenalco Castilla» en el mismo punto (3 m). Sede nueva de la base v2 (6 oct).",
+  "_matriz": "s_d6693f43"
  },
  "Casa Libre": {
   "lat": 6.2429133,
   "lng": -75.5951382,
   "address": "Cra. 78A #38-74, Laureles",
   "_prec": "manual",
-  "_nota": "Google Maps «Casa libre - Librerías y café»; OSM no tiene el local, sí la Carrera 78A en Laureles. La base del festival: «Librerías y café (Laureles)»."
+  "_nota": "Google Maps «Casa libre - Librerías y café»; OSM no tiene el local, sí la Carrera 78A en Laureles. La base del festival: «Librerías y café (Laureles)».",
+  "_matriz": "s_65941893"
  },
  "Instituto Cultural Alexander von Humboldt": {
   "lat": 6.2281458,
   "lng": -75.6022406,
   "address": "Calle 27 # 81-17, Belén",
   "_prec": "manual",
-  "_nota": "Dirección de su web (avhmedellin.co/contacto) y pin de Google Maps; Nominatim da la Calle 27 en La Palma a 95 m. OSM tiene el local en una dirección vieja de Laureles (Calle 48B #79-32): descartada."
+  "_nota": "Dirección de su web (avhmedellin.co/contacto) y pin de Google Maps; Nominatim da la Calle 27 en La Palma a 95 m. OSM tiene el local en una dirección vieja de Laureles (Calle 48B #79-32): descartada.",
+  "_matriz": "s_2263f2e4"
  },
  "_provenance": {
   "fuente": "Nominatim con verificación: caja de ciudad + token distintivo + clase de lugar (una sede fija nunca es un barrio). _prec:manual intocable.",

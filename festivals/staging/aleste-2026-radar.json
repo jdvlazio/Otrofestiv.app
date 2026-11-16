@@ -1,10 +1,10 @@
 {
  "_provenance": {
   "fuente": "issue de radar #1397 — https://github.com/jdvlazio/Otrofestiv.app/issues/1397",
-  "capturado": "2026-11-13",
+  "capturado": "2026-11-16",
   "titulo": "RADAR: Festival de Cine Al Este — Medellín 18 NOV, Bogotá 25–29 NOV 2026",
   "estado": "OPEN",
-  "comentarios": 5
+  "comentarios": 8
  },
  "issue": 1397,
  "titulo": "RADAR: Festival de Cine Al Este — Medellín 18 NOV, Bogotá 25–29 NOV 2026",
@@ -30,6 +30,18 @@
   {
    "fecha": "2026-11-13",
    "cuerpo": "Vigía 13 nov 13:05 — Al Este BOGOTÁ publicó programación (https://www.instagram.com/p/DfsHqtAlpmC/, Cinemateca de Bogotá): Shame and Money 25.11 18:30 (lám. 1) · Histeria 26.11 17:00 (lám. 4) · The Souffleur 26.11 17:00 (lám. 3, solo OCR) · 1982 27.11 16:30 (lám. 5) · Todas las canciones del mundo 28.11 16:30 (lám. 2, solo OCR). El pie remite a la programación completa en el link de la bio. → Onboarding."
+  },
+  {
+   "fecha": "2026-11-16",
+   "cuerpo": "Vigía 15 nov 21:00: la web publicó https://www.alestfestival.com/programa2026, un catálogo de 40 obras en 10 secciones, sin día, hora ni sede. De esas 40, 26 no están en la app (Vidas Cruzadas, Hecho en Colombia B1/B2, Far East, Kluk, parte de Fokus y de Al Este Especial, y la Clausura «Retorno antes de las 3 p. m.»). Pasado a Onboarding."
+  },
+  {
+   "fecha": "2026-11-16",
+   "cuerpo": "**Vigía de salas — 16 nov 2026 (solo webs; nada cargado)**\n\n**MAMM (Medellín)** — sin diferencias. Las 4 funciones coinciden en día, hora y link de compra ($14.000): The Souffleur 19 nov 18:30 · Padre 20 nov 18:30 · 1982 21 nov 16:30 · Londres 22 nov 16:00. Fuente: https://www.elmamm.org/cine/9o-festival-al-este/\n\n**Colombo Americano (Medellín)** — todavía no publica la semana del festival: su programación va del 10 al 15 nov y solo anuncia «Próximamente: Cenizas y diamantes — Festival Al Este, 18 al 22 de noviembre». No se puede comparar aún. Fuente: https://www.colombomedellin.edu.co/cine/\n\n**Cinemateca de Bogotá** — publicó 8 fichas rotuladas «Festival de Cine de Europa Central y Oriental Al Este», **todas sin funciones cargadas** (sin fecha, hora, sala ni link de TuBoleta). La agenda (https://cinematecadebogota.gov.co/agenda/11) ya llega al 29 nov y no muestra ninguna función de Al Este. Diferencia de catálogo:\n- En la Cinemateca y NO en la app (sede Bogotá): Ciudadano Havel (/node/peliculas/4038), La retirada (4041), Ino Moxo: El sueño del brujo (4042), Historias de una mentira (4043), Aquí en otros lugares (4044).\n- En la app y sin ficha de Al Este en la Cinemateca: 1982 (27 nov 16:30) y Todas las canciones del mundo (28 nov 16:30).\n- Coinciden como obra: Shame and Money (4037), The Souffleur (4039), Histeria (4040).\n- La app cierra el 28 nov aunque el festival va hasta el 29.\n\nAcción sugerida: confirmar con la programación del festival para Bogotá y volver a mirar las fichas de la Cinemateca cuando carguen funciones (traerán sala y link de TuBoleta para `ticket_url`).\n"
+  },
+  {
+   "fecha": "2026-11-16",
+   "cuerpo": "Vigía 16 nov 09:00 — **Al Este: la web ya trae el programa completo de Bogotá** (https://www.alestfestival.com/programa2026, una página por obra con «Ciudad · Día · Hora · Sala»).\n\n- **Bogotá (25–29 nov, Cinemateca):** la web trae ~26 funciones (incluidos 2 bloques de «Hecho en Colombia»: B1 sáb 28 14:30 Sala 3 con 6 cortos; B2 dom 29 14:00 Sala 3 con 3) más una en la Cinemateca Fontanar del Río (Cortometrajes de Altura, dom 29 14:00). La app tiene 5. Faltan, entre otras: Aquí, en otros lugares; Bright Future; Ciudadano Havel; Historias de una mentira; Ino Moxo; La ciudad blanca; La retirada; La salamandra; Labriego; Laguna; License to Live; Los golfos; Nadie a la vista; Pulse; The Megalomaniacs; Retorno antes de las 3 p. m. (clausura, con premiación); La última ronda en Venecia y Padre (Bogotá). Varias traen la sala (Sala Capital / 2 / 3).\n- **Q&A:** «Todas las canciones del mundo» (sáb 28 nov 16:30, Sala Capital) dice «Seguida de conversatorio con los realizadores»; en la app `has_qa` = false. «1982» en Bogotá (vie 27 16:30) dice «Seguida de cineforo».\n- **Medellín, contradicciones que resuelve la regla (sin cambio):** «Pucallpa la Europea» sáb 21 nov: la web dice 19:00 Sala 1, la lámina 04 de p/DfSV6Z3lpE1 dice 14:00 (la app tiene 14:00; queda la más temprana). «Gioia mia» dom 22: la web dice 14:30, la lámina del 15 nov (p/Dfw_9kslhvl, la más nueva) dice 14:00, igual que la app.\n- El resto de Medellín coincide con la app.\n"
   }
  ]
 }

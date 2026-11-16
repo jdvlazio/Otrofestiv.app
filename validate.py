@@ -5553,6 +5553,52 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar pipeline-circuito: {_e}')
 
+# ── [sede-matriz] un lugar, un pin: la matriz de sedes ─────────────────────────
+# 16 nov 2026 (Juan: «así como hay una de películas, las sedes deberían vivir en
+# un archivo matriz»). catalogo/sedes.json la arma pipeline/sedes.py desde los
+# venues-geo. Frena: (a) la matriz atrasada respecto de los venues-geo (un pin
+# nuevo que no pasó por ella); (b) un pin de festival que se aparta más de
+# TOLERANCIA_M de su lugar ya resuelto. Los lugares en `_divergentes` (dos pines
+# viejos que no coinciden) se avisan: los resuelve una persona con --elegir.
+check = 'sede-matriz'
+try:
+    import sys as _sysm
+    _sysm.path.insert(0, 'pipeline')
+    import sedes as _sm
+    _mz = _sm.leer()
+    if not _mz:
+        fail(check, 'no existe catalogo/sedes.json — python3 pipeline/sedes.py --construir')
+    else:
+        _S = _mz['sedes']
+        _sin = sorted(f'{_f}:{_k}' for _f, _k, _n, _v in _sm.pines()
+                      if not any(_f in _e['festivales'] and _k in [_e['nombre']] + _e.get('alias', []) for _e in _S.values()))
+        _ap, _ce, _ev = _sm.apartados(), _sm.cercanos(), _sm.sin_evidencia_nueva()
+        _dv = _mz.get('_divergentes') or {}
+        _p = []
+        if _sin:
+            _p.append(f'{len(_sin)} pin(es) que el almacén no tiene (python3 pipeline/sedes.py --construir): ' + ', '.join(_sin[:5]))
+        if _ap:
+            _p.append('pin(es) que se apartan de su lugar: ' + ', '.join(f'{a}:{b} a {d} m' for a, b, c, d in _ap[:5]))
+        if _dv:
+            _p.append(f'{len(_dv)} lugar(es) con pines que no coinciden (--evidencia con Maps, --elegir o --campus): ' + ', '.join(_S[x]['nombre'] for x in _dv))
+        if _ce:
+            _p.append(f'{len(_ce)} par(es) de lugares a <{_sm.CERCA_M} m sin decidir (--mismo / --distintos): ' + ', '.join(f'{_S[a]["nombre"]} ↔ {_S[b]["nombre"]}' for d, a, b in _ce[:4]))
+        if _ev:
+            _p.append(f'{len(_ev)} lugar(es) NUEVO(s) sin enlace de Google Maps (--evidencia): ' + ', '.join(_S[x]['nombre'] for x in _ev[:5]))
+        _se = _sm.sin_enlace()
+        _sc = [x['nombre'] for x in _S.values() if not _sm.limpia_ciudad(x.get('ciudad'))]
+        if _sc:
+            _p.append(f'{len(_sc)} lugar(es) sin ciudad válida (python3 pipeline/sedes.py --completar-ciudades): ' + ', '.join(_sc[:5]))
+        if _p:
+            fail(check, ' · '.join(_p))
+        else:
+            ok(check, f'{len(_S)} lugares; todo pin coincide con el suyo, ningún par cercano sin decidir, todo lugar nuevo con Maps '
+                      f'({len((_mz.get("_deuda") or {}).get("sin_url") or [])} viejos sin enlace: deuda que solo baja)')
+        if _se:   # aviso hasta que los venues-geo traigan `_matriz` (PR de datos que sigue a este)
+            warn(check, f'{len(_se)} pin(es) de festivales vivos sin enlace al almacén — python3 pipeline/sedes.py --enlazar: ' + ', '.join(f'{a}:{b}' for a, b in _se[:5]))
+except Exception as _e:
+    fail(check, f'el guardián no pudo correr: {_e}')
+
 # ── [sedes-apiladas] + [sala-en-sede] — los guardianes de datos de sede ───────
 # Aprobados tras FICDEH. (a) dos sedes del mismo festival a <60 m casi siempre
 # son la MISMA con dos nombres (63 de 120 apiladas en el geocoding v1); si es

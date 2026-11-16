@@ -370,10 +370,10 @@ está pasando de verdad — no lo que alguien recordaba al escribirlo.
 | `sessions` | array | — | 1 fest |  |
 | `has_qa` | boolean | — | 42 fest | Afecta conflictos vía durationForTravel. |
 | `titulos_anteriores` | array | — | 20 fest | Títulos con que el festival publicó ANTES esta obra. Lo llena Onboarding cuando un festival renombra (p. ej. «Tránsito» → «Tránsitos»). La app mueve en silencio lo que el usuario guardó bajo el viejo (Interés, Plan, vista, prioridad, calificación, retrasos) — domain/titulos.js. Obra partida en dos: el viejo va en las dos y gana la primera del catálogo. Nunca un título que siga vigente. |
-| `qa_type` | string | `team` · `guests` | 18 fest | La variante del Q&A. Se pinta traducida; NO se escribe la frase en el dato. |
+| `qa_type` | string | `team` · `guests` | 19 fest | La variante del Q&A. Se pinta traducida; NO se escribe la frase en el dato. |
 | `competencia` | string | — | 1 fest |  |
 | `premium` | boolean | — | 1 fest |  |
-| `sala` | string | — | 31 fest | Sala DENTRO de la sede. Que no aparezca en el nombre de la sede ([sala-en-sede]). |
+| `sala` | string | — | 32 fest | Sala DENTRO de la sede. Que no aparezca en el nombre de la sede ([sala-en-sede]). |
 | `date` | string | `^\d{4}-\d{2}-\d{2}$` | 6 fest | Requerido si hay screenings[]. Tres festivales legacy lo tienen como número de día. |
 | `screenings` | array | — | 3 fest |  |
 | `poster` | string | — | 45 fest | URL, /assets/… o path TMDB. poster:"" está PROHIBIDO. Reglas: docs/POSTERS.md |

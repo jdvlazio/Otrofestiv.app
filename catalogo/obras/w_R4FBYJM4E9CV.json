@@ -19,8 +19,11 @@
   "es": "Un grupo de amigos que sobreviven penosamente en los arrabales de Madrid cometen pequeños delitos con el propósito de financiar el debut como torero de uno de ellos.",
   "en": "A group of friends who are struggling to survive in the slums of Madrid commit petty crime in order to finance the debut as a bullfighter of one of them."
  },
+ "generos": [
+  "Drama"
+ ],
  "afiche": {
-  "archivo": "https://image.tmdb.org/t/p/w500/j5r2H4KqokTowdqR2hF2NC6pSEO.jpg",
+  "archivo": "/assets/aleste-2026/los-golfos.jpg",
   "veredicto": "oficial"
  },
  "xref": {
@@ -31,9 +34,14 @@
   {
    "etiqueta": "83 min",
    "duracion_min": 83
+  },
+  {
+   "etiqueta": "88 min",
+   "duracion_min": 88
   }
  ],
  "presentaciones": [
+  "aleste-2026",
   "cinemancia-2026"
  ]
 }

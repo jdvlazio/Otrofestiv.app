@@ -7,18 +7,27 @@
   "nota": "Tercer Tiempo tiene «CEFE Fontanar del Río» en 4.754983, -74.1126869, a ~200 m del registro de FICDEH. Se toma el de FICDEH porque su clave es EXACTAMENTE la canónica que este festival necesita."
  },
  "Cinemateca de Bogotá - Bogotá": {
-  "lat": 4.6031614, "lng": -74.0676717, "address": "Cra. 3 #19-10",
+  "lat": 4.6031614,
+  "lng": -74.0676717,
+  "address": "Cra. 3 #19-10",
   "_prec": "heredada-verificada",
-  "_nota": "coincide al decimal con Google Maps y con cineautopsia, ficdeh y qaff"
+  "_nota": "coincide al decimal con Google Maps y con cineautopsia, ficdeh y qaff",
+  "_matriz": "s_17a71d8b"
  },
  "Cinemateca Fontanar del Río - Bogotá": {
-  "lat": 4.7561244, "lng": -74.1110572, "address": "Calle 145 #138a-10",
+  "lat": 4.7561244,
+  "lng": -74.1110572,
+  "address": "Calle 145 #138a-10",
   "_prec": "heredada",
-  "_nota": "de ficdeh-2026, con este mismo nombre canónico"
+  "_nota": "de ficdeh-2026, con este mismo nombre canónico",
+  "_matriz": "s_c82c47d7"
  },
  "Universidad Jorge Tadeo Lozano - Bogotá": {
-  "lat": 4.607911, "lng": -74.0673108, "address": "Cra. 4 #22-61",
+  "lat": 4.607911,
+  "lng": -74.0673108,
+  "address": "Cra. 4 #22-61",
   "_prec": "heredada",
-  "_nota": "de ficdeh-2026 («Salón Oval»); Maps dio un punto a 90 m, mismo campus"
+  "_nota": "de ficdeh-2026 («Salón Oval»); Maps dio un punto a 90 m, mismo campus",
+  "_matriz": "s_808cba64"
  }
 }

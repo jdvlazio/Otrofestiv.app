@@ -15,11 +15,20 @@ LAS FUENTES (12 nov 2026):
 - IG p/DfkttriN6pD (10 nov): el corto inaugural «Latidos».
 
 Las láminas se leyeron a ojo y por ig-lecturas.py (Vision ×3 + tesseract).
+
+16 nov 2026 — LA WEB OFICIAL (alestfestival.com/programa2026, 40 fichas; la
+lee aleste-2026-programa.py → festivals/staging/aleste-2026-programa.json):
+suma las obras que faltaban (Bogotá) y da la SECCIÓN oficial de todas. Las
+secciones de antes («Al Este en el MAMM / en la Cinemateca») eran nuestras,
+por sede: la regla es la sección del festival, tal cual. Los dos bloques de
+«Competencia Hecho en Colombia» son una sección; el bloque es la función.
 """
 import io
 import json
 import os
+import re
 import sys
+import unicodedata
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(REPO, 'pipeline'))
@@ -29,6 +38,8 @@ DESTINO = f'{REPO}/festivals/staging/aleste-2026-catalogo.json'
 IG = 'https://www.instagram.com/p/'
 MAMM = 'https://www.elmamm.org/producto/'
 ESPECIAL, FOKUS = 'Al Este Especial', 'Fokus: Las grietas en el muro'
+WEB = 'https://www.alestfestival.com/programa2026'
+PROGRAMA = f'{REPO}/festivals/staging/aleste-2026-programa.json'
 
 # título, dirección, año, país, min, sección, fuente
 OBRAS = [
@@ -54,7 +65,16 @@ OBRAS = [
 ]
 
 
+def seccion_web(sec):
+    return re.sub(r'\s*[-–]\s*Bloque \d+$', '', sec)
+
+
+def plano(t):
+    return re.sub(r'[^a-z0-9]', '', unicodedata.normalize('NFD', t.lower()).encode('ascii', 'ignore').decode())
+
+
 def main():
+    web = {plano(o['titulo']): o for o in json.load(io.open(PROGRAMA, encoding='utf-8'))['obras']}
     obras = []
     for t, d, a, p, m, sec, (url, lam) in OBRAS:
         o = {'titulo': t, 'director': d, 'anio': a, 'pais': p, 'tipo': 'corto' if t.startswith('Latidos') else 'largo',
@@ -65,9 +85,24 @@ def main():
             o['seccion'] = sec
         if lam:
             o['_src']['lamina'] = lam
+        w = web.pop(plano(t), None)
+        if w:
+            o['seccion'] = seccion_web(w['seccion'])
         obras.append(o)
-    if len(obras) != 15:
-        sys.exit(f'✗ {len(obras)} obras, se contaron 15')
+    for w in web.values():                     # las que solo trae la web (16 nov)
+        o = {'titulo': w['titulo'], 'pais': w['pais'], 'duracion_min': w['duracion_min'],
+             'seccion': seccion_web(w['seccion']),
+             'tipo': 'corto' if w['duracion_min'] < 60 else 'largo',
+             '_src': {'url': f'{WEB}/{w["pagina"]}', 'date': '2026-11-16'}}
+        if w['director']:
+            o['director'] = w['director']
+        if w['anio']:
+            o['anio'] = w['anio']
+        if w['titulo_original'] and w['titulo_original'] not in (w['titulo'], 'Varios'):
+            o['titulo_original'] = w['titulo_original']
+        obras.append(o)
+    if len(obras) != 41:
+        sys.exit(f'✗ {len(obras)} obras, se contaron 41 (15 de MAMM/IG + 26 nuevas de la web)')
     with io.open(DESTINO, 'w', encoding='utf-8') as f:
         json.dump({'_provenance': provenance(
             fuente='MAMM (ciclo 9º Festival Al Este) + IG @aleste.colombia (3, 5 y 10 nov 2026)',

@@ -11,8 +11,11 @@
  "sinopsis": {
   "es": "¿Qué permanece en un lugar cuando nos vamos? En una travesía por diversos espacios liminales, entendidos como lugares de tránsito, ambigüedad y espera silenciosa, se explora la relación de los seres humanos con los lugares que han habitado y habitan, así como las sensaciones, los recuerdos y las emociones que estos espacios despiertan en los distintos momentos de sus vidas."
  },
+ "generos": [
+  "Documental"
+ ],
  "afiche": {
-  "archivo": "https://image.tmdb.org/t/p/w500/hV8eL8v9isrSLOXoxtAdH8N9t0P.jpg",
+  "archivo": "/assets/aleste-2026/liminal.jpg",
   "veredicto": "oficial"
  },
  "xref": {
@@ -26,6 +29,7 @@
   }
  ],
  "presentaciones": [
+  "aleste-2026",
   "cinemancia-2026"
  ]
 }

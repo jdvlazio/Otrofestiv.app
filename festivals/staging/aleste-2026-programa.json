@@ -1,0 +1,934 @@
+{
+ "_provenance": {
+  "fuente": "https://www.alestfestival.com/programa2026",
+  "capturado": "2026-11-16",
+  "metodo": "una página por obra (curl), texto plano: sección, ficha y «Ciudad · Día · Hora · Sede – Sala · nota»"
+ },
+ "obras": [
+  {
+   "pagina": "1982",
+   "seccion": "Competencia Al Este",
+   "titulo": "1982",
+   "titulo_original": "1982",
+   "director": "Juan Carlos García",
+   "anio": 2025,
+   "pais": "Perú",
+   "duracion_min": 84,
+   "sinopsis": "En un pueblo andino del Perú, en 1982, Tato, un niño de 12 años, se ve forzado al exilio cuando su familia es amenazada.",
+   "funciones": [
+    {
+     "ciudad": "Medellín",
+     "dia": "2026-11-21",
+     "dia_semana": "Sábado",
+     "hora": "16:30",
+     "sede": "Museo de Arte Moderno de Medellín (MAMM)",
+     "sala": "Sala de cine",
+     "nota": null
+    },
+    {
+     "ciudad": "Bogotá",
+     "dia": "2026-11-27",
+     "dia_semana": "Viernes",
+     "hora": "16:30",
+     "sede": "Cinemateca de Bogotá",
+     "sala": "Sala Capital",
+     "nota": "Seguida de cineforo"
+    }
+   ]
+  },
+  {
+   "pagina": "aquí-en-otros-lugares",
+   "seccion": "Competencia Vidas Cruzadas",
+   "titulo": "Aquí, en otros lugares",
+   "titulo_original": "Ici, ailleurs",
+   "director": "Comes Chahbazian",
+   "anio": 2026,
+   "pais": "Bélgica, Armenia",
+   "duracion_min": 67,
+   "sinopsis": "En julio de 2023, Nagorno-Karabaj lleva siete meses bajo el asedio de Azerbaiyán. Ante la inminencia de la guerra, la realizadora pide a su amigo Artsiv que filme su vida cotidiana junto a su esposa Tatev y sus cinco hijos. A través de imágenes de gran ternura emerge una forma silenciosa de resistencia: la de un pueblo que se encuentra al borde de tener que abandonar su hogar para siempre.",
+   "funciones": [
+    {
+     "ciudad": "Bogotá",
+     "dia": "2026-11-27",
+     "dia_semana": "Viernes",
+     "hora": "16:00",
+     "sede": "Cinemateca de Bogotá",
+     "sala": "Sala 2",
+     "nota": "Seguida de cineforo"
+    }
+   ]
+  },
+  {
+   "pagina": "bright-future",
+   "seccion": "Far East",
+   "titulo": "Bright Future",
+   "titulo_original": "Akarui mirai",
+   "director": "Kiyoshi Kurosawa",
+   "anio": 2003,
+   "pais": "Japón",
+   "duracion_min": 92,
+   "sinopsis": "Yuji y Mamoru son dos jóvenes que trabajan en una fábrica de Tokio, sin rumbo y sin futuro. Cuando Mamoru termina en prisión, Yuji queda a cargo de su medusa venenosa, que escapa a los canales de la ciudad y empieza a multiplicarse. En Cannes 2003 compitió por la Palma de Oro.",
+   "funciones": [
+    {
+     "ciudad": "Bogotá",
+     "dia": "2026-11-28",
+     "dia_semana": "Sábado",
+     "hora": "18:00",
+     "sede": "Cinemateca de Bogotá",
+     "sala": "Sala 2",
+     "nota": null
+    }
+   ]
+  },
+  {
+   "pagina": "cenizas-y-diamantes",
+   "seccion": "Fokus: Las grietas del muro",
+   "titulo": "Cenizas y diamantes",
+   "titulo_original": "Popiół i diament",
+   "director": "Andrzej Wajda",
+   "anio": 1958,
+   "pais": "Polonia",
+   "duracion_min": 103,
+   "sinopsis": "Es el 8 de mayo de 1945, último día de la guerra en Europa. Maciek, un joven de la resistencia anticomunista, recibe la orden de matar a un dirigente del partido en una ciudad de provincia. Esa noche, su amor por una camarera hace que dude de la misión.",
+   "funciones": [
+    {
+     "ciudad": "Medellín",
+     "dia": "2026-11-19",
+     "dia_semana": "Jueves",
+     "hora": "19:00",
+     "sede": "Centro Colombo Americano",
+     "sala": "Sala 1",
+     "nota": null
+    }
+   ]
+  },
+  {
+   "pagina": "ciudadano-havel",
+   "seccion": "Fokus: Las grietas del muro",
+   "titulo": "Ciudadano Havel",
+   "titulo_original": "Občan Havel",
+   "director": "Miroslav Janek, Pavel Koutecký",
+   "anio": 2008,
+   "pais": "República Checa",
+   "duracion_min": 119,
+   "sinopsis": "Tras la caída del comunismo en Europa del Este, el exdisidente y escritor checo Václav Havel se convirtió en el primer presidente electo democráticamente de la República Checa en 1993. Desde la campaña electoral hasta después de que terminaran sus 10 años en el cargo en el 2003, el cineasta y amigo de la familia, Pavel Koutecký, siguió de cerca a Havel durante los mítines de campaña, las deliberaciones del partido, las visitas de Estado y los asuntos privados.",
+   "funciones": [
+    {
+     "ciudad": "Bogotá",
+     "dia": "2026-11-26",
+     "dia_semana": "Jueves",
+     "hora": "16:00",
+     "sede": "Cinemateca de Bogotá",
+     "sala": "Sala 2",
+     "nota": "Seguida de cineforo"
+    }
+   ]
+  },
+  {
+   "pagina": "cortometrajes-de-altura",
+   "seccion": "Kluk - Cine familiar",
+   "titulo": "Cortometrajes de Altura",
+   "titulo_original": "Varios",
+   "director": null,
+   "anio": 2008,
+   "pais": "Bolivia",
+   "duracion_min": 41,
+   "sinopsis": "Cortometrajes de Altura es una selección de 5 animaciones bolivianas con una duración total de 41 minutos, presentada en el 9º Festival AL ESTE 2026, que reúne las obras Cuentos de la Cuenca (sobre el cuidado ambiental), Ekeko (acerca de la deidad andina de la abundancia), La muñeca de maíz (un tierno vínculo en el Chaco boliviano), Pascay (un relato sobre el duelo y las tradiciones del altiplano) y Paulina y el cóndor (una emotiva travesía a la gran ciudad realizada con la técnica de papel rasgado).",
+   "funciones": [
+    {
+     "ciudad": "Bogotá",
+     "dia": "2026-11-29",
+     "dia_semana": "Domingo",
+     "hora": "14:00",
+     "sede": "Cinemateca Fontanar del Río",
+     "sala": null,
+     "nota": null
+    }
+   ]
+  },
+  {
+   "pagina": "desde-acá-veo-la-tormenta",
+   "seccion": "Competencia Hecho en Colombia - Bloque 1",
+   "titulo": "Desde acá veo la tormenta",
+   "titulo_original": "Desde acá veo la tormenta",
+   "director": "Juan Felipe Restrepo",
+   "anio": null,
+   "pais": "Colombia",
+   "duracion_min": 11,
+   "sinopsis": "Julia atraviesa un momento decisivo en su vida. Lo que debería traerle felicidad se ve alterado por recuerdos dolorosos y la presencia de la muerte. Ante una vida que insiste en abrirse paso, deberá afrontar sus miedos más profundos antes de cruzar un umbral que lo cambiará todo.",
+   "funciones": [
+    {
+     "ciudad": "Bogotá",
+     "dia": "2026-11-28",
+     "dia_semana": "Sábado",
+     "hora": "14:30",
+     "sede": "Cinemateca de Bogotá",
+     "sala": "Sala 3",
+     "nota": "Seguida de conversatorio con los realizadores"
+    }
+   ]
+  },
+  {
+   "pagina": "gioia-mia",
+   "seccion": "Al Este Especial",
+   "titulo": "Gioia mia",
+   "titulo_original": "Gioia mia",
+   "director": "Margherita Spampinato",
+   "anio": 2025,
+   "pais": "Italia",
+   "duracion_min": 90,
+   "sinopsis": "Nico, un niño criado en una familia urbana y laica, pasa el verano en Sicilia con su anciana tía Gela. Ella vive en un viejo palacio lleno de rituales y supersticiones. El choque entre los dos termina en un vínculo inesperado. Es el primer largometraje de Spampinato. En Locarno 2025 ganó el Premio Especial del Jurado Ciné+, y Aurora Quattrocchi el premio a mejor interpretación.",
+   "funciones": [
+    {
+     "ciudad": "Medellín",
+     "dia": "2026-11-20",
+     "dia_semana": "Viernes",
+     "hora": "19:00",
+     "sede": "Centro Colombo Americano",
+     "sala": "Sala 1",
+     "nota": null
+    },
+    {
+     "ciudad": "Medellín",
+     "dia": "2026-11-22",
+     "dia_semana": "Domingo",
+     "hora": "14:30",
+     "sede": "Centro Colombo Americano",
+     "sala": "Sala 1",
+     "nota": null
+    }
+   ]
+  },
+  {
+   "pagina": "histeria",
+   "seccion": "Competencia Al Este",
+   "titulo": "Histeria",
+   "titulo_original": "Hysteria",
+   "director": "Mehmet Akif Büyükatalay",
+   "anio": 2025,
+   "pais": "Alemania",
+   "duracion_min": 104,
+   "sinopsis": "Un equipo rueda una película sobre el atentado incendiario racista de Solingen de 1993, y en el set aparece un Corán quemado. Elif, una pasante, queda atrapada en una red de sospechas, acusaciones y mentiras. Se estrenó en la sección Panorama de la Berlinale 2025.",
+   "funciones": [
+    {
+     "ciudad": "Bogotá",
+     "dia": "2026-11-26",
+     "dia_semana": "Jueves",
+     "hora": "17:00",
+     "sede": "Cinemateca de Bogotá",
+     "sala": "Sala 3",
+     "nota": null
+    }
+   ]
+  },
+  {
+   "pagina": "historias-de-una-mentira",
+   "seccion": "Competencia Vidas Cruzadas",
+   "titulo": "Historias de una mentira",
+   "titulo_original": "Stories of a Lie",
+   "director": "Olia Verriopoulou",
+   "anio": 2025,
+   "pais": "Grecia, Francia",
+   "duracion_min": 76,
+   "sinopsis": "Durante una estancia en Grecia, su país natal, la realizadora se entera de que una amiga está enferma. Sus médicos y familiares se lo ocultan y ella también debe guardar el secreto. Este hecho despierta recuerdos de su infancia en un entorno médico y de cómo esta práctica afectó a personas cercanas. Decide entonces conversar con su padre, médico, e iniciar una investigación íntima para comprender las razones detrás de las mentiras médicas.",
+   "funciones": [
+    {
+     "ciudad": "Bogotá",
+     "dia": "2026-11-27",
+     "dia_semana": "Viernes",
+     "hora": "14:30",
+     "sede": "Cinemateca de Bogotá",
+     "sala": "Sala 3",
+     "nota": null
+    }
+   ]
+  },
+  {
+   "pagina": "ino-moxo-el-sueño-del-brujo",
+   "seccion": "Competencia Vidas Cruzadas",
+   "titulo": "Ino Moxo: El sueño del brujo",
+   "titulo_original": "Ino Moxo: El sueño del brujo",
+   "director": "Rodolfo Arrascue",
+   "anio": 2024,
+   "pais": "Perú, Colombia",
+   "duracion_min": 80,
+   "sinopsis": "Javier, atormentado por sus sueños y por la cercanía de la muerte, viaja a lo profundo de la Amazonía peruana en busca de Ino Moxo para curarse. Ino Moxo, también llamado Pantera Negra, es el curandero Manuel Córdova Ríos. La película recoge costumbres y saberes de comunidades originarias. Ganó el premio a Mejor Película Latinoamericana en Viña del Mar 2024.",
+   "funciones": [
+    {
+     "ciudad": "Bogotá",
+     "dia": "2026-11-26",
+     "dia_semana": "Jueves",
+     "hora": "19:00",
+     "sede": "Cinemateca de Bogotá",
+     "sala": "Sala 2",
+     "nota": "Seguida de conversatorio con el director"
+    }
+   ]
+  },
+  {
+   "pagina": "junio-25.-andréi-tarkovski-visita-a-su-tumba",
+   "seccion": "Competencia Hecho en Colombia - Bloque 1",
+   "titulo": "Junio 25. Andréi Tarkovski, visita a su tumba",
+   "titulo_original": "Junio 25. Andréi Tarkovski, visita a su tumba",
+   "director": "Juan Camilo Moreno",
+   "anio": null,
+   "pais": "Colombia",
+   "duracion_min": 5,
+   "sinopsis": "En diciembre de 1986, el cineasta y poeta ruso Andréi Tarkovski muere a los 54 años a causa de un cáncer, luego de haberse exiliado de la URSS.",
+   "funciones": [
+    {
+     "ciudad": "Bogotá",
+     "dia": "2026-11-28",
+     "dia_semana": "Sábado",
+     "hora": "14:30",
+     "sede": "Cinemateca de Bogotá",
+     "sala": "Sala 3",
+     "nota": "Seguida de conversatorio con los realizadores"
+    }
+   ]
+  },
+  {
+   "pagina": "la-ciudad-blanca",
+   "seccion": "Fokus: Las grietas del muro",
+   "titulo": "La ciudad blanca",
+   "titulo_original": "Dans la ville blanche",
+   "director": "Alain Tanner",
+   "anio": 1983,
+   "pais": "Suiza, Portugal",
+   "duracion_min": 108,
+   "sinopsis": "Un marinero suizo, cansado del ruido de la sala de máquinas, deserta de su barco en Lisboa. Alquila una habitación y no hace más. Solo escribe cartas a su amante en las que describe la blancura de la ciudad, la soledad y el silencio. Le envía su amor y su vacío; ella responde con amor y confusión.",
+   "funciones": [
+    {
+     "ciudad": "Bogotá",
+     "dia": "2026-11-29",
+     "dia_semana": "Domingo",
+     "hora": "16:30",
+     "sede": "Cinemateca de Bogotá",
+     "sala": "Sala 3",
+     "nota": null
+    }
+   ]
+  },
+  {
+   "pagina": "la-retirada",
+   "seccion": "Fokus: Las grietas del muro",
+   "titulo": "La retirada",
+   "titulo_original": "Odcházení",
+   "director": "Václav Havel",
+   "anio": 2011,
+   "pais": "República Checa",
+   "duracion_min": 94,
+   "sinopsis": "La única película dirigida por Václav Havel, basada en su última obra literaria, es una reflexión autobiográfica y una libre interpretación de El rey Lear, de Shakespeare y El jardín de los cerezos, de Chéjov.",
+   "funciones": [
+    {
+     "ciudad": "Bogotá",
+     "dia": "2026-11-26",
+     "dia_semana": "Jueves",
+     "hora": "19:30",
+     "sede": "Cinemateca de Bogotá",
+     "sala": "Sala 3",
+     "nota": "Seguida de cineforo"
+    }
+   ]
+  },
+  {
+   "pagina": "la-salamandra",
+   "seccion": "Fokus: Las grietas del muro",
+   "titulo": "La salamandra",
+   "titulo_original": "La salamandre",
+   "director": "Alain Tanner",
+   "anio": 1971,
+   "pais": "Suiza, Francia",
+   "duracion_min": 123,
+   "sinopsis": "Pierre, periodista, y Paul, novelista, trabajan en la producción de una serie de televisión basada en una noticia real: una joven fue acusada de intentar asesinar a su tío y liberada por falta de pruebas. Paul imagina el personaje, Pierre lo entrevista. Cuando Paul conoce por casualidad a la joven y la realidad de ella emerge, en ese contraste sucede el filme.",
+   "funciones": [
+    {
+     "ciudad": "Bogotá",
+     "dia": "2026-11-27",
+     "dia_semana": "Viernes",
+     "hora": "16:30",
+     "sede": "Cinemateca de Bogotá",
+     "sala": "Sala 3",
+     "nota": null
+    }
+   ]
+  },
+  {
+   "pagina": "la-tierra-prometida",
+   "seccion": "Fokus: Las grietas del muro",
+   "titulo": "La tierra prometida",
+   "titulo_original": "Ziemia obiecana",
+   "director": "Andrzej Wajda",
+   "anio": 1975,
+   "pais": "Polonia",
+   "duracion_min": 179,
+   "sinopsis": "En Łódź, a fines del siglo XIX, tres socios se juegan todo para levantar su propia fábrica textil en una ciudad de capitalismo salvaje: un polaco, un alemán y un judío. Fue nominada al Óscar a mejor película extranjera.",
+   "funciones": [
+    {
+     "ciudad": "Medellín",
+     "dia": "2026-11-21",
+     "dia_semana": "Sábado",
+     "hora": "14:30",
+     "sede": "Centro Colombo Americano",
+     "sala": "Sala 2",
+     "nota": null
+    }
+   ]
+  },
+  {
+   "pagina": "la-última-ronda-en-venecia",
+   "seccion": "Al Este Especial",
+   "titulo": "La última ronda en Venecia",
+   "titulo_original": "Le città di pianura",
+   "director": "Francesco Sossai",
+   "anio": 2025,
+   "pais": "Italia, Alemania",
+   "duracion_min": 98,
+   "sinopsis": "En la llanura del Véneto, Carlobianchi y Doriano, dos amigos cincuentones, viven obsesionados con tomarse «la última copa». Por el camino arrastran a Giulio, un joven estudiante de arquitectura, a una deriva de bares y recuerdos de los años noventa. Se estrenó en Un Certain Regard de Cannes 2025 y ganó ocho premios David di Donatello, entre ellos el de mejor película.",
+   "funciones": [
+    {
+     "ciudad": "Medellín",
+     "dia": "2026-11-18",
+     "dia_semana": "Miércoles",
+     "hora": "19:00",
+     "sede": "Centro Colombo Americano",
+     "sala": "Sala 1",
+     "nota": null
+    },
+    {
+     "ciudad": "Bogotá",
+     "dia": "2026-11-29",
+     "dia_semana": "Domingo",
+     "hora": "19:00",
+     "sede": "Cinemateca de Bogotá",
+     "sala": "Sala Capital",
+     "nota": null
+    }
+   ]
+  },
+  {
+   "pagina": "labriego",
+   "seccion": "Competencia Vidas Cruzadas",
+   "titulo": "Labriego",
+   "titulo_original": "Labriego",
+   "director": "Carlos Matsuo",
+   "anio": 2026,
+   "pais": "Colombia, México",
+   "duracion_min": 85,
+   "sinopsis": "Una aproximación analítica al trabajo del artista Rosemberg Sandoval, cuya producción abarca desde 1980 hasta la actualidad y se caracteriza por el uso del cuerpo propio y ajeno, especialmente de habitantes de calle, como material artístico.",
+   "funciones": [
+    {
+     "ciudad": "Bogotá",
+     "dia": "2026-11-27",
+     "dia_semana": "Viernes",
+     "hora": "19:00",
+     "sede": "Cinemateca de Bogotá",
+     "sala": "Sala 2",
+     "nota": "Seguida de conversatorio con el director"
+    }
+   ]
+  },
+  {
+   "pagina": "laguna",
+   "seccion": "Al Este Especial",
+   "titulo": "Laguna",
+   "titulo_original": "Lagūna",
+   "director": "Šarūnas Bartas",
+   "anio": 2025,
+   "pais": "Lituania, Francia",
+   "duracion_min": 102,
+   "sinopsis": "En 2021, Bartas perdió a su hija Ina Marija en un accidente. Viaja con su hija menor, Una, a la costa del Pacífico mexicano donde Ina Marija había elegido vivir. Entre manglares golpeados por huracanes, padre e hija atraviesan el duelo. Se estrenó en las Giornate degli Autori de Venecia 2025.",
+   "funciones": [
+    {
+     "ciudad": "Bogotá",
+     "dia": "2026-11-28",
+     "dia_semana": "Sábado",
+     "hora": "17:00",
+     "sede": "Cinemateca de Bogotá",
+     "sala": "Sala 3",
+     "nota": "Presentación con el director"
+    }
+   ]
+  },
+  {
+   "pagina": "las-piedras-del-río",
+   "seccion": "Competencia Hecho en Colombia – Bloque 2",
+   "titulo": "Las piedras del río",
+   "titulo_original": "Las piedras del río",
+   "director": "Edna Sierra",
+   "anio": null,
+   "pais": "Colombia",
+   "duracion_min": 16,
+   "sinopsis": "En las márgenes del río Magdalena, un territorio marcado por décadas de violencia, las almas de los desaparecidos encuentran un inexplicable refugio. Esther, cual Caronte, guía a estas sombras que fueron arrancadas de la vida por grupos armados. Los cuerpos olvidados, expulsados por las aguas como un testimonio de dolor, vagan errantes buscando reconstruir los fragmentos de sus historias interrumpidas. Entre la vida y la muerte, entre el olvido y la memoria, transitan estos espíritus que reclaman su derecho a ser recordados, a ser nombrados, a ser humanos.",
+   "funciones": [
+    {
+     "ciudad": "Bogotá",
+     "dia": "2026-11-29",
+     "dia_semana": "Domingo",
+     "hora": "14:00",
+     "sede": "Cinemateca de Bogotá",
+     "sala": "Sala 3",
+     "nota": "Seguida de conversatorio con los realizadores"
+    }
+   ]
+  },
+  {
+   "pagina": "lejanía",
+   "seccion": "Competencia Hecho en Colombia - Bloque 1",
+   "titulo": "Lejanía",
+   "titulo_original": "Lejanía",
+   "director": "Daniel Velásquez Patarroyo",
+   "anio": null,
+   "pais": "Colombia",
+   "duracion_min": 17,
+   "sinopsis": "Un viajero se dirige hacia Lejanía, una playa en una isla escondida en la inmensidad del océano Pacífico, donde se presume, sus visitantes tienen visiones sobrenaturales. En medio de paisajes fragmentados y presencias clandestinas entre las sombras, la realidad se desdibuja y el tiempo se deshace.",
+   "funciones": [
+    {
+     "ciudad": "Bogotá",
+     "dia": "2026-11-28",
+     "dia_semana": "Sábado",
+     "hora": "14:30",
+     "sede": "Cinemateca de Bogotá",
+     "sala": "Sala 3",
+     "nota": "Seguida de conversatorio con los realizadores"
+    }
+   ]
+  },
+  {
+   "pagina": "license-to-live",
+   "seccion": "Far East",
+   "titulo": "License to Live",
+   "titulo_original": "Ningen gokaku",
+   "director": "Kiyoshi Kurosawa",
+   "anio": 1998,
+   "pais": "Japón",
+   "duracion_min": 109,
+   "sinopsis": "Tras diez años en coma, un joven despierta y debe enfrentarse a una vida que continuó sin él. Mientras intenta reconstruir sus vínculos familiares y encontrar su lugar en un mundo que ha cambiado, emprende un difícil proceso de adaptación.",
+   "funciones": [
+    {
+     "ciudad": "Bogotá",
+     "dia": "2026-11-29",
+     "dia_semana": "Domingo",
+     "hora": "17:00",
+     "sede": "Cinemateca de Bogotá",
+     "sala": "Sala 2",
+     "nota": "Seguida de cineforo"
+    }
+   ]
+  },
+  {
+   "pagina": "liminal",
+   "seccion": "Competencia Hecho en Colombia - Bloque 1",
+   "titulo": "Liminal",
+   "titulo_original": "Liminal",
+   "director": "Gabriella Castelblanco",
+   "anio": null,
+   "pais": "Colombia",
+   "duracion_min": 16,
+   "sinopsis": "En una travesía por diversos espacios liminales, entendidos como lugares de tránsito, ambigüedad y espera silenciosa, exploramos la relación de los seres humanos con los lugares que han habitado y habitan, así como las sensaciones, recuerdos y emociones que estos espacios despiertan durante los distintos momentos de sus vidas.",
+   "funciones": [
+    {
+     "ciudad": "Bogotá",
+     "dia": "2026-11-28",
+     "dia_semana": "Sábado",
+     "hora": "14:30",
+     "sede": "Cinemateca de Bogotá",
+     "sala": "Sala 3",
+     "nota": "Seguida de conversatorio con los realizadores"
+    }
+   ]
+  },
+  {
+   "pagina": "londres",
+   "seccion": "Competencia Vidas Cruzadas",
+   "titulo": "Londres",
+   "titulo_original": "London",
+   "director": "Sebastian Brameshuber",
+   "anio": 2026,
+   "pais": "Austria",
+   "duracion_min": 122,
+   "sinopsis": "Bobby siempre está de viaje, conduciendo su coche de un lado a otro por la autopista que une las ciudades austriacas de Viena y Salzburgo. Gracias a un servicio de coche compartido, recoge a otras personas que viajan por la misma ruta pero buscan ahorrar en gasolina. Durante el trayecto, charlan.",
+   "funciones": [
+    {
+     "ciudad": "Medellín",
+     "dia": "2026-11-22",
+     "dia_semana": "Domingo",
+     "hora": "16:00",
+     "sede": "Museo de Arte Moderno de Medellín (MAMM)",
+     "sala": "Sala de cine",
+     "nota": null
+    }
+   ]
+  },
+  {
+   "pagina": "los-golfos",
+   "seccion": "Al Este Especial",
+   "titulo": "Los golfos",
+   "titulo_original": "Los golfos",
+   "director": "Carlos Saura",
+   "anio": 1960,
+   "pais": "España",
+   "duracion_min": 88,
+   "sinopsis": "Julián, Ramón, Juan, el Chato, Paco y Manolo son seis jóvenes que sobreviven como pueden en los arrabales de Madrid. Juan quiere ser torero, y sus amigos cometen pequeños atracos para poder pagar su debut.",
+   "funciones": [
+    {
+     "ciudad": "Bogotá",
+     "dia": "2026-11-29",
+     "dia_semana": "Domingo",
+     "hora": "16:30",
+     "sede": "Cinemateca de Bogotá",
+     "sala": "Sala Capital",
+     "nota": null
+    }
+   ]
+  },
+  {
+   "pagina": "los-inocentes-encantadores",
+   "seccion": "Fokus: Las grietas del muro",
+   "titulo": "Los inocentes encantadores",
+   "titulo_original": "Niewinni czarodzieje",
+   "director": "Andrzej Wajda",
+   "anio": 1960,
+   "pais": "Polonia",
+   "duracion_min": 87,
+   "sinopsis": "Bazyli es un joven médico y baterista de jazz en Varsovia. Pasa una noche con una muchacha que acaba de conocer, entre juegos de seducción y poses, y ninguno de los dos se atreve a mostrar lo que siente. Es un retrato de la juventud polaca de fines de los años cincuenta.",
+   "funciones": [
+    {
+     "ciudad": "Medellín",
+     "dia": "2026-11-20",
+     "dia_semana": "Viernes",
+     "hora": "19:00",
+     "sede": "Centro Colombo Americano",
+     "sala": "Sala 2",
+     "nota": null
+    }
+   ]
+  },
+  {
+   "pagina": "muchas-muchas-gracias",
+   "seccion": "Competencia Hecho en Colombia – Bloque 2",
+   "titulo": "Muchas, muchas gracias",
+   "titulo_original": "Muchas, muchas gracias",
+   "director": "Oiyi Kan",
+   "anio": null,
+   "pais": "Colombia",
+   "duracion_min": 20,
+   "sinopsis": "El cortometraje explora la migración de una familia chino-colombiana a Buenaventura, reconstruyendo su adaptación cultural e identidad. A través de la memoria familiar, el cortometraje reflexiona sobre el mestizaje, las tradiciones, el desarraigo y la construcción de una identidad.",
+   "funciones": [
+    {
+     "ciudad": "Bogotá",
+     "dia": "2026-11-29",
+     "dia_semana": "Domingo",
+     "hora": "14:00",
+     "sede": "Cinemateca de Bogotá",
+     "sala": "Sala 3",
+     "nota": "Seguida de conversatorio con los realizadores"
+    }
+   ]
+  },
+  {
+   "pagina": "nadie-a-la-vista",
+   "seccion": "Competencia Vidas Cruzadas",
+   "titulo": "Nadie a la vista",
+   "titulo_original": "არავინ არ ჩანს (Aravin ar chans)",
+   "director": "Kote Kalandadze",
+   "anio": 2025,
+   "pais": "Georgia",
+   "duracion_min": 75,
+   "sinopsis": "Achiko lleva diez años en el programa estatal de terapia de sustitución, un sistema que ofrece rutina diaria pero deja pocas esperanzas de recuperación. A pesar de una soledad insoportable y una fuerte dependencia a las drogas, todavía sueña con vivir una vida plena.",
+   "funciones": [
+    {
+     "ciudad": "Bogotá",
+     "dia": "2026-11-28",
+     "dia_semana": "Sábado",
+     "hora": "16:00",
+     "sede": "Cinemateca de Bogotá",
+     "sala": "Sala 2",
+     "nota": null
+    }
+   ]
+  },
+  {
+   "pagina": "padre",
+   "seccion": "Competencia Al Este",
+   "titulo": "Padre",
+   "titulo_original": "Otec",
+   "director": "Tereza Nvotová",
+   "anio": 2025,
+   "pais": "Eslovaquia, República Checa, Polonia",
+   "duracion_min": 103,
+   "sinopsis": "La vida tranquila de un hombre exitoso se desmorona cuando su bebé desaparece de la guardería. La llamada desesperada de su esposa revela una verdad devastadora. Inspirada en hechos reales en torno al llamado síndrome del bebé olvidado, la película acompaña a Michal y a su esposa Zuzka a través del duelo, de la culpa, del escarnio público y el largo proceso judicial que sigue.",
+   "funciones": [
+    {
+     "ciudad": "Medellín",
+     "dia": "2026-11-20",
+     "dia_semana": "Viernes",
+     "hora": "18:30",
+     "sede": "Museo de Arte Moderno de Medellín (MAMM)",
+     "sala": "Sala de cine",
+     "nota": null
+    },
+    {
+     "ciudad": "Bogotá",
+     "dia": "2026-11-27",
+     "dia_semana": "Viernes",
+     "hora": "19:30",
+     "sede": "Cinemateca de Bogotá",
+     "sala": "Sala 3",
+     "nota": "Seguida de cineforo"
+    }
+   ]
+  },
+  {
+   "pagina": "pucallpa-la-europea",
+   "seccion": "Al Este Especial",
+   "titulo": "Pucallpa la Europea",
+   "titulo_original": "Pucallpa la Europea",
+   "director": "Santi Zegarra",
+   "anio": 2025,
+   "pais": "Perú",
+   "duracion_min": 105,
+   "sinopsis": "Elsa es una mujer trans que es deportada desde Francia al Perú. Una vez en su país, se ve envuelta en un triángulo amoroso con el ingeniero francés Aymeric (Maxime Saint-Jean) y Yena (Gabriela Pastor), su esposa argentina.",
+   "funciones": [
+    {
+     "ciudad": "Medellín",
+     "dia": "2026-11-21",
+     "dia_semana": "Sábado",
+     "hora": "19:00",
+     "sede": "Centro Colombo Americano",
+     "sala": "Sala 1",
+     "nota": null
+    }
+   ]
+  },
+  {
+   "pagina": "pulse",
+   "seccion": "Far East",
+   "titulo": "Pulse",
+   "titulo_original": "Kairo",
+   "director": "Kiyoshi Kurosawa",
+   "anio": 2001,
+   "pais": "Japón",
+   "duracion_min": 118,
+   "sinopsis": "Michi visita a un amigo al que hace tiempo no ve y descubre que algo no va bien, a pesar de sus aparentes tranquilizadoras palabras. Paralelamente, Ryusuke se conecta por primera vez a internet y se topa con una misteriosa página que muestra inquietantes imágenes de habitaciones vacías y un mensaje perturbador: «¿Quieres ver un fantasma?».",
+   "funciones": [
+    {
+     "ciudad": "Bogotá",
+     "dia": "2026-11-28",
+     "dia_semana": "Sábado",
+     "hora": "20:00",
+     "sede": "Cinemateca de Bogotá",
+     "sala": "Sala 2",
+     "nota": null
+    }
+   ]
+  },
+  {
+   "pagina": "refracción",
+   "seccion": "Competencia Hecho en Colombia - Bloque 1",
+   "titulo": "Refracción",
+   "titulo_original": "Refracción",
+   "director": "Isabella Palacio Mesa",
+   "anio": null,
+   "pais": "Colombia",
+   "duracion_min": 11,
+   "sinopsis": "Eloísa, una chica de 20 años, está en dos relaciones al mismo tiempo. Una noche, después de haber estado con ambas chicas, se siente agobiada por estar en esa situación de engaño y en medio de su confusión sale a recorrer las calles de Medellín en bicicleta, donde se dará cuenta de que no quiere reconocerse pero deberá encontrarse consigo misma.",
+   "funciones": [
+    {
+     "ciudad": "Bogotá",
+     "dia": "2026-11-28",
+     "dia_semana": "Sábado",
+     "hora": "14:30",
+     "sede": "Cinemateca de Bogotá",
+     "sala": "Sala 3",
+     "nota": "Seguida de conversatorio con los realizadores"
+    }
+   ]
+  },
+  {
+   "pagina": "regreso-de-áfrica",
+   "seccion": "Fokus: Las grietas del muro",
+   "titulo": "Regreso de África",
+   "titulo_original": "Le Retour d'Afrique",
+   "director": "Alain Tanner",
+   "anio": 1973,
+   "pais": "Suiza, Francia",
+   "duracion_min": 113,
+   "sinopsis": "Françoise y Vincent son una pareja de Ginebra cansada de su rutina. Deciden irse a Argelia, donde un amigo les promete trabajo, y se despiden de todos. Antes de partir, un telegrama les pide postergar el viaje. Encerrados en su departamento vacío, tienen que repensar su vida sin moverse de la ciudad.",
+   "funciones": [
+    {
+     "ciudad": "Medellín",
+     "dia": "2026-11-20",
+     "dia_semana": "Viernes",
+     "hora": "16:30",
+     "sede": "Centro Colombo Americano",
+     "sala": "Sala 2",
+     "nota": null
+    }
+   ]
+  },
+  {
+   "pagina": "retorno-antes-de-las-3-p.-m.",
+   "seccion": "Clausura",
+   "titulo": "Retorno antes de las 3 p. m.",
+   "titulo_original": "Retour avant 3 p.m.",
+   "director": "Gaël Lepingle",
+   "anio": 2026,
+   "pais": "Francia",
+   "duracion_min": 74,
+   "sinopsis": "Se trata de un hombre y su hogar, el padre en un complejo habitacional. Es después de su muerte. Se ha encontrado algo. No es un secreto, sino la cara oculta de los días, registrada con precisión obsesiva. Una lucha diaria con la vida material y el paso del tiempo.",
+   "funciones": [
+    {
+     "ciudad": "Bogotá",
+     "dia": "2026-11-29",
+     "dia_semana": "Domingo",
+     "hora": "19:00",
+     "sede": "Cinemateca de Bogotá",
+     "sala": "Sala 2",
+     "nota": "Seguida de la premiación"
+    }
+   ]
+  },
+  {
+   "pagina": "shame-and-money",
+   "seccion": "Inauguración Bogotá",
+   "titulo": "Shame and Money",
+   "titulo_original": "Shame and Money",
+   "director": "Visar Morina",
+   "anio": 2026,
+   "pais": "Alemania, Kosovo, Eslovenia, Albania, Macedonia del Norte, Bélgica",
+   "duracion_min": 130,
+   "sinopsis": "Una pareja de unos 40 años vive con su familia extendida en la zona rural de Kosovo, donde se ganan la vida modestamente con su granja. Tras una disputa familiar, pierden su medio de sustento. Se ven obligados a mudarse a Pristina, donde la presión de mantener a su familia pesa mucho sobre los padres, quienes hacen todo lo posible por encontrar trabajo y un lugar donde quedarse. Comienza así un viaje hacia una sociedad hipercapitalista.",
+   "funciones": [
+    {
+     "ciudad": "Bogotá",
+     "dia": "2026-11-25",
+     "dia_semana": "Miércoles",
+     "hora": "18:30",
+     "sede": "Cinemateca de Bogotá",
+     "sala": "Sala Capital",
+     "nota": null
+    }
+   ]
+  },
+  {
+   "pagina": "sol-de-niebla",
+   "seccion": "Competencia Hecho en Colombia - Bloque 1",
+   "titulo": "Sol de niebla",
+   "titulo_original": "Sol de niebla",
+   "director": "María José Ibarra, Florentino Vargas",
+   "anio": null,
+   "pais": "Colombia",
+   "duracion_min": 6,
+   "sinopsis": "Sol de Niebla aborda una visión fragmentada, a modo de estudio morfológico, contraponiendo ilustraciones científicas, representaciones institucionales y discursos alrededor del frailejón. Su soporte fotosensible aporta una noción de registro tangible de la planta y sus inflorescencias, ubicando al frailejón como territorio habitado por diversas formas de vida; reflexionando así el valor de los ecosistemas amenazados por actividades extractivistas que resuenan desde tiempos de la colonia.",
+   "funciones": [
+    {
+     "ciudad": "Bogotá",
+     "dia": "2026-11-28",
+     "dia_semana": "Sábado",
+     "hora": "14:30",
+     "sede": "Cinemateca de Bogotá",
+     "sala": "Sala 3",
+     "nota": "Seguida de conversatorio con los realizadores"
+    }
+   ]
+  },
+  {
+   "pagina": "the-megalomaniacs",
+   "seccion": "Al Este Especial",
+   "titulo": "The Megalomaniacs",
+   "titulo_original": "Megalomani",
+   "director": "Spiros Stathoulopoulos",
+   "anio": 2025,
+   "pais": "Grecia, Chipre, Colombia",
+   "duracion_min": 105,
+   "sinopsis": "Convencida de que la cerámica antigua puede contener rastros de sonido grabado, la arqueóloga Sofía viaja a una remota isla griega para probar su teoría con Potter, un artista excéntrico que duda de su idea.",
+   "funciones": [
+    {
+     "ciudad": "Bogotá",
+     "dia": "2026-11-28",
+     "dia_semana": "Sábado",
+     "hora": "19:00",
+     "sede": "Cinemateca de Bogotá",
+     "sala": "Sala Capital",
+     "nota": "Seguida de conversatorio con los realizadores"
+    }
+   ]
+  },
+  {
+   "pagina": "the-souffleur",
+   "seccion": "Competencia Al Este",
+   "titulo": "The Souffleur",
+   "titulo_original": "The Souffleur",
+   "director": "Gastón Solnicki",
+   "anio": 2025,
+   "pais": "Austria, Argentina",
+   "duracion_min": 78,
+   "sinopsis": "Tras treinta años al frente de un emblemático hotel en Viena, Lucius (Dafoe) descubre que el edificio ha sido vendido a un promotor argentino con la intención de demolerlo y remodelarlo. Lo que sigue es una cruzada llena de giros inesperados, espionaje y una lucha paranoica por preservar un mundo que se desvanece (el único hogar que él ha conocido).",
+   "funciones": [
+    {
+     "ciudad": "Medellín",
+     "dia": "2026-11-19",
+     "dia_semana": "Jueves",
+     "hora": "18:30",
+     "sede": "Museo de Arte Moderno de Medellín (MAMM)",
+     "sala": "Sala de cine",
+     "nota": null
+    },
+    {
+     "ciudad": "Bogotá",
+     "dia": "2026-11-26",
+     "dia_semana": "Jueves",
+     "hora": "17:00",
+     "sede": "Cinemateca de Bogotá",
+     "sala": "Sala Capital",
+     "nota": null
+    }
+   ]
+  },
+  {
+   "pagina": "todas-las-canciones-del-mundo",
+   "seccion": "Competencia Al Este",
+   "titulo": "Todas las canciones del mundo",
+   "titulo_original": "Todas las canciones del mundo",
+   "director": "Santiago Flórez Rincón",
+   "anio": 2026,
+   "pais": "Colombia",
+   "duracion_min": 85,
+   "sinopsis": "Omar, un maestro de música andina con 25 años de trayectoria, enfrenta el cierre del programa universitario al que ha dedicado su vida y la indiferencia de estudiantes y autoridades. Mientras recorre una ciudad marcada por aulas vacías, conciertos y ensayos, emprende un silencioso proceso de duelo y transformación ante el fin de una etapa.",
+   "funciones": [
+    {
+     "ciudad": "Bogotá",
+     "dia": "2026-11-28",
+     "dia_semana": "Sábado",
+     "hora": "16:30",
+     "sede": "Cinemateca de Bogotá",
+     "sala": "Sala Capital",
+     "nota": "Seguida de conversatorio con los realizadores"
+    }
+   ]
+  },
+  {
+   "pagina": "todo-lo-que-pasará-mañana",
+   "seccion": "Competencia Hecho en Colombia – Bloque 2",
+   "titulo": "Todo lo que pasará mañana",
+   "titulo_original": "Todo lo que pasará mañana",
+   "director": "Santiago Calle García",
+   "anio": null,
+   "pais": "Colombia",
+   "duracion_min": 15,
+   "sinopsis": "En una cabaña en medio del bosque, tres amigos se sumergen en un ritual psicotrópico de amor y deseo que resulta fracturando su relación y recuerdos compartidos, invocando juntos una criatura que emerge de sí mismos.",
+   "funciones": [
+    {
+     "ciudad": "Bogotá",
+     "dia": "2026-11-29",
+     "dia_semana": "Domingo",
+     "hora": "14:00",
+     "sede": "Cinemateca de Bogotá",
+     "sala": "Sala 3",
+     "nota": "Seguida de conversatorio con los realizadores"
+    }
+   ]
+  }
+ ]
+}

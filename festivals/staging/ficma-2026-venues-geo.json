@@ -7,7 +7,8 @@
   "_prec": "manual",
   "lat": 5.0588125,
   "lng": -75.4884375,
-  "_todo": "buscar a mano en Google Maps"
+  "_todo": "buscar a mano en Google Maps",
+  "_matriz": "s_dfae17a9"
  },
  "All Cine": {
   "ciclo": "",
@@ -17,7 +18,8 @@
   "_prec": "manual",
   "lat": 5.0563125,
   "lng": -75.4854375,
-  "_todo": "buscar a mano en Google Maps"
+  "_todo": "buscar a mano en Google Maps",
+  "_matriz": "s_d1996183"
  },
  "Aranjuez": {
   "ciclo": "Cine al barrio",
@@ -27,7 +29,8 @@
   "lat": 5.0425408,
   "lng": -75.4997759,
   "_prec": "nominatim",
-  "_match": "Aranjuez, Comuna Universitaria, Perímetro Urbano Manizales, Manizales, Centrosur, Caldas, "
+  "_match": "Aranjuez, Comuna Universitaria, Perímetro Urbano Manizales, Manizales, Centrosur, Caldas, ",
+  "_matriz": "s_acff4c50"
  },
  "Auditorio Juan Hurtado - Universidad Nacional": {
   "ciclo": "",
@@ -37,7 +40,8 @@
   "lat": 5.0568793,
   "lng": -75.4913791,
   "_prec": "nominatim",
-  "_match": "Universidad Nacional - Campus Palogrande, Avenida Paralela, Palogrande, Comuna Palogrande,"
+  "_match": "Universidad Nacional - Campus Palogrande, Avenida Paralela, Palogrande, Comuna Palogrande,",
+  "_matriz": "s_7585ad81"
  },
  "Auditorio Roberto Vélez Correa - Universidad de Caldas": {
   "ciclo": "",
@@ -47,7 +51,8 @@
   "_prec": "manual",
   "lat": 5.0559375,
   "lng": -75.4929375,
-  "_todo": "buscar a mano en Google Maps"
+  "_todo": "buscar a mano en Google Maps",
+  "_matriz": "s_fe8d7da8"
  },
  "Auditorio principal Campus El Cable - Universidad Nacional de Colombia": {
   "ciclo": "",
@@ -57,7 +62,8 @@
   "_prec": "manual",
   "lat": 5.0555625,
   "lng": -75.4861875,
-  "_todo": "buscar a mano en Google Maps"
+  "_todo": "buscar a mano en Google Maps",
+  "_matriz": "s_46bfcf2a"
  },
  "Barrio la estrella": {
   "ciclo": "Cine bajo la niebla",
@@ -67,7 +73,8 @@
   "_prec": "manual",
   "lat": 5.0773125,
   "lng": -75.4873125,
-  "_todo": "buscar a mano en Google Maps"
+  "_todo": "buscar a mano en Google Maps",
+  "_matriz": "s_86bebcba"
  },
  "Batuta": {
   "ciclo": "",
@@ -77,7 +84,8 @@
   "lat": 5.0510059,
   "lng": -75.4826798,
   "_prec": "nominatim",
-  "_match": "Batuta - Sede Principal, Carrera 22, Zona Industrial Alta Suiza, Comuna Ecoturística Cerro"
+  "_match": "Batuta - Sede Principal, Carrera 22, Zona Industrial Alta Suiza, Comuna Ecoturística Cerro",
+  "_matriz": "s_bfd4ab42"
  },
  "Bosques del Norte": {
   "ciclo": "Cine al barrio",
@@ -87,7 +95,8 @@
   "lat": 5.0829919,
   "lng": -75.4892998,
   "_prec": "nominatim",
-  "_match": "Bosques del Norte, Comuna Ciudadela del Norte, Perímetro Urbano Manizales, Manizales, Cent"
+  "_match": "Bosques del Norte, Comuna Ciudadela del Norte, Perímetro Urbano Manizales, Manizales, Cent",
+  "_matriz": "s_1ee22222"
  },
  "Cancha de Bengala": {
   "ciclo": "Cine al barrio",
@@ -97,7 +106,8 @@
   "_prec": "manual",
   "lat": 5.0820625,
   "lng": -75.4896875,
-  "_todo": "buscar a mano en Google Maps"
+  "_todo": "buscar a mano en Google Maps",
+  "_matriz": "s_68138fbc"
  },
  "Cancha la Isla": {
   "ciclo": "Cine bajo la niebla",
@@ -115,7 +125,8 @@
   "_prec": "manual",
   "lat": 5.0416875,
   "lng": -75.4753125,
-  "_todo": "buscar a mano en Google Maps"
+  "_todo": "buscar a mano en Google Maps",
+  "_matriz": "s_36b34e66"
  },
  "Cineclub La Rendija": {
   "ciclo": "",
@@ -133,7 +144,8 @@
   "_prec": "manual",
   "lat": 5.0701875,
   "lng": -75.5166875,
-  "_todo": "buscar a mano en Google Maps"
+  "_todo": "buscar a mano en Google Maps",
+  "_matriz": "s_57b40373"
  },
  "Colombo": {
   "ciclo": "",
@@ -143,7 +155,8 @@
   "lat": 5.058704,
   "lng": -75.4896552,
   "_prec": "nominatim",
-  "_match": "Centro Colombo Americano, Calle 62, La Estrella, Comuna Palogrande, Perímetro Urbano Maniz"
+  "_match": "Centro Colombo Americano, Calle 62, La Estrella, Comuna Palogrande, Perímetro Urbano Maniz",
+  "_matriz": "s_6badfe99"
  },
  "El Carmen": {
   "ciclo": "Cine al barrio",
@@ -153,7 +166,8 @@
   "lat": 5.0601441,
   "lng": -75.5191322,
   "_prec": "nominatim",
-  "_match": "El Carmen, Comuna La Macarena, Perímetro Urbano Manizales, Manizales, Centrosur, Caldas, R"
+  "_match": "El Carmen, Comuna La Macarena, Perímetro Urbano Manizales, Manizales, Centrosur, Caldas, R",
+  "_matriz": "s_213dce05"
  },
  "La Enea Cisco": {
   "ciclo": "Cine al barrio",
@@ -163,7 +177,8 @@
   "lat": 5.0325643,
   "lng": -75.46605,
   "_prec": "nominatim",
-  "_match": "Cisco La Enea, Carrera 33B, San Marcel, Comuna Tesorito, Perímetro Urbano Manizales, Maniz"
+  "_match": "Cisco La Enea, Carrera 33B, San Marcel, Comuna Tesorito, Perímetro Urbano Manizales, Maniz",
+  "_matriz": "s_2c759e7a"
  },
  "Media Torta de Chipre": {
   "ciclo": "Cine bajo la niebla",
@@ -173,7 +188,8 @@
   "_prec": "manual",
   "lat": 5.0723125,
   "lng": -75.5259375,
-  "_todo": "buscar a mano en Google Maps"
+  "_todo": "buscar a mano en Google Maps",
+  "_matriz": "s_987cd558"
  },
  "Parque Ernesto Gutiérrez": {
   "ciclo": "Cine bajo la niebla",
@@ -183,7 +199,8 @@
   "_prec": "manual",
   "lat": 5.0683125,
   "lng": -75.5121875,
-  "_todo": "buscar a mano en Google Maps"
+  "_todo": "buscar a mano en Google Maps",
+  "_matriz": "s_2e88d79d"
  },
  "Parque Fundadores": {
   "ciclo": "Cine al barrio",
@@ -193,7 +210,8 @@
   "lat": 5.0675654,
   "lng": -75.5104371,
   "_prec": "nominatim",
-  "_match": "Parque Fundadores, Comuna Cumanday, Perímetro Urbano Manizales, Manizales, Centrosur, Cald"
+  "_match": "Parque Fundadores, Comuna Cumanday, Perímetro Urbano Manizales, Manizales, Centrosur, Cald",
+  "_matriz": "s_11519c26"
  },
  "Plaza de Bolivar": {
   "ciclo": "Cine bajo la niebla",
@@ -203,7 +221,8 @@
   "lat": 5.0680769,
   "lng": -75.5173616,
   "_prec": "nominatim",
-  "_match": "Plaza de Bolívar, Centro Histórico de Manizales, Comuna Cumanday, Perímetro Urbano Manizal"
+  "_match": "Plaza de Bolívar, Centro Histórico de Manizales, Comuna Cumanday, Perímetro Urbano Manizal",
+  "_matriz": "s_895d2add"
  },
  "Rogelio Salmona": {
   "ciclo": "Cine al aire libre",
@@ -213,7 +232,8 @@
   "lat": 5.0545465,
   "lng": -75.4916559,
   "_prec": "nominatim",
-  "_match": "Centro Cultural Rogelio Salmona, Calle 65, Palogrande, Comuna Palogrande, Perímetro Urbano"
+  "_match": "Centro Cultural Rogelio Salmona, Calle 65, Palogrande, Comuna Palogrande, Perímetro Urbano",
+  "_matriz": "s_46c0ae50"
  },
  "SES Hospital Universitario de Caldas": {
   "ciclo": "",
@@ -223,7 +243,8 @@
   "_prec": "manual",
   "lat": 5.0629375,
   "lng": -75.5009375,
-  "_todo": "buscar a mano en Google Maps"
+  "_todo": "buscar a mano en Google Maps",
+  "_matriz": "s_e94299cf"
  },
  "Samaria": {
   "ciclo": "Cine al barrio",
@@ -233,7 +254,8 @@
   "lat": 5.078985,
   "lng": -75.486459,
   "_prec": "nominatim",
-  "_match": "Samaria, Comuna Nuevo Horizonte, Perímetro Urbano Manizales, Manizales, Centrosur, Caldas,"
+  "_match": "Samaria, Comuna Nuevo Horizonte, Perímetro Urbano Manizales, Manizales, Centrosur, Caldas,",
+  "_matriz": "s_797f44ee"
  },
  "San José": {
   "ciclo": "Cine al barrio",
@@ -254,7 +276,8 @@
   "lat": 5.0684238,
   "lng": -75.5103558,
   "_prec": "nominatim",
-  "_match": "Teatro Fundadores, Calle 33, Fundadores, Comuna Cumanday, Perímetro Urbano Manizales, Mani"
+  "_match": "Teatro Fundadores, Calle 33, Fundadores, Comuna Cumanday, Perímetro Urbano Manizales, Mani",
+  "_matriz": "s_34d4a9cf"
  },
  "Torre del Cable": {
   "ciclo": "Cine bajo la niebla",
@@ -264,7 +287,8 @@
   "lat": 5.0572695,
   "lng": -75.4860656,
   "_prec": "nominatim",
-  "_match": "Portal del Cable Torre Empresarial, Calle 64, El Cable, Comuna Palogrande, Perímetro Urban"
+  "_match": "Portal del Cable Torre Empresarial, Calle 64, El Cable, Comuna Palogrande, Perímetro Urban",
+  "_matriz": "s_b7e0f2f4"
  },
  "Universidad Autónoma - Aula Torreón F-101": {
   "ciclo": "",
@@ -274,48 +298,56 @@
   "_prec": "manual",
   "lat": 5.0674375,
   "lng": -75.5031875,
-  "_todo": "buscar a mano en Google Maps"
+  "_todo": "buscar a mano en Google Maps",
+  "_matriz": "s_985165e3"
  },
  "Universidad de Caldas": {
   "lat": 5.0559375,
   "lng": -75.4929375,
   "_prec": "manual",
-  "_remap": "coordenada verificada de «Auditorio Roberto Vélez Correa - Universidad de Caldas»"
+  "_remap": "coordenada verificada de «Auditorio Roberto Vélez Correa - Universidad de Caldas»",
+  "_matriz": "s_384e68d5"
  },
  "Universidad Nacional · Palogrande": {
   "lat": 5.0568793,
   "lng": -75.4913791,
   "_prec": "nominatim",
-  "_remap": "coordenada verificada de «Auditorio Juan Hurtado - Universidad Nacional»"
+  "_remap": "coordenada verificada de «Auditorio Juan Hurtado - Universidad Nacional»",
+  "_matriz": "s_ce9371b5"
  },
  "Universidad Nacional · El Cable": {
   "lat": 5.0555625,
   "lng": -75.4861875,
   "_prec": "manual",
-  "_remap": "coordenada verificada de «Auditorio principal Campus El Cable - Universidad Nacional de Colombia»"
+  "_remap": "coordenada verificada de «Auditorio principal Campus El Cable - Universidad Nacional de Colombia»",
+  "_matriz": "s_03bcfa6f"
  },
  "Universidad Autónoma": {
   "lat": 5.0674375,
   "lng": -75.5031875,
   "_prec": "manual",
-  "_remap": "coordenada verificada de «Universidad Autónoma - Aula Torreón F-101»"
+  "_remap": "coordenada verificada de «Universidad Autónoma - Aula Torreón F-101»",
+  "_matriz": "s_985165e3"
  },
  "Expoferias": {
   "lat": 5.0416875,
   "lng": -75.4753125,
   "_prec": "manual",
-  "_remap": "coordenada verificada de «Cine fest»"
+  "_remap": "coordenada verificada de «Cine fest»",
+  "_matriz": "s_104736cc"
  },
  "Secretaría de la Mujer y Equidad de Género": {
   "lat": 5.0678125,
   "lng": -75.5199375,
   "_prec": "manual",
-  "_nota": "Comparte coordenada con «Casa de la Secretaría de Cultura»: ambas son dependencias en la Alcaldía de Manizales (confirmado por Juan, 9 ago 2026). Son despachos distintos; la dirección exacta sigue pendiente de la organización."
+  "_nota": "Comparte coordenada con «Casa de la Secretaría de Cultura»: ambas son dependencias en la Alcaldía de Manizales (confirmado por Juan, 9 ago 2026). Son despachos distintos; la dirección exacta sigue pendiente de la organización.",
+  "_matriz": "s_3c28b8d0"
  },
  "Casa de la Secretaría de Cultura": {
   "lat": 5.0678125,
   "lng": -75.5199375,
   "_prec": "manual",
-  "_nota": "Comparte coordenada con «Secretaría de la Mujer y Equidad de Género»: ambas son dependencias en la Alcaldía de Manizales (confirmado por Juan, 9 ago 2026). Son despachos distintos; la dirección exacta sigue pendiente de la organización."
+  "_nota": "Comparte coordenada con «Secretaría de la Mujer y Equidad de Género»: ambas son dependencias en la Alcaldía de Manizales (confirmado por Juan, 9 ago 2026). Son despachos distintos; la dirección exacta sigue pendiente de la organización.",
+  "_matriz": "s_b862f340"
  }
 }

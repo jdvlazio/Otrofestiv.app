@@ -1,0 +1,589 @@
+{
+ "obras": {
+  "Aquí, en otros lugares": {
+   "titulo": "Aquí, en otros lugares",
+   "director": "Comes Chahbazian",
+   "fuentes": {
+    "tmdb_titulo": {
+     "url": "https://www.themoviedb.org/search/movie?query=Aqu%C3%AD%2C%20en%20otros%20lugares%20y%3A2026",
+     "fecha": "2026-11-16",
+     "resultado": "«Aquí, en otros lugares»: 0 resultado(s); «Aquí, en otros lugares» 2026: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_alternos": {
+     "url": "https://www.themoviedb.org/search/movie?query=aqui%20en%20otros%20lugares%20y%3A2026",
+     "fecha": "2026-11-16",
+     "resultado": "«aqui en otros lugares»: 0 resultado(s); «aqui en otros lugares» 2026: 0 resultado(s); «Ici, ailleurs»: 9 resultado(s); «Ici, ailleurs» 2026: 1 resultado(s) → tmdb_alternos: TMDB 1657855 «Here, Elsewhere» — director ✓ y año/duración ✓"
+    },
+    "tmdb_director": {
+     "url": "https://www.themoviedb.org/person/3972543",
+     "fecha": "2026-11-16",
+     "resultado": "Comes Chahbazian (3972543): dirige 2 → tmdb_alternos: TMDB 1657855 «Here, Elsewhere» — director ✓ y año/duración ✓"
+    }
+   },
+   "estado": "ficha_existente",
+   "tmdb_id": 1657855
+  },
+  "Ciudadano Havel": {
+   "titulo": "Ciudadano Havel",
+   "director": "Miroslav Janek, Pavel Koutecký",
+   "fuentes": {
+    "tmdb_titulo": {
+     "url": "https://www.themoviedb.org/search/movie?query=Ciudadano%20Havel%20y%3A2008",
+     "fecha": "2026-11-16",
+     "resultado": "«Ciudadano Havel»: 0 resultado(s); «Ciudadano Havel» 2008: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_alternos": {
+     "url": "https://www.themoviedb.org/search/movie?query=ciudadano%20havel%20y%3A2008",
+     "fecha": "2026-11-16",
+     "resultado": "«ciudadano havel»: 0 resultado(s); «ciudadano havel» 2008: 0 resultado(s); «Občan Havel»: 3 resultado(s); «Občan Havel» 2008: 1 resultado(s) → tmdb_alternos: TMDB 54346 «Citizen Havel» — director ✓ y año/duración ✓"
+    },
+    "tmdb_director": {
+     "url": "https://www.themoviedb.org/person/1146885 https://www.themoviedb.org/person/4620590 https://www.themoviedb.org/person/5194794 https://www.themoviedb.org/person/1146884",
+     "fecha": "2026-11-16",
+     "resultado": "Miroslav Janek (1146885): dirige 21; Miroslav Janek (4620590): dirige 0; Miroslav Janek (5194794): dirige 0; Pavel Koutecký (1146884): dirige 15 → tmdb_alternos: TMDB 54346 «Citizen Havel» — director ✓ y año/duración ✓"
+    }
+   },
+   "estado": "ficha_existente",
+   "tmdb_id": 54346
+  },
+  "Cortometrajes de Altura": {
+   "titulo": "Cortometrajes de Altura",
+   "director": "",
+   "fuentes": {
+    "tmdb_titulo": {
+     "url": "https://www.themoviedb.org/search/movie?query=Cortometrajes%20de%20Altura%20y%3A2008",
+     "fecha": "2026-11-16",
+     "resultado": "«Cortometrajes de Altura»: 0 resultado(s); «Cortometrajes de Altura» 2008: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_alternos": {
+     "url": "https://www.themoviedb.org/search/movie?query=cortometrajes%20de%20altura%20y%3A2008",
+     "fecha": "2026-11-16",
+     "resultado": "«cortometrajes de altura»: 0 resultado(s); «cortometrajes de altura» 2008: 0 resultado(s) → ninguna verifica"
+    },
+    "pagina_del_festival": {
+     "url": "https://www.alestfestival.com/programa2026/cortometrajes-de-altura",
+     "fecha": "2026-11-16",
+     "resultado": "Programa Kluk de 5 animaciones bolivianas (41 min): Cuentos de la Cuenca, Ekeko, La muñeca de maíz, Pascay, Paulina y el cóndor; la imagen de la ficha es el afiche de Paulina y el cóndor (463x662), no del programa"
+    },
+    "tmdb_director": {
+     "url": "https://www.themoviedb.org/movie/344764",
+     "fecha": "2026-11-16",
+     "resultado": "Programa sin director. Partes: Paulina y el cóndor = TMDB 344764 (Marisol Barragán, 1994, 7 min); La muñeca de maíz = TMDB 1743360 (Marisol Barragán, 1989, 6 min, Bolivia); Ekeko, Pascay, Cuentos de la Cuenca sin ficha verificable"
+    },
+    "distribuidora_o_agencia": {
+     "url": "https://www.retinalatina.org/wp-content/uploads/2024/07/guia-ekeko.pdf",
+     "fecha": "2026-11-16",
+     "resultado": "Retina Latina: guía del programa de cortos bolivianos (Paulina y el cóndor, prod. Nicobis 1994)"
+    },
+    "web_director_o_productora": {
+     "url": "https://www.telescopefilm.com/film/180898-paulina-condor",
+     "fecha": "2026-11-16",
+     "resultado": "Telescope: Paulina y el cóndor, Bolivia 1994, 7 min, Marisol Barragán"
+    },
+    "festivales_previos": {
+     "url": "https://lafilm.web.unc.edu/paulina-y-el-condor-en-camino/",
+     "fecha": "2026-11-16",
+     "resultado": "UNC Latin American Film: Paulina y el cóndor proyectada en programa doble"
+    },
+    "imdb": {
+     "na": true,
+     "por_que": "Es un programa de 5 cortos, no una obra; las partes se investigaron por TMDB/Retina Latina",
+     "fecha": "2026-11-16"
+    },
+    "letterboxd": {
+     "na": true,
+     "por_que": "Es un programa de 5 cortos, no una obra; las partes se investigaron por TMDB/Retina Latina",
+     "fecha": "2026-11-16"
+    },
+    "plataformas_festivales": {
+     "na": true,
+     "por_que": "Es un programa de 5 cortos, no una obra; las partes se investigaron por TMDB/Retina Latina",
+     "fecha": "2026-11-16"
+    },
+    "organismo_nacional": {
+     "na": true,
+     "por_que": "Es un programa de 5 cortos, no una obra; las partes se investigaron por TMDB/Retina Latina",
+     "fecha": "2026-11-16"
+    },
+    "busqueda_imagenes": {
+     "na": true,
+     "por_que": "Es un programa de 5 cortos, no una obra; las partes se investigaron por TMDB/Retina Latina",
+     "fecha": "2026-11-16"
+    }
+   },
+   "estado": "sin_afiche",
+   "por_que_sin_afiche": "Programa de 5 cortos, no obra: no tiene afiche propio (la imagen de la ficha es el de Paulina y el cóndor)"
+  },
+  "Desde acá veo la tormenta": {
+   "titulo": "Desde acá veo la tormenta",
+   "director": "Juan Felipe Restrepo",
+   "fuentes": {
+    "tmdb_titulo": {
+     "url": "https://www.themoviedb.org/search/movie?query=Desde%20ac%C3%A1%20veo%20la%20tormenta",
+     "fecha": "2026-11-16",
+     "resultado": "«Desde acá veo la tormenta»: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_alternos": {
+     "url": "https://www.themoviedb.org/search/movie?query=desde%20aca%20veo%20la%20tormenta",
+     "fecha": "2026-11-16",
+     "resultado": "«desde aca veo la tormenta»: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_director": {
+     "url": "https://www.themoviedb.org/person/2937203",
+     "fecha": "2026-11-16",
+     "resultado": "Juan Felipe Restrepo (2937203): dirige 0"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/find/?q=Desde%20ac%C3%A1%20veo%20la%20tormenta%20Juan%20Felipe%20Restrepo",
+     "fecha": "2026-11-16",
+     "resultado": "",
+     "parcial": "IMDb bloquea fetch automatizado; no se vio el resultado"
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/Desde%20ac%C3%A1%20veo%20la%20tormenta%20Juan%20Felipe%20Restrepo/",
+     "fecha": "2026-11-16",
+     "resultado": "",
+     "parcial": "Letterboxd da 403 a WebFetch/curl; no se vio"
+    },
+    "distribuidora_o_agencia": {
+     "url": "https://www.google.com/search?q=Desde%20ac%C3%A1%20veo%20la%20tormenta%20Juan%20Felipe%20Restrepo%20distribuci%C3%B3n",
+     "fecha": "2026-11-16",
+     "resultado": "WebSearch: ninguna distribuidora/agencia encontrada"
+    },
+    "plataformas_festivales": {
+     "url": "https://www.google.com/search?q=Desde%20ac%C3%A1%20veo%20la%20tormenta%20Juan%20Felipe%20Restrepo%20filmfreeway%20OR%20festhome%20OR%20shortfilmdepot",
+     "fecha": "2026-11-16",
+     "resultado": "WebSearch: sin ficha en FilmFreeway/Festhome/Short Film Depot"
+    },
+    "organismo_nacional": {
+     "url": "https://www.proimagenescolombia.com/",
+     "fecha": "2026-11-16",
+     "resultado": "",
+     "parcial": "No se consultó el buscador de Proimágenes (requiere navegador)"
+    },
+    "pagina_del_festival": {
+     "url": "https://www.alestfestival.com/programa2026/desde-acá-veo-la-tormenta",
+     "fecha": "2026-11-16",
+     "resultado": "Ficha: Juan Felipe Restrepo, Colombia, 11 min; afiche oficial 1080x1350 con título y créditos (Sr. Murga Cine)"
+    },
+    "web_director_o_productora": {
+     "url": "https://www.google.com/search?q=Sr.%20Murga%20Cine%20Desde%20ac%C3%A1%20veo%20la%20tormenta",
+     "fecha": "2026-11-16",
+     "resultado": "WebSearch: sin web propia; afiche acredita Sr. Murga Cine"
+    },
+    "busqueda_imagenes": {
+     "url": "https://static.wixstatic.com/media/9df115_088ce1ba8a314500ae61a05804ed2899~mv2.jpg",
+     "fecha": "2026-11-16",
+     "resultado": "Afiche oficial 1080x1350 en la ficha del festival (mayor que el de SiembraFest)"
+    },
+    "festivales_previos": {
+     "url": "https://github.com/jdvlazio/Otrofestiv.app/blob/main/festivals/siembrafest-2026.json",
+     "fecha": "2026-11-16",
+     "resultado": "SiembraFest 2026 (publicado, afiche oficial 500x750); laureles del afiche: Vitafest, Sanfici, FICAE 2026, Origen"
+    }
+   },
+   "afiche": {
+    "url": "https://static.wixstatic.com/media/9df115_088ce1ba8a314500ae61a05804ed2899~mv2.jpg",
+    "fuente": "Afiche oficial en la ficha de AL ESTE 2026 (mismo arte que SiembraFest)",
+    "archivo": "fuentes/aleste-2026/altas/desde-aca-veo-la-tormenta.jpg",
+    "px": [
+     1080,
+     1620
+    ],
+    "ratio": 0.6667,
+    "recorte": {
+     "de": [
+      1080,
+      1350
+     ],
+     "estirado": [
+      1080,
+      1620
+     ],
+     "objetivo": 0.6667
+    },
+    "veredicto_criterio": null,
+    "fecha": "2026-11-16"
+   },
+   "estado": "alta_posible"
+  },
+  "Historias de una mentira": {
+   "titulo": "Historias de una mentira",
+   "director": "Olia Verriopoulou",
+   "fuentes": {
+    "tmdb_titulo": {
+     "url": "https://www.themoviedb.org/search/movie?query=Historias%20de%20una%20mentira%20y%3A2025",
+     "fecha": "2026-11-16",
+     "resultado": "«Historias de una mentira»: 0 resultado(s); «Historias de una mentira» 2025: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_alternos": {
+     "url": "https://www.themoviedb.org/search/movie?query=historias%20de%20una%20mentira%20y%3A2025",
+     "fecha": "2026-11-16",
+     "resultado": "«historias de una mentira»: 0 resultado(s); «historias de una mentira» 2025: 0 resultado(s); «Stories of a Lie»: 2 resultado(s); «Stories of a Lie» 2025: 1 resultado(s) → tmdb_alternos: TMDB 1568190 «Stories of a Lie» — director ✓ y año/duración ✓"
+    },
+    "tmdb_director": {
+     "url": "https://www.themoviedb.org/person/3239065",
+     "fecha": "2026-11-16",
+     "resultado": "Olia Verriopoulou (3239065): dirige 3 → tmdb_alternos: TMDB 1568190 «Stories of a Lie» — director ✓ y año/duración ✓"
+    }
+   },
+   "estado": "ficha_existente",
+   "tmdb_id": 1568190
+  },
+  "La retirada": {
+   "titulo": "La retirada",
+   "director": "Václav Havel",
+   "fuentes": {
+    "tmdb_titulo": {
+     "url": "https://www.themoviedb.org/search/movie?query=La%20retirada%20y%3A2011",
+     "fecha": "2026-11-16",
+     "resultado": "«La retirada»: 5 resultado(s); «La retirada» 2011: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_alternos": {
+     "url": "https://www.themoviedb.org/search/movie?query=la%20retirada%20y%3A2011",
+     "fecha": "2026-11-16",
+     "resultado": "«la retirada»: 5 resultado(s); «la retirada» 2011: 0 resultado(s); «Odcházení»: 2 resultado(s); «Odcházení» 2011: 1 resultado(s) → tmdb_alternos: TMDB 76598 «Leaving» — director ✓ y año/duración ✓"
+    },
+    "tmdb_director": {
+     "url": "https://www.themoviedb.org/person/579477",
+     "fecha": "2026-11-16",
+     "resultado": "Václav Havel (579477): dirige 1 → tmdb_alternos: TMDB 76598 «Leaving» — director ✓ y año/duración ✓"
+    }
+   },
+   "estado": "ficha_existente",
+   "tmdb_id": 76598
+  },
+  "Labriego": {
+   "titulo": "Labriego",
+   "director": "Carlos Matsuo",
+   "fuentes": {
+    "tmdb_titulo": {
+     "url": "https://www.themoviedb.org/search/movie?query=Labriego%20y%3A2026",
+     "fecha": "2026-11-16",
+     "resultado": "«Labriego»: 0 resultado(s); «Labriego» 2026: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_alternos": {
+     "url": "https://www.themoviedb.org/search/movie?query=labriego%20y%3A2026",
+     "fecha": "2026-11-16",
+     "resultado": "«labriego»: 0 resultado(s); «labriego» 2026: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_director": {
+     "url": "https://www.themoviedb.org/person/1368580",
+     "fecha": "2026-11-16",
+     "resultado": "Carlos Matsuo (1368580): dirige 4"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/find/?q=Labriego%20Carlos%20Matsuo",
+     "fecha": "2026-11-16",
+     "resultado": "",
+     "parcial": "IMDb bloquea fetch automatizado; no se vio el resultado"
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/Labriego%20Carlos%20Matsuo/",
+     "fecha": "2026-11-16",
+     "resultado": "",
+     "parcial": "Letterboxd da 403 a WebFetch/curl; no se vio"
+    },
+    "distribuidora_o_agencia": {
+     "url": "https://www.google.com/search?q=Labriego%20Carlos%20Matsuo%20distribuci%C3%B3n",
+     "fecha": "2026-11-16",
+     "resultado": "WebSearch: ninguna distribuidora/agencia encontrada"
+    },
+    "plataformas_festivales": {
+     "url": "https://www.google.com/search?q=Labriego%20Carlos%20Matsuo%20filmfreeway%20OR%20festhome%20OR%20shortfilmdepot",
+     "fecha": "2026-11-16",
+     "resultado": "WebSearch: sin ficha en FilmFreeway/Festhome/Short Film Depot"
+    },
+    "organismo_nacional": {
+     "url": "https://www.proimagenescolombia.com/",
+     "fecha": "2026-11-16",
+     "resultado": "",
+     "parcial": "No se consultó el buscador de Proimágenes (requiere navegador)"
+    },
+    "pagina_del_festival": {
+     "url": "https://www.alestfestival.com/programa2026/labriego",
+     "fecha": "2026-11-16",
+     "resultado": "Ficha: Carlos Matsuo, 2026, Colombia/México, 85 min, sobre Rosemberg Sandoval; única imagen propia es una foto de sala de exposición 467x428, no afiche"
+    },
+    "web_director_o_productora": {
+     "url": "https://www.google.com/search?q=Labriego%20Carlos%20Matsuo%20Rosemberg%20Sandoval",
+     "fecha": "2026-11-16",
+     "resultado": "WebSearch: nada sobre la obra; Carlos Matsuo solo aparece por Violentao (Morelia 2013)"
+    },
+    "festivales_previos": {
+     "url": "https://www.google.com/search?q=Labriego%20Matsuo%20festival%202026",
+     "fecha": "2026-11-16",
+     "resultado": "WebSearch: sin otros festivales; parece estreno en AL ESTE"
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.google.com/search?q=Labriego%20Matsuo%20afiche",
+     "fecha": "2026-11-16",
+     "resultado": "",
+     "parcial": "Solo WebSearch textual; sin búsqueda de imágenes real (sin navegador)"
+    }
+   },
+   "estado": "sin_afiche",
+   "por_que_sin_afiche": "Ni la ficha del festival ni la web traen afiche; la única imagen es una foto de sala (467x428)"
+  },
+  "Las piedras del río": {
+   "titulo": "Las piedras del río",
+   "director": "Edna Sierra",
+   "fuentes": {
+    "tmdb_titulo": {
+     "url": "https://www.themoviedb.org/search/movie?query=Las%20piedras%20del%20r%C3%ADo",
+     "fecha": "2026-11-16",
+     "resultado": "«Las piedras del río»: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_alternos": {
+     "url": "https://www.themoviedb.org/search/movie?query=las%20piedras%20del%20rio",
+     "fecha": "2026-11-16",
+     "resultado": "«las piedras del rio»: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_director": {
+     "url": "https://www.themoviedb.org/person/3224069",
+     "fecha": "2026-11-16",
+     "resultado": "Edna Sierra Duque (3224069): dirige 2"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/find/?q=Las%20piedras%20del%20r%C3%ADo%20Edna%20Sierra",
+     "fecha": "2026-11-16",
+     "resultado": "",
+     "parcial": "IMDb bloquea fetch automatizado; no se vio el resultado"
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/Las%20piedras%20del%20r%C3%ADo%20Edna%20Sierra/",
+     "fecha": "2026-11-16",
+     "resultado": "",
+     "parcial": "Letterboxd da 403 a WebFetch/curl; no se vio"
+    },
+    "distribuidora_o_agencia": {
+     "url": "https://www.google.com/search?q=Las%20piedras%20del%20r%C3%ADo%20Edna%20Sierra%20distribuci%C3%B3n",
+     "fecha": "2026-11-16",
+     "resultado": "WebSearch: ninguna distribuidora/agencia encontrada"
+    },
+    "plataformas_festivales": {
+     "url": "https://www.google.com/search?q=Las%20piedras%20del%20r%C3%ADo%20Edna%20Sierra%20filmfreeway%20OR%20festhome%20OR%20shortfilmdepot",
+     "fecha": "2026-11-16",
+     "resultado": "WebSearch: sin ficha en FilmFreeway/Festhome/Short Film Depot"
+    },
+    "organismo_nacional": {
+     "url": "https://www.proimagenescolombia.com/",
+     "fecha": "2026-11-16",
+     "resultado": "",
+     "parcial": "No se consultó el buscador de Proimágenes (requiere navegador)"
+    },
+    "pagina_del_festival": {
+     "url": "https://www.alestfestival.com/programa2026/las-piedras-del-río",
+     "fecha": "2026-11-16",
+     "resultado": "Ficha: Edna Sierra, Colombia, 16 min; afiche oficial 3175x4490 (Animal Films)"
+    },
+    "web_director_o_productora": {
+     "url": "https://www.google.com/search?q=Animal%20Films%20Edna%20Sierra%20Las%20piedras%20del%20r%C3%ADo",
+     "fecha": "2026-11-16",
+     "resultado": "WebSearch: sin web de Animal Films ni de la directora"
+    },
+    "busqueda_imagenes": {
+     "url": "https://static.wixstatic.com/media/9df115_5ab25809093d4eae80cc089e791e85a0~mv2.jpg",
+     "fecha": "2026-11-16",
+     "resultado": "Afiche oficial 3175x4490 en la ficha del festival"
+    },
+    "festivales_previos": {
+     "url": "https://github.com/jdvlazio/Otrofestiv.app/blob/main/festivals/cortoscali-2026.json",
+     "fecha": "2026-11-16",
+     "resultado": "Cortos Cali 2026 y Popayán 2026 (publicados); afiche oficial en assets/cortoscali-2026 (780x1170)"
+    }
+   },
+   "afiche": {
+    "url": "https://static.wixstatic.com/media/9df115_5ab25809093d4eae80cc089e791e85a0~mv2.jpg",
+    "fuente": "Afiche oficial en la ficha de AL ESTE 2026 (mismo arte que Cortos Cali)",
+    "archivo": "fuentes/aleste-2026/altas/las-piedras-del-rio.jpg",
+    "px": [
+     3175,
+     4490
+    ],
+    "ratio": 0.7071,
+    "recorte": null,
+    "veredicto_criterio": null,
+    "fecha": "2026-11-16"
+   },
+   "estado": "alta_posible"
+  },
+  "Latidos: el grafiti como arte, el grafiti como forma de vida": {
+   "titulo": "Latidos: el grafiti como arte, el grafiti como forma de vida",
+   "director": "Juan Zapata",
+   "fuentes": {
+    "tmdb_titulo": {
+     "url": "https://www.themoviedb.org/search/movie?query=Latidos%3A%20el%20grafiti%20como%20arte%2C%20el%20grafiti%20como%20forma%20de%20vida%20y%3A2026",
+     "fecha": "2026-11-16",
+     "resultado": "«Latidos: el grafiti como arte, el grafiti como forma de vida»: 0 resultado(s); «Latidos: el grafiti como arte, el grafiti como forma de vida» 2026: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_alternos": {
+     "url": "https://www.themoviedb.org/search/movie?query=latidos%20el%20grafiti%20como%20arte%20el%20grafiti%20como%20forma%20de%20vida%20y%3A2026",
+     "fecha": "2026-11-16",
+     "resultado": "«latidos el grafiti como arte el grafiti como forma de vida»: 0 resultado(s); «latidos el grafiti como arte el grafiti como forma de vida» 2026: 0 resultado(s); «Latidos»: 20 resultado(s); «Latidos» 2026: 3 resultado(s) → ninguna verifica"
+    },
+    "tmdb_director": {
+     "url": "https://www.themoviedb.org/person/2463829 https://www.themoviedb.org/person/1192540 https://www.themoviedb.org/person/3842969",
+     "fecha": "2026-11-16",
+     "resultado": "Juan Zapata (2463829): dirige 1; Juan Zapata (1192540): dirige 2; Juan Zapata (3842969): dirige 0"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/find/?q=Latidos%20grafiti%20Juan%20Zapata",
+     "fecha": "2026-11-16",
+     "resultado": "",
+     "parcial": "IMDb bloquea fetch automatizado; no se vio el resultado"
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/Latidos%20grafiti%20Juan%20Zapata/",
+     "fecha": "2026-11-16",
+     "resultado": "",
+     "parcial": "Letterboxd da 403 a WebFetch/curl; no se vio"
+    },
+    "distribuidora_o_agencia": {
+     "url": "https://www.google.com/search?q=Latidos%20grafiti%20Juan%20Zapata%20distribuci%C3%B3n",
+     "fecha": "2026-11-16",
+     "resultado": "WebSearch: ninguna distribuidora/agencia encontrada"
+    },
+    "plataformas_festivales": {
+     "url": "https://www.google.com/search?q=Latidos%20grafiti%20Juan%20Zapata%20filmfreeway%20OR%20festhome%20OR%20shortfilmdepot",
+     "fecha": "2026-11-16",
+     "resultado": "WebSearch: sin ficha en FilmFreeway/Festhome/Short Film Depot"
+    },
+    "organismo_nacional": {
+     "url": "https://www.proimagenescolombia.com/",
+     "fecha": "2026-11-16",
+     "resultado": "",
+     "parcial": "No se consultó el buscador de Proimágenes (requiere navegador)"
+    },
+    "pagina_del_festival": {
+     "url": "https://www.alestfestival.com/programa2026",
+     "fecha": "2026-11-16",
+     "resultado": "El programa2026 bajado (fuentes/aleste-2026/programa/) no tiene ficha propia de Latidos; solo consta en el post IG DfkttriN6pD"
+    },
+    "web_director_o_productora": {
+     "url": "https://www.google.com/search?q=Latidos%20grafiti%20Juan%20Zapata%20cortometraje",
+     "fecha": "2026-11-16",
+     "resultado": "WebSearch: solo la Bienal de Grafiti Latidos (Medellín, Alcaldía); nada del corto ni de Juan Zapata"
+    },
+    "festivales_previos": {
+     "url": "https://www.google.com/search?q=Latidos%20el%20grafiti%20como%20forma%20de%20vida%20corto",
+     "fecha": "2026-11-16",
+     "resultado": "WebSearch: sin festivales previos"
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.instagram.com/p/DfkttriN6pD/",
+     "fecha": "2026-11-16",
+     "resultado": "",
+     "parcial": "IG no se abrió (sin sesión); sin búsqueda de imágenes real"
+    }
+   },
+   "estado": "sin_afiche",
+   "por_que_sin_afiche": "Sin ficha en la web del festival ni rastro web del corto; el post IG del festival no se revisó (sin sesión)"
+  },
+  "Nadie a la vista": {
+   "titulo": "Nadie a la vista",
+   "director": "Kote Kalandadze",
+   "fuentes": {
+    "tmdb_titulo": {
+     "url": "https://www.themoviedb.org/search/movie?query=Nadie%20a%20la%20vista%20y%3A2025",
+     "fecha": "2026-11-16",
+     "resultado": "«Nadie a la vista»: 0 resultado(s); «Nadie a la vista» 2025: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_alternos": {
+     "url": "https://www.themoviedb.org/search/movie?query=nadie%20a%20la%20vista%20y%3A2025",
+     "fecha": "2026-11-16",
+     "resultado": "«nadie a la vista»: 0 resultado(s); «nadie a la vista» 2025: 0 resultado(s); «არავინ არ ჩანს (Aravin ar chans)»: 0 resultado(s); «არავინ არ ჩანს (Aravin ar chans)» 2025: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_director": {
+     "url": "https://www.themoviedb.org/person/3122625",
+     "fecha": "2026-11-16",
+     "resultado": "Kote Kalandadze (3122625): dirige 4"
+    },
+    "pagina_del_festival": {
+     "url": "https://www.alestfestival.com/programa2026/nadie-a-la-vista",
+     "fecha": "2026-11-16",
+     "resultado": "Ficha AL ESTE: Kote Kalandadze, 2025, Georgia, 75 min, original არავინ არ ჩანს; afiche oficial georgiano 600x900"
+    },
+    "web_director_o_productora": {
+     "url": "https://sites.google.com/view/parachutefilms/films/nobody-in-sight-2025",
+     "fecha": "2026-11-16",
+     "resultado": "Parachute Films: Nobody In Sight, Kote Kalandadze, 2025, 75 min, EU Human Rights Award Tbilisi IFF"
+    },
+    "festivales_previos": {
+     "url": "https://oc-media.org/review-nobody-in-sight-one-mans-fight-with-addiction-and-loneliness-in-tbilisi",
+     "fecha": "2026-11-16",
+     "resultado": "Reseña OC Media: estreno Tbilisi IFF 5 dic 2025; Eliso Awards 2026 nominada"
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/tmdb/1594652",
+     "fecha": "2026-11-16",
+     "resultado": "",
+     "parcial": "403 a WebFetch; no se pudo ver la página de Letterboxd"
+    },
+    "imdb": {
+     "url": "https://www.themoviedb.org/movie/1594652",
+     "fecha": "2026-11-16",
+     "resultado": "",
+     "parcial": "TMDB no trae imdb_id; IMDb no se consultó"
+    },
+    "distribuidora_o_agencia": {
+     "url": "https://sites.google.com/view/parachutefilms/films/nobody-in-sight-2025",
+     "fecha": "2026-11-16",
+     "resultado": "Parachute Films / Wide Productions (logos del afiche)"
+    },
+    "plataformas_festivales": {
+     "url": "https://www.google.com/search?q=Nobody%20in%20Sight%20Kalandadze%20filmfreeway",
+     "fecha": "2026-11-16",
+     "resultado": "Sin ficha en plataformas; no necesaria, ficha TMDB existe"
+    },
+    "organismo_nacional": {
+     "url": "https://www.gnfc.ge/",
+     "fecha": "2026-11-16",
+     "resultado": "",
+     "parcial": "No se consultó el catálogo del Georgian National Film Center (logo en el afiche)"
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.themoviedb.org/movie/1594652/images/posters",
+     "fecha": "2026-11-16",
+     "resultado": "TMDB ya tiene el afiche oficial 900x1350, igual al de la ficha del festival"
+    }
+   },
+   "estado": "ficha_existente",
+   "tmdb_id": 1594652,
+   "evidencia": "TMDB 1594652 «Nobody In Sight» / original არავინ არ ჩანს, dir. Kote Kalandadze, 2025-12-05, 76 min — coincide título original, director, año y duración (75)",
+   "respaldo": [
+    "festivales_previos",
+    "web_director_o_productora"
+   ],
+   "ficha_fecha": "2026-11-16"
+  },
+  "Retorno antes de las 3 p. m.": {
+   "titulo": "Retorno antes de las 3 p. m.",
+   "director": "Gaël Lepingle",
+   "fuentes": {
+    "tmdb_titulo": {
+     "url": "https://www.themoviedb.org/search/movie?query=Retorno%20antes%20de%20las%203%20p.%20m.%20y%3A2026",
+     "fecha": "2026-11-16",
+     "resultado": "«Retorno antes de las 3 p. m.»: 0 resultado(s); «Retorno antes de las 3 p. m.» 2026: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_alternos": {
+     "url": "https://www.themoviedb.org/search/movie?query=retorno%20antes%20de%20las%203%20p%20m%20y%3A2026",
+     "fecha": "2026-11-16",
+     "resultado": "«retorno antes de las 3 p m»: 0 resultado(s); «retorno antes de las 3 p m» 2026: 0 resultado(s); «Retour avant 3 p.m.»: 1 resultado(s); «Retour avant 3 p.m.» 2026: 1 resultado(s) → tmdb_alternos: TMDB 1633356 «Back Before 3 P.M.» — director ✓ y año/duración ✓"
+    },
+    "tmdb_director": {
+     "url": "https://www.themoviedb.org/person/1510309 https://www.themoviedb.org/person/2811918",
+     "fecha": "2026-11-16",
+     "resultado": "Gaël Lépingle (1510309): dirige 10; Gaël Lépingle (2811918): dirige 0 → tmdb_alternos: TMDB 1633356 «Back Before 3 P.M.» — director ✓ y año/duración ✓"
+    }
+   },
+   "estado": "ficha_existente",
+   "tmdb_id": 1633356
+  }
+ },
+ "_provenance": {
+  "fuente": "pipeline/altas.py (TMDB + fuentes revisadas a mano, una por una)",
+  "capturado": "2026-11-16"
+ },
+ "_nota": "registro de altas: por obra sin ficha, las fuentes revisadas y la decisión. Se escribe con pipeline/altas.py, no a mano."
+}
