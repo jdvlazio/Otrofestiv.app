@@ -3,5 +3,96 @@
   "fuente": "sondas TMDB por título, alternos y filmografía del director (movie/credits)",
   "capturado": "2026-11-15"
  },
- "fichas": {}
+ "fichas": {
+  "2000": {
+   "tmdb": 1712540,
+   "_fuente": "https://www.themoviedb.org/movie/1712540",
+   "_por_que": "altas.py --sondar: tmdb_titulo: TMDB 1712540 «2000» — director ✓ y año/duración ✓",
+   "_registro": "bogoshorts-2026-altas.json"
+  },
+  "A los once": {
+   "tmdb": 1826830,
+   "_fuente": "https://www.themoviedb.org/movie/1826830",
+   "_por_que": "altas.py --sondar: tmdb_titulo: TMDB 1826830 «A los once» — director ✓ y año/duración ✓",
+   "_registro": "bogoshorts-2026-altas.json"
+  },
+  "Barcelona": {
+   "tmdb": 356487,
+   "_fuente": "https://www.themoviedb.org/movie/356487",
+   "_por_que": "altas.py --sondar: tmdb_titulo: TMDB 356487 «Barcelona, Main City of Catalonia» — director ✓ y año/duración ✓",
+   "_registro": "bogoshorts-2026-altas.json"
+  },
+  "Bus": {
+   "tmdb": 1274419,
+   "_fuente": "https://www.themoviedb.org/movie/1274419",
+   "_por_que": "altas.py --sondar: tmdb_titulo: TMDB 1274419 «Bus» — director ✓ y año/duración ✓",
+   "_registro": "bogoshorts-2026-altas.json"
+  },
+  "Eri": {
+   "tmdb": 1118590,
+   "_fuente": "https://www.themoviedb.org/movie/1118590",
+   "_por_que": "altas.py --sondar: tmdb_titulo: TMDB 1118590 «Eri, The Cow» — director ✓ y año/duración ✓",
+   "_registro": "bogoshorts-2026-altas.json"
+  },
+  "Fiction": {
+   "tmdb": 1691015,
+   "_fuente": "https://www.themoviedb.org/movie/1691015",
+   "_por_que": "altas.py --sondar: tmdb_titulo: TMDB 1691015 «Fiction» — director ✓ y año/duración ✓",
+   "_registro": "bogoshorts-2026-altas.json"
+  },
+  "Grounded": {
+   "tmdb": 1700763,
+   "_fuente": "https://www.themoviedb.org/movie/1700763",
+   "_por_que": "altas.py --sondar: tmdb_titulo: TMDB 1700763 «Grounded» — director ✓ y año/duración ✓",
+   "_registro": "bogoshorts-2026-altas.json"
+  },
+  "Idols": {
+   "tmdb": 1654471,
+   "_fuente": "https://www.themoviedb.org/movie/1654471",
+   "_por_que": "altas.py --sondar: tmdb_titulo: TMDB 1654471 «Idols» — director ✓ y año/duración ✓",
+   "_registro": "bogoshorts-2026-altas.json"
+  },
+  "Mirage": {
+   "tmdb": 1705630,
+   "_fuente": "https://www.themoviedb.org/movie/1705630",
+   "_por_que": "altas.py --sondar: tmdb_titulo: TMDB 1705630 «Mirage» — director ✓ y año/duración ✓",
+   "_registro": "bogoshorts-2026-altas.json"
+  },
+  "Raíces": {
+   "tmdb": 1784652,
+   "_fuente": "https://www.themoviedb.org/movie/1784652",
+   "_por_que": "altas.py --sondar: tmdb_titulo: TMDB 1784652 «Raíces» — director ✓ y año/duración ✓",
+   "_registro": "bogoshorts-2026-altas.json"
+  },
+  "Risorsero dalla tomba e fu... l’Apocalisse!": {
+   "tmdb": 1788289,
+   "_fuente": "https://www.themoviedb.org/movie/1788289",
+   "_por_que": "altas.py --sondar: tmdb_alternos: TMDB 1788289 «They Rose from the Grave and It Was… The Apocalypse!» — director ✓ y año/duración ✓",
+   "_registro": "bogoshorts-2026-altas.json"
+  },
+  "Solos": {
+   "tmdb": 758792,
+   "_fuente": "https://www.themoviedb.org/movie/758792",
+   "_por_que": "altas.py --sondar: tmdb_director: TMDB 758792 «Solos» — director ✓ y año/duración ✓",
+   "_registro": "bogoshorts-2026-altas.json"
+  },
+  "Summer": {
+   "tmdb": 1256387,
+   "_fuente": "https://www.themoviedb.org/movie/1256387",
+   "_por_que": "altas.py --sondar: tmdb_director: TMDB 1256387 «END OF SUMMER» — director ✓ y año/duración ✓",
+   "_registro": "bogoshorts-2026-altas.json"
+  },
+  "The End": {
+   "tmdb": 1472669,
+   "_fuente": "https://www.themoviedb.org/movie/1472669",
+   "_por_que": "altas.py --sondar: tmdb_titulo: TMDB 1472669 «The End» — director ✓ y año/duración ✓",
+   "_registro": "bogoshorts-2026-altas.json"
+  },
+  "Triangle": {
+   "tmdb": 1567979,
+   "_fuente": "https://www.themoviedb.org/movie/1567979",
+   "_por_que": "altas.py --sondar: tmdb_director: TMDB 1567979 «Triangle» — director ✓ y año/duración ✓",
+   "_registro": "bogoshorts-2026-altas.json"
+  }
+ }
 }
