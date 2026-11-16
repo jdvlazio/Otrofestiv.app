@@ -1460,8 +1460,50 @@
      "url": "https://www.themoviedb.org/person/4053702",
      "fecha": "2026-11-15",
      "resultado": "Bram VanderMark (4053702): dirige 2"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/find/?q=I%20Carry%20Them&s=tt",
+     "fecha": "2026-11-16",
+     "resultado": "IMDb títulos «I Carry Them»: solo I Carry Them Wherever I Go (2024, otra obra); nada de Bram VanderMark 2022"
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/I%20Carry%20Them/",
+     "fecha": "2026-11-16",
+     "resultado": "LB: solo I Carry Them Wherever I Go (2024, Mason McDonald), otra obra"
+    },
+    "web_director_o_productora": {
+     "url": "https://www.bramvandermark.com/",
+     "fecha": "2026-11-16",
+     "resultado": "Web del director: I CARRY THEM, Experimental Narrative / Films.Dance, comisionado por Jacob Jonas, coreografía Jonathan Fredrickson; solo tráiler y fotogramas, sin afiche"
+    },
+    "distribuidora_o_agencia": {
+     "url": "https://www.films.dance/icarrythem",
+     "fecha": "2026-11-16",
+     "resultado": "Films.Dance (Jacob Jonas The Company, productora/comisionante): créditos completos (Jamar Roberts, música Keyon Harrold), New York; difusión en línea (Vimeo Staff Pick), sin agencia de ventas ni afiche"
+    },
+    "plataformas_festivales": {
+     "url": "https://www.bing.com/search?q=%22I+Carry+Them%22+%22Bram+VanderMark%22",
+     "fecha": "2026-11-16",
+     "resultado": "Sin perfil FilmFreeway en Bing; la obra circula en Vimeo (Staff Pick), Directors' Library, NOWNESS. Short Film Depot pide sesión; Festhome sin catálogo público"
+    },
+    "festivales_previos": {
+     "url": "https://www.onepointfour.co/entries/bram-vandermark-i-carry-them/",
+     "fecha": "2026-11-16",
+     "resultado": "Onepointfour 1.4 Awards: Winners – Dance (Silver). Además Directors Notes y Beyond the Short (may–jun 2022)"
+    },
+    "organismo_nacional": {
+     "na": true,
+     "por_que": "Estados Unidos no tiene organismo nacional de cine con registro de obras; producción privada de Films.Dance/Jacob Jonas The Company",
+     "fecha": "2026-11-16"
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.bing.com/images/search?q=%22I+Carry+Them%22+Bram+VanderMark+poster",
+     "fecha": "2026-11-16",
+     "resultado": "Bing Imágenes: solo fotogramas 16:9 (Onepointfour 1920x1080, Directors Notes, Films.Dance); ningún afiche"
     }
-   }
+   },
+   "estado": "sin_afiche",
+   "por_que_sin_afiche": "Dance film comisionado y lanzado en línea: el director, Films.Dance, Directors Notes y Onepointfour solo publican fotogramas horizontales; no se halló afiche vertical"
   },
   "Jazzed": {
    "titulo": "Jazzed",
@@ -1481,8 +1523,50 @@
      "url": "https://www.themoviedb.org/person/2404080",
      "fecha": "2026-11-15",
      "resultado": "Anton Setola (2404080): dirige 2"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/title/tt1822238/",
+     "fecha": "2026-11-16",
+     "resultado": "IMDb: Jazzed (Short 2008, 7 min) dir./guion Anton Setola, sinopsis del protagonista Jack = catálogo. TMDB /find tt1822238: sin película → no hay ficha TMDB"
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/Jazzed/",
+     "fecha": "2026-11-16",
+     "resultado": "Buscador LB «Jazzed»: ningún resultado de Anton Setola (LB importa de TMDB y no existe ficha)"
+    },
+    "web_director_o_productora": {
+     "url": "https://vimeo.com/search?q=JAZZED%20anton%20setola",
+     "fecha": "2026-11-16",
+     "resultado": "Vimeo del director (anton setola): «JAZZED Full Short», shown at Annecy, Ottawa…; el catálogo no trae contacto (programa especial Miles Davis)"
+    },
+    "distribuidora_o_agencia": {
+     "url": "https://www.lesfilmsdunord.com/jazzed",
+     "fecha": "2026-11-16",
+     "resultado": "Les Films du Nord (coproductor/distribuidor): Jazzed, 2008, 7 min, Anton Setola; prod. Lumière, La Boîte…, Les Films du Nord, Digit Anima; apoyos VAF y CCA; lista de festivales. Sin afiche en la página (solo viñeta horizontal)"
+    },
+    "plataformas_festivales": {
+     "url": "https://www.bing.com/search?q=%22Jazzed%22+%22Anton+Setola%22",
+     "fecha": "2026-11-16",
+     "resultado": "Obra de 2008: sin perfil FilmFreeway en Bing; Short Film Depot pide sesión; Festhome sin catálogo público"
+    },
+    "festivales_previos": {
+     "url": "https://www.lesfilmsdunord.com/jazzed",
+     "fecha": "2026-11-16",
+     "resultado": "Leuven Kort 2008, Film Fest Gent 2008 (mención), Anima Bruselas 2009 (Prix Cinergie), Go Short, Animfest Atenas (mención), Anifest Trebon, Melbourne, Annecy, Ottawa"
+    },
+    "organismo_nacional": {
+     "url": "https://www.flandersimage.com/titles/jazzed/jazzed.pdf",
+     "fecha": "2026-11-16",
+     "resultado": "Flanders Image (agencia oficial de promoción del cine flamenco, ligada al VAF): ficha Jazzed, dir./guion Anton Setola, productora Lunanime BV, majority Flemish, 35mm. Sin afiche (solo fotogramas horizontales)"
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.bing.com/images/search?q=Jazzed+2008+court+m%C3%A9trage+animation+Setola+affiche",
+     "fecha": "2026-11-16",
+     "resultado": "Afiche original (título JAZZED + Anton Setola) en FilmAffinity film781501, solo 400x600; Unifrance trae fotograma horizontal"
     }
-   }
+   },
+   "estado": "sin_afiche",
+   "por_que_sin_afiche": "El único afiche original hallado (FilmAffinity, jazzed-201890773-large.jpg) mide 400x600, bajo el mínimo de 500x750 de TMDB, y el host bloquea la descarga directa (403); Unifrance y Les Films du Nord solo tienen fotogramas horizontales"
   },
   "Joychair": {
    "titulo": "Joychair",
@@ -1502,8 +1586,62 @@
      "url": "https://www.themoviedb.org/person/2923049",
      "fecha": "2026-11-15",
      "resultado": "Vanessa Sandre (2923049): dirige 2"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/title/tt42882412/",
+     "fecha": "2026-11-16",
+     "resultado": "IMDb: Joychair (Short 2025) dir./guion Vanessa Sandre, reparto Cory Bertrand, Mylene Carino, Murray Furrow = catálogo. TMDB /find tt42882412: sin película"
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/Joychair/",
+     "fecha": "2026-11-16",
+     "resultado": "Buscador LB «Joychair»: sin coincidencias de la obra"
+    },
+    "web_director_o_productora": {
+     "url": "https://vanessasandre.com/films",
+     "fecha": "2026-11-16",
+     "resultado": "Web de la directora (contacto del catálogo vanessacinema@gmail.com): lista JOYCHAIR entre sus obras; producción del Canadian Film Centre (CFC, logo en el afiche)"
+    },
+    "distribuidora_o_agencia": {
+     "na": true,
+     "por_que": "El contacto del catálogo es la directora (vanessacinema@gmail.com); no figura agencia ni distribuidora en FilmFreeway ni en su web",
+     "fecha": "2026-11-16"
+    },
+    "plataformas_festivales": {
+     "url": "https://filmfreeway.com/Joychair",
+     "fecha": "2026-11-16",
+     "resultado": "Perfil FilmFreeway de Joychair con sinopsis, bio y póster del press kit (533x800). Short Film Depot pide sesión; Festhome sin catálogo público"
+    },
+    "festivales_previos": {
+     "url": "https://www.bing.com/search?q=%22Joychair%22+festival+short+CFC+Sandre+selection",
+     "fecha": "2026-11-16",
+     "resultado": "Bing «Joychair»: IMDb (2025), FilmFreeway, YouTube del CFC (clip dic 2025), Cinemateca de Bogotá; sin palmarés listado. Catálogo BOGOSHORTS: premier latinoamericana"
+    },
+    "organismo_nacional": {
+     "na": true,
+     "por_que": "Canadá no tiene registro público de cortometrajes (Telefilm no lista cortos de escuela); es producción del Canadian Film Centre, confirmada por su canal de YouTube y el afiche",
+     "fecha": "2026-11-16"
+    },
+    "busqueda_imagenes": {
+     "url": "https://filmfreeway.com/Joychair",
+     "fecha": "2026-11-16",
+     "resultado": "Afiche oficial vertical en el press kit de FilmFreeway (original 533x800), con título y créditos completos que coinciden con el catálogo"
     }
-   }
+   },
+   "afiche": {
+    "url": "https://filmfreeway-production-storage-01-connector.filmfreeway.com/press_kits/posters/003/684/463/original/09fc839b18-poster.jpg?1785973673",
+    "fuente": "Póster del press kit de Joychair en FilmFreeway (filmfreeway.com/Joychair), subido por la directora",
+    "archivo": "fuentes/bogoshorts-2026/altas/joychair.jpg",
+    "px": [
+     533,
+     800
+    ],
+    "ratio": 0.6663,
+    "recorte": null,
+    "veredicto_criterio": null,
+    "fecha": "2026-11-16"
+   },
+   "estado": "alta_posible"
   },
   "Kevin, el niño del espacio": {
    "titulo": "Kevin, el niño del espacio",
@@ -1523,8 +1661,50 @@
      "url": "https://www.themoviedb.org/person/5067293",
      "fecha": "2026-11-15",
      "resultado": "Edward Gómez Granada (5067293): dirige 1"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/find/?q=Kevin%20the%20Space%20Kid",
+     "fecha": "2026-11-16",
+     "resultado": "IMDb por título original y «Kevin the Space Kid»: sin la obra"
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/Kevin%20the%20Space%20Kid/",
+     "fecha": "2026-11-16",
+     "resultado": "LB por original y por inglés: 0 resultados"
+    },
+    "web_director_o_productora": {
+     "url": "https://lamontanacine.com/proyectos/kevin-el-nino-del-espacio/",
+     "fecha": "2026-11-16",
+     "resultado": "La Montaña Cine (productora; contacto del catálogo cinelamontana@gmail.com): ficha «Work in progress», misma sinopsis, ~15', dir. Edward Gómez Granada, prod. Daniela Lazt; solo imagen horizontal de dossier (KNE_Dossier 1600x900), sin afiche"
+    },
+    "distribuidora_o_agencia": {
+     "na": true,
+     "por_que": "El contacto del catálogo es la propia productora La Montaña Cine (Daniela Lazt Álvarez); no hay agencia ni distribuidora",
+     "fecha": "2026-11-16"
+    },
+    "plataformas_festivales": {
+     "url": "https://www.bing.com/search?q=%22Kevin%2C+el+ni%C3%B1o+del+espacio%22",
+     "fecha": "2026-11-16",
+     "resultado": "Bing: único resultado lamontanacine.com; sin perfil FilmFreeway. Short Film Depot pide sesión; Festhome sin catálogo público"
+    },
+    "festivales_previos": {
+     "url": "https://www.bing.com/search?q=%22Kevin%2C+el+ni%C3%B1o+del+espacio%22",
+     "fecha": "2026-11-16",
+     "resultado": "Ningún festival previo: el catálogo BOGOSHORTS la marca como premier mundial y Bing solo devuelve la web de la productora (work in progress)"
+    },
+    "organismo_nacional": {
+     "url": "https://www.proimagenescolombia.com/secciones/buscador/buscador_general_resultado.php?buscar=ni%F1o+del+espacio",
+     "fecha": "2026-11-16",
+     "resultado": "Buscador general de Proimágenes por «niño del espacio» y por el director: sin la obra (solo noticias ajenas)"
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.bing.com/images/search?q=%22Kevin+el+ni%C3%B1o+del+espacio%22+afiche",
+     "fecha": "2026-11-16",
+     "resultado": "Bing Imágenes «Kevin el niño del espacio» afiche: solo imágenes ajenas (stock, otras obras); ningún afiche de la obra"
     }
-   }
+   },
+   "estado": "sin_afiche",
+   "por_que_sin_afiche": "Estreno mundial en BOGOSHORTS: la productora la lista aún como work in progress con una imagen de dossier horizontal y no hay afiche publicado en ninguna fuente"
   },
   "Kupljena sjecanja": {
    "titulo": "Kupljena sjecanja",
@@ -1544,8 +1724,50 @@
      "url": "https://www.themoviedb.org/search/person?query=Franko%20Dujmi%C4%87%20Lorger",
      "fecha": "2026-11-15",
      "resultado": "Franko Dujmić Lorger: sin perfil en TMDB"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/find/?q=Kupljena%20sje%C4%87anja",
+     "fecha": "2026-11-16",
+     "resultado": "IMDb por «Kupljena sjećanja» y «Bought Memories»: sin la obra (solo Zagubljena sjecanja 2019, otra)"
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/Bought%20Memories/",
+     "fecha": "2026-11-16",
+     "resultado": "LB por original: 0; por «Bought Memories»: sin la obra"
+    },
+    "web_director_o_productora": {
+     "url": "https://kkz.hr/novosti/film-kupljena-sjecanja-na-bogoshortsu",
+     "fecha": "2026-11-16",
+     "resultado": "Kinoklub Zagreb (productora según catálogo): nota del 27 oct 2026 sobre el film de Franko Dujmić en BOGOSHORTS, hecho en el taller Koordinate (mentor Vladislav Knežević); última proyección en Dani hrvatskog filma, Karlovac. Solo fotograma, sin afiche"
+    },
+    "distribuidora_o_agencia": {
+     "na": true,
+     "por_que": "El contacto del catálogo es el propio director (frdujmic@gmail.com); producción de Kinoklub Zagreb sin agencia de ventas en ninguna fuente",
+     "fecha": "2026-11-16"
+    },
+    "plataformas_festivales": {
+     "url": "https://www.bing.com/search?q=%22Bought+Memories%22+Dujmi%C4%87",
+     "fecha": "2026-11-16",
+     "resultado": "Bing por título en inglés y director: sin perfil FilmFreeway. Short Film Depot pide sesión; Festhome sin catálogo público"
+    },
+    "festivales_previos": {
+     "url": "https://www.bing.com/search?q=%22Kupljena+sje%C4%87anja%22",
+     "fecha": "2026-11-16",
+     "resultado": "35. Dani hrvatskog filma 2026 (competencia, experimental 09'46\") según kino-edison.hr y zonafilma.com; proyección en Kinoholik/Knjižara Sandorf 24 nov 2026. Catálogo BOGOSHORTS: premier internacional"
+    },
+    "organismo_nacional": {
+     "url": "https://havc.hr/hrvatski-film/katalog-hrvatskih-filmova?godina=2026",
+     "fecha": "2026-11-16",
+     "resultado": "Catálogo de películas croatas de HAVC, año 2026: la obra NO figura (producción amateur de Kinoklub Zagreb, sin fondos HAVC)"
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.bing.com/images/search?q=%22Kupljena+sje%C4%87anja%22+plakat+poster",
+     "fecha": "2026-11-16",
+     "resultado": "Bing Imágenes por título croata (plakat/poster) e inglés + director: sin afiche; kinoholik.hr y kkz.hr solo muestran fotogramas 16:9"
     }
-   }
+   },
+   "estado": "sin_afiche",
+   "por_que_sin_afiche": "No existe afiche publicado: Kinoklub Zagreb, Kinoholik y DHF solo muestran fotogramas horizontales y la búsqueda de imágenes por título croata e inglés no devuelve ningún póster"
   },
   "La ciudad de las flores (Maleza y Los Floripondios)": {
    "titulo": "La ciudad de las flores (Maleza y Los Floripondios)",
@@ -1565,8 +1787,55 @@
      "url": "https://www.themoviedb.org/person/6268899",
      "fecha": "2026-11-15",
      "resultado": "Rodrigo Torrijos (6268899): dirige 1"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/find/?q=La%20ciudad%20de%20las%20flores%20Maleza",
+     "fecha": "2026-11-16",
+     "resultado": "IMDb: sin el videoclip"
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/La%20ciudad%20de%20las%20flores/",
+     "fecha": "2026-11-16",
+     "resultado": "LB: 0 resultados"
+    },
+    "canal_oficial_artista": {
+     "url": "https://www.youtube.com/results?search_query=%22Maleza+y+los+floripondios%22",
+     "fecha": "2026-11-16",
+     "resultado": "No se halló el video en YouTube: la búsqueda por la banda solo devuelve videos sobre la planta; el canal Hormiga Roja Films del director solo tiene 3 videos (reel, Memoria del agua, Rotos casi nadie); Instagram de la banda no disponible sin sesión"
+    },
+    "web_director_o_productora": {
+     "url": "https://www.youtube.com/@HormigaRojaFilms/videos",
+     "fecha": "2026-11-16",
+     "resultado": "Hormiga Roja Films (productora del director Rodrigo Torrijos, contacto rodrigotorrijos@gmail.com): canal sin el videoclip; sin web propia con la obra"
+    },
+    "distribuidora_o_agencia": {
+     "na": true,
+     "por_que": "Videoclip; el contacto del catálogo es el propio director Rodrigo Torrijos, sin agencia",
+     "fecha": "2026-11-16"
+    },
+    "plataformas_festivales": {
+     "url": "https://www.bing.com/search?q=%22Maleza+y+los+Floripondios%22",
+     "fecha": "2026-11-16",
+     "resultado": "Sin perfil FilmFreeway en Bing. Short Film Depot pide sesión; Festhome sin catálogo público"
+    },
+    "festivales_previos": {
+     "url": "https://www.bing.com/search?q=%22Maleza+y+los+Floripondios%22+%22La+ciudad+de+las+flores%22",
+     "fecha": "2026-11-16",
+     "resultado": "Ningún festival previo: Bing solo devuelve la ficha de BOGOSHORTS (que la fecha en 2025, prod. Luis Eduardo Díaz) y un reel de Sabana Alta sobre la banda"
+    },
+    "organismo_nacional": {
+     "url": "https://www.proimagenescolombia.com/secciones/buscador/buscador_general_resultado.php?buscar=Floripondios",
+     "fecha": "2026-11-16",
+     "resultado": "Buscador de Proimágenes por «Floripondios» y por el director: sin resultados"
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.bing.com/images/search?q=%22Maleza+y+los+Floripondios%22+%22La+ciudad+de+las+flores%22+afiche",
+     "fecha": "2026-11-16",
+     "resultado": "Bing Imágenes: solo homónimos (Behance «La Ciudad de las Flores», tienda Ciudad de las Flores); nada de la obra"
     }
-   }
+   },
+   "estado": "sin_afiche",
+   "por_que_sin_afiche": "Videoclip sin publicación localizable y sin afiche: ninguna fuente (YouTube, canal del director, Bing Imágenes) muestra imagen de la obra"
   },
   "La colère et après": {
    "titulo": "La colère et après",
@@ -1586,8 +1855,50 @@
      "url": "https://www.themoviedb.org/person/6088099 https://www.themoviedb.org/person/3303609 https://www.themoviedb.org/person/6088100",
      "fecha": "2026-11-15",
      "resultado": "Nicolas Legendre (6088099): dirige 1; Nicolas Legendre Duplessis (3303609): dirige 1; Nicolas Legendre (6088100): dirige 0"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/find/?q=La%20col%C3%A8re%20et%20apr%C3%A8s",
+     "fecha": "2026-11-16",
+     "resultado": "IMDb: solo episodios de pódcast; sin la obra de Nicolas Legendre"
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/Anger.%20Onward/",
+     "fecha": "2026-11-16",
+     "resultado": "LB por original y «Anger. Onward»: 0 resultados"
+    },
+    "web_director_o_productora": {
+     "url": "https://www.bing.com/search?q=travellingdistribution.com+%22Nicolas+Legendre%22",
+     "fecha": "2026-11-16",
+     "resultado": "El director-productor (Nicolas Legendre, Montreal) no tiene web propia localizable: Bing devuelve homónimos (periodista francés, HEC, desarrollador web). TMDB 6088099 es el periodista homónimo (Violence dans les Champs), no este cineasta"
+    },
+    "distribuidora_o_agencia": {
+     "url": "https://www.travellingdistribution.com/catalogue",
+     "fecha": "2026-11-16",
+     "resultado": "Travelling Distribution (contacto del catálogo): la obra no figura en su catálogo público (rutas /films/la-colere-et-apres y /films/anger-onward = 404); estreno mundial reciente"
+    },
+    "plataformas_festivales": {
+     "url": "https://www.bing.com/search?q=%22Anger.+Onward%22+OR+%22Anger%2C+Onward%22+Legendre+short",
+     "fecha": "2026-11-16",
+     "resultado": "Sin perfil FilmFreeway; solo aparece en la Cinemateca de Bogotá (colección Fútbol, BOGOSHORTS). Short Film Depot pide sesión; Festhome sin catálogo público"
+    },
+    "festivales_previos": {
+     "url": "https://www.bing.com/search?q=%22La+col%C3%A8re+et+apr%C3%A8s%22+Legendre",
+     "fecha": "2026-11-16",
+     "resultado": "Ningún festival previo: catálogo BOGOSHORTS la marca premier mundial; Bing por título original e inglés solo devuelve la Cinemateca de Bogotá"
+    },
+    "organismo_nacional": {
+     "na": true,
+     "por_que": "Canadá/Quebec no tiene registro público consultable de cortometrajes (Telefilm/SODEC no listan cortos sin financiamiento); producción propia del director",
+     "fecha": "2026-11-16"
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.bing.com/images/search?q=%22La+col%C3%A8re+et+apr%C3%A8s%22+Nicolas+Legendre+affiche",
+     "fecha": "2026-11-16",
+     "resultado": "Bing Imágenes: solo imágenes del periodista homónimo y de otras obras «La colère»; ningún afiche de esta obra"
     }
-   }
+   },
+   "estado": "sin_afiche",
+   "por_que_sin_afiche": "Estreno mundial en BOGOSHORTS sin presencia pública: ni Travelling ni ninguna otra fuente publica afiche o ficha de la obra"
   },
   "La culpa (Juliana Quédate Otro Día)": {
    "titulo": "La culpa (Juliana Quédate Otro Día)",
@@ -1607,8 +1918,55 @@
      "url": "https://www.themoviedb.org/search/person?query=Pablo%20Gait%C3%A1n",
      "fecha": "2026-11-15",
      "resultado": "Pablo Gaitán: sin perfil en TMDB"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/find/?q=Juliana%20Qu%C3%A9date%20Otro%20D%C3%ADa%20La%20culpa",
+     "fecha": "2026-11-16",
+     "resultado": "IMDb: 0 resultados"
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/La%20culpa%20Juliana/",
+     "fecha": "2026-11-16",
+     "resultado": "LB: sin el videoclip"
+    },
+    "canal_oficial_artista": {
+     "url": "https://www.youtube.com/watch?v=d6vs4i_HK6E",
+     "fecha": "2026-11-16",
+     "resultado": "Canal oficial Juliana Quédate Otro Dia: «LA CULPA (Video Oficial)», 21 jun 2026; créditos: dir. Pablo Gaitán, protagonista Johanna Duque Londoño, casa productora Cara de Pez Lab, prod. Pablo Gaitán, David Tapia, Esteban Castañeda; foto Santiago Ramírez «Kurrito». Coincide con el catálogo"
+    },
+    "web_director_o_productora": {
+     "url": "https://www.bing.com/search?q=%22Juliana+Qu%C3%A9date+Otro+D%C3%ADa%22+%22La+culpa%22",
+     "fecha": "2026-11-16",
+     "resultado": "Contacto del catálogo: el director (jtorradogaitan@gmail.com); casa productora Cara de Pez Lab sin web localizable; Bing devuelve YouTube, Instagram de la banda, Songsterr, Bioma Agencia"
+    },
+    "distribuidora_o_agencia": {
+     "na": true,
+     "por_que": "Videoclip; el contacto del catálogo es el propio director Pablo Gaitán, sin agencia ni distribuidora",
+     "fecha": "2026-11-16"
+    },
+    "plataformas_festivales": {
+     "url": "https://www.bing.com/search?q=%22Juliana+Qu%C3%A9date+Otro+D%C3%ADa%22+%22La+culpa%22",
+     "fecha": "2026-11-16",
+     "resultado": "Sin perfil FilmFreeway en Bing. Short Film Depot pide sesión; Festhome sin catálogo público"
+    },
+    "festivales_previos": {
+     "url": "https://www.bing.com/search?q=%22Juliana+Qu%C3%A9date+Otro+D%C3%ADa%22+%22La+culpa%22",
+     "fecha": "2026-11-16",
+     "resultado": "Ningún festival previo hallado; solo BOGOSHORTS 2026"
+    },
+    "organismo_nacional": {
+     "url": "https://www.proimagenescolombia.com/secciones/buscador/buscador_general_resultado.php?buscar=Juliana+Quedate",
+     "fecha": "2026-11-16",
+     "resultado": "Buscador de Proimágenes por la banda y por el director: sin resultados de la obra"
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.bing.com/images/search?q=Juliana+Qu%C3%A9date+Otro+D%C3%ADa+%22La+culpa%22+afiche+videoclip",
+     "fecha": "2026-11-16",
+     "resultado": "Bing Imágenes: fotos de prensa de la banda, afiche de concierto (Bioma) y miniaturas; ningún afiche del videoclip"
     }
-   }
+   },
+   "estado": "sin_afiche",
+   "por_que_sin_afiche": "Videoclip en YouTube sin afiche propio; las imágenes halladas son de prensa de la banda o de un concierto, no de la obra"
   },
   "La luna y yo (Tabi Wav)": {
    "titulo": "La luna y yo (Tabi Wav)",
@@ -1628,8 +1986,55 @@
      "url": "https://www.themoviedb.org/search/person?query=Manuelita%20Rosero%20M%C3%A9ndez",
      "fecha": "2026-11-15",
      "resultado": "Manuelita Rosero Méndez: sin perfil en TMDB"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/find/?q=Tabi%20Wav%20La%20luna%20y%20yo",
+     "fecha": "2026-11-16",
+     "resultado": "IMDb: sin el videoclip"
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/La%20luna%20y%20yo%20Tabi/",
+     "fecha": "2026-11-16",
+     "resultado": "LB: sin el videoclip"
+    },
+    "canal_oficial_artista": {
+     "url": "https://www.youtube.com/watch?v=20pkCQEamSI",
+     "fecha": "2026-11-16",
+     "resultado": "Canal oficial Tabi Wav: «Tabi Wav - La Luna y Yo (Official Music Video)», 31 jul 2026; créditos: Composed by Tabi Wav, Directed by Manuelita, Produced by EMG Beatz, Mix Rotor. Coincide con el catálogo"
+    },
+    "web_director_o_productora": {
+     "url": "https://www.bing.com/search?q=%22Tabi+Wav%22+%22La+luna+y+yo%22",
+     "fecha": "2026-11-16",
+     "resultado": "Contacto del catálogo calivefilms@gmail.com (Calive Films, de la directora): sin web propia localizable; Bing solo devuelve YouTube, redes del artista y la página de BOGOSHORTS"
+    },
+    "distribuidora_o_agencia": {
+     "na": true,
+     "por_que": "Videoclip autoproducido; el contacto del catálogo es la propia directora (calivefilms@gmail.com), sin agencia",
+     "fecha": "2026-11-16"
+    },
+    "plataformas_festivales": {
+     "url": "https://www.bing.com/search?q=%22Tabi+Wav%22+%22La+luna+y+yo%22",
+     "fecha": "2026-11-16",
+     "resultado": "Sin perfil FilmFreeway en Bing. Short Film Depot pide sesión; Festhome sin catálogo público"
+    },
+    "festivales_previos": {
+     "url": "https://www.bing.com/search?q=%22Tabi+Wav%22+%22La+luna+y+yo%22",
+     "fecha": "2026-11-16",
+     "resultado": "Ningún festival previo hallado: Bing solo devuelve YouTube, Instagram/Facebook/SoundCloud del artista y BOGOSHORTS"
+    },
+    "organismo_nacional": {
+     "url": "https://www.proimagenescolombia.com/secciones/buscador/buscador_general_resultado.php?buscar=Tabi+Wav",
+     "fecha": "2026-11-16",
+     "resultado": "Buscador de Proimágenes por «Tabi Wav» y por la directora: sin la obra (videoclip, no registrado)"
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.bing.com/images/search?q=%22Tabi+Wav%22+%22La+luna+y+yo%22+poster+afiche",
+     "fecha": "2026-11-16",
+     "resultado": "Bing Imágenes: solo pines de Pinterest ajenos; ningún afiche del videoclip"
     }
-   }
+   },
+   "estado": "sin_afiche",
+   "por_que_sin_afiche": "Videoclip publicado en YouTube: no tiene afiche; la búsqueda de imágenes solo devuelve material ajeno y una portada de sencillo no sirve como póster"
   },
   "La suma de todas las partes": {
    "titulo": "La suma de todas las partes",
@@ -3228,8 +3633,57 @@
      "url": "https://www.themoviedb.org/person/3406864",
      "fecha": "2026-11-15",
      "resultado": "Arnas Balčiūnas (3406864): dirige 7"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/title/tt41815531/",
+     "fecha": "2026-11-16",
+     "resultado": "Buscador IMDb por «Klase s nuotrauka» → Class Photo (2026, 17 min, corto) tt41815531; TMDB 1668922 enlaza ese mismo imdb_id"
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/film/class-photo/",
+     "fecha": "2026-11-16",
+     "resultado": "Buscador LB por original: 0; por «Class Photo» → Class Photo 2026, alt. Klasės nuotrauka, dir. Arnas Balčiūnas"
+    },
+    "web_director_o_productora": {
+     "url": "https://m-films.lt/filmai/class-photo-klases-nuotrauka/",
+     "fecha": "2026-11-16",
+     "resultado": "M-Films (contacto del catálogo morta@m-films.lt): Class Photo / Klasės Nuotrauka 2026, 17 min, Lituania, dir. Arnas Balčiūnas, misma sinopsis y equipo; producción KIMO; festivales: Semaine de la Critique 2026, Telluride, SEMINCI…"
+    },
+    "distribuidora_o_agencia": {
+     "url": "https://m-films.lt/filmai/class-photo-klases-nuotrauka/",
+     "fecha": "2026-11-16",
+     "resultado": "Distribución M FILMS; ventas Kurzfilm Sales (según ficha de M-Films)"
+    },
+    "plataformas_festivales": {
+     "url": "https://www.bing.com/search?q=%22Class+Photo%22+Bal%C4%8Di%C5%ABnas+M-Films",
+     "fecha": "2026-11-16",
+     "resultado": "Bing: sin perfil FilmFreeway (la obra circula por agencia Kurzfilm Sales/M-Films). Short Film Depot pide sesión; Festhome sin catálogo público"
+    },
+    "festivales_previos": {
+     "url": "https://www.seminci.com/en/peliculas/class-photo",
+     "fecha": "2026-11-16",
+     "resultado": "Estreno en Semaine de la Critique (Cannes) 2026; SEMINCI 2026 sección oficial; Telluride 2026, Kutaisi, Etiuda&Anima, Brest (lista en M-Films)"
+    },
+    "organismo_nacional": {
+     "url": "https://lithuanianshorts.com/en/film-database/class-photo/",
+     "fecha": "2026-11-16",
+     "resultado": "Lithuanian Shorts (base de cortos lituanos, ref. nacional): CLASS PHOTO / KLASĖS NUOTRAUKA 2026, 17', KIMO, distribuidor M-Films; coincide"
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.themoviedb.org/movie/1668922/images/posters",
+     "fecha": "2026-11-16",
+     "resultado": "La ficha TMDB 1668922 ya tiene póster; no se requiere afiche nuevo"
     }
-   }
+   },
+   "estado": "ficha_existente",
+   "tmdb_id": 1668922,
+   "evidencia": "TMDB 1668922 «Class Photo» (2026, 17 min, Lituania, dir. Arnas Balčiūnas) con sinopsis idéntica a la del catálogo (Ignas, escuela abandonada); imdb_id tt41815531 coincide con IMDb; LB class-photo alt. Klasės nuotrauka",
+   "respaldo": [
+    "imdb",
+    "letterboxd",
+    "web_director_o_productora"
+   ],
+   "ficha_fecha": "2026-11-16"
   },
   "Mirage": {
    "titulo": "Mirage",

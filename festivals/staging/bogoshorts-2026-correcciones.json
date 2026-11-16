@@ -111,6 +111,12 @@
    "_fuente": "https://www.themoviedb.org/movie/1724318",
    "_por_que": "altas.py --ficha: TMDB 1724318 'In the Silence After' (2026, 17 min, QA/US/CO) dir./guion/foto/montaje Sebastian Delascasas = catálogo (Catar, EE.UU., Colombia 2026, 16'50'', mismos créditos); IMDb tt43337293 en external_ids",
    "_registro": "bogoshorts-2026-altas.json"
+  },
+  "Klase s nuotrauka": {
+   "tmdb": 1668922,
+   "_fuente": "https://www.themoviedb.org/movie/1668922",
+   "_por_que": "altas.py --ficha: TMDB 1668922 «Class Photo» (2026, 17 min, Lituania, dir. Arnas Balčiūnas) con sinopsis idéntica a la del catálogo (Ignas, escuela abandonada); imdb_id tt41815531 coincide con IMDb; LB class-photo alt. Klasės nuotrauka",
+   "_registro": "bogoshorts-2026-altas.json"
   }
  }
 }
