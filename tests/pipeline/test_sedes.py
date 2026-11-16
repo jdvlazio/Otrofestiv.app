@@ -146,5 +146,79 @@ class Ficha(Base):
         self.assertEqual(S.leer(self.r)['sedes'][sid]['ciudad'], 'Cali')
 
 
+class Resolver(Base):
+    def setUp(self):
+        super().setUp()
+        self.geo('viejo-2026', {'Cinemateca de Bogotá - Bogotá': {'lat': 4.6105, 'lng': -74.0705, '_prec': 'manual'},
+                                'CEFE Chapinero - Bogotá': {'lat': 4.6480, 'lng': -74.0630, '_prec': 'manual'},
+                                'Teatro Colsubsidio - Bogotá': {'lat': 4.6400, 'lng': -74.0700, '_prec': 'manual'}})
+        os.makedirs(f'{self.r}/festivals', exist_ok=True)
+        json.dump({'films': [{'venue': 'Cinemateca de Bogotá - Bogotá', 'sala': 'Sala Capital'}]},
+                  open(f'{self.r}/festivals/viejo-2026.json', 'w'))
+        S.construir(self.r)
+        json.dump({'funciones': [{'sede': s} for s in ('Cinemateca de Bogotá', 'Cinemateca Sala Capital', 'CEFE',
+                                                        'Teatro Inventado del Sur')]},
+                  open(f'{self.r}/festivals/staging/nuevo-2026-crudo.json', 'w'), ensure_ascii=False)
+        json.dump({'festival': {'city': 'Bogotá', 'festivalEndStr': '2099-12-31T23:59:00', 'sedes': {}}},
+                  open(f'{self.r}/pipeline/nuevo-2026.plan.json', 'w'))
+
+    def test_clasifica_y_escribe_solo_las_conocidas(self):
+        r = S.resolver('nuevo-2026', self.r)
+        self.assertEqual(sorted(c for c, _ in r['conocida']), ['Cinemateca Sala Capital', 'Cinemateca de Bogotá'])
+        self.assertEqual([c for c, _ in r['parecida']], ['CEFE'])
+        self.assertEqual([c for c, _ in r['nueva']], ['Teatro Inventado del Sur'])
+        self.assertIn('google.com/maps/search', r['nueva'][0][1])
+        self.assertFalse(os.path.exists(f'{self.r}/festivals/staging/nuevo-2026-venues-geo.json'))   # sin --escribir no toca
+        S.resolver('nuevo-2026', self.r, escribir=True)
+        plan = json.load(open(f'{self.r}/pipeline/nuevo-2026.plan.json'))['festival']['sedes']
+        self.assertEqual(plan['Cinemateca Sala Capital'], ['Cinemateca de Bogotá - Bogotá', 'Sala Capital'])
+        geo = json.load(open(f'{self.r}/festivals/staging/nuevo-2026-venues-geo.json'))
+        self.assertEqual((geo['Cinemateca de Bogotá - Bogotá']['lat'], geo['Cinemateca de Bogotá - Bogotá']['_prec']), (4.6105, 'matriz'))
+        self.assertNotIn('CEFE', plan)                                                        # la parecida no entra sola
+        r2 = S.resolver('nuevo-2026', self.r)
+        self.assertEqual(len(r2['ya']), 2)
+
+    def test_aceptar_una_parecida(self):
+        sid = next(s for s, e in S.leer(self.r)['sedes'].items() if e['nombre'] == 'CEFE Chapinero')
+        S.resolver('nuevo-2026', self.r, escribir=True, aceptar={'CEFE': sid})
+        plan = json.load(open(f'{self.r}/pipeline/nuevo-2026.plan.json'))['festival']['sedes']
+        self.assertEqual(plan['CEFE'], ['CEFE Chapinero - Bogotá', ''])
+
+    def test_ciudad_que_no_cuadra_con_el_mapa_se_quita(self):
+        self.geo('multi-2026', {'Universidad Lejana': {'lat': 6.2464, 'lng': -75.5641}})
+        plan = json.load(open(f'{self.r}/pipeline/multi-2026.plan.json'))
+        plan['festival']['city'] = 'Bogotá'
+        json.dump(plan, open(f'{self.r}/pipeline/multi-2026.plan.json', 'w'))
+        m = S.construir(self.r)
+        e = next(e for e in m['sedes'].values() if e['nombre'] == 'Universidad Lejana')
+        self.assertNotIn('ciudad', e)
+        self.assertEqual(e['_ciudad_dudosa'], 'Bogotá')
+
+
+class Normalizar(Base):
+    def test_salas_compuestas_fuera_y_variantes_juntas(self):
+        e = {'nombre': 'MAMM', 'corto': 'MAMM'}
+        canon, var = S.normalizar_salas({'Teatro MAMM': 5, 'Teatro': 1, 'teatro': 1, 'Salas 2, 3 y Capital': 2,
+                                         'Laboratorios 1 y 2': 1, 'Salón Montreal, 3.er piso': 1, 'Salón Montreal': 3}, e)
+        self.assertEqual(canon, ['Salón Montreal', 'Teatro'])                 # sin el nombre del lugar dentro
+        self.assertEqual(var, {'Salón Montreal, 3.er piso': 'Salón Montreal', 'Teatro MAMM': 'Teatro', 'teatro': 'Teatro'})
+
+    def test_ciudad_que_no_es_ciudad(self):
+        self.assertIsNone(S.limpia_ciudad('Universidad Nacional'))
+        self.assertEqual(S.limpia_ciudad('Perímetro Urbano Santa Marta'), 'Santa Marta')
+
+    def test_completar_ciudades_vecino_o_reverso(self):
+        self.geo('a-2026', {'Teatro A - Manizales': {'lat': 5.068, 'lng': -75.517},
+                            'Plaza B': {'lat': 5.0685, 'lng': -75.5175},
+                            'Finca Lejana': {'lat': 5.3, 'lng': -75.9}})
+        S.construir(self.r)
+        hechas = {n: (c, f) for n, c, f in S.completar_ciudades(self.r, reverso=lambda a, b: 'Perímetro Urbano Neira')}
+        self.assertEqual(hechas['Plaza B'][0], 'Manizales')
+        self.assertIn('vecino', hechas['Plaza B'][1])
+        self.assertEqual(hechas['Finca Lejana'], ('Neira', 'Nominatim reverso'))
+        S.construir(self.r)                                                    # reconstruir no la borra
+        self.assertEqual(next(e for e in S.leer(self.r)['sedes'].values() if e['nombre'] == 'Plaza B')['ciudad'], 'Manizales')
+
+
 if __name__ == '__main__':
     unittest.main()

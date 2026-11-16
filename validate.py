@@ -5585,6 +5585,9 @@ try:
             _p.append(f'{len(_ce)} par(es) de lugares a <{_sm.CERCA_M} m sin decidir (--mismo / --distintos): ' + ', '.join(f'{_S[a]["nombre"]} ↔ {_S[b]["nombre"]}' for d, a, b in _ce[:4]))
         if _ev:
             _p.append(f'{len(_ev)} lugar(es) NUEVO(s) sin enlace de Google Maps (--evidencia): ' + ', '.join(_S[x]['nombre'] for x in _ev[:5]))
+        _sc = [x['nombre'] for x in _S.values() if not _sm.limpia_ciudad(x.get('ciudad'))]
+        if _sc:
+            _p.append(f'{len(_sc)} lugar(es) sin ciudad válida (python3 pipeline/sedes.py --completar-ciudades): ' + ', '.join(_sc[:5]))
         if _p:
             fail(check, ' · '.join(_p))
         else:
