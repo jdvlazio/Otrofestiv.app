@@ -8,6 +8,6 @@ acá, versionado; antes estaba en iCloud (`10_iOS`), fuera de git.
   carpetas sincronizadas: un archivo que se agrega a la carpeta entra al target.
 - Compilar sin firmar: `xcodebuild -project native/ios/Otrofestiv.xcodeproj
   -scheme Otrofestiv -destination 'generic/platform=iOS' CODE_SIGNING_ALLOWED=NO build`.
-  En el simulador el bundle es `app.otrofestiv.Otrofestiv` (solo dispositivo
-  usa `.mobile`) y el empaquetado con el reloj falla; es así de origen.
+  El bundle es `app.otrofestiv.mobile` también en el simulador (16 nov 2026): antes
+  era `app.otrofestiv.Otrofestiv` y el empaquetado con el reloj fallaba.
 - Tests del reloj (sin Xcode): `native/ios/tests/watch/run.sh`.
