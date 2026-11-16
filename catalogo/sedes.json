@@ -1082,6 +1082,25 @@
    "ciudad": "Manizales",
    "_ciudad_fijada": "lugar vecino del almacén a 1957 m"
   },
+  "s_3704da4c": {
+   "nombre": "Lubianka",
+   "lat": 4.627756,
+   "lng": -74.0763821,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Lubianka+D.C+Laboratorio+de+memoria+y+paz+viva./@4.627756,-74.0763821,17z",
+    "fecha": "2026-11-16",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Cl. 39 #25-13",
+   "alias": [
+    "Lubianka - Bogotá"
+   ],
+   "festivales": [
+    "cineparalapaz-2026"
+   ],
+   "ciudad": "Bogotá"
+  },
   "s_384e68d5": {
    "nombre": "Universidad de Caldas",
    "lat": 5.0559375,
@@ -1566,6 +1585,25 @@
    ],
    "ciudad": "Manizales",
    "corto": "Clandestino Records"
+  },
+  "s_59792218": {
+   "nombre": "Alpamanda Peña Cultural",
+   "lat": 4.6037739,
+   "lng": -74.0684617,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Pe%C3%B1a+Alpamanda+Bar/@4.6037739,-74.0684617,17z",
+    "fecha": "2026-11-16",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Cra. 4 #19-56, piso 3",
+   "alias": [
+    "Alpamanda Peña Cultural - Bogotá"
+   ],
+   "festivales": [
+    "cineparalapaz-2026"
+   ],
+   "ciudad": "Bogotá"
   },
   "s_5c62c6c3": {
    "nombre": "Teatro Caribe",
@@ -2462,6 +2500,25 @@
    "ciudad": "Jardín",
    "corto": "Teatro Municipal de Jardín"
   },
+  "s_829df039": {
+   "nombre": "Centro Cultural La Tullpa",
+   "lat": 4.7007378,
+   "lng": -74.100381,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/LA+TULLPA+-+Centro+Cultural/@4.7007378,-74.100381,17z",
+    "fecha": "2026-11-16",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Cra. 84 #77A-26, La Granja",
+   "alias": [
+    "Centro Cultural La Tullpa - Bogotá"
+   ],
+   "festivales": [
+    "cineparalapaz-2026"
+   ],
+   "ciudad": "Bogotá"
+  },
   "s_830a426d": {
    "nombre": "Universidad del Norte",
    "lat": 11.0193206,
@@ -2827,6 +2884,25 @@
    "ciudad": "Manizales",
    "_ciudad_fijada": "lugar vecino del almacén a 1051 m"
   },
+  "s_98bbb7e0": {
+   "nombre": "La Trocha · Casa de la Paz",
+   "lat": 4.6248165,
+   "lng": -74.0679005,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/La+Trocha,+La+Casa+de+la+Paz/@4.6248165,-74.0679005,17z",
+    "fecha": "2026-11-16",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Cra. 13 #36-37",
+   "alias": [
+    "La Trocha · Casa de la Paz - Bogotá"
+   ],
+   "festivales": [
+    "cineparalapaz-2026"
+   ],
+   "ciudad": "Bogotá"
+  },
   "s_98cccf58": {
    "nombre": "Casa Museo Otraparte",
    "lat": 6.1792522,
@@ -2996,9 +3072,12 @@
     "fuente": "verificado en Google Maps"
    },
    "address": "Cl. 22 #5-91",
-   "alias": [],
+   "alias": [
+    "Universidad Central - Bogotá"
+   ],
    "festivales": [
     "biff-2026",
+    "cineparalapaz-2026",
     "midbo-2026"
    ],
    "_elegido_de": "maps",

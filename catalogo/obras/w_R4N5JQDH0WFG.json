@@ -1,6 +1,6 @@
 {
  "id": "w_R4N5JQDH0WFG",
- "titulo_original": "Refugiar el gesto",
+ "titulo_original": "Refugiar el Gesto",
  "anio": 2026,
  "paises": [
   "CO"
@@ -15,7 +15,7 @@
    "tipo": "festival"
   },
   {
-   "titulo": "Refugiar el Gesto",
+   "titulo": "Refugiar el gesto",
    "tipo": "festival"
   },
   {
@@ -29,7 +29,7 @@
   }
  ],
  "sinopsis": {
-  "es": "A group of young dancers who witnessed the gradual disappearance of the traditional Danza de las Tabliteras.",
+  "es": "En San Antonio, un grupo de jóvenes aprende de los mayores la Danza de las Tablíteras. Cada paso devuelve al presente una tradición ritual afrocolombiana.",
   "en": "A group of young dancers witnessed the gradual disappearance of the traditional Danza de las Tabliteras. Determined to bring it back to life, they learned its rhythms and choreography from the four remaining elders who still carried the dance in their bodies. Once again, these gestures echo the movements that decades ago filled the community of San Antonio, Bolívar, with pride, vitality, and collective spirit."
  },
  "generos": [
@@ -37,7 +37,7 @@
   "Videodanza"
  ],
  "afiche": {
-  "archivo": "https://image.tmdb.org/t/p/w500/bHXUP6sTxTX46cmGdVLDh9eLxqB.jpg",
+  "archivo": "/assets/cineparalapaz-2026/refugiar-el-gesto.jpg",
   "veredicto": "oficial"
  },
  "xref": {
@@ -55,6 +55,7 @@
   }
  ],
  "presentaciones": [
+  "cineparalapaz-2026",
   "fecibac-2026",
   "qaff-2026",
   "siembrafest-2026",
