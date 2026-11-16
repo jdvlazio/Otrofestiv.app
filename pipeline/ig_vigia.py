@@ -43,6 +43,7 @@ from datetime import datetime, timedelta
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+import bandeja  # noqa: E402
 CONFIG = os.path.join(RAIZ, 'src', 'config.js')
 CUENTAS = os.path.join(RAIZ, 'pipeline', 'ig-vigia-cuentas.json')
 ESTADO = os.path.expanduser('~/.otrofestiv/ig-vigia-estado.json')
@@ -117,17 +118,17 @@ def vigilados(config, cuentas, ahora, cerrados=()):
         ini = datetime.strptime(f['inicio'], '%Y-%m-%d').date()
         fin = datetime.strptime(f['fin'], '%Y-%m-%d').date()
         if ini - timedelta(days=1) <= hoy <= fin:
-            out.append({'id': fid, 'cuenta': f['cuenta'], 'tier': 'vivo'})
+            out.append({'id': fid, 'cuenta': f['cuenta'], 'tier': 'vivo', 'fin': f['fin']})
         elif ini - timedelta(days=CAMINO) <= hoy < ini - timedelta(days=1):
             # En camino: una vez al día. Apify cobra cada consulta aunque no haya
             # posts nuevos (~US$0,003 por cuenta): mirar 3 veces al día una cuenta
             # que publica una selección por semana era casi todo el gasto (26 oct).
-            out.append({'id': fid, 'cuenta': f['cuenta'], 'tier': 'camino'})
+            out.append({'id': fid, 'cuenta': f['cuenta'], 'tier': 'camino', 'fin': f['fin']})
         elif fin < hoy <= fin + timedelta(days=TERMINADO) and fid not in cerrados:
             # Terminado: solo se mira por el palmarés. Si el vigía lo declaró
             # COMPLETO (todas las categorías anunciadas tienen ganadora publicada,
             # con evidencia en palmares-cerrados.json) deja de mirarse.
-            out.append({'id': fid, 'cuenta': f['cuenta'], 'tier': 'terminado'})
+            out.append({'id': fid, 'cuenta': f['cuenta'], 'tier': 'terminado', 'fin': f['fin']})
     return out
 
 
@@ -720,6 +721,11 @@ def main():
             informe['nuevos'].append({'cuenta': c, 'fecha': ts, 'post': f"https://www.instagram.com/p/{it['shortCode']}/",
                                       'laminas': len(it.get('childPosts') or it.get('images') or []) or 1,
                                       'texto': (it.get('caption') or '')[:300]})
+            # Bandeja (16 nov 2026): todo post leído entra como «pendiente» y el
+            # guardián de bandeja.py frena hasta que se decida (y se aplique).
+            for v in ahora_toca:
+                if v['cuenta'] == c:
+                    bandeja.ingresar(bandeja.RUTA, v['id'], v['fin'], it, ahora)
             anotar_enlaces(informe, [v['id'] for v in ahora_toca if v['cuenta'] == c],
                            f"https://www.instagram.com/p/{it['shortCode']}/", it.get('caption') or '')
     informe['NO_PUDE_LEER'] = sin_leer
