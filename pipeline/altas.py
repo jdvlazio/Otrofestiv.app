@@ -26,7 +26,7 @@ fuentes obligatorias vive SOLO acá: FUENTES_OBLIGATORIAS.
     python3 pipeline/altas.py <fid> --fuente <título> <clave> <url> --parcial «qué NO se miró»   # no cuenta
     python3 pipeline/altas.py <fid> --ficha <título> <tmdb_id> --evidencia TXT --respaldo imdb,letterboxd
     python3 pipeline/altas.py <fid> --sin-afiche <título> --por-que TXT
-    python3 pipeline/altas.py <fid> --preparar <título> --url URL --origen TXT
+    python3 pipeline/altas.py <fid> --preparar <título> --url URL --origen TXT [--estirar]   # si el recorte corta título o créditos
     python3 pipeline/altas.py <fid> --registrar-alta <título> <tmdb_id>
 
 Guardianes: [alta-sin-evidencia], [ficha-sin-registro], [titulo-nfc] (validate.py);
@@ -49,6 +49,9 @@ FUENTES_OBLIGATORIAS = (
     'distribuidora_o_agencia',
     'plataformas_festivales',    # Short Film Depot / FilmFreeway / Festhome
     'festivales_previos',
+    'pagina_del_festival',       # la ficha de la obra en la web del PROPIO festival: BOGOSHORTS
+                                 # tenía ahí el póster oficial de obras que 5 tandas dieron por
+                                 # «sin afiche» (16 nov 2026)
     'organismo_nacional',        # Proimágenes, INCAA, IMCINE…
     'busqueda_imagenes',
 )
@@ -406,14 +409,20 @@ def _descargar(url, destino):
         f.write(r.read())
 
 
-def encuadrar(origen, destino, objetivo=2 / 3):
+def encuadrar(origen, destino, objetivo=2 / 3, modo='recortar'):
     """JPG con ancho/alto dentro de RATIO; si no lo está, RECORTE CENTRADO a
-    `objetivo`. → (px, ratio, recorte | None)."""
+    `objetivo` — o, con modo='estirar', se escala al alto/ancho del objetivo
+    sin perder nada (regla de Juan, 4 nov: recortar o estirar; 16 nov: un
+    recorte le cortó el título a «Ni aquí, ni allá»). → (px, ratio, ajuste | None)."""
     from PIL import Image
     im = Image.open(origen).convert('RGB')
     w, h = im.size
     r, recorte = w / h, None
-    if not RATIO[0] <= r <= RATIO[1]:
+    if modo == 'estirar' and not RATIO[0] <= r <= RATIO[1]:
+        nw, nh = (w, round(w / objetivo)) if r > RATIO[1] else (round(h * objetivo), h)
+        im = im.resize((nw, nh), Image.LANCZOS)
+        recorte = {'de': [w, h], 'estirado': [nw, nh], 'objetivo': round(objetivo, 4)}
+    elif not RATIO[0] <= r <= RATIO[1]:
         if r > RATIO[1]:
             nw = round(h * objetivo)
             x = (w - nw) // 2
@@ -428,7 +437,7 @@ def encuadrar(origen, destino, objetivo=2 / 3):
     return [im.width, im.height], round(im.width / im.height, 4), recorte
 
 
-def preparar(fid, titulo, url, fuente, raiz=REPO):
+def preparar(fid, titulo, url, fuente, raiz=REPO, modo='recortar'):
     """Afiche → fuentes/<fid>/altas/, por afiche_criterio, JPG y proporción;
     título NFC; JSON para los helpers del skill tmdb-alta (wiz/personas/alta)."""
     import lib
@@ -446,7 +455,7 @@ def preparar(fid, titulo, url, fuente, raiz=REPO):
     orig = os.path.join(d, f'{s}-original{ext}')
     _descargar(url, orig)
     jpg = os.path.join(d, f'{s}.jpg')
-    px, ratio, recorte = encuadrar(orig, jpg)
+    px, ratio, recorte = encuadrar(orig, jpg, modo=modo)
     v = veredicto(jpg)
     e['titulo'] = t
     e['afiche'] = {'url': url, 'fuente': fuente, 'archivo': os.path.relpath(jpg, raiz), 'px': px,
@@ -616,7 +625,8 @@ def main():
     if '--sin-afiche' in a:
         marcar_sin_afiche(fid, _arg('--sin-afiche'), _arg('--por-que'))
     if '--preparar' in a:
-        print(json.dumps(preparar(fid, _arg('--preparar'), _arg('--url'), _arg('--origen')),
+        print(json.dumps(preparar(fid, _arg('--preparar'), _arg('--url'), _arg('--origen'),
+                                  modo='estirar' if '--estirar' in a else 'recortar'),
                          ensure_ascii=False, indent=1))
     if '--registrar-alta' in a:
         t, i = _arg('--registrar-alta', 2)
