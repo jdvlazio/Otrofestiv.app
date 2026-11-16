@@ -2054,8 +2054,50 @@
      "url": "https://www.themoviedb.org/person/2365479",
      "fecha": "2026-11-15",
      "resultado": "Maite Lucía Valero (2365479): dirige 2"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/find/?q=La%20suma%20de%20todas%20las%20partes&s=tt",
+     "fecha": "2026-11-16",
+     "resultado": "Buscador IMDb por «La suma de todas las partes» y «The Sum of All Parts Valero»: ninguna ficha de este corto (solo homónimos ajenos)."
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/La+suma+de+todas+las+partes/",
+     "fecha": "2026-11-16",
+     "resultado": "Sin coincidencias; «The Sum of All Parts» solo trae otra obra (Quinn Thomashow 2020)."
+    },
+    "web_director_o_productora": {
+     "url": "https://www.instagram.com/p/DfAfeg5DNuk/",
+     "fecha": "2026-11-16",
+     "resultado": "Producción ECAM (productor Alonso Sanz): post del 27 oct 2026 anuncia estreno internacional en BOGOSHORTS (Conexión España), créditos completos; menciona diseño de cartel (Javiera G. Oteíza) pero la imagen pública es un video de rodaje. Residencias Academia de Cine confirma: corto de fin de estudios ECAM."
+    },
+    "distribuidora_o_agencia": {
+     "na": true,
+     "por_que": "El contacto del catálogo es la propia directora (maiteluciavalero@gmail.com); producción de escuela (ECAM) sin agencia anunciada en el post de lanzamiento.",
+     "fecha": "2026-11-16"
+    },
+    "plataformas_festivales": {
+     "url": "https://www.bing.com/search?q=%22La+suma+de+todas+las+partes%22+filmfreeway+OR+festhome+OR+shortfilmdepot",
+     "fecha": "2026-11-16",
+     "resultado": "Búsqueda web de perfil FilmFreeway/press kit: nada. Short Film Depot pide sesión y Festhome no tiene catálogo público (no mirados por dentro)."
+    },
+    "festivales_previos": {
+     "url": "https://www.bing.com/search?q=%22La+suma+de+todas+las+partes%22+Maite+Luc%C3%ADa+Valero",
+     "fecha": "2026-11-16",
+     "resultado": "Ninguno: BOGOSHORTS es su estreno internacional (post del productor) y el catálogo dice premier colombiana; «The Sum of All Parts» + directora: 0 resultados."
+    },
+    "organismo_nacional": {
+     "url": "https://sede.mcu.gob.es/CatalogoICAA/",
+     "fecha": "2026-11-16",
+     "resultado": "Catálogo ICAA (cine español calificado), búsqueda «La suma de todas las partes»: sin resultados (corto de 2026 aún no calificado)."
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.bing.com/images/search?q=%22La+suma+de+todas+las+partes%22+Maite+Luc%C3%ADa+Valero+poster",
+     "fecha": "2026-11-16",
+     "resultado": "Solo libros homónimos, videobook de la actriz y fotos de San Sebastián 2021; ningún afiche del corto."
     }
-   }
+   },
+   "estado": "sin_afiche",
+   "por_que_sin_afiche": "Cartel existe (créditos del post de ECAM nombran su diseño) pero no está publicado: ni web, ni FilmFreeway, ni imágenes; la única imagen pública es un video de rodaje 640x360."
   },
   "La vida de un hilo": {
    "titulo": "La vida de un hilo",
@@ -2075,8 +2117,62 @@
      "url": "https://www.themoviedb.org/person/1026269 https://www.themoviedb.org/person/6340148 https://www.themoviedb.org/person/6617287 https://www.themoviedb.org/person/2867319 https://www.themoviedb.org/person/5670536 https://www.themoviedb.org/person/5207601",
      "fecha": "2026-11-15",
      "resultado": "Guillermo Castañeda (1026269): dirige 1; Guillermo Castañeda (6340148): dirige 0; Guillermo A. Castaneda (6617287): dirige 0; Andrea Castillo (2867319): dirige 0; Andrea Castillo (5670536): dirige 0; Andrea Castillo (5207601): dirige 2"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/find/?q=The%20Life%20by%20a%20Thread&s=tt",
+     "fecha": "2026-11-16",
+     "resultado": "Buscador IMDb por «La vida de un hilo» y «The Life by a Thread»: sin ficha (solo homónimos ajenos)."
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/La+vida+de+un+hilo/",
+     "fecha": "2026-11-16",
+     "resultado": "Solo «La vida en un hilo» (Neville 1945); «The Life by a Thread»: nada."
+    },
+    "web_director_o_productora": {
+     "url": "https://www.bing.com/search?q=%22El+Coraje+Producciones%22",
+     "fecha": "2026-11-16",
+     "resultado": "El Coraje Producciones SAS no tiene web propia (solo directorios empresariales); cinecorto.co lista La vida de un hilo como ganador FDC 2021 animación de El Coraje Producciones."
+    },
+    "distribuidora_o_agencia": {
+     "na": true,
+     "por_que": "El contacto del catálogo es el codirector Guillermo Castañeda (gmail); coproducción con Animaandrea, sin agencia de distribución.",
+     "fecha": "2026-11-16"
+    },
+    "plataformas_festivales": {
+     "url": "https://athensanimfest.eu/2026/en/movies/201/",
+     "fecha": "2026-11-16",
+     "resultado": "Ficha de Athens Animfest 2026 trae el afiche oficial (533x800); búsqueda de perfil FilmFreeway sin resultado. Short Film Depot pide sesión y Festhome no tiene catálogo público (no mirados por dentro)."
+    },
+    "festivales_previos": {
+     "url": "https://athensanimfest.eu/2026/en/movies/201/",
+     "fecha": "2026-11-16",
+     "resultado": "Athens Animfest 2026 (Mención especial, Colombia 2025, 19:08, dir. Guillermo Andrés Castañeda Reyes y Andrea Castillo); catálogo cita además Corti da Sogni 2026 (Mejor corto Green Planet)."
+    },
+    "organismo_nacional": {
+     "url": "https://cinecorto.co/fdc/fdc2021/",
+     "fecha": "2026-11-16",
+     "resultado": "Ganador FDC 2021 (Realización de cortometrajes de animación, El Coraje Producciones SAS). Buscador Proimágenes «vida de un hilo»: sin ficha de película (https://www.proimagenescolombia.com/secciones/buscador/buscador_general_resultado.php?buscar=vida+de+un+hilo)."
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.bing.com/images/search?q=%22La+vida+de+un+hilo%22+Guillermo+Casta%C3%B1eda+afiche",
+     "fecha": "2026-11-16",
+     "resultado": "Bing Imágenes solo trae la película de Neville; el afiche está en Athens Animfest."
     }
-   }
+   },
+   "afiche": {
+    "url": "https://athensanimfest.eu/years/2026/images/content/subscribers/full/subscribers_0201_6008.jpg",
+    "fuente": "Athens Animfest 2026, ficha oficial de la obra (afiche con título THE LIFE BY A THREAD y créditos El Coraje Producciones / Animaandrea)",
+    "archivo": "fuentes/bogoshorts-2026/altas/la-vida-de-un-hilo.jpg",
+    "px": [
+     533,
+     800
+    ],
+    "ratio": 0.6663,
+    "recorte": null,
+    "veredicto_criterio": null,
+    "fecha": "2026-11-16"
+   },
+   "estado": "alta_posible"
   },
   "Largo de cortos": {
    "titulo": "Largo de cortos",
@@ -2112,8 +2208,63 @@
      "url": "https://www.themoviedb.org/search/person?query=Maximilien%20Mpoto",
      "fecha": "2026-11-15",
      "resultado": "Maximilien Mpoto: sin perfil en TMDB"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/find/?q=Liebe%20Caro&s=tt",
+     "fecha": "2026-11-16",
+     "resultado": "Buscador IMDb «Liebe Caro» y «My Dear Caro»: sin ficha del corto."
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/Liebe+Caro/",
+     "fecha": "2026-11-16",
+     "resultado": "«Liebe Caro» y «My Dear Caro»: sin coincidencia."
+    },
+    "web_director_o_productora": {
+     "url": "https://www.gironafilmfestival.com/pellicules/liebe-caro/",
+     "fecha": "2026-11-16",
+     "resultado": "Producción EnsAD (escuela del director); sin web propia de la obra. Director con YouTube @mmpoto e Instagram; Girona publica el afiche oficial 1810x2560."
+    },
+    "distribuidora_o_agencia": {
+     "na": true,
+     "por_que": "El contacto del catálogo es el director (mpotomaximilien@gmail.com); film de escuela EnsAD sin agencia.",
+     "fecha": "2026-11-16"
+    },
+    "plataformas_festivales": {
+     "url": "https://www.gironafilmfestival.com/pellicules/liebe-caro/",
+     "fecha": "2026-11-16",
+     "resultado": "Ficha de festival con afiche; búsqueda de perfil FilmFreeway sin resultado. Short Film Depot pide sesión y Festhome no tiene catálogo público (no mirados por dentro)."
+    },
+    "festivales_previos": {
+     "url": "https://poitiersfilmfestival.com/cinema/liebe-caro/",
+     "fecha": "2026-11-16",
+     "resultado": "Girona Film Festival 2026 (Selección oficial), T-Short 2026 (catálogo), Poitiers Film Festival 2026 (So French!, première française, 2 dic). Francia 2025, 9 min, EnsAD."
+    },
+    "organismo_nacional": {
+     "url": "https://en.unifrance.org/movie/67333/liebe-caro",
+     "fecha": "2026-11-16",
+     "resultado": "Unifrance tiene ficha 67333 (Maximilien Mpoto-Imana, producida por EnsAD, 2025) según el extracto del buscador Bing",
+     "parcial": "Unifrance responde con verificación Cloudflare (403) en el navegador integrado: la ficha misma no se pudo abrir"
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.bing.com/images/search?q=%22Liebe+Caro%22+Mpoto+affiche",
+     "fecha": "2026-11-16",
+     "resultado": "Bing Imágenes sin resultados de la obra; el afiche está en Girona."
     }
-   }
+   },
+   "afiche": {
+    "url": "https://www.gironafilmfestival.com/wp-content/uploads/2026/09/GFF26389-urlImagenPortada-scaled.png",
+    "fuente": "Girona Film Festival 2026, ficha oficial de la obra (afiche con título Liebe Caro, «un film de Maximilien Mpoto», laurel de Girona)",
+    "archivo": "fuentes/bogoshorts-2026/altas/liebe-caro.jpg",
+    "px": [
+     1810,
+     2560
+    ],
+    "ratio": 0.707,
+    "recorte": null,
+    "veredicto_criterio": null,
+    "fecha": "2026-11-16"
+   },
+   "estado": "alta_posible"
   },
   "Lo entrañable": {
    "titulo": "Lo entrañable",
@@ -2133,8 +2284,62 @@
      "url": "https://www.themoviedb.org/person/4963389",
      "fecha": "2026-11-15",
      "resultado": "Valentina Laverde Castillo (4963389): dirige 0"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/find/?q=Lo%20entra%C3%B1able&s=tt",
+     "fecha": "2026-11-16",
+     "resultado": "Buscador IMDb «Lo entrañable» y «The Endearing Laverde»: sin ficha."
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/Lo+entra%C3%B1able/",
+     "fecha": "2026-11-16",
+     "resultado": "Sin coincidencias; «The Endearing» tampoco."
+    },
+    "web_director_o_productora": {
+     "url": "https://www.bing.com/search?q=%22Lo+entra%C3%B1able%22+Valentina+Laverde",
+     "fecha": "2026-11-16",
+     "resultado": "Producción Daniela López Moreno y Valentina Laverde (asociada Nostra Studio), sin web propia; teaser en Vimeo; la obra vive en el catálogo de Cinespécimen."
+    },
+    "distribuidora_o_agencia": {
+     "url": "https://www.cinespecimen.com/distribuye/lo-entranable",
+     "fecha": "2026-11-16",
+     "resultado": "Cinespécimen (contacto del catálogo: distribuye@cinespecimen.com): ficha con créditos, festivales y afiche oficial 1200x1716."
+    },
+    "plataformas_festivales": {
+     "url": "https://www.bing.com/search?q=%22Lo+entra%C3%B1able%22+Valentina+Laverde",
+     "fecha": "2026-11-16",
+     "resultado": "Aparece en shortfilmwire (embed); sin perfil FilmFreeway. Short Film Depot pide sesión y Festhome no tiene catálogo público (no mirados por dentro)."
+    },
+    "festivales_previos": {
+     "url": "https://www.cinespecimen.com/distribuye/lo-entranable",
+     "fecha": "2026-11-16",
+     "resultado": "Ninguno: BOGOSHORTS 2026 es su estreno mundial y nacional (Cinespécimen e Instagram de la distribuidora)."
+    },
+    "organismo_nacional": {
+     "url": "https://www.proimagenescolombia.com/secciones/buscador/buscador_general_resultado.php?buscar=Laverde",
+     "fecha": "2026-11-16",
+     "resultado": "Buscador Proimágenes por «Laverde» (el título con ñ se rompe en su buscador): sin ficha de la obra."
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.bing.com/search?q=%22Lo+entra%C3%B1able%22+Valentina+Laverde",
+     "fecha": "2026-11-16",
+     "resultado": "El afiche oficial está en Cinespécimen."
     }
-   }
+   },
+   "afiche": {
+    "url": "https://static.wixstatic.com/media/6575c6_8619ae4c4a034fe89c5cb65dda5f96c0~mv2.jpg",
+    "fuente": "Cinespécimen (distribuidora), ficha de la obra: afiche oficial LO ENTRAÑABLE, dirigido por Valentina Laverde Castillo",
+    "archivo": "fuentes/bogoshorts-2026/altas/lo-entranable.jpg",
+    "px": [
+     1200,
+     1716
+    ],
+    "ratio": 0.6993,
+    "recorte": null,
+    "veredicto_criterio": null,
+    "fecha": "2026-11-16"
+   },
+   "estado": "alta_posible"
   },
   "Lucha": {
    "titulo": "Lucha",
@@ -2154,8 +2359,50 @@
      "url": "https://www.themoviedb.org/person/2692496",
      "fecha": "2026-11-15",
      "resultado": "César Heredia Cruz (2692496): dirige 1"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/name/nm6195758/",
+     "fecha": "2026-11-16",
+     "resultado": "Filmografía IMDb de César Heredia Cruz (Salvador, Karen Cries on the Bus, Elefante, Has estado aquí, Jazzed, Joychair): no incluye Lucha; buscador «Lucha Heredia» tampoco."
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/Lucha/",
+     "fecha": "2026-11-16",
+     "resultado": "Varias «Lucha» (Rubio 2017, Breaux 2009, Velázquez 2025, Chow 2017…), ninguna de César Heredia ni de 2019 colombiana."
+    },
+    "web_director_o_productora": {
+     "url": "https://www.proimagenescolombia.com/secciones/cine_colombiano/perfiles/perfil_persona.php?id_perfil=3722&lang=es",
+     "fecha": "2026-11-16",
+     "resultado": "César Heredia falleció (dic 2025; homenaje de BOGOSHORTS); sin web propia ni productora acreditada en el catálogo para Lucha. Perfil Proimágenes no lista la obra."
+    },
+    "distribuidora_o_agencia": {
+     "na": true,
+     "por_que": "El catálogo no trae contacto ni productora para Lucha (programa homenaje al director fallecido); ninguna agencia aparece en la búsqueda web.",
+     "fecha": "2026-11-16"
+    },
+    "plataformas_festivales": {
+     "url": "https://www.bing.com/search?q=%22Lucha%22+%22C%C3%A9sar+Heredia%22+filmfreeway+OR+vimeo",
+     "fecha": "2026-11-16",
+     "resultado": "Sin perfil FilmFreeway ni Vimeo de la obra. Short Film Depot pide sesión y Festhome no tiene catálogo público (no mirados por dentro)."
+    },
+    "festivales_previos": {
+     "url": "https://www.bing.com/search?q=%22Lucha%22+%22C%C3%A9sar+Heredia%22+cortometraje",
+     "fecha": "2026-11-16",
+     "resultado": "Solo SensCritique (court-métrage de César Heredia, 12 min, 2019, Colombie; página bloqueada por Cloudflare) y el homenaje de BOGOSHORTS; ningún festival previo hallado."
+    },
+    "organismo_nacional": {
+     "url": "https://www.proimagenescolombia.com/secciones/buscador/buscador_general_resultado.php?buscar=Lucha",
+     "fecha": "2026-11-16",
+     "resultado": "Buscador Proimágenes «Lucha» y «Heredia»: sin resultados."
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.bing.com/images/search?q=Lucha+C%C3%A9sar+Heredia+cortometraje+afiche",
+     "fecha": "2026-11-16",
+     "resultado": "Solo otras obras (La lucha 2025 España, Lucha de ReelRun) y el obituario; ningún afiche de esta Lucha."
     }
-   }
+   },
+   "estado": "sin_afiche",
+   "por_que_sin_afiche": "Corto de 2019 de un director fallecido sin web, distribuidora ni perfil en plataformas; ni IMDb ni buscadores de imágenes tienen afiche."
   },
   "Marea (Lido Pimienta)": {
    "titulo": "Marea (Lido Pimienta)",
@@ -2175,8 +2422,55 @@
      "url": "https://www.themoviedb.org/person/4403738",
      "fecha": "2026-11-15",
      "resultado": "Sisifo Guzman (4403738): dirige 0"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/find/?q=Marea%20Lido%20Pimienta&s=tt",
+     "fecha": "2026-11-16",
+     "resultado": "Sin ficha del videoclip (solo una entrevista a Lido Pimienta); «Marea 2026» tampoco."
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/Marea+Lido+Pimienta/",
+     "fecha": "2026-11-16",
+     "resultado": "Sin coincidencias."
+    },
+    "web_director_o_productora": {
+     "url": "https://lidopimienta.com/videos",
+     "fecha": "2026-11-16",
+     "resultado": "Web oficial de la artista (productora ejecutiva del video) con sección de videos; directora Sísifo (Juliana Salinas) sin web propia."
+    },
+    "distribuidora_o_agencia": {
+     "url": "https://lidopimienta.bandcamp.com/track/marea",
+     "fecha": "2026-11-16",
+     "resultado": "Sello ANTI- (Epitaph), álbum «Caribenya» (2026); no hay distribuidora audiovisual del video."
+    },
+    "plataformas_festivales": {
+     "url": "https://www.bing.com/search?q=Lido+Pimienta+%22Marea%22+video+oficial+youtube",
+     "fecha": "2026-11-16",
+     "resultado": "Videoclip sin perfil en FilmFreeway/Festhome. Short Film Depot pide sesión y Festhome no tiene catálogo público (no mirados por dentro)."
+    },
+    "festivales_previos": {
+     "url": "https://www.bing.com/search?q=Lido+Pimienta+%22Marea%22+video+oficial+youtube",
+     "fecha": "2026-11-16",
+     "resultado": "Ningún festival previo hallado; solo publicación en YouTube (14 jul 2026)."
+    },
+    "organismo_nacional": {
+     "url": "https://www.proimagenescolombia.com/secciones/buscador/buscador_general_resultado.php?buscar=Lido+Pimienta",
+     "fecha": "2026-11-16",
+     "resultado": "Buscador Proimágenes «Lido Pimienta»: sin resultados (Proimágenes no registra videoclips)."
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.bing.com/images/search?q=Lido+Pimienta+Marea+videoclip+S%C3%ADsifo+poster",
+     "fecha": "2026-11-16",
+     "resultado": "Solo fotos de prensa de la artista y portadas; ningún afiche del video."
+    },
+    "canal_oficial_artista": {
+     "url": "https://www.youtube.com/watch?v=EtDactzmneM",
+     "fecha": "2026-11-16",
+     "resultado": "Canal oficial Lido Pimienta: «Lido Pimienta - Marea», 14 jul 2026, 4:01 (catálogo 4:00), álbum Caribenya; la descripción trae créditos musicales, no del video."
     }
-   }
+   },
+   "estado": "sin_afiche",
+   "por_que_sin_afiche": "Videoclip sin afiche: ni web de la artista, ni YouTube, ni buscador de imágenes; solo portadas de sencillo/álbum, que no valen."
   },
   "Maria Lionza (Yajaira La Beyaca)": {
    "titulo": "Maria Lionza (Yajaira La Beyaca)",
@@ -2196,8 +2490,55 @@
      "url": "https://www.themoviedb.org/search/person?query=Yajaira%20la%20Beyaca",
      "fecha": "2026-11-15",
      "resultado": "Yajaira la Beyaca: sin perfil en TMDB"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/find/?q=Maria%20Lionza%20Yajaira&s=tt",
+     "fecha": "2026-11-16",
+     "resultado": "Sin resultados."
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/Maria+Lionza/",
+     "fecha": "2026-11-16",
+     "resultado": "Solo María Lionza (Luis Gaitán 2004) y Maria Lionza la dea urbana; nada del videoclip."
+    },
+    "web_director_o_productora": {
+     "url": "https://www.instagram.com/yajairalabeyaca",
+     "fecha": "2026-11-16",
+     "resultado": "La artista dirige y produce (contacto del catálogo, gmail); sin web propia, solo redes enlazadas desde YouTube."
+    },
+    "distribuidora_o_agencia": {
+     "url": "https://muakk.bandcamp.com/track/maria-lionza",
+     "fecha": "2026-11-16",
+     "resultado": "Sello MUAKK (álbum CARÁCTER ANAL, 2025); sin distribuidora audiovisual."
+    },
+    "plataformas_festivales": {
+     "url": "https://www.bing.com/search?q=%22Yajaira+La+Beyaca%22+%22Maria+Lionza%22",
+     "fecha": "2026-11-16",
+     "resultado": "Sin perfil FilmFreeway/Festhome; aparece en festival.bogoshorts.com/corto/4378. Short Film Depot pide sesión y Festhome no tiene catálogo público (no mirados por dentro)."
+    },
+    "festivales_previos": {
+     "url": "https://www.bing.com/search?q=%22Yajaira+La+Beyaca%22+%22Maria+Lionza%22",
+     "fecha": "2026-11-16",
+     "resultado": "Ningún festival previo; video publicado 16 sep 2026."
+    },
+    "organismo_nacional": {
+     "url": "https://www.proimagenescolombia.com/secciones/buscador/buscador_general_resultado.php?buscar=Yajaira",
+     "fecha": "2026-11-16",
+     "resultado": "Buscador Proimágenes «Yajaira»: sin resultados (no registra videoclips)."
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.bing.com/images/search?q=Yajaira+La+Beyaca+Maria+Lionza+poster",
+     "fecha": "2026-11-16",
+     "resultado": "Solo portadas de Spotify/Genius, fotos de prensa y la película de 2004; ningún afiche del video."
+    },
+    "canal_oficial_artista": {
+     "url": "https://www.youtube.com/watch?v=rJYFdRWYU6A",
+     "fecha": "2026-11-16",
+     "resultado": "Canal YAJAIRA LA BEYACA: «Maria Lionza (Official Music Video)», 16 sep 2026, 3:24 (catálogo 3:25); créditos: dirección Yajaira La Beyaca, fotografía Gaby Monroy Agámez y Esteban Ruiz, edición Manchado, bailarinas Salao — coincide con el catálogo."
     }
-   }
+   },
+   "estado": "sin_afiche",
+   "por_que_sin_afiche": "Videoclip sin afiche: ni YouTube ni buscador de imágenes; solo portadas de sencillo, que no valen."
   },
   "Meyolotl": {
    "titulo": "Meyolotl",
@@ -2217,6 +2558,46 @@
      "url": "https://www.themoviedb.org/person/3761433",
      "fecha": "2026-11-15",
      "resultado": "Lorena R. Valencia (3761433): dirige 2"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/title/tt28704014/",
+     "fecha": "2026-11-16",
+     "resultado": "tt28704014 «Meyolotl» (Short 2026), dir. y guion Lorena R. Valencia, misma sinopsis que el catálogo."
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/film/meyolotl/",
+     "fecha": "2026-11-16",
+     "resultado": "Existe /film/meyolotl/ (importada de TMDB 1807233), sin director visible."
+    },
+    "web_director_o_productora": {
+     "url": "https://filmfreeway.com/Meyolotl",
+     "fecha": "2026-11-16",
+     "resultado": "Sin web propia; la directora (contacto del catálogo, itslorevalencia@gmail.com) mantiene el press kit en FilmFreeway con afiche y stills."
+    },
+    "distribuidora_o_agencia": {
+     "na": true,
+     "por_que": "El contacto del catálogo es la propia directora; producción Karla Pedraza Jasso y Lorena R. Valencia, sin agencia.",
+     "fecha": "2026-11-16"
+    },
+    "plataformas_festivales": {
+     "url": "https://filmfreeway.com/Meyolotl",
+     "fecha": "2026-11-16",
+     "resultado": "Press kit FilmFreeway con afiche (miniatura 400x593) y stills. Short Film Depot pide sesión y Festhome no tiene catálogo público (no mirados por dentro)."
+    },
+    "festivales_previos": {
+     "url": "https://nylatinofilmfestival.com/2026/movies/meyolotl/",
+     "fecha": "2026-11-16",
+     "resultado": "New York Latino Film Festival 2026 (México, documental, 17 min, dir. Lorena R. Valencia); WIP en Big Sky Docs (FilmFreeway)."
+    },
+    "organismo_nacional": {
+     "url": "https://www.bing.com/search?q=%22Meyolotl%22+site%3Aimcine.gob.mx",
+     "fecha": "2026-11-16",
+     "resultado": "IMCINE no tiene buscador público de cortos; búsqueda en su sitio: sin registro."
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.bing.com/images/search?q=Meyolotl+Lorena+R.+Valencia+poster",
+     "fecha": "2026-11-16",
+     "resultado": "Imágenes de la ficha IMDb (tt28704014) y FilmFreeway."
     }
    }
   },
@@ -2238,8 +2619,55 @@
      "url": "https://www.themoviedb.org/search/person?query=Tilo%20G%C3%B3mez",
      "fecha": "2026-11-15",
      "resultado": "Tilo Gómez: sin perfil en TMDB"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/find/?q=Mi%20barquito&s=tt",
+     "fecha": "2026-11-16",
+     "resultado": "«Mi barquito» y «Mi barquito Canalón de Timbiquí»: sin ficha."
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/Mi+barquito/",
+     "fecha": "2026-11-16",
+     "resultado": "Solo «Mi barquito en letras» (2025, otra obra)."
+    },
+    "web_director_o_productora": {
+     "url": "https://www.youtube.com/watch?v=vl8kyw9KgiY",
+     "fecha": "2026-11-16",
+     "resultado": "El director Tilo Gómez (contacto del catálogo, gmail) no tiene web; la agrupación enlaza solo redes y plataformas desde YouTube."
+    },
+    "distribuidora_o_agencia": {
+     "url": "https://onerpm.link/113176004087",
+     "fecha": "2026-11-16",
+     "resultado": "Distribución musical ONErpm (enlace del video oficial); sin distribuidora audiovisual."
+    },
+    "plataformas_festivales": {
+     "url": "https://www.bing.com/images/search?q=Canal%C3%B3n+de+Timbiqu%C3%AD+Mi+barquito+videoclip+Tilo+G%C3%B3mez+afiche",
+     "fecha": "2026-11-16",
+     "resultado": "Sin perfil FilmFreeway/Festhome. Short Film Depot pide sesión y Festhome no tiene catálogo público (no mirados por dentro)."
+    },
+    "festivales_previos": {
+     "url": "https://www.youtube.com/results?search_query=Canal%C3%B3n+de+Timbiqu%C3%AD+Mi+barquito",
+     "fecha": "2026-11-16",
+     "resultado": "Ningún festival previo hallado; video oficial publicado 9 may 2026."
+    },
+    "organismo_nacional": {
+     "url": "https://www.proimagenescolombia.com/secciones/buscador/buscador_general_resultado.php?buscar=Canalon",
+     "fecha": "2026-11-16",
+     "resultado": "Buscador Proimágenes «Canalon»: sin resultados (no registra videoclips)."
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.bing.com/images/search?q=Canal%C3%B3n+de+Timbiqu%C3%AD+Mi+barquito+videoclip+Tilo+G%C3%B3mez+afiche",
+     "fecha": "2026-11-16",
+     "resultado": "Solo fotos de la agrupación y miniaturas de YouTube; ningún afiche."
+    },
+    "canal_oficial_artista": {
+     "url": "https://www.youtube.com/watch?v=vl8kyw9KgiY",
+     "fecha": "2026-11-16",
+     "resultado": "Canal Canalón de Timbiquí: «Mi Barquito (Video Oficial)», 9 may 2026, 5:41 (catálogo 5:40); la descripción trae solo letra y enlaces, sin créditos del video."
     }
-   }
+   },
+   "estado": "sin_afiche",
+   "por_que_sin_afiche": "Videoclip sin afiche: ni YouTube, ni redes enlazadas, ni buscador de imágenes."
   },
   "Nancy resabiada (Cumbia) (El Kalvo & La Banda Resabiada)": {
    "titulo": "Nancy resabiada (Cumbia) (El Kalvo & La Banda Resabiada)",
