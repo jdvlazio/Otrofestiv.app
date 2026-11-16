@@ -5586,6 +5586,8 @@ try:
         if _ev:
             _p.append(f'{len(_ev)} lugar(es) NUEVO(s) sin enlace de Google Maps (--evidencia): ' + ', '.join(_S[x]['nombre'] for x in _ev[:5]))
         _se = _sm.sin_enlace()
+        if _se:   # desde #1507 todo pin vivo está enlazado: uno nuevo sin enlace frena
+            _p.append(f'{len(_se)} pin(es) de festivales vivos sin enlace al almacén (python3 pipeline/sedes.py --construir && --enlazar): ' + ', '.join(f'{a}:{b}' for a, b in _se[:5]))
         _sc = [x['nombre'] for x in _S.values() if not _sm.limpia_ciudad(x.get('ciudad'))]
         if _sc:
             _p.append(f'{len(_sc)} lugar(es) sin ciudad válida (python3 pipeline/sedes.py --completar-ciudades): ' + ', '.join(_sc[:5]))
@@ -5594,8 +5596,6 @@ try:
         else:
             ok(check, f'{len(_S)} lugares; todo pin coincide con el suyo, ningún par cercano sin decidir, todo lugar nuevo con Maps '
                       f'({len((_mz.get("_deuda") or {}).get("sin_url") or [])} viejos sin enlace: deuda que solo baja)')
-        if _se:   # aviso hasta que los venues-geo traigan `_matriz` (PR de datos que sigue a este)
-            warn(check, f'{len(_se)} pin(es) de festivales vivos sin enlace al almacén — python3 pipeline/sedes.py --enlazar: ' + ', '.join(f'{a}:{b}' for a, b in _se[:5]))
 except Exception as _e:
     fail(check, f'el guardián no pudo correr: {_e}')
 
