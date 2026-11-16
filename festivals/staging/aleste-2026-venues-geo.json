@@ -8,21 +8,24 @@
   "lng": -75.5626063,
   "address": "Cra. 45 (El Palo) #53-38",
   "_prec": "manual",
-  "_nota": "pin verificado en Mamut y Fantasmagoría; dirección del post de @aleste.colombia (1 nov 2026)"
+  "_nota": "pin verificado en Mamut y Fantasmagoría; dirección del post de @aleste.colombia (1 nov 2026)",
+  "_matriz": "s_b5d25cab"
  },
  "MAMM - Medellín": {
   "lat": 6.2237797,
   "lng": -75.57384,
   "address": "Cra. 44 #19A-100",
   "_prec": "manual",
-  "_nota": "pin verificado en Mamut; dirección de la web del MAMM"
+  "_nota": "pin verificado en Mamut; dirección de la web del MAMM",
+  "_matriz": "s_99915661"
  },
  "Cinemateca de Bogotá - Bogotá": {
   "lat": 4.6031614,
   "lng": -74.0676717,
   "address": "Cra. 3 #19-10, Bogotá",
   "_prec": "manual",
-  "_match": "heredada de BIFF/MIDBO/BHFF 2026; coincide al decimal con Google Maps «Cinemateca de Bogotá»"
+  "_match": "heredada de BIFF/MIDBO/BHFF 2026; coincide al decimal con Google Maps «Cinemateca de Bogotá»",
+  "_matriz": "s_17a71d8b"
  },
  "Cinemateca Fontanar del Río - Bogotá": {
   "_prec": "manual",
@@ -30,6 +33,7 @@
   "lat": 4.7561244,
   "lng": -74.1110572,
   "address": "Calle 146 # 138A-99",
-  "_match": "heredada de Anibia/FICDEH/Narrar el Futuro 2026 (Google Maps «CEFE Fontanar del río»)"
+  "_match": "heredada de Anibia/FICDEH/Narrar el Futuro 2026 (Google Maps «CEFE Fontanar del río»)",
+  "_matriz": "s_c82c47d7"
  }
 }
