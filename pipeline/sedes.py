@@ -40,6 +40,7 @@ fusionados con `--mismo`.
                                                           # las sedes del crudo: ya / conocida / parecida / nueva
     python3 pipeline/sedes.py --tablero                   # festivales vivos: qué falta en sus sedes
     python3 pipeline/sedes.py --completar-ciudades        # vecino del almacén (<3 km) o Nominatim reverso
+    python3 pipeline/sedes.py --enlazar                   # cada pin de los venues-geo apunta a su lugar (_matriz)
 
 geocodificar.py consulta el almacén ANTES de Nominatim. Guardián: [sede-matriz].
 """
@@ -510,6 +511,57 @@ def sin_evidencia_nueva(raiz=REPO):
                   if not (e.get('evidencia') or {}).get('url') and s not in deuda)
 
 
+# ── enlazar: el festival apunta al lugar (PR C, 16 nov 2026) ─────────────────
+def lugar(sid, raiz=REPO, _m=None):
+    """El lugar de un id, siguiendo las redirecciones de --mismo. None si no existe."""
+    m = _m or leer(raiz)
+    red = m.get('redirecciones') or {}
+    for _ in range(10):
+        if sid in red:
+            sid = red[sid]
+    return (m.get('sedes') or {}).get(sid)
+
+
+def enlazar(raiz=REPO):
+    """Pone `_matriz: s_xxx` en cada pin de los venues-geo que el almacén
+    conoce. Desde ahí el pin y la dirección los da el almacén (ensamblar.py):
+    corregir un lugar una vez lo corrige en todos los festivales que se vuelvan
+    a armar. → {fid: n enlazados}"""
+    m = leer(raiz)
+    S = m.get('sedes') or {}
+    idx = {}
+    for sid, e in S.items():
+        for nom in [e['nombre']] + e.get('alias', []):
+            for fid in e['festivales']:
+                idx.setdefault((fid, nom), sid)
+    out = {}
+    for p in sorted(glob.glob(f'{raiz}/festivals/staging/*-venues-geo.json')):
+        fid = os.path.basename(p)[:-len('-venues-geo.json')]
+        g = json.load(open(p, encoding='utf-8'))
+        n = 0
+        for k, v in g.items():
+            if not isinstance(v, dict) or v.get('lat') is None:
+                continue
+            sid = idx.get((fid, k)) or idx.get((fid, nombre_de(k)))
+            if sid and v.get('_matriz') != sid:
+                v['_matriz'] = sid
+                n += 1
+        if n:
+            json.dump(g, open(p, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+            out[fid] = n
+    return out
+
+
+def sin_enlace(raiz=REPO):
+    """Pines de festivales VIVOS sin `_matriz` válido: [(fid, clave)]."""
+    m = leer(raiz)
+    out = []
+    for fid, k, nombre, v in pines(raiz):
+        if vivo(fid, raiz) and not (v.get('_matriz') and lugar(v['_matriz'], _m=m)):
+            out.append((fid, k))
+    return out
+
+
 # ── completar la ciudad (16 nov 2026, Juan: «añadir ciudad») ────────────────
 def _reverso(lat, lng):
     """Nominatim reverso → municipio. Con la cortesía de 1 consulta/s."""
@@ -754,6 +806,9 @@ def main():
             print(f'  NUEVA     {cr}  →  buscar en Maps: {url}')
         print(f"{len(r['ya'])} ya · {len(r['conocida'])} conocidas{' (escritas)' if '--escribir' in a else ' (--escribir para aplicarlas)'}"
               f" · {len(r['parecida'])} para confirmar (--aceptar «cruda=s_xxx») · {len(r['nueva'])} nuevas")
+    elif '--enlazar' in a:
+        r = enlazar()
+        print(f'✓ {sum(r.values())} pines enlazados en {len(r)} festivales' if r else '✓ todo enlazado')
     elif '--completar-ciudades' in a:
         for n, c, f in completar_ciudades():
             print(f'  {n:50} → {c}  ({f})')
