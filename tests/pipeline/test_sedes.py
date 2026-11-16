@@ -220,5 +220,27 @@ class Normalizar(Base):
         self.assertEqual(next(e for e in S.leer(self.r)['sedes'].values() if e['nombre'] == 'Plaza B')['ciudad'], 'Manizales')
 
 
+class Enlazar(Base):
+    def test_enlaza_y_ensamblar_toma_el_pin_del_almacen(self):
+        self.geo('a-2026', {'Brisas - Cali': {'lat': 3.415857, 'lng': -76.562927, '_prec': 'manual'}})
+        S.construir(self.r)
+        sid, _ = self.unico()
+        S.poner_evidencia(sid, MAPS, (3.416991, -76.56774), self.r)
+        self.assertEqual([x[1] for x in S.sin_enlace(self.r)], ['Brisas - Cali'])
+        self.assertEqual(S.enlazar(self.r), {'a-2026': 1})
+        self.assertEqual(S.sin_enlace(self.r), [])
+        g = json.load(open(f'{self.r}/festivals/staging/a-2026-venues-geo.json'))['Brisas - Cali']
+        self.assertEqual(g['_matriz'], sid)
+        self.assertEqual(S.lugar(sid, self.r)['lat'], 3.416991)       # el que ensamblar.py usa
+
+    def test_lugar_sigue_las_redirecciones(self):
+        self.geo('a-2026', {'MAMM': {'lat': 6.2232, 'lng': -75.5741, '_prec': 'manual'}})
+        self.geo('b-2026', {'Museo de Arte Moderno de Medellín': {'lat': 6.2232, 'lng': -75.5741}})
+        viejos = list(S.construir(self.r)['sedes'])
+        S.declarar('mismo', 'MAMM', 'Museo de Arte Moderno de Medellín', 'sigla', self.r)
+        for v in viejos:
+            self.assertEqual(S.lugar(v, self.r)['nombre'], 'MAMM')
+
+
 if __name__ == '__main__':
     unittest.main()

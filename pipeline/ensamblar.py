@@ -30,6 +30,25 @@ import lib
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
+
+def _desde_almacen(g):
+    """EL PIN LO DA EL ALMACÉN (16 nov 2026, catalogo/sedes.json): un venue-geo
+    con `_matriz` toma lat, lng y dirección del lugar, no de su copia. Corregir
+    un lugar una vez lo corrige en todo festival que se vuelva a armar (FICCALI
+    tenía Brisas de Mayo a 549 m de donde la pone Google Maps)."""
+    if not g.get('_matriz'):
+        return g
+    import sedes
+    e = sedes.lugar(g['_matriz'])
+    if not e:
+        sys.exit(f'✗ venue-geo apunta a {g["_matriz"]}, que no está en catalogo/sedes.json')
+    if e.get('campus'):   # un campus: cada festival en SU edificio, con su pin
+        return g
+    out = {**g, 'lat': e['lat'], 'lng': e['lng']}
+    if e.get('address'):
+        out['address'] = e['address']
+    return out
+
 def _plan(fid):
     """El plan pasa por su contrato ANTES de tocar nada (lib.cargar_plan): lo
     que falte sale aquí, junto y con remedio, no una vuelta más tarde en un
@@ -630,7 +649,7 @@ def ensamblar(fid, escribir=True):
         # a producción con sus SIETE sedes sin coordenadas teniendo el sidecar
         # completo al lado. Lo destapó Itagüí, que hizo exactamente lo mismo.
         _v = {'short': sede.split(' - ')[0], 'city': sede.split(' - ')[-1]}
-        _v.update(geo.get(sede) or geo.get(f['sede']) or {})
+        _v.update(_desde_almacen(geo.get(sede) or geo.get(f['sede']) or {}))
         venues[sede] = _v
 
     out = {'_etapa': plan.get('_etapa', 'build generado por pipeline/ensamblar.py'),
@@ -729,7 +748,7 @@ def ensamblar(fid, escribir=True):
             _s = _f.get('venue')
             if _s and _s not in venues:
                 venues[_s] = {'short': _s.split(' - ')[0], 'city': _s.split(' - ')[-1],
-                              **(geo.get(_s) or geo.get(_s.split(' - ')[0]) or {})}
+                              **_desde_almacen(geo.get(_s) or geo.get(_s.split(' - ')[0]) or {})}
         print(f'  modelo de la función: {len(_afs)} afirmaciones · {len(films)} funciones')
     # L7: el registro se reescribe solo si cambió lo que guarda (sin ruido diario),
     # y solo después de que el modelo no frenó
