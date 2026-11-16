@@ -236,6 +236,13 @@ def main():
         if f.get('codigo') in progs:
             f['obras'] = progs[f['codigo']]
         funciones.append(f)
+    import unicodedata
+    def _nfc(x):
+        if isinstance(x, str): return unicodedata.normalize('NFC', x)
+        if isinstance(x, list): return [_nfc(y) for y in x]
+        if isinstance(x, dict): return {k: _nfc(v) for k, v in x.items()}
+        return x
+    funciones = _nfc(funciones)
     json.dump({'_provenance': provenance(URL, metodo='pdftotext -bbox: columna por x del encabezado, '
                                          'fila por la hora más cercana dentro del espacio'),
                'funciones': funciones, '_descartadas': descartadas},

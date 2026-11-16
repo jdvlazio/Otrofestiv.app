@@ -24,24 +24,6 @@
    "posterSource": "tmdb"
   },
   {
-   "titulo": "2000",
-   "tmdb_id": 1712540,
-   "titulo_original": "2000.",
-   "poster_path": "/pJKq2VnysJ9Llj9qSJHpCrxmbUv.jpg",
-   "synopsis_es": "",
-   "synopsis_en": "Siblings Lela and Vid have an enduring relationship, despite the toxic enviroment created by their parents. However, on New Years Eve of the year 2000, their bond will be broken once and for all.",
-   "genero": "Drama",
-   "anio_tmdb": 2026,
-   "duracion_tmdb": 19,
-   "pais_tmdb": "Croatia",
-   "lbSlug": "2000-2026",
-   "_verificado": "declarada a mano: director + año + duración cuadran (TMDB search + movie/credits)",
-   "_director": "Renata Lučić",
-   "_sondeado": "2026-11-15",
-   "poster": "/assets/bogoshorts-2026/2000.jpg",
-   "posterSource": "tmdb"
-  },
-  {
    "titulo": "2:LOVE",
    "tmdb_id": 1730056,
    "titulo_original": "2:LOVE",
@@ -150,22 +132,6 @@
    "_sondeado": "2026-11-15",
    "poster": "/assets/bogoshorts-2026/a-wolf-in-the-suburbs.jpg",
    "posterSource": "tmdb"
-  },
-  {
-   "titulo": "A los once",
-   "tmdb_id": 1826830,
-   "titulo_original": "A los once",
-   "poster_path": null,
-   "synopsis_es": "",
-   "synopsis_en": "When her mother mistakes a bloodstain for her first period, an eleven-year-old uncovers the devastating truth.",
-   "genero": "Drama",
-   "anio_tmdb": 0,
-   "duracion_tmdb": 15,
-   "pais_tmdb": "",
-   "lbSlug": "a-los-once",
-   "_verificado": "declarada a mano: alta nueva 15 nov 2026 (Priscila Núñez, 2025, 15 min; IMDb tt35506134), afiche original de IMDb; NO es TMDB 684089 (2020, otra directora)",
-   "_director": "Priscila Núñez",
-   "_sondeado": "2026-11-15"
   },
   {
    "titulo": "A voz de todas as cousas",
@@ -419,25 +385,6 @@
    "posterSource": "tmdb"
   },
   {
-   "titulo": "Barcelona",
-   "tmdb_id": 356487,
-   "titulo_original": "Barcelone, principale ville de la Catalogne",
-   "poster_path": "/pqlm6zqbNbwQbVqzSqSGlG2xY8V.jpg",
-   "synopsis_es": "",
-   "synopsis_en": "",
-   "genero": "Documental",
-   "anio_tmdb": 1912,
-   "duracion_tmdb": 4,
-   "pais_tmdb": "France, Spain",
-   "title_en": "Barcelona, Main City of Catalonia",
-   "lbSlug": "barcelona-main-city-of-catalonia",
-   "_verificado": "declarada a mano: «Barcelone, principale ville de la Catalogne», Chomón 1912, 4 min",
-   "_director": "Segundo de Chomón",
-   "_sondeado": "2026-11-15",
-   "poster": "/assets/bogoshorts-2026/barcelona.jpg",
-   "posterSource": "tmdb"
-  },
-  {
    "titulo": "Barcelona de Foc",
    "tmdb_id": 750788,
    "titulo_original": "Barcelona De Foc",
@@ -505,9 +452,10 @@
    "duracion_tmdb": 14,
    "pais_tmdb": "France, Iran",
    "lbSlug": "beach-flags",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Beach Flags",
    "_director": "Sarah Saidan",
-   "_sondeado": "2026-10-23",
+   "_sondeado": "2026-11-15",
    "poster": "/assets/bogoshorts-2026/beach-flags.jpg",
    "posterSource": "tmdb"
   },
@@ -526,22 +474,6 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Belladonna",
    "_director": "Dubravka Turić",
-   "_sondeado": "2026-11-15"
-  },
-  {
-   "titulo": "Běi Huí Gu− Xiàn",
-   "tmdb_id": 1826831,
-   "titulo_original": "北回歸線",
-   "poster_path": null,
-   "synopsis_es": "",
-   "synopsis_en": "In a small-town lingerie factory, a young man's monotonous life is upended by an unexpected bond and his awakening queerness.",
-   "genero": "",
-   "anio_tmdb": 0,
-   "duracion_tmdb": 0,
-   "pais_tmdb": "",
-   "lbSlug": "film:1678938",
-   "_verificado": "declarada a mano: alta nueva 15 nov 2026 como «北回歸線 / Tropic of Cancer» (Alex Jiang, 13 min; IMDb tt38915889), afiche original de IMDb",
-   "_director": "Alex Jiang",
    "_sondeado": "2026-11-15"
   },
   {
@@ -635,24 +567,6 @@
    "_director": "Rubens Fabricio Anzolin, João Fernando Chagas",
    "_sondeado": "2026-11-15",
    "poster": "/assets/bogoshorts-2026/braco-forte.jpg",
-   "posterSource": "tmdb"
-  },
-  {
-   "titulo": "Bus",
-   "tmdb_id": 1274419,
-   "titulo_original": "Bus",
-   "poster_path": "/ktirc1BE3uOSaGJxsUc4VY5DUdb.jpg",
-   "synopsis_es": "",
-   "synopsis_en": "In the middle of rush hour traffic in Lima, a young student refuses to give up his seat to an elderly woman, sparking unexpected chaos among the passengers.",
-   "genero": "Comedia",
-   "anio_tmdb": 2025,
-   "duracion_tmdb": 9,
-   "pais_tmdb": "Peru",
-   "lbSlug": "bus",
-   "_verificado": "declarada a mano: director + año + duración cuadran (TMDB search + movie/credits)",
-   "_director": "André Balbuena",
-   "_sondeado": "2026-11-15",
-   "poster": "/assets/bogoshorts-2026/bus.jpg",
    "posterSource": "tmdb"
   },
   {
@@ -843,23 +757,7 @@
    "posterSource": "tmdb"
   },
   {
-   "titulo": "Cuando retornen las garzas",
-   "tmdb_id": 1575134,
-   "titulo_original": "When the Herons Return",
-   "poster_path": null,
-   "synopsis_es": "",
-   "synopsis_en": "The lamentations of a missing person’s mother lead a murderer suffering from amnesia to question his actions. He travels to the spot in the jungle where he murdered and buried his most recent victim.",
-   "genero": "Drama",
-   "anio_tmdb": 2025,
-   "duracion_tmdb": 19,
-   "pais_tmdb": "Colombia",
-   "lbSlug": "when-the-herons-return",
-   "_verificado": "declarada a mano: ficha sin póster",
-   "_director": "Robert Brand Ordóñez",
-   "_sondeado": "2026-11-15"
-  },
-  {
-   "titulo": "Cvijeće",
+   "titulo": "Cvijeće",
    "tmdb_id": 1826811,
    "titulo_original": "Cvijeće",
    "poster_path": null,
@@ -870,7 +768,8 @@
    "duracion_tmdb": 19,
    "pais_tmdb": "",
    "lbSlug": "cvijece",
-   "_verificado": "declarada a mano: alta nueva 15 nov 2026 (Judita Gamulin, 2015, 19 min), afiche oficial de croatian.film/en/films/2890",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Cvijeće",
    "_director": "Judita Gamulin",
    "_sondeado": "2026-11-15"
   },
@@ -895,7 +794,7 @@
    "posterSource": "tmdb"
   },
   {
-   "titulo": "Da je kuća dobra i vuk bi je imao",
+   "titulo": "Da je kuća dobra i vuk bi je imao",
    "tmdb_id": 367050,
    "titulo_original": "Da je kuća dobra i vuk bi je imao",
    "poster_path": "/9hZgwZfWEpkzx16r3vUmeMV5z00.jpg",
@@ -907,7 +806,8 @@
    "pais_tmdb": "Croatia",
    "title_en": "No Wolf Has a House",
    "lbSlug": "no-wolf-has-a-house",
-   "_verificado": "declarada a mano: No Wolf Has a House, Hana Jušić HR 2015, 25 min",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Da je kuća dobra i vuk bi je imao",
    "_director": "Hana Jušić",
    "_sondeado": "2026-11-15",
    "poster": "/assets/bogoshorts-2026/da-je-kuca-dobra-i-vuk-bi-je-imao.jpg",
@@ -938,6 +838,7 @@
    "titulo_original": "Dear Upstairs Neighbors",
    "poster_path": "/zGSnNvfNKVLNAb5I7wTDH0lqSzC.jpg",
    "synopsis_es": "Un cortometraje en competencia en Tribeca 2026.",
+   "synopsis_en": "A short film in competition at Tribeca 2026.",
    "genero": "Animación",
    "anio_tmdb": 2026,
    "duracion_tmdb": 0,
@@ -963,7 +864,6 @@
    "_sinopsis_de": "ya publicada en tribeca-2026",
    "poster": "/assets/bogoshorts-2026/dear-upstairs-neighbors.jpg",
    "posterSource": "tmdb",
-   "synopsis_en": "A short film in competition at Tribeca 2026.",
    "_heredado": {
     "synopsis_en": "catálogo w_R4QPXCZFY0PN (tribeca-2026)"
    }
@@ -1038,9 +938,10 @@
    "duracion_tmdb": 11,
    "pais_tmdb": "Portugal",
    "lbSlug": "dedalo",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Dédalo",
    "_director": "Jerónimo Rocha",
-   "_sondeado": "2026-10-23",
+   "_sondeado": "2026-11-15",
    "poster": "/assets/bogoshorts-2026/dedalo.jpg",
    "posterSource": "tmdb"
   },
@@ -1297,40 +1198,6 @@
    "posterSource": "tmdb"
   },
   {
-   "titulo": "Elefante",
-   "tmdb_id": 1826828,
-   "titulo_original": "Elefante",
-   "poster_path": null,
-   "synopsis_es": "",
-   "synopsis_en": "Andrés lives on the road, selling knick-knacks out of his old Renault 4. Meanwhile he can barely stand his elderly, senile father, who lives in the past of old cycling radio commentaries and family memories.",
-   "genero": "Drama",
-   "anio_tmdb": 0,
-   "duracion_tmdb": 15,
-   "pais_tmdb": "",
-   "lbSlug": "elefante-1",
-   "_verificado": "declarada a mano: alta nueva 15 nov 2026 (César Heredia, 2014, 15 min; IMDb tt4392972), afiche original de IMDb",
-   "_director": "César Heredia Cruz",
-   "_sondeado": "2026-11-15"
-  },
-  {
-   "titulo": "En el silencio después",
-   "tmdb_id": 1724318,
-   "titulo_original": "In the Silence After",
-   "poster_path": "/zYCH1cCoA4MksFgwe3eP78IkPP.jpg",
-   "synopsis_es": "",
-   "synopsis_en": "A son returns home to care for his mother, filming the last year they will spend together.",
-   "genero": "Documental",
-   "anio_tmdb": 2026,
-   "duracion_tmdb": 17,
-   "pais_tmdb": "Qatar, United States of America, Colombia",
-   "lbSlug": "in-the-silence-after",
-   "_verificado": "declarada a mano: director + año + duración cuadran (TMDB search + movie/credits)",
-   "_director": "Sebastian Delascasas",
-   "_sondeado": "2026-11-15",
-   "poster": "/assets/bogoshorts-2026/en-el-silencio-despues.jpg",
-   "posterSource": "tmdb"
-  },
-  {
    "titulo": "En pays froid",
    "tmdb_id": 1547983,
    "titulo_original": "En pays froid",
@@ -1371,25 +1238,6 @@
    "posterSource": "tmdb"
   },
   {
-   "titulo": "Eri",
-   "tmdb_id": 1118590,
-   "titulo_original": "エリ",
-   "poster_path": "/xrEDmlV4rFZv5AYuYL88L8mwibW.jpg",
-   "synopsis_es": "",
-   "synopsis_en": "One spring, Eri, a Holstein cow, falls in love with Sawa, a Jersey newcomer. Eri idolizes Sawa and longs to be close to her, to become one with her. To refine her intense feelings for Sawa, Eri subjects herself to ascetic practices and rituals of her own making. In a world where those who do not bear children are disposed of, Eri has fallen for someone who shares the same fate.",
-   "genero": "Animación",
-   "anio_tmdb": 2026,
-   "duracion_tmdb": 12,
-   "pais_tmdb": "France, Japan",
-   "title_en": "Eri, The Cow",
-   "lbSlug": "eri-the-cow",
-   "_verificado": "declarada a mano: título TMDB «エリ / Eri, The Cow», Honami Yano, FR/JP 2026, 12 min",
-   "_director": "Honami Yano",
-   "_sondeado": "2026-11-15",
-   "poster": "/assets/bogoshorts-2026/eri.jpg",
-   "posterSource": "tmdb"
-  },
-  {
    "titulo": "Esa fugaz esencia que dejaron los sucesos",
    "tmdb_id": 1073875,
    "titulo_original": "Esa fugaz esencia que dejaron los sucesos",
@@ -1426,24 +1274,6 @@
    "_verificado": "ya publicada en cinemancia-2025: se reusa su afiche",
    "pais": "Colombia",
    "duracion_tmdb": 8
-  },
-  {
-   "titulo": "Fiction",
-   "tmdb_id": 1691015,
-   "titulo_original": "Fiction",
-   "poster_path": "/hshmmmtSrr4tRHLzUAACjEAreyi.jpg",
-   "synopsis_es": "",
-   "synopsis_en": "",
-   "genero": "Comedia",
-   "anio_tmdb": 2026,
-   "duracion_tmdb": 0,
-   "pais_tmdb": "France",
-   "lbSlug": "fiction-2026",
-   "_verificado": "declarada a mano: director + año + duración cuadran (TMDB search + movie/credits)",
-   "_director": "Ambroise Rateau",
-   "_sondeado": "2026-11-15",
-   "poster": "/assets/bogoshorts-2026/fiction.jpg",
-   "posterSource": "tmdb"
   },
   {
    "titulo": "Galverse",
@@ -1578,21 +1408,24 @@
   },
   {
    "titulo": "Grounded",
-   "tmdb_id": 1700763,
-   "titulo_original": "Grounded",
-   "poster_path": "/9wQC73QwYqWdcoZtKMF4owaNkCH.jpg",
-   "synopsis_es": "",
-   "synopsis_en": "As dawn breaks, a loveliness of ladybirds take to the sky... all except Bug. Left behind and unable to fly, Bug and a sympathetic Spider wrestle against an invisible weight that feels heavier than gravity alone.",
-   "genero": "Animación",
-   "anio_tmdb": 2026,
+   "_ya_publicada": [
+    {
+     "festival": "tribeca-2026",
+     "titulo": "Grounded",
+     "poster": "https://d13jj08vfqimqg.cloudfront.net/uploads/film/photo_1/7017/large_Grounded-Clean-16x9-01.jpg",
+     "posterSource": "editorial",
+     "country": "New Zealand",
+     "duration": 4,
+     "synopsis_en": "Young backpacker Henry inadvertently takes charge of a stranger's suitcase at the airport — and is immediately surrounded by police who accuse him of terrorism.",
+     "sinopsis": "Henry, joven mochilero, se hace cargo inadvertidamente de la maleta de un desconocido en el aeropuerto y de inmediato se ve rodeado de policías que lo acusan de terrorismo."
+    }
+   ],
+   "_sinopsis_de": "ya publicada en tribeca-2026",
+   "_verificado": "ya publicada en tribeca-2026: se reusa su sinopsis",
+   "sinopsis": "Henry, joven mochilero, se hace cargo inadvertidamente de la maleta de un desconocido en el aeropuerto y de inmediato se ve rodeado de policías que lo acusan de terrorismo.",
+   "pais": "New Zealand",
    "duracion_tmdb": 4,
-   "pais_tmdb": "",
-   "lbSlug": "grounded-2026-2",
-   "_verificado": "declarada a mano: DUPLICADO en TMDB: 1700763 (con IMDb) y 1702560, ambos Chris Callus 2026 4 min",
-   "_director": "Chris Callus",
-   "_sondeado": "2026-11-15",
-   "poster": "/assets/bogoshorts-2026/grounded.jpg",
-   "posterSource": "tmdb"
+   "synopsis_en": "Young backpacker Henry inadvertently takes charge of a stranger's suitcase at the airport — and is immediately surrounded by police who accuse him of terrorism."
   },
   {
    "titulo": "HDLT",
@@ -1601,6 +1434,7 @@
    "poster_path": "/j4A2q3aODb9T1QGbJphYrYB35ur.jpg",
    "synopsis_es": "Después del ataque que sufrió, Luz trata de entender lo que le sucedió: el Hijo de la Tierra vino a destruir a la humanidad robando sus recuerdos más tristes y felices. Pero desembarcó en Suba, el distrito más lejano de Bogotá, donde una extraña adicción cambiará el curso de la historia.",
    "synopsis_en": "Mixed media Found footage film made by a Colombian Collective",
+   "genero": "Drama",
    "anio_tmdb": 0,
    "duracion_tmdb": 18,
    "pais_tmdb": "",
@@ -1683,7 +1517,6 @@
    ],
    "poster": "/assets/bogoshorts-2026/hdlt.jpg",
    "posterSource": "tmdb",
-   "genero": "Drama",
    "_heredado": {
     "genero": "catálogo w_R4GBJ7SNPXDQ (fantasmagoria-2026, festicinerio-2026, ficfusa-2026, filcmar-2026, siembrafest-2026)"
    }
@@ -1744,24 +1577,6 @@
    "_director": "Aliona Zagurovska",
    "_sondeado": "2026-11-15",
    "poster": "/assets/bogoshorts-2026/ici-azor.jpg",
-   "posterSource": "tmdb"
-  },
-  {
-   "titulo": "Idols",
-   "tmdb_id": 1654471,
-   "titulo_original": "아이돌스",
-   "poster_path": "/fVOCOPp5iqMzi6xgTrWitrkpzNo.jpg",
-   "synopsis_es": "",
-   "synopsis_en": "Kim Min-ha has always dreamed of the bright lights, but now she’s an almost 30-year-old wannabe K-pop idol and people only care about her uncanny resemblance to Park Hye-mi, the superstar she believes is living the life that by all rights should be hers.",
-   "genero": "Suspense",
-   "anio_tmdb": 2026,
-   "duracion_tmdb": 20,
-   "pais_tmdb": "South Korea, Japan, United Kingdom",
-   "lbSlug": "idols-2026",
-   "_verificado": "declarada a mano: director en TMDB «Matthew Halsall» (programa: Matt Halsall)",
-   "_director": "Matt Halsall",
-   "_sondeado": "2026-11-15",
-   "poster": "/assets/bogoshorts-2026/idols.jpg",
    "posterSource": "tmdb"
   },
   {
@@ -1855,24 +1670,6 @@
    "_director": "Mahmoud Assi",
    "_sondeado": "2026-11-15",
    "poster": "/assets/bogoshorts-2026/khufu.jpg",
-   "posterSource": "tmdb"
-  },
-  {
-   "titulo": "Klase s nuotrauka",
-   "tmdb_id": 1668922,
-   "titulo_original": "Class Photo",
-   "poster_path": "/JuDcylbg8S3wZ3GEBaFC0RrIIc.jpg",
-   "synopsis_es": "",
-   "synopsis_en": "While revisiting his now-abandoned school, Ignas runs into a former classmate. As they wander through corridors filled with conflicting memories, they try to capture what will soon be gone.",
-   "genero": "Drama",
-   "anio_tmdb": 2026,
-   "duracion_tmdb": 17,
-   "pais_tmdb": "Lithuania",
-   "lbSlug": "class-photo",
-   "_verificado": "declarada a mano: director + año + duración cuadran (TMDB search + movie/credits)",
-   "_director": "Arnas Balčiūnas",
-   "_sondeado": "2026-11-15",
-   "poster": "/assets/bogoshorts-2026/klase-s-nuotrauka.jpg",
    "posterSource": "tmdb"
   },
   {
@@ -2082,9 +1879,10 @@
    "duracion_tmdb": 15,
    "pais_tmdb": "",
    "lbSlug": "la-maleza",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "La maleza",
    "_director": "Martina Rodríguez",
-   "_sondeado": "2026-10-23",
+   "_sondeado": "2026-11-15",
    "poster": "/assets/bogoshorts-2026/la-maleza.jpg",
    "posterSource": "tmdb"
   },
@@ -2196,10 +1994,10 @@
    "duracion_tmdb": 4,
    "pais_tmdb": "",
    "lbSlug": "lamentos-de-un-balcon",
-   "_verificado": "el catálogo ya la tiene (w_R4ENGEB7EKSY, cineautopsia-2026, cinemancia-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4ENGEB7EKSY, cineautopsia-2026, cinemancia-2026, cinetoro-2026)",
    "work_id": "w_R4ENGEB7EKSY",
    "_director": "Juan Chispas",
-   "_sondeado": "2026-10-23",
+   "_sondeado": "2026-11-15",
    "_ya_publicada": [
     {
      "festival": "cineautopsia-2026",
@@ -2224,6 +2022,18 @@
      "year": 2026,
      "duration": "4 min",
      "sinopsis": "Lamentos de un balcón es un cortometraje experimental colombiano dirigido por el realizador Hans Chispas. La producción vio la luz en el año 2026 y posee una duración exacta de 4 minutos."
+    },
+    {
+     "festival": "cinetoro-2026",
+     "titulo": "Lamentos de un balcón",
+     "tmdb_id": 1744098,
+     "poster": "/assets/cinetoro-2026/lamentos-de-un-balcon.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "lamentos-de-un-balcon",
+     "country": "Colombia",
+     "year": 2026,
+     "duration": "4 min",
+     "sinopsis": "El RODADERO La localidad de Gaira lleva el nombre del pueblo prehispánico que la habitaba. En 1510, tuvo lugar la Batalla de Gaira, el primer enfrentamiento armado entre españoles e indígenas. En 1954, el gobierno militar de Rojas Pinilla, movido por un ánimo de modernización nacional, impulsa la construcción de la carretera Ziruma, y del primer hotel de la zona, el Hotel Tamacá. A partir de ahí, el asfalto se expande en espirales frenéticas."
     }
    ],
    "poster": "/assets/bogoshorts-2026/lamentos-de-un-balcon.jpg",
@@ -2264,7 +2074,7 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Le dérapage",
    "_director": "Aurélien Laplace",
-   "_sondeado": "2026-10-23",
+   "_sondeado": "2026-11-15",
    "poster": "/assets/bogoshorts-2026/le-derapage.jpg",
    "posterSource": "tmdb"
   },
@@ -2294,18 +2104,20 @@
    "poster_path": "/52dY1avW5rGG5cfAO4tRpc8RbpS.jpg",
    "synopsis_es": "Un viajero se dirige hacia Lejanía, una playa en una isla escondida en la inmensidad del océano pacífico, donde se presume, sus visitantes tienen visiones sobrenaturales. En medio de paisajes fragmentados y presencias clandestinas entre las sombras ,la realidad se desdibuja y el tiempo se deshace.",
    "synopsis_en": "",
-   "anio_tmdb": 0,
+   "genero": "Documental",
+   "anio_tmdb": 2026,
    "duracion_tmdb": 17,
    "pais_tmdb": "",
-   "lbSlug": "lejania-1",
+   "lbSlug": "lejania-2026",
    "_verificado": "el catálogo ya la tiene (w_R4HCND964DS3, ficci-65, jardin-2026)",
    "work_id": "w_R4HCND964DS3",
    "_director": "Daniel Velásquez Patarroyo",
-   "_sondeado": "2026-10-23",
+   "_sondeado": "2026-11-15",
    "_ya_publicada": [
     {
      "festival": "ficci-65",
      "titulo": "Lejanía",
+     "tmdb_id": 1668904,
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_PO%CC%81STER%20LEJANIA%20-%20Carolina%20Zarate%20Garcia.png?itok=UPHrcFZ4",
      "posterSource": "custom",
      "lbSlug": "lejania-1",
@@ -2331,7 +2143,6 @@
    ],
    "poster": "/assets/bogoshorts-2026/lejania.jpg",
    "posterSource": "tmdb",
-   "genero": "Documental",
    "_heredado": {
     "genero": "catálogo w_R4HCND964DS3 (ficci-65, jardin-2026)"
    }
@@ -2467,7 +2278,7 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Lo que te falta",
    "_director": "Sara Bermejo",
-   "_sondeado": "2026-10-23",
+   "_sondeado": "2026-11-15",
    "poster": "/assets/bogoshorts-2026/lo-que-te-falta.jpg",
    "posterSource": "tmdb"
   },
@@ -2712,7 +2523,7 @@
    "_verificado": "el catálogo ya la tiene (w_R4F45MWYW0TY, cinemancia-2026, ficci-65)",
    "work_id": "w_R4F45MWYW0TY",
    "_director": "Óscar Garzón",
-   "_sondeado": "2026-10-23",
+   "_sondeado": "2026-11-15",
    "_ya_publicada": [
     {
      "festival": "cinemancia-2026",
@@ -2730,6 +2541,7 @@
     {
      "festival": "ficci-65",
      "titulo": "Mi amigo, el arquitecto",
+     "tmdb_id": 1655621,
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_MFTA_Final_Untextured_Low-Res%20-%20MEDIOCIELO%20Cine%20%281%29.jpg?itok=MXASl-yt",
      "posterSource": "custom",
      "lbSlug": "my-friend-the-architect",
@@ -2817,24 +2629,6 @@
    "posterSource": "tmdb"
   },
   {
-   "titulo": "Mirage",
-   "tmdb_id": 1705630,
-   "titulo_original": "Mirage",
-   "poster_path": "/ieonkOXC2Gd9r2xjmV9K3lJUOyH.jpg",
-   "synopsis_es": "",
-   "synopsis_en": "'Mirage' is an interactive Virtual Reality experience of a young girl who is battling depression and anxiety. Set in a desert landscape, it is a metaphorical and stylized adaptation with visuals created by the artist Naima Karim and her lived experience with her daughter’s depression and anxiety.",
-   "genero": "Animación",
-   "anio_tmdb": 2025,
-   "duracion_tmdb": 8,
-   "pais_tmdb": "Saudi Arabia, Netherlands",
-   "lbSlug": "mirage-2025-1",
-   "_verificado": "declarada a mano: TMDB 2025 SA/NL 8 min",
-   "_director": "Naima Karim",
-   "_sondeado": "2026-11-15",
-   "poster": "/assets/bogoshorts-2026/mirage.jpg",
-   "posterSource": "tmdb"
-  },
-  {
    "titulo": "Miriam",
    "tmdb_id": 1614760,
    "titulo_original": "Miriam",
@@ -2865,9 +2659,10 @@
    "duracion_tmdb": 14,
    "pais_tmdb": "New Zealand",
    "lbSlug": "mis-drop",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Mis-Drop",
    "_director": "Ferand Peek",
-   "_sondeado": "2026-10-23",
+   "_sondeado": "2026-11-15",
    "poster": "/assets/bogoshorts-2026/mis-drop.jpg",
    "posterSource": "tmdb"
   },
@@ -3269,9 +3064,10 @@
    "duracion_tmdb": 7,
    "pais_tmdb": "Iran",
    "lbSlug": "our-uniform",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Our Uniform",
    "_director": "Yegane Moghaddam",
-   "_sondeado": "2026-10-23",
+   "_sondeado": "2026-11-15",
    "poster": "/assets/bogoshorts-2026/our-uniform.jpg",
    "posterSource": "tmdb"
   },
@@ -3532,7 +3328,7 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Principio de incendio sobre paisaje desierto",
    "_director": "Avelina Prat",
-   "_sondeado": "2026-10-23",
+   "_sondeado": "2026-11-15",
    "poster": "/assets/bogoshorts-2026/principio-de-incendio-sobre-paisaje-desierto.jpg",
    "posterSource": "tmdb"
   },
@@ -3548,9 +3344,10 @@
    "duracion_tmdb": 10,
    "pais_tmdb": "",
    "lbSlug": "prueba-de-camara",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Prueba de cámara",
    "_director": "David Correa F.",
-   "_sondeado": "2026-10-23",
+   "_sondeado": "2026-11-15",
    "_ya_publicada": [
     {
      "festival": "cinemancia-2026",
@@ -3635,39 +3432,23 @@
    "posterSource": "tmdb"
   },
   {
-   "titulo": "Pískoviště",
-   "tmdb_id": 1768658,
-   "titulo_original": "Sandbox",
-   "poster_path": "/29b8EjvvqQReDp62yTiaIVwcuV0.jpg",
+   "titulo": "Pískoviště",
+   "tmdb_id": 1805073,
+   "titulo_original": "Pískoviště",
+   "poster_path": "/oH0AitAzZMfMtoquGJSuuRFcg5b.jpg",
    "synopsis_es": "",
    "synopsis_en": "The boy and his toys venture into a deep world under his sandbox, where mysterious meetings happen.",
    "genero": "Animación",
    "anio_tmdb": 2026,
    "duracion_tmdb": 3,
    "pais_tmdb": "Czech Republic",
-   "lbSlug": "sandbox-2026",
-   "_verificado": "declarada a mano: Sandbox, Kateřina Čupová CZ 2026, 3 min; ojo: segunda ficha 1805073 «Sandbox» 2026 de la misma directora",
+   "title_en": "Sandbox",
+   "lbSlug": "sandbox-2026-1",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Pískoviště",
    "_director": "Kateřina Čupová",
    "_sondeado": "2026-11-15",
    "poster": "/assets/bogoshorts-2026/piskoviste.jpg",
-   "posterSource": "tmdb"
-  },
-  {
-   "titulo": "Raíces",
-   "tmdb_id": 1784652,
-   "titulo_original": "Raíces",
-   "poster_path": "/4t1FmWdBdkmVKYZ5tOniVCScnTm.jpg",
-   "synopsis_es": "",
-   "synopsis_en": "When Alex enters the basement, he discovers a grotesque ritual: a monstrous plant feeding on his father’s blood.",
-   "genero": "Terror",
-   "anio_tmdb": 2026,
-   "duracion_tmdb": 14,
-   "pais_tmdb": "",
-   "lbSlug": "raices-2026-3",
-   "_verificado": "declarada a mano: director + año + duración cuadran (TMDB search + movie/credits)",
-   "_director": "Mavie Beisheim, Felipe Cuartas",
-   "_sondeado": "2026-11-15",
-   "poster": "/assets/bogoshorts-2026/raices.jpg",
    "posterSource": "tmdb"
   },
   {
@@ -3706,25 +3487,6 @@
    "_director": "Iqran Rasheed",
    "_sondeado": "2026-11-15",
    "poster": "/assets/bogoshorts-2026/red-elephant.jpg",
-   "posterSource": "tmdb"
-  },
-  {
-   "titulo": "Risorsero dalla tomba e fu... l’Apocalisse!",
-   "tmdb_id": 1788289,
-   "titulo_original": "Risorsero dalla Tomba e Fu… L’Apocalisse!",
-   "poster_path": "/xixFUBur7xtFQSgXS2RPdXl6YQz.jpg",
-   "synopsis_es": "",
-   "synopsis_en": "1980, Dunwich City, USA. A couple mistakenly summons a heretic priest, killed 100 years earlier by four gunmen hired by the residents of what was then Dunwich Town, intent on revenge and opening the gates of hell. Will they be able to stop him?",
-   "genero": "Terror",
-   "anio_tmdb": 2026,
-   "duracion_tmdb": 34,
-   "pais_tmdb": "",
-   "title_en": "They Rose from the Grave and It Was… The Apocalypse!",
-   "lbSlug": "they-rose-from-the-grave-and-it-was-the-apocalypse",
-   "_verificado": "declarada a mano: director + año + duración cuadran (TMDB search + movie/credits)",
-   "_director": "Domenico Montixi",
-   "_sondeado": "2026-11-15",
-   "poster": "/assets/bogoshorts-2026/risorsero-dalla-tomba-e-fu-l-apocalisse.jpg",
    "posterSource": "tmdb"
   },
   {
@@ -3789,9 +3551,10 @@
    "duracion_tmdb": 6,
    "pais_tmdb": "Germany",
    "lbSlug": "rha",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "R’ha",
    "_director": "Kaleb Lechowski",
-   "_sondeado": "2026-10-23",
+   "_sondeado": "2026-11-15",
    "poster": "/assets/bogoshorts-2026/r-ha.jpg",
    "posterSource": "tmdb"
   },
@@ -3810,7 +3573,7 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Saltar",
    "_director": "Lía Lugilde",
-   "_sondeado": "2026-10-23",
+   "_sondeado": "2026-11-15",
    "poster": "/assets/bogoshorts-2026/saltar.jpg",
    "posterSource": "tmdb"
   },
@@ -3906,26 +3669,8 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Shit Happened",
    "_director": "Simon Schares",
-   "_sondeado": "2026-10-23",
-   "poster": "/assets/bogoshorts-2026/shit-happened.jpg",
-   "posterSource": "tmdb"
-  },
-  {
-   "titulo": "Solos",
-   "tmdb_id": 758792,
-   "titulo_original": "Solos",
-   "poster_path": "/jV5kh2m5pNz8etmDEd1Msc7nGaW.jpg",
-   "synopsis_es": "",
-   "synopsis_en": "A short animated film that documents the happenings in a single square in Barcelona, la Plaça de la Virreina.",
-   "genero": "Animación",
-   "anio_tmdb": 2019,
-   "duracion_tmdb": 5,
-   "pais_tmdb": "Spain, United Kingdom",
-   "lbSlug": "solos-2019",
-   "_verificado": "declarada a mano: TMDB 758792 fecha 2019 (programa dice 2020), Gabriella Marsh ES/GB 5 min; hay duplicado 1223478 sin fecha",
-   "_director": "Gabriella Marsh",
    "_sondeado": "2026-11-15",
-   "poster": "/assets/bogoshorts-2026/solos.jpg",
+   "poster": "/assets/bogoshorts-2026/shit-happened.jpg",
    "posterSource": "tmdb"
   },
   {
@@ -4039,11 +3784,12 @@
    "_verificado": "el catálogo ya la tiene (w_R4HDE4TF8RNM, ficci-65, popayan-2026)",
    "work_id": "w_R4HDE4TF8RNM",
    "_director": "Lola Tartane",
-   "_sondeado": "2026-10-23",
+   "_sondeado": "2026-11-15",
    "_ya_publicada": [
     {
      "festival": "ficci-65",
      "titulo": "Suite intercontinental",
+     "tmdb_id": 1668898,
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Capture_decran_2025-05-28_a_15.57.26%20-%20Marianna%20Manili.jpg?itok=alqasZXz",
      "posterSource": "custom",
      "lbSlug": "suite-intercontinental",
@@ -4102,7 +3848,7 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Tenéis que verlo",
    "_director": "Nacho Solana",
-   "_sondeado": "2026-10-23",
+   "_sondeado": "2026-11-15",
    "poster": "/assets/bogoshorts-2026/teneis-que-verlo.jpg",
    "posterSource": "tmdb"
   },
@@ -4127,21 +3873,28 @@
   },
   {
    "titulo": "The End",
-   "tmdb_id": 1472669,
-   "titulo_original": "The End",
-   "poster_path": "/toRt5f4upcssrBWN1zqcHZY6av1.jpg",
-   "synopsis_es": "",
-   "synopsis_en": "A stop-motion doomsday comedy, in which airport-bound creatures wait out the impending apocalypse.",
-   "genero": "Animación",
-   "anio_tmdb": 2026,
-   "duracion_tmdb": 16,
-   "pais_tmdb": "Sweden, France, Denmark",
-   "lbSlug": "the-end-13",
-   "_verificado": "declarada a mano: director + año + duración cuadran (TMDB search + movie/credits)",
-   "_director": "Niki Lindroth von Bahr",
-   "_sondeado": "2026-11-15",
-   "poster": "/assets/bogoshorts-2026/the-end.jpg",
-   "posterSource": "tmdb"
+   "_ya_publicada": [
+    {
+     "festival": "tiff-2026",
+     "titulo": "The End",
+     "poster": "https://images.ctfassets.net/22n7d68fswlw/7zobSrS7WoKexEoOrjW6Ja/d8da65b5679157332aab231d6ce212db/The-End_Still_06.jpg",
+     "posterSource": "editorial",
+     "lbSlug": "the-end-2026-4",
+     "country": "Suecia, Francia, Dinamarca",
+     "year": 2026,
+     "duration": "17 min",
+     "synopsis_en": "Winner of the 2017 Best International Short Film ( The Burden ), Niki Lindroth von Bahr returns to TIFF with another brilliant stop-motion doomsday comedy, in which airport-bound creatures wait out the impending apocalypse. Featuring voices by Alexander Skarsgård, Denis Lavant, and Noomi Rapace.",
+     "sinopsis": "Ganadora en 2017 del premio al mejor cortometraje internacional por The Burden, Niki Lindroth von Bahr vuelve al festival con otra brillante comedia apocalíptica en stop-motion, donde unas criaturas varadas en un aeropuerto esperan el fin del mundo. Con las voces de Alexander Skarsgård, Denis Lavant y Noomi Rapace."
+    }
+   ],
+   "_sinopsis_de": "ya publicada en tiff-2026",
+   "_verificado": "ya publicada en tiff-2026: se reusa su sinopsis",
+   "sinopsis": "Ganadora en 2017 del premio al mejor cortometraje internacional por The Burden, Niki Lindroth von Bahr vuelve al festival con otra brillante comedia apocalíptica en stop-motion, donde unas criaturas varadas en un aeropuerto esperan el fin del mundo. Con las voces de Alexander Skarsgård, Denis Lavant y Noomi Rapace.",
+   "pais": "Suecia, Francia, Dinamarca",
+   "anio": 2026,
+   "duracion_tmdb": 17,
+   "synopsis_en": "Winner of the 2017 Best International Short Film ( The Burden ), Niki Lindroth von Bahr returns to TIFF with another brilliant stop-motion doomsday comedy, in which airport-bound creatures wait out the impending apocalypse. Featuring voices by Alexander Skarsgård, Denis Lavant, and Noomi Rapace.",
+   "lbSlug": "the-end-2026-4"
   },
   {
    "titulo": "The Getaway",
@@ -4260,7 +4013,7 @@
    "titulo": "They’re Here",
    "tmdb_id": 1736525,
    "titulo_original": "They're Here",
-   "poster_path": "/u0OXvugqnpOca0MWhWAKQZS6X4n.jpg",
+   "poster_path": "/3OW7nrP36U1qq7hWG6PdYgiBSj3.jpg",
    "synopsis_es": "",
    "synopsis_en": "Edén Villa (pseudonym) and anonymous Minneapolis residents evade and resist the paramilitary occupation of their city, in a winter landscape where masked agents abduct children, residents travel in trunks, shackled prisoners are loaded onto airplanes within eyesight of vacationers, and bicyclists track the movements of an invading force.",
    "genero": "Documental",
@@ -4271,7 +4024,7 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "They’re Here",
    "_director": "Laura Poitras, Rachel Lauren Mueller",
-   "_sondeado": "2026-10-23",
+   "_sondeado": "2026-11-15",
    "poster": "/assets/bogoshorts-2026/they-re-here.jpg",
    "posterSource": "tmdb"
   },
@@ -4307,9 +4060,20 @@
    "pais_tmdb": "Colombia, France",
    "title_en": "All the Hands I’ve Let Go",
    "lbSlug": "all-the-hands-ive-let-go",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Todas las manos que solté",
    "_director": "Laura Chará",
-   "_sondeado": "2026-10-23",
+   "_sondeado": "2026-11-15",
+   "_ya_publicada": [
+    {
+     "festival": "ficci-65",
+     "titulo": "Todas las manos que solté",
+     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Captura%20de%20pantalla%202026-03-25%20155500.png?itok=liUEj-a0",
+     "posterSource": "custom",
+     "country": "Colombia/Francia",
+     "duration": "23 min"
+    }
+   ],
    "poster": "/assets/bogoshorts-2026/todas-las-manos-que-solte.jpg",
    "posterSource": "tmdb"
   },
@@ -4330,24 +4094,6 @@
    "_director": "Ana Cecilia Sandoval",
    "_sondeado": "2026-11-15",
    "poster": "/assets/bogoshorts-2026/toque-reglamentario.jpg",
-   "posterSource": "tmdb"
-  },
-  {
-   "titulo": "Triangle",
-   "tmdb_id": 1567979,
-   "titulo_original": "Triangle",
-   "poster_path": "/ehD6mEGOCzq6pTo7jc0eYSlJex6.jpg",
-   "synopsis_es": "",
-   "synopsis_en": "A mother goes through a box of keepsakes, showing photographs and reading love letters out loud in a soft voice. Meanwhile a father leafs through an ethnography book, then fixes his gaze on a single, significant photograph. These are the parents of French-Vietnamese filmmaker Anaël Dang, who, 21 years ago, received an envelope with life-changing contents.",
-   "genero": "Documental",
-   "anio_tmdb": 2025,
-   "duracion_tmdb": 31,
-   "pais_tmdb": "France",
-   "lbSlug": "triangle-2025",
-   "_verificado": "declarada a mano: TMDB 2025, 31 min (programa 2026, 30)",
-   "_director": "Anaël Dang",
-   "_sondeado": "2026-11-15",
-   "poster": "/assets/bogoshorts-2026/triangle.jpg",
    "posterSource": "tmdb"
   },
   {
@@ -4615,7 +4361,7 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Yugo",
    "_director": "Carlos Gómez Salamanca",
-   "_sondeado": "2026-10-23",
+   "_sondeado": "2026-11-15",
    "poster": "/assets/bogoshorts-2026/yugo.jpg",
    "posterSource": "tmdb"
   },
@@ -4632,9 +4378,10 @@
    "pais_tmdb": "France",
    "title_en": "Home of the Heart",
    "lbSlug": "home-of-the-heart",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "À cœur perdu",
    "_director": "Sarah Saidan",
-   "_sondeado": "2026-10-23",
+   "_sondeado": "2026-11-15",
    "poster": "/assets/bogoshorts-2026/a-c-ur-perdu.jpg",
    "posterSource": "tmdb"
   },
@@ -4716,23 +4463,6 @@
    "_director": "Steven Woloshen",
    "_sondeado": "2026-11-15",
    "poster": "/assets/bogoshorts-2026/1000-plateaus-2004-2014.jpg",
-   "posterSource": "tmdb"
-  },
-  "2000": {
-   "tmdb_id": 1712540,
-   "titulo_original": "2000.",
-   "poster_path": "/pJKq2VnysJ9Llj9qSJHpCrxmbUv.jpg",
-   "synopsis_es": "",
-   "synopsis_en": "Siblings Lela and Vid have an enduring relationship, despite the toxic enviroment created by their parents. However, on New Years Eve of the year 2000, their bond will be broken once and for all.",
-   "genero": "Drama",
-   "anio_tmdb": 2026,
-   "duracion_tmdb": 19,
-   "pais_tmdb": "Croatia",
-   "lbSlug": "2000-2026",
-   "_verificado": "declarada a mano: director + año + duración cuadran (TMDB search + movie/credits)",
-   "_director": "Renata Lučić",
-   "_sondeado": "2026-11-15",
-   "poster": "/assets/bogoshorts-2026/2000.jpg",
    "posterSource": "tmdb"
   },
   "2:LOVE": {
@@ -4839,21 +4569,6 @@
    "_sondeado": "2026-11-15",
    "poster": "/assets/bogoshorts-2026/a-wolf-in-the-suburbs.jpg",
    "posterSource": "tmdb"
-  },
-  "A los once": {
-   "tmdb_id": 1826830,
-   "titulo_original": "A los once",
-   "poster_path": null,
-   "synopsis_es": "",
-   "synopsis_en": "When her mother mistakes a bloodstain for her first period, an eleven-year-old uncovers the devastating truth.",
-   "genero": "Drama",
-   "anio_tmdb": 0,
-   "duracion_tmdb": 15,
-   "pais_tmdb": "",
-   "lbSlug": "a-los-once",
-   "_verificado": "declarada a mano: alta nueva 15 nov 2026 (Priscila Núñez, 2025, 15 min; IMDb tt35506134), afiche original de IMDb; NO es TMDB 684089 (2020, otra directora)",
-   "_director": "Priscila Núñez",
-   "_sondeado": "2026-11-15"
   },
   "A voz de todas as cousas": {
    "tmdb_id": 1555898,
@@ -5093,24 +4808,6 @@
    "poster": "/assets/bogoshorts-2026/banshee.jpg",
    "posterSource": "tmdb"
   },
-  "Barcelona": {
-   "tmdb_id": 356487,
-   "titulo_original": "Barcelone, principale ville de la Catalogne",
-   "poster_path": "/pqlm6zqbNbwQbVqzSqSGlG2xY8V.jpg",
-   "synopsis_es": "",
-   "synopsis_en": "",
-   "genero": "Documental",
-   "anio_tmdb": 1912,
-   "duracion_tmdb": 4,
-   "pais_tmdb": "France, Spain",
-   "title_en": "Barcelona, Main City of Catalonia",
-   "lbSlug": "barcelona-main-city-of-catalonia",
-   "_verificado": "declarada a mano: «Barcelone, principale ville de la Catalogne», Chomón 1912, 4 min",
-   "_director": "Segundo de Chomón",
-   "_sondeado": "2026-11-15",
-   "poster": "/assets/bogoshorts-2026/barcelona.jpg",
-   "posterSource": "tmdb"
-  },
   "Barcelona de Foc": {
    "tmdb_id": 750788,
    "titulo_original": "Barcelona De Foc",
@@ -5175,9 +4872,10 @@
    "duracion_tmdb": 14,
    "pais_tmdb": "France, Iran",
    "lbSlug": "beach-flags",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Beach Flags",
    "_director": "Sarah Saidan",
-   "_sondeado": "2026-10-23",
+   "_sondeado": "2026-11-15",
    "poster": "/assets/bogoshorts-2026/beach-flags.jpg",
    "posterSource": "tmdb"
   },
@@ -5195,21 +4893,6 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Belladonna",
    "_director": "Dubravka Turić",
-   "_sondeado": "2026-11-15"
-  },
-  "Běi Huí Gu− Xiàn": {
-   "tmdb_id": 1826831,
-   "titulo_original": "北回歸線",
-   "poster_path": null,
-   "synopsis_es": "",
-   "synopsis_en": "In a small-town lingerie factory, a young man's monotonous life is upended by an unexpected bond and his awakening queerness.",
-   "genero": "",
-   "anio_tmdb": 0,
-   "duracion_tmdb": 0,
-   "pais_tmdb": "",
-   "lbSlug": "film:1678938",
-   "_verificado": "declarada a mano: alta nueva 15 nov 2026 como «北回歸線 / Tropic of Cancer» (Alex Jiang, 13 min; IMDb tt38915889), afiche original de IMDb",
-   "_director": "Alex Jiang",
    "_sondeado": "2026-11-15"
   },
   "Borrachos mientras escuchamos las gotas caer": {
@@ -5301,23 +4984,6 @@
    "_director": "Rubens Fabricio Anzolin, João Fernando Chagas",
    "_sondeado": "2026-11-15",
    "poster": "/assets/bogoshorts-2026/braco-forte.jpg",
-   "posterSource": "tmdb"
-  },
-  "Bus": {
-   "tmdb_id": 1274419,
-   "titulo_original": "Bus",
-   "poster_path": "/ktirc1BE3uOSaGJxsUc4VY5DUdb.jpg",
-   "synopsis_es": "",
-   "synopsis_en": "In the middle of rush hour traffic in Lima, a young student refuses to give up his seat to an elderly woman, sparking unexpected chaos among the passengers.",
-   "genero": "Comedia",
-   "anio_tmdb": 2025,
-   "duracion_tmdb": 9,
-   "pais_tmdb": "Peru",
-   "lbSlug": "bus",
-   "_verificado": "declarada a mano: director + año + duración cuadran (TMDB search + movie/credits)",
-   "_director": "André Balbuena",
-   "_sondeado": "2026-11-15",
-   "poster": "/assets/bogoshorts-2026/bus.jpg",
    "posterSource": "tmdb"
   },
   "Cada día paso por aquí": {
@@ -5497,22 +5163,7 @@
    "poster": "/assets/bogoshorts-2026/computadora.jpg",
    "posterSource": "tmdb"
   },
-  "Cuando retornen las garzas": {
-   "tmdb_id": 1575134,
-   "titulo_original": "When the Herons Return",
-   "poster_path": null,
-   "synopsis_es": "",
-   "synopsis_en": "The lamentations of a missing person’s mother lead a murderer suffering from amnesia to question his actions. He travels to the spot in the jungle where he murdered and buried his most recent victim.",
-   "genero": "Drama",
-   "anio_tmdb": 2025,
-   "duracion_tmdb": 19,
-   "pais_tmdb": "Colombia",
-   "lbSlug": "when-the-herons-return",
-   "_verificado": "declarada a mano: ficha sin póster",
-   "_director": "Robert Brand Ordóñez",
-   "_sondeado": "2026-11-15"
-  },
-  "Cvijeće": {
+  "Cvijeće": {
    "tmdb_id": 1826811,
    "titulo_original": "Cvijeće",
    "poster_path": null,
@@ -5523,7 +5174,8 @@
    "duracion_tmdb": 19,
    "pais_tmdb": "",
    "lbSlug": "cvijece",
-   "_verificado": "declarada a mano: alta nueva 15 nov 2026 (Judita Gamulin, 2015, 19 min), afiche oficial de croatian.film/en/films/2890",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Cvijeće",
    "_director": "Judita Gamulin",
    "_sondeado": "2026-11-15"
   },
@@ -5546,7 +5198,7 @@
    "poster": "/assets/bogoshorts-2026/c-est-ma-s-ur.jpg",
    "posterSource": "tmdb"
   },
-  "Da je kuća dobra i vuk bi je imao": {
+  "Da je kuća dobra i vuk bi je imao": {
    "tmdb_id": 367050,
    "titulo_original": "Da je kuća dobra i vuk bi je imao",
    "poster_path": "/9hZgwZfWEpkzx16r3vUmeMV5z00.jpg",
@@ -5558,7 +5210,8 @@
    "pais_tmdb": "Croatia",
    "title_en": "No Wolf Has a House",
    "lbSlug": "no-wolf-has-a-house",
-   "_verificado": "declarada a mano: No Wolf Has a House, Hana Jušić HR 2015, 25 min",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Da je kuća dobra i vuk bi je imao",
    "_director": "Hana Jušić",
    "_sondeado": "2026-11-15",
    "poster": "/assets/bogoshorts-2026/da-je-kuca-dobra-i-vuk-bi-je-imao.jpg",
@@ -5587,6 +5240,7 @@
    "titulo_original": "Dear Upstairs Neighbors",
    "poster_path": "/zGSnNvfNKVLNAb5I7wTDH0lqSzC.jpg",
    "synopsis_es": "Un cortometraje en competencia en Tribeca 2026.",
+   "synopsis_en": "A short film in competition at Tribeca 2026.",
    "genero": "Animación",
    "anio_tmdb": 2026,
    "duracion_tmdb": 0,
@@ -5612,7 +5266,6 @@
    "_sinopsis_de": "ya publicada en tribeca-2026",
    "poster": "/assets/bogoshorts-2026/dear-upstairs-neighbors.jpg",
    "posterSource": "tmdb",
-   "synopsis_en": "A short film in competition at Tribeca 2026.",
    "_heredado": {
     "synopsis_en": "catálogo w_R4QPXCZFY0PN (tribeca-2026)"
    }
@@ -5683,9 +5336,10 @@
    "duracion_tmdb": 11,
    "pais_tmdb": "Portugal",
    "lbSlug": "dedalo",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Dédalo",
    "_director": "Jerónimo Rocha",
-   "_sondeado": "2026-10-23",
+   "_sondeado": "2026-11-15",
    "poster": "/assets/bogoshorts-2026/dedalo.jpg",
    "posterSource": "tmdb"
   },
@@ -5932,38 +5586,6 @@
    "poster": "/assets/bogoshorts-2026/el-salto.jpg",
    "posterSource": "tmdb"
   },
-  "Elefante": {
-   "tmdb_id": 1826828,
-   "titulo_original": "Elefante",
-   "poster_path": null,
-   "synopsis_es": "",
-   "synopsis_en": "Andrés lives on the road, selling knick-knacks out of his old Renault 4. Meanwhile he can barely stand his elderly, senile father, who lives in the past of old cycling radio commentaries and family memories.",
-   "genero": "Drama",
-   "anio_tmdb": 0,
-   "duracion_tmdb": 15,
-   "pais_tmdb": "",
-   "lbSlug": "elefante-1",
-   "_verificado": "declarada a mano: alta nueva 15 nov 2026 (César Heredia, 2014, 15 min; IMDb tt4392972), afiche original de IMDb",
-   "_director": "César Heredia Cruz",
-   "_sondeado": "2026-11-15"
-  },
-  "En el silencio después": {
-   "tmdb_id": 1724318,
-   "titulo_original": "In the Silence After",
-   "poster_path": "/zYCH1cCoA4MksFgwe3eP78IkPP.jpg",
-   "synopsis_es": "",
-   "synopsis_en": "A son returns home to care for his mother, filming the last year they will spend together.",
-   "genero": "Documental",
-   "anio_tmdb": 2026,
-   "duracion_tmdb": 17,
-   "pais_tmdb": "Qatar, United States of America, Colombia",
-   "lbSlug": "in-the-silence-after",
-   "_verificado": "declarada a mano: director + año + duración cuadran (TMDB search + movie/credits)",
-   "_director": "Sebastian Delascasas",
-   "_sondeado": "2026-11-15",
-   "poster": "/assets/bogoshorts-2026/en-el-silencio-despues.jpg",
-   "posterSource": "tmdb"
-  },
   "En pays froid": {
    "tmdb_id": 1547983,
    "titulo_original": "En pays froid",
@@ -6002,24 +5624,6 @@
    "poster": "/assets/bogoshorts-2026/en-ten-tyky.jpg",
    "posterSource": "tmdb"
   },
-  "Eri": {
-   "tmdb_id": 1118590,
-   "titulo_original": "エリ",
-   "poster_path": "/xrEDmlV4rFZv5AYuYL88L8mwibW.jpg",
-   "synopsis_es": "",
-   "synopsis_en": "One spring, Eri, a Holstein cow, falls in love with Sawa, a Jersey newcomer. Eri idolizes Sawa and longs to be close to her, to become one with her. To refine her intense feelings for Sawa, Eri subjects herself to ascetic practices and rituals of her own making. In a world where those who do not bear children are disposed of, Eri has fallen for someone who shares the same fate.",
-   "genero": "Animación",
-   "anio_tmdb": 2026,
-   "duracion_tmdb": 12,
-   "pais_tmdb": "France, Japan",
-   "title_en": "Eri, The Cow",
-   "lbSlug": "eri-the-cow",
-   "_verificado": "declarada a mano: título TMDB «エリ / Eri, The Cow», Honami Yano, FR/JP 2026, 12 min",
-   "_director": "Honami Yano",
-   "_sondeado": "2026-11-15",
-   "poster": "/assets/bogoshorts-2026/eri.jpg",
-   "posterSource": "tmdb"
-  },
   "Esa fugaz esencia que dejaron los sucesos": {
    "tmdb_id": 1073875,
    "titulo_original": "Esa fugaz esencia que dejaron los sucesos",
@@ -6037,23 +5641,6 @@
    "_director": "Carolina Astudillo Muñoz",
    "_sondeado": "2026-11-15",
    "poster": "/assets/bogoshorts-2026/esa-fugaz-esencia-que-dejaron-los-sucesos.jpg",
-   "posterSource": "tmdb"
-  },
-  "Fiction": {
-   "tmdb_id": 1691015,
-   "titulo_original": "Fiction",
-   "poster_path": "/hshmmmtSrr4tRHLzUAACjEAreyi.jpg",
-   "synopsis_es": "",
-   "synopsis_en": "",
-   "genero": "Comedia",
-   "anio_tmdb": 2026,
-   "duracion_tmdb": 0,
-   "pais_tmdb": "France",
-   "lbSlug": "fiction-2026",
-   "_verificado": "declarada a mano: director + año + duración cuadran (TMDB search + movie/credits)",
-   "_director": "Ambroise Rateau",
-   "_sondeado": "2026-11-15",
-   "poster": "/assets/bogoshorts-2026/fiction.jpg",
    "posterSource": "tmdb"
   },
   "Galverse": {
@@ -6181,29 +5768,13 @@
    "_director": "Víctor Orozco Ramírez",
    "_sondeado": "2026-11-15"
   },
-  "Grounded": {
-   "tmdb_id": 1700763,
-   "titulo_original": "Grounded",
-   "poster_path": "/9wQC73QwYqWdcoZtKMF4owaNkCH.jpg",
-   "synopsis_es": "",
-   "synopsis_en": "As dawn breaks, a loveliness of ladybirds take to the sky... all except Bug. Left behind and unable to fly, Bug and a sympathetic Spider wrestle against an invisible weight that feels heavier than gravity alone.",
-   "genero": "Animación",
-   "anio_tmdb": 2026,
-   "duracion_tmdb": 4,
-   "pais_tmdb": "",
-   "lbSlug": "grounded-2026-2",
-   "_verificado": "declarada a mano: DUPLICADO en TMDB: 1700763 (con IMDb) y 1702560, ambos Chris Callus 2026 4 min",
-   "_director": "Chris Callus",
-   "_sondeado": "2026-11-15",
-   "poster": "/assets/bogoshorts-2026/grounded.jpg",
-   "posterSource": "tmdb"
-  },
   "HDLT": {
    "tmdb_id": 1796013,
    "titulo_original": "HDLT",
    "poster_path": "/j4A2q3aODb9T1QGbJphYrYB35ur.jpg",
    "synopsis_es": "Después del ataque que sufrió, Luz trata de entender lo que le sucedió: el Hijo de la Tierra vino a destruir a la humanidad robando sus recuerdos más tristes y felices. Pero desembarcó en Suba, el distrito más lejano de Bogotá, donde una extraña adicción cambiará el curso de la historia.",
    "synopsis_en": "Mixed media Found footage film made by a Colombian Collective",
+   "genero": "Drama",
    "anio_tmdb": 0,
    "duracion_tmdb": 18,
    "pais_tmdb": "",
@@ -6286,7 +5857,6 @@
    ],
    "poster": "/assets/bogoshorts-2026/hdlt.jpg",
    "posterSource": "tmdb",
-   "genero": "Drama",
    "_heredado": {
     "genero": "catálogo w_R4GBJ7SNPXDQ (fantasmagoria-2026, festicinerio-2026, ficfusa-2026, filcmar-2026, siembrafest-2026)"
    }
@@ -6344,23 +5914,6 @@
    "_director": "Aliona Zagurovska",
    "_sondeado": "2026-11-15",
    "poster": "/assets/bogoshorts-2026/ici-azor.jpg",
-   "posterSource": "tmdb"
-  },
-  "Idols": {
-   "tmdb_id": 1654471,
-   "titulo_original": "아이돌스",
-   "poster_path": "/fVOCOPp5iqMzi6xgTrWitrkpzNo.jpg",
-   "synopsis_es": "",
-   "synopsis_en": "Kim Min-ha has always dreamed of the bright lights, but now she’s an almost 30-year-old wannabe K-pop idol and people only care about her uncanny resemblance to Park Hye-mi, the superstar she believes is living the life that by all rights should be hers.",
-   "genero": "Suspense",
-   "anio_tmdb": 2026,
-   "duracion_tmdb": 20,
-   "pais_tmdb": "South Korea, Japan, United Kingdom",
-   "lbSlug": "idols-2026",
-   "_verificado": "declarada a mano: director en TMDB «Matthew Halsall» (programa: Matt Halsall)",
-   "_director": "Matt Halsall",
-   "_sondeado": "2026-11-15",
-   "poster": "/assets/bogoshorts-2026/idols.jpg",
    "posterSource": "tmdb"
   },
   "If Only": {
@@ -6449,23 +6002,6 @@
    "_director": "Mahmoud Assi",
    "_sondeado": "2026-11-15",
    "poster": "/assets/bogoshorts-2026/khufu.jpg",
-   "posterSource": "tmdb"
-  },
-  "Klase s nuotrauka": {
-   "tmdb_id": 1668922,
-   "titulo_original": "Class Photo",
-   "poster_path": "/JuDcylbg8S3wZ3GEBaFC0RrIIc.jpg",
-   "synopsis_es": "",
-   "synopsis_en": "While revisiting his now-abandoned school, Ignas runs into a former classmate. As they wander through corridors filled with conflicting memories, they try to capture what will soon be gone.",
-   "genero": "Drama",
-   "anio_tmdb": 2026,
-   "duracion_tmdb": 17,
-   "pais_tmdb": "Lithuania",
-   "lbSlug": "class-photo",
-   "_verificado": "declarada a mano: director + año + duración cuadran (TMDB search + movie/credits)",
-   "_director": "Arnas Balčiūnas",
-   "_sondeado": "2026-11-15",
-   "poster": "/assets/bogoshorts-2026/klase-s-nuotrauka.jpg",
    "posterSource": "tmdb"
   },
   "Kondor, el mago": {
@@ -6666,9 +6202,10 @@
    "duracion_tmdb": 15,
    "pais_tmdb": "",
    "lbSlug": "la-maleza",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "La maleza",
    "_director": "Martina Rodríguez",
-   "_sondeado": "2026-10-23",
+   "_sondeado": "2026-11-15",
    "poster": "/assets/bogoshorts-2026/la-maleza.jpg",
    "posterSource": "tmdb"
   },
@@ -6774,10 +6311,10 @@
    "duracion_tmdb": 4,
    "pais_tmdb": "",
    "lbSlug": "lamentos-de-un-balcon",
-   "_verificado": "el catálogo ya la tiene (w_R4ENGEB7EKSY, cineautopsia-2026, cinemancia-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4ENGEB7EKSY, cineautopsia-2026, cinemancia-2026, cinetoro-2026)",
    "work_id": "w_R4ENGEB7EKSY",
    "_director": "Juan Chispas",
-   "_sondeado": "2026-10-23",
+   "_sondeado": "2026-11-15",
    "_ya_publicada": [
     {
      "festival": "cineautopsia-2026",
@@ -6802,6 +6339,18 @@
      "year": 2026,
      "duration": "4 min",
      "sinopsis": "Lamentos de un balcón es un cortometraje experimental colombiano dirigido por el realizador Hans Chispas. La producción vio la luz en el año 2026 y posee una duración exacta de 4 minutos."
+    },
+    {
+     "festival": "cinetoro-2026",
+     "titulo": "Lamentos de un balcón",
+     "tmdb_id": 1744098,
+     "poster": "/assets/cinetoro-2026/lamentos-de-un-balcon.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "lamentos-de-un-balcon",
+     "country": "Colombia",
+     "year": 2026,
+     "duration": "4 min",
+     "sinopsis": "El RODADERO La localidad de Gaira lleva el nombre del pueblo prehispánico que la habitaba. En 1510, tuvo lugar la Batalla de Gaira, el primer enfrentamiento armado entre españoles e indígenas. En 1954, el gobierno militar de Rojas Pinilla, movido por un ánimo de modernización nacional, impulsa la construcción de la carretera Ziruma, y del primer hotel de la zona, el Hotel Tamacá. A partir de ahí, el asfalto se expande en espirales frenéticas."
     }
    ],
    "poster": "/assets/bogoshorts-2026/lamentos-de-un-balcon.jpg",
@@ -6840,7 +6389,7 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Le dérapage",
    "_director": "Aurélien Laplace",
-   "_sondeado": "2026-10-23",
+   "_sondeado": "2026-11-15",
    "poster": "/assets/bogoshorts-2026/le-derapage.jpg",
    "posterSource": "tmdb"
   },
@@ -6868,18 +6417,20 @@
    "poster_path": "/52dY1avW5rGG5cfAO4tRpc8RbpS.jpg",
    "synopsis_es": "Un viajero se dirige hacia Lejanía, una playa en una isla escondida en la inmensidad del océano pacífico, donde se presume, sus visitantes tienen visiones sobrenaturales. En medio de paisajes fragmentados y presencias clandestinas entre las sombras ,la realidad se desdibuja y el tiempo se deshace.",
    "synopsis_en": "",
-   "anio_tmdb": 0,
+   "genero": "Documental",
+   "anio_tmdb": 2026,
    "duracion_tmdb": 17,
    "pais_tmdb": "",
-   "lbSlug": "lejania-1",
+   "lbSlug": "lejania-2026",
    "_verificado": "el catálogo ya la tiene (w_R4HCND964DS3, ficci-65, jardin-2026)",
    "work_id": "w_R4HCND964DS3",
    "_director": "Daniel Velásquez Patarroyo",
-   "_sondeado": "2026-10-23",
+   "_sondeado": "2026-11-15",
    "_ya_publicada": [
     {
      "festival": "ficci-65",
      "titulo": "Lejanía",
+     "tmdb_id": 1668904,
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_PO%CC%81STER%20LEJANIA%20-%20Carolina%20Zarate%20Garcia.png?itok=UPHrcFZ4",
      "posterSource": "custom",
      "lbSlug": "lejania-1",
@@ -6905,7 +6456,6 @@
    ],
    "poster": "/assets/bogoshorts-2026/lejania.jpg",
    "posterSource": "tmdb",
-   "genero": "Documental",
    "_heredado": {
     "genero": "catálogo w_R4HCND964DS3 (ficci-65, jardin-2026)"
    }
@@ -7034,7 +6584,7 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Lo que te falta",
    "_director": "Sara Bermejo",
-   "_sondeado": "2026-10-23",
+   "_sondeado": "2026-11-15",
    "poster": "/assets/bogoshorts-2026/lo-que-te-falta.jpg",
    "posterSource": "tmdb"
   },
@@ -7267,7 +6817,7 @@
    "_verificado": "el catálogo ya la tiene (w_R4F45MWYW0TY, cinemancia-2026, ficci-65)",
    "work_id": "w_R4F45MWYW0TY",
    "_director": "Óscar Garzón",
-   "_sondeado": "2026-10-23",
+   "_sondeado": "2026-11-15",
    "_ya_publicada": [
     {
      "festival": "cinemancia-2026",
@@ -7285,6 +6835,7 @@
     {
      "festival": "ficci-65",
      "titulo": "Mi amigo, el arquitecto",
+     "tmdb_id": 1655621,
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_MFTA_Final_Untextured_Low-Res%20-%20MEDIOCIELO%20Cine%20%281%29.jpg?itok=MXASl-yt",
      "posterSource": "custom",
      "lbSlug": "my-friend-the-architect",
@@ -7368,23 +6919,6 @@
    "poster": "/assets/bogoshorts-2026/minuto-fatal.jpg",
    "posterSource": "tmdb"
   },
-  "Mirage": {
-   "tmdb_id": 1705630,
-   "titulo_original": "Mirage",
-   "poster_path": "/ieonkOXC2Gd9r2xjmV9K3lJUOyH.jpg",
-   "synopsis_es": "",
-   "synopsis_en": "'Mirage' is an interactive Virtual Reality experience of a young girl who is battling depression and anxiety. Set in a desert landscape, it is a metaphorical and stylized adaptation with visuals created by the artist Naima Karim and her lived experience with her daughter’s depression and anxiety.",
-   "genero": "Animación",
-   "anio_tmdb": 2025,
-   "duracion_tmdb": 8,
-   "pais_tmdb": "Saudi Arabia, Netherlands",
-   "lbSlug": "mirage-2025-1",
-   "_verificado": "declarada a mano: TMDB 2025 SA/NL 8 min",
-   "_director": "Naima Karim",
-   "_sondeado": "2026-11-15",
-   "poster": "/assets/bogoshorts-2026/mirage.jpg",
-   "posterSource": "tmdb"
-  },
   "Miriam": {
    "tmdb_id": 1614760,
    "titulo_original": "Miriam",
@@ -7414,9 +6948,10 @@
    "duracion_tmdb": 14,
    "pais_tmdb": "New Zealand",
    "lbSlug": "mis-drop",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Mis-Drop",
    "_director": "Ferand Peek",
-   "_sondeado": "2026-10-23",
+   "_sondeado": "2026-11-15",
    "poster": "/assets/bogoshorts-2026/mis-drop.jpg",
    "posterSource": "tmdb"
   },
@@ -7779,9 +7314,10 @@
    "duracion_tmdb": 7,
    "pais_tmdb": "Iran",
    "lbSlug": "our-uniform",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Our Uniform",
    "_director": "Yegane Moghaddam",
-   "_sondeado": "2026-10-23",
+   "_sondeado": "2026-11-15",
    "poster": "/assets/bogoshorts-2026/our-uniform.jpg",
    "posterSource": "tmdb"
   },
@@ -8030,7 +7566,7 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Principio de incendio sobre paisaje desierto",
    "_director": "Avelina Prat",
-   "_sondeado": "2026-10-23",
+   "_sondeado": "2026-11-15",
    "poster": "/assets/bogoshorts-2026/principio-de-incendio-sobre-paisaje-desierto.jpg",
    "posterSource": "tmdb"
   },
@@ -8045,9 +7581,10 @@
    "duracion_tmdb": 10,
    "pais_tmdb": "",
    "lbSlug": "prueba-de-camara",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Prueba de cámara",
    "_director": "David Correa F.",
-   "_sondeado": "2026-10-23",
+   "_sondeado": "2026-11-15",
    "_ya_publicada": [
     {
      "festival": "cinemancia-2026",
@@ -8129,38 +7666,23 @@
    "poster": "/assets/bogoshorts-2026/pupa.jpg",
    "posterSource": "tmdb"
   },
-  "Pískoviště": {
-   "tmdb_id": 1768658,
-   "titulo_original": "Sandbox",
-   "poster_path": "/29b8EjvvqQReDp62yTiaIVwcuV0.jpg",
+  "Pískoviště": {
+   "tmdb_id": 1805073,
+   "titulo_original": "Pískoviště",
+   "poster_path": "/oH0AitAzZMfMtoquGJSuuRFcg5b.jpg",
    "synopsis_es": "",
    "synopsis_en": "The boy and his toys venture into a deep world under his sandbox, where mysterious meetings happen.",
    "genero": "Animación",
    "anio_tmdb": 2026,
    "duracion_tmdb": 3,
    "pais_tmdb": "Czech Republic",
-   "lbSlug": "sandbox-2026",
-   "_verificado": "declarada a mano: Sandbox, Kateřina Čupová CZ 2026, 3 min; ojo: segunda ficha 1805073 «Sandbox» 2026 de la misma directora",
+   "title_en": "Sandbox",
+   "lbSlug": "sandbox-2026-1",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Pískoviště",
    "_director": "Kateřina Čupová",
    "_sondeado": "2026-11-15",
    "poster": "/assets/bogoshorts-2026/piskoviste.jpg",
-   "posterSource": "tmdb"
-  },
-  "Raíces": {
-   "tmdb_id": 1784652,
-   "titulo_original": "Raíces",
-   "poster_path": "/4t1FmWdBdkmVKYZ5tOniVCScnTm.jpg",
-   "synopsis_es": "",
-   "synopsis_en": "When Alex enters the basement, he discovers a grotesque ritual: a monstrous plant feeding on his father’s blood.",
-   "genero": "Terror",
-   "anio_tmdb": 2026,
-   "duracion_tmdb": 14,
-   "pais_tmdb": "",
-   "lbSlug": "raices-2026-3",
-   "_verificado": "declarada a mano: director + año + duración cuadran (TMDB search + movie/credits)",
-   "_director": "Mavie Beisheim, Felipe Cuartas",
-   "_sondeado": "2026-11-15",
-   "poster": "/assets/bogoshorts-2026/raices.jpg",
    "posterSource": "tmdb"
   },
   "Red Dress. No Straps.": {
@@ -8197,24 +7719,6 @@
    "_director": "Iqran Rasheed",
    "_sondeado": "2026-11-15",
    "poster": "/assets/bogoshorts-2026/red-elephant.jpg",
-   "posterSource": "tmdb"
-  },
-  "Risorsero dalla tomba e fu... l’Apocalisse!": {
-   "tmdb_id": 1788289,
-   "titulo_original": "Risorsero dalla Tomba e Fu… L’Apocalisse!",
-   "poster_path": "/xixFUBur7xtFQSgXS2RPdXl6YQz.jpg",
-   "synopsis_es": "",
-   "synopsis_en": "1980, Dunwich City, USA. A couple mistakenly summons a heretic priest, killed 100 years earlier by four gunmen hired by the residents of what was then Dunwich Town, intent on revenge and opening the gates of hell. Will they be able to stop him?",
-   "genero": "Terror",
-   "anio_tmdb": 2026,
-   "duracion_tmdb": 34,
-   "pais_tmdb": "",
-   "title_en": "They Rose from the Grave and It Was… The Apocalypse!",
-   "lbSlug": "they-rose-from-the-grave-and-it-was-the-apocalypse",
-   "_verificado": "declarada a mano: director + año + duración cuadran (TMDB search + movie/credits)",
-   "_director": "Domenico Montixi",
-   "_sondeado": "2026-11-15",
-   "poster": "/assets/bogoshorts-2026/risorsero-dalla-tomba-e-fu-l-apocalisse.jpg",
    "posterSource": "tmdb"
   },
   "Robo macabro": {
@@ -8276,9 +7780,10 @@
    "duracion_tmdb": 6,
    "pais_tmdb": "Germany",
    "lbSlug": "rha",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "R’ha",
    "_director": "Kaleb Lechowski",
-   "_sondeado": "2026-10-23",
+   "_sondeado": "2026-11-15",
    "poster": "/assets/bogoshorts-2026/r-ha.jpg",
    "posterSource": "tmdb"
   },
@@ -8296,7 +7801,7 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Saltar",
    "_director": "Lía Lugilde",
-   "_sondeado": "2026-10-23",
+   "_sondeado": "2026-11-15",
    "poster": "/assets/bogoshorts-2026/saltar.jpg",
    "posterSource": "tmdb"
   },
@@ -8387,25 +7892,8 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Shit Happened",
    "_director": "Simon Schares",
-   "_sondeado": "2026-10-23",
-   "poster": "/assets/bogoshorts-2026/shit-happened.jpg",
-   "posterSource": "tmdb"
-  },
-  "Solos": {
-   "tmdb_id": 758792,
-   "titulo_original": "Solos",
-   "poster_path": "/jV5kh2m5pNz8etmDEd1Msc7nGaW.jpg",
-   "synopsis_es": "",
-   "synopsis_en": "A short animated film that documents the happenings in a single square in Barcelona, la Plaça de la Virreina.",
-   "genero": "Animación",
-   "anio_tmdb": 2019,
-   "duracion_tmdb": 5,
-   "pais_tmdb": "Spain, United Kingdom",
-   "lbSlug": "solos-2019",
-   "_verificado": "declarada a mano: TMDB 758792 fecha 2019 (programa dice 2020), Gabriella Marsh ES/GB 5 min; hay duplicado 1223478 sin fecha",
-   "_director": "Gabriella Marsh",
    "_sondeado": "2026-11-15",
-   "poster": "/assets/bogoshorts-2026/solos.jpg",
+   "poster": "/assets/bogoshorts-2026/shit-happened.jpg",
    "posterSource": "tmdb"
   },
   "Somorrostro en tres actes": {
@@ -8513,11 +8001,12 @@
    "_verificado": "el catálogo ya la tiene (w_R4HDE4TF8RNM, ficci-65, popayan-2026)",
    "work_id": "w_R4HDE4TF8RNM",
    "_director": "Lola Tartane",
-   "_sondeado": "2026-10-23",
+   "_sondeado": "2026-11-15",
    "_ya_publicada": [
     {
      "festival": "ficci-65",
      "titulo": "Suite intercontinental",
+     "tmdb_id": 1668898,
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Capture_decran_2025-05-28_a_15.57.26%20-%20Marianna%20Manili.jpg?itok=alqasZXz",
      "posterSource": "custom",
      "lbSlug": "suite-intercontinental",
@@ -8574,7 +8063,7 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Tenéis que verlo",
    "_director": "Nacho Solana",
-   "_sondeado": "2026-10-23",
+   "_sondeado": "2026-11-15",
    "poster": "/assets/bogoshorts-2026/teneis-que-verlo.jpg",
    "posterSource": "tmdb"
   },
@@ -8594,23 +8083,6 @@
    "_director": "Arianna Ortiz",
    "_sondeado": "2026-11-15",
    "poster": "/assets/bogoshorts-2026/the-birthday-gift.jpg",
-   "posterSource": "tmdb"
-  },
-  "The End": {
-   "tmdb_id": 1472669,
-   "titulo_original": "The End",
-   "poster_path": "/toRt5f4upcssrBWN1zqcHZY6av1.jpg",
-   "synopsis_es": "",
-   "synopsis_en": "A stop-motion doomsday comedy, in which airport-bound creatures wait out the impending apocalypse.",
-   "genero": "Animación",
-   "anio_tmdb": 2026,
-   "duracion_tmdb": 16,
-   "pais_tmdb": "Sweden, France, Denmark",
-   "lbSlug": "the-end-13",
-   "_verificado": "declarada a mano: director + año + duración cuadran (TMDB search + movie/credits)",
-   "_director": "Niki Lindroth von Bahr",
-   "_sondeado": "2026-11-15",
-   "poster": "/assets/bogoshorts-2026/the-end.jpg",
    "posterSource": "tmdb"
   },
   "The Getaway": {
@@ -8723,7 +8195,7 @@
   "They’re Here": {
    "tmdb_id": 1736525,
    "titulo_original": "They're Here",
-   "poster_path": "/u0OXvugqnpOca0MWhWAKQZS6X4n.jpg",
+   "poster_path": "/3OW7nrP36U1qq7hWG6PdYgiBSj3.jpg",
    "synopsis_es": "",
    "synopsis_en": "Edén Villa (pseudonym) and anonymous Minneapolis residents evade and resist the paramilitary occupation of their city, in a winter landscape where masked agents abduct children, residents travel in trunks, shackled prisoners are loaded onto airplanes within eyesight of vacationers, and bicyclists track the movements of an invading force.",
    "genero": "Documental",
@@ -8734,7 +8206,7 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "They’re Here",
    "_director": "Laura Poitras, Rachel Lauren Mueller",
-   "_sondeado": "2026-10-23",
+   "_sondeado": "2026-11-15",
    "poster": "/assets/bogoshorts-2026/they-re-here.jpg",
    "posterSource": "tmdb"
   },
@@ -8768,9 +8240,20 @@
    "pais_tmdb": "Colombia, France",
    "title_en": "All the Hands I’ve Let Go",
    "lbSlug": "all-the-hands-ive-let-go",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Todas las manos que solté",
    "_director": "Laura Chará",
-   "_sondeado": "2026-10-23",
+   "_sondeado": "2026-11-15",
+   "_ya_publicada": [
+    {
+     "festival": "ficci-65",
+     "titulo": "Todas las manos que solté",
+     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Captura%20de%20pantalla%202026-03-25%20155500.png?itok=liUEj-a0",
+     "posterSource": "custom",
+     "country": "Colombia/Francia",
+     "duration": "23 min"
+    }
+   ],
    "poster": "/assets/bogoshorts-2026/todas-las-manos-que-solte.jpg",
    "posterSource": "tmdb"
   },
@@ -8790,23 +8273,6 @@
    "_director": "Ana Cecilia Sandoval",
    "_sondeado": "2026-11-15",
    "poster": "/assets/bogoshorts-2026/toque-reglamentario.jpg",
-   "posterSource": "tmdb"
-  },
-  "Triangle": {
-   "tmdb_id": 1567979,
-   "titulo_original": "Triangle",
-   "poster_path": "/ehD6mEGOCzq6pTo7jc0eYSlJex6.jpg",
-   "synopsis_es": "",
-   "synopsis_en": "A mother goes through a box of keepsakes, showing photographs and reading love letters out loud in a soft voice. Meanwhile a father leafs through an ethnography book, then fixes his gaze on a single, significant photograph. These are the parents of French-Vietnamese filmmaker Anaël Dang, who, 21 years ago, received an envelope with life-changing contents.",
-   "genero": "Documental",
-   "anio_tmdb": 2025,
-   "duracion_tmdb": 31,
-   "pais_tmdb": "France",
-   "lbSlug": "triangle-2025",
-   "_verificado": "declarada a mano: TMDB 2025, 31 min (programa 2026, 30)",
-   "_director": "Anaël Dang",
-   "_sondeado": "2026-11-15",
-   "poster": "/assets/bogoshorts-2026/triangle.jpg",
    "posterSource": "tmdb"
   },
   "Trio": {
@@ -9042,7 +8508,7 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Yugo",
    "_director": "Carlos Gómez Salamanca",
-   "_sondeado": "2026-10-23",
+   "_sondeado": "2026-11-15",
    "poster": "/assets/bogoshorts-2026/yugo.jpg",
    "posterSource": "tmdb"
   },
@@ -9058,9 +8524,10 @@
    "pais_tmdb": "France",
    "title_en": "Home of the Heart",
    "lbSlug": "home-of-the-heart",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "À cœur perdu",
    "_director": "Sarah Saidan",
-   "_sondeado": "2026-10-23",
+   "_sondeado": "2026-11-15",
    "poster": "/assets/bogoshorts-2026/a-c-ur-perdu.jpg",
    "posterSource": "tmdb"
   },
@@ -9123,32 +8590,45 @@
   }
  },
  "sin_ficha": [
+  "2000",
   "A Body that Hurts",
+  "A los once",
   "Amará",
   "Argentina Is Daing (Marttein)",
+  "Barcelona",
   "Berzingue (Crache)",
   "Bu",
+  "Bus",
+  "Běi Huí Gu− Xiàn",
   "Carta a un joven ladrón",
   "Cartas a Daniel Apóstol",
   "Cassandra",
   "Clasificado personal",
   "Cocodrilo (Dillom)",
   "Complementarios",
+  "Cuando retornen las garzas",
   "Cumbia pa’ la luna (Fuji Kurosawa ft. Lina Remolina)",
   "El Alto de los Buitres",
   "El hombre del reloj",
   "El mandado",
   "El píxel y la parcela",
+  "Elefante",
+  "En el silencio después",
+  "Eri",
   "Escritorio",
   "Espaciar",
   "Fantasy Land",
+  "Fiction",
   "Fragmentos de una tarde en Pance (Sol Menguante)",
+  "Grounded",
   "Has estado aquí",
   "Herir al viento (Monopop, Monstera Delizziosa)",
   "I Carry Them",
+  "Idols",
   "Jazzed",
   "Joychair",
   "Kevin, el niño del espacio",
+  "Klase s nuotrauka",
   "Kupljena sjecanja",
   "La ciudad de las flores (Maleza y Los Floripondios)",
   "La colère et après",
@@ -9164,6 +8644,7 @@
   "Maria Lionza (Yajaira La Beyaca)",
   "Meyolotl",
   "Mi barquito (Canalón de Timbiquí)",
+  "Mirage",
   "Nancy resabiada (Cumbia) (El Kalvo & La Banda Resabiada)",
   "Ni aquí, ni allá",
   "No te conozcas",
@@ -9180,17 +8661,22 @@
   "Querida A.",
   "Querido River Phoenix",
   "Raj’in",
+  "Raíces",
+  "Risorsero dalla tomba e fu... l’Apocalisse!",
   "Savia (Alfilera)",
   "Skiladagur",
+  "Solos",
   "Stadionul Dragostei",
   "Summer",
   "Susurros",
   "Szepty",
   "The Beat (Matías Aguayo)",
+  "The End",
   "The Waiting Palm",
   "Todo río lloverá sobre nosotros",
   "Torito",
   "Transastralisme",
+  "Triangle",
   "Un gallinazo sin suerte",
   "Un pájaro más",
   "Una carta supuesta",
@@ -9202,8 +8688,16 @@
   "¿El regreso pa’ cuándo?"
  ],
  "_sin_ficha_sondeo": {
+  "2000": {
+   "director": "Renata Lučić",
+   "fecha": "2026-11-15"
+  },
   "A Body that Hurts": {
    "director": "David Espitia Calderón",
+   "fecha": "2026-11-15"
+  },
+  "A los once": {
+   "director": "Priscila Núñez",
    "fecha": "2026-11-15"
   },
   "Amará": {
@@ -9214,12 +8708,24 @@
    "director": "Valentin Stefano Mutti, Bosco Cabello",
    "fecha": "2026-11-15"
   },
+  "Barcelona": {
+   "director": "Segundo de Chomón",
+   "fecha": "2026-11-15"
+  },
   "Berzingue (Crache)": {
    "director": "Ewan Rosenstrauch, Cécile Montanès",
    "fecha": "2026-11-15"
   },
   "Bu": {
    "director": "Daniel Alemán Montero",
+   "fecha": "2026-11-15"
+  },
+  "Bus": {
+   "director": "André Balbuena",
+   "fecha": "2026-11-15"
+  },
+  "Běi Huí Gu− Xiàn": {
+   "director": "Alex Jiang",
    "fecha": "2026-11-15"
   },
   "Carta a un joven ladrón": {
@@ -9246,6 +8752,10 @@
    "director": "Mar Triana García",
    "fecha": "2026-11-15"
   },
+  "Cuando retornen las garzas": {
+   "director": "Robert Brand Ordóñez",
+   "fecha": "2026-11-15"
+  },
   "Cumbia pa’ la luna (Fuji Kurosawa ft. Lina Remolina)": {
    "director": "Diego Blanco",
    "fecha": "2026-11-15"
@@ -9266,6 +8776,18 @@
    "director": "Hannah Meszaros Martin",
    "fecha": "2026-11-15"
   },
+  "Elefante": {
+   "director": "César Heredia Cruz",
+   "fecha": "2026-11-15"
+  },
+  "En el silencio después": {
+   "director": "Sebastian Delascasas",
+   "fecha": "2026-11-15"
+  },
+  "Eri": {
+   "director": "Honami Yano",
+   "fecha": "2026-11-15"
+  },
   "Escritorio": {
    "director": "Darío Vejarano Tafur",
    "fecha": "2026-11-15"
@@ -9278,8 +8800,16 @@
    "director": "Aitana Ahrens",
    "fecha": "2026-11-15"
   },
+  "Fiction": {
+   "director": "Ambroise Rateau",
+   "fecha": "2026-11-15"
+  },
   "Fragmentos de una tarde en Pance (Sol Menguante)": {
    "director": "Daniel Candamil",
+   "fecha": "2026-11-15"
+  },
+  "Grounded": {
+   "director": "Chris Callus",
    "fecha": "2026-11-15"
   },
   "Has estado aquí": {
@@ -9294,6 +8824,10 @@
    "director": "Bram VanderMark",
    "fecha": "2026-11-15"
   },
+  "Idols": {
+   "director": "Matt Halsall",
+   "fecha": "2026-11-15"
+  },
   "Jazzed": {
    "director": "Anton Setola",
    "fecha": "2026-11-15"
@@ -9304,6 +8838,10 @@
   },
   "Kevin, el niño del espacio": {
    "director": "Edward Gómez Granada",
+   "fecha": "2026-11-15"
+  },
+  "Klase s nuotrauka": {
+   "director": "Arnas Balčiūnas",
    "fecha": "2026-11-15"
   },
   "Kupljena sjecanja": {
@@ -9364,6 +8902,10 @@
   },
   "Mi barquito (Canalón de Timbiquí)": {
    "director": "Tilo Gómez",
+   "fecha": "2026-11-15"
+  },
+  "Mirage": {
+   "director": "Naima Karim",
    "fecha": "2026-11-15"
   },
   "Nancy resabiada (Cumbia) (El Kalvo & La Banda Resabiada)": {
@@ -9430,12 +8972,24 @@
    "director": "Faiz Abu Rmeleh, Keren Manor",
    "fecha": "2026-11-15"
   },
+  "Raíces": {
+   "director": "Mavie Beisheim, Felipe Cuartas",
+   "fecha": "2026-11-15"
+  },
+  "Risorsero dalla tomba e fu... l’Apocalisse!": {
+   "director": "Domenico Montixi",
+   "fecha": "2026-11-15"
+  },
   "Savia (Alfilera)": {
    "director": "Nadiela",
    "fecha": "2026-11-15"
   },
   "Skiladagur": {
    "director": "Margrét Seema Takyar",
+   "fecha": "2026-11-15"
+  },
+  "Solos": {
+   "director": "Gabriella Marsh",
    "fecha": "2026-11-15"
   },
   "Stadionul Dragostei": {
@@ -9458,6 +9012,10 @@
    "director": "Lorea Arcelus, Francisco Schultz",
    "fecha": "2026-11-15"
   },
+  "The End": {
+   "director": "Niki Lindroth von Bahr",
+   "fecha": "2026-11-15"
+  },
   "The Waiting Palm": {
    "director": "Nazanin Zahra Rafiei",
    "fecha": "2026-11-15"
@@ -9472,6 +9030,10 @@
   },
   "Transastralisme": {
    "director": "Eva Ortega Puig",
+   "fecha": "2026-11-15"
+  },
+  "Triangle": {
+   "director": "Anaël Dang",
    "fecha": "2026-11-15"
   },
   "Un gallinazo sin suerte": {
