@@ -74,6 +74,12 @@ class Registro(Base):
         self.assertEqual(A.obra_catalogo('x', 'Lluvia', self.r)['director'], 'Ana Pérez Gómez')
         self.assertEqual(A.obra_catalogo('x', 'Nada', self.r), {'titulo': 'Nada'})
 
+    def test_sin_afiche_no_pisa_una_ficha(self):
+        self.w('festivals/staging/x-altas.json', {'obras': {'Lluvia': {'titulo': 'Lluvia', 'estado': 'ficha_existente', 'tmdb_id': 7}}})
+        with self.assertRaises(SystemExit):
+            A.marcar_sin_afiche('x', 'Lluvia', 'sin afiche', self.r)
+        self.assertEqual(self.rd('festivals/staging/x-altas.json')['obras']['Lluvia']['estado'], 'ficha_existente')
+
 class Sondar(Base):
     def setUp(self):
         super().setUp()
