@@ -603,8 +603,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 26.5;
 				MARKETING_VERSION = 1.19;
-				PRODUCT_BUNDLE_IDENTIFIER = app.otrofestiv.Otrofestiv;
-				"PRODUCT_BUNDLE_IDENTIFIER[sdk=iphoneos*]" = app.otrofestiv.mobile;
+				PRODUCT_BUNDLE_IDENTIFIER = app.otrofestiv.mobile;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = auto;
@@ -652,8 +651,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 26.5;
 				MARKETING_VERSION = 1.19;
-				PRODUCT_BUNDLE_IDENTIFIER = app.otrofestiv.Otrofestiv;
-				"PRODUCT_BUNDLE_IDENTIFIER[sdk=iphoneos*]" = app.otrofestiv.mobile;
+				PRODUCT_BUNDLE_IDENTIFIER = app.otrofestiv.mobile;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = auto;
