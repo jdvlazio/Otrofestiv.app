@@ -74,7 +74,7 @@ F = [
          _src={'ig': 'DfkCq1vlXAe', 'cinemateca': 4032}),
     dict(titulo='Hip Hop, Comunidad y Graffiti', dia='22', hora='13:30', sala='Sala 3', seccion=SEC,
          tipo='programa', duracion_min=60, acceso=LIBRE,
-         obras=[corto('Código cypher vol1', 'Hinata, Sir Cesaro', 'Argentina', 2026, 5),
+         obras=[corto('Código cypher vol1', 'Hitana, Sir Cesaro', 'Argentina', 2026, 5),
                 corto('El arte de Gravitar', 'Camila Estupiñán', 'Colombia', 2024, 5),
                 corto('El Lejano Sur', 'Isben Isaeb', 'Colombia', 2026, 8),
                 corto('Instrucciones para interpretar graffiti, el beso de los invisibles', 'Iván Alba',

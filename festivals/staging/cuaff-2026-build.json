@@ -303,7 +303,7 @@
    "film_list": [
     {
      "title": "Código cypher vol1",
-     "director": "Hinata, Sir Cesaro",
+     "director": "Hitana, Sir Cesaro",
      "country": "Argentina",
      "flags": "🇦🇷",
      "year": 2026,
@@ -490,7 +490,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-17T11:43:12",
+  "fecha": "2026-11-17T13:14:29",
   "plan_sha": "8d9717eb85ec366c",
   "paso": 6,
   "cmd": "python3 pipeline/cuaff-2026-verificar.py"
