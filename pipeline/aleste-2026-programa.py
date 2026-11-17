@@ -53,7 +53,7 @@ FUNC = re.compile(r'^(Medellín|Bogotá) · (\w+) (\d{1,2}) nov · (\d{1,2}:\d{2
 def leer(path):
     """Las líneas de la ficha, en orden fijo: sección, título, título original,
     dirección, [año], país, «N min», sinopsis, funciones."""
-    L = lineas(path)
+    L = [l for l in lineas(path) if l != '.']   # 16 nov: la web cierra la ficha con un «.» suelto
     nom = os.path.basename(path)
     k = next(i for i, l in enumerate(L) if re.fullmatch(r'\d{1,3} min', l))
     cab = L[:k]
@@ -63,6 +63,8 @@ def leer(path):
         (sec, tit, orig, dire, pais), anio = cab, None
     else:
         sys.exit(f'✗ {nom}: cabecera de {len(cab)} líneas: {cab}')
+    # 16 nov: la línea de país pasó a «País, 2025. 103 min» (y el «N min» sigue aparte)
+    pais = re.sub(r',\s*\d{4}\.\s*\d{1,3} min$', '', pais).strip()
     if anio is not None and not re.fullmatch(r'\d{4}', anio):
         sys.exit(f'✗ {nom}: año raro «{anio}»')
     funcs, sinopsis = [], []
