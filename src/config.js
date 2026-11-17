@@ -1312,8 +1312,8 @@ export const FESTIVAL_CONFIG={
     // EL AFICHE OFICIAL de la 4.ª edición («Ojos siempre abiertos»), 2:3 de origen,
     // llevado a 400×600 (keyart-estirado). Lo mandó el festival a Juan el 25 oct
     keyArt:'/assets/keyart/funza2026.jpg',
-    // PROPUESTA a Juan (25 oct): dice qué es sin repetir el nombre; el lema vive en el afiche
-    tagline:'',
+    // Juan, 16 nov: el lema de la edición, verbatim del afiche oficial
+    tagline:'Ojos Siempre Abiertos',
     storageKey:'funza2026_',festivalStartStr:'2026-11-18T00:00:00',festivalEndStr:'2026-11-21T23:59:00',
     festivalDates:{'2026-11-18':'2026-11-18','2026-11-19':'2026-11-19','2026-11-20':'2026-11-20','2026-11-21':'2026-11-21'},
     days:[{k:'2026-11-18',d:18,lbl:'MIÉ'},{k:'2026-11-19',d:19,lbl:'JUE'},{k:'2026-11-20',d:20,lbl:'VIE'},{k:'2026-11-21',d:21,lbl:'SÁB'}],
