@@ -23,6 +23,9 @@
  "sharedSlotIsOneScreening": false,
  "ticketing_model": "mixed",
  "dias_vacios": [],
+ "_fuentes_versionadas": {
+  "festivals/staging/cuaff-2026-radar.json": "el volcado del radar #1269"
+ },
  "prioLimit": 3,
  "dias": [
   "2026-11-20",
@@ -248,7 +251,11 @@
      "year": 2025,
      "duration": "26 min",
      "poster": "/assets/cuaff-2026/uniendo-plazas-los-padres-del-under.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "lbSlug": "uniendo-plazas-los-padres-del-under",
+     "tmdb_id": 1828522,
+     "synopsis_en": "Squares become meeting points, hip hop a collective voice and the underground a way of life. A documentary by Alberto Tolaba about urban culture, its protagonists and the power of building community through art.",
+     "genre": "Documental"
     },
     {
      "title": "Homenajes de memorias, del Hip hop en ciudad Bolívar",
@@ -318,7 +325,10 @@
      "year": 2026,
      "duration": "8 min",
      "poster": "/assets/cuaff-2026/el-lejano-sur.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "lbSlug": "el-lejano-sur",
+     "tmdb_id": 1828506,
+     "synopsis_en": "A Colombian short film by Isben Isaeb about urban culture: the streets have stories to tell, voices that deserve to be heard and expressions that build identity."
     },
     {
      "title": "Instrucciones para interpretar graffiti, el beso de los invisibles",
@@ -328,7 +338,11 @@
      "year": 2025,
      "duration": "26 min",
      "poster": "/assets/cuaff-2026/instrucciones-para-interpretar-graffiti-el-beso-de-los-invis.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "lbSlug": "muralmente-instrucciones-para-interpretar",
+     "tmdb_id": 1828510,
+     "synopsis_en": "Every stroke, every wall and every urban intervention holds a story: graffiti turns public space into a place of expression, memory and resistance. A documentary by Iván Alba that invites us to look at the streets from another perspective and discover the stories that live on their walls.",
+     "genre": "Documental"
     },
     {
      "title": "Diario de los nuevos 20s",
@@ -338,7 +352,10 @@
      "year": 2026,
      "duration": "15 min",
      "poster": "/assets/cuaff-2026/diario-de-los-nuevos-20s.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "lbSlug": "diario-de-los-nuevos-20s",
+     "tmdb_id": 1828512,
+     "synopsis_en": "A generation, many stories and new ways of understanding the world we live in. A short film by Juan Pablo Huston."
     }
    ],
    "_fid": "f_db1a7e214a",
@@ -384,7 +401,11 @@
      "year": 2026,
      "duration": "18 min",
      "poster": "/assets/cuaff-2026/still-free.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "lbSlug": "still-free-1",
+     "tmdb_id": 1828516,
+     "synopsis_en": "Graffiti crosses borders, connects cities and turns trains and streets into territories of expression. A journey through Latin American urban culture, where graffiti is much more than paint: it is identity, movement and a way of leaving a mark.",
+     "genre": "Documental"
     },
     {
      "title": "VSK en metal",
@@ -394,7 +415,11 @@
      "year": 2026,
      "duration": "8 min",
      "poster": "/assets/cuaff-2026/vsk-en-metal.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "lbSlug": "vsk-en-metal",
+     "tmdb_id": 1828519,
+     "synopsis_en": "A tribute to the VSK crew and the history of graffiti writing in Bogotá. Through the alchemy of metal casting, Peds Shaumers reclaims the memory of his crew — Shuk, Skill and Suber — turning art into an exercise of memory, identity and resistance to oblivion.",
+     "genre": "Documental"
     },
     {
      "title": "Adrenaline Tour: Bella Ciao",
@@ -412,7 +437,10 @@
      "year": 2026,
      "duration": "30 min",
      "poster": "/assets/cuaff-2026/morbo-x-noches-aires.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "lbSlug": "morbo-x-noches-aires",
+     "tmdb_id": 1828517,
+     "synopsis_en": "A short film shot in a single night that portrays the lifestyle of a graffiti writer, roaming the streets of Buenos Aires until the early hours. Accompanied by the ambient sound of the city, it shows the beings who inhabit the street while everyone sleeps, looking for spots for tags or throw-ups and a kiosk with cheap alcohol."
     }
    ],
    "_fid": "f_c5065e87d1",
@@ -450,6 +478,9 @@
     "ficha_sala": "https://cinematecadebogota.gov.co/node/peliculas/4036"
    },
    "is_free": true,
+   "lbSlug": "sanber-vivencias-de-un-bajo-mundo",
+   "tmdb_id": 1828501,
+   "synopsis_en": "A documentary that, through a story of parallels, seeks every possible nuance of a small piece of downtown Bogotá: a microcosm that intertwines and dies with the city's renewal. Graffiti, rap and literature (Mario Mendoza) bring never-before-told accounts of what once happened in one of the marginalized neighborhoods of central Bogotá.",
    "_fid": "f_9d6b5ba2ba",
    "id": "f_9d6b5ba2ba"
   }
@@ -459,8 +490,8 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-17T10:39:48",
-  "plan_sha": "760450b3382be5ce",
+  "fecha": "2026-11-17T11:31:03",
+  "plan_sha": "8d9717eb85ec366c",
   "paso": 6,
   "cmd": "python3 pipeline/cuaff-2026-verificar.py"
  }
