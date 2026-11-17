@@ -8,11 +8,17 @@
  "directores": [
   "Luis Carlos Ayala"
  ],
+ "sinopsis": {
+  "en": "A documentary that, through a story of parallels, seeks every possible nuance of a small piece of downtown Bogotá: a microcosm that intertwines and dies with the city's renewal. Graffiti, rap and literature (Mario Mendoza) bring never-before-told accounts of what once happened in one of the marginalized neighborhoods of central Bogotá."
+ },
  "afiche": {
   "archivo": "/assets/cuaff-2026/sanber-vivencias-de-un-bajo-mundo.jpg",
   "veredicto": "oficial"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 1828501,
+  "letterboxd": "sanber-vivencias-de-un-bajo-mundo"
+ },
  "versiones": [
   {
    "etiqueta": "90 min",

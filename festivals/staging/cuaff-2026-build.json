@@ -490,7 +490,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-17T11:31:03",
+  "fecha": "2026-11-17T11:43:12",
   "plan_sha": "8d9717eb85ec366c",
   "paso": 6,
   "cmd": "python3 pipeline/cuaff-2026-verificar.py"
