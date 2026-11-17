@@ -1,0 +1,196 @@
+{
+ "_provenance": {
+  "fuente": "TMDB + letterboxd.com/tmdb/<id>, emparejado con ficha_verifica() (director + año ±1 o duración ±3 min). Lo que no verifica no entra.",
+  "capturado": "2026-11-17"
+ },
+ "obras": [
+  {
+   "titulo": "Breaking la vida",
+   "tmdb_id": 654102,
+   "titulo_original": "Breaking la vida",
+   "poster_path": "/AnRRsaMPnDvmwazlGeK5mbr3pyf.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "A journey from youth to adulthood, facing the adversities that life presents to a group of break dancers.",
+   "genero": "Documental",
+   "anio_tmdb": 2022,
+   "duracion_tmdb": 120,
+   "pais_tmdb": "Mexico",
+   "lbSlug": "breaking-la-vida",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Breaking la vida",
+   "_director": "Abraham Escobedo-Salas",
+   "_sondeado": "2026-11-17",
+   "poster": "/assets/cuaff-2026/breaking-la-vida.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Wholetrain",
+   "tmdb_id": 14231,
+   "titulo_original": "Wholetrain",
+   "poster_path": "/uSSeQg9BIsavmDYjM9acAi1LU9S.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "This feature takes a look at the graffiti movement and young people who populate the niche culture. Following four such artists as they shape the graffiti community through both their art and their interactions, the film tells the story of how the foursome's decision to paint an entire train would affect their lives forever.",
+   "genero": "Drama",
+   "anio_tmdb": 2006,
+   "duracion_tmdb": 82,
+   "pais_tmdb": "Germany, Poland",
+   "lbSlug": "wholetrain",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Wholetrain",
+   "_director": "Florian Gaag",
+   "_sondeado": "2026-11-17",
+   "poster": "/assets/cuaff-2026/wholetrain.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Sanber: vivencias de un bajo mundo",
+   "poster": "/assets/cuaff-2026/sanber-vivencias-de-un-bajo-mundo.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: afiche oficial de la obra, lámina 1 del post de @colombianurbanfilm p/DfkahZulbIz (embed sin sesión), mirado a ojo"
+  },
+  {
+   "titulo": "El Lejano Sur",
+   "poster": "/assets/cuaff-2026/el-lejano-sur.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: afiche oficial de la obra, lámina 1 del post de @colombianurbanfilm p/DfkEI-ZFSa2 (embed sin sesión), mirado a ojo"
+  },
+  {
+   "titulo": "Instrucciones para interpretar graffiti, el beso de los invisibles",
+   "poster": "/assets/cuaff-2026/instrucciones-para-interpretar-graffiti-el-beso-de-los-invis.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: afiche oficial de la obra, lámina 1 del post de @colombianurbanfilm p/DfkFGHmlZnr (embed sin sesión), mirado a ojo"
+  },
+  {
+   "titulo": "Diario de los nuevos 20s",
+   "poster": "/assets/cuaff-2026/diario-de-los-nuevos-20s.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: afiche oficial de la obra, lámina 1 del post de @colombianurbanfilm p/DfkVdFolQHW (embed sin sesión), mirado a ojo"
+  },
+  {
+   "titulo": "Still Free",
+   "poster": "/assets/cuaff-2026/still-free.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: afiche oficial de la obra, lámina 1 del post de @colombianurbanfilm p/DfkG3folR3w (embed sin sesión), mirado a ojo"
+  },
+  {
+   "titulo": "Morbo x Noches Aires",
+   "poster": "/assets/cuaff-2026/morbo-x-noches-aires.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: afiche oficial de la obra, lámina 1 del post de @colombianurbanfilm p/DfvPV3zDP5z (embed sin sesión), mirado a ojo"
+  },
+  {
+   "titulo": "VSK en metal",
+   "poster": "/assets/cuaff-2026/vsk-en-metal.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: afiche oficial de la obra, lámina 1 del post de @colombianurbanfilm p/DfzaftWlRzG (embed sin sesión), mirado a ojo"
+  },
+  {
+   "titulo": "Uniendo plazas: Los padres del under",
+   "poster": "/assets/cuaff-2026/uniendo-plazas-los-padres-del-under.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: afiche oficial de la obra, lámina 1 del post de @colombianurbanfilm p/DfkCq1vlXAe (embed sin sesión), mirado a ojo"
+  }
+ ],
+ "verificadas": {
+  "Breaking la vida": {
+   "tmdb_id": 654102,
+   "titulo_original": "Breaking la vida",
+   "poster_path": "/AnRRsaMPnDvmwazlGeK5mbr3pyf.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "A journey from youth to adulthood, facing the adversities that life presents to a group of break dancers.",
+   "genero": "Documental",
+   "anio_tmdb": 2022,
+   "duracion_tmdb": 120,
+   "pais_tmdb": "Mexico",
+   "lbSlug": "breaking-la-vida",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Breaking la vida",
+   "_director": "Abraham Escobedo-Salas",
+   "_sondeado": "2026-11-17",
+   "poster": "/assets/cuaff-2026/breaking-la-vida.jpg",
+   "posterSource": "tmdb"
+  },
+  "Wholetrain": {
+   "tmdb_id": 14231,
+   "titulo_original": "Wholetrain",
+   "poster_path": "/uSSeQg9BIsavmDYjM9acAi1LU9S.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "This feature takes a look at the graffiti movement and young people who populate the niche culture. Following four such artists as they shape the graffiti community through both their art and their interactions, the film tells the story of how the foursome's decision to paint an entire train would affect their lives forever.",
+   "genero": "Drama",
+   "anio_tmdb": 2006,
+   "duracion_tmdb": 82,
+   "pais_tmdb": "Germany, Poland",
+   "lbSlug": "wholetrain",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Wholetrain",
+   "_director": "Florian Gaag",
+   "_sondeado": "2026-11-17",
+   "poster": "/assets/cuaff-2026/wholetrain.jpg",
+   "posterSource": "tmdb"
+  }
+ },
+ "sin_ficha": [
+  "Adrenaline Tour: Bella Ciao",
+  "Código cypher vol1",
+  "Diario de los nuevos 20s",
+  "El Lejano Sur",
+  "El arte de Gravitar",
+  "Homenajes de memorias, del Hip hop en ciudad Bolívar",
+  "Instrucciones para interpretar graffiti, el beso de los invisibles",
+  "Morbo x Noches Aires",
+  "Sanber: vivencias de un bajo mundo",
+  "Still Free",
+  "Uniendo plazas: Los padres del under",
+  "VSK en metal"
+ ],
+ "_sin_ficha_sondeo": {
+  "Adrenaline Tour: Bella Ciao": {
+   "director": "Ozono",
+   "fecha": "2026-11-17"
+  },
+  "Código cypher vol1": {
+   "director": "Hinata, Sir Cesaro",
+   "fecha": "2026-11-17"
+  },
+  "Diario de los nuevos 20s": {
+   "director": "Juan Pablo Huston",
+   "fecha": "2026-11-17"
+  },
+  "El Lejano Sur": {
+   "director": "Isben Isaeb",
+   "fecha": "2026-11-17"
+  },
+  "El arte de Gravitar": {
+   "director": "Camila Estupiñán",
+   "fecha": "2026-11-17"
+  },
+  "Homenajes de memorias, del Hip hop en ciudad Bolívar": {
+   "director": "Kno Delix, Johan Duarte",
+   "fecha": "2026-11-17"
+  },
+  "Instrucciones para interpretar graffiti, el beso de los invisibles": {
+   "director": "Iván Alba",
+   "fecha": "2026-11-17"
+  },
+  "Morbo x Noches Aires": {
+   "director": "Newen",
+   "fecha": "2026-11-17"
+  },
+  "Sanber: vivencias de un bajo mundo": {
+   "director": "Luis Carlos Ayala",
+   "fecha": "2026-11-17"
+  },
+  "Still Free": {
+   "director": "Krone",
+   "fecha": "2026-11-17"
+  },
+  "Uniendo plazas: Los padres del under": {
+   "director": "Alberto Tolaba",
+   "fecha": "2026-11-17"
+  },
+  "VSK en metal": {
+   "director": "Peds Shaumers",
+   "fecha": "2026-11-17"
+  }
+ }
+}

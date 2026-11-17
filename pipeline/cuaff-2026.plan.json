@@ -1,0 +1,89 @@
+{
+ "_nota": "CUAFF 2026 — Colombian Urban Art Film Festival, 3.ª edición (Cinemateca de Bogotá, 20–22 nov). Juan aprobó montarlo el 17 nov («Sí, móntalo»). Fechas y salas: pies de 11 posts de @colombianurbanfilm (10–16 nov, embed sin sesión); obras de cada programa: fichas 4030–4036 de la Cinemateca. Festhome dice 27–29 nov: desactualizado. Secciones, nombre y tagline: PROPUESTA para Juan.",
+ "radar": 1269,
+ "pasos": [
+  {
+   "cmd": "python3 pipeline/radar.py cuaff-2026",
+   "que": "el volcado del radar #1269"
+  },
+  {
+   "cmd": "python3 pipeline/cuaff-2026-crudo.py",
+   "que": "IG (día, hora, sala, acceso) + fichas de la Cinemateca (obras) → crudo (7 funciones)"
+  },
+  {
+   "cmd": "python3 pipeline/enriquecer.py cuaff-2026 --posters",
+   "que": "TMDB verificado + cascada + afiches"
+  },
+  {
+   "cmd": "python3 pipeline/ensamblar.py cuaff-2026",
+   "que": "crudo + plan → build"
+  },
+  {
+   "cmd": "python3 pipeline/encuadrar-posters.py cuaff-2026 --aplicar --desde festivals/staging/cuaff-2026-build.json",
+   "que": "los afiches a 2:3"
+  },
+  {
+   "cmd": "python3 pipeline/cuaff-2026-verificar.py",
+   "que": "2.ª lectura: el build contra los pies de IG y las fichas de la Cinemateca, por tokens"
+  }
+ ],
+ "fuentes_vivas": [],
+ "_nota_fuentes_vivas": "Sin web propia con programa: todo sale de posts de IG (fijos) y de fichas de la Cinemateca bajadas el 17 nov. La agenda de la sala la vigila la tarea salas-agenda-festivales.",
+ "_fuentes_versionadas": {
+  "festivals/staging/cuaff-2026-crudo.json": "la programación (IG + Cinemateca)",
+  "festivals/staging/cuaff-2026-venues-geo.json": "la Cinemateca de Bogotá, heredada (manual)",
+  "festivals/staging/cuaff-2026-afiches.json": "8 afiches oficiales (lámina 1 de cada post), mirados a mano; los leen enriquecer.py y encuadrar-posters.py",
+  "festivals/staging/cuaff-2026-correcciones.json": "sin_afiche de 4 cortos",
+  "festivals/staging/cuaff-2026-altas.json": "registro de altas (pipeline/altas.py)"
+ },
+ "festival": {
+  "crudo": "festivals/staging/cuaff-2026-crudo.json",
+  "enriquecido": "festivals/staging/cuaff-2026-enriquecido.json",
+  "geo": "festivals/staging/cuaff-2026-venues-geo.json",
+  "_por_que_secciones": "El festival no publica secciones: sus programas tienen nombre propio (van como título). «CUAFF 2026» es el sello de todos los posts; «Clausura» lo dice el post de Sanber; «Taller» la lámina del taller. PROPUESTA para Juan.",
+  "secciones": {
+   "CUAFF 2026": {
+    "emoji": "🎨",
+    "en": "CUAFF 2026",
+    "archetype": "Muestra / País"
+   },
+   "Clausura": {
+    "emoji": "🎬",
+    "en": "Closing Night",
+    "archetype": "Clausura"
+   },
+   "Taller": {
+    "emoji": "📷",
+    "en": "Workshop",
+    "archetype": "Charlas / Industria"
+   }
+  },
+  "sedes": {
+   "Cinemateca de Bogotá": [
+    "Cinemateca de Bogotá - Bogotá",
+    ""
+   ]
+  },
+  "name": "CUAFF",
+  "displayName": "CUAFF",
+  "fullName": "Colombian Urban Art Film Festival 2026",
+  "shortName": "CUAFF",
+  "tagline": "Colombian Urban Art Film Festival",
+  "city": "Bogotá",
+  "country": "CO",
+  "dates": "20–22 NOV",
+  "dates_en": "NOV 20–22",
+  "year": 2026,
+  "timezoneOffset": "-05:00",
+  "storageKey": "cuaff2026_",
+  "festivalStartStr": "2026-11-20T00:00:00",
+  "festivalEndStr": "2026-11-22T23:59:00",
+  "sharedSlotIsOneScreening": false,
+  "ticketing_model": "mixed",
+  "mes_es": "noviembre",
+  "dias_vacios": [],
+  "_fuentes_versionadas": {
+   "festivals/staging/cuaff-2026-radar.json": "el volcado del radar #1269"
+  }
+ }
+}

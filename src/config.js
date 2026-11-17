@@ -141,6 +141,9 @@ export const SECTION_COLORS = {
 //  · Tribeca se omite entero: sus secciones ya están en inglés.
 //  · "Impact Hits"/"Industry Days" (AFF) ya están en inglés → se omiten.
 export const SECTION_EN = {
+  // CUAFF 2026 (propuesta, 17 nov)
+  '🎨 CUAFF 2026': 'CUAFF 2026',
+  '📷 Taller': 'Workshop',
   // CINETORO 2026
   '🏆 Selección Oficial': 'Official Selection',
   '🎬 Largometrajes': 'Feature Films',
@@ -1019,6 +1022,27 @@ export const FESTIVAL_CONFIG={
     prioLimit:3,
     films:null,posters:null,lbSlugs:{}
   },
+  'cuaff2026': {
+    // EL NOMBRE es la sigla del festival (@colombianurbanfilm); el subtítulo la expande.
+    // 3.ª edición, Cinemateca de Bogotá. Festhome dice 27–29 nov: desactualizado (vigía, 17 nov).
+    name:'CUAFF',displayName:'CUAFF',
+    fullName:'Colombian Urban Art Film Festival 2026',shortName:'CUAFF',
+    city:'Bogotá',country:'CO',
+    dates:'20–22 NOV',dates_en:'NOV 20–22',year:2026,timezoneOffset:'-05:00',
+    // no hay afiche de la edición: la lámina 3 del post del taller (p/Dfz5iWUlVID,
+    // 16 nov, 1080×1350), la plantilla CUAFF 2026 sin texto de evento; estirada a 400×600
+    keyArt:'/assets/keyart/cuaff2026-v2.jpg',
+    tagline:'Colombian Urban Art Film Festival',
+    instagram:'colombianurbanfilm', storageKey:'cuaff2026_',festivalStartStr:'2026-11-20T00:00:00',festivalEndStr:'2026-11-22T23:59:00',
+    festivalDates:{'2026-11-20':'2026-11-20','2026-11-21':'2026-11-21','2026-11-22':'2026-11-22'},
+    days:[{k:'2026-11-20',d:20,lbl:'VIE'},{k:'2026-11-21',d:21,lbl:'SÁB'},{k:'2026-11-22',d:22,lbl:'DOM'}],
+    dayKeys:['2026-11-20','2026-11-21','2026-11-22'],
+    dayShort:{'2026-11-20':'VIE 20','2026-11-21':'SÁB 21','2026-11-22':'DOM 22'},
+    dayShort_en:{'2026-11-20':'FRI 20','2026-11-21':'SAT 21','2026-11-22':'SUN 22'},
+    dayLong:{'2026-11-20':'Viernes 20 de noviembre','2026-11-21':'Sábado 21 de noviembre','2026-11-22':'Domingo 22 de noviembre'},
+    prioLimit:3,
+    films:null,posters:null,lbSlugs:{}
+  },
   'cinetoro2026': {
     // EL NOMBRE es el del festival (cinetoro.org); la edición va en fullName.
     // Días oficiales 10–15 NOV (Roldanillo 10, Toro 11–15). Lo de otras ciudades
@@ -1424,6 +1448,9 @@ export const ARCHETYPE_COLORS = {
 // Cada sección de cada festival → su arquetipo. Generado por scripts/classify-posters
 // (arquetipos) + decisiones de diseño. Sección nueva sin entrada → gate lo caza.
 export const SECTION_ARCHETYPES = {
+  // ── CUAFF 2026 · Bogotá (propuesta a Juan, 17 nov) ─────────
+  '🎨 CUAFF 2026': 'Muestra / País',
+  '📷 Taller': 'Charlas / Industria',
   // ── Miradas Medellín 2026 · Medellín (índice del PDF oficial) ─────────
   '🏙️ Cine Hecho en Medellín': 'Muestra / País',
   '🇨🇴 Cine Colombiano': 'Muestra / País',

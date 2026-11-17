@@ -833,6 +833,8 @@ SIGLAS = {
     'LGBTIQ', 'MAMB', 'MAMM', 'MUBI', 'SENA', 'TPAC', 'UNAL', 'UNIAGRARIA', 'UNIBAC', 'VISA',
     # festivales nombrados dentro de una sección o una sede
     'BIFF', 'FICCI', 'FICDH', 'TIFF',
+    # CUAFF 2026 (17 nov 2026): Colombian Urban Art Film Festival, el sello «CUAFF 2026» de sus posts
+    'CUAFF',
     # Guatapé Film Fest (18 oct 2026): la Pantalla CORNARE (Corporación Autónoma Regional
     # Rionegro-Nare) y la sección FIACINE (Federación Iberoamericana de Asociaciones de Cine)
     'CORNARE', 'FIACINE',

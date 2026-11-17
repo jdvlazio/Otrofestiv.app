@@ -436,12 +436,14 @@
     "anibia-2026",
     "bhff-2026",
     "biff-2026",
+    "cuaff-2026",
     "midbo-2026",
     "narrarelfuturo-2026"
    ],
    "salas": [
     "Calle Museo",
     "Lab 1",
+    "Laboratorio 1",
     "Sala 2",
     "Sala 3",
     "Sala Capital",
@@ -1099,7 +1101,8 @@
    "festivales": [
     "cineparalapaz-2026"
    ],
-   "ciudad": "Bogotá"
+   "ciudad": "Bogotá",
+   "corto": "Lubianka"
   },
   "s_384e68d5": {
    "nombre": "Universidad de Caldas",
@@ -1603,7 +1606,8 @@
    "festivales": [
     "cineparalapaz-2026"
    ],
-   "ciudad": "Bogotá"
+   "ciudad": "Bogotá",
+   "corto": "Alpamanda Peña Cultural"
   },
   "s_5c62c6c3": {
    "nombre": "Teatro Caribe",
@@ -2517,7 +2521,8 @@
    "festivales": [
     "cineparalapaz-2026"
    ],
-   "ciudad": "Bogotá"
+   "ciudad": "Bogotá",
+   "corto": "Centro Cultural La Tullpa"
   },
   "s_830a426d": {
    "nombre": "Universidad del Norte",
@@ -2901,7 +2906,8 @@
    "festivales": [
     "cineparalapaz-2026"
    ],
-   "ciudad": "Bogotá"
+   "ciudad": "Bogotá",
+   "corto": "La Trocha · Casa de la Paz"
   },
   "s_98cccf58": {
    "nombre": "Casa Museo Otraparte",
@@ -3086,7 +3092,8 @@
     "por_que": "sede centro: cada festival pone el pin en su edificio (BIFF: Sala Fundadores, Cl. 22 # 5-91; MIDBO: Auditorio Caldas); los dos verificados en Maps"
    },
    "salas": [
-    "Auditorio Fundadores"
+    "Auditorio Fundadores",
+    "Caja de Colores"
    ],
    "ciudad": "Bogotá",
    "corto": "Universidad Central"

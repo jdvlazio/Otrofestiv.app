@@ -1,0 +1,14 @@
+{
+ "_provenance": {
+  "fuente": "heredada de aleste-2026-venues-geo.json (Cinemateca de Bogotá, _prec manual)",
+  "capturado": "2026-11-17"
+ },
+ "Cinemateca de Bogotá - Bogotá": {
+  "lat": 4.6031614,
+  "lng": -74.0676717,
+  "address": "Cra. 3 #19-10, Bogotá",
+  "_prec": "manual",
+  "_match": "heredada de BIFF/MIDBO/BHFF 2026; coincide al decimal con Google Maps «Cinemateca de Bogotá»",
+  "_matriz": "s_17a71d8b"
+ }
+}

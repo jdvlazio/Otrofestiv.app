@@ -94,8 +94,8 @@ deliberada existe la etiqueta `frontera-ok`.
 | `olhar2026` | Olhar de Cinema | Curitiba | JUN 4–13 | Archivado |
 | `tercertiempo2026` | Tercer Tiempo Fest | Bogotá | 13–19 JUL | Archivado |
 | `fantasofest2026` | FantasoFest | Bogotá | 13–19 JUL | Archivado |
-| `ficpa2026` | FICPA | Pasto | 13–17 OCT | Recién terminado |
-| `villadelcine2026` | Villa del Cine | Villa de Leyva | 14–17 OCT | Recién terminado |
+| `ficpa2026` | FICPA | Pasto | 13–17 OCT | Archivado |
+| `villadelcine2026` | Villa del Cine | Villa de Leyva | 14–17 OCT | Archivado |
 | `ficma2026` | FICMA | Manizales | 19–26 SEP | Archivado |
 | `ficdeh2026` | FICDEH | Colombia | 12–19 AGO | Archivado |
 | `finca2026` | FINCA | Buenos Aires | 12–19 AGO | Archivado |
@@ -112,11 +112,12 @@ deliberada existe la etiqueta `frontera-ok`.
 | `anibia2026` | Anibia | Bogotá | 20 OCT–1 NOV | Recién terminado |
 | `guatape2026` | Guatapé Film Fest | Guatapé | 21–25 OCT | Recién terminado |
 | `festicinerio2026` | FESTICINERIO | Riosucio | 8–13 NOV | Recién terminado |
-| `ficfusa2026` | FICFUSA | Fusagasugá | 11–16 NOV | **Próximo / activo** |
+| `ficfusa2026` | FICFUSA | Fusagasugá | 11–16 NOV | Recién terminado |
 | `fecibac2026` | FECIBAC | Caucasia | 10–14 NOV | Recién terminado |
 | `aleste2026` | Al Este | Medellín y Bogotá | 18–29 NOV | **Próximo / activo** |
 | `villadeleyvaiff2026` | Festcinevilla | Villa de Leyva | 13–15 NOV | Recién terminado |
 | `cineparalapaz2026` | Cine para la Paz | Bogotá | 18–21 NOV | **Próximo / activo** |
+| `cuaff2026` | CUAFF | Bogotá | 20–22 NOV | **Próximo / activo** |
 | `cinetoro2026` | CINETORO | Toro | 10–15 NOV | Recién terminado |
 | `cortoscali2026` | Cortos Cali | Cali | 27–30 OCT | Recién terminado |
 | `biff2026` | BIFF | Bogotá | 8–14 OCT | Archivado |
