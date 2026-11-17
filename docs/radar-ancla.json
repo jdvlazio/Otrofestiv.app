@@ -4864,11 +4864,13 @@
    "region": "Andina",
    "mes": 11,
    "mes_texto": null,
-   "fechas_2026": "27–29 NOV 2026 (2ª, Festhome)",
+   "fechas_2026": "20–22 NOV 2026 (3.ª edición, IG @colombianurbanfilm; Festhome decía 27–29)",
    "web": null,
    "ig": "@colombianurbanfilm",
-   "estado": "radar",
-   "id_config": null,
+   "estado": "en_app",
+   "id_config": [
+    "cuaff2026"
+   ],
    "issue": [
     1269
    ],
