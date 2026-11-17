@@ -1,0 +1,14 @@
+{
+ "_provenance": {
+  "fuente": "pipeline/altas.py --sondar sobre el crudo (reel IG Df0rYtRxmgp)",
+  "capturado": "2026-11-17"
+ },
+ "fichas": {
+  "Duelo": {
+   "tmdb": 1313242,
+   "_fuente": "https://www.themoviedb.org/movie/1313242",
+   "_por_que": "altas.py --sondar: tmdb_titulo: TMDB 1313242 «Duelo» — director ✓ y año/duración ✓",
+   "_registro": "under-2026-altas.json"
+  }
+ }
+}

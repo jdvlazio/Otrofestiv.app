@@ -1,0 +1,96 @@
+{
+ "_nota": "XXII Festival Transterritorial de Cine Underground, sede Medellín (25 nov – 3 dic 2026). PRE-ONBOARDING SIN PUBLICAR (Juan, 17 nov: «móntalo pero no publiques aún, solo lo vigilamos»). Fuente: reel IG @cineundermedellin Df0rYtRxmgp (16 nov), 9 cuadros; triple lectura a ojo + Vision + Tesseract (under-2026-verificar.py). Solo 25–29 nov programados; 30 nov – 3 dic: sedes y fechas por anunciar (dias_vacios). PROPUESTAS PARA JUAN (copy, sin aprobar): name/displayName/fullName/shortName/tagline y los nombres en inglés, emoji y arquetipo de las 6 secciones (los nombres en español son el rótulo verbatim de cada día).",
+ "pasos": [
+  {
+   "cmd": "python3 pipeline/under-2026-crudo.py",
+   "que": "los cuadros del reel Df0rYtRxmgp → crudo (9 funciones)"
+  },
+  {
+   "cmd": "python3 pipeline/enriquecer.py under-2026 --posters",
+   "que": "TMDB + cascada + afiches"
+  },
+  {
+   "cmd": "python3 pipeline/ensamblar.py under-2026",
+   "que": "crudo + plan → build"
+  },
+  {
+   "cmd": "python3 pipeline/under-2026-verificar.py",
+   "que": "2.ª y 3.ª lectura: Vision y Tesseract leen hora y títulos en su cuadro"
+  }
+ ],
+ "fuentes_vivas": [],
+ "radar": null,
+ "radar_nota": "Sin issue de radar: lo pidió Juan el 17 nov 2026 desde el reel de @cineundermedellin.",
+ "_fuentes_versionadas": {
+  "festivals/staging/under-2026-crudo.json": "la programación 25–29 nov (reel IG Df0rYtRxmgp)",
+  "festivals/staging/under-2026-venues-geo.json": "Perpetua Lab (Google Maps)",
+  "festivals/staging/under-2026-enriquecido.json": "fichas TMDB/Letterboxd",
+  "festivals/staging/under-2026-correcciones.json": "fichas (altas.py --sondar)",
+  "festivals/staging/under-2026-altas.json": "registro de altas (pipeline/altas.py)"
+ },
+ "festival": {
+  "crudo": "festivals/staging/under-2026-crudo.json",
+  "enriquecido": "festivals/staging/under-2026-enriquecido.json",
+  "geo": "festivals/staging/under-2026-venues-geo.json",
+  "secciones": {
+   "Documental Activismo Social": {
+    "emoji": "✊",
+    "en": "Documentary · Social Activism",
+    "archetype": "Muestra / País"
+   },
+   "Animación": {
+    "emoji": "🎨",
+    "en": "Animation",
+    "archetype": "Cortos / Programas"
+   },
+   "Feminismos y disidencias sexuales": {
+    "emoji": "🏳️‍🌈",
+    "en": "Feminisms and Sexual Dissidence",
+    "archetype": "Perspectivas / Miradas"
+   },
+   "Actividad creativa": {
+    "emoji": "🛠️",
+    "en": "Creative Activity",
+    "archetype": "Charlas / Industria"
+   },
+   "Cine experimental": {
+    "emoji": "🌀",
+    "en": "Experimental Film",
+    "archetype": "Cortos / Programas"
+   },
+   "Actividad académica": {
+    "emoji": "💬",
+    "en": "Academic Activity",
+    "archetype": "Charlas / Industria"
+   }
+  },
+  "sedes": {
+   "Perpetua Lab": [
+    "Perpetua Lab - Medellín",
+    ""
+   ]
+  },
+  "name": "Under Medellín",
+  "displayName": "Under Medellín",
+  "fullName": "XXII Festival Transterritorial de Cine Underground",
+  "shortName": "UNDER",
+  "tagline": "Festival Transterritorial de Cine Underground",
+  "city": "Medellín",
+  "country": "CO",
+  "dates": "25 NOV–3 DIC",
+  "dates_en": "NOV 25–DEC 3",
+  "year": 2026,
+  "timezoneOffset": "-05:00",
+  "storageKey": "under2026_",
+  "festivalStartStr": "2026-11-25T00:00:00",
+  "festivalEndStr": "2026-12-03T23:59:00",
+  "sharedSlotIsOneScreening": false,
+  "mes_es": "noviembre",
+  "dias_vacios": [
+   "2026-11-30",
+   "2026-12-01",
+   "2026-12-02",
+   "2026-12-03"
+  ]
+ }
+}
