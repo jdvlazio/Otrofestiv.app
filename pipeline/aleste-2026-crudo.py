@@ -46,7 +46,10 @@ COL_ACC = 'Con boleta'
 # (día, hora, título, sede, sección, fuente, extra)
 F = [
     ('18', '19:00', 'Noche inaugural', COLOMBO, ESPECIAL, (IG + 'DfkttriN6pD/', None),
-     dict(event_kind='apertura', obras=['Latidos: el grafiti como arte, el grafiti como forma de vida',
+     # 16 nov (vigía): el link del perfil es un formulario de inscripción sin precio
+     # (linktr.ee/alestefestivalcolombia) → libre con inscripción (regla 13 oct)
+     dict(event_kind='apertura', acceso='Entrada libre con inscripción previa',
+          registration_url='https://forms.gle/d6aSy5hBEQr3R2m98', obras=['Latidos: el grafiti como arte, el grafiti como forma de vida',
                                         'La última ronda en Venecia'])),
     ('19', '18:30', 'The Souffleur', MAMM, MUSEO, (MAMM_URL + 'the-souffleur/', None), {}),
     ('19', '19:00', 'Cenizas y diamantes', COLOMBO, FOKUS, (IG + 'DfYe-5Slr8E/', '02.jpg'), {}),

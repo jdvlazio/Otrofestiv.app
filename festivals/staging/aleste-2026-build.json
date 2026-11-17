@@ -229,7 +229,8 @@
    "lng": -75.5626063,
    "address": "Cra. 45 (El Palo) #53-38",
    "_prec": "manual",
-   "_nota": "pin verificado en Mamut y Fantasmagoría; dirección del post de @aleste.colombia (1 nov 2026)"
+   "_nota": "pin verificado en Mamut y Fantasmagoría; dirección del post de @aleste.colombia (1 nov 2026)",
+   "_matriz": "s_b5d25cab"
   },
   "MAMM - Medellín": {
    "short": "MAMM",
@@ -238,7 +239,8 @@
    "lng": -75.57384,
    "address": "Cra. 44 #19A-100",
    "_prec": "manual",
-   "_nota": "pin verificado en Mamut; dirección de la web del MAMM"
+   "_nota": "pin verificado en Mamut; dirección de la web del MAMM",
+   "_matriz": "s_99915661"
   },
   "Cinemateca de Bogotá - Bogotá": {
    "short": "Cinemateca de Bogotá",
@@ -247,7 +249,8 @@
    "lng": -74.0676717,
    "address": "Cra. 3 #19-10, Bogotá",
    "_prec": "manual",
-   "_match": "heredada de BIFF/MIDBO/BHFF 2026; coincide al decimal con Google Maps «Cinemateca de Bogotá»"
+   "_match": "heredada de BIFF/MIDBO/BHFF 2026; coincide al decimal con Google Maps «Cinemateca de Bogotá»",
+   "_matriz": "s_17a71d8b"
   },
   "Cinemateca Fontanar del Río - Bogotá": {
    "short": "Cinemateca Fontanar del Río",
@@ -257,7 +260,8 @@
    "lat": 4.7561244,
    "lng": -74.1110572,
    "address": "Calle 146 # 138A-99",
-   "_match": "heredada de Anibia/FICDEH/Narrar el Futuro 2026 (Google Maps «CEFE Fontanar del río»)"
+   "_match": "heredada de Anibia/FICDEH/Narrar el Futuro 2026 (Google Maps «CEFE Fontanar del río»)",
+   "_matriz": "s_c82c47d7"
   }
  },
  "_avisos_id": [],
@@ -285,7 +289,9 @@
     "date": "2026-11-12",
     "tipo": "festival-ig"
    },
-   "is_free": false,
+   "registration_url": "https://forms.gle/d6aSy5hBEQr3R2m98",
+   "is_free": true,
+   "requires_registration": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -1842,7 +1848,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-16T10:19:38",
+  "fecha": "2026-11-16T21:20:31",
   "plan_sha": "504f5daa1302f309",
   "paso": 9,
   "cmd": "python3 pipeline/aleste-2026-verificar.py"
