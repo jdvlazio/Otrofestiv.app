@@ -8,11 +8,20 @@
  "directores": [
   "Krone"
  ],
+ "sinopsis": {
+  "en": "Graffiti crosses borders, connects cities and turns trains and streets into territories of expression. A journey through Latin American urban culture, where graffiti is much more than paint: it is identity, movement and a way of leaving a mark."
+ },
+ "generos": [
+  "Documental"
+ ],
  "afiche": {
   "archivo": "/assets/cuaff-2026/still-free.jpg",
   "veredicto": "oficial"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 1828516,
+  "letterboxd": "still-free-1"
+ },
  "versiones": [
   {
    "etiqueta": "18 min",

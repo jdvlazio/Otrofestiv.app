@@ -8,11 +8,17 @@
  "directores": [
   "Juan Pablo Huston"
  ],
+ "sinopsis": {
+  "en": "A generation, many stories and new ways of understanding the world we live in. A short film by Juan Pablo Huston."
+ },
  "afiche": {
   "archivo": "/assets/cuaff-2026/diario-de-los-nuevos-20s.jpg",
   "veredicto": "oficial"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 1828512,
+  "letterboxd": "diario-de-los-nuevos-20s"
+ },
  "versiones": [
   {
    "etiqueta": "15 min",

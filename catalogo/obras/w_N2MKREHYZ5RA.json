@@ -8,11 +8,20 @@
  "directores": [
   "Alberto Tolaba"
  ],
+ "sinopsis": {
+  "en": "Squares become meeting points, hip hop a collective voice and the underground a way of life. A documentary by Alberto Tolaba about urban culture, its protagonists and the power of building community through art."
+ },
+ "generos": [
+  "Documental"
+ ],
  "afiche": {
   "archivo": "/assets/cuaff-2026/uniendo-plazas-los-padres-del-under.jpg",
   "veredicto": "oficial"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 1828522,
+  "letterboxd": "uniendo-plazas-los-padres-del-under"
+ },
  "versiones": [
   {
    "etiqueta": "26 min",

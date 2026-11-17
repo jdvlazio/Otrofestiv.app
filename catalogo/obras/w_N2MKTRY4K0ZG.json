@@ -8,11 +8,20 @@
  "directores": [
   "Peds Shaumers"
  ],
+ "sinopsis": {
+  "en": "A tribute to the VSK crew and the history of graffiti writing in Bogotá. Through the alchemy of metal casting, Peds Shaumers reclaims the memory of his crew — Shuk, Skill and Suber — turning art into an exercise of memory, identity and resistance to oblivion."
+ },
+ "generos": [
+  "Documental"
+ ],
  "afiche": {
   "archivo": "/assets/cuaff-2026/vsk-en-metal.jpg",
   "veredicto": "oficial"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 1828519,
+  "letterboxd": "vsk-en-metal"
+ },
  "versiones": [
   {
    "etiqueta": "8 min",

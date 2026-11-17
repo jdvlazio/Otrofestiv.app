@@ -8,11 +8,17 @@
  "directores": [
   "Isben Isaeb"
  ],
+ "sinopsis": {
+  "en": "A Colombian short film by Isben Isaeb about urban culture: the streets have stories to tell, voices that deserve to be heard and expressions that build identity."
+ },
  "afiche": {
   "archivo": "/assets/cuaff-2026/el-lejano-sur.jpg",
   "veredicto": "oficial"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 1828506,
+  "letterboxd": "el-lejano-sur"
+ },
  "versiones": [
   {
    "etiqueta": "8 min",
