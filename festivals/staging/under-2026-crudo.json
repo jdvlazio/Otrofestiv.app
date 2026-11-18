@@ -1,9 +1,9 @@
 {
  "_provenance": {
-  "fuente": "https://www.instagram.com/p/Df0rYtRxmgp/",
-  "capturado": "2026-11-17",
-  "metodo": "9 cuadros del reel leídos a ojo (fuentes/ig/Df0rYtRxmgp-x2)",
-  "que_aporta": "día, hora, sede, obras de cada función, director/país/año/min, acceso"
+  "fuente": "fuentes/under-2026/correo-2026-11-18/Programa_UNDER_Medellin_2026_def.pdf",
+  "capturado": "2026-11-18",
+  "metodo": "PDF oficial (correo 18 nov): capa de texto + OCR + a ojo; duraciones y rótulos de sección del reel https://www.instagram.com/p/Df0rYtRxmgp/",
+  "que_aporta": "día, hora, sede, obras de cada función, director/país/año, acceso"
  },
  "funciones": [
   {
@@ -11,14 +11,14 @@
    "dia": "2026-11-25",
    "hora": "18:30",
    "sede": "Perpetua Lab",
-   "seccion": "Documental Activismo Social",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://www.instagram.com/p/Df0rYtRxmgp/",
-    "lamina": "01.jpg",
-    "date": "2026-11-16",
-    "tipo": "festival-ig"
+    "url": "fuentes/under-2026/correo-2026-11-18/Programa_UNDER_Medellin_2026_def.pdf",
+    "lamina": "p. 2",
+    "date": "2026-11-18",
+    "tipo": "festival-mensaje"
    },
+   "seccion": "Documental Activismo Social",
    "obras": [
     {
      "titulo": "Borrachos mientras escuchamos las gotas caer",
@@ -43,32 +43,82 @@
    "dia": "2026-11-25",
    "hora": "20:00",
    "sede": "Perpetua Lab",
-   "seccion": "Documental Activismo Social",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://www.instagram.com/p/Df0rYtRxmgp/",
-    "lamina": "01.jpg",
-    "date": "2026-11-16",
-    "tipo": "festival-ig"
+    "url": "fuentes/under-2026/correo-2026-11-18/Programa_UNDER_Medellin_2026_def.pdf",
+    "lamina": "p. 2",
+    "date": "2026-11-18",
+    "tipo": "festival-mensaje"
    },
+   "seccion": "Documental Activismo Social",
    "director": "Quique Avilés, Ellie Walton",
    "pais": "Estados Unidos",
    "anio": 2024,
    "duracion_min": 71
   },
   {
+   "titulo": "Bisou ACAB + Memoria colectiva + 8 metros: La palabra subterránea",
+   "dia": "2026-11-25",
+   "hora": "18:30",
+   "sede": "Bebop Bar",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "fuentes/under-2026/correo-2026-11-18/Programa_UNDER_Medellin_2026_def.pdf",
+    "lamina": "p. 2",
+    "date": "2026-11-18",
+    "tipo": "festival-mensaje"
+   },
+   "obras": [
+    {
+     "titulo": "Bisou ACAB",
+     "director": "Guillermo Gallo",
+     "pais": "Francia",
+     "anio": 2026
+    },
+    {
+     "titulo": "Memoria colectiva",
+     "director": "Cristina Colmenares",
+     "pais": "Perú",
+     "anio": 2025
+    },
+    {
+     "titulo": "8 metros: La palabra subterránea",
+     "director": "Pablo Fernández Alberti",
+     "pais": "Argentina",
+     "anio": 2026
+    }
+   ],
+   "tipo": "programa"
+  },
+  {
+   "titulo": "El coloquio de los pájaros",
+   "dia": "2026-11-25",
+   "hora": "18:30",
+   "sede": "Donde Robin",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "fuentes/under-2026/correo-2026-11-18/Programa_UNDER_Medellin_2026_def.pdf",
+    "lamina": "p. 2",
+    "date": "2026-11-18",
+    "tipo": "festival-mensaje"
+   },
+   "director": "Sofía Velázquez",
+   "pais": "Perú",
+   "anio": 2026
+  },
+  {
    "titulo": "Programa 1",
    "dia": "2026-11-26",
    "hora": "19:00",
    "sede": "Perpetua Lab",
-   "seccion": "Animación",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://www.instagram.com/p/Df0rYtRxmgp/",
-    "lamina": "02.jpg",
-    "date": "2026-11-16",
-    "tipo": "festival-ig"
+    "url": "fuentes/under-2026/correo-2026-11-18/Programa_UNDER_Medellin_2026_def.pdf",
+    "lamina": "p. 2",
+    "date": "2026-11-18",
+    "tipo": "festival-mensaje"
    },
+   "seccion": "Animación",
    "obras": [
     {
      "titulo": "Duelo",
@@ -138,22 +188,38 @@
    "duracion_min": 62
   },
   {
+   "titulo": "Amor trava",
+   "dia": "2026-11-26",
+   "hora": "18:30",
+   "sede": "Donde Robin",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "fuentes/under-2026/correo-2026-11-18/Programa_UNDER_Medellin_2026_def.pdf",
+    "lamina": "p. 2",
+    "date": "2026-11-18",
+    "tipo": "festival-mensaje"
+   },
+   "director": "Lucrecia Mastrangelo",
+   "pais": "Argentina",
+   "anio": 2026
+  },
+  {
    "titulo": "verdever",
    "dia": "2026-11-27",
    "hora": "17:00",
    "sede": "Perpetua Lab",
-   "seccion": "Feminismos y disidencias sexuales",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://www.instagram.com/p/Df0rYtRxmgp/",
-    "lamina": "03.jpg",
-    "date": "2026-11-16",
-    "tipo": "festival-ig"
+    "url": "fuentes/under-2026/correo-2026-11-18/Programa_UNDER_Medellin_2026_def.pdf",
+    "lamina": "p. 3",
+    "date": "2026-11-18",
+    "tipo": "festival-mensaje"
    },
+   "seccion": "Feminismos y disidencias sexuales",
    "obras": [
     {
      "titulo": "Elegy for the Lost",
-     "director": "William Hong-Xiao Wei",
+     "director": "William Hong-xiao Wei",
      "pais": "Francia, España, Reino Unido",
      "anio": 2025,
      "duracion_min": 29
@@ -182,38 +248,38 @@
    ],
    "tipo": "programa",
    "duracion_min": 67,
-   "descripcion": "Conversatorio con el Club de lectura y escritura de ciencia ficción Anarco Feminista."
+   "descripcion": "Conversatorio con el Club de lectura y escritura de ciencia ficción anarco feminista."
   },
   {
    "titulo": "Fiesta Under · El Vikingo Selektor",
    "dia": "2026-11-27",
    "hora": "21:00",
    "sede": "Perpetua Lab",
-   "seccion": "Feminismos y disidencias sexuales",
    "acceso": "Con boleta: aporte $10.000",
    "_src": {
-    "url": "https://www.instagram.com/p/Df0rYtRxmgp/",
-    "lamina": "04.jpg",
-    "date": "2026-11-16",
-    "tipo": "festival-ig"
+    "url": "fuentes/under-2026/correo-2026-11-18/Programa_UNDER_Medellin_2026_def.pdf",
+    "lamina": "p. 6",
+    "date": "2026-11-18",
+    "tipo": "festival-mensaje"
    },
+   "seccion": "Feminismos y disidencias sexuales",
    "tipo": "evento",
    "event_kind": "fiesta",
-   "descripcion": "Post punk, dark wave, dark techno, industrial, EBM."
+   "descripcion": "Post punk, darkwave, industrial, EBM."
   },
   {
-   "titulo": "Orígenes de los lenguajes audiovisuales experimentales y laboratorio de creación",
+   "titulo": "Orígenes de los lenguajes experimentales y laboratorio de creación",
    "dia": "2026-11-28",
    "hora": "15:00",
    "sede": "Perpetua Lab",
-   "seccion": "Actividad creativa",
    "acceso": "Entrada libre con inscripción previa. Cupos limitados",
    "_src": {
-    "url": "https://www.instagram.com/p/Df0rYtRxmgp/",
-    "lamina": "05.jpg",
-    "date": "2026-11-16",
-    "tipo": "festival-ig"
+    "url": "fuentes/under-2026/correo-2026-11-18/Programa_UNDER_Medellin_2026_def.pdf",
+    "lamina": "p. 6",
+    "date": "2026-11-18",
+    "tipo": "festival-mensaje"
    },
+   "seccion": "Actividad creativa",
    "tipo": "evento",
    "event_kind": "charla taller",
    "descripcion": "A cargo de: Hernán D. Arango S. Realizador audiovisual, editor y docente universitario con más de 20 años de experiencia en cine y televisión. Magíster en Artes Digitales."
@@ -223,14 +289,14 @@
    "dia": "2026-11-28",
    "hora": "19:00",
    "sede": "Perpetua Lab",
-   "seccion": "Cine experimental",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://www.instagram.com/p/Df0rYtRxmgp/",
-    "lamina": "06.jpg",
-    "date": "2026-11-16",
-    "tipo": "festival-ig"
+    "url": "fuentes/under-2026/correo-2026-11-18/Programa_UNDER_Medellin_2026_def.pdf",
+    "lamina": "p. 3",
+    "date": "2026-11-18",
+    "tipo": "festival-mensaje"
    },
+   "seccion": "Cine experimental",
    "obras": [
     {
      "titulo": "Cosmopoética: el ciclo de vida de una estrella masiva",
@@ -262,13 +328,13 @@
     },
     {
      "titulo": "Spheres",
-     "director": "Marlin Gerigk",
+     "director": "Martin Gerigk",
      "pais": "Alemania",
      "anio": 2026,
      "duracion_min": 6
     },
     {
-     "titulo": "Und ich behaupte",
+     "titulo": "Und Ich behaupte",
      "director": "Patrick Müller",
      "pais": "Alemania",
      "anio": 2026,
@@ -286,39 +352,269 @@
    "duracion_min": 61
   },
   {
-   "titulo": "Hacerlo Sin Permiso. Laboratorio de Apropiación",
+   "titulo": "Hacerlo sin permiso. Laboratorio de apropiación",
    "dia": "2026-11-29",
    "hora": "15:00",
    "sede": "Perpetua Lab",
-   "seccion": "Actividad académica",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://www.instagram.com/p/Df0rYtRxmgp/",
-    "lamina": "07.jpg",
-    "date": "2026-11-16",
-    "tipo": "festival-ig"
+    "url": "fuentes/under-2026/correo-2026-11-18/Programa_UNDER_Medellin_2026_def.pdf",
+    "lamina": "p. 6",
+    "date": "2026-11-18",
+    "tipo": "festival-mensaje"
    },
+   "seccion": "Actividad académica",
    "tipo": "evento",
    "event_kind": "charla taller",
    "descripcion": "A cargo de: El Gabinete Cine Club / Manifiesto / La Pola Records."
   },
   {
-   "titulo": "Función sorpresa",
+   "titulo": "Proyección sorpresa",
    "dia": "2026-11-29",
    "hora": "17:00",
    "sede": "Perpetua Lab",
-   "seccion": "Actividad académica",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://www.instagram.com/p/Df0rYtRxmgp/",
-    "lamina": "07.jpg",
-    "date": "2026-11-16",
-    "tipo": "festival-ig"
+    "url": "fuentes/under-2026/correo-2026-11-18/Programa_UNDER_Medellin_2026_def.pdf",
+    "lamina": "p. 6",
+    "date": "2026-11-18",
+    "tipo": "festival-mensaje"
    },
+   "seccion": "Actividad académica",
    "tipo": "evento",
    "event_kind": "función sorpresa",
    "descripcion": "El Gabinete Cine Club."
+  },
+  {
+   "titulo": "Jubiladxs le enseñan + Norma también + To the rhythm of love and hate",
+   "dia": "2026-12-01",
+   "hora": "18:00",
+   "sede": "Bebop Bar",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "fuentes/under-2026/correo-2026-11-18/Programa_UNDER_Medellin_2026_def.pdf",
+    "lamina": "p. 4",
+    "date": "2026-11-18",
+    "tipo": "festival-mensaje"
+   },
+   "obras": [
+    {
+     "titulo": "Jubiladxs le enseñan",
+     "director": "Silbando Bembas",
+     "pais": "Argentina",
+     "anio": 2025
+    },
+    {
+     "titulo": "Norma también",
+     "director": "Natalia Andrea Vinelli, Alejandra Guzzo",
+     "pais": "Argentina",
+     "anio": 2025
+    },
+    {
+     "titulo": "To the rhythm of love and hate: A punkumentary on salsa with the Macabeo Orchestra",
+     "director": "Nelson Varas-Díaz",
+     "pais": "Puerto Rico",
+     "anio": 2026
+    }
+   ],
+   "tipo": "programa"
+  },
+  {
+   "titulo": "Una persona distinta + 5 obras",
+   "dia": "2026-12-01",
+   "hora": "18:30",
+   "sede": "Librería Antimateria",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "fuentes/under-2026/correo-2026-11-18/Programa_UNDER_Medellin_2026_def.pdf",
+    "lamina": "p. 4",
+    "date": "2026-11-18",
+    "tipo": "festival-mensaje"
+   },
+   "obras": [
+    {
+     "titulo": "Una persona distinta",
+     "director": "Sergio Quatraro",
+     "pais": "Argentina",
+     "anio": 2026
+    },
+    {
+     "titulo": "Atombombenabend",
+     "director": "Thorsten Fleisch",
+     "pais": "Alemania",
+     "anio": 2026
+    },
+    {
+     "titulo": "Binary",
+     "director": "Padrick Ritch",
+     "pais": "Estados Unidos",
+     "anio": 2026
+    },
+    {
+     "titulo": "Distillery Dance",
+     "director": "Elly Moghtaderi",
+     "pais": "Irán",
+     "anio": 2026
+    },
+    {
+     "titulo": "Echoes of a zephyr",
+     "director": "Josh Weissbach",
+     "pais": "Albania",
+     "anio": 2025
+    },
+    {
+     "titulo": "Chaika",
+     "director": "Ingrid Paola Bonilla Rodriguez",
+     "pais": "Colombia",
+     "anio": 2025
+    }
+   ],
+   "tipo": "programa"
+  },
+  {
+   "titulo": "Cut your wings and fly + Quizás nunca + Mall + Shell Shock O'K",
+   "dia": "2026-12-02",
+   "hora": "18:30",
+   "sede": "Librería Antimateria",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "fuentes/under-2026/correo-2026-11-18/Programa_UNDER_Medellin_2026_def.pdf",
+    "lamina": "p. 5",
+    "date": "2026-11-18",
+    "tipo": "festival-mensaje"
+   },
+   "obras": [
+    {
+     "titulo": "Cut your wings and fly",
+     "director": "Meryem Lahlou",
+     "pais": "Estados Unidos",
+     "anio": 2026
+    },
+    {
+     "titulo": "Quizás nunca",
+     "director": "Loana Isabel Pagani",
+     "pais": "Argentina",
+     "anio": 2026
+    },
+    {
+     "titulo": "Mall",
+     "director": "Frida Balca",
+     "pais": "España",
+     "anio": 2026
+    },
+    {
+     "titulo": "Shell Shock O'K",
+     "director": "Dmytro Grynov",
+     "pais": "Alemania, Ucrania",
+     "anio": 2026
+    }
+   ],
+   "tipo": "programa"
+  },
+  {
+   "titulo": "A Perfect Maryam + Pluvia + Sinforme sinfinal + Les Voyageurs",
+   "dia": "2026-12-02",
+   "hora": "19:00",
+   "sede": "Perpetua Lab",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "fuentes/under-2026/correo-2026-11-18/Programa_UNDER_Medellin_2026_def.pdf",
+    "lamina": "p. 5",
+    "date": "2026-11-18",
+    "tipo": "festival-mensaje"
+   },
+   "obras": [
+    {
+     "titulo": "A Perfect Maryam",
+     "director": "Solmaz Etemadzadeh, Ara Torosian",
+     "pais": "Irán, Estados Unidos",
+     "anio": 2025
+    },
+    {
+     "titulo": "Pluvia",
+     "director": "Iñigo Floristán",
+     "pais": "España",
+     "anio": 2025
+    },
+    {
+     "titulo": "Sinforme sinfinal",
+     "director": "Patricio Lagos",
+     "pais": "Perú",
+     "anio": 2026
+    },
+    {
+     "titulo": "Les Voyageurs",
+     "director": "David Bingong",
+     "pais": "Camerún, España",
+     "anio": 2025
+    }
+   ],
+   "tipo": "programa"
+  },
+  {
+   "titulo": "Tuktu, padre maíz + 7 obras",
+   "dia": "2026-12-03",
+   "hora": "19:00",
+   "sede": "Perpetua Lab",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "fuentes/under-2026/correo-2026-11-18/Programa_UNDER_Medellin_2026_def.pdf",
+    "lamina": "p. 5",
+    "date": "2026-11-18",
+    "tipo": "festival-mensaje"
+   },
+   "obras": [
+    {
+     "titulo": "Tuktu, padre maíz",
+     "director": "Mauricio Prieto Muriel",
+     "pais": "Colombia",
+     "anio": 2026
+    },
+    {
+     "titulo": "Salman Wants to Go",
+     "director": "Ozan Takış",
+     "pais": "Turquía",
+     "anio": 2025
+    },
+    {
+     "titulo": "Esas ruinas",
+     "director": "Gabriel Piñeiro",
+     "pais": "Argentina",
+     "anio": 2023
+    },
+    {
+     "titulo": "Quisiera volverme río",
+     "director": "Susana Parejas",
+     "pais": "Argentina",
+     "anio": 2024
+    },
+    {
+     "titulo": "Lo que aún queda de mí",
+     "director": "Elena Bursztein",
+     "pais": "Argentina",
+     "anio": 2026
+    },
+    {
+     "titulo": "Mamma",
+     "director": "Mike Montagna",
+     "pais": "Italia",
+     "anio": 2025
+    },
+    {
+     "titulo": "Analogue natives",
+     "director": "Bernd Lützeler",
+     "pais": "Alemania, India",
+     "anio": 2025
+    },
+    {
+     "titulo": "Vlasta, el recuerdo no es eterno",
+     "director": "Candela Vey, Tino Pereira",
+     "pais": "Argentina",
+     "anio": 2025
+    }
+   ],
+   "tipo": "programa"
   }
  ],
- "_por_anunciar": "30 nov – 3 dic: la portada dice «25 nov - 3 dic», sin programación ni sedes (16 nov)"
+ "_sin_funciones": "30 nov: el PDF oficial no programa nada"
 }

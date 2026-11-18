@@ -1,9 +1,9 @@
 {
- "_nota": "XXII Festival Transterritorial de Cine Underground, sede Medellín (25 nov – 3 dic 2026). PRE-ONBOARDING SIN PUBLICAR (Juan, 17 nov: «móntalo pero no publiques aún, solo lo vigilamos»). Fuente: reel IG @cineundermedellin Df0rYtRxmgp (16 nov), 9 cuadros; triple lectura a ojo + Vision + Tesseract (under-2026-verificar.py). Solo 25–29 nov programados; 30 nov – 3 dic: sedes y fechas por anunciar (dias_vacios). PROPUESTAS PARA JUAN (copy, sin aprobar): name/displayName/fullName/shortName/tagline y los nombres en inglés, emoji y arquetipo de las 6 secciones (los nombres en español son el rótulo verbatim de cada día).",
+ "_nota": "XXII Festival Transterritorial de Cine Underground, sede Medellín (25 nov – 3 dic 2026). PRE-ONBOARDING SIN PUBLICAR. Fuente que manda: PDF oficial (correo de José Fernando Duque a hola@, 18 nov), triple lectura texto+OCR+ojo. El reel IG Df0rYtRxmgp (16 nov) aporta duraciones y rótulos de sección de 25–29 nov. 30 nov sin programación. PROPUESTAS PARA JUAN (copy, sin aprobar): name/displayName/fullName/shortName/tagline, nombres en inglés/emoji/arquetipo de las secciones, seccion_default «Programación» para las funciones nuevas sin rótulo, y los títulos de los programas sin nombre impreso («A + B + …», «X + N obras»).",
  "pasos": [
   {
    "cmd": "python3 pipeline/under-2026-crudo.py",
-   "que": "los cuadros del reel Df0rYtRxmgp → crudo (9 funciones)"
+   "que": "PDF oficial del correo del 18 nov → crudo (17 funciones, 4 sedes); el reel queda como fuente de duraciones y secciones"
   },
   {
    "cmd": "python3 pipeline/enriquecer.py under-2026 --posters",
@@ -15,18 +15,19 @@
   },
   {
    "cmd": "python3 pipeline/under-2026-verificar.py",
-   "que": "2.ª y 3.ª lectura: Vision y Tesseract leen hora y títulos en su cuadro"
+   "que": "triple lectura (texto del PDF, Vision, Tesseract) por página + cobertura inversa de títulos y horas"
   }
  ],
  "fuentes_vivas": [],
  "radar": null,
  "radar_nota": "Sin issue de radar: lo pidió Juan el 17 nov 2026 desde el reel de @cineundermedellin.",
  "_fuentes_versionadas": {
-  "festivals/staging/under-2026-crudo.json": "la programación 25–29 nov (reel IG Df0rYtRxmgp)",
-  "festivals/staging/under-2026-venues-geo.json": "Perpetua Lab (Google Maps)",
+  "festivals/staging/under-2026-crudo.json": "la programación 25 nov – 3 dic (PDF oficial, correo 18 nov)",
+  "festivals/staging/under-2026-venues-geo.json": "4 sedes (Google Maps)",
   "festivals/staging/under-2026-enriquecido.json": "fichas TMDB/Letterboxd",
   "festivals/staging/under-2026-correcciones.json": "fichas (altas.py --sondar)",
-  "festivals/staging/under-2026-altas.json": "registro de altas (pipeline/altas.py)"
+  "festivals/staging/under-2026-altas.json": "registro de altas (pipeline/altas.py)",
+  "festivals/staging/under-2026-afiches.json": "afiches originales que mandó el festival (correo 18 nov)"
  },
  "festival": {
   "crudo": "festivals/staging/under-2026-crudo.json",
@@ -62,11 +63,28 @@
     "emoji": "💬",
     "en": "Academic Activity",
     "archetype": "Charlas / Industria"
+   },
+   "Programación": {
+    "emoji": "🎬",
+    "en": "Programme",
+    "archetype": "Muestra / País"
    }
   },
   "sedes": {
    "Perpetua Lab": [
     "Perpetua Lab - Medellín",
+    ""
+   ],
+   "Bebop Bar": [
+    "Bebop Bar - Medellín",
+    ""
+   ],
+   "Donde Robin": [
+    "Donde Robin - Medellín",
+    ""
+   ],
+   "Librería Antimateria": [
+    "Librería Antimateria - Medellín",
     ""
    ]
   },
@@ -87,10 +105,8 @@
   "sharedSlotIsOneScreening": false,
   "mes_es": "noviembre",
   "dias_vacios": [
-   "2026-11-30",
-   "2026-12-01",
-   "2026-12-02",
-   "2026-12-03"
-  ]
+   "2026-11-30"
+  ],
+  "seccion_default": "Programación"
  }
 }

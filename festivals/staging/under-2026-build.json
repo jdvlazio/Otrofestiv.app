@@ -1,8 +1,8 @@
 {
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
-  "fuente": "https://www.instagram.com/p/Df0rYtRxmgp/",
-  "capturado": "2026-11-17",
+  "fuente": "fuentes/under-2026/correo-2026-11-18/Programa_UNDER_Medellin_2026_def.pdf",
+  "capturado": "2026-11-18",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "name": "Under Medellín",
@@ -21,10 +21,7 @@
  "festivalEndStr": "2026-12-03T23:59:00",
  "sharedSlotIsOneScreening": false,
  "dias_vacios": [
-  "2026-11-30",
-  "2026-12-01",
-  "2026-12-02",
-  "2026-12-03"
+  "2026-11-30"
  ],
  "prioLimit": 4,
  "dias": [
@@ -146,30 +143,35 @@
    "archetype": "Muestra / País",
    "order": 1
   },
+  "🎬 Programación": {
+   "en": "Programme",
+   "archetype": "Muestra / País",
+   "order": 2
+  },
   "🎨 Animación": {
    "en": "Animation",
    "archetype": "Cortos / Programas",
-   "order": 2
+   "order": 3
   },
   "🏳️‍🌈 Feminismos y Disidencias Sexuales": {
    "en": "Feminisms and Sexual Dissidence",
    "archetype": "Perspectivas / Miradas",
-   "order": 3
+   "order": 4
   },
   "🛠️ Actividad Creativa": {
    "en": "Creative Activity",
    "archetype": "Charlas / Industria",
-   "order": 4
+   "order": 5
   },
   "🌀 Cine Experimental": {
    "en": "Experimental Film",
    "archetype": "Cortos / Programas",
-   "order": 5
+   "order": 6
   },
   "💬 Actividad Académica": {
    "en": "Academic Activity",
    "archetype": "Charlas / Industria",
-   "order": 6
+   "order": 7
   }
  },
  "venues": {
@@ -183,6 +185,39 @@
    "_match": "Google Maps (17 nov 2026), ficha «Perpetua LAB»: https://www.google.com/maps/place/Perpetua+LAB/@6.2346133,-75.5714725,17z; dirección de los cuadros: Calle 34 # 45-07, segundo piso, Distrito Creativo Perpetuo Socorro",
    "_maps": "https://www.google.com/maps/place/Perpetua+LAB/@6.2346133,-75.5714725,17z",
    "_matriz": "s_8d5d66e1"
+  },
+  "Bebop Bar - Medellín": {
+   "short": "Bebop Bar",
+   "city": "Medellín",
+   "lat": 6.264047,
+   "lng": -75.567918,
+   "address": "Cra. 55 #65-87, piso 3",
+   "_prec": "manual",
+   "_maps": "https://www.google.com/maps/place/bebop+bar/@6.264047,-75.567918,17z",
+   "_match": "Google Maps (18 nov 2026), ficha «bebop bar», dirección «Cra. 55 #65-87 Piso 3»; PDF: Carrera 55 # 65-87, piso 3, Estación Ruta N Metroplús",
+   "_matriz": "s_67e7a9bd"
+  },
+  "Donde Robin - Medellín": {
+   "short": "Donde Robin",
+   "city": "Medellín",
+   "lat": 6.2496084,
+   "lng": -75.5619183,
+   "address": "Cra. 43 #53-51, Parque del Periodista",
+   "_prec": "direccion",
+   "_maps": "https://www.google.com/maps/place/Cra.+43+%2353-51/@6.2496084,-75.5619183,17z",
+   "_match": "Google Maps (18 nov 2026): sin ficha de «Donde Robin»; pin de la dirección del PDF, Cra. 43 #53-51 (Parque del Periodista)",
+   "_matriz": "s_2f9c41f8"
+  },
+  "Librería Antimateria - Medellín": {
+   "short": "Librería Antimateria",
+   "city": "Medellín",
+   "lat": 6.2514371,
+   "lng": -75.5911408,
+   "address": "Calle 45E # 72–09, Medellín, Antioquia",
+   "_prec": "manual",
+   "_maps": "https://www.google.com/maps/place/Antimateria/@6.2514371,-75.5911408,17z",
+   "_match": "Google Maps (18 nov 2026), ficha «Antimateria»; coincide (<1 m) con el pin de la dirección «Cl. 45E #72-09» (el PDF dice Carrera 45E)",
+   "_matriz": "s_e1907155"
   }
  },
  "_avisos_id": [],
@@ -205,10 +240,10 @@
    "venue": "Perpetua Lab - Medellín",
    "has_qa": false,
    "_src": {
-    "url": "https://www.instagram.com/p/Df0rYtRxmgp/",
-    "lamina": "01.jpg",
-    "date": "2026-11-16",
-    "tipo": "festival-ig"
+    "url": "fuentes/under-2026/correo-2026-11-18/Programa_UNDER_Medellin_2026_def.pdf",
+    "lamina": "p. 2",
+    "date": "2026-11-18",
+    "tipo": "festival-mensaje"
    },
    "is_free": true,
    "is_cortos": true,
@@ -267,10 +302,10 @@
    "poster": "/assets/under-2026/las-muertes-mas-bellas-del-mundo.jpg",
    "posterSource": "tmdb",
    "_src": {
-    "url": "https://www.instagram.com/p/Df0rYtRxmgp/",
-    "lamina": "01.jpg",
-    "date": "2026-11-16",
-    "tipo": "festival-ig"
+    "url": "fuentes/under-2026/correo-2026-11-18/Programa_UNDER_Medellin_2026_def.pdf",
+    "lamina": "p. 2",
+    "date": "2026-11-18",
+    "tipo": "festival-mensaje"
    },
    "is_free": true,
    "lbSlug": "the-most-beautiful-deaths-in-the-world",
@@ -279,6 +314,106 @@
    "title_en": "The Most Beautiful Deaths In The World",
    "_fid": "f_35c9250f10",
    "id": "f_35c9250f10"
+  },
+  {
+   "title": "Bisou ACAB + Memoria colectiva + 8 metros: La palabra subterránea",
+   "type": "film",
+   "section": "🎬 Programación",
+   "country": "Francia, Perú, Argentina",
+   "flags": "🇫🇷🇵🇪🇦🇷",
+   "duration": "12 min",
+   "_ancla": [
+    "Bebop Bar - Medellín",
+    "2026-11-25",
+    "18:30"
+   ],
+   "day": "2026-11-25",
+   "time": "18:30",
+   "day_order": 0,
+   "venue": "Bebop Bar - Medellín",
+   "has_qa": false,
+   "_src": {
+    "url": "fuentes/under-2026/correo-2026-11-18/Programa_UNDER_Medellin_2026_def.pdf",
+    "lamina": "p. 2",
+    "date": "2026-11-18",
+    "tipo": "festival-mensaje"
+   },
+   "is_free": true,
+   "is_cortos": true,
+   "film_list": [
+    {
+     "title": "Bisou ACAB",
+     "director": "Guillermo Gallo",
+     "country": "Francia",
+     "flags": "🇫🇷",
+     "year": 2026,
+     "lbSlug": "bisou-acab",
+     "tmdb_id": 1788221
+    },
+    {
+     "title": "Memoria colectiva",
+     "director": "Cristina Colmenares",
+     "country": "Perú",
+     "flags": "🇵🇪",
+     "year": 2025,
+     "poster": "/assets/under-2026/memoria-colectiva.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "memoria-colectiva",
+     "tmdb_id": 1520364,
+     "synopsis": "En 1983, durante los días más oscuros del Conflicto Armado en el Perú, soldados enmascarados entraron a la casa de Adelina y se llevaron a su marido por la fuerza. Ella nunca lo volvería a ver. Después de toparse con el silencio y el desprecio de la policía y el ejército, Adelina une fuerzas con las muchas otras mujeres que perdieron a sus maridos e hijos a manos de soldados que se suponía debían protegerlas. Juntos, se unirán para encontrarlos y exigir justicia.",
+     "synopsis_en": "In 1983, during the darkest days of Peru’s Armed Conflict with the Shining Path, masked soldiers entered Adelina’s home and took her husband away. She would never see him again. After facing silence and contempt from the Police and Army, Adelina joins forces with the many other women who have lost their husbands and children to soldiers who were supposed to protect them. Together, they will unite to demand justice.",
+     "genre": "Animación",
+     "synopsis_lang": "es",
+     "duration": "12 min"
+    },
+    {
+     "title": "8 metros: La palabra subterránea",
+     "director": "Pablo Fernández Alberti",
+     "country": "Argentina",
+     "flags": "🇦🇷",
+     "year": 2026
+    }
+   ],
+   "_fid": "f_b5e0b64fe5",
+   "id": "f_b5e0b64fe5"
+  },
+  {
+   "title": "El coloquio de los pájaros",
+   "type": "film",
+   "section": "🎬 Programación",
+   "director": "Sofía Velázquez",
+   "year": 2026,
+   "country": "Perú",
+   "flags": "🇵🇪",
+   "duration": "60 min",
+   "genre": "Documental",
+   "_ancla": [
+    "Donde Robin - Medellín",
+    "2026-11-25",
+    "18:30"
+   ],
+   "day": "2026-11-25",
+   "time": "18:30",
+   "day_order": 0,
+   "venue": "Donde Robin - Medellín",
+   "has_qa": false,
+   "synopsis": "Había una vez un grupo de poetas anarquistas peruanos obligados a esconderse que, durante sus reuniones secretas, buscaban asumir una identidad no humana. Basándose en la famosa fábula persa del mismo nombre, el cineasta traduce el poder de la poesía y la amistad en imágenes y sonido, sirviendo como posturas defiantes contra el orden establecido.",
+   "synopsis_lang": "es",
+   "poster": "/assets/under-2026/el-coloquio-de-los-pajaros.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "fuentes/under-2026/correo-2026-11-18/Programa_UNDER_Medellin_2026_def.pdf",
+    "lamina": "p. 2",
+    "date": "2026-11-18",
+    "tipo": "festival-mensaje"
+   },
+   "is_free": true,
+   "lbSlug": "the-colloquium-of-the-birds",
+   "tmdb_id": 1657856,
+   "synopsis_en": "There was once a group of Peruvian anarchist poets forced into hiding who, during their secret meetings, sought to assume a non-human identity. Drawing on the famous Persian fable of the same name, the filmmaker translates the power of poetry and friendship into images and sound, serving as def iant stances against the established order.",
+   "title_en": "The Colloquium of the Birds",
+   "_fid": "f_cce7692fa3",
+   "id": "f_cce7692fa3"
   },
   {
    "title": "Programa 1",
@@ -298,10 +433,10 @@
    "venue": "Perpetua Lab - Medellín",
    "has_qa": false,
    "_src": {
-    "url": "https://www.instagram.com/p/Df0rYtRxmgp/",
-    "lamina": "02.jpg",
-    "date": "2026-11-16",
-    "tipo": "festival-ig"
+    "url": "fuentes/under-2026/correo-2026-11-18/Programa_UNDER_Medellin_2026_def.pdf",
+    "lamina": "p. 2",
+    "date": "2026-11-18",
+    "tipo": "festival-mensaje"
    },
    "is_free": true,
    "is_cortos": true,
@@ -339,7 +474,9 @@
      "country": "Estados Unidos",
      "flags": "🇺🇸",
      "year": 2026,
-     "duration": "3 min"
+     "duration": "3 min",
+     "poster": "/assets/under-2026/comb-story.jpg",
+     "posterSource": "oficial"
     },
     {
      "title": "Cyclotron",
@@ -387,7 +524,9 @@
      "country": "Australia",
      "flags": "🇦🇺",
      "year": 2025,
-     "duration": "10 min"
+     "duration": "10 min",
+     "poster": "/assets/under-2026/the-shapeshifter-s-lament.jpg",
+     "posterSource": "oficial"
     },
     {
      "title": "Teatime",
@@ -403,11 +542,49 @@
      "country": "Vietnam",
      "flags": "🇻🇳",
      "year": 2026,
-     "duration": "3 min"
+     "duration": "3 min",
+     "poster": "/assets/under-2026/rattling.jpg",
+     "posterSource": "editorial"
     }
    ],
    "_fid": "f_b16012428e",
    "id": "f_b16012428e"
+  },
+  {
+   "title": "Amor trava",
+   "type": "film",
+   "section": "🎬 Programación",
+   "director": "Lucrecia Mastrangelo",
+   "year": 2026,
+   "country": "Argentina",
+   "flags": "🇦🇷",
+   "duration": "67 min",
+   "_ancla": [
+    "Donde Robin - Medellín",
+    "2026-11-26",
+    "18:30"
+   ],
+   "day": "2026-11-26",
+   "time": "18:30",
+   "day_order": 1,
+   "venue": "Donde Robin - Medellín",
+   "has_qa": false,
+   "synopsis": "Amor Trava es el retrato de Aurora, adolescente en transición. Son parte de este documental sus proyectos a futuro, sus miedos y la relación con su mamá. Su vida está atravesada estéticamente por la cultura del Movimiento Ballroom, un espacio LGBTIQ+ de liberación y expresión a través del cual se busca dejar de esconder el cuerpo y reivindicar los derechos de la diversidad. La película está tamizada por la obra de Morena García, escritora y militante travesti/trans.",
+   "synopsis_lang": "es",
+   "poster": "/assets/under-2026/amor-trava.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "fuentes/under-2026/correo-2026-11-18/Programa_UNDER_Medellin_2026_def.pdf",
+    "lamina": "p. 2",
+    "date": "2026-11-18",
+    "tipo": "festival-mensaje"
+   },
+   "is_free": true,
+   "lbSlug": "amor-trava",
+   "tmdb_id": 1583322,
+   "synopsis_en": "Amor Trava is a portrait of Aurora, a teenager in transition. This documentary explores her future plans, her fears, and her relationship with her mother. Her life is aesthetically shaped by the Ballroom Movement, an LGBTQ+ space for liberation and expression that seeks to end the hiding of the body and reclaim the rights of diversity. The film is filtered through the work of Morena García, a transvestite/trans writer and activist.",
+   "_fid": "f_ce5fbe1a6d",
+   "id": "f_ce5fbe1a6d"
   },
   {
    "title": "Verdever",
@@ -427,17 +604,17 @@
    "venue": "Perpetua Lab - Medellín",
    "has_qa": false,
    "_src": {
-    "url": "https://www.instagram.com/p/Df0rYtRxmgp/",
-    "lamina": "03.jpg",
-    "date": "2026-11-16",
-    "tipo": "festival-ig"
+    "url": "fuentes/under-2026/correo-2026-11-18/Programa_UNDER_Medellin_2026_def.pdf",
+    "lamina": "p. 3",
+    "date": "2026-11-18",
+    "tipo": "festival-mensaje"
    },
    "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
      "title": "Elegy for the Lost",
-     "director": "William Hong-Xiao Wei",
+     "director": "William Hong-xiao Wei",
      "country": "Francia, España, Reino Unido",
      "flags": "🇫🇷🇪🇸🇬🇧",
      "year": 2025,
@@ -512,17 +689,17 @@
    "event_kind": "fiesta",
    "has_qa": false,
    "_src": {
-    "url": "https://www.instagram.com/p/Df0rYtRxmgp/",
-    "lamina": "04.jpg",
-    "date": "2026-11-16",
-    "tipo": "festival-ig"
+    "url": "fuentes/under-2026/correo-2026-11-18/Programa_UNDER_Medellin_2026_def.pdf",
+    "lamina": "p. 6",
+    "date": "2026-11-18",
+    "tipo": "festival-mensaje"
    },
    "is_free": false,
    "_fid": "f_3c01c359a6",
    "id": "f_3c01c359a6"
   },
   {
-   "title": "Orígenes de los lenguajes audiovisuales experimentales y laboratorio de creación",
+   "title": "Orígenes de los lenguajes experimentales y laboratorio de creación",
    "type": "event",
    "section": "🛠️ Actividad Creativa",
    "_ancla": [
@@ -537,10 +714,10 @@
    "event_kind": "charla taller",
    "has_qa": false,
    "_src": {
-    "url": "https://www.instagram.com/p/Df0rYtRxmgp/",
-    "lamina": "05.jpg",
-    "date": "2026-11-16",
-    "tipo": "festival-ig"
+    "url": "fuentes/under-2026/correo-2026-11-18/Programa_UNDER_Medellin_2026_def.pdf",
+    "lamina": "p. 6",
+    "date": "2026-11-18",
+    "tipo": "festival-mensaje"
    },
    "is_free": true,
    "requires_registration": true,
@@ -565,10 +742,10 @@
    "venue": "Perpetua Lab - Medellín",
    "has_qa": false,
    "_src": {
-    "url": "https://www.instagram.com/p/Df0rYtRxmgp/",
-    "lamina": "06.jpg",
-    "date": "2026-11-16",
-    "tipo": "festival-ig"
+    "url": "fuentes/under-2026/correo-2026-11-18/Programa_UNDER_Medellin_2026_def.pdf",
+    "lamina": "p. 3",
+    "date": "2026-11-18",
+    "tipo": "festival-mensaje"
    },
    "is_free": true,
    "is_cortos": true,
@@ -580,6 +757,8 @@
      "flags": "🇨🇴",
      "year": 2026,
      "duration": "10 min",
+     "poster": "/assets/under-2026/cosmopoetica-el-ciclo-de-vida-de-una-estrella-masiva.jpg",
+     "posterSource": "oficial",
      "synopsis": "Cosmopoética es un cortometraje experimental que explora la transformación y la vulnerabilidad del cambio. A partir del paralelo entre el ciclo vital de una estrella masiva y el proceso interior de una actriz que se despide del teatro, la obra propone una reflexión sobre los finales como origen de lo nuevo.",
      "synopsis_lang": "es"
     },
@@ -597,7 +776,9 @@
      "country": "Finlandia",
      "flags": "🇫🇮",
      "year": 2026,
-     "duration": "5 min"
+     "duration": "5 min",
+     "poster": "/assets/under-2026/fata-morgana.jpg",
+     "posterSource": "oficial"
     },
     {
      "title": "Ghost Noon",
@@ -612,7 +793,7 @@
     },
     {
      "title": "Spheres",
-     "director": "Marlin Gerigk",
+     "director": "Martin Gerigk",
      "country": "Alemania",
      "flags": "🇩🇪",
      "year": 2026,
@@ -624,7 +805,7 @@
      "synopsis_en": "Spheres is an homage to life, a poetic essay that drifts through a series of expanding spheres, each revealing a different layer of our shared reality, from the microscopic to the mythical. The film is an exploration of how the smallest vibrations of existence echo outward into the vast architecture of being and cosmos, a breathing meditation designed to remind us of the wonders of our incomprehensibly beautiful world. Spheres invites viewers to look closely, to listen deeply, and to remember that every sphere - no matter how small or vast - is part of one continuous unfolding. The film is an invitation to see life not as a ladder but as a constellation of spheres: interdependent, fragile, and astonishing."
     },
     {
-     "title": "Und ich behaupte",
+     "title": "Und Ich behaupte",
      "director": "Patrick Müller",
      "country": "Alemania",
      "flags": "🇩🇪",
@@ -656,7 +837,7 @@
    "id": "f_10c4601d21"
   },
   {
-   "title": "Hacerlo Sin Permiso. Laboratorio de Apropiación",
+   "title": "Hacerlo sin permiso. Laboratorio de apropiación",
    "type": "event",
    "section": "💬 Actividad Académica",
    "_ancla": [
@@ -671,17 +852,17 @@
    "event_kind": "charla taller",
    "has_qa": false,
    "_src": {
-    "url": "https://www.instagram.com/p/Df0rYtRxmgp/",
-    "lamina": "07.jpg",
-    "date": "2026-11-16",
-    "tipo": "festival-ig"
+    "url": "fuentes/under-2026/correo-2026-11-18/Programa_UNDER_Medellin_2026_def.pdf",
+    "lamina": "p. 6",
+    "date": "2026-11-18",
+    "tipo": "festival-mensaje"
    },
    "is_free": true,
    "_fid": "f_a8ceaa3b53",
    "id": "f_a8ceaa3b53"
   },
   {
-   "title": "Función sorpresa",
+   "title": "Proyección sorpresa",
    "type": "event",
    "section": "💬 Actividad Académica",
    "_ancla": [
@@ -696,20 +877,448 @@
    "event_kind": "función sorpresa",
    "has_qa": false,
    "_src": {
-    "url": "https://www.instagram.com/p/Df0rYtRxmgp/",
-    "lamina": "07.jpg",
-    "date": "2026-11-16",
-    "tipo": "festival-ig"
+    "url": "fuentes/under-2026/correo-2026-11-18/Programa_UNDER_Medellin_2026_def.pdf",
+    "lamina": "p. 6",
+    "date": "2026-11-18",
+    "tipo": "festival-mensaje"
    },
    "is_free": true,
    "_fid": "f_8f5e23568b",
    "id": "f_8f5e23568b"
+  },
+  {
+   "title": "Jubiladxs le enseñan + Norma también + To the rhythm of love and hate",
+   "type": "film",
+   "section": "🎬 Programación",
+   "country": "Argentina, Puerto Rico",
+   "flags": "🇦🇷🇵🇷",
+   "duration": "104 min",
+   "_ancla": [
+    "Bebop Bar - Medellín",
+    "2026-12-01",
+    "18:00"
+   ],
+   "day": "2026-12-01",
+   "time": "18:00",
+   "day_order": 6,
+   "venue": "Bebop Bar - Medellín",
+   "has_qa": false,
+   "_src": {
+    "url": "fuentes/under-2026/correo-2026-11-18/Programa_UNDER_Medellin_2026_def.pdf",
+    "lamina": "p. 4",
+    "date": "2026-11-18",
+    "tipo": "festival-mensaje"
+   },
+   "is_free": true,
+   "is_cortos": true,
+   "film_list": [
+    {
+     "title": "Jubiladxs le enseñan",
+     "director": "Silbando Bembas",
+     "country": "Argentina",
+     "flags": "🇦🇷",
+     "year": 2025,
+     "poster": "/assets/under-2026/jubiladxs-le-ensenan.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "jubiladxs-le-ensenan",
+     "tmdb_id": 1700468,
+     "synopsis": "Ni los agravios del presidente y los ministros ni las vallas policiales ni la represión sistemática. No hay nada que frene la marcha que, cada semana desde hace más de dos años, realizan los jubiladxs al Congreso contra la destrucción de sus ingresos. Allí están cada miércoles Zulema, Eduardo y Carlos. A través de su testimonio y su organización, la movilización de lxs jubilados reconoce sus raíces en una larga tradición de luchas obreras, y se proyecta hacia el futuro, como un faro para las peleas en defensa de las conquistas populares.",
+     "synopsis_lang": "es",
+     "duration": "30 min"
+    },
+    {
+     "title": "Norma también",
+     "director": "Natalia Andrea Vinelli, Alejandra Guzzo",
+     "country": "Argentina",
+     "flags": "🇦🇷",
+     "year": 2025,
+     "poster": "/assets/under-2026/norma-tambien.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "norma-tambien",
+     "tmdb_id": 1533167,
+     "synopsis": "Norma También es un retrato de Norma Pla a través del viaje de investigación de Solve, una estudiante feminista de Ciencias Sociales. Fascinada por la figura desafiante de Norma, quien lideró la lucha por los derechos de jubiladas y jubilados en los años 90 frente a reformas neoliberales, Solve explora su legado mediante encuentros, entrevistas y material de archivo. ¿Quién fue esta mujer que, desafiando el individualismo de la época, impulsó las primeras protestas durante los años de espejismo neoliberal? A la manera de bitácora, la estudiante va tejiendo lazos entre generaciones que hablan de un feminismo popular. La imagen de Norma se va construyendo de a poco, a través de conversaciones con la generación que la conoció, otra más joven que encuentra en ella una fuente de inspiración y el material de archivo. El documental revive sus protestas y revaloriza su compromiso, subrayando su importancia en el contexto actual y trazando paralelismos entre los 90 y el presente.",
+     "synopsis_en": "A portrait of Norma Pla through the research journey of Solve, a feminist social science student. Fascinated by the defiant figure of Norma, who led the fight for pensioners' rights in the 1990s against neoliberal reforms, Solve explores her legacy through encounters, interviews, and archival material.",
+     "genre": "Documental",
+     "synopsis_lang": "es",
+     "duration": "74 min"
+    },
+    {
+     "title": "To the rhythm of love and hate: A punkumentary on salsa with the Macabeo Orchestra",
+     "director": "Nelson Varas-Díaz",
+     "country": "Puerto Rico",
+     "flags": "🇵🇷",
+     "year": 2026
+    }
+   ],
+   "_fid": "f_d1f628382b",
+   "id": "f_d1f628382b"
+  },
+  {
+   "title": "Una Persona Distinta + 5 Obras",
+   "type": "film",
+   "section": "🎬 Programación",
+   "country": "Argentina, Alemania, Estados Unidos, Irán, Albania, Colombia",
+   "flags": "🇦🇷🇩🇪🇺🇸🇮🇷🇦🇱🇨🇴",
+   "duration": "22 min",
+   "_ancla": [
+    "Librería Antimateria - Medellín",
+    "2026-12-01",
+    "18:30"
+   ],
+   "day": "2026-12-01",
+   "time": "18:30",
+   "day_order": 6,
+   "venue": "Librería Antimateria - Medellín",
+   "has_qa": false,
+   "_src": {
+    "url": "fuentes/under-2026/correo-2026-11-18/Programa_UNDER_Medellin_2026_def.pdf",
+    "lamina": "p. 4",
+    "date": "2026-11-18",
+    "tipo": "festival-mensaje"
+   },
+   "is_free": true,
+   "is_cortos": true,
+   "film_list": [
+    {
+     "title": "Una persona distinta",
+     "director": "Sergio Quatraro",
+     "country": "Argentina",
+     "flags": "🇦🇷",
+     "year": 2026
+    },
+    {
+     "title": "Atombombenabend",
+     "director": "Thorsten Fleisch",
+     "country": "Alemania",
+     "flags": "🇩🇪",
+     "year": 2026
+    },
+    {
+     "title": "Binary",
+     "director": "Padrick Ritch",
+     "country": "Estados Unidos",
+     "flags": "🇺🇸",
+     "year": 2026
+    },
+    {
+     "title": "Distillery Dance",
+     "director": "Elly Moghtaderi",
+     "country": "Irán",
+     "flags": "🇮🇷",
+     "year": 2026,
+     "poster": "/assets/under-2026/distillery-dance.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "distillery-dance",
+     "tmdb_id": 1720676,
+     "synopsis_en": "Distillery dance is a forgotten corporate movement, an occultic ritual, invented to prevent the act of diary contraction.",
+     "genre": "Misterio",
+     "duration": "7 min"
+    },
+    {
+     "title": "Echoes of a zephyr",
+     "director": "Josh Weissbach",
+     "country": "Albania",
+     "flags": "🇦🇱",
+     "year": 2025,
+     "poster": "/assets/under-2026/echoes-of-a-zephyr.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "echoes-of-a-zephyr",
+     "tmdb_id": 1717072
+    },
+    {
+     "title": "Chaika",
+     "director": "Ingrid Paola Bonilla Rodriguez",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "year": 2025,
+     "poster": "/assets/under-2026/chaika.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "chaika-2025",
+     "tmdb_id": 1689999,
+     "synopsis": "Valentina, una cosmonauta rusa de 76 años, llega a una Cuba ucrónica y nebulosa tras recibir, con treinta años de retraso, una invitación para una expedición agrícola a Marte. Entre paisajes difusos y promesas del pasado, busca las ruinas de un futuro que nunca llegó.",
+     "genre": "Ciencia Ficción",
+     "synopsis_lang": "es",
+     "duration": "15 min"
+    }
+   ],
+   "_fid": "f_4902e17978",
+   "id": "f_4902e17978"
+  },
+  {
+   "title": "Cut your wings and fly + Quizás nunca + Mall + Shell Shock O'K",
+   "type": "film",
+   "section": "🎬 Programación",
+   "country": "Estados Unidos, Argentina, España, Alemania, Ucrania",
+   "flags": "🇺🇸🇦🇷🇪🇸🇩🇪🇺🇦",
+   "duration": "8 min",
+   "_ancla": [
+    "Librería Antimateria - Medellín",
+    "2026-12-02",
+    "18:30"
+   ],
+   "day": "2026-12-02",
+   "time": "18:30",
+   "day_order": 7,
+   "venue": "Librería Antimateria - Medellín",
+   "has_qa": false,
+   "_src": {
+    "url": "fuentes/under-2026/correo-2026-11-18/Programa_UNDER_Medellin_2026_def.pdf",
+    "lamina": "p. 5",
+    "date": "2026-11-18",
+    "tipo": "festival-mensaje"
+   },
+   "is_free": true,
+   "is_cortos": true,
+   "film_list": [
+    {
+     "title": "Cut your wings and fly",
+     "director": "Meryem Lahlou",
+     "country": "Estados Unidos",
+     "flags": "🇺🇸",
+     "year": 2026
+    },
+    {
+     "title": "Quizás nunca",
+     "director": "Loana Isabel Pagani",
+     "country": "Argentina",
+     "flags": "🇦🇷",
+     "year": 2026,
+     "poster": "/assets/under-2026/quizas-nunca.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "maybe-never",
+     "tmdb_id": 1749719,
+     "synopsis_en": "Two strangers cross paths several times before meeting at a party. There, music allows them to dance and their movements travel to their previous encounters. A subtle play that remains unnoticed in everyday life emerges.",
+     "title_en": "Maybe Never",
+     "duration": "8 min"
+    },
+    {
+     "title": "Mall",
+     "director": "Frida Balca",
+     "country": "España",
+     "flags": "🇪🇸",
+     "year": 2026
+    },
+    {
+     "title": "Shell Shock O'K",
+     "director": "Dmytro Grynov",
+     "country": "Alemania, Ucrania",
+     "flags": "🇩🇪🇺🇦",
+     "year": 2026
+    }
+   ],
+   "_fid": "f_7217be4ce5",
+   "id": "f_7217be4ce5"
+  },
+  {
+   "title": "A Perfect Maryam + Pluvia + Sinforme sinfinal + Les Voyageurs",
+   "type": "film",
+   "section": "🎬 Programación",
+   "country": "Irán, Estados Unidos, España, Perú, Camerún",
+   "flags": "🇮🇷🇺🇸🇪🇸🇵🇪🇨🇲",
+   "duration": "85 min",
+   "_ancla": [
+    "Perpetua Lab - Medellín",
+    "2026-12-02",
+    "19:00"
+   ],
+   "day": "2026-12-02",
+   "time": "19:00",
+   "day_order": 7,
+   "venue": "Perpetua Lab - Medellín",
+   "has_qa": false,
+   "_src": {
+    "url": "fuentes/under-2026/correo-2026-11-18/Programa_UNDER_Medellin_2026_def.pdf",
+    "lamina": "p. 5",
+    "date": "2026-11-18",
+    "tipo": "festival-mensaje"
+   },
+   "is_free": true,
+   "is_cortos": true,
+   "film_list": [
+    {
+     "title": "A Perfect Maryam",
+     "director": "Solmaz Etemadzadeh, Ara Torosian",
+     "country": "Irán, Estados Unidos",
+     "flags": "🇮🇷🇺🇸",
+     "year": 2025
+    },
+    {
+     "title": "Pluvia",
+     "director": "Iñigo Floristán",
+     "country": "España",
+     "flags": "🇪🇸",
+     "year": 2025,
+     "poster": "/assets/under-2026/pluvia.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "pluvia-2026",
+     "tmdb_id": 1688274,
+     "synopsis": "En un entorno rural marcado por la tradición, Nerea —agricultora por herencia, no por elección— convive con un padre rígido y una madre conciliadora, atrapada en una rutina sin margen de decisión; entre entrevistas y momentos cotidianos afloran tensiones silenciosas, hasta que la lluvia trae su única tregua emocional.",
+     "genre": "Drama",
+     "synopsis_lang": "es",
+     "duration": "11 min"
+    },
+    {
+     "title": "Sinforme sinfinal",
+     "director": "Patricio Lagos",
+     "country": "Perú",
+     "flags": "🇵🇪",
+     "year": 2026,
+     "poster": "/assets/under-2026/sinforme-sinfinal.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "sinforme-sinfinal",
+     "tmdb_id": 1719008,
+     "synopsis_en": "A counter-fictional document about the last days of a country with a bad dream and the possibilities it left behind.",
+     "genre": "Documental",
+     "duration": "14 min"
+    },
+    {
+     "title": "Les Voyageurs",
+     "director": "David Bingong",
+     "country": "Camerún, España",
+     "flags": "🇨🇲🇪🇸",
+     "year": 2025,
+     "poster": "/assets/under-2026/les-voyageurs.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "the-travelers-2025",
+     "tmdb_id": 1463516,
+     "synopsis": "En la frontera entre Marruecos y España, aguardamos impacientes el boza – la travesía a Europa. Entre los sucesivos intentos fallidos, sobrevivimos, y yo, como el «artista», debo mantener viva la llama de la esperanza del grupo. Con una cámara y un puñado de canciones, hicimos juntos esta película.",
+     "synopsis_en": "On the border between Morocco and Spain, a group of travelers is eagerly waiting to cross over to Europe.",
+     "title_en": "The Travelers",
+     "genre": "Documental",
+     "synopsis_lang": "es",
+     "duration": "60 min"
+    }
+   ],
+   "_fid": "f_1c57034eb1",
+   "id": "f_1c57034eb1"
+  },
+  {
+   "title": "Tuktu, Padre Maíz + 7 Obras",
+   "type": "film",
+   "section": "🎬 Programación",
+   "country": "Colombia, Turquía, Argentina, Italia, Alemania, India",
+   "flags": "🇨🇴🇹🇷🇦🇷🇮🇹🇩🇪🇮🇳",
+   "duration": "129 min",
+   "_ancla": [
+    "Perpetua Lab - Medellín",
+    "2026-12-03",
+    "19:00"
+   ],
+   "day": "2026-12-03",
+   "time": "19:00",
+   "day_order": 8,
+   "venue": "Perpetua Lab - Medellín",
+   "has_qa": false,
+   "_src": {
+    "url": "fuentes/under-2026/correo-2026-11-18/Programa_UNDER_Medellin_2026_def.pdf",
+    "lamina": "p. 5",
+    "date": "2026-11-18",
+    "tipo": "festival-mensaje"
+   },
+   "is_free": true,
+   "is_cortos": true,
+   "film_list": [
+    {
+     "title": "Tuktu, padre maíz",
+     "director": "Mauricio Prieto Muriel",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "year": 2026,
+     "poster": "/assets/under-2026/tuktu-padre-maiz.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "tuktu-father-maize",
+     "tmdb_id": 1592955,
+     "synopsis": "En las montañas de Colombia, Juan, un niño mestizo de 13 años, se ve obligado a huir del monstruo de la guerra. En su travesía, la tierra misma lo protege y, guiado por las voces de sus ancestros, despierta un poder ancestral llamado Tucuna, que le permite transformarse y renacer. Convertido en Tuktu, un Taita de fuerza extraordinaria, comprende que su destino no es solo sobrevivir, sino regresar para sanar la herida de la guerra y sembrar la paz en la tierra que lo vio nacer.",
+     "synopsis_en": "In the mountains of Colombia, Juan, a 13-year-old indigenous peasant boy, is forced to flee from the monster of war. In his escape, between the whistling of bullets and the guidance of his ancestors, he awakens an ancestral power that transforms him into Tuktu: a Taita of extraordinary strength destined to return to sow the peace of the earth.",
+     "title_en": "Tuktu, Father Maize",
+     "genre": "Animación",
+     "synopsis_lang": "es",
+     "duration": "13 min"
+    },
+    {
+     "title": "Salman Wants to Go",
+     "director": "Ozan Takış",
+     "country": "Turquía",
+     "flags": "🇹🇷",
+     "year": 2025,
+     "poster": "/assets/under-2026/salman-wants-to-go.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "salman-wants-to-go",
+     "tmdb_id": 1569734,
+     "synopsis_en": "Salmane is a Senegalese refugee living in Turkey. He dreams of moving to Europe, continuing his unfinished university life and supporting his family financially. During his time in Turkey, he works in different jobs and saves money to go to Europe. He makes several attempts to cross into Europe via Greece, but each time he is beaten and sent back to Turkey. Salmane, who disappeared on the day his documentary was shot, is never heard from again. While following Salmane's own text, the film unearths the memories he left behind with the help of the memories on his phone.",
+     "genre": "Documental",
+     "duration": "20 min"
+    },
+    {
+     "title": "Esas ruinas",
+     "director": "Gabriel Piñeiro",
+     "country": "Argentina",
+     "flags": "🇦🇷",
+     "year": 2023
+    },
+    {
+     "title": "Quisiera volverme río",
+     "director": "Susana Parejas",
+     "country": "Argentina",
+     "flags": "🇦🇷",
+     "year": 2024
+    },
+    {
+     "title": "Lo que aún queda de mí",
+     "director": "Elena Bursztein",
+     "country": "Argentina",
+     "flags": "🇦🇷",
+     "year": 2026
+    },
+    {
+     "title": "Mamma",
+     "director": "Mike Montagna",
+     "country": "Italia",
+     "flags": "🇮🇹",
+     "year": 2025
+    },
+    {
+     "title": "Analogue natives",
+     "director": "Bernd Lützeler",
+     "country": "Alemania, India",
+     "flags": "🇩🇪🇮🇳",
+     "year": 2025,
+     "poster": "/assets/under-2026/analogue-natives.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "analogue-natives",
+     "tmdb_id": 1543512,
+     "synopsis": "Este documental experimental gira en torno a entrevistas con cuatro veteranos que trabajaron toda su vida en estudios de animación y laboratorios de cine analógico (celuloide) en Bombay, y que perdieron sus negocios y empleos entre 2012 y 2014, cuando la industria cinematográfica en hindi sufrió una drástica transición hacia la producción digital. Ellos reflexionan sobre la pérdida de su oficio, pero también sobre las filosofías detrás de su práctica cinematográfica artesanal frente a las soluciones digitales prefabricadas. Mientras el filme deriva hacia diversos escenarios conexos y ajenos, rodados en las calles de Bombay, nos adentramos en el arte de vivir y trabajar bajo condiciones precarias en la India, así como en las estrategias de supervivencia en una de las ciudades más masificadas y comerciales del mundo. Finalmente, todo deriva en un fútil collage de nostalgia y recuerdos, mezclado con la estética absurda de la basura (slop) generada por inteligencia artificial. Un documental expandido de múltiples géneros concebido bajo las limitaciones de la llamada Fórmula Masala, popularmente conocida dentro del cine indio.",
+     "synopsis_en": "This experimental documentary circulates around interviews with four veterans who worked all their lives in analogue (=celluloid) film laboratories and animation studios in Mumbai, and who all lost their businesses and jobs around 2012–14, when the Hindi film industry went through a drastic shift to digital production. They reflect on the loss of their craftsmanship, but also on the philosophies of their handmade film practice versus readymade digital solutions. While the film drifts into various related and unrelated scenarios, shot on the streets of Mumbai, we learn about the art of living and working under precarious conditions in India and survival strategies in one of the most crowded and commercial cities in the world. Finally everything results in a futile collage of nostalgia and memories, mashed up with the absurd aesthetics of AI slop.  An expanded multi-genre documentary within the constraints of the so-called Masala Formula, popularly known from Indian cinema.",
+     "genre": "Documental",
+     "synopsis_lang": "es",
+     "duration": "26 min"
+    },
+    {
+     "title": "Vlasta, el recuerdo no es eterno",
+     "director": "Candela Vey, Tino Pereira",
+     "country": "Argentina",
+     "flags": "🇦🇷",
+     "year": 2025,
+     "poster": "/assets/under-2026/vlasta-el-recuerdo-no-es-eterno.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "vlasta-the-memory-is-not-everlasting",
+     "tmdb_id": 1058532,
+     "synopsis": "Al momento de realizar su primer film en 1960, Vlasta Lah era la única mujer directora de un largometraje sonoro en Argentina. Su camino fue arduo y extenso: de su infancia en un país desmembrado por la guerra a su formación en el Centro Sperimentale di Cinematografia de Roma, hasta arribar a Argentina huyendo de otra guerra para convertirse en la más importante asistente de dirección de los Estudios San Miguel. A partir de su correspondencia personal y a través una investigación detectivesca, su nombre será recuperado del olvido.",
+     "synopsis_en": "When she made her first film in 1960, Vlasta Lah was the only woman to direct a sound feature film in Argentina. Her path was arduous and long: from her childhood in a country torn apart by war to her training at the Centro Sperimentale di Cinematografia in Rome, to her arrival in Argentina fleeing another war, where she became the most important assistant director at Estudios San Miguel. Through her personal correspondence and a meticulous investigation, her name will be rescued from oblivion.",
+     "title_en": "Vlasta, The Memory Is Not Everlasting",
+     "genre": "Documental",
+     "synopsis_lang": "es",
+     "duration": "70 min"
+    }
+   ],
+   "_fid": "f_45277f787e",
+   "id": "f_45277f787e"
   }
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-17T09:43:12",
-  "plan_sha": "86fa55380c1a201e",
+  "fecha": "2026-11-18T18:11:35",
+  "plan_sha": "4b92e840958da344",
   "paso": 4,
   "cmd": "python3 pipeline/under-2026-verificar.py"
  }

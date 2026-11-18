@@ -1,0 +1,30 @@
+{
+ "_provenance": {
+  "fuente": "afiches que mandó el festival en el correo del 18 nov 2026 (zips de obra + IMG-20261117-WA0014.jpg = afiche de Cosmopoética), MIRADOS uno por uno",
+  "capturado": "2026-11-18",
+  "regla": "solo donde TMDB no tiene afiche; Antifragility no trae afiche (solo fotogramas) y no se usa ninguno; el «Poster» de Teatime es un fotograma 16:9 sin título: no se usa"
+ },
+ "afiches": {
+  "Rattling": {
+   "archivo": "fuentes/under-2026/correo-2026-11-18/unz/Rattilng/Poster b23c6e015e-poster.jpg",
+   "fuente": "afiche oficial enviado por el festival (correo 18 nov 2026) — horizontal con el título pintado: va entero (editorial)",
+   "editorial": true
+  },
+  "Fata Morgana": {
+   "archivo": "fuentes/under-2026/correo-2026-11-18/unz/fata morgana/Poster 53463d2ae0-poster.jpg",
+   "fuente": "afiche oficial enviado por el festival (correo 18 nov 2026)"
+  },
+  "Comb story": {
+   "archivo": "fuentes/under-2026/correo-2026-11-18/unz/Combstory/Poster e413cdeacc-poster.jpg",
+   "fuente": "afiche oficial enviado por el festival (correo 18 nov 2026)"
+  },
+  "The Shapeshifter's lament": {
+   "archivo": "fuentes/under-2026/correo-2026-11-18/unz/The Shapeshifter's Lament/Poster 11160ca52e-poster.jpg",
+   "fuente": "afiche oficial enviado por el festival (correo 18 nov 2026)"
+  },
+  "Cosmopoética: el ciclo de vida de una estrella masiva": {
+   "archivo": "fuentes/under-2026/correo-2026-11-18/IMG-20261117-WA0014.jpg",
+   "fuente": "afiche oficial enviado por el festival (correo 18 nov 2026)"
+  }
+ }
+}
