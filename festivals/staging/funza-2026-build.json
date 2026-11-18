@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "Agenda general actualizada del IV Festival de Cine (PDF del festival a Juan, 25 oct 2026)",
-  "capturado": "2026-11-14",
+  "capturado": "2026-11-18",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_secciones": "Sección = el «Componente» de la agenda, verbatim y en caja de Título (pedido de Juan, 25 oct).",
@@ -25,6 +25,9 @@
  "_por_que_acceso": "Sin `ticketing_model`: ninguna función dice que se pague. El acceso va declarado en `_acceso` del crudo.",
  "_fuentes_versionadas": {
   "festivals/staging/funza-2026-radar.json": "el volcado del radar #1261"
+ },
+ "radar_salas_ok": {
+  "Auditorio Complejo Cultural": "lámina del evento inaugural del 18 nov (FB del Bacatá): ya pasó; en la app queda como la agenda, en el Centro Cultural Bacatá"
  },
  "prioLimit": 3,
  "dias": [
@@ -105,28 +108,28 @@
    "archetype": "Especiales / Eventos",
    "order": 2
   },
+  "🛠️ Formación Especializada": {
+   "en": "Specialized Training",
+   "archetype": "Charlas / Industria",
+   "order": 3
+  },
   "💬 Conversatorio": {
    "en": "Talk",
    "archetype": "Charlas / Industria",
-   "order": 3
+   "order": 4
   },
   "🎞️ Exhibición Cinematográfica": {
    "en": "Film Screening",
    "archetype": "Muestra / País",
-   "order": 4
+   "order": 5
   },
   "🤝 Encuentro Departamental": {
    "en": "Departmental Meeting",
    "archetype": "Charlas / Industria",
-   "order": 5
+   "order": 6
   },
   "📡 Comunicaciones": {
    "en": "Communications",
-   "archetype": "Charlas / Industria",
-   "order": 6
-  },
-  "🛠️ Formación Especializada": {
-   "en": "Specialized Training",
    "archetype": "Charlas / Industria",
    "order": 7
   },
@@ -165,7 +168,35 @@
    "lng": -74.2129375,
    "address": "Cra. 13 #12-55, Funza",
    "_prec": "manual",
-   "_match": "Google Maps «Instituto Centro Cultural Bacatá» (25 oct 2026), Cra. 13 #12-55, Funza (491 opiniones). Sede única según el afiche oficial. OJO: Nominatim/OSM pone un edificio «Centro Cultural Bacatá» en la Calle 18 (4.71662,-74.20628), ~730 m al este: no se usa (regla Google Maps primero)."
+   "_match": "Google Maps «Instituto Centro Cultural Bacatá» (25 oct 2026), Cra. 13 #12-55, Funza (491 opiniones). Sede única según el afiche oficial. OJO: Nominatim/OSM pone un edificio «Centro Cultural Bacatá» en la Calle 18 (4.71662,-74.20628), ~730 m al este: no se usa (regla Google Maps primero).",
+   "_matriz": "s_ba748121"
+  },
+  "Institución Educativa Ágora - Funza": {
+   "short": "Institución Educativa Ágora",
+   "city": "Funza",
+   "lat": 4.7152567,
+   "lng": -74.2124986,
+   "address": "Calle 13 #12-21, Funza",
+   "_prec": "manual",
+   "_match": "Google Maps «Institución educativa ágora» (18 nov 2026); dirección de la lámina del Bacatá"
+  },
+  "Colegio de Valores Humanos Sathya Sai - Funza": {
+   "short": "Colegio de Valores Humanos Sathya Sai",
+   "city": "Funza",
+   "lat": 4.7097183,
+   "lng": -74.1971832,
+   "address": "Carrera 2b #25-15, Funza",
+   "_prec": "manual",
+   "_match": "Google Maps «Colegio De Valores Humanos Sathya Sai» (18 nov 2026); dirección de la lámina del Bacatá"
+  },
+  "CITI - Funza": {
+   "short": "CITI",
+   "city": "Funza",
+   "lat": 4.7164543,
+   "lng": -74.2121741,
+   "address": "Parque principal Capitán Ernesto Esguerra Cubides, Funza",
+   "_prec": "manual",
+   "_match": "Google Maps no tiene ficha del CITI; la lámina lo ubica en el parque principal: pin de «Parque Principal de Funza - Parque Capitán Ernesto Esguerra Cubides» (18 nov 2026)"
   },
   "Biblioteca de Ciudad Universitaria - Funza": {
    "short": "Biblioteca de Ciudad Universitaria",
@@ -174,7 +205,8 @@
    "lng": -74.2062933,
    "address": "Ciudad Universitaria, Funza",
    "_prec": "manual",
-   "_match": "Google Maps no tiene ficha «Biblioteca de Ciudad Universitaria»; la Ciudad Universitaria de Funza es el campus de la Universidad Colegio Mayor de Cundinamarca (Google Maps, 14 nov 2026): pin del campus"
+   "_match": "Google Maps no tiene ficha «Biblioteca de Ciudad Universitaria»; la Ciudad Universitaria de Funza es el campus de la Universidad Colegio Mayor de Cundinamarca (Google Maps, 14 nov 2026): pin del campus",
+   "_matriz": "s_f9f4208c"
   }
  },
  "_avisos_id": [],
@@ -440,6 +472,204 @@
     "event_kind": {
      "tipo": "festival-web",
      "fecha": "2026-10-25"
+    }
+   }
+  },
+  {
+   "title": "Taller: Stop motion",
+   "type": "event",
+   "section": "🛠️ Formación Especializada",
+   "duration": "120 min",
+   "_ancla": [
+    "Institución Educativa Ágora - Funza",
+    "2026-11-19",
+    "08:00"
+   ],
+   "day": "2026-11-19",
+   "time": "08:00",
+   "day_order": 1,
+   "venue": "Institución Educativa Ágora - Funza",
+   "event_kind": "taller",
+   "has_qa": false,
+   "_src": {
+    "url": "https://www.facebook.com/centroculturalbacatadefunza/posts/pfbid027eBYyM9iqPAX24HW8mLWyp8zyVTzZJPpm9vHUoLjdwm6Tdsb6HAhZmmVuvqfPj6Nl",
+    "date": "2026-11-18",
+    "tipo": "festival-redes",
+    "lamina": "02"
+   },
+   "description": "Con Hellsy Piraguata.",
+   "description_lang": "es",
+   "_fid": "f_10d1910d0b",
+   "id": "f_10d1910d0b",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-18"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-18"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-18"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-18"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-18"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-18"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-18"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-18"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-18"
+    }
+   }
+  },
+  {
+   "title": "Taller: Maquillaje para efectos especiales",
+   "type": "event",
+   "section": "🛠️ Formación Especializada",
+   "duration": "120 min",
+   "_ancla": [
+    "Colegio de Valores Humanos Sathya Sai - Funza",
+    "2026-11-19",
+    "09:00"
+   ],
+   "day": "2026-11-19",
+   "time": "09:00",
+   "day_order": 1,
+   "venue": "Colegio de Valores Humanos Sathya Sai - Funza",
+   "event_kind": "taller",
+   "has_qa": false,
+   "_src": {
+    "url": "https://www.facebook.com/centroculturalbacatadefunza/posts/pfbid027eBYyM9iqPAX24HW8mLWyp8zyVTzZJPpm9vHUoLjdwm6Tdsb6HAhZmmVuvqfPj6Nl",
+    "date": "2026-11-18",
+    "tipo": "festival-redes",
+    "lamina": "03"
+   },
+   "description": "Con Marcela Moreno.",
+   "description_lang": "es",
+   "_fid": "f_d711a56758",
+   "id": "f_d711a56758",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-18"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-18"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-18"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-18"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-18"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-18"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-18"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-18"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-18"
+    }
+   }
+  },
+  {
+   "title": "Taller: Realidad virtual",
+   "type": "event",
+   "section": "🛠️ Formación Especializada",
+   "duration": "120 min",
+   "_ancla": [
+    "CITI - Funza",
+    "2026-11-19",
+    "09:00"
+   ],
+   "day": "2026-11-19",
+   "time": "09:00",
+   "day_order": 1,
+   "venue": "CITI - Funza",
+   "event_kind": "taller",
+   "has_qa": false,
+   "_src": {
+    "url": "https://www.facebook.com/centroculturalbacatadefunza/posts/pfbid027eBYyM9iqPAX24HW8mLWyp8zyVTzZJPpm9vHUoLjdwm6Tdsb6HAhZmmVuvqfPj6Nl",
+    "date": "2026-11-18",
+    "tipo": "festival-redes",
+    "lamina": "04"
+   },
+   "description": "Con Édgar Medina.",
+   "description_lang": "es",
+   "_fid": "f_a7d3726ac1",
+   "id": "f_a7d3726ac1",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-18"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-18"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-18"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-18"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-18"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-18"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-18"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-18"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-18"
     }
    }
   },
@@ -725,72 +955,6 @@
      "tipo": "juan",
      "fecha": "2026-11-11",
      "frase": "en el desktop algo que envió Funza para cargar en la app"
-    },
-    "type": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-25"
-    },
-    "event_kind": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-25"
-    }
-   }
-  },
-  {
-   "title": "Taller efectos especiales o stop motion",
-   "type": "event",
-   "section": "🛠️ Formación Especializada",
-   "duration": "120 min",
-   "_ancla": [
-    "Centro Cultural Bacatá - Funza",
-    "2026-11-20",
-    "10:00"
-   ],
-   "day": "2026-11-20",
-   "time": "10:00",
-   "day_order": 2,
-   "venue": "Centro Cultural Bacatá - Funza",
-   "event_kind": "taller",
-   "has_qa": false,
-   "_src": {
-    "url": "fuentes/funza-2026/agenda-2026.pdf",
-    "date": "2026-10-25",
-    "tipo": "festival-mensaje",
-    "fila": "10:00 a. m. – 12:00 m. · Taller efectos especiales o stop motion"
-   },
-   "description": "Taller práctico con artista independiente.",
-   "description_lang": "es",
-   "_fid": "f_d4b8c8edb2",
-   "id": "f_d4b8c8edb2",
-   "is_free": true,
-   "_procedencia": {
-    "day": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-25"
-    },
-    "time": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-25"
-    },
-    "venue": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-25"
-    },
-    "duration": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-25"
-    },
-    "entrada": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-25"
-    },
-    "has_qa": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-25"
-    },
-    "title": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-25"
     },
     "type": {
      "tipo": "festival-web",
@@ -1543,8 +1707,8 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-14T13:15:39",
-  "plan_sha": "f21069d77d607207",
+  "fecha": "2026-11-18T17:52:46",
+  "plan_sha": "1e679e89c8d991cf",
   "paso": 6,
   "cmd": "python3 pipeline/funza-2026-verificar.py"
  }

@@ -61,8 +61,19 @@ NO_SE_PUBLICA = {
     'Registro y bienvenida': 'logística del Encuentro (registro y estación de café)',
     'Pausa de café': 'logística',
     'Almuerzo Encuentro': 'logística: «Almuerzo de participantes inscritos e invitados»',
-    'Taller audiovisual escolar': 'el festival confirma (25 oct) que es ABIERTO, pero es Formación descentralizada y la agenda no da sede: no se publica hasta saber dónde es (duda con Juan)',
+    'Taller audiovisual escolar': 'provisional de la agenda: el Bacatá publicó los talleres reales (FB, 18 nov) → FB_TALLERES',
+    'Taller efectos especiales o stop motion': 'provisional de la agenda (Juan, 18 nov): lo reemplazan los talleres del FB del Bacatá → FB_TALLERES',
 }
+# Los talleres reales: post del Centro Cultural Bacatá en Facebook, 18 nov 2026
+# (fuentes/funza-2026/fb-2026-11-18-programacion/, láminas 02–04). Juan, 18 nov:
+# «cárgalos los tres, el de antes era provisional». Duración: 2 h, la de la agenda.
+FB_SRC = {'url': 'https://www.facebook.com/centroculturalbacatadefunza/posts/pfbid027eBYyM9iqPAX24HW8mLWyp8zyVTzZJPpm9vHUoLjdwm6Tdsb6HAhZmmVuvqfPj6Nl',
+          'date': '2026-11-18', 'tipo': 'festival-redes'}
+FB_TALLERES = [
+    ('2026-11-19', '08:00', 'Taller: Stop motion', 'Hellsy Piraguata', 'Institución Educativa Ágora', '02'),
+    ('2026-11-19', '09:00', 'Taller: Maquillaje para efectos especiales', 'Marcela Moreno', 'Colegio de Valores Humanos Sathya Sai', '03'),
+    ('2026-11-19', '09:00', 'Taller: Realidad virtual', 'Édgar Medina', 'CITI', '04'),
+]
 # proyección → la obra
 OBRAS = {
     'Proyección Reflejos': {'titulo': 'Reflejos', 'director': 'Miguel Urrutia', 'pais': 'Colombia'},  # «thriller colombiano»: cambiocolombia.com (dic 2025), enter.co
@@ -148,6 +159,11 @@ def main():
             if not obs.startswith('Instalación'):
                 reg['sinopsis'] = obs
         funciones.append(reg)
+    for dia, hora, tit, quien, sede, lam in FB_TALLERES:
+        funciones.append({'dia': dia, 'hora': hora, 'sede': sede, 'acceso': 'Entrada libre (no se anuncia pago)',
+                          'duracion_min': 120, 'seccion': 'Formación Especializada', 'titulo': tit,
+                          'tipo': 'evento', 'event_kind': 'taller', 'sinopsis': f'Con {quien}.',
+                          '_src': dict(FB_SRC, lamina=lam)})
     funciones.sort(key=lambda f: (f['dia'], f['hora'], f['titulo']))
     io.open(OUT, 'w', encoding='utf-8').write(json.dumps({
         '_provenance': provenance('Agenda general actualizada del IV Festival de Cine (PDF del festival a Juan, 25 oct 2026)',
