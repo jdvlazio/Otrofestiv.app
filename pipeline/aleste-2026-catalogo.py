@@ -54,7 +54,7 @@ OBRAS = [
     ('Regreso de África', 'Alain Tanner', 1973, 'Suiza, Francia', 108, FOKUS, (IG + 'DfYe-5Slr8E/', '03.jpg')),
     ('La tierra prometida', 'Andrzej Wajda', 1974, 'Polonia', 162, FOKUS, (IG + 'DfYe-5Slr8E/', '04.jpg')),
     ('Los inocentes encantadores', 'Andrzej Wajda', 1960, 'Polonia', 83, FOKUS, (IG + 'DfYe-5Slr8E/', '05.jpg')),
-    ('Latidos: el grafiti como arte, el grafiti como forma de vida', 'Juan Zapata', 2026, 'Colombia', None, None,
+    ('Latido. El grafiti como arte, el grafiti como forma de vida.', 'Juan Zapata', 2026, 'Colombia', None, None,
      (IG + 'DfkttriN6pD/', None)),
     # Bogotá, Cinemateca (IG p/DfsHqtAlpmC, 13 nov, «Programación Bogotá», leídas a ojo).
     # La lámina 1 dice «SHAME AND MONEYV»: errata, el título es «Shame and Money».
@@ -77,8 +77,10 @@ def main():
     web = {plano(o['titulo']): o for o in json.load(io.open(PROGRAMA, encoding='utf-8'))['obras']}
     obras = []
     for t, d, a, p, m, sec, (url, lam) in OBRAS:
-        o = {'titulo': t, 'director': d, 'anio': a, 'pais': p, 'tipo': 'corto' if t.startswith('Latidos') else 'largo',
+        o = {'titulo': t, 'director': d, 'anio': a, 'pais': p, 'tipo': 'corto' if t.startswith('Latido') else 'largo',
              '_src': {'url': url, 'date': '2026-11-12'}}
+        if t == 'Latido. El grafiti como arte, el grafiti como forma de vida.':
+            o['titulos_anteriores'] = ['Latidos: el grafiti como arte, el grafiti como forma de vida']
         if m:
             o['duracion_min'] = m
         if sec:

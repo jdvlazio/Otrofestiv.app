@@ -1,10 +1,10 @@
 {
  "_provenance": {
   "fuente": "issue de radar #1397 — https://github.com/jdvlazio/Otrofestiv.app/issues/1397",
-  "capturado": "2026-11-17",
+  "capturado": "2026-11-18",
   "titulo": "RADAR: Festival de Cine Al Este — Medellín 18 NOV, Bogotá 25–29 NOV 2026",
   "estado": "OPEN",
-  "comentarios": 12
+  "comentarios": 14
  },
  "issue": 1397,
  "titulo": "RADAR: Festival de Cine Al Este — Medellín 18 NOV, Bogotá 25–29 NOV 2026",
@@ -58,6 +58,14 @@
   {
    "fecha": "2026-11-18",
    "cuerpo": "Vigía 17 nov 21:30: grilla de Medellín en IG (https://www.instagram.com/p/Df3D47hlulW/).\n- Pucallpa la Europea, sáb 21: 19:00, Sala 1 (en la app: 14:00). Gioia mia, dom 22: 14:30, Sala 1 (en la app: 14:00). Coinciden con la web; pasan a Onboarding para aplicar.\n- MAMM: la lámina pone Londres el jue 19, The Souffleur el sáb 21 y 1982 el dom 22. La web y la boletería del MAMM dicen Souffleur 19, 1982 21, Londres 22 → lo decide Juan.\n"
+  },
+  {
+   "fecha": "2026-11-18",
+   "cuerpo": "Vigía 18 nov 09:04 — MAMM: la grilla IG (Df3D47hlulW, lámina 01) pone Londres el jue 19 a las 18:30, The Souffleur el sáb 21 a las 16:30 y 1982 el dom 22 a las 16:00. La boletería del MAMM (revisada hoy) y la app tienen esos mismos horarios con los títulos rotados: Souffleur el 19, 1982 el 21 y Londres el 22. Lo decide Juan. La inaugural de hoy (19:00, Colombo, La última ronda en Venecia) está confirmada y ya figura en la app."
+  },
+  {
+   "fecha": "2026-11-18",
+   "cuerpo": "Vigía 18 nov 13:00. Al Este:\n- **Aplicado:** la Noche Inaugural (mié 18, 19:00, Colombo) pasa a la **Sala 1**. Lo dicen la web (fichas de «La última ronda en Venecia» y «Latido.», en HTML y en el texto renderizado) y la grilla de IG Df3D47hlulW, que la pone en la fila de la Sala 1. PR #1529, ya publicado.\n- **Fuente nueva:** la ficha web https://www.alestfestival.com/programa2026/latido.-el-grafiti-como-arte-el-grafiti-como-forma-de-vida. Trae día, hora y sede que coinciden con la app. El título no coincide: la ficha dice «Latido. El grafiti como arte, el grafiti como forma de vida.» y la app (que lo tomó del IG) dice «Latidos: el grafiti como arte…». Va a Juan.\n- **Contradicción abierta (Juan), MAMM:** la grilla de IG Df3D47hlulW cambia el orden de las obras: Londres jue 19 18h30, The Souffleur sáb 21 16h30 y 1982 dom 22 16h00. La web del festival y la boletería del MAMM, leídas hoy de nuevo, coinciden con la app: Souffleur jue 19 18:30, 1982 sáb 21 16:30 y Londres dom 22 16:00. No se aplica nada.\n- Las otras 41 fichas de programa2026 coinciden con la app."
   }
  ]
 }

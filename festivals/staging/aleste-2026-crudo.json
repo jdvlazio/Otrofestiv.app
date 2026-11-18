@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "MAMM (fichas del ciclo) + láminas de @aleste.colombia (3, 5 y 10 nov 2026) + web oficial programa2026 (16 nov, Bogotá)",
-  "capturado": "2026-11-17",
+  "capturado": "2026-11-18",
   "metodo": "transcripción a ojo; láminas cruzadas con ig-lecturas.py",
   "que_aporta": "día, hora, sede, acceso"
  },
@@ -23,7 +23,7 @@
    "tipo": "evento",
    "obras": [
     {
-     "titulo": "Latidos: el grafiti como arte, el grafiti como forma de vida",
+     "titulo": "Latido. El grafiti como arte, el grafiti como forma de vida.",
      "director": "Juan Zapata",
      "anio": 2026,
      "pais": "Colombia",
@@ -31,7 +31,10 @@
      "_src": {
       "url": "https://www.instagram.com/p/DfkttriN6pD/",
       "date": "2026-11-12"
-     }
+     },
+     "titulos_anteriores": [
+      "Latidos: el grafiti como arte, el grafiti como forma de vida"
+     ]
     },
     {
      "titulo": "La última ronda en Venecia",
