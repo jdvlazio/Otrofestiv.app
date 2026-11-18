@@ -1,10 +1,10 @@
 {
  "_provenance": {
   "fuente": "issue de radar #1397 — https://github.com/jdvlazio/Otrofestiv.app/issues/1397",
-  "capturado": "2026-11-16",
+  "capturado": "2026-11-17",
   "titulo": "RADAR: Festival de Cine Al Este — Medellín 18 NOV, Bogotá 25–29 NOV 2026",
   "estado": "OPEN",
-  "comentarios": 8
+  "comentarios": 12
  },
  "issue": 1397,
  "titulo": "RADAR: Festival de Cine Al Este — Medellín 18 NOV, Bogotá 25–29 NOV 2026",
@@ -42,6 +42,22 @@
   {
    "fecha": "2026-11-16",
    "cuerpo": "Vigía 16 nov 09:00 — **Al Este: la web ya trae el programa completo de Bogotá** (https://www.alestfestival.com/programa2026, una página por obra con «Ciudad · Día · Hora · Sala»).\n\n- **Bogotá (25–29 nov, Cinemateca):** la web trae ~26 funciones (incluidos 2 bloques de «Hecho en Colombia»: B1 sáb 28 14:30 Sala 3 con 6 cortos; B2 dom 29 14:00 Sala 3 con 3) más una en la Cinemateca Fontanar del Río (Cortometrajes de Altura, dom 29 14:00). La app tiene 5. Faltan, entre otras: Aquí, en otros lugares; Bright Future; Ciudadano Havel; Historias de una mentira; Ino Moxo; La ciudad blanca; La retirada; La salamandra; Labriego; Laguna; License to Live; Los golfos; Nadie a la vista; Pulse; The Megalomaniacs; Retorno antes de las 3 p. m. (clausura, con premiación); La última ronda en Venecia y Padre (Bogotá). Varias traen la sala (Sala Capital / 2 / 3).\n- **Q&A:** «Todas las canciones del mundo» (sáb 28 nov 16:30, Sala Capital) dice «Seguida de conversatorio con los realizadores»; en la app `has_qa` = false. «1982» en Bogotá (vie 27 16:30) dice «Seguida de cineforo».\n- **Medellín, contradicciones que resuelve la regla (sin cambio):** «Pucallpa la Europea» sáb 21 nov: la web dice 19:00 Sala 1, la lámina 04 de p/DfSV6Z3lpE1 dice 14:00 (la app tiene 14:00; queda la más temprana). «Gioia mia» dom 22: la web dice 14:30, la lámina del 15 nov (p/Dfw_9kslhvl, la más nueva) dice 14:00, igual que la app.\n- El resto de Medellín coincide con la app.\n"
+  },
+  {
+   "fecha": "2026-11-17",
+   "cuerpo": "Vigía 16 nov 21:20. Al Este:\n- **Fuente nueva:** hay un formulario de inscripción a la inauguración en Medellín, https://forms.gle/d6aSy5hBEQr3R2m98 (sale del Linktree). Es la «Noche Inaugural» del 18 nov, 19:00, en el Colombo, con «La última ronda en Venecia» y antes el corto «Latidos». En la app esa función no tiene `registration_url`. Pasado a Onboarding para que lo aplique.\n- La web programa2026 (45 funciones) y las fichas del MAMM no cambiaron.\n- Hay una contradicción que sigue abierta y que se resolvió por la regla de la hora más temprana. Pucallpa la Europea, sáb 21: la web dice 19:00 y la lámina 04 de DfSV6Z3lpE1 dice 14:00. Gioia mia, dom 22: la web dice 14:30 y el IG (15 nov) dice 14:00. En los dos casos la app tiene 14:00.\n"
+  },
+  {
+   "fecha": "2026-11-17",
+   "cuerpo": "Vigía 17 nov 09:30 — Al Este: sin cambios que aplicar.\n- Web (alestfestival.com/programa2026, 40 fichas, 45 funciones): igual a la copia del 16 nov.\n- Dos horas del Colombo en Medellín chocan entre la web y las láminas del 3 nov (https://www.instagram.com/p/DfSV6Z3lpE1/): **Pucallpa la Europea**, sáb 21: lámina 5 dice 14:00, la web dice 19:00. **Gioia mia**, dom 22: lámina 4 dice 14:00, la web dice 14:30. La app publica 14:00 en las dos (regla de la hora más temprana). En Pucallpa la diferencia es de 5 h: si el Colombo lo aclara, se corrige.\n- IG: 3 posts nuevos (Dfzoo8Rtb8Q, Df0fAohgjXX, Df170kgFk2l). Son promoción; el reel del MAMM repite las 4 horas ya publicadas.\n- Formulario de la inauguración (forms.gle/d6aSy5hBEQr3R2m98): ya está en la app como registration_url.\n- Bio: linktr.ee/alestefestivalcolombia, igual a la que ya está registrada."
+  },
+  {
+   "fecha": "2026-11-17",
+   "cuerpo": "Vigía 17 nov 17:25: en Medellín, «Pucallpa la Europea» (sáb 21, 14:00) y «Gioia mia» (dom 22, 14:00) no tienen sala en la app. La web del festival y la del Colombo dicen Sala 1. La web del festival da otras horas (19:00 y 14:30); el IG del 3 nov y la cartelera del Colombo confirman 14:00. Queda para Onboarding."
+  },
+  {
+   "fecha": "2026-11-18",
+   "cuerpo": "Vigía 17 nov 21:30: grilla de Medellín en IG (https://www.instagram.com/p/Df3D47hlulW/).\n- Pucallpa la Europea, sáb 21: 19:00, Sala 1 (en la app: 14:00). Gioia mia, dom 22: 14:30, Sala 1 (en la app: 14:00). Coinciden con la web; pasan a Onboarding para aplicar.\n- MAMM: la lámina pone Londres el jue 19, The Souffleur el sáb 21 y 1982 el dom 22. La web y la boletería del MAMM dicen Souffleur 19, 1982 21, Londres 22 → lo decide Juan.\n"
   }
  ]
 }

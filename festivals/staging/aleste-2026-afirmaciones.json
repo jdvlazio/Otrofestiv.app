@@ -1,0 +1,75 @@
+{
+ "_provenance": {
+  "fuente": "IG @aleste.colombia (grilla de Medellín del 17 nov) + web oficial alestfestival.com/programa2026",
+  "capturado": "2026-11-17",
+  "metodo": "una afirmación por casilla, con su fuente (docs/FUNCION.md)"
+ },
+ "afirmaciones": [
+  {
+   "ancla": {
+    "sede": "Centro Colombo Americano - Medellín",
+    "dia": "2026-11-21",
+    "hora": "14:00"
+   },
+   "funcion": "f_0ba6ba1a3a",
+   "casilla": "time",
+   "valor": "19:00",
+   "contra": "14:00",
+   "fuente": {
+    "tipo": "festival-ig",
+    "url": "https://www.instagram.com/p/Df3D47hlulW/",
+    "fecha": "2026-11-17"
+   },
+   "evidencia": "lámina 01.jpg de Df3D47hlulW (17 nov): «PUCALLPA LA EUROPEA 105' 19h00», fila CENTRO COLOMBO AMERICANO - SALA 1, columna 21 SÁBADO; la web (alestfestival.com/programa2026/pucallpa-la-europea, HTML y texto renderizado) dice «Medellín · Sábado 21 nov · 19:00 · Centro Colombo Americano – Sala 1». Tres caminos coinciden (ig-lecturas no lee el formato «19h00»)"
+  },
+  {
+   "ancla": {
+    "sede": "Centro Colombo Americano - Medellín",
+    "dia": "2026-11-21",
+    "hora": "14:00"
+   },
+   "funcion": "f_0ba6ba1a3a",
+   "casilla": "sala",
+   "valor": "Sala 1",
+   "fuente": {
+    "tipo": "festival-ig",
+    "url": "https://www.instagram.com/p/Df3D47hlulW/",
+    "fecha": "2026-11-17"
+   },
+   "evidencia": "lámina 01.jpg de Df3D47hlulW (17 nov): «PUCALLPA LA EUROPEA 105' 19h00», fila CENTRO COLOMBO AMERICANO - SALA 1, columna 21 SÁBADO; la web (alestfestival.com/programa2026/pucallpa-la-europea, HTML y texto renderizado) dice «Medellín · Sábado 21 nov · 19:00 · Centro Colombo Americano – Sala 1». Tres caminos coinciden (ig-lecturas no lee el formato «19h00»)"
+  },
+  {
+   "ancla": {
+    "sede": "Centro Colombo Americano - Medellín",
+    "dia": "2026-11-22",
+    "hora": "14:00"
+   },
+   "funcion": "f_516f75f820",
+   "casilla": "time",
+   "valor": "14:30",
+   "contra": "14:00",
+   "fuente": {
+    "tipo": "festival-ig",
+    "url": "https://www.instagram.com/p/Df3D47hlulW/",
+    "fecha": "2026-11-17"
+   },
+   "evidencia": "lámina 01.jpg de Df3D47hlulW (17 nov): «GIOIA MIA 14h30», fila CENTRO COLOMBO AMERICANO - SALA 1, columna 22 DOMINGO; la web (alestfestival.com/programa2026/gioia-mia, HTML y texto renderizado) dice «Medellín · Domingo 22 nov · 14:30 · Centro Colombo Americano – Sala 1». Tres caminos coinciden (ig-lecturas no lee el formato «14h30»)"
+  },
+  {
+   "ancla": {
+    "sede": "Centro Colombo Americano - Medellín",
+    "dia": "2026-11-22",
+    "hora": "14:00"
+   },
+   "funcion": "f_516f75f820",
+   "casilla": "sala",
+   "valor": "Sala 1",
+   "fuente": {
+    "tipo": "festival-ig",
+    "url": "https://www.instagram.com/p/Df3D47hlulW/",
+    "fecha": "2026-11-17"
+   },
+   "evidencia": "lámina 01.jpg de Df3D47hlulW (17 nov): «GIOIA MIA 14h30», fila CENTRO COLOMBO AMERICANO - SALA 1, columna 22 DOMINGO; la web (alestfestival.com/programa2026/gioia-mia, HTML y texto renderizado) dice «Medellín · Domingo 22 nov · 14:30 · Centro Colombo Americano – Sala 1». Tres caminos coinciden (ig-lecturas no lee el formato «14h30»)"
+  }
+ ]
+}

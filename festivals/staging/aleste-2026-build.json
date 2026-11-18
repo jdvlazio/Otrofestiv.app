@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "MAMM (fichas del ciclo) + láminas de @aleste.colombia (3, 5 y 10 nov 2026) + web oficial programa2026 (16 nov, Bogotá)",
-  "capturado": "2026-11-16",
+  "capturado": "2026-11-17",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_secciones": "16 nov 2026: las secciones son las de la web oficial (alestfestival.com/programa2026), tal cual. Se retiran «Al Este en el MAMM / en la Cinemateca», que eran rótulos nuestros por sede. «Fokus: Las grietas en el muro» (lámina IG) pasa a «del muro», como dice la web, que es la fuente más nueva. Emojis y nombres en inglés: propuesta, a confirmar con Juan.",
@@ -290,7 +290,6 @@
     "tipo": "festival-ig"
    },
    "registration_url": "https://forms.gle/d6aSy5hBEQr3R2m98",
-   "is_free": true,
    "requires_registration": true,
    "is_cortos": true,
    "film_list": [
@@ -329,7 +328,58 @@
     }
    ],
    "_fid": "f_6c856cce71",
-   "id": "f_6c856cce71"
+   "id": "f_6c856cce71",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "requires_registration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "registration_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    }
+   }
   },
   {
    "title": "The Souffleur",
@@ -361,12 +411,50 @@
     "tipo": "festival-web"
    },
    "ticket_url": "https://www.elmamm.org/producto/the-souffleur/",
-   "is_free": false,
    "lbSlug": "the-souffleur",
    "tmdb_id": 1418361,
    "synopsis_en": "Lucius Glantz, a veteran hotel manager in Vienna, fights to save his beloved establishment from a scheming realtor's plan to demolish it, leading to a clash of wills that even affects the hotel's renowned soufflé recipe.",
    "_fid": "f_4b2cf29622",
-   "id": "f_4b2cf29622"
+   "id": "f_4b2cf29622",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    }
+   }
   },
   {
    "title": "Cenizas y diamantes",
@@ -399,13 +487,51 @@
     "tipo": "festival-ig",
     "lamina": "02.jpg"
    },
-   "is_free": false,
    "lbSlug": "ashes-and-diamonds",
    "tmdb_id": 5055,
    "synopsis_en": "A young academy soldier, Maciek Chelmicki, is ordered to shoot the secretary of the KW PPR. A coincidence causes him to kill someone else. Meeting face to face with his victim, he gets a shock. He faces the necessity of repeating the assassination.  He meets Krystyna, a girl working as a barmaid in the restaurant of the \"Monopol\" hotel. His affection for her makes him even more aware of the senselessness of killing at the end of the war. Loyalty to the oath he took, and thus the obligation to obey the order, tips the scales.",
    "title_en": "Ashes and Diamonds",
    "_fid": "f_dc70814074",
-   "id": "f_dc70814074"
+   "id": "f_dc70814074",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    }
+   }
   },
   {
    "title": "Regreso de África",
@@ -438,13 +564,51 @@
     "tipo": "festival-ig",
     "lamina": "03.jpg"
    },
-   "is_free": false,
    "lbSlug": "return-from-africa",
    "tmdb_id": 134252,
    "synopsis_en": "A young Swiss couple, Vincent and Françoise, plan to leave Geneva and settle in Africa: a friend of theirs living in Algeria promises to give them a job there.",
    "title_en": "Return from Africa",
    "_fid": "f_6fc36893e9",
-   "id": "f_6fc36893e9"
+   "id": "f_6fc36893e9",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    }
+   }
   },
   {
    "title": "Padre",
@@ -476,13 +640,51 @@
     "tipo": "festival-web"
    },
    "ticket_url": "https://www.elmamm.org/producto/padre/",
-   "is_free": false,
    "lbSlug": "father-2025-1",
    "tmdb_id": 1516518,
    "synopsis_en": "The life of a man after he experiences forgotten baby syndrome, unintentionally leaving his infant daughter in the back seat of his car.",
    "title_en": "Father",
    "_fid": "f_d10cfa308b",
-   "id": "f_d10cfa308b"
+   "id": "f_d10cfa308b",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    }
+   }
   },
   {
    "title": "Los inocentes encantadores",
@@ -515,13 +717,51 @@
     "tipo": "festival-ig",
     "lamina": "05.jpg"
    },
-   "is_free": false,
    "lbSlug": "innocent-sorcerers",
    "tmdb_id": 80324,
    "synopsis_en": "A young doctor is tired of being sought by women. One night he meets a young girl who all but forces herself into his room where they talk of morals and love.",
    "title_en": "Innocent Sorcerers",
    "_fid": "f_0d3bcd98ef",
-   "id": "f_0d3bcd98ef"
+   "id": "f_0d3bcd98ef",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    }
+   }
   },
   {
    "title": "Gioia mia",
@@ -554,13 +794,51 @@
     "tipo": "festival-ig",
     "lamina": "03.jpg"
    },
-   "is_free": false,
    "lbSlug": "sweetheart-2025-3",
    "tmdb_id": 1510325,
    "synopsis_en": "A reluctant summer together transforms into an enchanting adventure when a young boy discovers his aunt's mysterious Sicilian house holds secrets and, perhaps, ancient spirits lurking within its walls.",
    "title_en": "Sweetheart",
    "_fid": "f_23f0b39afc",
-   "id": "f_23f0b39afc"
+   "id": "f_23f0b39afc",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    }
+   }
   },
   {
    "title": "Pucallpa la Europea",
@@ -578,7 +856,7 @@
     "14:00"
    ],
    "day": "2026-11-21",
-   "time": "14:00",
+   "time": "19:00",
    "day_order": 3,
    "venue": "Centro Colombo Americano - Medellín",
    "has_qa": false,
@@ -592,13 +870,54 @@
     "tipo": "festival-ig",
     "lamina": "04.jpg"
    },
-   "is_free": false,
    "lbSlug": "pucallpa",
    "tmdb_id": 1507240,
    "synopsis_en": "Paris 2007. Elsa, a Peruvian trans woman, is serving a sentence in a men's prison. Sergio, a detainee, makes her his sex slave. Furthermore, the administration refuses her hormone treatment. When Elsa is released, she begins a new life and meets Yena, a young Korean woman who introduces her to Aymeric, her French husband. The attraction between Elsa and him is lightning-fast, calling into question her sexual identity. However, the final obstacle is Sergio. He has just escaped from prison.",
    "title_en": "Pucallpa",
    "_fid": "f_0ba6ba1a3a",
-   "id": "f_0ba6ba1a3a"
+   "id": "f_0ba6ba1a3a",
+   "sala": "Sala 1",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "time": {
+     "tipo": "festival-ig",
+     "fecha": "2026-11-17",
+     "url": "https://www.instagram.com/p/Df3D47hlulW/"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "sala": {
+     "tipo": "festival-ig",
+     "fecha": "2026-11-17",
+     "url": "https://www.instagram.com/p/Df3D47hlulW/"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    }
+   }
   },
   {
    "title": "La tierra prometida",
@@ -631,13 +950,51 @@
     "tipo": "festival-ig",
     "lamina": "04.jpg"
    },
-   "is_free": false,
    "lbSlug": "the-promised-land-1975",
    "tmdb_id": 511,
    "synopsis_en": "At the turn of the century, Lodz, Poland, was a quick-paced manufacturing center for textiles, replete with cutthroat industrialists and unsafe working conditions. Three young friends, a Pole, a Jew, and a German, pool their money together to build a factory.",
    "title_en": "The Promised Land",
    "_fid": "f_818f6e700e",
-   "id": "f_818f6e700e"
+   "id": "f_818f6e700e",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    }
+   }
   },
   {
    "title": "1982",
@@ -669,12 +1026,50 @@
     "tipo": "festival-web"
    },
    "ticket_url": "https://www.elmamm.org/producto/1982/",
-   "is_free": false,
    "lbSlug": "1982-2025",
    "tmdb_id": 1517461,
    "synopsis_en": "In an Andean village in Peru, in 1982, Tato, a 12-year-old boy is forced into exile when his family is threatened.",
    "_fid": "f_28b57ac1da",
-   "id": "f_28b57ac1da"
+   "id": "f_28b57ac1da",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    }
+   }
   },
   {
    "title": "Gioia mia",
@@ -692,7 +1087,7 @@
     "14:00"
    ],
    "day": "2026-11-22",
-   "time": "14:00",
+   "time": "14:30",
    "day_order": 4,
    "venue": "Centro Colombo Americano - Medellín",
    "has_qa": false,
@@ -706,13 +1101,54 @@
     "tipo": "festival-ig",
     "lamina": "03.jpg"
    },
-   "is_free": false,
    "lbSlug": "sweetheart-2025-3",
    "tmdb_id": 1510325,
    "synopsis_en": "A reluctant summer together transforms into an enchanting adventure when a young boy discovers his aunt's mysterious Sicilian house holds secrets and, perhaps, ancient spirits lurking within its walls.",
    "title_en": "Sweetheart",
    "_fid": "f_516f75f820",
-   "id": "f_516f75f820"
+   "id": "f_516f75f820",
+   "sala": "Sala 1",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "time": {
+     "tipo": "festival-ig",
+     "fecha": "2026-11-17",
+     "url": "https://www.instagram.com/p/Df3D47hlulW/"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "sala": {
+     "tipo": "festival-ig",
+     "fecha": "2026-11-17",
+     "url": "https://www.instagram.com/p/Df3D47hlulW/"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    }
+   }
   },
   {
    "title": "Londres",
@@ -744,12 +1180,50 @@
     "tipo": "festival-web"
    },
    "ticket_url": "https://www.elmamm.org/producto/londres/",
-   "is_free": false,
    "lbSlug": "london-2026",
    "tmdb_id": 1599764,
    "synopsis_en": "Bobby drives back and forth between Vienna and Salzburg, giving lifts to strangers on the way, sharing conversations that drift from the mundane to the deeply personal. In this tender portrait of today’s Europe, anonymity and warmth still go hand in hand.",
    "_fid": "f_ebafd92c4c",
-   "id": "f_ebafd92c4c"
+   "id": "f_ebafd92c4c",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
+    }
+   }
   },
   {
    "title": "Shame and Money",
@@ -781,12 +1255,50 @@
     "date": "2026-11-16",
     "tipo": "festival-web"
    },
-   "is_free": false,
    "lbSlug": "shame-and-money",
    "tmdb_id": 1553591,
    "synopsis_en": "After losing their livelihood in a village, a Kosovar family is forced to move to the capital in pursuit of a place in a hypercapitalist society.",
    "_fid": "f_0372296ef6",
-   "id": "f_0372296ef6"
+   "id": "f_0372296ef6",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    }
+   }
   },
   {
    "title": "Ciudadano Havel",
@@ -816,13 +1328,51 @@
     "date": "2026-11-16",
     "tipo": "festival-web"
    },
-   "is_free": false,
    "lbSlug": "citizen-havel",
    "tmdb_id": 54346,
    "synopsis_en": "The documentary explores the presidency of Václav Havel, a poet who unexpectedly became president. The film, starting in 1992, captures Havel’s experiences after the breakup of Czechoslovakia, a significant defeat for him as he had campaigned for its continuation. Despite political opposition and accusations of responsibility for the breakup, Havel runs for president of the new Czech Republic. The film, a unique document, was Koutecký’s most important project, continued by Janek after Koutecký’s death in 2006.",
    "title_en": "Citizen Havel",
    "_fid": "f_2654209d6c",
-   "id": "f_2654209d6c"
+   "id": "f_2654209d6c",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    }
+   }
   },
   {
    "title": "Histeria",
@@ -854,12 +1404,50 @@
     "date": "2026-11-16",
     "tipo": "festival-web"
    },
-   "is_free": false,
    "lbSlug": "hysteria-2025-1",
    "tmdb_id": 1399696,
    "synopsis_en": "A film shoot takes a dark turn when the burning of a Quran throws the crew into turmoil. Caught in accusations, intern Elif is drawn into a dangerous game of secrets and lies, finding herself at the heart of an all-absorbing conspiracy.",
    "_fid": "f_43f9884be2",
-   "id": "f_43f9884be2"
+   "id": "f_43f9884be2",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    }
+   }
   },
   {
    "title": "The Souffleur",
@@ -891,12 +1479,50 @@
     "date": "2026-11-16",
     "tipo": "festival-web"
    },
-   "is_free": false,
    "lbSlug": "the-souffleur",
    "tmdb_id": 1418361,
    "synopsis_en": "Lucius Glantz, a veteran hotel manager in Vienna, fights to save his beloved establishment from a scheming realtor's plan to demolish it, leading to a clash of wills that even affects the hotel's renowned soufflé recipe.",
    "_fid": "f_ed7fe5d715",
-   "id": "f_ed7fe5d715"
+   "id": "f_ed7fe5d715",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    }
+   }
   },
   {
    "title": "Ino Moxo: El sueño del brujo",
@@ -929,12 +1555,54 @@
     "date": "2026-11-16",
     "tipo": "festival-web"
    },
-   "is_free": false,
    "lbSlug": "ino-moxo-el-sueno-del-brujo",
    "tmdb_id": 1374972,
    "synopsis_en": "Documentary on the Amazonian sorcerer Ino Moxo",
    "_fid": "f_a89c9c3153",
-   "id": "f_a89c9c3153"
+   "id": "f_a89c9c3153",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "qa_type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    }
+   }
   },
   {
    "title": "La retirada",
@@ -964,13 +1632,51 @@
     "date": "2026-11-16",
     "tipo": "festival-web"
    },
-   "is_free": false,
    "lbSlug": "leaving-2011",
    "tmdb_id": 76598,
    "synopsis_en": "A bitter sweet comedy that follows a highly appointed Chancellor who set to step down from his position after years of service to his country. With just two last days left to enjoy his palatial villa before he is finally evicted, his situation gradually goes from bad to worse.",
    "title_en": "Leaving",
    "_fid": "f_7eb873bf13",
-   "id": "f_7eb873bf13"
+   "id": "f_7eb873bf13",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    }
+   }
   },
   {
    "title": "Historias de una mentira",
@@ -1000,13 +1706,51 @@
     "date": "2026-11-16",
     "tipo": "festival-web"
    },
-   "is_free": false,
    "lbSlug": "stories-of-a-lie",
    "tmdb_id": 1568190,
    "synopsis_en": "During a stay in her native Greece, Olia hears that her friend Sofia has cancer. Her doctors and family are keeping the illness hidden from her, and Olia isn’t allowed to give anything away either. She decides to investigate the rationale behind this practice.",
    "title_en": "Stories of a Lie",
    "_fid": "f_f099f216fa",
-   "id": "f_f099f216fa"
+   "id": "f_f099f216fa",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    }
+   }
   },
   {
    "title": "Aquí, en otros lugares",
@@ -1036,13 +1780,51 @@
     "date": "2026-11-16",
     "tipo": "festival-web"
    },
-   "is_free": false,
    "lbSlug": "here-elsewhere-2026",
    "tmdb_id": 1657855,
    "synopsis_en": "July 2023. Nagorno-Karabakh has been under siege by Azerbaijan for seven months. As war draws nearer, Comes Chahbazian asks his friend Artziv to f ilm his daily life with his wife Tatev and their five children.",
    "title_en": "Here, Elsewhere",
    "_fid": "f_3a6030b537",
-   "id": "f_3a6030b537"
+   "id": "f_3a6030b537",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    }
+   }
   },
   {
    "title": "La salamandra",
@@ -1074,13 +1856,51 @@
     "date": "2026-11-16",
     "tipo": "festival-web"
    },
-   "is_free": false,
    "lbSlug": "the-salamander-1971",
    "tmdb_id": 62978,
    "synopsis_en": "Pierre and Paul, journalist and writer respectively, team up to write a screenplay based on the real story of a young woman accused by her uncle of trying to kill him. They decide to meet her.",
    "title_en": "The Salamander",
    "_fid": "f_2402b739a7",
-   "id": "f_2402b739a7"
+   "id": "f_2402b739a7",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    }
+   }
   },
   {
    "title": "1982",
@@ -1112,12 +1932,50 @@
     "date": "2026-11-16",
     "tipo": "festival-web"
    },
-   "is_free": false,
    "lbSlug": "1982-2025",
    "tmdb_id": 1517461,
    "synopsis_en": "In an Andean village in Peru, in 1982, Tato, a 12-year-old boy is forced into exile when his family is threatened.",
    "_fid": "f_4ef959b53d",
-   "id": "f_4ef959b53d"
+   "id": "f_4ef959b53d",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    }
+   }
   },
   {
    "title": "Labriego",
@@ -1145,9 +2003,51 @@
     "date": "2026-11-16",
     "tipo": "festival-web"
    },
-   "is_free": false,
    "_fid": "f_2fd427a663",
-   "id": "f_2fd427a663"
+   "id": "f_2fd427a663",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "qa_type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    }
+   }
   },
   {
    "title": "Padre",
@@ -1179,13 +2079,51 @@
     "date": "2026-11-16",
     "tipo": "festival-web"
    },
-   "is_free": false,
    "lbSlug": "father-2025-1",
    "tmdb_id": 1516518,
    "synopsis_en": "The life of a man after he experiences forgotten baby syndrome, unintentionally leaving his infant daughter in the back seat of his car.",
    "title_en": "Father",
    "_fid": "f_28cdee8833",
-   "id": "f_28cdee8833"
+   "id": "f_28cdee8833",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    }
+   }
   },
   {
    "title": "Hecho en Colombia – Bloque 1",
@@ -1211,7 +2149,6 @@
     "date": "2026-11-16",
     "tipo": "festival-web"
    },
-   "is_free": false,
    "is_cortos": true,
    "film_list": [
     {
@@ -1323,7 +2260,54 @@
     }
    ],
    "_fid": "f_1cbb3fe13a",
-   "id": "f_1cbb3fe13a"
+   "id": "f_1cbb3fe13a",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "qa_type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    }
+   }
   },
   {
    "title": "Nadie a la vista",
@@ -1353,13 +2337,51 @@
     "date": "2026-11-16",
     "tipo": "festival-web"
    },
-   "is_free": false,
    "lbSlug": "nobody-in-sight",
    "tmdb_id": 1594652,
    "synopsis_en": "A feature documentary film by Kote Kalandadze",
    "title_en": "Nobody In Sight",
    "_fid": "f_e91111ec2d",
-   "id": "f_e91111ec2d"
+   "id": "f_e91111ec2d",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    }
+   }
   },
   {
    "title": "Todas las canciones del mundo",
@@ -1391,11 +2413,53 @@
     "date": "2026-11-16",
     "tipo": "festival-web"
    },
-   "is_free": false,
    "lbSlug": "todas-las-canciones-del-mundo",
    "tmdb_id": 1744092,
    "_fid": "f_1c1639d27e",
-   "id": "f_1c1639d27e"
+   "id": "f_1c1639d27e",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "qa_type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    }
+   }
   },
   {
    "title": "Laguna",
@@ -1426,12 +2490,54 @@
     "date": "2026-11-16",
     "tipo": "festival-web"
    },
-   "is_free": false,
    "lbSlug": "laguna-2025",
    "tmdb_id": 1520513,
    "synopsis_en": "On the Mexican Pacific coast, the land Ina Marija adopted before dying too young, her father and younger sister Una embark on a journey in her footsteps. There, amidst the lush nature of the mangroves—in a lagoon ravaged by hurricanes and constantly reborn—they begin the process of mourning. As he films this journey, Sharunas Bartas lays bare his emotions and, in an act of transmission, seeks a reconstruction nourished by the natural cycles of life and nature.",
    "_fid": "f_866ea1f464",
-   "id": "f_866ea1f464"
+   "id": "f_866ea1f464",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "qa_type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    }
+   }
   },
   {
    "title": "Bright Future",
@@ -1461,12 +2567,50 @@
     "date": "2026-11-16",
     "tipo": "festival-web"
    },
-   "is_free": false,
    "lbSlug": "bright-future",
    "tmdb_id": 26886,
    "synopsis_en": "Buddies working at an oshibori factory bond over an uncontrollable rage neither can control, as well as a strange jellyfish they keep as a pet.",
    "_fid": "f_1f013248ab",
-   "id": "f_1f013248ab"
+   "id": "f_1f013248ab",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    }
+   }
   },
   {
    "title": "The Megalomaniacs",
@@ -1497,12 +2641,54 @@
     "date": "2026-11-16",
     "tipo": "festival-web"
    },
-   "is_free": false,
    "lbSlug": "the-megalomaniacs",
    "tmdb_id": 1567508,
    "synopsis_en": "Convinced that ancient pottery may hold traces of recorded sound, archaeologist Sofia travels to a remote Greek island to test her theory with Potter, an eccentric artist who doubts her idea.",
    "_fid": "f_c121fb1b75",
-   "id": "f_c121fb1b75"
+   "id": "f_c121fb1b75",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "qa_type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    }
+   }
   },
   {
    "title": "Pulse",
@@ -1534,12 +2720,50 @@
     "date": "2026-11-16",
     "tipo": "festival-web"
    },
-   "is_free": false,
    "lbSlug": "pulse-2001",
    "tmdb_id": 27324,
    "synopsis_en": "In the immense city of Tokyo, the darkness of the afterlife lures some of its inhabitants desperately trying to escape the sadness and isolation of the modern world.",
    "_fid": "f_aeab88b02c",
-   "id": "f_aeab88b02c"
+   "id": "f_aeab88b02c",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    }
+   }
   },
   {
    "title": "Cortometrajes de Altura",
@@ -1564,9 +2788,43 @@
     "date": "2026-11-16",
     "tipo": "festival-web"
    },
-   "is_free": false,
    "_fid": "f_caf13da1b1",
-   "id": "f_caf13da1b1"
+   "id": "f_caf13da1b1",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    }
+   }
   },
   {
    "title": "Hecho en Colombia – Bloque 2",
@@ -1592,7 +2850,6 @@
     "date": "2026-11-16",
     "tipo": "festival-web"
    },
-   "is_free": false,
    "is_cortos": true,
    "film_list": [
     {
@@ -1653,7 +2910,54 @@
     }
    ],
    "_fid": "f_cb55e388f2",
-   "id": "f_cb55e388f2"
+   "id": "f_cb55e388f2",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "qa_type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    }
+   }
   },
   {
    "title": "La ciudad blanca",
@@ -1685,13 +2989,51 @@
     "date": "2026-11-16",
     "tipo": "festival-web"
    },
-   "is_free": false,
    "lbSlug": "in-the-white-city",
    "tmdb_id": 33802,
    "synopsis_en": "Fed up with the sea, Paul, a Swiss mechanic working in the noisy bowels of a merchant ship, lands in Lisbon.",
    "title_en": "In the White City",
    "_fid": "f_8b4e1bc31e",
-   "id": "f_8b4e1bc31e"
+   "id": "f_8b4e1bc31e",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    }
+   }
   },
   {
    "title": "Los golfos",
@@ -1723,13 +3065,51 @@
     "date": "2026-11-16",
     "tipo": "festival-web"
    },
-   "is_free": false,
    "lbSlug": "the-delinquents-1960",
    "tmdb_id": 198915,
    "synopsis_en": "A group of friends who are struggling to survive in the slums of Madrid commit petty crime in order to finance the debut as a bullfighter of one of them.",
    "title_en": "The Delinquents",
    "_fid": "f_5378451bd6",
-   "id": "f_5378451bd6"
+   "id": "f_5378451bd6",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    }
+   }
   },
   {
    "title": "License to Live",
@@ -1759,12 +3139,50 @@
     "date": "2026-11-16",
     "tipo": "festival-web"
    },
-   "is_free": false,
    "lbSlug": "license-to-live",
    "tmdb_id": 48341,
    "synopsis_en": "Having fallen into a coma following a car accident at 14, Yutaka wakes ten years later and realizes that his family is no longer intact: father, mother and sister live at different places, so he decides to reopen the farm that his family once ran.",
    "_fid": "f_61974e3c92",
-   "id": "f_61974e3c92"
+   "id": "f_61974e3c92",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    }
+   }
   },
   {
    "title": "Retorno antes de las 3 p. m.",
@@ -1796,13 +3214,51 @@
     "date": "2026-11-16",
     "tipo": "festival-web"
    },
-   "is_free": false,
    "lbSlug": "back-before-3-pm",
    "tmdb_id": 1633356,
    "synopsis_en": "It's a man and his place, the father in a housing estate. It's after his death. Something has been found. Not a secret, but the underside of days, recorded with obsessive precision. A daily struggle with material life and the passing of time.",
    "title_en": "Back Before 3 P.M.",
    "_fid": "f_4c38bc5347",
-   "id": "f_4c38bc5347"
+   "id": "f_4c38bc5347",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    }
+   }
   },
   {
    "title": "La última ronda en Venecia",
@@ -1834,13 +3290,51 @@
     "date": "2026-11-16",
     "tipo": "festival-web"
    },
-   "is_free": false,
    "lbSlug": "the-last-one-for-the-road",
    "tmdb_id": 1462322,
    "synopsis_en": "A couple of jovial life-long drunkards run into a shy architecture undergrad, whose way of seeing things will be transformed as the trio wanders from pub to pub in search of a buried treasure.",
    "title_en": "The Last One for the Road",
    "_fid": "f_730c9c11c9",
-   "id": "f_730c9c11c9"
+   "id": "f_730c9c11c9",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    }
+   }
   }
  ],
  "_avisos_duracion": [
@@ -1848,7 +3342,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-16T21:20:31",
+  "fecha": "2026-11-17T21:26:32",
   "plan_sha": "504f5daa1302f309",
   "paso": 9,
   "cmd": "python3 pipeline/aleste-2026-verificar.py"
