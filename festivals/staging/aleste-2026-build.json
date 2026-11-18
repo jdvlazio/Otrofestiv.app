@@ -294,11 +294,14 @@
    "is_cortos": true,
    "film_list": [
     {
-     "title": "Latidos: el grafiti como arte, el grafiti como forma de vida",
+     "title": "Latido. El grafiti como arte, el grafiti como forma de vida.",
      "director": "Juan Zapata",
      "country": "Colombia",
      "flags": "🇨🇴",
      "year": 2026,
+     "titulos_anteriores": [
+      "Latidos: el grafiti como arte, el grafiti como forma de vida"
+     ],
      "_src": {
       "url": "https://www.instagram.com/p/DfkttriN6pD/",
       "date": "2026-11-12"
@@ -3348,7 +3351,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-18T13:09:04",
+  "fecha": "2026-11-18T15:36:10",
   "plan_sha": "504f5daa1302f309",
   "paso": 9,
   "cmd": "python3 pipeline/aleste-2026-verificar.py"
