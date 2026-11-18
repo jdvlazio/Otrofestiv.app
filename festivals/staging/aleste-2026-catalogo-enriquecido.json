@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, con el MISMO candado de enriquecer.py: director ✓ y (año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-11-16"
+  "capturado": "2026-11-17"
  },
  "_origen": "aleste-2026-catalogo.json",
  "obras": [
@@ -109,8 +109,8 @@
    "pais_tmdb": "Italy, Germany",
    "title_en": "The Last One for the Road",
    "lbSlug": "the-last-one-for-the-road",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "La última ronda en Venecia"
+   "_verificado": "el catálogo ya la tiene (w_JETKX5ESK1DZ, aleste-2026)",
+   "work_id": "w_JETKX5ESK1DZ"
   },
   {
    "titulo": "Gioia mia",
@@ -218,8 +218,8 @@
    "duracion_tmdb": 129,
    "pais_tmdb": "Kosovo, Germany, Slovenia, Macedonia, Albania, Belgium",
    "lbSlug": "shame-and-money",
-   "_verificado": "el catálogo ya la tiene (w_B2TQ0X0MG8PK, aleste-2026)",
-   "work_id": "w_B2TQ0X0MG8PK"
+   "_verificado": "el catálogo ya la tiene (w_JF6HTWSRS6KF, aleste-2026)",
+   "work_id": "w_JF6HTWSRS6KF"
   },
   {
    "titulo": "Todas las canciones del mundo",
@@ -283,8 +283,7 @@
    "pais_tmdb": "Belgium, Armenia",
    "title_en": "Here, Elsewhere",
    "lbSlug": "here-elsewhere-2026",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Ici, ailleurs"
+   "_verificado": "declarada a mano: altas.py --sondar: tmdb_alternos: TMDB 1657855 «Here, Elsewhere» — director ✓ y año/duración ✓"
   },
   {
    "titulo": "Bright Future",
@@ -298,8 +297,8 @@
    "duracion_tmdb": 115,
    "pais_tmdb": "Japan",
    "lbSlug": "bright-future",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Bright Future"
+   "_verificado": "el catálogo ya la tiene (w_JETBVFBSYK7M, aleste-2026)",
+   "work_id": "w_JETBVFBSYK7M"
   },
   {
    "titulo": "Ciudadano Havel",
@@ -314,8 +313,7 @@
    "pais_tmdb": "Czech Republic",
    "title_en": "Citizen Havel",
    "lbSlug": "citizen-havel",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Občan Havel"
+   "_verificado": "declarada a mano: altas.py --sondar: tmdb_alternos: TMDB 54346 «Citizen Havel» — director ✓ y año/duración ✓"
   },
   {
    "titulo": "Desde acá veo la tormenta",
@@ -345,8 +343,7 @@
    "pais_tmdb": "Greece, France",
    "title_en": "Stories of a Lie",
    "lbSlug": "stories-of-a-lie",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Stories of a Lie"
+   "_verificado": "declarada a mano: altas.py --sondar: tmdb_alternos: TMDB 1568190 «Stories of a Lie» — director ✓ y año/duración ✓"
   },
   {
    "titulo": "Ino Moxo: El sueño del brujo",
@@ -360,8 +357,8 @@
    "duracion_tmdb": 82,
    "pais_tmdb": "Peru",
    "lbSlug": "ino-moxo-el-sueno-del-brujo",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Ino Moxo: El sueño del brujo"
+   "_verificado": "el catálogo ya la tiene (w_JET3NQQJ12X5, aleste-2026)",
+   "work_id": "w_JET3NQQJ12X5"
   },
   {
    "titulo": "Junio 25. Andréi Tarkovski, visita a su tumba",
@@ -375,8 +372,8 @@
    "duracion_tmdb": 5,
    "pais_tmdb": "",
    "lbSlug": "junio-25-andrei-tarkovski-visita-a-su-tumba",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Junio 25. Andréi Tarkovski, visita a su tumba"
+   "_verificado": "el catálogo ya la tiene (w_JET7S5Q0VAEA, aleste-2026)",
+   "work_id": "w_JET7S5Q0VAEA"
   },
   {
    "titulo": "La ciudad blanca",
@@ -391,8 +388,8 @@
    "pais_tmdb": "Portugal, Switzerland",
    "title_en": "In the White City",
    "lbSlug": "in-the-white-city",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "La ciudad blanca"
+   "_verificado": "el catálogo ya la tiene (w_JETFBZMAW32J, aleste-2026)",
+   "work_id": "w_JETFBZMAW32J"
   },
   {
    "titulo": "La retirada",
@@ -407,8 +404,7 @@
    "pais_tmdb": "Czech Republic",
    "title_en": "Leaving",
    "lbSlug": "leaving-2011",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Odcházení"
+   "_verificado": "declarada a mano: altas.py --sondar: tmdb_alternos: TMDB 76598 «Leaving» — director ✓ y año/duración ✓"
   },
   {
    "titulo": "La salamandra",
@@ -423,8 +419,8 @@
    "pais_tmdb": "Switzerland, France",
    "title_en": "The Salamander",
    "lbSlug": "the-salamander-1971",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "La salamandra"
+   "_verificado": "el catálogo ya la tiene (w_JET7AWMJQ4J4, aleste-2026)",
+   "work_id": "w_JET7AWMJQ4J4"
   },
   {
    "titulo": "Laguna",
@@ -438,8 +434,8 @@
    "duracion_tmdb": 102,
    "pais_tmdb": "Lithuania, France",
    "lbSlug": "laguna-2025",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Laguna"
+   "_verificado": "el catálogo ya la tiene (w_JETAWV8S9EP5, aleste-2026)",
+   "work_id": "w_JETAWV8S9EP5"
   },
   {
    "titulo": "Las piedras del río",
@@ -493,7 +489,7 @@
    "duracion_tmdb": 17,
    "pais_tmdb": "",
    "lbSlug": "lejania-2026",
-   "_verificado": "el catálogo ya la tiene (w_R4HCND964DS3, ficci-65, jardin-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4HCND964DS3, aleste-2026, ficci-65, jardin-2026)",
    "work_id": "w_R4HCND964DS3",
    "_ya_publicada": [
     {
@@ -536,8 +532,8 @@
    "duracion_tmdb": 110,
    "pais_tmdb": "Japan",
    "lbSlug": "license-to-live",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "License to Live"
+   "_verificado": "el catálogo ya la tiene (w_JETH4AN7CW78, aleste-2026)",
+   "work_id": "w_JETH4AN7CW78"
   },
   {
    "titulo": "Liminal",
@@ -551,7 +547,7 @@
    "duracion_tmdb": 16,
    "pais_tmdb": "",
    "lbSlug": "liminal-6",
-   "_verificado": "el catálogo ya la tiene (w_R4F84MW9WTH9, cinemancia-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4F84MW9WTH9, aleste-2026, cinemancia-2026)",
    "work_id": "w_R4F84MW9WTH9",
    "_ya_publicada": [
     {
@@ -581,7 +577,7 @@
    "pais_tmdb": "Spain",
    "title_en": "The Delinquents",
    "lbSlug": "the-delinquents-1960",
-   "_verificado": "el catálogo ya la tiene (w_R4FBYJM4E9CV, cinemancia-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4FBYJM4E9CV, aleste-2026, cinemancia-2026)",
    "work_id": "w_R4FBYJM4E9CV",
    "_ya_publicada": [
     {
@@ -612,7 +608,7 @@
    "pais_tmdb": "Colombia",
    "title_en": "Thanks so, so much",
    "lbSlug": "thanks-so-so-much",
-   "_verificado": "el catálogo ya la tiene (w_R4GZR74RXREK, cinetoro-2026, ficcali-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4GZR74RXREK, aleste-2026, cinetoro-2026, ficcali-2026)",
    "work_id": "w_R4GZR74RXREK",
    "_ya_publicada": [
     {
@@ -646,8 +642,7 @@
    "pais_tmdb": "",
    "title_en": "Nobody In Sight",
    "lbSlug": "nobody-in-sight",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "არავინ არ ჩანს"
+   "_verificado": "declarada a mano: altas.py --ficha: TMDB 1594652 «Nobody In Sight» / original არავინ არ ჩანს, dir. Kote Kalandadze, 2025-12-05, 76 min — coincide título original, director, año y duración (75)"
   },
   {
    "titulo": "Pulse",
@@ -661,8 +656,8 @@
    "duracion_tmdb": 118,
    "pais_tmdb": "Japan",
    "lbSlug": "pulse-2001",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Pulse"
+   "_verificado": "el catálogo ya la tiene (w_JETDDR1A4XA4, aleste-2026)",
+   "work_id": "w_JETDDR1A4XA4"
   },
   {
    "titulo": "Refracción",
@@ -676,7 +671,7 @@
    "duracion_tmdb": 11,
    "pais_tmdb": "Colombia",
    "lbSlug": "refraccion",
-   "_verificado": "el catálogo ya la tiene (w_R4F8T5DKXC9W, cinemancia-2026, ficica-2026, ficidi-2026, ficmontanas-2026, girardota-2026, jardin-2026, miradas-2026, narrarelfuturo-2026, villadeleyvaiff-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4F8T5DKXC9W, aleste-2026, cinemancia-2026, ficica-2026, ficidi-2026, ficmontanas-2026, girardota-2026, jardin-2026, miradas-2026, narrarelfuturo-2026, villadeleyvaiff-2026)",
    "work_id": "w_R4F8T5DKXC9W",
    "_ya_publicada": [
     {
@@ -819,8 +814,7 @@
    "pais_tmdb": "France",
    "title_en": "Back Before 3 P.M.",
    "lbSlug": "back-before-3-pm",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Retour avant 3 p.m."
+   "_verificado": "declarada a mano: altas.py --sondar: tmdb_alternos: TMDB 1633356 «Back Before 3 P.M.» — director ✓ y año/duración ✓"
   },
   {
    "titulo": "Sol de niebla",
@@ -834,7 +828,7 @@
    "duracion_tmdb": 6,
    "pais_tmdb": "",
    "lbSlug": "sol-de-niebla",
-   "_verificado": "el catálogo ya la tiene (w_R4JMKBFQW5V3, cinetoro-2026, cortoscali-2026, ficfusa-2026, filcmar-2026, mamut-2026, midbo-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4JMKBFQW5V3, aleste-2026, cinetoro-2026, cortoscali-2026, ficfusa-2026, filcmar-2026, mamut-2026, midbo-2026)",
    "work_id": "w_R4JMKBFQW5V3",
    "_ya_publicada": [
     {
@@ -923,8 +917,8 @@
    "duracion_tmdb": 105,
    "pais_tmdb": "Greece, Cyprus, Colombia",
    "lbSlug": "the-megalomaniacs",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "The Megalomaniacs"
+   "_verificado": "el catálogo ya la tiene (w_JETCAD2VVTFW, aleste-2026)",
+   "work_id": "w_JETCAD2VVTFW"
   },
   {
    "titulo": "Todo lo que pasará mañana",
@@ -938,7 +932,7 @@
    "duracion_tmdb": 0,
    "pais_tmdb": "",
    "lbSlug": "todo-lo-que-pasara-manana",
-   "_verificado": "el catálogo ya la tiene (w_4RPT53V0H8F6, festicinerio-2026, ficidi-2026)",
+   "_verificado": "el catálogo ya la tiene (w_4RPT53V0H8F6, aleste-2026, festicinerio-2026, ficidi-2026)",
    "work_id": "w_4RPT53V0H8F6",
    "_ya_publicada": [
     {
@@ -1066,8 +1060,8 @@
    "pais_tmdb": "Italy, Germany",
    "title_en": "The Last One for the Road",
    "lbSlug": "the-last-one-for-the-road",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "La última ronda en Venecia"
+   "_verificado": "el catálogo ya la tiene (w_JETKX5ESK1DZ, aleste-2026)",
+   "work_id": "w_JETKX5ESK1DZ"
   },
   "Gioia mia": {
    "tmdb_id": 1510325,
@@ -1168,8 +1162,8 @@
    "duracion_tmdb": 129,
    "pais_tmdb": "Kosovo, Germany, Slovenia, Macedonia, Albania, Belgium",
    "lbSlug": "shame-and-money",
-   "_verificado": "el catálogo ya la tiene (w_B2TQ0X0MG8PK, aleste-2026)",
-   "work_id": "w_B2TQ0X0MG8PK"
+   "_verificado": "el catálogo ya la tiene (w_JF6HTWSRS6KF, aleste-2026)",
+   "work_id": "w_JF6HTWSRS6KF"
   },
   "Todas las canciones del mundo": {
    "tmdb_id": 1744092,
@@ -1230,8 +1224,7 @@
    "pais_tmdb": "Belgium, Armenia",
    "title_en": "Here, Elsewhere",
    "lbSlug": "here-elsewhere-2026",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Ici, ailleurs"
+   "_verificado": "declarada a mano: altas.py --sondar: tmdb_alternos: TMDB 1657855 «Here, Elsewhere» — director ✓ y año/duración ✓"
   },
   "Bright Future": {
    "tmdb_id": 26886,
@@ -1244,8 +1237,8 @@
    "duracion_tmdb": 115,
    "pais_tmdb": "Japan",
    "lbSlug": "bright-future",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Bright Future"
+   "_verificado": "el catálogo ya la tiene (w_JETBVFBSYK7M, aleste-2026)",
+   "work_id": "w_JETBVFBSYK7M"
   },
   "Ciudadano Havel": {
    "tmdb_id": 54346,
@@ -1259,8 +1252,7 @@
    "pais_tmdb": "Czech Republic",
    "title_en": "Citizen Havel",
    "lbSlug": "citizen-havel",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Občan Havel"
+   "_verificado": "declarada a mano: altas.py --sondar: tmdb_alternos: TMDB 54346 «Citizen Havel» — director ✓ y año/duración ✓"
   },
   "Historias de una mentira": {
    "tmdb_id": 1568190,
@@ -1274,8 +1266,7 @@
    "pais_tmdb": "Greece, France",
    "title_en": "Stories of a Lie",
    "lbSlug": "stories-of-a-lie",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Stories of a Lie"
+   "_verificado": "declarada a mano: altas.py --sondar: tmdb_alternos: TMDB 1568190 «Stories of a Lie» — director ✓ y año/duración ✓"
   },
   "Ino Moxo: El sueño del brujo": {
    "tmdb_id": 1374972,
@@ -1288,8 +1279,8 @@
    "duracion_tmdb": 82,
    "pais_tmdb": "Peru",
    "lbSlug": "ino-moxo-el-sueno-del-brujo",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Ino Moxo: El sueño del brujo"
+   "_verificado": "el catálogo ya la tiene (w_JET3NQQJ12X5, aleste-2026)",
+   "work_id": "w_JET3NQQJ12X5"
   },
   "Junio 25. Andréi Tarkovski, visita a su tumba": {
    "tmdb_id": 1193850,
@@ -1302,8 +1293,8 @@
    "duracion_tmdb": 5,
    "pais_tmdb": "",
    "lbSlug": "junio-25-andrei-tarkovski-visita-a-su-tumba",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Junio 25. Andréi Tarkovski, visita a su tumba"
+   "_verificado": "el catálogo ya la tiene (w_JET7S5Q0VAEA, aleste-2026)",
+   "work_id": "w_JET7S5Q0VAEA"
   },
   "La ciudad blanca": {
    "tmdb_id": 33802,
@@ -1317,8 +1308,8 @@
    "pais_tmdb": "Portugal, Switzerland",
    "title_en": "In the White City",
    "lbSlug": "in-the-white-city",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "La ciudad blanca"
+   "_verificado": "el catálogo ya la tiene (w_JETFBZMAW32J, aleste-2026)",
+   "work_id": "w_JETFBZMAW32J"
   },
   "La retirada": {
    "tmdb_id": 76598,
@@ -1332,8 +1323,7 @@
    "pais_tmdb": "Czech Republic",
    "title_en": "Leaving",
    "lbSlug": "leaving-2011",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Odcházení"
+   "_verificado": "declarada a mano: altas.py --sondar: tmdb_alternos: TMDB 76598 «Leaving» — director ✓ y año/duración ✓"
   },
   "La salamandra": {
    "tmdb_id": 62978,
@@ -1347,8 +1337,8 @@
    "pais_tmdb": "Switzerland, France",
    "title_en": "The Salamander",
    "lbSlug": "the-salamander-1971",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "La salamandra"
+   "_verificado": "el catálogo ya la tiene (w_JET7AWMJQ4J4, aleste-2026)",
+   "work_id": "w_JET7AWMJQ4J4"
   },
   "Laguna": {
    "tmdb_id": 1520513,
@@ -1361,8 +1351,8 @@
    "duracion_tmdb": 102,
    "pais_tmdb": "Lithuania, France",
    "lbSlug": "laguna-2025",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Laguna"
+   "_verificado": "el catálogo ya la tiene (w_JETAWV8S9EP5, aleste-2026)",
+   "work_id": "w_JETAWV8S9EP5"
   },
   "Las piedras del río": {
    "_fuente": "cinecorto",
@@ -1414,7 +1404,7 @@
    "duracion_tmdb": 17,
    "pais_tmdb": "",
    "lbSlug": "lejania-2026",
-   "_verificado": "el catálogo ya la tiene (w_R4HCND964DS3, ficci-65, jardin-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4HCND964DS3, aleste-2026, ficci-65, jardin-2026)",
    "work_id": "w_R4HCND964DS3",
    "_ya_publicada": [
     {
@@ -1456,8 +1446,8 @@
    "duracion_tmdb": 110,
    "pais_tmdb": "Japan",
    "lbSlug": "license-to-live",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "License to Live"
+   "_verificado": "el catálogo ya la tiene (w_JETH4AN7CW78, aleste-2026)",
+   "work_id": "w_JETH4AN7CW78"
   },
   "Liminal": {
    "tmdb_id": 1743116,
@@ -1470,7 +1460,7 @@
    "duracion_tmdb": 16,
    "pais_tmdb": "",
    "lbSlug": "liminal-6",
-   "_verificado": "el catálogo ya la tiene (w_R4F84MW9WTH9, cinemancia-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4F84MW9WTH9, aleste-2026, cinemancia-2026)",
    "work_id": "w_R4F84MW9WTH9",
    "_ya_publicada": [
     {
@@ -1499,7 +1489,7 @@
    "pais_tmdb": "Spain",
    "title_en": "The Delinquents",
    "lbSlug": "the-delinquents-1960",
-   "_verificado": "el catálogo ya la tiene (w_R4FBYJM4E9CV, cinemancia-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4FBYJM4E9CV, aleste-2026, cinemancia-2026)",
    "work_id": "w_R4FBYJM4E9CV",
    "_ya_publicada": [
     {
@@ -1529,7 +1519,7 @@
    "pais_tmdb": "Colombia",
    "title_en": "Thanks so, so much",
    "lbSlug": "thanks-so-so-much",
-   "_verificado": "el catálogo ya la tiene (w_R4GZR74RXREK, cinetoro-2026, ficcali-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4GZR74RXREK, aleste-2026, cinetoro-2026, ficcali-2026)",
    "work_id": "w_R4GZR74RXREK",
    "_ya_publicada": [
     {
@@ -1562,8 +1552,7 @@
    "pais_tmdb": "",
    "title_en": "Nobody In Sight",
    "lbSlug": "nobody-in-sight",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "არავინ არ ჩანს"
+   "_verificado": "declarada a mano: altas.py --ficha: TMDB 1594652 «Nobody In Sight» / original არავინ არ ჩანს, dir. Kote Kalandadze, 2025-12-05, 76 min — coincide título original, director, año y duración (75)"
   },
   "Pulse": {
    "tmdb_id": 27324,
@@ -1576,8 +1565,8 @@
    "duracion_tmdb": 118,
    "pais_tmdb": "Japan",
    "lbSlug": "pulse-2001",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Pulse"
+   "_verificado": "el catálogo ya la tiene (w_JETDDR1A4XA4, aleste-2026)",
+   "work_id": "w_JETDDR1A4XA4"
   },
   "Refracción": {
    "tmdb_id": 1584776,
@@ -1590,7 +1579,7 @@
    "duracion_tmdb": 11,
    "pais_tmdb": "Colombia",
    "lbSlug": "refraccion",
-   "_verificado": "el catálogo ya la tiene (w_R4F8T5DKXC9W, cinemancia-2026, ficica-2026, ficidi-2026, ficmontanas-2026, girardota-2026, jardin-2026, miradas-2026, narrarelfuturo-2026, villadeleyvaiff-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4F8T5DKXC9W, aleste-2026, cinemancia-2026, ficica-2026, ficidi-2026, ficmontanas-2026, girardota-2026, jardin-2026, miradas-2026, narrarelfuturo-2026, villadeleyvaiff-2026)",
    "work_id": "w_R4F8T5DKXC9W",
    "_ya_publicada": [
     {
@@ -1732,8 +1721,7 @@
    "pais_tmdb": "France",
    "title_en": "Back Before 3 P.M.",
    "lbSlug": "back-before-3-pm",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Retour avant 3 p.m."
+   "_verificado": "declarada a mano: altas.py --sondar: tmdb_alternos: TMDB 1633356 «Back Before 3 P.M.» — director ✓ y año/duración ✓"
   },
   "Sol de niebla": {
    "tmdb_id": 1791609,
@@ -1746,7 +1734,7 @@
    "duracion_tmdb": 6,
    "pais_tmdb": "",
    "lbSlug": "sol-de-niebla",
-   "_verificado": "el catálogo ya la tiene (w_R4JMKBFQW5V3, cinetoro-2026, cortoscali-2026, ficfusa-2026, filcmar-2026, mamut-2026, midbo-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4JMKBFQW5V3, aleste-2026, cinetoro-2026, cortoscali-2026, ficfusa-2026, filcmar-2026, mamut-2026, midbo-2026)",
    "work_id": "w_R4JMKBFQW5V3",
    "_ya_publicada": [
     {
@@ -1834,8 +1822,8 @@
    "duracion_tmdb": 105,
    "pais_tmdb": "Greece, Cyprus, Colombia",
    "lbSlug": "the-megalomaniacs",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "The Megalomaniacs"
+   "_verificado": "el catálogo ya la tiene (w_JETCAD2VVTFW, aleste-2026)",
+   "work_id": "w_JETCAD2VVTFW"
   },
   "Todo lo que pasará mañana": {
    "tmdb_id": 1812504,
@@ -1848,7 +1836,7 @@
    "duracion_tmdb": 0,
    "pais_tmdb": "",
    "lbSlug": "todo-lo-que-pasara-manana",
-   "_verificado": "el catálogo ya la tiene (w_4RPT53V0H8F6, festicinerio-2026, ficidi-2026)",
+   "_verificado": "el catálogo ya la tiene (w_4RPT53V0H8F6, aleste-2026, festicinerio-2026, ficidi-2026)",
    "work_id": "w_4RPT53V0H8F6",
    "_ya_publicada": [
     {

@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, emparejado con ficha_verifica() (director + año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-11-16"
+  "capturado": "2026-11-17"
  },
  "obras": [
   {
@@ -54,7 +54,7 @@
    "lbSlug": "here-elsewhere-2026",
    "_verificado": "declarada a mano: altas.py --sondar: tmdb_alternos: TMDB 1657855 «Here, Elsewhere» — director ✓ y año/duración ✓",
    "_director": "Comes Chahbazian",
-   "_sondeado": "2026-11-16",
+   "_sondeado": "2026-11-17",
    "poster": "/assets/aleste-2026/aqui-en-otros-lugares.jpg",
    "posterSource": "tmdb"
   },
@@ -112,7 +112,7 @@
    "lbSlug": "citizen-havel",
    "_verificado": "declarada a mano: altas.py --sondar: tmdb_alternos: TMDB 54346 «Citizen Havel» — director ✓ y año/duración ✓",
    "_director": "Miroslav Janek, Pavel Koutecký",
-   "_sondeado": "2026-11-16",
+   "_sondeado": "2026-11-17",
    "poster": "/assets/aleste-2026/ciudadano-havel.jpg",
    "posterSource": "tmdb"
   },
@@ -175,7 +175,7 @@
    "lbSlug": "hysteria-2025-1",
    "_verificado": "declarada a mano: «Hysteria» (2025), dir. Mehmet Akif Büyükatalay en su filmografía de TMDB; Alemania, 103 min (lámina 104)",
    "_director": "Mehmet Akif Büyükatalay",
-   "_sondeado": "2026-11-16",
+   "_sondeado": "2026-11-17",
    "poster": "/assets/aleste-2026/histeria.jpg",
    "posterSource": "tmdb"
   },
@@ -194,7 +194,7 @@
    "lbSlug": "stories-of-a-lie",
    "_verificado": "declarada a mano: altas.py --sondar: tmdb_alternos: TMDB 1568190 «Stories of a Lie» — director ✓ y año/duración ✓",
    "_director": "Olia Verriopoulou",
-   "_sondeado": "2026-11-16",
+   "_sondeado": "2026-11-17",
    "poster": "/assets/aleste-2026/historias-de-una-mentira.jpg",
    "posterSource": "tmdb"
   },
@@ -271,7 +271,7 @@
    "lbSlug": "leaving-2011",
    "_verificado": "declarada a mano: altas.py --sondar: tmdb_alternos: TMDB 76598 «Leaving» — director ✓ y año/duración ✓",
    "_director": "Václav Havel",
-   "_sondeado": "2026-11-16",
+   "_sondeado": "2026-11-17",
    "poster": "/assets/aleste-2026/la-retirada.jpg",
    "posterSource": "tmdb"
   },
@@ -310,7 +310,7 @@
    "lbSlug": "the-promised-land-1975",
    "_verificado": "declarada a mano: «Ziemia obiecana», dir. Andrzej Wajda; la lámina dice 1974 (rodaje/premier) y TMDB 1975; 162 min es el montaje corto, TMDB da 179",
    "_director": "Andrzej Wajda",
-   "_sondeado": "2026-11-16",
+   "_sondeado": "2026-11-17",
    "poster": "/assets/aleste-2026/la-tierra-prometida.jpg",
    "posterSource": "tmdb"
   },
@@ -517,7 +517,7 @@
    "lbSlug": "london-2026",
    "_verificado": "declarada a mano: «London» (2026), dir. Sebastian Brameshuber, en su filmografía de TMDB; misma dirección y año",
    "_director": "Sebastian Brameshuber",
-   "_sondeado": "2026-11-16",
+   "_sondeado": "2026-11-17",
    "sinopsis": "Bobby siempre está de viaje, conduciendo su coche de un lado a otro por la autopista que une las ciudades austriacas de Viena y Salzburgo. Gracias a un servicio de coche compartido, recoge a otras personas que viajan por la misma ruta pero buscan ahorrar en gasolina. Durante el trayecto, charlan.",
    "_sinopsis": "https://www.elmamm.org/cine/9o-festival-al-este/",
    "poster": "/assets/aleste-2026/londres.jpg",
@@ -573,7 +573,7 @@
    "lbSlug": "innocent-sorcerers",
    "_verificado": "declarada a mano: «Niewinni czarodzieje» (1960, 83 min), dir. Andrzej Wajda: año y duración exactos",
    "_director": "Andrzej Wajda",
-   "_sondeado": "2026-11-16",
+   "_sondeado": "2026-11-17",
    "sinopsis": "Un joven médico está cansado de que las mujeres lo persigan. Una noche conoce a una muchacha que prácticamente se instala en su cuarto, y allí hablan de la moral y del amor.",
    "_sinopsis": "traducida del inglés de TMDB 80324",
    "poster": "/assets/aleste-2026/los-inocentes-encantadores.jpg",
@@ -631,7 +631,7 @@
    "lbSlug": "nobody-in-sight",
    "_verificado": "declarada a mano: altas.py --ficha: TMDB 1594652 «Nobody In Sight» / original არავინ არ ჩანს, dir. Kote Kalandadze, 2025-12-05, 76 min — coincide título original, director, año y duración (75)",
    "_director": "Kote Kalandadze",
-   "_sondeado": "2026-11-16",
+   "_sondeado": "2026-11-17",
    "poster": "/assets/aleste-2026/nadie-a-la-vista.jpg",
    "posterSource": "tmdb"
   },
@@ -650,7 +650,7 @@
    "lbSlug": "father-2025-1",
    "_verificado": "declarada a mano: «Otec» (2025), dir. Tereza Nvotová: misma dirección y año. TMDB 99 min, MAMM 103; el título en español no casa con «Father»",
    "_director": "Tereza Nvotová",
-   "_sondeado": "2026-11-16",
+   "_sondeado": "2026-11-17",
    "sinopsis": "La vida tranquila de un hombre exitoso se desmorona cuando su bebé desaparece de la guardería. La llamada desesperada de su esposa revela una verdad devastadora. Inspirada en hechos reales en torno al llamado síndrome del bebé olvidado, la película acompaña a Michal y a su esposa Zuzka a través del duelo, de la culpa, del escarnio público y el largo proceso judicial que sigue.",
    "_sinopsis": "https://www.elmamm.org/cine/9o-festival-al-este/",
    "poster": "/assets/aleste-2026/padre.jpg",
@@ -876,7 +876,7 @@
    "lbSlug": "back-before-3-pm",
    "_verificado": "declarada a mano: altas.py --sondar: tmdb_alternos: TMDB 1633356 «Back Before 3 P.M.» — director ✓ y año/duración ✓",
    "_director": "Gaël Lepingle",
-   "_sondeado": "2026-11-16",
+   "_sondeado": "2026-11-17",
    "sinopsis": "Se trata de un hombre y su hogar, el padre en un complejo habitacional. Es después de su muerte. Se ha encontrado algo. No es un secreto, sino la cara oculta de los días, registrada con precisión obsesiva. Una lucha diaria con la vida material y el paso del tiempo.",
    "_sinopsis": "https://www.alestfestival.com/programa2026/retorno-antes-de-las-3-p.-m.",
    "poster": "/assets/aleste-2026/retorno-antes-de-las-3-p-m.jpg",
@@ -1179,7 +1179,7 @@
    "lbSlug": "here-elsewhere-2026",
    "_verificado": "declarada a mano: altas.py --sondar: tmdb_alternos: TMDB 1657855 «Here, Elsewhere» — director ✓ y año/duración ✓",
    "_director": "Comes Chahbazian",
-   "_sondeado": "2026-11-16",
+   "_sondeado": "2026-11-17",
    "poster": "/assets/aleste-2026/aqui-en-otros-lugares.jpg",
    "posterSource": "tmdb"
   },
@@ -1234,7 +1234,7 @@
    "lbSlug": "citizen-havel",
    "_verificado": "declarada a mano: altas.py --sondar: tmdb_alternos: TMDB 54346 «Citizen Havel» — director ✓ y año/duración ✓",
    "_director": "Miroslav Janek, Pavel Koutecký",
-   "_sondeado": "2026-11-16",
+   "_sondeado": "2026-11-17",
    "poster": "/assets/aleste-2026/ciudadano-havel.jpg",
    "posterSource": "tmdb"
   },
@@ -1272,7 +1272,7 @@
    "lbSlug": "hysteria-2025-1",
    "_verificado": "declarada a mano: «Hysteria» (2025), dir. Mehmet Akif Büyükatalay en su filmografía de TMDB; Alemania, 103 min (lámina 104)",
    "_director": "Mehmet Akif Büyükatalay",
-   "_sondeado": "2026-11-16",
+   "_sondeado": "2026-11-17",
    "poster": "/assets/aleste-2026/histeria.jpg",
    "posterSource": "tmdb"
   },
@@ -1290,7 +1290,7 @@
    "lbSlug": "stories-of-a-lie",
    "_verificado": "declarada a mano: altas.py --sondar: tmdb_alternos: TMDB 1568190 «Stories of a Lie» — director ✓ y año/duración ✓",
    "_director": "Olia Verriopoulou",
-   "_sondeado": "2026-11-16",
+   "_sondeado": "2026-11-17",
    "poster": "/assets/aleste-2026/historias-de-una-mentira.jpg",
    "posterSource": "tmdb"
   },
@@ -1363,7 +1363,7 @@
    "lbSlug": "leaving-2011",
    "_verificado": "declarada a mano: altas.py --sondar: tmdb_alternos: TMDB 76598 «Leaving» — director ✓ y año/duración ✓",
    "_director": "Václav Havel",
-   "_sondeado": "2026-11-16",
+   "_sondeado": "2026-11-17",
    "poster": "/assets/aleste-2026/la-retirada.jpg",
    "posterSource": "tmdb"
   },
@@ -1400,7 +1400,7 @@
    "lbSlug": "the-promised-land-1975",
    "_verificado": "declarada a mano: «Ziemia obiecana», dir. Andrzej Wajda; la lámina dice 1974 (rodaje/premier) y TMDB 1975; 162 min es el montaje corto, TMDB da 179",
    "_director": "Andrzej Wajda",
-   "_sondeado": "2026-11-16",
+   "_sondeado": "2026-11-17",
    "poster": "/assets/aleste-2026/la-tierra-prometida.jpg",
    "posterSource": "tmdb"
   },
@@ -1557,7 +1557,7 @@
    "lbSlug": "london-2026",
    "_verificado": "declarada a mano: «London» (2026), dir. Sebastian Brameshuber, en su filmografía de TMDB; misma dirección y año",
    "_director": "Sebastian Brameshuber",
-   "_sondeado": "2026-11-16",
+   "_sondeado": "2026-11-17",
    "sinopsis": "Bobby siempre está de viaje, conduciendo su coche de un lado a otro por la autopista que une las ciudades austriacas de Viena y Salzburgo. Gracias a un servicio de coche compartido, recoge a otras personas que viajan por la misma ruta pero buscan ahorrar en gasolina. Durante el trayecto, charlan.",
    "_sinopsis": "https://www.elmamm.org/cine/9o-festival-al-este/",
    "poster": "/assets/aleste-2026/londres.jpg",
@@ -1611,7 +1611,7 @@
    "lbSlug": "innocent-sorcerers",
    "_verificado": "declarada a mano: «Niewinni czarodzieje» (1960, 83 min), dir. Andrzej Wajda: año y duración exactos",
    "_director": "Andrzej Wajda",
-   "_sondeado": "2026-11-16",
+   "_sondeado": "2026-11-17",
    "sinopsis": "Un joven médico está cansado de que las mujeres lo persigan. Una noche conoce a una muchacha que prácticamente se instala en su cuarto, y allí hablan de la moral y del amor.",
    "_sinopsis": "traducida del inglés de TMDB 80324",
    "poster": "/assets/aleste-2026/los-inocentes-encantadores.jpg",
@@ -1667,7 +1667,7 @@
    "lbSlug": "nobody-in-sight",
    "_verificado": "declarada a mano: altas.py --ficha: TMDB 1594652 «Nobody In Sight» / original არავინ არ ჩანს, dir. Kote Kalandadze, 2025-12-05, 76 min — coincide título original, director, año y duración (75)",
    "_director": "Kote Kalandadze",
-   "_sondeado": "2026-11-16",
+   "_sondeado": "2026-11-17",
    "poster": "/assets/aleste-2026/nadie-a-la-vista.jpg",
    "posterSource": "tmdb"
   },
@@ -1685,7 +1685,7 @@
    "lbSlug": "father-2025-1",
    "_verificado": "declarada a mano: «Otec» (2025), dir. Tereza Nvotová: misma dirección y año. TMDB 99 min, MAMM 103; el título en español no casa con «Father»",
    "_director": "Tereza Nvotová",
-   "_sondeado": "2026-11-16",
+   "_sondeado": "2026-11-17",
    "sinopsis": "La vida tranquila de un hombre exitoso se desmorona cuando su bebé desaparece de la guardería. La llamada desesperada de su esposa revela una verdad devastadora. Inspirada en hechos reales en torno al llamado síndrome del bebé olvidado, la película acompaña a Michal y a su esposa Zuzka a través del duelo, de la culpa, del escarnio público y el largo proceso judicial que sigue.",
    "_sinopsis": "https://www.elmamm.org/cine/9o-festival-al-este/",
    "poster": "/assets/aleste-2026/padre.jpg",
@@ -1906,7 +1906,7 @@
    "lbSlug": "back-before-3-pm",
    "_verificado": "declarada a mano: altas.py --sondar: tmdb_alternos: TMDB 1633356 «Back Before 3 P.M.» — director ✓ y año/duración ✓",
    "_director": "Gaël Lepingle",
-   "_sondeado": "2026-11-16",
+   "_sondeado": "2026-11-17",
    "sinopsis": "Se trata de un hombre y su hogar, el padre en un complejo habitacional. Es después de su muerte. Se ha encontrado algo. No es un secreto, sino la cara oculta de los días, registrada con precisión obsesiva. Una lucha diaria con la vida material y el paso del tiempo.",
    "_sinopsis": "https://www.alestfestival.com/programa2026/retorno-antes-de-las-3-p.-m.",
    "poster": "/assets/aleste-2026/retorno-antes-de-las-3-p-m.jpg",
