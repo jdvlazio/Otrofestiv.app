@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "cinetoro.org — programacion-2026-2 (parrilla) + programas-2 (obras de cada programa) + el catálogo del pre-onboarding (fichas)",
-  "capturado": "2026-11-17",
+  "capturado": "2026-11-18",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_sedes": "Los lugares de la parrilla con su ciudad. «POR DEFINIR» es un rótulo del festival y se publica tal cual, con pin aproximado declarado. «Mambo House / Polideportivo (San Antonio)» (el intermedio musical) se publica en el Polideportivo, donde van los programas 3 y 4 que lo rodean: inferido.",
@@ -2552,7 +2552,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-17T17:15:00",
+  "fecha": "2026-11-18T13:20:48",
   "plan_sha": "84b6e08d3d7ee761",
   "paso": 8,
   "cmd": "python3 pipeline/cinetoro-2026-verificar.py"
