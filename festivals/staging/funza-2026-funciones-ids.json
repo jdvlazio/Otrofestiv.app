@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "ensamblar.py: ids estables de las funciones (docs/FUNCION.md C1)",
-  "capturado": "2026-10-25"
+  "capturado": "2026-11-18"
  },
  "funciones": {
   "f_ed9eae5030": {
@@ -32,6 +32,27 @@
    "sala": "",
    "titulo": "cierre jornada inaugural"
   },
+  "f_10d1910d0b": {
+   "sede": "Institución Educativa Ágora - Funza",
+   "dia": "2026-11-19",
+   "hora": "08:00",
+   "sala": "",
+   "titulo": "taller stop motion"
+  },
+  "f_d711a56758": {
+   "sede": "Colegio de Valores Humanos Sathya Sai - Funza",
+   "dia": "2026-11-19",
+   "hora": "09:00",
+   "sala": "",
+   "titulo": "taller maquillaje para efectos especiales"
+  },
+  "f_a7d3726ac1": {
+   "sede": "CITI - Funza",
+   "dia": "2026-11-19",
+   "hora": "09:00",
+   "sala": "",
+   "titulo": "taller realidad virtual"
+  },
   "f_0ab1d0c3ce": {
    "sede": "Centro Cultural Bacatá - Funza",
    "dia": "2026-11-19",
@@ -59,13 +80,6 @@
    "hora": "09:00",
    "sala": "",
    "titulo": "panel comunicacion nuevas narrativas"
-  },
-  "f_d4b8c8edb2": {
-   "sede": "Centro Cultural Bacatá - Funza",
-   "dia": "2026-11-20",
-   "hora": "10:00",
-   "sala": "",
-   "titulo": "taller efectos especiales o stop motion"
   },
   "f_d9a7e52bb9": {
    "sede": "Centro Cultural Bacatá - Funza",
@@ -129,6 +143,14 @@
    "hora": "22:30",
    "sala": "",
    "titulo": "horizonte"
+  },
+  "f_d4b8c8edb2": {
+   "sede": "Centro Cultural Bacatá - Funza",
+   "dia": "2026-11-20",
+   "hora": "10:00",
+   "sala": "",
+   "titulo": "taller efectos especiales o stop motion",
+   "ausente": true
   },
   "f_ba0dca3096": {
    "sede": "Centro Cultural Bacatá - Funza",

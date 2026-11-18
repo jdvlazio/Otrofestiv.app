@@ -1,14 +1,23 @@
 {
  "_provenance": {
   "fuente": "issue de radar #1261 — https://github.com/jdvlazio/Otrofestiv.app/issues/1261",
-  "capturado": "2026-10-25",
+  "capturado": "2026-11-18",
   "titulo": "RADAR: 4.º Festival de Cine Funza — Funza (Cundinamarca), 18–21 NOV 2026",
   "estado": "OPEN",
-  "comentarios": 0
+  "comentarios": 2
  },
  "issue": 1261,
  "titulo": "RADAR: 4.º Festival de Cine Funza — Funza (Cundinamarca), 18–21 NOV 2026",
  "estado": "OPEN",
  "cuerpo": "**4.º Festival de Cine Funza** — Funza (Cundinamarca), **18–21 nov 2026**, lema «Ojos siempre abiertos». Sede: Centro Cultural Bacatá (Cra. 13 #12-55, Centro).\nFuente: pedido de Juan (25 oct 2026): el festival lo invitó a participar con Otrofestiv (la «Charla app de festivales de cine», 20 nov 14:45).\n\n- **Programación:** agenda general actualizada en PDF, mandada por el festival a Juan (25 oct). 23 filas; 18 publicables.\n- **Web:** no se encontró web propia.\n- **IG:** no tiene. Se comunica por Facebook: https://www.facebook.com/centroculturalbacatadefunza/ (Apify `facebook-posts-scraper`). Al 25 oct no había publicado la programación.\n- **Obras:** Reflejos (Miguel Urrutia), Basta Mamá, Horizonte. Las obras en competencia aún NO se publicaron.\n\nPlan: onboarding en la rama `data/funza-2026`. Vigilar en Facebook la selección en competencia y la hora de Horizonte (la agenda dice 10:30 p. m.).\n",
- "comentarios": []
+ "comentarios": [
+  {
+   "fecha": "2026-11-17",
+   "cuerpo": "Vigía 16 nov 21:20 — Funza: sin cambios. El único post nuevo en Facebook del Centro Cultural Bacatá es sobre las muestras de teatro, no del festival."
+  },
+  {
+   "fecha": "2026-11-18",
+   "cuerpo": "Vigía 18 nov 17:30: el post de Facebook del Centro Cultural Bacatá (18 nov) suma 3 talleres el jue 19 que no están en la app: Stop motion (8:00, IE Ágora), Maquillaje FX (9:00, Colegio Sathya Sai) y Realidad virtual (9:00, CITI). Además, el evento inaugural del 18 fue a las 5:00 p.m. en el Auditorio Complejo Cultural. Pasado a Onboarding."
+  }
+ ]
 }

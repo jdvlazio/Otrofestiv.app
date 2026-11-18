@@ -835,6 +835,8 @@ SIGLAS = {
     'BIFF', 'FICCI', 'FICDH', 'TIFF',
     # CUAFF 2026 (17 nov 2026): Colombian Urban Art Film Festival, el sello «CUAFF 2026» de sus posts
     'CUAFF',
+    # Funza 2026 (18 nov 2026): el CITI del parque principal, sede del taller de realidad virtual
+    'CITI',
     # Guatapé Film Fest (18 oct 2026): la Pantalla CORNARE (Corporación Autónoma Regional
     # Rionegro-Nare) y la sección FIACINE (Federación Iberoamericana de Asociaciones de Cine)
     'CORNARE', 'FIACINE',
