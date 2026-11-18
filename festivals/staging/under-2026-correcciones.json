@@ -9,6 +9,18 @@
    "_fuente": "https://www.themoviedb.org/movie/1313242",
    "_por_que": "altas.py --sondar: tmdb_titulo: TMDB 1313242 «Duelo» — director ✓ y año/duración ✓",
    "_registro": "under-2026-altas.json"
+  },
+  "Fata Morgana": {
+   "tmdb": 1829503,
+   "_fuente": "https://www.themoviedb.org/movie/1829503",
+   "_por_que": "alta en TMDB hecha por nosotros el 2026-11-18 (registro under-2026-altas.json)",
+   "_registro": "under-2026-altas.json"
+  },
+  "Cosmopoética: el ciclo de vida de una estrella masiva": {
+   "tmdb": 1829504,
+   "_fuente": "https://www.themoviedb.org/movie/1829504",
+   "_por_que": "alta en TMDB hecha por nosotros el 2026-11-18 (registro under-2026-altas.json)",
+   "_registro": "under-2026-altas.json"
   }
  }
 }

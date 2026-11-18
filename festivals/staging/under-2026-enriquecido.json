@@ -335,22 +335,19 @@
   },
   {
    "titulo": "Cosmopoética: el ciclo de vida de una estrella masiva",
-   "_ya_publicada": [
-    {
-     "festival": "vartex-2026",
-     "titulo": "Cosmopoética",
-     "country": "Colombia",
-     "year": 2025,
-     "duration": "10 min",
-     "sinopsis": "Cosmopoética es un cortometraje experimental que explora la transformación y la vulnerabilidad del cambio. A partir del paralelo entre el ciclo vital de una estrella masiva y el proceso interior de una actriz que se despide del teatro, la obra propone una reflexión sobre los finales como origen de lo nuevo."
-    }
-   ],
-   "_sinopsis_de": "ya publicada en vartex-2026",
-   "_verificado": "ya publicada en vartex-2026: se reusa su sinopsis",
-   "sinopsis": "Cosmopoética es un cortometraje experimental que explora la transformación y la vulnerabilidad del cambio. A partir del paralelo entre el ciclo vital de una estrella masiva y el proceso interior de una actriz que se despide del teatro, la obra propone una reflexión sobre los finales como origen de lo nuevo.",
-   "pais": "Colombia",
-   "anio": 2025,
+   "tmdb_id": 1829504,
+   "titulo_original": "Cosmopoética: el ciclo de vida de una estrella masiva",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "Cosmopoética is an experimental short film that explores transformation and the vulnerability of change. Drawing a parallel between the life cycle of a massive star and the inner process of an actress saying goodbye to the theatre, the film reflects on endings as the origin of the new.",
+   "genero": "",
+   "anio_tmdb": 0,
    "duracion_tmdb": 10,
+   "pais_tmdb": "",
+   "lbSlug": "cosmopoetica-el-ciclo-de-vida-de-una-estrella",
+   "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-18 (registro under-2026-altas.json)",
+   "_director": "Sofía Orozco Payares",
+   "_sondeado": "2026-11-18",
    "poster": "/assets/under-2026/cosmopoetica-el-ciclo-de-vida-de-una-estrella-masiva.jpg",
    "posterSource": "oficial",
    "_afiche": "declarado: afiche oficial enviado por el festival (correo 18 nov 2026)"
@@ -481,6 +478,25 @@
    "_sondeado": "2026-11-18",
    "poster": "/assets/under-2026/elegy-for-the-lost.jpg",
    "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Fata Morgana",
+   "tmdb_id": 1829503,
+   "titulo_original": "Fata Morgana",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "An experimental study of memory, images and filming and how memories can transform, rust and disintegrate.",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 5,
+   "pais_tmdb": "",
+   "lbSlug": "fata-morgana-1",
+   "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-18 (registro under-2026-altas.json)",
+   "_director": "Hannu Nieminen",
+   "_sondeado": "2026-11-18",
+   "poster": "/assets/under-2026/fata-morgana.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: afiche oficial enviado por el festival (correo 18 nov 2026)"
   },
   {
    "titulo": "Ghost Noon",
@@ -1113,12 +1129,6 @@
    "_afiche": "declarado: afiche oficial enviado por el festival (correo 18 nov 2026) — horizontal con el título pintado: va entero (editorial)"
   },
   {
-   "titulo": "Fata Morgana",
-   "poster": "/assets/under-2026/fata-morgana.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: afiche oficial enviado por el festival (correo 18 nov 2026)"
-  },
-  {
    "titulo": "Comb story",
    "poster": "/assets/under-2026/comb-story.jpg",
    "posterSource": "oficial",
@@ -1129,6 +1139,18 @@
    "poster": "/assets/under-2026/the-shapeshifter-s-lament.jpg",
    "posterSource": "oficial",
    "_afiche": "declarado: afiche oficial enviado por el festival (correo 18 nov 2026)"
+  },
+  {
+   "titulo": "Teatime",
+   "poster": "/assets/under-2026/teatime.jpg",
+   "posterSource": "editorial",
+   "_afiche": "declarado: fotograma 16:9 que el festival mandó como «Poster» (correo 18 nov 2026): póster editorial"
+  },
+  {
+   "titulo": "Antifragility",
+   "poster": "/assets/under-2026/antifragility.jpg",
+   "posterSource": "editorial",
+   "_afiche": "declarado: fotograma oficial enviado por el festival (correo 18 nov 2026): póster editorial"
   }
  ],
  "verificadas": {
@@ -1431,6 +1453,24 @@
     "genero": "catálogo w_R4EP71550W43 (bhff-2026, cineautopsia-2026, fantasmagoria-2026, fantasofest-2026, festicinerio-2026, ficfusa-2026, ficica-2026, ficpa-2026, narrarelfuturo-2026, popayan-2026, villadeleyvaiff-2026)"
    }
   },
+  "Cosmopoética: el ciclo de vida de una estrella masiva": {
+   "tmdb_id": 1829504,
+   "titulo_original": "Cosmopoética: el ciclo de vida de una estrella masiva",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "Cosmopoética is an experimental short film that explores transformation and the vulnerability of change. Drawing a parallel between the life cycle of a massive star and the inner process of an actress saying goodbye to the theatre, the film reflects on endings as the origin of the new.",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 10,
+   "pais_tmdb": "",
+   "lbSlug": "cosmopoetica-el-ciclo-de-vida-de-una-estrella",
+   "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-18 (registro under-2026-altas.json)",
+   "_director": "Sofía Orozco Payares",
+   "_sondeado": "2026-11-18",
+   "poster": "/assets/under-2026/cosmopoetica-el-ciclo-de-vida-de-una-estrella-masiva.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: afiche oficial enviado por el festival (correo 18 nov 2026)"
+  },
   "Cyclotron": {
    "tmdb_id": 1821440,
    "titulo_original": "Cyclotron",
@@ -1551,6 +1591,24 @@
    "_sondeado": "2026-11-18",
    "poster": "/assets/under-2026/elegy-for-the-lost.jpg",
    "posterSource": "tmdb"
+  },
+  "Fata Morgana": {
+   "tmdb_id": 1829503,
+   "titulo_original": "Fata Morgana",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "An experimental study of memory, images and filming and how memories can transform, rust and disintegrate.",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 5,
+   "pais_tmdb": "",
+   "lbSlug": "fata-morgana-1",
+   "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-18 (registro under-2026-altas.json)",
+   "_director": "Hannu Nieminen",
+   "_sondeado": "2026-11-18",
+   "poster": "/assets/under-2026/fata-morgana.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: afiche oficial enviado por el festival (correo 18 nov 2026)"
   },
   "Ghost Noon": {
    "tmdb_id": 1781720,
@@ -2164,10 +2222,8 @@
   "Atombombenabend",
   "Binary",
   "Comb story",
-  "Cosmopoética: el ciclo de vida de una estrella masiva",
   "Cut your wings and fly",
   "Esas ruinas",
-  "Fata Morgana",
   "Lo que aún queda de mí",
   "Mall",
   "Mamma",
@@ -2208,10 +2264,6 @@
    "director": "Ernesto Rodriguez Cruz",
    "fecha": "2026-11-17"
   },
-  "Cosmopoética: el ciclo de vida de una estrella masiva": {
-   "director": "Sofía Orozco Payares",
-   "fecha": "2026-11-17"
-  },
   "Cut your wings and fly": {
    "director": "Meryem Lahlou",
    "fecha": "2026-11-18"
@@ -2219,10 +2271,6 @@
   "Esas ruinas": {
    "director": "Gabriel Piñeiro",
    "fecha": "2026-11-18"
-  },
-  "Fata Morgana": {
-   "director": "Hannu Nieminen",
-   "fecha": "2026-11-17"
   },
   "Lo que aún queda de mí": {
    "director": "Elena Bursztein",

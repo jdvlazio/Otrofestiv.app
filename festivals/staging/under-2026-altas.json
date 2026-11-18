@@ -121,7 +121,33 @@
      "resultado": "",
      "parcial": "solo la convocatoria (FilmFreeway, Festhome 3476), sin ficha por obra; Instagram del festival no revisado"
     }
-   }
+   },
+   "afiche": {
+    "url": "/Users/d/Developer/Otrofestiv-fuentes/under-2026/correo-2026-11-18/IMG-20261117-WA0014.jpg",
+    "fuente": "afiche oficial enviado por el festival (correo 18 nov 2026)",
+    "archivo": "fuentes/under-2026/altas/cosmopoetica-el-ciclo-de-vida-de-una-estrella-masiva.jpg",
+    "px": [
+     1080,
+     1620
+    ],
+    "ratio": 0.6667,
+    "recorte": {
+     "de": [
+      1080,
+      1350
+     ],
+     "estirado": [
+      1080,
+      1620
+     ],
+     "objetivo": 0.6667
+    },
+    "veredicto_criterio": null,
+    "fecha": "2026-11-18"
+   },
+   "estado": "alta_hecha",
+   "tmdb_id": 1829504,
+   "alta_fecha": "2026-11-18"
   },
   "Duelo": {
    "titulo": "Duelo",
@@ -171,7 +197,23 @@
      "resultado": "",
      "parcial": "solo la convocatoria (FilmFreeway, Festhome 3476), sin ficha por obra; Instagram del festival no revisado"
     }
-   }
+   },
+   "afiche": {
+    "url": "/Users/d/Developer/Otrofestiv-fuentes/under-2026/correo-2026-11-18/unz/fata morgana/Poster 53463d2ae0-poster.jpg",
+    "fuente": "afiche oficial enviado por el festival (correo 18 nov 2026)",
+    "archivo": "fuentes/under-2026/altas/fata-morgana.jpg",
+    "px": [
+     540,
+     800
+    ],
+    "ratio": 0.675,
+    "recorte": null,
+    "veredicto_criterio": null,
+    "fecha": "2026-11-18"
+   },
+   "estado": "alta_hecha",
+   "tmdb_id": 1829503,
+   "alta_fecha": "2026-11-18"
   },
   "Rattling": {
    "titulo": "Rattling",
@@ -262,7 +304,7 @@
  },
  "_provenance": {
   "fuente": "pipeline/altas.py (TMDB + fuentes revisadas a mano, una por una)",
-  "capturado": "2026-11-17"
+  "capturado": "2026-11-18"
  },
  "_nota": "registro de altas: por obra sin ficha, las fuentes revisadas y la decisión. Se escribe con pipeline/altas.py, no a mano."
 }
