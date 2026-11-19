@@ -45,7 +45,13 @@ ACT = 'Encuentros y actividades'                 # PROPUESTA para Juan: encuentr
 F = [
     ('18', '09:00', '11:00', 'Encuentro con Boris Guevara', TROCHA, None, ACT, '01.jpg', [],
      dict(tipo='evento', event_kind='encuentro',
-          descripcion='Fragmentos y diálogo sobre su trayectoria audiovisual. Modera: Pedro Adrián Zuluaga.')),
+          # post Dfs7Bm9FBXh, tal cual (19 nov); la lámina decía solo «Fragmentos y diálogo…»
+          descripcion='En la IV edición de Cine para la Paz nos reencontramos con Boris Guevara, director, '
+                      'documentalista y firmante del Acuerdo de Paz, para recorrer su experiencia detrás de la '
+                      'cámara: de la montaña al proceso de paz de La Habana y a las narrativas que sigue '
+                      'construyendo hoy. A diez años del Acuerdo, abrimos un diálogo sobre las historias que '
+                      'cuentan estos archivos y lo que podemos descubrir en ellos desde el presente. Modera el '
+                      'crítico de cine Pedro Adrián Zuluaga.')),
     ('18', '11:00', '13:00', 'Selección Oficial', TROCHA, None, SEL, '01.jpg',
      [('Hecho a mano', 10), ('Refugiar el Gesto', 11), ('La coca: Buen vivir del pueblo Nasa', 19),
       ('La pandemia del feminicidio en Colombia', 23)], {}),
@@ -60,7 +66,13 @@ F = [
      [('De la misma Tierra', 19), ('Medellín, yo te saludo', 4), ('Un berraco Partido', 10),
       ('Un Milagro Cada Día', 26), ('Nueve jueves en Riachuelo', 24), ('Paseando Te Cuento', 9)], {}),
     ('20', '11:00', '12:00', 'Conversatorio "La Propia Inopia"', LUBIANKA, None, ACT, '03.jpg', [],
-     dict(tipo='evento', event_kind='conversatorio')),
+     dict(tipo='evento', event_kind='conversatorio',
+          # post Df27pKjFNLX, tal cual (19 nov)
+          descripcion='Las películas nos acercan a otras vidas y nos dejan pensando en nuestras propias '
+                      'historias. En el IV Festival Cine para la Paz, La Propia Inopia nos invita a llevar esas '
+                      'inquietudes a la palabra compartida. Conoceremos su proyecto de lectura, escritura y '
+                      'escucha para pensar, a diez años del Acuerdo de Paz, cómo narramos lo vivido y qué '
+                      'futuros queremos construir.')),
     ('20', '13:00', '15:05', 'Horizonte', LUBIANKA, None, ESP, '03.jpg', [('Horizonte', 125)], {}),
     ('20', '15:15', '16:30', 'Por una gota de leche', LUBIANKA, None, SEL, '03.jpg', [('Por una gota de leche', 60)],
      dict(has_qa=True)),
@@ -121,6 +133,10 @@ def main():
             r['obras'] = ob
             r.setdefault('tipo', 'evento' if extra.get('tipo') else 'programa')
         r.update(extra)
+        # el texto de una ACTIVIDAD viaja como `sinopsis` (ensamblar lo pasa a
+        # description); `descripcion` no lo lee nadie y no llegaba al JSON
+        if r.get('tipo') == 'evento' and r.get('descripcion') and not r.get('sinopsis'):
+            r['sinopsis'] = r.pop('descripcion')
         funciones.append(r)
     fuera = sorted(o['titulo'] for k, o in cat.items() if k not in usadas)
     if fuera != ['La niebla de la paz']:
