@@ -154,10 +154,7 @@ def main():
             reg['_nota'] = obs
         else:
             reg.update(titulo=act, tipo='evento', event_kind=KIND[act])
-            # «Instalación del 1.er Encuentro…» haría saltar [abierta-sin-info]
-            # (lee «instalación» como exposición): esa observación no va de sinopsis
-            if not obs.startswith('Instalación'):
-                reg['sinopsis'] = obs
+            reg['sinopsis'] = obs
         funciones.append(reg)
     for dia, hora, tit, quien, sede, lam in FB_TALLERES:
         funciones.append({'dia': dia, 'hora': hora, 'sede': sede, 'acceso': 'Entrada libre (no se anuncia pago)',
