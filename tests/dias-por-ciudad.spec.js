@@ -15,7 +15,8 @@ const tira = () => {
   const tabs = [...document.querySelectorAll('#dtabs .dtab')].filter(t => t.dataset.day !== 'all');
   const visibles = tabs.filter(t => getComputedStyle(t).display !== 'none').map(t => t.dataset.day);
   const on = document.querySelector('#dtabs .dtab.on');
-  return { visibles, activeDay, onVisible: !!on && getComputedStyle(on).display !== 'none' };
+  const pildoras = ['hoy', 'manana'].filter(m => document.getElementById('pmode-' + m)?.classList.contains('on'));
+  return { visibles, activeDay, pildoras, onVisible: !!on && getComputedStyle(on).display !== 'none' };
 };
 
 test('DC1 — elegir ciudad oculta los días de la otra; «Todas» los muestra', async ({ page }) => {
@@ -40,6 +41,8 @@ test('DC1 — elegir ciudad oculta los días de la otra; «Todas» los muestra',
   }
   // El 19 con Bogotá elegida: Bogotá no empezó → su primer día, el 25.
   expect(r.bog.activeDay, 'Bogotá antes de empezar → su primer día').toBe('2026-11-25');
+  // El 25 no es ni hoy ni mañana: ninguna píldora se enciende sobre él.
+  expect(r.bog.pildoras, 'sin «Hoy»/«Mañana» encendidos sobre el 25').toEqual([]);
 });
 
 test('DC2 — elegir una ciudad que ya terminó con el día de hoy puesto lleva a «Todo»', async ({ page }) => {
@@ -69,4 +72,7 @@ test('DC3 — «Mañana» en el último día de la ciudad no salta a un día aje
   }, { tiraSrc: tira.toString() });
   expect(MED, '«Mañana» queda dentro de Medellín').toContain(r.activeDay);
   expect(r.onVisible, 'y su pestaña se ve').toBe(true);
+  // Píldora y botón usan el MISMO cálculo (_hoyManana): la píldora «Mañana»
+  // queda encendida sobre el día al que llevó.
+  expect(r.pillOn, 'la píldora «Mañana» coincide con el día').toBe(true);
 });

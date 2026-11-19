@@ -217,7 +217,10 @@ export function _hoyManana(){
   const hoy=pti>=0?dias[pti]:(vivo>=0?dias[vivo]:dias[ultimo]);
   const base=pti>=0?pti+1:vivo;
   const manana=(base>=0&&base<=ultimo)?dias[base]:dias[ultimo];
-  return {hoy, manana};
+  // enCurso: hoy ES un día de la tira. Si no (Bogotá elegida el 19, o un día
+  // hueco), los botones llevan al próximo día igual, pero la píldora no se
+  // enciende: «Hoy» o «Mañana» encendidos sobre el 25 dicen algo falso.
+  return {hoy, manana, enCurso:pti>=0};
 }
 // Aplica la ciudad a la tira: oculta los días ajenos y, si el día activo quedó
 // fuera, lo lleva al primer día vigente de la ciudad, o a «Todo» si la ciudad
@@ -278,7 +281,7 @@ export function _syncPmodeTabs(){
   ['hoy','manana'].forEach(m=>{
     const el=document.getElementById('pmode-'+m);
     if(!el) return;
-    el.classList.toggle('on', activeDay===_keys[m]);
+    el.classList.toggle('on', _keys.enCurso && activeDay===_keys[m]);
     el.classList.toggle('past', dayFullyPassed(_keys[m]));
   });
   // Y los chips se refrescan con el MISMO cálculo: al cruzar la medianoche o
