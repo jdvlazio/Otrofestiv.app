@@ -475,8 +475,12 @@ def ensamblar(fid, escribir=True):
             'is_recurring': True if f.get('is_recurring') else None,
             'has_qa': bool(f.get('has_qa')),
             'qa_type': f.get('qa_type') or None,
-            'synopsis': f.get('sinopsis') or None,
-            'synopsis_lang': 'es' if f.get('sinopsis') else None,
+            # `descripcion` es como el crudo nombra el texto de una ACTIVIDAD o un
+            # programa (19 nov 2026): no se leía y ese texto nunca llegaba al JSON
+            # (CUAFF, Cine para la Paz, Cinemancia). Entra como synopsis y
+            # lib.separar_descripcion lo pasa a description, que es su lugar.
+            'synopsis': f.get('sinopsis') or f.get('descripcion') or None,
+            'synopsis_lang': 'es' if (f.get('sinopsis') or f.get('descripcion')) else None,
             # se consume en _enriquece(), que lo añade a la sinopsis elegida
             'invitados': f.get('invitados') or None,
             'poster': f.get('poster') or None,

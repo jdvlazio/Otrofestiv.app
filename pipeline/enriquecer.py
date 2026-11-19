@@ -649,8 +649,14 @@ def main():
     _sdec = f'{ST}/{fid}-sinopsis.json'
     if os.path.exists(_sdec):
         n_s = 0
+        # También el texto de un PROGRAMA o una ACTIVIDAD (19 nov 2026, «Noche
+        # Inaugural» de Al Este): no son obras, pero sí funciones del programa.
+        # Su entrada lleva solo el texto, sin ficha, y el ensamblador ya deja
+        # pasar a un programa lo declarado sin tmdb_id (ficha_de_la_funcion).
+        _funcs = {tit_of.get(f['titulo'], f['titulo']) for f in crudo['funciones']
+                  if f.get('titulo') and f.get('en_app', True)}
         for t, d in (json.load(open(_sdec, encoding='utf-8')).get('sinopsis') or {}).items():
-            if t not in obras:
+            if t not in obras and t not in _funcs:
                 sys.exit(f'sinopsis declarada para un título que no está en el programa: {t}')
             e = ok.get(t) or {}
             # `idioma: en`: la única sinopsis que existe está en inglés; va a

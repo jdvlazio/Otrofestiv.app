@@ -6245,6 +6245,9 @@ try:
         ('midbo-2026', 'Visita guiada a la exposición Escuchar lo que permanece'):
             'la visita es un recorrido guiado con hora (mié 4 nov 3 p. m., IG DfKdzHMEUck); '
             'la exposición en sí ya va como abierta con info:true',
+        ('funza-2026', 'Apertura institucional'):
+            'es la «instalación» del 1.er Encuentro Departamental: el acto de abrirlo, '
+            'con hora, no una instalación artística (agenda de Funza, 19 nov 2026)',
     }
     _malas = []
     for _fab in _festivalesVivos():
