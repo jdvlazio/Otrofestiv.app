@@ -2154,7 +2154,7 @@
    "section": "🇨🇴 Competencia Hecho en Colombia",
    "country": "Colombia",
    "flags": "🇨🇴",
-   "duration": "66 min",
+   "duration": "55 min",
    "_ancla": [
     "Cinemateca de Bogotá - Bogotá",
     "2026-11-28",
@@ -2174,23 +2174,6 @@
    },
    "is_cortos": true,
    "film_list": [
-    {
-     "title": "Desde acá veo la tormenta",
-     "director": "Juan Felipe Restrepo",
-     "country": "Colombia",
-     "flags": "🇨🇴",
-     "duration": "11 min",
-     "_src": {
-      "url": "https://www.alestfestival.com/programa2026/desde-acá-veo-la-tormenta",
-      "date": "2026-11-16"
-     },
-     "poster": "/assets/aleste-2026/desde-aca-veo-la-tormenta.jpg",
-     "posterSource": "oficial",
-     "synopsis": "Julia atraviesa un momento decisivo en su vida. Lo que debería traerle felicidad se ve alterado por recuerdos dolorosos y la presencia de la muerte. Ante una vida que insiste en abrirse paso, deberá afrontar sus miedos más profundos antes de cruzar un umbral que lo cambiará todo.",
-     "genre": "Familia",
-     "year": 2026,
-     "synopsis_lang": "es"
-    },
     {
      "title": "Junio 25. Andréi Tarkovski, visita a su tumba",
      "director": "Juan Camilo Moreno",
@@ -2869,7 +2852,7 @@
    "section": "🇨🇴 Competencia Hecho en Colombia",
    "country": "Colombia",
    "flags": "🇨🇴",
-   "duration": "51 min",
+   "duration": "62 min",
    "_ancla": [
     "Cinemateca de Bogotá - Bogotá",
     "2026-11-29",
@@ -2889,6 +2872,23 @@
    },
    "is_cortos": true,
    "film_list": [
+    {
+     "title": "Desde acá veo la tormenta",
+     "director": "Juan Felipe Restrepo",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "duration": "11 min",
+     "_src": {
+      "url": "https://www.alestfestival.com/programa2026/desde-acá-veo-la-tormenta",
+      "date": "2026-11-16"
+     },
+     "poster": "/assets/aleste-2026/desde-aca-veo-la-tormenta.jpg",
+     "posterSource": "oficial",
+     "synopsis": "Julia atraviesa un momento decisivo en su vida. Lo que debería traerle felicidad se ve alterado por recuerdos dolorosos y la presencia de la muerte. Ante una vida que insiste en abrirse paso, deberá afrontar sus miedos más profundos antes de cruzar un umbral que lo cambiará todo.",
+     "genre": "Familia",
+     "year": 2026,
+     "synopsis_lang": "es"
+    },
     {
      "title": "Las piedras del río",
      "director": "Edna Sierra",
@@ -3382,7 +3382,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-19T10:32:54",
+  "fecha": "2026-11-19T17:20:58",
   "plan_sha": "504f5daa1302f309",
   "paso": 9,
   "cmd": "python3 pipeline/aleste-2026-verificar.py"

@@ -106,6 +106,17 @@ for dia, hora, tit, sede, sec, (url, lam), extra in F:
     funciones.append(r)
 
 # ── Bogotá: la web ─────────────────────────────────────────────────────────
+# MOVIDA (19 nov): «Desde acá veo la tormenta» va en el Bloque 2 (dom 29, 14:00),
+# no en el 1 como dice la web: post Df7JJA8x1GK de @elforro_6 con @aleste.colombia
+# de coautor + catálogo oficial PDF del 18 nov. Lo más reciente del festival manda.
+MOVIDAS = {'Desde acá veo la tormenta': ('2026-11-29', '14:00', 'Competencia Hecho en Colombia – Bloque 2')}
+for o in web:
+    if o['titulo'] in MOVIDAS:
+        dia_, hora_, sec_ = MOVIDAS[o['titulo']]
+        o['seccion'] = sec_
+        for f in o['funciones']:
+            if f['ciudad'] == 'Bogotá':
+                f['dia'], f['hora'] = dia_, hora_
 grupos = {}
 for o in web:
     for f in o['funciones']:
