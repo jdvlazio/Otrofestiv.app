@@ -915,7 +915,7 @@
     "fila": "9:00 a. m. – 10:30 a. m. · Panel comunicación nuevas narrativas"
    },
    "requires_registration": true,
-   "description": "Nuevas narrativas, comunicación cultural, ecosistemas digitales e identidad territorial.",
+   "description": "Nuevas narrativas, comunicación cultural, ecosistemas digitales e identidad territorial. Invitados: José Valerio, Nicolás León y Rubén Santa Rubio.",
    "description_lang": "es",
    "_fid": "f_15d4067239",
    "id": "f_15d4067239",
@@ -994,7 +994,7 @@
     "fila": "10:45 a. m. – 12:15 p. m. · Panel cine desde región"
    },
    "requires_registration": true,
-   "description": "Producción independiente, financiación, convocatorias, circulación y territorio.",
+   "description": "Producción independiente, financiación, convocatorias, circulación y territorio. Invitados: Édgar Medina, Felipe Suárez y Juan Esteban Rengifo.",
    "description_lang": "es",
    "_fid": "f_d9a7e52bb9",
    "id": "f_d9a7e52bb9",
@@ -1074,7 +1074,7 @@
     "fila": "1:30 p. m. – 2:45 p. m. · Conferencia fotografía y territorio"
    },
    "requires_registration": true,
-   "description": "Conferencia sobre imagen, memoria, paisaje, identidad y territorio.",
+   "description": "Conferencia sobre imagen, memoria, paisaje, identidad y territorio. Invitado: Mauricio Beltrán.",
    "description_lang": "es",
    "_fid": "f_31e336c377",
    "id": "f_31e336c377",
@@ -1154,7 +1154,7 @@
     "fila": "2:45 p. m. – 3:30 p. m. · Charla app de festivales de cine"
    },
    "requires_registration": true,
-   "description": "Herramientas y plataformas para circulación, convocatorias e inscripción de obras en festivales.",
+   "description": "Herramientas y plataformas para circulación, convocatorias e inscripción de obras en festivales. Invitado: Juan David Villa.",
    "description_lang": "es",
    "_fid": "f_6f19c59638",
    "id": "f_6f19c59638",
@@ -1784,7 +1784,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-19T14:02:26",
+  "fecha": "2026-11-19T14:18:00",
   "plan_sha": "1e679e89c8d991cf",
   "paso": 6,
   "cmd": "python3 pipeline/funza-2026-verificar.py"
