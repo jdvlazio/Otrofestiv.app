@@ -59,9 +59,13 @@ F = [
     dict(titulo='Graffiti y cámara: documentar la calle', dia='21', hora='09:00', sala='Laboratorio 1',
          seccion='Taller', tipo='evento', event_kind='taller', duracion_min=120,
          acceso='Entrada libre con inscripción previa',
-         descripcion='Taller teórico-analítico sobre cómo registrar muralismo, graffiti y acciones urbanas '
-                     'desde una mirada audiovisual consciente. Dictado por Anonimato Visual. '
-                     'Inscripciones por mensaje directo a @colombianurbanfilm.',
+         # texto del post Dfz5iWUlVID, tal cual (19 nov)
+         descripcion='¿Cómo registrar el graffiti, el muralismo y las acciones urbanas sin intervenir en su '
+                     'esencia? Un taller teórico y analítico donde abordaremos referentes visuales, ritmo, '
+                     'composición, luz y narrativa del territorio, explorando estrategias para documentar el '
+                     'arte urbano desde una mirada consciente, respetando los códigos de calle y los procesos '
+                     'de creación. Dictado por Anonimato Visual, fotógrafo, artista multidisciplinar y docente '
+                     'en Artes Visuales de Bogotá.',
          _src={'ig': 'Dfz5iWUlVID'}),
     dict(titulo='Breaking la vida', dia='21', hora='14:30', sala='Sala 3', seccion=SEC,
          director='Abraham Escobedo-Salas', pais='México', anio=2022, duracion_min=92, acceso=LIBRE,
@@ -118,6 +122,10 @@ def main():
             r['_src']['ficha_sala'] = CINE.format(src['cinemateca'])
             if str(src['cinemateca']) in SINOPSIS:
                 r['sinopsis'] = SINOPSIS[str(src['cinemateca'])]
+        # el texto de una ACTIVIDAD viaja como `sinopsis` (ensamblar lo pasa a
+        # description); `descripcion` no lo lee nadie y no llegaba al JSON
+        if r.get('tipo') == 'evento' and r.get('descripcion') and not r.get('sinopsis'):
+            r['sinopsis'] = r.pop('descripcion')
         if r.get('obras'):
             suma = sum(o['duracion_min'] for o in r['obras'])
             if abs(suma - r['duracion_min']) > 1:

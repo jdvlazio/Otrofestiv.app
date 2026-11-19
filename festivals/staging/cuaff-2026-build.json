@@ -173,6 +173,8 @@
    },
    "is_free": true,
    "requires_registration": true,
+   "description": "¿Cómo registrar el graffiti, el muralismo y las acciones urbanas sin intervenir en su esencia? Un taller teórico y analítico donde abordaremos referentes visuales, ritmo, composición, luz y narrativa del territorio, explorando estrategias para documentar el arte urbano desde una mirada consciente, respetando los códigos de calle y los procesos de creación. Dictado por Anonimato Visual, fotógrafo, artista multidisciplinar y docente en Artes Visuales de Bogotá.",
+   "description_lang": "es",
    "_fid": "f_2ebcde31ef",
    "id": "f_2ebcde31ef"
   },
@@ -315,7 +317,9 @@
      "country": "Argentina",
      "flags": "🇦🇷",
      "year": 2026,
-     "duration": "5 min"
+     "duration": "5 min",
+     "synopsis": "Una propuesta audiovisual independiente que busca generar espacios para las raperas del underground. Una pieza con identidad propia, fuerza, creada para conectar, visibilizar y seguir construyendo lazos desde la música.",
+     "synopsis_lang": "es"
     },
     {
      "title": "El arte de Gravitar",
@@ -518,7 +522,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-19T08:16:56",
+  "fecha": "2026-11-19T08:46:30",
   "plan_sha": "8d9717eb85ec366c",
   "paso": 6,
   "cmd": "python3 pipeline/cuaff-2026-verificar.py"
