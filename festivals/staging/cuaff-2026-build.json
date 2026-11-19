@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "https://www.instagram.com/colombianurbanfilm/",
-  "capturado": "2026-11-17",
+  "capturado": "2026-11-19",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_secciones": "El festival no publica secciones: sus programas tienen nombre propio (van como título). «CUAFF 2026» es el sello de todos los posts; «Clausura» lo dice el post de Sanber; «Taller» la lámina del taller. PROPUESTA para Juan.",
@@ -126,6 +126,8 @@
    "venue": "Cinemateca de Bogotá - Bogotá",
    "sala": "Sala Capital",
    "has_qa": false,
+   "synopsis": "Lo que mantiene unido a este grupo de amigos es una causa artística urbana llamada graffiti que persigue la ley. Tienen normas y valores propios. Se rigen por un código honesto y estricto y sueñan, que para eso son artistas, con fama, respeto y reconocimiento. Pero de momento toca agitar el spray con nocturnidad y lo más urgente, escapar de la policía y responder al reto de un grupo rival, los temibles KBS, que les arrojan el guante de pintar entero un tren de cercanías.",
+   "synopsis_lang": "es",
    "poster": "/assets/cuaff-2026/wholetrain.jpg",
    "posterSource": "tmdb",
    "_src": {
@@ -195,6 +197,8 @@
    "venue": "Cinemateca de Bogotá - Bogotá",
    "sala": "Sala 3",
    "has_qa": false,
+   "synopsis": "Seis jóvenes bailarines provenientes de distintas clases sociales y antecedentes son unidos por el poder del hip-hop. Su amistad y deseos de volverse profesionales los llevarán por un viaje vital y transformador filmado a lo largo de 8 años. A través de la paternidad, el amor, las batallas y decepciones, descubrirán qué tipo de hombres quieren ser.",
+   "synopsis_lang": "es",
    "poster": "/assets/cuaff-2026/breaking-la-vida.jpg",
    "posterSource": "tmdb",
    "_src": {
@@ -251,11 +255,13 @@
      "year": 2025,
      "duration": "26 min",
      "poster": "/assets/cuaff-2026/uniendo-plazas-los-padres-del-under.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "uniendo-plazas-los-padres-del-under",
      "tmdb_id": 1828522,
+     "synopsis": "Las plazas se convierten en puntos de encuentro, el hip hop en una voz colectiva y el underground en una forma de vida. Un documental de Alberto Tolaba que nos acerca a la cultura urbana, sus protagonistas y el poder de construir comunidad a través del arte.",
      "synopsis_en": "Squares become meeting points, hip hop a collective voice and the underground a way of life. A documentary by Alberto Tolaba about urban culture, its protagonists and the power of building community through art.",
-     "genre": "Documental"
+     "genre": "Documental",
+     "synopsis_lang": "es"
     },
     {
      "title": "Homenajes de memorias, del Hip hop en ciudad Bolívar",
@@ -266,6 +272,8 @@
      "duration": "39 min"
     }
    ],
+   "description": "El hip hop es mucho más que música: es memoria, identidad, resistencia y construcción colectiva. Este bloque reúne dos miradas documentales de Argentina y Colombia que exploran cómo la cultura urbana transforma territorios, conecta generaciones y fortalece los vínculos comunitarios. A través de sus protagonistas, las calles se convierten en escenarios de expresión, encuentro y memoria, donde el arte mantiene vivas las historias de quienes han construido el movimiento desde sus raíces.",
+   "description_lang": "es",
    "_fid": "f_af9f2d1125",
    "id": "f_af9f2d1125"
   },
@@ -325,10 +333,12 @@
      "year": 2026,
      "duration": "8 min",
      "poster": "/assets/cuaff-2026/el-lejano-sur.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "el-lejano-sur",
      "tmdb_id": 1828506,
-     "synopsis_en": "A Colombian short film by Isben Isaeb about urban culture: the streets have stories to tell, voices that deserve to be heard and expressions that build identity."
+     "synopsis": "Cortometraje colombiano de Isben Isaeb sobre la cultura urbana: las calles tienen historias que contar, voces que merecen ser escuchadas y expresiones que construyen identidad.",
+     "synopsis_en": "A Colombian short film by Isben Isaeb about urban culture: the streets have stories to tell, voices that deserve to be heard and expressions that build identity.",
+     "synopsis_lang": "es"
     },
     {
      "title": "Instrucciones para interpretar graffiti, el beso de los invisibles",
@@ -338,11 +348,13 @@
      "year": 2025,
      "duration": "26 min",
      "poster": "/assets/cuaff-2026/instrucciones-para-interpretar-graffiti-el-beso-de-los-invis.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "muralmente-instrucciones-para-interpretar",
      "tmdb_id": 1828510,
+     "synopsis": "Cada trazo, cada muro y cada intervención urbana guarda una historia: el graffiti transforma el espacio público en un lugar de expresión, memoria y resistencia. Un documental de Iván Alba que invita a mirar las calles desde otra perspectiva y descubrir las historias que habitan en sus muros.",
      "synopsis_en": "Every stroke, every wall and every urban intervention holds a story: graffiti turns public space into a place of expression, memory and resistance. A documentary by Iván Alba that invites us to look at the streets from another perspective and discover the stories that live on their walls.",
-     "genre": "Documental"
+     "genre": "Documental",
+     "synopsis_lang": "es"
     },
     {
      "title": "Diario de los nuevos 20s",
@@ -352,12 +364,16 @@
      "year": 2026,
      "duration": "15 min",
      "poster": "/assets/cuaff-2026/diario-de-los-nuevos-20s.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "diario-de-los-nuevos-20s",
      "tmdb_id": 1828512,
-     "synopsis_en": "A generation, many stories and new ways of understanding the world we live in. A short film by Juan Pablo Huston."
+     "synopsis": "Una generación, muchas historias y nuevas formas de entender el mundo que habitamos. Un cortometraje de Juan Pablo Huston.",
+     "synopsis_en": "A generation, many stories and new ways of understanding the world we live in. A short film by Juan Pablo Huston.",
+     "synopsis_lang": "es"
     }
    ],
+   "description": "El hip hop y el graffiti son expresiones culturales que nacen de las calles, construyen identidad y fortalecen los lazos comunitarios. Este bloque reúne cinco producciones audiovisuales de Colombia y Argentina que exploran el arte urbano como lenguaje de encuentro, memoria, transformación social y resistencia cultural. A través del movimiento, la música, las intervenciones gráficas y las narrativas de sus protagonistas, descubrimos cómo las nuevas generaciones reinterpretan sus territorios, mantienen viva la cultura underground y encuentran en el arte una forma de expresión colectiva.",
+   "description_lang": "es",
    "_fid": "f_db1a7e214a",
    "id": "f_db1a7e214a"
   },
@@ -401,11 +417,13 @@
      "year": 2026,
      "duration": "18 min",
      "poster": "/assets/cuaff-2026/still-free.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "still-free-1",
      "tmdb_id": 1828516,
+     "synopsis": "El graffiti cruza fronteras, conecta ciudades y convierte los trenes y las calles en territorios de expresión. Un recorrido por la cultura urbana latinoamericana, donde el graffiti es mucho más que pintura: es identidad, movimiento y una forma de dejar huella.",
      "synopsis_en": "Graffiti crosses borders, connects cities and turns trains and streets into territories of expression. A journey through Latin American urban culture, where graffiti is much more than paint: it is identity, movement and a way of leaving a mark.",
-     "genre": "Documental"
+     "genre": "Documental",
+     "synopsis_lang": "es"
     },
     {
      "title": "VSK en metal",
@@ -415,11 +433,13 @@
      "year": 2026,
      "duration": "8 min",
      "poster": "/assets/cuaff-2026/vsk-en-metal.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "vsk-en-metal",
      "tmdb_id": 1828519,
+     "synopsis": "Un homenaje al crew VSK y a la historia del graffiti writing en Bogotá. Desde la alquimia y la transformación de los materiales, Peds Shaumers busca reivindicar la memoria de su crew —Shuk, Skill y Suber— a través de la fundición de metales, convirtiendo el arte en un ejercicio de memoria, identidad y resistencia al olvido.",
      "synopsis_en": "A tribute to the VSK crew and the history of graffiti writing in Bogotá. Through the alchemy of metal casting, Peds Shaumers reclaims the memory of his crew — Shuk, Skill and Suber — turning art into an exercise of memory, identity and resistance to oblivion.",
-     "genre": "Documental"
+     "genre": "Documental",
+     "synopsis_lang": "es"
     },
     {
      "title": "Adrenaline Tour: Bella Ciao",
@@ -437,12 +457,17 @@
      "year": 2026,
      "duration": "30 min",
      "poster": "/assets/cuaff-2026/morbo-x-noches-aires.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "morbo-x-noches-aires",
      "tmdb_id": 1828517,
-     "synopsis_en": "A short film shot in a single night that portrays the lifestyle of a graffiti writer, roaming the streets of Buenos Aires until the early hours. Accompanied by the ambient sound of the city, it shows the beings who inhabit the street while everyone sleeps, looking for spots for tags or throw-ups and a kiosk with cheap alcohol."
+     "synopsis": "Un cortometraje filmado en una sola noche que refleja el estilo de vida de un escritor de graffiti, recorriendo las calles de Buenos Aires hasta altas horas de la madrugada. Acompañado por el sonido ambiente de la ciudad, muestra a los seres que habitan la calle cuando todos duermen, buscando spots para hacer tags o flops y algún kiosco donde conseguir alcohol a buen precio.",
+     "synopsis_en": "A short film shot in a single night that portrays the lifestyle of a graffiti writer, roaming the streets of Buenos Aires until the early hours. Accompanied by the ambient sound of the city, it shows the beings who inhabit the street while everyone sleeps, looking for spots for tags or throw-ups and a kiosk with cheap alcohol.",
+     "genre": "Documental",
+     "synopsis_lang": "es"
     }
    ],
+   "description": "El graffiti no conoce fronteras. Entre trenes, calles, muros y recorridos clandestinos, este bloque nos sumerge en la esencia más cruda y auténtica de la cultura underground. Cuatro producciones audiovisuales de Colombia, Italia y Argentina retratan la adrenalina, los viajes, los códigos y las experiencias que definen el graffiti sobre metal y el movimiento del street bombing. Una mirada a las conexiones internacionales entre escritores de graffiti, donde cada recorrido se convierte en una aventura y cada intervención deja una huella en el paisaje urbano. Arte, riesgo, identidad y libertad se encuentran en historias que revelan la fuerza de una cultura que permanece en constante movimiento.",
+   "description_lang": "es",
    "_fid": "f_c5065e87d1",
    "id": "f_c5065e87d1"
   },
@@ -455,6 +480,7 @@
    "country": "Colombia",
    "flags": "🇨🇴",
    "duration": "90 min",
+   "genre": "Documental",
    "_ancla": [
     "Cinemateca de Bogotá - Bogotá",
     "2026-11-22",
@@ -466,8 +492,10 @@
    "venue": "Cinemateca de Bogotá - Bogotá",
    "sala": "Sala Capital",
    "has_qa": true,
+   "synopsis": "Documental que busca, en un relato de paralelismos, encontrar todos los matices posibles sobre un pedacito del centro de Bogotá, un microcosmos que se entrelaza y muere con la renovación de la ciudad. Graffiti, Rap y literatura (Mario Mendoza) aportan con datos inéditos todo lo que pasó en algún momento en uno de los barrios marginalizados del centro de Bogotá",
+   "synopsis_lang": "es",
    "poster": "/assets/cuaff-2026/sanber-vivencias-de-un-bajo-mundo.jpg",
-   "posterSource": "oficial",
+   "posterSource": "tmdb",
    "_src": {
     "url": "https://www.instagram.com/p/DfkahZulbIz/",
     "posts": [
@@ -490,7 +518,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-17T13:14:29",
+  "fecha": "2026-11-19T08:16:56",
   "plan_sha": "8d9717eb85ec366c",
   "paso": 6,
   "cmd": "python3 pipeline/cuaff-2026-verificar.py"

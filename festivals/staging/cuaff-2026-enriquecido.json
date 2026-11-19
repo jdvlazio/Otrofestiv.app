@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, emparejado con ficha_verifica() (director + año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-11-17"
+  "capturado": "2026-11-19"
  },
  "obras": [
   {
@@ -16,10 +16,10 @@
    "duracion_tmdb": 120,
    "pais_tmdb": "Mexico",
    "lbSlug": "breaking-la-vida",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Breaking la vida",
+   "_verificado": "el catálogo ya la tiene (w_N2MK9WH55ABP, cuaff-2026)",
+   "work_id": "w_N2MK9WH55ABP",
    "_director": "Abraham Escobedo-Salas",
-   "_sondeado": "2026-11-17",
+   "_sondeado": "2026-11-19",
    "poster": "/assets/cuaff-2026/breaking-la-vida.jpg",
    "posterSource": "tmdb"
   },
@@ -27,8 +27,8 @@
    "titulo": "Diario de los nuevos 20s",
    "tmdb_id": 1828512,
    "titulo_original": "Diario de los nuevos 20s",
-   "poster_path": null,
-   "synopsis_es": "",
+   "poster_path": "/ihMABYcnN7eMv7DMUlPpz8bZ0GK.jpg",
+   "synopsis_es": "Una generación, muchas historias y nuevas formas de entender el mundo que habitamos. Un cortometraje de Juan Pablo Huston.",
    "synopsis_en": "A generation, many stories and new ways of understanding the world we live in. A short film by Juan Pablo Huston.",
    "genero": "",
    "anio_tmdb": 0,
@@ -37,17 +37,16 @@
    "lbSlug": "diario-de-los-nuevos-20s",
    "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-17 (registro cuaff-2026-altas.json)",
    "_director": "Juan Pablo Huston",
-   "_sondeado": "2026-11-17",
+   "_sondeado": "2026-11-19",
    "poster": "/assets/cuaff-2026/diario-de-los-nuevos-20s.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: afiche oficial de la obra, lámina 1 del post de @colombianurbanfilm p/DfkVdFolQHW (embed sin sesión), mirado a ojo"
+   "posterSource": "tmdb"
   },
   {
    "titulo": "El Lejano Sur",
    "tmdb_id": 1828506,
    "titulo_original": "El Lejano Sur",
-   "poster_path": null,
-   "synopsis_es": "",
+   "poster_path": "/eZ9r4osDbuQLkkDrsZcUaYTj2Ct.jpg",
+   "synopsis_es": "Cortometraje colombiano de Isben Isaeb sobre la cultura urbana: las calles tienen historias que contar, voces que merecen ser escuchadas y expresiones que construyen identidad.",
    "synopsis_en": "A Colombian short film by Isben Isaeb about urban culture: the streets have stories to tell, voices that deserve to be heard and expressions that build identity.",
    "genero": "",
    "anio_tmdb": 0,
@@ -56,17 +55,16 @@
    "lbSlug": "el-lejano-sur",
    "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-17 (registro cuaff-2026-altas.json)",
    "_director": "Isben Isaeb",
-   "_sondeado": "2026-11-17",
+   "_sondeado": "2026-11-19",
    "poster": "/assets/cuaff-2026/el-lejano-sur.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: afiche oficial de la obra, lámina 1 del post de @colombianurbanfilm p/DfkEI-ZFSa2 (embed sin sesión), mirado a ojo"
+   "posterSource": "tmdb"
   },
   {
    "titulo": "Instrucciones para interpretar graffiti, el beso de los invisibles",
    "tmdb_id": 1828510,
    "titulo_original": "Muralmente: Instrucciones para interpretar grafiti. El beso de los invisibles",
-   "poster_path": null,
-   "synopsis_es": "",
+   "poster_path": "/cIx9CUeawulLdASNS7I0YSLmwy9.jpg",
+   "synopsis_es": "Cada trazo, cada muro y cada intervención urbana guarda una historia: el graffiti transforma el espacio público en un lugar de expresión, memoria y resistencia. Un documental de Iván Alba que invita a mirar las calles desde otra perspectiva y descubrir las historias que habitan en sus muros.",
    "synopsis_en": "Every stroke, every wall and every urban intervention holds a story: graffiti turns public space into a place of expression, memory and resistance. A documentary by Iván Alba that invites us to look at the streets from another perspective and discover the stories that live on their walls.",
    "genero": "Documental",
    "anio_tmdb": 0,
@@ -75,55 +73,52 @@
    "lbSlug": "muralmente-instrucciones-para-interpretar",
    "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-17 (registro cuaff-2026-altas.json)",
    "_director": "Iván Alba",
-   "_sondeado": "2026-11-17",
+   "_sondeado": "2026-11-19",
    "poster": "/assets/cuaff-2026/instrucciones-para-interpretar-graffiti-el-beso-de-los-invis.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: afiche oficial de la obra, lámina 1 del post de @colombianurbanfilm p/DfkFGHmlZnr (embed sin sesión), mirado a ojo"
+   "posterSource": "tmdb"
   },
   {
    "titulo": "Morbo x Noches Aires",
    "tmdb_id": 1828517,
    "titulo_original": "Morbo x Noches Aires",
-   "poster_path": null,
-   "synopsis_es": "",
+   "poster_path": "/AcIv5mvLJDMEdXNSAbEqlU3xcaz.jpg",
+   "synopsis_es": "Un cortometraje filmado en una sola noche que refleja el estilo de vida de un escritor de graffiti, recorriendo las calles de Buenos Aires hasta altas horas de la madrugada. Acompañado por el sonido ambiente de la ciudad, muestra a los seres que habitan la calle cuando todos duermen, buscando spots para hacer tags o flops y algún kiosco donde conseguir alcohol a buen precio.",
    "synopsis_en": "A short film shot in a single night that portrays the lifestyle of a graffiti writer, roaming the streets of Buenos Aires until the early hours. Accompanied by the ambient sound of the city, it shows the beings who inhabit the street while everyone sleeps, looking for spots for tags or throw-ups and a kiosk with cheap alcohol.",
-   "genero": "",
+   "genero": "Documental",
    "anio_tmdb": 0,
    "duracion_tmdb": 30,
    "pais_tmdb": "",
    "lbSlug": "morbo-x-noches-aires",
    "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-17 (registro cuaff-2026-altas.json)",
    "_director": "Newen",
-   "_sondeado": "2026-11-17",
+   "_sondeado": "2026-11-19",
    "poster": "/assets/cuaff-2026/morbo-x-noches-aires.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: afiche oficial de la obra, lámina 1 del post de @colombianurbanfilm p/DfvPV3zDP5z (embed sin sesión), mirado a ojo"
+   "posterSource": "tmdb"
   },
   {
    "titulo": "Sanber: vivencias de un bajo mundo",
    "tmdb_id": 1828501,
    "titulo_original": "Sanber: vivencias de un bajo mundo",
-   "poster_path": null,
-   "synopsis_es": "",
+   "poster_path": "/zHOkkPP3nRFfPVyBjnkKVnCoNJb.jpg",
+   "synopsis_es": "Documental que busca, en un relato de paralelismos, encontrar todos los matices posibles sobre un pedacito del centro de Bogotá, un microcosmos que se entrelaza y muere con la renovación de la ciudad. Graffiti, rap y literatura (Mario Mendoza) aportan con datos inéditos todo lo que pasó en algún momento en uno de los barrios marginalizados del centro de Bogotá.",
    "synopsis_en": "A documentary that, through a story of parallels, seeks every possible nuance of a small piece of downtown Bogotá: a microcosm that intertwines and dies with the city's renewal. Graffiti, rap and literature (Mario Mendoza) bring never-before-told accounts of what once happened in one of the marginalized neighborhoods of central Bogotá.",
-   "genero": "",
+   "genero": "Documental",
    "anio_tmdb": 0,
    "duracion_tmdb": 90,
    "pais_tmdb": "",
    "lbSlug": "sanber-vivencias-de-un-bajo-mundo",
    "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-17 (registro cuaff-2026-altas.json)",
    "_director": "Luis Carlos Ayala",
-   "_sondeado": "2026-11-17",
+   "_sondeado": "2026-11-19",
    "poster": "/assets/cuaff-2026/sanber-vivencias-de-un-bajo-mundo.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: afiche oficial de la obra, lámina 1 del post de @colombianurbanfilm p/DfkahZulbIz (embed sin sesión), mirado a ojo"
+   "posterSource": "tmdb"
   },
   {
    "titulo": "Still Free",
    "tmdb_id": 1828516,
    "titulo_original": "Still Free",
-   "poster_path": null,
-   "synopsis_es": "",
+   "poster_path": "/c1ur9utmSUYeJKBj652mY3ffaka.jpg",
+   "synopsis_es": "El graffiti cruza fronteras, conecta ciudades y convierte los trenes y las calles en territorios de expresión. Un recorrido por la cultura urbana latinoamericana, donde el graffiti es mucho más que pintura: es identidad, movimiento y una forma de dejar huella.",
    "synopsis_en": "Graffiti crosses borders, connects cities and turns trains and streets into territories of expression. A journey through Latin American urban culture, where graffiti is much more than paint: it is identity, movement and a way of leaving a mark.",
    "genero": "Documental",
    "anio_tmdb": 0,
@@ -132,17 +127,16 @@
    "lbSlug": "still-free-1",
    "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-17 (registro cuaff-2026-altas.json)",
    "_director": "Krone",
-   "_sondeado": "2026-11-17",
+   "_sondeado": "2026-11-19",
    "poster": "/assets/cuaff-2026/still-free.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: afiche oficial de la obra, lámina 1 del post de @colombianurbanfilm p/DfkG3folR3w (embed sin sesión), mirado a ojo"
+   "posterSource": "tmdb"
   },
   {
    "titulo": "Uniendo plazas: Los padres del under",
    "tmdb_id": 1828522,
    "titulo_original": "Uniendo plazas: Los padres del under",
-   "poster_path": null,
-   "synopsis_es": "",
+   "poster_path": "/un7ch5fY0fJNG5Cl4BuBswqZR5c.jpg",
+   "synopsis_es": "Las plazas se convierten en puntos de encuentro, el hip hop en una voz colectiva y el underground en una forma de vida. Un documental de Alberto Tolaba que nos acerca a la cultura urbana, sus protagonistas y el poder de construir comunidad a través del arte.",
    "synopsis_en": "Squares become meeting points, hip hop a collective voice and the underground a way of life. A documentary by Alberto Tolaba about urban culture, its protagonists and the power of building community through art.",
    "genero": "Documental",
    "anio_tmdb": 0,
@@ -151,17 +145,16 @@
    "lbSlug": "uniendo-plazas-los-padres-del-under",
    "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-17 (registro cuaff-2026-altas.json)",
    "_director": "Alberto Tolaba",
-   "_sondeado": "2026-11-17",
+   "_sondeado": "2026-11-19",
    "poster": "/assets/cuaff-2026/uniendo-plazas-los-padres-del-under.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: afiche oficial de la obra, lámina 1 del post de @colombianurbanfilm p/DfkCq1vlXAe (embed sin sesión), mirado a ojo"
+   "posterSource": "tmdb"
   },
   {
    "titulo": "VSK en metal",
    "tmdb_id": 1828519,
    "titulo_original": "VSK en metal",
-   "poster_path": null,
-   "synopsis_es": "",
+   "poster_path": "/rL5u36QCHyy2E78uALrpnTQwSCc.jpg",
+   "synopsis_es": "Un homenaje al crew VSK y a la historia del graffiti writing en Bogotá. Desde la alquimia y la transformación de los materiales, Peds Shaumers busca reivindicar la memoria de su crew —Shuk, Skill y Suber— a través de la fundición de metales, convirtiendo el arte en un ejercicio de memoria, identidad y resistencia al olvido.",
    "synopsis_en": "A tribute to the VSK crew and the history of graffiti writing in Bogotá. Through the alchemy of metal casting, Peds Shaumers reclaims the memory of his crew — Shuk, Skill and Suber — turning art into an exercise of memory, identity and resistance to oblivion.",
    "genero": "Documental",
    "anio_tmdb": 0,
@@ -170,10 +163,9 @@
    "lbSlug": "vsk-en-metal",
    "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-17 (registro cuaff-2026-altas.json)",
    "_director": "Peds Shaumers",
-   "_sondeado": "2026-11-17",
+   "_sondeado": "2026-11-19",
    "poster": "/assets/cuaff-2026/vsk-en-metal.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: afiche oficial de la obra, lámina 1 del post de @colombianurbanfilm p/DfzaftWlRzG (embed sin sesión), mirado a ojo"
+   "posterSource": "tmdb"
   },
   {
    "titulo": "Wholetrain",
@@ -187,10 +179,10 @@
    "duracion_tmdb": 82,
    "pais_tmdb": "Germany, Poland",
    "lbSlug": "wholetrain",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Wholetrain",
+   "_verificado": "el catálogo ya la tiene (w_N2MJT4QTG3Y5, cuaff-2026)",
+   "work_id": "w_N2MJT4QTG3Y5",
    "_director": "Florian Gaag",
-   "_sondeado": "2026-11-17",
+   "_sondeado": "2026-11-19",
    "poster": "/assets/cuaff-2026/wholetrain.jpg",
    "posterSource": "tmdb"
   }
@@ -207,18 +199,18 @@
    "duracion_tmdb": 120,
    "pais_tmdb": "Mexico",
    "lbSlug": "breaking-la-vida",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Breaking la vida",
+   "_verificado": "el catálogo ya la tiene (w_N2MK9WH55ABP, cuaff-2026)",
+   "work_id": "w_N2MK9WH55ABP",
    "_director": "Abraham Escobedo-Salas",
-   "_sondeado": "2026-11-17",
+   "_sondeado": "2026-11-19",
    "poster": "/assets/cuaff-2026/breaking-la-vida.jpg",
    "posterSource": "tmdb"
   },
   "Diario de los nuevos 20s": {
    "tmdb_id": 1828512,
    "titulo_original": "Diario de los nuevos 20s",
-   "poster_path": null,
-   "synopsis_es": "",
+   "poster_path": "/ihMABYcnN7eMv7DMUlPpz8bZ0GK.jpg",
+   "synopsis_es": "Una generación, muchas historias y nuevas formas de entender el mundo que habitamos. Un cortometraje de Juan Pablo Huston.",
    "synopsis_en": "A generation, many stories and new ways of understanding the world we live in. A short film by Juan Pablo Huston.",
    "genero": "",
    "anio_tmdb": 0,
@@ -227,16 +219,15 @@
    "lbSlug": "diario-de-los-nuevos-20s",
    "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-17 (registro cuaff-2026-altas.json)",
    "_director": "Juan Pablo Huston",
-   "_sondeado": "2026-11-17",
+   "_sondeado": "2026-11-19",
    "poster": "/assets/cuaff-2026/diario-de-los-nuevos-20s.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: afiche oficial de la obra, lámina 1 del post de @colombianurbanfilm p/DfkVdFolQHW (embed sin sesión), mirado a ojo"
+   "posterSource": "tmdb"
   },
   "El Lejano Sur": {
    "tmdb_id": 1828506,
    "titulo_original": "El Lejano Sur",
-   "poster_path": null,
-   "synopsis_es": "",
+   "poster_path": "/eZ9r4osDbuQLkkDrsZcUaYTj2Ct.jpg",
+   "synopsis_es": "Cortometraje colombiano de Isben Isaeb sobre la cultura urbana: las calles tienen historias que contar, voces que merecen ser escuchadas y expresiones que construyen identidad.",
    "synopsis_en": "A Colombian short film by Isben Isaeb about urban culture: the streets have stories to tell, voices that deserve to be heard and expressions that build identity.",
    "genero": "",
    "anio_tmdb": 0,
@@ -245,16 +236,15 @@
    "lbSlug": "el-lejano-sur",
    "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-17 (registro cuaff-2026-altas.json)",
    "_director": "Isben Isaeb",
-   "_sondeado": "2026-11-17",
+   "_sondeado": "2026-11-19",
    "poster": "/assets/cuaff-2026/el-lejano-sur.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: afiche oficial de la obra, lámina 1 del post de @colombianurbanfilm p/DfkEI-ZFSa2 (embed sin sesión), mirado a ojo"
+   "posterSource": "tmdb"
   },
   "Instrucciones para interpretar graffiti, el beso de los invisibles": {
    "tmdb_id": 1828510,
    "titulo_original": "Muralmente: Instrucciones para interpretar grafiti. El beso de los invisibles",
-   "poster_path": null,
-   "synopsis_es": "",
+   "poster_path": "/cIx9CUeawulLdASNS7I0YSLmwy9.jpg",
+   "synopsis_es": "Cada trazo, cada muro y cada intervención urbana guarda una historia: el graffiti transforma el espacio público en un lugar de expresión, memoria y resistencia. Un documental de Iván Alba que invita a mirar las calles desde otra perspectiva y descubrir las historias que habitan en sus muros.",
    "synopsis_en": "Every stroke, every wall and every urban intervention holds a story: graffiti turns public space into a place of expression, memory and resistance. A documentary by Iván Alba that invites us to look at the streets from another perspective and discover the stories that live on their walls.",
    "genero": "Documental",
    "anio_tmdb": 0,
@@ -263,52 +253,49 @@
    "lbSlug": "muralmente-instrucciones-para-interpretar",
    "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-17 (registro cuaff-2026-altas.json)",
    "_director": "Iván Alba",
-   "_sondeado": "2026-11-17",
+   "_sondeado": "2026-11-19",
    "poster": "/assets/cuaff-2026/instrucciones-para-interpretar-graffiti-el-beso-de-los-invis.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: afiche oficial de la obra, lámina 1 del post de @colombianurbanfilm p/DfkFGHmlZnr (embed sin sesión), mirado a ojo"
+   "posterSource": "tmdb"
   },
   "Morbo x Noches Aires": {
    "tmdb_id": 1828517,
    "titulo_original": "Morbo x Noches Aires",
-   "poster_path": null,
-   "synopsis_es": "",
+   "poster_path": "/AcIv5mvLJDMEdXNSAbEqlU3xcaz.jpg",
+   "synopsis_es": "Un cortometraje filmado en una sola noche que refleja el estilo de vida de un escritor de graffiti, recorriendo las calles de Buenos Aires hasta altas horas de la madrugada. Acompañado por el sonido ambiente de la ciudad, muestra a los seres que habitan la calle cuando todos duermen, buscando spots para hacer tags o flops y algún kiosco donde conseguir alcohol a buen precio.",
    "synopsis_en": "A short film shot in a single night that portrays the lifestyle of a graffiti writer, roaming the streets of Buenos Aires until the early hours. Accompanied by the ambient sound of the city, it shows the beings who inhabit the street while everyone sleeps, looking for spots for tags or throw-ups and a kiosk with cheap alcohol.",
-   "genero": "",
+   "genero": "Documental",
    "anio_tmdb": 0,
    "duracion_tmdb": 30,
    "pais_tmdb": "",
    "lbSlug": "morbo-x-noches-aires",
    "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-17 (registro cuaff-2026-altas.json)",
    "_director": "Newen",
-   "_sondeado": "2026-11-17",
+   "_sondeado": "2026-11-19",
    "poster": "/assets/cuaff-2026/morbo-x-noches-aires.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: afiche oficial de la obra, lámina 1 del post de @colombianurbanfilm p/DfvPV3zDP5z (embed sin sesión), mirado a ojo"
+   "posterSource": "tmdb"
   },
   "Sanber: vivencias de un bajo mundo": {
    "tmdb_id": 1828501,
    "titulo_original": "Sanber: vivencias de un bajo mundo",
-   "poster_path": null,
-   "synopsis_es": "",
+   "poster_path": "/zHOkkPP3nRFfPVyBjnkKVnCoNJb.jpg",
+   "synopsis_es": "Documental que busca, en un relato de paralelismos, encontrar todos los matices posibles sobre un pedacito del centro de Bogotá, un microcosmos que se entrelaza y muere con la renovación de la ciudad. Graffiti, rap y literatura (Mario Mendoza) aportan con datos inéditos todo lo que pasó en algún momento en uno de los barrios marginalizados del centro de Bogotá.",
    "synopsis_en": "A documentary that, through a story of parallels, seeks every possible nuance of a small piece of downtown Bogotá: a microcosm that intertwines and dies with the city's renewal. Graffiti, rap and literature (Mario Mendoza) bring never-before-told accounts of what once happened in one of the marginalized neighborhoods of central Bogotá.",
-   "genero": "",
+   "genero": "Documental",
    "anio_tmdb": 0,
    "duracion_tmdb": 90,
    "pais_tmdb": "",
    "lbSlug": "sanber-vivencias-de-un-bajo-mundo",
    "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-17 (registro cuaff-2026-altas.json)",
    "_director": "Luis Carlos Ayala",
-   "_sondeado": "2026-11-17",
+   "_sondeado": "2026-11-19",
    "poster": "/assets/cuaff-2026/sanber-vivencias-de-un-bajo-mundo.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: afiche oficial de la obra, lámina 1 del post de @colombianurbanfilm p/DfkahZulbIz (embed sin sesión), mirado a ojo"
+   "posterSource": "tmdb"
   },
   "Still Free": {
    "tmdb_id": 1828516,
    "titulo_original": "Still Free",
-   "poster_path": null,
-   "synopsis_es": "",
+   "poster_path": "/c1ur9utmSUYeJKBj652mY3ffaka.jpg",
+   "synopsis_es": "El graffiti cruza fronteras, conecta ciudades y convierte los trenes y las calles en territorios de expresión. Un recorrido por la cultura urbana latinoamericana, donde el graffiti es mucho más que pintura: es identidad, movimiento y una forma de dejar huella.",
    "synopsis_en": "Graffiti crosses borders, connects cities and turns trains and streets into territories of expression. A journey through Latin American urban culture, where graffiti is much more than paint: it is identity, movement and a way of leaving a mark.",
    "genero": "Documental",
    "anio_tmdb": 0,
@@ -317,16 +304,15 @@
    "lbSlug": "still-free-1",
    "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-17 (registro cuaff-2026-altas.json)",
    "_director": "Krone",
-   "_sondeado": "2026-11-17",
+   "_sondeado": "2026-11-19",
    "poster": "/assets/cuaff-2026/still-free.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: afiche oficial de la obra, lámina 1 del post de @colombianurbanfilm p/DfkG3folR3w (embed sin sesión), mirado a ojo"
+   "posterSource": "tmdb"
   },
   "Uniendo plazas: Los padres del under": {
    "tmdb_id": 1828522,
    "titulo_original": "Uniendo plazas: Los padres del under",
-   "poster_path": null,
-   "synopsis_es": "",
+   "poster_path": "/un7ch5fY0fJNG5Cl4BuBswqZR5c.jpg",
+   "synopsis_es": "Las plazas se convierten en puntos de encuentro, el hip hop en una voz colectiva y el underground en una forma de vida. Un documental de Alberto Tolaba que nos acerca a la cultura urbana, sus protagonistas y el poder de construir comunidad a través del arte.",
    "synopsis_en": "Squares become meeting points, hip hop a collective voice and the underground a way of life. A documentary by Alberto Tolaba about urban culture, its protagonists and the power of building community through art.",
    "genero": "Documental",
    "anio_tmdb": 0,
@@ -335,16 +321,15 @@
    "lbSlug": "uniendo-plazas-los-padres-del-under",
    "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-17 (registro cuaff-2026-altas.json)",
    "_director": "Alberto Tolaba",
-   "_sondeado": "2026-11-17",
+   "_sondeado": "2026-11-19",
    "poster": "/assets/cuaff-2026/uniendo-plazas-los-padres-del-under.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: afiche oficial de la obra, lámina 1 del post de @colombianurbanfilm p/DfkCq1vlXAe (embed sin sesión), mirado a ojo"
+   "posterSource": "tmdb"
   },
   "VSK en metal": {
    "tmdb_id": 1828519,
    "titulo_original": "VSK en metal",
-   "poster_path": null,
-   "synopsis_es": "",
+   "poster_path": "/rL5u36QCHyy2E78uALrpnTQwSCc.jpg",
+   "synopsis_es": "Un homenaje al crew VSK y a la historia del graffiti writing en Bogotá. Desde la alquimia y la transformación de los materiales, Peds Shaumers busca reivindicar la memoria de su crew —Shuk, Skill y Suber— a través de la fundición de metales, convirtiendo el arte en un ejercicio de memoria, identidad y resistencia al olvido.",
    "synopsis_en": "A tribute to the VSK crew and the history of graffiti writing in Bogotá. Through the alchemy of metal casting, Peds Shaumers reclaims the memory of his crew — Shuk, Skill and Suber — turning art into an exercise of memory, identity and resistance to oblivion.",
    "genero": "Documental",
    "anio_tmdb": 0,
@@ -353,10 +338,9 @@
    "lbSlug": "vsk-en-metal",
    "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-17 (registro cuaff-2026-altas.json)",
    "_director": "Peds Shaumers",
-   "_sondeado": "2026-11-17",
+   "_sondeado": "2026-11-19",
    "poster": "/assets/cuaff-2026/vsk-en-metal.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: afiche oficial de la obra, lámina 1 del post de @colombianurbanfilm p/DfzaftWlRzG (embed sin sesión), mirado a ojo"
+   "posterSource": "tmdb"
   },
   "Wholetrain": {
    "tmdb_id": 14231,
@@ -369,10 +353,10 @@
    "duracion_tmdb": 82,
    "pais_tmdb": "Germany, Poland",
    "lbSlug": "wholetrain",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Wholetrain",
+   "_verificado": "el catálogo ya la tiene (w_N2MJT4QTG3Y5, cuaff-2026)",
+   "work_id": "w_N2MJT4QTG3Y5",
    "_director": "Florian Gaag",
-   "_sondeado": "2026-11-17",
+   "_sondeado": "2026-11-19",
    "poster": "/assets/cuaff-2026/wholetrain.jpg",
    "posterSource": "tmdb"
   }
@@ -386,19 +370,19 @@
  "_sin_ficha_sondeo": {
   "Adrenaline Tour: Bella Ciao": {
    "director": "Ozono",
-   "fecha": "2026-11-17"
+   "fecha": "2026-11-19"
   },
   "Código cypher vol1": {
    "director": "Hitana, Sir Cesaro",
-   "fecha": "2026-11-17"
+   "fecha": "2026-11-19"
   },
   "El arte de Gravitar": {
    "director": "Camila Estupiñán",
-   "fecha": "2026-11-17"
+   "fecha": "2026-11-19"
   },
   "Homenajes de memorias, del Hip hop en ciudad Bolívar": {
    "director": "Kno Delix, Johan Duarte",
-   "fecha": "2026-11-17"
+   "fecha": "2026-11-19"
   }
  }
 }
