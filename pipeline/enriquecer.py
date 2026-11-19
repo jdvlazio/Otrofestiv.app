@@ -511,6 +511,14 @@ def main():
                   ' (declarada a mano)', flush=True)
             continue
         c = prev_ok.get(t)
+        # …salvo un acierto SIN sinopsis en español (19 nov 2026, CUAFF): la
+        # ficha es la misma, pero su traducción al español puede llegar después
+        # —se lee TMDB justo tras el alta, antes de cargarle el español—, y como
+        # el acierto no caducaba, la sinopsis nunca entraba. Se vuelve a sondear,
+        # una vez por día (guardián: pipeline/sinopsis.py).
+        if c and c.get('tmdb_id') and not str(c.get('synopsis_es') or '').strip() \
+                and c.get('_sondeado') != _hoy:
+            c = None
         if c and c.get('_director') == _dir:
             # el afiche PRESTADO (de lo publicado o declarado) no se cachea: se
             # recalcula abajo cada vez, que la regla puede haber cambiado —el
