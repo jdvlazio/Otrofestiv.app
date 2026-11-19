@@ -668,6 +668,40 @@ export function festivalCities(films){
     .sort((a,b)=>b.count-a.count);
 }
 
+// diasDeCiudad(sel, films) — DUEÑO ÚNICO de «qué días tiene programación la
+// ciudad elegida» (19 nov 2026, aprobado por Juan). Un festival multiciudad que
+// NO es simultáneo (Al Este: Medellín 18–22, Bogotá 25–29) mostraba en la tira
+// los doce días aunque la mitad estuviera vacía para quien está en una ciudad.
+//
+// La CIUDAD es contexto, así que manda también cuando se elige una SEDE: la tira
+// sigue siendo la de la ciudad de esa sede. Elegir una sede no esconde nada más
+// (que una sala no proyecte un día es información, no ruido).
+//
+// Devuelve null cuando no hay nada que recortar —sin ciudad elegida, o un
+// festival de una sola ciudad—, y los consumidores leen null como «todos».
+// Los días salen de festivalCities (de las FUNCIONES), no de un campo nuevo.
+export function ciudadDeSeleccion(sel){
+  if(!sel||sel==='all') return null;
+  if(sel.startsWith('city:')) return sel.slice(5);
+  if(sel.startsWith('sede:')){
+    const i=sel.indexOf(SEDE_SEP);
+    if(i>=0) return sel.slice(5,i);
+    sel=sel.slice(5);
+  }
+  // Sede por nombre corto (legado): la ciudad de su primera sede.
+  const venues=(FESTIVAL_CONFIG[_activeFestId]||{}).venues||{};
+  const k=Object.keys(venues).find(v=>vcfg(v).short===sel);
+  return k?(filterCity(k)||null):null;
+}
+export function diasDeCiudad(sel, films){
+  const c=ciudadDeSeleccion(sel);
+  if(!c) return null;
+  const cities=festivalCities(films);
+  if(cities.length<2) return null;
+  const hit=cities.find(x=>x.name===c);
+  return hit?hit.days:null;
+}
+
 export function venueCity(v){
   const festCity=(FESTIVAL_CONFIG[_activeFestId]||{}).city||'';
   const c=vcfg(v).city||'';

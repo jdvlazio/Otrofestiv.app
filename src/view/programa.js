@@ -242,7 +242,7 @@ export function scrollDtabsToActive(){
   if(!dt) return;
   const on=dt.querySelector('.dtab.on');
   if(!on) return;
-  const tabs=[...dt.querySelectorAll('.dtab')];
+  const tabs=[...dt.querySelectorAll('.dtab:not(.fuera-ciudad)')];   // los de otra ciudad miden 0
   const next=tabs[tabs.indexOf(on)+1]||null;
   // El objetivo es el PAR (hoy + mañana); sin mañana (último día), solo hoy.
   const left=on.offsetLeft-dt.offsetLeft;

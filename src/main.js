@@ -107,7 +107,7 @@ import {
 
 // ── Step 7c: controller/pipeline.js — render dispatchers. ────────────────────
 import {
-  renderActiveView, switchMainNav, showDayView, showAgView, updateAgTab, _reRenderIntereses, _rerenderFilmList, _getProgramaPhase, _updateProgramaActiveFilter, initProgramaModeBar, setLang,
+  renderActiveView, switchMainNav, showDayView, showAgView, updateAgTab, _reRenderIntereses, _rerenderFilmList, _getProgramaPhase, _updateProgramaActiveFilter, initProgramaModeBar, setLang, primerDiaVigente,
   toggleLangDropdown, selectLang, closeLangDropdown,
 } from './controller/pipeline.js';
 
@@ -936,7 +936,7 @@ const dtabs=document.getElementById('dtabs');
 // Auto-posicionar en el primer día vigente al cargar
 // Los días pasados siguen accesibles con scroll hacia la izquierda
 (()=>{
-  const firstFuture=DAY_KEYS.find(d=>!dayFullyPassed(d));
+  const firstFuture=primerDiaVigente();   // de la ciudad elegida, si la hay
   if(firstFuture&&dayFullyPassed(activeDay)){
     activeDay=firstFuture;
     dtabs.querySelectorAll('.dtab').forEach(t=>t.classList.toggle('on',t.dataset.day===firstFuture));

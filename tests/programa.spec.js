@@ -2819,18 +2819,25 @@ test('T131 — el día vacío por ciudad nombra la ciudad, no filtros ajenos', a
     await w(700);
     switchMainNav('mnav-cartelera');
     await w(700);
-    const out = { venue: String(activeVenue), sec: String(activeSec), txt: null };
-    for (let i = 0; i < DAY_KEYS.length; i++) {
-      globalThis.selectedIdx = i;
-      if (typeof render === 'function') render();
-      await w(240);
-      const es = document.querySelector('.empty-state');
-      if (es) { out.txt = es.innerText.replace(/\s+/g, ' ').trim(); break; }
-    }
+    const out = { venue: String(activeVenue), sec: String(activeSec), txt: null, oculto: null };
+    // Desde el 19 nov 2026 la tira OCULTA los días sin funciones en la ciudad
+    // (dias-por-ciudad.spec.js), así que desde la tira ya no se llega a ese
+    // vacío. El mensaje sigue existiendo para cualquier otra entrada: se fuerza
+    // el día directamente y se mide el texto pintado, igual que antes.
+    const H = await import('/src/view/helpers.js');
+    const vacio = DAY_KEYS.find(d => !FILMS.some(f => f.day === d && H.venueMatches(f.venue, activeVenue)));
+    const tab = document.querySelector(`#dtabs .dtab[data-day="${vacio}"]`);
+    out.oculto = !!tab && getComputedStyle(tab).display === 'none';
+    globalThis.activeDay = vacio;
+    if (typeof render === 'function') render();
+    await w(400);
+    const es = document.querySelector('.empty-state');
+    if (es) out.txt = es.innerText.replace(/\s+/g, ' ').trim();
     return out;
   });
   expect(r.venue, 'la ciudad quedó puesta como selección de lugar').toContain('city:');
   expect(r.sec, 'y ninguna sección está filtrando').toBe('all');
+  expect(r.oculto, 'ese día no aparece en la tira de Medellín').toBe(true);
   expect(r.txt, 'algún día de FICDEH queda vacío en esa ciudad').not.toBe(null);
   expect(r.txt, 'el vacío nombra la ciudad').toContain('Medell\u00edn');
   expect(r.txt, 'y NO manda a ajustar sección o sede').not.toMatch(/secci\u00f3n o sede/);
