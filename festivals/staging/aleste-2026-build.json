@@ -332,7 +332,7 @@
      "duration": "98 min"
     }
    ],
-   "description": "¡Se enciende la pantalla y arranca el festival! 🎬✨Acompáñanos a la gran noche inaugural del 9° Festival de Cine de Europa Central y Oriental con una doble función imperdible: 🎨 Cortometraje inaugural: Latidos: el grafiti como arte, el grafiti como forma de vida (Dir. Juan Zapata | Colombia, 2026). 📽 Película central: La última ronda en Vencia (Dir. Francesco Sossai | Italia, 2025). Una noche para vibrar con historias que cruzan fronteras desde el primer minuto. 🗓 Fecha: 18 de noviembre en #colomboamericano",
+   "description": "Noche inaugural del 9.° Festival de Cine de Europa Central y Oriental, con una doble función: el cortometraje inaugural \"Latido. El grafiti como arte, el grafiti como forma de vida\" (dir. Juan Zapata, Colombia, 2026) y la película central \"La última ronda en Venecia\" (dir. Francesco Sossai, Italia, 2025).",
    "description_lang": "es",
    "_fid": "f_6c856cce71",
    "id": "f_6c856cce71",
@@ -3382,7 +3382,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-19T09:17:03",
+  "fecha": "2026-11-19T10:32:54",
   "plan_sha": "504f5daa1302f309",
   "paso": 9,
   "cmd": "python3 pipeline/aleste-2026-verificar.py"
