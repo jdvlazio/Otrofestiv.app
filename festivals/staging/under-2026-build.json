@@ -1334,9 +1334,9 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-18T19:35:52",
+  "fecha": "2026-11-18T19:53:10",
   "plan_sha": "de4c503917909c23",
-  "paso": 4,
-  "cmd": "python3 pipeline/under-2026-verificar.py"
+  "paso": 2,
+  "cmd": "python3 pipeline/enriquecer.py under-2026 --posters"
  }
 }
