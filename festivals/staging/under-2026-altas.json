@@ -89,7 +89,23 @@
      "resultado": "",
      "parcial": "solo la convocatoria (FilmFreeway, Festhome 3476), sin ficha por obra; Instagram del festival no revisado"
     }
-   }
+   },
+   "afiche": {
+    "url": "/Users/d/Developer/Otrofestiv-fuentes/under-2026/correo-2026-11-18/unz/Combstory/Poster e413cdeacc-poster.jpg",
+    "fuente": "afiche oficial enviado por el festival (correo 18 nov 2026)",
+    "archivo": "fuentes/under-2026/altas/comb-story.jpg",
+    "px": [
+     533,
+     800
+    ],
+    "ratio": 0.6663,
+    "recorte": null,
+    "veredicto_criterio": null,
+    "fecha": "2026-11-18"
+   },
+   "estado": "alta_hecha",
+   "tmdb_id": 1829663,
+   "alta_fecha": "2026-11-18"
   },
   "Cosmopoética: el ciclo de vida de una estrella masiva": {
    "titulo": "Cosmopoética: el ciclo de vida de una estrella masiva",
@@ -299,7 +315,23 @@
      "resultado": "",
      "parcial": "solo la convocatoria (FilmFreeway, Festhome 3476), sin ficha por obra; Instagram del festival no revisado"
     }
-   }
+   },
+   "afiche": {
+    "url": "/Users/d/Developer/Otrofestiv-fuentes/under-2026/correo-2026-11-18/unz/The Shapeshifter's Lament/Poster 11160ca52e-poster.jpg",
+    "fuente": "afiche oficial enviado por el festival (correo 18 nov 2026)",
+    "archivo": "fuentes/under-2026/altas/the-shapeshifter-s-lament.jpg",
+    "px": [
+     533,
+     800
+    ],
+    "ratio": 0.6663,
+    "recorte": null,
+    "veredicto_criterio": null,
+    "fecha": "2026-11-18"
+   },
+   "estado": "alta_hecha",
+   "tmdb_id": 1829671,
+   "alta_fecha": "2026-11-18"
   }
  },
  "_provenance": {

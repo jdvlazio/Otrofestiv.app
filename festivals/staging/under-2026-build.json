@@ -476,7 +476,11 @@
      "year": 2026,
      "duration": "3 min",
      "poster": "/assets/under-2026/comb-story.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "lbSlug": "comb-story",
+     "tmdb_id": 1829663,
+     "synopsis_en": "Elena holds a wooden comb in her hands as memories pull her back to childhood: her mother combing her hair slowly, every single day, even when Elena was already a grown young woman. When life swept her away to the city, Elena cut her hair and with it cut her way back home. The years filled up with reasons not to return. Elena never understood why her mother combed her hair until the day she finally stood in front of her mother, took out the comb, and ran it through her hair for the very first time.",
+     "genre": "Animación"
     },
     {
      "title": "Cyclotron",
@@ -526,7 +530,11 @@
      "year": 2025,
      "duration": "10 min",
      "poster": "/assets/under-2026/the-shapeshifter-s-lament.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "lbSlug": "the-shapeshifters-lament",
+     "tmdb_id": 1829671,
+     "synopsis_en": "The Shapeshifter's Lament is a poetic fantasy reflecting on introduced species. Situating survival at the shifting boundaries between different life forms, it weaves a narrative of kinship, metamorphosis, and the fragile persistence of memory. The question remains: how might the original inhabitants respond to uninvited and introduced arrivals who disrupt the harmony of the land and its living forms?",
+     "genre": "Animación"
     },
     {
      "title": "Teatime",
@@ -1325,7 +1333,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-18T18:29:24",
+  "fecha": "2026-11-18T19:13:40",
   "plan_sha": "4b92e840958da344",
   "paso": 4,
   "cmd": "python3 pipeline/under-2026-verificar.py"

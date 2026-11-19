@@ -334,6 +334,25 @@
    }
   },
   {
+   "titulo": "Comb story",
+   "tmdb_id": 1829663,
+   "titulo_original": "Comb Story",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "Elena holds a wooden comb in her hands as memories pull her back to childhood: her mother combing her hair slowly, every single day, even when Elena was already a grown young woman. When life swept her away to the city, Elena cut her hair and with it cut her way back home. The years filled up with reasons not to return. Elena never understood why her mother combed her hair until the day she finally stood in front of her mother, took out the comb, and ran it through her hair for the very first time.",
+   "genero": "Animación",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 3,
+   "pais_tmdb": "",
+   "lbSlug": "comb-story",
+   "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-18 (registro under-2026-altas.json)",
+   "_director": "Ernesto Rodriguez Cruz",
+   "_sondeado": "2026-11-18",
+   "poster": "/assets/under-2026/comb-story.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: afiche oficial enviado por el festival (correo 18 nov 2026)"
+  },
+  {
    "titulo": "Cosmopoética: el ciclo de vida de una estrella masiva",
    "tmdb_id": 1829504,
    "titulo_original": "Cosmopoética: el ciclo de vida de una estrella masiva",
@@ -915,6 +934,25 @@
    "posterSource": "tmdb"
   },
   {
+   "titulo": "The Shapeshifter's lament",
+   "tmdb_id": 1829671,
+   "titulo_original": "The Shapeshifter's Lament",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "The Shapeshifter's Lament is a poetic fantasy reflecting on introduced species. Situating survival at the shifting boundaries between different life forms, it weaves a narrative of kinship, metamorphosis, and the fragile persistence of memory. The question remains: how might the original inhabitants respond to uninvited and introduced arrivals who disrupt the harmony of the land and its living forms?",
+   "genero": "Animación",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 10,
+   "pais_tmdb": "",
+   "lbSlug": "the-shapeshifters-lament",
+   "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-18 (registro under-2026-altas.json)",
+   "_director": "Gaele Sobott",
+   "_sondeado": "2026-11-18",
+   "poster": "/assets/under-2026/the-shapeshifter-s-lament.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: afiche oficial enviado por el festival (correo 18 nov 2026)"
+  },
+  {
    "titulo": "The sight is a wound",
    "tmdb_id": 1484934,
    "titulo_original": "The Sight is a Wound",
@@ -1127,18 +1165,6 @@
    "poster": "/assets/under-2026/rattling.jpg",
    "posterSource": "editorial",
    "_afiche": "declarado: afiche oficial enviado por el festival (correo 18 nov 2026) — horizontal con el título pintado: va entero (editorial)"
-  },
-  {
-   "titulo": "Comb story",
-   "poster": "/assets/under-2026/comb-story.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: afiche oficial enviado por el festival (correo 18 nov 2026)"
-  },
-  {
-   "titulo": "The Shapeshifter's lament",
-   "poster": "/assets/under-2026/the-shapeshifter-s-lament.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: afiche oficial enviado por el festival (correo 18 nov 2026)"
   },
   {
    "titulo": "Teatime",
@@ -1452,6 +1478,24 @@
    "_heredado": {
     "genero": "catálogo w_R4EP71550W43 (bhff-2026, cineautopsia-2026, fantasmagoria-2026, fantasofest-2026, festicinerio-2026, ficfusa-2026, ficica-2026, ficpa-2026, narrarelfuturo-2026, popayan-2026, villadeleyvaiff-2026)"
    }
+  },
+  "Comb story": {
+   "tmdb_id": 1829663,
+   "titulo_original": "Comb Story",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "Elena holds a wooden comb in her hands as memories pull her back to childhood: her mother combing her hair slowly, every single day, even when Elena was already a grown young woman. When life swept her away to the city, Elena cut her hair and with it cut her way back home. The years filled up with reasons not to return. Elena never understood why her mother combed her hair until the day she finally stood in front of her mother, took out the comb, and ran it through her hair for the very first time.",
+   "genero": "Animación",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 3,
+   "pais_tmdb": "",
+   "lbSlug": "comb-story",
+   "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-18 (registro under-2026-altas.json)",
+   "_director": "Ernesto Rodriguez Cruz",
+   "_sondeado": "2026-11-18",
+   "poster": "/assets/under-2026/comb-story.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: afiche oficial enviado por el festival (correo 18 nov 2026)"
   },
   "Cosmopoética: el ciclo de vida de una estrella masiva": {
    "tmdb_id": 1829504,
@@ -2009,6 +2053,24 @@
    "poster": "/assets/under-2026/tapeworm-alexis-the-opera-diva.jpg",
    "posterSource": "tmdb"
   },
+  "The Shapeshifter's lament": {
+   "tmdb_id": 1829671,
+   "titulo_original": "The Shapeshifter's Lament",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "The Shapeshifter's Lament is a poetic fantasy reflecting on introduced species. Situating survival at the shifting boundaries between different life forms, it weaves a narrative of kinship, metamorphosis, and the fragile persistence of memory. The question remains: how might the original inhabitants respond to uninvited and introduced arrivals who disrupt the harmony of the land and its living forms?",
+   "genero": "Animación",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 10,
+   "pais_tmdb": "",
+   "lbSlug": "the-shapeshifters-lament",
+   "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-18 (registro under-2026-altas.json)",
+   "_director": "Gaele Sobott",
+   "_sondeado": "2026-11-18",
+   "poster": "/assets/under-2026/the-shapeshifter-s-lament.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: afiche oficial enviado por el festival (correo 18 nov 2026)"
+  },
   "The sight is a wound": {
    "tmdb_id": 1484934,
    "titulo_original": "The Sight is a Wound",
@@ -2221,7 +2283,6 @@
   "Antifragility",
   "Atombombenabend",
   "Binary",
-  "Comb story",
   "Cut your wings and fly",
   "Esas ruinas",
   "Lo que aún queda de mí",
@@ -2231,7 +2292,6 @@
   "Rattling",
   "Shell Shock O'K",
   "Teatime",
-  "The Shapeshifter's lament",
   "To the rhythm of love and hate: A punkumentary on salsa with the Macabeo Orchestra",
   "Una persona distinta"
  ],
@@ -2259,10 +2319,6 @@
   "Binary": {
    "director": "Padrick Ritch",
    "fecha": "2026-11-18"
-  },
-  "Comb story": {
-   "director": "Ernesto Rodriguez Cruz",
-   "fecha": "2026-11-17"
   },
   "Cut your wings and fly": {
    "director": "Meryem Lahlou",
@@ -2298,10 +2354,6 @@
   },
   "Teatime": {
    "director": "David Mathews",
-   "fecha": "2026-11-17"
-  },
-  "The Shapeshifter's lament": {
-   "director": "Gaele Sobott",
    "fecha": "2026-11-17"
   },
   "To the rhythm of love and hate: A punkumentary on salsa with the Macabeo Orchestra": {
